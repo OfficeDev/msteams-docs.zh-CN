@@ -1,0 +1,2 @@
+> [!Important]
+> <span data-ttu-id="2a159-101">本节中的文章基于 v3 Bot 框架 SDK。</span><span class="sxs-lookup"><span data-stu-id="2a159-101">The articles in this section are based on the v3 Bot Framework SDK.</span></span> <span data-ttu-id="2a159-102">如果您要查找当前文档（SDK 版本4.6 或更高版本），请参阅 "[对话 bot](~/bots/what-are-bots.md) " 部分。</span><span class="sxs-lookup"><span data-stu-id="2a159-102">If you're looking for current documentation (version 4.6 or later of the SDK) see the [Conversational Bots](~/bots/what-are-bots.md) section.</span></span>

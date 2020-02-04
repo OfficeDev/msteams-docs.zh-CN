@@ -1,0 +1,116 @@
+---
+title: 使用 ASP.NET Core 创建通道和组选项卡
+author: laujan
+description: 用于创建带有 ASP.NET Core 的自定义频道和分组选项卡的快速入门指南。
+ms.topic: quickstart
+ms.author: laujan
+ms.openlocfilehash: 7fdc4b042aac0664ae9d62c73c90689c75823592
+ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "41673474"
+---
+# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a><span data-ttu-id="3b06d-103">使用 ASP.NET Core 创建自定义通道和组选项卡</span><span class="sxs-lookup"><span data-stu-id="3b06d-103">Create a Custom Channel and Group Tab with ASP.NET Core</span></span>
+
+<span data-ttu-id="3b06d-104">在此快速入门中，我们将介绍如何使用 c # 和 ASP.Net Core Razor 页创建自定义频道/组选项卡。</span><span class="sxs-lookup"><span data-stu-id="3b06d-104">In this quickstart we'll walk-through creating a custom channel/group tab with C# and ASP.Net Core Razor page.</span></span> <span data-ttu-id="3b06d-105">我们还将使用[Microsoft 团队的应用 Studio](~/concepts/build-and-test/app-studio-overview.md)来完成你的应用程序清单，并将你的选项卡部署到团队。</span><span class="sxs-lookup"><span data-stu-id="3b06d-105">We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.</span></span>
+
+[!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
+
+## <a name="get-the-source-code"></a><span data-ttu-id="3b06d-106">获取源代码</span><span class="sxs-lookup"><span data-stu-id="3b06d-106">Get the source code</span></span>
+
+<span data-ttu-id="3b06d-107">打开命令提示符并为您的选项卡项目创建一个新目录。</span><span class="sxs-lookup"><span data-stu-id="3b06d-107">Open a command prompt and create a new directory for your tab project.</span></span> <span data-ttu-id="3b06d-108">我们提供了一个简单的项目，可帮助你入门。</span><span class="sxs-lookup"><span data-stu-id="3b06d-108">We have provided a simple project to get you started.</span></span> <span data-ttu-id="3b06d-109">若要检索源代码，可以下载 zip 文件夹并解压缩文件，或将示例存储库克隆到新目录：</span><span class="sxs-lookup"><span data-stu-id="3b06d-109">To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:</span></span>
+
+```bash
+git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
+```
+
+<span data-ttu-id="3b06d-110">拥有源代码后，打开 Visual Studio 并选择 "**打开项目或解决方案**"。</span><span class="sxs-lookup"><span data-stu-id="3b06d-110">Once you have the source code, open Visual Studio and select **Open a project or solution**.</span></span> <span data-ttu-id="3b06d-111">导航到 "选项卡应用程序目录"，然后打开 " **ChannelGroupTab**"。</span><span class="sxs-lookup"><span data-stu-id="3b06d-111">Navigate to the tab application directory and open **ChannelGroupTab.sln**.</span></span>
+
+<span data-ttu-id="3b06d-112">若要生成并运行应用程序，请按**F5**或从 "**调试**" 菜单中选择 "**启动调试**"。</span><span class="sxs-lookup"><span data-stu-id="3b06d-112">To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="3b06d-113">在浏览器中导航到以下 Url 并验证是否正确加载了应用程序：</span><span class="sxs-lookup"><span data-stu-id="3b06d-113">In a browser navigate to the URLs below and verify the application loaded properly:</span></span>
+
+- `http://localhost:44355`
+- `http://localhost:44355/privacy`
+- `http://localhost:44355/tou`
+
+## <a name="review-the-source-code"></a><span data-ttu-id="3b06d-114">查看源代码</span><span class="sxs-lookup"><span data-stu-id="3b06d-114">Review the source code</span></span>
+
+### <a name="startupcs"></a><span data-ttu-id="3b06d-115">Startup.cs</span><span class="sxs-lookup"><span data-stu-id="3b06d-115">Startup.cs</span></span>
+
+<span data-ttu-id="3b06d-116">此项目是从 ASP.NET Core 2.2 Web 应用程序空模板创建的，并且在安装程序中选中了 "*高级-配置为 HTTPS* " 复选框。</span><span class="sxs-lookup"><span data-stu-id="3b06d-116">This project was created from an ASP.NET Core 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup.</span></span> <span data-ttu-id="3b06d-117">MVC 服务由依赖关系注入框架的`ConfigureServices()`方法注册。</span><span class="sxs-lookup"><span data-stu-id="3b06d-117">The MVC services are registered by the dependency injection framework's `ConfigureServices()` method.</span></span> <span data-ttu-id="3b06d-118">此外，默认情况下，空模板不启用静态内容的服务，因此将静态文件中间件添加`Configure()`到方法中：</span><span class="sxs-lookup"><span data-stu-id="3b06d-118">Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:</span></span>
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+  {
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+  }
+public void Configure(IApplicationBuilder app)
+  {
+    app.UseStaticFiles();
+    app.UseMvc();
+  }
+```
+
+### <a name="wwwroot-folder"></a><span data-ttu-id="3b06d-119">wwwroot 文件夹</span><span class="sxs-lookup"><span data-stu-id="3b06d-119">wwwroot folder</span></span>
+
+<span data-ttu-id="3b06d-120">在 ASP.NET Core 中，web 根文件夹是应用程序查找静态文件的位置。</span><span class="sxs-lookup"><span data-stu-id="3b06d-120">In ASP.NET Core, the web root folder is where the application looks for static files.</span></span>
+
+### <a name="indexcshtml"></a><span data-ttu-id="3b06d-121">索引 cshtml</span><span class="sxs-lookup"><span data-stu-id="3b06d-121">Index.cshtml</span></span>
+
+<span data-ttu-id="3b06d-122">ASP.NET Core 将称为*Index*的文件视为网站的默认/主页。</span><span class="sxs-lookup"><span data-stu-id="3b06d-122">ASP.NET Core treats files called *Index* as the default/home page for the site.</span></span> <span data-ttu-id="3b06d-123">当浏览器 URL 指向网站的根目录时，将显示**索引. cshtml**将显示为应用程序的主页。</span><span class="sxs-lookup"><span data-stu-id="3b06d-123">When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.</span></span>
+
+### <a name="tabcs"></a><span data-ttu-id="3b06d-124">Tab.cs</span><span class="sxs-lookup"><span data-stu-id="3b06d-124">Tab.cs</span></span>
+
+<span data-ttu-id="3b06d-125">此 c # 文件包含在配置过程中将从**选项卡**调用的方法。</span><span class="sxs-lookup"><span data-stu-id="3b06d-125">This C# file contains a method that will be called from **Tab.cshtml** during configuration.</span></span>
+
+### <a name="appmanifest-folder"></a><span data-ttu-id="3b06d-126">Appmanifest.xml 文件夹</span><span class="sxs-lookup"><span data-stu-id="3b06d-126">AppManifest folder</span></span>
+
+<span data-ttu-id="3b06d-127">此文件夹包含以下所需的应用程序包文件：</span><span class="sxs-lookup"><span data-stu-id="3b06d-127">This folder contains the following required app package files:</span></span>
+
+- <span data-ttu-id="3b06d-128">以 192 x 192 像素为单位的**完整彩色图标**。</span><span class="sxs-lookup"><span data-stu-id="3b06d-128">A **full color icon** measuring 192 x 192 pixels.</span></span>
+- <span data-ttu-id="3b06d-129">一个**透明的大纲图标**，用于度量 32 x 32 像素。</span><span class="sxs-lookup"><span data-stu-id="3b06d-129">A **transparent outline icon** measuring 32 x 32 pixels.</span></span>
+- <span data-ttu-id="3b06d-130">一个指定应用程序的属性的**清单 json**文件。</span><span class="sxs-lookup"><span data-stu-id="3b06d-130">A **manifest.json** file that specifies the attributes of your app.</span></span>
+
+<span data-ttu-id="3b06d-131">需要将这些文件压缩到应用程序包中，以便在将选项卡上载到团队时使用。</span><span class="sxs-lookup"><span data-stu-id="3b06d-131">These files need to be zipped in an app package for use in uploading your tab to Teams.</span></span> <span data-ttu-id="3b06d-132">当用户选择添加或更新选项卡时，Microsoft 团队将加载清单中`configurationUrl`指定的项，将其嵌入 IFrame 中，并在您的选项卡中进行呈现。</span><span class="sxs-lookup"><span data-stu-id="3b06d-132">When a user chooses to add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.</span></span>
+
+### <a name="csproj"></a><span data-ttu-id="3b06d-133">.csproj</span><span class="sxs-lookup"><span data-stu-id="3b06d-133">.csproj</span></span>
+
+<span data-ttu-id="3b06d-134">在 Visual Studio "解决方案资源管理器" 窗口中，右键单击该项目，然后选择 "**编辑项目文件**"。</span><span class="sxs-lookup"><span data-stu-id="3b06d-134">In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**.</span></span> <span data-ttu-id="3b06d-135">在该文件的底部，您将看到在应用程序生成时创建和更新您的 zip 文件夹的代码：</span><span class="sxs-lookup"><span data-stu-id="3b06d-135">At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:</span></span>
+
+```xml
+<PropertyGroup>
+    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="AppManifest\icon-outline.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppManifest\icon-color.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppManifest\manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+```
+
+[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
+
+- <span data-ttu-id="3b06d-136">在项目目录的根目录中打开命令提示符，并运行以下命令：</span><span class="sxs-lookup"><span data-stu-id="3b06d-136">Open a command prompt in the root of your project directory and run the following command:</span></span>
+
+```bash
+ngrok http https://localhost:44355 -host-header="localhost:44355"
+```
+
+- <span data-ttu-id="3b06d-137">Ngrok 将侦听来自 internet 的请求，并在其运行在端口44355上时将它们路由到您的应用程序。</span><span class="sxs-lookup"><span data-stu-id="3b06d-137">Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355.</span></span> <span data-ttu-id="3b06d-138">它应类似`https://y8rCgT2b.ngrok.io/`于在*y8rCgT2b*替换为 NGROK 字母数字 HTTPS URL 的位置。</span><span class="sxs-lookup"><span data-stu-id="3b06d-138">It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.</span></span>
+
+- <span data-ttu-id="3b06d-139">请务必在 ngrok 运行的同时保留命令提示符，并记下该 URL，稍后将需要它。</span><span class="sxs-lookup"><span data-stu-id="3b06d-139">Be sure to keep the command prompt with ngrok running and to make note of the URL — you'll need it later.</span></span>
+
+## <a name="update-your-application"></a><span data-ttu-id="3b06d-140">更新应用程序</span><span class="sxs-lookup"><span data-stu-id="3b06d-140">Update your application</span></span>
+
+<span data-ttu-id="3b06d-141">在*选项卡中。 cshtml*应用程序为用户提供了两个选项按钮，用于显示带有红色或灰色图标的选项卡。</span><span class="sxs-lookup"><span data-stu-id="3b06d-141">Within *Tab.cshtml* the application presents the user with two option buttons for displaying the tab with either a red or gray icon.</span></span> <span data-ttu-id="3b06d-142">选择 "**选择灰色**" 或 "**选择红色**" `saveGray()`按钮将触发或`settings.setValidityState(true)` `saveRed()`分别设置和启用 "配置" 页上的 "**保存**" 按钮。</span><span class="sxs-lookup"><span data-stu-id="3b06d-142">Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page.</span></span> <span data-ttu-id="3b06d-143">此代码使团队知道您已经满足配置要求，可以继续安装。</span><span class="sxs-lookup"><span data-stu-id="3b06d-143">This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed.</span></span> <span data-ttu-id="3b06d-144">在保存`settings.setSettings`时设置的参数。</span><span class="sxs-lookup"><span data-stu-id="3b06d-144">On save, the parameters of `settings.setSettings` are set.</span></span> <span data-ttu-id="3b06d-145">最后， `saveEvent.notifySuccess()`将调用，以指示内容 URL 已成功解析。</span><span class="sxs-lookup"><span data-stu-id="3b06d-145">Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.</span></span>
+
+[!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
+
+[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]

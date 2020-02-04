@@ -1,0 +1,371 @@
+- name: 概述
+  expanded: true
+  items:
+    - name: 什么是 Microsoft 团队应用？
+      href: overview.md
+    - name: 新增功能
+      href: whats-new.md
+- name: 入门
+  items:
+    - name: '使用 C 创建应用程序#'
+      href: tutorials/get-started-dotnet-app-studio.md
+    - name: 使用节点创建应用
+      href: tutorials/get-started-nodejs-app-studio.md
+    - name: 使用 Yeoman 生成器创建应用程序
+      href: tutorials/get-started-yeoman.md
+- name: 示例和模板
+  items:
+    - name: 示例应用程序
+      href: samples/code-samples.md
+    - name: 生产就绪的应用程序模板
+      href: samples/app-templates.md
+- name: 概念
+  expanded: true
+  items:
+    - name: 为 Microsoft 团队构建应用程序
+      href: concepts/building-an-app.md
+    - name: 团队客户端中的可扩展性点
+      href: concepts/extensibility-points.md
+    - name: 设计应用程序
+      items:
+        - name: 了解你的用例
+          href: concepts/design/understand-use-cases.md
+        - name: 将用例映射到功能
+          href: concepts/design/map-use-cases.md
+        - name: 个人应用程序
+          href: concepts/design/personal-apps.md
+        - name: UI 组件
+          items:
+            - name: 颜色
+              href: concepts/design/components/color.md
+            - name: 按钮、链接和控件
+              href: concepts/design/components/buttons.md
+            - name: 版式
+              href: concepts/design/components/typography.md
+            - name: 字段和 Flyouts
+              href: concepts/design/components/fields.md
+            - name: Dialogs
+              href: concepts/design/components/dialogs.md
+    - name: 生成和测试应用程序
+      items:
+        - name: 准备 Office 365 租户
+          href: concepts/build-and-test/prepare-your-o365-tenant.md
+        - name: 使用应用程序 Studio 创建您的应用程序
+          href: concepts/build-and-test/app-studio-overview.md
+        - name: 创建应用程序包
+          href: concepts/build-and-test/apps-package.md
+        - name: 测试和调试应用程序
+          href: concepts/build-and-test/debug.md
+        - name: 向您的环境中添加测试数据
+          href: concepts/build-and-test/test-data.md
+        - name: 使用深层链接进行导航
+          href: concepts/build-and-test/deep-links.md
+        - name: 本地化应用程序
+          href: concepts/build-and-test/apps-localization.md
+        - name: 为您的网站创建 "共享到团队" 按钮
+          href: concepts/build-and-test/share-to-teams.md
+    - name: 部署和发布应用程序
+      items:
+        - name: 选择分发方法
+          href: concepts/deploy-and-publish/overview.md
+        - name: 为团队或用户上载您的应用程序
+          href: concepts/deploy-and-publish/apps-upload.md
+        - name: 将您的应用程序发布到您的组织
+          href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+        - name: 在 AppSource 上发布应用程序
+          items:
+            - name: 了解 AppSource 提交
+              href: concepts/deploy-and-publish/appsource/publish.md
+            - name: 准备应用程序
+              items:
+                - name: Presubmission 清单
+                  href: concepts/deploy-and-publish/appsource/prepare/overview.md
+                - name: 应用程序详细信息页检查表
+                  href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
+                - name: 应用部件清单（manifest）清单
+                  href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
+                - name: 频繁失败的情况
+                  href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+            - name: 发布应用程序后
+              items:
+                - name: 发布应用程序后要执行的操作
+                  href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+                - name: 应用程序认证计划
+                  href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
+    - name: 团队应用中的身份验证
+      items:
+        - name: 身份验证概述
+          href: concepts/authentication/authentication.md
+        - name: 配置标识提供程序
+          href: concepts/authentication/configure-identity-provider.md
+- name: 与邮件扩展的面向任务的交互
+  items:
+    - name: 什么是邮件扩展？
+      href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Quickstarts
+      items:
+        - name: With action 命令
+          items:
+            - name: 'C #/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
+            - name: TypeScript/node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
+        - name: 使用搜索命令
+          items:
+            - name: 'C #/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
+            - name: TypeScript/node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+    - name: 操作方法指南
+      expanded: true
+      items:
+        - name: 创建邮件扩展
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        - name: 基于操作的命令
+          items:
+            - name: 定义操作命令
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
+            - name: 创建并发送任务模块
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
+            - name: 向提交操作发送响应
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        - name: 基于搜索的命令
+          items:
+            - name: 定义搜索命令
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
+            - name: 接收和响应搜索查询
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: 链接 unfurling
+          href: messaging-extensions/how-to/link-unfurling.md
+        - name: 添加身份验证
+          href: messaging-extensions/how-to/add-authentication.md
+- name: 对话 Bot
+  items:
+    - name: Microsoft 团队中的 bot 是什么？
+      href: bots/what-are-bots.md
+    - name: Bot 的工作原理
+      href: bots/bot-basics.md
+    - name: Quickstarts
+      items:
+        - name: 'C 中的团队对话 bot#'
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot'
+        - name: JavaScript 中的团队对话机器人
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot'
+        - name: Python 中的团队对话机器人
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot'
+    - name: 设计你的 bot
+      items:
+        - name: 设计概述
+          href: bots/design/bots.md
+    - name: 操作方法指南
+      expanded: true
+      items:
+        - name: 为团队创建机器人
+          href: bots/how-to/create-a-bot-for-teams.md
+        - name: 对话
+          items:
+            - name: 对话基础知识
+              href: bots/how-to/conversations/conversation-basics.md
+            - name: 订阅对话事件
+              href: bots/how-to/conversations/subscribe-to-conversation-events.md
+            - name: 通道和组对话
+              href: bots/how-to/conversations/channel-and-group-conversations.md
+            - name: 发送主动消息
+              href: bots/how-to/conversations/send-proactive-messages.md
+            - name: 发送和接收文件
+              href: bots/how-to/conversations/send-and-receive-files.md
+        - name: 调试你的 bot
+          items:
+            - name: 使用 IDE 在本地调试
+              href: bots/how-to/debug/locally-with-an-ide.md
+            - name: 使用检查中间件进行调试
+              href: /azure/bot-service/bot-service-debug-inspection-middleware
+        - name: 身份验证
+          items:
+            - name: Bot 中的身份验证流
+              href: bots/how-to/authentication/auth-flow-bot.md
+            - name: 向你的 bot 添加身份验证
+              href: bots/how-to/authentication/add-authentication.md
+        - name: 设置你的 bot 邮件的格式
+          href: bots/how-to/format-your-bot-messages.md
+        - name: 更新和删除 bot 邮件
+          href: bots/how-to/update-and-delete-bot-messages.md
+        - name: 获取你的 bot 的团队上下文
+          href: bots/how-to/get-teams-context.md
+        - name: 为你的 bot 创建命令菜单
+          href: bots/how-to/create-a-bot-commands-menu.md
+        - name: 处理 bot 速率限制
+          href: bots/how-to/rate-limit.md
+    - name: 呼叫和会议 bot
+      items:
+        - name: 呼叫和会议 bot 概述
+          href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+        - name: 实时媒体概念
+          href: bots/calls-and-meetings/real-time-media-concepts.md
+        - name: 注册呼叫机器人
+          href: bots/calls-and-meetings/registering-calling-bot.md
+        - name: 传入呼叫通知
+          href: bots/calls-and-meetings/call-notifications.md
+        - name: 调试和本地测试
+          href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+        - name: 应用程序托管的媒体
+          href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+- name: 包含选项卡的嵌入式 web 体验
+  items:
+    - name: 什么是自定义选项卡？
+      href: tabs/what-are-tabs.md
+    - name: Quickstarts
+      items:
+        - name: Node.js 和响应
+          items:
+            - name: 创建通道和组选项卡
+              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+            - name: 创建个人选项卡
+              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+        - name: 'C #/ASP.NET 核心'
+          items:
+            - name: 创建通道和组选项卡
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+            - name: 创建个人选项卡
+              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+        - name: 'C #/ASP.NET MVC'
+          items:
+            - name: 创建通道和组选项卡
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+            - name: 创建个人选项卡
+              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: 设计选项卡
+      items:
+        - name: 设计概述
+          href: tabs/design/tabs.md
+        - name: 移动客户端上的选项卡
+          href: tabs/design/tabs-mobile.md
+    - name: 操作方法指南
+      expanded: true
+      items:
+        - name: 将选项卡添加到您的应用程序
+          href: tabs/how-to/add-tab.md
+        - name: 创建选项卡页
+          items:
+            - name: 创建内容页
+              href: tabs/how-to/create-tab-pages/content-page.md
+            - name: 创建配置页
+              href: tabs/how-to/create-tab-pages/configuration-page.md
+            - name: 创建选项卡删除页
+              href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: 将身份验证添加到你的选项卡
+          items:
+            - name: 身份验证流
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: 使用 Azure AD 身份验证
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: 使用缄默身份验证
+              href: tabs/how-to/authentication/auth-silent-aad.md
+            - name: 使用单一登录身份验证
+              href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: 使用团队客户端 SDK
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: 获取其他团队上下文
+          href: tabs/how-to/access-teams-context.md
+        - name: Microsoft 团队选项卡的 DevTools
+          href: tabs/how-to/developer-tools.md
+        - name: 将自定义选项卡添加到 SharePoint
+          href: tabs/how-to/tabs-in-sharepoint.md
+        - name: 请求设备权限
+          href: tabs/how-to/native-device-permissions.md
+- name: 任务模块和卡片
+  items:
+    - name: 什么是任务模块？
+      href: task-modules-and-cards/what-are-task-modules.md
+    - name: 什么是卡片？
+      href: task-modules-and-cards/what-are-cards.md
+    - name: 圣诞卡
+      items:
+        - name: 设计有效的卡片
+          href: task-modules-and-cards/cards/design-effective-cards.md
+        - name: 设置卡片文本格式
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: 添加和响应卡片操作
+          href: task-modules-and-cards/cards/cards-actions.md
+        - name: 卡片参考
+          href: task-modules-and-cards/cards/cards-reference.md
+    - name: 任务模块
+      items:
+        - name: 从 bot
+          href: task-modules-and-cards/task-modules/task-modules-bots.md
+        - name: 从选项卡
+          href: task-modules-and-cards/task-modules/task-modules-tabs.md
+- name: Webhook 和连接器
+  items:
+    - name: 什么是 Webhook 和连接器？
+      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - name: 操作方法指南
+      expanded: true
+      items:
+        - name: 创建传入 webhook
+          href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+        - name: 创建传出 webhook
+          href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+        - name: 创建 O365 连接器
+          href: webhooks-and-connectors/how-to/connectors-creating.md
+        - name: 将邮件发送到连接器和 Webhook
+          href: webhooks-and-connectors/how-to/connectors-using.md
+- name: 资源
+  items:
+    - name: Bot-v3 SDK
+      href: resources/bot-v3/bots-overview.md
+      items:
+        - name: 创建 bot
+          href: resources/bot-v3/bots-create.md
+        - name: 对话
+          href: resources/bot-v3/bot-conversations/bots-conversations.md
+          items:
+            - name: 与 bot 的个人对话
+              href: resources/bot-v3/bot-conversations/bots-conv-personal.md
+            - name: 使用 bot 的频道和组对话
+              href: resources/bot-v3/bot-conversations/bots-conv-channel.md
+            - name: 启动对话
+              href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
+        - name: 卡片和卡片操作
+          href: resources/bot-v3/bots-cards.md
+        - name: 邮件格式
+          href: resources/bot-v3/bots-message-format.md
+        - name: Bot 事件
+          href: resources/bot-v3/bots-notifications.md
+        - name: Bot 的上下文
+          href: resources/bot-v3/bots-context.md
+        - name: 发送和接收文件
+          href: resources/bot-v3/bots-files.md
+        - name: 仅通知 bot
+          href: resources/bot-v3/bots-notification-only.md
+        - name: Bot 菜单
+          href: resources/bot-v3/bots-menus.md
+        - name: 带有选项卡的 bot
+          href: resources/bot-v3/bots-with-tabs.md
+        - name: 测试 bot
+          href: resources/bot-v3/bots-test.md
+    - name: 邮件扩展-v3 SDK
+      href: resources/messaging-extension-v3/messaging-extensions-overview.md
+      items:
+        - name: 搜索扩展
+          href: resources/messaging-extension-v3/search-extensions.md
+        - name: 操作扩展
+          href: resources/messaging-extension-v3/create-extensions.md
+    - name: 公共开发人员预览版
+      items:
+        - name: 开发人员预览概述
+          href: resources/dev-preview/developer-preview-intro.md
+        - name: 开发人员预览版清单架构
+          href: resources/schema/manifest-schema-dev-preview.md
+        - name: 开发人员预览版中的功能
+          href: resources/dev-preview/developer-preview-features.md
+    - name: 支持的 bot 媒体格式
+      href: resources/media-formats.md
+    - name: SameSite cookie 属性（2020更新）
+      href: resources/samesite-cookie-update.md
+    - name: 清单架构
+      href: resources/schema/manifest-schema.md
+    - name: 本地化文件 JSON 架构
+      href: resources/schema/localization-schema.md
+- name: 支持和反馈
+  href: feedback.md
