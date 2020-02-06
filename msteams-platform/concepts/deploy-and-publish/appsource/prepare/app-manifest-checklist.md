@@ -2,14 +2,17 @@
 title: 应用部件清单（manifest）清单
 description: 用于将 Microsoft 团队应用程序发布到 AppSource 的应用程序清单的清单
 keywords: 团队发布 microsoft store office 发布清单
-ms.openlocfilehash: e684bb4f578944c6f37eeb43541a491d42ec3479
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6186daf264f04e04d6037ddfb7d9208994cc3c57
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673334"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783876"
 ---
 # <a name="app-manifest-checklist"></a>应用部件清单（manifest）清单
+
+>[!IMPORTANT]
+>我们正在将 Office 解决方案的管理从卖家面板迁移到合作伙伴中心。 有关详细信息，请参阅[从卖家面板移动到合作伙伴中心](https://developer.microsoft.com/office/blogs/moving-management-of-solutions-from-seller-dashboard-to-partner-center/)并阅读[常见问题解答](https://docs.microsoft.com/office/dev/store/partner-center-faq)。
 
 您的应用程序清单需要符合下面所述的准则。
 
@@ -19,13 +22,13 @@ ms.locfileid: "41673334"
 ## <a name="tips"></a>提示
 
 * 请勿在您的应用程序名称中使用 "团队"、"Microsoft" 或 "应用程序"。
-* 应用程序清单中的 developerName 必须与在合作伙伴中心或卖家面板中定义的提供程序名称相同。
+* 清单中的 developerName 必须与在合作伙伴中心定义的提供程序名称相同。
 * 请确保应用程序说明、屏幕截图、文本和促销图像仅描述应用程序，并且不包含任何其他广告、促销或版权品牌名称。
 * 如果你的产品需要服务或其他服务上的帐户，请列出说明中的，并确保有要注册的链接，请登录并注销。
 * 如果你的产品需要额外购买才能正常运行，请在说明中列出。
-* 在清单和合作伙伴中心或卖家面板中提供必备条款和隐私策略链接。 验证这些链接是否正确地解析为正确的文档，以及理想的工作组。 对于 bot，必须在 "Bot 框架注册" 页的 "提交" 部分提供相同的信息。
-* 确保清单中的元数据与合作伙伴中心或卖家面板中的元数据完全匹配（以及 Bot 框架注册中的 bot）。 请注意，卖家面板条目应包含更详细和已设置格式的说明，以便在 AppSource 产品页面中使用。
-* 请确保清单中使用的应用程序标题与在合作伙伴中心或卖方仪表板提交中输入的应用程序标题完全匹配
+* 在清单和合作伙伴中心或仪表板中提供必要的条款和隐私策略链接。 验证这些链接是否正确地解析为正确的文档，以及理想的工作组。 对于 bot，必须在 "Bot 框架注册" 页的 "提交" 部分提供相同的信息。
+* 确保清单中的元数据与合作伙伴中心中的元数据（和 bot 框架注册中的 bot）完全匹配。 请注意，您的合作伙伴中心条目可能包含更详细和已设置格式的说明，可在 AppSource 产品页面中使用。
+* 确保清单中使用的应用程序标题与在合作伙伴中心提交中输入的应用程序标题**完全匹配**。 *请参阅*[在 Microsoft AppSource 和 Office 中创建有效的列表-使用一致的加载项名称](https://docs.microsoft.com/office/dev/store/create-effective-office-store-listings#use-a-consistent-add-in-name)。
 
 ## <a name="metadata-requirement"></a>元数据要求
 
@@ -51,10 +54,10 @@ ms.locfileid: "41673334"
 
 |Data|类型|大小|清单|合作伙伴中心|说明|
 |---|---|---|---|---|---|
-|应用名称|String|30|`name.short`|✔|您的应用程序的名称应显示在店面和产品中。|
-|长应用程序名称|String|30|`name.full`|✔|您的应用程序的名称应显示在店面和产品中。|
-|简短说明|String|80|`description.short`|✔|您的应用程序的简短说明。|
-|较长说明|String|4000|`description.full`|✔|您的应用程序的更详细说明。 在清单文件中，准确的摘要就足够了。 在合作伙伴中心，您可以对 AppSource 产品页面使用更丰富的格式化说明。|
+|应用名称|字符串|30|`name.short`|✔|您的应用程序的名称应显示在店面和产品中。|
+|长应用程序名称|字符串|30|`name.full`|✔|您的应用程序的名称应显示在店面和产品中。|
+|简短说明|字符串|80|`description.short`|✔|您的应用程序的简短说明。|
+|较长说明|字符串|4000|`description.full`|✔|您的应用程序的更详细说明。 在清单文件中，准确的摘要就足够了。 在合作伙伴中心，您可以对 AppSource 产品页面使用更丰富的格式化说明。|
 |屏幕截图（1-5）|.png、.jpg 或 .gif|1366w x 768h 和小于 1024 KB||✔|至少一个显示你的应用程序体验的屏幕截图。 在 "应用程序详细信息" 页上使用。|
 
 ## <a name="submission-extras-for-bots"></a>Bot 的提交额外内容

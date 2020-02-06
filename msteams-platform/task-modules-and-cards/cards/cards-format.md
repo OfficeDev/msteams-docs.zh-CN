@@ -3,12 +3,12 @@ title: 卡片中的文本格式
 description: 描述 Microsoft 团队中的卡片文本格式
 keywords: 团队 bot 卡片格式
 ms.date: 03/29/2018
-ms.openlocfilehash: 4a467c5b0b21cc3c19977bf7caa25e6790904b10
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: eb8aa13b9e75d08dadd5e615029a9d418c6c7892
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673437"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783967"
 ---
 # <a name="card-formatting"></a>卡片格式
 
@@ -105,14 +105,16 @@ ms.locfileid: "41673437"
     ]
 }
 ```
+
 ## <a name="mention-support-within-adaptive-cards"></a>提及自适应卡片中的支持 
 
 > [!NOTE]
-> 在[开发人员预览版](~/resources/dev-preview/developer-preview-intro)中，目前仅支持对卡片中提及支持。
+> 在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中，目前仅支持对卡片中提及支持。
 
 Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内容中提及的内容。 
 
 ### <a name="constructing-mentions"></a>构建提及
+
 若要在自适应卡片中添加提及的内容，应用需要包含以下元素
 
 * `<at>username</at>`在支持的自适应卡片元素中
@@ -121,6 +123,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 请注意，目前移动客户端上不支持带有提及的卡片。
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>带提及的示例自适应卡片
+
 ``` json
 {
   "contentType": "application/vnd.microsoft.card.adaptive",
