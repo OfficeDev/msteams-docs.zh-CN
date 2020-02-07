@@ -3,12 +3,12 @@ title: 向连接器和 Webhook 发送邮件
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: cf720bb8193c6b61ba37e8d89fafc044555222ac
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673428"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783911"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -230,14 +230,15 @@ ms.locfileid: "41673428"
 
 ## <a name="rate-limiting-for-connectors"></a>连接器的速率限制
 
-此限制控制允许连接器或传入 Webhook 在频道上生成的流量。
+此限制控制允许连接器或传入 Webhook 在频道上生成的流量。 当超出速率限制阈值时，将限制 Webhook 或连接器发出的请求。 限制行为的时间长度与超出的请求速率参数直接相关。 例如，如果连接器或 Webhook 在 3600 秒内超过 100 个消息请求，则在接下来的 3600 秒内将限制该连接器：
 
 | 时间段（秒）  | 允许的最大邮件请求数  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
+| 3600（1小时）  | 100  | 
 | 7200 | 150  | 
+| 86400（1 天） | 1800  | 
 
 如下所示，[具有指数补偿的重试逻辑](/azure/architecture/patterns/retry)将减轻速率限制，以应对请求在一秒内超出限制的情况。 请按照[最佳做法](../../bots/how-to/rate-limit.md#best-practices)避免达到速率限制。
 
