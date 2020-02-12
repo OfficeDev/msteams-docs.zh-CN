@@ -2,12 +2,12 @@
 title: 构建一个出色的应用程序详细信息页
 description: 描述应用程序详细信息页必须具有的内容
 keywords: 团队发布存储 office 发布策略 AppSource 内容
-ms.openlocfilehash: 4a98cca7b1ddd87d79e38d863fd3868171b7749e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673091"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953514"
 ---
 # <a name="build-a-great-app-details-page"></a>构建一个出色的应用程序详细信息页
 
@@ -41,7 +41,7 @@ ms.locfileid: "41673091"
 
 ## <a name="outline-icon"></a>大纲图标
 
-这在邮件扩展中用于标记为用户收藏的用户和左侧导航菜单。 请确保它简单且可识别。
+这在邮件扩展中用于标记为用户收藏的用户和左侧导航菜单。 请确保它简单且可识别。 大纲图标必须仅包含白色和透明度（无其他颜色）。 有关所需的规范，*请参阅*为[Microsoft 团队应用程序图标创建应用程序包](../../../build-and-test/apps-package.md#icons)。
 
 ![应用图标大纲存储视图](~/assets/images/store-detail-page/AppIconOutline-02.png)
 ![应用图标大纲 appstudio 视图](~/assets/images/store-detail-page/AppIconOutline-01.png)

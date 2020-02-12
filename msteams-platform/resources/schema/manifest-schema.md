@@ -2,12 +2,12 @@
 title: 清单架构参考
 description: 介绍 Microsoft 团队清单支持的架构
 keywords: 团队清单架构
-ms.openlocfilehash: d4a2864c18a5066673bafab42a46733a0ab5f116
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1a1a690e6e382dcad3ceb200ec02286e8c9171f8
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673271"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953486"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考： Microsoft 团队的清单架构
 
@@ -219,7 +219,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 指定有关贵公司的信息。 对于提交到 AppSource （以前称为 "Office 应用商店"）的应用程序，这些值必须与您的 AppSource 条目中的信息相匹配。 有关详细信息，请参阅我们的[发布指南](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`name`|32个字符|✔|开发人员的显示名称。|
 |`websiteUrl`|2048 个字符|✔|开发人员网站的 https://URL。 此链接应将用户带到您的公司或特定于产品的登陆页面。|
@@ -233,7 +233,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 允许指定默认语言，以及指向其他语言文件的指针。 请参阅[本地化](~/concepts/build-and-test/apps-localization.md)。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`defaultLanguageTag`||✔|此顶级清单文件中的字符串的语言标记。|
 
@@ -241,7 +241,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 指定其他语言翻译的对象的数组。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`languageTag`||✔|所提供文件中的字符串的语言标记。|
 |`file`||✔|包含翻译字符串的 json 文件的相对文件路径。|
@@ -252,7 +252,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 在团队体验中向用户显示的应用程序体验的名称。 对于提交到 AppSource 的应用程序，这些值必须与您的 AppSource 条目中的信息相匹配。 `short`和`full`的值不应相同。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`short`|30 个字符|✔|应用程序的短显示名称。|
 |`full`|100 个字符||应用程序的全名，如果完整的应用程序名称超过30个字符，则使用该名称。|
@@ -265,7 +265,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 确保你的说明准确描述你的体验，并提供信息，以帮助潜在客户了解你的体验。 如果需要使用外部帐户，还应在完整说明中说明。 `short`和`full`的值不应相同。  您的简短说明不得在详细说明中重复，并且不得包含任何其他应用程序名称。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`short`|80个字符|✔|在空间有限时使用的应用程序体验的简短说明。|
 |`full`|4000个字符|✔|您的应用程序的完整说明。|
@@ -276,7 +276,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 在团队应用程序中使用的图标。 图标文件必须作为上载包的一部分包括在内。 有关详细信息，请参阅[图标](~/concepts/build-and-test/apps-package.md#icons)。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`outline`|2048 个字符|✔|指向透明 32x32 PNG 边框图标的相对文件路径。|
 |`color`|2048 个字符|✔|完整颜色 192x192 PNG 图标的相对文件路径。|
@@ -315,11 +315,14 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`entityId`|String|64个字符|✔|选项卡显示的实体的唯一标识符。|
+|`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|String|128个字符|✔|该选项卡在通道接口中的显示名称。|
 |`contentUrl`|String|2048 个字符|✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
 |`websiteUrl`|String|2048 个字符||要指向的 https://URL，如果用户要在浏览器中查看。|
 |`scopes`|枚举数组|1 |✔|目前，静态选项卡仅支持`personal`作用域，这意味着它只能作为个人体验的一部分进行预配。|
+
+> [!NOTE]
+> 如果您的选项卡需要上下文相关信息来显示相关内容或启动身份验证流，*请参阅*[获取 Microsoft 团队的上下文选项卡](../../tabs/how-to/access-teams-context.md)。
 
 ## <a name="bots"></a>bot
 
@@ -331,11 +334,11 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`botId`|String|64个字符|✔|与 Bot 框架一起注册的 bot 的唯一 Microsoft 应用 ID。 这可能与整体[应用程序 ID](#id)很好。|
-|`needsChannelSelector`|Boolean|||描述 bot 是否利用用户提示将机器人添加到特定频道。 设置`false`|
-|`isNotificationOnly`|Boolean|||指示 bot 是否为单向仅通知 bot，而不是对话机器人。 设置`false`|
-|`supportsFiles`|Boolean|||指示 bot 是否支持在个人聊天中上载/下载文件的功能。 设置`false`|
-|`scopes`|枚举数组|3 |✔|指定机器人是在中的频道上下文中`team`、在组中的聊天（`groupchat`）中，还是在仅限于单个用户（`personal`）的体验中提供体验。 这些选项是非独占的。|
+|`botId`|字符串|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这可能与整体[应用程序 ID](#id)很好。|
+|`needsChannelSelector`|Boolean|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 设置`false`|
+|`isNotificationOnly`|Boolean|||指示自动程序是否为单向、仅通知的自动程序，而不是对话自动程序。 设置`false`|
+|`supportsFiles`|布尔值|||指示自动程序是否支持在个人聊天中上传/下载文件。 设置`false`|
+|`scopes`|枚举数组|3 |✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
 
 ### <a name="botscommandlists"></a>commandLists
 
@@ -343,8 +346,8 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`items.scopes`|枚举数组|3 |✔|指定命令列表有效的范围。 选项包括`team`、 `personal`和`groupchat`。|
-|`items.commands`|对象数组|10 |✔|机器人支持的命令数组：<br>`title`： bot 命令名称（string，32）<br>`description`：命令语法及其参数的简单说明或示例（string，128）|
+|`items.scopes`|枚举数组|3 |✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
+|`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单描述或示例（字符串，128）|
 
 ## <a name="connectors"></a>插槽
 
@@ -357,7 +360,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置连接器时要使用的 https://URL。|
-|`connectorId`|String|64个字符|✔|与[连接器开发人员仪表板](https://aka.ms/connectorsdashboard)中的 ID 相匹配的连接器的唯一标识符。|
+|`connectorId`|字符串|64 个字符|✔|与[连接器开发人员仪表板](https://aka.ms/connectorsdashboard)中的 ID 相匹配的连接器的唯一标识符。|
 |`scopes`|枚举数组|1 |✔|指定连接器是在中的频道上下文中`team`，还是在仅限于单个用户的体验（`personal`）中提供体验。 目前，仅支持`team`作用域。|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -388,8 +391,8 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`id`|String|64个字符|✔|命令的 ID|
-|`type`|String|64个字符||命令的类型。 一个`query`或`action`。 设置`query`|
+|`id`|字符串|64 个字符|✔|命令的 ID|
+|`type`|字符串|64 个字符||命令的类型。 一个`query`或`action`。 设置`query`|
 |`title`|String|32个字符|✔|用户友好的命令名称|
 |`description`|String|128个字符||对用户显示的说明，以指示此命令的用途|
 |`initialRun`|Boolean|||一个布尔值，指示是否在最初不使用任何参数的情况之下运行该命令。 设置`false`|
@@ -401,7 +404,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 |`taskInfo.height`|String|||对话框高度-以像素为单位的数字或默认布局，如 "大"、"中" 或 "small"|
 |`taskInfo.url`|String|||初始 web 视图 URL|
 |`parameters`|对象数组|5 |✔|命令所采用的参数的列表。 最小值： 1;最大值：5|
-|`parameter.name`|String|64个字符|✔|在客户端中显示的参数的名称。 此项包含在用户请求中。|
+|`parameter.name`|字符串|64 个字符|✔|在客户端中显示的参数的名称。 此项包含在用户请求中。|
 |`parameter.title`|String|32个字符|✔|参数的用户友好标题。|
 |`parameter.description`|String|128个字符||描述此参数用途的用户友好字符串。|
 |`parameter.inputType`|String|128个字符||定义在的任务模块上显示的控件的类型`fetchTask: true`。 一个`text` `textarea`、 `number` `date`、、、、 `time` `toggle``choiceset`|
