@@ -2,12 +2,12 @@
 title: 使用邮件扩展启动操作
 description: 创建基于操作的消息扩展以允许用户触发外部服务
 keywords: 工作组邮件传递扩展邮件扩展搜索
-ms.openlocfilehash: 9b7d3bd53ba45d55e80f858a3c89be265c13482b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1a38b4f7bfb413defd28950ca9b97f7411cf9c09
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673285"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228029"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>使用邮件扩展启动操作
 
@@ -496,9 +496,7 @@ ms.locfileid: "41673285"
 
 响应`edit`请求时，应`task`响应，其中包含以用户已提交的信息填充的值。 响应`send`请求时，应向包含最终的自适应卡的频道发送一封邮件。
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
-
-下面的示例展示了如何使用[Node.js 团队 Bot 生成器 SDK](https://www.npmjs.com/package/botbuilder-teams)执行此操作。
+# <a name="typescriptnodejs"></a>[TypeScript/node.js](#tab/typescript)
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
@@ -558,7 +556,9 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
+
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
 此示例演示如何使用[Microsoft Bot. 团队 SDK （v3）](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)进行传输。
 

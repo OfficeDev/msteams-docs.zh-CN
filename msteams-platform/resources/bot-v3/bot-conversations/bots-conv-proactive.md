@@ -2,12 +2,12 @@
 title: 主动消息
 description: 描述 bot 可以在 Microsoft 团队中开始对话
 keywords: 团队方案主动消息对话机器人
-ms.openlocfilehash: c5c779b7ec5733b19366ae73053ef7d45ca6c1d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2f644820da33acc885a7972b13a1f61c167d6d8f
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673047"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228064"
 ---
 # <a name="proactive-messaging-for-bots"></a>针对 bot 的主动消息
 
@@ -130,8 +130,6 @@ await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 
 ### <a name="using-nodejs"></a>使用 node.js
 
-此示例使用[botbuilder](https://www.npmjs.com/package/botbuilder-teams) npm 程序包。
-
 ```javascript
 var address =
 {
@@ -156,13 +154,15 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
+*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
+
 ## <a name="creating-a-channel-conversation"></a>创建频道对话
 
 您的团队添加的 bot 可以发布到通道中，以创建新的答复链。 如果您使用的是 node.js 团队 SDK，则使用`startReplyChain()`可为您提供一个具有正确的活动 id 和会话 id 的完全填充的地址。如果使用的是 c #，请参阅下面的示例。
 
 或者，也可以使用 REST API 并向[`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) RESOURCE 发出 POST 请求。
 
-### <a name="net-example-from-this-samplehttpsgithubcomofficedevmicrosoft-teams-sample-complete-csharpblob32c39268d60078ef54f21fb3c6f42d122b97da22template-bot-master-csharpsrcdialogsexamplesteamsproactivemsgto1to1dialogcs"></a>.NET 示例（[本示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)中）
+### <a name="net-example-from-this-sample"></a>.NET 示例（[本示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)中）
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;

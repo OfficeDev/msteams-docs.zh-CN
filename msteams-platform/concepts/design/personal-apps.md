@@ -2,12 +2,12 @@
 title: 设计准则参考
 description: 介绍设计个人应用程序的指南
 keywords: 团队设计准则参考框架个人应用程序
-ms.openlocfilehash: 6a07b618d78a3ad79850713052c88ef178c1ecc1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673068"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228071"
 ---
 # <a name="personal-apps"></a>个人应用程序
 
@@ -34,7 +34,7 @@ ms.locfileid: "41673068"
 
 ### <a name="your-tab"></a>您的选项卡
 
-你的用户将看到其所有内容。 其个人空间。 该选项卡可作为列表、网格、列或单个画布进行排列。。最适用于您的应用程序的任何功能。 有关设计有效选项卡的其他信息，请参阅： [选项卡设计（~/tabs/design/tabs.md）。
+你的用户将看到其所有内容。 其个人空间。 该选项卡可作为列表、网格、列或单个画布进行排列。。最适用于您的应用程序的任何功能。 有关设计有效选项卡的其他信息，请参阅：[选项卡设计](../../tabs/design/tabs.md)。
 
 由于此选项卡可以显示来自多个通道的项目，因此每个项目都应显示其自己的团队、频道和选项卡，以便用户可以轻松地查看它的来源。
 
@@ -46,7 +46,7 @@ ms.locfileid: "41673068"
 
 ![最近选项卡](~/assets/images/Personal-apps-Recent-tab.png)
 
-### <a name="all"></a>所有
+### <a name="all"></a>全部
 
 这是个人组织中的所有选项卡的列表（仍有权访问它们）。 换句话说，它在使用应用程序的任何位置显示它们。 与**最近**的选项卡一样，选择列表中的内容会将用户直接带入相关频道和选项卡。
 
@@ -54,7 +54,7 @@ ms.locfileid: "41673068"
 
 Bot 不是必需的，但它是直接和私下与用户进行通信的绝佳方式。 通知是个人应用程序中最重要的功能之一，以及通知与直接通信是否更好的方法？
 
-Bot 以卡片形式传递邮件，这可以提供特定信息（如通知新内容可用）或广泛的更新（如日常待办情况列表）。 有关设计有效的 bot 的详细信息，请参阅： [Bot 设计（~/bots/design/bots.md）。
+Bot 以卡片形式传递邮件，这可以提供特定信息（如通知新内容可用）或广泛的更新（如日常待办情况列表）。 有关设计有效的 bot 的其他信息，请参阅： [Bot 设计](../../bots/design/bots.md)。
 
 ![Bot 问候语](~/assets/images/Personal-apps-Bot.png)
 

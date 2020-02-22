@@ -4,12 +4,12 @@ author: clearab
 description: 如何使用 Microsoft 团队 bot 发送主动消息。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e60fdbfb909abec2c6d64ed0d32fa1a4c4b463a6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2821e4d7ddeb74b3921be792cc55a136ab4ac5e4
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673138"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228078"
 ---
 # <a name="send-proactive-messages"></a>发送主动消息
 
@@ -108,7 +108,7 @@ POST /v3/conversations
 
 此 ID 是个人聊天的唯一会话 ID。 请存储此值并重用它以供用户将来交互。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
 本示例使用的是 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。
 
@@ -131,9 +131,9 @@ Activity newActivity = new Activity()
 await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 ```
 
-# <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-此示例使用[botbuilder](https://www.npmjs.com/package/botbuilder-teams) npm 程序包。
+*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
 
 ```javascript
 var address =
@@ -159,7 +159,7 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def _send_proactive_message():
@@ -178,10 +178,9 @@ async def _send_proactive_message():
 
 或者，也可以使用 REST API 并向[`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) RESOURCE 发出 POST 请求。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
 下面的代码段来自[此示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)。
-
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
@@ -227,13 +226,13 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 }
 ```
 
-# <a name="javascripttabjavascript"></a>[JavaScript](#tab/javascript)
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-此示例使用[botbuilder](https://www.npmjs.com/package/botbuilder-teams) npm 程序包。 下面的代码片段来自[teamsConversationBot](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js)。
+下面的代码片段来自[teamsConversationBot](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js)。
 
 [!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 [!code-python[message-all-members](~/../botbuilder-samples/samples/python/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
 

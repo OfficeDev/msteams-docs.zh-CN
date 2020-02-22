@@ -3,12 +3,12 @@ title: 与 bot 的频道和组聊天对话
 description: 介绍在 Microsoft 团队中与频道中的 bot 进行对话的端到端方案
 keywords: 团队方案频道对话机器人
 ms.date: 06/25/2019
-ms.openlocfilehash: 168abd1e3894b95983eec01541d470f1b5384a66
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673048"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42227996"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>与 Microsoft 团队 bot 的频道和组聊天对话
 
@@ -136,8 +136,6 @@ await client.Conversations.ReplyToActivityAsync(replyActivity);
 
 #### <a name="nodejs-example"></a>Node.js 示例
 
-此示例使用[botbuilder](https://www.npmjs.com/package/botbuilder-teams) npm 程序包。
-
 ```javascript
 // User to mention
 var toMention: builder.IIdentity = {
@@ -199,3 +197,5 @@ session.send(generalMessage);
 ## <a name="accessing-groupchat-or-channel-scope"></a>访问 groupChat 或通道范围
 
 你的 bot 可以执行的操作不仅仅是在组和团队中发送和接收邮件。 例如，它还可以提取成员列表，包括其配置文件信息和通道列表。 若要了解详细信息，请参阅[获取 Microsoft 团队 bot 的上下文](~/resources/bot-v3/bots-context.md)。
+
+*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。

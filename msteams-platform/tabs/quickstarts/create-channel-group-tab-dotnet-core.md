@@ -4,12 +4,12 @@ author: laujan
 description: 用于创建带有 ASP.NET Core 的自定义频道和分组选项卡的快速入门指南。
 ms.topic: quickstart
 ms.author: laujan
-ms.openlocfilehash: 7fdc4b042aac0664ae9d62c73c90689c75823592
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 47a0c98d630501944c7a5f4baf4620dbb70cdbcd
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673474"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228002"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a>使用 ASP.NET Core 创建自定义通道和组选项卡
 
@@ -113,4 +113,3 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
-[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]

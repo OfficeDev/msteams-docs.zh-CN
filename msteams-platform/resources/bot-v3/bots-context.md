@@ -3,12 +3,12 @@ title: 获取你的 bot 的上下文
 description: 介绍如何在 Microsoft 团队中获取 bot 的上下文
 keywords: 团队 bot 上下文
 ms.date: 05/20/2019
-ms.openlocfilehash: 2dea6fd51e7274fa899d9ae882441a21618d7e09
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673481"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42227995"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>获取你的 Microsoft 团队 bot 的上下文
 
@@ -17,7 +17,7 @@ ms.locfileid: "41673481"
 你的 bot 可以访问有关团队或聊天的其他上下文，如用户配置文件。 此信息可用于丰富你的 bot 的功能，并提供更个性化的体验。
 
 > [!NOTE]
-> 通过使用机器人&ndash;生成器 SDK 的扩展，可以更好地访问这些 Microsoft 团队特定的 bot api。 对于 c #/.NET，请下载我们的 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。 对于 node.js 开发，可以安装[botbuilder-团队](https://www.npmjs.com/package/botbuilder-teams)npm 程序包。 Sdk 目标 Bot 生成器版本 v3。
+> 通过使用机器人&ndash;生成器 SDK 的扩展，可以更好地访问这些 Microsoft 团队特定的 bot api。 对于 c #/.NET，请下载我们的 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。 对于 node.js 开发，BotBuilder for Microsoft 团队功能已并入到来自 v4.0 的[Bot 框架 SDK](https://github.com/microsoft/botframework-sdk)中。
 
 ## <a name="fetching-the-team-roster"></a>提取团队名单
 
@@ -90,8 +90,6 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 
 ### <a name="nodejstypescript-example"></a>Node.js/TypeScript 示例
 
-下面的示例使用[Microsoft 团队扩展获取用于 node.js 的 Bot 生成器 SDK](https://www.npmjs.com/package/botbuilder-teams)。
-
 ```typescript
 
 [...]
@@ -112,6 +110,8 @@ connector.fetchMembers(
   }
 );
 ```
+
+*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
 
 ## <a name="fetching-user-profile-or-roster-in-personal-or-group-chat"></a>获取个人聊天或组聊天中的用户配置文件或名单
 

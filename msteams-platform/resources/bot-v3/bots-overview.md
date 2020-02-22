@@ -3,12 +3,12 @@ title: 向 Microsoft 团队应用程序添加 bot
 description: 介绍如何开始在 Microsoft 团队中开发 bot
 keywords: 团队 bot 开发
 ms.date: 05/20/2018
-ms.openlocfilehash: 0ecb268c34275e958103c9905b2ed1f0858cafda
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 58221e94520ef6e748bbd6c17fa7933813874c56
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673030"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228050"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>向 Microsoft 团队应用程序添加 bot
 
@@ -42,9 +42,9 @@ Microsoft 团队支持大多数[Microsoft Bot 框架](https://dev.botframework.c
 
 SDK 扩展安装了依赖项，包括机器人生成器 SDK。
 
-* **.Net**若要使用适用于 .NET 的机器人生成器 SDK 的 Microsoft 团队扩展，请在 Visual Studio 项目中安装 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。
-* **Node.js 若要**使用用于 Node.js 的 BOT 生成器 SDK 的 Microsoft 团队扩展，请添加[botbuilder](https://www.npmjs.com/package/botbuilder-teams) npm 程序包。
-* **源代码**您可以在 Github 上的[BotBuilder-MicrosoftTeams](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams)存储库中查找扩展的完整源代码。
+* **.Net**若要使用适用于 .NET 的机器人生成器 SDK 的 Microsoft 团队扩展，请在 Visual Studio 项目中安装 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。 对于 node.js 开发，BotBuilder for Microsoft 团队功能已并入到来自 v4.0 的[Bot 框架 SDK](https://github.com/microsoft/botframework-sdk)中。
+
+*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
 
 > [!IMPORTANT]
 > 您可以在任何其他 web 编程技术中开发团队应用程序，并直接调用[Bot 框架 REST api](/bot-framework/rest-api/bot-framework-rest-overview) ，但您必须自己执行所有令牌处理。

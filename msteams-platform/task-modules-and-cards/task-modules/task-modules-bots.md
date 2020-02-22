@@ -2,12 +2,12 @@
 title: 在 Microsoft 团队 bot 中使用任务模块
 description: 如何在 Microsoft 团队 bot 中使用任务模块，包括机器人框架卡、自适应卡片和深层链接。
 keywords: 任务模块团队 bot
-ms.openlocfilehash: 3a0e4591dbb26ff4afa8cc06edc0a03365da0eca
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 09b0ede85c613d5724c6ecddbccd2a59c43cad74
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673196"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228092"
 ---
 # <a name="using-task-modules-from-microsoft-teams-bots"></a>使用 Microsoft 团队 bot 中的任务模块
 
@@ -76,8 +76,6 @@ ms.locfileid: "41673196"
 | `value`  | 开发人员定义的有效负载。 通常， `value`对象的结构会反映从团队发送的内容。 但是，在这种情况下，由于我们要支持来自 Bot 框架（`task/fetch``value`）和自适应卡片`Action.Submit`操作（`data`）的动态提取（），并且除了中`context` `value` / `data`包含的内容之外，我们还需要一种方法来将团队与 bot 进行通信。<br/><br/>为此，我们将两者组合成一个父对象：<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---nodejs"></a>示例：接收和响应任务/提取和任务/提交调用消息-node.js
-
-在 Bot `invoke`框架中处理邮件可能有点麻烦，因为在 BOT 框架 SDK 中不提供对它们的正式支持。 为了简化此过程，团队已在`onInvoke()` [botbuilder-团队 npm 包](https://www.npmjs.com/package/botbuilder-teams)中创建了 helper 函数（对于 node.js）。 下面的示例展示了如何执行此操作：
 
 > [!NOTE]
 > 下面的示例代码在此功能的技术预览和最终版本中进行了修改： `task/fetch`请求的架构已更改，以遵循[上一节中所述](#payload-of-taskfetch-and-tasksubmit-messages)内容。 也就是说，文档是正确的，但实现不正确。 请参阅`// for Technical Preview [...]`下面的注释以了解所做的更改。
@@ -159,6 +157,8 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
     }
 }
 ```
+
+*另*请参阅[Microsoft 团队任务模块示例代码-Nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)和[Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---c"></a>示例：接收和响应任务/提取和任务/提交调用消息-C#
 

@@ -2,12 +2,12 @@
 title: Microsoft 团队的 Yeoman 生成器入门
 description: 使用 Microsoft 团队的 Yeoman 生成器开始构建强大的应用程序
 keywords: 入门节点 .js nodejs yeoman
-ms.openlocfilehash: b0a9ae8d526286790d266e4291ef95d4ed7ce90f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6318b51c29c673b0bf3504218100cf0d7aad7b97
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673180"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228085"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>构建你的首个 Microsoft 团队应用
 
@@ -118,7 +118,7 @@ npm install generator-teams@preview --global
 
 Microsoft 团队不允许您在 localhost 上托管您的应用程序，因此您需要将其发布到公用 URL 或使用代理（如 ngrok）。
 
-好消息是搭建项目具有此内置的。 在运行`gulp ngrok-serve` ngrok 服务时，将在后台启动，并提供唯一和公共 DNS 条目，并且它还会将清单打包为该唯一的 URL，然后执行与相同的完全相同`gulp serve`的任务。
+好消息是搭建项目具有此内置的。 在运行`gulp ngrok-serve` ngrok 服务时，将在后台启动，并使用唯一的公共 DNS 条目，并将清单打包为该唯一的 URL，然后执行与相同的完全相同的任务`gulp serve`。
 
 运行`gulp ngrok-serve`后，创建一个新的 Microsoft 团队团队，并在创建时单击团队名称，以转到 "团队设置"，然后选择 "*应用*"。 在右下角，您应该会看到一个链接 "*上传自定义应用程序*"，选择它，然后浏览到您的项目`package`文件夹和名为的子文件夹。 选择该文件夹中的 zip 文件，然后选择 "打开"。 现在，您的应用程序将旁加载到 Microsoft 团队中。
 

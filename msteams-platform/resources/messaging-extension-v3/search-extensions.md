@@ -2,13 +2,13 @@
 title: 使用邮件扩展进行搜索
 description: 介绍如何开发基于搜索的邮件扩展插件
 keywords: 工作组邮件传递扩展邮件扩展搜索
-ms.date: 05/20/2019
-ms.openlocfilehash: 7baf55d7184784a436ac5a3d6b82db233389bca7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.date: 07/20/2019
+ms.openlocfilehash: c220d976fa3e9920c8d4bb332a793b23d9b294c4
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673282"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228043"
 ---
 # <a name="search-with-messaging-extensions"></a>使用邮件扩展进行搜索
 
@@ -135,7 +135,7 @@ ms.locfileid: "41673282"
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
 |`channelData.channel.id`| 通道 ID （如果请求是在通道中发出的）。 |
 |`channelData.team.id`| "工作组 ID" （如果请求是在通道中进行的）。 |
-|`clientInfo`法人 | 有关客户端的其他元数据，例如客户端的区域设置/语言和类型。 |
+|`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>`country`字段包含用户检测到的位置。<br>`platform`字段描述邮件客户端平台。 <br>有关其他信息，请*参阅*[非 IRI 实体类型-clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
 
 请求参数本身位于 value 对象中，其中包括以下属性：
 
@@ -183,11 +183,9 @@ ms.locfileid: "41673282"
   },
   "entities": [
     {
-      "locale": "en-US",
+    "type": "clientInfo",
       "country": "US",
-      "platform": "Windows",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
+      "platform": "Windows"
     }
   ]
 }
@@ -524,10 +522,10 @@ ms.locfileid: "41673282"
     "timestamp": "2017-04-26T05:18:25.629Z",
     "localTimestamp": "2017-04-25T22:18:25.629-07:00",
     "entities": [{
-        "locale": "en-US",
+        "type": "clientInfo",
         "country": "US",
         "platform": "Web",
-        "type": "clientInfo"
+        
     }],
     "text": "",
     "attachments": [],
@@ -602,8 +600,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-用于 node.js 的 Bot 生成器 SDK 的[团队扩展](https://www.npmjs.com/package/botbuilder-teams)提供了帮助程序对象和方法，以简化邮件扩展请求的接收、处理和响应。
-
 #### <a name="example-code-in-nodejs"></a>Node.js 中的示例代码
 
 ```javascript
@@ -659,3 +655,4 @@ class App {
 const app = new App();
 app.run();
 ```
+*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
