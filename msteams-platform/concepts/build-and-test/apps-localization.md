@@ -3,12 +3,12 @@ title: 工作组应用程序的本地化
 description: 介绍有关本地化应用程序的问题
 keywords: 团队发布 microsoft store office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: b09f33e53303587e81b445c012de92b11dd90580
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673113"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279759"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft 团队应用程序的本地化
 
@@ -66,7 +66,7 @@ ms.locfileid: "41673113"
 }
 ```
 
-您可以提供附加的 json 文件，其中包含清单中所有面向用户的字符串的转换。 这些文件必须遵循[本地化文件 JSON 架构](~/resources/schema/localization-schema.md)，并且必须将其添加到清单的 "localizationInfo" 属性。 每个文件都与一个语言标记相关联，团队客户端使用这些标记来选择适当的字符串。 语言标记<language> - <region>采用的形式为，但建议省略<region>部分，以面向支持所需语言的所有区域。
+您可以提供附加的 json 文件，其中包含清单中所有面向用户的字符串的转换。 这些文件必须遵循[本地化文件 JSON 架构](../../resources/schema/localization-schema.md)，并且必须将其添加到清单的 "localizationInfo" 属性。 每个文件都与一个语言标记相关联，团队客户端使用这些标记来选择适当的字符串。 语言标记<language> - <region>采用的形式为，但建议省略<region>部分，以面向支持所需语言的所有区域。
 
 团队客户端将按如下顺序应用这些字符串：默认语言字符串-> 用户的语言仅为字符串-> 用户的语言 + 用户的区域字符串。
 

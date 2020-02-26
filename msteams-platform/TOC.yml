@@ -369,5 +369,7 @@
       href: resources/schema/manifest-schema.md
     - name: 本地化文件 JSON 架构
       href: resources/schema/localization-schema.md
+    - name: 团队参与者指南
+      href: resources/teams-contributor-reference.md
 - name: 支持和反馈
   href: feedback.md
