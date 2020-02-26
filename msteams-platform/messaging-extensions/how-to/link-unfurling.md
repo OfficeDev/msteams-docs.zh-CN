@@ -4,37 +4,37 @@ author: clearab
 description: 如何在 Microsoft 团队应用中使用邮件扩展功能执行链接 unfurling。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5b20ea303a2c3d085651a53b01af4bb449d386de
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673495"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279772"
 ---
-# <a name="link-unfurling"></a><span data-ttu-id="5881e-103">链接 unfurling</span><span class="sxs-lookup"><span data-stu-id="5881e-103">Link unfurling</span></span>
+# <a name="link-unfurling"></a><span data-ttu-id="eb12d-103">链接 unfurling</span><span class="sxs-lookup"><span data-stu-id="eb12d-103">Link unfurling</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-<span data-ttu-id="5881e-104">通过链接 unfurling 如果将特定域的 Url 粘贴`invoke`到撰写邮件区域中，应用可以注册接收活动。</span><span class="sxs-lookup"><span data-stu-id="5881e-104">With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area.</span></span> <span data-ttu-id="5881e-105">`invoke`将包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可以*unfurl*的卡片进行响应，并提供其他信息或操作。</span><span class="sxs-lookup"><span data-stu-id="5881e-105">The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions.</span></span> <span data-ttu-id="5881e-106">此操作的工作方式与[搜索命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)非常相似，URL 充当搜索词。</span><span class="sxs-lookup"><span data-stu-id="5881e-106">This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.</span></span>
+<span data-ttu-id="eb12d-104">通过链接 unfurling 如果将特定域的 Url 粘贴`invoke`到撰写邮件区域中，应用可以注册接收活动。</span><span class="sxs-lookup"><span data-stu-id="eb12d-104">With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area.</span></span> <span data-ttu-id="eb12d-105">`invoke`将包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可以*unfurl*的卡片进行响应，并提供其他信息或操作。</span><span class="sxs-lookup"><span data-stu-id="eb12d-105">The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions.</span></span> <span data-ttu-id="eb12d-106">此操作的工作方式与[搜索命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)非常相似，URL 充当搜索词。</span><span class="sxs-lookup"><span data-stu-id="eb12d-106">This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.</span></span>
 
-<span data-ttu-id="5881e-107">Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的撰写邮件区域中的 Url。</span><span class="sxs-lookup"><span data-stu-id="5881e-107">The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item.</span></span> <span data-ttu-id="5881e-108">在下面的屏幕截图中，用户已将 Azure DevOps 中的工作项的 URL 粘贴到邮件扩展已解析为卡片。</span><span class="sxs-lookup"><span data-stu-id="5881e-108">In the screenshot below, a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.</span></span>
+<span data-ttu-id="eb12d-107">Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的撰写邮件区域中的 Url。</span><span class="sxs-lookup"><span data-stu-id="eb12d-107">The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item.</span></span> <span data-ttu-id="eb12d-108">在下面的屏幕截图中，用户已将 Azure DevOps 中的工作项的 URL 粘贴到邮件扩展已解析为卡片。</span><span class="sxs-lookup"><span data-stu-id="eb12d-108">In the screenshot below, a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.</span></span>
 
 ![Link unfurling 的示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-## <a name="add-link-unfurling-to-your-app-manifest"></a><span data-ttu-id="5881e-110">向您的应用程序清单添加链接 unfurling</span><span class="sxs-lookup"><span data-stu-id="5881e-110">Add link unfurling to your app manifest</span></span>
+## <a name="add-link-unfurling-to-your-app-manifest"></a><span data-ttu-id="eb12d-110">向您的应用程序清单添加链接 unfurling</span><span class="sxs-lookup"><span data-stu-id="eb12d-110">Add link unfurling to your app manifest</span></span>
 
-<span data-ttu-id="5881e-111">为此，您需要将新`messageHandlers`的数组添加到`composeExtensions`应用程序清单 JSON 的部分。</span><span class="sxs-lookup"><span data-stu-id="5881e-111">To do this you'll add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON.</span></span> <span data-ttu-id="5881e-112">您可以使用应用程序 Studio 的帮助或手动执行此操作。</span><span class="sxs-lookup"><span data-stu-id="5881e-112">You can either do so with the help of App Studio, or manually.</span></span> <span data-ttu-id="5881e-113">例如`*.example.com`，域列表可以包含通配符。</span><span class="sxs-lookup"><span data-stu-id="5881e-113">Domain listings can include wildcards, for example `*.example.com`.</span></span> <span data-ttu-id="5881e-114">这与域的一段完全匹配;如果需要匹配`a.b.example.com` ，请使用`*.*.example.com`。</span><span class="sxs-lookup"><span data-stu-id="5881e-114">This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.</span></span>
+<span data-ttu-id="eb12d-111">为此，您需要将新`messageHandlers`的数组添加到`composeExtensions`应用程序清单 JSON 的部分。</span><span class="sxs-lookup"><span data-stu-id="eb12d-111">To do this you'll add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON.</span></span> <span data-ttu-id="eb12d-112">您可以使用应用程序 Studio 的帮助或手动执行此操作。</span><span class="sxs-lookup"><span data-stu-id="eb12d-112">You can either do so with the help of App Studio, or manually.</span></span> <span data-ttu-id="eb12d-113">例如`*.example.com`，域列表可以包含通配符。</span><span class="sxs-lookup"><span data-stu-id="eb12d-113">Domain listings can include wildcards, for example `*.example.com`.</span></span> <span data-ttu-id="eb12d-114">这与域的一段完全匹配;如果需要匹配`a.b.example.com` ，请使用`*.*.example.com`。</span><span class="sxs-lookup"><span data-stu-id="eb12d-114">This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.</span></span>
 
-### <a name="using-app-studio"></a><span data-ttu-id="5881e-115">使用应用程序 Studio</span><span class="sxs-lookup"><span data-stu-id="5881e-115">Using App Studio</span></span>
+### <a name="using-app-studio"></a><span data-ttu-id="eb12d-115">使用 App Studio</span><span class="sxs-lookup"><span data-stu-id="eb12d-115">Using App Studio</span></span>
 
-1. <span data-ttu-id="5881e-116">在应用程序 Studio 中，在 "清单编辑器" 选项卡上，加载您的应用程序清单。</span><span class="sxs-lookup"><span data-stu-id="5881e-116">In App Studio, on the Manifest editor tab, load your app manifest.</span></span>
-1. <span data-ttu-id="5881e-117">在 "**邮件扩展**" 页上，在 "**邮件处理程序**" 部分添加要查找的域，如下面的屏幕截图所示。</span><span class="sxs-lookup"><span data-stu-id="5881e-117">On the **Messaging Extension** page, add the domain you want to look for in the **Message handlers** section as in the screenshot below.</span></span>
+1. <span data-ttu-id="eb12d-116">在应用程序 Studio 中，在 "清单编辑器" 选项卡上，加载您的应用程序清单。</span><span class="sxs-lookup"><span data-stu-id="eb12d-116">In App Studio, on the Manifest editor tab, load your app manifest.</span></span>
+1. <span data-ttu-id="eb12d-117">在 "**邮件扩展**" 页上，在 "**邮件处理程序**" 部分添加要查找的域，如下面的屏幕截图所示。</span><span class="sxs-lookup"><span data-stu-id="eb12d-117">On the **Messaging Extension** page, add the domain you want to look for in the **Message handlers** section as in the screenshot below.</span></span>
 
 ![应用程序 Studio 中的 "邮件处理程序" 部分](~/assets/images/link-unfurling.png)
 
-### <a name="manually"></a><span data-ttu-id="5881e-119">手动</span><span class="sxs-lookup"><span data-stu-id="5881e-119">Manually</span></span>
+### <a name="manually"></a><span data-ttu-id="eb12d-119">手动</span><span class="sxs-lookup"><span data-stu-id="eb12d-119">Manually</span></span>
 
-<span data-ttu-id="5881e-120">若要使您的邮件扩展能够与链接进行交互，这种方法首先需要`messageHandlers`将该数组添加到应用程序清单中，如以下示例中所示。</span><span class="sxs-lookup"><span data-stu-id="5881e-120">To enable your messaging extension to interact with links this way you'll first need to add the `messageHandlers` array to your app manifest as in the example below.</span></span> <span data-ttu-id="5881e-121">本示例不是完整的清单，请参阅[清单参考](~/resources/schema/manifest-schema.md)，了解完整的清单示例。</span><span class="sxs-lookup"><span data-stu-id="5881e-121">This example is not the complete manifest, see [manifest reference](~/resources/schema/manifest-schema.md) for a complete manifest example.</span></span>
+<span data-ttu-id="eb12d-120">若要使您的邮件扩展能够与链接进行交互，这种方法首先需要`messageHandlers`将该数组添加到应用程序清单中，如以下示例中所示。</span><span class="sxs-lookup"><span data-stu-id="eb12d-120">To enable your messaging extension to interact with links this way you'll first need to add the `messageHandlers` array to your app manifest as in the example below.</span></span> <span data-ttu-id="eb12d-121">本示例不是完整的清单，请参阅[清单参考](~/resources/schema/manifest-schema.md)，了解完整的清单示例。</span><span class="sxs-lookup"><span data-stu-id="eb12d-121">This example is not the complete manifest, see [manifest reference](~/resources/schema/manifest-schema.md) for a complete manifest example.</span></span>
 
 ```json
 ...
@@ -56,40 +56,40 @@ ms.locfileid: "41673495"
 ...
 ```
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a><span data-ttu-id="5881e-122">处理`composeExtension/queryLink`调用</span><span class="sxs-lookup"><span data-stu-id="5881e-122">Handle the `composeExtension/queryLink` invoke</span></span>
+## <a name="handle-the-composeextensionquerylink-invoke"></a><span data-ttu-id="eb12d-122">处理`composeExtension/queryLink`调用</span><span class="sxs-lookup"><span data-stu-id="eb12d-122">Handle the `composeExtension/queryLink` invoke</span></span>
 
-<span data-ttu-id="5881e-123">在添加了要侦听应用程序清单的域之后，您需要更新 web 服务代码以处理调用请求。</span><span class="sxs-lookup"><span data-stu-id="5881e-123">Once you've added the domain to listen on to the app manifest, you'll need to update your web service code to handle the invoke request.</span></span> <span data-ttu-id="5881e-124">使用您收到的 URL 搜索您的服务并创建卡片响应。</span><span class="sxs-lookup"><span data-stu-id="5881e-124">Use the URL you receive to search your service and create a card response.</span></span> <span data-ttu-id="5881e-125">如果使用多个卡进行响应，将仅使用第一个。</span><span class="sxs-lookup"><span data-stu-id="5881e-125">If you respond with more than one card, only the first will be used.</span></span>
+<span data-ttu-id="eb12d-123">在添加了要侦听应用程序清单的域之后，您需要更新 web 服务代码以处理调用请求。</span><span class="sxs-lookup"><span data-stu-id="eb12d-123">Once you've added the domain to listen on to the app manifest, you'll need to update your web service code to handle the invoke request.</span></span> <span data-ttu-id="eb12d-124">使用您收到的 URL 搜索您的服务并创建卡片响应。</span><span class="sxs-lookup"><span data-stu-id="eb12d-124">Use the URL you receive to search your service and create a card response.</span></span> <span data-ttu-id="eb12d-125">如果使用多个卡进行响应，将仅使用第一个。</span><span class="sxs-lookup"><span data-stu-id="eb12d-125">If you respond with more than one card, only the first will be used.</span></span>
 
-<span data-ttu-id="5881e-126">我们支持以下卡类型：</span><span class="sxs-lookup"><span data-stu-id="5881e-126">We support the following card types:</span></span>
+<span data-ttu-id="eb12d-126">我们支持以下卡类型：</span><span class="sxs-lookup"><span data-stu-id="eb12d-126">We support the following card types:</span></span>
 
-* [<span data-ttu-id="5881e-127">缩略图卡片</span><span class="sxs-lookup"><span data-stu-id="5881e-127">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [<span data-ttu-id="5881e-128">英雄卡片</span><span class="sxs-lookup"><span data-stu-id="5881e-128">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [<span data-ttu-id="5881e-129">Office 365 连接器卡</span><span class="sxs-lookup"><span data-stu-id="5881e-129">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [<span data-ttu-id="5881e-130">自适应卡片</span><span class="sxs-lookup"><span data-stu-id="5881e-130">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [<span data-ttu-id="eb12d-127">缩略图卡片</span><span class="sxs-lookup"><span data-stu-id="eb12d-127">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [<span data-ttu-id="eb12d-128">英雄卡片</span><span class="sxs-lookup"><span data-stu-id="eb12d-128">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [<span data-ttu-id="eb12d-129">Office 365 连接器卡</span><span class="sxs-lookup"><span data-stu-id="eb12d-129">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [<span data-ttu-id="eb12d-130">自适应卡片</span><span class="sxs-lookup"><span data-stu-id="eb12d-130">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-<span data-ttu-id="5881e-131">有关概述，请参阅[什么是卡片](~/task-modules-and-cards/what-are-cards.md)。</span><span class="sxs-lookup"><span data-stu-id="5881e-131">See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.</span></span>
+<span data-ttu-id="eb12d-131">有关概述，请参阅[什么是卡片](~/task-modules-and-cards/what-are-cards.md)。</span><span class="sxs-lookup"><span data-stu-id="eb12d-131">See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.</span></span>
 
-# <a name="cnettabdotnet"></a>[<span data-ttu-id="5881e-132">C #/.NET</span><span class="sxs-lookup"><span data-stu-id="5881e-132">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="eb12d-132">C #/.NET</span><span class="sxs-lookup"><span data-stu-id="eb12d-132">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
 {
     //You'll use the query.link value to search your service and create a card response
-    var heroCard = new ThumbnailCard
+    var card = new HeroCard
     {
-        Title = "Thumbnail Card",
+        Title = "Hero Card",
         Text = query.Url,
         Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
     };
 
-    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, heroCard);
+    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
     var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
 
     return new MessagingExtensionResponse(result);
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[<span data-ttu-id="5881e-133">JavaScript/node.js</span><span class="sxs-lookup"><span data-stu-id="5881e-133">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="eb12d-133">JavaScript/node.js</span><span class="sxs-lookup"><span data-stu-id="eb12d-133">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -112,9 +112,9 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[<span data-ttu-id="5881e-134">JSON</span><span class="sxs-lookup"><span data-stu-id="5881e-134">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="eb12d-134">JSON</span><span class="sxs-lookup"><span data-stu-id="eb12d-134">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="5881e-135">这是`invoke`发送到你的 bot 的一个示例。</span><span class="sxs-lookup"><span data-stu-id="5881e-135">This is an example of the `invoke` sent to your bot.</span></span>
+<span data-ttu-id="eb12d-135">这是`invoke`发送到你的 bot 的一个示例。</span><span class="sxs-lookup"><span data-stu-id="eb12d-135">This is an example of the `invoke` sent to your bot.</span></span>
 
 ```json
 {
@@ -126,7 +126,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="5881e-136">响应的示例如下所示。</span><span class="sxs-lookup"><span data-stu-id="5881e-136">An example of the response is shown below.</span></span>
+<span data-ttu-id="eb12d-136">响应的示例如下所示。</span><span class="sxs-lookup"><span data-stu-id="eb12d-136">An example of the response is shown below.</span></span>
 
 ```json
 {
