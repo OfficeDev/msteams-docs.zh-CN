@@ -116,7 +116,7 @@
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
             - name: TypeScript/node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
-    - name: 操作方法指南
+    - name: 操作指南
       expanded: true
       items:
         - name: 创建邮件扩展
@@ -157,7 +157,7 @@
       items:
         - name: 设计概述
           href: bots/design/bots.md
-    - name: 操作方法指南
+    - name: 操作指南
       expanded: true
       items:
         - name: 为团队创建机器人
@@ -240,7 +240,7 @@
           href: tabs/design/tabs.md
         - name: 移动客户端上的选项卡
           href: tabs/design/tabs-mobile.md
-    - name: 操作方法指南
+    - name: 操作指南
       expanded: true
       items:
         - name: 将选项卡添加到您的应用程序
@@ -299,7 +299,7 @@
   items:
     - name: 什么是 Webhook 和连接器？
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: 操作方法指南
+    - name: 操作指南
       expanded: true
       items:
         - name: 创建传入 webhook
@@ -365,6 +365,8 @@
       href: resources/media-formats.md
     - name: SameSite cookie 属性（2020更新）
       href: resources/samesite-cookie-update.md
+    - name: 团队/聊天成员的 Bot API 更改
+      href: resources/team-chat-member-api-changes.md
     - name: 清单架构
       href: resources/schema/manifest-schema.md
     - name: 本地化文件 JSON 架构
