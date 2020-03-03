@@ -3,18 +3,18 @@ title: 卡片中的文本格式
 description: 描述 Microsoft 团队中的卡片文本格式
 keywords: 团队 bot 卡片格式
 ms.date: 03/29/2018
-ms.openlocfilehash: 21adabe35011ba77d888165b9be7a544284cb1a3
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279779"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365246"
 ---
 # <a name="format-cards-in-teams"></a>设置团队中卡片的格式
 
 您可以使用 Markdown 或 HTML 向卡片添加格式文本格式，具体取决于卡片类型。
 
-卡片仅支持 text 属性中的格式设置，而不支持标题或副标题属性中的格式设置。 可以使用 XML （HTML）格式子集或 Markdown （具体取决于卡片类型）指定格式。 对于当前使用 Markdown 格式的 amd 未来开发的自适应卡，建议使用该格式。
+卡片仅支持 text 属性中的格式设置，而不支持标题或副标题属性中的格式设置。 可以使用 XML （HTML）格式子集或 Markdown （具体取决于卡片类型）指定格式。 对于当前和将来使用 Markdown 格式的开发自适应卡片，建议使用格式设置。
 
 不同的卡片类型之间的格式支持不同，在桌面和移动团队客户端以及桌面浏览器中的团队之间，卡片的呈现可能略有不同。
 

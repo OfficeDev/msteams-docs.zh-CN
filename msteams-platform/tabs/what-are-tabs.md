@@ -3,22 +3,35 @@ title: Microsoft 团队中的自定义选项卡是什么？
 author: laujan
 description: Microsoft 团队平台上的自定义选项卡概述
 ms.topic: overview
-ms.author: v-laujan
-ms.openlocfilehash: 7560a9a7d19ca0182b2f5f45b304a96a0f2dddd4
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 77faa5a4b3bf7eede1443317ad8baac4934ebf9a
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673442"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365253"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>什么是 Microsoft 团队自定义选项卡？
 
-选项卡是嵌入在 Microsoft 团队中的团队感知网页。 可以将它们添加为团队内的频道的一部分、组聊天或单个用户的个人应用程序。 作为应用程序的一部分，您可以添加自定义选项卡以在团队中嵌入自己的 web 内容，使用[团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)向您的 web 内容添加特定于团队的功能。
+选项卡是嵌入在 Microsoft 团队中的团队感知网页。 它们是指向应用程序清单中声明的域的简单 iframe，可以作为单个用户的团队中的频道的一部分添加，也可以添加到组聊天或作为个人应用程序。 您可以将自定义选项卡包含在您的应用程序中，以在工作组中嵌入自己的 web 内容，并向 web 内容中添加特定于团队的功能。 *请参阅*[团队 JAVASCRIPT 客户端 SDK](/javascript/api/overview/msteams-client)。
 
 > [!NOTE]
 > Chrome 80，安排在早期2020中发布，默认引入新的 cookie 值并强加 cookie 策略。 建议您为 cookie 设置预期用途，而不是依赖于默认浏览器行为。 *请参阅* [SameSite cookie 属性（2020更新）](../resources/samesite-cookie-update.md)。
 
 团队中提供了两种类型的选项卡-通道/组和个人。 频道/组选项卡可将内容传递到频道和组聊天，这是在专门的基于 web 的内容周围创建协作空间的绝佳方式。 个人选项卡和个人范围的 bot 是个人应用程序的一部分，且范围限定为单个用户。 可以将它们固定到左侧导航栏以方便访问。
+
+## <a name="lesser-known-tab-features"></a>较低的已知选项卡功能
+
+> [!div class="checklist"]
+>
+> * 对团队的整个名单的认识。
+> * 如果将某个选项卡添加到也具有 bot 的应用程序中，则也会将该 bot 添加到团队中。
+> * 感知当前用户的 AAD ID。
+> * 用户的区域设置感知以指示语言，即， `en-us`。 
+> * SSO 功能（如果支持）。
+> * 能够使用 bot 或应用程序通知深入链接到选项卡或服务内的子实体（例如，单个工作项）。
+> * 通过选项卡中的链接打开任务模块的功能。
+> * 在选项卡中重用 SharePoint web 部件。
 
 ## <a name="tabs-user-scenarios"></a>选项卡用户方案
 
@@ -37,7 +50,7 @@ ms.locfileid: "41673442"
 
 无论您是否选择在频道/组或个人作用域中公开您的选项卡，您都需要在选项卡中提供一个 IFramed HTML[内容页](~/tabs/how-to/create-tab-pages/content-page.md)。对于 "个人" 选项卡，将通过`contentUrl` `staticTabs`数组中的属性直接在清单中设置内容 URL。 您的选项卡的内容将对所有用户都相同。
 
-对于频道/组选项卡，还需要创建一个额外的配置页，使用户可以配置内容页面 URL，通常是使用 URL 查询字符串参数为该上下文加载相应的内容。 这是因为您的频道/组选项卡可以添加到多个不同的团队或组聊天。 在每次后续安装中，您的用户将能够配置选项卡，以便根据需要定制体验。 例如，在添加 "Azure DevOps 板" 选项卡时，"配置" 页允许您选择选项卡将加载的板。 配置页面 URL 由应用程序清单中`configurationUrl`的`configurableTabs`数组中的属性指定。
+对于频道/组选项卡，还需要创建一个额外的配置页，使用户可以配置内容页面 URL，通常是使用 URL 查询字符串参数为该上下文加载相应的内容。 这是因为您的频道/组选项卡可以添加到多个不同的团队或组聊天。 在每次后续安装中，您的用户将能够配置选项卡，以便根据需要定制体验。 当用户添加选项卡或配置选项卡时，会将 URL 与团队 UI 中显示的选项卡相关联。 配置选项卡只是将其他参数添加到该 URL。 例如，在添加 "Azure DevOps 板" 选项卡时，"配置" 页允许您选择选项卡将加载的板。 配置页面 URL 由应用程序清单中`configurationUrl`的`configurableTabs`数组中的属性指定。
 
 最多可以有一个（1）通道/组选项卡，每个应用最多可以有十六个（16）个个人选项卡。
 

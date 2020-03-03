@@ -2,19 +2,19 @@
 title: 选项卡的设计准则
 description: 介绍为内容和协作创建选项卡的准则
 keywords: 团队设计指南参考框架选项卡配置
-ms.openlocfilehash: adf86678a42e2267af00734e1ef85efced882488
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672974"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365260"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
 
 > [!Important]
 > **移动客户端上的选项卡**
 >
-> 创建选项卡时，请遵循[移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md)。 如果您的选项卡使用身份验证，则必须将团队 JavaScript SDK 升级到版本1.4.1 或更高版本，否则身份验证将失败。
+> 创建选项卡时，请遵循[移动电话上的选项卡指南](./tabs-mobile.md)。 如果您的选项卡使用身份验证，则必须将团队 JavaScript SDK 升级到版本1.4.1 或更高版本，否则身份验证将失败。
 >
 > **移动设备上的个人（静态）选项卡：**
 >
@@ -40,9 +40,6 @@ ms.locfileid: "41672974"
 
 避免在选项卡中创建多个面板、添加导航层或要求用户在一个选项卡中垂直和水平滚动。换言之，请不要在选项卡中包含选项卡。
 
-> [!TIP]
-> 避免在选项卡中创建多个面板、添加导航层或要求用户在一个选项卡中垂直和水平滚动。
-
 ### <a name="integration"></a>集中
 
 查找通过将卡发布到对话来通知用户选项卡活动的方法。
@@ -55,35 +52,53 @@ ms.locfileid: "41672974"
 
 请确保在适当的时间授予对正确人员的访问权限。 保持您的登录过程很简单将避免为发布和协作创建障碍。
 
+### <a name="responsiveness-to-window-sizing"></a>对窗口大小的响应
+
+在窗口大小中，可以将团队用作720px，以确保在小窗口中可用的选项卡与极高分辨率的可用性同样重要。
+
+### <a name="flat-navigation"></a>平面导航
+
+我们要求开发人员不要将其整个门户添加到选项卡。保持导航相对平整有助于保持更简单的会话模式。 换言之，对话是关于事情的列表（如已会审的工作项）或一个内容（如规范）。
+
+深入导航层次结构中有一些固有的导航挑战，在线程对话中。 为获得最佳用户体验，应将选项卡导航保持在最少，并按如下方式设计：
+
+> [!div class="checklist"]
+>
+> * **打开一个任务模块，如单个工作项或实体**。 这将完全阻止聊天，并且是最佳选择，它是专门了解选项卡的聊天，而不是子实体或编辑体验。
+>* **在 iframe 中打开伪对话框**。 如果与屏蔽背景一起使用，我们建议使用较亮的颜色，而不是黑色。 `app-gray-10 at 30%`透明度工作良好。
+>* **打开浏览器页面**。
+
 ### <a name="personality"></a>特征
 
-您的选项卡画布为你的体验提供出色的品牌打造机会。 合并自己的徽标、颜色和布局以传达个性。
+您的选项卡画布极有机会为你的体验提供品牌。 您的徽标是标识的重要部分，与您的用户的连接。，因此请务必包含它：
 
-你的徽标是你的身份以及与你的用户的连接的重要部分。 因此，请务必将其包括在内。
+> [!div class="checklist"]
+>
+>* 将徽标放置在左右角或沿下边缘
+> * 保持您的徽标较小且不引人注目
 
-* 将徽标放置在左右角或沿下边缘
-* 保持您的徽标较小且不引人注目
+合并自己的颜色和布局 twill 也有助于传达个性。
 
 > [!TIP]
-> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。
+> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。 *请参阅*（例如 [团队颜色] （/concepts/design/components/typography.md
 
 ---
 
 ## <a name="tab-layouts"></a>选项卡布局
 
-[!include[Tab layouts](~/includes/design/tab-layouts.html)]
+[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
 
 ---
 
 ## <a name="types-of-tabs"></a>选项卡的类型
 
-[!include[Tab types](~/includes/design/tab-types.html)]
+[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
 
 ---
 
 ## <a name="configuration-page-height"></a>配置页高度
 
->[!NOTE]
+>[!IMPORTANT]
 >在9月2018中，选项卡[配置页面](~/tabs/how-to/create-tab-pages/configuration-page.md)的高度增加，而宽度保持不变。 如果您的应用程序是为较旧的大小设计的，则选项卡配置页将具有大量的垂直空白。 从此更改中免除的旧版应用程序将需要在更新后与 Microsoft 联系，以适应新的维度。
 
 选项卡配置页的尺寸：
@@ -116,4 +131,15 @@ ms.locfileid: "41672974"
 
 ### <a name="naming"></a>名称
 
-在很多情况下，您的应用程序的名称可能会产生很好的选项卡名称。 但请考虑根据它们提供的功能命名选项卡。
+在很多情况下，您的应用程序的名称将产生很好的选项卡名称。 此外，还应考虑根据它们提供的功能命名选项卡。
+
+## <a name="notifications-for-tabs"></a>选项卡通知
+
+对于选项卡内容更改，有两种通知模式：
+
+> [!div class="checklist"]
+>
+> * **使用应用程序 api 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。*请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](/concepts/build-and-test/deep-links?view=msteams-client-js-latest)
+> * **使用 bot**。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
+
+  将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您`@mention`将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。

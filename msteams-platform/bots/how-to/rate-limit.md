@@ -2,12 +2,12 @@
 title: 速率限制
 description: Microsoft 团队中的速率限制和最佳做法
 keywords: 团队 bot 速率限制
-ms.openlocfilehash: 4e9efab539ec7817d259fd6c149c438ba02e3ce5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
+ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673121"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42371763"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>优化你的机器人： Microsoft 团队中的速率限制和最佳做法
 
@@ -46,26 +46,29 @@ catch (HttpOperationException ex)
 
 下面是使用通过瞬时故障处理应用程序块的指数回退的示例。
 
-您可以使用[临时错误处理库](/previous-versions/msp-n-p/hh680901(v=pandp.50))执行回退和重试。 有关获取和安装 NuGet 包的指南，请参阅[向解决方案中添加瞬时故障处理应用程序块](/previous-versions/msp-n-p/hh680891(v=pandp.50))
+您可以使用[暂时性的故障处理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)执行回退和重试。 有关获取和安装 NuGet 包的指南，请参阅[将临时错误处理应用程序块添加到解决方案](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)中）。 *另请参阅*[暂时性故障处理](/azure/architecture/best-practices/transient-faults)。
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
-{
-    // List of error codes to retry on
-    List<int> transientErrorStatusCodes = new List<int>() { 429 };
-
-    public bool IsTransient(Exception ex)
     {
-        var httpOperationException = ex as HttpOperationException;
-        if (httpOperationException != null)
-        {
-            return httpOperationException.Response != null &&
-                    transientErrorStatusCodes.Contains((int) httpOperationException.Response.StatusCode);
-        }
+        // List of error codes to retry on
+        List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        return false;
+        public bool IsTransient(Exception ex)
+        {
+            if (ex.Message.Contains("429"))
+                return true;
+
+            var httpOperationException = ex as HttpOperationException;
+            if (httpOperationException != null)
+            {
+                return httpOperationException.Response != null &&
+                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
+            }
+
+            return false;
+        }
     }
-}
 ```
 
 ## <a name="example-backoff"></a>示例：回退
@@ -83,10 +86,10 @@ var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSec
 
 
 // Define the Retry Policy
-var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), fixedIntervalRetryStrategy);
+var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), exponentialBackoffRetryStrategy);
 
 //Execute any bot sdk action
-await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync((Activity)reply)).ConfigureAwait(false);
+await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
 您还可以使用上面`System.Action`介绍的重试策略执行方法执行。 引用的库还允许您指定固定间隔或线性回退机制。
@@ -104,26 +107,22 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | **应用场景** | **时间段（秒）** | **允许的最大操作** |
 | --- | --- | --- |
-| NewMessage | 1  | 7  |
-| NewMessage | 2  | 8  |
-| NewMessage | 30 | 60 |
-| NewMessage | 3600 | 1800 |
-| UpdateMessage | 1  | 7  |
-| UpdateMessage | 2  | 8  |
-| UpdateMessage | 30 | 60 |
-| UpdateMessage | 3600 | 1800 |
-| NewThread | 1  | 7  |
-| NewThread | 2  | 8  |
-| NewThread | 30 | 60 |
-| NewThread | 3600 | 1800 |
-| GetThreadMembers | 1  | 14  |
-| GetThreadMembers | 2  | 16  |
-| GetThreadMembers | 30 | 120 |
-| GetThreadMembers | 3600 | 3600 |
-| GetThread | 1  | 14  |
-| GetThread | 2  | 16  |
-| GetThread | 30 | 120 |
-| GetThread | 3600 | 3600 |
+|| 1 | 步 |
+| 发送到对话 | 双面 | utf-8 |
+| 发送到对话 | 30 | 60 |
+| 发送到对话 | 3600 | 1800 |
+| 创建对话 | 1 | 步 |
+| 创建对话 | 双面 | utf-8 |
+| 创建对话 | 30 | 60 |
+| 创建对话 | 3600 | 1800 |
+| 获取对话成员| 1 | 14  |
+| 获取对话成员| 双面 | 16  |
+| 获取对话成员| 30 | 120 |
+| 获取对话成员| 3600 | 3600 |
+| 获取对话 | 1 | 14  |
+| 获取对话 | 双面 | 16  |
+| 获取对话 | 30 | 120 |
+| 获取对话 | 3600 | 3600 |
 
 ## <a name="per-thread-limit-for-all-bots"></a>每个线程对所有 bot 的限制
 
@@ -131,16 +130,16 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | **应用场景** | **时间段（秒）** | **允许的最大操作** |
 | --- | --- | --- |
-| NewMessage | 1  | 14  |
-| NewMessage | 2  | 16  |
-| UpdateMessage | 1  | 14  |
-| UpdateMessage | 2  | 16  |
-| NewThread | 1  | 14  |
-| NewThread | 2  | 16  |
-| GetThreadMembers | 1  | 28 |
-| GetThreadMembers | 2  | 32 |
-| GetThread | 1  | 28 |
-| GetThread | 2  | 32 |
+| 发送到对话 | 1 | 14  |
+| 发送到对话 | 双面 | 16  |
+| 创建对话 | 1 | 14  |
+| 创建对话 | 双面 | 16  |
+| CreateConversation| 1 | 14  |
+| CreateConversation| 双面 | 16  |
+| 获取对话成员| 1 | 28 |
+| 获取对话成员| 双面 | 32 |
+| 获取对话 | 1 | 28 |
+| 获取对话 | 双面 | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>每个数据中心的 Bot 限制
 
@@ -148,6 +147,6 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 |**时间段（秒）** | **允许的最大操作** |
 | --- | --- |
-| 1  | 20 |
+| 1 | 20 |
 | 1800 | 8000 |
 | 3600 | 15000 |
