@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 36f04727828b3bfa3be9b808cafcd33c11bf2c0d
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
+ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365267"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "42416850"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -38,7 +38,7 @@ Celebrations 是一种团队应用，可帮助工作组成员庆祝他人的生�
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ 加 gif](~/assets/images/CompanyCommunicatorCompose.png)
+![FAQ 加 gif](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="faq-plus"></a>常见问题 +
 
@@ -61,7 +61,7 @@ Celebrations 是一种团队应用，可帮助工作组成员庆祝他人的生�
 >
 >
 
-![FAQ 加 gif](~/assets/images/FAQPlusEndUser.gif)
+![FAQ 加 gif](../assets/images/FAQPlusEndUser.gif)
 
 ## <a name="hr-support"></a>HR 支持
 
@@ -69,7 +69,7 @@ HR 支持机器人是一个友好的 Q&一个 bot，它将支持专业人员/专
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![HR 支持](~/assets/images/expert-user.png)
+![HR 支持](../assets/images/expert-user.png)
 
 ## <a name="list-search"></a>列表搜索
 
@@ -79,7 +79,7 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
-![列表搜索应用程序](~/assets/images/list-search-template.png)
+![列表搜索应用程序](../assets/images/list-search-template.png)
 
 ## <a name="custom-stickers"></a>自定义贴纸
 
@@ -89,7 +89,7 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![不干胶标签应用](~/assets/images/stickers.png)
+![不干胶标签应用](../assets/images/stickers.png)
 
 ## <a name="icebreaker"></a>Icebreaker
 
@@ -99,13 +99,13 @@ Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Icebreaker 应用程序](~/assets/images/icebreaker.png)
+![Icebreaker 应用程序](../assets/images/icebreaker.png)
 
-## <a name="scrum-status-bot"></a>Scrum 状态 Bot
+## <a name="scrum-status-bot"></a>Scrum 状态 bot
 
 Scrum 状态 bot 是一个简单的 scrum 助手机器人，它使用户能够运行异步的独立式会议，并提供并轻松地让用户共享他们的每日更新。 它旨在在团队组聊天中工作，所有成员都可以参与 scrum。 一种方法可以开始和结束 scrum，并且可以在运行的 scrum 中查看其他人所做的更新。
 
-[在 GitHub 上 Git it](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[在 GitHub 上 Git it](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
 
 ![Scrum 状态 Bot](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
@@ -135,10 +135,27 @@ Crowdsourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 
 ## <a name="attendance-app"></a>出勤应用
 
-"出席" 应用是可在团队中固定的 "[电源应用](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned)" 选项卡。 它旨在记录状态，通常是在学习和培训环境等设置中。 用户可以在过去的30天内标记或编辑出席情况，并查看整个组或单个与会者的汇总出勤报告。
+"出席" 应用是可在团队中固定的 "[电源应用](/powerapps/maker/canvas-apps/embed-teams-app)" 选项卡。 它旨在记录状态，通常是在学习和培训环境等设置中。 用户可以在过去的30天内标记或编辑出席情况，并查看整个组或单个与会者的汇总出勤报告。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
 ![出勤应用演示](../assets/images/attendance-app.png)
+
+## <a name="associate-insights-app"></a>关联 Insights 应用
+
+关联 insights 是一个[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)模板，它使 firstline 工作人员能够直接捕获和提交客户意见、看法和感知。 Firstline 工作者通常是第一个公司代表，在一对一联系人中与客户接洽。 收集的数据可由业务团队共同共享和使用，例如，通过 Power BI "团队" 选项卡，可实现产品改进并增强客户体验。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+
+:::row:::
+  :::column span="2":::
+    ![应用程序生成的见解的反馈视图](../assets/images/associate-insights-app.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![应用程序生成的见解的 Power BI 视图](../assets/images/associate-insights-app2.png)
+:::column-end:::
+:::row-end:::
 
 您想要查看的应用程序模板有什么想法？ [请告知我们](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
