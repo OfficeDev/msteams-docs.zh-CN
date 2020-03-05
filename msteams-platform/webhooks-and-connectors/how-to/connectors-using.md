@@ -3,12 +3,12 @@ title: 向连接器和 Webhook 发送邮件
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
-ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
+ms.openlocfilehash: 56ef6adc7731eadc0a799f489867d8e056248e03
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "41783911"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953465"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -129,17 +129,17 @@ ms.locfileid: "41783911"
 > [!NOTE]
 > 在 Microsoft Teams 中的指定 `style` 属性的 `compact` 与在 Microsoft Outlook 中指定 `style` 属性的 `normal` 相同。
 
-有关连接器卡操作的所有其他详细信息，请参阅可操作的邮件卡参考中的“操作”**[](/outlook/actionable-messages/card-reference#actions)**。
+有关连接器卡操作的所有其他详细信息，请参阅可操作的邮件卡参考中的**[“操作”](/outlook/actionable-messages/card-reference#actions)**。
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>设置自定义传入 Webhook
 
 请按照以下步骤，了解如何向连接器发送简单卡。
 
-1. 在 Microsoft Teams 中，选择频道名称旁边的“更多选项”****(**&#8943;**) ，然后选择“连接器”****。
-2. 滚动浏览“传入 Webhook”**** 的连接器列表，然后选择“添加”****。
-3. 输入 Webhook 的名称，上传图像以与 Webhook 中的数据相关联，然后选择“创建”****。
+1. 在 Microsoft Teams 中，选择频道名称旁边的 **“更多选项”**(**&#8943;**) ，然后选择 **“连接器”**。
+2. 滚动浏览 **“传入 Webhook”** 的连接器列表，然后选择 **“添加”**。
+3. 输入 Webhook 的名称，上传图像以与 Webhook 中的数据相关联，然后选择 **“创建”**。
 4. 将 Webhook 复制到剪贴板并保存。 需要 Webhook URL 才能将信息发送到 Microsoft Teams。
-5. 选择“完成”****。
+5. 选择 **“完成”**。
 
 ### <a name="post-a-message-to-the-webhook-using-curl"></a>使用 cURL 将邮件发布到 Webhook
 
@@ -167,7 +167,7 @@ ms.locfileid: "41783911"
 2. 如果 POST 成功，则可以看到 `Invoke-RestMethod` 简单输出 **1**。
 3. 检查与 Webhook URL 相关联的 Microsoft Teams 频道。 你应查看发布到频道的新卡片。
 
-- 包含两个图标，按照“图标”[](~/concepts/build-and-test/apps-package.md#icons)中的说明。
+- 包含两个图标，按照[“图标”](~/concepts/build-and-test/apps-package.md#icons)中的说明。
 - 修改清单的 `icons` 部分，以便引用图标的文件名，而不是 URL。
 
 以下 manifest.json 文件包含测试和提交应用程序所需的基本元素。
@@ -219,7 +219,7 @@ ms.locfileid: "41783911"
 
 若要测试连接器，请将其上传到团队中，就像使用任何其他应用程序一样。 可使用连接器开发人员仪表板中的清单文件（按照上一部分的说明进行修改）和两个图标文件来创建 .zip 包。
 
-上传应用程序后，从任意频道打开连接器列表。 向下滚动到底部，查看“上传”**** 部分中的应用程序。
+上传应用程序后，从任意频道打开连接器列表。 向下滚动到底部，查看 **“上传”** 部分中的应用程序。
 
 ![“连接器”对话框中上传部分的屏幕截图](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -227,18 +227,21 @@ ms.locfileid: "41783911"
 
 若要验证 `HttpPOST` 操作是否正常工作，请使用[自定义传入 Webhook](#setting-up-a-custom-incoming-webhook)。
 
-
 ## <a name="rate-limiting-for-connectors"></a>连接器的速率限制
 
-此限制控制允许连接器或传入 Webhook 在频道上生成的流量。 当超出速率限制阈值时，将限制 Webhook 或连接器发出的请求。 限制行为的时间长度与超出的请求速率参数直接相关。 例如，如果连接器或 Webhook 在 3600 秒内超过 100 个消息请求，则在接下来的 3600 秒内将限制该连接器：
+应用程序速率限制可以控制允许连接器或传入 Webhook 在频道上生成的流量。 Teams 通过固定速率窗口以及以秒为单位的增量计数器跟踪请求。  如果发出的请求过多，则会限制客户端连接，直至该窗口刷新（即在固定速率的持续时间内）。
 
-| 时间段（秒）  | 允许的最大邮件请求数  |
+### <a name="transactions-per-second-thresholds"></a>**每秒事务数阈值**
+
+| 时间（秒）  | 允许的最大请求数  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600（1小时）  | 100  | 
-| 7200 | 150  | 
-| 86400（1 天） | 1800  | 
+| 3600   | 100  |
+| 7200 | 150  |
+| 86400  | 1800  |
+
+*另请参阅* [Office 365 连接器 - Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
 如下所示，[具有指数补偿的重试逻辑](/azure/architecture/patterns/retry)将减轻速率限制，以应对请求在一秒内超出限制的情况。 请按照[最佳做法](../../bots/how-to/rate-limit.md#best-practices)避免达到速率限制。
 
