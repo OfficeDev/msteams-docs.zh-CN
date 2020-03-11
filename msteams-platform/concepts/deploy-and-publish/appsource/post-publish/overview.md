@@ -2,12 +2,12 @@
 title: 发布发布
 description: 发布应用程序后要执行的操作
 keywords: 团队发布更新证书
-ms.openlocfilehash: 05e4ea47bbf81967ccf086230bf0ad8c633f6e0b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673090"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582858"
 ---
 # <a name="maintain-and-support-your-published-app"></a>维护和支持您发布的应用程序 
 
@@ -27,7 +27,9 @@ Microsoft 提供了[应用程序认证计划](./application-certification.md)，
 
 * 请勿使用 "*添加新应用*" 按钮重新提交您的应用程序。 改为对 "概述" 选项卡上的应用程序使用磁贴。
 * 更新后的清单中的 appId 应与当前清单中的 appId 相同，并增加了版本号。
-* 在清单中增加版本号。
+* 如果对提交内容进行任何清单更改，请增加清单中的版本号。
+* 需要进行更新的提交，以进行新的审阅和验证过程。
+
 
 ### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>何时更新应用程序触发用户同意流？
 

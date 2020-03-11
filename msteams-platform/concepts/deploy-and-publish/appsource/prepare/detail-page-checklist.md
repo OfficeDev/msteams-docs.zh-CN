@@ -2,12 +2,12 @@
 title: 构建一个出色的应用程序详细信息页
 description: 描述应用程序详细信息页必须具有的内容
 keywords: 团队发布存储 office 发布策略 AppSource 内容
-ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: 741bc7b623e97b338c54c4dcfec5b1ca75201867
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953514"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582865"
 ---
 # <a name="build-a-great-app-details-page"></a>构建一个出色的应用程序详细信息页
 
@@ -29,22 +29,22 @@ ms.locfileid: "41953514"
 
 * 请勿使用与现有应用程序名称类似的泛型术语或名称。
 * 请勿在您的应用程序名称中使用 "团队"、"Microsoft" 或 "应用程序"。
-![应用名称存储视图](~/assets/images/store-detail-page/AppName-02.png)
-![应用名称 appstudio 视图](~/assets/images/store-detail-page/AppName-01.png)
+![应用程序名称存储](~/assets/images/store-detail-page/AppName-02.png)
+![视图应用程序名称应用程序工作室视图](~/assets/images/store-detail-page/AppName-01.png)
 
 ## <a name="color-icon"></a>颜色图标
 
 这是用户看到的首个元素之一。 在滚动应用商店时，它应具有吸引力且引人注目的醒目。 确保它成为一个出色的第一个印象，同时还传达品牌的图像和用途。 AppSource 提供了有关[创建一致的视觉标识](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity)的更多提示。
 
 ![应用程序图标存储](~/assets/images/store-detail-page/AppIcon-02.png)
-![视图应用程序图标 appstudio 视图](~/assets/images/store-detail-page/AppIcon-01.png)
+![视图应用程序图标应用程序工作室视图](~/assets/images/store-detail-page/AppIcon-01.png)
 
 ## <a name="outline-icon"></a>大纲图标
 
 这在邮件扩展中用于标记为用户收藏的用户和左侧导航菜单。 请确保它简单且可识别。 大纲图标必须仅包含白色和透明度（无其他颜色）。 有关所需的规范，*请参阅*为[Microsoft 团队应用程序图标创建应用程序包](../../../build-and-test/apps-package.md#icons)。
 
 ![应用图标大纲存储视图](~/assets/images/store-detail-page/AppIconOutline-02.png)
-![应用图标大纲 appstudio 视图](~/assets/images/store-detail-page/AppIconOutline-01.png)
+![应用图标大纲应用程序 Studio 视图](~/assets/images/store-detail-page/AppIconOutline-01.png)
 
 ## <a name="short-description"></a>简短说明
 
@@ -64,7 +64,7 @@ ms.locfileid: "41953514"
 
 下面是[应用程序 Studio](https://aka.ms/InstallTeamsAppStudio)中的一个视图：
 
-![简短说明 appstudio 视图](~/assets/images/store-detail-page/ShortDescription-01.png)
+![简短说明应用程序工作室视图](~/assets/images/store-detail-page/ShortDescription-01.png)
 
 ## <a name="long-description"></a>较长说明
 
@@ -80,6 +80,22 @@ ms.locfileid: "41953514"
 * 使用活动语音并直接向用户讲话。
 * 使用项目符号可列出您的功能。
 * 包含 "帮助" 或 "支持" 链接，以便你的用户知道如果有问题，如何联系你。
+* 请务必致电任何限制或约束，以获得更好的用户指导。
+
+
+>[!NOTE]
+>团队支持以下 Markdown 语法：  
+> **链接**。 `[title](url/address/here)`.  
+>**图像**。`![alt text](url/address/here)`.  
+> **加粗**。 `**bold text**`   `__bold text__`.  
+> **斜体**。 `*italicized text*`  `_italicized text`.  
+>**[有序列表](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
+>`1. first`  <br>` 1. second `  <br>`1.third`<br>
+>**[无序列表](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
+` - short` <br>`- bulleted` <br>`- list`<br>
+>**换行符**。 `Place two empty spaces or a backslash \`  \
+`at the end of a line.`<br>
+ >**过.** 使用内联反斜杠来转义特殊字符。 `\*asterisk`.
 
 **应该**
 
@@ -89,11 +105,11 @@ ms.locfileid: "41953514"
 
 下面是[应用程序 Studio](https://aka.ms/InstallTeamsAppStudio)中的一个视图：
 
-![应用程序长说明 appstudio 视图](~/assets/images/store-detail-page/LongDescription-01.png)
+![应用程序长说明应用程序工作室视图](~/assets/images/store-detail-page/LongDescription-01.png)
 
 ## <a name="screenshots"></a>屏幕截图
 
-将在[卖方仪表板](https://sellerdashboard.microsoft.com/Registration)上上载的屏幕截图显示在[AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)和团队客户端中的应用程序列表中。 它们提供了应用程序的可视预览以及应用程序说明。
+在[合作伙伴中心](https://partner.microsoft.com)上传的屏幕截图显示在 " [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) " 和 "团队客户端" 中的应用程序列表中。 它们提供了应用程序的可视预览以及应用程序说明。
 您可以提供一到五个格式为 .png、.jpg 或 .gif 文件的屏幕截图。 屏幕截图应为 1366 x 768 像素，最大大小为 1024 KB。
 
 **请执行以下操作：**
@@ -118,7 +134,7 @@ ms.locfileid: "41953514"
 
 如果图像相当于一千个字，则视频相当于一千个图像。 视频是传达应用程序使用优势的最有效方式。 它将放在应用程序详细信息页中的所有屏幕截图之前。 请务必谈论你的应用程序的工作方式、可以使用它实现的功能、使用它的好处以及它的用途。 请记住，将演示文稿保持简短和最佳--介于30-90 秒之间。
 
-## <a name="learn-more"></a>了解更多
+## <a name="learn-more"></a>了解详细信息
 
 [提交应用程序的清单](~/concepts/deploy-and-publish/appsource/publish.md)。  
 [为 Microsoft 团队应用程序创建应用程序包](~/concepts/build-and-test/apps-package.md)。  

@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
-ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
+ms.openlocfilehash: e3eb7788515d9d44c820c472b24eeee44f4b0993
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "42416850"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42587318"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -63,7 +63,7 @@ Celebrations 是一种团队应用，可帮助工作组成员庆祝他人的生�
 
 ![FAQ 加 gif](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="hr-support"></a>HR 支持
+## <a name="hr-support-bot"></a>HR 支持机器人
 
 HR 支持机器人是一个友好的 Q&一个 bot，它将支持专业人员/专家从循环中的 HR 团队中引入帮助。 如果某个问题包含在知识库中，则可以向该 bot 提供一个问题，并且机器人会做出响应。 如果不是，则机器人允许用户提交一个查询，然后将其发布到预先配置的专家团队中，这些专家将通过在团队内部对通知进行操作来提供支持。 此外，机器人通过在问题中搜索预配置的标记来建议指向建议的 HR 策略/问题的链接。 此外，还可以在关联的选项卡中找到这些磁贴作为快速参考。 HR 支持适用于轻型 QnA，并可在组织中启动新项目/计划时提供快速支持。
 
@@ -71,7 +71,7 @@ HR 支持机器人是一个友好的 Q&一个 bot，它将支持专业人员/专
 
 ![HR 支持](../assets/images/expert-user.png)
 
-## <a name="list-search"></a>列表搜索
+## <a name="list-search-app"></a>列表搜索应用程序
 
 Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含的信息。 只需粘贴指向相关项目的链接，即可强制每个人都切换上下文以离开对话，查找所需的信息，然后返回到团队以继续进行对话。 随着对话的持续不断，人们通常需要多次切换回参考项目，以验证新注释并刷新项目中包含的信息的记忆。 此上下文切换为平滑协作创建了一个障碍，并且是通过裂纹的方法实现的食谱。
 
@@ -81,7 +81,7 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 ![列表搜索应用程序](../assets/images/list-search-template.png)
 
-## <a name="custom-stickers"></a>自定义贴纸
+## <a name="custom-stickers-app"></a>自定义不干胶标签应用
 
 自表达式是正常团队区域性的核心。 此应用程序模板是一种[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)，使用户能够在 Microsoft 团队中使用自定义不干胶标签和 gif。 此模板提供了简单的基于 web 的配置体验，其中任何具有配置访问权限的用户都可以上传他们希望最终用户拥有的 Gif/不干胶标签/图像，从而使整个团队能够使用您选择的任何一组不干胶标签。
 
@@ -91,7 +91,7 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 ![不干胶标签应用](../assets/images/stickers.png)
 
-## <a name="icebreaker"></a>Icebreaker
+## <a name="icebreaker-bot"></a>Icebreaker bot
 
 Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮助您的团队更好地通过将两个随机团队成员与每周匹配来实现。 通过自动建议用于两个成员的空闲时间，机器人可简化日程安排。 加强个人连接并使用此应用构建一个紧密的 knit 社区。
 
@@ -158,4 +158,13 @@ Crowdsourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 :::column-end:::
 :::row-end:::
 
+## <a name="incentives-app"></a>激励应用
+
+激励是管理和跟踪 incentivized 员工参与指定活动（如培训和更改管理计划）的[电源应用程序](/powerapps/maker/canvas-apps/embed-teams-app)模板。 管理员使用应用程序建立指定的活动、分配点以完成和为奖励指定所需的资格点级别。 员工使用应用程序查看其积累的积分，并在达到资格、请求和声明 redeemable 奖励时实现。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
+
+![激励应用演示](../assets/images/incentives-app.png)
+
 您想要查看的应用程序模板有什么想法？ [请告知我们](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
+
