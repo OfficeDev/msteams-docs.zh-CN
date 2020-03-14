@@ -4,22 +4,46 @@ author: clearab
 description: Microsoft 团队中的会话 bot 概述。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 7bde886b67788a355181c83287d999a3bfb9727a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673117"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635303"
 ---
 # <a name="what-are-conversational-bots"></a>什么是对话 bot？
 
-会话 bot 使用户能够通过文本、交互式卡片和任务模块与 web 服务进行交互。 它们的灵活性非常灵活—会话间的 bot 可用于处理几个简单的命令或复杂、人工智能的智能化和自然语言处理虚拟助理。 它们可以是大型应用程序的一个方面，也可以完全独立。
+会话 bot 使用户能够通过文本、交互式卡片和任务模块与 web 服务进行交互。 它们的灵活性非常灵活—会话间的 bot 可用于处理几个简单的命令或复杂、人工智能化的工作和自然语言处理的虚拟助手。 它们可以是大型应用程序的一个方面，也可以完全独立。
 
 下面的 GIF 显示了用户使用文本和交互式卡片同时在一对一聊天中与 bot 聊天。 查找卡片、文本和任务模块的正确组合是创建有用的 bot 的关键所在。 别忘了，机器人要远不止是文本！
 
 ![FAQ 加 gif](~/assets/images/FAQPlusEndUser.gif)
 
-## <a name="what-tasks-are-best-handled-by-bots"></a>哪些任务最适合通过 bot 处理？
+## <a name="how-bots-work"></a>Bot 的工作原理
+
+你的团队 bot 由三个元素组成：
+
+* 您承载的可公开访问的 web 服务。
+* 使用 Bot 框架的 bot 注册。
+* 您的团队应用程序包与您的应用程序清单。 这是用户将安装的内容，并将团队客户端连接到 web 服务，并通过 Bot 服务进行路由。
+
+Microsoft 团队的 bot 基于[Microsoft Bot 框架](https://dev.botframework.com/)构建。 如果您已经有一个基于 Bot 框架的 bot，您可以轻松地对其进行调整以在 Microsoft 团队中工作。 我们建议您使用 c # 或 node.js 来利用我们的[sdk](/microsoftteams/platform/#pivot=sdk-tools)。 这些包扩展了基本的 Bot 生成器 SDK 类和方法，如下所示：
+
+* 使用专用的卡片类型，如 Office 365 连接器卡。
+* 使用和设置活动的团队特定频道数据。
+* 处理邮件扩展请求。
+
+> [!IMPORTANT]
+> 您可以在任何 web 编程技术中开发团队应用程序，并直接调用[Bot 框架 REST api](/bot-framework/rest-api/bot-framework-rest-overview) ，但您必须自己执行所有令牌处理。
+
+> [!TIP]
+> 团队应用程序 Studio * 可帮助您创建和配置应用程序清单，并可将 web 服务注册为 Bot 框架上的 bot。 它还包含响应控制库和交互式卡片生成器。 *请参阅*[开始使用团队应用 Studio](~/concepts/build-and-test/app-studio-overview.md)。
+
+## <a name="webhooks-and-connectors"></a>Webhook 和连接器
+
+Webhook 和连接器允许您创建简单的 bot 来实现基本交互，例如启动脱离工作流或其他简单命令。 它们仅在您创建它们的团队中运行，适用于特定于贵公司的工作流的简单流程。 *请参阅*[什么是 webhook 和连接器？](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)有关详细信息，请参阅。
+
+## <a name="where-bots-work-best"></a>在何处最适合使用 bot
 
 Microsoft 团队中的 bot 可以是一对一对话、组聊天或团队中的频道的一部分。 每个范围都将为您的会话 bot 提供独特的机会和挑战。
 
@@ -44,35 +68,41 @@ Microsoft 团队中的 bot 可以是一对一对话、组聊天或团队中的�
 
 这是对话机器人与用户进行交互的传统方法。 他们可以实现多元化不同的工作负载。 问：&bot、在其他系统中启动工作流的 bot、通知笑话的 bot 以及记录笔记的 bot 只是几个示例。 只需记住，应考虑基于会话的界面是否是展示功能的最佳方式。
 
-## <a name="how-do-bots-work"></a>Bot 的工作原理是什么？
+## <a name="bot-fails"></a>机器人失败
 
-你的 bot 由三部分组成：
+### <a name="having-multi-turn-experiences-in-chat"></a>在聊天中拥有多轮体验
 
-* 您承载的可公开访问的 web 服务。
-* 您的 bot 注册，用于向 Bot 框架注册你的 bot。
-* 您的团队应用程序包，其中包含您的应用程序清单。 这是您的用户安装并将团队客户端连接到 web 服务（通过 Bot 服务路由）的内容。
+您的 bot 和用户之间的一个广泛的对话框是一种缓慢且过于复杂的方法来使任务完成，还需要开发人员维护状态。 若要退出此状态，用户必须是超时时间或键入 "*取消*"。 在所有情况下，此过程是不必要的单调操作：
 
-Microsoft 团队的 bot 基于[Microsoft Bot 框架](https://dev.botframework.com/)构建。 （如果已经有一个基于 Bot 框架的 bot，可以轻松地将其调整为在 Microsoft 团队中工作。）我们建议您使用 c # 或 node.js 来利用我们的[sdk](/microsoftteams/platform/#pivot=sdk-tools)。 这些包扩展了基本的 Bot 生成器 SDK 类和方法：
+用户：使用 Megan 安排会议。
 
-* 使用专用的卡片类型，如 Office 365 连接器卡。
-* 使用和设置针对活动的特定于团队的频道数据。
-* 处理消息扩展请求。
+BOT：我发现了200结果，请包含姓和名。
 
-> [!IMPORTANT]
-> 您可以在任何 web 编程技术中开发团队应用程序，并直接调用[Bot 框架 REST api](/bot-framework/rest-api/bot-framework-rest-overview) ，但您必须自己执行所有令牌处理。
+用户：使用 Megan Bowen 安排会议。
 
-*团队应用程序 Studio*可帮助您创建和配置应用程序清单，并可将 web 服务注册为 bot 框架上的 bot。 它还包含响应控制库和交互式卡片生成器。 *请参阅*[开始使用团队应用 Studio](~/concepts/build-and-test/app-studio-overview.md)。
+机器人：好了，您想要使用 Megan Bowen 来满足什么时间？
 
-## <a name="webhooks-and-connectors"></a>Webhook 和连接器
+用户： 1:00 pm。
 
-Webhook 和连接器允许您创建简单的 bot 来实现基本交互，例如启动脱离工作流或其他简单命令。 它们仅在您创建它们的团队中运行，适用于特定于贵公司的工作流的简单流程。 *请参阅*[什么是 webhook 和连接器？](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)有关详细信息，请参阅。
+机器人：在哪天？
+
+### <a name="supporting-too-many-commands"></a>支持的命令过多
+
+用户不能成功或查看不支持过多命令的 bot （尤其是一系列命令）。 由于当前机器人菜单中只有6个可见的命令，因此任何频率都不大可能使用。 深入了解特定区域的 bot，而不是尝试成为一家广泛的助理将会更好地发挥作用并 fare。
+
+### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>使用 unranked 响应维护大型检索知识库
+
+Bot 最适合短而快速的交互（而不是 sifting），但长列表正在寻找答案。
 
 ## <a name="get-started"></a>入门
 
 * [C # 中的团队对话机器人/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
 * [JavaScript 中的团队对话机器人](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
 
-## <a name="learn-more"></a>了解更多
+## <a name="learn-more"></a>了解详细信息
 
-* [团队中的 bot 的基础知识](~/bots/bot-basics.md)
-* [为团队创建机器人](~/bots/how-to/create-a-bot-for-teams.md)
+> [!div class="nextstepaction"]
+> [团队中的 bot 的基础知识](~/bots/bot-basics.md)
+
+> [!div class="nextstepaction"]
+> [为团队创建机器人](~/bots/how-to/create-a-bot-for-teams.md)

@@ -19,6 +19,8 @@
       href: samples/code-samples.md
     - name: 生产就绪的应用程序模板
       href: samples/app-templates.md
+    - name: 生产-就绪班次连接器
+      href: samples/shifts-wfm-connectors.md
 - name: 概念
   expanded: true
   items:
