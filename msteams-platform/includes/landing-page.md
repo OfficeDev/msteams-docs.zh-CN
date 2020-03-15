@@ -1,17 +1,17 @@
 ---
 title: Microsoft Teams 开发人员平台
-author: clearab/laujan
+author: laujan
 description: 添加简短说明。
 layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
-ms.author: anclear/lajanuar
-ms.openlocfilehash: 97ec9d4a1dd7b6f03185c8fd8d68cde3f0d55dcb
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.author: lajanuar
+ms.openlocfilehash: c13530dfcd5841f6a843e8f6f94a44180a2e4927
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953502"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42638589"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -126,6 +126,330 @@ ms.locfileid: "41953502"
             <li>
                 <a href="#samples-demos-templates">示例 &amp; 模板</a>
                 <ul id="samples-demos-templates">
+                    <li>
+                        <a href="#templates">应用模板</a>
+                        <ul id="templates" class="cardsC">
+                            <li>
+                                <div class="container intro" style="margin-top:-20px;">
+                                    <h2>预设应用模板</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-company-communicator-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>公司通信器应用</h3>
+                                                    <p>使企业团队可通过聊天功能创建消息并将其发送给员工</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-celebrations-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>庆祝应用</h3>
+                                                    <p>帮助团队成员庆祝彼此的生日、周年纪念和其他定期事件</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-faqplusplus-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-faq-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>常见问题增强版自动程序</h3>
+                                                    <p>常见问题自动程序是一种问答自动程序，可在无法提供帮助时，为人类提供最新动态</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-hrsupport-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>HR 支持自动程序</h3>
+                                                    <p>HRy 问答自动程序可在无法提供帮助时，为人力资源团队提供最新动态</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>  
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-list-search-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>SharePoint 列表搜索应用</h3>
+                                                    <p>搜索 SharePoint 列表，并将某一项作为自适应卡插入到 Teams 中</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-stickers-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>自定义贴纸应用</h3>
+                                                    <p>为你的团队或组织添加自定义贴纸</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-icebreaker-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>破冰自动程序</h3>
+                                                    <p>通过对每周聚会的团队成员随机配对来帮助团队拉近距离</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-app-scrumstatus">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-scrum.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Scrum 状态自动程序</h3>
+                                                    <p>使团队可运行异步 Scrum 会议并共享更新。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/teams-voice-deployment.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>众源自动程序</h3>
+                                                    <p>帮助团队通过协作从组织成员处获取查询信息。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-expertfinder">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>专家查找器自动程序</h3>
+                                                    <p>帮助你的团队根据技能、兴趣和教育情况找到内部专家。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-bookaroom">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>会议室预定自动程序</h3>
+                                                    <p>帮助你的团队快速查找和保留会议室。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-attendance">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-add-user-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>考勤</h3>
+                                                    <p>帮助团队记录考勤情况并生成汇总报表。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-associateinsights">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>员工见解</h3>
+                                                    <p>使一线员工能够捕获客户反馈。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-incentives">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>奖励应用</h3>
+                                                    <p>管理和跟踪对活动和事件的奖励性参与。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/microsoftteams/platform/moodleinstructions">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/ms365enterprise-partner-resource-training-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Moodle 与 Teams 的集成</h3>
+                                                    <p>将 Moodle 服务器连接到 Microsoft Teams</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#connectors">排班连接器</a>
+                        <ul id="connectors" class="cardsC">
+                            <li>
+                                <div class="container intro" style="margin-top:-20px;">
+                                    <h2>随时可用的排班连接器</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/Kronos-Shifts-Connector">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Kronos 到排班连接器</h3>
+                                                    <p>提供从 Kronos WFM 系统到 Teams 排班的无缝集成。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="#samples">示例</a>
                         <ul id="samples" class="cardsI panelContent">
@@ -455,168 +779,6 @@ ms.locfileid: "41953502"
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#templates">应用模板</a>
-                        <ul id="templates" class="cardsC">
-                            <li>
-                                <div class="container intro" style="margin-top:-20px;">
-                                    <h2>预设应用模板</h2>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-company-communicator-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-community.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Company Communicator</h3>
-                                                    <p>使企业团队可通过聊天功能创建消息并将其发送给员工</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-celebrations-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Celebrations</h3>
-                                                    <p>帮助团队成员庆祝彼此的生日、周年纪念和其他定期事件</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-faqplusplus-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-faq-2.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>常见问题 +</h3>
-                                                    <p>常见问题自动程序是一种问答自动程序，可在无法提供帮助时，为人类提供最新动态</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-hrsupport-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>HR 支持</h3>
-                                                    <p>HRy 问答自动程序可在无法提供帮助时，为人力资源团队提供最新动态</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>                             
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-stickers-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>自定义贴纸</h3>
-                                                    <p>为你的团队或组织添加自定义贴纸</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-list-search-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-developer-documentation-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>SharePoint 列表搜索</h3>
-                                                    <p>搜索 SharePoint 列表，并将项目作为自适应卡插入到团队中</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/OfficeDev/microsoft-teams-icebreaker-app">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-get-started-account-manager.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Icebreaker</h3>
-                                                    <p>通过对每周聚会的团队成员随机配对来帮助您的团队拉近距离</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/microsoftteams/platform/moodleinstructions">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/media/illustrations/ms365enterprise-partner-resource-training-1.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Moodle 与 Teams 的集成</h3>
-                                                    <p>将 Moodle 服务器连接到 Microsoft Teams</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
                             </li>
                         </ul>
                     </li>
