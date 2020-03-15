@@ -5,12 +5,12 @@ description: 如何为 Microsoft Teams 创建自动程序。
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 9e0bd603772cf4da8465a638c4a7f5b426a1fbfb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673392"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635296"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>为 Microsoft Teams 创建自动程序
 
@@ -62,9 +62,9 @@ ms.locfileid: "41673392"
 
 #### <a name="using-app-studio"></a>使用 App Studio
 
-*App Studio* 是一种 Teams 应用，可帮助你构建 Teams 应用，包括将 Web 服务注册为自动程序、创建应用程序清单和应用程序包。 它还包含 React 控件库和卡的可配置示例。 请参阅[开始使用 Teams App Studio](../../concepts/build-and-test/app-studio-overview.md)。
+*App Studio* 是一种 Teams 应用程序，可帮助你构建 Teams 应用，包括将 Web 服务注册为自动程序、创建应用清单和应用包，以及更新设置和配置。 它还包含 React 控件库和卡的可配置示例。 请参阅[开始使用 Teams App Studio](../../concepts/build-and-test/app-studio-overview.md)。
 
-请记住，如果使用 App Studio 注册你的 Web 服务，则需要转到 https://dev.botframework.com/bots 以管理你的注册。 某些设置（例如你的消息传递终结点）也可以在 App Studio 中进行更新。
+请记住，如果使用 App Studio 注册你的 Web 服务，则需要转到 https://dev.botframework.com/bots 以管理你的注册。
 
 #### <a name="in-the-legacy-portal"></a>在旧门户中
 
