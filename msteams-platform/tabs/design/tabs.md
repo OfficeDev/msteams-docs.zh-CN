@@ -2,12 +2,12 @@
 title: 选项卡的设计准则
 description: 介绍为内容和协作创建选项卡的准则
 keywords: 团队设计指南参考框架选项卡配置
-ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365260"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896497"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
 
@@ -139,7 +139,7 @@ ms.locfileid: "42365260"
 
 > [!div class="checklist"]
 >
-> * **使用应用程序 api 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。*请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](/concepts/build-and-test/deep-links?view=msteams-client-js-latest)
+> * **使用应用程序 api 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。*请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
 > * **使用 bot**。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
 
   将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您`@mention`将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。

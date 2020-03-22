@@ -4,12 +4,12 @@ description: 描述提交和大多数失败策略的提示
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 75ac2a01f1ccd8e38977e1cd099544e7dd160733
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279786"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896518"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>成功提交应用程序的提示
 
@@ -51,7 +51,7 @@ ms.locfileid: "42279786"
 
 有关身份验证的其他信息，请参阅：
 
-* [身份验证文档](/concepts/authentication/authentication.md)
+* [身份验证文档](../../../authentication/authentication.md)
 * [节点中的 Bot 身份验证示例](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [节点中的 Tab 身份验证示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [C #/.NET 中的选项卡/机器人身份验证](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
