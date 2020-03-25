@@ -2,12 +2,12 @@
 title: 为 Microsoft "团队" 选项卡请求设备权限
 description: 如何更新您的应用程序清单，以便请求对通常需要用户同意的本机功能的访问权限
 keywords: 团队选项卡开发
-ms.openlocfilehash: 454466ff17ecf275f6ae6c7413df8e117335f3c8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672997"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928515"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>为 Microsoft "团队" 选项卡请求设备权限
 
@@ -57,7 +57,7 @@ ms.locfileid: "41672997"
 
 | 属性      | 说明   |
 | --- | --- |
-| 光盘         | 使用摄像头、麦克风和扬声器的权限 |
+| media         | 使用摄像头、麦克风和扬声器的权限 |
 | 地理位置   | 返回用户位置的权限      |
 | 通知 | 发送用户通知的权限      |
 | midi          | 从数字音乐仪器发送和接收 midi 信息的权限   |
@@ -106,3 +106,7 @@ Notification.requestPermission(function(result) { /* ... */ });
 ```
 
 ![选项卡设备权限提示](~/assets/images/tabs/device-permissions-prompt.png)
+
+## <a name="permission-behavior-across-login-sessions"></a>跨登录会话的权限行为
+
+本机设备权限是按每个登录会话存储的。 这意味着，如果您登录到团队的另一个实例（例如，在另一台计算机上），您的设备权限将不可用。 相反，你将需要重新同意新登录 sessoin 的设备权限。 这也意味着，如果您注销团队（或团队内部的交换机租户），则将删除该先前登录会话的设备权限。 在开发本机设备权限时，请记住这一点：您同意的本机功能仅适用于您的_当前_登录 sessoin。

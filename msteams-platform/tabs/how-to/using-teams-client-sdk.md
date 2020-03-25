@@ -4,12 +4,12 @@ author: laujan
 description: 如何使用团队客户端 SDK 向自定义选项卡添加团队感知功能
 keywords: 团队选项卡组频道可配置静态 SDK JavaScript 个人
 ms.topic: conceptual
-ms.openlocfilehash: eac5a8ec03ba12d926346afb40ca9bc6e9dda8d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673475"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928508"
 ---
 # <a name="using-the-teams-client-sdk"></a>使用团队客户端 SDK
 
@@ -23,6 +23,8 @@ ms.locfileid: "41673475"
 | -----     | -----     | -----    | -----        |
 | `microsoftTeams.initialize()` | 初始化团队库。 此函数必须在任何其他 SDK 调用之前调用。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-)|
 |`microsoftTeams.getContext(callback: (context: Context)`| 获取运行页面的当前状态。 回调将检索**Context**对象。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-)<br/>[上下文 obj](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | 初始化团队库，并根据 contentUrl 和 websiteUrl 设置选项卡的[帧上下文](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest)。 这可确保 "转到网站/重新加载" 功能在正确的 URL 上运行。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---)|
+| `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | 根据 contentUrl 和 websiteUrl 设置选项卡的[帧上下文](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest)。 这可确保 "转到网站/重新加载" 功能在正确的 URL 上运行。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-)|
 | `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |当用户切换选项卡的全屏/窗口视图时注册的处理程序。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-)<br/>[boolean](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest#isfullscreen)|
 |`microsoftTeams.registerChangeSettingsHandler()` |当用户选择 "已启用的**设置**" 按钮以重新配置选项卡时注册的处理程序。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |获取应用程序拥有的选项卡。 该回调检索**TabInformation**对象。 **TabInstanceParameters**对象是可选参数。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest)|
