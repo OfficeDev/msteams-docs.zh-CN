@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: ad02795c7ab84e290b83e781ea413dd3ef797fdb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f8550070ed010d99c0c33202ada95b64c05cdc4f
+ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672970"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42982142"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -15,8 +15,9 @@ ms.locfileid: "41672970"
 
 更改日志将列出 Microsoft 团队平台和此文档集的更改。 有时，条目可用于吸引团队开发人员感兴趣的新功能。
 
-| **Date** | **Notes** | **更改的主题** |
+| **Date** | **备注** | **更改的主题** |
 | -------- | --------- | ------------------ |
+| 03/24/2020 | 添加了对检索会话的单个成员和其他支持检索分页成员的支持。 | [获取你的 bot 的团队上下文](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | 发送`replyToId`到 bot 的负载中的参数不再加密，这样您就可以使用此值来构造 deeplinks 给这些邮件。 邮件负载在参数`legacy.replyToId`中包含加密的值。  |
 | 11/5/2019 | 使用 web 内容页中的团队 JavaScript SDK 进行单一登录是在开发人员预览版中 | [单一登录](~/tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | 已更新会话 bot 和邮件扩展文档，以反映 4.6 Bot 框架 SDK。 有关 v3 SDK 的文档在 "资源" 部分提供。 | 所有机器人和邮件扩展文档。 |
@@ -30,7 +31,7 @@ ms.locfileid: "41672970"
 | 05/20/2019 | 邮件操作 | [邮件操作](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | 链接 unfurling （自定义 URL 预览） | [链接 unfurling](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | 适用于 store 应用的应用程序认证计划 | [应用程序证书](~/publishing/application-certification.md) |
-| 05/06/2019 | 应用模板现已推出。 | [应用程序模板](~/samples/app-templates.md) |
+| 05/06/2019 | 应用模板现已推出。 | [应用模板](~/samples/app-templates.md) |
 | 04/23/2019 | 基于操作的邮件扩展现已提供 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | 创建到专用聊天的深层链接不适用于开发人员预览和可用 | [深层链接到聊天](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | 在选项卡上下文中呈现 SKU 和 licenceType 信息 | [选项卡上下文](~/concepts/tabs/tabs-context.md) |
