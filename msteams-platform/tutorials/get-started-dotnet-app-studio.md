@@ -2,13 +2,15 @@
 title: '开始使用 c #/.NET'
 description: '使用 c #/.NET 在 Microsoft 团队中开始构建出色的应用程序'
 keywords: '入门 .net c # csharp'
+ms.custom: scenarios:getting-started; languages:ASP.NET,C#
+ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: de133894042baaba897a9f046d613cd5dbb94eee
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: d38491ec1d152e8710e52530e3903a4bad3e1459
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673187"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034055"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>使用 c #/.NET 和应用程序工作室在 Microsoft 团队平台上开始使用
 

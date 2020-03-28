@@ -2,12 +2,12 @@
 title: 为 Microsoft "团队" 选项卡请求设备权限
 description: 如何更新您的应用程序清单，以便请求对通常需要用户同意的本机功能的访问权限
 keywords: 团队选项卡开发
-ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: e9dc6c6f177e3a87e2846bcb836cc38601c9a50e
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928515"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034034"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>为 Microsoft "团队" 选项卡请求设备权限
 
@@ -21,13 +21,10 @@ ms.locfileid: "42928515"
 ![设备权限设置屏幕](~/assets/images/tabs/device-permissions.png)
 
 > [!IMPORTANT]
-> 移动客户端上的选项卡目前不支持本机设备功能，但即将推出完全支持。 若要为此更改做准备，应按照移动选项卡[上的选项卡指南中](~/tabs/design/tabs-mobile.md)的步骤创建选项卡。 个人应用（静态选项卡）目前可在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中使用。
 >
-> 释放对选项卡的完全支持时：
+> 移动客户端上的选项卡目前不支持本机设备功能。
 >
-> * 所有选项卡将始终在移动设备上可用
-> * 您`contentUrl` **将在移动团队客户端中加载**。
-> * 对于频道/组选项卡，用户仍可以通过您`websiteUrl`在单独的浏览器中打开您的`contentUrl`选项卡，但您将首先加载。  
+> 目前，所有桌面客户端都不完全支持地理位置 API。
 
 ## <a name="device-permissions"></a>设备权限
 
@@ -109,4 +106,4 @@ Notification.requestPermission(function(result) { /* ... */ });
 
 ## <a name="permission-behavior-across-login-sessions"></a>跨登录会话的权限行为
 
-本机设备权限是按每个登录会话存储的。 这意味着，如果您登录到团队的另一个实例（例如，在另一台计算机上），您的设备权限将不可用。 相反，你将需要重新同意新登录 sessoin 的设备权限。 这也意味着，如果您注销团队（或团队内部的交换机租户），则将删除该先前登录会话的设备权限。 在开发本机设备权限时，请记住这一点：您同意的本机功能仅适用于您的_当前_登录 sessoin。
+本机设备权限是按每个登录会话存储的。 这意味着，如果您登录到团队的另一个实例（例如，在另一台计算机上），您的设备权限将不可用。 相反，你将需要重新同意新登录会话的设备权限。 这也意味着，如果您注销团队（或团队内部的交换机租户），则将删除该先前登录会话的设备权限。 在开发本机设备权限时，请记住这一点：您同意的本机功能仅适用于您的_当前_登录会话。
