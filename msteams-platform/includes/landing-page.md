@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: c13530dfcd5841f6a843e8f6f94a44180a2e4927
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 85fb1f4f3112da1022613ac7d9a9cd5f64081abd
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42638589"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43035601"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -354,7 +354,7 @@ ms.locfileid: "42638589"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>考勤</h3>
+                                                    <h3>考勤应用</h3>
                                                     <p>帮助团队记录考勤情况并生成汇总报表。</p>
                                                 </div>
                                             </div>
@@ -373,7 +373,7 @@ ms.locfileid: "42638589"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>员工见解</h3>
+                                                    <h3>员工见解应用</h3>
                                                     <p>使一线员工能够捕获客户反馈。</p>
                                                 </div>
                                             </div>
@@ -394,6 +394,44 @@ ms.locfileid: "42638589"
                                                 <div class="cardText">
                                                     <h3>奖励应用</h3>
                                                     <p>管理和跟踪对活动和事件的奖励性参与。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-openbadges">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/dynamics-gdpr-center.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>开放式徽章应用</h3>
+                                                    <p>奖励和跟踪数字学习凭据徽章。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-groupactivities">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>群组活动应用</h3>
+                                                    <p>快速创建并管理活动组和协作工作流。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -860,6 +898,28 @@ ms.locfileid: "42638589"
                                                 </p>
                                                 <p>
                                                     <a href="https://github.com/Microsoft/botbuilder-dotnet/">GitHub</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="assets/icons/graph-icon-1.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Microsoft Graph SDK</h3>
+                                                <p>
+                                                    <a href="https://docs.microsoft.com/graph/sdks/sdks-overview">Graph SDK 概述</a>
+                                                </p>
+                                                <p>
+                                                    <a href="https://docs.microsoft.com/graph/sdks/sdk-installation">安装 Graph SDK</a>
                                                 </p>
                                             </div>
                                         </div>
