@@ -3,12 +3,12 @@ title: 安装与 Microsoft 团队的 Moodle 集成
 description: 如何为 Microsoft 团队安装和配置 Moodle 集成应用程序
 keywords: 团队 Moodle 应用集成插件
 ms.date: 01/31/2019
-ms.openlocfilehash: 012d6e9c979386e892b5a47b7655208eca95e11a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2b48cfb0bbef9a531e69ae5620c11a8258acdc64
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41672966"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120295"
 ---
 # <a name="installing-the-moodle-integration-with-microsoft-teams"></a>安装与 Microsoft 团队的 Moodle 集成
 
@@ -24,7 +24,7 @@ ms.locfileid: "41672966"
 * 将 Moodle 选项卡和 Moodle 助手 bot 自动安装到每个已同步的团队中。 （即将推出）
 * 单击一次，将 Moodle 应用发布到私有团队应用商店中。 （即将推出）
 
-若要了解此集成提供的功能的详细信息，请转到[此处](https://education.microsoft.com/courses-and-resources/resources/microsoft-teams-moodle)。
+若要了解此集成提供的功能的详细信息，请转到[此处](https://education.microsoft.com/resource/3dffb3a8)。
 
 ## <a name="prerequisites"></a>先决条件
 

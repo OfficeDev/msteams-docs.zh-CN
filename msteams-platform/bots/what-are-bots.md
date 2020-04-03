@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft 团队中的会话 bot 概述。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 132b71a4da7462c426468c7fc2f79b26b6fbb03b
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635303"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120288"
 ---
 # <a name="what-are-conversational-bots"></a>什么是对话 bot？
 
@@ -92,7 +92,7 @@ BOT：我发现了200结果，请包含姓和名。
 
 ### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>使用 unranked 响应维护大型检索知识库
 
-Bot 最适合短而快速的交互（而不是 sifting），但长列表正在寻找答案。
+Bot 最适用于简短的快速交互，而不是 sifting 通过长列表查找答案。
 
 ## <a name="get-started"></a>入门
 

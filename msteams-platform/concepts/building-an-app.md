@@ -4,12 +4,12 @@ author: clearab
 description: 了解为 Microsoft 团队构建应用程序的典型过程。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7c748829c481373dd7dfa011bfba4e7de3aba1bb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7ec67c52f9321579da34c490175f6becc3a8fdfd
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673337"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120253"
 ---
 # <a name="building-an-app-for-microsoft-teams"></a>为 Microsoft 团队构建应用程序
 
@@ -17,7 +17,7 @@ ms.locfileid: "41673337"
 
 ## <a name="design-a-great-app"></a>设计出色的应用程序
 
-为 Microsoft 团队创建成功应用程序的最重要步骤是选择适当的组合扩展性点和要利用的 UI 元素。 有时，这是一种非常简单的决策，但对于更复杂的应用程序，您应花大量时间来了解您尝试使用应用程序所做的问题，并将您的解决方案映射到用户可以在 Microsoft 中与您的应用程序交互的各种方式。团队客户端。 不要低估上下文和范围的重要性！ 在一对一聊天中运行良好的会话自动程序在群聊天或频道对话过程中可能不起作用。
+为 Microsoft 团队创建成功应用程序的最重要步骤是选择适当的组合扩展性点和要利用的 UI 元素。 有时，这是一种非常简单的决策，但对于更复杂的应用，您应花大量时间来了解您尝试使用应用程序解决的问题，以及在用户可以与 Microsoft 团队客户端中的应用程序交互的各种方式之间映射您的解决方案。 不要低估上下文和范围的重要性！ 在一对一聊天中运行良好的会话自动程序在群聊天或频道对话过程中可能不起作用。
 
 1. 首先，[了解团队客户端扩展性点和](~/concepts/extensibility-points.md)可用于您的应用程序的 UI 元素。
 
@@ -32,7 +32,7 @@ ms.locfileid: "41673337"
 
 ## <a name="prepare-your-environment"></a>准备环境
 
-您需要确保您有一个可在其中上传和测试团队应用程序的环境。 如果您还没有已启用团队的 O365 订阅，并且可以将应用上传到它，则可以[注册 O365 开发人员计划](https://dev.office.com/devprogram)，从而为开发目的提供访问免费 Office 365 订阅的功能。
+您需要确保您有一个可在其中上传和测试团队应用程序的环境。 如果您还没有已启用团队的 O365 订阅，并且可以将应用上传到它，则可以[注册 O365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)，从而为开发目的提供访问免费 Office 365 订阅的功能。
 
 有关详细信息，请参阅[准备您的 O365 环境](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 

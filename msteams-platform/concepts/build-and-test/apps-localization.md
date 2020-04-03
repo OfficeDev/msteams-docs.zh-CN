@@ -3,12 +3,12 @@ title: 工作组应用程序的本地化
 description: 介绍有关本地化应用程序的问题
 keywords: 团队发布 microsoft store office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: c7d8ff47d370badcc75e3ad5d10a2ca298b80195
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279759"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120278"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft 团队应用程序的本地化
 
@@ -78,7 +78,7 @@ ms.locfileid: "42279759"
 如果用户的语言设置为 "en-ca"： 
 
 1. 团队客户端将使用 ' en ' 字符串将其替换为 "fr" 字符串。
-2. 由于未提供 "en-ca" localazation，将使用 "en" localizations。
+2. 由于未提供 "en-ca" 本地化，将使用 "en" localizations。
 
 如果用户的语言设置为 "es"，则团队客户端将采用 "fr" 字符串，而不会使用任何语言文件覆盖这些字符串。
 

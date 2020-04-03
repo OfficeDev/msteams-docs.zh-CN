@@ -4,12 +4,12 @@ author: clearab
 description: 介绍如何从邮件扩展操作命令响应任务模块提交操作
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 33a9388ee84dcf03a5bda59c5a5139c6f49bde6c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6372a683a7c9f08551a9c0d126a0db2ab9212e66
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673310"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120260"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -39,7 +39,7 @@ ms.locfileid: "41673310"
 
 下面是接收调用消息的示例。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -48,7 +48,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -61,7 +61,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 这是您将收到的 JSON 对象的一个示例。 `commandContext`参数指示邮件扩展的触发位置。 `data`对象将窗体上的字段作为参数，并将用户提交的值包含在窗体中。 此处的 JSON 对象将被缩短，以突出显示最相关的字段。
 
@@ -95,7 +95,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 对`composeExtension/submitAction`请求做出响应的最常见方法是将卡片插入撰写邮件区域中。 然后，用户可以选择将该卡提交到对话中。 有关使用卡片的详细信息，请参阅[卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -132,7 +132,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -155,7 +155,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -204,7 +204,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 您还可以通过将带有自适应卡片的邮件插入到使用 bot 的频道中来响应提交操作。 你的用户将能够在提交邮件之前预览邮件，并可能对其进行编辑/与之交互。 当您需要在创建自适应卡片响应之前从用户处收集信息，或者在某人与他人交互后需要更新卡片时，这可能非常有用。 以下方案显示了应用程序 Polly 如何使用此流配置轮询，而不在通道对话中包括配置步骤。
 
 1. 用户单击邮件扩展可触发任务模块。
-2. 用户使用任务 moudule 配置投票。
+2. 用户使用任务模块配置投票。
 3. 提交任务模块后，应用使用提供的信息将轮询构建为自适应卡片，并将其作为`botMessagePreview`响应发送给客户端。
 4. 然后，用户可以预览自适应卡片邮件，然后将其插入频道。 如果应用尚未成为频道的成员，则单击`Send` "" 将添加它。
    1. 用户还可以选择`Edit`将其返回到原始任务模块的邮件。
@@ -215,7 +215,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 若要启用此流，任务模块应使用 bot 将`composeExtension/submitAction`发送到频道的卡片的预览对初始邮件做出响应。 这使用户可以在发送之前验证卡，还会在对话中尝试安装你的 bot （如果尚未安装）。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -256,7 +256,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -295,7 +295,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 >[!Note]
 >`activityPreview`必须包含一个`message`只有1个自适应卡片附件的活动。 `<< Card Payload >>`值是要发送的卡片的占位符。
@@ -323,7 +323,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 现在，您的`composeExtension/submitAction`邮件扩展将需要对两种新的调用进行响应， `value.botMessagePreviewAction = "send"`其中`value.botMessagePreviewAction = "edit"`和。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(
@@ -340,7 +340,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -357,7 +357,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -400,7 +400,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 用户单击 "**发送**" 按钮后，您将收到带`composeExtension/submitAction`调用的`value.botMessagePreviewAction = send`invoke。 您的 web 服务将需要创建一个具有自适应卡片的主动消息，并将其发送到对话，同时还会回复调用。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
@@ -427,7 +427,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -476,7 +476,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 你将收到一封`composeExtension/submitAction`类似下面的新邮件。
 
