@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: 85fb1f4f3112da1022613ac7d9a9cd5f64081abd
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: d73bfe89ba2cc8a62c912572786bd81ab9e641fe
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43035601"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120827"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -480,6 +480,25 @@ ms.locfileid: "43035601"
                                                 <div class="cardText">
                                                     <h3>Kronos 到排班连接器</h3>
                                                     <p>提供从 Kronos WFM 系统到 Teams 排班的无缝集成。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/Microsoft-Teams-Shifts-WFM-Connectors/tree/master/JDA_v17.2-Shifts-Connector">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-scenarios.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>JDA-to-Shifts 连接器</h3>
+                                                    <p>提供从 JDA (BlueYonder) WFM 系统到 Teams Shifts 的无缝集成。</p>
                                                 </div>
                                             </div>
                                         </div>
