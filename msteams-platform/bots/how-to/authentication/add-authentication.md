@@ -3,13 +3,13 @@ title: 向你的团队 bot 添加身份验证
 author: clearab
 description: 如何：将 OAuth 身份验证添加到 Microsoft 团队中的 bot。
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 63d06100f69a5dc3777bdfb20b3231a85dce1f04
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 4a573037e970be3f6c010a0a3c4b2e18be811d2f
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673155"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225796"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向你的团队 bot 添加身份验证
 
@@ -25,7 +25,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
 
 在本文中，您将了解：
 
-- **如何创建启用身份验证的 bot**。 你将使用[cs-auth 示例][teams-auth-bot]来处理用户登录凭据和生成身份验证令牌。
+- **如何创建启用身份验证的 bot**。 你将使用[cs-auth 示例][teams-auth-bot-cs]来处理用户登录凭据和生成身份验证令牌。
 - **如何将机器人部署到 Azure 并将其与标识提供程序关联**。 提供程序根据用户登录凭据发出令牌。 Bot 可以使用令牌访问需要身份验证的资源，如邮件服务。 有关详细信息，请参阅[适用于 bot 的 Microsoft 团队身份验证流](auth-flow-bot.md)。
 - **如何在 Microsoft 团队中集成机器人**。 将 bot 集成后，可以在聊天中登录并与之交换邮件。
 
@@ -39,8 +39,9 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
 
     | 示例 | BotBuilder 版本 | 示 |
     |:---|:---:|:---|
-    | Cs 中的**Bot 身份验证**- [auth-示例][teams-auth-bot] | v4 | OAuthCard 支持 |
-    | Python 中的**Bot 身份验证** [-auth-示例][teams-auth-bot-py] | v4 | OAuthCard 支持 |
+    | Cs 中的**Bot 身份验证**- [auth-示例][teams-auth-bot-cs] | v4 | OAuthCard 支持 |
+    | [Js-auth][teams-auth-bot-js]中的**Bot 身份验证**-示例 | v4| OAuthCard 支持  |
+    | [Py-auth][teams-auth-bot-py]中的**Bot 身份验证**-示例 | v4 | OAuthCard 支持 |
 
 ## <a name="create-the-resource-group"></a>创建资源组
 
@@ -64,7 +65,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
 
 1. 在[**Azure 门户**][azure-portal]的左侧导航窗格中，选择 "**创建资源**"。
 1. 在 "搜索" 框中，键入*App Service Plan*。 从搜索结果中选择**应用服务计划**卡片。
-1. 选择“**创建**”。
+1. 选择“创建”****。
 1. 系统将要求你提供以下信息：
     1. **订阅**。 您可以使用现有订阅。
     1. **资源组**。 选择之前创建的组。
@@ -73,7 +74,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
     1. **区域**。 选择 "*西部*" 或 "区域接近您的应用程序"。
     1. **定价层**。 确保选择了 "*标准 S1* "。 此值应为默认值。
     1. 选择 "**查看" 和 "创建**" 按钮。 您应该会看到标题为 "已*通过验证*"。
-    1. 选择“**创建**”。 可能需要几分钟的时间来创建应用服务计划。 该计划将列在资源组中。
+    1. 选择“创建”****。 可能需要几分钟的时间来创建应用服务计划。 该计划将列在资源组中。
 
 ## <a name="create-the-bot-channels-registration"></a>创建 bot 通道注册
 
@@ -122,7 +123,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
    1. 在 "**客户端密码**" 下，选择 &#x2795;**新的客户端密码**。
    1. 添加描述以标识来自其他用户可能需要为此应用程序创建的此机密，如*团队中的 Bot 标识应用程序*。
    1. 将**过期**时间设置为您所做的选择。
-   1. 选择“添加”****。
+   1. 选择“**添加**”。
    1. 在离开此页面之前，请**记录此密码**。 在你将 Azure AD 应用程序注册到你的 bot 时，你将在稍后将此值用作_客户端密码_。
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>配置标识提供程序连接，并将其注册到机器人
@@ -172,9 +173,9 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
 
 完成初步设置后，我们将重点介绍如何创建要在本文中使用的 bot。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
 
-1. 克隆： [cs-auth-示例][teams-auth-bot]。
+1. 克隆： [cs-auth-示例][teams-auth-bot-cs]。
 1. 启动 Visual Studio。
 1. 在工具栏中，选择 "**文件-> 打开-> 项目/解决方案**"，然后打开 "bot" 项目。
 1. 在 c # 中，如下所示更新**appsettings** ：
@@ -182,7 +183,7 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
     - 设置`ConnectionName`为你添加到 bot 通道注册的标识提供程序连接的名称。 本示例中使用的名称是*BotTeamsAuthADv1*。
     - 设置`MicrosoftAppId`为在 bot 频道注册时保存的**bot 应用 ID** 。
     - 设置`MicrosoftAppPassword`为在 bot 频道注册时保存的**客户机密**。
-    - 将设置`ConnectionName`为标识提供程序连接的名称。 
+    - 将设置`ConnectionName`为标识提供程序连接的名称。
 
     根据你的 bot 密码中的字符，你可能需要 XML 对密码进行转义。 例如，需要将任何 & 符号（&）编码为`&amp;`。
 
@@ -190,9 +191,28 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
 
 1. 在 "解决方案资源管理器" 中`TeamsAppManifest` ，导航到`manifest.json` "打开`id` " `botId`和 "设置" 文件夹，并转到在 BOT 频道注册时保存的**bot 应用 ID** 。
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="javascript"></a>[JavaScript](#tab/node-js)
 
-1. 克隆来自 github 存储库的示例[团队 bot 身份验证][teams-auth-bot-py]。
+1. Clone[节点-auth-示例][teams-auth-bot-js]。
+1. 在控制台中，导航到项目： </br></br>
+`cd samples/javascript_nodejs/46.teams`  
+1. 安装模块</br></br>
+`npm install`
+1. 更新**env**配置，如下所示：
+
+    - 设置`MicrosoftAppId`为在 bot 频道注册时保存的**bot 应用 ID** 。
+    - 设置`MicrosoftAppPassword`为在 bot 频道注册时保存的**客户机密**。
+    - 将设置`connectionName`为标识提供程序连接的名称。
+
+    根据你的 bot 密码中的字符，你可能需要 XML 对密码进行转义。 例如，需要将任何 & 符号（&）编码为`&amp;`。
+
+     [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
+
+1. `teamsAppManifest`在文件夹中，打开`manifest.json`并将`id`其设置为您的**Microsoft 应用 id** ，并`botId`将其设置为在 bot 频道注册时保存的**bot 应用 id** 。
+
+# <a name="python"></a>[Python](#tab/python)
+
+1. Clone 存储库中的[py-auth-示例][teams-auth-bot-py]。
 1. 更新**config.py**：
 
     - 设置`ConnectionName`为你添加到你的 Bot 的 OAuth 连接设置的名称。
@@ -219,7 +239,7 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
 
    ![auth-应用程序-服务](../../../assets/images/authentication/auth-bot-app-service.png)
 
-1. 选择“**创建**”。
+1. 选择“创建”****。
 1. 如果部署成功完成，您应该会看到它在 Visual Studio 中反映出来。 此外，默认浏览器中会显示一个页面，指示*你的 bot 已准备就绪！*。 该 URL 将类似于： `https://botteamsauth.azurewebsites.net/`。 将其保存到文件中。
 1. 在浏览器中，导航到[**Azure 门户**][azure-portal]。
 1. 检查您的资源组，应将 bot 与其他资源一起列出。 下面的图像是一个示例：
@@ -424,9 +444,9 @@ Microsoft 团队是完全基于云的产品，它需要使用 HTTPS 终结点从
 **调用活动**将发送到 bot，而不是其他通道使用的事件活动。
 这是通过**ActivityHandler**的 classing 完成的。
 
-**Bot/DialogBot**
+# <a name="cnet"></a>[C #/.NET](#tab/dotnet-sample)
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+**Bot/DialogBot**
 
 [!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
@@ -458,7 +478,36 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="javascript"></a>[JavaScript](#tab/node-js-dialog-sample)
+
+**bot/dialogBot**
+
+[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/dialogBot.js?range=4-46)]
+
+**bot/teamsBot**
+
+如果使用了**OAuthPrompt** ，则必须将*调用活动*转发到对话框。
+
+[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/teamsBot.js?range=4-33)]
+
+**对话框/mainDialog**
+
+在对话步骤中，使用`beginDialog` "" 启动 OAuth 提示，这将要求用户登录。
+
+- 如果用户已登录，则会生成令牌响应事件，而不会提示用户。
+- 否则，这将提示用户登录。 Azure Bot 服务在用户尝试登录后发送令牌响应事件。
+
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
+
+在下面的对话框步骤中，检查上一步的结果中是否存在令牌。 如果不为 null，则用户已成功登录。
+
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-64)]
+
+**bot/logoutDialog**
+
+[!code-javascript[allow-logout](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42&highlight=7)]
+
+# <a name="python"></a>[Python](#tab/python-sample)
 
 **bot/dialog_bot py**
 
@@ -468,7 +517,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 如果使用了**OAuthPrompt** ，则必须将*调用活动*转发到对话框。
 
-[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
+[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)]
 
 **对话框/main_dialog py**
 
@@ -481,7 +530,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 在下面的对话框步骤中，检查上一步的结果中是否存在令牌。 如果不为 null，则用户已成功登录。
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=51-61)]
 
 **对话框/logout_dialog py**
 
@@ -489,9 +538,8 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 ---
 
-## <a name="further-reading"></a>进一步阅读
-
-- [通过 Azure Bot 服务向你的 bot 添加身份验证](https://aka.ms/azure-bot-add-authentication)
+> [!div class="nextstepaction"]
+> [了解如何通过 Azure Bot 服务添加身份验证](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 
@@ -502,9 +550,11 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 [concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0
 [simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0
 
-[teams-auth-bot]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
+[teams-auth-bot-cs]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 
 [teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
+
+[teams-auth-bot-js]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth
 
 [azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 [aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview

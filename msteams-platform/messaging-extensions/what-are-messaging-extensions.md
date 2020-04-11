@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft 团队平台上的邮件扩展概述
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 01a038d57368826345a55358b1d628447b21f772
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673304"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225789"
 ---
 # <a name="what-are-messaging-extensions"></a>什么是邮件扩展？
 
@@ -64,10 +64,10 @@ ms.locfileid: "41673304"
 
 准备好开始构建了吗？ 尝试一下我们的快速入门：
 
-* 适用于 C 的快速入门#
+* **C#**
   * [带有基于操作的命令的消息扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
   * [包含基于搜索的命令的邮件扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* 适用于 JavaScript 的快速入门
+* **JavaScript**
   * [带有基于操作的命令的消息扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [包含基于搜索的命令的邮件扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 

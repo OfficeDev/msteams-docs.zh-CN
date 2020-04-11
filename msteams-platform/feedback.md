@@ -1,15 +1,15 @@
 ---
-title: 发送反馈
-description: 提供有关 Microsoft 团队开发人员平台的反馈
-keywords: 团队反馈问题发布 bug 的相关内容
-ms.openlocfilehash: 1f92a1f685632a9bb1bcae9e382b3b651561ead7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: 支持和反馈
+description: Microsoft 团队开发人员支持和反馈
+keywords: 团队反馈开发人员问题问题联系支持请求 bug 发布
+ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673321"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225782"
 ---
-# <a name="send-feedback-about-the-microsoft-teams-developer-platform"></a>发送有关 Microsoft 团队开发人员平台的反馈
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft 团队开发人员支持和反馈  
 
 Microsoft 团队产品团队将跨多个渠道响应开发人员社区。
 
