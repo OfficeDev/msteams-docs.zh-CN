@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序审批过程指南
 description: 介绍了如何将应用发布到 Microsoft 团队应用商店的审批过程
 keywords: 团队发布 microsoft store office 发布 AppSource
-ms.openlocfilehash: 761cb69ddebac28af5ffc39401eefa9e1b424bc3
-ms.sourcegitcommit: 27789fd2e6f522f33f2135c66b0153949d9b0d64
+ms.openlocfilehash: e0b8c7d1b98747019a096924de395a7ccf608a0c
+ms.sourcegitcommit: ebd653e0646c8ddf0b0f4f2da55831c5acbad5d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "43285935"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "43509320"
 ---
 # <a name="submit-your-app-to-appsource"></a>将您的应用程序提交到 AppSource
 
@@ -43,7 +43,15 @@ ms.locfileid: "43285935"
 
 ## <a name="why-do-i-get-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>如果我尝试通过合作伙伴中心提交我的加载项，为什么我会收到 "此帐户未发布资格" 消息？
 
-当您的[帐户验证状态](/partner-center/verification-responses)为 "挂起" 时，您将收到上述错误消息。 您可以通过在页面页眉命令行管理程序的右上角选择 "**设置**" 选项（齿轮图标），然后选择 "**开发人员设置** => **帐户**  => **帐户设置**"，在 "合作伙伴中心"[仪表板](https://partner.microsoft.com/dashboard)中检查您的帐户验证状态。 在帐户验证过程中，将显示每个所需步骤的状态（电子邮件所有权、雇用验证和商业验证）。 成功完成验证过程后，配置文件页上的注册的验证状态将从 "挂起" 更改为 "已授权"，并且不会再显示进程步骤。 *请参阅下文*，以解决可能存在的验证问题。
+当您的[帐户验证状态](/partner-center/verification-responses)为 "挂起" 时，您将收到上述错误消息。 您可以通过在页面页眉命令行管理程序的右上角选择 "**设置**" 选项（齿轮图标），然后选择 "**开发人员设置** => **帐户**  => **帐户设置**"，在 "合作伙伴中心"[仪表板](https://partner.microsoft.com/dashboard)中检查您的帐户验证状态。
+
+![合作伙伴中心帐户设置页](../../../assets/images/partner-center-accts-page.png)
+
+![合作伙伴中心验证状态](../../../assets/images/partner-center-verification-status.png)
+
+在帐户验证过程中，将显示每个所需步骤的状态（电子邮件所有权、雇用验证和商业验证）。 成功完成验证过程后，配置文件页上的注册的验证状态将从 "挂起" 更改为 "已授权"，并且不会再显示进程步骤。
+
+![合作伙伴中心验证错误](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>如何获取对与我的帐户相关的问题的进一步支持？
 
