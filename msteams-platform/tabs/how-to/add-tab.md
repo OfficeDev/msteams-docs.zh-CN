@@ -5,12 +5,12 @@ description: 创建选项卡的指南
 keywords: 团队选项卡组频道可配置
 ms.topic: conceptual
 ms.author: ''
-ms.openlocfilehash: 3f3b0ac8bc141672f25d9db2470cb71a856e0ed8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9f12f9eb39e4dfac4d5b725638bdbd2d7c2b4de6
+ms.sourcegitcommit: b8b06929981ebbeef4ae489f338271bf09d349a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673255"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "43537269"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>使用自定义选项卡扩展团队应用程序
 
@@ -38,7 +38,9 @@ ms.locfileid: "41673255"
 无论页面的类型如何，您都需要遵循以下要求：
 
 * 您必须允许通过 X 框架选项和/或内容安全策略 HTTP 响应标头在 IFrame 中提供页面。
-
+  * 设置标头：`Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`        
+  * 对于 Internet Explorer 11 兼容性， `X-Content-Security-Policy`也设置。    
+  * 或者，设置标`X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`头。 此标头已弃用，但仍受大多数浏览器的考虑。
 * 通常，作为针对 jacking 的安全措施，登录页面不会呈现在 Iframe 中。 因此，您的身份验证逻辑需要使用除重定向之外的方法（例如，使用基于令牌的身份验证或基于 cookie 的身份验证）。
 
 > [!NOTE]
@@ -78,11 +80,11 @@ ms.locfileid: "41673255"
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`entityId`|String|64个字符|✔|选项卡显示的实体的唯一标识符。|
+|`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|String|128个字符|✔|该选项卡在通道接口中的显示名称。|
 |`contentUrl`|String|2048 个字符|✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
 |`websiteUrl`|String|2048 个字符||要指向的 https://URL，如果用户要在浏览器中查看。|
-|`scopes`|枚举数组|1 |✔|静态选项卡仅支持`personal`作用域，这意味着只能将其设置为个人应用程序的一部分。|
+|`scopes`|枚举数组|1|✔|静态选项卡仅支持`personal`作用域，这意味着只能将其设置为个人应用程序的一部分。|
 
 #### <a name="simple-personal-tab-manifest-example"></a>简单的个人选项卡清单示例
 
@@ -109,7 +111,7 @@ ms.locfileid: "41673255"
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|指向 "配置" 页的 https://URL。|
 |`canUpdateConfiguration`|Boolean|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置`true`|
-|`scopes`|枚举数组|1 |✔|可配置的`team`选项卡仅`groupchat`支持和范围。 |
+|`scopes`|枚举数组|1|✔|可配置的`team`选项卡仅`groupchat`支持和范围。 |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>简单通道/组选项卡清单示例
 
