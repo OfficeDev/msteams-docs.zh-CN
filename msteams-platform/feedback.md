@@ -1,17 +1,19 @@
 ---
-title: 支持和反馈
-description: Microsoft 团队开发人员支持和反馈
+title: Microsoft 团队开发人员支持和反馈
+description: Microsoft 团队产品团队在多个反馈和支持频道中向开发人员社区做出响应。
 keywords: 团队反馈开发人员问题问题联系支持请求 bug 发布
-ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: dc152fc9445e3fc9583638d522c03e9f2052bcd9
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225782"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550943"
 ---
-# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft 团队开发人员支持和反馈  
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft 团队开发人员支持和反馈
 
-Microsoft 团队产品团队将跨多个渠道响应开发人员社区。
+Microsoft 团队产品团队在多个反馈和支持频道中向开发人员社区做出响应。
+
+## <a name="support-and-feedback-channels"></a>支持和反馈通道
 
 - **有关 Microsoft 团队开发人员平台的一般问题：** 请将电子邮件发送到[Microsoft 团队开发人员支持](mailto:microsoftteamsdev@microsoft.com)。 此电子邮件地址_不适_用于 Microsoft 团队非平台相关功能的注释或建议。 此外，在我们读取发送到此地址的所有电子邮件时，我们不会答复每个电子邮件。
 

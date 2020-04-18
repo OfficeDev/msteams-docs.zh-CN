@@ -3,12 +3,12 @@ title: 卡片中的文本格式
 description: 描述 Microsoft 团队中的卡片文本格式
 keywords: 团队 bot 卡片格式
 ms.date: 03/29/2018
-ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365246"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550950"
 ---
 # <a name="format-cards-in-teams"></a>设置团队中卡片的格式
 
@@ -61,15 +61,15 @@ ms.locfileid: "42365246"
 
 在桌面上，自适应卡片 Markdown 格式在 web 浏览器和团队客户端应用程序中的显示格式如下所示：
 
-![自适应卡片 Markdown 桌面客户端中的格式设置](/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![自适应卡片 Markdown 桌面客户端中的格式设置](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 在 iOS 上，自适应卡片 Markdown 格式如下所示：
 
-![自适应卡片 Markdown 格式在 iOS 中](/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![自适应卡片 Markdown 格式在 iOS 中](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 在 Android 上，自适应卡片 Markdown 格式如下所示：
 
-![Android 中的自适应卡片 Markdown 格式](/assets/images/cards/Adaptive-markdown-Android.png)
+![Android 中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-Android.png)
 
 ### <a name="more-information-on-adaptive-cards"></a>有关自适应卡片的详细信息
 
@@ -179,11 +179,11 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 
 在桌面上，连接器卡的 Markdown 格式如下所示：
 
-![桌面客户端中的连接器卡的 Markdown 格式](/assets/images/cards/connector-desktop-markdown-combined.png)
+![桌面客户端中的连接器卡的 Markdown 格式](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
 在 iOS 上，连接器卡的 Markdown 格式如下所示：
 
-![IOS 客户端中的连接器卡的 Markdown 格式](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+![IOS 客户端中的连接器卡的 Markdown 格式](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 问题：
 
@@ -192,7 +192,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 
 在 Android 上，连接器卡的 Markdown 格式如下所示：
 
-![Android 客户端中的连接器卡的 Markdown 格式](/assets/images/cards/connector-android-markdown-combined.png)
+![Android 客户端中的连接器卡的 Markdown 格式](../../assets/images/cards/connector-android-markdown-combined.png)
 
 ### <a name="formatting-example-for-markdown-connector-cards"></a>Markdown 连接器卡的格式示例
 
@@ -268,11 +268,11 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 
 在桌面上，连接器卡的 HTML 格式如下所示：
 
-![桌面客户端中的连接器卡的 HTML 格式](/assets/images/cards/Connector-desktop-html-combined.png)
+![桌面客户端中的连接器卡的 HTML 格式](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 在 iOS 上，HTML 格式如下所示：
 
-![IOS 客户端中的连接器卡的 HTML 格式](/assets/images/cards/connector-iphone-html-combined-80.png)
+![IOS 客户端中的连接器卡的 HTML 格式](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 问题：
 
@@ -281,7 +281,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 
 在 Android 上，HTML 格式如下所示：
 
-![Android 客户端中的连接器卡的 HTML 格式](/assets/images/cards/connector-android-html-combined.png)
+![Android 客户端中的连接器卡的 HTML 格式](../../assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>HTML 连接器卡的格式示例
 
@@ -356,11 +356,11 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 
 在桌面上，HTML 格式如下所示：
 
-![桌面客户端中的 HTML 格式](/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![桌面客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 在 iOS 上，HTML 格式的外观如下所示：
 
-![IOS 客户端中的 HTML 格式](/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![IOS 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 问题：
 
@@ -368,7 +368,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 
 在 Android 上，HTML 格式的外观如下所示：
 
-![Android 客户端中的 HTML 格式](/assets/images/cards/card-formatting-xml-android-60.png)
+![Android 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-android-60.png)
 
 Android 上正确显示的字符格式（如粗体和斜体）。
 

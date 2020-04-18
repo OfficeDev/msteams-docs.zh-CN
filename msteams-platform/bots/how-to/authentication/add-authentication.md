@@ -4,12 +4,12 @@ author: clearab
 description: 如何：将 OAuth 身份验证添加到 Microsoft 团队中的 bot。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4a573037e970be3f6c010a0a3c4b2e18be811d2f
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: f5eae27de45cd0932e4d2ed62fa954429a48aa6d
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225796"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550968"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向你的团队 bot 添加身份验证
 
@@ -33,7 +33,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
 
 - 有关[机器人基础][concept-basics]知识、[管理状态][concept-state]、[对话框库][concept-dialogs]以及如何[实施顺序对话流][simple-dialog]的知识。
 - Azure 和 OAuth 2.0 开发方面的知识。
-- Visual Studio 2017 或更高版本和 Git。
+- 当前版本的 Visual Studio 和 Git。
 - Azure 帐户。 如果需要，可以创建[Azure 免费帐户](https://azure.microsoft.com/free/)。
 - 下面的示例。
 
@@ -173,7 +173,7 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
 
 完成初步设置后，我们将重点介绍如何创建要在本文中使用的 bot。
 
-# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 1. 克隆： [cs-auth-示例][teams-auth-bot-cs]。
 1. 启动 Visual Studio。
@@ -444,7 +444,7 @@ Microsoft 团队是完全基于云的产品，它需要使用 HTTPS 终结点从
 **调用活动**将发送到 bot，而不是其他通道使用的事件活动。
 这是通过**ActivityHandler**的 classing 完成的。
 
-# <a name="cnet"></a>[C #/.NET](#tab/dotnet-sample)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet-sample)
 
 **Bot/DialogBot**
 

@@ -5,12 +5,12 @@ keywords: '入门 .net c # csharp'
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: d38491ec1d152e8710e52530e3903a4bad3e1459
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 61237cd3178fcb41357230536827f732faf65ee4
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034055"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550957"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>使用 c #/.NET 和应用程序工作室在 Microsoft 团队平台上开始使用
 
@@ -29,7 +29,7 @@ ms.locfileid: "43034055"
 若要完成本教程，您需要获取以下工具：
 
 - [安装 Git](https://git-scm.com/downloads)
-- [安装 Visual Studio 2017](https://www.visualstudio.com/downloads/)。 您可以安装免费社区版。
+- [安装 Visual Studio](https://www.visualstudio.com/downloads/)。 您可以安装免费社区版。
 
 如果您在安装过程中看到`git`一个添加到路径的选项，请选择执行此操作。 这将很方便。
 
@@ -43,7 +43,7 @@ git version 2.17.1.windows.2
 
 ```
 
-请务必启动 Visual Studio 2017 并安装任何更新（如图所示）。
+请务必启动最新版本的 Visual Studio，并安装任何更新（如图所示）。
 
 您可以继续使用此终端窗口运行本教程后面的命令。
 
