@@ -2,12 +2,12 @@
 title: 选项卡的设计准则
 description: 介绍为内容和协作创建选项卡的准则
 keywords: 团队设计指南参考框架选项卡配置
-ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896497"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914551"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
 
@@ -42,7 +42,7 @@ ms.locfileid: "42896497"
 
 ### <a name="integration"></a>集中
 
-查找通过将卡发布到对话来通知用户选项卡活动的方法。
+通过将[自适应卡](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)发布到对话中，查找通知用户有关选项卡活动的方法。
 
 ### <a name="conversational"></a>对话
 

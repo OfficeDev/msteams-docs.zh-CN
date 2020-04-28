@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft 团队平台上的邮件扩展概述
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: 2a9fcdbcdda6bb85b6f5edc21253d05327ca5157
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225789"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914600"
 ---
 # <a name="what-are-messaging-extensions"></a>什么是邮件扩展？
 
@@ -42,7 +42,7 @@ ms.locfileid: "43225789"
 
 ### <a name="action-commands"></a>操作命令
 
-操作命令允许你向用户呈现模式弹出窗口，以收集或显示信息。 当用户提交表单时，您的 web 服务可以通过直接在对话中插入邮件，或在撰写邮件区域中插入邮件并允许用户提交邮件来做出响应。 甚至可以将多个表单链接在一起，以获取更复杂的工作流。
+操作命令使您可以向用户呈现模式弹出窗口，以收集或显示信息。 当用户提交表单时，您的 web 服务可以通过直接在对话中插入邮件，或在撰写邮件区域中插入邮件并允许用户提交邮件来做出响应。 甚至可以将多个表单链接在一起，以获取更复杂的工作流。
 
 它们可以通过撰写邮件区域、命令框或邮件触发。 从邮件中调用时，发送到你的 bot 的初始 JSON 有效负载将包含从中调用的整个邮件。
 
@@ -56,11 +56,11 @@ ms.locfileid: "43225789"
 
 ![邮件扩展搜索命令](~/assets/images/search-extension.png)
 
-### <a name="link-unfurling"></a>链接 unfurling
+### <a name="link-unfurling"></a>链接展开
 
 将 URL 粘贴到撰写邮件区域中时，还必须选择调用您的服务。 此功能称为**链接 unfurling**，使您可以在将包含特定域的 url 粘贴到撰写邮件区域时订阅接收调用。 您的 web 服务可以将 URL "unfurl" 到详细卡片中，提供的信息比标准网站预览卡更多。 您甚至可以添加按钮以允许用户立即执行操作，而无需离开 Microsoft 团队客户端。
 
-## <a name="get-started"></a>入门
+## <a name="get-started"></a>开始使用
 
 准备好开始构建了吗？ 尝试一下我们的快速入门：
 

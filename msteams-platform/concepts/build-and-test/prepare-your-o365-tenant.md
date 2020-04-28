@@ -2,12 +2,12 @@
 title: 准备 Office 365 租户
 description: 如何开始使用 Office 365 中的团队
 keywords: 配置 Office 365 租户团队上载
-ms.openlocfilehash: 35f102223a5f8e6a8e12268e22aedca07a61b1fa
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: e07ffe7f5325be1293a49934669f36c81613278b
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120267"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914565"
 ---
 # <a name="prepare-your-office-365-tenant"></a>准备 Office 365 租户
 
@@ -16,14 +16,14 @@ ms.locfileid: "43120267"
 * 商业协作版
 * 商业高级版
 * 企业版 E1、E3 和 E5
-* Developer
+* 开发人员
 * 教育版、教育版和教育版 E5
 
 Microsoft 团队还将对在其[退休](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)前订阅 E4 的客户提供。
 
 ## <a name="just-need-a-development-environment"></a>只需要开发环境？
 
-如果当前没有 Office 365 帐户，可以注册[office 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)订阅。 它在90天内*免费*使用，并且将持续更新，只要你将其用于开发活动即可。 如果您有 Visual Studio *Enterprise*或*专业*订阅，这两个程序都包括免费的 Office 365[开发人员订阅](https://aka.ms/MyVisualStudioBenefits)（在 visual Studio 订阅的生命周期内处于活动状态）。 *请参阅*[设置 Microsoft 365 开发人员订阅](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
+如果当前没有 Office 365 帐户，则可以注册[Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)订阅。 它在90天内*免费*使用，并且将持续更新，只要你将其用于开发活动即可。 如果你有 Visual Studio *Enterprise*或*专业版*订阅，这两个程序都包括一个免费的 Microsoft 365[开发人员订阅](https://aka.ms/MyVisualStudioBenefits)，在 Visual Studio 订阅的生命周期内处于活动状态。 *请参阅*[设置 Microsoft 365 开发人员订阅](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>为你的组织启用 Microsoft 团队
 

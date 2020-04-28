@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序审批过程指南
 description: 介绍了如何将应用发布到 Microsoft 团队应用商店的审批过程
 keywords: 团队发布 microsoft store office 发布 AppSource
-ms.openlocfilehash: e0b8c7d1b98747019a096924de395a7ccf608a0c
-ms.sourcegitcommit: ebd653e0646c8ddf0b0f4f2da55831c5acbad5d3
+ms.openlocfilehash: 70f81f40ff424ab28e7129da7b947be0b1fcf469
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "43509320"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914544"
 ---
 # <a name="submit-your-app-to-appsource"></a>将您的应用程序提交到 AppSource
 
@@ -28,7 +28,7 @@ ms.locfileid: "43509320"
 > * 如果您的团队应用程序包含 bot，则必须遵守 Bot 开发人员框架[行为准则](https://aka.ms/bf-conduct)。
 > * 如果您的应用程序包含 Office 365 连接器，可能会应用其他条款。 *请参阅*[连接器开发人员仪表板](https://aka.ms/connectorsdashboard)和[应用程序开发人员协议](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)。
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>**Faq —团队应用和合作伙伴帐户**
+## <a name="faqs--teams-apps-and-partner-accounts"></a>Faq —团队应用和合作伙伴帐户
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>如何创建合作伙伴中心帐户？
 
@@ -96,4 +96,4 @@ ms.locfileid: "43509320"
     * 问题的屏幕截图。
 
 > [!div class="nextstepaction"]
-> [了解有关 Microsoft 团队的应用验证策略的详细信息](/office/dev/store/validation-policies#14-microsoft-teams-apps)
+> [了解有关 Microsoft 团队的应用验证策略的详细信息](https://docs.microsoft.com/legal/marketplace/certification-policies)

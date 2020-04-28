@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: 如何更新和删除从你的 Microsoft 团队 bot 发送的邮件
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 012a6edb77f75c43cff01c58fb94e03fd4f61a85
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 222409fa0d02a571b7295dedb0c60b1ca3f90cca
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673380"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914607"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>更新和删除从你的 bot 发送的邮件
 
@@ -21,7 +21,7 @@ ms.locfileid: "41673380"
 
 新邮件需要与类型中的原始邮件不匹配。 例如，如果原始邮件包含附件，则新邮件可以是简单的短信。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 若要更新现有的邮件，请将`Activity`具有现有活动 ID 的新对象传递`UpdateActivityAsync`给`TurnContext`该类的方法。 *请参阅* [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable)
 
@@ -31,7 +31,7 @@ newActivity.Id = activityId;
 await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 若要更新现有的邮件，请将`Activity`具有现有活动 ID 的新对象传递`updateActivity`给该`TurnContext`对象的方法。 *请参阅* [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--)
 
@@ -41,7 +41,7 @@ newActivity.id = activityId;
 await turnContext.updateActivity(newActivity);
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 若要更新现有的邮件，请将`Activity`具有现有活动 ID 的新对象传递`update_activity`给`TurnContext`该类的方法。 请参阅[TurnContextClass](link to Python API ref docs)。
 
@@ -60,7 +60,7 @@ update_result = await context.update_activity(new_activity)
 在 Bot 框架中，每封邮件都有其自己唯一的活动标识符。
 可以使用 Bot 框架的`DeleteActivity`方法删除邮件，如下所示。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 若要删除该消息，请将该活动的 ID `DeleteActivityAsync`传递给`TurnContext`该类的方法。 *请参阅* [DeleteActivityAsync 方法 TurnContext](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable)
 
@@ -71,7 +71,7 @@ foreach (var activityId in _list)
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 若要删除该邮件，请将该活动的 ID `deleteActivity`传递给该`TurnContext`对象的方法。 *请参阅* [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--)
 
@@ -81,9 +81,9 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
-若要删除该邮件，请将该活动的 ID `delete_activity`传递给该`TurnContext`对象的方法。 请参阅[delete_activity](link to Python API ref docs)。
+若要删除该邮件，请将该活动的 ID `delete_activity`传递给该`TurnContext`对象的方法。 请参阅[活动更新-和-删除](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py)。
 
 ```python
 for each activity_id in _list:

@@ -2,12 +2,12 @@
 title: 呼叫和联机会议 Bot
 description: 了解如何使用 Microsoft Graph Api 对呼叫和联机会议使用语音和视频与用户进行交互。
 keywords: 呼叫音频视频 IVR 语音联机会议
-ms.openlocfilehash: 03bd7e085908a49f070fe84aba87138ecabafb83
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e89fc576a0688a65e86c03696619569c41b6a3a2
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673163"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914614"
 ---
 # <a name="calls-and-online-meetings-bots"></a>呼叫和联机会议 bot
 
@@ -36,8 +36,8 @@ ms.locfileid: "41673163"
 以下是有关如何创建和测试呼叫和联机会议 bot 的详细信息：
 
 * [Graph API 参考](/graph/api/resources/communications-api-overview?view=graph-rest-beta)
-* [示例应用程序](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [为呼叫和联机会议 Bot](/registering-calling-bot.md#add-microsoft-graph-permissions) [注册支持呼叫和联机会议](./registering-calling-bot.md)以及 Microsoft Graph 权限的 bot
+* [示例应用](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* [为呼叫和联机会议 Bot](./registering-calling-bot.md#add-microsoft-graph-permissions) [注册支持呼叫和联机会议](./registering-calling-bot.md)以及 Microsoft Graph 权限的 bot
 * [如何在本地电脑上开发呼叫和联机会议 bot](./debugging-local-testing-calling-meeting-bots.md)
 * 有关[实时媒体处理的详细信息](./real-time-media-concepts.md)，以及[支持应用程序承载的媒体所需的内容](./requirements-considerations-application-hosted-media-bots.md)
 * [有关处理传入呼叫通知的技术信息](./call-notifications.md)

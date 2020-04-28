@@ -4,12 +4,12 @@ description: 描述提交和大多数失败策略的提示
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896518"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914572"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>成功提交应用程序的提示
 
@@ -30,6 +30,7 @@ ms.locfileid: "42896518"
 * 您的应用程序不得在用户环境中自动下载、安装或启动任何可执行代码。 所有下载都应从用户处寻求显式权限。
 * 与您的体验相关联的任何材料（如说明和支持文档）都必须是准确的。 在您的说明和材料中，使用正确的拼写、大小写、标点符号和语法。
 * 提供帮助和支持信息。 强烈建议您的应用程序包括首次运行的用户体验的帮助/常见问题解答链接。 对于所有个人应用程序，我们建议将 "帮助" 页作为 "个人" 选项卡提供，以获得更好的用户体验。
+* 如果对提交进行任何清单更改，请增加清单中的应用版本号。
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; 提供清晰且简单的登录/注销和注册体验
 

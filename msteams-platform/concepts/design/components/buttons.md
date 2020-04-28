@@ -2,12 +2,12 @@
 title: 设计准则参考
 description: 介绍在应用程序中使用按钮、链接和控件的准则
 keywords: 团队设计准则参考组件按钮链接颜色
-ms.openlocfilehash: 09dad651fee9c97fd52e672ea055e2c24b549a59
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9325980c38048ee250ace6b00f1ed29c6cbea8d
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673323"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914586"
 ---
 # <a name="buttons-links-and-controls"></a>按钮、链接和控件
 
@@ -18,6 +18,10 @@ ms.locfileid: "41673323"
 按钮的样式方式有助于传达它们触发的操作类型。 我们维护各种格式的按钮，以显示不同的强调级别。
 
 按钮可以有文本、图标或文本和图标的组合。 为了在层次结构中传达不同的级别，我们为每个类别中的主要和辅助按钮设计。
+
+### <a name="fluent-design-system"></a>熟知设计系统
+
+熟知的 UI 为 web 和桌面组件状态、样式和可访问性提供指导。 可以对团队平台上的按钮设置格式以显示不同级别的强调。 有关 HTML 和 CSS 十六进制颜色值，*请参阅*[熟知 UI 按钮的颜色](https://fluentsite.z22.web.core.windows.net/components/button/definition?showCode=false&showRtl=false&showTransparent=false&showVariables=true#types-emphasis)。  
 
 ### <a name="text-buttons"></a>文本按钮
 
