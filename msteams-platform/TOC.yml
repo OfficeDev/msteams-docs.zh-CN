@@ -3,9 +3,9 @@
   items:
     - name: 什么是 Microsoft Teams 应用？
       href: overview.md
-    - name: 有哪些新增功能？
+    - name: 新变化？
       href: whats-new.md
-- name: 开始使用
+- name: 教程和代码示例
   items:
     - name: '使用 C# 创建应用'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -13,14 +13,14 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: 使用 Yeoman 生成器创建应用
       href: tutorials/get-started-yeoman.md
-- name: 示例和模板
+    - name: 使用自定义应用扩展 Teams 客户端
+      href: tutorials/code-samples.md
+- name: 应用模板和集成
   items:
     - name: 生产准备就绪的应用模板
       href: samples/app-templates.md
     - name: 生产准备就绪的排班连接器
       href: samples/shifts-wfm-connectors.md
-    - name: 示例应用
-      href: samples/code-samples.md
 - name: 概念
   expanded: true
   items:
@@ -104,6 +104,10 @@
   items:
     - name: 什么是消息扩展？
       href: messaging-extensions/what-are-messaging-extensions.md
+    - name: 设计
+      items:
+        - name: 消息扩展设计指南
+          href: messaging-extensions/design/messaging-extension-design.md
     - name: 快速入门
       items:
         - name: 使用操作命令
