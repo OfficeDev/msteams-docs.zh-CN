@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序审批过程指南
 description: 介绍了如何将应用发布到 Microsoft 团队应用商店的审批过程
 keywords: 团队发布 microsoft store office 发布 AppSource
-ms.openlocfilehash: 70f81f40ff424ab28e7129da7b947be0b1fcf469
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 0f4a93f6c93ab0dd4147d7e6b8dce0beac26ed95
+ms.sourcegitcommit: 5207af18a032763fecf2b932d7e29ced1ee11ccd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914544"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "43937348"
 ---
 # <a name="submit-your-app-to-appsource"></a>将您的应用程序提交到 AppSource
 
@@ -25,8 +25,8 @@ ms.locfileid: "43914544"
 
 >[!NOTE]
 >
-> * 如果您的团队应用程序包含 bot，则必须遵守 Bot 开发人员框架[行为准则](https://aka.ms/bf-conduct)。
-> * 如果您的应用程序包含 Office 365 连接器，可能会应用其他条款。 *请参阅*[连接器开发人员仪表板](https://aka.ms/connectorsdashboard)和[应用程序开发人员协议](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)。
+>- 如果您的团队应用程序包含 bot，则必须遵守 Bot 开发人员框架[行为准则](https://aka.ms/bf-conduct)。
+>- 如果您的应用程序包含 Office 365 连接器，可能会应用其他条款。 *请参阅*[连接器开发人员仪表板](https://aka.ms/connectorsdashboard)和[应用程序开发人员协议](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)。
 
 ## <a name="faqs--teams-apps-and-partner-accounts"></a>Faq —团队应用和合作伙伴帐户
 
@@ -34,14 +34,34 @@ ms.locfileid: "43914544"
 
 有两种创建合作伙伴中心帐户的方法：
 
-* 如果你不熟悉合作伙伴中心，并且在 Microsoft 网络中没有帐户，请[使用 "合作伙伴中心注册" 页创建帐户](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
-* 如果你已在合作伙伴网络中注册，请[使用现有注册直接在合作伙伴中心中创建帐户](/office/dev/store/)。
+- 如果你不熟悉合作伙伴中心，并且在 Microsoft 网络中没有帐户，请[使用 "合作伙伴中心注册" 页创建帐户](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
+- 如果你已在合作伙伴网络中注册，请[使用现有注册直接在合作伙伴中心中创建帐户](/office/dev/store/)。
 
-## <a name="how-do-i-add-my-phone-number-to-the-contact-info-section"></a>如何将我的电话号码添加到 "联系人信息" 部分？
+## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>如何将我的电话号码添加到合作伙伴配置文件联系人部分？
 
-电话号码包含三个部分：国家/地区代码、区号和电话号码。 如果任何部分不适用，请输入数字`0`。
+电话号码包含三个部分：国家/地区代码、区号和电话号码。 如果你的电话号码不包含区号，则将第二个框留空，然后完成第三个框。
 
-## <a name="why-do-i-get-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>如果我尝试通过合作伙伴中心提交我的加载项，为什么我会收到 "此帐户未发布资格" 消息？
+## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>如果我无法在合作伙伴中心找到我的 Office 应用商店帐户，该怎么办？
+
+请打开[合作伙伴支持票证](https://partner.microsoft.com/en-US/support/v2/?stage=1)，然后从下拉菜单中选择以下内容：
+
+| 菜单 | 方法 |
+| -------   | -------  |
+|类别| 商业市场|
+| 主题 | 常规市场帮助和操作方法问题 |
+| 子| Office 加载项 |
+
+另*请参阅*[如何打开合作伙伴中心支持票证](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
+
+## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>如何在合作伙伴中心管理我的帐户设置和合作伙伴配置文件？
+
+有关管理合作伙伴中心帐户设置的指南，请访问我们的 "[管理帐户设置和配置文件信息](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info)" 页面。
+
+## <a name="how-do-i-manage-my-office-store-account"></a>如何管理我的 Office 应用商店帐户？
+
+若要了解如何通过合作伙伴中心管理 Office 应用商店帐户，请访问 "[合作伙伴中心" 中的 "管理你的 Office 应用商店帐户](/office/dev/store/manage-account-settings-and-profile)"。
+
+## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>为什么我会收到邮件：当我尝试通过合作伙伴中心提交我的加载项时，"此帐户未发布合格"。
 
 当您的[帐户验证状态](/partner-center/verification-responses)为 "挂起" 时，您将收到上述错误消息。 您可以通过在页面页眉命令行管理程序的右上角选择 "**设置**" 选项（齿轮图标），然后选择 "**开发人员设置** => **帐户**  => **帐户设置**"，在 "合作伙伴中心"[仪表板](https://partner.microsoft.com/dashboard)中检查您的帐户验证状态。
 
@@ -53,19 +73,16 @@ ms.locfileid: "43914544"
 
 ![合作伙伴中心验证错误](../../../assets/images/partner-center-acct-verification-error.png)
 
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>我的帐户验证状态并非电子邮件所有权之外的高级。 我应该如何继续？
+
+在**电子邮件所有权**验证过程中，会将验证电子邮件发送到主要联系人电子邮件地址。 请检查主要联系人收件箱中是否有需要主题行操作的电子邮件**maccount@<span>microsoft</span>.Com** *：使用 microsoft 验证您的电子邮件帐户*，请求您完成电子邮件验证过程。 验证电子邮件将发送到合作伙伴中心的 "帐户设置" 页上列出的电子邮件地址。
+
+> [!NOTE]
+ >电子邮件验证链接仅在7天内有效。 你可以通过访问合作伙伴配置文件页面并选择 "**重新发送验证电子邮件**" 链接，请求重新向你发送电子邮件。 若要确保收到电子邮件，请将来自 microsoft.com 的电子邮件作为安全域的白名单，并检查垃圾邮件文件夹。
+
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>如何获取对与我的帐户相关的问题的进一步支持？
 
-访问[合作伙伴帮助和支持页面](https://aka.ms/marketplacepublishersupport)，并搜索与你的问题相关的文档的有用解决方案。 如果提供的自助服务解决方案或文档对解决你的问题没有帮助，请通过选择 "**下一步**" 部分下的 "**提供问题详细信息**" 来将支持票证文件存档。 您可以在 "搜索" 框中搜索问题主题，或选择 "搜索" 框下方的 "**浏览主题**" 进一步向下钻取。
-
-> [!TIP]
-> 如果你要查找有关**帐户验证**问题的帮助：
->
->1. 在**搜索框**下方，选择 "**浏览主题**"。
->1. 从 "**类别**" 下拉菜单中选择 "**所有程序**"。
-> 1. 从 "**主题**" 下拉菜单中选择 "**帐户"、"加入" 和 "访问**"。
->1. 从 "**副标题**" 下拉菜单中**选择一个选项**。
->1. 获取更多帮助。 在 "**下一步**" 部分下选择 "**提供问题详细信息**"。
->
+若要了解如何创建支持票证，请访问[合作伙伴中心计划中的商业市场计划的支持人员](/azure/marketplace/partner-center-portal/support)和步骤。
 
 ## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what--should-i-do-next"></a>我已检查我的邮件文件夹，但尚未收到验证电子邮件。 接下来我该怎么办？
 
@@ -79,9 +96,13 @@ ms.locfileid: "43914544"
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>雇用验证过程通常需要多长时间？
 
-如果正确提供了所有详细信息，则雇佣验证将在1到2小时内完成。
+如果所有提交的详细信息都是正确的，则雇用验证将在1到2小时内完成。
 
-## <a name="ive-already-reached-out-to-support-is-there-a-way-to-expedite-my-case"></a>我已经接通了支持，有没有办法可以加快我的案件？
+## <a name="how-long-does-the-business-verification-process-usually-take"></a>"业务验证" 过程通常需要多长时间？
+
+业务验证需要1到2个工作日才能完成，只要提交了所有必需的文档。
+
+## <a name="if-ive-already-reached-out-to-the-support-team-will-my-ticket-be-expedited"></a>如果我已到达支持团队，我的票证是否会加快？
 
 支持票证将在一周内得到解决。 请查找将发送到在发出支持票证时提供的电子邮件的更新。
 
@@ -90,10 +111,11 @@ ms.locfileid: "43914544"
 请**<teamsubm@microsoft.com>** 使用以下详细信息发送电子邮件：
 
 1. **主题行**。 *<App_Name>的合作伙伴中心帐户问题*（指定您的应用程序的名称）。
-2. **电子邮件正文：**
+1. **电子邮件正文：**
     * 支持票证号码：
     * 卖家 ID：
-    * 问题的屏幕截图。
+    * 问题的屏幕截图（如果可能）：
 
+>
 > [!div class="nextstepaction"]
 > [了解有关 Microsoft 团队的应用验证策略的详细信息](https://docs.microsoft.com/legal/marketplace/certification-policies)
