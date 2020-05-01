@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: 如何更新和删除从你的 Microsoft 团队 bot 发送的邮件
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 222409fa0d02a571b7295dedb0c60b1ca3f90cca
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 46994c6810197002ef1c108af4f725426395b37f
+ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914607"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "43957185"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>更新和删除从你的 bot 发送的邮件
 
@@ -53,6 +53,22 @@ update_result = await context.update_activity(new_activity)
 
 ```
 
+# <a name="rest-api"></a>[REST API](#tab/rest)
+
+>[!NOTE]
+>您可以开发任何 web 编程技术中的团队应用程序，并直接调用[机器人连接器服务 REST api](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0)。 若要执行此操作，您需要使用 API 请求来实施[身份验证](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0)安全过程。
+
+若要更新对话中的现有活动，请在`conversationId`请求`activityId`终结点中包含和。 若要完成此方案，您应缓存最初的 POST 呼叫返回的活动 ID。
+
+```http
+PUT /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **请求正文** | [活动](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)对象 |
+| **返回** | 一个[ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object)对象 |
+
 ---
 
 ## <a name="deleting-messages"></a>删除邮件
@@ -90,5 +106,17 @@ for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
----
+# <a name="rest-api"></a>[REST API](#tab/rest)
 
+ 若要删除对话中的现有活动，请在`conversationId`请求`activityId`终结点中包含和。
+
+```http
+DELETE /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **请求正文** | 不适用 |
+| **返回** | 指示操作结果的 HTTP 状态代码。 响应正文中未指定任何内容。 |
+
+---
