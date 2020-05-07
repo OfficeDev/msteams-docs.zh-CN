@@ -4,12 +4,12 @@ author: laujan
 description: Microsoft 团队平台上的自定义选项卡概述
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 77faa5a4b3bf7eede1443317ad8baac4934ebf9a
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
+ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365253"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "44119047"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>什么是 Microsoft 团队自定义选项卡？
 
@@ -24,7 +24,6 @@ ms.locfileid: "42365253"
 
 > [!div class="checklist"]
 >
-> * 对团队的整个名单的认识。
 > * 如果将某个选项卡添加到也具有 bot 的应用程序中，则也会将该 bot 添加到团队中。
 > * 感知当前用户的 AAD ID。
 > * 用户的区域设置感知以指示语言，即， `en-us`。 
