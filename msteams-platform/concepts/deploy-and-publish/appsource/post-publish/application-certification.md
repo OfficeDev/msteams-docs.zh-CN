@@ -3,12 +3,12 @@ title: 应用程序认证
 description: 介绍 microsoft store 应用中的自我评估计划
 keywords: 团队合规 appsource 应用程序认证合作伙伴中心
 ms.date: 05/06/2019
-ms.openlocfilehash: 11c69527e60290f908e8fd3c781a02cd26bbbe14
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ff159f39061dd7073a93d3270d254365db4b2228
+ms.sourcegitcommit: 950e5f9c2a58d3856d026a251c5fe112d4d6121a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673336"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "44170505"
 ---
 # <a name="microsoft-teams-app-certification"></a>Microsoft 团队应用认证
 
@@ -26,7 +26,7 @@ Microsoft 团队应用程序认证计划是一项试点计划，可让你完成�
 
 ### <a name="for-existing-store-apps"></a>对于现有的应用商店应用
 
-如果在应用商店中已经有一个应用程序，并且想要加入该程序，则可以通过填写[此表单](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUOUgzSUtFNU8yOFpYR0oyWElHVkxHODhQUyQlQCN0PWcu)与我们联系。 我们团队中的人员将跟进你，让你的过程开始。
+如果在应用商店中已经有一个应用程序，并且想要加入该程序，则可以通过填写[此表单](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR3oKPRKv815GlRdzCCYPJGZUMzlXMVVIRkhXQUVXT0paQVQ0UUdRWEZSSCQlQCN0PWcu)与我们联系。 我们团队中的人员将跟进你，让你的过程开始。
 
 ### <a name="for-new-or-updated-store-apps"></a>对于新的或更新的 microsoft store 应用
 
@@ -36,7 +36,7 @@ Microsoft 团队应用程序认证计划是一项试点计划，可让你完成�
 
 当您完成评估时，您将需要以下类型的信息。
 
-#### <a name="general"></a>概要
+#### <a name="general"></a>常规
 
 有关您的应用程序的基本信息，如许可详细信息和联系信息。
 
