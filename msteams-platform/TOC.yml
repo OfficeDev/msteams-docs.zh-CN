@@ -100,54 +100,70 @@
           href: concepts/authentication/authentication.md
         - name: 配置标识提供程序
           href: concepts/authentication/configure-identity-provider.md
-- name: 消息扩展
+- name: 选项卡 - 嵌入式 Web 体验
   items:
-    - name: 什么是消息扩展？
-      href: messaging-extensions/what-are-messaging-extensions.md
-    - name: 设计
-      items:
-        - name: 消息扩展设计指南
-          href: messaging-extensions/design/messaging-extension-design.md
+    - name: 什么是自定义选项卡？
+      href: tabs/what-are-tabs.md
     - name: 快速入门
       items:
-        - name: 使用操作命令
+        - name: Node.js 和 React
           items:
-            - name: 'C#/.NET'
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-            - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: 使用搜索命令
+            - name: 创建频道和群组选项卡
+              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+            - name: 创建个人选项卡
+              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+        - name: 'C#/ASP.NET Core'
           items:
-            - name: 'C#/.NET'
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-            - name: TypeScript/Node.js
-              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+            - name: 创建频道和群组选项卡
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+            - name: 创建个人选项卡
+              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+        - name: 'C#/ASP.NET MVC'
+          items:
+            - name: 创建频道和群组选项卡
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+            - name: 创建个人选项卡
+              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: 设计选项卡
+      items:
+        - name: 设计概述
+          href: tabs/design/tabs.md
+        - name: 移动客户端上的选项卡
+          href: tabs/design/tabs-mobile.md
     - name: 操作指南
       expanded: true
       items:
-        - name: 创建邮件扩展
-          href: messaging-extensions/how-to/create-messaging-extension.md
-        - name: 基于操作的命令
+        - name: 向应用添加选项卡
+          href: tabs/how-to/add-tab.md
+        - name: 创建选项卡页面
           items:
-            - name: 定义操作命令
-              href: messaging-extensions/how-to/action-commands/define-action-command.md
-            - name: 创建并发送任务模块
-              href: messaging-extensions/how-to/action-commands/create-task-module.md
-            - name: 发送对提交操作的响应
-              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-        - name: 基于搜索的命令
+            - name: 创建内容页
+              href: tabs/how-to/create-tab-pages/content-page.md
+            - name: 创建配置页
+              href: tabs/how-to/create-tab-pages/configuration-page.md
+            - name: 创建选项卡删除页
+              href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: 将身份验证添加到选项卡
           items:
-            - name: 定义搜索命令
-              href: messaging-extensions/how-to/search-commands/define-search-command.md
-            - name: 接收和响应搜索查询
-              href: messaging-extensions/how-to/search-commands/respond-to-search.md
-        - name: 链接展开
-          href: messaging-extensions/how-to/link-unfurling.md
-        - name: 添加身份验证
-          href: messaging-extensions/how-to/add-authentication.md
-        - name: 添加配置页面
-          href: messaging-extensions/how-to/add-configuration-page.md
-- name: 机器人
+            - name: 身份验证流
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: 使用 Azure AD 身份验证
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: 使用无提示的身份验证
+              href: tabs/how-to/authentication/auth-silent-aad.md
+            - name: 使用单一登录身份验证
+              href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: 使用 Teams 客户端 SDK
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: 获取其他 Teams 上下文
+          href: tabs/how-to/access-teams-context.md
+        - name: 适用于 Microsoft Teams 选项卡的 DevTools
+          href: tabs/how-to/developer-tools.md
+        - name: 向 SharePoint 添加自定义选项卡
+          href: tabs/how-to/tabs-in-sharepoint.md
+        - name: 请求设备权限
+          href: tabs/how-to/native-device-permissions.md
+- name: 机器人 - 基于对话的交互
   items:
     - name: Microsoft Teams 中的机器人是指什么？
       href: bots/what-are-bots.md
@@ -218,70 +234,54 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: 应用程序托管的媒体
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: 选项卡
+- name: 消息传递扩展 - 面向任务的交互
   items:
-    - name: 什么是自定义选项卡？
-      href: tabs/what-are-tabs.md
+    - name: 什么是消息扩展？
+      href: messaging-extensions/what-are-messaging-extensions.md
+    - name: 设计
+      items:
+        - name: 消息扩展设计指南
+          href: messaging-extensions/design/messaging-extension-design.md
     - name: 快速入门
       items:
-        - name: Node.js 和 React
+        - name: 使用操作命令
           items:
-            - name: 创建频道和群组选项卡
-              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-            - name: 创建个人选项卡
-              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
+            - name: TypeScript/Node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
+        - name: 使用搜索命令
           items:
-            - name: 创建频道和群组选项卡
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-            - name: 创建个人选项卡
-              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
-          items:
-            - name: 创建频道和群组选项卡
-              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-            - name: 创建个人选项卡
-              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: 设计选项卡
-      items:
-        - name: 设计概述
-          href: tabs/design/tabs.md
-        - name: 移动客户端上的选项卡
-          href: tabs/design/tabs-mobile.md
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
+            - name: TypeScript/Node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
     - name: 操作指南
       expanded: true
       items:
-        - name: 向应用添加选项卡
-          href: tabs/how-to/add-tab.md
-        - name: 创建选项卡页面
+        - name: 创建邮件扩展
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        - name: 基于操作的命令
           items:
-            - name: 创建内容页
-              href: tabs/how-to/create-tab-pages/content-page.md
-            - name: 创建配置页
-              href: tabs/how-to/create-tab-pages/configuration-page.md
-            - name: 创建选项卡删除页
-              href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: 将身份验证添加到选项卡
+            - name: 定义操作命令
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
+            - name: 创建并发送任务模块
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
+            - name: 发送对提交操作的响应
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        - name: 基于搜索的命令
           items:
-            - name: 身份验证流
-              href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: 使用 Azure AD 身份验证
-              href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: 使用无提示的身份验证
-              href: tabs/how-to/authentication/auth-silent-aad.md
-            - name: 使用单一登录身份验证
-              href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 使用 Teams 客户端 SDK
-          href: tabs/how-to/using-teams-client-sdk.md
-        - name: 获取其他 Teams 上下文
-          href: tabs/how-to/access-teams-context.md
-        - name: 适用于 Microsoft Teams 选项卡的 DevTools
-          href: tabs/how-to/developer-tools.md
-        - name: 向 SharePoint 添加自定义选项卡
-          href: tabs/how-to/tabs-in-sharepoint.md
-        - name: 请求设备权限
-          href: tabs/how-to/native-device-permissions.md
-- name: 任务模块和卡
+            - name: 定义搜索命令
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
+            - name: 接收和响应搜索查询
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: 链接展开
+          href: messaging-extensions/how-to/link-unfurling.md
+        - name: 添加身份验证
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: 添加配置页面
+          href: messaging-extensions/how-to/add-configuration-page.md
+- name: 任务模块和卡 - 丰富的消息传递和通知
   items:
     - name: 什么是任务模块？
       href: task-modules-and-cards/what-are-task-modules.md
@@ -303,7 +303,7 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: 从选项卡
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: Webhook 和连接器
+- name: Webhook 和连接器 - 编程的消息传递和通知
   items:
     - name: 什么是 Webhook 和连接器？
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
