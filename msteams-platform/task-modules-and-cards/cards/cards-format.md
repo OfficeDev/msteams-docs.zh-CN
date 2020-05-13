@@ -3,12 +3,12 @@ title: 卡片中的文本格式
 description: 描述 Microsoft 团队中的卡片文本格式
 keywords: 团队 bot 卡片格式
 ms.date: 03/29/2018
-ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550950"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210685"
 ---
 # <a name="format-cards-in-teams"></a>设置团队中卡片的格式
 
@@ -18,19 +18,19 @@ ms.locfileid: "43550950"
 
 不同的卡片类型之间的格式支持不同，在桌面和移动团队客户端以及桌面浏览器中的团队之间，卡片的呈现可能略有不同。
 
-可以在任何团队卡片中添加内嵌图像。 图像的格式为`.png`、 `.jpg`或`.gif`文件，不得超过1024× 1024 px 或 1 MB。 不正式支持动画 GIF。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
+可以在任何团队卡片中添加内嵌图像。 图像的格式为 `.png` 、 `.jpg` 或文件， `.gif` 不得超过1024× 1024 PX 或 1 MB。 不正式支持动画 GIF。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>使用 Markdown 设置卡片格式
 
 有两种卡类型支持团队中的 Markdown：
 
 > [!div class="checklist"]
-> * **自适应卡片**： Markdown 在自适应卡片`Textblock`字段以及`Fact.Title`和`Fact.Value`中受支持。 自适应卡片中不支持 HTML。
+> * **自适应卡片**： Markdown 在自适应卡片 `Textblock` 字段以及和中受 `Fact.Title` 支持 `Fact.Value` 。 自适应卡片中不支持 HTML。
 > * **O365 连接器卡片**：文本字段中的 Office 365 连接器卡片支持 Markdown 和有限的 HTML。
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Markdown 格式：自适应卡片**](#tab/adaptive-md)
 
- 支持的`Fact.Title`和`Fact.Value`的`Textblock`样式如下：
+ 支持的和的 `Textblock` 样式 `Fact.Title` `Fact.Value` 如下：
 
 | Style | 示例 | Markdown |
 | --- | --- | --- |
@@ -49,11 +49,11 @@ ms.locfileid: "43550950"
 * Blockquotes
 
 > [!IMPORTANT]
-> 自适应卡片不支持任何 HTML 格式设置。
+> 自适应卡片不支持 HTML 格式。
 
 ### <a name="newlines-for-adaptive-cards"></a>自适应卡片的换行符
 
-在 "列表" `\r`中，可以`\n`对换行符使用或转义序列。 在`\n\n`列表中使用将导致缩进列表中的下一个元素。 如果需要在 textblock 中的其他位置使用换行符`\n\n`，请使用。
+在 "列表" 中，可以对 `\r` 换行符使用或 `\n` 转义序列。 `\n\n`在列表中使用将导致缩进列表中的下一个元素。 如果需要在 textblock 中的其他位置使用换行符，请使用 `\n\n` 。
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>自适应卡的移动和桌面差异
 
@@ -109,21 +109,21 @@ ms.locfileid: "43550950"
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards"></a>提及自适应卡片中的支持
+### <a name="mention-support-within-adaptive-cards-v12"></a>提及自适应卡片中的支持 1.2 1。2
+
+基于卡片的提及在 Web、桌面和移动客户端中受支持。 您可以在自适应卡片正文中添加用于 bot 和邮件扩展响应的 @ 提及。  若要在卡片中添加 @ 提及，请在[通道和组聊天对话中](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )遵循与基于邮件的提及相同的通知逻辑和呈现。
+
+Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBlock.html)和[FactSet](https://adaptivecards.io/explorer/FactSet.html)元素的卡片内容中包括提及。
 
 > [!NOTE]
-> 在[开发人员预览版](../../resources/dev-preview/developer-preview-intro.md)中，目前仅支持对卡片中提及支持。
-
-Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内容中提及的内容。
+>目前，工作组平台上的自适应卡版1.2 中不支持[媒体元素](https://adaptivecards.io/explorer/Media.html)。
 
 ### <a name="constructing-mentions"></a>构建提及
 
 若要在自适应卡片中添加提及的内容，应用需要包含以下元素
 
 * `<at>username</at>`在支持的自适应卡片元素中
-* 卡片`mention`内容中`msteams`属性内的对象，其中包括所提及用户的团队用户 id
-
-请注意，目前移动客户端上不支持带有提及的卡片。
+* `mention` `msteams` 卡片内容中属性内的对象，其中包括所提及用户的团队用户 id
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>带提及的示例自适应卡片
 
@@ -164,7 +164,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| 标头（级别&ndash;1 3） | **Text** | `### Text`|
+| 标头（级别 1 &ndash; 3） | **Text** | `### Text`|
 | 删除 | ~~text~~ | `~~text~~` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -173,7 +173,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 | 超链接 | [必应](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | 图像链接 |![在摇滚上的工作](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-在连接器卡中，将为`\n\n`（而不是为`\n`或`\r`）呈现换行符。
+在连接器卡中，将为 `\n\n` （而不是为或）呈现换行符 `\n` `\r` 。
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>使用 Markdown 的连接器卡的移动和桌面差异
 
@@ -253,7 +253,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| 标头（级别&ndash;1 3） | **Text** | `<h3>Text</h3>` |
+| 标头（级别 1 &ndash; 3） | **Text** | `<h3>Text</h3>` |
 | 删除 | ~~text~~ | `<strike>text</strike>` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -262,7 +262,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 | 超链接 | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 图像链接 | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-在连接器卡中，使用`<p>`标记在 HTML 中呈现的换行符。
+在连接器卡中，使用标记在 HTML 中呈现的换行符 `<p>` 。
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>使用 HTML 的连接器卡的移动和桌面差异
 
@@ -341,7 +341,7 @@ Bot 和邮件扩展现在可以在文本块和 FactSet 元素中包括卡片内�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| 标头（级别&ndash;1 3） | **Text** | `<h3>Text</h3>` |
+| 标头（级别 1 &ndash; 3） | **Text** | `<h3>Text</h3>` |
 | 删除 | ~~text~~ | `<strike>text</strike>` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

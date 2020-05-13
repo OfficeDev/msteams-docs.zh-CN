@@ -4,12 +4,12 @@ author: clearab
 description: 如何：将 OAuth 身份验证添加到 Microsoft 团队中的 bot。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: f5eae27de45cd0932e4d2ed62fa954429a48aa6d
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: b5a246db1838d19d81e42e9a60efa74bb5363573
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550968"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210715"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向你的团队 bot 添加身份验证
 
@@ -85,10 +85,6 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
-在 Azure 创建注册资源之后，它将包含在资源组列表中。  
-
-![机器人应用程序通道注册组](../../../assets/images/authentication/auth-bot-channels-registration-group.PNG)
-
 > [!NOTE]
 > 自动程序通道注册资源将显示**全局**区域，即使您选择了 "西部我们"。 这是预期的。
 
@@ -110,7 +106,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
    1. 为您的应用程序选择**支持的帐户类型**。 选择*任何组织目录（任何 AZURE AD 目录-多租户）和个人 Microsoft 帐户（例如 Skype、Xbox）中的 "帐户"*。
    1. 对于**重定向 URI**：<br/>
        &#x2713;选择 " **Web**"。 <br/>
-       &#x2713; 将 URL 设置为`https://token.botframework.com/.auth/web/redirect`。
+       &#x2713; 将 URL 设置为 `https://token.botframework.com/.auth/web/redirect` 。
    1. 选择 "**注册**"。
 
 1. 创建后，Azure 将显示该应用程序的 "**概述**" 页。 将下面的信息复制并保存到一个文件中：
@@ -134,24 +130,24 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
 1. 在页面底部附近的 " **OAuth 连接设置**" 下，选择 "**添加设置**"。
 1. 如下所示完成表单：
 
-    1. **名称**。 输入连接的名称。 您将在`appsettings.json`文件的 bot 中使用此名称。 例如*BotTeamsAuthADv1*。
+    1. **名称**。 输入连接的名称。 您将在文件的 bot 中使用此名称 `appsettings.json` 。 例如*BotTeamsAuthADv1*。
     1. **服务提供商**。 选择“**Azure Active Directory**”。 选择此项后，将显示 Azure AD 特有的字段。
     1. **客户端 id**。在上面的步骤中，输入您为 Azure 标识提供程序应用记录的应用程序（客户端） ID。
     1. **客户端密码**。 在上面的步骤中，输入您为 Azure 标识提供程序应用程序记录的密码。
-    1. **授予类型**。 Enter `authorization_code`。
-    1. **登录 URL**。 Enter `https://login.microsoftonline.com`。
+    1. **授予类型**。 Enter `authorization_code` 。
+    1. **登录 URL**。 Enter `https://login.microsoftonline.com` 。
     1. **租户 id**，请输入您之前为 Azure 标识应用记录的**目录（租户） ID**或根据您创建标识提供程序应用程序时所选的受支持帐户类型的不同，而不是**常见**的。 若要确定要分配的值，请执行以下条件：
 
         - 如果您选择了 "*仅在此组织目录中的帐户（仅限 microsoft-单个租户）* " 或 "*任何组织目录中的帐户（microsoft AAD directory-多租户）* "，请输入您之前为 AAD 应用程序记录的**租户 ID** 。 这将是与可以进行身份验证的用户关联的租户。
 
         - 如果您*在任何组织目录（任何 AAD 目录-多租户和个人 Microsoft 帐户，例如 Skype、Xbox、Outlook）中*选择了 "帐户"，请输入**通用**词，而不是租户 ID。 否则，AAD 应用将通过已选择 ID 的租户进行验证，并排除个人 Microsoft 帐户。
 
-    水平. 对于 "**资源 URL**" `https://graph.microsoft.com/`，请输入。 当前代码示例中不使用此代码。  
+    水平. 对于 "**资源 URL**"，请输入 `https://graph.microsoft.com/` 。 当前代码示例中不使用此代码。  
     得到. 将**范围**保留为空。 下面的图像是一个示例：
 
     ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. 选择“**保存**”。
+1. 选择“保存”****。
 
 ### <a name="test-the-connection"></a>测试连接
 
@@ -163,7 +159,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
     ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. 选择 "**接受**"。
-1. 然后，这会将您重定向到 " **-连接-名称> 成功\<** " 页的测试连接。 如果遇到错误，请刷新页面。 下面的图像是一个示例：
+1. 然后，这会将您重定向到 " ** \< -连接-名称> 成功**" 页的测试连接。 如果遇到错误，请刷新页面。 下面的图像是一个示例：
 
   ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
@@ -180,16 +176,16 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
 1. 在工具栏中，选择 "**文件-> 打开-> 项目/解决方案**"，然后打开 "bot" 项目。
 1. 在 c # 中，如下所示更新**appsettings** ：
 
-    - 设置`ConnectionName`为你添加到 bot 通道注册的标识提供程序连接的名称。 本示例中使用的名称是*BotTeamsAuthADv1*。
-    - 设置`MicrosoftAppId`为在 bot 频道注册时保存的**bot 应用 ID** 。
-    - 设置`MicrosoftAppPassword`为在 bot 频道注册时保存的**客户机密**。
-    - 将设置`ConnectionName`为标识提供程序连接的名称。
+    - 设置 `ConnectionName` 为你添加到 bot 通道注册的标识提供程序连接的名称。 本示例中使用的名称是*BotTeamsAuthADv1*。
+    - 设置 `MicrosoftAppId` 为在 bot 频道注册时保存的**BOT 应用 ID** 。
+    - 设置 `MicrosoftAppPassword` 为在 bot 频道注册时保存的**客户机密**。
+    - 将设置 `ConnectionName` 为标识提供程序连接的名称。
 
-    根据你的 bot 密码中的字符，你可能需要 XML 对密码进行转义。 例如，需要将任何 & 符号（&）编码为`&amp;`。
+    根据你的 bot 密码中的字符，你可能需要 XML 对密码进行转义。 例如，需要将任何 & 符号（&）编码为 `&amp;` 。
 
      [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
-1. 在 "解决方案资源管理器" 中`TeamsAppManifest` ，导航到`manifest.json` "打开`id` " `botId`和 "设置" 文件夹，并转到在 BOT 频道注册时保存的**bot 应用 ID** 。
+1. 在 "解决方案资源管理器" 中，导航到 " `TeamsAppManifest` 打开 `manifest.json` " 和 "设置" 文件夹， `id` 并转 `botId` 到在 bot 频道注册时保存的**bot 应用 ID** 。
 
 # <a name="javascript"></a>[JavaScript](#tab/node-js)
 
@@ -200,25 +196,25 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
 `npm install`
 1. 更新**env**配置，如下所示：
 
-    - 设置`MicrosoftAppId`为在 bot 频道注册时保存的**bot 应用 ID** 。
-    - 设置`MicrosoftAppPassword`为在 bot 频道注册时保存的**客户机密**。
-    - 将设置`connectionName`为标识提供程序连接的名称。
+    - 设置 `MicrosoftAppId` 为在 bot 频道注册时保存的**BOT 应用 ID** 。
+    - 设置 `MicrosoftAppPassword` 为在 bot 频道注册时保存的**客户机密**。
+    - 将设置 `connectionName` 为标识提供程序连接的名称。
 
-    根据你的 bot 密码中的字符，你可能需要 XML 对密码进行转义。 例如，需要将任何 & 符号（&）编码为`&amp;`。
+    根据你的 bot 密码中的字符，你可能需要 XML 对密码进行转义。 例如，需要将任何 & 符号（&）编码为 `&amp;` 。
 
      [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
 
-1. `teamsAppManifest`在文件夹中，打开`manifest.json`并将`id`其设置为您的**Microsoft 应用 id** ，并`botId`将其设置为在 bot 频道注册时保存的**bot 应用 id** 。
+1. 在 `teamsAppManifest` 文件夹中，打开 `manifest.json` 并将 `id` 其设置为您的**Microsoft 应用 id** ，并将 `botId` 其设置为在 bot 频道注册时保存的**bot 应用 id** 。
 
 # <a name="python"></a>[Python](#tab/python)
 
 1. Clone 存储库中的[py-auth-示例][teams-auth-bot-py]。
 1. 更新**config.py**：
 
-    - 设置`ConnectionName`为你添加到你的 Bot 的 OAuth 连接设置的名称。
-    - 将`MicrosoftAppId`和`MicrosoftAppPassword`设置为你的 bot 的应用 ID 和应用密码。
+    - 设置 `ConnectionName` 为你添加到你的 bot 的 OAuth 连接设置的名称。
+    - 将 `MicrosoftAppId` 和设置 `MicrosoftAppPassword` 为你的 bot 的应用 ID 和应用密码。
 
-      根据你的 bot 密码中的字符，你可能需要 XML 对密码进行转义。 例如，需要将任何 & 符号（&）编码为`&amp;`。
+      根据你的 bot 密码中的字符，你可能需要 XML 对密码进行转义。 例如，需要将任何 & 符号（&）编码为 `&amp;` 。
 
       [!code-python[config](~/../botbuilder-samples/samples/python/46.teams-auth/config.py?range=14-16)]
 
@@ -240,7 +236,7 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
    ![auth-应用程序-服务](../../../assets/images/authentication/auth-bot-app-service.png)
 
 1. 选择“创建”****。
-1. 如果部署成功完成，您应该会看到它在 Visual Studio 中反映出来。 此外，默认浏览器中会显示一个页面，指示*你的 bot 已准备就绪！*。 该 URL 将类似于： `https://botteamsauth.azurewebsites.net/`。 将其保存到文件中。
+1. 如果部署成功完成，您应该会看到它在 Visual Studio 中反映出来。 此外，默认浏览器中会显示一个页面，指示*你的 bot 已准备就绪！*。 该 URL 将类似于： `https://botteamsauth.azurewebsites.net/` 。 将其保存到文件中。
 1. 在浏览器中，导航到[**Azure 门户**][azure-portal]。
 1. 检查您的资源组，应将 bot 与其他资源一起列出。 下面的图像是一个示例：
 
@@ -248,7 +244,7 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
 
 1. 在 "资源" 组中，选择 "bot 频道注册名称" （链接）。
 1. 在左面板中，选择 "**设置**"。
-1. 在 "**邮件终结点**" 框中，输入上面接下来`api/messages`的 URL。 下面是一个示例： `https://botteamsauth.azurewebsites.net/api/messages`。
+1. 在 "**邮件终结点**" 框中，输入上面接下来的 URL `api/messages` 。 下面是一个示例： `https://botteamsauth.azurewebsites.net/api/messages` 。
 1. 选择左上角的 "**保存**" 按钮。
 
 ## <a name="test-the-bot-using-the-emulator"></a>使用模拟器测试机器人
@@ -278,9 +274,9 @@ Bot 代码使用连接名称来检索用户身份验证令牌。
 1. 通过 Visual Studio 在你的计算机上本地运行机器人示例（例如）。
 1. 启动仿真程序。
 1. 选择 "**打开 bot** " 按钮。
-1. 在**机器人 url**中，输入 bot 的本地 URL。 通常为`http://localhost:3978/api/messages`。
-1. 在**Microsoft 应用 id**中，输入 bot 的应用 id `appsettings.json`。
-1. 在**Microsoft App 密码**中，输入 bot 的应用密码`appsettings.json`。
+1. 在**机器人 url**中，输入 bot 的本地 URL。 通常为 `http://localhost:3978/api/messages` 。
+1. 在**Microsoft 应用 id**中，输入 bot 的应用 id `appsettings.json` 。
+1. 在**Microsoft App 密码**中，输入 bot 的应用密码 `appsettings.json` 。
 1. 选择 "**连接**"。
 1. 在安装程序启动并运行后，输入任何文本以显示登录卡。
 1. 选择 "**登录**" 按钮。
@@ -339,15 +335,15 @@ and when for these, and just reference that from here, along with the set of ste
 
 ## <a name="install-and-test-the-bot-in-teams"></a>在团队中安装和测试机器人
 
-1. 在机器人`TeamsAppManifest`项目中，确保文件夹包含`manifest.json` `outline.png`和`color.png`文件一起包含。
-1. 在 "解决方案资源管理器" `TeamsAppManifest`中，导航到该文件夹。 通过`manifest.json`分配以下值进行编辑：
-    1. 确保在将 bot 频道注册时收到的**Bot 应用 ID**分配给`id`和`botId`。
-    1. 将此值分配`validDomains: [ "token.botframework.com" ]`给：。
-1. 选择和**压缩** `manifest.json`、 `outline.png`和`color.png`文件。
+1. 在机器人项目中，确保 `TeamsAppManifest` 文件夹包含 `manifest.json` `outline.png` 和文件一起包含 `color.png` 。
+1. 在 "解决方案资源管理器" 中，导航到该 `TeamsAppManifest` 文件夹。 `manifest.json`通过分配以下值进行编辑：
+    1. 确保在将 bot 频道注册时收到的**Bot 应用 ID**分配给 `id` 和 `botId` 。
+    1. 将此值分配给： `validDomains: [ "token.botframework.com" ]` 。
+1. 选择和**压缩** `manifest.json` 、 `outline.png` 和 `color.png` 文件。
 1. 打开**Microsoft 团队**。
 1. 在左侧面板中的底部，选择 "应用"**图标**。
 1. 在右侧面板的底部，选择 "**上传自定义应用程序**"。
-1. 导航到该`TeamsAppManifest`文件夹并上传压缩清单。
+1. 导航到该 `TeamsAppManifest` 文件夹并上传压缩清单。
 将显示以下向导：
 
     ![授权 bot 团队上传](../../../assets/images/authentication/auth-bot-teams-upload.png)
@@ -364,22 +360,22 @@ and when for these, and just reference that from here, along with the set of ste
 Microsoft 团队是完全基于云的产品，它需要使用 HTTPS 终结点从云中获取所有 it 访问的服务。 因此，若要使 bot （我们的示例）能够在团队中工作，您需要将代码发布到您选择的云，或使本地运行的实例可通过**隧道**工具进行外部访问。 我们建议[ngrok](https://ngrok.com/download)，这将为您在您的计算机上本地打开的端口创建外部可寻址的 URL。
 若要设置 ngrok 以准备在本地运行 Microsoft 团队应用程序，请按照以下步骤操作：
 
-1. 在终端窗口中，转到已`ngrok.exe`安装的目录。 建议设置要指向的*环境变量*路径。
-1. 例如， `ngrok http 3978 --host-header=localhost:3978`运行。 根据需要更换端口号。
+1. 在终端窗口中，转到已安装的目录 `ngrok.exe` 。 建议设置要指向的*环境变量*路径。
+1. 例如，运行 `ngrok http 3978 --host-header=localhost:3978` 。 根据需要更换端口号。
 这将启动 ngrok 以侦听您指定的端口。 在 return 中，它为您提供一个外部可寻址的 URL，只要 ngrok 正在运行，它就会有效。 下面的图像是一个示例：
 
     ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
-1. 复制转发 HTTPS 地址。 它应类似于以下内容： `https://dea822bf.ngrok.io/`。
-1. Append `/api/messages`获取`https://dea822bf.ngrok.io/api/messages`。 这是在 Microsoft 团队的聊天中，在计算机上本地运行的 bot 的**消息终结点**，并可通过 web 访问。
+1. 复制转发 HTTPS 地址。 它应类似于以下内容： `https://dea822bf.ngrok.io/` 。
+1. Append `/api/messages` 获取 `https://dea822bf.ngrok.io/api/messages` 。 这是在 Microsoft 团队的聊天中，在计算机上本地运行的 bot 的**消息终结点**，并可通过 web 访问。
 1. 要执行的最后一个步骤是更新已部署的 bot 的消息终结点。 在此示例中，我们在 Azure 中部署了机器人。 因此，* * 我们将执行以下步骤：
     1. 在浏览器中导航到[**Azure 门户**][azure-portal]。
     1. 选择你的**Bot 频道注册**。
     1. 在左面板中，选择 "**设置**"。
-    1. 在右侧面板中的 "**邮件终结点**" 框中，输入 ngrok URL （在我们的`https://dea822bf.ngrok.io/api/messages`示例中）。
+    1. 在右侧面板中的 "**邮件终结点**" 框中，输入 ngrok URL （在我们的示例中） `https://dea822bf.ngrok.io/api/messages` 。
 1. 在本地启动你的 bot，例如在 Visual Studio 调试模式下。
 1. 使用 Bot 框架门户的**测试 Web 聊天**在本地运行时测试机器人。 与模拟器一样，此测试不允许您访问特定于团队的功能。
-1. 在运行的终端窗口`ngrok`中，可以查看 bot 和 web 聊天客户端之间的 HTTP 流量。 如果需要更详细的视图，请在浏览器窗口中`http://127.0.0.1:4040`输入从以前的终端窗口中获取的。 下面的图像是一个示例：
+1. 在运行的终端窗口中 `ngrok` ，可以查看 bot 和 web 聊天客户端之间的 HTTP 流量。 如果需要更详细的视图，请在浏览器窗口中输入 `http://127.0.0.1:4040` 从以前的终端窗口中获取的。 下面的图像是一个示例：
 
     ![auth bot 团队 ngrok 测试](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
 
@@ -492,7 +488,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 **对话框/mainDialog**
 
-在对话步骤中，使用`beginDialog` "" 启动 OAuth 提示，这将要求用户登录。
+在对话步骤中，使用 `beginDialog` "" 启动 OAuth 提示，这将要求用户登录。
 
 - 如果用户已登录，则会生成令牌响应事件，而不会提示用户。
 - 否则，这将提示用户登录。 Azure Bot 服务在用户尝试登录后发送令牌响应事件。
@@ -521,7 +517,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 **对话框/main_dialog py**
 
-在对话步骤中，使用`begin_dialog` "" 启动 OAuth 提示，这将要求用户登录。
+在对话步骤中，使用 `begin_dialog` "" 启动 OAuth 提示，这将要求用户登录。
 
 - 如果用户已登录，则会生成令牌响应事件，而不会提示用户。
 - 否则，这将提示用户登录。 Azure Bot 服务在用户尝试登录后发送令牌响应事件。

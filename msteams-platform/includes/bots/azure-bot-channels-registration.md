@@ -22,3 +22,13 @@
 1. 返回到 " **Bot 通道注册**" 窗口，并分别复制 " **Microsoft 应用 id** " 和 "**密码**" 框中的*应用程序 id*和*客户端密码*。
 1. 单击“确定”****。
 1. 最后，单击 "**创建**"。
+
+在 Azure 创建注册资源之后，它将包含在资源组列表中。  
+
+![机器人应用程序通道注册组](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
+
+一旦创建了你的 bot 通道注册，你将需要启用团队频道。
+
+1. 在[azure 门户](https://ms.portal.azure.com/#home)中，在 "azure 服务" 下，选择刚刚创建的**Bot 频道注册**。
+1. 在左面板中，单击 "**频道**"。
+1. 单击 "Microsoft 团队" 图标，然后选择 "**保存**"。

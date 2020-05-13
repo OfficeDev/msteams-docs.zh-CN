@@ -2,26 +2,22 @@
 title: 公共开发人员预览版中的功能
 description: 介绍 Microsoft 团队的公共开发人员预览版中的功能
 keywords: 团队预览开发人员功能
-ms.openlocfilehash: abec097d9f3b6fb48a4a50cb26d73cf811151149
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7ed442072779917dcc5db3ebcb4afaac9db0407f
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673025"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210699"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Microsoft 团队的公共开发人员预览版中的功能
 
 开发人员预览包括以下新功能：
 
-## <a name="mention-support-in-adaptive-cards"></a>提及自适应卡片中的支持
+## <a name="adaptive-cards-v12-support"></a>自适应卡片 1.2 1.2 支持
 
-您现在可以在自适应卡片正文中添加用于 Bot 和邮件扩展响应的 @ 提及。 @ 卡片中的 "提及" 遵循相同的通知逻辑，并作为常规邮件的具体表述呈现。 请注意，目前仅在 Web 和桌面客户端中支持基于卡片的提及，即将在即将推出的移动客户端中呈现。
+团队中的[自适应卡片 v 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)的支持现在可供一般大众使用。 但是，在团队平台上，自适应卡上的1.2 版中目前不支持[媒体元素](https://adaptivecards.io/explorer/Media.html)。
 
-## <a name="adaptive-12-support"></a>自适应1.2 支持
-
-Microsoft 团队现在在开发人员预览版中支持[自适应版本 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0) 。 请注意，尚不支持[媒体元素](https://adaptivecards.io/explorer/Media.html)。
-
-## <a name="tabs-single-sign-on"></a>选项卡单一登录
+## <a name="tabs-single-sign-on-sso"></a>选项卡单一登录（SSO）
 
 现在，您可以使用[单一登录（SSO）](~/tabs/how-to/authentication/auth-aad-sso.md) ，在桌面和移动设备上使用 web 内容页中的团队 JavaScript SDK 登录并验证用户。 其中一项好处是用户永远不需要登录;在用户使用其配置文件同意应用程序之后，将自动登录到其选项卡（包括移动设备）。
 
