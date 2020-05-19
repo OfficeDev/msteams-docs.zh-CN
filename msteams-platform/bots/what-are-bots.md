@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft 团队中的会话 bot 概述。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 132b71a4da7462c426468c7fc2f79b26b6fbb03b
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 6f1ce3cf905b0c638652784fdc76b37ea0f6aca9
+ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120288"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "44281844"
 ---
 # <a name="what-are-conversational-bots"></a>什么是对话 bot？
 
@@ -19,7 +19,13 @@ ms.locfileid: "43120288"
 
 ![FAQ 加 gif](~/assets/images/FAQPlusEndUser.gif)
 
-## <a name="how-bots-work"></a>Bot 的工作原理
+## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>为使用 Microsoft Bot 框架的团队构建 bot
+
+Microsoft Bot 框架] （ https://dev.botframework.com/) 是一种丰富的 SDK，用于使用 c #、Java、Python 和 JavaScript 构建 bot。 如果您已经有一个基于 Bot 框架的 bot，您可以轻松地对其进行调整以在 Microsoft 团队中工作。 我们建议您使用 c # 或 node.js 来利用我们的[sdk](/microsoftteams/platform/#pivot=sdk-tools)。 这些包扩展了基本的 Bot 生成器 SDK 类和方法，如下所示：
+
+* 使用专用的卡片类型，如 Office 365 连接器卡。
+* 使用和设置活动的团队特定频道数据。
+* 处理邮件扩展请求。
 
 你的团队 bot 由三个元素组成：
 
@@ -27,17 +33,15 @@ ms.locfileid: "43120288"
 * 使用 Bot 框架的 bot 注册。
 * 您的团队应用程序包与您的应用程序清单。 这是用户将安装的内容，并将团队客户端连接到 web 服务，并通过 Bot 服务进行路由。
 
-Microsoft 团队的 bot 基于[Microsoft Bot 框架](https://dev.botframework.com/)构建。 如果您已经有一个基于 Bot 框架的 bot，您可以轻松地对其进行调整以在 Microsoft 团队中工作。 我们建议您使用 c # 或 node.js 来利用我们的[sdk](/microsoftteams/platform/#pivot=sdk-tools)。 这些包扩展了基本的 Bot 生成器 SDK 类和方法，如下所示：
-
-* 使用专用的卡片类型，如 Office 365 连接器卡。
-* 使用和设置活动的团队特定频道数据。
-* 处理邮件扩展请求。
-
 > [!IMPORTANT]
 > 您可以在任何 web 编程技术中开发团队应用程序，并直接调用[Bot 框架 REST api](/bot-framework/rest-api/bot-framework-rest-overview) ，但您必须自己执行所有令牌处理。
 
 > [!TIP]
 > 团队应用程序 Studio * 可帮助您创建和配置应用程序清单，并可将 web 服务注册为 Bot 框架上的 bot。 它还包含响应控制库和交互式卡片生成器。 *请参阅*[开始使用团队应用 Studio](~/concepts/build-and-test/app-studio-overview.md)。
+
+## <a name="create-a-chatbot-for-teams-with-microsoft-power-virtual-agents"></a>为具有 Microsoft Power Virtual 代理的团队创建 chatbot
+
+[电源虚拟代理](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是一个基于 Microsoft Power Platform 和 Bot 框架构建的 chatbot 服务。  Power Virtual Agent 开发过程使用无代码的图形界面方法，使团队的每个成员都能轻松创建和维护智能虚拟代理。  在[Power Virtual agent 门户](https://powervirtualagents.microsoft.com)中完成创建 chatbot 后，可以轻松地[将 Power virtual Agent chatbot 与团队集成](how-to/add-power-virtual-agents-bot-to-teams.md)。 若要开始创建电源虚拟代理 chatbot，*请参阅* [power virtual agent 文档](https://docs.microsoft.com/power-virtual-agents/)。
 
 ## <a name="webhooks-and-connectors"></a>Webhook 和连接器
 
@@ -49,7 +53,7 @@ Microsoft 团队中的 bot 可以是一对一对话、组聊天或团队中的�
 
 ### <a name="in-a-channel"></a>通道中
 
-频道包含多个用户之间的线程对话—可能有很多人（目前最多为2000）。 这可能会为你的 bot 提供大规模的访问，但各个交互需要简明。 传统的多项交互操作可能不会很好。 相反，如果需要收集大量信息，请查看使用互动卡片或任务模块，或者可能将对话移动到一对一对话中。 你的 bot 也只能访问直接访问邮件的`@mentioned`邮件，无法使用 Microsoft Graph 和提升的组织级别权限从对话中检索其他邮件。
+频道包含多个用户之间的线程对话—可能有很多人（目前最多为2000）。 这可能会为你的 bot 提供大规模的访问，但各个交互需要简明。 传统的多项交互操作可能不会很好。 相反，如果需要收集大量信息，请查看使用互动卡片或任务模块，或者可能将对话移动到一对一对话中。 你的 bot 也只能访问直接访问邮件的邮件 `@mentioned` ，无法使用 Microsoft Graph 和提升的组织级别权限从对话中检索其他邮件。
 
 在频道中 excel 的一些应用场景包括：
 
@@ -60,7 +64,7 @@ Microsoft 团队中的 bot 可以是一对一对话、组聊天或团队中的�
 
 ### <a name="in-a-group-chat"></a>在群聊中
 
-组聊天是三个或更多人之间的非线程对话。 它们的成员数往往少于通道，并且更具暂时性。 与频道类似，你的`@mentioned` bot 仅可直接访问邮件。
+组聊天是三个或更多人之间的非线程对话。 它们的成员数往往少于通道，并且更具暂时性。 与频道类似，你的 bot 仅可直接访问邮件 `@mentioned` 。
 
 在频道中正常工作的方案通常在组聊天中也会起作用。
 
@@ -97,12 +101,12 @@ Bot 最适用于简短的快速交互，而不是 sifting 通过长列表查找�
 ## <a name="get-started"></a>入门
 
 * [C # 中的团队对话机器人/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
-* [JavaScript 中的团队对话机器人](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
+* [JavaScript 中的 Teams 对话机器人](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="learn-more"></a>了解更多
 
 > [!div class="nextstepaction"]
 > [团队中的 bot 的基础知识](~/bots/bot-basics.md)
 
 > [!div class="nextstepaction"]
-> [为团队创建机器人](~/bots/how-to/create-a-bot-for-teams.md)
+> [创建适合 Teams 的机器人](~/bots/how-to/create-a-bot-for-teams.md)
