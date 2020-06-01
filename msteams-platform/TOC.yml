@@ -320,14 +320,14 @@
           href: webhooks-and-connectors/how-to/connectors-creating.md
         - name: 向连接器和 Webhook 发送消息
           href: webhooks-and-connectors/how-to/connectors-using.md
-- name: 图表 API 权限：
+- name: Teams Graph REST APIs
   items:
     - name: 资源特定许可 (RSC)
-      href: graph-permissions/resource-specific-consent.md
+      href: graph-api/rsc/resource-specific-consent.md
     - name: 测试资源特定许可权限
-      href: graph-permissions/test-resource-specific-consent.md
+      href: graph-api/rsc/test-resource-specific-consent.md
     - name: RSC JSON 测试文件
-      href: graph-permissions/test-rsc-json-file.md
+      href: graph-api/rsc/test-rsc-json-file.md
 - name: 资源
   items:
     - name: 机器人 - v3 SDK
