@@ -2,32 +2,22 @@
 title: 移动设备上的选项卡
 description: 介绍设计适用于移动设备的选项卡的指南。
 keywords: 团队设计准则参考框架个人应用移动选项卡
-ms.openlocfilehash: 928fb8586434eca9cc1577fd45c6b94594724d7f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673260"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455518"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
-
-> [!Important]
-> 对移动客户端上的选项卡的完全支持即将推出。 若要为此更改做准备，请在创建选项卡时遵循本指南。 个人应用（静态选项卡）目前可在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中使用。 和频道/组聊天选项卡在选项卡`...`的 "溢出" 菜单中可用。
->
-> 释放对选项卡的完全支持时：
->
-> * 所有选项卡将始终在移动设备上可用
-> * 您`contentUrl` **将在移动团队客户端中加载**。
-> * 对于频道/组选项卡，用户仍可以通过您`websiteUrl`在单独的浏览器中打开您的`contentUrl`选项卡，但您将首先加载。
-> * 如果您的选项卡使用身份验证，则必须将团队 JavaScript SDK 升级到版本1.4.1 或更高版本，否则身份验证将失败。
 
 自定义选项卡可以是频道、组聊天或个人应用（包含静态选项卡和/或一对一 bot 的应用程序）的一部分。
 
 应用程序抽屉中的移动客户端提供了个人应用程序。 只能从桌面或 web 客户端安装应用程序，并且在移动客户端上可能需要长达24小时才能显示该应用程序。
 
-组和频道选项卡也在移动客户端上可用。 默认行为是使用`websiteUrl` ，在浏览器窗口中启动您的选项卡。 但是，可以通过单击选项卡旁边的 " `...`溢出" 菜单，然后选择 "**打开**"，在移动客户端上加载这些`contentUrl`用户，这将使用您在团队移动客户端内加载该选项卡。
+组和频道选项卡也在移动客户端上可用。 默认行为是使用 `websiteUrl` ，在浏览器窗口中启动您的选项卡。 但是，可以通过单击选项卡旁边的 "溢出" 菜单，然后选择 "打开"，在移动客户端上加载这些用户 `...` ，这将使用您在**Open** `contentUrl` 团队移动客户端内加载该选项卡。
 
-![移动应用程序抽屉](~/assets/images/app-drawer.png)
+![移动应用程序抽屉](../../assets/images/personal-app-mobile.png)
 
 ## <a name="developer-considerations-for-mobile-support"></a>移动支持的开发人员注意事项
 
@@ -111,7 +101,7 @@ ms.locfileid: "41673260"
 
 ![移动 typograph](~/assets/images/mobile-typography.png)
 
-#### <a name="fields-and-flyouts"></a>字段和 Flyouts
+#### <a name="fields-and-flyouts"></a>字段和浮出控件
 
 字段是用户可以在其中输入文本的区域。 Flyouts 比对话框更轻便，显示在顶部窗格中。
 

@@ -2,27 +2,19 @@
 title: 设计准则参考
 description: 介绍设计个人应用程序的指南
 keywords: 团队设计准则参考框架个人应用程序
-ms.openlocfilehash: 0d886adf926697f8920c0893589201ea4e4c3a9c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228071"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455497"
 ---
-# <a name="personal-apps"></a>个人应用程序
+# <a name="personal-apps"></a>个人应用
 
-> [!Important]
-> 对移动客户端上的选项卡的完全支持即将推出。 若要为此更改做准备，应按照移动选项卡[上的选项卡指南中](~/tabs/design/tabs-mobile.md)的步骤创建选项卡。 个人应用（静态选项卡）目前可在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中使用。
->
-> 释放对选项卡的完全支持时：
->
-> * 所有选项卡将始终在移动设备上可用
-> * 您`contentUrl` **将在移动团队客户端中加载**。
-> * 对于频道/组选项卡，用户仍可以通过您`websiteUrl`在单独的浏览器中打开您的`contentUrl`选项卡，但您将首先加载。
+> [!NOTE]
+> 团队中支持对移动客户端上的选项卡的完全支持。 为移动平台创建选项卡时，应遵循[移动电话上的选项卡指南](../../tabs/design/tabs-mobile.md)。
 
-个人应用是具有个人作用域的应用程序。 作为应用程序开发人员，您可以选择提供为单个用户生成的应用程序版本。 在此版本中，选项卡的集合（以及自动程序，如果您已加入）是为此人设计的。 这样，你就能够创建与你的用户的一对一交互。
-
-个人应用程序是指有人可以查看其所有内容，以及最近在应用中查看的所有项目。 它将所有内容都放在一个位置。 在下面的屏幕截图中，Contoso 是个人应用浮出控件中的个人应用程序。
+个人应用是具有个人作用域的团队应用程序。  作为应用程序开发人员，您可以选择提供一个侧重于与单个用户的交互的应用程序版本。 它可以是一个[对话机器人](../../bots/what-are-bots.md)，可与用户或[个人选项卡](../../tabs/what-are-tabs.md)进行一对一对话，以提供内嵌的 web 体验。 借助个人应用程序，用户可以在一个位置查看他们选择的内容。 在下面的屏幕截图中，Contoso 是个人应用浮出控件中的个人应用程序。
 
 ![应用程序溢出菜单的图像](~/assets/images/Personal-apps-App-flyout.png)
 
@@ -46,7 +38,7 @@ ms.locfileid: "42228071"
 
 ![最近选项卡](~/assets/images/Personal-apps-Recent-tab.png)
 
-### <a name="all"></a>全部
+### <a name="all"></a>所有
 
 这是个人组织中的所有选项卡的列表（仍有权访问它们）。 换句话说，它在使用应用程序的任何位置显示它们。 与**最近**的选项卡一样，选择列表中的内容会将用户直接带入相关频道和选项卡。
 

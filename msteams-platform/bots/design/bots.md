@@ -2,12 +2,12 @@
 title: Bot 设计指南
 description: 介绍创建 bot 的指南
 keywords: 团队设计指南参考框架 bot 对话
-ms.openlocfilehash: 172778e8d4adc08986d360c52b2bd076c443ac1a
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635282"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453887"
 ---
 # <a name="start-talking-with-bots"></a>开始与 bot 对话
 
@@ -131,7 +131,7 @@ Bot 应具有一些用户控件。 对于很多机器人，通过聊天界面允
 
 ## <a name="bots-in-channels"></a>通道中的 bot
 
-可以通过`@mention`对频道中的 bot 进行调用来实现。 机器人对话框在通道和组中应是唯一的，而不是一对一方案，通常最好是考虑不同的方法。 在下列情况下，尤其如此：
+可以通过对频道中的 bot 进行调用来实现 `@mention` 。 机器人对话框在通道和组中应是唯一的，而不是一对一方案，通常最好是考虑不同的方法。 在下列情况下，尤其如此：
 
 ### <a name="sensitive-data-sent-by-a-bot"></a>Bot 发送的敏感数据
 
@@ -165,4 +165,4 @@ Bot 应具有一些用户控件。 对于很多机器人，通过聊天界面允
 
 支持多项交互，同时仍允许完整构建的问题。 预测下一步将帮助用户更轻松地完成任务流。
 
-如果用户需要几个步骤来完成某项任务，则允许你的 bot 在每个步骤中执行这些步骤，但通过让其建议更快速的途径来完成。 例如，如果用户已进行了多个会话设置，则会设置一个会议（通过先指定一个会议，然后确定要通知的时间，然后指出一天），使用以下建议完成对话：下一次，请尝试询问您是否可以 "安排在明天1:00 的 Bob 开会"。
+如果用户需要几个步骤来完成某项任务，则允许你的 bot 在每个步骤中执行这些步骤，但通过让其建议更快速的途径来完成。 例如，如果用户已进行了多个会话设置，则会设置一个会议（通过先指定一个会议，然后确定要通知的时间，然后指出一天），完成与以下建议的对话：下一次，请尝试询问你是否可以在明天为小明安排会议（明天为1:00）。

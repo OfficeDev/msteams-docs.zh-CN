@@ -3,16 +3,16 @@ title: Microsoft 团队的应用程序 Studio 入门
 description: 使用应用程序 Studio 开始在 Microsoft 团队中构建出色的应用程序
 keywords: 入门应用程序 studio 团队
 ms.date: 03/20/2019
-ms.openlocfilehash: 9a88c6be552905a1dbd41d691c160a39f0123710
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 3d6274c204f907bdff19d1b0b9f347414423f2f5
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673375"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453859"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>使用 Microsoft 团队的应用程序工作室快速开发应用程序
 
-无论是为企业中的团队开发自定义应用程序，还是要为世界各地的团队开发自定义应用程序，您都可以轻松地创建或集成您自己的 Microsoft 团队应用程序，无论是为您的应用程序创建清单和包，提供有用的工具，如卡片编辑器和响应控制库。
+无论是为企业中的团队开发自定义应用程序，还是通过简化应用程序的清单和包，并提供卡片编辑器和响应控件库等有用的工具，应用程序 Studio 都可以轻松地开始创建或集成您自己的 Microsoft 团队应用程序。
 
 ## <a name="installing-app-studio"></a>安装应用程序 Studio
 
@@ -76,7 +76,7 @@ ms.locfileid: "41673375"
 
 此部分允许您将连接器添加到您的应用程序。 如果您已经注册了 Office 365 连接器，请选择 "*设置*"，并输入连接器的名称和 ID。 如果您想要新的连接器，请单击 "*注册*" 以转到浏览器中的连接器开发人员仪表板。
 
-##### <a name="messaging-extensions"></a>邮件扩展
+##### <a name="messaging-extensions"></a>消息扩展
 
 [邮件扩展](~/messaging-extensions/what-are-messaging-extensions.md)是用户在 Microsoft 团队中与您的应用程序进行接洽的一种强大方式。 用户可以查询服务中的信息，并以卡片形式发布该信息，直接进入频道或聊天对话。
 

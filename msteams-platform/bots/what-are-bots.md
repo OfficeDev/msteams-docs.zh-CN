@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft 团队中的会话 bot 概述。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6f1ce3cf905b0c638652784fdc76b37ea0f6aca9
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44281844"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453866"
 ---
 # <a name="what-are-conversational-bots"></a>什么是对话 bot？
 
@@ -53,7 +53,7 @@ Microsoft 团队中的 bot 可以是一对一对话、组聊天或团队中的�
 
 ### <a name="in-a-channel"></a>通道中
 
-频道包含多个用户之间的线程对话—可能有很多人（目前最多为2000）。 这可能会为你的 bot 提供大规模的访问，但各个交互需要简明。 传统的多项交互操作可能不会很好。 相反，如果需要收集大量信息，请查看使用互动卡片或任务模块，或者可能将对话移动到一对一对话中。 你的 bot 也只能访问直接访问邮件的邮件 `@mentioned` ，无法使用 Microsoft Graph 和提升的组织级别权限从对话中检索其他邮件。
+频道包含多个用户之间的线程对话—可能有很多人（目前最多为2000）。 这可能会为你的 bot 提供大规模的访问，但各个交互需要简明。 传统的多项交互操作可能不会很好。 相反，如果需要收集大量信息，请查看使用互动卡片或任务模块，或者可能将对话移动到一对一对话中。 你的 bot 也只能访问 `@mentioned` 直接邮件，尽管你可以使用 Microsoft Graph 和提升的组织级权限检索来自对话的其他邮件。
 
 在频道中 excel 的一些应用场景包括：
 
@@ -103,7 +103,7 @@ Bot 最适用于简短的快速交互，而不是 sifting 通过长列表查找�
 * [C # 中的团队对话机器人/dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
 * [JavaScript 中的 Teams 对话机器人](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
 
-## <a name="learn-more"></a>了解更多
+## <a name="learn-more"></a>了解详细信息
 
 > [!div class="nextstepaction"]
 > [团队中的 bot 的基础知识](~/bots/bot-basics.md)

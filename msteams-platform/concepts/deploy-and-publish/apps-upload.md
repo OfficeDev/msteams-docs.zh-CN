@@ -2,12 +2,12 @@
 title: 在 Microsoft 团队中上传自定义应用程序
 description: 介绍如何在 Microsoft 团队中上传您的应用程序
 keywords: 团队应用上传
-ms.openlocfilehash: b5807644a0c9afa26b81d07c71d5f45ab3c8ba00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673089"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453880"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>将一个应用程序包上传到 Microsoft Teams
 
@@ -20,7 +20,7 @@ ms.locfileid: "41673089"
 
 对于开发和 AppSource （以前称为 "Office 应用商店"）提交，您必须创建一个 uploadable 程序包，其中包含描述您的体验的信息。 该包（.zip 文件）包含应用程序清单和用于唯一定义您的体验的图标。
 
-若要创建上载包，请参阅为[Microsoft 团队应用程序创建程序包](~/concepts/build-and-test/apps-package.md)。
+若要创建上载包，请参阅为[Microsoft 团队应用程序创建程序包](../build-and-test/apps-package.md)。
 
 创建包后，即可将其上载到团队中。 上载后，将对所选团队中的所有用户和该团队的用户可用。
 
@@ -40,16 +40,16 @@ ms.locfileid: "41673089"
 
 1. 在 "团队" 的左下角，选择 "存储" 图标。 在 "应用商店" 页上，选择 "上载自定义应用程序"。
 
-   ![查看团队](~/assets/images/store-upload-a-custom-app.png)
+   ![查看团队](../../assets/images/store-upload-a-custom-app.png)
 
 2. 在 "*打开*" 对话框中，导航到要上载的包，然后选择 "*打开*"。
 
 已上载的包现在应可在同意对话框中指定的团队或对话中使用。 如果未显示您的应用程序，最常见的原因是清单中的一个错误，尤其是应用程序、bot 和邮件扩展的 id。 如果应用程序的作用范围不适合对话，则不会显示该选项。
 
 >[!NOTE]
-> 对话中的应用程序当前处于[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中，如果团队未在该模式下运行，则不会显示该选项。
+> 对话中的应用程序当前处于[开发人员预览版](../../resources/dev-preview/developer-preview-intro.md)中，如果团队未在该模式下运行，则不会显示该选项。
 
-![上载的 bot 列表中的 bot 的示例](~/assets/images/botinlist.jpg)
+![上载的 bot 列表中的 bot 的示例](../../assets/images/botinlist.jpg)
 
 ## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>使用 "应用程序" 选项卡将您的包上传到团队
 
@@ -60,13 +60,13 @@ ms.locfileid: "41673089"
 
 2. 选择 "应用" 选项卡，然后选择右下方的 "*上传自定义应用程序*"。
 
-   ![上载入口点](~/assets/images/uploadACustomApp.png)
+   ![上载入口点](../../assets/images/UploadACustomApp.png)
 
 3. 浏览到您的计算机上的 .zip 包并将其从计算机中选择。
 
 4. 在短暂停顿之后，你将在列表中看到上传的应用。
 
-   ![上载的 bot 列表中的 bot 的示例](~/assets/images/botinlist.jpg)
+   ![上载的 bot 列表中的 bot 的示例](../../assets/images/botinlist.jpg)
 
 如果您的应用程序未加载，最常见的原因是清单中存在错误，尤其是应用程序、bot 和邮件扩展的 id。
 
@@ -74,15 +74,15 @@ ms.locfileid: "41673089"
 
 如果应用程序包含选项卡，则用户可以使用标准的选项卡库流将它们固定到任何对话或团队频道：
 
-1. 转到团队中的频道。 选择*+* 现有选项卡右侧的 *"（添加选项卡*）"。
+1. 转到团队中的频道。 选择 *+* 现有选项卡右侧的 *"（添加选项卡*）"。
 
 2. 从显示的库中选择您的选项卡。
 
 3. 接受同意提示。
 
-4. 通过[配置页面](~/tabs/how-to/create-tab-pages/configuration-page.md)配置您的选项卡，然后选择 "*保存*"。
+4. 通过[配置页面](../../tabs/how-to/create-tab-pages/configuration-page.md)配置您的选项卡，然后选择 "*保存*"。
 
-  !["添加选项卡" 对话框，带有可用选项卡的库](~/assets/images/tab_gallery.png)
+  !["添加选项卡" 对话框，带有可用选项卡的库](../../assets/images/tab_gallery.png)
 
 ## <a name="accessing-your-uploaded-bot"></a>访问上载的 bot
 
@@ -102,15 +102,15 @@ ms.locfileid: "41673089"
 
 2. 从底部的 "**上传**" 部分选择连接器。
 
-3. 通过[配置页面](~/webhooks-and-connectors/how-to/connectors-creating.md)配置连接器，然后选择 "*保存*"。
+3. 通过[配置页面](../../webhooks-and-connectors/how-to/connectors-creating.md)配置连接器，然后选择 "*保存*"。
 
-  !["添加选项卡" 对话框，带有可用选项卡库。](~/assets/images/connector_gallery.png)
+  !["添加选项卡" 对话框，带有可用选项卡库。](../../assets/images/connector_gallery.png)
 
 ## <a name="accessing-your-uploaded-messaging-extension"></a>访问上载的邮件扩展插件
 
 带有邮件扩展功能的已上载应用程序将自动显示在 "撰写" 框中的 "*更多选项*（*&#8943;*）" 菜单中。
 
-![消息扩展](~/assets/images/compose-extensions/cesampleapp.png)
+![消息传递扩展](../../assets/images/compose-extensions/cesampleapp.png)
 
 ## <a name="removing-or-updating-your-app"></a>删除或更新应用程序
 
@@ -123,5 +123,5 @@ ms.locfileid: "41673089"
 
 ## <a name="troubleshooting-notes"></a>疑难解答说明
 
-* 如果未加载清单，请仔细检查是否遵循 "[创建包](~/concepts/build-and-test/apps-package.md)" 和 "根据[架构](~/resources/schema/manifest-schema.md)验证清单" 中的所有说明操作。
+* 如果未加载清单，请仔细检查是否遵循 "[创建包](../../concepts/build-and-test/apps-package.md)" 和 "根据[架构](../../resources/schema/manifest-schema.md)验证清单" 中的所有说明操作。
 
