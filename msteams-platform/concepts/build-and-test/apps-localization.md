@@ -3,12 +3,12 @@ title: 工作组应用程序的本地化
 description: 介绍有关本地化应用程序的问题
 keywords: 团队发布 microsoft store office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: c7d8ff47d370badcc75e3ad5d10a2ca298b80195
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 30e4a2589bf5c1093723406c78cff2258554c486
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120278"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590856"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft 团队应用程序的本地化
 
@@ -40,13 +40,13 @@ ms.locfileid: "43120278"
 
 ## <a name="localizing-the-strings-in-your-app-manifest"></a>本地化应用程序清单中的字符串
 
-您必须使用 Microsoft 团队应用程序架构 v1.0 + 以正确本地化您的应用程序。 为此，可以将清单. `$schema` json 文件中的属性设置为 "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json"，并将 "manifestVersion" 属性更新为 "1.5"。
+您必须使用 Microsoft 团队应用程序架构 v1.0 + 以正确本地化您的应用程序。 为此，可以将 `$schema` 清单. json 文件中的属性设置为 " https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json "，并将 "manifestVersion" 属性更新为 "1.5"。
 
 ### <a name="example-manifestjson-change"></a>示例清单 json 更改
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   ...
 }
@@ -66,7 +66,7 @@ ms.locfileid: "43120278"
 }
 ```
 
-您可以提供附加的 json 文件，其中包含清单中所有面向用户的字符串的转换。 这些文件必须遵循[本地化文件 JSON 架构](../../resources/schema/localization-schema.md)，并且必须将其添加到清单的 "localizationInfo" 属性。 每个文件都与一个语言标记相关联，团队客户端使用这些标记来选择适当的字符串。 语言标记<language> - <region>采用的形式为，但建议省略<region>部分，以面向支持所需语言的所有区域。
+您可以提供附加的 json 文件，其中包含清单中所有面向用户的字符串的转换。 这些文件必须遵循[本地化文件 JSON 架构](../../resources/schema/localization-schema.md)，并且必须将其添加到清单的 "localizationInfo" 属性。 每个文件都与一个语言标记相关联，团队客户端使用这些标记来选择适当的字符串。 语言标记采用的形式为， <language> - <region> 但建议省略 <region> 部分，以面向支持所需语言的所有区域。
 
 团队客户端将按如下顺序应用这些字符串：默认语言字符串-> 用户的语言仅为字符串-> 用户的语言 + 用户的区域字符串。
 
@@ -114,7 +114,7 @@ ms.locfileid: "43120278"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "name.short": "Le App",
   "name.full": "App pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App.",
@@ -129,4 +129,4 @@ ms.locfileid: "43120278"
 
 ## <a name="handling-localized-text-submissions-from-your-users"></a>处理用户的本地化文本提交
 
-如果您提供了应用程序的本地化版本，则您的用户很可能会使用相同的语言进行响应。 团队不会将用户的提交翻译回默认语言，因此您的应用程序将需要处理该情况。 例如，如果您提供本地化`commandList`的，则对你的 bot 的响应将是该命令的本地化文本，而不是默认语言。 您的应用程序需要进行相应的响应。
+如果您提供了应用程序的本地化版本，则您的用户很可能会使用相同的语言进行响应。 团队不会将用户的提交翻译回默认语言，因此您的应用程序将需要处理该情况。 例如，如果您提供本地化的 `commandList` ，则对你的 bot 的响应将是该命令的本地化文本，而不是默认语言。 您的应用程序需要进行相应的响应。

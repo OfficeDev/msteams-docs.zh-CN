@@ -4,12 +4,12 @@ author: clearab
 description: 如何：将 OAuth 身份验证添加到 Microsoft 团队中的 bot。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: b5a246db1838d19d81e42e9a60efa74bb5363573
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 2b9765a2f295e85dc9b4d2c1b1ddcae4d642e268
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210715"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590870"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向你的团队 bot 添加身份验证
 
@@ -143,11 +143,11 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
         - 如果您*在任何组织目录（任何 AAD 目录-多租户和个人 Microsoft 帐户，例如 Skype、Xbox、Outlook）中*选择了 "帐户"，请输入**通用**词，而不是租户 ID。 否则，AAD 应用将通过已选择 ID 的租户进行验证，并排除个人 Microsoft 帐户。
 
     水平. 对于 "**资源 URL**"，请输入 `https://graph.microsoft.com/` 。 当前代码示例中不使用此代码。  
-    得到. 将**范围**保留为空。 下面的图像是一个示例：
+    i. 将**范围**保留为空。 下面的图像是一个示例：
 
     ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. 选择“保存”****。
+1. 选择“**保存**”。
 
 ### <a name="test-the-connection"></a>测试连接
 
@@ -159,7 +159,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure Active Directory （Azure AD�
     ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. 选择 "**接受**"。
-1. 然后，这会将您重定向到 " ** \< -连接-名称> 成功**" 页的测试连接。 如果遇到错误，请刷新页面。 下面的图像是一个示例：
+1. 然后，这会将您重定向到 "成功" 页的 "**测试连接 \<your-connection-name> ** "。 如果遇到错误，请刷新页面。 下面的图像是一个示例：
 
   ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
@@ -390,7 +390,7 @@ Microsoft 团队是完全基于云的产品，它需要使用 HTTPS 终结点从
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
