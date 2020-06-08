@@ -3,12 +3,12 @@ title: 向连接器和 Webhook 发送邮件
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: df91dfc68dbafb5e32d8c0e5732eb820c21a51b0
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: 1b3fc9da27d4226bafcc772f77b1a42bca7c5800
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225775"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590792"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -185,7 +185,7 @@ ms.locfileid: "43225775"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
