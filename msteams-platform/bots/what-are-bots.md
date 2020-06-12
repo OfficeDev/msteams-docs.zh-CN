@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft 团队中的会话 bot 概述。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 140be426ac789efbf044130b0683f60af9f617d6
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453866"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704465"
 ---
 # <a name="what-are-conversational-bots"></a>什么是对话 bot？
 
@@ -21,7 +21,7 @@ ms.locfileid: "44453866"
 
 ## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>为使用 Microsoft Bot 框架的团队构建 bot
 
-Microsoft Bot 框架] （ https://dev.botframework.com/) 是一种丰富的 SDK，用于使用 c #、Java、Python 和 JavaScript 构建 bot。 如果您已经有一个基于 Bot 框架的 bot，您可以轻松地对其进行调整以在 Microsoft 团队中工作。 我们建议您使用 c # 或 node.js 来利用我们的[sdk](/microsoftteams/platform/#pivot=sdk-tools)。 这些包扩展了基本的 Bot 生成器 SDK 类和方法，如下所示：
+[Microsoft Bot 框架](https://dev.botframework.com/)是一个丰富的 SDK，用于使用 c #、Java、Python 和 JavaScript 构建 bot。 如果您已经有一个基于 Bot 框架的 bot，您可以轻松地对其进行调整以在 Microsoft 团队中工作。 我们建议您使用 c # 或 Node.js 来利用我们的[sdk](/microsoftteams/platform/#pivot=sdk-tools)。 这些包扩展了基本的 Bot 生成器 SDK 类和方法，如下所示：
 
 * 使用专用的卡片类型，如 Office 365 连接器卡。
 * 使用和设置活动的团队特定频道数据。

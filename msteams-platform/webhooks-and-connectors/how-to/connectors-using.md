@@ -3,12 +3,12 @@ title: 向连接器和 Webhook 发送邮件
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: 1b3fc9da27d4226bafcc772f77b1a42bca7c5800
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: f3b89161a908af8709334c300a8ee6218817c21f
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44590792"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704493"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -149,12 +149,12 @@ ms.locfileid: "44590792"
 
    ```bash
    // on macOS or Linux
-   curl -H 'Content-Type: application/json' -d '{\"text\": \"Hello World\"}' <YOUR WEBHOOK URL>
+   curl -H 'Content-Type: application/json' -d '{"text": "Hello World"}' <YOUR WEBHOOK URL>
    ```
 
    ```bash
    // on Windows
-   curl.exe -H 'Content-Type: application/json' -d '{\"text\": \"Hello World\"}' <YOUR WEBHOOK URL>
+   curl.exe -H 'Content-Type: application/json' -d '{"text": "Hello World"}' <YOUR WEBHOOK URL>
    ```
 
 2. 如果 POST 成功，则可以看到 `curl` 简单输出 **1**。

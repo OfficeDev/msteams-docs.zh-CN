@@ -1,17 +1,17 @@
 ---
-title: 发送主动消息
+title: 发送主动邮件
 author: clearab
 description: 如何使用 Microsoft 团队 bot 发送主动消息。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 566b93f519001cbc2470b43e4729fa8b4aa0a9d2
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 6e387dcf0e73124d57996a56c835f5a99fc6f1c6
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635275"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704458"
 ---
-# <a name="send-proactive-messages"></a>发送主动消息
+# <a name="send-proactive-messages"></a>发送主动邮件
 
 > [!Note]
 > 本文中的代码示例使用的是 v3 Bot 框架 SDK 和 v3 团队 Bot 生成器 SDK 扩展。 从概念上讲，此信息适用于使用该 SDK 的 v4 版本，但代码略有不同。
@@ -28,7 +28,12 @@ ms.locfileid: "42635275"
 1. [获取用户的唯一 Id 和租户 Id](#obtain-necessary-user-information)
 1. [发送邮件](#examples)
 
-创建主动预防性邮件**must**时， `MicrosoftAppCredentials.TrustServiceUrl`必须调用并传入服务 URL，然后才能创建`ConnectorClient`将用于发送邮件的。 如果不这样做，您的应用程序将`401: Unauthorized`收到响应。 
+创建主动预防性邮件时，**必须**调用 `MicrosoftAppCredentials.TrustServiceUrl` 并传入服务 URL，然后才能创建 [`ConnectorClient`](/azure/bot-service/dotnet/bot-builder-dotnet-connector) 将用于发送邮件的。 如果不这样做，您的应用程序将收到 `401: Unauthorized` 响应。
+
+> [!Tip]
+> 有关为 .NET 客户端设置的更多详细信息 `ConnectorClient` ，请参阅 "[发送和接收活动](/azure/bot-service/dotnet/bot-builder-dotnet-connector#create-a-connector-client)" 主题
+>
+> 有关发送前瞻性消息的更多示例，可参阅 Azure Bot Service [.net](/azure/bot-service/dotnet/bot-builder-dotnet-proactive-messages)和[Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-proactive-messages)文档
 
 ## <a name="best-practices-for-proactive-messaging"></a>主动消息传递的最佳做法
 
@@ -61,14 +66,14 @@ Bot 可以通过获取用户的*唯一 ID*和*租户 id* ，创建与单个 Micr
 * 通过从频道中[提取团队名单，](../get-teams-context.md#fetching-the-roster-or-user-profile)您的应用程序已安装在中。
 * 通过在用户[与频道中的 bot 交互](./channel-and-group-conversations.md)时缓存这些文件。
 * 当用户[在频道对话中 @mentioned](./channel-and-group-conversations.md#retrieving-mentions)时，bot 是的一部分。
-* 当您的应用程序安装在个人作用域中时，当您[收到`conversationUpdate` ](./subscribe-to-conversation-events.md#team-members-added)事件时缓存它们，或将新成员添加到频道或组聊天
+* 当您的应用程序安装在个人作用域中时，当您[收到 `conversationUpdate` ](./subscribe-to-conversation-events.md#team-members-added)事件时缓存它们，或将新成员添加到频道或组聊天
 
 ### <a name="proactively-install-your-app-using-graph"></a>使用 Graph 主动安装您的应用程序
 
 > [!Note]
 > 使用 graph 主动安装应用当前处于 beta 中。
 
-有时，可能有必要主动向尚未安装或与您的应用程序进行交互的邮件用户进行处理。 例如，您希望使用[公司 communicator](~/samples/app-templates.md#company-communicator-app)向整个组织发送邮件。 在这种情况下，您可以使用 Graph API 主动为您的用户安装您的应用程序，然后从应用`conversationUpdate`程序安装时收到的事件中缓存必要的值。
+有时，可能有必要主动向尚未安装或与您的应用程序进行交互的邮件用户进行处理。 例如，您希望使用[公司 communicator](~/samples/app-templates.md#company-communicator)向整个组织发送邮件。 在这种情况下，您可以使用 Graph API 主动为您的用户安装您的应用程序，然后从 `conversationUpdate` 应用程序安装时收到的事件中缓存必要的值。
 
 您只能安装组织应用程序目录或团队应用商店中的应用程序。
 
@@ -76,7 +81,7 @@ Bot 可以通过获取用户的*唯一 ID*和*租户 id* ，创建与单个 Micr
 
 ## <a name="examples"></a>示例
 
-在使用 REST API 创建新对话之前，请务必对持有者令牌进行身份验证并拥有持有者令牌。 下面`members.id`的对象中的字段对你的 bot 和用户的组合是唯一的。 您不能通过任何其他方法获取它，而不是以上所述。
+在使用 REST API 创建新对话之前，请务必对持有者令牌进行身份验证并拥有持有者令牌。 `members.id`下面的对象中的字段对你的 bot 和用户的组合是唯一的。 您不能通过任何其他方法获取它，而不是以上所述。
 
 ```json
 POST /v3/conversations
@@ -108,9 +113,9 @@ POST /v3/conversations
 
 此 ID 是个人聊天的唯一会话 ID。 请存储此值并重用它以供用户将来交互。
 
-# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-本示例使用的是 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。
+本示例使用的是 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。 在此示例中， `client` 是已 `ConnectorClient` 按照[发送和接收活动](/azure/bot-service/dotnet/bot-builder-dotnet-connector)中所述创建和验证的实例
 
 ```csharp
 // Create or get existing chat conversation with user
@@ -174,11 +179,11 @@ async def _send_proactive_message():
 
 ## <a name="creating-a-channel-conversation"></a>创建频道对话
 
-您的团队添加的 bot 可以发布到通道中，以创建新的答复链。 如果您使用的是 node.js 团队 SDK，则使用`startReplyChain()`可为您提供一个具有正确的活动 id 和会话 id 的完全填充的地址。如果使用的是 c #，请参阅下面的示例。
+您的团队添加的 bot 可以发布到通道中，以创建新的答复链。 如果您使用的是 Node.js 团队 SDK，请使用以 `startReplyChain()` 正确的活动 id 和会话 id 为您提供完全填充的地址。如果使用的是 c #，请参阅下面的示例。
 
-或者，也可以使用 REST API 并向[`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) RESOURCE 发出 POST 请求。
+或者，也可以使用 REST API 并向 resource 发出 POST 请求 [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) 。
 
-# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 下面的代码段来自[此示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)。
 
@@ -228,7 +233,7 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-下面的代码片段来自[teamsConversationBot](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js)。
+下面的代码片段来自[teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js)。
 
 [!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
 

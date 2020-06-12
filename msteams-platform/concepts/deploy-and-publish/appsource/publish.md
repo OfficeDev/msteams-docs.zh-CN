@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序审批过程指南
 description: 介绍了如何将应用发布到 Microsoft 团队应用商店的审批过程
 keywords: 团队发布 microsoft store office 发布 AppSource
-ms.openlocfilehash: 0f4a93f6c93ab0dd4147d7e6b8dce0beac26ed95
-ms.sourcegitcommit: 5207af18a032763fecf2b932d7e29ced1ee11ccd
+ms.openlocfilehash: e93a17453e514b1e89f3f7070ff1f31000719260
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "43937348"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704486"
 ---
 # <a name="submit-your-app-to-appsource"></a>将您的应用程序提交到 AppSource
 
@@ -16,7 +16,8 @@ ms.locfileid: "43937348"
 将应用程序发布到[AppSource](https://appsource.microsoft.com)使其在团队应用程序目录和 web 上可用。 从较高的层次来看，将应用程序提交到 AppSource 的过程如下：
 
 1. 遵循我们的[设计准则](~/concepts/design/understand-use-cases.md)来开发您的应用程序。 选项卡应遵循我们的[选项卡设计准则](~/tabs/design/tabs.md)。 Bot 应遵循[bot 设计指南](~/bots/design/bots.md)。
-1. 在 "[合作伙伴中心](https://support.microsoft.com/help/4499930/partner-center-overview)" 中[设置开发人员帐户](/office/dev/store/open-a-developer-account)。
+1. 确保您的应用程序符合 Microsoft 团队的应用程序[验证策略](/legal/marketplace/certification-policies)。
+1. 在 "[合作伙伴中心](https://support.microsoft.com/help/4499930/partner-center-overview)" 中[设置开发人员帐户](/office/dev/store/open-a-developer-account)。 另*请参阅*下面的 FAQ 部分中的[如何创建合作伙伴中心帐户](#how-do-i-create-a-partner-center-account)。
 1. 按照[提交清单](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)，准备要提交的应用程序。
 1. 查看我们[关于成功提交应用程序的提示](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)。
 1. [通过合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource)将您的包提交到 AppSource。
@@ -37,33 +38,35 @@ ms.locfileid: "43937348"
 - 如果你不熟悉合作伙伴中心，并且在 Microsoft 网络中没有帐户，请[使用 "合作伙伴中心注册" 页创建帐户](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
 - 如果你已在合作伙伴网络中注册，请[使用现有注册直接在合作伙伴中心中创建帐户](/office/dev/store/)。
 
-## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>如何将我的电话号码添加到合作伙伴配置文件联系人部分？
-
-电话号码包含三个部分：国家/地区代码、区号和电话号码。 如果你的电话号码不包含区号，则将第二个框留空，然后完成第三个框。
-
 ## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>如果我无法在合作伙伴中心找到我的 Office 应用商店帐户，该怎么办？
 
-请打开[合作伙伴支持票证](https://partner.microsoft.com/en-US/support/v2/?stage=1)，然后从下拉菜单中选择以下内容：
+请打开[合作伙伴中心支持票证](https://partner.microsoft.com/en-US/support/v2/?stage=1)，然后从下拉菜单中选择以下内容：
 
-| 菜单 | 方法 |
+| 菜单 | 选项 |
 | -------   | -------  |
 |类别| 商业市场|
 | 主题 | 常规市场帮助和操作方法问题 |
 | 子| Office 加载项 |
 
-另*请参阅*[如何打开合作伙伴中心支持票证](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
+## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>在哪里可以获得对我的合作伙伴中心问题的支持？
 
-## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>如何在合作伙伴中心管理我的帐户设置和合作伙伴配置文件？
-
-有关管理合作伙伴中心帐户设置的指南，请访问我们的 "[管理帐户设置和配置文件信息](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info)" 页面。
+请访问我们的[发布者支持页面](https://aka.ms/marketplacepublishersupport)以搜索你的问题主题并查找指南。 如果提供的指南不起作用，请[打开合作伙伴中心支持票证](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
 
 ## <a name="how-do-i-manage-my-office-store-account"></a>如何管理我的 Office 应用商店帐户？
 
 若要了解如何通过合作伙伴中心管理 Office 应用商店帐户，请访问 "[合作伙伴中心" 中的 "管理你的 Office 应用商店帐户](/office/dev/store/manage-account-settings-and-profile)"。
 
+## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>如何将我的电话号码添加到合作伙伴配置文件联系人部分？
+
+电话号码包含三个部分：国家/地区代码、区号和电话号码。 如果你的电话号码不包含区号，则将第二个框留空，然后完成第三个框。
+
+## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>如何在合作伙伴中心管理我的帐户设置和合作伙伴配置文件？
+
+有关管理合作伙伴中心帐户设置的指南，请访问我们的 "[管理帐户设置和配置文件信息](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info)" 页面。
+
 ## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>为什么我会收到邮件：当我尝试通过合作伙伴中心提交我的加载项时，"此帐户未发布合格"。
 
-当您的[帐户验证状态](/partner-center/verification-responses)为 "挂起" 时，您将收到上述错误消息。 您可以通过在页面页眉命令行管理程序的右上角选择 "**设置**" 选项（齿轮图标），然后选择 "**开发人员设置** => **帐户**  => **帐户设置**"，在 "合作伙伴中心"[仪表板](https://partner.microsoft.com/dashboard)中检查您的帐户验证状态。
+当您的[帐户验证状态](/partner-center/verification-responses)为 "挂起" 时，您将收到上述错误消息。 您可以通过在页面页眉命令行管理程序的右上角选择 "**设置**" 选项（齿轮图标），然后选择 "**开发人员设置** [dashboard](https://partner.microsoft.com/dashboard)  =>  **帐户**   =>  **帐户设置**"，在 "合作伙伴中心" 仪表板中检查您的帐户验证状态。
 
 ![合作伙伴中心帐户设置页](../../../assets/images/partner-center-accts-page.png)
 
@@ -92,7 +95,7 @@ ms.locfileid: "43937348"
 1. 清除浏览器缓存，转到合作伙伴中心帐户仪表板，然后选择 "**重新发送验证电子邮件**" 链接，将验证电子邮件发送到您的电子邮件地址。
 1. 尝试从其他浏览器访问**重新发送验证电子邮件**链接。
 1. 与 IT 部门合作，以确保电子邮件服务器不会阻止验证电子邮件。
-1. 调整您的服务器的垃圾邮件筛选器以允许/白名单中的所有电子邮件**maccount@microsoft。<span> </span>com**。
+1. 调整您的服务器的垃圾邮件筛选器以允许/白名单中的所有电子邮件**maccount@microsoft。 <span></span>com**。
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>雇用验证过程通常需要多长时间？
 
@@ -102,13 +105,17 @@ ms.locfileid: "43937348"
 
 业务验证需要1到2个工作日才能完成，只要提交了所有必需的文档。
 
-## <a name="if-ive-already-reached-out-to-the-support-team-will-my-ticket-be-expedited"></a>如果我已到达支持团队，我的票证是否会加快？
+## <a name="if-i-reach-out-to-the-support-team-will-my-ticket-be-expedited"></a>如果我转到支持团队，我的票证将会加快吗？
 
 支持票证将在一周内得到解决。 请查找将发送到在发出支持票证时提供的电子邮件的更新。
 
+## <a name="my-issue-is-not-listed-here--are-there-other-pages-i-can-reference-for-partner-center-issues"></a>我的问题未在此处列出。  是否有其他页面可供我参考以获取合作伙伴中心问题？
+
+请参阅我们的[商业市场文档](/azure/marketplace/)以获取更多帮助。
+
 ## <a name="ive-created-a-support-ticket-it-has-been-7-business-days-and-i-havent-received-an-update-where-can-i-get-additional-help"></a>我已经创建了一个支持票证，它已有7个工作日，但尚未收到更新。 在哪里可以获得更多帮助？
 
-请**<teamsubm@microsoft.com>** 使用以下详细信息发送电子邮件：
+请 **<teamsubm@microsoft.com>** 使用以下详细信息发送电子邮件：
 
 1. **主题行**。 *<App_Name>的合作伙伴中心帐户问题*（指定您的应用程序的名称）。
 1. **电子邮件正文：**
@@ -118,4 +125,4 @@ ms.locfileid: "43937348"
 
 >
 > [!div class="nextstepaction"]
-> [了解有关 Microsoft 团队的应用验证策略的详细信息](https://docs.microsoft.com/legal/marketplace/certification-policies)
+> [了解有关 Microsoft 团队的应用验证策略的详细信息](/legal/marketplace/certification-policies)

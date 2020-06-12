@@ -2,12 +2,12 @@
 title: 主动消息
 description: 描述 bot 可以在 Microsoft 团队中开始对话
 keywords: 团队方案主动消息对话机器人
-ms.openlocfilehash: 30a21a15126e489ec50f8d3b7307880921d6062b
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: adb677bf348065713911d576289c432f8aba3960
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635317"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704451"
 ---
 # <a name="proactive-messaging-for-bots"></a>针对 bot 的主动消息
 
@@ -25,7 +25,7 @@ ms.locfileid: "42635317"
 1. [获取用户的唯一 Id 和租户 Id](#obtain-necessary-user-information)
 1. [发送邮件](#examples)
 
-创建主动预防性邮件**must**时， `MicrosoftAppCredentials.TrustServiceUrl`必须调用并传入服务 URL，然后才能创建`ConnectorClient`将用于发送邮件的。 如果不这样做，您的应用程序将`401: Unauthorized`收到响应。 请参阅[下面的示例](#net-example-from-this-sample)。
+创建主动预防性邮件时，**必须**调用 `MicrosoftAppCredentials.TrustServiceUrl` 并传入服务 URL，然后才能创建 `ConnectorClient` 将用于发送邮件的。 如果不这样做，您的应用程序将收到 `401: Unauthorized` 响应。 请参阅[下面的示例](#net-example-from-this-sample)。
 
 ## <a name="best-practices-for-proactive-messaging"></a>主动消息传递的最佳做法
 
@@ -58,14 +58,14 @@ Bot 可以通过获取用户的*唯一 ID*和*租户 id* ，创建与单个 Micr
 * 通过从频道中[提取团队名单，](~/resources/bot-v3/bots-context.md#fetching-the-team-roster)您的应用程序已安装在中。
 * 通过在用户[与频道中的 bot 交互](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)时缓存这些文件。
 * 当用户[在频道对话中 @mentioned](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions)时，bot 是的一部分。
-* 当您的应用程序安装在个人作用域中时，当您[收到`conversationUpdate` ](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)事件时缓存它们，或将新成员添加到频道或组聊天
+* 当您的应用程序安装在个人作用域中时，当您[收到 `conversationUpdate` ](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)事件时缓存它们，或将新成员添加到频道或组聊天
 
 ### <a name="proactively-install-your-app-using-graph"></a>使用 Graph 主动安装您的应用程序
 
 > [!Note]
 > 使用 graph 主动安装应用当前处于 beta 中。
 
-有时，可能有必要主动向尚未安装或与您的应用程序进行交互的邮件用户进行处理。 例如，您希望使用[公司 communicator](~/samples/app-templates.md#company-communicator-app)向整个组织发送邮件。 在这种情况下，您可以使用 Graph API 主动为您的用户安装您的应用程序，然后从应用`conversationUpdate`程序安装时收到的事件中缓存必要的值。
+有时，可能有必要主动向尚未安装或与您的应用程序进行交互的邮件用户进行处理。 例如，您希望使用[公司 communicator](~/samples/app-templates.md#company-communicator)向整个组织发送邮件。 在这种情况下，您可以使用 Graph API 主动为您的用户安装您的应用程序，然后从 `conversationUpdate` 应用程序安装时收到的事件中缓存必要的值。
 
 您只能安装组织应用程序目录或团队应用商店中的应用程序。
 
@@ -128,7 +128,7 @@ Activity newActivity = new Activity()
 await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 ```
 
-### <a name="using-nodejs"></a>使用 node.js
+### <a name="using-nodejs"></a>使用 Node.js
 
 ```javascript
 var address =
@@ -158,9 +158,9 @@ bot.send(msg);
 
 ## <a name="creating-a-channel-conversation"></a>创建频道对话
 
-您的团队添加的 bot 可以发布到通道中，以创建新的答复链。 如果您使用的是 node.js 团队 SDK，则使用`startReplyChain()`可为您提供一个具有正确的活动 id 和会话 id 的完全填充的地址。如果使用的是 c #，请参阅下面的示例。
+您的团队添加的 bot 可以发布到通道中，以创建新的答复链。 如果您使用的是 Node.js 团队 SDK，请使用以 `startReplyChain()` 正确的活动 id 和会话 id 为您提供完全填充的地址。如果使用的是 c #，请参阅下面的示例。
 
-或者，也可以使用 REST API 并向[`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) RESOURCE 发出 POST 请求。
+或者，也可以使用 REST API 并向 resource 发出 POST 请求 [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) 。
 
 ### <a name="net-example-from-this-sample"></a>.NET 示例（[本示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)中）
 
