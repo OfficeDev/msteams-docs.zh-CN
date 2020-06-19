@@ -4,11 +4,11 @@ description: 了解与为 Microsoft 团队创建应用程序托管媒体 bot 相
 keywords: 应用程序承载的媒体 windows server azure 虚拟机
 ms.date: 11/16/2018
 ms.openlocfilehash: f5b721edacb11e867d05c8213b74036cb51f419c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673157"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801007"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管媒体 bot 的要求和注意事项
 
@@ -19,7 +19,7 @@ ms.locfileid: "41673157"
 
 ## <a name="application-hosted-media-bot-development-requires-cnet-and-windows-server"></a>应用程序托管的媒体 bot 开发需要 c #/.NET 和 Windows Server
 
-- 应用程序托管的媒体 bot 需要`Microsoft.Graph.Communications.Calls.Media` .net 库（可在[此处](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)访问音频和视频媒体流，并且必须在 windows Server 计算机（或 Azure 中的 windows server 来宾 OS）上部署 bot。 因此，必须在 c # 和 standard .NET Framework 中开发机器人并在 Microsoft Azure 中部署机器人。 不能使用 c + + 或 node.js Api 来访问实时媒体和 .NET Core 不支持应用程序托管的媒体 bot。
+- 应用程序托管的媒体 bot 需要 `Microsoft.Graph.Communications.Calls.Media` .net 库（[可在此处](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)访问音频和视频媒体流，并且必须在 windows server 计算机（或 Azure 中的 WINDOWS server 来宾 OS）上部署 bot。 因此，必须在 c # 和 standard .NET Framework 中开发机器人并在 Microsoft Azure 中部署机器人。 不能使用 c + + 或 Node.js Api 访问实时媒体和 .NET Core 不支持应用程序托管的媒体 bot。
 
 - 可以在以下 Azure 服务环境之一中托管应用程序托管的媒体 bot：
   - 云服务。
@@ -28,7 +28,7 @@ ms.locfileid: "41673157"
   
 - 无法将应用程序托管的媒体 bot 部署为 Azure Web 应用。
 
-- 应用程序托管的媒体 bot 必须在`Microsoft.Graph.Communications.Calls.Media` .net 库的最新版本上运行。 Bot 应使用最新可用版本的[NuGet 包](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)，或使用的版本不超过三个月。 库的较旧版本将被弃用，并且在几个月后可能无法工作。 将`Microsoft.Graph.Communications.Calls.Media`库保持最新可确保机器人和 Microsoft 团队之间的最佳互操作性。
+- 应用程序托管的媒体 bot 必须在 .Net 库的最新版本上运行 `Microsoft.Graph.Communications.Calls.Media` 。 Bot 应使用最新可用版本的[NuGet 包](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)，或使用的版本不超过三个月。 库的较旧版本将被弃用，并且在几个月后可能无法工作。 `Microsoft.Graph.Communications.Calls.Media`将库保持最新可确保机器人和 Microsoft 团队之间的最佳互操作性。
 
 ## <a name="real-time-media-calls-stay-on-the-machine-where-they-were-created"></a>实时媒体呼叫停留在创建它们的计算机上
 

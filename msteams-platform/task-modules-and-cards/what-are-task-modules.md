@@ -5,15 +5,15 @@ description: 添加模式弹出窗口体验，以便从 Microsoft 团队应用�
 ms.topic: overview
 ms.author: anclear
 ms.openlocfilehash: 22fdc7a9dab1ff6f27e2b0d144e54676b6cca50e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673431"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801024"
 ---
 # <a name="what-are-task-modules"></a>什么是任务模块？
 
-任务模块使您能够在团队应用程序中创建模式弹出窗口体验。 在弹出式菜单中，您可以运行自己的自定义 HTML/JavaScript 代码`<iframe>`，显示基于某个的小组件（如 YouTube 或 Microsoft Stream 视频）或显示[自适应卡片](/adaptive-cards/)。 它们在启动和完成任务或显示丰富的信息（如视频或 Power BI 仪表板）时尤其有用。 与选项卡或基于对话的 bot 体验相比，启动和完成任务的用户的弹出体验通常更为自然。
+任务模块使您能够在团队应用程序中创建模式弹出窗口体验。 在弹出式菜单中，您可以运行自己的自定义 HTML/JavaScript 代码，显示基于某个的 `<iframe>` 小组件（如 YouTube 或 Microsoft Stream 视频）或显示[自适应卡片](/adaptive-cards/)。 它们在启动和完成任务或显示丰富的信息（如视频或 Power BI 仪表板）时尤其有用。 与选项卡或基于对话的 bot 体验相比，启动和完成任务的用户的弹出体验通常更为自然。
 
 任务模块是在 Microsoft 团队选项卡的基础上构建的;它们实质上是一个处于弹出窗口中的选项卡。 它们使用相同的 SDK，因此，如果您已经构建了一个选项卡，则您已经是能够创建任务模块的90%。
 
@@ -31,12 +31,12 @@ ms.locfileid: "41673431"
 
 让我们浏览一下：
 
-1. 您的[ `color` ](~/resources/schema/manifest-schema.md#icons)应用程序图标。
-2. 您的应用程序的[ `short`名称](~/resources/schema/manifest-schema.md#name)。
-3. 在`title` [TaskInfo 对象](#the-taskinfo-object)的属性中指定的任务模块的标题。
-4. 任务模块的 "关闭/取消" 按钮。 如果用户按此方式，您的应用程序将`err`按[此处](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)所述接收事件。 （**注意：** 当从 bot 调用任务模块时，当前无法检测到此事件。）
-5. 当您使用`url` [TaskInfo 对象](#the-taskinfo-object)的属性加载自己的网页时，蓝色矩形是您的网页的显示位置。 下面的[任务模块 "调整大小](#task-module-sizing)" 部分中有更多详细信息。
-6. 如果您通过`card` [TaskInfo 对象](#the-taskinfo-object)的属性显示自适应卡片，则会为您添加填充，否则您将需要[自己处理这](#task-module-css-for-htmljavascript-task-modules)种情况。
+1. 您的应用程序[ `color` 图标](~/resources/schema/manifest-schema.md#icons)。
+2. 您的应用程序的[ `short` 名称](~/resources/schema/manifest-schema.md#name)。
+3. 在 `title` [TaskInfo 对象](#the-taskinfo-object)的属性中指定的任务模块的标题。
+4. 任务模块的 "关闭/取消" 按钮。 如果用户按此方式，您的应用程序将 `err` 按[此处](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)所述接收事件。 （**注意：** 当从 bot 调用任务模块时，当前无法检测到此事件。）
+5. 当您使用 `url` [TaskInfo 对象](#the-taskinfo-object)的属性加载自己的网页时，蓝色矩形是您的网页的显示位置。 下面的[任务模块 "调整大小](#task-module-sizing)" 部分中有更多详细信息。
+6. 如果您通过 TaskInfo 对象的属性显示自适应卡片 `card` ， [TaskInfo object](#the-taskinfo-object)则会为您添加填充，否则您将需要[自己处理这](#task-module-css-for-htmljavascript-task-modules)种情况。
 7. 自适应卡片按钮将呈现在此处。 如果您使用的是自己的页面，则必须创建自己的按钮。
 
 ## <a name="overview-of-invoking-and-dismissing-task-modules"></a>调用和解除关闭任务模块的概述
@@ -45,37 +45,37 @@ ms.locfileid: "41673431"
 
 | **通过调用的 .。。** | **任务模块为 HTML/JavaScript** | **任务模块为自适应卡片** |
 | --- | --- | --- |
-| **选项卡中的 JavaScript** | 1. 将团队客户端 SDK 函数`tasks.startTask()`与可选`submitHandler(err, result)`回调函数结合使用 <br/><br/> 2. 在任务模块代码中，当用户完成时，调用团队 SDK 函数`tasks.submitTask()` ，并将`result`对象作为参数。 如果在`submitHandler`中`tasks.startTask()`指定了回调，则团队将使用`result`作为参数调用它。<br/><br/> 3. 如果调用`tasks.startTask()`时出现错误，则使用`submitHandler` `err`字符串调用函数。 <br/><br/> 4. 您还可以指定在`completionBotId`调用`teams.startTask()`时改为发送到`result` bot 的条件。 | 1. 使用[TaskInfo 对象](#the-taskinfo-object)调用团队客户`tasks.startTask()`端 SDK 函数，并`TaskInfo.card`包含要在任务模块弹出菜单中显示的自适应卡片的 JSON。 <br/><br/> 2. 如果在`submitHandler`中`tasks.startTask()`指定了回调，则团队会在调用`err` `tasks.startTask()`时出现错误，或者用户使用右上角的 X 关闭任务模块弹出菜单时，将调用该字符串。 <br/><br/> 3. 如果用户按下某个操作。 "提交" 按钮`data` ，然后其对象将作为的`result`值返回。 |
-| **Bot 卡按钮** | 1. Bot 卡片按钮（具体取决于按钮的类型）可以通过两种方式调用任务模块：深层链接 URL 或通过发送`task/fetch`邮件。 有关深层链接 Url 的工作原理，请参阅下文。 <br/><br/> 2. 如果`type`按钮的操作为`task/fetch` （`Action.Submit`自适应卡片的按钮类型），则`task/fetch invoke`会将事件（封面下的 HTTP POST）发送到 bot，然后，bot 将使用 HTTP 200 和包含[TaskInfo 对象](#the-taskinfo-object)包装的响应正文对 POST 做出响应。 这将在[通过任务/提取调用任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-via-taskfetch)中详细说明。<br/><br/> 3. 团队显示任务模块;当用户完成时，调用团队 SDK 函数`tasks.submitTask()` ，并将`result`对象作为参数。 <br/><br/> 4. 机器人会收到包含`task/submit invoke`该`result`对象的邮件。 您可以使用三种不同的方法来`task/submit`响应邮件：通过不执行任何操作（任务已成功完成）、在弹出窗口中向用户显示一条消息，或调用另一个任务模块窗口（如创建类似于向导的体验）。 [有关任务/提交的详细讨论中](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)详细介绍了这三个选项。 | 1. 与 Bot 框架卡上的按钮类似，自适应卡片上的按钮支持两种调用任务模块的方法`Action.openUrl` ：带有按钮的`task/fetch`深层`Action.Submit`链接 url，以及通过使用按钮。 <br/><br/> 2. 具有自适应卡片的任务模块的工作方式与 HTML/JavaScript 情况非常相似（请参阅左图）。 主要区别在于，由于在使用自适应卡时没有 JavaScript，因此没有办法呼叫`tasks.submitTask()`。 相反，团队将获取`data`对象， `Action.Submit`并将其作为`task/submit`事件中的有效负载返回，如下所[述。](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit) |
-| **深层链接 URL** <br/>[URL 语法](#task-module-deep-link-syntax) | 1. 团队调用任务模块;在深层链接的`<iframe>` `url`参数中指定的 URL 中显示的 URL。 没有`submitHandler`回调。 <br/><br/> 2. 在任务模块中的页面的 JavaScript 中，调用`tasks.submitTask()`以将`result`对象作为参数关闭，与从选项卡或机器人卡按钮调用它时相同。 但是，完成逻辑稍有不同。 如果完成逻辑驻留在客户端上（即没有 bot），则没有`submitHandler`回调，因此任何完成逻辑都必须位于调用前的代码中。 `tasks.submitTask()` 仅通过控制台报告调用错误。 如果你有机器人，则可以在 deep link 中`completionBotId`指定用于通过`result` `task/submit`事件发送对象的参数。 | 1. 团队调用任务模块;将自适应卡片的 JSON 卡片正文指定为深层链接的`card`参数的 URL 编码值。 <br/><br/> 2. 用户通过单击任务模块右上角的 X 或按卡片上的`Action.Submit`按钮关闭任务模块。 `submitHandler`由于没有呼叫，您必须有用于将自适应卡片字段的值发送到的 bot。 您可以使用`completionBotId`深层链接中的参数指定通过`task/submit invoke`事件将数据发送到的 bot。 |
+| **选项卡中的 JavaScript** | 1. 将团队客户端 SDK 函数 `tasks.startTask()` 与可选 `submitHandler(err, result)` 回调函数结合使用 <br/><br/> 2. 在任务模块代码中，当用户完成时，调用团队 SDK 函数， `tasks.submitTask()` 并将 `result` 对象作为参数。 如果 `submitHandler` 在中指定了回调 `tasks.startTask()` ，则团队将使用 `result` 作为参数调用它。<br/><br/> 3. 如果调用时出现错误，则 `tasks.startTask()` `submitHandler` 使用字符串调用函数 `err` 。 <br/><br/> 4. 您还可以指定在 `completionBotId` 调用时 `teams.startTask()` `result` 改为发送到 bot 的条件。 | 1. 使用 TaskInfo 对象调用团队客户端 SDK 函数 `tasks.startTask()` ， [TaskInfo object](#the-taskinfo-object)并 `TaskInfo.card` 包含要在任务模块弹出菜单中显示的自适应卡片的 JSON。 <br/><br/> 2. 如果 `submitHandler` 在中指定了回调 `tasks.startTask()` ，则团队会在 `err` 调用时出现错误， `tasks.startTask()` 或者用户使用右上角的 X 关闭任务模块弹出菜单时，将调用该字符串。 <br/><br/> 3. 如果用户按下某个操作。 "提交" 按钮 `data` ，然后其对象将作为的值返回 `result` 。 |
+| **Bot 卡按钮** | 1. Bot 卡片按钮（具体取决于按钮的类型）可以通过两种方式调用任务模块：深层链接 URL 或通过发送 `task/fetch` 邮件。 有关深层链接 Url 的工作原理，请参阅下文。 <br/><br/> 2. 如果按钮的操作 `type` 为 `task/fetch` （ `Action.Submit` 自适应卡片的按钮类型），则 `task/fetch invoke` 会将事件（封面下的 HTTP POST）发送到 bot，然后，bot 将使用 HTTP 200 和包含[TaskInfo 对象](#the-taskinfo-object)包装的响应正文对 POST 做出响应。 这将在[通过任务/提取调用任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-via-taskfetch)中详细说明。<br/><br/> 3. 团队显示任务模块;当用户完成时，调用团队 SDK 函数， `tasks.submitTask()` 并将 `result` 对象作为参数。 <br/><br/> 4. 机器人 `task/submit invoke` 会收到包含该对象的邮件 `result` 。 您可以使用三种不同的方法来响应 `task/submit` 邮件：通过不执行任何操作（任务已成功完成）、在弹出窗口中向用户显示一条消息，或调用另一个任务模块窗口（如创建类似于向导的体验）。 [有关任务/提交的详细讨论中](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)详细介绍了这三个选项。 | 1. 与 Bot 框架卡上的按钮类似，自适应卡片上的按钮支持两种调用任务模块的方法：带有按钮的深层链接 Url `Action.openUrl` ，以及通过 `task/fetch` 使用 `Action.Submit` 按钮。 <br/><br/> 2. 具有自适应卡片的任务模块的工作方式与 HTML/JavaScript 情况非常相似（请参阅左图）。 主要区别在于，由于在使用自适应卡时没有 JavaScript，因此没有办法呼叫 `tasks.submitTask()` 。 相反，团队将获取 `data` 对象 `Action.Submit` ，并将其作为事件中的有效负载返回 `task/submit` ，如下所[here](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)述。 |
+| **深层链接 URL** <br/>[URL 语法](#task-module-deep-link-syntax) | 1. 团队调用任务模块;在 `<iframe>` 深层链接的参数中指定的 URL 中显示的 URL `url` 。 没有 `submitHandler` 回调。 <br/><br/> 2. 在任务模块中的页面的 JavaScript 中，调用 `tasks.submitTask()` 以将 `result` 对象作为参数关闭，与从选项卡或机器人卡按钮调用它时相同。 但是，完成逻辑稍有不同。 如果完成逻辑驻留在客户端上（即没有 bot），则没有 `submitHandler` 回调，因此任何完成逻辑都必须位于调用前的代码中 `tasks.submitTask()` 。 仅通过控制台报告调用错误。 如果你有机器人，则可以 `completionBotId` 在 deep link 中指定用于通过事件发送对象的参数 `result` `task/submit` 。 | 1. 团队调用任务模块;将自适应卡片的 JSON 卡片正文指定为深层链接的参数的 URL 编码值 `card` 。 <br/><br/> 2. 用户通过单击任务模块右上角的 X 或按卡片上的按钮关闭任务模块 `Action.Submit` 。 由于没有 `submitHandler` 呼叫，您必须有用于将自适应卡片字段的值发送到的 bot。 您可以使用 `completionBotId` 深层链接中的参数指定通过事件将数据发送到的 bot `task/submit invoke` 。 |
 
 > [!NOTE]
 > 移动时不支持从 JavaScript 调用任务模块。
 
 ## <a name="the-taskinfo-object"></a>TaskInfo 对象
 
-`TaskInfo`对象包含任务模块的元数据。 对象定义如下所示。 您**必须**定义`url` （对于 en 嵌入 iFrame）或`card` （对于自适应卡片）。
+`TaskInfo`对象包含任务模块的元数据。 对象定义如下所示。 您**必须**定义 `url` （对于 en 嵌入 iFrame）或 `card` （对于自适应卡片）。
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
 | `title` | string | 显示在应用程序名称下方和应用图标的右侧 |
-| `height` | number or string | 该值可以是表示任务模块的高度（以像素为单位）或`small`、 `medium`或的`large`数字。 [请参阅以下有关如何处理高度和宽度的说明](#task-module-sizing)。 |
-| `width` | number or string | 该值可以是表示任务模块的宽度（以像素为单位）的`small`数字`medium`，或者`large`、或。 [请参阅以下有关如何处理高度和宽度的说明](#task-module-sizing)。 |
-| `url` | string | 加载为任务模块`<iframe>`内的页面的 URL。 URL 的域必须位于应用程序清单中的应用程序的[validDomains 数组](~/resources/schema/manifest-schema.md#validdomains)中。 |
-| `card` | 自适应卡片或自适应卡片 bot 卡片附件 | 要显示在任务模块中的自适应卡片的 JSON。 如果您正在从 bot 进行调用，则需要在 Bot 框架`attachment`对象中使用自适应卡 JSON。 在选项卡上，您只需使用自适应卡片。 [下面是一个示例。](#adaptive-card-or-adaptive-card-bot-card-attachment) |
+| `height` | number or string | 该值可以是表示任务模块的高度（以像素为单位）或、或的数字 `small` `medium` `large` 。 [请参阅以下有关如何处理高度和宽度的说明](#task-module-sizing)。 |
+| `width` | number or string | 该值可以是表示任务模块的宽度（以像素为单位）的数字，或者 `small` 、 `medium` 或 `large` 。 [请参阅以下有关如何处理高度和宽度的说明](#task-module-sizing)。 |
+| `url` | string | 加载为任务模块内的页面的 URL `<iframe>` 。 URL 的域必须位于应用程序清单中的应用程序的[validDomains 数组](~/resources/schema/manifest-schema.md#validdomains)中。 |
+| `card` | 自适应卡片或自适应卡片 bot 卡片附件 | 要显示在任务模块中的自适应卡片的 JSON。 如果您正在从 bot 进行调用，则需要在 Bot 框架对象中使用自适应卡 JSON `attachment` 。 在选项卡上，您只需使用自适应卡片。 [下面是一个示例。](#adaptive-card-or-adaptive-card-bot-card-attachment) |
 | `fallbackUrl` | string | 如果客户端不支持任务模块功能，则在浏览器选项卡中打开此 URL。 |
-| `completionBotId` | string | 指定机器人应用程序 ID，以将用户与任务模块的交互结果发送到。 如果指定，则 bot 将在事件`task/submit invoke`负载中接收具有 JSON 对象的事件。 |
+| `completionBotId` | string | 指定机器人应用程序 ID，以将用户与任务模块的交互结果发送到。 如果指定，则 bot 将 `task/submit invoke` 在事件负载中接收具有 JSON 对象的事件。 |
 
 > [!NOTE]
-> 任务模块功能要求您要加载的任何 Url 的域都包含在应用程序清单中`validDomains`的数组中。
+> 任务模块功能要求您要加载的任何 Url 的域都包含在 `validDomains` 应用程序清单中的数组中。
 
 ## <a name="task-module-sizing"></a>任务模块大小调整
 
-对使用的`TaskInfo.width`整数`TaskInfo.height`和将设置以像素为单位的高度和宽度。 但是，根据工作组窗口和屏幕分辨率的大小，它们将按比例缩小，同时保持纵横比（宽度/高度）。
+对使用的整数 `TaskInfo.width` 和 `TaskInfo.height` 将设置以像素为单位的高度和宽度。 但是，根据工作组窗口和屏幕分辨率的大小，它们将按比例缩小，同时保持纵横比（宽度/高度）。
 
-如果`TaskInfo.width`和`TaskInfo.height`是`"small"`， `"medium"`或者`"large"`上图中的红色矩形的大小是可用空间的比例：20%、50%、60% `width` 、20%、50%、66%。 `height`
+如果 `TaskInfo.width` 和 `TaskInfo.height` 是 `"small"` ， `"medium"` 或者 `"large"` 上图中的红色矩形的大小是可用空间的比例：20%、50%、60% `width` 、20%、50%、66% `height` 。
 
-从选项卡调用的任务模块可以动态调整大小。 调用`tasks.startTask()`后，您可以`tasks.updateTask(newSize)`调用 newSize 对象上的 height 和 width 属性符合 TaskInfo 规范（ex）。 `{ height: 'medium', width: 'medium' }`).
+从选项卡调用的任务模块可以动态调整大小。 调用后 `tasks.startTask()` ，您可以调用 `tasks.updateTask(newSize)` newSize 对象上的 height 和 width 属性符合 TaskInfo 规范（ex）。 `{ height: 'medium', width: 'medium' }`).
 
 ## <a name="task-module-css-for-htmljavascript-task-modules"></a>HTML/JavaScript 任务模块的任务模块 CSS
 
@@ -149,7 +149,7 @@ CSS 为：
 
 ## <a name="adaptive-card-or-adaptive-card-bot-card-attachment"></a>自适应卡片或自适应卡片 bot 卡片附件
 
-正如我们上面所述，根据您的调用`card`方式，需要使用自适应卡片或自适应卡片 bot 卡片附件（只是包装在附件对象中的自适应卡）。
+正如我们上面所述，根据您的调用方式， `card` 需要使用自适应卡片或自适应卡片 bot 卡片附件（只是包装在附件对象中的自适应卡）。
 
 从选项卡调用时，需要使用自适应卡片。 下面是一个非常简单的示例：
 
@@ -198,25 +198,25 @@ CSS 为：
 
 ## <a name="task-module-deep-link-syntax"></a>任务模块深层链接语法
 
-Task module deep 链接只是对包含其他两条信息的[TaskInfo 对象](#the-taskinfo-object)进行序列化， `APP_ID`也可以选择： `BOT_APP_ID`
+Task module deep 链接只是对包含其他两条信息的[TaskInfo 对象](#the-taskinfo-object)进行序列化， `APP_ID` 也可以选择 `BOT_APP_ID` ：
 
 `https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
 `https://teams.microsoft.com/l/task/APP_ID?card=<TaskInfo.card>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
-有关数据类型以及`<TaskInfo.url>` `<TaskInfo.card>`、、、和`<TaskInfo.height>` `<TaskInfo.width>` `<TaskInfo.title>`的允许值，请参阅[TaskInfo 对象](#the-taskinfo-object)。
+有关[TaskInfo object](#the-taskinfo-object)数据类型以及、、、 `<TaskInfo.url>` `<TaskInfo.card>` `<TaskInfo.height>` `<TaskInfo.width>` 和 `<TaskInfo.title>` 的允许值，请参阅 TaskInfo 对象。
 
 > [!TIP]
-> 确保 URL 对深层链接进行编码，尤其是在使用`card`参数时（例如，JavaScript 的[ `encodeURI()`函数](https://www.w3schools.com/jsref/jsref_encodeURI.asp)）。
+> 确保 URL 对深层链接进行编码，尤其是在使用 `card` 参数时（例如，JavaScript 的[ `encodeURI()` 函数](https://www.w3schools.com/jsref/jsref_encodeURI.asp)）。
 
-以下是有关`APP_ID`和`BOT_APP_ID`的信息：
+以下是有关和的 `APP_ID` 信息 `BOT_APP_ID` ：
 
 | 值 | 类型 | 是否必需？ | 说明 |
 | --- | --- | --- | --- |
-| `APP_ID` | string | 是 | 调用任务模块的应用程序的[id](~/resources/schema/manifest-schema.md#id) 。 的清单中的[validDomains 数组](~/resources/schema/manifest-schema.md#validdomains) `APP_ID`必须包含的域`url` `url`位于 URL 中。 （在从选项卡或 bot 中调用任务模块时，应用程序 ID 已已知，这就是不包含在中`TaskInfo`的原因。） |
-| `BOT_APP_ID` | string | 否 | 如果指定`completionBotId`了一个值，则会`result`通过一`task/submit invoke`封邮件将该对象发送到指定的 bot。 `BOT_APP_ID`必须在应用程序清单中指定为 bot，即，不能仅将其发送到任何机器人。 |
+| `APP_ID` | string | 是 | 调用任务模块的应用程序的[id](~/resources/schema/manifest-schema.md#id) 。 的清单中的[validDomains 数组](~/resources/schema/manifest-schema.md#validdomains) `APP_ID` 必须包含的域位于 `url` `url` URL 中。 （在从选项卡或 bot 中调用任务模块时，应用程序 ID 已已知，这就是不包含在中的原因 `TaskInfo` 。） |
+| `BOT_APP_ID` | string | 否 | 如果 `completionBotId` 指定了一个值，则 `result` 会通过一封邮件将该对象发送 `task/submit invoke` 到指定的 bot。 `BOT_APP_ID`必须在应用程序清单中指定为 bot，即，不能仅将其发送到任何机器人。 |
 
-请注意，它的有效期`APP_ID`和`BOT_APP_ID`相同，在许多情况下，如果应用程序中有自动程序的 ID，则会出现这种情况，如果存在，则使用该应用程序的 ID。
+请注意，它的有效期 `APP_ID` 和 `BOT_APP_ID` 相同，在许多情况下，如果应用程序中有自动程序的 ID，则会出现这种情况，如果存在，则使用该应用程序的 ID。
 
 ## <a name="keyboard-and-accessibility-guidelines"></a>键盘和辅助功能指南
 

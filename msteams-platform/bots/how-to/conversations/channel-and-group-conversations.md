@@ -1,21 +1,21 @@
 ---
-title: 通道和组对话
+title: 频道和群组对话
 author: clearab
 description: 如何：在频道或组聊天中发送、接收和处理机器人的邮件。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ada2839ba41e4004b5f48449f4e057830dd841b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc27d7638820cfa3c2b7cfe12b91b3a3a9fef1d
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673396"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44801149"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>与 Microsoft 团队 bot 的频道和组聊天对话
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-通过将或`teams` `groupchat`作用域添加到你的 bot，可以在团队或组聊天中安装它。 这样，对话的所有成员都可以与你的 bot 进行交互。 一旦安装，它还可以访问有关会话的元数据，如会话成员的列表，以及在团队详细信息中安装的有关该团队和频道的完整列表。
+通过将 `teams` 或 `groupchat` 作用域添加到你的 bot，可以在团队或组聊天中安装它。 这样，对话的所有成员都可以与你的 bot 进行交互。 一旦安装，它还可以访问有关会话的元数据，如会话成员的列表，以及在团队详细信息中安装的有关该团队和频道的完整列表。
 
 组或频道中的 bot 仅在提到邮件时才接收邮件（"@botname"），它们不会收到发送到对话的任何其他邮件。
 
@@ -30,7 +30,7 @@ Bot 应提供与组或通道中的所有成员都适用且相关的信息。 包
 
 当你的 bot 安装在团队中时，有时可能需要创建新的会话线程，而不是答复现有的会话线程。 这是一种[主动消息传递](~/bots/how-to/conversations/send-proactive-messages.md)形式。
 
-## <a name="working-with--mentions"></a>使用 @ 提及
+## <a name="working-with-mentions"></a>处理提及
 
 来自组或频道的每封邮件都将在邮件文本中包含其自己的名称的 @mention，因此您需要确保您的邮件分析处理该邮件。 你的 bot 还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
 
@@ -40,11 +40,11 @@ Bot 应提供与组或通道中的所有成员都适用且相关的信息。 包
 
 ### <a name="retrieving-mentions"></a>检索提及
 
-提到在有效负载的`entities`对象中返回，并且包含用户的唯一 ID，在大多数情况下，提到的用户的名称。 邮件文本中还包括提及的 like `<at>@John Smith<at>`。 但是，不应依赖邮件中的文本来检索有关用户的任何信息;发送邮件的人可以对其进行更改。 而是使用`entities`对象。
+提到在 `entities` 有效负载的对象中返回，并且包含用户的唯一 ID，在大多数情况下，提到的用户的名称。 邮件文本中还包括提及的 like `<at>@John Smith<at>` 。 但是，不应依赖邮件中的文本来检索有关用户的任何信息;发送邮件的人可以对其进行更改。 而是使用 `entities` 对象。
 
-您可以通过调用自动程序生成器 SDK 中的`GetMentions`函数来检索邮件中的所有提及，这将返回`Mention`对象的数组。
+您可以通过调用自动程序生成器 SDK 中的函数来检索邮件中的所有提及， `GetMentions` 这将返回 `Mention` 对象的数组。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -62,7 +62,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -78,7 +78,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -120,7 +120,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 @staticmethod
@@ -146,7 +146,7 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 Bot 框架 SDK 提供帮助程序方法和对象，以使所提及的更简单的构造更简单。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +164,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -183,9 +183,9 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
-数组中的对象中`text`的字段必须与消息`text`字段的一部分*完全*匹配。 `entities` 如果不是，则将忽略提及。
+`text`数组中的对象中的字段 `entities` 必须与消息字段的一部分*完全*匹配 `text` 。 如果不是，则将忽略提及。
 
 ```json
 {
@@ -227,7 +227,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
@@ -246,7 +246,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="sending-a-message-on-installation"></a>在安装时发送邮件
 
-当你的 bot 第一次添加到组或团队时，发送引入邮件的消息可能很有用。 邮件应提供机器人功能的简短说明以及如何使用它们。 你将需要使用`conversationUpdate` `teamMemberAdded`事件，来订阅事件。  由于添加任何新的团队成员时都会发送事件，因此您需要进行检查以确定添加的新成员是否为 bot。 有关更多详细信息，请参阅[向新的团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。
+当你的 bot 第一次添加到组或团队时，发送引入邮件的消息可能很有用。 邮件应提供机器人功能的简短说明以及如何使用它们。 你将需要 `conversationUpdate` 使用事件，来订阅事件 `teamMemberAdded` 。  由于添加任何新的团队成员时都会发送事件，因此您需要进行检查以确定添加的新成员是否为 bot。 有关更多详细信息，请参阅[向新的团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。
 
 添加 bot 时，您可能还希望向团队的每个成员发送个人消息。 为此，您可以获取团队名单并向每个用户发送一条直接消息。
 
@@ -257,7 +257,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 * 重命名组或通道
 * 将团队成员添加到组或通道
 
-## <a name="learn-more"></a>了解更多
+## <a name="learn-more"></a>了解详细信息
 
 你的 bot 可以访问有关安装了的组聊天或团队的其他信息。 有关为你的 bot 提供的其他 Api，请参阅[获取团队上下文](~/bots/how-to/get-teams-context.md)。
 

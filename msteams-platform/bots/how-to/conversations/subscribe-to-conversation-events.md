@@ -5,11 +5,11 @@ description: 如何订阅来自 Microsoft 团队 bot 的对话事件。
 ms.topic: overview
 ms.author: anclear
 ms.openlocfilehash: a8c6c39989a7d09a325412438f0d2ace78259cb7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673393"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801010"
 ---
 # <a name="subscribe-to-conversation-events"></a>订阅对话事件
 
@@ -24,9 +24,9 @@ Microsoft 团队将通知发送到你的 bot，以获取在你的 bot 处于活�
 
 ## <a name="conversation-update-events"></a>对话更新事件
 
-当 bot 被添加`conversationUpdate`到对话中时，即会收到事件，其他成员已添加到对话中或从会话中删除，或者对话元数据已更改。
+`conversationUpdate`当 bot 被添加到对话中时，即会收到事件，其他成员已添加到对话中或从会话中删除，或者对话元数据已更改。
 
-当`conversationUpdate`该事件收到有关已添加的团队成员身份更新的信息时，该事件将发送到你的 bot。 它还会在首次专门为个人对话而添加时收到更新。
+`conversationUpdate`当该事件收到有关已添加的团队成员身份更新的信息时，该事件将发送到你的 bot。 它还会在首次专门为个人对话而添加时收到更新。
 
 下表显示了团队对话更新事件的列表，并提供了更多详细信息的链接。
 
@@ -35,7 +35,7 @@ Microsoft 团队将通知发送到你的 bot，以获取在你的 bot 处于活�
 | 通道已创建     | channelCreated    | OnTeamsChannelCreatedAsync | [通道已创建](#channel-created) | 团队 |
 | 频道已重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道已重命名](#channel-renamed) | 团队 |
 | 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道已删除](#channel-deleted) | 团队 |
-| 添加的团队成员   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [添加到团队的成员](#team-members-added)   | 所有 |
+| 添加的团队成员   | teamMemberAdded   | OnTeamsMembersAddedAsync   | [添加到团队的成员](#team-members-added)   | 全部 |
 | 删除了团队成员 | teamMemberRemoved | OnTeamsMembersRemovedAsync | [成员已从团队中删除](#team-members-removed) | groupChat & 团队 |
 | 重命名团队        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队已重命名](#team-renamed)       | 团队 |
 
@@ -43,7 +43,7 @@ Microsoft 团队将通知发送到你的 bot，以获取在你的 bot 处于活�
 
 只要在安装了 bot 的团队中创建了新通道，就会将频道创建事件发送到你的机器人。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -53,7 +53,7 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -73,7 +73,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -111,7 +111,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_channel_created_activity(
@@ -130,7 +130,7 @@ async def on_teams_channel_created_activity(
 
 只要在安装了 bot 的团队中重命名频道，就会将频道重命名事件发送到你的机器人。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -140,7 +140,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -155,7 +155,7 @@ export class MyBot extends TeamsActivityHandler {
     }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -193,7 +193,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_channel_renamed_activity(
@@ -210,7 +210,7 @@ async def on_teams_channel_renamed_activity(
 
 只要在安装了 bot 的团队中删除频道时，就会将频道删除事件发送到你的机器人。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -220,7 +220,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -237,7 +237,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -275,7 +275,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_channel_deleted_activity(
@@ -290,9 +290,9 @@ async def on_teams_channel_deleted_activity(
 
 ### <a name="team-members-added"></a>添加的团队成员
 
-在`teamMemberAdded`首次将事件添加到对话中，以及每次向团队或组聊天中安装了你的 bot 时，都会将该事件发送到你的 bot。 用户信息（ID）对你的 bot 是唯一的，并且可以缓存以供你的服务将来使用（例如，向特定用户发送邮件）。
+在 `teamMemberAdded` 首次将事件添加到对话中，以及每次向团队或组聊天中安装了你的 bot 时，都会将该事件发送到你的 bot。 用户信息（ID）对你的 bot 是唯一的，并且可以缓存以供你的服务将来使用（例如，向特定用户发送邮件）。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -314,7 +314,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<ChannelAccount> mem
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -337,7 +337,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 这是在将 bot 添加**到团队**时，你的 bot 将收到的邮件。
 
@@ -415,7 +415,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_members_added_activity(
@@ -432,9 +432,9 @@ async def on_teams_members_added_activity(
 
 ### <a name="team-members-removed"></a>删除了团队成员
 
-如果`teamMemberRemoved`从团队中删除了该事件，并且每次从你的 bot 所属的团队中删除任何用户，则该事件将发送到你的 bot。 您可以通过查看的`Activity`对象确定删除的新成员是机器人本身还是用户。 `turnContext`  如果`Id` `MembersRemoved`对象的字段与`Id` `Recipient`对象的字段相同，则删除的成员是 bot，否则是用户。  通常情况下`Id` ，bot 将：`28:<MicrosoftAppId>`
+`teamMemberRemoved`如果从团队中删除了该事件，并且每次从你的 bot 所属的团队中删除任何用户，则该事件将发送到你的 bot。 您可以通过查看的对象确定删除的新成员是机器人本身还是用户 `Activity` `turnContext` 。  如果 `Id` 对象的字段与 `MembersRemoved` 对象的 `Id` 字段相同 `Recipient` ，则删除的成员是 bot，否则是用户。  `Id`通常情况下，bot 将：`28:<MicrosoftAppId>`
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -455,7 +455,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 
@@ -479,7 +479,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -520,7 +520,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_members_removed_activity(
@@ -537,9 +537,9 @@ async def on_teams_members_removed_activity(
 
 ### <a name="team-renamed"></a>重命名团队
 
-重命名你的 bot 时，会通知你的你的团队。 它接收`channelData`对象`conversationUpdate` `eventType.teamRenamed`中的事件。
+重命名你的 bot 时，会通知你的你的团队。 它接收 `conversationUpdate` `eventType.teamRenamed` 对象中的事件 `channelData` 。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -549,7 +549,7 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -565,7 +565,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 { 
@@ -601,7 +601,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_teams_team_renamed_activity(
@@ -616,16 +616,16 @@ async def on_teams_team_renamed_activity(
 
 ## <a name="message-reaction-events"></a>邮件反应事件
 
-当`messageReaction`用户添加或删除由你的 bot 发送的邮件的反应时，会发送此事件。 `replyToId`包含特定邮件的 ID， `Type`是文本格式的反应类型。  反应类型包括： "生气"、"心形"、"laugh"、"like"、"Sad"、"惊讶"。 此事件不包含原始邮件的内容，因此，如果处理邮件的反应对你的 bot 非常重要，则在发送邮件时需要将其存储起来。
+`messageReaction`当用户添加或删除由你的 bot 发送的邮件的反应时，会发送此事件。 `replyToId`包含特定邮件的 ID， `Type` 是文本格式的反应类型。  反应类型包括： "生气"、"心形"、"laugh"、"like"、"Sad"、"惊讶"。 此事件不包含原始邮件的内容，因此，如果处理邮件的反应对你的 bot 非常重要，则在发送邮件时需要将其存储起来。
 
 | EventType       | 有效负载对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [对 bot 邮件的反应](#reactions-to-a-bot-message)                   | 所有   |
-| messageReaction | reactionsRemoved | [从 bot 邮件中删除的反应](#reactions-removed-from-bot-message) | 所有   |
+| messageReaction | reactionsAdded   | [对 bot 邮件的反应](#reactions-to-a-bot-message)                   | 全部   |
+| messageReaction | reactionsRemoved | [从 bot 邮件中删除的反应](#reactions-removed-from-bot-message) | 全部   |
 
 ### <a name="reactions-to-a-bot-message"></a>Bot 邮件的反应
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -639,7 +639,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 <!-- Verify -->
 
@@ -664,7 +664,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -709,7 +709,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_reactions_added(
@@ -734,7 +734,7 @@ async def on_reactions_added(
 
 ### <a name="reactions-removed-from-bot-message"></a>从 bot 邮件中删除的反应
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -748,7 +748,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 <!-- Verify -->
 
@@ -771,7 +771,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -816,7 +816,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def on_reactions_removed(

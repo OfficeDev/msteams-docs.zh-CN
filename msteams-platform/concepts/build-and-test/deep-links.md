@@ -3,11 +3,11 @@ title: 创建深层链接
 description: 介绍深层链接以及如何在应用程序中使用它们
 keywords: 团队深层链接 deeplink
 ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673360"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801019"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>创建指向 Microsoft 团队中的内容和功能的深层链接
 
@@ -18,7 +18,7 @@ ms.locfileid: "41673360"
 
 ## <a name="deep-linking-to-your-tab"></a>深度链接到你的选项卡
 
-您可以创建指向团队中的实体的深层链接。 通常，这用于创建导航到您的选项卡中的内容和信息的链接。例如，如果您的选项卡中包含任务列表工作组成员可以创建和共享单个任务的链接。 单击时，链接将导航到重点关注特定项目的选项卡。 若要实现此目的，请为每个项目添加 "复制链接" 操作，采用最适合您的 UI 的任何方式。 当用户执行此操作时，将调用`shareDeepLink()`以显示一个对话框，其中包含用户可以复制到剪贴板的链接。 在进行此调用时，还会为您的项目传递一个 ID，在后续[链接时，](~/tabs/how-to/access-teams-context.md)将返回该 ID，并且重新加载您的选项卡。
+您可以创建指向团队中的实体的深层链接。 通常，这用于创建导航到您的选项卡中的内容和信息的链接。例如，如果您的选项卡中包含任务列表工作组成员可以创建和共享单个任务的链接。 单击时，链接将导航到重点关注特定项目的选项卡。 若要实现此目的，请为每个项目添加 "复制链接" 操作，采用最适合您的 UI 的任何方式。 当用户执行此操作时，将调用 `shareDeepLink()` 以显示一个对话框，其中包含用户可以复制到剪贴板的链接。 在进行此调用时，还会为您的项目传递一个 ID，在后续[链接时，](~/tabs/how-to/access-teams-context.md)将返回该 ID，并且重新加载您的选项卡。
 
 或者，也可以使用本主题后面所指定的格式以编程方式生成深层链接。 您可能需要在[机器人](~/bots/what-are-bots.md)和[连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)消息中使用这些选项，以告知用户对您的选项卡或其中的项目所做的更改。
 
@@ -38,7 +38,7 @@ ms.locfileid: "41673360"
 ### <a name="generating-a-deep-link-to-your-tab"></a>生成指向您的选项卡的深层链接
 
 > [!NOTE]
-> 静态选项卡的作用域为 "个人"，且可配置的选项卡的作用域为 "team"。 由于只有可配置的选项卡具有与其上下文对象相关联的`channel`属性，这两个选项卡类型的语法略有不同。 有关个人和团队作用域的详细信息，请参阅[清单](~/resources/schema/manifest-schema.md)参考。
+> 静态选项卡的作用域为 "个人"，且可配置的选项卡的作用域为 "team"。 由于只有可配置的选项卡具有 `channel` 与其上下文对象相关联的属性，这两个选项卡类型的语法略有不同。 有关个人和团队作用域的详细信息，请参阅[清单](~/resources/schema/manifest-schema.md)参考。
 > [!NOTE]
 > 仅当选项卡是使用 v 0.4 或更高版本库配置的，并且由于具有实体 ID 时，Deep 链接才会正常工作。 指向不含实体 Id 的选项卡的深层链接仍会导航到选项卡，但不能向该选项卡提供子实体 ID。
 
@@ -50,8 +50,8 @@ ms.locfileid: "41673360"
 
 * `appId`&emsp;清单中的 ID;例如，"fe4a8eba-2a31-4737-8e33-e5fae6fee194"
 * `entityId`&emsp;选项卡中的项的 ID，在[配置选项卡](~/tabs/how-to/create-tab-pages/configuration-page.md)时提供;例如，"tasklist123"
-* `entityWebUrl`或者`subEntityWebUrl` &emsp;一个可选字段，如果客户端不支持呈现该选项卡，则为要使用的回退 URL;例如，"https://tasklist.example.com/123" 或 "https://tasklist.example.com/list123/task456"
-* `entityLabel`或`subEntityLabel` &emsp;选项卡中项的标签，以在显示深层链接时使用;例如，"任务列表 123" 或 "任务 456"
+* `entityWebUrl`或者 `subEntityWebUrl` &emsp; 一个可选字段，如果客户端不支持呈现该选项卡，则为要使用的回退 URL; 例如，" https://tasklist.example.com/123 " 或 " https://tasklist.example.com/list123/task456 "
+* `entityLabel`或 `subEntityLabel` &emsp; 选项卡中项的标签，以在显示深层链接时使用; 例如，"任务列表 123" 或 "任务 456"
 * `context`&emsp;一个包含以下字段的 JSON 对象：
   * `subEntityId`&emsp;选项卡_中_项的 ID;例如，"task456"
   * `channelId`&emsp;Microsoft 团队频道 ID （可从选项卡[上下文](~/tabs/how-to/access-teams-context.md)中查看; 例如，"19： cbe3683f25094106b826c9cada3afbe0@thread skype"。 此属性仅在作用域为 "team" 的可配置选项卡中可用。 它在具有 "个人" 范围的静态选项卡中不可用。
@@ -75,7 +75,7 @@ ms.locfileid: "41673360"
 
 导航到深层链接时，Microsoft 团队只需导航到该选项卡，并通过 Microsoft 团队 JavaScript 库提供一种方法来检索子实体 ID （如果存在）。
 
-如果[`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-)通过深层链接将选项卡导航`subEntityId`到该字段，则调用将返回一个包含该字段的上下文。
+[`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) `subEntityId` 如果通过深层链接将选项卡导航到该字段，则调用将返回一个包含该字段的上下文。
 
 ## <a name="deep-linking-from-your-tab"></a>从你的选项卡深层链接
 
@@ -115,7 +115,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 * `topicName`&emsp;用于聊天的显示名称的可选字段，在与3个或更多用户聊天的情况下。 如果未指定此字段，则聊天的显示名称将基于参与者的名称。
 * `message`&emsp;在聊天处于草稿状态时要插入到当前用户的撰写框中的邮件文本的可选字段。
 
-若要使用与你的 bot 的深层链接，你可以将其指定为你的卡片按钮中的 URL 目标，或`openUrl`通过操作类型点击操作。
+若要使用与你的 bot 的深层链接，你可以将其指定为你的卡片按钮中的 URL 目标，或通过 `openUrl` 操作类型点击操作。
 
 ## <a name="linking-to-the-scheduling-dialog"></a>链接到计划对话框
 
@@ -140,4 +140,4 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 目前，不支持指定位置。 在生成开始和结束时间时，请务必指定 UTC 偏移量（时区）。
 
-若要使用与你的 bot 的深层链接，你可以将其指定为你的卡片按钮中的 URL 目标，或`openUrl`通过操作类型点击操作。
+若要使用与你的 bot 的深层链接，你可以将其指定为你的卡片按钮中的 URL 目标，或通过 `openUrl` 操作类型点击操作。

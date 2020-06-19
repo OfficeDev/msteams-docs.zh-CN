@@ -2,12 +2,12 @@
 title: 卡片参考
 description: 介绍可供团队中的 bot 的所有卡片和卡片操作
 keywords: bot 卡片参考
-ms.openlocfilehash: 76b9cb7e2508d300deb2e3cd4f392fdb9850062d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673200"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44801113"
 ---
 # <a name="cards-reference"></a>卡片参考
 
@@ -43,7 +43,7 @@ ms.locfileid: "41673200"
 
 ### <a name="inline-card-images"></a>内嵌卡片图像
 
-您的卡片可以通过包含指向您的公开可用图像的链接来包含内嵌图像。 出于性能考虑，强烈建议您将映像托管在公共内容传递网络（CDN）上。
+你的卡片可以通过包含指向公开可用图像的链接来包含内嵌图像。 出于性能考虑，强烈建议您将映像托管在公共内容传递网络（CDN）上。
 
 图像在大小上向上或向下放大，同时保持纵横比以覆盖图像区域，然后从中心裁剪以达到适合该卡片的纵横比。
 
@@ -66,14 +66,11 @@ ms.locfileid: "41673200"
 
 ## <a name="adaptive-card"></a>自适应卡片
 
-> [!NOTE]
-> 对于所有用户，仅支持1.0 版自适应卡。 版本1.2 当前仅适用于开发人员预览版
-
-一种可自定义的卡片，可包含文本、语音、图像、按钮和输入字段的任意组合。
+一种可自定义的卡片，可包含文本、语音、图像、按钮和输入字段的任意组合。 *请参阅*[自适应卡片 v 1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)。
 
 ### <a name="support-for-adaptive-cards"></a>对自适应卡片的支持
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -226,7 +223,7 @@ ms.locfileid: "41673200"
 
 ### <a name="support-for-hero-cards"></a>对英雄卡片的支持
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -289,7 +286,7 @@ Bot 框架参考：
 
 ### <a name="support-for-list-cards"></a>支持列表卡片
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 |
@@ -365,7 +362,7 @@ Office 365 连接器卡提供了具有多个节、字段、图像和操作的灵
 
 ### <a name="support-for-office-365-connector-cards"></a>支持 Office 365 连接器卡
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 |
@@ -386,18 +383,18 @@ Office 365 连接器卡在 Microsoft 团队中正常工作，包括[ActionCard �
 使用连接器中的连接器卡和在你的 bot 中使用连接器卡的一个重要区别是处理智能卡操作。
 
 * 对于连接器，终结点通过 HTTP POST 接收卡有效负载。
-* 对于 bot，该`HttpPOST`操作触发仅将`invoke`操作 ID 和正文发送到 bot 的活动。
+* 对于 bot，该 `HttpPOST` 操作触发 `invoke` 仅将操作 ID 和正文发送到 bot 的活动。
 
 每个连接器卡最多可以显示10个部分，每个部分最多可包含5个图像和5个操作。
 
 > [!NOTE]
 > 将不会显示邮件中的任何其他节、图像或操作。
 
-所有文本字段都支持 Markdown 和 HTML。 您可以通过在邮件中设置`markdown`属性来控制哪些部分使用 MARKDOWN 或 HTML。 默认情况下`markdown` ，设置为`true`;如果要改为使用 HTML，则将`markdown`设置`false`为。
+所有文本字段都支持 Markdown 和 HTML。 您可以通过在邮件中设置属性来控制哪些部分使用 Markdown 或 HTML `markdown` 。 默认情况下， `markdown` 设置为 `true` ; 如果要改为使用 HTML，则将设置 `markdown` 为 `false` 。
 
-如果指定`themeColor`属性，它将替代应用程序`accentColor`清单中的属性。
+如果指定 `themeColor` 属性，它将替代 `accentColor` 应用程序清单中的属性。
 
-若要指定的呈现样式`activityImage`，可以按如下`activityImageType`所示进行设置。
+若要指定的呈现样式 `activityImage` ，可以按 `activityImageType` 如下所示进行设置。
 
 | 值 | 说明 |
 | --- | --- |
@@ -408,7 +405,7 @@ Office 365 连接器卡在 Microsoft 团队中正常工作，包括[ActionCard �
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`（始终按`true`团队处理）
+* `startGroup`（始终按 `true` 团队处理）
 * `originator`
 * `correlationId`
 
@@ -483,7 +480,7 @@ Office 365 连接器卡在 Microsoft 团队中正常工作，包括[ActionCard �
 
 ### <a name="support-for-receipts-cards"></a>对收据卡的支持
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -497,13 +494,13 @@ Bot 框架参考：
 
 ## <a name="signin-card"></a>登录卡片
 
-使机器人能够请求用户登录的卡片。 在与 Bot 框架中相比，在不同表单中的团队中支持。 团队中的登录卡片与 bot 框架中的登录卡片类似，但在团队登录卡仅支持两个操作时除外： `signin`和。 `openUrl`
+使机器人能够请求用户登录的卡片。 在与 Bot 框架中相比，在不同表单中的团队中支持。 团队中的登录卡片与 bot 框架中的登录卡片类似，但在团队登录卡仅支持两个操作时除外： `signin` 和 `openUrl` 。
 
 *登录操作*可用于团队中的任何卡片，而不仅仅是登录卡。 有关身份验证的详细信息，请参阅[Microsoft 团队身份验证流的](~/bots/how-to/authentication/auth-flow-bot.md)主题相关主题。
 
 ### <a name="support-for-signin-cards"></a>对登录卡的支持
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -521,7 +518,7 @@ Bot 框架参考：
 
 ### <a name="support-for-thumbnail-cards"></a>支持缩略图卡片
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -583,7 +580,7 @@ Bot 框架参考：
 }
 ```
 
-### <a name="for-more-information"></a>更多详细信息
+### <a name="for-more-information"></a>详细信息
 
 Bot 框架参考：
 
@@ -594,7 +591,7 @@ Bot 框架参考：
 
 团队中支持卡片集合。
 
-卡集合由 Bot 框架（ `builder.AttachmentLayout.carousel`和`builder.AttachmentLayout.list`）提供。 这些集合可以包含自适应、英雄或缩略图卡片。
+卡集合由 Bot 框架（和）提供 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 。 这些集合可以包含自适应、英雄或缩略图卡片。
 
 ## <a name="carousel-collection"></a>轮播集合
 
@@ -602,7 +599,7 @@ Bot 框架参考：
 
 ### <a name="support-for-carousel-collections"></a>对轮播集合的支持
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -626,7 +623,7 @@ Bot 框架参考：
 
 列表布局显示垂直堆叠的卡片列表，可以选择使用关联的操作按钮。
 
-| 团队中的 bot | 邮件扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |

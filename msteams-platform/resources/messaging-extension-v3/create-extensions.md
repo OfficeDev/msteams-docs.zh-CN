@@ -2,12 +2,12 @@
 title: 使用邮件扩展启动操作
 description: 创建基于操作的消息扩展以允许用户触发外部服务
 keywords: 工作组邮件传递扩展邮件扩展搜索
-ms.openlocfilehash: 1a38b4f7bfb413defd28950ca9b97f7411cf9c09
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: 4eb5984f4a75f185accfe7ba87e9389361946959
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228029"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44801167"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>使用邮件扩展启动操作
 
@@ -23,13 +23,13 @@ ms.locfileid: "42228029"
 
 ### <a name="action-type-message-extensions"></a>操作类型邮件扩展名
 
-若要从邮件扩展启动操作，请`type`将参数`action`设置为。 下面是一个带有搜索和创建命令的清单示例。 单个邮件传递分机最长可包含10个不同的命令。 这可以包括多个搜索和多个基于操作的命令。
+若要从邮件扩展启动操作，请将 `type` 参数设置为 `action` 。 下面是一个带有搜索和创建命令的清单示例。 单个邮件传递分机最长可包含10个不同的命令。 这可以包括多个搜索和多个基于操作的命令。
 
 #### <a name="complete-app-manifest-example"></a>完整的应用程序清单示例
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -128,11 +128,11 @@ ms.locfileid: "42228029"
 
 ### <a name="initiate-actions-from-messages"></a>从邮件中启动操作
 
-除了从撰写邮件区域中启动操作之外，还可以使用邮件扩展从邮件中启动操作。 这将允许您将邮件的内容发送到你的 bot 以进行处理，还可以选择使用响应[提交](#responding-to-submit)中所述的方法，使用响应答复该邮件。 响应将作为回复插入到您的用户可以在提交前编辑的邮件。 您的用户可以从 "溢出`...` " 菜单访问您的邮件扩展`Take action` ，然后选择下面的图像中的 "as"。
+除了从撰写邮件区域中启动操作之外，还可以使用邮件扩展从邮件中启动操作。 这将允许您将邮件的内容发送到你的 bot 以进行处理，还可以选择使用响应[提交](#responding-to-submit)中所述的方法，使用响应答复该邮件。 响应将作为回复插入到您的用户可以在提交前编辑的邮件。 您的用户可以从 "溢出" 菜单访问您的邮件扩展 `...` ，然后选择 `Take action` 下面的图像中的 "as"。
 
 ![从邮件中启动操作的示例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-若要使邮件扩展能够从邮件中运行，您需要将`context`参数添加到应用程序清单中的`commands`邮件扩展的对象，如下例所示。 `context`数组的有效字符串为`"message"`、 `"commandBox"`和`"compose"`。 默认值为 `["compose", "commandBox"]`。 有关`context`参数的完整详细信息，请参阅 "[定义命令](#define-commands)" 部分。
+若要使邮件扩展能够从邮件中运行，您需要将参数添加 `context` 到 `commands` 应用程序清单中的邮件扩展的对象，如下例所示。 数组的有效字符串 `context` 为 `"message"` 、 `"commandBox"` 和 `"compose"` 。 默认值为 `["compose", "commandBox"]`。 有关参数的完整详细信息，请参阅 "[定义命令](#define-commands)" 部分 `context` 。
 
 ```json
 "composeExtensions": [
@@ -152,7 +152,7 @@ ms.locfileid: "42228029"
 
 ```
 
-下面是一个`value`对象的示例，其中包含将作为`composeExtension`请求的一部分发送到你的 bot 的邮件详细信息。
+下面是一个对象的示例， `value` 其中包含将作为请求的一部分发送到你的 bot 的邮件详细信息 `composeExtension` 。
 
 ```json
 {
@@ -234,15 +234,15 @@ ms.locfileid: "42228029"
 
 ### <a name="static-parameter-list"></a>静态参数列表
 
-在此方法中，您只需定义清单中的参数的静态列表，如上面的 "创建任务" 命令中所示。 若要使用此方法`fetchTask` ，请确保`false`设置为，并在清单中定义参数。
+在此方法中，您只需定义清单中的参数的静态列表，如上面的 "创建任务" 命令中所示。 若要使用此方法，请确保 `fetchTask` 设置为 `false` ，并在清单中定义参数。
 
-当用户选择带有静态参数的命令时，团队将在任务模块中使用清单中定义的参数生成窗体。 在 "命中提交`composeExtension/submitAction` a" 发送到机器人。 有关预期响应集的详细信息，请参阅主题[响应提交](#responding-to-submit)。
+当用户选择带有静态参数的命令时，团队将在任务模块中使用清单中定义的参数生成窗体。 在 "命中提交 a" `composeExtension/submitAction` 发送到机器人。 有关预期响应集的详细信息，请参阅主题[响应提交](#responding-to-submit)。
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>使用自适应卡片的动态输入
 
-在此方法中，服务可以定义自定义的自适应卡片以收集最终用户输入。 对于此方法，请在`fetchTask`清单中`true`将参数设置为。 请注意，如果您`fetchTask`设置`true`为将忽略为命令定义的任何静态参数。
+在此方法中，服务可以定义自定义的自适应卡片以收集最终用户输入。 对于此方法，请 `fetchTask` 在清单中将参数设置为 `true` 。 请注意，如果您设置 `fetchTask` 为 `true` 将忽略为命令定义的任何静态参数。
 
-在此方法中，服务将接收`composeExtension/fetchTask`事件，并需要使用基于自适应卡的[任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)进行响应。 以下是使用自适应卡片的示例响应：
+在此方法中，服务将接收 `composeExtension/fetchTask` 事件，并需要使用基于自适应卡的[任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)进行响应。 以下是使用自适应卡片的示例响应：
 
 ```json
 {
@@ -291,9 +291,9 @@ ms.locfileid: "42228029"
 
 ### <a name="dynamic-input-using-a-web-view"></a>使用 web 视图的动态输入
 
-在此方法中，您的服务`<iframe>`可以显示一个基于的小部件，以显示任何自定义 UI 并收集用户输入。 对于此方法，请在`fetchTask`清单中`true`将参数设置为。
+在此方法中，您的服务可以显示一个 `<iframe>` 基于的小部件，以显示任何自定义 UI 并收集用户输入。 对于此方法，请 `fetchTask` 在清单中将参数设置为 `true` 。
 
-就像在自适应卡流中，您的服务将`fetchTask`发送事件并需要使用基于 URL 的[任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)进行响应。 以下是使用自适应卡片的示例响应：
+就像在自适应卡流中，您的服务将发送 `fetchTask` 事件并需要使用基于 URL 的[任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)进行响应。 以下是使用自适应卡片的示例响应：
 
 ```json
 {
@@ -310,7 +310,7 @@ ms.locfileid: "42228029"
 
 如果您的应用程序还包含一个对话机器人，则可能需要确保在加载任务模块之前在对话中安装你的 bot。 在需要获取任务模块的其他上下文的情况下，这可能很有用。 例如，您可能需要提取名单以填充 "人员选取器" 控件或团队中的频道列表。
 
-若要简化此流程，当邮件扩展程序首次`composeExtension/fetchTask`收到调用检查以查看您的 bot 是否已安装在当前上下文中时（例如，您可以通过尝试 get 名单调用来实现此目的）。 如果未安装你的 bot，请返回一个自适应卡片，其中包含一个请求用户安装你的 bot 的操作。请参阅下面的示例。 请注意，这要求用户具有在该位置安装应用程序的权限;如果不能，他们将看到一条消息，询问用户是否与管理员联系。
+若要简化此流程，当邮件扩展程序首次收到 `composeExtension/fetchTask` 调用检查以查看您的 bot 是否已安装在当前上下文中时（例如，您可以通过尝试 get 名单调用来实现此目的）。 如果未安装你的 bot，请返回一个自适应卡片，其中包含一个请求用户安装你的 bot 的操作。请参阅下面的示例。 请注意，这要求用户具有在该位置安装应用程序的权限;如果不能，他们将看到一条消息，询问用户是否与管理员联系。
 
 下面是一个响应示例：
 
@@ -338,7 +338,7 @@ ms.locfileid: "42228029"
 }
 ```
 
-一旦用户完成安装，你的 bot 将收到另一条带`name = composeExtension/submitAction`和`value.data.msteams.justInTimeInstall = true`的 invoke 消息。
+一旦用户完成安装，你的 bot 将收到另一条带和的 invoke 消息 `name = composeExtension/submitAction` `value.data.msteams.justInTimeInstall = true` 。
 
 下面是一个调用示例：
 
@@ -368,13 +368,13 @@ ms.locfileid: "42228029"
 
 ## <a name="responding-to-submit"></a>响应提交
 
-用户完成输入后，你的 bot 将接收到设置`composeExtension/submitAction`了命令 id 和参数值的事件。
+用户完成输入后，你的 bot 将接收到 `composeExtension/submitAction` 设置了命令 id 和参数值的事件。
 
-这些是对的`submitAction`预期的不同响应。
+这些是对的预期的不同响应 `submitAction` 。
 
 ### <a name="task-module-response"></a>任务模块响应
 
-当您的扩展需要将对话框链接在一起以获取详细信息时，将使用此信息。 响应与前面`fetchTask`提到的完全相同。
+当您的扩展需要将对话框链接在一起以获取详细信息时，将使用此信息。 响应与前面提到的完全相同 `fetchTask` 。
 
 ### <a name="compose-extension-authconfig-response"></a>撰写扩展身份验证/配置响应
 
@@ -436,15 +436,15 @@ ms.locfileid: "42228029"
 
 1. 用户单击邮件扩展可触发任务模块。
 1. 用户使用任务模块配置轮询。
-1. 提交配置任务模块后，应用使用任务模块中提供的信息来创建自适应卡片，并将其作为对客户`botMessagePreview`端的响应发送。
-1. 然后，用户可以预览自适应卡片邮件，然后 bot 将其插入频道中。 如果 bot 尚不是频道的成员，则单击`Send` "" 将添加机器人。
+1. 提交配置任务模块后，应用使用任务模块中提供的信息来创建自适应卡片，并将其作为 `botMessagePreview` 对客户端的响应发送。
+1. 然后，用户可以预览自适应卡片邮件，然后 bot 将其插入频道中。 如果 bot 尚不是频道的成员，则单击 "" `Send` 将添加机器人。
 1. 与自适应卡片进行交互将会在发送邮件之前对其进行更改。
-1. 用户单击`Send` bot 后，会将邮件发送到频道。
+1. 用户单击 bot 后， `Send` 会将邮件发送到频道。
 
 若要启用此流，您的任务模块应如下面的示例所示进行响应，这将向用户显示预览邮件。
 
 >[!Note]
->`activityPreview`必须包含一个`message`只有1个自适应卡片附件的活动。
+>`activityPreview`必须包含一个 `message` 只有1个自适应卡片附件的活动。
 
 ```json
 {
@@ -463,7 +463,7 @@ ms.locfileid: "42228029"
 }
 ```
 
-您的邮件扩展现在需要对两种新类型的交互`value.botMessagePreviewAction = "send"`和`value.botMessagePreviewAction = "edit"`进行响应。 下面是需要处理的`value`对象的示例：
+您的邮件扩展现在需要对两种新类型的交互和进行 `value.botMessagePreviewAction = "send"` 响应 `value.botMessagePreviewAction = "edit"` 。 下面是 `value` 需要处理的对象的示例：
 
 ```json
 {
@@ -494,9 +494,9 @@ ms.locfileid: "42228029"
 }
 ```
 
-响应`edit`请求时，应`task`响应，其中包含以用户已提交的信息填充的值。 响应`send`请求时，应向包含最终的自适应卡的频道发送一封邮件。
+响应请求时，应响应，其中包含以 `edit` `task` 用户已提交的信息填充的值。 响应 `send` 请求时，应向包含最终的自适应卡的频道发送一封邮件。
 
-# <a name="typescriptnodejs"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
@@ -558,7 +558,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 *另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
 
-# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 此示例演示如何使用[Microsoft Bot. 团队 SDK （v3）](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)进行传输。
 

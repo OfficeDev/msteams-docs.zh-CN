@@ -4,11 +4,11 @@ description: 介绍如何在 Microsoft 团队中获取 bot 的上下文
 keywords: 团队 bot 上下文
 ms.date: 05/20/2019
 ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42227995"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801014"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>获取你的 Microsoft 团队 bot 的上下文
 
@@ -17,7 +17,7 @@ ms.locfileid: "42227995"
 你的 bot 可以访问有关团队或聊天的其他上下文，如用户配置文件。 此信息可用于丰富你的 bot 的功能，并提供更个性化的体验。
 
 > [!NOTE]
-> 通过使用机器人&ndash;生成器 SDK 的扩展，可以更好地访问这些 Microsoft 团队特定的 bot api。 对于 c #/.NET，请下载我们的 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。 对于 node.js 开发，BotBuilder for Microsoft 团队功能已并入到来自 v4.0 的[Bot 框架 SDK](https://github.com/microsoft/botframework-sdk)中。
+> &ndash;通过使用机器人生成器 SDK 的扩展，可以更好地访问这些 Microsoft 团队特定的 Bot api。 对于 c #/.NET，请下载我们的 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。 在 Node.js 开发中，Microsoft 团队的 BotBuilder 功能已并入到来自4.6 的[Bot 框架 SDK](https://github.com/microsoft/botframework-sdk)中。
 
 ## <a name="fetching-the-team-roster"></a>提取团队名单
 
@@ -25,15 +25,15 @@ ms.locfileid: "42227995"
 
 ### <a name="rest-api-example"></a>REST API 示例
 
-您可以使用`serviceUrl`作为终结点的值[`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members)，直接发出 GET 请求。
+您可以 [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。
 
-`teamId`可以在你的 bot 在`channeldata`以下情况下收到的活动负载的对象中找到：
+`teamId`可以在你的 bot 在 `channeldata` 以下情况下收到的活动负载的对象中找到：
 * 当用户在团队上下文中发送邮件或与你的 bot 交互时（请参阅[接收邮件](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)）
 * 将新用户或 bot 添加到团队时（请参阅[机器人或用户添加到团队](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)）
 
 > [!NOTE]
 >* 调用 api 时，请务必使用团队 id
->* 值往往是`serviceUrl`稳定的，但可能会发生变化。 当新邮件到达时，你的 bot 应验证其存储值`serviceUrl`。
+>* 值 `serviceUrl` 往往是稳定的，但可能会发生变化。 当新邮件到达时，你的 bot 应验证其存储值 `serviceUrl` 。
 
 ```json
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
@@ -65,7 +65,7 @@ Response body
 
 ### <a name="net-example"></a>.NET 示例
 
-使用`GetConversationMembersAsync` `Team.Id`调用可返回用户 id 的列表。
+`GetConversationMembersAsync`使用调用 `Team.Id` 可返回用户 id 的列表。
 
 ```csharp
 // Fetch the members in the current conversation
@@ -117,7 +117,7 @@ connector.fetchMembers(
 
 您还可以对任何个人聊天进行相同的 API 调用，以获取用户与你的 bot 聊天的配置文件信息。
 
-API 调用和 SDK 方法与获取团队名单完全相同，响应对象也一样。 唯一的区别是传递的`conversationId`是，而不`teamId`是。
+API 调用和 SDK 方法与获取团队名单完全相同，响应对象也一样。 唯一的区别是传递的 `conversationId` 是，而不是 `teamId` 。
 
 ## <a name="fetching-the-list-of-channels-in-a-team"></a>获取团队中通道的列表
 
@@ -125,17 +125,17 @@ API 调用和 SDK 方法与获取团队名单完全相同，响应对象也一�
 
 > [!NOTE]
 >
->* 将返回默认常规通道的名称， `null`以允许进行本地化。
+>* 将返回默认常规通道的名称， `null` 以允许进行本地化。
 >* 常规通道的通道 ID 始终与团队 ID 匹配。
 
 ### <a name="rest-api-example"></a>REST API 示例
 
-您可以使用`serviceUrl`作为终结点的值`/teams/{teamId}/conversations/`，直接发出 GET 请求。
+您可以 `/teams/{teamId}/conversations/` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。
 
-唯一的`teamId`来源是来自团队上下文的邮件-来自用户的邮件，或者是在将你的 bot 添加到团队时接收的消息（请参阅[bot 或用户添加到团队](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)）。
+唯一的来源 `teamId` 是来自团队上下文的邮件-来自用户的邮件，或者是在将你的 bot 添加到团队时接收的消息（请参阅[bot 或用户添加到团队](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)）。
 
 > [!NOTE]
-> 值往往是`serviceUrl`稳定的，但可能会发生变化。 当新邮件到达时，你的 bot 应验证其存储值`serviceUrl`。
+> 值 `serviceUrl` 往往是稳定的，但可能会发生变化。 当新邮件到达时，你的 bot 应验证其存储值 `serviceUrl` 。
 
 ```json
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -160,7 +160,7 @@ Response body
 
 #### <a name="net-example"></a>.NET 示例
 
-下面的示例使用来自`FetchChannelList` Microsoft 团队分机号的 Microsoft 团队分机号的调用，用于[.Net 的机器人生成器 SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)：
+下面的示例使用 `FetchChannelList` 来自 Microsoft 团队分机号的 Microsoft 团队分机号的调用，用于[.Net 的机器人生成器 SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)：
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -168,7 +168,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js 示例
 
-下面的示例使用`fetchChannelList`来自[Microsoft 团队扩展的来自用于 Node.js 的 Bot 生成器 SDK](https://www.npmjs.com/package/botbuilder-teams)的调用。
+下面的示例使用 `fetchChannelList` 来自[Microsoft 团队扩展的 Microsoft 团队扩展](https://www.npmjs.com/package/botbuilder-teams)的调用来获取 Node.js的。
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;

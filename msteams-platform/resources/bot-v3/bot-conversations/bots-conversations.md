@@ -3,12 +3,12 @@ title: 使用 bot 发送和接收邮件
 description: 介绍如何使用 Microsoft 团队中的 bot 发送和接收邮件
 keywords: 工作组 bot 消息
 ms.date: 05/20/2019
-ms.openlocfilehash: 864473c7f502d96987a48e5837840236c45f59c7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4a15bb9b4ae8c0ede3214d3a534649e2769baf6e
+ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673484"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "44801133"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与 Microsoft 团队 bot 进行对话
 
@@ -37,7 +37,7 @@ Bot 可以参与对话或启动对话。 大多数通信是对另一封邮件的
 
 ## <a name="conversation-basics"></a>对话基础知识
 
-每封邮件都`Activity`是一种`messageType: message`类型的对象。 当用户发送邮件时，工作组会将邮件发送到你的 bot。具体来说，它会将 JSON 对象发送到你的 bot 的邮件终结点。 你的 bot 将检查邮件以确定其类型并相应地做出响应。
+每封邮件都是一 `Activity` 种类型的对象 `messageType: message` 。 当用户发送邮件时，工作组会将邮件发送到你的 bot。具体来说，它会将 JSON 对象发送到你的 bot 的邮件终结点。 你的 bot 将检查邮件以确定其类型并相应地做出响应。
 
 Bot 还支持事件样式的邮件。 有关详细信息，请参阅[在 Microsoft 团队中处理 bot 事件](~/resources/bot-v3/bots-notifications.md)。 目前不支持语音。
 
@@ -53,16 +53,16 @@ Bot 还支持事件样式的邮件。 有关详细信息，请参阅[在 Microso
 | --- | :---: | :---: | --- |
 | 格式文本  | ✔ | ✔ |  |
 | 图片 | ✔ | ✔ | 最大1024×1024和 1 MB，PNG、JPEG 或 GIF 格式;不支持动态 GIF |
-| 圣诞卡 | ✖ | ✔ | 有关支持的卡片，请参阅[团队卡片参考](~/task-modules-and-cards/cards/cards-reference.md) |
+| 卡 | ✖ | ✔ | 有关支持的卡片，请参阅[团队卡片参考](~/task-modules-and-cards/cards/cards-reference.md) |
 | 表情符号 | ✖ | ✔ | 团队目前支持通过 UTF-16 进行的表情符号（例如，U + 1F600 for grinning 脸） |
 |
 
-有关 Bot 框架（团队中的自动程序基于）所支持的 bot 交互类型的详细信息，请参阅有关适用于[.net 的 Bot 生成器 sdk](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0)的文档中的 "bot 框架"[框架和相关](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0)概念，以及[node.js 的 bot 生成器 sdk](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0)。
+有关 Bot 框架（团队中的自动程序基于）支持的 bot 交互类型的详细信息，请参阅用于[.net 的 Bot 生成器 sdk](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0)的文档中的 "bot 框架" 和 "相关概念" 的 "Bot" 框架[文档，以及](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0)[适用于 Node.js的 bot 生成器 sdk ](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0)。
 
-## <a name="message-formatting"></a>邮件格式
+## <a name="message-formatting"></a>消息格式
 
-您可以设置的[`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) `message`可选属性来控制邮件的文本内容的呈现方式。 有关 bot 邮件中支持的格式的详细说明，请参阅[邮件格式](~/resources/bot-v3/bots-message-format.md)。
-您可以设置可选[`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message)属性以控制邮件的文本内容的呈现方式。
+您可以设置的可选 [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) 属性 `message` 来控制邮件的文本内容的呈现方式。 有关 bot 邮件中支持的格式的详细说明，请参阅[邮件格式](~/resources/bot-v3/bots-message-format.md)。
+您可以设置可选 [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message) 属性以控制邮件的文本内容的呈现方式。
 
 有关团队如何在团队中支持文本格式的详细信息，请参阅[bot 邮件中的文本格式](~/resources/bot-v3/bots-text-formats.md)。
 
@@ -77,7 +77,7 @@ Bot 还支持事件样式的邮件。 有关详细信息，请参阅[在 Microso
 建议使用 XML 指定每个图像的高度和宽度。 如果使用 Markdown，则图像大小默认为256×256。 例如：
 
 * 改用`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* 请勿使用 `![Duck on a rock](http://aka.ms/Fo983c)`
+* 请勿使用`![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## <a name="receiving-messages"></a>接收邮件
 
@@ -86,9 +86,9 @@ Bot 还支持事件样式的邮件。 有关详细信息，请参阅[在 Microso
 * **个人聊天**用户可以通过在聊天历史记录中选择添加的自动程序，或在新聊天中的 "到：" 框中键入其名称或应用 ID，在私人对话中与机器人进行交互。
 * **通道**如果已将 bot 添加到团队，则可以在频道中提及 bot （"@_botname_"）。 请注意，频道中的 bot 的其他回复需要提及机器人。 它不会对未提到答复的答复做出响应。
 
-对于传入的邮件，你的 bot [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0)接收到一个`messageType: message`类型的对象。 尽管该`Activity`对象可以包含其他类型的信息（如发送给你的 bot 的[频道更新](~/resources/bot-v3/bots-notifications.md#channel-updates)），但类型表示 bot 和用户之间的`message`通信。
+对于传入的邮件，你的 bot 接收到一个 [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0) 类型的对象 `messageType: message` 。 尽管该 `Activity` 对象可以包含其他类型的信息（如发送给你的 bot 的[频道更新](~/resources/bot-v3/bots-notifications.md#channel-updates)），但 `message` 类型表示 bot 和用户之间的通信。
 
-你的 bot 将接收包含用户消息`Text`的有效负载，以及有关用户的其他信息、邮件源和团队信息。 注意：
+你的 bot 将接收包含用户消息的有效负载 `Text` ，以及有关用户的其他信息、邮件源和团队信息。 注意：
 
 * `timestamp`邮件的日期和时间（采用协调通用时间（UTC））
 * `localTimestamp`发件人时区中邮件的日期和时间
@@ -154,9 +154,9 @@ Bot 还支持事件样式的邮件。 有关详细信息，请参阅[在 Microso
 
 ## <a name="teams-channel-data"></a>团队频道数据
 
-该`channelData`对象包含特定于团队的信息，是团队和通道 id 的权威源。 应将这些 id 作为本地存储的键进行缓存和使用。
+该 `channelData` 对象包含特定于团队的信息，是团队和通道 id 的权威源。 应将这些 id 作为本地存储的键进行缓存和使用。
 
-在`channelData`个人对话的邮件中不包含该对象，因为它们在任何频道之外发生。
+在 `channelData` 个人对话的邮件中不包含该对象，因为它们在任何频道之外发生。
 
 发送到你的 bot 的活动中的典型 channelData 对象包含以下信息：
 
@@ -191,7 +191,7 @@ Bot 还支持事件样式的邮件。 有关详细信息，请参阅[在 Microso
 
 ### <a name="net-example"></a>.NET 示例
 
-" [Microsoft Bot. 团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包提供专用`TeamsChannelData`对象，该对象公开了用于访问团队特定信息的属性。
+" [Microsoft Bot. 团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包提供专用 `TeamsChannelData` 对象，该对象公开了用于访问团队特定信息的属性。
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();
@@ -200,13 +200,13 @@ string tenantId = channelData.Tenant.Id;
 
 ## <a name="sending-replies-to-messages"></a>向邮件发送答复
 
-若要答复现有邮件，请在[`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) .net 或[`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities)在 node.js 中调用。 机器人生成器 SDK 处理所有详细信息。
+若要答复现有邮件，请 [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_) 在 .net 或 Node.js 中进行调用 [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities) 。 机器人生成器 SDK 处理所有详细信息。
 
-如果选择使用 REST API，则还可以调用[`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0)终结点。
+如果选择使用 REST API，则还可以调用 [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0) 终结点。
 
 邮件内容本身可以包含简单文本或某些机器人框架提供的[卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-请注意，在出站架构中，应始终使用与`serviceUrl`您接收到的相同。 请注意，的值`serviceUrl`往往是稳定的，但可能会发生变化。 当新邮件到达时，你的 bot 应验证其存储值`serviceUrl`。
+请注意，在出站架构中，应始终使用与 `serviceUrl` 您接收到的相同。 请注意，的值 `serviceUrl` 往往是稳定的，但可能会发生变化。 当新邮件到达时，你的 bot 应验证其存储值 `serviceUrl` 。
 
 ## <a name="updating-messages"></a>更新邮件
 
@@ -219,7 +219,7 @@ string tenantId = channelData.Tenant.Id;
 
 ### <a name="rest-api"></a>REST API
 
-若要发出邮件更新，只需使用给定的活动 ID `/v3/conversations/<conversationId>/activities/<activityId>/`对终结点执行 PUT 请求即可。 若要完成此方案，您应缓存最初的 POST 呼叫返回的活动 ID。
+若要发出邮件更新，只需 `/v3/conversations/<conversationId>/activities/<activityId>/` 使用给定的活动 ID 对终结点执行 PUT 请求即可。 若要完成此方案，您应缓存最初的 POST 呼叫返回的活动 ID。
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128
@@ -231,7 +231,7 @@ PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128
 
 ### <a name="net-example"></a>.NET 示例
 
-您可以使用机器人`UpdateActivityAsync`生成器 SDK 中的方法来更新现有邮件。
+您可以使用 `UpdateActivityAsync` 机器人生成器 SDK 中的方法来更新现有邮件。
 
 ```csharp
 public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
@@ -249,7 +249,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs-example"></a>Node.js 示例
 
-您可以使用机器人`session.connector.update`生成器 SDK 中的方法来更新现有邮件。
+您可以使用 `session.connector.update` 机器人生成器 SDK 中的方法来更新现有邮件。
 
 ```javascript
 function sendCardUpdate(bot, session, originalMessage, address) {
@@ -279,7 +279,7 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 ## <a name="deleting-messages"></a>删除邮件
 
-可以使用[BOTBUILDER SDK](/bot-framework/bot-builder-overview-getstarted)中的连接器[`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete)方法删除邮件。
+可以使用 [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted)中的连接器方法删除邮件。
 
 ```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {

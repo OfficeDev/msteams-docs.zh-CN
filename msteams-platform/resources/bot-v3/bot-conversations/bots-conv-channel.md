@@ -4,11 +4,11 @@ description: 介绍在 Microsoft 团队中与频道中的 bot 进行对话的端
 keywords: 团队方案频道对话机器人
 ms.date: 06/25/2019
 ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42227996"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801031"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>与 Microsoft 团队 bot 的频道和组聊天对话
 
@@ -47,15 +47,15 @@ Microsoft 团队允许用户将 bot 引入其频道或组聊天对话。 通过�
 
 ### <a name="replying-to-messages"></a>答复邮件
 
-若要答复现有邮件，请在[`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) .net 或[`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler)在 node.js 中调用。 机器人生成器 SDK 处理所有详细信息。
+若要答复现有邮件，请 [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) 在 .net 或 Node.js 中进行调用 [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) 。 机器人生成器 SDK 处理所有详细信息。
 
-如果选择使用 REST API，则还可以调用[`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply)终结点。
+如果选择使用 REST API，则还可以调用 [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) 终结点。
 
-在频道中，回复邮件显示为对启动答复链的答复。 `conversation.id`包含通道和顶级邮件 ID。 尽管 Bot 框架`conversation.id`提供了详细信息，但您可以根据需要将其缓存，以供将来对该会话线程的回复。
+在频道中，回复邮件显示为对启动答复链的答复。 `conversation.id`包含通道和顶级邮件 ID。 尽管 Bot 框架提供了详细信息，但您可以根据需要将其缓存，以 `conversation.id` 供将来对该会话线程的回复。
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>最佳实践：团队中的欢迎邮件
 
-当你的 bot 第一次添加到组或团队时，向所有用户发送欢迎消息向所有用户引入的欢迎消息通常很有用。 欢迎消息应提供 bot 功能和用户权益的说明。 理想情况下，邮件还应包括用户与应用程序进行交互的命令。 为此，请确保你的 bot 对`conversationUpdate`邮件做出响应，并在`teamsAddMembers` `channelData`对象中使用事件类型。 请确保`memberAdded` ID 是 Bot 的应用程序 ID 本身，因为当用户添加到团队中时，会发送相同的事件。 有关更多详细信息，请参阅[团队成员或 bot 添加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)。
+当你的 bot 第一次添加到组或团队时，向所有用户发送欢迎消息向所有用户引入的欢迎消息通常很有用。 欢迎消息应提供 bot 功能和用户权益的说明。 理想情况下，邮件还应包括用户与应用程序进行交互的命令。 为此，请确保你的 bot 对邮件做出响应 `conversationUpdate` ，并在 `teamsAddMembers` 对象中使用事件类型 `channelData` 。 `memberAdded`请确保 ID 是 bot 的应用程序 ID 本身，因为当用户添加到团队中时，会发送相同的事件。 有关更多详细信息，请参阅[团队成员或 bot 添加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)。
 
 添加 bot 时，您可能还希望向团队的每个成员发送个人消息。 为此，您可以[提取团队名单](~/resources/bot-v3/bots-context.md#fetching-the-team-roster)并向每个用户发送一[条直接消息](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
 
@@ -72,7 +72,7 @@ Microsoft 团队允许用户将 bot 引入其频道或组聊天对话。 通过�
 
 ### <a name="retrieving-mentions"></a>检索提及
 
-提到在有效负载的`entities`对象中返回，并且包含用户的唯一 ID，在大多数情况下，提到的用户的名称。 您可以通过在用于 .NET 的 Bot 生成器 SDK 中`GetMentions`调用函数来检索邮件中的所有提及，这将返回对象`Mentioned`的数组。
+提到在 `entities` 有效负载的对象中返回，并且包含用户的唯一 ID，在大多数情况下，提到的用户的名称。 您可以通过在用于 .NET 的 Bot 生成器 SDK 中调用函数来检索邮件中的所有提及 `GetMentions` ，这将返回对象的数组 `Mentioned` 。
 
 #### <a name="net-example-code-check-for-and-strip-bot-mention"></a>.NET 示例代码：检查并去除 @bot 提及
 
@@ -93,7 +93,7 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> 您还可以使用 "团队扩展" `GetTextWithoutMentions`功能，该函数将去除所有提及内容，包括 bot。
+> 您还可以使用 "团队扩展 `GetTextWithoutMentions` " 功能，该函数将去除所有提及内容，包括 bot。
 
 #### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js 示例代码：检查并去除 @bot 提及的内容
 
@@ -109,14 +109,14 @@ if (message.entities) {
 }
 ```
 
-您还可以使用 "团队扩展" `getTextWithoutMentions`功能，该函数将去除所有提及内容，包括 bot。
+您还可以使用 "团队扩展 `getTextWithoutMentions` " 功能，该函数将去除所有提及内容，包括 bot。
 
 ### <a name="constructing-mentions"></a>构建提及
 
 你的 bot 可以在发送到频道的邮件中提及其他用户。 若要执行此操作，您的邮件必须执行以下操作：
 
-* 在`<at>@username</at>`邮件文本中包含
-* 将`mention`对象包括在实体集合中
+* `<at>@username</at>`在邮件文本中包含
+* `mention`将对象包括在实体集合中
 
 #### <a name="net-example"></a>.NET 示例
 

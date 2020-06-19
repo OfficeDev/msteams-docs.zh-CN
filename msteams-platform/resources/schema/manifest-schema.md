@@ -2,16 +2,16 @@
 title: 清单架构参考
 description: 介绍 Microsoft 团队清单支持的架构
 keywords: 团队清单架构
-ms.openlocfilehash: 1a1a690e6e382dcad3ceb200ec02286e8c9171f8
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: 061b39430cf8eba229b4e0c3012a5bbf752a5e85
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953486"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44801168"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考： Microsoft 团队的清单架构
 
-Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产品中。 您的清单必须符合托管的架构[`https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json)。 此外，还支持早期版本 1.0-1.4 （使用 URL 中的 "v1"）。
+Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产品中。 您的清单必须符合托管的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) 。 此外，还支持早期版本 1.0-1.4 （使用 URL 中的 "v1"）。
 
 以下架构示例显示了所有扩展性选项。
 
@@ -19,7 +19,7 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
@@ -124,7 +124,7 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
           "title": "Example Command",
           "description": "Command Description; e.g., Search on the web",
           "initialRun": true,
-          "type" : "search",
+          "type" : "query",
           "context" : ["compose", "commandBox"],
           "parameters": [
             {
@@ -181,19 +181,19 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
 
 ## <a name="schema"></a>$schema
 
-*可选，但建议* &ndash;的字符串
+*可选，但建议* &ndash;类似
 
 引用清单的 JSON 架构的 https://URL。
 
 ## <a name="manifestversion"></a>manifestVersion
 
-**必需** &ndash;的字符串
+**必需** &ndash;类似
 
 此清单使用的清单架构的版本。 它应为 "1.5"。
 
 ## <a name="version"></a>version
 
-**必需** &ndash;的字符串
+**必需** &ndash;类似
 
 特定应用程序的版本。 如果您更新清单中的某些内容，该版本还必须递增。 这样一来，在安装新的清单时，它将覆盖现有的版本，用户将获得新的功能。 如果此应用程序已提交到应用商店，则必须重新提交新清单，然后再对其进行重新验证。 然后，此应用程序的用户将在几小时内自动获取新更新的清单（在批准后）。
 
@@ -203,13 +203,13 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
 
 ## <a name="id"></a>id
 
-**必需** &ndash;的 Microsoft 应用程序 ID
+**必需** &ndash;Microsoft 应用 ID
 
 Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Microsoft Bot 框架注册了 bot，或者你的选项卡的 web 应用已使用 Microsoft 登录，则你应该已经有 ID，应在此处输入它。 否则，应在 Microsoft 应用注册门户（[我的应用程序](https://apps.dev.microsoft.com)）上生成一个新的 ID，在此处输入它，然后在添加机器人时重用它。注意：如果您在 AppSource 中提交对现有应用程序的更新，您的清单中的 ID 不得修改。
 
 ## <a name="packagename"></a>packageName
 
-**必需** &ndash;的字符串
+**必需** &ndash;类似
 
 此应用的以反向域表示法表示的唯一标识符;例如，.com. myapp。
 
@@ -250,7 +250,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 **Required**
 
-在团队体验中向用户显示的应用程序体验的名称。 对于提交到 AppSource 的应用程序，这些值必须与您的 AppSource 条目中的信息相匹配。 `short`和`full`的值不应相同。
+在团队体验中向用户显示的应用程序体验的名称。 对于提交到 AppSource 的应用程序，这些值必须与您的 AppSource 条目中的信息相匹配。 和的值 `short` `full` 不应相同。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -263,7 +263,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 向用户介绍你的应用程序。 对于提交到 AppSource 的应用程序，这些值必须与您的 AppSource 条目中的信息相匹配。
 
-确保你的说明准确描述你的体验，并提供信息，以帮助潜在客户了解你的体验。 如果需要使用外部帐户，还应在完整说明中说明。 `short`和`full`的值不应相同。  您的简短说明不得在详细说明中重复，并且不得包含任何其他应用程序名称。
+确保你的说明准确描述你的体验，并提供信息，以帮助潜在客户了解你的体验。 如果需要使用外部帐户，还应在完整说明中说明。 和的值 `short` `full` 不应相同。  您的简短说明不得在详细说明中重复，并且不得包含任何其他应用程序名称。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -283,11 +283,11 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 ## <a name="accentcolor"></a>accentColor
 
-**必需** &ndash;的字符串
+**必需** &ndash;类似
 
 与大纲图标的背景一起使用的颜色。
 
-值必须是以 "#" 开头的有效 HTML 颜色代码，例如`#4464ee`。
+值必须是以 "#" 开头的有效 HTML 颜色代码，例如 `#4464ee` 。
 
 ## <a name="configurabletabs"></a>configurableTabs
 
@@ -295,23 +295,23 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 当您的应用程序体验具有在添加之前需要额外配置的团队频道选项卡体验时使用。 仅在团队作用域中支持可配置的选项卡，并且每个应用程序目前仅支持一个选项卡。
 
-对象是一个包含所有类型`object`的元素的数组。 仅在提供可配置的通道选项卡解决方案的解决方案中，此块才是必需的。
+对象是一个包含所有类型的元素的数组 `object` 。 仅在提供可配置的通道选项卡解决方案的解决方案中，此块才是必需的。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置选项卡时要使用的 https://URL。|
-|`canUpdateConfiguration`|Boolean|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置`true`|
-|`scopes`|枚举数组|1 |✔|目前，可配置的`team`选项卡仅`groupchat`支持和范围。 |
+|`canUpdateConfiguration`|布尔值|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置`true`|
+|`scopes`|枚举数组|1 |✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 范围。 |
 |`sharePointPreviewImage`|String|2048||要在 SharePoint 中使用的选项卡预览图像的相对文件路径。 字号（1024x768）。 |
-|`supportedSharePointHosts`|枚举数组|1 ||定义您的选项卡在 SharePoint 中的可用方式。 选项包括`sharePointFullPage`和`sharePointWebPart` |
+|`supportedSharePointHosts`|枚举数组|1 ||定义您的选项卡在 SharePoint 中的可用方式。 选项包括 `sharePointFullPage` 和`sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
 **可选**
 
-定义一组可在默认情况下 "固定" 的选项卡，而无需用户手动添加它们。 在范围内声明`personal`的静态制表符始终固定到应用的个人体验中。 当前不支持在`team`范围中声明的静态选项卡。
+定义一组可在默认情况下 "固定" 的选项卡，而无需用户手动添加它们。 在范围内声明的静态制表符 `personal` 始终固定到应用的个人体验中。 当前不支持在范围中声明的静态选项卡 `team` 。
 
-对象是包含类型`object`的所有元素的数组（最多16个元素）。 仅在提供静态选项卡解决方案的解决方案中，此块是必需的。
+对象是包含类型的所有元素的数组（最多16个元素） `object` 。 仅在提供静态选项卡解决方案的解决方案中，此块是必需的。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -319,7 +319,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 |`name`|String|128个字符|✔|该选项卡在通道接口中的显示名称。|
 |`contentUrl`|String|2048 个字符|✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
 |`websiteUrl`|String|2048 个字符||要指向的 https://URL，如果用户要在浏览器中查看。|
-|`scopes`|枚举数组|1 |✔|目前，静态选项卡仅支持`personal`作用域，这意味着它只能作为个人体验的一部分进行预配。|
+|`scopes`|枚举数组|1 |✔|目前，静态选项卡仅支持 `personal` 作用域，这意味着它只能作为个人体验的一部分进行预配。|
 
 > [!NOTE]
 > 如果您的选项卡需要上下文相关信息来显示相关内容或启动身份验证流，*请参阅*[获取 Microsoft 团队的上下文选项卡](../../tabs/how-to/access-teams-context.md)。
@@ -330,38 +330,38 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 定义机器人解决方案以及可选信息，如默认的命令属性。
 
-该对象是数组（每个应用程序最多&mdash;只能有一个一个 bot 仅允许一个 bot）和所有类型`object`的元素。 仅在提供机器人体验的解决方案中，此块才是必需的。
+该对象是数组（ &mdash; 每个应用程序最多只能有一个一个 bot 仅允许一个 bot）和所有类型的元素 `object` 。 仅在提供机器人体验的解决方案中，此块才是必需的。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|字符串|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这可能与整体[应用程序 ID](#id)很好。|
-|`needsChannelSelector`|Boolean|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 设置`false`|
-|`isNotificationOnly`|Boolean|||指示自动程序是否为单向、仅通知的自动程序，而不是对话自动程序。 设置`false`|
+|`needsChannelSelector`|布尔值|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 设置`false`|
+|`isNotificationOnly`|布尔值|||指示自动程序是否为单向、仅通知的自动程序，而不是对话自动程序。 设置`false`|
 |`supportsFiles`|布尔值|||指示自动程序是否支持在个人聊天中上传/下载文件。 设置`false`|
-|`scopes`|枚举数组|3 |✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
+|`scopes`|枚举数组|第三章|✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
 
 ### <a name="botscommandlists"></a>commandLists
 
-你的 bot 可以向用户推荐的命令的可选列表。 对象是包含所有类型`object`元素的数组（最多2个元素）;您必须为你的 bot 支持的每个作用域定义单独的命令列表。 有关详细信息，请参阅[Bot 菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
+你的 bot 可以向用户推荐的命令的可选列表。 对象是包含所有类型元素的数组（最多2个元素） `object` ; 您必须为你的 bot 支持的每个作用域定义单独的命令列表。 有关详细信息，请参阅[Bot 菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`items.scopes`|枚举数组|3 |✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
-|`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单描述或示例（字符串，128）|
+|`items.scopes`|枚举数组|第三章|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
+|`items.commands`|对象数组|10  |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单描述或示例（字符串，128）|
 
 ## <a name="connectors"></a>插槽
 
 **可选**
 
-`connectors` Block 定义了应用程序的 Office 365 连接器。
+`connectors`Block 定义了应用程序的 Office 365 连接器。
 
-对象是包含所有类型`object`元素的数组（最多1个元素）。 仅对提供连接器的解决方案而言，此块是必需的。
+对象是包含所有类型元素的数组（最多1个元素） `object` 。 仅对提供连接器的解决方案而言，此块是必需的。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置连接器时要使用的 https://URL。|
 |`connectorId`|字符串|64 个字符|✔|与[连接器开发人员仪表板](https://aka.ms/connectorsdashboard)中的 ID 相匹配的连接器的唯一标识符。|
-|`scopes`|枚举数组|1 |✔|指定连接器是在中的频道上下文中`team`，还是在仅限于单个用户的体验（`personal`）中提供体验。 目前，仅支持`team`作用域。|
+|`scopes`|枚举数组|1 |✔|指定连接器是在中的频道上下文中 `team` ，还是在仅限于单个用户的体验（）中提供体验 `personal` 。 目前，仅 `team` 支持作用域。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -372,13 +372,13 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 > [!NOTE]
 > 功能的名称已从11月2017的 "撰写分机" 更改为 "消息扩展"，但清单名称保持不变，以便现有扩展能够继续正常工作。
 
-对象是包含所有类型`object`元素的数组（最多1个元素）。 仅对提供邮件扩展的解决方案而言，此块是必需的。
+对象是包含所有类型元素的数组（最多1个元素） `object` 。 仅对提供邮件扩展的解决方案而言，此块是必需的。
 
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|与 Bot 框架一起注册的支持邮件扩展的 bot 的唯一 Microsoft 应用 ID。 这可能与整体应用程序 ID 很好。|
-|`canUpdateConfiguration`|Boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为`false`。|
-|`commands`|对象数组|10 |✔|邮件扩展支持的命令数组|
+|`canUpdateConfiguration`|布尔值|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false` 。|
+|`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
 |`messageHandlers`|对象数组|5 ||允许在满足特定条件时调用应用程序的处理程序列表。 域也必须列在`validDomains`|
 |`messageHandlers.type`|String|||消息处理程序的类型。 必须是 `"link"`。|
 |`messageHandlers.value.domains`|Array of Strings|||链接消息处理程序可以为其注册的域的数组。|
@@ -392,12 +392,12 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|字符串|64 个字符|✔|命令的 ID|
-|`type`|字符串|64 个字符||命令的类型。 一个`query`或`action`。 设置`query`|
+|`type`|字符串|64 个字符||命令的类型。 一个 `query` 或 `action` 。 设置`query`|
 |`title`|String|32个字符|✔|用户友好的命令名称|
 |`description`|String|128个字符||对用户显示的说明，以指示此命令的用途|
-|`initialRun`|Boolean|||一个布尔值，指示是否在最初不使用任何参数的情况之下运行该命令。 设置`false`|
-|`context`|Array of Strings|3 ||定义可以从中调用邮件扩展的位置。 、 `commandBox`、 `message`的`compose`的任意组合。 默认值为`["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||一个布尔值，指示是否应动态获取任务模块|
+|`initialRun`|布尔值|||一个布尔值，指示是否在最初不使用任何参数的情况之下运行该命令。 设置`false`|
+|`context`|Array of Strings|第三章||定义可以从中调用邮件扩展的位置。 、、的的任意组合 `compose` `commandBox` `message` 。 默认值为`["compose", "commandBox"]`|
+|`fetchTask`|布尔值|||一个布尔值，指示是否应动态获取任务模块|
 |`taskInfo`|对象|||指定在使用消息扩展命令时要预加载的任务模块|
 |`taskInfo.title`|String|64||初始对话框标题|
 |`taskInfo.width`|String|||对话框宽度-以像素为单位的数字或默认布局，如 "大"、"中" 或 "small"|
@@ -407,8 +407,8 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 |`parameter.name`|字符串|64 个字符|✔|在客户端中显示的参数的名称。 此项包含在用户请求中。|
 |`parameter.title`|String|32个字符|✔|参数的用户友好标题。|
 |`parameter.description`|String|128个字符||描述此参数用途的用户友好字符串。|
-|`parameter.inputType`|String|128个字符||定义在的任务模块上显示的控件的类型`fetchTask: true`。 一个`text` `textarea`、 `number` `date`、、、、 `time` `toggle``choiceset`|
-|`parameter.choices`|对象数组|10 ||的选项选项`choiceset`。 仅在何时`parameter.inputType`使用`choiceset`|
+|`parameter.inputType`|String|128个字符||定义在的任务模块上显示的控件的类型 `fetchTask: true` 。 一个、、、、、 `text` `textarea` `number` `date` `time` `toggle``choiceset`|
+|`parameter.choices`|对象数组|10  ||的选项选项 `choiceset` 。 仅 `parameter.inputType` 在何时使用`choiceset`|
 |`parameter.choices.title`|String|128||选项的标题|
 |`parameter.choices.value`|String|512||选项的值|
 
@@ -416,7 +416,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 **可选**
 
-一个数组， `string`它指定应用程序请求的权限，这样最终用户就可以知道扩展将如何执行。 以下选项是非独占的：
+一个数组 `string` ，它指定应用程序请求的权限，这样最终用户就可以知道扩展将如何执行。 以下选项是非独占的：
 
 * `identity`&emsp;需要用户标识信息
 * `messageTeamMembers`&emsp;需要向团队成员发送直接消息的权限
@@ -439,16 +439,16 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 **可选**，但**所需**的除外
 
-应用程序希望在团队客户端中加载的网站的有效域列表。 例如`*.example.com`，域列表可以包含通配符。 这与域的一段完全匹配;如果需要匹配`a.b.example.com` ，请使用`*.*.example.com`。 如果您的选项卡配置或内容 UI 需要导航到其他任何域，除了用于选项卡配置之外，则必须在此处指定该域。
+应用程序希望在团队客户端中加载的网站的有效域列表。 例如，域列表可以包含通配符 `*.example.com` 。 这与域的一段完全匹配;如果需要匹配， `a.b.example.com` 请使用 `*.*.example.com` 。 如果您的选项卡配置或内容 UI 需要导航到其他任何域，除了用于选项卡配置之外，则必须在此处指定该域。
 
-但是，**不**需要在您的应用程序中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，需要重定向到 accounts.google.com，但不应在中`validDomains[]`包含 accounts.google.com。
+但是，**不**需要在您的应用程序中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，需要重定向到 accounts.google.com，但不应在中包含 accounts.google.com `validDomains[]` 。
 
 需要其自己的 sharepoint Url 的团队应用程序能够正常工作，可能会在其有效的域列表中包含 "{teamsitedomain}"。
 
 > [!IMPORTANT]
-> 不要直接或通过通配符添加位于控件外部的域。 例如， `yourapp.onmicrosoft.com`是有效的，但`*.onmicrosoft.com`无效。
+> 不要直接或通过通配符添加位于控件外部的域。 例如， `yourapp.onmicrosoft.com` 是有效的，但 `*.onmicrosoft.com` 无效。
 
-对象是一个包含所有类型`string`的元素的数组。
+对象是一个包含所有类型的元素的数组 `string` 。
 
 ## <a name="webapplicationinfo"></a>webApplicationInfo
 

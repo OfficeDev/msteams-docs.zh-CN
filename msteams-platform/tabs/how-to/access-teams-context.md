@@ -3,11 +3,11 @@ title: 获取您的选项卡的上下文
 description: 介绍如何获取选项卡的用户上下文
 keywords: 团队选项卡用户上下文
 ms.openlocfilehash: 01919999e38d6b659f014b0f05b76d3f332db9ab
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673005"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801012"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>获取 Microsoft 团队选项卡的上下文
 
@@ -15,7 +15,7 @@ ms.locfileid: "41673005"
 
 * 您的选项卡可能需要有关用户、团队或公司的基本信息。
 * 您的选项卡可能需要区域设置和主题信息。
-* 您的选项卡可能需要读取`entityId`或`subEntityId`标识此选项卡中的内容。
+* 您的选项卡可能需要读取 `entityId` 或 `subEntityId` 标识此选项卡中的内容。
 
 ## <a name="user-context"></a>用户上下文
 
@@ -43,15 +43,15 @@ ms.locfileid: "41673005"
 * {loginHint}：一个适用于 Azure AD 的登录提示的值。这通常是当前用户的登录名，位于其主租户中。
 * {userPrincipalName}：当前租户中当前用户的用户主体名称。
 * {userObjectId}：当前租户中当前用户的 Azure AD 对象 ID。
-* {主题}：当前的 UI 主题`default`，如、 `dark`或。 `contrast`
+* {主题}：当前的 UI 主题，如 `default` 、 `dark` 或 `contrast` 。
 * {groupId}：选项卡所在的 Office 365 组的 ID。
 * {tid}：当前用户的 Azure AD 租户 ID。
 * {locale}：用户的当前区域设置格式为 languageId-countryId （例如，en-us）。
 
 >[!NOTE]
->以前`{upn}`的占位符现在已被弃用。 为了向后兼容，它当前是的同义词`{loginHint}`。
+>以前的 `{upn}` 占位符现在已被弃用。 为了向后兼容，它当前是的同义词 `{loginHint}` 。
 
-例如，假设在您的选项卡清单中， `configURL`您将属性设置为
+例如，假设在您的选项卡清单中，您将 `configURL` 属性设置为
 
 `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
 
@@ -68,7 +68,7 @@ ms.locfileid: "41673005"
 
 ### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>使用 Microsoft 团队 JavaScript 库获取上下文
 
-您还可以通过调用`microsoftTeams.getContext(function(context) { /* ... */ })`来使用[Microsoft 团队 JAVASCRIPT 客户端 SDK](/javascript/api/overview/msteams-client)检索上面列出的信息。
+您还可以通过调用来使用[Microsoft 团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)检索上面列出的信息 `microsoftTeams.getContext(function(context) { /* ... */ })` 。
 
 上下文变量将如以下示例所示。
 
@@ -100,7 +100,7 @@ ms.locfileid: "41673005"
 > [!Note]
 > 专用通道目前位于私有开发人员预览版中。
 
-当您的内容页加载到专用通道中时，将对从该`getContext`调用中接收的数据进行模糊处理，以保护通道的隐私。 当内容页位于专用通道中时，会更改以下字段。 如果您的页面使用以下任何值，则需要检查该`channelType`字段以确定页面是否已加载到专用通道中，并进行相应的响应。
+当您的内容页加载到专用通道中时，将对从该调用中接收的数据 `getContext` 进行模糊处理，以保护通道的隐私。 当内容页位于专用通道中时，会更改以下字段。 如果您的页面使用以下任何值，则需要检查该 `channelType` 字段以确定页面是否已加载到专用通道中，并进行相应的响应。
 
 * `groupId`-专用通道未定义
 * `teamId`-设置为专用通道的 threadId
@@ -111,6 +111,6 @@ ms.locfileid: "41673005"
 
 ## <a name="theme-change-handling"></a>主题更改处理
 
-您可以注册您的应用程序，以通过调用`microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`的主题更改来进行通知。
+您可以注册您的应用程序，以通过调用的主题更改来进行通知 `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` 。
 
-函数`theme`中的参数将是值为`default`、 `dark`或`contrast`的字符串。
+`theme`函数中的参数将是值为 `default` 、或的字符串 `dark` `contrast` 。

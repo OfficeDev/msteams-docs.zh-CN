@@ -2,24 +2,24 @@
 title: 速率限制
 description: Microsoft 团队中的速率限制和最佳做法
 keywords: 团队 bot 速率限制
-ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42371763"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44801124"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>优化你的机器人： Microsoft 团队中的速率限制和最佳做法
 
 通常情况下，您的应用程序应限制它在单个聊天或频道对话中发布的邮件数。 这可确保对最终用户不会感到 "垃圾" 的最佳体验。
 
-为了保护 Microsoft 团队及其用户，机器人 Api 对传入请求进行评级。 跳过此限制的应用程序将`HTTP 429 Too Many Requests`收到错误状态。 所有请求都服从相同的速率限制策略，包括发送消息、通道枚举和名单读取。
+为了保护 Microsoft 团队及其用户，机器人 Api 对传入请求进行评级。 跳过此限制的应用程序将收到 `HTTP 429 Too Many Requests` 错误状态。 所有请求都服从相同的速率限制策略，包括发送消息、通道枚举和名单读取。
 
-由于汇率限制的确切值可能会发生更改，因此建议您的应用程序在 API 返回`HTTP 429 Too Many Requests`时实现适当的回退行为。
+由于汇率限制的确切值可能会发生更改，因此建议您的应用程序在 API 返回时实现适当的回退行为 `HTTP 429 Too Many Requests` 。
 
 ## <a name="handling-rate-limits"></a>处理速率限制
 
-在颁发机器人生成器 SDK 操作时，您可以处理`Microsoft.Rest.HttpOperationException`和检查状态代码。
+在颁发机器人生成器 SDK 操作时，您可以处理 `Microsoft.Rest.HttpOperationException` 和检查状态代码。
 
 ```csharp
 try
@@ -38,7 +38,7 @@ catch (HttpOperationException ex)
 
 ## <a name="best-practices"></a>最佳做法
 
-通常情况下，应采取简单的预防措施来`HTTP 429`避免收到响应。 例如，避免发出对相同个人或通道对话的多个请求。 相反，请考虑批处理 API 请求。
+通常情况下，应采取简单的预防措施来避免收到 `HTTP 429` 响应。 例如，避免发出对相同个人或通道对话的多个请求。 相反，请考虑批处理 API 请求。
 
 使用具有随机抖动的指数回退是处理429s 的推荐方法。 这可确保多个请求不会导致重试冲突。
 
@@ -92,7 +92,7 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
-您还可以使用上面`System.Action`介绍的重试策略执行方法执行。 引用的库还允许您指定固定间隔或线性回退机制。
+您还可以 `System.Action` 使用上面介绍的重试策略执行方法执行。 引用的库还允许您指定固定间隔或线性回退机制。
 
 建议将值和策略存储在配置文件中，以便在运行时微调和调整值。
 
@@ -107,19 +107,19 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | **应用场景** | **时间段（秒）** | **允许的最大操作** |
 | --- | --- | --- |
-|| 1 | 步 |
-| 发送到对话 | 双面 | utf-8 |
+| 发送到对话 | 1  | 7  |
+| 发送到对话 | 双面 | 8  |
 | 发送到对话 | 30 | 60 |
 | 发送到对话 | 3600 | 1800 |
-| 创建对话 | 1 | 步 |
-| 创建对话 | 双面 | utf-8 |
+| 创建对话 | 1  | 7  |
+| 创建对话 | 双面 | 8  |
 | 创建对话 | 30 | 60 |
 | 创建对话 | 3600 | 1800 |
-| 获取对话成员| 1 | 14  |
+| 获取对话成员| 1  | 14  |
 | 获取对话成员| 双面 | 16  |
 | 获取对话成员| 30 | 120 |
 | 获取对话成员| 3600 | 3600 |
-| 获取对话 | 1 | 14  |
+| 获取对话 | 1  | 14  |
 | 获取对话 | 双面 | 16  |
 | 获取对话 | 30 | 120 |
 | 获取对话 | 3600 | 3600 |
@@ -130,15 +130,15 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | **应用场景** | **时间段（秒）** | **允许的最大操作** |
 | --- | --- | --- |
-| 发送到对话 | 1 | 14  |
+| 发送到对话 | 1  | 14  |
 | 发送到对话 | 双面 | 16  |
-| 创建对话 | 1 | 14  |
+| 创建对话 | 1  | 14  |
 | 创建对话 | 双面 | 16  |
-| CreateConversation| 1 | 14  |
+| CreateConversation| 1  | 14  |
 | CreateConversation| 双面 | 16  |
-| 获取对话成员| 1 | 28 |
+| 获取对话成员| 1  | 28 |
 | 获取对话成员| 双面 | 32 |
-| 获取对话 | 1 | 28 |
+| 获取对话 | 1  | 28 |
 | 获取对话 | 双面 | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>每个数据中心的 Bot 限制
@@ -147,6 +147,6 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 |**时间段（秒）** | **允许的最大操作** |
 | --- | --- |
-| 1 | 20 |
+| 1  | 20 |
 | 1800 | 8000 |
 | 3600 | 15000 |
