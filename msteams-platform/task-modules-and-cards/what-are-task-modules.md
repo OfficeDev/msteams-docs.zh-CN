@@ -4,12 +4,12 @@ author: clearab
 description: 添加模式弹出窗口体验，以便从 Microsoft 团队应用程序向用户收集或显示信息。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 22fdc7a9dab1ff6f27e2b0d144e54676b6cca50e
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801024"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867116"
 ---
 # <a name="what-are-task-modules"></a>什么是任务模块？
 
@@ -54,7 +54,7 @@ ms.locfileid: "44801024"
 
 ## <a name="the-taskinfo-object"></a>TaskInfo 对象
 
-`TaskInfo`对象包含任务模块的元数据。 对象定义如下所示。 您**必须**定义 `url` （对于 en 嵌入 iFrame）或 `card` （对于自适应卡片）。
+`TaskInfo`对象包含任务模块的元数据。 对象定义如下所示。 您**必须**定义 `url` （对于嵌入的 iFrame）或 `card` （对于自适应卡片）。
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |

@@ -2,12 +2,12 @@
 title: 发布发布
 description: 发布应用程序后要执行的操作
 keywords: 团队发布更新证书
-ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42582858"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867090"
 ---
 # <a name="maintain-and-support-your-published-app"></a>维护和支持您发布的应用程序 
 
@@ -20,8 +20,8 @@ Microsoft 提供了[应用程序认证计划](./application-certification.md)，
 ## <a name="add-a-download-button-to-your-product-site"></a>将 "下载" 按钮添加到产品网站
 
 如果您的应用程序位于 Microsoft 团队存储中，则可以为您的网站生成一个链接，用于启动团队并显示用户添加应用程序的许可和安装对话框。
-格式为： `https://teams.microsoft.com/l/app/<appId>`其中 appID 是它们在提交的清单中声明的 GUID。
-示例： `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd`是用于安装 Trello 的链接。
+格式为： `https://teams.microsoft.com/l/app/<appId>` 其中 appID 是它们在提交的清单中声明的 GUID。
+示例： `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` 是用于安装 Trello 的链接。
 
 ## <a name="updating-your-existing-teams-app"></a>更新现有团队应用程序
 
@@ -30,11 +30,19 @@ Microsoft 提供了[应用程序认证计划](./application-certification.md)，
 * 如果对提交内容进行任何清单更改，请增加清单中的版本号。
 * 需要进行更新的提交，以进行新的审阅和验证过程。
 
+## <a name="app-updates-and-the-user-consent-flow"></a>应用程序更新和用户同意流程
 
-### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>何时更新应用程序触发用户同意流？
+当用户安装您的应用程序时，他们所做的第一件事是同意授予应用程序访问应用程序执行其工作所需的服务和信息的权限。 在大多数情况下，在完成应用更新后，最终用户将自动显示新版本。 但是，对[团队应用程序清单](../../../../resources/schema/manifest-schema.md)的一些更新需要用户接受才能完成，并且可能会重新触发此同意行为：
 
-当用户安装您的应用程序时，他们所做的第一件事是同意授予应用程序访问应用程序执行其工作所需的服务和信息的权限。 当您更新您的应用程序时，可能会重新触发此同意行为，尤其是在您进行了以下一个或多个更改时：
-
-* 将新功能添加到应用程序，例如仅将 bot 添加到仅选项卡应用程序中。
-* 更改清单中的权限数组。
-* 在清单中增加您的应用程序版本号。
+ >[!div class="checklist"]
+>
+> * 添加或删除了一个 bot。
+> * 现有 bot 的唯一 `botId` 值已更改。
+> * 现有 bot 的 `isNotificationOnly` boolean 值已更改。
+> * 现有 bot 的 `supportsFiles` boolean 值已更改。
+> * 添加或删除了邮件扩展（ `composeExtensions` ）。
+> * 添加了新的连接器。
+> * 添加了一个新的静态/个人选项卡。
+> * 添加了一个新的可配置组/通道选项卡。
+> * `webApplicationInfo`值已更改。
+>

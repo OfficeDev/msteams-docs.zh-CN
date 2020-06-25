@@ -3,12 +3,12 @@ title: 将测试数据添加到 Office 365 测试租户
 description: 设置 Office 365 开发人员计划订阅，以成功测试 Microsoft 团队应用
 keywords: 测试应用程序开发人员计划团队
 ms.date: 11/01/2019
-ms.openlocfilehash: 2d32b0bf4243d540eeb5e2cc89ea2518d737ae17
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 87e9dc280c192f013098c3e9f604f72238bfafdf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673110"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867089"
 ---
 # <a name="add-test-data-to-your-office-365-test-tenant"></a>将测试数据添加到 Office 365 测试租户
 
@@ -20,7 +20,7 @@ ms.locfileid: "41673110"
 
 ## <a name="before-you-start"></a>准备工作
 
-如果尚不具有测试租户，则需要加入 Office 365 开发人员计划并注册开发人员订阅。 你还需要安装必要的 powershell 模块。 对于您使用的任何租户，都需要具有全局管理员权限才能运行脚本。
+如果尚不具有测试租户，则需要加入 Office 365 开发人员计划并注册开发人员订阅。 你还需要安装必要的 PowerShell 模块。 对于您使用的任何租户，都需要具有全局管理员权限才能运行脚本。
 
 1. [加入 Office 365 开发人员计划](/office/developer-program/office-365-developer-program)
 2. [设置 Microsoft 365 开发人员订阅](/office/developer-program/office-365-developer-program-get-started)

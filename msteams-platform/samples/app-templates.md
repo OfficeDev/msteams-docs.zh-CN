@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 222128596dab2c7795cb15b63cc0520d3be970c4
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
+ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44801174"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44873395"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -75,6 +75,23 @@ Celebrations 是一种团队应用，可帮助工作组成员庆祝他人的生�
 
 ![FAQ 加 gif](../assets/images/CompanyCommunicatorCompose.png)
 
+## <a name="contact-group-lookup-9734"></a>联系人组查找 &#9734;
+
+联系人组查找应用程序为创建、访问和管理组织的联系人组（以前称为通讯组列表或通讯组）提供了一种便利且有用的方法。 用户可以快速查看和聊天组成员、查看成员状态以及创建与联系人组中所选成员的组聊天，这一切都在团队环境中。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
+
+:::row:::
+:::column span="2":::
+    ![联系人组查找固定收藏夹视图](../assets/images/contact-group-lookup-favorites.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![联系人组查找入门研讨演示](../assets/images/contact-group-lookup-chat.png)
+:::column-end:::
+:::row-end:::
+
 ## <a name="crowdsourcer"></a>CrowdSourcer
 
 CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向团队查询与组成员协作的信息。 这是在帮助参与者积极参与并参与有趣和有用的信息资源的同时，回答常见问题的一种非常好的方法。
@@ -101,7 +118,7 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 
 ![专家查找器搜索结果演示](../assets/images/expert-finder.png)
 
-## <a name="faq-plus"></a>常见问题 + 
+## <a name="faq-plus"></a>常见问题 +
 
 对话 Q&bot 是一种简单的方法，可提供用户对常见问题的解答。 但是，大多数 bot 无法以有意义的方式与用户接洽，因为在 bot 发生故障时没有人在循环中。 FAQ bot 是一个友好的 Q，&在无法帮助的情况中将人体带到循环中的 bot。 如果某个问题包含在知识库中，则可以向该 bot 提供一个问题，并且机器人会做出响应。 如果不是，则机器人允许用户提交一个查询，然后将该查询发布到预先配置的专家团队中，这有助于通过在团队内部执行通知来提供支持。
 

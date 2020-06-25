@@ -4,12 +4,12 @@ author: clearab
 description: 了解 Microsoft 团队客户端中适用于你的应用的扩展点。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1db9b6828ef8a4e186160351b90c01f253df552d
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 0624aefa7873678b1d69c1d5796340cdac69c381
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034027"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867130"
 ---
 # <a name="extensible-points-in-the-teams-client"></a>团队客户端中的可扩展点
 
@@ -29,7 +29,7 @@ ms.locfileid: "43034027"
 
 * [**Webhook 和连接器**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)，使外部服务能够将邮件发布到对话，以及向您的用户发送邮件到您的服务。 您可以利用卡片和卡片操作来创建丰富的可操作邮件。
 
-### <a name="personal-apps"></a>个人应用程序
+### <a name="personal-apps"></a>个人应用
 
 [个人应用](~/concepts/design/personal-apps.md)是团队应用中重点关注与单个用户的交互的部分。 每个用户的体验各不相同。 你的应用程序的此部分可以固定到左导航滑轨，为你的用户启用一次单击访问。
 
@@ -65,7 +65,7 @@ ms.locfileid: "43034027"
 
 ### <a name="task-modules"></a>任务模块
 
-[任务模块](~/task-modules-and-cards/what-are-task-modules.md)使您能够在团队应用程序中创建模式弹出窗口体验。 在弹出式菜单中，您可以运行自己的自定义 HTML/JavaScript 代码`<iframe>` ，显示小部件（如 YouTube 或 Microsoft Stream 视频）或显示自适应卡片。 它们在启动和完成任务或显示丰富的信息（如视频或 Power BI 仪表板）时尤其有用。 与选项卡或基于对话的 bot 体验相比，启动和完成任务的用户的弹出体验通常更为自然。
+[任务模块](~/task-modules-and-cards/what-are-task-modules.md)使您能够在团队应用程序中创建模式弹出窗口体验。 在弹出式菜单中，您可以运行自己的自定义 HTML/JavaScript 代码，显示 `<iframe>` 小部件（如 YouTube 或 Microsoft Stream 视频）或显示自适应卡片。 它们在启动和完成任务或显示丰富的信息（如视频或 Power BI 仪表板）时尤其有用。 与选项卡或基于对话的 bot 体验相比，启动和完成任务的用户的弹出体验通常更为自然。
 
 ### <a name="deep-links"></a>深度链接
 
@@ -76,5 +76,5 @@ ms.locfileid: "43034027"
 [Web 内容页](~/tabs/how-to/create-tab-pages/content-page.md)是可嵌入到选项卡或任务模块中的承载的网页。 若要使您的网页嵌入 Microsoft 团队客户端，必须执行以下操作：
 
 * 在 HTTPS 上托管。
-* 能够`<iframe>`由团队客户端嵌入。
-* 包括 Microsoft 团队 JavaScript 客户端 SDK，并在页面加载时`initialize()`调用 SDK 的方法。
+* 能够 `<iframe>` 由团队客户端嵌入。
+* 包括 Microsoft 团队 JavaScript 客户端 SDK，并 `initialize()` 在页面加载时调用 SDK 的方法。
