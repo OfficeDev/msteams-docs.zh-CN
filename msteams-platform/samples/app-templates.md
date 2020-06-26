@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
-ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
+ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
+ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44873395"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888798"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -131,7 +131,7 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 >
 > &#x2714; 跟踪 Q&的修订历史记录。
 >
-> &#x2714; 配置包含其他详细信息的答案以显示为[自适应卡片](/task-modules-and-cards/cards/cards-reference#adaptive-card)。
+> &#x2714; 配置包含其他详细信息的答案以显示为[自适应卡片](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 >
 [**在 GitHub 上获取它**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -296,5 +296,22 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![列表搜索应用程序](../assets/images/list-search-template.png)
+
+## <a name="workplace-awards-9734"></a>工作场所奖项 &#9734;
+
+Workplace 奖项是一个团队应用程序模板，它提供了积极的框架来促进认可，并鼓励新式工作场所的员工感谢文化。 此应用程序使您能够设置和管理员工奖励和表彰（R&R）计划，在该计划中，员工可以轻松地提名和签署同事，而您的 R&R 主持人可以查看提交的 nominations、授予奖项并通知收件人。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+
+:::row:::
+  :::column span="2":::
+    ![Workplace 大奖提名卡片 ](../assets/images/workplace-awards-nominate.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![工作场所奖项列表选项卡](../assets/images/workplace-awards-champion-tab.png)
+:::column-end:::
+:::row-end:::
 
 您想要查看的应用程序模板有什么想法？ [请告知我们](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
