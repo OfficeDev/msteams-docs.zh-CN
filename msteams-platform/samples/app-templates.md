@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
-ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
+ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
+ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44888798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44943807"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -136,6 +136,23 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 [**在 GitHub 上获取它**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ 加 gif](../assets/images/FAQPlusEndUser.gif)
+
+## <a name="goal-tracker-9734"></a>目标跟踪程序 &#9734;
+
+目标跟踪器应用程序是组织的一个综合解决方案，可帮助您在 Microsoft 团队中实现目标、观察进度和确认成功。 该应用程序使用户能够在专业、个人和团队级别上设置、跟踪和更新目标。 团队成员还会收到及时提醒和状态更新，以保持重点并保持跟踪。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+
+:::row:::
+  :::column span="2":::
+    ![设置目标](../assets/images/goal-tracker-set-goals-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![查看设置目标](../assets/images/goal-tracker-your-goals-view.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="group-activities"></a>组活动
 
@@ -287,6 +304,14 @@ Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 
 ![Scrums 的分组讨论演示](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
+## <a name="share-now-9734"></a>立即共享 &#9734;
+
+"立即共享" 应用通过使您的用户能够轻松地在团队环境中共享内容来促进同事之间的信息交换。 用户可让应用与团队成员共享感兴趣的项目、发现新的共享内容、设置首选项以及书签收藏夹以供以后阅读。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
+
+![选择内容视图](../assets/images/share-now-suggested-content.png)
+
 ## <a name="sharepoint-list-search"></a>SharePoint 列表搜索
 
 Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含的信息。 只需粘贴指向相关项目的链接，即可强制每个人都切换上下文以离开对话，查找所需的信息，然后返回到团队以继续进行对话。 随着对话的持续不断，人们通常需要多次切换回参考项目，以验证新注释并刷新项目中包含的信息的记忆。 此上下文切换为平滑协作创建了一个障碍，并且是通过裂纹的方法实现的食谱。
@@ -296,6 +321,23 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![列表搜索应用程序](../assets/images/list-search-template.png)
+
+## <a name="visitor-management-9734"></a>访问者管理 &#9734;
+
+通过访问者管理应用，你的组织和员工可以直接从 Microsoft 团队轻松高效地管理现场访问者进程。 该应用程序使员工能够创建访问者请求，通过 "访问者" 仪表板集中跟踪请求状态，并在访问者到达时收到实时通知。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![创建请求视图](../assets/images/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![访问者到达通知](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="workplace-awards-9734"></a>工作场所奖项 &#9734;
 
