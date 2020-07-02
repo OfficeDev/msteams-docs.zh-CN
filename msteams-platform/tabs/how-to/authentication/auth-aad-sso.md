@@ -1,20 +1,20 @@
 ---
 title: 单一登录
 description: 介绍单一登录（SSO）
-keywords: 团队身份验证 SSO AAD
-ms.openlocfilehash: 8f9d94346aad7c096e4310f80b6cda73856afc8c
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+keywords: 团队身份验证 SSO AAD 单一登录 api
+ms.openlocfilehash: 849e2c357859a1e8980aaa4662a55319cd7b2493
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455511"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021600"
 ---
-# <a name="single-sign-on"></a>单一登录
+# <a name="single-sign-on-sso"></a>单一登录（SSO）
 
 > [!NOTE]
-> "单一登录" API 目前仅在_开发人员预览版_中受支持。
+> * 单一登录（SSO） API 在 web 和桌面上通常可用。 移动将很快推出。 在这种情况下，我们建议您在移动时正常回退到我们的[经典身份验证 API](auth-flow-tab.md) 。
 
-用户使用其工作或学校（Office 365）帐户登录 Microsoft 团队，您可以使用单一登录（SSO）对 Microsoft "团队" 选项卡上的用户进行授权，以利用这一点。这意味着，如果用户同意在桌面上使用您的应用程序，则无需再次在手机上同意，并且将自动登录。 
+用户通过其工作、学校或 Microsoft 帐户（Office 365、Outlook 等）登录 Microsoft 团队。 通过允许单一登录对桌面或移动客户端上的 Microsoft "工作组" 选项卡（或任务模块）进行授权，可以利用这一点。 因此，如果用户同意使用您的应用程序，则无需再次在其他设备上同意，它们将自动登录。 此外，我们还会预提取访问令牌，以提高性能和加载时间。
 
 ## <a name="how-sso-works-at-runtime"></a>运行时 SSO 的工作方式
 
@@ -22,91 +22,99 @@ ms.locfileid: "44455511"
 
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. 在 "" 选项卡中，JavaScript 调用 getAuthToken （）。 这将告知团队应用程序获取对选项卡应用程序的身份验证令牌。
-2. 如果这是当前用户第一次使用您的选项卡应用程序，则系统会提示他们同意（如果需要同意）或要求他们处理分步身份验证（如双重身份验证）。
-3. Microsoft 团队应用程序从 Azure AD v1.0 终结点请求当前用户的选项卡应用程序令牌。
+1. 在 "" 选项卡中，对进行了 JavaScript 调用 `getAuthToken()` 。 这将告知团队获取选项卡应用程序的身份验证令牌。
+2. 如果这是当前用户第一次使用您的选项卡应用程序，则会有请求提示（如果需要许可）或处理步骤验证（如双重身份验证）。
+3. 团队从当前用户的 Azure AD 终结点请求选项卡应用程序令牌。
 4. Azure AD 将选项卡应用程序令牌发送给团队应用程序。
-5. Microsoft 团队应用程序将选项卡应用程序令牌作为 getAuthToken （）调用返回的 result 对象的一部分发送到选项卡。
-6. 选项卡应用程序中的 JavaScript 可以分析令牌，并提取所需的信息，如用户的电子邮件地址。
-    * 注意：此令牌仅适用于同意一组有限的用户级 Api （ex：电子邮件、配置文件等），而不是对进一步的图表范围（如 Mail）有效。 如果你需要其他 Graph 作用域，请参阅本文档末尾的部分，了解建议的解决方法。
+5. 团队将选项卡应用程序令牌作为调用返回的 result 对象的一部分发送到选项卡 `getAuthToken()` 。
+6. 将通过 JavaScript 在选项卡应用程序中分析令牌，以提取所需的信息，如用户的电子邮件地址。
+
+> [!NOTE]
+> `getAuthToken()`仅适用于同意一组有限的用户级 api （电子邮件、配置文件、offline_access 和 OpenId），而不是对更多 Microsoft Graph 范围（例如或）有效 `User.Read` `Mail.Read` 。 如果你需要[其他 Graph 作用域](#apps-that-require-additional-microsoft-graph-scopes)，请参阅本文档末尾的部分，了解建议的解决方法。
+
+SSO API 也可在嵌入 web 内容的[任务模块](../../../task-modules-and-cards/what-are-task-modules.md)中运行。
 
 ## <a name="develop-an-sso-microsoft-teams-tab"></a>开发 SSO Microsoft 团队选项卡
 
-本节介绍创建使用 SSO 的 Microsoft "团队" 选项卡所涉及的任务。 其中介绍的这些任务与语言和框架无关。
+本节介绍创建使用 SSO 的 "团队" 选项卡所涉及的任务。 此处介绍了这些任务是语言和框架不可知的。
 
-### <a name="1-create-your-aad-application-in-azure"></a>1. 在 Azure 中创建 AAD 应用程序
+### <a name="1-create-your-azure-active-directory-azure-ad-application"></a>1. 创建 Azure Active Directory （Azure AD）应用程序
 
-在 Azure AD v1.0 终结点的注册门户中注册应用程序。 该流程用时 5-10 分钟，包括以下任务：
+在[AZURE AD 门户](https://azure.microsoft.com/features/azure-portal/)中注册应用程序。 该流程用时 5-10 分钟，包括以下任务：
 
-* 获取 AAD 应用程序 ID
-* 指定应用程序对 AAD 终结点（也可以选择向 Microsoft Graph）所需的权限。 
-* 向 Microsoft 团队桌面、web 和移动应用程序授予对应用程序的信任
-* 预授权将 Microsoft 团队应用程序与默认作用域名称为的应用程序结合使用 `access_as_user` 。
+1. 获取[AZURE AD 应用程序 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
+2. 指定应用程序需要的 Azure AD 终结点和 Microsoft Graph （可选）的权限。
+3. [授予](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)对团队桌面、web 和移动应用程序的权限。
+4. 预授权团队通过选择 "**添加范围**" 按钮，并在打开的面板中，输入 `access_as_user` 作为**作用域名称**。
 
 > [!NOTE]
 > 您应注意一些重要限制：
 >
-> * 仅支持用户级图形 API 权限，例如，电子邮件、配置文件、offline_access、openid。 如果需要访问其他图表范围，请阅读本文档末尾的建议解决方法。
-> * 您的应用程序的域名应注册到 Azure AD 应用程序，这一点很重要。 当在团队中请求身份验证令牌时，以及在团队清单中指定资源属性（下一节中的详细信息）时，此名称必须与应用程序运行的域名相同。
-> * 目前，每个应用程序不支持多个域
-> * 我们还不支持使用域的应用程序， `azurewebsites.net` 因为此域太常见，可能存在安全风险
+> * 仅支持用户级别的 Microsoft Graph API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果需要访问其他 Microsoft Graph 作用域（例如 `User.Read` 或 `Mail.Read` ），请参阅本文档末尾的[建议解决方法](#apps-that-require-additional-microsoft-graph-scopes)。
+> * 您的应用程序的域名与您为 Azure AD 应用程序注册的域名称相同，这一点很重要。
+> * 目前，我们不支持每个应用的多个域。
+> * 我们不支持使用域的应用程序， `azurewebsites.net` 因为它太常见，可能存在安全风险。 但是，我们正在努力删除此限制。
 
 #### <a name="steps"></a>步骤
 
-1. 在 Azure Active Directory 中注册新应用程序[–应用注册](https://go.microsoft.com/fwlink/?linkid=2083908)门户
-2. 选择 "新注册"。 在 "注册应用程序" 页上，按如下所示设置值：
-    * 将**名称**设置为您的应用程序名称
-    * 将**支持的帐户类型**设置为**任何组织目录和个人 Microsoft 帐户中的帐户**
-    * 将**重定向 URI**留空
-    * 选择 "**注册**"
+1. 在[Azure Active Directory –应用程序注册](https://go.microsoft.com/fwlink/?linkid=2083908)门户中注册新的应用程序。
+2. 选择 "**新建注册**"，并在 "*注册应用程序" 页*上，设置以下值：
+    * 将**名称**设置为您的应用程序名称。
+    * 选择**受支持的帐户类型**（任何帐户类型将生效）¹
+    * 保留“重定向 URI”**** 为空。
+    * 选择“注册”****。
 3. 在 "概述" 页上，复制并保存**应用程序（客户端） ID**。 稍后在更新团队应用程序清单时，将需要它。
-4. 在“管理”**** 下选择“公开 API”****。 选择 "**设置**" 链接，以以的形式生成应用程序 ID URI `api://{AppID}` 。 在双正斜杠和 GUID 之间插入完全限定的域名（在末尾追加一个正斜杠 "/"）。 整个 ID 的形式应为：`api://fully-qualified-domain-name.com/{AppID}`
-    * 例如： `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7` 。
-
-> [!NOTE]
-> 如果收到一条错误，指出域已有所有者，但你拥有该域，请按照[快速入门： 将自定义域名添加到 Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain) 中的步骤进行操作来注册该域，然后重复此步骤。 （如果您未使用 Office 365 租赁中的管理员的凭据登录，也会发生此错误。
-
-5. 选择“添加一个作用域”**** 按钮。 在打开的面板中，输入 `access_as_user` 作为“作用域名称”****。
-6. 设置谁可以同意？为管理员和用户
-7. 填写用于配置管理员和用户同意提示的字段，其中包含适用于该范围的值 `access_as_user` 。 建议：
-    * **管理员同意职务：** 团队可以访问用户的配置文件
+4. 在“**管理**”下，选择“**公开 API**”。 
+5. 选择 "**设置**" 链接，以以的形式生成应用程序 ID URI `api://{AppID}` 。 在双正斜杠和 GUID 之间插入完全限定的域名（在末尾追加一个正斜杠 "/"）。 整个 ID 的形式应为： `api://fully-qualified-domain-name.com/{AppID}` ²
+    * 例如： `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` 。
+6. 选择“添加一个作用域”**** 按钮。 在打开的面板中，输入 `access_as_user` 作为“作用域名称”****。
+7. 设置**谁可以同意？** 若要`Admins and users`
+8. 填写用于配置管理员和用户同意提示的字段，其中包含适用于该范围的值 `access_as_user` ：
+    * **管理员同意职务：** 团队可以访问用户的配置文件。
     * **管理员同意说明**：允许团队以当前用户的身份调用应用程序的 web api。
-    * **用户同意标题**：团队可以访问您的用户配置文件并代表你发出请求
-    * **用户同意说明：** 使团队可以使用你拥有的相同权限调用此应用的 Api
-8. 确保将 "**状态**" 设置为 "**已启用**"
-9. 选择 "**添加范围**"
-    * 注意：在文本字段正下方显示的**范围名称**的域部分应自动与上一步中设置的**应用程序 ID** URI 进行匹配，并 `/access_as_user` 追加到结尾处; 例如： 
-        * `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7/access_as_user`
-10. 在 "**授权客户端应用程序**" 部分中，确定要授权给应用程序的 web 应用程序的应用程序。 需要输入以下每个 Id：
+    * **用户同意标题**：团队可以访问用户配置文件，并代表用户发出请求。
+    * **用户同意说明：** 使团队可以使用与用户相同的权限调用此应用的 Api。
+9. 确保将 "**状态**" 设置为 "**已启用**"
+10. 选择 "**添加范围**"
+    * 显示在文本字段正下方的**范围名称**的域部分应自动匹配上一步中设置的**应用程序 ID** URI，并 `/access_as_user` 追加到末尾：
+        * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
+11. 在 "**授权客户端应用程序**" 部分中，确定要为您的应用程序的 web 应用程序授权的应用程序。 需要输入以下每个 Id：
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`（团队移动/桌面应用程序）
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`（团队 web 应用程序）
-11. 导航到 " **API 权限**"，并确保添加 "关注" 权限：
+12. 导航到 " **API 权限**"，并确保添加 "关注" 权限：
     * User。 Read （默认情况下已启用）
     * email
     * offline_access
-    * openid
+    * OpenId
     * profile
+
+> [!NOTE]
+>
+> * ¹如果您的 Azure AD 应用注册到在团队中进行身份验证请求的_同一个_租户中，则不会要求用户同意并将立即被授予访问令牌。 如果 Azure AD 应用在其他租户中注册，则用户只需同意这些权限。
+> * ²如果你收到一条错误，指出域已拥有且你是所有者，请按照[以下过程操作：将自定义域名添加到 Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)以注册域，然后重复上面的步骤5。 （如果您未使用 Office 365 租赁中的管理员凭据登录，也会发生此错误）。
+> * 如果未在返回的访问令牌中接收 UPN （用户主体名称），则可以将其作为 Azure AD 中的[可选声明](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)进行添加。
 
 ### <a name="2-update-your-microsoft-teams-application-manifest"></a>2. 更新 Microsoft 团队应用程序清单
 
 将新属性添加到 Microsoft 团队清单：
 
-* **WebApplicationInfo** - 下列元素的父元素。
-* **Id** -应用程序的客户端 Id。 这是在使用 Azure AD 1.0 终结点注册应用程序的过程中获得的应用程序 ID。
-* **Resource** -应用程序的域和子域。 这是在 `api://` AAD 中注册应用时使用的 URI （包括协议）。 此 URI 的域部分应与在团队应用程序清单的部分的 Url 中使用的域（包括任何子域）相匹配。
+* **WebApplicationInfo** -以下元素的父元素：
+
+> [!div class="checklist"]
+> * **id** -应用程序的客户端 id。 这是您在向 Azure AD 注册应用程序的过程中获得的应用程序 ID。
+>* **resource** -应用程序的域和子域。 这是在 `api://` `scope` 上面的步骤6中创建时注册的相同 URI （包括协议）。 您不应 `access_as_user` 在资源中包含该路径。 此 URI 的域部分应与在团队应用程序清单的 Url 中使用的域（包括任何子域）相匹配。
 
 ```json
 "webApplicationInfo": {
-  "id": "<application_GUID here>",
-  "resource": "<web_API resource here>"
+  "id": "00000000-0000-0000-0000-000000000000",
+  "resource": "api://subdomain.example.com/00000000-0000-0000-0000-000000000000"
 }
 ```
 
-注意：
-
-* AAD 应用的资源通常只是其网站 URL 和 appID 的根（例如 `api://subdomain.example.com/6789/c6c1f32b-5e55-4997-881a-753cc1d563b7` ）。 我们还使用此值来确保你的请求来自同一个域。 Therefor 确保您 `contentURL` 的选项卡使用与您的资源属性相同的域。
-* 您需要使用清单版本1.5 或更高版本，才能使用这些字段。
-* 清单在清单中不受支持，而是应在 Azure 门户中的 API 权限部分中指定。
+> [!NOTE]
+>
+>* AAD 应用的资源通常是其网站 URL 和 appID 的根（例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ）。 我们还使用此值来确保你的请求来自同一个域。 因此，请确保 `contentURL` 选项卡使用与资源属性相同的域。
+>* 您需要使用清单版本1.5 或更高版本来实现 `webApplicationInfo` 字段。
 
 ### <a name="3-get-an-authentication-token-from-your-client-side-code"></a>3. 从客户端代码中获取身份验证令牌
 
@@ -122,21 +130,27 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 当你拨打 `getAuthToken` 并需要其他用户同意时（对于用户级权限），我们将向用户显示一个对话框，让他们鼓励他们授予额外的许可。 
 
-<img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
+收到成功回调中的访问令牌后，可以对访问令牌进行解码，以查看与该令牌关联的声明。 （可选）您可以手动将访问令牌复制/粘贴到工具（如[JWT.io](https://jwt.io/) ），以检查其内容。 如果未在返回的访问令牌中接收 UPN （用户主体名称），则可以将其作为 Azure AD 中的[可选声明](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)进行添加。
 
-## <a name="demo-code"></a>演示代码
+<p>
+    <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
+</p>
 
-现在，您可以访问我们的测试应用程序[任务 Meow](https://github.com/ydogandjiev/taskmeow) ，并使用 SSO 清单并签出 `teams.auth.service.js` 和 `sso.auth.service.js` 文件，以查看如何处理身份验证工作流。
+## <a name="sample-code"></a>示例代码
+
+请访问我们的示例应用程序： [MSTeams 选项卡 SSO 示例-Nodejs](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs)
+
+该自述文件介绍如何设置开发环境以及如何在 Azure AD 中配置应用程序。 您还可以进一步了解如何在[应用程序结构部分](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure)中对示例进行构造，以帮助熟悉基本代码。
 
 ## <a name="known-limitations"></a>已知限制
 
-### <a name="apps-that-require-additional-graph-scopes"></a>需要其他图表范围的应用程序
+### <a name="apps-that-require-additional-microsoft-graph-scopes"></a>需要其他 Microsoft Graph 作用域的应用程序
 
-我们目前的 SSO 实施仅授予用户级权限（电子邮件、配置文件、offline_access、openid）的同意，而不授予对其他 Api （如 Mail）的同意。 如果您的应用程序需要更多图形范围，则有一些解决办法可实现此工作。
+我们目前的 SSO 实施仅授予用户级权限（电子邮件、配置文件、offline_access、OpenId）的同意，而不是其他 Api （如用户阅读或阅读邮件）。 如果您的应用程序需要更多 Microsoft Graph 作用域，下面是一些启用解决方法：
 
 #### <a name="tenant-admin-consent"></a>租户管理员同意
 
-最简单的方法是，让租户管理员代表组织进行预先同意。 这意味着用户无需同意这些作用域，然后可以使用 AAD 的[代表流](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)来免费交换令牌服务器端。 这种解决方法对于内部业务线应用程序是可接受的，但对于可能无法依赖租户管理员批准的 Isv 来说可能不够。
+最简单的方法是让租户管理员代表组织进行预先同意。 这意味着用户无需同意这些作用域，您就可以使用 Azure AD 的[代表流](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)来交换令牌服务器端。 这种解决方法对于内部业务线应用程序是可接受的，但对于可能无法依赖租户管理员批准的第三方开发人员来说可能不够。
 
 同意代表组织（作为租户管理员）的一种简单方法是访问：
 
@@ -144,18 +158,18 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 #### <a name="asking-for-additional-consent-using-the-auth-api"></a>使用 Auth API 请求其他许可
 
-获取其他图表范围的另一种方法是，使用现有的[基于 web 的 aad 身份验证方法](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)呈现许可对话，这涉及弹出 AAD 同意对话框。 有一些显著的添加：
+获取其他 Microsoft Graph 作用域的另一种方法是，使用现有的[基于 web 的 AZURE ad 身份验证方法](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)呈现许可对话，这涉及弹出 Azure ad 同意对话框。 有一些显著的添加：
 
-1. 使用 getAuthToken 检索到的令牌需要使用 AADs[代表流](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)进行交换，以获取对这些其他图形 api 的访问权限。
-    * 请务必将 v2 Graph 终结点用于此 exchange
-2. 如果 exchange 失败，AAD 将返回无效的授予异常。 通常有以下两种错误消息 `ConsentRequired` 之一：`InteractionRequired`
-3. 当 exchange 发生故障时，您需要请求其他许可。 建议显示一些 UI，要求用户授予更多许可。 此 UI 应包含使用我们的[AAD 身份验证 API](~/concepts/authentication/auth-silent-aad.md)触发 aad 同意对话的按钮。
-4. 当询问来自 AAD 的其他许可时，您需要将 `prompt=consent` [查询字符串参数](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)包括在您的 aad 中，否则 aad 将不会询问其他作用域。
+1. `getAuthToken()`需要使用 AZURE AD[代表流](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)交换服务器端检索的令牌，以获取对这些额外 Microsoft Graph api 的访问权限。
+    * 请务必将 v2 Microsoft Graph 终结点用于此 exchange
+2. 如果 exchange 发生故障，Azure AD 将返回无效的授予异常。 通常有以下两种错误消息 `invalid_grant` 之一：`interaction_required`
+3. 当 exchange 发生故障时，您需要请求其他许可。 建议显示一些 UI，要求用户授予更多许可。 此 UI 应包括使用我们的[AZURE ad 身份验证 API](~/concepts/authentication/auth-silent-aad.md)触发 azure ad 许可对话的按钮。
+4. 当询问 Azure AD 的其他许可时，您需要将 `prompt=consent` [查询字符串参数](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)包括在 azure ad 中，否则 azure ad 将不会要求提供其他作用域。
     * 而不是：`?scope={scopes}`
     * 使用以下命令：`?prompt=consent&scope={scopes}`
     * 确保 `{scopes}` 包含要提示用户的所有作用域（例如： Mail. read 或 user. read）。
 5. 一旦用户授予了其他权限，则重试代表流，以获取对这些附加 Api 的访问权限。
 
-### <a name="non-aad-authentication"></a>非 AAD 身份验证
+### <a name="non-azure-ad-authentication"></a>非 Azure AD 身份验证
 
-以上所述的身份验证解决方案仅适用于支持 Azure AD 作为标识提供程序的应用程序和服务。 若要使用基于非 AAD 的服务进行身份验证的应用程序，需要继续使用基于弹出窗口的[web 身份验证流](~/concepts/authentication.md)。
+以上所述的身份验证解决方案仅适用于支持 Azure AD 作为标识提供程序的应用程序和服务。 要使用基于非 Azure AD 的服务进行身份验证的应用程序需要继续使用基于弹出窗口的[web 身份验证流](~/concepts/authentication.md)。

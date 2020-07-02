@@ -2,12 +2,12 @@
 title: 选项卡的设计准则
 description: 介绍为内容和协作创建选项卡的准则
 keywords: 团队设计指南参考框架选项卡配置
-ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914551"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021613"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
 
@@ -23,8 +23,8 @@ ms.locfileid: "43914551"
 >
 > **移动设备上的频道/组（可配置）选项卡：**
 >
-> * 移动客户端仅显示具有值的`websiteUrl`选项卡。 如果希望您的选项卡显示在团队移动客户端上，则必须设置的`websiteUrl`值。
-> * 移动上的默认打开行为是使用在浏览器中的`websiteUrl`外部打开。 对于发布到公用应用商店的应用程序，如果您希望频道选项卡在默认情况下在团队内打开，请遵循[移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md)，并转到您的支持代表以请求列入白名单。
+> * 移动客户端仅显示具有值的选项卡 `websiteUrl` 。 如果希望您的选项卡显示在团队移动客户端上，则必须设置的值 `websiteUrl` 。
+> * 移动上的默认打开行为是使用在浏览器中的外部打开 `websiteUrl` 。 对于发布到公用应用商店的应用程序，如果您希望频道选项卡在默认情况下在团队内打开，请遵循[移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md)，并转到您的支持代表以请求列入白名单。
 
 选项卡是可用于在团队的随机工作流中共享内容、举行对话和托管第三方服务的画布。 当您在 Microsoft 团队中构建一个选项卡时，它会将 web 应用程序的前端和中心放置在易于从关键对话中访问的位置。
 
@@ -80,7 +80,7 @@ ms.locfileid: "43914551"
 合并自己的颜色和布局 twill 也有助于传达个性。
 
 > [!TIP]
-> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。 *请参阅*（例如 [团队颜色] （/concepts/design/components/typography.md
+> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。 *请参阅*示例[团队颜色](../../concepts/design/components/color.md)
 
 ---
 
@@ -108,7 +108,7 @@ ms.locfileid: "43914551"
 ### <a name="guidelines-for-tab-configuration-page-format"></a>选项卡配置页面格式的准则
 
 * 使固定高度图形元素上的选项卡配置页的内容区域的最小高度为基准。
-* 使用`window.innerHeight`计算可用的垂直间距（配置页中的内容区域的高度）。 这将返回配置页面所`<iframe>`驻留的大小，在将来的版本中可能会发生更改。 通过使用此值，你的内容将自动调整为将来的更改。
+* 使用计算可用的垂直间距（配置页中的内容区域的高度） `window.innerHeight` 。 这将返回 `<iframe>` 配置页面所驻留的大小，在将来的版本中可能会发生更改。 通过使用此值，你的内容将自动调整为将来的更改。
 * 将垂直空间分配给可变高度元素减去固定高度元素所需的值。
 * 对于 "*登录*状态"，将内容垂直和水平居中。
 * 如果需要背景图像，您需要一个新图像，调整大小以适合该区域（首选），或者您可以保留相同的图像并在其中进行选择：
@@ -142,4 +142,4 @@ ms.locfileid: "43914551"
 > * **使用应用程序 api 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。*请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
 > * **使用 bot**。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
 
-  将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您`@mention`将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。
+  将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您 `@mention` 将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。

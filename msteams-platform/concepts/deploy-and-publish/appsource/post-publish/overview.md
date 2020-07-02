@@ -2,20 +2,20 @@
 title: 发布发布
 description: 发布应用程序后要执行的操作
 keywords: 团队发布更新证书
-ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 887e18ac7e27cf12aa4319ac240e42f21f05fd75
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021571"
 ---
 # <a name="maintain-and-support-your-published-app"></a>维护和支持您发布的应用程序 
 
-在应用程序获得批准并在公用应用程序目录中列出后，可以通过实现应用程序证书或添加网站的 "下载" 按钮来增加您的访问范围。
+在应用程序获得批准并在公用应用程序目录中列出后，可以通过完成 Microsoft 365 应用合规性计划或在网站上添加 "下载" 按钮来提高您的访问范围。
 
-## <a name="application-certificate"></a>应用程序证书
+## <a name="m365-certified"></a>M365 认证
 
-Microsoft 提供了[应用程序认证计划](./application-certification.md)，用于编译应用程序信息，并将其呈现在[Microsoft 团队应用程序安全性和合规性页面](https://aka.ms/AppCertification)上。 此信息旨在帮助管理员选择对其组织而言是安全的应用程序。
+[Microsoft 365 应用合规性计划](./application-certification.md)是一种用于应用程序安全性和合规性的三层方法。 每个层都基于下一个分层计划，以满足客户的需求。 您可以通过访问[合规性页面](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)来了解有关团队应用程序的安全和合规性状况的详细信息。
 
 ## <a name="add-a-download-button-to-your-product-site"></a>将 "下载" 按钮添加到产品网站
 
