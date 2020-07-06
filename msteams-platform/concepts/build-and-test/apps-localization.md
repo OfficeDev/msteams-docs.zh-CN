@@ -3,12 +3,12 @@ title: 工作组应用程序的本地化
 description: 介绍有关本地化应用程序的问题
 keywords: 团队发布 microsoft store office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: 30e4a2589bf5c1093723406c78cff2258554c486
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: 138b6d66808fc5ed212f1cb0eed8579faea6f764
+ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44590856"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45039270"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft 团队应用程序的本地化
 
@@ -40,13 +40,13 @@ ms.locfileid: "44590856"
 
 ## <a name="localizing-the-strings-in-your-app-manifest"></a>本地化应用程序清单中的字符串
 
-您必须使用 Microsoft 团队应用程序架构 v1.0 + 以正确本地化您的应用程序。 为此，可以将 `$schema` 清单. json 文件中的属性设置为 " https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json "，并将 "manifestVersion" 属性更新为 "1.5"。
+您必须使用 Microsoft 团队应用程序架构 v1.0 + 以正确本地化您的应用程序。 为此，可以将 `$schema` manifest.js的文件中的属性设置为 " https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json "，并将 "manifestVersion" 属性更新为 "1.7"。
 
-### <a name="example-manifestjson-change"></a>示例清单 json 更改
+### <a name="example-manifestjson-change"></a>更改 manifest.js示例
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json",
   "manifestVersion": "1.5",
   ...
 }
@@ -54,7 +54,7 @@ ms.locfileid: "44590856"
 
 然后，您需要使用您的应用程序支持的默认语言添加 "localizationInfo" 属性。 如果用户的客户端设置与任何其他语言都不匹配，则将默认语言用作最终回退语言。
 
-### <a name="example-manifestjson-change"></a>示例清单 json 更改
+### <a name="example-manifestjson-change"></a>更改 manifest.js示例
 
 ```json
 {
@@ -84,7 +84,7 @@ ms.locfileid: "44590856"
 
 因此，强烈建议在清单中提供顶级的纯语言翻译（"en"，而不是 "en-us"），并仅为需要它们的少数几个字符串提供区域级别的重写。
 
-### <a name="example-manifestjson-change"></a>示例清单 json 更改
+### <a name="example-manifestjson-change"></a>更改 manifest.js示例
 
 ```json
 {
@@ -114,7 +114,7 @@ ms.locfileid: "44590856"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json",
   "name.short": "Le App",
   "name.full": "App pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App.",
