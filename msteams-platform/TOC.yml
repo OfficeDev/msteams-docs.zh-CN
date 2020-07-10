@@ -7,7 +7,7 @@
       href: whats-new.md
 - name: 教程和代码示例
   items:
-    - name: '使用 C# 创建应用'
+    - name: 使用 C# 创建应用
       href: tutorials/get-started-dotnet-app-studio.md
     - name: 使用节点创建应用
       href: tutorials/get-started-nodejs-app-studio.md
@@ -15,12 +15,16 @@
       href: tutorials/get-started-yeoman.md
     - name: 使用自定义应用扩展 Teams 客户端
       href: tutorials/code-samples.md
-- name: 应用模板和集成
+- name: 模板和集成
   items:
     - name: 生产准备就绪的应用模板
       href: samples/app-templates.md
     - name: 生产准备就绪的排班连接器
       href: samples/shifts-wfm-connectors.md
+    - name: Microsoft Teams 工具包扩展
+      items:
+        - name: "适用于 Visual\_Studio\_Code 的 Teams 工具包扩展"
+          href: toolkit/visual-studio-code-overview.md
 - name: 概念
   expanded: true
   items:
@@ -112,13 +116,13 @@
               href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
             - name: 创建个人选项卡
               href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 'C#/ASP.NET Core'
+        - name: C#/ASP.NET Core
           items:
             - name: 创建频道和群组选项卡
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
             - name: 创建个人选项卡
               href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 'C#/ASP.NET MVC'
+        - name: C#/ASP.NET MVC
           items:
             - name: 创建频道和群组选项卡
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
@@ -171,7 +175,7 @@
       href: bots/bot-basics.md
     - name: 快速入门
       items:
-        - name: 'C# 中的 Teams 对话机器人'
+        - name: C# 中的 Teams 对话机器人
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot'
         - name: JavaScript 中的 Teams 对话机器人
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot'
@@ -248,13 +252,13 @@
       items:
         - name: 使用操作命令
           items:
-            - name: 'C#/.NET'
+            - name: C#/.NET
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
             - name: TypeScript/Node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
         - name: 使用搜索命令
           items:
-            - name: 'C#/.NET'
+            - name: C#/.NET
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
             - name: TypeScript/Node.js
               href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
