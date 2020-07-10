@@ -1,19 +1,19 @@
 ---
-title: 使用团队客户端 SDK
+title: 使用 Teams 客户端 SDK
 author: laujan
 description: 如何使用团队客户端 SDK 向自定义选项卡添加团队感知功能
 keywords: 团队选项卡组频道可配置静态 SDK JavaScript 个人
 ms.topic: conceptual
-ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: 07903d766ac67f2dbc9fc09268618ac5c2ae33c2
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928508"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091296"
 ---
-# <a name="using-the-teams-client-sdk"></a>使用团队客户端 SDK
+# <a name="using-the-teams-client-sdk"></a>使用 Teams 客户端 SDK
 
-**团队 javascript 客户端 SDK**和**团队 Javascript 库**是[Microsoft 团队开发人员平台](https://msdn.microsoft.com/microsoft-teams)的一部分，提供了用于简化团队应用程序创建的工具和过程。 团队客户端 SDK 作为 npm 包进行分发。 可在以下位置找到最新版本<https://www.npmjs.com/package/@microsoft/teams-js>：。 团队库位于<https://github.com/OfficeDev/microsoft-teams-library-js>。
+**团队 javascript 客户端 SDK**和**团队 Javascript 库**是[Microsoft 团队开发人员平台](/microsoftteams/platform/)的一部分，提供了用于简化团队应用程序创建的工具和过程。 团队客户端 SDK 作为 npm 包进行分发。 可在以下位置找到最新版本： <https://www.npmjs.com/package/@microsoft/teams-js> 。 团队库位于 <https://github.com/OfficeDev/microsoft-teams-library-js> 。
 
 下表概述了在选项卡开发中通常使用的团队库函数：
 

@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
-ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
+ms.openlocfilehash: 7e818f18e97da71fee0f51bd7502bedf2de3d465
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44943807"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091319"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -49,7 +49,7 @@ ms.locfileid: "44943807"
 
 ## <a name="book-a-room"></a>会议室
 
-会议室是[Microsoft 团队 bot](../bots/what-are-bots.md) ，可让用户快速查找和保留从当前时间起30（默认）、60或90分钟的会议室。 书籍-会议室的 bot 作用域到个人或1:1 对话。
+会议室是[Microsoft 团队的 bot](../bots/what-are-bots.md) ，可让用户快速查找和保留从当前时间开始的 30 (默认) 、60或90分钟的会议室。 书籍-会议室的 bot 作用域到个人或1:1 对话。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
@@ -77,7 +77,7 @@ Celebrations 是一种团队应用，可帮助工作组成员庆祝他人的生�
 
 ## <a name="contact-group-lookup-9734"></a>联系人组查找 &#9734;
 
-联系人组查找应用程序为创建、访问和管理组织的联系人组（以前称为通讯组列表或通讯组）提供了一种便利且有用的方法。 用户可以快速查看和聊天组成员、查看成员状态以及创建与联系人组中所选成员的组聊天，这一切都在团队环境中。
+联系人组查找应用程序提供了一种方便且有用的方法，可用于创建、访问和管理组织的联系人组 (以前称为通讯组列表或通信组) 。 用户可以快速查看和聊天组成员、查看成员状态以及创建与联系人组中所选成员的组聊天，这一切都在团队环境中。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
 
@@ -154,6 +154,23 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 :::column-end:::
 :::row-end:::
 
+## <a name="great-ideas-9734"></a>&#9734; 的好主意
+
+出色的创意应用程序支持和实现贵组织内的创新和创造力。 该应用程序使员工能够与同事和领导共享想法、发现新的报送、对同行注意事项的聚光灯贡献，以及在 Microsoft 团队中的最佳建议中对其投票进行了转换。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
+
+:::row:::
+  :::column span="2":::
+    ![查看已提交的观点](../assets/images/great-ideas-all-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![查看想法](../assets/images/great-ideas-digest-view.png)
+:::column-end:::
+:::row-end:::
+
 ## <a name="group-activities"></a>组活动
 
 组活动是 Microsoft 团队应用程序，使团队所有者可以轻松地在 Microsoft 团队的上下文中快速创建活动组和管理协作工作流。 启用活动作者以创建活动，在组中随机分发工作组成员，以及在活动完成之前，可以选择让 bot 发送提醒。
@@ -168,6 +185,23 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 :::row:::
 :::column span="2":::
     ![在频道中对活动通知邮件进行分组](../assets/images/group-activities-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="grow-your-skills-9734"></a>扩大你的技能 &#9734;
+
+成长技能应用程序通过使员工能够参与组织的补充项目并同时学习新技能，从而支持专业发展和开发。 员工可以使用该应用找到满足其利益的商机，享受与同行的有意义的协作，并在团队环境中获得新的专业技能和功能级别。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
+
+:::row:::
+  :::column span="2":::
+    ![可用项目视图](../assets/images/grow-your-skills-all-projects-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![查看者获取的技能视图](../assets/images/grow-your-skills-acquired-skills-view.png)
 :::column-end:::
 :::row-end:::
 
@@ -233,7 +267,7 @@ Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 
 ## <a name="quick-responses"></a>快速响应
 
-快速响应是 Microsoft 团队应用程序，它为有效回答用户的常见问题（Faq）提供了一个强健的解决方案。 应用程序将通过团队[消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)构建一个响应库，以获取交互式用户体验的响应库，而不是手动应答每个查询。
+快速响应是 Microsoft 团队应用程序，它提供了一个强大的解决方案，可有效地回答用户的常见问题 (Faq) 。 应用程序将通过团队[消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)构建一个响应库，以获取交互式用户体验的响应库，而不是手动应答每个查询。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
@@ -322,6 +356,14 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 ![列表搜索应用程序](../assets/images/list-search-template.png)
 
+## <a name="staff-check-ins-9734"></a>人员签入 &#9734;
+
+"员工签入" 是基于[Power Apps](/powerapps/powerapps-overview)的应用程序，它能够在您的业务和现场人员之间监督交流。 员工可以直接从团队的计划或临时提供时间关键型信息和状态更新。 该应用支持实时位置、照片和笔记以及提醒通知和自动工作流。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
+
+![创建签入视图](../assets/images/staff-check-ins-create.png)
+
 ## <a name="visitor-management-9734"></a>访问者管理 &#9734;
 
 通过访问者管理应用，你的组织和员工可以直接从 Microsoft 团队轻松高效地管理现场访问者进程。 该应用程序使员工能够创建访问者请求，通过 "访问者" 仪表板集中跟踪请求状态，并在访问者到达时收到实时通知。
@@ -341,7 +383,7 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 ## <a name="workplace-awards-9734"></a>工作场所奖项 &#9734;
 
-Workplace 奖项是一个团队应用程序模板，它提供了积极的框架来促进认可，并鼓励新式工作场所的员工感谢文化。 此应用程序使您能够设置和管理员工奖励和表彰（R&R）计划，在该计划中，员工可以轻松地提名和签署同事，而您的 R&R 主持人可以查看提交的 nominations、授予奖项并通知收件人。
+Workplace 奖项是一个团队应用程序模板，它提供了积极的框架来促进认可，并鼓励新式工作场所的员工感谢文化。 该应用程序使您能够设置和管理员工奖励和表彰 (R&R) 计划，在该计划中，员工可以轻松地提名和签署同事，而您的 R&R 负责人可以查看提交的 nominations、授予奖项并通知收件人。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
 
