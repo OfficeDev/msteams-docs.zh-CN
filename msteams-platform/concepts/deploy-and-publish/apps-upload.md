@@ -2,12 +2,12 @@
 title: 在 Microsoft 团队中上传自定义应用程序
 description: 介绍如何在 Microsoft 团队中上传您的应用程序
 keywords: 团队应用上传
-ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: c130ef48d3ad7476de9ca5afeb7b613197c43f18
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453880"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103024"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>将一个应用程序包上传到 Microsoft Teams
 
@@ -18,7 +18,7 @@ ms.locfileid: "44453880"
 
 ## <a name="create-your-upload-package"></a>创建你的上载包
 
-对于开发和 AppSource （以前称为 "Office 应用商店"）提交，您必须创建一个 uploadable 程序包，其中包含描述您的体验的信息。 该包（.zip 文件）包含应用程序清单和用于唯一定义您的体验的图标。
+对于开发和 AppSource (以前的 Office 应用商店) 提交，您必须创建一个 uploadable 程序包，其中包含描述您的体验的信息。 该包（.zip 文件）包含应用程序清单和用于唯一定义您的体验的图标。
 
 若要创建上载包，请参阅为[Microsoft 团队应用程序创建程序包](../build-and-test/apps-package.md)。
 
@@ -53,7 +53,7 @@ ms.locfileid: "44453880"
 
 ## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>使用 "应用程序" 选项卡将您的包上传到团队
 
-1. 在目标团队中，选择 "*更多选项*（**&#8943;**）"，然后选择 "*管理团队*"。
+1. 在目标团队中，选择 "*更多选项*" (**&#8943;** ") "，然后选择 "*管理团队*"。
 
    > [!NOTE]
    > 您必须是团队所有者，或者所有者必须允许用户添加相应的应用程序类型，才能显示此功能。
@@ -74,7 +74,7 @@ ms.locfileid: "44453880"
 
 如果应用程序包含选项卡，则用户可以使用标准的选项卡库流将它们固定到任何对话或团队频道：
 
-1. 转到团队中的频道。 选择 *+* 现有选项卡右侧的 *"（添加选项卡*）"。
+1. 转到团队中的频道。 选择 *+* (*将选项卡添加*) 在现有选项卡的右侧。
 
 2. 从显示的库中选择您的选项卡。
 
@@ -98,9 +98,9 @@ ms.locfileid: "44453880"
 
 在团队或对话中加载应用程序后，用户可以使用标准的 "连接器" 库流设置连接器：
 
-1. 转到团队中的频道。 选择 "*更多选项*（*&#8943;*）"，然后选择 "*连接器*"。
+1. 转到团队中的频道。 选择 "*更多选项*" (*&#8943;*) 然后选择 "*连接器*"。
 
-2. 从底部的 "**上传**" 部分选择连接器。
+2. 从底部的 "**旁加载**" 部分选择连接器。
 
 3. 通过[配置页面](../../webhooks-and-connectors/how-to/connectors-creating.md)配置连接器，然后选择 "*保存*"。
 
@@ -108,7 +108,7 @@ ms.locfileid: "44453880"
 
 ## <a name="accessing-your-uploaded-messaging-extension"></a>访问上载的邮件扩展插件
 
-带有邮件扩展功能的已上载应用程序将自动显示在 "撰写" 框中的 "*更多选项*（*&#8943;*）" 菜单中。
+带有邮件扩展功能的已上载应用程序将自动显示在 "撰写" 框中 (*&#8943;*) "菜单中的"*更多选项*"中。
 
 ![消息传递扩展](../../assets/images/compose-extensions/cesampleapp.png)
 
@@ -116,7 +116,7 @@ ms.locfileid: "44453880"
 
 如果要删除您的应用程序，请在 "查看团队 bot" 列表中选择应用程序名称旁边的 "垃圾桶" 图标。
 
-如果您更改了清单信息，则必须先删除该应用程序，然后再添加更新的程序包（每次将[您的包加载到团队中](#load-your-package-into-teams)）。 请注意，通常情况下，您的服务上的代码更改不需要重新上载清单，除非这些更改需要清单更新（例如，对 URL 或其 bot 的 Microsoft 应用 ID 所做的更改）。
+如果更改了清单信息，则必须先删除该应用程序，然后将更新的包 (添加到团队) 中的每个[加载包中](#load-your-package-into-teams)。 请注意，通常情况下，您的服务上的代码更改不要求您重新上载清单，除非这些更改需要清单更新 (例如，对其 bot 的 URL 或 Microsoft app ID 的更改) 。
 
 > [!NOTE]
 > 无法从个人上下文中完全删除机器人。 如果卸载并重新添加了 bot，则与 bot 的其他通信将追加到之前的会话中。

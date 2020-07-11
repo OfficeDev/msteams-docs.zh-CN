@@ -2,12 +2,12 @@
 title: 为 Microsoft 团队注册呼叫和会议机器人
 description: 了解如何为 Microsoft 团队注册新的音频/视频呼叫机器人
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: 9a246c9b1a5aae230881b468afef6c205d5bdecf
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 9b932e6a330b495aef97e65c7bb1f297fdfc1336
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801006"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103003"
 ---
 # <a name="registering-a-calling-bot-for-microsoft-teams"></a>为 Microsoft 团队注册呼叫机器人
 
@@ -37,7 +37,7 @@ ms.locfileid: "44801006"
 在 "[创建 Microsoft 团队的 bot](../how-to/create-a-bot-for-teams.md) " 主题中将更详细地介绍了如何创建新的 bot，但我们将在此处重复执行以下操作：
 
 1. 使用此链接可创建新的 bot： `https://dev.botframework.com/bots/new` 。 如果改为在 Bot 框架门户中选择 "*创建机器人*" 按钮，则会在 Microsoft Azure 中创建你需要 Azure 帐户的你的 bot。
-1. 添加 Microsoft 团队频道。 单击 "Microsoft 团队频道" 页面上的 "通话" 选项卡，选择 "**启用呼叫**"，然后使用你的 HTTPS URL 更新**Webhook （用于呼叫）** ，你将收到传入通知（例如，） `https://contoso.com/teamsapp/api/calling` 。 有关如何配置频道的详细信息，请参阅[配置频道](/bot-framework/portal-configure-channels)。
+1. 添加 Microsoft 团队频道。 单击 "Microsoft 团队频道" 页面上的 "通话" 选项卡，然后选择 "**启用呼叫**"，然后使用你将接收传入通知的 HTTPS URL 更新**Webhook () ** （例如， `https://contoso.com/teamsapp/api/calling` ）。 有关如何配置频道的详细信息，请参阅[配置频道](/bot-framework/portal-configure-channels)。
   ![配置 Microsoft 团队频道信息](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 ## <a name="add-microsoft-graph-permissions"></a>添加 Microsoft Graph 权限
@@ -66,7 +66,7 @@ Microsoft Graph 公开了控制应用程序对资源的访问权限的精细权�
 
 ### <a name="assigning-permissions"></a>分配权限
 
-你必须提前为你的 bot 配置应用程序权限。 我们建议使用[Microsoft 应用注册门户](https://apps.dev.microsoft.com/) [，如下所述，](/graph/docs/concepts/auth_register_app_v2)因为它是配置机器人的地方;但是，如果您更喜欢使用[AZURE AD V1 终结点](/azure/active-directory/develop/azure-ad-endpoint-comparison)，仍可以使用[azure 门户](https://aka.ms/aadapplist)。
+你必须提前为你的 bot 配置应用程序权限。 我们建议使用[Microsoft 应用注册门户](https://apps.dev.microsoft.com/) [，如下所述，](/graph/auth_register_app_v2)因为它是配置机器人的地方;但是，如果您更喜欢使用[AZURE AD V1 终结点](/azure/active-directory/develop/azure-ad-endpoint-comparison)，仍可以使用[azure 门户](https://aka.ms/aadapplist)。
 
 ### <a name="getting-tenant-administrator-consent"></a>获取租户管理员同意
 
