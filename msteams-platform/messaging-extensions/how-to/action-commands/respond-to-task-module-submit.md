@@ -4,12 +4,12 @@ author: clearab
 description: 介绍如何从邮件扩展操作命令响应任务模块提交操作
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: cc62bd6643fad9b3f2054d6595dd509b75c59680
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103011"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137659"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -19,14 +19,14 @@ ms.locfileid: "45103011"
 
 您有以下选项可供您进行响应。
 
-* 无响应-你可以选择使用 "提交" 操作在外部系统中触发进程，而不向用户提供任何反馈。 这对于长时间运行的进程很有用，您可以选择以其他方式提供反馈 (例如，使用[主动消息](~/bots/how-to/conversations/send-proactive-messages.md)。
+* 无响应-你可以选择使用 "提交" 操作在外部系统中触发进程，而不向用户提供任何反馈。 这对于长时间运行的进程很有用，您可以选择以另一种方式提供反馈（例如，使用[主动消息](~/bots/how-to/conversations/send-proactive-messages.md)）。
 * [另一个任务模块](#respond-with-another-task-module)-您可以作为多步骤交互的一部分，使用其他任务模块进行响应。
 * [卡片响应](#respond-with-a-card-inserted-into-the-compose-message-area)-你可以使用用户可与之交互和/或插入邮件的卡片进行响应。
 * [来自 bot 的自适应卡片](#bot-response-with-adaptive-card)-将自适应卡片直接插入对话中。
 * [请求用户进行身份验证](~/messaging-extensions/how-to/add-authentication.md)
 * [请求用户提供其他配置](~/messaging-extensions/how-to/add-configuration-page.md)
 
-下表显示了哪些类型的响应可基于邮件扩展的调用位置 (`commandContext`) 。 对于身份验证或配置，一旦用户完成了流，原始调用将重新发送到您的 web 服务。
+下表显示了哪些类型的响应可基于邮件扩展的调用位置（ `commandContext` ）。 对于身份验证或配置，一旦用户完成了流，原始调用将重新发送到您的 web 服务。
 
 |响应类型 | 编撰 | 命令栏 | message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -531,7 +531,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="user-attribution-for-bots-messages"></a>Bot 消息的用户归属 
 
-在 bot 代表用户发送邮件的情况下，将邮件的特性化到该用户可以帮助接洽，并展示更自然的交互流程。 此功能允许您代表正在启动邮件的用户发送邮件。
+在 bot 代表用户发送邮件的情况下，将邮件的特性化到该用户可以帮助接洽，并展示更自然的交互流程。 此功能使您可以将来自你的 bot 的邮件特性为其代表发送的用户。
 
 在下面的图像中，左侧是由*不带*用户归属的 bot 发送的卡片邮件，右侧是由*具有*用户归属的 bot 发送的卡片。
 
@@ -581,7 +581,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 |:---|:---|:---|
 |`itemId`|Integer|应为0|
 |`mentionType`|String|应为 "person"|
-|`mri`|String|邮件资源标识符 (其代表其发送邮件的人员的 MRI) 。 邮件发件人名称将显示为 " \<user\> via \<bot name\> "。|
+|`mri`|String|发送邮件的人员的邮件资源标识符（MRI）。 邮件发件人名称将显示为 " \<user\> via \<bot name\> "。|
 |`displayName`|String|人员的姓名。 在案例名称解析中不可用时用作回退。|
   
 ## <a name="next-steps"></a>后续步骤

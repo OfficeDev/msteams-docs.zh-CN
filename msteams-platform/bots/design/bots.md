@@ -2,12 +2,12 @@
 title: Bot 设计指南
 description: 介绍创建 bot 的指南
 keywords: 团队设计指南参考框架 bot 对话
-ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 4f474278b37058f61886a620af634780d2e3cb19
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453887"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137673"
 ---
 # <a name="start-talking-with-bots"></a>开始与 bot 对话
 
@@ -33,7 +33,7 @@ Bot 是执行一组较窄或特定任务的会话式应用程序。 它们为您
 
 ### <a name="onboarding-users"></a>载入用户
 
-关键是，bot 会自我介绍并向用户传达可执行的操作。 此*值 exchange*可帮助用户了解如何使用 bot，这些限制可能位于何处，并且最重要的是，帮助用户容许与不像真实人员那样直观的计算机进行交互。 此外，它还向 exchange 中的用户数据授予对该服务提供的真正价值的权限。
+关键是，bot 会自我介绍并传达他们可以为用户执行的操作。 此*值 exchange*可帮助用户了解如何使用 bot，这些限制可能位于何处，并且最重要的是，帮助用户容许与不像真实人员那样直观的计算机进行交互。 此外，它还向 exchange 中的用户数据授予对该服务提供的真正价值的权限。
 
 #### <a name="welcome-messages"></a>欢迎邮件
 

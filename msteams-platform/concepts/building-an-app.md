@@ -4,14 +4,17 @@ author: clearab
 description: 了解为 Microsoft 团队构建应用程序的典型过程。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7ec67c52f9321579da34c490175f6becc3a8fdfd
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 748b5cf6c6bc1bf51c1f647348012057627d2679
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120253"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137645"
 ---
 # <a name="building-an-app-for-microsoft-teams"></a>为 Microsoft 团队构建应用程序
+
+> [!NOTE] 
+> 希望快速入门吗？ 您可以使用[Microsoft 团队工具包和 Visual Studio Code](../toolkit/visual-studio-code-overview.md)生成团队应用程序。
 
 创建和分发在 Microsoft 团队平台上构建的应用程序涉及到确定要生成的内容、生成 web 服务、创建应用程序包以及将该包分发给目标最终用户。 由组织的管理员决定谁可以访问和安装您的应用程序，并将由您的用户在任何特定的上下文中安装您的应用程序。
 
@@ -36,7 +39,7 @@ ms.locfileid: "43120253"
 
 有关详细信息，请参阅[准备您的 O365 环境](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
-## <a name="build-and-test-your-app"></a>生成和测试应用程序
+## <a name="build-and-test-your-app"></a>运行和测试应用
 
 生成和测试适用于 Microsoft 团队的应用程序与生成任何其他 web 应用程序没有什么不同。 主要区别在于，需要在应用程序包中使用应用程序清单将团队客户端连接到 web 服务。 每当您对应用程序清单进行更改时，您都需要重新上载应用程序包，并通过重新安装在团队中更新您的应用程序。 但是，在对 web 服务进行更改时，不需要在团队客户端中重新安装您的应用程序。
 
@@ -48,14 +51,14 @@ ms.locfileid: "43120253"
 
 * 用于[邮件扩展](~/messaging-extensions/what-are-messaging-extensions.md)和[对话 Bot](~/bots/what-are-bots.md)的 Bot 框架 SDK
 * 用于[选项卡](~/tabs/what-are-tabs.md)和其他内容页的团队 JavaScript 客户端 SDK
-* 用于在 node.js 中构建应用程序的[Yeoman 生成器](~/tutorials/get-started-yeoman.md)
+* 用于在 Node.js 中构建应用程序的[Yeoman 生成器](~/tutorials/get-started-yeoman.md)
 * **预览**用于 web 内容页的一组开放源代码控件-[熟知 UI](https://microsoft.github.io/fluent-ui-react/)
 * 现成的可供生产[应用程序模板](~/samples/app-templates.md)
 * 帮助您入门的各种[示例](~/samples/code-samples.md)
 
 请记住，您需要以一种方式承载 web 服务，从而使它们以公共方式通过 internet 访问（通常在云服务提供商（如 Azure）中），并通过 HTTPS 提供您的内容。
 
-### <a name="create-your-app-package"></a>创建应用程序包
+### <a name="create-your-app-package"></a>创建应用包
 
 您还需要创建一个可在 Microsoft 团队中分发和安装的应用程序包。 应用程序包包含两个图标和一个 JSON 清单文件，其中描述了您的应用程序的元数据、您的应用程序正在使用的扩展点以及指向这些扩展点的服务的指针。
 
@@ -79,12 +82,8 @@ ms.locfileid: "43120253"
 
 例如，假设您的应用程序包含一个在个人对话和团队对话中工作的对话机器人，以及一个个人选项卡和一个频道选项卡。安装应用程序后，它将安装在特定的上下文中-如果用户在团队中安装了应用程序，则无需安装应用程序的个人部分。 首先，这可能有点令人困惑，只需记住永远不要指望应用程序的所有部分都将在任何给定的上下文中安装和配置。
 
-## <a name="get-started-quickly"></a>快速入门
-
-想要快速开始？ 查看我们的入门教程之一，或查看针对特定平台功能（可在文档的每个功能部分中找到）的快速入门教程。
-
-入门教程：
+## <a name="getting-started-tutorials"></a>入门教程
 
 * [在 C 中构建 bot 和选项卡应用#](~/tutorials/get-started-dotnet-app-studio.md)
-* [构建 JavaScript/node.js 中的 bot 和选项卡应用程序](~/tutorials/get-started-nodejs-app-studio.md)
-* [使用 Yeoman 生成器创建应用程序](~/tutorials/get-started-yeoman.md)
+* [在 JavaScript/Node.js中构建 bot 和选项卡应用程序](~/tutorials/get-started-nodejs-app-studio.md)
+* [使用 Yeoman 生成器创建应用](~/tutorials/get-started-yeoman.md)

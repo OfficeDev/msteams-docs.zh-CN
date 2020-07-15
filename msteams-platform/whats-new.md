@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: eede16c65faa2366b8c0734a39d84b558b1d68ed
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453852"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137634"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -15,8 +15,9 @@ ms.locfileid: "44453852"
 
 更改日志将列出 Microsoft 团队平台和此文档集的更改。 有时，条目可用于吸引团队开发人员感兴趣的新功能。
 
-| **Date** | **注释** | **更改的主题** |
+| **Date** | **备注** | **更改的主题** |
 | -------- | --------- | ------------------ |
+| 07/01/2020 |开始使用 Visual Studio Code 工具包生成团队应用程序。|[使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序](toolkit/visual-studio-code-overview.md) |
 | 05/20/2020 | 使用 Microsoft Graph Api 的特定于资源的同意权限是在开发人员预览版中。 |[特定于资源的同意（RSC）-开发人员预览版](graph-api/rsc/resource-specific-consent.md) |
 | 03/24/2020 | 添加了对检索会话的单个成员和其他支持检索分页成员的支持。 | [为机器人获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | `replyToId`发送到 bot 的负载中的参数不再加密，这样您就可以使用此值来构造 deeplinks 给这些邮件。 邮件负载在参数中包含加密的值。 `legacy.replyToId`.  |
@@ -32,7 +33,7 @@ ms.locfileid: "44453852"
 | 05/20/2019 | 邮件操作。 | [邮件操作](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | 链接 unfurling （自定义 URL 预览）。 | [链接展开](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | 适用于 store 应用的应用程序认证计划。 | [应用程序证书](~/publishing/application-certification.md) |
-| 05/06/2019 | 应用模板现已推出。 | [应用模板](~/samples/app-templates.md) |
+| 05/06/2019 | 应用模板现已推出。 | [应用程序模板](~/samples/app-templates.md) |
 | 04/23/2019 | 基于操作的邮件扩展现已推出。 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | 创建到专用聊天的深层链接不适用于开发人员预览和可用。 | [深层链接到聊天](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | 在选项卡上下文中呈现 SKU 和 licenceType 信息。 | [选项卡上下文](~/concepts/tabs/tabs-context.md) |

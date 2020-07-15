@@ -3,12 +3,12 @@ title: Office 365 连接器
 description: 介绍如何开始使用 Microsoft 团队中的 Office 365 连接器
 keywords: Teams o365 连接器
 ms.date: 04/19/2019
-ms.openlocfilehash: 9c18a4c0dfda449c1507b26e78889cfab56ffd5f
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: 9c89463830d46512e622dcf4c256a867d419de83
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44590849"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137652"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>为 Microsoft 团队创建 Office 365 连接器
 
@@ -18,7 +18,7 @@ ms.locfileid: "44590849"
 
 您可以将已注册的连接器作为团队应用程序包的一部分进行分发。 无论是独立的解决方案还是你的经验在团队中启用的几项[功能](~/concepts/extensibility-points.md)之一，都可以[打包](~/concepts/build-and-test/apps-package.md)和[发布](~/concepts/deploy-and-publish/apps-publish.md)连接器作为 AppSource 提交的一部分，也可以直接将其提供给用户以在团队内上载。
 
-若要分发连接器，您需要使用[连接器开发人员仪表板](https://outlook.office.com/connectors/home/login/#/publish)进行注册。 默认情况下，注册连接器后，系统会假定您的连接器能够在所有支持它们的 Office 365 产品（包括 Outlook 和团队）中工作。 如果_不_是这种情况，并且需要创建仅在 Microsoft 团队中工作的连接器，请直接在[团队存储提交支持](mailto:TeamsSubSupport@microsoft.com)中与我们联系。
+若要分发连接器，您需要使用[连接器开发人员仪表板](https://outlook.office.com/connectors/home/login/#/publish)进行注册。 默认情况下，注册连接器后，系统会假定您的连接器能够在所有支持它们的 Office 365 产品（包括 Outlook 和团队）中工作。 如果_不_是这种情况，并且需要创建仅在 microsoft 团队中工作的连接器，请直接在[Microsoft 团队应用程序提交](mailto:teamsubm@microsoft.com)中与我们联系。
 
 > [!IMPORTANT]
 > 选择 "连接器" 开发人员仪表板中的 "**保存**" 后，将注册连接器。 如果要在 AppSource 中发布连接器，请按照[发布 Microsoft 团队应用程序到 AppSource](~/concepts/deploy-and-publish/apps-publish.md)中的说明进行操作。 如果您不希望在 AppSource 中发布您的应用程序，而只是仅直接将其分发到您的组织，则可以通过[发布到您的组织来](#publish-connectors-for-your-organization)执行此操作。 如果只想要发布到您的组织，则无需对连接器仪表板执行进一步操作。
