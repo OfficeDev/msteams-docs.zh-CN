@@ -2,14 +2,17 @@
 title: 移动设备上的选项卡
 description: 介绍设计适用于移动设备的选项卡的指南。
 keywords: 团队设计准则参考框架个人应用移动选项卡
-ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455518"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145921"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
+
+> [!NOTE]
+> 如果选择在工作组移动客户端上显示频道/组选项卡，则 `setSettings()` 配置必须具有 `websiteUrl` 属性值（请参阅下文）。 个人选项卡当前可在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中使用。 将很快发布对移动客户端上的选项卡的完全支持。 若要准备更新，请在创建选项卡时遵循此处介绍的内容。
 
 自定义选项卡可以是频道、组聊天或个人应用（包含静态选项卡和/或一对一 bot 的应用程序）的一部分。
 

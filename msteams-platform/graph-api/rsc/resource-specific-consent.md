@@ -6,17 +6,17 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: 团队授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 7d0927fc360d8c005326cdff6453796fb45bf113
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: a9380081e7694a7eae8e2c131e091b108acb051f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867137"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145912"
 ---
 # <a name="resource-specific-consent-rsc--developer-preview"></a>特定于资源的同意（RSC）-开发人员预览版
 
 >[!NOTE]
->特定于资源的同意权限仅在开发人员预览版启用后在桌面和 Android 客户端中可用。 有关详细信息，请参阅[如何启用开发人员预览](../../resources/dev-preview/developer-preview-intro.md)。
+>启用开发人员预览后，会在桌面和 web 客户端中提供特定于资源的同意权限。 有关详细信息，请参阅[如何启用开发人员预览](../../resources/dev-preview/developer-preview-intro.md)。
 
 特定于资源的同意（RSC）是 Microsoft 团队和图形 API 集成，使您的应用程序能够使用 API 终结点来管理组织中的特定团队。 特定于资源的同意（RSC）权限模型使*团队所有者*能够授予应用程序访问和/或修改团队数据的同意。 具体的团队特定的 RSC 权限定义了应用程序可在特定团队中执行的操作：
 

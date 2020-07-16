@@ -4,12 +4,12 @@ author: laujan
 description: Microsoft 团队平台上的自定义选项卡概述
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
-ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
+ms.openlocfilehash: d8aba99210369bf92ad1e600b13cf1d20984d06f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "44119047"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145905"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>什么是 Microsoft 团队自定义选项卡？
 
@@ -26,7 +26,7 @@ ms.locfileid: "44119047"
 >
 > * 如果将某个选项卡添加到也具有 bot 的应用程序中，则也会将该 bot 添加到团队中。
 > * 感知当前用户的 AAD ID。
-> * 用户的区域设置感知以指示语言，即， `en-us`。 
+> * 用户的区域设置感知以指示语言，即， `en-us` 。 
 > * SSO 功能（如果支持）。
 > * 能够使用 bot 或应用程序通知深入链接到选项卡或服务内的子实体（例如，单个工作项）。
 > * 通过选项卡中的链接打开任务模块的功能。
@@ -45,14 +45,14 @@ ms.locfileid: "44119047"
 
 ## <a name="how-do-tabs-work"></a>选项卡如何工作？
 
-自定义选项卡在应用程序包的应用部件清单（manifest）中声明。 对于您要在应用程序中包含为选项卡的每个网页，定义一个 URL 和一个作用域。 此外，还需要将[团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)添加到页面，并在加载`microsoftTeams.initialize()`页面后调用。 这样做将告知团队显示您的页面，使您可以访问特定于团队的信息（例如，如果团队客户端运行的是深色主题），并允许您根据结果执行操作。
+自定义选项卡在应用程序包的应用部件清单（manifest）中声明。 对于您要在应用程序中包含为选项卡的每个网页，定义一个 URL 和一个作用域。 此外，还需要将[团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)添加到页面，并在 `microsoftTeams.initialize()` 加载页面后调用。 这样做将告知团队显示您的页面，使您可以访问特定于团队的信息（例如，如果团队客户端运行的是深色主题），并允许您根据结果执行操作。
 
-无论您是否选择在频道/组或个人作用域中公开您的选项卡，您都需要在选项卡中提供一个 IFramed HTML[内容页](~/tabs/how-to/create-tab-pages/content-page.md)。对于 "个人" 选项卡，将通过`contentUrl` `staticTabs`数组中的属性直接在清单中设置内容 URL。 您的选项卡的内容将对所有用户都相同。
+无论您是否选择在频道/组或个人作用域中公开您的选项卡，您都需要在选项卡中提供一个 IFramed HTML[内容页](~/tabs/how-to/create-tab-pages/content-page.md)。对于 "个人" 选项卡，将通过数组中的属性直接在清单中设置内容 URL `contentUrl` `staticTabs` 。 您的选项卡的内容将对所有用户都相同。
 
-对于频道/组选项卡，还需要创建一个额外的配置页，使用户可以配置内容页面 URL，通常是使用 URL 查询字符串参数为该上下文加载相应的内容。 这是因为您的频道/组选项卡可以添加到多个不同的团队或组聊天。 在每次后续安装中，您的用户将能够配置选项卡，以便根据需要定制体验。 当用户添加选项卡或配置选项卡时，会将 URL 与团队 UI 中显示的选项卡相关联。 配置选项卡只是将其他参数添加到该 URL。 例如，在添加 "Azure DevOps 板" 选项卡时，"配置" 页允许您选择选项卡将加载的板。 配置页面 URL 由应用程序清单中`configurationUrl`的`configurableTabs`数组中的属性指定。
+对于频道/组选项卡，还需要创建一个额外的配置页，使用户可以配置内容页面 URL，通常是使用 URL 查询字符串参数为该上下文加载相应的内容。 这是因为您的频道/组选项卡可以添加到多个不同的团队或组聊天。 在每次后续安装中，您的用户将能够配置选项卡，以便根据需要定制体验。 当用户添加选项卡或配置选项卡时，会将 URL 与团队 UI 中显示的选项卡相关联。 配置选项卡只是将其他参数添加到该 URL。 例如，在添加 "Azure DevOps 板" 选项卡时，"配置" 页允许您选择选项卡将加载的板。 配置页面 URL 由 `configurationUrl` `configurableTabs` 应用程序清单中的数组中的属性指定。
 
 最多可以有一个（1）通道/组选项卡，每个应用最多可以有十六个（16）个个人选项卡。
 
 ## <a name="mobile-clients"></a>移动客户端
 
-如果选择在工作组移动客户端上显示频道/组选项卡，则`setSettings()`配置必须具有`websiteUrl`属性值（请参阅下文）。 个人选项卡当前可在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中使用。 将很快发布对移动客户端上的选项卡的完全支持。 若要准备更新，应按照移动选项卡[上的选项卡指南中](~/tabs/design/tabs-mobile.md)的步骤创建选项卡。
+如果选择在工作组移动客户端上显示 "频道/组" 选项卡，则 `setSettings()` 配置必须具有该属性的值 `websiteUrl` 。 个人选项卡当前可在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中使用。 将很快发布对移动客户端上的选项卡的完全支持。 若要准备更新，应按照移动选项卡[上的选项卡指南中](~/tabs/design/tabs-mobile.md)的步骤创建选项卡。
