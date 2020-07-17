@@ -3,12 +3,12 @@ title: 工作组应用程序的本地化
 description: 介绍有关本地化应用程序的问题
 keywords: 团队发布 microsoft store office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: 138b6d66808fc5ed212f1cb0eed8579faea6f764
-ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
+ms.openlocfilehash: 8d14da5c773bcc422081b50fc530a32163260b4a
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45039270"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152677"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft 团队应用程序的本地化
 
@@ -20,9 +20,9 @@ ms.locfileid: "45039270"
 
 ## <a name="localizing-your-appsource-listing"></a>本地化您的 AppSource 列表
 
-如果您正在发布到应用商店，您需要注意，尚不支持本地化 AppSource 列表。 但是，在对应用商店中的本地化列表进行支持的准备过程中，可以向列表中添加其他语言。 目前，仅在[合作伙伴中心](/dev/store/use-partner-center-to-submit-to-appsource)提供的默认（英语）语言信息将显示在您的应用程序的[AppSource 网站](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)列表中。
+如果您正在发布到应用商店，您需要注意，尚不支持本地化 AppSource 列表。 但是，在对应用商店中的本地化列表进行支持的准备过程中，可以向列表中添加其他语言。 目前，仅在[合作伙伴中心](/office/dev/store/submit-to-appsource-via-partner-center)提供的默认（英语）语言信息将显示在您的应用程序的[AppSource 网站](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)列表中。
 
-若要为您的应用程序配置其他语言，请在 "[合作伙伴中心](/dev/store/use-partner-center-to-submit-to-appsource)" 中，选择 "英语" 和 "应用程序的其他语言"。 在此示例中使用的是法语。
+若要为您的应用程序配置其他语言，请在 "[合作伙伴中心](/office/dev/store/submit-to-appsource-via-partner-center)" 中，选择 "英语" 和 "应用程序的其他语言"。 在此示例中使用的是法语。
 
 1. 添加英语语言
     * 填写应用程序名称。

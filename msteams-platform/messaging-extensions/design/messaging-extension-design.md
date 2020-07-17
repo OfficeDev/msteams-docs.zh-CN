@@ -4,12 +4,12 @@ description: 介绍创建邮件扩展的准则
 keywords: 团队设计准则参考邮件扩展提示最佳实践
 author: EmilyyC
 ms.author: qinch
-ms.openlocfilehash: cf2862b8c8544efcab21616c420d66937fb7406a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 5d62646c5757f93cc4f6ae6e089ef3a0918f9eea
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801121"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152684"
 ---
 # <a name="start-sharing-with-powerful-messaging-extensions"></a>开始与强大的邮件扩展进行共享
 
@@ -46,4 +46,4 @@ ms.locfileid: "44801121"
 
 ### <a name="keep-users-in-the-app-context"></a>将用户保留在应用上下文中
 
-如果卡片不够，并且需要提供详细信息的链接，请考虑打开一个选项卡，而不是打开浏览器以获得更好的用户体验。 *请参阅*[扩展您的团队应用程序 wit 自定义选项卡](../../tabs/how-to/add-tab.md)
+如果卡片不够，并且需要提供详细信息的链接，请考虑打开一个选项卡，而不是打开浏览器以获得更好的用户体验。 *请参阅*[使用自定义选项卡扩展团队应用](../../tabs/how-to/add-tab.md)
