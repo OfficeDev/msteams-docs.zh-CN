@@ -13,7 +13,7 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: 使用 Yeoman 生成器创建应用
       href: tutorials/get-started-yeoman.md
-    - name: 使用自定义应用扩展 Teams 客户端
+    - name: 详细了解适用于 Teams 的自定义应用
       href: tutorials/code-samples.md
 - name: 模板和集成
   items:
