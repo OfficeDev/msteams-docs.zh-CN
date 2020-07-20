@@ -8,7 +8,7 @@ ms.topic: How-to
 keywords: 团队授权 OAuth SSO AAD rsc Postman Graph
 ms.openlocfilehash: c1c02c2ba0051193aa459d0df26fadfc9fa55550
 ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
-ms.translationtype: MT
+ms.translationtype: Auto
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/24/2020
 ms.locfileid: "44867100"
