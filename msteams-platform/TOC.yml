@@ -330,12 +330,18 @@
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Teams Graph REST APIs
   items:
-    - name: 资源特定许可 (RSC)
-      href: graph-api/rsc/resource-specific-consent.md
-    - name: 测试资源特定许可权限
-      href: graph-api/rsc/test-resource-specific-consent.md
-    - name: RSC JSON 测试文件
-      href: graph-api/rsc/test-rsc-json-file.md
+    - name: 资源特定许可
+      items:
+        - name: 启用资源特定许可 (RSC)
+          href: graph-api/rsc/resource-specific-consent.md
+        - name: 测试资源特定许可权限
+          href: graph-api/rsc/test-resource-specific-consent.md
+        - name: RSC JSON 测试文件
+          href: graph-api/rsc/test-rsc-json-file.md
+    - name: 主动型机器人和主动消息
+      items:
+        - name: 启用主动型机器人安装和主动消息传递
+          href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
 - name: 资源
   items:
     - name: 机器人 - v3 SDK
