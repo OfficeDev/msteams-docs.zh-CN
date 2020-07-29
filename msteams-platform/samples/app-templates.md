@@ -3,12 +3,12 @@ title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 ms.topic: reference
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 827e6562bdab06b4aa2d44800222d72a10106439
-ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
+ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45152699"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434536"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -359,7 +359,7 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 ## <a name="staff-check-ins-9734"></a>人员签入 &#9734;
 
-"员工签入" 是基于[Power Apps](/powerapps/powerapps-overview)的应用程序，它能够在您的业务和现场人员之间监督交流。 员工可以直接从团队的计划或临时提供时间关键型信息和状态更新。 该应用支持实时位置、照片和笔记以及提醒通知和自动工作流。
+人员签入是基于电源的基于[应用](/powerapps/powerapps-overview)的应用程序，它能够在业务和现场人员之间监督交流。 员工可以直接从团队的计划或临时提供时间关键型信息和状态更新。 该应用支持实时位置、照片和笔记以及提醒通知和自动工作流。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 

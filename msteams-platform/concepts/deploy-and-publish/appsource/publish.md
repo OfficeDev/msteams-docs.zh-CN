@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序审批过程指南
 description: 介绍了如何将应用发布到 Microsoft 团队应用商店的审批过程
 keywords: 团队发布 microsoft store office 发布发布 AppSource 合作伙伴中心帐户验证
-ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
-ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
+ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091303"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434473"
 ---
 # <a name="submit-your-app-to-appsource"></a>将您的应用程序提交到 AppSource
 
@@ -40,7 +40,7 @@ ms.locfileid: "45091303"
 
 ## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>如果我无法在合作伙伴中心找到我的 Office 应用商店帐户，该怎么办？
 
-请打开[合作伙伴中心支持票证](https://partner.microsoft.com/en-US/support/v2/?stage=1)，然后从下拉菜单中选择以下内容：
+请打开[合作伙伴中心支持票证](https://partner.microsoft.com/support/v2/?stage=1)，然后从下拉菜单中选择以下内容：
 
 | 菜单 | 选项 |
 | -------   | -------  |
@@ -66,7 +66,7 @@ ms.locfileid: "45091303"
 
 ## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>为什么我会收到邮件：当我尝试通过合作伙伴中心提交我的加载项时，"此帐户未发布合格"。
 
-当您的[帐户验证状态](/partner-center/verification-responses)为 "挂起" 时，您将收到上述错误消息。 您可以在 "合作伙伴中心"[仪表板](https://partner.microsoft.com/dashboard)中通过选择 "**设置**" 选项 ("齿轮" 图标) 在页面页眉命令行管理程序的右上角，然后选择 "**开发人员设置**" 帐户 "帐户  =>  **Account**   =>  **设置**" 来检查您的帐户验证状态。
+当您的[帐户验证状态](/partner-center/verification-responses)为 "挂起" 时，您将收到上述错误消息。 您可以通过在页面页眉命令行管理程序的右上角选择 "**设置**" 选项（齿轮图标），然后选择 "**开发人员设置** [dashboard](https://partner.microsoft.com/dashboard)  =>  **帐户**   =>  **帐户设置**"，在 "合作伙伴中心" 仪表板中检查您的帐户验证状态。
 
 ![合作伙伴中心帐户设置页](../../../assets/images/partner-center-accts-page.png)
 
@@ -117,11 +117,11 @@ ms.locfileid: "45091303"
 
 请 **<teamsubm@microsoft.com>** 使用以下详细信息发送电子邮件：
 
-1. **主题行**。 *<App_Name>的合作伙伴中心帐户问题* (指定您的应用程序) 的名称。
+1. **主题行**。 *<App_Name>的合作伙伴中心帐户问题*（指定您的应用程序的名称）。
 1. **电子邮件正文：**
     * 支持票证号码：
     * 卖家 ID：
-    *  (的问题的屏幕截图（如果可能）) ：
+    * 问题的屏幕截图（如果可能）：
 
 >
 > [!div class="nextstepaction"]

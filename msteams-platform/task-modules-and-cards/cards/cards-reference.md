@@ -2,12 +2,12 @@
 title: 卡片参考
 description: 介绍可供团队中的 bot 的所有卡片和卡片操作
 keywords: bot 卡片参考
-ms.openlocfilehash: 9cd868e504e426cbe56ed1c5d05c8e6adc1e1ddf
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801113"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434543"
 ---
 # <a name="cards-reference"></a>卡片参考
 
@@ -74,6 +74,9 @@ ms.locfileid: "44801113"
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
+
+> [!NOTE]
+> 目前，工作组平台上的自适应卡版1.2 中不支持媒体元素。
 
 ### <a name="example-adaptive-card"></a>自适应卡片示例
 

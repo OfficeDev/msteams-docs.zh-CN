@@ -5,12 +5,12 @@ description: ''
 keywords: 团队选项卡组频道配置静态
 ms.topic: conceptual
 ms.author: v-laujan
-ms.openlocfilehash: a9f1fa407c6377daa8bce6a6a6c63b47d50d8100
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137631"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434487"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>创建选项卡的内容页
 
@@ -66,7 +66,7 @@ ms.locfileid: "45137631"
 
 确保您的选项卡中使用的所有 URL 域都包含在 `validDomains` [清单](~/concepts/build-and-test/apps-package.md)中的阵列中。 有关详细信息，请参阅清单架构参考中的[validDomains](~/resources/schema/manifest-schema.md#validdomains) 。 但是，请注意，您的选项卡的核心功能在团队中，而不是在团队外部。
 
-## <a name="showing-a-native-loading-indicator"></a>显示本机加载指示器
+## <a name="show-a-native-loading-indicator"></a>显示本机加载指示器
 
 从[清单架构](../../../resources/schema/manifest-schema.md)v1.1，您可以在团队中加载 web 内容的任何位置提供[本机加载指示器](../../../resources/schema/manifest-schema.md#showloadingindicator)，例如，[选项卡内容页](#integrate-your-code-with-teams)、[配置页](configuration-page.md)、[删除页](removal-page.md)和[选项卡中的任务模块](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)。
 

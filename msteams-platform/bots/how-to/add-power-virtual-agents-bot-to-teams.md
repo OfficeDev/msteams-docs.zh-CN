@@ -4,14 +4,14 @@ author: laujan
 description: 在团队平台中集成电源虚拟代理 chatbot
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 4f32a3c13d9288c3e733e92369645bcf9e32d586
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: 57b06fd0d3e1fae0cbfb927335fb1b5941396bb0
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44801141"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434512"
 ---
-# <a name="integrate-your-power-virtual-agents-chatbot-with-microsoft-teams"></a>将您的 Power Virtual Agent chatbot 与 Microsoft 团队集成
+# <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>将电源虚拟代理与 Microsoft 团队集成 chatbot
 
 [Power Virtual agent](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是一个无代码的、导向的图形界面解决方案，它使团队中的每个成员都能创建丰富的会话 chatbots，以便轻松地与团队平台集成。 在 Power Virtual Agent 中创作的所有内容都在团队中呈现为自然，电源虚拟代理程序 bot 与团队本机聊天画布中的用户接洽。 您的 IT 管理员、业务分析师、域专家和训练有素的应用程序开发人员可以设计、开发和发布用于团队的智能虚拟代理，而无需设置开发环境、创建 web 服务或直接在 Bot 框架中注册。  *请参阅*[为使用 Microsoft Power Virtual 代理的团队创建 chatbot](../what-are-bots.md#create-a-chatbot-for-teams-with-microsoft-power-virtual-agents)。
 

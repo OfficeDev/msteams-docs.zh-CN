@@ -2,14 +2,17 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137634"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434529"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
+
+>[!TIP]
+> 查看[**团队应用程序模板目录**](samples/app-templates.md)中的生产就绪模板。 目录按字母顺序排列，最新的添加项使用星形 **&#9734;** 进行标记。
 
 ## <a name="change-log"></a>更改日志
 
@@ -17,8 +20,15 @@ ms.locfileid: "45137634"
 
 | **Date** | **备注** | **更改的主题** |
 | -------- | --------- | ------------------ |
+| 07/22/2020 |移动设备功能更新。|[为 Microsoft "团队" 选项卡请求设备权限](~/tabs/how-to/native-device-permissions.md) |
+|07/15/2020|为工作组创建虚拟助理|[Microsoft 团队的虚拟助手](samples/virtual-assistant.md)|
+|07/14/2020|呈现本机加载指示器文档|[显示本机加载指示器](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 | 07/01/2020 |开始使用 Visual Studio Code 工具包生成团队应用程序。|[使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|针对团队 web 和桌面客户端公开的选项卡的单一登录|[单一登录（SSO）](tabs/how-to/authentication/auth-aad-sso.md)|
+|06/05/2020| 清单架构已更新到版本1。7| [参考： Microsoft 团队的清单架构](resources/schema/manifest-schema.md)|
 | 05/20/2020 | 使用 Microsoft Graph Api 的特定于资源的同意权限是在开发人员预览版中。 |[特定于资源的同意（RSC）-开发人员预览版](graph-api/rsc/resource-specific-consent.md) |
+|5/18/2020|将电源虚拟代理与团队集成|[将电源虚拟代理与 Microsoft 团队集成 chatbot](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
+|04/01/2020|将 WFM 系统与团队的倒班连接器集成|[Microsoft 团队转移 WFM 连接器](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | 添加了对检索会话的单个成员和其他支持检索分页成员的支持。 | [为机器人获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | `replyToId`发送到 bot 的负载中的参数不再加密，这样您就可以使用此值来构造 deeplinks 给这些邮件。 邮件负载在参数中包含加密的值。 `legacy.replyToId`.  |
 | 11/5/2019 | 使用 web 内容页中的团队 JavaScript SDK 进行单一登录是在开发人员预览版中。 | [单一登录](tabs/how-to/authentication/auth-aad-sso.md) |

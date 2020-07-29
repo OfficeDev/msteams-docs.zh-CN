@@ -6,43 +6,44 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: 团队授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: a9380081e7694a7eae8e2c131e091b108acb051f
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: bf449b338e8c0f42dfef776e533fb6b5ff591529
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145912"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434501"
 ---
 # <a name="resource-specific-consent-rsc--developer-preview"></a>特定于资源的同意（RSC）-开发人员预览版
 
 >[!NOTE]
+
 >启用开发人员预览后，会在桌面和 web 客户端中提供特定于资源的同意权限。 有关详细信息，请参阅[如何启用开发人员预览](../../resources/dev-preview/developer-preview-intro.md)。
 
 特定于资源的同意（RSC）是 Microsoft 团队和图形 API 集成，使您的应用程序能够使用 API 终结点来管理组织中的特定团队。 特定于资源的同意（RSC）权限模型使*团队所有者*能够授予应用程序访问和/或修改团队数据的同意。 具体的团队特定的 RSC 权限定义了应用程序可在特定团队中执行的操作：
 
 ## <a name="resource-specific-permissions"></a>特定于资源的权限
 
-|应用权限| Action |
+|应用权限| 操作 |
 | ----- | ----- |
-|TeamSettings。 Group | 获取此团队的设置。|
+|TeamSettings.Read.Group | 获取此团队的设置。|
 |TeamSettings。组|更新此团队的设置。|
-|ChannelSettings。 Group|获取此团队的频道名称、频道说明和频道设置。|
-|ChannelSettings。组|更新此团队的频道名称、频道说明和频道设置。|
-|创建. 分组|在此团队中创建频道。|
-|频道. 删除. 组|删除此团队中的频道。|
-|ChannelMessage。 Group |获取此团队的频道消息。|
-|TeamsApp。 Group|获取此团队安装的应用程序的列表。|
-|TeamsTab。 Group|获取此团队的选项卡列表。|
-|TeamsTab 的组|在此团队中创建选项卡。|
-|TeamsTab。组|更新此团队的选项卡。|
-|TeamsTab. 组|删除此团队的选项卡。|
-|Member。 Read. Group|获取此团队的成员。|
-|Owner. Read. Group|获取此团队的所有者。|
+|ChannelSettings.Read.Group|获取此团队的频道名称、频道说明和频道设置。|
+|ChannelSettings.Edit.Group|更新此团队的频道名称、频道说明和频道设置。|
+|Channel.Create.Group|在这个团队中创建频道。|
+|Channel.Delete.Group|删除此团队中的频道。|
+|ChannelMessage.Read.Group |获取此团队的频道消息。|
+|TeamsApp.Read.Group|获取此团队安装的应用程序的列表。|
+|TeamsTab.Read.Group|获取此团队的选项卡列表。|
+|TeamsTab.Create.Group|在此团队中创建选项卡。|
+|TeamsTab.Edit.Group|更新此团队的选项卡。|
+|TeamsTab.Delete.Group|删除此团队的选项卡。|
+|Member.Read.Group|获取此团队的成员。|
+|Owner.Read.Group|获取此团队的所有者。|
 
 >[!NOTE]
 >特定于资源的权限仅对在团队客户端上安装的团队应用程序可用，并且当前不是 Azure Active Directory 门户的一部分。
 
-## <a name="enabling-resource-specific-consent-in-your-application"></a>在应用程序中启用特定于资源的同意
+## <a name="enable-resource-specific-consent-in-your-application"></a>在应用程序中启用特定于资源的同意
 
 在应用程序中启用 RSC 的步骤如下所示：
 
@@ -160,6 +161,14 @@ RSC 权限是在您的应用程序清单（JSON）文件中声明的。  使用�
 > - 对以下终结点进行**GET**调用： `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` 。 响应中的 clientAppId 字段将映射到在团队应用程序清单中指定的 appId。
 
  ![Graph 资源管理器响应 GET call。](../../assets/images/graph-permissions.png)
+ 
+## <a name="test-resource-specific-consent"></a>测试特定于资源的同意
+ 
+> [!div class="nextstepaction"]
+> [**在团队中测试特定于资源的同意权限**](test-resource-specific-consent.md)
+ 
+## <a name="related-topic-for-teams-administrators"></a>团队管理员的相关主题
 
- > [!div class="nextstepaction"]
-> [在团队中测试特定于资源的同意权限](test-resource-specific-consent.md)
+> [!div class="nextstepaction"]
+> [**Microsoft 团队中针对管理员的特定于资源的同意**](/MicrosoftTeams/resource-specific-consent)
+> 
