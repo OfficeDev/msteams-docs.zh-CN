@@ -3,12 +3,12 @@ title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 ms.topic: reference
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434536"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531275"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -110,6 +110,23 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
 ![不干胶标签应用](../assets/images/stickers.png)
+
+## <a name="e-prescriptions-9734"></a>&#9734; 的电子处方 
+
+电子处方是基于[电源](/powerapps/maker/canvas-apps/embed-teams-app)的基于应用的应用程序，可通过自动执行向病人发出电子处方的过程来增强 telemedicine 和虚拟护理。 医药专业人员可以在团队平台中直接查看约会、生成电子处方和向患者发送电子邮件附件。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
+
+:::row:::
+:::column span="2":::
+    ![电子处方应用程序的屏幕截图。 显示运行状况护理提供程序如何选择 "生成" 按钮以对患者的处方进行排序。](../assets/images/e-prescriptions-app-template.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![电子处方应用程序的屏幕截图。 显示管理员如何管理使用应用程序的运行状况护理提供程序。](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="expert-finder"></a>专家查找程序
 

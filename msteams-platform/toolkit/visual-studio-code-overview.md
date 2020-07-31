@@ -3,12 +3,12 @@ title: 使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序
 description: 开始在 Visual Studio Code 中使用 Microsoft 团队工具包直接构建强大的自定义应用程序
 keywords: 团队 visual studio code 工具包
 ms.date: 06/30/2020
-ms.openlocfilehash: 17f21d1656b32074318030b9df9e643200f58f80
-ms.sourcegitcommit: ecf7ca8e77e77fe3f4cad1b13e3d31a825155555
-ms.translationtype: Auto
+ms.openlocfilehash: 96293a2166e56495a8f775cb0142f721605cfdae
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45054250"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531257"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序
 
@@ -87,7 +87,7 @@ Visual studio Code 的 Microsoft 团队工具包可从[Visual Studio Marketplace
 
 * 构建并运行应用程序
   * 按照项目自述文件的 "**生成和运行**" 部分中的 instuctions 操作，以便从提供服务 https://localhost:3000/tab 。通常情况下，这将涉及执行， `npm install` 然后`npm start`
-  * https://localhost:3000/tab从 Google Chrome 导航到
+  * https://localhost:3000/tab从 Google Chrome 或 Edge Chromium 导航到。
 
 * 获取 SSL 证书：
   * 打开 "Chrome 开发人员工具" 窗口（ `ctrl + shift + i`  /  `cmd + option + i` ）。
