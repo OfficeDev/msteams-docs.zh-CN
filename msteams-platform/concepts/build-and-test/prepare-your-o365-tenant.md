@@ -2,12 +2,12 @@
 title: 准备 Office 365 租户
 description: 如何开始使用 Office 365 中的团队
 keywords: 配置 Office 365 租户团队上载
-ms.openlocfilehash: e07ffe7f5325be1293a49934669f36c81613278b
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 447968c9b56010e515fc1d1346eac4d8485c7f80
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914565"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587768"
 ---
 # <a name="prepare-your-office-365-tenant"></a>准备 Office 365 租户
 
@@ -16,7 +16,7 @@ ms.locfileid: "43914565"
 * 商业协作版
 * 商业高级版
 * 企业版 E1、E3 和 E5
-* 开发人员
+* Developer
 * 教育版、教育版和教育版 E5
 
 Microsoft 团队还将对在其[退休](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)前订阅 E4 的客户提供。
@@ -31,13 +31,25 @@ Microsoft 团队还将对在其[退休](https://support.office.com//article/impo
 
 ## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>启用自定义团队应用并启用自定义应用上传
 
+按如下方式为开发人员租户启用自定义应用旁加载：
+
+1. 使用管理员凭据登录到[Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) 。 
+
+2. 选择 "**显示所有**  -->  **团队**"。 
+
+![应用程序溢出菜单的图像](~/assets/images/prepare-test-tenant/admin-center.png)
+
+3. 导航到**团队应用**  -->  **程序设置策略**  -->  **全局 (组织范围默认) **  
+
+![应用程序溢出菜单的图像](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+4. 将 "**上载自定义应用**" 切换到 "**开**" 位置。
+
+就是这么简单。 你的测试租户现在将允许自定义应用旁加载。
+
 > [!Note] 
-> 如果使用的是 Office 365 开发人员平台来构建应用程序，则应已将这些设置配置为允许您生成、上载和测试应用程序。
+> 在启用旁加载之前，可能需要长达24小时。 在临时期间，您可以使用**上 \<your tenant> 传**来测试您的应用程序。
 
-有三个与启用自定义应用程序和自定义应用程序上载相关的设置：
+![应用程序溢出菜单的图像](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-* **组织范围的自定义应用设置** => **允许与中的自定义应用** => **On**程序进行交互—此设置可启用或禁用组织的自定义应用程序。 需要打开它。 
-* **团队自定义应用设置** => **允许成员上载自定义应用程序** => **打开/关闭**—此设置适用于 Microsoft 团队中的每个单独团队。 如果要为特定团队安装您的应用程序，则需要为该团队启用此项。
-* **用户自定义应用程序策略** => **用户可以上传自定义应用程序** => **On/Off** ，此设置控制单个用户的权限。 你需要为允许上传自定义应用的个人启用此。
-
-有关这些设置如何交互的完整信息，*请参阅*在 microsoft 团队中[管理自定义应用策略和设置](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)和[管理 microsoft 团队中的应用程序设置策略](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)。
+有关这些设置如何进行交互的完整信息，*请参阅*在 microsoft 团队中[管理自定义应用策略和设置](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)和[管理 microsoft 团队中的应用程序安装策略](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)。

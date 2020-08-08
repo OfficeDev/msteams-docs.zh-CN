@@ -2,38 +2,63 @@
 title: 提交内容清单
 description: 将 Microsoft 团队应用程序发布到 AppSource 之前要使用的清单
 keywords: 团队发布商店 office 发布清单提交准备
-ms.openlocfilehash: 3379fe670c9835c1f2223067592d9574fff83a69
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 86217cef542cc3f3a09e0dc64e429a675011a0c1
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801109"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587747"
 ---
 # <a name="prepare-for-appsource-submission"></a>准备 AppSource 提交  
 
 若要在 AppSource 上列出，您的应用程序必须经过审批过程。 这是 Microsoft 团队组提供的一项免费服务，它验证您的应用程序按所述方式工作，包含所有适当的元数据，并提供对最终用户有价值的内容。 为了帮助你获得快速批准，请确保你的应用满足以下要求和指南：
 
-* **分发方法：** 请确保您的应用程序适用于商店。 在不发布到 AppSource 的情况下，分发应用程序的[其他选项](../../overview.md)。
-* **应用程序详细信息页面：** 您的应用程序符合[应用程序详细信息页检查表](detail-page-checklist.md)
-* **提示和频繁失败的情况：** 请特别注意这些[提示和频繁失败的情况](frequently-failed-cases.md)，以改进应用提交到审批时间。
-* **应用程序清单：** 针对应用程序中的[应用程序清单检查表](app-manifest-checklist.md)和清单检查器检查应用程序清单
-* **测试和调试：** 您已对[应用程序进行了充分测试和调试](../../../build-and-test/debug.md)。
-* **验证策略：** 它必须传递工作组选项卡和 bot 的所有当前[AppSource 验证策略](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)。 请注意，这些策略可能会发生更改。
-* **测试备注：** 包含[验证的测试说明](#test-notes-for-validation)
+* **分发方法：** 请确保您的应用程序适用于商店平台上的出版物。 在不发布到 AppSource 的情况下，分发应用程序的[其他选项](../../overview.md)。
+* **验证策略：** 您的应用程序必须传递所有当前的[AppSource 验证策略](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)。 提交之前，请对照[验证工具](#teams-app-validation-tool)检查您的应用程序。 请注意，这些策略可能会发生更改。
+* **应用程序详细信息页面：** 您的应用程序必须与[应用程序详细信息页检查表](detail-page-checklist.md)相一致。
+* **提示和频繁失败的情况：** 请特别注意列出的[提示和频繁失败的情况](frequently-failed-cases.md)，以改进应用提交和审批时间。
+* **应用程序清单：** 检查应用部件清单（manifest）清单[中的应用](app-manifest-checklist.md)清单。
+* **测试和调试：** 确保已对应用程序进行了充分[测试和调试](../../../build-and-test/debug.md)。
+* **测试备注：** 包含[用于验证的测试说明](#test-notes-for-validation)
 * **隐私策略：** 确保你的[隐私策略、使用条款和支持 url](#privacy-policy-terms-of-use-and-support-urls)遵循我们的准则。
 
-完成上述所有要求后，即可通过[合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource)将包提交到应用程序源。
+完成上述所有要求后，通过[合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource)将您的包提交到 AppSource。
+
+## <a name="teams-app-validation-tool"></a>团队应用程序验证工具
+
+应用程序验证工具由[应用程序验证程序](#teams-app-validator)和[初步检查表](#preliminary-checklist)组成。 该工具将复制[AppSource](/office/dev/store/submit-to-appsource-via-partner-center)使用的相同测试用例来评估应用程序提交。 因此，在将解决方案提交到 AppSource 以供审批之前，将其传递给所有测试用例是至关重要的。可以在团队平台内的多个区域中找到该工具：
+
+> [!div class="checklist"]
+>
+> * [**应用程序验证程序主页**](https://dev.teams.microsoft.com/appvalidation.html)
+> * [**团队 Visual Studio Code 工具包**](/toolkit/visual-studio-code-overview.md)
+> * [**应用程序工作室**](/concepts/build-and-test/app-studio-overview.md)
+
+### <a name="teams-app-validator"></a>团队应用程序验证程序
+
+通过 "**验证**" 页，您可以在提交到 AppSource 之前检查应用程序包。 只需上传应用程序包，验证工具便会针对所有与清单相关的测试用例检查您的应用程序。 对于每个失败的测试，说明提供的文档链接可帮助您修复错误。
+
+![验证工具](../../../../assets/images/validation-tool/validator.png)
+
+### <a name="preliminary-checklist"></a>初步清单
+
+对于难以自动化的测试方案，初步清单将显示七个最常用的失败测试事例。
+
+![初步清单](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
 ## <a name="privacy-policy-terms-of-use-and-support-urls"></a>隐私策略、使用条款和支持 Url
 
 ### <a name="privacy-policy"></a>隐私策略
 
 隐私策略指南：
-* 隐私策略可以是特定于您的应用程序和/或外接程序，也可以是所有服务的整体策略。 
-* 如果使用通用隐私策略，则必须引用 "服务/应用程序/平台" 以涵盖你的团队应用和你的网站。 
-* 它必须包括您处理用户数据存储、用户数据保留、删除和安全控制信息的方式。
-* 它必须包含您的联系信息。
-* 它不应包含损坏的链接、beta Url 或暂存 Url。 
+
+> [!div class="checklist"]
+>
+> * 隐私策略可特定于您的应用程序和/或所有服务的整体策略。
+> * 如果使用通用隐私策略，则必须引用 "服务"、"应用程序" 和 "平台" 以包含团队应用和您的网站。
+> * 它必须包括处理用户数据存储、用户数据保留、删除和安全控件的方式。
+> * 它必须包含您的联系信息。
+> * 它不应包含损坏的链接、beta Url 或暂存 Url。
 
 ### <a name="terms-of-use"></a>使用条款
 
@@ -63,7 +88,4 @@ ms.locfileid: "44801109"
 
 * **有关团队中应用程序功能的说明**：详细介绍了应用程序在团队中提供的所有功能，以及用于测试每项功能的步骤。
 
-* **显示应用程序功能的视频（可选）**：可以为我们提供产品的视频录制，以充分了解应用程序的功能。
-
-
-
+* **显示应用程序功能 (可选) 的视频**：您可以为我们提供产品的视频录制，以充分了解应用程序的功能。

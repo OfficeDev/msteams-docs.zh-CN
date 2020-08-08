@@ -1,21 +1,24 @@
 ---
-title: 链接 unfurling
+title: 链接展开
 author: clearab
 description: 如何在 Microsoft 团队应用中使用邮件扩展功能执行链接 unfurling。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 32d19fcd44f2475047539350706d2745aeec3691
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279772"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587802"
 ---
-# <a name="link-unfurling"></a>链接 unfurling
+# <a name="link-unfurling"></a>链接展开
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-通过链接 unfurling 如果将特定域的 Url 粘贴`invoke`到撰写邮件区域中，应用可以注册接收活动。 `invoke`将包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可以*unfurl*的卡片进行响应，并提供其他信息或操作。 此操作的工作方式与[搜索命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)非常相似，URL 充当搜索词。
+> [!NOTE]
+> 目前，移动客户端上不支持链接 unfurling。
+
+通过链接 unfurling `invoke` 如果将特定域的 url 粘贴到撰写邮件区域中，应用可以注册接收活动。 `invoke`将包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可以*unfurl*的卡片进行响应，并提供其他信息或操作。 此操作的工作方式与[搜索命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)非常相似，URL 充当搜索词。
 
 Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的撰写邮件区域中的 Url。 在下面的屏幕截图中，用户已将 Azure DevOps 中的工作项的 URL 粘贴到邮件扩展已解析为卡片。
 
@@ -23,7 +26,7 @@ Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>向您的应用程序清单添加链接 unfurling
 
-为此，您需要将新`messageHandlers`的数组添加到`composeExtensions`应用程序清单 JSON 的部分。 您可以使用应用程序 Studio 的帮助或手动执行此操作。 例如`*.example.com`，域列表可以包含通配符。 这与域的一段完全匹配;如果需要匹配`a.b.example.com` ，请使用`*.*.example.com`。
+为此，您需要将新的 `messageHandlers` 数组添加到 `composeExtensions` 应用程序清单 JSON 的部分。 您可以使用应用程序 Studio 的帮助或手动执行此操作。 例如，域列表可以包含通配符 `*.example.com` 。 这与域的一段完全匹配;如果需要匹配， `a.b.example.com` 请使用 `*.*.example.com` 。
 
 ### <a name="using-app-studio"></a>使用 App Studio
 
@@ -34,7 +37,7 @@ Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的
 
 ### <a name="manually"></a>手动
 
-若要使您的邮件扩展能够与链接进行交互，这种方法首先需要`messageHandlers`将该数组添加到应用程序清单中，如以下示例中所示。 本示例不是完整的清单，请参阅[清单参考](~/resources/schema/manifest-schema.md)，了解完整的清单示例。
+若要使您的邮件扩展能够与链接进行交互，这种方法首先需要将该 `messageHandlers` 数组添加到应用程序清单中，如以下示例中所示。 本示例不是完整的清单，请参阅[清单参考](~/resources/schema/manifest-schema.md)，了解完整的清单示例。
 
 ```json
 ...
@@ -56,7 +59,7 @@ Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的
 ...
 ```
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a>处理`composeExtension/queryLink`调用
+## <a name="handle-the-composeextensionquerylink-invoke"></a>处理 `composeExtension/queryLink` 调用
 
 在添加了要侦听应用程序清单的域之后，您需要更新 web 服务代码以处理调用请求。 使用您收到的 URL 搜索您的服务并创建卡片响应。 如果使用多个卡进行响应，将仅使用第一个。
 
@@ -69,7 +72,7 @@ Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的
 
 有关概述，请参阅[什么是卡片](~/task-modules-and-cards/what-are-cards.md)。
 
-# <a name="cnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -89,7 +92,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -114,7 +117,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是`invoke`发送到你的 bot 的一个示例。
+这是 `invoke` 发送到你的 bot 的一个示例。
 
 ```json
 {

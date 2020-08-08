@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: 团队前瞻性消息聊天安装图
-ms.openlocfilehash: 735dbfa39222f312b4f3714b5c009dfd1bf28b05
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434494"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587739"
 ---
-# <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>在使用 Microsoft Graph 的团队中启用主动备机器人安装和主动消息（公共预览）
+# <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>使用 Microsoft Graph (公共预览版在团队中启用主动备机器人安装和主动消息) 
 
 >[!IMPORTANT]
 > Microsoft Graph 公共预览版适用于早期访问和反馈。 尽管此版本已经历大量测试，但不适合在生产中使用。
@@ -35,7 +35,7 @@ ms.locfileid: "45434494"
 
 ## <a name="permissions"></a>权限
 
-Microsoft Graph [teamsAppInstallation 资源类型](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0)权限允许您管理应用程序在 Microsoft 团队平台中的所有用户（个人）或团队（频道）作用域的安装生命周期：
+Microsoft Graph [teamsAppInstallation 资源类型](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0)权限允许您在 Microsoft 团队平台中管理所有用户 (个人) 或团队 (频道) 范围的应用程序安装生命周期：
 
 |应用权限 | 说明|
 |------------------|---------------------|
@@ -79,7 +79,7 @@ Microsoft Graph [teamsAppInstallation 资源类型](/graph/api/resources/teamsap
 **HTTP GET**请求：
 
 ```http
-GET https://graph.microsoft.com/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
 请求将返回一个 `teamsApp` 对象。 返回的对象 `id` 是应用程序的目录生成的应用程序 id，与您在团队应用程序清单中提供的 "id：" 不同：
@@ -156,7 +156,7 @@ POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
 
 **Microsoft Graph 参考：** [获取聊天](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-**1.** 你将需要你的应用程序 `{teamsAppInstallationId}` ，如果你没有它，请使用以下命令：
+**1.** 你将需要你的应用程序 `{teamsAppInstallationId}` 。 如果你没有此项，请使用以下命令：
 
 **HTTP GET**请求：
 
@@ -168,7 +168,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 **2.** 发出以下请求以获取 `chatId` ：
 
-**HTTP GET**请求（权限 `TeamsAppInstallation.ReadWriteSelfForUser.All` ）：  
+**HTTP GET**请求 (权限— `TeamsAppInstallation.ReadWriteSelfForUser.All`) ：  
 
 ```http
  GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
@@ -178,7 +178,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 
 或者，您可以 `chatId` 使用下面的请求检索，但它将需要更广泛的 `Chat.Read.All` 权限：
 
-**HTTP GET**请求（权限 `Chat.Read.All` ）：
+**HTTP GET**请求 (权限— `Chat.Read.All`) ：
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')

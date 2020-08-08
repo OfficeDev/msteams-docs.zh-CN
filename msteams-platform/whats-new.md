@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 83fe01f5a34ae0d1f3f3f86699f47139bb630b3e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434529"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587725"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -18,15 +18,16 @@ ms.locfileid: "45434529"
 
 更改日志将列出 Microsoft 团队平台和此文档集的更改。 有时，条目可用于吸引团队开发人员感兴趣的新功能。
 
-| **Date** | **备注** | **更改的主题** |
+| **Date** | **注意** | **更改的主题** |
 | -------- | --------- | ------------------ |
 | 07/22/2020 |移动设备功能更新。|[为 Microsoft "团队" 选项卡请求设备权限](~/tabs/how-to/native-device-permissions.md) |
+|07/20/2020|适用于 AppSource 提交的团队应用程序验证工具。|[团队应用程序验证工具](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|为工作组创建虚拟助理|[Microsoft 团队的虚拟助手](samples/virtual-assistant.md)|
 |07/14/2020|呈现本机加载指示器文档|[显示本机加载指示器](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-| 07/01/2020 |开始使用 Visual Studio Code 工具包生成团队应用程序。|[使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序](toolkit/visual-studio-code-overview.md) |
-|07/01/2020|针对团队 web 和桌面客户端公开的选项卡的单一登录|[单一登录（SSO）](tabs/how-to/authentication/auth-aad-sso.md)|
+|07/01/2020|开始使用 Visual Studio Code 工具包生成团队应用程序。|[使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|针对团队 web 和桌面客户端公开的选项卡的单一登录|[ (SSO) 的单一登录](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| 清单架构已更新到版本1。7| [参考： Microsoft 团队的清单架构](resources/schema/manifest-schema.md)|
-| 05/20/2020 | 使用 Microsoft Graph Api 的特定于资源的同意权限是在开发人员预览版中。 |[特定于资源的同意（RSC）-开发人员预览版](graph-api/rsc/resource-specific-consent.md) |
+| 05/20/2020 | 使用 Microsoft Graph Api 的特定于资源的同意权限是在开发人员预览版中。 |[特定于资源的同意 (RSC) —开发人员预览版](graph-api/rsc/resource-specific-consent.md) |
 |5/18/2020|将电源虚拟代理与团队集成|[将电源虚拟代理与 Microsoft 团队集成 chatbot](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|将 WFM 系统与团队的倒班连接器集成|[Microsoft 团队转移 WFM 连接器](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | 添加了对检索会话的单个成员和其他支持检索分页成员的支持。 | [为机器人获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
@@ -41,7 +42,7 @@ ms.locfileid: "45434529"
 | 05/25/2019 | 群研讨中的 bot。 | [与组聊天或频道中的 bot 进行交互](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | 应用程序清单本地化。 | [应用本地化](~/publishing/apps-localization.md) |
 | 05/20/2019 | 邮件操作。 | [邮件操作](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
-| 05/20/2019 | 链接 unfurling （自定义 URL 预览）。 | [链接展开](messaging-extensions/how-to/link-unfurling.md)|
+| 05/20/2019 | Link unfurling (自定义 URL 预览) 。 | [链接展开](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | 适用于 store 应用的应用程序认证计划。 | [应用程序证书](~/publishing/application-certification.md) |
 | 05/06/2019 | 应用模板现已推出。 | [应用程序模板](~/samples/app-templates.md) |
 | 04/23/2019 | 基于操作的邮件扩展现已推出。 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
@@ -65,7 +66,7 @@ ms.locfileid: "45434529"
 | 07/16/2018 | 在开发人员预览版中，已向选项卡配置页分配更多空间。 | [选项卡配置页面高度增加](tabs/design/tabs.md#configuration-page-height)|
 | 07/12/2018 | 有关来宾访问的信息。 | [Microsoft Teams 中的来宾访问](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | 已添加 Microsoft 团队租户应用程序目录的预发布信息。 | [发布 Microsoft 团队应用程序](~/publishing/apps-publish.md)|
-| 05/31/2018 | 团队开发人员预览版（ring 3.6）已更新，以包括将 bot 和选项卡添加到分组聊天的功能。 | [开发人员预览版中的功能](~/resources/dev-preview/developer-preview-features.md)（[开发人员预览版架构](~/resources/schema/manifest-schema-dev-preview.md)）|
+| 05/31/2018 | 团队开发人员预览版 (ring 3.6) 已更新，以包括将 bot 和选项卡添加到组聊天的功能。 | [开发人员预览版中的功能](~/resources/dev-preview/developer-preview-features.md)（[开发人员预览版架构](~/resources/schema/manifest-schema-dev-preview.md)）|
 | 05/29/2018 | 团队中的[自适应卡片操作](task-modules-and-cards/cards/cards-reference.md)中现支持自适应卡片。 |
 | 05/29/2018 | 如果使用的是[开发人员预览](~/resources/dev-preview/developer-preview-intro.md)，你的 bot 现在可以发送和接收文件。| [通过你的 Bot 发送和接收文件](~/concepts/bots/bots-files.md)，[适用于 Microsoft 团队的公共开发人员预览版中的功能](~/resources/dev-preview/developer-preview-features.md)|
 | 04/17/2018 | 已将 replyToID 添加到 `Invoke` 和卡片操作的有效负载中 `MessageBack` 。 如果需要更新卡片操作来自的邮件，这将非常有用。 | [卡片操作](~/concepts/cards/cards-actions.md)|
@@ -76,7 +77,7 @@ ms.locfileid: "45434529"
 | 03/27/2018 | 用于主动消息的扩展文档。 |[开始对话](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 03/15/2018 | 卡片的重构文档。 |[卡片](~/concepts/cards/cards.md)、[卡片操作](~/concepts/cards/cards-actions.md)、[卡片格式](~/concepts/cards/cards-format.md)、[卡片参考](~/concepts/cards/cards-reference.md)|
 | 03/03/2018 | 添加了团队应用程序 Studio 的文档。 |[使用应用程序 studio 中的控件库在](~/get-started/app-studio-component-library.md)[团队应用程序 studio 中快速开发应用](~/get-started/get-started-app-studio.md)程序|
-| 02/27/2018 | 添加了示例代码以演示 AsTeamsChannelAccounts （）方法。 |[获取你的 bot 的上下文](~/concepts/bots/bots-context.md)|
+| 02/27/2018 | 添加了示例代码，以演示 AsTeamsChannelAccounts ( # A1 方法。 |[获取你的 bot 的上下文](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | 新增了使用 c # 入门主题。 |[开始在 Microsoft Teams 平台上使用 C#/.NET ](./get-started/get-started-dotnet-app-studio.md)|
 
 ## <a name="submit-your-questions-bugs-feature-requests-and-contributions"></a>提交您的问题、bug、功能请求和发布内容

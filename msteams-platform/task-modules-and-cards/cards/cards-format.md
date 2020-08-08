@@ -3,18 +3,18 @@ title: 卡片中的文本格式
 description: 描述 Microsoft 团队中的卡片文本格式
 keywords: 团队 bot 卡片格式
 ms.date: 03/29/2018
-ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210685"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587809"
 ---
 # <a name="format-cards-in-teams"></a>设置团队中卡片的格式
 
 您可以使用 Markdown 或 HTML 向卡片添加格式文本格式，具体取决于卡片类型。
 
-卡片仅支持 text 属性中的格式设置，而不支持标题或副标题属性中的格式设置。 可以使用 XML （HTML）格式子集或 Markdown （具体取决于卡片类型）指定格式。 对于当前和将来使用 Markdown 格式的开发自适应卡片，建议使用格式设置。
+卡片仅支持 text 属性中的格式设置，而不支持标题或副标题属性中的格式设置。 可以使用 XML (HTML) 格式或 Markdown 的子集指定格式，具体取决于卡片类型。 对于当前和将来使用 Markdown 格式的开发自适应卡片，建议使用格式设置。
 
 不同的卡片类型之间的格式支持不同，在桌面和移动团队客户端以及桌面浏览器中的团队之间，卡片的呈现可能略有不同。
 
@@ -116,7 +116,8 @@ ms.locfileid: "44210685"
 Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBlock.html)和[FactSet](https://adaptivecards.io/explorer/FactSet.html)元素的卡片内容中包括提及。
 
 > [!NOTE]
->目前，工作组平台上的自适应卡版1.2 中不支持[媒体元素](https://adaptivecards.io/explorer/Media.html)。
+> * 目前，工作组平台上的自适应卡版1.2 中不支持[媒体元素](https://adaptivecards.io/explorer/Media.html)。
+> * 在 bot 消息中不支持频道 & 的团队提及。
 
 ### <a name="constructing-mentions"></a>构建提及
 
@@ -164,7 +165,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| 标头（级别 1 &ndash; 3） | **Text** | `### Text`|
+| 标头 (级别 1 &ndash; 3)  | **Text** | `### Text`|
 | 删除 | ~~text~~ | `~~text~~` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -253,7 +254,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| 标头（级别 1 &ndash; 3） | **Text** | `<h3>Text</h3>` |
+| 标头 (级别 1 &ndash; 3)  | **Text** | `<h3>Text</h3>` |
 | 删除 | ~~text~~ | `<strike>text</strike>` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -341,7 +342,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| 标头（级别 1 &ndash; 3） | **Text** | `<h3>Text</h3>` |
+| 标头 (级别 1 &ndash; 3)  | **Text** | `<h3>Text</h3>` |
 | 删除 | ~~text~~ | `<strike>text</strike>` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
