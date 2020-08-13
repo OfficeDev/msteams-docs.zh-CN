@@ -29,6 +29,8 @@
       items:
         - name: "适用于 Visual\_Studio\_Code 的 Teams 工具包扩展"
           href: toolkit/visual-studio-code-overview.md
+        - name: "适用于 Visual\_Studio\_的 Teams 工具包扩展"
+          href: toolkit/visual-studio-overview.md
 - name: 概念
   expanded: true
   items:
