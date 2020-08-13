@@ -2,13 +2,12 @@
 title: 使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序
 description: 开始在 Visual Studio Code 中使用 Microsoft 团队工具包直接构建强大的自定义应用程序
 keywords: 团队 visual studio code 工具包
-ms.date: 06/30/2020
-ms.openlocfilehash: 96293a2166e56495a8f775cb0142f721605cfdae
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: 7b8a32c099d85bec2584da2b42dcf5a524ecddbc
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531257"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651661"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序
 
@@ -53,7 +52,7 @@ Visual studio Code 的 Microsoft 团队工具包可从[Visual Studio Marketplace
 
 在其核心中，团队应用程序包含三个组件：
 
-  1. Microsoft 团队客户端（web、桌面或移动版），用户与您的应用程序进行交互。
+  1. Microsoft 团队客户端 (web、桌面或移动) ，用户与您的应用程序进行交互。
   1. 对将在团队中显示的内容请求做出响应的服务器，例如，HTML 选项卡内容或 bot 自适应卡。
   1. 由三个文件组成的团队[应用程序包](/concepts/build-and-test/apps-package.md)：
 
@@ -67,7 +66,7 @@ Visual studio Code 的 Microsoft 团队工具包可从[Visual Studio Marketplace
 
 1. 若要配置您的应用程序，请导航到 Visual Studio Code 中的 " **Microsoft 团队工具包**" 选项卡。
 1. 选择 "**编辑应用程序包**" 以查看**应用程序详细信息**页。
-1. 编辑应用程序详细信息页中的字段将更新作为应用程序包一部分最终交付的文件上的 manifest.js的内容。 [了解更多](https://aka.ms/teams-toolkit-manifest)
+1. 编辑应用程序详细信息页中的字段将更新作为应用程序包一部分最终交付的文件上的 manifest.js的内容。 [了解详细信息](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>打包应用程序
 
@@ -90,13 +89,13 @@ Visual studio Code 的 Microsoft 团队工具包可从[Visual Studio Marketplace
   * https://localhost:3000/tab从 Google Chrome 或 Edge Chromium 导航到。
 
 * 获取 SSL 证书：
-  * 打开 "Chrome 开发人员工具" 窗口（ `ctrl + shift + i`  /  `cmd + option + i` ）。
+  *  () 打开 "Chrome 开发人员工具" 窗口 `ctrl + shift + i`  /  `cmd + option + i` 。
   * 在 `Security` 选项卡上单击
   * 单击 "启用"， `View certificate` 可以选择下载证书，方法是在 OS X 中将其拖放到桌面，或者单击 `Details` Windows 中的选项卡，然后单击`Copy to File…`
   * 将该文件命名为 <*任何内容*> .cer，并将其保存到不需要管理员同意执行写入操作的文件夹中。
   
 * 在**Windows**上安装证书
-  * 选择 `DER encoded binary X.509 (.CER)` 选项（第一个选项）并保存它。
+  * 选择 `DER encoded binary X.509 (.CER)` 第一个) 的选项 (并保存它。
   * 双击证书并安装它。
   * 选取`Local Machine`
   * 选定`Place all certificates in the following store`
