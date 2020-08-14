@@ -3,12 +3,12 @@ title: 向连接器和 Webhook 发送邮件
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: f3b89161a908af8709334c300a8ee6218817c21f
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 16dbb99add82c26930baf22bfc2c5153fd47b2f1
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704493"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651647"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -220,6 +220,55 @@ ms.locfileid: "44704493"
   "needsIdentity": "true"
 }
 ```
+
+## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>使用传入 webhook 发送自适应卡
+
+> [!NOTE]
+>
+> ✔ 完全支持所有本地自适应卡架构元素（`Action.Submit` 除外）。
+>
+> ✔ 受支持的操作包括：[**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html) 和 [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)。
+
+### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>通过传入 webhook 发送[自适应卡](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)的流程如下所示：
+
+**1.** 在 Teams 中[设置自定义 webhook](#setting-up-a-custom-incoming-webhook)。</br></br>
+**2.** 创建自适应卡 JSON 文件：
+
+```json
+{
+   "type":"message",
+   "attachments":[
+      {
+         "contentType":"application/vnd.microsoft.card.adaptive",
+         "contentUrl":null,
+         "content":{
+            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+            "type":"AdaptiveCard",
+            "version":"1.2",
+            "body":[
+               {
+                  "For Samples and Templates, see":"https://adaptivecards.io/samples"
+               }
+            ]
+         }
+      }
+   ]
+}
+```
+
+> [!div class="checklist"]
+>
+> - `"type"` 字段必须为 `"message"`。
+> - `"attachments"` 阵列包含一组卡对象。
+> - `"contentType"` 字段必须设置为自适应卡类型。
+> - `"content"` 对象为采用 JSON 格式的卡。
+
+**3.** 使用 Postman 测试自适应卡
+
+可以使用 [Postman](https://www.postman.com) 测试自适应卡，以发送 POST 请求至在设置传入 webhook 时创建的 URL。 将 JSON 文件粘贴至请求主体中，并在 Teams 中查看自适应卡。
+
+>[!TIP]
+> 你可以为测试 Post 请求主体使用自适应卡代码[示例和模板](https://adaptivecards.io/samples)。
 
 ## <a name="testing-your-connector"></a>测试连接器
 
