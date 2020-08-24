@@ -344,6 +344,10 @@
       items:
         - name: 启用主动型机器人安装和主动消息传递
           href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    - name: 导入消息
+      items:
+        - name: 使用 Microsoft Graph 将第三方平台消息导入 Teams
+          href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: 资源
   items:
     - name: 机器人 - v3 SDK
