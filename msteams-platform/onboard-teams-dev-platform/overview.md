@@ -4,12 +4,12 @@ author: clearab
 description: 概述开发人员如何使用团队平台扩展和自定义 Microsoft 团队功能。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: d127acb33212f23dff9cf0dd83a1936044c10d5e
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: 4af4d34ffa4581be6e69f6233d3eb356aa6a2a08
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651875"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874882"
 ---
 # <a name="building-for-microsoft-teams"></a>为 Microsoft 团队构建
 
@@ -19,19 +19,19 @@ Microsoft 团队应用程序可提供关键信息、常见工具和受信任的�
 
 ## <a name="what-can-teams-apps-do"></a>团队应用程序可以做什么？
 
-人员通过一组平台[功能](capabilities-overview.md)发现和使用团队应用。
+人员通过一组平台 [功能](capabilities-overview.md)发现和使用团队应用。
 
 有些应用程序很简单 (发送通知) ，其他应用程序 (查看患者记录) 的复杂。 在规划您的应用程序时，请记住，团队是协作中心。 最佳团队应用可帮助人们自己表达自己并更好地协同工作。
 
 ### <a name="get-information-more-conveniently"></a>更方便地获取信息
 
-有时，您只需更轻松地查找内容。 在[选项卡](doc-links/what-are-tabs.md)中显示一个重要的网页，该网页为工作组中的静态和动态内容提供了全屏 web 体验。
+有时，您只需更轻松地查找内容。 在 [选项卡](doc-links/what-are-tabs.md)中显示一个重要的网页，该网页为工作组中的静态和动态内容提供了全屏 web 体验。
 
 ![选项卡在团队客户端中的外观的概念性表示。](doc-links/images/overview-tabs.png)
 
 ### <a name="share-links-without-switching-context"></a>在不切换上下文的情况下共享链接
 
-将信息提取到对话中，永远不会离开团队。 例如，通过邮件[扩展](doc-links/what-are-messaging-extensions.md)，您可以使用邮件撰写框，通过外部系统共享丰富的、易于 digestible 的内容。
+将信息提取到对话中，永远不会离开团队。 例如，通过邮件 [扩展](doc-links/what-are-messaging-extensions.md) ，您可以使用邮件撰写框，通过外部系统共享丰富的、易于 digestible 的内容。
 
 ![邮件扩展在团队客户端中的显示方式的概念性表示](doc-links\images\overview-messaging.png)
 
@@ -43,7 +43,7 @@ Microsoft 团队应用程序可提供关键信息、常见工具和受信任的�
 
 ### <a name="communicate-with-external-apps-and-services"></a>与外部应用程序和服务进行通信
 
-[传入 webhook](doc-links/what-are-webhooks-and-connectors.md#incoming-webhooks)是一种将来自其他应用程序的通知自动发送到团队频道或聊天的简单方法。 通过[传出的 webhook](doc-links/what-are-webhooks-and-connectors.md#outgoing-webhooks)，您可以使用 @mention 向 web 服务发送邮件。
+[传入 webhook](doc-links/what-are-webhooks-and-connectors.md#incoming-webhooks) 是一种将来自其他应用程序的通知自动发送到团队频道或聊天的简单方法。 通过 [传出的 webhook](doc-links/what-are-webhooks-and-connectors.md#outgoing-webhooks)，您可以使用 @mention 向 web 服务发送邮件。
 
 ![团队客户端中的连接器外观的概念性表示。](doc-links/images/overview-connectors.png)
 
@@ -84,7 +84,6 @@ Microsoft 团队应用程序可提供关键信息、常见工具和受信任的�
 ## <a name="resources"></a>资源
 
 * [向您的网站添加 "共享到团队" 按钮](doc-links/share-to-teams.md)
-* [使用推荐指南设计你的应用](doc-links/designing-overview.md)
 * [熟知的 UI 设计系统](https://fluentsite.z22.web.core.windows.net/)
 * [Microsoft 团队 JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
 * 用于 .NET 的 JavaScript 和[Bot 框架 sdk](https://github.com/Microsoft/botbuilder-dotnet/)的[bot 框架 sdk](https://github.com/Microsoft/botbuilder-js)

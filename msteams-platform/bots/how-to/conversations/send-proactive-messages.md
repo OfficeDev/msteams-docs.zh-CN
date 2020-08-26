@@ -4,84 +4,218 @@ author: clearab
 description: 如何使用 Microsoft 团队 bot 发送主动消息。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6e387dcf0e73124d57996a56c835f5a99fc6f1c6
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 2dfb8e18243079ca38d505f4b80deb7abf2de32f
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704458"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874847"
 ---
 # <a name="send-proactive-messages"></a>发送主动邮件
 
-> [!Note]
-> 本文中的代码示例使用的是 v3 Bot 框架 SDK 和 v3 团队 Bot 生成器 SDK 扩展。 从概念上讲，此信息适用于使用该 SDK 的 v4 版本，但代码略有不同。
+[!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-[！注意] 主动消息是由 bot 发送的用于启动对话的邮件。 出于多种原因，您可能希望机器人启动对话，其中包括：
+主动消息是由自动程序发送的无直接响应来自用户的请求的任何消息。 这可能包括如下邮件：
 
-* 个人 bot 对话的欢迎邮件
-* 轮询响应
-* 外部事件通知
+* 欢迎邮件
+* 通知
+* 计划的邮件
 
-发送邮件以启动新的对话线程与发送邮件以响应现有对话不同：当你的 bot 启动新的对话时，没有要将邮件发布到的预先存在的会话。 若要发送一封主动消息，您需要执行以下操作：
+为了让你的 bot 发送一封主动消息，它必须具有对要向其发送邮件的用户、组聊天或团队的访问权限。 对于组聊天或团队，这意味着必须首先将包含你的 bot 的应用安装到该位置。 如有必要，可以在团队中使用 Graph （如有必要） [主动安装应用](#proactively-install-your-app-using-graph) ，或使用 [应用策略](/microsoftteams/teams-custom-app-policies-and-settings) 将应用推送到租户中的团队和用户。 对于用户，需要为该用户安装您的应用程序，或者您的用户需要是安装应用程序的团队的一部分。
 
-1. [决定要说出的内容](#best-practices-for-proactive-messaging)
-1. [获取用户的唯一 Id 和租户 Id](#obtain-necessary-user-information)
-1. [发送邮件](#examples)
+发送主动消息与发送常规邮件不同，因为您没有可用于答复的活动状态 `turnContext` 。 您可能还需要在发送邮件之前，先创建一个新的会话 (，例如新的一对一聊天或在频道) 中的新对话线程。 您不能通过主动消息在团队中创建新组聊天或新频道。
 
-创建主动预防性邮件时，**必须**调用 `MicrosoftAppCredentials.TrustServiceUrl` 并传入服务 URL，然后才能创建 [`ConnectorClient`](/azure/bot-service/dotnet/bot-builder-dotnet-connector) 将用于发送邮件的。 如果不这样做，您的应用程序将收到 `401: Unauthorized` 响应。
+在较高级别上，您需要完成的步骤才能发送一封主动消息：
 
-> [!Tip]
-> 有关为 .NET 客户端设置的更多详细信息 `ConnectorClient` ，请参阅 "[发送和接收活动](/azure/bot-service/dotnet/bot-builder-dotnet-connector#create-a-connector-client)" 主题
->
-> 有关发送前瞻性消息的更多示例，可参阅 Azure Bot Service [.net](/azure/bot-service/dotnet/bot-builder-dotnet-proactive-messages)和[Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-proactive-messages)文档
+1. [获取用户 ID 或团队/通道 ID](#get-the-user-id-or-teamchannel-id) (如果需要) 。
+1. 如有必要[，创建会话或对话线索](#create-the-conversation) () 。
+1. [获取会话 ID](#get-the-conversation-id)。
+1. [发送邮件](#send-the-message)。
+
+下面的 [示例](#examples) 部分中的代码段用于创建一对一对话，请参阅 " [参考](#references) " 部分，以获取用于一次性对话和组/频道的完整工作示例的链接。
+
+## <a name="get-the-user-id-or-teamchannel-id"></a>获取用户 ID 或团队/通道 ID
+
+如果需要在频道中创建新对话或对话线程，则首先需要使用正确的 ID 来创建对话。 您可以通过多种方式接收/检索此 ID：
+
+1. 当您的应用程序安装在任何特定上下文中时，您将收到一个[ `onMembersAdded` 活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
+1. 将新用户添加到安装了应用程序的上下文中时，您将收到[ `onMembersAdded` 活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
+1. 您可以在已安装应用程序的团队中检索 [频道列表](~/bots/how-to/get-teams-context.md) 。
+1. 您可以检索您的应用程序已安装的团队 [成员的列表](~/bots/how-to/get-teams-context.md) 。
+1. 你的 bot 接收的每个活动将包含所需的信息。
+
+无论您如何获取这些信息，您都需要存储 `tenantId` 和或的，以便 `userId` `channelId` 创建新对话。 您还可以使用在 `teamId` 团队的常规/默认通道中创建新的对话线程。
+
+`userId`对于你的 Bot Id 和特定用户而言是唯一的，无法在 bot 之间重新使用它们。 `channelId`这是全局性的，但是你的 bot_必须_安装在团队中，然后才能向通道发送主动消息。
+
+## <a name="create-the-conversation"></a>创建对话
+
+拥有用户/频道信息后，如果会话尚不存在，则需要创建会话 (或者不知道 `conversationId`) 。 只应创建对话一次;请确保存储 `conversationId` `conversationReference` 要在将来使用的值或对象。
+
+## <a name="get-the-conversation-id"></a>获取会话 ID
+
+一旦创建了对话，您就可以使用 `conversationReference` 对象或 `conversationId` 和 `tenantId` 来发送邮件。 您可以通过创建对话来获取此 Id，也可以在从该上下文发送给您的任何活动中存储此 Id。 确保存储此 Id。
+
+## <a name="send-the-message"></a>发送邮件
+
+现在你已拥有正确的地址信息，你可以发送邮件了。 如果您使用的是 SDK，您将使用 `continueConversation` 方法，以及 `conversationId` 并执行 `tenantId` 直接 API 调用。  您需要设置 `conversationParameters` 正确的以成功发送邮件-请参阅下面的 [示例](#examples) 或使用 " [参考](#references) " 部分中列出的示例之一。
 
 ## <a name="best-practices-for-proactive-messaging"></a>主动消息传递的最佳做法
 
-向用户发送主动消息是与用户进行通信的一种非常有效的方式。 但是，从其角度看，此消息似乎完全自发，而欢迎消息则是第一次与您的应用程序进行交互的情况。 因此，谨慎使用此功能非常重要（不要向用户发送垃圾邮件），并为他们提供足够的信息，让他们了解为什么要推广。
-
-主动消息通常分为两类：欢迎消息或通知中的一种。
+向用户发送主动消息是与用户进行通信的一种非常有效的方式。 但是，从其角度来看，此消息可以完全自发，在欢迎消息的情况下，它将在第一次与您的应用程序进行交互时显示。 因此，谨慎使用此功能非常重要 (不要对用户) 垃圾邮件，并提供足够的信息，让用户了解推广的原因。
 
 ### <a name="welcome-messages"></a>欢迎邮件
 
-使用前瞻性消息向用户发送欢迎邮件时，必须注意，对于大多数接收邮件的用户，他们在接收邮件时将没有上下文。 这也是第一次将与您的应用程序进行交互。你有机会创建一个理想的首印象。 最佳欢迎消息将包括：
+使用前瞻性消息向用户发送欢迎邮件时，必须记住，对于大多数接收邮件的人，将没有上下文了解他们接收邮件的原因。 这也是第一次将与您的应用程序进行交互。你有机会创建一个理想的首印象。 最佳欢迎消息将包括：
 
-* **为什么他们收到此邮件。** 应非常清楚用户接收邮件的原因。 如果你的 bot 已安装在频道中，并且你向所有用户发送了欢迎消息，请让他们知道它安装在什么频道并有权安装它。
+* **用户接收邮件的原因。** 应非常清楚用户接收邮件的原因。 如果你的 bot 已安装在频道中，并且你向所有用户发送了欢迎消息，请让他们知道它安装在什么频道并有权安装它。
 * **你提供的内容。** 他们可以对你的应用程序做些什么？ 您可以为它们引入什么值？
 * **接下来应做些什么。** 邀请他们试用某个命令，或以某种方式与您的应用程序进行交互。
+
+请记住，欢迎邮件较差可能会导致用户阻止你的 bot。 应花费大量时间来起草欢迎消息，并在用户没有所需的效果的情况下对其进行迭代。
 
 ### <a name="notification-messages"></a>通知邮件
 
 使用主动消息发送通知时，您需要确保您的用户有一个明确的路径，以根据您的通知执行常见操作，并清楚地了解通知发生的原因。 正常的通知消息通常包括：
 
 * **发生了什么事。** 可以清楚地指示导致通知发生了什么情况。
-* **它发生的变化。** 应清楚是什么项目/内容已更新，从而导致通知。
-* **已完成的操作。** 谁采取了导致通知发送的操作。
-* **他们可以执行的操作。** 使您的用户可以轻松地根据您的通知执行操作。
-* **他们可以选择退出。** 您需要为用户提供一个路径，以供用户退出其他通知。
+* **结果是什么。** 应清楚是什么项目/内容已更新，从而导致通知。
+* **触发它的执行者。** 导致通知被发送的操作或采取的操作。
+* **用户可以采取何种响应。** 使您的用户可以轻松地根据您的通知执行操作。
+* **用户可以选择退出的方式。** 您需要为用户提供一个路径，以供用户退出其他通知。
 
-## <a name="obtain-necessary-user-information"></a>获取必要的用户信息
-
-Bot 可以通过获取用户的*唯一 ID*和*租户 id* ，创建与单个 Microsoft 团队用户的新对话。 您可以使用下列方法之一获取这些值：
-
-* 通过从频道中[提取团队名单，](../get-teams-context.md#fetching-the-roster-or-user-profile)您的应用程序已安装在中。
-* 通过在用户[与频道中的 bot 交互](./channel-and-group-conversations.md)时缓存这些文件。
-* 当用户[在频道对话中 @mentioned](./channel-and-group-conversations.md#retrieving-mentions)时，bot 是的一部分。
-* 当您的应用程序安装在个人作用域中时，当您[收到 `conversationUpdate` ](./subscribe-to-conversation-events.md#team-members-added)事件时缓存它们，或将新成员添加到频道或组聊天
-
-### <a name="proactively-install-your-app-using-graph"></a>使用 Graph 主动安装您的应用程序
+## <a name="proactively-install-your-app-using-graph"></a>使用 Graph 主动安装您的应用程序
 
 > [!Note]
-> 使用 graph 主动安装应用当前处于 beta 中。
+> 使用 Microsoft Graph 主动安装应用目前在 beta 中。
 
-有时，可能有必要主动向尚未安装或与您的应用程序进行交互的邮件用户进行处理。 例如，您希望使用[公司 communicator](~/samples/app-templates.md#company-communicator)向整个组织发送邮件。 在这种情况下，您可以使用 Graph API 主动为您的用户安装您的应用程序，然后从 `conversationUpdate` 应用程序安装时收到的事件中缓存必要的值。
+有时，可能有必要主动向尚未安装或与您的应用程序进行交互的邮件用户进行处理。 例如，您希望使用 [公司 communicator](~/samples/app-templates.md#company-communicator) 向整个组织发送邮件。 在这种情况下，您可以使用 Graph API 主动为您的用户安装您的应用程序，然后从 `conversationUpdate` 应用程序安装时收到的事件中缓存必要的值。
 
 您只能安装组织应用程序目录或团队应用商店中的应用程序。
 
-有关完整的详细信息，请参阅在 Graph 文档中[安装用户的应用程序](/graph/teams-proactive-messaging)。 [.Net 中](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)也有一个示例。
+请参阅在 Microsoft Graph 的团队文档中 [为用户安装应用程序](/graph/teams-proactive-messaging) 和 [主动机器人安装和消息](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。 GitHub 平台上也有 [Microsoft .net framework 示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)  。
 
 ## <a name="examples"></a>示例
 
-在使用 REST API 创建新对话之前，请务必对持有者令牌进行身份验证并拥有持有者令牌。 `members.id`下面的对象中的字段对你的 bot 和用户的组合是唯一的。 您不能通过任何其他方法获取它，而不是以上所述。
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var teamsChannelId = turnContext.Activity.TeamsGetChannelId();
+    var serviceUrl = turnContext.Activity.ServiceUrl;
+    var credentials = new MicrosoftAppCredentials(_appId, _appPassword);
+    ConversationReference conversationReference = null;
+
+    //Get the set of member IDs to send the message to
+    var members = await GetPagedMembers(turnContext, cancellationToken);
+
+    foreach (var teamMember in members)
+    {
+        var proactiveMessage = MessageFactory.Text($"Hello {teamMember.GivenName} {teamMember.Surname}. I'm a Teams conversation bot.");
+
+        var conversationParameters = new ConversationParameters
+        {
+            IsGroup = false,
+            Bot = turnContext.Activity.Recipient,
+            Members = new ChannelAccount[] { teamMember },
+            TenantId = turnContext.Activity.Conversation.TenantId,
+        };
+        //create the new one-to-one conversations
+        await ((BotFrameworkAdapter)turnContext.Adapter).CreateConversationAsync(
+            teamsChannelId,
+            serviceUrl,
+            credentials,
+            conversationParameters,
+            async (t1, c1) =>
+            {
+                //Get the conversationReference
+                conversationReference = t1.Activity.GetConversationReference();
+                //Send the proactive message
+                await ((BotFrameworkAdapter)turnContext.Adapter).ContinueConversationAsync(
+                    _appId,
+                    conversationReference,
+                    async (t2, c2) =>
+                    {
+                        await t2.SendActivityAsync(proactiveMessage, c2);
+                    },
+                    cancellationToken);
+            },
+            cancellationToken);
+    }
+
+    await turnContext.SendActivityAsync(MessageFactory.Text("All messages have been sent."), cancellationToken);
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```javascript
+
+async messageAllMembersAsync(context) {
+    const members = await this.getPagedMembers(context);
+
+    members.forEach(async (teamMember) => {
+        const message = MessageFactory.text('Hello ${ teamMember.givenName } ${ teamMember.surname }. I\'m a Teams conversation bot.');
+
+        var ref = TurnContext.getConversationReference(context.activity);
+        ref.user = teamMember;
+
+        await context.adapter.createConversation(ref,
+            async (t1) => {
+                const ref2 = TurnContext.getConversationReference(t1.activity);
+                await t1.adapter.continueConversation(ref2, async (t2) => {
+                    await t2.sendActivity(message);
+                });
+            });
+    });
+
+    await context.sendActivity(MessageFactory.text('All messages have been sent.'));
+}
+```
+
+# <a name="python"></a>[Python](#tab/python)
+
+```python
+async def _message_all_members(self, turn_context: TurnContext):
+    team_members = await self._get_paged_members(turn_context)
+
+    for member in team_members:
+        conversation_reference = TurnContext.get_conversation_reference(
+            turn_context.activity
+        )
+
+        conversation_parameters = ConversationParameters(
+            is_group=False,
+            bot=turn_context.activity.recipient,
+            members=[member],
+            tenant_id=turn_context.activity.conversation.tenant_id,
+        )
+
+        async def get_ref(tc1):
+            conversation_reference_inner = TurnContext.get_conversation_reference(
+                tc1.activity
+            )
+            return await tc1.adapter.continue_conversation(
+                conversation_reference_inner, send_message, self._app_id
+            )
+
+        async def send_message(tc2: TurnContext):
+            return await tc2.send_activity(
+                f"Hello {member.name}. I'm a Teams conversation bot."
+            )
+
+        await turn_context.adapter.create_conversation(
+            conversation_reference, get_ref, conversation_parameters
+        )
+
+    await turn_context.send_activity(
+        MessageFactory.text("All messages have been sent")
+    )
+
+```
+
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 POST /v3/conversations
@@ -111,134 +245,23 @@ POST /v3/conversations
 }
 ```
 
-此 ID 是个人聊天的唯一会话 ID。 请存储此值并重用它以供用户将来交互。
-
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
-
-本示例使用的是 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。 在此示例中， `client` 是已 `ConnectorClient` 按照[发送和接收活动](/azure/bot-service/dotnet/bot-builder-dotnet-connector)中所述创建和验证的实例
-
-```csharp
-// Create or get existing chat conversation with user
-var response = client.Conversations.CreateOrGetDirectConversation(activity.Recipient, activity.From, activity.GetTenantId());
-
-// Construct the message to post to conversation
-Activity newActivity = new Activity()
-{
-    Text = "Hello",
-    Type = ActivityTypes.Message,
-    Conversation = new ConversationAccount
-    {
-        Id = response.Id
-    },
-};
-
-// Post the message to chat conversation with user
-await client.Conversations.SendToConversationAsync(newActivity, response.Id);
-```
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
-
-```javascript
-var address =
-{
-    channelId: 'msteams',
-    user: { id: userId },
-    channelData: {
-        tenant: {
-            id: tenantId
-        }
-    },
-    bot:
-    {
-        id: appId,
-        name: appName
-    },
-    serviceUrl: session.message.address.serviceUrl,
-    useAuth: true
-}
-
-var msg = new builder.Message().address(address);
-msg.text('Hello, this is a notification');
-bot.send(msg);
-```
-
-# <a name="python"></a>[Python](#tab/python)
-
-```python
-async def _send_proactive_message():
-  for conversation_reference in CONVERSATION_REFERENCES.values():
-    return await ADAPTER.continue_conversation(APP_ID, conversation_reference,
-      lambda turn_context: turn_context.send_activity("proactive hello")
-    )
-
-```
-
 ---
 
-## <a name="creating-a-channel-conversation"></a>创建频道对话
+## <a name="references"></a>参考
 
-您的团队添加的 bot 可以发布到通道中，以创建新的答复链。 如果您使用的是 Node.js 团队 SDK，请使用以 `startReplyChain()` 正确的活动 id 和会话 id 为您提供完全填充的地址。如果使用的是 c #，请参阅下面的示例。
+下面列出了官方的主动消息示例。
 
-或者，也可以使用 REST API 并向 resource 发出 POST 请求 [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) 。
+|  不正确。  | 示例名称           | 说明                                                                      | .NET    | JavaScript   | Python  |
+|:--:|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
+|57|团队对话基础知识  | 演示团队中的对话的基础知识，包括发送一对一的主动消息。|[.NET &nbsp; Core](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
+|58|在频道中启动新线程     | 演示如何在通道中创建新线程。 |[.NET &nbsp; Core](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+下面的示例演示了在不使用对象) 的情况下发送主动消息所需的最少量信息 (`conversationReference` 。 如果您直接使用 REST API 调用，或者尚未存储完全对象，则此示例可能很有用 `conversationReference` 。
 
-下面的代码段来自[此示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)。
+* [团队主动消息传递](https://github.com/clearab/teamsProactiveMessaging)
 
-```csharp
-using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Bot.Connector;
-using Microsoft.Bot.Connector.Teams.Models;
-using Microsoft.Teams.TemplateBotCSharp.Properties;
-using System;
-using System.Threading.Tasks;
-
-namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
-{
-    [Serializable]
-    public class ProactiveMsgTo1to1Dialog : IDialog<object>
-    {
-        public async Task StartAsync(IDialogContext context)
-        {
-            if (context == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-
-            var channelData = context.Activity.GetChannelData<TeamsChannelData>();
-            var message = Activity.CreateMessageActivity();
-            message.Text = "Hello World";
-
-            var conversationParameters = new ConversationParameters
-            {
-                  IsGroup = true,
-                  ChannelData = new TeamsChannelData
-                  {
-                      Channel = new ChannelInfo(channelData.Channel.Id),
-                  },
-                  Activity = (Activity) message
-            };
-
-            MicrosoftAppCredentials.TrustServiceUrl(serviceUrl, DateTime.MaxValue);
-            var connectorClient = new ConnectorClient(new Uri(activity.ServiceUrl));
-            var response = await connectorClient.Conversations.CreateConversationAsync(conversationParameters);
-
-            context.Done<object>(null);
-        }
-    }
-}
-```
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-下面的代码片段来自[teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js)。
-
-[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
-
-# <a name="python"></a>[Python](#tab/python)
-
-[!code-python[message-all-members](~/../botbuilder-samples/samples/python/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
-
----
+## <a name="view-additional-code"></a>查看其他代码
+>
+> [!div class="nextstepaction"]
+> [**团队主动消息代码示例**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+>
