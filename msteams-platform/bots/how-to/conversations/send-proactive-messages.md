@@ -4,84 +4,218 @@ author: clearab
 description: 如何使用 Microsoft 团队 bot 发送主动消息。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6e387dcf0e73124d57996a56c835f5a99fc6f1c6
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 2dfb8e18243079ca38d505f4b80deb7abf2de32f
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704458"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874847"
 ---
-# <a name="send-proactive-messages"></a><span data-ttu-id="2a5fa-103">发送主动邮件</span><span class="sxs-lookup"><span data-stu-id="2a5fa-103">Send proactive messages</span></span>
+# <a name="send-proactive-messages"></a><span data-ttu-id="ec0fd-103">发送主动邮件</span><span class="sxs-lookup"><span data-stu-id="ec0fd-103">Send proactive messages</span></span>
+
+[!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
+
+<span data-ttu-id="ec0fd-104">主动消息是由自动程序发送的无直接响应来自用户的请求的任何消息。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-104">A proactive message is any message sent by a bot that is not in direct response to a request from a user.</span></span> <span data-ttu-id="ec0fd-105">这可能包括如下邮件：</span><span class="sxs-lookup"><span data-stu-id="ec0fd-105">This can include messages like:</span></span>
+
+* <span data-ttu-id="ec0fd-106">欢迎邮件</span><span class="sxs-lookup"><span data-stu-id="ec0fd-106">Welcome messages</span></span>
+* <span data-ttu-id="ec0fd-107">通知</span><span class="sxs-lookup"><span data-stu-id="ec0fd-107">Notifications</span></span>
+* <span data-ttu-id="ec0fd-108">计划的邮件</span><span class="sxs-lookup"><span data-stu-id="ec0fd-108">Scheduled messages</span></span>
+
+<span data-ttu-id="ec0fd-109">为了让你的 bot 发送一封主动消息，它必须具有对要向其发送邮件的用户、组聊天或团队的访问权限。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-109">In order for your bot to send a proactive message, it must have access to the user, group chat, or team that you wish to send the message to.</span></span> <span data-ttu-id="ec0fd-110">对于组聊天或团队，这意味着必须首先将包含你的 bot 的应用安装到该位置。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-110">For a group chat or team, this means the app that contains your bot must first be installed to that location.</span></span> <span data-ttu-id="ec0fd-111">如有必要，可以在团队中使用 Graph （如有必要） [主动安装应用](#proactively-install-your-app-using-graph) ，或使用 [应用策略](/microsoftteams/teams-custom-app-policies-and-settings) 将应用推送到租户中的团队和用户。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-111">You can [proactively install your app using Graph](#proactively-install-your-app-using-graph) in a team if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant.</span></span> <span data-ttu-id="ec0fd-112">对于用户，需要为该用户安装您的应用程序，或者您的用户需要是安装应用程序的团队的一部分。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-112">For users, your app either needs to be installed for that user, or your user needs to be part of a team where your app is installed.</span></span>
+
+<span data-ttu-id="ec0fd-113">发送主动消息与发送常规邮件不同，因为您没有可用于答复的活动状态 `turnContext` 。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-113">Sending a proactive message is different than sending a regular message in that you won't have an active `turnContext` to use for a reply.</span></span> <span data-ttu-id="ec0fd-114">您可能还需要在发送邮件之前，先创建一个新的会话 (，例如新的一对一聊天或在频道) 中的新对话线程。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-114">You may also need to create the conversation (for example a new one-to-one chat, or a new conversation thread in a channel) before sending the message.</span></span> <span data-ttu-id="ec0fd-115">您不能通过主动消息在团队中创建新组聊天或新频道。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-115">You cannot create a new group chat or a new channel in a team with proactive messaging.</span></span>
+
+<span data-ttu-id="ec0fd-116">在较高级别上，您需要完成的步骤才能发送一封主动消息：</span><span class="sxs-lookup"><span data-stu-id="ec0fd-116">At a high level the steps you'll need to complete to send a proactive message are:</span></span>
+
+1. <span data-ttu-id="ec0fd-117">[获取用户 ID 或团队/通道 ID](#get-the-user-id-or-teamchannel-id) (如果需要) 。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-117">[Get the user ID or team/channel ID](#get-the-user-id-or-teamchannel-id) (if needed).</span></span>
+1. <span data-ttu-id="ec0fd-118">如有必要[，创建会话或对话线索](#create-the-conversation) () 。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-118">[Create the conversation or conversation thread](#create-the-conversation) (if needed).</span></span>
+1. <span data-ttu-id="ec0fd-119">[获取会话 ID](#get-the-conversation-id)。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-119">[Get the conversation ID](#get-the-conversation-id).</span></span>
+1. <span data-ttu-id="ec0fd-120">[发送邮件](#send-the-message)。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-120">[Send the message](#send-the-message).</span></span>
+
+<span data-ttu-id="ec0fd-121">下面的 [示例](#examples) 部分中的代码段用于创建一对一对话，请参阅 " [参考](#references) " 部分，以获取用于一次性对话和组/频道的完整工作示例的链接。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-121">The code snippets in the [examples](#examples) section below are for creating a one-to-one conversation, see the [references](#references) section for links to complete working samples for both one-to-once conversations and group/channels.</span></span>
+
+## <a name="get-the-user-id-or-teamchannel-id"></a><span data-ttu-id="ec0fd-122">获取用户 ID 或团队/通道 ID</span><span class="sxs-lookup"><span data-stu-id="ec0fd-122">Get the user ID or team/channel ID</span></span>
+
+<span data-ttu-id="ec0fd-123">如果需要在频道中创建新对话或对话线程，则首先需要使用正确的 ID 来创建对话。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-123">If you need to create a new conversation or conversation thread in a channel you'll first need the right ID to create the conversation.</span></span> <span data-ttu-id="ec0fd-124">您可以通过多种方式接收/检索此 ID：</span><span class="sxs-lookup"><span data-stu-id="ec0fd-124">You can receive/retrieve this ID in multiple ways:</span></span>
+
+1. <span data-ttu-id="ec0fd-125">当您的应用程序安装在任何特定上下文中时，您将收到一个[ `onMembersAdded` 活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-125">When your app is installed in any particular context, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+1. <span data-ttu-id="ec0fd-126">将新用户添加到安装了应用程序的上下文中时，您将收到[ `onMembersAdded` 活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-126">When a new user is added to a context where your app is installed, you'll receive a [`onMembersAdded` Activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+1. <span data-ttu-id="ec0fd-127">您可以在已安装应用程序的团队中检索 [频道列表](~/bots/how-to/get-teams-context.md) 。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-127">You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team your app is installed.</span></span>
+1. <span data-ttu-id="ec0fd-128">您可以检索您的应用程序已安装的团队 [成员的列表](~/bots/how-to/get-teams-context.md) 。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-128">You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team your app is installed.</span></span>
+1. <span data-ttu-id="ec0fd-129">你的 bot 接收的每个活动将包含所需的信息。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-129">Every Activity your bot receives will contain the necessary information.</span></span>
+
+<span data-ttu-id="ec0fd-130">无论您如何获取这些信息，您都需要存储 `tenantId` 和或的，以便 `userId` `channelId` 创建新对话。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-130">Regardless of how you gain the information, you'll need to store the `tenantId` and either the `userId` or `channelId` in order to create a new conversation.</span></span> <span data-ttu-id="ec0fd-131">您还可以使用在 `teamId` 团队的常规/默认通道中创建新的对话线程。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-131">You can also use the `teamId` to create a new conversation thread in the general/default channel of a team.</span></span>
+
+<span data-ttu-id="ec0fd-132">`userId`对于你的 Bot Id 和特定用户而言是唯一的，无法在 bot 之间重新使用它们。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-132">The `userId` is unique to your bot Id and a particular user, you cannot re-use them between bots.</span></span> <span data-ttu-id="ec0fd-133">`channelId`这是全局性的，但是你的 bot_必须_安装在团队中，然后才能向通道发送主动消息。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-133">The `channelId` is global, however your bot _must_ be installed in the team before you can send a proactive message to a channel.</span></span>
+
+## <a name="create-the-conversation"></a><span data-ttu-id="ec0fd-134">创建对话</span><span class="sxs-lookup"><span data-stu-id="ec0fd-134">Create the conversation</span></span>
+
+<span data-ttu-id="ec0fd-135">拥有用户/频道信息后，如果会话尚不存在，则需要创建会话 (或者不知道 `conversationId`) 。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-135">Once you have the user/channel information, you'll need to create the conversation if it doesn't already exist (or you don't know the `conversationId`).</span></span> <span data-ttu-id="ec0fd-136">只应创建对话一次;请确保存储 `conversationId` `conversationReference` 要在将来使用的值或对象。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-136">You should only create the conversation once; make sure you store the `conversationId` value or `conversationReference` object to use in the future.</span></span>
+
+## <a name="get-the-conversation-id"></a><span data-ttu-id="ec0fd-137">获取会话 ID</span><span class="sxs-lookup"><span data-stu-id="ec0fd-137">Get the conversation ID</span></span>
+
+<span data-ttu-id="ec0fd-138">一旦创建了对话，您就可以使用 `conversationReference` 对象或 `conversationId` 和 `tenantId` 来发送邮件。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-138">Once the conversation has been created, you will use either the `conversationReference` object or the `conversationId` and the `tenantId` to send the message.</span></span> <span data-ttu-id="ec0fd-139">您可以通过创建对话来获取此 Id，也可以在从该上下文发送给您的任何活动中存储此 Id。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-139">You can get this Id by either creating the conversation, or storing it from any Activity sent to you from that context.</span></span> <span data-ttu-id="ec0fd-140">确保存储此 Id。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-140">Make certain that you store this Id.</span></span>
+
+## <a name="send-the-message"></a><span data-ttu-id="ec0fd-141">发送邮件</span><span class="sxs-lookup"><span data-stu-id="ec0fd-141">Send the message</span></span>
+
+<span data-ttu-id="ec0fd-142">现在你已拥有正确的地址信息，你可以发送邮件了。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-142">Now that you have the right address information, you can send your message.</span></span> <span data-ttu-id="ec0fd-143">如果您使用的是 SDK，您将使用 `continueConversation` 方法，以及 `conversationId` 并执行 `tenantId` 直接 API 调用。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-143">If you're using the SDK, you'll do so using the `continueConversation` method,and the `conversationId` and `tenantId` to make a direct API call.</span></span>  <span data-ttu-id="ec0fd-144">您需要设置 `conversationParameters` 正确的以成功发送邮件-请参阅下面的 [示例](#examples) 或使用 " [参考](#references) " 部分中列出的示例之一。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-144">You'll need to set the `conversationParameters` correctly to successfully send your message - see the [examples](#examples) below or use one of the samples listed in the [references](#references) section.</span></span>
+
+## <a name="best-practices-for-proactive-messaging"></a><span data-ttu-id="ec0fd-145">主动消息传递的最佳做法</span><span class="sxs-lookup"><span data-stu-id="ec0fd-145">Best practices for proactive messaging</span></span>
+
+<span data-ttu-id="ec0fd-146">向用户发送主动消息是与用户进行通信的一种非常有效的方式。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-146">Sending proactive messages to users can be a very effective way to communicate with your users.</span></span> <span data-ttu-id="ec0fd-147">但是，从其角度来看，此消息可以完全自发，在欢迎消息的情况下，它将在第一次与您的应用程序进行交互时显示。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-147">However, from their perspective this message can appear completely unprompted and, in the case of welcome messages, it will be the first time they've interacted with your app.</span></span> <span data-ttu-id="ec0fd-148">因此，谨慎使用此功能非常重要 (不要对用户) 垃圾邮件，并提供足够的信息，让用户了解推广的原因。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-148">As such, it is very important to use this functionality sparingly (don't spam your users) and to provide enough information to let users understand why they are being messaged.</span></span>
+
+### <a name="welcome-messages"></a><span data-ttu-id="ec0fd-149">欢迎邮件</span><span class="sxs-lookup"><span data-stu-id="ec0fd-149">Welcome messages</span></span>
+
+<span data-ttu-id="ec0fd-150">使用前瞻性消息向用户发送欢迎邮件时，必须记住，对于大多数接收邮件的人，将没有上下文了解他们接收邮件的原因。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-150">When using proactive messaging to send a welcome message to a user you must keep in mind that, for most people receiving the message, there will be no context for why they are receiving it.</span></span> <span data-ttu-id="ec0fd-151">这也是第一次将与您的应用程序进行交互。你有机会创建一个理想的首印象。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-151">This is also the first time they will have interacted with your app; it is your opportunity to create a good first impression.</span></span> <span data-ttu-id="ec0fd-152">最佳欢迎消息将包括：</span><span class="sxs-lookup"><span data-stu-id="ec0fd-152">The best welcome messages will include:</span></span>
+
+* <span data-ttu-id="ec0fd-153">**用户接收邮件的原因。**</span><span class="sxs-lookup"><span data-stu-id="ec0fd-153">**Why a user is receiving the message.**</span></span> <span data-ttu-id="ec0fd-154">应非常清楚用户接收邮件的原因。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-154">It should be very clear to the user why they are receiving the message.</span></span> <span data-ttu-id="ec0fd-155">如果你的 bot 已安装在频道中，并且你向所有用户发送了欢迎消息，请让他们知道它安装在什么频道并有权安装它。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-155">If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.</span></span>
+* <span data-ttu-id="ec0fd-156">**你提供的内容。**</span><span class="sxs-lookup"><span data-stu-id="ec0fd-156">**What do you offer.**</span></span> <span data-ttu-id="ec0fd-157">他们可以对你的应用程序做些什么？</span><span class="sxs-lookup"><span data-stu-id="ec0fd-157">What can they do with your app?</span></span> <span data-ttu-id="ec0fd-158">您可以为它们引入什么值？</span><span class="sxs-lookup"><span data-stu-id="ec0fd-158">What value can you bring to them?</span></span>
+* <span data-ttu-id="ec0fd-159">**接下来应做些什么。**</span><span class="sxs-lookup"><span data-stu-id="ec0fd-159">**What should they do next.**</span></span> <span data-ttu-id="ec0fd-160">邀请他们试用某个命令，或以某种方式与您的应用程序进行交互。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-160">Invite them to try out a command, or interact with your app in some way.</span></span>
+
+<span data-ttu-id="ec0fd-161">请记住，欢迎邮件较差可能会导致用户阻止你的 bot。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-161">Remember, poor welcome messages can lead to users blocking your bot.</span></span> <span data-ttu-id="ec0fd-162">应花费大量时间来起草欢迎消息，并在用户没有所需的效果的情况下对其进行迭代。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-162">You should spend plenty of time crafting your welcome messages, and iterate on them if they are not having the desired effect.</span></span>
+
+### <a name="notification-messages"></a><span data-ttu-id="ec0fd-163">通知邮件</span><span class="sxs-lookup"><span data-stu-id="ec0fd-163">Notification messages</span></span>
+
+<span data-ttu-id="ec0fd-164">使用主动消息发送通知时，您需要确保您的用户有一个明确的路径，以根据您的通知执行常见操作，并清楚地了解通知发生的原因。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-164">When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification and a clear understanding of why the notification occurred.</span></span> <span data-ttu-id="ec0fd-165">正常的通知消息通常包括：</span><span class="sxs-lookup"><span data-stu-id="ec0fd-165">Good notification messages will generally include:</span></span>
+
+* <span data-ttu-id="ec0fd-166">**发生了什么事。**</span><span class="sxs-lookup"><span data-stu-id="ec0fd-166">**What happened.**</span></span> <span data-ttu-id="ec0fd-167">可以清楚地指示导致通知发生了什么情况。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-167">A clear indication of what happened to cause the notification.</span></span>
+* <span data-ttu-id="ec0fd-168">**结果是什么。**</span><span class="sxs-lookup"><span data-stu-id="ec0fd-168">**What was the result.**</span></span> <span data-ttu-id="ec0fd-169">应清楚是什么项目/内容已更新，从而导致通知。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-169">It should be clear what item/thing was updated to cause the notification.</span></span>
+* <span data-ttu-id="ec0fd-170">**触发它的执行者。**</span><span class="sxs-lookup"><span data-stu-id="ec0fd-170">**Who/what triggered it.**</span></span> <span data-ttu-id="ec0fd-171">导致通知被发送的操作或采取的操作。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-171">Who or what took action that caused the notification to be sent.</span></span>
+* <span data-ttu-id="ec0fd-172">**用户可以采取何种响应。**</span><span class="sxs-lookup"><span data-stu-id="ec0fd-172">**What can users do in response.**</span></span> <span data-ttu-id="ec0fd-173">使您的用户可以轻松地根据您的通知执行操作。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-173">Make it easy for your users to take actions based on your notifications.</span></span>
+* <span data-ttu-id="ec0fd-174">**用户可以选择退出的方式。** 您需要为用户提供一个路径，以供用户退出其他通知。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-174">**How can users opt out.** You need to provide a path for users to opt out of additional notifications.</span></span>
+
+## <a name="proactively-install-your-app-using-graph"></a><span data-ttu-id="ec0fd-175">使用 Graph 主动安装您的应用程序</span><span class="sxs-lookup"><span data-stu-id="ec0fd-175">Proactively install your app using Graph</span></span>
 
 > [!Note]
-> <span data-ttu-id="2a5fa-104">本文中的代码示例使用的是 v3 Bot 框架 SDK 和 v3 团队 Bot 生成器 SDK 扩展。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-104">The code samples in this article make use of the v3 Bot Framework SDK, and v3 Teams Bot Builder SDK extensions.</span></span> <span data-ttu-id="2a5fa-105">从概念上讲，此信息适用于使用该 SDK 的 v4 版本，但代码略有不同。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-105">Conceptually, the information applies when using the v4 versions of the SDK, but the code is slightly different.</span></span>
+> <span data-ttu-id="ec0fd-176">使用 Microsoft Graph 主动安装应用目前在 beta 中。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-176">Proactively installing apps using the Microsoft Graph is currently in beta.</span></span>
 
-<span data-ttu-id="2a5fa-106">[！注意] 主动消息是由 bot 发送的用于启动对话的邮件。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-106">A proactive message is a message that is sent by a bot to start a conversation.</span></span> <span data-ttu-id="2a5fa-107">出于多种原因，您可能希望机器人启动对话，其中包括：</span><span class="sxs-lookup"><span data-stu-id="2a5fa-107">You may want your bot to start a conversation for a number of reasons, including:</span></span>
+<span data-ttu-id="ec0fd-177">有时，可能有必要主动向尚未安装或与您的应用程序进行交互的邮件用户进行处理。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-177">Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously.</span></span> <span data-ttu-id="ec0fd-178">例如，您希望使用 [公司 communicator](~/samples/app-templates.md#company-communicator) 向整个组织发送邮件。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-178">For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization.</span></span> <span data-ttu-id="ec0fd-179">在这种情况下，您可以使用 Graph API 主动为您的用户安装您的应用程序，然后从 `conversationUpdate` 应用程序安装时收到的事件中缓存必要的值。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-179">For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.</span></span>
 
-* <span data-ttu-id="2a5fa-108">个人 bot 对话的欢迎邮件</span><span class="sxs-lookup"><span data-stu-id="2a5fa-108">Welcome messages for personal bot conversations</span></span>
-* <span data-ttu-id="2a5fa-109">轮询响应</span><span class="sxs-lookup"><span data-stu-id="2a5fa-109">Poll responses</span></span>
-* <span data-ttu-id="2a5fa-110">外部事件通知</span><span class="sxs-lookup"><span data-stu-id="2a5fa-110">External event notifications</span></span>
+<span data-ttu-id="ec0fd-180">您只能安装组织应用程序目录或团队应用商店中的应用程序。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-180">You can only install apps that are in your organizational app catalogue, or the Teams app store.</span></span>
 
-<span data-ttu-id="2a5fa-111">发送邮件以启动新的对话线程与发送邮件以响应现有对话不同：当你的 bot 启动新的对话时，没有要将邮件发布到的预先存在的会话。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-111">Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to.</span></span> <span data-ttu-id="2a5fa-112">若要发送一封主动消息，您需要执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="2a5fa-112">In order to send a proactive message you need to:</span></span>
+<span data-ttu-id="ec0fd-181">请参阅在 Microsoft Graph 的团队文档中 [为用户安装应用程序](/graph/teams-proactive-messaging) 和 [主动机器人安装和消息](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-181">See [Install apps for users](/graph/teams-proactive-messaging) in the Graph documentation and [Proactive bot installation and messaging in Teams with Microsoft Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md).</span></span> <span data-ttu-id="ec0fd-182">GitHub 平台上也有 [Microsoft .net framework 示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)  。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-182">There is also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)  on the GitHub platform.</span></span>
 
-1. [<span data-ttu-id="2a5fa-113">决定要说出的内容</span><span class="sxs-lookup"><span data-stu-id="2a5fa-113">Decide what you're going to say</span></span>](#best-practices-for-proactive-messaging)
-1. [<span data-ttu-id="2a5fa-114">获取用户的唯一 Id 和租户 Id</span><span class="sxs-lookup"><span data-stu-id="2a5fa-114">Obtain the user's unique Id and tenant Id</span></span>](#obtain-necessary-user-information)
-1. [<span data-ttu-id="2a5fa-115">发送邮件</span><span class="sxs-lookup"><span data-stu-id="2a5fa-115">Send the message</span></span>](#examples)
+## <a name="examples"></a><span data-ttu-id="ec0fd-183">示例</span><span class="sxs-lookup"><span data-stu-id="ec0fd-183">Examples</span></span>
 
-<span data-ttu-id="2a5fa-116">创建主动预防性邮件时，**必须**调用 `MicrosoftAppCredentials.TrustServiceUrl` 并传入服务 URL，然后才能创建 [`ConnectorClient`](/azure/bot-service/dotnet/bot-builder-dotnet-connector) 将用于发送邮件的。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-116">When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the [`ConnectorClient`](/azure/bot-service/dotnet/bot-builder-dotnet-connector) you will use to send the message.</span></span> <span data-ttu-id="2a5fa-117">如果不这样做，您的应用程序将收到 `401: Unauthorized` 响应。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-117">If you do not, your app will receive a `401: Unauthorized` response.</span></span>
+# <a name="cnet"></a>[<span data-ttu-id="ec0fd-184">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ec0fd-184">C#/.NET</span></span>](#tab/dotnet)
 
-> [!Tip]
-> <span data-ttu-id="2a5fa-118">有关为 .NET 客户端设置的更多详细信息 `ConnectorClient` ，请参阅 "[发送和接收活动](/azure/bot-service/dotnet/bot-builder-dotnet-connector#create-a-connector-client)" 主题</span><span class="sxs-lookup"><span data-stu-id="2a5fa-118">For more details on setting up the `ConnectorClient` for .NET clients, see the [Send and receive activities](/azure/bot-service/dotnet/bot-builder-dotnet-connector#create-a-connector-client) topic</span></span>
->
-> <span data-ttu-id="2a5fa-119">有关发送前瞻性消息的更多示例，可参阅 Azure Bot Service [.net](/azure/bot-service/dotnet/bot-builder-dotnet-proactive-messages)和[Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-proactive-messages)文档</span><span class="sxs-lookup"><span data-stu-id="2a5fa-119">More examples for sending proactive messages can be found in the Azure Bot Service [.NET](/azure/bot-service/dotnet/bot-builder-dotnet-proactive-messages) and [Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-proactive-messages) documentation</span></span>
+```csharp
+private async Task MessageAllMembersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var teamsChannelId = turnContext.Activity.TeamsGetChannelId();
+    var serviceUrl = turnContext.Activity.ServiceUrl;
+    var credentials = new MicrosoftAppCredentials(_appId, _appPassword);
+    ConversationReference conversationReference = null;
 
-## <a name="best-practices-for-proactive-messaging"></a><span data-ttu-id="2a5fa-120">主动消息传递的最佳做法</span><span class="sxs-lookup"><span data-stu-id="2a5fa-120">Best practices for proactive messaging</span></span>
+    //Get the set of member IDs to send the message to
+    var members = await GetPagedMembers(turnContext, cancellationToken);
 
-<span data-ttu-id="2a5fa-121">向用户发送主动消息是与用户进行通信的一种非常有效的方式。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-121">Sending proactive messages to users can be a very effective way to communicate with your users.</span></span> <span data-ttu-id="2a5fa-122">但是，从其角度看，此消息似乎完全自发，而欢迎消息则是第一次与您的应用程序进行交互的情况。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-122">However, from their perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app.</span></span> <span data-ttu-id="2a5fa-123">因此，谨慎使用此功能非常重要（不要向用户发送垃圾邮件），并为他们提供足够的信息，让他们了解为什么要推广。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-123">As such, it is very important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.</span></span>
+    foreach (var teamMember in members)
+    {
+        var proactiveMessage = MessageFactory.Text($"Hello {teamMember.GivenName} {teamMember.Surname}. I'm a Teams conversation bot.");
 
-<span data-ttu-id="2a5fa-124">主动消息通常分为两类：欢迎消息或通知中的一种。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-124">Proactive messages generally fall into one of two categories, welcome messages or notifications.</span></span>
+        var conversationParameters = new ConversationParameters
+        {
+            IsGroup = false,
+            Bot = turnContext.Activity.Recipient,
+            Members = new ChannelAccount[] { teamMember },
+            TenantId = turnContext.Activity.Conversation.TenantId,
+        };
+        //create the new one-to-one conversations
+        await ((BotFrameworkAdapter)turnContext.Adapter).CreateConversationAsync(
+            teamsChannelId,
+            serviceUrl,
+            credentials,
+            conversationParameters,
+            async (t1, c1) =>
+            {
+                //Get the conversationReference
+                conversationReference = t1.Activity.GetConversationReference();
+                //Send the proactive message
+                await ((BotFrameworkAdapter)turnContext.Adapter).ContinueConversationAsync(
+                    _appId,
+                    conversationReference,
+                    async (t2, c2) =>
+                    {
+                        await t2.SendActivityAsync(proactiveMessage, c2);
+                    },
+                    cancellationToken);
+            },
+            cancellationToken);
+    }
 
-### <a name="welcome-messages"></a><span data-ttu-id="2a5fa-125">欢迎邮件</span><span class="sxs-lookup"><span data-stu-id="2a5fa-125">Welcome messages</span></span>
+    await turnContext.SendActivityAsync(MessageFactory.Text("All messages have been sent."), cancellationToken);
+}
+```
 
-<span data-ttu-id="2a5fa-126">使用前瞻性消息向用户发送欢迎邮件时，必须注意，对于大多数接收邮件的用户，他们在接收邮件时将没有上下文。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-126">When using proactive messaging to send a welcome message to a user you must keep in mind that for most people receiving the message they will have no context for why they are receiving it.</span></span> <span data-ttu-id="2a5fa-127">这也是第一次将与您的应用程序进行交互。你有机会创建一个理想的首印象。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-127">This is also the first time they will have interacted with your app; it is your opportunity to create a good first impression.</span></span> <span data-ttu-id="2a5fa-128">最佳欢迎消息将包括：</span><span class="sxs-lookup"><span data-stu-id="2a5fa-128">The best welcome messages will include:</span></span>
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="ec0fd-185">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ec0fd-185">TypeScript/Node.js</span></span>](#tab/typescript)
 
-* <span data-ttu-id="2a5fa-129">**为什么他们收到此邮件。**</span><span class="sxs-lookup"><span data-stu-id="2a5fa-129">**Why are they receiving this message.**</span></span> <span data-ttu-id="2a5fa-130">应非常清楚用户接收邮件的原因。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-130">It should be very clear to the user why they are receiving the message.</span></span> <span data-ttu-id="2a5fa-131">如果你的 bot 已安装在频道中，并且你向所有用户发送了欢迎消息，请让他们知道它安装在什么频道并有权安装它。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-131">If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.</span></span>
-* <span data-ttu-id="2a5fa-132">**你提供的内容。**</span><span class="sxs-lookup"><span data-stu-id="2a5fa-132">**What do you offer.**</span></span> <span data-ttu-id="2a5fa-133">他们可以对你的应用程序做些什么？</span><span class="sxs-lookup"><span data-stu-id="2a5fa-133">What can they do with your app?</span></span> <span data-ttu-id="2a5fa-134">您可以为它们引入什么值？</span><span class="sxs-lookup"><span data-stu-id="2a5fa-134">What value can you bring to them?</span></span>
-* <span data-ttu-id="2a5fa-135">**接下来应做些什么。**</span><span class="sxs-lookup"><span data-stu-id="2a5fa-135">**What should they do next.**</span></span> <span data-ttu-id="2a5fa-136">邀请他们试用某个命令，或以某种方式与您的应用程序进行交互。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-136">Invite them to try out a command, or interact with your app in some way.</span></span>
+```javascript
 
-### <a name="notification-messages"></a><span data-ttu-id="2a5fa-137">通知邮件</span><span class="sxs-lookup"><span data-stu-id="2a5fa-137">Notification messages</span></span>
+async messageAllMembersAsync(context) {
+    const members = await this.getPagedMembers(context);
 
-<span data-ttu-id="2a5fa-138">使用主动消息发送通知时，您需要确保您的用户有一个明确的路径，以根据您的通知执行常见操作，并清楚地了解通知发生的原因。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-138">When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification, and a clear understanding of why the notification occurred.</span></span> <span data-ttu-id="2a5fa-139">正常的通知消息通常包括：</span><span class="sxs-lookup"><span data-stu-id="2a5fa-139">Good notification messages will generally include:</span></span>
+    members.forEach(async (teamMember) => {
+        const message = MessageFactory.text('Hello ${ teamMember.givenName } ${ teamMember.surname }. I\'m a Teams conversation bot.');
 
-* <span data-ttu-id="2a5fa-140">**发生了什么事。**</span><span class="sxs-lookup"><span data-stu-id="2a5fa-140">**What happened.**</span></span> <span data-ttu-id="2a5fa-141">可以清楚地指示导致通知发生了什么情况。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-141">A clear indication of what happened to cause the notification.</span></span>
-* <span data-ttu-id="2a5fa-142">**它发生的变化。**</span><span class="sxs-lookup"><span data-stu-id="2a5fa-142">**What it happened to.**</span></span> <span data-ttu-id="2a5fa-143">应清楚是什么项目/内容已更新，从而导致通知。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-143">It should be clear what item/thing was updated to cause the notification.</span></span>
-* <span data-ttu-id="2a5fa-144">**已完成的操作。**</span><span class="sxs-lookup"><span data-stu-id="2a5fa-144">**Who did it.**</span></span> <span data-ttu-id="2a5fa-145">谁采取了导致通知发送的操作。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-145">Who took the action that caused the notification to be sent.</span></span>
-* <span data-ttu-id="2a5fa-146">**他们可以执行的操作。**</span><span class="sxs-lookup"><span data-stu-id="2a5fa-146">**What they can do about it.**</span></span> <span data-ttu-id="2a5fa-147">使您的用户可以轻松地根据您的通知执行操作。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-147">Make it easy for your users to take actions based on your notifications.</span></span>
-* <span data-ttu-id="2a5fa-148">**他们可以选择退出。** 您需要为用户提供一个路径，以供用户退出其他通知。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-148">**How they can opt out.** You need to provide a path for users to opt out of additional notifications.</span></span>
+        var ref = TurnContext.getConversationReference(context.activity);
+        ref.user = teamMember;
 
-## <a name="obtain-necessary-user-information"></a><span data-ttu-id="2a5fa-149">获取必要的用户信息</span><span class="sxs-lookup"><span data-stu-id="2a5fa-149">Obtain necessary user information</span></span>
+        await context.adapter.createConversation(ref,
+            async (t1) => {
+                const ref2 = TurnContext.getConversationReference(t1.activity);
+                await t1.adapter.continueConversation(ref2, async (t2) => {
+                    await t2.sendActivity(message);
+                });
+            });
+    });
 
-<span data-ttu-id="2a5fa-150">Bot 可以通过获取用户的*唯一 ID*和*租户 id* ，创建与单个 Microsoft 团队用户的新对话。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-150">Bots can create new conversations with an individual Microsoft Teams user by obtaining the user's *unique ID* and *tenant ID.*</span></span> <span data-ttu-id="2a5fa-151">您可以使用下列方法之一获取这些值：</span><span class="sxs-lookup"><span data-stu-id="2a5fa-151">You can obtain these values using one of the following methods:</span></span>
+    await context.sendActivity(MessageFactory.text('All messages have been sent.'));
+}
+```
 
-* <span data-ttu-id="2a5fa-152">通过从频道中[提取团队名单，](../get-teams-context.md#fetching-the-roster-or-user-profile)您的应用程序已安装在中。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-152">By [fetching the team roster](../get-teams-context.md#fetching-the-roster-or-user-profile) from a channel your app is installed in.</span></span>
-* <span data-ttu-id="2a5fa-153">通过在用户[与频道中的 bot 交互](./channel-and-group-conversations.md)时缓存这些文件。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-153">By caching them when a user [interacts with your bot in a channel](./channel-and-group-conversations.md).</span></span>
-* <span data-ttu-id="2a5fa-154">当用户[在频道对话中 @mentioned](./channel-and-group-conversations.md#retrieving-mentions)时，bot 是的一部分。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-154">When a users is [@mentioned in a channel conversation](./channel-and-group-conversations.md#retrieving-mentions) the bot is a part of.</span></span>
-* <span data-ttu-id="2a5fa-155">当您的应用程序安装在个人作用域中时，当您[收到 `conversationUpdate` ](./subscribe-to-conversation-events.md#team-members-added)事件时缓存它们，或将新成员添加到频道或组聊天</span><span class="sxs-lookup"><span data-stu-id="2a5fa-155">By caching them when you [receive the `conversationUpdate`](./subscribe-to-conversation-events.md#team-members-added) event when your app is installed in a personal scope, or new members are added to a channel or group chat that</span></span>
+# <a name="python"></a>[<span data-ttu-id="ec0fd-186">Python</span><span class="sxs-lookup"><span data-stu-id="ec0fd-186">Python</span></span>](#tab/python)
 
-### <a name="proactively-install-your-app-using-graph"></a><span data-ttu-id="2a5fa-156">使用 Graph 主动安装您的应用程序</span><span class="sxs-lookup"><span data-stu-id="2a5fa-156">Proactively install your app using Graph</span></span>
+```python
+async def _message_all_members(self, turn_context: TurnContext):
+    team_members = await self._get_paged_members(turn_context)
 
-> [!Note]
-> <span data-ttu-id="2a5fa-157">使用 graph 主动安装应用当前处于 beta 中。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-157">Proactively installing apps using graph is currently in beta.</span></span>
+    for member in team_members:
+        conversation_reference = TurnContext.get_conversation_reference(
+            turn_context.activity
+        )
 
-<span data-ttu-id="2a5fa-158">有时，可能有必要主动向尚未安装或与您的应用程序进行交互的邮件用户进行处理。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-158">Occasionally it may be necessary to proactively message users that have not installed or interacted with your app previously.</span></span> <span data-ttu-id="2a5fa-159">例如，您希望使用[公司 communicator](~/samples/app-templates.md#company-communicator)向整个组织发送邮件。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-159">For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization.</span></span> <span data-ttu-id="2a5fa-160">在这种情况下，您可以使用 Graph API 主动为您的用户安装您的应用程序，然后从 `conversationUpdate` 应用程序安装时收到的事件中缓存必要的值。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-160">For this scenario you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.</span></span>
+        conversation_parameters = ConversationParameters(
+            is_group=False,
+            bot=turn_context.activity.recipient,
+            members=[member],
+            tenant_id=turn_context.activity.conversation.tenant_id,
+        )
 
-<span data-ttu-id="2a5fa-161">您只能安装组织应用程序目录或团队应用商店中的应用程序。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-161">You can only install apps that are in your organizational app catalogue, or the Teams app store.</span></span>
+        async def get_ref(tc1):
+            conversation_reference_inner = TurnContext.get_conversation_reference(
+                tc1.activity
+            )
+            return await tc1.adapter.continue_conversation(
+                conversation_reference_inner, send_message, self._app_id
+            )
 
-<span data-ttu-id="2a5fa-162">有关完整的详细信息，请参阅在 Graph 文档中[安装用户的应用程序](/graph/teams-proactive-messaging)。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-162">See [Install apps for users](/graph/teams-proactive-messaging) in the Graph documentation for complete details.</span></span> <span data-ttu-id="2a5fa-163">[.Net 中](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)也有一个示例。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-163">There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).</span></span>
+        async def send_message(tc2: TurnContext):
+            return await tc2.send_activity(
+                f"Hello {member.name}. I'm a Teams conversation bot."
+            )
 
-## <a name="examples"></a><span data-ttu-id="2a5fa-164">示例</span><span class="sxs-lookup"><span data-stu-id="2a5fa-164">Examples</span></span>
+        await turn_context.adapter.create_conversation(
+            conversation_reference, get_ref, conversation_parameters
+        )
 
-<span data-ttu-id="2a5fa-165">在使用 REST API 创建新对话之前，请务必对持有者令牌进行身份验证并拥有持有者令牌。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-165">Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.</span></span> <span data-ttu-id="2a5fa-166">`members.id`下面的对象中的字段对你的 bot 和用户的组合是唯一的。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-166">The `members.id` field in the object below is unique to the combination of your bot and a user.</span></span> <span data-ttu-id="2a5fa-167">您不能通过任何其他方法获取它，而不是以上所述。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-167">You cannot obtain it via any other method than those outlined above.</span></span>
+    await turn_context.send_activity(
+        MessageFactory.text("All messages have been sent")
+    )
+
+```
+
+# <a name="json"></a>[<span data-ttu-id="ec0fd-187">JSON</span><span class="sxs-lookup"><span data-stu-id="ec0fd-187">JSON</span></span>](#tab/json)
 
 ```json
 POST /v3/conversations
@@ -103,7 +237,7 @@ POST /v3/conversations
 }
 ```
 
-<span data-ttu-id="2a5fa-168">您必须提供用户 ID 和租户 ID。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-168">You must supply the user ID and the tenant ID.</span></span> <span data-ttu-id="2a5fa-169">如果调用成功，API 将返回以下响应对象。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-169">If the call succeeds, the API returns with the following response object.</span></span>
+<span data-ttu-id="ec0fd-188">您必须提供用户 ID 和租户 ID。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-188">You must supply the user ID and the tenant ID.</span></span> <span data-ttu-id="ec0fd-189">如果调用成功，API 将返回以下响应对象。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-189">If the call succeeds, the API returns with the following response object.</span></span>
 
 ```json
 {
@@ -111,134 +245,23 @@ POST /v3/conversations
 }
 ```
 
-<span data-ttu-id="2a5fa-170">此 ID 是个人聊天的唯一会话 ID。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-170">This ID is the personal chat's unique conversation ID.</span></span> <span data-ttu-id="2a5fa-171">请存储此值并重用它以供用户将来交互。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-171">Please store this value and reuse it for future interactions with the user.</span></span>
-
-# <a name="cnet"></a>[<span data-ttu-id="2a5fa-172">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="2a5fa-172">C#/.NET</span></span>](#tab/dotnet)
-
-<span data-ttu-id="2a5fa-173">本示例使用的是 ".[团队](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)" NuGet 包。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-173">This example uses the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.</span></span> <span data-ttu-id="2a5fa-174">在此示例中， `client` 是已 `ConnectorClient` 按照[发送和接收活动](/azure/bot-service/dotnet/bot-builder-dotnet-connector)中所述创建和验证的实例</span><span class="sxs-lookup"><span data-stu-id="2a5fa-174">In this example, `client` is a `ConnectorClient` instance that has already been created and authenticated as described in [Send and receive activities](/azure/bot-service/dotnet/bot-builder-dotnet-connector)</span></span>
-
-```csharp
-// Create or get existing chat conversation with user
-var response = client.Conversations.CreateOrGetDirectConversation(activity.Recipient, activity.From, activity.GetTenantId());
-
-// Construct the message to post to conversation
-Activity newActivity = new Activity()
-{
-    Text = "Hello",
-    Type = ActivityTypes.Message,
-    Conversation = new ConversationAccount
-    {
-        Id = response.Id
-    },
-};
-
-// Post the message to chat conversation with user
-await client.Conversations.SendToConversationAsync(newActivity, response.Id);
-```
-
-# <a name="javascript"></a>[<span data-ttu-id="2a5fa-175">JavaScript</span><span class="sxs-lookup"><span data-stu-id="2a5fa-175">JavaScript</span></span>](#tab/javascript)
-
-<span data-ttu-id="2a5fa-176">*另请参阅* [Bot 框架示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-176">*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).</span></span>
-
-```javascript
-var address =
-{
-    channelId: 'msteams',
-    user: { id: userId },
-    channelData: {
-        tenant: {
-            id: tenantId
-        }
-    },
-    bot:
-    {
-        id: appId,
-        name: appName
-    },
-    serviceUrl: session.message.address.serviceUrl,
-    useAuth: true
-}
-
-var msg = new builder.Message().address(address);
-msg.text('Hello, this is a notification');
-bot.send(msg);
-```
-
-# <a name="python"></a>[<span data-ttu-id="2a5fa-177">Python</span><span class="sxs-lookup"><span data-stu-id="2a5fa-177">Python</span></span>](#tab/python)
-
-```python
-async def _send_proactive_message():
-  for conversation_reference in CONVERSATION_REFERENCES.values():
-    return await ADAPTER.continue_conversation(APP_ID, conversation_reference,
-      lambda turn_context: turn_context.send_activity("proactive hello")
-    )
-
-```
-
 ---
 
-## <a name="creating-a-channel-conversation"></a><span data-ttu-id="2a5fa-178">创建频道对话</span><span class="sxs-lookup"><span data-stu-id="2a5fa-178">Creating a channel conversation</span></span>
+## <a name="references"></a><span data-ttu-id="ec0fd-190">参考</span><span class="sxs-lookup"><span data-stu-id="ec0fd-190">References</span></span>
 
-<span data-ttu-id="2a5fa-179">您的团队添加的 bot 可以发布到通道中，以创建新的答复链。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-179">Your team-added bot can post into a channel to create a new reply chain.</span></span> <span data-ttu-id="2a5fa-180">如果您使用的是 Node.js 团队 SDK，请使用以 `startReplyChain()` 正确的活动 id 和会话 id 为您提供完全填充的地址。如果使用的是 c #，请参阅下面的示例。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-180">If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.</span></span>
+<span data-ttu-id="ec0fd-191">下面列出了官方的主动消息示例。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-191">The official proactive messaging samples are listed below.</span></span>
 
-<span data-ttu-id="2a5fa-181">或者，也可以使用 REST API 并向 resource 发出 POST 请求 [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) 。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-181">Alternatively, you can use the REST API and issue a POST request to [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.</span></span>
+|  <span data-ttu-id="ec0fd-192">不正确。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-192">No.</span></span>  | <span data-ttu-id="ec0fd-193">示例名称</span><span class="sxs-lookup"><span data-stu-id="ec0fd-193">Sample Name</span></span>           | <span data-ttu-id="ec0fd-194">说明</span><span class="sxs-lookup"><span data-stu-id="ec0fd-194">Description</span></span>                                                                      | <span data-ttu-id="ec0fd-195">.NET</span><span class="sxs-lookup"><span data-stu-id="ec0fd-195">.NET</span></span>    | <span data-ttu-id="ec0fd-196">JavaScript</span><span class="sxs-lookup"><span data-stu-id="ec0fd-196">JavaScript</span></span>   | <span data-ttu-id="ec0fd-197">Python</span><span class="sxs-lookup"><span data-stu-id="ec0fd-197">Python</span></span>  |
+|:--:|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
+|<span data-ttu-id="ec0fd-198">57</span><span class="sxs-lookup"><span data-stu-id="ec0fd-198">57</span></span>|<span data-ttu-id="ec0fd-199">团队对话基础知识</span><span class="sxs-lookup"><span data-stu-id="ec0fd-199">Teams Conversation Basics</span></span>  | <span data-ttu-id="ec0fd-200">演示团队中的对话的基础知识，包括发送一对一的主动消息。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-200">Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.</span></span>|[<span data-ttu-id="ec0fd-201">.NET &nbsp; Core</span><span class="sxs-lookup"><span data-stu-id="ec0fd-201">.NET&nbsp;Core</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="ec0fd-202">JavaScript</span><span class="sxs-lookup"><span data-stu-id="ec0fd-202">JavaScript</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [<span data-ttu-id="ec0fd-203">Python</span><span class="sxs-lookup"><span data-stu-id="ec0fd-203">Python</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
+|<span data-ttu-id="ec0fd-204">58</span><span class="sxs-lookup"><span data-stu-id="ec0fd-204">58</span></span>|<span data-ttu-id="ec0fd-205">在频道中启动新线程</span><span class="sxs-lookup"><span data-stu-id="ec0fd-205">Start new thread in a channel</span></span>     | <span data-ttu-id="ec0fd-206">演示如何在通道中创建新线程。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-206">Demonstrates creating a new thread in a channel.</span></span> |[<span data-ttu-id="ec0fd-207">.NET &nbsp; Core</span><span class="sxs-lookup"><span data-stu-id="ec0fd-207">.NET&nbsp;Core</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[<span data-ttu-id="ec0fd-208">JavaScript</span><span class="sxs-lookup"><span data-stu-id="ec0fd-208">JavaScript</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[<span data-ttu-id="ec0fd-209">Python</span><span class="sxs-lookup"><span data-stu-id="ec0fd-209">Python</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
-# <a name="cnet"></a>[<span data-ttu-id="2a5fa-182">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="2a5fa-182">C#/.NET</span></span>](#tab/dotnet)
+<span data-ttu-id="ec0fd-210">下面的示例演示了在不使用对象) 的情况下发送主动消息所需的最少量信息 (`conversationReference` 。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-210">The sample below demonstrates the minimal amount of information needed to send a proactive message (without using a `conversationReference` object).</span></span> <span data-ttu-id="ec0fd-211">如果您直接使用 REST API 调用，或者尚未存储完全对象，则此示例可能很有用 `conversationReference` 。</span><span class="sxs-lookup"><span data-stu-id="ec0fd-211">This sample can be useful if you're using REST API calls directly, or haven't been storing full `conversationReference` objects.</span></span>
 
-<span data-ttu-id="2a5fa-183">下面的代码段来自[此示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-183">The following code snippet is from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs).</span></span>
+* [<span data-ttu-id="ec0fd-212">团队主动消息传递</span><span class="sxs-lookup"><span data-stu-id="ec0fd-212">Teams Proactive Messaging</span></span>](https://github.com/clearab/teamsProactiveMessaging)
 
-```csharp
-using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Bot.Connector;
-using Microsoft.Bot.Connector.Teams.Models;
-using Microsoft.Teams.TemplateBotCSharp.Properties;
-using System;
-using System.Threading.Tasks;
-
-namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
-{
-    [Serializable]
-    public class ProactiveMsgTo1to1Dialog : IDialog<object>
-    {
-        public async Task StartAsync(IDialogContext context)
-        {
-            if (context == null)
-            {
-                throw new ArgumentNullException(nameof(context));
-            }
-
-            var channelData = context.Activity.GetChannelData<TeamsChannelData>();
-            var message = Activity.CreateMessageActivity();
-            message.Text = "Hello World";
-
-            var conversationParameters = new ConversationParameters
-            {
-                  IsGroup = true,
-                  ChannelData = new TeamsChannelData
-                  {
-                      Channel = new ChannelInfo(channelData.Channel.Id),
-                  },
-                  Activity = (Activity) message
-            };
-
-            MicrosoftAppCredentials.TrustServiceUrl(serviceUrl, DateTime.MaxValue);
-            var connectorClient = new ConnectorClient(new Uri(activity.ServiceUrl));
-            var response = await connectorClient.Conversations.CreateConversationAsync(conversationParameters);
-
-            context.Done<object>(null);
-        }
-    }
-}
-```
-
-# <a name="javascript"></a>[<span data-ttu-id="2a5fa-184">JavaScript</span><span class="sxs-lookup"><span data-stu-id="2a5fa-184">JavaScript</span></span>](#tab/javascript)
-
-<span data-ttu-id="2a5fa-185">下面的代码片段来自[teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js)。</span><span class="sxs-lookup"><span data-stu-id="2a5fa-185">The following code snippet is from [teamsConversationBot.js](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js).</span></span>
-
-[!code-javascript[messageAllMembersAsync](~/../botbuilder-samples/samples/javascript_nodejs/57.teams-conversation-bot/bots/teamsConversationBot.js?range=115-134&highlight=13-15)]
-
-# <a name="python"></a>[<span data-ttu-id="2a5fa-186">Python</span><span class="sxs-lookup"><span data-stu-id="2a5fa-186">Python</span></span>](#tab/python)
-
-[!code-python[message-all-members](~/../botbuilder-samples/samples/python/57.teams-conversation-bot/bots/teams_conversation_bot.py?range=101-135)]
-
----
+## <a name="view-additional-code"></a><span data-ttu-id="ec0fd-213">查看其他代码</span><span class="sxs-lookup"><span data-stu-id="ec0fd-213">View additional code</span></span>
+>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="ec0fd-214">**团队主动消息代码示例**</span><span class="sxs-lookup"><span data-stu-id="ec0fd-214">**Teams proactive messaging code samples**</span></span>](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+>
