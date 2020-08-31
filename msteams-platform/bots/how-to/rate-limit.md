@@ -2,12 +2,12 @@
 title: 速率限制
 description: Microsoft 团队中的速率限制和最佳做法
 keywords: 团队 bot 速率限制
-ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 2e401b59df075688cb6d459a881e6b813f2cf8e6
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801124"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303708"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>优化你的机器人： Microsoft 团队中的速率限制和最佳做法
 
@@ -46,7 +46,7 @@ catch (HttpOperationException ex)
 
 下面是使用通过瞬时故障处理应用程序块的指数回退的示例。
 
-您可以使用[暂时性的故障处理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)执行回退和重试。 有关获取和安装 NuGet 包的指南，请参阅[将临时错误处理应用程序块添加到解决方案](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)中）。 *另请参阅*[暂时性故障处理](/azure/architecture/best-practices/transient-faults)。
+您可以使用 [暂时性的故障处理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)执行回退和重试。 有关获取和安装 NuGet 包的指南，请参阅向 [解决方案中添加瞬时故障处理应用程序块](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)) 。 *另请参阅*[暂时性故障处理](/azure/architecture/best-practices/transient-faults)。
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -96,31 +96,31 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 建议将值和策略存储在配置文件中，以便在运行时微调和调整值。
 
-有关详细信息，请参阅有关各种重试模式的此便捷指南：[重试模式](/azure/architecture/patterns/retry)。
+有关详细信息，请参阅有关各种重试模式的此便捷指南： [重试模式](/azure/architecture/patterns/retry)。
 
 ## <a name="per-bot-per-thread-limit"></a>每个 bot 每个线程的限制
 
 >[!NOTE]
->服务级别的邮件拆分会导致高于每秒预期的请求数（RPS）。 如果你担心接近限制，应实施上述回退策略。 下面提供的值仅用于评估。
+>服务级别的邮件拆分会导致高于每秒 (RPS) 的预期请求。 如果你担心接近限制，应实施上述回退策略。 下面提供的值仅用于评估。
 
 此限制控制允许 bot 在单个会话中生成的流量。 此处的对话是在 bot 与用户、组聊天或团队中的频道之间的1:1。
 
 | **应用场景** | **时间段（秒）** | **允许的最大操作** |
 | --- | --- | --- |
 | 发送到对话 | 1  | 7  |
-| 发送到对话 | 双面 | 8  |
+| 发送到对话 | 2  | 8  |
 | 发送到对话 | 30 | 60 |
 | 发送到对话 | 3600 | 1800 |
 | 创建对话 | 1  | 7  |
-| 创建对话 | 双面 | 8  |
+| 创建对话 | 2  | 8  |
 | 创建对话 | 30 | 60 |
 | 创建对话 | 3600 | 1800 |
 | 获取对话成员| 1  | 14  |
-| 获取对话成员| 双面 | 16  |
+| 获取对话成员| 2  | 16  |
 | 获取对话成员| 30 | 120 |
 | 获取对话成员| 3600 | 3600 |
 | 获取对话 | 1  | 14  |
-| 获取对话 | 双面 | 16  |
+| 获取对话 | 2  | 16  |
 | 获取对话 | 30 | 120 |
 | 获取对话 | 3600 | 3600 |
 
@@ -131,22 +131,12 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | **应用场景** | **时间段（秒）** | **允许的最大操作** |
 | --- | --- | --- |
 | 发送到对话 | 1  | 14  |
-| 发送到对话 | 双面 | 16  |
+| 发送到对话 | 2  | 16  |
 | 创建对话 | 1  | 14  |
-| 创建对话 | 双面 | 16  |
+| 创建对话 | 2  | 16  |
 | CreateConversation| 1  | 14  |
-| CreateConversation| 双面 | 16  |
+| CreateConversation| 2  | 16  |
 | 获取对话成员| 1  | 28 |
-| 获取对话成员| 双面 | 32 |
+| 获取对话成员| 2  | 32 |
 | 获取对话 | 1  | 28 |
-| 获取对话 | 双面 | 32 |
-
-## <a name="bot-per-data-center-limit"></a>每个数据中心的 Bot 限制
-
-此限制控制允许机器人在数据中心中的所有线程（跨多个租户）生成的流量。
-
-|**时间段（秒）** | **允许的最大操作** |
-| --- | --- |
-| 1  | 20 |
-| 1800 | 8000 |
-| 3600 | 15000 |
+| 获取对话 | 2  | 32 |
