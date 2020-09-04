@@ -1,66 +1,66 @@
 ---
-title: 使用 Microsoft Graph 将外部平台消息导入到 Teams
-description: 介绍如何使用 Microsoft Graph 将消息从外部平台导入到 Teams
+title: 使用 Microsoft Graph 将外部平台邮件导入到团队
+description: 介绍如何使用 Microsoft Graph 将邮件从外部平台导入到团队
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
-keywords: Teams Slack 导入邮件 API 图形 Microsoft 迁移迁移后内容
-ms.openlocfilehash: 8e8b21c9a38570d7ede745e27b9316b7aba29956
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+keywords: 工作组时差导入邮件 api 图 microsoft 迁移迁移发布
+ms.openlocfilehash: 0e0aa96373d29f07893456adf54986ec23bdec3c
+ms.sourcegitcommit: 02ab2cb7820dc8665bb4ec6a1a40c3b8b8f29d66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46820364"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "47340947"
 ---
-# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入到 Teams
+# <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
 >[!IMPORTANT]
-> Microsoft Graph 和 Microsoft Teams 公共预览版可提供快速访问权限和反馈。 虽然此版本已经进行了扩展测试，但它不适合用于生产。
+> Microsoft Graph 和 Microsoft 团队公开预览版适用于早期访问和反馈。 尽管此版本已经历大量测试，但不适合在生产中使用。
 
-使用 Microsoft Graph，可以将用户的现有消息历史记录和数据从外部系统迁移到 Teams 频道。 通过在 Teams 中重新创建第三方平台消息传递层次结构，用户可以无缝地继续通信，并在不中断的情况下继续通信。
+使用 Microsoft Graph，可以将用户的现有邮件历史记录和数据从外部系统迁移到团队频道。 通过在团队内启用第三方平台邮件传递层次结构，用户可以采用无缝方式继续进行通信并继续进行而不会中断。
 
 ## <a name="import-overview"></a>导入概述
 
-从较高的层次上来说，导入过程包括：
+从较高的层次来看，导入过程包含以下内容：
 
-1. [创建具有后期时间戳的团队](#step-one-create-a-team)
-1. [创建具有后期时间戳的通道](#step-two-create-a-channel)  
-1. [导入外部后期时间过期的消息](#step-three-import-messages)
+1. [创建具有后时间戳的团队](#step-one-create-a-team)
+1. [使用后向时间戳创建通道](#step-two-create-a-channel)  
+1. [导入外部定期邮件](#step-three-import-messages)
 1. [完成团队和渠道迁移过程](#step-four-complete-migration-mode)
 1. [添加团队成员](#step-five-add-team-members)
 
-## <a name="necessary-requirements"></a>必需要求
+## <a name="necessary-requirements"></a>必需的要求
 
-### <a name="analyze-and-prepare-message-data"></a>分析和准备消息数据
+### <a name="analyze-and-prepare-message-data"></a>分析和准备邮件数据
 
-✔检查第三方数据以决定要迁移的内容。  
-✔从第三方聊天系统提取所选数据。  
+✔查看第三方数据以确定将迁移的内容。  
+✔从第三方聊天系统中提取所选数据。  
 ✔将导入数据转换为迁移所需的格式。  
-✔ 将第三方聊天结构映射到 Teams 结构。
+✔将第三方聊天结构映射到团队结构。
 
 ### <a name="set-up-your-office-365-tenant"></a>设置 Office 365 租户
 
-✔确保存在 Office 365 租户以获取导入数据。 有关设置 Teams 的 Office 365 租用的详细信息，请参阅 *： 准备* [Office 365 租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。  
-✔确保团队成员在 Azure Active Directory (AAD) 。  有关详细信息，*请参阅"*[将新用户添加到](/azure/active-directory/fundamentals/add-users-azure-active-directory)Azure Active Directory"。
+✔确保导入数据存在 Office 365 租户。 有关为团队设置 Office 365 租赁的详细信息，*请参阅*[准备 office 365 租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。  
+✔确保团队成员在 Azure Active Directory (AAD) 中。  有关详细信息， *请参阅*向 Azure Active Directory [添加新用户](/azure/active-directory/fundamentals/add-users-azure-active-directory) 。
 
-## <a name="step-one-create-a-team"></a>第 1 步：创建团队
+## <a name="step-one-create-a-team"></a>第一步：创建团队
 
-由于正在迁移现有数据，请维护原始邮件时间戳并防止迁移过程中的邮件活动对重新创建 Teams 中用户现有的邮件流至至至多重要。 此操作实现如下：
+由于现有数据正在迁移，因此在迁移过程中维护原始邮件的时间戳并防止邮件活动是重新创建用户的现有邮件流的关键。 这是通过以下方式实现的：
 
-1. [使用团队资源](/graph/api/team-post?view=graph-rest-beta&tabs=http) 属性创建具有后期时间戳的新  `createdDateTime`  团队。  
+1. 使用 "团队" 资源属性创建具有 "后向时间戳" 的[新团队](/graph/api/team-post?view=graph-rest-beta&tabs=http) `createdDateTime` 。  
 
-1. 将新团队置 `migration mode` 于一个特殊状态，可使用户从团队内的大多数活动中进行，直到迁移过程完成。 在 `teamCreationMode` POST 请求中包括 `migration` 实例属性以及值，明确标识新团队创建用于迁移的内容。  
+1. 将新团队放在中 `migration mode` ，这是一种特殊状态，可从团队中的大多数活动中对用户进行横栏，直到迁移过程完成。 将 `teamCreationMode` 实例属性包含 `migration` 在 POST 请求中的值，以显式标识新团队为迁移而创建。  
 
 <!-- markdownlint-disable MD001 -->
 
 #### <a name="permissions"></a>权限
 
-|ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/API|
+|ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/Api|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理要迁移到 Microsoft Teams 的资源|**仅限应用程序**|**是**|`POST /teams`|
+|`Teamwork.Migrate.All`|管理到 Microsoft 团队的迁移|创建、管理用于迁移到 Microsoft 团队的资源|**仅限应用程序**|**是**|`POST /teams`|
 
-#### <a name="request-create-a-team-in-migration-state"></a>请求 (在迁移状态下创建) 
+#### <a name="request-create-a-team-in-migration-state"></a>请求 (在迁移状态中创建团队) 
 
 ```http
 POST https://graph.microsoft.com/beta/teams
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.067Z"
 }
 ```
@@ -89,24 +89,24 @@ Content-Location: /teams/{teamId}
 400 Bad Request
 ```
 
-* `createdDateTime`  将来设置。
-* `createdDateTime`  正确指定， `teamCreationMode`  但实例属性缺少或设置为无效值。
+* `createdDateTime`  设置为 "将来"。
+* `createdDateTime`  正确指定，但 `teamCreationMode`  缺少实例属性或将实例属性设置为无效值。
 
-## <a name="step-two-create-a-channel"></a>第 2 步：创建频道
+## <a name="step-two-create-a-channel"></a>步骤2：创建通道
 
-为导入的消息创建频道与创建团队方案类似： 
+为导入的邮件创建通道与创建团队方案类似： 
 
-1. [使用通道资源](/graph/api/channel-post?view=graph-rest-beta&tabs=http) 属性，使用后期时间戳创建新 `createdDateTime` 频道。
+1. 使用 "信道" 资源属性创建具有 "后向时间戳" 的[新通道](/graph/api/channel-post?view=graph-rest-beta&tabs=http) `createdDateTime` 。
 
-1. 将新频道置于 `migration mode` ，从频道内的大多数聊天活动中栏用户，直到完成迁移过程之前，其状态是一种特殊状态。  在 `channelCreationMode` POST 请求中包括 `migration` 实例属性以及值，明确标识新团队创建用于迁移的内容。  
+1. 将新频道放置在中 `migration mode` ，这是一种特殊状态，可用于在迁移过程完成前，从频道内的大多数聊天活动中对用户进行横栏。  将 `channelCreationMode` 实例属性包含 `migration` 在 POST 请求中的值，以显式标识新团队为迁移而创建。  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permissions"></a>权限
 
-|ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/API|
+|ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/Api|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理要迁移到 Microsoft Teams 的资源|**仅限应用程序**|**是**|`POST /teams`|
+|`Teamwork.Migrate.All`|管理到 Microsoft 团队的迁移|创建、管理用于迁移到 Microsoft 团队的资源|**仅限应用程序**|**是**|`POST /teams`|
 
-#### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态下创建) 
+#### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态中创建频道) 
 
 ```http
 POST https://graph.microsoft.com/beta/teams/{id}/channels
@@ -135,14 +135,14 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 400 Bad Request
 ```
 
-* `createdDateTime`  将来设置。
-* `createdDateTime`  正确指定 `channelCreationMode`  ，但实例属性缺少或设置为无效值。
+* `createdDateTime`  设置为 "将来"。
+* `createdDateTime`  正确指定 `channelCreationMode`  ，但缺少实例属性或将实例属性设置为无效值。
 
-## <a name="step-three-import-messages"></a>步骤 3：导入邮件
+## <a name="step-three-import-messages"></a>第三步：导入邮件
 
-创建团队和频道后，你可以开始使用请求正文中的密钥 `createdDateTime` `from`  发送返回时消息。
+在创建团队和频道之后，您可以开始使用 `createdDateTime`  请求正文中的和键发送回送邮件 `from`  。
 
-#### <a name="request-post-message-that-is-text-only"></a>请求 (文本的 POST 消息) 
+#### <a name="request-post-message-that-is-text-only"></a>请求 (张贴为纯文本的邮件) 
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -217,9 +217,9 @@ HTTP/1.1 200 OK
 }
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a>请求 (嵌入式图像) 消息
+#### <a name="request-post-a-message-with-inline-image"></a>请求 (发布包含内联 "图像) 的邮件
 
-> **注意**：此方案中没有特殊的权限范围，因为请求是 chatMessage 的一部分;chatMessage 的范围也在此适用。
+> **注意**：此方案中没有特殊的权限范围，因为该请求是了 chatmessage 的一部分;了 chatmessage 的作用域也适用于此处。
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -279,11 +279,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-## <a name="step-four-complete-migration-mode"></a>步骤 4：完成迁移模式
+## <a name="step-four-complete-migration-mode"></a>步骤4：完成迁移模式
 
-消息迁移过程完成后，团队和渠道都使用该方法退出迁移  `completeMigration`  模式。 此步骤将打开团队和频道资源，以供团队成员使用。 操作绑定到 `team` 该实例。
+邮件迁移过程完成后，团队和通道将使用方法从迁移模式中去掉  `completeMigration`  。 此步骤将打开团队和渠道资源，以供工作组成员进行常规使用。 操作将绑定到 `team` 实例。
 
-#### <a name="request-end-team-migration-mode"></a>请求 (团队迁移模式) 
+#### <a name="request-end-team-migration-mode"></a>请求 (结束团队迁移模式) 
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
@@ -296,7 +296,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="request-end-channel-migration-mode"></a>请求结束 (频道迁移模式) 
+#### <a name="request-end-channel-migration-mode"></a>请求 (结束通道迁移模式) 
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMigration
@@ -315,13 +315,13 @@ HTTP/1.1 204 NoContent
 400 Bad Request
 ```
 
-* 对中或 `team` 不在 `channel` 中的操作 `migrationMode` 调用。
+* 在或上调用的操作 `team` `channel` 不在中 `migrationMode` 。
 
-## <a name="step-five-add-team-members"></a>步骤 5：添加团队成员
+## <a name="step-five-add-team-members"></a>第5步：添加团队成员
 
-你可以使用 Teams UI 或 Microsoft Graph [添加成员 API](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) 向 [团队添加](/graph/api/group-post-members?view=graph-rest-beta&tabs=http) 成员：
+您可以 [使用 "团队 UI"](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) 或 Microsoft Graph [添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http) API 将成员添加到团队中：
 
-#### <a name="request-add-member"></a>添加 (请求) 
+#### <a name="request-add-member"></a>请求 (添加成员) 
 
 ```http
 POST https://graph.microsoft.com/beta/groups/{id}/members/$ref
@@ -344,35 +344,35 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* 可导入来自 Teams 外部用户的消息。
+* 您可以导入不在工作组中的用户的邮件。
 
-* 发出请求 `completeMigration` 后，无法将进一步的邮件导入到团队。
+* `completeMigration`发出请求后，将无法再向团队中导入邮件。
 
-* 工作组成员只能在请求返回成功 `completeMigration` 的响应后添加到新团队。
+* 只有在请求返回成功的响应后，才能将团队成员添加到新团队 `completeMigration` 。
 
-* 限制：每渠道 5 个 RPS 导入邮件。
+* 限制：邮件将导入每通道5个 RPS。
 
-* 如需更正迁移结果，需要删除团队并重复创建团队和频道并重新迁移消息的步骤。
+* 如果需要对迁移结果进行更正，则需要删除团队并重复步骤以创建团队和频道并重新迁移邮件。
 
 > [!NOTE]
-> 目前，嵌入式图像是导入消息 API 架构唯一支持的媒体类型。
+> 目前，嵌入式图像是导入邮件 API 架构支持的唯一媒体类型。
 
 ##### <a name="import-content-scope"></a>导入内容范围
 
-|范围内 | 目前超出范围|
+|范围内 | 当前超出范围|
 |----------|--------------------------|
-|团队消息和频道消息|1：1 和群组聊天消息|
-|创建原始邮件的时间|专用频道|
-|作为邮件的一部分的嵌入式图像|提及|
-|指向 SPO/OneDrive 中的现有文件的链接|反应|
-|包含 RTF 的邮件|视频|
+|团队和频道消息|1:1 和分组聊天消息|
+|原始邮件的创建时间|专用频道|
+|作为邮件的一部分的嵌入式图像|提到|
+|指向 SPO/OneDrive 中的现有文件的链接|作出|
+|带格式文本的邮件|视频|
 |邮件答复链|公告|
 |高吞吐量处理|代码段|
 ||自适应卡片|
-||Stickers|
-||情注|
-||引号|
-||在通道之间交叉帖子|
+||不干胶|
+||表情符号|
+||股票|
+||通道之间的跨文章|
 
 > [!div class="nextstepaction"]
->[了解有关 Microsoft Graph 和 Teams 集成的详细信息](/graph/teams-concept-overview)
+>[了解有关 Microsoft Graph 和团队集成的详细信息](/graph/teams-concept-overview)
