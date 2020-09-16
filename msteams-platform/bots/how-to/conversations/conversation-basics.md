@@ -4,43 +4,43 @@ author: clearab
 description: 如何与 Microsoft 团队 bot 进行对话
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2d241ad04509c596e97647138bab2a749fa0f74c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: bc016a8f0dcce474f80898dc93e309692ba20471
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673139"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819051"
 ---
 # <a name="conversation-basics"></a>对话基础知识
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-对话是在你的 bot 和一个或多个用户之间发送的一系列邮件。 团队中有三种对话（也称为 "作用域"）：
+对话是在你的 bot 和一个或多个用户之间发送的一系列邮件。 有三种对话 (也称为 "作用域) 在团队中：
 
-* `teams`也称为频道对话，对频道的所有成员可见。
-* `personal`Bot 和单个用户之间的对话。
-* `groupChat`在 bot 和两个或更多用户之间聊天。 此外，还可以在会议聊天中启用你的 bot。
+* `teams` 也称为频道对话，对频道的所有成员可见。
+* `personal` Bot 和单个用户之间的对话。
+* `groupChat` 在 bot 和两个或更多用户之间聊天。 此外，还可以在会议聊天中启用你的 bot。
 
 Bot 的行为略有不同，具体取决于它涉及的对话类型：
 
 * 频道和分组聊天对话中的 bot 要求用户在频道中提及机器人以调用它。
 * 一对一对话中的 bot 不需要 @ 提及。 用户发送的所有邮件都将被路由到你的 bot。
 
-若要在特定范围内启用你的 bot，请将该作用域添加到你的[应用程序清单](~/resources/schema/manifest-schema.md)。
+若要在特定范围内启用你的 bot，请将该作用域添加到你的 [应用程序清单](~/resources/schema/manifest-schema.md)。
 
 ## <a name="activities"></a>活动
 
-每封邮件都`Activity`是一种`messageType: message`类型的对象。 当用户发送邮件时，工作组会将邮件发送到你的 bot。具体来说，它会将 JSON 对象发送到你的 bot 的邮件终结点。 你的 bot 将检查邮件以确定其类型并相应地做出响应。
+每封邮件都是一 `Activity` 种类型的对象 `messageType: message` 。 当用户发送邮件时，工作组会将邮件发送到你的 bot。具体来说，它会将 JSON 对象发送到你的 bot 的邮件终结点。 你的 bot 将检查邮件以确定其类型并相应地做出响应。
 
-基本对话通过 Bot 框架连接器（单个 REST API）处理，使你的 bot 能够与团队和其他频道进行通信。 机器人生成器 SDK 提供了轻松访问此 API 的功能、用于管理对话流和状态的附加功能，以及用于集成认知服务（如自然语言处理（NLP））的简单方法。
+基本对话通过 Bot 框架连接器（单个 REST API）处理，使你的 bot 能够与团队和其他频道进行通信。 自动程序生成器 SDK 提供了轻松访问此 API 的功能、用于管理对话流和状态的附加功能，以及将认知服务（如自然语言处理） (NLP) 集成的简单方法。
 
 ## <a name="receive-a-message"></a>接收邮件
 
-若要接收短信，请使用`Text` `Activity`对象的属性。 在 bot 的活动处理程序中，使用 turn context 对象`Activity`读取单个邮件请求。
+若要接收短信，请使用 `Text` 对象的属性 `Activity` 。 在 bot 的活动处理程序中，使用 turn context 对象 `Activity` 读取单个邮件请求。
 
 下面的代码显示了一个示例。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -50,7 +50,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 
@@ -66,7 +66,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 <!-- Verify -->
 ```python
@@ -76,7 +76,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -123,19 +123,19 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>发送邮件
 
-若要发送短信，请指定要作为活动发送的字符串。 在 bot 的活动处理程序中，使用 turn context 对象的`SendActivityAsync`方法发送单个邮件响应。 您还可以使用对象的`SendActivitiesAsync`方法一次发送多个响应。 下面的代码展示了在将某人添加到对话中时发送邮件的示例  
+若要发送短信，请指定要作为活动发送的字符串。 在 bot 的活动处理程序中，使用 turn context 对象的 `SendActivityAsync` 方法发送单个邮件响应。 您还可以使用对象的 `SendActivitiesAsync` 方法一次发送多个响应。 下面的代码展示了在将某人添加到对话中时发送邮件的示例  
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
   await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
 }
 
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 
@@ -150,7 +150,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 <!-- Verify -->
 
@@ -165,7 +165,7 @@ async def on_members_added_activity(
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -212,24 +212,24 @@ async def on_members_added_activity(
 
 ## <a name="teams-channel-data"></a>团队频道数据
 
-该`channelData`对象包含特定于团队的信息，是团队和通道 id 的权威源。 您可能需要缓存这些 id 并将其用作本地存储的键。 SDK `TeamsActivityHandler`中的通常会从`channelData`对象中提取重要信息，以使其更易于访问，但您始终可以访问`turnContext`对象中的原始信息。
+该 `channelData` 对象包含特定于团队的信息，是团队和通道 id 的权威源。 您可能需要缓存这些 id 并将其用作本地存储的键。 `TeamsActivityHandler`SDK 中的通常会从对象中提取重要信息 `channelData` ，以使其更易于访问，但您始终可以访问对象中的原始信息 `turnContext` 。
 
-在`channelData`个人对话的邮件中不包含该对象，因为它们在任何频道之外发生。
+在 `channelData` 个人对话的邮件中不包含该对象，因为它们在任何频道之外发生。
 
 发送到你的 bot 的活动中的典型 channelData 对象包含以下信息：
 
 * `eventType`团队事件类型;仅在[频道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递
-* `tenant.id`Azure Active Directory 租户 ID;在所有上下文中传递
-* `team`仅在通道上下文中传递，而不是在个人聊天中传递。
-  * `id`通道的 GUID
+* `tenant.id` Azure Active Directory 租户 ID;在所有上下文中传递
+* `team` 仅在通道上下文中传递，而不是在个人聊天中传递。
+  * `id` 通道的 GUID
   * `name`团队的名称;仅在[团队重命名事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递
-* `channel`当提及 bot 时，仅在通道上下文中传递，或在已添加机器人的团队中的频道中传递事件
-  * `id`通道的 GUID
-  * `name`通道名称;仅在[频道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
-* `channelData.teamsTeamId`被. 包含此属性只是为了向后兼容。
-* `channelData.teamsChannelId`被. 包含此属性只是为了向后兼容。
+* `channel` 当提及 bot 时，仅在通道上下文中传递，或在已添加机器人的团队中的频道中传递事件
+  * `id` 通道的 GUID
+  * `name` 通道名称;仅在 [频道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
+* `channelData.teamsTeamId` 被. 包含此属性只是为了向后兼容。
+* `channelData.teamsChannelId` 被. 包含此属性只是为了向后兼容。
 
-### <a name="example-channeldata-object-channelcreated-event"></a>示例 channelData 对象（channelCreated 事件）
+### <a name="example-channeldata-object-channelcreated-event"></a> (channelCreated 事件的示例 channelData 对象) 
 
 ```json
 "channelData": {
@@ -255,14 +255,14 @@ async def on_members_added_activity(
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                |                                                                                         |
 | 图片  | ✔                | ✔                | 最大1024×1024和 1 MB，PNG、JPEG 或 GIF 格式;不支持动态 GIF  |
-| 圣诞卡     | ✖                | ✔                | 有关支持的卡片，请参阅[团队卡片参考](~/task-modules-and-cards/cards/cards-reference.md) |
-| 表情符号    | ✖                | ✔                | 团队目前支持通过 UTF-16 进行的表情符号（例如，U + 1F600 for grinning 脸）          |
+| 卡     | ✖                | ✔                | 有关支持的卡片，请参阅[团队卡片参考](~/task-modules-and-cards/cards/cards-reference.md) |
+| 表情符号    | ✖                | ✔                | 团队当前支持通过 UTF-16 (的表情符号，例如 U + 1F600 for grinning 脸)           |
 
 ## <a name="adding-notifications-to-your-message"></a>向邮件中添加通知
 
-通知会提醒用户有关新任务、提及和注释（与他们的工作方式相关），或者需要将通知插入到其活动源中来查看。 您可以通过将`TeamsChannelData`对象`Notification.Alert`属性设置为 true，将通知设置为触发来自 bot 邮件。 是否引发通知将最终取决于单个用户的团队设置，并且无法以编程方式重写这些设置。 通知类型可以是横幅，也可以同时是横幅和电子邮件。
+通知会提醒用户有关新任务、提及和注释（与他们的工作方式相关），或者需要将通知插入到其活动源中来查看。 您可以通过将 `TeamsChannelData` 对象属性设置为 true，将通知设置为触发来自 bot 邮件 `Notification.Alert` 。 是否引发通知将最终取决于单个用户的团队设置，并且无法以编程方式重写这些设置。 通知类型可以是横幅，也可以同时是横幅和电子邮件。
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -274,7 +274,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -288,7 +288,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 
@@ -300,7 +300,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -335,14 +335,14 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="picture-messages"></a>图片邮件
 
-通过将附件添加到邮件来发送图片。 您可以在[Bot 框架文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0)中找到有关附件的详细信息。
+通过将附件添加到邮件来发送图片。 您可以在 [Bot 框架文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0)中找到有关附件的详细信息。
 
 图片最多可以为1024×1024和 1 MB （PNG、JPEG 或 GIF 格式）;不支持动态 GIF。
 
 建议使用 XML 指定每个图像的高度和宽度。 如果使用 Markdown，则图像大小默认为256×256。 例如：
 
-* 改用`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* 请勿使用-`![Duck on a rock](http://aka.ms/Fo983c)`
+* 改用 `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
+* 请勿使用- `![Duck on a rock](http://aka.ms/Fo983c)`
 
 ## <a name="next-steps"></a>后续步骤
 

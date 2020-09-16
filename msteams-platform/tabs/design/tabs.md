@@ -2,29 +2,24 @@
 title: 选项卡的设计准则
 description: 介绍为内容和协作创建选项卡的准则
 keywords: 团队设计指南参考框架选项卡配置
-ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021613"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819037"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
 
 > [!Important]
 > **移动客户端上的选项卡**
 >
-> 创建选项卡时，请遵循[移动电话上的选项卡指南](./tabs-mobile.md)。 如果您的选项卡使用身份验证，则必须将团队 JavaScript SDK 升级到版本1.4.1 或更高版本，否则身份验证将失败。
+> 创建选项卡时，请遵循 [移动电话上的选项卡指南](./tabs-mobile.md) 。 如果您的选项卡使用身份验证，则必须将团队 JavaScript SDK 升级到版本1.4.1 或更高版本，否则身份验证将失败。
 >
-> **移动设备上的个人（静态）选项卡：**
+> **移动设备上的频道/组 (可配置) 选项卡：**
 >
-> * 在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中，可以使用静态选项卡（个人应用）。
-> * 在构建静态选项卡时，请确保遵循[移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md)
->
-> **移动设备上的频道/组（可配置）选项卡：**
->
-> * 移动客户端仅显示具有值的选项卡 `websiteUrl` 。 如果希望您的选项卡显示在团队移动客户端上，则必须设置的值 `websiteUrl` 。
-> * 移动上的默认打开行为是使用在浏览器中的外部打开 `websiteUrl` 。 对于发布到公用应用商店的应用程序，如果您希望频道选项卡在默认情况下在团队内打开，请遵循[移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md)，并转到您的支持代表以请求列入白名单。
+> * 移动客户端仅显示具有值的可配置选项卡 `websiteUrl` 。 如果希望您的选项卡显示在团队移动客户端上，则必须设置的值 `websiteUrl` 。
+> * 移动上的默认打开行为是使用在浏览器中的外部打开 `websiteUrl` 。 对于发布到公用应用商店的应用程序，如果您希望频道选项卡在默认情况下在团队内打开，请遵循 [移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md)，并转到您的支持代表以请求列入白名单。
 
 选项卡是可用于在团队的随机工作流中共享内容、举行对话和托管第三方服务的画布。 当您在 Microsoft 团队中构建一个选项卡时，它会将 web 应用程序的前端和中心放置在易于从关键对话中访问的位置。
 
@@ -40,9 +35,9 @@ ms.locfileid: "45021613"
 
 避免在选项卡中创建多个面板、添加导航层或要求用户在一个选项卡中垂直和水平滚动。换言之，请不要在选项卡中包含选项卡。
 
-### <a name="integration"></a>集中
+### <a name="integration"></a>集成
 
-通过将[自适应卡](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)发布到对话中，查找通知用户有关选项卡活动的方法。
+通过将 [自适应卡](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) 发布到对话中，查找通知用户有关选项卡活动的方法。
 
 ### <a name="conversational"></a>对话
 
@@ -58,7 +53,7 @@ ms.locfileid: "45021613"
 
 ### <a name="flat-navigation"></a>平面导航
 
-我们要求开发人员不要将其整个门户添加到选项卡。保持导航相对平整有助于保持更简单的会话模式。 换言之，对话是关于事情的列表（如已会审的工作项）或一个内容（如规范）。
+我们要求开发人员不要将其整个门户添加到选项卡中。保持导航相对平整有助于保持更简单的会话模式。 换言之，对话是关于事情的列表（如已会审的工作项）或一个内容（如规范）。
 
 深入导航层次结构中有一些固有的导航挑战，在线程对话中。 为获得最佳用户体验，应将选项卡导航保持在最少，并按如下方式设计：
 
@@ -80,7 +75,7 @@ ms.locfileid: "45021613"
 合并自己的颜色和布局 twill 也有助于传达个性。
 
 > [!TIP]
-> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。 *请参阅*示例[团队颜色](../../concepts/design/components/color.md)
+> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。 *请参阅*示例 [团队颜色](../../concepts/design/components/color.md)
 
 ---
 
@@ -99,25 +94,27 @@ ms.locfileid: "45021613"
 ## <a name="configuration-page-height"></a>配置页高度
 
 >[!IMPORTANT]
->在9月2018中，选项卡[配置页面](~/tabs/how-to/create-tab-pages/configuration-page.md)的高度增加，而宽度保持不变。 如果您的应用程序是为较旧的大小设计的，则选项卡配置页将具有大量的垂直空白。 从此更改中免除的旧版应用程序将需要在更新后与 Microsoft 联系，以适应新的维度。
+>在9月2018中，选项卡 [配置页面](~/tabs/how-to/create-tab-pages/configuration-page.md) 的高度增加，而宽度保持不变。 如果您的应用程序是为较旧的大小设计的，则选项卡配置页将具有大量的垂直空白。 从此更改中免除的旧版应用程序将需要在更新后与 Microsoft 联系，以适应新的维度。
 
 选项卡配置页的尺寸：
 
-<img width="450px" title="配置选项卡的大小" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+<img width="450px" title="配置选项卡的大小" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+
 
 ### <a name="guidelines-for-tab-configuration-page-format"></a>选项卡配置页面格式的准则
 
 * 使固定高度图形元素上的选项卡配置页的内容区域的最小高度为基准。
-* 使用计算可用的垂直间距（配置页中的内容区域的高度） `window.innerHeight` 。 这将返回 `<iframe>` 配置页面所驻留的大小，在将来的版本中可能会发生更改。 通过使用此值，你的内容将自动调整为将来的更改。
+* 使用) 的配置页面中的内容区域的高度计算可用的垂直空间 (`window.innerHeight` 。 这将返回 `<iframe>` 配置页面所驻留的大小，在将来的版本中可能会发生更改。 通过使用此值，你的内容将自动调整为将来的更改。
 * 将垂直空间分配给可变高度元素减去固定高度元素所需的值。
-* 对于 "*登录*状态"，将内容垂直和水平居中。
-* 如果需要背景图像，您需要一个新图像，调整大小以适合该区域（首选），或者您可以保留相同的图像并在其中进行选择：
+* 对于 " *登录* 状态"，将内容垂直和水平居中。
+* 如果您需要背景图像，则需要一个新图像，调整大小以适合 (首选) 的区域，也可以保留相同的图像并在其中进行选择：
   * 与左上角对齐。
   * 将图像缩放到合适大小。
 
 如果调整了适当的大小，您的选项卡配置页面应如下所示：
 
-<img width="450px" title=""新建配置" 选项卡" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+<img width="450px" title=""新建配置" 选项卡" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
 
 ## <a name="best-practices"></a>最佳做法
 
@@ -139,7 +136,7 @@ ms.locfileid: "45021613"
 
 > [!div class="checklist"]
 >
-> * **使用应用程序 api 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。*请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest)
+> * **使用应用程序 api 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。 *请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 > * **使用 bot**。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
 
-  将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您 `@mention` 将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。
+  将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您 `@mention`  将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。

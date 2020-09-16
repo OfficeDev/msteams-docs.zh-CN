@@ -2,19 +2,19 @@
 title: 移动设备上的选项卡
 description: 介绍设计适用于移动设备的选项卡的指南。
 keywords: 团队设计准则参考框架个人应用移动选项卡
-ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: d47039c245b8e262af6e1f60bc0c644dc7e65bd6
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145921"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819044"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
 
 > [!NOTE]
-> 如果选择在工作组移动客户端上显示频道/组选项卡，则 `setSettings()` 配置必须具有 `websiteUrl` 属性值（请参阅下文）。 个人选项卡当前可在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中使用。 将很快发布对移动客户端上的选项卡的完全支持。 若要准备更新，请在创建选项卡时遵循此处介绍的内容。
+> 如果选择在工作组移动客户端上显示 "频道/组" 选项卡，则该 `setSettings()` 配置必须具有该属性的值 `websiteUrl` (请参阅下) 。
 
-自定义选项卡可以是频道、组聊天或个人应用（包含静态选项卡和/或一对一 bot 的应用程序）的一部分。
+自定义选项卡可以是频道、组聊天或个人应用 (包含静态选项卡和/或一对一机器人) 的应用程序的一部分。
 
 应用程序抽屉中的移动客户端提供了个人应用程序。 只能从桌面或 web 客户端安装应用程序，并且在移动客户端上可能需要长达24小时才能显示该应用程序。
 
@@ -24,15 +24,15 @@ ms.locfileid: "45145921"
 
 ## <a name="developer-considerations-for-mobile-support"></a>移动支持的开发人员注意事项
 
-在构建包含选项卡的应用程序时，需要考虑（并测试）选项卡在 Android 和 iOS Microsoft 团队客户端上的工作方式。 以下各节概述了您需要考虑的一些关键方案。
+在构建包含选项卡的应用程序时，需要考虑 (并测试您的选项卡在 Android 和 iOS Microsoft 团队客户端上将如何运行的) 。 以下各节概述了您需要考虑的一些关键方案。
 
 ### <a name="testing-on-mobile-clients"></a>在移动客户端上进行测试
 
-您需要验证您的选项卡在各种大小和质量的移动设备上是否正常工作。 对于 Android 设备，您可以使用[DevTools](~/tabs/how-to/developer-tools.md)在选项卡运行时对其进行调试。 我们建议您在高性能和低性能的设备以及平板电脑上进行测试。
+您需要验证您的选项卡在各种大小和质量的移动设备上是否正常工作。 对于 Android 设备，您可以使用 [DevTools](~/tabs/how-to/developer-tools.md) 在选项卡运行时对其进行调试。 我们建议您在高性能和低性能的设备以及平板电脑上进行测试。
 
 ### <a name="responsive-design"></a>响应式设计
 
-由于您的选项卡可以在屏幕大小范围很广的设备上打开，因此它需要遵循[快速响应设计](https://www.w3schools.com/html/html_responsive.asp)原则。 所有关键构造在移动设备上都应该是可访问的，并且这些视图不应失真。 确保在移动设备上加载选项卡时，可以使用基于手指的导航轻松访问所有按钮和链接。
+由于您的选项卡可以在屏幕大小范围很广的设备上打开，因此它需要遵循 [快速响应设计](https://www.w3schools.com/html/html_responsive.asp) 原则。 所有关键构造在移动设备上都应该是可访问的，并且这些视图不应失真。 确保在移动设备上加载选项卡时，可以使用基于手指的导航轻松访问所有按钮和链接。
 
 ### <a name="authentication"></a>身份验证
 
@@ -78,7 +78,7 @@ ms.locfileid: "45145921"
 
 #### <a name="color-palettes"></a>调色板
 
-使用我们为背景、通知、文本和按钮提供的已批准中性调色板，可帮助你的应用程序在团队家庭中更好地感觉。 由于团队 mobile 具有两种颜色主题（浅色和深色），因此最好确保您的应用程序在这两个方面看起来非常出色。
+使用我们为背景、通知、文本和按钮提供的已批准中性调色板，可帮助你的应用程序在团队家庭中更好地感觉。 由于团队 mobile 有两个颜色主题 (浅色和深色) ，因此最好确保您的应用程序在这两个方面看起来非常出色。
 
 ##### <a name="light-color"></a>浅色
 
@@ -92,7 +92,7 @@ ms.locfileid: "45145921"
 
 按钮的样式方式有助于传达它们触发的操作类型。 我们维护各种格式的按钮，以显示不同的强调级别。 按钮可以有文本、图标或文本和图标的组合。 为了在层次结构中传达不同的级别，我们为每个类别中的主要和辅助按钮设计。
 
-![按钮](~/assets/images/buttons.png)
+![按钮图像](~/assets/images/buttons.png)
 
 ![选择控件](~/assets/images/selection-controls.png)
 

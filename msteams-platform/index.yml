@@ -3,19 +3,19 @@ title: Microsoft 团队开发人员文档
 brand: teams
 metadata:
   title: Microsoft 团队平台开发人员文档
-  description: Microsoft 团队开发人员平台使开发人员可以轻松地集成自己的应用程序和服务，以提高工作效率、更快地做出决策、提供焦点（通过减少上下文切换），并围绕现有内容和工作流创建协作。 .
+  description: Microsoft 团队开发人员平台使开发人员可以轻松地集成自己的应用程序和服务，以提高工作效率、更快地做出决策，并通过减少上下文切换) ，并围绕现有内容和工作流创建协作，从而提供焦点 (。 .
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 3ddefb1b0f01c5b2add719dbe61972eae405a959
-  ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+  ms.openlocfilehash: b67453a5d8f190dd03bd369dc6e019afe0950d4c
+  ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/15/2020
-  ms.locfileid: "45137666"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "47819086"
 highlightedContent:
   items:
   - title: "Microsoft 团队的新开发？ \U0001F680从这里开始！"
@@ -106,9 +106,11 @@ conceptualContent:
     - url: https://aka.ms/microsoftteamscommunitycall
       itemType: overview
       text: Microsoft Teams 社区通话
+  - title: 社区帮助
+    links:
     - url: /microsoftteams/platform/feedback
       itemType: overview
-      text: 反馈 & 支持
+      text: Microsoft 团队开发人员社区和响应
 tools:
   title: Sdk & 工具
   items:
