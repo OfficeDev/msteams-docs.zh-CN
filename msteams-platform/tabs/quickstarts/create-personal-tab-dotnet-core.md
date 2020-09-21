@@ -1,6 +1,16 @@
 ---
-标题： "使用 ASP.NET Core 创建个人选项卡" author： laujan 说明：用于创建具有 ASP.NET Core 的自定义个人选项卡的快速入门指南。
-（毫秒）主题：快速启动 ms. author： lajanuar
+title: 使用 ASP.NET Core 创建个人选项卡
+author: laujan
+description: 用于创建带有 ASP.NET Core 的自定义个人选项卡的快速入门指南。
+ms.topic: quickstart
+ms.author: lajanuar
+ms.openlocfilehash: 21d1de18bfa8b7959cbecfe6eb50430ed8d3f3ec
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964576"
+---
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>使用 ASP.NET Core 创建自定义个人选项卡
 
 在此快速入门中，我们将介绍如何创建包含 c # 和 ASP.Net Core Razor 页面的自定义个人选项卡。 我们还将使用 [Microsoft 团队的应用 Studio](~/concepts/build-and-test/app-studio-overview.md) 来完成你的应用程序清单，并将你的选项卡部署到团队。

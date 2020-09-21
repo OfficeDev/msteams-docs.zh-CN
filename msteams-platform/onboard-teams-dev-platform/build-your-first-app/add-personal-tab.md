@@ -3,12 +3,14 @@ title: 为团队创建个人选项卡
 author: heath-hamilton
 description: 了解如何在您的首个 Microsoft 团队应用程序中构建个人选项卡。
 ms.topic: tutorial
-ms.openlocfilehash: 1c782adce2201550d30d658907d507dc6a1337f3
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.author: lajanuar
+ms.date: 08/31/2020
+ms.openlocfilehash: 5dbe3a8314102807992b15e34a15c23f395c4d74
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651924"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964597"
 ---
 # <a name="create-a-personal-tab-for-teams"></a>为团队创建个人选项卡
 
@@ -18,7 +20,7 @@ ms.locfileid: "46651924"
 
 ## <a name="before-you-begin"></a>准备工作
 
-您需要一个基本运行的应用程序才能开始使用。 如果没有，请参阅 [生成并运行你的首个团队应用](build-and-run-with-toolkit.md)。
+若要开始，您需要 "运行一个基本的个人" 选项卡。 如果没有，请参阅 [生成并运行你的首个团队应用](../build-your-first-app/build-and-run.md)。
 
 ## <a name="your-assignment"></a>您的分配
 
@@ -29,12 +31,12 @@ ms.locfileid: "46651924"
 > [!div class="checklist"]
 >
 > * 标识与个人选项卡相关的应用部件清单（manifest）属性和基架
-> * 创建选项卡的内容
+> * 创建选项卡内容
 > * 根据用户首选项更新选项卡的颜色主题
 
-## <a name="identify-relevant-app-manifest-and-scaffolding-components"></a>确定相关的应用程序清单和基架组件
+## <a name="identify-relevant-app-project-components"></a>确定相关的应用程序项目组件
 
-大多数个人选项卡应用程序基架和清单在您使用团队工具包创建项目时自动设置。 我们来看看用于构建个人选项卡的主要组件。
+大多数应用程序清单和基架是在使用团队工具包创建项目时自动设置的。 我们来看看用于构建个人选项卡的主要组件。
 
 ### <a name="app-manifest"></a>应用程序清单
 
@@ -108,17 +110,17 @@ ms.locfileid: "46651924"
 
 保存所做的更改。 转到团队中的应用程序选项卡以查看新内容。
 
-![包含静态内容的个人选项卡的示例屏幕截图](../doc-links/images/personal-tab-tutorial-content.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-content.png" alt-text="包含静态内容的个人选项卡的示例屏幕截图。":::
 
 ## <a name="update-the-tab-theme"></a>更新选项卡主题
 
 理想的应用程序会让团队成为本地用户，因此，您的选项卡与您的用户喜欢的团队主题进行混合是很重要的：默认 (浅) 、深或高对比度。 正如您可能在最后的屏幕截图中已注意到，当客户端使用深色主题时，您的选项卡仍有浅背景。 这不是建议的用户体验。
 
-[团队 JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)可让你的应用程序知道和响应客户端中的主题更改。 我们来演练一下如何执行此操作。
+[团队 JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)可让你的应用程序知道和响应客户端中的主题更改。 我们来演练一下如何执行此操作。
 
 ### <a name="get-context-about-the-teams-client"></a>获取有关团队客户端的上下文
 
-在您的文件中， `Tab.js` 有一个 `microsoftTeams.getContext()` 可提供 [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) 有关已配置的客户端主题的信息的呼叫。 由于应用程序基架，使用此代码来访问 `context` 接口及其属性。
+在您的文件中， `Tab.js` 有一个 `microsoftTeams.getContext()` 可提供 [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) 有关已配置的客户端主题的信息的呼叫。 由于应用程序基架，使用此代码来访问 `context` 接口及其属性。
 
 ```JavaScript
   componentDidMount(){
@@ -151,7 +153,7 @@ ms.locfileid: "46651924"
 您的主题更改处理程序已准备就绪，但您需要一些代码来响应这些更改，并将您的选项卡的颜色与当前主题对齐。
 
 > [!NOTE]
-> 下面的示例只是将样式应用于选项卡的一种方式。使用代码为，再展开或编写自己的代码。
+> 下面的示例只是将样式应用于选项卡的一种方法。使用的代码为，然后展开或编写自己的代码。
 
 将主题更改处理程序提供的状态存储在中 `isTheme` 。
 
@@ -179,23 +181,22 @@ ms.locfileid: "46651924"
 
 检查团队中的选项卡。 外观应与深色主题紧密匹配。
 
-![包含静态内容的个人选项卡的示例屏幕截图](../doc-links/images/personal-tab-tutorial-updated-theme.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-updated-theme.png" alt-text="包含静态内容的个人选项卡的示例屏幕截图。":::
 
 ## <a name="well-done"></a>干的好
 
 恭喜你！ 您有一个 "个人" 选项卡的团队应用程序，可以更轻松地查找组织中的重要联系人。
-
-## <a name="next-step"></a>后续步骤
-
-您知道如何构建用于个人用途的选项卡。 让我们来看看构建团队频道和聊天的选项卡所需的内容。
-
-> [!div class="nextstepaction"]
-> [生成通道选项卡](add-channel-tab.md)
 
 ## <a name="learn-more"></a>了解详细信息
 
 * [使用 Sso 对选项卡用户进行身份验证](../../tabs/how-to/authentication/auth-aad-sso.md)：如果您仅希望授权用户查看您的选项卡，请通过 Azure Active DIRECTORY (AD) 设置单一登录 (SSO) 。
 * [从现有 web 应用或网页嵌入内容](../../tabs/how-to/add-tab.md#tab-requirements)：我们向您介绍了如何为个人选项卡创建新内容，但您也可以从外部 URL 加载内容。
 * [为您的选项卡创建无缝体验](../../tabs/design/tabs.md)：有关设计团队选项卡的建议指南，请参阅。
-* [为移动设备构建选项卡](../../tabs/design/tabs-mobile.md)：了解如何为智能手机和平板电脑开发选项卡。
+* [为移动设备构建选项卡](../../tabs/design/tabs-mobile.md)：了解如何为电话和平板电脑开发选项卡。
 
+## <a name="next-lesson"></a>下一课
+
+您知道如何构建用于个人用途的选项卡。 让我们来看看构建团队频道和聊天的选项卡所需的内容。
+
+> [!div class="nextstepaction"]
+> [生成通道选项卡](../build-your-first-app/add-channel-tab.md)

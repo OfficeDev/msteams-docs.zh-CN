@@ -3,13 +3,13 @@ title: 开始规划你的 Microsoft 团队应用
 author: heath-hamilton
 description: 了解如何规划团队应用程序。
 ms.topic: conceptual
-ms.author: v-heha
-ms.openlocfilehash: b30b54e20c35a745132197464538f4d5a29f3c17
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.author: lajanuar
+ms.openlocfilehash: 7433d9c5c0600bbb52e625c35a228d44fc021ca8
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819072"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964555"
 ---
 # <a name="start-planning-your-microsoft-teams-app"></a>开始规划你的 Microsoft 团队应用
 

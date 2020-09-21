@@ -3,14 +3,14 @@ title: 创建配置页
 author: laujan
 description: 如何创建配置页
 keywords: 团队选项卡组频道可配置
-ms.topic: conceptualF
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819023"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964604"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -22,7 +22,7 @@ ms.locfileid: "47819023"
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>配置频道或组聊天选项卡
 
-配置页面通知内容页面它应如何呈现。 您的应用程序必须引用 [Microsoft 团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) 和调用 `microsoft.initialize()` 。 此外，您的 Url 必须是安全的 HTTPS 终结点，并可从云中使用。 下面是配置页面示例。
+配置页面通知内容页面它应如何呈现。 您的应用程序必须引用 [Microsoft 团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 和调用 `microsoft.initialize()` 。 此外，您的 Url 必须是安全的 HTTPS 终结点，并可从云中使用。 下面是配置页面示例。
 
 ```html
 <head>
@@ -85,7 +85,7 @@ ms.locfileid: "47819023"
 1. `microsoftTeams.settings.registerOnSaveHandler()`触发事件处理程序。
 1. 启用 "在团队中上载的应用程序配置" 页上的 " **保存** " 按钮。
 
-此代码使团队知道已满足配置要求，并且可以继续安装。 在 **保存**时， `settings.setSettings()` 由接口定义的参数设置为 `Settings` 当前实例 (请参阅 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) ) 。 最后， `saveEvent.notifySuccess()` 将调用，以指示内容 URL 已成功解析。
+此代码使团队知道已满足配置要求，并且可以继续安装。 在 **保存**时， `settings.setSettings()` 由接口定义的参数设置为 `Settings` 当前实例 (请参阅 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ) 。 最后， `saveEvent.notifySuccess()` 将调用，以指示内容 URL 已成功解析。
 
 >[!NOTE]
 >
@@ -96,11 +96,11 @@ ms.locfileid: "47819023"
 
 您的选项卡可能需要上下文信息才能显示相关内容。 上下文信息可以通过提供更多自定义的用户体验来进一步增强您的选项卡的吸引力。
 
-团队 [上下文界面](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) 定义可用于您的选项卡配置的属性。 您可以通过两种方式收集上下文数据变量的值：
+团队 [上下文界面](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) 定义可用于您的选项卡配置的属性。 您可以通过两种方式收集上下文数据变量的值：
 
 1. 在清单中插入 URL 查询字符串占位符 `configurationURL` 。
 
-1. 使用 " [团队" SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) `microsoftTeams.getContext((context) =>{}` 方法。
+1. 使用 " [团队" SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{}` 方法。
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>将占位符插入到 `configurationURL`
 
@@ -139,7 +139,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>使用 `getContext()` 函数检索上下文
 
-调用时， `microsoftTeams.getContext((context) => {})` 函数将检索 [上下文接口](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest)。 您可以将此函数添加到您的配置页面以检索上下文值：
+调用时， `microsoftTeams.getContext((context) => {})` 函数将检索 [上下文接口](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)。 您可以将此函数添加到您的配置页面以检索上下文值：
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->

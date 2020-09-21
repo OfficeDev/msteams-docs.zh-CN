@@ -4,12 +4,12 @@ author: clearab
 description: 如何：将 OAuth 身份验证添加到 Microsoft 团队中的 bot。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 0ec80c558a34af70530175d340869895fd2fda81
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 403072efeccdd09e46ac93e2e811ee2d10131668
+ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819093"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "48097884"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向你的团队 bot 添加身份验证
 
@@ -81,7 +81,7 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 如果你有 Microsoft 应用 Id 和应用密码 (客户端机密) ，bot 通道注册会将您的 web 服务注册为 bot 框架的 bot。
 
 > [!IMPORTANT]
-> 仅当你的 bot 未托管在 Azure 中时，才需要注册你的 bot。 如果你通过 Azure 门户 [创建了一个 bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0) ，则它已向该服务注册。 如果你通过 [Bot 框架](https://dev.botframework.com/bots/new) 或 [AppStudio](~/concepts/build-and-test/app-studio-overview.md) 创建了你的 bot，你的 Bot 不会在 Azure 中注册。
+> 仅当你的 bot 未托管在 Azure 中时，才需要注册你的 bot。 如果你通过 Azure 门户 [创建了一个 bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) ，则它已向该服务注册。 如果你通过 [Bot 框架](https://dev.botframework.com/bots/new) 或 [AppStudio](~/concepts/build-and-test/app-studio-overview.md) 创建了你的 bot，你的 Bot 不会在 Azure 中注册。
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -124,7 +124,7 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>配置标识提供程序连接，并将其注册到机器人
 
-注意-服务提供商有两个选项-Azure AD V1 和 Azure AD V2。  [这里](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)汇总了两个提供程序之间的差异，但一般来说，V2 提供了有关更改 bot 权限的更多灵活性。  Graph API 权限在 "范围" 字段中列出，并在添加新权限时，bot 将允许用户在下一个登录时同意新权限。  对于 V1，用户必须删除机器人许可，以获取在 OAuth 对话框中提示的新权限。 
+注意-服务提供商有两个选项-Azure AD V1 和 Azure AD V2。  [这里](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)汇总了两个提供程序之间的差异，但一般来说，V2 提供了有关更改 bot 权限的更多灵活性。  Graph API 权限在 "范围" 字段中列出，并在添加新权限时，bot 将允许用户在下一个登录时同意新权限。  对于 V1，用户必须删除机器人许可，以获取在 OAuth 对话框中提示的新权限。 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
@@ -149,7 +149,7 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
     水平. 对于 " **资源 URL**"，请输入 `https://graph.microsoft.com/` 。 当前代码示例中不使用此代码。  
     i. 将 **范围** 保留为空。 下面的图像是一个示例：
 
-    ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
+    ![团队 bot 应用程序身份验证连接字符串 adv1 视图](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
 1. 选择“**保存**”。
 
@@ -183,12 +183,12 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 1. 第一次执行此操作时，将打开一个新的浏览器窗口，要求您选择帐户。 选择要使用的一个。
 1. 接下来，系统将要求您允许标识提供程序使用您的数据 (凭据) 。 下面的图像是一个示例：
 
-    ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+    ![团队 bot 身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. 选择 " **接受**"。
 1. 然后，这会将您重定向到 "成功" 页的 " **测试连接 \<your-connection-name> ** "。 如果遇到错误，请刷新页面。 下面的图像是一个示例：
 
-  ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+  ![团队 bot 应用程序身份验证连接 str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
 Bot 代码使用连接名称来检索用户身份验证令牌。
 
@@ -391,7 +391,7 @@ Microsoft 团队是完全基于云的产品，它需要使用 HTTPS 终结点从
 1. 例如，运行 `ngrok http 3978 --host-header=localhost:3978` 。 根据需要更换端口号。
 这将启动 ngrok 以侦听您指定的端口。 在 return 中，它为您提供一个外部可寻址的 URL，只要 ngrok 正在运行，它就会有效。 下面的图像是一个示例：
 
-    ![团队 bot 应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
+    ![团队机器人应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. 复制转发 HTTPS 地址。 它应类似于以下内容： `https://dea822bf.ngrok.io/` 。
 1. Append `/api/messages` 获取 `https://dea822bf.ngrok.io/api/messages` 。 这是在 Microsoft 团队的聊天中，在计算机上本地运行的 bot 的 **消息终结点** ，并可通过 web 访问。

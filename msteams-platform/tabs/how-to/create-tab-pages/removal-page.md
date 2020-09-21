@@ -5,12 +5,12 @@ description: 如何创建选项卡删除页
 keywords: 团队选项卡组通道可配置删除删除
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a8b40911de3e2519d8194415e2d8e467d0766ef2
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818897"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964590"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>修改或删除频道组选项卡
 
@@ -39,7 +39,7 @@ ms.locfileid: "47818897"
 
 ### <a name="register-a-remove-handler"></a>注册删除处理程序
 
-（可选）在删除页面逻辑中，可以在 `registerOnRemoveHandler((RemoveEvent) => {}` 用户删除现有的选项卡配置时调用事件处理程序。 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest)当用户尝试删除内容时，该方法将采用接口，并在处理程序中执行代码。 它用于执行清理操作，例如，删除用于为选项卡内容加电的基础资源。 一次只能注册一个删除处理程序。
+（可选）在删除页面逻辑中，可以在 `registerOnRemoveHandler((RemoveEvent) => {}` 用户删除现有的选项卡配置时调用事件处理程序。 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true)当用户尝试删除内容时，该方法将采用接口，并在处理程序中执行代码。 它用于执行清理操作，例如，删除用于为选项卡内容加电的基础资源。 一次只能注册一个删除处理程序。
 
 该 `RemoveEvent` 接口描述了具有以下两种方法的对象：
 
@@ -49,11 +49,11 @@ ms.locfileid: "47818897"
 
 #### <a name="use-the-getsettings-function"></a>使用 `getSettings()` 函数
 
-您可以使用 `getSettings()` 来指定要删除的选项卡内容。 `getSettings((Settings) =>{})`函数采用 [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) 并提供可检索的有效设置属性值。
+您可以使用 `getSettings()` 来指定要删除的选项卡内容。 `getSettings((Settings) =>{})`函数采用 [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) 并提供可检索的有效设置属性值。
 
 #### <a name="use-the-getcontext-function"></a>使用 `getContext()` 函数
 
-您可以使用 `getContext()` 来检索运行该帧的当前上下文。 `getContext((Context) =>{})`函数采用 [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) 并提供 `Context` 可在删除页面逻辑中使用的有效属性值，以确定要在删除页面中显示的内容。
+您可以使用 `getContext()` 来检索运行该帧的当前上下文。 `getContext((Context) =>{})`函数采用 [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) 并提供 `Context` 可在删除页面逻辑中使用的有效属性值，以确定要在删除页面中显示的内容。
 
 #### <a name="include-authentication"></a>包括身份验证
 
