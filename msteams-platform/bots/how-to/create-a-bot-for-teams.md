@@ -5,12 +5,12 @@ description: 如何为 Microsoft Teams 创建自动程序。
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: eab1d5b76c4fa534e7a5bbab8572004b9f737a1b
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635296"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178314"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>为 Microsoft Teams 创建自动程序
 
@@ -171,7 +171,14 @@ ms.locfileid: "42635296"
 
 ## <a name="upload-your-package-to-microsoft-teams"></a>将你的程序包上传到 Microsoft Teams
 
+> [!NOTE]
+> 要成功上传你的自动程序，你的租户管理员必须首先[允许在 Teams 中上传](/microsoftteams/manage-apps#manage-org-wide-app-settings)第三方或自定义应用。
+
 如果你一直在使用 App Studio，则可以从**清单编辑器**的“**测试和分发**”选项卡中安装应用。 或者，你也可以通过以下方法安装应用程序包，即单击左侧导航栏中的 `...` 溢出菜单，单击“**更多应用**”，然后单击“**上载自定义应用**”链接。 你还可以将应用程序清单或应用程序包导入到 App Studio 中，以在上传之前进行其他更新。
+
+## <a name="bots-in-teams-meetings"></a>Teams 会议的自动程序
+
+Teams 支持在会议期间进行自动程序调用。 当你的自动程序收到调用消息时，它可以识别来自 `userId` 和 `tenantId` 的用户和租户。 可在 `channelData` 对象中找到 `meetingId`。 你的自动程序可以对 `GetParticipant` API 请求使用 `userId` 和 `meetingId` 来检索用户角色。
 
 ## <a name="next-steps"></a>后续步骤
 
