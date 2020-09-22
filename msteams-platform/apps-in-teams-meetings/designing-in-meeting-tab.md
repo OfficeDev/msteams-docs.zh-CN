@@ -1,17 +1,17 @@
 ---
-title: 正在设计 Microsoft 团队会议选项卡
+title: 设计 Microsoft 团队会议选项卡
 author: heath-hamilton
 description: 为 Microsoft 团队设计 "会议" 选项卡的指南和最佳实践。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: ec095654f4a0816478b1b32a45c931d74dbb3209
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 91981ab79c8e50483568dd0dc750b4e9b3fdef24
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48097973"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178321"
 ---
-# <a name="designing-an-in-meeting-tab"></a>设计会议中的选项卡
+# <a name="design-an-in-meeting-tab"></a>设计会议中的选项卡
 
 "会议" 选项卡是在会议过程中充实协作的画布。 根据 "团队" 选项卡功能，与会者可以通过共享或基于角色的视图在会议阶段外的专用空间中查看应用程序内容并与之交互。
 

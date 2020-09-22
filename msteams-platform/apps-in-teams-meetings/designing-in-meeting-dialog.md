@@ -1,17 +1,17 @@
 ---
-title: 正在设计 Microsoft 团队会议对话
+title: 设计 Microsoft 团队会议对话
 author: heath-hamilton
 description: 为 Microsoft 团队设计会议内对话的指南和最佳实践。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 449e6cdf9aecefba9fe70099c961ab56955306f8
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 8e9671d8d284311d3d0a299573d3f0e08b195e97
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48097985"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178328"
 ---
-# <a name="designing-an-in-meeting-dialog"></a>设计会议内对话
+# <a name="design-an-in-meeting-dialog"></a>设计会议内对话
 
 会议中的对话框显示在团队会议阶段。 他们需要用户注意、确认或交互，但这并不会中断会议。
 
