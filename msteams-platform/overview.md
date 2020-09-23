@@ -1,58 +1,145 @@
 ---
-title: Microsoft Teams 开发人员平台
-author: clearab
-description: 介绍 Microsoft 团队开发人员平台的概述页面，以及如何开始为 Microsoft 团队构建应用程序。
+title: 为 Microsoft 团队平台生成应用程序
+author: heath-hamilton
+description: 概述开发人员如何使用自定义应用程序扩展和自定义 Microsoft 团队功能。
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.author: lajanuar
+ms.date: 09/22/2020
+ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455483"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209791"
 ---
-# <a name="what-are-microsoft-teams-apps"></a><span data-ttu-id="6313d-103">什么是 Microsoft Teams 应用？</span><span class="sxs-lookup"><span data-stu-id="6313d-103">What are Microsoft Teams apps?</span></span>
+# <a name="build-apps-for-microsoft-teams"></a><span data-ttu-id="3f5ea-103">为 Microsoft 团队构建应用程序</span><span class="sxs-lookup"><span data-stu-id="3f5ea-103">Build apps for Microsoft Teams</span></span>
 
-<span data-ttu-id="6313d-104">Microsoft 团队是 Office 365 中的协作工作区，它与用户使用的应用程序和服务集成，以实现共同完成的工作。</span><span class="sxs-lookup"><span data-stu-id="6313d-104">Microsoft Teams is a collaboration workspace in Office 365 that integrates with apps and services people use to get work done together.</span></span> <span data-ttu-id="6313d-105">Microsoft 团队开发人员平台使开发人员可以轻松地集成自己的应用程序和服务，以提高工作效率、更快地做出决策、提供焦点（通过减少上下文切换），并围绕现有内容和工作流创建协作。</span><span class="sxs-lookup"><span data-stu-id="6313d-105">The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows.</span></span> <span data-ttu-id="6313d-106">在 Microsoft 团队平台上构建的应用程序是团队客户端和您的服务和工作流之间的桥梁;将它们直接引入协作平台的上下文中。</span><span class="sxs-lookup"><span data-stu-id="6313d-106">Apps built on the Microsoft Teams platform are bridges between the Teams client and your services and workflows; bringing them directly into the context of your collaboration platform.</span></span>
+<span data-ttu-id="3f5ea-104">Microsoft 团队应用程序可提供关键信息、常见工具和受信任的过程，以便人们越来越多地收集、学习和工作。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-104">Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.</span></span>
 
-## <a name="what-can-teams-apps-do"></a><span data-ttu-id="6313d-107">团队应用程序可以做什么？</span><span class="sxs-lookup"><span data-stu-id="6313d-107">What can Teams apps do?</span></span>
+<span data-ttu-id="3f5ea-105">应用程序是您扩展团队以满足您的需求的方式。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-105">Apps are how you extend Teams to fit your needs.</span></span> <span data-ttu-id="3f5ea-106">创建适用于团队的全新功能或集成现有应用程序。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-106">Create something brand new for Teams or integrate an existing app.</span></span>
 
-<span data-ttu-id="6313d-108">基于 Microsoft 团队平台构建的应用主要侧重于提高协作能力和提高生产率。</span><span class="sxs-lookup"><span data-stu-id="6313d-108">Apps built on the Microsoft Teams platform primarily focus on increasing collaboration and improving productivity.</span></span> <span data-ttu-id="6313d-109">您的应用程序可能很简单，如从其他系统发布通知或复杂的多面应用程序。</span><span class="sxs-lookup"><span data-stu-id="6313d-109">Your app can be something simple, like posting notifications from other systems, or complex multi-faceted applications.</span></span> <span data-ttu-id="6313d-110">只需记住，团队就是社会协作平台;最佳应用重点是帮助人员自己快速学习并更好地协同工作。</span><span class="sxs-lookup"><span data-stu-id="6313d-110">Just keep in mind that Teams is a social collaboration platform; the best apps focus on helping people express themselves and work better together.</span></span>
+## <a name="what-are-teams-apps"></a><span data-ttu-id="3f5ea-107">什么是团队应用？</span><span class="sxs-lookup"><span data-stu-id="3f5ea-107">What are Teams apps?</span></span>
 
-* <span data-ttu-id="6313d-111">**对外部系统中的项目进行协作。**</span><span class="sxs-lookup"><span data-stu-id="6313d-111">**Collaborate on items in external systems.**</span></span> <span data-ttu-id="6313d-112">自定义团队应用程序的一个核心方案是，将信息或项目从某个其他地方引入到团队中，并围绕它进行对话。</span><span class="sxs-lookup"><span data-stu-id="6313d-112">One of the core scenarios for a custom Teams app is to bring information or items into Teams from some other place, and have a conversation around it.</span></span> <span data-ttu-id="6313d-113">您可以将信息推送到团队中，使用户能够按需搜索和请求，或使其在嵌入的 web 视图中可用。</span><span class="sxs-lookup"><span data-stu-id="6313d-113">You can push information into Teams, enable your users to search for and pull it on demand, or make it available in an embedded web view.</span></span>
+<span data-ttu-id="3f5ea-108">团队应用程序是 [功能](concepts/capabilities-overview.md) 和 [入口点](concepts/extensibility-points.md)的组合。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-108">Teams apps are a combination of [capabilities](concepts/capabilities-overview.md) and [entry points](concepts/extensibility-points.md).</span></span> <span data-ttu-id="3f5ea-109">例如，用户可以与您的应用程序的 *bot* 聊天 (功能) 在 *频道* (入口点) 中。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-109">For example, people can chat with your app's *bot* (capability) in a *channel* (entry point).</span></span>
 
-* <span data-ttu-id="6313d-114">**触发对话中的工作流。**</span><span class="sxs-lookup"><span data-stu-id="6313d-114">**Trigger workflows from conversations.**</span></span> <span data-ttu-id="6313d-115">通常，对话会导致需要启动一些工作流或完成某些操作;请记下有关这一点的说明，查看我的拉取请求，将其转换为销售线索等。您的团队应用可以在团队内部将访问工作流。</span><span class="sxs-lookup"><span data-stu-id="6313d-115">Often conversations result in the need to kick off some workflow or complete some action; take a note about that, review my pull request, convert that to a sales lead, etc. Your Teams app can put access to that workflow right inside of Teams.</span></span>
+<span data-ttu-id="3f5ea-110">有些应用程序很简单 (发送通知) ，而其他应用则 (管理患者记录) 的复杂。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-110">Some apps are simple (send notifications), while others are complex (manage patient records).</span></span> <span data-ttu-id="3f5ea-111">在规划您的应用程序时，请记住，团队是协作中心。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-111">When planning your app, remember that Teams is a collaboration hub.</span></span> <span data-ttu-id="3f5ea-112">最佳团队应用可帮助人们自己表达自己并更好地协同工作。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-112">The best Teams apps help people express themselves and work better together.</span></span>
 
-* <span data-ttu-id="6313d-116">**将重要事件的团队通知给团队。**</span><span class="sxs-lookup"><span data-stu-id="6313d-116">**Notify your team of important events.**</span></span> <span data-ttu-id="6313d-117">电子邮件通知的病假？</span><span class="sxs-lookup"><span data-stu-id="6313d-117">Sick of email notifications?</span></span> <span data-ttu-id="6313d-118">改为向团队发送通知！</span><span class="sxs-lookup"><span data-stu-id="6313d-118">Send notifications to Teams instead!</span></span> <span data-ttu-id="6313d-119">将通知直接发送给用户、频道、活动源或订阅邮件的任何人。</span><span class="sxs-lookup"><span data-stu-id="6313d-119">Send notifications directly to users, to a channel, to the Activity Feed, or to anyone who subscribes to them.</span></span>
+:::row:::
+   :::column span="":::
 
-* <span data-ttu-id="6313d-120">**从其他网站/服务嵌入功能。**</span><span class="sxs-lookup"><span data-stu-id="6313d-120">**Embed functionality from other sites/services.**</span></span> <span data-ttu-id="6313d-121">有时，您只需让您的应用程序更易于发现。</span><span class="sxs-lookup"><span data-stu-id="6313d-121">Sometimes you just need to make your app easier to discover.</span></span> <span data-ttu-id="6313d-122">嵌入现有的单页面应用程序，或为团队从头开始构建一些内容。</span><span class="sxs-lookup"><span data-stu-id="6313d-122">Embed your existing single-page app, or build something from scratch for Teams.</span></span>
+### <a name="tabs"></a><span data-ttu-id="3f5ea-113">选项卡</span><span class="sxs-lookup"><span data-stu-id="3f5ea-113">Tabs</span></span>
 
-## <a name="how-do-teams-apps-work"></a><span data-ttu-id="6313d-123">团队应用程序的工作原理是什么？</span><span class="sxs-lookup"><span data-stu-id="6313d-123">How do Teams apps work?</span></span>
+<span data-ttu-id="3f5ea-114">**更方便地获取信息**：有时只需更轻松地找到一些内容。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-114">**Get information more conveniently**: Sometimes you just need to make things easier to find.</span></span> <span data-ttu-id="3f5ea-115">在 [选项卡](tabs/what-are-tabs.md)中显示一个重要的网页，该网页为工作组中的静态和动态内容提供了全屏 web 体验。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-115">Display an important webpage in a [tab](tabs/what-are-tabs.md), which provides a full-screen web experience for static and dynamic content in Teams.</span></span>
 
-<span data-ttu-id="6313d-124">有关 Microsoft 团队的自定义应用程序的第一件事（除了可以令人惊奇），团队不是托管服务。</span><span class="sxs-lookup"><span data-stu-id="6313d-124">The first thing to know about custom apps for Microsoft Teams (other than how amazing they can be), is that Teams is not a hosting service.</span></span> <span data-ttu-id="6313d-125">您的应用程序包包含有关您的应用程序（名称、图标等）的元数据，以及指向承载该应用程序的 web 服务的指针。</span><span class="sxs-lookup"><span data-stu-id="6313d-125">Your app package contains metadata about your app (name, icons, etc.), and pointers to the web services you host that power your app.</span></span> <span data-ttu-id="6313d-126">Microsoft 团队提供了分发机制、UI/UX 构造以供您利用，并且您可以使用 Api 来扩充可用于您的应用程序的信息和操作。</span><span class="sxs-lookup"><span data-stu-id="6313d-126">Microsoft Teams provides the distribution mechanism, UI/UX constructs for you to take advantage of, and APIs you can use to augment the information and actions available to your app.</span></span>
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="选项卡在团队客户端中的外观的概念性表示。" border="false":::
 
-<span data-ttu-id="6313d-127">团队应用程序包含三个主要部分：</span><span class="sxs-lookup"><span data-stu-id="6313d-127">A Teams app consists of three major pieces:</span></span>
+   :::column-end:::
+   :::column span="":::
 
-* <span data-ttu-id="6313d-128">用户将与您的应用程序进行交互**的 Microsoft 团队客户端（web、桌面或移动版）** 。</span><span class="sxs-lookup"><span data-stu-id="6313d-128">**The Microsoft Teams client (web, desktop or mobile)** where users will interact with your app.</span></span>
-* <span data-ttu-id="6313d-129">**您的团队应用程序包**，用于创建用户安装的应用程序，并包含应用程序的元数据和指向服务的指针。</span><span class="sxs-lookup"><span data-stu-id="6313d-129">**Your Teams app package** that creates the app installed by your users, and contains your app's metadata and pointers to your services.</span></span>
-* <span data-ttu-id="6313d-130">执行必要逻辑的**服务、工作流或网站**对应用程序供电的数据存储和 API 调用。</span><span class="sxs-lookup"><span data-stu-id="6313d-130">**Your service, workflow or website** which perform the necessary logic, data storage and API calls to power your app.</span></span>
+### <a name="messaging-extensions"></a><span data-ttu-id="3f5ea-117">消息传递扩展</span><span class="sxs-lookup"><span data-stu-id="3f5ea-117">Messaging extensions</span></span>
 
-<span data-ttu-id="6313d-131">请务必记住，您在 Microsoft 团队应用程序中公开的任何功能在 internet 上都是公开的，除非您采取其他步骤来保护它。</span><span class="sxs-lookup"><span data-stu-id="6313d-131">It is important to keep in mind that any functionality you expose in a Microsoft Teams app is publicly available over the internet unless you take additional steps to secure it.</span></span> <span data-ttu-id="6313d-132">如果你要提供对机密或受保护信息的访问权限，你需要确保你的服务至少对连接到你的应用的终结点进行身份验证，或对[你的用户进行身份验证](concepts/authentication/authentication.md)。</span><span class="sxs-lookup"><span data-stu-id="6313d-132">If you are providing access to confidential or protected information you'll want make sure your services are at a minimum authenticating the endpoint connecting to your app, or [authenticating your users](concepts/authentication/authentication.md).</span></span>
+<span data-ttu-id="3f5ea-118">**更轻松**地执行多项工作：使用 [邮件扩展](messaging-extensions/what-are-messaging-extensions.md)，可以在对话中快速共享外部信息。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-118">**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation.</span></span> <span data-ttu-id="3f5ea-119">您还可以对邮件执行操作，例如根据频道帖子的内容创建帮助票证。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-119">You also can act on a message, such as creating a help ticket based on the content of a channel post.</span></span>
 
-## <a name="how-can-you-share-your-teams-app"></a><span data-ttu-id="6313d-133">如何共享你的团队应用？</span><span class="sxs-lookup"><span data-stu-id="6313d-133">How can you share your Teams app?</span></span>
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="邮件扩展在团队客户端中的显示方式的概念性表示。" border="false":::
 
-<span data-ttu-id="6313d-134">当您准备好共享 Microsoft 团队应用程序时，您有三个选项，具体取决于您的目标访问群体。</span><span class="sxs-lookup"><span data-stu-id="6313d-134">When you're ready to share your Microsoft Teams apps, you have three options depending on who your target audience is.</span></span>
+   :::column-end:::
+:::row-end:::
 
-* <span data-ttu-id="6313d-135">**[直接上载您的应用程序](concepts/deploy-and-publish/apps-upload.md)** 如果您的应用程序只需要与您的团队或组织中的少数几个人共享您的应用程序，则可以共享您的应用程序包并直接上载它。</span><span class="sxs-lookup"><span data-stu-id="6313d-135">**[Upload your app directly](concepts/deploy-and-publish/apps-upload.md)** If your app only needs to be shared to your team, or a few individuals in your organization, you can share your app package and upload it directly.</span></span>
-* <span data-ttu-id="6313d-136">**[发布到你的组织应用程序目录](concepts/deploy-and-publish/apps-upload.md)** 您可以通过您的应用程序目录与整个组织共享您的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6313d-136">**[Publish to your organizational app catalog](concepts/deploy-and-publish/apps-upload.md)** You can share your app with your entire organization through your app catalog.</span></span>
-* <span data-ttu-id="6313d-137">**[发布到公用应用商店](concepts/deploy-and-publish/apps-upload.md)** 如果你的应用程序适用于所有人，你可以将其发布到我们的公共应用商店。</span><span class="sxs-lookup"><span data-stu-id="6313d-137">**[Publish to the public app store](concepts/deploy-and-publish/apps-upload.md)** If your app is for everyone, you can publish it to our public app store.</span></span> <span data-ttu-id="6313d-138">根据你的目标，你可能有资格获取市场营销和销售帮助。</span><span class="sxs-lookup"><span data-stu-id="6313d-138">Depending on your goals, you might be eligible for marketing and sales assistance.</span></span>
+:::row:::
+   :::column span="":::
 
-## <a name="get-started"></a><span data-ttu-id="6313d-139">入门</span><span class="sxs-lookup"><span data-stu-id="6313d-139">Get started</span></span>
+### <a name="bots"></a><span data-ttu-id="3f5ea-121">机器人</span><span class="sxs-lookup"><span data-stu-id="3f5ea-121">Bots</span></span>
 
-* [<span data-ttu-id="6313d-140">在 C 中构建 bot 和选项卡应用#</span><span class="sxs-lookup"><span data-stu-id="6313d-140">Build a bot and tab app in C#</span></span>](tutorials/get-started-dotnet-app-studio.md)
-* [<span data-ttu-id="6313d-141">构建 JavaScript/node.js 中的 bot 和选项卡应用程序</span><span class="sxs-lookup"><span data-stu-id="6313d-141">Build a bot and tab app in JavaScript/Node.js</span></span>](tutorials/get-started-nodejs-app-studio.md)
+<span data-ttu-id="3f5ea-122">将**单词转换为操作**：对话通常会导致需要执行某些操作， (生成订单、查看我的代码、检查票证状态等 ) 。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-122">**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, etc.).</span></span> <span data-ttu-id="3f5ea-123">[机器人](bots/what-are-bots.md)可以直接在团队内部启动这些类型的工作流。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-123">A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.</span></span>
 
-## <a name="learn-more"></a><span data-ttu-id="6313d-142">了解详细信息</span><span class="sxs-lookup"><span data-stu-id="6313d-142">Learn more</span></span>
+:::image type="content" source="assets/images/overview-bots.png" alt-text="团队客户端中的 bot 外观的概念性表示。" border="false":::
 
-* [<span data-ttu-id="6313d-143">Teams 客户端中的扩展点</span><span class="sxs-lookup"><span data-stu-id="6313d-143">Extensibility points in the Teams client</span></span>](concepts/extensibility-points.md)
-* [<span data-ttu-id="6313d-144">构建团队相关应用程序</span><span class="sxs-lookup"><span data-stu-id="6313d-144">Building apps for Teams</span></span>](concepts/building-an-app.md)
+   :::column-end:::
+   :::column span="":::
+
+### <a name="webhooks"></a><span data-ttu-id="3f5ea-125">Webhook</span><span class="sxs-lookup"><span data-stu-id="3f5ea-125">Webhooks</span></span>
+
+<span data-ttu-id="3f5ea-126">**与外部应用程序通信**： [传入 webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) 是一种将通知从另一个应用程序自动发送到团队频道的简单方法。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-126">**Communicate with external apps**: [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel.</span></span> <span data-ttu-id="3f5ea-127">使用 [传出的 webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)，将 @mention 的 web 服务进行消息处理。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-127">With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.</span></span>
+
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="团队客户端中的连接器外观的概念性表示。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a><span data-ttu-id="3f5ea-129">适用于团队的 Microsoft Graph</span><span class="sxs-lookup"><span data-stu-id="3f5ea-129">Microsoft Graph for Teams</span></span>
+
+<span data-ttu-id="3f5ea-130">**利用团队数据**： [适用于团队的 Microsoft Graph API](https://docs.microsoft.com/graph/teams-concept-overview) 提供了有关可帮助您创建或增强应用程序功能的团队、频道、用户和消息的信息的访问。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-130">**Utilize Teams data**: The [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.</span></span>
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="适用于团队的 Microsoft Graph API 的概念性表示。" border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="get-started"></a><span data-ttu-id="3f5ea-132">入门</span><span class="sxs-lookup"><span data-stu-id="3f5ea-132">Get started</span></span>
+
+<span data-ttu-id="3f5ea-133">通过我们的第一个应用教程或了解如何集成和导入现有应用，直接参与。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-133">Jump right in with our first app tutorials or find out how to integrate and import existing apps.</span></span>
+
+:::row:::
+   :::column span="2":::
+
+### <a name="start-building"></a><span data-ttu-id="3f5ea-134">开始构建</span><span class="sxs-lookup"><span data-stu-id="3f5ea-134">Start building</span></span>
+
+   <span data-ttu-id="3f5ea-135">通过创建一个简单的应用程序并添加一些常用功能，快速熟悉为团队构建。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-135">Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="3f5ea-136">立即构建您的第一个应用程序</span><span class="sxs-lookup"><span data-stu-id="3f5ea-136">Build your first app now</span></span>](build-your-first-app/build-first-app-overview.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="integrate-with-teams"></a><span data-ttu-id="3f5ea-137">与团队集成</span><span class="sxs-lookup"><span data-stu-id="3f5ea-137">Integrate with Teams</span></span>
+
+   <span data-ttu-id="3f5ea-138">将用户喜爱的功能与团队协作功能的现有 web 应用、服务或系统融合。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-138">Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="3f5ea-139">集成现有应用程序</span><span class="sxs-lookup"><span data-stu-id="3f5ea-139">Integrate an existing app</span></span>](samples/integrating-web-apps.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="a-little-code-goes-a-long-way"></a><span data-ttu-id="3f5ea-140">较小的代码是一段较长的方法</span><span class="sxs-lookup"><span data-stu-id="3f5ea-140">A little code goes a long way</span></span>
+
+   <span data-ttu-id="3f5ea-141">您无需成为专家级程序员即可构建出色的团队应用程序。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-141">You don't need to be an expert programmer to build a great Teams app.</span></span> <span data-ttu-id="3f5ea-142">尝试几个低代码解决方案中的一个。</span><span class="sxs-lookup"><span data-stu-id="3f5ea-142">Try one of several low-code solutions.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="3f5ea-143">创建低代码应用程序</span><span class="sxs-lookup"><span data-stu-id="3f5ea-143">Create a low-code app</span></span>](samples/teams-low-code-solutions.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+## <a name="resources"></a><span data-ttu-id="3f5ea-144">资源</span><span class="sxs-lookup"><span data-stu-id="3f5ea-144">Resources</span></span>
+
+* [<span data-ttu-id="3f5ea-145">向您的网站添加 "共享到团队" 按钮</span><span class="sxs-lookup"><span data-stu-id="3f5ea-145">Add a Share to Teams button to your website</span></span>](concepts/build-and-test/share-to-teams.md)
+* [<span data-ttu-id="3f5ea-146">熟知设计系统</span><span class="sxs-lookup"><span data-stu-id="3f5ea-146">Fluent Design System</span></span>](https://fluentsite.z22.web.core.windows.net/)
+* [<span data-ttu-id="3f5ea-147">Microsoft 团队 JavaScript 客户端 SDK</span><span class="sxs-lookup"><span data-stu-id="3f5ea-147">Microsoft Teams JavaScript client SDK</span></span>](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* <span data-ttu-id="3f5ea-148">用于 .NET 的 JavaScript 和[Bot 框架 sdk](https://github.com/Microsoft/botbuilder-dotnet/)的[bot 框架 sdk](https://github.com/Microsoft/botbuilder-js)</span><span class="sxs-lookup"><span data-stu-id="3f5ea-148">[Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)</span></span>
+* [<span data-ttu-id="3f5ea-149">将应用发布到组织或 AppSource</span><span class="sxs-lookup"><span data-stu-id="3f5ea-149">Publish your app to an organization or AppSource</span></span>](concepts/deploy-and-publish/overview.md)
