@@ -2,14 +2,14 @@
 title: 设计有效的卡片
 description: 介绍创建卡片的设计准则
 keywords: 团队设计准则参考框架卡适应性轻型
-ms.openlocfilehash: 33ee0b59a3a5a1490d6e2106f8532094ed852598
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673436"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209835"
 ---
-# <a name="designing-effective-cards"></a>设计有效的卡片
+# <a name="design-effective-cards"></a>设计有效的卡片
 
 卡片是可通过 bot、连接器或应用添加到对话中的可操作内容片段。 通过使用文本、图形和按钮，卡片可以与访问群体进行通信。
 
@@ -19,7 +19,7 @@ ms.locfileid: "41673436"
 
 ## <a name="guidelines"></a>准则
 
-可将卡片视为对用户问题或设置的响应。 卡片可以响应直接问题（例如，"我有多少个打开的 bug？"）或一个条件（如 "每日上午9点发送我打开的 bug 的列表"）。
+可将卡片视为对用户问题或设置的响应。 卡片可以响应直接的问题 (如 "我有多少打开的 bug？") 或 (类似的一种情况下，"每日上午9点发送我打开的 bug 的列表" ) 。
 
 > [!TIP]
 > 使用我们的标准卡类型之一意味着你将了解所有响应将在每个受支持的平台上进行良好呈现。
@@ -130,6 +130,6 @@ ms.locfileid: "41673436"
 ### <a name="use-mentions-if-you-want-the-attention-of-specific-users"></a>如果您希望特定用户注意，请使用提及
 
 > [!NOTE]
-> 在[开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中，目前仅支持对卡片中提及支持。
+> 在 [开发人员预览版](~/resources/dev-preview/developer-preview-intro.md) 中，目前仅支持对卡片中提及支持。
 
-提及是在团队或群聊天中通知特定用户的一种极好的方法。 您可以在类似、分配给用户的任务或向 teammate 提供荣誉的方案中包括提及的卡片。 了解如何在[卡片格式页](~/task-modules-and-cards/cards/cards-format.md)的卡片中添加提及。 
+提及是在团队或群聊天中通知特定用户的一种极好的方法。 您可以在类似、分配给用户的任务或向 teammate 提供荣誉的方案中包括提及的卡片。 了解如何在 [卡片格式页](~/task-modules-and-cards/cards/cards-format.md)的卡片中添加提及。 

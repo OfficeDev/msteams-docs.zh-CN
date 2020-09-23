@@ -1,16 +1,16 @@
 ---
 title: 使用自定义选项卡扩展团队应用程序
 author: laujan
-description: 创建选项卡的指南
+description: 如何使用应用程序 Studio 或手动为 Microsoft 团队创建选项卡。
 keywords: 团队选项卡组频道可配置
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0434aabc39900e8f8232ae307a5854b2eb3a756d
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819030"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209716"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>使用自定义选项卡扩展团队应用程序
 
@@ -81,10 +81,10 @@ ms.locfileid: "47819030"
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
-|`name`|String|128个字符|✔|该选项卡在通道接口中的显示名称。|
-|`contentUrl`|String|2048 个字符|✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
-|`websiteUrl`|String|2048 个字符||要指向的 https://URL，如果用户要在浏览器中查看。|
-|`scopes`|枚举数组|1 |✔|静态选项卡仅支持 `personal` 作用域，这意味着只能将其设置为个人应用程序的一部分。|
+|`name`|字符串|128个字符|✔|该选项卡在通道接口中的显示名称。|
+|`contentUrl`|字符串|2048 个字符|✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
+|`websiteUrl`|字符串|2048 个字符||要指向的 https://URL，如果用户要在浏览器中查看。|
+|`scopes`|枚举数组|1|✔|静态选项卡仅支持 `personal` 作用域，这意味着只能将其设置为个人应用程序的一部分。|
 
 #### <a name="simple-personal-tab-manifest-example"></a>简单的个人选项卡清单示例
 
@@ -109,9 +109,9 @@ ms.locfileid: "47819030"
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 个字符|✔|指向 "配置" 页的 https://URL。|
-|`canUpdateConfiguration`|Boolean|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置 `true`|
-|`scopes`|枚举数组|1 |✔|可配置的选项卡仅支持 `team` 和 `groupchat` 范围。 |
+|`configurationUrl`|字符串|2048 个字符|✔|指向 "配置" 页的 https://URL。|
+|`canUpdateConfiguration`|布尔值|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置 `true`|
+|`scopes`|枚举数组|1|✔|可配置的选项卡仅支持 `team` 和 `groupchat` 范围。 |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>简单通道/组选项卡清单示例
 

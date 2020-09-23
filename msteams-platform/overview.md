@@ -1,58 +1,145 @@
 ---
-title: Microsoft Teams 开发人员平台
-author: clearab
-description: 介绍 Microsoft 团队开发人员平台的概述页面，以及如何开始为 Microsoft 团队构建应用程序。
+title: 为 Microsoft 团队平台生成应用程序
+author: heath-hamilton
+description: 概述开发人员如何使用自定义应用程序扩展和自定义 Microsoft 团队功能。
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.author: lajanuar
+ms.date: 09/22/2020
+ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455483"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209791"
 ---
-# <a name="what-are-microsoft-teams-apps"></a>什么是 Microsoft Teams 应用？
+# <a name="build-apps-for-microsoft-teams"></a>为 Microsoft 团队构建应用程序
 
-Microsoft 团队是 Office 365 中的协作工作区，它与用户使用的应用程序和服务集成，以实现共同完成的工作。 Microsoft 团队开发人员平台使开发人员可以轻松地集成自己的应用程序和服务，以提高工作效率、更快地做出决策、提供焦点（通过减少上下文切换），并围绕现有内容和工作流创建协作。 在 Microsoft 团队平台上构建的应用程序是团队客户端和您的服务和工作流之间的桥梁;将它们直接引入协作平台的上下文中。
+Microsoft 团队应用程序可提供关键信息、常见工具和受信任的过程，以便人们越来越多地收集、学习和工作。
 
-## <a name="what-can-teams-apps-do"></a>团队应用程序可以做什么？
+应用程序是您扩展团队以满足您的需求的方式。 创建适用于团队的全新功能或集成现有应用程序。
 
-基于 Microsoft 团队平台构建的应用主要侧重于提高协作能力和提高生产率。 您的应用程序可能很简单，如从其他系统发布通知或复杂的多面应用程序。 只需记住，团队就是社会协作平台;最佳应用重点是帮助人员自己快速学习并更好地协同工作。
+## <a name="what-are-teams-apps"></a>什么是团队应用？
 
-* **对外部系统中的项目进行协作。** 自定义团队应用程序的一个核心方案是，将信息或项目从某个其他地方引入到团队中，并围绕它进行对话。 您可以将信息推送到团队中，使用户能够按需搜索和请求，或使其在嵌入的 web 视图中可用。
+团队应用程序是 [功能](concepts/capabilities-overview.md) 和 [入口点](concepts/extensibility-points.md)的组合。 例如，用户可以与您的应用程序的 *bot* 聊天 (功能) 在 *频道* (入口点) 中。
 
-* **触发对话中的工作流。** 通常，对话会导致需要启动一些工作流或完成某些操作;请记下有关这一点的说明，查看我的拉取请求，将其转换为销售线索等。您的团队应用可以在团队内部将访问工作流。
+有些应用程序很简单 (发送通知) ，而其他应用则 (管理患者记录) 的复杂。 在规划您的应用程序时，请记住，团队是协作中心。 最佳团队应用可帮助人们自己表达自己并更好地协同工作。
 
-* **将重要事件的团队通知给团队。** 电子邮件通知的病假？ 改为向团队发送通知！ 将通知直接发送给用户、频道、活动源或订阅邮件的任何人。
+:::row:::
+   :::column span="":::
 
-* **从其他网站/服务嵌入功能。** 有时，您只需让您的应用程序更易于发现。 嵌入现有的单页面应用程序，或为团队从头开始构建一些内容。
+### <a name="tabs"></a>选项卡
 
-## <a name="how-do-teams-apps-work"></a>团队应用程序的工作原理是什么？
+**更方便地获取信息**：有时只需更轻松地找到一些内容。 在 [选项卡](tabs/what-are-tabs.md)中显示一个重要的网页，该网页为工作组中的静态和动态内容提供了全屏 web 体验。
 
-有关 Microsoft 团队的自定义应用程序的第一件事（除了可以令人惊奇），团队不是托管服务。 您的应用程序包包含有关您的应用程序（名称、图标等）的元数据，以及指向承载该应用程序的 web 服务的指针。 Microsoft 团队提供了分发机制、UI/UX 构造以供您利用，并且您可以使用 Api 来扩充可用于您的应用程序的信息和操作。
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="选项卡在团队客户端中的外观的概念性表示。" border="false":::
 
-团队应用程序包含三个主要部分：
+   :::column-end:::
+   :::column span="":::
 
-* 用户将与您的应用程序进行交互**的 Microsoft 团队客户端（web、桌面或移动版）** 。
-* **您的团队应用程序包**，用于创建用户安装的应用程序，并包含应用程序的元数据和指向服务的指针。
-* 执行必要逻辑的**服务、工作流或网站**对应用程序供电的数据存储和 API 调用。
+### <a name="messaging-extensions"></a>消息传递扩展
 
-请务必记住，您在 Microsoft 团队应用程序中公开的任何功能在 internet 上都是公开的，除非您采取其他步骤来保护它。 如果你要提供对机密或受保护信息的访问权限，你需要确保你的服务至少对连接到你的应用的终结点进行身份验证，或对[你的用户进行身份验证](concepts/authentication/authentication.md)。
+**更轻松**地执行多项工作：使用 [邮件扩展](messaging-extensions/what-are-messaging-extensions.md)，可以在对话中快速共享外部信息。 您还可以对邮件执行操作，例如根据频道帖子的内容创建帮助票证。
 
-## <a name="how-can-you-share-your-teams-app"></a>如何共享你的团队应用？
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="邮件扩展在团队客户端中的显示方式的概念性表示。" border="false":::
 
-当您准备好共享 Microsoft 团队应用程序时，您有三个选项，具体取决于您的目标访问群体。
+   :::column-end:::
+:::row-end:::
 
-* **[直接上载您的应用程序](concepts/deploy-and-publish/apps-upload.md)** 如果您的应用程序只需要与您的团队或组织中的少数几个人共享您的应用程序，则可以共享您的应用程序包并直接上载它。
-* **[发布到你的组织应用程序目录](concepts/deploy-and-publish/apps-upload.md)** 您可以通过您的应用程序目录与整个组织共享您的应用程序。
-* **[发布到公用应用商店](concepts/deploy-and-publish/apps-upload.md)** 如果你的应用程序适用于所有人，你可以将其发布到我们的公共应用商店。 根据你的目标，你可能有资格获取市场营销和销售帮助。
+:::row:::
+   :::column span="":::
+
+### <a name="bots"></a>机器人
+
+将**单词转换为操作**：对话通常会导致需要执行某些操作， (生成订单、查看我的代码、检查票证状态等 ) 。 [机器人](bots/what-are-bots.md)可以直接在团队内部启动这些类型的工作流。
+
+:::image type="content" source="assets/images/overview-bots.png" alt-text="团队客户端中的 bot 外观的概念性表示。" border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+### <a name="webhooks"></a>Webhook
+
+**与外部应用程序通信**： [传入 webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) 是一种将通知从另一个应用程序自动发送到团队频道的简单方法。 使用 [传出的 webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)，将 @mention 的 web 服务进行消息处理。
+
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="团队客户端中的连接器外观的概念性表示。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a>适用于团队的 Microsoft Graph
+
+**利用团队数据**： [适用于团队的 Microsoft Graph API](https://docs.microsoft.com/graph/teams-concept-overview) 提供了有关可帮助您创建或增强应用程序功能的团队、频道、用户和消息的信息的访问。
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="适用于团队的 Microsoft Graph API 的概念性表示。" border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
 
 ## <a name="get-started"></a>入门
 
-* [在 C 中构建 bot 和选项卡应用#](tutorials/get-started-dotnet-app-studio.md)
-* [构建 JavaScript/node.js 中的 bot 和选项卡应用程序](tutorials/get-started-nodejs-app-studio.md)
+通过我们的第一个应用教程或了解如何集成和导入现有应用，直接参与。
 
-## <a name="learn-more"></a>了解详细信息
+:::row:::
+   :::column span="2":::
 
-* [Teams 客户端中的扩展点](concepts/extensibility-points.md)
-* [构建团队相关应用程序](concepts/building-an-app.md)
+### <a name="start-building"></a>开始构建
+
+   通过创建一个简单的应用程序并添加一些常用功能，快速熟悉为团队构建。
+
+   > [!div class="nextstepaction"]
+   > [立即构建您的第一个应用程序](build-your-first-app/build-first-app-overview.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="integrate-with-teams"></a>与团队集成
+
+   将用户喜爱的功能与团队协作功能的现有 web 应用、服务或系统融合。
+
+   > [!div class="nextstepaction"]
+   > [集成现有应用程序](samples/integrating-web-apps.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="a-little-code-goes-a-long-way"></a>较小的代码是一段较长的方法
+
+   您无需成为专家级程序员即可构建出色的团队应用程序。 尝试几个低代码解决方案中的一个。
+
+   > [!div class="nextstepaction"]
+   > [创建低代码应用程序](samples/teams-low-code-solutions.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+## <a name="resources"></a>资源
+
+* [向您的网站添加 "共享到团队" 按钮](concepts/build-and-test/share-to-teams.md)
+* [熟知设计系统](https://fluentsite.z22.web.core.windows.net/)
+* [Microsoft 团队 JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* 用于 .NET 的 JavaScript 和[Bot 框架 sdk](https://github.com/Microsoft/botbuilder-dotnet/)的[bot 框架 sdk](https://github.com/Microsoft/botbuilder-js)
+* [将应用发布到组织或 AppSource](concepts/deploy-and-publish/overview.md)

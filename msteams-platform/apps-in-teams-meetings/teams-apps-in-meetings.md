@@ -5,12 +5,12 @@ description: 基于参与者和用户角色的团队会议中的应用程序概�
 ms.topic: overview
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: f60f09283827ee8b22db4e77154ee986b26b54f8
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: c1cb894f066ac82b49fe327a3bbf10acf0d750dd
+ms.sourcegitcommit: 71b12e346c43853a99341b13837a44ff9555a5d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "48181989"
+ms.locfileid: "48204022"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>团队会议中的应用 (预览) 
 
@@ -62,7 +62,7 @@ ms.locfileid: "48181989"
 可以在两个区域中的团队会议中查看应用程序的✔：
 
 &emsp;&emsp;&#9679; **侧面板**。 </br>
-> **注意**：如果您的 _应用程序清单_ 指定您的选项卡是 [为侧面板优化](create-apps-for-teams-meetings.md#in-meeting)的，则它将显示在此处。 我也可以是共享任务栏体验的一部分，根据指定的设计准则。
+> **注意**：如果您的 _应用程序清单_ 指定您的选项卡是 [为侧面板优化](create-apps-for-teams-meetings.md#in-meeting)的，则它将显示在此处。 它也可以是共享任务栏体验的一部分，根据指定的设计准则。
 
 &emsp;&emsp;&#9679; **会议中的对话框**。 使用 "会议内" 对话框展示会议参与者的可操作内容。 *请参阅*[创建适用于团队的应用程序会议](create-apps-for-teams-meetings.md)。
 
@@ -120,7 +120,7 @@ _请参阅_ [**团队会议中的角色**](https://support.microsoft.com/office/
 > 用户类型可以加入会议，并假设上述参与者角色之一。 用户类型不作为 **getParticipantRole** API 的一部分公开。
 
 1. **租户中**。 这些用户属于组织，并拥有租户的 Azure Active Directory 中的凭据。 他们通常是全职、现场或远程员工。
-1. **来宾**。 来宾是来自另一个组织的参与者，受邀访问团队或组织租户中的其他资源。 将来宾添加到您的组织的 Active Directory 中，并且可以获得与本机工作组成员完全相同的工作组成员功能，并拥有对团队聊天、会议和文件的完全访问权限。 _请参阅_ [Microsoft 团队中的猜测访问权限](/microsoftteams/guest-access)
+1. **来宾**。 来宾是来自另一个组织的参与者，受邀访问团队或组织租户中的其他资源。 将来宾添加到您的组织的 Active Directory 中，并且可以获得与本机工作组成员完全相同的工作组成员功能，并拥有对团队聊天、会议和文件的完全访问权限。 _请参阅_ [Microsoft 团队中的来宾访问](/microsoftteams/guest-access)
 1. **联合/外部**。 联合用户是已被邀请加入会议的另一个组织中的外部团队用户。 由于这些用户具有联合合作伙伴的有效凭据，因此这些用户将被视为通过团队进行身份验证，但无法访问你的团队或组织中的其他共享资源。 如果您希望外部用户具有对团队和频道的访问权限，则来宾访问可能是更好的选择。 _请参阅_[在 Microsoft 团队中管理外部访问](/microsoftteams/manage-external-access)
 1. **匿名**。 匿名用户不具有 Active Directory 标识，并且不与租户联合。 匿名参与者类似于外部用户，但其身份不会投影到会议中。 匿名用户将无法访问会议窗口中的应用程序。
 
