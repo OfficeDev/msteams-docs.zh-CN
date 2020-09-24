@@ -4,24 +4,24 @@ author: clearab
 description: 如何：获取 Microsoft 团队针对你的 bot 的特定上下文，包括对话名单、详细信息和频道列表。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a29fc192a88534620a463e7e14d383999a7783e7
-ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
+ms.openlocfilehash: 55f93a914cdb0f92885ff535424cd823072184aa
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "44801097"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237792"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a><span data-ttu-id="49ac4-103">获取团队针对你的 bot 的特定上下文</span><span class="sxs-lookup"><span data-stu-id="49ac4-103">Get Team's specific context for your bot</span></span>
+# <a name="get-teams-specific-context-for-your-bot"></a><span data-ttu-id="5c29b-103">获取团队针对你的 bot 的特定上下文</span><span class="sxs-lookup"><span data-stu-id="5c29b-103">Get Team's specific context for your bot</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="49ac4-104">Bot 可以访问有关安装它的团队或聊天的其他上下文数据。</span><span class="sxs-lookup"><span data-stu-id="49ac4-104">A bot can access additional context data about a team or chat it is installed in.</span></span> <span data-ttu-id="49ac4-105">此信息可用于丰富 bot 的功能，并提供更个性化的体验。</span><span class="sxs-lookup"><span data-stu-id="49ac4-105">This information can be used to enrich the bot's functionality and provide a more personalized experience.</span></span>
+<span data-ttu-id="5c29b-104">Bot 可以访问有关安装它的团队或聊天的其他上下文数据。</span><span class="sxs-lookup"><span data-stu-id="5c29b-104">A bot can access additional context data about a team or chat it is installed in.</span></span> <span data-ttu-id="5c29b-105">此信息可用于丰富 bot 的功能，并提供更个性化的体验。</span><span class="sxs-lookup"><span data-stu-id="5c29b-105">This information can be used to enrich the bot's functionality and provide a more personalized experience.</span></span>
 
-## <a name="fetching-the-roster-or-user-profile"></a><span data-ttu-id="49ac4-106">提取名单或用户配置文件</span><span class="sxs-lookup"><span data-stu-id="49ac4-106">Fetching the roster or user profile</span></span>
+## <a name="fetching-the-roster-or-user-profile"></a><span data-ttu-id="5c29b-106">提取名单或用户配置文件</span><span class="sxs-lookup"><span data-stu-id="5c29b-106">Fetching the roster or user profile</span></span>
 
-<span data-ttu-id="49ac4-107">你的 bot 可以查询成员列表和基本配置文件，包括团队用户 Id 和 Azure Active Directory （Azure AD）等信息，如名称和 objectId。</span><span class="sxs-lookup"><span data-stu-id="49ac4-107">Your bot can query for the list of members and their basic profiles, including Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId.</span></span> <span data-ttu-id="49ac4-108">您可以使用此信息来关联用户标识（例如，检查用户是否通过 Azure AD 凭据登录到选项卡）是团队的成员。</span><span class="sxs-lookup"><span data-stu-id="49ac4-108">You can use this information to correlate user identities, e.g., to check whether a user, logged into a tab through Azure AD credentials, is a member of the team.</span></span> <span data-ttu-id="49ac4-109">下面的示例代码使用分页终结点检索名单。</span><span class="sxs-lookup"><span data-stu-id="49ac4-109">The sample code below uses the paged endpoint for retrieving the roster.</span></span> <span data-ttu-id="49ac4-110">虽然您仍可以使用非页面版本，但它在大型团队中不可靠，不应使用。</span><span class="sxs-lookup"><span data-stu-id="49ac4-110">Although you may still use the non-paged version, it will be unreliable in large teams and should not be used.</span></span> <span data-ttu-id="49ac4-111">有关其他信息，请参阅[本文](~/resources/team-chat-member-api-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="49ac4-111">See [this article](~/resources/team-chat-member-api-changes.md) for additional information.</span></span>
+<span data-ttu-id="5c29b-107">你的 bot 可以查询成员列表和基本配置文件，包括团队用户 Id 和 Azure Active Directory (Azure AD) 信息（如 name 和 objectId）。</span><span class="sxs-lookup"><span data-stu-id="5c29b-107">Your bot can query for the list of members and their basic profiles, including Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId.</span></span> <span data-ttu-id="5c29b-108">您可以使用此信息来关联用户标识（例如，检查用户是否通过 Azure AD 凭据登录到选项卡）是团队的成员。</span><span class="sxs-lookup"><span data-stu-id="5c29b-108">You can use this information to correlate user identities, e.g., to check whether a user, logged into a tab through Azure AD credentials, is a member of the team.</span></span> <span data-ttu-id="5c29b-109">下面的示例代码使用分页终结点检索名单。</span><span class="sxs-lookup"><span data-stu-id="5c29b-109">The sample code below uses the paged endpoint for retrieving the roster.</span></span> <span data-ttu-id="5c29b-110">虽然您仍可以使用非页面版本，但它在大型团队中不可靠，不应使用。</span><span class="sxs-lookup"><span data-stu-id="5c29b-110">Although you may still use the non-paged version, it will be unreliable in large teams and should not be used.</span></span> <span data-ttu-id="5c29b-111">有关其他信息，请参阅 [本文](~/resources/team-chat-member-api-changes.md) 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-111">See [this article](~/resources/team-chat-member-api-changes.md) for additional information.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="49ac4-112">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="49ac4-112">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="5c29b-112">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="5c29b-112">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -35,14 +35,14 @@ public class MyBot : TeamsActivityHandler
         {
             var currentPage = await TeamsInfo.GetPagedMembersAsync(turnContext, 100, continuationToken, cancellationToken);
             continuationToken = currentPage.ContinuationToken;
-            members = members.Concat(currentPage.Members).ToList();
-        }
-        while (continuationToken != null);
-    }
+            members.AddRange(currentPage.Members);
+         }
+         while (continuationToken != null);
+     }
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="49ac4-113">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="49ac4-113">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="5c29b-113">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="5c29b-113">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -68,7 +68,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="49ac4-114">Python</span><span class="sxs-lookup"><span data-stu-id="49ac4-114">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="5c29b-114">Python</span><span class="sxs-lookup"><span data-stu-id="5c29b-114">Python</span></span>](#tab/python)
 
 ```python
 async def _show_members(
@@ -77,9 +77,9 @@ async def _show_members(
     members = await TeamsInfo.get_team_members(turn_context)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="49ac4-115">JSON</span><span class="sxs-lookup"><span data-stu-id="49ac4-115">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="5c29b-115">JSON</span><span class="sxs-lookup"><span data-stu-id="5c29b-115">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="49ac4-116">您可以 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="49ac4-116">You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="49ac4-117">值 `serviceUrl` 往往是稳定的，但可能会发生变化。</span><span class="sxs-lookup"><span data-stu-id="49ac4-117">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="49ac4-118">新邮件到达时，您的 bot 应验证其存储的值 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="49ac4-118">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
+<span data-ttu-id="5c29b-116">您可以 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-116">You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="5c29b-117">值 `serviceUrl` 往往是稳定的，但可能会发生变化。</span><span class="sxs-lookup"><span data-stu-id="5c29b-117">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="5c29b-118">新邮件到达时，您的 bot 应验证其存储的值 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-118">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -115,11 +115,11 @@ Response body
 
 * * *
 
-## <a name="get-single-member-details"></a><span data-ttu-id="49ac4-119">获取单个成员详细信息</span><span class="sxs-lookup"><span data-stu-id="49ac4-119">Get single member details</span></span>
+## <a name="get-single-member-details"></a><span data-ttu-id="5c29b-119">获取单个成员详细信息</span><span class="sxs-lookup"><span data-stu-id="5c29b-119">Get single member details</span></span>
 
-<span data-ttu-id="49ac4-120">您还可以使用团队用户 Id、UPN 或 AAD 对象 Id 检索特定用户的详细信息。</span><span class="sxs-lookup"><span data-stu-id="49ac4-120">You can also retrieve the details of a particular user using their Teams user Id, UPN, or AAD Object Id.</span></span>
+<span data-ttu-id="5c29b-120">您还可以使用团队用户 Id、UPN 或 AAD 对象 Id 检索特定用户的详细信息。</span><span class="sxs-lookup"><span data-stu-id="5c29b-120">You can also retrieve the details of a particular user using their Teams user Id, UPN, or AAD Object Id.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="49ac4-121">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="49ac4-121">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="5c29b-121">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="5c29b-121">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -131,7 +131,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="49ac4-122">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="49ac4-122">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="5c29b-122">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="5c29b-122">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -148,7 +148,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="49ac4-123">Python</span><span class="sxs-lookup"><span data-stu-id="49ac4-123">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="5c29b-123">Python</span><span class="sxs-lookup"><span data-stu-id="5c29b-123">Python</span></span>](#tab/python)
 
 ```python
 async def _show_members(
@@ -157,9 +157,9 @@ async def _show_members(
     member = TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="49ac4-124">JSON</span><span class="sxs-lookup"><span data-stu-id="49ac4-124">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="5c29b-124">JSON</span><span class="sxs-lookup"><span data-stu-id="5c29b-124">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="49ac4-125">您可以 `/v3/conversations/{conversationId}/members/{userId}` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="49ac4-125">You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="49ac4-126">值 `serviceUrl` 往往是稳定的，但可能会发生变化。</span><span class="sxs-lookup"><span data-stu-id="49ac4-126">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="49ac4-127">新邮件到达时，您的 bot 应验证其存储的值 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="49ac4-127">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
+<span data-ttu-id="5c29b-125">您可以 `/v3/conversations/{conversationId}/members/{userId}` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-125">You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="5c29b-126">值 `serviceUrl` 往往是稳定的，但可能会发生变化。</span><span class="sxs-lookup"><span data-stu-id="5c29b-126">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="5c29b-127">新邮件到达时，您的 bot 应验证其存储的值 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-127">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/labrown@fabrikam.com"
@@ -177,11 +177,11 @@ Response body
 
 * * *
 
-## <a name="get-teams-details"></a><span data-ttu-id="49ac4-128">获取团队的详细信息</span><span class="sxs-lookup"><span data-stu-id="49ac4-128">Get team's details</span></span>
+## <a name="get-teams-details"></a><span data-ttu-id="5c29b-128">获取团队的详细信息</span><span class="sxs-lookup"><span data-stu-id="5c29b-128">Get team's details</span></span>
 
-<span data-ttu-id="49ac4-129">在团队中安装时，你的 bot 可以查询有关此团队的元数据，包括 Azure AD groupId。</span><span class="sxs-lookup"><span data-stu-id="49ac4-129">When installed in a team, your bot can query for metadata about that team including the Azure AD groupId.</span></span>
+<span data-ttu-id="5c29b-129">在团队中安装时，你的 bot 可以查询有关此团队的元数据，包括 Azure AD groupId。</span><span class="sxs-lookup"><span data-stu-id="5c29b-129">When installed in a team, your bot can query for metadata about that team including the Azure AD groupId.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="49ac4-130">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="49ac4-130">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="5c29b-130">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="5c29b-130">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -199,7 +199,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="49ac4-131">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="49ac4-131">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="5c29b-131">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="5c29b-131">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -222,7 +222,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="49ac4-132">Python</span><span class="sxs-lookup"><span data-stu-id="49ac4-132">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="5c29b-132">Python</span><span class="sxs-lookup"><span data-stu-id="5c29b-132">Python</span></span>](#tab/python)
 
 ```python
 async def _show_details(self, turn_context: TurnContext):
@@ -231,9 +231,9 @@ async def _show_details(self, turn_context: TurnContext):
     await turn_context.send_activity(reply)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="49ac4-133">JSON</span><span class="sxs-lookup"><span data-stu-id="49ac4-133">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="5c29b-133">JSON</span><span class="sxs-lookup"><span data-stu-id="5c29b-133">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="49ac4-134">您可以 `/v3/teams/{teamId}` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="49ac4-134">You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="49ac4-135">值 `serviceUrl` 往往是稳定的，但可能会发生变化。</span><span class="sxs-lookup"><span data-stu-id="49ac4-135">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="49ac4-136">新邮件到达时，您的 bot 应验证其存储的值 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="49ac4-136">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
+<span data-ttu-id="5c29b-134">您可以 `/v3/teams/{teamId}` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-134">You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="5c29b-135">值 `serviceUrl` 往往是稳定的，但可能会发生变化。</span><span class="sxs-lookup"><span data-stu-id="5c29b-135">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="5c29b-136">新邮件到达时，您的 bot 应验证其存储的值 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-136">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -248,16 +248,16 @@ Response body
 
 * * *
 
-## <a name="get-the-list-of-channels-in-a-team"></a><span data-ttu-id="49ac4-137">获取团队中频道的列表</span><span class="sxs-lookup"><span data-stu-id="49ac4-137">Get the list of channels in a team</span></span>
+## <a name="get-the-list-of-channels-in-a-team"></a><span data-ttu-id="5c29b-137">获取团队中频道的列表</span><span class="sxs-lookup"><span data-stu-id="5c29b-137">Get the list of channels in a team</span></span>
 
-<span data-ttu-id="49ac4-138">你的 bot 可以查询团队中的频道列表。</span><span class="sxs-lookup"><span data-stu-id="49ac4-138">Your bot can query the list of channels in a team.</span></span>
+<span data-ttu-id="5c29b-138">你的 bot 可以查询团队中的频道列表。</span><span class="sxs-lookup"><span data-stu-id="5c29b-138">Your bot can query the list of channels in a team.</span></span>
 
 > [!NOTE]
 >
->* <span data-ttu-id="49ac4-139">将返回默认常规通道的名称， `null` 以允许进行本地化。</span><span class="sxs-lookup"><span data-stu-id="49ac4-139">The name of the default General channel is returned as `null` to allow for localization.</span></span>
->* <span data-ttu-id="49ac4-140">常规通道的通道 ID 始终与团队 ID 匹配。</span><span class="sxs-lookup"><span data-stu-id="49ac4-140">The channel ID for the General channel always matches the team ID.</span></span>
+>* <span data-ttu-id="5c29b-139">将返回默认常规通道的名称， `null` 以允许进行本地化。</span><span class="sxs-lookup"><span data-stu-id="5c29b-139">The name of the default General channel is returned as `null` to allow for localization.</span></span>
+>* <span data-ttu-id="5c29b-140">常规通道的通道 ID 始终与团队 ID 匹配。</span><span class="sxs-lookup"><span data-stu-id="5c29b-140">The channel ID for the General channel always matches the team ID.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="49ac4-141">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="49ac4-141">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="5c29b-141">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="5c29b-141">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -271,7 +271,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="49ac4-142">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="49ac4-142">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="5c29b-142">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="5c29b-142">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -291,7 +291,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="49ac4-143">Python</span><span class="sxs-lookup"><span data-stu-id="49ac4-143">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="5c29b-143">Python</span><span class="sxs-lookup"><span data-stu-id="5c29b-143">Python</span></span>](#tab/python)
 
 ```python
 async def _show_channels(
@@ -302,9 +302,9 @@ async def _show_channels(
     await turn_context.send_activity(reply)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="49ac4-144">JSON</span><span class="sxs-lookup"><span data-stu-id="49ac4-144">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="5c29b-144">JSON</span><span class="sxs-lookup"><span data-stu-id="5c29b-144">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="49ac4-145">您可以 `/v3/teams/{teamId}/conversations` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="49ac4-145">You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="49ac4-146">值 `serviceUrl` 往往是稳定的，但可能会发生变化。</span><span class="sxs-lookup"><span data-stu-id="49ac4-146">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="49ac4-147">新邮件到达时，您的 bot 应验证其存储的值 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="49ac4-147">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
+<span data-ttu-id="5c29b-145">您可以 `/v3/teams/{teamId}/conversations` 使用作为终结点的值，直接发出 GET 请求 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-145">You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="5c29b-146">值 `serviceUrl` 往往是稳定的，但可能会发生变化。</span><span class="sxs-lookup"><span data-stu-id="5c29b-146">The value of `serviceUrl` tends to be stable but can change.</span></span> <span data-ttu-id="5c29b-147">新邮件到达时，您的 bot 应验证其存储的值 `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="5c29b-147">When a new message arrives, your bot should verify its stored value for `serviceUrl`.</span></span>
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
