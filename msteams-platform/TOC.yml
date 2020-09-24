@@ -50,16 +50,6 @@
           href: toolkit/visual-studio-code-overview.md
         - name: "适用于 Visual\_Studio\_的 Teams 工具包扩展"
           href: toolkit/visual-studio-overview.md
-- name: 会议中的应用
-  items:
-    - name: 会议中的 Teams 应用
-      href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: 创建适用于团队会议的应用
-      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-    - name: 设计会议内对话
-      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
-    - name: 设计会议内的选项卡
-      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: 概念
   expanded: true
   items:
@@ -361,12 +351,16 @@
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: 会议中的应用
   items:
-    - name: 设计应用
+    - name: 会议中的 Teams 应用
+      href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    - name: 创建适用于 Teams 会议的应用
+      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: 设计你的会议内应用
       items:
         - name: 会议内的对话框
-          href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+          href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: 会议内的选项卡
-          href: apps-in-teams-meetings/designing-in-meeting-tab.md
+          href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
 - name: Teams Graph REST APIs
   items:
     - name: 资源特定许可
