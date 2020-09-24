@@ -1,22 +1,22 @@
 ---
 title: Microsoft 团队的 Yeoman 生成器入门
 description: 使用 Microsoft 团队的 Yeoman 生成器开始构建强大的应用程序
-keywords: 入门节点 .js nodejs yeoman
+keywords: 入门 node.js nodejs yeoman
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 217c0900e067a61e083e7ffb0b121afdaa51c49f
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: f9b3f165d3b5387f8e7d30563134ed4889920ca5
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034041"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237991"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>构建你的首个 Microsoft 团队应用
 
 >[!Note]
->本教程来自适用于[团队 wiki 的 yeoman 生成器](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
+>本教程来自适用于 [团队 wiki 的 yeoman 生成器](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
-在本教程中，我们将逐步介绍如何使用 Microsoft 团队 Yeoman 生成器创建首个 Microsoft 团队应用程序。 它假定您已[启用 Microsoft 团队应用程序的侧面加载](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+在本教程中，我们将逐步介绍如何使用 Microsoft 团队 Yeoman 生成器创建首个 Microsoft 团队应用程序。 它假定您已 [启用 Microsoft 团队应用程序的侧面加载](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
 ![yeoman 生成器 git](~/assets/yeoman-demo.gif)
 
@@ -26,11 +26,11 @@ ms.locfileid: "43034041"
 
 ### <a name="install-node"></a>安装节点
 
-您需要在您的计算机上安装 NodeJS。 应使用最新的[LTS 版本](https://nodejs.org/dist/latest-v8.x/)。
+您需要在您的计算机上安装 NodeJS。 应使用最新的 [LTS 版本](https://nodejs.org)。
 
 ### <a name="install-a-code-editor"></a>安装代码编辑器
 
-此外，您还需要代码编辑器，可以随时使用您喜欢的任何文本编辑器。 但大部分文档和屏幕截图都是指使用[Visual Studio Code](https://code.visualstudio.com)。
+此外，您还需要代码编辑器，可以随时使用您喜欢的任何文本编辑器。 但大部分文档和屏幕截图都是指使用 [Visual Studio Code](https://code.visualstudio.com)。
 
 ### <a name="install-yeoman-and-gulp-cli"></a>安装 Yeoman 和 Gulp CLI
 
@@ -60,7 +60,7 @@ npm install generator-teams@preview --global
 
 ## <a name="generate-your-project"></a>生成项目
 
-打开命令提示符并创建要在其中创建项目的新目录，并在该目录中键入该命令`yo teams`。 这将启动 "团队应用生成器"，系统将会提示您一组问题。
+打开命令提示符并创建要在其中创建项目的新目录，并在该目录中键入该命令 `yo teams` 。 这将启动 "团队应用生成器"，系统将会提示您一组问题。
 
 ![yo 团队](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -68,9 +68,9 @@ npm install generator-teams@preview --global
 
 下面的步骤要求您提供项目的标题，此标题将用于您的应用程序的清单和说明。 然后，系统将要求你提供一个公司名称，该名称也将在清单中使用。
 
-第五个问题会询问您要使用的清单版本。 对于此教程， `v1.5`请选择 "当前常规可用架构"。
+第五个问题会询问您要使用的清单版本。 对于此教程，请选择 " `v1.5` 当前常规可用架构"。
 
-在此之后，生成器将询问您要添加到项目中的项目。 您可以选择一个或多个项目组合。 现在，只需选择*一个选项卡*。
+在此之后，生成器将询问您要添加到项目中的项目。 您可以选择一个或多个项目组合。 现在，只需选择 *一个选项卡*。
 
 ![项目选择](~/assets/yeoman-images/teams-first-app-2.png)
 
@@ -86,9 +86,9 @@ npm install generator-teams@preview --global
 
 ## <a name="add-some-code-to-your-tab"></a>向您的选项卡添加一些代码
 
-生成器完成后，您可以在最喜爱的代码编辑器中打开该解决方案。 花一分钟或两分钟，熟悉代码的组织方式-您可以在[项目结构](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure)文档中阅读有关该信息的详细信息。
+生成器完成后，您可以在最喜爱的代码编辑器中打开该解决方案。 花一分钟或两分钟，熟悉代码的组织方式-您可以在 [项目结构](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) 文档中阅读有关该信息的详细信息。
 
-您的选项卡将位于`./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx`文件中。 这是您的选项卡的基于 TypeScript 响应的类。 `render()`找到方法并在`<PanelBody>`控件中添加一行代码，使其如下所示：
+您的选项卡将位于 `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` 文件中。 这是您的选项卡的基于 TypeScript 响应的类。找到 `render()` 方法并在控件中添加一行代码， `<PanelBody>` 使其如下所示：
 
 ``` TypeScript
 <PanelBody>
@@ -102,17 +102,17 @@ npm install generator-teams@preview --global
 
 ## <a name="build-your-app"></a>生成应用程序
 
-现在可以生成项目。 为此，请执行两个步骤（或一个步骤，如下所示）。
+现在可以生成项目。 这是通过两个步骤 (或一个步骤完成的，请参阅下面的) 。
 
-首先，您需要创建团队应用程序清单文件，并将其上传/旁加载到 Microsoft 团队。 这是由 Gulp 任务`gulp manifest`完成的。 这将验证清单并在`./package`目录中创建 zip 文件。
+首先，您需要创建团队应用程序清单文件，并将其上传/旁加载到 Microsoft 团队。 这是由 Gulp 任务完成的 `gulp manifest` 。 这将验证清单并在目录中创建 zip 文件 `./package` 。
 
-若要生成解决方案，请使用`gulp build`命令。 这会将您的解决方案转换`./dist`到该文件夹中。 
+若要生成解决方案，请使用 `gulp build` 命令。 这会将您的解决方案转换到该 `./dist` 文件夹中。 
 
 ## <a name="run-your-app"></a>运行应用程序
 
-若要运行您的`gulp serve`应用程序，请使用命令。 这将为您生成并启动一个本地 web 服务器来测试您的应用程序。 当您在项目中保存文件时，该命令也会重新生成应用程序。 
+若要运行您的应用程序，请使用 `gulp serve` 命令。 这将为您生成并启动一个本地 web 服务器来测试您的应用程序。 当您在项目中保存文件时，该命令也会重新生成应用程序。 
 
-现在，您应该能够浏览到`http://localhost:3007/myFirstAppTab/` ，以确保您的选项卡呈现。 但在 Microsoft 团队中尚不会。
+现在，您应该能够浏览到 `http://localhost:3007/myFirstAppTab/` ，以确保您的选项卡呈现。 但在 Microsoft 团队中尚不会。
 
 ![在浏览器中查看网站](~/assets/yeoman-images/teams-first-app-3.png)
 
@@ -120,17 +120,17 @@ npm install generator-teams@preview --global
 
 Microsoft 团队不允许您在 localhost 上托管您的应用程序，因此您需要将其发布到公用 URL 或使用代理（如 ngrok）。
 
-好消息是搭建项目具有此内置的。 在运行`gulp ngrok-serve` ngrok 服务时，将在后台启动，并使用唯一的公共 DNS 条目，并将清单打包为该唯一的 URL，然后执行与相同的完全相同的任务`gulp serve`。
+好消息是搭建项目具有此内置的。 在运行 `gulp ngrok-serve` ngrok 服务时，将在后台启动，并使用唯一的公共 DNS 条目，并将清单打包为该唯一的 URL，然后执行与相同的完全相同的任务 `gulp serve` 。
 
-运行`gulp ngrok-serve`后，创建一个新的 Microsoft 团队团队，并在创建时单击团队名称，以转到 "团队设置"，然后选择 "*应用*"。 在右下角，您应该会看到一个链接 "*上传自定义应用程序*"，选择它，然后浏览到您的项目`package`文件夹和名为的子文件夹。 选择该文件夹中的 zip 文件，然后选择 "打开"。 现在，您的应用程序将旁加载到 Microsoft 团队中。
+运行后 `gulp ngrok-serve` ，创建一个新的 Microsoft 团队团队，并在创建时单击团队名称，以转到 "团队设置"，然后选择 " *应用*"。 在右下角，您应该会看到一个链接 " *上传自定义应用程序*"，选择它，然后浏览到您的项目文件夹和名为的子文件夹 `package` 。 选择该文件夹中的 zip 文件，然后选择 "打开"。 现在，您的应用程序将旁加载到 Microsoft 团队中。
 
 ![旁加载应用程序](~/assets/yeoman-images/teams-first-app-4.png)
 
-返回到*常规*频道并选择*+* 添加新的选项卡。您应该会在选项卡列表中看到您的选项卡。
+返回到 *常规* 频道并选择 *+* 添加新的选项卡。您应该会在选项卡列表中看到您的选项卡。
 
 ![配置选项卡](~/assets/yeoman-images/teams-first-app-5.png)
 
-选择您的选项卡，然后按照说明添加它。 请注意，您有一个自定义配置对话框，您可以在其中编辑该源。 选择 "*保存*" 将选项卡添加到频道。 完成后，应在 Microsoft 团队中加载您的选项卡！
+选择您的选项卡，然后按照说明添加它。 请注意，您有一个自定义配置对话框，您可以在其中编辑该源。 选择 " *保存* " 将选项卡添加到频道。 完成后，应在 Microsoft 团队中加载您的选项卡！
 
 ![在团队中运行选项卡](~/assets/yeoman-images/teams-first-app-6.png)
 

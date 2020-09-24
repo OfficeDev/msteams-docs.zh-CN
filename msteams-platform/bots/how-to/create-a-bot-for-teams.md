@@ -1,16 +1,16 @@
 ---
 title: 为 Microsoft Teams 创建自动程序
 author: clearab
-description: 如何为 Microsoft Teams 创建自动程序。
+description: 如何使用 App Studio，Yeoman Generator 和其他工具为 Microsoft Teams 创建机器人。
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: eab1d5b76c4fa534e7a5bbab8572004b9f737a1b
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 03196c32e5e1a4b2714a4c916a71c80fc10a5edc
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "48178314"
+ms.locfileid: "48209828"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>为 Microsoft Teams 创建自动程序
 

@@ -5,12 +5,12 @@ description: 了解如何为你的首个 Microsoft 团队应用构建机器人�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7d3d1b63aace7fda971fb6ccaddddf631b4b2ad9
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210081"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237823"
 ---
 # <a name="build-a-teams-bot"></a>构建团队 bot
 
@@ -34,7 +34,7 @@ ms.locfileid: "48210081"
 
 如果还没有，请确保 [了解并安装团队开发先决条件](build-first-app-overview.md#get-prerequisites)。
 
-## <a name="create-your-app-project"></a>创建您的应用程序项目
+## <a name="1-create-your-app-project"></a>1. 创建您的应用程序项目
 
 Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 
@@ -53,7 +53,7 @@ Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 1.  (可选) 输入你的 bot 的自定义名称，然后选择 " **创建**"。  (记住，这是你的 bot 的名称，而不是你已指定的团队应用程序的名称。 ) 
 1. 选择屏幕底部的 " **完成** " 以配置项目。
 
-## <a name="identify-relevant-app-project-components"></a>确定相关的应用程序项目组件
+## <a name="2-identify-relevant-app-project-components"></a>2. 确定相关的应用程序项目组件
 
 大多数应用程序清单和基架是在使用团队工具包创建项目时自动设置的。 我们来看看构建机器人的主要组件。
 
@@ -105,7 +105,7 @@ Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 
 `.env`文件也存储在根目录中，用于存储你的 BOT ID 和密码。
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>设置到您的应用程序的安全隧道
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. 设置应用程序的安全隧道
 
 出于测试目的，让你将你的 bot 托管在本地 web 服务器上 (端口 3978) 。
 
@@ -116,7 +116,7 @@ Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 
 你的应用程序清单指向你承载机器人的位置。
 
-## <a name="configuring-your-bot"></a>配置你的 bot
+## <a name="4-configure-your-bot"></a>4. 配置你的 bot
 
 若要在团队中使用 bot，必须将其注册到 Azure Bot 服务。 幸运的是，当您使用团队工具包设置应用程序时，将自动完成此操作。
 
@@ -140,7 +140,7 @@ Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 
 你的 bot 将能够响应团队中的邮件。
 
-## <a name="run-your-app"></a>运行应用程序
+## <a name="5-run-your-app"></a>5. 运行您的应用程序
 
 您已经设置了承载你的 bot 并将其配置为处理邮件的 URL。 现在是将你的 bot 准备好并运行了。
 
@@ -151,19 +151,19 @@ Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-bot-in-teams"></a>在团队中旁加载你的机器人
+## <a name="6-sideload-your-bot-in-teams"></a>6. 在团队中旁加载你的机器人
 
 在运行机器人的情况下，可以将其安装在团队中。
 
 > [!TIP]
-> 如果您在之前未旁加载团队应用程序并遇到问题，请按照这些 [说明](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams)进行操作。
+> 如果您在之前未旁加载团队应用程序并遇到问题，请按照这些 [说明](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)进行操作。
 
 1. 使用允许应用旁加载的帐户登录到团队客户端。
 1. 选择 " **应用**"，然后选择 " **上载自定义应用**"。
 1. 转到您的应用程序项目 `.publish` 文件夹，然后选择 `Development.zip` 。
 1. 在 "安装模式" 中，选择 " **添加** " 以安装您的应用程序。
 
-## <a name="test-your-bot"></a>测试你的 bot
+## <a name="7-test-your-bot"></a>7. 测试你的 bot
 
 现在，为有趣部分：让我们在一对一聊天中说出 "Hello" 到你的机器人。
 

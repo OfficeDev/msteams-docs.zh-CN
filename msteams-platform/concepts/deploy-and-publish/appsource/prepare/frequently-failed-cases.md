@@ -4,19 +4,19 @@ description: 描述提交和大多数失败策略的提示
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: b2b198068478e6cc1e620d5bf5da9d448b3cf56d
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 93b772f6868c50df6810c09f06bc9d1c99a00896
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704479"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237858"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>成功提交应用程序的提示
 
 本文解决了提交的应用程序验证失败的常见原因。 尽管它并不是您的应用程序的所有潜在问题的详尽列表，但遵循本指南将增加您的应用程序提交第一次的可能性。 有关验证策略的详细列表，*请参阅*[商业市场认证策略](/legal/marketplace/certification-policies)。
 
 >[!NOTE]
->**[1140 节](/legal/marketplace/certification-policies#1140-teams)** 是专门针对团队应用程序的 Microsoft 团队和**[子节 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** 解决功能要求的。
+>**[1140 节](/legal/marketplace/certification-policies#1140-teams)** 是专门针对团队应用程序的 Microsoft 团队和 **[子节 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** 解决功能要求的。
 
 ## <a name="validation-guidelines"></a>验证准则
 
@@ -24,7 +24,7 @@ ms.locfileid: "44704479"
 
 另*请参阅* [Section 100 —常规](/legal/marketplace/certification-policies#100-general)
 
-* 确保使用的是版本1.4.1 或更高版本的[Microsoft 团队 SDK](https://www.npmjs.com/package/@microsoft/teams-js)。
+* 确保使用的是版本1.4.1 或更高版本的 [Microsoft 团队 SDK](https://www.npmjs.com/package/@microsoft/teams-js)。
 * 在验证过程正在进行时，请勿对应用进行更改。 执行此操作将需要对应用进行完全重新验证。
 * 您的应用程序不得停止响应、意外终止或包含编程错误。 如果遇到问题，您的应用程序应正常失败，并向用户提供有效的单向转发邮件。
 * 您的应用程序不得在用户环境中自动下载、安装或启动任何可执行代码。 所有下载都应从用户处寻求显式权限。
@@ -37,18 +37,18 @@ ms.locfileid: "44704479"
 另*请参阅* [Section 1100.5-客户控制](/legal/marketplace/certification-policies#11005-customer-control)
 
 * 如果您的应用程序或外接程序依赖于外部帐户或服务，则登录/注销和注册体验必须在应用程序中的所有功能上都显而易见且可访问。
-* 如果向用户提供了显式登录选项，则必须有对应的注销选项（即使该应用程序使用的是 SSO/[缄默身份验证](~/tabs/how-to/authentication/auth-silent-aad.md)）也是如此。
+* 如果向用户提供了显式登录选项，则即使应用程序使用的是 SSO/[缄默身份验证](~/tabs/how-to/authentication/auth-silent-aad.md)) ，也必须有相应的注销选项 (。
 * 注销选项必须仅将用户从应用程序功能中注销，而不能从团队客户端注销。
 * 注销选项至少必须使用与登录选项相同的功能对用户进行签名即可。 例如，如果登录选项同时包含邮件扩展和选项卡，则注销选项必须包括邮件扩展和选项卡。
 
-* 确保始终有一种方法来撤消以下（或类似）行为：
+* 确保始终有办法撤消以下 (或类似的) 行为：
   * 登录 => 注销。
   * 链接帐户/服务 => 取消链接帐户/服务。
   * 连接帐户/服务 => 断开帐户/服务的连接。
   * 授权帐户/服务 => deauthorize/拒绝帐户/服务。
   * 注册帐户/服务 => 取消注册/取消订阅帐户/服务。
 * 如果您的应用程序需要帐户或服务，则必须为用户提供注册或创建注册请求的方法。 如果您的应用程序是企业应用程序，则可以授予异常。
-* 登录/注销功能必须在移动客户端上工作。 确保使用的是[Microsoft 团队 SDK](https://www.npmjs.com/package/@microsoft/teams-js)版本1.4.1 或更高版本。
+* 登录/注销功能必须在移动客户端上工作。 确保使用的是 [Microsoft 团队 SDK](https://www.npmjs.com/package/@microsoft/teams-js) 版本1.4.1 或更高版本。
 
 有关身份验证的其他信息，请参阅：
 
@@ -112,21 +112,24 @@ ms.locfileid: "44704479"
 * **使用自适应卡片和任务模块使你的 bot 响应清晰且可操作** 
 [带有按钮的自适应卡片，用于调用任务模块，以](/task-modules-and-cards/task-modules/task-modules-bots)增强机器人用户体验。 这些卡片和按钮更易于在移动设备中使用，而不是用户键入命令
 
-* 请**考虑所有作用域**。 在 `@*botname*` 频道和个人对话中提到（）时，请确保你的 bot 提供了适当的响应。 如果你的 bot 未在个人或团队作用域内提供有意义的上下文，请通过清单禁用该作用域。 （请参阅 `bots` [Microsoft 团队清单架构参考](~/resources/schema/manifest-schema.md#bots)中的 "阻止"。）
+* 请**考虑所有作用域**。 如果 `@*botname*` 在频道和个人对话中 () ，请确保你的 bot 提供适当的响应。 如果你的 bot 未在个人或团队作用域内提供有意义的上下文，请通过清单禁用该作用域。  (请参阅 `bots` [Microsoft 团队清单架构参考](~/resources/schema/manifest-schema.md#bots)中的 "阻止"。 ) 
 
-### <a name="9989-bots-must-send-a-welcome-message-on-first-launch"></a>&#9989; Bot 必须在首次启动时发送欢迎消息
+### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>在首次启动时 &#9989; 个人 bot 必须发送欢迎消息
 
-欢迎邮件是设置你的 bot 语气的最佳方式。 这是用户与 bot 的第一个交互操作。 最好的欢迎消息可以鼓励用户继续浏览应用。 如果欢迎或介绍性邮件令人困惑或不清楚，用户将不会立即看到应用程序的价值，也不会失去兴趣。
+欢迎邮件是为个人/聊天机器人设置语气的最佳方式。 这是用户与 bot 的第一个交互操作。 最好的欢迎消息可以鼓励用户继续浏览应用。 如果欢迎或介绍性邮件令人困惑或不清楚，用户将不会立即看到应用程序的价值，也不会失去兴趣。
+
+> [!Note]
+> 欢迎消息对于频道 bot 来说是可选的。
 
 ### <a name="welcome-message-requirements"></a>欢迎邮件要求
 
-* 确定将机器人添加到频道的个人。
-* 包括一个价值主张。
-* 提供有关使用 bot 的转发指南的方法。
-* 提供易于阅读的文本和简单的对话框（最好是一张包含可加载任务模块的可操作的欢迎教程按钮的卡片）。
+* 在 "欢迎" 教程中加入一个价值主张。
+* 提供使用 bot 的转发指南。
+* 提供易于阅读的文本和简单的对话框，最好是一张包含加载任务模块的可操作的欢迎教程按钮的卡片。
 * 请尽量简单，避免 wordy/对话。
+* 包含自适应卡片和按钮，使欢迎消息更易于使用。
 * 使用一个 ping （而不是两个或多个并发 ping）调用欢迎消息。
-* 在个人聊天中，欢迎消息只能显示给配置了该应用程序的用户。  
+* 欢迎消息只能显示给配置了该应用程序的用户，最好是在1:1 个人聊天中。
 * 永远不要向团队中的每个成员发送个人聊天。
 * 永远不要多次发送欢迎消息。 不允许按固定间隔重复相同的欢迎邮件，它被视为垃圾邮件。
 

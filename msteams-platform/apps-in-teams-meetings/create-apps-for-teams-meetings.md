@@ -1,16 +1,16 @@
 ---
-title: 创建团队会议的应用程序
+title: 创建适用于团队会议的应用
 author: laujan
 description: 创建团队会议的应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: 83e0a5b53e363a090935b4afa9840dd96c5f7381
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 9ead77e3573510bc9c9415c6f3ac9a6e83f23ece
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48181988"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237984"
 ---
 # <a name="create-apps-for-teams-meetings-preview"></a>为团队会议 (预览) 创建应用程序
 
@@ -27,11 +27,11 @@ ms.locfileid: "48181988"
 
 1. 某些会议 Api （如 `GetParticipant` 将需要 [机器人注册和 BOT 应用 ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) 生成身份验证令牌）。
 
-1. 在团队会议过程中，开发人员必须遵守会议前和会议后对话的常规 [团队选项卡设计指南](../tabs/design/tabs.md) 以及会议对话 [指南](designing-in-meeting-dialog.md) 。
+1. 开发人员必须遵循 ["常规团队" 选项卡设计指南](../tabs/design/tabs.md) （适用于会议前后方案以及会议期间） (参阅 [会议对话框](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) 和 [会议中的选项卡](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) 设计准则) 。
 
 ## <a name="meeting-apps-api-reference"></a>会议应用程序 API 参考
 
-|API|描述|请求|Source|
+|API|说明|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 获取上下文信息以在 "团队" 选项卡中显示相关内容。 |_**microsoftTeams getContext ( ( ) => {/*...*/} ) **_|Microsoft 团队客户端 SDK|
 |**GetParticipant**|此 API 允许 bot 按会议 id 和参与者 id 提取参与者信息。|**获取** _ **/v1/meetings/{meetingId}/participants/{participantId}？ tenantId = {tenantId}**_ |Microsoft Bot 框架 SDK|
@@ -269,7 +269,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 #### <a name="in-meeting-dialog"></a>**会议对话**
 
-✔您必须遵守 [会议中的对话框设计准则](designing-in-meeting-dialog.md)。
+✔您必须遵守 [会议中的对话框设计准则](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md)。
 
 ✔引用 [选项卡的团队身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。
 

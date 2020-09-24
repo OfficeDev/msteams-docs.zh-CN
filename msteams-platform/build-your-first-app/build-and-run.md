@@ -5,18 +5,18 @@ description: 生成并运行您的首个 Microsoft 团队应用程序（一个�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 5be2e8f2932a91ed11137f3a7be544e12bd65559
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210149"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237830"
 ---
 # <a name="build-a-hello-world-teams-app"></a>构建 "Hello，World！" Teams 应用
 
 您可以通过构建显示为 "Hello，World！" 的个人选项卡，直接跳转到 Microsoft 团队平台开发。
 
-## <a name="create-your-app-project"></a>创建您的应用程序项目
+## <a name="1-create-your-app-project"></a>1. 创建您的应用程序项目
 
 使用 Visual Studio Code 中的 Microsoft 团队工具包设置您的首个应用程序项目。
 
@@ -27,7 +27,7 @@ ms.locfileid: "48210149"
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="显示如何使用 Visual Studio Code 团队工具包配置应用程序项目的屏幕截图。":::
 1. 检查 " **个人" 选项卡** 选项，然后选择屏幕底部的 " **完成** " 以配置项目。
 
-## <a name="understand-important-app-project-components"></a>了解重要的应用程序项目组件
+## <a name="2-understand-important-app-project-components"></a>2. 了解重要的应用程序项目组件
 
 工具包配置项目后，您就可以使用组件为团队构建基本的个人选项卡。 项目目录和文件显示在 Visual Studio Code 的 "资源管理器" 区域中。
 
@@ -51,13 +51,13 @@ ms.locfileid: "48210149"
 
 以下是有关应用程序包文件的一些详细信息：
 
-|名称|类型|Size|清单位置|工具包文件名|
+|姓名|类型|Size|清单位置|工具包文件名|
 |---|---|:---:|:---:|-----|
 |**应用程序清单**|`.json`| — | — |`.publish/manifest.json`|
 |**颜色徽标**|`.png`|192 &times; 192 像素|`icon.color`|`.publish/color.png`|
 |**大纲徽标**|`.png`|32 &times; 32 像素|`icon.outline`|`.publish/outline.png`|
 
-## <a name="run-your-app"></a>运行应用程序
+## <a name="3-run-your-app"></a>3. 运行您的应用程序
 
 在时间方面，你将在本地构建和运行应用程序。
 
@@ -68,7 +68,7 @@ ms.locfileid: "48210149"
 1. 打开浏览器并转到 `https://localhost:3000` 以查看名为 **Microsoft 团队选项卡**的空白网页。 (不会担心您无法看到页面上的任何内容。 ) <br/>
    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="显示要在浏览器中查看正在运行的应用程序的外观的屏幕截图。":::
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>设置到您的应用程序的安全隧道
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. 设置应用程序的安全隧道
 
 您的应用程序已启动并在本地 web 服务器上运行。 若要在团队中运行您的应用程序，您必须 `localhost` 通过 HTTPS 进行访问。
 
@@ -82,7 +82,7 @@ ms.locfileid: "48210149"
 
 您的应用程序清单现在指向您在其中承载应用程序的位置。
 
-## <a name="sideload-your-app-in-teams"></a>在团队中旁加载您的应用程序
+## <a name="5-sideload-your-app-in-teams"></a>5. 在团队中旁加载您的应用程序
 
 通过 HTTPS 运行并可访问应用程序后，即可将其上载到团队。
 

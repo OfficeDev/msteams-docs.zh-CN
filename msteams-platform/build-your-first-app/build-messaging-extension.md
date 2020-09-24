@@ -5,12 +5,12 @@ description: 了解如何为你的首个 Microsoft 团队应用构建消息扩�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 0475fcea7d865849fa60c5b3b23788bf90ee5e25
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210129"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237816"
 ---
 # <a name="build-a-teams-messaging-extension"></a>生成团队消息扩展
 
@@ -36,7 +36,7 @@ ms.locfileid: "48210129"
 
 如果还没有，请确保 [了解并安装团队开发先决条件](build-first-app-overview.md#get-prerequisites)。
 
-## <a name="create-your-app-project"></a>创建您的应用程序项目
+## <a name="1-create-your-app-project"></a>1. 创建您的应用程序项目
 
 Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
@@ -58,7 +58,7 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。":::
 1. 选择屏幕底部的 " **完成** " 以配置项目。
 
-## <a name="identify-relevant-app-project-components"></a>确定相关的应用程序项目组件
+## <a name="2-identify-relevant-app-project-components"></a>2. 确定相关的应用程序项目组件
 
 大多数应用程序清单和基架是在使用团队工具包创建项目时自动设置的。
 
@@ -108,9 +108,9 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
 应用程序基架包含一个 `.env` 文件，该文件位于项目的根目录中，用于存储邮件扩展机器人的 ID 和密码。
 
-此外，在根目录中，还有一个 `botActivityHandler.js` 用于处理邮件扩展 (或技术方面的文件， [邮件扩展程序的 Bot](#configuring-the-bot-for-your-messaging-extension)) 响应团队中的搜索查询。
+此外，在根目录中，还有一个 `botActivityHandler.js` 用于处理邮件扩展 (或技术方面的文件， [邮件扩展程序的 Bot](#4-configure-the-bot-for-your-messaging-extension)) 响应团队中的搜索查询。
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>设置到您的应用程序的安全隧道
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. 设置应用程序的安全隧道
 
 出于测试目的，让我们在本地 web 服务器上托管您的邮件扩展 (端口 3978) 。
 
@@ -121,7 +121,7 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
 您的应用程序清单指向你承载邮件扩展使用的 bot 的位置。
 
-## <a name="configuring-the-bot-for-your-messaging-extension"></a>为邮件扩展配置 bot
+## <a name="4-configure-the-bot-for-your-messaging-extension"></a>4. 配置邮件扩展的 bot
 
 邮件扩展依靠 bot 来发送和处理从团队到托管服务的用户请求。
 
@@ -145,7 +145,7 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
 你的 bot 将能够处理你的邮件扩展中的查询。
 
-## <a name="run-your-app"></a>运行应用程序
+## <a name="5-run-your-app"></a>5. 运行您的应用程序
 
 您已经设置了一个 URL 来托管您的邮件扩展并将其配置为处理搜索。 现在就可以启动并运行您的应用程序了。
 
@@ -156,19 +156,19 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-messaging-extension-in-teams"></a>在团队中旁加载您的邮件扩展
+## <a name="6-sideload-your-messaging-extension-in-teams"></a>6. 旁加载您的邮件扩展在团队中
 
 在邮件扩展运行的情况下，可以将其安装在团队中。
 
 > [!TIP]
-> 如果您在之前未旁加载团队应用程序并遇到问题，请按照这些 [说明](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams)进行操作。
+> 如果您在之前未旁加载团队应用程序并遇到问题，请按照这些 [说明](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)进行操作。
 
 1. 使用允许应用旁加载的帐户登录到团队客户端。
 1. 选择 " **应用**"，然后选择 " **上载自定义应用**"。
 1. 转到您的应用程序项目 `.publish` 文件夹，然后选择 `Development.zip` 。
 1. 在 "安装模式" 中，选择 " **添加** " 以安装您的应用程序。
 
-## <a name="test-your-messaging-extension"></a>测试消息扩展
+## <a name="7-test-your-messaging-extension"></a>7. 测试邮件扩展
 
 了解邮件扩展在团队聊天中的工作方式。
 

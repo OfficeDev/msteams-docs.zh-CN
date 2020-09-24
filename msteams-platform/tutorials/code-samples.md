@@ -2,12 +2,12 @@
 title: Microsoft 团队代码示例
 description: Microsoft 团队开发人员平台的示例应用程序的链接和说明
 keywords: Microsoft 团队开发人员示例
-ms.openlocfilehash: 955588608fde694b163104d0a9e9e94289719003
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7a81494d7808c27c495c660b5d58f7779ba87c83
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801112"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237956"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Microsoft 团队开发人员平台的教程和代码示例
 
@@ -28,9 +28,9 @@ ms.locfileid: "44801112"
 从 GitHub 下载我们的示例：
 
 1. 选择下面列出的其中一个项目，并在 GitHub 中打开该项目。
-2. 选择 "**克隆" 或 "下载**" 按钮并复制 URL
+2. 选择 " **克隆" 或 "下载** " 按钮并复制 URL
 3. 在要将示例项目安装到的父目录中打开一个命令提示符
-4. 以`git clone <pasted url>`
+4. 以 `git clone <pasted url>`
 
 ### <a name="for-netc-samples"></a>For .NET/c # 示例
 
@@ -44,34 +44,36 @@ ms.locfileid: "44801112"
 
 与往常一样，项目的自述文件应包含有关特定示例的特定需求的详细信息。
 
-## <a name="bots-using-the-v4-sdk"></a>Bot （使用 v4 SDK）
+## <a name="bots-using-the-v4-sdk"></a>使用 v4 SDK (的 bot) 
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
 >[!TIP]
->访问[Bot 框架示例存储库](https://github.com/Microsoft/BotBuilder-Samples)，以查看 Microsoft Bot FRAMEWORK v4 SDK 以任务为中心的针对 c #、JavaScript、TypeScript 和 Python 的示例。
+>访问 [Bot 框架示例存储库](https://github.com/Microsoft/BotBuilder-Samples) ，以查看 Microsoft Bot FRAMEWORK v4 SDK 以任务为中心的针对 c #、JavaScript、TypeScript 和 Python 的示例。
 
-## <a name="messaging-extensions-using-the-v4-sdk"></a>邮件扩展（使用 v4 SDK）
+## <a name="messaging-extensions-using-the-v4-sdk"></a>使用 v4 SDK (的邮件扩展) 
 
 | 示例 | 说明 | .NET Core | JavaScript | Python|
 |--------|------------- |---|---|----|
-| 搜索命令 | 使用搜索命令的简单消息扩展 | [查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)| [查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|[查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/50.teams-messaging-extension-search)|
-| 操作命令 | 带有操作命令的简单消息扩展。 插入到撰写邮件区域的响应。 | [查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)|[查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/51.teams-messaging-extensions-action)|
-| 带机器人响应的操作命令 | 带有操作命令的消息扩展。 由 bot 插入对话中的响应。 | [查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview)|[查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview)|[查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/53.teams-messaging-extensions-action-preview)|
-| 搜索命令 | 带有搜索命令和身份验证和配置的消息扩展 | [查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|[查看](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/52.teams-messaging-extensions-search-auth-config)|
+| 邮件扩展-搜索 | 接受搜索请求并返回结果的消息扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| 邮件扩展-操作 | 接受参数并返回卡片的消息扩展。 此外，如何在邮件扩展中接收转发的邮件作为参数。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| 消息传送扩展-身份验证和配置 | 具有配置页面的邮件扩展，接受搜索请求并在用户登录后返回结果。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
+| 邮件扩展-操作预览 | 演示如何为邮件扩展创建预览和编辑流。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
+| 链接展开 | 执行链接 unfurling 的邮件扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
+
 
 ## <a name="outgoing-webhooks"></a>传出 Webhook
 
 | 示例 | 说明
 |--------|-------------
 | [C # 的传出 Webhook/.NET](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | 说明如何在 c #/.NET. 中为 Microsoft 团队创建**传出 Webhook**
-| [Node.js的传出 Webhook](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | 说明如何在 ~ 50 Node.js 代码行中为 Microsoft 团队创建简单的**传出 Webhook** 。
+| [Node.js的传出 Webhook ](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | 说明如何在 ~ 50 Node.js 代码行中为 Microsoft 团队创建简单的 **传出 Webhook** 。
 
 ## <a name="connectors"></a>连接器
 
 | 示例 | 说明
 |--------|-------------
-| [Node.js的示例连接器](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | 本示例在 Node.js 中编写，展示了如何使用 GitHub 为 Microsoft 团队构建连接器，作为生成连接器通知的示例。
+| [Node.js的示例连接器 ](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | 本示例在 Node.js 中编写，展示了如何使用 GitHub 为 Microsoft 团队构建连接器，作为生成连接器通知的示例。
 | [C #/.NET 的示例连接器](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | 此示例以 c # 编写，展示了如何使用示例任务列表应用程序为 Microsoft 团队构建连接器，作为生成连接器通知的示例。
 
 ## <a name="graph-api"></a>Graph API
@@ -85,4 +87,4 @@ ms.locfileid: "44801112"
 | 示例 | 说明 |
 |--------|------------- |
 | [C #/.NET 的示例 bot](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | Bot 框架 v3 示例|
-| [Node.js的示例 bot](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | Bot 框架 v3 示例 |
+| [Node.js的示例 bot ](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | Bot 框架 v3 示例 |

@@ -5,12 +5,12 @@ description: 了解如何为你的首个 Microsoft 团队应用构建个人选�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 3b54efa9b7ed8019b5d4901eeaaf0864e1afc7ac
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210124"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237802"
 ---
 # <a name="build-a-teams-personal-tab"></a>生成工作组个人选项卡
 
@@ -34,7 +34,7 @@ ms.locfileid: "48210124"
 > * 创建选项卡内容
 > * 根据用户首选项更新选项卡的颜色主题
 
-## <a name="identify-relevant-app-project-components"></a>确定相关的应用程序项目组件
+## <a name="1-identify-relevant-app-project-components"></a>1. 确定相关的应用程序项目组件
 
 大多数应用程序清单和基架是在使用团队工具包创建项目时自动设置的。 我们来看看用于构建个人选项卡的主要组件。
 
@@ -65,7 +65,7 @@ ms.locfileid: "48210124"
 * `Tab.js``src/components`项目目录中的文件
 * Microsoft 团队 JavaScript 客户端 SDK，它在项目的前端组件中预加载
 
-## <a name="create-your-tab-content"></a>创建选项卡内容
+## <a name="2-customize-your-tab-content-page"></a>2. 自定义 "选项卡内容" 页
 
 编译组织中重要联系人的列表。 使用与您相关的信息复制和更新以下代码段，如果需要，请按如下所示使用代码。
 
@@ -112,7 +112,7 @@ a {
 
 :::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="包含静态内容的个人选项卡的屏幕截图。":::
 
-## <a name="update-the-tab-theme"></a>更新选项卡主题
+## <a name="3-update-the-tab-theme"></a>3. 更新选项卡主题
 
 理想的应用程序会让团队成为本地用户，因此，您的选项卡与您的用户喜欢的团队主题进行混合是很重要的：默认 (浅) 、深或高对比度。 正如您可能在最后的屏幕截图中已注意到，当客户端使用深色主题时，您的选项卡仍有浅背景。 这不是建议的用户体验。
 
