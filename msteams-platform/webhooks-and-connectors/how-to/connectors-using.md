@@ -3,12 +3,12 @@ title: 向连接器和 Webhook 发送邮件
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: 16dbb99add82c26930baf22bfc2c5153fd47b2f1
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: bfcee2c00d30517522621f61142324b4f81a93f8
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651647"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237963"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -154,7 +154,7 @@ ms.locfileid: "46651647"
 
    ```bash
    // on Windows
-   curl.exe -H 'Content-Type: application/json' -d '{"text": "Hello World"}' <YOUR WEBHOOK URL>
+   curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
 2. 如果 POST 成功，则可以看到 `curl` 简单输出 **1**。
@@ -246,9 +246,10 @@ ms.locfileid: "46651647"
             "type":"AdaptiveCard",
             "version":"1.2",
             "body":[
-               {
-                  "For Samples and Templates, see":"https://adaptivecards.io/samples"
-               }
+                {
+                "type": "TextBlock",
+                "text": "For Samples and Templates, see https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                }
             ]
          }
       }
