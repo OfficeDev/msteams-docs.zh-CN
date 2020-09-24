@@ -1,10 +1,25 @@
 - name: 概述
   expanded: true
   items:
-    - name: 什么是 Microsoft Teams 应用？
+    - name: 构建 Microsoft Teams 应用
       href: overview.md
     - name: 新变化？
       href: whats-new.md
+- name: 构建首个应用
+  expanded: true
+  items:
+    - name: 概述和先决条件
+      href: build-your-first-app/build-first-app-overview.md
+    - name: '创建“Hello, World!”  应用'
+      href: build-your-first-app/build-and-run.md
+    - name: 创建个人选项卡
+      href: build-your-first-app/build-personal-tab.md
+    - name: 创建频道选项卡
+      href: build-your-first-app/build-channel-tab.md
+    - name: 创建机器人
+      href: build-your-first-app/build-bot.md
+    - name: 创建邮件扩展
+      href: build-your-first-app/build-messaging-extension.md
 - name: 教程和代码示例
   items:
     - name: 使用 C# 创建应用
@@ -15,8 +30,12 @@
       href: tutorials/get-started-yeoman.md
     - name: 详细了解适用于 Teams 的自定义应用
       href: tutorials/code-samples.md
-- name: 模板和集成
+- name: 集成和模板
   items:
+    - name: 集成 web 应用
+      href: samples/integrating-web-apps.md
+    - name: 创建低代码应用
+      href: samples/teams-low-code-solutions.md
     - name: 生产准备就绪的应用模板
       href: samples/app-templates.md
     - name: 生产准备就绪的排班连接器
@@ -44,9 +63,9 @@
 - name: 概念
   expanded: true
   items:
-    - name: 构建 Microsoft Teams 应用
-      href: concepts/building-an-app.md
-    - name: Teams 客户端中的扩展点
+    - name: 应用功能
+      href: concepts/capabilities-overview.md
+    - name: 应用入口点
       href: concepts/extensibility-points.md
     - name: 设计应用
       items:
@@ -313,7 +332,7 @@
       items:
         - name: 设计有效的卡
           href: task-modules-and-cards/cards/design-effective-cards.md
-        - name: 设置卡文本的格式
+        - name: 设置卡片文本格式
           href: task-modules-and-cards/cards/cards-format.md
         - name: 发送和响应卡操作
           href: task-modules-and-cards/cards/cards-actions.md
@@ -398,7 +417,7 @@
           href: resources/bot-v3/bots-menus.md
         - name: 带选项卡的机器人
           href: resources/bot-v3/bots-with-tabs.md
-        - name: 设置机器人消息的格式
+        - name: 设置机器人邮件的格式
           href: resources/bot-v3/bots-text-formats.md
         - name: 测试机器人
           href: resources/bot-v3/bots-test.md
