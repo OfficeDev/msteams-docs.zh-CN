@@ -5,12 +5,12 @@ description: 基于参与者和用户角色的团队会议中的应用程序概�
 ms.topic: overview
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237886"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279714"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>团队会议中的应用 (预览) 
 
@@ -129,4 +129,4 @@ _请参阅_ [**团队会议中的角色**](https://support.microsoft.com/office/
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [在团队会议中启用应用程序] (应用程序内-团队中-会议/启用-应用程序-会议 md
+> [创建适用于 Teams 会议的应用](create-apps-for-teams-meetings.md)

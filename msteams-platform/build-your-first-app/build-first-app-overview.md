@@ -5,14 +5,14 @@ description: 构建首个 Microsoft 团队应用程序的概述和先决条件
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: bcfbcaa9de85f4b7135483aed3d1d11bf8bffad6
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210076"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279712"
 ---
-# <a name="building-your-first-teams-app-overview"></a>构建你的第一个团队应用概述
+# <a name="build-your-first-teams-app-overview"></a>构建你的第一个团队应用概述
 
 在 " **构建您的首个应用** 课程" 中，您将创建基本的团队应用程序。 每个教程演示如何构建一个简单的真实团队应用程序，同时向您介绍了常见工具、基本概念以及更高级的功能。
 
@@ -105,6 +105,6 @@ ms.locfileid: "48210076"
 ### <a name="other-tutorials"></a>其他教程
 
 > [!div class="nextstepaction"]
-> [构建 bot](../build-your-first-app/build-bot.md)
+> [创建机器人](../build-your-first-app/build-bot.md)
 > [!div class="nextstepaction"]
-> [构建消息扩展](../build-your-first-app/build-messaging-extension.md)
+> [创建邮件扩展](../build-your-first-app/build-messaging-extension.md)

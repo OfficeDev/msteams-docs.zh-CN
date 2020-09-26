@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
-ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
+ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47303715"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279662"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -18,9 +18,15 @@ ms.locfileid: "47303715"
 
 更改日志将列出 Microsoft 团队平台和此文档集的更改。 有时，条目可用于吸引团队开发人员感兴趣的新功能。
 
-| **Date** | **备注** | **更改的主题** |
+| **Date** | **Notes** | **更改的主题** |
 | -------- | --------- | ------------------ |
+|09/22/2020|新建 "团队入门" 指南|[构建你的第一个团队应用概述](build-your-first-app/build-first-app-overview.md)|
+|9/18/2020| (公共预览版中对会议团队应用程序的支持) |为团队[会议中](apps-in-teams-meetings/teams-apps-in-meetings.md)[的团队会议和应用创建应用程序](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
+|8/19/2020|使用 Microsoft Graph 导入团队邮件|[使用 Microsoft Graph 将第三方平台消息导入 Teams](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |传入 webhook 中的自适应卡支持已移至 GA。|[使用传入 webhook 发送自适应卡](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/10/2020|开始使用 Visual Studio 工具包生成团队应用程序。|[使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序](toolkit/visual-studio-overview.md) |
+|08/06/2020|对选项卡的支持 SSO 身份验证|[开发 SSO Microsoft 团队选项卡](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
+|07/27/2020 |  (公共预览版) 的关系图主动备机器人和消息|[在使用 Microsoft Graph 的团队中启用主动备机器人安装和主动消息传递](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |移动设备功能更新。|[为 Microsoft "团队" 选项卡请求设备权限](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|适用于 AppSource 提交的团队应用程序验证工具。|[团队应用程序验证工具](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|为工作组创建虚拟助理|[Microsoft 团队的虚拟助手](samples/virtual-assistant.md)|

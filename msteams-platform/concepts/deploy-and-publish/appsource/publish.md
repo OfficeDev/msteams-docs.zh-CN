@@ -2,12 +2,12 @@
 title: Microsoft 团队应用程序审批提交过程指南
 description: 介绍用于获取发布到 Microsoft 团队应用商店的应用程序的提交审批过程
 keywords: 团队发布 microsoft store office 发布发布 AppSource 合作伙伴中心帐户验证
-ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874868"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279686"
 ---
 # <a name="submit-your-app-to-appsource"></a>将您的应用程序提交到 AppSource
 
@@ -30,7 +30,7 @@ ms.locfileid: "46874868"
 >- 如果您的应用程序包含 Office 365 连接器，可能会应用其他条款。 *请参阅*[连接器开发人员仪表板](https://aka.ms/connectorsdashboard)和[应用程序开发人员协议](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)。
 >- 若要使您的应用程序可供 GCC 用户使用，并在存储中避免出现重复的应用程序列表，则身份验证进程/流应标识用户并将其传送到适用于 GCC 用户的指定/预期内容 URL。
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>Faq —团队应用和合作伙伴帐户
+## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>Faq —合作伙伴中心的团队应用和合作伙伴帐户验证流程
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>如何创建合作伙伴中心帐户？
 
@@ -49,11 +49,11 @@ ms.locfileid: "46874868"
 | 主题 | 常规市场帮助和操作方法问题 |
 | 子| Office 加载项 |
 
-## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>在哪里可以获得对我的合作伙伴中心问题的支持？
+## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>在哪里可以获得对我的合作伙伴中心帐户问题的支持？
 
 请访问我们的 [发布者支持页面](https://aka.ms/marketplacepublishersupport) 以搜索你的问题主题并查找指南。 如果提供的指南不起作用，请 [打开合作伙伴中心支持票证](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
 
-## <a name="how-do-i-manage-my-office-store-account"></a>如何管理我的 Office 应用商店帐户？
+## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>如何在合作伙伴中心管理我的 Office 应用商店帐户？
 
 若要了解如何通过合作伙伴中心管理 Office 应用商店帐户，请访问 "  [合作伙伴中心" 中的 "管理你的 Office 应用商店帐户](/office/dev/store/manage-account-settings-and-profile) "。
 
@@ -77,12 +77,12 @@ ms.locfileid: "46874868"
 
 ![合作伙伴中心验证错误](../../../assets/images/partner-center-acct-verification-error.png)
 
-## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>我的帐户验证状态并非电子邮件所有权之外的高级。 我应该如何继续？
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>我的帐户验证状态除了合作伙伴中心的电子邮件所有权之外，尚未提前。 我应该如何继续？
 
 在 **电子邮件所有权** 验证过程中，会将验证电子邮件发送到主要联系人电子邮件地址。 请检查主要联系人收件箱中是否有需要主题行操作的电子邮件 **maccount@<span>microsoft</span>.Com** *：使用 microsoft 验证您的电子邮件帐户*，请求您完成电子邮件验证过程。 验证电子邮件将发送到合作伙伴中心的 "帐户设置" 页上列出的电子邮件地址。
 
 > [!NOTE]
- >电子邮件验证链接仅在7天内有效。 你可以通过访问合作伙伴配置文件页面并选择 " **重新发送验证电子邮件** " 链接，请求重新向你发送电子邮件。 若要确保收到电子邮件，请将来自 microsoft.com 的电子邮件作为安全域的白名单，并检查垃圾邮件文件夹。
+ >电子邮件验证链接仅在7天内有效。 你可以通过访问合作伙伴配置文件页面并选择 " **重新发送验证电子邮件** " 链接，请求重新向你发送电子邮件。 若要确保收到电子邮件，请将安全列表电子邮件从 microsoft.com 为安全域，并检查 "垃圾邮件" 文件夹。
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>如何获取对与我的帐户相关的问题的进一步支持？
 
@@ -96,7 +96,7 @@ ms.locfileid: "46874868"
 1. 清除浏览器缓存，转到合作伙伴中心帐户仪表板，然后选择 " **重新发送验证电子邮件** " 链接，将验证电子邮件发送到您的电子邮件地址。
 1. 尝试从其他浏览器访问  **重新发送验证电子邮件** 链接。
 1. 与 IT 部门合作，以确保电子邮件服务器不会阻止验证电子邮件。
-1. 调整您的服务器的垃圾邮件筛选器以允许/白名单中的所有电子邮件 **maccount@microsoft。 <span></span>com**。
+1. 调整您的服务器的垃圾邮件筛选器，以允许/通过 maccount@microsoft 的所有电子邮件进行安全列表 **。 <span></span>com**。
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>雇用验证过程通常需要多长时间？
 

@@ -3,12 +3,12 @@ title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 ms.topic: reference
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531275"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279802"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -23,9 +23,21 @@ ms.locfileid: "46531275"
 * **可自定义和扩展：** 虽然所有应用程序模板都准备好部署，但我们提供了完整的代码库和部署脚本，以便您可以轻松地自定义或扩展它们以满足您的独特需求。
 * **& 支持的详细文档：** 所有应用程序模板都附带了有关解决方案体系结构、部署和配置步骤的端到端文档。 存储库也将受到监视，因此，请通过在 GitHub 上提出问题来报告遇到的任何问题。
 
+## <a name="ask-away-9734"></a>请求离开 &#9734;
+
+向离开是 [Microsoft 团队的 bot](../bots/what-are-bots.md) ，它使用户能够在团队中执行问答&(问题和应答) 会话。 通过使用 Ask 机器人，工作组成员可以提交和向上投票由同事共享的问题，使 Q&主机能够在频道或聊天中轻松地收集最新问题。 可以使用 bot 在团队会议中执行实时问答&会话，并允许与会者通过聊天提交实时问题。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
+
+:::row:::
+  :::column span="2":::
+    ![查看用户的 leaderboard 弹出对话框，以对问题进行投票](../assets/images/ask-away-app.png)  
+:::column-end:::
+:::row-end:::
+
 ## <a name="associate-insights"></a>员工见解
 
-关联 insights 是一个[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)模板，它使 firstline 工作人员能够直接捕获和提交客户意见、看法和感知。 Firstline 工作者通常是第一个公司代表，在一对一联系人中与客户接洽。 收集的数据可由业务团队共同共享和使用，例如，通过 Power BI "团队" 选项卡，可实现产品改进并增强客户体验。
+关联 Insights 是一个 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) 模板，它使 firstline 工作人员能够直接捕获和提交客户意见、看法和感知。 Firstline 工作者通常是第一个公司代表，在一对一联系人中与客户接洽。 收集的数据可由业务团队共同共享和使用，例如，通过 Power BI "团队" 选项卡，可实现产品改进并增强客户体验。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -42,7 +54,7 @@ ms.locfileid: "46531275"
 
 ## <a name="attendance"></a>考勤
 
-"出席" 应用是可在团队中固定的 "[电源应用](/powerapps/maker/canvas-apps/embed-teams-app)" 选项卡。 它旨在记录状态，通常是在学习和培训环境等设置中。 用户可以在过去的30天内标记或编辑出席情况，并查看整个组或单个与会者的汇总出勤报告。
+"出席" 应用是可在团队中固定的 " [电源应用](/powerapps/maker/canvas-apps/embed-teams-app) " 选项卡。 它旨在记录状态，通常是在学习和培训环境等设置中。 用户可以在过去的30天内标记或编辑出席情况，并查看整个组或单个与会者的汇总出勤报告。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
@@ -50,7 +62,7 @@ ms.locfileid: "46531275"
 
 ## <a name="book-a-room"></a>会议室
 
-会议室是[Microsoft 团队 bot](../bots/what-are-bots.md) ，可让用户快速查找和保留从当前时间起30（默认）、60或90分钟的会议室。 书籍-会议室的 bot 作用域到个人或1:1 对话。
+会议室是 [Microsoft 团队的 bot](../bots/what-are-bots.md) ，可让用户快速查找和保留从当前时间开始的 30 (默认) 、60或90分钟的会议室。 书籍-会议室的 bot 作用域到个人或1:1 对话。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
@@ -74,11 +86,11 @@ Celebrations 是一种团队应用，可帮助工作组成员庆祝他人的生�
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ 加 gif](../assets/images/CompanyCommunicatorCompose.png)
+![jCompany Communicator 撰写框视图](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="contact-group-lookup-9734"></a>联系人组查找 &#9734;
 
-联系人组查找应用程序为创建、访问和管理组织的联系人组（以前称为通讯组列表或通讯组）提供了一种便利且有用的方法。 用户可以快速查看和聊天组成员、查看成员状态以及创建与联系人组中所选成员的组聊天，这一切都在团队环境中。
+联系人组查找应用程序提供了一种方便且有用的方法，可用于创建、访问和管理组织的联系人组 (以前称为通讯组列表或通信组) 。 用户可以快速查看和聊天组成员、查看成员状态以及创建与联系人组中所选成员的组聊天，这一切都在团队环境中。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
 
@@ -95,7 +107,7 @@ Celebrations 是一种团队应用，可帮助工作组成员庆祝他人的生�
 
 ## <a name="crowdsourcer"></a>CrowdSourcer
 
-CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向团队查询与组成员协作的信息。 这是在帮助参与者积极参与并参与有趣和有用的信息资源的同时，回答常见问题的一种非常好的方法。
+CrowdSourcer 是一种 [Microsoft 团队 bot](../bots/what-are-bots.md) ，可向团队查询与组成员协作的信息。 这是在帮助参与者积极参与并参与有趣和有用的信息资源的同时，回答常见问题的一种非常好的方法。
 
 [在 Github 上获取它](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
@@ -103,7 +115,7 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 
 ## <a name="custom-stickers"></a>自定义贴纸
 
-自表达式是正常团队区域性的核心。 此应用程序模板是一种[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)，使用户能够在 Microsoft 团队中使用自定义不干胶标签和 gif。 此模板提供了简单的基于 web 的配置体验，其中任何具有配置访问权限的用户都可以上传他们希望最终用户拥有的 Gif/不干胶标签/图像，从而使整个团队能够使用您选择的任何一组不干胶标签。
+自表达式是正常团队区域性的核心。 此应用程序模板是一种 [消息扩展](~/messaging-extensions/what-are-messaging-extensions.md) ，使用户能够在 Microsoft 团队中使用自定义不干胶标签和 gif。 此模板提供了简单的基于 web 的配置体验，其中任何具有配置访问权限的用户都可以上传他们希望最终用户拥有的 Gif/不干胶标签/图像，从而使整个团队能够使用您选择的任何一组不干胶标签。
 
 此应用程序还可以跨团队轻松共享图像/Gif/不干胶标签，而无需像存储和共享机制那样访问 SharePoint 网站或单个通道。 例如，产品团队可以以编程方式轻松地将产品图像和 Gif 共享到社交媒体、市场营销和销售团队。 还可以通过触发新图像/Gif 时向特定团队/个人发出通知流来扩展此应用。
 
@@ -113,7 +125,7 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 
 ## <a name="e-prescriptions-9734"></a>&#9734; 的电子处方 
 
-电子处方是基于[电源](/powerapps/maker/canvas-apps/embed-teams-app)的基于应用的应用程序，可通过自动执行向病人发出电子处方的过程来增强 telemedicine 和虚拟护理。 医药专业人员可以在团队平台中直接查看约会、生成电子处方和向患者发送电子邮件附件。
+电子处方是基于 [电源](/powerapps/maker/canvas-apps/embed-teams-app)的基于应用的应用程序，可通过自动执行向病人发出电子处方的过程来增强 telemedicine 和虚拟护理。 医药专业人员可以在团队平台中直接查看约会、生成电子处方和向患者发送电子邮件附件。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
 
@@ -130,7 +142,7 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 
 ## <a name="expert-finder"></a>专家查找程序
 
-专家查找器是[Microsoft 团队的 bot](../bots/what-are-bots.md) ，它根据技能、兴趣和教育属性确定特定组织成员。 成员查找组织内与 Azure Active Directory 用户配置文件的关键字搜索相匹配的专家。
+专家查找器是 [Microsoft 团队的 bot](../bots/what-are-bots.md) ，它根据技能、兴趣和教育属性确定特定组织成员。 成员查找组织内与 Azure Active Directory 用户配置文件的关键字搜索相匹配的专家。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
 
@@ -141,7 +153,7 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 对话 Q&bot 是一种简单的方法，可提供用户对常见问题的解答。 但是，大多数 bot 无法以有意义的方式与用户接洽，因为在 bot 发生故障时没有人在循环中。 FAQ bot 是一个友好的 Q，&在无法帮助的情况中将人体带到循环中的 bot。 如果某个问题包含在知识库中，则可以向该 bot 提供一个问题，并且机器人会做出响应。 如果不是，则机器人允许用户提交一个查询，然后将该查询发布到预先配置的专家团队中，这有助于通过在团队内部执行通知来提供支持。
 
 > [!NOTE]
-> 最新版本的**FAQ 加上**支持改进的 Q&解决方案，通过使专家团队能够完成以下操作：
+> 最新版本的 **FAQ 加上** 支持改进的 Q&解决方案，通过使专家团队能够完成以下操作：
 >
 > &#x2714; 使用邮件扩展名直接在知识库中添加新的 Q&。
 >
@@ -149,13 +161,13 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 >
 > &#x2714; 跟踪 Q&的修订历史记录。
 >
-> &#x2714; 配置包含其他详细信息的答案以显示为[自适应卡片](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+> &#x2714; 配置包含其他详细信息的答案以显示为 [自适应卡片](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 >
 [**在 GitHub 上获取它**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ 加 gif](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="goal-tracker-9734"></a>目标跟踪程序 &#9734;
+## <a name="goal-tracker"></a>目标跟踪程序
 
 目标跟踪器应用程序是组织的一个综合解决方案，可帮助您在 Microsoft 团队中实现目标、观察进度和确认成功。 该应用程序使用户能够在专业、个人和团队级别上设置、跟踪和更新目标。 团队成员还会收到及时提醒和状态更新，以保持重点并保持跟踪。
 
@@ -172,7 +184,7 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 :::column-end:::
 :::row-end:::
 
-## <a name="great-ideas-9734"></a>&#9734; 的好主意
+## <a name="great-ideas"></a>出色的想法
 
 出色的创意应用程序支持和实现贵组织内的创新和创造力。 该应用程序使员工能够与同事和领导共享想法、发现新的报送、对同行注意事项的聚光灯贡献，以及在 Microsoft 团队中的最佳建议中对其投票进行了转换。
 
@@ -206,7 +218,7 @@ CrowdSourcer 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可向
 :::column-end:::
 :::row-end:::
 
-## <a name="grow-your-skills-9734"></a>扩大你的技能 &#9734;
+## <a name="grow-your-skills"></a>扩大技能
 
 成长技能应用程序通过使员工能够参与组织的补充项目并同时学习新技能，从而支持专业发展和开发。 员工可以使用该应用找到满足其利益的商机，享受与同行的有意义的协作，并在团队环境中获得新的专业技能和功能级别。
 
@@ -233,7 +245,7 @@ HR 支持机器人是一个友好的 Q&一个 bot，它将支持专业人员/专
 
 ## <a name="icebreaker"></a>Icebreaker
 
-Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮助您的团队更好地通过将两个随机团队成员与每周匹配来实现。 通过自动建议用于两个成员的空闲时间，机器人可简化日程安排。 加强个人连接并使用此应用构建一个紧密的 knit 社区。
+Icebreaker 是一种 [Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮助您的团队更好地通过将两个随机团队成员与每周匹配来实现。 通过自动建议用于两个成员的空闲时间，机器人可简化日程安排。 加强个人连接并使用此应用构建一个紧密的 knit 社区。
 
 除了鼓励整个团队中的个人连接，Icebreaker 应用还可以帮助您的组织内 cultivate 基于兴趣的社区。 例如，您可以将此应用用于 DevOps 兴趣组，以帮助在您的组织中分布的想法和最佳做法逐渐。
 
@@ -243,15 +255,15 @@ Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 
 ## <a name="incentives"></a>奖励
 
-激励是管理和跟踪 incentivized 员工参与指定活动（如培训和更改管理计划）的[电源应用程序](/powerapps/maker/canvas-apps/embed-teams-app)模板。 管理员使用应用程序建立指定的活动、分配点以完成和为奖励指定所需的资格点级别。 员工使用应用程序查看其积累的积分，并在达到资格、请求和声明 redeemable 奖励时实现。
+激励是管理和跟踪 incentivized 员工参与指定活动（如培训和更改管理计划）的 [电源应用程序](/powerapps/maker/canvas-apps/embed-teams-app) 模板。 管理员使用应用程序建立指定的活动、分配点以完成和为奖励指定所需的资格点级别。 员工使用应用程序查看其积累的积分，并在达到资格、请求和声明 redeemable 奖励时实现。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
 
 ![激励应用演示](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter-9734"></a>事件报告 &#9734;
+## <a name="incident-reporter"></a>事件报告器 
 
-事件报告程序是[Microsoft 团队 bot](../bots/what-are-bots.md) ，可优化组织中事件的管理。 机器人可促进自动化的事件数据收集、自定义的事件报告、相关的利益干系人通知和端到端事件跟踪。
+事件报告程序是 [Microsoft 团队 bot](../bots/what-are-bots.md)  ，可优化组织中事件的管理。 机器人可促进自动化的事件数据收集、自定义的事件报告、相关的利益干系人通知和端到端事件跟踪。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
 
@@ -285,15 +297,15 @@ Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 
 ## <a name="quick-responses"></a>快速响应
 
-快速响应是 Microsoft 团队应用程序，它为有效回答用户的常见问题（Faq）提供了一个强健的解决方案。 应用程序将通过团队[消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)构建一个响应库，以获取交互式用户体验的响应库，而不是手动应答每个查询。
+快速响应是 Microsoft 团队应用程序，它提供了一个强大的解决方案，可有效地回答用户的常见问题 (Faq) 。 应用程序将通过团队 [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)构建一个响应库，以获取交互式用户体验的响应库，而不是手动应答每个查询。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![响应的示例视图](../assets/images/quick-responses.png)
 
-## <a name="remote-support-9734"></a>远程支持 &#9734;
+## <a name="remote-support"></a>远程支持
 
-远程支持是[Microsoft 团队的 bot](../bots/what-are-bots.md) ，它在整个组织和内部支持团队中提供了支持请求者之间的重点界面。  最终用户可以提交、编辑或撤消支持请求，并且支持团队可以在团队平台内响应、管理和更新所有请求。
+远程支持是 [Microsoft 团队的 bot](../bots/what-are-bots.md) ，它在整个组织和内部支持团队中提供了支持请求者之间的重点界面。  最终用户可以提交、编辑或撤消支持请求，并且支持团队可以在团队平台内响应、管理和更新所有请求。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport)
 
@@ -308,7 +320,7 @@ Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 :::column-end:::
 :::row-end:::
 
-## <a name="request-a-team-9734"></a>请求-a-团队 &#9734;
+## <a name="request-a-team"></a>请求-a 团队
 
 请求-a 团队是 Microsoft 团队应用，可优化企业组织的新团队创建。 当通过集成向导导向的请求表单、嵌入的审批流程、请求状态仪表板和自动化的团队版本来创建新的团队实例时，应用程序支持标准化和最佳做法。
 
@@ -325,14 +337,14 @@ Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-channels-9734"></a>频道 &#9734; 的 Scrums
+## <a name="scrums-for-channels"></a>频道的 Scrums
 
 频道的 Scrums 是一个 scrum 助理应用程序，它使用户能够在 Microsoft 团队内的频道中安排和运行 Scrums。 对于由来自不同地理位置和时区的成员组成的远程团队和团队而言，应用程序非常适合共享每日更新，并确保参与 scrum 独立式会议。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
 > [!NOTE]
-> 若要在群聊中开展 scrum 会议，请参阅我们[的 Scrums For Group chat](#scrums-for-group-chat-)应用程序模板。
+> 若要在群聊中开展 scrum 会议，请参阅我们 [的 Scrums For Group chat](#scrums-for-group-chat) 应用程序模板。
 
 :::row:::
   :::column span="2":::
@@ -345,7 +357,7 @@ Icebreaker 是一种[Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-group-chat-9734"></a>Scrums &#9734; 的组聊天
+## <a name="scrums-for-group-chat"></a>分组聊天的 Scrums
 
 > [!NOTE]
 > Scrums 状态应用程序模板已更新，现已 Scrums 进行分组聊天。
@@ -374,9 +386,9 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 ![列表搜索应用程序](../assets/images/list-search-template.png)
 
-## <a name="staff-check-ins-9734"></a>人员签入 &#9734;
+## <a name="staff-check-ins"></a>人员签入
 
-人员签入是基于电源的基于[应用](/powerapps/powerapps-overview)的应用程序，它能够在业务和现场人员之间监督交流。 员工可以直接从团队的计划或临时提供时间关键型信息和状态更新。 该应用支持实时位置、照片和笔记以及提醒通知和自动工作流。
+人员签入是基于电源的基于 [应用](/powerapps/powerapps-overview)的应用程序，它能够在业务和现场人员之间监督交流。 员工可以直接从团队的计划或临时提供时间关键型信息和状态更新。 该应用支持实时位置、照片和笔记以及提醒通知和自动工作流。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
@@ -401,7 +413,7 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 
 ## <a name="workplace-awards-9734"></a>工作场所奖项 &#9734;
 
-Workplace 奖项是一个团队应用程序模板，它提供了积极的框架来促进认可，并鼓励新式工作场所的员工感谢文化。 此应用程序使您能够设置和管理员工奖励和表彰（R&R）计划，在该计划中，员工可以轻松地提名和签署同事，而您的 R&R 主持人可以查看提交的 nominations、授予奖项并通知收件人。
+Workplace 奖项是一个团队应用程序模板，它提供了积极的框架来促进认可，并鼓励新式工作场所的员工感谢文化。 该应用程序使您能够设置和管理员工奖励和表彰 (R&R) 计划，在该计划中，员工可以轻松地提名和签署同事，而您的 R&R 负责人可以查看提交的 nominations、授予奖项并通知收件人。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
 
