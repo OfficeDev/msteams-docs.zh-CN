@@ -157,7 +157,7 @@
       items:
         - name: 设计概述
           href: tabs/design/tabs.md
-        - name: 移动客户端上的选项卡
+        - name: 移动设备上的选项卡
           href: tabs/design/tabs-mobile.md
     - name: 操作指南
       expanded: true
