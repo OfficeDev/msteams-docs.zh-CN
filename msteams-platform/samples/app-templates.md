@@ -3,12 +3,12 @@ title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 ms.topic: reference
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279802"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326355"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -67,6 +67,21 @@ ms.locfileid: "48279802"
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
 ![会议室演示](../assets/images/book-a-room.png)
+
+## <a name="building-access-9734"></a>构建 Access &#9734;
+
+构建 Access 是一种基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)的应用程序，它支持通过启用设施主管来管理、跟踪和报告员工现场状态，从而管理生成占有阈值和社会 distancing 规范。 该应用程序使用 Microsoft [Power Apps](/powerapps/powerapps-overview)和 [power 自动化](/power-automate/getting-started)进行构建，并与 microsoft 团队进行了深入的集成，使组织能够确定构建准备情况，建立现场访问的资格条件，并收集有关未来规划的见解。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+
+:::row:::
+   :::column span="":::
+     ![构建访问预留卡](../assets/images/building-access-reservation.png)
+   :::column-end:::
+   :::column span="":::
+      ![构建访问键视图](../assets/images/building-access-access-key.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="celebrations"></a>Celebrations
 

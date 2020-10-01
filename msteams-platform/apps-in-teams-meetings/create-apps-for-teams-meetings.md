@@ -5,17 +5,17 @@ description: 创建团队会议的应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: a489a2a439c8aaacc2900e4c62084f13b34b3e30
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 847e79d188a52892cda8732a2b58cee068cb5e95
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279676"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326303"
 ---
-# <a name="create-apps-for-teams-meetings-preview"></a>为团队会议 (预览) 创建应用程序
+# <a name="create-apps-for-teams-meetings-release-preview"></a>为团队会议 (发布预览) 创建应用程序
 
 >[!IMPORTANT]
-> Microsoft 团队预览版中包含的功能仅用于早期访问、测试和反馈目的。 他们可能会在公开发布之前进行更改，并且不应在生产应用程序中使用。
+> Microsoft 团队版中突出显示的功能提供了仅用于及早了解和反馈的目的预览。 它们可能会在启用前进行更改。
 
 ## <a name="prerequisites-and-considerations"></a>先决条件和注意事项
 
@@ -27,11 +27,11 @@ ms.locfileid: "48279676"
 
 1. 某些会议 Api （如 `GetParticipant` 将需要 [机器人注册和 BOT 应用 ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) 生成身份验证令牌）。
 
-1. 开发人员必须遵循 ["常规团队" 选项卡设计指南](../tabs/design/tabs.md) （适用于会议前后方案以及会议期间） (参阅 [会议对话框](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) 和 [会议中的选项卡](../apps-in-teams-meetings/design/designing-in-meeting-tab.md) 设计准则) 。
+1. 在团队会议过程中，开发人员必须遵守会议前和会议后对话的常规 [团队选项卡设计指南](../tabs/design/tabs.md) 以及会议对话 [指南](design/designing-in-meeting-dialog.md) 。
 
 ## <a name="meeting-apps-api-reference"></a>会议应用程序 API 参考
 
-|API|说明|请求|Source|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 获取上下文信息以在 "团队" 选项卡中显示相关内容。 |_**microsoftTeams getContext ( ( ) => {/*...*/} ) **_|Microsoft 团队客户端 SDK|
 |**GetParticipant**|此 API 允许 bot 按会议 id 和参与者 id 提取参与者信息。|**获取** _ **/v1/meetings/{meetingId}/participants/{participantId}？ tenantId = {tenantId}**_ |Microsoft Bot 框架 SDK|
@@ -98,11 +98,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
+    "meetingRole":"Presenter",
+    "conversation":{
+            "isGroup": true,
+            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
+        }
 }
 ```
 
@@ -112,10 +112,10 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Attendee",
+   "meetingRole":"Presenter",
    "conversation":{
       "isGroup":true,
-      "id":"19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
+      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
    }
 }
 ```
@@ -141,7 +141,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>查询参数
 
-**conversationId**：会话标识符。 必需
+**conversationId**：会话标识符。 必填
 
 #### <a name="request-payload"></a>请求有效负载
 
@@ -149,17 +149,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-   "type":"message",
-   "text":"John Phillips assigned you a weekly todo",
-   "summary":"Don't forget to meet with Marketing next week",
-   "channelData":{
-      "notification":{
-         "alert":true,
-         "externalResourceUrl":"https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-      }
-   },
-   "replyToId":"1493070356924"
-}
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+    "notification": {
+    "alertInMeeting": true,
+    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
+    }
+},
+    "replyToId": "1493070356924"
+    }
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -210,6 +210,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 会议应用程序功能是通过**configurableTabs**  ->  **作用域**和**上下文**数组在应用程序清单中声明的。 *作用域* 定义了您的应用程序将在何处定义的人员和 *上下文* 。
 
+> [!NOTE]
+> 请使用 [开发人员预览版清单架构](../resources/schema/manifest-schema-dev-preview.md) 在你的应用程序清单中试用此架构。
+
 ```json
 "configurableTabs": [
     {
@@ -232,7 +235,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 ### <a name="context-property"></a>Context 属性
 
-该选项卡 `context` 和 `scopes` 属性在协调中使用，以确定您希望应用程序的显示位置。 当作用域中的选项卡 `personal` 只能有一个上下文，即， `personalTab`  `team` 或 `groupchat` 作用域的选项卡可以有多个上下文。 Context 属性的可能值如下所示：
+该选项卡 `context` 和 `scopes` 属性在协调中使用，以确定您希望应用程序的显示位置。 或范围中的选项卡 `team` `groupchat` 可以有多个上下文。 Context 属性的可能值如下所示：
 
 * **channelTab**：团队频道标头中的一个选项卡。
 * **privateChatTab**：组标头中的一个选项卡，在一组不在团队或会议的上下文中的一组用户之间聊天。
@@ -257,9 +260,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 ### <a name="in-meeting"></a>会议中
 
-#### <a name="side-panel"></a>**侧面板**
+#### <a name="sidepanel"></a>**sidePanel**
 
-在应用程序清单中✔将 **sidePanel** 添加到 **meetingSurfaces** 数组中，如上文所述。
+在您的应用程序清单中✔将 **sidePanel** 添加到 **上下文** 阵列中，如上文所述。
 
 ✔在会议中以及在所有情况下，应用程序将呈现在320px 中的 "会议" 选项卡中，宽度为宽。 您的选项卡必须针对此进行优化。 *请参阅* [FrameContext 接口](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
@@ -269,7 +272,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 #### <a name="in-meeting-dialog"></a>**会议对话**
 
-✔您必须遵守 [会议中的对话框设计准则](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md)。
+✔您必须遵守 [会议中的对话框设计准则](design/designing-in-meeting-dialog.md)。
 
 ✔引用 [选项卡的团队身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。
 
@@ -278,7 +281,10 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 ✔作为通知请求负载的一部分，请添加承载要 showcased 内容的 URL。
 
 > [!NOTE]
-> 这些通知在本质上是永久性的。 在用户在 web 视图中执行某项操作后，必须调用 [**submitTask ( # B1 **](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数以自动消除。 这是应用程序提交的必要条件。 *另请参阅*[团队 SDK：任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
+>
+> * 这些通知在本质上是永久性的。 在用户在 web 视图中执行某项操作后，必须调用 [**submitTask ( # B1 **](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数以自动消除。 这是应用程序提交的必要条件。 *另请参阅*[团队 SDK：任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
+>
+> * 如果您希望您的应用程序支持匿名用户，初始的调用请求负载必须依赖于 `from.id`  用户的 (ID) 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 用户) 请求元数据的 (AZURE Active Directory ID。 *请参阅*[在选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md)和[创建并发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="post-meeting"></a>会议后
 

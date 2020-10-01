@@ -5,17 +5,14 @@ description: 如何将现有团队选项卡作为 SharePoint 框架 web 部件�
 keywords: sharepoint 框架开发的团队选项卡
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: d7f617f0967743eab84423cd31f78d4700db1c1c
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818939"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326345"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>在 SharePoint 中将 Microsoft 团队选项卡添加为 SPFx web 部件
-
-> [!IMPORTANT]
-> 此功能暂处于预览阶段，可能会发生变更。 不支持在生产环境中使用。 欢迎使用 [SharePoint 开发人员文档问题列表](https://github.com/SharePoint/sp-dev-docs/issues)提供有关此功能的反馈意见。
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>团队和 SharePoint 之间的丰富集成
 
@@ -70,7 +67,7 @@ ms.locfileid: "47818939"
 
 您还可以使用 SharePoint 框架实施 Microsoft 团队选项卡。 对于 SharePoint 开发人员，这极大地简化了团队选项卡的开发过程，因为 SharePoint 框架 web 部件托管在 SharePoint 中，无需任何外部服务（如 Azure）。 [了解有关在团队中使用 SharePoint 框架的详细信息。](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-## <a name="introduction"></a>介绍
+## <a name="introduction"></a>简介
 
 这些说明将介绍如何从 Microsoft 团队示例应用中获取一个选项卡，并在 SharePoint 中使用它。 我们将使用 Azure 上已托管的选项卡，以将重点放在所需的集成工作上。
 
@@ -119,7 +116,7 @@ ms.locfileid: "47818939"
 
 ![Sharepoint 中选项卡的图像](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
-## <a name="more-information"></a>更多信息
+## <a name="more-information"></a>详细信息
 
 - [使用 SharePoint 框架生成 Microsoft Teams 选项卡 - 教程](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 - [在 SharePoint Online 中使用单个部件应用程序页面](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
