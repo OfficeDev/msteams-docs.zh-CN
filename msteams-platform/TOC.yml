@@ -103,6 +103,8 @@
           href: concepts/deploy-and-publish/apps-upload.md
         - name: 将应用发布到组织
           href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+        - name: 为 Teams 应用创建 SaaS 产品
+          href: concepts/deploy-and-publish/add-saas-offer.md
         - name: 在 AppSource 上发布应用
           items:
             - name: 了解 AppSource 提交内容
