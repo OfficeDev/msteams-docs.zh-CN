@@ -4,12 +4,12 @@ author: laujan
 description: 在团队平台中集成电源虚拟代理 chatbot
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 0a85738857015e4bce9627333ed6f1a74e489c43
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 125a114cb4775dfe2c9265afefae0257f57282df
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279697"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397685"
 ---
 # <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>将电源虚拟代理与 Microsoft 团队集成 chatbot
 
@@ -39,11 +39,12 @@ ms.locfileid: "48279697"
 
   * 从 "团队" 实例的左侧导航栏底部选择 "应用商店" 图标，然后搜索 **应用程序 Studio**。
 >
-&emsp;&emsp; <img  width="450px" title="在存储区中查找应用程序 Studio" src="../../assets/images/get-started/app-studio-store.png" alt="app in studio store view"/>    
+
+&emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
   * 选择 " **应用程序制作室** " 磁贴，然后在弹出对话框中选择 " **安装** "。
 >
-&emsp;&emsp; <img  width="450px" title="安装应用程序 Studio" src="../../assets/images/get-started/app-studio-install.png" alt="install app studio view"/>
+&emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 2. **在应用程序 Studio 中创建团队应用程序清单**。  团队中的 bot 由应用部件清单（ (JSON) 文件）定义，该文件提供有关你的 bot 及其功能的基本信息。 在**应用程序 Studio**中选择**清单编辑器**   =>  **创建新的应用程序**。
 3. **添加你的 bot 详细信息**。 有关每个字段的完整说明，请参阅 [清单架构定义](../../resources/schema/manifest-schema.md)。 请务必填写所有必填字段。

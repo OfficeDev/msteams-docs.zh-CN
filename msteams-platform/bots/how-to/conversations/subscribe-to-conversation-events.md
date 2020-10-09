@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: 如何订阅来自 Microsoft 团队 bot 的对话事件。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a8c6c39989a7d09a325412438f0d2ace78259cb7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: c678690b1dc2c948cceacdf42c95f169fff753bb
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801010"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397678"
 ---
 # <a name="subscribe-to-conversation-events"></a>订阅对话事件
 
@@ -290,7 +290,7 @@ async def on_teams_channel_deleted_activity(
 
 ### <a name="team-members-added"></a>添加的团队成员
 
-在 `teamMemberAdded` 首次将事件添加到对话中，以及每次向团队或组聊天中安装了你的 bot 时，都会将该事件发送到你的 bot。 用户信息（ID）对你的 bot 是唯一的，并且可以缓存以供你的服务将来使用（例如，向特定用户发送邮件）。
+在 `teamMemberAdded` 首次将事件添加到对话中，以及每次向团队或组聊天中安装了你的 bot 时，都会将该事件发送到你的 bot。  (ID) 的用户信息对你的 bot 而言是唯一的，并且可以缓存以供你的服务将来使用 (例如，向特定用户发送邮件) 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -339,7 +339,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是在将 bot 添加**到团队**时，你的 bot 将收到的邮件。
+这是在将 bot 添加 **到团队**时，你的 bot 将收到的邮件。
 
 ```json
 {
@@ -433,6 +433,8 @@ async def on_teams_members_added_activity(
 ### <a name="team-members-removed"></a>删除了团队成员
 
 `teamMemberRemoved`如果从团队中删除了该事件，并且每次从你的 bot 所属的团队中删除任何用户，则该事件将发送到你的 bot。 您可以通过查看的对象确定删除的新成员是机器人本身还是用户 `Activity` `turnContext` 。  如果 `Id` 对象的字段与 `MembersRemoved` 对象的 `Id` 字段相同 `Recipient` ，则删除的成员是 bot，否则是用户。  `Id`通常情况下，bot 将：`28:<MicrosoftAppId>`
+
+[!Note] 从租户中永久删除用户时， `membersRemoved conversationUpdate` 将触发事件。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

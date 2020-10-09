@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 87fa50bc374310c2fe5d8081b18268c6298fb515
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279662"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397664"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -18,10 +18,10 @@ ms.locfileid: "48279662"
 
 更改日志将列出 Microsoft 团队平台和此文档集的更改。 有时，条目可用于吸引团队开发人员感兴趣的新功能。
 
-| **Date** | **Notes** | **更改的主题** |
+| **Date** | **备注** | **更改的主题** |
 | -------- | --------- | ------------------ |
 |09/22/2020|新建 "团队入门" 指南|[构建你的第一个团队应用概述](build-your-first-app/build-first-app-overview.md)|
-|9/18/2020| (公共预览版中对会议团队应用程序的支持) |为团队[会议中](apps-in-teams-meetings/teams-apps-in-meetings.md)[的团队会议和应用创建应用程序](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
+|9/18/2020|对会议团队应用 (发布预览的支持) |为团队[会议中](apps-in-teams-meetings/teams-apps-in-meetings.md)[的团队会议和应用创建应用程序](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
 |8/19/2020|使用 Microsoft Graph 导入团队邮件|[使用 Microsoft Graph 将第三方平台消息导入 Teams](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |传入 webhook 中的自适应卡支持已移至 GA。|[使用传入 webhook 发送自适应卡](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|开始使用 Visual Studio 工具包生成团队应用程序。|[使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序](toolkit/visual-studio-overview.md) |
@@ -32,7 +32,7 @@ ms.locfileid: "48279662"
 |07/15/2020|为工作组创建虚拟助理|[Microsoft 团队的虚拟助手](samples/virtual-assistant.md)|
 |07/14/2020|呈现本机加载指示器文档|[显示本机加载指示器](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|开始使用 Visual Studio Code 工具包生成团队应用程序。|[使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序](toolkit/visual-studio-code-overview.md) |
-|07/01/2020|针对团队 web 和桌面客户端公开的选项卡的单一登录|[ (SSO) 的单一登录 ](tabs/how-to/authentication/auth-aad-sso.md)|
+|07/01/2020|针对团队 web 和桌面客户端公开的选项卡的单一登录|[ (SSO) 的单个 Sign-On ](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| 清单架构已更新到版本1。7| [参考： Microsoft 团队的清单架构](resources/schema/manifest-schema.md)|
 | 05/20/2020 | 使用 Microsoft Graph Api 的特定于资源的同意权限是在开发人员预览版中。 |[特定于资源的同意 (RSC) —开发人员预览版](graph-api/rsc/resource-specific-consent.md) |
 |5/18/2020|将电源虚拟代理与团队集成|[将电源虚拟代理与 Microsoft 团队集成 chatbot](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

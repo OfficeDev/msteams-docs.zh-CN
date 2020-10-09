@@ -5,12 +5,12 @@ description: 构建首个 Microsoft 团队应用程序的概述和先决条件
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279712"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397692"
 ---
 # <a name="build-your-first-teams-app-overview"></a>构建你的第一个团队应用概述
 
@@ -56,7 +56,7 @@ ms.locfileid: "48279712"
     1. 在 "团队客户端" 中，选择 " **应用**"。
     1. 查找用于 **上传自定义应用程序**的选项。
 
-    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="图显示了在团队中可以上载自定义应用程序的位置。":::
+    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="图显示了在团队中可以上载自定义应用程序的位置。&quot;:::
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -66,10 +66,21 @@ ms.locfileid: "48279712"
 你可以通过加入 Microsoft 365 开发人员计划获取免费的团队测试帐户，以允许应用旁加载。  (注册过程大约需要两分钟时间。 ) 
 
 1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
-1. 选择 " **立即加入** "，然后按照屏幕上的说明操作。
-1. 进入 "欢迎" 屏幕时，选择 " **设置 E5 订阅**"。
+1. 选择 &quot; **立即加入** &quot;，然后按照屏幕上的说明操作。
+1. 进入 &quot;欢迎&quot; 屏幕时，选择 " **设置 E5 订阅**"。
 1. 设置管理员帐户。 完成后，您应该会看到类似这样的屏幕。
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册 Microsoft 365 开发人员计划后，您会看到的示例。":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="图显示了在团队中可以上载自定义应用程序的位置。&quot;:::
+
+<!-- markdownlint-disable MD033 -->
+<details>
+
+<summary>如果您看不到旁加载选项或没有团队帐户，<b>请选择此处</b>。</summary>
+
+你可以通过加入 Microsoft 365 开发人员计划获取免费的团队测试帐户，以允许应用旁加载。  (注册过程大约需要两分钟时间。 ) 
+
+1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
+1. 选择 &quot; **立即加入** &quot;，然后按照屏幕上的说明操作。
+1. 进入 &quot;欢迎&quot; 屏幕时，选择 ":::
 1. 使用刚刚设置的管理员帐户登录到团队。
 1. 验证您是否现在已 **上载自定义应用程序** 选项。
 
@@ -85,13 +96,36 @@ ms.locfileid: "48279712"
 1. 安装 [ngrok](https://ngrok.com/download)。
 1. 安装最新版本的 [Visual Studio Code](https://code.visualstudio.com/download)。  (早期版本可能在工具包中不起作用。 ) 
 1. 在 Visual Studio Code 中， **Extensions**选择 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: 左侧活动栏上的 "扩展"，然后安装**Microsoft 团队工具包**。
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="图显示了在 Visual Studio Code 中可以安装 Microsoft 团队工具包扩展的位置。":::
+
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="图显示了在团队中可以上载自定义应用程序的位置。&quot;:::
+
+<!-- markdownlint-disable MD033 -->
+<details>
+
+<summary>如果您看不到旁加载选项或没有团队帐户，<b>请选择此处</b>。</summary>
+
+你可以通过加入 Microsoft 365 开发人员计划获取免费的团队测试帐户，以允许应用旁加载。  (注册过程大约需要两分钟时间。 ) 
+
+1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
+1. 选择 &quot; **立即加入** &quot;，然后按照屏幕上的说明操作。
+1. 进入 &quot;欢迎&quot; 屏幕时，选择 ":::
 
 ## <a name="about-the-tutorials"></a>关于教程
 
 你可以从任意团队开始 **构建你的第一个应用** 课程。 如果你不确定首先要转到的位置，请遵循初级友好路径，并构建一个 "Hello，World！" 应用程序.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="显示团队 "构建您的首个应用" 教程的学习途径的技能树。" border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="图显示了在团队中可以上载自定义应用程序的位置。&quot;:::
+
+<!-- markdownlint-disable MD033 -->
+<details>
+
+<summary>如果您看不到旁加载选项或没有团队帐户，<b>请选择此处</b>。</summary>
+
+你可以通过加入 Microsoft 365 开发人员计划获取免费的团队测试帐户，以允许应用旁加载。  (注册过程大约需要两分钟时间。 ) 
+
+1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
+1. 选择 &quot; **立即加入** &quot;，然后按照屏幕上的说明操作。
+1. 进入 &quot;欢迎&quot; 屏幕时，选择 " border="false":::
 
 ## <a name="next-step"></a>后续步骤
 

@@ -3,12 +3,12 @@ title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 ms.topic: reference
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326355"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397727"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -90,6 +90,18 @@ Celebrations 是一种团队应用，可帮助工作组成员庆祝他人的生�
 该应用程序为所有团队成员提供了一个简单的界面，以供个人添加和查看他们的事件，还允许用户选择共享事件的团队。
 
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
+
+## <a name="checklist-9734"></a>检查表 &#9734;
+
+检查表是一个自定义 Microsoft 团队 [消息扩展](../messaging-extensions/what-are-messaging-extensions.md) 应用程序，它使你能够通过在聊天或频道中创建共享检查表来与你的团队进行协作。 所有团队平台客户端（桌面、浏览器、iOS 和 Android）都支持应用程序，并准备好在 Microsoft 365 订阅中进行部署。  
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+
+:::row:::
+:::column span="2":::
+    ![在团队视图中创建清单](../assets/images/checklist-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="company-communicator"></a>Company Communicator
 
@@ -276,7 +288,7 @@ Icebreaker 是一种 [Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 
 ![激励应用演示](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter"></a>事件报告器 
+## <a name="incident-reporter"></a>事件报告器
 
 事件报告程序是 [Microsoft 团队 bot](../bots/what-are-bots.md)  ，可优化组织中事件的管理。 机器人可促进自动化的事件数据收集、自定义的事件报告、相关的利益干系人通知和端到端事件跟踪。
 
@@ -307,6 +319,18 @@ Icebreaker 是一种 [Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 :::row:::
 :::column span="2":::
     ![授予徽章视图](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="poll-9734"></a>轮询 &#9734;
+
+轮询是一种自定义的 Microsoft 团队 [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md) 应用程序，使您能够在聊天或通道中快速创建和发送轮询，以收集团队意见和首选项。 所有团队平台客户端（桌面、浏览器、iOS 和 Android）都支持应用程序，并准备好在 Microsoft 365 订阅中进行部署。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-poll-app)
+
+:::row:::
+  :::column span="1":::
+    ![在团队视图中创建投票](../assets/images/poll-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
@@ -408,6 +432,18 @@ Microsoft 团队中的协作通常会引用 SharePoint 列表中项目中包含�
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
 ![创建签入视图](../assets/images/staff-check-ins-create.png)
+
+## <a name="survey-9734"></a>调查 &#9734;
+
+调查是一个自定义 Microsoft 团队 [消息扩展](../messaging-extensions/what-are-messaging-extensions.md) 应用程序，它使您能够在聊天或渠道中创建调查，以收集数据并获得可操作的洞察力。  所有团队平台客户端（桌面、浏览器、iOS 和 Android）都支持应用程序，并准备好在 Microsoft 365 订阅中进行部署。  
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
+
+:::row:::
+  :::column span="2":::
+    ![在团队视图中创建调查](../assets/images/survey-app-template-compose-view.gif)
+:::column-end:::
+:::row-end:::
 
 ## <a name="visitor-management-9734"></a>访问者管理 &#9734;
 
