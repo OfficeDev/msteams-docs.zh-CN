@@ -1,20 +1,23 @@
 ---
-title: 使用自定义选项卡扩展团队应用程序
+title: 为团队创建选项卡
 author: laujan
-description: 如何使用应用程序 Studio 或手动为 Microsoft 团队创建选项卡。
+description: 了解如何创建 "团队" 选项卡
 keywords: 团队选项卡组频道可配置
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209716"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452755"
 ---
-# <a name="extend-your-teams-app-with-a-custom-tab"></a>使用自定义选项卡扩展团队应用程序
+# <a name="create-a-tab-for-microsoft-teams"></a>为 Microsoft 团队创建选项卡
 
-自定义选项卡使您能够为您承载于频道、组聊天和个人用户的 web 内容提供服务。 在较高级别，需要完成以下步骤以创建选项卡：
+> [!TIP]
+> 寻求更快的入门方式？ 使用 Microsoft 团队工具包创建 [个人](../../build-your-first-app/build-personal-tab.md) 或 [通道和组](../../build-your-first-app/build-channel-tab.md) 选项卡。
+
+通过选项卡，您可以为承载于频道、组聊天和个人用户的 web 内容提供服务。 在较高级别，需要完成以下步骤以创建选项卡：
 
 1. 准备开发环境。
 1.  (s) 创建页面。
@@ -110,7 +113,7 @@ ms.locfileid: "48209716"
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|字符串|2048 个字符|✔|指向 "配置" 页的 https://URL。|
-|`canUpdateConfiguration`|布尔值|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置 `true`|
+|`canUpdateConfiguration`|Boolean|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置 `true`|
 |`scopes`|枚举数组|1|✔|可配置的选项卡仅支持 `team` 和 `groupchat` 范围。 |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>简单通道/组选项卡清单示例

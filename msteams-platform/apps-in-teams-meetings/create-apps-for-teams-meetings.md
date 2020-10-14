@@ -5,17 +5,17 @@ description: 创建团队会议的应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: 847e79d188a52892cda8732a2b58cee068cb5e95
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: e80dd50590d9e0828ab094c691a6b8e07ace3b0c
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326303"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452622"
 ---
-# <a name="create-apps-for-teams-meetings-release-preview"></a>为团队会议 (发布预览) 创建应用程序
+# <a name="create-apps-for-teams-meetings-developer-preview"></a>创建团队相关应用程序会议 (开发人员预览版) 
 
 >[!IMPORTANT]
-> Microsoft 团队版中突出显示的功能提供了仅用于及早了解和反馈的目的预览。 它们可能会在启用前进行更改。
+> Microsoft 团队开发人员预览版中包含的功能仅用于早期访问、测试和反馈目的。 他们可能会在公开发布之前进行更改，并且不应在生产应用程序中使用。
 
 ## <a name="prerequisites-and-considerations"></a>先决条件和注意事项
 
@@ -31,7 +31,7 @@ ms.locfileid: "48326303"
 
 ## <a name="meeting-apps-api-reference"></a>会议应用程序 API 参考
 
-|API|说明|请求|源|
+|API|说明|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 获取上下文信息以在 "团队" 选项卡中显示相关内容。 |_**microsoftTeams getContext ( ( ) => {/*...*/} ) **_|Microsoft 团队客户端 SDK|
 |**GetParticipant**|此 API 允许 bot 按会议 id 和参与者 id 提取参与者信息。|**获取** _ **/v1/meetings/{meetingId}/participants/{participantId}？ tenantId = {tenantId}**_ |Microsoft Bot 框架 SDK|
@@ -80,6 +80,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 {
     var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
     var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
+}
 ```
 
 * * *
@@ -94,32 +95,34 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>响应有效负载
 <!-- markdownlint-disable MD036 -->
 
+**meetingRole** 可以是 *组织者*、 *演示者*或 *与会者*。
+
 **示例 1**
 
 ```json
 {
-    "meetingRole":"Presenter",
-    "conversation":{
-            "isGroup": true,
-            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-        }
+  "user":
+  {
+      "id": "29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId": "6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+      "name": "Allan Deyoung",
+      "givenName": "Allan",
+      "surname": "Deyoung",
+      "email": "Allan.Deyoung@microsoft.com",
+      "userPrincipalName": "Allan.Deyoung@microsoft.com",
+      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+  },
+  "meeting":
+  {
+      "role ": "Presenter",
+      "inMeeting":true
+  },
+  "conversation":
+  {
+      "id": "<conversation id>"
+  }
 }
 ```
-
-**meetingRole** 可以是 *组织者*、 *演示者*或 *与会者*。
-
-**示例 2**
-
-```json
-{
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
-}
-```
-
 #### <a name="response-codes"></a>响应代码
 
 **403**：不允许应用获取参与者信息。 这是最常见的错误响应，当应用程序未安装在会议中时（例如，当租户管理员禁用应用或在 live 网站缓解过程中被阻止）时，将会触发此响应。  
@@ -143,6 +146,8 @@ POST /v3/conversations/{conversationId}/activities
 
 **conversationId**：会话标识符。 必填
 
+**completionBotId**：这是 Bot ID。 可选
+
 #### <a name="request-payload"></a>请求有效负载
 
 # <a name="json"></a>[JSON](#tab/json)
@@ -153,13 +158,13 @@ POST /v3/conversations/{conversationId}/activities
     "text": "John Phillips assigned you a weekly todo",
     "summary": "Don't forget to meet with Marketing next week",
     "channelData": {
-    "notification": {
-    "alertInMeeting": true,
-    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-    }
-},
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+        }
+    },
     "replyToId": "1493070356924"
-    }
+}
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -167,14 +172,14 @@ POST /v3/conversations/{conversationId}/activities
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
-{
+  {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-};
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+  };
 activity.ChannelData = new TeamsChannelData
-{
+  {
     Notification = notification
-};
+  };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -186,10 +191,10 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
         replyActivity.channelData = {
             notification: {
                 alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>’
+                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
             }
         };
-        await context.sendActivity(replyActivity);
+await context.sendActivity(replyActivity);
 ```
 
 * * *
@@ -211,7 +216,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 会议应用程序功能是通过**configurableTabs**  ->  **作用域**和**上下文**数组在应用程序清单中声明的。 *作用域* 定义了您的应用程序将在何处定义的人员和 *上下文* 。
 
 > [!NOTE]
-> 请使用 [开发人员预览版清单架构](../resources/schema/manifest-schema-dev-preview.md) 在你的应用程序清单中试用此架构。
+> * 请使用 [开发人员预览版清单架构](../resources/schema/manifest-schema-dev-preview.md) 在你的应用程序清单中试用此架构。
+> * 移动平台目前仅支持清单架构1。6
+> * 移动平台仅支持准备会议和投递会议表面中的选项卡。 在会议中 (会议中的对话和选项卡) 的会议体验将很快可用
 
 ```json
 "configurableTabs": [

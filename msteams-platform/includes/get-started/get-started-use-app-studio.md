@@ -93,7 +93,7 @@ Bot 是向应用程序添加功能的最常见方法。 Hello world 示例已将
 
 <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-添加 bot 名称 `Contoso bot` ，例如，并单击 " *范围*" 下的两个按钮。
+添加 bot 名称 `Contoso bot` ，例如，并选择 " *作用域*" 下的所有三个按钮。
 
 选择 " *创建 bot* " 退出对话框。 应用程序 Studio 将花点时间向 Microsoft 注册你的 bot，然后应在 bot 列表中显示新的 bot。 现在，在记事本中打开文本文件并将新的 bot id 复制并粘贴到该文件中是一个很合适的时机。 稍后将需要此 id。
 

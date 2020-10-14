@@ -1,18 +1,18 @@
 ---
-title: 构建团队 bot
+title: 入门-构建机器人
 author: heath-hamilton
-description: 了解如何为你的首个 Microsoft 团队应用构建机器人。
+description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队 bot。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 78fe535137864a72dcacf20857572599a7c2409a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237823"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452790"
 ---
-# <a name="build-a-teams-bot"></a>构建团队 bot
+# <a name="build-a-bot-for-microsoft-teams"></a>为 Microsoft 团队构建机器人
 
 您将在本教程中构建基本 *机器人* 应用程序。 Bot 充当团队用户与 web 服务之间的媒介。 用户可以与机器人聊天以快速获取信息或启动服务执行的工作流和任务。
 
@@ -48,10 +48,10 @@ Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
 1. 在 " **添加功能** " 屏幕上，依次选择 **Bot** 和 " **下一步**"。
 1. 选择 " **创建新的 Bot** 并 **登录** " 以使用 Microsoft 365 开发帐户登录。<br/>
-:::image type="content" source="../assets/images/build-your-first-app/vsc-create-bot.png" alt-text="该图显示了如何在团队工具包中登录到 Microsoft 365 帐户以创建新的 bot。":::
+:::image type="content" source="../assets/images/build-your-first-app/vsc-create-bot.png" alt-text="该图显示了如何在团队工具包中登录到 Microsoft 365 帐户以创建新的 bot。&quot;:::
 1. 将你的 bot ID 和密码存储 (稍后需要一些) 。
-1.  (可选) 输入你的 bot 的自定义名称，然后选择 " **创建**"。  (记住，这是你的 bot 的名称，而不是你已指定的团队应用程序的名称。 ) 
-1. 选择屏幕底部的 " **完成** " 以配置项目。
+1.  (可选) 输入你的 bot 的自定义名称，然后选择 &quot; **创建**&quot;。  (记住，这是你的 bot 的名称，而不是你已指定的团队应用程序的名称。 ) 
+1. 选择屏幕底部的 &quot; **完成** " 以配置项目。
 
 ## <a name="2-identify-relevant-app-project-components"></a>2. 确定相关的应用程序项目组件
 
@@ -136,7 +136,10 @@ Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 1. 转到 **Bot 管理 > 现有的 bot 注册** ，并选择在安装过程中创建的 bot。
 1. 在 " **机器人终结点地址** " 字段中，输入您在其中承载机器人的本地 web 服务器 (`baseUrl10` 值) 并追加 `/api/messages` 到它。
 
-    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="图中显示可在团队工具包中配置 bot 终结点 URL 的位置。":::
+    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="该图显示了如何在团队工具包中登录到 Microsoft 365 帐户以创建新的 bot。&quot;:::
+1. 将你的 bot ID 和密码存储 (稍后需要一些) 。
+1.  (可选) 输入你的 bot 的自定义名称，然后选择 &quot; **创建**&quot;。  (记住，这是你的 bot 的名称，而不是你已指定的团队应用程序的名称。 ) 
+1. 选择屏幕底部的 &quot; **完成** ":::
 
 你的 bot 将能够响应团队中的邮件。
 
@@ -169,18 +172,23 @@ Microsoft 团队工具包可帮助您为您的应用程序设置以下组件：
 
 1. 在团队中，选择左侧的 " **更多**" :::image type="icon" source="../assets/icons/teams-client-more.png"::: 。
 1. 找到并选择您刚刚旁加载的 bot。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="图示显示在团队中访问机器人的位置。":::
-1. 在 "撰写" 框中，发送一 `Hello` 封邮件。
+   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="该图显示了如何在团队工具包中登录到 Microsoft 365 帐户以创建新的 bot。&quot;:::
+1. 将你的 bot ID 和密码存储 (稍后需要一些) 。
+1.  (可选) 输入你的 bot 的自定义名称，然后选择 &quot; **创建**&quot;。  (记住，这是你的 bot 的名称，而不是你已指定的团队应用程序的名称。 ) 
+1. 选择屏幕底部的 &quot; **完成** " 框中，发送一 `Hello` 封邮件。
 
 你的 bot 将回复如下邮件等内容。
 
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="显示用户将 "Hello" 告诉团队 bot 并收到响应的屏幕截图。":::
+:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="该图显示了如何在团队工具包中登录到 Microsoft 365 帐户以创建新的 bot。&quot;:::
+1. 将你的 bot ID 和密码存储 (稍后需要一些) 。
+1.  (可选) 输入你的 bot 的自定义名称，然后选择 &quot; **创建**&quot;。  (记住，这是你的 bot 的名称，而不是你已指定的团队应用程序的名称。 ) 
+1. 选择屏幕底部的 &quot; **完成** ":::
 
 ## <a name="well-done"></a>干的好
 
 恭喜你！ 您有一个基本的团队 bot，可以与用户一次或在组设置 (频道和聊天) 通信。
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 如果你在完成本教程时遇到问题，以下信息可能会有所帮助。
 

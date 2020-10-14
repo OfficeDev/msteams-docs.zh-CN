@@ -1,37 +1,40 @@
 ---
-title: 构建并运行 "Hello，World！" Teams 应用
+title: 入门-构建并运行您的首个应用程序
 author: heath-hamilton
-description: 生成并运行您的首个 Microsoft 团队应用程序（一个显示 "Hello，World！" 的个人选项卡）
+description: 快速创建显示 "Hello，World！" 的 Microsoft 团队应用程序 使用 Microsoft 团队工具包的邮件。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 20c9eee14649cda23e1d682940f489e78cba24b9
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237830"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452643"
 ---
-# <a name="build-a-hello-world-teams-app"></a>构建 "Hello，World！" Teams 应用
+# <a name="build-and-run-your-first-microsoft-teams-app"></a>生成并运行你的首个 Microsoft 团队应用
 
-您可以通过构建显示为 "Hello，World！" 的个人选项卡，直接跳转到 Microsoft 团队平台开发。
+您可以通过构建显示为 "Hello，World！" 的个人选项卡，直接跳转到 Microsoft 团队开发。
 
 ## <a name="1-create-your-app-project"></a>1. 创建您的应用程序项目
 
 使用 Visual Studio Code 中的 Microsoft 团队工具包设置您的首个应用程序项目。
 
 1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队**"， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **创建新的团队应用**"。
-:::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="显示如何使用 Visual Studio Code 团队工具包创建新应用程序的屏幕截图。":::
+:::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="显示如何使用 Visual Studio Code 团队工具包创建新应用程序的屏幕截图。&quot;:::
 1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
-1. 在 " **添加功能** " 屏幕上，依次选择 **"** **下一步**"。
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="显示如何使用 Visual Studio Code 团队工具包配置应用程序项目的屏幕截图。":::
-1. 检查 " **个人" 选项卡** 选项，然后选择屏幕底部的 " **完成** " 以配置项目。
+1. 在 &quot; **添加功能** " 屏幕上，依次选择 **"** **下一步**"。
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="显示如何使用 Visual Studio Code 团队工具包创建新应用程序的屏幕截图。&quot;:::
+1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
+1. 在 &quot; **添加功能** " 以配置项目。
 
 ## <a name="2-understand-important-app-project-components"></a>2. 了解重要的应用程序项目组件
 
 工具包配置项目后，您就可以使用组件为团队构建基本的个人选项卡。 项目目录和文件显示在 Visual Studio Code 的 "资源管理器" 区域中。
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="显示 Visual Studio Code 中的 "个人" 选项卡的应用程序项目文件的屏幕截图。":::
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="显示如何使用 Visual Studio Code 团队工具包创建新应用程序的屏幕截图。&quot;:::
+1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
+1. 在 &quot; **添加功能** ":::
 
 让我们花点时间了解一些主要文件团队应用程序开发人员使用的。
 
@@ -51,7 +54,7 @@ ms.locfileid: "48237830"
 
 以下是有关应用程序包文件的一些详细信息：
 
-|姓名|类型|Size|清单位置|工具包文件名|
+|名称|类型|Size|清单位置|工具包文件名|
 |---|---|:---:|:---:|-----|
 |**应用程序清单**|`.json`| — | — |`.publish/manifest.json`|
 |**颜色徽标**|`.png`|192 &times; 192 像素|`icon.color`|`.publish/color.png`|
@@ -66,7 +69,9 @@ ms.locfileid: "48237830"
 1. 在终端中，转到您的应用程序项目的根目录并运行该目录 `npm install` 。
 1. 运行 `npm start` 。 完成后，已 **成功编译了！** 终端中的邮件。
 1. 打开浏览器并转到 `https://localhost:3000` 以查看名为 **Microsoft 团队选项卡**的空白网页。 (不会担心您无法看到页面上的任何内容。 ) <br/>
-   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="显示要在浏览器中查看正在运行的应用程序的外观的屏幕截图。":::
+   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="显示如何使用 Visual Studio Code 团队工具包创建新应用程序的屏幕截图。&quot;:::
+1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
+1. 在 &quot; **添加功能** ":::
 
 ## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. 设置应用程序的安全隧道
 
@@ -76,7 +81,9 @@ ms.locfileid: "48237830"
 
 1. 打开一个新的终端并运行 `ngrok http 3000` 。
 1. 复制你提供的 HTTPS URL (请参阅以下示例) 。
-:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="显示 ngrok 正在运行的终端的屏幕截图。":::
+:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="显示如何使用 Visual Studio Code 团队工具包创建新应用程序的屏幕截图。&quot;:::
+1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
+1. 在 &quot; **添加功能** ":::
 1. 在 `.publish` 目录中，打开 `Development.env` 。
 1. 将 `baseUrl0` 值替换为复制的 URL。  (例如，改 `baseUrl0=http://localhost:3000` 为 `baseUrl0=https://85528b2b3ba5.ngrok.io` 。 ) 
 
@@ -92,9 +99,12 @@ ms.locfileid: "48237830"
 1. 使用允许应用旁加载的帐户登录到团队客户端。  (如果您不能确定，请了解如何获取 [团队开发帐户](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)。 ) 
 1. 选择 " **应用**"，然后选择 " **上载自定义应用**"。
 1. 转到您的应用程序项目 `.publish` 文件夹，然后选择 `Development.zip` 。 将显示安装模式。
-:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="显示团队应用安装模式示例的屏幕截图。":::
-1. 选择 " **添加** " 以安装您的应用程序。
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="显示在团队中运行的示例 "Hello，World！" 个人选项卡应用程序的屏幕截图。":::
+:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="显示如何使用 Visual Studio Code 团队工具包创建新应用程序的屏幕截图。&quot;:::
+1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
+1. 在 &quot; **添加功能** " 以安装您的应用程序。
+:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="显示如何使用 Visual Studio Code 团队工具包创建新应用程序的屏幕截图。&quot;:::
+1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
+1. 在 &quot; **添加功能** ":::
 
 🎉祝贺！ 你的应用程序正在团队中运行。
 
@@ -105,6 +115,6 @@ ms.locfileid: "48237830"
 > [!div class="nextstepaction"]
 > [添加到你的个人选项卡](../build-your-first-app/build-personal-tab.md)
 > [!div class="nextstepaction"]
-> [生成通道选项卡](../build-your-first-app/build-channel-tab.md)
+> [创建频道选项卡](../build-your-first-app/build-channel-tab.md)
 > [!div class="nextstepaction"]
-> [构建 bot](../build-your-first-app/build-bot.md)
+> [创建机器人](../build-your-first-app/build-bot.md)

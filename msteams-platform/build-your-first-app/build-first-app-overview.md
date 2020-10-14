@@ -1,18 +1,18 @@
 ---
-title: 开始构建第一个团队应用
+title: 入门-构建您的首个应用程序概述和先决条件
 author: heath-hamilton
-description: 构建首个 Microsoft 团队应用程序的概述和先决条件
+description: 了解如何开始使用 Microsoft 团队应用程序开发和设置你的环境。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397692"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452601"
 ---
-# <a name="build-your-first-teams-app-overview"></a>构建你的第一个团队应用概述
+# <a name="build-your-first-microsoft-teams-app-overview"></a>构建你的首个 Microsoft 团队应用概述
 
 在 " **构建您的首个应用** 课程" 中，您将创建基本的团队应用程序。 每个教程演示如何构建一个简单的真实团队应用程序，同时向您介绍了常见工具、基本概念以及更高级的功能。
 

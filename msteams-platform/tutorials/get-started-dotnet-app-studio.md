@@ -5,12 +5,12 @@ keywords: '入门 .net c # csharp'
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: c29fdde23ff6ff0e8269ccaf256c5154c0145a7b
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 3aca72a43765036c0014a9e16fa585575fe97b2e
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210692"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452841"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>使用 c #/.NET 和应用程序工作室在 Microsoft 团队平台上开始使用
 
@@ -51,7 +51,7 @@ git version 2.17.1.windows.2
 
 ## <a name="download-the-sample"></a>下载示例
 
-我们提供了一个简单的[Hello，World！](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) 在 c # 中的示例可帮助您入门。 在终端窗口中，运行以下命令以将示例存储库克隆到本地计算机：
+我们提供了一个简单的 [Hello，World！](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) 在 c # 中的示例可帮助您入门。 在终端窗口中，运行以下命令以将示例存储库克隆到本地计算机：
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
@@ -76,7 +76,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 <a name="HostSample"></a>
 
 > [!Note]
-> 如果收到类似的错误 `Could not find a part of the path … bin\roslyn\csc.exe` ，请尝试使用命令更新该包 `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` 。 有关更多详细信息，请参阅[StackOverflow 上的此问题](https://stackoverflow.com/questions/32780315)。
+> 如果收到类似的错误 `Could not find a part of the path … bin\roslyn\csc.exe` ，请尝试使用命令更新该包 `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` 。 有关更多详细信息，请参阅 [StackOverflow 上的此问题](https://stackoverflow.com/questions/32780315) 。
 
 ## <a name="host-the-sample-app"></a>承载示例应用程序
 
@@ -84,7 +84,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 
 ### <a name="tunnel-using-ngrok"></a>使用 ngrok 的隧道
 
-若要快速测试，可以在本地计算机上运行应用程序，并通过 web 终结点创建到它的隧道。 [ngrok](https://ngrok.com)是一个免费工具，可让你做到这一点。 通过 ngrok，您可以获取诸如 `https://d0ac14a5.ngrok.io` （此 URL 只是一个示例）之类的 web 地址。 您可以为您的环境[下载并安装](https://ngrok.com/download)ngrok。 请确保将其添加到中的某个位置 `PATH` 。
+若要快速测试，可以在本地计算机上运行应用程序，并通过 web 终结点创建到它的隧道。 [ngrok](https://ngrok.com) 是一个免费工具，可让你做到这一点。 通过 ngrok，您可以获取 web 地址（如 `https://d0ac14a5.ngrok.io` (此 URL 只是一个示例) ）。 您可以为您的环境 [下载并安装](https://ngrok.com/download) ngrok。 请确保将其添加到中的某个位置 `PATH` 。
 
 安装后，可以打开一个新的终端窗口并运行以下命令来创建隧道。 此示例使用端口3333，因此请务必在此处指定它。
 
@@ -95,7 +95,7 @@ ngrok http 3333 -host-header=localhost:3333
 Ngrok 将侦听来自 internet 的请求，并将其路由到在端口3333上运行的应用。 您可以通过打开浏览器并转到 `https://d0ac14a5.ngrok.io/hello` 加载应用程序的 hello 页面来进行验证。 请务必使用控制台会话中由 ngrok 显示的转发地址，而不是此 URL。
 
 > [!NOTE]
-> 如果您在上面的 "[内部版本" 和 "运行](#build-and-run-the-sample)" 步骤中使用了不同的端口，请确保使用相同的端口号设置 `ngrok` 隧道。
+> 如果您在上面的 " [内部版本" 和 "运行](#build-and-run-the-sample) " 步骤中使用了不同的端口，请确保使用相同的端口号设置 `ngrok` 隧道。
 > [!TIP]
 > 最好 `ngrok` 在不同的终端窗口中运行，以使其保持运行状态，而不影响您稍后可能需要停止、重新生成和重新运行的应用程序。 `ngrok`该会话将在此窗口中返回有用的调试信息。
 
@@ -103,44 +103,44 @@ Ngrok 将侦听来自 internet 的请求，并将其路由到在端口3333上运
 
 ### <a name="host-in-azure"></a>Azure 中的主机
 
-Microsoft Azure 允许你使用共享基础结构将 .NET 应用程序托管在免费的层上。 这就足够了运行此 `Hello World` 示例。 有关详细信息，请参阅[创建新的免费帐户](https://azure.microsoft.com/free/)。
+Microsoft Azure 允许你使用共享基础结构将 .NET 应用程序托管在免费的层上。 这就足够了运行此 `Hello World` 示例。 有关详细信息，请参阅 [创建新的免费帐户](https://azure.microsoft.com/free/) 。
 
 Visual Studio 为对不同提供程序（包括 Azure）的应用程序部署提供内置支持。
 
-<img width="530px" src="~/assets/images/get-started/publishtoazure1.png" title="Visual Studio"/>
+<img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
-[!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>更新承载的应用程序的凭据
 
 示例应用程序需要将以下环境变量设置为您在前面记下的值。
 
-打开 appsettings 文件。 使用之前保存的你的 Bot ID 更新*MicrosoftAppId*值。 使用之前保存的 Bot 密码更新*MicrosoftAppPassword* 。
+打开文件上的 appsettings.js。 使用之前保存的你的 Bot ID 更新 *MicrosoftAppId* 值。 使用之前保存的 Bot 密码更新 *MicrosoftAppPassword* 。
 
-<img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="设置键"/>
+<img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
 进行这些更改后，请重新生成应用程序。 如果您使用的是 ngrok，请在本地运行应用程序，如果您是在 Azure 中托管，请重新部署应用程序。
 
 ## <a name="configure-the-app-tab"></a>配置 "应用程序" 选项卡
 
-将应用程序安装到团队后，需要将其配置为显示内容。 转到安装了示例应用程序的团队中的某个频道，然后单击 **"+"** 按钮以添加新的选项卡。然后，可以 `Hello World` 从 "**添加选项卡**" 列表中进行选择。 随后将显示配置对话框。 此对话框将允许您选择要在此通道中显示的选项卡。 选择选项卡并单击 "打开" 后 `Save` ，即可看到 `Hello World` 使用所选的选项卡加载的选项卡。
+将应用程序安装到团队后，需要将其配置为显示内容。 转到安装了示例应用程序的团队中的某个频道，然后单击 **"+"** 按钮以添加新的选项卡。然后，可以 `Hello World` 从 " **添加选项卡** " 列表中进行选择。 随后将显示配置对话框。 此对话框将允许您选择要在此通道中显示的选项卡。 选择选项卡并单击 "打开" 后 `Save` ，即可看到 `Hello World` 使用所选的选项卡加载的选项卡。
 
-<img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="配置的屏幕截图" />
+<img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### <a name="test-your-bot-in-teams"></a>在团队中测试你的 bot
 
 现在可以与团队中的 bot 进行交互。 选择您在其中注册应用程序的团队中的频道，然后键入 `@your-bot-name` 。 这称为 " ** \@ 提及**"。 发送到 bot 的任何邮件都将作为答复发送回您。
 
-<img width="450px" title="Bot 响应" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>测试消息扩展
 
 若要测试您的邮件扩展插件，可以单击对话视图中输入框下的三个点。 将弹出一个菜单，其中包含 **"Hello World"** 应用。 当您单击它时，您将看到一组随机文本显示。 您可以选择其中的任何一个，并将其插入到对话中。
 
-<img width="530px" title="邮件扩展菜单" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="530px" title="邮件扩展结果" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 选择一种随机文本，您将看到一张卡片的格式并准备好在底部使用您自己的消息进行发送。
 
-<img width="530px" title="邮件扩展发送" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

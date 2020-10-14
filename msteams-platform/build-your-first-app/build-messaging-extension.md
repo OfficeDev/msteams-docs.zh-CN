@@ -1,18 +1,18 @@
 ---
-title: 生成团队消息扩展
+title: 入门-构建消息扩展
 author: heath-hamilton
-description: 了解如何为你的首个 Microsoft 团队应用构建消息扩展。
+description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队消息扩展。
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237816"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452832"
 ---
-# <a name="build-a-teams-messaging-extension"></a>生成团队消息扩展
+# <a name="build-a-messaging-extension-for-microsoft-teams"></a>为 Microsoft 团队构建消息扩展
 
 有两种类型的团队 *邮件扩展*： [搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md) 和 [动作命令](../messaging-extensions/how-to/action-commands/define-action-command.md)。
 
@@ -55,8 +55,8 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
     1. 将你的 bot ID 和密码存储 (稍后需要一些) 。
     1.  (可选) 输入你的 bot 的自定义名称，然后选择 " **创建**"。  (这不是已指定的团队应用程序的名称。 ) 
     1. 现在，为 "链接 unfurling" 选择 " **否** " 选项。</br>
-:::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。":::
-1. 选择屏幕底部的 " **完成** " 以配置项目。
+:::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。&quot;:::
+1. 选择屏幕底部的 &quot; **完成** " 以配置项目。
 
 ## <a name="2-identify-relevant-app-project-components"></a>2. 确定相关的应用程序项目组件
 
@@ -173,9 +173,10 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 了解邮件扩展在团队聊天中的工作方式。
 
 1. 启动新聊天。 在 "撰写" 框中，选择 " **更多** :::image type="icon" source="../assets/icons/teams-client-more.png"::: "，然后选择您刚刚旁加载的邮件扩展应用程序。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="该图显示了如何在 "团队撰写" 框中访问基于搜索的邮件扩展。":::
-1. 请尝试搜索某个内容 (例如，"入场券" ) 。 如果你的应用程序正常运行，你将看到示例搜索结果 (你可以在以后添加自己的) 。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="显示在 "团队撰写" 框中如何使用基于搜索的邮件扩展的屏幕截图。":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。&quot;:::
+1. 选择屏幕底部的 &quot; **完成** " ) 。 如果你的应用程序正常运行，你将看到示例搜索结果 (你可以在以后添加自己的) 。<br/>
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。&quot;:::
+1. 选择屏幕底部的 &quot; **完成** ":::
 
 ## <a name="well-done"></a>干的好
 
@@ -188,7 +189,7 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 1. 定义与您的服务相关的[搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md)。
 1. 将您的服务配置为 [响应用户的搜索](../messaging-extensions/how-to/search-commands/respond-to-search.md)。
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 如果你在完成本教程时遇到问题，以下信息可能会有所帮助。
 

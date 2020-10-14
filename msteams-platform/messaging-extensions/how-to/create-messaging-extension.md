@@ -1,17 +1,20 @@
 ---
-title: 创建邮件扩展
+title: 为工作组创建邮件扩展
 author: clearab
-description: 如何为 Microsoft 团队应用程序创建邮件扩展插件。
+description: 了解如何创建团队消息扩展
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ca03469b04c9696b26db3512790e03be26ca63af
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48178307"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452594"
 ---
-# <a name="create-a-messaging-extension-in-microsoft-teams"></a>在 Microsoft 团队中创建邮件扩展插件
+# <a name="create-a-messaging-extension-for-microsoft-teams"></a>为 Microsoft 团队创建消息扩展
+
+> [!TIP]
+> 寻求更快的入门方式？ 使用 Microsoft 团队工具包创建 [邮件扩展插件](../../build-your-first-app/build-messaging-extension.md) 。
 
 在较高级别，需要完成以下步骤以创建邮件扩展。
 
@@ -128,9 +131,9 @@ ms.locfileid: "48178307"
 
 1. **Location**。 您的邮件扩展可以从撰写邮件区域、命令框或会议聊天 @mentioned 中进行调用。
 
-1. **元数据**。 调用邮件扩展时，可以通过和来识别用户和租户 `userId` `tenantId` 。 `meetingId`可在对象中找到 `channelData` 。 您的应用程序可以使用 `userId` 和， `meetingId`  以获取用于 `GetParticipant` 检索用户角色的 API 请求。
+1. **元数据**。 调用邮件扩展时，可以通过和来识别用户和租户 `userId` `tenantId` 。 可在 `channelData` 对象中找到 `meetingId`。 您的应用程序可以使用 `userId` 和， `meetingId`  以获取用于 `GetParticipant` 检索用户角色的 API 请求。
 
-1. **命令类型**。 如果您的邮件扩展使用 [基于操作的命令](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)，它应遵循选项卡式 [单一登录](../../tabs/how-to/authentication/auth-aad-sso.md) 身份验证。 
+1. **命令类型**。 如果您的邮件扩展使用 [基于操作的命令](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)，它应遵循选项卡式 [单一登录](../../tabs/how-to/authentication/auth-aad-sso.md) 身份验证。
 
 1. **用户体验**。 您应确定会议聊天过程中调用的最终用户体验邮件扩展。
 

@@ -1,20 +1,20 @@
 ---
-title: 准备 Office 365 租户
-description: 如何开始使用 Office 365 中的团队
-keywords: 配置 Office 365 租户团队上载
-ms.openlocfilehash: a246b13ae3a12a486a06ff9d98d37d4d147e4ed4
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+title: 准备 Microsoft 365 租户
+description: 如何开始使用 Microsoft 365 中的团队
+keywords: 配置 Microsoft 365 租户团队上载
+ms.openlocfilehash: 67a0342a7e8605097eed53dd1b0bdf273d537c0e
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874861"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452762"
 ---
-# <a name="prepare-your-office-365-tenant"></a>准备 Office 365 租户
+# <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 
-如果你是 Office 365 订阅者，则可以使用以下 [计划](https://products.office.com/business/compare-more-office-365-for-business-plans)之一为 Microsoft 团队开发应用程序：
+如果你是 Microsoft 365 订阅者，则可以使用以下 [计划](https://products.office.com/business/compare-more-office-365-for-business-plans)之一为 Microsoft 团队开发应用程序：
 
-* 商业协作版
-* 商业高级版
+* 基本
+* 标准
 * 企业版 E1、E3 和 E5
 * 开发人员版
 * 教育版、教育版和教育版 E5
@@ -23,7 +23,7 @@ Microsoft 团队还将对在其 [退休](https://support.office.com//article/imp
 
 ## <a name="just-need-a-development-environment"></a>只需要开发环境？
 
-如果当前没有 Office 365 帐户，则可以注册 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program) 订阅。 它在90天内 *免费* 使用，并且将持续更新，只要你将其用于开发活动即可。 如果你有 Visual Studio *Enterprise* 或 *专业版* 订阅，这两个程序都包括一个免费的 Microsoft 365 [开发人员订阅](https://aka.ms/MyVisualStudioBenefits)，在 Visual Studio 订阅的生命周期内处于活动状态。 *请参阅*[设置 Microsoft 365 开发人员订阅](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
+如果你当前没有 Microsoft 365 帐户，你可以注册 [microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program) 订阅。 它在90天内 *免费* 使用，并且将持续更新，只要你将其用于开发活动即可。 如果你有 Visual Studio *Enterprise* 或 *专业版* 订阅，这两个程序都包括一个免费的 Microsoft 365 [开发人员订阅](https://aka.ms/MyVisualStudioBenefits)，在 Visual Studio 订阅的生命周期内处于活动状态。 *请参阅*[设置 Microsoft 365 开发人员订阅](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>为你的组织启用 Microsoft 团队 
 

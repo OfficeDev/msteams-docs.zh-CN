@@ -1,18 +1,18 @@
 ---
-title: 生成工作组个人选项卡
+title: 入门-构建个人选项卡
 author: heath-hamilton
-description: 了解如何为你的首个 Microsoft 团队应用构建个人选项卡。
+description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队个人选项卡。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237802"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452741"
 ---
-# <a name="build-a-teams-personal-tab"></a>生成工作组个人选项卡
+# <a name="build-a-personal-tab-for-microsoft-teams"></a>为 Microsoft 团队构建个人选项卡
 
 通过在团队中嵌入网页，选项卡是在应用程序中呈现内容的一种简单方法。
 
@@ -181,7 +181,7 @@ if (isTheme === "default") {
 
 检查团队中的选项卡。 外观应与深色主题紧密匹配。
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="包含静态内容视图的个人选项卡的屏幕截图。":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="包含静态内容的个人选项卡的屏幕截图。":::
 
 ## <a name="well-done"></a>干的好
 
@@ -201,4 +201,4 @@ if (isTheme === "default") {
 您知道如何构建用于个人用途的选项卡。 让我们来看看构建团队频道和聊天的选项卡所需的内容。
 
 > [!div class="nextstepaction"]
-> [生成通道选项卡](../build-your-first-app/build-channel-tab.md)
+> [创建频道选项卡](../build-your-first-app/build-channel-tab.md)

@@ -4,16 +4,16 @@ description: 介绍 Microsoft 团队清单支持的架构
 keywords: 团队清单架构
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: aea75276d37ae0a99ecc55b204d29706cc5a07c8
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b514bbe8e04e674f5aafb3dff3acfe08072d814f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237977"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452734"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考： Microsoft 团队的清单架构
 
-Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产品中。 您的清单必须符合托管的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) 。 在 URL) 中使用 "v1" 时，也 (支持早期版本 1.0-1.4。
+Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产品中。 您的清单必须符合托管的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) 。 早期版本 1.0-1.6 在 URL) 中使用 "v1" (也是支持的。
 
 以下架构示例显示了所有扩展性选项。
 
@@ -273,7 +273,7 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
 
 **必需** -字符串
 
-此清单使用的清单架构的版本。 它应为 "1.5"。
+此清单使用的清单架构的版本。 它应为 "1.7"。
 
 ## <a name="version"></a>version
 
@@ -297,7 +297,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 指定有关贵公司的信息。 对于提交到 AppSource 的应用程序 (以前的 Office 应用商店) ，这些值必须与您的 AppSource 条目中的信息相匹配。 有关详细信息，请参阅我们的 [发布指南](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) 。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`name`|32个字符|✔|开发人员的显示名称。|
 |`websiteUrl`|2048 个字符|✔|开发人员网站的 https://URL。 此链接应将用户带到您的公司或特定于产品的登陆页面。|
@@ -311,7 +311,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 在团队体验中向用户显示的应用程序体验的名称。 对于提交到 AppSource 的应用程序，这些值必须与您的 AppSource 条目中的信息相匹配。 和的值 `short` `full` 不应相同。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`short`|30 个字符|✔|应用程序的短显示名称。|
 |`full`|100 个字符||应用程序的全名，如果完整的应用程序名称超过30个字符，则使用该名称。|
@@ -324,7 +324,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 确保你的说明准确描述你的体验，并提供信息，以帮助潜在客户了解你的体验。 如果需要使用外部帐户，还应在完整说明中说明。 和的值 `short` `full` 不应相同。  您的简短说明不得在详细说明中重复，并且不得包含任何其他应用程序名称。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`short`|80个字符|✔|在空间有限时使用的应用程序体验的简短说明。|
 |`full`|4000个字符|✔|您的应用程序的完整说明。|
@@ -341,7 +341,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 允许指定默认语言，以及指向其他语言文件的指针。 请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`defaultLanguageTag`||✔|此顶级清单文件中的字符串的语言标记。|
 
@@ -349,7 +349,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 指定其他语言翻译的对象的数组。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`languageTag`||✔|所提供文件中的字符串的语言标记。|
 |`file`||✔|包含翻译字符串的 json 文件的相对文件路径。|
@@ -360,7 +360,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 在团队应用程序中使用的图标。 图标文件必须作为上载包的一部分包括在内。 有关详细信息，请参阅 [图标](~/concepts/build-and-test/apps-package.md#icons) 。
 
-|姓名| 最大大小 | 必需 | 说明|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`outline`|32 x 32 像素|✔|指向透明 32x32 PNG 边框图标的相对文件路径。|
 |`color`|192 x 192 像素|✔|完整颜色 192x192 PNG 图标的相对文件路径。|
@@ -379,7 +379,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 当您的应用程序体验具有在添加之前需要额外配置的团队频道选项卡体验时使用。 只有在不是个人) 的团队 (范围中支持可配置的选项卡，并且每个应用程序目前仅支持 **一个** 选项卡。
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置选项卡时要使用的 https://URL。|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 范围。 |
@@ -395,7 +395,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 此项是一个数组， (最多16个元素，) 与所有类型的元素一起使用 `object` 。 仅在提供静态选项卡解决方案的解决方案中，此块是必需的。
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|string|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|string|128个字符|✔|该选项卡在通道接口中的显示名称。|
@@ -414,7 +414,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 
 Item 是数组 (每个元素最多只能包含1个元素， &mdash; 每个应用程序) 只允许一个 bot 与所有类型的元素一起使用 `object` 。 仅在提供机器人体验的解决方案中，此块才是必需的。
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|string|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这可能与整体 [应用程序 ID](#id)很好。|
 |`scopes`|枚举数组|第三章|✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
@@ -426,14 +426,14 @@ Item 是数组 (每个元素最多只能包含1个元素， &mdash; 每个应用
 
 你的 bot 可以向用户推荐的命令的可选列表。 对象是数组 (最多为2个元素) 的所有类型的元素 `object` ; 您必须为你的 bot 支持的每个作用域定义单独的命令列表。 有关详细信息，请参阅 [Bot 菜单](~/bots/how-to/create-a-bot-commands-menu.md) 。
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`items.scopes`|枚举数组|第三章|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
-|`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单描述或示例（字符串，128）|
+|`items.commands`|对象数组|10  |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单描述或示例（字符串，128）|
 
 ### <a name="botscommandlistscommands"></a>commandLists
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |title|string|12 |✔|Bot 命令名称|
 |说明|string|128个字符|✔|一个简单的文本说明或一个命令语法及其参数的示例。|
@@ -446,7 +446,7 @@ Item 是数组 (每个元素最多只能包含1个元素， &mdash; 每个应用
 
 对象是数组 (最大值为1的元素) 与所有类型的元素一起使用 `object` 。 仅对提供连接器的解决方案而言，此块是必需的。
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置连接器时要使用的 https://URL。|
 |`scopes`|枚举数组|1|✔|指定连接器是在中频道的上下文中 `team` ，还是在仅限于单个用户 () 的体验中提供体验 `personal` 。 目前，仅 `team` 支持作用域。|
@@ -463,10 +463,10 @@ Item 是数组 (每个元素最多只能包含1个元素， &mdash; 每个应用
 
 Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 `object` 。 仅对提供邮件扩展的解决方案而言，此块是必需的。
 
-|姓名| 类型 | 最大大小 | 必需 | 说明|
+|名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|与 Bot 框架一起注册的支持邮件扩展的 bot 的唯一 Microsoft 应用 ID。 这可能与整体应用程序 ID 很好。|
-|`commands`|对象数组|10 |✔|邮件扩展支持的命令数组|
+|`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
 |`canUpdateConfiguration`|boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值：**False**。|
 |`messageHandlers`|对象数组|5 ||允许在满足特定条件时调用应用程序的处理程序列表。 域也必须列在 `validDomains`|
 |`messageHandlers.type`|string|||消息处理程序的类型。 必须是 `"link"`。|
@@ -478,7 +478,7 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 
 每个命令项都是一个具有以下结构的对象：
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|string|64 个字符|✔|命令的 ID。|
 |`title`|string|32个字符|✔|用户友好的命令名称。|
@@ -546,7 +546,7 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 
 指定 AAD 应用 ID 和 Graph 信息，以帮助用户无缝登录 AAD 应用。
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|string|36个字符|✔|应用程序的 AAD 应用程序 id。 此 id 必须为 GUID。|
 |`resource`|string|2048 个字符||用于获取 SSO 的身份验证令牌的应用程序的资源 url。|
@@ -573,13 +573,13 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 
 定义您的应用程序将用于发布到用户活动源的属性。
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`activityTypes`|对象数组|128项| | 指定您的应用程序可以发布到用户活动源的活动类型。|
 
 ### <a name="activitiesactivitytypes"></a>activityTypes
 
-|姓名| 类型| 最大大小 | 必需 | 说明|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`type`|string|32个字符|✔|通知类型。 *请参阅下文*。|
 |`description`|string|128个字符|✔|通知的简短说明。 *请参阅下文*。|

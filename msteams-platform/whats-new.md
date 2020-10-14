@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: 87fa50bc374310c2fe5d8081b18268c6298fb515
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: b4e36ab00a784017cef20657e9ee548ed90f3efa
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397664"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452811"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -20,6 +20,7 @@ ms.locfileid: "48397664"
 
 | **Date** | **备注** | **更改的主题** |
 | -------- | --------- | ------------------ |
+|9/30/2020|现在支持在移动设备上向 bot 发送和接收文件。|[通过你的 bot 发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|新建 "团队入门" 指南|[构建你的第一个团队应用概述](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|对会议团队应用 (发布预览的支持) |为团队[会议中](apps-in-teams-meetings/teams-apps-in-meetings.md)[的团队会议和应用创建应用程序](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
 |8/19/2020|使用 Microsoft Graph 导入团队邮件|[使用 Microsoft Graph 将第三方平台消息导入 Teams](graph-api/import-messages/import-external-messages-to-teams.md)

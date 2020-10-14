@@ -1,18 +1,18 @@
 ---
+title: 入门-构建通道和组选项卡
 author: heath-hamilton
-description: 了解如何为你的首个 Microsoft 团队应用构建通道和组选项卡。
+description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队频道和分组选项卡。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-title: 生成团队频道和组选项卡
-ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f890754cdf4ca43f39c25e3ba24fcf47b08c5a9f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237809"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452853"
 ---
-# <a name="build-a-teams-channel-and-group-tab"></a>生成团队频道和组选项卡
+# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>为 Microsoft 团队构建通道和组选项卡
 
 在本教程中，你将构建基本的 *频道选项卡* (也称为 " *组" 选项* 卡) （它是团队频道或聊天的全屏页面）。 与 "个人" 选项卡不同，用户可以配置此类选项卡的某些方面 (例如，重命名选项卡，使其对频道) 有意义。
 
@@ -208,9 +208,10 @@ microsoftTeams.settings.setSettings({
 1. 选择 " **上载自定义应用程序** "，然后选择您的应用程序 `Development.zip` 。
 1. 选择 " **添加到团队** " 或 " **添加到聊天** "，找到可用于测试的频道或聊天。
 1. 选择 **"设置选项卡"**。将显示 "配置" 页。<br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="频道选项卡配置页的屏幕截图。":::
-1. 选择 " **保存** " 以配置选项卡。将显示内容。<br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="包含静态内容视图的频道选项卡的屏幕截图。":::
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="频道选项卡配置页的屏幕截图。&quot;:::
+1. 选择 &quot; **保存** " 以配置选项卡。将显示内容。<br/>
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="频道选项卡配置页的屏幕截图。&quot;:::
+1. 选择 &quot; **保存** ":::
 
 ## <a name="well-done"></a>干的好
 
@@ -229,4 +230,4 @@ microsoftTeams.settings.setSettings({
 您知道如何构建协作选项卡。 想要尝试构建不同种类的团队应用吗？
 
 > [!div class="nextstepaction"]
-> [构建 bot](../build-your-first-app/build-bot.md)
+> [创建机器人](../build-your-first-app/build-bot.md)

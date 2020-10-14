@@ -1,21 +1,21 @@
 ---
-title: 应用到团队会议
+title: 团队会议中的应用
 author: laujan
 description: 基于参与者和用户角色的团队会议中的应用程序概述
 ms.topic: overview
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: e7f0f95566347c06a4ab422565c3f49665a5150e
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: dbf12523d609d47193fb3c07bde2acd184292f64
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326310"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452636"
 ---
-# <a name="apps-in-teams-meetings-release-preview"></a>团队会议中的应用 (发布预览) 
+# <a name="apps-in-teams-meetings-developer-preview"></a>团队会议中的应用 (开发人员预览版) 
 
 >[!IMPORTANT]
-> Microsoft 团队版中突出显示的功能提供了仅用于及早了解和反馈的目的预览。 它们可能会在启用前进行更改。
+> Microsoft 团队开发人员预览版中包含的功能仅用于早期访问、测试和反馈目的。 他们可能会在公开发布之前进行更改，并且不应在生产应用程序中使用。
 
 会议是团队中的工作效率的关键。 它们在包含和活跃的论坛中启用协作、合作、有通知的通信和共享反馈。 作为开发人员，您可以创建 [可配置的选项卡](../tabs/what-are-tabs.md#how-do-tabs-work)、 [bot](../bots/what-are-bots.md)和 [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md) 应用程序，以增强和丰富团队会议体验。 会议用户可以通过选项卡库访问应用程序，以启用相关方案，如预暂存看板面板、启动会议内操作对话框或创建会议后轮询。 您的会议应用程序可以根据与会者的状态为会议生命周期的每个阶段提供用户体验。
 

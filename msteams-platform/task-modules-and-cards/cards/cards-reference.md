@@ -2,12 +2,12 @@
 title: 卡片参考
 description: 介绍可供团队中的 bot 的所有卡片和卡片操作
 keywords: bot 卡片参考
-ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434543"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452608"
 ---
 # <a name="cards-reference"></a>卡片参考
 
@@ -15,14 +15,14 @@ ms.locfileid: "45434543"
 
 ## <a name="card-examples"></a>卡片示例
 
-您可以在机器人生成器 SDK （v3）的文档中找到有关如何使用卡片的其他信息。 GitHub 上的 Microsoft/BotBuilder-示例存储库中也提供了代码示例。
+您可以在机器人生成器 SDK (v3) 的文档中找到有关如何使用卡片的其他信息。 GitHub 上的 Microsoft/BotBuilder-示例存储库中也提供了代码示例。
 
 * .NET
   * [将卡片添加为邮件附件](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-  * [卡片示例代码（Bot 生成器 v3）](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/CSharp/cards-RichCards)
+  * [卡片 (Bot 生成器 v3 中的代码示例) ](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/CSharp/cards-RichCards)
 * Node.js
   * [将卡片添加为邮件附件](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
-  * [卡片示例代码（Bot 生成器 v3）](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/Node/cards-RichCards)
+  * [卡片 (Bot 生成器 v3 中的代码示例) ](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/Node/cards-RichCards)
 
 ## <a name="types-of-cards"></a>卡片类型
 
@@ -43,7 +43,7 @@ ms.locfileid: "45434543"
 
 ### <a name="inline-card-images"></a>内嵌卡片图像
 
-你的卡片可以通过包含指向公开可用图像的链接来包含内嵌图像。 出于性能考虑，强烈建议您将映像托管在公共内容传递网络（CDN）上。
+你的卡片可以通过包含指向公开可用图像的链接来包含内嵌图像。 出于性能方面的考虑，强烈建议您将映像托管在公开内容传递网络 (CDN) 上。
 
 图像在大小上向上或向下放大，同时保持纵横比以覆盖图像区域，然后从中心裁剪以达到适合该卡片的纵横比。
 
@@ -52,17 +52,17 @@ ms.locfileid: "45434543"
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
 | url | URL | 指向图像的 HTTPS URL |
-| alt | String | 图像的可访问说明 |
+| alt | 字符串 | 图像的可访问说明 |
 
 ### <a name="buttons"></a>按钮
 
 按钮以堆叠方式显示在卡片底部。 按钮文本总是在单行上，如果文本超出按钮宽度，则将被截尾取整。 不会显示超出卡片支持的最大数量的任何其他按钮。
 
-有关详细信息，请参阅[卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
+有关详细信息，请参阅 [卡片操作](~/task-modules-and-cards/cards/cards-actions.md) 。
 
 ### <a name="card-formatting"></a>卡片格式
 
-有关卡片中的文本格式的详细信息，请参阅[卡片格式](~/task-modules-and-cards/cards/cards-format.md)。
+有关卡片中的文本格式的详细信息，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md) 。
 
 ## <a name="adaptive-card"></a>自适应卡片
 
@@ -235,9 +235,9 @@ ms.locfileid: "45434543"
 
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
-| title | 格式文本  | 卡片的标题。 最多2行;当前不支持的格式 |
-| 字幕 | 格式文本  | 卡片的副标题。 最多2行;当前不支持的格式 |
-| text | 格式文本  | 文本显示在副标题的正下方;请参阅[卡片格式](~/task-modules-and-cards/cards/cards-format.md)设置选项 |
+| title | 格式文本  | 卡片的标题。 最多2行。 |
+| 字幕 | 格式文本  | 卡片的副标题。 最多2行。|
+| text | 格式文本  | 文本显示在副标题的正下方;请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md) 设置选项 |
 | 图形 | 图像数组 | 显示在卡片顶部的图像。 纵横比16:9 |
 | 按钮 | Action 对象的数组 | 适用于当前卡片的一组操作。 最大6 |
 | 即可 | Action 对象 | 当用户点击卡片本身时，将激活此操作 |
@@ -281,7 +281,7 @@ ms.locfileid: "45434543"
 Bot 框架参考：
 
 * ["英雄卡片" 节点](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [英雄卡片 C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0)
+* [英雄卡片 C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="list-card"></a>列出卡片
 
@@ -298,10 +298,9 @@ Bot 框架参考：
 
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
-| title | 格式文本  | 卡片的标题。 最多2行;当前不支持的格式 |
-| items | 列表项的数组  ||
-| 按钮 | Action 对象的数组 | 适用于当前卡片的一组操作。 最大6。 不会在移动设备上呈现。 |
-|
+| title | 格式文本  | 卡片的标题。 最多2行。|
+| 项目 | 列表项的数组  ||
+| 按钮 | Action 对象的数组 | 适用于当前卡片的一组操作。 最大6。 |
 
 ### <a name="example-list-card"></a>列表卡片示例
 
@@ -374,14 +373,14 @@ Office 365 连接器卡提供了具有多个节、字段、图像和操作的灵
 
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
-| title | 格式文本  | 卡片的标题。 最多2行;当前不支持的格式 |
-| 摘要 | 格式文本  | 卡片摘要。 最多2行;当前不支持的格式 |
-| text | 格式文本  | 文本显示在副标题的正下方;请参阅[卡片格式](~/task-modules-and-cards/cards/cards-format.md)设置选项 |
+| title | 格式文本  | 卡片的标题。 最多2行。 |
+| 摘要 | 格式文本  | 卡片摘要。 最多2行。 |
+| text | 格式文本  | 文本显示在副标题的正下方;请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md) 设置选项 |
 | themeColor | 十六进制字符串 | 重写从应用程序清单提供的 accentColor 的颜色 |
 
 ### <a name="notes-on-the-office-365-connector-card"></a>Office 365 连接器卡上的备注
 
-Office 365 连接器卡在 Microsoft 团队中正常工作，包括[ActionCard 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
+Office 365 连接器卡在 Microsoft 团队中正常工作，包括 [ActionCard 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
 
 使用连接器中的连接器卡和在你的 bot 中使用连接器卡的一个重要区别是处理智能卡操作。
 
@@ -401,14 +400,14 @@ Office 365 连接器卡在 Microsoft 团队中正常工作，包括[ActionCard �
 
 | 值 | 说明 |
 | --- | --- |
-| `avatar` | 设置`activityImage`将裁剪为圆形 |
-| `article` | `activityImage`将显示为一个矩形，并保持其纵横比 |
+| `avatar` | 设置 `activityImage` 将裁剪为圆形 |
+| `article` | `activityImage` 将显示为一个矩形，并保持其纵横比 |
 
-有关连接器卡属性的所有其他详细信息，请参阅可[操作邮件卡参考](/outlook/actionable-messages/card-reference)。 Microsoft 团队目前不支持的连接器卡片属性如下所示：
+有关连接器卡属性的所有其他详细信息，请参阅可 [操作邮件卡参考](/outlook/actionable-messages/card-reference)。 Microsoft 团队目前不支持的连接器卡片属性如下所示：
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`（始终按 `true` 团队处理）
+* `startGroup` (`true` 在团队中始终被视为) 
 * `originator`
 * `correlationId`
 
@@ -492,14 +491,14 @@ Office 365 连接器卡在 Microsoft 团队中正常工作，包括[ActionCard �
 
 Bot 框架参考：
 
-* ["收据卡" 节点](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest)
-* [收据卡 C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0)
+* ["收据卡" 节点](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [收据卡 C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="signin-card"></a>登录卡片
 
 使机器人能够请求用户登录的卡片。 在与 Bot 框架中相比，在不同表单中的团队中支持。 团队中的登录卡片与 bot 框架中的登录卡片类似，但在团队登录卡仅支持两个操作时除外： `signin` 和 `openUrl` 。
 
-*登录操作*可用于团队中的任何卡片，而不仅仅是登录卡。 有关身份验证的详细信息，请参阅[Microsoft 团队身份验证流的](~/bots/how-to/authentication/auth-flow-bot.md)主题相关主题。
+*登录操作*可用于团队中的任何卡片，而不仅仅是登录卡。 有关身份验证的详细信息，请参阅 [Microsoft 团队身份验证流的](~/bots/how-to/authentication/auth-flow-bot.md) 主题相关主题。
 
 ### <a name="support-for-signin-cards"></a>对登录卡的支持
 
@@ -512,8 +511,8 @@ Bot 框架参考：
 
 Bot 框架参考：
 
-* [登录卡片节点](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
-* [登录卡 C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
+* [登录卡片节点](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [登录卡 C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>缩略图卡片
 
@@ -532,10 +531,10 @@ Bot 框架参考：
 
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
-| title | 格式文本  | 卡片的标题。 最多2行;当前不支持的格式 |
-| 字幕 | 格式文本  | 卡片的副标题。 最多2行;当前不支持的格式 |
-| text | 格式文本  | 文本显示在副标题的正下方;请参阅[卡片格式](~/task-modules-and-cards/cards/cards-format.md)设置选项 |
-| 图形 | 图像数组 | 显示在卡片顶部的图像。 纵横比1:1 （方形） |
+| title | 格式文本  | 卡片的标题。 最多2行。|
+| 字幕 | 格式文本  | 卡片的副标题。 最多2行。|
+| text | 格式文本  | 文本显示在副标题的正下方;请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md) 设置选项 |
+| 图形 | 图像数组 | 显示在卡片顶部的图像。 纵横比 1:1 (平方)  |
 | 按钮 | Action 对象的数组 | 适用于当前卡片的一组操作。 最大6 |
 | 即可 | Action 对象 | 当用户点击卡片本身时，将激活此操作 |
 |
@@ -587,8 +586,8 @@ Bot 框架参考：
 
 Bot 框架参考：
 
-* [缩略图卡片节点](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest)
-* [缩略图卡片 C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0)
+* [缩略图卡片节点](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [缩略图卡片 C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="card-collections"></a>卡片集合
 
@@ -598,7 +597,7 @@ Bot 框架参考：
 
 ## <a name="carousel-collection"></a>轮播集合
 
-[轮播布局](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0)显示了卡片的轮播，也可以选择使用关联的动作按钮。
+[轮播布局](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true)显示了卡片的轮播，也可以选择使用关联的动作按钮。
 
 ### <a name="support-for-carousel-collections"></a>对轮播集合的支持
 
