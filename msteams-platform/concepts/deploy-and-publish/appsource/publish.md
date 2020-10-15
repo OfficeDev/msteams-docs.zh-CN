@@ -1,13 +1,13 @@
 ---
 title: Microsoft 团队应用程序审批提交过程指南
 description: 介绍用于获取发布到 Microsoft 团队应用商店的应用程序的提交审批过程
-keywords: 团队发布 microsoft store office 发布发布 AppSource 合作伙伴中心帐户验证
-ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+keywords: 团队发布 microsoft store office 发布发布 AppSource 合作伙伴中心帐户验证应用帐户未发布资格
+ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279686"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465927"
 ---
 # <a name="submit-your-app-to-appsource"></a>将您的应用程序提交到 AppSource
 
@@ -76,6 +76,11 @@ ms.locfileid: "48279686"
 在帐户验证过程中，将显示每个所需步骤的状态（电子邮件所有权、雇用验证和商业验证）。 成功完成验证过程后，配置文件页上的注册的验证状态将从 "挂起" 更改为 "已授权"，并且不会再显示进程步骤。
 
 ![合作伙伴中心验证错误](../../../assets/images/partner-center-acct-verification-error.png)
+
+## <a name="what-is-verified-in-partner-center-account-verification-process-and-how-to-respond"></a>合作伙伴中心帐户验证过程中验证了哪些内容以及如何进行响应？
+有三个验证区域-电子邮件所有权、雇用和业务。 如果你是主要联系人 (全局管理员 "或" 帐户管理员 ") ，请查看已验证内容的详细信息 [以及如何响应](/partner-center/verification-responses#what-is-verified-and-how-to-respond) 。我们建议你转到合作伙伴配置文件以监视验证状态并跟踪进度。
+
+验证过程完成后，配置文件页面上的注册的验证状态将从 " *待定* " 更改为 "已 *授权* "，并且在该页面上显示的 "进程步骤" 状态将消失。 主要联系人会在验证完成后的几个工作日内收到来自 Microsoft 的电子邮件。
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>我的帐户验证状态除了合作伙伴中心的电子邮件所有权之外，尚未提前。 我应该如何继续？
 

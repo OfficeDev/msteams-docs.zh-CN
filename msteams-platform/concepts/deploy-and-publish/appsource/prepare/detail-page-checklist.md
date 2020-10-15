@@ -1,13 +1,13 @@
 ---
 title: 构建一个出色的应用程序详细信息页
 description: 描述应用程序详细信息页的要求
-keywords: 团队发布存储 office 发布策略 AppSource 内容
-ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+keywords: 团队发布存储 office 发布策略 AppSource 内容元数据屏幕截图徽标说明应用程序名称图标简短说明
+ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452769"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465941"
 ---
 # <a name="build-a-great-app-details-page"></a>构建一个出色的应用程序详细信息页
 
@@ -91,7 +91,7 @@ ms.locfileid: "48452769"
 **应该**
 
 * 不要重复标题。
-* 不将 Microsoft 缩写为 "MS"。
+* 不要将 Microsoft 缩写为 "MS" 或 "MSFT"。
 * 请勿使用术语或专用术语，不能假定用户知道要查找的内容。
 * 除非绝对必要，否则避免对 Microsoft 产品名称的不必要引用。
 * 请勿指明或暗示该应用程序是 Microsoft 提供的服务。

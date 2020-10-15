@@ -5,13 +5,13 @@ localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
-keywords: 工作组时差导入邮件 api 图 microsoft 迁移迁移发布
-ms.openlocfilehash: 0e0aa96373d29f07893456adf54986ec23bdec3c
-ms.sourcegitcommit: 02ab2cb7820dc8665bb4ec6a1a40c3b8b8f29d66
+keywords: 团队导入邮件 api 图 microsoft 迁移迁移发布
+ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "47340947"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465906"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
@@ -36,8 +36,8 @@ ms.locfileid: "47340947"
 
 ✔查看第三方数据以确定将迁移的内容。  
 ✔从第三方聊天系统中提取所选数据。  
+✔将第三方聊天结构映射到团队结构。  
 ✔将导入数据转换为迁移所需的格式。  
-✔将第三方聊天结构映射到团队结构。
 
 ### <a name="set-up-your-office-365-tenant"></a>设置 Office 365 租户
 
@@ -48,17 +48,17 @@ ms.locfileid: "47340947"
 
 由于现有数据正在迁移，因此在迁移过程中维护原始邮件的时间戳并防止邮件活动是重新创建用户的现有邮件流的关键。 这是通过以下方式实现的：
 
-1. 使用 "团队" 资源属性创建具有 "后向时间戳" 的[新团队](/graph/api/team-post?view=graph-rest-beta&tabs=http) `createdDateTime` 。  
+> 使用 "团队" 资源属性创建具有 "后向时间戳" 的[新团队](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) `createdDateTime` 。 将新团队放在中 `migration mode` ，这是一种特殊状态，可从团队中的大多数活动中对用户进行横栏，直到迁移过程完成。 将 `teamCreationMode` 实例属性包含 `migration` 在 POST 请求中的值，以显式标识新团队为迁移而创建。  
 
-1. 将新团队放在中 `migration mode` ，这是一种特殊状态，可从团队中的大多数活动中对用户进行横栏，直到迁移过程完成。 将 `teamCreationMode` 实例属性包含 `migration` 在 POST 请求中的值，以显式标识新团队为迁移而创建。  
+> **注意**： `createdDateTime` 将仅为已迁移的团队或频道的实例填充字段。
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>权限
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/Api|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|管理到 Microsoft 团队的迁移|创建、管理用于迁移到 Microsoft 团队的资源|**仅限应用程序**|**是**|`POST /teams`|
+|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理用于迁移到 Microsoft 团队的资源|**仅限应用程序**|**是**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>请求 (在迁移状态中创建团队) 
 
@@ -70,8 +70,8 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description",
-  "createdDateTime": "2020-03-14T11:22:17.067Z"
+  "description": "My Sample Team’s Description"
+  "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
 
@@ -94,17 +94,15 @@ Content-Location: /teams/{teamId}
 
 ## <a name="step-two-create-a-channel"></a>步骤2：创建通道
 
-为导入的邮件创建通道与创建团队方案类似： 
+为导入的邮件创建通道与创建团队方案类似：
 
-1. 使用 "信道" 资源属性创建具有 "后向时间戳" 的[新通道](/graph/api/channel-post?view=graph-rest-beta&tabs=http) `createdDateTime` 。
-
-1. 将新频道放置在中 `migration mode` ，这是一种特殊状态，可用于在迁移过程完成前，从频道内的大多数聊天活动中对用户进行横栏。  将 `channelCreationMode` 实例属性包含 `migration` 在 POST 请求中的值，以显式标识新团队为迁移而创建。  
+> 使用 "信道" 资源属性创建具有 "后向时间戳" 的[新通道](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) `createdDateTime` 。 将新频道放置在中 `migration mode` ，这是一种特殊状态，可用于在迁移过程完成前，从频道内的大多数聊天活动中对用户进行横栏。  将 `channelCreationMode` 实例属性包含 `migration` 在 POST 请求中的值，以显式标识新团队为迁移而创建。  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>权限
+#### <a name="permissions"></a>Permissions
 
 |ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/Api|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|管理到 Microsoft 团队的迁移|创建、管理用于迁移到 Microsoft 团队的资源|**仅限应用程序**|**是**|`POST /teams`|
+|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理用于迁移到 Microsoft 团队的资源|**仅限应用程序**|**是**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态中创建频道) 
 
@@ -117,7 +115,7 @@ Content-Type: application/json
   "displayName": "Architecture Discussion",
   "description": "This channel is where we debate all future architecture plans",
   "membershipType": "standard",
-  "createdDateTime": "2020-03-14T11:22:17.067Z"
+  "createdDateTime": "2020-03-14T11:22:17.047Z"
 }
 ```
 
@@ -125,11 +123,21 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/channels/{channelId}/operations/{operationId}
-Content-Location: /teams/{teamId}/channels/{channelId}
-```
 
-#### <a name="error-message"></a>错误消息
+{
+   "@odata.context":"https://canary.graph.microsoft.com/testprodbetateamsgraphsvcncus/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
+   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "createdDateTime":null,
+   "displayName":"Architecture Discussion",
+   "description":"This channel is where we debate all future architecture plans",
+   "isFavoriteByDefault":null,
+   "email":null,
+   "webUrl":null,
+   "membershipType":null,
+   "moderationSettings":null
+}
+
+#### Error message
 
 ```http
 400 Bad Request
@@ -140,7 +148,10 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 
 ## <a name="step-three-import-messages"></a>第三步：导入邮件
 
-在创建团队和频道之后，您可以开始使用 `createdDateTime`  请求正文中的和键发送回送邮件 `from`  。
+在创建团队和频道之后，您可以开始使用 `createdDateTime`  请求正文中的和键发送回送邮件 `from`  。 **注意**： `createdDateTime` 不支持在邮件线程之前导入的邮件 `createdDateTime` 。
+
+> [!NOTE]
+> createdDateTime 在同一线程中的所有邮件中必须是唯一的。
 
 #### <a name="request-post-message-that-is-text-only"></a>请求 (张贴为纯文本的邮件) 
 
@@ -148,33 +159,18 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 
 {
-    "replyToId": null,
-    "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.511Z",
-    "lastModifiedDateTime": null,
-    "deleted": false,
-    "subject": null,
-    "summary": null,
-    "importance": "normal",
-    "locale": "en-us",
-    "policyViolation": null,
-    "from": {
-        "application": null,
-        "device": null,
-        "conversation": null,
-        "user": {
-            "id": "id-value",
-            "displayName": "Joh Doe",
-            "userIdentityType": "aadUser"
-        }
-    },
-    "body": {
-        "contentType": "html",
-        "content": "Hello World"
-    },
-    "attachments": [],
-    "mentions": [],
-    "reactions": []
+   "createdDateTime":"2019-02-04T19:58:15.511Z",
+   "from":{
+      "user":{
+         "id":"id-value",
+         "displayName":"Joh Doe",
+         "userIdentityType":"aadUser"
+      }
+   },
+   "body":{
+      "contentType":"html",
+      "content":"Hello World"
+   }
 }
 ```
 
@@ -184,40 +180,49 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
-    "id": "id-value",
-    "replyToId": null,
-    "etag": "id-value",
-    "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.511Z",
-    "lastModifiedDateTime": null,
-    "deleted": false,
-    "subject": null,
-    "summary": null,
-    "importance": "normal",
-    "locale": "en-us",
-    "policyViolation": null,
-    "from": {
-        "application": null,
-        "device": null,
-        "conversation": null,
-        "user": {
-            "id": "id-value",
-            "displayName": "Joh Doe",
-            "userIdentityType": "aadUser"
-        }
-    },
-    "body": {
-        "contentType": "html",
-        "content": "Hello World"
-    },
-    "attachments": [],
-    "mentions": [],
-    "reactions": []
+   "@odata.context":"https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "id":"id-value",
+   "replyToId":null,
+   "etag":"id-value",
+   "messageType":"message",
+   "createdDateTime":"2019-02-04T19:58:15.58Z",
+   "lastModifiedDateTime":null,
+   "deleted":false,
+   "subject":null,
+   "summary":null,
+   "importance":"normal",
+   "locale":"en-us",
+   "policyViolation":null,
+   "from":{
+      "application":null,
+      "device":null,
+      "conversation":null,
+      "user":{
+         "id":"id-value",
+         "displayName":"Joh Doe",
+         "userIdentityType":"aadUser"
+      }
+   },
+   "body":{
+      "contentType":"html",
+      "content":"Hello World"
+   },
+   "attachments":[
+   ],
+   "mentions":[
+   ],
+   "reactions":[
+   ]
 }
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a>请求 (发布包含内联 "图像) 的邮件
+#### <a name="error-messages"></a>错误消息
+
+```http
+400 Bad Request
+```
+
+#### <a name="request-post-a-message-with-inline-image"></a>请求 (将包含内联图像的邮件发布) 
 
 > **注意**：此方案中没有特殊的权限范围，因为该请求是了 chatmessage 的一部分;了 chatmessage 的作用域也适用于此处。
 
@@ -268,7 +273,6 @@ HTTP/1.1 200 OK
             "userIdentityType": "aadUser"
         }
     },
-    {
       "body": {
         "contentType": "html",
         "content": "<div><div>\n<div><span><img height=\"250\" src=\"https://graph.microsoft.com/teams/teamId/channels/channelId/messages/id-value/hostedContents/hostedContentId/$value\" width=\"176.2295081967213\" style=\"vertical-align:bottom; width:176px; height:250px\"></span>\n\n</div>\n\n\n</div>\n</div>"
@@ -319,17 +323,18 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>第5步：添加团队成员
 
-您可以 [使用 "团队 UI"](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) 或 Microsoft Graph [添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http) API 将成员添加到团队中：
+您可以 [使用 "团队 UI"](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) 或 Microsoft Graph [添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API 将成员添加到团队中：
 
 #### <a name="request-add-member"></a>请求 (添加成员) 
 
 ```http
-POST https://graph.microsoft.com/beta/groups/{id}/members/$ref
+POST https://graph.microsoft.com/beta/teams/{id}/members
 Content-type: application/json
 Content-length: 30
-
 {
-  "@odata.id": "https://graph.microsoft.com/beta/directoryObjects/{id}"
+"@odata.type": "#microsoft.graph.aadUserConversationMember",
+"roles": [],
+"user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 
@@ -344,7 +349,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* 您可以导入不在工作组中的用户的邮件。
+* 您可以导入不在工作组中的用户的邮件。 **注意**：在公共预览过程中，不会在团队客户端或合规性门户中搜索为用户导入的邮件。
 
 * `completeMigration`发出请求后，将无法再向团队中导入邮件。
 
