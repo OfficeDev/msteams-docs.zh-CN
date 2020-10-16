@@ -10,12 +10,12 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 0595dff854382c2a5e95c551f93d76ca3b8616fa
-  ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+  ms.openlocfilehash: b49635a0bfc927e4c9323985842ef470fa895340
+  ms.sourcegitcommit: b0b2f148add54ccd17fdf863c2f1973a615f8657
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/25/2020
-  ms.locfileid: "48279725"
+  ms.lasthandoff: 10/16/2020
+  ms.locfileid: "48487845"
 highlightedContent:
   items:
   - title: "Microsoft 团队的新开发？ \U0001F680从这里开始！"
@@ -117,6 +117,12 @@ conceptualContent:
 tools:
   title: Sdk & 工具
   items:
+  - title: 适用于 Visual Studio Code 的 Microsoft 团队工具包扩展
+    imageSrc: /media/logos/logo_vs-code.svg
+    url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+  - title: 适用于 Visual Studio 的 Microsoft 团队工具包扩展
+    imageSrc: /media/logos/logo_vs-ide.svg
+    url: /microsoftteams/platform/toolkit/visual-studio-overview
   - title: 适用于选项卡的 JavaScript SDK
     imageSrc: ./assets/icons/logo_js.png
     url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
@@ -135,71 +141,3 @@ tools:
   - title: 适用于 Microsoft Teams 的 Yeoman Generator
     imageSrc: ./assets/icons/Yeoman.png
     url: https://github.com/OfficeDev/generator-teams
-additionalContent:
-  sections:
-  - title: 应用程序模板 A-H
-    summary: 随时可用的应用程序
-    items:
-    - title: 员工见解
-      url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
-      summary: 使一线员工能够捕获客户反馈。
-    - title: 考勤
-      url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
-      summary: 使您的团队能够录制出席情况并生成汇总报告。
-    - title: 会议室
-      url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
-      summary: 帮助你的团队快速查找和保留会议室。
-    - title: Celebrations
-      url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
-      summary: 促进生日、周年纪念和其他定期事件的庆祝。
-    - title: Company Communicator
-      url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
-      summary: 使公司团队能够创建聊天消息并将其发送给员工。
-    - title: Sourcer
-      url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
-      summary: 提供来自协作来源信息的工作组查询的答案。
-    - title: 自定义贴纸
-      url: https://github.com/OfficeDev/microsoft-teams-stickers-app
-      summary: 在团队或组织中添加自定义不干胶标签。
-    - title: 专家查找程序
-      url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
-      summary: 使您的团队能够根据技能、兴趣和教育情况确定内部专家。
-    - title: 常见问题 +
-      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-      summary: 使用问题和答案 bot 增强团队的工作效率。
-    - title: 组活动
-      url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
-      summary: 快速创建并管理活动组和协作工作流。
-    - title: HR 支持
-      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
-      summary: 提供与问答 bot 的 HR 支持。
-  - title: 应用程序模板 I-Z
-    summary: 随时可用的应用程序
-    items:
-    - title: Icebreaker
-      url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
-      summary: 通过按每周 meetups 随机配对团队成员来促进协作。
-    - title: 奖励
-      url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
-      summary: 管理和跟踪对活动和事件的奖励性参与。
-    - title: 事件报告器
-      url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport
-      summary: 优化组织内的事件管理。
-    - title: 开放徽章
-      url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
-      summary: 跟踪数字学习和获奖凭据徽章。
-    - title: 快速响应
-      url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
-      summary: 有效回答常见问题并构建动态的响应库。
-    - title: 远程支持
-      url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
-      summary: 提供具有内部支持团队的重点界面。
-    - title: 请求-a 团队
-      url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
-      summary: 增强组织的新团队创建流程。
-    - title: Scrum 状态
-      url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
-      summary: 使团队可运行异步 Scrum 会议并共享更新。
-    - title: SharePoint 列表搜索
-      url: https://github.com/OfficeDev/microsoft-teams-list-search-app
-      summary: 搜索 SharePoint 列表并在团队中将项目插入为自适应卡片。
