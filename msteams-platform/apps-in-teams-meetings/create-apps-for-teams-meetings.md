@@ -5,12 +5,12 @@ description: 创建团队会议的应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: e80dd50590d9e0828ab094c691a6b8e07ace3b0c
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 74f04ce9420110f721d95045fccee1d455cc7ea8
+ms.sourcegitcommit: b0b2f148add54ccd17fdf863c2f1973a615f8657
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452622"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48487838"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>创建团队相关应用程序会议 (开发人员预览版) 
 
@@ -88,9 +88,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### <a name="query-parameters"></a>查询参数
 
-**meetingId**。 会议标识符是必需的。  
-**participantId**。 参与者标识符是必需的。  
-**tenantId**。 参与者的[租户 id](/onedrive/find-your-office-365-tenant-id) 。 租户用户的必需。
+|值|类型|必需|说明|
+|---|---|----|---|
+|**meetingId**| string | 是 | 会议标识符可通过 Bot 调用和团队客户端 SDK 获取。|
+|**participantId**| string | 是 | 此字段是用户 ID，可在选项卡 SSO、Bot 调用和团队客户端 SDK 中使用。 强烈建议使用 Tab SSO|
+|**tenantId**| string | 是 | 租户用户所需的。 它在选项卡 SSO、Bot 调用和团队客户端 SDK 中可用。 强烈建议使用 Tab SSO|
 
 #### <a name="response-payload"></a>响应有效负载
 <!-- markdownlint-disable MD036 -->
@@ -144,9 +146,10 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>查询参数
 
-**conversationId**：会话标识符。 必填
-
-**completionBotId**：这是 Bot ID。 可选
+|值|类型|必需|说明|
+|---|---|----|---|
+|**conversationId**| string | 是 | Convdersation 标识符可用作机器人 invoke 的一部分 |
+|**completionBotId**| string | 否 | 此字段是在清单中声明的 Bot ID。 Bot 将接收到一个 result 对象 |
 
 #### <a name="request-payload"></a>请求有效负载
 
@@ -188,12 +191,12 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```javascript
 
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {
-            notification: {
-                alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
-            }
-        };
+replyActivity.channelData = {
+    notification: {
+        alertInMeeting: true,
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+    }
+};
 await context.sendActivity(replyActivity);
 ```
 
