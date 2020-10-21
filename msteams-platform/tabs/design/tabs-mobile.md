@@ -30,7 +30,7 @@ ms.locfileid: "48279792"
 
 <span data-ttu-id="19a2c-116">下图显示了如何访问移动设备上的 "频道" 选项卡。</span><span class="sxs-lookup"><span data-stu-id="19a2c-116">The following illustration shows how you access a channel tab on mobile.</span></span>
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="显示 "工作组移动" 选项卡的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 ## <a name="design-considerations"></a><span data-ttu-id="19a2c-118">设计注意事项</span><span class="sxs-lookup"><span data-stu-id="19a2c-118">Design considerations</span></span>
 
@@ -48,25 +48,25 @@ ms.locfileid: "48279792"
 
 <span data-ttu-id="19a2c-130">这是工作完成的一个大型区域。</span><span class="sxs-lookup"><span data-stu-id="19a2c-130">This is one large area where work gets done.</span></span> <span data-ttu-id="19a2c-131">团队 Wiki 应用程序遵循此模式。</span><span class="sxs-lookup"><span data-stu-id="19a2c-131">The Teams Wiki app follows this pattern.</span></span> <span data-ttu-id="19a2c-132">如果您的应用程序不将内容分隔为较小的组件，这就是理想之地。</span><span class="sxs-lookup"><span data-stu-id="19a2c-132">If you have an app that doesn’t separate content into smaller components this would be a good fit.</span></span>
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="显示 "团队移动单个画布" 选项卡的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 #### <a name="list"></a><span data-ttu-id="19a2c-134">列表</span><span class="sxs-lookup"><span data-stu-id="19a2c-134">List</span></span>
 
 <span data-ttu-id="19a2c-135">列表非常适合于对大量数据进行排序和筛选，并且非常适合在顶部保留最重要的内容。</span><span class="sxs-lookup"><span data-stu-id="19a2c-135">Lists are great for sorting and filtering large quantities of data and are great at keeping the most important things at the top.</span></span> <span data-ttu-id="19a2c-136">使用可排序列非常有用。</span><span class="sxs-lookup"><span data-stu-id="19a2c-136">It is helpful to use sortable columns.</span></span> <span data-ttu-id="19a2c-137">可以将操作添加到省略号菜单下的每个列表项。</span><span class="sxs-lookup"><span data-stu-id="19a2c-137">Actions can be added to each list item under the ellipsis menu.</span></span>
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="显示团队移动列表选项卡的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 #### <a name="grid"></a><span data-ttu-id="19a2c-139">窗格</span><span class="sxs-lookup"><span data-stu-id="19a2c-139">Grid</span></span>
 
 <span data-ttu-id="19a2c-140">网格对于显示高度直观的元素很有用。</span><span class="sxs-lookup"><span data-stu-id="19a2c-140">Grids are useful for showing elements which are highly visual.</span></span> <span data-ttu-id="19a2c-141">它有助于在顶部添加筛选器或搜索控件。</span><span class="sxs-lookup"><span data-stu-id="19a2c-141">It helps to include a filter or search control at the top.</span></span>
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="图示显示了具有网格布局的 "工作组移动" 选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 ### <a name="tabs-with-bots-on-mobile"></a><span data-ttu-id="19a2c-143">移动设备上带有 bot 的选项卡</span><span class="sxs-lookup"><span data-stu-id="19a2c-143">Tabs with bots on mobile</span></span>
 
 <span data-ttu-id="19a2c-144">下面的示例是包含选项卡和机器人的个人应用程序。</span><span class="sxs-lookup"><span data-stu-id="19a2c-144">The following example is a personal app that has tabs and a bot.</span></span>
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="展示了具有选项卡和 bot 的移动团队应用程序的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 ## <a name="ui-components"></a><span data-ttu-id="19a2c-146">UI 组件</span><span class="sxs-lookup"><span data-stu-id="19a2c-146">UI components</span></span>
 
