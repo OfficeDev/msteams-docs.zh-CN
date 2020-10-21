@@ -30,7 +30,7 @@ ms.locfileid: "48279792"
 
 下图显示了如何访问移动设备上的 "频道" 选项卡。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="显示 "工作组移动" 选项卡的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 ## <a name="design-considerations"></a>设计注意事项
 
@@ -48,25 +48,25 @@ ms.locfileid: "48279792"
 
 这是工作完成的一个大型区域。 团队 Wiki 应用程序遵循此模式。 如果您的应用程序不将内容分隔为较小的组件，这就是理想之地。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="显示 "团队移动单个画布" 选项卡的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 #### <a name="list"></a>列表
 
 列表非常适合于对大量数据进行排序和筛选，并且非常适合在顶部保留最重要的内容。 使用可排序列非常有用。 可以将操作添加到省略号菜单下的每个列表项。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="显示团队移动列表选项卡的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 #### <a name="grid"></a>窗格
 
 网格对于显示高度直观的元素很有用。 它有助于在顶部添加筛选器或搜索控件。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="图示显示了具有网格布局的 "工作组移动" 选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 ### <a name="tabs-with-bots-on-mobile"></a>移动设备上带有 bot 的选项卡
 
 下面的示例是包含选项卡和机器人的个人应用程序。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="展示了具有选项卡和 bot 的移动团队应用程序的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="显示团队移动应用程序抽屉的图示。" border="false":::
 
 ## <a name="ui-components"></a>UI 组件
 
