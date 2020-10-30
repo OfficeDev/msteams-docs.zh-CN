@@ -164,7 +164,7 @@
     - name: 操作指南
       expanded: true
       items:
-        - name: 为 Teams 创建选项卡
+        - name: 使用 App Studio 创建选项卡
           href: tabs/how-to/add-tab.md
         - name: 创建选项卡页面
           items:
@@ -215,7 +215,7 @@
     - name: 操作指南
       expanded: true
       items:
-        - name: 创建适合 Teams 的机器人
+        - name: 使用 App Studio 创建机器人
           href: bots/how-to/create-a-bot-for-teams.md
         - name: 将 Power Virtual Agent chatbot 与 Teams 相整合
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: 操作指南
       expanded: true
       items:
-        - name: 为 Teams 创建消息传递扩展
+        - name: 使用 App Studio 创建消息传递
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: 基于操作的命令
           items:
@@ -363,7 +363,7 @@
           href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: 会议内的选项卡
           href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-- name: Teams Graph REST APIs
+- name: Microsoft Graph REST API 集成
   items:
     - name: 资源特定许可
       items:
