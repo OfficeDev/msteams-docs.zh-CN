@@ -2,19 +2,20 @@
 title: 提交内容清单
 description: 将 Microsoft 团队应用程序发布到 AppSource 之前要使用的清单
 keywords: 团队发布 microsoft store office 发布清单提交团队应用 appsource 验证
-ms.openlocfilehash: 4bbf5adb8594db0f7163db610b192dd8aaec37fb
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 1b25a449901c303269334e5cea6de46fa3b6f6e5
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465920"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796300"
 ---
 # <a name="prepare-for-appsource-submission"></a>准备 AppSource 提交  
 
 若要在 AppSource 上列出，您的应用程序必须经过审批过程。 这是 Microsoft 团队组提供的一项免费服务，它验证您的应用程序按所述方式工作，包含所有适当的元数据，并提供对最终用户有价值的内容。 为了帮助你获得快速批准，请确保你的应用满足以下要求和指南：
 
 * **分发方法：** 请确保您的应用程序适用于商店平台上的出版物。 在不发布到 AppSource 的情况下，分发应用程序的 [其他选项](../../overview.md) 。
-* **验证策略：** 您的应用程序必须传递所有当前的 [AppSource 验证策略](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)。 提交之前，请对照 [验证工具](#teams-app-validation-tool) 检查您的应用程序。 请注意，这些策略可能会发生更改。
+* **验证策略：** 您的应用程序必须在提交前传递所有当前的 [AppSource 验证策略](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) 。 请注意，这些策略可能会发生更改。 
+* * * 使用 [清单验证工具](#teams-app-validation-tool) 自我测试您的应用程序。
 * **应用程序详细信息页面：** 您的应用程序必须与  [应用程序详细信息页检查表](detail-page-checklist.md)相一致。
 * **提示和频繁失败的情况：** 请特别注意列出的 [提示和频繁失败的情况](frequently-failed-cases.md)  ，以改进应用提交和审批时间。
 * **应用程序清单：** 检查应用部件清单（manifest）清单 [中的应用](app-manifest-checklist.md)清单。
@@ -82,10 +83,10 @@ ms.locfileid: "48465920"
 
 * 您可以选择将测试笔记上传到 SharePoint。 如果是这样，请提供指向该文件的公用链接。
 
-* **测试帐户**。 如果您的应用程序仅允许来自后端的授权帐户或 safelisting，则需要测试帐户。 此外，如果您的应用程序中允许有团队/组聊天作用域，则必须在同一租户中有两个测试帐户来验证工作组协作方案。
+* **测试帐户** 。 如果您的应用程序仅允许来自后端的授权帐户或 safelisting，则需要测试帐户。 此外，如果您的应用程序中允许有团队/组聊天作用域，则必须在同一租户中有两个测试帐户来验证工作组协作方案。
 
-* **集成步骤**。 如果需要由租户管理员进行预配置以使用应用，请包括步骤和/或提供配置的管理员和非管理员帐户进行验证。 注意：你可以注册 [Office 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program) 订阅。 它在90天内 *免费* 使用，并且将持续更新，只要你将其用于开发活动即可。
+* **集成步骤** 。 如果需要由租户管理员进行预配置以使用应用，请包括步骤和/或提供配置的管理员和非管理员帐户进行验证。 注意：你可以注册 [Office 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program) 订阅。 它在90天内 *免费* 使用，并且将持续更新，只要你将其用于开发活动即可。
 
-* **有关团队中应用程序功能的说明**：详细介绍了应用程序在团队中提供的所有功能，以及用于测试每项功能的步骤。
+* **有关团队中应用程序功能的说明** ：详细介绍了应用程序在团队中提供的所有功能，以及用于测试每项功能的步骤。
 
-* **显示应用程序功能 (可选) 的视频 **：您可以为我们提供产品的视频录制，以充分了解应用程序的功能。
+* **显示应用程序功能 (可选) 的视频** ：您可以为我们提供产品的视频录制，以充分了解应用程序的功能。

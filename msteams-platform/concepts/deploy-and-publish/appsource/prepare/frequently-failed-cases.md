@@ -5,16 +5,16 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: 团队应用程序验证大多数失败的测试用例快速审批 appsource 发布
-ms.openlocfilehash: 97130f7b943fb95b76356aa853e2fddd55d69a83
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: a838d34cabd99ee5d892517c13efc4b91dbd059d
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465934"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796335"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>成功提交应用程序的提示
 
-本文解决了提交的应用程序验证失败的常见原因。 尽管它并不是您的应用程序的所有潜在问题的详尽列表，但遵循本指南将增加您的应用程序提交第一次的可能性。 有关验证策略的详细列表，*请参阅*[商业市场认证策略](/legal/marketplace/certification-policies)。
+本文解决了提交的应用程序验证失败的常见原因。 尽管它并不是您的应用程序的所有潜在问题的详尽列表，但遵循本指南将增加您的应用程序提交第一次的可能性。 有关验证策略的详细列表， *请参阅*[商业市场认证策略](/legal/marketplace/certification-policies)。
 
 >[!NOTE]
 >**[1140 节](/legal/marketplace/certification-policies#1140-teams)** 是专门针对团队应用程序的 Microsoft 团队和 **[子节 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** 解决功能要求的。
@@ -23,7 +23,7 @@ ms.locfileid: "48465934"
 
 ### <a name="9989-general-considerations"></a>&#9989; 常规注意事项
 
-另*请参阅* [Section 100 —常规](/legal/marketplace/certification-policies#100-general)
+另 *请参阅* [Section 100 —常规](/legal/marketplace/certification-policies#100-general)
 
 * 确保使用的是版本1.4.1 或更高版本的 [Microsoft 团队 SDK](https://www.npmjs.com/package/@microsoft/teams-js)。
 * 在验证过程正在进行时，请勿对应用进行更改。 执行此操作将需要对应用进行完全重新验证。
@@ -35,7 +35,7 @@ ms.locfileid: "48465934"
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; 提供清晰且简单的登录/注销和注册体验
 
-另*请参阅* [Section 1100.5-客户控制](/legal/marketplace/certification-policies#11005-customer-control)
+另 *请参阅* [Section 1100.5-客户控制](/legal/marketplace/certification-policies#11005-customer-control)
 
 * 如果您的应用程序或外接程序依赖于外部帐户或服务，则登录/注销和注册体验必须在应用程序中的所有功能上都显而易见且可访问。
 * 如果向用户提供了显式登录选项，则即使应用程序使用的是 SSO/[缄默身份验证](~/tabs/how-to/authentication/auth-silent-aad.md)) ，也必须有相应的注销选项 (。
@@ -60,9 +60,9 @@ ms.locfileid: "48465934"
 
 ### <a name="9989-response-times-must-be-reasonable"></a>&#9989; 响应时间必须合理
 
-* **选项卡**。 如果对操作的响应需要的时间超过三秒，则必须提供加载消息或警告。
-* **Bot**。 对用户命令的响应必须在两秒内发生。 如果需要更长的处理，应用程序必须显示键入指示器。
-* **撰写扩展**。 对用户命令的响应必须在5秒内发生。
+* **选项卡** 。 如果对操作的响应需要的时间超过三秒，则必须提供加载消息或警告。
+* **Bot** 。 对用户命令的响应必须在两秒内发生。 如果需要更长的处理，应用程序必须显示键入指示器。
+* **撰写扩展** 。 对用户命令的响应必须在5秒内发生。
 
 > [!TIP]
 > 确保您的应用程序在您的应用程序需要响应的时间过长时显示加载指示器或某种形式的警告。
@@ -75,6 +75,8 @@ ms.locfileid: "48465934"
 ![SharePoint 选项卡视图](~/assets/images/faq/tab-sp.png)
 
 * 选项卡的性质应为 "亮"，并且不包含复杂的导航。
+* 选项卡不能显示带有左侧导轨中与主团队导航冲突的图标的应用程序栏。
+* 应用程序中具有复杂编辑功能的选项卡应在多窗口中打开编辑器视图，而不是在选项卡中打开。
 * 如果有多个视图选项，请考虑具有一个选项卡配置菜单供用户选择。 例如，将菜单放在 "配置" 页中，以使实际的选项卡视图干净且具有焦点，而不是在选项卡中嵌入菜单。
 
 !["广域观点配置" 页](~/assets/images/faq/wideidea.png)
@@ -100,20 +102,20 @@ ms.locfileid: "48465934"
 
 你的 bot 应响应任何命令，而不是用户的终止。 下面的一些提示可帮助你的机器人智能地对用户做出响应：
 
-* **使用命令列表**。 分析用户输入或预测用户意图非常困难。 而不是让用户猜出你的 bot 可以执行的操作，而是提供你的 bot 理解的命令列表。
+* **使用命令列表** 。 分析用户输入或预测用户意图非常困难。 而不是让用户猜出你的 bot 可以执行的操作，而是提供你的 bot 理解的命令列表。
 
 ![流命令列表](~/assets/images/faq/flow-bot.png)
 
-* **包含 "帮助" 命令**。 用户在丢失时或者在你的 bot 未按预期响应时，可能会键入 "帮助"。 包含一个帮助命令，该命令描述应用程序的值将如何与所有有效命令一起使用。
+* **包含 "帮助" 命令** 。 用户在丢失时或者在你的 bot 未按预期响应时，可能会键入 "帮助"。 包含一个帮助命令，该命令描述应用程序的值将如何与所有有效命令一起使用。
 
 ![流帮助命令](~/assets/images/faq/flow-help.png)
 
-* **在你的 bot 丢失时包括帮助内容或指南**。 当你的 bot 无法识别用户输入时，它应建议另一个操作。 例如， *"我很抱歉，我不理解。有关详细信息，请键入 "help"。* 不要使用错误消息进行响应，也不要简单说出 *"我不知道"*。 使用此机会讲授你的用户。
+* **在你的 bot 丢失时包括帮助内容或指南** 。 当你的 bot 无法识别用户输入时，它应建议另一个操作。 例如， *"我很抱歉，我不理解。有关详细信息，请键入 "help"。* 不要使用错误消息进行响应，也不要简单说出 *"我不知道"* 。 使用此机会讲授你的用户。
 
 * **使用自适应卡片和任务模块使你的 bot 响应清晰且可操作** 
 [带有按钮的自适应卡片，用于调用任务模块，以](/task-modules-and-cards/task-modules/task-modules-bots)增强机器人用户体验。 这些卡片和按钮更易于在移动设备中使用，而不是用户键入命令
 
-* 请**考虑所有作用域**。 如果 `@*botname*` 在频道和个人对话中 () ，请确保你的 bot 提供适当的响应。 如果你的 bot 未在个人或团队作用域内提供有意义的上下文，请通过清单禁用该作用域。  (请参阅 `bots` [Microsoft 团队清单架构参考](~/resources/schema/manifest-schema.md#bots)中的 "阻止"。 ) 
+* 请 **考虑所有作用域** 。 如果 `@*botname*` 在频道和个人对话中 () ，请确保你的 bot 提供适当的响应。 如果你的 bot 未在个人或团队作用域内提供有意义的上下文，请通过清单禁用该作用域。  (请参阅 `bots` [Microsoft 团队清单架构参考](~/resources/schema/manifest-schema.md#bots)中的 "阻止"。 ) 
 
 ### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>在首次启动时 &#9989; 个人 bot 必须发送欢迎消息
 
@@ -136,19 +138,19 @@ ms.locfileid: "48465934"
 
 #### <a name="avoid-welcome-message-spamming"></a>避免欢迎消息垃圾邮件
 
-* **按 bot 的频道消息**。 通过创建单独的新聊天帖子，不要使用垃圾邮件用户。 在同一线程中创建包含回复的单线程。
-* **通过 bot 进行个人聊天**。 不发送多封邮件。 发送包含完整信息的一封邮件。
+* **按 bot 的频道消息** 。 通过创建单独的新聊天帖子，不要使用垃圾邮件用户。 在同一线程中创建包含回复的单线程。
+* **通过 bot 进行个人聊天** 。 不发送多封邮件。 发送包含完整信息的一封邮件。
 
 #### <a name="notification-only-bot-welcome-messages"></a>仅通知机器人的欢迎消息
 
-仅通知 bot 必须发送一封欢迎消息，其中包含一封电子邮件： *"我是仅通知的 bot 并无法回复你的聊天"*。
+仅通知 bot 必须发送一封欢迎消息，其中包含一封电子邮件： *"我是仅通知的 bot 并无法回复你的聊天"* 。
 
 #### <a name="welcome-messages-in-the-personal-scope"></a>个人范围中的欢迎邮件
 
-* **使您的邮件简洁和提供信息**。  您的应用程序的用户体验和知识很可能会有所不同。 用户可能在其他平台上使用过您的应用程序，或者不知道您的应用程序的任何内容。 您想要将您的邮件量身定制给所有访问群体，并在几个句子中说明你的 bot 的功能和与之交互的方法。 此外，还应说明应用程序的价值，以及用户将如何使用它。
+* **使您的邮件简洁和提供信息** 。  您的应用程序的用户体验和知识很可能会有所不同。 用户可能在其他平台上使用过您的应用程序，或者不知道您的应用程序的任何内容。 您想要将您的邮件量身定制给所有访问群体，并在几个句子中说明你的 bot 的功能和与之交互的方法。 此外，还应说明应用程序的价值，以及用户将如何使用它。
 ![Cafe 和 Dinning bot](~/assets/images/faq/cafe-bot.png)
 
-* **使您的邮件可操作**。 请考虑安装您的应用程序后，您希望用户做的第一件事。 是否有要尝试的酷命令？ 是否有其他应知道的启动体验？ 他们是否需要登录？ 可以在自适应卡片上添加操作，也可以提供具体示例，如 *"请尝试 ..."*， *"这是我可以执行的操作 ..."*。
+* **使您的邮件可操作** 。 请考虑安装您的应用程序后，您希望用户做的第一件事。 是否有要尝试的酷命令？ 是否有其他应知道的启动体验？ 他们是否需要登录？ 可以在自适应卡片上添加操作，也可以提供具体示例，如 *"请尝试 ..."* ， *"这是我可以执行的操作 ..."* 。
 
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>团队/频道范围中的欢迎邮件
 

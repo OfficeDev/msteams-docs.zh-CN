@@ -1,20 +1,20 @@
 ---
-title: 为工作组创建邮件扩展
+title: 使用应用程序 Studio 创建邮件扩展插件
 author: clearab
-description: 了解如何创建团队消息扩展
+description: 了解如何使用应用程序 Studio 创建 Microsoft 团队消息扩展。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: c3437457f7084d2d768af0f0db5208525c368682
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452594"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796181"
 ---
-# <a name="create-a-messaging-extension-for-microsoft-teams"></a>为 Microsoft 团队创建消息扩展
+# <a name="create-a-messaging-extension-using-app-studio"></a>使用应用程序 Studio 创建邮件扩展插件
 
 > [!TIP]
-> 寻求更快的入门方式？ 使用 Microsoft 团队工具包创建 [邮件扩展插件](../../build-your-first-app/build-messaging-extension.md) 。
+> 正在寻求更快的入门方式？ 使用 Microsoft 团队工具包创建 [邮件扩展插件](../../build-your-first-app/build-messaging-extension.md) 。
 
 在较高级别，需要完成以下步骤以创建邮件扩展。
 
@@ -57,13 +57,13 @@ ms.locfileid: "48452594"
 
 您可以使用 Microsoft 团队客户端中的应用程序 Studio 应用来帮助创建应用程序清单。
 
-1. 在 Teams 客户端中，从左侧导航栏上的“**…**”溢出菜单中打开 App Studio。 如果尚未安装，可以通过搜索来执行此操作。
+1. 在 Teams 客户端中，从左侧导航栏上的“ **…** ”溢出菜单中打开 App Studio。 如果尚未安装，可以通过搜索来执行此操作。
 2. 在 " **清单编辑器** " 选项卡上，选择 " **新建应用程序** " (如果要将邮件扩展添加到现有应用程序，可以导入应用程序包) 
 3. 添加应用详细信息（有关每个字段的完整说明，请参阅[清单架构定义](~/resources/schema/manifest-schema.md)）。
 4. 在 " **邮件扩展** " 选项卡上，单击 " **设置** " 按钮。
 5. 您可以创建新的 web 服务 (bot) 以供您的邮件扩展使用，或者，如果您已注册，请在此处选择/添加一个。
 6. 如有必要，请更新自动程序终结点地址以指向你的自动程序。 它应该类似于 `https://someplace.com/api/messages`。
-7. "**命令**" 部分的 "**添加**" 按钮将指导您将命令添加到邮件扩展。 有关添加命令的详细信息，请参阅 " [了解更多](#learn-more) " 部分。 请记住，您最长可为邮件扩展定义10个命令。
+7. " **命令** " 部分的 " **添加** " 按钮将指导您将命令添加到邮件扩展。 有关添加命令的详细信息，请参阅 " [了解更多](#learn-more) " 部分。 请记住，您最长可为邮件扩展定义10个命令。
 8. 通过 " **邮件处理程序** " 部分，您可以添加将在其中触发消息的域。 有关详细信息，请参阅 [link unfurling](~/messaging-extensions/how-to/link-unfurling.md) 。
 
 从 " **完成 => 测试和分布** " 选项卡上，您可以 **下载** 应用程序包 (其中包括您的应用程序清单和应用程序图标) 或 **安装** 程序包。
@@ -129,13 +129,13 @@ ms.locfileid: "48452594"
 
 会议开始后，团队参与者可以在实时呼叫过程中与您的邮件扩展直接交互。 在构建会议内邮件扩展时，请考虑以下几点：
 
-1. **Location**。 您的邮件扩展可以从撰写邮件区域、命令框或会议聊天 @mentioned 中进行调用。
+1. **Location** 。 您的邮件扩展可以从撰写邮件区域、命令框或会议聊天 @mentioned 中进行调用。
 
-1. **元数据**。 调用邮件扩展时，可以通过和来识别用户和租户 `userId` `tenantId` 。 可在 `channelData` 对象中找到 `meetingId`。 您的应用程序可以使用 `userId` 和， `meetingId`  以获取用于 `GetParticipant` 检索用户角色的 API 请求。
+1. **元数据** 。 调用邮件扩展时，可以通过和来识别用户和租户 `userId` `tenantId` 。 可在 `channelData` 对象中找到 `meetingId`。 您的应用程序可以使用 `userId` 和， `meetingId`  以获取用于 `GetParticipant` 检索用户角色的 API 请求。
 
-1. **命令类型**。 如果您的邮件扩展使用 [基于操作的命令](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)，它应遵循选项卡式 [单一登录](../../tabs/how-to/authentication/auth-aad-sso.md) 身份验证。
+1. **命令类型** 。 如果您的邮件扩展使用 [基于操作的命令](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)，它应遵循选项卡式 [单一登录](../../tabs/how-to/authentication/auth-aad-sso.md) 身份验证。
 
-1. **用户体验**。 您应确定会议聊天过程中调用的最终用户体验邮件扩展。
+1. **用户体验** 。 邮件扩展的外观和行为与会议外部的行为相同。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -154,7 +154,7 @@ ms.locfileid: "48452594"
   * [带有基于操作的命令的消息扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [包含基于搜索的命令的邮件扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-了解有关邮件扩展的详细信息概念：
+了解有关团队开发概念的更多信息：
 
-* [了解团队应用程序功能？](~/concepts/extensibility-points.md)
+* [了解团队应用程序功能](../../concepts/capabilities-overview.md)
 * [什么是邮件扩展？](~/messaging-extensions/what-are-messaging-extensions.md)

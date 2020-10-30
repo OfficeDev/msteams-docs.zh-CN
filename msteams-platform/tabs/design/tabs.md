@@ -1,13 +1,13 @@
 ---
 title: 选项卡的设计准则
 description: 介绍为内容和协作创建选项卡的准则
-keywords: 团队设计指南参考框架选项卡配置
-ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+keywords: 团队设计指南参考框架选项卡配置通道选项卡静态选项卡 "简单选项卡设计工作组" 选项卡
+ms.openlocfilehash: 7636159e26a4000efb1d89dd8e9921a91cb5aa39
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819037"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796209"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
 
@@ -59,9 +59,9 @@ ms.locfileid: "47819037"
 
 > [!div class="checklist"]
 >
-> * **打开一个任务模块，如单个工作项或实体**。 这将完全阻止聊天，并且是最佳选择，它是专门了解选项卡的聊天，而不是子实体或编辑体验。
->* **在 iframe 中打开伪对话框**。 如果与屏蔽背景一起使用，我们建议使用较亮的颜色，而不是黑色。 `app-gray-10 at 30%`透明度工作良好。
->* **打开浏览器页面**。
+> * **打开一个任务模块，如单个工作项或实体** 。 这将完全阻止聊天，并且是最佳选择，它是专门了解选项卡的聊天，而不是子实体或编辑体验。
+>* **在 iframe 中打开伪对话框** 。 如果与屏蔽背景一起使用，我们建议使用较亮的颜色，而不是黑色。 `app-gray-10 at 30%`透明度工作良好。
+>* **打开浏览器页面** 。
 
 ### <a name="personality"></a>特征
 
@@ -75,7 +75,7 @@ ms.locfileid: "47819037"
 合并自己的颜色和布局 twill 也有助于传达个性。
 
 > [!TIP]
-> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。 *请参阅*示例 [团队颜色](../../concepts/design/components/color.md)
+> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。 *请参阅* 示例 [团队颜色](../../concepts/design/components/color.md)
 
 ---
 
@@ -136,7 +136,7 @@ ms.locfileid: "47819037"
 
 > [!div class="checklist"]
 >
-> * **使用应用程序 api 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。 *请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
-> * **使用 bot**。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
+> * **使用应用程序 api 将更改通知用户** 。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。 *请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+> * **使用 bot** 。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
 
   将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您 `@mention`  将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。

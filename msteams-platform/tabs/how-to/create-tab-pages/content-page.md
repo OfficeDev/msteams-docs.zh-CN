@@ -5,12 +5,12 @@ description: 如何创建内容页
 keywords: 团队选项卡组频道配置静态
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818904"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796314"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>创建选项卡的内容页
 
@@ -28,7 +28,7 @@ ms.locfileid: "47818904"
 
 ## <a name="integrate-your-code-with-teams"></a>将您的代码与团队集成
 
-若要在团队中显示您的页面，您必须包含 [Microsoft 团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) ，并在 `microsoftTeams.initialize()` 页面加载后包含一个调用。 这就是页面和团队客户端的通信方式：
+若要在团队中显示您的页面，您必须包含 [Microsoft 团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) ，并在 `microsoftTeams.initialize()` 页面加载后包含一个调用。 这就是页面和团队客户端的通信方式：
 
 ```html
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ ms.locfileid: "47818904"
 
 ### <a name="using-the-sdk-to-interact-with-teams"></a>使用 SDK 与团队进行交互
 
-[团队客户端 JAVASCRIPT SDK](~/tabs/how-to/using-teams-client-sdk.md)提供了许多其他功能，在开发人员的内容页时，您可能会发现有用的功能。
+[团队客户端 JAVASCRIPT SDK](~/tabs/how-to/using-teams-client-sdk.md)提供了许多其他功能，在开发内容页时可能会非常有用。
 
 ### <a name="deep-links"></a>深度链接
 
@@ -75,8 +75,8 @@ ms.locfileid: "47818904"
 
 1. 若要显示加载指示器，请将添加 `"showLoadingIndicator": true` 到你的清单中。 
 2. 请记住调用 `microsoftTeams.initialize();` 。
-3. **可选**。 如果您已准备好打印到屏幕，并希望延迟加载应用程序内容的其余部分，则可以通过调用来手动隐藏加载指示器 `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **强制性**。 最后，调用 `microsoftTeams.appInitialization.notifySuccess()` 以通知团队您的应用程序已成功加载。 如果适用，团队将隐藏加载指示器。 如果  `notifySuccess`  在30秒内未调用，则系统将假定您的应用程序超时，并将出现一个带有重试选项的错误屏幕。
+3. **可选** 。 如果您已准备好打印到屏幕，并希望延迟加载应用程序内容的其余部分，则可以通过调用来手动隐藏加载指示器 `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **强制性** 。 最后，调用 `microsoftTeams.appInitialization.notifySuccess()` 以通知团队您的应用程序已成功加载。 如果适用，团队将隐藏加载指示器。 如果  `notifySuccess`  在30秒内未调用，则系统将假定您的应用程序超时，并将出现一个带有重试选项的错误屏幕。
 5. 如果您的应用程序无法加载，则可以通过调用 `microsoftTeams.appInitialization.notifyFailure(reason);` 来让团队知道出现了错误。 随后将向用户显示一个错误屏幕：
 
 ```typescript

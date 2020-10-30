@@ -1,21 +1,21 @@
 ---
-title: 为团队创建选项卡
+title: 使用应用程序 Studio 创建选项卡
 author: laujan
-description: 了解如何创建 "团队" 选项卡
+description: 了解如何使用应用程序 Studio 创建 Microsoft 团队选项卡。
 keywords: 团队选项卡组频道可配置
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 4e6554a3fdba2ee53bf6d76cd6e25a55b14f7bdd
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452755"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796153"
 ---
-# <a name="create-a-tab-for-microsoft-teams"></a>为 Microsoft 团队创建选项卡
+# <a name="create-a-tab-using-app-studio"></a>使用应用程序 Studio 创建选项卡
 
 > [!TIP]
-> 寻求更快的入门方式？ 使用 Microsoft 团队工具包创建 [个人](../../build-your-first-app/build-personal-tab.md) 或 [通道和组](../../build-your-first-app/build-channel-tab.md) 选项卡。
+> 正在寻求更快的入门方式？ 使用 Microsoft 团队工具包创建 [个人](../../build-your-first-app/build-personal-tab.md) 或 [通道和组](../../build-your-first-app/build-channel-tab.md) 选项卡。
 
 通过选项卡，您可以为承载于频道、组聊天和个人用户的 web 内容提供服务。 在较高级别，需要完成以下步骤以创建选项卡：
 
@@ -47,7 +47,7 @@ ms.locfileid: "48452755"
 * 通常，作为针对 jacking 的安全措施，登录页面不会呈现在 Iframe 中。 因此，身份验证逻辑需要使用重定向 (以外的方法，例如，使用基于令牌的身份验证或基于 cookie 的身份验证) 。
 
 > [!NOTE]
-> Chrome 80，安排在早期2020中发布，默认引入新的 cookie 值并强加 cookie 策略。 建议您为 cookie 设置预期用途，而不是依赖于默认浏览器行为。 *请参阅* [SameSite cookie 属性 (2020 update) ](../../resources/samesite-cookie-update.md)。
+> Chrome 80，安排在早期2020中发布，默认引入新的 cookie 值并强加 cookie 策略。 建议您为 cookie 设置预期用途，而不是依赖于默认浏览器行为。 *请参阅* [SameSite cookie 属性 (2020 update)](../../resources/samesite-cookie-update.md)。
 
 * 浏览器遵循同一个源策略限制，以防止网页发出请求，而不是为 web 页提供服务的其他域。 但是，您可能需要将配置或内容页面重定向到另一个域或子域。 您的跨域导航逻辑应允许团队客户端在加载或与选项卡通信时，针对应用程序清单中的静态 validDomains 列表验证源。
 
@@ -67,11 +67,11 @@ ms.locfileid: "48452755"
 1. 打开应用程序 Studio 并选择 " **清单编辑器** " 选项卡。
 1. 选择 " **创建新的应用程序** " 磁贴。
 1. 添加应用程序详细信息 (请参阅 [清单架构定义](~/resources/schema/manifest-schema.md) ，以获取每个字段) 的完整说明。
-1. 在 "功能" 部分，选择 " **选项卡**"。
-    * 对于 "个人" 选项卡，选择 " *添加个人" 选项卡* ，然后选择 " **添加**"。 将显示一个弹出对话框窗口，可在其中添加选项卡详细信息。
-    * 对于 "通道/组" 选项卡，在 " *团队"* 选项卡下选择 " **添加** " 并完成 "团队" 选项卡弹出窗口中的选项卡详细信息字段。 请确保 *可以更新配置？* 选中 "工作组" 和 " *组" 聊天* 框，然后选择 " **保存**"。
+1. 在 "功能" 部分，选择 " **选项卡** "。
+    * 对于 "个人" 选项卡，选择 " *添加个人" 选项卡* ，然后选择 " **添加** "。 将显示一个弹出对话框窗口，可在其中添加选项卡详细信息。
+    * 对于 "通道/组" 选项卡，在 " *团队"* 选项卡下选择 " **添加** " 并完成 "团队" 选项卡弹出窗口中的选项卡详细信息字段。 请确保 *可以更新配置？* 选中 "工作组" 和 " *组" 聊天* 框，然后选择 " **保存** "。
 1. 在 " *域和权限* " 部分中，" *选项卡* " 字段中的域应包含不带 HTTPS 前缀的主机或反向代理 URL。
-1. 在 "**完成**  =>  **测试和分布**" 选项卡上，您可以**下载**应用程序包，将包**安装**到团队中，或**提交**到团队应用商店以供审批。 *如果使用反向代理，将在右侧的 " **说明** " 字段中收到警告。在测试选项卡时可以忽略此警告*。
+1. 在 " **完成**  =>  **测试和分布** " 选项卡上，您可以 **下载** 应用程序包，将包 **安装** 到团队中，或 **提交** 到团队应用商店以供审批。 *如果使用反向代理，将在右侧的 " **说明** " 字段中收到警告。在测试选项卡时可以忽略此警告* 。
 
 ## <a name="create-your-app-package-manually"></a>手动创建应用程序包
 
@@ -84,9 +84,9 @@ ms.locfileid: "48452755"
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
-|`name`|字符串|128个字符|✔|该选项卡在通道接口中的显示名称。|
-|`contentUrl`|字符串|2048 个字符|✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
-|`websiteUrl`|字符串|2048 个字符||要指向的 https://URL，如果用户要在浏览器中查看。|
+|`name`|String|128个字符|✔|该选项卡在通道接口中的显示名称。|
+|`contentUrl`|String|2048 个字符|✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
+|`websiteUrl`|String|2048 个字符||要指向的 https://URL，如果用户要在浏览器中查看。|
 |`scopes`|枚举数组|1|✔|静态选项卡仅支持 `personal` 作用域，这意味着只能将其设置为个人应用程序的一部分。|
 
 #### <a name="simple-personal-tab-manifest-example"></a>简单的个人选项卡清单示例
@@ -112,8 +112,8 @@ ms.locfileid: "48452755"
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`configurationUrl`|字符串|2048 个字符|✔|指向 "配置" 页的 https://URL。|
-|`canUpdateConfiguration`|Boolean|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置 `true`|
+|`configurationUrl`|String|2048 个字符|✔|指向 "配置" 页的 https://URL。|
+|`canUpdateConfiguration`|布尔值|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 设置 `true`|
 |`scopes`|枚举数组|1|✔|可配置的选项卡仅支持 `team` 和 `groupchat` 范围。 |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>简单通道/组选项卡清单示例
@@ -136,9 +136,9 @@ ms.locfileid: "48452755"
 ### <a name="upload-app-package-directly-to-a-team"></a>将应用程序包直接上载到团队
 
 1. 打开 Microsoft 团队客户端。 如果您使用的是 [基于 web 的版本](https://teams.microsoft.com) ，则可以使用浏览器的 [开发人员工具](~/tabs/how-to/developer-tools.md)检查您的前端代码。
-1. 在左侧的 " *YourTeams* " 面板中，选择要用于 `...` 测试选项卡的团队旁边的菜单，然后选择 " **管理团队**"。
+1. 在左侧的 " *YourTeams* " 面板中，选择要用于 `...` 测试选项卡的团队旁边的菜单，然后选择 " **管理团队** "。
 1. 在主面板中，从选项卡栏中选择 " **应用** "，然后选择 "上载" 位于页面右下角的 **自定义应用程序** 。
-1. 打开您的项目目录，浏览到 " **/package** " 文件夹，选择 "应用程序包" zip 文件夹，然后选择 " **打开**"。 您的选项卡将上传到团队。
+1. 打开您的项目目录，浏览到 " **/package** " 文件夹，选择 "应用程序包" zip 文件夹，然后选择 " **打开** "。 您的选项卡将上传到团队。
 
 ### <a name="view-your-tab-in-teams"></a>在团队中查看您的选项卡
 

@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: 团队导入邮件 api 图 microsoft 迁移迁移发布
-ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 934e00541773140c90c270a616d6bc50aacac6e1
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465906"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796293"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
@@ -41,8 +41,8 @@ ms.locfileid: "48465906"
 
 ### <a name="set-up-your-office-365-tenant"></a>设置 Office 365 租户
 
-✔确保导入数据存在 Office 365 租户。 有关为团队设置 Office 365 租赁的详细信息，*请参阅*[准备 office 365 租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。  
-✔确保团队成员在 Azure Active Directory (AAD) 中。  有关详细信息， *请参阅*向 Azure Active Directory [添加新用户](/azure/active-directory/fundamentals/add-users-azure-active-directory) 。
+✔确保导入数据存在 Office 365 租户。 有关为团队设置 Office 365 租赁的详细信息， *请参阅*[准备 office 365 租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。  
+✔确保团队成员在 Azure Active Directory (AAD) 中。  有关详细信息， *请参阅* 向 Azure Active Directory [添加新用户](/azure/active-directory/fundamentals/add-users-azure-active-directory) 。
 
 ## <a name="step-one-create-a-team"></a>第一步：创建团队
 
@@ -50,11 +50,11 @@ ms.locfileid: "48465906"
 
 > 使用 "团队" 资源属性创建具有 "后向时间戳" 的[新团队](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) `createdDateTime` 。 将新团队放在中 `migration mode` ，这是一种特殊状态，可从团队中的大多数活动中对用户进行横栏，直到迁移过程完成。 将 `teamCreationMode` 实例属性包含 `migration` 在 POST 请求中的值，以显式标识新团队为迁移而创建。  
 
-> **注意**： `createdDateTime` 将仅为已迁移的团队或频道的实例填充字段。
+> **注意** ： `createdDateTime` 将仅为已迁移的团队或频道的实例填充字段。
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>权限
 
 |ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/Api|
 |-|-|-|-|-|-|
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
@@ -98,7 +98,7 @@ Content-Location: /teams/{teamId}
 
 > 使用 "信道" 资源属性创建具有 "后向时间戳" 的[新通道](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) `createdDateTime` 。 将新频道放置在中 `migration mode` ，这是一种特殊状态，可用于在迁移过程完成前，从频道内的大多数聊天活动中对用户进行横栏。  将 `channelCreationMode` 实例属性包含 `migration` 在 POST 请求中的值，以显式标识新团队为迁移而创建。  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>权限
 
 |ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/Api|
 |-|-|-|-|-|-|
@@ -136,8 +136,9 @@ HTTP/1.1 202 Accepted
    "membershipType":null,
    "moderationSettings":null
 }
+```
 
-#### Error message
+#### <a name="error-message"></a>错误消息
 
 ```http
 400 Bad Request
@@ -148,7 +149,7 @@ HTTP/1.1 202 Accepted
 
 ## <a name="step-three-import-messages"></a>第三步：导入邮件
 
-在创建团队和频道之后，您可以开始使用 `createdDateTime`  请求正文中的和键发送回送邮件 `from`  。 **注意**： `createdDateTime` 不支持在邮件线程之前导入的邮件 `createdDateTime` 。
+在创建团队和频道之后，您可以开始使用 `createdDateTime`  请求正文中的和键发送回送邮件 `from`  。 **注意** ： `createdDateTime` 不支持在邮件线程之前导入的邮件 `createdDateTime` 。
 
 > [!NOTE]
 > createdDateTime 在同一线程中的所有邮件中必须是唯一的。
@@ -224,7 +225,7 @@ HTTP/1.1 200 OK
 
 #### <a name="request-post-a-message-with-inline-image"></a>请求 (将包含内联图像的邮件发布) 
 
-> **注意**：此方案中没有特殊的权限范围，因为该请求是了 chatmessage 的一部分;了 chatmessage 的作用域也适用于此处。
+> **注意** ：此方案中没有特殊的权限范围，因为该请求是了 chatmessage 的一部分;了 chatmessage 的作用域也适用于此处。
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -349,7 +350,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* 您可以导入不在工作组中的用户的邮件。 **注意**：在公共预览过程中，不会在团队客户端或合规性门户中搜索为用户导入的邮件。
+* 您可以导入不在工作组中的用户的邮件。 **注意** ：在公共预览过程中，不会在团队客户端或合规性门户中搜索为用户导入的邮件。
 
 * `completeMigration`发出请求后，将无法再向团队中导入邮件。
 

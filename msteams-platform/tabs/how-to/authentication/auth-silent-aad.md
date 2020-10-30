@@ -3,20 +3,20 @@ title: 无提示的身份验证
 description: 描述无提示身份验证
 keywords: 团队身份验证 SSO 无提示 AAD
 ms.openlocfilehash: b8a5b8cb9328635f5730ca089da29140d0a17ac4
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801011"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796363"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
 > [!NOTE]
 > 若要对移动客户端上的选项卡进行身份验证，您需要确保您至少使用的是1.4.1 版本的团队 JavaScript SDK。
 
-在 Azure Active Directory （Azure AD）中进行无提示身份验证，可通过无提示刷新身份验证令牌，最大限度地减少用户输入其登录凭据的次数。 （有关真正的单一登录支持，请查看我们的[SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)）
+在 Azure Active Directory 中进行无提示身份验证 (Azure AD) 最大限度地减少用户通过无提示刷新身份验证令牌来输入其登录凭据的次数。  (真正的单一登录支持，请查看我们的 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)) 
 
-如果要将代码完全保持在客户端，可以使用适用于 JavaScript 的[Azure Active Directory 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries)尝试以无提示方式获取 azure AD 访问令牌。 这意味着用户可能永远不会看到弹出对话框（如果他们最近已登录）。
+如果要将代码完全保持在客户端，可以使用适用于 JavaScript 的 [Azure Active Directory 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries) 尝试以无提示方式获取 azure AD 访问令牌。 这意味着用户可能永远不会看到弹出对话框（如果他们最近已登录）。
 
 尽管 ADAL.js 库针对 AngularJS 应用程序进行了优化，但它也适用于纯 JavaScript 单页应用程序。
 
@@ -29,7 +29,7 @@ ADAL.js 库为 OAuth 2.0 隐式授予流创建了一个隐藏的 iframe，但它
 
 ## <a name="how-to-do-silent-authentication"></a>如何执行无提示身份验证
 
-本文中的代码来自团队示例应用程序[Microsoft 团队身份验证示例（节点）](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。
+本文中的代码来自 (Node) 的团队示例应用程序 [Microsoft 团队身份验证示例 ](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。
 
 ### <a name="include-and-configure-adal"></a>包含和配置 ADAL
 
