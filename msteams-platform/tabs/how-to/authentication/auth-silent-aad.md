@@ -3,37 +3,37 @@ title: 无提示的身份验证
 description: 描述无提示身份验证
 keywords: 团队身份验证 SSO 无提示 AAD
 ms.openlocfilehash: b8a5b8cb9328635f5730ca089da29140d0a17ac4
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801011"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796363"
 ---
-# <a name="silent-authentication"></a><span data-ttu-id="59765-104">无提示的身份验证</span><span class="sxs-lookup"><span data-stu-id="59765-104">Silent authentication</span></span>
+# <a name="silent-authentication"></a><span data-ttu-id="7a783-104">无提示的身份验证</span><span class="sxs-lookup"><span data-stu-id="7a783-104">Silent authentication</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="59765-105">若要对移动客户端上的选项卡进行身份验证，您需要确保您至少使用的是1.4.1 版本的团队 JavaScript SDK。</span><span class="sxs-lookup"><span data-stu-id="59765-105">For authentication to work for your tab on mobile clients, you need to ensure you're using at least the 1.4.1 version of the Teams JavaScript SDK.</span></span>
+> <span data-ttu-id="7a783-105">若要对移动客户端上的选项卡进行身份验证，您需要确保您至少使用的是1.4.1 版本的团队 JavaScript SDK。</span><span class="sxs-lookup"><span data-stu-id="7a783-105">For authentication to work for your tab on mobile clients, you need to ensure you're using at least the 1.4.1 version of the Teams JavaScript SDK.</span></span>
 
-<span data-ttu-id="59765-106">在 Azure Active Directory （Azure AD）中进行无提示身份验证，可通过无提示刷新身份验证令牌，最大限度地减少用户输入其登录凭据的次数。</span><span class="sxs-lookup"><span data-stu-id="59765-106">Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token.</span></span> <span data-ttu-id="59765-107">（有关真正的单一登录支持，请查看我们的[SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)）</span><span class="sxs-lookup"><span data-stu-id="59765-107">(For true single sign-on support, view our [SSO Documentation](~/tabs/how-to/authentication/auth-aad-sso.md))</span></span>
+<span data-ttu-id="7a783-106">在 Azure Active Directory 中进行无提示身份验证 (Azure AD) 最大限度地减少用户通过无提示刷新身份验证令牌来输入其登录凭据的次数。</span><span class="sxs-lookup"><span data-stu-id="7a783-106">Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token.</span></span> <span data-ttu-id="7a783-107"> (真正的单一登录支持，请查看我们的 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)) </span><span class="sxs-lookup"><span data-stu-id="7a783-107">(For true single sign-on support, view our [SSO Documentation](~/tabs/how-to/authentication/auth-aad-sso.md))</span></span>
 
-<span data-ttu-id="59765-108">如果要将代码完全保持在客户端，可以使用适用于 JavaScript 的[Azure Active Directory 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries)尝试以无提示方式获取 azure AD 访问令牌。</span><span class="sxs-lookup"><span data-stu-id="59765-108">If you want to keep your code completely client-side, you can use the [Azure Active Directory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to attempt to acquire an Azure AD access token silently.</span></span> <span data-ttu-id="59765-109">这意味着用户可能永远不会看到弹出对话框（如果他们最近已登录）。</span><span class="sxs-lookup"><span data-stu-id="59765-109">This means that the user may never see a popup dialog if they have signed in recently.</span></span>
+<span data-ttu-id="7a783-108">如果要将代码完全保持在客户端，可以使用适用于 JavaScript 的 [Azure Active Directory 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries) 尝试以无提示方式获取 azure AD 访问令牌。</span><span class="sxs-lookup"><span data-stu-id="7a783-108">If you want to keep your code completely client-side, you can use the [Azure Active Directory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to attempt to acquire an Azure AD access token silently.</span></span> <span data-ttu-id="7a783-109">这意味着用户可能永远不会看到弹出对话框（如果他们最近已登录）。</span><span class="sxs-lookup"><span data-stu-id="7a783-109">This means that the user may never see a popup dialog if they have signed in recently.</span></span>
 
-<span data-ttu-id="59765-110">尽管 ADAL.js 库针对 AngularJS 应用程序进行了优化，但它也适用于纯 JavaScript 单页应用程序。</span><span class="sxs-lookup"><span data-stu-id="59765-110">Even though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.</span></span>
+<span data-ttu-id="7a783-110">尽管 ADAL.js 库针对 AngularJS 应用程序进行了优化，但它也适用于纯 JavaScript 单页应用程序。</span><span class="sxs-lookup"><span data-stu-id="7a783-110">Even though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="59765-111">目前，无提示身份验证仅适用于选项卡。</span><span class="sxs-lookup"><span data-stu-id="59765-111">Currently, silent authentication only works for tabs.</span></span> <span data-ttu-id="59765-112">它在从 bot 登录时仍不起作用。</span><span class="sxs-lookup"><span data-stu-id="59765-112">It does not yet work when signing in from a bot.</span></span>
+> <span data-ttu-id="7a783-111">目前，无提示身份验证仅适用于选项卡。</span><span class="sxs-lookup"><span data-stu-id="7a783-111">Currently, silent authentication only works for tabs.</span></span> <span data-ttu-id="7a783-112">它在从 bot 登录时仍不起作用。</span><span class="sxs-lookup"><span data-stu-id="7a783-112">It does not yet work when signing in from a bot.</span></span>
 
-## <a name="how-silent-authentication-works"></a><span data-ttu-id="59765-113">无提示身份验证的工作方式</span><span class="sxs-lookup"><span data-stu-id="59765-113">How silent authentication works</span></span>
+## <a name="how-silent-authentication-works"></a><span data-ttu-id="7a783-113">无提示身份验证的工作方式</span><span class="sxs-lookup"><span data-stu-id="7a783-113">How silent authentication works</span></span>
 
-<span data-ttu-id="59765-114">ADAL.js 库为 OAuth 2.0 隐式授予流创建了一个隐藏的 iframe，但它指定了 `prompt=none` AZURE AD 从不显示登录页。</span><span class="sxs-lookup"><span data-stu-id="59765-114">The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow, but it specifies `prompt=none` so that Azure AD never shows the login page.</span></span> <span data-ttu-id="59765-115">如果需要用户交互，因为用户需要登录或授予对应用程序的访问权限，则 Azure AD 将立即返回一个错误，ADAL.js 然后向您的应用程序报告。</span><span class="sxs-lookup"><span data-stu-id="59765-115">If user interaction is required because the user needs to log in or grant access to the application, Azure AD will immediately return an error that ADAL.js then reports to your app.</span></span> <span data-ttu-id="59765-116">此时，您的应用程序可以根据需要显示 "登录" 按钮。</span><span class="sxs-lookup"><span data-stu-id="59765-116">At this point your app can show a login button if needed.</span></span>
+<span data-ttu-id="7a783-114">ADAL.js 库为 OAuth 2.0 隐式授予流创建了一个隐藏的 iframe，但它指定了 `prompt=none` AZURE AD 从不显示登录页。</span><span class="sxs-lookup"><span data-stu-id="7a783-114">The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow, but it specifies `prompt=none` so that Azure AD never shows the login page.</span></span> <span data-ttu-id="7a783-115">如果需要用户交互，因为用户需要登录或授予对应用程序的访问权限，则 Azure AD 将立即返回一个错误，ADAL.js 然后向您的应用程序报告。</span><span class="sxs-lookup"><span data-stu-id="7a783-115">If user interaction is required because the user needs to log in or grant access to the application, Azure AD will immediately return an error that ADAL.js then reports to your app.</span></span> <span data-ttu-id="7a783-116">此时，您的应用程序可以根据需要显示 "登录" 按钮。</span><span class="sxs-lookup"><span data-stu-id="7a783-116">At this point your app can show a login button if needed.</span></span>
 
-## <a name="how-to-do-silent-authentication"></a><span data-ttu-id="59765-117">如何执行无提示身份验证</span><span class="sxs-lookup"><span data-stu-id="59765-117">How to do silent authentication</span></span>
+## <a name="how-to-do-silent-authentication"></a><span data-ttu-id="7a783-117">如何执行无提示身份验证</span><span class="sxs-lookup"><span data-stu-id="7a783-117">How to do silent authentication</span></span>
 
-<span data-ttu-id="59765-118">本文中的代码来自团队示例应用程序[Microsoft 团队身份验证示例（节点）](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。</span><span class="sxs-lookup"><span data-stu-id="59765-118">The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node).</span></span>
+<span data-ttu-id="7a783-118">本文中的代码来自 (Node) 的团队示例应用程序 [Microsoft 团队身份验证示例 ](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。</span><span class="sxs-lookup"><span data-stu-id="7a783-118">The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node).</span></span>
 
-### <a name="include-and-configure-adal"></a><span data-ttu-id="59765-119">包含和配置 ADAL</span><span class="sxs-lookup"><span data-stu-id="59765-119">include and configure ADAL</span></span>
+### <a name="include-and-configure-adal"></a><span data-ttu-id="7a783-119">包含和配置 ADAL</span><span class="sxs-lookup"><span data-stu-id="7a783-119">include and configure ADAL</span></span>
 
-<span data-ttu-id="59765-120">在选项卡页中包含 ADAL.js 库，并使用客户端 ID 和重定向 URL 配置 ADAL：</span><span class="sxs-lookup"><span data-stu-id="59765-120">Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL:</span></span>
+<span data-ttu-id="7a783-120">在选项卡页中包含 ADAL.js 库，并使用客户端 ID 和重定向 URL 配置 ADAL：</span><span class="sxs-lookup"><span data-stu-id="7a783-120">Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL:</span></span>
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -49,9 +49,9 @@ ms.locfileid: "44801011"
 </script>
 ```
 
-### <a name="get-the-user-context"></a><span data-ttu-id="59765-121">获取用户上下文</span><span class="sxs-lookup"><span data-stu-id="59765-121">Get the user context</span></span>
+### <a name="get-the-user-context"></a><span data-ttu-id="7a783-121">获取用户上下文</span><span class="sxs-lookup"><span data-stu-id="7a783-121">Get the user context</span></span>
 
-<span data-ttu-id="59765-122">在该选项卡的内容页中，调用 `microsoftTeams.getContext()` 获取当前用户的登录提示。</span><span class="sxs-lookup"><span data-stu-id="59765-122">In the tab's content page, call `microsoftTeams.getContext()` to get a login hint for the current user.</span></span> <span data-ttu-id="59765-123">这将用作对 Azure AD 的调用中的 login_hint。</span><span class="sxs-lookup"><span data-stu-id="59765-123">This will be used as a login_hint in the call to Azure AD.</span></span>
+<span data-ttu-id="7a783-122">在该选项卡的内容页中，调用 `microsoftTeams.getContext()` 获取当前用户的登录提示。</span><span class="sxs-lookup"><span data-stu-id="7a783-122">In the tab's content page, call `microsoftTeams.getContext()` to get a login hint for the current user.</span></span> <span data-ttu-id="7a783-123">这将用作对 Azure AD 的调用中的 login_hint。</span><span class="sxs-lookup"><span data-stu-id="7a783-123">This will be used as a login_hint in the call to Azure AD.</span></span>
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -64,11 +64,11 @@ if (loginHint) {
 }
 ```
 
-### <a name="authenticate"></a><span data-ttu-id="59765-124">身份验证</span><span class="sxs-lookup"><span data-stu-id="59765-124">Authenticate</span></span>
+### <a name="authenticate"></a><span data-ttu-id="7a783-124">身份验证</span><span class="sxs-lookup"><span data-stu-id="7a783-124">Authenticate</span></span>
 
-<span data-ttu-id="59765-125">如果 ADAL 为用户缓存了未到期的令牌，请使用该令牌。</span><span class="sxs-lookup"><span data-stu-id="59765-125">If ADAL has an unexpired token cached for the user, use that.</span></span> <span data-ttu-id="59765-126">否则，尝试通过调用以无提示方式获取令牌 `acquireToken(resource, callback)` 。</span><span class="sxs-lookup"><span data-stu-id="59765-126">Otherwise, attempt to get a token silently by calling `acquireToken(resource, callback)`.</span></span> <span data-ttu-id="59765-127">ADAL.js 将使用请求的令牌调用回调函数，如果身份验证失败，则调用错误。</span><span class="sxs-lookup"><span data-stu-id="59765-127">ADAL.js will call your callback function with the requested token, or an error if authentication fails.</span></span>
+<span data-ttu-id="7a783-125">如果 ADAL 为用户缓存了未到期的令牌，请使用该令牌。</span><span class="sxs-lookup"><span data-stu-id="7a783-125">If ADAL has an unexpired token cached for the user, use that.</span></span> <span data-ttu-id="7a783-126">否则，尝试通过调用以无提示方式获取令牌 `acquireToken(resource, callback)` 。</span><span class="sxs-lookup"><span data-stu-id="7a783-126">Otherwise, attempt to get a token silently by calling `acquireToken(resource, callback)`.</span></span> <span data-ttu-id="7a783-127">ADAL.js 将使用请求的令牌调用回调函数，如果身份验证失败，则调用错误。</span><span class="sxs-lookup"><span data-stu-id="7a783-127">ADAL.js will call your callback function with the requested token, or an error if authentication fails.</span></span>
 
-<span data-ttu-id="59765-128">如果在回调函数中遇到错误，则显示 "登录" 按钮并回退到显式登录。</span><span class="sxs-lookup"><span data-stu-id="59765-128">If you get an error in the callback function, show a login button and fall back to an explicit login.</span></span>
+<span data-ttu-id="7a783-128">如果在回调函数中遇到错误，则显示 "登录" 按钮并回退到显式登录。</span><span class="sxs-lookup"><span data-stu-id="7a783-128">If you get an error in the callback function, show a login button and fall back to an explicit login.</span></span>
 
 ```javascript
 let authContext = new AuthenticationContext(config); // from the ADAL.js library
@@ -99,11 +99,11 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 });
 ```
 
-### <a name="process-the-return-value"></a><span data-ttu-id="59765-129">处理返回值</span><span class="sxs-lookup"><span data-stu-id="59765-129">Process the return value</span></span>
+### <a name="process-the-return-value"></a><span data-ttu-id="7a783-129">处理返回值</span><span class="sxs-lookup"><span data-stu-id="7a783-129">Process the return value</span></span>
 
-<span data-ttu-id="59765-130">通过 `AuthenticationContext.handleWindowCallback(hash)` 在登录回调页中调用，让 ADAL.js 负责从 AZURE AD 中分析结果。</span><span class="sxs-lookup"><span data-stu-id="59765-130">Let ADAL.js take care of parsing the result from Azure AD by calling `AuthenticationContext.handleWindowCallback(hash)` in the login callback page.</span></span>
+<span data-ttu-id="7a783-130">通过 `AuthenticationContext.handleWindowCallback(hash)` 在登录回调页中调用，让 ADAL.js 负责从 AZURE AD 中分析结果。</span><span class="sxs-lookup"><span data-stu-id="7a783-130">Let ADAL.js take care of parsing the result from Azure AD by calling `AuthenticationContext.handleWindowCallback(hash)` in the login callback page.</span></span>
 
-<span data-ttu-id="59765-131">检查我们是否有有效的用户和呼叫， `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 将状态报告回您的主选项卡内容页面。</span><span class="sxs-lookup"><span data-stu-id="59765-131">Check that we have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report status back to your main tab content page.</span></span>
+<span data-ttu-id="7a783-131">检查我们是否有有效的用户和呼叫， `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 将状态报告回您的主选项卡内容页面。</span><span class="sxs-lookup"><span data-stu-id="7a783-131">Check that we have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report status back to your main tab content page.</span></span>
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
