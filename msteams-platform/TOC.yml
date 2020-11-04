@@ -243,6 +243,8 @@
               href: bots/how-to/authentication/auth-flow-bot.md
             - name: 将身份验证添加到机器人
               href: bots/how-to/authentication/add-authentication.md
+            - name: 为机器人提供单一登录支持
+              href: bots/how-to/authentication/auth-aad-sso-bots.md
         - name: 设置机器人消息的格式
           href: bots/how-to/format-your-bot-messages.md
         - name: 更新和删除机器人消息
