@@ -5,12 +5,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: how to
 keywords: 团队应用程序验证大多数失败的测试用例快速审批 appsource 发布
-ms.openlocfilehash: a838d34cabd99ee5d892517c13efc4b91dbd059d
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 095a519d94cd6a19f9f4c8fbabcdb209476965d0
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796335"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877069"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>成功提交应用程序的提示
 
@@ -19,7 +19,7 @@ ms.locfileid: "48796335"
 >[!NOTE]
 >**[1140 节](/legal/marketplace/certification-policies#1140-teams)** 是专门针对团队应用程序的 Microsoft 团队和 **[子节 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** 解决功能要求的。
 
-## <a name="validation-guidelines"></a>验证准则
+## <a name="validation-guidelines--most-failed-test-cases"></a>& 大多数失败的测试用例的验证准则
 
 ### <a name="9989-general-considerations"></a>&#9989; 常规注意事项
 
@@ -31,6 +31,7 @@ ms.locfileid: "48796335"
 * 您的应用程序不得在用户环境中自动下载、安装或启动任何可执行代码。 所有下载都应从用户处寻求显式权限。
 * 与您的体验相关联的任何材料（如说明和支持文档）都必须是准确的。 在您的说明和材料中，使用正确的拼写、大小写、标点符号和语法。
 * 提供帮助和支持信息。 强烈建议您的应用程序包括首次运行的用户体验的帮助/常见问题解答链接。 对于所有个人应用程序，我们建议将 "帮助" 页作为 "个人" 选项卡提供，以获得更好的用户体验。
+* 对于核心用户方案，应用不得让用户离开团队。 使用任务模块建议在团队中向用户显示信息时采用 amd 选项卡。
 * 如果对提交进行任何清单更改，请增加清单中的应用版本号。
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>&#9989; 提供清晰且简单的登录/注销和注册体验
@@ -117,9 +118,10 @@ ms.locfileid: "48796335"
 
 * 请 **考虑所有作用域** 。 如果 `@*botname*` 在频道和个人对话中 () ，请确保你的 bot 提供适当的响应。 如果你的 bot 未在个人或团队作用域内提供有意义的上下文，请通过清单禁用该作用域。  (请参阅 `bots` [Microsoft 团队清单架构参考](~/resources/schema/manifest-schema.md#bots)中的 "阻止"。 ) 
 
-### <a name="9989-personal-bots-must-send-a-welcome-message-on-first-launch"></a>在首次启动时 &#9989; 个人 bot 必须发送欢迎消息
+### <a name="9989-personal-bots-must-always-send-a-welcome-message-on-first-launch"></a>在首次启动时 &#9989; 个人 bot 必须始终发送欢迎消息
 
 欢迎邮件是为个人/聊天机器人设置语气的最佳方式。 这是用户与 bot 的第一个交互操作。 最好的欢迎消息可以鼓励用户继续浏览应用。 如果欢迎或介绍性邮件令人困惑或不清楚，用户将不会立即看到应用程序的价值，也不会失去兴趣。
+请参阅下一节，了解欢迎邮件要求。
 
 > [!Note]
 > 欢迎消息对于频道 bot 来说是可选的。
@@ -127,19 +129,21 @@ ms.locfileid: "48796335"
 ### <a name="welcome-message-requirements"></a>欢迎邮件要求
 
 * 在 "欢迎" 教程中加入一个价值主张。
-* 提供使用 bot 的转发指南。
+* 提供使用应用程序的转发指南。
+* 包括有关如何注册和配置应用程序的指南
 * 提供易于阅读的文本和简单的对话框，最好是一张包含加载任务模块的可操作的欢迎教程按钮的卡片。
-* 请尽量简单，避免 wordy/对话。
+* 通过按钮和卡片保持简单和可用—避免使用较长的文本、对话的对话框。
 * 包含自适应卡片和按钮，使欢迎消息更易于使用。
 * 使用一个 ping （而不是两个或多个并发 ping）调用欢迎消息。
 * 欢迎消息只能显示给配置了该应用程序的用户，最好是在1:1 个人聊天中。
-* 永远不要向团队中的每个成员发送个人聊天。
+* 个人应用程序必须始终向用户提供欢迎消息。
+* 从不向团队中的每个成员发送个人聊天-这被视为垃圾邮件。
 * 永远不要多次发送欢迎消息。 不允许按固定间隔重复相同的欢迎邮件，它被视为垃圾邮件。
 
 #### <a name="avoid-welcome-message-spamming"></a>避免欢迎消息垃圾邮件
 
 * **按 bot 的频道消息** 。 通过创建单独的新聊天帖子，不要使用垃圾邮件用户。 在同一线程中创建包含回复的单线程。
-* **通过 bot 进行个人聊天** 。 不发送多封邮件。 发送包含完整信息的一封邮件。
+* **通过 bot 进行个人聊天** 。 不发送多封邮件。 发送包含完整信息的一封邮件。 不允许按固定间隔重复相同的欢迎邮件，它被视为垃圾邮件。
 
 #### <a name="notification-only-bot-welcome-messages"></a>仅通知机器人的欢迎消息
 
@@ -155,6 +159,24 @@ ms.locfileid: "48796335"
 #### <a name="welcome-messages-in-the-teamchannel--scope"></a>团队/频道范围中的欢迎邮件
 
 当 bot 第一次添加到频道时，有些不同。 通常情况下，不应向团队中的每个人发送1:1 邮件，但机器人可以在频道中发送欢迎消息。
+
+### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989; 移动响应能力，无直接追加销售或付款
+* 您的选项卡、自适应卡片、机器人邮件和任务模块中的内容必须响应 varios 移动设备屏幕大小。
+* 支持 iOS 的应用程序必须使用最新版本的 iOS 在最新 iPad 设备上完全正常运行。
+* 不得包括对应用程序内购买、试用产品和 UI 的任何直接引用，旨在追加到付费版本的 UI，或指向任何在线商店的链接，用户可从移动 OS (Android、iOS) 购买或获取其他内容、应用或外接程序。
+* IOS 或 Android 版本的外接程序不得显示任何 UI 或语言或任何其他要求用户付费的应用程序、加载项或网站的链接。
+* 相关的隐私策略和使用条款页面也必须没有任何商业用户界面或存储链接。
+
+### <a name="9989-do-not-post-sensitive-data-to-an-audience-not-intended-to-view-the-data"></a>&#9989; 不向访问群体发布敏感数据，而不打算查看数据
+您的团队应用不得将敏感信息（如信用卡/财务付款仪器、个人身份信息、健康或联系人跟踪信息）发布给访问群体，而不是用于查看该数据。
+
+### <a name="9989-do-not-transmit-financial-payment-details-or-complete-financial-transactions-via-your-teams-app"></a>&#9989; 不通过你的团队应用传输财务付款详细信息或完整财务交易记录
+* 您的团队应用程序不得询问用户是否直接在团队界面中进行付款
+* 应用可能无法通过应用界面上的用户传输财务仪器详细信息。 如果在用户同意使用应用程序之前，应用程序的应用条款、隐私策略以及应用程序的任何配置文件页面或网站中的任何配置文件页面或网站中公开，则应用程序可能仅向用户发送安全付款服务的链接。
+
+### <a name="9989-clear-warning-before-downloading-any-files-or-exes-into-users-environment"></a>将任何文件或 exe 下载到用户环境中之前 &#9989; 清除警告
+在您的应用程序将任何文件或 exe 下载到用户的计算机或环境中时，请警告用户
+
 
 > [!div class="nextstepaction"]
 > [了解有关团队应用程序审批策略的详细信息](/legal/marketplace/certification-policies#1140-teams) 

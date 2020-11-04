@@ -5,16 +5,16 @@ description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队消息
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 68f2bf7c71182499dc8f6f50e03ea3d97f03ded2
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452832"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877078"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>为 Microsoft 团队构建消息扩展
 
-有两种类型的团队 *邮件扩展*： [搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md) 和 [动作命令](../messaging-extensions/how-to/action-commands/define-action-command.md)。
+有两种类型的团队 *邮件扩展* ： [搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md) 和 [动作命令](../messaging-extensions/how-to/action-commands/define-action-command.md)。
 
 在本课中，您将创建一个 *搜索命令* (也称为 " *基于搜索的邮件扩展* ") ，这是查找外部内容并在团队中共享它的快捷方式。 用户可以从 " [团队撰写" 或 "命令" 框](../messaging-extensions/what-are-messaging-extensions.md)中访问搜索命令。
 
@@ -40,23 +40,23 @@ ms.locfileid: "48452832"
 
 Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
-* 与邮件扩展相关的**应用程序清单和基架**
-* 自动注册到 Microsoft Azure Bot 服务的邮件扩展的**Bot**
+* 与邮件扩展相关的 **应用程序清单和基架**
+* 自动注册到 Microsoft Azure Bot 服务的邮件扩展的 **Bot**
 
 > [!TIP]
 > 如果之前尚未创建团队应用程序项目，您可能会发现，请按照 [以下说明](../build-your-first-app/build-and-run.md) 更详细地说明项目。
 
-1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队**"， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **创建新的团队应用**"。
+1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队** "， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **创建新的团队应用** "。
 1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
-1. 在 " **添加功能** " 屏幕上，依次选择 " **消息扩展** " 和 " **下一步**"
+1. 在 " **添加功能** " 屏幕上，依次选择 " **消息扩展** " 和 " **下一步** "
 1. 在 " **配置消息扩展** " 屏幕上，执行以下操作：
     1. 为邮件扩展类型选择 " **基于搜索** 的选项"。
     1. 选择 " **创建新的 Bot** 并 **登录** " 以使用 Microsoft 365 开发帐户登录。
     1. 将你的 bot ID 和密码存储 (稍后需要一些) 。
-    1.  (可选) 输入你的 bot 的自定义名称，然后选择 " **创建**"。  (这不是已指定的团队应用程序的名称。 ) 
+    1.  (可选) 输入你的 bot 的自定义名称，然后选择 " **创建** "。  (这不是已指定的团队应用程序的名称。 ) 
     1. 现在，为 "链接 unfurling" 选择 " **否** " 选项。</br>
-:::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。&quot;:::
-1. 选择屏幕底部的 &quot; **完成** " 以配置项目。
+:::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。":::
+1. 选择屏幕底部的 " **完成** " 以配置项目。
 
 ## <a name="2-identify-relevant-app-project-components"></a>2. 确定相关的应用程序项目组件
 
@@ -139,7 +139,7 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
 您必须指定用于接收和处理邮件扩展中的搜索查询的 bot 终结点 URL。 通常，URL 如下所示 `https://HOST_URL/api/messages` 。 您可以在团队工具包中快速配置此设置。
 
-1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队**"， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **打开 Microsoft 团队工具包**"。
+1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队** "， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **打开 Microsoft 团队工具包** "。
 1. 转到 **Bot 管理 > 现有的 bot 注册** ，并选择在安装过程中创建的 bot。
 1. 在 " **机器人终结点地址** " 字段中，输入您在其中承载机器人的本地 web 服务器 (`baseUrl10` 值) 并追加 `/api/messages` 到它。
 
@@ -164,7 +164,7 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 > 如果您在之前未旁加载团队应用程序并遇到问题，请按照这些 [说明](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)进行操作。
 
 1. 使用允许应用旁加载的帐户登录到团队客户端。
-1. 选择 " **应用**"，然后选择 " **上载自定义应用**"。
+1. 选择 " **应用** "，然后选择 " **上载自定义应用** "。
 1. 转到您的应用程序项目 `.publish` 文件夹，然后选择 `Development.zip` 。
 1. 在 "安装模式" 中，选择 " **添加** " 以安装您的应用程序。
 
@@ -172,15 +172,13 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
 了解邮件扩展在团队聊天中的工作方式。
 
-1. 启动新聊天。 在 "撰写" 框中，选择 " **更多** :::image type="icon" source="../assets/icons/teams-client-more.png"::: "，然后选择您刚刚旁加载的邮件扩展应用程序。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。&quot;:::
-1. 选择屏幕底部的 &quot; **完成** " ) 。 如果你的应用程序正常运行，你将看到示例搜索结果 (你可以在以后添加自己的) 。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="演示如何在团队工具包中登录到 Microsoft 365 帐户，以创建用于邮件扩展的新 bot。&quot;:::
-1. 选择屏幕底部的 &quot; **完成** ":::
+1. 启动新聊天。 在 "撰写" 框中，选择 " **更多** :::image type="icon" source="../assets/icons/teams-client-more.png"::: "，然后选择您刚刚旁加载的邮件扩展应用程序。
+1. 请尝试搜索某个内容 (例如，"入场券" ) 。 如果你的应用程序正常运行，你将看到示例搜索结果 (你可以在以后添加自己的) 。<br/>
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="显示在 &quot;团队撰写&quot; 框中如何使用基于搜索的邮件扩展的屏幕截图。":::
 
 ## <a name="well-done"></a>干的好
 
-恭喜你！ 您有一个基本的工作组邮件扩展，它设置为在撰写或命令框中搜索外部内容。
+祝贺你！ 您有一个基本的工作组邮件扩展，它设置为在撰写或命令框中搜索外部内容。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -189,7 +187,7 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 1. 定义与您的服务相关的[搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md)。
 1. 将您的服务配置为 [响应用户的搜索](../messaging-extensions/how-to/search-commands/respond-to-search.md)。
 
-## <a name="troubleshooting"></a>疑难解答
+## <a name="troubleshooting"></a>故障排除
 
 如果你在完成本教程时遇到问题，以下信息可能会有所帮助。
 
@@ -199,7 +197,7 @@ Microsoft 团队工具包可帮助您为邮件扩展设置以下组件：
 
 这可能是身份验证问题。 按照以下步骤完成对项目的设置。
 
-1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队**"， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **注销**"。
+1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队** "， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **注销** "。
 1. 通过使用相同帐户登录并创建新的 bot，再次执行安装过程。
 
 ### <a name="bot-isnt-connected-to-teams"></a>机器人未连接到团队

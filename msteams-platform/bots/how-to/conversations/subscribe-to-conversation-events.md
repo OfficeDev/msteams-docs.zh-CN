@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: 如何订阅来自 Microsoft 团队 bot 的对话事件。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c678690b1dc2c948cceacdf42c95f169fff753bb
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: d6a385d4608239029a943c0a1365cfcb56b21b6b
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397678"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877034"
 ---
 # <a name="subscribe-to-conversation-events"></a>订阅对话事件
 
@@ -114,7 +114,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_channel_created_activity(
+async def on_teams_channel_created(
     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
     return await turn_context.send_activity(
@@ -196,7 +196,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_channel_renamed_activity(
+async def on_teams_channel_renamed(
     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
     return await turn_context.send_activity(
@@ -278,7 +278,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_channel_deleted_activity(
+async def on_teams_channel_deleted(
     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
     return await turn_context.send_activity(
@@ -339,7 +339,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是在将 bot 添加 **到团队**时，你的 bot 将收到的邮件。
+这是在将 bot 添加 **到团队** 时，你的 bot 将收到的邮件。
 
 ```json
 {
@@ -378,7 +378,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-这是在将 bot 添加*到一对一聊天*时，你的 bot 将收到的邮件。
+这是在将 bot 添加 *到一对一聊天* 时，你的 bot 将收到的邮件。
 
 ```json
 {
@@ -397,11 +397,11 @@ export class MyBot extends TeamsActivityHandler {
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "***"
+    "aadObjectId": "**_"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "***"
+    "id": "_*_"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -418,7 +418,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_members_added_activity(
+async def on_teams_members_added(
     self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
 ):
     for member in teams_members_added:
@@ -428,7 +428,7 @@ async def on_teams_members_added_activity(
     return
 ```
 
-* * *
+_ * *
 
 ### <a name="team-members-removed"></a>删除了团队成员
 
@@ -525,7 +525,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_members_removed_activity(
+async def on_teams_members_removed(
     self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
 ):
     for member in teams_members_removed:
@@ -606,7 +606,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_team_renamed_activity(
+async def on_teams_team_renamed(
     self, team_info: TeamInfo, turn_context: TurnContext
 ):
     return await turn_context.send_activity(

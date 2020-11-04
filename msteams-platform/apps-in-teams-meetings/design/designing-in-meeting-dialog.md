@@ -4,12 +4,12 @@ author: heath-hamilton
 description: 了解如何为 Microsoft 团队有效设计会议内对话。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: f2ac0df3ce28293d9e3f61f45dd2d460dc01f2e9
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: ded8793f6ea0a736e559e72afaf314608c0875fe
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452671"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877048"
 ---
 # <a name="design-an-in-meeting-dialog"></a>设计会议内对话
 
@@ -36,22 +36,22 @@ ms.locfileid: "48452671"
 
 ## <a name="anatomy"></a>解析
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="会议中的对话框视图的 UI 剖析。" border="false":::
 
 1. **应用程序图标**
 1. **应用名称**
 1. **操作字符串**
 1. **消除图标：** 关闭单个对话框。 始终使用右上关闭图标而不是页脚中的操作。
-1. **Web 视图**：显示所有第三方应用程序内容和按钮 (标准团队按钮的建议) 。
+1. **Web 视图** ：显示所有第三方应用程序内容和按钮 (标准团队按钮的建议) 。
 
 ### <a name="sizing"></a>调整
 
 会议中的对话框的大小可能因不同的用例而异，但您必须始终保留填充和组件大小。
 
-* **高度**：对话框的高度由 web 视图中的内容决定。 垂直滚动将接管超出您指定的最大高度的内容。
-* **宽度**： web 视图的宽度是指定范围内的绝对值。
+* **高度** ：对话框的高度由 web 视图中的内容决定。 垂直滚动将接管超出您指定的最大高度的内容。
+* **宽度** ： web 视图的宽度是指定范围内的绝对值。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="显示会议对话的可能尺寸的图示。高度：对话框的高度由 web 视图中的内容决定。垂直滚动将接管超出) 所定义的最大高度 (的内容。最小值：无。最大值：400像素 (320 像素 web 视图) 。宽度： web 视图的宽度是指定范围内的绝对值。最小值：288像素 (256 像素 web 视图) 。最大值：468像素 (436 像素 web 视图) 。" border="false":::
 
 ## <a name="behavior"></a>行为
 
@@ -61,7 +61,7 @@ ms.locfileid: "48452671"
 
 会议中的对话在会议阶段居中对齐。 无法在团队系统级通知框架中拖动和工作它们。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="显示会议对话的 UI 剖析的插图。" border="false":::
 
 ### <a name="aggregation"></a>聚合
 
@@ -76,7 +76,7 @@ ms.locfileid: "48452671"
 * 应仅能够垂直滚动。
 * 您只能看到您已滚动的内容 (不在) 以上或之下的任何内容。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="显示在 &quot;会议&quot; 对话框中滚动 web 视图内容的方式的图示。" border="false":::
 
 ### <a name="buttons"></a>按钮
 
@@ -114,7 +114,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="演示如何将会议中的对话框内容限制为单个屏幕，以便用户可以将注意力集中在会议上。" border="false":::
 
 #### <a name="do-keep-it-contained"></a>Do：将其包含
 
@@ -122,7 +122,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="图示：会议对话框不应要求用户在内容中导航。" border="false":::
 
 #### <a name="dont-include-multiple-steps"></a>请勿：包含多个步骤
 
@@ -135,18 +135,18 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="图中显示为什么应删除不会帮助用户快速完成某些不必要的内容的原因。" border="false":::
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="另一种说明为何应删除不能帮助用户快速完成某些不必要的内容的说明。" border="false":::
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="插图显示，如果需要复杂的交互，建议您改为在会议上使用一栏。" border="false":::
 
 #### <a name="do-limit-number-of-interactions"></a>操作：限制交互次数
 
@@ -154,7 +154,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="图中显示会议中的对话 distracts 中的交互过多。" border="false":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>请勿：引入不必要的元素
 
@@ -167,7 +167,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="显示会议中对话框的理想布局的插图。" border="false":::
 
 #### <a name="do-use-single-column-layouts"></a>Do： Use 单列版式
 
@@ -175,7 +175,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="显示不建议的会议中对话框的布局的图示。" border="false":::
 
 #### <a name="dont-clutter-the-space"></a>不：打乱空间
 
@@ -188,7 +188,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="图中显示会议对话框大小应始终是相同的。" border="false":::
 
 #### <a name="do-keep-it-consistent"></a>Do：使其保持一致
 
@@ -196,7 +196,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="演示如何使用不同的对话框大小。" border="false":::
 
 #### <a name="dont-always-fit-to-the-content"></a>不：始终填充内容
 
@@ -209,7 +209,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="显示 &quot;在会议中放置按钮的位置&quot; 对话框的图示。" border="false":::
 
 #### <a name="do-right-align-the-primary-action"></a>操作：将主要操作右对齐
 
@@ -217,7 +217,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="示例显示会议参与者的视角中会议对话框的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="显示 &quot;在会议中不放置按钮的位置&quot; 对话框的图示。" border="false":::
 
 #### <a name="dont-left-or-center-align-actions"></a>不：左对齐或居中对齐操作
 
@@ -239,4 +239,4 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 如果计划将应用程序发布到 AppSource，则应了解通常会在提交期间导致应用程序失败的设计问题。
 
 > [!div class="nextstepaction"]
-> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines)
+> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

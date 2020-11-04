@@ -3,13 +3,14 @@ title: 处理 bot 事件
 description: 介绍如何处理 Microsoft 团队的 bot 中的事件
 keywords: 团队 bot 事件
 ms.date: 05/20/2019
+ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5ef37a931d421f245cca4fbb984b69217f779785
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: cb3463b8cfb14920644f16f84a09260739a82ede
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796174"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877041"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>在 Microsoft 团队中处理 bot 事件
 
@@ -42,7 +43,7 @@ Microsoft 团队将通知发送到你的 bot，以获取在你的 bot 处于活�
 
 ## <a name="team-member-or-bot-addition"></a>团队成员或 bot 添加
 
-[`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate)当该事件收到有关已添加的团队成员身份更新的信息时，该事件将发送到你的 bot。 它还会在首次专门为个人对话而添加时收到更新。 请注意， () 的用户信息对 `Id` 你的 bot 而言是唯一的，并且可以缓存以供你的服务将来使用 (例如，向特定用户发送邮件) 。
+[`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true)当该事件收到有关已添加的团队成员身份更新的信息时，该事件将发送到你的 bot。 它还会在首次专门为个人对话而添加时收到更新。 请注意， () 的用户信息对 `Id` 你的 bot 而言是唯一的，并且可以缓存以供你的服务将来使用 (例如，向特定用户发送邮件) 。
 
 ### <a name="bot-or-user-added-to-a-team"></a>添加到团队的 Bot 或用户
 
@@ -94,39 +95,89 @@ bot.on('conversationUpdate', (msg) => {
 
 ```json
 {
-    "membersAdded": [
-        {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
-        }
-    ],
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:38:35.312Z",
-    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "from": {
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-    },
-    "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
-    },
-    "channelData": {
-        "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-        },
-        "eventType": "teamMemberAdded",
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-        }
-    }
+   "membersAdded":[
+      {
+         "id":"28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+      }
+   ],
+   "type":"conversationUpdate",
+   "timestamp":"2017-02-23T19:38:35.312Z",
+   "localTimestamp":"2017-02-23T12:38:35.312-07:00",
+   "id":"f:5f85c2ad",
+   "channelId":"msteams",
+   "serviceUrl":"https://smba.trafficmanager.net/amer-client-ss.msg/",
+   "from":{
+      "id":"29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+   },
+   "conversation":{
+      "isGroup":true,
+      "conversationType":"channel",
+      "id":"19:efa9296d959346209fea44151c742e73@thread.skype"
+   },
+   "recipient":{
+      "id":"28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+      "name":"SongsuggesterBot"
+   },
+   "channelData":{
+      "team":{
+         "id":"19:efa9296d959346209fea44151c742e73@thread.skype"
+      },
+      "eventType":"teamMemberAdded",
+      "tenant":{
+         "id":"72f988bf-86f1-41af-91ab-2d7cd011db47"
+      }
+   }
 }
+```
+
+### <a name="user-added-to-a-meeting"></a>添加到会议的用户
+
+将 `conversationUpdate` `membersAdded` 用户添加到专用计划会议中时，会发送具有有效负载的对象的事件。 即使匿名用户加入会议，也会发送事件详细信息。 
+
+> [!NOTE]
+>
+>* 将匿名用户添加到会议时，membersAdded 有效负载对象不具有 `aadObjectId` 字段。
+>* 将匿名用户添加到会议中时， `from` 有效负载中的对象始终具有会议组织者的 id，即使该匿名用户是由另一个演示者添加的也是如此。
+
+#### <a name="schema-example-user-added-to-meeting"></a>架构示例：用户已添加到会议
+
+```json
+{
+   "membersAdded":[
+      {
+         "id":"229:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"
+      }
+   ],
+   "type":"conversationUpdate",
+   "timestamp":"2017-02-23T19:38:35.312Z",
+   "localTimestamp":"2020-09-29T21:11:38.6542339Z",
+   "id":"f:a8cd1b51-9ddb-bd35-624b-7f7474165df8",
+   "channelId":"msteams",
+   "serviceUrl":"https://canary.botapi.skype.com/amer/",
+   "from":{
+      "id":"29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",
+      "aadObjectId":"f30ba569-abef-4e97-8762-35f85cbae706"
+   },
+   "conversation":{
+      "isGroup":true,
+      "tenantId":"e15762ef-a8d8-416b-871c-25516354f1fe",
+      "id":"19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"
+   },
+   "recipient":{
+      "id":"28:3af3604a-d4fc-486b-911e-86fab41aa91c",
+      "name":"EchoBot1_Rename"
+   },
+   "channelData":{
+      "tenant":{
+         "id":"e15762ef-a8d8-416b-871c-25516354f1fe"
+      },
+      "source":null,
+      "meeting":{
+         "id":"MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="
+      }
+   }
+}
+
 ```
 
 ### <a name="bot-added-for-personal-context-only"></a>仅为个人上下文添加的 Bot
@@ -217,6 +268,20 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
+### <a name="user-removed-from-a-meeting"></a>用户已从会议中删除
+
+`conversationUpdate` `membersRemoved` 当从私人计划会议中删除用户时，将发送有效负载中包含对象的事件。 即使匿名用户加入会议，也会发送事件详细信息。 
+
+> [!NOTE]
+>
+>_ 当从会议中删除匿名用户时，membersRemoved 有效负载对象不具有 `aadObjectId` 字段。
+>* 从会议中删除匿名用户时， `from` 有效负载中的对象始终具有会议组织者的 id，即使已由另一个演示者删除了匿名用户也是如此。
+
+#### <a name="schema-example-user-removed-from-meeting"></a>架构示例：用户已从会议中删除
+
+{       "membersRemoved"：        {           "id"： "29： 1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"         }       ]，       "type"： "conversationUpdate"，       "timestamp"： "2020-09-29T21：15： 08.6391139 z"，       "id"： "f:ee8dfdf3-54ac-51de-05da-9d49514974bb"，"       channelId"： "msteams"，       "serviceUrl"： " https://canary.botapi.skype.com/amer/ "，       "from"： {         "id"： "29： 1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw"，         "aadObjectId"： "f30ba569-abef-4e97-8762-35f85cbae706"       }，       "对话"： {    
+        "isGroup"： true，         "tenantId"： "e15762ef-a8d8-416b-871c-25516354f1fe"，         "id"： "19： meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread. v2"       }，       "收件人"： {         "id"： "28： 3af3604a-d4fc-486b-911e-86fab41aa91c"，         "name"： "EchoBot1_Rename"       }，       "channelData"： {         "租户"： {           "id"： "e15762ef-a8d8-416b-871c-25516354f1fe"         }，         "source"： null，         "meeting"： {           "id"： "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA = ="         }       }}    }   
+
 ## <a name="team-name-updates"></a>团队名称更新
 
 > [!NOTE]
@@ -265,7 +330,7 @@ bot.on('conversationUpdate', (msg) => {
 
 通道事件如下所示：
 
-_ **channelCreated** &emsp; 用户向团队添加新频道
+* **channelCreated** &emsp;用户向团队添加新频道
 * **channelRenamed** &emsp;用户重命名现有频道
 * **channelDeleted** &emsp;用户删除频道
 

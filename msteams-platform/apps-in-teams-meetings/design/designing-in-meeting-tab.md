@@ -4,12 +4,12 @@ author: heath-hamilton
 description: 了解如何为 Microsoft 团队有效设计 "会议" 选项卡。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: a5c4d0cc0d2c61f422ea9bc189f164d02b28aae0
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 402d25e543494636af287bcc2e8a308765b4cea9
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452657"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877027"
 ---
 # <a name="design-an-in-meeting-tab"></a>设计会议内的选项卡
 
@@ -37,16 +37,16 @@ ms.locfileid: "48452657"
 
 "会议" 选项卡将使用以下维度显示您的应用程序内容：
 
-* **宽度**：280像素用于 web 视图区域。 在 web 视图的左侧和右侧有20像素的填充。
-* **高度**：完全出血到选项卡的底部。在 web 视图区域和选项卡头之间有20像素的填充。
+* **宽度** ：280像素用于 web 视图区域。 在 web 视图的左侧和右侧有20像素的填充。
+* **高度** ：完全出血到选项卡的底部。在 web 视图区域和选项卡头之间有20像素的填充。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="显示会议扩展 &quot;会议&quot; 选项卡的 UI 剖析的插图。" border="false":::
 
-1. **应用图标**： "会议中" 选项卡的入口点。
-1. **标头**：包含选项卡名称。
-1. **名称**：选项卡实例的名称。
-1. **消除**：关闭选项卡。始终使用右上关闭图标而不是页脚中的操作。
-1. **Web 视图**：显示所有第三方应用程序内容。
+1. **应用图标** ： "会议中" 选项卡的入口点。
+1. **标头** ：包含选项卡名称。
+1. **名称** ：选项卡实例的名称。
+1. **消除** ：关闭选项卡。始终使用右上关闭图标而不是页脚中的操作。
+1. **Web 视图** ：显示所有第三方应用程序内容。
 
 ## <a name="behavior"></a>行为
 
@@ -62,13 +62,13 @@ ms.locfileid: "48452657"
 * 您只能看到您已滚动的内容 (不在) 以上或之下的任何内容。
 * 滚动条是 web 视图内容的一部分。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="显示如何在 &quot;会议&quot; 选项卡中滚动 web 视图内容的工作方式的图示。" border="false":::
 
 ### <a name="navigation"></a>导航
 
 对于具有导航层或较大内容的方案，建议允许用户导航到辅助层。 用户必须能够返回到上一层。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="显示如何在 &quot;会议&quot; 选项卡中导航到辅助图层的图示工作方式。" border="false":::
 
 ## <a name="components"></a>组件
 
@@ -100,7 +100,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="插图显示会议中的选项卡内容看起来像是会议前后的全屏选项卡。" border="false":::
 
 #### <a name="before-the-meeting"></a>会议之前
 
@@ -108,7 +108,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="显示会议期间如何将会议前选项卡内容压缩到 &quot;会议&quot; 选项卡的插图。" border="false":::
 
 #### <a name="during-the-meeting"></a>会议期间
 
@@ -121,7 +121,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="演示如何为团队会议中使用的深色主题设计 &quot;会议&quot; 选项卡。" border="false":::
 
 #### <a name="do-design-for-a-dark-theme"></a>Do：深色主题的设计
 
@@ -129,7 +129,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="插图显示您不应使用未 conducive 到 &quot;团队深色&quot; 主题的颜色。" border="false":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>不：使用不熟悉的颜色
 
@@ -142,7 +142,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="图中显示只允许在 &quot;会议&quot; 选项卡中进行垂直滚动。" border="false":::
 
 #### <a name="do-scroll-vertically"></a>Do：垂直滚动
 
@@ -150,7 +150,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="显示显示不应允许在 &quot;会议&quot; 选项卡中水平滚动的图示。" border="false":::
 
 #### <a name="dont-scroll-horizontally"></a>不：水平滚动
 
@@ -163,7 +163,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="图示在 &quot;会议&quot; 选项卡中显示建议的单列版式。" border="false":::
 
 #### <a name="do-single-columns"></a>操作：单个列
 
@@ -171,7 +171,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="显示 &quot;会议&quot; 选项卡中的两列布局不理想的图示。" border="false":::
 
 #### <a name="dont-multiple-columns"></a>不：多个列
 
@@ -184,7 +184,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="图显示如果您的会议选项卡应用程序有多个导航层，则应始终提供 &quot;后退&quot; 按钮。" border="false":::
 
 #### <a name="do-have-a-back-button"></a>操作：有一个 "后退" 按钮
 
@@ -192,7 +192,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="图中显示在导航的 &quot;会议&quot; 选项卡中添加另一个 &quot;关闭&quot; 按钮是多余的，可能会导致问题。" border="false":::
 
 #### <a name="dont-include-another-close-button"></a>不：包含另一个 "关闭" 按钮
 
@@ -205,7 +205,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="示例显示会议组织者的视角中会议 &quot;会议&quot; 选项卡的外观。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="图示在使用模式时需要谨慎 (例如，任务模块在 &quot;会议&quot; 选项卡中) 在给定有限的空间。" border="false":::
 
 #### <a name="caution-using-dialogs-in-a-narrow-space"></a>警告：在窄间距中使用对话
 
@@ -229,4 +229,4 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 如果计划将应用程序发布到 AppSource，则应了解通常会在提交期间导致应用程序失败的设计问题。
 
 > [!div class="nextstepaction"]
-> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines)
+> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

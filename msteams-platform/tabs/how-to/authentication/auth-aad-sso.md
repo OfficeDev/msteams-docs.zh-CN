@@ -1,15 +1,15 @@
 ---
-title: 单一登录
+title: 对选项卡的单一登录支持
 description: 描述 (SSO) 的单一登录
 keywords: 团队身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: 011be3fe7fe614bd42f0ee6b88289cf97740a4d3
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796377"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877055"
 ---
-# <a name="single-sign-on-sso"></a> (SSO) 的单个 Sign-On
+# <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 支持选项卡
 
 用户通过其工作、学校或 Microsoft 帐户登录 Microsoft 团队 (Office 365、Outlook 等) 。 通过允许单一登录对桌面或移动客户端上的 Microsoft "团队" 选项卡 (或任务模块) 进行授权，可以利用这一点。 因此，如果用户同意使用您的应用程序，则无需再次在其他设备上同意，它们将自动登录。 此外，我们还会预提取访问令牌，以提高性能和加载时间。
 
@@ -68,15 +68,15 @@ SSO API 也可在嵌入 web 内容的 [任务模块](../../../task-modules-and-c
 2. 选择 " **新建注册** "，并在 " *注册应用程序" 页* 上，设置以下值：
     * 将 **名称** 设置为您的应用程序名称。
     * 选择 **受支持的帐户类型** (任何帐户类型的工作) ¹
-    * 保留“重定向 URI”  为空。
-    * 选择“注册”  。
+    * 保留“重定向 URI”为空。
+    * 选择“注册”。
 3. 在 "概述" 页上，将应用程序复制并保存 **(客户端) ID** 。 稍后在更新团队应用程序清单时，将需要它。
 4. 在“ **管理** ”下，选择“ **公开 API** ”。 
 5. 选择 " **设置** " 链接，以以的形式生成应用程序 ID URI `api://{AppID}` 。 插入完全限定的域名 (，并追加一个正斜杠 "/"，并追加到双正斜杠和 GUID 之间的结束) 。 整个 ID 的形式应为： `api://fully-qualified-domain-name.com/{AppID}` ²
     * 例如： `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` 。
     
     完全限定的域名是用户可读的域名，您的应用程序将从该域名提供服务。 如果您使用的是隧道服务（如 ngrok），则每当 ngrok 子域更改时，您都需要更新此值。 
-6. 选择“添加一个作用域”  按钮。 在打开的面板中，输入 `access_as_user` 作为“作用域名称”  。
+6. 选择“添加一个作用域”按钮。 在打开的面板中，输入 `access_as_user` 作为“作用域名称”。
 7. 设置 **谁可以同意？** 若要 `Admins and users`
 8. 填写用于配置管理员和用户同意提示的字段，其中包含适用于该范围的值 `access_as_user` ：
     * **管理员同意职务：** 团队可以访问用户的配置文件。
