@@ -4,12 +4,12 @@ author: laujan
 description: 详细说明适用于团队的 Microsoft 低和无代码解决方案
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 4b112a674df76d0bd33e1b461d6b2f194f764f7b
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 2dc9f6ed17a11407efbd4496439848266fc0a604
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210156"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931755"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为 Microsoft 团队创建低代码自定义应用程序
 
@@ -85,7 +85,7 @@ Virtual Assistant 是一款 Microsoft 开放源代码模板，使您能够在保
 ### <a name="-project-oakdale-preview"></a>✔ (预览的 Project Oakdale) 
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) 是一种新的低代码数据平台，可用于即将推出 Microsoft 团队。 它将允许开发人员直接在团队中创建团队能源平台解决方案。 有关详细信息，*请参阅*我们的[团队博客 Microsoft Project Oakdale 页面](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)。
+) 是一种新的低代码数据平台，可用于即将推出 Microsoft 团队。 它将允许开发人员直接在团队中创建团队能源平台解决方案。 有关详细信息， *请参阅* 我们的 [团队博客 Microsoft Project Oakdale 页面](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)。
 
 ### <a name="-microsoft-blog-insights"></a>✔ Microsoft 博客见解
 
@@ -94,3 +94,8 @@ Virtual Assistant 是一款 Microsoft 开放源代码模板，使您能够在保
 [宣布了电源平台和团队更新，以帮助客户适应远程工作](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [团队将使用较低的代码功能来调整工作的未来，以增强您的数字工作区](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
+
+### <a name="-managing-power-platform-apps"></a>✔管理电源平台应用程序
+
+> [!div class="nextstepaction"]
+> [在 Microsoft 团队管理中心中管理 Microsoft Power Platform 应用](/microsoftteams/manage-power-platform-apps)

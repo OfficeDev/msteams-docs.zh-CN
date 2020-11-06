@@ -3,20 +3,20 @@ title: 入门-构建个人选项卡
 author: heath-hamilton
 description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队个人选项卡。
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452741"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931727"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>为 Microsoft 团队构建个人选项卡
 
 通过在团队中嵌入网页，选项卡是在应用程序中呈现内容的一种简单方法。
 
-团队中有两种类型的选项卡。 在本教程中，将为单个用户构建基本的 *个人选项卡*（全屏内容页面）。  (个人选项卡是团队中的传统网站体验中最接近的内容。 ) 
+团队中有两种类型的选项卡。 在本教程中，将为单个用户构建基本的 *个人选项卡* （全屏内容页面）。  (个人选项卡是团队中的传统网站体验中最接近的内容。 ) 
 
 ## <a name="before-you-begin"></a>准备工作
 
@@ -30,40 +30,26 @@ ms.locfileid: "48452741"
 
 > [!div class="checklist"]
 >
-> * 确定与个人选项卡相关的一些应用程序清单属性和基架
+> * 确定与个人选项卡相关的一些应用配置和基架
 > * 创建选项卡内容
 > * 根据用户首选项更新选项卡的颜色主题
 
 ## <a name="1-identify-relevant-app-project-components"></a>1. 确定相关的应用程序项目组件
 
-大多数应用程序清单和基架是在使用团队工具包创建项目时自动设置的。 我们来看看用于构建个人选项卡的主要组件。
+大部分应用配置和基架是在使用团队工具包创建项目时自动设置的。 我们来看看用于构建个人选项卡的主要组件。
 
-### <a name="app-manifest"></a>应用程序清单
+### <a name="app-configurations"></a>应用配置
 
-应用程序清单中的以下代码片段 (`manifest.json` 项目目录中的文件 `.publish`) 显示 [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) ，其中包括与个人选项卡相关的属性和默认值。
+您可以使用包含在工具包中的应用程序 Studio 查看和更新应用程序配置。
 
-```JSON
-"staticTabs": [
-    {
-        "entityId": "index",
-        "name": "Personal Tab",
-        "contentUrl": "{baseUrl0}/tab",
-        "scopes": [ "personal" ]
-    }
-],
-```
-
-* `entityId`：选项卡显示的页面的唯一标识符。
-* `name`：该选项卡的显示名称 (例如，"我的联系人" ) 。
-* `contentUrl`：主机 URL "选项卡内容" 页面 (必须是 HTTPS) 。
-* `scopes`：指定选项卡仅供个人使用。
+在安装过程中，该工具包最初配置了 "选项卡内容" 页，您可以在其中显示主要内容。 在工具包中，转到 **应用程序 Studio** 并选择 " **选项卡** " 以查看配置。
 
 ### <a name="app-scaffolding"></a>应用程序基架
 
-应用程序基架提供用于在团队中呈现选项卡的组件。 你可以使用很多，但现在你只需关注以下内容：
+应用程序基架提供用于在团队中呈现个人选项卡的组件。 你可以使用很多，但现在你只需关注以下内容：
 
-* `Tab.js``src/components`项目目录中的文件
-* Microsoft 团队 JavaScript 客户端 SDK，它在项目的前端组件中预加载
+* `Tab.js``src/components`项目目录中的文件。 这用于呈现 "选项卡内容" 页。
+* Microsoft 团队 JavaScript 客户端 SDK，它在项目的前端组件中预加载。
 
 ## <a name="2-customize-your-tab-content-page"></a>2. 自定义 "选项卡内容" 页
 
@@ -181,19 +167,19 @@ if (isTheme === "default") {
 
 检查团队中的选项卡。 外观应与深色主题紧密匹配。
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="包含静态内容的个人选项卡的屏幕截图。":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="包含静态内容视图的个人选项卡的屏幕截图。":::
 
 ## <a name="well-done"></a>干的好
 
-恭喜你！ 您有一个 "个人" 选项卡的团队应用程序，可以更轻松地查找组织中的重要联系人。
+祝贺你！ 您有一个 "个人" 选项卡的团队应用程序，可以更轻松地查找组织中的重要联系人。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="learn-more"></a>了解更多
 
 * [使用 Sso 对选项卡用户进行身份验证](../tabs/how-to/authentication/auth-aad-sso.md)：如果您仅希望授权用户查看您的选项卡，请通过 Azure Active DIRECTORY (AD) 设置单一登录 (SSO) 。
 * [从现有 web 应用或网页嵌入内容](../tabs/how-to/add-tab.md#tab-requirements)：我们向您介绍了如何为个人选项卡创建新内容，但您也可以从外部 URL 加载内容。
 * [为您的选项卡创建无缝体验](../tabs/design/tabs.md)：有关设计团队选项卡的建议指南，请参阅。
 * [为移动设备构建选项卡](../tabs/design/tabs-mobile.md)：了解如何为电话和平板电脑开发选项卡。
-* [与 Microsoft Graph API 集成](https://docs.microsoft.com/graph/teams-concept-overview)
+* [使用 Microsoft Graph API 的团队数据](https://docs.microsoft.com/graph/teams-concept-overview)
 * [创建不带工具箱的选项卡](../tabs/how-to/add-tab.md)
 
 ## <a name="next-lesson"></a>下一课
