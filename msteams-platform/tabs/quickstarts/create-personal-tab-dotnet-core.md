@@ -4,14 +4,14 @@ author: laujan
 description: 用于创建带有 ASP.NET Core 的自定义个人选项卡的快速入门指南。
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: c6b58ffd09f952a6237b765e5457fe7a8e943390
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 3eb0c42bb81ec8b2d906863051bd551c88c35f57
+ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48097877"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48992629"
 ---
-# <a name="create-a-custom-personal-tab-with-aspnet-core"></a>使用 ASP.NET Core 创建自定义个人选项卡
+# <a name="create-a-personal-tab-with-aspnet-core"></a>使用 ASP.NET Core 创建个人选项卡
 
 在此快速入门中，我们将介绍如何创建包含 c # 和 ASP.Net Core Razor 页面的自定义个人选项卡。 我们还将使用 [Microsoft 团队的应用 Studio](~/concepts/build-and-test/app-studio-overview.md) 来完成你的应用程序清单，并将你的选项卡部署到团队。
 
@@ -25,9 +25,9 @@ ms.locfileid: "48097877"
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-拥有源代码后，打开 Visual Studio 并选择 " **打开项目或解决方案**"。 导航到 "选项卡应用程序目录"，然后打开 " **PersonalTab**"。
+拥有源代码后，打开 Visual Studio 并选择 " **打开项目或解决方案** "。 导航到 "选项卡应用程序目录"，然后打开 " **PersonalTab** "。
 
-若要生成并运行应用程序，请按**F5**或从 "**调试**" 菜单中选择 "**启动调试**"。 在浏览器中导航到以下 Url，以验证是否正确加载了应用程序：
+若要生成并运行应用程序，请按 **F5** 或从 " **调试** " 菜单中选择 " **启动调试** "。 在浏览器中导航到以下 Url，以验证是否正确加载了应用程序：
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
@@ -66,13 +66,13 @@ ASP.NET Core 将称为 *Index* 的文件视为网站的默认/主页。 当浏�
 
 - 以 192 x 192 像素为单位的 **完整彩色图标** 。
 - 一个 **透明的大纲图标** ，用于度量 32 x 32 像素。
-- 指定应用程序属性的文件 ** 上的manifest.js** 。
+- 指定应用程序属性的文件 **上的manifest.js** 。
 
 需要将这些文件压缩到应用程序包中，以便在将选项卡上载到团队时使用。 Microsoft 团队将加载 `contentUrl` 清单中指定的项，将其嵌入 IFrame 中，并在您的选项卡中呈现。
 
 ### <a name="csproj"></a>.csproj
 
-在 Visual Studio "解决方案资源管理器" 窗口中，右键单击该项目，然后选择 " **编辑项目文件**"。 在该文件的底部，您将看到在应用程序生成时创建和更新您的 zip 文件夹的代码：
+在 Visual Studio "解决方案资源管理器" 窗口中，右键单击该项目，然后选择 " **编辑项目文件** "。 在该文件的底部，您将看到在应用程序生成时创建和更新您的 zip 文件夹的代码：
 
 ```xml
 <PropertyGroup>
@@ -109,10 +109,10 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 - 通过在命令提示符窗口中提供的 ngrok HTTPS URL 打开浏览器并转到内容页，验证 *ngrok* 是否正在运行并正常运行。
 
 >[!TIP]
->您需要在 Visual Studio 和 ngrok 中同时运行应用程序，才能完成此快速入门。 如果需要在 Visual Studio 中停止运行应用程序以进行处理，请 **保持 ngrok 运行状态**。 它将继续侦听，并将在 Visual Studio 中重新启动时继续路由应用程序的请求。 如果您必须重新启动 ngrok 服务，它将返回一个新的 URL，您必须更新使用该 URL 的每个位置。
+>您需要在 Visual Studio 和 ngrok 中同时运行应用程序，才能完成此快速入门。 如果需要在 Visual Studio 中停止运行应用程序以进行处理，请 **保持 ngrok 运行状态** 。 它将继续侦听，并将在 Visual Studio 中重新启动时继续路由应用程序的请求。 如果您必须重新启动 ngrok 服务，它将返回一个新的 URL，您必须更新使用该 URL 的每个位置。
 
 ### <a name="run-your-application"></a>运行应用程序
 
-- 在 Visual Studio 中，按**F5**或从应用程序的 "**调试**" 菜单中选择 "**启动调试**"。
+- 在 Visual Studio 中，按 **F5** 或从应用程序的 " **调试** " 菜单中选择 " **启动调试** "。
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
