@@ -1,19 +1,19 @@
 ---
 title: 清单架构参考
-description: 介绍 Microsoft 团队清单支持的架构
+description: 描述 Microsoft 团队清单支持的架构
 keywords: 团队清单架构
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: b514bbe8e04e674f5aafb3dff3acfe08072d814f
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: a158f2ad760078e7d9d7ebb72589437136c24ac5
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452734"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997949"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考： Microsoft 团队的清单架构
 
-Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产品中。 您的清单必须符合托管的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json) 。 早期版本 1.0-1.6 在 URL) 中使用 "v1" (也是支持的。
+Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产品中。 您的清单必须符合托管的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json) 。 在 URL) 中使用 "v1" 时，也 (支持早期版本 1.0-1.4。
 
 以下架构示例显示了所有扩展性选项。
 
@@ -21,8 +21,8 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.7",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.8",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -63,8 +63,19 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
         "groupchat"
       ],
       "canUpdateConfiguration": true,
+      "context":[
+        "channelTab",
+        "privateChatTab",
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel",
+        "meetingStage"
+      ],
       "sharePointPreviewImage": "Relative path to a tab preview image for use in SharePoint — 1024px X 768",
-      "supportedSharePointHosts": "Define how your tab wil be made available in SharePoint (full page or web part)"
+      "supportedSharePointHosts": [
+         "sharePointFullPage",
+         "sharePointWebPart"
+      ]
     }
   ],
   "staticTabs": [
@@ -73,9 +84,14 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
       "scopes": [
         "personal"
       ],
+      "context":[
+        "personalTab",
+        "channelTab"
+        ],
       "name": "Display name of tab",
       "contentUrl": "https://contoso.com/content (displayed in Teams canvas)",
-      "websiteUrl": "https://contoso.com/content (displayed in web browser"
+      "websiteUrl": "https://contoso.com/content (displayed in web browser)",
+       "searchUrl":  "https://contoso.com/content (displayed in web browser)"
     }
   ],
   "bots": [
@@ -89,6 +105,8 @@ Microsoft 团队清单介绍了应用程序如何集成到 Microsoft 团队产�
       "needsChannelSelector": false,
       "isNotificationOnly": false,
       "supportsFiles": true,
+      "supportsCalling": false,
+      "supportsVideo": true,
       "commandLists": [
         {
           "scopes": [
@@ -316,7 +334,7 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 |`short`|30 个字符|✔|应用程序的短显示名称。|
 |`full`|100 个字符||应用程序的全名，如果完整的应用程序名称超过30个字符，则使用该名称。|
 
-## <a name="description"></a>说明
+## <a name="description"></a>description
 
 **必需** -对象
 
@@ -382,10 +400,11 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置选项卡时要使用的 https://URL。|
-|`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 范围。 |
-|`canUpdateConfiguration`|boolean|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 默认值： **true**。|
+|`scopes`|枚举数组|1 |✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 范围。 |
+|`canUpdateConfiguration`|布尔值|||一个值，指示是否可在用户创建之后更新该选项卡的配置实例。 默认值： **true** 。|
+|`context` |枚举数组|6 ||`contextItem`支持选项卡的作用域集。 默认值： **[channelTab、privateChatTab、meetingChatTab、meetingDetailsTab]** 。|
 |`sharePointPreviewImage`|string|2048||要在 SharePoint 中使用的选项卡预览图像的相对文件路径。 字号（1024x768）。 |
-|`supportedSharePointHosts`|枚举数组|1||定义您的选项卡在 SharePoint 中的可用方式。 选项包括 `sharePointFullPage` 和 `sharePointWebPart` |
+|`supportedSharePointHosts`|枚举数组|1 ||定义您的选项卡在 SharePoint 中的可用方式。 选项包括 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -399,12 +418,14 @@ Microsoft 为此应用程序生成的唯一标识符。 如果你已通过 Micro
 |---|---|---|---|---|
 |`entityId`|string|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|string|128个字符|✔|该选项卡在通道接口中的显示名称。|
-|`contentUrl`|string|2048 个字符|✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
-|`websiteUrl`|string|2048 个字符||要指向的 https://URL，如果用户要在浏览器中查看。|
-|`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持 `personal` 作用域，这意味着它只能作为个人体验的一部分进行预配。|
+|`contentUrl`|string||✔|指向要在团队画布中显示的实体 UI 的 https://URL。|
+|`websiteUrl`|string|||如果用户要在浏览器中查看，则为指向的 https://URL。|
+|`searchUrl`|string|||指向用户搜索查询的 https://URL。|
+|`scopes`|枚举数组|1 |✔|目前，静态选项卡仅支持 `personal` 作用域，这意味着它只能作为个人体验的一部分进行预配。|
+|`context` | 枚举数组| 2 || `contextItem`支持选项卡的作用域集。|
 
 > [!NOTE]
-> 如果您的选项卡需要上下文相关信息来显示相关内容或启动身份验证流，*请参阅*[获取 Microsoft 团队的上下文选项卡](../../tabs/how-to/access-teams-context.md)。
+> 如果您的选项卡需要上下文相关信息来显示相关内容或启动身份验证流， *请参阅*[获取 Microsoft 团队的上下文选项卡](../../tabs/how-to/access-teams-context.md)。
 
 ## <a name="bots"></a>bot
 
@@ -417,10 +438,12 @@ Item 是数组 (每个元素最多只能包含1个元素， &mdash; 每个应用
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|string|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这可能与整体 [应用程序 ID](#id)很好。|
-|`scopes`|枚举数组|第三章|✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
-|`needsChannelSelector`|boolean|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 设置 **`false`**|
-|`isNotificationOnly`|boolean|||指示自动程序是否为单向、仅通知的自动程序，而不是对话自动程序。 设置 `**false**`|
-|`supportsFiles`|boolean|||指示自动程序是否支持在个人聊天中上传/下载文件。 设置 **`false`**|
+|`scopes`|枚举数组|3 |✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
+|`needsChannelSelector`|布尔值|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 设置 **`false`**|
+|`isNotificationOnly`|布尔值|||指示自动程序是否为单向、仅通知的自动程序，而不是对话自动程序。 设置 `**false**`|
+|`supportsFiles`|布尔值|||指示自动程序是否支持在个人聊天中上传/下载文件。 设置 **`false`**|
+|`supportsCalling`|布尔值|||一个值，指示机器人支持音频呼叫的位置。 **重要说明** ：此属性当前为实验性。 实验性属性可能不完整，并且可能会在完全可用之前进行更改。  它仅用于测试和研究目的，不应在生产应用程序中使用。 设置 **`false`**|
+|`supportsVideo`|布尔值|||一个值，指示机器人支持视频通话的位置。 **重要说明** ：此属性当前为实验性。 实验性属性可能不完整，并且可能会在完全可用之前进行更改。  它仅用于测试和研究目的，不应在生产应用程序中使用。 设置 **`false`**|
 
 ### <a name="botscommandlists"></a>commandLists
 
@@ -428,7 +451,7 @@ Item 是数组 (每个元素最多只能包含1个元素， &mdash; 每个应用
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`items.scopes`|枚举数组|第三章|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
+|`items.scopes`|枚举数组|3 |✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
 |`items.commands`|对象数组|10  |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单描述或示例（字符串，128）|
 
 ### <a name="botscommandlistscommands"></a>commandLists
@@ -436,7 +459,7 @@ Item 是数组 (每个元素最多只能包含1个元素， &mdash; 每个应用
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |title|string|12 |✔|Bot 命令名称|
-|说明|string|128个字符|✔|一个简单的文本说明或一个命令语法及其参数的示例。|
+|description|string|128个字符|✔|一个简单的文本说明或一个命令语法及其参数的示例。|
 
 ## <a name="connectors"></a>插槽
 
@@ -449,7 +472,7 @@ Item 是数组 (每个元素最多只能包含1个元素， &mdash; 每个应用
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置连接器时要使用的 https://URL。|
-|`scopes`|枚举数组|1|✔|指定连接器是在中频道的上下文中 `team` ，还是在仅限于单个用户 () 的体验中提供体验 `personal` 。 目前，仅 `team` 支持作用域。|
+|`scopes`|枚举数组|1 |✔|指定连接器是在中频道的上下文中 `team` ，还是在仅限于单个用户 () 的体验中提供体验 `personal` 。 目前，仅 `team` 支持作用域。|
 |`connectorId`|string|64 个字符|✔|与 [连接器开发人员仪表板](https://aka.ms/connectorsdashboard)中的 ID 相匹配的连接器的唯一标识符。|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -467,7 +490,7 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 |---|---|---|---|---|
 |`botId`|string|64|✔|与 Bot 框架一起注册的支持邮件扩展的 bot 的唯一 Microsoft 应用 ID。 这可能与整体应用程序 ID 很好。|
 |`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
-|`canUpdateConfiguration`|boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值：**False**。|
+|`canUpdateConfiguration`|布尔值|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值： **False** 。|
 |`messageHandlers`|对象数组|5 ||允许在满足特定条件时调用应用程序的处理程序列表。 域也必须列在 `validDomains`|
 |`messageHandlers.type`|string|||消息处理程序的类型。 必须是 `"link"`。|
 |`messageHandlers.value.domains`|字符串数组|||链接消息处理程序可以为其注册的域的数组。|
@@ -482,11 +505,11 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 |---|---|---|---|---|
 |`id`|string|64 个字符|✔|命令的 ID。|
 |`title`|string|32个字符|✔|用户友好的命令名称。|
-|`type`|string|64 个字符||命令的类型。 一个 `query` 或 `action` 。 默认值： **query**。|
+|`type`|string|64 个字符||命令的类型。 一个 `query` 或 `action` 。 默认值： **query** 。|
 |`description`|string|128个字符||对用户显示的说明，用于指示此命令的用途。|
-|`initialRun`|boolean|||一个布尔值，指示是否在最初不使用任何参数的情况之下运行该命令。 默认值：**False**。|
-|`context`|字符串数组|第三章||定义可以从中调用邮件扩展的位置。 、、的的任意组合 `compose` `commandBox` `message` 。 默认值为 `["compose","commandBox"]`。|
-|`fetchTask`|boolean|||一个布尔值，指示是否应动态获取任务模块。 默认值：**False**。|
+|`initialRun`|布尔值|||一个布尔值，指示是否在最初不使用任何参数的情况之下运行该命令。 默认值： **False** 。|
+|`context`|字符串数组|3 ||定义可以从中调用邮件扩展的位置。 、、的的任意组合 `compose` `commandBox` `message` 。 默认值为 `["compose","commandBox"]`。|
+|`fetchTask`|布尔值|||一个布尔值，指示是否应动态获取任务模块。 默认值： **False** 。|
 |`taskInfo`|object|||使用消息扩展命令指定要预加载的任务模块。|
 |`taskInfo.title`|string|64 个字符||初始对话框标题。|
 |`taskInfo.width`|string|||对话框宽度-以像素为单位的数字或默认布局，如 "大"、"中" 或 "small"。|
@@ -527,7 +550,7 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 
 ## <a name="validdomains"></a>validDomains
 
-**可选**，但 **所需** 的除外
+**可选** ，但 **所需** 的除外
 
 应用程序希望在团队客户端中加载的网站的有效域列表。 例如，域列表可以包含通配符 `*.example.com` 。 这与域的一段完全匹配;如果需要匹配， `a.b.example.com` 请使用 `*.*.example.com` 。 如果您的选项卡配置或内容 UI 需要导航到其他任何域，除了用于选项卡配置之外，则必须在此处指定该域。
 
@@ -556,7 +579,7 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 
 **可选** -boolean
 
-指示在加载应用程序/选项卡时是否显示加载指示器。 默认值：**False**。
+指示在加载应用程序/选项卡时是否显示加载指示器。 默认值： **False** 。
 >[!NOTE]
 >如果您在应用程序清单中设置 "showLoadingIndicator： true"，然后要正确加载页面，则必须按照 [显示本机加载指示器](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) 文档中所述的协议修改选项卡和任务模块的内容页面。
 
@@ -565,7 +588,7 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 
  **可选** -boolean
 
-使用或不使用 tab 头条指示个人应用程序的呈现位置。 默认值：**False**。
+使用或不使用 tab 头条指示个人应用程序的呈现位置。 默认值： **False** 。
 
 ## <a name="activities"></a>activities
 
@@ -581,8 +604,8 @@ Item 是一个数组， (最多1个元素) 与所有类型的元素一起使用 
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`type`|string|32个字符|✔|通知类型。 *请参阅下文*。|
-|`description`|string|128个字符|✔|通知的简短说明。 *请参阅下文*。|
+|`type`|string|32个字符|✔|通知类型。 *请参阅下文* 。|
+|`description`|string|128个字符|✔|通知的简短说明。 *请参阅下文* 。|
 |`templateText`|string|128个字符|✔|Ex： "{主角} 为您创建任务 {taskId}"|
 
 ```json

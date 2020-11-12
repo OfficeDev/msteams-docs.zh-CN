@@ -3,12 +3,12 @@ title: 使用邮件扩展进行搜索
 description: 介绍如何开发基于搜索的邮件扩展插件
 keywords: 工作组邮件传递扩展邮件扩展搜索
 ms.date: 07/20/2019
-ms.openlocfilehash: b791e7cc8f9a311d0610573f2fa3659578c29c7d
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: f46548d2e7e03ecebd8bc0fb6685aeb82b8eec6e
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801166"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997998"
 ---
 # <a name="search-with-messaging-extensions"></a>使用邮件扩展进行搜索
 
@@ -30,7 +30,7 @@ ms.locfileid: "44801166"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -87,21 +87,21 @@ ms.locfileid: "44801166"
 
 您可以通过上载您的应用程序来测试您的邮件扩展。
 
-若要打开邮件扩展插件，请导航到任何聊天或频道。 选择 "撰写" 框中的 "**更多选项**（**&#8943;**）" 按钮，然后选择您的邮件扩展。
+若要打开邮件扩展插件，请导航到任何聊天或频道。 在 "撰写" 框中选择 " **更多选项** ( **&#8943;** ) " 按钮，然后选择您的邮件分机号码。
 
 ## <a name="add-event-handlers"></a>添加事件处理程序
 
 大部分工作都涉及 `onQuery` 事件，后者处理邮件扩展窗口中的所有交互。
 
-如果 `canUpdateConfiguration` `true` 在清单中设置为，则会为邮件扩展启用 "**设置**" 菜单项，还必须处理 `onQuerySettingsUrl` 和 `onSettingsUpdate` 。
+如果 `canUpdateConfiguration` `true` 在清单中设置为，则会为邮件扩展启用 " **设置** " 菜单项，还必须处理 `onQuerySettingsUrl` 和 `onSettingsUpdate` 。
 
 ### <a name="handle-onquery-events"></a>处理 onQuery 事件
 
 邮件扩展 `onQuery` 在邮件扩展窗口中发生任何事情或发送到窗口时，都会收到事件。
 
-如果您的消息扩展使用配置页，则您的处理程序 `onQuery` 应首先检查任何存储的配置信息; 如果未配置邮件扩展，则返回一个 `config` 包含指向您的配置页面的链接的响应。 请注意，来自配置页面的响应也由处理 `onQuery` 。 （唯一的例外是处理程序调用配置页面时 `onQuerySettingsUrl` ;请参阅下一节。
+如果您的消息扩展使用配置页，则您的处理程序 `onQuery` 应首先检查任何存储的配置信息; 如果未配置邮件扩展，则返回一个 `config` 包含指向您的配置页面的链接的响应。 请注意，来自配置页面的响应也由处理 `onQuery` 。  (唯一的例外是处理程序调用配置页面时 `onQuerySettingsUrl` ; 请参阅下一节。 ) 
 
-如果您的邮件扩展需要身份验证，请检查用户状态信息;如果用户未登录，请按照本主题后面的 "[身份验证](#authentication)" 一节中的说明操作。
+如果您的邮件扩展需要身份验证，请检查用户状态信息;如果用户未登录，请按照本主题后面的 " [身份验证](#authentication) " 一节中的说明操作。
 
 接下来，检查是否 `initialRun` 已设置; 如果是，请采取相应的操作，如提供说明或响应列表。
 
@@ -109,11 +109,11 @@ ms.locfileid: "44801166"
 
 ### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>处理 onQuerySettingsUrl 和 onSettingsUpdate 事件
 
-`onQuerySettingsUrl`和 `onSettingsUpdate` 事件一起使用，以启用 "**设置**" 菜单项。
+`onQuerySettingsUrl`和 `onSettingsUpdate` 事件一起使用，以启用 " **设置** " 菜单项。
 
 !["设置" 菜单项的位置的屏幕截图](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
-您的处理程序用于 `onQuerySettingsUrl` 返回配置页面的 URL; 配置页面关闭后，您的处理程序用于 `onSettingsUpdate` 接受并保存返回的状态。 （这是一种 `onQuery`*不*会从配置页收到响应。）
+您的处理程序用于 `onQuerySettingsUrl` 返回配置页面的 URL; 配置页面关闭后，您的处理程序用于 `onSettingsUpdate` 接受并保存返回的状态。  (此种情况下， `onQuery` *不* 会从配置页面接收响应。 ) 
 
 ## <a name="receive-and-respond-to-queries"></a>接收和响应查询
 
@@ -133,9 +133,9 @@ ms.locfileid: "44801166"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 id。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 通道 ID （如果请求是在通道中发出的）。 |
-|`channelData.team.id`| "工作组 ID" （如果请求是在通道中进行的）。 |
-|`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>`country`字段包含用户检测到的位置。<br>`platform`字段描述邮件客户端平台。 <br>有关其他信息，请*参阅*[非 IRI 实体类型-clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
+|`channelData.channel.id`| 通道 ID (如果在频道) 发出请求。 |
+|`channelData.team.id`| 如果请求是在频道) 中进行的，则为工作组 ID (。 |
+|`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>`country`字段包含用户检测到的位置。<br>`platform`字段描述邮件客户端平台。 <br>有关其他信息，请 *参阅*[非 IRI 实体类型-clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
 
 请求参数本身位于 value 对象中，其中包括以下属性：
 
@@ -193,7 +193,7 @@ ms.locfileid: "44801166"
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>接收来自插入到撰写消息框中的链接的请求
 
-作为用于搜索外部服务的替代（或补充），您可以使用插入到 "撰写" 消息框中的 URL 来查询服务并返回一个卡片。 在下面的屏幕截图中，用户已在 Azure DevOps 中的工作项的 URL 中粘贴了邮件扩展已将其解析为卡片。
+作为一种替代 (或者除了) 搜索外部服务外，还可以使用插入到 "撰写" 消息框中的 URL 来查询服务并返回一个卡片。 在下面的屏幕截图中，用户已在 Azure DevOps 中的工作项的 URL 中粘贴了邮件扩展已将其解析为卡片。
 
 ![Link unfurling 的示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -217,7 +217,7 @@ ms.locfileid: "44801166"
 ]
 ```
 
-在添加了要侦听应用程序清单的域之后，您需要更改您的 bot 代码以[响应](#respond-to-user-requests)以下调用请求。
+在添加了要侦听应用程序清单的域之后，您需要更改您的 bot 代码以 [响应](#respond-to-user-requests) 以下调用请求。
 
 ```json
 {
@@ -255,11 +255,11 @@ ms.locfileid: "44801166"
 * [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-请参阅[卡片](~/task-modules-and-cards/what-are-cards.md)获取概述。
+请参阅 [卡片](~/task-modules-and-cards/what-are-cards.md) 获取概述。
 
-若要了解如何使用缩略图和英雄卡片类型，请参阅[添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
+若要了解如何使用缩略图和英雄卡片类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-有关 Office 365 连接器卡的其他文档，请参阅[使用 office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+有关 Office 365 连接器卡的其他文档，请参阅 [使用 office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
 结果列表显示在 Microsoft 团队 UI 中，每个项目都有一个预览。 将通过以下两种方式之一生成预览：
 
@@ -484,11 +484,11 @@ ms.locfileid: "44801166"
 ```
 
 > [!NOTE]
-> 若要在团队弹出窗口中承载登录体验，URL 的域部分必须位于您的应用程序的有效域的列表中。 （请参阅清单架构中的[validDomains](~/resources/schema/manifest-schema.md#validdomains) 。）
+> 若要在团队弹出窗口中承载登录体验，URL 的域部分必须位于您的应用程序的有效域的列表中。  (请参阅清单架构中的 [validDomains](~/resources/schema/manifest-schema.md#validdomains) 。 ) 
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流
 
-您的登录体验应响应且适合弹出窗口。 它应与使用邮件传递的[Microsoft 团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)集成。
+您的登录体验应响应且适合弹出窗口。 它应与使用邮件传递的 [Microsoft 团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)集成。
 
 与在 Microsoft 团队中运行的其他嵌入式体验一样，窗口中的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，则可以将团队用户 ID 传递到你的窗口，然后可以将其传递到 OAuth 登录 URL。
 
@@ -496,7 +496,7 @@ ms.locfileid: "44801166"
 
 当登录请求完成并重定向回您的页面时，应执行以下步骤：
 
-1. 生成安全代码。 （可以是一个随机数字。）您需要将此代码与您的服务进行缓存，以及通过登录流（例如 OAuth 2.0 令牌）获取的凭据。
+1. 生成安全代码。  (这可以是一个随机数字。 ) 您需要将此代码与您的服务进行缓存，以及通过登录流获取的凭据 (如 OAuth 2.0 令牌) 。
 2. 调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。
 
 此时，窗口将关闭，并将控制传递给团队客户端。 客户端现在可以重新发出原始用户查询，以及属性中的安全代码 `state` 。 您的代码可以使用安全代码查找之前存储的凭据以完成身份验证序列，然后完成用户请求。
@@ -554,7 +554,7 @@ ms.locfileid: "44801166"
 
 ### <a name="net"></a>.NET
 
-若要使用机器人生成器 SDK 为 .NET 接收和处理查询，您可以 `invoke` 在 "传入" 活动中检查操作类型，然后使用 NuGet 包["."](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)中的帮助程序方法来确定它是否为邮件扩展活动。
+若要使用机器人生成器 SDK 为 .NET 接收和处理查询，您可以 `invoke` 在 "传入" 活动中检查操作类型，然后使用 NuGet 包 ["."](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 中的帮助程序方法来确定它是否为邮件扩展活动。
 
 #### <a name="example-code-in-net"></a>.NET 中的示例代码
 

@@ -3,12 +3,12 @@ title: 打包应用程序
 description: 了解如何打包应用程序以在 Microsoft 团队中进行测试、上载和发布
 keywords: 团队应用程序打包
 ms.topic: conceptual
-ms.openlocfilehash: d2d49dcc5c4ccada0a75de5df6fda29a60e809f6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397699"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997984"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>为 Microsoft 团队应用程序创建应用程序包
 
@@ -28,7 +28,7 @@ ms.locfileid: "48397699"
 > [!TIP]
 > 指定清单开头的架构，以从代码编辑器中启用 IntelliSense 或类似支持：
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="icons"></a>图标
 
@@ -37,7 +37,7 @@ ms.locfileid: "48397699"
 
 Microsoft 团队需要两个图标来满足你的应用程序体验，才能在产品中使用。 图标必须包含在包中，并通过清单中的相对路径引用。 每个路径的最大长度为2048个字节，图标的格式为 .png。
 
-### <a name="color"></a>颜色
+### <a name="color"></a>color
 
 该 `color` 图标在 Microsoft 团队中 (在应用程序和选项卡库、bot、flyouts 等) 中。 此图标应为192x192 像素。 您的图标可以是任何颜色 (或颜色) ，但背景应为您的品牌化的强调文字颜色。 它还应在图标周围具有少量的填充，以适应图标的 bot 版本的六角裁剪。
 

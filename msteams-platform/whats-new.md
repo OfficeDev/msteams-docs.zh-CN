@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: b4e36ab00a784017cef20657e9ee548ed90f3efa
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 69dec453483ec9edab3ad07abf57044ac93c2dee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452811"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997956"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -20,6 +20,7 @@ ms.locfileid: "48452811"
 
 | **Date** | **备注** | **更改的主题** |
 | -------- | --------- | ------------------ |
+|11/11/2020| 清单架构已更新到版本1。8| [参考： Microsoft 团队的清单架构](resources/schema/manifest-schema.md)|
 |9/30/2020|现在支持在移动设备上向 bot 发送和接收文件。|[通过你的 bot 发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|新建 "团队入门" 指南|[构建你的第一个团队应用概述](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|对会议团队应用 (发布预览的支持) |为团队[会议中](apps-in-teams-meetings/teams-apps-in-meetings.md)[的团队会议和应用创建应用程序](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|

@@ -4,14 +4,14 @@ description: 介绍了团队中特定于资源的同意以及如何利用它。
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: Overview
+ms.topic: reference
 keywords: 团队授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: e7a59497b77b303b6ef06582828f7c5cb36dbb58
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: cbeb1069f7f80608ec3a65710543b429e6f2908b
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796189"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995021"
 ---
 # <a name="resource-specific-consent-rsc"></a>特定于资源的同意 (RSC) 
 
@@ -25,18 +25,18 @@ ms.locfileid: "48796189"
 |应用权限| 操作 |
 | ----- | ----- |
 |TeamSettings.Read.Group | 获取此团队的设置。|
-|TeamSettings 的组|更新此团队的设置。|
+|TeamSettings.ReadWrite.Group|更新此团队的设置。|
 |ChannelSettings.Read.Group|获取此团队的频道名称、频道说明和频道设置。|
-|ChannelSettings 的组|更新此团队的频道名称、频道说明和频道设置。|
+|ChannelSettings.ReadWrite.Group|更新此团队的频道名称、频道说明和频道设置。|
 |Channel.Create.Group|在这个团队中创建频道。|
 |Channel.Delete.Group|删除此团队中的频道。|
 |ChannelMessage.Read.Group |获取此团队的频道消息。|
-|TeamsAppInstallation。 Group|获取此团队安装的应用程序的列表。|
+|TeamsAppInstallation.Read.Group|获取此团队安装的应用程序的列表。|
 |TeamsTab.Read.Group|获取此团队的选项卡列表。|
 |TeamsTab.Create.Group|在此团队中创建选项卡。|
-|TeamsTab 的组|更新此团队的选项卡。|
+|TeamsTab.ReadWrite.Group|更新此团队的选项卡。|
 |TeamsTab.Delete.Group|删除此团队的选项卡。|
-|TeamMember。 Group|获取此团队的成员。|
+|TeamMember.Read.Group|获取此团队的成员。|
 
 >[!NOTE]
 >特定于资源的权限仅对在团队客户端上安装的团队应用程序可用，并且当前不是 Azure Active Directory 门户的一部分。

@@ -2,12 +2,12 @@
 title: 使用邮件扩展启动操作
 description: 创建基于操作的消息扩展以允许用户触发外部服务
 keywords: 工作组邮件传递扩展邮件扩展搜索
-ms.openlocfilehash: 4eb5984f4a75f185accfe7ba87e9389361946959
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: dd88360e342788fc0505809c6c8281c64fb7afbb
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801167"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997991"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>使用邮件扩展启动操作
 
@@ -29,7 +29,7 @@ ms.locfileid: "44801167"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -128,11 +128,11 @@ ms.locfileid: "44801167"
 
 ### <a name="initiate-actions-from-messages"></a>从邮件中启动操作
 
-除了从撰写邮件区域中启动操作之外，还可以使用邮件扩展从邮件中启动操作。 这将允许您将邮件的内容发送到你的 bot 以进行处理，还可以选择使用响应[提交](#responding-to-submit)中所述的方法，使用响应答复该邮件。 响应将作为回复插入到您的用户可以在提交前编辑的邮件。 您的用户可以从 "溢出" 菜单访问您的邮件扩展 `...` ，然后选择 `Take action` 下面的图像中的 "as"。
+除了从撰写邮件区域中启动操作之外，还可以使用邮件扩展从邮件中启动操作。 这将允许您将邮件的内容发送到你的 bot 以进行处理，还可以选择使用响应 [提交](#responding-to-submit)中所述的方法，使用响应答复该邮件。 响应将作为回复插入到您的用户可以在提交前编辑的邮件。 您的用户可以从 "溢出" 菜单访问您的邮件扩展 `...` ，然后选择 `Take action` 下面的图像中的 "as"。
 
 ![从邮件中启动操作的示例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-若要使邮件扩展能够从邮件中运行，您需要将参数添加 `context` 到 `commands` 应用程序清单中的邮件扩展的对象，如下例所示。 数组的有效字符串 `context` 为 `"message"` 、 `"commandBox"` 和 `"compose"` 。 默认值为 `["compose", "commandBox"]`。 有关参数的完整详细信息，请参阅 "[定义命令](#define-commands)" 部分 `context` 。
+若要使邮件扩展能够从邮件中运行，您需要将参数添加 `context` 到 `commands` 应用程序清单中的邮件扩展的对象，如下例所示。 数组的有效字符串 `context` 为 `"message"` 、 `"commandBox"` 和 `"compose"` 。 默认值为 `["compose", "commandBox"]`。 有关参数的完整详细信息，请参阅 " [定义命令](#define-commands) " 部分 `context` 。
 
 ```json
 "composeExtensions": [
@@ -224,9 +224,9 @@ ms.locfileid: "44801167"
 
 ### <a name="test-via-uploading"></a>通过上传进行测试
 
-您可以通过上载您的应用程序来测试您的邮件扩展。 有关详细信息，请参阅[在团队中上传你的应用](~/concepts/deploy-and-publish/apps-upload.md)。
+您可以通过上载您的应用程序来测试您的邮件扩展。 有关详细信息，请参阅 [在团队中上传你的应用](~/concepts/deploy-and-publish/apps-upload.md) 。
 
-若要打开邮件扩展插件，请导航到任何聊天或频道。 选择 "撰写" 框中的 "**更多选项**（**&#8943;**）" 按钮，然后选择您的邮件扩展。
+若要打开邮件扩展插件，请导航到任何聊天或频道。 在 "撰写" 框中选择 " **更多选项** ( **&#8943;** ) " 按钮，然后选择您的邮件分机号码。
 
 ## <a name="collecting-input-from-users"></a>收集用户的输入
 
@@ -236,13 +236,13 @@ ms.locfileid: "44801167"
 
 在此方法中，您只需定义清单中的参数的静态列表，如上面的 "创建任务" 命令中所示。 若要使用此方法，请确保 `fetchTask` 设置为 `false` ，并在清单中定义参数。
 
-当用户选择带有静态参数的命令时，团队将在任务模块中使用清单中定义的参数生成窗体。 在 "命中提交 a" `composeExtension/submitAction` 发送到机器人。 有关预期响应集的详细信息，请参阅主题[响应提交](#responding-to-submit)。
+当用户选择带有静态参数的命令时，团队将在任务模块中使用清单中定义的参数生成窗体。 在 "命中提交 a" `composeExtension/submitAction` 发送到机器人。 有关预期响应集的详细信息，请参阅主题 [响应提交](#responding-to-submit) 。
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>使用自适应卡片的动态输入
 
 在此方法中，服务可以定义自定义的自适应卡片以收集最终用户输入。 对于此方法，请 `fetchTask` 在清单中将参数设置为 `true` 。 请注意，如果您设置 `fetchTask` 为 `true` 将忽略为命令定义的任何静态参数。
 
-在此方法中，服务将接收 `composeExtension/fetchTask` 事件，并需要使用基于自适应卡的[任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)进行响应。 以下是使用自适应卡片的示例响应：
+在此方法中，服务将接收 `composeExtension/fetchTask` 事件，并需要使用基于自适应卡的 [任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)进行响应。 以下是使用自适应卡片的示例响应：
 
 ```json
 {
@@ -293,7 +293,7 @@ ms.locfileid: "44801167"
 
 在此方法中，您的服务可以显示一个 `<iframe>` 基于的小部件，以显示任何自定义 UI 并收集用户输入。 对于此方法，请 `fetchTask` 在清单中将参数设置为 `true` 。
 
-就像在自适应卡流中，您的服务将发送 `fetchTask` 事件并需要使用基于 URL 的[任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)进行响应。 以下是使用自适应卡片的示例响应：
+就像在自适应卡流中，您的服务将发送 `fetchTask` 事件并需要使用基于 URL 的 [任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)进行响应。 以下是使用自适应卡片的示例响应：
 
 ```json
 {
@@ -310,7 +310,7 @@ ms.locfileid: "44801167"
 
 如果您的应用程序还包含一个对话机器人，则可能需要确保在加载任务模块之前在对话中安装你的 bot。 在需要获取任务模块的其他上下文的情况下，这可能很有用。 例如，您可能需要提取名单以填充 "人员选取器" 控件或团队中的频道列表。
 
-若要简化此流程，当邮件扩展程序首次收到 `composeExtension/fetchTask` 调用检查以查看您的 bot 是否已安装在当前上下文中时（例如，您可以通过尝试 get 名单调用来实现此目的）。 如果未安装你的 bot，请返回一个自适应卡片，其中包含一个请求用户安装你的 bot 的操作。请参阅下面的示例。 请注意，这要求用户具有在该位置安装应用程序的权限;如果不能，他们将看到一条消息，询问用户是否与管理员联系。
+若要简化此流程，当邮件扩展程序首次收到 `composeExtension/fetchTask` 调用检查以查看是否在当前上下文中安装了你的 bot 时 (可以通过尝试 get 名单调用（例如) ）实现此目的。 如果未安装你的 bot，请返回一个自适应卡片，其中包含一个请求用户安装你的 bot 的操作。请参阅下面的示例。 请注意，这要求用户具有在该位置安装应用程序的权限;如果不能，他们将看到一条消息，询问用户是否与管理员联系。
 
 下面是一个响应示例：
 
@@ -378,7 +378,7 @@ ms.locfileid: "44801167"
 
 ### <a name="compose-extension-authconfig-response"></a>撰写扩展身份验证/配置响应
 
-当扩展需要进行身份验证或配置以便继续时，使用此方法。 有关详细信息，请参阅 "搜索" 部分中的 "[身份验证" 部分](~/resources/messaging-extension-v3/search-extensions.md#authentication)。
+当扩展需要进行身份验证或配置以便继续时，使用此方法。 有关详细信息，请参阅 "搜索" 部分中的 " [身份验证" 部分](~/resources/messaging-extension-v3/search-extensions.md#authentication) 。
 
 ### <a name="compose-extension-result-response"></a>撰写扩展结果响应
 
@@ -560,7 +560,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-此示例演示如何使用[Microsoft Bot. 团队 SDK （v3）](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)进行传输。
+此示例演示如何使用 [ (v3) ](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)的此流。
 
 ```csharp
 public class MessagesController : ApiController

@@ -5,12 +5,12 @@ description: 创建团队会议的应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: cf42d660c9b4a82f8e28d4d4379194c1bcc681e1
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796167"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997970"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>创建团队相关应用程序会议 (开发人员预览版) 
 
@@ -27,11 +27,13 @@ ms.locfileid: "48796167"
 
 1. 某些会议 Api （如 `GetParticipant` 将需要 [机器人注册和 BOT 应用 ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) 生成身份验证令牌）。
 
-1. 在团队会议过程中，开发人员必须遵守会议前和会议后对话的常规 [团队选项卡设计指南](../tabs/design/tabs.md) 以及会议对话 [指南](design/designing-in-meeting-dialog.md) 。
+1. 作为开发人员，您必须遵循在团队会议期间触发的会议前和会议中对话框[的 "常规](design/designing-in-meeting-dialog.md)[团队" 选项卡设计指导方针](../tabs/design/tabs.md)。
+
+1. 请注意，为了使您的应用程序实时更新，必须根据会议中的事件活动保持最新。 这些事件可以在会议中的对话框 (引用 `bot Id` `Notification Signal API` 会议生命周期的) 和其他表面中的完成参数
 
 ## <a name="meeting-apps-api-reference"></a>会议应用程序 API 参考
 
-|API|说明|请求|Source|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 获取上下文信息以在 "团队" 选项卡中显示相关内容。 |_**microsoftTeams getContext ( ( ) => {/ *...* /} )**_|Microsoft 团队客户端 SDK|
 |**GetParticipant**|此 API 允许 bot 按会议 id 和参与者 id 提取参与者信息。|**获取** _**/v1/meetings/{meetingId}/participants/{participantId}？ tenantId = {tenantId}**_ |Microsoft Bot 框架 SDK|
@@ -52,6 +54,7 @@ ms.locfileid: "48796167"
 > * 团队目前不支持 API 的多350个参与者的大型通讯组列表或名单大小 `GetParticipant` 。
 >
 > * 即将推出对 Bot 框架 SDK 的支持。
+
 
 #### <a name="request"></a>请求
 
@@ -128,10 +131,15 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### <a name="response-codes"></a>响应代码
 
-**403** ：不允许应用获取参与者信息。 这是最常见的错误响应，当应用程序未安装在会议中时（例如，当租户管理员禁用应用或在 live 网站缓解过程中被阻止）时，将会触发此响应。  
-**200** ：成功检索参与者信息  
-**401** ：令牌无效  
-**404** ：会议不存在或无法找到参与者。
+**403** ：不允许应用获取参与者信息。 这是最常见的错误响应，当应用程序未安装在会议中时（如租户管理员禁用或在实时网站迁移过程中被阻止）时，会触发此响应。  
+**200** ：成功检索参与者信息。  
+**401** ：令牌无效。  
+**404** ：找不到参与者。 
+**500** ：会议已过期 (超过60天，自会议结束) 或参与者没有基于其角色的权限。
+
+**即将推出**
+
+**404** ：会议已过期，或者找不到参与者。 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>NotificationSignal API
@@ -155,7 +163,10 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> 以下 requeste 有效负载中的 externalResourceUrl 中的 completionBotId 是可选参数。 它是在清单中声明的 Bot ID。 机器人将接收到一个 result 对象。
+> *  在下面请求的负载中， `completionBotId` 的参数 `externalResourceUrl` 是可选的。 它是 `Bot ID` 在清单中声明的。 机器人将接收到一个 result 对象。
+> * ExternalResourceUrl width 和 height 参数必须以像素为单位。 请参阅 [设计准则](design/designing-in-meeting-dialog.md) ，以确保尺寸在允许的限制范围内。
+> * URL 是 `<iframe>` 在会议对话中加载的页面。 URL 的域必须位于 `validDomains` 应用程序清单中的应用程序阵列中。
+
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -167,7 +178,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
         }
     },
     "replyToId": "1493070356924"
@@ -181,7 +192,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
   {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
   };
 activity.ChannelData = new TeamsChannelData
   {
@@ -198,7 +209,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
     }
 };
 await context.sendActivity(replyActivity);
