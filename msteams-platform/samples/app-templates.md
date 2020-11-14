@@ -3,12 +3,14 @@ title: Microsoft 团队应用程序模板
 description: Microsoft 团队平台的应用程序模板的链接和说明
 ms.topic: reference
 keywords: Microsoft 团队模板示例演示
-ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.author: lajanuar
+author: laujan
+ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
+ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397727"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "49019616"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -302,6 +304,23 @@ Icebreaker 是一种 [Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 :::row:::
 :::column span="2":::
     ![事件报告人个人作用域视图](../assets/images/incident-reporter-01.jpg)
+:::column-end:::
+:::row-end:::
+
+## <a name="new-employee-onboarding9734"></a>新员工的加入&#9734;
+
+新员工加入是一个集成的 Microsoft 团队和 [SharePoint 新员工启动解决方案](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) ，使您的组织能够为员工在其新员工旅行中提供一致、高质量的入门体验。 人力资源团队和聘用经理可使用该应用程序，在整个方向和感应流程中提供相关信息，以及通过新员工共享反馈、提供引入和完成载入任务。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
+
+:::row:::
+  :::column span="2":::
+    **新员工欢迎卡片** ![新员工欢迎卡片的图像](../assets/images/new-employee-welcome-card.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **新员工清单** ![新员工清单的图像](../assets/images/new-employee-checklist.png)  
 :::column-end:::
 :::row-end:::
 
