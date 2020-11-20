@@ -4,12 +4,12 @@ description: 创建和发布团队文档的步骤
 author: laujan
 ms.author: lajanuar
 ms.topic: contributor-guide
-ms.openlocfilehash: 80aaf7795a226c0437140fe72e1d74b07fa66775
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 18aae61a674cf9c4c94831f22149cd4b9e7ebeda
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995014"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366894"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>对 Microsoft 团队文档的贡献
 
@@ -34,15 +34,15 @@ ms.locfileid: "48995014"
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>查看 Microsoft 文档 "参与者指南"
 
-" [参与者指南](/contribute)" 提供了在 Microsoft/docs. 上创建、发布和更新技术内容的方向 *另请参阅*[文档样式和语音快速入门](/contribute/style-quick-start)。
+" [参与者指南](/contribute) " 提供了在 Microsoft 文档平台上创建、发布和更新技术内容的方向。 *另请参阅*[文档样式和语音快速入门](/contribute/style-quick-start)。
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft 写作、样式和内容指南
 
-* **[Microsoft 写作风格指南](/style-guide/welcome)** 。 请考虑将此联机指南添加到浏览器的 **"收藏夹"** 菜单。 它是今天的技术写作的综合资源，反映了 Microsoft 的新式语音和风格方法。
+* **[Microsoft 写作风格指南](/style-guide/welcome)**。 请考虑将此联机指南添加到浏览器的 **"收藏夹"** 菜单。 它是今天的技术写作的综合资源，反映了 Microsoft 的新式语音和风格方法。
 
-* **[编写开发人员内容](/style-guide/developer-content/)** 。 特定于团队的内容面向开发人员群体，对编程概念和过程有基本的了解。 在维护 Microsoft 的语气和样式的同时，以极具吸引力的方式提供清晰、技术上的信息，这一点非常重要。
+* **[编写开发人员内容](/style-guide/developer-content/)**。 特定于团队的内容面向开发人员群体，对编程概念和过程有基本的了解。 在维护 Microsoft 的语气和样式的同时，以极具吸引力的方式提供清晰、技术上的信息，这一点非常重要。
 
-* **[编写分步说明](/style-guide/procedures-instructions/writing-step-by-step-instructions)** 。 应用程序和交互式体验是开发人员了解 Microsoft 产品和技术的一种非常好的方法。 以渐进格式呈现复杂或简单的过程是自然的，并且是用户友好的。
+* **[编写分步说明](/style-guide/procedures-instructions/writing-step-by-step-instructions)**。 应用程序和交互式体验是开发人员了解 Microsoft 产品和技术的一种非常好的方法。 以渐进格式呈现复杂或简单的过程是自然的，并且是用户友好的。
 
 ## <a name="markdown-reference"></a>MarkDown 参考
 
@@ -59,10 +59,10 @@ ms.locfileid: "48995014"
 > &emsp;&#x2714; 使用不带前导正斜线的相对路径。<br>
 > &emsp;&#x2714; 包括 Markdown 文件扩展名。<br>
 >Ex：  **父目录/目录/路径到文章** -> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> 若要引用 Microsoft 文档库 (<https://docs.microsoft.com/>) *不属于* 团队平台 docset 的文章：<br>
+> 若要引用 *不属于* 团队平台 Docset 的 Microsoft 文档库文章，请执行以下操作：<br>
 > &emsp;&#x2714; 使用以正斜杠开头的相对路径。<br>
-> &emsp;&#x2714; 不包括文件扩展名。 <br> Ex：  **/docset/address-to-file-location** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
->
+> &emsp;&#x2714; 不包括文件扩展名。 <br> Ex：  **/docset/address-to-file-location** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> 若要引用 Microsoft 文档库外部的页面（例如 GitHub），请使用完整 `https` 文件路径。<br>
 
 ## <a name="code-samples-and-snippets"></a>代码示例和代码段
 

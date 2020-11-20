@@ -2,12 +2,12 @@
 title: 对选项卡的单一登录支持
 description: 描述 (SSO) 的单一登录
 keywords: 团队身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: 9691c4190697b3f53a9ce76921375101e762263a
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877055"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346789"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 支持选项卡
 
@@ -18,7 +18,7 @@ ms.locfileid: "48877055"
 >
 > 适用于 Android 的✔团队 (1416/1.0.0.2020073101 及更高版本) 
 >
-> 适用于 iOS 的✔团队 (版本：2.0.18 和更高 _版本_ )   
+> 适用于 iOS 的✔团队 (版本：2.0.18 和更高 _版本_)   
 >
 > 若要获取团队的最佳体验，请使用最新版本的 iOS 和 Android。
 
@@ -52,7 +52,7 @@ SSO API 也可在嵌入 web 内容的 [任务模块](../../../task-modules-and-c
 1. 获取 [AZURE AD 应用程序 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
 2. 指定应用程序需要的 Azure AD 终结点和 Microsoft Graph （可选）的权限。
 3. [授予](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) 对团队桌面、web 和移动应用程序的权限。
-4. 预授权团队通过选择 " **添加范围** " 按钮，并在打开的面板中，输入 `access_as_user` 作为 **作用域名称** 。
+4. 预授权团队通过选择 " **添加范围** " 按钮，并在打开的面板中，输入 `access_as_user` 作为 **作用域名称**。
 
 > [!NOTE]
 > 您应注意一些重要限制：
@@ -70,8 +70,8 @@ SSO API 也可在嵌入 web 内容的 [任务模块](../../../task-modules-and-c
     * 选择 **受支持的帐户类型** (任何帐户类型的工作) ¹
     * 保留“重定向 URI”为空。
     * 选择“注册”。
-3. 在 "概述" 页上，将应用程序复制并保存 **(客户端) ID** 。 稍后在更新团队应用程序清单时，将需要它。
-4. 在“ **管理** ”下，选择“ **公开 API** ”。 
+3. 在 "概述" 页上，将应用程序复制并保存 **(客户端) ID**。 稍后在更新团队应用程序清单时，将需要它。
+4. 在“**管理**”下，选择“**公开 API**”。 
 5. 选择 " **设置** " 链接，以以的形式生成应用程序 ID URI `api://{AppID}` 。 插入完全限定的域名 (，并追加一个正斜杠 "/"，并追加到双正斜杠和 GUID 之间的结束) 。 整个 ID 的形式应为： `api://fully-qualified-domain-name.com/{AppID}` ²
     * 例如： `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` 。
     
@@ -80,37 +80,37 @@ SSO API 也可在嵌入 web 内容的 [任务模块](../../../task-modules-and-c
 7. 设置 **谁可以同意？** 若要 `Admins and users`
 8. 填写用于配置管理员和用户同意提示的字段，其中包含适用于该范围的值 `access_as_user` ：
     * **管理员同意职务：** 团队可以访问用户的配置文件。
-    * **管理员同意说明** ：允许团队以当前用户的身份调用应用程序的 web api。
-    * **用户同意标题** ：团队可以访问用户配置文件，并代表用户发出请求。
+    * **管理员同意说明**：允许团队以当前用户的身份调用应用程序的 web api。
+    * **用户同意标题**：团队可以访问用户配置文件，并代表用户发出请求。
     * **用户同意说明：** 使团队可以使用与用户相同的权限调用此应用的 Api。
-9. 确保将 " **状态** " 设置为 " **已启用** "
+9. 确保将 "**状态**" 设置为 "**已启用**"
 10. 选择 " **添加范围** " 按钮以保存 
     * 显示在文本字段正下方的 **范围名称** 的域部分应自动匹配上一步中设置的 **应用程序 ID** URI，并 `/access_as_user` 追加到末尾：
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. 在 " **授权客户端应用程序** " 部分中，确定要为您的应用程序的 web 应用程序授权的应用程序。 选择 " *添加客户端应用程序* "。 输入以下每个客户端 Id，然后选择您在上一步中创建的授权范围：
+11. 在 " **授权客户端应用程序** " 部分中，确定要为您的应用程序的 web 应用程序授权的应用程序。 选择 " *添加客户端应用程序*"。 输入以下每个客户端 Id，然后选择您在上一步中创建的授权范围：
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (团队移动/桌面应用程序) 
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (团队 web 应用程序) 
-12. 导航到 " **API 权限** "。 选择 " *添加权限*  >  *Microsoft Graph*  >  *委派权限* "，然后添加以下权限：
+12. 导航到 " **API 权限**"。 选择 "*添加权限*  >  " "*microsoft graph*  >  *委派权限*"，然后从 Microsoft graph API 添加以下权限：
     * 默认情况下， (启用 Read) 
-    * email
+    * 电子邮件
     * offline_access
     * OpenId
     * 个人资料
 
-13. 导航到 " **身份验证** "
+13. 导航到 "**身份验证**"
 
     如果尚未向应用授予 IT 管理员同意，则用户在首次使用应用程序时必须提供许可。
 
     设置重定向 URI：
-    * 选择 " **添加平台** "。
-    * 选择 " **web** "。
+    * 选择 " **添加平台**"。
+    * 选择 " **web**"。
     * 输入您的应用程序的 **重定向 URI** 。 这将是成功的隐式授予流将重定向到用户的页面。 这将是您在步骤5中输入的完全限定的域名，后跟应发送身份验证响应的 API 路由。 如果您正在关注任何团队示例，则将执行以下操作： `https://subdomain.example.com/auth-end`
 
     接下来，通过选中以下框来启用隐式授予：  
     ✔ ID 令牌  
     ✔访问令牌  
     
-祝贺你！ 您已完成应用注册先决条件，以继续使用您的选项卡 SSO 应用。     
+恭喜！ 您已完成应用注册先决条件，以继续使用您的选项卡 SSO 应用。     
 
 > [!NOTE]
 >
@@ -147,7 +147,7 @@ SSO API 也可在嵌入 web 内容的 [任务模块](../../../task-modules-and-c
 ```javascript
 var authTokenRequest = {
   successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Failure: " + error); },
+  failureCallback: function(error) { console.log("Failure: " + error); }
 };
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```

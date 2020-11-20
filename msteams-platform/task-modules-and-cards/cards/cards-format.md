@@ -3,12 +3,12 @@ title: 卡片中的文本格式
 description: 描述 Microsoft 团队中的卡片文本格式
 keywords: 团队 bot 卡片格式
 ms.date: 03/29/2018
-ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: fcf0692fe033cd3c30ea1e3ac7bda8ddd06297ca
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587809"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346705"
 ---
 # <a name="format-cards-in-teams"></a>设置团队中卡片的格式
 
@@ -18,7 +18,7 @@ ms.locfileid: "46587809"
 
 不同的卡片类型之间的格式支持不同，在桌面和移动团队客户端以及桌面浏览器中的团队之间，卡片的呈现可能略有不同。
 
-可以在任何团队卡片中添加内嵌图像。 图像的格式为 `.png` 、 `.jpg` 或文件， `.gif` 不得超过1024× 1024 PX 或 1 MB。 不正式支持动画 GIF。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
+可以在任何团队卡片中添加内嵌图像。 图像的格式为  `.png` 、 `.jpg` 或文件， `.gif` 不得超过1024× 1024 PX 或 1 MB。 不正式支持动画 GIF。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>使用 Markdown 设置卡片格式
 
@@ -32,7 +32,7 @@ ms.locfileid: "46587809"
 
  支持的和的 `Textblock` 样式 `Fact.Title` `Fact.Value` 如下：
 
-| Style | 示例 | Markdown |
+| 样式 | 示例 | Markdown |
 | --- | --- | --- |
 | bold | **Bold** | ```**Bold**``` |
 | italic | _Italic_ | ```_Italic_``` |
@@ -73,13 +73,13 @@ ms.locfileid: "46587809"
 
 ### <a name="more-information-on-adaptive-cards"></a>有关自适应卡片的详细信息
 
-[自适应卡片中的文本功能](/adaptive-cards/create/textfeatures)团队不支持本主题中提及的日期和本地化功能。
+[自适应卡片中的文本功能](/adaptive-cards/create/textfeatures) 团队不支持本主题中提及的日期和本地化功能。
 
 ### <a name="formatting-sample-for-adaptive-cards"></a>自适应卡片的格式设置示例
 
 ``` json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
     "version": "1.0",
     "body": [
@@ -103,7 +103,7 @@ ms.locfileid: "46587809"
         },
         {
             "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
+            "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
         }
     ]
 }
@@ -111,9 +111,9 @@ ms.locfileid: "46587809"
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>提及自适应卡片中的支持 1.2 1。2
 
-基于卡片的提及在 Web、桌面和移动客户端中受支持。 您可以在自适应卡片正文中添加用于 bot 和邮件扩展响应的 @ 提及。  若要在卡片中添加 @ 提及，请在[通道和组聊天对话中](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )遵循与基于邮件的提及相同的通知逻辑和呈现。
+基于卡片的提及在 Web、桌面和移动客户端中受支持。 您可以在自适应卡片正文中添加用于 bot 和邮件扩展响应的 @ 提及。  若要在卡片中添加 @ 提及，请在 [通道和组聊天对话中](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )遵循与基于邮件的提及相同的通知逻辑和呈现。
 
-Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBlock.html)和[FactSet](https://adaptivecards.io/explorer/FactSet.html)元素的卡片内容中包括提及。
+Bot 和邮件扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。
 
 > [!NOTE]
 > * 目前，工作组平台上的自适应卡版1.2 中不支持[媒体元素](https://adaptivecards.io/explorer/Media.html)。
@@ -123,7 +123,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 
 若要在自适应卡片中添加提及的内容，应用需要包含以下元素
 
-* `<at>username</at>`在支持的自适应卡片元素中
+* `<at>username</at>` 在支持的自适应卡片元素中
 * `mention` `msteams` 卡片内容中属性内的对象，其中包括所提及用户的团队用户 id
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>带提及的示例自适应卡片
@@ -139,7 +139,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
         "text": "Hi <at>John Doe</at>"
       }
     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0",
     "msteams": {
       "entities": [
@@ -161,7 +161,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 
 连接器卡支持有限的 Markdown 和 HTML 格式设置。 上一节中介绍了 HTML 支持。
 
-| Style | 示例 | Markdown |
+| 样式 | 示例 | Markdown |
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
@@ -202,7 +202,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card Markdown formatting",
     "sections": [
@@ -225,7 +225,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
             "text": "Link: [Bing](https://www.bing.com)"
         },
         {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+            "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
         },
         {
             "text": "`preformatted text`"
@@ -250,7 +250,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 
 连接器卡支持有限的 Markdown 和 HTML 格式设置。 Markdown 将在下一节中介绍。
 
-| Style | 示例 | HTML |
+| 样式 | 示例 | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
@@ -261,7 +261,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 | 预设格式文本 | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | 超链接 | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| 图像链接 | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| 图像链接 | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 在连接器卡中，使用标记在 HTML 中呈现的换行符 `<p>` 。
 
@@ -291,7 +291,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card HTML formatting",
     "sections": [
@@ -317,7 +317,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
             "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
         },
         {
-            "text": "embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+            "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
         },
         {
             "text": "preformatted text <pre>text</pre>"
@@ -338,7 +338,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 
 简单卡片（如英雄和缩略图卡片）支持 HTML 标记。 不支持 Markdown。
 
-| Style | 示例 | HTML |
+| 样式 | 示例 | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
@@ -349,7 +349,7 @@ Bot 和邮件扩展可以在[TextBlock](https://adaptivecards.io/explorer/TextBl
 | 预设格式文本 | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | 超链接 | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| 图像链接 |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| 图像链接 |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>简单卡片的移动和桌面差异
 
@@ -377,6 +377,6 @@ Android 上正确显示的字符格式（如粗体和斜体）。
 
 这些屏幕截图是使用团队 AppStudio 创建的，其中，将一个英雄卡片的 text 属性设置为以下字符串。 您可以通过修改此代码来测试自己的卡片中的格式设置。
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
 ---

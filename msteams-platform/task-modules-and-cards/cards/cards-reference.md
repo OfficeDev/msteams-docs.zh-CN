@@ -2,12 +2,12 @@
 title: 卡片参考
 description: 介绍可供团队中的 bot 的所有卡片和卡片操作
 keywords: bot 卡片参考
-ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 7c37d05ae4cfd07049eaec6dec5eda0f3312cefa
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452608"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346740"
 ---
 # <a name="cards-reference"></a>卡片参考
 
@@ -47,7 +47,7 @@ ms.locfileid: "48452608"
 
 图像在大小上向上或向下放大，同时保持纵横比以覆盖图像区域，然后从中心裁剪以达到适合该卡片的纵横比。
 
-图像必须最多为1024×1024和 1 MB （PNG、JPEG 或 GIF 格式）;不正式支持动画 GIF。
+在 PNG、JPEG 或 GIF 格式中，图像的最大值必须为1024× 1024;不正式支持动画 GIF。
 
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ ms.locfileid: "48452608"
 
 ### <a name="support-for-adaptive-cards"></a>对自适应卡片的支持
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -226,7 +226,7 @@ ms.locfileid: "48452608"
 
 ### <a name="support-for-hero-cards"></a>对英雄卡片的支持
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -289,7 +289,7 @@ Bot 框架参考：
 
 ### <a name="support-for-list-cards"></a>支持列表卡片
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 |
@@ -299,7 +299,7 @@ Bot 框架参考：
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
 | title | 格式文本  | 卡片的标题。 最多2行。|
-| 项目 | 列表项的数组  ||
+| items | 列表项的数组  ||
 | 按钮 | Action 对象的数组 | 适用于当前卡片的一组操作。 最大6。 |
 
 ### <a name="example-list-card"></a>列表卡片示例
@@ -364,7 +364,7 @@ Office 365 连接器卡提供了具有多个节、字段、图像和操作的灵
 
 ### <a name="support-for-office-365-connector-cards"></a>支持 Office 365 连接器卡
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 |
@@ -482,7 +482,7 @@ Office 365 连接器卡在 Microsoft 团队中正常工作，包括 [ActionCard 
 
 ### <a name="support-for-receipts-cards"></a>对收据卡的支持
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -498,11 +498,11 @@ Bot 框架参考：
 
 使机器人能够请求用户登录的卡片。 在与 Bot 框架中相比，在不同表单中的团队中支持。 团队中的登录卡片与 bot 框架中的登录卡片类似，但在团队登录卡仅支持两个操作时除外： `signin` 和 `openUrl` 。
 
-*登录操作*可用于团队中的任何卡片，而不仅仅是登录卡。 有关身份验证的详细信息，请参阅 [Microsoft 团队身份验证流的](~/bots/how-to/authentication/auth-flow-bot.md) 主题相关主题。
+*登录操作* 可用于团队中的任何卡片，而不仅仅是登录卡。 有关身份验证的详细信息，请参阅 [Microsoft 团队身份验证流的](~/bots/how-to/authentication/auth-flow-bot.md) 主题相关主题。
 
 ### <a name="support-for-signin-cards"></a>对登录卡的支持
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -520,7 +520,7 @@ Bot 框架参考：
 
 ### <a name="support-for-thumbnail-cards"></a>支持缩略图卡片
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
@@ -601,7 +601,7 @@ Bot 框架参考：
 
 ### <a name="support-for-carousel-collections"></a>对轮播集合的支持
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 |
@@ -625,7 +625,7 @@ Bot 框架参考：
 
 列表布局显示垂直堆叠的卡片列表，可以选择使用关联的操作按钮。
 
-| 团队中的 bot | 消息扩展  | 连接器 | Bot 框架 |
+| 团队中的 bot | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |

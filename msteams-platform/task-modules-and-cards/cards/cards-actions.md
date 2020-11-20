@@ -2,32 +2,32 @@
 title: 在 bot 中添加卡片操作
 description: 介绍 Microsoft 团队中的卡片操作以及如何在你的 bot 中使用它们
 keywords: 团队 bot 卡片操作
-ms.openlocfilehash: e0b050cde9adf5bd811d5d95ce1c6f1bf60546a1
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801027"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346775"
 ---
 # <a name="card-actions"></a>卡片操作
 
-由团队中的 bot 和邮件分机使用的卡片支持以下活动（ [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) ）类型。 请注意， `potentialActions` 从连接器使用时，这些操作与 Office 365 连接器卡有所不同。
+由团队中的 bot 和邮件分机使用的卡片支持以下活动 ([`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) 类型。 请注意， `potentialActions` 从连接器使用时，这些操作与 Office 365 连接器卡有所不同。
 
 | 类型 | Action |
 | --- | --- |
 | `openUrl` | 在默认浏览器中打开 URL。 |
-| `messageBack` | 将邮件和有效负载发送到 bot （从单击按钮或点击卡片的用户），并将单独的邮件发送到聊天流。 |
-| `imBack`| 将邮件发送到自动程序（从单击按钮的用户或通过点击卡片）。 此邮件（从用户到 bot）对所有对话参与者均可见。 |
-| `invoke` | 将邮件和有效负载发送到机器人（从单击按钮的用户或通过点击卡片）。 此消息不可见。 |
+| `messageBack` | 将邮件和有效负载发送到单击按钮的用户 (中，或将其) ，并将单独的邮件发送到聊天流。 |
+| `imBack`| 将邮件从单击按钮的用户 (或) 的卡发送到 bot。 此邮件 (从用户到 bot) 对所有对话参与者均可见。 |
+| `invoke` | 将邮件和有效负载从单击按钮的用户 (或) 的卡发送到 bot。 此消息不可见。 |
 | `signin` | 启动 OAuth 流，允许 bot 与安全服务连接。 |
 
 > [!NOTE]
 >* 团队不支持 `CardAction` 上表中未列出的类型。
 >* 团队不支持该 `potentialActions` 属性。
->* 卡片操作与 Bot 框架/Azure Bot 服务中的[建议操作](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button)不同。 Microsoft 团队不支持建议的操作：如果希望按钮显示在 "团队" bot 邮件中，请使用卡片。
->* 如果使用的是作为邮件扩展一部分的卡片操作，则在将该卡片提交到频道之前，操作将不起作用（当卡片在撰写消息框中时，这些操作将不起作用）。
+>* 卡片操作与 Bot 框架/Azure Bot 服务中的 [建议操作](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) 不同。 Microsoft 团队不支持建议的操作：如果希望按钮显示在 "团队" bot 邮件中，请使用卡片。
+>* 如果使用的是作为邮件扩展一部分的卡片操作，则在将该卡片提交到频道之前，操作将不起作用 (这些操作将不起作用，因为智能卡位于撰写消息框) 中。
 
-团队还支持[自适应卡片操作](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)，仅供自适应卡片使用。 这些操作在本参考结束时在各自的部分中列出。
+团队还支持 [自适应卡片操作](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)，仅供自适应卡片使用。 这些操作在本参考结束时在各自的部分中列出。
 
 ## <a name="openurl"></a>openUrl
 
@@ -50,7 +50,7 @@ ms.locfileid: "44801027"
 | 属性 | 说明 |
 | --- | --- |
 | `title` | 显示为按钮标签。 |
-| `displayText` | 可选。 在执行操作时，用户在聊天流中回显。 此文本*不*会发送到你的机器人。 |
+| `displayText` | 可选。 在执行操作时，用户在聊天流中回显。 此文本 *不* 会发送到你的机器人。 |
 | `value` | 在执行操作时发送到你的 bot。 您可以对操作的上下文进行编码，例如唯一标识符或 JSON 对象。 |
 | `text` | 在执行操作时发送到你的 bot。 使用此属性可简化 bot 的开发：您的代码可以检查单个顶级属性以调度 bot 逻辑。 |
 
@@ -74,7 +74,7 @@ ms.locfileid: "44801027"
 
 ### <a name="inbound-message-example"></a>入站邮件示例
 
-`replyToId`包含卡操作来自的邮件的 ID。 如果要更新邮件，请使用此方法。
+`replyToId` 包含卡操作来自的邮件的 ID。 如果要更新邮件，请使用此方法。
 
 ```json
 {
@@ -138,7 +138,7 @@ ms.locfileid: "44801027"
 
 ## <a name="invoke"></a>调
 
-该 `invoke` 操作用于调用[任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
+该 `invoke` 操作用于调用 [任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
 
 `invoke`操作包含三个属性： `type` 、 `title` 和 `value` 。 `value`属性可以包含字符串、字符串化 JSON 对象或 json 对象。
 
@@ -152,9 +152,9 @@ ms.locfileid: "44801027"
 }
 ```
 
-当用户单击此按钮时，你的 bot 将接收 `value` 具有一些其他信息的对象。 请注意，活动类型将为 `invoke` 而不是 `message` （ `activity.Type == "invoke"` ）。
+当用户单击此按钮时，你的 bot 将接收 `value` 具有一些其他信息的对象。 请注意，活动类型将是， `invoke` 而不是 `message` (`activity.Type == "invoke"`) 。
 
-### <a name="example-invoke-button-definition-net"></a>示例： Invoke button definition （.NET）
+### <a name="example-invoke-button-definition-net"></a>示例： Invoke button definition ( .NET) 
 
 ```csharp
 var button = new CardAction()
@@ -229,14 +229,17 @@ var button = new CardAction()
 
 除了上面提到的操作之外，还可以使用对象中的属性修改自适应卡 `Action.Submit` 有效负载，以支持现有机器人框架操作 `msteams` `data` `Action.Submit` 。 以下各节详细介绍了如何将现有的 Bot 框架操作用于自适应卡片。
 
+> [!NOTE]
+> 使用 `msteams` 机器人框架操作添加到数据不能与自适应卡片任务模块一起使用。
+
 ### <a name="adaptive-cards-with-messageback-action"></a>具有 messageBack 操作的自适应卡片
 
 若要包含 `messageBack` 自适应卡片的操作，请在对象中包含以下详细信息 `msteams` 。 请注意，如果需要，可以在对象中包含其他隐藏属性 `data` 。
 
 | 属性 | 说明 |
 | --- | --- |
-| `type` | 设置为`messageBack` |
-| `displayText` | 可选。 在执行操作时，用户在聊天流中回显。 此文本*不*会发送到你的机器人。 |
+| `type` | 设置为 `messageBack` |
+| `displayText` | 可选。 在执行操作时，用户在聊天流中回显。 此文本 *不* 会发送到你的机器人。 |
 | `value` | 在执行操作时发送到你的 bot。 您可以对操作的上下文进行编码，例如唯一标识符或 JSON 对象。 |
 | `text` | 在执行操作时发送到你的 bot。 使用此属性可简化 bot 的开发：您的代码可以检查单个顶级属性以调度 bot 逻辑。 |
 
@@ -263,7 +266,7 @@ var button = new CardAction()
 
 | 属性 | 说明 |
 | --- | --- |
-| `type` | 设置为`imBack` |
+| `type` | 设置为 `imBack` |
 | `value` | 需要在聊天中回送的字符串 |
 
 #### <a name="example"></a>示例
@@ -287,7 +290,7 @@ var button = new CardAction()
 
 | 属性 | 说明 |
 | --- | --- |
-| `type` | 设置为`signin` |
+| `type` | 设置为 `signin` |
 | `value` | 设置为要重定向到的 URL  |
 
 #### <a name="example"></a>示例

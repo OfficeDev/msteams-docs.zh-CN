@@ -4,12 +4,12 @@ author: heath-hamilton
 description: 了解如何为 Microsoft 团队有效设计 "会议" 选项卡。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 402d25e543494636af287bcc2e8a308765b4cea9
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: fc10c5b60672d243ac2e330ce93b4e01c2e7a278
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877027"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346670"
 ---
 # <a name="design-an-in-meeting-tab"></a>设计会议内的选项卡
 
@@ -37,16 +37,16 @@ ms.locfileid: "48877027"
 
 "会议" 选项卡将使用以下维度显示您的应用程序内容：
 
-* **宽度** ：280像素用于 web 视图区域。 在 web 视图的左侧和右侧有20像素的填充。
-* **高度** ：完全出血到选项卡的底部。在 web 视图区域和选项卡头之间有20像素的填充。
+* **宽度**：280像素用于 web 视图区域。 在 web 视图的左侧和右侧有20像素的填充。
+* **高度**：完全出血到选项卡的底部。在 web 视图区域和选项卡头之间有20像素的填充。
 
 :::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="显示会议扩展 &quot;会议&quot; 选项卡的 UI 剖析的插图。" border="false":::
 
-1. **应用图标** ： "会议中" 选项卡的入口点。
-1. **标头** ：包含选项卡名称。
-1. **名称** ：选项卡实例的名称。
-1. **消除** ：关闭选项卡。始终使用右上关闭图标而不是页脚中的操作。
-1. **Web 视图** ：显示所有第三方应用程序内容。
+1. **应用图标**： "会议中" 选项卡的入口点。
+1. **标头**：包含选项卡名称。
+1. **名称**：选项卡实例的名称。
+1. **消除**：关闭选项卡。始终使用右上关闭图标而不是页脚中的操作。
+1. **Web 视图**：显示所有第三方应用程序内容。
 
 ## <a name="behavior"></a>行为
 
@@ -125,7 +125,7 @@ Input | 用于简短用户输入的字段。 标签文本可以包含图标  | �
 
 #### <a name="do-design-for-a-dark-theme"></a>Do：深色主题的设计
 
-团队会议针对深色模式进行了优化，以帮助减少视觉和认知干扰，以便用户可以将注意力集中在讨论和共享内容上。
+团队会议针对深色模式进行了优化，以帮助减少视觉和认知干扰，以便用户可以将注意力集中在讨论和共享内容上。 "会议" 选项卡应应用深色主题，应遵循主题准则。
 
    :::column-end:::
    :::column span="":::

@@ -4,31 +4,31 @@ author: laujan
 description: 详细说明适用于团队的 Microsoft 低和无代码解决方案
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 089e436d43819f9aabe3ceb47760f521b014d93f
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 1166de0ae6e5512f4943ca1a3a7e74c62a0d5cf1
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995000"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366887"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为 Microsoft 团队创建低代码自定义应用程序
 
 [Microsoft 团队](/microsoftteams/platform) 既可扩展又是自适应。 这意味着您可以自由为团队构建满足用户独特需求的自定义应用程序。 虽然您可以从头开始创建应用程序，但今天的快速解决方案需求较低，但也可能只是在压缩的时间范围内构建典雅应用程序所需的内容。
 
-低代码平台为软件开发提供了直观的方法，几乎无需编写代码即可构建应用程序和进程。 为公民开发者启用了轻松构建自定义应用程序和专业开发人员，可以以指数级加速应用程序开发和部署过程。 大多数低代码平台由可视化界面、指向后端服务的连接器以及内置的应用生命周期管理系统组成，以生成、调试、部署和维护应用程序。 Microsoft 提供了几种创新网关，以快速构建使用低级别代码的、与团队兼容的应用程序属性：
+低代码平台为软件开发提供了直观的方法，几乎无需编写代码即可构建应用程序和进程。 初学者开发人员可轻松构建自定义应用程序，专业开发人员可以以指数级加速应用程序开发和部署过程。 大多数低代码平台由可视化界面、指向后端服务的连接器以及内置的应用生命周期管理系统组成，以生成、调试、部署和维护应用程序。 Microsoft 提供了几种创新网关，以快速构建使用低级别代码的、与团队兼容的应用程序属性：
 
 1. [Microsoft Power Platform](#teams-and-microsoft-power-platform)
 1. [Microsoft 团队应用程序模板](#teams-app-templates)
 
 ## <a name="teams-and-microsoft-power-platform"></a>团队和 Microsoft Power Platform
 
-Microsoft Power Platform (/power-platform) 将四种强健的 Microsoft 技术组合在一个功能强大的应用程序平台中。 Power BI、Power Apps 和 power Virtual (以前的 Microsoft Flow) 和高级虚拟代理使您能够在统一和集成环境中构建解决方案、自动化流程、分析数据和创建虚拟代理：
+[Microsoft Power Platform](/power-platform) 将四种强大的 Microsoft 技术结合到一个功能强大的应用程序平台中。 Power BI、Power Apps 和 power Virtual (以前的 Microsoft Flow) 和高级虚拟代理使您能够在统一和集成环境中构建解决方案、自动化流程、分析数据和创建虚拟代理：
 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power platform 服务":::
 
 ### <a name="-teams-and-power-bi"></a>✔团队和 Power BI
 
-[Microsoft 团队的 POWER BI 选项卡](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/)添加了对团队工作区中报告的支持，并允许用户[共享交互式 Power BI 内容](/power-bi/collaborate-share/service-embed-report-microsoft-teams)并[与其他人 inTeams](/power-bi/collaborate-share/service-collaborate-microsoft-teams)频道和聊天进行协作。 您可以从头开始创建打包的 [POWER BI 应用](/power-bi/collaborate-share/service-create-distribute-apps) 内容，也可以将其作为应用进行分发，也可以 [在 Power BI 中创建模板应用程序](/connect-data/service-template-apps-create)。 此外，使用 [团队中的新 POWER bi 应用程序](https://go.microsoft.com/fwlink/?linkid=2143643) 将整个基本的 power bi 服务体验引入团队中。
+[Microsoft 团队的 POWER BI 选项卡](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/)添加了对团队工作区中报告的支持，并允许用户[共享交互式 Power BI 内容](/power-bi/collaborate-share/service-embed-report-microsoft-teams)并与团队频道和聊天[中的其他人协作](/power-bi/collaborate-share/service-collaborate-microsoft-teams)。 您可以从头开始创建打包的 [POWER BI 应用程序](/power-bi/collaborate-share/service-create-distribute-apps) 内容，并将其作为应用程序分发，也可以 [在 Power BI 中创建模板应用程序](/connect-data/service-template-apps-create)。 此外，使用 [团队中的新 POWER bi 应用程序](https://go.microsoft.com/fwlink/?linkid=2143643) 将整个基本的 power bi 服务体验引入团队中。
 
 ### <a name="-teams-and-power-apps"></a>✔团队和高级应用程序
 
@@ -52,7 +52,7 @@ Microsoft Power Platform (/power-platform) 将四种强健的 Microsoft 技术�
 
 ### <a name="-app-template-catalog"></a>✔应用程序模板目录
 
-[应用程序模板](../samples/app-templates.md) 是 Microsoft 团队的已准备好的应用程序，这些应用程序是社区驱动的开放源代码、开放源代码和在 GitHub 上可用的 Microsoft 团队。 每个模板都包含为您的组织部署和安装该应用程序的详细说明，提供可供安装并立即开始使用的现成应用程序。 完整的源代码也是可用的，因此您可以对其进行详细研究，也可以对代码进行更改，以满足您的特定需求。
+[应用程序模板](../samples/app-templates.md) 是 Microsoft 团队的已准备好的应用程序，这些应用程序是社区驱动的开放源代码、开放源代码和在 GitHub 上可用的 Microsoft 团队。 每个模板都包含为您的组织部署和安装应用程序的详细说明，提供可供安装并立即开始使用的现成应用程序。 完整的源代码也是可用的，因此您可以对其进行详细研究，也可以对代码进行更改，以满足您的特定需求。
 
 ### <a name="-virtual-assistant-for-teams"></a>为团队✔虚拟助理
 
@@ -75,7 +75,7 @@ Virtual Assistant 是一款 Microsoft 开放源代码模板，使您能够在保
 |[适用于开发人员的 Power BI](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
 |**Power Apps**|
 |[应用程序制造商的超级应用程序](/learn/browse/?products=power-apps&roles=maker)|
-|[应用程序开发人员的超级应用程序](/learn/browse/?products=power-apps)|
+|[面向开发人员的高级应用程序](/learn/browse/?products=power-apps)|
 |**Power Automate**|
 |[应用程序制造商的电力自动化](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)|
 |[面向开发人员的自动电源](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
@@ -85,7 +85,7 @@ Virtual Assistant 是一款 Microsoft 开放源代码模板，使您能够在保
 ### <a name="-project-oakdale-preview"></a>✔ (预览的 Project Oakdale) 
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) 是一种新的低代码数据平台，可用于即将推出 Microsoft 团队。 它将允许开发人员直接在团队中创建团队能源平台解决方案。 有关详细信息， *请参阅* 我们的 [团队博客 Microsoft Project Oakdale 页面](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)。
+) 是 Microsoft 团队即将推出的一种新的低代码数据平台。 它将允许开发人员直接在团队中创建团队能源平台解决方案。 *请参阅*[团队博客 Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)。
 
 ### <a name="-microsoft-blog-insights"></a>✔ Microsoft 博客见解
 

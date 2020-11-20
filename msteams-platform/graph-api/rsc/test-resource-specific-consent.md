@@ -1,17 +1,17 @@
 ---
-title: 测试团队中特定于资源的同意
+title: 在团队中测试特定于资源的同意
 description: 详细信息在使用 Postman 的团队中测试特定于资源的同意
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: 团队授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: f50f61e7eb62e3bcc6af2dafc1c7c781ff2145de
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995007"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366852"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>在团队中测试特定于资源的同意权限
 
@@ -20,9 +20,9 @@ ms.locfileid: "48995007"
 > [!NOTE]
 >若要测试 RSC 权限，您的团队应用程序清单文件必须包含使用以下字段填充的 **webApplicationInfo** 项：
 >
-> - **id** -你的 azure ad 应用 id， *请参阅*[在 azure ad 门户中注册你的应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
-> - **resource** —任何字符串， *请参阅*[更新团队应用程序清单](resource-specific-consent.md#update-your-teams-app-manifest)中的注释
-> - **应用程序权限** -您的应用程序的 RSC 权限， *请参阅*[特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
+> - **id** -你的 azure ad 应用 id，*请参阅*[在 azure ad 门户中注册你的应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
+> - **resource** —任何字符串，*请参阅*[更新团队应用程序清单](resource-specific-consent.md#update-your-teams-app-manifest)中的注释
+> - **应用程序权限**-您的应用程序的 RSC 权限，*请参阅*[特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 
 ```json
 "webApplicationInfo":{
@@ -64,7 +64,7 @@ ms.locfileid: "48995007"
 > * 在团队客户端中，从最左侧的导航栏中选择 " **团队** "。
 > * 从下拉菜单中选择应用程序安装到的团队。
 > * 选择 " **更多选项** " 图标 ( # A0) 
-> * 选择 " **获取到团队的链接** " 
+> * 选择 "**获取到团队的链接**" 
 > * 复制并保存字符串中的 **groupId** 值。
 
 ### <a name="using-postman"></a>使用 Postman
@@ -72,7 +72,7 @@ ms.locfileid: "48995007"
 > [!div class="checklist"]
 >
 > * 打开 [Postman](https://www.postman.com) 应用程序。
-> * 选择 " **文件**  =>  **导入**  =>  **导入文件** " 以从您的环境中上载更新的 JSON 文件。  
+> * 选择 "**文件**  =>  **导入**  =>  **导入文件**" 以从您的环境中上载更新的 JSON 文件。  
 > * 选择 " **集合** " 选项卡。 
 > * 选择 **测试 RSC** 旁边 ( # A0) 旁边的 v 形，以展开详细信息视图，并查看 API 请求。
 
@@ -91,4 +91,5 @@ ms.locfileid: "48995007"
 
 > [!div class="nextstepaction"]
 >
-> [了解有关图形 API 和团队的详细信息](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [了解详细信息： Microsoft Graph API 和团队](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+

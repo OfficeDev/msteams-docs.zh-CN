@@ -5,17 +5,14 @@ description: 创建团队会议的应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 30c7a2d6bc3afed28fe0f24a9dd54b67f9b1223c
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997970"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358012"
 ---
-# <a name="create-apps-for-teams-meetings-developer-preview"></a>创建团队相关应用程序会议 (开发人员预览版) 
-
->[!IMPORTANT]
-> Microsoft 团队开发人员预览版中包含的功能仅用于早期访问、测试和反馈目的。 他们可能会在公开发布之前进行更改，并且不应在生产应用程序中使用。
+# <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
 ## <a name="prerequisites-and-considerations"></a>先决条件和注意事项
 
@@ -35,7 +32,7 @@ ms.locfileid: "48997970"
 
 |API|说明|请求|源|
 |---|---|----|---|
-|**GetUserContext**| 获取上下文信息以在 "团队" 选项卡中显示相关内容。 |_**microsoftTeams getContext ( ( ) => {/ *...* /} )**_|Microsoft 团队客户端 SDK|
+|**GetUserContext**| 获取上下文信息以在 "团队" 选项卡中显示相关内容。 |_**microsoftTeams getContext ( ( ) => {/*...*/} )**_|Microsoft 团队客户端 SDK|
 |**GetParticipant**|此 API 允许 bot 按会议 id 和参与者 id 提取参与者信息。|**获取** _**/v1/meetings/{meetingId}/participants/{participantId}？ tenantId = {tenantId}**_ |Microsoft Bot 框架 SDK|
 |**NotificationSignal** |将使用以下现有对话通知 API 为用户-bot 聊天) 传递会议信号 (。 通过此 API，开发人员可以基于最终用户操作发出信号，以显示会议中的对话气泡图。|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot 框架 SDK|
 
@@ -43,7 +40,7 @@ ms.locfileid: "48997970"
 
 请参阅我们 [的 "获取团队上下文" 选项卡](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) 文档，获取有关标识和检索您的选项卡内容的上下文信息的指南。 作为会议扩展性的一部分，已为响应负载添加了一个新值：
 
-✔ **meetingId** ：在会议上下文中运行时由选项卡使用。
+✔ **meetingId**：在会议上下文中运行时由选项卡使用。
 
 ### <a name="getparticipant-api"></a>GetParticipant API
 
@@ -100,7 +97,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>响应有效负载
 <!-- markdownlint-disable MD036 -->
 
-"会议" 下的 **角色** 可以是 *组织者* 、 *演示者* 或 *与会者* 。
+"会议" 下的 **角色** 可以是 *组织者*、*演示者* 或 *与会者*。
 
 **示例 1**
 
@@ -131,15 +128,15 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### <a name="response-codes"></a>响应代码
 
-**403** ：不允许应用获取参与者信息。 这是最常见的错误响应，当应用程序未安装在会议中时（如租户管理员禁用或在实时网站迁移过程中被阻止）时，会触发此响应。  
-**200** ：成功检索参与者信息。  
-**401** ：令牌无效。  
-**404** ：找不到参与者。 
-**500** ：会议已过期 (超过60天，自会议结束) 或参与者没有基于其角色的权限。
+**403**：不允许应用获取参与者信息。 这是最常见的错误响应，当应用程序未安装在会议中时（如租户管理员禁用或在实时网站迁移过程中被阻止）时，会触发此响应。  
+**200**：成功检索参与者信息。  
+**401**：令牌无效。  
+**404**：找不到参与者。 
+**500**：会议已过期 (超过60天，自会议结束) 或参与者没有基于其角色的权限。
 
 **即将推出**
 
-**404** ：会议已过期，或者找不到参与者。 
+**404**：会议已过期，或者找不到参与者。 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>NotificationSignal API
@@ -222,10 +219,10 @@ await context.sendActivity(replyActivity);
 
 #### <a name="response-codes"></a>响应代码
 
-**201** ：已成功发送信号活动  
-**401** ：令牌无效  
-**403** ：不允许应用发送信号。 在这种情况下，有效负载应包含更详细的错误消息。 可能有多种原因：应用程序因租户管理员而被禁用，在 live 网站缓解等过程中被阻止。  
-**404** ：会议聊天不存在  
+**201**：已成功发送信号活动  
+**401**：令牌无效  
+**403**：不允许应用发送信号。 在这种情况下，有效负载应包含更详细的错误消息。 可能有多种原因：应用程序因租户管理员而被禁用，在 live 网站缓解等过程中被阻止。  
+**404**：会议聊天不存在  
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为团队会议启用您的应用程序
 
@@ -260,11 +257,11 @@ await context.sendActivity(replyActivity);
 
 该选项卡 `context` 和 `scopes` 属性在协调中使用，以确定您希望应用程序的显示位置。 或范围中的选项卡 `team` `groupchat` 可以有多个上下文。 Context 属性的可能值如下所示：
 
-* **channelTab** ：团队频道标头中的一个选项卡。
-* **privateChatTab** ：组标头中的一个选项卡，在一组不在团队或会议的上下文中的一组用户之间聊天。
-* **meetingChatTab** ：组标头中的一个选项卡，在计划会议上下文中的一组用户之间聊天。
-* **meetingDetailsTab** ：日历的 "会议详细信息" 视图标头中的一个选项卡。
-* **meetingSidePanel** ：通过 (u) 的统一栏打开的会议面板。
+* **channelTab**：团队频道标头中的一个选项卡。
+* **privateChatTab**：组标头中的一个选项卡，在一组不在团队或会议的上下文中的一组用户之间聊天。
+* **meetingChatTab**：组标头中的一个选项卡，在计划会议上下文中的一组用户之间聊天。
+* **meetingDetailsTab**：日历的 "会议详细信息" 视图标头中的一个选项卡。
+* **meetingSidePanel**：通过 (u) 的统一栏打开的会议面板。
 
 > [!NOTE]
 > "Context" 属性目前不受支持，因此在移动客户端上将被忽略
@@ -272,19 +269,19 @@ await context.sendActivity(replyActivity);
 ## <a name="configure-your-app-for-meeting-scenarios"></a>为会议方案配置应用程序
 
 > [!NOTE]
-> * 若要使您的应用程序在选项卡库中可见，它需要 **支持可配置的选项卡** 和 **组聊天作用域** 。
+> * 若要使您的应用程序在选项卡库中可见，它需要 **支持可配置的选项卡** 和 **组聊天作用域**。
 >
 > * 移动客户端仅支持准备会议和投递会议表面中的选项卡。 在会议中 (会议中的对话和面板) 的体验将很快推出。 创建移动电话选项卡时，请遵循 [移动电话上的选项卡指南](../tabs/design/tabs-mobile.md) 。 
 
 ### <a name="pre-meeting"></a>会议前
 
-拥有组织者和/或演示者角色的用户使用会议 **聊天** 和会议 **详细信息** 页中的加号➕按钮将选项卡添加到会议。 邮件扩展通过位于聊天的撰写邮件区域下的省略号/溢出菜单 &#x25CF;&#x25CF;&#x25CF; 添加到中。 将 bot 添加到会议聊天中，使用 " **@** " 键，然后选择 " **获取 bot** "。
+拥有组织者和/或演示者角色的用户使用会议 **聊天** 和会议 **详细信息** 页中的加号➕按钮将选项卡添加到会议。 邮件扩展通过位于聊天的撰写邮件区域下的省略号/溢出菜单 &#x25CF;&#x25CF;&#x25CF; 添加到中。 将 bot 添加到会议聊天中，使用 " **@** " 键，然后选择 " **获取 bot**"。
 
 ✔ *必须* 通过 [选项卡 SSO](../tabs/how-to/authentication/auth-aad-sso.md)确认用户标识。 遵循此身份验证后，应用可以通过 GetParticipant API 检索用户角色。
 
  ✔基于用户角色，应用现在将能够呈现特定于角色的体验。 例如，轮询应用程序可以仅允许组织者和演示者创建新的轮询。
 
-> **注意** ：在会议进行过程中，可以更改角色分配。  *请参阅*[团队会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。 
+> **注意**：在会议进行过程中，可以更改角色分配。  *请参阅*[团队会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。 
 
 ### <a name="in-meeting"></a>会议中
 
@@ -298,6 +295,10 @@ await context.sendActivity(replyActivity);
 
 ✔引用 [选项卡的团队身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流非常类似于网站的身份验证流。 因此，选项卡可以直接使用 OAuth 2.0。 *另请参阅* [Microsoft Identity platform 和 OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
 
+当用户处于会议视图中时，✔邮件扩展应按预期方式工作，并且应该能够发布撰写邮件扩展卡。
+
+✔的 AppName 工作项-工具提示应声明应用程序名称在会议中的 U-条形图中。
+
 #### <a name="in-meeting-dialog"></a>**会议对话**
 
 ✔您必须遵守 [会议中的对话框设计准则](design/designing-in-meeting-dialog.md)。
@@ -307,6 +308,8 @@ await context.sendActivity(replyActivity);
 ✔使用 [通知](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API 指示需要触发气泡通知。
 
 ✔作为通知请求负载的一部分，请添加承载要 showcased 内容的 URL。
+
+✔会议对话中不能使用任务模块。
 
 > [!NOTE]
 >

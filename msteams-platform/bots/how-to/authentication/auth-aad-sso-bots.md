@@ -1,13 +1,13 @@
 ---
-title: 对 bot 的单一登录支持
+title: 为机器人提供单一登录支持
 description: 介绍如何获取用户令牌。 目前，bot 开发人员可以在支持 OAuth 卡时使用 "登录卡" 或 "azure bot 服务"。
 keywords: 令牌，用户令牌，针对 bot 的 SSO 支持
-ms.openlocfilehash: 0b896f7e13847f529075b5562a6c3eb2542482bf
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877842"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346852"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>单一登录 (SSO) 对 bot 的支持
 
@@ -22,9 +22,9 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 1. 机器人发送包含属性的 OAuthCard 的邮件 `tokenExchangeResource` 。 它告诉团队获取机器人应用程序的身份验证令牌。 用户在用户的所有活动终结点上接收邮件。
 
 > [!NOTE]
-> ✔用户一次可以有一个以上的活动终结点。  
-> ✔从用户的每个活动终结点接收 bot 令牌。
-> ✔单一登录支持目前要求在个人作用域中安装应用程序。
+>* 一个用户一次可以有一个以上的活动终结点。  
+>* 将从用户的每个活动终结点接收 bot 令牌。
+>* 单一登录支持目前要求在个人作用域中安装应用程序。
 
 2. 如果是当前用户第一次使用你的 bot 应用程序，则在需要同意的情况下，将会发出请求提示 () 或处理步骤验证 (如双重身份验证) ）。
 
@@ -36,7 +36,7 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
   
 6. 令牌将在 bot 应用程序中进行分析，以提取所需的信息，如用户的电子邮件地址。
   
-## <a name="develop-an-single-sign-on-microsoft-teams-bot"></a>开发单一登录 Microsoft 团队 bot
+## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a>开发单一登录 Microsoft 团队 bot
   
 以下步骤是开发 SSO Microsoft 团队 bot 所必需的：
 
@@ -46,12 +46,12 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 
 ### <a name="create-an-azure-account"></a>创建 Azure 帐户
 
-此步骤类似于 [选项卡 SSO 流](../../../tabs/how-to/authentication/auth-aad-sso.md) 流：
+此步骤类似于 [选项卡 SSO 流](../../../tabs/how-to/authentication/auth-aad-sso.md)：
 
 1. 获取 [AZURE AD 应用程序 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
 2. 指定应用程序需要的 Azure AD 终结点和 Microsoft Graph （可选）的权限。
 3. [授予](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) 对团队桌面、web 和移动应用程序的权限。
-4. 预授权团队通过选择 " **添加范围** " 按钮，并在打开的面板中，输入 `access_as_user` 作为 **作用域名称** 。
+4. 预授权团队通过选择 " **添加范围** " 按钮，并在打开的面板中，输入 `access_as_user` 作为 **作用域名称**。
 
 > [!IMPORTANT]
 > * 如果要构建独立的 bot，请将应用程序 ID URI 设置为 `api://botid-{YourBotId}` 。
@@ -79,7 +79,7 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 
 获取令牌的请求是使用现有邮件架构)  (正常的 POST 邮件请求。 它包含在 OAuthCard 的附件中。 OAuthCard 类的架构在 [Microsoft Bot 架构 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) 中定义，与登录卡非常相似。 如果在卡片上填充了该属性，则团队会将此请求视为无提示令牌获取 `TokenExchangeResource` 。 对于 "团队渠道"，我们仅接受 `Id` 唯一标识令牌请求的属性。
 
-如果这是用户第一次使用您的应用程序，并且需要用户同意，则将显示一个对话框，以继续使用与下面类似的同意体验。 当用户选择 " **继续** " 时，将根据是否定义了 Bot 以及 OAuthCard 上的登录按钮，将发生两个不同的情况。
+如果这是用户第一次使用您的应用程序，并且需要用户同意，则将显示一个对话框，以继续使用与下面类似的同意体验。 当用户选择 " **继续**" 时，将根据是否定义了 Bot 以及 OAuthCard 上的登录按钮，将发生两个不同的情况。
 
 !["同意" 对话框](../../../assets/images/bots/bots-consent-dialogbox.png)
 
@@ -87,7 +87,7 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 
 如果 bot 未在卡片上提供登录按钮，则会触发用户对最少一组权限的同意。 此令牌对基本身份验证和获取用户电子邮件地址非常有用。
 
-**不带登录按钮的 c # 令牌请求** ：
+**不带登录按钮的 c # 令牌请求**：
 
 ```csharp
 var attachment = new Attachment
@@ -113,7 +113,7 @@ var attachment = new Attachment
 
 令牌的响应是通过具有相同架构的调用活动发送的，而是由其他人调用，因为它会立即接收到这些活动。 唯一的区别是调用名称、 **登录/tokenExchange** 和 **值** 字段，其中包含的 **Id** (最初请求获取令牌的字符串) 和 **令牌** 字段 (包含令牌) 的字符串值。 请注意，如果用户有多个活动终结点，则可能会收到针对给定请求的多个响应。 您可以使用令牌 deduplicate 响应。
 
-**用于响应处理调用活动的 c # 代码** ：
+**用于响应处理调用活动的 c # 代码**：
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivity
@@ -142,7 +142,7 @@ protected override async Task<InvokeResponse> OnInvokeActivity
 
 ### <a name="update-the-azure-portal-with-the-oauth-connection"></a>使用 OAuth 连接更新 Azure 门户
 
-1. 在 Azure 门户中，导航回 **机器人通道注册** 。
+1. 在 Azure 门户中，导航回 **机器人通道注册**。
 
 2. 切换到 " **设置** " 边栏选项卡，然后选择 "OAuth 连接设置" 部分下的 " **添加设置** "。
 
@@ -153,12 +153,12 @@ protected override async Task<InvokeResponse> OnInvokeActivity
 > [!div class="checklist"]
 >
 > * 为新的连接设置输入一个名称。 这将是在 **步骤 5** 中的 bot 服务代码的设置中引用的名称。
-> * 在 "服务提供商" 下拉列表中，选择 " **Azure Active Directory V2** "。
+> * 在 "服务提供商" 下拉列表中，选择 " **Azure Active Directory V2**"。
 >* 输入 AAD 应用程序的客户端凭据。
 >* 对于令牌交换 URL，请使用在 AAD 应用程序的上一步骤中定义的范围值。 令牌交换 URL 的存在指示为 SDK 配置此 AAD 应用程序的 SSO。
->* 将 "公用" 指定为 **租户 ID** 。
+>* 将 "公用" 指定为 **租户 ID**。
 >* 在为 AAD 应用程序指定对下游 Api 的权限时，添加所有配置的作用域。 使用提供的客户端 id 和客户端密码，令牌存储将为您交换带有定义的权限的图形令牌的令牌。
->* 选择“ **保存** ”。
+>* 选择“保存”。
 
 ![VuSSOBotConnection 设置视图](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 

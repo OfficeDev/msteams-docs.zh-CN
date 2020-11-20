@@ -6,23 +6,23 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: 团队授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: cbeb1069f7f80608ec3a65710543b429e6f2908b
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 3cafbb090c4e4bc44a814c840a7a297357341bba
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995021"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366859"
 ---
 # <a name="resource-specific-consent-rsc"></a>特定于资源的同意 (RSC) 
 
 >[!IMPORTANT]
 > 这些 Api 在终结点中是可访问的 https://graph.microsoft.com/beta 。  [Beta 版本](/graph/versioning-and-support#beta-version)终结点包含当前处于预览阶段且尚不可用的 api。 Beta endpoint 中的 Api 可能会发生更改，我们建议您不要在生产应用程序中使用它们。 
 
-特定于资源的同意 (RSC) 是 Microsoft 团队和图形 API 集成，使您的应用程序能够使用 API 终结点来管理组织中的特定团队。 特定于资源的同意 (RSC) 权限模型使 *团队所有者* 能够授予应用程序访问和/或修改团队数据的同意。 具体的团队特定的 RSC 权限定义了应用程序可在特定团队中执行的操作：
+特定于资源的同意 (RSC) 是 Microsoft 团队和 Microsoft Graph API 集成，使您的应用程序能够使用 API 终结点来管理组织中的特定团队。 特定于资源的同意 (RSC) 权限模型使 *团队所有者* 能够授予应用程序访问和/或修改团队数据的同意。 具体的团队特定的 RSC 权限定义了应用程序可在特定团队中执行的操作：
 
 ## <a name="resource-specific-permissions"></a>特定于资源的权限
 
-|应用权限| 操作 |
+|应用权限| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | 获取此团队的设置。|
 |TeamSettings.ReadWrite.Group|更新此团队的设置。|
@@ -47,7 +47,7 @@ ms.locfileid: "48995021"
 
 1. [在 Azure Active Directory 门户中配置组所有者同意设置](#configure-group-owner-consent-settings-in-the-azure-ad-portal)。
 1. [通过 AZURE AD 门户将您的应用程序注册到 Microsoft identity platform](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
-1. [在 Azure AD 门户中查看你的应用程序权限](#review-your-application-permissions-in-the-azure-ad-portal)
+1. [在 AZURE AD 门户中查看您的应用程序权限](#review-your-application-permissions-in-the-azure-ad-portal)。
 1. [从 Microsoft Identity Platform 获取访问令牌](#obtain-an-access-token-from-the-microsoft-identity-platform)。
 1. [更新团队应用程序清单](#update-your-teams-app-manifest)。
 1. [直接在团队中安装您的应用程序](#install-your-app-directly-in-teams)。
@@ -60,7 +60,7 @@ ms.locfileid: "48995021"
 > [!div class="checklist"]
 >
 >- 以[全局管理员/公司管理员身份](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)登录到[Azure 门户](https://portal.azure.com)。  
- > - [选择](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)" **Azure Active Directory**  =>  **企业应用程序**  =>  **同意和权限** "  =>  **用户同意设置** 。
+ > - [选择](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)" **Azure Active Directory**  =>  **企业应用程序**  =>  **同意和权限**"  =>  **用户同意设置**。
 > - 启用、禁用或将用户同意限制为对 **访问数据的应用程序进行 "组所有者同意** " (默认为 " **允许所有组所有者的组所有者同意** ") 。 若要让团队所有者使用 RSC 安装应用程序，必须为该用户启用组所有者许可。
 
 ![azure rsc 配置](../../assets/images/azure-rsc-configuration.png)
@@ -69,14 +69,14 @@ ms.locfileid: "48995021"
 
 ## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a>通过 Azure AD 门户将您的应用程序注册到 Microsoft identity platform
 
-Azure Active Directory 门户为您提供了一个用于注册和配置应用程序的中央平台。 您的应用程序必须在 Azure AD 门户中注册，才能与 Microsoft identity platform 和调用 Graph Api 集成。 *请参阅*[在 Microsoft identity platform 中注册应用程序](/graph/auth-register-app-v2)。
+Azure Active Directory 门户为您提供了一个用于注册和配置应用程序的中央平台。 您的应用程序必须在 Azure AD 门户中注册，才能与 Microsoft identity platform 集成并调用 Microsoft Graph Api。 *请参阅*[在 Microsoft identity platform 中注册应用程序](/graph/auth-register-app-v2)。
 
 >[!WARNING]
 >不要将多个团队应用注册到同一个 Azure AD 应用 id。应用程序 id 对于每个应用程序必须是唯一的。 尝试将多个应用程序安装到相同的应用 id 将会失败。
 
 ## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>在 Azure AD 门户中查看你的应用程序权限
 
-导航到 " **家庭**  =>  **应用注册** " 页，并选择您的 RSC 应用程序。 从左侧导航栏中选择 " **API 权限** "，然后检查您的应用程序的已配置权限列表。 如果您的应用程序将仅进行 RSC Graph 呼叫，则删除该页面上的所有权限。 如果你的应用程序还将进行非 RSC 呼叫，请根据需要保留这些权限。
+导航到 "**家庭**  =>  **应用注册**" 页，并选择您的 RSC 应用程序。 从左侧导航栏中选择 " **API 权限** "，然后检查您的应用程序的已配置权限列表。 如果您的应用程序将仅进行 RSC Graph API 调用，则删除该页面上的所有权限。 如果你的应用程序还将进行非 RSC 呼叫，请根据需要保留这些权限。
 
 >[!IMPORTANT]
 >Azure AD 门户不能用于请求 RSC 权限。 RSC 权限当前对于安装在团队客户端中的团队应用程序是独占的，在应用程序清单 (JSON) 文件中声明。
@@ -88,7 +88,7 @@ Azure Active Directory 门户为您提供了一个用于注册和配置应用程
 您需要使用 Azure AD 注册过程中的以下值从标识平台检索访问令牌：
 
 - 应用注册门户分配的 **应用程序 ID** 。 如果您的应用程序支持单一登录 (SSO) 则您的应用程序和 SSO 应使用相同的应用程序 ID。
-- **客户端密钥/密码** 或公钥/私钥对)  ( **证书** 。 这不是本机应用的必需项。
+- **客户端密钥/密码** 或公钥/私钥对)  (**证书**。 这不是本机应用的必需项。
 - **重定向 URI** (或用于从 Azure AD 接收响应的应用程序) 回复 URL。
 
  *请参阅*[代表用户获取访问权限](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token)并在 [没有用户的情况下获取访问权限](/graph/auth-v2-service)
@@ -99,7 +99,7 @@ RSC 权限是在应用程序清单 (JSON) 文件中声明的。  使用以下值
 
 > [!div class="checklist"]
 >
-> - **id** -你的 azure ad 应用 Id。 *请参阅*[在 azure ad 门户中注册你的应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
+> - **id** -你的 azure ad 应用 Id。*请参阅*[在 azure ad 门户中注册你的应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
 > - **resource**  —任何字符串。 此字段在 RSC 中没有任何操作，但必须添加它并具有值以避免错误响应;任何字符串都将执行。
 > - **应用程序权限** -您的应用程序的 RSC 权限。 *请参阅*[特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 
@@ -147,9 +147,9 @@ RSC 权限是在应用程序清单 (JSON) 文件中声明的。  使用以下值
 > - 在团队客户端中，从最左侧的导航栏中选择 " **团队** "。
 > - 从下拉菜单中选择应用程序安装到的团队。
 > - 选择 " **更多选项** " 图标 ( # A0) 。
-> - 选择 " **获取到团队的链接** "。
+> - 选择 " **获取到团队的链接**"。
 > - 复制并保存字符串中的 **groupId** 值。
-> - 登录到 **Graph 浏览器** 。
+> - 登录到 **Graph 浏览器**。
 > - 对以下终结点进行 **GET** 调用： `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` 。 响应中的 clientAppId 字段将映射到在团队应用程序清单中指定的 appId。
   ![Graph 资源管理器响应 GET call。](../../assets/images/graph-permissions.png)
  

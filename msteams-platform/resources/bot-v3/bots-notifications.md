@@ -5,12 +5,12 @@ keywords: 团队 bot 事件
 ms.date: 05/20/2019
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: cb3463b8cfb14920644f16f84a09260739a82ede
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: e15629ef2f178c0498e33518f5976ff2b2bdf776
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877041"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346726"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>在 Microsoft 团队中处理 bot 事件
 
@@ -185,7 +185,7 @@ bot.on('conversationUpdate', (msg) => {
 `conversationUpdate` `membersAdded` 当用户直接添加个人聊天时，你的 bot 会收到。 在这种情况下，你的 bot 接收的有效负载不包含该 `channelData.team` 对象。 如果您希望您的 bot 根据范围提供不同的 [欢迎消息](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) ，则应将此作为筛选器使用。
 
 > [!NOTE]
-> 对于个人范围内的 bot，你的 bot 只会 `conversationUpdate` 在一次时间内收到该事件，即使已删除并重新添加了 bot 也是如此。 对于开发和测试，您可能会发现，添加帮助程序函数将允许您完全重置你的 bot。 有关实现这一点的更多详细信息，请参阅 [Node.js 示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) 或 [c # 示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) 。
+> 对于个人范围的 bot，你的 bot 将 `conversationUpdate` 多次收到该事件，即使已删除并重新添加了 bot 也是如此。 对于开发和测试，您可能会发现，添加帮助程序函数将允许您完全重置你的 bot。 有关实现这一点的更多详细信息，请参阅 [Node.js 示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) 或 [c # 示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) 。
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>架构示例：添加到个人上下文的 bot
 

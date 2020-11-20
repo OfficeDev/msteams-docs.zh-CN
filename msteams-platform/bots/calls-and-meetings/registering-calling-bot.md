@@ -2,12 +2,12 @@
 title: 为 Microsoft 团队注册呼叫和会议机器人
 description: 了解如何为 Microsoft 团队注册新的音频/视频呼叫机器人
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: 4db6c29352aa117e0dd1959826d0560359864d8a
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209751"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346845"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>为 Microsoft 团队注册呼叫机器人
 
@@ -37,7 +37,7 @@ ms.locfileid: "48209751"
 在 " [创建 Microsoft 团队的 bot](../how-to/create-a-bot-for-teams.md) " 主题中将更详细地介绍了如何创建新的 bot，但我们将在此处重复执行以下操作：
 
 1. 使用此链接可创建新的 bot： `https://dev.botframework.com/bots/new` 。 如果改为在 Bot 框架门户中选择 " *创建机器人* " 按钮，则会在 Microsoft Azure 中创建你需要 Azure 帐户的你的 bot。
-1. 添加 Microsoft 团队频道。 单击 "Microsoft 团队频道" 页面上的 "通话" 选项卡，然后选择 " **启用呼叫**"，然后使用你将接收传入通知的 HTTPS URL 更新 **Webhook () ** （例如， `https://contoso.com/teamsapp/api/calling` ）。 有关如何配置频道的详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels) 。
+1. 添加 Microsoft 团队频道。 单击 "Microsoft 团队频道" 页面上的 "通话" 选项卡，然后选择 " **启用呼叫**"，然后使用你将接收传入通知的 HTTPS URL 更新 **Webhook ()** （例如， `https://contoso.com/teamsapp/api/calling` ）。 有关如何配置频道的详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels) 。
   ![配置 Microsoft 团队频道信息](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 ## <a name="add-microsoft-graph-permissions"></a>添加 Microsoft Graph 权限
@@ -50,9 +50,9 @@ Microsoft Graph 公开了控制应用程序对资源的访问权限的精细权�
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|从应用发起一对一拨出通话（预览版）|允许应用在没有登录用户的情况下，向单个用户发起播出通话并将通话转接到组织目录中的用户。|是|
 |_Calls.InitiateGroupCall.All_|从应用发起组拨出通话（预览版）|允许应用在没有登录用户的情况下，向多个用户发起播出通话并向组织中的会议添加参与者。|是|
-|_Calls.JoinGroupCall.All_|作为应用加入组通话和会议（预览版）|允许应用在没有登录用户的情况下，加入组织中的组通话和计划会议。 应用将加入到租户的会议中并获得目录用户特权。|是|
-|_Calls.JoinGroupCallasGuest.All_|作为来宾加入组通话和会议（预览版）|允许应用在没有登录用户的情况下，以匿名方式加入组织中的组通话和计划会议。 应用将作为来宾加入租户的会议。|是|
-|_AccessMedia。_ <sup>_请参阅下面_的</sup>|作为应用访问通话中的媒体数据流（预览版）|允许应用在没有登录用户的情况下，直接访问通话中的媒体数据流。|是|
+|_Calls.JoinGroupCall.All_|作为应用加入组通话和会议（预览版）|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|是|
+|_Calls.JoinGroupCallasGuest.All_|作为来宾加入组通话和会议（预览版）|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|是|
+|_AccessMedia。_ <sup>_请参阅下面_ 的</sup>|作为应用访问通话中的媒体数据流（预览版）|允许应用在没有登录用户的情况下，直接访问通话中的媒体数据流。|是|
 
 > [!IMPORTANT]
 > 您 **不能** 使用 Microsoft. Media API 来记录或以其他方式保留你的 bot 访问的呼叫或会议中的媒体内容。
@@ -66,7 +66,7 @@ Microsoft Graph 公开了控制应用程序对资源的访问权限的精细权�
 
 ### <a name="assigning-permissions"></a>分配权限
 
-你必须提前为你的 bot 配置应用程序权限。 我们建议使用[Microsoft 应用注册门户](https://apps.dev.microsoft.com/) [，如下所述，](/graph/auth_register_app_v2)因为它是配置机器人的地方;但是，如果您更喜欢使用[AZURE AD V1 终结点](/azure/active-directory/develop/azure-ad-endpoint-comparison)，仍可以使用[azure 门户](https://aka.ms/aadapplist)。
+如果你更喜欢使用[AZURE AD V1 终结点](/azure/active-directory/develop/azure-ad-endpoint-comparison)，则必须事先使用[azure 门户](https://aka.ms/aadapplist)配置你的 bot 的应用程序权限。
 
 ### <a name="getting-tenant-administrator-consent"></a>获取租户管理员同意
 

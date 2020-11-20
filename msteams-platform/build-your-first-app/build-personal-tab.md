@@ -5,18 +5,18 @@ description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队个人
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931727"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346803"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>为 Microsoft 团队构建个人选项卡
 
 通过在团队中嵌入网页，选项卡是在应用程序中呈现内容的一种简单方法。
 
-团队中有两种类型的选项卡。 在本教程中，将为单个用户构建基本的 *个人选项卡* （全屏内容页面）。  (个人选项卡是团队中的传统网站体验中最接近的内容。 ) 
+团队中有两种类型的选项卡。 在本教程中，将为单个用户构建基本的 *个人选项卡*（全屏内容页面）。  (个人选项卡是团队中的传统网站体验中最接近的内容。 ) 
 
 ## <a name="before-you-begin"></a>准备工作
 
@@ -106,7 +106,7 @@ a {
 
 ### <a name="get-context-about-the-teams-client"></a>获取有关团队客户端的上下文
 
-在您的文件中， `Tab.js` 有一个 `microsoftTeams.getContext()` 可提供 [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) 有关已配置的客户端主题的信息的呼叫。 由于应用程序基架，使用此代码来访问 `context` 接口及其属性。
+在您的文件中， `Tab.js` 有一个 `microsoftTeams.getContext()` 可提供 [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) 有关已配置的客户端主题的信息的呼叫。 由于应用程序基架，使用此代码来访问 `context` 接口及其属性。
 
 ```JavaScript
 componentDidMount(){
@@ -171,9 +171,9 @@ if (isTheme === "default") {
 
 ## <a name="well-done"></a>干的好
 
-祝贺你！ 您有一个 "个人" 选项卡的团队应用程序，可以更轻松地查找组织中的重要联系人。
+恭喜！ 您有一个 "个人" 选项卡的团队应用程序，可以更轻松地查找组织中的重要联系人。
 
-## <a name="learn-more"></a>了解更多
+## <a name="learn-more"></a>了解详细信息
 
 * [使用 Sso 对选项卡用户进行身份验证](../tabs/how-to/authentication/auth-aad-sso.md)：如果您仅希望授权用户查看您的选项卡，请通过 Azure Active DIRECTORY (AD) 设置单一登录 (SSO) 。
 * [从现有 web 应用或网页嵌入内容](../tabs/how-to/add-tab.md#tab-requirements)：我们向您介绍了如何为个人选项卡创建新内容，但您也可以从外部 URL 加载内容。

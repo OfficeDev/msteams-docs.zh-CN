@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft 团队模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
-ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
+ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "49019616"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358026"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -307,7 +307,7 @@ Icebreaker 是一种 [Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 :::column-end:::
 :::row-end:::
 
-## <a name="new-employee-onboarding9734"></a>新员工的加入&#9734;
+## <a name="new-employee-onboarding-9734"></a>新员工的加入 &#9734;
 
 新员工加入是一个集成的 Microsoft 团队和 [SharePoint 新员工启动解决方案](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) ，使您的组织能够为员工在其新员工旅行中提供一致、高质量的入门体验。 人力资源团队和聘用经理可使用该应用程序，在整个方向和感应流程中提供相关信息，以及通过新员工共享反馈、提供引入和完成载入任务。
 
@@ -360,6 +360,20 @@ Icebreaker 是一种 [Microsoft 团队 bot](../bots/what-are-bots.md) ，可帮�
 [在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![响应的示例视图](../assets/images/quick-responses.png)
+
+## <a name="reflect-9734"></a>反映 &#9734;
+
+反射是一种自定义的 Microsoft 团队 [消息扩展](../messaging-extensions/what-are-messaging-extensions.md) 应用，为团队成员提供安全且包含的资源，以便在团队中直接与同事和/或组领导共享其情绪的状态。 该应用程序可在频道、组、会议和1:1 聊天中使用，并且签入响应可设置为 public、private 或完全匿名。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+
+:::row:::
+    :::column:::
+    **正在轮询**
+    
+    ![反映应用程序用户轮询](../assets/images/reflect-app-user-poll.png)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="remote-support"></a>远程支持
 
