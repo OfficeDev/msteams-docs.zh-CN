@@ -5,12 +5,12 @@ description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队个人
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 89d9a2109a863402dd7641d0882c530a0c2e6f66
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346803"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409069"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>为 Microsoft 团队构建个人选项卡
 
@@ -48,7 +48,7 @@ ms.locfileid: "49346803"
 
 应用程序基架提供用于在团队中呈现个人选项卡的组件。 你可以使用很多，但现在你只需关注以下内容：
 
-* `Tab.js``src/components`项目目录中的文件。 这用于呈现 "选项卡内容" 页。
+* `Tab.js``src/components`项目目录中的文件。 这是为了呈现您的选项卡内容页。
 * Microsoft 团队 JavaScript 客户端 SDK，它在项目的前端组件中预加载。
 
 ## <a name="2-customize-your-tab-content-page"></a>2. 自定义 "选项卡内容" 页

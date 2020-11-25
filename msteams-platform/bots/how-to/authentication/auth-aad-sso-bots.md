@@ -2,12 +2,12 @@
 title: 为机器人提供单一登录支持
 description: 介绍如何获取用户令牌。 目前，bot 开发人员可以在支持 OAuth 卡时使用 "登录卡" 或 "azure bot 服务"。
 keywords: 令牌，用户令牌，针对 bot 的 SSO 支持
-ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: f2f04cefdea874c42961404339f54b8eb581c7ee
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346852"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409097"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>单一登录 (SSO) 对 bot 的支持
 
@@ -48,13 +48,16 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 
 此步骤类似于 [选项卡 SSO 流](../../../tabs/how-to/authentication/auth-aad-sso.md)：
 
-1. 获取 [AZURE AD 应用程序 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
+1. 获取团队桌面、web 或移动客户端的 [AZURE AD 应用程序 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 。
 2. 指定应用程序需要的 Azure AD 终结点和 Microsoft Graph （可选）的权限。
 3. [授予](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) 对团队桌面、web 和移动应用程序的权限。
-4. 预授权团队通过选择 " **添加范围** " 按钮，并在打开的面板中，输入 `access_as_user` 作为 **作用域名称**。
+4. 通过选择 " **添加范围** " 按钮并在打开的面板中，输入 `access_as_user` 作为 **作用域名称** 来添加客户端应用程序。
+
+>[!NOTE]
+> 用于添加客户端应用程序的 "access_as_user" 范围针对的是 "管理员和用户"。
 
 > [!IMPORTANT]
-> * 如果要构建独立的 bot，请将应用程序 ID URI 设置为 `api://botid-{YourBotId}` 。
+> * 如果要构建独立的 bot，请将应用程序 ID URI 设置为 `api://botid-{YourBotId}` 此处， **YourBotId** 引用您的 Azure AD 应用程序 id。
 > * 如果要使用 bot 和选项卡生成应用程序，请将应用程序 ID URI 设置为 `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。
 
 ### <a name="update-your-app-manifest"></a>更新应用程序清单
@@ -78,6 +81,9 @@ OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和�
 ### <a name="request-a-bot-token"></a>请求 bot 令牌
 
 获取令牌的请求是使用现有邮件架构)  (正常的 POST 邮件请求。 它包含在 OAuthCard 的附件中。 OAuthCard 类的架构在 [Microsoft Bot 架构 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) 中定义，与登录卡非常相似。 如果在卡片上填充了该属性，则团队会将此请求视为无提示令牌获取 `TokenExchangeResource` 。 对于 "团队渠道"，我们仅接受 `Id` 唯一标识令牌请求的属性。
+
+>[!NOTE]
+> Bot 框架 `OAuthPrompt` 或 `MultiProviderAuthDialog` 支持单一登录 (SSO) 身份验证。
 
 如果这是用户第一次使用您的应用程序，并且需要用户同意，则将显示一个对话框，以继续使用与下面类似的同意体验。 当用户选择 " **继续**" 时，将根据是否定义了 Bot 以及 OAuthCard 上的登录按钮，将发生两个不同的情况。
 
@@ -116,14 +122,14 @@ var attachment = new Attachment
 **用于响应处理调用活动的 c # 代码**：
 
 ```csharp
-protected override async Task<InvokeResponse> OnInvokeActivity
+protected override async Task<InvokeResponse> OnInvokeActivityAsync
   (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             try
             {
                 if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
                 {
-                    await OnTokenResponse(turnContext, cancellationToken);
+                    await OnTokenResponseEventAsync(turnContext, cancellationToken);
                     return new InvokeResponse() { Status = 200 };
                 }
                 else
@@ -155,6 +161,10 @@ protected override async Task<InvokeResponse> OnInvokeActivity
 > * 为新的连接设置输入一个名称。 这将是在 **步骤 5** 中的 bot 服务代码的设置中引用的名称。
 > * 在 "服务提供商" 下拉列表中，选择 " **Azure Active Directory V2**"。
 >* 输入 AAD 应用程序的客户端凭据。
+
+>[!NOTE]
+> AAD 应用程序中可能需要 **隐式授予**。
+
 >* 对于令牌交换 URL，请使用在 AAD 应用程序的上一步骤中定义的范围值。 令牌交换 URL 的存在指示为 SDK 配置此 AAD 应用程序的 SSO。
 >* 将 "公用" 指定为 **租户 ID**。
 >* 在为 AAD 应用程序指定对下游 Api 的权限时，添加所有配置的作用域。 使用提供的客户端 id 和客户端密码，令牌存储将为您交换带有定义的权限的图形令牌的令牌。

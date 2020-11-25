@@ -5,12 +5,12 @@ description: 创建团队会议的应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: 30c7a2d6bc3afed28fe0f24a9dd54b67f9b1223c
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: f448885e3664209858eb90fa9f0853c3d31e015a
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358012"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409111"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -289,7 +289,8 @@ await context.sendActivity(replyActivity);
 
 在您的应用程序清单中✔将 **sidePanel** 添加到 **上下文** 阵列中，如上文所述。
 
-✔在会议中以及在所有情况下，应用程序将呈现在320px 中的 "会议" 选项卡中，宽度为宽。 您的选项卡必须针对此进行优化。 *请参阅* [FrameContext 接口](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+✔在会议中以及在所有情况下，应用程序将呈现在320px 中的 "会议" 选项卡中，宽度为宽。 您的选项卡必须针对此进行优化。 *请参阅* [FrameContext 接口](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+)
 
 ✔请参阅 [团队 SDK](../tabs/how-to/access-teams-context.md#user-context) ，以使用 **userContext** API 进行相应的路由请求。
 
