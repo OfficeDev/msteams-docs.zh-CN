@@ -229,8 +229,6 @@
               href: bots/how-to/conversations/channel-and-group-conversations.md
             - name: 发送主动邮件
               href: bots/how-to/conversations/send-proactive-messages.md
-            - name: 发送和接收文件
-              href: bots/how-to/conversations/send-and-receive-files.md
         - name: 调试机器人
           items:
             - name: 使用 IDE 进行本地调试
