@@ -5,12 +5,12 @@ description: 了解如何使用 App Studio 创建 Microsoft Teams 机器人。
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 3d4f954afd56bf6ee442b57961c9d6b736ffa4d8
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 42b825ff2883e9b2b8b13dbd6774ed7ce6d0f40f
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796349"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49476957"
 ---
 # <a name="create-a-bot-using-app-studio"></a>使用 App Studio 创建机器人
 
@@ -44,7 +44,7 @@ ms.locfileid: "48796349"
 ## <a name="register-your-web-service-with-the-bot-framework"></a>使用 Bot Framework 注册你的 Web 服务
 
 > [!IMPORTANT]
-> 注册 Web 服务时，请确保将 **显示名称** 设置为与应用程序清单中的 **简短名称** 相同的名称。 通过直接上传或利用组织的应用程序目录分发应用程序时，由自动程序发送到对话的消息将使用注册的 **显示名称** ，而不是应用程序的 **简短名称** 。
+> 注册 Web 服务时，请确保将 **显示名称** 设置为与应用程序清单中的 **简短名称** 相同的名称。 通过直接上传或利用组织的应用程序目录分发应用程序时，由自动程序发送到对话的消息将使用注册的 **显示名称**，而不是应用程序的 **简短名称**。
 
 通过使用 Bot Framework 来注册 Web 服务，可在 Teams 客户端与 Web 服务之间建立安全的通信通道。 Teams 客户端与 Web 服务永远不会直接通信。 相反，消息通过 Bot Framework Service 进行路由（Microsoft Teams 使用此服务的单独实例，它符合 Office 365 标准）。
 
@@ -52,9 +52,9 @@ ms.locfileid: "48796349"
 
 ### <a name="without-an-azure-subscription"></a>无 Azure 订阅
 
-如果你不想在 Azure 中创建自动程序注册，则 **必须** 使用此链接 - https://dev.botframework.com/bots/new 或 App Studio。 如果单击 Bot Framework 门户中的“ *创建自动程序* ”按钮，将在 Microsoft Azure 中创建自动程序注册，并且需要提供 Azure 订阅。 若要在创建后管理注册或将其迁移到 Azure 订阅，请转到：https://dev.botframework.com/bots。
+如果你不想在 Azure 中创建自动程序注册，则 **必须** 使用此链接 - https://dev.botframework.com/bots/new 或 App Studio。 如果单击 Bot Framework 门户中的“*创建自动程序*”按钮，将在 Microsoft Azure 中创建自动程序注册，并且需要提供 Azure 订阅。 若要在创建后管理注册或将其迁移到 Azure 订阅，请转到：https://dev.botframework.com/bots。
 
-当你编辑未在 Azure 中注册的现有 Bot Framework 注册的属性时，你将看到“迁移状态”列和蓝色“迁移”按钮，该按钮会将你带到 Microsoft Azure 门户。 除非你希望这样做，否则不要选择“迁移”按钮。 相反，请选择自动程序的 **名称** ，然后可以编辑其属性：
+当你编辑未在 Azure 中注册的现有 Bot Framework 注册的属性时，你将看到“迁移状态”列和蓝色“迁移”按钮，该按钮会将你带到 Microsoft Azure 门户。 除非你希望这样做，否则不要选择“迁移”按钮。 相反，请选择自动程序的 **名称**，然后可以编辑其属性：
 
    ![编辑自动程序属性](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 
@@ -81,9 +81,10 @@ ms.locfileid: "48796349"
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
-[Bot Framework 门户](https://dev.botframework.com)已针对在 Microsoft Azure 中注册自动程序进行了优化。 以下是几个注意事项：
+[Bot Framework 门户](https://dev.botframework.com)已针对在 Microsoft Azure 中注册自动程序进行了优化。 以下是需要了解的一些事项：
 
-* 在 Azure 中注册的自动程序的 Microsoft Teams 频道是 **免费** 的。 通过 Teams 渠道发送的消息将不会计入自动程序使用的消息中。
+* 创建自动程序后，请确保从特色频道列表中将 Microsoft Teams 添加为频道。
+* 在 Azure 上注册的自动程序的 Microsoft Teams 频道是 **免费** 的。 通过 Teams 渠道发送的消息将不会计入自动程序使用的消息中。
 * 如果你使用 Microsoft Azure 注册自动程序，则无需在 Microsoft Azure 上 *托管* 自动程序代码。
 * 如果你使用 Microsoft Azure 门户注册自动程序，则必须拥有 Microsoft Azure 帐户。 你可以[免费创建一个](https://azure.microsoft.com/free/)。 若要在创建 Azure 帐户时验证你的身份，必须提供信用卡，但不会收费；在 Microsoft Teams 中创建和使用自动程序始终是免费的。
 
@@ -93,15 +94,15 @@ ms.locfileid: "48796349"
 
 ### <a name="add-using-app-studio"></a>使用 App Studio 添加
 
-1. 在 Teams 客户端中，从左侧导航栏上的“ **…** ”溢出菜单中打开 App Studio。 如果尚未安装 App Studio，则可以通过搜索它来执行此操作。
-2. 在“ **清单编辑器** ”选项卡上，选择“ **创建新应用** ”（或者，如果要将自动程序添加到现有应用中，则可以导入应用程序包）
+1. 在 Teams 客户端中，从左侧导航栏上的“**…**”溢出菜单中打开 App Studio。 如果尚未安装 App Studio，则可以通过搜索它来执行此操作。
+2. 在“**清单编辑器**”选项卡上，选择“**创建新应用**”（或者，如果要将自动程序添加到现有应用中，则可以导入应用程序包）
 3. 添加应用详细信息（有关每个字段的完整说明，请参阅[清单架构定义](~/resources/schema/manifest-schema.md)）。
-4. 在“ **自动程序** ”选项卡上，选择“ **设置** ”按钮。
-5. 你可以创建新的 Web 服务注册（ **新自动程序** ），或者如果已经注册了一个，请选择 **现有自动程序** 。
+4. 在“**自动程序**”选项卡上，选择“**设置**”按钮。
+5. 你可以创建新的 Web 服务注册（**新自动程序**），或者如果已经注册了一个，请选择 **现有自动程序**。
 6. 选择自动程序所需的功能和作用域。
 7. 如有必要，请更新自动程序终结点地址以指向你的自动程序。 它应该类似于 `https://someplace.com/api/messages`。
 8. （可选）添加[自动程序命令](~/bots/how-to/create-a-bot-commands-menu.md)。
-9. （可选）你可以从“ **测试和分发** ”选项卡下载完整的应用程序包。
+9. （可选）你可以从“**测试和分发**”选项卡下载完整的应用程序包。
 
 ### <a name="create-it-manually"></a>手动创建
 
@@ -115,7 +116,7 @@ ms.locfileid: "48796349"
 |`supportsFiles`|布尔值|||指示自动程序是否支持在个人聊天中上传/下载文件。 默认值：`false`。|
 |`scopes`|枚举数组|3|✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
 
-（可选）你可以定义由自动程序向用户推荐的一个或多个命令列表。 对象是一个数组（最多 2 个元素），所有元素的类型均为 `object`。 你必须为自动程序支持的每个作用域定义一个单独的命令列表。 有关详细信息， *请参阅*[自动程序菜单](./create-a-bot-commands-menu.md)。
+（可选）你可以定义由自动程序向用户推荐的一个或多个命令列表。 对象是一个数组（最多 2 个元素），所有元素的类型均为 `object`。 你必须为自动程序支持的每个作用域定义一个单独的命令列表。 有关详细信息，*请参阅*[自动程序菜单](./create-a-bot-commands-menu.md)。
 
 |姓名| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -177,7 +178,7 @@ ms.locfileid: "48796349"
 > [!NOTE]
 > 要成功上传你的自动程序，你的租户管理员必须首先[允许在 Teams 中上传](/microsoftteams/manage-apps#manage-org-wide-app-settings)第三方或自定义应用。
 
-如果你一直在使用 App Studio，则可以从 **清单编辑器** 的“ **测试和分发** ”选项卡中安装应用。 或者，你也可以通过以下方法安装应用程序包，即单击左侧导航栏中的 `...` 溢出菜单，单击“ **更多应用** ”，然后单击“ **上载自定义应用** ”链接。 你还可以将应用程序清单或应用程序包导入到 App Studio 中，以在上传之前进行其他更新。
+如果你一直在使用 App Studio，则可以从 **清单编辑器** 的“**测试和分发**”选项卡中安装应用。 或者，你也可以通过以下方法安装应用程序包，即单击左侧导航栏中的 `...` 溢出菜单，单击“**更多应用**”，然后单击“**上载自定义应用**”链接。 你还可以将应用程序清单或应用程序包导入到 App Studio 中，以在上传之前进行其他更新。
 
 ## <a name="bots-in-teams-meetings"></a>Teams 会议的自动程序
 
