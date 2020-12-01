@@ -20,6 +20,17 @@
       href: build-your-first-app/build-bot.md
     - name: 创建邮件扩展
       href: build-your-first-app/build-messaging-extension.md
+- name: Microsoft Teams 工具包扩展
+  expanded: true
+  items:
+    - name: "适用于 Visual\_Studio\_Code 的 Teams 工具包扩展"
+      href: toolkit/visual-studio-code-overview.md
+    - name: "适用于 Visual\_Studio\_的 Teams 工具包扩展"
+      href: toolkit/visual-studio-overview.md
+    - name: "适用于 Visual\_Studio\_Code 的 Tabs SSO 与工具包扩展"
+      href: toolkit/visual-studio-code-tab-sso.md
+- name: 生产准备就绪的应用模板
+  href: samples/app-templates.md
 - name: 教程和代码示例
   items:
     - name: 使用 C# 创建应用
@@ -36,20 +47,12 @@
       href: samples/integrating-web-apps.md
     - name: 创建低代码应用
       href: samples/teams-low-code-solutions.md
-    - name: 生产准备就绪的应用模板
-      href: samples/app-templates.md
     - name: 生产准备就绪的排班连接器
       href: samples/shifts-wfm-connectors.md
     - name: 创建 Teams 的虚拟助手
       href: samples/virtual-assistant.md
     - name: 将 Power Virtual Agent Agents chatbot 与 Teams 相整合
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-    - name: Microsoft Teams 工具包扩展
-      items:
-        - name: "适用于 Visual\_Studio\_Code 的 Teams 工具包扩展"
-          href: toolkit/visual-studio-code-overview.md
-        - name: "适用于 Visual\_Studio\_的 Teams 工具包扩展"
-          href: toolkit/visual-studio-overview.md
 - name: 概念
   expanded: true
   items:
