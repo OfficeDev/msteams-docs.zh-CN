@@ -2,12 +2,12 @@
 title: 选项卡的身份验证流
 description: 描述选项卡中的身份验证流
 keywords: 团队身份验证流选项卡
-ms.openlocfilehash: de5e0312e4523c3adef211dc03b0349c205f92cb
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5ecd4d7d3a2658d17a8c6dea5d73cbd98eb2dfde
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346677"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552540"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft 团队身份验证流（针对选项卡）
 
@@ -17,7 +17,7 @@ ms.locfileid: "49346677"
 
 OAuth 2.0 是一种开放的标准，用于 Azure AD 和许多其他标识提供程序使用的身份验证和授权。 对 OAuth 2.0 的基本了解是在团队中使用身份验证的先决条件; [下面是一个很好的概述](https://aaronparecki.com/oauth-2-simplified/) ，比 [正式规范](https://oauth.net/2/)更易于遵循。 选项卡和 bot 的身份验证流略有不同，因为选项卡非常类似于网站，因此可以直接使用 OAuth 2.0;bot 不是，并且必须以不同的方式执行几项操作，但核心概念是相同的。
 
-用于演示使用使用 [OAuth 2.0 隐式授予类型](https://oauth.net/2/grant-types/implicit/)的节点的针对选项卡和 bot 的身份验证流的示例。
+有关使用 Node 和 [OAuth 2.0 隐式授予类型](https://oauth.net/2/grant-types/implicit/)的选项卡和 bot 的身份验证流示例，*请参阅*[启动身份验证流。](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow)
 
 ![选项卡身份验证序列图](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
@@ -35,7 +35,7 @@ OAuth 2.0 是一种开放的标准，用于 Azure AD 和许多其他标识提供
 
 ## <a name="treat-tab-context-as-hints"></a>将选项卡上下文视为提示
 
-尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证，无论您是将其作为 URL 参数获取到您的选项卡内容 URL，还是通过在 `microsoftTeams.getContext()` Microsoft 团队客户端 SDK 中调用该函数。 恶意参与者可以使用其自己的参数调用您的选项卡内容 URL，并且模拟 Microsoft 团队的网页可以在 iframe 中加载您的选项卡内容 URL 并将其自己的数据返回到 `getContext()` 函数中。 应在选项卡上下文中将与标识相关的信息简单地视为提示，并在使用之前对其进行验证。
+尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证，无论您是将其作为 URL 参数获取到您的选项卡内容 URL，还是通过在 `microsoftTeams.getContext()` Microsoft 团队客户端 SDK 中调用该函数。 恶意参与者可以使用其自己的参数调用您的选项卡内容 URL，并且模拟 Microsoft 团队的网页可以在 iframe 中加载您的选项卡内容 URL 并将其自己的数据返回到 `getContext()` 函数中。 应在选项卡上下文中将与标识相关的信息简单地视为提示，并在使用之前对其进行验证。 请参阅 [从弹出页面导航到 "授权" 页面](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)中的注释。
 
 ## <a name="samples"></a>示例
 

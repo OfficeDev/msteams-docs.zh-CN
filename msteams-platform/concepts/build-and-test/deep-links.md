@@ -2,12 +2,12 @@
 title: 创建深层链接
 description: 介绍深层链接以及如何在应用程序中使用它们
 keywords: 团队深层链接 deeplink
-ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: a3d5dac3fc83510ae47d91bd70390b9ca2860120
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796328"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552561"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>创建指向 Microsoft 团队中的内容和功能的深层链接
 
@@ -15,6 +15,22 @@ ms.locfileid: "48796328"
 
 * 将用户导航到某个应用程序的选项卡中的内容。 例如，您的应用程序可能有一个用于发送通知用户重要活动的邮件的 bot。 当用户点击通知时，深层链接将导航到 "" 选项卡，以便用户可以查看有关活动的更多详细信息。
 * 您的应用程序通过使用所需参数预填充深层链接来自动执行或简化某些用户任务，如创建聊天或安排会议。 这样，用户就无需手动输入信息。
+
+> [!NOTE]
+>
+> Deeplink 在导航到内容和信息之前先启动浏览器，如下所示：
+>
+> **选项卡**：  
+> ✔直接导航到 deeplink url。
+>
+> **Bot**：  
+> ✔ Deeplink 在卡片正文中-先在浏览器中打开。  
+> ✔ Deeplink 添加到 OpenURL 操作在自适应卡片中-直接导航到 Deeplink url。  
+> ✔超链接在卡片中 markdown 文本-先在浏览器中打开。  
+>
+> **聊天**：  
+> ✔短信超链接 markdown：直接导航到 deeplink url。  
+> 在一般聊天对话中粘贴✔链接-直接导航到 deeplink url。
 
 ## <a name="deep-linking-to-your-tab"></a>深度链接到你的选项卡
 
@@ -24,6 +40,9 @@ ms.locfileid: "48796328"
 
 > [!NOTE]
 > 这不同于 **复制指向选项卡** 菜单项的链接提供的链接，它只生成指向此选项卡的深层链接。
+
+>[!NOTE]
+> 目前，shareDeepLink 不能在移动平台上工作。
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>在选项卡中显示指向某个项目的深层链接
 
@@ -45,6 +64,10 @@ ms.locfileid: "48796328"
 此格式适用于您可以在机器人、连接器或邮件扩充卡中使用的深层链接：
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+
+> [!NOTE]
+> 如果 bot 发送包含 `TextBlock` 带 deep 链接的邮件，则当用户选择该链接时，将打开一个新的浏览器选项卡。 这在 Chrome 和 Microsoft 团队桌面应用程序中发生，这两种情况都在 Linux 上运行。
+> 如果 bot 将相同的深层链接 URL 发送到 `Action.OpenUrl` 中，则当用户单击该链接时，将在当前浏览器选项卡中打开 "团队" 选项卡。 不打开新的浏览器选项卡。
 
 查询参数为：
 

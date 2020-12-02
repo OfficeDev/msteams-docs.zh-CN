@@ -3,12 +3,12 @@ title: 打包应用程序
 description: 了解如何打包应用程序以在 Microsoft 团队中进行测试、上载和发布
 keywords: 团队应用程序打包
 ms.topic: conceptual
-ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997984"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552568"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>为 Microsoft 团队应用程序创建应用程序包
 
@@ -37,7 +37,7 @@ ms.locfileid: "48997984"
 
 Microsoft 团队需要两个图标来满足你的应用程序体验，才能在产品中使用。 图标必须包含在包中，并通过清单中的相对路径引用。 每个路径的最大长度为2048个字节，图标的格式为 .png。
 
-### <a name="color"></a>color
+### <a name="color"></a>颜色
 
 该 `color` 图标在 Microsoft 团队中 (在应用程序和选项卡库、bot、flyouts 等) 中。 此图标应为192x192 像素。 您的图标可以是任何颜色 (或颜色) ，但背景应为您的品牌化的强调文字颜色。 它还应在图标周围具有少量的填充，以适应图标的 bot 版本的六角裁剪。
 
@@ -45,12 +45,13 @@ Microsoft 团队需要两个图标来满足你的应用程序体验，才能在�
 
 `outline`在以下位置使用图标：用户已将其标记为 "收藏夹" 的应用栏和邮件扩展。 此图标必须为32x32 像素。 大纲图标必须仅包含白色和透明度 (不) 其他颜色。 图标可以是白色背景，也可以是透明背景。 大纲图标周围的图标周围不应有额外的填充，应尽可能紧密地裁剪，同时仍保持32x32 尺寸。 以下是几个很棒的示例：
 
-> [!TIP]
->  * 颜色必须是 RGB 中的 "白色"， (红色：255，绿色：255，蓝色： 255) 。
->  * 图标的所有其他部分都应是透明的。
->  * 对于传递，小图标必须为全透明，Alpha 通道为0，任何其他值都将失败。
-
 ![示例大纲图标](~/assets/images/icons/sample20x20s.png)
+
+[!创建透明图标的提示]
+
+* 颜色必须是 RGB 中的 "白色"， (红色：255，绿色：255，蓝色： 255) 。
+* 图标的所有其他部分都应是透明的。
+* 对于传递，小图标必须为完全透明，alpha 通道值为0，任何其他值都将失败。
 
 例如，假设您的公司是 Contoso。 您可以提交两个图标：
 

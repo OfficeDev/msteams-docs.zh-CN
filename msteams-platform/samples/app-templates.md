@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft 团队模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: 87361e8c6be068b932400d97379db8f182afd499
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358026"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552575"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft 团队的应用程序模板
 
@@ -166,6 +166,23 @@ CrowdSourcer 是一种 [Microsoft 团队 bot](../bots/what-are-bots.md) ，可�
 :::row:::
 :::column span="2":::
     ![电子处方应用程序的屏幕截图。 显示管理员如何管理使用应用程序的运行状况护理提供程序。](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="employee-training-9734"></a>员工培训 &#9734;
+
+员工培训是 Microsoft 团队应用程序，使组织者能够轻松发布、跟踪和促进组织的学习和培训事件。  在应用程序中，事件规划者可以向事件 registrants 发送提醒和通知，员工可以指示即将发生的事件中的兴趣，及时更新当前事件，并通过团队消息扩展与同事共享事件详细信息。
+
+[在 GitHub 上获取它](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
+
+:::row:::
+:::column span="2":::
+    **查看员工培训事件** ![员工培训选项卡图像](../assets/images/employee-training-discover-tab.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **创建员工培训事件** ![员工培训创建事件表单](../assets/images/employee-training-create-event.jpg)
 :::column-end:::
 :::row-end:::
 

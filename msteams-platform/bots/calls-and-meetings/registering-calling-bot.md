@@ -2,12 +2,12 @@
 title: 为 Microsoft 团队注册呼叫和会议机器人
 description: 了解如何为 Microsoft 团队注册新的音频/视频呼叫机器人
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5a832646d4fa622f746f88a3a969ae4ad3ce69a6
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346845"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552442"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>为 Microsoft 团队注册呼叫机器人
 
@@ -50,12 +50,12 @@ Microsoft Graph 公开了控制应用程序对资源的访问权限的精细权�
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|从应用发起一对一拨出通话（预览版）|允许应用在没有登录用户的情况下，向单个用户发起播出通话并将通话转接到组织目录中的用户。|是|
 |_Calls.InitiateGroupCall.All_|从应用发起组拨出通话（预览版）|允许应用在没有登录用户的情况下，向多个用户发起播出通话并向组织中的会议添加参与者。|是|
-|_Calls.JoinGroupCall.All_|作为应用加入组通话和会议（预览版）|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|是|
-|_Calls.JoinGroupCallasGuest.All_|作为来宾加入组通话和会议（预览版）|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|是|
+|_Calls.JoinGroupCall.All_|作为应用加入组通话和会议（预览版）|允许应用在没有登录用户的情况下，加入组织中的组通话和计划会议。 应用将加入到租户的会议中并获得目录用户特权。|是|
+|_Calls.JoinGroupCallasGuest.All_|作为来宾加入组通话和会议（预览版）|允许应用在没有登录用户的情况下，以匿名方式加入组织中的组通话和计划会议。 应用将作为来宾加入租户的会议。|是|
 |_AccessMedia。_ <sup>_请参阅下面_ 的</sup>|作为应用访问通话中的媒体数据流（预览版）|允许应用在没有登录用户的情况下，直接访问通话中的媒体数据流。|是|
 
 > [!IMPORTANT]
-> 您 **不能** 使用 Microsoft. Media API 来记录或以其他方式保留你的 bot 访问的呼叫或会议中的媒体内容。
+> 您 **不能** 使用媒体访问 API 在您的应用程序访问的呼叫或会议中或从该媒体 )  ( 内容派生的数据中保留媒体内容，而不先调用 api 以指示录制已开始，并从该 api 接收成功答复，而无需先调用 [ `updateRecordingStatus` api](/graph/api/call-updaterecordingstatus) 。 如果您的应用程序开始记录任何会议/呼叫，则它必须在调用 API 之前结束录制， `updateRecordingStatus` 以指示录制已结束。
 
 ### <a name="application-permissions-online-meetings"></a>应用程序权限：联机会议
 

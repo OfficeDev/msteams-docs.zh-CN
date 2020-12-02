@@ -2,12 +2,12 @@
 title: 选项卡的设计准则
 description: 介绍为内容和协作创建选项卡的准则
 keywords: 团队设计指南参考框架选项卡配置通道选项卡静态选项卡 "简单选项卡设计工作组" 选项卡
-ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931797"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552547"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
 
@@ -59,9 +59,9 @@ ms.locfileid: "48931797"
 
 > [!div class="checklist"]
 >
-> * **打开一个任务模块，如单个工作项或实体** 。 这将完全阻止聊天，并且是最佳选择，它是专门了解选项卡的聊天，而不是子实体或编辑体验。
->* **在 iframe 中打开伪对话框** 。 如果与屏蔽背景一起使用，我们建议使用较亮的颜色，而不是黑色。 `app-gray-10 at 30%`透明度工作良好。
->* **打开浏览器页面** 。
+> * **打开一个任务模块，如单个工作项或实体**。 这将完全阻止聊天，并且是最佳选择，它是专门了解选项卡的聊天，而不是子实体或编辑体验。
+>* **在 iframe 中打开伪对话框**。 如果与屏蔽背景一起使用，我们建议使用较亮的颜色，而不是黑色。 `app-gray-10 at 30%`透明度工作良好。
+>* **打开浏览器页面**。
 
 ### <a name="personality"></a>特征
 
@@ -172,7 +172,7 @@ ms.locfileid: "48931797"
 
 ### <a name="no-link-to-external-browser"></a>无指向外部浏览器的链接
 
-选项卡中的链接目标不应链接到外部浏览器，但应链接到包含在团队内的 div 元素，例如，在任务模块、选项卡等中。
+选项卡中的链接目标不应链接到外部浏览器，但应链接到包含在团队中的 div 元素。 例如，在任务模块、选项卡等中。
 
 ## <a name="notifications-for-tabs"></a>选项卡通知
 
@@ -180,9 +180,9 @@ ms.locfileid: "48931797"
 
 > [!div class="checklist"]
 >
-> * **使用应用程序 API 将更改通知用户** 。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。 *请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+> * **使用应用程序 API 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。 *请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
 
-> * **使用 bot** 。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
+> * **使用 bot**。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
 
 将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您 `@mention`  将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。
 
@@ -198,3 +198,4 @@ ms.locfileid: "48931797"
 * 在应用程序中，选项卡的导航级别不应超过三个。
 * 选项卡中的第二页和第三页应在主选项卡区域中的 L2/L3 视图中打开，这是通过痕迹导航导航的。
 * 应用程序中具有复杂编辑功能的选项卡应在多窗口中打开编辑器视图，而不是在选项卡中打开桌面和 web) 的 (的选项卡。
+* 若要改进用户体验，请在首次运行时向用户发送欢迎消息，并响应 " **hi**"、" **帮助**" 和 " **hello** " 命令，并提供个人 bot。 您可以参阅有关 [对话 bot](../../bots/what-are-bots#in-a-one-to-one-chat) 的文档以获取进一步帮助。

@@ -2,12 +2,12 @@
 title: 对选项卡的单一登录支持
 description: 描述 (SSO) 的单一登录
 keywords: 团队身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: 9691c4190697b3f53a9ce76921375101e762263a
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 08ad1ab55a06ccb887755322fbd572f745952d8e
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346789"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552449"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 支持选项卡
 
@@ -21,6 +21,12 @@ ms.locfileid: "49346789"
 > 适用于 iOS 的✔团队 (版本：2.0.18 和更高 _版本_)   
 >
 > 若要获取团队的最佳体验，请使用最新版本的 iOS 和 Android。
+
+>[!NOTE]
+> **快速入门**  
+>
+> 开始使用 tab SSO 的最简单途径是使用 Microsoft 团队工具包获取 Visual Studio Code。 [了解更多](../../../toolkit/visual-studio-code-tab-sso.md)
+
 
 ## <a name="how-sso-works-at-runtime"></a>运行时 SSO 的工作方式
 
@@ -92,7 +98,7 @@ SSO API 也可在嵌入 web 内容的 [任务模块](../../../task-modules-and-c
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (团队 web 应用程序) 
 12. 导航到 " **API 权限**"。 选择 "*添加权限*  >  " "*microsoft graph*  >  *委派权限*"，然后从 Microsoft graph API 添加以下权限：
     * 默认情况下， (启用 Read) 
-    * 电子邮件
+    * email
     * offline_access
     * OpenId
     * 个人资料
@@ -110,7 +116,7 @@ SSO API 也可在嵌入 web 内容的 [任务模块](../../../task-modules-and-c
     ✔ ID 令牌  
     ✔访问令牌  
     
-恭喜！ 您已完成应用注册先决条件，以继续使用您的选项卡 SSO 应用。     
+恭喜你！ 您已完成应用注册先决条件，以继续使用您的选项卡 SSO 应用。     
 
 > [!NOTE]
 >

@@ -5,12 +5,12 @@ description: 如何创建内容页
 keywords: 团队选项卡组频道配置静态
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: ad1e1a015526fd723670ea7eda735ebf88f85bf8
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796314"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552533"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>创建选项卡的内容页
 
@@ -71,12 +71,14 @@ ms.locfileid: "48796314"
 从 [清单架构](../../../resources/schema/manifest-schema.md)v1.1，您可以在团队中加载 web 内容的任何位置提供 [本机加载指示器](../../../resources/schema/manifest-schema.md#showloadingindicator) ，例如， [选项卡内容页](#integrate-your-code-with-teams)、 [配置页](configuration-page.md)、 [删除页](removal-page.md) 和 [选项卡中的任务模块](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)。
 
 > [!NOTE]
-> 如果  `"showLoadingIndicator : true`  在应用程序清单中指明，则所有选项卡配置、内容和删除页以及所有基于 iframe 的任务模块必须遵循以下强制协议：
+> 1. 本地加载指示器在移动设备上尚不受支持。
+> 2. 如果  `"showLoadingIndicator : true`  在应用程序清单中指明，则所有选项卡配置、内容和删除页以及所有基于 iframe 的任务模块必须遵循以下强制协议：
+
 
 1. 若要显示加载指示器，请将添加 `"showLoadingIndicator": true` 到你的清单中。 
 2. 请记住调用 `microsoftTeams.initialize();` 。
-3. **可选** 。 如果您已准备好打印到屏幕，并希望延迟加载应用程序内容的其余部分，则可以通过调用来手动隐藏加载指示器 `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **强制性** 。 最后，调用 `microsoftTeams.appInitialization.notifySuccess()` 以通知团队您的应用程序已成功加载。 如果适用，团队将隐藏加载指示器。 如果  `notifySuccess`  在30秒内未调用，则系统将假定您的应用程序超时，并将出现一个带有重试选项的错误屏幕。
+3. **可选**。 如果您已准备好打印到屏幕，并希望延迟加载应用程序内容的其余部分，则可以通过调用来手动隐藏加载指示器 `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **强制性**。 最后，调用 `microsoftTeams.appInitialization.notifySuccess()` 以通知团队您的应用程序已成功加载。 如果适用，团队将隐藏加载指示器。 如果  `notifySuccess`  在30秒内未调用，则系统将假定您的应用程序超时，并将出现一个带有重试选项的错误屏幕。
 5. 如果您的应用程序无法加载，则可以通过调用 `microsoftTeams.appInitialization.notifyFailure(reason);` 来让团队知道出现了错误。 随后将向用户显示一个错误屏幕：
 
 ```typescript

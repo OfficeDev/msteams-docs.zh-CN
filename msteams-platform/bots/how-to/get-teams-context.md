@@ -4,12 +4,12 @@ author: laujan
 description: 如何：获取 Microsoft 团队针对你的 bot 的特定上下文，包括对话名单、详细信息和频道列表。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 36ec992e009a7f45064021ae1235b159d100b9cd
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796342"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552470"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>获取团队针对你的 bot 的特定上下文
 
@@ -19,7 +19,7 @@ Bot 可以访问有关安装它的团队或聊天的其他上下文数据。 此
 
 ## <a name="fetching-the-roster-or-user-profile"></a>提取名单或用户配置文件
 
-你的 bot 可以查询成员列表和基本配置文件，包括团队用户 Id 和 Azure Active Directory (Azure AD) 信息（如 name 和 objectId）。 您可以使用此信息来关联用户标识（例如，检查用户是否通过 Azure AD 凭据登录到选项卡）是团队的成员。 下面的示例代码使用分页终结点检索名单。 虽然您仍可以使用非页面版本，但它在大型团队中不可靠，不应使用。 有关其他信息，请参阅 [本文](~/resources/team-chat-member-api-changes.md) 。
+你的 bot 可以查询成员列表和基本配置文件，包括团队用户 Id 和 Azure Active Directory (Azure AD) 信息（如 name 和 objectId）。 您可以使用此信息来关联用户标识（例如，检查用户是否通过 Azure AD 凭据登录到选项卡）是团队的成员。 下面的示例代码使用分页终结点检索名单。 对于 get 对话成员，最小或最大页面大小取决于实现。 小于50的页面大小被视为50，页面大小大于500，它们的上限为500。 虽然您仍可以使用非页面版本，但它在大型团队中不可靠，不应使用。 有关获取团队/聊天成员的详细信息，*请参阅*[对团队 Bot api 所做的更改](~/resources/team-chat-member-api-changes.md)。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

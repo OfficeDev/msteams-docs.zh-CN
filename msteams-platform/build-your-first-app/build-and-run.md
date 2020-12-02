@@ -5,12 +5,12 @@ description: 快速创建显示 "Hello，World！" 的 Microsoft 团队应用程
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 62c4bd950183ceb64fb30b528661cf84e9210d89
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: 2d357ef71bfc4c498b54d94f9d0717cf886df17d
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931772"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552477"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app"></a>生成并运行你的首个 Microsoft 团队应用
 
@@ -20,12 +20,16 @@ ms.locfileid: "48931772"
 
 使用 Visual Studio Code 中的 Microsoft 团队工具包设置您的首个应用程序项目。
 
-1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队** "， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **创建新的团队应用** "。
+1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队**"， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **创建新的团队应用**"。
 1. 出现提示时，使用 Microsoft 365 开发帐户登录。
-1. 在 " **添加功能** " 屏幕上，依次选择 **"** **下一步** "。
+1. 在 " **添加功能** " 屏幕上，依次选择 **"** **下一步**"。
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="显示如何使用 Visual Studio Code 团队工具包配置应用程序项目的屏幕截图。":::
 1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
 1. 仅检查 " **个人" 选项卡** 选项，然后选择屏幕底部的 " **完成** " 以配置项目。
+
+> [!NOTE]
+
+> 若要在工具包中创建新项目后安装应用程序包，请按 F5/run。 它将启动 Chrome 并安装你的程序包。 该包存储在应用程序 Studio 中，并使用安装 `appId` 。
 
 ## <a name="2-understand-important-app-project-components"></a>2. 了解重要的应用程序项目组件
 
