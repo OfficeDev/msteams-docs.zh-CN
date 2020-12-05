@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: 69dec453483ec9edab3ad07abf57044ac93c2dee
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: acd02c9765fbbf2e4e1d93d48cb1287936940dee
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997956"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576832"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -20,7 +20,10 @@ ms.locfileid: "48997956"
 
 | **Date** | **备注** | **更改的主题** |
 | -------- | --------- | ------------------ |
+|11/30/2020|新增：与选项卡的团队工具包和 Visual Studio 代码的身份平台集成|[单一登录身份验证与团队工具包和 Visual Studio Code for 选项卡](toolkit/visual-studio-code-tab-sso.md)|
+|11/16/2020|团队应用程序清单已更新到版本1。8|参考： Microsoft 团队的清单架构|[参考： Microsoft 团队的清单架构](resources/schema/manifest-schema.md)|
 |11/11/2020| 清单架构已更新到版本1。8| [参考： Microsoft 团队的清单架构](resources/schema/manifest-schema.md)|
+|11/10/2020|团队 bot 设计指南|[Bot 设计指南](bots/design/bots.md#bot-design-guidelines)|
 |9/30/2020|现在支持在移动设备上向 bot 发送和接收文件。|[通过你的 bot 发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|新建 "团队入门" 指南|[构建你的第一个团队应用概述](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|对会议团队应用 (发布预览的支持) |为团队[会议中](apps-in-teams-meetings/teams-apps-in-meetings.md)[的团队会议和应用创建应用程序](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
@@ -29,7 +32,7 @@ ms.locfileid: "48997956"
 |08/10/2020|开始使用 Visual Studio 工具包生成团队应用程序。|[使用 Microsoft 团队工具包和 Visual Studio Code 生成应用程序](toolkit/visual-studio-overview.md) |
 |08/06/2020|对选项卡的支持 SSO 身份验证|[开发 SSO Microsoft 团队选项卡](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 |  (公共预览版) 的关系图主动备机器人和消息|[在使用 Microsoft Graph 的团队中启用主动备机器人安装和主动消息传递](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
-| 07/22/2020 |移动设备功能更新。|[为 Microsoft "团队" 选项卡请求设备权限](~/tabs/how-to/native-device-permissions.md) |
+| 07/22/2020 |移动设备功能更新。|[为 Microsoft "团队" 选项卡请求设备权限](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|适用于 AppSource 提交的团队应用程序验证工具。|[团队应用程序验证工具](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|为工作组创建虚拟助理|[Microsoft 团队的虚拟助手](samples/virtual-assistant.md)|
 |07/14/2020|呈现本机加载指示器文档|[显示本机加载指示器](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)

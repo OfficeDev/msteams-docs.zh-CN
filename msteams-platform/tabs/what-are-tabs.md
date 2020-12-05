@@ -4,12 +4,12 @@ author: laujan
 description: 团队平台上的自定义选项卡概述
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7400d5d2c7ffb1d56ec6dec01261e08de597fcdd
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+ms.openlocfilehash: e89f07133f86b6c0700e6a71d8e53bf6d9831196
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366873"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576846"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>什么是 Microsoft 团队自定义选项卡？
 
@@ -56,3 +56,9 @@ ms.locfileid: "49366873"
 ## <a name="mobile-clients"></a>移动客户端
 
 如果选择在工作组移动客户端上显示 "频道/组" 选项卡，则 `setSettings()` 配置必须具有该属性的值 `websiteUrl` 。 为了确保获得最佳用户体验，在创建选项卡时，应遵循 [移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md) 。
+
+> [!div class="nextstepaction"]
+> [了解详细信息：请求设备权限](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[了解详细信息：照相机和图像库权限](/concepts/device-capabilities/mobile-camera-image-permissions.md)

@@ -2,12 +2,12 @@
 title: 选项卡的设计准则
 description: 介绍为内容和协作创建选项卡的准则
 keywords: 团队设计指南参考框架选项卡配置通道选项卡静态选项卡 "简单选项卡设计工作组" 选项卡
-ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552547"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576860"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
 
@@ -198,4 +198,4 @@ ms.locfileid: "49552547"
 * 在应用程序中，选项卡的导航级别不应超过三个。
 * 选项卡中的第二页和第三页应在主选项卡区域中的 L2/L3 视图中打开，这是通过痕迹导航导航的。
 * 应用程序中具有复杂编辑功能的选项卡应在多窗口中打开编辑器视图，而不是在选项卡中打开桌面和 web) 的 (的选项卡。
-* 若要改进用户体验，请在首次运行时向用户发送欢迎消息，并响应 " **hi**"、" **帮助**" 和 " **hello** " 命令，并提供个人 bot。 您可以参阅有关 [对话 bot](../../bots/what-are-bots#in-a-one-to-one-chat) 的文档以获取进一步帮助。
+* 若要改进用户体验，请在首次运行时向用户发送欢迎消息，并响应 " **hi**"、" **帮助**" 和 " **hello** " 命令，并提供个人 bot。 您可以参阅有关 [对话 bot](../../bots/what-are-bots.md#in-a-one-to-one-chat) 的文档以获取进一步帮助。
