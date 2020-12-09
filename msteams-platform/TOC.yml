@@ -134,6 +134,12 @@
           href: concepts/authentication/authentication.md
         - name: 配置标识提供程序
           href: concepts/authentication/configure-identity-provider.md
+    - name: 启用设备功能
+      items:
+        - name: 请求设备权限
+          href: concepts/device-capabilities/native-device-permissions.md
+        - name: 照相机和图片库
+          href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: 选项卡 - 嵌入式 Web 体验
   items:
     - name: 什么是自定义选项卡？
@@ -195,8 +201,6 @@
           href: tabs/how-to/developer-tools.md
         - name: 向 SharePoint 添加自定义选项卡
           href: tabs/how-to/tabs-in-sharepoint.md
-        - name: 请求设备权限
-          href: tabs/how-to/native-device-permissions.md
 - name: 机器人 - 基于对话的交互
   items:
     - name: Microsoft Teams 中的机器人是指什么？
