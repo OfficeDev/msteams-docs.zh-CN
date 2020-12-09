@@ -1,73 +1,178 @@
 ---
-title: 设计准则参考
-description: 介绍设计个人应用程序的指南
-keywords: 团队设计准则参考框架个人应用程序
-ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+title: 正在设计你的个人应用
+description: 了解如何设计工作组个人应用程序并获取 Microsoft 团队 UI 工具包。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 971071be9f345815f5461646d7970efdf05fd5c4
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455497"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604973"
 ---
-# <a name="personal-apps"></a><span data-ttu-id="e49ab-104">个人应用</span><span class="sxs-lookup"><span data-stu-id="e49ab-104">Personal apps</span></span>
+# <a name="designing-your-personal-app-for-microsoft-teams"></a><span data-ttu-id="38fcf-103">为 Microsoft 团队设计个人应用程序</span><span class="sxs-lookup"><span data-stu-id="38fcf-103">Designing your personal app for Microsoft Teams</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="e49ab-105">团队中支持对移动客户端上的选项卡的完全支持。</span><span class="sxs-lookup"><span data-stu-id="e49ab-105">Full support for tabs on mobile clients is supported in Teams.</span></span> <span data-ttu-id="e49ab-106">为移动平台创建选项卡时，应遵循[移动电话上的选项卡指南](../../tabs/design/tabs-mobile.md)。</span><span class="sxs-lookup"><span data-stu-id="e49ab-106">You should follow the [guidance for tabs on mobile](../../tabs/design/tabs-mobile.md) when creating tabs for mobile platforms.</span></span>
+<span data-ttu-id="38fcf-104">个人应用程序可以是 bot、专用工作区或两者。</span><span class="sxs-lookup"><span data-stu-id="38fcf-104">A personal app can be a bot, private workspace, or both.</span></span> <span data-ttu-id="38fcf-105">有时它的工作方式类似于创建或查看内容的位置，而另一些时候它为用户提供了在将应用程序配置为多个频道中的选项卡时的所有内容的鸟瞰视图。</span><span class="sxs-lookup"><span data-stu-id="38fcf-105">Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that’s theirs when the app has been configured as a tab in multiple channels.</span></span>
 
-<span data-ttu-id="e49ab-107">个人应用是具有个人作用域的团队应用程序。</span><span class="sxs-lookup"><span data-stu-id="e49ab-107">A personal app is a Teams application with a personal scope.</span></span>  <span data-ttu-id="e49ab-108">作为应用程序开发人员，您可以选择提供一个侧重于与单个用户的交互的应用程序版本。</span><span class="sxs-lookup"><span data-stu-id="e49ab-108">As an app developer, you have the option to provide a version of your app that focuses on interactions with a single user.</span></span> <span data-ttu-id="e49ab-109">它可以是一个[对话机器人](../../bots/what-are-bots.md)，可与用户或[个人选项卡](../../tabs/what-are-tabs.md)进行一对一对话，以提供内嵌的 web 体验。</span><span class="sxs-lookup"><span data-stu-id="e49ab-109">It can be a [conversational bot](../../bots/what-are-bots.md) to engage in one-to-one conversations with a user or a [personal tab](../../tabs/what-are-tabs.md) providing an embedded web experience.</span></span> <span data-ttu-id="e49ab-110">借助个人应用程序，用户可以在一个位置查看他们选择的内容。</span><span class="sxs-lookup"><span data-stu-id="e49ab-110">Personal apps enable users to view their select content in one place.</span></span> <span data-ttu-id="e49ab-111">在下面的屏幕截图中，Contoso 是个人应用浮出控件中的个人应用程序。</span><span class="sxs-lookup"><span data-stu-id="e49ab-111">In the following screenshot, Contoso is a personal app in the personal app flyout.</span></span>
+<span data-ttu-id="38fcf-106">若要指导您的应用程序设计，以下信息介绍并说明了用户如何添加、使用和管理团队中的个人应用程序。</span><span class="sxs-lookup"><span data-stu-id="38fcf-106">To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps in Teams.</span></span>
 
-![应用程序溢出菜单的图像](~/assets/images/Personal-apps-App-flyout.png)
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="38fcf-107">Microsoft 团队 UI 工具包</span><span class="sxs-lookup"><span data-stu-id="38fcf-107">Microsoft Teams UI Kit</span></span>
 
----
+<span data-ttu-id="38fcf-108">您可以在 Microsoft 团队 UI 工具包中找到全面的个人应用程序设计指南，包括可在需要时获取和修改的元素。</span><span class="sxs-lookup"><span data-stu-id="38fcf-108">You can find comprehensive personal app design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span> <span data-ttu-id="38fcf-109">UI 工具包还包含此处未介绍的辅助功能和响应大小等基本主题。</span><span class="sxs-lookup"><span data-stu-id="38fcf-109">The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.</span></span>
 
-## <a name="guidelines"></a><span data-ttu-id="e49ab-113">准则</span><span class="sxs-lookup"><span data-stu-id="e49ab-113">Guidelines</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="38fcf-110"> (Figma) 获取 Microsoft 团队 UI 工具包 </span><span class="sxs-lookup"><span data-stu-id="38fcf-110">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-<span data-ttu-id="e49ab-114">个人应用程序通常包含以下选项卡：</span><span class="sxs-lookup"><span data-stu-id="e49ab-114">A personal app typically contains the following tabs:</span></span>
+## <a name="add-a-personal-app"></a><span data-ttu-id="38fcf-111">添加个人应用程序</span><span class="sxs-lookup"><span data-stu-id="38fcf-111">Add a personal app</span></span>
 
-### <a name="your-tab"></a><span data-ttu-id="e49ab-115">您的选项卡</span><span class="sxs-lookup"><span data-stu-id="e49ab-115">Your tab</span></span>
+<span data-ttu-id="38fcf-112">您可以从团队存储 (AppSource ") " 或 "应用程序" 浮出控件中添加个人应用程序，方法是在团队左侧选择 " **更多** " 图标 (如以下示例) 所示。</span><span class="sxs-lookup"><span data-stu-id="38fcf-112">You can add a personal app from the Teams store (AppSource) or the app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).</span></span>
 
-<span data-ttu-id="e49ab-116">你的用户将看到其所有内容。</span><span class="sxs-lookup"><span data-stu-id="e49ab-116">This is where your users will see all their stuff.</span></span> <span data-ttu-id="e49ab-117">其个人空间。</span><span class="sxs-lookup"><span data-stu-id="e49ab-117">It's their personal space.</span></span> <span data-ttu-id="e49ab-118">该选项卡可作为列表、网格、列或单个画布进行排列。。最适用于您的应用程序的任何功能。</span><span class="sxs-lookup"><span data-stu-id="e49ab-118">The tab can be arranged as a list, a grid, columns, or a single canvas...whatever works best for your application.</span></span> <span data-ttu-id="e49ab-119">有关设计有效选项卡的其他信息，请参阅：[选项卡设计](../../tabs/design/tabs.md)。</span><span class="sxs-lookup"><span data-stu-id="e49ab-119">For additional information on designing effective tabs see: [Tabs design](../../tabs/design/tabs.md).</span></span>
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="示例演示如何从应用浮出控件添加个人应用程序。" border="false":::
 
-<span data-ttu-id="e49ab-120">由于此选项卡可以显示来自多个通道的项目，因此每个项目都应显示其自己的团队、频道和选项卡，以便用户可以轻松地查看它的来源。</span><span class="sxs-lookup"><span data-stu-id="e49ab-120">Since this tab can show items from multiple channels, each item should display its own team, channel, and tab so the user can easily see where it originated.</span></span>
+## <a name="use-a-personal-app-private-workspace"></a><span data-ttu-id="38fcf-114">使用个人应用 (专用工作区) </span><span class="sxs-lookup"><span data-stu-id="38fcf-114">Use a personal app (private workspace)</span></span>
 
-!["个人任务" 选项卡](~/assets/images/Personal-apps-MY-tab.png)
+<span data-ttu-id="38fcf-115">使用专用工作区，您可以查看在中心位置有意义的应用程序内容，而无需离开团队。</span><span class="sxs-lookup"><span data-stu-id="38fcf-115">With a private workspace, you can view app content that's meaningful to you in a central location without leaving Teams.</span></span>
 
-### <a name="recent"></a><span data-ttu-id="e49ab-122">最近更新</span><span class="sxs-lookup"><span data-stu-id="e49ab-122">Recent</span></span>
+<span data-ttu-id="38fcf-116"> (实现注意：专用工作区基于 " [*个人" 选项卡*](../../build-your-first-app/build-personal-tab.md) 功能。 ) </span><span class="sxs-lookup"><span data-stu-id="38fcf-116">(Implementation note: The private workspace is based on the [*personal tab*](../../build-your-first-app/build-personal-tab.md) capability.)</span></span>
 
-<span data-ttu-id="e49ab-123">"**最近**" 选项卡允许某人浏览最近在您的应用程序中查看过的所有内容。</span><span class="sxs-lookup"><span data-stu-id="e49ab-123">The **Recent** tab lets someone browse everything they've recently viewed in your app.</span></span> <span data-ttu-id="e49ab-124">它按时间顺序列出（从最高到最新）。</span><span class="sxs-lookup"><span data-stu-id="e49ab-124">It's listed in chronological order (from most to least recent).</span></span> <span data-ttu-id="e49ab-125">单击此列表中的某个项目会将该用户导航到该项目的频道和选项卡。</span><span class="sxs-lookup"><span data-stu-id="e49ab-125">Clicking on an item in this list will navigate the user to that item's channel and tab.</span></span>
+### <a name="anatomy-personal-app-private-workspace"></a><span data-ttu-id="38fcf-117">剖析：个人应用程序 (专用工作区) </span><span class="sxs-lookup"><span data-stu-id="38fcf-117">Anatomy: Personal app (private workspace)</span></span>
 
-![最近选项卡](~/assets/images/Personal-apps-Recent-tab.png)
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="示例显示了个人选项卡的组件解析。" border="false":::
 
-### <a name="all"></a><span data-ttu-id="e49ab-127">所有</span><span class="sxs-lookup"><span data-stu-id="e49ab-127">All</span></span>
+|<span data-ttu-id="38fcf-119">计数器</span><span class="sxs-lookup"><span data-stu-id="38fcf-119">Counter</span></span>|<span data-ttu-id="38fcf-120">描述</span><span class="sxs-lookup"><span data-stu-id="38fcf-120">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="38fcf-121">A</span><span class="sxs-lookup"><span data-stu-id="38fcf-121">A</span></span>|<span data-ttu-id="38fcf-122">**应用程序归属**：您的应用程序徽标和名称。</span><span class="sxs-lookup"><span data-stu-id="38fcf-122">**App attribution**: Your app logo and name.</span></span>|
+|<span data-ttu-id="38fcf-123">B</span><span class="sxs-lookup"><span data-stu-id="38fcf-123">B</span></span>|<span data-ttu-id="38fcf-124">**选项卡**：提供你的个人应用的导航。</span><span class="sxs-lookup"><span data-stu-id="38fcf-124">**Tabs**: Provides navigation for your personal app.</span></span> <span data-ttu-id="38fcf-125">例如，包括 " **关于** " 或 " **帮助** " 选项卡。</span><span class="sxs-lookup"><span data-stu-id="38fcf-125">For example, include an **About** or **Help** tab.</span></span>|
+|<span data-ttu-id="38fcf-126">C</span><span class="sxs-lookup"><span data-stu-id="38fcf-126">C</span></span>|<span data-ttu-id="38fcf-127">**弹出视图**：将您的应用程序内容从父窗口推送到独立子窗口。</span><span class="sxs-lookup"><span data-stu-id="38fcf-127">**Popout view**: Pushes your app content from a parent window to a standalone child window.</span></span>|
+|<span data-ttu-id="38fcf-128">D</span><span class="sxs-lookup"><span data-stu-id="38fcf-128">D</span></span>|<span data-ttu-id="38fcf-129">"**更多" 菜单**：包含其他应用程序信息和选项。</span><span class="sxs-lookup"><span data-stu-id="38fcf-129">**More menu**: Includes additional app information and options.</span></span> <span data-ttu-id="38fcf-130"> (您也可以将 **设置设置** 为选项卡。 ) </span><span class="sxs-lookup"><span data-stu-id="38fcf-130">(You could alternatively make **Settings** a tab.)</span></span>|
 
-<span data-ttu-id="e49ab-128">这是个人组织中的所有选项卡的列表（仍有权访问它们）。</span><span class="sxs-lookup"><span data-stu-id="e49ab-128">This is a list of all your tabs in the person's organization (the ones they have access to, anyway).</span></span> <span data-ttu-id="e49ab-129">换句话说，它在使用应用程序的任何位置显示它们。</span><span class="sxs-lookup"><span data-stu-id="e49ab-129">In other words, it shows them everywhere the app is being used.</span></span> <span data-ttu-id="e49ab-130">与**最近**的选项卡一样，选择列表中的内容会将用户直接带入相关频道和选项卡。</span><span class="sxs-lookup"><span data-stu-id="e49ab-130">As with the **Recent** tab, selecting something in the list will bring the user straight to the relevant channel and tab.</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="示例显示了个人选项卡的结构剖析。" border="false":::
 
-### <a name="bot"></a><span data-ttu-id="e49ab-131">Bot</span><span class="sxs-lookup"><span data-stu-id="e49ab-131">Bot</span></span>
+|<span data-ttu-id="38fcf-132">计数器</span><span class="sxs-lookup"><span data-stu-id="38fcf-132">Counter</span></span>|<span data-ttu-id="38fcf-133">描述</span><span class="sxs-lookup"><span data-stu-id="38fcf-133">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="38fcf-134">A</span><span class="sxs-lookup"><span data-stu-id="38fcf-134">A</span></span>|<span data-ttu-id="38fcf-135">**选项卡**：提供你的个人应用的导航。</span><span class="sxs-lookup"><span data-stu-id="38fcf-135">**Tabs**: Provides navigation for your personal app.</span></span>|
+|<span data-ttu-id="38fcf-136">1 </span><span class="sxs-lookup"><span data-stu-id="38fcf-136">1</span></span>|<span data-ttu-id="38fcf-137">**iframe**：显示应用内容。</span><span class="sxs-lookup"><span data-stu-id="38fcf-137">**iframe**: Displays your app content.</span></span>|
 
-<span data-ttu-id="e49ab-132">Bot 不是必需的，但它是直接和私下与用户进行通信的绝佳方式。</span><span class="sxs-lookup"><span data-stu-id="e49ab-132">A bot isn't required, but it's a great way to communicate directly and privately with your users.</span></span> <span data-ttu-id="e49ab-133">通知是个人应用程序中最重要的功能之一，以及通知与直接通信是否更好的方法？</span><span class="sxs-lookup"><span data-stu-id="e49ab-133">Notification is one of the most important functions of a personal app, and what better way to notify than with direct communication?</span></span>
+### <a name="designing-with-ui-templates"></a><span data-ttu-id="38fcf-138">使用 UI 模板进行设计</span><span class="sxs-lookup"><span data-stu-id="38fcf-138">Designing with UI templates</span></span>
 
-<span data-ttu-id="e49ab-134">Bot 以卡片形式传递邮件，这可以提供特定信息（如通知新内容可用）或广泛的更新（如日常待办情况列表）。</span><span class="sxs-lookup"><span data-stu-id="e49ab-134">Bots deliver messages in the form of cards, which can provide specific information (like an alert that new content is available) or broad updates (like a daily to-do list).</span></span> <span data-ttu-id="e49ab-135">有关设计有效的 bot 的其他信息，请参阅： [Bot 设计](../../bots/design/bots.md)。</span><span class="sxs-lookup"><span data-stu-id="e49ab-135">For additional information on designing effective bots see: [Bot design](../../bots/design/bots.md).</span></span>
+<span data-ttu-id="38fcf-139">使用以下团队 UI 模板之一来帮助设计您的个人选项卡：</span><span class="sxs-lookup"><span data-stu-id="38fcf-139">Use one of the following Teams UI templates to help design your personal tab:</span></span>
 
-![Bot 问候语](~/assets/images/Personal-apps-Bot.png)
+* <span data-ttu-id="38fcf-140">[列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可浏览的格式显示相关项目，并允许用户对整个列表或单个项目执行操作。</span><span class="sxs-lookup"><span data-stu-id="38fcf-140">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
+* <span data-ttu-id="38fcf-141">[任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为 "看板母板" 或 "泳道"）是用于跟踪工作项或票证状态的卡片的集合。</span><span class="sxs-lookup"><span data-stu-id="38fcf-141">[Task board](../../concepts/design/design-teams-app-ui-templates.md#task-board): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.</span></span>
+* <span data-ttu-id="38fcf-142">[仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard)：仪表板是一个包含多个卡片的画布，可提供数据或内容的概述。</span><span class="sxs-lookup"><span data-stu-id="38fcf-142">[Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.</span></span>
+* <span data-ttu-id="38fcf-143">[表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单以结构化方式收集、验证和提交用户输入。</span><span class="sxs-lookup"><span data-stu-id="38fcf-143">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
+* <span data-ttu-id="38fcf-144">[空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。</span><span class="sxs-lookup"><span data-stu-id="38fcf-144">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
+* <span data-ttu-id="38fcf-145">[左侧](../../concepts/design/design-teams-app-ui-templates.md#left-nav)导航：如果您的选项卡需要一些导航，则左侧导航模板可有所帮助。</span><span class="sxs-lookup"><span data-stu-id="38fcf-145">[Left nav](../../concepts/design/design-teams-app-ui-templates.md#left-nav): The left nav template can help if your tab requires some navigation.</span></span> <span data-ttu-id="38fcf-146">通常情况下，应保持最小的选项卡导航。</span><span class="sxs-lookup"><span data-stu-id="38fcf-146">In general, you should keep tab navigation to a minimum.</span></span>
 
-### <a name="help-and-settings"></a><span data-ttu-id="e49ab-137">帮助和设置</span><span class="sxs-lookup"><span data-stu-id="e49ab-137">Help and Settings</span></span>
+## <a name="use-a-personal-app-bot"></a><span data-ttu-id="38fcf-147">使用个人应用 (bot) </span><span class="sxs-lookup"><span data-stu-id="38fcf-147">Use a personal app (bot)</span></span>
 
-<span data-ttu-id="e49ab-138">帮助内容使用户能够发现您的应用程序的细微差别。</span><span class="sxs-lookup"><span data-stu-id="e49ab-138">Help content enables users to discover the nuances of your app.</span></span> <span data-ttu-id="e49ab-139">添加 "**设置**" 选项卡，让他们可以进一步自定义它。</span><span class="sxs-lookup"><span data-stu-id="e49ab-139">Add a **Settings** tab to give them the ability to further customize it.</span></span>
+<span data-ttu-id="38fcf-148">个人应用可以包括用于一对一对话和私人通知 (的 bot，例如，当同事将注释发布到美工板上时) 。</span><span class="sxs-lookup"><span data-stu-id="38fcf-148">Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on your artboard).</span></span> <span data-ttu-id="38fcf-149">可以在指定的选项卡中使用 bot。</span><span class="sxs-lookup"><span data-stu-id="38fcf-149">The bot is available in a tab you specify.</span></span>
 
-### <a name="about"></a><span data-ttu-id="e49ab-140">关于</span><span class="sxs-lookup"><span data-stu-id="e49ab-140">About</span></span>
+### <a name="anatomy-personal-app-bot"></a><span data-ttu-id="38fcf-150">剖析：个人应用程序 (bot) </span><span class="sxs-lookup"><span data-stu-id="38fcf-150">Anatomy: Personal app (bot)</span></span>
 
-<span data-ttu-id="e49ab-141">包括 "**关于**" 选项卡，以提供版本号码、功能、隐私和权限链接等信息。</span><span class="sxs-lookup"><span data-stu-id="e49ab-141">Include an **About** tab to provide information like version number, capabilities, privacy, and permissions links.</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="示例显示个人 bot 组件解析。" border="false":::
 
-## <a name="best-practices"></a><span data-ttu-id="e49ab-142">最佳做法</span><span class="sxs-lookup"><span data-stu-id="e49ab-142">Best practices</span></span>
+|<span data-ttu-id="38fcf-152">计数器</span><span class="sxs-lookup"><span data-stu-id="38fcf-152">Counter</span></span>|<span data-ttu-id="38fcf-153">描述</span><span class="sxs-lookup"><span data-stu-id="38fcf-153">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="38fcf-154">A</span><span class="sxs-lookup"><span data-stu-id="38fcf-154">A</span></span>|<span data-ttu-id="38fcf-155">**机器人选项卡**：例如，包含一个 " **聊天** " 选项卡来访问机器人对话和通知。</span><span class="sxs-lookup"><span data-stu-id="38fcf-155">**Bot tab**: For example, include a **Chat** tab to access bot conversations and notifications.</span></span>|
+|<span data-ttu-id="38fcf-156">B</span><span class="sxs-lookup"><span data-stu-id="38fcf-156">B</span></span>|<span data-ttu-id="38fcf-157">**Bot 邮件**： bot 通常以卡片形式发送邮件和通知 (例如，自适应卡片) 。</span><span class="sxs-lookup"><span data-stu-id="38fcf-157">**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).</span></span>|
+|<span data-ttu-id="38fcf-158">C</span><span class="sxs-lookup"><span data-stu-id="38fcf-158">C</span></span>|<span data-ttu-id="38fcf-159">**"撰写" 框**：用于将邮件发送到 bot 的输入字段。</span><span class="sxs-lookup"><span data-stu-id="38fcf-159">**Compose box**: Input field for sending messages to the bot.</span></span>|
 
-### <a name="communicate-directly-with-your-users"></a><span data-ttu-id="e49ab-143">直接与您的用户通信</span><span class="sxs-lookup"><span data-stu-id="e49ab-143">Communicate directly with your users</span></span>
+## <a name="best-practices"></a><span data-ttu-id="38fcf-160">最佳做法</span><span class="sxs-lookup"><span data-stu-id="38fcf-160">Best practices</span></span>
 
-<span data-ttu-id="e49ab-144">使用 bot 向用户通知更改和新功能。</span><span class="sxs-lookup"><span data-stu-id="e49ab-144">Use a bot to notify users of changes and new features.</span></span>
+### <a name="tab-priority"></a><span data-ttu-id="38fcf-161">选项卡优先级</span><span class="sxs-lookup"><span data-stu-id="38fcf-161">Tab priority</span></span>
 
-### <a name="customize-your-tabs"></a><span data-ttu-id="e49ab-145">自定义选项卡 .。。</span><span class="sxs-lookup"><span data-stu-id="e49ab-145">Customize your tabs...</span></span>
+#### <a name="do-show-the-most-relevant-content-in-the-first-tab"></a><span data-ttu-id="38fcf-162">操作：在第一个选项卡中显示最相关的内容</span><span class="sxs-lookup"><span data-stu-id="38fcf-162">Do: Show the most relevant content in the first tab</span></span>
 
-<span data-ttu-id="e49ab-146">你可以随意添加其他选项卡，以帮助你的用户完成特定任务。</span><span class="sxs-lookup"><span data-stu-id="e49ab-146">Feel free to add other tabs that will help your users accomplish specific tasks.</span></span>
+<span data-ttu-id="38fcf-163">通过快速响应调整大小，右侧的选项卡可能会被截断或无法查看。</span><span class="sxs-lookup"><span data-stu-id="38fcf-163">With responsive sizing, tabs on the right may become truncated or out of view.</span></span>
 
-### <a name="and-make-them-relevant-to-every-user"></a><span data-ttu-id="e49ab-147">...并使其与每个用户相关</span><span class="sxs-lookup"><span data-stu-id="e49ab-147">...and make them relevant to every user</span></span>
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
 
-<span data-ttu-id="e49ab-148">您在应用程序清单中声明的每个选项卡将对所有用户可见。</span><span class="sxs-lookup"><span data-stu-id="e49ab-148">Every tab you declare in your app manifest will be visible to all users.</span></span> <span data-ttu-id="e49ab-149">例如，如果您的个人应用程序是由经理和员工使用的费用报告工具，则 "**审批**" 选项卡应提供对这两个角色都有意义的内容。</span><span class="sxs-lookup"><span data-stu-id="e49ab-149">For example, if your personal app is an expense reporting tool that is used by both managers and employees, an **Approval** tab should provide content that is meaningful to both roles.</span></span>
+#### <a name="dont-lead-with-secondary-content-or-metadata"></a><span data-ttu-id="38fcf-165">不：领导辅助内容或元数据</span><span class="sxs-lookup"><span data-stu-id="38fcf-165">Don’t: Lead with secondary content or metadata</span></span>
+
+<span data-ttu-id="38fcf-166">与标准 web 应用一样，选项卡导航按照有助于了解应用程序主要功能的顺序进行。</span><span class="sxs-lookup"><span data-stu-id="38fcf-166">Like a standard web app, tab navigation should progress in an order that helps make sense of your app’s primary features.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+### <a name="tab-hierarchy"></a><span data-ttu-id="38fcf-168">选项卡层次结构</span><span class="sxs-lookup"><span data-stu-id="38fcf-168">Tab hierarchy</span></span>
+
+#### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a><span data-ttu-id="38fcf-169">操作：选项卡应具有相同的层次结构，并表示关键应用程序页面</span><span class="sxs-lookup"><span data-stu-id="38fcf-169">Do: Tabs should be of equal hierarchy and represent key app pages</span></span>
+
+<span data-ttu-id="38fcf-170">你的选项卡应对你的应用程序的主要功能和内容进行分类。</span><span class="sxs-lookup"><span data-stu-id="38fcf-170">Your tabs should categorize your app’s primary features and content.</span></span> <span data-ttu-id="38fcf-171">使用快速响应大小，右侧的内容可能会被截断或无法查看。</span><span class="sxs-lookup"><span data-stu-id="38fcf-171">With responsive sizing, content on the right may become truncated or out of view.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+#### <a name="dont-include-different-levels-of-hierarchy"></a><span data-ttu-id="38fcf-173">不：包含不同级别的层次结构</span><span class="sxs-lookup"><span data-stu-id="38fcf-173">Don't: Include different levels of hierarchy</span></span>
+
+<span data-ttu-id="38fcf-174">您的内容应以有助于用户理解的逻辑顺序进行。</span><span class="sxs-lookup"><span data-stu-id="38fcf-174">Your content should progress in a logical order that helps users make sense of it.</span></span> <span data-ttu-id="38fcf-175">如果您有两个密切相关的选项卡，请考虑将它们组合成一个选项卡。</span><span class="sxs-lookup"><span data-stu-id="38fcf-175">If you have two tabs that are closely related, consider combining them into one tab.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+### <a name="first-run-experience"></a><span data-ttu-id="38fcf-177">首次运行体验</span><span class="sxs-lookup"><span data-stu-id="38fcf-177">First-run experience</span></span>
+
+#### <a name="do-include-a-first-run-experience"></a><span data-ttu-id="38fcf-178">操作：包括首次运行体验</span><span class="sxs-lookup"><span data-stu-id="38fcf-178">Do: Include a first-run experience</span></span>
+
+<span data-ttu-id="38fcf-179">首次使用个人应用时，应该至少有一个欢迎屏幕。</span><span class="sxs-lookup"><span data-stu-id="38fcf-179">There should be at least a welcome screen the first time you use a personal app.</span></span> <span data-ttu-id="38fcf-180">对于 bot，说明你的 bot 可以执行的操作并提供快速操作，如登录按钮。</span><span class="sxs-lookup"><span data-stu-id="38fcf-180">For bots, describe what your bot can do and provide quick actions, such as a sign-in button.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+#### <a name="dont-start-with-a-blank-screen"></a><span data-ttu-id="38fcf-183">不：从空白屏幕开始</span><span class="sxs-lookup"><span data-stu-id="38fcf-183">Don't: Start with a blank screen</span></span>
+
+<span data-ttu-id="38fcf-184">如果在首次运行应用程序时没有显示任何内容，则可能会对用户感到困惑。</span><span class="sxs-lookup"><span data-stu-id="38fcf-184">Users might be confused if nothing displays the first time they run your app.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+### <a name="personalized-content"></a><span data-ttu-id="38fcf-186">个性化内容</span><span class="sxs-lookup"><span data-stu-id="38fcf-186">Personalized content</span></span>
+
+#### <a name="do-aggregate-app-content-relevant-to-a-user"></a><span data-ttu-id="38fcf-187">操作：与用户相关的聚合应用内容</span><span class="sxs-lookup"><span data-stu-id="38fcf-187">Do: Aggregate app content relevant to a user</span></span>
+
+<span data-ttu-id="38fcf-188">无论是个人选项卡还是 bot，仅显示与您的应用程序中的用户活动相关的内容。</span><span class="sxs-lookup"><span data-stu-id="38fcf-188">Whether it's a personal tab or bot, display content related to only a user's activity in your app.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+#### <a name="dont-show-unrelated-or-overly-broad-content"></a><span data-ttu-id="38fcf-191">不：显示不相关或过于广泛的内容</span><span class="sxs-lookup"><span data-stu-id="38fcf-191">Don’t: Show unrelated or overly broad content</span></span>
+
+<span data-ttu-id="38fcf-192">在个人上下文中，不为不属于用户的团队显示内容。</span><span class="sxs-lookup"><span data-stu-id="38fcf-192">In personal contexts, don’t display content for teams a user isn't part of.</span></span> <span data-ttu-id="38fcf-193">个人 bot 内容应侧重于个人（而不是组）。</span><span class="sxs-lookup"><span data-stu-id="38fcf-193">Personal bot content should focus on the individual—not a group.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+### <a name="complex-app-features"></a><span data-ttu-id="38fcf-196">复杂的应用程序功能</span><span class="sxs-lookup"><span data-stu-id="38fcf-196">Complex app features</span></span>
+
+#### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a><span data-ttu-id="38fcf-197">Do：允许用户在浏览器中访问复杂功能</span><span class="sxs-lookup"><span data-stu-id="38fcf-197">Do: Allow users to access complex features in a browser</span></span>
+
+<span data-ttu-id="38fcf-198">您的应用程序应重点关注团队中的核心任务，但您仍可以在浏览器中查看完整的独立应用程序。</span><span class="sxs-lookup"><span data-stu-id="38fcf-198">Your app should focus on core tasks in Teams, but you can still view the full, standalone app in a browser.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+#### <a name="dont-include-your-entire-app"></a><span data-ttu-id="38fcf-200">请勿：包含整个应用程序</span><span class="sxs-lookup"><span data-stu-id="38fcf-200">Don’t: Include your entire app</span></span>
+
+<span data-ttu-id="38fcf-201">除非您专为工作组创建应用程序，否则在协作工具中可能没有意义的功能。</span><span class="sxs-lookup"><span data-stu-id="38fcf-201">Unless you created your app specifically for Teams, you probably have features that don’t make sense in a collaboration tool.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="示例展示了个人应用程序最佳实践。" border="false":::
+
+## <a name="manage-a-personal-tab"></a><span data-ttu-id="38fcf-203">管理个人选项卡</span><span class="sxs-lookup"><span data-stu-id="38fcf-203">Manage a personal tab</span></span>
+
+<span data-ttu-id="38fcf-204">在团队的左侧，用户可以右键单击个人应用以固定、删除和配置其他应用程序选项。</span><span class="sxs-lookup"><span data-stu-id="38fcf-204">On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options.</span></span>
+
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="示例显示用于管理个人应用程序的选项。" border="false":::
+
+## <a name="learn-more"></a><span data-ttu-id="38fcf-206">了解更多</span><span class="sxs-lookup"><span data-stu-id="38fcf-206">Learn more</span></span>
+
+<span data-ttu-id="38fcf-207">根据个人应用程序的范围，这些其他设计准则可能会有所帮助：</span><span class="sxs-lookup"><span data-stu-id="38fcf-207">These other design guidelines may help depending on the scope of your personal app:</span></span>
+
+* [<span data-ttu-id="38fcf-208">设计选项卡</span><span class="sxs-lookup"><span data-stu-id="38fcf-208">Designing your tab</span></span>](../../tabs/design/tabs.md)
+* [<span data-ttu-id="38fcf-209">设计机器人</span><span class="sxs-lookup"><span data-stu-id="38fcf-209">Designing you bot</span></span>](../../bots/design/bots.md)
+
+## <a name="validate-your-design"></a><span data-ttu-id="38fcf-210">验证设计</span><span class="sxs-lookup"><span data-stu-id="38fcf-210">Validate your design</span></span>
+
+<span data-ttu-id="38fcf-211">如果计划将应用程序发布到 AppSource，则应了解通常会在提交期间导致应用程序失败的设计问题。</span><span class="sxs-lookup"><span data-stu-id="38fcf-211">If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="38fcf-212">检查设计验证准则</span><span class="sxs-lookup"><span data-stu-id="38fcf-212">Check design validation guidelines</span></span>](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

@@ -1,183 +1,323 @@
 ---
-title: Bot 设计指南
-description: 介绍创建 bot 的指南
-keywords: 团队设计指南参考框架 bot 对话
-ms.openlocfilehash: 0691c483d12e537772b74abc015d71e1704f88c8
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+title: 正在设计你的 bot
+description: 了解如何设计团队 bot 并获取 Microsoft 团队 UI 工具包。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: d1a7470f4986de22ecca7071823b620cb0234abb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992636"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605390"
 ---
-# <a name="start-talking-with-bots"></a><span data-ttu-id="b7398-104">开始与 bot 对话</span><span class="sxs-lookup"><span data-stu-id="b7398-104">Start talking with bots</span></span>
+# <a name="designing-your-microsoft-teams-bot"></a><span data-ttu-id="1c2a8-103">正在设计你的 Microsoft 团队 bot</span><span class="sxs-lookup"><span data-stu-id="1c2a8-103">Designing your Microsoft Teams bot</span></span>
 
-<span data-ttu-id="b7398-105">Bot 是执行一组较窄或特定任务的会话式应用程序。</span><span class="sxs-lookup"><span data-stu-id="b7398-105">Bots are conversational apps that perform a narrow or specific set of tasks.</span></span> <span data-ttu-id="b7398-106">它们为您提供了与用户进行通信的机会，回答了他们的问题，并主动通知他们发生了哪些更改。</span><span class="sxs-lookup"><span data-stu-id="b7398-106">They give you an opportunity to communicate with users, respond to their questions, and proactively notify them about changes.</span></span> <span data-ttu-id="b7398-107">这是一种很好的方法。</span><span class="sxs-lookup"><span data-stu-id="b7398-107">They’re a great way to reach out.</span></span>
+<span data-ttu-id="1c2a8-104">Bot 是执行一组特定任务的会话中应用程序。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-104">Bots are conversational apps that perform a specific set of tasks.</span></span> <span data-ttu-id="1c2a8-105">根据 <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot 框架</a>，bot 与用户进行通信，响应他们的问题，并主动通知他们发生更改和其他事件。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-105">Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events.</span></span> <span data-ttu-id="1c2a8-106">这是一种很好的方法。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-106">They're a great way to reach out.</span></span>
 
----
+<span data-ttu-id="1c2a8-107">若要指导您的应用程序设计，以下信息介绍并说明了用户如何在团队中添加、使用和管理 bot。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-107">To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.</span></span>
 
-## <a name="guidelines"></a><span data-ttu-id="b7398-108">准则</span><span class="sxs-lookup"><span data-stu-id="b7398-108">Guidelines</span></span>
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="1c2a8-108">Microsoft 团队 UI 工具包</span><span class="sxs-lookup"><span data-stu-id="1c2a8-108">Microsoft Teams UI Kit</span></span>
 
-### <a name="bot-design-guidelines"></a><span data-ttu-id="b7398-109">Bot 设计指南</span><span class="sxs-lookup"><span data-stu-id="b7398-109">Bot design guidelines</span></span>
+<span data-ttu-id="1c2a8-109">您可以在 Microsoft 团队 UI 工具包中找到更全面的 bot 设计指南，包括您可以根据需要获取和修改的元素。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-109">You can find more comprehensive bot design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span>
 
-* <span data-ttu-id="b7398-110">当有活动时，bot 应提供相关通知。</span><span class="sxs-lookup"><span data-stu-id="b7398-110">Bots should provide relevant notifications when there has been activity.</span></span>
-* <span data-ttu-id="b7398-111">自动程序不能向不应查看该数据的访问群体向团队、组聊天或1:1 对话中推送敏感数据。</span><span class="sxs-lookup"><span data-stu-id="b7398-111">Bots must not push sensitive data to a team, group chat, or 1:1 conversation to an audience that should not view that data.</span></span>
-* <span data-ttu-id="b7398-112">Bot 通知应包含有意义的数据，以向用户通知通知的相关性。</span><span class="sxs-lookup"><span data-stu-id="b7398-112">Bot notifications should include meaningful data to inform the relevance of the notification to users.</span></span>
-* <span data-ttu-id="b7398-113">Bot 的语气应按指南中定义的方式反映团队语音。</span><span class="sxs-lookup"><span data-stu-id="b7398-113">The bot's tone should reflect the Teams voice, as defined in the guidelines.</span></span>
-* <span data-ttu-id="b7398-114">Bot 应提供首次运行体验欢迎消息，以突出显示 bot 的价值以及它的主要功能，这可能是 "获取教程"、带有轮播卡片的交互式教程或 "试用" 按钮的形式。</span><span class="sxs-lookup"><span data-stu-id="b7398-114">Bots should provide an first-run-experience welcome message that highlights the value of the bot and what its primary functions are, this might be in the form of "take a tour", an interactive tutorial with carousel cards, or "try it" buttons.</span></span>
-* <span data-ttu-id="b7398-115">Bot 文本不能包含任何拼写错误或语法错误。</span><span class="sxs-lookup"><span data-stu-id="b7398-115">Bot text must not have any spelling mistakes or grammatical errors.</span></span>
-* <span data-ttu-id="b7398-116">Bot 必须提供一组可操作的预定义的 bot 命令。</span><span class="sxs-lookup"><span data-stu-id="b7398-116">Bots must provide a set of predefined bot commands that are actionable.</span></span>
-* <span data-ttu-id="b7398-117">Bot 邮件应易于理解和操作。</span><span class="sxs-lookup"><span data-stu-id="b7398-117">Bot messages should be easy to understand and actionable.</span></span>
-* <span data-ttu-id="b7398-118">当不理解邮件时，bot 必须提供后备帮助命令。</span><span class="sxs-lookup"><span data-stu-id="b7398-118">Bots must provide fallback help commands when a message is not understood.</span></span>
-* <span data-ttu-id="b7398-119">由自动程序发送的卡片中嵌入的窗体应提供不需要顺序更新的确定性输入。</span><span class="sxs-lookup"><span data-stu-id="b7398-119">Forms, embedded in cards, sent by a bot should provide deterministic inputs that do not require sequential updating.</span></span>
-* <span data-ttu-id="b7398-120">应将 Bot 通知的范围限定为团队、组聊天或1:1 对话，其中包含访问群体的相关内容。</span><span class="sxs-lookup"><span data-stu-id="b7398-120">Bot notifications should be scoped to a team, group chat, or 1:1 conversation with relevant content for the audience.</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="1c2a8-110"> (Figma) 获取 Microsoft 团队 UI 工具包 </span><span class="sxs-lookup"><span data-stu-id="1c2a8-110">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="avatars"></a><span data-ttu-id="b7398-121">虚拟形象</span><span class="sxs-lookup"><span data-stu-id="b7398-121">Avatars</span></span>
+## <a name="add-a-bot"></a><span data-ttu-id="1c2a8-111">添加 bot</span><span class="sxs-lookup"><span data-stu-id="1c2a8-111">Add a bot</span></span>
 
-<span data-ttu-id="b7398-122">在团队中，Bot 虚拟形象的形状类似于六边形，因此人们可以快速判断他们正在与某个 bot 而不是某人交谈。</span><span class="sxs-lookup"><span data-stu-id="b7398-122">Bot avatars in Teams are shaped like hexagons so people can quickly tell that they’re talking to a bot instead of a person.</span></span> <span data-ttu-id="b7398-123">你将头像作为方块提交，我们将为你进行裁剪。</span><span class="sxs-lookup"><span data-stu-id="b7398-123">You’ll submit your avatar as a square and we’ll crop it for you.</span></span> <span data-ttu-id="b7398-124">当遇到虚拟形象时，我们建议您让您能够在2英尺和使用较高的对比度的情况下清晰地消失。</span><span class="sxs-lookup"><span data-stu-id="b7398-124">When it comes to avatars, we recommend making yours legible from 2 feet away and using a higher contrast.</span></span>
+<span data-ttu-id="1c2a8-112">聊天、频道和个人应用中提供了 bot。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-112">Bots are available in chats, channels, and personal apps.</span></span> <span data-ttu-id="1c2a8-113">您可以通过以下方式之一添加机器人：</span><span class="sxs-lookup"><span data-stu-id="1c2a8-113">You can add a bot one of the following ways:</span></span>
 
-[!include[Avatar image](~/includes/design/bot-avatar-image.html)]
+* <span data-ttu-id="1c2a8-114">从团队存储 (AppSource) 。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-114">From the Teams store (AppSource).</span></span>
+* <span data-ttu-id="1c2a8-115">通过在工作组左侧选择 " **更多** " 图标来使用应用浮出控件。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-115">Using the app flyout by selecting the **More** icon on the left side of Teams.</span></span>
+* <span data-ttu-id="1c2a8-116">在 "新聊天" 或 "撰写" 框中使用 @mention (下面的示例演示如何在组聊天) 中执行此操作。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-116">With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).</span></span>
 
-### <a name="buttons"></a><span data-ttu-id="b7398-125">按钮</span><span class="sxs-lookup"><span data-stu-id="b7398-125">Buttons</span></span>
+:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="示例演示如何使用 @mention 在组中添加机器人。" border="false":::
 
-<span data-ttu-id="b7398-126">我们每张卡片最长支持六个按钮。</span><span class="sxs-lookup"><span data-stu-id="b7398-126">We support up to six buttons per card.</span></span> <span data-ttu-id="b7398-127">编写按钮文本时请务必简明扼要，并且请注意，大多数按钮应仅处理手头的任务。</span><span class="sxs-lookup"><span data-stu-id="b7398-127">Be concise when writing button text, and keep in mind that most buttons should only address the task at hand.</span></span>
+## <a name="introduce-a-bot"></a><span data-ttu-id="1c2a8-118">引入机器人</span><span class="sxs-lookup"><span data-stu-id="1c2a8-118">Introduce a bot</span></span>
 
-### <a name="graphics"></a><span data-ttu-id="b7398-128">图形</span><span class="sxs-lookup"><span data-stu-id="b7398-128">Graphics</span></span>
+<span data-ttu-id="1c2a8-119">你的 bot 会自行引入并描述它可以执行的操作，这一点非常重要。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-119">It’s critical that your bot introduces itself and describes what it can do.</span></span> <span data-ttu-id="1c2a8-120">此初始 exchange 可帮助用户了解如何使用 bot，找出它的局限性，最重要的是，让他们能够轻松地与之进行交互。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-120">This initial exchange helps people understand what to do with the bot, find out its limitations and, most importantly, get comfortable interacting with it.</span></span>
 
-<span data-ttu-id="b7398-129">图形是一种很不错的说明，但并不是所有机器人对话都需要图形，因此使用它们来获得最大影响。</span><span class="sxs-lookup"><span data-stu-id="b7398-129">Graphics are a good way to tell a story, but not all bot conversations require graphics, so use them for maximum impact.</span></span>
+### <a name="welcome-message-in-a-one-on-one-chat"></a><span data-ttu-id="1c2a8-121">一对一聊天中的欢迎消息</span><span class="sxs-lookup"><span data-stu-id="1c2a8-121">Welcome message in a one-on-one chat</span></span>
 
-### <a name="onboarding-users"></a><span data-ttu-id="b7398-130">载入用户</span><span class="sxs-lookup"><span data-stu-id="b7398-130">Onboarding users</span></span>
+<span data-ttu-id="1c2a8-122">在个人上下文中，欢迎邮件设置你的 bot 的语气。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-122">In personal contexts, welcome messages set your bot's tone.</span></span> <span data-ttu-id="1c2a8-123">该邮件包含问候语、bot 可以执行的操作以及有关如何在 (进行交互的一些建议（例如，"请尝试询问我 ..."） ) 。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-123">The message includes a greeting, what the bot can do, and some suggestions for how to interact (for example, “Try asking me about …”).</span></span> <span data-ttu-id="1c2a8-124">如果可能，这些建议应返回存储的响应，而无需登录。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-124">If possible, these suggestions should return stored responses without having to sign in.</span></span>
 
-<span data-ttu-id="b7398-131">关键是，bot 会自我介绍并传达他们可以为用户执行的操作。</span><span class="sxs-lookup"><span data-stu-id="b7398-131">It is critical that bots introduce themselves and convey what they can do for users.</span></span> <span data-ttu-id="b7398-132">此 *值 exchange* 可帮助用户了解如何使用 bot，这些限制可能位于何处，并且最重要的是，帮助用户容许与不像真实人员那样直观的计算机进行交互。</span><span class="sxs-lookup"><span data-stu-id="b7398-132">This *value exchange* helps users understand what to do with the bot, where the limitations may lie, and, most importantly, helps users tolerate the interaction with a machine that won’t be as intuitive as a real person .</span></span> <span data-ttu-id="b7398-133">此外，它还向 exchange 中的用户数据授予对该服务提供的真正价值的权限。</span><span class="sxs-lookup"><span data-stu-id="b7398-133">Additionally, it grants permission to user data in exchange for the real value the service provides.</span></span>
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="示例显示了个人应用程序中的 bot 简介。" border="false":::
 
-#### <a name="welcome-messages"></a><span data-ttu-id="b7398-134">欢迎邮件</span><span class="sxs-lookup"><span data-stu-id="b7398-134">Welcome messages</span></span>
+### <a name="introductions-in-group-chats-and-channels"></a><span data-ttu-id="1c2a8-126">群研讨和频道中的简介</span><span class="sxs-lookup"><span data-stu-id="1c2a8-126">Introductions in group chats and channels</span></span>
 
-<span data-ttu-id="b7398-135">欢迎邮件是设置你的 bot 语气并应在个人和团队或组方案中使用的最佳方式。</span><span class="sxs-lookup"><span data-stu-id="b7398-135">Welcome messages are the best way to set your bot's tone and should be used in personal and team or group scenarios.</span></span> <span data-ttu-id="b7398-136">该消息指出了 bot 的功能以及与之进行交互的一些常见方法。</span><span class="sxs-lookup"><span data-stu-id="b7398-136">The message states what the bot does and some common ways to interact with it.</span></span> <span data-ttu-id="b7398-137">使用类似 " *请尝试询问*..." 的特定功能示例</span><span class="sxs-lookup"><span data-stu-id="b7398-137">Use specific capability examples like,  “ *Try asking ….* ”</span></span> <span data-ttu-id="b7398-138">在项目符号列表中。</span><span class="sxs-lookup"><span data-stu-id="b7398-138">in a bulleted list.</span></span> <span data-ttu-id="b7398-139">只要有可能，这些建议应返回存储的响应。</span><span class="sxs-lookup"><span data-stu-id="b7398-139">Whenever possible, these suggestions should return stored responses.</span></span> <span data-ttu-id="b7398-140">此功能示例非常关键，无需用户登录即可正常工作。</span><span class="sxs-lookup"><span data-stu-id="b7398-140">It's critical that the capability examples work without requiring users to sign in.</span></span>
-<span data-ttu-id="b7398-141">有关其他指导，请 *参阅*[欢迎消息要求](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch)。</span><span class="sxs-lookup"><span data-stu-id="b7398-141">Please *see* [welcome message requirements](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) for additional guidance.</span></span>
+<span data-ttu-id="1c2a8-127">你的 bot 的简介与个人上下文 (（如个人应用) ）相比，在组聊天和频道中略有不同。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-127">Your bot's introduction should be slightly little different in group chats and channels compared to a personal context (like a personal app).</span></span> <span data-ttu-id="1c2a8-128">在实际生活中，如果你输入的会议室完全为人，则为你将自行引入，而不是欢迎大家已经在那里的人。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-128">In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there.</span></span> <span data-ttu-id="1c2a8-129">将这种想法引入到你的 bot 设计中。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-129">Carry that thinking into your bot design.</span></span>
 
-#### <a name="tours"></a><span data-ttu-id="b7398-142">漫游</span><span class="sxs-lookup"><span data-stu-id="b7398-142">Tours</span></span>
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="示例显示了协作上下文中的 bot 简介。" border="false":::
 
-<span data-ttu-id="b7398-143">包括使用欢迎邮件的 *教程* 属性和对与 " *帮助* " 等效的用户输入的响应。</span><span class="sxs-lookup"><span data-stu-id="b7398-143">Include a *Take a tour* attribute with welcome messages and responses to user input equivalent to “ *help* ”.</span></span> <span data-ttu-id="b7398-144">这是让用户了解机器人可以执行的操作的最有效方法。</span><span class="sxs-lookup"><span data-stu-id="b7398-144">This is the most effective way to let users learn what a bot can do.</span></span> <span data-ttu-id="b7398-145">在一对一体验中，Carousels 是一种很好的方法，可告知这一情景，包括 " *Try it* " 按钮。鼓励可能的响应示例。</span><span class="sxs-lookup"><span data-stu-id="b7398-145">Carousels in one-to-one experiences are an excellent way to tell this story and including *Try it* buttons linking to  examples of possible responses is encouraged.</span></span> <span data-ttu-id="b7398-146">漫游也是谈论应用程序的其他功能的很好的地方。</span><span class="sxs-lookup"><span data-stu-id="b7398-146">Tours are also great places to talk about an app’s other features.</span></span> <span data-ttu-id="b7398-147">例如，可以包括邮件扩展和工作组选项卡的屏幕截图。</span><span class="sxs-lookup"><span data-stu-id="b7398-147">For example, you can include screenshots of messaging extensions and Teams tabs.</span></span>  <span data-ttu-id="b7398-148">用户无需登录即可访问和使用教程。</span><span class="sxs-lookup"><span data-stu-id="b7398-148">Users shouldn't have to sign in to access and use a tour.</span></span>
+### <a name="bot-authentication-with-single-sign-on"></a><span data-ttu-id="1c2a8-131">单一登录的 Bot 身份验证</span><span class="sxs-lookup"><span data-stu-id="1c2a8-131">Bot authentication with single sign-on</span></span>
 
-<span data-ttu-id="b7398-149">在团队或组方案中使用演示时，他们应在任务模块中打开，以便不向用户之间的正在进行的会话添加更多的卡噪音。</span><span class="sxs-lookup"><span data-stu-id="b7398-149">When tours are used in team or group scenarios, they should open in a task module so as not to add more card noise to the ongoing conversations between users.</span></span>
+<span data-ttu-id="1c2a8-132">当某个人将邮件发送到 bot 时，可能需要登录才能使用其所有功能。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-132">When a person messages a bot, sign in may be required use all its features.</span></span> <span data-ttu-id="1c2a8-133">您可以使用单一登录 (SSO) 简化身份验证过程。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-133">You can simplify the authentication process using single sign-on (SSO).</span></span>
 
-### <a name="responding-to-users-and-failing-gracefully"></a><span data-ttu-id="b7398-150">响应用户并顺利进行故障转移</span><span class="sxs-lookup"><span data-stu-id="b7398-150">Responding to users and failing gracefully</span></span>
+<span data-ttu-id="1c2a8-134">别忘了：在机器人命令菜单中 (**我可以执行哪些操作？**) ，还必须提供命令来注销。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-134">Don’t forget: In the bot command menu (**What can I do?**), you must also provide a command to sign out.</span></span>
 
-<span data-ttu-id="b7398-151">你的 bot 还应能够在考虑常见的拼写错误和俗语时，对诸如 " *Hi* "、" *帮助* " 和 " *感谢* " 这样的内容做出响应。</span><span class="sxs-lookup"><span data-stu-id="b7398-151">Your bot should also be able to respond to things like " *Hi* ", " *Help* ", and " *Thanks* " while taking common misspellings and colloquialisms into account.</span></span> <span data-ttu-id="b7398-152">例如：</span><span class="sxs-lookup"><span data-stu-id="b7398-152">For example:</span></span>
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="示例显示了带有登录按钮的 bot。" border="false":::
 
-#### <a name="x2713-hello"></a><span data-ttu-id="b7398-153">&#x2713; Hello</span><span class="sxs-lookup"><span data-stu-id="b7398-153">&#x2713; Hello</span></span>
+### <a name="tours"></a><span data-ttu-id="1c2a8-136">漫游</span><span class="sxs-lookup"><span data-stu-id="1c2a8-136">Tours</span></span>
 
-<span data-ttu-id="b7398-154">`"Hi"`  `"How are you"`  `"Howdy"`</span><span class="sxs-lookup"><span data-stu-id="b7398-154">`"Hi"`  `"How are you"`  `"Howdy"`</span></span>
+<span data-ttu-id="1c2a8-137">您可以包含欢迎邮件的教程，如果 bot 响应的是 "帮助" 命令之类的内容。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-137">You can include a tour with welcome messages and if the bot responds to something like a “help” command.</span></span> <span data-ttu-id="1c2a8-138">教程是描述你的 bot 可以执行的操作的最有效方式。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-138">A tour is the most effective way to describe what your bot can do.</span></span> <span data-ttu-id="1c2a8-139">如果适用，它们也很适合描述应用程序的其他功能 (例如，包括邮件扩展) 的屏幕截图。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-139">If applicable, they’re also great for describing your app’s other features (for example, include screenshots of your messaging extension).</span></span>
 
-#### <a name="x2713-help"></a><span data-ttu-id="b7398-155">&#x2713; 帮助</span><span class="sxs-lookup"><span data-stu-id="b7398-155">&#x2713; Help</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="1c2a8-140">无需登录即可访问教程。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-140">Tours should be accessible without having to sign in.</span></span>
 
-<span data-ttu-id="b7398-156">`"What do you do?"`  `"How does this work?"`  `"What the heck?"`</span><span class="sxs-lookup"><span data-stu-id="b7398-156">`"What do you do?"`  `"How does this work?"`  `"What the heck?"`</span></span>
+#### <a name="one-on-one-chats"></a><span data-ttu-id="1c2a8-141">一对一聊天</span><span class="sxs-lookup"><span data-stu-id="1c2a8-141">One-on-one chats</span></span>
 
-#### <a name="x2713-thanks"></a><span data-ttu-id="b7398-157">&#x2713; 感谢</span><span class="sxs-lookup"><span data-stu-id="b7398-157">&#x2713; Thanks</span></span>
+<span data-ttu-id="1c2a8-142">在个人应用程序中，轮播可提供对你的 bot 和你的应用程序的任何其他功能的有效概述。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-142">In a personal app, a carousel can provide an effective overview of your bot and any other features of your app.</span></span> <span data-ttu-id="1c2a8-143">包含按钮鼓励用户尝试使用 bot 命令 (例如， **创建任务**) 。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-143">Including buttons the let users try bot commands is encouraged (for example, **Create a task**).</span></span>
 
-<span data-ttu-id="b7398-158">`"Thank you"`  `"Thankyou"`  `"Thx"`</span><span class="sxs-lookup"><span data-stu-id="b7398-158">`"Thank you"`  `"Thankyou"`  `"Thx"`</span></span>
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="示例显示了一次一对一聊天中的 bot 教程。" border="false":::
 
-<span data-ttu-id="b7398-159">你的 bot 应能够处理以下类型的查询和输入：</span><span class="sxs-lookup"><span data-stu-id="b7398-159">Your bot should be able to handle the following types of queries and inputs:</span></span>
+#### <a name="channels-and-group-chats"></a><span data-ttu-id="1c2a8-145">频道和组聊天</span><span class="sxs-lookup"><span data-stu-id="1c2a8-145">Channels and group chats</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="b7398-160">**识别的问题** 。</span><span class="sxs-lookup"><span data-stu-id="b7398-160">**Recognized questions**.</span></span> <span data-ttu-id="b7398-161">这些是用户预期的 "最佳方案情况" 问题。</span><span class="sxs-lookup"><span data-stu-id="b7398-161">These are the “best case scenario” questions you would expect from users.</span></span>
-> * <span data-ttu-id="b7398-162">**识别的无问题** 。</span><span class="sxs-lookup"><span data-stu-id="b7398-162">**Recognized non-questions**.</span></span> <span data-ttu-id="b7398-163">有关不受支持的功能和/或随机、无关或 profane 条目的查询。</span><span class="sxs-lookup"><span data-stu-id="b7398-163">Queries about unsupported functionality and/or random, unrelated , or profane entries.</span></span>
-> * <span data-ttu-id="b7398-164">**无法识别的问题** ：输入或无法识别、无意义或无意义的项。</span><span class="sxs-lookup"><span data-stu-id="b7398-164">**Unrecognized questions** : Input or entries that are unintelligible, meaningless, or nonsense.</span></span>
+<span data-ttu-id="1c2a8-146">在频道和群研讨中，应在模式 (（也称为 [任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) ）中打开一个教程，使其不会中断正在进行的对话。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-146">In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) so it doesn’t interrupt ongoing conversations.</span></span> <span data-ttu-id="1c2a8-147">这还为您提供了为您的演示实现基于角色的视图的选项。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-147">This also gives you the option to implement role-based views for your tour.</span></span>
 
-<span data-ttu-id="b7398-165">Bot 的个性和响应类型的示例：</span><span class="sxs-lookup"><span data-stu-id="b7398-165">Examples of bot personality and response types:</span></span>
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="示例显示频道中的 bot 教程。" border="false":::
 
-[!include[Bot responses](~/includes/design/bot-responses-table.html)]
+## <a name="chat-with-a-bot"></a><span data-ttu-id="1c2a8-149">与 bot 聊天</span><span class="sxs-lookup"><span data-stu-id="1c2a8-149">Chat with a bot</span></span>
 
-> [!TIP]
-> <span data-ttu-id="b7398-166">编写机器人脚本时，请询问自己： "我的公司是否为 embarrassed 如果响应是通过屏幕捕获并共享吗？"</span><span class="sxs-lookup"><span data-stu-id="b7398-166">When writing your bot script, ask yourself: “Will my company be embarrassed if a response is screen captured and shared?”</span></span>
+<span data-ttu-id="1c2a8-150">Bot 直接集成到团队的消息传递框架中。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-150">Bots integrate directly into Team’s messaging framework.</span></span> <span data-ttu-id="1c2a8-151">用户可以与机器人聊天以获取其问题，或键入命令让 bot 执行一组或一组特定的任务。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-151">Users can chat with a bot to get their questions answered or type commands to have the bot perform a narrow or specific set of tasks.</span></span> <span data-ttu-id="1c2a8-152">Bot 可以通过聊天主动通知用户对你的应用所做的更改或更新。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-152">Bots can proactively notify users about changes or updates to your app via chat.</span></span>
 
-### <a name="understanding-what-users-are-trying-to-say"></a><span data-ttu-id="b7398-167">了解用户试图说出的内容</span><span class="sxs-lookup"><span data-stu-id="b7398-167">Understanding what users are trying to say</span></span>
+### <a name="chat-with-a-bot-in-different-contexts"></a><span data-ttu-id="1c2a8-153">与不同上下文中的 bot 聊天</span><span class="sxs-lookup"><span data-stu-id="1c2a8-153">Chat with a bot in different contexts</span></span>
 
-#### <a name="use-a-thesaurus-for-synonyms"></a><span data-ttu-id="b7398-168">对同义词使用同义词库</span><span class="sxs-lookup"><span data-stu-id="b7398-168">Use a thesaurus for synonyms</span></span>
+<span data-ttu-id="1c2a8-154">您可以在以下上下文中使用 bot：</span><span class="sxs-lookup"><span data-stu-id="1c2a8-154">You can use bots in the following contexts:</span></span>
 
-<span data-ttu-id="b7398-169">当灵感触发变体时，请使用同义词库并从尽可能多的不同背景中获取人员，以帮助您生成每个查询的不同解释。</span><span class="sxs-lookup"><span data-stu-id="b7398-169">When brainstorming variants, use a thesaurus and get people from as many different backgrounds as possible to help you generate different interpretations of each query.</span></span>
+* <span data-ttu-id="1c2a8-155">**个人应用程序**：在个人应用程序中，bot 具有专用的聊天选项卡。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-155">**Personal apps**: In a personal app, a bot has a dedicated chat tab.</span></span>
+* <span data-ttu-id="1c2a8-156">**一对一聊天**：用户可以启动与 bot 的专用对话。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-156">**One-on-one chat**: A user can initiate a private conversation with a bot.</span></span> <span data-ttu-id="1c2a8-157">这与在个人应用程序中使用 bot 的体验相同。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-157">It's the same experience as using a bot in a personal app.</span></span>
+* <span data-ttu-id="1c2a8-158">**分组聊天**：用户可以通过 @mentioning bot 与组聊天中的 bot 进行交互。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-158">**Group chat**: People can interact with a bot in a group chat by @mentioning the bot.</span></span>
+* <span data-ttu-id="1c2a8-159">**频道**：用户可以与频道中的 bot 进行交互。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-159">**Channel**: People can interact with a bot in a channel.</span></span> <span data-ttu-id="1c2a8-160">通过 @mentioning "撰写" 框中的 bot 名称。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-160">by @mentioning the bot name in the compose box.</span></span> <span data-ttu-id="1c2a8-161">请记住，在此上下文中，bot 可用于整个团队，而不仅仅是通道。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-161">Remember, in this context, the bot is available to the entire team, not just the channel.</span></span>
 
-#### <a name="make-use-of-telemetry-and-interviews"></a><span data-ttu-id="b7398-170">使用遥测和访谈</span><span class="sxs-lookup"><span data-stu-id="b7398-170">Make use of telemetry and interviews</span></span>
+### <a name="anatomy"></a><span data-ttu-id="1c2a8-162">解析</span><span class="sxs-lookup"><span data-stu-id="1c2a8-162">Anatomy</span></span>
 
-<span data-ttu-id="b7398-171">了解用户在查询你的 bot 时所说的含义以及它们的意图。</span><span class="sxs-lookup"><span data-stu-id="b7398-171">Find out what users are saying and what was their intent when querying your bot.</span></span> <span data-ttu-id="b7398-172">当你在不同位置和公司类型中获取用户时，这将是一个持续的过程。</span><span class="sxs-lookup"><span data-stu-id="b7398-172">This will be an ongoing process as you get users in different locations and types of companies.</span></span> <span data-ttu-id="b7398-173">您可以使用语言理解智能服务 ([LUIS](/azure/cognitive-services/luis/what-is-luis)) 来微调语言识别和意图映射。</span><span class="sxs-lookup"><span data-stu-id="b7398-173">You can fine-tune language recognition and intent mapping with Language Understanding Intelligent Service ([LUIS](/azure/cognitive-services/luis/what-is-luis)).</span></span>
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="示例显示 bot 的结构剖析。" border="false":::
 
-### <a name="how-often-should-you-use-your-bot-to-reach-out-to-a-user"></a><span data-ttu-id="b7398-174">应多长时间使用你的 bot 与用户联系？</span><span class="sxs-lookup"><span data-stu-id="b7398-174">How often should you use your bot to reach out to a user?</span></span>
+|<span data-ttu-id="1c2a8-164">计数器</span><span class="sxs-lookup"><span data-stu-id="1c2a8-164">Counter</span></span>|<span data-ttu-id="1c2a8-165">说明</span><span class="sxs-lookup"><span data-stu-id="1c2a8-165">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="1c2a8-166">1</span><span class="sxs-lookup"><span data-stu-id="1c2a8-166">1</span></span>|<span data-ttu-id="1c2a8-167">**应用程序名称和图标**</span><span class="sxs-lookup"><span data-stu-id="1c2a8-167">**App name and icon**</span></span>|
+|<span data-ttu-id="1c2a8-168">2 </span><span class="sxs-lookup"><span data-stu-id="1c2a8-168">2</span></span>|<span data-ttu-id="1c2a8-169">**"聊天" 选项卡**：打开与你的 bot 对话的空间 (仅适用于个人应用) 。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-169">**Chat tab**: Opens the space to talk with your bot (applicable only to personal apps).</span></span>|
+|<span data-ttu-id="1c2a8-170">3 </span><span class="sxs-lookup"><span data-stu-id="1c2a8-170">3</span></span>|<span data-ttu-id="1c2a8-171">**自定义选项卡**：打开与您的应用程序相关的其他内容。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-171">**Custom tabs**: Opens other content related to your app.</span></span>|
+|<span data-ttu-id="1c2a8-172">4 </span><span class="sxs-lookup"><span data-stu-id="1c2a8-172">4</span></span>|<span data-ttu-id="1c2a8-173">**"关于" 选项卡**：显示有关您的应用程序的基本信息。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-173">**About tab**: Displays basic information about your app.</span></span>|
+|<span data-ttu-id="1c2a8-174">5 </span><span class="sxs-lookup"><span data-stu-id="1c2a8-174">5</span></span>|<span data-ttu-id="1c2a8-175">**聊天气泡**： Bot 对话使用团队消息传递框架。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-175">**Chat bubble**: Bot conversations use the Teams messaging framework.</span></span>|
+|<span data-ttu-id="1c2a8-176">6 </span><span class="sxs-lookup"><span data-stu-id="1c2a8-176">6</span></span>|<span data-ttu-id="1c2a8-177">**自适应卡片**：如果你的 bot 的响应包含自适应卡片，卡片将占用完整的聊天气泡宽度。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-177">**Adaptive Card**: If your bot’s responses include Adaptive Cards, the card takes up the full width of the chat bubble.</span></span>|
+|<span data-ttu-id="1c2a8-178">7 </span><span class="sxs-lookup"><span data-stu-id="1c2a8-178">7</span></span>|<span data-ttu-id="1c2a8-179">**命令菜单**：显示你)  (定义的你的 bot 的标准命令。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-179">**Command menu**: Displays your bot's standard commands (defined by you).</span></span>
 
-#### <a name="x2713-when-a-state-has-changed"></a><span data-ttu-id="b7398-175">状态更改时 &#x2713;</span><span class="sxs-lookup"><span data-stu-id="b7398-175">&#x2713; When a state has changed</span></span>
+### <a name="command-menu"></a><span data-ttu-id="1c2a8-180">命令菜单</span><span class="sxs-lookup"><span data-stu-id="1c2a8-180">Command menu</span></span>
 
-<span data-ttu-id="b7398-176">例如，如果工作分配标记为 "已完成"、"bug 更改时"、"新社交媒体可用" 或 "已完成轮询"。</span><span class="sxs-lookup"><span data-stu-id="b7398-176">For example, if an assignment is marked as complete, when a bug changes, when new social media is available, or when a poll has been completed.</span></span>
+<span data-ttu-id="1c2a8-181">命令菜单提供您希望机器人始终响应的单词或短语的列表。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-181">The command menu provides a list of words or phrases you want your bot to always respond to.</span></span> <span data-ttu-id="1c2a8-182">当有人正在使用 bot 时，"命令" 菜单将显示在 "撰写" 框的上方。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-182">The command menu displays above the compose box when someone is conversing with a bot.</span></span> <span data-ttu-id="1c2a8-183">当选中某个命令时，它会插入到邮件中。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-183">When a command is selected, it gets inserted into a message.</span></span>
 
-#### <a name="x2713-when-the-timing-is-right"></a><span data-ttu-id="b7398-177">当计时正确时 &#x2713;</span><span class="sxs-lookup"><span data-stu-id="b7398-177">&#x2713; When the timing is right</span></span>
+<span data-ttu-id="1c2a8-184">命令列表应简短。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-184">The list of commands should be brief.</span></span> <span data-ttu-id="1c2a8-185">此菜单仅用于突出显示你的 bot 的主要功能。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-185">The menu is only meant to highlight your bot’s primary features.</span></span> <span data-ttu-id="1c2a8-186">也将命令保持简洁。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-186">Keep commands concise, too.</span></span> <span data-ttu-id="1c2a8-187">例如，创建一个名为 " **帮助** " 的命令，而不 **能帮助我** 吗？</span><span class="sxs-lookup"><span data-stu-id="1c2a8-187">For example, create a command called **Help** instead of **Can you please help me**?</span></span>
+<span data-ttu-id="1c2a8-188">无论会话的状态如何，命令菜单都必须始终可用。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-188">The command menu must always be available regardless of the state of the conversation.</span></span>
 
-<span data-ttu-id="b7398-178">你的 bot 可以像每日摘要那样操作，以特定频率向用户或频道发送通知。</span><span class="sxs-lookup"><span data-stu-id="b7398-178">Your bot can act like a daily digest, sending a notification to the user or channel at a specific frequency.</span></span>
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="示例显示 bot 的命令菜单。" border="false":::
 
-<span data-ttu-id="b7398-179">将用户保持在控制之下。</span><span class="sxs-lookup"><span data-stu-id="b7398-179">Leave the user in control.</span></span> <span data-ttu-id="b7398-180">提供包括频率和优先级的通知设置。</span><span class="sxs-lookup"><span data-stu-id="b7398-180">Provide notification settings that include frequency and priority.</span></span>
+## <a name="understand-what-people-are-saying"></a><span data-ttu-id="1c2a8-190">了解人们的评价</span><span class="sxs-lookup"><span data-stu-id="1c2a8-190">Understand what people are saying</span></span>
 
-[!include[Bot notification](~/includes/design/bot-notification-image.html)]
+<span data-ttu-id="1c2a8-191">使用同义词库并从尽可能多的不同背景中获取人员，以帮助您生成标准查询的不同解释。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-191">Use a thesaurus and get people from as many different backgrounds as possible to help you generate different interpretations of standard queries.</span></span>
 
----
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="显示机器人可能如何解释 &quot;Hello&quot; 的插图。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="图示：机器人如何解释 &quot;帮助&quot;。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="显示机器人可能解释 &quot;感谢&quot; 的说明。" border="false":::
+   :::column-end:::
+:::row-end:::
 
-## <a name="using-tabs"></a><span data-ttu-id="b7398-181">使用选项卡</span><span class="sxs-lookup"><span data-stu-id="b7398-181">Using tabs</span></span>
+### <a name="extract-intent-and-data-from-messages"></a><span data-ttu-id="1c2a8-195">从邮件中提取意图和数据</span><span class="sxs-lookup"><span data-stu-id="1c2a8-195">Extract intent and data from messages</span></span>
 
-<span data-ttu-id="b7398-182">选项卡使你的 bot 功能更强大。</span><span class="sxs-lookup"><span data-stu-id="b7398-182">Tabs make your bot much more functional.</span></span> <span data-ttu-id="b7398-183">通过选项卡，您可以创建以下内容：</span><span class="sxs-lookup"><span data-stu-id="b7398-183">With tabs, you can create the following:</span></span>
+<span data-ttu-id="1c2a8-196">将你的 bot 设计为识别意图，这将从你的人员那里获取某人想要响应邮件或查询的内容。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-196">Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query.</span></span> <span data-ttu-id="1c2a8-197">意向将邮件或查询分类为单个操作，其中包含一个或多个受操作影响的数据对象。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-197">Intent classifies a message or query as a single action with one or more data objects that are affected by the action.</span></span> 
 
-### <a name="x2713-a-place-to-host-standing-queries"></a><span data-ttu-id="b7398-184">&#x2713; 承载驻留查询的位置</span><span class="sxs-lookup"><span data-stu-id="b7398-184">&#x2713; A place to host standing queries</span></span>
+<span data-ttu-id="1c2a8-198">下面的示例概述了发送到 bot 的邮件中的用户意图和数据。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-198">The following examples outline the user intent and data in messages sent to bots.</span></span>
 
-<span data-ttu-id="b7398-185">在 bot 和单个用户之间的个人对话中，选项卡可以包含用户特定的信息和列表。</span><span class="sxs-lookup"><span data-stu-id="b7398-185">In personal conversations between a bot and a single person, tabs can contain user-specific information and lists.</span></span> <span data-ttu-id="b7398-186">它们也是维护对常见问题 (Faq) 的 bot 响应的好地方，因此用户无需继续提问。</span><span class="sxs-lookup"><span data-stu-id="b7398-186">They’re also a good place to maintain bot responses to frequently-asked questions (FAQs) — so users don’t need to keep asking.</span></span>
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="示例中所示的 &quot;将航班预订给西雅图&quot; 这一句，用户意图是 &quot;书籍 a 航班&quot;，数据是 &quot;西雅图&quot;。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="示例显示在句子 &quot;何时打开存储&quot;，用户意图是 &quot;when&quot;，且数据为 &quot;开放&quot;。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="示例中显示了句子 &quot;安排会议时，在通讯组中使用王俊元&quot;、用户意向为 &quot;安排会议&quot; 和 &quot;分发中的 Bob&quot; 等数据。" border="false":::
+   :::column-end:::
+:::row-end:::
 
-### <a name="x2713-a-place-to-finish-a-conversation"></a><span data-ttu-id="b7398-187">&#x2713; 完成对话的位置</span><span class="sxs-lookup"><span data-stu-id="b7398-187">&#x2713; A place to finish a conversation</span></span>
+### <a name="analyze-and-improve"></a><span data-ttu-id="1c2a8-202">分析和改进</span><span class="sxs-lookup"><span data-stu-id="1c2a8-202">Analyze and improve</span></span>
 
-<span data-ttu-id="b7398-188">您可以从卡片链接到选项卡。</span><span class="sxs-lookup"><span data-stu-id="b7398-188">You can link to a tab from a card.</span></span> <span data-ttu-id="b7398-189">如果你的 bot 提供了需要更多步骤的答案，则它可以链接到选项卡以完成任务或流。</span><span class="sxs-lookup"><span data-stu-id="b7398-189">If your bot provides an answer that requires a few more steps, it can link to a tab to complete the task or flow.</span></span> <span data-ttu-id="b7398-190">例如，为了响应，"如何设置 iPhone 的格式？" 好的响应可能是一个卡片，它概括了前几个步骤，并具有一个 *显示更多* 步骤的按钮，然后将用户带到 bot 的 " *帮助* " 选项卡和指向特定说明的深层链接。</span><span class="sxs-lookup"><span data-stu-id="b7398-190">For instance, in response to, "How do I format my iPhone?", a good response might be a card which outlines the first few steps and has a button for *Show more* that then takes the user to the bot's *Help* tab and deep links to the specific instructions.</span></span>
+<span data-ttu-id="1c2a8-203">了解用户在与你的 bot 聊天时应说出的内容。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-203">Learn what users say when chatting with your bot.</span></span> <span data-ttu-id="1c2a8-204">随着用户群在不同位置和 emc 的增长，这将是一个持续的反复发生的过程。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-204">This will be an ongoing, iterative process as your user base grows in different locations and orgs.</span></span> <span data-ttu-id="1c2a8-205">您可以使用 (Microsoft LUIS) 调整您的 bot 的语言识别和意图映射。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-205">You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).</span></span>
 
-### <a name="x2713-a-place-to-host-a-settings-page"></a><span data-ttu-id="b7398-191">&#x2713; 承载设置页面的位置</span><span class="sxs-lookup"><span data-stu-id="b7398-191">&#x2713; A place to host a settings page</span></span>
+* <span data-ttu-id="1c2a8-206">[了解 LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence)：了解 LUIS 如何使用 AI 提供对应用数据的自然语言理解 (NLU) 。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-206">[Understanding LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.</span></span>
+* <span data-ttu-id="1c2a8-207">[与 LUIS 集成](https://www.luis.ai/)：将自然语言功能添加到你的机器人中，而不是创建机器学习模型的复杂过程。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-207">[Integrating with LUIS](https://www.luis.ai/): Add natural language capabilities to your bot without the complex process of creating machine learning models.</span></span>
 
-<span data-ttu-id="b7398-192">Bot 应具有一些用户控件。</span><span class="sxs-lookup"><span data-stu-id="b7398-192">Bots should have some user control.</span></span> <span data-ttu-id="b7398-193">对于很多机器人，通过聊天界面允许它;但是，很难记住这些设置。</span><span class="sxs-lookup"><span data-stu-id="b7398-193">For many bots it is allowed through a chat interface; however, it's hard to remember those settings.</span></span> <span data-ttu-id="b7398-194">"设置" 选项卡可以显示 "用户" 设置，允许用户一次更改所有设置，也可能是更复杂的 bot 自定义行为的一个良好的位置。</span><span class="sxs-lookup"><span data-stu-id="b7398-194">A settings tab can display users settings, allow users to change them all at once, and may also be a good hand-off point for more complex bot custom behaviors.</span></span>
+## <a name="use-cases"></a><span data-ttu-id="1c2a8-208">用例</span><span class="sxs-lookup"><span data-stu-id="1c2a8-208">Use cases</span></span>
 
-### <a name="x2713-a-place-to-provide-some-help"></a><span data-ttu-id="b7398-195">&#x2713; 提供一些帮助的位置</span><span class="sxs-lookup"><span data-stu-id="b7398-195">&#x2713; A place to provide some help</span></span>
+### <a name="simple-queries"></a><span data-ttu-id="1c2a8-209">简单查询</span><span class="sxs-lookup"><span data-stu-id="1c2a8-209">Simple queries</span></span>
 
-<span data-ttu-id="b7398-196">添加一个选项卡，educates 用户如何与你的 bot 进行通信。</span><span class="sxs-lookup"><span data-stu-id="b7398-196">Add a tab that educates users about how to communicate with your bot.</span></span> <span data-ttu-id="b7398-197">您可以为其所做的操作或 Faq 提供一些上下文。</span><span class="sxs-lookup"><span data-stu-id="b7398-197">You can provide some context for what it does or FAQs.</span></span>
+<span data-ttu-id="1c2a8-210">Bot 可以提供与查询或一组相关匹配项完全匹配的项，以帮助消除歧义。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-210">Bots can deliver an exact match to a query or a group of related matches to help with disambiguation.</span></span> <span data-ttu-id="1c2a8-211">对于相关的匹配项，请使用列表卡片对内容进行分组。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-211">For related matches, group the content using a list card.</span></span>
 
-![提供帮助](~/assets/images/framework/framework_bots_tbot-help.png)
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="示例显示与 bot 的简单查询交互。" border="false":::
 
-> [!TIP]
-> <span data-ttu-id="b7398-199">在选项卡中嵌入网站的各个部分将有助于用户在使用您的服务时维护对话的上下文。</span><span class="sxs-lookup"><span data-stu-id="b7398-199">Embedding parts of your site in a tab will help users maintain the context of a conversation as they use your service.</span></span> <span data-ttu-id="b7398-200">它消除了在浏览器中启动服务的需求，并在应用程序之间来回切换。</span><span class="sxs-lookup"><span data-stu-id="b7398-200">It removes the need to launch your service in a browser and switch back and forth between apps.</span></span>
+### <a name="multi-turn-interactions"></a><span data-ttu-id="1c2a8-213">多转换交互</span><span class="sxs-lookup"><span data-stu-id="1c2a8-213">Multi-turn interactions</span></span>
 
----
+<span data-ttu-id="1c2a8-214">虽然你的 bot 可以支持完整的请求和问题，但它还应能够处理多项交互。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-214">While your bot can support complete requests and questions, it should also be able to handle multi-turn interactions.</span></span> <span data-ttu-id="1c2a8-215">预测可能的后续步骤使用户可以更轻松地执行完整的任务流 (而不是期望他们手工创建一个全面的请求) 。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-215">Anticipating possible next steps makes it much easier for people to a complete task flow (rather than expecting them to craft a comprehensive request).</span></span>
 
-## <a name="bots-in-channels"></a><span data-ttu-id="b7398-201">通道中的 bot</span><span class="sxs-lookup"><span data-stu-id="b7398-201">Bots in channels</span></span>
+<span data-ttu-id="1c2a8-216">在下面的示例中，bot 将使用有关下一步操作的选项来响应每个邮件。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-216">In the following example, the bot responds to each message with options for what might want to do next.</span></span>
 
-<span data-ttu-id="b7398-202">可以通过对频道中的 bot 进行调用来实现 `@mention` 。</span><span class="sxs-lookup"><span data-stu-id="b7398-202">Invoking a bot in a channel can be accomplished by `@mention`.</span></span> <span data-ttu-id="b7398-203">机器人对话框在通道和组中应是唯一的，而不是一对一方案，通常最好是考虑不同的方法。</span><span class="sxs-lookup"><span data-stu-id="b7398-203">Bot dialog should be unique in channels and groups vs. one-to-one scenarios and it's generally a good idea to consider separate approaches.</span></span> <span data-ttu-id="b7398-204">在下列情况下，尤其如此：</span><span class="sxs-lookup"><span data-stu-id="b7398-204">This is especially true in the following cases:</span></span>
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="示例显示与 bot 之间的多路交互交互。" border="false":::
 
-### <a name="sensitive-data-sent-by-a-bot"></a><span data-ttu-id="b7398-205">Bot 发送的敏感数据</span><span class="sxs-lookup"><span data-stu-id="b7398-205">Sensitive data sent by a bot</span></span>
+### <a name="reach-out-to-users"></a><span data-ttu-id="1c2a8-218">与用户联系</span><span class="sxs-lookup"><span data-stu-id="1c2a8-218">Reach out to users</span></span>
 
-<span data-ttu-id="b7398-206">虽然团队中的用户可以在服务中知道，但实际用户角色却不能。</span><span class="sxs-lookup"><span data-stu-id="b7398-206">While the users in a team can be known to the service, the actual user roles cannot.</span></span> <span data-ttu-id="b7398-207">这意味着，在涉及威胁的教育场景中，不会在团队设置中共享父联系人信息和学生联系人信息。</span><span class="sxs-lookup"><span data-stu-id="b7398-207">This means that, for example, in an education scenario involving bullying, parent and student contact information wouldn't be shared in a team setting.</span></span> <span data-ttu-id="b7398-208">而 bot 的邮件可能是： "今天发生两个威胁事件" 和一个显示详细信息的按钮。</span><span class="sxs-lookup"><span data-stu-id="b7398-208">Instead the bot's message might be,"Two bullying incidents occurred today" along with a button to show details.</span></span>
+<span data-ttu-id="1c2a8-219">通过主动消息传递，你的 bot 可以像摘要那样操作，以特定频率发送与个人、组聊天或频道相关的通知。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-219">With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency.</span></span> <span data-ttu-id="1c2a8-220">当文档中的内容发生了更改或工作项关闭时，bot 可能会发送一封邮件。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-220">A bot may send a message when something has changed in a document or a work item is closed.</span></span>
 
-<span data-ttu-id="b7398-209">在网页中启动详细信息，或任务模块可以提示用户凭据或查询与 AAD 帐户配对的用户角色的索引。</span><span class="sxs-lookup"><span data-stu-id="b7398-209">Launching details in a web page, or a task module can prompt for user credentials or query against an index for user roles paired with AAD accounts.</span></span> <span data-ttu-id="b7398-210">在这两个选项中，数据都在一个专用视图作用域中，并且不会有数据泄露。</span><span class="sxs-lookup"><span data-stu-id="b7398-210">In both of these options the data is in a private view scope and there will be no data leakage.</span></span> <span data-ttu-id="b7398-211">如果在用户与 bot 之间的一对一聊天中发送相同的数据，则该数据仅对该上下文中的用户可见，因此，在 bot 邮件中完全显示该数据是安全的。</span><span class="sxs-lookup"><span data-stu-id="b7398-211">If the same data is sent in a one-to-one chat between a user and the bot, the data is only visible to the user in that context and is, therefore safe, to fully display in the bot message.</span></span> <span data-ttu-id="b7398-212">应避免将用户从频道中提取到一对一聊天，因为这会导致强制导航高度中断。</span><span class="sxs-lookup"><span data-stu-id="b7398-212">Taking users from a channel to a one-to-one chat should be avoided however as that forced navigation is highly disruptive.</span></span>
+<span data-ttu-id="1c2a8-221">在以下示例中，用户将收到 toast 通知，即 bot 在另一个频道中将其推广。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-221">In the following example, a user gets a toast notification that a bot messaged them in another channel.</span></span>
 
-### <a name="sending-cards-as-a-response-to-interactions"></a><span data-ttu-id="b7398-213">作为交互的响应发送卡片</span><span class="sxs-lookup"><span data-stu-id="b7398-213">Sending cards as a response to interactions</span></span>
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="示例展示了自动将用户从另一个频道传递给用户的 toast。" border="false":::
 
-<span data-ttu-id="b7398-214">发送轮播卡片以在一对一聊天中 *进行漫游* 是完全可接受的，相同的模式可能会在活动频道中向大量用户发送数十或数百个 *漫游 carousels* 。</span><span class="sxs-lookup"><span data-stu-id="b7398-214">While sending a carousel card in response to *Take a tour* in a one-to-one chat is perfectly acceptable, the same pattern could yield tens or hundreds of *tour carousels* in an active channel with lots of users.</span></span> <span data-ttu-id="b7398-215">为避免这种情况，辅助卡应托管在任务模块中。</span><span class="sxs-lookup"><span data-stu-id="b7398-215">To avoid this, secondary cards should be hosted in a task module.</span></span> <span data-ttu-id="b7398-216">此模式使用户在使用频道的上下文中保持用户的正常，并使频道清除过多的 bot 响应，并且可以选择在显示 *漫游* 时考虑不同的用户角色。</span><span class="sxs-lookup"><span data-stu-id="b7398-216">This pattern keeps users in context with the channel, keeps the channel clean of excessive bot responses, and can optionally consider different user roles when the *tour* is shown.</span></span>
+<span data-ttu-id="1c2a8-223">现在，该频道中的用户可以从 bot 读取其邮件。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-223">Now in that channel, the user can read their message from the bot.</span></span>
 
-## <a name="useful-tips"></a><span data-ttu-id="b7398-217">有用的提示</span><span class="sxs-lookup"><span data-stu-id="b7398-217">Useful tips</span></span>
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="示例显示了用户查看 bot 的主动消息。" border="false":::
 
-### <a name="x2713-remember-bots-arent-assistants"></a><span data-ttu-id="b7398-218">&#x2713; 记住，bot 不助手</span><span class="sxs-lookup"><span data-stu-id="b7398-218">&#x2713; Remember, bots aren’t assistants</span></span>
+### <a name="use-tabs-with-bots"></a><span data-ttu-id="1c2a8-225">使用带 bot 的选项卡</span><span class="sxs-lookup"><span data-stu-id="1c2a8-225">Use tabs with bots</span></span>
 
-<span data-ttu-id="b7398-219">与代理不同，例如 Cortana、bot 充当专家。</span><span class="sxs-lookup"><span data-stu-id="b7398-219">Unlike agents, e.g., Cortana, bots act as specialists.</span></span>
+<span data-ttu-id="1c2a8-226">选项卡可使你的 bot 更易于使用。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-226">A tab can make your bot easier to use.</span></span> <span data-ttu-id="1c2a8-227">例如，如果你的 bot 可以创建工作项，则在选项卡中的一个中心位置显示所有这些项会非常好。有关 [设计选项卡](../../tabs/design/tabs.md)的详细信息，请参阅。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-227">For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).</span></span>
 
-### <a name="x2713-discourage-chitchat"></a><span data-ttu-id="b7398-220">&#x2713; 阻止 chitchat</span><span class="sxs-lookup"><span data-stu-id="b7398-220">&#x2713; Discourage chitchat</span></span>
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="示例显示选项卡如何帮助组织 bot 内容。" border="false":::
 
-<span data-ttu-id="b7398-221">除非为对话构建了你的 bot，否则会发现将 chitchat 重定向到任务完成的方法。</span><span class="sxs-lookup"><span data-stu-id="b7398-221">Unless your bot is built for conversation, find ways to redirect chitchat toward task completion.</span></span>
+## <a name="manage-a-bot"></a><span data-ttu-id="1c2a8-229">管理 bot</span><span class="sxs-lookup"><span data-stu-id="1c2a8-229">Manage a bot</span></span>
 
-### <a name="x2713-introduce-some-personality"></a><span data-ttu-id="b7398-222">&#x2713; 引入了一些个性</span><span class="sxs-lookup"><span data-stu-id="b7398-222">&#x2713; Introduce some personality</span></span>
+<span data-ttu-id="1c2a8-230">用户应该能够更改机器人的设置。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-230">Users should be able to change a bot's settings.</span></span> <span data-ttu-id="1c2a8-231">您可以使用 bot 命令提供此功能，但在 [任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) 中包含所有设置通常效率更高 (如以下示例中所示) 。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-231">You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).</span></span>
 
-<span data-ttu-id="b7398-223">保持你的 bot 个人与你的产品的语音一致。</span><span class="sxs-lookup"><span data-stu-id="b7398-223">Keep your bot personality consistent with the voice of your product.</span></span> <span data-ttu-id="b7398-224">将你的 bot 想象为你的公司说话。</span><span class="sxs-lookup"><span data-stu-id="b7398-224">Think of your bot as speaking for your company.</span></span>
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="示例显示了用于配置 bot 设置的任务模块。" border="false":::
 
-### <a name="x2713-maintain-tone"></a><span data-ttu-id="b7398-225">&#x2713; 保持音调</span><span class="sxs-lookup"><span data-stu-id="b7398-225">&#x2713; Maintain tone</span></span>
+## <a name="best-practices"></a><span data-ttu-id="1c2a8-233">最佳做法</span><span class="sxs-lookup"><span data-stu-id="1c2a8-233">Best practices</span></span>
 
-<span data-ttu-id="b7398-226">确定您是否希望您的语气是友好和浅、"只是真实" 还是超级 quirky。</span><span class="sxs-lookup"><span data-stu-id="b7398-226">Determine whether you want your tone to be friendly and light, “just the facts”, or super quirky.</span></span>
+### <a name="content"></a><span data-ttu-id="1c2a8-234">内容</span><span class="sxs-lookup"><span data-stu-id="1c2a8-234">Content</span></span>
 
-### <a name="x2713-encourage-easy-task-flow"></a><span data-ttu-id="b7398-227">&#x2713; 鼓励轻松的任务流</span><span class="sxs-lookup"><span data-stu-id="b7398-227">&#x2713; Encourage easy task flow</span></span>
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
 
-<span data-ttu-id="b7398-228">支持多项交互，同时仍允许完整构建的问题。</span><span class="sxs-lookup"><span data-stu-id="b7398-228">Support multi-turn interactions while still allowing for fully formed questions.</span></span> <span data-ttu-id="b7398-229">预测下一步将帮助用户更轻松地完成任务流。</span><span class="sxs-lookup"><span data-stu-id="b7398-229">Anticipating the next step will help users get through task flows much easier.</span></span>
+#### <a name="do-establish-a-clear-persona"></a><span data-ttu-id="1c2a8-236">操作：建立明确角色</span><span class="sxs-lookup"><span data-stu-id="1c2a8-236">Do: Establish a clear persona</span></span>
 
-<span data-ttu-id="b7398-230">如果用户需要几个步骤来完成某项任务，则允许你的 bot 在每个步骤中执行这些步骤，但通过让其建议更快速的途径来完成。</span><span class="sxs-lookup"><span data-stu-id="b7398-230">If a user takes several steps to complete a task, allow your bot to take them through each step, but finish by having it suggest a quicker path.</span></span> <span data-ttu-id="b7398-231">例如，如果用户已进行了多个会话，则先指定一个会议，然后确定该时间，然后再指出一天) 来设置会议 (，并在下面的建议下完成此对话：下一次，请尝试询问您是否可以 "在明天1:00 的时间安排与小明的会议"。</span><span class="sxs-lookup"><span data-stu-id="b7398-231">For example, if a user has taken several conversational turns to set a meeting (by first specifying a meeting, then identifying with whom, then stating the time, then stating the day), finish the conversation with the following suggestion: Next time, try asking if you can ‘schedule a meeting with Bob at 1:00 tomorrow’.</span></span>
+<span data-ttu-id="1c2a8-237">你的 bot 的语气是否友好和轻型、"只是真实" 还是超级 quirky？</span><span class="sxs-lookup"><span data-stu-id="1c2a8-237">Is your bot's tone friendly and light, “just the facts”, or super quirky?</span></span> <span data-ttu-id="1c2a8-238">它应如何在不同的方案中做出响应？</span><span class="sxs-lookup"><span data-stu-id="1c2a8-238">How should it respond in different scenarios?</span></span> <span data-ttu-id="1c2a8-239">规划和记录你的 bot 角色可以更轻松地编写看似自然和内聚的响应。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-239">Planning and documenting your bot's persona makes it easier to write responses that seem natural and cohesive.</span></span>
+
+<span data-ttu-id="1c2a8-240">有关在<a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft 团队 UI 工具包 (Figma) </a>中写入 bot 的详细信息，请参阅。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-240">See more about writing for bots in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma).</a></span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-clearly-convey-what-your-bot-can-do"></a><span data-ttu-id="1c2a8-242">操作：清楚地传达机器人可以执行的操作</span><span class="sxs-lookup"><span data-stu-id="1c2a8-242">Do: Clearly convey what your bot can do</span></span>
+
+<span data-ttu-id="1c2a8-243">欢迎消息和教程帮助用户了解使用你的 bot 可以执行的操作。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-243">Welcome messages and tours help people understand what they can do with your bot.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-obscure-your-bots-features"></a><span data-ttu-id="1c2a8-245">不：遮盖你的 bot 的功能</span><span class="sxs-lookup"><span data-stu-id="1c2a8-245">Don't: Obscure your bot's features</span></span>
+
+<span data-ttu-id="1c2a8-246">第一事是印象。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-246">First impressions matter.</span></span> <span data-ttu-id="1c2a8-247">在使用 nondescript 登录邮件时，用户可能会感到困惑或有疑问。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-247">People will likely be confused or suspicious when presented with a nondescript sign-in message.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-recognize-non-questions"></a><span data-ttu-id="1c2a8-249">操作：识别非问题</span><span class="sxs-lookup"><span data-stu-id="1c2a8-249">Do: Recognize non-questions</span></span>
+
+<span data-ttu-id="1c2a8-250">你的 bot 应能够响应类似于 "Hi"、"帮助" 和 "感谢" 的邮件，同时还可以对常见的拼写错误和俗语进行评估。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-250">Your bot should be able to respond to messages like "Hi", "Help", and "Thanks" while also accounting for common misspellings and colloquialisms.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-miss-out-on-opportunities-to-delight"></a><span data-ttu-id="1c2a8-252">请勿：错过对欣喜的机会</span><span class="sxs-lookup"><span data-stu-id="1c2a8-252">Don't: Miss out on opportunities to delight</span></span>
+
+<span data-ttu-id="1c2a8-253">有些人希望对话以流的方式自然，就像真正的人一样。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-253">Some people expect conversations to flow naturally like they would with a real person.</span></span> <span data-ttu-id="1c2a8-254">尽量避免对简单邮件的 clumsy 响应。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-254">Try to avoid clumsy responses to simple messages.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="troubleshooting"></a><span data-ttu-id="1c2a8-255">疑难解答</span><span class="sxs-lookup"><span data-stu-id="1c2a8-255">Troubleshooting</span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-provide-help"></a><span data-ttu-id="1c2a8-257">Do：提供帮助</span><span class="sxs-lookup"><span data-stu-id="1c2a8-257">Do: Provide help</span></span>
+
+<span data-ttu-id="1c2a8-258">如果你的 bot 无法满足请求，请为用户提供用于教育自己与你的 bot 进行交互的方法。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-258">If your bot can’t satisfy a request, provide ways for a user to educate themselves about interacting with your bot.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-leave-users-stranded"></a><span data-ttu-id="1c2a8-260">请勿：让用户处于进退两难</span><span class="sxs-lookup"><span data-stu-id="1c2a8-260">Don't: Leave users stranded</span></span>
+
+<span data-ttu-id="1c2a8-261">如果用户无法解决问题，他们将很快放弃你的机器人。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-261">People will quickly abandon your bot if they can’t troubleshoot issues.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="complex-interactions"></a><span data-ttu-id="1c2a8-262">复杂的交互</span><span class="sxs-lookup"><span data-stu-id="1c2a8-262">Complex interactions</span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-use-task-modules-or-tabs"></a><span data-ttu-id="1c2a8-264">操作：使用任务模块或选项卡</span><span class="sxs-lookup"><span data-stu-id="1c2a8-264">Do: Use task modules or tabs</span></span>
+
+<span data-ttu-id="1c2a8-265">如果你的 bot 提供了需要更多步骤的答案，则可以链接到任务模块或选项卡以完成任务或流。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-265">If your bot provides an answer that requires a few more steps, you can link to a task module or tab to complete the task or flow.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-make-multi-turn-interactions-tedious"></a><span data-ttu-id="1c2a8-267">请勿：使多项交互变单调乏味</span><span class="sxs-lookup"><span data-stu-id="1c2a8-267">Don't: Make multi-turn interactions tedious</span></span>
+
+<span data-ttu-id="1c2a8-268">完成单个任务的一个广泛的对话速度缓慢且过于复杂。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-268">An extensive conversation to complete a single task is slow and overly complex.</span></span> <span data-ttu-id="1c2a8-269">它还要求开发人员考虑状态更改 (例如，会话超时或发送 "取消" 邮件) 。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-269">It also requires the developer to account for state changes (such as the conversation timing out or you sending a “Cancel” message).</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="privacy"></a><span data-ttu-id="1c2a8-270">隐私</span><span class="sxs-lookup"><span data-stu-id="1c2a8-270">Privacy</span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-only-show-sensitive-info-in-a-personal-context"></a><span data-ttu-id="1c2a8-272">操作：仅在个人上下文中显示敏感信息</span><span class="sxs-lookup"><span data-stu-id="1c2a8-272">Do: Only show sensitive info in a personal context</span></span>
+
+<span data-ttu-id="1c2a8-273">如果你的 bot 位于组聊天或频道中，我们建议将用户定向到专用位置 (如任务模块、选项卡或浏览器) 查看敏感信息。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-273">If your bot is in a group chat or channel, we recommend directing users to a private location (such as a task module, tab, or browser) to view sensitive information.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a><span data-ttu-id="1c2a8-275">请勿：某些内容并非每个人都能看到</span><span class="sxs-lookup"><span data-stu-id="1c2a8-275">Don't: Some content isn’t meant to be seen by everyone</span></span>
+
+<span data-ttu-id="1c2a8-276">你的 bot 不应将敏感信息泄露给一组用户。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-276">Your bot shouldn’t reveal sensitive information to a group of people.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="learn-more"></a><span data-ttu-id="1c2a8-277">了解更多</span><span class="sxs-lookup"><span data-stu-id="1c2a8-277">Learn more</span></span>
+
+<span data-ttu-id="1c2a8-278">这些其他指南可帮助你使用你的 bot 设计：</span><span class="sxs-lookup"><span data-stu-id="1c2a8-278">These other guidelines may help with your bot design:</span></span>
+
+* [<span data-ttu-id="1c2a8-279">正在设计你的个人应用</span><span class="sxs-lookup"><span data-stu-id="1c2a8-279">Designing your personal app</span></span>](../../concepts/design/personal-apps.md)
+* [<span data-ttu-id="1c2a8-280">设计自适应卡片</span><span class="sxs-lookup"><span data-stu-id="1c2a8-280">Designing Adaptive Cards</span></span>](../../task-modules-and-cards/cards/design-effective-cards.md)
+* [<span data-ttu-id="1c2a8-281">正在设计任务模块</span><span class="sxs-lookup"><span data-stu-id="1c2a8-281">Designing task modules</span></span>](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+
+## <a name="validate-your-design"></a><span data-ttu-id="1c2a8-282">验证设计</span><span class="sxs-lookup"><span data-stu-id="1c2a8-282">Validate your design</span></span>
+
+<span data-ttu-id="1c2a8-283">如果计划将应用程序发布到 AppSource，则应了解通常会在提交期间导致应用程序失败的设计问题。</span><span class="sxs-lookup"><span data-stu-id="1c2a8-283">If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="1c2a8-284">检查设计验证准则</span><span class="sxs-lookup"><span data-stu-id="1c2a8-284">Check design validation guidelines</span></span>](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

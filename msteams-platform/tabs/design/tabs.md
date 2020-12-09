@@ -1,201 +1,236 @@
 ---
-title: 选项卡的设计准则
-description: 介绍为内容和协作创建选项卡的准则
-keywords: 团队设计指南参考框架选项卡配置通道选项卡静态选项卡 "简单选项卡设计工作组" 选项卡
-ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+title: 设计桌面和 web 的选项卡
+description: 了解如何设计 "团队" 选项卡 (桌面和 web) 并获取 Microsoft 团队 UI 工具包。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 692a21c78dc86cbca5bf248e55d0332bd71c6b92
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576860"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604654"
 ---
-# <a name="content-and-conversations-all-at-once-using-tabs"></a><span data-ttu-id="1155d-104">内容和对话，所有使用选项卡一次</span><span class="sxs-lookup"><span data-stu-id="1155d-104">Content and conversations, all at once using tabs</span></span>
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a><span data-ttu-id="3be5e-103">设计用于 Microsoft 团队桌面和 web 的选项卡</span><span class="sxs-lookup"><span data-stu-id="3be5e-103">Designing your tab for Microsoft Teams desktop and web</span></span>
 
-> [!Important]
-> <span data-ttu-id="1155d-105">**移动客户端上的选项卡**</span><span class="sxs-lookup"><span data-stu-id="1155d-105">**Tabs on Mobile Clients**</span></span>
->
-> <span data-ttu-id="1155d-106">创建选项卡时，请遵循 [移动电话上的选项卡指南](./tabs-mobile.md) 。</span><span class="sxs-lookup"><span data-stu-id="1155d-106">Follow the [guidance for tabs on mobile](./tabs-mobile.md) when creating your tabs.</span></span> <span data-ttu-id="1155d-107">如果您的选项卡使用身份验证，则必须将团队 JavaScript SDK 升级到版本1.4.1 或更高版本，否则身份验证将失败。</span><span class="sxs-lookup"><span data-stu-id="1155d-107">If your tab uses authentication, you must upgrade your Teams JavaScript SDK to version 1.4.1 or later, or authentication will fail.</span></span>
->
-> <span data-ttu-id="1155d-108">**移动设备上的频道/组 (可配置) 选项卡：**</span><span class="sxs-lookup"><span data-stu-id="1155d-108">**Channel/group (configurable) tabs on mobile:**</span></span>
->
-> * <span data-ttu-id="1155d-109">移动客户端仅显示具有值的可配置选项卡 `websiteUrl` 。</span><span class="sxs-lookup"><span data-stu-id="1155d-109">Mobile clients only show configurable tabs that have a value for `websiteUrl`.</span></span> <span data-ttu-id="1155d-110">如果希望您的选项卡显示在团队移动客户端上，则必须设置的值 `websiteUrl` 。</span><span class="sxs-lookup"><span data-stu-id="1155d-110">If you want your tab to appear on the Teams mobile clients, you must set the value of `websiteUrl`.</span></span>
-> * <span data-ttu-id="1155d-111">移动上的默认打开行为是使用在浏览器中的外部打开 `websiteUrl` 。</span><span class="sxs-lookup"><span data-stu-id="1155d-111">Default open behavior on mobile is to open outside in browser using the `websiteUrl`.</span></span> <span data-ttu-id="1155d-112">对于发布到公用应用商店的应用程序，如果您希望频道选项卡在默认情况下在团队内打开，请遵循 [移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md)，并转到您的支持代表以请求列入白名单。</span><span class="sxs-lookup"><span data-stu-id="1155d-112">For apps published to the public App Store, if you want your channel tab to open inside teams by default, follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md), and reach out to your support rep to request to be whitelisted.</span></span>
+<span data-ttu-id="3be5e-104">选项卡是用于便于协作的内容的大型画布。</span><span class="sxs-lookup"><span data-stu-id="3be5e-104">A tab is a large canvas for content that facilitates collaboration.</span></span> <span data-ttu-id="3be5e-105">若要指导您的应用程序设计，以下信息介绍并说明了用户如何在团队中添加、使用和管理选项卡。</span><span class="sxs-lookup"><span data-stu-id="3be5e-105">To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.</span></span>
 
-<span data-ttu-id="1155d-113">选项卡是可用于在团队的随机工作流中共享内容、举行对话和托管第三方服务的画布。</span><span class="sxs-lookup"><span data-stu-id="1155d-113">Tabs are canvases that you can use to share content, hold conversations, and host third-party services, all within a team’s organic workflow.</span></span> <span data-ttu-id="1155d-114">当您在 Microsoft 团队中构建一个选项卡时，它会将 web 应用程序的前端和中心放置在易于从关键对话中访问的位置。</span><span class="sxs-lookup"><span data-stu-id="1155d-114">When you build a tab in Microsoft Teams, it puts your web app front and center where it’s easily accessible from key conversations.</span></span>
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="3be5e-106">Microsoft 团队 UI 工具包</span><span class="sxs-lookup"><span data-stu-id="3be5e-106">Microsoft Teams UI Kit</span></span>
 
-## <a name="guidelines"></a><span data-ttu-id="1155d-115">准则</span><span class="sxs-lookup"><span data-stu-id="1155d-115">Guidelines</span></span>
+<span data-ttu-id="3be5e-107">您可以在 Microsoft 团队 UI 工具包中找到全面的选项卡设计指南，包括您可以在需要时获取和修改的元素。</span><span class="sxs-lookup"><span data-stu-id="3be5e-107">You can find comprehensive tab design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span> <span data-ttu-id="3be5e-108">UI 工具包还包含此处未介绍的辅助功能和响应大小等基本主题。</span><span class="sxs-lookup"><span data-stu-id="3be5e-108">The UI kit also has essential topics such as accessibility and responsive sizing that aren't covered here.</span></span>
 
-<span data-ttu-id="1155d-116">一个合适的选项卡应显示以下特征：</span><span class="sxs-lookup"><span data-stu-id="1155d-116">A good tab should display the following characteristics:</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="3be5e-109"> (Figma) 获取 Microsoft 团队 UI 工具包 </span><span class="sxs-lookup"><span data-stu-id="3be5e-109">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="focused-functionality"></a><span data-ttu-id="1155d-117">重点功能</span><span class="sxs-lookup"><span data-stu-id="1155d-117">Focused functionality</span></span>
+## <a name="add-a-tab"></a><span data-ttu-id="3be5e-110">添加选项卡</span><span class="sxs-lookup"><span data-stu-id="3be5e-110">Add a tab</span></span>
 
-<span data-ttu-id="1155d-118">当为满足特定需求而构建时，选项卡的工作效果最佳。</span><span class="sxs-lookup"><span data-stu-id="1155d-118">Tabs work best when they’re built to address a specific need.</span></span> <span data-ttu-id="1155d-119">将重点放在一小部分任务或与选项卡所在通道相关的一组数据。</span><span class="sxs-lookup"><span data-stu-id="1155d-119">Focus on a small set of tasks or a subset of data that’s relevant to the channel the tab is in.</span></span>
+<span data-ttu-id="3be5e-111">您可以从 "团队" 存储 ("AppSource") 或以下上下文之一添加选项卡：</span><span class="sxs-lookup"><span data-stu-id="3be5e-111">You can add a tab from the Teams store (AppSource) or in one of the following contexts:</span></span>
 
-### <a name="reduced-chrome"></a><span data-ttu-id="1155d-120">简化 chrome</span><span class="sxs-lookup"><span data-stu-id="1155d-120">Reduced chrome</span></span>
+* <span data-ttu-id="3be5e-112">聊天</span><span class="sxs-lookup"><span data-stu-id="3be5e-112">Chat</span></span>
+* <span data-ttu-id="3be5e-113">频道</span><span class="sxs-lookup"><span data-stu-id="3be5e-113">Channel</span></span>
+* <span data-ttu-id="3be5e-114">会议 (之前、会议期间或会议之后) </span><span class="sxs-lookup"><span data-stu-id="3be5e-114">Meeting (before, during, or after the meeting)</span></span>
 
-<span data-ttu-id="1155d-121">避免在选项卡中创建多个面板、添加导航层或要求用户在一个选项卡中垂直和水平滚动。换言之，请不要在选项卡中包含选项卡。</span><span class="sxs-lookup"><span data-stu-id="1155d-121">Avoid creating multiple panels in a tab, adding layers of navigation, or requiring users to scroll both vertically and horizontally in one tab. In other words, try not to have tabs in your tab.</span></span>
+<span data-ttu-id="3be5e-115">下面的示例演示如何在通道中添加制表符。</span><span class="sxs-lookup"><span data-stu-id="3be5e-115">The following example shows how a tab is added in a channel.</span></span>
 
-### <a name="integration"></a><span data-ttu-id="1155d-122">集成</span><span class="sxs-lookup"><span data-stu-id="1155d-122">Integration</span></span>
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="示例显示在通道中添加的选项卡。" border="false":::
 
-<span data-ttu-id="1155d-123">通过将 [自适应卡](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) 发布到对话中，查找通知用户有关选项卡活动的方法。</span><span class="sxs-lookup"><span data-stu-id="1155d-123">Find ways to notify users about tab activity by posting [adaptive cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) to a conversation.</span></span>
+## <a name="set-up-a-tab"></a><span data-ttu-id="3be5e-117">设置选项卡</span><span class="sxs-lookup"><span data-stu-id="3be5e-117">Set up a tab</span></span>
 
-### <a name="conversational"></a><span data-ttu-id="1155d-124">对话</span><span class="sxs-lookup"><span data-stu-id="1155d-124">Conversational</span></span>
+<span data-ttu-id="3be5e-118">有一个将应用添加为频道、聊天或会议选项卡的短安装过程。体验主要由你来掌握。</span><span class="sxs-lookup"><span data-stu-id="3be5e-118">There's a short setup process to add an app as a channel, chat, or meeting tab. The experience is largely up to you.</span></span> <span data-ttu-id="3be5e-119">例如，您可以对如何使用应用程序和一些可选设置进行说明。</span><span class="sxs-lookup"><span data-stu-id="3be5e-119">For example, you could have a description of how to use the app and some optional settings.</span></span> <span data-ttu-id="3be5e-120">如果需要对用户进行身份验证，请在此处加入登录步骤。</span><span class="sxs-lookup"><span data-stu-id="3be5e-120">Include a sign-in step here if you need to authenticate users.</span></span>
 
-<span data-ttu-id="1155d-125">寻找一种有助于围绕选项卡进行对话的方法。这样可确保在现有内容、数据或流程上进行对话中心。</span><span class="sxs-lookup"><span data-stu-id="1155d-125">Find a way to facilitate conversation around a tab. This ensures that conversations center on the content, data, or process at hand.</span></span>
+### <a name="tab-configuration-modal"></a><span data-ttu-id="3be5e-121">选项卡配置模式</span><span class="sxs-lookup"><span data-stu-id="3be5e-121">Tab configuration modal</span></span>
 
-### <a name="streamlined-access"></a><span data-ttu-id="1155d-126">精简访问</span><span class="sxs-lookup"><span data-stu-id="1155d-126">Streamlined access</span></span>
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="示例显示了选项卡配置模式。" border="false":::
 
-<span data-ttu-id="1155d-127">请确保在适当的时间授予对正确人员的访问权限。</span><span class="sxs-lookup"><span data-stu-id="1155d-127">Make sure you’re granting access to the right people at the right time.</span></span> <span data-ttu-id="1155d-128">保持您的登录过程很简单将避免为发布和协作创建障碍。</span><span class="sxs-lookup"><span data-stu-id="1155d-128">Keeping your sign-in process simple will avoid creating barriers to contribution and collaboration.</span></span>
+### <a name="anatomy-tab-configuration-modal"></a><span data-ttu-id="3be5e-123">剖析：选项卡配置模式</span><span class="sxs-lookup"><span data-stu-id="3be5e-123">Anatomy: Tab configuration modal</span></span>
 
-### <a name="responsiveness-to-window-sizing"></a><span data-ttu-id="1155d-129">对窗口大小的响应</span><span class="sxs-lookup"><span data-stu-id="1155d-129">Responsiveness to window sizing</span></span>
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="显示选项卡配置模式的 UI 剖析的插图。" border="false":::
 
-<span data-ttu-id="1155d-130">在窗口大小中，可以将团队用作720px，以确保在小窗口中可用的选项卡与极高分辨率的可用性同样重要。</span><span class="sxs-lookup"><span data-stu-id="1155d-130">Teams can be used in window sizes as small as 720px, so making sure that a tab is usable in a small window is just as important as usability at very high resolutions.</span></span>
+|<span data-ttu-id="3be5e-125">计数器</span><span class="sxs-lookup"><span data-stu-id="3be5e-125">Counter</span></span>|<span data-ttu-id="3be5e-126">说明</span><span class="sxs-lookup"><span data-stu-id="3be5e-126">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="3be5e-127">1</span><span class="sxs-lookup"><span data-stu-id="3be5e-127">1</span></span>|<span data-ttu-id="3be5e-128">**应用徽标**：应用的完整颜色应用徽标。</span><span class="sxs-lookup"><span data-stu-id="3be5e-128">**App logo**: Full color app logo of your app.</span></span>|
+|<span data-ttu-id="3be5e-129">2 </span><span class="sxs-lookup"><span data-stu-id="3be5e-129">2</span></span>|<span data-ttu-id="3be5e-130">**应用程序名称**：应用程序的完整名称。</span><span class="sxs-lookup"><span data-stu-id="3be5e-130">**App name**: Full name of your app.</span></span>|
+|<span data-ttu-id="3be5e-131">3 </span><span class="sxs-lookup"><span data-stu-id="3be5e-131">3</span></span>|<span data-ttu-id="3be5e-132">**iframe**：应用内容的响应空间 (例如，选项卡设置或身份验证) 。</span><span class="sxs-lookup"><span data-stu-id="3be5e-132">**iframe**: Responsive space for your app’s content (for example, tab settings or authentication).</span></span>|
+|<span data-ttu-id="3be5e-133">4 </span><span class="sxs-lookup"><span data-stu-id="3be5e-133">4</span></span>|<span data-ttu-id="3be5e-134">**关于链接**：打开一个对话框，显示有关该应用程序的详细信息，如完整说明、应用程序所需的权限以及指向您的隐私策略和服务条款的链接。</span><span class="sxs-lookup"><span data-stu-id="3be5e-134">**About link**: Opens a dialog showing more information about the app, such as a full description, permissions required by the app, and links to your privacy policy and terms of service.</span></span>
+|<span data-ttu-id="3be5e-135">5 </span><span class="sxs-lookup"><span data-stu-id="3be5e-135">5</span></span>|<span data-ttu-id="3be5e-136">"**关闭" 按钮**：关闭模式。</span><span class="sxs-lookup"><span data-stu-id="3be5e-136">**Close button**: Closes the modal.</span></span>|
+|<span data-ttu-id="3be5e-137">6 </span><span class="sxs-lookup"><span data-stu-id="3be5e-137">6</span></span>|<span data-ttu-id="3be5e-138">**通知工作组成员选项**：模式询问您是否要创建一篇文章，让其他人知道您添加了一个选项卡。</span><span class="sxs-lookup"><span data-stu-id="3be5e-138">**Notify team members option**: The modal asks if you want to create a post letting others know you added a tab.</span></span>|
+|<span data-ttu-id="3be5e-139">7 </span><span class="sxs-lookup"><span data-stu-id="3be5e-139">7</span></span>|<span data-ttu-id="3be5e-140">"**后退" 按钮**：根据对话框打开的位置转到上一步。</span><span class="sxs-lookup"><span data-stu-id="3be5e-140">**Back button**: Goes to the previous step based on where the dialog opened.</span></span>|
+|<span data-ttu-id="3be5e-141">8 </span><span class="sxs-lookup"><span data-stu-id="3be5e-141">8</span></span>|<span data-ttu-id="3be5e-142">"**保存" 按钮**：完成选项卡设置。</span><span class="sxs-lookup"><span data-stu-id="3be5e-142">**Save button**: Completes tab setup.</span></span>|
 
-### <a name="flat-navigation"></a><span data-ttu-id="1155d-131">平面导航</span><span class="sxs-lookup"><span data-stu-id="1155d-131">Flat navigation</span></span>
+### <a name="tab-authentication-with-single-sign-on"></a><span data-ttu-id="3be5e-143">单一登录的选项卡身份验证</span><span class="sxs-lookup"><span data-stu-id="3be5e-143">Tab authentication with single sign-on</span></span>
 
-<span data-ttu-id="1155d-132">我们要求开发人员不要将其整个门户添加到选项卡中。保持导航相对平整有助于保持更简单的会话模式。</span><span class="sxs-lookup"><span data-stu-id="1155d-132">We ask developers not to add their entire portal to a tab. Keeping the navigation relatively flat helps maintain a simpler conversational model.</span></span> <span data-ttu-id="1155d-133">换言之，对话是关于事情的列表（如已会审的工作项）或一个内容（如规范）。</span><span class="sxs-lookup"><span data-stu-id="1155d-133">In other words, the conversation is about a list of things, such as triaged work items, or a single thing, like a spec.</span></span>
+<span data-ttu-id="3be5e-144">您可以添加用户首次使用其 Microsoft 凭据登录时必须登录的步骤。</span><span class="sxs-lookup"><span data-stu-id="3be5e-144">You can add a step in which users must first sign in with their Microsoft credentials.</span></span> <span data-ttu-id="3be5e-145">此身份验证方法称为 (SSO) 的单一登录。</span><span class="sxs-lookup"><span data-stu-id="3be5e-145">This authentication method is called single sign-on (SSO).</span></span>
 
-<span data-ttu-id="1155d-134">深入导航层次结构中有一些固有的导航挑战，在线程对话中。</span><span class="sxs-lookup"><span data-stu-id="1155d-134">There are inherent navigational challenges with deep navigation hierarchy, within threaded conversations.</span></span> <span data-ttu-id="1155d-135">为获得最佳用户体验，应将选项卡导航保持在最少，并按如下方式设计：</span><span class="sxs-lookup"><span data-stu-id="1155d-135">For the best user experience, your tab navigation should be kept to a minimum and be designed as follows:</span></span>
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="示例显示一个 tab 身份验证屏幕。" border="false":::
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="1155d-136">**打开一个任务模块，如单个工作项或实体**。</span><span class="sxs-lookup"><span data-stu-id="1155d-136">**Opens a task module such as an individual work item or entity**.</span></span> <span data-ttu-id="1155d-137">这将完全阻止聊天，并且是最佳选择，它是专门了解选项卡的聊天，而不是子实体或编辑体验。</span><span class="sxs-lookup"><span data-stu-id="1155d-137">This precludes chat entirely and is the best option to keep chat specifically about the tab and not the sub-entities or editing experiences.</span></span>
->* <span data-ttu-id="1155d-138">**在 iframe 中打开伪对话框**。</span><span class="sxs-lookup"><span data-stu-id="1155d-138">**Opens a pseudo dialog in an iframe**.</span></span> <span data-ttu-id="1155d-139">如果与屏蔽背景一起使用，我们建议使用较亮的颜色，而不是黑色。</span><span class="sxs-lookup"><span data-stu-id="1155d-139">If used with a screened background we recommend using the lighter color rather than the dark.</span></span> <span data-ttu-id="1155d-140">`app-gray-10 at 30%`透明度工作良好。</span><span class="sxs-lookup"><span data-stu-id="1155d-140">The `app-gray-10 at 30%` transparency works well.</span></span>
->* <span data-ttu-id="1155d-141">**打开浏览器页面**。</span><span class="sxs-lookup"><span data-stu-id="1155d-141">**Opens a browser page**.</span></span>
+### <a name="designing-a-tab-setup-with-ui-templates"></a><span data-ttu-id="3be5e-147">使用 UI 模板设计选项卡设置</span><span class="sxs-lookup"><span data-stu-id="3be5e-147">Designing a tab setup with UI templates</span></span>
 
-### <a name="personality"></a><span data-ttu-id="1155d-142">特征</span><span class="sxs-lookup"><span data-stu-id="1155d-142">Personality</span></span>
+<span data-ttu-id="3be5e-148">使用以下团队 UI 模板之一可帮助设计您的选项卡设置体验：</span><span class="sxs-lookup"><span data-stu-id="3be5e-148">Use one of the following Teams UI templates to help design your tab setup experience:</span></span>
 
-<span data-ttu-id="1155d-143">您的选项卡画布极有机会为你的体验提供品牌。</span><span class="sxs-lookup"><span data-stu-id="1155d-143">Your tab canvas presents a great opportunity to brand your experience.</span></span> <span data-ttu-id="1155d-144">您的徽标是标识的重要部分，与您的用户的连接。，因此请务必包含它：</span><span class="sxs-lookup"><span data-stu-id="1155d-144">Your logo is an important part of your identity and connection with your users., so be sure to include it:</span></span>
+* <span data-ttu-id="3be5e-149">[列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可浏览的格式显示相关项目，并允许用户对整个列表或单个项目执行操作。</span><span class="sxs-lookup"><span data-stu-id="3be5e-149">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
+* <span data-ttu-id="3be5e-150">[表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单以结构化方式收集、验证和提交用户输入。</span><span class="sxs-lookup"><span data-stu-id="3be5e-150">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
+* <span data-ttu-id="3be5e-151">[空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。</span><span class="sxs-lookup"><span data-stu-id="3be5e-151">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
 
-> [!div class="checklist"]
->
->* <span data-ttu-id="1155d-145">将徽标放置在左右角或沿下边缘</span><span class="sxs-lookup"><span data-stu-id="1155d-145">Place your logo in the left or right corner or along the bottom edge</span></span>
-> * <span data-ttu-id="1155d-146">保持您的徽标较小且不引人注目</span><span class="sxs-lookup"><span data-stu-id="1155d-146">Keep your logo small and unobtrusive</span></span>
+## <a name="view-a-tab"></a><span data-ttu-id="3be5e-152">查看选项卡</span><span class="sxs-lookup"><span data-stu-id="3be5e-152">View a tab</span></span>
 
-<span data-ttu-id="1155d-147">合并自己的颜色和布局 twill 也有助于传达个性。</span><span class="sxs-lookup"><span data-stu-id="1155d-147">Incorporating your own colors and layouts twill also aid in communicating personality.</span></span>
+<span data-ttu-id="3be5e-153">选项卡在团队中提供了全屏 web 体验，您可以在其中显示协作内容（如任务板和仪表板）以及重要信息。</span><span class="sxs-lookup"><span data-stu-id="3be5e-153">Tabs provide a full-screen web experience in Teams where you can display collaborative content—such task boards and dashboards—and important information.</span></span>
 
-> [!TIP]
-> <span data-ttu-id="1155d-148">请使用我们的视觉样式，让你的服务感觉像团队的一部分。</span><span class="sxs-lookup"><span data-stu-id="1155d-148">Please work with our visual style so your service feels like a part of Teams.</span></span> <span data-ttu-id="1155d-149">*请参阅* 示例 [团队颜色](../../concepts/design/components/color.md)</span><span class="sxs-lookup"><span data-stu-id="1155d-149">*See*, for example [Teams Colors](../../concepts/design/components/color.md)</span></span>
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="示例显示带有任务板的选项卡。" border="false":::
 
----
+### <a name="anatomy-tab"></a><span data-ttu-id="3be5e-155">剖析： Tab</span><span class="sxs-lookup"><span data-stu-id="3be5e-155">Anatomy: Tab</span></span>
 
-## <a name="tab-layouts"></a><span data-ttu-id="1155d-150">选项卡布局</span><span class="sxs-lookup"><span data-stu-id="1155d-150">Tab layouts</span></span>
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="显示选项卡的 UI 剖析的插图。" border="false":::
 
-[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
+|<span data-ttu-id="3be5e-157">计数器</span><span class="sxs-lookup"><span data-stu-id="3be5e-157">Counter</span></span>|<span data-ttu-id="3be5e-158">说明</span><span class="sxs-lookup"><span data-stu-id="3be5e-158">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="3be5e-159">1</span><span class="sxs-lookup"><span data-stu-id="3be5e-159">1</span></span>|<span data-ttu-id="3be5e-160">**选项卡名称**：选项卡的导航标签。</span><span class="sxs-lookup"><span data-stu-id="3be5e-160">**Tab name**: Navigation label for your tab.</span></span>|
+|<span data-ttu-id="3be5e-161">2 </span><span class="sxs-lookup"><span data-stu-id="3be5e-161">2</span></span>|<span data-ttu-id="3be5e-162">**选项卡溢出**：打开选项卡操作，例如 "重命名" 和 "删除"。</span><span class="sxs-lookup"><span data-stu-id="3be5e-162">**Tab overflow**: Opens tab actions, such as rename and remove.</span></span>|
+|<span data-ttu-id="3be5e-163">3 </span><span class="sxs-lookup"><span data-stu-id="3be5e-163">3</span></span>|<span data-ttu-id="3be5e-164">**选项卡聊天**：在右侧打开聊天线程，使用户可以在内容旁边进行对话。</span><span class="sxs-lookup"><span data-stu-id="3be5e-164">**Tab chat**: Opens a chat thread on the right, allowing users to have a conversation next to the content.</span></span>|
+|<span data-ttu-id="3be5e-165">4 </span><span class="sxs-lookup"><span data-stu-id="3be5e-165">4</span></span>|<span data-ttu-id="3be5e-166">**iframe**：显示您的选项卡的内容。</span><span class="sxs-lookup"><span data-stu-id="3be5e-166">**iframe**: Displays your tab’s content.</span></span>
 
----
+### <a name="designing-a-tab-with-ui-templates"></a><span data-ttu-id="3be5e-167">设计包含 UI 模板的选项卡</span><span class="sxs-lookup"><span data-stu-id="3be5e-167">Designing a tab with UI templates</span></span>
 
-## <a name="types-of-tabs"></a><span data-ttu-id="1155d-151">选项卡的类型</span><span class="sxs-lookup"><span data-stu-id="1155d-151">Types of tabs</span></span>
+<span data-ttu-id="3be5e-168">使用以下团队 UI 模板之一来帮助设计您的选项卡体验：</span><span class="sxs-lookup"><span data-stu-id="3be5e-168">Use one of the following Teams UI templates to help design your tab experience:</span></span>
 
-[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
+* <span data-ttu-id="3be5e-169">[列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可浏览的格式显示相关项目，并允许用户对整个列表或单个项目执行操作。</span><span class="sxs-lookup"><span data-stu-id="3be5e-169">[List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.</span></span>
+* <span data-ttu-id="3be5e-170">[任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为 "看板母板" 或 "泳道"）是用于跟踪工作项或票证状态的卡片的集合。</span><span class="sxs-lookup"><span data-stu-id="3be5e-170">[Task board](../../concepts/design/design-teams-app-ui-templates.md#task-board): A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets.</span></span>
+* <span data-ttu-id="3be5e-171">[仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard)：仪表板是一个包含多个卡片的画布，可提供数据或内容的概述。</span><span class="sxs-lookup"><span data-stu-id="3be5e-171">[Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.</span></span>
+* <span data-ttu-id="3be5e-172">[表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单以结构化方式收集、验证和提交用户输入。</span><span class="sxs-lookup"><span data-stu-id="3be5e-172">[Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.</span></span>
+* <span data-ttu-id="3be5e-173">[空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。</span><span class="sxs-lookup"><span data-stu-id="3be5e-173">[Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.</span></span>
+* <span data-ttu-id="3be5e-174">[左侧](../../concepts/design/design-teams-app-ui-templates.md#left-nav)导航：如果您的选项卡需要一些导航，则左侧导航模板可有所帮助。</span><span class="sxs-lookup"><span data-stu-id="3be5e-174">[Left nav](../../concepts/design/design-teams-app-ui-templates.md#left-nav): The left nav template can help if your tab requires some navigation.</span></span> <span data-ttu-id="3be5e-175">通常情况下，应保持最小的选项卡导航。</span><span class="sxs-lookup"><span data-stu-id="3be5e-175">In general, you should keep tab navigation to a minimum.</span></span>
 
----
+## <a name="use-a-tab-to-collaborate"></a><span data-ttu-id="3be5e-176">使用选项卡进行协作</span><span class="sxs-lookup"><span data-stu-id="3be5e-176">Use a tab to collaborate</span></span>
 
-## <a name="configuration-page-height"></a><span data-ttu-id="1155d-152">配置页高度</span><span class="sxs-lookup"><span data-stu-id="1155d-152">Configuration page height</span></span>
+<span data-ttu-id="3be5e-177">选项卡有助于促进有关中心位置中的内容的对话。</span><span class="sxs-lookup"><span data-stu-id="3be5e-177">Tabs help facilitate conversations about content in a central location.</span></span>
 
->[!IMPORTANT]
-><span data-ttu-id="1155d-153">在9月2018中，选项卡 [配置页面](~/tabs/how-to/create-tab-pages/configuration-page.md) 的高度增加，而宽度保持不变。</span><span class="sxs-lookup"><span data-stu-id="1155d-153">In September 2018, the height for the tab [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) was increased while the width remained unchanged.</span></span> <span data-ttu-id="1155d-154">如果您的应用程序是为较旧的大小设计的，则选项卡配置页将具有大量的垂直空白。</span><span class="sxs-lookup"><span data-stu-id="1155d-154">If your app is designed for the older size your tab configuration page will have a great deal of vertical whitespace.</span></span> <span data-ttu-id="1155d-155">从此更改中免除的旧版应用程序将需要在更新后与 Microsoft 联系，以适应新的维度。</span><span class="sxs-lookup"><span data-stu-id="1155d-155">Legacy store apps exempted from this change will need to contact Microsoft after updating to accommodate the new dimensions.</span></span>
+### <a name="thread-discussion"></a><span data-ttu-id="3be5e-178">线程讨论</span><span class="sxs-lookup"><span data-stu-id="3be5e-178">Thread discussion</span></span>
 
-<span data-ttu-id="1155d-156">选项卡配置页的尺寸：</span><span class="sxs-lookup"><span data-stu-id="1155d-156">The dimensions of the tab configuration page:</span></span>
+<span data-ttu-id="3be5e-179">用户在添加新选项卡后，可以自动将其发布到频道或聊天。这不仅会通知团队成员新内容并提供指向选项卡的链接，它还允许用户开始谈论选项卡。</span><span class="sxs-lookup"><span data-stu-id="3be5e-179">Users can automatically post to a channel or chat once they’ve added a new tab. This not only notifies team members of the new content and provides a link to tab, it allows people to start talking about the tab.</span></span>
 
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="示例显示了在通道线程中讨论的选项卡。" border="false":::
 
-<img width="450px" title="配置选项卡的大小" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+### <a name="side-by-side-discussion"></a><span data-ttu-id="3be5e-181">并排讨论</span><span class="sxs-lookup"><span data-stu-id="3be5e-181">Side-by-side discussion</span></span>
 
+<span data-ttu-id="3be5e-182">在查看该选项卡的内容时，用户可以进行对话。</span><span class="sxs-lookup"><span data-stu-id="3be5e-182">Users can have a conversation next while viewing the tab’s content.</span></span>
 
-### <a name="guidelines-for-tab-configuration-page-format"></a><span data-ttu-id="1155d-158">选项卡配置页面格式的准则</span><span class="sxs-lookup"><span data-stu-id="1155d-158">Guidelines for tab configuration page format</span></span>
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="示例显示右侧的 &quot;聊天&quot; 处于打开状态的选项卡。" border="false":::
 
-* <span data-ttu-id="1155d-159">使固定高度图形元素上的选项卡配置页的内容区域的最小高度为基准。</span><span class="sxs-lookup"><span data-stu-id="1155d-159">Base the minimum height of your content area of your tab configuration page on fixed-height graphic elements.</span></span>
-* <span data-ttu-id="1155d-160">使用) 的配置页面中的内容区域的高度计算可用的垂直空间 (`window.innerHeight` 。</span><span class="sxs-lookup"><span data-stu-id="1155d-160">Calculate available vertical space (the height of the content area in the configuration page) using `window.innerHeight`.</span></span> <span data-ttu-id="1155d-161">这将返回 `<iframe>` 配置页面所驻留的大小，在将来的版本中可能会发生更改。</span><span class="sxs-lookup"><span data-stu-id="1155d-161">This returns the size of the `<iframe>` in which your configuration page resides, which may change in future releases.</span></span> <span data-ttu-id="1155d-162">通过使用此值，你的内容将自动调整为将来的更改。</span><span class="sxs-lookup"><span data-stu-id="1155d-162">By using this value your content will adjust automatically to future changes.</span></span>
-* <span data-ttu-id="1155d-163">将垂直空间分配给可变高度元素减去固定高度元素所需的值。</span><span class="sxs-lookup"><span data-stu-id="1155d-163">Allocate vertical space to the variable-height elements minus what's needed for the fixed-height elements.</span></span>
-* <span data-ttu-id="1155d-164">对于 " *登录* 状态"，将内容垂直和水平居中。</span><span class="sxs-lookup"><span data-stu-id="1155d-164">For the *login* state, vertically and horizontally center the content.</span></span>
-* <span data-ttu-id="1155d-165">如果您需要背景图像，则需要一个新图像，调整大小以适合 (首选) 的区域，也可以保留相同的图像并在其中进行选择：</span><span class="sxs-lookup"><span data-stu-id="1155d-165">If you want a background image, you need either a new image, sized to fit the area (preferred), or you can keep the same image and choose between:</span></span>
-  * <span data-ttu-id="1155d-166">与左上角对齐。</span><span class="sxs-lookup"><span data-stu-id="1155d-166">aligning to the upper left hand corner.</span></span>
-  * <span data-ttu-id="1155d-167">将图像缩放到合适大小。</span><span class="sxs-lookup"><span data-stu-id="1155d-167">scaling the image to fit.</span></span>
+### <a name="permissions-and-role-based-views"></a><span data-ttu-id="3be5e-184">权限和基于角色的视图</span><span class="sxs-lookup"><span data-stu-id="3be5e-184">Permissions and role-based views</span></span>
 
-<span data-ttu-id="1155d-168">如果调整了适当的大小，您的选项卡配置页面应如下所示：</span><span class="sxs-lookup"><span data-stu-id="1155d-168">When properly sized, your tab configuration page should look similar to this:</span></span>
+<span data-ttu-id="3be5e-185">根据用户的权限，用户的选项卡体验可能有所不同。</span><span class="sxs-lookup"><span data-stu-id="3be5e-185">The tab experience may be different for users depending on their permissions.</span></span> <span data-ttu-id="3be5e-186">例如，一个用户无需登录即可访问该选项卡。</span><span class="sxs-lookup"><span data-stu-id="3be5e-186">For example, one user can access the tab without having to sign in.</span></span> <span data-ttu-id="3be5e-187">但是，另一个用户必须签名，并且将看到略有不同的内容。</span><span class="sxs-lookup"><span data-stu-id="3be5e-187">Another user, however, must sign and will see slightly different content.</span></span>
 
-<img width="450px" title=""新建配置" 选项卡" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
+## <a name="manage-a-tab"></a><span data-ttu-id="3be5e-188">管理选项卡</span><span class="sxs-lookup"><span data-stu-id="3be5e-188">Manage a tab</span></span>
 
-## <a name="best-practices"></a><span data-ttu-id="1155d-170">最佳做法</span><span class="sxs-lookup"><span data-stu-id="1155d-170">Best practices</span></span>
+<span data-ttu-id="3be5e-189">可以包括用于重命名、删除或修改选项卡的选项。</span><span class="sxs-lookup"><span data-stu-id="3be5e-189">You can include options to rename, remove, or modify a tab.</span></span>
 
-### <a name="always-include-a-default-state"></a><span data-ttu-id="1155d-171">始终包含默认状态</span><span class="sxs-lookup"><span data-stu-id="1155d-171">Always include a default state</span></span>
+### <a name="anatomy-tab-menu"></a><span data-ttu-id="3be5e-190">剖析：选项卡菜单</span><span class="sxs-lookup"><span data-stu-id="3be5e-190">Anatomy: Tab menu</span></span>
 
-<span data-ttu-id="1155d-172">如果您的选项卡是可配置的，则包括默认状态以使选项卡易于设置。</span><span class="sxs-lookup"><span data-stu-id="1155d-172">Include a default state to make tabs easy to set up even if your tab is configurable.</span></span>
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="显示选项卡菜单的 UI 剖析的插图。" border="false":::
 
-### <a name="deep-linking"></a><span data-ttu-id="1155d-173">深度链接</span><span class="sxs-lookup"><span data-stu-id="1155d-173">Deep linking</span></span>
+|<span data-ttu-id="3be5e-192">计数器</span><span class="sxs-lookup"><span data-stu-id="3be5e-192">Counter</span></span>|<span data-ttu-id="3be5e-193">说明</span><span class="sxs-lookup"><span data-stu-id="3be5e-193">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="3be5e-194">1</span><span class="sxs-lookup"><span data-stu-id="3be5e-194">1</span></span>|<span data-ttu-id="3be5e-195">**设置**： (可选) 允许用户在添加选项卡后修改该选项卡的设置。</span><span class="sxs-lookup"><span data-stu-id="3be5e-195">**Settings**: (Optional) Allows users to modify a tab’s settings after it’s been added.</span></span>|
+|<span data-ttu-id="3be5e-196">2 </span><span class="sxs-lookup"><span data-stu-id="3be5e-196">2</span></span>|<span data-ttu-id="3be5e-197">**重命名**：允许用户为选项卡提供对团队更有意义的名称。</span><span class="sxs-lookup"><span data-stu-id="3be5e-197">**Rename**: Allows users to give the tab a name that’s more meaningful to the team.</span></span>|
+|<span data-ttu-id="3be5e-198">3 </span><span class="sxs-lookup"><span data-stu-id="3be5e-198">3</span></span>|<span data-ttu-id="3be5e-199">**删除**：从频道、聊天或会议中删除选项卡。</span><span class="sxs-lookup"><span data-stu-id="3be5e-199">**Remove**: Removes the tab from the channel, chat, or meeting.</span></span>|
 
-<span data-ttu-id="1155d-174">只要有可能，卡片和 bot 应在承载的选项卡中深入链接到丰富的数据。例如，卡片可能会显示错误数据的摘要，但单击它可以在选项卡中显示整个 bug。</span><span class="sxs-lookup"><span data-stu-id="1155d-174">Whenever possible, cards and bots should deep link to richer data in a hosted tab. For example, a card may show a summary of bug data, but clicking it can shows the entire bug in a tab.</span></span>
+## <a name="tab-notifications-and-deep-linking"></a><span data-ttu-id="3be5e-200">选项卡通知和深层链接</span><span class="sxs-lookup"><span data-stu-id="3be5e-200">Tab notifications and deep linking</span></span>
 
-### <a name="naming"></a><span data-ttu-id="1155d-175">名称</span><span class="sxs-lookup"><span data-stu-id="1155d-175">Naming</span></span>
+<span data-ttu-id="3be5e-201">您可以向您的选项卡发送带有深层链接的邮件。例如，卡片显示了用户可以选择在选项卡中查看整个 bug 的 bug 数据的摘要。发送有关选项卡活动的邮件可提高感知功能，而无需明确通知每个人 (即，活动没有噪音) 。</span><span class="sxs-lookup"><span data-stu-id="3be5e-201">You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (i.e., activity without noise).</span></span> <span data-ttu-id="3be5e-202">如果需要，还可以 @mention 特定用户。</span><span class="sxs-lookup"><span data-stu-id="3be5e-202">You also can @mention specific users if needed.</span></span>
 
-<span data-ttu-id="1155d-176">在很多情况下，您的应用程序的名称将产生很好的选项卡名称。</span><span class="sxs-lookup"><span data-stu-id="1155d-176">In many cases, the name of your app will make a great tab name.</span></span> <span data-ttu-id="1155d-177">此外，还应考虑根据它们提供的功能命名选项卡。</span><span class="sxs-lookup"><span data-stu-id="1155d-177">But, also consider naming your tabs according to the functionality they provide.</span></span>
+<span data-ttu-id="3be5e-203">通过以下方式之一通知用户选项卡活动：</span><span class="sxs-lookup"><span data-stu-id="3be5e-203">Notify users of tab activity one of the following ways:</span></span>
 
-### <a name="multi-window"></a><span data-ttu-id="1155d-178">多窗口</span><span class="sxs-lookup"><span data-stu-id="1155d-178">Multi-window</span></span>
+* <span data-ttu-id="3be5e-204">**Bot**：此方法是首选的如果对 tab 线程线程设定。</span><span class="sxs-lookup"><span data-stu-id="3be5e-204">**Bot**: This method is preferred especially if the tab thread is targeted.</span></span> <span data-ttu-id="3be5e-205">该选项卡的线程对话在最近活动的视图中移动到视图中。</span><span class="sxs-lookup"><span data-stu-id="3be5e-205">The tab’s threaded conversation is moved into view as recently active.</span></span> <span data-ttu-id="3be5e-206">此方法还允许在通知的发送方式方面有一些复杂之处。</span><span class="sxs-lookup"><span data-stu-id="3be5e-206">This method also allows for some sophistication in how the notification is sent.</span></span>
+* <span data-ttu-id="3be5e-207">**消息**：在用户的活动源中显示一条消息，其中包含 [指向该选项卡的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="3be5e-207">**Message**: A message shows up in the user’s activity feed with a [deep link to the tab](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).</span></span>
 
-<span data-ttu-id="1155d-179">具有复杂编辑功能的频道选项卡必须在多窗口中打开编辑器视图，而不是在选项卡中打开。</span><span class="sxs-lookup"><span data-stu-id="1155d-179">Channel tabs that have complex editing capabilities must open the editor view in multi-window rather than a tab.</span></span>
+## <a name="best-practices"></a><span data-ttu-id="3be5e-208">最佳做法</span><span class="sxs-lookup"><span data-stu-id="3be5e-208">Best practices</span></span>
 
-### <a name="no-horizontal-scrolling"></a><span data-ttu-id="1155d-180">无水平滚动</span><span class="sxs-lookup"><span data-stu-id="1155d-180">No horizontal scrolling</span></span>
+### <a name="collaboration"></a><span data-ttu-id="3be5e-209">协作</span><span class="sxs-lookup"><span data-stu-id="3be5e-209">Collaboration</span></span>
 
-<span data-ttu-id="1155d-181">制表位不应具有水平滚动。</span><span class="sxs-lookup"><span data-stu-id="1155d-181">Tab should not have horizontal scrolling.</span></span>
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="图示演示如何处理选项卡导航设计。" border="false":::
 
-### <a name="easy-navigation"></a><span data-ttu-id="1155d-182">轻松导航</span><span class="sxs-lookup"><span data-stu-id="1155d-182">Easy navigation</span></span>
+#### <a name="do-facilitate-conversation"></a><span data-ttu-id="3be5e-211">Do：促进对话</span><span class="sxs-lookup"><span data-stu-id="3be5e-211">Do: Facilitate conversation</span></span>
 
-<span data-ttu-id="1155d-183">在选项卡应用程序中导航必须易于遵循，例如，在必要/适用的地方，页面具有以下内容：</span><span class="sxs-lookup"><span data-stu-id="1155d-183">Navigation inside a tab app must be easy to follow i.e. pages have the following where necessary/applicable:</span></span>
-* <span data-ttu-id="1155d-184">后退按钮</span><span class="sxs-lookup"><span data-stu-id="1155d-184">Back buttons</span></span>
-* <span data-ttu-id="1155d-185">页面页眉</span><span class="sxs-lookup"><span data-stu-id="1155d-185">Page headers</span></span>
-* <span data-ttu-id="1155d-186">导航</span><span class="sxs-lookup"><span data-stu-id="1155d-186">Breadcrumbs</span></span>
-* <span data-ttu-id="1155d-187">汉堡菜单</span><span class="sxs-lookup"><span data-stu-id="1155d-187">Hamburger menus</span></span>
+<span data-ttu-id="3be5e-212">包含人们可以谈论的内容和组件。</span><span class="sxs-lookup"><span data-stu-id="3be5e-212">Include content and components people can talk about.</span></span> <span data-ttu-id="3be5e-213">如果它不适合聊天、频道或会议的上下文，它不会显示在您的选项卡中。</span><span class="sxs-lookup"><span data-stu-id="3be5e-213">If it doesn’t fit within the context of a chat, channel, or meeting, it doesn’t belong in your tab.</span></span>
 
-### <a name="undo-last-action"></a><span data-ttu-id="1155d-188">撤消上一步操作</span><span class="sxs-lookup"><span data-stu-id="1155d-188">Undo last action</span></span>
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="图示演示了不使用选项卡导航设计。" border="false":::
 
-<span data-ttu-id="1155d-189">用户必须能够撤消其在应用中的最后一项操作。</span><span class="sxs-lookup"><span data-stu-id="1155d-189">User must be able to undo their last action in the app.</span></span>
+#### <a name="dont-treat-your-tab-like-any-other-webpage"></a><span data-ttu-id="3be5e-215">请勿：像其他网页那样处理选项卡</span><span class="sxs-lookup"><span data-stu-id="3be5e-215">Don't: Treat your tab like any other webpage</span></span>
 
-### <a name="share-content"></a><span data-ttu-id="1155d-190">共享内容</span><span class="sxs-lookup"><span data-stu-id="1155d-190">Share content</span></span>
+<span data-ttu-id="3be5e-216">一个选项卡不是某人可能只查看一次的网页。</span><span class="sxs-lookup"><span data-stu-id="3be5e-216">A tab isn’t a webpage someone might view once.</span></span> <span data-ttu-id="3be5e-217">选项卡应显示用户在实现这些功能时所需的最重要的相关内容。</span><span class="sxs-lookup"><span data-stu-id="3be5e-217">A tab should display your most important, relevant content that people need to accomplish something together.</span></span>
 
-<span data-ttu-id="1155d-191">个人应用应允许用户与其他团队成员共享个人应用程序体验中的内容。</span><span class="sxs-lookup"><span data-stu-id="1155d-191">Personal apps should enable users to share content from a personal app experience with other team members.</span></span> <span data-ttu-id="1155d-192">频道选项卡必须提供与主要团队导航相补充的导航，而不是与之冲突 (如左滑轨导航栏) 。</span><span class="sxs-lookup"><span data-stu-id="1155d-192">Channel tab must provide navigation that complements the main Teams navigation, rather than conflicting with it (such as left rail nav-bars).</span></span>
+   :::column-end:::
+:::row-end:::
 
-### <a name="single-view"></a><span data-ttu-id="1155d-193">单一视图</span><span class="sxs-lookup"><span data-stu-id="1155d-193">Single view</span></span>
+### <a name="navigation"></a><span data-ttu-id="3be5e-218">导航</span><span class="sxs-lookup"><span data-stu-id="3be5e-218">Navigation</span></span>
 
-<span data-ttu-id="1155d-194">个人应用应在单个视图中显示该应用程序的团队或组聊天范围实例的内容，例如，Trello 用户应能够在其个人应用程序的团队级别查看他们参与的所有 Trello 板实例。</span><span class="sxs-lookup"><span data-stu-id="1155d-194">Personal apps should present content from team or group chat scoped instances of that app in a single view, e.g., a Trello user should be able to see all instances of Trello boards they participate in at a team level in their personal app.</span></span>
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="图示演示如何处理选项卡导航设计。" border="false":::
 
-### <a name="no-app-bar"></a><span data-ttu-id="1155d-195">无应用程序栏</span><span class="sxs-lookup"><span data-stu-id="1155d-195">No app bar</span></span>
+#### <a name="do-limit-tasks-and-data"></a><span data-ttu-id="3be5e-220">操作：限制任务和数据</span><span class="sxs-lookup"><span data-stu-id="3be5e-220">Do: Limit tasks and data</span></span>
 
-<span data-ttu-id="1155d-196">选项卡不应提供带有与主团队导航相冲突的左侧导轨图标的应用程序栏。</span><span class="sxs-lookup"><span data-stu-id="1155d-196">Tabs should not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.</span></span>
+<span data-ttu-id="3be5e-221">在满足特定需求时，选项卡的工作效果最佳。</span><span class="sxs-lookup"><span data-stu-id="3be5e-221">Tabs work best when they address specific needs.</span></span> <span data-ttu-id="3be5e-222">包含与团队或组相关的一组有限的任务和数据。</span><span class="sxs-lookup"><span data-stu-id="3be5e-222">Include a limited set of tasks and data relevant to the team or group.</span></span>
 
-### <a name="navigation"></a><span data-ttu-id="1155d-197">导航</span><span class="sxs-lookup"><span data-stu-id="1155d-197">Navigation</span></span>
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="图示演示了不使用选项卡导航设计。" border="false":::
 
-<span data-ttu-id="1155d-198">在应用程序中，选项卡的导航级别不应超过3个。</span><span class="sxs-lookup"><span data-stu-id="1155d-198">Tabs should not have more than 3 levels of navigation within the app.</span></span>
+#### <a name="dont-embed-your-entire-app"></a><span data-ttu-id="3be5e-224">请勿：嵌入整个应用程序</span><span class="sxs-lookup"><span data-stu-id="3be5e-224">Don't: Embed your entire app</span></span>
 
-### <a name="l2l3-view"></a><span data-ttu-id="1155d-199">L2/L3 视图</span><span class="sxs-lookup"><span data-stu-id="1155d-199">L2/L3 view</span></span>
+<span data-ttu-id="3be5e-225">使用选项卡显示包含多级导航和复杂交互组件的整个应用程序将导致信息超载。</span><span class="sxs-lookup"><span data-stu-id="3be5e-225">Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.</span></span>
 
-<span data-ttu-id="1155d-200">选项卡中的第二页和第三页应在主选项卡区域中的 L2/L3 视图中打开，这是通过痕迹导航导航的。</span><span class="sxs-lookup"><span data-stu-id="1155d-200">Secondary and tertiary pages in a tab should be opened in an L2/L3 view in the main tab area that is navigated via the breadcrumb.</span></span>
+   :::column-end:::
+:::row-end:::
 
-### <a name="no-link-to-external-browser"></a><span data-ttu-id="1155d-201">无指向外部浏览器的链接</span><span class="sxs-lookup"><span data-stu-id="1155d-201">No link to external browser</span></span>
+### <a name="setup"></a><span data-ttu-id="3be5e-226">设置</span><span class="sxs-lookup"><span data-stu-id="3be5e-226">Setup</span></span>
 
-<span data-ttu-id="1155d-202">选项卡中的链接目标不应链接到外部浏览器，但应链接到包含在团队中的 div 元素。</span><span class="sxs-lookup"><span data-stu-id="1155d-202">Link targets in tabs should not link to an external browser but should link to div elements contained within Teams.</span></span> <span data-ttu-id="1155d-203">例如，在任务模块、选项卡等中。</span><span class="sxs-lookup"><span data-stu-id="1155d-203">For example, inside task Modules, tabs, etc.</span></span>
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="图中显示如何处理选项卡设置设计。" border="false":::
 
-## <a name="notifications-for-tabs"></a><span data-ttu-id="1155d-204">选项卡通知</span><span class="sxs-lookup"><span data-stu-id="1155d-204">Notifications for tabs</span></span>
+#### <a name="do-keep-it-simple"></a><span data-ttu-id="3be5e-228">操作：将其简化</span><span class="sxs-lookup"><span data-stu-id="3be5e-228">Do: Keep it simple</span></span>
 
-<span data-ttu-id="1155d-205">对于选项卡内容更改，有两种通知模式：</span><span class="sxs-lookup"><span data-stu-id="1155d-205">There are two modes of notification for tab content changes:</span></span>
+<span data-ttu-id="3be5e-229">如果您的应用程序需要身份验证，请尝试将 Microsoft single sign-on 集成 (SSO) ，以实现更无缝的登录体验。</span><span class="sxs-lookup"><span data-stu-id="3be5e-229">If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience.</span></span> <span data-ttu-id="3be5e-230">此外，仅包含必要的信息和添加该选项卡的步骤。</span><span class="sxs-lookup"><span data-stu-id="3be5e-230">Also, only include essential information and steps to add the tab.</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="1155d-206">**使用应用程序 API 将更改通知用户**。</span><span class="sxs-lookup"><span data-stu-id="1155d-206">**Use the app API to notify users of changes**.</span></span> <span data-ttu-id="1155d-207">此消息将显示在用户的活动源和指向该选项卡的深层链接中。 *请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )</span><span class="sxs-lookup"><span data-stu-id="1155d-207">This message will show up in the user’s activity feed and deep link to the tab. *See*  [Create deep links to content and features in Microsoft Teams](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )</span></span>
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="图中显示与选项卡设置设计无关的操作。" border="false":::
 
-> * <span data-ttu-id="1155d-208">**使用 bot**。</span><span class="sxs-lookup"><span data-stu-id="1155d-208">**Use a bot**.</span></span> <span data-ttu-id="1155d-209">如果为 Tab 线程的目标，则此方法是首选方法。</span><span class="sxs-lookup"><span data-stu-id="1155d-209">This method is preferred especially if the Tab thread is targeted.</span></span> <span data-ttu-id="1155d-210">结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。</span><span class="sxs-lookup"><span data-stu-id="1155d-210">The result will be that the tab’s threaded conversation will be moved into view as recently active.</span></span> <span data-ttu-id="1155d-211">此方法还允许在通知的发送方式方面有一些复杂之处。</span><span class="sxs-lookup"><span data-stu-id="1155d-211">This method also allows for some sophistication in how the notification is sent.</span></span>
+#### <a name="dont-have-too-many-steps"></a><span data-ttu-id="3be5e-232">请勿：执行过多的步骤</span><span class="sxs-lookup"><span data-stu-id="3be5e-232">Don't: Have too many steps</span></span>
 
-<span data-ttu-id="1155d-212">将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。</span><span class="sxs-lookup"><span data-stu-id="1155d-212">Sending a message to a tab thread increases the awareness of activity to all users without explicitly notifying everyone.</span></span> <span data-ttu-id="1155d-213">这是不带噪音的感知。</span><span class="sxs-lookup"><span data-stu-id="1155d-213">This is awareness without noise.</span></span> <span data-ttu-id="1155d-214">此外，当您 `@mention`  将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。</span><span class="sxs-lookup"><span data-stu-id="1155d-214">In addition, when you `@mention`  specific users the same notification will be placed in their feed, deep linking them to the tab thread directly.</span></span>
+<span data-ttu-id="3be5e-233">删除添加选项卡的任何不必要的步骤。</span><span class="sxs-lookup"><span data-stu-id="3be5e-233">Remove any unnecessary steps for adding a tab.</span></span>
 
-### <a name="tab-design-best-practices"></a><span data-ttu-id="1155d-215">选项卡设计最佳实践</span><span class="sxs-lookup"><span data-stu-id="1155d-215">Tab design best practices</span></span>
+   :::column-end:::
+:::row-end:::
 
-* <span data-ttu-id="1155d-216">个人/静态选项卡应使用户能够与其他团队成员共享个人应用程序体验中的内容。</span><span class="sxs-lookup"><span data-stu-id="1155d-216">Personal/Static tabs should enable users to share content from a personal app experience with another team members.</span></span>
-* <span data-ttu-id="1155d-217">"个人/静态" 选项卡可以在单个视图中显示来自 team 或 group chat 的应用程序范围实例的内容。</span><span class="sxs-lookup"><span data-stu-id="1155d-217">Personal/Static tabs may present content from team or group chat scoped instances of that app in a single view.</span></span>
-* <span data-ttu-id="1155d-218">选项卡中的链接目标不应链接到外部浏览器，但应链接到包含在团队中的 div 元素 (例如，内部、任务模块、选项卡等) 。</span><span class="sxs-lookup"><span data-stu-id="1155d-218">Link targets in tabs should not link to an external browser but should link to div elements contained within Teams (example-inside, task modules, tabs, etc).</span></span>
-* <span data-ttu-id="1155d-219">选项卡应响应团队主题。</span><span class="sxs-lookup"><span data-stu-id="1155d-219">Tabs should be responsive to Team’s themes.</span></span> <span data-ttu-id="1155d-220">当 "团队" 主题发生更改时，应用程序中的主题也应更改以反映该主题。</span><span class="sxs-lookup"><span data-stu-id="1155d-220">When the Teams theme is changed, the theme within the app should also change to reflect that theme.</span></span>
-* <span data-ttu-id="1155d-221">在可能的情况下，选项卡应使用团队样式的组件。</span><span class="sxs-lookup"><span data-stu-id="1155d-221">Tabs should use Teams-styled components where possible.</span></span> <span data-ttu-id="1155d-222">这意味着采用团队字体，键入斜坡、调色板、网格系统、动作、语音音频等。</span><span class="sxs-lookup"><span data-stu-id="1155d-222">It means adopting Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, etc.</span></span>
-* <span data-ttu-id="1155d-223">选项卡应将团队交互行为用于对话、信息层次结构等的页面内导航、定位和使用。</span><span class="sxs-lookup"><span data-stu-id="1155d-223">Tabs should use Teams interaction behaviors for in-page navigation, position, and use of dialogs, information hierarchies, etc.</span></span>
-* <span data-ttu-id="1155d-224">在应用程序内导航时，选项卡应使用标准团队汉堡菜单和/或痕迹。</span><span class="sxs-lookup"><span data-stu-id="1155d-224">Tabs should use the standard Teams hamburger menu and/or breadcrumb for in-app navigation.</span></span> <span data-ttu-id="1155d-225">选项卡不应提供带有与主团队导航相冲突的左侧导轨图标的应用程序栏。</span><span class="sxs-lookup"><span data-stu-id="1155d-225">Tabs should not provide an app bar with icons in the left rail that conflicts with the main Teams navigation.</span></span>
-* <span data-ttu-id="1155d-226">在应用程序中，选项卡的导航级别不应超过三个。</span><span class="sxs-lookup"><span data-stu-id="1155d-226">Tabs should not have more than three levels of navigation within the app.</span></span>
-* <span data-ttu-id="1155d-227">选项卡中的第二页和第三页应在主选项卡区域中的 L2/L3 视图中打开，这是通过痕迹导航导航的。</span><span class="sxs-lookup"><span data-stu-id="1155d-227">Secondary and tertiary pages in a tab should be opened in an L2/L3 view in the main tab area that is navigated via the breadcrumb.</span></span>
-* <span data-ttu-id="1155d-228">应用程序中具有复杂编辑功能的选项卡应在多窗口中打开编辑器视图，而不是在选项卡中打开桌面和 web) 的 (的选项卡。</span><span class="sxs-lookup"><span data-stu-id="1155d-228">Tabs that have complex editing capabilities within the app should open the editor view in multi-window rather than a tab (for desktop and web).</span></span>
-* <span data-ttu-id="1155d-229">若要改进用户体验，请在首次运行时向用户发送欢迎消息，并响应 " **hi**"、" **帮助**" 和 " **hello** " 命令，并提供个人 bot。</span><span class="sxs-lookup"><span data-stu-id="1155d-229">For improved user experience include a personal bot that sends a welcome message to the user on the first run and responds to the **hi**, **help**, and **hello** commands.</span></span> <span data-ttu-id="1155d-230">您可以参阅有关 [对话 bot](../../bots/what-are-bots.md#in-a-one-to-one-chat) 的文档以获取进一步帮助。</span><span class="sxs-lookup"><span data-stu-id="1155d-230">You can refer to the documentation on [conversational bots](../../bots/what-are-bots.md#in-a-one-to-one-chat) for further assistance.</span></span>
+### <a name="theming"></a><span data-ttu-id="3be5e-234">主题</span><span class="sxs-lookup"><span data-stu-id="3be5e-234">Theming</span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="图示演示如何处理选项卡主题。" border="false":::
+
+#### <a name="do-take-advantage-of-teams-color-tokens"></a><span data-ttu-id="3be5e-236">Do：利用团队颜色令牌</span><span class="sxs-lookup"><span data-stu-id="3be5e-236">Do: Take advantage of Teams color tokens</span></span>
+
+<span data-ttu-id="3be5e-237">每个团队主题都有自己的配色方案。</span><span class="sxs-lookup"><span data-stu-id="3be5e-237">Each Teams theme has its own color scheme.</span></span> <span data-ttu-id="3be5e-238">若要自动处理主题更改，请在设计中使用 <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank"> (熟知的 UI) 的颜色标记 </a> 。</span><span class="sxs-lookup"><span data-stu-id="3be5e-238">To handle theme changes automatically, use <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">color tokens (Fluent UI)</a> in your design.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="图中显示与选项卡主题无关的操作。" border="false":::
+
+#### <a name="dont-hard-code-color-values"></a><span data-ttu-id="3be5e-240">不：硬编码颜色值</span><span class="sxs-lookup"><span data-stu-id="3be5e-240">Don't: Hard code color values</span></span>
+
+<span data-ttu-id="3be5e-241">如果您不使用团队颜色令牌，则设计的可伸缩性较小并需要更多时间来管理。</span><span class="sxs-lookup"><span data-stu-id="3be5e-241">If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="validate-your-design"></a><span data-ttu-id="3be5e-242">验证设计</span><span class="sxs-lookup"><span data-stu-id="3be5e-242">Validate your design</span></span>
+
+<span data-ttu-id="3be5e-243">如果计划将应用程序发布到 AppSource，则应了解通常会在提交期间导致应用程序失败的设计问题。</span><span class="sxs-lookup"><span data-stu-id="3be5e-243">If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="3be5e-244">检查设计验证准则</span><span class="sxs-lookup"><span data-stu-id="3be5e-244">Check design validation guidelines</span></span>](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
