@@ -5,12 +5,12 @@ description: 创建团队会议的应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: 1be9763bdd81bdff7fa2a6f5b44d936dced6755a
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576825"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605229"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -24,13 +24,13 @@ ms.locfileid: "49576825"
 
 1. 某些会议 Api （如 `GetParticipant` 将需要 [机器人注册和 BOT 应用 ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) 生成身份验证令牌）。
 
-1. 作为开发人员，您必须遵循在团队会议期间触发的会议前和会议中对话框[的 "常规](design/designing-in-meeting-dialog.md)[团队" 选项卡设计指导方针](../tabs/design/tabs.md)。
+1. 作为开发人员，您必须遵循在团队会议期间触发的会议前和会议中对话框[的 "常规](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)[团队" 选项卡设计指导方针](../tabs/design/tabs.md)。
 
 1. 请注意，为了使您的应用程序实时更新，必须根据会议中的事件活动保持最新。 这些事件可以在会议中的对话框 (引用 `bot Id` `Notification Signal API` 会议生命周期的) 和其他表面中的完成参数
 
 ## <a name="meeting-apps-api-reference"></a>会议应用程序 API 参考
 
-|API|说明|请求|Source|
+|API|Description|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 获取上下文信息以在 "团队" 选项卡中显示相关内容。 |_**microsoftTeams getContext ( ( ) => {/*...*/} )**_|Microsoft 团队客户端 SDK|
 |**GetParticipant**|此 API 允许 bot 按会议 id 和参与者 id 提取参与者信息。|**获取** _**/v1/meetings/{meetingId}/participants/{participantId}？ tenantId = {tenantId}**_ |Microsoft Bot 框架 SDK|
@@ -75,7 +75,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**meetingId**| string | 是 | 会议标识符可通过 Bot 调用和团队客户端 SDK 获取。|
 |**participantId**| string | 是 | 此字段是用户 ID，可在选项卡 SSO、Bot 调用和团队客户端 SDK 中使用。 强烈建议使用 Tab SSO|
@@ -111,6 +111,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    }
 }
 ```
+
 #### <a name="response-codes"></a>响应代码
 
 **403**：不允许应用获取参与者信息。 这是最常见的错误响应，当应用程序未安装在会议中时（如租户管理员禁用或在实时网站迁移过程中被阻止）时，会触发此响应。  
@@ -137,7 +138,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**conversationId**| string | 是 | 会话标识符作为机器人 invoke 的一部分提供 |
 
@@ -146,7 +147,7 @@ POST /v3/conversations/{conversationId}/activities
 > [!NOTE]
 >
 > *  在下面请求的负载中， `completionBotId` 的参数 `externalResourceUrl` 是可选的。 它是 `Bot ID` 在清单中声明的。 机器人将接收到一个 result 对象。
-> * ExternalResourceUrl width 和 height 参数必须以像素为单位。 请参阅 [设计准则](design/designing-in-meeting-dialog.md) ，以确保尺寸在允许的限制范围内。
+> * ExternalResourceUrl width 和 height 参数必须以像素为单位。 请参阅 [设计准则](design/designing-apps-in-meetings.md) ，以确保尺寸在允许的限制范围内。
 > * URL 是 `<iframe>` 在会议对话中加载的页面。 URL 的域必须位于 `validDomains` 应用程序清单中的应用程序阵列中。
 
 
@@ -256,9 +257,9 @@ await context.sendActivity(replyActivity);
 > [!NOTE]
 > * 若要使您的应用程序在选项卡库中可见，它需要 **支持可配置的选项卡** 和 **组聊天作用域**。
 >
-> * 移动客户端仅支持准备会议和投递会议表面中的选项卡。 在会议中 (会议中的对话和面板) 的体验将很快推出。 创建移动电话选项卡时，请遵循 [移动电话上的选项卡指南](../tabs/design/tabs-mobile.md) 。 
+> * 移动客户端仅支持准备会议和投递会议表面中的选项卡。 移动版 (会议中的会议体验和选项卡) 将很快可用。 创建移动电话选项卡时，请遵循 [移动电话上的选项卡指南](../tabs/design/tabs-mobile.md) 。
 
-### <a name="pre-meeting"></a>会议前
+### <a name="before-a-meeting"></a>会议前
 
 拥有组织者和/或演示者角色的用户使用会议 **聊天** 和会议 **详细信息** 页中的加号➕按钮将选项卡添加到会议。 邮件扩展通过位于聊天的撰写邮件区域下的省略号/溢出菜单 &#x25CF;&#x25CF;&#x25CF; 添加到中。 将 bot 添加到会议聊天中，使用 " **@** " 键，然后选择 " **获取 bot**"。
 
@@ -268,7 +269,7 @@ await context.sendActivity(replyActivity);
 
 > **注意**：在会议进行过程中，可以更改角色分配。  *请参阅*[团队会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。 
 
-### <a name="in-meeting"></a>会议中
+### <a name="during-a-meeting"></a>会议期间
 
 #### <a name="sidepanel"></a>**sidePanel**
 
@@ -285,9 +286,9 @@ await context.sendActivity(replyActivity);
 
 ✔的 AppName 工作项-工具提示应声明应用程序名称在会议中的 U-条形图中。
 
-#### <a name="in-meeting-dialog"></a>**会议对话**
+#### <a name="in-meeting-dialog"></a>**会议内的对话框**
 
-✔您必须遵守 [会议中的对话框设计准则](design/designing-in-meeting-dialog.md)。
+✔您必须遵守 [会议中的对话框设计准则](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
 
 ✔引用 [选项卡的团队身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。
 
@@ -303,7 +304,7 @@ await context.sendActivity(replyActivity);
 >
 > * 如果您希望您的应用程序支持匿名用户，初始的调用请求负载必须依赖于 `from.id`  用户的 (ID) 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 用户) 请求元数据的 (AZURE Active Directory ID。 *请参阅*[在选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md)和 [创建并发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
-### <a name="post-meeting"></a>会议后
+### <a name="after-a-meeting"></a>会议后
 
 会议后和会议前配置是等效的。
 

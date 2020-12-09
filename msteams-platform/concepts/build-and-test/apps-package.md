@@ -1,14 +1,13 @@
 ---
 title: 打包应用程序
-description: 了解如何打包应用程序以在 Microsoft 团队中进行测试、上载和发布
-keywords: 团队应用程序打包
+description: 了解如何打包 Microsoft 团队应用程序以进行测试、上载和存储发布。
 ms.topic: conceptual
-ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 6929375c8d6a1602f01d83d15bfa0dab7f02a664
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552568"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605265"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>为 Microsoft 团队应用程序创建应用程序包
 
@@ -16,8 +15,8 @@ ms.locfileid: "49552568"
 
 团队应用程序包是一个 .zip 文件，其中包含以下内容：
 
-* 一个名为 "manifest.json" 的清单文件，它指定您的应用程序的属性，并指向您的体验所需的资源，如其选项卡配置页或其机器人的 Microsoft 应用 ID 的位置。
-* 透明的 "大纲" 图标和完整的 "颜色" 图标。 有关详细信息，请参阅本主题后面的 [图标](#icons) 。
+* 一个名为的清单文件 `manifest.json` ，它指定应用程序的属性，并指向您的体验所需的资源，如其选项卡配置页或其机器人的 Microsoft 应用 ID 的位置。
+* [您的应用程序的颜色和边框图标](#app-icons)。
 
 ## <a name="creating-a-manifest"></a>创建指令清单
 
@@ -30,43 +29,65 @@ ms.locfileid: "49552568"
 >
 > `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
-## <a name="icons"></a>图标
+## <a name="app-icons"></a>应用程序图标
+
+您的应用程序包必须包含应用程序图标的两个 PNG 版本（彩色图标和大纲图标）。 为了使您的应用程序通过 AppSource 审阅，这些图标必须满足以下大小要求。
 
 > [!Note]
-> 如果您的应用程序包含机器人或邮件扩展，则使用的图标将是上载到 bot 框架中的 bot 注册的图标。
+> 如果你的应用程序具有机器人或邮件扩展，你的图标也将包含在 Microsoft Azure Bot 服务注册中。
 
-Microsoft 团队需要两个图标来满足你的应用程序体验，才能在产品中使用。 图标必须包含在包中，并通过清单中的相对路径引用。 每个路径的最大长度为2048个字节，图标的格式为 .png。
+### <a name="color-icon"></a>颜色图标
 
-### <a name="color"></a>颜色
+您的图标的颜色版本在大多数团队场景中显示，并且必须为192x192 像素。 您的图标符号 (96x96 像素) 可以是任何颜色或颜色，但它必须位于一个纯或完全透明的方形背景上。
 
-该 `color` 图标在 Microsoft 团队中 (在应用程序和选项卡库、bot、flyouts 等) 中。 此图标应为192x192 像素。 您的图标可以是任何颜色 (或颜色) ，但背景应为您的品牌化的强调文字颜色。 它还应在图标周围具有少量的填充，以适应图标的 bot 版本的六角裁剪。
+团队将自动裁剪图标，以在多个场景中显示带圆角的方形，在 bot 方案中显示一个六角形。 在符号周围包含48像素的填充，以便可以进行这些裁剪，而不会丢失任何细节。
 
-### <a name="outline"></a>outline
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="团队颜色图标设计指南。" border="false":::
 
-`outline`在以下位置使用图标：用户已将其标记为 "收藏夹" 的应用栏和邮件扩展。 此图标必须为32x32 像素。 大纲图标必须仅包含白色和透明度 (不) 其他颜色。 图标可以是白色背景，也可以是透明背景。 大纲图标周围的图标周围不应有额外的填充，应尽可能紧密地裁剪，同时仍保持32x32 尺寸。 以下是几个很棒的示例：
+### <a name="outline-icon"></a>大纲图标
 
-![示例大纲图标](~/assets/images/icons/sample20x20s.png)
+在以下两种情况下，大纲图标将显示：
 
-[!创建透明图标的提示]
+* 当您的应用程序在团队左侧的应用程序栏上使用并 "已提升"。
+* 当用户锁定您的应用程序的邮件扩展时。
 
-* 颜色必须是 RGB 中的 "白色"， (红色：255，绿色：255，蓝色： 255) 。
-* 图标的所有其他部分都应是透明的。
-* 对于传递，小图标必须为完全透明，alpha 通道值为0，任何其他值都将失败。
+图标必须是32x32 像素。 它可以是白色的透明背景，也可以是透明的白色背景 (不允许任何其他颜色) 。 大纲图标周围的符号不应包含任何额外的填充。
 
-例如，假设您的公司是 Contoso。 您可以提交两个图标：
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="团队颜色图标设计指南。" border="false":::
 
-![图标展示](~/assets/images/framework/framework_submit_icon.png)
+### <a name="best-practices"></a>最佳做法
 
-以下是图标在 UI 中的显示方式：
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="演示如何设计应用图标。" border="false":::
 
-#### <a name="bot-and-chiclet-in-channel-view"></a>通道视图中的 Bot 和 chiclet
+#### <a name="do-follow-the-precise-outline-icon-guidelines"></a>操作：遵循精确的大纲图标准则
 
-![Bot 和 chiclet UX](~/assets/images/icons/botandchiclet.png)
+您的图标中使用的白色的 RGB 值必须为红色：255、绿色：255、蓝色：255。 大纲图标的所有其他部分必须完全透明，alpha 通道设置为0。
 
-#### <a name="flyout"></a>弹出
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="演示如何不设计应用图标。" border="false":::
 
-![示例 Contoso 浮出控件](~/assets/images/icons/flyout.png)
+#### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>不：在圆形或圆角方形形状中裁剪
 
-#### <a name="app-bar-and-home-screen"></a>应用栏和主屏幕
+您的应用程序包中提交的颜色图标必须是方形。 不四舍五入图标的角。 团队自动调整拐角的半径。
 
-![示例 Contoso 应用程序栏 homescreen](~/assets/images/icons/appbarhomescreen.png)
+   :::column-end:::
+:::row-end:::
+
+### <a name="examples"></a>示例
+
+下面介绍了应用程序图标在不同的团队功能和上下文中的显示方式。
+
+#### <a name="personal-app"></a>个人应用程序
+
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="示例：显示应用程序图标在个人应用程序中的外观。" border="false":::
+
+#### <a name="bot-channel"></a>Bot (频道) 
+
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="示例：显示应用程序图标在频道内的机器人的外观。" border="false":::
+
+#### <a name="messaging-extension"></a>消息扩展
+
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt 文本>" border="false":::

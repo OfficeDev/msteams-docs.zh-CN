@@ -1,201 +1,236 @@
 ---
-title: 选项卡的设计准则
-description: 介绍为内容和协作创建选项卡的准则
-keywords: 团队设计指南参考框架选项卡配置通道选项卡静态选项卡 "简单选项卡设计工作组" 选项卡
-ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+title: 设计桌面和 web 的选项卡
+description: 了解如何设计 "团队" 选项卡 (桌面和 web) 并获取 Microsoft 团队 UI 工具包。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 692a21c78dc86cbca5bf248e55d0332bd71c6b92
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576860"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604654"
 ---
-# <a name="content-and-conversations-all-at-once-using-tabs"></a>内容和对话，所有使用选项卡一次
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>设计用于 Microsoft 团队桌面和 web 的选项卡
 
-> [!Important]
-> **移动客户端上的选项卡**
->
-> 创建选项卡时，请遵循 [移动电话上的选项卡指南](./tabs-mobile.md) 。 如果您的选项卡使用身份验证，则必须将团队 JavaScript SDK 升级到版本1.4.1 或更高版本，否则身份验证将失败。
->
-> **移动设备上的频道/组 (可配置) 选项卡：**
->
-> * 移动客户端仅显示具有值的可配置选项卡 `websiteUrl` 。 如果希望您的选项卡显示在团队移动客户端上，则必须设置的值 `websiteUrl` 。
-> * 移动上的默认打开行为是使用在浏览器中的外部打开 `websiteUrl` 。 对于发布到公用应用商店的应用程序，如果您希望频道选项卡在默认情况下在团队内打开，请遵循 [移动电话上的选项卡指南](~/tabs/design/tabs-mobile.md)，并转到您的支持代表以请求列入白名单。
+选项卡是用于便于协作的内容的大型画布。 若要指导您的应用程序设计，以下信息介绍并说明了用户如何在团队中添加、使用和管理选项卡。
 
-选项卡是可用于在团队的随机工作流中共享内容、举行对话和托管第三方服务的画布。 当您在 Microsoft 团队中构建一个选项卡时，它会将 web 应用程序的前端和中心放置在易于从关键对话中访问的位置。
+## <a name="microsoft-teams-ui-kit"></a>Microsoft 团队 UI 工具包
 
-## <a name="guidelines"></a>准则
+您可以在 Microsoft 团队 UI 工具包中找到全面的选项卡设计指南，包括您可以在需要时获取和修改的元素。 UI 工具包还包含此处未介绍的辅助功能和响应大小等基本主题。
 
-一个合适的选项卡应显示以下特征：
+> [!div class="nextstepaction"]
+> [ (Figma) 获取 Microsoft 团队 UI 工具包 ](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="focused-functionality"></a>重点功能
+## <a name="add-a-tab"></a>添加选项卡
 
-当为满足特定需求而构建时，选项卡的工作效果最佳。 将重点放在一小部分任务或与选项卡所在通道相关的一组数据。
+您可以从 "团队" 存储 ("AppSource") 或以下上下文之一添加选项卡：
 
-### <a name="reduced-chrome"></a>简化 chrome
+* 聊天
+* 频道
+* 会议 (之前、会议期间或会议之后) 
 
-避免在选项卡中创建多个面板、添加导航层或要求用户在一个选项卡中垂直和水平滚动。换言之，请不要在选项卡中包含选项卡。
+下面的示例演示如何在通道中添加制表符。
 
-### <a name="integration"></a>集成
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="示例显示在通道中添加的选项卡。" border="false":::
 
-通过将 [自适应卡](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) 发布到对话中，查找通知用户有关选项卡活动的方法。
+## <a name="set-up-a-tab"></a>设置选项卡
 
-### <a name="conversational"></a>对话
+有一个将应用添加为频道、聊天或会议选项卡的短安装过程。体验主要由你来掌握。 例如，您可以对如何使用应用程序和一些可选设置进行说明。 如果需要对用户进行身份验证，请在此处加入登录步骤。
 
-寻找一种有助于围绕选项卡进行对话的方法。这样可确保在现有内容、数据或流程上进行对话中心。
+### <a name="tab-configuration-modal"></a>选项卡配置模式
 
-### <a name="streamlined-access"></a>精简访问
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="示例显示了选项卡配置模式。" border="false":::
 
-请确保在适当的时间授予对正确人员的访问权限。 保持您的登录过程很简单将避免为发布和协作创建障碍。
+### <a name="anatomy-tab-configuration-modal"></a>剖析：选项卡配置模式
 
-### <a name="responsiveness-to-window-sizing"></a>对窗口大小的响应
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="显示选项卡配置模式的 UI 剖析的插图。" border="false":::
 
-在窗口大小中，可以将团队用作720px，以确保在小窗口中可用的选项卡与极高分辨率的可用性同样重要。
+|计数器|说明|
+|----------|-----------|
+|1|**应用徽标**：应用的完整颜色应用徽标。|
+|2 |**应用程序名称**：应用程序的完整名称。|
+|3 |**iframe**：应用内容的响应空间 (例如，选项卡设置或身份验证) 。|
+|4 |**关于链接**：打开一个对话框，显示有关该应用程序的详细信息，如完整说明、应用程序所需的权限以及指向您的隐私策略和服务条款的链接。
+|5 |"**关闭" 按钮**：关闭模式。|
+|6 |**通知工作组成员选项**：模式询问您是否要创建一篇文章，让其他人知道您添加了一个选项卡。|
+|7 |"**后退" 按钮**：根据对话框打开的位置转到上一步。|
+|8 |"**保存" 按钮**：完成选项卡设置。|
 
-### <a name="flat-navigation"></a>平面导航
+### <a name="tab-authentication-with-single-sign-on"></a>单一登录的选项卡身份验证
 
-我们要求开发人员不要将其整个门户添加到选项卡中。保持导航相对平整有助于保持更简单的会话模式。 换言之，对话是关于事情的列表（如已会审的工作项）或一个内容（如规范）。
+您可以添加用户首次使用其 Microsoft 凭据登录时必须登录的步骤。 此身份验证方法称为 (SSO) 的单一登录。
 
-深入导航层次结构中有一些固有的导航挑战，在线程对话中。 为获得最佳用户体验，应将选项卡导航保持在最少，并按如下方式设计：
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="示例显示一个 tab 身份验证屏幕。" border="false":::
 
-> [!div class="checklist"]
->
-> * **打开一个任务模块，如单个工作项或实体**。 这将完全阻止聊天，并且是最佳选择，它是专门了解选项卡的聊天，而不是子实体或编辑体验。
->* **在 iframe 中打开伪对话框**。 如果与屏蔽背景一起使用，我们建议使用较亮的颜色，而不是黑色。 `app-gray-10 at 30%`透明度工作良好。
->* **打开浏览器页面**。
+### <a name="designing-a-tab-setup-with-ui-templates"></a>使用 UI 模板设计选项卡设置
 
-### <a name="personality"></a>特征
+使用以下团队 UI 模板之一可帮助设计您的选项卡设置体验：
 
-您的选项卡画布极有机会为你的体验提供品牌。 您的徽标是标识的重要部分，与您的用户的连接。，因此请务必包含它：
+* [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可浏览的格式显示相关项目，并允许用户对整个列表或单个项目执行操作。
+* [表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单以结构化方式收集、验证和提交用户输入。
+* [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。
 
-> [!div class="checklist"]
->
->* 将徽标放置在左右角或沿下边缘
-> * 保持您的徽标较小且不引人注目
+## <a name="view-a-tab"></a>查看选项卡
 
-合并自己的颜色和布局 twill 也有助于传达个性。
+选项卡在团队中提供了全屏 web 体验，您可以在其中显示协作内容（如任务板和仪表板）以及重要信息。
 
-> [!TIP]
-> 请使用我们的视觉样式，让你的服务感觉像团队的一部分。 *请参阅* 示例 [团队颜色](../../concepts/design/components/color.md)
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="示例显示带有任务板的选项卡。" border="false":::
 
----
+### <a name="anatomy-tab"></a>剖析： Tab
 
-## <a name="tab-layouts"></a>选项卡布局
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="显示选项卡的 UI 剖析的插图。" border="false":::
 
-[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
+|计数器|说明|
+|----------|-----------|
+|1|**选项卡名称**：选项卡的导航标签。|
+|2 |**选项卡溢出**：打开选项卡操作，例如 "重命名" 和 "删除"。|
+|3 |**选项卡聊天**：在右侧打开聊天线程，使用户可以在内容旁边进行对话。|
+|4 |**iframe**：显示您的选项卡的内容。
 
----
+### <a name="designing-a-tab-with-ui-templates"></a>设计包含 UI 模板的选项卡
 
-## <a name="types-of-tabs"></a>选项卡的类型
+使用以下团队 UI 模板之一来帮助设计您的选项卡体验：
 
-[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
+* [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可浏览的格式显示相关项目，并允许用户对整个列表或单个项目执行操作。
+* [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为 "看板母板" 或 "泳道"）是用于跟踪工作项或票证状态的卡片的集合。
+* [仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard)：仪表板是一个包含多个卡片的画布，可提供数据或内容的概述。
+* [表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单以结构化方式收集、验证和提交用户输入。
+* [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。
+* [左侧](../../concepts/design/design-teams-app-ui-templates.md#left-nav)导航：如果您的选项卡需要一些导航，则左侧导航模板可有所帮助。 通常情况下，应保持最小的选项卡导航。
 
----
+## <a name="use-a-tab-to-collaborate"></a>使用选项卡进行协作
 
-## <a name="configuration-page-height"></a>配置页高度
+选项卡有助于促进有关中心位置中的内容的对话。
 
->[!IMPORTANT]
->在9月2018中，选项卡 [配置页面](~/tabs/how-to/create-tab-pages/configuration-page.md) 的高度增加，而宽度保持不变。 如果您的应用程序是为较旧的大小设计的，则选项卡配置页将具有大量的垂直空白。 从此更改中免除的旧版应用程序将需要在更新后与 Microsoft 联系，以适应新的维度。
+### <a name="thread-discussion"></a>线程讨论
 
-选项卡配置页的尺寸：
+用户在添加新选项卡后，可以自动将其发布到频道或聊天。这不仅会通知团队成员新内容并提供指向选项卡的链接，它还允许用户开始谈论选项卡。
 
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="示例显示了在通道线程中讨论的选项卡。" border="false":::
 
-<img width="450px" title="配置选项卡的大小" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+### <a name="side-by-side-discussion"></a>并排讨论
 
+在查看该选项卡的内容时，用户可以进行对话。
 
-### <a name="guidelines-for-tab-configuration-page-format"></a>选项卡配置页面格式的准则
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="示例显示右侧的 &quot;聊天&quot; 处于打开状态的选项卡。" border="false":::
 
-* 使固定高度图形元素上的选项卡配置页的内容区域的最小高度为基准。
-* 使用) 的配置页面中的内容区域的高度计算可用的垂直空间 (`window.innerHeight` 。 这将返回 `<iframe>` 配置页面所驻留的大小，在将来的版本中可能会发生更改。 通过使用此值，你的内容将自动调整为将来的更改。
-* 将垂直空间分配给可变高度元素减去固定高度元素所需的值。
-* 对于 " *登录* 状态"，将内容垂直和水平居中。
-* 如果您需要背景图像，则需要一个新图像，调整大小以适合 (首选) 的区域，也可以保留相同的图像并在其中进行选择：
-  * 与左上角对齐。
-  * 将图像缩放到合适大小。
+### <a name="permissions-and-role-based-views"></a>权限和基于角色的视图
 
-如果调整了适当的大小，您的选项卡配置页面应如下所示：
+根据用户的权限，用户的选项卡体验可能有所不同。 例如，一个用户无需登录即可访问该选项卡。 但是，另一个用户必须签名，并且将看到略有不同的内容。
 
-<img width="450px" title=""新建配置" 选项卡" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
+## <a name="manage-a-tab"></a>管理选项卡
+
+可以包括用于重命名、删除或修改选项卡的选项。
+
+### <a name="anatomy-tab-menu"></a>剖析：选项卡菜单
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="显示选项卡菜单的 UI 剖析的插图。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|1|**设置**： (可选) 允许用户在添加选项卡后修改该选项卡的设置。|
+|2 |**重命名**：允许用户为选项卡提供对团队更有意义的名称。|
+|3 |**删除**：从频道、聊天或会议中删除选项卡。|
+
+## <a name="tab-notifications-and-deep-linking"></a>选项卡通知和深层链接
+
+您可以向您的选项卡发送带有深层链接的邮件。例如，卡片显示了用户可以选择在选项卡中查看整个 bug 的 bug 数据的摘要。发送有关选项卡活动的邮件可提高感知功能，而无需明确通知每个人 (即，活动没有噪音) 。 如果需要，还可以 @mention 特定用户。
+
+通过以下方式之一通知用户选项卡活动：
+
+* **Bot**：此方法是首选的如果对 tab 线程线程设定。 该选项卡的线程对话在最近活动的视图中移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
+* **消息**：在用户的活动源中显示一条消息，其中包含 [指向该选项卡的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)。
 
 ## <a name="best-practices"></a>最佳做法
 
-### <a name="always-include-a-default-state"></a>始终包含默认状态
+### <a name="collaboration"></a>协作
 
-如果您的选项卡是可配置的，则包括默认状态以使选项卡易于设置。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="图示演示如何处理选项卡导航设计。" border="false":::
 
-### <a name="deep-linking"></a>深度链接
+#### <a name="do-facilitate-conversation"></a>Do：促进对话
 
-只要有可能，卡片和 bot 应在承载的选项卡中深入链接到丰富的数据。例如，卡片可能会显示错误数据的摘要，但单击它可以在选项卡中显示整个 bug。
+包含人们可以谈论的内容和组件。 如果它不适合聊天、频道或会议的上下文，它不会显示在您的选项卡中。
 
-### <a name="naming"></a>名称
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="图示演示了不使用选项卡导航设计。" border="false":::
 
-在很多情况下，您的应用程序的名称将产生很好的选项卡名称。 此外，还应考虑根据它们提供的功能命名选项卡。
+#### <a name="dont-treat-your-tab-like-any-other-webpage"></a>请勿：像其他网页那样处理选项卡
 
-### <a name="multi-window"></a>多窗口
+一个选项卡不是某人可能只查看一次的网页。 选项卡应显示用户在实现这些功能时所需的最重要的相关内容。
 
-具有复杂编辑功能的频道选项卡必须在多窗口中打开编辑器视图，而不是在选项卡中打开。
-
-### <a name="no-horizontal-scrolling"></a>无水平滚动
-
-制表位不应具有水平滚动。
-
-### <a name="easy-navigation"></a>轻松导航
-
-在选项卡应用程序中导航必须易于遵循，例如，在必要/适用的地方，页面具有以下内容：
-* 后退按钮
-* 页面页眉
-* 导航
-* 汉堡菜单
-
-### <a name="undo-last-action"></a>撤消上一步操作
-
-用户必须能够撤消其在应用中的最后一项操作。
-
-### <a name="share-content"></a>共享内容
-
-个人应用应允许用户与其他团队成员共享个人应用程序体验中的内容。 频道选项卡必须提供与主要团队导航相补充的导航，而不是与之冲突 (如左滑轨导航栏) 。
-
-### <a name="single-view"></a>单一视图
-
-个人应用应在单个视图中显示该应用程序的团队或组聊天范围实例的内容，例如，Trello 用户应能够在其个人应用程序的团队级别查看他们参与的所有 Trello 板实例。
-
-### <a name="no-app-bar"></a>无应用程序栏
-
-选项卡不应提供带有与主团队导航相冲突的左侧导轨图标的应用程序栏。
+   :::column-end:::
+:::row-end:::
 
 ### <a name="navigation"></a>导航
 
-在应用程序中，选项卡的导航级别不应超过3个。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="图示演示如何处理选项卡导航设计。" border="false":::
 
-### <a name="l2l3-view"></a>L2/L3 视图
+#### <a name="do-limit-tasks-and-data"></a>操作：限制任务和数据
 
-选项卡中的第二页和第三页应在主选项卡区域中的 L2/L3 视图中打开，这是通过痕迹导航导航的。
+在满足特定需求时，选项卡的工作效果最佳。 包含与团队或组相关的一组有限的任务和数据。
 
-### <a name="no-link-to-external-browser"></a>无指向外部浏览器的链接
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="图示演示了不使用选项卡导航设计。" border="false":::
 
-选项卡中的链接目标不应链接到外部浏览器，但应链接到包含在团队中的 div 元素。 例如，在任务模块、选项卡等中。
+#### <a name="dont-embed-your-entire-app"></a>请勿：嵌入整个应用程序
 
-## <a name="notifications-for-tabs"></a>选项卡通知
+使用选项卡显示包含多级导航和复杂交互组件的整个应用程序将导致信息超载。
 
-对于选项卡内容更改，有两种通知模式：
+   :::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
->
-> * **使用应用程序 API 将更改通知用户**。 此消息将显示在用户的活动源和指向该选项卡的深层链接中。 *请参阅*  [创建指向 Microsoft 团队中的内容和功能的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true )
+### <a name="setup"></a>设置
 
-> * **使用 bot**。 如果为 Tab 线程的目标，则此方法是首选方法。 结果将是，选项卡的线程对话将作为最近活动的视图移动到视图中。 此方法还允许在通知的发送方式方面有一些复杂之处。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="图中显示如何处理选项卡设置设计。" border="false":::
 
-将邮件发送到选项卡线程可将对所有用户的活动的感知提高到所有用户，而无需明确通知每个人。 这是不带噪音的感知。 此外，当您 `@mention`  将特定用户的通知放在其源中时，会将它们直接链接到 tab 线程。
+#### <a name="do-keep-it-simple"></a>操作：将其简化
 
-### <a name="tab-design-best-practices"></a>选项卡设计最佳实践
+如果您的应用程序需要身份验证，请尝试将 Microsoft single sign-on 集成 (SSO) ，以实现更无缝的登录体验。 此外，仅包含必要的信息和添加该选项卡的步骤。
 
-* 个人/静态选项卡应使用户能够与其他团队成员共享个人应用程序体验中的内容。
-* "个人/静态" 选项卡可以在单个视图中显示来自 team 或 group chat 的应用程序范围实例的内容。
-* 选项卡中的链接目标不应链接到外部浏览器，但应链接到包含在团队中的 div 元素 (例如，内部、任务模块、选项卡等) 。
-* 选项卡应响应团队主题。 当 "团队" 主题发生更改时，应用程序中的主题也应更改以反映该主题。
-* 在可能的情况下，选项卡应使用团队样式的组件。 这意味着采用团队字体，键入斜坡、调色板、网格系统、动作、语音音频等。
-* 选项卡应将团队交互行为用于对话、信息层次结构等的页面内导航、定位和使用。
-* 在应用程序内导航时，选项卡应使用标准团队汉堡菜单和/或痕迹。 选项卡不应提供带有与主团队导航相冲突的左侧导轨图标的应用程序栏。
-* 在应用程序中，选项卡的导航级别不应超过三个。
-* 选项卡中的第二页和第三页应在主选项卡区域中的 L2/L3 视图中打开，这是通过痕迹导航导航的。
-* 应用程序中具有复杂编辑功能的选项卡应在多窗口中打开编辑器视图，而不是在选项卡中打开桌面和 web) 的 (的选项卡。
-* 若要改进用户体验，请在首次运行时向用户发送欢迎消息，并响应 " **hi**"、" **帮助**" 和 " **hello** " 命令，并提供个人 bot。 您可以参阅有关 [对话 bot](../../bots/what-are-bots.md#in-a-one-to-one-chat) 的文档以获取进一步帮助。
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="图中显示与选项卡设置设计无关的操作。" border="false":::
+
+#### <a name="dont-have-too-many-steps"></a>请勿：执行过多的步骤
+
+删除添加选项卡的任何不必要的步骤。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="theming"></a>主题
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="图示演示如何处理选项卡主题。" border="false":::
+
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do：利用团队颜色令牌
+
+每个团队主题都有自己的配色方案。 若要自动处理主题更改，请在设计中使用 <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank"> (熟知的 UI) 的颜色标记 </a> 。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="图中显示与选项卡主题无关的操作。" border="false":::
+
+#### <a name="dont-hard-code-color-values"></a>不：硬编码颜色值
+
+如果您不使用团队颜色令牌，则设计的可伸缩性较小并需要更多时间来管理。
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="validate-your-design"></a>验证设计
+
+如果计划将应用程序发布到 AppSource，则应了解通常会在提交期间导致应用程序失败的设计问题。
+
+> [!div class="nextstepaction"]
+> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

@@ -5,12 +5,12 @@ description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队频道
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 46b5410a1ae7c866f8998362765dfe5462df94cb
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: bb87d34974469057287cf63725e7722125c57c34
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931762"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605243"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>为 Microsoft 团队构建通道和组选项卡
 
@@ -45,9 +45,9 @@ Microsoft 团队工具包可帮助配置您的应用程序，并设置与通道�
 > [!TIP]
 > 如果之前尚未创建团队应用程序项目，您可能会发现，请按照 [以下说明](../build-your-first-app/build-and-run.md) 更详细地说明项目。
 
-1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队** "， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **创建新的团队应用** "。
+1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队**"， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **创建新的团队应用**"。
 1. 出现提示时，使用 Microsoft 365 开发帐户登录。
-1. 在 " **添加功能** " 屏幕上，依次选择 **"** **下一步** "。
+1. 在 " **添加功能** " 屏幕上，依次选择 **"** **下一步**"。
 1. 为你的团队应用输入名称。  (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) 
 1. 检查 " **个人" 选项卡** 和 **"组" 或 "工作组通道" 选项卡** 选项。  (你将很快了解为什么需要两种类型的选项卡。 ) 
 1. 选择屏幕底部的 " **完成** " 以配置项目。  
@@ -62,8 +62,8 @@ Microsoft 团队工具包可帮助配置您的应用程序，并设置与通道�
 
 在安装过程中，该工具包最初配置了通道和组选项卡的两个基本组件：
 
-* **配置页面** ：用于将选项卡添加到频道或聊天的对话框。  (在应用程序 Studio 中，通过转到 **"团队" 选项卡 > "团队" 选项卡** ，可以找到此页面。 ) 
-* **内容页面** ：显示主要内容的位置。  (在应用程序 Studio 中，通过转到 " **添加个人" 选项卡 > 的选项** 卡可以找到此页面。 ) 
+* **配置页面**：用于将选项卡添加到频道或聊天的模式。  (在应用程序 Studio 中，通过转到 **"团队" 选项卡 > "团队" 选项卡**，可以找到此页面。 ) 
+* **内容页面**：显示主要内容的位置。  (在应用程序 Studio 中，通过转到 " **添加个人" 选项卡 > 的选项** 卡可以找到此页面。 ) 
 
 ### <a name="app-scaffolding"></a>应用程序基架
 
@@ -119,7 +119,7 @@ a {
 
 ## <a name="4-customize-your-tab-configuration-page"></a>4. 自定义您的选项卡配置页
 
-频道或聊天中的每个选项卡都有一个配置页面，其中包含至少一个安装选项的对话框，在用户添加您的应用程序时显示。 默认情况下，配置页面会询问用户是否要在安装该选项卡时通知频道或聊天。
+频道或聊天中的每个选项卡都有一个配置页面，其中包含至少一个安装选项的模式，在用户添加您的应用程序时显示。 默认情况下，配置页面会询问用户是否要在安装该选项卡时通知频道或聊天。
 
 将一些自定义内容添加到配置页面。 转到项目的 `src/components` 目录，打开 `TabConfig.js` ，并更新中的占位符内容 (中， `return()` 如下面的示例所示) 。
 
@@ -139,9 +139,9 @@ return (
 
 ## <a name="5-provide-a-suggested-tab-name"></a>5. 提供建议的选项卡名称
 
-在添加频道或组选项卡时，默认情况下，应用名称会显示 (例如， **第一个应用程序** ) 。
+在添加频道或组选项卡时，默认情况下，应用名称会显示 (例如， **第一个应用程序**) 。
 
-这可能会很好，具体取决于您调用应用程序的内容，但您可能希望提供一个名称，以便在组协作的上下文中更有意义 (例如， **工作组联系人** ) 。
+这可能会很好，具体取决于您调用应用程序的内容，但您可能希望提供一个名称，以便在组协作的上下文中更有意义 (例如， **工作组联系人**) 。
 
 在中 `TabConfig.js` ，转到 `microsoftTeams.settings.setSettings` 。 添加 `suggestedDisplayName` 默认情况下要显示的选项卡名称的属性 (如) 所示。 使用提供的名称或创建自己的名称。  (默认情况下，用户可以根据需要更改名称。 ) 
 
@@ -171,15 +171,15 @@ microsoftTeams.settings.setSettings({
 1. 若要在团队中显示应用内容，请指定您的应用程序的运行位置 (`localhost`) 是可信的：
    1. 默认情况下，在同一浏览器窗口中打开一个新选项卡 () 按 **F5** 后打开的。
    1. 转到 `https://localhost:3000/tab` ""，然后继续转到 "" 页。
-1. 返回到 "团队"。 在对话框中，选择 " **添加到团队** " 或 " **添加到聊天** "，并找到可用于测试的频道或聊天。
-1. 选择 **"设置选项卡"** 。"配置" 页将显示在对话框中。<br/>
+1. 返回到 "团队"。 在模式中，选择 " **添加到团队** " 或 " **添加到聊天** "，并找到可用于测试的频道或聊天。
+1. 选择 **"设置选项卡"**。配置页面在模式中显示。<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="频道选项卡配置页的屏幕截图。":::
 1. 选择 " **保存** " 以配置选项卡。将显示内容页。<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="包含静态内容视图的频道选项卡的屏幕截图。":::
 
 ## <a name="well-done"></a>干的好
 
-祝贺你！ 您有一个包含选项卡的团队应用程序，用于在频道和聊天中显示有用的内容。
+恭喜！ 您有一个包含选项卡的团队应用程序，用于在频道和聊天中显示有用的内容。
 
 ## <a name="learn-more"></a>了解更多
 

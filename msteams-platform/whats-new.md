@@ -2,12 +2,12 @@
 title: 最近更新
 description: 介绍 Microsoft 团队中的所有新开发人员功能
 keywords: 团队新增功能最新
-ms.openlocfilehash: acd02c9765fbbf2e4e1d93d48cb1287936940dee
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: 29101e45a317268d1eacf00273a98bc30593d5bd
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576832"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604464"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft 团队中面向开发人员的新增功能
 
@@ -23,7 +23,7 @@ ms.locfileid: "49576832"
 |11/30/2020|新增：与选项卡的团队工具包和 Visual Studio 代码的身份平台集成|[单一登录身份验证与团队工具包和 Visual Studio Code for 选项卡](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|团队应用程序清单已更新到版本1。8|参考： Microsoft 团队的清单架构|[参考： Microsoft 团队的清单架构](resources/schema/manifest-schema.md)|
 |11/11/2020| 清单架构已更新到版本1。8| [参考： Microsoft 团队的清单架构](resources/schema/manifest-schema.md)|
-|11/10/2020|团队 bot 设计指南|[Bot 设计指南](bots/design/bots.md#bot-design-guidelines)|
+|11/10/2020|团队 bot 设计指南|[Bot 设计指南](bots/design/bots.md)|
 |9/30/2020|现在支持在移动设备上向 bot 发送和接收文件。|[通过你的 bot 发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|新建 "团队入门" 指南|[构建你的第一个团队应用概述](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|对会议团队应用 (发布预览的支持) |为团队[会议中](apps-in-teams-meetings/teams-apps-in-meetings.md)[的团队会议和应用创建应用程序](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
@@ -75,7 +75,7 @@ ms.locfileid: "49576832"
 | 08/06/2018 | 你的 bot 现在可以发送和接收文件。| [通过你的 bot 发送和接收文件](~/concepts/bots/bots-files.md)|
 | 07/27/2018 | 现在，开发人员预览版支持邮件扩展中的多个命令。 | [邮件扩展已扩展](~/resources/dev-preview/developer-preview-features.md)|
 | 07/23/2018 | 有关应用程序重新认证的信息已添加到 "发布" 部分。 |[清单权限](resources/schema/manifest-schema.md#permissions)|
-| 07/16/2018 | 在开发人员预览版中，已向选项卡配置页分配更多空间。 | [选项卡配置页面高度增加](tabs/design/tabs.md#configuration-page-height)|
+| 07/16/2018 | 在开发人员预览版中，已向选项卡配置页分配更多空间。 | [选项卡配置页面高度增加](tabs/design/tabs.md)|
 | 07/12/2018 | 有关来宾访问的信息。 | [Microsoft Teams 中的来宾访问](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | 已添加 Microsoft 团队租户应用程序目录的预发布信息。 | [发布 Microsoft 团队应用程序](~/publishing/apps-publish.md)|
 | 05/31/2018 | 团队开发人员预览版 (ring 3.6) 已更新，以包括将 bot 和选项卡添加到组聊天的功能。 | [开发人员预览版中的功能](~/resources/dev-preview/developer-preview-features.md)（[开发人员预览版架构](~/resources/schema/manifest-schema-dev-preview.md)）|

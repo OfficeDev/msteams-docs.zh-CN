@@ -1,183 +1,323 @@
 ---
-title: Bot 设计指南
-description: 介绍创建 bot 的指南
-keywords: 团队设计指南参考框架 bot 对话
-ms.openlocfilehash: 0691c483d12e537772b74abc015d71e1704f88c8
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+title: 正在设计你的 bot
+description: 了解如何设计团队 bot 并获取 Microsoft 团队 UI 工具包。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: d1a7470f4986de22ecca7071823b620cb0234abb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992636"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605390"
 ---
-# <a name="start-talking-with-bots"></a>开始与 bot 对话
+# <a name="designing-your-microsoft-teams-bot"></a>正在设计你的 Microsoft 团队 bot
 
-Bot 是执行一组较窄或特定任务的会话式应用程序。 它们为您提供了与用户进行通信的机会，回答了他们的问题，并主动通知他们发生了哪些更改。 这是一种很好的方法。
+Bot 是执行一组特定任务的会话中应用程序。 根据 <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot 框架</a>，bot 与用户进行通信，响应他们的问题，并主动通知他们发生更改和其他事件。 这是一种很好的方法。
 
----
+若要指导您的应用程序设计，以下信息介绍并说明了用户如何在团队中添加、使用和管理 bot。
 
-## <a name="guidelines"></a>准则
+## <a name="microsoft-teams-ui-kit"></a>Microsoft 团队 UI 工具包
 
-### <a name="bot-design-guidelines"></a>Bot 设计指南
+您可以在 Microsoft 团队 UI 工具包中找到更全面的 bot 设计指南，包括您可以根据需要获取和修改的元素。
 
-* 当有活动时，bot 应提供相关通知。
-* 自动程序不能向不应查看该数据的访问群体向团队、组聊天或1:1 对话中推送敏感数据。
-* Bot 通知应包含有意义的数据，以向用户通知通知的相关性。
-* Bot 的语气应按指南中定义的方式反映团队语音。
-* Bot 应提供首次运行体验欢迎消息，以突出显示 bot 的价值以及它的主要功能，这可能是 "获取教程"、带有轮播卡片的交互式教程或 "试用" 按钮的形式。
-* Bot 文本不能包含任何拼写错误或语法错误。
-* Bot 必须提供一组可操作的预定义的 bot 命令。
-* Bot 邮件应易于理解和操作。
-* 当不理解邮件时，bot 必须提供后备帮助命令。
-* 由自动程序发送的卡片中嵌入的窗体应提供不需要顺序更新的确定性输入。
-* 应将 Bot 通知的范围限定为团队、组聊天或1:1 对话，其中包含访问群体的相关内容。
+> [!div class="nextstepaction"]
+> [ (Figma) 获取 Microsoft 团队 UI 工具包 ](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="avatars"></a>虚拟形象
+## <a name="add-a-bot"></a>添加 bot
 
-在团队中，Bot 虚拟形象的形状类似于六边形，因此人们可以快速判断他们正在与某个 bot 而不是某人交谈。 你将头像作为方块提交，我们将为你进行裁剪。 当遇到虚拟形象时，我们建议您让您能够在2英尺和使用较高的对比度的情况下清晰地消失。
+聊天、频道和个人应用中提供了 bot。 您可以通过以下方式之一添加机器人：
 
-[!include[Avatar image](~/includes/design/bot-avatar-image.html)]
+* 从团队存储 (AppSource) 。
+* 通过在工作组左侧选择 " **更多** " 图标来使用应用浮出控件。
+* 在 "新聊天" 或 "撰写" 框中使用 @mention (下面的示例演示如何在组聊天) 中执行此操作。
 
-### <a name="buttons"></a>按钮
+:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="示例演示如何使用 @mention 在组中添加机器人。" border="false":::
 
-我们每张卡片最长支持六个按钮。 编写按钮文本时请务必简明扼要，并且请注意，大多数按钮应仅处理手头的任务。
+## <a name="introduce-a-bot"></a>引入机器人
 
-### <a name="graphics"></a>图形
+你的 bot 会自行引入并描述它可以执行的操作，这一点非常重要。 此初始 exchange 可帮助用户了解如何使用 bot，找出它的局限性，最重要的是，让他们能够轻松地与之进行交互。
 
-图形是一种很不错的说明，但并不是所有机器人对话都需要图形，因此使用它们来获得最大影响。
+### <a name="welcome-message-in-a-one-on-one-chat"></a>一对一聊天中的欢迎消息
 
-### <a name="onboarding-users"></a>载入用户
+在个人上下文中，欢迎邮件设置你的 bot 的语气。 该邮件包含问候语、bot 可以执行的操作以及有关如何在 (进行交互的一些建议（例如，"请尝试询问我 ..."） ) 。 如果可能，这些建议应返回存储的响应，而无需登录。
 
-关键是，bot 会自我介绍并传达他们可以为用户执行的操作。 此 *值 exchange* 可帮助用户了解如何使用 bot，这些限制可能位于何处，并且最重要的是，帮助用户容许与不像真实人员那样直观的计算机进行交互。 此外，它还向 exchange 中的用户数据授予对该服务提供的真正价值的权限。
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="示例显示了个人应用程序中的 bot 简介。" border="false":::
 
-#### <a name="welcome-messages"></a>欢迎邮件
+### <a name="introductions-in-group-chats-and-channels"></a>群研讨和频道中的简介
 
-欢迎邮件是设置你的 bot 语气并应在个人和团队或组方案中使用的最佳方式。 该消息指出了 bot 的功能以及与之进行交互的一些常见方法。 使用类似 " *请尝试询问*..." 的特定功能示例 在项目符号列表中。 只要有可能，这些建议应返回存储的响应。 此功能示例非常关键，无需用户登录即可正常工作。
-有关其他指导，请 *参阅*[欢迎消息要求](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch)。
+你的 bot 的简介与个人上下文 (（如个人应用) ）相比，在组聊天和频道中略有不同。 在实际生活中，如果你输入的会议室完全为人，则为你将自行引入，而不是欢迎大家已经在那里的人。 将这种想法引入到你的 bot 设计中。
 
-#### <a name="tours"></a>漫游
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="示例显示了协作上下文中的 bot 简介。" border="false":::
 
-包括使用欢迎邮件的 *教程* 属性和对与 " *帮助* " 等效的用户输入的响应。 这是让用户了解机器人可以执行的操作的最有效方法。 在一对一体验中，Carousels 是一种很好的方法，可告知这一情景，包括 " *Try it* " 按钮。鼓励可能的响应示例。 漫游也是谈论应用程序的其他功能的很好的地方。 例如，可以包括邮件扩展和工作组选项卡的屏幕截图。  用户无需登录即可访问和使用教程。
+### <a name="bot-authentication-with-single-sign-on"></a>单一登录的 Bot 身份验证
 
-在团队或组方案中使用演示时，他们应在任务模块中打开，以便不向用户之间的正在进行的会话添加更多的卡噪音。
+当某个人将邮件发送到 bot 时，可能需要登录才能使用其所有功能。 您可以使用单一登录 (SSO) 简化身份验证过程。
 
-### <a name="responding-to-users-and-failing-gracefully"></a>响应用户并顺利进行故障转移
+别忘了：在机器人命令菜单中 (**我可以执行哪些操作？**) ，还必须提供命令来注销。
 
-你的 bot 还应能够在考虑常见的拼写错误和俗语时，对诸如 " *Hi* "、" *帮助* " 和 " *感谢* " 这样的内容做出响应。 例如：
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="示例显示了带有登录按钮的 bot。" border="false":::
 
-#### <a name="x2713-hello"></a>&#x2713; Hello
+### <a name="tours"></a>漫游
 
-`"Hi"`  `"How are you"`  `"Howdy"`
+您可以包含欢迎邮件的教程，如果 bot 响应的是 "帮助" 命令之类的内容。 教程是描述你的 bot 可以执行的操作的最有效方式。 如果适用，它们也很适合描述应用程序的其他功能 (例如，包括邮件扩展) 的屏幕截图。
 
-#### <a name="x2713-help"></a>&#x2713; 帮助
+> [!IMPORTANT]
+> 无需登录即可访问教程。
 
-`"What do you do?"`  `"How does this work?"`  `"What the heck?"`
+#### <a name="one-on-one-chats"></a>一对一聊天
 
-#### <a name="x2713-thanks"></a>&#x2713; 感谢
+在个人应用程序中，轮播可提供对你的 bot 和你的应用程序的任何其他功能的有效概述。 包含按钮鼓励用户尝试使用 bot 命令 (例如， **创建任务**) 。
 
-`"Thank you"`  `"Thankyou"`  `"Thx"`
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="示例显示了一次一对一聊天中的 bot 教程。" border="false":::
 
-你的 bot 应能够处理以下类型的查询和输入：
+#### <a name="channels-and-group-chats"></a>频道和组聊天
 
-> [!div class="checklist"]
->
-> * **识别的问题** 。 这些是用户预期的 "最佳方案情况" 问题。
-> * **识别的无问题** 。 有关不受支持的功能和/或随机、无关或 profane 条目的查询。
-> * **无法识别的问题** ：输入或无法识别、无意义或无意义的项。
+在频道和群研讨中，应在模式 (（也称为 [任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) ）中打开一个教程，使其不会中断正在进行的对话。 这还为您提供了为您的演示实现基于角色的视图的选项。
 
-Bot 的个性和响应类型的示例：
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="示例显示频道中的 bot 教程。" border="false":::
 
-[!include[Bot responses](~/includes/design/bot-responses-table.html)]
+## <a name="chat-with-a-bot"></a>与 bot 聊天
 
-> [!TIP]
-> 编写机器人脚本时，请询问自己： "我的公司是否为 embarrassed 如果响应是通过屏幕捕获并共享吗？"
+Bot 直接集成到团队的消息传递框架中。 用户可以与机器人聊天以获取其问题，或键入命令让 bot 执行一组或一组特定的任务。 Bot 可以通过聊天主动通知用户对你的应用所做的更改或更新。
 
-### <a name="understanding-what-users-are-trying-to-say"></a>了解用户试图说出的内容
+### <a name="chat-with-a-bot-in-different-contexts"></a>与不同上下文中的 bot 聊天
 
-#### <a name="use-a-thesaurus-for-synonyms"></a>对同义词使用同义词库
+您可以在以下上下文中使用 bot：
 
-当灵感触发变体时，请使用同义词库并从尽可能多的不同背景中获取人员，以帮助您生成每个查询的不同解释。
+* **个人应用程序**：在个人应用程序中，bot 具有专用的聊天选项卡。
+* **一对一聊天**：用户可以启动与 bot 的专用对话。 这与在个人应用程序中使用 bot 的体验相同。
+* **分组聊天**：用户可以通过 @mentioning bot 与组聊天中的 bot 进行交互。
+* **频道**：用户可以与频道中的 bot 进行交互。 通过 @mentioning "撰写" 框中的 bot 名称。 请记住，在此上下文中，bot 可用于整个团队，而不仅仅是通道。
 
-#### <a name="make-use-of-telemetry-and-interviews"></a>使用遥测和访谈
+### <a name="anatomy"></a>解析
 
-了解用户在查询你的 bot 时所说的含义以及它们的意图。 当你在不同位置和公司类型中获取用户时，这将是一个持续的过程。 您可以使用语言理解智能服务 ([LUIS](/azure/cognitive-services/luis/what-is-luis)) 来微调语言识别和意图映射。
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="示例显示 bot 的结构剖析。" border="false":::
 
-### <a name="how-often-should-you-use-your-bot-to-reach-out-to-a-user"></a>应多长时间使用你的 bot 与用户联系？
+|计数器|说明|
+|----------|-----------|
+|1|**应用程序名称和图标**|
+|2 |**"聊天" 选项卡**：打开与你的 bot 对话的空间 (仅适用于个人应用) 。|
+|3 |**自定义选项卡**：打开与您的应用程序相关的其他内容。|
+|4 |**"关于" 选项卡**：显示有关您的应用程序的基本信息。|
+|5 |**聊天气泡**： Bot 对话使用团队消息传递框架。|
+|6 |**自适应卡片**：如果你的 bot 的响应包含自适应卡片，卡片将占用完整的聊天气泡宽度。|
+|7 |**命令菜单**：显示你)  (定义的你的 bot 的标准命令。
 
-#### <a name="x2713-when-a-state-has-changed"></a>状态更改时 &#x2713;
+### <a name="command-menu"></a>命令菜单
 
-例如，如果工作分配标记为 "已完成"、"bug 更改时"、"新社交媒体可用" 或 "已完成轮询"。
+命令菜单提供您希望机器人始终响应的单词或短语的列表。 当有人正在使用 bot 时，"命令" 菜单将显示在 "撰写" 框的上方。 当选中某个命令时，它会插入到邮件中。
 
-#### <a name="x2713-when-the-timing-is-right"></a>当计时正确时 &#x2713;
+命令列表应简短。 此菜单仅用于突出显示你的 bot 的主要功能。 也将命令保持简洁。 例如，创建一个名为 " **帮助** " 的命令，而不 **能帮助我** 吗？
+无论会话的状态如何，命令菜单都必须始终可用。
 
-你的 bot 可以像每日摘要那样操作，以特定频率向用户或频道发送通知。
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="示例显示 bot 的命令菜单。" border="false":::
 
-将用户保持在控制之下。 提供包括频率和优先级的通知设置。
+## <a name="understand-what-people-are-saying"></a>了解人们的评价
 
-[!include[Bot notification](~/includes/design/bot-notification-image.html)]
+使用同义词库并从尽可能多的不同背景中获取人员，以帮助您生成标准查询的不同解释。
 
----
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="显示机器人可能如何解释 &quot;Hello&quot; 的插图。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="图示：机器人如何解释 &quot;帮助&quot;。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="显示机器人可能解释 &quot;感谢&quot; 的说明。" border="false":::
+   :::column-end:::
+:::row-end:::
 
-## <a name="using-tabs"></a>使用选项卡
+### <a name="extract-intent-and-data-from-messages"></a>从邮件中提取意图和数据
 
-选项卡使你的 bot 功能更强大。 通过选项卡，您可以创建以下内容：
+将你的 bot 设计为识别意图，这将从你的人员那里获取某人想要响应邮件或查询的内容。 意向将邮件或查询分类为单个操作，其中包含一个或多个受操作影响的数据对象。 
 
-### <a name="x2713-a-place-to-host-standing-queries"></a>&#x2713; 承载驻留查询的位置
+下面的示例概述了发送到 bot 的邮件中的用户意图和数据。
 
-在 bot 和单个用户之间的个人对话中，选项卡可以包含用户特定的信息和列表。 它们也是维护对常见问题 (Faq) 的 bot 响应的好地方，因此用户无需继续提问。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="示例中所示的 &quot;将航班预订给西雅图&quot; 这一句，用户意图是 &quot;书籍 a 航班&quot;，数据是 &quot;西雅图&quot;。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="示例显示在句子 &quot;何时打开存储&quot;，用户意图是 &quot;when&quot;，且数据为 &quot;开放&quot;。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="示例中显示了句子 &quot;安排会议时，在通讯组中使用王俊元&quot;、用户意向为 &quot;安排会议&quot; 和 &quot;分发中的 Bob&quot; 等数据。" border="false":::
+   :::column-end:::
+:::row-end:::
 
-### <a name="x2713-a-place-to-finish-a-conversation"></a>&#x2713; 完成对话的位置
+### <a name="analyze-and-improve"></a>分析和改进
 
-您可以从卡片链接到选项卡。 如果你的 bot 提供了需要更多步骤的答案，则它可以链接到选项卡以完成任务或流。 例如，为了响应，"如何设置 iPhone 的格式？" 好的响应可能是一个卡片，它概括了前几个步骤，并具有一个 *显示更多* 步骤的按钮，然后将用户带到 bot 的 " *帮助* " 选项卡和指向特定说明的深层链接。
+了解用户在与你的 bot 聊天时应说出的内容。 随着用户群在不同位置和 emc 的增长，这将是一个持续的反复发生的过程。 您可以使用 (Microsoft LUIS) 调整您的 bot 的语言识别和意图映射。
 
-### <a name="x2713-a-place-to-host-a-settings-page"></a>&#x2713; 承载设置页面的位置
+* [了解 LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence)：了解 LUIS 如何使用 AI 提供对应用数据的自然语言理解 (NLU) 。
+* [与 LUIS 集成](https://www.luis.ai/)：将自然语言功能添加到你的机器人中，而不是创建机器学习模型的复杂过程。
 
-Bot 应具有一些用户控件。 对于很多机器人，通过聊天界面允许它;但是，很难记住这些设置。 "设置" 选项卡可以显示 "用户" 设置，允许用户一次更改所有设置，也可能是更复杂的 bot 自定义行为的一个良好的位置。
+## <a name="use-cases"></a>用例
 
-### <a name="x2713-a-place-to-provide-some-help"></a>&#x2713; 提供一些帮助的位置
+### <a name="simple-queries"></a>简单查询
 
-添加一个选项卡，educates 用户如何与你的 bot 进行通信。 您可以为其所做的操作或 Faq 提供一些上下文。
+Bot 可以提供与查询或一组相关匹配项完全匹配的项，以帮助消除歧义。 对于相关的匹配项，请使用列表卡片对内容进行分组。
 
-![提供帮助](~/assets/images/framework/framework_bots_tbot-help.png)
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="示例显示与 bot 的简单查询交互。" border="false":::
 
-> [!TIP]
-> 在选项卡中嵌入网站的各个部分将有助于用户在使用您的服务时维护对话的上下文。 它消除了在浏览器中启动服务的需求，并在应用程序之间来回切换。
+### <a name="multi-turn-interactions"></a>多转换交互
 
----
+虽然你的 bot 可以支持完整的请求和问题，但它还应能够处理多项交互。 预测可能的后续步骤使用户可以更轻松地执行完整的任务流 (而不是期望他们手工创建一个全面的请求) 。
 
-## <a name="bots-in-channels"></a>通道中的 bot
+在下面的示例中，bot 将使用有关下一步操作的选项来响应每个邮件。
 
-可以通过对频道中的 bot 进行调用来实现 `@mention` 。 机器人对话框在通道和组中应是唯一的，而不是一对一方案，通常最好是考虑不同的方法。 在下列情况下，尤其如此：
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="示例显示与 bot 之间的多路交互交互。" border="false":::
 
-### <a name="sensitive-data-sent-by-a-bot"></a>Bot 发送的敏感数据
+### <a name="reach-out-to-users"></a>与用户联系
 
-虽然团队中的用户可以在服务中知道，但实际用户角色却不能。 这意味着，在涉及威胁的教育场景中，不会在团队设置中共享父联系人信息和学生联系人信息。 而 bot 的邮件可能是： "今天发生两个威胁事件" 和一个显示详细信息的按钮。
+通过主动消息传递，你的 bot 可以像摘要那样操作，以特定频率发送与个人、组聊天或频道相关的通知。 当文档中的内容发生了更改或工作项关闭时，bot 可能会发送一封邮件。
 
-在网页中启动详细信息，或任务模块可以提示用户凭据或查询与 AAD 帐户配对的用户角色的索引。 在这两个选项中，数据都在一个专用视图作用域中，并且不会有数据泄露。 如果在用户与 bot 之间的一对一聊天中发送相同的数据，则该数据仅对该上下文中的用户可见，因此，在 bot 邮件中完全显示该数据是安全的。 应避免将用户从频道中提取到一对一聊天，因为这会导致强制导航高度中断。
+在以下示例中，用户将收到 toast 通知，即 bot 在另一个频道中将其推广。
 
-### <a name="sending-cards-as-a-response-to-interactions"></a>作为交互的响应发送卡片
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="示例展示了自动将用户从另一个频道传递给用户的 toast。" border="false":::
 
-发送轮播卡片以在一对一聊天中 *进行漫游* 是完全可接受的，相同的模式可能会在活动频道中向大量用户发送数十或数百个 *漫游 carousels* 。 为避免这种情况，辅助卡应托管在任务模块中。 此模式使用户在使用频道的上下文中保持用户的正常，并使频道清除过多的 bot 响应，并且可以选择在显示 *漫游* 时考虑不同的用户角色。
+现在，该频道中的用户可以从 bot 读取其邮件。
 
-## <a name="useful-tips"></a>有用的提示
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="示例显示了用户查看 bot 的主动消息。" border="false":::
 
-### <a name="x2713-remember-bots-arent-assistants"></a>&#x2713; 记住，bot 不助手
+### <a name="use-tabs-with-bots"></a>使用带 bot 的选项卡
 
-与代理不同，例如 Cortana、bot 充当专家。
+选项卡可使你的 bot 更易于使用。 例如，如果你的 bot 可以创建工作项，则在选项卡中的一个中心位置显示所有这些项会非常好。有关 [设计选项卡](../../tabs/design/tabs.md)的详细信息，请参阅。
 
-### <a name="x2713-discourage-chitchat"></a>&#x2713; 阻止 chitchat
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="示例显示选项卡如何帮助组织 bot 内容。" border="false":::
 
-除非为对话构建了你的 bot，否则会发现将 chitchat 重定向到任务完成的方法。
+## <a name="manage-a-bot"></a>管理 bot
 
-### <a name="x2713-introduce-some-personality"></a>&#x2713; 引入了一些个性
+用户应该能够更改机器人的设置。 您可以使用 bot 命令提供此功能，但在 [任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) 中包含所有设置通常效率更高 (如以下示例中所示) 。
 
-保持你的 bot 个人与你的产品的语音一致。 将你的 bot 想象为你的公司说话。
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="示例显示了用于配置 bot 设置的任务模块。" border="false":::
 
-### <a name="x2713-maintain-tone"></a>&#x2713; 保持音调
+## <a name="best-practices"></a>最佳做法
 
-确定您是否希望您的语气是友好和浅、"只是真实" 还是超级 quirky。
+### <a name="content"></a>内容
 
-### <a name="x2713-encourage-easy-task-flow"></a>&#x2713; 鼓励轻松的任务流
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
 
-支持多项交互，同时仍允许完整构建的问题。 预测下一步将帮助用户更轻松地完成任务流。
+#### <a name="do-establish-a-clear-persona"></a>操作：建立明确角色
 
-如果用户需要几个步骤来完成某项任务，则允许你的 bot 在每个步骤中执行这些步骤，但通过让其建议更快速的途径来完成。 例如，如果用户已进行了多个会话，则先指定一个会议，然后确定该时间，然后再指出一天) 来设置会议 (，并在下面的建议下完成此对话：下一次，请尝试询问您是否可以 "在明天1:00 的时间安排与小明的会议"。
+你的 bot 的语气是否友好和轻型、"只是真实" 还是超级 quirky？ 它应如何在不同的方案中做出响应？ 规划和记录你的 bot 角色可以更轻松地编写看似自然和内聚的响应。
+
+有关在<a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft 团队 UI 工具包 (Figma) </a>中写入 bot 的详细信息，请参阅。
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-clearly-convey-what-your-bot-can-do"></a>操作：清楚地传达机器人可以执行的操作
+
+欢迎消息和教程帮助用户了解使用你的 bot 可以执行的操作。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-obscure-your-bots-features"></a>不：遮盖你的 bot 的功能
+
+第一事是印象。 在使用 nondescript 登录邮件时，用户可能会感到困惑或有疑问。
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-recognize-non-questions"></a>操作：识别非问题
+
+你的 bot 应能够响应类似于 "Hi"、"帮助" 和 "感谢" 的邮件，同时还可以对常见的拼写错误和俗语进行评估。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-miss-out-on-opportunities-to-delight"></a>请勿：错过对欣喜的机会
+
+有些人希望对话以流的方式自然，就像真正的人一样。 尽量避免对简单邮件的 clumsy 响应。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="troubleshooting"></a>疑难解答
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-provide-help"></a>Do：提供帮助
+
+如果你的 bot 无法满足请求，请为用户提供用于教育自己与你的 bot 进行交互的方法。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-leave-users-stranded"></a>请勿：让用户处于进退两难
+
+如果用户无法解决问题，他们将很快放弃你的机器人。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="complex-interactions"></a>复杂的交互
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-use-task-modules-or-tabs"></a>操作：使用任务模块或选项卡
+
+如果你的 bot 提供了需要更多步骤的答案，则可以链接到任务模块或选项卡以完成任务或流。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-make-multi-turn-interactions-tedious"></a>请勿：使多项交互变单调乏味
+
+完成单个任务的一个广泛的对话速度缓慢且过于复杂。 它还要求开发人员考虑状态更改 (例如，会话超时或发送 "取消" 邮件) 。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="privacy"></a>隐私
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>操作：仅在个人上下文中显示敏感信息
+
+如果你的 bot 位于组聊天或频道中，我们建议将用户定向到专用位置 (如任务模块、选项卡或浏览器) 查看敏感信息。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="显示 bot 最佳实践的示例。" border="false":::
+
+#### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>请勿：某些内容并非每个人都能看到
+
+你的 bot 不应将敏感信息泄露给一组用户。
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="learn-more"></a>了解更多
+
+这些其他指南可帮助你使用你的 bot 设计：
+
+* [正在设计你的个人应用](../../concepts/design/personal-apps.md)
+* [设计自适应卡片](../../task-modules-and-cards/cards/design-effective-cards.md)
+* [正在设计任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+
+## <a name="validate-your-design"></a>验证设计
+
+如果计划将应用程序发布到 AppSource，则应了解通常会在提交期间导致应用程序失败的设计问题。
+
+> [!div class="nextstepaction"]
+> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

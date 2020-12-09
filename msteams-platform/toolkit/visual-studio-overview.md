@@ -4,12 +4,12 @@ description: 开始在 Visual Studio 中使用 Microsoft 团队工具包直接�
 keywords: 团队 visual studio 工具包
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: a1221945659b2dd0f45bdd3a966d9b029ddcde09
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476984"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604485"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>使用团队工具包和 Visual Studio 生成应用程序
 
@@ -78,11 +78,11 @@ Visual studio 的 Microsoft 团队工具包可从 [Visual Studio Marketplace](ht
 1. 若要配置应用程序，请在 " **Microsoft 团队工具包** " 登录页上，选择 " **编辑应用程序包** "。
 1. 从 " **我的环境** " 下拉菜单中，选择 " **开发**"。
 1. 您将在 " **应用程序详细信息** " 页上放置，您可以在其中编辑应用程序的属性字段。
-1. 编辑应用程序详细信息页中的字段将更新作为应用程序包一部分最终交付的文件上的 manifest.js的内容。 [了解更多](https://aka.ms/teams-toolkit-manifest)
+1. 编辑应用程序详细信息页中的字段将更新作为应用程序包一部分最终交付的文件上的 manifest.js的内容。 [了解详细信息](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>打包应用程序
 
-修改 **应用程序详细信息** 页或更新 **清单**，或应用程序的 **. publish** 文件夹中的 **env** 文件将自动生成 **Development.zip** 文件。 Development.zip 文件包括三个所需的文件，即 **manifest.js打开** 和 [两个图标文件](../concepts/build-and-test/apps-package.md#icons)。
+修改 **应用程序详细信息** 页或更新 **清单**，或应用程序的 **. publish** 文件夹中的 **env** 文件将自动生成 **Development.zip** 文件。 Development.zip 文件包括三个所需的文件，即 **manifest.js打开** 和 [两个图标](../concepts/build-and-test/apps-package.md#app-icons)。
 
 ## <a name="install-and-run-your-app-locally"></a>在本地安装和运行应用程序
 

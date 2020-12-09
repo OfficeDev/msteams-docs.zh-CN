@@ -5,12 +5,12 @@ description: 如何创建配置页
 keywords: 团队选项卡组频道可配置
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964604"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605323"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -85,7 +85,7 @@ ms.locfileid: "47964604"
 1. `microsoftTeams.settings.registerOnSaveHandler()`触发事件处理程序。
 1. 启用 "在团队中上载的应用程序配置" 页上的 " **保存** " 按钮。
 
-此代码使团队知道已满足配置要求，并且可以继续安装。 在 **保存**时， `settings.setSettings()` 由接口定义的参数设置为 `Settings` 当前实例 (请参阅 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ) 。 最后， `saveEvent.notifySuccess()` 将调用，以指示内容 URL 已成功解析。
+此代码使团队知道已满足配置要求，并且可以继续安装。 在 **保存** 时， `settings.setSettings()` 由接口定义的参数设置为 `Settings` 当前实例 (请参阅 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) ) 。 最后， `saveEvent.notifySuccess()` 将调用，以指示内容 URL 已成功解析。
 
 >[!NOTE]
 >
@@ -166,7 +166,7 @@ document.write(getId());
 
 ## <a name="mobile-clients"></a>移动客户端
 
-如果选择在工作组移动客户端上显示 "频道/组" 选项卡，则该 `setSettings()` 配置必须具有该属性的值 `websiteUrl` (请参阅下) 。 将很快发布对移动客户端上的选项卡的完全支持。 若要准备更新，应按照移动选项卡 [上的选项卡指南中](~/tabs/design/tabs-mobile.md) 的步骤创建选项卡。
+如果选择在工作组移动客户端上显示 "频道/组" 选项卡，则该 `setSettings()` 配置必须具有该属性的值 `websiteUrl` (请参阅下) 。 请参阅 [mobile 上的选项卡指南](~/tabs/design/tabs-mobile.md)。
 
 Microsoft 团队 setSettings ( 用于删除页面和/或移动客户端的 # A1 配置：
 

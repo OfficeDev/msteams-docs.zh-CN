@@ -5,12 +5,12 @@ description: 基于参与者和用户角色的团队会议中的应用程序概�
 ms.topic: overview
 ms.author: lajanuar
 keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: db14049d3150eaaa9634b4fa535a989528b1c6a2
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: 8a1b5b7d95e91273c794a2aa86a51e0ddeb1c610
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358019"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605161"
 ---
 # <a name="apps-in-teams-meetings"></a>团队会议中的应用
 
@@ -68,7 +68,7 @@ ms.locfileid: "49358019"
 &emsp;&emsp;&#9679; **侧面板**。 </br>
 
 > [!NOTE]
-> 如果您的 _应用程序清单_ 指定选项卡是 [针对侧面板优化](create-apps-for-teams-meetings.md#in-meeting)的，则它将显示在该面板中。 它也可以是共享任务栏体验的一部分，根据指定的设计准则。
+> 如果您的 _应用程序清单_ 指定选项卡是 [针对侧面板优化](create-apps-for-teams-meetings.md#during-a-meeting)的，则它将显示在该面板中。 它也可以是共享任务栏体验的一部分，根据指定的设计准则。
 
 &emsp;&emsp;&#9679; **会议中的对话框**。 使用 "会议内" 对话框展示会议参与者的可操作内容。 *请参阅*[创建适用于团队的应用程序会议](create-apps-for-teams-meetings.md)。
 

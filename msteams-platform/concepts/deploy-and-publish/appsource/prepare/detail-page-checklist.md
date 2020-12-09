@@ -2,12 +2,12 @@
 title: 构建一个出色的应用程序详细信息页
 description: 描述应用程序详细信息页的要求
 keywords: 团队发布存储 office 发布策略 AppSource 内容元数据屏幕截图徽标说明应用程序名称图标简短说明
-ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: aa12cab0bb89349b4d9d613a9c533773fa593283
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465941"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605316"
 ---
 # <a name="build-a-great-app-details-page"></a>构建一个出色的应用程序详细信息页
 
@@ -65,7 +65,7 @@ ms.locfileid: "48465941"
 
 ## <a name="outline-icon"></a>大纲图标
 
-这用于邮件扩展、用户标记为收藏的应用和左侧导航菜单。 请确保它简单且可识别。 大纲图标必须仅包含白色的颜色，并且是透明的。 有关所需的规范， *请参阅*为 [Microsoft 团队应用程序图标创建应用程序包](../../../build-and-test/apps-package.md#icons)。
+此图标用于固定邮件扩展和当您的应用程序显示在团队的左侧。 有关 [大纲图标](../../../../concepts/build-and-test/apps-package.md#outline-icon)，请参阅设计指南。
 
 ![应用图标大纲存储视图 ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
  ![ 应用图标大纲应用程序 Studio 视图](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
@@ -83,7 +83,7 @@ ms.locfileid: "48465941"
 
 * 首先放置最重要的信息。
 * 包含客户可能搜索的关键字。
-* 如果你需要提到 Microsoft 团队，应将 Microsoft 团队的第一次建议作为 *Microsoft 团队*完全写出来。 如果在同一说明中再次提到团队，则可以将该名称缩短为 " *团队*"。
+* 如果你需要提到 Microsoft 团队，应将 Microsoft 团队的第一次建议作为 *Microsoft 团队* 完全写出来。 如果在同一说明中再次提到团队，则可以将该名称缩短为 " *团队*"。
 * 对 Microsoft 或 Microsoft 团队的任何引用都可以作为说明的一部分，并且应遵循 Microsoft 的品牌标准和指南。
 * 所有说明都必须是无语言错误的语法正确的。
 * 避免不必要地使用 capitalizations，例如，声明 "用户" 而不是 "用户"。
@@ -215,7 +215,7 @@ ms.locfileid: "48465941"
 
 请记住，将演示文稿保持简短和最佳--介于30-90 秒之间。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="learn-more"></a>了解更多
 
 [提交应用程序的清单](~/concepts/deploy-and-publish/appsource/publish.md)。  
 [为 Microsoft 团队应用程序创建应用程序包](~/concepts/build-and-test/apps-package.md)。  

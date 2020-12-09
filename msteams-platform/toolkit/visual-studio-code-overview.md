@@ -4,12 +4,12 @@ description: 开始在 Visual Studio Code 中使用 Microsoft 团队工具包直
 keywords: 团队 visual studio code 工具包
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 41b0eeaeef1c7094fc9c8cbdc05c2db899245fc6
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: 350da030d15e72e2cad51c5967afab9b6f29fe9e
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476928"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604471"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>使用团队工具包和 Visual Studio Code 生成应用程序
 
@@ -70,7 +70,9 @@ Visual studio Code 的 Microsoft 团队工具包可从 [Visual Studio Marketplac
 
 ## <a name="package-your-app"></a>打包应用程序
 
-修改 **应用程序详细信息** 页或更新 **清单**，或应用程序的 **. publish** 文件夹中的 **env** 文件将自动生成 **Development.zip** 文件。 您需要在同一文件夹中包含 [两个图标](../concepts/build-and-test/apps-package.md#icons) 。
+在应用程序的 **. publish** 文件夹中修改 **应用程序详细信息** 页、**清单** 或 **env** 文件将自动生成 **Development.zip** 文件。 您需要在同一文件夹中包含 [两个图标](../concepts/build-and-test/apps-package.md#app-icons) 。
+
+## <a name="install-and-run-your-app-locally"></a>在本地安装和运行应用程序
 
 ## <a name="run-your-app"></a>运行应用程序
 

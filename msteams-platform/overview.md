@@ -5,18 +5,21 @@ description: 概述开发人员如何使用自定义应用程序扩展和自定�
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 6f5f3454885320669ef42383529d39fcfcfdfee8
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209791"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604785"
 ---
-# <a name="build-apps-for-microsoft-teams"></a>为 Microsoft 团队构建应用程序
+# <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
 Microsoft 团队应用程序可提供关键信息、常见工具和受信任的过程，以便人们越来越多地收集、学习和工作。
 
 应用程序是您扩展团队以满足您的需求的方式。 创建适用于团队的全新功能或集成现有应用程序。
+
+> [!div class="nextstepaction"]
+> [从这里开始](build-your-first-app/build-first-app-overview.md)
 
 ## <a name="what-are-teams-apps"></a>什么是团队应用？
 
@@ -38,7 +41,7 @@ Microsoft 团队应用程序可提供关键信息、常见工具和受信任的�
 
 ### <a name="messaging-extensions"></a>消息传递扩展
 
-**更轻松**地执行多项工作：使用 [邮件扩展](messaging-extensions/what-are-messaging-extensions.md)，可以在对话中快速共享外部信息。 您还可以对邮件执行操作，例如根据频道帖子的内容创建帮助票证。
+**更轻松** 地执行多项工作：使用 [邮件扩展](messaging-extensions/what-are-messaging-extensions.md)，可以在对话中快速共享外部信息。 您还可以对邮件执行操作，例如根据频道帖子的内容创建帮助票证。
 
 :::image type="content" source="assets\images\overview-messaging.png" alt-text="邮件扩展在团队客户端中的显示方式的概念性表示。" border="false":::
 
@@ -50,7 +53,7 @@ Microsoft 团队应用程序可提供关键信息、常见工具和受信任的�
 
 ### <a name="bots"></a>机器人
 
-将**单词转换为操作**：对话通常会导致需要执行某些操作， (生成订单、查看我的代码、检查票证状态等 ) 。 [机器人](bots/what-are-bots.md)可以直接在团队内部启动这些类型的工作流。
+将 **单词转换为操作**：对话通常会导致需要执行某些操作， (生成订单、查看我的代码、检查票证状态等 ) 。 [机器人](bots/what-are-bots.md)可以直接在团队内部启动这些类型的工作流。
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="团队客户端中的 bot 外观的概念性表示。" border="false":::
 
@@ -139,7 +142,7 @@ Microsoft 团队应用程序可提供关键信息、常见工具和受信任的�
 ## <a name="resources"></a>资源
 
 * [向您的网站添加 "共享到团队" 按钮](concepts/build-and-test/share-to-teams.md)
-* [熟知设计系统](https://fluentsite.z22.web.core.windows.net/)
+* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>
 * [Microsoft 团队 JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * 用于 .NET 的 JavaScript 和[Bot 框架 sdk](https://github.com/Microsoft/botbuilder-dotnet/)的[bot 框架 sdk](https://github.com/Microsoft/botbuilder-js)
 * [将应用发布到组织或 AppSource](concepts/deploy-and-publish/overview.md)

@@ -3,12 +3,12 @@ title: Office 365 连接器
 description: 介绍如何开始使用 Microsoft 团队中的 Office 365 连接器
 keywords: Teams o365 连接器
 ms.date: 04/19/2019
-ms.openlocfilehash: dcd9f7e68dfe834fbcac245941944007beedf478
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 374e5058d2041d43f675d643e5b830bf72ad79c2
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998019"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605340"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>为 Microsoft 团队创建 Office 365 连接器
 
@@ -79,7 +79,7 @@ ms.locfileid: "48998019"
 
 您可以从门户下载自动生成的团队应用程序清单。 但是，必须先执行以下操作，然后才能使用它测试或发布应用程序：
 
-- 包含两个图标，按照[“图标”](~/concepts/build-and-test/apps-package.md#icons)中的说明。
+- [包含两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
 - 修改清单的 `icons` 部分，以便引用图标的文件名，而不是 URL。
 
 以下 manifest.json 文件包含测试和提交应用程序所需的基本元素。
@@ -146,10 +146,10 @@ ms.locfileid: "48998019"
 上载应用程序包后，若要配置和使用团队中的连接器，可以通过执行以下步骤，从组织的应用程序目录中进行安装：
 
 1. 从最左侧垂直导航栏中选择 "应用" 图标。
-1. 在 " **应用** " 窗口中选择 " **连接器** "。
+1. 在 " **应用** " 窗口中选择 " **连接器**"。
 1. 选择要添加的连接器，将显示一个弹出对话框窗口。
 1. 选择 " **添加到团队** 栏"。
 1. 在下一个对话框窗口中，键入团队或频道名称。
 1. 从对话框窗口的右下角选择 " **设置连接符** " 栏。
-1. 该连接器将在 " &#9679;&#9679;&#9679; => *更多选项* "  =>  *连接器*  =>  *All*  =>  *为* 该团队的所有连接器提供支持。 您可以通过滚动到此部分或搜索连接器应用来进行导航。
+1. 该连接器将在 " &#9679;&#9679;&#9679; =>*更多选项*"  =>  *连接器*  =>  *All*  =>  *为* 该团队的所有连接器提供支持。 您可以通过滚动到此部分或搜索连接器应用来进行导航。
 1. 若要配置或修改连接器，请选择 " **配置** " 栏。
