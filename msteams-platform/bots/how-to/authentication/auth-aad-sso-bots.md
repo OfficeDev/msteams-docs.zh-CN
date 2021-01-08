@@ -1,75 +1,76 @@
 ---
 title: 为机器人提供单一登录支持
-description: 介绍如何获取用户令牌。 目前，bot 开发人员可以在支持 OAuth 卡时使用 "登录卡" 或 "azure bot 服务"。
-keywords: 令牌，用户令牌，针对 bot 的 SSO 支持
-ms.openlocfilehash: f2f04cefdea874c42961404339f54b8eb581c7ee
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+description: 介绍如何获取用户令牌。 目前，机器人开发人员可以使用具有 OAuth 卡支持的登录卡或 azure 自动程序服务。
+keywords: 令牌， 用户令牌， 自动程序 SSO 支持
+ms.openlocfilehash: ee9dbee063acf90f5596fc95d002caf53f88a08a
+ms.sourcegitcommit: 0a9e91c65d88512eda895c21371b3cd4051dca0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409097"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "49729072"
 ---
-# <a name="single-sign-on-sso-support-for-bots"></a><span data-ttu-id="eaa80-105">单一登录 (SSO) 对 bot 的支持</span><span class="sxs-lookup"><span data-stu-id="eaa80-105">Single sign-on (SSO) support for bots</span></span>
+# <a name="single-sign-on-sso-support-for-bots"></a><span data-ttu-id="7630e-105">单一登录 (SSO) 自动程序支持</span><span class="sxs-lookup"><span data-stu-id="7630e-105">Single sign-on (SSO) support for bots</span></span>
 
-<span data-ttu-id="eaa80-106">Azure Active Directory 中的单一登录身份验证 (Azure AD) 最大限度地减少用户需要通过静默方式刷新身份验证令牌来输入其登录凭据的次数。</span><span class="sxs-lookup"><span data-stu-id="eaa80-106">Single sign-on authentication in Azure Active Directory (Azure AD) minimizes the number of times users need to enter their login credentials by silently refreshing the authentication token.</span></span> <span data-ttu-id="eaa80-107">如果用户同意使用您的应用程序，则无需再次在其他设备上同意，并将自动登录。</span><span class="sxs-lookup"><span data-stu-id="eaa80-107">If users agrees to use your app, they will not have to consent again on another device and will be signed in automatically.</span></span> <span data-ttu-id="eaa80-108">流与 " [团队" 选项卡的 SSO 支持]( ../../../tabs/how-to/authentication/auth-aad-sso.md)非常相似。</span><span class="sxs-lookup"><span data-stu-id="eaa80-108">The flow is very similar to the [Teams tab SSO support]( ../../../tabs/how-to/authentication/auth-aad-sso.md).</span></span> <span data-ttu-id="eaa80-109">不同之处在于，机器人如何请求令牌和接收响应的协议。</span><span class="sxs-lookup"><span data-stu-id="eaa80-109">The difference is the protocol for how a bot requests tokens and receives responses.</span></span>
+<span data-ttu-id="7630e-106">Azure AD (Azure Active Directory 中的单一登录身份验证) 通过静默刷新身份验证令牌来最大程度地减少用户输入其登录凭据的时间。</span><span class="sxs-lookup"><span data-stu-id="7630e-106">Single sign-on authentication in Azure Active Directory (Azure AD) minimizes the number of times users need to enter their login credentials by silently refreshing the authentication token.</span></span> <span data-ttu-id="7630e-107">如果用户同意使用你的应用，则他们不需要在另一台设备上再次同意，并且将自动登录。</span><span class="sxs-lookup"><span data-stu-id="7630e-107">If users agree to use your app, they will not have to consent again on another device and will be signed in automatically.</span></span> <span data-ttu-id="7630e-108">该流非常类似于 Teams [选项卡 SSO 支持]( ../../../tabs/how-to/authentication/auth-aad-sso.md)。</span><span class="sxs-lookup"><span data-stu-id="7630e-108">The flow is very similar to the [Teams tab SSO support]( ../../../tabs/how-to/authentication/auth-aad-sso.md).</span></span> <span data-ttu-id="7630e-109">区别在于自动程序如何请求令牌和接收响应的协议。</span><span class="sxs-lookup"><span data-stu-id="7630e-109">The difference is the protocol for how a bot requests tokens and receives responses.</span></span>
 
-<span data-ttu-id="eaa80-110">OAuth 2.0 是一种开放标准，用于 Azure Active Directory (Azure AD) 和许多其他标识提供程序使用的身份验证和授权。</span><span class="sxs-lookup"><span data-stu-id="eaa80-110">OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (Azure AD) and many other identity providers.</span></span> <span data-ttu-id="eaa80-111">对 OAuth 2.0 的基本了解是在团队中使用身份验证的先决条件。</span><span class="sxs-lookup"><span data-stu-id="eaa80-111">A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.</span></span>
+<span data-ttu-id="7630e-110">OAuth 2.0 是 Azure Active Directory 和 Azure AD (和许多其他标识提供程序) 身份验证和授权的开放式标准。</span><span class="sxs-lookup"><span data-stu-id="7630e-110">OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (Azure AD) and many other identity providers.</span></span> <span data-ttu-id="7630e-111">基本了解 OAuth 2.0 是在 Teams 中处理身份验证的先决条件。</span><span class="sxs-lookup"><span data-stu-id="7630e-111">A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.</span></span>
 
-## <a name="bot-sso-at-runtime"></a><span data-ttu-id="eaa80-112">运行时的 Bot SSO</span><span class="sxs-lookup"><span data-stu-id="eaa80-112">Bot SSO at runtime</span></span>
+## <a name="bot-sso-at-runtime"></a><span data-ttu-id="7630e-112">运行时自动程序 SSO</span><span class="sxs-lookup"><span data-stu-id="7630e-112">Bot SSO at runtime</span></span>
 
-![运行时关系图中的 Bot SSO](../../../assets/images/bots/bots-sso-diagram.png)
+![运行时自动程序 SSO 图](../../../assets/images/bots/bots-sso-diagram.png)
 
-1. <span data-ttu-id="eaa80-114">机器人发送包含属性的 OAuthCard 的邮件 `tokenExchangeResource` 。</span><span class="sxs-lookup"><span data-stu-id="eaa80-114">The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property.</span></span> <span data-ttu-id="eaa80-115">它告诉团队获取机器人应用程序的身份验证令牌。</span><span class="sxs-lookup"><span data-stu-id="eaa80-115">It tells Teams to obtain an authentication token for the bot application.</span></span> <span data-ttu-id="eaa80-116">用户在用户的所有活动终结点上接收邮件。</span><span class="sxs-lookup"><span data-stu-id="eaa80-116">The user receives messages at all the active endpoints of the user.</span></span>
+1. <span data-ttu-id="7630e-114">机器人使用包含该属性的 OAuthCard 发送邮件 `tokenExchangeResource` 。</span><span class="sxs-lookup"><span data-stu-id="7630e-114">The bot sends a message with an OAuthCard that contains the `tokenExchangeResource` property.</span></span> <span data-ttu-id="7630e-115">它指示 Teams 获取自动程序应用程序的身份验证令牌。</span><span class="sxs-lookup"><span data-stu-id="7630e-115">It tells Teams to obtain an authentication token for the bot application.</span></span> <span data-ttu-id="7630e-116">用户在用户的所有活动终结点接收消息。</span><span class="sxs-lookup"><span data-stu-id="7630e-116">The user receives messages at all the active endpoints of the user.</span></span>
 
-> [!NOTE]
->* <span data-ttu-id="eaa80-117">一个用户一次可以有一个以上的活动终结点。</span><span class="sxs-lookup"><span data-stu-id="eaa80-117">A user can have more than one active endpoint at a time.</span></span>  
->* <span data-ttu-id="eaa80-118">将从用户的每个活动终结点接收 bot 令牌。</span><span class="sxs-lookup"><span data-stu-id="eaa80-118">The bot token is received from every active endpoint of the user.</span></span>
->* <span data-ttu-id="eaa80-119">单一登录支持目前要求在个人作用域中安装应用程序。</span><span class="sxs-lookup"><span data-stu-id="eaa80-119">Single sign-on support currently requires the app to be installed in personal scope.</span></span>
+    > [!NOTE]
+    >* <span data-ttu-id="7630e-117">一个用户一次可以具有多个活动终结点。</span><span class="sxs-lookup"><span data-stu-id="7630e-117">A user can have more than one active endpoint at a time.</span></span>  
+    >* <span data-ttu-id="7630e-118">自动程序令牌从用户每个活动终结点接收。</span><span class="sxs-lookup"><span data-stu-id="7630e-118">The bot token is received from every active endpoint of the user.</span></span>
+    >* <span data-ttu-id="7630e-119">单一登录支持当前需要在个人范围内安装应用。</span><span class="sxs-lookup"><span data-stu-id="7630e-119">Single sign-on support currently requires the app to be installed in personal scope.</span></span>
 
-2. <span data-ttu-id="eaa80-120">如果是当前用户第一次使用你的 bot 应用程序，则在需要同意的情况下，将会发出请求提示 () 或处理步骤验证 (如双重身份验证) ）。</span><span class="sxs-lookup"><span data-stu-id="eaa80-120">If it is the first time the current user has used your bot application, there will be a request prompt to consent (if consent is required) or to handle step-up authentication (such as two-factor authentication).</span></span>
+2. <span data-ttu-id="7630e-120">如果当前用户第一次使用自动程序应用程序， (如果需要同意) 或处理双重身份验证等 (身份验证请求) 。</span><span class="sxs-lookup"><span data-stu-id="7630e-120">If it is the first time the current user has used your bot application, there will be a request prompt to consent (if consent is required) or to handle step-up authentication (such as two-factor authentication).</span></span>
 
-3. <span data-ttu-id="eaa80-121">Microsoft 团队从当前用户的 Azure AD 终结点请求 bot 应用程序令牌。</span><span class="sxs-lookup"><span data-stu-id="eaa80-121">Microsoft Teams requests the bot application token from the Azure AD endpoint for the current user.</span></span>
+3. <span data-ttu-id="7630e-121">Microsoft Teams 从 Azure AD 终结点为当前用户请求自动程序应用程序令牌。</span><span class="sxs-lookup"><span data-stu-id="7630e-121">Microsoft Teams requests the bot application token from the Azure AD endpoint for the current user.</span></span>
 
-4. <span data-ttu-id="eaa80-122">Azure AD 将机器人应用程序令牌发送给团队应用程序。</span><span class="sxs-lookup"><span data-stu-id="eaa80-122">Azure AD sends the bot application token to the Teams application.</span></span>
+4. <span data-ttu-id="7630e-122">Azure AD 将机器人应用程序令牌发送到 Teams 应用程序。</span><span class="sxs-lookup"><span data-stu-id="7630e-122">Azure AD sends the bot application token to the Teams application.</span></span>
 
-5. <span data-ttu-id="eaa80-123">Microsoft 团队将令牌以名称登录/tokenExchange 的 invoke 活动返回的 value 对象的一部分发送到 bot。</span><span class="sxs-lookup"><span data-stu-id="eaa80-123">Microsoft Teams sends the token to the bot as part of the value object returned by the invoke activity with the name sign-in/tokenExchange.</span></span>
+5. <span data-ttu-id="7630e-123">Microsoft Teams 将令牌作为调用活动返回的值对象的一部分（名称为登录/令牌Exchange）发送给机器人。</span><span class="sxs-lookup"><span data-stu-id="7630e-123">Microsoft Teams sends the token to the bot as part of the value object returned by the invoke activity with the name sign-in/tokenExchange.</span></span>
   
-6. <span data-ttu-id="eaa80-124">令牌将在 bot 应用程序中进行分析，以提取所需的信息，如用户的电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="eaa80-124">The token will be parsed in the bot application to extract the needed information, such as the user's email address.</span></span>
+6. <span data-ttu-id="7630e-124">令牌将在自动程序应用程序中进行分析，以提取所需信息，如用户的电子邮件地址。</span><span class="sxs-lookup"><span data-stu-id="7630e-124">The token will be parsed in the bot application to extract the needed information, such as the user's email address.</span></span>
   
-## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a><span data-ttu-id="eaa80-125">开发单一登录 Microsoft 团队 bot</span><span class="sxs-lookup"><span data-stu-id="eaa80-125">Develop a Single sign-on Microsoft Teams bot</span></span>
+## <a name="develop-a-single-sign-on-microsoft-teams-bot"></a><span data-ttu-id="7630e-125">开发单一登录 Microsoft Teams 自动程序</span><span class="sxs-lookup"><span data-stu-id="7630e-125">Develop a Single sign-on Microsoft Teams bot</span></span>
   
-<span data-ttu-id="eaa80-126">以下步骤是开发 SSO Microsoft 团队 bot 所必需的：</span><span class="sxs-lookup"><span data-stu-id="eaa80-126">The following steps: are required to develop an SSO Microsoft Teams bot:</span></span>
+<span data-ttu-id="7630e-126">开发 SSO Microsoft Teams 自动程序需要执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="7630e-126">The following steps are required to develop an SSO Microsoft Teams bot:</span></span>
 
-1. [<span data-ttu-id="eaa80-127">创建 Azure 免费帐户</span><span class="sxs-lookup"><span data-stu-id="eaa80-127">Create an Azure free account</span></span>](#create-an-azure-account)
-2. [<span data-ttu-id="eaa80-128">更新团队应用程序清单</span><span class="sxs-lookup"><span data-stu-id="eaa80-128">Update your Teams app manifest</span></span>](#update-your-app-manifest)
-3. [<span data-ttu-id="eaa80-129">添加代码以请求和接收 bot 令牌</span><span class="sxs-lookup"><span data-stu-id="eaa80-129">Add the code to request and receive the bot token</span></span>](#request-a-bot-token)
+1. [<span data-ttu-id="7630e-127">创建 Azure 免费帐户</span><span class="sxs-lookup"><span data-stu-id="7630e-127">Create an Azure free account</span></span>](#create-an-azure-account)
+2. [<span data-ttu-id="7630e-128">更新 Teams 应用清单</span><span class="sxs-lookup"><span data-stu-id="7630e-128">Update your Teams app manifest</span></span>](#update-your-app-manifest)
+3. [<span data-ttu-id="7630e-129">添加代码以请求和接收自动程序令牌</span><span class="sxs-lookup"><span data-stu-id="7630e-129">Add the code to request and receive the bot token</span></span>](#request-a-bot-token)
 
-### <a name="create-an-azure-account"></a><span data-ttu-id="eaa80-130">创建 Azure 帐户</span><span class="sxs-lookup"><span data-stu-id="eaa80-130">Create an Azure account</span></span>
+### <a name="create-an-azure-account"></a><span data-ttu-id="7630e-130">创建 Azure 帐户</span><span class="sxs-lookup"><span data-stu-id="7630e-130">Create an Azure account</span></span>
 
-<span data-ttu-id="eaa80-131">此步骤类似于 [选项卡 SSO 流](../../../tabs/how-to/authentication/auth-aad-sso.md)：</span><span class="sxs-lookup"><span data-stu-id="eaa80-131">This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):</span></span>
+<span data-ttu-id="7630e-131">此步骤类似于选项卡 [SSO 流](../../../tabs/how-to/authentication/auth-aad-sso.md)：</span><span class="sxs-lookup"><span data-stu-id="7630e-131">This step is similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md):</span></span>
 
-1. <span data-ttu-id="eaa80-132">获取团队桌面、web 或移动客户端的 [AZURE AD 应用程序 ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 。</span><span class="sxs-lookup"><span data-stu-id="eaa80-132">Get your [Azure AD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) for Teams desktop, web, or mobile client.</span></span>
-2. <span data-ttu-id="eaa80-133">指定应用程序需要的 Azure AD 终结点和 Microsoft Graph （可选）的权限。</span><span class="sxs-lookup"><span data-stu-id="eaa80-133">Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.</span></span>
-3. <span data-ttu-id="eaa80-134">[授予](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) 对团队桌面、web 和移动应用程序的权限。</span><span class="sxs-lookup"><span data-stu-id="eaa80-134">[Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.</span></span>
-4. <span data-ttu-id="eaa80-135">通过选择 " **添加范围** " 按钮并在打开的面板中，输入 `access_as_user` 作为 **作用域名称** 来添加客户端应用程序。</span><span class="sxs-lookup"><span data-stu-id="eaa80-135">Add a client app by selecting the **Add a scope** button and in the panel that opens, enter `access_as_user` as the **Scope name**.</span></span>
+1. <span data-ttu-id="7630e-132">获取 Teams 桌面、Web 或移动客户端的 [Azure AD](/graph/concepts/auth-register-app-v2) 应用程序 ID。</span><span class="sxs-lookup"><span data-stu-id="7630e-132">Get your [Azure AD Application ID](/graph/concepts/auth-register-app-v2) for Teams desktop, web, or mobile client.</span></span>
+2. <span data-ttu-id="7630e-133">指定应用程序对 Azure AD 终结点和（可选）Microsoft Graph 所需的权限。</span><span class="sxs-lookup"><span data-stu-id="7630e-133">Specify the permissions that your application needs for the Azure AD endpoint and, optionally, Microsoft Graph.</span></span>
+3. <span data-ttu-id="7630e-134">[授予 Teams](/azure/active-directory/develop/v2-permissions-and-consent) 桌面、Web 和移动应用程序的权限。</span><span class="sxs-lookup"><span data-stu-id="7630e-134">[Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.</span></span>
+4. <span data-ttu-id="7630e-135">选择 **"添加范围"。**</span><span class="sxs-lookup"><span data-stu-id="7630e-135">Select **Add a scope**.</span></span>
+5. <span data-ttu-id="7630e-136">在打开的面板中，通过输入作为范围名称 `access_as_user` 添加 **客户端应用**。</span><span class="sxs-lookup"><span data-stu-id="7630e-136">In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.</span></span>
 
->[!NOTE]
-> <span data-ttu-id="eaa80-136">用于添加客户端应用程序的 "access_as_user" 范围针对的是 "管理员和用户"。</span><span class="sxs-lookup"><span data-stu-id="eaa80-136">The "access_as_user" scope used to add a client app is for "Administrators and users".</span></span>
+    >[!NOTE]
+    > <span data-ttu-id="7630e-137">用于添加access_as_user应用的"access_as_user"作用域适用于"管理员和用户"。</span><span class="sxs-lookup"><span data-stu-id="7630e-137">The "access_as_user" scope used to add a client app is for "Administrators and users".</span></span>
 
-> [!IMPORTANT]
-> * <span data-ttu-id="eaa80-137">如果要构建独立的 bot，请将应用程序 ID URI 设置为 `api://botid-{YourBotId}` 此处， **YourBotId** 引用您的 Azure AD 应用程序 id。</span><span class="sxs-lookup"><span data-stu-id="eaa80-137">If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` Here, **YourBotId** refers to your Azure AD application ID.</span></span>
-> * <span data-ttu-id="eaa80-138">如果要使用 bot 和选项卡生成应用程序，请将应用程序 ID URI 设置为 `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。</span><span class="sxs-lookup"><span data-stu-id="eaa80-138">If you are building an app with a bot and a tab, set the Application ID URI to `api://fully-qualified-domain-name.com/botid-{YourBotId}`.</span></span>
+    > [!IMPORTANT]
+    > * <span data-ttu-id="7630e-138">如果要生成独立自动程序，将应用程序 ID URI 设置为 `api://botid-{YourBotId}` 此处 **，YourBotId** 将引用 Azure AD 应用程序 ID。</span><span class="sxs-lookup"><span data-stu-id="7630e-138">If you are building a standalone bot, set the Application ID URI to `api://botid-{YourBotId}` Here, **YourBotId** refers to your Azure AD application ID.</span></span>
+    > * <span data-ttu-id="7630e-139">如果要使用自动程序和选项卡生成应用，将应用程序 ID URI 设置为 `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。</span><span class="sxs-lookup"><span data-stu-id="7630e-139">If you are building an app with a bot and a tab, set the Application ID URI to `api://fully-qualified-domain-name.com/botid-{YourBotId}`.</span></span>
 
-### <a name="update-your-app-manifest"></a><span data-ttu-id="eaa80-139">更新应用程序清单</span><span class="sxs-lookup"><span data-stu-id="eaa80-139">Update your app manifest</span></span>
+### <a name="update-your-app-manifest"></a><span data-ttu-id="7630e-140">更新应用清单</span><span class="sxs-lookup"><span data-stu-id="7630e-140">Update your app manifest</span></span>
 
-<span data-ttu-id="eaa80-140">将新属性添加到 Microsoft 团队清单：</span><span class="sxs-lookup"><span data-stu-id="eaa80-140">Add new properties to your Microsoft Teams manifest:</span></span>
+<span data-ttu-id="7630e-141">将新属性添加到 Microsoft Teams 清单：</span><span class="sxs-lookup"><span data-stu-id="7630e-141">Add new properties to your Microsoft Teams manifest:</span></span>
 
-<span data-ttu-id="eaa80-141">**WebApplicationInfo** -以下元素的父元素：</span><span class="sxs-lookup"><span data-stu-id="eaa80-141">**WebApplicationInfo** - The parent of the following elements:</span></span>
+<span data-ttu-id="7630e-142">**WebApplicationInfo** - 以下元素的父元素：</span><span class="sxs-lookup"><span data-stu-id="7630e-142">**WebApplicationInfo** - The parent of the following elements:</span></span>
 
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="eaa80-142">**id** -应用程序的客户端 id。</span><span class="sxs-lookup"><span data-stu-id="eaa80-142">**id** - The client ID of the application.</span></span> <span data-ttu-id="eaa80-143">这是您在向 Azure AD 注册应用程序的过程中获得的应用程序 ID。</span><span class="sxs-lookup"><span data-stu-id="eaa80-143">This is the application ID that you obtained as part of registering the application with Azure AD.</span></span>
->* <span data-ttu-id="eaa80-144">**resource** -应用程序的域和子域。</span><span class="sxs-lookup"><span data-stu-id="eaa80-144">**resource** - The domain and subdomain of your application.</span></span> <span data-ttu-id="eaa80-145">此 URI (包括 `api://` 您在 `scope` 上面的步骤6中创建时注册的协议) 。</span><span class="sxs-lookup"><span data-stu-id="eaa80-145">This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in step 6 above.</span></span> <span data-ttu-id="eaa80-146">您不应 `access_as_user` 在资源中包含该路径。</span><span class="sxs-lookup"><span data-stu-id="eaa80-146">You shouldn't include the `access_as_user` path in your resource.</span></span> <span data-ttu-id="eaa80-147">此 URI 的域部分应与在团队应用程序清单的 Url 中使用的域（包括任何子域）相匹配。</span><span class="sxs-lookup"><span data-stu-id="eaa80-147">The domain part of this URI should match the domain, including any subdomains, used in the URLs of your Teams application manifest.</span></span>
+> * <span data-ttu-id="7630e-143">**id** - 应用程序的客户端 ID。</span><span class="sxs-lookup"><span data-stu-id="7630e-143">**id** - The client ID of the application.</span></span> <span data-ttu-id="7630e-144">这是在向 Azure AD 注册应用程序时获取的应用程序 ID。</span><span class="sxs-lookup"><span data-stu-id="7630e-144">This is the application ID that you obtained as part of registering the application with Azure AD.</span></span>
+>* <span data-ttu-id="7630e-145">**resource** - 应用程序的域和子域。</span><span class="sxs-lookup"><span data-stu-id="7630e-145">**resource** - The domain and subdomain of your application.</span></span> <span data-ttu-id="7630e-146">这是相同的 URI (，包括) 步骤 6 中创建时注册 `api://` `scope` 的协议。</span><span class="sxs-lookup"><span data-stu-id="7630e-146">This is the same URI (including the `api://` protocol) that you registered when creating your `scope` in step 6 above.</span></span> <span data-ttu-id="7630e-147">不应在资源 `access_as_user` 中包括路径。</span><span class="sxs-lookup"><span data-stu-id="7630e-147">You shouldn't include the `access_as_user` path in your resource.</span></span> <span data-ttu-id="7630e-148">此 URI 的域部分应匹配 Teams 应用程序清单的 URL 中使用的域，包括任何子域。</span><span class="sxs-lookup"><span data-stu-id="7630e-148">The domain part of this URI should match the domain, including any subdomains, used in the URLs of your Teams application manifest.</span></span>
 
 ```json
 "webApplicationInfo": {
@@ -78,22 +79,22 @@ ms.locfileid: "49409097"
 }
 ```
 
-### <a name="request-a-bot-token"></a><span data-ttu-id="eaa80-148">请求 bot 令牌</span><span class="sxs-lookup"><span data-stu-id="eaa80-148">Request a bot token</span></span>
+### <a name="request-a-bot-token"></a><span data-ttu-id="7630e-149">请求自动程序令牌</span><span class="sxs-lookup"><span data-stu-id="7630e-149">Request a bot token</span></span>
 
-<span data-ttu-id="eaa80-149">获取令牌的请求是使用现有邮件架构)  (正常的 POST 邮件请求。</span><span class="sxs-lookup"><span data-stu-id="eaa80-149">The request to get the token is a normal POST message request (using the existing message schema).</span></span> <span data-ttu-id="eaa80-150">它包含在 OAuthCard 的附件中。</span><span class="sxs-lookup"><span data-stu-id="eaa80-150">It is included in the attachments of an OAuthCard.</span></span> <span data-ttu-id="eaa80-151">OAuthCard 类的架构在 [Microsoft Bot 架构 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) 中定义，与登录卡非常相似。</span><span class="sxs-lookup"><span data-stu-id="eaa80-151">The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is very similar to a sign-in card.</span></span> <span data-ttu-id="eaa80-152">如果在卡片上填充了该属性，则团队会将此请求视为无提示令牌获取 `TokenExchangeResource` 。</span><span class="sxs-lookup"><span data-stu-id="eaa80-152">Teams will treat this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card.</span></span> <span data-ttu-id="eaa80-153">对于 "团队渠道"，我们仅接受 `Id` 唯一标识令牌请求的属性。</span><span class="sxs-lookup"><span data-stu-id="eaa80-153">For the Teams channel we honor only the `Id` property, which uniquely identifies a token request.</span></span>
+<span data-ttu-id="7630e-150">获取令牌的请求是使用现有邮件架构 (普通 POST 消息) 。</span><span class="sxs-lookup"><span data-stu-id="7630e-150">The request to get the token is a normal POST message request (using the existing message schema).</span></span> <span data-ttu-id="7630e-151">它包含在 OAuthCard 的附件中。</span><span class="sxs-lookup"><span data-stu-id="7630e-151">It is included in the attachments of an OAuthCard.</span></span> <span data-ttu-id="7630e-152">OAuthCard 类的架构在 Microsoft [Bot 架构 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) 中定义，它非常类似于登录卡。</span><span class="sxs-lookup"><span data-stu-id="7630e-152">The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) and it is very similar to a sign-in card.</span></span> <span data-ttu-id="7630e-153">如果卡片上填充了属性，Teams 将对此请求视为无提示 `TokenExchangeResource` 令牌获取。</span><span class="sxs-lookup"><span data-stu-id="7630e-153">Teams will treat this request as a silent token acquisition if the `TokenExchangeResource` property is populated on the card.</span></span> <span data-ttu-id="7630e-154">对于 Teams 频道，我们仅遵守 `Id` 唯一标识令牌请求的属性。</span><span class="sxs-lookup"><span data-stu-id="7630e-154">For the Teams channel, we honor only the `Id` property, which uniquely identifies a token request.</span></span>
 
 >[!NOTE]
-> <span data-ttu-id="eaa80-154">Bot 框架 `OAuthPrompt` 或 `MultiProviderAuthDialog` 支持单一登录 (SSO) 身份验证。</span><span class="sxs-lookup"><span data-stu-id="eaa80-154">The Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for single sign-on (SSO) authentication.</span></span>
+> <span data-ttu-id="7630e-155">自动程序 `OAuthPrompt` 框架或支持单一登录 `MultiProviderAuthDialog` (SSO) 身份验证。</span><span class="sxs-lookup"><span data-stu-id="7630e-155">The Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for single sign-on (SSO) authentication.</span></span>
 
-<span data-ttu-id="eaa80-155">如果这是用户第一次使用您的应用程序，并且需要用户同意，则将显示一个对话框，以继续使用与下面类似的同意体验。</span><span class="sxs-lookup"><span data-stu-id="eaa80-155">If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below.</span></span> <span data-ttu-id="eaa80-156">当用户选择 " **继续**" 时，将根据是否定义了 Bot 以及 OAuthCard 上的登录按钮，将发生两个不同的情况。</span><span class="sxs-lookup"><span data-stu-id="eaa80-156">When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuthCard.</span></span>
+<span data-ttu-id="7630e-156">如果这是用户第一次使用你的应用程序，并且需要用户同意，将显示一个对话框，以继续获得与下面类似的同意体验。</span><span class="sxs-lookup"><span data-stu-id="7630e-156">If this is the first time the user is using your application and the user consent is required, the user will be shown a dialog to continue with the consent experience similar to the one below.</span></span> <span data-ttu-id="7630e-157">当用户 **选择"继续**"时，将发生两个不同的情况，具体取决于是否已定义自动程序以及 OAuthCard 上的登录按钮。</span><span class="sxs-lookup"><span data-stu-id="7630e-157">When the user selects **Continue**, two different things occur depending on whether the bot is defined or not and a sign-in button on the OAuthCard.</span></span>
 
-!["同意" 对话框](../../../assets/images/bots/bots-consent-dialogbox.png)
+!["同意"对话框](../../../assets/images/bots/bots-consent-dialogbox.png)
 
-<span data-ttu-id="eaa80-158">如果机器人定义了登录按钮，则 bot 的登录流将以类似于邮件流中的卡按钮的登录流的方式触发。</span><span class="sxs-lookup"><span data-stu-id="eaa80-158">If the bot defines a sign-in button, the sign-in flow for bots will be triggered similarly to the sign-in flow from a card button in a message stream.</span></span> <span data-ttu-id="eaa80-159">由开发人员决定要求用户同意哪些权限。</span><span class="sxs-lookup"><span data-stu-id="eaa80-159">It is up to the developer to decide which permissions to ask for the user to consent.</span></span> <span data-ttu-id="eaa80-160">如果需要具有权限的令牌 `openId` （例如，如果要交换 graph 资源的令牌），则建议使用此方法。</span><span class="sxs-lookup"><span data-stu-id="eaa80-160">This approach is recommended if you need a token with permissions beyond `openId`, for example, if you want to exchange the token for graph resources.</span></span>
+<span data-ttu-id="7630e-159">如果自动程序定义登录按钮，则自动程序登录流的触发方式与从邮件流中的卡片按钮的登录流类似。</span><span class="sxs-lookup"><span data-stu-id="7630e-159">If the bot defines a sign-in button, the sign-in flow for bots will be triggered similarly to the sign-in flow from a card button in a message stream.</span></span> <span data-ttu-id="7630e-160">由开发人员决定请求用户同意哪些权限。</span><span class="sxs-lookup"><span data-stu-id="7630e-160">It is up to the developer to decide which permissions to ask for the user to consent.</span></span> <span data-ttu-id="7630e-161">如果需要权限超出权限的令牌（例如，如果要交换图形资源的令牌），则建议采用 `openId` 此方法。</span><span class="sxs-lookup"><span data-stu-id="7630e-161">This approach is recommended if you need a token with permissions beyond `openId`, for example, if you want to exchange the token for graph resources.</span></span>
 
-<span data-ttu-id="eaa80-161">如果 bot 未在卡片上提供登录按钮，则会触发用户对最少一组权限的同意。</span><span class="sxs-lookup"><span data-stu-id="eaa80-161">If the bot is not providing a sign-in button on the card, it triggers user consent for a minimal set of permissions.</span></span> <span data-ttu-id="eaa80-162">此令牌对基本身份验证和获取用户电子邮件地址非常有用。</span><span class="sxs-lookup"><span data-stu-id="eaa80-162">This token is useful for basic authentication and getting the user email address.</span></span>
+<span data-ttu-id="7630e-162">如果自动程序未在卡上提供登录按钮，它将触发用户对最低权限集的同意。</span><span class="sxs-lookup"><span data-stu-id="7630e-162">If the bot is not providing a sign-in button on the card, it triggers user consent for a minimal set of permissions.</span></span> <span data-ttu-id="7630e-163">此令牌对于基本身份验证和获取用户的电子邮件地址非常有用。</span><span class="sxs-lookup"><span data-stu-id="7630e-163">This token is useful for basic authentication and getting the user's email address.</span></span>
 
-<span data-ttu-id="eaa80-163">**不带登录按钮的 c # 令牌请求**：</span><span class="sxs-lookup"><span data-stu-id="eaa80-163">**C# token request without a sign-in button**:</span></span>
+<span data-ttu-id="7630e-164">**没有登录按钮的 C# 令牌请求**：</span><span class="sxs-lookup"><span data-stu-id="7630e-164">**C# token request without a sign-in button**:</span></span>
 
 ```csharp
 var attachment = new Attachment
@@ -115,11 +116,11 @@ var attachment = new Attachment
    await turnContext.SendActivityAsync(activity, cancellationToken);
 ```
 
-#### <a name="receiving-the-token"></a><span data-ttu-id="eaa80-164">接收令牌</span><span class="sxs-lookup"><span data-stu-id="eaa80-164">Receiving the token</span></span>
+#### <a name="receiving-the-token"></a><span data-ttu-id="7630e-165">接收令牌</span><span class="sxs-lookup"><span data-stu-id="7630e-165">Receiving the token</span></span>
 
-<span data-ttu-id="eaa80-165">令牌的响应是通过具有相同架构的调用活动发送的，而是由其他人调用，因为它会立即接收到这些活动。</span><span class="sxs-lookup"><span data-stu-id="eaa80-165">The response with the token is sent through an invoke activity with the same schema as others invoke activities the bots receive today.</span></span> <span data-ttu-id="eaa80-166">唯一的区别是调用名称、 **登录/tokenExchange** 和 **值** 字段，其中包含的 **Id** (最初请求获取令牌的字符串) 和 **令牌** 字段 (包含令牌) 的字符串值。</span><span class="sxs-lookup"><span data-stu-id="eaa80-166">The only difference is the invoke name, **sign-in/tokenExchange** and the **value** field which will contain the **Id** (a string) of the initial request to get the token and the **token** field (a string value including the token).</span></span> <span data-ttu-id="eaa80-167">请注意，如果用户有多个活动终结点，则可能会收到针对给定请求的多个响应。</span><span class="sxs-lookup"><span data-stu-id="eaa80-167">Please note that you might receive multiple responses for a given request if the user has multiple active endpoints.</span></span> <span data-ttu-id="eaa80-168">您可以使用令牌 deduplicate 响应。</span><span class="sxs-lookup"><span data-stu-id="eaa80-168">It is up to you to deduplicate the responses with the token.</span></span>
+<span data-ttu-id="7630e-166">包含令牌的响应通过调用活动发送，该调用活动架构与其他人调用机器人今天接收的活动相同。</span><span class="sxs-lookup"><span data-stu-id="7630e-166">The response with the token is sent through an invoke activity with the same schema as others invoke activities the bots receive today.</span></span> <span data-ttu-id="7630e-167">唯一的区别是调用名称、登录 **/令牌Exchange** 和值字段，该字段将包含 **ID** (获取令牌的初始请求的字符串) ，令牌字段 (字符串值，包括令牌) 。 </span><span class="sxs-lookup"><span data-stu-id="7630e-167">The only difference is the invoke name, **sign-in/tokenExchange** and the **value** field which will contain the **Id** (a string) of the initial request to get the token and the **token** field (a string value including the token).</span></span> <span data-ttu-id="7630e-168">请注意，如果用户有多个活动终结点，您可能会收到针对给定请求的多个响应。</span><span class="sxs-lookup"><span data-stu-id="7630e-168">Please note that you might receive multiple responses for a given request if the user has multiple active endpoints.</span></span> <span data-ttu-id="7630e-169">由你使用令牌删除响应的重复数据。</span><span class="sxs-lookup"><span data-stu-id="7630e-169">It is up to you to deduplicate the responses with the token.</span></span>
 
-<span data-ttu-id="eaa80-169">**用于响应处理调用活动的 c # 代码**：</span><span class="sxs-lookup"><span data-stu-id="eaa80-169">**C# code to respond to handle the invoke activity**:</span></span>
+<span data-ttu-id="7630e-170">**用于响应处理调用活动的 C# 代码**：</span><span class="sxs-lookup"><span data-stu-id="7630e-170">**C# code to respond to handle the invoke activity**:</span></span>
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync
@@ -144,42 +145,42 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync
         }
 ```
 
-<span data-ttu-id="eaa80-170">的 `turnContext.activity.value` 类型为 [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) ，包含可供你的 bot 继续使用的令牌。</span><span class="sxs-lookup"><span data-stu-id="eaa80-170">The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot.</span></span> <span data-ttu-id="eaa80-171">出于性能原因，安全地存储标记并刷新它们。</span><span class="sxs-lookup"><span data-stu-id="eaa80-171">Store the tokens securely for performance reasons and refresh them.</span></span>
+<span data-ttu-id="7630e-171">`turnContext.activity.value`其类型为[TokenExchangeInvokeRequest，](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true)其中包含自动程序可以进一步使用的令牌。</span><span class="sxs-lookup"><span data-stu-id="7630e-171">The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot.</span></span> <span data-ttu-id="7630e-172">出于性能原因，请安全地存储令牌并刷新它们。</span><span class="sxs-lookup"><span data-stu-id="7630e-172">Store the tokens securely for performance reasons and refresh them.</span></span>
 
-### <a name="update-the-azure-portal-with-the-oauth-connection"></a><span data-ttu-id="eaa80-172">使用 OAuth 连接更新 Azure 门户</span><span class="sxs-lookup"><span data-stu-id="eaa80-172">Update the Azure portal with the OAuth connection</span></span>
+### <a name="update-the-azure-portal-with-the-oauth-connection"></a><span data-ttu-id="7630e-173">使用 OAuth 连接更新 Azure 门户</span><span class="sxs-lookup"><span data-stu-id="7630e-173">Update the Azure portal with the OAuth connection</span></span>
 
-1. <span data-ttu-id="eaa80-173">在 Azure 门户中，导航回 **机器人通道注册**。</span><span class="sxs-lookup"><span data-stu-id="eaa80-173">In the Azure Portal, navigate back to the **Bot Channels Registration**.</span></span>
+1. <span data-ttu-id="7630e-174">在 Azure 门户中，导航回 **自动程序通道注册**。</span><span class="sxs-lookup"><span data-stu-id="7630e-174">In the Azure Portal, navigate back to the **Bot Channels Registration**.</span></span>
 
-2. <span data-ttu-id="eaa80-174">切换到 " **设置** " 边栏选项卡，然后选择 "OAuth 连接设置" 部分下的 " **添加设置** "。</span><span class="sxs-lookup"><span data-stu-id="eaa80-174">Switch to the **Settings** blade and choose **Add Setting** under the OAuth Connection Settings section.</span></span>
+2. <span data-ttu-id="7630e-175">切换到"**设置"\*\*\*\*边栏选项卡**，然后选择"OAuth 连接设置"部分下的"添加设置"。</span><span class="sxs-lookup"><span data-stu-id="7630e-175">Switch to the **Settings** blade and choose **Add Setting** under the OAuth Connection Settings section.</span></span>
 
-![SSOBotHandle2 视图](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
+    ![SSOBotHandle2 视图](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
-3. <span data-ttu-id="eaa80-176">完成 " **连接设置** " 窗体：</span><span class="sxs-lookup"><span data-stu-id="eaa80-176">Complete the **Connection Setting** form:</span></span>
+3. <span data-ttu-id="7630e-177">完成 **"连接设置"** 表单：</span><span class="sxs-lookup"><span data-stu-id="7630e-177">Complete the **Connection Setting** form:</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="eaa80-177">为新的连接设置输入一个名称。</span><span class="sxs-lookup"><span data-stu-id="eaa80-177">Enter a name for your new Connection Setting.</span></span> <span data-ttu-id="eaa80-178">这将是在 **步骤 5** 中的 bot 服务代码的设置中引用的名称。</span><span class="sxs-lookup"><span data-stu-id="eaa80-178">This will be the name that gets referenced inside the settings of your bot service code in **step 5**.</span></span>
-> * <span data-ttu-id="eaa80-179">在 "服务提供商" 下拉列表中，选择 " **Azure Active Directory V2**"。</span><span class="sxs-lookup"><span data-stu-id="eaa80-179">In the Service Provider dropdown, select **Azure Active Directory V2**.</span></span>
->* <span data-ttu-id="eaa80-180">输入 AAD 应用程序的客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="eaa80-180">Enter the client credentials for the AAD application.</span></span>
+    > [!div class="checklist"]
+    >
+    > * <span data-ttu-id="7630e-178">输入新连接设置的名称。</span><span class="sxs-lookup"><span data-stu-id="7630e-178">Enter a name for your new Connection Setting.</span></span> <span data-ttu-id="7630e-179">这将是在步骤 **5** 中的自动程序服务代码设置内引用的名称。</span><span class="sxs-lookup"><span data-stu-id="7630e-179">This will be the name that gets referenced inside the settings of your bot service code in **step 5**.</span></span>
+    > * <span data-ttu-id="7630e-180">在"服务提供程序"下拉列表中，**选择 Azure Active Directory V2。**</span><span class="sxs-lookup"><span data-stu-id="7630e-180">In the Service Provider dropdown, select **Azure Active Directory V2**.</span></span>
+    >* <span data-ttu-id="7630e-181">输入 AAD 应用程序的客户端凭据。</span><span class="sxs-lookup"><span data-stu-id="7630e-181">Enter the client credentials for the AAD application.</span></span>
 
->[!NOTE]
-> <span data-ttu-id="eaa80-181">AAD 应用程序中可能需要 **隐式授予**。</span><span class="sxs-lookup"><span data-stu-id="eaa80-181">**Implicit grant** may be required in the AAD application.</span></span>
+    >[!NOTE]
+    > <span data-ttu-id="7630e-182">**AAD** 应用程序中可能需要隐式授予。</span><span class="sxs-lookup"><span data-stu-id="7630e-182">**Implicit grant** may be required in the AAD application.</span></span>
 
->* <span data-ttu-id="eaa80-182">对于令牌交换 URL，请使用在 AAD 应用程序的上一步骤中定义的范围值。</span><span class="sxs-lookup"><span data-stu-id="eaa80-182">For the Token Exchange URL, use the scope value defined in the previous step of your AAD application.</span></span> <span data-ttu-id="eaa80-183">令牌交换 URL 的存在指示为 SDK 配置此 AAD 应用程序的 SSO。</span><span class="sxs-lookup"><span data-stu-id="eaa80-183">The presence of the Token Exchange URL is indicating to the SDK that this AAD application is configured for SSO.</span></span>
->* <span data-ttu-id="eaa80-184">将 "公用" 指定为 **租户 ID**。</span><span class="sxs-lookup"><span data-stu-id="eaa80-184">Specify "common" as the **Tenant ID**.</span></span>
->* <span data-ttu-id="eaa80-185">在为 AAD 应用程序指定对下游 Api 的权限时，添加所有配置的作用域。</span><span class="sxs-lookup"><span data-stu-id="eaa80-185">Add all the scopes configured when specifying permissions to downstream APIs for your AAD application.</span></span> <span data-ttu-id="eaa80-186">使用提供的客户端 id 和客户端密码，令牌存储将为您交换带有定义的权限的图形令牌的令牌。</span><span class="sxs-lookup"><span data-stu-id="eaa80-186">With the client id and client secret provided, token store will exchange the token for a graph token with defined permissions for you.</span></span>
->* <span data-ttu-id="eaa80-187">选择“保存”。</span><span class="sxs-lookup"><span data-stu-id="eaa80-187">Select **Save**.</span></span>
+    >* <span data-ttu-id="7630e-183">对于令牌 Exchange URL，请使用 AAD 应用程序上一步中定义的作用域值。</span><span class="sxs-lookup"><span data-stu-id="7630e-183">For the Token Exchange URL, use the scope value defined in the previous step of your AAD application.</span></span> <span data-ttu-id="7630e-184">令牌 Exchange URL 的存在向 SDK 指示此 AAD 应用程序已针对 SSO 进行配置。</span><span class="sxs-lookup"><span data-stu-id="7630e-184">The presence of the Token Exchange URL is indicating to the SDK that this AAD application is configured for SSO.</span></span>
+    >* <span data-ttu-id="7630e-185">指定"common"作为 **租户 ID。**</span><span class="sxs-lookup"><span data-stu-id="7630e-185">Specify "common" as the **Tenant ID**.</span></span>
+    >* <span data-ttu-id="7630e-186">为 AAD 应用程序指定对下游 API 的权限时配置的所有作用域。</span><span class="sxs-lookup"><span data-stu-id="7630e-186">Add all the scopes configured when specifying permissions to downstream APIs for your AAD application.</span></span> <span data-ttu-id="7630e-187">提供客户端 ID 和客户端密码后，令牌存储将用已定义的权限交换令牌，获取图形令牌。</span><span class="sxs-lookup"><span data-stu-id="7630e-187">With the client id and client secret provided, the token store will exchange the token for a graph token with defined permissions for you.</span></span>
+    >* <span data-ttu-id="7630e-188">选择“**保存**”。</span><span class="sxs-lookup"><span data-stu-id="7630e-188">Select **Save**.</span></span>
 
-![VuSSOBotConnection 设置视图](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
+    ![BotSSOBotConnection 设置视图](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 
-### <a name="update-the-auth-sample"></a><span data-ttu-id="eaa80-189">更新身份验证示例</span><span class="sxs-lookup"><span data-stu-id="eaa80-189">Update the auth sample</span></span>
+### <a name="update-the-auth-sample"></a><span data-ttu-id="7630e-190">更新身份验证示例</span><span class="sxs-lookup"><span data-stu-id="7630e-190">Update the auth sample</span></span>
 
-<span data-ttu-id="eaa80-190">从 " [团队" auth 示例](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)开始。</span><span class="sxs-lookup"><span data-stu-id="eaa80-190">Start with the [teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).</span></span>
+<span data-ttu-id="7630e-191">从团队 [身份验证示例开始](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)。</span><span class="sxs-lookup"><span data-stu-id="7630e-191">Start with the [teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).</span></span>
 
-1. <span data-ttu-id="eaa80-191">更新 TeamsBot 以包含以下项。</span><span class="sxs-lookup"><span data-stu-id="eaa80-191">Update the TeamsBot to include the following.</span></span> <span data-ttu-id="eaa80-192">若要处理传入请求的 deduping，请参阅以下内容：</span><span class="sxs-lookup"><span data-stu-id="eaa80-192">To handle the deduping of the incoming request, see below:</span></span>
+1. <span data-ttu-id="7630e-192">更新 TeamsBot 以包括以下内容。</span><span class="sxs-lookup"><span data-stu-id="7630e-192">Update the TeamsBot to include the following.</span></span> <span data-ttu-id="7630e-193">若要处理传入请求的 deduping，请参阅以下内容：</span><span class="sxs-lookup"><span data-stu-id="7630e-193">To handle the deduping of the incoming request, see below:</span></span>
 
 ```csharp
- protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+     protected override async Task OnSignInInvokeAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
         }
@@ -189,14 +190,14 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync
         }
 ```
   
-2. <span data-ttu-id="eaa80-193">更新 `appsettings.json` 以包含 `botId` 上面定义的、密码和连接名称。</span><span class="sxs-lookup"><span data-stu-id="eaa80-193">Update the `appsettings.json` to include the `botId`, password, and the connection name defined above.</span></span>
-3. <span data-ttu-id="eaa80-194">更新清单，并确保 `token.botframework.com` 在 "有效域" 部分中。</span><span class="sxs-lookup"><span data-stu-id="eaa80-194">Update the manifest and ensure that `token.botframework.com` is in the valid domains section.</span></span>
-4. <span data-ttu-id="eaa80-195">使用配置文件图像对清单进行压缩，并将其安装在团队中。</span><span class="sxs-lookup"><span data-stu-id="eaa80-195">Zip the manifest with the profile images and install it in Teams.</span></span>
+2. <span data-ttu-id="7630e-194">更新 `appsettings.json` 以包括 `botId` 上面定义的 、 密码和连接名称。</span><span class="sxs-lookup"><span data-stu-id="7630e-194">Update the `appsettings.json` to include the `botId`, password, and the connection name defined above.</span></span>
+3. <span data-ttu-id="7630e-195">更新清单并确保 `token.botframework.com` 该清单位于有效域部分。</span><span class="sxs-lookup"><span data-stu-id="7630e-195">Update the manifest and ensure that `token.botframework.com` is in the valid domains section.</span></span>
+4. <span data-ttu-id="7630e-196">Zip the manifest with the profile images and install it in Teams.</span><span class="sxs-lookup"><span data-stu-id="7630e-196">Zip the manifest with the profile images and install it in Teams.</span></span>
 
-#### <a name="additional-code-samples"></a><span data-ttu-id="eaa80-196">其他代码示例</span><span class="sxs-lookup"><span data-stu-id="eaa80-196">Additional code samples</span></span>
+#### <a name="additional-code-samples"></a><span data-ttu-id="7630e-197">其他代码示例</span><span class="sxs-lookup"><span data-stu-id="7630e-197">Additional code samples</span></span>
 
-* <span data-ttu-id="eaa80-197">[使用 Bot 框架 SDK 的 c # 示例](https://microsoft-my.sharepoint-df.com/:u:/p/vul/ETZQfeTViDlCv-frjgTIincB7dvk2HOnma1TLvcoeGGIxg?e=uPq62c)。</span><span class="sxs-lookup"><span data-stu-id="eaa80-197">[C# sample using the Bot Framework SDK](https://microsoft-my.sharepoint-df.com/:u:/p/vul/ETZQfeTViDlCv-frjgTIincB7dvk2HOnma1TLvcoeGGIxg?e=uPq62c).</span></span>
+* <span data-ttu-id="7630e-198">[使用 Bot Framework SDK 的 C# 示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)。</span><span class="sxs-lookup"><span data-stu-id="7630e-198">[C# sample using the Bot Framework SDK](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore).</span></span>
 
-* <span data-ttu-id="eaa80-198">[C # 示例使用 Bot 框架 SDK deduplicate 令牌请求](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682)。</span><span class="sxs-lookup"><span data-stu-id="eaa80-198">[C# sample using the Bot Framework SDK to deduplicate the token request](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682).</span></span>
+* <span data-ttu-id="7630e-199">[使用 Bot Framework SDK 删除](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682)令牌请求的 C# 示例。</span><span class="sxs-lookup"><span data-stu-id="7630e-199">[C# sample using the Bot Framework SDK to deduplicate the token request](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682).</span></span>
 
-* [<span data-ttu-id="eaa80-199">不使用 Bot 框架 SDK 令牌存储的 c # 示例</span><span class="sxs-lookup"><span data-stu-id="eaa80-199">C# sample without using the Bot Framework SDK token store</span></span>](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)
+* <span data-ttu-id="7630e-200">[没有使用 Bot Framework SDK 令牌存储的 C# 示例](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)。</span><span class="sxs-lookup"><span data-stu-id="7630e-200">[C# sample without using the Bot Framework SDK token store](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw).</span></span>
