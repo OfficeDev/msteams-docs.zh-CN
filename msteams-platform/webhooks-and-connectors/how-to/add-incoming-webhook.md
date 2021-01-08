@@ -1,69 +1,69 @@
 ---
-title: 向具有传入 webhook 的 Microsoft 团队发布外部请求
+title: 使用传入 Webhook 向 Microsoft Teams 发布外部请求
 author: laujan
-description: 如何将传入 webhook 添加到团队应用
-keywords: 团队选项卡传出 webhook *
+description: 如何将传入 Webhook 添加到 Teams 应用
+keywords: Teams 选项卡传出 Webhook*
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 3aa795170af9695fc375043c94e794f814b38646
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: a05f9ec448a722f3d662a8323a40ebe6b2de1e27
+ms.sourcegitcommit: 23ceb25d07a76f03ffe92cf1ac578b7c50b0bafc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819065"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "49777915"
 ---
-# <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>向具有传入 webhook 的团队发布外部请求
+# <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>使用传入 Webhook 将外部请求张贴到 Teams
 
-## <a name="what-are-incoming-webhooks-in-teams"></a>哪些是团队中的传入 webhook？
+## <a name="what-are-incoming-webhooks-in-teams"></a>Teams 中的传入 Webhook 是什么？
 
-传入 webhook 是在团队中提供的一种特殊类型的连接器，可提供一种简单的方法，让外部应用程序在团队频道中共享内容，并经常用作跟踪和通知工具。 团队提供一个唯一的 URL，您将 JSON 有效负载与要发布的邮件（通常采用卡片格式）一起发送。 卡片是用户界面 (UI) 容器，其中包含与单个主题相关的内容和操作，并且是以一致的方式显示邮件数据的一种方式。 团队使用三种功能中的卡片：
+传入 Webhook 是 Teams 中的特殊类型的连接器，为外部应用提供在团队频道中共享内容的简单方法，并且通常用作跟踪和通知工具。 Teams 提供了一个唯一 URL，你向该 URL 发送 JSON 有效负载以及要 POST 的消息，通常采用卡片格式。 卡片是用户界面 (UI) 容器，其中包含与单个主题相关的内容和操作，是一种以一致的方式显示邮件数据的方法。 Teams 在三种功能内使用卡片：
 
 * 机器人
 * 消息传递扩展
 * 连接器
 
-## <a name="incoming-webhook-key-features"></a>传入 webhook 密钥功能
+## <a name="incoming-webhook-key-features"></a>传入 Webhook 关键功能
 
 | 功能 | 说明 |
 | ------- | ----------- |
-|作用域配置|传入 webhook 的范围和配置在频道级别 (例如，传出 webhook 的范围和在团队一级) 配置。|
-|安全资源定义|将邮件格式化为 JSON 有效负载。 此声明性邮件结构阻止了恶意代码的注入，因为在客户端上没有执行任何代码。|
-|可操作邮件支持|如果选择通过卡片发送邮件，则必须使用可 **操作邮件卡片** 格式。 所有 Office 365 组（包括团队）都支持可操作邮件卡。 下面是指向旧版可 [操作邮件卡参考](/outlook/actionable-messages/message-card-reference) 和 [邮件卡样本](https://messagecardplayground.azurewebsites.net)的链接。|
-|独立 HTTPS 消息支持| 卡片是以清晰一致的方式呈现信息的绝佳方式。 任何可发送 HTTPS POST 请求的工具或框架都可以通过传入 webhook 向团队发送邮件。|
-|Markdown 支持|可操作邮件卡中的所有文本字段都支持基本 Markdown。 **请勿在卡片中使用 HTML 标记**。 将忽略 HTML 并将其视为纯文本。|
+|作用域配置|传入 Webhook 的范围和配置在通道级别 (例如，传出 Webhook 的范围和配置在团队级别) 。|
+|安全资源定义|邮件的格式设置为 JSON 有效负载。 此声明性消息结构可防止注入恶意代码，因为客户端上没有代码执行。|
+|可操作邮件支持|如果选择通过卡片发送邮件，则必须使用可 **操作邮件卡片** 格式。 所有 Office 365 组（包括 Teams）都支持可操作邮件卡。 下面是指向旧版可[操作邮件卡参考和](/outlook/actionable-messages/message-card-reference)[邮件卡的场的链接](https://messagecardplayground.azurewebsites.net)。|
+|独立 HTTPS 消息支持| 卡片以清晰一致的方式呈现信息是一种很好的方法。 任何可以发送 HTTPS POST 请求的工具或框架都可以通过传入 Webhook 向 Teams 发送邮件。|
+|Markdown 支持|可操作邮件卡中所有文本字段都支持基本 Markdown。 **请勿在卡片中使用 HTML 标记**。 将忽略 HTML 并将其视为纯文本。|
 
-> [!Note]  
-> 团队 bot、邮件扩展和 Bot 框架支持自适应卡，即开放式跨卡片平台框架。 工作组连接器目前不支持自适应卡片。 但是，可以创建将自适应卡发布到团队频道的 [流](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) 。
+> [!Note]
+> Teams 机器人、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片，这是一个开放的跨卡平台框架。 [Teams 连接器](../../webhooks-and-connectors/how-to/connectors-creating.md) 当前不支持自适应卡片。 但是，可以创建将自适应卡片张贴到[](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)Teams 频道的流。
 
-## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>将传入 webhook 添加到团队频道
+## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>将传入 Webhook 添加到 Teams 频道
 
 > [!Important]  
-> 如果您的团队的**设置**  =>  **成员权限**  =>  **允许成员创建、更新和删除连接器**，则任何团队成员都可以添加、修改或删除连接器。
+> 如果选择了 **团队的"** 设置成员"权限，允许成员创建、更新和删除连接器，则任何团队成员都可以添加、修改  =>    =>  或删除连接器。
 
-1. 导航到要在其中添加 webhook 的通道，然后从顶部导航栏中选择 " ( # A3) *更多选项* "。
-1. 从下拉菜单中选择 " **连接器** "，并搜索 **传入的 Webhook**。
-1. 选择 " **配置** " 按钮，提供一个名称，并为 webhook 上传图像头像（可选）。
-1. 对话框窗口将提供一个将映射到通道的唯一 URL。 请确保 **复制并保存该 URL**-您需要将其提供给外部服务。
-1. 选择 " **完成** " 按钮。 将在团队频道中提供 webhook。
+1. 导航到要添加 webhook 的通道，然后从顶部导航 (选择) 选择"更多选项"。 
+1. 从 **下拉菜单** 中选择连接器并搜索 **传入 Webhook。**
+1. 选择 **"配置** "按钮，提供名称，并（可选）为 Webhook 上传图像头像。
+1. 对话框窗口将显示将映射到通道的唯一 URL。 请确保复制 **并保存 URL，** 您需要将其提供给外部服务。
+1. 选择 **"完成"** 按钮。 Webhook 将在团队频道中提供。
 
-## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>从团队频道中删除传入 webhook
+## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>从 Teams 频道中删除传入 Webhook
 
-1. 导航到添加了 webhook 的通道，然后从顶部导航栏中选择 " ( # A3) *更多选项* "。
-1. 从下拉菜单中选择 " **连接器** "。
-1. 在左侧的 " **管理**" 下，选择 " **已配置**"。
-1. 选择配置为查看当前连接器列表的 *号码* 。
-1. 选择要删除的连接器旁边的 " **管理** "。
-1. 选择 " **删除** " 按钮，将显示 " *删除配置* " 对话框。
-1. （可选）在选择 " **删除** " 按钮之前填写对话框字段和复选框。 将从团队通道中删除 webhook。
+1. 导航到添加 webhook 的通道，然后从顶部导航 (选择) 选择"更多选项"。 
+1. 从 **下拉菜单** 中选择"连接器"。
+1. 在左侧的"管理 **"** 下，选择"**已配置"。**
+1. 选择 *配置为* 查看当前连接器列表的号码。
+1. 选择要 **删除** 的连接器旁边的"管理"。
+1. 选择 **"删除** "按钮，将显示"删除配置 *"* 对话框。
+1. （可选）在选择"删除"按钮之前填写对话框 **字段和复选框** 。 Webhook 将从团队频道中删除。
 
 ## <a name="distribution"></a>分发
 
-您有三个用于分发传入 webhook 的选项：
+有三种分配传入 Webhook 的选项：
 
-* 为你的团队直接设置传入 webhook。
-* 添加配置页面并将传入 webhook 包装在[O365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)中
-* 将连接器打包并发布为您的 [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) 提交的一部分。
+* 直接为团队设置传入 Webhook。
+* 添加配置页面，将传入的 Webhook 包装在 [O365 连接器中](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* 将连接器打包并发布为 [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) 提交的一部分。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="learn-more"></a>了解更多
 
 * [将邮件发送到连接器和 Webhook](~/webhooks-and-connectors/how-to/connectors-using.md)
