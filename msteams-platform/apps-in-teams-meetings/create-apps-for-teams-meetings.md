@@ -1,104 +1,120 @@
 ---
 title: 创建适用于团队会议的应用
 author: laujan
-description: 创建团队会议的应用程序
+description: 为团队会议创建应用
 ms.topic: conceptual
 ms.author: lajanuar
-keywords: 团队应用会议用户参与者角色 api
-ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+keywords: teams 应用会议用户参与者角色 api
+ms.openlocfilehash: e768c2dc6722d006c89927adfe60e03243a076d0
+ms.sourcegitcommit: f0dfae429385ef02f61896ad49172c4803ef6622
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605229"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "49740869"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
 ## <a name="prerequisites-and-considerations"></a>先决条件和注意事项
 
-1. 会议中的应用程序需要一些有关 [团队应用程序开发](../overview.md)的基本知识。 会议中的应用程序可以包含 [选项卡](../tabs/what-are-tabs.md)、 [bot](../bots/what-are-bots.md)和 [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md) 功能，并将要求对团队 [应用程序清单](#update-your-app-manifest) 进行更新以指示该应用程序可用于会议
+1. 会议中的应用需要一些 Teams [应用开发的基本知识](../overview.md)。 会议中的应用可以包括[选项卡](../tabs/what-are-tabs.md)、聊天机器人和消息传递[](../bots/what-are-bots.md)扩展功能，并且[](../messaging-extensions/what-are-messaging-extensions.md)[需要更新](#update-your-app-manifest)Teams 应用清单以指示该应用可用于会议
 
-1. 为了使您的应用程序在会议生命周期中作为选项卡运行，它必须支持 [groupchat 范围](../resources/schema/manifest-schema.md#configurabletabs)中可配置的选项卡。 *请参阅*[使用自定义选项卡扩展团队应用](../tabs/how-to/add-tab.md)。如果支持此 `groupchat` 范围，您的应用程序将在 [会议前](teams-apps-in-meetings.md#pre-meeting-app-experience)和 [会议后](teams-apps-in-meetings.md#post-meeting-app-experience)的聊天中启用。
+1. 若要使应用在会议生命周期中作为选项卡运行，它必须支持群聊作用域中的可 [配置选项卡](../resources/schema/manifest-schema.md#configurabletabs)。 *请参阅*["使用自定义选项卡扩展 Teams 应用"。](../tabs/how-to/add-tab.md)支持范围 `groupchat` 将启用会议前 [和](teams-apps-in-meetings.md#pre-meeting-app-experience)会议 [后聊天中的](teams-apps-in-meetings.md#post-meeting-app-experience)应用。
 
-1. 会议 API URL 参数可能需要 `meetingId` 、 `userId` 和 [tenantId](/onedrive/find-your-office-365-tenant-id) 这些参数可用作团队客户端 SDK 和 bot 活动的一部分。 此外，还可以使用 [选项卡 SSO 身份验证](../tabs/how-to/authentication/auth-aad-sso.md)检索用户 ID 和租户 ID 的可靠信息。
+1. 会议 API URL 参数可能需要 ，并且 tenantId These 作为 Teams 客户端 SDK 和聊天机器人活动的一 `meetingId` `userId` 部分提供。 [](/onedrive/find-your-office-365-tenant-id) 此外，可以使用 Tab SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
 
-1. 某些会议 Api （如 `GetParticipant` 将需要 [机器人注册和 BOT 应用 ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) 生成身份验证令牌）。
+1. 某些会议 API（例如 `GetParticipant` ，将需要自动 [程序注册和自动程序应用 ID）](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) 来生成身份验证令牌。
 
-1. 作为开发人员，您必须遵循在团队会议期间触发的会议前和会议中对话框[的 "常规](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)[团队" 选项卡设计指导方针](../tabs/design/tabs.md)。
+1. 作为开发人员，你必须遵循 Teams 会议前和会后方案的常规[Teams](../tabs/design/tabs.md)选项卡设计准则，以及 Teams[](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)会议期间触发的会议内对话的会议对话指南。
 
-1. 请注意，为了使您的应用程序实时更新，必须根据会议中的事件活动保持最新。 这些事件可以在会议中的对话框 (引用 `bot Id` `Notification Signal API` 会议生命周期的) 和其他表面中的完成参数
+1. 请注意，若要实时更新应用，应用必须基于会议中的事件活动是最新的。 这些事件可以位于会议内对话框内， (整个会议) 和其他图面中的 `bot Id` `Notification Signal API` 完成参数
 
-## <a name="meeting-apps-api-reference"></a>会议应用程序 API 参考
+## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
-|API|Description|请求|Source|
+|API|说明|请求|Source|
 |---|---|----|---|
-|**GetUserContext**| 获取上下文信息以在 "团队" 选项卡中显示相关内容。 |_**microsoftTeams getContext ( ( ) => {/*...*/} )**_|Microsoft 团队客户端 SDK|
-|**GetParticipant**|此 API 允许 bot 按会议 id 和参与者 id 提取参与者信息。|**获取** _**/v1/meetings/{meetingId}/participants/{participantId}？ tenantId = {tenantId}**_ |Microsoft Bot 框架 SDK|
-|**NotificationSignal** |将使用以下现有对话通知 API 为用户-bot 聊天) 传递会议信号 (。 通过此 API，开发人员可以基于最终用户操作发出信号，以显示会议中的对话气泡图。|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot 框架 SDK|
+|**GetUserContext**| 获取上下文信息以在 Teams 选项卡中显示相关内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams 客户端 SDK|
+|**GetParticipant**|此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
+|**NotificationSignal** |会议信号将采用以下现有对话通知 API (用于用户聊天聊天) 。 此 API 允许开发人员根据最终用户操作发出信号，以显示会议内对话气泡。|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 
 ### <a name="getusercontext"></a>GetUserContext
 
-请参阅我们 [的 "获取团队上下文" 选项卡](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) 文档，获取有关标识和检索您的选项卡内容的上下文信息的指南。 作为会议扩展性的一部分，已为响应负载添加了一个新值：
+请参阅 Teams 选项卡 [文档的"](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) 获取上下文"，获取有关标识和检索选项卡内容的上下文信息的指南。 作为会议扩展的一部分，为响应有效负载添加了一个新值：
 
-✔ **meetingId**：在会议上下文中运行时由选项卡使用。
+✔ **meetingId**： 在会议上下文中运行时由选项卡使用。
 
 ### <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
 >
-> * 不缓存参与者角色，因为会议组织者可以在任何时间点更改角色。
+> * 不要缓存参与者角色，因为会议组织者可以在任何时间点更改角色。
 >
-> * 团队目前不支持 API 的多350个参与者的大型通讯组列表或名单大小 `GetParticipant` 。
->
-> * 即将推出对 Bot 框架 SDK 的支持。
+> * Teams 当前不支持 API 参与者超过 350 人的大型通讯组列表或名单 `GetParticipant` 大小。
 
+#### <a name="query-parameters"></a>查询参数
 
-#### <a name="request"></a>请求
+|值|类型|必需|说明|
+|---|---|----|---|
+|**meetingId**| string | 是 | 会议标识符通过 Bot Invoke 和 Teams 客户端 SDK 提供。|
+|**participantId**| string | 是 | participantId 是用户 ID。 它可在 Tab SSO、Bot Invoke 和 Teams 客户端 SDK 中提供。 强烈建议从 Tab SSO 获取 participantId。 |
+|**tenantId**| string | 是 | 租户用户需要 tenantId。 它可在 Tab SSO、Bot Invoke 和 Teams 客户端 SDK 中提供。 强烈建议从 Tab SSO 获取 tenantId。 |
+
+#### <a name="example"></a>示例
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsChannelAccount member = participant.User;
+  MeetingParticipantInfo meetingInfo = participant.Meeting;
+  ConversationAccount conversation = participant.Conversation;
+
+  await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
+}
+
+```
+
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
+
+```typescript
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            let member = participant.user;
+            let meetingInfo = participant.meeting;
+            let conversation = participant.conversation;
+            
+            await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
+            await next();
+        });
+    }
+}
+
+```
+
+# <a name="json"></a>[JSON](#tab/json)
 
 ```http
 GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-*请参阅* [Bot 框架 API 参考](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。
-
-<!-- markdownlint-disable MD025 -->
-
-**C # 示例**
-
-```csharp
-   // Get role for the user who sent a message to your bot
-   var senderRole = await TeamsInfo.GetMeetingParticipantAsync(turnContext);
-```
-
-* * *
-<!-- markdownlint-disable MD001 -->
-
-#### <a name="query-parameters"></a>查询参数
-
-|值|类型|必需|Description|
-|---|---|----|---|
-|**meetingId**| string | 是 | 会议标识符可通过 Bot 调用和团队客户端 SDK 获取。|
-|**participantId**| string | 是 | 此字段是用户 ID，可在选项卡 SSO、Bot 调用和团队客户端 SDK 中使用。 强烈建议使用 Tab SSO|
-|**tenantId**| string | 是 | 租户用户所需的。 它在选项卡 SSO、Bot 调用和团队客户端 SDK 中可用。 强烈建议使用 Tab SSO|
-
-#### <a name="response-payload"></a>响应有效负载
-<!-- markdownlint-disable MD036 -->
-
-"会议" 下的 **角色** 可以是 *组织者*、*演示者* 或 *与会者*。
-
-**示例 1**
+响应正文为：
 
 ```json
 {
    "user":{
       "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
-      "aadObjectId":"6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-      "name":"Allan Deyoung",
-      "givenName":"Allan",
-      "surname":"Deyoung",
-      "email":"Allan.Deyoung@microsoft.com",
-      "userPrincipalName":"Allan.Deyoung@microsoft.com",
-      "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "aadObjectId":"e236c4bf-88b1-4f3a-b1d7-8891dfc332b5",
+      "name":"Bob Young",
+      "givenName":"Bob",
+      "surname":"Young",
+      "email":"Bob.young@microsoft.com",
+      "userPrincipalName":"Bob.young@microsoft.com",
+      "tenantId":"2fe477ab-0efc-4dfd-bde2-484374e2c373",
       "userRole":"user"
    },
    "meeting":{
@@ -112,61 +128,40 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 }
 ```
 
+* * *
+
 #### <a name="response-codes"></a>响应代码
 
-**403**：不允许应用获取参与者信息。 这是最常见的错误响应，当应用程序未安装在会议中时（如租户管理员禁用或在实时网站迁移过程中被阻止）时，会触发此响应。  
-**200**：成功检索参与者信息。  
-**401**：令牌无效。  
-**404**：找不到参与者。 
-**500**：会议已过期 (超过60天，自会议结束) 或参与者没有基于其角色的权限。
+* **403：** 不允许应用获取参与者信息。  这是最常见的错误响应，如果未在会议中安装应用，将触发此错误响应。 例如，如果租户管理员禁用应用或在实时网站迁移过程中阻止应用。
+* **200：** 已成功检索参与者信息。
+* **401：** 令牌无效。
+* **404：** 找不到参与者。
+* **500：** 会议自 (结束以来已到期 60) 或者参与者没有基于其角色的权限。
+
 
 **即将推出**
 
-**404**：会议已过期，或者找不到参与者。 
+* **404：** 会议已过期或找不到参与者。
 
-<!-- markdownlint-disable MD024 -->
+
 ### <a name="notificationsignal-api"></a>NotificationSignal API
 
 > [!NOTE]
-> 在调用会议内对话时，相同的内容也会显示为聊天消息。
-
-#### <a name="request"></a>请求
-
-```http
-POST /v3/conversations/{conversationId}/activities
-```
+> 调用会议内对话框时，相同的内容还将呈现为聊天消息。
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|Description|
+|值|类型|必需|说明|
 |---|---|----|---|
-|**conversationId**| string | 是 | 会话标识符作为机器人 invoke 的一部分提供 |
+|**conversationId**| string | 是 | 对话标识符作为自动程序调用的一部分提供 |
 
-#### <a name="request-payload"></a>请求有效负载
+#### <a name="example"></a>示例
 
 > [!NOTE]
 >
-> *  在下面请求的负载中， `completionBotId` 的参数 `externalResourceUrl` 是可选的。 它是 `Bot ID` 在清单中声明的。 机器人将接收到一个 result 对象。
-> * ExternalResourceUrl width 和 height 参数必须以像素为单位。 请参阅 [设计准则](design/designing-apps-in-meetings.md) ，以确保尺寸在允许的限制范围内。
-> * URL 是 `<iframe>` 在会议对话中加载的页面。 URL 的域必须位于 `validDomains` 应用程序清单中的应用程序阵列中。
-
-
-# <a name="json"></a>[JSON](#tab/json)
-
-```json
-{
-    "type": "message",
-    "text": "John Phillips assigned you a weekly todo",
-    "summary": "Don't forget to meet with Marketing next week",
-    "channelData": {
-        "notification": {
-            "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-        }
-    },
-    "replyToId": "1493070356924"
-}
-```
+在 `completionBotId` 请求 `externalResourceUrl` 的有效负载示例中，参数是可选的。 `Bot ID` 在清单中声明，机器人会收到结果对象。
+> * externalResourceUrl 宽度和高度参数必须以像素为单位。 请参阅 [设计指南](design/designing-apps-in-meetings.md) 以确保尺寸在允许的限制范围内。
+> * URL 是作为会议 `<iframe>` 内对话框中的一个页面加载的页面。 域必须在你的应用清单 `validDomains` 中的应用数组中。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -198,28 +193,48 @@ replyActivity.channelData = {
 await context.sendActivity(replyActivity);
 ```
 
-* * *
+# <a name="json"></a>[JSON](#tab/json)
 
-> [!IMPORTANT]
-> 内容气泡 (taskInfo URL 中的 URL) 必须包含在团队应用程序清单中的 [有效域](../resources/schema/manifest-schema.md#validdomains) 列表中。
+```http
+POST /v3/conversations/{conversationId}/activities
+
+{
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+        }
+    },
+    "replyToId": "1493070356924"
+}
+```
+
+* * *
 
 #### <a name="response-codes"></a>响应代码
 
-**201**：已成功发送信号活动  
-**401**：令牌无效  
-**403**：不允许应用发送信号。 在这种情况下，有效负载应包含更详细的错误消息。 可能有多种原因：应用程序因租户管理员而被禁用，在 live 网站缓解等过程中被阻止。  
-**404**：会议聊天不存在  
+* **201：** 具有信号的活动已成功发送  
+* **401**： 无效令牌  
+* **201：** 已成功发送具有信号的活动。 
+* **401：** 令牌无效。
+* **403：** 应用无法发送信号。 发生这种情况的原因有多种，如租户管理员禁用应用、实时网站迁移期间阻止应用等。 在这种情况下，有效负载包含详细的错误消息。 
+* **404：** 会议聊天不存在。
+ 
 
-## <a name="enable-your-app-for-teams-meetings"></a>为团队会议启用您的应用程序
+## <a name="enable-your-app-for-teams-meetings"></a>为 Teams 会议启用应用
 
-### <a name="update-your-app-manifest"></a>更新应用程序清单
+### <a name="update-your-app-manifest"></a>更新应用清单
 
-会议应用程序功能是通过 **configurableTabs**  ->  **作用域** 和 **上下文** 数组在应用程序清单中声明的。 *作用域* 定义了您的应用程序将在何处定义的人员和 *上下文* 。
+会议应用功能通过 **configurableTabs** 作用域和上下文数组在应用清单  ->  **中** 声明。 *范围* 定义谁 *，上下文* 定义你的应用的可用位置。
 
 > [!NOTE]
-> * 请使用 [开发人员预览版清单架构](../resources/schema/manifest-schema-dev-preview.md) 在你的应用程序清单中试用此架构。
+> 请使用开发者预览版 [清单架构](../resources/schema/manifest-schema-dev-preview.md) 在应用清单中尝试此操作。
 
 ```json
+
 "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
@@ -241,72 +256,72 @@ await context.sendActivity(replyActivity);
 
 ### <a name="context-property"></a>Context 属性
 
-该选项卡 `context` 和 `scopes` 属性在协调中使用，以确定您希望应用程序的显示位置。 或范围中的选项卡 `team` `groupchat` 可以有多个上下文。 Context 属性的可能值如下所示：
+选项卡 `context` 和 `scopes` 属性协调工作，以允许你确定希望应用显示在何处。 或作用域 `team` 中的 `groupchat` 选项卡可以具有多个上下文。 上下文属性的可能值如下所示：
 
-* **channelTab**：团队频道标头中的一个选项卡。
-* **privateChatTab**：组标头中的一个选项卡，在一组不在团队或会议的上下文中的一组用户之间聊天。
-* **meetingChatTab**：组标头中的一个选项卡，在计划会议上下文中的一组用户之间聊天。
-* **meetingDetailsTab**：日历的 "会议详细信息" 视图标头中的一个选项卡。
-* **meetingSidePanel**：通过 (u) 的统一栏打开的会议面板。
-
-> [!NOTE]
-> "Context" 属性目前不受支持，因此在移动客户端上将被忽略
-
-## <a name="configure-your-app-for-meeting-scenarios"></a>为会议方案配置应用程序
+* **channelTab**：团队频道标题中的选项卡。
+* **privateChatTab**：一组不在团队或会议上下文中的用户之间的群聊标题中的选项卡。
+* **meetingChatTab**：计划会议上下文中一组用户之间的群聊标题中的选项卡。
+* **meetingDetailsTab**：日历的会议详细信息视图标题中的选项卡。
+* **meetingSidePanel**：通过统一栏打开的 (u-bar) 。
 
 > [!NOTE]
-> * 若要使您的应用程序在选项卡库中可见，它需要 **支持可配置的选项卡** 和 **组聊天作用域**。
+> "Context"属性当前不受支持，因此将在移动客户端上被忽略
+
+## <a name="configure-your-app-for-meeting-scenarios"></a>为会议方案配置应用
+
+> [!NOTE]
+> * 若要使应用在选项卡库中可见，它需要支持可 **配置的选项卡** 和 **群聊范围**。
 >
-> * 移动客户端仅支持准备会议和投递会议表面中的选项卡。 移动版 (会议中的会议体验和选项卡) 将很快可用。 创建移动电话选项卡时，请遵循 [移动电话上的选项卡指南](../tabs/design/tabs-mobile.md) 。
+> * 移动客户端仅在会议前和会议后支持选项卡。 即将在移动设备上 (会议内对话框和选项卡) 体验。 在创建 [适用于移动的选项卡时](../tabs/design/tabs-mobile.md) ，请遵循移动选项卡指南。
 
-### <a name="before-a-meeting"></a>会议前
+### <a name="before-a-meeting"></a>会议之前
 
-拥有组织者和/或演示者角色的用户使用会议 **聊天** 和会议 **详细信息** 页中的加号➕按钮将选项卡添加到会议。 邮件扩展通过位于聊天的撰写邮件区域下的省略号/溢出菜单 &#x25CF;&#x25CF;&#x25CF; 添加到中。 将 bot 添加到会议聊天中，使用 " **@** " 键，然后选择 " **获取 bot**"。
+具有组织者和/或演示者角色的用户使用会议聊天和会议详细信息页面中的"➕"按钮将选项卡 **添加到会议**。  消息扩展通过省略号/溢出菜单添加到 &#x25CF;&#x25CF;&#x25CF; 位于聊天的撰写消息区域下。 聊天机器人会使用""键并选择"获取机器人"添加到 **@** **会议聊天中**。
 
-✔ *必须* 通过 [选项卡 SSO](../tabs/how-to/authentication/auth-aad-sso.md)确认用户标识。 遵循此身份验证后，应用可以通过 GetParticipant API 检索用户角色。
+✔用户标识 *必须通过* 选项卡 [SSO 确认](../tabs/how-to/authentication/auth-aad-sso.md)。 在此身份验证后，应用可以通过 GetParticipant API 检索用户角色。
 
- ✔基于用户角色，应用现在将能够呈现特定于角色的体验。 例如，轮询应用程序可以仅允许组织者和演示者创建新的轮询。
+ ✔基于用户角色，应用现在能够呈现特定于角色的体验。 例如，轮询应用只允许组织者和演示者创建新轮询。
 
-> **注意**：在会议进行过程中，可以更改角色分配。  *请参阅*[团队会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。 
+> **注意**：可以在会议进行时更改角色分配。  *请参阅* [Teams 会议的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。 
 
 ### <a name="during-a-meeting"></a>会议期间
 
 #### <a name="sidepanel"></a>**sidePanel**
 
-在您的应用程序清单中✔将 **sidePanel** 添加到 **上下文** 阵列中，如上文所述。
+✔在应用清单中向上下文数组添加 **sidePanel，** 如上所述。 
 
-✔在会议中以及在所有情况下，应用程序将呈现在320px 中的 "会议" 选项卡中，宽度为宽。 您的选项卡必须针对此进行优化。 *请参阅* [FrameContext 接口](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+✔在会议以及所有方案中，应用程序将在宽度为 320px 的"会议内"选项卡中呈现。 必须针对这一点对选项卡进行优化。 *请参阅* [，FrameContext 接口](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
 )
 
-✔请参阅 [团队 SDK](../tabs/how-to/access-teams-context.md#user-context) ，以使用 **userContext** API 进行相应的路由请求。
+✔ Teams [SDK，](../tabs/how-to/access-teams-context.md#user-context) 以使用 **userContext** API 相应地路由请求。
 
-✔引用 [选项卡的团队身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流非常类似于网站的身份验证流。 因此，选项卡可以直接使用 OAuth 2.0。 *另请参阅* [Microsoft Identity platform 和 OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
+✔选项卡 [的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流与网站的身份验证流非常相似。 因此，选项卡可以直接使用 OAuth 2.0。 *另请参阅* [，Microsoft 标识平台和 OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
 
-当用户处于会议视图中时，✔邮件扩展应按预期方式工作，并且应该能够发布撰写邮件扩展卡。
+✔用户位于会议视图中时，邮件扩展应按预期工作，并且应该能够发布撰写邮件扩展卡。
 
-✔的 AppName 工作项-工具提示应声明应用程序名称在会议中的 U-条形图中。
+✔ AppName- 工具提示应说明会议 U 栏中的应用名称。
 
 #### <a name="in-meeting-dialog"></a>**会议内的对话框**
 
-✔您必须遵守 [会议中的对话框设计准则](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
+✔必须遵守会议 [内对话框设计准则](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
 
-✔引用 [选项卡的团队身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。
+✔选项卡 [的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。
 
-✔使用 [通知](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API 指示需要触发气泡通知。
+✔ 使用 [通知](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API 发出需要触发气泡通知的信号。
 
-✔作为通知请求负载的一部分，请添加承载要 showcased 内容的 URL。
+✔作为通知请求有效负载的一部分，请包含要展示内容的托管 URL。
 
-✔会议对话中不能使用任务模块。
+✔会议内对话框不得使用任务模块。
 
 > [!NOTE]
 >
-> * 这些通知在本质上是永久性的。 在用户在 web 视图中执行某项操作后，必须调用 [**submitTask ( # B1**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数以自动消除。 这是应用程序提交的必要条件。 *另请参阅*[团队 SDK：任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
+> * 这些通知本质上是永久性的。 您必须调用 [**submitTask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 *另请参阅* [，Teams SDK：任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 >
-> * 如果您希望您的应用程序支持匿名用户，初始的调用请求负载必须依赖于 `from.id`  用户的 (ID) 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 用户) 请求元数据的 (AZURE Active Directory ID。 *请参阅*[在选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md)和 [创建并发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+> * 如果希望应用支持匿名用户，初始调用请求有效负载必须依赖于对象中的用户) 请求元数据的 (ID，而不是用户请求元数据的 `from.id` `from` (Azure Active `from.aadObjectId` Directory) ID。 *请参阅*[使用选项卡中的任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md)[以及创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会议后
 
-会议后和会议前配置是等效的。
+会后和会前配置是等效的。
 
 ## <a name="meeting-app-sample"></a>会议应用程序示例
 

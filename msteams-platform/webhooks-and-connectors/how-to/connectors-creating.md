@@ -1,85 +1,144 @@
 ---
 title: Office 365 连接器
-description: 介绍如何开始使用 Microsoft 团队中的 Office 365 连接器
+description: 介绍如何在 Microsoft Teams 中开始使用 Office 365 连接器
 keywords: Teams o365 连接器
+ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 374e5058d2041d43f675d643e5b830bf72ad79c2
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 62a27e8f7b218491682ff0b9216e428f51264d0a
+ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605340"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "49739047"
 ---
-# <a name="creating-office-365-connectors-for-microsoft-teams"></a>为 Microsoft 团队创建 Office 365 连接器
+# <a name="creating-office-365-connectors-for-microsoft-teams"></a>为 Microsoft Teams 创建 Office 365 连接器
 
->在 Microsoft 团队应用程序中，您可以添加现有的 Office 365 连接器或构建新的 Office 连接器以将其包含在 Microsoft 团队中。 有关详细信息，请参阅 [生成您自己的连接器](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) 。
+>使用 Microsoft Teams 应用，可以添加现有 Office 365 连接器或生成要包括在 Microsoft Teams 中的新连接器。 有关详细信息 [，请参阅"生成您自己的](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) 连接器"。
 
-## <a name="adding-a-connector-to-your-teams-app"></a>将连接器添加到你的团队应用
+## <a name="adding-a-connector-to-your-teams-app"></a>将连接器添加到 Teams 应用
 
-您可以将已注册的连接器作为团队应用程序包的一部分进行分发。 无论是独立的解决方案还是你的经验在团队中启用的几项 [功能](~/concepts/extensibility-points.md) 之一，都可以 [打包](~/concepts/build-and-test/apps-package.md) 和 [发布](~/concepts/deploy-and-publish/apps-publish.md) 连接器作为 AppSource 提交的一部分，也可以直接将其提供给用户以在团队内上载。
+你可以将已注册的连接器作为 Teams 应用包的一部分进行分发。 无论是作为独立解决方案，还是体验在 Teams 中启用的多种功能之一，都可以将[](~/concepts/build-and-test/apps-package.md)连接器打包[](~/concepts/deploy-and-publish/apps-publish.md)并发布为 AppSource 提交的一部分，也可以直接向用户提供连接器以在 Teams 中上传。 [](~/concepts/extensibility-points.md)
 
-若要分发连接器，您需要使用 [连接器开发人员仪表板](https://outlook.office.com/connectors/home/login/#/publish)进行注册。 默认情况下，注册连接器后，系统会假定您的连接器能够在所有支持它们的 Office 365 产品（包括 Outlook 和团队）中工作。 如果 _不_ 是这种情况，并且需要创建仅在 microsoft 团队中工作的连接器，请直接在 [Microsoft 团队应用程序提交](mailto:teamsubm@microsoft.com)中与我们联系。
+若要分发连接器，你需要使用连接器开发人员仪表板 [进行注册](https://outlook.office.com/connectors/home/login/#/publish)。 默认情况下，注册连接器后，假定连接器将在支持连接器的所有 Office 365 产品（包括 Outlook 和 Teams）中工作。 如果不是这种情况 _，_ 并且你需要创建仅在 Microsoft Teams 中工作的连接器，请直接在 Microsoft Teams [应用提交中联系我们](mailto:teamsubm@microsoft.com)。
 
 > [!IMPORTANT]
-> 选择 "连接器" 开发人员仪表板中的 " **保存** " 后，将注册连接器。 如果要在 AppSource 中发布连接器，请按照 [发布 Microsoft 团队应用程序到 AppSource](~/concepts/deploy-and-publish/apps-publish.md)中的说明进行操作。 如果您不希望在 AppSource 中发布您的应用程序，而只是仅直接将其分发到您的组织，则可以通过 [发布到您的组织来](#publish-connectors-for-your-organization)执行此操作。 如果只想要发布到您的组织，则无需对连接器仪表板执行进一步操作。
+> 选择" **在** 连接器开发人员仪表板中保存"后，将注册连接器。 如果你想要在 AppSource 中发布连接器，请按照将 Microsoft Teams 应用发布到 [AppSource 中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果你不希望在 AppSource 中发布应用，而只是直接将其分发到你的组织，可以通过发布到你的组织 [来这样做](#publish-connectors-for-your-organization)。 如果只想发布到组织，则不需要在连接器仪表板上执行进一步的操作。
 
 ### <a name="integrating-the-configuration-experience"></a>集成配置体验
 
-您的用户将完成整个连接器配置体验，而无需离开团队客户端。 若要实现此体验，团队将在 iframe 中直接嵌入配置页面。 操作顺序如下所示：
+用户无需离开 Teams 客户端即可完成整个连接器配置体验。 为了实现此体验，Teams 将直接在 iframe 中嵌入你的配置页面。 操作顺序如下所示：
 
-1. 用户单击连接器即可开始配置过程。
-2. 团队将以行为单位加载配置体验。
-3. 用户可与您的 web 体验进行交互以完成配置。
-4. 用户按 "保存"，这将在代码中触发回调。
-5. 代码将通过检索) 下面记录 (的 webhook 设置来处理 save 事件。 随后，您的代码应将 webhook 存储在稍后发布事件。
+1. 用户单击连接器开始配置过程。
+2. Teams 将在线加载你的配置体验。
+3. 用户与 Web 体验交互以完成配置。
+4. 用户按"保存"，这将触发代码中的回调。
+5. 代码将处理保存事件，方法为检索 (webhook 设置) 。 然后，您的代码应存储 webhook 以稍后发布事件。
 
-您可以重复使用现有的 web 配置体验，也可以创建单独的版本以在团队中专门托管。 您的代码应：
+可以重用现有 Web 配置体验或创建单独版本以专门托管在 Teams 中。 代码应：
 
-1. 包括 Microsoft 团队 JavaScript SDK。 这使您的代码能够访问 Api，以执行常见操作，如获取当前用户/通道/团队上下文和启动身份验证流。 通过调用初始化 SDK `microsoftTeams.initialize()` 。
-2. `microsoftTeams.settings.setValidityState(true)`当您想要启用 "保存" 按钮时调用。 应作为对有效用户输入（如选择或字段更新）的响应执行此操作。
-3. 注册 `microsoftTeams.settings.registerOnSaveHandler()` 在用户单击 "保存" 时调用的事件处理程序。
-4. 调用 `microsoftTeams.settings.setSettings()` 以保存连接器设置。 如果用户尝试更新连接器的现有配置，此处保存的内容也会显示在 "配置" 对话框中。
-5. 调用 `microsoftTeams.settings.getSettings()` 获取 webhook 属性，包括 URL 本身。 除了在保存事件期间，如果第一次加载页面时，还应调用此过程，在重新配置的情况下。
-6.  (可选) 注册在 `microsoftTeams.settings.registerOnRemoveHandler()` 用户删除连接器时调用的事件处理程序。 此事件为服务提供了执行任何清理操作的机会。
+1. 包括 Microsoft Teams JavaScript SDK。 这样，代码可以访问 API 来执行常见操作，如获取当前用户/频道/团队上下文和启动身份验证流。 通过调用初始化 `microsoftTeams.initialize()` SDK。
+2. 在 `microsoftTeams.settings.setValidityState(true)` 要启用"保存"按钮时调用。 应作为对有效用户输入（如选择或字段更新）的响应进行此操作。
+3. 注册 `microsoftTeams.settings.registerOnSaveHandler()` 事件处理程序，该事件处理程序在用户单击"保存"时调用。
+4. 调用 `microsoftTeams.settings.setSettings()` 以保存连接器设置。 用户尝试更新连接器的现有配置时，此处保存的项也将显示在配置对话框中。
+5. 调用 `microsoftTeams.settings.getSettings()` 以提取 webhook 属性，包括 URL 本身。 除了在保存事件期间，还应在重新配置的情况下首次加载页面时调用此调用。
+6.  (可选) 注册事件处理程序，该事件处理程序在用户删除连接器 `microsoftTeams.settings.registerOnRemoveHandler()` 时调用。 此事件使服务有机会执行任何清理操作。
+
+下面是用于创建不带 CSS 的连接器配置页的示例 HTML：
+
+```html
+<h2>Send notifications when tasks are:</h2>
+<div class="col-md-8">
+    <section id="configSection">
+        <form id="configForm">
+            <input type="radio" name="notificationType" value="Create" onclick="onClick()"> Created
+            <br>
+            <br>
+            <input type="radio" name="notificationType" value="Update" onclick="onClick()"> Updated
+        </form>
+    </section>
+</div>
+
+<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script src="/Scripts/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+
+        function onClick() {
+            microsoftTeams.settings.setValidityState(true);
+        }
+
+        microsoftTeams.initialize();
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            var radios = document.getElementsByName('notificationType');
+
+            var eventType = '';
+            if (radios[0].checked) {
+                eventType = radios[0].value;
+            } else {
+                eventType = radios[1].value;
+            }
+
+            microsoftTeams.settings.setSettings({
+                 entityId: eventType,
+                contentUrl: "https://YourSite/Connector/Setup",
+                removeUrl:"https://YourSite/Connector/Setup",
+                 configName: eventType
+                });
+
+            microsoftTeams.settings.getSettings(function (settings) {
+                // We get the Webhook URL in settings.webhookUrl which needs to be saved. 
+                // This can be used later to send notification.
+            });
+
+            saveEvent.notifySuccess();
+        });
+
+        microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+            var removeCalled = true;
+            alert("Removed" + JSON.stringify(removeEvent));
+        });
+
+</script>
+```
 
 #### <a name="getsettings-response-properties"></a>`GetSettings()` 响应属性
 
 >[!Note]
->此处的调用返回的参数 `getSettings` 不同于从选项卡调用此方法的参数，与 [此处](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)记录的不同。
+>此处调用返回的参数与从选项卡调用此方法时不同，并且 `getSettings` 不同于此处介绍 [的参数](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)。
 
 | 参数   | 详细信息 |
 |-------------|---------|
-| `entityId`       | 调用时由您的代码设置的实体 ID `setSettings()` 。 |
-| `configName`  | 调用时由您的代码设置的配置名称 `setSettings()` 。 |
-| `contentUrl` | 调用时由您的代码设置的配置页面的 URL `setSettings()` |
-| `webhookUrl` | 为此连接器创建的 webhook URL。 保留 webhook URL 并使用它来发布结构化的 JSON，以向通道发送卡。 仅在应用程序成功返回时返回。 |
+| `entityId`       | 实体 ID，由代码在调用时设置 `setSettings()` 。 |
+| `configName`  | 调用时由代码设置的配置名称 `setSettings()` 。 |
+| `contentUrl` | 配置页的 URL，由代码在调用时设置 `setSettings()` |
+| `webhookUrl` | 为此连接器创建的 webhook URL。 保留 Webhook URL，并将其用于 POST 结构化 JSON，以将卡片发送到频道。 仅在应用程序成功返回时返回。 |
 | `appType` | 返回的值可以是 `mail`、`groups` 或 `teams`，分别对应 Office 365 邮件、Office 365 组或 Microsoft Teams。 |
-| `userObjectId` | 这是与启动连接器安装程序的 Office 365 用户相对应的唯一 id。 应该具备安全性。 可以使用此值将 Office 365 中设置配置的用户与服务中的用户关联起来。 |
+| `userObjectId` | 这是与启动连接器设置的 Office 365 用户对应的唯一 ID。 应该具备安全性。 可以使用此值将 Office 365 中设置配置的用户与服务中的用户关联起来。 |
 
-如果需要在上述步骤2中加载页面时对用户进行身份验证，请参阅 [此链接](~/tabs/how-to/authentication/auth-flow-tab.md) ，以了解有关如何在嵌入页面时集成登录的详细信息。
+如果需要在以上步骤 2 中加载页面时对用户进行身份验证，请参阅此链接，详细了解在[](~/tabs/how-to/authentication/auth-flow-tab.md)嵌入页面时如何集成登录。
 
 > [!NOTE]
-> 由于跨客户端的兼容性原因，在调用之前，您 `microsoftTeams.authentication.registerAuthenticationHandlers()` 的代码需要使用 URL 和成功/失败回调方法进行调用 `authenticate()` 。
+> 由于跨客户端兼容性原因，代码在调用之前将需要使用 URL 和 `microsoftTeams.authentication.registerAuthenticationHandlers()` 成功/失败回调方法进行调用 `authenticate()` 。
 
 #### <a name="handling-edits"></a>处理编辑
 
-您的代码应处理返回以编辑现有连接器配置的用户。 为此，请 `microsoftTeams.settings.setSettings()` 在初始配置过程中使用以下参数进行调用：
+代码应处理返回以编辑现有连接器配置的用户。 为此，在初始 `microsoftTeams.settings.setSettings()` 配置期间调用以下参数：
 
-- `entityId` 是您的服务可理解的自定义 ID，它表示用户已配置的内容。
-- `configName` 是您的配置代码可以检索的友好名称
-- `contentUrl` 是在用户编辑现有连接器配置时加载的自定义 URL。 您可以使用此 URL 使代码更易于处理编辑案例。
+- `entityId` 是服务可以理解的自定义 ID，表示用户配置了哪些信息。
+- `configName` 是配置代码可以检索的友好名称
+- `contentUrl` 是用户编辑现有连接器配置时加载的自定义 URL。 您可以使用此 URL 更轻松地让代码处理编辑案例。
 
-通常情况下，此调用是作为保存事件处理程序的一部分进行的。 然后，在 `contentUrl` 加载上述项时，代码应调用 `getSettings()` 以预填充配置 UI 中的任何设置或窗体。
+通常，此调用作为保存事件处理程序的一部分进行。 然后，当 `contentUrl` 加载上述内容时，代码应调用以预填充配置 UI 中任何 `getSettings()` 设置或表单。
 
 #### <a name="handling-removals"></a>处理删除
 
-当用户删除现有连接器配置时，您可以选择执行事件处理程序。 通过调用注册此处理程序 `microsoftTeams.settings.registerOnRemoveHandler()` 。 此处理程序可用于执行清理操作，例如从数据库中删除条目。
+可以选择在用户删除现有连接器配置时执行事件处理程序。 通过调用注册此处理程序 `microsoftTeams.settings.registerOnRemoveHandler()` 。 此处理程序可用于执行清理操作，例如从数据库中删除条目。
 
-### <a name="including-the-connector-in-your-manifest"></a>在清单中包含连接器
+### <a name="including-the-connector-in-your-manifest"></a>在清单中包括连接器
 
-您可以从门户下载自动生成的团队应用程序清单。 但是，必须先执行以下操作，然后才能使用它测试或发布应用程序：
+你可以从门户下载自动生成的 Teams 应用清单。 但是，在使用它测试或发布应用之前，必须执行以下操作：
 
-- [包含两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
+- [包括两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
 - 修改清单的 `icons` 部分，以便引用图标的文件名，而不是 URL。
 
 以下 manifest.json 文件包含测试和提交应用程序所需的基本元素。
@@ -135,21 +194,21 @@ ms.locfileid: "49605340"
 
 ![“连接器”对话框中上传部分的屏幕截图](~/assets/images/connectors/connector_dialog_uploaded.png)
 
-现在可启动配置体验。 请注意，此流程完全在 Microsoft 团队中作为托管体验发生。
+现在可启动配置体验。 请注意，此流完全作为托管体验在 Microsoft Teams 中发生。
 
-若要验证 `HttpPOST` 操作是否正常运行，请 [将邮件发送到您的连接器](~/webhooks-and-connectors/how-to/connectors-using.md)。
+若要验证操作 `HttpPOST` 是否正常工作， [请将邮件发送到连接器](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
-## <a name="publish-connectors-for-your-organization"></a>为您的组织发布连接器
+## <a name="publish-connectors-for-your-organization"></a>发布组织的连接器
 
-有时，您可能不希望将连接器应用程序发布到公用 AppSource/存储，但希望它仅供组织中的用户使用。 在这种情况下，可以将自定义连接器应用上传到 [组织的应用程序目录](~/concepts/deploy-and-publish/apps-publish.md)。 这样，你的连接器应用程序将仅可用于该组织，而无需将连接器发布到公用存储。
+有时，你可能不希望将连接器应用发布到公共 AppSource/Store，但希望它仅对组织的用户可用。 在这种情况下，您可以将自定义连接器应用程序上载到 [组织的应用程序目录](~/concepts/deploy-and-publish/apps-publish.md)。 这样，连接器应用将仅适用于该组织，你无需将连接器发布到公共应用商店。
 
-上载应用程序包后，若要配置和使用团队中的连接器，可以通过执行以下步骤，从组织的应用程序目录中进行安装：
+上传应用包后，若要在团队中配置和使用连接器，可以按照以下步骤从组织的应用程序目录安装：
 
-1. 从最左侧垂直导航栏中选择 "应用" 图标。
-1. 在 " **应用** " 窗口中选择 " **连接器**"。
-1. 选择要添加的连接器，将显示一个弹出对话框窗口。
-1. 选择 " **添加到团队** 栏"。
+1. 从最左侧垂直导航栏中选择应用图标。
+1. 在"**应用"** 窗口中，**选择"连接器"。**
+1. 选择要添加的连接器，将显示弹出对话框窗口。
+1. 选择 **"添加到团队栏** "。
 1. 在下一个对话框窗口中，键入团队或频道名称。
-1. 从对话框窗口的右下角选择 " **设置连接符** " 栏。
-1. 该连接器将在 " &#9679;&#9679;&#9679; =>*更多选项*"  =>  *连接器*  =>  *All*  =>  *为* 该团队的所有连接器提供支持。 您可以通过滚动到此部分或搜索连接器应用来进行导航。
-1. 若要配置或修改连接器，请选择 " **配置** " 栏。
+1. 从 **对话框窗口的右** 下角选择"设置连接线"栏。
+1. 该连接器将在"= &#9679;&#9679;&#9679; "部分提供>该团队的"更多选项连接器所有  =>    =>    =>  连接器"部分。 可以通过滚动到此部分或搜索连接器应用来导航。
+1. 若要配置或修改连接器，请选择" **配置"** 栏。
