@@ -1,110 +1,110 @@
 ---
-title: 入门-构建您的首个应用程序概述和先决条件
+title: 入门 - 生成你的第一个应用概述和先决条件
 author: heath-hamilton
-description: 了解如何开始使用 Microsoft 团队应用程序开发和设置你的环境。
+description: 了解如何开始 Microsoft Teams 应用开发和设置环境。
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: e2e73e755c45fa3bff3b6320dfbf0999a575fe99
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 06e26c57e6f6d3fd0bbeb981ef7ab46c8217bb4a
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346810"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795459"
 ---
-# <a name="build-your-first-microsoft-teams-app-overview"></a>构建你的首个 Microsoft 团队应用概述
+# <a name="build-your-first-microsoft-teams-app-overview"></a>生成首个 Microsoft Teams 应用概述
 
-在 " **构建您的首个应用** 课程" 中，您将创建基本的团队应用程序。 每个教程演示如何构建一个简单的真实团队应用程序，同时向您介绍了常见工具、基本概念以及更高级的功能。
+在 **构建你的第一个应用** 课程时，你将创建基本的 Teams 应用。 每个教程将介绍如何生成简单的实际 Teams 应用，同时向用户介绍通用工具、基本概念和更高级的功能。
 
-## <a name="what-youll-learn"></a>你将了解的内容
+## <a name="what-youll-learn"></a>您将了解哪些知识
 
-下面介绍了学习课程后您知道的内容。
+下面将了解在学习课程后将了解哪些内容。
 
 > [!div class="checklist"]
   >
-  > * **使用团队工具包快速启动和运行**： Visual Studio 代码的 Microsoft 团队工具包负责创建您的应用程序项目和基架，以便您可以在几分钟内运行应用程序。
-  > * **使用应用程序 Studio 配置应用**：指定你的团队应用使用的功能和服务。
-  > * **确定您的应用程序访问群体的范围**：构建一个工作组应用程序以供个人使用、协作或同时使用这两者。
-  > * **获取团队工具和 sdk 的经验**：自定义应用 (例如，将其配色方案更改为与 "团队" 主题) 与团队 JavaScript SDK 中的 "帮助" 相匹配。 此外，了解用于创建和管理 bot 的常用工具。
-  > * **在您的应用程序上展开**：在整个课程中，您将找到可能对 (（如身份验证和设计指南) ）感兴趣的相关主题。
+  > * 使用 Teams Toolkit 快速启动并 **运行**：Microsoft Teams Toolkit for Visual Studio Code 负责创建应用项目和基架，以便你可以几分钟内拥有正在运行的应用。
+  > * **使用 App Studio 配置应用**：指定 Teams 应用使用的功能和服务。
+  > * **确定应用受众的范围**：生成用于个人使用和/或协作的 Teams 应用。
+> * **获取 Teams 工具和 SDK** 体验：使用 Teams JavaScript 客户端 SDK 帮助自定义应用。 例如，更改应用的配色方案以匹配 Teams 主题。 此外，了解用于创建和管理机器人的常用工具。
+  > * **在应用中展开**：在课程过程中，你将找到你可能感兴趣的相关主题，例如 (身份验证和设计) 。
 
-## <a name="teams-app-fundamentals"></a>团队应用程序基础
+## <a name="teams-app-fundamentals"></a>Teams 应用基础
 
-在开始教程之前，您应该了解以下有关为团队生成应用程序的信息。
+在开始教程之前，你应了解以下有关生成 Teams 应用的信息。
 
-### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>应用可以具有多个功能和入口点
+### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>应用可以有多个功能和入口点
 
-团队应用程序由一个或多个 [平台功能](../concepts/capabilities-overview.md) 组成 (用户如何使用应用程序) 和 [入口点](../concepts/extensibility-points.md) (用户发现应用程序) 。
+Teams 应用由一个或多个平台[功能 (用户](../concepts/capabilities-overview.md)如何使用应用) 以及 (发现应用的入口点) 。 [](../concepts/extensibility-points.md)
 
-### <a name="teams-doesnt-host-your-app"></a>团队不会托管您的应用程序
+### <a name="teams-doesnt-host-your-app"></a>Teams 不托管你的应用
 
-团队应用程序包括以下重要部分：
+Teams 应用包括以下重要部分：
 
-* 对应用程序加电的逻辑、数据存储和 API 调用。 这些服务不是由团队托管的，并且必须可通过 HTTPS 访问。
-* 团队客户端 (web、桌面或移动) 上的用户使用您的应用程序。
-* 您的应用程序 ID，可让您使用应用程序 Studio 配置应用程序。
+* 支持你的应用的逻辑、数据存储和 API 调用。 这些服务不是由 Teams 托管的，必须通过 HTTPS 访问。
+* Teams 客户端 (Web、桌面或) ，用户可使用你的应用。
+* 应用 ID，允许你使用 App Studio 配置应用。
 
 ## <a name="get-prerequisites"></a>获取先决条件
 
-验证您是否具有用于生成团队应用程序的正确帐户，并安装一些建议的开发工具。
+验证你拥有用于生成 Teams 应用和安装一些推荐的开发工具的合适帐户。
 
-### <a name="set-up-your-development-account"></a>设置你的开发帐户
+### <a name="set-up-your-development-account"></a>设置开发帐户
 
-您需要一个允许自定义应用程序旁加载的团队帐户。  (你的帐户可能已提供此。 ) 
+你需要允许自定义应用旁加载的 Teams 帐户。  (您的帐户可能已经提供此功能。) 
 
-1. 如果您有团队帐户，请验证您是否可以在团队中旁加载应用程序：
-    1. 在 "团队客户端" 中，选择 " **应用**"。
-    1. 查找用于 **上传自定义应用程序** 的选项。
+1. 如果你有 Teams 帐户，请验证你能否在 Teams 中旁加载应用：
+    1. 在 Teams 客户端中，选择 **"应用"。**
+    1. 查找用于上载 **自定义应用的选项**。
 
-    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="图显示了在团队中可以上载自定义应用程序的位置。":::
+    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="插图显示可以在 Teams 中在哪里上载自定义应用。":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
 
-<summary>如果您看不到旁加载选项或没有团队帐户，<b>请选择此处</b>。</summary>
+<summary><b>如果你</b> 看不到旁加载选项或没有 Teams 帐户，请在此处选择。</summary>
 
-你可以通过加入 Microsoft 365 开发人员计划获取免费的团队测试帐户，以允许应用旁加载。  (注册过程大约需要两分钟时间。 ) 
+通过加入 Microsoft 365 开发人员计划，你可以获取允许应用旁加载的免费 Teams 测试帐户。  (注册过程大约需要两分钟。) 
 
 1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
-1. 选择 " **立即加入** "，然后按照屏幕上的说明操作。
-1. 进入 "欢迎" 屏幕时，选择 " **设置 E5 订阅**"。
-1. 设置管理员帐户。 完成后，您应该会看到类似这样的屏幕。
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册 Microsoft 365 开发人员计划后，您会看到的示例。":::
-1. 使用刚刚设置的管理员帐户登录到团队。
-1. 验证您是否现在已 **上载自定义应用程序** 选项。
+1. 选择 **"立即加入** "并按照屏幕上的说明操作。
+1. 当你进入欢迎屏幕时，选择 **"设置 E5 订阅"。**
+1. 设置管理员帐户。 完成后，应看到如下所示的屏幕。
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册 Microsoft 365 开发人员计划后看到的示例。":::
+1. 使用刚设置的管理员帐户登录到 Teams。
+1. 验证你现在是否具有" **上载自定义应用"** 选项。
 
 </details>
 
 > [!Note]
-> 如果仍然无法旁加载应用，请参阅 [启用自定义团队应用并打开自定义应用上载](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
+> 如果仍无法旁加载应用，请参阅启用自定义 [Teams 应用并启用自定义应用上传](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
 
 ### <a name="install-your-development-tools"></a>安装开发工具
 
-您可以使用您的首选工具构建团队应用程序，但这些课程展示了如何快速开始使用 Microsoft 团队工具包获取 Visual Studio Code。
+可以使用首选工具生成 Teams 应用，但以下课程将展示如何快速开始使用 Microsoft Teams Toolkit for Visual Studio Code。
 
-团队仅通过 HTTPS 连接显示应用内容。 若要在本地（如 bot）调试某些类型的应用程序，您将了解如何使用 ngrok 在团队和应用之间 [设置安全隧道](../concepts/build-and-test/debug.md#locally-hosted) 。  (生产团队应用程序托管在云中。 ) 
+Teams 仅通过 HTTPS 连接显示应用内容。 若要在本地调试某些类型的应用（如机器人），你将了解如何使用 [ngrok](../concepts/build-and-test/debug.md#locally-hosted) 在 Teams 和应用之间设置安全隧道。  (Teams 生产应用托管在云中。) 
 
 1. 安装 [Node.js](https://nodejs.org/en/)。
-1. 如果您计划生成机器人或邮件扩展，请安装 [ngrok](https://ngrok.com/download) 。
-1. 安装最新版本的 [Visual Studio Code](https://code.visualstudio.com/download)。  (早期版本可能在工具包中不起作用。 ) 
-1. 在 Visual Studio Code 中， **Extensions** 选择 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: 左侧活动栏上的 "扩展"，然后安装 **Microsoft 团队工具包**。
+1. 如果计划构建自动程序或消息扩展，请安装[ngrok。](https://ngrok.com/download)
+1. 安装最新版本的 [Visual Studio 代码](https://code.visualstudio.com/download)。  (早期版本可能无法使用 toolkit.) 
+1. 在Visual Studio代码中，选择左侧活动栏上的"扩展"，然后 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: 安装 Microsoft Teams **Toolkit。**
 
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="图显示了在 Visual Studio Code 中可以安装 Microsoft 团队工具包扩展的位置。":::
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="此插图显示Visual Studio代码中可以安装 Microsoft Teams Toolkit扩展。":::
 
 ## <a name="about-the-tutorials"></a>关于教程
 
-你可以从任意团队开始 **构建你的第一个应用** 课程。 如果你不确定首先要转到的位置，请遵循初级友好路径，并构建一个 "Hello，World！" 应用程序.
+你可以从任何 Teams 开始 **生成你的第一个应用** 课程。 如果你不确定首先从何处开始，请遵循初学者友好路径并构建一个"Hello， World！" 应用。
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="显示团队 &quot;构建您的首个应用&quot; 教程的学习途径的技能树。" border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="显示 Teams&quot;生成第一个应用&quot;教程的学习路径的技能树。" border="false":::
 
 ## <a name="next-step"></a>后续步骤
 
-设置帐户和环境后，即可开始构建。
+设置帐户和环境后，就可以开始构建。
 
-### <a name="beginner-friendly-tutorial"></a>初级友好教程
+### <a name="beginner-friendly-tutorial"></a>初学者友好教程
 
 > [!div class="nextstepaction"]
-> [构建 "Hello，World！" 应用程序](../build-your-first-app/build-and-run.md)
+> [生成"Hello， World！"应用](../build-your-first-app/build-and-run.md)
 
 ### <a name="other-tutorials"></a>其他教程
 

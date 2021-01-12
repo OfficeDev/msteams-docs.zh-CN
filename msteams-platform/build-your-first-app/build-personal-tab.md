@@ -1,59 +1,57 @@
 ---
-title: 入门-构建个人选项卡
+title: 入门 - 生成个人选项卡
 author: heath-hamilton
-description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队个人选项卡。
+description: 使用 Microsoft Teams Toolkit 快速创建 Microsoft Teams 个人Toolkit。
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 89d9a2109a863402dd7641d0882c530a0c2e6f66
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+ms.openlocfilehash: ae64e2a8216d2b91ec08bd9f4418f7d640d5b189
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409069"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795445"
 ---
-# <a name="build-a-personal-tab-for-microsoft-teams"></a>为 Microsoft 团队构建个人选项卡
+# <a name="build-a-personal-tab-for-microsoft-teams"></a>为 Microsoft Teams 生成个人选项卡
 
-通过在团队中嵌入网页，选项卡是在应用程序中呈现内容的一种简单方法。
+通过本质上在 Teams 中嵌入网页，选项卡是显示应用中内容的一种简单方法。
 
-团队中有两种类型的选项卡。 在本教程中，将为单个用户构建基本的 *个人选项卡*（全屏内容页面）。  (个人选项卡是团队中的传统网站体验中最接近的内容。 ) 
+Teams 中具有两种类型的选项卡。 在本教程中，你将生成基本的个人 *选项卡*，一个适用于单个用户的全屏内容页。  (个人选项卡是最接近 Teams.) 
 
 ## <a name="before-you-begin"></a>准备工作
 
-若要开始，您需要 "运行一个基本的个人" 选项卡。 如果没有，请参阅 [生成并运行你的首个团队应用](../build-your-first-app/build-and-run.md)。
+你需要一个基本的运行个人选项卡才能开始。 如果你没有，请参阅生成并 [运行你的第一个 Teams 应用](../build-your-first-app/build-and-run.md)。
 
-## <a name="your-assignment"></a>您的分配
+## <a name="your-assignment"></a>你的作业
 
-组织中的人员在查找重要功能的基本联系人信息时遇到问题 (技术支持、人力资源等 ) 。 你需要确保他们能够在一个位置快速查找此信息。 您该如何操作？ 当然是 "工作组个人" 选项卡。
+您的组织中的人员在查找重要功能的基本联系信息时 (技术支持、人力资源等) 。 你负责确保他们可以在一个地方快速找到此信息。 如何执行？ 当然，Teams 个人选项卡。
 
-## <a name="what-youll-learn"></a>你将了解的内容
+## <a name="what-youll-learn"></a>您将了解哪些知识
 
 > [!div class="checklist"]
 >
-> * 确定与个人选项卡相关的一些应用配置和基架
+> * 确定一些与个人选项卡相关的应用配置和基架
 > * 创建选项卡内容
 > * 根据用户首选项更新选项卡的颜色主题
 
-## <a name="1-identify-relevant-app-project-components"></a>1. 确定相关的应用程序项目组件
+## <a name="1-identify-relevant-app-project-components"></a>1. 确定相关应用程序项目组件
 
-大部分应用配置和基架是在使用团队工具包创建项目时自动设置的。 我们来看看用于构建个人选项卡的主要组件。
+使用 Teams 解决方案创建项目时，会自动设置大部分应用配置和基架Toolkit。 让我们看一下生成个人选项卡的主要组件。
 
 ### <a name="app-configurations"></a>应用配置
 
-您可以使用包含在工具包中的应用程序 Studio 查看和更新应用程序配置。
+在工具包中，转到 **App Studio** 以查看和更新应用配置。
 
-在安装过程中，该工具包最初配置了 "选项卡内容" 页，您可以在其中显示主要内容。 在工具包中，转到 **应用程序 Studio** 并选择 " **选项卡** " 以查看配置。
+### <a name="app-scaffolding"></a>应用基架
 
-### <a name="app-scaffolding"></a>应用程序基架
+应用基架提供在 Teams 中呈现个人选项卡的组件。 可以使用许多方法，但目前只需关注以下内容：
 
-应用程序基架提供用于在团队中呈现个人选项卡的组件。 你可以使用很多，但现在你只需关注以下内容：
+* `Tab.js` 文件 `src/components` 。 这用于呈现选项卡内容页。
+* Microsoft Teams JavaScript 客户端 SDK，预加载到项目的前端组件中。
 
-* `Tab.js``src/components`项目目录中的文件。 这是为了呈现您的选项卡内容页。
-* Microsoft 团队 JavaScript 客户端 SDK，它在项目的前端组件中预加载。
+## <a name="2-customize-your-tab-content-page"></a>2. 自定义选项卡内容页
 
-## <a name="2-customize-your-tab-content-page"></a>2. 自定义 "选项卡内容" 页
-
-编译组织中重要联系人的列表。 使用与您相关的信息复制和更新以下代码段，如果需要，请按如下所示使用代码。
+编译组织中重要联系人的列表。 复制并更新以下代码段，并包含与自己相关的信息，或者出于时间考虑，按如下所示使用代码。
 
 ```JSX
 <div>
@@ -66,7 +64,7 @@ ms.locfileid: "49409069"
 </div>
 ```
 
-转到 `src/components` 目录并打开 `Tab.js` 。 找到 `render()` 函数并将内容粘贴 (中， `return()` 如) 所示。
+转到 `src/components` 目录并打开 `Tab.js` 。 找到 `render()` 该函数，然后将内容粘贴到 `return()` (，如下所示) 。
 
 ```JavaScript
 render() {
@@ -86,7 +84,7 @@ render() {
 }
 ```
 
-将以下规则添加到 `App.css` ，无论使用哪个主题，电子邮件链接更易于阅读。
+添加以下规则，以便无论使用哪个主题，电子邮件 `App.css` 链接都更易于阅读。
 
 ```CSS
 a {
@@ -94,19 +92,19 @@ a {
 }
 ```
 
-保存所做的更改。 转到团队中的应用程序选项卡以查看新内容。
+保存所做的更改。 转到 Teams 中你的应用的选项卡以查看新内容。
 
 :::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="包含静态内容的个人选项卡的屏幕截图。":::
 
 ## <a name="3-update-the-tab-theme"></a>3. 更新选项卡主题
 
-理想的应用程序会让团队成为本地用户，因此，您的选项卡与您的用户喜欢的团队主题进行混合是很重要的：默认 (浅) 、深或高对比度。 正如您可能在最后的屏幕截图中已注意到，当客户端使用深色主题时，您的选项卡仍有浅背景。 这不是建议的用户体验。
+良好的应用感觉对于 Teams 而言是原生的，因此选项卡与用户喜欢的 Teams 主题混合很重要：默认 (浅色) 、深色或高对比度。 正如你可能在上一张屏幕截图中注意到的，当客户端使用深色主题时，选项卡仍具有浅色背景。 这不是建议的用户体验。
 
-[团队 JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)可让你的应用程序知道和响应客户端中的主题更改。 我们来演练一下如何执行此操作。
+[Teams JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)可以使你的应用注意到和响应客户端中的主题更改。 让我们演练一下如何完成此操作。
 
-### <a name="get-context-about-the-teams-client"></a>获取有关团队客户端的上下文
+### <a name="get-context-about-the-teams-client"></a>获取有关 Teams 客户端的上下文
 
-在您的文件中， `Tab.js` 有一个 `microsoftTeams.getContext()` 可提供 [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) 有关已配置的客户端主题的信息的呼叫。 由于应用程序基架，使用此代码来访问 `context` 接口及其属性。
+在你的 `Tab.js` 文件中，有一个调用提供有关配置的客户端主题的一些信息，以及其他 `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) 详细信息。 由于应用基架，因此可使用此代码，就像访问 `context` 接口及其属性一样。
 
 ```JavaScript
 componentDidMount(){
@@ -122,9 +120,9 @@ componentDidMount(){
 
 ### <a name="create-a-theme-change-handler"></a>创建主题更改处理程序
 
-使用这些 `context` 属性，您的应用程序可以清楚地了解团队中的 it 所发生的问题。 但是，应用仍不知道其外观应反映用户选择的任何主题。
+有了属性，你的应用可以深入了解 Teams `context` 中围绕它发生的情况。 但应用仍然不知道其外观应反映用户选择的主题。
 
-您需要处理程序，以便您的应用程序的状态随主题而更改。 在调用后立即插入以下主题更改处理程序 `microsoftTeams.getContext()` 。
+你需要一个处理程序，以便应用的状态随主题一起更改。 在调用后立即插入以下主题更改 `microsoftTeams.getContext()` 处理程序。
 
 ```JavaScript
   microsoftTeams.registerOnThemeChangeHandler(theme => {
@@ -136,18 +134,21 @@ componentDidMount(){
 
 ### <a name="match-theme-styles"></a>匹配主题样式
 
-您的主题更改处理程序已准备就绪，但您需要一些代码来响应这些更改，并将您的选项卡的颜色与当前主题对齐。
+主题更改处理程序已就位，但你需要一些代码来响应这些更改，并且将选项卡的颜色与当前主题对齐。
 
 > [!NOTE]
-> 下面的示例只是将样式应用于选项卡的一种方法。使用的代码为，然后展开或编写自己的代码。
+> 以下示例只是将样式应用到选项卡的一种方式。像现在一样使用代码，展开它，或编写你自己的代码。
 
-将主题更改处理程序提供的状态存储在中 `isTheme` 。
+在 `render()` 函数中，将主题更改处理程序提供的状态存储在中 `isTheme` 。
 
 ```JavaScript
   const isTheme = this.state.theme
 ```
 
-提供一些条件逻辑，以根据当前主题呈现您的选项卡样式。 下面的示例展示了这样做的基本方法： 1) 检查中的当前主题 `isTheme` ，2) 使用与 `newTheme` 当前主题相关的 css 属性创建对象，3) 将 css 应用到您的选项卡内容的根 HTML 元素 (`<div>`) 。
+存储主题更改处理程序提供的状态后，提供一些条件逻辑以根据当前主题呈现选项卡的样式。 以下示例演示了一种基本方法：
+1. 检查 中的当前主题 `isTheme` 。
+2. 使用 `newTheme` 与当前主题相关的 CSS 属性创建对象。
+3. 将 CSS 应用到选项卡内容的根 HTML 元素 `<div>` () 。
 
 ```JavaScript
 let newTheme
@@ -165,26 +166,26 @@ if (isTheme === "default") {
 }
 ```
 
-检查团队中的选项卡。 外观应与深色主题紧密匹配。
+在 Teams 中查看你的选项卡。 外观应该与深色主题紧密匹配。
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="包含静态内容视图的个人选项卡的屏幕截图。":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="具有静态内容视图的个人选项卡的屏幕截图。":::
 
 ## <a name="well-done"></a>干的好
 
-恭喜！ 您有一个 "个人" 选项卡的团队应用程序，可以更轻松地查找组织中的重要联系人。
+恭喜！ 你拥有具有个人选项卡的 Teams 应用，可更轻松地查找组织中的重要联系人。
 
 ## <a name="learn-more"></a>了解详细信息
 
-* [使用 Sso 对选项卡用户进行身份验证](../tabs/how-to/authentication/auth-aad-sso.md)：如果您仅希望授权用户查看您的选项卡，请通过 Azure Active DIRECTORY (AD) 设置单一登录 (SSO) 。
-* [从现有 web 应用或网页嵌入内容](../tabs/how-to/add-tab.md#tab-requirements)：我们向您介绍了如何为个人选项卡创建新内容，但您也可以从外部 URL 加载内容。
-* [为您的选项卡创建无缝体验](../tabs/design/tabs.md)：有关设计团队选项卡的建议指南，请参阅。
-* [为移动设备构建选项卡](../tabs/design/tabs-mobile.md)：了解如何为电话和平板电脑开发选项卡。
-* [使用 Microsoft Graph API 的团队数据](https://docs.microsoft.com/graph/teams-concept-overview)
-* [创建不带工具箱的选项卡](../tabs/how-to/add-tab.md)
+* 使用[SSO](../tabs/how-to/authentication/auth-aad-sso.md)对选项卡用户进行身份验证：如果仅希望授权用户查看您的选项卡，请通过 Azure Active Directory) AD (设置单一登录 (SSO) 。
+* [嵌入现有 Web](../tabs/how-to/add-tab.md#tab-requirements)应用或网页中的内容：我们展示了如何为个人选项卡创建新内容，但您也可以从外部 URL 加载内容。
+* [为选项卡创建无缝体验](../tabs/design/tabs.md)：请参阅设计 Teams 选项卡的建议指南。
+* [构建适用于移动设备的选项卡](../tabs/design/tabs-mobile.md)：了解如何开发适用于手机和平板电脑的选项卡。
+* [使用 Microsoft Graph API 利用 Teams 数据](https://docs.microsoft.com/graph/teams-concept-overview)
+* [创建不带工具包的选项卡](../tabs/how-to/add-tab.md)
 
-## <a name="next-lesson"></a>下一课
+## <a name="next-lesson"></a>下一课程
 
-您知道如何构建用于个人用途的选项卡。 让我们来看看构建团队频道和聊天的选项卡所需的内容。
+你知道如何生成供个人使用的选项卡。 让我们看一下为团队频道和聊天构建选项卡需要哪些内容。
 
 > [!div class="nextstepaction"]
 > [创建频道选项卡](../build-your-first-app/build-channel-tab.md)

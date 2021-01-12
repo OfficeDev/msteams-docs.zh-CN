@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams 模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 2135180a91d7cf123c4b456ac6ab4c236687ae87
-ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
+ms.openlocfilehash: 4a9b2ee9a5fadfa86dead4a15f49a6cea67d4963
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49768088"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795484"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -24,6 +24,17 @@ ms.locfileid: "49768088"
 * **生产就绪代码：** 应用模板符合有关安全性和基础结构的建议最佳做法，并审查所有社区提交的更改以确保持续一致性。
 * **可自定义和可扩展：** 尽管所有应用模板都已准备好按其部署，但我们提供了整个代码库和部署脚本，以便你可以轻松地自定义或扩展它们以满足你的独特需求。
 * **详细的文档&支持：** 所有应用模板都附带了有关解决方案体系结构、部署和配置步骤的端到端文档。 存储库也受监视，因此请在 GitHub 上通过引发问题报告你遇到的任何问题。
+
+## <a name="appointment-manager-9734"></a>约会管理器&#9734;
+
+约会管理器是一个 Teams 应用模板，可帮助企业通过 Teams 创建、管理和与消费者进行虚拟约会。 来自消费者的新约会请求在 Teams 频道中可见，可在其中快速分配这些请求并将其重新分配到团队中的员工。 可以通过自定义选项卡在团队或个人级别查看约会请求。 每个约会都与 Teams 联机会议关联，因此员工和使用者可以在计划的时间轻松加入会议。
+
+该应用模板与 Microsoft Bookings 集成，便于进行约会管理。 安排的约会会自动显示在已分配员工的日历上，并且消费者会收到包含嵌入式会议链接的可自定义电子邮件通知和提醒。
+
+[在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager)
+
+![Teams 中的 ](../assets/images/appointment-manager-overview.png)
+ ![ 约会管理器概述约会管理器](../assets/images/appointment-manager-2.png)
 
 ## <a name="ask-away"></a>询问离开
 
