@@ -3,12 +3,12 @@ title: 向连接器和 Webhook 发送邮件
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: e14b02a5a93d10feca49b6dcd653979aa9a94370
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 0cc53fa6110247e02582474ef4781a05af2a8fac
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604478"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795473"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -67,6 +67,11 @@ ms.locfileid: "49604478"
             "name": "Save",
             "target": "http://..."
         }]
+        {
+            "@type": "OpenUri",
+            "name": "Learn More",
+            "targets": [{ "os": "default", "uri": "https://docs.microsoft.com/outlook/actionable-messages" }]
+        }
     }, {
         "@type": "ActionCard",
         "name": "Change status",
@@ -108,8 +113,6 @@ ms.locfileid: "49604478"
 - `ActionCard` 显示一个或多个输入类型和关联的操作
 - `HttpPOST` 向 URL 发送 POST 请求
 - `OpenUri` 在单独的浏览器或应用程序中打开 URI；根据操作系统，可选择性地针对不同的 URI
-
-（第四个操作 `ViewAction` 仍受支持，但不再需要；改用 `OpenUri`。）
 
 `ActionCard` 操作支持三种输入类型：
 
