@@ -1,82 +1,76 @@
 ---
-title: 入门-构建通道和组选项卡
+title: 入门 - 生成频道和组选项卡
 author: heath-hamilton
-description: 使用 Microsoft 团队工具包快速创建 Microsoft 团队频道和分组选项卡。
+description: 使用 Microsoft Teams Toolkit 快速创建 Microsoft Teams 频道和Toolkit。
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: bb87d34974469057287cf63725e7722125c57c34
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 2ad0474859118f302a39e823f7669dc54061d525
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605243"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795452"
 ---
-# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a><span data-ttu-id="f1f2a-103">为 Microsoft 团队构建通道和组选项卡</span><span class="sxs-lookup"><span data-stu-id="f1f2a-103">Build a channel and group tab for Microsoft Teams</span></span>
+# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a><span data-ttu-id="5f1ee-103">为 Microsoft Teams 生成频道和组选项卡</span><span class="sxs-lookup"><span data-stu-id="5f1ee-103">Build a channel and group tab for Microsoft Teams</span></span>
 
-<span data-ttu-id="f1f2a-104">在本教程中，你将构建基本的 *频道选项卡* (也称为 " *组" 选项* 卡) （它是团队频道或聊天的全屏页面）。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-104">In this tutorial, you'll build a basic *channel tab* (also known as a *group tab*), which is a full-screen page for a team channel or chat.</span></span> <span data-ttu-id="f1f2a-105">与 "个人" 选项卡不同，用户可以配置此类选项卡的某些方面 (例如，重命名选项卡，使其对频道) 有意义。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-105">Unlike a personal tab, users can configure some aspects of this kind of tab (for example, rename the tab so it's meaningful to their channel).</span></span>
+<span data-ttu-id="5f1ee-104">在本教程中，你将生成基本频道 *选项卡 (也称为* 组选项卡 *) ，* 它是团队频道或聊天的全屏页面。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-104">In this tutorial, you'll build a basic *channel tab* (also known as a *group tab*), which is a full-screen page for a team channel or chat.</span></span> <span data-ttu-id="5f1ee-105">与个人选项卡不同，用户可以配置此类选项卡的一些 (例如，重命名该选项卡，以便其通道) 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-105">Unlike a personal tab, users can configure some aspects of this kind of tab (for example, rename the tab so it's meaningful to their channel).</span></span>
 
-## <a name="your-assignment"></a><span data-ttu-id="f1f2a-106">您的分配</span><span class="sxs-lookup"><span data-stu-id="f1f2a-106">Your assignment</span></span>
+## <a name="your-assignment"></a><span data-ttu-id="5f1ee-106">你的作业</span><span class="sxs-lookup"><span data-stu-id="5f1ee-106">Your assignment</span></span>
 
-<span data-ttu-id="f1f2a-107">以前，您的组织创建了一个团队应用程序，该应用程序使用选项卡来显示重要的联系人信息， (技术支持、人力资源等 ) 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-107">Not long ago, your organization created a Teams app that uses a tab to display important contact information (help desk, HR, etc.).</span></span> <span data-ttu-id="f1f2a-108">但是，由于它是一个 "个人" 选项卡，因此每个用户都必须安装该选项卡，才能看到它，并且采用情况低于预期。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-108">However, since it's a personal tab, each user must install the tab to see it and adoption is lower than expected.</span></span> <span data-ttu-id="f1f2a-109">换句话说，工作线程太多仍不知道如何联系技术支持人员。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-109">In other words, too many workers still don't know how to reach the help desk.</span></span>
+<span data-ttu-id="5f1ee-107">前不久，你的组织创建了一个 Teams 应用，该应用使用选项卡在技术支持、人力资源等 (显示重要的) 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-107">Not long ago, your organization created a Teams app that uses a tab to display important contact information (help desk, HR, etc.).</span></span> <span data-ttu-id="5f1ee-108">但是，由于它是个人选项卡，因此每个用户必须安装该选项卡以查看它，并且采用率低于预期。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-108">However, since it's a personal tab, each user must install the tab to see it and adoption is lower than expected.</span></span> <span data-ttu-id="5f1ee-109">换句话说，太多工作人员仍不知道如何联系技术支持人员。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-109">In other words, too many workers still don't know how to reach the help desk.</span></span>
 
-<span data-ttu-id="f1f2a-110">您可以通过构建通道选项卡使此信息更易于查找，这将消除要求每个人安装应用程序的负担。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-110">You can make this information easier to find by building a channel tab, which will remove the burden of requiring everyone to install an app.</span></span> <span data-ttu-id="f1f2a-111">相反，一个用户可以在频道或聊天中添加该选项卡，以了解整个组的好处。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-111">Instead, one user can add the tab in a channel or chat for the benefit of an entire group.</span></span>
+<span data-ttu-id="5f1ee-110">通过生成频道选项卡，可以使此信息更易于查找，这将消除要求所有人安装应用的负担。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-110">You can make this information easier to find by building a channel tab, which will remove the burden of requiring everyone to install an app.</span></span> <span data-ttu-id="5f1ee-111">相反，一个用户可以在频道中添加选项卡或聊天，以有利于整个组。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-111">Instead, one user can add the tab in a channel or chat for the benefit of an entire group.</span></span>
 
-## <a name="what-youll-learn"></a><span data-ttu-id="f1f2a-112">你将了解的内容</span><span class="sxs-lookup"><span data-stu-id="f1f2a-112">What you'll learn</span></span>
+## <a name="what-youll-learn"></a><span data-ttu-id="5f1ee-112">您将了解哪些知识</span><span class="sxs-lookup"><span data-stu-id="5f1ee-112">What you'll learn</span></span>
 
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="f1f2a-113">使用 Microsoft 团队工具包创建适用于 Visual Studio Code 的应用程序项目</span><span class="sxs-lookup"><span data-stu-id="f1f2a-113">Create an app project using the Microsoft Teams Toolkit for Visual Studio Code</span></span>
-> * <span data-ttu-id="f1f2a-114">确定与频道和组选项卡相关的一些应用配置和基架</span><span class="sxs-lookup"><span data-stu-id="f1f2a-114">Identify some of the app configurations and scaffolding relevant to channel and group tabs</span></span>
-> * <span data-ttu-id="f1f2a-115">创建选项卡内容</span><span class="sxs-lookup"><span data-stu-id="f1f2a-115">Create tab content</span></span>
-> * <span data-ttu-id="f1f2a-116">创建选项卡的配置页的内容</span><span class="sxs-lookup"><span data-stu-id="f1f2a-116">Create content for a tab's configuration page</span></span>
-> * <span data-ttu-id="f1f2a-117">提供建议的选项卡名称</span><span class="sxs-lookup"><span data-stu-id="f1f2a-117">Provide a suggested tab name</span></span>
-> * <span data-ttu-id="f1f2a-118">在本地生成和运行应用程序</span><span class="sxs-lookup"><span data-stu-id="f1f2a-118">Build and run your app locally</span></span>
-> * <span data-ttu-id="f1f2a-119">在团队中旁加载您的应用程序以供测试</span><span class="sxs-lookup"><span data-stu-id="f1f2a-119">Sideload your app in Teams for testing</span></span>
+> * <span data-ttu-id="5f1ee-113">使用 Microsoft Teams Toolkit for Visual Studio Code 创建应用项目</span><span class="sxs-lookup"><span data-stu-id="5f1ee-113">Create an app project using the Microsoft Teams Toolkit for Visual Studio Code</span></span>
+> * <span data-ttu-id="5f1ee-114">确定一些与通道选项卡相关的应用配置和基架</span><span class="sxs-lookup"><span data-stu-id="5f1ee-114">Identify some of the app configurations and scaffolding relevant to channel tabs</span></span>
+> * <span data-ttu-id="5f1ee-115">创建选项卡内容</span><span class="sxs-lookup"><span data-stu-id="5f1ee-115">Create tab content</span></span>
+> * <span data-ttu-id="5f1ee-116">为选项卡的配置页创建内容</span><span class="sxs-lookup"><span data-stu-id="5f1ee-116">Create content for a tab's configuration page</span></span>
+> * <span data-ttu-id="5f1ee-117">提供建议的选项卡名称</span><span class="sxs-lookup"><span data-stu-id="5f1ee-117">Provide a suggested tab name</span></span>
+> * <span data-ttu-id="5f1ee-118">在本地生成和运行应用</span><span class="sxs-lookup"><span data-stu-id="5f1ee-118">Build and run your app locally</span></span>
+> * <span data-ttu-id="5f1ee-119">在 Teams 中旁加载应用进行测试</span><span class="sxs-lookup"><span data-stu-id="5f1ee-119">Sideload your app in Teams for testing</span></span>
 
-## <a name="before-you-begin"></a><span data-ttu-id="f1f2a-120">准备工作</span><span class="sxs-lookup"><span data-stu-id="f1f2a-120">Before you begin</span></span>
+## <a name="before-you-begin"></a><span data-ttu-id="5f1ee-120">准备工作</span><span class="sxs-lookup"><span data-stu-id="5f1ee-120">Before you begin</span></span>
 
-<span data-ttu-id="f1f2a-121">如果还没有，请确保 [了解并安装团队开发先决条件](build-first-app-overview.md#get-prerequisites)。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-121">If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).</span></span>
+<span data-ttu-id="5f1ee-121">如果尚未安装，请确保了解并 [安装 Teams 开发先决条件](build-first-app-overview.md#get-prerequisites)。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-121">If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).</span></span>
 
-## <a name="1-create-your-app-project"></a><span data-ttu-id="f1f2a-122">1. 创建您的应用程序项目</span><span class="sxs-lookup"><span data-stu-id="f1f2a-122">1. Create your app project</span></span>
+## <a name="1-create-your-app-project"></a><span data-ttu-id="5f1ee-122">1. 创建应用项目</span><span class="sxs-lookup"><span data-stu-id="5f1ee-122">1. Create your app project</span></span>
 
-<span data-ttu-id="f1f2a-123">Microsoft 团队工具包可帮助配置您的应用程序，并设置与通道和组选项卡相关的基架，包括显示 "Hello，World！" 的基本配置页和内容页。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-123">The Microsoft Teams Toolkit helps configure your app and set up scaffolding relevant to channel and group tabs, including a basic configuration page and content page that displays a "Hello, World!"</span></span> <span data-ttu-id="f1f2a-124">消息。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-124">message.</span></span>
+<span data-ttu-id="5f1ee-123">Microsoft Teams Toolkit帮助配置你的应用和设置与频道和组选项卡相关的基架，包括显示"Hello， World！" 的基本配置页面和内容页。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-123">The Microsoft Teams Toolkit helps configure your app and set up scaffolding relevant to channel and group tabs, including a basic configuration page and content page that displays a "Hello, World!"</span></span> <span data-ttu-id="5f1ee-124">消息。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-124">message.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="f1f2a-125">如果之前尚未创建团队应用程序项目，您可能会发现，请按照 [以下说明](../build-your-first-app/build-and-run.md) 更详细地说明项目。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-125">If you haven't created a Teams app project before, you might find it helpful to follow [these instructions](../build-your-first-app/build-and-run.md) that explain projects in more detail.</span></span>
+> <span data-ttu-id="5f1ee-125">如果你之前尚未创建 Teams 应用项目，你可能会发现按照这些说明更详细地解释项目非常有用[](../build-your-first-app/build-and-run.md)。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-125">If you haven't created a Teams app project before, you might find it helpful to follow [these instructions](../build-your-first-app/build-and-run.md) that explain projects in more detail.</span></span>
 
-1. 在 Visual Studio Code 中，选择左侧活动栏上的 " **Microsoft 团队**"， :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 " **创建新的团队应用**"。
-1. <span data-ttu-id="f1f2a-127">出现提示时，使用 Microsoft 365 开发帐户登录。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-127">When prompted, sign in with your Microsoft 365 development account.</span></span>
-1. <span data-ttu-id="f1f2a-128">在 " **添加功能** " 屏幕上，依次选择 **"** **下一步**"。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-128">On the **Add capabilities** screen, select **Tab** then **Next**.</span></span>
-1. <span data-ttu-id="f1f2a-129">为你的团队应用输入名称。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-129">Enter a name for your Teams app.</span></span> <span data-ttu-id="f1f2a-130"> (这是您的应用程序的默认名称，也是本地计算机上的应用程序项目目录的名称。 ) </span><span class="sxs-lookup"><span data-stu-id="f1f2a-130">(This is the default name for your app and also the name of the app project directory on your local machine.)</span></span>
-1. <span data-ttu-id="f1f2a-131">检查 " **个人" 选项卡** 和 **"组" 或 "工作组通道" 选项卡** 选项。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-131">Check the **Personal tab** and **Group or Teams channel tab** options.</span></span> <span data-ttu-id="f1f2a-132"> (你将很快了解为什么需要两种类型的选项卡。 ) </span><span class="sxs-lookup"><span data-stu-id="f1f2a-132">(You'll soon learn why you need both types of tabs.)</span></span>
-1. <span data-ttu-id="f1f2a-133">选择屏幕底部的 " **完成** " 以配置项目。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-133">Select **Finish** at the bottom of the screen to configure your project.</span></span>  
+1. 在Visual Studio代码中，选择左侧活动栏上的 **Microsoft Teams，** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 **"创建新的 Teams 应用"。**
+1. <span data-ttu-id="5f1ee-127">当系统提示时，使用 Microsoft 365 开发帐户登录。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-127">When prompted, sign in with your Microsoft 365 development account.</span></span>
+1. <span data-ttu-id="5f1ee-128">在"**添加功能"屏幕上**，选择 **"Tab"，** 然后选择"**下一步"。**</span><span class="sxs-lookup"><span data-stu-id="5f1ee-128">On the **Add capabilities** screen, select **Tab** then **Next**.</span></span>
+1. <span data-ttu-id="5f1ee-129">输入 Teams 应用的名称。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-129">Enter a name for your Teams app.</span></span> <span data-ttu-id="5f1ee-130"> (这是应用的默认名称，也是本地计算机上应用项目目录的名称。) 选择组或 **Teams 频道选项卡**。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-130">(This is the default name for your app and also the name of the app project directory on your local machine.) Select **Group or Teams channel tab**.</span></span>
+1. <span data-ttu-id="5f1ee-131">选择 **屏幕** 底部的"完成"以配置项目。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-131">Select **Finish** at the bottom of the screen to configure your project.</span></span>  
 
-## <a name="2-identify-relevant-app-project-components"></a><span data-ttu-id="f1f2a-134">2. 确定相关的应用程序项目组件</span><span class="sxs-lookup"><span data-stu-id="f1f2a-134">2. Identify relevant app project components</span></span>
+## <a name="2-identify-relevant-app-project-components"></a><span data-ttu-id="5f1ee-132">2. 确定相关应用程序项目组件</span><span class="sxs-lookup"><span data-stu-id="5f1ee-132">2. Identify relevant app project components</span></span>
 
-<span data-ttu-id="f1f2a-135">大部分应用配置和基架是在使用团队工具包创建项目时自动设置的。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-135">Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit.</span></span> <span data-ttu-id="f1f2a-136">我们来看看构建通道和组选项卡的主要组件。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-136">Let's look at the main components for building a channel and group tab.</span></span>
+<span data-ttu-id="5f1ee-133">使用工具包创建项目时，会自动设置大部分应用配置和基架。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-133">Much of the app configurations and scaffolding are set up automatically when you create your project with the toolkit.</span></span> <span data-ttu-id="5f1ee-134">让我们看一下用于生成频道选项卡的主要组件。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-134">Let's look at the main components for building a channel tab.</span></span>
 
-### <a name="app-configurations"></a><span data-ttu-id="f1f2a-137">应用配置</span><span class="sxs-lookup"><span data-stu-id="f1f2a-137">App configurations</span></span>
+### <a name="app-configurations"></a><span data-ttu-id="5f1ee-135">应用配置</span><span class="sxs-lookup"><span data-stu-id="5f1ee-135">App configurations</span></span>
 
-<span data-ttu-id="f1f2a-138">您可以使用包含在工具包中的应用程序 Studio 查看和更新应用程序配置。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-138">You can view and update your app configurations using App Studio, which is included in the toolkit.</span></span>
+<span data-ttu-id="5f1ee-136">在工具包中，转到 **App Studio** 以查看和更新应用配置。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-136">In the toolkit, go to **App Studio** to view and update your app configurations.</span></span>
 
-<span data-ttu-id="f1f2a-139">在安装过程中，该工具包最初配置了通道和组选项卡的两个基本组件：</span><span class="sxs-lookup"><span data-stu-id="f1f2a-139">During setup, the toolkit initially configured two essential components of channel and group tabs:</span></span>
+### <a name="app-scaffolding"></a><span data-ttu-id="5f1ee-137">应用基架</span><span class="sxs-lookup"><span data-stu-id="5f1ee-137">App scaffolding</span></span>
 
-* <span data-ttu-id="f1f2a-140">**配置页面**：用于将选项卡添加到频道或聊天的模式。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-140">**Configuration page**: The modal for adding a tab to a channel or chat.</span></span> <span data-ttu-id="f1f2a-141"> (在应用程序 Studio 中，通过转到 **"团队" 选项卡 > "团队" 选项卡**，可以找到此页面。 ) </span><span class="sxs-lookup"><span data-stu-id="f1f2a-141">(In App Studio, you can find this page by going to **Tabs > Team tab**.)</span></span>
-* <span data-ttu-id="f1f2a-142">**内容页面**：显示主要内容的位置。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-142">**Content page**: Where you display your primary content.</span></span> <span data-ttu-id="f1f2a-143"> (在应用程序 Studio 中，通过转到 " **添加个人" 选项卡 > 的选项** 卡可以找到此页面。 ) </span><span class="sxs-lookup"><span data-stu-id="f1f2a-143">(In App Studio, you can find this page by going to **Tabs > Add a personal tab**.)</span></span>
+<span data-ttu-id="5f1ee-138">应用基架提供在 Teams 中呈现频道选项卡的组件。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-138">The app scaffolding provides the components for rendering your channel tab in Teams.</span></span> <span data-ttu-id="5f1ee-139">可以使用许多方法，但目前只需关注以下内容：</span><span class="sxs-lookup"><span data-stu-id="5f1ee-139">There's a lot you can work with, but for now you only need to focus on the following:</span></span>
 
-### <a name="app-scaffolding"></a><span data-ttu-id="f1f2a-144">应用程序基架</span><span class="sxs-lookup"><span data-stu-id="f1f2a-144">App scaffolding</span></span>
+* <span data-ttu-id="5f1ee-140">位于项目目录中的两 `src/components` 个文件：</span><span class="sxs-lookup"><span data-stu-id="5f1ee-140">Two files located in the `src/components` directory of your project:</span></span>
+  * <span data-ttu-id="5f1ee-141">`Tab.js` 用于呈现选项卡的内容页。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-141">`Tab.js` for rendering your tab's content page.</span></span>
+  * <span data-ttu-id="5f1ee-142">`TabConfig.js` 用于呈现选项卡的配置页。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-142">`TabConfig.js` for rendering your tab's configuration page.</span></span>
+* <span data-ttu-id="5f1ee-143">Microsoft Teams JavaScript 客户端 SDK，预加载到项目的前端组件中。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-143">Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.</span></span>
 
-<span data-ttu-id="f1f2a-145">应用程序基架提供用于在团队中呈现个人选项卡的组件。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-145">The app scaffolding provides the components for rendering your personal tab in Teams.</span></span> <span data-ttu-id="f1f2a-146">你可以使用很多，但现在你只需关注以下内容：</span><span class="sxs-lookup"><span data-stu-id="f1f2a-146">There's a lot you can work with, but for now you only need to focus on the following:</span></span>
+## <a name="3-customize-your-tab-content-page"></a><span data-ttu-id="5f1ee-144">3. 自定义选项卡内容页</span><span class="sxs-lookup"><span data-stu-id="5f1ee-144">3. Customize your tab content page</span></span>
 
-* <span data-ttu-id="f1f2a-147">位于项目目录中的两个文件 `src/components` ：</span><span class="sxs-lookup"><span data-stu-id="f1f2a-147">Two files located in the `src/components` directory of your project:</span></span>
-  * <span data-ttu-id="f1f2a-148">`Tab.js` 用于呈现选项卡的内容页。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-148">`Tab.js` for rendering your tab's content page.</span></span>
-  * <span data-ttu-id="f1f2a-149">`TabConfig.js` 用于呈现选项卡的配置页。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-149">`TabConfig.js` for rendering your tab's configuration page.</span></span>
-* <span data-ttu-id="f1f2a-150">Microsoft 团队 JavaScript 客户端 SDK，它在项目的前端组件中预加载。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-150">Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.</span></span>
-
-## <a name="3-customize-your-tab-content-page"></a><span data-ttu-id="f1f2a-151">3. 自定义 "选项卡内容" 页</span><span class="sxs-lookup"><span data-stu-id="f1f2a-151">3. Customize your tab content page</span></span>
-
-<span data-ttu-id="f1f2a-152">使用与您的组织相关的信息复制和更新以下代码段，如果有时间，请使用代码。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-152">Copy and update the following snippet with information that's relevant to your organization or, for the sake of time, use the code as is.</span></span>
+<span data-ttu-id="5f1ee-145">复制并更新以下代码段，并包含与您的组织有关的信息，或者出于时间考虑，按如下所示使用代码。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-145">Copy and update the following snippet with information that's relevant to your organization or, for the sake of time, use the code as is.</span></span>
 
 ```JSX
 <div>
@@ -89,7 +83,7 @@ ms.locfileid: "49605243"
 </div>
 ```
 
-<span data-ttu-id="f1f2a-153">转到 `src/components` 目录并打开 `Tab.js` 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-153">Go to the `src/components` directory and open `Tab.js`.</span></span> <span data-ttu-id="f1f2a-154">找到 `render()` 函数并将内容粘贴 (中， `return()` 如) 所示。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-154">Locate the `render()` function and paste your content inside `return()` (as shown).</span></span>
+<span data-ttu-id="5f1ee-146">转到 `src/components` 目录并打开 `Tab.js` 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-146">Go to the `src/components` directory and open `Tab.js`.</span></span> <span data-ttu-id="5f1ee-147">找到 `render()` 该函数，然后将内容粘贴到 `return()` (，如下所示) 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-147">Locate the `render()` function and paste your content inside `return()` (as shown).</span></span>
 
 ```JavaScript
 render() {
@@ -109,7 +103,7 @@ render() {
 }
 ```
 
-<span data-ttu-id="f1f2a-155">将以下规则添加到 `App.css` (也位于 `src/components`) 中，这样无论使用哪个主题，电子邮件链接都更易于阅读。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-155">Add the following rule to `App.css` (also located in `src/components`) so the email links are easier to read no matter which theme is used.</span></span>
+<span data-ttu-id="5f1ee-148">将以下规则 (也位于) 中，以便无论使用哪个主题，电子邮件链接都更易于 `App.css` `src/components` 阅读。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-148">Add the following rule to `App.css` (also located in `src/components`) so the email links are easier to read no matter which theme is used.</span></span>
 
 ```CSS
 a {
@@ -117,11 +111,11 @@ a {
 }
 ```
 
-## <a name="4-customize-your-tab-configuration-page"></a><span data-ttu-id="f1f2a-156">4. 自定义您的选项卡配置页</span><span class="sxs-lookup"><span data-stu-id="f1f2a-156">4. Customize your tab configuration page</span></span>
+## <a name="4-customize-your-tab-configuration-page"></a><span data-ttu-id="5f1ee-149">4. 自定义选项卡配置页</span><span class="sxs-lookup"><span data-stu-id="5f1ee-149">4. Customize your tab configuration page</span></span>
 
-<span data-ttu-id="f1f2a-157">频道或聊天中的每个选项卡都有一个配置页面，其中包含至少一个安装选项的模式，在用户添加您的应用程序时显示。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-157">Every tab in a channel or chat has a configuration page, a modal with at least one setup option that displays when users add your app.</span></span> <span data-ttu-id="f1f2a-158">默认情况下，配置页面会询问用户是否要在安装该选项卡时通知频道或聊天。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-158">The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.</span></span>
+<span data-ttu-id="5f1ee-150">频道或聊天中的每个选项卡都有一个配置页，这是一个模式，具有至少一个设置选项，在用户添加你的应用时显示。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-150">Every tab in a channel or chat has a configuration page, a modal with at least one setup option that displays when users add your app.</span></span> <span data-ttu-id="5f1ee-151">默认情况下，配置页询问用户是否要在安装选项卡时通知频道或聊天。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-151">The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.</span></span>
 
-<span data-ttu-id="f1f2a-159">将一些自定义内容添加到配置页面。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-159">Add some custom content to your configuration page.</span></span> <span data-ttu-id="f1f2a-160">转到项目的 `src/components` 目录，打开 `TabConfig.js` ，并更新中的占位符内容 (中， `return()` 如下面的示例所示) 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-160">Go to your project's `src/components` directory, open `TabConfig.js`, and update the placeholder content inside `return()` (as shown in the following example).</span></span>
+<span data-ttu-id="5f1ee-152">向配置页面添加一些自定义内容。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-152">Add some custom content to your configuration page.</span></span> <span data-ttu-id="5f1ee-153">转到项目的目录，打开并更新 (中的占位符内容，如下面的示例 `src/components` `TabConfig.js` `return()`) 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-153">Go to your project's `src/components` directory, open `TabConfig.js`, and update the placeholder content inside `return()` (as shown in the following example).</span></span>
 
 ```JavaScript
 return (
@@ -135,15 +129,17 @@ return (
 ```
  
 > [!TIP]
-> <span data-ttu-id="f1f2a-161">至少，在此页面上提供有关您的应用程序的一些简要信息，因为这可能是用户首次了解它。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-161">At minimum, provide some brief information about your app on this page since this may be the first time users are learning about it.</span></span> <span data-ttu-id="f1f2a-162">您还可以包括自定义配置选项或 [身份验证工作流](../tabs/how-to/authentication/auth-aad-sso.md)，这在选项卡配置页上很常见。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-162">You also could include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.</span></span>
+> <span data-ttu-id="5f1ee-154">至少应在此页面上提供有关你的应用的一些简短信息，因为这可能是用户第一次了解它。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-154">At minimum, provide some brief information about your app on this page since this may be the first time users are learning about it.</span></span> <span data-ttu-id="5f1ee-155">还可以包括自定义配置选项或身份验证 [工作流](../tabs/how-to/authentication/auth-aad-sso.md)（在选项卡配置页面上很常见）。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-155">You also could include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.</span></span>
 
-## <a name="5-provide-a-suggested-tab-name"></a><span data-ttu-id="f1f2a-163">5. 提供建议的选项卡名称</span><span class="sxs-lookup"><span data-stu-id="f1f2a-163">5. Provide a suggested tab name</span></span>
+## <a name="5-provide-a-suggested-tab-name"></a><span data-ttu-id="5f1ee-156">5. 提供建议的选项卡名称</span><span class="sxs-lookup"><span data-stu-id="5f1ee-156">5. Provide a suggested tab name</span></span>
 
-<span data-ttu-id="f1f2a-164">在添加频道或组选项卡时，默认情况下，应用名称会显示 (例如， **第一个应用程序**) 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-164">When you add a channel or group tab, by default the app name displays (for example, **first-app**).</span></span>
+<span data-ttu-id="5f1ee-157">添加通道选项卡时，默认情况下应用名称 (例如，第一 **个应用) 。**</span><span class="sxs-lookup"><span data-stu-id="5f1ee-157">When you add a channel tab, by default the app name displays (for example, **first-app**).</span></span>
 
-<span data-ttu-id="f1f2a-165">这可能会很好，具体取决于您调用应用程序的内容，但您可能希望提供一个名称，以便在组协作的上下文中更有意义 (例如， **工作组联系人**) 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-165">This may be fine depending on what you call your app, but you may want to provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).</span></span>
+<span data-ttu-id="5f1ee-158">这可能适合你调用你的应用，但你可能希望提供一个在组协作上下文中更有意义的名称 (例如，团队联系人) 。 </span><span class="sxs-lookup"><span data-stu-id="5f1ee-158">This may be fine depending on what you call your app, but you may want to provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).</span></span>
 
-<span data-ttu-id="f1f2a-166">在中 `TabConfig.js` ，转到 `microsoftTeams.settings.setSettings` 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-166">In `TabConfig.js`, go to `microsoftTeams.settings.setSettings`.</span></span> <span data-ttu-id="f1f2a-167">添加 `suggestedDisplayName` 默认情况下要显示的选项卡名称的属性 (如) 所示。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-167">Add the `suggestedDisplayName` property with the tab name you want to display by default (as shown).</span></span> <span data-ttu-id="f1f2a-168">使用提供的名称或创建自己的名称。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-168">Use the provided name or create your own.</span></span> <span data-ttu-id="f1f2a-169"> (默认情况下，用户可以根据需要更改名称。 ) </span><span class="sxs-lookup"><span data-stu-id="f1f2a-169">(By default, users to change the name if they want.)</span></span>
+1. <span data-ttu-id="5f1ee-159">在 `TabConfig.js` 中，转到 `microsoftTeams.settings.setSettings` 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-159">In `TabConfig.js`, go to `microsoftTeams.settings.setSettings`.</span></span>
+2. <span data-ttu-id="5f1ee-160">使用 `suggestedDisplayName` 要默认显示的选项卡名称添加属性。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-160">Add the `suggestedDisplayName` property with the tab name you want to display by default.</span></span> 
+3. <span data-ttu-id="5f1ee-161">使用以下示例中提供的名称或键入您的名称。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-161">Use the name provided in the following example or type your name.</span></span> <span data-ttu-id="5f1ee-162"> (默认情况下，用户可以更改 name.) </span><span class="sxs-lookup"><span data-stu-id="5f1ee-162">(By default, users can change the name.)</span></span>
 
 ```JavaScript
 microsoftTeams.settings.setSettings({
@@ -152,47 +148,47 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## <a name="6-build-and-run-your-app"></a><span data-ttu-id="f1f2a-170">6. 生成并运行应用程序</span><span class="sxs-lookup"><span data-stu-id="f1f2a-170">6. Build and run your app</span></span>
+## <a name="6-build-and-run-your-app"></a><span data-ttu-id="5f1ee-163">6. 生成并运行应用</span><span class="sxs-lookup"><span data-stu-id="5f1ee-163">6. Build and run your app</span></span>
 
-<span data-ttu-id="f1f2a-171">在时间方面，你将在本地构建和运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-171">In the interest of time, you'll build and run your app locally.</span></span>
+<span data-ttu-id="5f1ee-164">为符合时间需要，你将在本地生成和运行应用。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-164">In the interest of time, you'll build and run your app locally.</span></span>
 
-<span data-ttu-id="f1f2a-172"> (工具包中也提供了此信息 `README` 。 ) </span><span class="sxs-lookup"><span data-stu-id="f1f2a-172">(This information is also available in the toolkit `README`.)</span></span>
+<span data-ttu-id="5f1ee-165"> (工具包 .) 中也提供了 `README` 此信息。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-165">(This information is also available in the toolkit `README`.)</span></span>
 
-1. <span data-ttu-id="f1f2a-173">在终端中，转到您的应用程序项目的根目录并运行该目录 `npm install` 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-173">In a terminal, go to the root directory of your app project and run `npm install`.</span></span>
-1. <span data-ttu-id="f1f2a-174">运行 `npm start` 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-174">Run `npm start`.</span></span>
+1. <span data-ttu-id="5f1ee-166">在终端中，转到应用项目的根目录并运行 `npm install` 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-166">In a terminal, go to the root directory of your app project and run `npm install`.</span></span>
+1. <span data-ttu-id="5f1ee-167">运行 `npm start`。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-167">Run `npm start`.</span></span>
 
-<span data-ttu-id="f1f2a-175">完成后，已 **成功编译了！**</span><span class="sxs-lookup"><span data-stu-id="f1f2a-175">Once complete, there's a **Compiled successfully!**</span></span> <span data-ttu-id="f1f2a-176">终端中的邮件。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-176">message in the terminal.</span></span> <span data-ttu-id="f1f2a-177">您的应用程序正在运行 `https://localhost:3000` 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-177">Your app is running on `https://localhost:3000`.</span></span>
+<span data-ttu-id="5f1ee-168">完成后，将成功 **进行编译！**</span><span class="sxs-lookup"><span data-stu-id="5f1ee-168">Once complete, there's a **Compiled successfully!**</span></span> <span data-ttu-id="5f1ee-169">消息。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-169">message in the terminal.</span></span> <span data-ttu-id="5f1ee-170">你的应用正在运行 `https://localhost:3000` 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-170">Your app is running on `https://localhost:3000`.</span></span>
 
-## <a name="7-sideload-your-app-in-teams"></a><span data-ttu-id="f1f2a-178">7. 在团队中旁加载您的应用程序</span><span class="sxs-lookup"><span data-stu-id="f1f2a-178">7. Sideload your app in Teams</span></span>
+## <a name="7-sideload-your-app-in-teams"></a><span data-ttu-id="5f1ee-171">7. 在 Teams 中旁加载应用</span><span class="sxs-lookup"><span data-stu-id="5f1ee-171">7. Sideload your app in Teams</span></span>
 
-<span data-ttu-id="f1f2a-179">您的应用程序已准备好在团队中进行测试。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-179">Your app is ready to test in Teams.</span></span> <span data-ttu-id="f1f2a-180">若要执行此操作，您必须具有允许应用旁加载的帐户。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-180">To do this, you must have an account that allows app sideloading.</span></span> <span data-ttu-id="f1f2a-181"> (如果您不能确定，请了解如何获取 [团队开发帐户](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)。 ) </span><span class="sxs-lookup"><span data-stu-id="f1f2a-181">(If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)</span></span>
+<span data-ttu-id="5f1ee-172">你的应用已准备好在 Teams 中进行测试。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-172">Your app is ready to test in Teams.</span></span> <span data-ttu-id="5f1ee-173">为此，你必须具有允许应用旁加载的帐户。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-173">To do this, you must have an account that allows app sideloading.</span></span> <span data-ttu-id="5f1ee-174"> (如果不确定是否拥有，请了解如何获取 Teams 开发 [帐户](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).) </span><span class="sxs-lookup"><span data-stu-id="5f1ee-174">(If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)</span></span>
 
-1. <span data-ttu-id="f1f2a-182">在 Visual Studio Code 中，按 **F5** 键以启动团队 web 客户端。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-182">In Visual Studio Code, press the **F5** key to launch a Teams web client.</span></span>
-1. <span data-ttu-id="f1f2a-183">若要在团队中显示应用内容，请指定您的应用程序的运行位置 (`localhost`) 是可信的：</span><span class="sxs-lookup"><span data-stu-id="f1f2a-183">To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:</span></span>
-   1. <span data-ttu-id="f1f2a-184">默认情况下，在同一浏览器窗口中打开一个新选项卡 () 按 **F5** 后打开的。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-184">Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.</span></span>
-   1. <span data-ttu-id="f1f2a-185">转到 `https://localhost:3000/tab` ""，然后继续转到 "" 页。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-185">Go to `https://localhost:3000/tab` and proceed to the page.</span></span>
-1. <span data-ttu-id="f1f2a-186">返回到 "团队"。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-186">Go back to Teams.</span></span> <span data-ttu-id="f1f2a-187">在模式中，选择 " **添加到团队** " 或 " **添加到聊天** "，并找到可用于测试的频道或聊天。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-187">In the modal, select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.</span></span>
-1. <span data-ttu-id="f1f2a-188">选择 **"设置选项卡"**。配置页面在模式中显示。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-188">Select **Set up a tab**. The configuration page displays in a modal.</span></span><br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="频道选项卡配置页的屏幕截图。":::
-1. <span data-ttu-id="f1f2a-190">选择 " **保存** " 以配置选项卡。将显示内容页。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-190">Select **Save** to configure the tab. The content page displays.</span></span><br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="包含静态内容视图的频道选项卡的屏幕截图。":::
+1. <span data-ttu-id="5f1ee-175">在Visual Studio中，按 **F5** 键启动 Teams Web 客户端。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-175">In Visual Studio Code, press the **F5** key to launch a Teams web client.</span></span>
+1. <span data-ttu-id="5f1ee-176">若要在 Teams 中显示你的应用内容，请指定你的应用在哪些 () `localhost` 可信赖：</span><span class="sxs-lookup"><span data-stu-id="5f1ee-176">To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:</span></span>
+   1. <span data-ttu-id="5f1ee-177">默认情况下，在 Google Chrome 的相同浏览器窗口中打开 (新选项卡) 按 **F5** 后打开。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-177">Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.</span></span>
+   1. <span data-ttu-id="5f1ee-178">转到 `https://localhost:3000/tab` 并转到页面。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-178">Go to `https://localhost:3000/tab` and proceed to the page.</span></span>
+1. <span data-ttu-id="5f1ee-179">返回到 Teams。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-179">Go back to Teams.</span></span> <span data-ttu-id="5f1ee-180">在模式中，选择"添加到 **团队** "或"添加到 **聊天** "，并找到可用于测试的频道或聊天。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-180">In the modal, select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.</span></span>
+1. <span data-ttu-id="5f1ee-181">选择 **"设置"选项卡**。配置页以模式显示。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-181">Select **Set up a tab**. The configuration page displays in a modal.</span></span><br/>
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="频道选项卡配置页面的屏幕截图。":::
+1. <span data-ttu-id="5f1ee-183">选择 **"保存** "以配置选项卡。显示内容页。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-183">Select **Save** to configure the tab. The content page displays.</span></span><br/>
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="具有静态内容视图的频道选项卡的屏幕截图。":::
 
-## <a name="well-done"></a><span data-ttu-id="f1f2a-192">干的好</span><span class="sxs-lookup"><span data-stu-id="f1f2a-192">Well done</span></span>
+## <a name="well-done"></a><span data-ttu-id="5f1ee-185">干的好</span><span class="sxs-lookup"><span data-stu-id="5f1ee-185">Well done</span></span>
 
-<span data-ttu-id="f1f2a-193">恭喜！</span><span class="sxs-lookup"><span data-stu-id="f1f2a-193">Congratulations!</span></span> <span data-ttu-id="f1f2a-194">您有一个包含选项卡的团队应用程序，用于在频道和聊天中显示有用的内容。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-194">You have a Teams app with a tab for displaying useful content in channels and chats.</span></span>
+<span data-ttu-id="5f1ee-186">恭喜！</span><span class="sxs-lookup"><span data-stu-id="5f1ee-186">Congratulations!</span></span> <span data-ttu-id="5f1ee-187">你有一个 Teams 应用，该应用具有一个选项卡，用于显示频道和聊天中的有用内容。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-187">You have a Teams app with a tab for displaying useful content in channels and chats.</span></span>
 
-## <a name="learn-more"></a><span data-ttu-id="f1f2a-195">了解更多</span><span class="sxs-lookup"><span data-stu-id="f1f2a-195">Learn more</span></span>
+## <a name="learn-more"></a><span data-ttu-id="5f1ee-188">了解详细信息</span><span class="sxs-lookup"><span data-stu-id="5f1ee-188">Learn more</span></span>
 
-* <span data-ttu-id="f1f2a-196">[使用 Sso 对选项卡用户进行身份验证](../tabs/how-to/authentication/auth-aad-sso.md)：如果您仅希望授权用户查看您的选项卡，请通过 Azure Active DIRECTORY (AD) 设置单一登录 (SSO) 。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-196">[Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).</span></span>
-* <span data-ttu-id="f1f2a-197">[从现有 web 应用或网页嵌入内容](../tabs/how-to/add-tab.md#tab-requirements)：我们向您介绍了如何为个人选项卡创建新内容，但您也可以从外部 URL 加载内容。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-197">[Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a personal tab, but you can also load content from an external URL.</span></span>
-* <span data-ttu-id="f1f2a-198">[为您的选项卡创建无缝体验](../tabs/design/tabs.md)：有关设计团队选项卡的建议指南，请参阅。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-198">[Create a seamless experience for your tab](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.</span></span>
-* <span data-ttu-id="f1f2a-199">[为移动设备构建选项卡](../tabs/design/tabs-mobile.md)：了解如何为电话和平板电脑开发选项卡。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-199">[Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.</span></span>
-* [<span data-ttu-id="f1f2a-200">使用 Microsoft Graph API 的团队数据</span><span class="sxs-lookup"><span data-stu-id="f1f2a-200">Utilize Teams data with the Microsoft Graph API</span></span>](https://docs.microsoft.com/graph/teams-concept-overview)
-* [<span data-ttu-id="f1f2a-201">创建不带工具箱的选项卡</span><span class="sxs-lookup"><span data-stu-id="f1f2a-201">Create a tab without the toolkit</span></span>](../tabs/how-to/add-tab.md)
+* <span data-ttu-id="5f1ee-189">使用[SSO](../tabs/how-to/authentication/auth-aad-sso.md)对选项卡用户进行身份验证：如果仅希望授权用户查看您的选项卡，请通过 Azure Active Directory) AD (设置单一登录 (SSO) 。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-189">[Authenticate tab users with SSO](../tabs/how-to/authentication/auth-aad-sso.md): If you only want authorized users viewing your tab, set up single sign-on (SSO) through Azure Active Directory (AD).</span></span>
+* <span data-ttu-id="5f1ee-190">[嵌入现有 Web](../tabs/how-to/add-tab.md#tab-requirements)应用或网页中的内容：我们展示了如何为选项卡创建新内容，但您也可以从外部 URL 加载内容。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-190">[Embed content from an existing web app or webpage](../tabs/how-to/add-tab.md#tab-requirements): We showed you how to create new content for a tab, but you can also load content from an external URL.</span></span>
+* <span data-ttu-id="5f1ee-191">[创建无缝选项卡体验](../tabs/design/tabs.md)：请参阅设计 Teams 选项卡的建议准则。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-191">[Create a seamless tab experience](../tabs/design/tabs.md): See the recommended guidelines for designing Teams tabs.</span></span>
+* <span data-ttu-id="5f1ee-192">[构建适用于移动设备的选项卡](../tabs/design/tabs-mobile.md)：了解如何开发适用于手机和平板电脑的选项卡。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-192">[Build tabs for mobile](../tabs/design/tabs-mobile.md): Understand how to develop tabs for phones and tablets.</span></span>
+* [<span data-ttu-id="5f1ee-193">使用 Microsoft Graph API 利用 Teams 数据</span><span class="sxs-lookup"><span data-stu-id="5f1ee-193">Utilize Teams data with the Microsoft Graph API</span></span>](https://docs.microsoft.com/graph/teams-concept-overview)
+* [<span data-ttu-id="5f1ee-194">创建不带工具包的选项卡</span><span class="sxs-lookup"><span data-stu-id="5f1ee-194">Create a tab without the toolkit</span></span>](../tabs/how-to/add-tab.md)
 
-## <a name="next-lesson"></a><span data-ttu-id="f1f2a-202">下一课</span><span class="sxs-lookup"><span data-stu-id="f1f2a-202">Next lesson</span></span>
+## <a name="next-lesson"></a><span data-ttu-id="5f1ee-195">下一课程</span><span class="sxs-lookup"><span data-stu-id="5f1ee-195">Next lesson</span></span>
 
-<span data-ttu-id="f1f2a-203">您知道如何构建协作选项卡。</span><span class="sxs-lookup"><span data-stu-id="f1f2a-203">You know how to build a tab for collaboration.</span></span> <span data-ttu-id="f1f2a-204">想要尝试构建不同种类的团队应用吗？</span><span class="sxs-lookup"><span data-stu-id="f1f2a-204">Want to try building a different kind of Teams app?</span></span>
+<span data-ttu-id="5f1ee-196">你知道如何生成用于协作的选项卡。</span><span class="sxs-lookup"><span data-stu-id="5f1ee-196">You know how to build a tab for collaboration.</span></span> <span data-ttu-id="5f1ee-197">想要尝试生成不同类型的 Teams 应用？</span><span class="sxs-lookup"><span data-stu-id="5f1ee-197">Want to try building a different kind of Teams app?</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="f1f2a-205">创建机器人</span><span class="sxs-lookup"><span data-stu-id="f1f2a-205">Build a bot</span></span>](../build-your-first-app/build-bot.md)
+> [<span data-ttu-id="5f1ee-198">创建机器人</span><span class="sxs-lookup"><span data-stu-id="5f1ee-198">Build a bot</span></span>](../build-your-first-app/build-bot.md)
