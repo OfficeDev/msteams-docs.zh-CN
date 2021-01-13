@@ -5,28 +5,28 @@ description: 为团队会议创建应用
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: e768c2dc6722d006c89927adfe60e03243a076d0
-ms.sourcegitcommit: f0dfae429385ef02f61896ad49172c4803ef6622
+ms.openlocfilehash: 82327eca86dcdac5c47f5f4471bc91d55484d07e
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "49740869"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797762"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
 ## <a name="prerequisites-and-considerations"></a>先决条件和注意事项
 
-1. 会议中的应用需要一些 Teams [应用开发的基本知识](../overview.md)。 会议中的应用可以包括[选项卡](../tabs/what-are-tabs.md)、聊天机器人和消息传递[](../bots/what-are-bots.md)扩展功能，并且[](../messaging-extensions/what-are-messaging-extensions.md)[需要更新](#update-your-app-manifest)Teams 应用清单以指示该应用可用于会议
+* 会议中的应用需要一些 Teams [应用开发的基本知识](../overview.md)。 会议中的应用可以包括[选项卡](../tabs/what-are-tabs.md)、聊天机器人和消息传递[](../bots/what-are-bots.md)扩展功能，并且[](../messaging-extensions/what-are-messaging-extensions.md)[需要更新](#update-your-app-manifest)Teams 应用清单以指示该应用可用于会议
 
-1. 若要使应用在会议生命周期中作为选项卡运行，它必须支持群聊作用域中的可 [配置选项卡](../resources/schema/manifest-schema.md#configurabletabs)。 *请参阅*["使用自定义选项卡扩展 Teams 应用"。](../tabs/how-to/add-tab.md)支持范围 `groupchat` 将启用会议前 [和](teams-apps-in-meetings.md#pre-meeting-app-experience)会议 [后聊天中的](teams-apps-in-meetings.md#post-meeting-app-experience)应用。
+* 若要使应用在会议生命周期中作为选项卡运行，它必须支持群聊范围中的可配置选项卡 ([](../resources/schema/manifest-schema.md#configurabletabs)了解如何生成组选项卡) 。 [](../build-your-first-app/build-channel-tab.md) 支持范围 `groupchat` 将启用会议前 [和](teams-apps-in-meetings.md#pre-meeting-app-experience) 会议 [后聊天中的](teams-apps-in-meetings.md#post-meeting-app-experience) 应用。
 
-1. 会议 API URL 参数可能需要 ，并且 tenantId These 作为 Teams 客户端 SDK 和聊天机器人活动的一 `meetingId` `userId` 部分提供。 [](/onedrive/find-your-office-365-tenant-id) 此外，可以使用 Tab SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
+* 会议 API URL 参数可能需要 ，并且 tenantId These 作为 Teams 客户端 SDK 和聊天机器人活动的一 `meetingId` `userId` 部分提供。 [](/onedrive/find-your-office-365-tenant-id) 此外，可以使用 Tab SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
 
-1. 某些会议 API（例如 `GetParticipant` ，将需要自动 [程序注册和自动程序应用 ID）](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) 来生成身份验证令牌。
+* 某些会议 API（例如 `GetParticipant` ，需要自动 [程序注册和 ID）](../build-your-first-app/build-bot.md) 才能生成身份验证令牌。
 
-1. 作为开发人员，你必须遵循 Teams 会议前和会后方案的常规[Teams](../tabs/design/tabs.md)选项卡设计准则，以及 Teams[](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)会议期间触发的会议内对话的会议对话指南。
+* 对于会议前和会议[](../tabs/design/tabs.md)后方案，必须遵守 Teams 选项卡设计一般准则。 有关会议期间的体验，请参阅 [会议内选项卡](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) 和 [会议内对话框](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) 设计指南。
 
-1. 请注意，若要实时更新应用，应用必须基于会议中的事件活动是最新的。 这些事件可以位于会议内对话框内， (整个会议) 和其他图面中的 `bot Id` `Notification Signal API` 完成参数
+* 若要实时更新应用，应用必须基于会议中的事件活动是最新的。 这些事件可以位于会议内对话框内， (整个会议) 和其他图面中的 `bot Id` `Notification Signal API` 完成参数
 
 ## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
@@ -136,7 +136,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 * **200：** 已成功检索参与者信息。
 * **401：** 令牌无效。
 * **404：** 找不到参与者。
-* **500：** 会议自 (结束以来已到期 60) 或者参与者没有基于其角色的权限。
+* **500：** 会议 (自会议结束以来超过 60 天) 或者参与者没有基于其角色的权限。
 
 
 **即将推出**
@@ -161,7 +161,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 >
 在 `completionBotId` 请求 `externalResourceUrl` 的有效负载示例中，参数是可选的。 `Bot ID` 在清单中声明，机器人会收到结果对象。
 > * externalResourceUrl 宽度和高度参数必须以像素为单位。 请参阅 [设计指南](design/designing-apps-in-meetings.md) 以确保尺寸在允许的限制范围内。
-> * URL 是作为会议 `<iframe>` 内对话框中的一个页面加载的页面。 域必须在你的应用清单 `validDomains` 中的应用数组中。
+> * URL 是作为会议内 `<iframe>` 对话框中的一个页面加载的页面。 域必须在你的应用清单 `validDomains` 中的应用数组中。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -216,8 +216,8 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>响应代码
 
-* **201：** 具有信号的活动已成功发送  
-* **401**： 无效令牌  
+* **201**： 具有信号的活动已成功发送  
+* **401**： 令牌无效  
 * **201：** 已成功发送具有信号的活动。 
 * **401：** 令牌无效。
 * **403：** 应用无法发送信号。 发生这种情况的原因有多种，如租户管理员禁用应用、实时网站迁移期间阻止应用等。 在这种情况下，有效负载包含详细的错误消息。 
@@ -270,13 +270,13 @@ POST /v3/conversations/{conversationId}/activities
 ## <a name="configure-your-app-for-meeting-scenarios"></a>为会议方案配置应用
 
 > [!NOTE]
-> * 若要使应用在选项卡库中可见，它需要支持可 **配置的选项卡** 和 **群聊范围**。
+> * 若要使应用在选项卡库中可见，它需要支持可配置的 **选项卡** 和 **群聊范围**。
 >
 > * 移动客户端仅在会议前和会议后支持选项卡。 即将在移动设备上 (会议内对话框和选项卡) 体验。 在创建 [适用于移动的选项卡时](../tabs/design/tabs-mobile.md) ，请遵循移动选项卡指南。
 
 ### <a name="before-a-meeting"></a>会议之前
 
-具有组织者和/或演示者角色的用户使用会议聊天和会议详细信息页面中的"➕"按钮将选项卡 **添加到会议**。  消息扩展通过省略号/溢出菜单添加到 &#x25CF;&#x25CF;&#x25CF; 位于聊天的撰写消息区域下。 聊天机器人会使用""键并选择"获取机器人"添加到 **@** **会议聊天中**。
+具有组织者和/或演示者角色的用户使用会议聊天和会议详细信息页面中的 ➕ **按钮将选项卡** 添加到 **会议** 。 消息扩展通过省略号/溢出菜单添加到 &#x25CF;&#x25CF;&#x25CF; 位于聊天的撰写消息区域下。 聊天机器人会使用""键并选择"获取机器人"添加到 **@** **会议聊天中**。
 
 ✔用户标识 *必须通过* 选项卡 [SSO 确认](../tabs/how-to/authentication/auth-aad-sso.md)。 在此身份验证后，应用可以通过 GetParticipant API 检索用户角色。
 
@@ -295,17 +295,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ✔ Teams [SDK，](../tabs/how-to/access-teams-context.md#user-context) 以使用 **userContext** API 相应地路由请求。
 
-✔选项卡 [的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流与网站的身份验证流非常相似。 因此，选项卡可以直接使用 OAuth 2.0。 *另请参阅* [，Microsoft 标识平台和 OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
+✔请参阅 [选项卡的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流与网站的身份验证流非常相似。 因此，选项卡可以直接使用 OAuth 2.0。 *另请参阅* [，Microsoft 标识平台和 OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
 
 ✔用户位于会议视图中时，邮件扩展应按预期工作，并且应该能够发布撰写邮件扩展卡。
 
-✔ AppName- 工具提示应说明会议 U 栏中的应用名称。
+✔ AppName 会议 - 工具提示应说明会议中的 U 栏的应用名称。
 
 #### <a name="in-meeting-dialog"></a>**会议内的对话框**
 
 ✔必须遵守会议 [内对话框设计准则](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
 
-✔选项卡 [的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。
+✔请参阅 [选项卡的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。
 
 ✔ 使用 [通知](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API 发出需要触发气泡通知的信号。
 

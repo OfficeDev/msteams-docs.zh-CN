@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 的清单架构
 keywords: teams 清单架构
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: c66add190b0492170acf9756980ee16fb1fdf1fd
-ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
+ms.openlocfilehash: 17626df3aa4b076190413c67d9a0ecd7cd2eed31
+ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "49739054"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797050"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -297,7 +297,7 @@ Microsoft Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 **必需** — 字符串
 
-特定应用的版本。 如果更新清单中的某些内容，则还必须增加版本。 这样一来，在安装新的清单时，它将覆盖现有的版本，用户将获得新的功能。 如果此应用已提交到应用商店，则新清单必须重新提交和重新验证。 然后，此应用的用户将在经过批准后数小时内自动获取新的更新清单。
+特定应用的版本。 如果更新清单中的某些内容，则版本也必须递增。 这样一来，在安装新的清单时，它将覆盖现有的版本，用户将获得新的功能。 如果此应用已提交到应用商店，则新清单必须重新提交和重新验证。 然后，此应用的用户将在经过批准后，在数小时内自动获取新的更新清单。
 
 如果应用请求的权限更改，将提示用户升级并重新同意应用。
 
@@ -331,7 +331,7 @@ Microsoft Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
-|`short`|30 个字符|✔|应用的显示名称代码。|
+|`short`|30 个字符|✔|应用的显示名称。|
 |`full`|100 个字符||应用的完整名称，当完整应用名称超过 30 个字符时使用。|
 
 ## <a name="description"></a>说明
@@ -351,7 +351,7 @@ Microsoft Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 **可选** — 字符串
 
-此应用的唯一标识符，使用反向域表示法;例如，com.example.myapp。 最大长度：64 个字符。
+此应用的唯一标识符（以反向域表示法表示）;例如，com.example.myapp。 最大长度：64 个字符。
 
 ## <a name="localizationinfo"></a>localizationInfo
 
@@ -404,7 +404,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |`canUpdateConfiguration`|boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值 **：true**。|
 |`context` |枚举数组|6 ||支持 `contextItem` 选项卡的范围集。 默认值 **：[channelTab、privateChatTab、meetingChatTab、meetingDetailsTab]**。|
 |`sharePointPreviewImage`|string|2048||在 SharePoint 中使用的选项卡预览图像的相对文件路径。 大小 1024x768。 |
-|`supportedSharePointHosts`|枚举数组|1 ||定义选项卡在 SharePoint 中的可用方法。 选项 `sharePointFullPage` 包括和 `sharePointWebPart` |
+|`supportedSharePointHosts`|枚举数组|1 ||定义选项卡在 SharePoint 中的可用方法。 选项包括 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -425,7 +425,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |`context` | 枚举数组| 2 || 支持 `contextItem` 选项卡的范围集。|
 
 > [!NOTE]
-> 如果你的选项卡需要上下文相关信息来显示相关内容或启动身份验证流，请参阅"获取[Microsoft Teams"选项卡的上下文](../../tabs/how-to/access-teams-context.md)。
+> 如果你的选项卡需要依赖上下文的信息来显示相关内容或启动身份验证流，请参阅"获取[Microsoft Teams"选项卡的上下文](../../tabs/how-to/access-teams-context.md)。
 
 ## <a name="bots"></a>bots
 
@@ -467,12 +467,12 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 此 `connectors` 块为应用定义 Office 365 连接器。
 
-对象是一个数组 (包含所有类型元素) 最多包含 1 个元素 `object` 。 只有提供连接器的解决方案才需要此块。
+对象是一个数组 (类型元素) 最多包含 1 个元素 `object` 。 只有提供连接器的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置https://使用的 URL。|
-|`scopes`|枚举数组|1 |✔|指定连接器是提供在频道上下文中的体验，还是仅针对单个用户提供体验 `team` `personal` ， () 。 目前，仅 `team` 支持范围。|
+|`scopes`|枚举数组|1 |✔|指定连接器是提供在频道上下文中的体验，还是仅针对单个用户或单个用户提供 `team` `personal` () 。 目前，仅 `team` 支持范围。|
 |`connectorId`|string|64 个字符|✔|连接器的唯一标识符，与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -509,7 +509,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |`description`|string|128 个字符||向用户显示以指示此命令用途的说明。|
 |`initialRun`|boolean|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值：**False**。|
 |`context`|字符串数组|3 ||定义可以从何处调用邮件扩展。 `compose`， 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose","commandBox"]`。|
-|`fetchTask`|boolean|||一个布尔值，指示它应动态获取任务模块。 默认值：**False**。|
+|`fetchTask`|boolean|||一个布尔值，指示它应动态提取任务模块。 默认值：**False**。|
 |`taskInfo`|object|||指定在使用邮件扩展命令时要预加载的任务模块。|
 |`taskInfo.title`|string|64 个字符||初始对话框标题。|
 |`taskInfo.width`|string|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
@@ -534,7 +534,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 * `identity`&emsp;需要用户标识信息
 * `messageTeamMembers`&emsp;需要向团队成员发送直接消息的权限
 
-在更新应用时更改这些权限将导致用户在首次运行更新后的应用时重复同意过程。 有关详细信息 [，请参阅更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) 应用。
+在更新应用时更改这些权限将导致你的用户在首次运行更新后的应用时重复同意过程。 有关详细信息 [，请参阅更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) 应用。
 
 ## <a name="devicepermissions"></a>devicePermissions
 
@@ -550,7 +550,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 ## <a name="validdomains"></a>validDomains
 
-**可选**，除非 **有说明的必需** 项
+**可选**，但 **"必需"（** 如果已指出）
 
 应用预期在 Teams 客户端内加载的网站的有效域列表。 域列表可以包括通配符，例如 `*.example.com` 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。 如果你的选项卡配置或内容 UI 需要导航到除用于选项卡配置的域之外的其他任何域，则必须在此处指定该域。
 
@@ -572,8 +572,8 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|string|36 个字符|✔|应用的 AAD 应用程序 ID。 此 ID 必须是 GUID。|
-|`resource`|string|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。|
-|`applicationPermissions`|array of strings|128 个字符||指定 [具体资源特定许可](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
+|`resource`|string|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。 </br> **注意：** 如果未使用 SSO，请确保在此字段中向应用清单输入虚拟字符串值，以避免 https://notapplicable 错误响应。 |
+|`applicationPermissions`|array of strings|128 个字符||指定具体 [资源特定许可](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
