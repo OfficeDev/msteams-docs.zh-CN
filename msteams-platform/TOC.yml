@@ -34,19 +34,19 @@
       items:
         - name: 使用 C# （GitHub）的聊天机器人
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: 使用 JavaScript（GitHub）的聊天机器人
+        - name: Chatbot 与 node.js （GitHub）
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: 使用 Python（GitHub）的聊天机器人
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
     - name: 邮件扩充示例
       items:
-        - name: 带 C# /.NET （GitHub）的操作命令
+        - name: 带 C# （GitHub）的操作命令
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: 带 TypeScript/Node.js（GitHub）的操作命令
+        - name: 带 node.js （GitHub）的操作命令
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: 带 C# /.NET（GitHub）的搜索命令
+        - name: 带 C# （GitHub）的搜索命令
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: 带 TypeScript/Node.js（GitHub）的搜索命令
+        - name: 带 node.js （GitHub）搜索命令
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
 - name: 应用程序基础知识
   items:
@@ -126,12 +126,14 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: 应用程序 Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: 团队 JavaScript 客户端 SDK
+      href: tabs/how-to/using-teams-client-sdk.md
     - name: 适用于机器人和消息扩展（GitHub）的 Node.js Bot Framework
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: 适用于机器人和消息扩展（GitHub）的 .NET Bot Framework
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Microsoft Graph SDK
-      href: 'https://docs.microsoft.com/en-us/graph/sdks/sdks-overview'
+      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - name: 旧版SDK
       items:
         - name: 机器人SDK（v3）
@@ -182,17 +184,17 @@
       href: tabs/what-are-tabs.md
     - name: 快速入门
       items:
-        - name: 带 Node.js/回应的个人选项卡
+        - name: 带 node.js 的 个人选项卡
           href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         - name: 带 C#/ASP.NET 核心的个人选项卡
           href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 带 C#/ASP.NET MVC 的个人选项卡
+        - name: 带 C# /ASP.NET CORE MVC 的个人选项卡
           href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: 带 Node.js/回应的频道选项卡
+        - name: 带 node.js 的频道选项卡
           href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
         - name: 带 C#/ASP.NET 核心的频道选项卡
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: 带 C#/ASP.NET MVC 的频道选项卡
+        - name: 带 C# /ASP.NET CORE MVC 的频道选项卡
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
     - name: 创建内容页
       href: tabs/how-to/create-tab-pages/content-page.md
@@ -200,9 +202,7 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: 创建删除页面
       href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: 使用 Teams JavaScript 客户端 SDK
-      href: tabs/how-to/using-teams-client-sdk.md
-    - name: 获取额外的背景资料
+    - name: 获取选项卡的上下文
       href: tabs/how-to/access-teams-context.md
 - name: 构建机器人
   items:
