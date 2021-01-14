@@ -1,43 +1,46 @@
 ---
 title: 链接展开
 author: clearab
-description: 如何在 Microsoft 团队应用中使用邮件扩展功能执行链接 unfurling。
+description: 如何在 Microsoft Teams 应用中使用消息传递扩展执行链接取消链接。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 32d19fcd44f2475047539350706d2745aeec3691
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 0d488638e63b8ec78bfa5bed8cf6f4f037883fb1
+ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587802"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49845635"
 ---
 # <a name="link-unfurling"></a>链接展开
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 > [!NOTE]
-> 目前，移动客户端上不支持链接 unfurling。
+> 目前，移动客户端不支持链接取消链接。
 
-通过链接 unfurling `invoke` 如果将特定域的 url 粘贴到撰写邮件区域中，应用可以注册接收活动。 `invoke`将包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可以*unfurl*的卡片进行响应，并提供其他信息或操作。 此操作的工作方式与[搜索命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)非常相似，URL 充当搜索词。
+通过取消链接，应用可以注册以在将特定域的 URL 粘贴到撰写邮件区域中时 `invoke` 接收活动。 将包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可以取消展开的卡片进行响应，从而 `invoke` 提供其他信息或操作。 这非常类似于搜索 [命令，URL](~/messaging-extensions/how-to/search-commands/define-search-command.md)充当搜索词。
 
-Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的撰写邮件区域中的 Url。 在下面的屏幕截图中，用户已将 Azure DevOps 中的工作项的 URL 粘贴到邮件扩展已解析为卡片。
+Azure DevOps 邮件扩展使用链接取消链接查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下面屏幕截图中，用户已粘贴 Azure DevOps 中某个工作项的 URL，邮件扩展已解析为卡片。
 
-![Link unfurling 的示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-## <a name="add-link-unfurling-to-your-app-manifest"></a>向您的应用程序清单添加链接 unfurling
+## <a name="add-link-unfurling-to-your-app-manifest"></a>向应用清单添加链接取消链接
 
-为此，您需要将新的 `messageHandlers` 数组添加到 `composeExtensions` 应用程序清单 JSON 的部分。 您可以使用应用程序 Studio 的帮助或手动执行此操作。 例如，域列表可以包含通配符 `*.example.com` 。 这与域的一段完全匹配;如果需要匹配， `a.b.example.com` 请使用 `*.*.example.com` 。
+ 若要向应用清单添加链接，请向应用清单 `messageHandlers` `composeExtensions` JSON 部分添加新数组。 可以在 App Studio 的帮助下或手动添加数组。 域列表可以包括通配符，例如 `*.example.com` 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。
+
+> [!NOTE]
+> 不要直接添加或通过通配符添加超出控件的域。 例如，yourapp.onmicrosoft.com有效，但 *.onmicrosoft.com 为 无效。 此外，还禁止顶级域。 例如*.com、*.org。
 
 ### <a name="using-app-studio"></a>使用 App Studio
 
-1. 在应用程序 Studio 中，在 "清单编辑器" 选项卡上，加载您的应用程序清单。
-1. 在 "**邮件扩展**" 页上，在 "**邮件处理程序**" 部分添加要查找的域，如下面的屏幕截图所示。
+1. 在 App Studio 的清单编辑器选项卡上，加载应用清单。
+1. 在 **"消息扩展**"页上，在"邮件处理程序"部分添加要查找的域，如下面的屏幕截图所示。
 
-![应用程序 Studio 中的 "邮件处理程序" 部分](~/assets/images/link-unfurling.png)
+![App Studio 中的邮件处理程序部分](~/assets/images/link-unfurling.png)
 
 ### <a name="manually"></a>手动
 
-若要使您的邮件扩展能够与链接进行交互，这种方法首先需要将该 `messageHandlers` 数组添加到应用程序清单中，如以下示例中所示。 本示例不是完整的清单，请参阅[清单参考](~/resources/schema/manifest-schema.md)，了解完整的清单示例。
+若要使邮件扩展可以这样与链接进行交互，你首先需要将数组添加到应用清单， `messageHandlers` 如以下示例所示。 此示例不是完整的清单 [，请参阅完整](~/resources/schema/manifest-schema.md) 清单示例的清单参考。
 
 ```json
 ...
@@ -61,16 +64,16 @@ Azure DevOps 消息扩展使用 link unfurling 查找粘贴到指向工作项的
 
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>处理 `composeExtension/queryLink` 调用
 
-在添加了要侦听应用程序清单的域之后，您需要更新 web 服务代码以处理调用请求。 使用您收到的 URL 搜索您的服务并创建卡片响应。 如果使用多个卡进行响应，将仅使用第一个。
+添加域以侦听应用程序清单后，需要更新 Web 服务代码以处理调用请求。 使用收到的 URL 搜索服务并创建卡片响应。 如果使用多张卡片进行响应，则仅使用第一张。
 
-我们支持以下卡类型：
+我们支持以下卡片类型：
 
 * [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [英雄卡片](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Hero 卡片](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-有关概述，请参阅[什么是卡片](~/task-modules-and-cards/what-are-cards.md)。
+有关 [概述，请参阅什么是](~/task-modules-and-cards/what-are-cards.md) 卡片。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -117,7 +120,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是 `invoke` 发送到你的 bot 的一个示例。
+这是发送到机器人 `invoke` 的示例。
 
 ```json
 {
@@ -129,7 +132,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-响应的示例如下所示。
+下面显示了一个响应示例。
 
 ```json
 {

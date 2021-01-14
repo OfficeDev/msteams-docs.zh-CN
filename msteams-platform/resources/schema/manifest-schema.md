@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 的清单架构
 keywords: teams 清单架构
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 17626df3aa4b076190413c67d9a0ecd7cd2eed31
-ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
+ms.openlocfilehash: cf80251abd22f0c89388cbe5a6287a02dedce1fb
+ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797050"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49845628"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -491,9 +491,9 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |`botId`|string|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 ID 相同。|
 |`commands`|对象数组|10 |✔|邮件扩展支持的命令数组|
 |`canUpdateConfiguration`|boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值：**False**。|
-|`messageHandlers`|对象数组|5 ||允许当满足特定条件时调用应用的处理程序列表。 域还必须在 `validDomains`|
+|`messageHandlers`|对象数组|5 ||允许当满足特定条件时调用应用的处理程序列表。|
 |`messageHandlers.type`|string|||消息处理程序的类型。 必须是 `"link"`。|
-|`messageHandlers.value.domains`|字符串数组|||链接消息处理程序可以注册的域数组。|
+|`messageHandlers.value.domains`|字符串数组|||链接消息处理程序可以注册的域的数组。|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
