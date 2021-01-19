@@ -1,13 +1,13 @@
 ---
 title: 请求 Microsoft Teams 选项卡的设备权限
 description: 如何更新应用清单以请求访问通常需要用户同意的本机功能
-keywords: teams 选项卡开发
-ms.openlocfilehash: 6be183d2610616f3bd3bdf32554976322193c132
-ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
+keywords: Teams 选项卡开发
+ms.openlocfilehash: b021ae4ae8b50ddd1f3603f696922c129eb25f10
+ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "49731977"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "49886742"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>请求 Microsoft Teams 选项卡的设备权限
 
@@ -20,13 +20,14 @@ ms.locfileid: "49731977"
 > * 位置
 > * 通知
 
-[!Note] 若要在 Microsoft Teams 移动应用中集成相机和图像功能，请参阅 [Teams 中的相机和图像功能。](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [!NOTE]
+> 若要在 Microsoft Teams 移动应用中集成相机和图像功能，请参阅 [Teams 中的相机和图像功能。](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!IMPORTANT]
 >
 > * 目前，Teams 移动客户端仅支持访问 、和通过本机设备功能，并且可用于所有应用构造（ `camera` `gallery` `mic` `location` 包括选项卡）。 </br>
 > * 支持 `camera` ， `gallery` 并且 `mic` 通过 [**selectMedia API 启用**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。 对于单个图像捕获，可以使用 [**captureImage API。**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true)
-> * 通过 `location` [**getLocation API 启用对的支持**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 建议使用此 API，因为当前并非所有桌面[](../../resources/schema/manifest-schema.md#devicepermissions)客户端都完全支持地理位置 API。
+> * 通过 `location` [**getLocation API 启用对的支持**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 建议使用此 API，因为地理位置 [**API**](../../resources/schema/manifest-schema.md#devicepermissions) 当前并非在所有桌面客户端上受到完全支持。
 
 ## <a name="device-permissions"></a>设备权限
 
@@ -139,7 +140,7 @@ microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: micros
 Notification.requestPermission(function(result) { /* ... */ });
 ```
 
-若要使用相机或访问照片库，Teams 移动版将在你调用时请求权限 `selectMedia()` ：
+若要使用相机或访问照片库，Teams 移动将在你调用时请求权限 `selectMedia()` ：
 
 ```JavaScript
 microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
