@@ -1,15 +1,15 @@
 ---
 title: 订阅对话事件
 author: WashingtonKayaker
-description: 如何从 Microsoft Teams 机器人订阅对话事件。
+description: 如何从 Microsoft Teams 自动程序订阅对话事件。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: f0da861834bbf221fe715d35c0beea6c3bd08f26
-ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
+ms.openlocfilehash: 17d13d51ab26aba60defb962dd425c1aed5b4133
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "49739033"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911959"
 ---
 # <a name="subscribe-to-conversation-events"></a>订阅对话事件
 
@@ -27,7 +27,7 @@ Microsoft Teams 会向自动程序发送有关在自动程序处于活动状态�
 > [!Important]
 > 可以随时添加新事件，机器人将开始接收它们。
 > 您必须针对接收意外事件的可能性进行设计。
-> 如果你使用的是 Bot Framework SDK，则自动程序将自动响应你未选择 `200 - OK` 处理的任何事件。
+> 如果你使用的是 Bot Framework SDK，则自动程序将自动响应你未选择处理 `200 - OK` 的任何事件。
 
 自动程序在将事件添加到对话、将其他成员添加到对话或从对话中删除，或者对话元数据已更改时接收 `conversationUpdate` 事件。
 
@@ -49,7 +49,7 @@ Microsoft Teams 会向自动程序发送有关在自动程序处于活动状态�
 
 ### <a name="channel-created"></a>已创建频道
 
-只要在安装自动程序的团队中创建了新频道，就会将频道创建事件发送给机器人。
+只要在安装自动程序的团队中创建了新频道，就会将频道创建事件发送到机器人。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -434,7 +434,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是自动程序添加到团队时，机器人将收到 **的消息**。
+这是机器人添加到团队时机器人将收到 **的消息**。
 
 ```json
 {
@@ -473,7 +473,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-这是自动程序将* 添加到一对一聊天时机器人 *将接收的消息*。
+This is the message your bot will receive when the bot is added **to a one-to-one chat.*
 
 ```json
 {
@@ -527,7 +527,7 @@ _ * *
 
 ### <a name="team-members-removed"></a>已删除团队成员
 
-如果从团队中删除了事件，并且每次从自动程序成员团队中删除任何用户，该事件都会 `teamMemberRemoved` 发送到自动程序。 通过查看对象，可以确定删除的新增成员是机器人本身还是 `Activity` 用户 `turnContext` 。  如果对象的字段与对象的字段相同，则删除的成员为自动程序， `Id` `MembersRemoved` 否则为 `Id` `Recipient` 用户。  自动程序 `Id` 通常为： `28:<MicrosoftAppId>`
+如果从团队中删除了事件，并且每次从自动程序是其中一个成员的团队中删除任何用户，该事件都会发送到 `teamMemberRemoved` 机器人。 通过查看对象，可以确定删除的新增成员是机器人本身还是 `Activity` 用户 `turnContext` 。  如果对象的字段与对象的字段相同，则删除的成员为自动程序， `Id` `MembersRemoved` 否则为 `Id` `Recipient` 用户。  自动程序 `Id` 通常为： `28:<MicrosoftAppId>`
 
 [!Note] 从租户中永久删除用户时， `membersRemoved conversationUpdate` 将触发事件。
 
@@ -578,7 +578,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-以下有效负载示例中的对象基于向团队（而不是群聊）添加成员，或启动新的一对 `channelData` 一对话：
+以下有效负载示例中的对象基于向团队（而不是群聊）添加成员或启动新的一对 `channelData` 一对话：
 
 ```json
 {
@@ -1092,3 +1092,11 @@ async def on_reactions_removed(
 ```
 
 * * *
+
+## <a name="samples"></a>示例
+有关显示机器人对话事件的示例代码，请参阅：
+
+[Microsoft Teams 机器人对话事件示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
+
+
+

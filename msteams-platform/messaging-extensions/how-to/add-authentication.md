@@ -1,23 +1,23 @@
 ---
-title: 向您的邮件扩展添加身份验证
+title: 向邮件扩展添加身份验证
 author: clearab
 description: 如何向邮件扩展添加身份验证
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f7ebbcd99b1ec35900de7ec2f54f93263918e945
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4ebe65af06240d13ceb99fe3b7640ab402d716c5
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673059"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911868"
 ---
-# <a name="add-authentication-to-your-messaging-extension"></a>向您的邮件扩展添加身份验证
+# <a name="add-authentication-to-your-messaging-extension"></a>向邮件扩展添加身份验证
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 ## <a name="identify-the-user"></a>标识用户
 
-对服务的每个请求都包括执行请求的用户的已模糊处理 ID，以及用户的显示名称和 Azure Active Directory 对象 ID。
+每个对服务的请求都包括执行请求的用户的模糊 ID，以及用户的 显示名称 和 Azure Active Directory 对象 ID。
 
 ```json
 "from": {
@@ -27,26 +27,26 @@ ms.locfileid: "41673059"
 },
 ```
 
-`id`和`aadObjectId`值保证已通过身份验证的团队用户的。 它们可用作在您的服务中查找凭据或任何缓存状态时使用的键。 此外，每个请求都包含用户的 Azure Active Directory 租户 ID，可用于标识用户的组织。 如果适用，该请求还包含发出请求的团队和频道 Id。
+和 `id` `aadObjectId` 值保证为经过身份验证的 Teams 用户的值。 它们可用于在服务中查找凭据或任何缓存状态。 此外，每个请求都包含用户的 Azure Active Directory 租户 ID，可用于标识用户的组织。 如果适用，请求还包含发起请求的团队和频道的 ID。
 
 ## <a name="authentication"></a>身份验证
 
-如果您的服务需要进行用户身份验证，则需要在用户登录后才能使用邮件扩展。 如果您已编写用于用户签名的 bot 或选项卡，则应熟悉此部分。
+如果服务需要用户身份验证，则需要先登录用户，然后才能使用消息传递扩展。 如果你已编写用于登录用户的自动程序或选项卡，则本节应该很熟悉。
 
-序列如下所示：
+顺序如下所示：
 
-1. 用户发出查询，或将默认查询自动发送到您的服务。
-2. 您的服务通过检查团队用户 ID 检查用户是否先进行身份验证。
-3. 如果用户未通过身份验证，则发送回复`auth` ，并提供`openUrl`建议的操作，包括身份验证 URL。
-4. Microsoft 团队客户端使用给定的身份验证 URL 启动承载你的网页的弹出窗口。
-5. 用户登录后，应关闭窗口并向团队客户端发送 "身份验证代码"。
-6. 然后，团队客户端将查询重新发出到您的服务，其中包括在步骤5中传递的身份验证代码。
+1. 用户发出查询，或者默认查询会自动发送到服务。
+2. 你的服务通过检查 Teams 用户 ID 来检查用户是否已首先进行身份验证。
+3. 如果用户尚未进行身份验证，请发送回包含建议操作（包括身份验证 `auth` `openUrl` URL）的响应。
+4. Microsoft Teams 客户端使用给定的身份验证 URL 启动承载网页的弹出窗口。
+5. 用户登录后，应关闭窗口，并将"身份验证代码"发送到 Teams 客户端。
+6. 然后，Teams 客户端重新向服务提供查询，其中包括步骤 5 中传递的身份验证代码。
 
-您的服务应验证步骤6中收到的身份验证代码是否与步骤5中的验证代码相匹配。 这可确保恶意用户不会尝试欺骗或危害登录流。 这将有效地 "关闭循环" 以完成安全身份验证序列。
+服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码匹配。 这可确保恶意用户不会尝试欺骗或破坏登录流。 这实际上"关闭循环"以完成安全身份验证序列。
 
-### <a name="respond-with-a-sign-in-action"></a>使用登录操作进行响应
+### <a name="respond-with-a-sign-in-action"></a>使用登录操作响应
 
-若要提示未经过身份验证的用户登录，请使用包含身份验证`openUrl` URL 的 "类型" 建议操作进行响应。
+若要提示未经身份验证的用户登录，请响应包含身份验证 URL 的推荐操作 `openUrl` 类型。
 
 #### <a name="response-example-for-a-sign-in-action"></a>登录操作的响应示例
 
@@ -68,24 +68,24 @@ ms.locfileid: "41673059"
 ```
 
 > [!NOTE]
-> 若要在团队弹出窗口中承载登录体验，URL 的域部分必须位于您的应用程序的有效域的列表中。 （请参阅清单架构中的[validDomains](~/resources/schema/manifest-schema.md#validdomains) 。）
+> 若要在 Teams 弹出窗口中托管登录体验，URL 的域部分必须位于应用的有效域列表中。  (清单[架构中查看 validDomains。) ](~/resources/schema/manifest-schema.md#validdomains)
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流
 
-您的登录体验应响应且适合弹出窗口。 它应与使用邮件传递的[Microsoft 团队 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)集成。
+你的登录体验应该具有响应性，并且适合弹出窗口。 它应与使用消息传递 [的 Microsoft Teams JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 集成。
 
-与在 Microsoft 团队中运行的其他嵌入式体验一样，窗口中的代码需要先调用`microsoftTeams.initialize()`。 如果你的代码执行 OAuth 流，则可以将团队用户 ID 传递到你的窗口，然后可以将其传递到 OAuth 登录 URL。
+与其他在 Microsoft Teams 内运行的嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将 Teams 用户 ID 传递到你的窗口中，然后可以将它传递到 OAuth 登录 URL。
 
-### <a name="complete-the-sign-in-flow"></a>完成登录流
+### <a name="complete-the-sign-in-flow"></a>完成登录流程
 
-当登录请求完成并重定向回您的页面时，应执行以下步骤：
+当登录请求完成并重定向回你的页面时，它应执行以下步骤：
 
-1. 生成安全代码。 （可以是一个随机数字。）您需要将此代码与您的服务进行缓存，以及通过登录流（例如 OAuth 2.0 令牌）获取的凭据。
-2. 调用`microsoftTeams.authentication.notifySuccess`并传递安全代码。
+1. 生成安全代码。  (可以是随机数字。) 您需要在服务上缓存此代码，以及通过登录流获取的凭据 (如 OAuth 2.0 令牌) 。
+2. 调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。
 
-此时，窗口将关闭，并将控制传递给团队客户端。 客户端现在可以重新发出原始用户查询，以及`state`属性中的安全代码。 您的代码可以使用安全代码查找之前存储的凭据以完成身份验证序列，然后完成用户请求。
+此时，窗口关闭，控制权将传递给 Teams 客户端。 客户端现在可以重新发送原始用户查询以及属性中的安全 `state` 代码。 代码可以使用安全代码查找之前存储的凭据，以完成身份验证序列，然后完成用户请求。
 
-#### <a name="reissued-request-example"></a>重新颁发的请求示例
+#### <a name="reissued-request-example"></a>重新请求示例
 
 ```json
 {
@@ -134,3 +134,9 @@ ms.locfileid: "41673059"
 }
 ```
 
+## <a name="samples"></a>示例
+有关显示邮件扩展身份验证过程的示例代码，请参阅：
+
+[Microsoft Teams 消息传递扩展身份验证示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)
+
+ 

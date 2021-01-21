@@ -5,12 +5,12 @@ description: 使用 Microsoft Teams Toolkit 快速创建 Microsoft Teams 个人T
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 86be39503ec4e4fde5fafe63f83b3a4fb6d956bf
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797804"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911910"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>为 Microsoft Teams 生成个人选项卡
 
@@ -98,13 +98,13 @@ a {
 
 ## <a name="3-update-the-tab-theme"></a>3. 更新选项卡主题
 
-良好的应用感觉与 Teams 本机一样，因此选项卡与用户喜欢的 Teams 主题混合很重要：默认 (浅色) 、深色或高对比度。 正如你可能在上一张屏幕截图中注意到的，当客户端使用深色主题时，选项卡仍具有浅色背景。 这不是建议的用户体验。
+良好的应用感觉对于 Teams 而言是原生的，因此选项卡与用户喜欢的 Teams 主题混合很重要：默认 (浅色) 、深色或高对比度。 正如你可能在上一张屏幕截图中注意到的，当客户端使用深色主题时，选项卡仍具有浅色背景。 这不是建议的用户体验。
 
 [Teams JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)可以使你的应用注意到和响应客户端中的主题更改。 让我们演练一下如何完成此操作。
 
 ### <a name="get-context-about-the-teams-client"></a>获取有关 Teams 客户端的上下文
 
-在你的 `Tab.js` 文件中，有一个调用提供有关配置的客户端主题的一些信息，以及其他 `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) 详细信息。 由于应用基架，因此使用此代码即会访问 `context` 接口及其属性。
+在你的 `Tab.js` 文件中，有一个调用提供有关配置的客户端主题的一些信息，以及其他 `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) 详细信息。 由于应用基架，因此可使用此代码，就像访问 `context` 接口及其属性一样。
 
 ```JavaScript
 componentDidMount(){
@@ -134,7 +134,7 @@ componentDidMount(){
 
 ### <a name="match-theme-styles"></a>匹配主题样式
 
-主题更改处理程序已就位，但你需要一些代码来响应这些更改，并对齐选项卡的颜色与当前主题。
+主题更改处理程序已就位，但你需要一些代码来响应这些更改，并且将选项卡的颜色与当前主题对齐。
 
 > [!NOTE]
 > 以下示例只是将样式应用到选项卡的一种方式。像现在一样使用代码，展开它，或编写你自己的代码。
@@ -146,7 +146,7 @@ componentDidMount(){
 ```
 
 存储主题更改处理程序提供的状态后，提供一些条件逻辑以根据当前主题呈现选项卡的样式。 以下示例演示了一种基本方法：
-1. 检查中的当前主题 `isTheme` 。
+1. 检查 中的当前主题 `isTheme` 。
 2. 使用 `newTheme` 与当前主题相关的 CSS 属性创建对象。
 3. 将 CSS 应用到选项卡内容的根 HTML 元素 `<div>` () 。
 
@@ -176,12 +176,11 @@ if (isTheme === "default") {
 
 ## <a name="learn-more"></a>了解详细信息
 
-* 使用[SSO](../tabs/how-to/authentication/auth-aad-sso.md)对选项卡用户进行身份验证：如果仅希望授权用户查看选项卡，请通过 Azure Active Directory) AD (设置单一登录 (SSO) 。
-* [嵌入现有 Web](../tabs/how-to/tab-requirements.md)应用或网页中的内容：我们展示了如何为个人选项卡创建新内容，但您也可以从外部 URL 加载内容。
-* [为选项卡创建无缝体验](../tabs/design/tabs.md)：请参阅设计 Teams 选项卡的建议指南。
-* [构建适用于移动设备的选项卡](../tabs/design/tabs-mobile.md)：了解如何开发适用于手机和平板电脑的选项卡。
-* [使用 Microsoft Graph 利用 Teams 数据](https://docs.microsoft.com/graph/teams-concept-overview)
-* [创建不带工具包的选项卡](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* 遵循 [我们的设计准则，](../tabs/design/tabs.md) 使用 [生产就绪 UI](../concepts/design/design-teams-app-ui-templates.md) 模板生成，以创建无缝体验。
+* 了解 [选项卡的移动](../tabs/design/tabs-mobile.md) 注意事项。
+* [将 SSO 身份验证添加到您的选项卡](../tabs/how-to/authentication/auth-aad-sso.md)。
+* 利用 Microsoft [Graph 的](https://docs.microsoft.com/graph/teams-concept-overview)Teams 数据。
+* [创建没有工具包的选项卡](../tabs/quickstarts/create-personal-tab-node-yeoman.md)。
 
 ## <a name="next-lesson"></a>下一课程
 

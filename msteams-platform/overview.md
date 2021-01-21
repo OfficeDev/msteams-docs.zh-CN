@@ -5,12 +5,12 @@ description: 大致了解开发人员如何使用自定义应用扩展 Microsoft
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 45be2dd7d0e421ac331cfc02703f0b81eab3dfe5
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 9f043fd5bab441ce88b0e04b4254b925aff25aad
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797769"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911882"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
@@ -44,7 +44,7 @@ Teams 应用是功能和[入口点](concepts/capabilities-overview.md)[的组合
 
 **将字词转换为操作**：对话通常导致需要执行某些操作 (生成订单、查看代码、检查票证状态等) 。 机器人 [可以在](bots/what-are-bots.md) Teams 内启动这些类型的工作流。
 
-:::image type="content" source="assets/images/overview-bots.png" alt-text="在 Teams 客户端中机器人外观的概念表示形式。" border="false":::
+:::image type="content" source="assets/images/overview-bots.png" alt-text="自动程序在 Teams 客户端中的外观的概念表示形式。" border="false":::
 
    :::column-end:::
 
@@ -93,7 +93,7 @@ Teams 应用是功能和[入口点](concepts/capabilities-overview.md)[的组合
 
 ## <a name="start-building"></a>开始构建
 
-   通过创建简单的应用并添加一些常用的功能，快速熟悉 Teams 的生成。
+   通过创建一个简单的应用并添加一些常用的功能，快速熟悉 Teams 的生成。
 
    > [!div class="nextstepaction"]
    > [现在生成你的第一个应用](build-your-first-app/build-first-app-overview.md)
@@ -107,7 +107,7 @@ Teams 应用是功能和[入口点](concepts/capabilities-overview.md)[的组合
 :::row:::
    :::column span="2":::
 
-## <a name="integrate-with-teams"></a>与 Teams 集成
+## <a name="integrate-with-teams"></a>与Teams整合
 
    将用户喜欢的现有 Web 应用、服务或系统的功能与 Teams 的协作功能混合在一起。
 
@@ -125,7 +125,7 @@ Teams 应用是功能和[入口点](concepts/capabilities-overview.md)[的组合
 
 ## <a name="a-little-code-goes-a-long-way"></a>一些代码会大有作为
 
-   你无需是专业程序员来构建出色的 Teams 应用。 请尝试多种低代码解决方案之一。
+   你无需是专家程序员来构建出色的 Teams 应用。 请尝试多种低代码解决方案之一。
 
    > [!div class="nextstepaction"]
    > [创建低代码应用](samples/teams-low-code-solutions.md)
@@ -139,7 +139,7 @@ Teams 应用是功能和[入口点](concepts/capabilities-overview.md)[的组合
 ## <a name="resources"></a>资源
 
 * [将"共享到 Teams"按钮添加到网站](concepts/build-and-test/share-to-teams.md)
-* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>
+* [设计 Teams 应用](concepts/design/design-teams-app-overview.md)
 * [Microsoft Teams JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [适用于 JavaScript 的 Bot Framework SDK 和](https://github.com/Microsoft/botbuilder-js) 适用于 [.NET 的 Bot Framework SDK](https://github.com/Microsoft/botbuilder-dotnet/)
-* [将应用发布到组织或 AppSource](concepts/deploy-and-publish/overview.md)
+* 适用于[JavaScript](https://github.com/Microsoft/botbuilder-js)和[.NET](https://github.com/Microsoft/botbuilder-dotnet/)的 Bot Framework SDK
+* [发布 Teams 应用](concepts/deploy-and-publish/overview.md)
