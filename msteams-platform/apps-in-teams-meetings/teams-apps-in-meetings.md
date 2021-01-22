@@ -5,12 +5,12 @@ description: 基于参与者和用户角色的 Teams 会议中应用概述
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 217737cbbf73104d4d78cf817e6df0244229c53c
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 63c383f1bc7eaa92e2bd4ff378756064ee85ed70
+ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797755"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "49917595"
 ---
 # <a name="apps-in-teams-meetings"></a>Teams 会议中的应用
 
@@ -55,7 +55,7 @@ Teams 的会议应用扩展性以三个概念为中心：
 
 ### <a name="in-meeting-app-experience"></a>会议内应用体验
 
-✔会议应用将承载在聊天窗口的顶部栏中，并作为会议内选项卡体验通过"会议内"选项卡托管。当用户通过选项卡库向会议添加选项卡时，将显示会议体验期间的应用。 
+✔会议应用将托管在聊天窗口的顶部栏中，并作为会议内选项卡体验通过"会议内"选项卡托管。当用户通过选项卡库向会议添加选项卡时，将显示会议体验期间的应用。 
 
 ✔权限的用户可以在会议期间添加应用。
 
@@ -102,7 +102,7 @@ Teams 的会议应用扩展性以三个概念为中心：
 
 有关消息传递扩展实现，请参阅 Teams 会议文档中 [的消息扩展](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings) 。
 
-## <a name="participant-roles-and-user-types-in-a-meeting"></a>会议的参与者角色和用户类型
+## <a name="participant-roles-and-user-types-in-a-meeting"></a>会议中的参与者角色和用户类型
 
 ![会议的参与者](../assets/images/apps-in-meetings/participant-roles.png)
 
@@ -122,7 +122,7 @@ _查看_ [ **Teams 会议的角色**](https://support.microsoft.com/office/roles
 
 &#11200;在会议邀请中，选择 **"会议选项"。**
 
-&#11200;会议期间，选择"在会议控件中显示参与者 ![ ](../assets/images/apps-in-meetings/show-participants.png) 显示参与者"图标。 然后，在参与者列表上方，选择"**管理权限"。**
+&#11200;会议期间，选择"在会议控件中显示参与者 ![ ](../assets/images/apps-in-meetings/show-participants.png) 显示参与者"图标。 然后，在参与者列表上方，选择 **"管理权限"。**
 
 ### <a name="user-types"></a>用户类型
 
@@ -130,13 +130,13 @@ _查看_ [ **Teams 会议的角色**](https://support.microsoft.com/office/roles
 > 用户类型可以加入会议并假定上述参与者角色之一。 用户类型不会作为 **getParticipantRole** API 的一部分公开。
 
 1. **租户内 。** 这些用户属于组织，并且具有租户的 Azure Active Directory 中的凭据。 他们通常是全职、现场或远程员工。
-1. **来宾**。 来宾是另一个组织的参与者，该参与者受邀访问贵组织租户中的 Teams 或其他资源。 来宾已添加到组织的 Active Directory，并且几乎可以像本机团队成员一样获得与本机团队成员相同的 Teams 功能，并可以完全访问团队聊天、会议和文件。 _请参阅_ [Microsoft Teams 中的来宾访问](/microsoftteams/guest-access)
-1. **联合/外部**。 联盟用户是另一个组织中已受邀加入会议的外部 Teams 用户。 由于这些用户具有与联盟伙伴的有效凭据，因此他们将被视为通过 Teams 身份验证，但无法访问你的团队或组织的其他共享资源。 如果希望外部用户能够访问团队和频道，则来宾访问可能是更好的选择。 _请参阅_["在 Microsoft Teams 中管理外部访问"](/microsoftteams/manage-external-access)
-1. **匿名**。 匿名用户没有 Active Directory 标识，也不与租户联盟。 匿名参与者与外部用户类似，但他们的标识不会预测到会议中。 匿名用户将无法在会议窗口中访问应用。
+1. **来宾**。 来宾是另一个组织的参与者，该参与者受邀访问贵组织租户中的 Teams 或其他资源。 来宾已添加到组织的 Active Directory，并且几乎可以像本机团队成员一样获得与本机团队成员相同的 Teams 功能，这些成员具有团队聊天、会议和文件的完全访问权限。 _请参阅_ [Microsoft Teams 中的来宾访问](/microsoftteams/guest-access)
+1. **联合/外部**。 联盟用户是另一个组织中受邀加入会议的外部 Teams 用户。 由于这些用户具有与联盟伙伴的有效凭据，因此他们将被视为通过 Teams 身份验证，但无法访问你的团队或组织的其他共享资源。 如果希望外部用户能够访问团队和频道，则来宾访问可能是更好的选择。 _请参阅_["在 Microsoft Teams 中管理外部访问"](/microsoftteams/manage-external-access)
+1. **匿名**。 匿名用户没有 Active Directory 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但他们的标识不会预测到会议中。 匿名用户将无法在会议窗口中访问应用。
 
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [设计应用](create-apps-for-teams-meetings.md)
+> [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 > [!div class="nextstepaction"]
 > [生成应用程序](create-apps-for-teams-meetings.md)
