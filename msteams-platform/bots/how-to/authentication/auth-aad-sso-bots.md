@@ -3,16 +3,16 @@ title: 为机器人提供单一登录支持
 description: 介绍如何获取用户令牌。 目前，机器人开发人员可以使用具有 OAuth 卡支持的登录卡或 azure 自动程序服务。
 keywords: 令牌， 用户令牌， 自动程序 SSO 支持
 ms.topic: conceptual
-ms.openlocfilehash: 8537cf41cdd7218b9bf7618fccf0e1704ac6b815
-ms.sourcegitcommit: 92fa912a51f295bb8a2dc1593a46ce103752dcdd
+ms.openlocfilehash: 55b930ba50eede6ac970fbe0f901d418605f3f91
+ms.sourcegitcommit: 5662bf23fafdbcc6d06f826a647f3696cd17f5e5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "49917582"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "49935252"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>单一登录 (SSO) 自动程序支持
 
-Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身份验证令牌来最大程度地减少用户输入登录凭据所需的次数。 如果用户同意使用你的应用，他们无需在另一台设备上再次提供同意，可以自动登录。 流程类似于 Microsoft Teams[选项卡 SSO](../../../tabs/how-to/authentication/auth-aad-sso.md)支持流，但是，区别在于机器人如何请求令牌和[](#request-a-bot-token)[接收响应的协议](#receive-the-bot-token)。
+Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身份验证令牌来最大程度地减少用户输入登录凭据的时间。 如果用户同意使用你的应用，他们无需在另一台设备上再次提供同意，可以自动登录。 流类似于 Microsoft Teams[选项卡 SSO](../../../tabs/how-to/authentication/auth-aad-sso.md)支持流，但是，区别在于机器人如何请求令牌和[接收响应的协议](#receive-the-bot-token)。 [](#request-a-bot-token)
 
 >[!NOTE]
 > OAuth 2.0 是 AAD 和许多其他标识提供程序使用的身份验证和授权的开放标准。 基本了解 OAuth 2.0 是在 Teams 中处理身份验证的先决条件。
@@ -26,7 +26,7 @@ Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身
 1. 机器人使用包含该属性的 OAuthCard 发送邮件 `tokenExchangeResource` 。 它指示 Teams 获取自动程序应用程序的身份验证令牌。 用户在所有活动用户终结点接收消息。
 
     > [!NOTE]
-    >* 一个用户一次可以拥有多个活动终结点。
+    >* 一个用户一次可以具有多个活动终结点。
     >* 自动程序令牌从每个活动用户终结点接收。
     >* 应用必须安装在个人范围内，SSO 支持。
 
@@ -58,7 +58,7 @@ Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身
 2. 选择 **"新建注册"。** 将显示 **"注册应用程序** "页。
 3. 在 **"注册应用程序"** 页中，输入以下值：
     1. 输入 **应用** 的名称。
-    2. 选择" **支持的帐户类型"，** 选择单个租户或多租户帐户类型。
+    2. 选择支持 **的帐户类型，** 选择单个租户或多租户帐户类型。
 
         > [!NOTE]
         >
@@ -111,7 +111,7 @@ Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身
 
     1. 在" **新建** 连接设置 **"页中输入名称** 。 这是在运行时自动程序 [SSO](#bot-sso-at-runtime)步骤 *5* 中的自动程序服务代码设置中引用的名称。
     2. 从 **"服务提供商"** 下拉列表中，选择 **Azure Active Directory v2。**
-    3. 输入客户端凭据，如 AAD 应用程序的客户端 **ID** 和客户端密码。
+    3. 输入客户端凭据，如 AAD **应用程序的客户端** **ID** 和客户端密码。
     4. 对于 **令牌 Exchange URL，** 请使用在更新机器人的 [Teams 应用程序清单中定义的作用域值](#update-your-teams-application-manifest-for-your-bot)。 令牌 Exchange URL 向 SDK 指示此 AAD 应用程序已针对 SSO 进行配置。
     5. 在" **租户 ID"** 框中，输入 *common*。
     6. 为 AAD **应用程序** 指定对下游 API 的权限时配置的所有作用域。 提供客户端 ID 和客户端密码后，令牌存储将令牌交换为具有定义权限的图形令牌。
@@ -145,11 +145,11 @@ Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身
 * **id** - 应用程序的客户端 ID。 这是在向 AAD 注册应用程序时获取的应用程序 ID。
 * **resource** - 应用程序的域和子域。 这是相同的 URI，包括在通过 AAD 门户注册应用时注册 `api://` `scope` [的协议](#register-your-app-through-the-aad-portal)。 不得在资源 `access_as_user` 中包括路径。 此 URI 的域部分必须与 Teams 应用程序清单的 URL 中使用的域和子域匹配。
 
-### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>添加代码以请求和接收自动程序令牌
+### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>添加代码以请求和接收机器人令牌
 
 #### <a name="request-a-bot-token"></a>请求自动程序令牌
 
-获取令牌的请求是使用现有邮件架构的普通 POST 消息请求。 它包含在 OAuthCard 的附件中。 OAuthCard 类的架构在 Microsoft [Bot 架构 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) 中定义，它类似于登录卡。 如果卡片上填充了属性，Teams 将此请求视为 `TokenExchangeResource` 无提示令牌获取。 对于 Teams 频道，仅会采用唯一 `Id` 标识令牌请求的属性。
+获取令牌的请求是使用现有邮件架构的普通 POST 消息请求。 它包含在 OAuthCard 的附件中。 OAuthCard 类的架构在 Microsoft [Bot 架构 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) 中定义，它类似于登录卡。 如果卡片上填充了属性，Teams 将此请求视为 `TokenExchangeResource` 无提示令牌获取。 对于 Teams 频道，仅 `Id` 处理唯一标识令牌请求的属性。
 
 >[!NOTE]
 > Microsoft Bot Framework `OAuthPrompt` 或 `MultiProviderAuthDialog` 支持 SSO 身份验证。
@@ -162,9 +162,9 @@ Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身
 
 * 如果自动程序定义登录按钮，则自动程序登录流程的触发方式类似于消息流中的 OAuth 卡按钮的登录流。 开发人员必须决定需要征得用户同意的权限。 如果需要具有超出权限的令牌，建议采用此方法 `openId` 。 例如，如果你想要交换图形资源的令牌。
 
-* 如果自动程序未在 OAuth 卡上提供登录按钮，需要用户同意，才能获得最低权限集。 此令牌对于基本身份验证和获取用户的电子邮件地址非常有用。
+* 如果自动程序未在 OAuth 卡上提供登录按钮，需要用户同意才能获得最低权限集。 此令牌对于基本身份验证和获取用户的电子邮件地址非常有用。
 
-##### <a name="c-token-request-without-a-sign-in-button"></a>没有登录按钮的 C# 令牌请求
+##### <a name="c-token-request-without-a-sign-in-button"></a>无登录按钮的 C# 令牌请求
 
 ```csharp
     var attachment = new Attachment
@@ -244,7 +244,3 @@ Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身
 #### <a name="additional-code-samples"></a>其他代码示例
 
 * [使用 Bot Framework SDK 的 C# 示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)。
-
-* [使用 Bot Framework SDK 删除](https://microsoft.sharepoint.com/:u:/t/ExtensibilityandFundamentals/Ea36rUGiN1BGt1RiLOb-mY8BGMF8NwPtronYGym0sCGOTw?e=4bB682)令牌请求的 C# 示例。
-
-* [没有使用 Bot Framework SDK 令牌存储的 C# 示例](https://microsoft-my.sharepoint-df.com/:u:/p/tac/EceKDXrkMn5AuGbh6iGid8ABKEVQ6hkxArxK1y7-M8OVPw)。
