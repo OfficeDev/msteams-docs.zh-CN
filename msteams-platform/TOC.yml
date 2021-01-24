@@ -332,6 +332,8 @@
           href: bots/how-to/authentication/auth-flow-bot.md
         - name: 将身份验证添加到机器人
           href: bots/how-to/authentication/add-authentication.md
+        - name: 使用 SSO 身份验证
+          href: bots/how-to/authentication/auth-aad-sso-bots.md
     - name: 消息扩展
       href: messaging-extensions/how-to/add-authentication.md
 - name: 利用 Microsoft Graph 及 Teams 数据
