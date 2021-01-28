@@ -1,39 +1,40 @@
 ---
 title: 无提示的身份验证
 description: 描述无提示身份验证
-keywords: 团队身份验证 SSO 无提示 AAD
-ms.openlocfilehash: b8a5b8cb9328635f5730ca089da29140d0a17ac4
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.topic: conceptual
+keywords: teams 身份验证 SSO 无提示 AAD
+ms.openlocfilehash: e55e415aba08fdedf4409abf39115838c3a5faf0
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796363"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014094"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
 > [!NOTE]
-> 若要对移动客户端上的选项卡进行身份验证，您需要确保您至少使用的是1.4.1 版本的团队 JavaScript SDK。
+> 若要在移动客户端上对选项卡进行身份验证，你需要确保你至少使用的是 1.4.1 版本的 Teams JavaScript SDK。
 
-在 Azure Active Directory 中进行无提示身份验证 (Azure AD) 最大限度地减少用户通过无提示刷新身份验证令牌来输入其登录凭据的次数。  (真正的单一登录支持，请查看我们的 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)) 
+Azure Active Directory (Azure AD) 中的无提示身份验证通过静默刷新身份验证令牌来最大程度地减少用户输入其登录凭据所需的次数。  (要获得真正的单一登录支持，请参阅我们的 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)) 
 
-如果要将代码完全保持在客户端，可以使用适用于 JavaScript 的 [Azure Active Directory 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries) 尝试以无提示方式获取 azure AD 访问令牌。 这意味着用户可能永远不会看到弹出对话框（如果他们最近已登录）。
+如果你想要使代码完全在客户端运行，可以使用适用于 JavaScript 的 [Azure Active Directory](/azure/active-directory/develop/active-directory-authentication-libraries) 身份验证库以静默方式尝试获取 Azure AD 访问令牌。 这意味着，如果用户最近登录过，可能永远不会看到弹出对话框。
 
-尽管 ADAL.js 库针对 AngularJS 应用程序进行了优化，但它也适用于纯 JavaScript 单页应用程序。
+尽管 ADAL.js库已针对 AngularJS 应用程序进行了优化，但它也适用于纯 JavaScript 单页应用程序。
 
 > [!NOTE]
-> 目前，无提示身份验证仅适用于选项卡。 它在从 bot 登录时仍不起作用。
+> 目前，无提示身份验证仅适用于选项卡。 从自动程序登录时，它尚不起作用。
 
-## <a name="how-silent-authentication-works"></a>无提示身份验证的工作方式
+## <a name="how-silent-authentication-works"></a>无提示身份验证的工作原理
 
-ADAL.js 库为 OAuth 2.0 隐式授予流创建了一个隐藏的 iframe，但它指定了 `prompt=none` AZURE AD 从不显示登录页。 如果需要用户交互，因为用户需要登录或授予对应用程序的访问权限，则 Azure AD 将立即返回一个错误，ADAL.js 然后向您的应用程序报告。 此时，您的应用程序可以根据需要显示 "登录" 按钮。
+该ADAL.js库为 OAuth 2.0 隐式授予流创建隐藏的 iframe，但它指定 Azure AD 从不显示 `prompt=none` 登录页。 如果由于用户需要登录或授予对应用程序的访问权限而需要用户交互，Azure AD 将立即返回错误，ADAL.js报告给应用。 此时，你的应用可以显示登录按钮（如果需要）。
 
 ## <a name="how-to-do-silent-authentication"></a>如何执行无提示身份验证
 
-本文中的代码来自 (Node) 的团队示例应用程序 [Microsoft 团队身份验证示例 ](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。
+本文中的代码来自 Teams 示例应用 Microsoft Teams 身份验证示例 ([Node) 。 ](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 
-### <a name="include-and-configure-adal"></a>包含和配置 ADAL
+### <a name="include-and-configure-adal"></a>包括和配置 ADAL
 
-在选项卡页中包含 ADAL.js 库，并使用客户端 ID 和重定向 URL 配置 ADAL：
+将ADAL.js库包括在选项卡页中，然后使用客户端 ID 和重定向 URL 配置 ADAL：
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -51,7 +52,7 @@ ADAL.js 库为 OAuth 2.0 隐式授予流创建了一个隐藏的 iframe，但它
 
 ### <a name="get-the-user-context"></a>获取用户上下文
 
-在该选项卡的内容页中，调用 `microsoftTeams.getContext()` 获取当前用户的登录提示。 这将用作对 Azure AD 的调用中的 login_hint。
+在选项卡的内容页中，调用 `microsoftTeams.getContext()` 以获取当前用户的登录提示。 这将在调用 Azure AD login_hint用作一个方法。
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -66,9 +67,9 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>身份验证
 
-如果 ADAL 为用户缓存了未到期的令牌，请使用该令牌。 否则，尝试通过调用以无提示方式获取令牌 `acquireToken(resource, callback)` 。 ADAL.js 将使用请求的令牌调用回调函数，如果身份验证失败，则调用错误。
+如果 ADAL 具有为用户缓存的未用令牌，请使用该令牌。 否则，尝试通过调用以静默方式获取令牌 `acquireToken(resource, callback)` 。 ADAL.js请求的令牌调用回调函数，或者身份验证失败时出现错误。
 
-如果在回调函数中遇到错误，则显示 "登录" 按钮并回退到显式登录。
+如果在回调函数中收到错误，则显示登录按钮并回退到显式登录。
 
 ```javascript
 let authContext = new AuthenticationContext(config); // from the ADAL.js library
@@ -101,9 +102,9 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>处理返回值
 
-通过 `AuthenticationContext.handleWindowCallback(hash)` 在登录回调页中调用，让 ADAL.js 负责从 AZURE AD 中分析结果。
+让我们ADAL.js登录回调页中调用来分析 Azure AD `AuthenticationContext.handleWindowCallback(hash)` 中的结果。
 
-检查我们是否有有效的用户和呼叫， `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 将状态报告回您的主选项卡内容页面。
+检查我们是否具有有效的用户并呼叫 `microsoftTeams.authentication.notifySuccess()` 或将状态报告 `microsoftTeams.authentication.notifyFailure()` 回主选项卡内容页。
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {

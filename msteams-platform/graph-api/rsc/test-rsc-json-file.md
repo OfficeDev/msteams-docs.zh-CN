@@ -1,17 +1,17 @@
 ---
-title: 在团队中测试特定于资源的同意
-description: 如何使用 Postman 测试团队中特定于资源的同意
+title: 在 Teams 中测试特定于资源的同意
+description: 如何使用 Postman 在 Teams 中测试特定于资源的同意
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: How-to
-keywords: 团队授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 63b2b708cf775816c5e6c0bb39a36537c2f20722
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.topic: how-to
+keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
+ms.openlocfilehash: 7360a81108ac900fdf6d03217b667e257ff227fe
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796141"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014514"
 ---
 # <a name="test-rsc-postman-collection-json"></a>测试 RSC Postman 集合 JSON
 

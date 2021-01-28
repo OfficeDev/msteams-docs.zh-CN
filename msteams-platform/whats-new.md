@@ -1,13 +1,14 @@
 ---
 title: 最近更新
 description: 介绍 Microsoft Teams 中所有新的开发人员功能
+ms.topic: reference
 keywords: teams 新增功能
-ms.openlocfilehash: da2378446f39ab8398cdc569987d14f5c6095330
-ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
+ms.openlocfilehash: 37192878bf6c3e3697faf535dcd757c2ceb1f5f3
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "49739040"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014556"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中针对开发人员的新增功能
 
@@ -18,12 +19,12 @@ ms.locfileid: "49739040"
 
 更改日志列出了对 Microsoft Teams 平台和本文档集的更改。 有时，条目可用于引起对 Teams 开发人员感兴趣的新功能的注意。
 
-| "日期" | **注意** | **已更改的主题** |
+| "日期" | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
 |11/30/2020|新增：标识平台与 Teams Toolkit 和Visual Studio代码集成|[使用 Teams 身份验证和选项卡Toolkit Visual Studio单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams 应用清单已更新到版本 1.8|[参考：Microsoft Teams 的清单架构](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams 机器人设计指南|[机器人设计指南](bots/design/bots.md)|
-|9/30/2020|现在支持在移动设备上向机器人发送和接收文件。|[通过机器人发送和接收文件](resources/bot-v3/bots-files.md)|
+|9/30/2020|现在支持在移动设备上向机器人发送和接收文件。|[通过自动程序发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|新的"Teams 入门"指南|[生成你的第一个 Teams 应用概述](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|支持会议中的 Teams 应用 (版本预览) |[在 Teams 会议中为 Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md) [会议和应用创建应用](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |8/19/2020|使用 Microsoft Graph 导入 Teams 消息|[使用 Microsoft Graph 将第三方平台消息导入 Teams](graph-api/import-messages/import-external-messages-to-teams.md)
@@ -41,7 +42,7 @@ ms.locfileid: "49739040"
 | 05/20/2020 | 使用 Microsoft Graph API 的资源特定许可权限位于开发人员预览版中。 |[RSC (特定于资源的) — 开发者预览版](graph-api/rsc/resource-specific-consent.md) |
 |5/18/2020|将 Power Virtual Agents 与 Teams 集成|[将 Power Virtual Agents 聊天机器人与 Microsoft Teams 集成](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|将 WFM 系统与适用于 Teams 的 Shifts 连接器集成|[Microsoft Teams Shifts WFM 连接器](samples/shifts-wfm-connectors.md)
-| 03/24/2020 | 添加了对检索对话中的单个成员的支持，并添加了对检索分页成员的其他支持。 | [为机器人获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
+| 03/24/2020 | 添加了对检索对话中单个成员的支持，并添加了对检索分页成员的其他支持。 | [为机器人获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | 发送到自动程序的有效负载中的参数不再加密，从而允许您使用此值构造到这些消息 `replyToId` 的深层链接。 邮件有效负载包括参数中的加密值。 `legacy.replyToId`.  |
 | 11/5/2019 | 在 Web 内容页面中使用 Teams JavaScript SDK 进行单一登录是开发人员预览版。 | [单一登录](tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | 更新了对话机器人和消息扩展文档以反映 4.6 Bot Framework SDK。 有关 v3 SDK 的文档，请参阅"资源"部分。 | 所有机器人和消息扩展文档。 |
@@ -63,15 +64,15 @@ ms.locfileid: "49739040"
 | 11/11/2018 | 节点 JS 和 .NET/C# 入门已更新为在 Teams 中使用 App Studio，并且已在 Azure 中托管基于节点的 Teams 应用上添加了一个新部分。 | [开始使用使用 C#/.NET](~/get-started/get-started-dotnet-app-studio.md)和 App Studio 的 Microsoft Teams 平台，使用 Node JS 和 App Studio 开始使用  [Microsoft Teams](~/get-started/get-started-nodejs-app-studio.md)平台，在 Azure 中托管节点 Teams [应用](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | 现在可以创建指向用户之间的私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 附带了将 Microsoft Teams 选项卡用作 SharePoint 框架 Web 部件的新功能。 | [SharePoint 中的选项卡](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | "任务模块"功能已发布。 任务模块允许你从机器人和选项卡在 Teams 应用程序中创建模式弹出窗口体验。 在弹出窗口内，可以运行自己的自定义 HTML/JavaScript 代码、显示基于小部件（如 YouTube 或 Microsoft Stream 视频）或显示自适应 `<iframe>` [卡片](https://docs.microsoft.com/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)， [选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)， 机器人  [中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
+| 11/05/2018 | "任务模块"功能已发布。 任务模块允许你在 Teams 应用程序中从机器人和选项卡创建模式弹出体验。 在弹出窗口内，可以运行自己的自定义 HTML/JavaScript 代码、显示基于小部件（如 YouTube 或 Microsoft Stream 视频）或显示自适应 `<iframe>` [卡片](https://docs.microsoft.com/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)， [选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)， 机器人  [中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | 卡片的格式设置信息已更新，并且已在适用于 Teams 的桌面、iOS 和 Android 客户端中进行测试。 | [卡片](~/concepts/cards/cards.md)[、卡片格式](~/concepts/cards/cards-format.md) |
-| 09/24/2018 | Microsoft Graph 的通话和联机会议 API 已发布到 beta 版本，Teams 应用现在可以使用语音和视频以丰富的方式与用户进行交互。 | [呼叫和联机会议](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人， [实时媒体](~/concepts/calls-and-meetings/real-time-media-concepts.md)概念， [注册](~/concepts/calls-and-meetings/registering-calling-bot.md)呼叫机器人， 调试 [和](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)本地测试， [应用程序托管的媒体](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)， [处理传入呼叫通知](~/concepts/calls-and-meetings/call-notifications.md) |
+| 09/24/2018 | Microsoft Graph 的通话和联机会议 API 已发布到 beta 版本，Teams 应用现在可以使用语音和视频以丰富的方式与用户进行交互。 | [呼叫和联机会议](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人， [实时](~/concepts/calls-and-meetings/real-time-media-concepts.md)媒体概念， [注册](~/concepts/calls-and-meetings/registering-calling-bot.md)呼叫机器人， 调试 [和](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)本地测试， [应用程序托管的媒体](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)， [处理传入呼叫通知](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | 选项卡配置页现在高度明显高。 | [选项卡设计](tabs/design/tabs.md) |
-| 08/15/2018 | Teams 现在支持自适应卡片。|[Teams 中的自适应卡片操作](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
+| 08/15/2018 | 自适应卡片现在在 Teams 中受支持。|[Teams 中的自适应卡片操作](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | 已记录对开发人员工具的客户端支持开发者预览版。| [适用于 Microsoft Teams 桌面客户端的 DevTools](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | 邮件扩展现在支持多个命令。 此功能已开发者预览版，现在向所有用户发布。| [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | 连接器现在支持内联配置。 为了清楚起见，连接器文档也进行了修订和扩展。| [连接器](~/concepts/connectors/connectors.md)|
-| 08/06/2018 | 现在，机器人可以发送和接收文件。| [通过机器人发送和接收文件](~/concepts/bots/bots-files.md)|
+| 08/06/2018 | 现在，机器人可以发送和接收文件。| [通过自动程序发送和接收文件](~/concepts/bots/bots-files.md)|
 | 07/27/2018 | 开发人员预览版现在支持邮件扩展中的多个命令。 | [邮件扩展已扩展](~/resources/dev-preview/developer-preview-features.md)|
 | 07/23/2018 | 有关应用重新认证的信息已添加到"发布"部分。 |[清单权限](resources/schema/manifest-schema.md#permissions)|
 | 07/16/2018 | 在开发人员预览版中，为选项卡配置页面分配了更多空间。 | [选项卡配置页面高度明显高于](tabs/design/tabs.md)|
@@ -88,7 +89,7 @@ ms.locfileid: "49739040"
 | 03/27/2018 | 主动消息的扩展文档。 |[开始对话](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 03/15/2018 | 卡片的重构文档。 |[卡片](~/concepts/cards/cards.md)、[卡片操作](~/concepts/cards/cards-actions.md)[、卡片格式、](~/concepts/cards/cards-format.md)[卡片参考](~/concepts/cards/cards-reference.md)|
 | 03/03/2018 | 添加了 Teams App Studio 文档。 |使用 App Studio[中的控件](~/get-started/get-started-app-studio.md)库，使用 Teams App [Studio 快速开发应用](~/get-started/app-studio-component-library.md)|
-| 02/27/2018 | 添加了示例代码来演示 AsTeamsChannelAccounts () 方法。 |[获取自动程序上下文](~/concepts/bots/bots-context.md)|
+| 02/27/2018 | 添加了示例代码来演示 AsTeamsChannelAccounts () 方法。 |[获取机器人的背景资料](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | 添加了有关开始使用 C# 的主题。 |[开始在 Microsoft Teams 平台上使用 C#/.NET ](./get-started/get-started-dotnet-app-studio.md)|
 
 ## <a name="submit-your-questions-bugs-feature-requests-and-contributions"></a>提交问题、Bug、功能请求和贡献

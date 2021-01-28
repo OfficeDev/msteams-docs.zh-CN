@@ -1,13 +1,14 @@
 ---
-title: Microsoft Teams 代码示例
+title: 应用代码示例
 description: Microsoft Teams 开发人员平台的示例应用程序的链接和说明
+ms.topic: reference
 keywords: Microsoft Teams 开发人员示例
-ms.openlocfilehash: 665d3565f4f453d263fef6a17cb27f5060111468
-ms.sourcegitcommit: 6d9c60cce1f2e5204e680c074ce77a8376233b59
+ms.openlocfilehash: f51ffb22a5e6b3b757d1971422adf955d95fb223
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49912314"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014108"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Microsoft Teams 开发人员平台的教程和代码示例
 
@@ -34,7 +35,7 @@ ms.locfileid: "49912314"
 
 ### <a name="for-netc-samples"></a>对于 .NET/C# 示例
 
-我们的每个 .NET 示例都包括一Visual Studio解决方案文件，该文件可以完全生成解决方案，包括还原 NuGet 包。
+我们的每个 .NET 示例包括一Visual Studio解决方案文件，该文件可以完全生成解决方案，包括还原 NuGet 包。
 
 ### <a name="for-nodejs-samples"></a>有关Node.js示例
 
@@ -51,13 +52,13 @@ ms.locfileid: "49912314"
 >[!TIP]
 >访问 [Bot Framework 示例存储库](https://github.com/Microsoft/BotBuilder-Samples) ，查看针对 C#、JavaScript、TypeScript 和 Python 的 Microsoft Bot Framework v4 SDK 任务重点示例。
 
-## <a name="messaging-extensions-using-the-v4-sdk"></a>使用 v4 SDK (邮件扩展) 
+## <a name="messaging-extensions-using-the-v4-sdk"></a>使用 v4 SDK (消息扩展) 
 
 | 示例 | 说明 | .NET Core | JavaScript | Python|
 |--------|------------- |---|---|----|
 | 邮件扩展 - 搜索 | 接受搜索请求并返回结果的消息扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 | 邮件扩展 - 操作 | 接受参数并返回卡片的邮件扩展。 此外，如何接收作为邮件扩展中的参数的转发邮件。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-| 邮件扩展 - 身份验证和配置 | 具有配置页面的邮件扩展，接受搜索请求，并返回用户登录后的结果。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
+| 邮件扩展 - 身份验证和配置 | 具有配置页面、接受搜索请求和在用户登录后返回结果的邮件扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
 | 邮件扩展 - 操作预览 | 演示如何为消息传递扩展创建预览和编辑流。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
 | 链接展开 | 执行链接取消链接的消息扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
 

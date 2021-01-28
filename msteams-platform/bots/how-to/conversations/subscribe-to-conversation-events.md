@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: 如何从 Microsoft Teams 自动程序订阅对话事件。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 17d13d51ab26aba60defb962dd425c1aed5b4133
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: b4dc70e4619043bd0b675206770093b086fc5ec6
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911959"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014318"
 ---
 # <a name="subscribe-to-conversation-events"></a>订阅对话事件
 
@@ -44,8 +44,10 @@ Microsoft Teams 会向自动程序发送有关在自动程序处于活动状态�
 | members added   | membersAdded   | OnTeamsMembersAddedAsync   | [已添加成员](#team-members-added)   | 全部 |
 | 成员已删除 | membersRemoved | OnTeamsMembersRemovedAsync | [已删除成员](#team-members-removed) | groupChat & team |
 | 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [已重命名团队](#team-renamed)       | 团队 |
+| 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [已删除团队](#team-deleted)       | 团队 |
 | 团队存档        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)       | 团队 |
-| 团队已还原        | teamRestored      | OnTeamsTeamRestoredAsync    | [已重命名团队](#team-renamed)       | 团队 |
+| 团队未存档        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)       | 团队 |
+| 团队已还原        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | 团队 |
 
 ### <a name="channel-created"></a>已创建频道
 
@@ -434,7 +436,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是机器人添加到团队时机器人将收到 **的消息**。
+这是自动程序添加到团队时，机器人将收到 **的消息**。
 
 ```json
 {
@@ -473,7 +475,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-This is the message your bot will receive when the bot is added **to a one-to-one chat.*
+这是自动程序将* 添加到一对一聊天时机器人 *将接收的消息*。
 
 ```json
 {
@@ -578,7 +580,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-以下有效负载示例中的对象基于向团队（而不是群聊）添加成员或启动新的一对 `channelData` 一对话：
+以下有效负载示例中的对象基于向团队（而不是群聊）添加成员，或启动新的一对 `channelData` 一对话：
 
 ```json
 {
@@ -712,6 +714,158 @@ async def on_teams_team_renamed(
 
 * * *
 
+### <a name="team-deleted"></a>团队已删除
+
+自动程序在它所参与的团队被删除后收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamDeleted` 中的 `channelData` 事件。
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    //handle delete event
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamDeletedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            //handle delete event
+            await next();
+        });
+    }
+}
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "Team Name"
+        },
+        "eventType": "teamDeleted",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# <a name="python"></a>[Python](#tab/python)
+
+```python
+async def on_teams_team_deleted(
+    self, team_info: TeamInfo, turn_context: TurnContext
+):
+    //handle delete event
+    )
+```
+
+* * *
+
+### <a name="team-restored"></a>团队已还原
+
+自动程序在从删除还原时收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamrestored` 中的 `channelData` 事件。
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsTeamrestoredEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team restored', `${teamInfo.name} is the team name`);
+            const message = MessageFactory.attachment(card);
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{ 
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:35:56.825Z",
+    "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+    "id": "f:1406033e",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+    "from": { 
+        "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+    }, 
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": { 
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterLocal"
+    },
+    "channelData": {
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+            "name": "Team Name"
+        },
+        "eventType": "teamrestored",
+        "tenant": { 
+           "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# <a name="python"></a>[Python](#tab/python)
+
+```python
+async def on_teams_team_restored(
+    self, team_info: TeamInfo, turn_context: TurnContext
+):
+    return await turn_context.send_activity(
+        MessageFactory.text(f"The team name is {team_info.name}")
+    )
+```
+
+* * *
+
 ### <a name="team-archived"></a>团队存档
 
 自动程序在存档安装它的团队时收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamarchived` 中的 `channelData` 事件。
@@ -790,14 +944,15 @@ async def on_teams_team_archived(
 
 * * *
 
-### <a name="team-restored"></a>团队已还原
 
-自动程序在安装它的团队还原时收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamrestored` 中的 `channelData` 事件。
+### <a name="team-unarchived"></a>团队未存档
+
+自动程序在安装它的团队未存档时收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamUnarchived` 中的 `channelData` 事件。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
     var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
     await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
@@ -810,8 +965,8 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
-        this.onTeamsTeamrestoredEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            const card = CardFactory.heroCard('Team restored', `${teamInfo.name} is the team name`);
+        this.onTeamsTeamUnarchivedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Team archived', `${teamInfo.name} is the team name`);
             const message = MessageFactory.attachment(card);
             await turnContext.sendActivity(message);
             await next();
@@ -847,7 +1002,7 @@ export class MyBot extends TeamsActivityHandler {
             "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
             "name": "Team Name"
         },
-        "eventType": "teamrestored",
+        "eventType": "teamUnarchived",
         "tenant": { 
            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
@@ -858,7 +1013,7 @@ export class MyBot extends TeamsActivityHandler {
 # <a name="python"></a>[Python](#tab/python)
 
 ```python
-async def on_teams_team_restored(
+async def on_teams_team_unarchived(
     self, team_info: TeamInfo, turn_context: TurnContext
 ):
     return await turn_context.send_activity(

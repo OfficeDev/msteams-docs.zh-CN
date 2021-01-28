@@ -1,39 +1,40 @@
 ---
-title: 应用认证
+title: Microsoft 365 应用认证
 description: 介绍应用商店应用中的 Microsoft 365 应用合规性计划
-keywords: Teams 合规 AppSource 应用商店应用认证合作伙伴中心
+ms.topic: overview
+keywords: teams 合规性 appsource 应用商店应用认证合作伙伴中心
 ms.date: 05/06/2019
-ms.openlocfilehash: 37fc472ea357e594b52e9fe7fc904b1a5a6d856d
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+ms.openlocfilehash: 7214acf8b9d6469d01bdf3d4141c563fa2795720
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819188"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014430"
 ---
-# <a name="microsoft-365-app-compliance"></a>Microsoft 365 应用合规 
+# <a name="microsoft-365-app-compliance"></a>Microsoft 365 应用版合规性 
 
-Microsoft 的首要任务是构建安全且值得信任的应用态系统。 为确保 Microsoft Store 中的可用应用有效、安全，以下两种投资算法。 
+构建安全且可信赖的应用生态系统是 Microsoft 的首要任务。 多项投资旨在确保 Microsoft Store 中提供的应用有效、安全且安全。 
 
-  ![应用符合性的 3 层方法](../../../../assets/images/Three_Tiers.png) 
+  ![应用合规性的 3 层方法](../../../../assets/images/Three_Tiers.png) 
 
--   [验证发布者的版本 – 允许](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview)  具有经验证的 [Microsoft 合作伙伴](https://partner.microsoft.com/membership) 网络 (MPN) 帐户的开发人员将组织标识与其通过 Microsoft 标识平台 [注册的应用关联](https://docs.microsoft.com/azure/active-directory/develop/)。
--   [发布者证明](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-attestation-guide) - 开发人员自行评估其组织的安全性、合规性和数据处理实践。 此信息可由 IT 管理员查看。 
--   [M365](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-certification-guide) 认证 – Microsoft 使用第三方评估方来审阅并验证组织的安全和合规性标准。 这是我们最高的认证级别，它向 IT 管理员保证以推广数据使用和存储的方式运行，以帮助 IT 管理员操作。
+-   [发布者验证](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview)  – 允许具有经过验证 [的 Microsoft 合作伙伴](https://partner.microsoft.com/membership) 网络 (MPN) 帐户的开发人员将组织标识与通过 Microsoft 标识平台注册 [的应用关联](https://docs.microsoft.com/azure/active-directory/develop/)。
+-   [发布者证明](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-attestation-guide) – 开发人员完成对组织的安全、合规性和数据处理做法的自我评估。 此信息可供 IT 管理员查看。 
+-   [M365 认证](https://docs.microsoft.com/microsoft-365-app-certification/docs/enterprise-app-certification-guide) – Microsoft 雇用第三方评估员来审阅和验证组织的安全性和合规性标准。 这是我们最高级别的认证，它向 IT 管理员保证接收证书的应用程序和组织以提升数据安全使用和存储的方式运行。
 
 
 ## <a name="program-benefits"></a>计划权益
 
-Microsoft 365 应用合规计划中的每一层向客户提供了不同级别的保障。 完成发布者验证后，可确保你的客户将公司作为你的应用的发布者。 发布者证明减少了客户有关你的应用的安全做法的来回不得。 我们以一致的格式发布对安全和合规性的常见问题的回复，其中格式使客户能够进行评审。 最后一层是 Microsoft 365 认证。 在客户完成后，您会知道您需要遵循安全的数据处理和安全做法。 合规性计划的其他好处包括：
--   免费 - Microsoft 当前正在涵盖此成本
--   在 AppSource 和合规性开发文档中获取锁屏 [提要](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
--   与应用商店中的其他应用区分
--   减少了应用为客户采用的时间
--   减少填写 RFP 所用的时间
--   在应用程序的安全性和合规性措施中添加了可信度
+Microsoft 365 应用合规性计划的每一层都为客户提供不同级别的保证。 通过完成发布者验证，你可以保证你的客户你的公司是你的应用的发布者。 发布者证明可减少客户就应用的安全做法来回访问的需求。 我们以一致格式在一个位置发布对有关安全性和合规性的常见问题的回复，供客户查看。 最后一层是 Microsoft 365 认证。 完成后，客户将知道您遵循安全数据处理和安全实践。 合规性计划的其他好处包括：
+-   免费 – Microsoft 目前负责支付此费用
+-   在 AppSource 和合规性开发人员 [文档上获取徽章](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
+-   与应用商店中其他应用的差异
+-   缩短客户应用采用时间
+-   减少填写 RFP 所花的时间
+-   增加了对应用程序的安全性和合规性措施的信心
 
-## <a name="qualifying-application-types"></a>资格限定应用程序类型 
+## <a name="qualifying-application-types"></a>符合条件的应用程序类型 
 ### <a name="publisher-verification-applies-to-apps-which"></a>发布者验证适用于以下应用： 
-- 使用 [OAuth 2.0 和 OpenID Connect](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols) 让用户登录，然后使用服务端 API（如 [Microsoft Graph）请求访问数据](https://developer.microsoft.com/graph/)。 
+- 使用 [OAuth 2.0 和 OpenID Connect](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols) 登录用户，并请求使用服务器端 API（如 [Microsoft Graph）访问数据](https://developer.microsoft.com/graph/)。 
 - 在 Azure AD 中注册为多租户。 
 
 ### <a name="publisher-attestation"></a>发布者证明
@@ -46,10 +47,10 @@ Microsoft 365 应用合规计划中的每一层向客户提供了不同级别的
 
 ### <a name="microsoft-365-certification"></a>Microsoft 365 认证
 -   Teams
--   即将推出：将会由于发布者证明提供相同的应用程序类型覆盖
+-   即将推出：将提供与发布者证明相同的应用程序类型覆盖
 
-## <a name="how-to-start-the-program"></a>如何启动程序
+## <a name="how-to-start-the-program"></a>如何启动计划
 
-完成 Microsoft 365 应用合规计划是一项非学措性计划，但高度建议。 无论是新添加的应用程序还是在应用商店中有多少年时间，都可以加入该计划。 
+完成 Microsoft 365 应用合规性计划是自愿的，但强烈鼓励。 无论你是新添加的应用程序，还是已在应用商店中工作很多年，都可以加入该计划。 
 
-第一步是完成[Publisher 验证。](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview) 下一步是完成 [Publisher 证明](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation)。 完成发布者证明后，我们将通过接下来的步骤来联系你，以开始 Microsoft 365 认证。
+第一步是完成 [发布者验证](https://docs.microsoft.com/azure/active-directory/develop/publisher-verification-overview)。 下一步是完成 [发布者证明](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation)。 完成发布者证明后，我们将通过以下步骤联系你以开始 Microsoft 365 认证。

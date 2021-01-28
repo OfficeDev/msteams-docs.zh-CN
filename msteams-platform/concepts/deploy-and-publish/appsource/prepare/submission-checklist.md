@@ -1,13 +1,14 @@
 ---
-title: 提交内容清单
+title: 应用商店提交清单
 description: 将 Microsoft Teams 应用发布到 AppSource 之前使用的清单
+ms.topic: reference
 keywords: teams 发布应用商店 Office 发布清单提交 Teams 应用 appsource 验证
-ms.openlocfilehash: 8d20d0106c1b2d8da38c5802b977634925afffcc
-ms.sourcegitcommit: db19fee033b41152267bb524d67aee5b7f64b04a
+ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797473"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014213"
 ---
 # <a name="prepare-for-appsource-submission"></a>准备 AppSource 提交  
 
@@ -17,7 +18,7 @@ ms.locfileid: "49797473"
 * **验证策略：** 应用必须在提交之前通过所有 [当前 AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) 验证策略。 
   > [!NOTE] 
   > Appsource 验证策略可能会更改。
-* **移动就绪情况：** 你的应用必须具有移动响应能力。 如果你的应用包含选项卡，它们必须遵循移动设计指南[](~/tabs/design/tabs-mobile.md)，并且你的应用必须符合 iOS 和[](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment)Android (上不) 。
+* **移动就绪情况：** 你的应用必须具有移动响应能力。 如果你的应用包含选项卡，它们必须遵循移动设计指南[](~/tabs/design/tabs-mobile.md)，并且你的应用必须符合 iOS 和[](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment)Android (移动操作系统上的) 。
 * **自行测试应用：** 使用清单验证 [工具测试你的应用](#teams-app-validation-tool)。
 * **应用详细信息页面：** 你的应用必须与应用详细信息  [页面清单一致](detail-page-checklist.md)。
 * **提示和经常失败的情况：** 请特别注意列出的 [提示和经常失败的情况](frequently-failed-cases.md)  ，以改进应用提交和审批时间。
@@ -30,13 +31,13 @@ ms.locfileid: "49797473"
 
 ## <a name="teams-app-validation-tool"></a>Teams 应用验证工具
 
-应用验证工具由应用[验证器和](#teams-app-validator)[初步清单组成](#preliminary-checklist)。 该工具复制 [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) 用于评估应用提交的相同测试用例。 因此，在将解决方案提交到 AppSource 进行审批之前，通过所有测试用例至关重要。该工具可在 Teams 平台内的多个区域找到：
+应用程序验证工具由应用[验证器和](#teams-app-validator)[初步清单组成](#preliminary-checklist)。 该工具复制 [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) 用于评估应用提交的相同测试用例。 因此，在将解决方案提交到 AppSource 进行审批之前，通过所有测试用例至关重要。该工具可在 Teams 平台内的多个区域找到：
 
 > [!div class="checklist"]
 >
 > * [**应用验证程序主页**](https://dev.teams.microsoft.com/appvalidation.html)
-> * [**Teams Visual Studio代码工具包**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+> * [**Teams Visual Studio 代码工具包**](/toolkit/visual-studio-code-overview.md)
+> * [**应用程序 Studio**](/concepts/build-and-test/app-studio-overview.md)
 
 ### <a name="teams-app-validator"></a>Teams 应用验证程序
 
@@ -46,7 +47,7 @@ ms.locfileid: "49797473"
 
 ### <a name="preliminary-checklist"></a>初步清单
 
-对于难以自动执行的测试方案，初步清单显示七个最常失败的测试用例。
+对于难以自动化的测试方案，初步清单显示七个最常失败的测试用例。
 
 ![初步清单](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
@@ -86,10 +87,10 @@ ms.locfileid: "49797473"
 
 * 您可以选择将测试说明上载到 SharePoint。 如果是这样，请提供文件的公共链接。
 
-* **测试帐户**。 如果应用仅允许来自后端的许可帐户或安全列表，则测试帐户是必需的。 此外，如果应用中允许团队/群聊范围，则同一租户中的两个测试帐户需要验证团队协作方案。
+* **测试帐户**。 如果你的应用仅允许来自后端的许可帐户或安全列表，则测试帐户是必需的。 此外，如果应用中允许团队/群聊范围，则同一租户中的两个测试帐户需要验证团队协作方案。
 
 * **集成步骤**。 如果需要租户管理员进行预配置才能使用该应用，请包含这些步骤和/或提供配置的管理员帐户和非管理员帐户进行验证。 注意：你可以注册 [Office 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program) 订阅。 它 *90* 天免费，并且将持续续订，只要使用它进行开发活动。
 
-* **有关 Teams 中的** 应用功能的注释：详细介绍 Teams 中应用提供的所有功能以及测试每个功能的步骤。
+* **有关 Teams 中的** 应用功能的注释：详细介绍了应用在 Teams 中提供的所有功能以及测试每个功能的步骤。
 
 * **显示应用功能的视频 (可选**) ：你可以提供产品的视频录制，以便我们完全了解应用的功能。

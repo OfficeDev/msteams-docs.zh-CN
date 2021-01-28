@@ -1,61 +1,62 @@
 ---
-title: 分发应用程序
-description: 介绍用于分发应用程序的三个选项
-keywords: 团队发布商店 office 分发 AppSource 旁加载上传应用程序
-ms.openlocfilehash: d3fd81e69f74b6332d9033412a7b6688239cd801
-ms.sourcegitcommit: 02ab2cb7820dc8665bb4ec6a1a40c3b8b8f29d66
+title: 分发应用
+description: 介绍分配应用的三个选项
+ms.topic: conceptual
+keywords: teams 发布应用商店办公室分发 AppSource 旁加载上传应用
+ms.openlocfilehash: 9c457608711bc491aeb9062a8ac2de58e78a90bd
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "47340955"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014185"
 ---
-# <a name="distribute-your-microsoft-teams-app"></a>分发 Microsoft 团队应用程序
+# <a name="distribute-your-microsoft-teams-app"></a>分发 Microsoft Teams 应用
 
-创建应用后，有三个选项可用于分发：
+创建应用后，有三种分配应用的选项：
 
-1. [直接上载您的应用程序](#upload-your-app-directly)。
-2. [将您的应用程序发布到组织的应用程序目录](#publish-to-your-organizations-app-catalog)。
-3. [通过 AppSource 发布您的应用程序](#publish-to-appsource)。
+1. [直接上传应用](#upload-your-app-directly)。
+2. [将应用发布到组织的应用程序目录](#publish-to-your-organizations-app-catalog)。
+3. [通过 AppSource 发布应用](#publish-to-appsource)。
 
 ## <a name="enterprise-organizations"></a>企业组织
 
-### <a name="upload-your-app-directly"></a>直接上载您的应用程序
+### <a name="upload-your-app-directly"></a>直接上传应用
 
-这是测试和使用您的应用程序的最简单方法。 如果您是团队所有者和/或 [上传自定义应用程序](/microsoftteams/admin-settings)，则可以 [直接上传 (或旁加载) ](./apps-upload.md) 应用，然后立即开始使用它。 但是，如果要与其他人共享应用程序，则必须向其发送应用程序包，并要求他们独立上传它。
+这是测试和使用应用的最简单方法。 如果你是团队所有者并且 [/或上传](/microsoftteams/admin-settings)自定义应用已启用，你可以直接上传 (或 [) ](./apps-upload.md) 应用并立即开始使用它。 但是，如果你想要与他人共享应用，你必须将应用包发送给他们，并要求他们单独上传它。
 
-如果您想要更广泛地分发您的应用程序，团队会为用户提供一个应用程序库，以查找或发现高质量的团队应用程序。 若要使您的解决方案在库中可用，您必须 [发布到组织的应用程序目录](#publish-to-your-organizations-app-catalog) 或 [发布到 AppSource](./appsource/publish.md)。
+如果你想要更广泛地分发你的应用，Teams 会为用户提供应用内库来查找或发现高质量的 Teams 应用。 若要在库中提供你的解决方案，你必须发布到组织的[应用](#publish-to-your-organizations-app-catalog)目录或[发布到 AppSource。](./appsource/publish.md)
 
-### <a name="publish-to-your-organizations-app-catalog"></a>发布到你的组织的应用程序目录
+### <a name="publish-to-your-organizations-app-catalog"></a>发布到组织的应用程序目录
 
-您的组织的应用程序目录包含您的组织特有的应用程序，并且完全位于组织的控制之下。 有关详细信息，请参阅将 [*应用发布到组织的应用程序目录*](/microsoftteams/tenant-apps-catalog-teams)一文。 此功能只能由具有 Microsoft Office 365 租户管理员权限的团队用户来管理。
+组织的应用程序目录包含组织独有的应用，完全受组织控制。 您可以在文章"将应用程序发布到组织的应用程序目录 [*"中查找更多信息*](/microsoftteams/tenant-apps-catalog-teams)。 此功能只能由具有 365 租户管理员权限Microsoft Office Teams 用户进行管理。
 
 ### <a name="publish-to-appsource"></a>发布到 AppSource
 
-AppSource (以前称为 Office 应用商店) 为您分发 Microsoft 团队应用程序以及其他 Office 365 扩展性类型（如 Office 外接程序和 SharePoint 外接程序）提供了方便的位置。遵循我们的准则，将 [您的应用程序提交到 AppSource](./appsource/publish.md)。
+AppSource (以前称为 Office 应用商店) 提供了一个方便的位置，便于你分发 Microsoft Teams 应用以及其他 Office 365 扩展类型（如 Office 加载项和 SharePoint 外接程序）。按照我们的指南[将应用提交到 AppSource。](./appsource/publish.md)
 
 ## <a name="government-community-cloud-gcc-organizations"></a>政府社区云 (GCC) 组织
 
-### <a name="upload-your-custom-app-directly-to-teams"></a>将您的自定义应用程序直接上载到团队
+### <a name="upload-your-custom-app-directly-to-teams"></a>将自定义应用直接上传到 Teams
 
- 作为 GCC 租户管理员，你将决定是将自定义应用上传到你的租户环境，还是将其发布到租户应用目录。 Microsoft 不拥有或控制您的自定义应用程序，因此，您必须确保所有终结点符合您组织的要求。 此外，如果应用程序解决方案包含 bot 或邮件扩展，则需要完成 [Bot 框架](https://dev.botframework.com/) 注册，如下所示：
+ 作为 GCC 租户管理员，你将决定是否将自定义应用上载到租户环境，以及是否将其发布到租户应用程序目录。 因此，Microsoft 不拥有或控制自定义应用程序，因此必须确保所有终结点都符合组织的要求。 此外，如果应用解决方案包括自动程序或消息扩展，则需要完成 [自动程序框架](https://dev.botframework.com/) 注册，如下所示：
 
-1. 在 " **连接到通道** " 页上的 " **添加功能通道**" 下，选择 " **团队**"。
-1. 导航到 " **配置 MSTeams** " 页 (*参阅* 以下) 。
-1. 在 " **邮件** " 下，选择 " **适用于政府客户的 Microsoft 团队** " 单选按钮。
-1. 在页面左下角，选择 " **保存**"。  
+1. 在"**连接到频道"页上** 的"**添加特色频道**"下，选择 **Teams。**
+1. 导航到" **配置 MSTeams"** 页 (*请参阅下面的*) 。
+1. 在 **"消息"** 下，选择 **Microsoft Teams 政府客户** 单选按钮。
+1. 在页面的左下角，选择"保存 **"。**  
 
 >[!IMPORTANT]
-> 您不能使用 "团队商业配置" 将自定义应用上传/旁加载到 GCC 环境，您必须为符合 GCC 规范的配置选择 " **适用于政府客户的 Microsoft 团队** " 单选按钮。
+> 不能使用 Teams 商业配置将自定义应用上载/旁加载到 GCC 环境，必须为符合 GCC 的配置选择 **Microsoft Teams 政府** 客户单选按钮。
 
-![团队消息配置页](../../assets/images/gcc-configure.png)
+![Teams 消息传递配置页](../../assets/images/gcc-configure.png)
 
 > [!NOTE]
 >
-> * 以上提供的针对 GCC 环境的上传说明适用于团队自定义应用。 </br>
-> * 默认情况下，在团队中启用合规性的 Microsoft 应用。
-> * 第三方应用程序在租户级别被禁用，应通过组织的 [应用程序权限策略](/microsoftteams/teams-app-permission-policies)进行管理。 确保查看所有第三方应用程序，以确保它们与您的组织的策略和过程相一致。
+> * 上述 GCC 环境的上传说明适用于 Teams 自定义应用。 </br>
+> * 默认情况下，在 Teams 的 GCC 环境中启用合规的 Microsoft 应用。
+> * 第三方应用在租户级别被禁用，并且应该通过组织的应用程序权限策略 [进行管理](/microsoftteams/teams-app-permission-policies)。 确保查看所有第三方应用，以确保它们符合组织的策略和过程。
 
 > [!TIP]
 >
-> Microsoft 365 开发人员合作伙伴通过 [microsoft 365 应用认证计划](/microsoft-365-app-certification/overview)为其第三方团队应用提供安全性、数据处理和合规性详细信息。 *另请参阅* [Microsoft 团队应用认证](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/application-certification)。
+> Microsoft 365 开发人员合作伙伴通过 [Microsoft 365](/microsoft-365-app-certification/overview)应用认证计划为第三方 Teams 应用提供安全性、数据处理和合规性详细信息。 *另请参阅* [Microsoft Teams 应用认证](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/application-certification)。
 </br></br>

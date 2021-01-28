@@ -1,17 +1,18 @@
 ---
 title: 选项卡的单一登录支持
 description: '介绍 SSO (单一) '
+ms.topic: how-to
 keywords: teams 身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: 3eff1cd1d73573c8eaade63580516f432fe082a1
-ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
+ms.openlocfilehash: 9392c3c01a7fa6dffc673cd01f57d0eab1720efe
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "49731984"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014122"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
-用户通过工作、学校或 Microsoft 帐户登录 Microsoft Teams (Office 365、Outlook 等) 。 你可以利用这一点，允许单一登录来授权 Microsoft Teams 选项卡 (或任务模块) 桌面或移动客户端上。 因此，如果用户同意使用你的应用，则他们不需要在另一台设备上再次同意，他们将自动登录。 此外，我们会预取访问令牌，以改进性能和加载时间。
+用户通过工作、学校或 Microsoft 帐户登录 Microsoft Teams (Office 365、Outlook 等) 。 你可以利用这一点，允许单一登录来授权 Microsoft Teams 选项卡 (或任务模块) 桌面或移动客户端上。 因此，如果用户同意使用你的应用，则他们不需要在另一台设备上再次同意，将自动登录。 此外，我们会预取访问令牌，以改进性能和加载时间。
 
 >[!NOTE]
 > **支持 SSO 的 Teams 移动客户端版本**  
@@ -43,7 +44,7 @@ ms.locfileid: "49731984"
 6. 令牌将在选项卡应用程序中通过 JavaScript 进行分析，以提取所需信息，如用户的电子邮件地址。
 
 > [!NOTE]
-> 仅对同意一组有限的用户级 API（电子邮件、配置文件、offline_access 和 OpenId）有效，对进一步 Microsoft Graph 作用域（如 `getAuthToken()` `User.Read` 或）无效 `Mail.Read` 。 如果需要其他 Graph 范围，请参阅本文档末尾的部分，了解建议的 [解决方法](#apps-that-require-additional-microsoft-graph-scopes)。
+> 仅对同意一组有限的用户级 API（电子邮件、配置文件、offline_access 和 OpenId）有效，对进一步 Microsoft Graph 作用域（如 `getAuthToken()` `User.Read` 或）无效 `Mail.Read` 。 如果需要其他 Graph 范围，请参阅本文档结尾部分的建议 [解决方法](#apps-that-require-additional-microsoft-graph-scopes)。
 
 SSO API 还将在嵌入 [Web](../../../task-modules-and-cards/what-are-task-modules.md) 内容的任务模块中工作。
 
@@ -57,15 +58,15 @@ SSO API 还将在嵌入 [Web](../../../task-modules-and-cards/what-are-task-modu
 
 1. 获取[Azure AD 应用程序 ID。](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)
 2. 指定应用程序对 Azure AD 终结点和（可选）Microsoft Graph 所需的权限。
-3. [授予 Teams](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) 桌面、Web 和移动应用程序的权限。
+3. [为](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) Teams 桌面、Web 和移动应用程序授予权限。
 4. 通过选择"添加范围"按钮预授权 Teams，在打开的面板中输入 `access_as_user` 为范围 **名称**。
 
 > [!NOTE]
 > 应注意一些重要限制：
 >
-> * 我们仅支持用户级别的 Microsoft Graph API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果你需要访问其他 Microsoft Graph 作用域， (或) ，请参阅本文档 `User.Read` 末尾 `Mail.Read` 的推荐解决方法。 [](#apps-that-require-additional-microsoft-graph-scopes)
+> * 我们仅支持用户级别的 Microsoft Graph API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果你需要访问其他 Microsoft Graph 作用域， (或) ，请参阅本文档 `User.Read` 末尾 `Mail.Read` 建议的解决方法。 [](#apps-that-require-additional-microsoft-graph-scopes)
 > * 应用程序的域名与为 Azure AD 应用程序注册的域名相同，这一点很重要。
-> * 目前，我们不支持每个应用多个域。
+> * 我们当前不支持每个应用多个域。
 > * 我们不支持使用该域的应用程序，因为它太常见， `azurewebsites.net` 并且可能是一种安全风险。 但是，我们正在积极寻求删除此限制。
 
 #### <a name="registering-your-app-through-the-azure-active-directory-portal-in-depth"></a>通过 Azure Active Directory 门户进行深入注册应用：
@@ -73,10 +74,10 @@ SSO API 还将在嵌入 [Web](../../../task-modules-and-cards/what-are-task-modu
 1. 在 Azure Active [Directory - 应用注册门户中注册新](https://go.microsoft.com/fwlink/?linkid=2083908) 应用程序。
 2. 选择 **"新建** 注册"， *在"注册应用程序"页上*，设置以下值：
     * 将 **名称** 设置为应用名称。
-    * 选择 **支持的帐户类型 (** 任何帐户类型都) ¹
+    * 选择支持 **的帐户类型 (** 任何帐户类型都) ¹
     * 保留“重定向 URI”为空。
     * 选择“注册”。
-3. 在概述页上，复制并保存应用程序 (**客户端) ID。** 稍后在更新 Teams 应用程序清单时将需要它。
+3. 在概述页上，复制并保存应用程序 (**客户端) ID。** 稍后更新 Teams 应用程序清单时将需要它。
 4. 在“**管理**”下，选择“**公开 API**”。 
 5. 选择 **"设置** "链接以生成应用程序 ID URI，格式为 `api://{AppID}` 。 插入您的完全限定域名 (双正斜杠和 GUID 之间追加一个) 斜杠"/"。 整个 ID 的形式 `api://fully-qualified-domain-name.com/{AppID}` 应为：
     * ex： `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` .
@@ -93,7 +94,7 @@ SSO API 还将在嵌入 [Web](../../../task-modules-and-cards/what-are-task-modu
 10. 选择要 **保存的"添加范围** "按钮 
     * 显示在文本字段正下方的范围名称的域部分应自动匹配上一步中设置的应用程序 **ID** URI，并追加 `/access_as_user` 到末尾：
         * `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`
-11. 在 **"授权客户端应用程序** "部分，确定要针对应用的 Web 应用程序授权的应用程序。 选择 *"添加客户端应用程序"。* 输入以下每个客户端 ID，然后选择在上一步中创建的授权作用域：
+11. 在 **"授权客户端应用程序** "部分，确定要授权用于应用程序的 Web 应用程序的应用程序。 选择 *"添加客户端应用程序"。* 输入以下每个客户端 ID，然后选择在上一步中创建的授权作用域：
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams 移动/桌面应用程序) 
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams Web 应用程序) 
 12. 导航到 **API 权限**。 选择 *"添加* Microsoft Graph 委派权限"权限，然后从 Microsoft Graph API 添加  >    >  以下权限：
@@ -143,7 +144,7 @@ SSO API 还将在嵌入 [Web](../../../task-modules-and-cards/what-are-task-modu
 
 > [!NOTE]
 >
->* AAD 应用的资源通常是其站点 URL 和 appID 的根 (例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`) 。 我们还使用此值来确保你的请求来自同一个域。 因此，请确保选项卡使用的域与资源 `contentURL` 属性相同。
+>* AAD 应用的资源通常是其网站 URL 和 appID (的根，例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`) 。 我们还使用此值来确保你的请求来自同一个域。 因此，请确保选项卡使用的域与资源 `contentURL` 属性相同。
 >* 您需要使用清单版本 1.5 或更高版本来实现 `webApplicationInfo` 该字段。
 
 ### <a name="3-get-an-authentication-token-from-your-client-side-code"></a>3. 从客户端代码获取身份验证令牌
@@ -170,7 +171,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 访问示例应用程序 [：MSTeams PnP SSO 示例](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
 
-自述文件介绍了如何设置开发环境以及如何在 Azure AD 中配置应用程序。 还可以找到有关示例在应用结构部分中的结构的进一步信息，[](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure)以帮助熟悉代码库。
+自述文件介绍了如何设置开发环境以及如何在 Azure AD 中配置应用程序。 还可以找到有关示例在应用结构部分的结构的进一步信息，[](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure)以帮助熟悉代码库。
 
 ## <a name="known-limitations"></a>已知限制
 
@@ -194,7 +195,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
     * 请务必将 v2 Microsoft Graph 终结点用于此交换
 2. 如果交换失败，Azure AD 将返回无效的授予例外。 通常有两条错误消息之一： `invalid_grant` 或 `interaction_required`
 3. 当交换失败时，需要请求其他同意。 我们建议显示一些要求用户授予其他同意的 UI。 此 UI 应包括使用 Azure AD 身份验证 API 触发 [Azure AD 同意对话框的按钮](~/concepts/authentication/auth-silent-aad.md)。
-4. 当请求 Azure AD 的其他同意时，你需要将查询 `prompt=consent` [字符串参数](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) 包括在 Azure AD 中，否则 Azure AD 不会请求其他作用域。
+4. 当请求 Azure AD 的其他同意时，你需要将查询字符串参数包括在 Azure AD 中，否则 Azure AD 不会请求其他 `prompt=consent` 作用域。 [](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)
     * 而不是： `?scope={scopes}`
     * 使用以下方法： `?prompt=consent&scope={scopes}`
     * 确保包括提示用户输入内容的所有作用域，例如 (`{scopes}` Mail.Read 或 User.Read) 。

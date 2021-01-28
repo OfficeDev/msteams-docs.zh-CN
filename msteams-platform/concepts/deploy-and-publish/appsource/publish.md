@@ -1,14 +1,14 @@
 ---
-title: Microsoft Teams 应用审批提交流程指南
+title: 了解 Teams 应用商店提交过程
 description: 介绍将应用发布到 Microsoft Teams 应用商店的审批提交过程
-ms.topic: conceptual
+ms.topic: overview
 keywords: teams 发布应用商店 Office 发布发布 AppSource 合作伙伴中心帐户验证应用帐户未发布符合条件的应用提交
-ms.openlocfilehash: 3dac91e8591edec597f6435fdc2bab989820661a
-ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
+ms.openlocfilehash: d2dc624c6dd13896397041c5c69ce5c5eb471a5b
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "49886749"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014409"
 ---
 # <a name="submit-your-app-to-appsource"></a>将应用提交到 AppSource
 
@@ -76,7 +76,7 @@ ms.locfileid: "49886749"
 
 ![合作伙伴中心验证状态](../../../assets/images/partner-center-verification-status.png)
 
-每个必需步骤（如 **电子邮件** 所有权、雇佣验证和业务验证）的状态都显示在帐户验证过程中。 验证过程完成后，在配置文件页上注册的验证状态会从 *挂起* 状态更改为 *已授权*。 不再显示过程步骤。
+每个必需步骤（如 **电子邮件** 所有权、雇佣验证和业务验证）的状态都显示在帐户验证过程中。 验证过程完成后，配置文件页上注册的验证 *状态会从* 挂起状态更改为 *已授权*。 不再显示过程步骤。
 
 ![合作伙伴中心验证错误](../../../assets/images/partner-center-acct-verification-error.png)
 
@@ -84,11 +84,11 @@ ms.locfileid: "49886749"
 有三个验证区域：**电子邮件所有权****、雇佣** 关系 **和业务**。 有关验证过程详细信息，请参阅"已 [验证"和如何响应](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
 如果你是主要联系人、全局管理员或帐户管理员，请转到合作伙伴配置文件以监视验证状态并跟踪进度。
 
-验证过程完成后，在配置文件页上注册的验证状态会从 *挂起* 状态更改为 *已授权*。 授权后，处理步骤及其状态在页面上不再可用。 主要联系人在验证完成后的几天内收到来自 Microsoft 的电子邮件。
+验证过程完成后，配置文件页上注册的验证 *状态会从* 挂起状态更改为 *已授权*。 授权后，处理步骤及其状态在页面上不再可用。 主要联系人在验证完成后的几天内收到来自 Microsoft 的电子邮件。
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-the-partner-center-how-should-i-proceed"></a>我的帐户验证状态未超出合作伙伴中心中的电子邮件所有权。 如何继续？
 
-在 **电子邮件所有权** 验证过程中，验证电子邮件将发送到主要联系人电子邮件地址。 检查主联系人收件箱中是否收到来自 **<span>maccount@ microsoft</span>.com** 的电子邮件，主题行为"需要操作：使用 *Microsoft 验证你的电子邮件帐户"。* 完成电子邮件验证过程。 验证电子邮件将发送到合作伙伴中心帐户设置页面中列出的电子邮件地址。
+在 **电子邮件所有权** 验证过程中，验证电子邮件将发送到主要联系人电子邮件地址。 检查主联系人收件箱中是否包含来自 **<span>maccount@ microsoft</span>.com** 的电子邮件，主题行为"需要操作：使用 *Microsoft 验证你的电子邮件帐户"。* 完成电子邮件验证过程。 验证电子邮件将发送到合作伙伴中心帐户设置页面中列出的电子邮件地址。
 
 > [!NOTE]
 > * 电子邮件验证链接仅在七天内有效。 
@@ -97,14 +97,14 @@ ms.locfileid: "49886749"
 
 ## <a name="how-do-i-get-further-support-for-my-account-related-issues"></a>如何进一步支持我的帐户相关问题？
 
-有关 [创建支持票证](/azure/marketplace/partner-center-portal/support) 的指导和步骤，请访问合作伙伴中心中的商业市场计划支持页面。
+有关 [创建支持票证](/azure/marketplace/partner-center-portal/support) 的指导和步骤，请访问"合作伙伴中心"页面中对商业市场计划的支持。
 
 ## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what-must-i-do-next"></a>我检查了邮件文件夹，但没有收到验证电子邮件。 接下来必须做什么？
 
 请尝试执行以下操作：
 * 检查垃圾邮件文件夹。
 * 清除浏览器缓存，转到合作伙伴中心帐户仪表板，然后选择"重新发送验证 **电子邮件** "链接，将验证电子邮件重新发送到你的电子邮件地址。
-* 请尝试从不同 **浏览器访问** "重新发送验证电子邮件"链接。
+* 请尝试从不同的 **浏览器访问** "重新发送验证电子邮件"链接。
 * 与 IT 部门合作，确保电子邮件服务器不会阻止验证电子邮件。
 * 调整服务器的垃圾邮件筛选器，以允许或安全列出来自 **maccount@microsoft。 <span></span>com**。
 

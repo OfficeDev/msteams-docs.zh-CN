@@ -1,55 +1,56 @@
 ---
-title: 开发人员预览版
-description: 介绍 Microsoft 团队的公共开发人员预览版中的功能
-keywords: 团队预览开发人员功能
-ms.openlocfilehash: a09e715e4e2d4aba72726cc96c4d248c550a3ab1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: 开发者预览版
+description: 介绍 Microsoft Teams 公共开发者预览版中的功能
+ms.topic: conceptual
+keywords: teams 预览开发人员功能
+ms.openlocfilehash: b8e8847d71ec3a571d434f952c79f3dd6a8f5bf1
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673288"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014073"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>Microsoft 团队的公共开发人员预览版
+# <a name="public-developer-preview-for-microsoft-teams"></a>Microsoft Teams 的公共开发人员预览版
 
 >[!NOTE]
->预览中包含的功能可能不完整，并且可能会在公开发布之前获得更改。 仅提供它们用于测试和研究目的。 不应在生产应用程序中使用它们。
+>预览版中包含的功能可能不完整，并且可能在公开版本中可用之前进行更改。 它们仅供测试和探索使用。 不应在生产应用程序中使用。
 
-开发人员预览版是为开发人员提供对 Microsoft 团队中的 unreleased 功能的早期访问的公共计划。 这使您可以探索和测试即将推出的功能，以便在 Microsoft 团队应用中可能包含这些功能。 我们还欢迎对开发人员预览版中的任何功能提供[反馈](~/feedback.md)。 根据 Microsoft 团队客户端启用开发人员预览，因此无需担心会影响整个组织。
+开发者预览版开发人员的公共计划，可提前访问 Microsoft Teams 中未提供的功能。 这允许你浏览和测试即将推出的功能，以潜在地包含在 Microsoft Teams 应用中。 我们还欢迎 [提供有关开发人员](~/feedback.md) 预览中任何功能的反馈。 开发人员预览版是按 Microsoft Teams 客户端启用的，因此你无需担心影响整个组织。
 
-## <a name="developer-preview-app-manifest"></a>开发人员预览版应用程序清单
+## <a name="developer-preview-app-manifest"></a>开发人员预览应用清单
 
-在开发人员预览中启用的许多功能都需要对应用程序清单 JSON 文件进行变更。 若要执行此操作，您需要使用[开发人员预览版清单架构](~/resources/schema/manifest-schema-dev-preview.md)。如果使用此架构，将无法使用[应用程序 Studio](~/concepts/build-and-test/app-studio-overview.md)进行这些更改，也不能使用它上传您的应用程序进行测试。 若要上传您的应用程序，您`More apps`需要单击应用栏上的图标，然后`Upload a custom app link`选择。 使用此方法，您只能上载应用程序包的压缩版本。
+开发人员预览版中启用的许多功能都需要更改应用清单 JSON 文件。 为此，将需要使用开发人员预览清单架构。如果[](~/resources/schema/manifest-schema-dev-preview.md)使用此架构，你将不能使用[App Studio](~/concepts/build-and-test/app-studio-overview.md)进行这些更改，也不能使用它上载应用进行测试。 若要上传应用，你需要单击应用栏上的图标， `More apps` 然后选择 `Upload a custom app link` 。 使用此方法，你只能上传应用包的压缩版本。
 
-您可能会发现，使用应用程序 Studio 创建应用程序包的非开发人员预览部分会非常有用，然后导出该程序包并手动编辑该`manifest.json`文件，以添加您想要使用的开发人员预览功能。 将开发人员预览功能添加到`manifest.json`文件后，将无法将包重新导入到应用程序 Studio 中。
+你可能会发现，使用 App Studio 创建应用包的非开发人员预览部分，然后导出该包并手动编辑文件以添加想要使用的开发人员预览功能会 `manifest.json` 很有用。 将开发人员预览功能添加到文件后，将无法将程序包重新导入 `manifest.json` App Studio。
 
 ## <a name="enable-developer-preview"></a>启用开发人员预览
 
-以每个客户端为基础启用开发人员预览，但在组织级别控制启用开发人员预览的选项。 若要启用选项以启用个人的开发人员预览版，必须确保能够上载自定义应用程序。 有关详细信息，请参阅[设置你的租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+开发人员预览版基于每个客户端启用，但启用开发人员预览的选项在组织级别控制。 若要启用为个人启用开发人员预览的选项，必须确保他们能够上载自定义应用。 有关 [其他信息，请参阅设置](~/concepts/build-and-test/prepare-your-o365-tenant.md) 租户。
 
-使用包含开发人员预览功能的应用可能会导致未启用开发人员预览的客户端出现意外行为。 如果看不到 "开发人员预览" 条目，最可能的原因是您的组织未配置为应用上载。
+使用包含开发人员预览功能的应用可能会导致未启用开发人员预览的客户端发生意外行为。 如果看不到开发人员预览条目，最可能的原因是组织未配置应用上载。
 
-### <a name="on-a-desktop-or-web-client"></a>在桌面或 web 客户端上
+### <a name="on-a-desktop-or-web-client"></a>在桌面或 Web 客户端上
 
-若要在桌面或 web 客户端上启用公共开发人员预览，您需要执行以下操作：
+若要在桌面或 Web 客户端上启用公共开发人员预览版，需要执行以下操作：
 
-1. 在租户的管理员控制台中启用上传应用程序[，如下所述。](~/concepts/build-and-test/prepare-your-o365-tenant.md)
-1. 单击您的配置文件（位于团队界面的右上角或左下方）以显示 "团队" 菜单。
-1. 选择 "关于→开发人员预览"。
-1. 选择 "**切换到开发人员预览**"。
+1. 启用在租户的管理控制台中上传应用， [如下所述](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+1. 单击你的配置文件 (Teams 界面的右上方或左下角) 显示 Teams 菜单。
+1. 选择"→预览"。
+1. 选择 **"切换到开发人员预览"。**
 
 ### <a name="on-a-mobile-client"></a>在移动客户端上
 
-若要在移动客户端上启用公共开发人员预览，您需要执行以下操作：
+若要在移动客户端上启用公共开发人员预览版，需要执行以下操作：
 
-1. 在租户的管理员控制台中启用上传应用程序[，如下所述。](~/concepts/build-and-test/prepare-your-o365-tenant.md)
-1. 打开左上角的 "汉堡" 菜单，然后选择 "**设置**"。
-1. 选择 "**关于**"。
-1. 单击 "开发人员预览" 切换。
+1. 启用在租户的管理控制台中上传应用， [如下所述](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+1. 打开左上方的汉堡包菜单，然后选择"**设置"。**
+1. 选择 **"关于"。**
+1. 单击"开发人员预览"切换。
 
 ## <a name="disable-developer-preview"></a>禁用开发人员预览
 
-使用 "关于→开发人员预览" 下的相同菜单项，并单击它以将其关闭。
+在"关于开发人员→下使用相同的菜单项，然后单击它将其关闭。
 
-## <a name="features-available-in-developer-preview"></a>在开发人员预览版中可用的功能
+## <a name="features-available-in-developer-preview"></a>开发人员预览版中提供的功能
 
-有关当前在开发者预览版中启用的功能的完整列表，请参阅：[公共开发人员预览版中的功能](../../resources/dev-preview/developer-preview-features.md)。
+有关当前在开发人员预览版中启用的功能的完整列表，请参阅： [公共开发人员预览版中的功能](../../resources/dev-preview/developer-preview-features.md)。

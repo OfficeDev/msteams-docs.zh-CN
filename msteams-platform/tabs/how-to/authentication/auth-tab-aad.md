@@ -1,13 +1,14 @@
 ---
 title: 使用 Azure Active Directory 对选项卡进行身份验证
 description: 介绍 Teams 中的身份验证以及如何在选项卡中使用它
+ms.topic: how-to
 keywords: teams 身份验证选项卡 AAD
-ms.openlocfilehash: f6df2dbf84583488ddc0c57798d423b6288af16d
-ms.sourcegitcommit: 23ceb25d07a76f03ffe92cf1ac578b7c50b0bafc
+ms.openlocfilehash: 1502d2634b39230e0428863383bf97ada0be0359
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "49777929"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014563"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>在 Microsoft Teams 选项卡中对用户进行身份验证
 

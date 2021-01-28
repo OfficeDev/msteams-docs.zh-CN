@@ -1,222 +1,233 @@
 ---
-title: 构建一个出色的应用程序详细信息页
-description: 描述应用程序详细信息页的要求
-keywords: 团队发布存储 office 发布策略 AppSource 内容元数据屏幕截图徽标说明应用程序名称图标简短说明
-ms.openlocfilehash: aa12cab0bb89349b4d9d613a9c533773fa593283
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+title: 生成出色的应用详细信息页面
+description: 描述应用详细信息页的要求
+ms.topic: reference
+keywords: teams 发布应用商店 Office 发布策略 AppSource 内容元数据屏幕截图徽标说明 应用名称图标简短说明
+ms.openlocfilehash: fa3086c92f69b74f7b0669ea26a6162ac3acc5c2
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605316"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014220"
 ---
-# <a name="build-a-great-app-details-page"></a>构建一个出色的应用程序详细信息页
+# <a name="build-a-great-app-details-page"></a>生成出色的应用详细信息页面
 
-详细信息页面向用户显示应用程序的第一个印象。 您的详细信息页面中的每个元素都可用于传达您的远景和驱动器下载-考虑您希望如何在有限的空间中展示您的应用程序。 下面是一些提示和技巧，可帮助你在用户甚至安装应用之前对你的用户进行接洽。
+详细信息页面向用户显示应用的第一印象。 详细信息页面的每个元素都可用于传达你的愿景和驱动器下载 -考虑你想要如何在有限的空间展示你的应用。 下面是一些提示和技巧，可帮助你在用户安装应用之前吸引他们。
 
 > [!NOTE]
-> 请确保您的应用程序信息遵循我们 [的 AppSource 指南，以创建有效的商店列表](/office/dev/store/create-effective-office-store-listings)。
+> 确保你的应用信息遵循 [我们的 AppSource 指南来创建有效的应用商店一览](/office/dev/store/create-effective-office-store-listings)。
 
 ## <a name="app-name"></a>应用名称
 
 > [!div class="checklist"]
 >
-> * 应用程序的名称在用户在 AppSource 应用商店中发现它的方式方面发挥至关重要的作用。 您的应用程序的短名称将显示在 "详细信息" 页上。
->* 应用程序名称应反映您的应用程序，而不会对 Microsoft 或 Microsoft 产品进行任何引用。
+> * 应用名称在用户如何在 AppSource 应用商店中发现它方面起到重要作用。 你的应用的短名称将显示在详细信息页面上。
+>* 应用名称应反映你的应用，而不引用 Microsoft 或 Microsoft 产品。
 >
 
-> **注意**：如果您的应用程序与 microsoft 正式合作，则第三方应用程序的名称必须是第一个，例如， *用于 Microsoft 团队的 Salesforce 连接器*。
+> **注意**：如果你的应用是一个与 Microsoft 的官方合作关系，则第三方应用的名称需要首先，例如，Microsoft Teams 的 *Salesforce 连接器*。
 
 > [!div class="checklist"]
 >
->* 请使用以下资源获取指导：
+>* 使用这些资源提供指导：
 
-* [应用名称指南](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
-* [Microsoft 商标和品牌准则](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+* [应用名称指南](#app-name)
+* [Microsoft 商标和品牌指南](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
-**请执行以下操作：**
+**需要：**
 
-* 选择一个简单且便于记忆的名称，以提示您的应用程序所执行的操作。
-* 是特殊的。
-* 如果需要，请使用 Microsoft 365 引用而不是 Office 365。
+* 选择一个简单、易记的名称，该名称将提示你的应用所做什么。
+* 独特。
+* 如果需要，请使用 Microsoft 365 引用，而不是 Office 365。
 
-**应该**
+**请勿：**
 
-* 请勿省略空格、大小写不正确或在应用名称中包含语言错误。
-* 请勿使用类似于现有应用的一般术语或名称。
-* 请勿在应用程序名称中使用 "团队"、"Microsoft"、现有/即将发布的 Microsoft 产品名称或 "应用程序"。
-* 请勿使用括号包含 microsoft 团队) 的 Microsoft 产品，例如， *应用名称 (*。
+* 请勿省略空格、大小写不正确或应用名称中包含语言错误。
+* 请勿使用与现有应用类似的通用术语或名称。
+* 不要在应用名称中使用"Teams"、"Microsoft"、"现有/即将推出的 Microsoft 产品名称"或"应用"。
+* 请勿使用括号包含 Microsoft 产品，例如 *，适用于 Microsoft Teams (的 Your-App-Name) 。*
 
 ![应用名称存储视图](../../../../assets/images/store-detail-page/AppName-02.png)
 
-![应用程序名称应用程序 Studio 视图](../../../../assets/images/store-detail-page/AppName-01.png)
+![应用名称 App Studio 视图](../../../../assets/images/store-detail-page/AppName-01.png)
 
 ## <a name="color-icon"></a>颜色图标
 
-这是用户看到的首个元素之一。 在滚动应用商店时，它应具有吸引力且引人注目的醒目。 确保它成为一个出色的第一个印象，同时还传达品牌的图像和用途。 AppSource 提供了有关 [创建一致的视觉标识](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity)的更多提示。
+这是用户首先看到的元素之一。 在应用商店中滚动时，它应具有吸引力和吸引力。 请确保它留下良好的第一印象，并传达你的品牌图像和用途。 AppSource 提供了更多有关创建 [一致视觉标识的提示](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity)。
 
-![应用程序图标存储视图](~/assets/images/store-detail-page/AppIcon-02.png)
+![应用图标应用商店视图](~/assets/images/store-detail-page/AppIcon-02.png)
 
-![应用程序图标应用程序 Studio 视图](~/assets/images/store-detail-page/AppIcon-01.png)
+![应用图标 App Studio 视图](~/assets/images/store-detail-page/AppIcon-01.png)
 
-**应该**
+**请勿：**
 
-* 您的图标不得模仿任何不属于您的受版权保护的产品。
-* 你的图标看起来不能类似于任何 Microsoft 产品/品牌。
+* 你的图标不得模仿你未拥有的任何受版权保护的产品。
+* 图标不得类似于任何 Microsoft 产品/品牌。
 
 ## <a name="outline-icon"></a>大纲图标
 
-此图标用于固定邮件扩展和当您的应用程序显示在团队的左侧。 有关 [大纲图标](../../../../concepts/build-and-test/apps-package.md#outline-icon)，请参阅设计指南。
+此图标用于固定的消息扩展以及应用在 Teams 左侧显示时。 请参阅 [大纲图标的设计指南](../../../../concepts/build-and-test/apps-package.md#outline-icon)。
 
-![应用图标大纲存储视图 ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
- ![ 应用图标大纲应用程序 Studio 视图](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
+![应用图标大纲应用商店视图 ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
+ ![ 应用图标大纲 App Studio 视图](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
 
-**应该**
+**请勿：**
 
-* 您的图标不得模仿任何不属于您的受版权保护的产品。
-* 你的图标看起来不能类似于任何 Microsoft 产品/品牌。
+* 你的图标不得模仿你未拥有的任何受版权保护的产品。
+* 图标不得类似于任何 Microsoft 产品/品牌。
 
 ## <a name="short-description"></a>简短说明
 
-这是你的应用程序的简要摘要。 不妨原创有吸引力且面向目标受众的说明。 理想情况下，请尝试在一个句子中对您的解决方案及其价值进行说明。
+这是应用的简要摘要。 不妨原创有吸引力且面向目标受众的说明。 理想情况下，请尝试用一个句子向用户描述你的解决方案及其价值。
 
-**请执行以下操作：**
+**需要：**
 
 * 首先放置最重要的信息。
-* 包含客户可能搜索的关键字。
-* 如果你需要提到 Microsoft 团队，应将 Microsoft 团队的第一次建议作为 *Microsoft 团队* 完全写出来。 如果在同一说明中再次提到团队，则可以将该名称缩短为 " *团队*"。
-* 对 Microsoft 或 Microsoft 团队的任何引用都可以作为说明的一部分，并且应遵循 Microsoft 的品牌标准和指南。
-* 所有说明都必须是无语言错误的语法正确的。
-* 避免不必要地使用 capitalizations，例如，声明 "用户" 而不是 "用户"。
+* 包括客户可能搜索的关键字。
+* 如果你需要提及 Microsoft Teams，Microsoft Teams 的第一个提及应完整地编写为 *Microsoft Teams。* 如果在同一描述中再次提到 Teams，可以将名称缩短为 *Teams。*
+* 对 Microsoft 或 Microsoft Teams 的任何引用都可以作为说明的一部分，并且应遵循 Microsoft 的品牌标准和指南。
+* 所有说明的语法必须正确，且没有语言错误。
+* 避免不必要地使用大写，例如，声明"用户"而不是"用户"。
 
-**应该**
+**请勿：**
 
 * 不要重复标题。
-* 不要将 Microsoft 缩写为 "MS" 或 "MSFT"。
-* 请勿使用术语或专用术语，不能假定用户知道要查找的内容。
-* 除非绝对必要，否则避免对 Microsoft 产品名称的不必要引用。
-* 请勿指明或暗示该应用程序是 Microsoft 提供的服务。
-* 请勿使用不属于版权的品牌名称。
-* 不要在短名称中使用 "for 团队"。
+* 不要将 Microsoft 缩写为"MS"或"MSFT"。
+* 请勿使用行话或专门术语，你无法假定用户知道要查找什么。
+* 除非绝对必要，否则避免不必要的 Microsoft 产品名称引用。
+* 请勿指示或暗示应用是 Microsoft 的产品/服务。
+* 请勿使用您不拥有的受版权保护的品牌名称。
+* 请勿以短名称使用"for Teams"。
 
 ![简短说明存储视图](~/assets/images/store-detail-page/ShortDescription-02.png)
 
-下面是 [应用程序 Studio](https://aka.ms/InstallTeamsAppStudio)中的一个视图：
+下面是 App Studio 中的 [视图](https://aka.ms/InstallTeamsAppStudio)：
 
-![简短说明应用程序工作室视图](~/assets/images/store-detail-page/ShortDescription-01.png)
+![简短说明 App Studio 视图](~/assets/images/store-detail-page/ShortDescription-01.png)
 
 ## <a name="long-description"></a>较长说明
 
 > [!div class="checklist"]
 >
->* 这提供了一个有吸引力的叙述，突出显示了解决方案的主要功能、它所解决的问题以及目标访问群体。 通过传达您的应用程序的独特功能，在受众中绘制第一句。 您的说明必须在4000个字符以内;大多数用户只会阅读300到500个词。
->* 允许什么？
+>* 这提供了一个极具吸引力的叙述性叙述，重点介绍解决方案的主要功能、解决方案所解决的问题和目标受众。 通过传达应用的独特功能，用第一句吸引受众。 说明必须不足 4000 个字符;大多数用户只能阅读 300 到 500 个词。
+>* 允许使用什么？
 
-* `<your_app>`  "与 Microsoft 团队合作"
-* `<for users>`  "使用 Microsoft 团队"
-* `<for tasks>`  "Microsoft 团队内"
-* `<an app>`  "Microsoft 团队"
-* `<your_app>`  "与 Microsoft 团队集成"
-* "...与 Microsoft 团队集成 "
-* "...建立于 ... "
-* "...运行于 ... "
-* "...启用者 ... "
-* "...开发用于 ... "
-* "...专为 ... "
+* `<your_app>`  "使用 Microsoft Teams"
+* `<for users>`  "使用 Microsoft Teams"
+* `<for tasks>`  "在 Microsoft Teams 中"
+* `<an app>`  "for Microsoft Teams"
+* `<your_app>`  "与 Microsoft Teams 集成"
+* "...与 Microsoft Teams 集成"
+* "...构建于..."
+* "...运行..."
+* "...enabled by..."
+* "...针对..."
+* "...专为..."
 
-> **注意**：上述条款也适用于使用 Microsoft 365。 Office 365 现在称为 Microsoft 365。 请更新您的应用程序说明以反映这一点。
+> **注意**：上述条款也适用于 Microsoft 365 的使用。 Office 365 现在称为 Microsoft 365。 请更新应用说明以反映这一点。
 
 >[!IMPORTANT]
-> 请务必将您在 AppSource 条目中写入的说明精确复制到您的应用程序清单中，这些值必须匹配。 Microsoft 团队将仅使用您在应用程序清单中提供的说明。
+> 请确保将你在 AppSource 条目中撰写的描述准确复制到应用清单中，这些值必须匹配。 Microsoft Teams 将仅使用你在应用清单中提供的说明。
 
-**请执行以下操作：**
+**需要：**
 
-* 使用 [Markdown 格式](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) 照亮您的说明。  
-* 列出可帮助读者扫描您的说明的功能。
-* 使用活动语音并直接向用户讲话。
-* 使用项目符号可列出您的功能。
-* 包含 "帮助" 或 "支持" 链接，以便你的用户知道如果有问题，如何联系你。
-* 确保 Microsoft 团队的第一个提及完全以 "*Microsoft 团队*" 的形式写出。 如果稍后在同一说明中再次提到团队，则可以将该名称缩短为 "*团队*"。
-* 仅在必要时 (对 Microsoft 或 Microsoft 团队的任何引用) 可能是详细说明的一部分，应遵循 Microsoft 的品牌标准和指南。
-* 所有说明都必须是无语言错误的语法正确的。
-* 为说明中的 capitalizations 避免不必要的使用条件 (示例：说明 "Users" 而不是 "users"。
-* 避免首字母缩写词。
-* 请务必拨打限制、帐户相关性、设置的未来更新或发布中的未来更新或任何使用限制
+* 使用 [Markdown 格式来](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) 照亮说明。  
+* 列出有助于读者扫描说明的功能。
+* 使用活动语音并直接与用户通话。
+* 使用项目符号来列出你的功能。
+* 包括帮助或支持链接，以便你的用户知道在有疑问时如何联系你。
+* 确保 Microsoft Teams 的第一个提及完全写成 *"Microsoft Teams"。* 如果稍后在同一描述中再次提到 Teams，可以将名称缩短为 *"Teams"。*
+* 仅在必要时才 (Microsoft 或 Microsoft Teams) 可能是详细说明的一部分，并且应遵循 Microsoft 的品牌标准和准则。
+* 所有说明的语法必须正确，且没有语言错误。
+* 避免对说明中的术语使用不必要的大写 (例如：说明"用户"而不是"用户"。
+* 避免使用首字母缩略词。
+* 请确保调用限制、帐户依赖关系、配置设置、版本中的未来更新或任何使用约束
 
 >[!NOTE]
-> Microsoft 团队支持以下 Markdown 语法：  
+> Microsoft Teams 支持以下 Markdown 语法：  
 > **链接**。 `[title](url/address/here)`.  
->**图像**... `![alt text](url/address/here)`  
+>**图像** `![alt text](url/address/here)` 。  
 > **加粗**。 `**bold text**`   `__bold text__`.  
 > **斜体**。 `*italicized text*`  `_italicized text`.  
->**[有序列表](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
+>**[已排序列表](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
 >`1. first` 
 <br>` 1. second ` 
 <br>`1.third`<br>
->**[无序列表](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
+>**[未排序列表](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
 ` - short` <br>`- bulleted` <br>`- list`<br>
->**换行符**。 `Place two empty spaces or a backslash \`  \
-`at the end of a line.`<br>
- >**过.** 使用内联反斜杠来转义特殊字符。 `\*asterisk`.
+>**Newline**。 `Place <br> at the end of a line.` <br> 
+ >**转义。** 使用内联反线转义特殊字符。 `\*asterisk`.
 
-**应该**
+**Markdown 格式的示例**
 
-* 不要在说明中添加过多的关键字，因为它会分散注意力，并不能帮助您的应用程序的发现。
-* 不要在短名称中使用 "*团队*" 或 "*Microsoft 团队*"。
-* 除非绝对必要，否则避免对 Microsoft 产品名称的不必要引用。
-* 请勿指示应用程序是 Microsoft 提供的服务。
-* 请勿使用不属于版权的品牌名称。
-* 请勿使用以下语言，除非应用程序已通过官方认证流程：
+|Markdown 格式 |Markdown 格式 |显示的文本|
+|:---------|:---------------|:-------------|
+|链接  |` [App name guide](#app-name)`| [应用名称指南](#app-name) |
+|图像 |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![应用长描述应用商店视图](~/assets/images/store-detail-page/LongDescription-02.png)|
+|粗体 |` **HR Tools**` | **HR 工具**  |
+|斜体 |`*HR Tools*` |*HR 工具*|
+|Newline |` HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively. <br> No more flipping through paper records or juggling among 5 different apps.` |HR 工具提供了各种解决方案，可帮助组织有效地管理日常 HR 活动。 <br>  不再在 5 个不同应用中翻阅纸张记录或进行切换。|
+|转义|`\*Payroll tools that help you manage your payroll and tax documents.` |\*帮助您管理工资单和税务文档的工资单工具。 
 
-  * "...认证 ... "
-  * "...支持者 ... "
+**请勿：**
 
-* 请勿将 "Microsoft" 缩写为 "MS" 或 "MSFT"-完全写满 Microsoft。
-* "说明" 或 "元数据" 的任何部分都不能将应用指示为官方 Microsoft 产品。
-* 合作伙伴可能不会使用或模仿任何 Microsoft 标志行，也不能在标语或标志行中使用任何 Microsoft 产品或服务的名称。
-* 徽标不能错误地将应用描述为官方 Microsoft 产品/功能，也不得模仿现有的或即将推出的 Microsoft 产品。
+* 请勿在描述中放入太多关键字，这令人分心，并且对应用的可发现性没有帮助。
+* 请勿以短名称使用 *"Teams"* 或 *"Microsoft Teams"。*
+* 除非绝对必要，否则避免不必要的 Microsoft 产品名称引用。
+* 不要指示该应用是 Microsoft 的产品/服务。
+* 请勿使用您不拥有的受版权保护的品牌名称。
+* 除非应用已经过正式的认证过程，否则请勿使用以下语言：
 
-![应用程序长说明存储视图](~/assets/images/store-detail-page/LongDescription-02.png)
+  * "...认证针对..."
+  * "...powered by..."
 
-下面是 [应用程序 Studio](https://aka.ms/InstallTeamsAppStudio)中的一个视图：
+* 不要将"Microsoft"缩写为"MS"或"MSFT"—完整地写出 Microsoft。
+* 说明或元数据的任何部分都不得将应用指示为官方 Microsoft 产品/服务。
+* 合作伙伴不得使用或模仿任何 Microsoft 标记，或在广告或标记中使用任何 Microsoft 产品或服务的名称。
+* 徽标不得错误地将应用描述为官方 Microsoft 产品/功能，或模仿任何现有或即将推出的 Microsoft 产品。
 
-![应用程序长说明应用程序工作室视图](~/assets/images/store-detail-page/LongDescription-01.png)
+![应用长描述应用商店视图](~/assets/images/store-detail-page/LongDescription-02.png)
+
+下面是 App Studio 中的 [视图](https://aka.ms/InstallTeamsAppStudio)：
+
+![应用长描述 App Studio 视图](~/assets/images/store-detail-page/LongDescription-01.png)
 
 ## <a name="screenshots"></a>屏幕截图
 
-在 [合作伙伴中心](https://partner.microsoft.com) 上传的屏幕截图显示在 " [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) " 和 "团队客户端" 中的应用程序列表中。 它们提供了应用程序的可视预览以及应用程序说明。
-您可以提供一到五个格式为 .png、.jpg 或 .gif 文件的屏幕截图。 屏幕截图应为 1366 x 768 像素，最大大小为 1024 KB。
+在合作伙伴中心上载的屏幕截图显示在[](https://partner.microsoft.com) [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)和 Teams 客户端的应用一览中。 它们提供应用的可视预览以及应用说明。
+你可以提供格式设置为 .png、.jpg 或 .gif 文件的一到五张屏幕截图。 屏幕截图应为 1366 x 768 像素，最大大小为 1024 KB。
 
-**请执行以下操作：**
+**需要：**
 
-* 重点强调您的应用程序的所有功能。
-* 内容应准确表示您的应用程序。
-* 应明确填充文本，而不会过度。
-* 您可以使用背景色包围屏幕截图，并添加类似于 [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) 示例的营销内容;但是，这些尺寸不会单独在屏幕截图中，而是会包含整个图像。
+* 专注于突出显示应用的所有功能。
+* 内容应准确地表示你的应用。
+* 文本应填充良好且不会过多。
+* 你可以用背景色将屏幕截图包围，并添加类似于 [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) 示例的营销内容;但是，尺寸不会仅包含屏幕截图，而是包括整个图像。
 
 <img width="800px" alt="Freshdesk screenshot" src="../../../../assets/images/freshdesk.png" />
 
-**应该**
+**请勿：**
 
-* 不显示特定设备，如电话或笔记本电脑。
-* 不要在你的应用程序之外显示任何 chrome/UI。
-* 不要在屏幕截图中捕获任何团队或浏览器 UI。
-* 不要包含未准确反映应用程序的模型，如显示网站而不是 "团队" 选项卡。
+* 不要显示特定设备，如手机或笔记本电脑。
+* 不要在应用外部显示任何部件版式/UI。
+* 不要在屏幕截图中捕获任何 Teams 或浏览器 UI。
+* 不要包含不精确反映应用实际 UI 的模拟，例如显示你的网站而不是 Teams 选项卡。
 
-有关更多最佳做法， *请参阅*： [起草有效的 AppSource 存储图像](/office/dev/store/craft-effective-appsource-store-images)。
+有关更多最佳实践，请参阅 *：*[精心制作有效的 AppSource 应用商店图像](/office/dev/store/craft-effective-appsource-store-images)。
 
 ## <a name="videos"></a>视频
 
-如果图像相当于一千个字，则视频相当于一千个图像。 视频是传达应用程序使用优势的最有效方式。 它将放在应用程序详细信息页面上的所有屏幕截图之前。 请务必注明以下内容：
+如果图像值得一千个字词，则视频值得一千个图像。 视频是传达使用你的应用的好处的最有效方法。 它将放置在应用详细信息页面上所有屏幕截图的前面。 请务必提到以下内容：
 
-* 您的应用程序的工作方式。
-* 您的应用程序可实现的功能。
-* 使用您的应用程序的好处。
-* 你的身份。
+* 应用的工作原理。
+* 你的应用可实现的目标。
+* 使用应用的好处。
+* 你负责的人。
 
-请记住，将演示文稿保持简短和最佳--介于30-90 秒之间。
+请记得保持演示文稿的简短和友好 - 介于 30-90 秒之间。
 
 ## <a name="learn-more"></a>了解更多
 
-[提交应用程序的清单](~/concepts/deploy-and-publish/appsource/publish.md)。  
-[为 Microsoft 团队应用程序创建应用程序包](~/concepts/build-and-test/apps-package.md)。  
-[使用 "合作伙伴中心" 将解决方案提交到 AppSource](/office/dev/store/use-partner-center-to-submit-to-appsource)。
+[应用提交的清单](~/concepts/deploy-and-publish/appsource/publish.md)。  
+[为 Microsoft Teams 应用创建应用包](~/concepts/build-and-test/apps-package.md)。  
+[使用合作伙伴中心将你的解决方案提交到 AppSource。](/office/dev/store/use-partner-center-to-submit-to-appsource)

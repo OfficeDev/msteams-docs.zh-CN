@@ -1,34 +1,35 @@
 ---
-title: 如何在本地电脑上开发呼叫和联机会议 bot
-description: 了解如何使用 ngrok 在本地电脑上开发呼叫和联机会议 bot。
+title: 在本地调试呼叫和会议机器人
+description: 了解如何使用 ngrok 在本地电脑上开发通话和联机会议机器人。
+ms.topic: how-to
 keywords: 本地开发 ngrok 隧道
 ms.date: 11/18/2018
-ms.openlocfilehash: b6cd2ba5a3866da8085b3da42377ab9e21f12f5f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e9b77df18c8d80f02134dc7912b5796023082039
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673413"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014304"
 ---
-# <a name="how-to-develop-calling-and-online-meeting-bots-on-your-local-pc"></a>如何在本地电脑上开发呼叫和联机会议 bot
+# <a name="how-to-develop-calling-and-online-meeting-bots-on-your-local-pc"></a>如何在本地电脑上开发通话和联机会议机器人
 
-在 "[运行" 和 "调试" 应用程序中，](../../concepts/build-and-test/debug.md)我们将介绍如何使用[ngrok](https://ngrok.com)在本地计算机和 internet 之间创建隧道。 在本主题中，您还可以了解如何使用 ngrok 和本地电脑来开发支持呼叫和联机会议的 bot。
+在 ["运行和调试你的应用"中](../../concepts/build-and-test/debug.md) ，我们将介绍如何使用 [ngrok](https://ngrok.com) 在本地计算机和 Internet 之间创建隧道。 在本主题中，了解如何使用 ngrok 和本地电脑开发支持通话和联机会议的机器人。
 
-邮件机器人使用 HTTP，但呼叫和联机会议 bot 使用低级别 TCP。 除了 HTTP 隧道之外，Ngrok 还支持 TCP 隧道;你将在下面了解如何操作。
+消息机器人使用 HTTP，但呼叫和联机会议机器人使用较低级别的 TCP。 Ngrok 除了支持 HTTP 隧道外，还支持 TCP 隧道;你将在下面了解如何操作。
 
-## <a name="configuring-ngrokyml"></a>配置 ngrok yml
+## <a name="configuring-ngrokyml"></a>配置 ngrok.yml
 
-转到[ngrok](https://ngrok.com)并注册免费帐户或登录到现有帐户。 登录后，请转到[仪表板](https://dashboard.ngrok.com)并获取 authtoken。
+转到 [ngrok](https://ngrok.com) 并注册免费帐户或登录到现有帐户。 登录后，转到 [仪表板并获取](https://dashboard.ngrok.com) authtoken。
 
-创建 ngrok 配置文件`ngrok.yml` （有关此文件位于何处的详细信息，请参阅[此处](https://ngrok.com/docs#config)），并添加以下行：
+创建 ngrok 配置文件 (，有关详细信息，请参阅此处有关此文件在) 的位置，并 `ngrok.yml` 添加以下行： [](https://ngrok.com/docs#config)
 
   `authtoken: <Your-AuthToken>`
 
 ## <a name="setting-up-signaling"></a>设置信号
 
-在[呼叫和联机会议 bot](./calls-meetings-bots-overview.md)中，我们讨论了呼叫信号—在呼叫过程中，bot 如何检测和响应新的呼叫和事件。 呼叫信号事件通过 HTTP POST 发送到 bot 的调用终结点。
+在 [通话和联机会议机器人](./calls-meetings-bots-overview.md)中，我们讨论了呼叫信号 — 机器人如何在通话过程中检测和响应新呼叫和事件。 呼叫信号事件通过 HTTP POST 发送到机器人的呼叫终结点。
 
-与 bot 的邮件 API 一样，为了让实时媒体平台与你的 bot 交流，你的 bot 必须可通过 internet 访问。 Ngrok 使此简单-将以下行添加到 Ngrok 中。 yml：
+与机器人的消息 API 一样，为了让实时媒体平台与机器人通信，必须通过 Internet 访问机器人。 Ngrok 使这一点变得简单 — 将以下行添加到您的 ngrok.yml：
 
 ```yaml
 tunnels:
@@ -40,13 +41,13 @@ tunnels:
 ## <a name="setting-up-local-media"></a>设置本地媒体
 
 > [!NOTE]
-> 仅应用程序托管的媒体 bot 需要此部分，如果你不自己托管媒体，则可以跳过此部分。
+> 此部分仅对应用程序托管的媒体机器人是必需的，如果你自己不托管媒体，可以跳过此部分。
 
-应用程序托管的媒体使用证书和 TCP 隧道。 以下步骤是必需的：
+应用程序托管的媒体使用证书和 TCP 隧道。 需要执行以下步骤：
 
-- Ngrok 的公共 TCP 终结点具有固定的 Url。 它们是`0.tcp.ngrok.io`、 `1.tcp.ngrok.io`等。 您应具有指向这些 Url 的服务的 DNS CNAME 条目。 在此示例中， `0.bot.contoso.com`假设引用`0.tcp.ngrok.io`、 `1.bot.contoso.com`引用`1.tcp.ngrok.io`，等等。
-- 您的 Url 需要 SSL 证书。 为了便于使用，请使用颁发给通配符域的 SSL 证书。 在这种情况下，应`*.bot.contoso.com`为。 此 SSL 证书由媒体 SDK 进行验证，因此它应与你的 bot 的公共 URL 相匹配。 记下指纹，并将其安装在计算机证书中。
-- 现在，设置 TCP 隧道以将流量转发到本地主机。 在 ngrok 中写入以下行： yml：
+- Ngrok 的公共 TCP 终结点具有固定 URL。 它们 `0.tcp.ngrok.io` 为 `1.tcp.ngrok.io` ，等等。 服务应具有指向这些 URL 的 DNS CNAME 条目。 本示例中，假设 `0.bot.contoso.com` 引用 `0.tcp.ngrok.io` 、 `1.bot.contoso.com` 引用 `1.tcp.ngrok.io` 等。
+- URL 需要 SSL 证书。 为了简单易用，请使用颁发给通配符域的 SSL 证书。 在这种情况下，它将 `*.bot.contoso.com` 是 。 此 SSL 证书由媒体 SDK 验证，因此应该与自动程序的公共 URL 相匹配。 记下指纹，并安装在计算机证书中。
+- 现在，设置 TCP 隧道以将流量转发到 localhost。 将以下行写入您的 ngrok.yml：
 
     ```yaml
     media:
@@ -56,11 +57,11 @@ tunnels:
 
 ## <a name="start-ngrok"></a>启动 ngrok
 
-现在，ngrok 配置已准备就绪，请启动它：
+现在 ngrok 配置已准备就绪，请启动它：
 
   `ngrok.exe start -all -config <Path to your ngrok.yml>`
 
-这将启动 ngrok 并定义提供本地主机隧道的公共 Url。 输出外观如下所示：
+这将启动 ngrok 并定义为 localhost 提供隧道的公共 URL。 输出如下所示：
 
 ```cmd
 Forwarding  http://signal.ngrok.io -> localhost:12345
@@ -68,15 +69,15 @@ Forwarding  https://signal.ngrok.io -> localhost:12345
 Forwarding  tcp://1.tcp.ngrok.io:12332 -> localhost:8445
 ```
 
-这里`12345`是信号端口， `8445`是应用程序托管的端口， `12332`是由 ngrok 公开的远程媒体端口。 请注意，我们已从`1.bot.contoso.com`转到`1.tcp.ngrok.io`。 这将用作 bot 的媒体 URL。 当然，这些端口号只是示例，您可以使用任何可用的端口。
+此处是信号端口，是应用程序托管的端口，也是 `12345` `8445` `12332` ngrok 公开的远程媒体端口。 请注意，我们有一个从到的 `1.bot.contoso.com` 转发 `1.tcp.ngrok.io` 。 这将用作机器人的媒体 URL。 当然，这些端口号只是示例，您可以使用任何可用的端口。
 
 ### <a name="update-code"></a>更新代码
 
-在 ngrok 已启动并在运行后，更新代码以使用刚刚设置的配置。
+ngrok 启动并运行后，更新代码以使用刚设置配置。
 
 #### <a name="update-signaling"></a>更新信号
 
-- 在 BotBuilder 调用中，将更改`NotificationUrl`为 ngrok 提供的信号 URL。
+- 在 BotBuilder 调用中，将更改为 `NotificationUrl` ngrok 提供的信号 URL。
 
 ```csharp
 statefulClientBuilder.SetNotificationUrl(
@@ -84,15 +85,15 @@ statefulClientBuilder.SetNotificationUrl(
 ```
 
 > [!NOTE]
-> 将信号替换为 ngrok 提供的和`NotificationEndpoint`接收通知的控制器路径。
+> 将信号替换为 ngrok 提供的信号，将信号替换为接收通知 `NotificationEndpoint` 的控制器路径。
 
-> **重要说明**：中`SetNotificationUrl`的 URL 必须是 HTTPS。
+> **重要** 提示：输入的 URL `SetNotificationUrl` 必须为 HTTPS。
 
-> **重要说明**：您的本地实例必须侦听信号端口上的 HTTP 流量。 呼叫和联机会议平台发出的请求将机器人作为 localhost HTTP 流量，除非设置端到端加密。
+> **重要** 提示：本地实例必须侦听信号端口上的 HTTP 流量。 除非设置了端到端加密，否则呼叫和联机会议平台提出的请求将作为 localhost HTTP 流量到达机器人。
 
 #### <a name="update-media"></a>更新媒体
 
-更新`MediaPlatformSettings`到以下项。
+将 `MediaPlatformSettings` 更新为以下内容。
 
 ```csharp
 var mediaPlatform = new MediaPlatformSettings
@@ -110,14 +111,14 @@ var mediaPlatform = new MediaPlatformSettings
 ```
 
 > [!NOTE]
-> 上面提供的证书指纹应与服务 FQDN 相匹配。 这就是为什么需要 DNS 条目的原因。
+> 上面提供的证书指纹应匹配服务 FQDN。 这就是需要 DNS 条目的原因。
 
 ## <a name="next-steps"></a>后续步骤
 
-你的 bot 现在可以在本地运行，并且所有流都可以从本地主机运行。
+现在，机器人可以在本地运行，并且所有流都可以从 localhost 运行。
 
-## <a name="caveats"></a>几点
+## <a name="caveats"></a>警告
 
-- Ngrok 免费帐户**不**提供端到端加密。 HTTPS 数据在 ngrok URL 和从 ngrok 到`localhost`之间未加密的数据流处结束。 如果需要端到端加密，请考虑使用付费的 ngrok 帐户。 有关设置安全端到端隧道的步骤，请参阅[TLS 隧道](https://ngrok.com/docs#tls)。
-- 由于 bot 回调 URL 是动态的，因此传入呼叫方案要求您频繁更新 ngrok 终结点。 解决此问题的一种方法是使用付费的 ngrok 帐户，该帐户提供可将你的 bot 和平台指向的固定子域。
-- Ngrok 隧道也可用于[Azure Service Fabric](/azure/service-fabric/service-fabric-overview)。 有关如何执行此操作的示例，请参阅[HueBot 示例应用程序](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)。
+- Ngrok 免费 **帐户不提供** 端到端加密。 HTTPS 数据以 ngrok URL 结尾，数据流未加密，从 ngrok 到 `localhost` 。 如果需要端到端加密，请考虑使用付费 ngrok 帐户。 有关设置安全的端到端隧道的步骤，请参阅 [TLS](https://ngrok.com/docs#tls) 隧道。
+- 由于机器人回调 URL 是动态的，因此传入呼叫方案需要频繁更新 ngrok 终结点。 解决此问题的一个方法就是使用付费 ngrok 帐户，该帐户提供你可以指向机器人和平台的固定子域。
+- Ngrok 隧道还可以与 Azure [Service Fabric 一同使用](/azure/service-fabric/service-fabric-overview)。 有关如何操作的示例，请参阅 [HueBot 示例应用](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)。
