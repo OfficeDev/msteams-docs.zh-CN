@@ -1,46 +1,44 @@
 ---
-title: 开始使用应用程序 Studio 和 Node.js
-description: 使用 Node.js 和应用程序工作室开始在 Microsoft 团队中构建出色的应用程序
-keywords: node.js nodejs App Studio 入门
+title: 教程 - 使用工具创建第一Node.js
+description: 了解如何开始生成 Microsoft Teams Node.js。
+keywords: nodejs App Studio node.js入门
 ms.topic: tutorial
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 3d86738d32c049d31a84c6c47746e275db5e6349
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: 03dcf79a46266321e54c7e99bf01cdd2a87075fa
+ms.sourcegitcommit: fa64b83c0b534bf7a89f256880d5b5ca193e4b04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931811"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "50037044"
 ---
-# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>使用 Node.js 和应用程序工作室开始使用 Microsoft 团队平台
+# <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>使用应用创建你的第一个 Microsoft Teams Node.js
 
-[Microsoft 团队](/microsoftteams/)开发人员平台使您能够轻松扩展团队并将自己的应用程序和服务与团队工作区无缝集成。 然后，可以将这些应用分发到企业或世界各地的团队。
-
-若要扩展 Microsoft 团队，您需要创建 Microsoft 团队应用程序。 Microsoft 团队应用程序是您承载的 web 应用程序。 然后，可以将此应用集成到团队中的用户工作区中。
+本教程帮助你开始使用 Microsoft Teams Node.js。
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
 <a name="DownloadAndHost"></a>
 
-## <a name="download-and-host-your-app"></a>下载并托管你的应用程序
+## <a name="download-and-host-your-app"></a>下载和托管应用
 
-按照以下步骤在团队中下载并托管一个简单的 "hello world" 应用。
+按照以下步骤在 Teams 中下载并托管简单的"hello world"应用。
 
 <a name="GetPrerequisites"></a>
 
 ### <a name="get-prerequisites"></a>获取先决条件
 
-若要完成本教程，您需要以下工具。 如果尚不具备这些链接，可以从这些链接进行安装。
+若要完成本教程，你需要以下工具。 如果尚未安装它们，可以从这些链接安装它们。
 
 - [Git](https://git-scm.com/downloads)
-- [Node.js 和 NPM](https://nodejs.org/)
-- 获取任何文本编辑器或 IDE。 您可以免费安装和使用 [Visual Studio Code](https://code.visualstudio.com/download) 。
+- [Node.js和 NPM](https://nodejs.org/)
+- 获取任何文本编辑器或 IDE。 你可以免费安装和Visual Studio [代码](https://code.visualstudio.com/download) 。
 
-如果您在 `git` 安装过程中看到要向路径添加、 `node` 、和的选项，请 `npm` `code` 选择执行此操作。 这将很方便。
+如果在安装过程中看到用于添加 、 和路径的选项， `git` `node` `npm` `code` 请选择这样做。 它很方便。
 
-在终端窗口中运行以下命令，验证这些工具是否可用：
+在终端窗口中运行以下代码，验证这些工具是否可用：
 
 > [!NOTE]
-> 在你的平台上使用你最舒适的终端窗口。 这些示例使用在 Git) 中包含的 Bash (，但这些脚本将在大多数平台上运行。
+> 使用你最熟悉平台的终端窗口。 这些示例使用 Git (中包含的 Bash) ，但这些脚本将在大多数平台上运行。
 
 ```bash
 $ git --version
@@ -57,11 +55,11 @@ CLI version 2.3.0
 Local version 4.0.2
 ```
 
-您可能具有这些应用程序的不同版本。 这不应是问题，gulp 除外。 对于 gulp，你将需要使用版本4.0.0 或更高版本。
+这些应用程序可能具有不同的版本。 这应该不是问题，但 gulp 除外。 对于 gulp，你需要使用版本 4.0.0 或更高版本。
 
-如果未 (安装 gulp，或者安装了错误的版本) ，请立即 `npm install gulp` 在终端窗口中运行以执行此操作。
+如果未将 gulp (或安装的版本) ，则现在在终端窗口中 `npm install gulp` 运行。
 
-如果已安装 Visual Studio Code，可以通过运行以下命令来验证安装：
+如果已安装Visual Studio代码，则可以通过运行以下代码来验证安装：
 
 ```bash
 code --version
@@ -69,49 +67,49 @@ code --version
 929bacba01ef658b873545e26034d1a8067445e9
 ```
 
-您可以继续使用此终端窗口运行本教程后面的命令。
+你可以继续使用此终端窗口运行本教程中遵循的命令。
 
 <a name="DownloadSample"></a>
 
 ### <a name="download-the-sample"></a>下载示例
 
-我们提供了一个简单的 [Hello，World！](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) 入门示例。 在终端窗口中，运行以下命令以将示例存储库克隆到本地计算机：
+我们提供了简单的 [Hello， World！](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) 示例，以开始。 在终端窗口中，运行以下命令将示例存储库克隆到本地计算机：
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs.git
 ```
 
 > [!TIP]
-> [如果要](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs)修改和签入 GitHub 存储库的更改，以供将来参考，可以[派生](https://help.github.com/articles/fork-a-repo/)此存储库。
+> 如果要[修改并](https://help.github.com/articles/fork-a-repo/)[签入对](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs)GitHub 存储库的更改，可分叉此存储库供将来参考。
 
 <a name="BuildRun"></a>
 
 ### <a name="build-and-run-the-sample"></a>生成和运行示例
 
-克隆存储库后，转到包含示例的目录：
+克隆存储库后，请更改为包含示例的目录：
 
 ```bash
 cd msteams-samples-hello-world-nodejs
 ```
 
-为了生成示例，您需要安装其所有依赖项。 运行以下命令来执行此操作：
+为了生成示例，需要安装其所有依赖项。 运行以下命令以执行下列操作：
 
 ```bash
 npm install
 ```
 
-您应该会看到一组已安装的依赖项。 完成后，您可以运行应用程序：
+你应该会看到一组依赖项正在安装。 完成后，你可以运行应用：
 
 ```bash
 npm start
 ```
 
-当 hello world 应用程序启动时，它将显示 `App started listening on port 3333` 在终端窗口中。
+当 hello-world 应用启动时，它将 `App started listening on port 3333` 在终端窗口中显示。
 
 > [!NOTE]
-> 如果您看到上面的消息中显示了不同的端口号，则是因为您有一个端口环境变量集。 您可以继续使用该端口或将环境变量更改为3333。
+> 如果上述消息中显示不同的端口号，这是因为您设置了一个 PORT 环境变量。 您可以继续使用该端口，也可以将环境变量更改为 3333。
 
-此时，您可以打开浏览器窗口并导航到以下 Url，以验证是否已加载所有应用程序 Url：
+此时，你可以打开浏览器窗口并导航到以下 URL 以验证所有应用 URL 是否正在加载：
 
 - [http://localhost:3333](http://localhost:3333)
 - [http://localhost:3333/hello](http://localhost:3333/hello)
@@ -120,45 +118,45 @@ npm start
 
 <a name="HostSample"></a>
 
-### <a name="host-the-sample-app"></a>承载示例应用程序
+### <a name="host-the-sample-app"></a>托管示例应用
 
-请注意，Microsoft 团队中的应用是公开一个或多个功能的 web 应用程序。 若要使团队平台加载您的应用程序，您的应用程序必须可从 internet 访问。 若要使您的应用程序可从 internet 访问，您需要 *托管* 您的应用程序。
+请记住，Microsoft Teams 中的应用是公开一个或多个功能的 Web 应用程序。 若要让 Teams 平台加载你的应用，必须从 Internet 访问你的应用。 若要使应用从 Internet 访问，你需要 *托管* 你的应用。
 
-对于本地测试，可以在本地计算机上运行应用程序，并使用 web 终结点创建与之的隧道。 [ngrok](https://ngrok.com) 是一个免费工具，可让你做到这一点。 通过 *ngrok* ，您可以获取 web 地址（如 `https://d0ac14a5.ngrok.io` (此 URL 只是一个示例) ）。 您可以为您的环境 [下载并安装](https://ngrok.com/download) *ngrok* 。 请确保将其添加到中的某个位置 `PATH` 。
+对于本地测试，可以在本地计算机上运行应用，并创建一个使用 Web 终结点的隧道。 [ngrok](https://ngrok.com) 是一款免费工具，允许你执行这一操作。 通过 *ngrok，* 您可以获取 Web 地址， `https://d0ac14a5.ngrok.io` 例如 (此 URL 只是一个) 。 您可以 [为环境](https://ngrok.com/download)*下载并安装 ngrok。* 请确保将其添加到您的位置 `PATH` 。
 
-安装后，可以打开一个新的终端窗口并运行以下命令来创建隧道。 此示例使用端口3333，因此请务必在此处指定它。
+安装后，可以打开一个新的终端窗口并运行以下命令以创建隧道。 此示例使用端口 3333，因此请务必在此处指定它。
 
 ```bash
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok* 将侦听来自 internet 的请求，并将其路由到在端口3333上运行的应用。 您可以通过打开浏览器并转到 `https://d0ac14a5.ngrok.io/hello` 加载应用程序的 hello 页面来进行验证。 请务必使用控制台会话中由 *ngrok* 显示的转发地址，而不是此 URL。
+*Ngrok* 将侦听来自 Internet 的请求，并路由到在端口 3333 上运行的应用。 可以通过打开浏览器并加载 `https://d0ac14a5.ngrok.io/hello` 应用的 Hello 页面进行验证。 请确保使用 *ngrok* 在控制台会话中显示的转发地址，而不是此 URL。
 
 > [!NOTE]
-> 如果您在上面的 " [内部版本" 和 "运行](#build-and-run-the-sample) " 步骤中使用了不同的端口，请确保使用相同的端口号设置 *ngrok* 隧道。
+> 如果在以上构建和运行步骤中使用不同的端口 [](#build-and-run-the-sample)，请确保使用相同的端口号来设置 *ngrok* 隧道。
 > [!TIP]
-> 最好在不同的终端窗口中运行 *ngrok* ，使其保持运行状态，而不会干扰您稍后可能需要停止、重新生成和重新运行的节点应用。 *Ngrok* 会话将在此窗口中返回有用的调试信息。
+> 建议在不同的终端窗口中运行 *ngrok* 以保持其运行，而不会干扰节点应用，稍后可能需要停止、重新生成和重新运行节点应用。 *ngrok* 会话将在此窗口中返回有用的调试信息。
 
-有 *ngrok* 的付费版本允许使用永久名称。 如果您使用的是免费版本，应用程序将仅在开发计算机上的当前会话过程中可用。 如果计算机关闭或进入睡眠状态，服务将不再可用。 在共享应用程序以供其他用户测试时，请记住这一点。 如果必须重新启动服务，它将返回一个新地址，并且您必须更新使用该地址的每个位置。
+存在允许永久名称 *的付费版本的 ngrok。* 如果你使用免费版本，你的应用将仅在开发计算机上当前会话期间可用。 如果计算机关闭或进入睡眠状态，服务将不再可用。 在共享应用供其他用户进行测试时，请记住这一点。 如果必须重新启动服务，它将返回一个新地址，并且必须更新使用该地址的每一位置。
 
-请记住，请记下你的应用程序的 URL，因为你稍后在使用应用程序 studio 向团队注册应用时将需要这样做。 为了实现此目的，记事本工作正常。
+请记住，记下应用的 URL，因为稍后使用 App studio 向 Teams 注册应用时将需要此 URL。 记事本可以正常使用。
 
 <a name="DeployToTeams"></a>
 
-## <a name="deploy-your-app-to-microsoft-teams"></a>将应用程序部署到 Microsoft 团队
+## <a name="deploy-your-app-to-microsoft-teams"></a>将应用部署到 Microsoft Teams
 
-此时，您有一个托管在 internet 上的应用程序，但您还没有办法告诉团队在哪里查找它，甚至您的应用程序已被调用。 若要执行此操作，您现在必须创建一个应用程序包。 这只是一个文本文件，其中包含应用程序清单和一些图标，团队客户端将使用这些图标来正确地显示应用程序并为其打造品牌。 您可以手动创建此应用程序包，也可以使用应用程序工作室（在将简化应用程序注册过程的团队中运行的工具）。 应用程序使用 Studio 是创建和更新应用程序包的推荐方法。
+此时，你拥有一个在 Internet 上托管的应用，但你无法告诉 Teams 在哪里查找它，甚至无法告诉应用被叫什么。 为此，你现在必须创建应用包。 这不仅仅是一个文本文件，其中包含应用清单和一些 Teams 客户端用于正确显示和标记应用的图标。 你可以手动创建此应用包，或者可以使用 App Studio，这是在 Teams 中运行的工具，可简化注册应用的过程。 App Studio 是建议创建和更新应用包的方法。
 
-对于这两种方法，您都需要以下各项：
+对于任一方法，你都需要以下各项：
 
-- 在 internet 上可以找到你的应用程序的 URL。
-- 团队将用来为你的应用程序建立品牌的图标。 示例附带了位于 "src\static\images." 中的占位符图标。 如果需要，应用程序 Studio 还将提供默认图标。
+- 可在 Internet 上找到应用的 URL。
+- Teams 用于为你的应用打造品牌的图标。 该示例附带位于"src\static\images"中的占位符图标。 如果需要，App Studio 还将提供默认图标。
 
 [!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
-## <a name="update-your-hosted-app"></a>更新承载的应用程序
+## <a name="update-your-hosted-app"></a>更新托管的应用
 
-示例应用程序需要将以下环境变量设置为您在前面记下的值。
+示例应用要求将以下环境变量设置为之前记录的值。
 
 ```
 MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
@@ -166,9 +164,9 @@ MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
-执行此操作的方式取决于您的应用程序的承载方式。 使用环境变量的重要一点是，这些值是环境的一部分-可以通过应用程序的代码来访问它们，但它们不会向可能检查构成网站的文件的第三方公开。
+具体操作方式因承载应用方式不同而不同。 使用环境变量的一个重要内容是，这些值是环境的一部分-你的应用的代码可以访问它们，但它们不会向可能检查网站文件的第三方公开。
 
-如果您正在使用 ngrok 运行应用程序，则需要设置一些本地环境变量。 有多种方法可以实现此目的，但如果您使用 Visual Studio Code，最简单的方法是添加 [启动配置](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)：
+如果使用 ngrok 运行应用，则需要设置一些本地环境变量。 执行此操作的方法有很多，但如果使用的是 Visual Studio 代码，最简单的方法是添加 [启动配置](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)：
 
 ``` 
 {
@@ -190,37 +188,37 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 其中：
 
-MICROSOFT_APP_ID 和 MICROSOFT_APP_PASSWORD 分别是您的 bot 的 ID 和密码。
-NODE_DEBUG 将在 Visual Studio Code 调试控制台中显示你的 bot 中发生的情况。
-NODE_CONFIG_DIR 指向存储库根目录下的目录 (默认情况下，在本地运行应用程序时，它会在 src 文件夹) 中查找它。
+MICROSOFT_APP_ID和MICROSOFT_APP_PASSWORD是自动程序 ID 和密码。
+NODE_DEBUG代码调试控制台中的自动程序Visual Studio发生的情况。
+NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当应用在本地运行时，它将在 src 文件夹中查找它) 。
 
 > [!Note]
-> 如果您在本教程的前面部分没有停止 npm，则需要运行 `npm stop` Visual Studio 代码，以便正确地拾取您的启动配置变量。
+> 如果你尚未从本教程的前面部分停止 npm，则需要运行，以便Visual Studio代码正确拾取启动配置 `npm stop` 变量。
 
 <a name="ConfigureTheAppTab"></a>
 
-## <a name="configure-the-app-tab"></a>配置 "应用程序" 选项卡
+## <a name="configure-the-app-tab"></a>配置应用选项卡
 
-将应用程序安装到团队后，需要将其配置为显示内容。 转到团队中的频道并单击 **"+"** 按钮以添加新的选项卡。然后，可以 `Hello World` 从 " **添加选项卡** " 列表中进行选择。 随后将显示配置对话框。 此对话框将允许您选择要在此通道中显示的选项卡。 选择选项卡并单击 "" 时， `Save` 可以看到在所 `Hello World` 选的选项卡上加载的选项卡。
+将应用安装到团队后，你需要将其配置为显示内容。 转到团队中的频道，然后单击 **"+"** 按钮以添加新选项卡。然后，可以从 `Hello World` "添加选项卡 **"列表中选择** 。 然后，将显示配置对话框。 此对话框将让你选择要在此通道中显示的选项卡。 选择该选项卡并单击后 `Save` ，即可看到已加载的 `Hello World` 选项卡以及您选择的选项卡。
 
 <img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" alt-text="Screenshot of configure" />
 
-### <a name="test-your-bot-in-teams"></a>在团队中测试你的 bot
+### <a name="test-your-bot-in-teams"></a>在 Teams 中测试机器人
 
-现在可以与团队中的 bot 进行交互。 选择您在其中注册应用程序的团队中的频道，然后键入，然后键入 `@your-bot-name` 您的消息。 这称为 " **\@ 提及** "。 发送到 bot 的任何邮件都将作为答复发送回您。
+现在，你可以与 Teams 中的机器人进行交互。 选择你注册应用的团队中的频道，然后键入 `@your-bot-name` ，然后键入消息。 这称为 **\@ 提及**。 向自动程序发送的任何消息都将作为回复发送回。
 
 <img width="450px" alt-text="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 <a name="ComposeRichMessages"></a>
 
-### <a name="test-your-messaging-extension"></a>测试消息扩展
+### <a name="test-your-messaging-extension"></a>测试邮件扩展
 
-若要测试您的邮件扩展插件，可以单击对话视图中输入框下的三个点。 将弹出一个菜单，其中包含 **"Hello World"** 应用。 当您单击它时，您将看到大量随机文本。 您可以选择其中的任何一个，并将其插入到对话中。
+若要测试消息扩展，可以单击对话视图中输入框下方的三个点。 菜单将弹出，并 **包含"Hello World"** 应用。 单击它时，你将看到大量随机文本。 可以选择其中任何一个，并将其插入到对话中。
 
 <img width="430px" alt-text="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
 <img width="430px" alt-text="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-选择一种随机文本，您将看到一张卡片的格式并准备好在底部使用您自己的消息进行发送。
+选择随机文本之一，你将在底部看到一张格式化卡片，并准备好随自己的邮件一起发送。
 
 <img width="430px" alt-text="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
