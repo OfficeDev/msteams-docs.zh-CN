@@ -5,12 +5,12 @@ description: 为团队会议创建应用
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 82327eca86dcdac5c47f5f4471bc91d55484d07e
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 7f6d8fec735aa21033c6bcb2462c20458634f10a
+ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797762"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50073094"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -30,7 +30,7 @@ ms.locfileid: "49797762"
 
 ## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
-|API|说明|请求|Source|
+|API|Description|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 获取上下文信息以在 Teams 选项卡中显示相关内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams 客户端 SDK|
 |**GetParticipant**|此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -52,7 +52,7 @@ ms.locfileid: "49797762"
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**meetingId**| string | 是 | 会议标识符通过 Bot Invoke 和 Teams 客户端 SDK 提供。|
 |**participantId**| string | 是 | participantId 是用户 ID。 它可在 Tab SSO、Bot Invoke 和 Teams 客户端 SDK 中提供。 强烈建议从 Tab SSO 获取 participantId。 |
@@ -151,7 +151,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**conversationId**| string | 是 | 对话标识符作为自动程序调用的一部分提供 |
 
@@ -307,7 +307,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ✔请参阅 [选项卡的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。
 
-✔ 使用 [通知](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API 发出需要触发气泡通知的信号。
+✔ [使用 NotificationSignal API](create-apps-for-teams-meetings.md#notificationsignal-api) 发出需要触发气泡通知的信号。
 
 ✔作为通知请求有效负载的一部分，请包含要展示内容的托管 URL。
 

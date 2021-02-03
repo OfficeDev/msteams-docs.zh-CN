@@ -4,12 +4,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: 36d30c0be3d562c7a71989355249f0cfa76e797d
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: edf84ad8902fa3b4a1827ffde415097aac978532
+ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014080"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50073087"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -254,7 +254,7 @@ ms.locfileid: "50014080"
             "body":[
                 {
                 "type": "TextBlock",
-                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
                 }
             ]
          }

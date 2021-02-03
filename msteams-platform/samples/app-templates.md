@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams 模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 4a9b2ee9a5fadfa86dead4a15f49a6cea67d4963
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 573291a9747b3df3cbdd11c52fe8f1d71525f0f6
+ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795484"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50072887"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -27,7 +27,7 @@ ms.locfileid: "49795484"
 
 ## <a name="appointment-manager-9734"></a>约会管理器&#9734;
 
-约会管理器是一个 Teams 应用模板，可帮助企业通过 Teams 创建、管理和与消费者进行虚拟约会。 来自消费者的新约会请求在 Teams 频道中可见，可在其中快速分配这些请求并将其重新分配到团队中的员工。 可以通过自定义选项卡在团队或个人级别查看约会请求。 每个约会都与 Teams 联机会议关联，因此员工和使用者可以在计划的时间轻松加入会议。
+约会管理器是一个 Teams 应用模板，可帮助企业通过 Teams 创建、管理和与消费者进行虚拟约会。 来自消费者的新约会请求在 Teams 频道中可见，可在其中快速分配这些请求并将其重新分配给团队中的员工。 可以通过自定义选项卡在团队或个人级别查看约会请求。 每个约会都与 Teams 联机会议关联，因此员工和使用者可以在计划的时间轻松加入会议。
 
 该应用模板与 Microsoft Bookings 集成，便于进行约会管理。 安排的约会会自动显示在已分配员工的日历上，并且消费者会收到包含嵌入式会议链接的可自定义电子邮件通知和提醒。
 
@@ -38,7 +38,7 @@ ms.locfileid: "49795484"
 
 ## <a name="ask-away"></a>询问离开
 
-"离开"是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 自动程序，使用户能够在 Teams 中&问答 (问答) 问答会话。 使用"询问离开"自动程序，团队成员可以提交和投票讨论同事共享的问题，从而让问答&主机在频道或聊天中轻松收集顶级问题。 机器人可用于在 Teams&会话期间执行实时问答，并允许与会者通过聊天实时提交问题。
+"离开"是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 自动程序，使用户能够在 Teams 中&问答 (问答) 问答会话。 使用"询问离开"机器人，团队成员可以提交和投票讨论同事共享的问题，从而允许问答&主机在频道或聊天中轻松收集顶级问题。 机器人可用于在 Teams&会话期间执行实时问答，并允许与会者通过聊天实时提交问题。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
 
@@ -71,11 +71,11 @@ ms.locfileid: "49795484"
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
-![出席应用演示](../assets/images/attendance-app.png)
+![参加应用演示](../assets/images/attendance-app.png)
 
 ## <a name="book-a-room"></a>预订房间
 
-会议室预订是一个 [Microsoft Teams](../bots/what-are-bots.md) 自动程序，用户可以从当前时间开始快速查找会议室并保留 30 (默认) 、60 或 90 分钟。 "预订房间"自动程序范围为个人对话或一对一对话。
+会议室预订是一个 [Microsoft Teams](../bots/what-are-bots.md) 自动程序，用户可以从当前时间开始快速查找会议室并保留 30 (默认) 、60 或 90 分钟。 会议室预订自动程序范围为个人对话或一对一对话。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
@@ -83,7 +83,7 @@ ms.locfileid: "49795484"
 
 ## <a name="building-access"></a>Building Access
 
-Building Access 是一款基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)的应用，它通过允许设施控制器管理、跟踪和报告员工现场状态，支持管理建筑物阈值和社会实例规范。 使用 Microsoft Power [Apps](/powerapps/powerapps-overview)和 [Power Automate](/power-automate/getting-started)构建的应用与 Microsoft Teams 深度集成，使组织可以确定构建就绪情况，建立现场访问资格标准，并收集用于未来规划的见解。
+Building Access 是一款基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)的应用，它通过允许设施控制器管理、跟踪和报告员工现场状态，支持管理建筑物阈值和社会解除阈值。 使用 Microsoft Power [Apps](/powerapps/powerapps-overview)和 [Power Automate](/power-automate/getting-started)构建的应用与 Microsoft Teams 深度集成，使组织可以确定构建就绪情况，建立现场访问的资格标准，并收集未来规划的见解。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
 
@@ -98,7 +98,7 @@ Building Access 是一款基于 Microsoft [Power Platform](https://powerapps.mic
 
 ## <a name="celebrations"></a>Celebrations
 
-庆祝是一款 Teams 应用，可帮助团队成员庆祝彼此的生日、纪念日和其他定期事件。 它记住所有团队成员的特殊场合，并发送在事件创建时选择的所有团队中的友好消息，使团队成员在一天中感觉特别。
+庆祝是一款 Teams 应用，可帮助团队成员庆祝彼此的生日、周年日和其他定期事件。 它记住所有团队成员的特殊场合，并发送在事件创建时选择的所有团队中的友好消息，使团队成员在一天中感觉特别。
 
 该应用提供了一个简单的界面，供所有团队成员个人添加和查看其事件，还允许用户选择共享事件的团队。
 
@@ -118,7 +118,7 @@ Building Access 是一款基于 Microsoft [Power Platform](https://powerapps.mic
 
 ## <a name="classroom-drop-in-9734"></a>课堂放置&#9734;
 
-Classroom Drop-in 是一款基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)的应用，系统领导可根据需要查找课堂团队 (虚拟教室) 并根据需要将自己或其他人添加到这些课堂团队中。 使用 Microsoft [Power Apps](/powerapps/powerapps-overview) 和 [Power Automate](/power-automate/getting-started)构建的应用与 Microsoft Teams 深度集成，以确保教育机构可以针对每个业务要求向相关利益干系人提供对课堂团队的访问权限，从而优化他们在混合学习环境中的操作。
+Classroom Drop-in 是一款基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)的应用，系统领导可根据需要查找课堂团队 (虚拟教室) 并根据需要将自己或其他人添加到这些课堂团队中。 使用 Microsoft [Power Apps](/powerapps/powerapps-overview) 和 [Power Automate](/power-automate/getting-started)构建的应用与 Microsoft Teams 深度集成，以确保教育机构可以通过根据业务要求向课堂团队的相关利益干系人提供访问权限，从而优化他们在混合学习环境中的操作。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
 
@@ -126,7 +126,7 @@ Classroom Drop-in 是一款基于 Microsoft [Power Platform](https://powerapps.m
 
 ## <a name="company-communicator"></a>Company Communicator
 
-公司Communicator应用允许公司团队通过聊天创建和发送面向多个团队或大量员工的消息，从而允许组织在员工协作的地方与员工联系。 针对多个方案（如新计划公告、员工入职培训、新式学习与开发或组织范围的广播）使用此模板。
+公司Communicator应用使企业团队通过聊天创建和发送面向多个团队或大量员工的消息，从而允许组织在员工协作的地方与员工联系。 此模板可用于多个方案，例如新计划公告、员工入职培训、新式学习与开发或组织范围的广播。
 
 该应用为指定用户提供了用于创建、预览、协作和发送邮件的简便界面。
 
@@ -171,9 +171,9 @@ CrowdSourcer 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 自动程�
 
 ## <a name="custom-stickers"></a>自定义贴纸
 
-自我表达是健康团队文化的核心。 此应用程序模板是 [一个消息](~/messaging-extensions/what-are-messaging-extensions.md) 扩展，允许用户在 Microsoft Teams 内使用自定义贴纸和 GIF。 此模板提供基于 Web 的轻松配置体验，具有配置访问权限的任何人都可以上载他们希望最终用户拥有的 GIF/贴纸/图像，从而允许整个团队使用你选择的任何贴纸集。
+自我表达是健康团队文化的核心。 此应用模板 [是一个消息](~/messaging-extensions/what-are-messaging-extensions.md) 扩展，允许用户在 Microsoft Teams 内使用自定义贴纸和 GIF。 此模板提供基于 Web 的轻松配置体验，具有配置访问权限的任何人都可以上载他们希望最终用户拥有的 GIF/贴纸/图像，从而允许整个团队使用你选择的任何贴纸集。
 
-此应用程序还支持跨团队轻松共享图像/GIF/贴纸，而无需访问 SharePoint 网站或作为存储和共享机制的单个通道。 例如，产品团队可以编程方式轻松地将产品图像和 GIF 共享到社交媒体、市场营销和销售团队。 当提供新映像/GIF 时，还可以通过向特定团队/个人触发通知流来扩展此应用。
+此应用程序还支持跨团队轻松共享图像/GIF/贴纸，而无需访问 SharePoint 网站或作为存储和共享机制的单个通道。 例如，产品团队可以编程方式轻松地将产品图像和 GIF 共享到社交媒体、市场营销和销售团队。 当提供新映像/GIF 时，还可以通过触发通知流到特定团队/个人来扩展此应用。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
@@ -181,7 +181,7 @@ CrowdSourcer 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 自动程�
 
 ## <a name="employee-ideas-9734"></a>员工想法&#9734;
 
-"员工创意"应用是基于 Azure 的"创意"应用模板的 PowerApps 版本。 通过该应用，Teams 用户可以设置和配置创意活动。 创意活动是围绕常见主题对想法进行分组的类别。
+"员工创意"应用是基于 Azure 的"创意"应用模板的 PowerApps 版本。 此应用使 Teams 用户可以设置和配置创意活动。 创意活动是围绕常见主题对想法进行分组的类别。
 
 Teams 用户还可以执行以下活动：
 * 配置员工需要为每个想法提交的标准提交表单。 
@@ -189,10 +189,10 @@ Teams 用户还可以执行以下活动：
 * 修改和删除市场活动。
 * 审阅想法排行榜。
 * 投票讨论并分享优先想法。
-* 提交市场活动想法。
+* 提交宣传活动想法。
 * 查看其他团队成员的想法。
 * 对最喜欢的想法投票。
-* 查看与活动中其他人相比他们想法的绩效。
+* 查看他们与活动中其他人相比想法的绩效。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-employeeideas)
 
@@ -200,7 +200,7 @@ Teams 用户还可以执行以下活动：
 
 ## <a name="e-prescriptions"></a>E-Prescriptions 
 
-E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)的应用，它通过自动执行向患者发布电子医疗方案的过程来增强远程医疗与虚拟医疗保健。 医疗专业人员可以直接在 Teams 平台内快速查看约会、生成电子医疗方案，并通过电子邮件向患者发送包含电子医疗附件的电子邮件。
+E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)的应用，它通过自动执行向患者发布电子医疗方案的过程来增强远程医疗与虚拟医疗保健。 医疗专业人员可以直接在 Teams 平台内快速查看约会、生成电子医疗方案，以及向患者发送包含电子医疗附件的电子邮件。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
 
@@ -215,9 +215,21 @@ E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-a
 :::column-end:::
 :::row-end:::
 
+
+## <a name="emergency-button-power-9734"></a>紧急按钮电源&#9734;
+
+使用 Microsoft Teams 的组织可以使用紧急按钮电源应用，以允许任何一组用户向监督员请求帮助。 此应用包括各种功能，例如：
+-   从 Power App 请求有关不同类别的帮助
+-   发送给请求者的通知，告知他们已分配了谁 
+-   发送给指定监督员的通知，告知他们谁需要帮助 
+-   查看 SharePoint 中召开的审核跟踪
+
+[在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
+
+
 ## <a name="employee-training"></a>员工培训 
 
-员工培训是一款 Microsoft Teams 应用，可让组织者轻松发布、跟踪和推广组织的学习和培训活动。  借助该应用，事件规划人员可以向事件注册人发送提醒和通知，员工可以指示对即将开始的活动感兴趣，及时了解当前事件，以及通过 Teams 消息扩展与同事共享事件详细信息。
+员工培训是一款 Microsoft Teams 应用，可让组织者轻松发布、跟踪和推广组织的学习和培训活动。  借助该应用，事件规划人员可以向事件注册人发送提醒和通知，员工可以指示对即将开始的事件感兴趣，及时了解当前事件，以及通过 Teams 消息扩展与同事共享事件详细信息。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
 
@@ -242,18 +254,18 @@ E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-a
 
 ## <a name="faq-plus"></a>常见问题 +
 
-对话&聊天机器人是为用户提供常见问题解答的简便方法。 但是，大多数机器人无法以有意义的方式与用户互动，因为机器人发生故障时循环中没有任何人。 FAQ 自动程序是一&的问答，当机器人无法提供帮助时，它会在循环中引入人。 可以询问机器人问题，如果知识库中包含自动程序，则机器人会以答案进行响应。 如果没有，自动程序允许用户提交查询，该查询随后将张贴到预配置的专家团队，这些专家通过处理来自团队本身的通知来帮助提供支持。
+对话&聊天机器人是为用户提供常见问题解答的简便方法。 但是，大多数机器人无法以有意义的方式与用户互动，因为机器人发生故障时循环中没有任何人。 FAQ 自动程序是一&的问答，当机器人无法提供帮助时，它会在循环中引入人。 用户可以向机器人提问，如果包含在知识库中，则机器人会以答案进行响应。 如果没有，自动程序允许用户提交查询，然后将该查询张贴到预配置的专家团队，这些专家通过处理来自团队本身的通知来帮助提供支持。
 
 > [!NOTE]
-> 最新版本的 **FAQ Plus** 支持改进的&A 解决方案，使专家团队能够完成以下操作：
+> 最新版 **FAQ Plus** 支持通过&团队完成以下操作，从而改进问答解决方案：
 >
 > &#x2714;使用消息&将新问答直接添加到知识库。
 >
-> &#x2714;自动程序添加的&编辑和删除问答。
+> &#x2714;自动程序&的对编辑和删除问答。
 >
 > &#x2714;跟踪问答的&历史记录。
 >
-> &#x2714;配置一个答案，并添加其他详细信息以显示为 [自适应卡片](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+> &#x2714;配置包含其他详细信息的应答，以显示为 [自适应卡片](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 >
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -261,7 +273,7 @@ E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-a
 
 ## <a name="goal-tracker"></a>目标跟踪器
 
-"目标跟踪器"应用是一个全面的解决方案，可支持在 Microsoft Teams 中建立目标、观察进度和确认成功。 该应用使用户能够在专业、个人和团队级别设置、跟踪和更新目标。 团队成员还可及时收到提醒和状态更新，保持专注并保持跟踪状态。
+"目标跟踪器"应用是一个全面的解决方案，可支持在 Microsoft Teams 中建立目标、观察进度和确认成功。 该应用使用户能够在专业、个人和团队级别设置、跟踪和更新目标。 团队成员还可以及时收到提醒和状态更新，保持专注并保持跟踪状态。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
 
@@ -278,7 +290,7 @@ E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-a
 
 ## <a name="great-ideas"></a>出色的创意
 
-"出色的创意"应用支持并增强组织内部的创造力和创造力。 利用该应用，员工可以与同事和领导分享想法、发现新提交、聚焦供对等考虑贡献，并投票选择 Microsoft Teams 中的最佳建议。
+"出色的创意"应用支持并增强组织内部的创造力和创造力。 利用该应用，你的员工可以与同事和领导分享想法、发现新提交、聚焦供对等考虑贡献，并投票选择 Microsoft Teams 中的最佳建议。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
 
@@ -312,7 +324,7 @@ E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-a
 
 ## <a name="grow-your-skills"></a>提高技能
 
-"发展技能"应用使员工能够参与组织的补充项目，同时学习新技能，从而支持专业成长和开发。 员工可以使用该应用在 Teams 环境中找到满足其兴趣、与同事进行有意义的协作以及获得新级别的专业技能和功能的机会。
+"发展你的技能"应用通过使员工在同时学习新技能的同时为组织提供补充项目，从而支持专业的增长和开发。 员工可以使用该应用在 Teams 环境中找到满足其兴趣、与同事进行有意义的协作以及获得新级别的专业技能和功能的机会。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
 
@@ -329,7 +341,7 @@ E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-a
 
 ## <a name="hr-support"></a>HR 支持
 
-HR 支持机器人是一个友好的&聊天机器人，它可以在无法提供帮助时，在循环中提供来自 HR 团队的支持专业人员/专家。 可以询问机器人问题，如果知识库中包含自动程序，则机器人会以答案进行响应。 如果没有，则自动程序允许用户提交查询，该查询随后会发布在预配置的专家团队中，这些专家通过处理来自团队本身的通知来帮助提供支持。 此外，自动程序通过搜索问题中的预配置标记，推荐指向建议的 HR 策略/问题的链接。 这些磁贴还可以作为快速参考在关联的选项卡中找到。 HR 支持适用于轻型 QnA，在组织中启动新项目/计划时提供快速支持。
+HR 支持机器人是一个友好的&聊天机器人，当无法提供帮助时，它会在循环中提供来自 HR 团队的支持专业人员/专家。 用户可以向机器人提问，如果包含在知识库中，则机器人会以答案进行响应。 如果没有，自动程序允许用户提交查询，该查询随后会发布在预先配置的专家团队中，这些专家通过处理来自团队本身的通知来帮助提供支持。 此外，自动程序通过搜索问题中的预配置标记，推荐指向建议的 HR 策略/问题的链接。 这些磁贴还可以作为快速参考在关联的选项卡中找到。 HR 支持适用于轻型 QnA，在组织中启动新项目/计划时提供快速支持。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
@@ -339,7 +351,7 @@ HR 支持机器人是一个友好的&聊天机器人，它可以在无法提供�
 
 Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，通过每周配对两个随机团队成员来开会，帮助你的团队建立关系。 自动程序通过自动建议适用于这两个成员的空闲时间来轻松安排日程安排。 通过此应用加强个人连接并构建紧密的社区。
 
-除了鼓励整个团队的个人连接之外，Icebreaker 应用还有助于在组织中培养基于兴趣的社区。 例如，你可以将此应用用于 DevOps 兴趣组，以帮助想法和最佳做法在组织中自然传播。
+除了鼓励整个团队的个人连接之外，Icebreaker 应用还有助于在组织中培养基于兴趣的社区。 例如，你可以将此应用用于 DevOps 兴趣组，以帮助将想法和最佳实践自然地分布到整个组织中。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
@@ -347,7 +359,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="incentives"></a>奖励
 
-奖励是 [一个 Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) 模板，可管理和跟踪奖励员工参与指定活动，如培训和变更管理计划。 管理员使用该应用建立指定活动、分配完成分数，并指定奖励所需的资格分数级别。 员工使用应用查看累积的积分，在达到资格后，请求和申请可兑换奖励。
+奖励是 [一个 Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) 模板，可管理和跟踪奖励员工参与指定活动（如培训和变更管理计划）。 管理员使用该应用建立指定活动、分配完成分数，并指定奖励所需的资格分数级别。 员工使用应用查看累积的积分，在达到资格后，请求和申请可兑换奖励。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
 
@@ -372,7 +384,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="inspection-9734"></a>检查&#9734;
 
- 检查是一款 Microsoft Teams 应用，它使第一线工作人员能够检查从位置到资产和设备之间的任何内容。 例如，零售商店、制造工厂或车辆和计算机。 此解决方案中具有两个应用，每个应用都适用于不同类型的用户。
+ 检查是一款 Microsoft Teams 应用，它使前端工作人员能够检查从位置到资产和设备之间的任何内容。 例如，零售商店、制造工厂或车辆和计算机。 此解决方案中具有两个应用，每个应用都适用于不同类型的用户。
 
 该应用使一线工作人员能够检查资产或区域，管理产品和服务的质量，或维护工作场所的安全。 它便于工作组成员之间的通信，以解决在检查过程中发现的问题。 该应用为经理提供了简单的报告，以加快问题解决并突出显示趋势。
 
@@ -383,9 +395,9 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="issue-reporting-9734"></a>问题报告&#9734;
 
-"问题报告"应用使员工和经理能够提出和管理问题。 它由两个应用组成：用于报告问题的"问题报告"应用和"管理问题"应用程序以管理问题。
+问题报告应用程序使员工和经理能够提出和管理问题。 它由两个应用组成：用于报告问题的"问题报告"应用和用于管理问题的"管理问题"应用。
 
-团队经理使用"管理问题"应用配置应用体验，包括应用创建 Microsoft Teams 消息和 Planner 任务的频道。 管理员还使用该应用程序创建模板表单，以在用户报告问题时收集详细信息。 例如，查看、编辑或删除问题模板表单。 该应用还可用于查看团队问题、报告问题历史记录并高效管理问题解决。
+团队经理使用"管理问题"应用配置应用体验，包括应用创建 Microsoft Teams 消息和 Planner 任务的频道。 管理员还使用该应用创建模板表单，以在用户报告问题时收集详细信息。 例如，查看、编辑或删除问题模板表单。 该应用还可用于查看团队问题、报告问题历史记录并高效管理问题解决。
 
 员工使用"问题报告"应用记录解决问题所需的问题和详细信息。 该应用还用于修改和解决现有问题，并获取个人或团队问题的高级别视图。
 
@@ -395,7 +407,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="new-employee-onboarding"></a>新员工入职培训 
 
-新员工入职培训是一个集成的 Microsoft Teams 和 [SharePoint](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) 新员工载入解决方案，使组织能够在新员工旅程中为员工提供一致、高质量的入职培训体验。 人力资源团队和招聘经理可以使用该应用在整个入职和入职培训过程中提供相关信息，新雇用人员可以共享反馈、提供简介和完成载入任务。
+新员工入职培训是一个集成的 Microsoft Teams 和 [SharePoint](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) 新员工载入解决方案，使组织能够在新员工旅程中为员工提供一致、高质量的入职培训体验。 人力资源团队和招聘经理可以使用该应用在整个入职和入职培训过程中提供相关信息，由新员工提供相关信息，以共享反馈、提供简介和完成载入任务。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
 
@@ -412,7 +424,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="open-badges"></a>打开锁屏提醒
 
-开放锁屏提醒是一款 Microsoft Teams 应用，个人可以在 Teams 上下文中获取数字学习凭据锁屏提醒，并可在任何位置共享。 使用来自第三方数字锁屏提醒颁发机构 [Badgr](https://badgr.org/)的功能，奖励徽章记录在收件人的 Badgr 个人资料中，可用于生成和共享生命周期学习旅程的丰富图片。
+开放锁屏提醒是一款 Microsoft Teams 应用，个人可以在 Teams 上下文中获取数字学习凭据锁屏提醒，并可在任何位置共享。 使用来自第三方数字锁屏提醒颁发机构 [Badgr](https://badgr.org/)的功能，奖励徽章记录在收件人的 Badgr 个人资料中，可用于构建和共享丰富的生命周期学习旅程图片。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-openbadges)
 
@@ -441,7 +453,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="quick-responses"></a>快速响应
 
-"快速响应"是一款 Microsoft Teams 应用，提供一个可靠的解决方案，可有效回答用户提出的常见问题 (常见问题) 。 应用将构建一个响应库，用于通过 Teams 消息传递扩展实现交互式用户体验，而不是手动和持续重复地回答 [每个查询](../messaging-extensions/what-are-messaging-extensions.md)。
+"快速响应"是一款 Microsoft Teams 应用，提供一个可靠的解决方案，可有效回答用户提出的常见问题 (常见问题) 。 应用将构建一个响应库，用于通过 Teams 消息传递扩展实现交互式用户体验，而不是手动和持续重复地应答 [每个查询](../messaging-extensions/what-are-messaging-extensions.md)。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
@@ -449,7 +461,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="rapid-assist-9734"></a>快速协助&#9734;
 
-快速协助是一款基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) 的应用，使面向客户的关联人员可以快速与专家联系，以快速获得答案、搜索信息、跟进打开的请求，并允许专家接收通知以快速接听电话以帮助回答问题。 使用 Microsoft [Power Apps](/powerapps/powerapps-overview) 和 [Power Automate](/power-automate/getting-started)构建的应用与 Microsoft Teams 深度集成，使组织能够轻松地将一线工作人员与公司代表联系，从而解决客户查询并提供出色的客户体验。 
+快速协助是一款基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) 的应用，使面向客户的关联人员可以快速与专家联系，以快速获得答案、搜索信息、跟进打开的请求，并允许专家接收通知，以便快速接听电话以帮助回答问题。 使用 Microsoft [Power Apps](/powerapps/powerapps-overview) 和 [Power Automate](/power-automate/getting-started)构建的应用与 Microsoft Teams 深度集成，使组织能够轻松地将一线工作人员与公司代表联系，从而解决客户查询并提供出色的客户体验。 
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
 
@@ -464,7 +476,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="reflect"></a>反射 
 
-反射是一个自定义 Microsoft [Teams](../messaging-extensions/what-are-messaging-extensions.md) 消息传递扩展应用，它可为团队成员提供安全且包含的资源，以直接与 Teams 内的同事和/或组领导共享其情绪状态。 该应用在频道、组、会议以及一对一聊天中可用，并且签入响应可以设置为公共、私人到发件人或完全匿名。
+反射是一个自定义 Microsoft [Teams](../messaging-extensions/what-are-messaging-extensions.md) 消息传递扩展应用，可为团队成员提供安全且包含的资源，以直接与 Teams 内的同事和/或组领导共享其情绪状态。 该应用在频道、组、会议以及一对一聊天中可用，并且签入响应可以设置为公共、私人到发件人或完全匿名。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
 
@@ -495,7 +507,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="request-a-team"></a>请求团队
 
-请求团队是一款 Microsoft Teams 应用，可优化企业组织的新团队创建。 应用通过集成向导指导的请求表单、嵌入式审批流程、请求状态仪表板和自动团队生成来创建新团队实例时，支持标准化和最佳做法。
+请求团队是一款 Microsoft Teams 应用，可优化企业组织的新团队创建。 通过集成向导指导的请求表单、嵌入式审批流程、请求状态仪表板和自动团队生成，应用程序支持标准化和最佳做法，从而创建新的团队实例。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-requestateam)
 
@@ -512,7 +524,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 
 ## <a name="scrums-for-channels"></a>适用于频道的 Scrum
 
-适用于频道的 Scrum 是一款 scrum 助手应用，使用户能够在 Microsoft Teams 内的频道中安排和运行 scrum。 该应用非常适用于由来自不同地理位置和时区的成员组成的远程团队和团队，以共享每日更新并确保参与重要独立会议。
+适用于频道的 Scrum 是一个 scrum 助手应用，使用户能够在 Microsoft Teams 内的频道中安排和运行 scrum。 该应用非常适用于由来自不同地理位置和时区的成员组成的远程团队和团队，以共享每日更新并确保参与重要独立会议。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
@@ -530,7 +542,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-group-chat"></a>群聊的 Scrum
+## <a name="scrums-for-group-chat"></a>群聊的 Scrums
 
 > [!NOTE]
 > Scrums 状态应用模板已更新，现在是用于群聊的 Scrums。
@@ -581,7 +593,7 @@ Microsoft Teams 中的协作通常引用 SharePoint 列表中项目中包含的�
 
 ## <a name="virtual-rounding-9734"></a>虚拟舍入&#9734;
 
-医院和紧急室提供商每天进行数十次，通常数百次"轮"。 这些患者快速签入旨在提供对患者操作方式的状态检查，并确保解决患者的问题。 尽管舍入是确保患者受到多种提供商监控的基本做法，但是它们表示 PPE 会消耗大量资源，因为每次访问时，每个提供商都必须使用一个新的掩码和一组新的面罩。 借助此应用模板，医疗工作者可以通过提供商和患者之间的 Microsoft Teams 会议轻松地进行虚拟轮次。
+医院和紧急室提供商每天进行数十次，通常数百次"轮"。 这些患者快速签入旨在提供患者操作方式的状态检查，并确保解决患者的问题。 尽管舍入是确保患者受到多种提供商监控的基本做法，但是它们表示 PPE 会消耗大量资源，因为每次访问时，每个提供商都必须使用一个新的掩码和一组新的面罩。 使用此应用模板，医疗工作者可以通过提供商和患者之间的 Microsoft Teams 会议轻松地进行虚拟轮次。
 
 Microsoft Health and Life Sciences 博客文章还引用了虚拟舍入 [解决方案](https://aka.ms/teamsvirtualrounding)。
 
@@ -608,7 +620,7 @@ Microsoft Health and Life Sciences 博客文章还引用了虚拟舍入 [解决�
 
 ## <a name="workplace-awards"></a>Workplace Awards
 
-Workplace Workplace Workplace 是一个 Teams 应用模板，提供一个积极框架，以培养现代工作场所中的员工认知和鼓励员工文化。 通过该应用，你可以设置和管理员工奖励和识别 (R&R) 计划，员工可以在该计划中轻松指定和认可同事，R&R 领导可以查看提交的奖励、授予奖励和通知收件人。
+Workplace Workplace Workplace 是一个 Teams 应用模板，提供一个积极框架，以培养现代工作场所中的员工认知和鼓励员工文化。 此应用使你能够设置和管理员工奖励和识别 (R&R) 计划，员工可以在该计划中轻松指定和认可同事，R&R 领导可以查看提交的奖励、授予奖励和通知收件人。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
 
@@ -623,4 +635,4 @@ Workplace Workplace Workplace 是一个 Teams 应用模板，提供一个积极�
 :::column-end:::
 :::row-end:::
 
-对要查看的应用模板有一个想法？ [请告诉我们](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
+对要查看的应用模板有一些了解吗？ [请告诉我们](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
