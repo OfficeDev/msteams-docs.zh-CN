@@ -20,9 +20,9 @@
       href: build-your-first-app/build-bot.md
     - name: 创建邮件扩展
       href: build-your-first-app/build-messaging-extension.md
-- name: 教程和示例
+- name: 教程和代码示例
   items:
-    - name: 概述
+    - name: 教程
       href: tutorials/code-samples.md
     - name: 使用 C# 创建应用
       href: tutorials/get-started-dotnet-app-studio.md
@@ -30,24 +30,8 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: 使用 Yeoman 生成器创建应用
       href: tutorials/get-started-yeoman.md
-    - name: 机器人示例
-      items:
-        - name: 使用 C# （GitHub）的聊天机器人
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Chatbot 与 node.js （GitHub）
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
-        - name: 使用 Python（GitHub）的聊天机器人
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
-    - name: 邮件扩充示例
-      items:
-        - name: 带 C# （GitHub）的操作命令
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: 带 node.js （GitHub）的操作命令
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: 带 C# （GitHub）的搜索命令
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: 带 node.js （GitHub）搜索命令
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+    - name: 代码示例
+      href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: 应用程序基础知识
   items:
     - name: 团队应用程序功能
