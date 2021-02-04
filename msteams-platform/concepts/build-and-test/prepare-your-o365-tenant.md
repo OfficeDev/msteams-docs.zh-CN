@@ -3,12 +3,12 @@ title: 准备 Microsoft 365 租户
 description: 如何在 Microsoft 365 中开始使用 Teams
 ms.topic: how-to
 keywords: 配置 Microsoft 365 租户 Teams 上传
-ms.openlocfilehash: bfeb1a5d39b8a6ad8d1dd4d631f984ecec4e26f1
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 50765271b93edd380d1c23672289b618baf1d346
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014451"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093941"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 
@@ -20,7 +20,7 @@ ms.locfileid: "50014451"
 * 开发人员版
 * 教育版、教育增强版和教育版 E5
 
-Microsoft Teams 也将提供给在停用之前订阅 E4 [的客户](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)。
+Microsoft Teams 还将提供给在停用 E4 之前订阅 E4 [的客户](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)。
 
 ## <a name="just-need-a-development-environment"></a>只需要开发环境？
 
@@ -48,6 +48,8 @@ Microsoft Teams 也将提供给在停用之前订阅 E4 [的客户](https://supp
 ![打开旁加载视图](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
 4. 将 **自定义应用切换** 至 **打开** 位置。
+
+5. 选择 **"保存** "保存更改。
 
 就是这么简单。 你的测试租户现在将允许自定义应用旁加载。
 

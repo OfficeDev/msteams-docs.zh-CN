@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams 模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 573291a9747b3df3cbdd11c52fe8f1d71525f0f6
-ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
+ms.openlocfilehash: 401d1e5878a026b2ff066114e4d41a0a54c0cf09
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50072887"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093962"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -24,6 +24,12 @@ ms.locfileid: "50072887"
 * **生产就绪代码：** 应用模板符合有关安全性和基础结构的建议最佳做法，并审查所有社区提交的更改以确保持续一致性。
 * **可自定义和可扩展：** 尽管所有应用模板都已准备好按其部署，但我们提供了整个代码库和部署脚本，以便你可以轻松地自定义或扩展它们以满足你的独特需求。
 * **详细的文档&支持：** 所有应用模板都附带了有关解决方案体系结构、部署和配置步骤的端到端文档。 存储库也受监视，因此请在 GitHub 上通过引发问题报告你遇到的任何问题。
+
+## <a name="adoption-bot-9734"></a>采用自动&#9734;
+
+采用机器人是一种用户关心聊天机器人，它使用 Power Virtual Agent for Teams (PVA) 。 它可视为常见问题增强版的 PVA 版本。 采用机器人解答了 100 多个有关 Microsoft 365 和 Teams 的常见问题。 可以编辑包含的主题、添加自己的主题和加入现有常见问题解答。 如果用户需要其他帮助，采用机器人可以将其与专家联系，甚至可以扩展为使用高级流连接器打开服务票证。
+
+[在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
 ## <a name="appointment-manager-9734"></a>约会管理器&#9734;
 

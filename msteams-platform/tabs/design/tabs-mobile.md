@@ -3,12 +3,12 @@ title: 移动设备上的选项卡
 description: 介绍设计适用于移动设备的选项卡的指南。
 ms.topic: conceptual
 keywords: teams 设计指南参考框架个人应用移动选项卡
-ms.openlocfilehash: 462228daa2179482110e2deb42f0f16ab2f5d5ec
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 70ff46e446b146b134f34830e8867133cbeeca14
+ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014171"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093286"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
 
@@ -19,7 +19,7 @@ ms.locfileid: "50014171"
 
 个人应用在应用箱中的移动客户端上可用。 该应用只能从桌面或 Web 客户端安装，最多可能需要 24 小时才能显示在移动客户端上。
 
-频道选项卡也可在移动设备上使用。 默认行为当前用于在浏览器窗口中启动 `websiteUrl` 选项卡。 但是，可以通过单击选项卡旁边的溢出菜单并选择"打开"（将使用你加载 Teams 移动客户端中的选项卡）在移动客户端上 `...`  `contentUrl` 加载它们。
+还可在移动设备上使用频道选项卡。 默认行为当前用于在浏览器窗口中启动 `websiteUrl` 选项卡。 但是，可以通过单击选项卡旁边的溢出菜单并选择"打开"（将使用你加载 Teams 移动客户端中的选项卡）在移动客户端上 `...`  `contentUrl` 加载它们。
 
 ## <a name="accessing-personal-tabs"></a>访问个人选项卡
 
@@ -65,7 +65,7 @@ ms.locfileid: "50014171"
 
 ### <a name="tabs-with-bots-on-mobile"></a>使用移动设备上的机器人的选项卡
 
-以下示例是包含选项卡和自动程序的个人应用。
+以下示例是一个包含选项卡和自动程序的个人应用。
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="插图显示具有选项卡和自动程序的移动 Teams 应用。" border="false":::
 
@@ -73,7 +73,7 @@ ms.locfileid: "50014171"
 
 ### <a name="color-palettes"></a>调色板
 
-将已批准的中性调色板用于背景、通知、文本和按钮将有助于你的应用在 Teams 中感觉更加自在。 由于 Teams 移动版具有 (浅色和深色) 主题，因此建议确保你的应用在两者中都外观良好。
+将已批准的中性调色板用于背景、通知、文本和按钮将帮助你的应用在 Teams 中感觉更加自在。 由于 Teams 移动版具有 (浅色和深色) 主题，因此，建议确保你的应用在两者中都外观良好。
 
 #### <a name="light-color"></a>浅色
 
@@ -136,3 +136,6 @@ ms.locfileid: "50014171"
 ### <a name="low-bandwidth-and-intermittent-connections"></a>低带宽和间歇性连接
 
 移动客户端经常需要在低带宽和间歇性连接下运行。 应用应该通过向用户提供上下文消息来适当地处理任何超时。 您还应使用用户进度指示器，以针对任何长时间运行的过程向用户提供反馈。
+
+> [!NOTE]
+> 只有在根据审批团队的输入将应用程序添加到允许列表后，才能在移动设备上启用选项卡。 若要检查移动响应，请与用户联系teamsubm@microsoft.com。 
