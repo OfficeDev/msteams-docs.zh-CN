@@ -5,12 +5,12 @@ description: 使用 Microsoft Teams 工具快速创建 Microsoft Teams Toolkit�
 ms.author: lajanuar
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: fbabd5130f0b7eb648a980f5f143792cc4c17933
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 3e07c148e1b03431dc419a4e3679abac0229ff72
+ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911945"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "50140466"
 ---
 # <a name="build-a-bot-for-microsoft-teams"></a>为 Microsoft Teams 生成自动程序
 
@@ -18,7 +18,7 @@ ms.locfileid: "49911945"
 
 ## <a name="your-assignment"></a>你的作业
 
-你的工作场所创建了一个 Teams 应用，该应用 [使用选项卡](../build-your-first-app/build-personal-tab.md) 来显示重要的联系信息。 例如，同事可以快速访问技术支持电话号码。 但是，如果人们可以通过聊天机器人联系技术支持，而不是通话呢？ 你的领导要求你查看在 Teams 中快速启动和运行基本对话机器人。
+你的工作场所创建了一个 Teams 应用，该应用 [使用选项卡](../build-your-first-app/build-personal-tab.md) 来显示重要的联系信息。 例如，同事可以快速访问技术支持电话号码。 但是，如果人们能够使用聊天机器人联系技术支持，而不是通话呢？ 你的领导要求你查看在 Teams 中快速启动和运行基本对话机器人。
 
 ## <a name="what-youll-learn"></a>您将了解哪些知识
 
@@ -42,7 +42,7 @@ Microsoft Teams Toolkit可帮助你为应用设置以下组件：
 * **自动** 注册到 Microsoft Azure 自动程序服务的自动程序
 
 > [!TIP]
-> 如果你之前尚未创建 Teams 应用项目，你可能会发现按照这些说明更详细地解释项目非常有用[](../build-your-first-app/build-and-run.md)。
+> 如果你之前尚未创建 Teams 应用项目，你可能会发现按照这些说明更详细地解释项目会[](../build-your-first-app/build-and-run.md)很有帮助。
 
 1. 在Visual Studio代码中，选择左侧活动栏上的 **Microsoft Teams，** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 然后选择 **"创建新的 Teams 应用"。**
 1. 当系统提示时，使用 Microsoft 365 开发帐户登录。
@@ -79,8 +79,8 @@ Microsoft Teams Toolkit可帮助你为应用设置以下组件：
 
 您仍必须指定终结点地址，以接收并处理 (消息，即发送到自动) 的请求。 通常，URL 如下所示 `https://HOST_URL/api/messages` 。 可以在工具包中快速配置此功能。
 
-1. 在Visual Studio代码中，选择左侧活动栏上的 **Microsoft Teams，** 然后选择" :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 打开 Microsoft **Teams** Toolkit"。
-1. 转到 **"自动>现有自动程序注册** "，然后选择在安装期间创建的自动程序。
+1. 在Visual Studio代码中，选择左侧活动栏上的 **Microsoft Teams，** 然后选择" :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 打开 Microsoft **Teams** Toolkit。
+1. 转到 **自动程序>自动程序注册，** 然后选择在安装期间创建的自动程序。
 1. 在 **Bot 终结点地址** 字段中，输入 ngrok URL (例如，) 自动程序并追加 `https://468b9ab725e9.ngrok.io` `/api/messages` 到其中。<br/>
     :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="显示可在 Teams 服务中配置自动程序终结点 URL 的Toolkit。":::
 
@@ -104,7 +104,7 @@ Microsoft Teams Toolkit可帮助你为应用设置以下组件：
 > [!TIP]
 > 如果你之前没有旁加载 Teams 应用并遇到问题，请按照以下 [说明操作](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams)。
 
-1. 在Visual Studio中，按 **F5** 键启动 Teams Web 客户端。
+1. 在Visual Studio代码中，按 **F5** 键启动 Teams Web 客户端。
 1. 在应用安装对话框中，选择 **"为我添加"。**  (你可以将聊天机器人添加到频道或聊天中，但对其他人来说，在一对一聊天中测试机器人的干扰性) 
 
 ## <a name="7-test-your-bot"></a>7. 测试机器人
@@ -131,11 +131,11 @@ Microsoft Teams Toolkit可帮助你为应用设置以下组件：
 
 了解这与 Teams 中的频道不同，了解这一点很重要。 在这种情况下，频道是 Azure 自动程序服务如何将机器人连接到 Teams 或其他受支持的 [Microsoft 或第三方通信应用](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="learn-more"></a>了解更多
 
 * [了解 Teams 机器人可以使用我们的一个示例执行哪些其他功能](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [自动程序对话基础知识](../bots/how-to/conversations/conversation-basics.md)
 * 遵循 [我们的设计准则，](../bots/design/bots.md) 使用 [生产就绪 UI](../concepts/design/design-teams-app-ui-templates.md) 模板生成，以创建无缝体验。
 * [Teams 中的自动程序身份验证](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-* [创建没有工具包的机器人](../bots/how-to/create-a-bot-for-teams.md)
+* [创建没有工具包的机器人](../resources/bot-v3/bots-create.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams 模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 401d1e5878a026b2ff066114e4d41a0a54c0cf09
-ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
+ms.openlocfilehash: 43181f6de30cfd811701edf22e4bd7aefd467027
+ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093962"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "50140475"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -221,18 +221,6 @@ E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-a
 :::column-end:::
 :::row-end:::
 
-
-## <a name="emergency-button-power-9734"></a>紧急按钮电源&#9734;
-
-使用 Microsoft Teams 的组织可以使用紧急按钮电源应用，以允许任何一组用户向监督员请求帮助。 此应用包括各种功能，例如：
--   从 Power App 请求有关不同类别的帮助
--   发送给请求者的通知，告知他们已分配了谁 
--   发送给指定监督员的通知，告知他们谁需要帮助 
--   查看 SharePoint 中召开的审核跟踪
-
-[在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
-
-
 ## <a name="employee-training"></a>员工培训 
 
 员工培训是一款 Microsoft Teams 应用，可让组织者轻松发布、跟踪和推广组织的学习和培训活动。  借助该应用，事件规划人员可以向事件注册人发送提醒和通知，员工可以指示对即将开始的事件感兴趣，及时了解当前事件，以及通过 Teams 消息扩展与同事共享事件详细信息。
@@ -276,6 +264,18 @@ E-Suings 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-a
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
+
+## <a name="get-support-app-9734"></a>获取支持应用&#9734;
+
+使用 Microsoft Teams 的组织可以使用"获取支持"应用，以允许任何一组用户向监督员请求帮助。 此应用包括各种功能，例如：
+-   从 Power App 请求有关不同类别的帮助
+-   发送给请求者的通知，告知他们已分配了谁 
+-   发送给指定监督员的通知，告知他们谁需要帮助 
+-   分析 SharePoint 和 PowerBI 中的升级和模式
+
+[在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
+
+![获取支持 Gif](../assets/images/get-support.gif)
 
 ## <a name="goal-tracker"></a>目标跟踪器
 
