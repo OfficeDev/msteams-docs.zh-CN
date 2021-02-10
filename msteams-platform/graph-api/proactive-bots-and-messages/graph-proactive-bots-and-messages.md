@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装图
-ms.openlocfilehash: ee1620c8fdcaeeecf0e8b0992017bf6f2fbacbf9
-ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
+ms.openlocfilehash: 4f26b4d2f4e82fcf50b7a35c46bcd07e5afecf19
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "49731970"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162892"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>使用 Microsoft Graph 公共预览版在 Teams 中启用主动自动 (和主动) 
 
@@ -35,7 +35,7 @@ ms.locfileid: "49731970"
 
 ## <a name="permissions"></a>权限
 
-Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) 资源类型权限允许你在 Microsoft Teams 平台内管理用户 (个人) 或团队 (频道) 范围的应用的安装生命周期：
+通过 Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) 资源类型权限，你可以管理 Microsoft Teams 平台内所有 (个人) 或团队 (频道) 范围的应用的安装生命周期：
 
 |应用权限 | 说明|
 |------------------|---------------------|
@@ -63,14 +63,14 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 ### <a name="-create-and-publish-your-proactive-messaging-bot-for-teams"></a>✔为 Teams 创建和发布主动消息自动程序
 
-若要开始，你需要一个具有主动消息传递功能的[Teams](../../bots/how-to/create-a-bot-for-teams.md)自动程序，并发布到[](../../concepts/deploy-and-publish/overview.md)组织的应用目录或[AppSource 中](https://appsource.microsoft.com/)。 [](../../concepts/bots/bot-conversations/bots-conv-proactive.md) [](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog)
+若要开始，你需要一个 Teams 自动程序，[](../../concepts/bots/bot-conversations/bots-conv-proactive.md)具有主动消息传递功能，并[](../../concepts/deploy-and-publish/overview.md)发布在组织的应用目录或[](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) [AppSource 中](https://appsource.microsoft.com/)。 [](../../bots/how-to/create-a-bot-for-teams.md)
 
 >[!TIP]
 > 生产就绪型 [**公司Communicator**](../..//samples/app-templates.md#company-communicator) 模板支持广播消息，是构建主动式机器人应用程序的良好基础。
 
 ### <a name="-get-the-teamsappid-for-your-app"></a>✔获取 `teamsAppId` 应用
 
-**1.** 需要执行 `teamsAppId`  以下步骤。
+**1.** 你将需要执行 `teamsAppId`  以下步骤。
 
 `teamsAppId`可以从组织的应用程序目录中检索：
 
@@ -79,7 +79,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 **HTTP GET** 请求：
 
 ```http
-GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
 请求将返回一 `teamsApp`  个对象。 返回的对象是应用的目录生成的应用 ID，不同于你在 Teams 应用清单中提供的 `id`  "id："：
@@ -98,24 +98,24 @@ GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq
 }
 ```
 
-**2.**  如果你的应用已在个人范围内为用户上载/旁加载，你可以按 `teamsAppId` 如下方式检索：
+**2.**  如果你的应用已在个人范围内为用户上载或旁加载，你可以按 `teamsAppId` 如下方式检索：
 
-**Microsoft Graph 页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph 页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 请求：
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 **3.** 如果你的应用已在团队范围内为频道上载/旁加载，你可以按 `teamsAppId` 如下方式检索：
 
-**Microsoft Graph 页面参考：**[列出团队中的应用](/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph 页面参考：**[列出团队中的应用](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 请求：
 
 ```http
-GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/v1.0/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 >[!TIP]
@@ -123,26 +123,26 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 
 ### <a name="-determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a>✔确定当前是否已为邮件收件人安装自动程序
 
-**Microsoft Graph 页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph 页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 请求：
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-如果未安装应用，此请求将返回空数组;如果已安装，则返回包含单个 [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta&preserve-view=true) 对象的数组。
+如果未安装应用，此请求将返回空数组;如果已安装，则返回包含单个 [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-v1.0&preserve-view=true) 对象的数组。
 
 ### <a name="-install-your-app"></a>✔安装应用
 
-**Microsoft Graph 页面参考：**[为用户安装应用](/graph/api/userteamwork-post-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph 页面参考：**[为用户安装应用](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP POST** 请求：
 
 ```http
-POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
+POST https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps
 {
-   "teamsApp@odata.bind" : "https://graph.microsoft.com/beta/appCatalogs/teamsApps/{teamsAppId}"
+   "teamsApp@odata.bind" : "https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/{teamsAppId}"
 }
 ```
 
@@ -164,7 +164,7 @@ POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-响应 **的 id** 属性是 `teamsAppInstallationId` 。
+响应 **的 id** 属性为 `teamsAppInstallationId` 。
 
 **2.** 提出以下请求以提取 `chatId` ：
 
@@ -174,7 +174,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
  GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
-响应 **的 id** 属性是 `chatId` 。
+响应 **的 id** 属性为 `chatId` 。
 
 或者，您可以使用下面的请求检索， `chatId`  但需要更广泛的 `Chat.Read.All` 权限：
 

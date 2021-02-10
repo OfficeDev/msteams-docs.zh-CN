@@ -3,12 +3,12 @@ title: 选项卡的单一登录支持
 description: '介绍 SSO (单一) '
 ms.topic: how-to
 keywords: teams 身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: ed8b52416dd1499f50d561ceb2c1edf03e5457d3
-ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
+ms.openlocfilehash: 72fbafe49e021b0cc23dcdaeee7eb5fe82ee23de
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093265"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162885"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
@@ -166,11 +166,11 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
 
-## <a name="sample-code"></a>示例代码
+## <a name="code-sample"></a>代码示例
 
-访问我们的示例应用程序 [：MSTeams PnP SSO 示例](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
-
-自述文件介绍了如何设置开发环境以及如何在 Azure AD 中配置应用程序。 还可以找到有关示例在应用结构部分中的结构的进一步信息，[](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure)以帮助熟悉代码库。
+|**示例名称**|**说明**|**C#**|**TypeScript**|
+|---------------|---------------|------|--------------|
+| Tab SSO |用于选项卡 Azure AD SSO 的 Microsoft Teams 示例应用| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[视图](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)， </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>已知限制
 
