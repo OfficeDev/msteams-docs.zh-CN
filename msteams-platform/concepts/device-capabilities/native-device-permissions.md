@@ -1,70 +1,67 @@
 ---
-title: 请求选项卡的设备权限
-description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能
+title: 请求 Microsoft Teams 应用的设备权限
+keywords: teams 应用功能权限
+description: 如何更新应用清单以请求访问通常需要用户同意的本机功能
 ms.topic: how-to
-keywords: teams 选项卡开发
-ms.openlocfilehash: a2893fb2905584eac4b398287d431f406c23b12b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 0343754eacbb6088a3e44fa5df8ec90e3b10b076
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014528"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231608"
 ---
-# <a name="request-device-permissions-for-your-microsoft-teams-tab"></a><span data-ttu-id="e0ec0-104">请求 Microsoft Teams 选项卡的设备权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-104">Request device permissions for your Microsoft Teams tab</span></span>
+# <a name="request-device-permissions-for-your-microsoft-teams-app"></a><span data-ttu-id="57ddf-104">请求 Microsoft Teams 应用的设备权限</span><span class="sxs-lookup"><span data-stu-id="57ddf-104">Request device permissions for your Microsoft Teams app</span></span>
 
-<span data-ttu-id="e0ec0-105">你可能想要使用需要访问本机设备功能的功能来丰富选项卡，例如：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-105">You might want to enrich your tab with features that require access to native device functionality like:</span></span>
-
-> [!div class="checklist"]
->
-> * <span data-ttu-id="e0ec0-106">相机</span><span class="sxs-lookup"><span data-stu-id="e0ec0-106">Camera</span></span>
-> * <span data-ttu-id="e0ec0-107">麦克风</span><span class="sxs-lookup"><span data-stu-id="e0ec0-107">Microphone</span></span>
-> * <span data-ttu-id="e0ec0-108">位置</span><span class="sxs-lookup"><span data-stu-id="e0ec0-108">Location</span></span>
-> * <span data-ttu-id="e0ec0-109">通知</span><span class="sxs-lookup"><span data-stu-id="e0ec0-109">Notifications</span></span>
+<span data-ttu-id="57ddf-105">可以使用本机设备功能（如相机、麦克风和位置）丰富 Teams 应用。</span><span class="sxs-lookup"><span data-stu-id="57ddf-105">You can enrich your Teams app with native device capabilities, such as camera, microphone, and location.</span></span> <span data-ttu-id="57ddf-106">本文档指导您如何请求用户同意和访问本机设备权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-106">This document guides you on how to request user consent and access the native device permissions.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e0ec0-110">若要在 Microsoft Teams 移动应用中集成相机和图像功能，请参阅 [Teams 中的相机和图像功能。](../../concepts/device-capabilities/mobile-camera-image-permissions.md)</span><span class="sxs-lookup"><span data-stu-id="e0ec0-110">To integrate camera and image capabilities within your Microsoft Teams mobile app, see [Camera and image capabilities in Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)</span></span>
+> <span data-ttu-id="57ddf-107">若要在 Microsoft Teams 移动应用中集成媒体功能，请参阅"[集成媒体功能"。](mobile-camera-image-permissions.md)</span><span class="sxs-lookup"><span data-stu-id="57ddf-107">To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).</span></span>
 
-> [!IMPORTANT]
->
-> * <span data-ttu-id="e0ec0-111">目前，Teams 移动客户端仅支持访问 、和通过本机设备功能，并且可用于所有应用构造（ `camera` `gallery` `mic` `location` 包括选项卡）。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-111">At present, Teams mobile client only supports access to `camera`, `gallery`, `mic`, and `location` through native device capabilities and is available on all app constructs including tabs.</span></span> </br>
-> * <span data-ttu-id="e0ec0-112">支持 `camera` ， `gallery` 并且 `mic` 通过 [**selectMedia API 启用**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-112">Support for `camera`, `gallery`, and `mic` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true).</span></span> <span data-ttu-id="e0ec0-113">对于单个图像捕获，可以使用 [**captureImage API。**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="e0ec0-113">For single image capture you may use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).</span></span>
-> * <span data-ttu-id="e0ec0-114">通过 `location` [**getLocation API 启用对的支持**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-114">Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).</span></span> <span data-ttu-id="e0ec0-115">建议使用此 API，因为当前并非所有桌面[](../../resources/schema/manifest-schema.md#devicepermissions)客户端都完全支持地理位置 API。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-115">It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.</span></span>
+## <a name="native-device-permissions"></a><span data-ttu-id="57ddf-108">本机设备权限</span><span class="sxs-lookup"><span data-stu-id="57ddf-108">Native device permissions</span></span>
 
-## <a name="device-permissions"></a><span data-ttu-id="e0ec0-116">设备权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-116">Device permissions</span></span>
+<span data-ttu-id="57ddf-109">必须请求设备权限才能访问本机设备功能。</span><span class="sxs-lookup"><span data-stu-id="57ddf-109">You must request the device permissions to access native device capabilities.</span></span> <span data-ttu-id="57ddf-110">设备权限在所有应用构造（如选项卡、任务模块或消息扩展）中同样工作。</span><span class="sxs-lookup"><span data-stu-id="57ddf-110">The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions.</span></span> <span data-ttu-id="57ddf-111">用户必须转到 Teams 设置中的权限页才能管理设备权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-111">The user must go to the permissions page in Teams settings to manage device permissions.</span></span>
+<span data-ttu-id="57ddf-112">通过访问设备功能，可以在 Teams 平台上构建更丰富的体验，例如：</span><span class="sxs-lookup"><span data-stu-id="57ddf-112">By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:</span></span>
+* <span data-ttu-id="57ddf-113">捕获和查看图像。</span><span class="sxs-lookup"><span data-stu-id="57ddf-113">Capture and view images.</span></span>
+* <span data-ttu-id="57ddf-114">录制和共享短视频。</span><span class="sxs-lookup"><span data-stu-id="57ddf-114">Record and share short videos.</span></span>
+* <span data-ttu-id="57ddf-115">录制音频备注并保存供以后使用。</span><span class="sxs-lookup"><span data-stu-id="57ddf-115">Record audio memos and save them for later use.</span></span>
+* <span data-ttu-id="57ddf-116">使用用户的位置信息显示相关信息。</span><span class="sxs-lookup"><span data-stu-id="57ddf-116">Use the location information of the user to display relevant information.</span></span>
 
-<span data-ttu-id="e0ec0-117">通过访问用户的设备权限，你可以构建更丰富的体验，例如：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-117">Accessing a user’s device permissions allows you to build much richer experiences, for example:</span></span>
+## <a name="access-device-permissions"></a><span data-ttu-id="57ddf-117">访问设备权限</span><span class="sxs-lookup"><span data-stu-id="57ddf-117">Access device permissions</span></span>
 
-* <span data-ttu-id="e0ec0-118">录制和共享简短视频</span><span class="sxs-lookup"><span data-stu-id="e0ec0-118">Record and share short videos</span></span>
-* <span data-ttu-id="e0ec0-119">录制简短的音频备注并将其保存供以后使用</span><span class="sxs-lookup"><span data-stu-id="e0ec0-119">Record short audio memos and save them for later</span></span>
-* <span data-ttu-id="e0ec0-120">使用用户位置信息显示相关信息</span><span class="sxs-lookup"><span data-stu-id="e0ec0-120">Use user location information to display relevant information</span></span>
+<span data-ttu-id="57ddf-118">[Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)提供了 Teams 移动应用访问用户设备权限和构建[](#manage-permissions)更丰富的体验所需的工具。</span><span class="sxs-lookup"><span data-stu-id="57ddf-118">The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](#manage-permissions) and build a richer experience.</span></span>
 
-<span data-ttu-id="e0ec0-121">虽然在大多数新式 Web 浏览器中访问这些功能是标准功能，但你需要通过更新应用清单让 Teams 知道要使用哪些功能。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-121">While access to these features is standard in most modern web browsers, you need to let Teams know which features you’d like to use by updating your app manifest.</span></span> <span data-ttu-id="e0ec0-122">这将允许你请求权限，与在浏览器中请求权限的方式相同，同时你的应用在 Teams 桌面客户端上运行。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-122">This will allow you to ask for permissions, the same way you would in a browser, while your app is running on the Teams desktop client.</span></span>
+<span data-ttu-id="57ddf-119">虽然新式 Web 浏览器中对这些功能的访问是标准访问，但你必须通过更新应用清单来通知 Teams 你使用的功能。</span><span class="sxs-lookup"><span data-stu-id="57ddf-119">While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest.</span></span> <span data-ttu-id="57ddf-120">此更新允许你在应用在 Teams 桌面客户端上运行时请求权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-120">This update allows you to ask for permissions while your app runs on the Teams desktop client.</span></span>
 
-## <a name="manage-permissions"></a><span data-ttu-id="e0ec0-123">管理权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-123">Manage permissions</span></span>
+> [!NOTE] 
+> <span data-ttu-id="57ddf-121">目前，Microsoft Teams 对媒体功能的支持仅适用于移动客户端。</span><span class="sxs-lookup"><span data-stu-id="57ddf-121">Currently, Microsoft Teams support for media capabilities is only available for mobile clients.</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="e0ec0-124">桌面</span><span class="sxs-lookup"><span data-stu-id="e0ec0-124">Desktop</span></span>](#tab/desktop)
+## <a name="manage-permissions"></a><span data-ttu-id="57ddf-122">管理权限</span><span class="sxs-lookup"><span data-stu-id="57ddf-122">Manage permissions</span></span>
 
-1. <span data-ttu-id="e0ec0-125">打开 Teams。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-125">Open Teams.</span></span>
-1. <span data-ttu-id="e0ec0-126">在窗口的右上角，选择配置文件图标。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-126">In the upper right corner of the window, select your profile icon.</span></span>
-1. <span data-ttu-id="e0ec0-127">从  ->  **下拉菜单中选择**"设置权限"。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-127">Select **Settings** -> **Permissions** from the drop-down menu.</span></span>
-1. <span data-ttu-id="e0ec0-128">选择所需的设置。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-128">Choose your desired settings.</span></span>
+<span data-ttu-id="57ddf-123">用户可以通过在 Teams 设置中选择"允许或拒绝"权限来管理特定应用的设备权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-123">A user can manage device permissions in Teams settings by selecting **Allow** or **Deny** permissions to specific apps.</span></span>
+ 
+# <a name="desktop"></a>[<span data-ttu-id="57ddf-124">桌面</span><span class="sxs-lookup"><span data-stu-id="57ddf-124">Desktop</span></span>](#tab/desktop)
 
-![设备权限桌面设置屏幕](../../assets/images/tabs/device-permissions.png)
+1. <span data-ttu-id="57ddf-125">打开 Teams 应用。</span><span class="sxs-lookup"><span data-stu-id="57ddf-125">Open your Teams app.</span></span>
+1. <span data-ttu-id="57ddf-126">选择窗口右上角的配置文件图标。</span><span class="sxs-lookup"><span data-stu-id="57ddf-126">Select your profile icon in the upper right corner of the window.</span></span>
+1. <span data-ttu-id="57ddf-127">从  >  **下拉菜单中选择**"设置权限"。</span><span class="sxs-lookup"><span data-stu-id="57ddf-127">Select **Settings** > **Permissions** from the drop-down menu.</span></span>
+1. <span data-ttu-id="57ddf-128">选择所需的设置。</span><span class="sxs-lookup"><span data-stu-id="57ddf-128">Select your desired settings.</span></span>
 
-# <a name="mobile"></a>[<span data-ttu-id="e0ec0-130">移动</span><span class="sxs-lookup"><span data-stu-id="e0ec0-130">Mobile</span></span>](#tab/mobile)
+   ![设备权限桌面设置屏幕](../../assets/images/tabs/device-permissions.png)
 
-1. <span data-ttu-id="e0ec0-131">打开 Teams。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-131">Open Teams.</span></span>
-1. <span data-ttu-id="e0ec0-132">转到 **"设置**  ->  **应用权限"。**</span><span class="sxs-lookup"><span data-stu-id="e0ec0-132">Go to **Settings** -> **App Permissions**.</span></span>
-1. <span data-ttu-id="e0ec0-133">选择你需要选择其设置的应用。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-133">Select the app you need to choose settings for.</span></span>
-1. <span data-ttu-id="e0ec0-134">选择所需的设置。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-134">Choose your desired settings.</span></span>
+# <a name="mobile"></a>[<span data-ttu-id="57ddf-130">移动</span><span class="sxs-lookup"><span data-stu-id="57ddf-130">Mobile</span></span>](#tab/mobile)
 
-![设备权限移动设置屏幕](../../assets/images/tabs/MobilePermissions.png)
+1. <span data-ttu-id="57ddf-131">打开 Teams。</span><span class="sxs-lookup"><span data-stu-id="57ddf-131">Open Teams.</span></span>
+1. <span data-ttu-id="57ddf-132">转到 **"设置**  >  **应用权限"。**</span><span class="sxs-lookup"><span data-stu-id="57ddf-132">Go to **Settings** > **App Permissions**.</span></span>
+1. <span data-ttu-id="57ddf-133">选择要选择其设置的应用。</span><span class="sxs-lookup"><span data-stu-id="57ddf-133">Select the app for which you need to choose the settings.</span></span>
+1. <span data-ttu-id="57ddf-134">选择所需的设置。</span><span class="sxs-lookup"><span data-stu-id="57ddf-134">Select your desired settings.</span></span>
+
+    ![设备权限移动设置屏幕](../../assets/images/tabs/MobilePermissions.png)
 
 ---
 
-## <a name="properties"></a><span data-ttu-id="e0ec0-136">属性</span><span class="sxs-lookup"><span data-stu-id="e0ec0-136">Properties</span></span>
+## <a name="specify-permissions"></a><span data-ttu-id="57ddf-136">指定权限</span><span class="sxs-lookup"><span data-stu-id="57ddf-136">Specify permissions</span></span>
 
-<span data-ttu-id="e0ec0-137">通过添加并指定你要在应用程序中使用的五个属性中的哪一个来更新 `manifest.json` `devicePermissions` 应用：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-137">Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties you’d like to use in your application:</span></span>
+<span data-ttu-id="57ddf-137">通过添加并指定在应用程序中使用的五个属性中的哪一个来 `manifest.json` `devicePermissions` 更新应用：</span><span class="sxs-lookup"><span data-stu-id="57ddf-137">Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties that you use in your application:</span></span>
 
 ``` json
 "devicePermissions": [
@@ -75,23 +72,20 @@ ms.locfileid: "50014528"
     "openExternal"
 ],
 ```
-> [!Note]
->
-> <span data-ttu-id="e0ec0-138">媒体还用于移动版上的相机权限。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-138">Media is also used for camera permissions on mobile.</span></span>
 
-<span data-ttu-id="e0ec0-139">每个属性都允许您提示用户请求其同意：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-139">Each property will allow you to prompt the user to ask for their consent:</span></span>
+<span data-ttu-id="57ddf-138">每个属性都允许您提示用户请求其同意：</span><span class="sxs-lookup"><span data-stu-id="57ddf-138">Each property allows you to prompt the user to ask for their consent:</span></span>
 
-| <span data-ttu-id="e0ec0-140">属性</span><span class="sxs-lookup"><span data-stu-id="e0ec0-140">Property</span></span>      | <span data-ttu-id="e0ec0-141">说明</span><span class="sxs-lookup"><span data-stu-id="e0ec0-141">Description</span></span>   |
+| <span data-ttu-id="57ddf-139">属性</span><span class="sxs-lookup"><span data-stu-id="57ddf-139">Property</span></span>      | <span data-ttu-id="57ddf-140">说明</span><span class="sxs-lookup"><span data-stu-id="57ddf-140">Description</span></span>   |
 | --- | --- |
-| <span data-ttu-id="e0ec0-142">media</span><span class="sxs-lookup"><span data-stu-id="e0ec0-142">media</span></span>         | <span data-ttu-id="e0ec0-143">使用相机、麦克风、扬声器和访问媒体库的权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-143">permission to use the camera, microphone, speakers, and access media gallery</span></span> |
-| <span data-ttu-id="e0ec0-144">geolocation</span><span class="sxs-lookup"><span data-stu-id="e0ec0-144">geolocation</span></span>   | <span data-ttu-id="e0ec0-145">返回用户位置的权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-145">permission to return the user's location</span></span>      |
-| <span data-ttu-id="e0ec0-146">通知</span><span class="sxs-lookup"><span data-stu-id="e0ec0-146">notifications</span></span> | <span data-ttu-id="e0ec0-147">发送用户通知的权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-147">permission to send the user notifications</span></span>      |
-| <span data-ttu-id="e0ec0-148">midi</span><span class="sxs-lookup"><span data-stu-id="e0ec0-148">midi</span></span>          | <span data-ttu-id="e0ec0-149">从数字音乐设备发送和接收中间信息的权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-149">permission to send and receive midi information from a digital musical instrument</span></span>   |
-| <span data-ttu-id="e0ec0-150">openExternal</span><span class="sxs-lookup"><span data-stu-id="e0ec0-150">openExternal</span></span>  | <span data-ttu-id="e0ec0-151">在外部应用程序中打开链接的权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-151">permission to open links in external applications</span></span>  |
+| <span data-ttu-id="57ddf-141">media</span><span class="sxs-lookup"><span data-stu-id="57ddf-141">media</span></span>         | <span data-ttu-id="57ddf-142">使用相机、麦克风、扬声器和访问媒体库的权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-142">Permission to use the camera, microphone, speakers, and access media gallery.</span></span> |
+| <span data-ttu-id="57ddf-143">geolocation</span><span class="sxs-lookup"><span data-stu-id="57ddf-143">geolocation</span></span>   | <span data-ttu-id="57ddf-144">返回用户位置的权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-144">Permission to return the user's location.</span></span>      |
+| <span data-ttu-id="57ddf-145">通知</span><span class="sxs-lookup"><span data-stu-id="57ddf-145">notifications</span></span> | <span data-ttu-id="57ddf-146">发送用户通知的权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-146">Permission to send the user notifications.</span></span>      |
+| <span data-ttu-id="57ddf-147">midi</span><span class="sxs-lookup"><span data-stu-id="57ddf-147">midi</span></span>          | <span data-ttu-id="57ddf-148">发送和接收来自数字音乐 (MIDI) 音乐界面数字接口的权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-148">Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.</span></span>   |
+| <span data-ttu-id="57ddf-149">openExternal</span><span class="sxs-lookup"><span data-stu-id="57ddf-149">openExternal</span></span>  | <span data-ttu-id="57ddf-150">在外部应用程序中打开链接的权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-150">Permission to open links in external applications.</span></span>  |
 
-## <a name="checking-permissions-from-your-tab"></a><span data-ttu-id="e0ec0-152">检查选项卡中的权限</span><span class="sxs-lookup"><span data-stu-id="e0ec0-152">Checking permissions from your tab</span></span>
+## <a name="check-permissions-from-your-app"></a><span data-ttu-id="57ddf-151">从应用检查权限</span><span class="sxs-lookup"><span data-stu-id="57ddf-151">Check permissions from your app</span></span>
 
-<span data-ttu-id="e0ec0-153">添加到应用清单后，即可使用 `devicePermissions` HTML5"权限"API 检查权限，而不会引发提示。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-153">Once you’ve added `devicePermissions` to your app manifest, you can check permissions using the HTML5 “permissions” API without causing a prompt.</span></span>
+<span data-ttu-id="57ddf-152">添加到 `devicePermissions` 应用清单后，使用 **HTML5 权限 API** 检查权限，而不出现提示：</span><span class="sxs-lookup"><span data-stu-id="57ddf-152">After adding `devicePermissions` to your app manifest, check permissions using the **HTML5 permissions API** without causing a prompt:</span></span>
 
 ``` Javascript
 // Different query options:
@@ -111,69 +105,85 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## <a name="prompting-the-user"></a><span data-ttu-id="e0ec0-154">提示用户</span><span class="sxs-lookup"><span data-stu-id="e0ec0-154">Prompting the user</span></span>
+## <a name="use-teams-apis-to-get-device-permissions"></a><span data-ttu-id="57ddf-153">使用 Teams API 获取设备权限</span><span class="sxs-lookup"><span data-stu-id="57ddf-153">Use Teams APIs to get device permissions</span></span>
 
-<span data-ttu-id="e0ec0-155">若要显示请求同意访问设备权限的提示，你需要利用相应的 HTML5 或 Teams API。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-155">To show a prompt to get consent to access device permissions you need to leverage the appropriate HTML5 or Teams API.</span></span> 
+<span data-ttu-id="57ddf-154">利用相应的 HTML5 或 Teams API，显示请求同意访问设备权限的提示。</span><span class="sxs-lookup"><span data-stu-id="57ddf-154">Leverage appropriate HTML5 or Teams API, to display a prompt for getting consent to access device permissions.</span></span>
 
-<span data-ttu-id="e0ec0-156">例如，要提示用户访问其位置，你需要调用 `getCurrentPosition` ：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-156">For example, to prompt the user to access their location you need to call `getCurrentPosition`:</span></span>
+> [!IMPORTANT]
+> * <span data-ttu-id="57ddf-155">支持 `camera` ， `gallery` `microphone` 并且通过 [**selectMedia API 启用**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="57ddf-155">Support for `camera`, `gallery`, and `microphone` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true).</span></span> <span data-ttu-id="57ddf-156">将 [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) 用于单个图像捕获。</span><span class="sxs-lookup"><span data-stu-id="57ddf-156">Use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) for a single image capture.</span></span>
+> * <span data-ttu-id="57ddf-157">支持 `location` 是通过 [**getLocation API 启用的**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="57ddf-157">Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).</span></span> <span data-ttu-id="57ddf-158">你必须对位置使用此功能，因为 HTML5 地理位置 API 当前在 Teams 桌面客户端上 `getLocation API` 不受完全支持。</span><span class="sxs-lookup"><span data-stu-id="57ddf-158">You must use this `getLocation API` for location, as HTML5 geolocation API is currently not fully supported on Teams desktop client.</span></span>
 
-```Javascript
-navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
-```
+<span data-ttu-id="57ddf-159">例如：</span><span class="sxs-lookup"><span data-stu-id="57ddf-159">For example:</span></span>
+ * <span data-ttu-id="57ddf-160">若要提示用户访问其位置，必须调用 `getCurrentPosition()` ：</span><span class="sxs-lookup"><span data-stu-id="57ddf-160">To prompt the user to access their location you must call `getCurrentPosition()`:</span></span>
 
-<span data-ttu-id="e0ec0-157">若要在桌面或 Web 上使用相机，Teams 将在你调用时显示权限提示 `getUserMedia` ：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-157">To use the camera on desktop or web, Teams will show a permission prompt when you call `getUserMedia`:</span></span>
+    ```Javascript
+    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    ```
 
-```Javascript
-navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-```
+ * <span data-ttu-id="57ddf-161">若要提示用户在桌面或 Web 上访问其相机，必须调用 `getUserMedia()` ：</span><span class="sxs-lookup"><span data-stu-id="57ddf-161">To prompt the user to access their camera on desktop or web you must call `getUserMedia()`:</span></span>
 
-<span data-ttu-id="e0ec0-158">若要在移动设备上捕获图像，Teams 移动版将在你调用时请求权限 `captureImage()` ：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-158">To capture the image on mobile, Teams mobile will ask for permission when you call `captureImage()`:</span></span>
+    ```Javascript
+    navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+    ```
 
-```Javascript
-microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
-  /* ... */
-});
-```
+ * <span data-ttu-id="57ddf-162">若要在移动设备上捕获图像，Teams 移动版在调用时需要获取权限 `captureImage()` ：</span><span class="sxs-lookup"><span data-stu-id="57ddf-162">To capture the image on mobile, Teams mobile asks for permission when you call `captureImage()`:</span></span>
 
-<span data-ttu-id="e0ec0-159">调用以下消息时，通知将提示用户 `requestPermission` ：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-159">Notifications will prompt the user when you call `requestPermission`:</span></span>
+    ```Javascript
+    microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
+      /* ... */
+    });
+    ```
 
-```Javascript
-Notification.requestPermission(function(result) { /* ... */ });
-```
+ * <span data-ttu-id="57ddf-163">调用以下消息时，通知将提示用户 `requestPermission()` ：</span><span class="sxs-lookup"><span data-stu-id="57ddf-163">Notifications will prompt the user when you call `requestPermission()`:</span></span>
 
-<span data-ttu-id="e0ec0-160">若要使用相机或访问照片库，Teams 移动将在你调用时请求权限 `selectMedia()` ：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-160">To use camera or access photo gallery, Teams mobile will ask permission when you call `selectMedia()`:</span></span>
-
-```JavaScript
-microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-  /* ... */
-});
-```
-
-<span data-ttu-id="e0ec0-161">若要使用麦克风，Teams 移动将在你调用时请求权限 `selectMedia()` ：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-161">To use mic, Teams mobile will ask permission when you call `selectMedia()`:</span></span>
-
-```JavaScript 
-microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-  /* ... */
-});
-```
-
-<span data-ttu-id="e0ec0-162">若要提示用户在地图上共享位置，Teams 移动将在你调用时请求权限 `getLocation()` ：</span><span class="sxs-lookup"><span data-stu-id="e0ec0-162">To prompt user to share location on map interface, Teams mobile will ask permission when you call `getLocation()`:</span></span>
-
-```JavaScript 
-microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-  /* ... *
-/});
-```
-
-# <a name="desktop"></a>[<span data-ttu-id="e0ec0-163">桌面</span><span class="sxs-lookup"><span data-stu-id="e0ec0-163">Desktop</span></span>](#tab/desktop)
-
-![选项卡桌面设备权限提示](~/assets/images/tabs/device-permissions-prompt.png)
-
-# <a name="mobile"></a>[<span data-ttu-id="e0ec0-165">移动</span><span class="sxs-lookup"><span data-stu-id="e0ec0-165">Mobile</span></span>](#tab/mobile)
-
-![选项卡移动设备权限提示](../../assets/images/tabs/MobileLocationPermission.png)
+    ```Javascript
+    Notification.requestPermission(function(result) { /* ... */ });
+    ```
 
 
-## <a name="permission-behavior-across-login-sessions"></a><span data-ttu-id="e0ec0-167">跨登录会话的权限行为</span><span class="sxs-lookup"><span data-stu-id="e0ec0-167">Permission behavior across login sessions</span></span>
 
-<span data-ttu-id="e0ec0-168">将存储每个登录会话的本机设备权限。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-168">Native device permissions are stored for every login session.</span></span> <span data-ttu-id="e0ec0-169">这意味着，如果你登录到 Teams (实例，例如，在另一) ，之前会话中的设备权限将不可用。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-169">It means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available.</span></span> <span data-ttu-id="e0ec0-170">相反，你需要重新同意新登录会话的设备权限。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-170">Instead, you will need to re-consent to device permissions for the new login session.</span></span> <span data-ttu-id="e0ec0-171">它还意味着，如果你注销 Teams (或在 Teams) 中切换租户，你的设备权限将删除该上一登录会话。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-171">It also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session.</span></span> <span data-ttu-id="e0ec0-172">开发本机设备权限时请记住这一点：你同意的本机功能仅适用于你的当前 _登录_ 会话。</span><span class="sxs-lookup"><span data-stu-id="e0ec0-172">Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login session.</span></span>
+
+* <span data-ttu-id="57ddf-164">若要使用相机或访问照片库，Teams 移动版在调用时会询问权限 `selectMedia()` ：</span><span class="sxs-lookup"><span data-stu-id="57ddf-164">To use the camera or access photo gallery, Teams mobile asks permission when you call `selectMedia()`:</span></span>
+
+    ```JavaScript
+    microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+      /* ... */
+    );
+    ```
+
+* <span data-ttu-id="57ddf-165">若要使用麦克风，Teams 移动版会在您呼叫时请求权限 `selectMedia()` ：</span><span class="sxs-lookup"><span data-stu-id="57ddf-165">To use the microphone, Teams mobile asks permission when you call `selectMedia()`:</span></span>
+
+    ```JavaScript 
+    microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+      /* ... */
+    });
+    ```
+
+* <span data-ttu-id="57ddf-166">若要提示用户共享地图界面上的位置，Teams 移动版在调用时请求权限 `getLocation()` ：</span><span class="sxs-lookup"><span data-stu-id="57ddf-166">To prompt the user to share location on the map interface, Teams mobile asks permission when you call `getLocation()`:</span></span>
+
+    ```JavaScript 
+    microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+      /* ... *
+    /});
+    ```
+# <a name="desktop"></a>[<span data-ttu-id="57ddf-167">桌面</span><span class="sxs-lookup"><span data-stu-id="57ddf-167">Desktop</span></span>](#tab/desktop)
+
+   ![选项卡桌面设备权限提示](~/assets/images/tabs/device-permissions-prompt.png)
+
+# <a name="mobile"></a>[<span data-ttu-id="57ddf-169">移动</span><span class="sxs-lookup"><span data-stu-id="57ddf-169">Mobile</span></span>](#tab/mobile)
+
+   ![选项卡移动设备权限提示](../../assets/images/tabs/MobileLocationPermission.png)
+
+* * * 
+
+## <a name="permission-behavior-across-login-sessions"></a><span data-ttu-id="57ddf-171">跨登录会话的权限行为</span><span class="sxs-lookup"><span data-stu-id="57ddf-171">Permission behavior across login sessions</span></span>
+
+<span data-ttu-id="57ddf-172">将存储每个登录会话的设备权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-172">Device permissions are stored for every login session.</span></span> <span data-ttu-id="57ddf-173">这意味着，如果你登录到另一个 Teams 实例（例如，在另一台计算机中）时，之前会话中的设备权限将不可用。</span><span class="sxs-lookup"><span data-stu-id="57ddf-173">It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available.</span></span> <span data-ttu-id="57ddf-174">因此，必须重新同意新会话的设备权限。</span><span class="sxs-lookup"><span data-stu-id="57ddf-174">Therefore, you must re-consent to device permissions for the new session.</span></span> <span data-ttu-id="57ddf-175">它还意味着，如果你注销 Teams 或在 Teams 中切换租户，你的设备权限将从以前的登录会话中删除。</span><span class="sxs-lookup"><span data-stu-id="57ddf-175">It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous login session.</span></span>  
+
+> [!NOTE]
+> <span data-ttu-id="57ddf-176">当你同意本机设备权限时，它仅对当前的登录 _会话_ 有效。</span><span class="sxs-lookup"><span data-stu-id="57ddf-176">When you consent to the native device permissions, it is valid only for your _current_ login session.</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="57ddf-177">后续步骤</span><span class="sxs-lookup"><span data-stu-id="57ddf-177">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="57ddf-178">在 Teams 中集成媒体功能</span><span class="sxs-lookup"><span data-stu-id="57ddf-178">Integrate media capabilities in Teams</span></span>](mobile-camera-image-permissions.md)
