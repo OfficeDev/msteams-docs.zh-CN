@@ -54,7 +54,7 @@
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
         - name: 创建虚拟助手
           href: samples/virtual-assistant.md
-    - name: 生产准备就绪的应用模板
+    - name: Microsoft Teams 的应用模板
       href: samples/app-templates.md
     - name: 生产准备就绪的排班连接器
       href: samples/shifts-wfm-connectors.md
@@ -68,9 +68,11 @@
       href: concepts/build-and-test/deep-links.md
     - name: 设备功能
       items:
+        - name: 概述
+          href: concepts/device-capabilities/device-capabilities-overview.md
         - name: 请求设备权限
           href: concepts/device-capabilities/native-device-permissions.md
-        - name: 使用相机和照片库
+        - name: 集成媒体功能
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: 设计应用
   items:
