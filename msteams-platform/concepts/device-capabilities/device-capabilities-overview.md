@@ -1,18 +1,18 @@
 ---
 title: 设备功能概述
 description: 本机设备功能概述。
-keywords: 相机图像媒体麦克风功能本机设备权限
+keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条码条形码扫描程序功能本机设备权限
 ms.topic: overview
-ms.openlocfilehash: 8b2f92cb4586d646bde02742883122bb009847ea
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 03ce0267f7160772e30ec88de2c29f81886b5280
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50232845"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294724"
 ---
 # <a name="device-capabilities"></a>设备功能 
 
-Microsoft Teams 平台不断增强开发人员功能，以与内置的第一方体验保持一致。 借助增强的 Teams 平台，合作伙伴可以将设备功能（如相机、照片库、麦克风和位置）与 Web 应用集成。 此集成减少了应用开发障碍，加快了开发周期，并创建了开发人员社区的新方案或用例。
+Microsoft Teams 平台不断增强开发人员功能，以与内置的第一方体验保持一致。 借助增强的 Teams 平台，合作伙伴可以将设备功能（如相机、QR 或条形码扫描仪、照片库、麦克风和位置）与 Web 应用集成。 此集成减少了应用开发障碍，加快了开发周期，并创建了开发人员社区的新方案或用例。
 
 ## <a name="native-device-capabilities"></a>本机设备功能
 
@@ -21,6 +21,7 @@ Microsoft Teams 平台不断增强开发人员功能，以与内置的第一方�
     * 相机
     * 麦克风
     * 库
+    * QR 或条形码扫描仪
 * 位置
 
 获取设备功能的访问权限后，你可以将其与 Teams 平台集成，以增强协作体验。 
@@ -31,10 +32,9 @@ Microsoft Teams 平台不断增强开发人员功能，以与内置的第一方�
  
  ## <a name="integrate-device-capabilities"></a>集成设备功能
 
-获取设备功能的访问权限后，使用 **Teams 媒体** 功能 API [](mobile-camera-image-permissions.md)将功能与 Teams 平台集成，以增强用户体验。 这些集成功能允许应用：
+获取设备功能的访问权限后，使用 Teams 媒体功能 API 将 [媒体](mobile-camera-image-permissions.md) 功能与 Teams 平台集成，以增强用户体验。 这些集成功能允许应用：
 
 * 捕获和共享图像
+* 使用扫描仪控件扫描 QR [或条形码](qr-barcode-scanner-capability.md)
 * 通过麦克风录制音频
 * 共享位置信息
-
-

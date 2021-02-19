@@ -5,12 +5,12 @@ keywords: 入门 .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: b37a8d555117e38383504dc99d82d564439a3ebf
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 29cc4e0f434bf9ece9c6073af84627acc048b628
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231519"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294752"
 ---
 # <a name="create-your-first-teams-app-using-c-or-net"></a>使用 C# 或 .NET 创建你的第一个 Teams 应用
 
@@ -48,20 +48,20 @@ git version 2.17.1.windows.2
 
 ## <a name="download-the-sample"></a>下载示例
 
-你可以开始使用简单的 [Hello， World！](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) C# 中的示例。 在终端窗口中，运行以下命令将示例存储库克隆到本地计算机：
+你可以开始使用简单的 [Hello， World！](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) C# 中的示例。 在终端窗口中，运行以下命令将示例存储库克隆到本地计算机：
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
+git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> 你可以 [分叉](https://help.github.com/articles/fork-a-repo/) 此 [存储库以](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) 修改所做的更改并将其保存到 GitHub 以参考。
+> 你可以 [分叉](https://help.github.com/articles/fork-a-repo/) 此 [存储库以](https://github.com/OfficeDev/Microsoft-Teams-Samples) 修改所做的更改并将其保存到 GitHub 以参考。
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>生成和运行示例
 
-克隆存储库后，Visual Studio从示例的根目录打开解决方案文件，然后 `Microsoft.Teams.Samples.HelloWorld.sln` `Build Solution` 从菜单中 `Build` 选择。 若要运行示例， `F5` 请按或 `Start Debugging` 从菜单中 `Debug` 选择。
+克隆存储库后，使用 Visual Studio 从 `Microsoft.Teams.Samples.HelloWorld.sln` **示例的 Microsoft-Teams-Samples/samples/app-hello-world/csharp** 目录中打开解决方案文件，然后从菜单中选择。 `Build Solution` `Build` 若要运行示例， `F5` 请按或 `Start Debugging` 从菜单中 `Debug` 选择。
 
 当应用启动时，浏览器窗口将打开，并启动应用的根。 你可以导航到以下 URL 以验证是否正在加载所有应用 URL：
 
@@ -119,7 +119,7 @@ Visual Studio向不同提供程序（包括 Azure）部署应用提供内置支�
 
 <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
-进行这些更改后，重新生成应用。 如果你使用的是 ngrok，请在本地运行该应用，如果你正在 Azure 中托管，请重新部署该应用。
+进行这些更改后，重新生成应用。 如果你使用的是 ngrok，请在本地运行应用，如果你正在 Azure 中托管，请重新部署该应用。
 
 ## <a name="configure-the-app-tab"></a>配置应用选项卡
 
@@ -141,6 +141,6 @@ Visual Studio向不同提供程序（包括 Azure）部署应用提供内置支�
 
 <img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-选择其中一个随机文本，你将在底部看到格式化的卡片，并准备好随自己的邮件一起发送。
+选择其中一个随机文本，你将在底部看到一张格式化卡片，并准备好随自己的邮件一起发送。
 
 <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

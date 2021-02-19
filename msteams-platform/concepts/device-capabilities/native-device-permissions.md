@@ -3,25 +3,27 @@ title: 请求 Microsoft Teams 应用的设备权限
 keywords: teams 应用功能权限
 description: 如何更新应用清单以请求访问通常需要用户同意的本机功能
 ms.topic: how-to
-ms.openlocfilehash: 0343754eacbb6088a3e44fa5df8ec90e3b10b076
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 60c28e1170e8bbdf664145bde7f7de585bd55a45
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231608"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294745"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求 Microsoft Teams 应用的设备权限
 
 可以使用本机设备功能（如相机、麦克风和位置）丰富 Teams 应用。 本文档指导您如何请求用户同意和访问本机设备权限。
 
 > [!NOTE]
-> 若要在 Microsoft Teams 移动应用中集成媒体功能，请参阅"[集成媒体功能"。](mobile-camera-image-permissions.md)
+> * 若要在 Microsoft Teams 移动应用中集成媒体功能，请参阅"[集成媒体功能"。](mobile-camera-image-permissions.md)
+> * 若要在 Microsoft Teams 移动应用中集成 QR 或条形码扫描仪功能，请参阅在 Teams 中集成 [QR 或条形码扫描仪功能](qr-barcode-scanner-capability.md)
 
 ## <a name="native-device-permissions"></a>本机设备权限
 
 必须请求设备权限才能访问本机设备功能。 设备权限在所有应用构造（如选项卡、任务模块或消息扩展）中同样工作。 用户必须转到 Teams 设置中的权限页才能管理设备权限。
 通过访问设备功能，可以在 Teams 平台上构建更丰富的体验，例如：
 * 捕获和查看图像。
+* 扫描 QR 或条形码。
 * 录制和共享短视频。
 * 录制音频备注并保存供以后使用。
 * 使用用户的位置信息显示相关信息。
@@ -33,7 +35,7 @@ ms.locfileid: "50231608"
 虽然新式 Web 浏览器中对这些功能的访问是标准访问，但你必须通过更新应用清单来通知 Teams 你使用的功能。 此更新允许你在应用在 Teams 桌面客户端上运行时请求权限。
 
 > [!NOTE] 
-> 目前，Microsoft Teams 对媒体功能的支持仅适用于移动客户端。
+> 目前，Microsoft Teams 对媒体功能和 QR 条形码扫描仪功能的支持仅适用于移动客户端。
 
 ## <a name="manage-permissions"></a>管理权限
 
@@ -111,7 +113,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 > [!IMPORTANT]
 > * 支持 `camera` ， `gallery` `microphone` 并且通过 [**selectMedia API 启用**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。 将 [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) 用于单个图像捕获。
-> * 支持 `location` 是通过 [**getLocation API 启用的**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 你必须对位置使用此功能，因为 HTML5 地理位置 API 当前在 Teams 桌面客户端上 `getLocation API` 不受完全支持。
+> * 支持 `location` 是通过 [**getLocation API 启用的**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 你必须将此功能用于位置，因为 HTML5 地理位置 API 当前在 Teams 桌面客户端上 `getLocation API` 不受完全支持。
 
 例如：
  * 若要提示用户访问其位置，必须调用 `getCurrentPosition()` ：
@@ -183,7 +185,10 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > [!NOTE]
 > 当你同意本机设备权限时，它仅对当前的登录 _会话_ 有效。
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [在 Teams 中集成媒体功能](mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [在 Teams 中集成 QR 或条形码扫描仪功能](qr-barcode-scanner-capability.md)

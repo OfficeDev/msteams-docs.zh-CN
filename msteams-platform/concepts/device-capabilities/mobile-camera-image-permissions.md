@@ -4,12 +4,12 @@ description: 如何使用 Teams JavaScript 客户端 SDK 启用媒体功能
 keywords: 相机图像麦克风功能本机设备权限媒体
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4126551858116343689e08c4b4f385eb0bbc7ed1
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 4876b4de9340cc2bd27a14e363954573ea42f05d
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231589"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294738"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能 
 
@@ -31,7 +31,7 @@ ms.locfileid: "50231589"
 
 ## <a name="update-manifest"></a>更新清单
 
-通过 [ 添加manifest.js并](../../resources/schema/manifest-schema.md#devicepermissions) 指定来更新你的 Teams 应用文件 `devicePermissions` `media` 。 它允许你的应用在用户开始使用相机捕获图像之前，向用户请求必要的权限，打开库以选择要作为附件提交的图像，或使用麦克风录制对话。 
+通过 [ 添加manifest.js并](../../resources/schema/manifest-schema.md#devicepermissions) 指定来更新 Teams 应用文件 `devicePermissions` `media` 。 它允许你的应用在用户开始使用相机捕获图像之前，向用户请求必要的权限，打开库以选择要作为附件提交的图像，或使用麦克风录制对话。 
 
 ``` json
 "devicePermissions": [
@@ -64,7 +64,7 @@ ms.locfileid: "50231589"
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) (**Camera)**| 此 API 允许用户从设备 **相机捕获** 或选择媒体，并返回到 Web 应用。 用户可以在提交之前编辑、裁剪、旋转、批注或绘制图像。 作为对 **selectMedia 的响应**，Web 应用接收所选图像的媒体 ID 和所选媒体的缩略图。 可以通过 [ImageProps](/javascript/api/@microsoft/teams-js/imageprops?view=msteams-client-js-latest&preserve-view=true) 配置进一步配置此 API。 |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true) (**麦克风**) | 在 [selectMedia](/javascript/api/@microsoft/teams-js/mediatype?view=msteams-client-js-latest&preserve-view=true) `4` API 中 **将 mediaType** 设置为用于访问麦克风功能。 此 API 还允许用户从设备麦克风录制音频，将录制的剪辑返回到 Web 应用。 用户可以在提交前暂停、重新录制和播放录制预览。 作为对 **selectMedia 的响应**，Web 应用接收所选音频录制的媒体 ID。 <br/> 如果需要 `maxDuration` 为录制对话配置持续时间（以分钟表示）。请使用。 录制的当前持续时间为 10 分钟，之后将终止录制。  |
-| [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| 此 API 以区块检索 **selectMedia** API 捕获的媒体，而不考虑媒体大小。 这些区块将进行组合，并作为文件或 blob 发送回 Web 应用。 将媒体分解为较小的块便于传输大文件。 |
+| [**getMedia**](/javascript/api/@microsoft/teams-js/_media?view=msteams-client-js-latest#getMedia__error__SdkError__blob__Blob_____void_&preserve-view=true)| 此 API 以区块检索 **selectMedia** API 捕获的媒体，而不考虑媒体大小。 这些区块将进行组合，并作为文件或 blob 发送回 Web 应用。 将媒体分解为较小的块便于大型文件传输。 |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#viewImages_ImageUri_____error___SdkError_____void_&preserve-view=true)| 此 API 使用户能够以可滚动列表形式在全屏模式下查看图像。|
 
 
@@ -252,3 +252,8 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
     }
 });
 ```
+
+## <a name="see-also"></a>另请参阅
+
+> [!div class="nextstepaction"]
+> [在 Teams 中集成 QR 或条形码扫描仪功能](qr-barcode-scanner-capability.md)
