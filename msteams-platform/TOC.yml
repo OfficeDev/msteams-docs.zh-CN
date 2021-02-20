@@ -74,6 +74,8 @@
           href: concepts/device-capabilities/native-device-permissions.md
         - name: 集成媒体功能
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
+        - name: 集成 QR 或条码扫描仪功能
+          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
 - name: 设计应用
   items:
     - name: 概述
