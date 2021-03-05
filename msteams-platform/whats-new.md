@@ -3,12 +3,12 @@ title: 最近更新
 description: 介绍 Microsoft Teams 中所有新的开发人员功能
 ms.topic: reference
 keywords: teams 新增功能
-ms.openlocfilehash: 49603a9e48cd0a9951c6d9f0132a705770322de4
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: c8271a1d3cd442301016874fbb364b697c4f7c73
+ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231650"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50455383"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中开发人员的新增功能
 
@@ -21,10 +21,13 @@ ms.locfileid: "50231650"
 
 | "日期" | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
-|02/09/2021|新增：添加了设备功能概述。 <br/> 更新：将麦克风功能信息添加到本机设备权限中，并集成媒体功能文件。|[概述](concepts/device-capabilities/device-capabilities-overview.md)， [请求设备权限](concepts/device-capabilities/native-device-permissions.md)， [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)|
+|03/04/2021|自适应卡片中的信息屏蔽在开发人员预览中。| [自适应卡片中的信息屏蔽](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
+|02/19/2021|新增：添加了位置功能。 <br/> 更新：位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能和 QR 或条形码扫描仪功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)， [请求设备权限](concepts/device-capabilities/native-device-permissions.md)， [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)， [集成 QR 或条形码扫描仪功能](concepts/device-capabilities/qr-barcode-scanner-capability.md)， [集成位置功能](concepts/device-capabilities/location-capability.md) |
+|02/18/2021|新增：添加了 QR 或条形码扫描仪功能。 <br/> 更新：QR 或条形码扫描仪功能信息将添加到设备功能概述、本机设备权限和集成媒体功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)， [请求设备权限](concepts/device-capabilities/native-device-permissions.md)， [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)， [集成 QR 或条形码扫描仪功能](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
+|02/09/2021|新增：添加了设备功能概述。 <br/> 更新：麦克风功能信息将添加到本机设备权限中，并集成媒体功能文件。|[概述](concepts/device-capabilities/device-capabilities-overview.md)， [请求设备权限](concepts/device-capabilities/native-device-permissions.md)， [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 |11/30/2020|新增：与 Teams Toolkit 和Visual Studio代码的标识平台集成|[使用 Teams Toolkit 和Visual Studio代码进行单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|更新到版本 1.8 的 Teams 应用清单|[参考：Microsoft Teams 的清单架构](resources/schema/manifest-schema.md)|
-|11/10/2020|Teams 机器人设计指南|[自动程序设计指南](bots/design/bots.md)|
+|11/10/2020|Teams 机器人设计指南|[机器人设计指南](bots/design/bots.md)|
 |9/30/2020|现在支持在移动设备上向机器人发送和接收文件。|[通过自动程序发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|新的"Teams 入门"指南|[生成你的第一个 Teams 应用概述](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|支持会议中的 Teams 应用 (版本预览) |[在 Teams 会议中为 Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md) [会议和应用创建应用](apps-in-teams-meetings/teams-apps-in-meetings.md)|
@@ -61,9 +64,9 @@ ms.locfileid: "50231650"
 | 04/23/2019 | 基于操作的消息扩展现已可用。 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | 创建到私人聊天的深层链接已退出开发人员预览，并且不可用。 | [深入链接到聊天](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | 在选项卡上下文中显示 SKU 和 licenceType 信息。 | [选项卡上下文](~/concepts/tabs/tabs-context.md) |
-| 11/12/2018 | 群聊中的选项卡现已在 Teams 的已发布版本中提供，并且已退出开发人员预览版。 作为此工作的一部分，为了清楚起见，已对选项卡部分进行了重新修改。| [可配置选项卡](~/concepts/tabs/tabs-configurable.md) |
-| 11/11/2018 | 节点 JS 和 .NET/C# 入门已更新为在 Teams 中使用 App Studio，并且已在 Azure 中托管基于节点的 Teams 应用添加了一个新部分。 | [使用 C#/.NET](~/get-started/get-started-dotnet-app-studio.md)和 App Studio 开始使用 Microsoft Teams 平台，开始使用 Microsoft Teams 平台（使用 Node JS 和[App Studio，](~/get-started/get-started-nodejs-app-studio.md)在 Azure 中托管[节点 Teams 应用](~/get-started/get-started-nodejs-in-azure.md)）|
-| 11/09/2018 | 现在，您可以创建指向用户之间的私人聊天的深层链接。 | [深入链接到聊天](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 11/12/2018 | 群聊中的选项卡现已在 Teams 的已发布版本中提供，并且已退出开发人员预览版。 作为此工作的一部分，为了清楚起见，已对选项卡部分进行了重新修改。| [可配置的选项卡](~/concepts/tabs/tabs-configurable.md) |
+| 11/11/2018 | 节点 JS 和 .NET/C# 入门已更新为在 Teams 中使用 App Studio，并且已在 Azure 中托管基于节点的 Teams 应用添加了一个新部分。 | [使用 C#/.NET](~/get-started/get-started-dotnet-app-studio.md)和 App Studio 开始使用 Microsoft Teams 平台，使用 Node JS 和 App Studio 在  [Microsoft Teams](~/get-started/get-started-nodejs-app-studio.md)平台上开始使用，在 Azure 中托管 Node Teams [应用](~/get-started/get-started-nodejs-in-azure.md)|
+| 11/09/2018 | 现在可以创建指向用户之间的私人聊天的深层链接。 | [深入链接到聊天](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 附带了将 Microsoft Teams 选项卡用作 SharePoint 框架 Web 部件的新功能。 | [SharePoint 中的选项卡](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 11/05/2018 | "任务模块"功能已发布。 任务模块允许你从机器人和选项卡在 Teams 应用程序中创建模式弹出体验。 在弹出窗口中，可以运行自己的自定义 HTML/JavaScript 代码、显示基于小部件（如 YouTube 或 Microsoft Stream 视频）或 `<iframe>` 显示自适应 [卡片](https://docs.microsoft.com/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)， [选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)， 自动  [程序中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | 已更新卡片的格式信息，在桌面版、iOS 和适用于 Teams 的 Android 客户端中进行测试。 | [卡片](~/concepts/cards/cards.md)[、卡片格式](~/concepts/cards/cards-format.md) |
@@ -85,13 +88,13 @@ ms.locfileid: "50231650"
 | 04/17/2018 | replyToID 已添加到和卡 `Invoke` 操作 `MessageBack` 的有效负载中。 如果需要更新卡片操作来自的消息，这尤其有用。 | [卡片操作](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | 添加了本主题以跟踪对 Teams 编程接口和本文档集的更改。 | [新增功能](~/whats-new.md)|
 | 04/10/2018 | 更改了身份验证 URL，以在路径中一致地使用租户 ID。 | [选项卡的身份验证流](~/concepts/authentication/auth-flow-tab.md)[，AAD 选项卡身份验证](~/concepts/authentication/auth-tab-AAD.md)|
-| 04/06/2018 | 添加了有关使用命令框的设计准则。 |[命令框](~/resources/design/framework/command-box.md)|
+| 04/06/2018 | 添加了使用命令框的设计准则。 |[命令框](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | 使用机器人为应用发送通知。 |[仅限通知的机器人](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | 主动消息的扩展文档。 |[开始对话](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 03/15/2018 | 卡片的重构文档。 |[卡片](~/concepts/cards/cards.md)、[卡片操作](~/concepts/cards/cards-actions.md)[、卡片格式、](~/concepts/cards/cards-format.md)[卡片参考](~/concepts/cards/cards-reference.md)|
 | 03/03/2018 | 添加了 Teams App Studio 文档。 |使用 App Studio[中的控件](~/get-started/get-started-app-studio.md)库，使用 Teams App Studio[快速开发应用](~/get-started/app-studio-component-library.md)|
 | 02/27/2018 | 添加了示例代码以演示 AsTeamsChannelAccounts () 方法。 |[获取机器人的背景资料](~/concepts/bots/bots-context.md)|
-| 02/05/2018 | 添加了有关开始使用 C# 的主题。 |[开始在 Microsoft Teams 平台上使用 C#/.NET ](./get-started/get-started-dotnet-app-studio.md)|
+| 02/05/2018 | 添加了有关开始使用 C#。 |[开始在 Microsoft Teams 平台上使用 C#/.NET ](./get-started/get-started-dotnet-app-studio.md)|
 
 ## <a name="submit-your-questions-bugs-feature-requests-and-contributions"></a>提交问题、Bug、功能请求和贡献
 

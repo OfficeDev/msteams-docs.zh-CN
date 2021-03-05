@@ -1,14 +1,14 @@
 ---
 title: 设备功能概述
 description: 本机设备功能概述。
-keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条码条形码扫描程序功能本机设备权限
+keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条码条形码扫描扫描仪位置映射功能本机设备权限
 ms.topic: overview
-ms.openlocfilehash: 03ce0267f7160772e30ec88de2c29f81886b5280
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: 4c826d1705dfeea1feea21b02e7be51789817e48
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294724"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449589"
 ---
 # <a name="device-capabilities"></a>设备功能 
 
@@ -37,4 +37,4 @@ Microsoft Teams 平台不断增强开发人员功能，以与内置的第一方�
 * 捕获和共享图像
 * 使用扫描仪控件扫描 QR [或条形码](qr-barcode-scanner-capability.md)
 * 通过麦克风录制音频
-* 共享位置信息
+* 使用位置选取 [器共享位置](location-capability.md)。

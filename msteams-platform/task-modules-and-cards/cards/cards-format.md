@@ -1,36 +1,36 @@
 ---
 title: 卡片中的文本格式
-description: 描述 Microsoft 团队中的卡片文本格式
-keywords: 团队 bot 卡片格式
+description: 介绍 Microsoft Teams 中的卡片文本格式
+keywords: teams 自动程序卡片格式
 ms.date: 03/29/2018
-ms.openlocfilehash: fcf0692fe033cd3c30ea1e3ac7bda8ddd06297ca
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 1221693ab9ae002ee982ef34a05ead1feb8b1f27
+ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346705"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50455392"
 ---
-# <a name="format-cards-in-teams"></a>设置团队中卡片的格式
+# <a name="format-cards-in-teams"></a>在 Teams 中设置卡片格式
 
-您可以使用 Markdown 或 HTML 向卡片添加格式文本格式，具体取决于卡片类型。
+可以使用 Markdown 或 HTML 将格式文本格式添加到卡片，具体取决于卡片类型。
 
-卡片仅支持 text 属性中的格式设置，而不支持标题或副标题属性中的格式设置。 可以使用 XML (HTML) 格式或 Markdown 的子集指定格式，具体取决于卡片类型。 对于当前和将来使用 Markdown 格式的开发自适应卡片，建议使用格式设置。
+卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。 可以使用 XML 子集指定格式 (HTML) ，也可以根据卡片类型指定 Markdown。 对于当前和将来的开发，建议使用 Markdown 格式的自适应卡片。
 
-不同的卡片类型之间的格式支持不同，在桌面和移动团队客户端以及桌面浏览器中的团队之间，卡片的呈现可能略有不同。
+格式设置支持因卡类型不同而不同，并且桌面版和移动 Teams 客户端以及桌面浏览器中的 Teams 的卡片呈现可能略有不同。
 
-可以在任何团队卡片中添加内嵌图像。 图像的格式为  `.png` 、 `.jpg` 或文件， `.gif` 不得超过1024× 1024 PX 或 1 MB。 不正式支持动画 GIF。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
+你可以将内联图像与任意 Teams 卡一起包含。 格式设置为 ，或文件的图像不能超过  `.png` `.jpg` `.gif` 1024 × 1024 像素或 1 MB。 动态 GIF 不受正式支持。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
 
-## <a name="formatting-cards-with-markdown"></a>使用 Markdown 设置卡片格式
+## <a name="formatting-cards-with-markdown"></a>使用 Markdown 格式化卡片
 
-有两种卡类型支持团队中的 Markdown：
+Teams 中支持 Markdown 的卡类型有两种：
 
 > [!div class="checklist"]
-> * **自适应卡片**： Markdown 在自适应卡片 `Textblock` 字段以及和中受 `Fact.Title` 支持 `Fact.Value` 。 自适应卡片中不支持 HTML。
-> * **O365 连接器卡片**：文本字段中的 Office 365 连接器卡片支持 Markdown 和有限的 HTML。
+> * **自适应卡片**：Markdown 在自适应卡片 `Textblock` 字段中受支持，以及 `Fact.Title` `Fact.Value` . 自适应卡片不支持 HTML。
+> * **O365 连接器卡**：文本字段中的 Office 365 连接器卡支持 Markdown 和有限的 HTML。
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Markdown 格式：自适应卡片**](#tab/adaptive-md)
 
- 支持的和的 `Textblock` 样式 `Fact.Title` `Fact.Value` 如下：
+ 支持的样式包括 `Textblock` `Fact.Title` `Fact.Value` ：
 
 | 样式 | 示例 | Markdown |
 | --- | --- | --- |
@@ -40,40 +40,40 @@ ms.locfileid: "49346705"
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[必应](https://www.bing.com/)| ```[Title](url)``` |
 
-以下 Markdown 标记不受支持：
+不支持以下 Markdown 标记：
 
 * 标头
 * 表格
 * 图像
-* 预设格式文本
+* 预先格式化的文本
 * Blockquotes
 
 > [!IMPORTANT]
 > 自适应卡片不支持 HTML 格式。
 
-### <a name="newlines-for-adaptive-cards"></a>自适应卡片的换行符
+### <a name="newlines-for-adaptive-cards"></a>自适应卡片的行
 
-在 "列表" 中，可以对 `\r` 换行符使用或 `\n` 转义序列。 `\n\n`在列表中使用将导致缩进列表中的下一个元素。 如果需要在 textblock 中的其他位置使用换行符，请使用 `\n\n` 。
+在列表中，可以使用 `\r` 新行的转 `\n` 义序列或转义序列。 在 `\n\n` 列表中使用将导致列表中的下一个元素缩进。 如果需要在 textblock 中的其他地方使用新行，请使用 `\n\n` 。
 
-### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>自适应卡的移动和桌面差异
+### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>自适应卡片的移动和桌面差异
 
-桌面和团队的移动版之间的格式略有不同。
+桌面版和移动版 Teams 之间的格式略有不同。
 
-在桌面上，自适应卡片 Markdown 格式在 web 浏览器和团队客户端应用程序中的显示格式如下所示：
+在桌面上，自适应卡片 Markdown 格式在 Web 浏览器和 Teams 客户端应用程序中如下所示：
 
-![自适应卡片 Markdown 桌面客户端中的格式设置](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+![桌面客户端中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 在 iOS 上，自适应卡片 Markdown 格式如下所示：
 
-![自适应卡片 Markdown 格式在 iOS 中](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+![iOS 中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 在 Android 上，自适应卡片 Markdown 格式如下所示：
 
 ![Android 中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-Android.png)
 
-### <a name="more-information-on-adaptive-cards"></a>有关自适应卡片的详细信息
+### <a name="more-information-on-adaptive-cards"></a>自适应卡片上更多信息
 
-[自适应卡片中的文本功能](/adaptive-cards/create/textfeatures) 团队不支持本主题中提及的日期和本地化功能。
+[自适应卡片中的文本功能](/adaptive-cards/create/textfeatures) 本主题中提到的日期和本地化功能在 Teams 中不受支持。
 
 ### <a name="formatting-sample-for-adaptive-cards"></a>自适应卡片的格式设置示例
 
@@ -109,24 +109,24 @@ ms.locfileid: "49346705"
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a>提及自适应卡片中的支持 1.2 1。2
+### <a name="mention-support-within-adaptive-cards-v12"></a>在自适应卡片 v1.2 中提及支持
 
-基于卡片的提及在 Web、桌面和移动客户端中受支持。 您可以在自适应卡片正文中添加用于 bot 和邮件扩展响应的 @ 提及。  若要在卡片中添加 @ 提及，请在 [通道和组聊天对话中](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )遵循与基于邮件的提及相同的通知逻辑和呈现。
+Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器人和消息传递扩展响应在自适应卡片正文中添加 @ 提及。  若要在卡片中添加 @ 提及，请遵循与频道和群聊对话中基于消息的提及相同的通知逻辑 [和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )。
 
-Bot 和邮件扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。
+自动程序和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素中的卡片内容中包括提及。
 
 > [!NOTE]
-> * 目前，工作组平台上的自适应卡版1.2 中不支持[媒体元素](https://adaptivecards.io/explorer/Media.html)。
-> * 在 bot 消息中不支持频道 & 的团队提及。
+> * [Teams 平台上](https://adaptivecards.io/explorer/Media.html) 自适应卡片 v1.2 中当前不支持媒体元素。
+> * 频道&团队提及在机器人消息中不受支持。
 
-### <a name="constructing-mentions"></a>构建提及
+#### <a name="constructing-mentions"></a>构造提及
 
-若要在自适应卡片中添加提及的内容，应用需要包含以下元素
+若要在自适应卡片中包括提及，应用需要包括以下元素
 
 * `<at>username</at>` 在支持的自适应卡片元素中
-* `mention` `msteams` 卡片内容中属性内的对象，其中包括所提及用户的团队用户 id
+* `mention`卡片内容中属性内的对象，其中包括被提及 `msteams` 用户的 Teams 用户 ID
 
-### <a name="sample-adaptive-card-with-a-mention"></a>带提及的示例自适应卡片
+#### <a name="sample-adaptive-card-with-a-mention"></a>带提及的示例自适应卡片
 
 ``` json
 {
@@ -157,45 +157,106 @@ Bot 和邮件扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextB
 }
 ```
 
-# <a name="markdown-formatting-o365-connector-cards"></a>[**Markdown 格式： O365 连接器卡**](#tab/connector-md)
 
-连接器卡支持有限的 Markdown 和 HTML 格式设置。 上一节中介绍了 HTML 支持。
+### <a name="information-masking-in-adaptive-cards"></a>自适应卡片中的信息屏蔽
+使用信息屏蔽属性可以屏蔽特定信息，例如密码或来自用户的敏感信息。
+
+> [!NOTE]
+> 信息屏蔽属性当前仅在开发人员预览版中可用。
+
+#### <a name="mask-information"></a>掩码信息
+若要在自适应卡片中屏蔽信息，请添加要键入的属性 `isMasked`  `Input.Text` ，将其值设置为 *true。*
+
+#### <a name="sample-adaptive-card-with-masking-property"></a>带屏蔽属性的示例自适应卡片
+
+```json
+{
+    "type": "Input.Text",
+    "id": "secretThing",
+    "style": "password",
+    "isMasked": true
+  },
+```
+
+下图是自适应卡片中屏蔽信息的一个示例：
+
+![屏蔽信息图像](../../assets/images/cards/masking-information-view.png)
+
+### <a name="full-width-adaptive-card"></a>全宽自适应卡片
+可以使用该属性来扩展自适应卡片的宽度， `msteams` 并充分利用额外的画布空间。 有关如何使用属性的信息，请参阅以下示例：
+
+#### <a name="constructing-full-width-cards"></a>构造全宽卡片
+若要使全宽自适应卡片，卡片内容 `width` `msteams` 中的属性中的对象必须设置为 `Full` 。
+此外，你的应用必须包含以下元素：
+
+#### <a name="sample-adaptive-card-with-full-width"></a>全宽自适应卡片示例
+
+``` json
+{
+    "type": "AdaptiveCard",
+    "body": [{
+        "type": "Container",
+        "items": [{
+            "type": "TextBlock",
+            "text": "Digest card",
+            "size": "Large",
+            "weight": "Bolder"
+        }]
+    }],
+    
+    "msteams": {
+        "width": "Full"
+    },
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+完整宽度自适应卡片如下所示： ![ 全宽自适应卡片视图](../../assets/images/cards/full-width-adaptive-card.png)
+
+如果尚未将该属性设置为 `width` *Full，* 则自适应卡片的默认视图如下所示： ![ 小宽度自适应卡片视图](../../assets/images/cards/small-width-adaptive-card.png)
+
+
+
+# <a name="markdown-formatting-o365-connector-cards"></a>[**Markdown 格式：O365 连接器卡**](#tab/connector-md)
+
+连接器卡支持有限的 Markdown 和 HTML 格式。 最后一节介绍了 HTML 支持。
 
 | 样式 | 示例 | Markdown |
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
 | 标头 (级别 1 &ndash; 3)  | **Text** | `### Text`|
-| 删除 | ~~text~~ | `~~text~~` |
+| strikethrough | ~~text~~ | `~~text~~` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| 预设格式文本 | `text` | ``preformatted text`` |
+| 预先格式化的文本 | `text` | ``preformatted text`` |
 | blockquote | >blockquote 文本 | `>blockquote text` |
 | 超链接 | [必应](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| 图像链接 |![在摇滚上的工作](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+| 图像链接 |![在一块石子上闪避](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-在连接器卡中，将为 `\n\n` （而不是为或）呈现换行符 `\n` `\r` 。
+在连接器卡中，为 或 呈现新行，但不 `\n\n` 呈现 `\n` `\r` 。
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>使用 Markdown 的连接器卡的移动和桌面差异
 
 在桌面上，连接器卡的 Markdown 格式如下所示：
 
-![桌面客户端中的连接器卡的 Markdown 格式](../../assets/images/cards/connector-desktop-markdown-combined.png)
+![桌面客户端中连接器卡的 Markdown 格式](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
 在 iOS 上，连接器卡的 Markdown 格式如下所示：
 
-![IOS 客户端中的连接器卡的 Markdown 格式](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+![iOS 客户端中连接器卡的 Markdown 格式](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 问题：
 
-* 团队的 iOS 客户端不会在连接器卡片中呈现 Markdown 或 HTML 嵌入式图像。
-* Blockquotes 呈现为缩进但不带灰色背景。
+* Teams 的 iOS 客户端不会在连接器卡中呈现 Markdown 或 HTML 内嵌图像。
+* Blockquote 呈现为缩进，但不呈现灰色背景。
 
 在 Android 上，连接器卡的 Markdown 格式如下所示：
 
-![Android 客户端中的连接器卡的 Markdown 格式](../../assets/images/cards/connector-android-markdown-combined.png)
+![Android 客户端中连接器卡的 Markdown 格式](../../assets/images/cards/connector-android-markdown-combined.png)
 
-### <a name="formatting-example-for-markdown-connector-cards"></a>Markdown 连接器卡的格式示例
+### <a name="formatting-example-for-markdown-connector-cards"></a>Markdown 连接器卡的格式设置示例
 
 ``` json
 {
@@ -244,47 +305,47 @@ Bot 和邮件扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextB
 
 ---
 
-## <a name="formatting-cards-with-html"></a>使用 HTML 格式化卡片
+## <a name="formatting-cards-with-html"></a>使用 HTML 设置卡片格式
 
-# <a name="html-formatting-o365-connector-cards"></a>[**HTML 格式： O365 连接器卡**](#tab/connector-html)
+# <a name="html-formatting-o365-connector-cards"></a>[**HTML 格式：O365 连接器卡**](#tab/connector-html)
 
-连接器卡支持有限的 Markdown 和 HTML 格式设置。 Markdown 将在下一节中介绍。
+连接器卡支持有限的 Markdown 和 HTML 格式。 下一节将介绍 Markdown。
 
 | 样式 | 示例 | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
 | 标头 (级别 1 &ndash; 3)  | **Text** | `<h3>Text</h3>` |
-| 删除 | ~~text~~ | `<strike>text</strike>` |
+| strikethrough | ~~text~~ | `<strike>text</strike>` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| 预设格式文本 | `text` | `<pre>text</pre>` |
+| 预先格式化的文本 | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | 超链接 | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 图像链接 | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-在连接器卡中，使用标记在 HTML 中呈现的换行符 `<p>` 。
+在连接器卡中，使用标记以 HTML 格式呈现 `<p>` 新行。
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>使用 HTML 的连接器卡的移动和桌面差异
 
 在桌面上，连接器卡的 HTML 格式如下所示：
 
-![桌面客户端中的连接器卡的 HTML 格式](../../assets/images/cards/Connector-desktop-html-combined.png)
+![桌面客户端中连接器卡的 HTML 格式](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 在 iOS 上，HTML 格式如下所示：
 
-![IOS 客户端中的连接器卡的 HTML 格式](../../assets/images/cards/connector-iphone-html-combined-80.png)
+![iOS 客户端中连接器卡的 HTML 格式](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 问题：
 
-* 嵌入式图像不是使用 Markdown 或 HTML in 连接器卡片呈现在 iOS 上。
-* 预设格式的文本将呈现，但不具有灰色背景。
+* 内嵌图像不会在 iOS 上使用 Markdown 或 HTML 在连接器卡上呈现。
+* 呈现格式文本，但没有灰色背景。
 
 在 Android 上，HTML 格式如下所示：
 
-![Android 客户端中的连接器卡的 HTML 格式](../../assets/images/cards/connector-android-html-combined.png)
+![Android 客户端中连接器卡的 HTML 格式](../../assets/images/cards/connector-android-html-combined.png)
 
-### <a name="formatting-sample-for-html-connector-cards"></a>HTML 连接器卡的格式示例
+### <a name="formatting-sample-for-html-connector-cards"></a>HTML 连接器卡的格式设置示例
 
 ``` json
 {
@@ -334,48 +395,48 @@ Bot 和邮件扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextB
 
 ```
 
-# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**HTML 格式：英雄和缩略图卡片**](#tab/simple-html)
+# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**HTML 格式：hero 和 thumbnail cards**](#tab/simple-html)
 
-简单卡片（如英雄和缩略图卡片）支持 HTML 标记。 不支持 Markdown。
+HTML 标记受简单卡片（如大图和缩略图卡）的支持。 不支持 Markdown。
 
 | 样式 | 示例 | HTML |
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
 | 标头 (级别 1 &ndash; 3)  | **Text** | `<h3>Text</h3>` |
-| 删除 | ~~text~~ | `<strike>text</strike>` |
+| strikethrough | ~~text~~ | `<strike>text</strike>` |
 | 无序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| 预设格式文本 | `text` | `<pre>text</pre>` |
+| 预先格式化的文本 | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | 超链接 | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 图像链接 |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>简单卡片的移动和桌面差异
 
-由于桌面和移动平台之间的分辨率不同，因此桌面和团队的移动版之间的格式不同。
+由于桌面平台和移动平台之间的分辨率差异，桌面版和移动版 Teams 之间的格式设置不同。
 
 在桌面上，HTML 格式如下所示：
 
 ![桌面客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-在 iOS 上，HTML 格式的外观如下所示：
+在 iOS 上，HTML 格式如下所示：
 
-![IOS 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+![iOS 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 问题：
 
-* 在 iOS 上不呈现粗体和斜体等字符格式。
+* 字符格式（如粗体和 italic）不会在 iOS 上呈现。
 
-在 Android 上，HTML 格式的外观如下所示：
+在 Android 上，HTML 格式如下所示：
 
 ![Android 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-Android 上正确显示的字符格式（如粗体和斜体）。
+在 Android 上正确显示粗体和 italic 等字符格式。
 
-### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>简单卡片中的 HTML 格式的格式示例
+### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>简单卡片中 HTML 格式的格式设置示例
 
-这些屏幕截图是使用团队 AppStudio 创建的，其中，将一个英雄卡片的 text 属性设置为以下字符串。 您可以通过修改此代码来测试自己的卡片中的格式设置。
+这些屏幕截图是使用 Teams AppStudio 创建的，其中，Hero 卡片的文本属性已设置为以下字符串。 可以通过修改此代码来测试自己的卡片格式。
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
