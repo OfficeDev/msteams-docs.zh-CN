@@ -24,12 +24,14 @@
   items:
     - name: 教程
       href: tutorials/code-samples.md
-    - name: 使用 C# 创建应用
+    - name: 使用或 C# .NET 创建应用
       href: tutorials/get-started-dotnet-app-studio.md
     - name: 使用Node.js创建应用
       href: tutorials/get-started-nodejs-app-studio.md
     - name: 使用 Yeoman 生成器创建应用
       href: tutorials/get-started-yeoman.md
+    - name: 使用 Yeoman 生成器升级 Microsoft Teams
+      href: tutorials/UpgradeTeamsUsingYeoman.md
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: 应用程序基础知识
@@ -76,6 +78,8 @@
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: 集成 QR 或条码扫描仪功能
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+        - name: 集成位置功能
+          href: concepts/device-capabilities/location-capability.md
 - name: 设计应用
   items:
     - name: 概述
@@ -334,7 +338,7 @@
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: 启用资源特定许可
       href: graph-api/rsc/resource-specific-consent.md
-    - name: 启用主动型机器人安装和消息传递
+    - name: 使用 Graph API 以及发送邮件主动安装应用
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: 导入第三方消息
       href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -408,6 +412,8 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: 功能
           href: resources/dev-preview/developer-preview-features.md
+    - name: 选项卡边距更改
+      href: resources/removing-tab-margins.md
     - name: SameSite cookie 属性（2020 更新）
       href: resources/samesite-cookie-update.md
     - name: 为Teams文档做贡献
