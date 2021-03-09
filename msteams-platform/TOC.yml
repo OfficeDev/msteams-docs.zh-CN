@@ -31,7 +31,7 @@
     - name: 使用 Yeoman 生成器创建应用
       href: tutorials/get-started-yeoman.md
     - name: 使用 Yeoman 生成器升级 Microsoft Teams
-      href: tutorials/UpgradeTeamsUsingYeoman.md
+      href: tutorials/upgrade-using-yeoman.md
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: 应用程序基础知识
