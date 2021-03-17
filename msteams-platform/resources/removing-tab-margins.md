@@ -5,12 +5,12 @@ description: 介绍删除制表位将如何增强开发人员的体验。
 keywords: 删除边距填充的选项卡
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: 57e6b15999ffc41c0a3e09897ba565f9b3bf3705
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: f26701b2c432ba35ce6f069eabd3b401aae8e369
+ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753516"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50827926"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
@@ -22,7 +22,7 @@ ms.locfileid: "50753516"
 ## <a name="timelines"></a>日程表
 
 * 2021 年 3 月 5 日 - 在 Public 开发者预览版 [中删除边距](~/resources/dev-preview/developer-preview-intro.md)。
-* 2021 年 5 月 1 日 - 将在生产中删除边距。
+* 2021 年 6 月 15 日 - 将在生产中删除边距。
 
 ## <a name="guidelines"></a>准则
 
