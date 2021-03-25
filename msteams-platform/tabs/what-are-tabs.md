@@ -4,12 +4,12 @@ author: laujan
 description: Teams 平台上的自定义选项卡概述
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c99d1e0d54c6fc1eded3ad1be1957c99a131ea6f
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: d72d70ac97a7da427f22ef7e84c73f235dc395c6
+ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034647"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51176961"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>什么是 Microsoft Teams 选项卡？
 
@@ -51,7 +51,7 @@ Teams 中提供两种类型的选项卡 — 频道/组和个人。 频道/组选
 
 对于频道/组选项卡，您还需要创建一个附加配置页面，以便用户能够配置内容页 URL，通常使用 URL 查询字符串参数加载该上下文的适当内容。 这是因为频道/组选项卡可以添加到多个不同的团队或群组聊天中。 每次后续安装时，用户将能够配置选项卡，从而允许您根据需要定制体验。 当用户添加或配置选项卡时，URL 与 Teams UI 中呈现的选项卡相关联。 配置选项卡只是向该 URL 添加其他参数。 例如，当你添加 Azure 版块选项卡时，配置页面允许你选择该选项卡将加载哪一个板。 配置页面 URL 由应用清单  `configurationUrl` 的 `configurableTabs` 数组中的 属性指定。
 
-每个应用最多只能有一个 (1) 频道/组选项卡 (16) 16 个个人选项卡。
+你可以有多个频道或组选项卡，每个应用最多有 16 个个人选项卡。
 
 ## <a name="mobile-clients"></a>移动客户端
 
