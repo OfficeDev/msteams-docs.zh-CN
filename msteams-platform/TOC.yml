@@ -334,6 +334,8 @@
   items:
     - name: 概述
       href: 'https://docs.microsoft.com/graph/teams-concept-overview'
+    - name: Microsoft Graph 工具包
+      href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: 入门
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: 启用资源特定许可
