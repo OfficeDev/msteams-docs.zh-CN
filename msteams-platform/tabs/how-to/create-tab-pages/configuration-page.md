@@ -5,12 +5,12 @@ description: 如何创建配置页
 keywords: teams 选项卡组频道可配置
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b6da8437b6988f863288d77aedc1acb786c12d4b
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034676"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382364"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -22,7 +22,15 @@ ms.locfileid: "51034676"
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>配置频道或群聊选项卡
 
-应用程序必须引用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 并调用 `microsoft.initialize()` 。 此外，使用的 URL 必须是安全的 HTTPS 终结点，并且可从云中访问。 以下代码是配置页的一个示例：
+应用程序必须引用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 并调用 `microsoft.initialize()` 。 此外，使用的 URL 必须是安全的 HTTPS 终结点，并且可从云中访问。 
+
+### <a name="example"></a>示例
+
+配置页的示例如下图所示： 
+
+<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+
+下一节显示了配置页的相应代码：
 
 ```html
 <head>
@@ -79,7 +87,17 @@ ms.locfileid: "51034676"
 ...
 ```
 
-选择配置 **页中的**"选择灰色"或"选择红色"按钮，以显示带灰色或红色图标的选项卡内容。 选择相对按钮将触发 `saveGray()` 或 `saveRed()` ，并调用以下内容：
+选择配置 **页中的**"选择灰色"或"选择红色"按钮，以显示带灰色或红色图标的选项卡内容。 
+
+下图显示带灰色图标的选项卡内容：
+
+<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+
+下图显示带红色图标的选项卡内容：
+
+<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+
+选择相对按钮将触发 `saveGray()` 或 `saveRed()` ，并调用以下内容：
 
 1. `settings.setValidityState(true)`设置为 true。
 1. `microsoftTeams.settings.registerOnSaveHandler()`将触发事件处理程序。

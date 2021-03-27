@@ -3,12 +3,12 @@ title: 创建指向内容的深层链接
 description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: ec6357998c5d5aa60d0f512bf35514f8aa76a0ed
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: 493f9a010f7076ec97fc7da7110244645e76cfe8
+ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753509"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51378327"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>在 Microsoft Teams 中创建指向内容和功能的深层链接
 
@@ -141,6 +141,23 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 * `message`：当聊天状态为草稿时，要插入到当前用户的撰写框中的消息文本的可选字段。
 
 若要将此深层链接与自动程序一同使用，可以在卡片按钮中指定此链接作为 URL 目标，或点击操作类型 `openUrl` 中的操作。
+
+## <a name="deep-links-for-sharepoint-framework-tabs"></a>SharePoint 框架选项卡的深层链接
+
+以下深层链接格式可用于机器人、连接器或邮件扩展卡： `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+
+> [!NOTE]
+> 当机器人发送带深层链接的 TextBlock 消息时，当用户选择该链接时，将打开一个新的浏览器选项卡。 在 Linux 上运行的 Chrome 和 Microsoft Teams 桌面应用程序中会发生此情况。
+> 如果机器人将相同的深层链接 URL 发送到 ，则当用户选择链接时 `Action.OpenUrl` ，"Teams"选项卡将在当前浏览器中打开。 未打开新的浏览器选项卡。
+
+查询参数包括：
+
+* `appID` - 清单 ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**。
+* `entityID` - 配置选项卡 时 [提供的项目 ID。](~/tabs/how-to/create-tab-pages/configuration-page.md)例如 **，tasklist123**。
+* `entityWebUrl` - 在客户端不支持呈现选项卡或 时，使用带回退 URL 的可选 https://tasklist.example.com/123 字段 https://tasklist.example.com/list123/task456 。
+* `entityName` - 选项卡中项的标签，用于显示深层链接（任务列表 123 或任务 456）。
+
+示例：https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
 ## <a name="linking-to-the-scheduling-dialog"></a>链接到计划对话框
 
