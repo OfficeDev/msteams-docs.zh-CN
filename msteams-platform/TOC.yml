@@ -329,7 +329,11 @@
         - name: 使用 SSO 身份验证
           href: bots/how-to/authentication/auth-aad-sso-bots.md
     - name: 消息扩展
-      href: messaging-extensions/how-to/add-authentication.md
+      items:
+        - name: 向邮件扩展添加身份验证
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: 为邮件扩展启用 SSO
+          href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: 利用 Microsoft Graph 及 Teams 数据
   items:
     - name: 概述
