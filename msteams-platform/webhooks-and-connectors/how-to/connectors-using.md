@@ -4,12 +4,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: edf84ad8902fa3b4a1827ffde415097aac978532
-ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
+ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50073087"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382329"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -132,10 +132,12 @@ ms.locfileid: "50073087"
 
 如果想要以精简样式初始显示多选列表，则必须同时指定 `"isMultiSelect": true` 和 `"style": true`。
 
-> [!NOTE]
-> 在 Microsoft Teams 中的指定 `style` 属性的 `compact` 与在 Microsoft Outlook 中指定 `style` 属性的 `normal` 相同。
+有关连接器卡操作详细信息，请参阅 可操作邮件卡参考中的 **[操作]** (/outlook/actionable-messages/card-reference#actions)。
 
-有关连接器卡操作的所有其他详细信息，请参阅可操作的邮件卡参考中的 **[“操作”](/outlook/actionable-messages/card-reference#actions)**。
+> [!NOTE]
+> 在 Microsoft Teams 中指定 `style` 属性的 `compact` 与在 Microsoft Outlook 中指定 `style` 属性的 `normal` 相同。
+> 
+> 对于 HttpPOST 操作，请求中包括承载令牌。 此令牌包括已执行该操作的 Office 365 用户的 Azure AD 标识。
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>设置自定义传入 Webhook
 
