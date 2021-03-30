@@ -6,17 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams 导入消息 api 图形 Microsoft 迁移迁移帖子
-ms.openlocfilehash: 8cf4f964aba7ce9375b1b259ae88a7fbcb620631
-ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
+ms.openlocfilehash: 1b5a8ccc243c795801552519b4b52f51366e047d
+ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51176954"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "51403967"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
-
->[!IMPORTANT]
-> Microsoft Graph 和 Microsoft Teams 公共预览版可用于早期访问和反馈。 尽管此版本已经过大量测试，但不适合在生产中使用。
 
 使用 Microsoft Graph，可以将用户的现有邮件历史记录和数据从外部系统迁移到 Teams 频道。 通过支持在 Teams 内恢复第三方平台消息层次结构，用户可以无缝地继续通信并不间断地继续。
 
@@ -66,12 +63,12 @@ ms.locfileid: "51176954"
 #### <a name="request-create-a-team-in-migration-state"></a>请求 (迁移状态创建) 
 
 ```http
-POST https://graph.microsoft.com/beta/teams
+POST https://graph.microsoft.com/v1.0/teams
 
 Content-Type: application/json
 {
   "@microsoft.graph.teamCreationMode": "migration",
-  "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
+  "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
   "displayName": "My Sample Team",
   "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
@@ -82,8 +79,8 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/operations/{operationId}
-Content-Location: /teams/{teamId}
+Location: /teams/{team-id}/operations/{operation-id}
+Content-Location: /teams/{team-id}
 ```
 
 #### <a name="error-messages"></a>错误消息
@@ -99,7 +96,7 @@ Content-Location: /teams/{teamId}
 
 为导入的消息创建频道与创建团队方案类似：
 
-> [使用 channel 资源](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) 属性创建具有返回时间戳的新 `createdDateTime` 频道。 将新频道放在 中，这是一种特殊状态，可禁止用户参与频道内大多数聊天活动，直到 `migration mode` 迁移过程完成。  在 POST 请求中包括具有 值的 instance 属性，以明确标识正在创建 `channelCreationMode` `migration` 用于迁移的新团队。  
+> [使用 channel 资源](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) 属性创建具有返回时间戳的新 `createdDateTime` 频道。 将新频道放在 中，这是一种特殊状态，可禁止用户参与频道内大多数聊天活动，直到 `migration mode` 迁移过程完成。  在 POST 请求中包括具有 值的 instance 属性，以明确标识正在创建 `channelCreationMode` `migration` 用于迁移的新团队。  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permissions"></a>权限
 
@@ -110,7 +107,7 @@ Content-Location: /teams/{teamId}
 #### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态创建) 
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/channels
+POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
 
 Content-Type: application/json
 {
@@ -128,8 +125,8 @@ Content-Type: application/json
 HTTP/1.1 202 Accepted
 
 {
-   "@odata.context":"https://canary.graph.microsoft.com/testprodbetateamsgraphsvcncus/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
-   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels/$entity",
+   "id":"id-value",
    "createdDateTime":null,
    "displayName":"Architecture Discussion",
    "description":"This channel is where we debate all future architecture plans",
@@ -161,7 +158,7 @@ HTTP/1.1 202 Accepted
 #### <a name="request-post-message-that-is-text-only"></a>请求 (纯文本的 POST) 
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
    "createdDateTime":"2019-02-04T19:58:15.511Z",
@@ -185,7 +182,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-   "@odata.context":"https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
    "id":"id-value",
    "replyToId":null,
    "etag":"id-value",
@@ -232,7 +229,7 @@ HTTP/1.1 200 OK
 > **注意**：此方案中没有特殊权限范围，因为请求是 chatMessage 的一部分;chatMessage 的范围也适用于此处。
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
   "body": {
@@ -255,7 +252,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
     "id": "id-value",
     "replyToId": null,
     "etag": "id-value",
@@ -290,25 +287,12 @@ HTTP/1.1 200 OK
 
 ## <a name="step-four-complete-migration-mode"></a>步骤 4：完成迁移模式
 
-完成邮件迁移过程后，团队和频道均会使用 方法退出迁移  `completeMigration`  模式。 此步骤将打开工作组和频道资源，供工作组成员常规使用。 操作绑定到 `team` 实例。
-
-#### <a name="request-end-team-migration-mode"></a>请求 (团队迁移模式) 
-
-```http
-POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
-
-```
-
-#### <a name="response"></a>响应
-
-```http
-HTTP/1.1 204 NoContent
-```
+完成邮件迁移过程后，团队和频道均会使用 方法退出迁移  `completeMigration`  模式。 此步骤将打开工作组和频道资源，供工作组成员常规使用。 操作绑定到 `team` 实例。 所有频道都必须在迁移模式下完成，然后才能完成团队。
 
 #### <a name="request-end-channel-migration-mode"></a>请求 (通道迁移模式) 
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMigration
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
 
 ```
 
@@ -318,10 +302,16 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMi
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="error-response"></a>错误响应
+#### <a name="request-end-team-migration-mode"></a>请求 (团队迁移模式) 
 
 ```http
-400 Bad Request
+POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
+```
+
+#### <a name="response"></a>响应
+
+```http
+HTTP/1.1 204 NoContent
 ```
 
 * 对 不在 `team` 中的 或 `channel` 调用的操作 `migrationMode` 。
@@ -333,7 +323,7 @@ HTTP/1.1 204 NoContent
 #### <a name="request-add-member"></a>请求 (添加成员) 
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/members
+POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
 {
@@ -353,8 +343,6 @@ HTTP/1.1 204 No Content
 
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
-
-* 你可以从不在 Teams 中的用户导入消息。 **注意**：在公共预览版期间，为租户中不存在的用户导入的消息在 Teams 客户端或合规性门户中不可搜索。
 
 * 提出 `completeMigration` 请求后，你将无法将进一步的消息导入团队。
 
@@ -378,7 +366,6 @@ HTTP/1.1 204 No Content
 |包含格式文本的邮件|视频|
 |邮件回复链|公告|
 |高吞吐量处理|代码段|
-||自适应卡片|
 ||贴纸|
 ||表情符号|
 ||引号|
@@ -387,4 +374,4 @@ HTTP/1.1 204 No Content
 
 ## <a name="see-also"></a>另请参阅
 > [!div class="nextstepaction"]
->[详细了解 Microsoft Graph 和 Teams 集成](/graph/teams-concept-overview)
+> [详细了解 Microsoft Graph 和 Teams 集成](/graph/teams-concept-overview)
