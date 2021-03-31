@@ -5,12 +5,12 @@ description: 创建团队会议应用
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 78b7791deb61354ab93fa108f8bb2e134dc86080
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
+ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382350"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51435034"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -289,6 +289,8 @@ POST /v3/conversations/{conversationId}/activities
     ![会议前体验](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. 在选项卡库中，选择要添加的应用并按照所需步骤操作。 应用作为选项卡安装。
+    > [!NOTE] 
+    > 目前，在"会议"选项卡中，不支持获取会议详细信息和参与者信息。
 
 **将消息传递扩展添加到会议**
 

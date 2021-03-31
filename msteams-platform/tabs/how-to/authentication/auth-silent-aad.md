@@ -3,12 +3,12 @@ title: 无提示的身份验证
 description: 描述无提示身份验证
 ms.topic: conceptual
 keywords: teams 身份验证 SSO 无提示 AAD
-ms.openlocfilehash: 7facaef0941ff7602b3e23444653ef41415c3396
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 7a68c532cadf181b15c16d6bc4d4ab861d5c9922
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382343"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421606"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
@@ -31,6 +31,8 @@ Azure Active Directory (AAD) 中的无提示身份验证通过静默刷新身份
 ## <a name="how-to-do-silent-authentication"></a>如何执行无提示身份验证
 
 本文中的代码来自 Teams 示例应用，该应用是 [Teams 身份验证示例节点](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
+
+[使用 AAD 启动](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) 无提示且简单的身份验证可配置选项卡，并按照说明在本地计算机上运行示例。
 
 ### <a name="include-and-configure-adal"></a>包括和配置 ADAL
 
