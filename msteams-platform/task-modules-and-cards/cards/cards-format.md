@@ -3,12 +3,12 @@ title: 卡片中的文本格式
 description: 介绍 Microsoft Teams 中的卡片文本格式
 keywords: teams 自动程序卡格式
 ms.date: 03/29/2018
-ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
-ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
+ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
+ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51421615"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51474997"
 ---
 # <a name="format-cards-in-teams"></a>在 Teams 中设置卡片格式
 
@@ -242,6 +242,10 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 ``` 
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>自适应卡片中的图像阶段视图
+
+> [!NOTE]
+> 此功能目前仅在开发人员预览版中可用。
+ 
 在自适应卡片中，可以使用 属性添加选择性地在阶段 `msteams` 视图中显示图像的能力。 当用户将鼠标悬停在图像上时，他们将看到展开图标，其 `allowExpand` 属性设置为 `true` 。 有关如何使用 属性的信息，请参阅以下示例：
 
 ``` json

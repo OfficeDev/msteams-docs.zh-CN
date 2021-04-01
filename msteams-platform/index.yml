@@ -4,19 +4,19 @@ summary: 获取文档、示例代码、教程等，帮助你生成自定义 Micr
 brand: teams
 metadata:
   title: Microsoft Teams 平台开发人员文档
-  description: Microsoft Teams 开发人员平台使开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地做出决策、通过减少上下文切换 (提供焦点) ，并围绕现有内容和工作流创建协作。 .
+  description: Microsoft Teams 开发人员平台使开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地做出决策、提供 (通过减少上下文切换) ，并围绕现有内容和工作流创建协作。 .
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: a0bcb386423f937603a6bfca56b5954d55c97bc0
-  ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
+  ms.openlocfilehash: 3ac38fce0273be69c358f085037449bb5b9626f2
+  ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 02/17/2021
-  ms.locfileid: "50270782"
+  ms.lasthandoff: 03/31/2021
+  ms.locfileid: "51475940"
 highlightedContent:
   items:
   - title: "是 Teams 开发的新人？ \U0001F680从这里开始！"
@@ -31,7 +31,7 @@ highlightedContent:
   - title: 生成应用程序
     itemType: how-to-guide
     url: /microsoftteams/platform/overview#start-building
-  - title: 使用 Microsoft Graph 增强你的应用
+  - title: 使用 Microsoft Graph 增强应用
     itemType: how-to-guide
     url: /graph/teams-concept-overview
   - title: 将应用发布到 Teams 应用商店
@@ -77,6 +77,9 @@ conceptualContent:
     - url: /microsoftteams/platform/resources/schema/manifest-schema
       itemType: reference
       text: Teams 应用的清单架构
+    - url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+      itemType: reference
+      text: 为 Microsoft Teams 应用生成解决方案
   - title: 学习
     links:
     - url: /learn/modules/intro-microsoft-teams-apps
@@ -90,7 +93,7 @@ conceptualContent:
       text: 创建与机器人的对话交互
     - url: /learn/modules/msteams-messaging-extensions/
       itemType: learn
-      text: 创建与邮件扩展的面向任务的交互
+      text: 创建面向任务的与邮件扩展的交互
     - url: /learn/modules/msteams-task-modules/
       itemType: learn
       text: 使用任务模块收集输入和收集信息
@@ -113,14 +116,14 @@ conceptualContent:
       text: 将 Teams 选项卡与 SharePoint 集成
     - url: /microsoftteams/platform/resources/moodleinstructions
       itemType: how-to-guide
-      text: 与一起，与一个学习管理系统集成
+      text: 与一个企业学习管理系统集成
     - url: /microsoftteams/platform/samples/app-templates
       itemType: reference
-      text: 集成生产就绪应用模板
+      text: 集成生产就绪型应用模板
     - url: /microsoftteams/platform/samples/shifts-wfm-connectors
       itemType: reference
-      text: 集成生产就绪的 Shifts 连接器
-  - title: Connect
+      text: 集成生产就绪型 Shifts 连接器
+  - title: 连接
     links:
     - url: https://developer.microsoft.com/microsoft-teams/blogs/
       itemType: overview
@@ -142,10 +145,10 @@ conceptualContent:
 tools:
   title: SDK 和工具
   items:
-  - title: Microsoft Teams Toolkit 代码Visual Studio扩展
+  - title: Microsoft Teams Toolkit Code Visual Studio扩展
     imageSrc: /media/logos/logo_vs-code.svg
     url: /microsoftteams/platform/toolkit/visual-studio-code-overview
-  - title: Microsoft Teams Toolkit 扩展Visual Studio
+  - title: Microsoft Teams Toolkit扩展Visual Studio
     imageSrc: /media/logos/logo_vs-ide.svg
     url: /microsoftteams/platform/toolkit/visual-studio-overview
   - title: 适用于选项卡和其他托管体验的 JavaScript 客户端 SDK
