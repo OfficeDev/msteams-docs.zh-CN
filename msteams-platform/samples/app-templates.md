@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams 模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: ac2062e8f62ee52a53c6e129301e2a5615110789
-ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
+ms.openlocfilehash: 098325d973ad1fa5306761cd60c6504d808cea9d
+ms.sourcegitcommit: 0628a85293f7e26de3490e4dd23a54e586cdfeca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51475953"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "51493053"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -469,18 +469,6 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 ![响应示例视图](../assets/images/quick-responses.png)
 
 
-## <a name="quiz--9734"></a>测验&#9734;
-
-测验是一个 [自定义 Teams 消息传递](../messaging-extensions/what-are-messaging-extensions.md) 扩展应用，可让你在聊天或频道内创建测验，用于进行知识检查和即时结果。 可以使用测验、课堂和离线考试、团队内的知识检查，以及团队中的有趣测验。 测验应用支持跨多个平台，例如 Teams 桌面、浏览器、iOS 和 Android 客户端。 此应用已准备好作为现有 Microsoft 365 订阅的一部分进行部署。
-
-[在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
-
-:::row:::
-  :::column span="1":::
-    ![在 Teams 视图中创建测验](../assets/images/quiz-app-template-compose-view.gif)  
-:::column-end:::
-:::row-end:::
-
 ## <a name="rapid-assist"></a>快速协助
 
 快速协助是一款基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) 的应用，面向客户的关联人员可以快速与专家联系，以快速获得答案、搜索信息、跟进打开的请求，并允许专家接收通知以快速接听电话以帮助回答问题。 使用 Microsoft [Power Apps](/powerapps/powerapps-overview) 和 [Power Automate](/power-automate/getting-started)构建的应用与 Microsoft Teams 深度集成，使组织能够轻松地将一线员工与公司代表联系，从而解决客户查询并提供出色的客户体验。 
@@ -620,19 +608,6 @@ Microsoft Teams 中的协作通常引用 SharePoint 列表中的项中包含的�
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-timetally)
 
 ![Time Tally](../assets/images/11zon_gif.gif)
-
-
-## <a name="training--9734"></a>培训&#9734;
-
-培训是一个自定义 [Teams 消息传递](../messaging-extensions/what-are-messaging-extensions.md) 扩展应用，允许用户在聊天或频道中发布培训，以便进行脱机知识共享和学习。 该应用在多个 Teams 平台客户端（如桌面、浏览器、iOS 和 Android）中受支持。 此应用已准备好部署为 Microsoft 365 订阅的一部分。
-
-[在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-training)
-
-:::row:::
-  :::column span="1":::
-    ![在 Teams 视图中创建培训](../assets/images/training-app-template-compose-view.gif)  
-:::column-end:::
-:::row-end:::
 
 ## <a name="virtual-rounding"></a>虚拟舍入
 
