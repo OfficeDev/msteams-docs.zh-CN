@@ -5,12 +5,12 @@ description: 创建团队会议应用
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
-ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
+ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51435034"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585846"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -36,7 +36,7 @@ ms.locfileid: "51435034"
 
 ## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
-|API|说明|请求|Source|
+|API|Description|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在 Teams 选项卡中显示相关内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams 客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -54,7 +54,7 @@ ms.locfileid: "51435034"
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**meetingId**| string | 是 | 会议标识符通过 Bot Invoke 和 Teams 客户端 SDK 提供。|
 |**participantId**| string | 是 | 参与者 ID 是用户 ID。 它在选项卡 SSO、Bot Invoke 和 Teams 客户端 SDK 中可用。 建议从选项卡 SSO 获取参与者 ID。 |
@@ -134,7 +134,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|说明|
+|响应代码|Description|
 |---|---|
 | **403** | 不允许应用获取参与者信息。 这是最常见的错误响应，如果会议未安装应用，将触发此错误响应。 例如，如果租户管理员禁用应用或在实时网站迁移期间阻止应用。|
 | **200** | 成功检索参与者信息。|
@@ -152,7 +152,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**conversationId**| string | 是 | 对话标识符作为自动程序调用的一部分提供 |
 
@@ -218,7 +218,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|说明|
+|响应代码|Description|
 |---|---|
 | **201** | 具有信号的活动已成功发送 |
 | **401** | 应用使用无效令牌进行响应。 |
@@ -233,6 +233,7 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 > 尝试使用清单架构更新 [应用清单](../resources/schema/manifest-schema-dev-preview.md)。
+> 会议中的应用程序需要 *群聊* 范围。 团队 *作用域* 仅适用于频道中的选项卡。
 
 ```json
 
@@ -249,23 +250,27 @@ POST /v3/conversations/{conversationId}/activities
         "privateChatTab",
         "meetingChatTab",
         "meetingDetailsTab",
-        "meetingSidePanel"
+        "meetingSidePanel",
+        "meetingStage"
      ]
     }
   ]
 ```
+> [!NOTE]
+> `meetingStage` 当前仅适用于开发人员预览版。
 
 ### <a name="context-property"></a>Context 属性
 
 选项卡 `context` 和 `scopes` 属性使你可以确定应用必须出现在何处。 或 作用域 `team` `groupchat` 中的选项卡可以具有多个上下文。 以下是可以使用所有或部分 `context` 值的 属性的值：
 
-|值|说明|
+|值|Description|
 |---|---|
 | **channelTab** | 团队频道标题中的选项卡。 |
 | **privateChatTab** | 一组不在团队或会议上下文中的用户之间的群聊标题中的选项卡。 |
 | **meetingChatTab** | 计划会议上下文中的一组用户之间的群聊标题中的选项卡。 |
 | **meetingDetailsTab** | 日历的会议详细信息视图标题中的选项卡。 |
 | **meetingSidePanel** | 通过统一栏和 U 条形图 (打开的会议内) 。 |
+| **meetingStage** | 可以将来自侧窗格的应用共享到会议阶段。 |
 
 > [!NOTE]
 > `Context` 属性当前在移动客户端上不受支持。
@@ -327,13 +332,25 @@ POST /v3/conversations/{conversationId}/activities
 > * 你必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅 [Teams SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 > * 如果希望你的应用支持匿名用户，则初始调用请求有效负载必须依赖于 对象中的请求元数据， `from.id` `from` 而不是 `from.aadObjectId` 请求元数据。 `from.id` 是用户 ID， `from.aadObjectId` 是 Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
+#### <a name="share-to-stage"></a>共享到阶段 
+
+> [!NOTE]
+> 此功能仅在预览体验成员开发人员预览版中可用
+
+
+此功能使开发人员能够将应用共享到会议阶段。 通过启用共享到会议阶段，会议参与者可以实时协作。 
+
+必需的上下文是应用程序清单中的 meetingStage。 这样做的先决条件是拥有 meetingSidePanel 上下文。 这将启用侧窗格的"共享"按钮，如下所述
+
+
+
 ### <a name="after-a-meeting"></a>会议后
 
 会议后和会议前配置是等效的。
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | C# |
+|示例名称 | Description | C# |
 |----------------|-----------------|--------------|
 | 会议可扩展性 | 用于传递令牌的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
 | 会议内容气泡机器人 | 用于与会议内容气泡机器人交互的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |

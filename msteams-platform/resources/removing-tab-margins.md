@@ -5,12 +5,12 @@ description: 介绍删除制表位将如何增强开发人员的体验。
 keywords: 删除边距填充的选项卡
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: f26701b2c432ba35ce6f069eabd3b401aae8e369
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827926"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585818"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
@@ -18,6 +18,9 @@ ms.locfileid: "50827926"
 删除所有选项卡周围的边距将允许开发人员生成看起来更原生于 Teams 的应用。 这也符合我们的 UI [工具包设计](~/tabs/design/tabs.md)。 大多数应用已看起来更好，没有围绕其体验的边距。 但是，某些选项卡会受此更改的视觉影响，开发人员必须进行必要的更改。
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="选项卡上没有边距" border="false":::
+
+> [!NOTE]
+> 此功能不适用于移动客户端，因为移动客户端中查看的选项卡没有边距。 
 
 ## <a name="timelines"></a>日程表
 
