@@ -1,71 +1,52 @@
 ---
-title: 团队应用程序的入口点
+title: Teams 应用的入口点
 author: heath-hamilton
-description: 介绍用户在团队中使用应用程序的方式和位置。
+description: 介绍用户可以在 Teams 中发现和使用应用的地方。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 1c68467177fc440993f059133f049f18785374b7
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
-ms.translationtype: MT
+ms.openlocfilehash: 72ce2620160f854bbe458821db01e91d2d9f62cd
+ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209779"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "49713625"
 ---
-# <a name="entry-points-for-teams-apps"></a>团队应用程序的入口点
+# <a name="entry-points-for-teams-apps"></a>Teams 应用的入口点
 
-团队平台提供了一组灵活的入口点，用户可在其中发现和使用您的应用程序。 您的应用程序可以像将现有网站嵌入个人选项卡或多面应用程序（用户在多个入口点之间进行交互）一样简单。
+Teams 平台提供了一组灵活的入口点，用户可以在其中发现和使用你的应用。 应用程序非常简单，只需在选项卡或多维应用中嵌入现有 Web 内容，用户跨多个上下文进行交互。
 
-最成功的应用程序会让团队成为本地用户，因此务必仔细规划应用程序的入口点。
+最成功的应用将本机为 Teams，因此请仔细规划应用的入口点。
 
-## <a name="teams-channels-and-group-chats"></a>团队、频道和组聊天
+## <a name="teams-channels-and-chats"></a>团队、频道和聊天
 
-团队、频道和组聊天是协作空间。 使用这些入口点的应用程序可供所有成员使用，并且通常侧重于其他工作流或解除新的社会交互。
+团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间的每个人使用，通常侧重于其他工作流或解锁新的社交交互。
 
-下面介绍了团队应用程序功能在协作上下文中的常见使用方法：
+下面说明在协作上下文中通常使用 Teams 应用功能的方式：
 
-* [**选项卡**](~/tabs/what-are-tabs.md) 提供为团队、频道或组聊天配置的全屏嵌入式 web 体验。 所有成员都与基于 web 的内容进行交互，因此无状态的单页面应用体验是典型的。
+* [**选项卡**](~/tabs/what-are-tabs.md)为团队、频道或群组聊天配置全屏嵌入的 Web 体验。 所有成员交互处理基于 Web 的相同内容，因此普通单页应用体验。
 
-* [**邮件扩展**](~/messaging-extensions/what-are-messaging-extensions.md) 是将外部内容插入到对话中或对邮件执行操作而不离开团队的快捷方式。 链接 unfurling 在共享公共 URL 中的内容时提供丰富的内容。
+* [**邮件扩展**](~/messaging-extensions/what-are-messaging-extensions.md)是一种快捷方式，适用于在对话中插入外部内容或在不离开 Teams 的情况下对邮件采取措施。 从公共 URL 共享内容时，取消链接将提供丰富的内容。
 
-* [**Bot**](~/bots/what-are-bots.md) 通过聊天与对话的成员进行交互，并响应事件 (如添加新成员或重命名频道) 。 与这些上下文中的 bot 的对话对团队、频道或组的所有成员都可见，因此应与所有人相关的 bot 对话。
+* [**自动**](~/bots/what-are-bots.md)通过聊天和响应事件（例如添加新成员或重命名频道）与对话成员交互。 团队、频道或组的所有成员都可以看到这些上下文中与机器人的对话，因此自动对话应该与所有人相关。
 
-* [**Webhook 和连接器**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) 允许外部服务将邮件发布到对话中，并允许用户向服务发送邮件。
+* [**Web 部件和连接器**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)外部服务将消息发布到对话中，用户可将邮件发送到服务。
 
-* [**Microsoft GRAPH REST API**](https://docs.microsoft.com/graph/teams-concept-overview) ，用于获取有关团队、频道和组聊天的数据，以帮助自动化和管理团队流程。
+* [**Microsoft Graph REST API**](https://docs.microsoft.com/graph/teams-concept-overview)团队、频道和群组聊天的数据，帮助自动执行和管理 Teams 流程。
 
 ## <a name="personal-apps"></a>个人应用
 
-[个人应用](~/concepts/design/personal-apps.md) 重点关注与单个用户的交互。 此上下文中的体验对每个用户都是唯一的。 用户可以将个人应用程序固定到左侧导航轨，以便快速访问。
+[个人应用](~/concepts/design/personal-apps.md) 专注于与单个用户的交互。 此上下文中的体验是每位用户所特有的。
 
-下面介绍了团队功能在个人环境中的常用功能：
+下面说明在个人上下文中通常使用 Teams 功能的方法：
 
-* [**Bot**](~/bots/what-are-bots.md) 具有与用户的一对一对话。 需要多转对话或提供仅与特定用户相关的通知的 bot 最适用于个人上下文。
+* [**自动**](~/bots/what-are-bots.md)用户进行一对一对话。 需要多次对话或提供仅与特定用户相关的通知的自动程序最适合个人应用。
 
-* [**选项卡**](~/tabs/what-are-tabs.md) 提供了对单个用户有意义的全屏嵌入式 web 体验。
+* [**选项卡**](~/tabs/what-are-tabs.md)可提供全屏嵌入的 Web 体验，对查看该体验的用户有意义。
 
-## <a name="ui-components"></a>UI 组件
+## <a name="examples"></a>示例
 
-应用程序通常表现出一个或多个标准团队 UI 组件。 使用这些组件构建应用程序会导致丰富的体验，让团队用户的本地体验感到不在。
+Teams 应用设计指南提供详细的视觉效果，展示用户在何处可以找到和使用 Teams 应用。
 
-### <a name="cards"></a>卡
-
-[卡片](~/task-modules-and-cards/what-are-cards.md) 是由 JSON 定义的 UI 容器，可包含带格式的文本、媒体、控件 (如下拉列表和单选按钮) 和触发操作的按钮。
-
-卡片操作可向应用程序的 API 发送有效负载、打开链接、启动身份验证流或向对话发送邮件。 团队平台支持多张卡片，包括自适应卡片、英雄卡片、缩略图卡片等。 您可以组合卡片集合并显示在列表或轮播中。
-
-### <a name="task-modules"></a>任务模块
-
-[任务模块](~/task-modules-and-cards/what-are-task-modules.md) 在团队中提供了模式体验。 它们对于启动工作流、收集用户输入或显示丰富的信息（如视频或 Power BI 仪表板）尤其有用。 在任务模块中，可以运行自定义前端代码、显示 `<iframe>` 小部件或显示自适应卡片。
-
-考虑您想要如何构建应用程序时，请记住，模式是用户输入信息或完成任务（与选项卡或基于对话的 bot 体验相比）的自然。
-
-### <a name="deep-links"></a>深度链接
-
-您的应用程序可以创建 [URL 深层链接](~/concepts/build-and-test/deep-links.md) ，以帮助您通过您的应用程序和团队客户端导航您的用户。 您可以为团队中的大多数实体创建深层链接，有些 (像新的会议请求) 允许您使用 URL 中的查询字符串预填充信息。
-
-例如，您的会话自动程序可以向通道发送一封邮件，其中包含指向任务模块的深层链接，从而将一个卡片作为一对一的邮件发送给用户，这又包含一个深层链接，以便在特定日期/时间使用特定用户新建会议。 使用深层链接可在应用程序可用的各种扩展点之间进行连接，始终保持用户在正确的上下文中的持续时间。
-
-### <a name="web-based-content"></a>基于 Web 的内容
-
-[基于 Web 的内容](~/tabs/how-to/create-tab-pages/content-page.md) 是您承载的可嵌入到选项卡或任务模块中的网页。
+> [!div class="nextstepaction"]
+> [查看 Teams 应用设计指南](../concepts/design/design-teams-app-overview.md)
