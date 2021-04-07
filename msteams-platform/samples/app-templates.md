@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: Microsoft Teams 模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 098325d973ad1fa5306761cd60c6504d808cea9d
-ms.sourcegitcommit: 0628a85293f7e26de3490e4dd23a54e586cdfeca
+ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "51493053"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596686"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
 应用模板是 Microsoft Teams 的完整应用示例，这些应用是开源的，可在 GitHub 上获取。 每个应用模板都包含有关为组织部署和安装该应用的详细说明。 它还提供一个示例应用，你可以立即安装并开始使用该应用。 完整的源代码也可用，这允许你详细浏览它或分叉代码，并更改它以满足你的特定要求。
 所有应用模板都根据 MIT 许可 [条款](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE) 提供。
->[!NOTE] 
->你（而非 Microsoft）必须许可和支持使用用户和组织的应用模板创建的应用。
+> [!NOTE] 
+> 你必须许可和支持使用用户和组织的应用模板创建的应用。 Microsoft 不负责许可证和支持。
 
 **&#9734;指示新发布的应用模板。**
 
@@ -28,13 +28,29 @@ ms.locfileid: "51493053"
 * **可自定义和可扩展：** 尽管所有应用模板都可以以最少的配置进行部署，但我们提供了整个代码库和部署脚本，以便你可以轻松自定义或扩展它们以满足你的独特需求。
 * **详细文档：** 所有应用模板都附带了有关解决方案体系结构、部署和配置步骤的端到端文档。  
 
-## <a name="adoption-bot-9734"></a>采用自动程序&#9734;
+## <a name="adoption-bot"></a>采用自动程序 
 
 采用机器人是一种用户关注聊天机器人，使用 Power Virtual Agent for Teams (PVA) 。 它可视为常见问题增强版的 PVA 版本。 采用自动程序解答了有关 Microsoft 365 和 Teams 的 100 多个常见问题。 可以编辑现有主题、添加自己的主题以及加入现有常见问题解答。 如果用户需要其他帮助，采用机器人可以将其与专家联系，甚至可以扩展为使用高级流连接器打开服务票证。此机器人可以安装在它自己的上，也可以内置到自定义应用（如采用 [中心）中](https://github.com/akporzondek/adoption_hub)。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="appointment-manager-9734"></a>约会管理器&#9734;
+## <a name="adoption-tool-9734"></a>采用工具&#9734;
+
+采用工具包含以下两个应用程序模板：
+
+### <a name="champion-management-platform"></a>冠军管理平台
+
+CMP (平台) 模板可帮助你管理、扩展和激发团队合作冠军取得更多成就。 此应用程序模板基于 SharePoint 框架构建，并加载到团队中的选项卡中。 组可以利用此工具帮助管理计划成员身份、提供用于日志记录的排行榜和事件类型，以及用于向计划参与者覆盖数字锁屏提醒的工具。
+
+[在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
+
+### <a name="get-started"></a>入门
+
+"入门"应用模板允许你将 Microsoft 365 学习路径功能引入到 Microsoft Teams 中。 此应用模板允许你轻松访问特定培训页面或其他 Intranet 资产，并直接在 Teams 中加载内容。 还可以更改应用名称或徽标，以匹配你的公司品牌。
+
+[在 GitHub 上获取](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
+
+## <a name="appointment-manager"></a>约会管理器 
 
 约会管理器是一个 Teams 应用模板，可帮助企业通过 Teams 创建、管理和与消费者进行虚拟约会。 来自客户的新约会请求在 Teams 频道中可见，可在 Teams 频道中快速分配这些请求并将其重新分配到团队中的员工。 可以通过自定义选项卡在团队或个人级别查看约会请求。 每个约会都与 Teams 联机会议关联，因此员工和使用者可以在计划的时间轻松加入会议。
 
@@ -125,7 +141,7 @@ Building Access 是一款基于 Microsoft [Power Platform](https://powerapps.mic
 :::column-end:::
 :::row-end:::
 
-## <a name="classroom-drop-in-9734"></a>课堂放置&#9734;
+## <a name="classroom-drop-in"></a>课堂放置 
 
 Classroom Drop-in 是一款基于 Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)的应用，系统领导可根据需要查找课堂团队 (虚拟教室) 并根据需要将自己或其他人员添加到这些课堂团队中。 使用 Microsoft [Power Apps](/powerapps/powerapps-overview) 和 [Power Automate](/power-automate/getting-started)构建的应用与 Microsoft Teams 深度集成，以确保教育机构可以针对每个业务要求向相关利益干系人提供访问权限，从而优化他们在混合学习环境中的操作。
 
@@ -162,7 +178,7 @@ Classroom Drop-in 是一款基于 Microsoft [Power Platform](https://powerapps.m
 :::column-end:::
 :::row-end:::
 
-## <a name="co-worker-appreciation-9734"></a>同事的"向内&#9734;
+## <a name="co-worker-appreciation"></a>同事的感谢 
 
 使用 Microsoft Teams 中的同事共同理解模板，用户可以在 Teams 上下文中识别其同事的成就。 当同事选择奖励同事时，将在频道对话中标记收件人和其他团队成员，并接收有关该频道的奖励详细信息的通知。 这些奖励记录在 Teams 应用中，安全、便携且易于共享。 这可视为基于 PowerApps 的开放锁屏提醒应用模板版本，具有排行榜。
 
@@ -268,7 +284,7 @@ E-Cares 是一款基于 [Power Apps](/powerapps/maker/canvas-apps/embed-teams-ap
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="get-support-app-9734"></a>获取支持应用&#9734;
+## <a name="get-support-app"></a>获取支持应用
 
 使用 Microsoft Teams 的组织可以使用"获取支持"应用，以允许任何一组用户向监督员请求帮助。 此应用包括各种功能，例如：
 -   从 Power App 请求不同类别的帮助
@@ -391,7 +407,7 @@ Icebreaker 是 [一](../bots/what-are-bots.md) 个 Microsoft Teams 机器人，�
 :::column-end:::
 :::row-end:::
 
-## <a name="inspection-9734"></a>检查&#9734;
+## <a name="inspection"></a>检查 
 
  检查是一款 Microsoft Teams 应用，使第一线工作人员可以检查从位置到资产和设备之间的任何内容。 例如，零售商店、制造工厂或车辆和计算机。 此解决方案中具有两个应用，每个应用都适用于不同类型的用户。
 
@@ -601,7 +617,7 @@ Microsoft Teams 中的协作通常引用 SharePoint 列表中的项中包含的�
 :::column-end:::
 :::row-end:::
 
-## <a name="time-tally-9734"></a>时间数据&#9734;
+## <a name="time-tally"></a>Time Tally 
 
 一个项目可以包含多个任务，并且可以将各种项目分配给员工。 经理必须了解在员工执行这些任务所花的时间内的项目进度。 这会是一项很麻烦的活动，因为员工需要填写时间表。 利用时间表应用程序，员工能够使用移动设备快速填写其时间表，经理也不需要跟进员工的时间表条目。 经理可以基于资源查看项目利用率，并可以批准或拒绝这些条目。 发送提醒通知以确保时间表合规性。 此外，历史数据和使用情况可用于分析。
 

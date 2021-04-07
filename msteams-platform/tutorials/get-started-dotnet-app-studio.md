@@ -5,12 +5,12 @@ keywords: 入门 .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: ee90d07b9616d130f4c418427762f9531c203672
-ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
+ms.openlocfilehash: 99a0982a0fa453c6eb7ffeea25ba8a2607cf2d5e
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "51403974"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596257"
 ---
 # <a name="create-your-first-teams-app-using-c-or-net"></a>使用 C# .NET 创建你的第一个 Teams 应用
 
@@ -117,9 +117,9 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>更新托管应用的凭据
 
-示例应用要求将环境变量设置为保存在文本文件 [中的值](~/includes/get-started/get-started-use-app-studio.md#bots)。
+示例应用要求将环境变量设置为保存在文本文件中的值。
 
-打开 appsettings.json 文件。 使用保存在文本文件中的自动程序 ID 更新 **MicrosoftAppId** 值。 使用保存的自动程序密码更新 **MicrosoftAppPassword。**
+打开 `appsettings.json`文件。 使用保存在文本文件中的自动程序 ID 更新 **MicrosoftAppId** 值。 使用保存的自动程序密码更新 **MicrosoftAppPassword。**
 
 <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 

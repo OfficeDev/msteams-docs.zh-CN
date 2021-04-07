@@ -11,161 +11,155 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 3ac38fce0273be69c358f085037449bb5b9626f2
-  ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
-  ms.translationtype: MT
-  ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/31/2021
-  ms.locfileid: "51475940"
 highlightedContent:
   items:
-  - title: "是 Teams 开发的新人？ \U0001F680从这里开始！"
-    itemType: get-started
-    url: /microsoftteams/platform/overview
-  - title: 规划应用
-    itemType: overview
-    url: /microsoftteams/platform/concepts/design/understand-use-cases
-  - title: 设计应用
-    itemType: overview
-    url: /microsoftteams/platform/concepts/design/design-teams-app-overview
-  - title: 生成应用程序
-    itemType: how-to-guide
-    url: /microsoftteams/platform/overview#start-building
-  - title: 使用 Microsoft Graph 增强应用
-    itemType: how-to-guide
-    url: /graph/teams-concept-overview
-  - title: 将应用发布到 Teams 应用商店
-    itemType: deploy
-    url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-  - title: 教程和代码示例
-    itemType: sample
-    url: /microsoftteams/platform/tutorials/code-samples
-  - title: 新变化？
-    itemType: whats-new
-    url: /microsoftteams/platform/whats-new
+    - title: "是 Teams 开发的新人？ \U0001F680从这里开始！"
+      itemType: get-started
+      url: /microsoftteams/platform/overview
+    - title: 规划应用
+      itemType: overview
+      url: /microsoftteams/platform/concepts/design/understand-use-cases
+    - title: 设计应用
+      itemType: overview
+      url: /microsoftteams/platform/concepts/design/design-teams-app-overview
+    - title: 生成应用程序
+      itemType: how-to-guide
+      url: /microsoftteams/platform/overview#start-building
+    - title: 使用 Microsoft Graph 增强应用
+      itemType: how-to-guide
+      url: /graph/teams-concept-overview
+    - title: 将应用发布到 Teams 应用商店
+      itemType: deploy
+      url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
+    - title: 教程和代码示例
+      itemType: sample
+      url: /microsoftteams/platform/tutorials/code-samples
+    - title: 新变化？
+      itemType: whats-new
+      url: /microsoftteams/platform/whats-new
 conceptualContent:
   title: 指南和资源
   items:
-  - title: 受众
-    links:
-    - url: https://developer.microsoft.com/microsoft-teams
-      itemType: concept
-      text: 开发者
-    - url: /microsoftteams/microsoft-teams
-      itemType: concept
-      text: IT 专业人员
-    - url: https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics
-      itemType: concept
-      text: 最终用户
-  - title: 浏览
-    links:
-    - url: /microsoftteams/platform/concepts/capabilities-overview
-      itemType: overview
-      text: 团队应用程序功能
-    - url: /microsoftteams/platform/concepts/design/map-use-cases
-      itemType: overview
-      text: 将用例映射到 Microsoft Teams 功能
-    - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-      itemType: how-to-guide
-      text: 使用应用生成 Teams Node.js
-    - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-      itemType: how-to-guide
-      text: 使用 C 生成 Teams 应用#
-    - url: /microsoftteams/platform/samples/teams-low-code-solutions
-      itemType: how-to-guide
-      text: 使用 Microsoft Power Platform 生成低代码 Teams 应用、机器人和流
-    - url: /microsoftteams/platform/resources/schema/manifest-schema
-      itemType: reference
-      text: Teams 应用的清单架构
-    - url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
-      itemType: reference
-      text: 为 Microsoft Teams 应用生成解决方案
-  - title: 学习
-    links:
-    - url: /learn/modules/intro-microsoft-teams-apps
-      itemType: learn
-      text: 构建 Microsoft Teams 应用
-    - url: /learn/modules/embedded-web-experiences
-      itemType: learn
-      text: 使用选项卡创建嵌入式 Web 体验
-    - url: /learn/modules/msteams-conversation-bots/
-      itemType: learn
-      text: 创建与机器人的对话交互
-    - url: /learn/modules/msteams-messaging-extensions/
-      itemType: learn
-      text: 创建面向任务的与邮件扩展的交互
-    - url: /learn/modules/msteams-task-modules/
-      itemType: learn
-      text: 使用任务模块收集输入和收集信息
-    - url: /learn/modules/msteams-webhooks-connectors/
-      itemType: learn
-      text: 使用 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
-  - title: 集成
-    links:
-    - url: /microsoftteams/platform/samples/integrating-web-apps
-      itemType: concept
-      text: 集成 web 应用
-    - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
-      itemType: how-to-guide
-      text: 集成 Power Virtual Agents 聊天机器人
-    - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
-      itemType: reference
-      text: 为网站集成"共享到 Teams"按钮
-    - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
-      itemType: reference
-      text: 将 Teams 选项卡与 SharePoint 集成
-    - url: /microsoftteams/platform/resources/moodleinstructions
-      itemType: how-to-guide
-      text: 与一个企业学习管理系统集成
-    - url: /microsoftteams/platform/samples/app-templates
-      itemType: reference
-      text: 集成生产就绪型应用模板
-    - url: /microsoftteams/platform/samples/shifts-wfm-connectors
-      itemType: reference
-      text: 集成生产就绪型 Shifts 连接器
-  - title: 连接
-    links:
-    - url: https://developer.microsoft.com/microsoft-teams/blogs/
-      itemType: overview
-      text: Microsoft Teams 开发人员博客
-    - url: https://aka.ms/microsoftteamscommunitycall
-      itemType: overview
-      text: Microsoft Teams 社区通话
-    - url: https://docs.microsoft.com/en-us/teamblog/
-      itemType: whats-new
-      text: 公告
-  - title: 社区帮助
-    links:
-    - url: /microsoftteams/platform/feedback
-      itemType: overview
-      text: Microsoft Teams 开发人员社区与响应
-    - url: /microsoftteams/platform/resources/teams-contributor-reference
-      itemType: overview
-      text: 参与 Microsoft Teams 文档
+    - title: 受众
+      links:
+        - url: 'https://developer.microsoft.com/microsoft-teams'
+          itemType: concept
+          text: 开发者
+        - url: /microsoftteams/microsoft-teams
+          itemType: concept
+          text: IT 专业人员
+        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+          itemType: concept
+          text: 最终用户
+    - title: 浏览
+      links:
+        - url: /microsoftteams/platform/concepts/capabilities-overview
+          itemType: overview
+          text: 团队应用程序功能
+        - url: /microsoftteams/platform/concepts/design/map-use-cases
+          itemType: overview
+          text: 将用例映射到 Microsoft Teams 功能
+        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
+          itemType: how-to-guide
+          text: 使用应用生成 Teams Node.js
+        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
+          itemType: how-to-guide
+          text: 使用 C 生成 Teams 应用#
+        - url: /microsoftteams/platform/samples/teams-low-code-solutions
+          itemType: how-to-guide
+          text: 使用 Microsoft Power Platform 生成低代码 Teams 应用、机器人和流
+        - url: /microsoftteams/platform/resources/schema/manifest-schema
+          itemType: reference
+          text: Teams 应用的清单架构
+        - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
+          itemType: reference
+          text: Microsoft Teams 应用的构建方案
+    - title: 学习
+      links:
+        - url: /learn/modules/intro-microsoft-teams-apps
+          itemType: learn
+          text: 构建 Microsoft Teams 应用
+        - url: /learn/modules/embedded-web-experiences
+          itemType: learn
+          text: 使用选项卡创建嵌入式 Web 体验
+        - url: /learn/modules/msteams-conversation-bots/
+          itemType: learn
+          text: 创建与机器人的对话交互
+        - url: /learn/modules/msteams-messaging-extensions/
+          itemType: learn
+          text: 创建面向任务的与邮件扩展的交互
+        - url: /learn/modules/msteams-task-modules/
+          itemType: learn
+          text: 使用任务模块收集输入和收集信息
+        - url: /learn/modules/msteams-webhooks-connectors/
+          itemType: learn
+          text: 使用 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
+    - title: 集成
+      links:
+        - url: /microsoftteams/platform/samples/integrating-web-apps
+          itemType: concept
+          text: 集成 web 应用
+        - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
+          itemType: how-to-guide
+          text: 集成 Power Virtual Agents 聊天机器人
+        - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
+          itemType: reference
+          text: 为网站集成"共享到 Teams"按钮
+        - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
+          itemType: reference
+          text: 将 Teams 选项卡与 SharePoint 集成
+        - url: /microsoftteams/platform/resources/moodleinstructions
+          itemType: how-to-guide
+          text: 与一个企业学习管理系统集成
+        - url: /microsoftteams/platform/samples/app-templates
+          itemType: reference
+          text: 集成生产就绪型应用模板
+        - url: /microsoftteams/platform/samples/shifts-wfm-connectors
+          itemType: reference
+          text: 集成生产就绪型 Shifts 连接器
+    - title: 连接
+      links:
+        - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
+          itemType: overview
+          text: Microsoft Teams 开发人员博客
+        - url: 'https://aka.ms/microsoftteamscommunitycall'
+          itemType: overview
+          text: Microsoft Teams 社区通话
+        - url: 'https://docs.microsoft.com/en-us/teamblog/'
+          itemType: whats-new
+          text: 公告
+    - title: 社区帮助
+      links:
+        - url: /microsoftteams/platform/feedback
+          itemType: overview
+          text: Microsoft Teams 开发人员社区与响应
+        - url: /microsoftteams/platform/resources/teams-contributor-reference
+          itemType: overview
+          text: 参与 Microsoft Teams 文档
 tools:
   title: SDK 和工具
   items:
-  - title: Microsoft Teams Toolkit Code Visual Studio扩展
-    imageSrc: /media/logos/logo_vs-code.svg
-    url: /microsoftteams/platform/toolkit/visual-studio-code-overview
-  - title: Microsoft Teams Toolkit扩展Visual Studio
-    imageSrc: /media/logos/logo_vs-ide.svg
-    url: /microsoftteams/platform/toolkit/visual-studio-overview
-  - title: 适用于选项卡和其他托管体验的 JavaScript 客户端 SDK
-    imageSrc: ./assets/icons/logo_js.png
-    url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
-  - title: 适用于自动程序和消息传递扩展的 Node.js Bot Framework SDK
-    imageSrc: ./assets/icons/logo_nodejs.png
-    url: https://github.com/Microsoft/botbuilder-js
-  - title: 适用于自动程序和消息传递扩展的.NET Bot Framework SDK
-    imageSrc: ./assets/icons/logo_net.png
-    url: https://github.com/Microsoft/botbuilder-dotnet/
-  - title: Microsoft Graph SDK
-    imageSrc: ./assets/icons/graph-icon-1.png
-    url: https://docs.microsoft.com/graph/sdks/sdks-overview
-  - title: Microsoft Teams App Studio
-    imageSrc: ./assets/icons/AppStudioIcon.png
-    url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
-  - title: 适用于 Microsoft Teams 的 Yeoman 生成器
-    imageSrc: ./assets/icons/Yeoman.png
-    url: https://github.com/OfficeDev/generator-teams
+    - title: Microsoft Teams Toolkit Code Visual Studio扩展
+      imageSrc: /media/logos/logo_vs-code.svg
+      url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+    - title: Microsoft Teams Toolkit扩展Visual Studio
+      imageSrc: /media/logos/logo_vs-ide.svg
+      url: /microsoftteams/platform/toolkit/visual-studio-overview
+    - title: 适用于选项卡和其他托管体验的 JavaScript 客户端 SDK
+      imageSrc: ./assets/icons/logo_js.png
+      url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
+    - title: 适用于自动程序和消息传递扩展的 Node.js Bot Framework SDK
+      imageSrc: ./assets/icons/logo_nodejs.png
+      url: 'https://github.com/Microsoft/botbuilder-js'
+    - title: 适用于自动程序和消息传递扩展的.NET Bot Framework SDK
+      imageSrc: ./assets/icons/logo_net.png
+      url: 'https://github.com/Microsoft/botbuilder-dotnet/'
+    - title: Microsoft Graph SDK
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
+    - title: Microsoft Teams App Studio
+      imageSrc: ./assets/icons/AppStudioIcon.png
+      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
+    - title: 适用于 Microsoft Teams 的 Yeoman 生成器
+      imageSrc: ./assets/icons/Yeoman.png
+      url: 'https://github.com/OfficeDev/generator-teams'

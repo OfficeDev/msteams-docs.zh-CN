@@ -5,12 +5,12 @@ description: 创建团队会议应用
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585846"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596229"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -350,10 +350,10 @@ POST /v3/conversations/{conversationId}/activities
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | Description | C# |
-|----------------|-----------------|--------------|
-| 会议可扩展性 | 用于传递令牌的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
-| 会议内容气泡机器人 | 用于与会议内容气泡机器人交互的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
+|示例名称 | Description | .NET | Node.js |
+|----------------|-----------------|--------------|--------------|
+| 会议可扩展性 | 用于传递令牌的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
+| 会议内容气泡机器人 | 用于与会议内容气泡机器人交互的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 

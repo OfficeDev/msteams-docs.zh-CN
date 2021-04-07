@@ -1,37 +1,37 @@
 ---
 title: 集成位置功能
 description: 如何使用 Teams JavaScript 客户端 SDK 利用位置功能
-keywords: 位置映射功能本机设备权限
+keywords: 位置地图功能本机设备权限
 ms.author: lajanuar
-ms.openlocfilehash: fccf39c37c785be716bfff26907f9184c0d9beec
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: b941080eaece2cd2346bfa046ae97f855195ff20
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449606"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596194"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能 
 
 本文档指导你如何将本机设备的位置功能与 Teams 应用集成。  
 
-可以使用 [Microsoft Teams JavaScript 客户端 SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户的本机设备功能 [所需的工具](native-device-permissions.md)。 使用位置 API（如 [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_) 和 [showLocation）](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_) 将功能集成到你的应用中。 
+可以使用 [Microsoft Teams JavaScript 客户端 SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户本机设备功能 [所需的工具](native-device-permissions.md)。 使用位置 API（如 [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) 和 [showLocation）](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) 将功能集成到你的应用中。 
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>集成位置功能的优点
 
 在 Teams 应用中集成位置功能的主要优点是，它允许 Teams 平台上的 Web 应用开发人员通过 Microsoft Teams JavaScript 客户端 SDK 利用位置功能。 
 
-以下示例显示了如何在不同方案中使用位置功能的集成：
-* 在工厂中，主管可以通过要求员工在工厂附近自家并通过指定的应用共享来跟踪员工出席情况。 位置数据也会与图像一起捕获和发送。
-* 位置功能使服务提供商的维护人员能够与管理层共享手机网络网络的真实运行状况数据。 管理层可以比较捕获的位置信息和维护人员提交的数据之间的任何不匹配情况。
+以下示例显示如何在不同方案中使用位置功能的集成：
+* 在工厂中，主管可以跟踪工作者的出席情况，让他们在工厂附近自家，并通过指定的应用共享它。 位置数据也会与图像一起捕获和发送。
+* 位置功能使服务提供商的维护人员能够与管理层共享手机网络的真实运行状况数据。 管理层可以比较捕获的位置信息与维护人员提交的数据之间的任何不匹配情况。
 
-若要集成位置功能，必须更新应用清单文件并调用 API。 为了有效集成，您必须对用于调用位置 API[](#code-snippets)的代码段有一个很好的了解。 熟悉 API 响应错误以处理[](#error-handling)Teams 应用中的错误非常重要。
+若要集成位置功能，必须更新应用清单文件并调用 API。 为了进行有效的集成，您必须深入了解用于调用位置[](#code-snippets)API 的代码段。 熟悉 API 响应错误以处理[](#error-handling)Teams 应用中的错误非常重要。
 
 > [!NOTE] 
 > 目前，Microsoft Teams 对位置功能的支持仅适用于移动客户端。
 
 ## <a name="update-manifest"></a>更新清单
 
-通过 [ 添加manifest.js并](../../resources/schema/manifest-schema.md#devicepermissions) 指定来更新 Teams 应用文件 `devicePermissions` `geolocation` 。 它允许你的应用在开始使用位置功能之前向用户请求必要的权限。
+通过添加 [manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) 并指定 ，更新你的 Teams 应用在文件 `devicePermissions` 上的应用 `geolocation` 。 它允许你的应用在开始使用位置功能之前向用户请求必要的权限。
 
 ``` json
 "devicePermissions": [
@@ -40,20 +40,21 @@ ms.locfileid: "50449606"
 ```
 
 > [!NOTE]
-> 启动 **相关** Teams API 时，将自动显示请求权限提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。
+> 启动 **相关的** Teams API 时，将自动显示"请求权限"提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。
 
 ## <a name="location-apis"></a>位置 API
 
 你必须使用以下一组 API 来启用设备的位置功能：
 
-| API      | 说明   |
+| API      | Description   |
 | --- | --- |
-|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_) | 提供用户的当前设备位置或打开本机位置选取器并返回用户选择的位置。 |
-|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation) | 在地图上显示位置 |
+|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | 提供用户的当前设备位置或打开本机位置选取器并返回用户选择的位置。 |
+|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | 在地图上显示位置 |
 
 > [!NOTE]
 
-> `getLocation()`API 附带以下[输入配置](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest)和 `allowChooseLocation` `showMap` 。 <br/> 如果值为 `allowChooseLocation` *true，* 则用户可以选择其选择的任何位置。<br/>  如果值为 *false，* 则用户无法更改其当前位置。<br/> 如果值为 `showMap` *false，* 则提取当前位置而不显示地图。 `showMap` 如果设置为 `allowChooseLocation` *true，则忽略*。 
+> API `getLocation()` 附带以下 [输入配置](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)和 `allowChooseLocation` `showMap` 。 <br/> 如果 的 `allowChooseLocation` 值为 *true，* 则用户可以选择他们选择的任何位置。<br/>  如果值为 *false，* 则用户无法更改其当前位置。<br/> 如果 的 `showMap` 值为 *false，* 则提取当前位置而不显示地图。 `showMap` 如果 设置为 true ， `allowChooseLocation` 则 *忽略*。 
+
 
 **位置功能的 Web 应用体验** 
  ![位置功能的 Web 应用体验](../../assets/images/tabs/location-capability.png)
@@ -67,9 +68,9 @@ ms.locfileid: "50449606"
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **500** | INTERNAL_ERROR | 执行所需操作时遇到内部错误。|
 | **1000** | PERMISSION_DENIED |用户拒绝对 Teams 应用或 Web 应用的位置权限。|
-| **4000** | INVALID_ARGUMENTS | 使用错误的或不足的强制参数调用 API。|
+| **4000** | INVALID_ARGUMENTS | 使用错误或不足的强制参数调用 API。|
 | **8000** | USER_ABORT |用户已取消操作。|
-| **9000** | OLD_PLATFORM | 用户位于不存在 API 实现的旧平台版本上。 升级生成应解决问题。|
+| **9000** | OLD_PLATFORM | 用户位于不存在 API 实现的旧平台版本上。 升级版本应该可以解决此问题。|
 
 ## <a name="code-snippets"></a>代码段
 

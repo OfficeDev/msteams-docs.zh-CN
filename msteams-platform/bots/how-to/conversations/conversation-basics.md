@@ -4,12 +4,12 @@ description: 介绍与 Microsoft Teams 自动程序对话的方法
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 3cf11b5b96a1504ddb3fb8c9fc5814c5131d072f
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 193a93dbf775389383e0385207fa4112440bffe5
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585853"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596672"
 ---
 # <a name="conversation-basics"></a>对话基础知识
 
@@ -282,6 +282,9 @@ async def on_members_added_activity(
 ## <a name="notifications-to-your-message"></a>邮件通知
 
 通知会提醒用户有关新任务、提及和评论。 这些警报与用户正在处理或必须通过向活动源中插入通知来查看内容相关。 对于从自动程序消息触发的通知，将 `TeamsChannelData` objects `Notification.Alert` 属性设置为 true。 是否引发通知取决于单个用户的 Teams 设置，你无法替代这些设置。 通知类型是横幅或横幅和电子邮件。
+
+> [!NOTE]
+> " **摘要"** 字段将来自用户的任何文本显示为源中的通知消息。
 
 以下代码显示向邮件添加通知的示例：
 

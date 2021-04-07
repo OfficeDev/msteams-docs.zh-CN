@@ -3,12 +3,12 @@ title: 选项卡的单一登录支持
 description: '介绍 SSO (单一) '
 ms.topic: how-to
 keywords: teams 身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: e5f79aaf62d195144dd9b34cfbce601c94478191
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753537"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596679"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
@@ -85,8 +85,8 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 9. 在框中输入详细信息，以使用适用于作用域的值配置管理员和用户同意 `access_as_user` 提示：
     * **管理员许可标题：** Teams 可以访问用户的个人资料。
     * **管理员同意说明**：Teams 可以当前用户调用应用的 Web API。
-    * **用户许可标题**：Teams 可以访问用户配置文件并代表用户提出请求。
-    * **用户同意说明：** Teams 可以使用与用户相同的权限调用此应用的 API。
+    * **用户同意标题**：Teams 可以访问你的个人资料并代表你提出请求。
+    * **用户同意说明：** Teams 可以使用你拥有的相同权限调用此应用的 API。
 10. 确保将“状态”设置为“已启用”。
 11. 选择 **"添加范围** "以保存详细信息。 文本字段下方显示的 **作用域** 名称的域部分必须自动匹配上一步中设置的应用程序 **ID** URI，并 `/access_as_user` 追加到末尾 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` 。
 12. 在 **"授权客户端应用程序** "部分，确定要针对应用程序的 Web 应用程序授权的应用程序。 选择 **"添加客户端应用程序"。** 输入以下每个客户端 ID，然后选择在上一步中创建的授权作用域：
@@ -154,7 +154,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 调用 时，用户级别权限需要其他用户同意，将显示一个对话框，以向用户授予 `getAuthToken` 其他同意。
 
-在成功回调中收到访问令牌后，可以解码访问令牌以查看与该令牌关联的声明。 （可选）你可以手动将访问令牌复制并粘贴到工具中，jwt.ms检查其内容。 [](https://jwt.ms/) 如果未在返回的访问令牌中接收 UPN，可以在 AAD 中将其添加为[](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)可选声明。
+在成功回调中收到访问令牌后，可以解码访问令牌以查看与该令牌关联的声明。 （可选）你可以手动将访问令牌复制并粘贴到工具中，jwt.ms 检查其内容[](https://jwt.ms/)。 如果未在返回的访问令牌中接收 UPN，可以在 AAD 中将其添加为[](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)可选声明。
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
@@ -162,7 +162,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ## <a name="code-sample"></a>代码示例
 
-|**示例名称**|**说明**|**C#**|**Node.js**|
+|**示例名称**|**Description**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | 选项卡 SSO |适用于选项卡 Azure AD SSO 的 Microsoft Teams 示例应用| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[查看](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 

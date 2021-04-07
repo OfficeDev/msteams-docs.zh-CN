@@ -4,12 +4,12 @@ author: heath-hamilton
 description: 了解如何在 Teams 会议中设计应用并获取 Microsoft Teams UI 工具包。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 83dfaf3f92c00c420f758b66488b4a6b09c75717
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827947"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596250"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -152,11 +152,10 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
 
 根据不同的方案，会议内对话框的大小可能会有所不同。 确保保持填充和组件大小。
 
-* **Width：** 对话框的 iframe 宽度是指定范围内的绝对值。
-* **高度**：对话框的 iframe 高度是指定范围内的绝对值。
+* **Width：** 可以指定对话框的 iframe 的宽度（在支持的大小范围内的任何位置）。
+* **高度**：可以在支持的大小范围内的任何位置指定对话框的 iframe 的高度。 如果应用内容超出最大高度，还可以允许用户垂直滚动。
 
-> [!NOTE]
-> 为宽度和高度定义的值用于会议 `externalResourceURL` 对话。
+若要实现，使用 键指定宽度和 [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) 高度。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="示例显示会议内对话框。宽度：最小为 280 像素 (248 像素的 iframe) 。最大为 460 像素 (428 像素的 iframe) 。高度：300 像素 (iframe) 。" border="false":::
 
@@ -164,7 +163,7 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
 
 可以在会议结束后返回到会议并查看应用内容。 本示例中，会议组织者可以在 **Contoso** 选项卡中查看投票结果。 (注意：从设计的角度来看，会议前和会议后选项卡体验之间没有区别。) 
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例显示会议后选项卡。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示会议后选项卡。" border="false":::
 
 ## <a name="best-practices"></a>最佳做法
 

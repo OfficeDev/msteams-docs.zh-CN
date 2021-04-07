@@ -5,12 +5,12 @@ description: 大致了解开发人员如何使用自定义应用扩展 Microsoft
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: e40d2b0d8b0d12e6275b97f79d103310d22f9720
-ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
+ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51475926"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596208"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
@@ -74,9 +74,8 @@ Teams 应用是功能和[入口点](concepts/capabilities-overview.md)[的组合
 :::row-end:::
 
 :::row:::
+
    :::column span="":::
-   :::column-end:::
-:::row-end:::
 
 ### <a name="microsoft-graph-for-teams"></a>适用于 Teams 的 Microsoft Graph
 
@@ -85,25 +84,20 @@ Teams 应用是功能和[入口点](concepts/capabilities-overview.md)[的组合
 :::image type="content" source="assets/images/overview-graph.png" alt-text="适用于 Teams 的 Microsoft Graph API 的概念表示形式。" border="false":::
 
    :::column-end:::
-   :::column span="":::
 
-:::row:::
-   :::column span="2":::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
-## <a name="build-solutions-for-microsoft-teams-apps"></a>为 Microsoft Teams 应用生成解决方案
- 
-Microsoft 提供了一本可扩展性外观书籍，这是一个按行业组织的 Teams 应用的方案库。 本书帮助你在 Teams 平台上生成应用，并了解使用各种 Teams 平台功能的不同可能方案。 通讯簿方案从业务问题、所涉及的角色及其挑战开始，以满足业务需求的 Teams 应用解决方案结束。
-
-此库的每个方案都附带一组高保真设计概念模型，这些模型可作为设计应用和增强用户体验的灵感。 此外，该书重点介绍了构建每个应用时遵循的设计和体系结构最佳做法。 有关详细信息，请参阅可扩展性外观书籍。 有关详细信息，请参阅 [扩展性外观书籍](https://adoption.microsoft.com/extensibility-look-book/scenarios/)。 
+:::row:::
+   :::column span="2":::
 
 ## <a name="start-building"></a>开始构建
 
-通过创建简单的应用并添加一些常用功能，快速熟悉 Teams 构建。
+通过设置环境和创建简单的应用，快速熟悉 Teams 构建。
 
 > [!div class="nextstepaction"]
-> [现在生成你的第一个应用](build-your-first-app/build-first-app-overview.md)
+> [构建首个应用](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -143,7 +137,23 @@ Microsoft 提供了一本可扩展性外观书籍，这是一个按行业组织�
    :::column-end:::
 :::row-end:::
 
-## <a name="resources"></a>资源
+:::row:::
+   :::column span="2":::
+
+## <a name="get-ideas-for-your-app"></a>获取应用灵感
+
+寻找应用开发灵感？ 浏览我们具有高保真概念的实际方案和行业解决方案列表，以了解 Teams 应用可以为用户提供帮助的各种方式。
+
+> [!div class="nextstepaction"]
+> [请参阅应用方案](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>另请参阅
 
 * [将"共享到 Teams"按钮添加到网站](concepts/build-and-test/share-to-teams.md)
 * [设计 Teams 应用](concepts/design/design-teams-app-overview.md)
