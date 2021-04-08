@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams 模板示例演示
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 47fb1748f0c88edd2233c4e17aa50d235818d609
+ms.sourcegitcommit: 2de062dd2258147cff8d6a3cadd8839890d9791a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596686"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51612649"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -34,17 +34,13 @@ ms.locfileid: "51596686"
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="adoption-tool-9734"></a>采用工具&#9734;
-
-采用工具包含以下两个应用程序模板：
-
-### <a name="champion-management-platform"></a>冠军管理平台
+## <a name="adoption-tool--champion-management-platform-9734"></a>采用工具 - 冠军管理平台&#9734;
 
 CMP (平台) 模板可帮助你管理、扩展和激发团队合作冠军取得更多成就。 此应用程序模板基于 SharePoint 框架构建，并加载到团队中的选项卡中。 组可以利用此工具帮助管理计划成员身份、提供用于日志记录的排行榜和事件类型，以及用于向计划参与者覆盖数字锁屏提醒的工具。
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-### <a name="get-started"></a>入门
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>采用工具 - Microsoft 365 学习路径 (入门) &#9734;
 
 "入门"应用模板允许你将 Microsoft 365 学习路径功能引入到 Microsoft Teams 中。 此应用模板允许你轻松访问特定培训页面或其他 Intranet 资产，并直接在 Teams 中加载内容。 还可以更改应用名称或徽标，以匹配你的公司品牌。
 
