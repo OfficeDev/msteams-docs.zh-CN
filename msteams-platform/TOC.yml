@@ -350,6 +350,8 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: 测试应用
   items:
+    - name: 概述
+      href: concepts/build-and-test/test-app-overview.md
     - name: 准备 Microsoft 365 租户
       href: concepts/build-and-test/prepare-your-o365-tenant.md
     - name: 选择测试设置
