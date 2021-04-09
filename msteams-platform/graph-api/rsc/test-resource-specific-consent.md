@@ -1,28 +1,28 @@
 ---
-title: 在团队中测试特定于资源的同意
-description: 详细信息在使用 Postman 的团队中测试特定于资源的同意
+title: 在 Teams 中测试特定于资源的同意权限
+description: 使用 Postman 在 Teams 中测试特定于资源的同意的详细信息
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: 团队授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: f50f61e7eb62e3bcc6af2dafc1c7c781ff2145de
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
+ms.openlocfilehash: 0d3d1c895c77bb417a9fdd84e319103485aa8944
+ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366852"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634705"
 ---
-# <a name="test-resource-specific-consent-permissions--in-teams"></a>在团队中测试特定于资源的同意权限
+# <a name="test-resource-specific-consent-permissions-in-teams"></a>在 Teams 中测试特定于资源的同意权限
 
-特定于资源的同意 (RSC) 是 Microsoft 团队和图形 API 集成，使您的应用程序能够使用 API 终结点来管理组织中的特定团队。 请 *参阅*  [特定于资源的同意 (RSC) — MICROSOFT 团队 Graph API](resource-specific-consent.md)。
+RSC (特定于资源的) 是 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定团队。 有关详细信息，请参阅 [RSC](resource-specific-consent.md) (特定) — Microsoft Teams Graph API。
 
 > [!NOTE]
->若要测试 RSC 权限，您的团队应用程序清单文件必须包含使用以下字段填充的 **webApplicationInfo** 项：
+> 若要测试 RSC 权限，Teams 应用清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
 >
-> - **id** -你的 azure ad 应用 id，*请参阅*[在 azure ad 门户中注册你的应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
-> - **resource** —任何字符串，*请参阅*[更新团队应用程序清单](resource-specific-consent.md#update-your-teams-app-manifest)中的注释
-> - **应用程序权限**-您的应用程序的 RSC 权限，*请参阅*[特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
+> - **id**：Azure AD 应用 ID，请参阅在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
+> - **resource**：任何字符串，请参阅更新  [Teams 应用清单中的注释](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **应用程序权限**：应用的 RSC 权限，请参阅 [特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 
 ```json
 "webApplicationInfo":{
@@ -47,49 +47,46 @@ ms.locfileid: "49366852"
    }
 ```
 
->[!IMPORTANT]
->在您的应用程序清单中，仅包括您希望应用程序具有的 RSC 权限。
+> [!IMPORTANT]
+> 在应用清单中，仅包含希望应用具有的 RSC 权限。
 
-## <a name="test-added-rsc-permissions-using-the-postman-app"></a>测试添加了使用 Postman 应用程序的 RSC 权限
+## <a name="test-added-rsc-permissions-using-the-postman-app"></a>使用 Postman 应用测试添加的 RSC 权限
 
-若要检查 API 请求负载是否符合 RSC 权限，需要将 [RSC JSON 测试代码](test-rsc-json-file.md) 复制到本地环境中并更新以下值：
+若要检查 API 请求有效负载是否接受 RSC 权限，需要将 [RSC JSON](test-rsc-json-file.md) 测试代码复制到本地环境并更新以下值：
 
-1. `azureADAppId`  -你的应用程序的 Azure AD 应用 id。
-1. `azureADAppSecret`  —您的 Azure AD 应用程序密钥 (密码) 
-1. `token_scope`  —获取令牌所需的作用域-将值设置为 https://graph.microsoft.com/.default
-1. `teamGroupId` —可以从团队客户端获取团队组 id，如下所示：
+* `azureADAppId`：应用的 Azure AD 应用 ID
+* `azureADAppSecret`：你的 Azure AD 应用密码 (密码) 
+* `token_scope`：获取令牌需要范围 - 将值设置为 https://graph.microsoft.com/.default
+* `teamGroupId`：可以从 Teams 客户端获取团队组 ID，如下所示：
 
-> [!div class="checklist"]
->
-> * 在团队客户端中，从最左侧的导航栏中选择 " **团队** "。
-> * 从下拉菜单中选择应用程序安装到的团队。
-> * 选择 " **更多选项** " 图标 ( # A0) 
-> * 选择 "**获取到团队的链接**" 
-> * 复制并保存字符串中的 **groupId** 值。
+  > [!div class="checklist"]
+  >
+  > * 在 Teams 客户端中 **，从** 最左侧导航栏中选择 Teams。
+  > * 从下拉菜单中选择安装应用的团队。
+  > * 选择" **更多选项"** 图标 (&#8943;) 
+  > * 选择 **获取团队链接** 
+  > * 复制并保存字符串中的 **groupId** 值。
 
-### <a name="using-postman"></a>使用 Postman
+### <a name="use-postman"></a>使用 Postman
 
-> [!div class="checklist"]
->
-> * 打开 [Postman](https://www.postman.com) 应用程序。
-> * 选择 "**文件**  =>  **导入**  =>  **导入文件**" 以从您的环境中上载更新的 JSON 文件。  
-> * 选择 " **集合** " 选项卡。 
-> * 选择 **测试 RSC** 旁边 ( # A0) 旁边的 v 形，以展开详细信息视图，并查看 API 请求。
+1. 打开 [Postman](https://www.postman.com) 应用。
+2. 选择 **"**  >  **文件**  >  **导入导入文件**"，从环境中上载更新的 JSON 文件。  
+3. 选择" **集合"** 选项卡。 
+4. 选择"测试 **>** **RSC"** 旁边的 V 形以展开详细信息视图并查看 API 请求。
 
-为每个 API 调用执行整个权限集。 在应用程序清单中指定的权限应成功，而未指定的权限应失败，并出现 HTTP 403 状态代码。 检查所有响应状态代码，以确认您的应用程序中的 RSC 权限行为满足预期。
+针对每个 API 调用执行整个权限集合。 在应用程序清单中指定的权限必须成功，而未指定的权限必须使用 HTTP 403 状态代码失败。 检查所有响应状态代码，确认应用中 RSC 权限的行为符合预期。
 
->[!NOTE]
->若要测试特定的 DELETE and READ API 调用，请将这些实例方案添加到 JSON 文件中。
+> [!NOTE]
+> 若要测试特定的 DELETE 和 READ API 调用，请向 JSON 文件添加这些实例方案。
 
-## <a name="test--revoked-rsc-permissions-using-postman"></a>使用[Postman](https://www.postman.com/)测试已吊销的 RSC 权限
+## <a name="test-revoked-rsc-permissions-using-postman"></a>使用[Postman](https://www.postman.com/)测试吊销的 RSC 权限
 
-> [!div class="checklist"]
->
-> * 从特定团队中卸载应用程序。
-> * 按照上述步骤 [使用 Postman 添加的 RSC 权限进行测试](#test-added-rsc-permissions-using-the-postman-app)。
-> * 检查所有响应状态代码，以确认成功使用 HTTP 403 状态代码的特定 API 调用失败。
+1. 从特定团队卸载应用。
+2. 按照使用 [Postman 测试添加的 RSC 权限的步骤操作](#test-added-rsc-permissions-using-the-postman-app)。
+3. 检查所有响应状态代码，确认特定 API 调用已成功，但 **HTTP 403 状态代码失败**。
+
+## <a name="see-also"></a>另请参阅
 
 > [!div class="nextstepaction"]
->
-> [了解详细信息： Microsoft Graph API 和团队](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [Microsoft Graph API 和 Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 的清单架构
 ms.topic: reference
 ms.author: lajanuar
 keywords: teams 清单架构
-ms.openlocfilehash: fc7af73dd90ae74d76645281d9e761b91678873b
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585839"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634521"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -277,7 +277,11 @@ Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必�
     ]
   },
   "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -320,7 +324,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 提供有关你的公司的信息。 对于提交到 AppSource (Office 应用商店) ，这些值必须与 AppSource 条目中的信息匹配。 有关 [其他信息，](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) 请参阅发布指南。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`name`|32 个字符|✔|开发人员显示名称的指南。|
 |`websiteUrl`|2048 个字符|✔|the https:// URL to the developer's website. 此链接必须将用户指向你的公司或特定于产品的登陆页面。|
@@ -334,7 +338,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 在 Teams 体验中向用户显示的应用体验名称。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值必须不同。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`short`|30 个字符|✔|应用的显示名称。|
 |`full`|100 个字符||应用的完整名称，在完整应用名称超过 30 个字符时使用。|
@@ -347,7 +351,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 确保你的描述准确地描述了你的体验，并提供相关信息来帮助潜在客户了解你的体验。 如果需要使用外部帐户，则必须在完整说明中记下。 和 `short` `full` 的值必须不同。 简短说明不得在详细说明中重复，且不得包含任何其他应用名称。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`short`|80 个字符|✔|应用体验的简短说明，在空间有限时使用。|
 |`full`|4000 个字符|✔|应用的完整说明。|
@@ -364,7 +368,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 允许指定默认语言，以及指向其他语言文件的指针。 请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`defaultLanguageTag`||✔|此顶级清单文件中字符串的语言标记。|
 
@@ -372,7 +376,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 指定其他语言翻译的对象数组。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`languageTag`||✔|提供的文件中字符串的语言标记。|
 |`file`||✔|包含已翻译字符串的 .json 文件的相对文件路径。|
@@ -383,7 +387,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 Teams 应用中使用的图标。 图标文件必须作为上传程序包的一部分包含在内。 有关详细信息 [，](../../concepts/build-and-test/apps-package.md#app-icons) 请参阅图标。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`outline`|32 x 32 像素|✔|指向透明 32x32 PNG 大纲图标的相对文件路径。|
 |`color`|192 x 192 像素|✔|完整颜色 192x192 PNG 图标的相对文件路径。|
@@ -454,7 +458,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含 2 个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息 [，](~/bots/how-to/create-a-bot-commands-menu.md) 请参阅自动程序菜单。
 
-|名称| 类型| 最大大小 | 必需 | Description|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`items.scopes`|枚举数组|3|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
 |`items.commands`|对象数组|10  |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单描述或示例（字符串，128）|
@@ -601,7 +605,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 定义应用用于发布用户活动源的属性。
 
-|名称| 类型| 最大大小 | 必需 | Description|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`activityTypes`|对象数组|128 项| | 提供你的应用可以发布给用户活动源的活动类型。|
 
@@ -658,5 +662,5 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 ```
 
 ***
->
->
+
+

@@ -3,12 +3,12 @@ title: App Studio for Microsoft Teams 入门
 description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应用
 keywords: 应用室团队入门
 ms.topic: overview
-ms.openlocfilehash: ca7d777458c8c8f9646d7e862f7a5b83059c21f3
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713394"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634507"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams 快速开发应用
 
@@ -34,6 +34,8 @@ App Studio 是一款可在 Teams 商店找到的 Teams 应用。 请通过此链
 
 ## <a name="app-studio-features"></a>App Studio 功能
 
+本节介绍对话、清单编辑器、详细信息和功能等功能。 可以使用应用自定义自定义自定义功能。
+
 ### <a name="conversation"></a>对话
 
 你可以在这里查看在 App Studio [在 App Studio](#card-editor) 将卡片发送到你自己来测试这些卡片在 Teams 中的外观。
@@ -52,6 +54,12 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 清单编辑器的功能部分介绍定义应用的功能并列出其中每个功能的详细信息。
 
+> [!NOTE]
+> 应用自定义功能目前仅在开发人员预览版中可用。
+> 
+> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅在 [Microsoft Teams 中自定义应用](/MicrosoftTeams/customize-apps)。
+
+
 ##### <a name="tabs"></a>选项卡
 
 * **团队选项卡。** 团队选项卡将成为频道的一部分，可提供对团队信息和资源的快速访问。 例如，频道的"Planner"选项卡包含单个计划;Power BI 选项卡映射到特定报表。 用户可以向下钻取相关上下文，但无法导航到选项卡外部。例如，Power BI 选项卡不会启用到其他 Power BI 报表的导航，但它允许" *转到网站* "按钮，该按钮在 Power BI 主网站中启动报表。
@@ -68,13 +76,17 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 如果你尚未在 Bot Framework 中注册自动 *，请单击"注册* 自动程序"以创建新的自动程序。 完成注册自动程序后，请返回清单编辑器的此部分，输入其名称和 Bot Framework ID。
 
-提供机器人的信息后，你现可选择性地定义自动程序可推荐用户的命令列表。 添加命令的名称、指示其语法和参数的命令说明以及此命令应应用于的范围。
+提供自动程序信息后，你现在可以选择定义自动程序可以建议给用户的命令列表。 添加命令的名称、指示其语法和参数的命令说明以及此命令应应用于的范围。
 
 请注意，如果将自动程序定义为仅支持一个作用域，则为不受支持的范围指定的命令将被忽略。 你随时都可以编辑你的自动程序支持的范围。
 
 ##### <a name="connectors"></a>连接器
 
 此部分允许向应用添加连接器。 如果已注册 Office 365 连接器，请选择" *设置* 并输入连接器的名称和 ID。 如果需要新的连接器，请单击 *注册* 以在浏览器中访问连接器开发人员仪表板。
+
+> [!NOTE]
+> 通过应用自定义，管理员可以更改通过机器人、消息传递扩展、选项卡和连接器加载的应用的外观。 例如，如果 Teams 管理员将 *Contoso* 中的应用名称自定义为 *Contoso 代理*，则应用将为用户显示新名称 *Contoso Agent。* 但是，向聊天添加连接器时，连接器仍将在列表中显示应用的名称为 *Contoso*。
+
 
 ##### <a name="messaging-extensions"></a>消息扩展
 

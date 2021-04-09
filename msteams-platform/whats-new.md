@@ -3,12 +3,12 @@ title: 最近更新
 description: 介绍 Microsoft Teams 中所有新的开发人员功能
 ms.topic: reference
 keywords: teams 新增功能
-ms.openlocfilehash: e166cbed4b8fb7849cee71d75fa1751b23da3df2
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 298305f11788963817ddacfabbc052297d3eaabe
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034724"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634528"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中针对开发人员的新增功能
 
@@ -19,8 +19,9 @@ ms.locfileid: "51034724"
 
 更改日志列出了对 Microsoft Teams 平台和此文档集的更改。 有时，条目可用于引起对 Teams 开发人员感兴趣的新功能的注意。
 
-| "日期" | **备注** | **已更改的主题** |
+| **Date** | **Notes** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|04/08/2021| 应用自定义功能现已在开发人员预览版中提供。|[设计团队应用概述](concepts/design/design-teams-app-overview.md#app-customization)[、App studio 概述](concepts/build-and-test/app-studio-overview.md#connectors)和[清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意 **：请更新到 Bot Framework SDK 的版本 4.10** 或以上版本，因为我们已开始弃用 和 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 的过程。 | [团队/聊天成员的机器人 API 更改](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意：选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |
 |03/05/2021 | 默认安装范围和组功能在开发人员预览版中。| [默认安装范围和组功能](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |

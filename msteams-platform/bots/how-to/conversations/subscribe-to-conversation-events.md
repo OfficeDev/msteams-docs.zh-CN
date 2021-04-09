@@ -1,57 +1,57 @@
 ---
 title: 订阅对话事件
 author: WashingtonKayaker
-description: 如何从 Microsoft Teams 自动程序订阅对话事件。
+description: 如何从 Microsoft Teams 机器人订阅对话事件。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: b4dc70e4619043bd0b675206770093b086fc5ec6
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: bc4ae36d8cffe5b19ee778a71e1c7b1c00c5e88c
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014318"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634500"
 ---
 # <a name="subscribe-to-conversation-events"></a>订阅对话事件
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Microsoft Teams 会向自动程序发送有关在自动程序处于活动状态的范围内发生的事件的通知。 可以在代码中捕获这些事件，并针对它们采取措施，例如：
+对于发生在机器人活动范围内的事件，Microsoft Teams 会向机器人发送通知。 可以在代码中捕获这些事件，并针对事件采取行动，如下文所示：
 
 * 将机器人添加到团队时触发欢迎消息
 * 添加或删除新团队成员时触发欢迎消息
 * 创建、重命名或删除频道时触发通知
-* 当用户喜欢自动程序消息时
+* 用户喜欢自动程序消息时
 
 ## <a name="conversation-update-events"></a>对话更新事件
 
 > [!Important]
-> 可以随时添加新事件，机器人将开始接收它们。
+> 你随时都可以添加新事件，你的机器人将开始接收它们。
 > 您必须针对接收意外事件的可能性进行设计。
-> 如果你使用的是 Bot Framework SDK，则自动程序将自动响应你未选择处理 `200 - OK` 的任何事件。
+> 如果你使用的是 Bot Framework SDK，则自动程序将自动响应你未选择 `200 - OK` 处理的任何事件。
 
-自动程序在将事件添加到对话、将其他成员添加到对话或从对话中删除，或者对话元数据已更改时接收 `conversationUpdate` 事件。
+将机器人添加到对话后、将其他成员添加到对话或从对话中删除其他成员后，或更改对话元数据后，机器人将收到 `conversationUpdate` 事件。
 
-当机器人收到有关已添加它的团队的成员身份更新的信息时，该事件 `conversationUpdate` 会发送到机器人。 当首次专门为个人对话添加更新时，它还会收到更新。
+当机器人收到关于其所属团队的成员身份更新信息时，`conversationUpdate` 事件就会发送到机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。
 
 下表显示了 Teams 对话更新事件的列表，以及指向更多详细信息的链接。
 
-| 已采取的操作        | EventType         | 调用的方法              | 说明                | 范围 |
+| 已采取的操作        | EventType         | 方法已调用              | 说明                | 范围 |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| 创建通道     | channelCreated    | OnTeamsChannelCreatedAsync | [已创建频道](#channel-created) | 团队 |
-| 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道已重命名](#channel-renamed) | 团队 |
-| 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道已删除](#channel-deleted) | 团队 |
-| 通道已还原    | channelRestored    | OnTeamsChannelRestoredAsync | [已还原频道](#channel-deleted) | 团队 |
+| 创建通道     | channelCreated    | OnTeamsChannelCreatedAsync | [已创建频道](#channel-created) | Team |
+| 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道已重命名](#channel-renamed) | Team |
+| 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [已删除频道](#channel-deleted) | Team |
+| 通道已还原    | channelRestored    | OnTeamsChannelRestoredAsync | [已还原频道](#channel-deleted) | Team |
 | members added   | membersAdded   | OnTeamsMembersAddedAsync   | [已添加成员](#team-members-added)   | 全部 |
 | 成员已删除 | membersRemoved | OnTeamsMembersRemovedAsync | [已删除成员](#team-members-removed) | groupChat & team |
-| 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [已重命名团队](#team-renamed)       | 团队 |
-| 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [已删除团队](#team-deleted)       | 团队 |
-| 团队存档        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)       | 团队 |
-| 团队未存档        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)       | 团队 |
-| 团队已还原        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | 团队 |
+| 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队已重命名](#team-renamed)       | Team |
+| 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [已删除团队](#team-deleted)       | Team |
+| 团队存档        | teamArchived       | OnTeamsTeamArchivedAsync    | [已存档团队](#team-archived)       | Team |
+| 团队未存档        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)       | Team |
+| 团队已还原        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | Team |
 
 ### <a name="channel-created"></a>已创建频道
 
-只要在安装自动程序的团队中创建了新频道，就会将频道创建事件发送到机器人。
+只要在安装自动程序的团队中创建了新频道，就会将频道创建事件发送给机器人。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -136,9 +136,9 @@ async def on_teams_channel_created(
 
 * * *
 
-### <a name="channel-renamed"></a>已重命名频道
+### <a name="channel-renamed"></a>通道重命名
 
-只要在安装了自动程序的团队中重命名频道，频道重命名事件就会发送到机器人。
+只要频道在安装自动程序的团队中重命名，频道重命名事件就会发送到机器人。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -218,7 +218,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>频道已删除
 
-只要在安装了自动程序的团队中删除频道，频道删除事件就会发送到机器人。
+只要在安装自动程序的团队中删除频道，频道删除事件就会发送给机器人。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -300,7 +300,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>已还原频道
 
-只要在已安装自动程序的团队中还原以前删除的频道，就会将频道还原事件发送给自动程序。
+只要在已安装自动程序的团队中还原以前删除的频道，就会将频道还原事件发送给机器人。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -385,9 +385,9 @@ async def on_teams_channel_restored(
 
 * * *
 
-### <a name="team-members-added"></a>已添加团队成员
+### <a name="team-members-added"></a>添加了工作组成员
 
-该事件在首次添加到对话时以及每次向安装自动程序的团队或群聊中添加新用户时 `teamMemberAdded` 发送到自动程序。 自动 (ID) 信息是唯一的，可以缓存这些信息供你的服务 (例如向特定用户发送) 。
+该事件在首次添加到对话时以及每次将新用户添加到安装机器人的团队或群聊时发送给 `teamMemberAdded` 机器人。 用户信息 (ID) 对于自动程序来说是唯一的，可以缓存这些信息供你的服务组织 (例如向特定用户发送) 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -436,7 +436,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是自动程序添加到团队时，机器人将收到 **的消息**。
+这是在将机器人添加到团队时机器人将收到 **的消息**。
 
 ```json
 {
@@ -475,7 +475,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-这是自动程序将* 添加到一对一聊天时机器人 *将接收的消息*。
+这是自动程序在将 * 添加到一对一聊天时将收到 *的消息*。
 
 ```json
 {
@@ -494,11 +494,11 @@ export class MyBot extends TeamsActivityHandler {
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "**_"
+    "aadObjectId": "***"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "_*_"
+    "id": "***"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -525,11 +525,11 @@ async def on_teams_members_added(
     return
 ```
 
-_ * *
+* * *
 
 ### <a name="team-members-removed"></a>已删除团队成员
 
-如果从团队中删除了事件，并且每次从自动程序是其中一个成员的团队中删除任何用户，该事件都会发送到 `teamMemberRemoved` 机器人。 通过查看对象，可以确定删除的新增成员是机器人本身还是 `Activity` 用户 `turnContext` 。  如果对象的字段与对象的字段相同，则删除的成员为自动程序， `Id` `MembersRemoved` 否则为 `Id` `Recipient` 用户。  自动程序 `Id` 通常为： `28:<MicrosoftAppId>`
+如果从团队中删除了事件，并且每次从自动程序是其成员的团队中删除任何用户时，该事件 `teamMemberRemoved` 都会发送到自动程序。 通过查看 的对象，可以确定删除的新增成员是机器人本身还是 `Activity` 用户 `turnContext` 。  如果对象的字段与对象的字段相同，则删除的成员为自动程序，否则 `Id` `MembersRemoved` `Id` `Recipient` 为用户。  自动程序 `Id` 通常为： `28:<MicrosoftAppId>`
 
 [!Note] 从租户中永久删除用户时， `membersRemoved conversationUpdate` 将触发事件。
 
@@ -580,7 +580,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-以下有效负载示例中的对象基于向团队（而不是群聊）添加成员，或启动新的一对 `channelData` 一对话：
+以下有效负载示例中的对象基于将成员添加到团队（而不是群组聊天）或启动新的一对 `channelData` 一对话：
 
 ```json
 {
@@ -638,7 +638,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>团队重命名
 
-自动程序在已重命名其团队时收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamRenamed` 中的 `channelData` 事件。
+当自动程序位于的团队重命名时，将会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamRenamed` 事件 `channelData` 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -716,7 +716,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>团队已删除
 
-自动程序在它所参与的团队被删除后收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamDeleted` 中的 `channelData` 事件。
+当自动程序位于的团队被删除时，将会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamDeleted` 事件 `channelData` 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -788,9 +788,9 @@ async def on_teams_team_deleted(
 
 * * *
 
-### <a name="team-restored"></a>团队已还原
+### <a name="team-restored"></a>已还原团队
 
-自动程序在从删除还原时收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamrestored` 中的 `channelData` 事件。
+当团队从删除中恢复时，机器人会收到通知。 机器人接收 `conversationUpdate` 对象中的 `eventType.teamrestored` 事件 `channelData` 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -868,7 +868,7 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>团队存档
 
-自动程序在存档安装它的团队时收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamarchived` 中的 `channelData` 事件。
+自动程序在存档安装它的团队时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamarchived` 事件 `channelData` 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -947,7 +947,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>团队未存档
 
-自动程序在安装它的团队未存档时收到通知。 它接收 `conversationUpdate` 对象 `eventType.teamUnarchived` 中的 `channelData` 事件。
+自动程序在安装它的团队未存档时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamUnarchived` 事件 `channelData` 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -1023,14 +1023,14 @@ async def on_teams_team_unarchived(
 
 * * *
 
-## <a name="message-reaction-events"></a>消息反应事件
+## <a name="message-reaction-events"></a>邮件反应事件
 
-`messageReaction`当用户向自动程序发送的消息添加或删除反应时，将发送该事件。 包含 `replyToId` 特定消息的 ID，它是 `Type` 文本格式的反应类型。  反应类型包括："heart"、"heart"、"heart"、"like"、"Heart"、"surprised"、"surprised"。 此事件不包含原始邮件的内容，因此，如果处理对消息的反应对于自动程序非常重要，则需要在发送邮件时存储它们。
+当用户 `messageReaction` 向自动程序发送的消息添加或删除反应时，将发送该事件。 `replyToId`包含特定邮件的 ID，并且 `Type` 是文本格式的反应类型。  反应类型包括："heart"、"heart"、"heart"、"like"、"Heart"、"surprised"。 此事件不包含原始邮件的内容，因此，如果处理对消息的反应对于自动程序非常重要，则需要在发送邮件时存储这些消息。
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [对机器人消息的反应](#reactions-to-a-bot-message)                   | 全部   |
-| messageReaction | reactionsRemoved | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message) | 全部   |
+| messageReaction | reactionsAdded   | [对自动程序消息的反应](#reactions-to-a-bot-message)                   | 全部   |
+| messageReaction | 将removed | [从自动程序消息中删除的反应](#reactions-removed-from-bot-message) | 全部   |
 
 ### <a name="reactions-to-a-bot-message"></a>对自动程序消息的反应
 
@@ -1249,6 +1249,7 @@ async def on_reactions_removed(
 * * *
 
 ## <a name="samples"></a>示例
+
 有关显示机器人对话事件的示例代码，请参阅：
 
 [Microsoft Teams 机器人对话事件示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
