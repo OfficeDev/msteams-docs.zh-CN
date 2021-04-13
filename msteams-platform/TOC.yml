@@ -202,21 +202,25 @@
   items:
     - name: 概述
       href: bots/what-are-bots.md
-    - name: 机器人的工作方式
+    - name: 智能机器人和 SDK
+      href: bots/bot-features.md
+    - name: 智能机器人活动处理程序
       href: bots/bot-basics.md
-    - name: 机器人对话
+    - name: 智能机器人对话
       items:
-        - name: 对话基础知识
+        - name: 概述
           href: bots/how-to/conversations/conversation-basics.md
+        - name: 智能机器人对话中的邮件
+          href: bots/how-to/conversations/conversation-messages.md
         - name: 为机器人创建命令菜单
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: 频道和群组对话
           href: bots/how-to/conversations/channel-and-group-conversations.md
-        - name: 订阅对话事件
+        - name: Teams 智能机器人中的对话活动
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: 发送主动邮件
           href: bots/how-to/conversations/send-proactive-messages.md
-        - name: 设置机器人邮件的格式
+        - name: 设置你的智能机器人邮件格式
           href: bots/how-to/format-your-bot-messages.md
         - name: 更新和删除机器人消息
           href: bots/how-to/update-and-delete-bot-messages.md
@@ -224,13 +228,13 @@
       href: bots/how-to/get-teams-context.md
     - name: 发送和接收文件
       href: bots/how-to/bots-filesv4.md
-    - name: 处理机器人速率限制
+    - name: 通过团队中的速率限制来优化你的智能机器人
       href: bots/how-to/rate-limit.md
-    - name: 电话和会议机器人
+    - name: 通话和会议智能机器人
       items:
         - name: 概述
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-        - name: 实时媒体概念
+        - name: 实时媒体通话与会议
           href: bots/calls-and-meetings/real-time-media-concepts.md
         - name: 注册通话机器人
           href: bots/calls-and-meetings/registering-calling-bot.md
@@ -246,7 +250,7 @@
   items:
     - name: 概述
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: 创建操作命令
+    - name: 操作命令
       items:
         - name: 定义操作命令
           href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -254,13 +258,13 @@
           href: messaging-extensions/how-to/action-commands/create-task-module.md
         - name: 响应操作命令
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-    - name: 创建搜索命令
+    - name: 搜索命令
       items:
         - name: 添加配置页面
           href: messaging-extensions/how-to/add-configuration-page.md
         - name: 定义搜索命令
           href: messaging-extensions/how-to/search-commands/define-search-command.md
-        - name: 接收和响应搜索查询
+        - name: 响应搜索命令
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: 添加链接展开
       href: messaging-extensions/how-to/link-unfurling.md
