@@ -3,12 +3,12 @@ title: 适用于 Microsoft Teams 选项卡的 DevTools
 description: 介绍如何在使用 Microsoft Teams 桌面客户端时访问 DevTools
 ms.topic: how-to
 keywords: devtools 调试移动部件版式桌面客户端开发人员工具
-ms.openlocfilehash: 1c540c94adc080d9495097f8e3b427eeb14c56d8
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 7bd9403a74fd33619a2f8ac1b4b3a4c74a21175d
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634739"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654384"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>适用于 Microsoft Teams 选项卡的 DevTools
 
@@ -19,17 +19,17 @@ ms.locfileid: "51634739"
 1. 将断点添加到 JavaScript 代码并执行交互式调试。
 
 > [!NOTE]
-> 启用此功能后，此功能仅在桌面开发者预览版 **Android** 客户端中可用。 有关详细信息，请参阅如何 [启用开发人员预览](~/resources/dev-preview/developer-preview-intro.md)。
+> 启用此功能后，此功能仅适用于桌面开发者预览版 **Android** 客户端。 有关详细信息，请参阅如何 [启用开发人员预览](~/resources/dev-preview/developer-preview-intro.md)。
 
 ## <a name="access-devtools-in-the-desktop"></a>访问桌面版中的 DevTools
 
-虽然 Teams 的 Web 版本和桌面版几乎完全相同，但身份验证方面存在一些差异。 有时，了解所发生事件的唯一方法就是使用 DevTools。 若要在桌面客户端使用 DevTools，你必须：
+虽然 Teams 的 Web 版本和桌面版几乎相同，但身份验证存在一些差异。 有时，了解所发生事件的唯一方法就是使用 DevTools。 若要在桌面客户端使用 DevTools，你必须：
 
 1. 确保你已启用 [开发人员预览](~/resources/dev-preview/developer-preview-intro.md)版。
 1. 打开一个选项卡，以便你有一些要检查的 DevTools。
 1. 通过下列方式之一打开 DevTools：
     * **Windows：** 在桌面托盘中选择 Teams 图标。
-    * **MacOS：** 选择扩展坞中的 Teams 图标。
+    * **macOS：** 选择扩展坞中的 Teams 图标。
  
    下图显示了检查选项卡配置对话框中元素的 DevTools：
 

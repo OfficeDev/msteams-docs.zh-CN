@@ -5,12 +5,12 @@ description: 创建团队会议应用
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 267c90792e07b483c92965bc61e46fca33573841
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596229"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654369"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -335,12 +335,35 @@ POST /v3/conversations/{conversationId}/activities
 #### <a name="share-to-stage"></a>共享到阶段 
 
 > [!NOTE]
-> 此功能仅在预览体验成员开发人员预览版中可用
+> * 此功能目前仅适用于开发人员预览版。
+> * 若要使用此功能，应用必须支持会议内侧窗格。
 
 
 此功能使开发人员能够将应用共享到会议阶段。 通过启用共享到会议阶段，会议参与者可以实时协作。 
 
-必需的上下文是应用程序清单中的 meetingStage。 这样做的先决条件是拥有 meetingSidePanel 上下文。 这将启用侧窗格的"共享"按钮，如下所述
+必需的上下文 `meetingStage` 位于应用程序清单中。 这样做的先决条件是拥有 `meetingSidePanel` 上下文。 这将启用 **侧窗格** 的"共享"按钮，如下图所示：
+
+  ![share_to_stage_during_meeting体验](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+
+启用此功能所需的清单更改如下所示： 
+
+```json
+
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
 
 
 

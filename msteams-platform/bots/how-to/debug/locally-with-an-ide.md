@@ -4,12 +4,12 @@ author: clearab
 description: 使用 IDE 在本地测试和调试机器人
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 449d6dd5e10a72538e6443c9d17f998ebc662379
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 5a35419564f87617ee5d590e2a604e970caa16b3
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634767"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654451"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
 
@@ -20,7 +20,7 @@ ms.locfileid: "51634767"
 测试自动程序的最全面方法就是创建应用包并将其上传到 Teams。 这是在所有范围内测试自动程序可用的完整功能的唯一方法。
 
 有两种上传应用的方法：
-* 使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md)
+* 使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md)。
 * [手动创建应用](~/concepts/build-and-test/apps-package.md) 包，然后 [上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
 
 > [!NOTE]
@@ -41,7 +41,7 @@ ngrok http <port> -host-header=localhost:<port>
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>在不上载到 Teams 的情况下测试自动程序
 
-有时，可能需要测试自动程序，无需将其安装为 Teams 中的应用。 我们提供两种测试自动程序的方法。 在未将其安装为应用的情况下测试自动程序对于确保自动程序可用并做出响应非常有用，但是，它不允许测试你可能已添加到自动程序的全部 Microsoft Teams 功能。 如果你需要完全测试自动程序，请参阅 [通过上传 进行测试](#test-by-uploading-to-teams)。
+有时，可能需要测试自动程序，而无需将其安装为 Teams 中的应用。 我们提供两种测试自动程序的方法。 在未将其安装为应用的情况下测试自动程序对于确保自动程序可用并做出响应非常有用，但是，它不允许测试你可能已添加到自动程序的全部 Microsoft Teams 功能。 如果你需要完全测试自动程序，请参阅 [通过上传 进行测试](#test-by-uploading-to-teams)。
 
 ### <a name="use-the-bot-emulator"></a>使用自动程序仿真器
 

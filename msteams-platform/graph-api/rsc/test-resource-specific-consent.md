@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 0d3d1c895c77bb417a9fdd84e319103485aa8944
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: ea764ec2cbca653221d7194d0759ac39f93ec802
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634705"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654424"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在 Teams 中测试特定于资源的同意权限
 
@@ -21,7 +21,7 @@ RSC (特定于资源的) 是 Microsoft Teams 和 Graph API 集成，使你的应
 > 若要测试 RSC 权限，Teams 应用清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
 >
 > - **id**：Azure AD 应用 ID，请参阅在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
-> - **resource**：任何字符串，请参阅更新  [Teams 应用清单中的注释](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **resource**：任何字符串，请参阅更新  [Teams 应用清单 中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **应用程序权限**：应用的 RSC 权限，请参阅 [特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 
 ```json
@@ -54,18 +54,16 @@ RSC (特定于资源的) 是 Microsoft Teams 和 Graph API 集成，使你的应
 
 若要检查 API 请求有效负载是否接受 RSC 权限，需要将 [RSC JSON](test-rsc-json-file.md) 测试代码复制到本地环境并更新以下值：
 
-* `azureADAppId`：应用的 Azure AD 应用 ID
-* `azureADAppSecret`：你的 Azure AD 应用密码 (密码) 
-* `token_scope`：获取令牌需要范围 - 将值设置为 https://graph.microsoft.com/.default
+* `azureADAppId`：应用的 Azure AD 应用 ID。
+* `azureADAppSecret`：你的 Azure AD 应用密码。
+* `token_scope`：获取令牌需要 范围。 将值设置为 https://graph.microsoft.com/.default 。
 * `teamGroupId`：可以从 Teams 客户端获取团队组 ID，如下所示：
 
-  > [!div class="checklist"]
-  >
-  > * 在 Teams 客户端中 **，从** 最左侧导航栏中选择 Teams。
-  > * 从下拉菜单中选择安装应用的团队。
-  > * 选择" **更多选项"** 图标 (&#8943;) 
-  > * 选择 **获取团队链接** 
-  > * 复制并保存字符串中的 **groupId** 值。
+    1. 在 Teams 客户端中，从 **最** 左侧导航栏中选择 Teams。
+    2. 从下拉菜单中选择安装应用的团队。
+    3. 选择" **更多选项"** 图标 (&#8943;) 。
+    4. 选择 **获取团队链接**。 
+    5. 复制并保存字符串中的 **groupId** 值。
 
 ### <a name="use-postman"></a>使用 Postman
 

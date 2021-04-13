@@ -4,12 +4,12 @@ description: 了解如何使用 ngrok 在本地电脑上开发呼叫和联机会
 ms.topic: how-to
 keywords: 本地开发 ngrok 隧道
 ms.date: 11/18/2018
-ms.openlocfilehash: d61c380fda941618a769ad3fffa053b2a4800de9
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: b764e41302ab569e40c9dacd374a31e6abb1d642
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634725"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654284"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>在本地电脑上开发通话和联机会议机器人
 
@@ -19,7 +19,7 @@ ms.locfileid: "51634725"
 
 ## <a name="configure-ngrokyml"></a>配置 ngrok.yml
 
-转到 [ngrok](https://ngrok.com) 并注册免费帐户或登录到现有帐户。 登录后，转到 [仪表板并获取](https://dashboard.ngrok.com) authtoken。
+转到 [ngrok](https://ngrok.com) 并注册免费帐户或登录到现有帐户。 登录后，转到 [仪表板并获取](https://dashboard.ngrok.com) 身份验证令牌。
 
 创建 ngrok 配置文件 `ngrok.yml` 并添加以下行。 有关文件可以位于的位置详细信息，请参阅 [ngrok](https://ngrok.com/docs#config)：
 
@@ -29,7 +29,7 @@ ms.locfileid: "51634725"
 
 在 [通话和联机会议机器人](./calls-meetings-bots-overview.md)中，我们讨论了呼叫信号，关于机器人如何在呼叫期间检测和响应新呼叫和事件。 呼叫信号事件通过 HTTP POST 发送到机器人的呼叫终结点。
 
-与机器人的消息 API 一样，为了让实时媒体平台与机器人交谈，必须通过 Internet 访问机器人。 Ngrok 使这一点变得简单。 将以下行添加到 ngrok.yml：
+与机器人的消息 API 一样，对于实时媒体平台与机器人通信，必须通过 Internet 访问机器人。 Ngrok 使这一点变得简单。 将以下行添加到 ngrok.yml：
 
 ```yaml
 tunnels:
