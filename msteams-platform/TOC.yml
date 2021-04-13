@@ -30,19 +30,19 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: 使用 Yeoman 生成器创建应用
       href: tutorials/get-started-yeoman.md
-    - name: 使用 Yeoman 生成器升级 Microsoft Teams
-      href: tutorials/upgrade-using-yeoman.md
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: 应用程序基础知识
   items:
+    - name: 概述
+      href: concepts/app-fundamentals-overview.md
     - name: 团队应用程序功能
       href: concepts/capabilities-overview.md
     - name: 团队应用程序入口点
       href: concepts/extensibility-points.md
-    - name: 了解使用案例
+    - name: 了解用例
       href: concepts/design/understand-use-cases.md
-    - name: 将用例映射到Teams应用功能
+    - name: 将用例映射到 Teams 应用功能
       href: concepts/design/map-use-cases.md
 - name: 与Teams整合
   items:
