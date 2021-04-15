@@ -1,59 +1,60 @@
 ---
-title: 处理 bot 事件
-description: 介绍如何处理 Microsoft 团队的 bot 中的事件
-keywords: 团队 bot 事件
+title: 处理机器人事件
+description: 介绍如何处理 Microsoft Teams 机器人中的事件
+keywords: teams 机器人事件
 ms.date: 05/20/2019
+ms.topic: how-to
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 1161d21ee755cebe6ddb2a2d5a219f9538de77cf
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+ms.openlocfilehash: 0fdd30a8eed63ea83e15825b0bf097125b4b665d
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409048"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696610"
 ---
-# <a name="handle-bot-events-in-microsoft-teams"></a><span data-ttu-id="906f5-104">在 Microsoft 团队中处理 bot 事件</span><span class="sxs-lookup"><span data-stu-id="906f5-104">Handle bot events in Microsoft Teams</span></span>
+# <a name="handle-bot-events-in-microsoft-teams"></a><span data-ttu-id="3d32f-104">在 Microsoft Teams 中处理机器人事件</span><span class="sxs-lookup"><span data-stu-id="3d32f-104">Handle bot events in Microsoft Teams</span></span>
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-<span data-ttu-id="906f5-105">Microsoft 团队将通知发送到你的 bot，以获取在你的 bot 处于活动状态的范围内发生的更改或事件。</span><span class="sxs-lookup"><span data-stu-id="906f5-105">Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active.</span></span> <span data-ttu-id="906f5-106">您可以使用这些事件来触发服务逻辑，如以下内容：</span><span class="sxs-lookup"><span data-stu-id="906f5-106">You can use these events to trigger service logic, such as the following:</span></span>
+<span data-ttu-id="3d32f-105">Microsoft Teams 会向自动程序发送有关自动程序处于活动状态的范围中发生的更改或事件的通知。</span><span class="sxs-lookup"><span data-stu-id="3d32f-105">Microsoft Teams sends notifications to your bot for changes or events that happen in scopes where your bot is active.</span></span> <span data-ttu-id="3d32f-106">可以使用这些事件触发服务逻辑，如下所示：</span><span class="sxs-lookup"><span data-stu-id="3d32f-106">You can use these events to trigger service logic, such as the following:</span></span>
 
-* <span data-ttu-id="906f5-107">在将你的 bot 添加到团队时触发欢迎消息</span><span class="sxs-lookup"><span data-stu-id="906f5-107">Trigger a welcome message when your bot is added to a team</span></span>
-* <span data-ttu-id="906f5-108">在将 bot 添加到组聊天时查询和缓存组信息</span><span class="sxs-lookup"><span data-stu-id="906f5-108">Query and cache group information when the bot is added to a group chat</span></span>
-* <span data-ttu-id="906f5-109">更新有关团队成员资格或通道信息的缓存信息</span><span class="sxs-lookup"><span data-stu-id="906f5-109">Update cached information on team membership or channel information</span></span>
-* <span data-ttu-id="906f5-110">删除团队的缓存信息（如果删除了 bot）</span><span class="sxs-lookup"><span data-stu-id="906f5-110">Remove cached information for a team if the bot is removed</span></span>
-* <span data-ttu-id="906f5-111">当用户对 bot 邮件进行了赞时</span><span class="sxs-lookup"><span data-stu-id="906f5-111">When a bot message is liked by a user</span></span>
+* <span data-ttu-id="3d32f-107">将机器人添加到团队时触发欢迎消息</span><span class="sxs-lookup"><span data-stu-id="3d32f-107">Trigger a welcome message when your bot is added to a team</span></span>
+* <span data-ttu-id="3d32f-108">将机器人添加到群聊时查询和缓存组信息</span><span class="sxs-lookup"><span data-stu-id="3d32f-108">Query and cache group information when the bot is added to a group chat</span></span>
+* <span data-ttu-id="3d32f-109">更新有关团队成员身份或频道信息的缓存信息</span><span class="sxs-lookup"><span data-stu-id="3d32f-109">Update cached information on team membership or channel information</span></span>
+* <span data-ttu-id="3d32f-110">删除自动程序时删除团队的缓存信息</span><span class="sxs-lookup"><span data-stu-id="3d32f-110">Remove cached information for a team if the bot is removed</span></span>
+* <span data-ttu-id="3d32f-111">用户喜欢自动程序消息时</span><span class="sxs-lookup"><span data-stu-id="3d32f-111">When a bot message is liked by a user</span></span>
 
-<span data-ttu-id="906f5-112">每个 bot 事件都以对象的形式发送， `Activity` 其中定义了对象中的 `messageType` 信息。</span><span class="sxs-lookup"><span data-stu-id="906f5-112">Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object.</span></span> <span data-ttu-id="906f5-113">有关类型的邮件 `message` ，请参阅 [发送和接收邮件](~/resources/bot-v3/bot-conversations/bots-conversations.md)。</span><span class="sxs-lookup"><span data-stu-id="906f5-113">For messages of type `message`, see [Sending and receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md).</span></span>
+<span data-ttu-id="3d32f-112">每个自动程序事件都作为 `Activity` 对象发送，其中 `messageType` 定义了对象中的信息。</span><span class="sxs-lookup"><span data-stu-id="3d32f-112">Each bot event is sent as an `Activity` object in which `messageType` defines what information is in the object.</span></span> <span data-ttu-id="3d32f-113">对于类型为 的邮件 `message` ，请参阅 [发送和接收邮件](~/resources/bot-v3/bot-conversations/bots-conversations.md)。</span><span class="sxs-lookup"><span data-stu-id="3d32f-113">For messages of type `message`, see [Sending and receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md).</span></span>
 
-<span data-ttu-id="906f5-114">团队和组事件（通常触发 `conversationUpdate` 类型）具有作为对象的一部分传递的其他团队事件信息 `channelData` ，因此您的事件处理程序必须查询团队的 `channelData` 有效负载 `eventType` 和其他特定于事件的元数据。</span><span class="sxs-lookup"><span data-stu-id="906f5-114">Teams and group events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.</span></span>
+<span data-ttu-id="3d32f-114">Teams 和组事件通常从类型触发，它们具有作为对象的一部分传递的其他 Teams 事件信息，因此事件处理程序必须查询 Teams 的有效负载和其他特定于事件的 `conversationUpdate` `channelData` `channelData` `eventType` 元数据。</span><span class="sxs-lookup"><span data-stu-id="3d32f-114">Teams and group events, usually triggered off the `conversationUpdate` type, have additional Teams event information passed as part of the `channelData` object, and therefore your event handler must query the `channelData` payload for the Teams `eventType` and additional event-specific metadata.</span></span>
 
-<span data-ttu-id="906f5-115">下表列出了你的 bot 可以接收并对其执行操作的事件。</span><span class="sxs-lookup"><span data-stu-id="906f5-115">The following table lists the events that your bot can receive and take action on.</span></span>
+<span data-ttu-id="3d32f-115">下表列出了机器人可以接收并采取措施的事件。</span><span class="sxs-lookup"><span data-stu-id="3d32f-115">The following table lists the events that your bot can receive and take action on.</span></span>
 
-|<span data-ttu-id="906f5-116">类型</span><span class="sxs-lookup"><span data-stu-id="906f5-116">Type</span></span>|<span data-ttu-id="906f5-117">有效负载对象</span><span class="sxs-lookup"><span data-stu-id="906f5-117">Payload object</span></span>|<span data-ttu-id="906f5-118">团队事件 =</span><span class="sxs-lookup"><span data-stu-id="906f5-118">Teams eventType</span></span> |<span data-ttu-id="906f5-119">说明</span><span class="sxs-lookup"><span data-stu-id="906f5-119">Description</span></span>|<span data-ttu-id="906f5-120">范围</span><span class="sxs-lookup"><span data-stu-id="906f5-120">Scope</span></span>|
+|<span data-ttu-id="3d32f-116">类型</span><span class="sxs-lookup"><span data-stu-id="3d32f-116">Type</span></span>|<span data-ttu-id="3d32f-117">Payload 对象</span><span class="sxs-lookup"><span data-stu-id="3d32f-117">Payload object</span></span>|<span data-ttu-id="3d32f-118">Teams eventType</span><span class="sxs-lookup"><span data-stu-id="3d32f-118">Teams eventType</span></span> |<span data-ttu-id="3d32f-119">说明</span><span class="sxs-lookup"><span data-stu-id="3d32f-119">Description</span></span>|<span data-ttu-id="3d32f-120">范围</span><span class="sxs-lookup"><span data-stu-id="3d32f-120">Scope</span></span>|
 |---|---|---|---|---|
-| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[<span data-ttu-id="906f5-121">添加到团队的成员</span><span class="sxs-lookup"><span data-stu-id="906f5-121">Member added to team</span></span>](#team-member-or-bot-addition)| <span data-ttu-id="906f5-122">各种</span><span class="sxs-lookup"><span data-stu-id="906f5-122">all</span></span> |
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[<span data-ttu-id="906f5-123">成员已从团队中删除</span><span class="sxs-lookup"><span data-stu-id="906f5-123">Member was removed from team</span></span>](#team-member-or-bot-removed)| `groupChat` & `team` |
-| `conversationUpdate` | |`teamRenamed`| [<span data-ttu-id="906f5-124">团队已重命名</span><span class="sxs-lookup"><span data-stu-id="906f5-124">Team was renamed</span></span>](#team-name-updates)| `team` |
-| `conversationUpdate` | |`channelCreated`| [<span data-ttu-id="906f5-125">通道已创建</span><span class="sxs-lookup"><span data-stu-id="906f5-125">A channel was created</span></span>](#channel-updates)|`team` |
-| `conversationUpdate` | |`channelRenamed`| [<span data-ttu-id="906f5-126">频道已重命名</span><span class="sxs-lookup"><span data-stu-id="906f5-126">A channel was renamed</span></span>](#channel-updates)|`team` |
-| `conversationUpdate` | |`channelDeleted`| [<span data-ttu-id="906f5-127">频道已删除</span><span class="sxs-lookup"><span data-stu-id="906f5-127">A channel was deleted</span></span>](#channel-updates)|`team` |
-| `messageReaction` |`reactionsAdded`|| [<span data-ttu-id="906f5-128">对 bot 邮件的反应</span><span class="sxs-lookup"><span data-stu-id="906f5-128">Reaction to bot message</span></span>](#reactions)| <span data-ttu-id="906f5-129">各种</span><span class="sxs-lookup"><span data-stu-id="906f5-129">all</span></span> |
-| `messageReaction` |`reactionsRemoved`|| [<span data-ttu-id="906f5-130">从 bot 邮件中删除的反应</span><span class="sxs-lookup"><span data-stu-id="906f5-130">Reaction removed from bot message</span></span>](#reactions)| <span data-ttu-id="906f5-131">各种</span><span class="sxs-lookup"><span data-stu-id="906f5-131">all</span></span> |
+| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[<span data-ttu-id="3d32f-121">添加到团队的成员</span><span class="sxs-lookup"><span data-stu-id="3d32f-121">Member added to team</span></span>](#team-member-or-bot-addition)| <span data-ttu-id="3d32f-122">all</span><span class="sxs-lookup"><span data-stu-id="3d32f-122">all</span></span> |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[<span data-ttu-id="3d32f-123">已从团队中删除成员</span><span class="sxs-lookup"><span data-stu-id="3d32f-123">Member was removed from team</span></span>](#team-member-or-bot-removed)| `groupChat` & `team` |
+| `conversationUpdate` | |`teamRenamed`| [<span data-ttu-id="3d32f-124">团队已重命名</span><span class="sxs-lookup"><span data-stu-id="3d32f-124">Team was renamed</span></span>](#team-name-updates)| `team` |
+| `conversationUpdate` | |`channelCreated`| [<span data-ttu-id="3d32f-125">已创建频道</span><span class="sxs-lookup"><span data-stu-id="3d32f-125">A channel was created</span></span>](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelRenamed`| [<span data-ttu-id="3d32f-126">频道已重命名</span><span class="sxs-lookup"><span data-stu-id="3d32f-126">A channel was renamed</span></span>](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelDeleted`| [<span data-ttu-id="3d32f-127">已删除频道</span><span class="sxs-lookup"><span data-stu-id="3d32f-127">A channel was deleted</span></span>](#channel-updates)|`team` |
+| `messageReaction` |`reactionsAdded`|| [<span data-ttu-id="3d32f-128">对自动程序消息的反应</span><span class="sxs-lookup"><span data-stu-id="3d32f-128">Reaction to bot message</span></span>](#reactions)| <span data-ttu-id="3d32f-129">all</span><span class="sxs-lookup"><span data-stu-id="3d32f-129">all</span></span> |
+| `messageReaction` |`reactionsRemoved`|| [<span data-ttu-id="3d32f-130">从自动程序消息中删除的反应</span><span class="sxs-lookup"><span data-stu-id="3d32f-130">Reaction removed from bot message</span></span>](#reactions)| <span data-ttu-id="3d32f-131">all</span><span class="sxs-lookup"><span data-stu-id="3d32f-131">all</span></span> |
 
-## <a name="team-member-or-bot-addition"></a><span data-ttu-id="906f5-132">团队成员或 bot 添加</span><span class="sxs-lookup"><span data-stu-id="906f5-132">Team member or bot addition</span></span>
+## <a name="team-member-or-bot-addition"></a><span data-ttu-id="3d32f-132">添加团队成员或机器人</span><span class="sxs-lookup"><span data-stu-id="3d32f-132">Team member or bot addition</span></span>
 
-<span data-ttu-id="906f5-133">[`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true)当该事件收到有关已添加的团队成员身份更新的信息时，该事件将发送到你的 bot。</span><span class="sxs-lookup"><span data-stu-id="906f5-133">The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) event is sent to your bot when it receives information on membership updates for teams where it has been added.</span></span> <span data-ttu-id="906f5-134">它还会在首次专门为个人对话而添加时收到更新。</span><span class="sxs-lookup"><span data-stu-id="906f5-134">It also receives an update when it has been added for the first time specifically for personal conversations.</span></span> <span data-ttu-id="906f5-135">请注意， () 的用户信息对 `Id` 你的 bot 而言是唯一的，并且可以缓存以供你的服务将来使用 (例如，向特定用户发送邮件) 。</span><span class="sxs-lookup"><span data-stu-id="906f5-135">Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).</span></span>
+<span data-ttu-id="3d32f-133">当机器人收到有关已添加它的团队的成员身份更新的信息时，该事件 [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 将发送给机器人。</span><span class="sxs-lookup"><span data-stu-id="3d32f-133">The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) event is sent to your bot when it receives information on membership updates for teams where it has been added.</span></span> <span data-ttu-id="3d32f-134">在首次专门为个人对话添加机器人时，机器人也会收到更新。</span><span class="sxs-lookup"><span data-stu-id="3d32f-134">It also receives an update when it has been added for the first time specifically for personal conversations.</span></span> <span data-ttu-id="3d32f-135">请注意， () 信息对于自动程序来说是唯一的，可以缓存这些信息供你的服务 (如向特定用户发送 `Id`) 。</span><span class="sxs-lookup"><span data-stu-id="3d32f-135">Note that the user information (`Id`) is unique for your bot and can be cached for future use by your service (such as sending a message to a specific user).</span></span>
 
-### <a name="bot-or-user-added-to-a-team"></a><span data-ttu-id="906f5-136">添加到团队的 Bot 或用户</span><span class="sxs-lookup"><span data-stu-id="906f5-136">Bot or user added to a team</span></span>
+### <a name="bot-or-user-added-to-a-team"></a><span data-ttu-id="3d32f-136">添加到团队的机器人或用户</span><span class="sxs-lookup"><span data-stu-id="3d32f-136">Bot or user added to a team</span></span>
 
-<span data-ttu-id="906f5-137">`conversationUpdate` `membersAdded` 当将 bot 添加到团队或将新用户添加到添加了 bot 的团队中时，会发送具有有效负载中的对象的事件。</span><span class="sxs-lookup"><span data-stu-id="906f5-137">The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot has been added.</span></span> <span data-ttu-id="906f5-138">Microsoft 工作组也会添加到 `eventType.teamMemberAdded` `channelData` 对象中。</span><span class="sxs-lookup"><span data-stu-id="906f5-138">Microsoft Teams also adds `eventType.teamMemberAdded` in the `channelData` object.</span></span>
+<span data-ttu-id="3d32f-137">将机器人添加到团队或将新用户添加到已添加机器人的团队时，将发送有效负载中对象 `conversationUpdate` `membersAdded` 的事件。</span><span class="sxs-lookup"><span data-stu-id="3d32f-137">The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot has been added.</span></span> <span data-ttu-id="3d32f-138">Microsoft Teams 还会 `eventType.teamMemberAdded` 在 对象中 `channelData` 添加 。</span><span class="sxs-lookup"><span data-stu-id="3d32f-138">Microsoft Teams also adds `eventType.teamMemberAdded` in the `channelData` object.</span></span>
 
-<span data-ttu-id="906f5-139">由于在这两种情况下都会发送此事件，因此应分析该 `membersAdded` 对象以确定添加是用户还是 bot 本身。</span><span class="sxs-lookup"><span data-stu-id="906f5-139">Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself.</span></span> <span data-ttu-id="906f5-140">对于后者，最佳做法是将 [欢迎消息](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) 发送到频道，以便用户能够理解你的 bot 提供的功能。</span><span class="sxs-lookup"><span data-stu-id="906f5-140">For the latter, a best practice is to send a [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.</span></span>
+<span data-ttu-id="3d32f-139">因为在这两种情况下都发送此事件，所以应分析对象以确定添加项是 `membersAdded` 用户还是自动程序本身。</span><span class="sxs-lookup"><span data-stu-id="3d32f-139">Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself.</span></span> <span data-ttu-id="3d32f-140">对于后者，最佳做法是向频道发送欢迎消息，[](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams)以便用户可以了解机器人提供的功能。</span><span class="sxs-lookup"><span data-stu-id="3d32f-140">For the latter, a best practice is to send a [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.</span></span>
 
-#### <a name="example-code-checking-whether-bot-was-the-added-member"></a><span data-ttu-id="906f5-141">示例代码：检查 bot 是否为已添加的成员</span><span class="sxs-lookup"><span data-stu-id="906f5-141">Example code: Checking whether bot was the added member</span></span>
+#### <a name="example-code-checking-whether-bot-was-the-added-member"></a><span data-ttu-id="3d32f-141">示例代码：检查机器人是否是已添加的成员</span><span class="sxs-lookup"><span data-stu-id="3d32f-141">Example code: Checking whether bot was the added member</span></span>
 
-##### <a name="net"></a><span data-ttu-id="906f5-142">.NET</span><span class="sxs-lookup"><span data-stu-id="906f5-142">.NET</span></span>
+##### <a name="net"></a><span data-ttu-id="3d32f-142">.NET</span><span class="sxs-lookup"><span data-stu-id="3d32f-142">.NET</span></span>
 
 ```csharp
     for (int i = 0; i < sourceMessage.MembersAdded.Count; i++)
@@ -66,7 +67,7 @@ ms.locfileid: "49409048"
     }
 ```
 
-##### <a name="nodejs"></a><span data-ttu-id="906f5-143">Node.js</span><span class="sxs-lookup"><span data-stu-id="906f5-143">Node.js</span></span>
+##### <a name="nodejs"></a><span data-ttu-id="3d32f-143">Node.js</span><span class="sxs-lookup"><span data-stu-id="3d32f-143">Node.js</span></span>
 
 ```javascript
 const builder = require('botbuilder');
@@ -91,7 +92,7 @@ bot.on('conversationUpdate', (msg) => {
 });
 ```
 
-#### <a name="schema-example-bot-added-to-team"></a><span data-ttu-id="906f5-144">架构示例：添加到团队的 Bot</span><span class="sxs-lookup"><span data-stu-id="906f5-144">Schema example: Bot added to team</span></span>
+#### <a name="schema-example-bot-added-to-team"></a><span data-ttu-id="3d32f-144">架构示例：添加到团队的自动程序</span><span class="sxs-lookup"><span data-stu-id="3d32f-144">Schema example: Bot added to team</span></span>
 
 ```json
 {
@@ -130,16 +131,16 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="user-added-to-a-meeting"></a><span data-ttu-id="906f5-145">添加到会议的用户</span><span class="sxs-lookup"><span data-stu-id="906f5-145">User Added to a meeting</span></span>
+### <a name="user-added-to-a-meeting"></a><span data-ttu-id="3d32f-145">用户已添加到会议</span><span class="sxs-lookup"><span data-stu-id="3d32f-145">User Added to a meeting</span></span>
 
-<span data-ttu-id="906f5-146">将 `conversationUpdate` `membersAdded` 用户添加到专用计划会议中时，会发送具有有效负载的对象的事件。</span><span class="sxs-lookup"><span data-stu-id="906f5-146">The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting.</span></span> <span data-ttu-id="906f5-147">即使匿名用户加入会议，也会发送事件详细信息。</span><span class="sxs-lookup"><span data-stu-id="906f5-147">The event details will be sent even when anonymous users join the meeting.</span></span> 
+<span data-ttu-id="3d32f-146">将 `conversationUpdate` 用户添加到私人计划会议时，将发送有效负载中对象 `membersAdded` 的事件。</span><span class="sxs-lookup"><span data-stu-id="3d32f-146">The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting.</span></span> <span data-ttu-id="3d32f-147">即使匿名用户加入会议，也会发送事件详细信息。</span><span class="sxs-lookup"><span data-stu-id="3d32f-147">The event details will be sent even when anonymous users join the meeting.</span></span> 
 
 > [!NOTE]
 >
->* <span data-ttu-id="906f5-148">将匿名用户添加到会议时，membersAdded 有效负载对象不具有 `aadObjectId` 字段。</span><span class="sxs-lookup"><span data-stu-id="906f5-148">When an anonymous user is added to a meeting, membersAdded payload object does not have `aadObjectId` field.</span></span>
->* <span data-ttu-id="906f5-149">将匿名用户添加到会议中时， `from` 有效负载中的对象始终具有会议组织者的 id，即使该匿名用户是由另一个演示者添加的也是如此。</span><span class="sxs-lookup"><span data-stu-id="906f5-149">When an anonymous user is added to a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was added by another presenter.</span></span>
+>* <span data-ttu-id="3d32f-148">向会议添加匿名用户时，membersAdded 有效负载对象没有 `aadObjectId` 字段。</span><span class="sxs-lookup"><span data-stu-id="3d32f-148">When an anonymous user is added to a meeting, membersAdded payload object does not have `aadObjectId` field.</span></span>
+>* <span data-ttu-id="3d32f-149">向会议添加匿名用户时，有效负载中的对象始终具有会议组织者的 ID，即使该匿名用户是由另一个演示者添加 `from` 的。</span><span class="sxs-lookup"><span data-stu-id="3d32f-149">When an anonymous user is added to a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was added by another presenter.</span></span>
 
-#### <a name="schema-example-user-added-to-meeting"></a><span data-ttu-id="906f5-150">架构示例：用户已添加到会议</span><span class="sxs-lookup"><span data-stu-id="906f5-150">Schema example: User added to meeting</span></span>
+#### <a name="schema-example-user-added-to-meeting"></a><span data-ttu-id="3d32f-150">架构示例：用户已添加到会议</span><span class="sxs-lookup"><span data-stu-id="3d32f-150">Schema example: User added to meeting</span></span>
 
 ```json
 {
@@ -180,14 +181,14 @@ bot.on('conversationUpdate', (msg) => {
 
 ```
 
-### <a name="bot-added-for-personal-context-only"></a><span data-ttu-id="906f5-151">仅为个人上下文添加的 Bot</span><span class="sxs-lookup"><span data-stu-id="906f5-151">Bot added for personal context only</span></span>
+### <a name="bot-added-for-personal-context-only"></a><span data-ttu-id="3d32f-151">仅针对个人上下文添加的自动程序</span><span class="sxs-lookup"><span data-stu-id="3d32f-151">Bot added for personal context only</span></span>
 
-<span data-ttu-id="906f5-152">`conversationUpdate` `membersAdded` 当用户直接添加个人聊天时，你的 bot 会收到。</span><span class="sxs-lookup"><span data-stu-id="906f5-152">Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat.</span></span> <span data-ttu-id="906f5-153">在这种情况下，你的 bot 接收的有效负载不包含该 `channelData.team` 对象。</span><span class="sxs-lookup"><span data-stu-id="906f5-153">In this case, the payload that your bot receives doesn't contain the `channelData.team` object.</span></span> <span data-ttu-id="906f5-154">如果您希望您的 bot 根据范围提供不同的 [欢迎消息](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) ，则应将此作为筛选器使用。</span><span class="sxs-lookup"><span data-stu-id="906f5-154">You should use this as a filter in case you want your bot to offer a different [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.</span></span>
+<span data-ttu-id="3d32f-152">当用户直接为个人聊天添加时，机器人 `conversationUpdate` `membersAdded` 会收到 with。</span><span class="sxs-lookup"><span data-stu-id="3d32f-152">Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat.</span></span> <span data-ttu-id="3d32f-153">在这种情况下，机器人收到的负载不包含 `channelData.team` 对象。</span><span class="sxs-lookup"><span data-stu-id="3d32f-153">In this case, the payload that your bot receives doesn't contain the `channelData.team` object.</span></span> <span data-ttu-id="3d32f-154">如果你希望机器人根据范围提供不同的欢迎消息，你应使用此筛选器。 [](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations)</span><span class="sxs-lookup"><span data-stu-id="3d32f-154">You should use this as a filter in case you want your bot to offer a different [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="906f5-155">对于个人范围的 bot，你的 bot 将 `conversationUpdate` 多次收到该事件，即使已删除并重新添加了 bot 也是如此。</span><span class="sxs-lookup"><span data-stu-id="906f5-155">For personal scoped bots, your bot will  receive the `conversationUpdate` event multiple times, even if the bot is removed and re-added.</span></span> <span data-ttu-id="906f5-156">对于开发和测试，您可能会发现，添加帮助程序函数将允许您完全重置你的 bot。</span><span class="sxs-lookup"><span data-stu-id="906f5-156">For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely.</span></span> <span data-ttu-id="906f5-157">有关实现这一点的更多详细信息，请参阅 [Node.js 示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) 或 [c # 示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) 。</span><span class="sxs-lookup"><span data-stu-id="906f5-157">See a [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.</span></span>
+> <span data-ttu-id="3d32f-155">对于个人范围的自动程序，你的自动程序将接收事件多次，即使机器人 `conversationUpdate` 已删除并重新添加。</span><span class="sxs-lookup"><span data-stu-id="3d32f-155">For personal scoped bots, your bot will  receive the `conversationUpdate` event multiple times, even if the bot is removed and re-added.</span></span> <span data-ttu-id="3d32f-156">对于开发和测试，你可能会发现添加一个支持你完全重置机器人的帮助程序函数会很有用。</span><span class="sxs-lookup"><span data-stu-id="3d32f-156">For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely.</span></span> <span data-ttu-id="3d32f-157">有关实现[Node.js的详细信息](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts)[，请参阅C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238)示例或示例。</span><span class="sxs-lookup"><span data-stu-id="3d32f-157">See a [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.</span></span>
 
-#### <a name="schema-example-bot-added-to-personal-context"></a><span data-ttu-id="906f5-158">架构示例：添加到个人上下文的 bot</span><span class="sxs-lookup"><span data-stu-id="906f5-158">Schema example: bot added to personal context</span></span>
+#### <a name="schema-example-bot-added-to-personal-context"></a><span data-ttu-id="3d32f-158">架构示例：添加到个人上下文的机器人</span><span class="sxs-lookup"><span data-stu-id="3d32f-158">Schema example: bot added to personal context</span></span>
 
 ```json
 {
@@ -206,11 +207,11 @@ bot.on('conversationUpdate', (msg) => {
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "**_"
+    "aadObjectId": "***"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "_*_"
+    "id": "***"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -224,11 +225,11 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-## <a name="team-member-or-bot-removed"></a><span data-ttu-id="906f5-159">删除了团队成员或 bot</span><span class="sxs-lookup"><span data-stu-id="906f5-159">Team member or bot removed</span></span>
+## <a name="team-member-or-bot-removed"></a><span data-ttu-id="3d32f-159">已删除团队成员或机器人</span><span class="sxs-lookup"><span data-stu-id="3d32f-159">Team member or bot removed</span></span>
 
-<span data-ttu-id="906f5-160">`conversationUpdate` `membersRemoved` 当您的 bot 从团队中删除时，将会发送事件和有效负载中的对象，或者从已添加 bot 的团队中删除用户。</span><span class="sxs-lookup"><span data-stu-id="906f5-160">The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added.</span></span> <span data-ttu-id="906f5-161">Microsoft 工作组也会添加到 `eventType.teamMemberRemoved` `channelData` 对象中。</span><span class="sxs-lookup"><span data-stu-id="906f5-161">Microsoft Teams also adds `eventType.teamMemberRemoved` in the `channelData` object.</span></span> <span data-ttu-id="906f5-162">与对象一样 `membersAdded` ，您应该为你的 `membersRemoved` Bot 的应用 ID 解析对象以确定已删除的用户。</span><span class="sxs-lookup"><span data-stu-id="906f5-162">As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.</span></span>
+<span data-ttu-id="3d32f-160">从团队中删除机器人或将用户从添加自动程序的团队中删除时，将发送有效负载中对象 `conversationUpdate` `membersRemoved` 的事件。</span><span class="sxs-lookup"><span data-stu-id="3d32f-160">The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added.</span></span> <span data-ttu-id="3d32f-161">Microsoft Teams 还会 `eventType.teamMemberRemoved` 在 对象中 `channelData` 添加 。</span><span class="sxs-lookup"><span data-stu-id="3d32f-161">Microsoft Teams also adds `eventType.teamMemberRemoved` in the `channelData` object.</span></span> <span data-ttu-id="3d32f-162">与 对象一样，应分析机器人的应用 ID 对象 `membersAdded` `membersRemoved` 以确定已删除用户。</span><span class="sxs-lookup"><span data-stu-id="3d32f-162">As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.</span></span>
 
-### <a name="schema-example-team-member-removed"></a><span data-ttu-id="906f5-163">架构示例：删除了工作组成员</span><span class="sxs-lookup"><span data-stu-id="906f5-163">Schema example: Team member removed</span></span>
+### <a name="schema-example-team-member-removed"></a><span data-ttu-id="3d32f-163">架构示例：已删除团队成员</span><span class="sxs-lookup"><span data-stu-id="3d32f-163">Schema example: Team member removed</span></span>
 
 ```json
 {
@@ -268,16 +269,16 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="user-removed-from-a-meeting"></a><span data-ttu-id="906f5-164">用户已从会议中删除</span><span class="sxs-lookup"><span data-stu-id="906f5-164">User removed from a meeting</span></span>
+### <a name="user-removed-from-a-meeting"></a><span data-ttu-id="3d32f-164">从会议中删除的用户</span><span class="sxs-lookup"><span data-stu-id="3d32f-164">User removed from a meeting</span></span>
 
-<span data-ttu-id="906f5-165">`conversationUpdate` `membersRemoved` 当从私人计划会议中删除用户时，将发送有效负载中包含对象的事件。</span><span class="sxs-lookup"><span data-stu-id="906f5-165">The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when a user is removed from a private scheduled meeting.</span></span> <span data-ttu-id="906f5-166">即使匿名用户加入会议，也会发送事件详细信息。</span><span class="sxs-lookup"><span data-stu-id="906f5-166">The event details will be sent even when anonymous users join the meeting.</span></span> 
+<span data-ttu-id="3d32f-165">从 `conversationUpdate` 私人计划会议中删除用户时，将发送有效负载中对象 `membersRemoved` 的事件。</span><span class="sxs-lookup"><span data-stu-id="3d32f-165">The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when a user is removed from a private scheduled meeting.</span></span> <span data-ttu-id="3d32f-166">即使匿名用户加入会议，也会发送事件详细信息。</span><span class="sxs-lookup"><span data-stu-id="3d32f-166">The event details will be sent even when anonymous users join the meeting.</span></span> 
 
 > [!NOTE]
 >
-><span data-ttu-id="906f5-167">_ 当从会议中删除匿名用户时，membersRemoved 有效负载对象不具有 `aadObjectId` 字段。</span><span class="sxs-lookup"><span data-stu-id="906f5-167">_ When an anonymous user is removed from a meeting, membersRemoved payload object does not have `aadObjectId` field.</span></span>
->* <span data-ttu-id="906f5-168">从会议中删除匿名用户时， `from` 有效负载中的对象始终具有会议组织者的 id，即使已由另一个演示者删除了匿名用户也是如此。</span><span class="sxs-lookup"><span data-stu-id="906f5-168">When an anonymous user is removed from a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.</span></span>
+>* <span data-ttu-id="3d32f-167">从会议中删除匿名用户时，membersRemoved 有效负载对象没有 `aadObjectId` 字段。</span><span class="sxs-lookup"><span data-stu-id="3d32f-167">When an anonymous user is removed from a meeting, membersRemoved payload object does not have `aadObjectId` field.</span></span>
+>* <span data-ttu-id="3d32f-168">从会议中删除匿名用户时，有效负载中的对象始终具有会议组织者的 ID，即使该匿名用户已被另一个 `from` 演示者删除。</span><span class="sxs-lookup"><span data-stu-id="3d32f-168">When an anonymous user is removed from a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.</span></span>
 
-#### <a name="schema-example-user-removed-from-meeting"></a><span data-ttu-id="906f5-169">架构示例：用户已从会议中删除</span><span class="sxs-lookup"><span data-stu-id="906f5-169">Schema example: User removed from meeting</span></span>
+#### <a name="schema-example-user-removed-from-meeting"></a><span data-ttu-id="3d32f-169">架构示例：从会议中删除的用户</span><span class="sxs-lookup"><span data-stu-id="3d32f-169">Schema example: User removed from meeting</span></span>
 
 ```
 {   
@@ -316,14 +317,14 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-## <a name="team-name-updates"></a><span data-ttu-id="906f5-170">团队名称更新</span><span class="sxs-lookup"><span data-stu-id="906f5-170">Team name updates</span></span>
+## <a name="team-name-updates"></a><span data-ttu-id="3d32f-170">团队名称更新</span><span class="sxs-lookup"><span data-stu-id="3d32f-170">Team name updates</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="906f5-171">没有用于查询所有团队名称的功能，且未从其他事件的有效负载中返回团队名称。</span><span class="sxs-lookup"><span data-stu-id="906f5-171">There is no functionality to query all team names, and team name is not returned in payloads from other events.</span></span>
+> <span data-ttu-id="3d32f-171">没有查询所有团队名称的功能，并且不会在其他事件的负载中返回团队名称。</span><span class="sxs-lookup"><span data-stu-id="3d32f-171">There is no functionality to query all team names, and team name is not returned in payloads from other events.</span></span>
 
-<span data-ttu-id="906f5-172">重命名你的 bot 时，会通知你的你的团队。</span><span class="sxs-lookup"><span data-stu-id="906f5-172">Your bot is notified when the team it is in has been renamed.</span></span> <span data-ttu-id="906f5-173">它接收 `conversationUpdate` `eventType.teamRenamed` 对象中的事件 `channelData` 。</span><span class="sxs-lookup"><span data-stu-id="906f5-173">It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.</span></span> <span data-ttu-id="906f5-174">请注意，没有针对团队创建或删除的通知，因为 bot 仅作为团队的一部分存在，并且在添加它们的范围之外不可见。</span><span class="sxs-lookup"><span data-stu-id="906f5-174">Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.</span></span>
+<span data-ttu-id="3d32f-172">当自动程序位于的团队重命名时，将会收到通知。</span><span class="sxs-lookup"><span data-stu-id="3d32f-172">Your bot is notified when the team it is in has been renamed.</span></span> <span data-ttu-id="3d32f-173">它接收 `conversationUpdate` 对象中的 `eventType.teamRenamed` 事件 `channelData` 。</span><span class="sxs-lookup"><span data-stu-id="3d32f-173">It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.</span></span> <span data-ttu-id="3d32f-174">请注意，没有有关团队创建或删除的通知，因为聊天机器人仅作为团队的一部分存在，在已添加它们的范围外没有可见性。</span><span class="sxs-lookup"><span data-stu-id="3d32f-174">Please note that there are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they have been added.</span></span>
 
-### <a name="schema-example-team-renamed"></a><span data-ttu-id="906f5-175">架构示例：团队已重命名</span><span class="sxs-lookup"><span data-stu-id="906f5-175">Schema example: Team renamed</span></span>
+### <a name="schema-example-team-renamed"></a><span data-ttu-id="3d32f-175">架构示例：团队重命名</span><span class="sxs-lookup"><span data-stu-id="3d32f-175">Schema example: Team renamed</span></span>
 
 ```json
 { 
@@ -358,17 +359,17 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-## <a name="channel-updates"></a><span data-ttu-id="906f5-176">频道更新</span><span class="sxs-lookup"><span data-stu-id="906f5-176">Channel updates</span></span>
+## <a name="channel-updates"></a><span data-ttu-id="3d32f-176">频道更新</span><span class="sxs-lookup"><span data-stu-id="3d32f-176">Channel updates</span></span>
 
-<span data-ttu-id="906f5-177">在已添加频道的团队中创建、重命名或删除频道时，将会通知你的 bot。</span><span class="sxs-lookup"><span data-stu-id="906f5-177">Your bot is notified when a channel is created, renamed, or deleted in a team where it has been added.</span></span> <span data-ttu-id="906f5-178">此外，还 `conversationUpdate` 会收到该事件，并将特定于团队的事件标识符作为该对象的一部分发送 `channelData.eventType` ，其中通道数据  `channel.id` 是通道的 GUID，并且 `channel.name` 包含通道名称本身。</span><span class="sxs-lookup"><span data-stu-id="906f5-178">Again, the `conversationUpdate` event is received, and a Teams-specific event identifier is sent as part of the `channelData.eventType` object, where the channel data's  `channel.id` is the GUID for the channel, and `channel.name` contains the channel name itself.</span></span>
+<span data-ttu-id="3d32f-177">在已添加频道的团队中创建、重命名或删除频道时，将会通知机器人。</span><span class="sxs-lookup"><span data-stu-id="3d32f-177">Your bot is notified when a channel is created, renamed, or deleted in a team where it has been added.</span></span> <span data-ttu-id="3d32f-178">同样，会接收事件，并且特定于 Teams 的事件标识符作为对象的一部分发送，其中通道数据的 是频道 `conversationUpdate` `channelData.eventType` 的 GUID，并且包含通道  `channel.id` `channel.name` 名称本身。</span><span class="sxs-lookup"><span data-stu-id="3d32f-178">Again, the `conversationUpdate` event is received, and a Teams-specific event identifier is sent as part of the `channelData.eventType` object, where the channel data's  `channel.id` is the GUID for the channel, and `channel.name` contains the channel name itself.</span></span>
 
-<span data-ttu-id="906f5-179">通道事件如下所示：</span><span class="sxs-lookup"><span data-stu-id="906f5-179">The channel events are as follows:</span></span>
+<span data-ttu-id="3d32f-179">频道事件如下所示：</span><span class="sxs-lookup"><span data-stu-id="3d32f-179">The channel events are as follows:</span></span>
 
-* <span data-ttu-id="906f5-180">**channelCreated** &emsp;用户向团队添加新频道</span><span class="sxs-lookup"><span data-stu-id="906f5-180">**channelCreated**&emsp;A user adds a new channel to the team</span></span>
-* <span data-ttu-id="906f5-181">**channelRenamed** &emsp;用户重命名现有频道</span><span class="sxs-lookup"><span data-stu-id="906f5-181">**channelRenamed**&emsp;A user renames an existing channel</span></span>
-* <span data-ttu-id="906f5-182">**channelDeleted** &emsp;用户删除频道</span><span class="sxs-lookup"><span data-stu-id="906f5-182">**channelDeleted**&emsp;A user removes a channel</span></span>
+* <span data-ttu-id="3d32f-180">**channelCreated** &emsp;用户向团队添加新频道</span><span class="sxs-lookup"><span data-stu-id="3d32f-180">**channelCreated**&emsp;A user adds a new channel to the team</span></span>
+* <span data-ttu-id="3d32f-181">**channelRenamed** &emsp;用户重命名现有频道</span><span class="sxs-lookup"><span data-stu-id="3d32f-181">**channelRenamed**&emsp;A user renames an existing channel</span></span>
+* <span data-ttu-id="3d32f-182">**channelDeleted** &emsp;用户删除频道</span><span class="sxs-lookup"><span data-stu-id="3d32f-182">**channelDeleted**&emsp;A user removes a channel</span></span>
 
-### <a name="full-schema-example-channelcreated"></a><span data-ttu-id="906f5-183">完整架构示例： channelCreated</span><span class="sxs-lookup"><span data-stu-id="906f5-183">Full schema example: channelCreated</span></span>
+### <a name="full-schema-example-channelcreated"></a><span data-ttu-id="3d32f-183">完整架构示例：channelCreated</span><span class="sxs-lookup"><span data-stu-id="3d32f-183">Full schema example: channelCreated</span></span>
 
 ```json
 {
@@ -406,7 +407,7 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="schema-excerpt-channeldata-for-channelrenamed"></a><span data-ttu-id="906f5-184">架构摘录： channelData for channelRenamed</span><span class="sxs-lookup"><span data-stu-id="906f5-184">Schema excerpt: channelData for channelRenamed</span></span>
+### <a name="schema-excerpt-channeldata-for-channelrenamed"></a><span data-ttu-id="3d32f-184">架构摘录：channelRenamed 的 channelData</span><span class="sxs-lookup"><span data-stu-id="3d32f-184">Schema excerpt: channelData for channelRenamed</span></span>
 
 ```json
 ⋮
@@ -426,7 +427,7 @@ bot.on('conversationUpdate', (msg) => {
 ⋮
 ```
 
-### <a name="schema-excerpt-channeldata-for-channeldeleted"></a><span data-ttu-id="906f5-185">架构摘录： channelData for channelDeleted</span><span class="sxs-lookup"><span data-stu-id="906f5-185">Schema excerpt: channelData for channelDeleted</span></span>
+### <a name="schema-excerpt-channeldata-for-channeldeleted"></a><span data-ttu-id="3d32f-185">架构摘录：channelDeleted 的 channelData</span><span class="sxs-lookup"><span data-stu-id="3d32f-185">Schema excerpt: channelData for channelDeleted</span></span>
 
 ```json
 ⋮
@@ -446,11 +447,11 @@ bot.on('conversationUpdate', (msg) => {
 ⋮
 ```
 
-## <a name="reactions"></a><span data-ttu-id="906f5-186">作出</span><span class="sxs-lookup"><span data-stu-id="906f5-186">Reactions</span></span>
+## <a name="reactions"></a><span data-ttu-id="3d32f-186">反应</span><span class="sxs-lookup"><span data-stu-id="3d32f-186">Reactions</span></span>
 
-<span data-ttu-id="906f5-187">`messageReaction`当用户在最初由你的 bot 发送的邮件中添加或删除他/她的反应时，会发送此事件。</span><span class="sxs-lookup"><span data-stu-id="906f5-187">The `messageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot.</span></span> <span data-ttu-id="906f5-188">`replyToId` 包含特定邮件的 ID。</span><span class="sxs-lookup"><span data-stu-id="906f5-188">`replyToId` contains the ID of the specific message.</span></span>
+<span data-ttu-id="3d32f-187">当用户向最初由机器人发送的消息添加或删除他/她的反应时， `messageReaction` 将发送该事件。</span><span class="sxs-lookup"><span data-stu-id="3d32f-187">The `messageReaction` event is sent when a user adds or removes his or her reaction to a message which was originally sent by your bot.</span></span> <span data-ttu-id="3d32f-188">`replyToId` 包含特定邮件的 ID。</span><span class="sxs-lookup"><span data-stu-id="3d32f-188">`replyToId` contains the ID of the specific message.</span></span>
 
-### <a name="schema-example-a-user-likes-a-message"></a><span data-ttu-id="906f5-189">架构示例：用户喜欢一封邮件</span><span class="sxs-lookup"><span data-stu-id="906f5-189">Schema example: A user likes a message</span></span>
+### <a name="schema-example-a-user-likes-a-message"></a><span data-ttu-id="3d32f-189">架构示例：用户喜欢消息</span><span class="sxs-lookup"><span data-stu-id="3d32f-189">Schema example: A user likes a message</span></span>
 
 ```json
 {
@@ -492,7 +493,7 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="schema-example-a-user-un-likes-a-message"></a><span data-ttu-id="906f5-190">架构示例：用户不喜欢某封邮件</span><span class="sxs-lookup"><span data-stu-id="906f5-190">Schema example: A user un-likes a message</span></span>
+### <a name="schema-example-a-user-un-likes-a-message"></a><span data-ttu-id="3d32f-190">架构示例：用户取消喜欢消息</span><span class="sxs-lookup"><span data-stu-id="3d32f-190">Schema example: A user un-likes a message</span></span>
 
 ```json
 {

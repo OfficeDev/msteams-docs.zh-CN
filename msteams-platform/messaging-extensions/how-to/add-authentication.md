@@ -1,23 +1,23 @@
 ---
 title: 向邮件扩展添加身份验证
 author: clearab
-description: 如何向邮件扩展添加身份验证
+description: 如何向消息传递扩展添加身份验证
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d673f52e63ba845675f6631470af68d65c7297ad
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 04ece6fe6f5e824873ed6e69385bce017df6927d
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449568"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696771"
 ---
-# <a name="add-authentication-to-your-messaging-extension"></a><span data-ttu-id="e8e0d-103">向邮件扩展添加身份验证</span><span class="sxs-lookup"><span data-stu-id="e8e0d-103">Add authentication to your messaging extension</span></span>
+# <a name="add-authentication-to-your-messaging-extension"></a><span data-ttu-id="69866-103">向邮件扩展添加身份验证</span><span class="sxs-lookup"><span data-stu-id="69866-103">Add authentication to your messaging extension</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-## <a name="identify-the-user"></a><span data-ttu-id="e8e0d-104">标识用户</span><span class="sxs-lookup"><span data-stu-id="e8e0d-104">Identify the user</span></span>
+## <a name="identify-the-user"></a><span data-ttu-id="69866-104">标识用户</span><span class="sxs-lookup"><span data-stu-id="69866-104">Identify the user</span></span>
 
-<span data-ttu-id="e8e0d-105">对服务的每个请求包括执行请求的用户的模糊 ID，以及用户的 显示名称 和 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-105">Every request to your services includes the obfuscated ID of the user that performed the request, as well as the user's display name and Azure Active Directory object ID.</span></span>
+<span data-ttu-id="69866-105">每个对服务的请求都包括用户 ID、显示名称和 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="69866-105">Every request to your services includes the user  ID, the user's display name and Azure Active Directory object ID.</span></span>
 
 ```json
 "from": {
@@ -27,28 +27,26 @@ ms.locfileid: "50449568"
 },
 ```
 
-<span data-ttu-id="e8e0d-106">和 `id` `aadObjectId` 值保证为经过身份验证的 Teams 用户的值。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-106">The `id` and `aadObjectId` values are guaranteed to be that of the authenticated Teams user.</span></span> <span data-ttu-id="e8e0d-107">它们可以用作在服务中查找凭据或任何缓存状态的密钥。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-107">They can be used as keys to look up credentials or any cached state in your service.</span></span> <span data-ttu-id="e8e0d-108">此外，每个请求都包含用户的 Azure Active Directory 租户 ID，可用于标识用户的组织。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-108">In addition, each request contains the Azure Active Directory tenant ID of the user, which can be used to identify the user’s organization.</span></span> <span data-ttu-id="e8e0d-109">如果适用，请求还包含源自请求的团队和频道的 ID。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-109">If applicable, the request also contains the team and channel IDs from which the request originated.</span></span>
+<span data-ttu-id="69866-106">和 `id` `aadObjectId` 值保证经过身份验证的 Teams 用户。</span><span class="sxs-lookup"><span data-stu-id="69866-106">The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user.</span></span> <span data-ttu-id="69866-107">它们用作在服务中查找凭据或任何缓存状态的密钥。</span><span class="sxs-lookup"><span data-stu-id="69866-107">They are used as keys to look up the credentials or any cached state in your service.</span></span> <span data-ttu-id="69866-108">此外，每个请求都包含用户的 Azure Active Directory 租户 ID，用于标识用户的组织。</span><span class="sxs-lookup"><span data-stu-id="69866-108">In addition, each request contains the Azure Active Directory tenant ID of the user, which is used to identify the user’s organization.</span></span> <span data-ttu-id="69866-109">如果适用，请求还包含发起请求的团队 ID 和频道 ID。</span><span class="sxs-lookup"><span data-stu-id="69866-109">If applicable, the request also contains the team Id and channel ID from which the request is originated.</span></span>
 
-## <a name="authentication"></a><span data-ttu-id="e8e0d-110">身份验证</span><span class="sxs-lookup"><span data-stu-id="e8e0d-110">Authentication</span></span>
+## <a name="authentication"></a><span data-ttu-id="69866-110">身份验证</span><span class="sxs-lookup"><span data-stu-id="69866-110">Authentication</span></span>
 
-<span data-ttu-id="e8e0d-111">如果服务需要用户身份验证，则需要先登录用户，然后才能使用消息传递扩展。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-111">If your service requires user authentication, you need to sign in the user before he or she can use the messaging extension.</span></span> <span data-ttu-id="e8e0d-112">如果已编写登录用户的自动程序或选项卡，则本节应该很熟悉。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-112">If you have written a bot or a tab that signs in the user, this section should be familiar.</span></span>
+<span data-ttu-id="69866-111">如果服务需要用户身份验证，则用户必须先登录，然后才能使用消息传递扩展。</span><span class="sxs-lookup"><span data-stu-id="69866-111">If your service requires user authentication, the users must sign in before they use the messaging extension.</span></span> <span data-ttu-id="69866-112">身份验证步骤类似于自动程序或选项卡的步骤。顺序如下所示：</span><span class="sxs-lookup"><span data-stu-id="69866-112">The authentication steps are similar to that of a bot or tab. The sequence is as follows:</span></span>
 
-<span data-ttu-id="e8e0d-113">顺序如下所示：</span><span class="sxs-lookup"><span data-stu-id="e8e0d-113">The sequence is as follows:</span></span>
+1. <span data-ttu-id="69866-113">用户发出查询，或者默认查询将自动发送到您的服务。</span><span class="sxs-lookup"><span data-stu-id="69866-113">User issues a query, or the default query is automatically sent to your service.</span></span>
+1. <span data-ttu-id="69866-114">你的服务通过检查 Teams 用户 ID 来检查用户是否经过身份验证。</span><span class="sxs-lookup"><span data-stu-id="69866-114">Your service checks whether the user is authenticated by inspecting the Teams user ID.</span></span>
+1. <span data-ttu-id="69866-115">如果用户未经过身份验证，请通过建议的操作（包括身份验证 `auth` `openUrl` URL）发送回响应。</span><span class="sxs-lookup"><span data-stu-id="69866-115">If the user is not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.</span></span>
+1. <span data-ttu-id="69866-116">Microsoft Teams 客户端使用给定的身份验证 URL 启动托管网页的对话框。</span><span class="sxs-lookup"><span data-stu-id="69866-116">The Microsoft Teams client launches a dialog box hosting your webpage using the given authentication URL.</span></span>
+1. <span data-ttu-id="69866-117">用户登录后，应关闭窗口，并将 **身份验证代码发送到** Teams 客户端。</span><span class="sxs-lookup"><span data-stu-id="69866-117">After the user signs in, you should close your window and send an **authentication code** to the Teams client.</span></span>
+1. <span data-ttu-id="69866-118">然后，Teams 客户端重新对服务进行查询，其中包括步骤 5 中传递的身份验证代码。</span><span class="sxs-lookup"><span data-stu-id="69866-118">The Teams client then reissues the query to your service, which includes the authentication code passed in Step 5.</span></span>
 
-1. <span data-ttu-id="e8e0d-114">用户发出查询，或者默认查询会自动发送到你的服务。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-114">User issues a query, or the default query is automatically sent to your service.</span></span>
-2. <span data-ttu-id="e8e0d-115">你的服务会检查用户是否已首先通过检查 Teams 用户 ID 进行身份验证。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-115">Your service checks whether the user has first authenticated by inspecting the Teams user ID.</span></span>
-3. <span data-ttu-id="e8e0d-116">如果用户尚未进行身份验证，请发送回包含建议操作（包括身份验证 `auth` `openUrl` URL）的响应。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-116">If the user has not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.</span></span>
-4. <span data-ttu-id="e8e0d-117">Microsoft Teams 客户端使用给定的身份验证 URL 启动托管网页的弹出窗口。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-117">The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.</span></span>
-5. <span data-ttu-id="e8e0d-118">用户登录后，应关闭窗口，并将"身份验证代码"发送到 Teams 客户端。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-118">After the user signs in, you should close your window and send an "authentication code" to the Teams client.</span></span>
-6. <span data-ttu-id="e8e0d-119">然后，Teams 客户端重新向服务提供查询，其中包括步骤 5 中传递的身份验证代码。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-119">The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.</span></span>
+<span data-ttu-id="69866-119">服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码匹配。</span><span class="sxs-lookup"><span data-stu-id="69866-119">Your service should verify that the authentication code received in step 6 matches the one from step 5.</span></span> <span data-ttu-id="69866-120">这可确保恶意用户不会尝试欺骗或破坏登录流。</span><span class="sxs-lookup"><span data-stu-id="69866-120">This ensures that a malicious user does not try to spoof or compromise the sign in flow.</span></span> <span data-ttu-id="69866-121">这实际上"关闭循环"以完成安全身份验证序列。</span><span class="sxs-lookup"><span data-stu-id="69866-121">This effectively "closes the loop" to finish the secure authentication sequence.</span></span>
 
-<span data-ttu-id="e8e0d-120">服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码匹配。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-120">Your service should verify that the authentication code received in step 6 matches the one from step 5.</span></span> <span data-ttu-id="e8e0d-121">这可确保恶意用户不会尝试欺骗或破坏登录流。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-121">This ensures that a malicious user does not try to spoof or compromise the sign-in flow.</span></span> <span data-ttu-id="e8e0d-122">这实际上"关闭循环"以完成安全身份验证序列。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-122">This effectively "closes the loop" to finish the secure authentication sequence.</span></span>
+### <a name="respond-with-a-sign-in-action"></a><span data-ttu-id="69866-122">使用登录操作响应</span><span class="sxs-lookup"><span data-stu-id="69866-122">Respond with a sign-in action</span></span>
 
-### <a name="respond-with-a-sign-in-action"></a><span data-ttu-id="e8e0d-123">使用登录操作响应</span><span class="sxs-lookup"><span data-stu-id="e8e0d-123">Respond with a sign-in action</span></span>
+<span data-ttu-id="69866-123">若要提示未经身份验证的用户登录，请通过包含身份验证 URL 的类型的建议操作 `openUrl` 进行响应。</span><span class="sxs-lookup"><span data-stu-id="69866-123">To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.</span></span>
 
-<span data-ttu-id="e8e0d-124">若要提示未经身份验证的用户登录，请响应包含身份验证 URL 的推荐操作 `openUrl` 类型。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-124">To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.</span></span>
-
-#### <a name="response-example-for-a-sign-in-action"></a><span data-ttu-id="e8e0d-125">登录操作的响应示例</span><span class="sxs-lookup"><span data-stu-id="e8e0d-125">Response example for a sign-in action</span></span>
+#### <a name="response-example-for-a-sign-in-action"></a><span data-ttu-id="69866-124">登录操作的响应示例</span><span class="sxs-lookup"><span data-stu-id="69866-124">Response example for a sign-in action</span></span>
 
 ```json
 {
@@ -68,24 +66,24 @@ ms.locfileid: "50449568"
 ```
 
 > [!NOTE]
-> <span data-ttu-id="e8e0d-126">若要在 Teams 弹出窗口中托管登录体验，URL 的域部分必须位于你的应用的有效域列表中。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-126">For the sign-in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains.</span></span> <span data-ttu-id="e8e0d-127"> (清单架构中查看[validDomains。) ](~/resources/schema/manifest-schema.md#validdomains)</span><span class="sxs-lookup"><span data-stu-id="e8e0d-127">(See [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.)</span></span>
+> <span data-ttu-id="69866-125">若要在 Teams 弹出窗口中托管登录体验，URL 的域部分必须位于你的应用的有效域列表中。</span><span class="sxs-lookup"><span data-stu-id="69866-125">For the sign in experience to be hosted in a Teams pop-up window, the domain portion of the URL must be in your app’s list of valid domains.</span></span> <span data-ttu-id="69866-126">有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)</span><span class="sxs-lookup"><span data-stu-id="69866-126">For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.</span></span>
 
-### <a name="start-the-sign-in-flow"></a><span data-ttu-id="e8e0d-128">启动登录流</span><span class="sxs-lookup"><span data-stu-id="e8e0d-128">Start the sign-in flow</span></span>
+### <a name="start-the-sign-in-flow"></a><span data-ttu-id="69866-127">启动登录流程</span><span class="sxs-lookup"><span data-stu-id="69866-127">Start the sign in flow</span></span>
 
-<span data-ttu-id="e8e0d-129">你的登录体验应该具有响应性，并且适合弹出窗口。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-129">Your sign-in experience should be responsive and fit within a popup window.</span></span> <span data-ttu-id="e8e0d-130">它应与 [使用消息传递的 Microsoft Teams JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 集成。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-130">It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.</span></span>
+<span data-ttu-id="69866-128">登录体验必须响应迅速且适合弹出窗口。</span><span class="sxs-lookup"><span data-stu-id="69866-128">Your sign in experience must be responsive and fit within a pop-up window.</span></span> <span data-ttu-id="69866-129">它应与使用消息传递 [的 Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)集成。</span><span class="sxs-lookup"><span data-stu-id="69866-129">It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.</span></span>
 
-<span data-ttu-id="e8e0d-131">与其他在 Microsoft Teams 内运行的嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-131">As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`.</span></span> <span data-ttu-id="e8e0d-132">如果你的代码执行 OAuth 流，你可以将 Teams 用户 ID 传递到你的窗口，然后可以将它传递到 OAuth 登录 URL。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-132">If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.</span></span>
+<span data-ttu-id="69866-130">与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。</span><span class="sxs-lookup"><span data-stu-id="69866-130">As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`.</span></span> <span data-ttu-id="69866-131">如果你的代码执行 OAuth 流，你可以将 Teams 用户 ID 传递到你的窗口，然后将它传递到 OAuth 登录 URL。</span><span class="sxs-lookup"><span data-stu-id="69866-131">If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then passes it to the OAuth sign-in URL.</span></span>
 
-### <a name="complete-the-sign-in-flow"></a><span data-ttu-id="e8e0d-133">完成登录流程</span><span class="sxs-lookup"><span data-stu-id="e8e0d-133">Complete the sign-in flow</span></span>
+### <a name="complete-the-sign-in-flow"></a><span data-ttu-id="69866-132">完成登录流程</span><span class="sxs-lookup"><span data-stu-id="69866-132">Complete the sign in flow</span></span>
 
-<span data-ttu-id="e8e0d-134">当登录请求完成并重定向回页面时，它应执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="e8e0d-134">When the sign-in request completes and redirects back to your page, it should perform the following steps:</span></span>
+<span data-ttu-id="69866-133">当登录请求完成并重定向回你的页面时，它必须执行以下步骤：</span><span class="sxs-lookup"><span data-stu-id="69866-133">When the sign in request completes and redirects back to your page, it must perform the following steps:</span></span>
 
-1. <span data-ttu-id="e8e0d-135">生成安全代码。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-135">Generate a security code.</span></span> <span data-ttu-id="e8e0d-136"> (可以是随机数字。) 您需要在服务上缓存此代码，以及通过登录流获取的凭据 (如 OAuth 2.0 令牌) 。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-136">(This can be a random number.) You need to cache this code on your service, along with the credentials obtained through the sign-in flow (such as OAuth 2.0 tokens).</span></span>
-2. <span data-ttu-id="e8e0d-137">调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-137">Call `microsoftTeams.authentication.notifySuccess` and pass the security code.</span></span>
+1. <span data-ttu-id="69866-134">生成安全代码。</span><span class="sxs-lookup"><span data-stu-id="69866-134">Generate a security code.</span></span> <span data-ttu-id="69866-135">这是一个随机数。</span><span class="sxs-lookup"><span data-stu-id="69866-135">This is a random number.</span></span> <span data-ttu-id="69866-136">您必须在服务上缓存此代码，以及通过登录流（如 OAuth 2.0 令牌）获取的凭据。</span><span class="sxs-lookup"><span data-stu-id="69866-136">You must cache this code on your service, along with the credentials obtained through the sign in flow, such as OAuth 2.0 tokens.</span></span>
+1. <span data-ttu-id="69866-137">调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。</span><span class="sxs-lookup"><span data-stu-id="69866-137">Call `microsoftTeams.authentication.notifySuccess` and pass the security code.</span></span>
 
-<span data-ttu-id="e8e0d-138">此时，窗口关闭，控件将传递给 Teams 客户端。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-138">At this point, the window closes and control is passed to the Teams client.</span></span> <span data-ttu-id="e8e0d-139">客户端现在可以重新发送原始用户查询以及属性中的安全 `state` 代码。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-139">The client now can reissue the original user query, along with the security code in the `state` property.</span></span> <span data-ttu-id="e8e0d-140">代码可以使用安全代码查找之前存储的凭据，以完成身份验证序列，然后完成用户请求。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-140">Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.</span></span>
+<span data-ttu-id="69866-138">此时，窗口关闭，控制权将传递给 Teams 客户端。</span><span class="sxs-lookup"><span data-stu-id="69866-138">At this point, the window closes and control is passed to the Teams client.</span></span> <span data-ttu-id="69866-139">客户端现在重新提供原始用户查询以及 属性中的安全 `state` 代码。</span><span class="sxs-lookup"><span data-stu-id="69866-139">The client now reissues the original user query, along with the security code in the `state` property.</span></span> <span data-ttu-id="69866-140">代码可以使用安全代码查找之前存储的凭据以完成身份验证序列，然后完成用户请求。</span><span class="sxs-lookup"><span data-stu-id="69866-140">Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.</span></span>
 
-#### <a name="reissued-request-example"></a><span data-ttu-id="e8e0d-141">重新发送的请求示例</span><span class="sxs-lookup"><span data-stu-id="e8e0d-141">Reissued request example</span></span>
+#### <a name="reissued-request-example"></a><span data-ttu-id="69866-141">重新请求示例</span><span class="sxs-lookup"><span data-stu-id="69866-141">Reissued request example</span></span>
 
 ```json
 {
@@ -134,9 +132,9 @@ ms.locfileid: "50449568"
 }
 ```
 
-## <a name="code-sample"></a><span data-ttu-id="e8e0d-142">代码示例</span><span class="sxs-lookup"><span data-stu-id="e8e0d-142">Code sample</span></span>
-|<span data-ttu-id="e8e0d-143">**示例名称**</span><span class="sxs-lookup"><span data-stu-id="e8e0d-143">**Sample name**</span></span> | <span data-ttu-id="e8e0d-144">**说明**</span><span class="sxs-lookup"><span data-stu-id="e8e0d-144">**Description**</span></span> |<span data-ttu-id="e8e0d-145">**.NET**</span><span class="sxs-lookup"><span data-stu-id="e8e0d-145">**.NET**</span></span> | <span data-ttu-id="e8e0d-146">**Node.js**</span><span class="sxs-lookup"><span data-stu-id="e8e0d-146">**Node.js**</span></span>|
+## <a name="code-sample"></a><span data-ttu-id="69866-142">代码示例</span><span class="sxs-lookup"><span data-stu-id="69866-142">Code sample</span></span>
+|<span data-ttu-id="69866-143">**示例名称**</span><span class="sxs-lookup"><span data-stu-id="69866-143">**Sample name**</span></span> | <span data-ttu-id="69866-144">**Description**</span><span class="sxs-lookup"><span data-stu-id="69866-144">**Description**</span></span> |<span data-ttu-id="69866-145">**.NET**</span><span class="sxs-lookup"><span data-stu-id="69866-145">**.NET**</span></span> | <span data-ttu-id="69866-146">**Node.js**</span><span class="sxs-lookup"><span data-stu-id="69866-146">**Node.js**</span></span>|
 |----------------|-----------------|--------------|----------------|
-|<span data-ttu-id="e8e0d-147">邮件扩展 - 身份验证和配置</span><span class="sxs-lookup"><span data-stu-id="e8e0d-147">Messaging extensions - auth and config</span></span> | <span data-ttu-id="e8e0d-148">具有配置页面、接受搜索请求和在用户登录后返回结果的消息扩展。</span><span class="sxs-lookup"><span data-stu-id="e8e0d-148">A Messaging Extension that has a configuration page, accepts search requests, and returns results after the user has signed in.</span></span> |[<span data-ttu-id="e8e0d-149">View</span><span class="sxs-lookup"><span data-stu-id="e8e0d-149">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[<span data-ttu-id="e8e0d-150">View</span><span class="sxs-lookup"><span data-stu-id="e8e0d-150">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|<span data-ttu-id="69866-147">邮件扩展 - 身份验证和配置</span><span class="sxs-lookup"><span data-stu-id="69866-147">Messaging extensions - auth and config</span></span> | <span data-ttu-id="69866-148">具有配置页面、接受搜索请求和在用户登录后返回结果的消息扩展。</span><span class="sxs-lookup"><span data-stu-id="69866-148">A Messaging Extension that has a configuration page, accepts search requests, and returns results after the user has signed in.</span></span> |[<span data-ttu-id="69866-149">View</span><span class="sxs-lookup"><span data-stu-id="69866-149">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[<span data-ttu-id="69866-150">View</span><span class="sxs-lookup"><span data-stu-id="69866-150">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
  

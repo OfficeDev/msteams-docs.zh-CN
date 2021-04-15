@@ -1,34 +1,36 @@
 ---
 title: 响应搜索命令
 author: clearab
-description: 如何在 Microsoft 团队应用中的邮件扩展中响应搜索命令。
+description: 如何从 Microsoft Teams 应用中的消息扩展响应搜索命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e8b40dd8f422ffbd2537e8fa76a38c15eb6208de
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2cc53796deddb47e8dbce86a5b02f4d80a1b91e0
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673492"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696190"
 ---
-# <a name="respond-to-the-search-command"></a><span data-ttu-id="68b4e-103">响应搜索命令</span><span class="sxs-lookup"><span data-stu-id="68b4e-103">Respond to the search command</span></span>
+# <a name="respond-to-search-command"></a><span data-ttu-id="eba6a-103">响应搜索命令</span><span class="sxs-lookup"><span data-stu-id="eba6a-103">Respond to search command</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-<span data-ttu-id="68b4e-104">您的 web 服务将接收`composeExtension/query`包含具有搜索参数的`value`对象的调用消息。</span><span class="sxs-lookup"><span data-stu-id="68b4e-104">Your web service will receive a `composeExtension/query` invoke message that contains a `value` object with the search parameters.</span></span> <span data-ttu-id="68b4e-105">触发此调用：</span><span class="sxs-lookup"><span data-stu-id="68b4e-105">This invoke is triggered:</span></span>
+<span data-ttu-id="eba6a-104">在用户提交搜索命令后，Web 服务会收到一条调用消息，其中包含包含 `composeExtension/query` `value` 搜索参数的对象。</span><span class="sxs-lookup"><span data-stu-id="eba6a-104">After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters.</span></span> <span data-ttu-id="eba6a-105">此调用将触发，并满足以下条件：</span><span class="sxs-lookup"><span data-stu-id="eba6a-105">This invoke is triggered with the following conditions:</span></span>
 
-* <span data-ttu-id="68b4e-106">在搜索框中输入字符时。</span><span class="sxs-lookup"><span data-stu-id="68b4e-106">As characters are entered into the search box.</span></span>
-* <span data-ttu-id="68b4e-107">如果`initialRun`在应用程序清单中将设置为 true，则会在调用搜索命令后立即收到调用消息。</span><span class="sxs-lookup"><span data-stu-id="68b4e-107">If `initialRun` is set to true in your app manifest, you'll receive the invoke message as soon as the search command is invoked.</span></span> <span data-ttu-id="68b4e-108">请参阅[默认查询](#default-query)。</span><span class="sxs-lookup"><span data-stu-id="68b4e-108">See [default query](#default-query).</span></span>
+* <span data-ttu-id="eba6a-106">在搜索框中输入字符时。</span><span class="sxs-lookup"><span data-stu-id="eba6a-106">As characters are entered into the search box.</span></span>
+* <span data-ttu-id="eba6a-107">`initialRun` 在应用清单中设置为 true，一旦调用搜索命令，就会收到调用消息。</span><span class="sxs-lookup"><span data-stu-id="eba6a-107">`initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked.</span></span> <span data-ttu-id="eba6a-108">有关详细信息，请参阅默认 [查询](#default-query)。</span><span class="sxs-lookup"><span data-stu-id="eba6a-108">For more information, see [default query](#default-query).</span></span>
 
-<span data-ttu-id="68b4e-109">请求参数本身位于请求的`value`对象中，其中包括以下属性：</span><span class="sxs-lookup"><span data-stu-id="68b4e-109">The request parameters itself are found in the `value` object in the request, which includes the following properties:</span></span>
+<span data-ttu-id="eba6a-109">本文档指导你了解如何以卡片和预览形式响应用户请求，以及 Microsoft Teams 发布默认查询的条件。</span><span class="sxs-lookup"><span data-stu-id="eba6a-109">This document guides you on how to respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.</span></span>
 
-| <span data-ttu-id="68b4e-110">属性名称</span><span class="sxs-lookup"><span data-stu-id="68b4e-110">Property name</span></span> | <span data-ttu-id="68b4e-111">用途</span><span class="sxs-lookup"><span data-stu-id="68b4e-111">Purpose</span></span> |
+<span data-ttu-id="eba6a-110">请求参数位于请求中的 对象中 `value` ，其中包括以下属性：</span><span class="sxs-lookup"><span data-stu-id="eba6a-110">The request parameters are found in the `value` object in the request, which includes the following properties:</span></span>
+
+| <span data-ttu-id="eba6a-111">属性名称</span><span class="sxs-lookup"><span data-stu-id="eba6a-111">Property name</span></span> | <span data-ttu-id="eba6a-112">用途</span><span class="sxs-lookup"><span data-stu-id="eba6a-112">Purpose</span></span> |
 |---|---|
-| `commandId` | <span data-ttu-id="68b4e-112">用户调用的命令的名称，与应用程序清单中声明的命令之一相匹配。</span><span class="sxs-lookup"><span data-stu-id="68b4e-112">The name of the command invoked by the user, matching one of the commands declared in the app manifest.</span></span> |
-| `parameters` | <span data-ttu-id="68b4e-113">参数数组。</span><span class="sxs-lookup"><span data-stu-id="68b4e-113">Array of parameters.</span></span> <span data-ttu-id="68b4e-114">每个 parameter 对象包含参数名称，以及用户提供的参数值。</span><span class="sxs-lookup"><span data-stu-id="68b4e-114">Each parameter object contains the parameter name, along with the parameter value provided by the user.</span></span> |
-| `queryOptions` | <span data-ttu-id="68b4e-115">分页参数：</span><span class="sxs-lookup"><span data-stu-id="68b4e-115">Pagination parameters:</span></span> <br><span data-ttu-id="68b4e-116">`skip`：跳过此查询的计数</span><span class="sxs-lookup"><span data-stu-id="68b4e-116">`skip`: skip count for this query</span></span> <br><span data-ttu-id="68b4e-117">`count`：要返回的元素数</span><span class="sxs-lookup"><span data-stu-id="68b4e-117">`count`: number of elements to return</span></span> |
+| `commandId` | <span data-ttu-id="eba6a-113">用户调用的命令的名称，与在应用清单中声明的命令之一匹配。</span><span class="sxs-lookup"><span data-stu-id="eba6a-113">The name of the command invoked by the user, matching one of the commands declared in the app manifest.</span></span> |
+| `parameters` | <span data-ttu-id="eba6a-114">参数数组。</span><span class="sxs-lookup"><span data-stu-id="eba6a-114">Array of parameters.</span></span> <span data-ttu-id="eba6a-115">每个参数对象都包含参数名称以及用户提供的参数值。</span><span class="sxs-lookup"><span data-stu-id="eba6a-115">Each parameter object contains the parameter name, along with the parameter value provided by the user.</span></span> |
+| `queryOptions` | <span data-ttu-id="eba6a-116">分页参数：</span><span class="sxs-lookup"><span data-stu-id="eba6a-116">Pagination parameters:</span></span> <br><span data-ttu-id="eba6a-117">`skip`：跳过此查询的计数</span><span class="sxs-lookup"><span data-stu-id="eba6a-117">`skip`: Skip count for this query</span></span> <br><span data-ttu-id="eba6a-118">`count`：要返回的元素数。</span><span class="sxs-lookup"><span data-stu-id="eba6a-118">`count`: Number of elements to return.</span></span> |
 
-# <a name="cnettabdotnet"></a>[<span data-ttu-id="68b4e-118">C #/.NET</span><span class="sxs-lookup"><span data-stu-id="68b4e-118">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="eba6a-119">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="eba6a-119">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
@@ -37,7 +39,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[<span data-ttu-id="68b4e-119">TypeScript/node.js</span><span class="sxs-lookup"><span data-stu-id="68b4e-119">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="eba6a-120">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="eba6a-120">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
@@ -47,9 +49,9 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[<span data-ttu-id="68b4e-120">JSON</span><span class="sxs-lookup"><span data-stu-id="68b4e-120">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="eba6a-121">JSON</span><span class="sxs-lookup"><span data-stu-id="eba6a-121">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="68b4e-121">下面的 JSON 将被缩短，以突出显示最相关的部分。</span><span class="sxs-lookup"><span data-stu-id="68b4e-121">The JSON below is shortened to highlight the most relevant sections.</span></span>
+<span data-ttu-id="eba6a-122">以下 JSON 已缩短，以突出显示最相关的部分。</span><span class="sxs-lookup"><span data-stu-id="eba6a-122">The JSON below is shortened to highlight the most relevant sections.</span></span>
 
 ```json
 {
@@ -74,46 +76,46 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-user-requests"></a><span data-ttu-id="68b4e-122">响应用户请求</span><span class="sxs-lookup"><span data-stu-id="68b4e-122">Respond to user requests</span></span>
+## <a name="respond-to-user-requests"></a><span data-ttu-id="eba6a-123">响应用户请求</span><span class="sxs-lookup"><span data-stu-id="eba6a-123">Respond to user requests</span></span>
 
-<span data-ttu-id="68b4e-123">当用户执行查询时，Microsoft 团队会向您的服务发出同步 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="68b4e-123">When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service.</span></span> <span data-ttu-id="68b4e-124">在这种情况下，您的代码有5秒的时间来提供对请求的 HTTP 响应。</span><span class="sxs-lookup"><span data-stu-id="68b4e-124">At that point, your code has 5 seconds to provide an HTTP response to the request.</span></span> <span data-ttu-id="68b4e-125">在这段时间内，您的服务可以执行其他查找，或提供服务请求所需的任何其他业务逻辑。</span><span class="sxs-lookup"><span data-stu-id="68b4e-125">During this time, your service can perform additional lookup, or any other business logic needed to serve the request.</span></span>
+<span data-ttu-id="eba6a-124">当用户执行查询时，Microsoft Teams 会向服务发送同步 HTTP 请求。</span><span class="sxs-lookup"><span data-stu-id="eba6a-124">When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service.</span></span> <span data-ttu-id="eba6a-125">此时，代码有 `5` 几秒钟时间提供对请求的 HTTP 响应。</span><span class="sxs-lookup"><span data-stu-id="eba6a-125">At that point, your code has `5` seconds to provide an HTTP response to the request.</span></span> <span data-ttu-id="eba6a-126">在此期间，你的服务可以执行其他查找，或执行为请求提供服务所需的任何其他业务逻辑。</span><span class="sxs-lookup"><span data-stu-id="eba6a-126">During this time, your service can perform additional lookup, or any other business logic needed to serve the request.</span></span>
 
-<span data-ttu-id="68b4e-126">您的服务应使用与用户查询匹配的结果进行响应。</span><span class="sxs-lookup"><span data-stu-id="68b4e-126">Your service should respond with the results matching the user query.</span></span> <span data-ttu-id="68b4e-127">响应必须指示 HTTP 状态代码`200 OK` ，以及具有以下正文的有效 application/json 对象：</span><span class="sxs-lookup"><span data-stu-id="68b4e-127">The response must indicate an HTTP status code of `200 OK` and a valid application/json object with the following body:</span></span>
+<span data-ttu-id="eba6a-127">服务必须使用与用户查询匹配的结果进行响应。</span><span class="sxs-lookup"><span data-stu-id="eba6a-127">Your service must respond with the results matching the user query.</span></span> <span data-ttu-id="eba6a-128">该响应必须指示 的 HTTP 状态代码以及具有以下属性的有效 `200 OK` 应用程序或 JSON 对象：</span><span class="sxs-lookup"><span data-stu-id="eba6a-128">The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:</span></span>
 
-|<span data-ttu-id="68b4e-128">属性名称</span><span class="sxs-lookup"><span data-stu-id="68b4e-128">Property name</span></span>|<span data-ttu-id="68b4e-129">用途</span><span class="sxs-lookup"><span data-stu-id="68b4e-129">Purpose</span></span>|
+|<span data-ttu-id="eba6a-129">属性名称</span><span class="sxs-lookup"><span data-stu-id="eba6a-129">Property name</span></span>|<span data-ttu-id="eba6a-130">用途</span><span class="sxs-lookup"><span data-stu-id="eba6a-130">Purpose</span></span>|
 |---|---|
-|`composeExtension`|<span data-ttu-id="68b4e-130">顶级响应信封。</span><span class="sxs-lookup"><span data-stu-id="68b4e-130">Top-level response envelope.</span></span>|
-|`composeExtension.type`|<span data-ttu-id="68b4e-131">响应的类型。</span><span class="sxs-lookup"><span data-stu-id="68b4e-131">Type of response.</span></span> <span data-ttu-id="68b4e-132">支持以下类型：</span><span class="sxs-lookup"><span data-stu-id="68b4e-132">The following types are supported:</span></span> <br><span data-ttu-id="68b4e-133">`result`：显示搜索结果列表</span><span class="sxs-lookup"><span data-stu-id="68b4e-133">`result`: displays a list of search results</span></span> <br><span data-ttu-id="68b4e-134">`auth`：要求用户进行身份验证</span><span class="sxs-lookup"><span data-stu-id="68b4e-134">`auth`: asks the user to authenticate</span></span> <br><span data-ttu-id="68b4e-135">`config`：要求用户设置邮件扩展</span><span class="sxs-lookup"><span data-stu-id="68b4e-135">`config`: asks the user to set up the messaging extension</span></span> <br><span data-ttu-id="68b4e-136">`message`：显示纯文本消息</span><span class="sxs-lookup"><span data-stu-id="68b4e-136">`message`: displays a plain text message</span></span> |
-|`composeExtension.attachmentLayout`|<span data-ttu-id="68b4e-137">指定附件的布局。</span><span class="sxs-lookup"><span data-stu-id="68b4e-137">Specifies the layout of the attachments.</span></span> <span data-ttu-id="68b4e-138">用于类型`result`的响应。</span><span class="sxs-lookup"><span data-stu-id="68b4e-138">Used for responses of type `result`.</span></span> <br><span data-ttu-id="68b4e-139">目前支持以下类型：</span><span class="sxs-lookup"><span data-stu-id="68b4e-139">Currently the following types are supported:</span></span> <br><span data-ttu-id="68b4e-140">`list`：包含缩略图、标题和文本字段的卡片对象的列表</span><span class="sxs-lookup"><span data-stu-id="68b4e-140">`list`: a list of card objects containing thumbnail, title, and text fields</span></span> <br><span data-ttu-id="68b4e-141">`grid`：缩略图图像的网格</span><span class="sxs-lookup"><span data-stu-id="68b4e-141">`grid`: a grid of thumbnail images</span></span> |
-|`composeExtension.attachments`|<span data-ttu-id="68b4e-142">有效的附件对象的数组。</span><span class="sxs-lookup"><span data-stu-id="68b4e-142">Array of valid attachment objects.</span></span> <span data-ttu-id="68b4e-143">用于类型`result`的响应。</span><span class="sxs-lookup"><span data-stu-id="68b4e-143">Used for responses of type `result`.</span></span> <br><span data-ttu-id="68b4e-144">目前支持以下类型：</span><span class="sxs-lookup"><span data-stu-id="68b4e-144">Currently the following types are supported:</span></span> <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
-|`composeExtension.suggestedActions`|<span data-ttu-id="68b4e-145">建议的操作。</span><span class="sxs-lookup"><span data-stu-id="68b4e-145">Suggested actions.</span></span> <span data-ttu-id="68b4e-146">用于类型`auth`或`config`的响应。</span><span class="sxs-lookup"><span data-stu-id="68b4e-146">Used for responses of type `auth` or `config`.</span></span> |
-|`composeExtension.text`|<span data-ttu-id="68b4e-147">要显示的消息。</span><span class="sxs-lookup"><span data-stu-id="68b4e-147">Message to display.</span></span> <span data-ttu-id="68b4e-148">用于类型`message`的响应。</span><span class="sxs-lookup"><span data-stu-id="68b4e-148">Used for responses of type `message`.</span></span> |
+|`composeExtension`|<span data-ttu-id="eba6a-131">顶级响应信封。</span><span class="sxs-lookup"><span data-stu-id="eba6a-131">Top-level response envelope.</span></span>|
+|`composeExtension.type`|<span data-ttu-id="eba6a-132">响应类型。</span><span class="sxs-lookup"><span data-stu-id="eba6a-132">Type of response.</span></span> <span data-ttu-id="eba6a-133">支持以下类型：</span><span class="sxs-lookup"><span data-stu-id="eba6a-133">The following types are supported:</span></span> <br><span data-ttu-id="eba6a-134">`result`：显示搜索结果列表</span><span class="sxs-lookup"><span data-stu-id="eba6a-134">`result`: Displays a list of search results</span></span> <br><span data-ttu-id="eba6a-135">`auth`：要求用户进行身份验证</span><span class="sxs-lookup"><span data-stu-id="eba6a-135">`auth`: Asks the user to authenticate</span></span> <br><span data-ttu-id="eba6a-136">`config`：要求用户设置消息扩展</span><span class="sxs-lookup"><span data-stu-id="eba6a-136">`config`: Asks the user to set up the messaging extension</span></span> <br><span data-ttu-id="eba6a-137">`message`：显示纯文本消息</span><span class="sxs-lookup"><span data-stu-id="eba6a-137">`message`: Displays a plain text message</span></span> |
+|`composeExtension.attachmentLayout`|<span data-ttu-id="eba6a-138">指定附件的布局。</span><span class="sxs-lookup"><span data-stu-id="eba6a-138">Specifies the layout of the attachments.</span></span> <span data-ttu-id="eba6a-139">用于 类型 `result` 的响应。</span><span class="sxs-lookup"><span data-stu-id="eba6a-139">Used for responses of type `result`.</span></span> <br><span data-ttu-id="eba6a-140">目前支持以下类型：</span><span class="sxs-lookup"><span data-stu-id="eba6a-140">Currently, the following types are supported:</span></span> <br><span data-ttu-id="eba6a-141">`list`：包含缩略图、标题和文本字段的卡片对象列表</span><span class="sxs-lookup"><span data-stu-id="eba6a-141">`list`: A list of card objects containing thumbnail, title, and text fields</span></span> <br><span data-ttu-id="eba6a-142">`grid`：缩略图图像的网格</span><span class="sxs-lookup"><span data-stu-id="eba6a-142">`grid`: A grid of thumbnail images</span></span> |
+|`composeExtension.attachments`|<span data-ttu-id="eba6a-143">有效 attachment 对象的数组。</span><span class="sxs-lookup"><span data-stu-id="eba6a-143">Array of valid attachment objects.</span></span> <span data-ttu-id="eba6a-144">用于 类型 `result` 的响应。</span><span class="sxs-lookup"><span data-stu-id="eba6a-144">Used for responses of type `result`.</span></span> <br><span data-ttu-id="eba6a-145">目前支持以下类型：</span><span class="sxs-lookup"><span data-stu-id="eba6a-145">Currently, the following types are supported:</span></span> <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.suggestedActions`|<span data-ttu-id="eba6a-146">建议的操作。</span><span class="sxs-lookup"><span data-stu-id="eba6a-146">Suggested actions.</span></span> <span data-ttu-id="eba6a-147">用于 或 类型的 `auth` 响应 `config` 。</span><span class="sxs-lookup"><span data-stu-id="eba6a-147">Used for responses of type `auth` or `config`.</span></span> |
+|`composeExtension.text`|<span data-ttu-id="eba6a-148">要显示的消息。</span><span class="sxs-lookup"><span data-stu-id="eba6a-148">Message to display.</span></span> <span data-ttu-id="eba6a-149">用于 类型 `message` 的响应。</span><span class="sxs-lookup"><span data-stu-id="eba6a-149">Used for responses of type `message`.</span></span> |
 
-### <a name="response-card-types-and-previews"></a><span data-ttu-id="68b4e-149">响应卡片类型和预览</span><span class="sxs-lookup"><span data-stu-id="68b4e-149">Response card types and previews</span></span>
+### <a name="response-card-types-and-previews"></a><span data-ttu-id="eba6a-150">响应卡类型和预览</span><span class="sxs-lookup"><span data-stu-id="eba6a-150">Response card types and previews</span></span>
 
-<span data-ttu-id="68b4e-150">我们支持以下附件类型：</span><span class="sxs-lookup"><span data-stu-id="68b4e-150">We support the following attachment types:</span></span>
+<span data-ttu-id="eba6a-151">Teams 支持以下卡片类型：</span><span class="sxs-lookup"><span data-stu-id="eba6a-151">Teams supports the following card types:</span></span>
 
-* [<span data-ttu-id="68b4e-151">缩略图卡片</span><span class="sxs-lookup"><span data-stu-id="68b4e-151">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [<span data-ttu-id="68b4e-152">英雄卡片</span><span class="sxs-lookup"><span data-stu-id="68b4e-152">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [<span data-ttu-id="68b4e-153">Office 365 连接器卡</span><span class="sxs-lookup"><span data-stu-id="68b4e-153">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [<span data-ttu-id="68b4e-154">自适应卡片</span><span class="sxs-lookup"><span data-stu-id="68b4e-154">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [<span data-ttu-id="eba6a-152">缩略图卡片</span><span class="sxs-lookup"><span data-stu-id="eba6a-152">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [<span data-ttu-id="eba6a-153">Hero card</span><span class="sxs-lookup"><span data-stu-id="eba6a-153">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [<span data-ttu-id="eba6a-154">Office 365 连接器卡</span><span class="sxs-lookup"><span data-stu-id="eba6a-154">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [<span data-ttu-id="eba6a-155">自适应卡片</span><span class="sxs-lookup"><span data-stu-id="eba6a-155">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-<span data-ttu-id="68b4e-155">有关概述，请参阅[什么是卡片](~/task-modules-and-cards/what-are-cards.md)。</span><span class="sxs-lookup"><span data-stu-id="68b4e-155">See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.</span></span>
+<span data-ttu-id="eba6a-156">若要更好地了解卡片并概览卡片，请参阅 [什么是卡片](~/task-modules-and-cards/what-are-cards.md)。</span><span class="sxs-lookup"><span data-stu-id="eba6a-156">To have a better understanding and overview on cards, see [what are cards](~/task-modules-and-cards/what-are-cards.md).</span></span>
 
-<span data-ttu-id="68b4e-156">若要了解如何使用缩略图和英雄卡片类型，请参阅[添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。</span><span class="sxs-lookup"><span data-stu-id="68b4e-156">To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
+<span data-ttu-id="eba6a-157">若要了解如何使用缩略图和 Hero 卡片类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。</span><span class="sxs-lookup"><span data-stu-id="eba6a-157">To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
 
-<span data-ttu-id="68b4e-157">有关 Office 365 连接器卡的其他文档，请参阅[使用 office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。</span><span class="sxs-lookup"><span data-stu-id="68b4e-157">For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span></span>
+<span data-ttu-id="eba6a-158">有关 Office 365 连接器卡的其他信息，请参阅使用 [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。</span><span class="sxs-lookup"><span data-stu-id="eba6a-158">For additional information regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span></span>
 
-<span data-ttu-id="68b4e-158">结果列表显示在 Microsoft 团队 UI 中，每个项目都有一个预览。</span><span class="sxs-lookup"><span data-stu-id="68b4e-158">The result list is displayed in the Microsoft Teams UI with a preview of each item.</span></span> <span data-ttu-id="68b4e-159">将通过以下两种方式之一生成预览：</span><span class="sxs-lookup"><span data-stu-id="68b4e-159">The preview is generated in one of two ways:</span></span>
+<span data-ttu-id="eba6a-159">结果列表显示在 Microsoft Teams UI 中，并预览每个项目。</span><span class="sxs-lookup"><span data-stu-id="eba6a-159">The result list is displayed in the Microsoft Teams UI with a preview of each item.</span></span> <span data-ttu-id="eba6a-160">预览以以下两种方式之一生成：</span><span class="sxs-lookup"><span data-stu-id="eba6a-160">The preview is generated in one of the two ways:</span></span>
 
-* <span data-ttu-id="68b4e-160">在`attachment`对象`preview`中使用属性。</span><span class="sxs-lookup"><span data-stu-id="68b4e-160">Using the `preview` property within the `attachment` object.</span></span> <span data-ttu-id="68b4e-161">该`preview`附件只能是一个英雄或缩略图卡片。</span><span class="sxs-lookup"><span data-stu-id="68b4e-161">The `preview` attachment can only be a Hero or Thumbnail card.</span></span>
-* <span data-ttu-id="68b4e-162">从附件的基本`title`、 `text`和`image`属性中提取。</span><span class="sxs-lookup"><span data-stu-id="68b4e-162">Extracted from the basic `title`, `text`, and `image` properties of the attachment.</span></span> <span data-ttu-id="68b4e-163">仅当未设置该`preview`属性且这些属性可用时，才使用这些属性。</span><span class="sxs-lookup"><span data-stu-id="68b4e-163">These are used only if the `preview` property is not set and these properties are available.</span></span>
+* <span data-ttu-id="eba6a-161">在 `preview` 对象内使用 `attachment` 属性。</span><span class="sxs-lookup"><span data-stu-id="eba6a-161">Using the `preview` property within the `attachment` object.</span></span> <span data-ttu-id="eba6a-162">附件 `preview` 只能是 Hero 或 Thumbnail 卡片。</span><span class="sxs-lookup"><span data-stu-id="eba6a-162">The `preview` attachment can only be a Hero or Thumbnail card.</span></span>
+* <span data-ttu-id="eba6a-163">从附件的基本 `title` 、 `text` 和 `image` 属性中提取。</span><span class="sxs-lookup"><span data-stu-id="eba6a-163">Extracted from the basic `title`, `text`, and `image` properties of the attachment.</span></span> <span data-ttu-id="eba6a-164">只有在属性未设置且这些属性可用 `preview` 时，才使用这些属性。</span><span class="sxs-lookup"><span data-stu-id="eba6a-164">These are used only if the `preview` property is not set and these properties are available.</span></span>
 
-<span data-ttu-id="68b4e-164">您可以仅通过其 preview 属性在结果列表中显示自适应卡片或 Office 365 连接器卡片的预览。</span><span class="sxs-lookup"><span data-stu-id="68b4e-164">You can display a preview of an Adaptive Card or Office 365 Connector card in the result list simply by its preview property.</span></span> <span data-ttu-id="68b4e-165">如果结果已经是英雄或缩略图卡片，则无需执行此步骤。</span><span class="sxs-lookup"><span data-stu-id="68b4e-165">This is not necessary if the results are already hero or thumbnail cards.</span></span> <span data-ttu-id="68b4e-166">如果使用预览附件，则它必须是英雄或缩略图卡片。</span><span class="sxs-lookup"><span data-stu-id="68b4e-166">If you use the preview attachment, it must be either a Hero or Thumbnail card.</span></span> <span data-ttu-id="68b4e-167">如果未指定 preview 属性，卡片的预览将会失败，并且不会显示任何内容。</span><span class="sxs-lookup"><span data-stu-id="68b4e-167">If no preview property is specified, the preview of the card will fail and nothing will be displayed.</span></span>
+<span data-ttu-id="eba6a-165">可以使用自适应卡片或 Office 365 连接器卡片的预览属性在结果列表中显示该卡片的预览。</span><span class="sxs-lookup"><span data-stu-id="eba6a-165">You can display a preview of an Adaptive Card or Office 365 Connector card in the result list using its preview property.</span></span> <span data-ttu-id="eba6a-166">如果结果已是 Hero 或 Thumbnail 卡片，则不需要预览属性。</span><span class="sxs-lookup"><span data-stu-id="eba6a-166">The preview property is not necessary if the results are already Hero or Thumbnail cards.</span></span> <span data-ttu-id="eba6a-167">如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。</span><span class="sxs-lookup"><span data-stu-id="eba6a-167">If you use the preview attachment, it must be either a Hero or Thumbnail card.</span></span> <span data-ttu-id="eba6a-168">如果未指定任何预览属性，则卡片预览将失败，并且不显示任何内容。</span><span class="sxs-lookup"><span data-stu-id="eba6a-168">If no preview property is specified, the preview of the card fails and nothing is displayed.</span></span>
 
-### <a name="response-example"></a><span data-ttu-id="68b4e-168">响应示例</span><span class="sxs-lookup"><span data-stu-id="68b4e-168">Response example</span></span>
+### <a name="response-example"></a><span data-ttu-id="eba6a-169">响应示例</span><span class="sxs-lookup"><span data-stu-id="eba6a-169">Response example</span></span>
 
-# <a name="cnettabdotnet"></a>[<span data-ttu-id="68b4e-169">C #/.NET</span><span class="sxs-lookup"><span data-stu-id="68b4e-169">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="eba6a-170">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="eba6a-170">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
@@ -147,7 +149,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[<span data-ttu-id="68b4e-170">TypeScript/node.js</span><span class="sxs-lookup"><span data-stu-id="68b4e-170">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="eba6a-171">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="eba6a-171">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
@@ -174,7 +176,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[<span data-ttu-id="68b4e-171">JSON</span><span class="sxs-lookup"><span data-stu-id="68b4e-171">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="eba6a-172">JSON</span><span class="sxs-lookup"><span data-stu-id="eba6a-172">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -188,14 +190,14 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -308,11 +310,11 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="default-query"></a><span data-ttu-id="68b4e-172">默认查询</span><span class="sxs-lookup"><span data-stu-id="68b4e-172">Default query</span></span>
+## <a name="default-query"></a><span data-ttu-id="eba6a-173">默认查询</span><span class="sxs-lookup"><span data-stu-id="eba6a-173">Default query</span></span>
 
-<span data-ttu-id="68b4e-173">如果在清单`initialRun`中`true`设置为，Microsoft 团队会在用户第一次打开邮件扩展时发出 "默认" 查询。</span><span class="sxs-lookup"><span data-stu-id="68b4e-173">If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension.</span></span> <span data-ttu-id="68b4e-174">您的服务可以使用一组预填充的结果对此查询做出响应。</span><span class="sxs-lookup"><span data-stu-id="68b4e-174">Your service can respond to this query with a set of pre-populated results.</span></span> <span data-ttu-id="68b4e-175">当您的搜索命令需要进行身份验证或配置、显示最近查看的项目、收藏夹或任何其他不依赖于用户输入的信息时，这可能很有用。</span><span class="sxs-lookup"><span data-stu-id="68b4e-175">This can be useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.</span></span>
+<span data-ttu-id="eba6a-174">如果在清单中设置为 ，Microsoft Teams 将在用户首次打开消息传递扩展时发送 `initialRun` `true` 默认查询。 </span><span class="sxs-lookup"><span data-stu-id="eba6a-174">If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the messaging extension.</span></span> <span data-ttu-id="eba6a-175">你的服务可以使用一组预填充的结果来响应此查询。</span><span class="sxs-lookup"><span data-stu-id="eba6a-175">Your service can respond to this query with a set of pre-populated results.</span></span> <span data-ttu-id="eba6a-176">当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息时，这非常有用。</span><span class="sxs-lookup"><span data-stu-id="eba6a-176">This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.</span></span>
 
-<span data-ttu-id="68b4e-176">默认查询的结构与任何常规用户`name`查询相同，字段在下面的对象中设置`initialRun`为`value`和设置`true`为。</span><span class="sxs-lookup"><span data-stu-id="68b4e-176">The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as in the object below.</span></span>
+<span data-ttu-id="eba6a-177">默认查询的结构与任何常规用户查询相同，字段设置为 并设置为 `name` `initialRun` `value` `true` ，如以下对象所示：</span><span class="sxs-lookup"><span data-stu-id="eba6a-177">The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:</span></span>
 
 ```json
 {
@@ -335,15 +337,22 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="68b4e-177">后续步骤</span><span class="sxs-lookup"><span data-stu-id="68b4e-177">Next Steps</span></span>
+## <a name="code-sample"></a><span data-ttu-id="eba6a-178">代码示例</span><span class="sxs-lookup"><span data-stu-id="eba6a-178">Code sample</span></span>
 
-<span data-ttu-id="68b4e-178">添加身份验证和/或配置</span><span class="sxs-lookup"><span data-stu-id="68b4e-178">Add authentication and/or configuration</span></span>
+| <span data-ttu-id="eba6a-179">示例名称</span><span class="sxs-lookup"><span data-stu-id="eba6a-179">Sample Name</span></span>           | <span data-ttu-id="eba6a-180">说明</span><span class="sxs-lookup"><span data-stu-id="eba6a-180">Description</span></span> | <span data-ttu-id="eba6a-181">.NET</span><span class="sxs-lookup"><span data-stu-id="eba6a-181">.NET</span></span>    | <span data-ttu-id="eba6a-182">Node.js</span><span class="sxs-lookup"><span data-stu-id="eba6a-182">Node.js</span></span>   |   
+|:---------------------|:--------------|:---------|:--------|
+|<span data-ttu-id="eba6a-183">Teams 消息传递扩展操作</span><span class="sxs-lookup"><span data-stu-id="eba6a-183">Teams messaging extension action</span></span>| <span data-ttu-id="eba6a-184">介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。</span><span class="sxs-lookup"><span data-stu-id="eba6a-184">Describes how to define action commands, create task module, and  respond to task module submit action.</span></span> |[<span data-ttu-id="eba6a-185">View</span><span class="sxs-lookup"><span data-stu-id="eba6a-185">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[<span data-ttu-id="eba6a-186">View</span><span class="sxs-lookup"><span data-stu-id="eba6a-186">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|<span data-ttu-id="eba6a-187">Teams 消息传递扩展搜索</span><span class="sxs-lookup"><span data-stu-id="eba6a-187">Teams messaging extension search</span></span>   |  <span data-ttu-id="eba6a-188">介绍如何定义搜索命令并响应搜索。</span><span class="sxs-lookup"><span data-stu-id="eba6a-188">Describes how to define search commands and respond to searches.</span></span>        |[<span data-ttu-id="eba6a-189">View</span><span class="sxs-lookup"><span data-stu-id="eba6a-189">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[<span data-ttu-id="eba6a-190">View</span><span class="sxs-lookup"><span data-stu-id="eba6a-190">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-* [<span data-ttu-id="68b4e-179">向邮件扩展添加身份验证</span><span class="sxs-lookup"><span data-stu-id="68b4e-179">Add authentication to a messaging extension</span></span>](~/messaging-extensions/how-to/add-authentication.md)
-* [<span data-ttu-id="68b4e-180">向邮件扩展添加配置</span><span class="sxs-lookup"><span data-stu-id="68b4e-180">Add configuration to a messaging extension</span></span>](~/messaging-extensions/how-to/add-configuration-page.md)
+## <a name="see-also"></a><span data-ttu-id="eba6a-191">另请参阅</span><span class="sxs-lookup"><span data-stu-id="eba6a-191">See also</span></span>
 
-<span data-ttu-id="68b4e-181">部署配置</span><span class="sxs-lookup"><span data-stu-id="68b4e-181">Deploy configuration</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="eba6a-192">向消息传递扩展添加配置</span><span class="sxs-lookup"><span data-stu-id="eba6a-192">Add configuration to a messaging extension</span></span>](~/messaging-extensions/how-to/add-configuration-page.md)
+ 
+## <a name="next-step"></a><span data-ttu-id="eba6a-193">后续步骤</span><span class="sxs-lookup"><span data-stu-id="eba6a-193">Next step</span></span>
 
-* [<span data-ttu-id="68b4e-182">部署应用程序包</span><span class="sxs-lookup"><span data-stu-id="68b4e-182">Deploy your app package</span></span>](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="eba6a-194">向消息传递扩展添加身份验证</span><span class="sxs-lookup"><span data-stu-id="eba6a-194">Add authentication to a messaging extension</span></span>](~/messaging-extensions/how-to/add-authentication.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+
+

@@ -3,26 +3,31 @@ title: 支持用于机器人的媒体格式
 description: Microsoft Teams 上的机器人仅支持音频和视频内容的以下媒体格式。
 ms.topic: reference
 keywords: teams 机器人媒体格式
-ms.openlocfilehash: 1f6fe7abf33ae9b831a2c7a5315be3161ac6952d
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: ed0dfc8d96aa1a1af62686efded8564b7100e7c7
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014346"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696561"
 ---
-# <a name="supported-media-formats-for-bots"></a><span data-ttu-id="832a9-104">支持用于机器人的媒体格式</span><span class="sxs-lookup"><span data-stu-id="832a9-104">Supported media formats for bots</span></span>
+# <a name="supported-media-formats-for-bots"></a><span data-ttu-id="a3541-104">支持用于机器人的媒体格式</span><span class="sxs-lookup"><span data-stu-id="a3541-104">Supported media formats for bots</span></span>
 
-<span data-ttu-id="832a9-105">Microsoft Teams 上的机器人仅支持音频和视频内容的以下媒体格式。</span><span class="sxs-lookup"><span data-stu-id="832a9-105">Bots on Microsoft Teams supports only the following media formats for audio and video content.</span></span>
+<span data-ttu-id="a3541-105">Microsoft Teams 上的机器人仅支持音频和视频内容的以下媒体格式：</span><span class="sxs-lookup"><span data-stu-id="a3541-105">Bots on Microsoft Teams supports only the following media formats for audio and video content:</span></span>
 
-| <span data-ttu-id="832a9-106">Format</span><span class="sxs-lookup"><span data-stu-id="832a9-106">Format</span></span> | <span data-ttu-id="832a9-107">更多信息</span><span class="sxs-lookup"><span data-stu-id="832a9-107">More information</span></span> |
+| <span data-ttu-id="a3541-106">格式</span><span class="sxs-lookup"><span data-stu-id="a3541-106">Format</span></span> | <span data-ttu-id="a3541-107">更多信息</span><span class="sxs-lookup"><span data-stu-id="a3541-107">More information</span></span> |
 | --- | --- |
-| <span data-ttu-id="832a9-108">Vorbis</span><span class="sxs-lookup"><span data-stu-id="832a9-108">Vorbis</span></span> | http://www.vorbis.com/ |
-| <span data-ttu-id="832a9-109">PCM_U8、PCM_S16LE、PCM_S32LE、PCM_F32LE、PCM_S16BE、PCM_S24BE、PCM_MULAW</span><span class="sxs-lookup"><span data-stu-id="832a9-109">PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW</span></span> | https://wiki.multimedia.cx/?title=PCM |
-| <span data-ttu-id="832a9-110">Ogg</span><span class="sxs-lookup"><span data-stu-id="832a9-110">Ogg</span></span> | http://www.vorbis.com/ |
-| <span data-ttu-id="832a9-111">Matroska</span><span class="sxs-lookup"><span data-stu-id="832a9-111">Matroska</span></span> | https://matroska.org/ |
-| <span data-ttu-id="832a9-112">WAV</span><span class="sxs-lookup"><span data-stu-id="832a9-112">WAV</span></span> | https://en.wikipedia.org/wiki/WAV |
-| <span data-ttu-id="832a9-113">AAC</span><span class="sxs-lookup"><span data-stu-id="832a9-113">AAC</span></span> | https://en.wikipedia.org/wiki/Advanced_Audio_Coding |
-| <span data-ttu-id="832a9-114">H264</span><span class="sxs-lookup"><span data-stu-id="832a9-114">H264</span></span> | https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC |
-| <span data-ttu-id="832a9-115">MP3</span><span class="sxs-lookup"><span data-stu-id="832a9-115">MP3</span></span> | https://en.wikipedia.org/wiki/MP3 |
-| <span data-ttu-id="832a9-116">Opus</span><span class="sxs-lookup"><span data-stu-id="832a9-116">Opus</span></span> | http://opus-codec.org/ |
-| <span data-ttu-id="832a9-117">MP4</span><span class="sxs-lookup"><span data-stu-id="832a9-117">MP4</span></span> | https://en.wikipedia.org/wiki/MPEG-4 |
+| <span data-ttu-id="a3541-108">Vorbis</span><span class="sxs-lookup"><span data-stu-id="a3541-108">Vorbis</span></span> | http://www.vorbis.com/ |
+| <span data-ttu-id="a3541-109">PCM_U8、PCM_S16LE、PCM_S32LE、PCM_F32LE、PCM_S16BE、PCM_S24BE、PCM_MULAW</span><span class="sxs-lookup"><span data-stu-id="a3541-109">PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW</span></span> | https://wiki.multimedia.cx/?title=PCM |
+| <span data-ttu-id="a3541-110">Ogg</span><span class="sxs-lookup"><span data-stu-id="a3541-110">Ogg</span></span> | http://www.vorbis.com/ |
+| <span data-ttu-id="a3541-111">Matroska</span><span class="sxs-lookup"><span data-stu-id="a3541-111">Matroska</span></span> | https://matroska.org/ |
+| <span data-ttu-id="a3541-112">WAV</span><span class="sxs-lookup"><span data-stu-id="a3541-112">WAV</span></span> | https://en.wikipedia.org/wiki/WAV |
+| <span data-ttu-id="a3541-113">AAC</span><span class="sxs-lookup"><span data-stu-id="a3541-113">AAC</span></span> | https://en.wikipedia.org/wiki/Advanced_Audio_Coding |
+| <span data-ttu-id="a3541-114">H264</span><span class="sxs-lookup"><span data-stu-id="a3541-114">H264</span></span> | https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC |
+| <span data-ttu-id="a3541-115">MP3</span><span class="sxs-lookup"><span data-stu-id="a3541-115">MP3</span></span> | https://en.wikipedia.org/wiki/MP3 |
+| <span data-ttu-id="a3541-116">Opus</span><span class="sxs-lookup"><span data-stu-id="a3541-116">Opus</span></span> | http://opus-codec.org/ |
+| <span data-ttu-id="a3541-117">MP4</span><span class="sxs-lookup"><span data-stu-id="a3541-117">MP4</span></span> | https://en.wikipedia.org/wiki/MPEG-4 |
+
+## <a name="next-step"></a><span data-ttu-id="a3541-118">后续步骤</span><span class="sxs-lookup"><span data-stu-id="a3541-118">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="a3541-119">对用于提取团队或聊天成员的 Teams 自动程序 API 的更改</span><span class="sxs-lookup"><span data-stu-id="a3541-119">Changes to Teams bot APIs for fetching Team or chat members</span></span>](~/resources/team-chat-member-api-changes.md)
