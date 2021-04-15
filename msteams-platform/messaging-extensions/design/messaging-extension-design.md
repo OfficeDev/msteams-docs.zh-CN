@@ -5,30 +5,30 @@ keywords: 团队设计指南参考消息传递扩展提示最佳做法
 author: heath-hamilton
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: 747b48e3aeb803f91cfb8d4412c98cb6d52c1fd1
-ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
+ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51176975"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697009"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>设计 Microsoft Teams 消息传递扩展
 
 消息传递扩展是插入应用内容或在离开对话的情况下对消息操作快捷方式。
 为了指导你的应用设计，以下信息介绍了并说明了用户如何在 Teams 中添加、使用和管理消息传递扩展。
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI 工具包
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
 可以在 Microsoft Teams UI 工具包中查找全面的消息传递扩展设计指南，包括可根据需要获取和修改的元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI 工具包 (图) ](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>添加消息传递扩展
 
 可以在以下 Teams 上下文中添加消息传递扩展：
 
-* 从 Teams 应用商店 (AppSource) 。
+* 从 Teams 应用商店 （AppSource）。
 * 在靠近撰写框 (、在频道、聊天或会议) 、聊天或会议。 值得注意的是，如果您在这些位置之一添加邮件扩展，则仅可以在该上下文中使用它。
 
 以下示例演示如何在频道中添加消息扩展。
@@ -55,7 +55,7 @@ ms.locfileid: "51176975"
 
 #### <a name="compose-box-layout-options"></a>撰写框布局选项
 
-有一些选项用于显示邮件扩展搜索结果，包括 [列表和网格视图](../../messaging-Ask about extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)。
+有一些选项用于显示邮件扩展搜索结果，包括 [列表和网格视图](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)。
 
 :::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="插图显示邮件扩展搜索结果的布局选项。" border="false":::
 
@@ -112,7 +112,7 @@ ms.locfileid: "51176975"
 
 **2. 完成操作**。 你的应用可以接收并处理邮件操作发送的任何内容或数据。 这允许用户保持其对话，并且（以下示例）无需担心直接在应用中输入信息。
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="示例显示用户搜索要从撰写框中插入的内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="如何对邮件采取操作的示例。" border="false":::
 
 ### <a name="preview-links"></a>预览链接
 
@@ -130,7 +130,7 @@ ms.locfileid: "51176975"
 
 通过右键单击图标，用户可以固定、删除或配置邮件扩展。
 
-## <a name="anatomy"></a>结构分析
+## <a name="anatomy"></a>解剖
 
 ### <a name="messaging-extension-in-the-compose-box"></a>撰写框中的消息扩展
 
@@ -164,7 +164,7 @@ ms.locfileid: "51176975"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="显示消息传递扩展最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="有关安装和常规用法的示例。" border="false":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>操作：与单一登录集成
 
@@ -172,7 +172,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="显示消息传递扩展最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="与单一登录集成的示例。" border="false":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>请勿：使用户离开对话
 
@@ -189,7 +189,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="显示消息传递扩展最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="模板示例。" border="false":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>完成：如果可能，让 Teams 处理一些设计工作
 
@@ -197,7 +197,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="显示消息传递扩展最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="有关处理设计工作的示例。" border="false":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>请勿：在任务模块中嵌入整个应用
 
@@ -210,7 +210,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="显示消息传递扩展最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="有关 theming 的示例。" border="false":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>应做：利用 Teams 颜色令牌
 
@@ -218,7 +218,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="显示消息传递扩展最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="有关颜色令牌的示例。" border="false":::
 
 #### <a name="dont-hard-code-color-values"></a>请勿：硬编码颜色值
 
@@ -231,7 +231,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="显示消息传递扩展最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="操作示例。" border="false":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>应做：在上下文中包括有意义的操作命令
 
@@ -239,7 +239,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="显示消息传递扩展最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="操作命令示例。" border="false":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>请勿：包括不与上下文相关的操作命令
 
@@ -262,9 +262,9 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
 例如，在用户向搜索框中写入任何内容之前，显示他们上次在你的应用上查看过什么内容。 他们可能会想要将这些内容插入对话中。
 
-## <a name="validate-your-design"></a>验证设计
+## <a name="validate-your-design"></a>验证你的设计
 
-如果你计划将应用发布到 AppSource，应了解在提交期间导致应用失败的常见设计问题。
+如果计划将应用发布到 AppSource，应了解提交过程中通常会导致应用出现故障的设计问题。
 
 > [!div class="nextstepaction"]
 > [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

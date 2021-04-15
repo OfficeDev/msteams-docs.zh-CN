@@ -1,47 +1,54 @@
 ---
-title: 有关处理传入呼叫通知的技术详细信息
+title: 来电通知
 description: 有关处理来自传入呼叫的通知的详细技术信息
+ms.topic: conceptual
 keywords: 调用呼叫通知回调区域相关性
 ms.date: 04/02/2019
-ms.openlocfilehash: be8860ff70cd7dff4fd9599079ea7aab4f454174
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1ab28f898d2b51b4c1c643006ecac06ca79b2d14
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673415"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696400"
 ---
-# <a name="incoming-call-notifications-technical-details"></a>传入呼叫通知：技术详细信息
+# <a name="incoming-call-notifications"></a>来电通知
 
-在[为 Microsoft 团队注册呼叫和会议机器人](./registering-calling-bot.md#creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot)时，我们提到了用于所有传入呼叫的 webhook **（用于呼叫）** URL-你的 bot 的所有传入呼叫的 webhook 终结点。 本主题讨论响应这些通知所需的技术详细信息。
+在 [注册 Microsoft Teams 的](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)通话和会议机器人时，提及用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
 
 ## <a name="protocol-determination"></a>协议确定
 
-传入通知以旧版格式提供，以与以前的[Skype 协议](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0)兼容。 为了将呼叫转换为 Microsoft Graph 协议，你的 bot 必须确定通知是否为旧格式，并在以下情况下回复：
+传入通知以旧格式提供，以与以前的 Skype 协议 [兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将调用转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式并提供以下响应：
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-你的 bot 将再次收到通知，但这次在 Microsoft Graph 协议中。
+自动程序会再次收到通知，但这次在 Microsoft Graph 协议中。
 
-在实时媒体平台的未来版本中，我们将允许您配置您的应用程序支持的协议，以避免以旧格式接收初始回调。
+在实时媒体平台的未来版本中，你可以配置应用程序支持的协议，以避免接收旧格式的初始回调。
 
-## <a name="redirects-for-region-affinity"></a>区域关联的重定向
+下一节提供有关针对区域相关性重定向到部署的传入呼叫通知的详细信息。
 
-你将从托管呼叫的数据中心呼叫你的 webhook。 呼叫可能会在任何数据中心开始，并且不会考虑区域相关性。 通知将发送到您的部署，具体取决于 GeoDNS 解决方案。 如果您的应用程序通过检查初始通知负载或以其他方式（如果需要在不同的部署中运行）确定应用程序，则应用程序可能会通过以下方式回复：
+## <a name="redirects-for-region-affinity"></a>区域相关性重定向
+
+从托管呼叫的数据中心调用 webhook。 呼叫从任何数据中心开始，不会考虑区域关系。 通知将发送到你的部署，具体取决于 GeoDNS 分辨率。 如果应用程序通过检查初始通知有效负载或其他方式确定需要在不同的部署中运行，则应用程序将提供以下响应：
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-使用 "[应答](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer)API" 使你的 bot 能够应答传入呼叫。 您可以指定处理`callbackUri`此特定调用的。 这对于您的__ 呼叫由特定分区进行处理且您希望将`callbackUri`此信息嵌入到右侧实例的有状态的实例很有用。
+使机器人能够使用应答 API 应答 [传入](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) 呼叫。 可以指定 以处理 `callbackUri` 此特定调用。 这适用于特定分区处理呼叫且您希望在 中嵌入此信息以路由到正确实例的有状态 `callbackUri` 实例。
 
-## <a name="authenticating-the-callback"></a>对回调进行身份验证
+下一节将提供有关通过检查张贴到 Webhook 的令牌来验证回调的详细信息。
 
-你的 bot 应检查发布到你的 webhook 的令牌以验证请求。 每当 API 发布到 webhook 时，HTTP POST 邮件都会在授权标头中包含一个 OAuth 令牌作为持有者作为应用程序的应用 ID 的持有者令牌。
+## <a name="authenticate-the-callback"></a>对回调进行身份验证
 
-您的应用程序应在接受回调请求之前验证此令牌。
+自动程序必须检查张贴到 Webhook 的令牌以验证请求。 每次 API 发送到 webhook 时，HTTP POST 消息都会在授权标头中包含一个 OAuth 令牌作为一个 bearer 令牌，访问群体作为应用程序的应用程序 ID。
+
+您的应用程序在接受回调请求之前必须验证此令牌。
+
+以下示例代码用于对回调进行身份验证：
 
 ```http
 POST https://bot.contoso.com/api/calls
@@ -60,7 +67,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-OAuth 令牌的值将如下所示，并将由 Skype 签署。 发布的 OpenID 配置<https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration>可用于验证令牌。
+OAuth 令牌具有以下值，由 Skype 签名：
 
 ```json
 {
@@ -73,10 +80,17 @@ OAuth 令牌的值将如下所示，并将由 Skype 签署。 发布的 OpenID �
 }
 ```
 
-* **aud**受众是为应用程序指定的应用 ID URI。
-* **tid**是 Contoso.com 的租户 id。
-* **iss**是令牌颁发者`https://api.botframework.com`。
+发布的 OpenID <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> 配置可用于验证令牌。 每个 OAuth 令牌值使用如下：
 
-处理 webhook 的代码应验证令牌，确保其未过期，并检查是否已通过已发布的 OpenID 配置对其进行签名。 您还应检查**aud**是否符合您的应用程序 ID，然后再接受回调请求。
+* `aud` 其中 audience 为为应用程序指定的应用 ID URI。
+* `tid` 是租户的租户 id Contoso.com。
+* `iss` 是令牌颁发者 `https://api.botframework.com` 。
 
-[示例](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)演示如何验证入站请求。
+对于代码处理，Webhook 必须验证令牌，确保令牌尚未过期，并检查它是否已由发布的 OpenID 配置签名。 在接受回调请求之前，还必须检查 aud 是否与应用 ID 匹配。
+
+有关详细信息，请参阅验证 [入站请求](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [应用程序托管的媒体机器人的要求和注意事项](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

@@ -1,57 +1,58 @@
 ---
-title: 处理 bot 事件
-description: 介绍如何处理 Microsoft 团队的 bot 中的事件
-keywords: 团队 bot 事件
+title: 处理机器人事件
+description: 介绍如何处理 Microsoft Teams 机器人中的事件
+keywords: teams 机器人事件
 ms.date: 05/20/2019
+ms.topic: how-to
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 1161d21ee755cebe6ddb2a2d5a219f9538de77cf
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+ms.openlocfilehash: 0fdd30a8eed63ea83e15825b0bf097125b4b665d
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409048"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696610"
 ---
-# <a name="handle-bot-events-in-microsoft-teams"></a>在 Microsoft 团队中处理 bot 事件
+# <a name="handle-bot-events-in-microsoft-teams"></a>在 Microsoft Teams 中处理机器人事件
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft 团队将通知发送到你的 bot，以获取在你的 bot 处于活动状态的范围内发生的更改或事件。 您可以使用这些事件来触发服务逻辑，如以下内容：
+Microsoft Teams 会向自动程序发送有关自动程序处于活动状态的范围中发生的更改或事件的通知。 可以使用这些事件触发服务逻辑，如下所示：
 
-* 在将你的 bot 添加到团队时触发欢迎消息
-* 在将 bot 添加到组聊天时查询和缓存组信息
-* 更新有关团队成员资格或通道信息的缓存信息
-* 删除团队的缓存信息（如果删除了 bot）
-* 当用户对 bot 邮件进行了赞时
+* 将机器人添加到团队时触发欢迎消息
+* 将机器人添加到群聊时查询和缓存组信息
+* 更新有关团队成员身份或频道信息的缓存信息
+* 删除自动程序时删除团队的缓存信息
+* 用户喜欢自动程序消息时
 
-每个 bot 事件都以对象的形式发送， `Activity` 其中定义了对象中的 `messageType` 信息。 有关类型的邮件 `message` ，请参阅 [发送和接收邮件](~/resources/bot-v3/bot-conversations/bots-conversations.md)。
+每个自动程序事件都作为 `Activity` 对象发送，其中 `messageType` 定义了对象中的信息。 对于类型为 的邮件 `message` ，请参阅 [发送和接收邮件](~/resources/bot-v3/bot-conversations/bots-conversations.md)。
 
-团队和组事件（通常触发 `conversationUpdate` 类型）具有作为对象的一部分传递的其他团队事件信息 `channelData` ，因此您的事件处理程序必须查询团队的 `channelData` 有效负载 `eventType` 和其他特定于事件的元数据。
+Teams 和组事件通常从类型触发，它们具有作为对象的一部分传递的其他 Teams 事件信息，因此事件处理程序必须查询 Teams 的有效负载和其他特定于事件的 `conversationUpdate` `channelData` `channelData` `eventType` 元数据。
 
-下表列出了你的 bot 可以接收并对其执行操作的事件。
+下表列出了机器人可以接收并采取措施的事件。
 
-|类型|有效负载对象|团队事件 = |说明|范围|
+|类型|Payload 对象|Teams eventType |说明|范围|
 |---|---|---|---|---|
-| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[添加到团队的成员](#team-member-or-bot-addition)| 各种 |
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[成员已从团队中删除](#team-member-or-bot-removed)| `groupChat` & `team` |
+| `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[添加到团队的成员](#team-member-or-bot-addition)| all |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[已从团队中删除成员](#team-member-or-bot-removed)| `groupChat` & `team` |
 | `conversationUpdate` | |`teamRenamed`| [团队已重命名](#team-name-updates)| `team` |
-| `conversationUpdate` | |`channelCreated`| [通道已创建](#channel-updates)|`team` |
+| `conversationUpdate` | |`channelCreated`| [已创建频道](#channel-updates)|`team` |
 | `conversationUpdate` | |`channelRenamed`| [频道已重命名](#channel-updates)|`team` |
-| `conversationUpdate` | |`channelDeleted`| [频道已删除](#channel-updates)|`team` |
-| `messageReaction` |`reactionsAdded`|| [对 bot 邮件的反应](#reactions)| 各种 |
-| `messageReaction` |`reactionsRemoved`|| [从 bot 邮件中删除的反应](#reactions)| 各种 |
+| `conversationUpdate` | |`channelDeleted`| [已删除频道](#channel-updates)|`team` |
+| `messageReaction` |`reactionsAdded`|| [对自动程序消息的反应](#reactions)| all |
+| `messageReaction` |`reactionsRemoved`|| [从自动程序消息中删除的反应](#reactions)| all |
 
-## <a name="team-member-or-bot-addition"></a>团队成员或 bot 添加
+## <a name="team-member-or-bot-addition"></a>添加团队成员或机器人
 
-[`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true)当该事件收到有关已添加的团队成员身份更新的信息时，该事件将发送到你的 bot。 它还会在首次专门为个人对话而添加时收到更新。 请注意， () 的用户信息对 `Id` 你的 bot 而言是唯一的，并且可以缓存以供你的服务将来使用 (例如，向特定用户发送邮件) 。
+当机器人收到有关已添加它的团队的成员身份更新的信息时，该事件 [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 将发送给机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。 请注意， () 信息对于自动程序来说是唯一的，可以缓存这些信息供你的服务 (如向特定用户发送 `Id`) 。
 
-### <a name="bot-or-user-added-to-a-team"></a>添加到团队的 Bot 或用户
+### <a name="bot-or-user-added-to-a-team"></a>添加到团队的机器人或用户
 
-`conversationUpdate` `membersAdded` 当将 bot 添加到团队或将新用户添加到添加了 bot 的团队中时，会发送具有有效负载中的对象的事件。 Microsoft 工作组也会添加到 `eventType.teamMemberAdded` `channelData` 对象中。
+将机器人添加到团队或将新用户添加到已添加机器人的团队时，将发送有效负载中对象 `conversationUpdate` `membersAdded` 的事件。 Microsoft Teams 还会 `eventType.teamMemberAdded` 在 对象中 `channelData` 添加 。
 
-由于在这两种情况下都会发送此事件，因此应分析该 `membersAdded` 对象以确定添加是用户还是 bot 本身。 对于后者，最佳做法是将 [欢迎消息](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) 发送到频道，以便用户能够理解你的 bot 提供的功能。
+因为在这两种情况下都发送此事件，所以应分析对象以确定添加项是 `membersAdded` 用户还是自动程序本身。 对于后者，最佳做法是向频道发送欢迎消息，[](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams)以便用户可以了解机器人提供的功能。
 
-#### <a name="example-code-checking-whether-bot-was-the-added-member"></a>示例代码：检查 bot 是否为已添加的成员
+#### <a name="example-code-checking-whether-bot-was-the-added-member"></a>示例代码：检查机器人是否是已添加的成员
 
 ##### <a name="net"></a>.NET
 
@@ -91,7 +92,7 @@ bot.on('conversationUpdate', (msg) => {
 });
 ```
 
-#### <a name="schema-example-bot-added-to-team"></a>架构示例：添加到团队的 Bot
+#### <a name="schema-example-bot-added-to-team"></a>架构示例：添加到团队的自动程序
 
 ```json
 {
@@ -130,14 +131,14 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="user-added-to-a-meeting"></a>添加到会议的用户
+### <a name="user-added-to-a-meeting"></a>用户已添加到会议
 
-将 `conversationUpdate` `membersAdded` 用户添加到专用计划会议中时，会发送具有有效负载的对象的事件。 即使匿名用户加入会议，也会发送事件详细信息。 
+将 `conversationUpdate` 用户添加到私人计划会议时，将发送有效负载中对象 `membersAdded` 的事件。 即使匿名用户加入会议，也会发送事件详细信息。 
 
 > [!NOTE]
 >
->* 将匿名用户添加到会议时，membersAdded 有效负载对象不具有 `aadObjectId` 字段。
->* 将匿名用户添加到会议中时， `from` 有效负载中的对象始终具有会议组织者的 id，即使该匿名用户是由另一个演示者添加的也是如此。
+>* 向会议添加匿名用户时，membersAdded 有效负载对象没有 `aadObjectId` 字段。
+>* 向会议添加匿名用户时，有效负载中的对象始终具有会议组织者的 ID，即使该匿名用户是由另一个演示者添加 `from` 的。
 
 #### <a name="schema-example-user-added-to-meeting"></a>架构示例：用户已添加到会议
 
@@ -180,14 +181,14 @@ bot.on('conversationUpdate', (msg) => {
 
 ```
 
-### <a name="bot-added-for-personal-context-only"></a>仅为个人上下文添加的 Bot
+### <a name="bot-added-for-personal-context-only"></a>仅针对个人上下文添加的自动程序
 
-`conversationUpdate` `membersAdded` 当用户直接添加个人聊天时，你的 bot 会收到。 在这种情况下，你的 bot 接收的有效负载不包含该 `channelData.team` 对象。 如果您希望您的 bot 根据范围提供不同的 [欢迎消息](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) ，则应将此作为筛选器使用。
+当用户直接为个人聊天添加时，机器人 `conversationUpdate` `membersAdded` 会收到 with。 在这种情况下，机器人收到的负载不包含 `channelData.team` 对象。 如果你希望机器人根据范围提供不同的欢迎消息，你应使用此筛选器。 [](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations)
 
 > [!NOTE]
-> 对于个人范围的 bot，你的 bot 将 `conversationUpdate` 多次收到该事件，即使已删除并重新添加了 bot 也是如此。 对于开发和测试，您可能会发现，添加帮助程序函数将允许您完全重置你的 bot。 有关实现这一点的更多详细信息，请参阅 [Node.js 示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) 或 [c # 示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) 。
+> 对于个人范围的自动程序，你的自动程序将接收事件多次，即使机器人 `conversationUpdate` 已删除并重新添加。 对于开发和测试，你可能会发现添加一个支持你完全重置机器人的帮助程序函数会很有用。 有关实现[Node.js的详细信息](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts)[，请参阅C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238)示例或示例。
 
-#### <a name="schema-example-bot-added-to-personal-context"></a>架构示例：添加到个人上下文的 bot
+#### <a name="schema-example-bot-added-to-personal-context"></a>架构示例：添加到个人上下文的机器人
 
 ```json
 {
@@ -206,11 +207,11 @@ bot.on('conversationUpdate', (msg) => {
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "**_"
+    "aadObjectId": "***"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "_*_"
+    "id": "***"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -224,11 +225,11 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-## <a name="team-member-or-bot-removed"></a>删除了团队成员或 bot
+## <a name="team-member-or-bot-removed"></a>已删除团队成员或机器人
 
-`conversationUpdate` `membersRemoved` 当您的 bot 从团队中删除时，将会发送事件和有效负载中的对象，或者从已添加 bot 的团队中删除用户。 Microsoft 工作组也会添加到 `eventType.teamMemberRemoved` `channelData` 对象中。 与对象一样 `membersAdded` ，您应该为你的 `membersRemoved` Bot 的应用 ID 解析对象以确定已删除的用户。
+从团队中删除机器人或将用户从添加自动程序的团队中删除时，将发送有效负载中对象 `conversationUpdate` `membersRemoved` 的事件。 Microsoft Teams 还会 `eventType.teamMemberRemoved` 在 对象中 `channelData` 添加 。 与 对象一样，应分析机器人的应用 ID 对象 `membersAdded` `membersRemoved` 以确定已删除用户。
 
-### <a name="schema-example-team-member-removed"></a>架构示例：删除了工作组成员
+### <a name="schema-example-team-member-removed"></a>架构示例：已删除团队成员
 
 ```json
 {
@@ -268,16 +269,16 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="user-removed-from-a-meeting"></a>用户已从会议中删除
+### <a name="user-removed-from-a-meeting"></a>从会议中删除的用户
 
-`conversationUpdate` `membersRemoved` 当从私人计划会议中删除用户时，将发送有效负载中包含对象的事件。 即使匿名用户加入会议，也会发送事件详细信息。 
+从 `conversationUpdate` 私人计划会议中删除用户时，将发送有效负载中对象 `membersRemoved` 的事件。 即使匿名用户加入会议，也会发送事件详细信息。 
 
 > [!NOTE]
 >
->_ 当从会议中删除匿名用户时，membersRemoved 有效负载对象不具有 `aadObjectId` 字段。
->* 从会议中删除匿名用户时， `from` 有效负载中的对象始终具有会议组织者的 id，即使已由另一个演示者删除了匿名用户也是如此。
+>* 从会议中删除匿名用户时，membersRemoved 有效负载对象没有 `aadObjectId` 字段。
+>* 从会议中删除匿名用户时，有效负载中的对象始终具有会议组织者的 ID，即使该匿名用户已被另一个 `from` 演示者删除。
 
-#### <a name="schema-example-user-removed-from-meeting"></a>架构示例：用户已从会议中删除
+#### <a name="schema-example-user-removed-from-meeting"></a>架构示例：从会议中删除的用户
 
 ```
 {   
@@ -319,11 +320,11 @@ bot.on('conversationUpdate', (msg) => {
 ## <a name="team-name-updates"></a>团队名称更新
 
 > [!NOTE]
-> 没有用于查询所有团队名称的功能，且未从其他事件的有效负载中返回团队名称。
+> 没有查询所有团队名称的功能，并且不会在其他事件的负载中返回团队名称。
 
-重命名你的 bot 时，会通知你的你的团队。 它接收 `conversationUpdate` `eventType.teamRenamed` 对象中的事件 `channelData` 。 请注意，没有针对团队创建或删除的通知，因为 bot 仅作为团队的一部分存在，并且在添加它们的范围之外不可见。
+当自动程序位于的团队重命名时，将会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamRenamed` 事件 `channelData` 。 请注意，没有有关团队创建或删除的通知，因为聊天机器人仅作为团队的一部分存在，在已添加它们的范围外没有可见性。
 
-### <a name="schema-example-team-renamed"></a>架构示例：团队已重命名
+### <a name="schema-example-team-renamed"></a>架构示例：团队重命名
 
 ```json
 { 
@@ -360,15 +361,15 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="channel-updates"></a>频道更新
 
-在已添加频道的团队中创建、重命名或删除频道时，将会通知你的 bot。 此外，还 `conversationUpdate` 会收到该事件，并将特定于团队的事件标识符作为该对象的一部分发送 `channelData.eventType` ，其中通道数据  `channel.id` 是通道的 GUID，并且 `channel.name` 包含通道名称本身。
+在已添加频道的团队中创建、重命名或删除频道时，将会通知机器人。 同样，会接收事件，并且特定于 Teams 的事件标识符作为对象的一部分发送，其中通道数据的 是频道 `conversationUpdate` `channelData.eventType` 的 GUID，并且包含通道  `channel.id` `channel.name` 名称本身。
 
-通道事件如下所示：
+频道事件如下所示：
 
 * **channelCreated** &emsp;用户向团队添加新频道
 * **channelRenamed** &emsp;用户重命名现有频道
 * **channelDeleted** &emsp;用户删除频道
 
-### <a name="full-schema-example-channelcreated"></a>完整架构示例： channelCreated
+### <a name="full-schema-example-channelcreated"></a>完整架构示例：channelCreated
 
 ```json
 {
@@ -406,7 +407,7 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="schema-excerpt-channeldata-for-channelrenamed"></a>架构摘录： channelData for channelRenamed
+### <a name="schema-excerpt-channeldata-for-channelrenamed"></a>架构摘录：channelRenamed 的 channelData
 
 ```json
 ⋮
@@ -426,7 +427,7 @@ bot.on('conversationUpdate', (msg) => {
 ⋮
 ```
 
-### <a name="schema-excerpt-channeldata-for-channeldeleted"></a>架构摘录： channelData for channelDeleted
+### <a name="schema-excerpt-channeldata-for-channeldeleted"></a>架构摘录：channelDeleted 的 channelData
 
 ```json
 ⋮
@@ -446,11 +447,11 @@ bot.on('conversationUpdate', (msg) => {
 ⋮
 ```
 
-## <a name="reactions"></a>作出
+## <a name="reactions"></a>反应
 
-`messageReaction`当用户在最初由你的 bot 发送的邮件中添加或删除他/她的反应时，会发送此事件。 `replyToId` 包含特定邮件的 ID。
+当用户向最初由机器人发送的消息添加或删除他/她的反应时， `messageReaction` 将发送该事件。 `replyToId` 包含特定邮件的 ID。
 
-### <a name="schema-example-a-user-likes-a-message"></a>架构示例：用户喜欢一封邮件
+### <a name="schema-example-a-user-likes-a-message"></a>架构示例：用户喜欢消息
 
 ```json
 {
@@ -492,7 +493,7 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="schema-example-a-user-un-likes-a-message"></a>架构示例：用户不喜欢某封邮件
+### <a name="schema-example-a-user-un-likes-a-message"></a>架构示例：用户取消喜欢消息
 
 ```json
 {

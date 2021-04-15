@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 的清单架构
 ms.topic: reference
 ms.author: lajanuar
 keywords: teams 清单架构
-ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: fa1c1cfd732fe5a30fc5fc32b693dd21b2e8ee82
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634521"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696043"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -313,7 +313,7 @@ Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必�
 
 **必需** - Microsoft 应用 ID
 
-ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序通过 Microsoft Bot Framework 注册，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，则你有一个 ID。 必须在此处输入 ID。 否则，必须在"我的应用程序"门户的 Microsoft 应用程序注册门户 ([一](https://apps.dev.microsoft.com)) 。 如果添加自动程序，请使用同一 ID。
+ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序通过 Microsoft Bot Framework 注册，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，则你有一个 ID。 必须在此处输入 ID。 否则，必须在 Microsoft 应用程序注册门户[中生成一个新 ID。](https://aka.ms/appregistrations) 如果添加自动程序，请使用同一 ID。
 
 > [!NOTE]
 > 如果你要向 AppSource 中的现有应用提交更新，则清单中的 ID 不得修改。

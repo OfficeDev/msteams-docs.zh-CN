@@ -1,80 +1,82 @@
 ---
-title: 什么是邮件扩展？
+title: 消息扩展
 author: clearab
-description: Microsoft 团队平台上的邮件扩展概述
+description: Microsoft Teams 平台上的消息扩展概述
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3ea9649a22ecc134e983037d1ef109be918a26b3
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: 2d82202c72584927fc705813151d91510a7f12c9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587795"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696735"
 ---
-# <a name="what-are-messaging-extensions"></a>什么是邮件扩展？
+# <a name="messaging-extensions"></a>消息扩展
 
-邮件扩展允许用户通过 Microsoft 团队客户端中的按钮和表单与 web 服务进行交互。 他们可以通过撰写邮件区域、命令框或直接从邮件中搜索或启动外部系统中的操作。 然后，您可以将该交互的结果发送回 Microsoft 团队客户端（通常采用格式丰富的卡片的形式）。
+消息传递扩展允许用户通过 Microsoft Teams 客户端中的按钮和表单与 Web 服务交互。 他们可以从撰写邮件区域、命令框或直接从邮件搜索或启动外部系统中的操作。 你可以以格式丰富的卡片的形式将交互结果发送回 Microsoft Teams 客户端。 本文档概述了邮件扩展、在不同方案中执行的任务、邮件扩展的工作、操作和搜索命令以及链接取消点击。
 
-下面的屏幕截图显示可以从中调用邮件扩展的位置。
+下图显示了调用邮件扩展的位置：
 
 ![消息扩展调用位置](~/assets/images/messaging-extension-invoke-locations.png)
 
-## <a name="what-kinds-of-tasks-are-they-good-for"></a>哪些类型的任务适合？
+## <a name="scenarios-where-messaging-extensions-are-used"></a>使用邮件扩展的方案
 
-**方案：** 我需要一些外部系统执行某些操作，并希望将操作的结果发送回我的对话。
-**示例：** 预订资源并让频道知道您为其预留的日期/时间。
+| 方案 | 示例 |
+|:-----------------|:-----------------|
+|您希望某些外部系统执行一个操作，并且此操作的结果将发送回您的对话。|预留资源并允许频道知道预留的时间段。|
+|您希望在外部系统中查找内容，并与对话共享结果。|在 Azure DevOps 中搜索工作项，并作为自适应卡片与组共享。|
+|您希望完成涉及外部系统中多个步骤或大量信息的复杂任务，并与对话共享结果。|根据 Teams 消息在跟踪系统中创建 Bug，将 Bug 分配给 Bob，然后向对话线程发送包含 Bug 详细信息的卡片。|
 
-**方案：** 我需要在外部系统中查找内容，我想要与我的对话共享结果。
-**示例：** 在 Azure DevOps 中搜索工作项，并将其与组共享为自适应卡片。
+## <a name="understand-how-messaging-extensions-work"></a>了解邮件扩展如何工作
 
-**方案：** 我需要在外部系统中完成涉及多个步骤 (或大量信息) 的复杂任务，并且应与会话共享结果。
-**示例：** 在跟踪系统中创建基于团队消息的 bug，将该 bug 分配给 Bob，然后将卡片发送给会话线程，并提供 bug 的详细信息。
+消息传递扩展包含您托管的 Web 服务和应用程序清单，它定义从 Microsoft Teams 客户端调用 Web 服务的地方。 Web 服务利用 Bot Framework 的消息架构和安全通信协议，因此你必须在 Bot Framework 中将 Web 服务注册为自动程序。 
 
-## <a name="how-do-messaging-extensions-work"></a>邮件扩展功能扩展的工作原理是什么？
+> [!NOTE]
+> 虽然可以手动创建 Web 服务，但使用 [Bot Framework SDK](https://github.com/microsoft/botframework) 处理协议。
 
-邮件扩展由您承载的 web 服务和应用程序清单组成，该服务定义在 Microsoft 团队客户端中可从何处调用 web 服务。 他们利用 Bot 框架的邮件架构和安全通信协议，因此您还需要将 web 服务注册为 Bot 框架中的 bot。 尽管您可以手动创建 web 服务，但我们建议您充分利用[Bot 框架 SDK](https://github.com/microsoft/botframework)来更简单地使用协议。
-
-在 Microsoft 团队应用程序的应用程序清单中，你将定义最大为十个不同命令的单一消息扩展。 每个命令定义一种类型 (操作或搜索) ，并且客户端中的位置可以从 (撰写邮件区域、命令栏和/或邮件) 中调用。 调用后，web 服务将收到具有 JSON 有效负载的 HTTPS 消息，其中包括所有相关信息。 你将使用 JSON 有效负载进行响应，让团队客户端了解下一步要启用的交互。
+在 Microsoft Teams 应用的应用清单中，使用最多十个不同的命令定义单个消息传递扩展。 每个命令都定义一种类型，如操作或搜索以及客户端中调用它的位置。 调用位置包括撰写邮件区域、命令栏和邮件。 在调用时，Web 服务会收到一条包含 JSON 有效负载的 HTTPS 消息，其中包括所有相关信息。 使用 JSON 有效负载进行响应，让 Teams 客户端知道要启用的下一次交互。 
 
 ## <a name="types-of-messaging-extension-commands"></a>邮件扩展命令的类型
 
-消息扩展命令的类型定义了可用于 web 服务的 UI 元素和交互流。 某些交互（如身份验证和配置）可用于这两种类型的命令。
+邮件扩展命令有两种类型：操作命令和搜索命令。 消息扩展命令类型定义可用于 Web 服务的 UI 元素和交互流。 某些交互（如身份验证和配置）可用于两种类型的命令。
 
 ### <a name="action-commands"></a>操作命令
 
-操作命令使您可以向用户呈现模式弹出窗口，以收集或显示信息。 当用户提交表单时，您的 web 服务可以通过直接在对话中插入邮件，或在撰写邮件区域中插入邮件并允许用户提交邮件来做出响应。 甚至可以将多个表单链接在一起，以获取更复杂的工作流。
+操作命令用于向用户显示用于收集或显示信息的模式弹出窗口。 当用户提交表单时，Web 服务会通过直接将邮件插入对话或将邮件插入撰写邮件区域来做出响应。 之后，用户可以提交邮件。 可以将多个表单链接在一起，以使用更复杂的工作流。
 
-它们可以通过撰写邮件区域、命令框或邮件触发。 从邮件中调用时，发送到你的 bot 的初始 JSON 有效负载将包含从中调用的整个邮件。
-
-![邮件扩展操作命令任务模块](~/assets/images/task-module.png)
+操作命令从撰写邮件区域、命令框或邮件中触发。 从邮件调用命令时，发送到机器人的初始 JSON 有效负载包括从其中调用它的整个消息。 下图显示了邮件扩展操作命令任务模块 ![ ：邮件扩展操作命令任务模块](~/assets/images/task-module.png)
 
 ### <a name="search-commands"></a>搜索命令
 
-搜索命令允许用户在搜索框中手动搜索外部系统，或者通过将指向受监视域的链接粘贴到 "撰写" 邮件区域中来 (的信息) ，然后将搜索结果插入到邮件中。 在最基本的搜索命令流中，初始调用邮件将包含用户提交的搜索字符串。 你将使用卡片和卡片预览的列表进行响应。 团队客户端将在列表中呈现卡片预览，以便最终用户可以从中进行选择。 当用户选择卡片时，完整大小的卡片将插入到撰写邮件区域中。
+搜索命令允许用户通过搜索框手动搜索外部系统的信息，或者将受监视域的链接粘贴到撰写邮件区域，然后将搜索结果插入邮件中。 在最基本的搜索命令流中，初始调用消息包括用户提交的搜索字符串。 使用卡片和卡片预览列表进行响应。 Teams 客户端为用户呈现卡片预览列表。 当用户从列表中选择卡片时，全尺寸卡片将插入到撰写邮件区域中。
 
-它们可以通过撰写消息区域或命令框触发。 与 action 命令不同，它们不能从邮件中触发。
+卡片从撰写邮件区域或命令框触发，不会从邮件中触发。 无法从邮件中触发它们。
+下图显示了邮件扩展搜索命令任务模块：
 
 ![邮件扩展搜索命令](~/assets/images/search-extension.png)
 
-### <a name="link-unfurling"></a>链接展开
+> [!NOTE]
+> 有关卡片详细信息，请参阅 [什么是卡片](../task-modules-and-cards/what-are-cards.md)。
 
-在将 URL 粘贴到撰写邮件区域中时，您还可以选择调用您的服务。 此功能称为**链接 unfurling**，使您可以在将包含特定域的 url 粘贴到撰写邮件区域时订阅接收调用。 您的 web 服务可以将 URL "unfurl" 到详细卡片中，提供的信息比标准网站预览卡更多。 您甚至可以添加按钮以允许用户立即执行操作，而无需离开 Microsoft 团队客户端。
+## <a name="link-unfurling"></a>链接展开
 
-## <a name="get-started"></a>开始使用
+在撰写邮件区域中粘贴 URL 时，将调用 Web 服务。 此功能称为链接取消点击。 当包含特定域的 URL 粘贴到撰写邮件区域中时，可以订阅接收调用。 Web 服务可以将 URL"取消展开"为详细卡片，提供比标准网站预览卡更多的信息。 你可以添加按钮以允许用户立即采取措施，而无需离开 Microsoft Teams 客户端。
+在邮件扩展中粘贴链接时，以下图像显示链接展开功能：
+ 
+![取消链接](../assets/images/messaging-extension/unfurl-link.png)
 
-准备好开始构建了吗？ 尝试一下我们的快速入门：
+![链接取消点击](../assets/images/messaging-extension/link-unfurl.gif)
 
-* **C#**
-  * [带有基于操作的命令的消息扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
-  * [包含基于搜索的命令的邮件扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* **JavaScript**
-  * [带有基于操作的命令的消息扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
-  * [包含基于搜索的命令的邮件扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="see-also"></a>另请参阅
 
-构建消息扩展：
+> [!div class="nextstepaction"]
+> [创建邮件扩展](../build-your-first-app/build-messaging-extension.md)
 
-* [创建邮件扩展](~/messaging-extensions/how-to/create-messaging-extension.md)
-* [定义操作消息扩展命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-* [定义搜索邮件扩展命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [定义操作消息传递扩展命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+
+> [!div class="nextstepaction"]
+> [定义搜索邮件扩展命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)

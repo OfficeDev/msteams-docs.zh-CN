@@ -4,43 +4,45 @@ author: clearab
 description: 如何在 Microsoft Teams 应用中使用消息传递扩展执行链接取消链接。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d488638e63b8ec78bfa5bed8cf6f4f037883fb1
-ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
+ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49845635"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696226"
 ---
 # <a name="link-unfurling"></a>链接展开
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
+本文档指导你了解如何使用 App studio 手动将链接取消点击添加到应用清单。 使用链接展开，当粘贴某一域的 URL 到撰写消息区域，你的应用可以注册接收`invoke`活动。 包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可取消展开的卡片进行响应，从而 `invoke` 提供其他信息或操作。 这类似于 URL 用作搜索词的搜索命令。
+
 > [!NOTE]
-> 目前，移动客户端不支持链接取消链接。
+> 目前，移动客户端不支持链接取消展开。
 
-通过取消链接，应用可以注册以在将特定域的 URL 粘贴到撰写邮件区域中时 `invoke` 接收活动。 将包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可以取消展开的卡片进行响应，从而 `invoke` 提供其他信息或操作。 这非常类似于搜索 [命令，URL](~/messaging-extensions/how-to/search-commands/define-search-command.md)充当搜索词。
-
-Azure DevOps 邮件扩展使用链接取消链接查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下面屏幕截图中，用户已粘贴 Azure DevOps 中某个工作项的 URL，邮件扩展已解析为卡片。
+Azure DevOps 邮件扩展使用链接取消点击查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户已粘贴 Azure DevOps 中工作项的 URL，邮件扩展已解析为卡片：
 
 ![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>向应用清单添加链接取消链接
 
- 若要向应用清单添加链接，请向应用清单 `messageHandlers` `composeExtensions` JSON 部分添加新数组。 可以在 App Studio 的帮助下或手动添加数组。 域列表可以包括通配符，例如 `*.example.com` 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。
+若要向应用清单添加链接取消链接，请向应用清单 JSON 的 部分 `messageHandlers` `composeExtensions` 添加新数组。 可以在 App Studio 的帮助下或手动添加数组。 域列表可以包含通配符，例如 `*.example.com` 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。
 
 > [!NOTE]
-> 不要直接添加或通过通配符添加超出控件的域。 例如，yourapp.onmicrosoft.com有效，但 *.onmicrosoft.com 为 无效。 此外，还禁止顶级域。 例如*.com、*.org。
+> 不要直接添加或通过通配符添加不在控件中的域。 例如， `yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。 此外，还禁止顶级域。 例如 `*.com` ，、 `*.org` 。
 
-### <a name="using-app-studio"></a>使用 App Studio
+### <a name="add-link-unfurling-using-app-studio"></a>使用 App Studio 添加链接取消链接
 
-1. 在 App Studio 的清单编辑器选项卡上，加载应用清单。
-1. 在 **"消息扩展**"页上，在"邮件处理程序"部分添加要查找的域，如下面的屏幕截图所示。
+1. 从 Microsoft Teams 客户端打开 **App Studio，** 然后选择清单 **编辑器** 选项卡。
+1. 加载应用清单。
+1. 在 **"消息扩展** "页上，在"邮件处理程序"部分添加 **要查找的** 域。 下图说明了此过程：
 
-![App Studio 中的邮件处理程序部分](~/assets/images/link-unfurling.png)
+    ![App Studio 中的邮件处理程序部分](~/assets/images/link-unfurling.png)
+    
+### <a name="add-link-unfurling-manually"></a>手动添加链接取消链接
 
-### <a name="manually"></a>手动
+若要使邮件扩展能够与链接进行交互，首先必须将 `messageHandlers` 数组添加到应用清单。 以下示例说明如何手动添加链接取消链接： 
 
-若要使邮件扩展可以这样与链接进行交互，你首先需要将数组添加到应用清单， `messageHandlers` 如以下示例所示。 此示例不是完整的清单 [，请参阅完整](~/resources/schema/manifest-schema.md) 清单示例的清单参考。
 
 ```json
 ...
@@ -62,18 +64,20 @@ Azure DevOps 邮件扩展使用链接取消链接查找粘贴到指向工作项�
 ...
 ```
 
+有关完整的清单示例，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。
+
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>处理 `composeExtension/queryLink` 调用
 
-添加域以侦听应用程序清单后，需要更新 Web 服务代码以处理调用请求。 使用收到的 URL 搜索服务并创建卡片响应。 如果使用多张卡片进行响应，则仅使用第一张。
+将域添加到应用程序清单后，必须更新 Web 服务代码以处理调用请求。 使用收到的 URL 搜索服务并创建卡片响应。 如果使用多张卡片进行响应，则仅使用第一个卡片响应。
 
-我们支持以下卡片类型：
+支持以下卡片类型：
 
 * [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Hero 卡片](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-有关 [概述，请参阅什么是](~/task-modules-and-cards/what-are-cards.md) 卡片。
+### <a name="example"></a>示例
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -120,7 +124,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是发送到机器人 `invoke` 的示例。
+下面是发送到 `invoke` 自动程序的示例：
 
 ```json
 {
@@ -132,7 +136,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-下面显示了一个响应示例。
+下面是一个响应示例：
 
 ```json
 {
@@ -146,14 +150,14 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -170,3 +174,8 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 ```
 
 * * *
+
+## <a name="see-also"></a>另请参阅 
+
+> [!div class="nextstepaction"]
+> [什么是卡片](~/task-modules-and-cards/what-are-cards.md)

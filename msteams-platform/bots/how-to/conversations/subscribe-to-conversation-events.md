@@ -1,59 +1,67 @@
 ---
-title: 订阅对话事件
+title: 对话事件
 author: WashingtonKayaker
-description: 如何从 Microsoft Teams 机器人订阅对话事件。
-ms.topic: overview
+description: 如何使用 Microsoft Teams 机器人中的对话事件。
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: bc4ae36d8cffe5b19ee778a71e1c7b1c00c5e88c
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: af06dba58b3784a03dbcbbc627fa38fce681eeb8
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634500"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696344"
 ---
-# <a name="subscribe-to-conversation-events"></a>订阅对话事件
+# <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-对于发生在机器人活动范围内的事件，Microsoft Teams 会向机器人发送通知。 可以在代码中捕获这些事件，并针对事件采取行动，如下文所示：
+为 Microsoft Teams 生成对话机器人时，可以使用对话事件。 Teams 会向自动程序发送有关在自动程序处于活动状态的范围中发生的对话事件的通知。 可以在代码中捕获这些事件，并执行以下操作：
 
-* 将机器人添加到团队时触发欢迎消息
-* 添加或删除新团队成员时触发欢迎消息
-* 创建、重命名或删除频道时触发通知
-* 用户喜欢自动程序消息时
+* 将机器人添加到团队时触发欢迎消息。
+* 在添加或删除新的团队成员时触发欢迎消息。
+* 创建、重命名或删除频道时触发通知。
+* 当用户喜欢自动程序消息时。
 
 ## <a name="conversation-update-events"></a>对话更新事件
 
-> [!Important]
-> 你随时都可以添加新事件，你的机器人将开始接收它们。
-> 您必须针对接收意外事件的可能性进行设计。
-> 如果你使用的是 Bot Framework SDK，则自动程序将自动响应你未选择 `200 - OK` 处理的任何事件。
+可以使用对话更新事件提供更好的通知和更有效的自动程序操作。
 
-将机器人添加到对话后、将其他成员添加到对话或从对话中删除其他成员后，或更改对话元数据后，机器人将收到 `conversationUpdate` 事件。
+> [!IMPORTANT]
+> * 你随时都可以添加新事件，并且机器人开始接收它们。
+> * 必须将机器人设计为接收意外事件。
+> * 如果你使用的是 Bot Framework SDK，则自动自动响应你选择不处理 `200 - OK` 的任何事件。
 
-当机器人收到关于其所属团队的成员身份更新信息时，`conversationUpdate` 事件就会发送到机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。
+在下列任一 `conversationUpdate` 情况下，自动程序接收事件：
 
-下表显示了 Teams 对话更新事件的列表，以及指向更多详细信息的链接。
+* 自动程序已添加到对话中时。
+* 在对话中添加或删除其他成员。
+* 对话元数据已更改。
 
-| 已采取的操作        | EventType         | 方法已调用              | 说明                | 范围 |
+当机器人收到关于其所属团队的成员身份更新信息时，`conversationUpdate` 事件就会发送到机器人。 它还在首次为个人对话添加更新时接收更新。
+
+下表显示了包含更多详细信息的 Teams 对话更新事件列表：
+
+| 已采取的操作        | EventType         | 调用的方法              | 说明                | 范围 |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| 创建通道     | channelCreated    | OnTeamsChannelCreatedAsync | [已创建频道](#channel-created) | Team |
-| 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道已重命名](#channel-renamed) | Team |
-| 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [已删除频道](#channel-deleted) | Team |
-| 通道已还原    | channelRestored    | OnTeamsChannelRestoredAsync | [已还原频道](#channel-deleted) | Team |
-| members added   | membersAdded   | OnTeamsMembersAddedAsync   | [已添加成员](#team-members-added)   | 全部 |
-| 成员已删除 | membersRemoved | OnTeamsMembersRemovedAsync | [已删除成员](#team-members-removed) | groupChat & team |
-| 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队已重命名](#team-renamed)       | Team |
-| 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [已删除团队](#team-deleted)       | Team |
-| 团队存档        | teamArchived       | OnTeamsTeamArchivedAsync    | [已存档团队](#team-archived)       | Team |
-| 团队未存档        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)       | Team |
-| 团队已还原        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | Team |
+| 已创建频道     | channelCreated    | OnTeamsChannelCreatedAsync | [将创建一个通道](#channel-created)。 | Team |
+| 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道被重命名](#channel-renamed)。 | Team |
+| 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道被删除](#channel-deleted)。 | Team |
+| 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [频道已还原](#channel-deleted)。 | Team |
+| 添加的成员   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 全部 |
+| 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [将删除成员](#team-members-removed)。 | groupChat and team |
+| 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队重命名为](#team-renamed)。       | Team |
+| 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队已删除](#team-deleted)。       | Team |
+| 团队存档        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)。       | Team |
+| 团队未存档        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)。       | Team |
+| 已还原团队        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | Team |
 
 ### <a name="channel-created"></a>已创建频道
 
-只要在安装自动程序的团队中创建了新频道，就会将频道创建事件发送给机器人。
+只要在安装了自动程序的团队中创建了新频道，就会将频道创建事件发送给机器人。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了通道创建事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -63,7 +71,7 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -140,7 +148,9 @@ async def on_teams_channel_created(
 
 只要频道在安装自动程序的团队中重命名，频道重命名事件就会发送到机器人。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了通道重命名事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -150,7 +160,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -218,9 +228,11 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>频道已删除
 
-只要在安装自动程序的团队中删除频道，频道删除事件就会发送给机器人。
+只要在安装了自动程序的团队中删除频道，频道删除事件就会发送给机器人。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了频道删除事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -230,7 +242,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -302,7 +314,9 @@ async def on_teams_channel_deleted(
 
 只要在已安装自动程序的团队中还原以前删除的频道，就会将频道还原事件发送给机器人。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了通道还原事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -312,7 +326,7 @@ protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInf
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -387,9 +401,11 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>添加了工作组成员
 
-该事件在首次添加到对话时以及每次将新用户添加到安装机器人的团队或群聊时发送给 `teamMemberAdded` 机器人。 用户信息 (ID) 对于自动程序来说是唯一的，可以缓存这些信息供你的服务组织 (例如向特定用户发送) 。
+`teamMemberAdded`该事件在首次添加到对话时发送到机器人。 每次将新用户添加到安装自动程序的团队或群聊时，都会向机器人发送该事件。 ID 为 ID 的用户信息对于自动程序是唯一的，可以缓存此信息供服务将来使用，例如向特定用户发送消息。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了团队成员添加事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded , TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -411,7 +427,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -436,7 +452,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是在将机器人添加到团队时机器人将收到 **的消息**。
+这是自动程序在添加到团队时收到的消息。
 
 ```json
 {
@@ -475,7 +491,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-这是自动程序在将 * 添加到一对一聊天时将收到 *的消息*。
+这是自动程序在将机器人添加到一对一聊天时收到的消息。
 
 ```json
 {
@@ -529,11 +545,14 @@ async def on_teams_members_added(
 
 ### <a name="team-members-removed"></a>已删除团队成员
 
-如果从团队中删除了事件，并且每次从自动程序是其成员的团队中删除任何用户时，该事件 `teamMemberRemoved` 都会发送到自动程序。 通过查看 的对象，可以确定删除的新增成员是机器人本身还是 `Activity` 用户 `turnContext` 。  如果对象的字段与对象的字段相同，则删除的成员为自动程序，否则 `Id` `MembersRemoved` `Id` `Recipient` 为用户。  自动程序 `Id` 通常为： `28:<MicrosoftAppId>`
+如果 `teamMemberRemoved` 从团队中删除了事件，则此事件将发送到自动程序。 每当从自动程序是成员的团队中删除任何用户时，都会将事件发送到自动程序。 若要确定删除的新增成员是自动程序本身还是用户，请检查 `Activity` 的对象 `turnContext` 。  如果对象的字段与对象的字段相同，则删除的成员是自动程序 `Id` `MembersRemoved` `Id` `Recipient` ，否则它是用户。 自动程序 `Id` 通常为 `28:<MicrosoftAppId>` 。
 
-[!Note] 从租户中永久删除用户时， `membersRemoved conversationUpdate` 将触发事件。
+> [!NOTE]
+> 从租户中永久删除用户时， `membersRemoved conversationUpdate` 将触发事件。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了工作组成员删除事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -554,7 +573,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 
@@ -640,7 +659,9 @@ async def on_teams_members_removed(
 
 当自动程序位于的团队重命名时，将会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamRenamed` 事件 `channelData` 。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了团队重命名事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -650,7 +671,7 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -718,7 +739,9 @@ async def on_teams_team_renamed(
 
 当自动程序位于的团队被删除时，将会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamDeleted` 事件 `channelData` 。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了团队已删除事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -727,7 +750,7 @@ protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -790,9 +813,11 @@ async def on_teams_team_deleted(
 
 ### <a name="team-restored"></a>已还原团队
 
-当团队从删除中恢复时，机器人会收到通知。 机器人接收 `conversationUpdate` 对象中的 `eventType.teamrestored` 事件 `channelData` 。
+删除团队后，机器人会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamrestored` 事件 `channelData` 。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了团队还原事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -802,7 +827,7 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -870,7 +895,9 @@ async def on_teams_team_restored(
 
 自动程序在存档安装它的团队时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamarchived` 事件 `channelData` 。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了团队存档事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -880,7 +907,7 @@ protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -949,7 +976,9 @@ async def on_teams_team_archived(
 
 自动程序在安装它的团队未存档时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamUnarchived` 事件 `channelData` 。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了团队未存档事件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -959,7 +988,7 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1023,9 +1052,11 @@ async def on_teams_team_unarchived(
 
 * * *
 
+现在，你已使用对话更新事件，可以了解对消息的不同反应所发生的消息反应事件。
+
 ## <a name="message-reaction-events"></a>邮件反应事件
 
-当用户 `messageReaction` 向自动程序发送的消息添加或删除反应时，将发送该事件。 `replyToId`包含特定邮件的 ID，并且 `Type` 是文本格式的反应类型。  反应类型包括："heart"、"heart"、"heart"、"like"、"Heart"、"surprised"。 此事件不包含原始邮件的内容，因此，如果处理对消息的反应对于自动程序非常重要，则需要在发送邮件时存储这些消息。
+当用户 `messageReaction` 向自动程序发送的消息添加或删除反应时，将发送该事件。 `replyToId`包含邮件的 ID， `Type` 并且 是文本格式的反应类型。 反应类型包括笑人、心声、笑人、喜欢、沮丧和意外。 此事件不包含原始邮件的内容。 如果处理对消息的反应对自动程序很重要，则必须在发送邮件时存储这些消息。 下表提供了有关事件类型和有效负载对象的信息：
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1034,7 +1065,9 @@ async def on_teams_team_unarchived(
 
 ### <a name="reactions-to-a-bot-message"></a>对自动程序消息的反应
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了对自动程序消息的反应示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1048,7 +1081,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 <!-- Verify -->
 
@@ -1143,7 +1176,9 @@ async def on_reactions_added(
 
 ### <a name="reactions-removed-from-bot-message"></a>从自动程序消息中删除的反应
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下代码显示了从自动程序消息中删除的反应示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1157,7 +1192,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 <!-- Verify -->
 
@@ -1248,11 +1283,15 @@ async def on_reactions_removed(
 
 * * *
 
-## <a name="samples"></a>示例
+## <a name="code-sample"></a>代码示例
 
-有关显示机器人对话事件的示例代码，请参阅：
+下表提供了一个简单的代码示例，该示例将机器人对话事件合并到 Teams 应用程序中：
 
-[Microsoft Teams 机器人对话事件示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
+| 示例 | 说明 | .NET Core |
+|--------|------------- |---|
+| Teams 机器人对话事件示例 | 适用于 Teams 的 Bot Framework v4 对话自动程序示例。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
 
+## <a name="next-step"></a>后续步骤
 
-
+> [!div class="nextstepaction"]
+> [发送主动邮件](~/bots/how-to/conversations/send-proactive-messages.md)

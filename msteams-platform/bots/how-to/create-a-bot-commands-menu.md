@@ -1,64 +1,70 @@
 ---
-title: 为你的 bot 创建命令菜单
+title: 为自动程序创建命令菜单
 author: clearab
-description: 如何为 Microsoft 团队 bot 创建命令菜单
-ms.topic: overview, command menu
+description: 如何为 Microsoft Teams 自动程序创建命令菜单
+ms.topic: how-to
 ms.author: anclear
-ms.openlocfilehash: ccbacc6ec6f18a38512d81dc898d0b14357d6ef7
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 839c01f870f026744dfe5fa1331835f5f6b6890f
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552484"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697020"
 ---
-# <a name="bot-command-menus"></a>Bot 命令菜单
+# <a name="bot-command-menus"></a>自动程序命令菜单
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 > [!Note]
-> 移动客户端上不会显示 Bot 菜单。
+> 自动程序菜单不显示在移动客户端上。
 
-通过为你的 bot 添加命令菜单，你可以定义你的 bot 可以始终响应的一组核心命令。 当用户正在使用你的 bot 时，会向用户显示撰写邮件区域上方的命令列表。 从列表中选择一个命令会将命令字符串插入到撰写消息框中，所有用户都需要选择 " **发送**"。
+若要定义自动程序可以响应的核心命令集，你可以添加一个命令菜单以及自动程序命令的下拉列表。 当用户与自动程序对话时，将在撰写邮件区域中显示命令列表。 Select a command from the list to insert the command string into the compose message box and select **Send**.
 
-![Bot 命令菜单](./conversations/media/bot-menu-sample.png)
+![自动程序命令菜单](./conversations/media/bot-menu-sample.png)
 
-## <a name="create-a-command-menu-for-your-bot"></a>为你的 bot 创建命令菜单
+## <a name="create-a-command-menu-for-your-bot"></a>为自动程序创建命令菜单
 
-命令菜单在应用部件清单（manifest）中定义。 您可以使用应用程序 Studio 来帮助您创建它们，也可以手动添加它们。
+命令菜单在应用清单中定义。 可以使用 App **Studio 创建** 它们，或在应用清单中手动添加它们。
 
-### <a name="creating-a-command-menu-for-your-bot-using-app-studio"></a>使用应用程序 Studio 为你的机器人创建命令菜单
+### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a>使用 App Studio 为机器人创建命令菜单
 
-此处的说明假定您将编辑现有的应用程序清单。 无论是创建新的清单还是编辑现有的清单，添加命令菜单的步骤都是相同的。
+为自动程序创建命令菜单的先决条件是必须编辑现有应用清单。 无论是创建新清单还是编辑现有清单，添加命令菜单的步骤都是相同的。
 
-1. 打开应用程序 Studio .。。左侧导航轨上的 "溢出" 菜单。 如果你没有可用的应用程序，可以下载。 有关使用应用程序 Studio 的详细信息，请参阅 [安装应用程序 studio](https://aka.ms/teams-app-studio#installing-app-studio) 。
+**使用 App Studio 为机器人创建命令菜单**
 
-    ![应用程序工作室](./conversations/media/AppStudio.png)
+1. 打开 **Teams，然后** 从左窗格中选择"应用"。 在"**应用"** 页中，搜索 **App Studio，** 然后选择"打开 **"。** 
+   > [!NOTE]
+   > 如果你没有 **App Studio，** 可以下载它。 有关详细信息，请参阅安装[App Studio。](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)
 
-2. 在应用程序 Studio 中，选择 " **清单编辑器** " 选项卡。
+    ![应用程序 Studio](./conversations/media/AppStudio.png)
 
-3. 在 " **功能** " 部分的 "清单编辑器" 视图的左列中，选择 " **bot**"。
+2. 在 **App Studio** 中，选择 **"清单编辑器"** 选项卡。如果你没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [更新应用包](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。
 
-4. 在清单编辑器视图的右列中的 " **命令** " 部分，选择 " **添加** " 按钮。
+3. 在清单编辑器的左侧 **窗格中的**"功能"部分，选择"**自动程序"。**
 
-    ![应用程序 Studio 命令菜单添加按钮](./conversations/media/AppStudio-CommandMenu-Add.png)
+4. 在清单编辑器的右侧 **窗格中的**"命令"部分 **，选择**"添加 **"。** 将显示 **"新建命令** "屏幕。
 
-5. 将显示 **新的命令** 屏幕。 输入要显示为菜单命令的 **命令文本** ，以及要在菜单中的命令文本正下方显示的 " **帮助" 文本** 。 这应该是命令用途的简短说明。
+    ![App Studio 命令菜单添加按钮](./conversations/media/AppStudio-CommandMenu-Add.png)
 
-6. 接下来，选择要在其上显示此命令菜单的范围 (s) ，然后选择 " **保存** " 按钮。
+5. 输入 **命令文本** ，该文本必须显示为自动程序的命令菜单。
 
-    ![应用程序 Studio 命令菜单添加按钮](./conversations/media/AppStudio-NewCommandMenu.png)
+6. 输入 **必须在菜单中** 的命令文本下显示的帮助文本。 **帮助文本** 必须是命令用途的简要说明。
 
-### <a name="creating-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过 **在上编辑Manifest.js** 来创建你的 bot 的命令菜单
+7. 选中"**范围**"复选框以选择此命令菜单必须显示在何处，然后选择"保存 **"。**
 
-创建命令菜单的另一种有效方法是在开发 bot 源代码时直接在清单文件中创建它。 使用此方法时，请记住以下几点：
+    ![App Studio 新命令菜单按钮](./conversations/media/AppStudio-NewCommandMenu.png)
 
-1. 每个菜单最长可支持10个命令。
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑"打开"菜单为自动程序Manifest.js菜单
 
-2. 可以创建将在所有范围中运行的单个命令菜单。
+创建命令菜单的另一种方式是在开发自动程序源代码时直接在清单文件中创建它。 若要使用此方法，请遵循以下几点：
 
-3. 您可以为每个作用域创建不同的命令菜单
+* 每个菜单最多支持 10 个命令。
+* 创建在所有范围内工作的单个命令菜单。
+* 为每个范围创建不同的命令菜单。
 
-#### <a name="manifest-example---single-menu-for-both-scopes"></a>清单示例-两个范围的单个菜单
+#### <a name="manifest-example-for-single-menu-for-both-scopes"></a>两个作用域的单个菜单的清单示例
+
+两个作用域的单个菜单的清单示例代码如下所示：
 
 ```json
 {
@@ -102,7 +108,9 @@ ms.locfileid: "49552484"
 }
 ```
 
-#### <a name="manifest-example---menu-for-each-scope"></a>清单示例-每个范围的菜单
+#### <a name="manifest-example-for-the-menu-for-each-scope"></a>每个范围的菜单的清单示例
+
+每个范围的菜单的清单示例代码如下所示：
 
 ```json
 {
@@ -144,23 +152,30 @@ ms.locfileid: "49552484"
 }
 ```
 
-## <a name="handling-menu-commands-in-your-bot-code"></a>处理机器人代码中的菜单命令
+处理来自用户的任何消息时，必须在自动程序代码中处理菜单命令。 可以通过解析邮件文本的"提及"部分来处理自动程序 **\@ 代码中** 的菜单命令。
 
-组或通道中的 bot 仅在邮件中 ( "@botname" ) 提到它们时才做出响应。 因此，在组或频道作用域中，由 bot 接收的每封邮件将在返回的邮件文本中包含其自己的名称。 您需要确保在处理返回的命令之前，您的邮件分析处理程序。
+## <a name="handle-menu-commands-in-your-bot-code"></a>处理自动程序代码中的菜单命令
 
-> **注释** 在代码中处理命令时，它们将以常规邮件的形式发送到你的 bot。 因此，您需要像处理来自用户的任何其他邮件那样处理这些文件。 它们只是在文本框中插入预先配置的文本的 UI 处理。 然后，用户必须像发送其他任何消息一样发送该文本。
+组或频道中的机器人仅在消息中提到时 `@botname` 进行响应。 自动程序在组或频道范围中收到的每封邮件在返回的消息文本中包含其名称。 在处理返回的命令之前，邮件分析必须处理自动程序使用其名称接收的消息。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+> [!NOTE]
+> 若要在代码中处理命令，它们作为常规消息发送到自动程序。 必须像处理用户发送的其他任何邮件一样处理邮件。 代码中的命令在文本框中插入预配置的文本。 然后，用户必须像发送任何其他邮件一样发送该文本。
 
-您可以使用 Microsoft Bot 框架（名为的类的方法）提供的静态方法分析邮件文本的 **\@ 提及** 部分 `Activity` `RemoveRecipientMention` 。
+# <a name="c"></a>[C#](#tab/dotnet)
+
+可以使用 Microsoft Bot Framework 提供的静态方法分析邮件文本的 **\@ "** 提及"部分。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
+
+用于C#"提及"部分的代码如下所示： **\@**
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+# <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-您可以使用 Microsoft Bot 框架（名为的类的方法）提供的静态方法分析邮件文本的 **\@ 提及** 部分 `TurnContext` `removeMentionText` 。
+可以使用自动程序框架提供的静态 **\@** 方法分析邮件文本的"提及"部分。 它是名为 的 `TurnContext` 类的一个方法 `removeMentionText` 。
+
+用于解析邮件文本的 **\@ "** 提及"部分的 JavaScript 代码如下所示：
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
@@ -168,8 +183,9 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
+可以使用 Bot Framework **@Mention** 静态方法解析邮件文本的 @Mention 部分。 它是名为 的 `TurnContext` 类的一个方法 `remove_recipient_mention` 。
 
-您可以使用 Microsoft Bot 框架（名为的类的方法）提供的静态方法分析邮件文本的 **@Mention** 部分 `TurnContext` `remove_recipient_mention` 。
+用于分析邮件文本的 **\@ "提及**"部分的 Python 代码如下所示：
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -177,10 +193,20 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 * * *
 
-## <a name="command-menu-best-practices"></a>命令菜单最佳做法
+若要使自动程序代码顺利运行，必须遵循一些最佳做法。
 
-* **保持简单**： bot 菜单旨在提供你的 bot 的主要功能。
-* **保持简短**：菜单选项不应是超长且复杂的自然语言语句—它们应为简单命令。
-* **将其 invokable**：自动程序菜单操作/命令应始终可用，而不考虑会话的状态或机器人所在的对话框。
+## <a name="command-menu-best-practices"></a>命令菜单最佳实践
 
-> **注释** 如果从清单中删除任何命令，则需要重新部署应用，以使更改生效。 通常情况下，对清单所做的任何更改都需要进行此更改。
+以下是命令菜单最佳实践：
+
+* 保持简单：自动程序菜单旨在显示自动程序的关键功能。
+* 保持简短：菜单选项不能长，不能是复杂的自然语言语句。 它们必须是简单的命令。
+* 保持它可以进行通话：自动程序菜单操作或命令必须始终可用，无论对话的状态或聊天机器人位于哪个对话中。
+
+> [!NOTE]
+> 如果从清单中删除任何命令，则必须重新部署应用来实现更改。 通常，对清单的任何更改都需要重新部署应用。
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [频道和群组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)

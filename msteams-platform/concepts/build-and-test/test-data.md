@@ -4,12 +4,12 @@ description: 设置 Office 365 开发人员计划订阅以成功测试 Microsoft
 ms.topic: how-to
 keywords: 测试应用开发人员计划团队
 ms.date: 11/01/2019
-ms.openlocfilehash: 9e23b9054f45ccff6c08b97c72f4d5375fef58ea
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634718"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696862"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>将测试数据添加到 Microsoft 365 测试租户
 
@@ -26,7 +26,15 @@ ms.locfileid: "51634718"
 > [!NOTE]
 > 对于你使用的任何租户，你必须获得全局管理员权限才能运行脚本。
 
-## <a name="enable-custom-app-sideloading"></a>启用自定义应用旁加载
+### <a name="optional-step-to-allow-upload-of-custom-apps"></a>允许上载自定义应用的可选步骤
+
+默认情况下，只有全局管理员或 Teams 服务管理员可以将自定义应用上载到租户应用程序目录中。 还可以允许所有用户上载自定义应用供自己使用或上载到团队进行测试。
+
+若要启用此设置，你需要在 Teams 管理门户中更新全局应用设置策略。
+
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
+
+## <a name="optional-step-to-enable-custom-app-sideloading"></a>启用自定义应用旁加载的可选步骤
 
 启用自定义应用旁加载是可选的。 默认情况下，只有全局管理员或 Teams 服务管理员可以将自定义应用上传到租户应用目录。 还可以允许用户将自定义应用上载到 Teams。 有关详细信息，请参阅在 [Teams 中管理应用设置策略](/microsoftteams/teams-app-setup-policies)。
 

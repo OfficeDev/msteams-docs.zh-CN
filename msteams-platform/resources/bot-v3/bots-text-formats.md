@@ -2,13 +2,14 @@
 title: 对话中支持的文本格式
 description: 介绍自动程序对话中的文本格式支持
 keywords: 机器人对话消息传送
+ms.topic: how-to
 ms.date: 03/29/2018
-ms.openlocfilehash: 3ef51a7f6e4e923d83ab746a2dfa1f22464efb93
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: d8cb4ffd18871737ed4a64443800938f424910c9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596264"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696057"
 ---
 # <a name="formatting-bot-messages"></a>设置机器人消息的格式
 
@@ -18,7 +19,7 @@ ms.locfileid: "51596264"
 
 Microsoft Teams 支持以下格式选项：
 
-| TextFormat 值 | Description |
+| TextFormat 值 | 说明 |
 | --- | --- |
 | plain | 文本应视为原始文本，而未应用任何格式 |
 | markdown | 文本应视为 Markdown 格式，并在适当时呈现在频道上;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容 |

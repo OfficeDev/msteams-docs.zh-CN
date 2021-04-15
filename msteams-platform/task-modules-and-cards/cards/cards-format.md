@@ -2,13 +2,14 @@
 title: 卡片中的文本格式
 description: 介绍 Microsoft Teams 中的卡片文本格式
 keywords: teams 自动程序卡格式
+ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
-ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
+ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51474997"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696533"
 ---
 # <a name="format-cards-in-teams"></a>在 Teams 中设置卡片格式
 
@@ -111,7 +112,7 @@ Teams 中支持 Markdown 的卡片类型有两种：
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>自适应卡片 v1.2 中的提及支持
 
-Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器人和消息传递扩展响应在自适应卡片正文中添加 @ 提及。  若要在卡片中添加 @ 提及，请遵循与频道和群聊对话中基于消息的提及相同的通知 [逻辑和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )。
+Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器人和消息传递扩展响应在自适应卡片正文中添加 @ 提及。 若要在卡片中添加 @ 提及，请遵循与频道和群聊对话中基于消息的提及相同的通知 [逻辑和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
 
 聊天机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。
 

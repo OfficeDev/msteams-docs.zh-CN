@@ -1,0 +1,117 @@
+---
+title: 智能机器人和 SDK
+author: clearab
+description: Microsoft Teams 中的机器人和 SDK。
+ms.topic: overview
+ms.author: anclear
+ms.openlocfilehash: c76a3300229e038e0d6a93d2701b3b3c5a1286da
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697230"
+---
+# <a name="bots-and-sdks"></a>智能机器人和 SDK
+
+若要创建在 Microsoft Teams 中工作的自动程序，可以使用下列方法之一：
+* 基于 Microsoft Bot Framework SDK 构建的现有自动程序
+* Power Virtual Agents chatbot 服务
+* Webhook 和连接器
+
+## <a name="bots-and-the-microsoft-bot-framework"></a>机器人和 Microsoft Bot Framework
+
+Teams 自动程序包含以下三个元素：
+
+* 由你主持的公共访问的 Web 服务。
+* 使用 Bot Framework 注册自动程序。
+* 包含应用清单的 Teams 应用包。 这是用户安装和连接 Teams 客户端到 Web 服务（通过自动程序服务进行路由）的内容。
+
+Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于创建使用 C#、Java、Python 和 JavaScript 的聊天机器人。 如果你已有基于 Bot Framework 的自动程序，你可以轻松修改它以在 Microsoft Teams 中工作。 使用 C# 或 Node.js 来利用[我们的 SDK。](/microsoftteams/platform/#pivot=sdk-tools) 这些包扩展基本 Bot Builder SDK 类和方法，如下所示：
+
+* 使用专门的卡类型，如 Office 365 连接器卡。
+* 设置特定于 Teams 的活动频道数据。
+* 处理邮件扩展请求。
+
+> [!IMPORTANT]
+> 可以使用任何 Web 编程技术开发 Teams 应用，并直接调用[Bot Framework REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
+
+> [!TIP]
+> Teams App Studio 可帮助你创建和配置应用清单，以及将 Web 服务注册为 Bot Framework 上的自动程序。 它还包含 React 控件库和交互式卡片生成器。 有关详细信息，请参阅 [Teams App Studio 入门](~/concepts/build-and-test/app-studio-overview.md)。
+
+## <a name="bots-and-the-microsoft-power-virtual-agents"></a>机器人和 Microsoft Power Virtual Agents
+
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) 是一项基于 Microsoft Power 平台和 Bot Framework 构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在 Power [Virtual Agents](https://powervirtualagents.microsoft.com)门户中创建聊天机器人后，可以轻松地 [将其与 Teams 集成](how-to/add-power-virtual-agents-bot-to-teams.md)。 有关入门信息，请参阅 Power [Virtual Agents 文档](https://docs.microsoft.com/power-virtual-agents/)。
+
+## <a name="bots-and-webhooks-and-connectors"></a>机器人、Webhook 和连接器
+
+Webhook 和连接器将机器人连接到 Web 服务。 使用 webhook 和连接器，可以创建简单的机器人进行基本交互，例如创建工作流或其他简单命令。 它们仅在创建它们的团队中可用，并且适用于特定于公司工作流的简单流程。 有关详细信息，请参阅什么是 [Webhook 和连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
+
+## <a name="advantages-of-bots"></a>自动程序的优点
+
+Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团队的频道。 每个范围都为对话机器人提供了独特的机遇与挑战。
+
+| 在频道中 | 在群聊中 | 在一对一聊天中 |
+| :-- | :-- | :-- |
+| 大规模覆盖 | 成员更少 | 传统方式 |
+| 简洁的单个交互 | @mention自动程序  | Q&A bots |
+| @mention自动程序 | 类似于频道 | 告知小人并做笔记的机器人 |
+
+### <a name="in-a-channel"></a>在频道中
+
+频道包含多个人员之间的线程对话，甚至最多包含两千个。 这可能会导致自动程序大规模访问，但个人交互必须简洁。 传统的多向交互不起作用。 相反，必须查找使用交互式卡片或任务模块，或将对话移动到一对一对话以收集大量信息。 自动程序仅有权访问其为 的邮件 `@mentioned` 。 可以使用 Microsoft Graph 和组织级别权限从对话中检索其他邮件。
+
+在下列情况下，自动程序在频道中可以更好地工作：
+
+* 通知，你提供交互式卡片供用户获取其他信息。
+* 反馈方案，如投票和调查。
+* 单个请求或响应周期可解析交互，并且结果对对话中的多个成员很有用。
+* 社交或有趣的机器人，你可获取出色的 cat 图像，随机选择获胜方等。
+
+### <a name="in-a-group-chat"></a>在群聊中
+
+群聊是在三个及以上人员之间进行的非按线索组织的对话。 其中的成员一般比频道中的少且更短暂。 与频道类似，自动程序仅有权访问直接位于其中 `@mentioned` 的消息。
+
+在机器人在频道中更好地工作的情况下，也更好地在群聊中工作。
+
+### <a name="in-a-one-to-one-chat"></a>在一对一聊天中
+
+一对一聊天是对话机器人与用户交互的传统方式。 一对一对话机器人的一些示例包括 Q&A bot、在其他系统中启动工作流的机器人、告知机器人和记录笔记的机器人。 在创建一对一聊天机器人之前，请考虑基于对话的界面是否是显示功能的最佳方法。
+
+## <a name="disadvantages-of-bots"></a>机器人的缺点
+
+自动程序与用户之间的广泛对话是完成任务的一种缓慢而复杂的方法。 支持过多命令（尤其是大量命令）的自动程序未成功，或者用户无法积极查看。
+
+### <a name="have-multi-turn-experiences-in-chat"></a>在聊天中拥有多轮体验
+
+一个广泛的对话框要求开发人员保持状态。 若要退出此状态，用户必须退出 **或选择取消**。 此外，该过程很繁琐。 例如，请参阅以下对话方案：
+
+用户：安排与 Megan 的会议。
+
+BOT：我找到了 200 个结果，请包含名字和姓氏。
+
+用户：与 Megan Bowen 安排会议。
+
+BOT：好的，你要在什么时间与 Megan Bowen 会面？
+
+用户：下午 1：00。
+
+BOT：哪一天？
+
+### <a name="support-too-many-commands"></a>支持过多命令
+
+由于当前自动程序菜单中只有六个可见命令，因此不可能以任何频率使用其他任何命令。 深入到特定领域的机器人，而不是尝试成为广泛的助手，可以更好地工作并提供更好的帮助。
+
+### <a name="maintain-a-large-knowledge-base"></a>维护大型知识库
+
+自动程序的缺点之一是很难维护具有未应答响应的大型检索知识库。 自动程序最适合于短而快速交互，而不是通过长列表来寻找答案。
+
+## <a name="code-sample"></a>代码示例
+
+|示例名称 | 说明 | .NETCore | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Teams 对话自动程序 | 消息和对话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [智能机器人活动处理程序](~/bots/bot-basics.md)

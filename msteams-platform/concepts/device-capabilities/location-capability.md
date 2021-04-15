@@ -2,13 +2,14 @@
 title: 集成位置功能
 description: 如何使用 Teams JavaScript 客户端 SDK 利用位置功能
 keywords: 位置地图功能本机设备权限
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b941080eaece2cd2346bfa046ae97f855195ff20
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: de699d4edbf1c95f283cead9d12dcd2c98f8d3b9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596194"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696855"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能 
 
@@ -46,7 +47,7 @@ ms.locfileid: "51596194"
 
 你必须使用以下一组 API 来启用设备的位置功能：
 
-| API      | Description   |
+| API      | 说明   |
 | --- | --- |
 |[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | 提供用户的当前设备位置或打开本机位置选取器并返回用户选择的位置。 |
 |[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | 在地图上显示位置 |

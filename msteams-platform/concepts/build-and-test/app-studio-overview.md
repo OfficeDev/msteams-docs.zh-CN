@@ -3,12 +3,12 @@ title: App Studio for Microsoft Teams 入门
 description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应用
 keywords: 应用室团队入门
 ms.topic: overview
-ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: d275e78909fe35a6032bf67cb7454396f3dbd7af
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634507"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696302"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams 快速开发应用
 
@@ -101,6 +101,9 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 * 在 Teams 客户端中显示且包含在用户请求中的参数名称
 * 方便使用的标题
 * 可选说明
+
+> [!NOTE]
+> 若要使用 app studio 创建消息传递扩展，请参阅 [使用 app studio 创建消息传递扩展](~/resources/create-messaging-extension-using-appstudio.md)。
 
 #### <a name="test-and-distribute"></a>测试和分发
 

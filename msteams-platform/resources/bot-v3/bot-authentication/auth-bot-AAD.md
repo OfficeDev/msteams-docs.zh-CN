@@ -1,38 +1,39 @@
 ---
-title: 使用 Azure Active Directory 对 bot 进行身份验证
-description: 介绍了团队中的 Azure AD 身份验证以及如何在你的 bot 中使用它
-keywords: 团队身份验证 bot AAD
+title: 使用 Azure Active Directory 的机器人身份验证
+description: 介绍 Teams 中的 Azure AD 身份验证以及如何在机器人中使用它
+keywords: teams 身份验证机器人 AAD
+ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: 268af02c51b21b65214bce4673b54ac564a125ae
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f772ef84282c3b8e1ee3e6aa96b47bf12caaa4dd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673301"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696680"
 ---
-# <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>在 Microsoft 团队 bot 中对用户进行身份验证
+# <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>在 Microsoft Teams 机器人中对用户进行身份验证
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-您可能需要在团队应用程序中使用许多服务，这些服务中的大多数都需要身份验证和授权才能获取对服务的访问权限。 服务包括 Facebook、Twitter 和课程团队。 使用 Microsoft Graph，工作组用户拥有存储在 Azure Active Directory （Azure AD）中的用户配置文件信息。 本文重点介绍了如何使用 Azure AD 进行身份验证，以获取对此信息的访问权限。
+你可能希望在 Teams 应用内使用许多服务，这些服务中的大多数都需要进行身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter，当然还包括 Teams。 Teams 用户的用户配置文件信息存储在 Azure Active Directory (Azure AD) Microsoft Graph 中。 本文将重点介绍使用 Azure AD 进行身份验证，以访问此信息。
 
-OAuth 2.0 是一种开放的标准，用于 Azure AD 和许多其他服务提供商使用的身份验证。 了解 OAuth 2.0 是在团队和 Azure AD 中使用身份验证的先决条件。 下面的示例使用 OAuth 2.0 隐式授予流，其目标是最终从 Azure AD 和 Microsoft Graph 读取用户的配置文件信息。
+OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证的开放式标准。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中处理身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流，目的是最终从 Azure AD 和 Microsoft Graph 中读取用户配置文件信息。
 
-本文中所述的身份验证流与选项卡的身份验证流非常相似，不同之处在于，选项卡可以使用基于 web 的身份验证流，并且 bot 需要通过代码驱动的身份验证。 在从移动平台实施身份验证时，本文中的概念也很有用。
+本文中介绍的身份验证流与选项卡的身份验证流非常相似，只是选项卡可以使用基于 Web 的身份验证流，而自动程序要求从代码驱动身份验证。 从移动平台实现身份验证时，本文中的概念也很有用。
 
-有关 bot 身份验证流的一般概述，请参阅[bot 中的主题身份验证流](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)。
+有关自动程序身份验证流的一般概述，请参阅主题 [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)。
 
 ## <a name="configuring-identity-providers"></a>配置标识提供程序
 
-有关在使用 Azure Active Directory 作为标识提供程序时配置 OAuth 2.0 回调重定向 URL 的详细步骤，请参阅主题[配置标识提供程序](~/concepts/authentication/configure-identity-provider.md)。
+有关 [将](~/concepts/authentication/configure-identity-provider.md) Azure Active Directory 用作标识提供程序时配置 OAuth 2.0 回调重定向 URL () 请参阅主题配置标识提供程序。
 
 ## <a name="initiate-authentication-flow"></a>启动身份验证流
 
-应由用户操作触发身份验证流。 您不应自动打开身份验证弹出窗口，因为这可能会触发浏览器的弹出窗口阻止器，并将用户搞糊涂。
+身份验证流应该由用户操作触发。 不应自动打开身份验证弹出窗口，因为这可能会触发浏览器的弹出窗口阻止程序，并让用户混淆。
 
-## <a name="add-ui-to-start-authentication"></a>添加 UI 以启动身份验证
+## <a name="add-ui-to-start-authentication"></a>添加 UI 以开始身份验证
 
-向 bot 添加 UI 以使用户能够在需要时登录。 以下是在 TypeScript 中通过缩略图执行的操作：
+将 UI 添加到自动程序，以便用户能够根据需要登录。 在此处，它通过"缩略图"卡片在 TypeScript 中完成：
 
 ```typescript
 // Show prompt of options
@@ -55,19 +56,19 @@ protected async promptForAction(session: builder.Session): Promise<void> {
 }
 ```
 
-已向 "英雄卡片" 中添加了三个按钮：登录、显示配置文件和注销。
+三个按钮已添加到 Hero Card：登录、显示配置文件和注销。
 
-## <a name="sign-the-user-in"></a>在中为用户签名
+## <a name="sign-the-user-in"></a>让用户登录
 
-由于出于安全原因和支持团队的移动版本而必须执行的验证，此处不显示代码，但[下面的示例展示了当用户按下 "登录" 按钮时](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195)，将启动进程的代码。。
+由于出于安全考虑而必须执行的验证和支持移动版本的 Teams，代码未在此处显示，但下面是在用户按下"登录"按钮时启动该过程[](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195)的代码示例。
 
-在 bot 的主题[身份验证流](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)中对验证和移动支持进行了说明。
+验证和移动支持在主题 Bot [中的身份验证流中进行了介绍](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)。
 
-请务必将身份验证重定向 URL 的域添加到清单[`validDomains`](~/resources/schema/manifest-schema.md#validdomains)部分。 如果不这样做，则不会显示登录弹出窗口。
+请务必将身份验证重定向 URL 的域添加到 [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) 清单的 部分。 如果不显示，将不会显示登录弹出窗口。
 
 ## <a name="showing-user-profile-information"></a>显示用户配置文件信息
 
-尽管获取访问令牌很困难，因为在不同的网站之间来回切换以及必须解决的安全问题，一旦您拥有令牌，从 Azure Active Directory 获取信息非常简单。 Bot 使用访问令牌调用`me` Graph 终结点。 Graph 将响应登录用户的用户信息。 响应中的信息用于构造 bot 卡并发送。
+尽管由于不同网站之间的所有转换以及必须解决的安全问题，获取访问令牌非常困难，但一旦拥有令牌，从 Azure Active Directory 获取信息就非常简单。 机器人使用访问令牌 `me` 调用 Graph 终结点。 Graph 响应登录人员的用户信息。 响应中的信息用于构建并发送自动程序卡。
 
 ```typescript
 // Show user profile
@@ -102,7 +103,7 @@ public async getProfileAsync(accessToken: string): Promise<any> {
 }
 ```
 
-如果用户未登录，则系统会提示他们执行此操作。
+如果用户未登录，系统会提示用户进行登录。
 
 ## <a name="sign-the-user-out"></a>注销用户
 
@@ -122,6 +123,6 @@ private async handleLogout(session: builder.Session): Promise<void> {
 
 ## <a name="other-samples"></a>其他示例
 
-有关显示 bot 身份验证过程的示例代码，请参阅：
+有关显示自动程序身份验证过程的示例代码，请参阅：
 
-* [Microsoft 团队 bot 身份验证示例](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+* [Microsoft Teams 机器人身份验证示例](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)

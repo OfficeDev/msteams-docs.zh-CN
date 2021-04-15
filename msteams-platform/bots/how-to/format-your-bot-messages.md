@@ -1,76 +1,89 @@
 ---
-title: 设置你的 bot 邮件的格式
+title: 设置你的智能机器人邮件格式
 author: clearab
-description: 为你的 bot 邮件添加丰富的格式
-ms.topic: overview
+description: 向自动程序消息添加丰富的格式
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a11d01233481371c66562e0fa27ab805b06e9391
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673140"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697002"
 ---
-# <a name="format-your-bot-messages"></a>设置你的 bot 邮件的格式
+# <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
-您可以设置可选[`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message)属性以控制邮件的文本内容的呈现方式。
+邮件格式使您能够在自动程序消息中获得最佳效果。 您可以设置自动程序消息的格式，以包含包含交互式元素（如按钮、文本、图像、音频、视频等）的附件的富卡片。
 
-Microsoft 团队支持以下格式设置选项：
+## <a name="format-text-content"></a>设置文本内容的格式
 
-| TextFormat 值 | 说明 |
+若要设置自动程序消息的格式，可以设置可选属性 [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) 以控制自动程序消息的文本内容的呈现方式。
+
+Microsoft Teams 支持以下格式选项：
+
+| `TextFormat` value | 说明 |
 | --- | --- |
-| 文本 | 应将文本视为原始文本，而不会应用任何格式。|
-| markdown | 应根据需要将文本视为 Markdown 格式并在通道上呈现。 有关支持的样式，*请参阅*[格式化文本内容](#formatting-text-content)。 |
-| xml | 文本是简单的 XML 标记。 有关支持的样式，*请参阅*[格式化文本内容](#formatting-text-content)。 |
+| plain | 必须将文本视为原始文本，不应用任何格式。|
+| markdown | 文本必须视为 markdown 格式，并在适当时呈现在频道上。 |
+| xml | 文本是简单的 XML 标记。 |
 
-## <a name="formatting-text-content"></a>设置文本内容的格式
+Teams 支持 markdown 和 XML 或 HTML 格式标记的子集。
 
-Microsoft 团队支持 Markdown 和 XML （HTML）格式设置标记的子集。
-
-目前，以下限制适用：
+目前，以下限制适用于格式设置：
 
 * 纯文本邮件不支持表格格式。
-* 富卡片仅支持 text 属性中的格式设置，而不支持标题或副标题属性中的格式设置。
-* 丰富的卡片不支持 Markdown 或表格格式。
+* 格式卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。
+* 富卡片不支持 markdown 或表格格式。
+
+设置文本内容的格式后，请确保格式设置适用于 Microsoft Teams 支持的所有平台。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
-若要确保您的格式在 Microsoft 团队支持的所有平台上都有效，请注意，目前不支持在所有平台上使用某些样式。
+某些样式当前并非在所有平台上都受支持。 下表提供了样式列表，以及纯文本消息和格式卡片支持哪些样式：
 
-| Style                     | 纯文本邮件 | 丰富卡片（仅限 XML） |
+| 样式                     | 纯文本邮件 | 富卡片 - 仅 XML |
 | ---                       | :---: | :---: |
-| bold                      | ✔ | ✖ |
-| italic                    | ✔ | ✔ |
-| 标头（级别&ndash;1 3） | ✖ | ✔ |
-| 删除             | ✖ | ✔ |
-| 水平标尺           | ✖ | ✖ |
-| 无序列表            | ✖ | ✔ |
-| 排序列表              | ✖ | ✔ |
-| 预设格式文本         | ✔ | ✔ |
-| blockquote                | ✔ | ✔ |
+| 粗体                      | ✔ | ✖ |
+| 斜体                    | ✔ | ✔ |
+| 页眉 (级别 1 &ndash; 3)  | ✖ | ✔ |
+| 删除线             | ✖ | ✔ |
+| 水平规则           | ✖ | ✖ |
+| 未排序列表            | ✖ | ✔ |
+| 已排序列表              | ✖ | ✔ |
+| 预设格式的文本         | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ |
 | 超链接                 | ✔ | ✔ |
 | 图像链接                | ✔ | ✖ |
 
-## <a name="support-by-individual-platform"></a>由单个平台支持
+检查跨平台支持后，请确保各个平台也提供支持。
+
+## <a name="support-by-individual-platform"></a>单个平台支持
 
 对文本格式的支持因邮件类型和平台而异。
 
 ### <a name="text-only-messages"></a>纯文本邮件
 
-| Style                     | 桌面 | iOS | Android |
+下表提供了样式列表，以及哪些样式在桌面、iOS 和 Android 上受支持：
+
+| 样式                     | 桌面 | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| bold                      | ✔ | ✔ | ✔ |
-| italic                    | ✔ | ✔ | ✔ |
-| 标头（级别&ndash;1 3） | ✖ | ✖ | ✖ |
-| 删除             | ✔ | ✔ | ✖ |
-| 水平标尺           | ✖ | ✖ | ✖ |
-| 无序列表            | ✔ | ✖ | ✖ |
-| 排序列表              | ✔ | ✖ | ✖ |
-| 预设格式文本         | ✔ | ✔ | ✔ |
-| blockquote                | ✔ | ✔ | ✔ |
+| 粗体                      | ✔ | ✔ | ✔ |
+| 斜体                    | ✔ | ✔ | ✔ |
+| 页眉 (级别 1 &ndash; 3)  | ✖ | ✖ | ✖ |
+| 删除线             | ✔ | ✔ | ✖ |
+| 水平规则           | ✖ | ✖ | ✖ |
+| 未排序列表            | ✔ | ✖ | ✖ |
+| 已排序列表              | ✔ | ✖ | ✖ |
+| 预设格式的文本         | ✔ | ✔ | ✔ |
+| Blockquote                | ✔ | ✔ | ✔ |
 | 超链接                 | ✔ | ✔ | ✔ |
 | 图像链接                | ✔ | ✔ | ✔ |
 
-### <a name="cards"></a>圣诞卡
+### <a name="cards"></a>卡
 
-请参阅[卡片格式](~/task-modules-and-cards/cards/cards-format.md)以获得卡片支持。
+有关卡支持，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [更新和删除机器人消息](~/bots/how-to/update-and-delete-bot-messages.md)

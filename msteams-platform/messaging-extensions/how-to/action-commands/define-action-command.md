@@ -1,104 +1,156 @@
 ---
-title: 定义邮件扩展操作命令
+title: 定义消息传递扩展操作命令
 author: clearab
 description: 邮件扩展操作命令概述
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: be2135477c4234187f374aef215f90e8329fb74e
-ms.sourcegitcommit: 5739245903278d521ec920427248b6b48676e637
+ms.openlocfilehash: 51c2ce5ac3b8ab265d9bec0b1101ba18138a9365
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "49778399"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696927"
 ---
-# <a name="define-messaging-extension-action-commands"></a>定义邮件扩展操作命令
+# <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-使用操作命令 (，你可以向用户显示名为 Teams) 中任务模块的模式弹出窗口，以收集或显示信息，然后处理他们的交互并将信息发送回 Teams。 在创建命令之前，你需要决定：
+操作命令允许你向用户显示 Teams 中称为任务模块的模式弹出窗口。 任务模块收集或显示信息、处理交互并将信息发送回 Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
 
-1. 可以从何处触发操作命令？
-1. 如何创建任务模块？
-1. 最终的邮件或卡片是从自动程序发送到频道，还是将邮件或卡片插入撰写邮件区域供用户提交？
+在创建操作命令之前，必须确定以下因素：
 
-## <a name="choose-action-command-invoke-locations"></a>选择操作命令调用位置
+1. [可以从何处触发操作命令？](#select-action-command-invoke-locations)
+1. [如何创建任务模块？](#select-how-to-create-your-task-module)
+1. [最终的邮件或卡片是从自动程序发送到频道，还是将邮件或卡片插入撰写邮件区域供用户提交？](#select-how-the-final-message-is-sent)
 
-首先需要确定操作命令的触发位置，具体 (调用命令) 位置。  通过指定 `context` 应用清单中的命令，可以从以下一个或多个位置调用命令：
+## <a name="select-action-command-invoke-locations"></a>选择操作命令调用位置
 
-* 撰写邮件区域底部的按钮。
-* By @mentioning your app in the command box. 注意：如果从命令框调用消息扩展，则不能使用直接插入到对话中的自动程序消息进行响应。
-* 直接通过 ... 从现有邮件发送...消息上的溢出菜单。 注意：对自动程序的初始调用将包括一个 JSON 对象，该对象包含从其中调用它的消息，你可以先处理该对象，然后再向它们显示任务模块。
+首先，必须决定必须调用操作命令的位置。 通过指定应用清单中的 ，可以从以下一个或多个位置调用 `context` 命令：
 
-## <a name="choose-how-to-build-your-task-module"></a>选择如何生成任务模块
+* 撰写邮件区域：撰写邮件区域底部的按钮。
+* 命令框：@mentioning命令框中显示你的应用。 
+   > [!NOTE]
+   > 如果从命令框调用消息扩展，则不能使用直接插入对话中的自动程序消息进行响应。
 
-除了选择命令的调用位置之外，还必须选择如何在任务模块中为用户填充表单。 有三个选项用于创建在任务模块内呈现的表单：
+* 消息：直接通过邮件上的溢出 `...` 菜单从现有邮件发送。 
+    > [!NOTE] 
+    > 对自动程序的初始调用包括一个 JSON 对象，其中包含从其中调用它的消息。 可以在向邮件显示任务模块之前处理邮件。
 
-* **参数的静态列表** - 这是最简单的选项。 可以在 Teams 客户端将 (的应用清单) 输入字段定义参数列表。 不能使用此选项控制格式。
-* **自适应卡片** - 你可以选择使用自适应卡片，它可更好地控制 UI，但仍限制你使用可用的控件和格式设置选项。
-* **嵌入式 Web 视图** - 如果需要完全控制 UI 和控件，可以选择在任务模块中嵌入自定义 Web 视图。
+下图显示了调用 action 命令的位置：
 
-如果选择使用静态参数列表创建任务模块，则当用户提交任务模块时，将首次调用邮件扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展将需要处理来自用户的初始调用事件、创建任务模块，然后返回给客户端。
+![操作命令调用位置](~/assets/images/messaging-extension-invoke-locations.png)
 
-## <a name="choose-how-the-final-message-will-be-sent"></a>选择最终邮件的发送
+## <a name="select-how-to-create-your-task-module"></a>选择如何创建任务模块
 
-在大多数情况下，您的操作命令将导致在撰写邮件框中插入卡片。 然后，你的用户可以决定将其发送到频道或聊天。 在这种情况下，消息来自用户，你的自动程序将无法进一步编辑或更新卡片。
+除了选择命令的调用位置之外，还必须选择如何为用户填充任务模块中的窗体。 有以下三个选项用于创建在任务模块内呈现的窗体：   
 
-如果消息扩展从撰写框或直接从消息中触发，则 Web 服务可以直接将最终响应插入频道或聊天中。 在这种情况下，自适应卡片来自自动程序，自动程序将能够更新它，并且机器人还可以根据需要回复对话线程。 你将需要使用相同的 ID 和定义适当的范围将对象添加到 `bot` 应用清单。
+* **参数的静态列表**：这是最简单的方法。 可以在 Teams 客户端呈现的应用清单中定义参数列表，但在这种情况下无法控制格式。
+* **自适应卡片**：可以选择使用自适应卡片，该卡片可以更好地控制 UI，但仍限制可用控件和格式设置选项。
+* **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以便完全控制 UI 和控件。 
 
-## <a name="add-the-command-to-your-app-manifest"></a>将命令添加到应用清单
+如果选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
 
-现在，你已决定用户如何与操作命令交互，是时候将其添加到应用清单了。 为此，你需要将新对象添加到应用清单 `composeExtension` JSON 的顶层。 可以在 App Studio 的帮助下完成操作，也可以手动完成。
+## <a name="select-how-the-final-message-is-sent"></a>选择最终邮件的发送
 
-### <a name="create-a-command-using-app-studio"></a>使用 App Studio 创建命令
+在大多数情况下，操作命令会导致在撰写消息框中插入一个卡片。 用户可以将其发送到频道或聊天。 在这种情况下，邮件来自用户，机器人无法进一步编辑或更新卡片。
 
-以下步骤假定你已 [创建邮件扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
+如果消息扩展从撰写框或直接通过消息调用，则 Web 服务可以直接将最终响应插入频道或聊天中。 在这种情况下，自适应卡片来自机器人，机器人会更新它，并根据需要回复到对话线程。 你必须使用相同的 ID 并定义适当的作用域将对象添加到 `bot` 应用清单。
 
-1. 从 Microsoft Teams 客户端中，打开 **App Studio** 并选择清单 **编辑器** 选项卡。
-2. 如果你已在 App Studio 中创建应用包，请从列表中选择它。 如果没有，你可以导入现有应用包。
-3. 单击 **"命令** "部分中的"添加"按钮。
-4. 选择 **"允许用户在 Teams 内触发外部服务中的操作"。**
-5. 如果要使用一组静态参数来创建任务模块，请选择该选项。 否则，请选择 **从自动程序获取一组动态参数**。
-6. 添加命令 **ID** 和 **标题**。
-7. 选择要从何处触发操作命令。
-8. 如果对任务模块使用参数，请添加第一个参数。
-9. 单击"保存"。
-10. 如果需要添加更多参数，请单击"参数"部分中的"添加"按钮以添加它们。
+## <a name="add-the-action-command-to-your-app-manifest"></a>将操作命令添加到应用清单
 
-### <a name="manually-create-a-command"></a>手动创建命令
+若要将操作命令添加到应用清单，必须将新对象添加到应用清单 `composeExtension` JSON 的顶层。 为此，可以使用下列方法之一：
 
-若要将基于操作的消息扩展命令手动添加到应用清单，你需要将以下参数添加到对象 `composeExtension.commands` 数组。
+* [使用 App Studio 创建操作命令](#create-an-action-command-using-app-studio)
+* [手动创建操作命令](#create-an-action-command-manually)
+
+### <a name="create-an-action-command-using-app-studio"></a>使用 App Studio 创建操作命令
+
+> [!NOTE]
+> 创建操作命令的先决条件是，已创建邮件扩展。 若要了解如何创建邮件扩展，请参阅创建 [邮件扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
+
+**创建操作命令**
+
+1. 从 Microsoft Teams 客户端打开 **App Studio，** 然后选择清单 **编辑器** 选项卡。
+1. 如果你已在 **App Studio** 中创建应用包，请从列表中选择它。 如果尚未创建应用包，请导入现有应用包。
+1. 导入应用包后，在"功能"下 **选择**"消息传递 **扩展"。** 你获得一个弹出窗口来设置邮件扩展。
+1. 选择 **窗口中** 的"设置"，将消息传递扩展包括在你的应用体验中。 下图显示了消息扩展设置窗口：
+
+    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    
+1. 若要创建消息扩展，你需要一个 Microsoft 注册的自动程序。 可以使用现有自动程序或创建新的自动程序。 选择 **"创建新自动程序**"选项，为新的自动程序命名，然后选择"创建 **"。** 下图显示了邮件扩展的自动程序创建：
+
+    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+
+1. 选择 **"** 邮件扩展 **"** 页的"命令"部分中的"添加"，以包含决定邮件扩展行为的命令。   
+下图显示了邮件扩展的命令添加：
+
+   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+
+1. 选择 **"允许用户在 Teams 内触发外部服务中的操作"。** 下图显示了操作命令选择：
+
+    <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
+    
+1. 若要使用一组静态参数来创建任务模块，请选择"为命令定义一组 **静态参数"。** 
+
+    下图显示了操作命令静态参数选择：
+
+   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/> 
+   
+    下图显示了一个静态参数设置示例： 
+
+   <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
+
+    下图显示了静态参数测试示例：
+
+   <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
+
+1. 若要使用动态参数，请选择"从自动程序提取动态 **参数集"。** 下图显示了操作命令参数选择：
+
+    <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
+    
+1. 添加命令 **ID** 和 **标题**。
+1. 选择要从其中调用操作命令的位置。 下图显示了操作命令调用位置：
+
+    <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
+
+1. 选择“**保存**”。
+1. 若要添加更多参数，请选择" **参数"部分** 中的" **添加"** 按钮。
+
+### <a name="create-an-action-command-manually"></a>手动创建操作命令
+
+若要手动将基于操作的消息扩展命令添加到应用清单，必须将以下参数添加到 `composeExtension.commands` 对象数组：
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-| `id` | 分配给此命令的唯一 ID。 用户请求将包含此 ID。 | 是 | 1.0 |
-| `title` | 命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 必须是 `action` | 否 | 1.4 |
-| `fetchTask` | `true`对于任务模块的自适应卡片或嵌入式 Web 视图，对于静态参数列表，或者当通过 `false``taskInfo` | 否 | 1.4 |
-| `context` | 用于定义可以从何处调用邮件扩展的值的可选数组。 可能的值是 `message` ， `compose` 或 `commandBox` 。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
+| `id` | 此属性是分配给此命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
+| `title` | 此属性是命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
+| `type` | 此属性必须是 `action` 。 | 否 | 1.4 |
+| `fetchTask` | 对于任务模块的自适应卡片或嵌入式 Web 视图，以及参数的静态列表或加载 Web 视图时，此属性 `true` `false` 设置为 `taskInfo` 。 | 否 | 1.4 |
+| `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
-如果使用静态参数列表，则也会添加它们。
-
-| 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
-|---|---|---|---|
-| `parameters` | 命令的参数静态列表。 仅在为时 `fetchTask` 使用 `false` | 否 | 1.0 |
-| `parameter.name` | 参数的名称。 这将在用户请求中发送到你的服务。 | 是 | 1.0 |
-| `parameter.description` | 描述此参数的目的或应提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
-| `parameter.title` | 简短的用户友好参数标题或标签。 | 是 | 1.0 |
-| `parameter.inputType` | 设置为所需的输入类型。 可能的值包括 `text` `textarea` ， ， `number` `date` `time` `toggle` 。 默认值设置为 `text` | 否 | 1.4 |
-
-如果使用的是嵌入式 Web 视图，可以选择添加对象以提取 Web 视图，而无需 `taskInfo` 直接调用机器人。 如果选择使用此选项，则此行为类似于使用静态参数列表，这是因为与机器人的第一次交互将响应任务 [模块提交操作](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 如果使用的是对象 `taskInfo` ，请确保还要将参数 `fetchTask` 设置为 `false` 。
+如果使用参数的静态列表，则还必须添加以下参数：
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-|`taskInfo`|指定使用消息传递扩展命令时要预加载的任务模块| 否 | 1.4 |
-|`taskInfo.title`|初始任务模块标题|否 | 1.4 |
-|`taskInfo.width`|任务模块宽度 - 一个数字（以像素为单位）或默认布局，如"large"、"medium"或"small"|否 | 1.4 |
-|`taskInfo.height`|任务模块高度 - 一个数字（以像素为单位）或默认布局，如"large"、"medium"或"small"|否 | 1.4 |
-|`taskInfo.url`|初始 Web 视图 URL|否 | 1.4 |
+| `parameters` | 此属性描述命令的参数静态列表。 仅在 为 时 `fetchTask` 使用 `false` 。 | 否 | 1.0 |
+| `parameter.name` | 此属性描述参数的名称。 这将在用户请求中发送到你的服务。 | 是 | 1.0 |
+| `parameter.description` | 此属性描述参数的用途或应提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
+| `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
+| `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 `text` `textarea` `number` `date` 、、、、、。 `time` `toggle` 默认值设置为 `text` 。 | 否 | 1.4 |
+
+如果你使用的是嵌入式 Web 视图，可以选择添加 对象来获取 Web 视图， `taskInfo` 而无需直接调用机器人。 如果选择此选项，则其行为类似于使用静态参数列表的行为。 因此，与机器人的第一次 [交互是响应任务模块提交操作](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 如果使用对象 `taskInfo` ，则必须将 参数 `fetchTask` 设置为 `false` 。
+
+| 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
+|---|---|---|---|
+|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 否 | 1.4 |
+|`taskInfo.title`|初始任务模块标题。 |否 | 1.4 |
+|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 `large` 、 `medium` 或 `small` ）。 |否 | 1.4 |
+|`taskInfo.height`|任务模块高度，以像素为单位或默认布局（如 、 `large` `medium` 或 `small` ）。|否 | 1.4 |
+|`taskInfo.url`|初始 Web 视图 URL。|否 | 1.4 | 
 
 #### <a name="app-manifest-example"></a>应用清单示例
 
-下面是定义两个操作 `composeExtensions` 命令的对象示例。 这不是完整清单的示例，有关完整应用清单架构，请参阅： [应用清单架构](~/resources/schema/manifest-schema.md)。
+下一节是定义两个 `composeExtensions` 操作命令的对象的示例。 这不是完整清单的示例。 有关完整的应用清单架构，请参阅 [应用清单架构](~/resources/schema/manifest-schema.md)：
 
 ```json
 ...
@@ -148,14 +200,22 @@ ms.locfileid: "49778399"
 ...
 ```
 
-## <a name="next-steps"></a>后续步骤
+## <a name="code-sample"></a>代码示例
 
-如果你使用的是自适应卡片或没有对象的嵌入 Web 视图， `taskInfo` 你将希望：
+| 示例名称           | 说明 | .NET    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Teams 消息传递扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams 消息传递扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-* [使用任务模块创建和响应](~/messaging-extensions/how-to/action-commands/create-task-module.md)
+## <a name="next-step"></a>后续步骤
 
-如果将参数或嵌入的 Web 视图与对象一同使用，下一步是 `taskInfo` ：
+如果你使用的是自适应卡片或没有对象的嵌入 Web 视图，下一 `taskInfo` 步是：
 
-* [响应任务模块提交](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [!div class="nextstepaction"]
+> [使用任务模块创建和响应](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+如果要将参数或嵌入的 Web 视图与对象一同使用，下一 `taskInfo` 步是：
+
+> [!div class="nextstepaction"]
+> [响应任务模块提交](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+

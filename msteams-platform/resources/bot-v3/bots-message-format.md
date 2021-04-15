@@ -1,77 +1,78 @@
 ---
-title: Bot 邮件格式
-description: 描述 bot 邮件格式的详细信息
-keywords: 团队方案频道对话 bot 邮件
+title: 自动程序消息格式
+description: 介绍自动程序消息格式的详细信息
+keywords: teams 方案频道对话机器人消息
+ms.topic: reference
 ms.date: 05/20/2019
-ms.openlocfilehash: eb0d0303d2b414ff84beab73055be5f057fff11c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4eccc8af8f2cdad153998a13502df2a1baf9ceec
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673477"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696617"
 ---
-# <a name="message-formatting-for-bots"></a>Bot 的邮件格式
+# <a name="message-formatting-for-bots"></a>自动程序的邮件格式
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-您可以设置可选[`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message)属性以控制邮件的文本内容的呈现方式。
+可以设置可选 [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) 属性来控制邮件文本内容的呈现方式。
 
-Microsoft 团队支持以下格式设置选项：
+Microsoft Teams 支持以下格式选项：
 
 | TextFormat 值 | 说明 |
 | --- | --- |
-| 文本 | 应将文本视为原始文本，而不会应用任何格式设置 |
-| markdown | 应根据需要将文本视为 Markdown 格式并在通道上呈现。有关支持的样式，请参阅[格式化文本内容](#formatting-text-content) |
-| xml | 文本是简单的 XML 标记;有关支持的样式，请参阅[格式化文本内容](#formatting-text-content) |
+| plain | 文本应视为原始文本，而未应用任何格式 |
+| markdown | 文本应视为 Markdown 格式，并在适当时呈现在频道上;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容 |
+| xml | 文本是简单的 XML 标记;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容 |
 
 ## <a name="formatting-text-content"></a>设置文本内容的格式
 
-Microsoft 团队支持 Markdown 和 XML （HTML）格式设置标记的子集。
+Microsoft Teams 支持 Markdown 和 XML 代码的一 (HTML) 格式标记。
 
-目前，以下限制适用：
+目前，存在以下限制：
 
-* 纯文本邮件不支持表格格式
-* 富卡片仅支持 text 属性中的格式设置，而不支持标题或副标题属性中的格式
-* 丰富卡片不支持 Markdown 或表格格式
+* 纯文本邮件不支持表格式设置
+* 格式卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置
+* 富卡不支持 Markdown 或表格格式
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
-若要确保您的格式在 Microsoft 团队支持的所有平台上都有效，请注意，目前不支持在所有平台上使用某些样式。
+若要确保你的格式可以在 Microsoft Teams 支持的所有平台上运行，请注意某些样式当前并非在所有平台上都受支持。
 
-| Style                     | 纯文本邮件 | 丰富卡片（仅限 XML） |
+| 样式                     | 纯文本邮件 | 富卡 (XML)  |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |
-| 标头（级别&ndash;1 3） | ✖ | ✔ |
-| 删除             | ✖ | ✔ |
-| 水平标尺           | ✖ | ✖ |
+| 页眉 (级别 1 &ndash; 3)  | ✖ | ✔ |
+| strikethrough             | ✖ | ✔ |
+| 水平规则           | ✖ | ✖ |
 | 无序列表            | ✖ | ✔ |
 | 排序列表              | ✖ | ✔ |
-| 预设格式文本         | ✔ | ✔ |
+| 预设格式的文本         | ✔ | ✔ |
 | blockquote                | ✔ | ✔ |
 | 超链接                 | ✔ | ✔ |
 | 图像链接                | ✔ | ✖ |
 
-## <a name="support-by-individual-platform"></a>由单个平台支持
+## <a name="support-by-individual-platform"></a>单个平台支持
 
 对文本格式的支持因邮件类型和平台而异。
 
 ### <a name="text-only-messages"></a>纯文本邮件
 
-| Style                     | 桌面 | iOS | Android |
+| 样式                     | 桌面 | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |
-| 标头（级别&ndash;1 3） | ✖ | ✖ | ✖ |
-| 删除             | ✔ | ✔ | ✖ |
-| 水平标尺           | ✖ | ✖ | ✖ |
+| 页眉 (级别 1 &ndash; 3)  | ✖ | ✖ | ✖ |
+| strikethrough             | ✔ | ✔ | ✖ |
+| 水平规则           | ✖ | ✖ | ✖ |
 | 无序列表            | ✔ | ✖ | ✖ |
 | 排序列表              | ✔ | ✖ | ✖ |
-| 预设格式文本         | ✔ | ✔ | ✔ |
+| 预设格式的文本         | ✔ | ✔ | ✔ |
 | blockquote                | ✔ | ✔ | ✔ |
 | 超链接                 | ✔ | ✔ | ✔ |
 | 图像链接                | ✔ | ✔ | ✔ |
 
-### <a name="cards"></a>圣诞卡
+### <a name="cards"></a>卡
 
-请参阅[卡片格式](~/task-modules-and-cards/cards/cards-format.md)以获得卡片支持。
+有关 [卡片支持，](~/task-modules-and-cards/cards/cards-format.md) 请参阅卡片格式。

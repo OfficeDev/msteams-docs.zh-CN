@@ -1,34 +1,36 @@
 ---
 title: 响应搜索命令
 author: clearab
-description: 如何在 Microsoft 团队应用中的邮件扩展中响应搜索命令。
+description: 如何从 Microsoft Teams 应用中的消息扩展响应搜索命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e8b40dd8f422ffbd2537e8fa76a38c15eb6208de
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2cc53796deddb47e8dbce86a5b02f4d80a1b91e0
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41673492"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696190"
 ---
-# <a name="respond-to-the-search-command"></a>响应搜索命令
+# <a name="respond-to-search-command"></a>响应搜索命令
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-您的 web 服务将接收`composeExtension/query`包含具有搜索参数的`value`对象的调用消息。 触发此调用：
+在用户提交搜索命令后，Web 服务会收到一条调用消息，其中包含包含 `composeExtension/query` `value` 搜索参数的对象。 此调用将触发，并满足以下条件：
 
 * 在搜索框中输入字符时。
-* 如果`initialRun`在应用程序清单中将设置为 true，则会在调用搜索命令后立即收到调用消息。 请参阅[默认查询](#default-query)。
+* `initialRun` 在应用清单中设置为 true，一旦调用搜索命令，就会收到调用消息。 有关详细信息，请参阅默认 [查询](#default-query)。
 
-请求参数本身位于请求的`value`对象中，其中包括以下属性：
+本文档指导你了解如何以卡片和预览形式响应用户请求，以及 Microsoft Teams 发布默认查询的条件。
+
+请求参数位于请求中的 对象中 `value` ，其中包括以下属性：
 
 | 属性名称 | 用途 |
 |---|---|
-| `commandId` | 用户调用的命令的名称，与应用程序清单中声明的命令之一相匹配。 |
-| `parameters` | 参数数组。 每个 parameter 对象包含参数名称，以及用户提供的参数值。 |
-| `queryOptions` | 分页参数： <br>`skip`：跳过此查询的计数 <br>`count`：要返回的元素数 |
+| `commandId` | 用户调用的命令的名称，与在应用清单中声明的命令之一匹配。 |
+| `parameters` | 参数数组。 每个参数对象都包含参数名称以及用户提供的参数值。 |
+| `queryOptions` | 分页参数： <br>`skip`：跳过此查询的计数 <br>`count`：要返回的元素数。 |
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
@@ -37,7 +39,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
@@ -47,9 +49,9 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
-下面的 JSON 将被缩短，以突出显示最相关的部分。
+以下 JSON 已缩短，以突出显示最相关的部分。
 
 ```json
 {
@@ -76,44 +78,44 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ## <a name="respond-to-user-requests"></a>响应用户请求
 
-当用户执行查询时，Microsoft 团队会向您的服务发出同步 HTTP 请求。 在这种情况下，您的代码有5秒的时间来提供对请求的 HTTP 响应。 在这段时间内，您的服务可以执行其他查找，或提供服务请求所需的任何其他业务逻辑。
+当用户执行查询时，Microsoft Teams 会向服务发送同步 HTTP 请求。 此时，代码有 `5` 几秒钟时间提供对请求的 HTTP 响应。 在此期间，你的服务可以执行其他查找，或执行为请求提供服务所需的任何其他业务逻辑。
 
-您的服务应使用与用户查询匹配的结果进行响应。 响应必须指示 HTTP 状态代码`200 OK` ，以及具有以下正文的有效 application/json 对象：
+服务必须使用与用户查询匹配的结果进行响应。 该响应必须指示 的 HTTP 状态代码以及具有以下属性的有效 `200 OK` 应用程序或 JSON 对象：
 
 |属性名称|用途|
 |---|---|
 |`composeExtension`|顶级响应信封。|
-|`composeExtension.type`|响应的类型。 支持以下类型： <br>`result`：显示搜索结果列表 <br>`auth`：要求用户进行身份验证 <br>`config`：要求用户设置邮件扩展 <br>`message`：显示纯文本消息 |
-|`composeExtension.attachmentLayout`|指定附件的布局。 用于类型`result`的响应。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象的列表 <br>`grid`：缩略图图像的网格 |
-|`composeExtension.attachments`|有效的附件对象的数组。 用于类型`result`的响应。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
-|`composeExtension.suggestedActions`|建议的操作。 用于类型`auth`或`config`的响应。 |
-|`composeExtension.text`|要显示的消息。 用于类型`message`的响应。 |
+|`composeExtension.type`|响应类型。 支持以下类型： <br>`result`：显示搜索结果列表 <br>`auth`：要求用户进行身份验证 <br>`config`：要求用户设置消息扩展 <br>`message`：显示纯文本消息 |
+|`composeExtension.attachmentLayout`|指定附件的布局。 用于 类型 `result` 的响应。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象列表 <br>`grid`：缩略图图像的网格 |
+|`composeExtension.attachments`|有效 attachment 对象的数组。 用于 类型 `result` 的响应。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.suggestedActions`|建议的操作。 用于 或 类型的 `auth` 响应 `config` 。 |
+|`composeExtension.text`|要显示的消息。 用于 类型 `message` 的响应。 |
 
-### <a name="response-card-types-and-previews"></a>响应卡片类型和预览
+### <a name="response-card-types-and-previews"></a>响应卡类型和预览
 
-我们支持以下附件类型：
+Teams 支持以下卡片类型：
 
 * [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [英雄卡片](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-有关概述，请参阅[什么是卡片](~/task-modules-and-cards/what-are-cards.md)。
+若要更好地了解卡片并概览卡片，请参阅 [什么是卡片](~/task-modules-and-cards/what-are-cards.md)。
 
-若要了解如何使用缩略图和英雄卡片类型，请参阅[添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
+若要了解如何使用缩略图和 Hero 卡片类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-有关 Office 365 连接器卡的其他文档，请参阅[使用 office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+有关 Office 365 连接器卡的其他信息，请参阅使用 [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
-结果列表显示在 Microsoft 团队 UI 中，每个项目都有一个预览。 将通过以下两种方式之一生成预览：
+结果列表显示在 Microsoft Teams UI 中，并预览每个项目。 预览以以下两种方式之一生成：
 
-* 在`attachment`对象`preview`中使用属性。 该`preview`附件只能是一个英雄或缩略图卡片。
-* 从附件的基本`title`、 `text`和`image`属性中提取。 仅当未设置该`preview`属性且这些属性可用时，才使用这些属性。
+* 在 `preview` 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
+* 从附件的基本 `title` 、 `text` 和 `image` 属性中提取。 只有在属性未设置且这些属性可用 `preview` 时，才使用这些属性。
 
-您可以仅通过其 preview 属性在结果列表中显示自适应卡片或 Office 365 连接器卡片的预览。 如果结果已经是英雄或缩略图卡片，则无需执行此步骤。 如果使用预览附件，则它必须是英雄或缩略图卡片。 如果未指定 preview 属性，卡片的预览将会失败，并且不会显示任何内容。
+可以使用自适应卡片或 Office 365 连接器卡片的预览属性在结果列表中显示该卡片的预览。 如果结果已是 Hero 或 Thumbnail 卡片，则不需要预览属性。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不显示任何内容。
 
 ### <a name="response-example"></a>响应示例
 
-# <a name="cnettabdotnet"></a>[C #/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
@@ -147,7 +149,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
@@ -174,7 +176,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -188,14 +190,14 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -310,9 +312,9 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="default-query"></a>默认查询
 
-如果在清单`initialRun`中`true`设置为，Microsoft 团队会在用户第一次打开邮件扩展时发出 "默认" 查询。 您的服务可以使用一组预填充的结果对此查询做出响应。 当您的搜索命令需要进行身份验证或配置、显示最近查看的项目、收藏夹或任何其他不依赖于用户输入的信息时，这可能很有用。
+如果在清单中设置为 ，Microsoft Teams 将在用户首次打开消息传递扩展时发送 `initialRun` `true` 默认查询。  你的服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息时，这非常有用。
 
-默认查询的结构与任何常规用户`name`查询相同，字段在下面的对象中设置`initialRun`为`value`和设置`true`为。
+默认查询的结构与任何常规用户查询相同，字段设置为 并设置为 `name` `initialRun` `value` `true` ，如以下对象所示：
 
 ```json
 {
@@ -335,15 +337,22 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-## <a name="next-steps"></a>后续步骤
+## <a name="code-sample"></a>代码示例
 
-添加身份验证和/或配置
+| 示例名称           | 说明 | .NET    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Teams 消息传递扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams 消息传递扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-* [向邮件扩展添加身份验证](~/messaging-extensions/how-to/add-authentication.md)
-* [向邮件扩展添加配置](~/messaging-extensions/how-to/add-configuration-page.md)
+## <a name="see-also"></a>另请参阅
 
-部署配置
+> [!div class="nextstepaction"]
+> [向消息传递扩展添加配置](~/messaging-extensions/how-to/add-configuration-page.md)
+ 
+## <a name="next-step"></a>后续步骤
 
-* [部署应用程序包](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [向消息传递扩展添加身份验证](~/messaging-extensions/how-to/add-authentication.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+
+

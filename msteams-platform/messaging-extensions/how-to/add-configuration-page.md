@@ -1,23 +1,29 @@
 ---
-title: 将配置页面添加到您的消息扩展
+title: 向邮件扩展添加配置页面
 author: clearab
-description: 如何将配置页面添加到邮件扩展
+description: 如何将配置页添加到邮件扩展
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4d3ccf000f5a0a0296f970650d63bd978b1eaaa5
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: e927e9753ad998ecc748e7b71fddd230f0b264d1
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896511"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696204"
 ---
-# <a name="add-a-configuration-page-to-your-messaging-extension"></a>将配置页面添加到您的消息扩展
+# <a name="add-a-configuration-page-to-your-messaging-extension"></a>向邮件扩展添加配置页面
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-## <a name="bot-framework-samples"></a>Bot 框架示例
+本文档指导你了解如何创建消息传递扩展，其中包括配置页面和使用 Bot Framework Teams 搜索身份验证身份验证的自动程序服务身份验证示例。 这些示例还演示如何创建接受搜索请求的邮件扩展，并返回用户登录后的结果。
 
-GitHub 上的[**JavaScript/node.js**](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)和[**C-升/DotNetCore**](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)示例项目的团队搜索验证配置演示如何创建包含配置页和 Bot 服务身份验证的邮件扩展。 这些示例还演示如何创建邮件扩展名，以接受搜索请求并在用户登录后返回结果。
+## <a name="code-sample"></a>代码示例
+
+| 示例名称 | 说明 | .NET | Node.js|   
+|:---------------------|:--------------|:---------|:--------|
+| Bot Framework Teams 搜索身份验证配置示例  | 演示如何创建包含配置页面和自动程序服务身份验证的消息扩展。 这些示例还演示如何创建接受搜索请求的邮件扩展，并返回用户登录后的结果。|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
+
+## <a name="additional-code-sample"></a>其他代码示例
 
 > [!div class="nextstepaction"]
-> [在 GitHub 上查看更多机器人框架示例](https://github.com/microsoft/BotBuilder-Samples)
+> [在 GitHub 上查看更多 Bot Framework 示例](https://github.com/microsoft/BotBuilder-Samples)

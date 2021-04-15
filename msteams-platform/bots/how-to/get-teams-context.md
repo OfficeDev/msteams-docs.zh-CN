@@ -1,27 +1,29 @@
 ---
-title: 获取机器人的团队特定上下文
+title: 获取机器人的 Teams 特定上下文
 author: laujan
 description: 如何获取机器人的 Microsoft 团队的特定上下文，包括对话名单、详细信息和频道列表。
-ms.topic: overview
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dfbf5e1638a2397492714b1e1945721450428d63
-ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
+ms.openlocfilehash: 9703a063ccccc8409239d5826a4935070b307edd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51378334"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696324"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>获取机器人的团队特定上下文
+# <a name="get-teams-specific-context-for-your-bot"></a>获取机器人的 Teams 特定上下文
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-机器人可以访问有关团队的其他上下文数据，也可以访问安装它的聊天。 此信息可用于丰富自动程序的功能并提供更加个性化的体验。
+机器人可以访问有关安装团队或聊天的其他上下文数据。 此信息可用于丰富自动程序的功能并提供更加个性化的体验。
 
-## <a name="fetching-the-roster-or-user-profile"></a>提取名单或用户配置文件
+## <a name="fetch-the-roster-or-user-profile"></a>获取名单或用户配置文件
 
-机器人可以查询成员列表及其基本个人资料，包括 Teams 用户 ID 和 Azure Active Directory (Azure AD) 名称和 objectId 等信息。 可以使用此信息关联用户标识，例如，检查通过 Azure AD 凭据登录选项卡的用户是否是团队的成员。 下面的示例代码使用分页终结点检索名单。 对于获取对话成员，最小或最大页面大小取决于实现。 小于 50 的页面大小被视为 50，大于 500 的页面大小限定为 500。 尽管你可能仍使用非分页版本，但它在大型团队中不可靠，不应使用。 *有关*[其他信息，请参阅更改用于提取团队/聊天成员的 Teams](~/resources/team-chat-member-api-changes.md)聊天机器人 API。
+机器人可以查询成员列表及其基本用户配置文件，包括 Teams 用户 ID 和 Azure Active Directory (AAD) 信息，如名称和 objectId。 可以使用此信息来关联用户标识。 例如，要检查用户是否通过 AAD 凭据登录到选项卡，是团队的成员。 对于获取对话成员，最小或最大页面大小取决于实现。 小于 50、被视为 50 且大于 500 的页面大小限定为 500。 即使你使用非分页版本，它在大型团队中也不可靠，并且不得使用。 有关详细信息，请参阅对 Teams 自动程序 API 所做的更改 [，以提取团队或聊天成员](~/resources/team-chat-member-api-changes.md)。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下示例代码使用分页终结点提取名单：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -42,7 +44,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -79,7 +81,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 往往很稳定，但可能会更改。 当新消息到达时，机器人应验证其存储的值 `serviceUrl` 。 响应有效负载还将指示用户是常规用户还是匿名用户。
+你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。 响应有效负载还指示用户是常规用户还是匿名用户。
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -120,11 +122,15 @@ Response body
 
 * * *
 
+获取名单或用户配置文件后，可以获取单个成员的详细信息。 目前，若要检索聊天或团队的一个或多个成员的信息，请使用 Microsoft Teams 自动程序 API C# `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` TypeScript API。
+
 ## <a name="get-single-member-details"></a>获取单个成员详细信息
 
 您还可以使用特定用户的 Teams 用户 ID、UPN 或 AAD 对象 ID 检索其详细信息。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下示例代码用于获取单个成员详细信息：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -136,7 +142,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -164,9 +170,9 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/members/{userId}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 往往很稳定，但可能会更改。 当新消息到达时，机器人应验证其存储的值 `serviceUrl` 。 这可用于常规用户和匿名用户。
+你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/members/{userId}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。 这可用于常规用户和匿名用户。
 
-下面是常规用户的响应示例
+下面是常规用户的响应示例：
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
@@ -184,7 +190,7 @@ Response body
 }
 ```
 
-下面是匿名用户的响应
+下面是匿名用户的响应示例：
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
@@ -200,11 +206,15 @@ Response body
 
 * * *
 
+获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用适用于团队或 TypeScript C# Microsoft Teams `TeamsInfo.GetMemberDetailsAsync` `TeamsInfo.getTeamDetails` 自动程序 API。
+
 ## <a name="get-teams-details"></a>获取团队的详细信息
 
-在团队中安装后，机器人可以查询有关该团队的元数据，包括 Azure AD groupId。
+在团队中安装后，机器人可以查询有关该团队的元数据，包括 AAD 组 ID。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下示例代码用于获取团队的详细信息：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -222,7 +232,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -256,7 +266,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 往往很稳定，但可能会更改。 当新消息到达时，机器人应验证其存储的值 `serviceUrl` 。
+你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -271,16 +281,19 @@ Response body
 
 * * *
 
+获取团队的详细信息后，可以获取团队中的频道列表。 目前，若要检索团队中频道列表的信息，请使用 Microsoft Teams 自动程序 API C# `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` TypeScript API。
+
 ## <a name="get-the-list-of-channels-in-a-team"></a>获取团队中的频道列表
 
 机器人可以查询团队中的频道列表。
 
 > [!NOTE]
->
->* 返回默认"常规"频道的名称， `null` 以允许本地化。
->* 常规频道的频道 ID 始终与团队 ID 匹配。
+> * 返回默认"常规"频道的名称， `null` 以允许本地化。
+> * 常规频道的频道 ID 始终与团队 ID 匹配。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+以下示例代码用于获取团队中的频道列表：
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -294,7 +307,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -327,7 +340,7 @@ async def _show_channels(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}/conversations` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 往往很稳定，但可能会更改。 当新消息到达时，机器人应验证其存储的值 `serviceUrl` 。
+你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}/conversations` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -353,3 +366,8 @@ Response body
 * * *
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [通过自动程序发送和接收文件](~/bots/how-to/bots-filesv4.md)
