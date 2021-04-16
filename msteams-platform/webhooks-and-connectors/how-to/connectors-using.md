@@ -4,12 +4,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 localization_priority: Priority
 keywords: Teams o365 连接器
-ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 28c1a6e68a0ac83a2eb4785d71596814d5a859d3
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382329"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696015"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -307,7 +307,7 @@ ms.locfileid: "51382329"
 
 *另请参阅* [Office 365 连接器 - Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
-如下所示，[具有指数补偿的重试逻辑](/azure/architecture/patterns/retry)将减轻速率限制，以应对请求在一秒内超出限制的情况。 请按照[最佳做法](../../bots/how-to/rate-limit.md#best-practices)避免达到速率限制。
+如下所示，[具有指数补偿的重试逻辑](/azure/architecture/patterns/retry)将减轻速率限制，以应对请求在一秒内超出限制的情况。 请参阅 [HTTP 429 响应](../../bots/how-to/rate-limit.md#handle-http-429-responses)以避免达到速率限制。
 
 ```csharp
 // Please note that response body needs to be extracted and read 

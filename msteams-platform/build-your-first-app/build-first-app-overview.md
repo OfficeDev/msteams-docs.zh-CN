@@ -5,12 +5,12 @@ description: 了解如何开始使用 Microsoft Teams 应用开发和设置环�
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 11bc263fae28866338abf37456ccf483d9f0a9fd
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
+ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585860"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51762037"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>生成首个 Microsoft Teams 应用概述
 
@@ -87,7 +87,7 @@ Teams 应用包括以下重要部分：
 Teams 仅通过 HTTPS 连接显示应用内容。 若要在本地调试某些类型的应用（如机器人），你将了解如何使用 [ngrok](../concepts/build-and-test/debug.md#locally-hosted) 在 Teams 和你的应用之间设置安全隧道。  (生产 Teams 应用托管在云中。) 
 
 1. 安装 [Node.js](https://nodejs.org/en/)。
-1. 如果计划构建机器人或消息扩展，请安装[ngrok。](https://ngrok.com/download)
+1. 如果要构建机器人或消息传递扩展，请安装 [ngrok，](https://ngrok.com/download) 然后使用 [ngrok 创建隧道](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok)。
 1. 安装最新版本的 [Visual Studio Code](https://code.visualstudio.com/download)。  (早期版本可能无法与工具包一) 
 1. 在Visual Studio代码"中，选择左侧活动栏上的"扩展 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: "，然后安装 **Microsoft Teams Toolkit。**
 

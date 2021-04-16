@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: 如何使用 Microsoft Teams 机器人中的对话事件。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af06dba58b3784a03dbcbbc627fa38fce681eeb8
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
+ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696344"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51762030"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -1060,10 +1060,10 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [对自动程序消息的反应](#reactions-to-a-bot-message)                   | 全部   |
-| messageReaction | 将removed | [从自动程序消息中删除的反应](#reactions-removed-from-bot-message) | 全部   |
+| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 全部   |
+| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 全部 |
 
-### <a name="reactions-to-a-bot-message"></a>对自动程序消息的反应
+### <a name="reactions-added-to-bot-message"></a>添加到自动程序消息的反应
 
 以下代码显示了对自动程序消息的反应示例：
 
@@ -1283,13 +1283,104 @@ async def on_reactions_removed(
 
 * * *
 
+## <a name="installation-update-event"></a>安装更新事件
+
+当您将机器人 `installationUpdate` 安装到对话线程时，机器人会收到一个事件。 从线程卸载自动程序也会触发事件。 安装自动程序时，事件的操作字段设置为 *添加*，当卸载机器人时，操作字段设置为 *删除*。 
+ 
+> [!NOTE]
+> 升级应用程序，然后添加或删除自动程序时，该操作还会触发 `installationUpdate` 事件。 如果 **添加** 自动程序或删除自动 *程序*，则操作字段将设置为"添加升级"。 
+
+> [!IMPORTANT]
+> 安装更新事件目前为开发人员预览版，并将于 2021 年 3 月 (GA) 通用版本。 若要查看安装更新事件，可以将 Teams 客户端移动到公共开发人员预览版，并亲自将应用添加到团队或聊天中。
+
+### <a name="install-update-event"></a>安装更新事件
+使用 `installationUpdate` 事件在安装时从机器人发送介绍性消息。 此事件有助于满足隐私和数据保留要求。 还可以在卸载机器人时清理和删除用户或线程数据。
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task
+OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
+var activity = turnContext.Activity; if
+(string.Equals(activity.Action, "Add",
+StringComparison.InvariantCultureIgnoreCase)) {
+// TO:DO Installation workflow }
+else
+{ // TO:DO Uninstallation workflow
+} return; }
+```
+
+还可以将添加或删除方案的专用处理程序用作捕获事件的替代方法。
+
+```csharp
+protected override async Task
+OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
+turnContext, CancellationToken cancellationToken) {
+// TO:DO Installation workflow return;
+}
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{ 
+  "action": "add", 
+  "type": "installationUpdate", 
+  "timestamp": "2020-10-20T22:08:07.869Z", 
+  "id": "f:3033745319439849398", 
+  "channelId": "msteams", 
+  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+  "from": { 
+    "id": "sample id", 
+    "aadObjectId": "sample AAD Object ID" 
+  },
+  "conversation": { 
+    "isGroup": true, 
+    "conversationType": "channel", 
+    "tenantId": "sample tenant ID", 
+    "id": "sample conversation Id@thread.skype" 
+  }, 
+
+  "recipient": { 
+    "id": "sample reciepent bot ID", 
+    "name": "bot name" 
+  }, 
+  "entities": [ 
+    { 
+      "locale": "en", 
+      "platform": "Windows", 
+      "type": "clientInfo" 
+    } 
+  ], 
+  "channelData": { 
+    "settings": { 
+      "selectedChannel": { 
+        "id": "sample channel ID@thread.skype" 
+      } 
+    }, 
+    "channel": { 
+      "id": "sample channel ID" 
+    }, 
+    "team": { 
+      "id": "sample team ID" 
+    }, 
+    "tenant": { 
+      "id": "sample tenant ID" 
+    }, 
+    "source": { 
+      "name": "message" 
+    } 
+  }, 
+  "locale": "en" 
+}
+```
+* * *
+
 ## <a name="code-sample"></a>代码示例
 
-下表提供了一个简单的代码示例，该示例将机器人对话事件合并到 Teams 应用程序中：
-
-| 示例 | 说明 | .NET Core |
-|--------|------------- |---|
-| Teams 机器人对话事件示例 | 适用于 Teams 的 Bot Framework v4 对话自动程序示例。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
+| **示例名称** | **描述** | **.NET** |
+|-----------------|-----------------|---------|
+|Microsoft Teams 机器人对话事件 | 自动程序事件示例。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>后续步骤
 
