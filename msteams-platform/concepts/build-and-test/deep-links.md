@@ -3,12 +3,12 @@ title: 创建指向内容的深层链接
 description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: 493f9a010f7076ec97fc7da7110244645e76cfe8
-ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
+ms.openlocfilehash: afcb079873f97055c4af43323d12846294861f74
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51378327"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885057"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>在 Microsoft Teams 中创建指向内容和功能的深层链接
 
@@ -25,13 +25,13 @@ ms.locfileid: "51378327"
 > ✔直接导航到深度链接 URL。
 >
 > **Bot**：  
-> ✔正文中打开 Deeplink - 首先在浏览器中打开。  
-> ✔卡片中添加到 OpenURL 操作中的 Deeplink - 直接导航到 deeplink url。  
-> ✔卡片中的超链接标记文本 - 首先在浏览器中打开。  
+> ✔正文中打开 Deeplink：首先在浏览器中打开。  
+> ✔卡片中添加到 OpenURL 操作中的 Deeplink：直接导航到 deeplink url。  
+> ✔卡片中的超链接标记文本：首先在浏览器中打开。  
 >
 > **聊天**：  
 > ✔文本消息超链接标记：直接导航到深层链接 URL。  
-> ✔常规聊天对话中粘贴的链接 - 直接导航到深度链接 URL。
+> ✔常规聊天对话中粘贴的链接：直接导航到深度链接 URL。
 
 ## <a name="deep-linking-to-your-tab"></a>到选项卡的深层链接
 
@@ -126,7 +126,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 例如，如果你将 Office 365 用户配置文件作为卡片从自动程序返回，此深层链接可以让用户轻松地与此人聊天。
 
-### <a name="generating-a-deep-link-to-a-chat"></a>生成聊天的深层链接
+### <a name="generate-a-deep-link-to-a-chat"></a>生成聊天的深层链接
 
 对于可以在自动程序、连接器或邮件扩展卡中使用的深层链接，请使用此格式：
 
@@ -142,6 +142,38 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 若要将此深层链接与自动程序一同使用，可以在卡片按钮中指定此链接作为 URL 目标，或点击操作类型 `openUrl` 中的操作。
 
+## <a name="generate-deep-links-to-file-in-channel"></a>在通道中生成文件深层链接
+
+以下深层链接格式可用于自动程序、连接器或邮件扩展卡：
+
+`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+
+查询参数包括：
+
+* `tenantId`：租户 ID 示例，0d9b645f-597b-41f0-a2a3-ef103fbd91bb
+* `fileType`：受支持的文件类型，例如 docx、pptx、xlsx 和 pdf
+* `objectUrl`：文件的对象 URL， https://microsoft.sharepoint.com/teams/(filepath)
+* `baseUrl`：文件的基本 URL， https://microsoft.sharepoint.com/teams
+* `serviceName`：服务名称、应用 ID
+* `threadId`：threadId 是存储文件的团队的团队 ID。 它是可选的，不能为存储在用户的 OneDrive 文件夹中的文件设置。 threadId - 19：f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `groupId`：文件组 ID ae063b79-5315-4ddb-ba70-27328ba6c31e
+
+以下是指向文件的深层链接的示例格式：
+
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
+
+### <a name="serialization-of-this-object"></a>此对象的序列化：
+```
+{
+tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
+filetype: = "pptx",
+objectUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx",
+baseUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform",
+serviceName: "teams",
+threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
+groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
+}
+```
 ## <a name="deep-links-for-sharepoint-framework-tabs"></a>SharePoint 框架选项卡的深层链接
 
 以下深层链接格式可用于机器人、连接器或邮件扩展卡： `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -152,10 +184,10 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 查询参数包括：
 
-* `appID` - 清单 ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**。
-* `entityID` - 配置选项卡 时 [提供的项目 ID。](~/tabs/how-to/create-tab-pages/configuration-page.md)例如 **，tasklist123**。
-* `entityWebUrl` - 在客户端不支持呈现选项卡或 时，使用带回退 URL 的可选 https://tasklist.example.com/123 字段 https://tasklist.example.com/list123/task456 。
-* `entityName` - 选项卡中项的标签，用于显示深层链接（任务列表 123 或任务 456）。
+* `appID`：清单 ID fe4a8eba-2a31-4737-8e33-e5fae6fee194。
+* `entityID`：配置选项卡时 [提供的项目 ID。](~/tabs/how-to/create-tab-pages/configuration-page.md)例如 **，tasklist123**。
+* `entityWebUrl`：如果客户端不支持呈现选项卡或 ，则使用带回退 URL 的可选 https://tasklist.example.com/123 字段 https://tasklist.example.com/list123/task456 。
+* `entityName`：选项卡中项的标签，用于显示深层链接（任务列表 123 或任务 456）。
 
 示例：https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
@@ -175,7 +207,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 查询参数包括：
 
 * `attendees`：可选的以逗号分隔的用户 ID 列表，表示会议与会者。 执行该操作的用户是会议组织者。 用户 ID 字段当前仅支持 Azure AD UserPrincipalName，通常为电子邮件地址。
-* `startTime`：事件的可选开始时间。 这应该采用 [长 ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)格式，例如"2018-03-12T23：55：25+02：00"。
+* `startTime`：事件的可选开始时间。 这应该采用 [长 ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)格式，例如 *2018-03-12T23：55：25+02：00。*
 * `endTime`：事件的可选结束时间，也采用 ISO 8601 格式。
 * `subject`：会议主题的可选字段。
 * `content`：会议详细信息字段的可选字段。

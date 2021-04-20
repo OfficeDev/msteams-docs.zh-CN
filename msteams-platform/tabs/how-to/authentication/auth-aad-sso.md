@@ -3,12 +3,12 @@ title: 选项卡的单一登录支持
 description: '介绍 SSO (单一) '
 ms.topic: how-to
 keywords: teams 身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 6be04617961d45763e5c812149d47a126fc4dae3
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596679"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885064"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
@@ -66,7 +66,6 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 > * 仅支持用户级别的图形 API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果必须有权访问其他 Graph 范围（如 `User.Read` 或 `Mail.Read` ），请参阅 [建议的解决方法](#apps-that-require-additional-graph-scopes)。
 > * 应用程序的域名与为 AAD 应用程序注册的域名相同，这一点很重要。
 > * 目前不支持每个应用多个域。
-> * 使用域 `azurewebsites.net` 的应用程序不受支持，因为它太常见，并且可能会带来安全风险。
 
 **通过 AAD 门户注册应用**
 
@@ -162,7 +161,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ## <a name="code-sample"></a>代码示例
 
-|**示例名称**|**Description**|**C#**|**Node.js**|
+|**示例名称**|**说明**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | 选项卡 SSO |适用于选项卡 Azure AD SSO 的 Microsoft Teams 示例应用| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[查看](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 

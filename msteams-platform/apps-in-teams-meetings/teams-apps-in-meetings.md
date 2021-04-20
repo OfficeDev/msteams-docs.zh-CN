@@ -5,12 +5,12 @@ description: 基于参与者和用户角色的 Teams 会议中应用概述
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: ac4e270090dd89d370d37de88b8cba552b77a5cb
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 201fa58cc375440cf6c495028135e32fd51f740c
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382336"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885078"
 ---
 # <a name="apps-in-teams-meetings"></a>Teams 会议中的应用
 
@@ -74,11 +74,11 @@ Teams 的会议应用扩展性基于以下概念：
 
 ✔权限用户可以在会议期间添加应用。
 
-✔在会议上下文中加载时，应用可以利用 Teams 客户端 SDK 访问 、 和 `meetingId` 以 `userMri` `frameContext` 适当呈现体验。
+✔在会议上下文中加载时，应用可以利用 Teams 客户端 SDK 访问 、 和 以 `meetingId` `userMri` `frameContext` 适当呈现体验。
 
 ✔导出调查或投票的结果会通知用户结果已成功下载。
 
-✔在 Teams 会议侧面板或会议内对话框中显示应用。 使用会议内对话框为会议参与者展示可操作内容。 *请参阅*[创建 Teams 应用会议](create-apps-for-teams-meetings.md)。
+✔在 Teams 会议侧面板或会议内对话框中显示应用。 使用"会议内"对话框为会议参与者展示可操作内容。 有关详细信息，请参阅为 [Teams 会议创建应用](create-apps-for-teams-meetings.md)。
 
    > [!NOTE]
    > 应用清单指定你的选项卡已 [针对](create-apps-for-teams-meetings.md#during-a-meeting)侧面板进行了优化，即它的显示位置。 它还可以是共享托盘体验的一部分，但需遵循指定的设计准则。
@@ -145,7 +145,18 @@ Teams 的会议应用扩展性基于以下概念：
 * **租户内**：租户内用户属于组织，拥有租户的 Azure Active Directory (AAD) 凭据。 他们通常是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
 * **来宾**：来宾是受邀访问组织租户中的 Teams 或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有与本机团队成员相同的 Teams 功能，可以访问团队聊天、会议和文件。 来宾用户可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams [中的来宾访问](/microsoftteams/guest-access)。
 * **联盟或外部**：联盟用户是另一个组织中受邀加入会议的外部 Teams 用户。 这些用户具有联盟伙伴的有效凭据，并且由 Teams 授权。 他们无法访问你的团队或组织的其他共享资源。 对于外部用户来说，来宾访问是访问团队和频道的更好选择。 有关详细信息，请参阅在 [Teams 中管理外部访问](/microsoftteams/manage-external-access)。
-* **匿名**：匿名用户没有 AAD 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会在会议中预测。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
+* **匿名**：匿名用户没有 AAD 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会在会议中预测。 匿名用户不能是组织者，但可以是演示者或与会者。
+
+> [!NOTE]
+> 匿名用户继承全局默认用户级别应用程序权限策略。 有关详细信息，请参阅管理 [应用](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)。
+
+下表提供了用户类型以及每个用户可以访问的功能：
+
+| 用户类型 | 选项卡 | 机器人 | 消息传递扩展 | 自适应卡 | 任务模块 | 会议内的对话框 |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| 匿名用户 | 不可用 | 不可用 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 不可用 |
+| 属于租户 AAD 的来宾 | 允许交互。 不允许创建、更新和删除。 | 不可用 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 可用 |
+| Federated | 不可用 | 不可用 | 不可用 | 不可用 | 不可用 | 不可用 |
 
 ## <a name="see-also"></a>另请参阅
 

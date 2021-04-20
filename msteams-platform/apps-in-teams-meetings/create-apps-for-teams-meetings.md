@@ -5,12 +5,12 @@ description: 创建团队会议应用
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 267c90792e07b483c92965bc61e46fca33573841
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: c9410e142c6831fa0aa1b1f5307d92d67739be0e
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654369"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885071"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -36,7 +36,7 @@ ms.locfileid: "51654369"
 
 ## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
-|API|Description|请求|Source|
+|API|说明|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在 Teams 选项卡中显示相关内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams 客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -54,7 +54,7 @@ ms.locfileid: "51654369"
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|Description|
+|值|类型|必需|说明|
 |---|---|----|---|
 |**meetingId**| string | 是 | 会议标识符通过 Bot Invoke 和 Teams 客户端 SDK 提供。|
 |**participantId**| string | 是 | 参与者 ID 是用户 ID。 它在选项卡 SSO、Bot Invoke 和 Teams 客户端 SDK 中可用。 建议从选项卡 SSO 获取参与者 ID。 |
@@ -134,7 +134,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|Description|
+|响应代码|说明|
 |---|---|
 | **403** | 不允许应用获取参与者信息。 这是最常见的错误响应，如果会议未安装应用，将触发此错误响应。 例如，如果租户管理员禁用应用或在实时网站迁移期间阻止应用。|
 | **200** | 成功检索参与者信息。|
@@ -152,7 +152,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 #### <a name="query-parameters"></a>查询参数
 
-|值|类型|必需|Description|
+|值|类型|必需|说明|
 |---|---|----|---|
 |**conversationId**| string | 是 | 对话标识符作为自动程序调用的一部分提供 |
 
@@ -218,7 +218,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|Description|
+|响应代码|说明|
 |---|---|
 | **201** | 具有信号的活动已成功发送 |
 | **401** | 应用使用无效令牌进行响应。 |
@@ -263,7 +263,7 @@ POST /v3/conversations/{conversationId}/activities
 
 选项卡 `context` 和 `scopes` 属性使你可以确定应用必须出现在何处。 或 作用域 `team` `groupchat` 中的选项卡可以具有多个上下文。 以下是可以使用所有或部分 `context` 值的 属性的值：
 
-|值|Description|
+|值|说明|
 |---|---|
 | **channelTab** | 团队频道标题中的选项卡。 |
 | **privateChatTab** | 一组不在团队或会议上下文中的用户之间的群聊标题中的选项卡。 |
@@ -322,6 +322,9 @@ POST /v3/conversations/{conversationId}/activities
 
 当用户在会议视图中并且用户可以发布撰写邮件扩展卡时，邮件扩展将按预期方式工作。 AppName 会议内是一个工具提示，用于指出会议 U 栏中的应用名称。
 
+> [!NOTE]
+> 使用 Teams [SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 版本 1.9.0 上载侧面板，因为之前的版本不支持侧面板。
+
 #### <a name="in-meeting-dialog"></a>会议内的对话框
 
 会议内对话框可用于在会议期间与参与者互动，并收集会议期间的信息或反馈。 使用 [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API 指示必须触发气泡通知。 作为通知请求有效负载的一部分，请包含要显示内容的托管 URL。
@@ -373,7 +376,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | Description | .NET | Node.js |
+|示例名称 | 说明 | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | 会议可扩展性 | 用于传递令牌的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
 | 会议内容气泡机器人 | 用于与会议内容气泡机器人交互的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
