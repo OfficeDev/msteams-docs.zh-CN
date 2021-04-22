@@ -2,14 +2,15 @@
 title: 卡片中的文本格式
 description: 介绍 Microsoft Teams 中的卡片文本格式
 keywords: teams 自动程序卡格式
+localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696533"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922515"
 ---
 # <a name="format-cards-in-teams"></a>在 Teams 中设置卡片格式
 
@@ -122,10 +123,11 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 
 #### <a name="constructing-mentions"></a>构造提及
 
-若要在自适应卡片中包括提及，应用需要包括以下元素
+若要在自适应卡片中包括提及，你的应用需要包括以下元素：
 
-* `<at>username</at>` 在支持的自适应卡片元素中
-* `mention`卡片内容中属性内的对象，其中包括被提及用户的 `msteams` Teams 用户 ID
+* `<at>username</at>` 在支持的自适应卡片元素中。
+* `mention`卡片内容 `msteams` 中属性内的对象，其中包括被提及用户的 Teams 用户 ID。
+* `userId`是自动程序 ID 和特定用户所特有的。 它可用于@mention用户。 `userId`可以使用获取用户 ID 中提到的选项之[一来检索](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>带提及功能的示例自适应卡片
 
@@ -157,7 +159,6 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
   }
 }
 ```
-
 
 ### <a name="information-masking-in-adaptive-cards"></a>自适应卡片中的信息屏蔽
 使用信息屏蔽属性可以屏蔽特定信息，如自适应卡片输入元素内用户的密码或 [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) 敏感信息。 

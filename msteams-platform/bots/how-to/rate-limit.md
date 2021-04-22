@@ -3,12 +3,12 @@ title: 通过团队中的速率限制来优化你的智能机器人
 description: Microsoft Teams 中的速率限制和最佳做法
 ms.topic: conceptual
 keywords: teams 机器人速率限制
-ms.openlocfilehash: 245c51fc736e5f888299535c3e50ec6232183623
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696995"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922501"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 
@@ -113,10 +113,12 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 ## <a name="per-bot-per-thread-limit"></a>每个机器人每线程限制
 
->[!NOTE]
-> 在服务级别拆分邮件会导致每秒请求数超过 RPS () 。 如果担心接近限制，则必须实施 [退约策略](#backoff-example)。 本节中提供的值仅用于估计。
+每个线程每个机器人限制控制允许机器人在单个对话中生成的流量。 聊天机器人和用户、群聊或团队中的频道之间的对话为 1：1。 因此，如果应用程序向每个用户发送一条自动程序消息，则线程限制不会受到限制。
 
-每个线程的自动程序限制控制允许机器人在单个对话上生成的流量。 此处的对话是机器人和用户、群聊或团队中的频道之间的一对一对话。
+>[!NOTE]
+> * 3600 秒和 1800 个操作线程限制仅适用于向单个用户发送多个自动程序消息的情况。 
+> * 每个租户每个应用的全局限制为每秒 30 个请求数 (RPS) 。 因此，每秒自动程序消息总数不能超过线程限制。
+> * 服务级别的邮件拆分结果高于预期的 RPS。 如果担心接近限制，则必须实施 [退约策略](#backoff-example)。 本节中提供的值仅用于估计。
 
 下表提供了每个机器人每个线程的限制：
 
