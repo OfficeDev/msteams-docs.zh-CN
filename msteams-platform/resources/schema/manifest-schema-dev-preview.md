@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 清单支持的架构
 ms.topic: reference
 keywords: teams 清单架构开发者预览版
 ms.date: 05/20/2019
-ms.openlocfilehash: f8c1842d6b9f9d07d8743f5bf7f868cacbd282af
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: adb178000d909c9031e4b4df187bbf6f74f6e783
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634486"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946471"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Microsoft Teams 的开发人员预览清单架构
 
@@ -195,7 +195,13 @@ Microsoft Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 �
      "websiteUrl",
      "privacyUrl",
      "termsOfUseUrl"        
-  ]              
+  ],
+  "defaultInstallScope": "meetings",
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -322,7 +328,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
-|`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
+|`canUpdateConfiguration`|布尔|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
 |`sharePointPreviewImage`|String|2048||指向用于 SharePoint 的选项卡预览图像的相对文件路径。 大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义选项卡在 SharePoint 中的可用方法。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
@@ -396,7 +402,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 [ID 相同](#id)。|
-|`canUpdateConfiguration`|Boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false` 。|
+|`canUpdateConfiguration`|布尔|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
 |`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -411,9 +417,9 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |`type`|字符串|64 个字符||命令的类型。 或 `query` `action` 之一。 默认值： `query`|
 |`title`|String|32 个字符|✔|用户友好命令名称|
 |`description`|String|128 个字符||向用户显示以指示此命令用途的说明|
-|`initialRun`|Boolean|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
+|`initialRun`|布尔|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
 |`context`|Array of Strings|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||一个布尔值，指示它应动态提取任务模块|
+|`fetchTask`|布尔|||一个布尔值，指示它应动态提取任务模块|
 |`taskInfo`|Object|||指定在使用消息传递扩展命令时要预加载的任务模块|
 |`taskInfo.title`|String|64||初始对话框标题|
 |`taskInfo.width`|String|||对话框宽度 - 一个数字（以像素为单位）或默认布局，例如"large"、"medium"或"small"|
@@ -499,4 +505,28 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 * `privacyUrl`：它是 https:// 隐私策略的 URL。
 * `termsOfUseUrl`：它是 https:// 使用条款的 URL。
 
+## <a name="defaultinstallscope"></a>defaultInstallScope
+
+**可选** - string
+
+指定默认情况下为此应用定义的安装范围。 定义的范围将是当用户尝试添加应用时按钮上显示的选项。 选项有：
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
+
+## <a name="defaultgroupcapability"></a>defaultGroupCapability
+
+**可选** - object
+
+选择组安装范围后，它将在用户安装应用时定义默认功能。 选项有：
+* `team`
+* `groupchat`
+* `meetings`
+ 
+|名称| 类型| 最大大小 | 必需 | 说明|
+|---|---|---|---|---|
+|`team`|string|||当选择的安装范围为 `team` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
+|`groupchat`|string|||当选择的安装范围为 `groupchat` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
+|`meetings`|string|||当选择的安装范围为 `meetings` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
 

@@ -224,6 +224,8 @@
           href: bots/how-to/format-your-bot-messages.md
         - name: 更新和删除机器人消息
           href: bots/how-to/update-and-delete-bot-messages.md
+        - name: 请求自动程序的标题
+          href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: 获取机器人的背景资料
       href: bots/how-to/get-teams-context.md
     - name: 发送和接收文件

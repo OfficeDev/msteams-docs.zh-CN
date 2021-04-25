@@ -3,12 +3,12 @@ title: 最近更新
 description: 介绍 Microsoft Teams 中所有新的开发人员功能
 ms.topic: reference
 keywords: teams 新增功能
-ms.openlocfilehash: 298305f11788963817ddacfabbc052297d3eaabe
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 8d38c5a4f79b557209eedab6747517e689248874
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634528"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946457"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中针对开发人员的新增功能
 
@@ -19,12 +19,12 @@ ms.locfileid: "51634528"
 
 更改日志列出了对 Microsoft Teams 平台和此文档集的更改。 有时，条目可用于引起对 Teams 开发人员感兴趣的新功能的注意。
 
-| **Date** | **Notes** | **已更改的主题** |
+| **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
 |04/08/2021| 应用自定义功能现已在开发人员预览版中提供。|[设计团队应用概述](concepts/design/design-teams-app-overview.md#app-customization)[、App studio 概述](concepts/build-and-test/app-studio-overview.md#connectors)和[清单架构](resources/schema/manifest-schema-dev-preview.md) |
-|03/18/2021|注意 **：请更新到 Bot Framework SDK 的版本 4.10** 或以上版本，因为我们已开始弃用 和 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 的过程。 | [团队/聊天成员的机器人 API 更改](resources/team-chat-member-api-changes.md) |
+|03/18/2021|注意：更新到 Bot Framework SDK 版本 4.10 或以上版本，因为我们已开始弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 和 的过程。 | [团队/聊天成员的机器人 API 更改](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意：选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |
-|03/05/2021 | 默认安装范围和组功能在开发人员预览版中。| [默认安装范围和组功能](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|03/05/2021|默认安装范围和组功能在开发人员预览版中。| [默认安装范围和组功能](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|对个人应用选项卡重新排序|[对个人应用中的聊天选项卡重新排序](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|自适应卡片中的信息屏蔽在开发人员预览版中。| [自适应卡片中的信息屏蔽](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|新增：添加了位置功能。 <br/> 更新：位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能和 QR 或条形码扫描仪功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md)、 [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)、 [集成 QR 或条形码](concepts/device-capabilities/qr-barcode-scanner-capability.md)扫描仪功能 、 [集成位置功能](concepts/device-capabilities/location-capability.md) |
