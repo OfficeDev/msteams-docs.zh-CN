@@ -3,12 +3,12 @@ title: 通话和联机会议机器人
 description: 了解 Microsoft Teams 应用如何使用语音和视频与用户交互，使用 Microsoft Graph API 进行通话和联机会议。
 ms.topic: conceptual
 keywords: 呼叫呼叫 音频视频 IVR 语音联机会议
-ms.openlocfilehash: cac9e31c39f35aeb3ea72e5e8964441f0a1c38f5
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: be3286afe739c8b1d99af896ad64a3963875768d
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697103"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995979"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
 
@@ -85,6 +85,12 @@ Teams 中的通话可以纯音频或音频和视频。 使用术语呼叫代替�
     例如，知道用户何时按 **0** 到达接线员。
 
 * **应用程序托管的媒体**：若要让机器人直接访问媒体，它需要特定的 Graph 权限。 在机器人拥有权限后，实时媒体[](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)库和 Graph 调用[SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder)可帮助你生成丰富的实时媒体和通话机器人。 必须在 Windows 环境中托管应用程序托管的机器人。 有关详细信息，请参阅 [应用程序托管的媒体机器人](./requirements-considerations-application-hosted-media-bots.md)。
+
+## <a name="code-sample"></a>代码示例
+
+| **示例名称** | **说明** | **Graph** |
+|---------------|----------|--------|
+| 图形通信 | 图形通信以与 Microsoft 的通信平台交互。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
 ## <a name="see-also"></a>另请参阅
 

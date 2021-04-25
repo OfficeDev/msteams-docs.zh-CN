@@ -4,12 +4,12 @@ author: clearab
 description: 如何从 Microsoft Teams 应用中的消息扩展响应搜索命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2cc53796deddb47e8dbce86a5b02f4d80a1b91e0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4dff59d0bd923618a3079c81cbb6f9e7aea2bab4
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696190"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996007"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -110,6 +110,7 @@ Teams 支持以下卡片类型：
 
 * 在 `preview` 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
 * 从附件的基本 `title` 、 `text` 和 `image` 属性中提取。 只有在属性未设置且这些属性可用 `preview` 时，才使用这些属性。
+* 预览卡片不支持 Hero 或 Thumbnail 卡片按钮和点击操作（调用除外）。
 
 可以使用自适应卡片或 Office 365 连接器卡片的预览属性在结果列表中显示该卡片的预览。 如果结果已是 Hero 或 Thumbnail 卡片，则不需要预览属性。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不显示任何内容。
 

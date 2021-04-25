@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: 如何更新和删除从 Microsoft Teams 自动程序发送的消息
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3b94c3f0851c62adb905121afb47389144bccffd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a2836d59c22b9784f1f1a0c84306072bb6a97d3e
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696311"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996000"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>更新和删除从自动程序发送的消息
 
@@ -45,20 +45,19 @@ await turnContext.updateActivity(newActivity);
 
 # <a name="python"></a>[Python](#tab/python)
 
-若要更新现有消息，请用现有活动 ID 将新对象 `Activity` 传递到 `update_activity` 类的 `TurnContext` 方法。 有关详细信息，请参阅 [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true)。
+若要更新现有消息，请用现有活动 ID 将新对象 `Activity` 传递到 `update_activity` 类的 `TurnContext` 方法。 请参阅 [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true)。
 
 ```python
-
 new_activity = MessageFactory.text("The new text for the activity")
 new_activity.id = activity_id
 update_result = await context.update_activity(new_activity)
-
 ```
 
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
 > [!NOTE]
-> 可以使用任何 Web 编程技术开发 Teams 应用，并直接调用[机器人连接器服务 REST API。](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) 为此，必须使用 [API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) 请求实现身份验证安全过程。
+
+> 可以使用任何 Web 编程技术开发 Teams 应用，并直接调用[Bot Connector 服务 REST API。](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) 为此，你需要使用 [API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) 请求实现身份验证安全过程。
 
 若要更新对话中的现有活动，请包含 `conversationId` 请求 `activityId` 终结点中的 和 。 若要完成此方案，您必须缓存原始 Post 调用返回的活动 ID。
 
@@ -66,7 +65,7 @@ update_result = await context.update_activity(new_activity)
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|请求正文 | 返回 |
+| **Request 和 Responce** | **说明** |
 |----|----|
 | 活动[对象](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)对象 |
 
@@ -79,7 +78,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 若要更新按钮选择上的现有卡片，可以使用 `ReplyToId` 传入活动。
 
-# <a name="c"></a>[C#](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 若要更新按钮选择上的现有卡片，请用更新的卡片将新对象作为活动 ID 传递给 类 `Activity` `ReplyToId` 的 `UpdateActivityAsync` `TurnContext` 方法。 请参阅 [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true)。
 
@@ -101,13 +100,12 @@ await context.updateActivity(message);
 
 # <a name="python"></a>[Python](#tab/python)
 
-若要更新按钮选择上的现有卡片，请用更新的卡片将新对象作为活动 ID 传递给 类 `Activity` `reply_to_id` 的 `update_activity` `TurnContext` 方法。 请参阅 [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true)。
+若要在按钮单击时更新现有卡片，请用更新的卡片将新对象作为活动 ID 传递给 类 `Activity` `reply_to_id` 的 `update_activity` `TurnContext` 方法。 请参阅 [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true)。
 
 ```python
 updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
 updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
-
 ```
 
 # <a name="rest-api"></a>[REST API](#tab/rest)
@@ -171,7 +169,7 @@ for each activity_id in _list:
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|请求 |响应 |
+| **Request 和 Responce** | **说明** |
 |----|----|
 | 不适用 | 指示操作结果的 HTTP 状态代码。 响应正文中未指定任何项。 |
 
@@ -181,12 +179,11 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 以下代码示例演示了对话的基础知识：
 
-| 示例名称           | 说明                                                                      | .NET    | Node.js   | Python  |
-|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|Teams 对话基础知识  | 演示 Teams 中对话的基础知识，包括消息更新和删除。|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+|----------------------|-----------------|--------|-------------|--------|
+| Teams 对话基础知识  | 演示 Teams 中对话的基础知识，包括消息更新和删除。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
-

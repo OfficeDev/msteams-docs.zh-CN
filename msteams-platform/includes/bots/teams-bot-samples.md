@@ -1,8 +1,8 @@
-## <a name="teams-bot-samples"></a>Teams 机器人示例
+## <a name="code-sample"></a>代码示例
 
 有关演示此功能的完整工作示例，请参阅以下适用于 Bot Framework 的 Teams 示例：
 
-| 示例 | 说明 | .NET Core | Node.js | Python |
+| **示例** | **说明** | **.NET** | **JavaScript** | **Python** |
 |--------|------------- |---|---|---|
 | Teams 对话自动程序 | 消息和对话事件处理。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot) |
 | 使用 OAuthPrompt 进行身份验证| Bot Framework v4 中的身份验证和基本消息。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth) |

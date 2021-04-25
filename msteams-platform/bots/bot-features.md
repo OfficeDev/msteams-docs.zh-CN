@@ -4,19 +4,19 @@ author: clearab
 description: Microsoft Teams 中的机器人和 SDK。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c76a3300229e038e0d6a93d2701b3b3c5a1286da
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b38a40cfd88c9b5879f6d777f50b919125ce9ec9
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697230"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995972"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
 若要创建在 Microsoft Teams 中工作的自动程序，可以使用下列方法之一：
-* 基于 Microsoft Bot Framework SDK 构建的现有自动程序
-* Power Virtual Agents chatbot 服务
-* Webhook 和连接器
+* 基于 Microsoft Bot Framework SDK 构建的现有机器人。
+* Power Virtual Agents chatbot 服务。
+* Webhook 和连接器。
 
 ## <a name="bots-and-the-microsoft-bot-framework"></a>机器人和 Microsoft Bot Framework
 

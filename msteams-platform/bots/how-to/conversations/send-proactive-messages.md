@@ -4,12 +4,12 @@ description: 介绍如何使用 Microsoft Teams 自动程序发送主动邮件�
 ms.topic: conceptual
 ms.author: anclear
 Keywords: 发送消息获取用户 ID 通道 ID 对话 ID
-ms.openlocfilehash: 25d5c6a1b51240c87ff0d8610a965d30f6b01095
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 44e8f3335b7ade4f4a8b1e6192802d932cbd39ed
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697051"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995839"
 ---
 # <a name="send-proactive-messages"></a>发送主动邮件
 
@@ -31,6 +31,8 @@ ms.locfileid: "51697051"
 1. [创建对话](#create-the-conversation)（如果需要）。
 1. [获取对话 ID](#get-the-conversation-id)。
 1. [发送邮件](#send-the-message)。
+
+示例部分的代码段用于创建一[](#samples)对一对话。 有关一对一对话和组或频道的完整工作示例的链接，请参阅 [代码示例](#code-sample)。
 
 要有效地使用主动邮件，请参阅 [主动邮件的最佳实践](#best-practices-for-proactive-messaging)。 对于某些方案，你必须使用 Graph 主动 [安装应用](#proactively-install-your-app-using-graph)。 示例部分的代码段用于创建一[](#samples)对一对话。 有关一对一对话以及组或频道的完整工作示例，请参阅 [代码示例](#code-sample)。
 
@@ -63,6 +65,8 @@ ms.locfileid: "51697051"
 获取相应的地址信息后，可以发送邮件。
 
 ## <a name="send-the-message"></a>发送邮件
+
+现在，您具有正确的地址信息，您可以发送邮件。 如果你使用的是 SDK，你将使用 方法以及 和 进行直接 `continueConversation` `conversationId` API `tenantId` 调用。 必须正确设置 `conversationParameters` ，以成功发送邮件。 请参阅 [示例](#samples) 部分或使用代码示例部分中列出的示例 [之](#code-sample) 一。
 
 如果使用的是 SDK，则必须使用 和 方法，并直接 `continueConversation` `conversationId` 调用 `tenantId` API 来发送消息。 必须正确设置 `conversationParameters` ，以成功发送邮件。
 
@@ -98,8 +102,8 @@ ms.locfileid: "51697051"
 
 使用主动消息向用户发送计划邮件时，请验证时区已更新到其时区。 这可确保在相关时间将邮件传递给用户。 计划邮件通常包括：
 
-* **用户为什么收到邮件**：让用户轻松了解收到邮件的原因。
-* **用户接下来可以做什么**：用户可以根据邮件内容采取所需操作。
+* 用户为什么收到邮件：让用户轻松了解收到邮件的原因。
+* 用户接下来可以做什么：用户可以根据邮件内容采取所需操作。
 
 ## <a name="proactively-install-your-app-using-graph"></a>使用 Graph 主动安装应用
 
@@ -262,10 +266,10 @@ POST /v3/conversations
 
 下表提供了一个简单的代码示例，该示例将基本对话流合并到 Teams 应用程序中，以及如何在 Teams 中的频道中创建新的对话线程：
 
-| 示例名称           | 说明                                                                      | .NET    | Node.js   | Python  |
-|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|Teams 对话基础知识  | 演示 Teams 中对话的基础知识，包括发送一对一主动消息。|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
-|在频道中启动新线程     | 演示在频道中创建新线程。 |[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+|---------------|--------------|--------|-------------|--------|
+| Teams 对话基础知识  | 演示 Teams 中对话的基础知识，包括发送一对一主动消息。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| 在频道中启动新线程 | 演示在频道中创建新线程。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
 ### <a name="additional-code-sample"></a>其他代码示例
 
@@ -275,4 +279,5 @@ POST /v3/conversations
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [设置你的智能机器人邮件格式](~/bots/how-to/format-your-bot-messages.md)
+> [**Teams 主动邮件代码示例**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
+> [设置自动程序消息的格式](~/bots/how-to/format-your-bot-messages.md)

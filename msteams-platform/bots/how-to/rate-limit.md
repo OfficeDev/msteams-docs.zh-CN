@@ -3,12 +3,12 @@ title: 通过团队中的速率限制来优化你的智能机器人
 description: Microsoft Teams 中的速率限制和最佳做法
 ms.topic: conceptual
 keywords: teams 机器人速率限制
-ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: 9a30d86a82a591c4a1125632fa7409780effb269
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922501"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995853"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 
@@ -48,6 +48,9 @@ catch (HttpOperationException ex)
 建议将指数退约与随机抖动一同处理 429。 这将确保多个请求不会在重试时引入冲突。
 
 处理响应 `HTTP 429` 后，可以浏览检测暂时性异常的示例。
+
+> [!NOTE]
+> 除了重新设置错误代码 **429** 之外，还必须重试错误代码 **412、502** 和 **504。** 
 
 ## <a name="detect-transient-exceptions-example"></a>检测暂时性异常示例
 

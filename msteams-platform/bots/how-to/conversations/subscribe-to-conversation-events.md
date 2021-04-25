@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: 如何使用 Microsoft Teams 机器人中的对话事件。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 0736ce07f91f0f33505c5ac3fa031a201d01c2f9
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762030"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996028"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -1296,7 +1296,7 @@ async def on_reactions_removed(
 ### <a name="install-update-event"></a>安装更新事件
 使用 `installationUpdate` 事件在安装时从机器人发送介绍性消息。 此事件有助于满足隐私和数据保留要求。 还可以在卸载机器人时清理和删除用户或线程数据。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task
@@ -1378,9 +1378,9 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **描述** | **.NET** |
-|-----------------|-----------------|---------|
-|Microsoft Teams 机器人对话事件 | 自动程序事件示例。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+|----------|-----------------|----------|
+| 对话机器人 | 机器人对话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>后续步骤
 

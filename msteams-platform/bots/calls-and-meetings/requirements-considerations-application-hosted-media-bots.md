@@ -4,12 +4,12 @@ description: 了解与为 Microsoft Teams 创建应用程序托管的媒体机�
 ms.topic: conceptual
 keywords: 应用程序托管的媒体 Windows 服务器 azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: dfd0b3a2ba9020622a2926c4fc395c060599afb6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4a191bbde6b592c74930069d794ff37273785c1b
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697079"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995951"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 
@@ -60,6 +60,18 @@ ms.locfileid: "51697079"
 
 应用程序托管的媒体机器人需要以下可伸缩性和性能注意事项：
 
+## <a name="code-sample"></a>代码示例
+
+应用程序托管的媒体机器人示例如下所示：
+
+| **示例名称** | **说明** | **Graph** |
+|------------|-------------|-----------|
+| 本地媒体示例 | 说明不同本地媒体方案的示例。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| 远程媒体示例 | 演示不同远程媒体方案的示例。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+
+## <a name="see-also"></a>另请参阅
+
+- [Graph 调用 SDK 文档](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - 机器人需要比消息机器人更多的计算和网络带宽容量，并且会产生更高的运营成本。 实时媒体自动程序开发人员必须仔细衡量机器人的可伸缩性，并确保机器人接受的并发呼叫数不会超过它可以管理的时间。 如果使用原始 RGB24 或 NV12 视频格式，启用视频的机器人只能维持每个 CPU 内核的一个或两个并发媒体会话。
 - 实时媒体平台当前不会利用 VM 上提供的任何图形处理单元 (GPU) 以对 H.264 视频编码或解码进行非负载处理。 相反，视频编码和解码在 CPU 上的软件中完成。 如果 GPU 可用，则机器人会利用它来呈现自己的图形，例如，如果机器人使用的是 3D 图形引擎。
 - 托管实时媒体机器人的 VM 实例必须至少具有 2 个 CPU 内核。 对于 Azure，建议使用 Dv2 系列虚拟机。 对于其他 Azure VM 类型，具有 4 个虚拟 CPU (vCPU) 是所需的最小大小。 有关 Azure VM 类型详细信息，请参阅 [Azure 文档](/azure/virtual-machines/windows/sizes-general)。
