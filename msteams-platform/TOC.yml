@@ -238,7 +238,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: 实时媒体通话与会议
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: 注册通话机器人
+        - name: 注册通话和会议智能机器人
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: 来电通知
           href: bots/calls-and-meetings/call-notifications.md
@@ -384,6 +384,8 @@
           href: graph-api/rsc/test-rsc-json-file.md
 - name: 发布应用程序
   items:
+    - name: 配置默认安装选项
+      href: concepts/deploy-and-publish/add-default-install-scope.md
     - name: 选择如何发布应用程序
       href: concepts/deploy-and-publish/overview.md
     - name: 创建应用包
