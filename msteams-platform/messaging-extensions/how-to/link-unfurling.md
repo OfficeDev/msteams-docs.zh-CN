@@ -2,14 +2,15 @@
 title: 链接展开
 author: clearab
 description: 如何在 Microsoft Teams 应用中使用消息传递扩展执行链接取消链接。
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 2037e1e9a903cfe90d0dd8866722b0d10fa156b2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696226"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019816"
 ---
 # <a name="link-unfurling"></a>链接展开
 

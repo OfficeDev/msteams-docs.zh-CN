@@ -2,13 +2,14 @@
 title: 为机器人提供单一登录支持
 description: 介绍如何获取用户令牌。 目前，机器人开发人员可以使用登录卡或具有 OAuth 卡支持的 azure 自动程序服务。
 keywords: 令牌， 用户令牌， 自动程序 SSO 支持
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: dad36f52a3e23c00f8725e2e906308339629bb05
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: 8da2591c3685b5bd3dffd272abd77babe94ab04c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753530"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020047"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>单一登录 (SSO) 自动程序支持
 
@@ -300,6 +301,6 @@ Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身
 4. 使用配置文件映像压缩清单，然后将其安装在 Teams 中。
 
 ## <a name="code-sample"></a>代码示例
-|**示例名称** | **说明** |**.NET** | 
+|**示例名称** | **描述** |**.NET** | 
 |----------------|-----------------|--------------|
 |自动程序框架 SDK | 使用自动程序框架 SDK 的示例。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|

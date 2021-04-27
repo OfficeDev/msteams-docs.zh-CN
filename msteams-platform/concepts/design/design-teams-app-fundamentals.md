@@ -1,19 +1,20 @@
 ---
-title: 设计应用程序-了解基础知识
-description: 了解有关设计 Microsoft 团队应用程序的基础知识，包括布局、配色方案等。
+title: 设计应用 - 了解基础
+description: 了解设计 Microsoft Teams 应用的基础知识，包括布局、配色方案等。
 author: heath-hamilton
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 91191f9d431fc45fae41c58e24fdf142e5af0b25
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: c0edfe7ac538fc27b7f255cdd09d2853f6f4cebc
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605804"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020770"
 ---
-# <a name="microsoft-teams-app-design-fundamentals"></a>Microsoft 团队应用程序设计基础
+# <a name="microsoft-teams-app-design-fundamentals"></a>Microsoft Teams 应用设计基础
 
-快速了解团队应用程序设计的基础知识。 您可以在 <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft 团队 UI 工具包 (Figma) </a>中找到全面的指导和示例。
+快速了解 Teams 应用设计的基础。 可以在 Microsoft Teams UI 工具包和图图 (<a href="https://www.figma.com/community/file/916836509871353159" target="_blank">中) 。 </a>
 
 ## <a name="layout"></a>布局
 
@@ -21,31 +22,31 @@ ms.locfileid: "49605804"
 
    :::column span="3":::
 
-      团队依赖网格布局以确保设计组件之间的一致且优雅的关系。 网格的4像素基本单元允许组件在团队中的所有显示大小之间一致地扩展。
+      Teams 依赖网格布局来确保设计组件之间保持一致和美观的关系。 网格的 4 像素基本单位允许组件在 Teams 中跨所有显示大小一致缩放。
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整布局指南 (Figma) </a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅图 (图的完整) </a>
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Microsoft 团队 UI 工具包的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Microsoft Teams UI 工具包的概念图像。" border="false":::
    :::column-end:::
 
 :::row-end:::
 
-## <a name="avatars"></a>虚拟形象
+## <a name="avatars"></a>头像
 
 :::row:::
 
    :::column span="3":::
 
-      头像是团队中的人员、团队、bot 或实体的图形表示。 虚拟形象组通常用于传达实时活动或以保留垂直空间的方式表示名单。 
+      头像是 Teams 中人员、团队、机器人或实体的图形表示形式。 头像组通常用于以保留垂直空间的方式传达实时活动或代表名单。 
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的头像准则 (Figma) </a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整头像指南 (图) </a>
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Microsoft 团队 UI 工具包的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Teams UI 工具包的概念图像。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -56,35 +57,35 @@ ms.locfileid: "49605804"
 
    :::column span="3":::
 
-      团队 web 和桌面支持默认 (浅色) 、深色和高对比度主题，而团队移动支持浅色和深色主题。 每个主题都有自己的配色方案。
+      Teams Web 和桌面支持默认 (浅) 、深色和高对比度主题，而 Teams 移动版支持浅色和深色主题。 每个主题都有自己的配色方案。
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的颜色准则和可用的颜色标记 (Figma) </a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅图图ma 的完整颜色指南和 (颜色) </a>
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Microsoft 团队 UI 工具包的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Microsoft Teams UI 工具包的概念图像。" border="false":::
    :::column-end:::
 
 :::row-end:::
 
-## <a name="iconography"></a>插图
+## <a name="iconography"></a>图标
 
 :::row:::
 
    :::column span="3":::
 
-      团队应用使用由熟知 UI 提供的图标。
+      Teams 应用使用 Fluent UI 提供的图标。
 
 ### <a name="resources"></a>资源
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">请参阅最新的流畅图标 (Figma) </a>
-      * <a href="https://aka.ms/fluent-ui-icons" target="_blank">试用 (熟知的 UI) 的流畅图标 </a>
-      * <a href="https://github.com/microsoft/fluentui-system-icons" target="_blank">获取 (GitHub) 的熟知图标库 </a>
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">请参阅图 (的最新 Fluent) </a>
+      * <a href="https://aka.ms/fluent-ui-icons" target="_blank">尝试使用 Fluent UI (Fluent 图标) </a>
+      * <a href="https://github.com/microsoft/fluentui-system-icons" target="_blank">获取 GitHub (Fluent 图标) </a>
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Microsoft 团队 UI 工具包的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Microsoft Teams UI 工具包的概念图。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -95,32 +96,32 @@ ms.locfileid: "49605804"
 
    :::column span="3":::
 
-      团队将 Microsoft Yahei UI 用于其类型滑道和不同的字体大小和权重，以帮助创建层次结构并确保可读性。
+      Teams 将 Segoe UI 用于其类型渐变以及不同的字体大小和权重，以帮助创建层次结构并确保可读性。
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的版式准则 (Figma) </a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅图 (图的完整版式) </a>
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Microsoft 团队 UI 工具包的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Microsoft Teams UI 工具包的概念图。" border="false":::
 
    :::column-end:::
 :::row-end:::
 
-## <a name="copy-and-content"></a>副本和内容
+## <a name="copy-and-content"></a>复制和内容
 
 :::row:::
 
    :::column span="3":::
 
-      若要感觉团队的一部分，您的应用程序副本通常应遵循以下 [Microsoft 语音原则](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human)：暖和放松、简洁和清晰，并准备好交付。
+      若要感觉 Teams 的一部分，应用副本一般应遵循 [以下 Microsoft 语音](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human)原则：温和轻松、简洁明了、随时提供支持。
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的副本和内容指南，包括) 的 bot (Figma </a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整副本和内容指南，包括为 Bot (使用图) </a>
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Microsoft 团队 UI 工具包的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Microsoft Teams UI 工具包的概念图片。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -131,14 +132,14 @@ ms.locfileid: "49605804"
 
    :::column span="3":::
 
-      您的应用程序图标在向团队用户传达您的品牌时可能会有很长的使用方式。 将 [您的应用程序发布](../../concepts/build-and-test/apps-package.md) 到 AppSource 时，获取图标设计权限也非常重要。
+      你的应用图标可以给 Teams 用户传达你的品牌。 正确设计图标对于将 [应用发布到](../../concepts/build-and-test/apps-package.md) AppSource 也很重要。
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的品牌表达式准则 (Figma) </a>
+      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅图马 (的完整品牌) </a>
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-branding.png" alt-text="Microsoft 团队 UI 工具包的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-branding.png" alt-text="Microsoft Teams UI 工具包的概念性表单。" border="false":::
 
    :::column-end:::
 :::row-end:::

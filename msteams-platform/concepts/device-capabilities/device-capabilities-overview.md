@@ -1,22 +1,25 @@
 ---
-title: 设备功能概述
+title: 设备功能 - 概述
+author: Rajeshwari-v
 description: 本机设备功能概述。
-keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条码条形码扫描扫描仪位置映射功能本机设备权限
+ms.author: surbhigupta
+keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条形码条形码扫描扫描仪位置映射功能本机设备权限
+localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 4c826d1705dfeea1feea21b02e7be51789817e48
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7d214e5011abdc83d2f6b5b49c2261359259035e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449589"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020749"
 ---
-# <a name="device-capabilities"></a>设备功能 
+# <a name="device-capabilities---overview"></a>设备功能 - 概述
 
-Microsoft Teams 平台不断增强开发人员功能，以与内置的第一方体验保持一致。 借助增强的 Teams 平台，合作伙伴可以将设备功能（如相机、QR 或条形码扫描仪、照片库、麦克风和位置）与 Web 应用集成。 此集成减少了应用开发障碍，加快了开发周期，并创建了开发人员社区的新方案或用例。
+Microsoft Teams 平台持续增强开发人员功能，以与内置第一方体验保持一致。 借助增强的 Teams 平台，合作伙伴可以将设备功能（如相机、QR 或条形码扫描仪、照片库、麦克风和位置）与 Web 应用集成。 此集成减少了应用开发障碍，加快了开发周期，并创建了开发人员社区的新方案或用例。
 
 ## <a name="native-device-capabilities"></a>本机设备功能
 
-移动或桌面设备具有内置的设备，如相机和麦克风，称为功能。 可以通过 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 访问移动或 [桌面上的以下设备功能](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)：
+移动或桌面设备具有内置的设备，如相机和麦克风，称为功能。 可以通过 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 在移动或桌面上 [访问以下设备功能](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)：
 * 媒体功能，例如
     * 相机
     * 麦克风
@@ -28,11 +31,11 @@ Microsoft Teams 平台不断增强开发人员功能，以与内置的第一方�
 
 ## <a name="request-device-permissions"></a>请求设备权限
 
-使用[Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)中提供[](native-device-permissions.md)的工具请求访问本机设备功能所需的权限。 虽然新式 Web 浏览器中对这些功能的访问是标准功能，但你必须通过更新应用清单来通知 Teams 你使用的功能。 此更新允许你在应用在 Teams 移动客户端或桌面客户端上运行时请求权限。
+使用[Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)中提供[](native-device-permissions.md)的工具请求访问本机设备功能所需的权限。 虽然访问这些功能是新式 Web 浏览器中的标准操作，但你必须通过更新应用清单来通知 Teams 你使用的功能。 此更新允许你在应用在 Teams 移动客户端或桌面客户端上运行时请求权限。
  
  ## <a name="integrate-device-capabilities"></a>集成设备功能
 
-获取设备功能的访问权限后，使用 Teams 媒体功能 API 将 [媒体](mobile-camera-image-permissions.md) 功能与 Teams 平台集成，以增强用户体验。 这些集成功能允许应用：
+访问设备功能后，使用 Teams 媒体功能 API [将](mobile-camera-image-permissions.md) 媒体功能与 Teams 平台集成，以增强用户体验。 这些集成功能使你的应用能够：
 
 * 捕获和共享图像
 * 使用扫描仪控件扫描 QR [或条形码](qr-barcode-scanner-capability.md)

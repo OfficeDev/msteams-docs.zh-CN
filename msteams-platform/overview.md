@@ -3,14 +3,15 @@ title: 构建适用于 Microsoft Teams 平台的应用
 author: heath-hamilton
 description: 大致了解开发人员如何使用自定义应用扩展 Microsoft Teams 功能。
 ms.topic: overview
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 5009427fc3cdde11de45a55cb0f6216ae36b0d66
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596208"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019809"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 

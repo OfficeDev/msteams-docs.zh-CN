@@ -1,14 +1,15 @@
 ---
 title: 适用于 Microsoft Teams 选项卡的 DevTools
 description: 介绍如何在使用 Microsoft Teams 桌面客户端时访问 DevTools
+localization_priority: Normal
 ms.topic: how-to
 keywords: devtools 调试移动部件版式桌面客户端开发人员工具
-ms.openlocfilehash: 7bd9403a74fd33619a2f8ac1b4b3a4c74a21175d
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 663368c96f4c75953dde2ce1160314eca0917e2a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654384"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020371"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>适用于 Microsoft Teams 选项卡的 DevTools
 

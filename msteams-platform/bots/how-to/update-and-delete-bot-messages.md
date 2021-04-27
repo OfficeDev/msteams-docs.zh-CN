@@ -3,13 +3,14 @@ title: 更新和删除从自动程序发送的消息
 author: WashingtonKayaker
 description: 如何更新和删除从 Microsoft Teams 自动程序发送的消息
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: a2836d59c22b9784f1f1a0c84306072bb6a97d3e
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: f1e9c068f4ce89f0fd3aa4f5a174a3d3c4b67a77
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996000"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019984"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>更新和删除从自动程序发送的消息
 
@@ -65,7 +66,7 @@ update_result = await context.update_activity(new_activity)
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Request 和 Responce** | **说明** |
+| **Request 和 Responce** | **描述** |
 |----|----|
 | 活动[对象](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)对象 |
 
@@ -169,7 +170,7 @@ for each activity_id in _list:
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Request 和 Responce** | **说明** |
+| **Request 和 Responce** | **描述** |
 |----|----|
 | 不适用 | 指示操作结果的 HTTP 状态代码。 响应正文中未指定任何项。 |
 
@@ -179,7 +180,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 以下代码示例演示了对话的基础知识：
 
-| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
 | Teams 对话基础知识  | 演示 Teams 中对话的基础知识，包括消息更新和删除。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

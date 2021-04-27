@@ -2,13 +2,14 @@
 title: 选项卡的单一登录支持
 description: '介绍 SSO (单一) '
 ms.topic: how-to
+localization_priority: Normal
 keywords: teams 身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: 6be04617961d45763e5c812149d47a126fc4dae3
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 65e8d5e5387ec727e9ce02967516d8672bf67931
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885064"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019606"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
@@ -161,7 +162,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ## <a name="code-sample"></a>代码示例
 
-|**示例名称**|**说明**|**C#**|**Node.js**|
+|**示例名称**|**描述**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | 选项卡 SSO |适用于选项卡 Azure AD SSO 的 Microsoft Teams 示例应用| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[查看](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 

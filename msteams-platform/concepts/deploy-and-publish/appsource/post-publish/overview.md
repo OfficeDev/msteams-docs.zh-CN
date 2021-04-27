@@ -2,13 +2,14 @@
 title: 维护和支持已发布的应用
 description: 发布应用后要执行哪些操作
 ms.topic: how-to
+localization_priority: Normal
 keywords: teams 发布更新认证应用更新清单
-ms.openlocfilehash: 8644db5e329e15d77062553eda4a41a36b2740ee
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 11c32ce61664f34a246905124b767e17d3c6f536
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585832"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020798"
 ---
 # <a name="maintain-and-support-your-published-app"></a>维护和支持已发布的应用 
 

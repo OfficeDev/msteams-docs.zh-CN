@@ -3,13 +3,14 @@ title: 智能机器人对话中的邮件
 description: 介绍与 Microsoft Teams 机器人对话的方法
 ms.topic: overview
 ms.author: anclear
+localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: e3239d8ae7a9950e7b66d552fee2c739ca61d76b
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 5944cc299a8ad4bebdaf034d803919a54868e41f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697228"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020924"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
@@ -249,7 +250,7 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>邮件内容
 
-| 格式    | 从用户到机器人 | 从自动程序到用户 | 注释                                                                                   |
+| 格式    | 从用户到机器人 | 从自动程序到用户 | 注意                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
 | 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。 不支持动态 GIF。  |

@@ -1,25 +1,26 @@
 ---
-title: 创建指向内容的深层链接
+title: 创建深层链接
 description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
+localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: afcb079873f97055c4af43323d12846294861f74
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 26423a52c1bd2f643a40222eafdb4b9c1087a1a1
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885057"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020833"
 ---
-# <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>在 Microsoft Teams 中创建指向内容和功能的深层链接
+# <a name="create-deep-links"></a>创建深层链接 
 
-可以在 Teams 内创建指向信息和功能的链接。 创建深层链接很有用的示例如下所示：
+可以在 Teams 内创建指向信息和功能的链接。 创建深层链接很有用的方案如下所示：
 
 * 将用户导航到应用选项卡之一中的内容。 例如，你的应用可以有一个自动程序，用于向用户发送重要活动通知消息。 当用户点击通知时，深层链接将导航到选项卡，以便用户可以查看有关活动的更多详细信息。
-* 你的应用通过使用所需参数预填充深度链接来自动执行或简化某些用户任务，例如创建聊天或安排会议。 这样可以避免用户手动输入信息。
+* 你的应用通过使用所需参数预先填充深层链接来自动执行或简化某些用户任务，例如创建聊天或安排会议。 这样可以避免用户手动输入信息。
 
 > [!NOTE]
 >
-> 深层链接先启动浏览器，然后再导航到内容和信息，如下所示：
+> 深层链接在导航到内容之前先启动浏览器。 Teams 实体上深层链接的行为如下所示：
 >
 > **Tab**：  
 > ✔直接导航到深度链接 URL。
@@ -35,9 +36,9 @@ ms.locfileid: "51885057"
 
 ## <a name="deep-linking-to-your-tab"></a>到选项卡的深层链接
 
-可以在 Teams 中创建指向实体的深层链接。 通常，这用于创建导航到选项卡中的内容和信息的链接。例如，如果选项卡包含任务列表，工作组成员可以创建并共享指向单个任务的链接。 选择该链接时，它将导航到以特定项目为焦点的选项卡。 若要实现此目标，你可以以最适合你的 UI 的任何方式向每个项目添加"复制链接"操作。 当用户执行该操作时，调用 以显示一个对话框，其中包含用户可 `shareDeepLink()` 复制到剪贴板的链接。 进行此调用时，还会传递项目的 ID，在单击链接并重新加载选项卡时，会返回[](~/tabs/how-to/access-teams-context.md)上下文 ID。
+可以在 Teams 中创建指向实体的深层链接。 这用于创建导航到选项卡中的内容和信息的链接。例如，如果选项卡包含任务列表，工作组成员可以创建并共享指向单个任务的链接。 选择该链接时，它将导航到以特定项目为焦点的选项卡。 若要实现此目标，你可以以 **最适合** 你的 UI 的任何方式向每个项目添加一个复制链接操作。 当用户执行该操作时，调用 以显示一个对话框，其中包含用户可 `shareDeepLink()` 复制到剪贴板的链接。 进行此调用时，还会传递项目的 ID，在单击链接并重新加载选项卡时，会返回[](~/tabs/how-to/access-teams-context.md)上下文 ID。
 
-或者，您也可以使用本主题稍后指定的格式以编程方式生成深层链接。 可以在自动程序消息 [和](~/bots/what-are-bots.md) 连接器消息 [中](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) 使用这些通知用户有关选项卡或其中项目的更改的信息。
+或者，您也可以使用本主题稍后指定的格式以编程方式生成深层链接。 可以在机器人 [和连接器消息](~/bots/what-are-bots.md) 中 [使用](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) 深层链接，以通知用户选项卡或其中项目的更改。
 
 > [!NOTE]
 > 此深层链接不同于"复制到选项卡"菜单项所提供的链接，而"复制到选项卡"菜单项仅生成指向此选项卡的深层链接。
@@ -51,9 +52,9 @@ ms.locfileid: "51885057"
 
 提供以下字段：
 
-* `subEntityId`&emsp;要深层链接的选项卡内项目的唯一标识符
-* `subEntityLabel`&emsp;用于显示深层链接的项的标签
-* `subEntityWebUrl`&emsp;在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段
+* `subEntityId`：要深入链接的选项卡内项目的唯一标识符。
+* `subEntityLabel`：用于显示深层链接的项的标签。
+* `subEntityWebUrl`：在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段。
 
 ### <a name="generating-a-deep-link-to-your-tab"></a>生成指向选项卡的深层链接
 
@@ -73,13 +74,15 @@ ms.locfileid: "51885057"
 
 查询参数包括：
 
-* `appId`&emsp;清单中的 ID;例如，"fe4a8eba-2a31-4737-8e33-e5fae6fee194"
-* `entityId`&emsp;选项卡中项的 ID，在配置选项卡时 [提供](~/tabs/how-to/create-tab-pages/configuration-page.md);例如，"tasklist123"
-* `entityWebUrl`或 `subEntityWebUrl` &emsp; 一个可选字段，如果客户端不支持呈现选项卡，则使用一个包含回退 URL 的可选字段;例如， " https://tasklist.example.com/123 " 或 https://tasklist.example.com/list123/task456 " "
-* `entityLabel`或选项卡中项的标签，用于显示深层链接时;例如，" `subEntityLabel` &emsp; 任务列表 123"或"任务 456"
-* `context`&emsp;包含以下字段的 JSON 对象：
-  * `subEntityId`&emsp;选项卡内项 _的_ ID;例如，"task456"
-  * `channelId`&emsp;选项卡上下文中提供的 Microsoft Teams 频道 [ID;](~/tabs/how-to/access-teams-context.md)例如，"19：cbe3683f25094106b826c9cada3afbe0@thread.skype"。 此属性仅在作用域为"team"的可配置选项卡中可用。 它在作用域为"个人"的静态选项卡中不可用。
+| 参数名称 | 说明 | 示例 |
+|:------------|:--------------|:---------------------|
+| `appId`&emsp; | 清单中的 ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `entityId`&emsp; | 选项卡中项的 ID，在配置选项卡 [时提供](~/tabs/how-to/create-tab-pages/configuration-page.md)。|Tasklist123|
+| `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段。 | https://tasklist.example.com/123 或 https://tasklist.example.com/list123/task456 |
+| `entityLabel` 或 `subEntityLabel`&emsp; | 选项卡中项的标签，用于显示深层链接时。 | 任务列表 123 或"任务 456 |
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象</br></br> * 选项卡内项的 ID。 </br></br> * 选项卡上下文中提供的 Microsoft Teams 频道[ID。](~/tabs/how-to/access-teams-context.md) | 
+| `subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
+| `channelId`&emsp; | 选项卡上下文中提供的 Microsoft Teams 频道[ID。](~/tabs/how-to/access-teams-context.md) 此属性仅在具有团队作用域的可配置选项卡 **中可用**。 它在静态选项卡中不可用，静态选项卡具有个人 **作用域**。| 19：cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
 示例：
 
@@ -90,6 +93,7 @@ ms.locfileid: "51885057"
 
 > [!IMPORTANT]
 > 确保所有查询参数都经过正确 URI 编码。 您必须使用上一个示例遵循之前的示例：
+
 > ```javascript
 > var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURI('{"subEntityId": "task456"}');
@@ -136,11 +140,11 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 查询参数包括：
 
-* `users`：表示聊天参与者的用户 ID 的逗号分隔列表。 执行该操作的用户始终作为参与者包含在内。 目前，用户 ID 字段支持 Azure AD UserPrincipalName，通常为仅电子邮件地址。
+* `users`：表示聊天参与者的用户 ID 的逗号分隔列表。 执行该操作的用户始终作为参与者包含在内。 目前，用户 ID 字段支持 Azure AD UserPrincipalName，例如仅电子邮件地址。
 * `topicName`：聊天的可选字段显示名称（如果与 3 个或多个用户聊天）。 如果未指定此字段，则聊天显示名称基于参与者的名称。
 * `message`：当聊天状态为草稿时，要插入到当前用户的撰写框中的消息文本的可选字段。
 
-若要将此深层链接与自动程序一同使用，可以在卡片按钮中指定此链接作为 URL 目标，或点击操作类型 `openUrl` 中的操作。
+若要将此深层链接与自动程序一同使用，请在卡片按钮中指定此链接作为 URL 目标，或点击操作类型 `openUrl` 中的操作。
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>在通道中生成文件深层链接
 
@@ -184,7 +188,8 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 查询参数包括：
 
-* `appID`：清单 ID fe4a8eba-2a31-4737-8e33-e5fae6fee194。
+* `appID`：清单 ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**。
+
 * `entityID`：配置选项卡时 [提供的项目 ID。](~/tabs/how-to/create-tab-pages/configuration-page.md)例如 **，tasklist123**。
 * `entityWebUrl`：如果客户端不支持呈现选项卡或 ，则使用带回退 URL 的可选 https://tasklist.example.com/123 字段 https://tasklist.example.com/list123/task456 。
 * `entityName`：选项卡中项的标签，用于显示深层链接（任务列表 123 或任务 456）。
@@ -193,7 +198,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="linking-to-the-scheduling-dialog"></a>链接到计划对话框
 
-> [!Note]
+> [!NOTE]
 > 此功能目前处于开发人员预览阶段。
 
 可以创建指向 Teams 内置计划对话框的深层链接。 如果你的应用可帮助用户完成日历或计划相关任务，这将特别有用。
@@ -216,3 +221,8 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 > 目前不支持指定位置。 你必须指定 UTC 偏移量，它表示生成开始时间和结束时间时时区。
 
 若要将此深层链接与自动程序一同使用，可以在卡片按钮中指定此链接作为 URL 目标，或点击操作类型 `openUrl` 中的操作。
+
+## <a name="see-also"></a>另请参阅
+
+> [!div class="nextstepaction"]
+> [集成 web 应用](~/samples/integrate-web-apps-overview.md)

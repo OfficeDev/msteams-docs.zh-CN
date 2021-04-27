@@ -3,13 +3,14 @@ title: 使用 App Studio 创建消息传递
 author: clearab
 description: 了解如何使用 App Studio 创建 Microsoft Teams 消息传递扩展。
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 25086d959004046e8227de46b31d840c0b3fd228
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 10de4c6f9e7b81e1edc47622cb5c0c814d2eb3a7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697224"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019739"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>使用 App Studio 创建消息传递
 
@@ -84,7 +85,7 @@ ms.locfileid: "51697224"
 | 属性名称 | 用途 | 是否必需？ |
 |---|---|---|
 | `botId` | 使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这通常应该与整个 Teams 应用的 ID 相同。 | 是 |
-| `canUpdateConfiguration` | 启用 **"设置"** 菜单项。 | 否 |
+| `canUpdateConfiguration` | 启用 **"设置"** 菜单项。 | 不支持 |
 | `commands` | 此邮件扩展支持的命令数组。 只能使用 10 个命令。 | 是 |
 
 #### <a name="define-your-commands"></a>定义命令

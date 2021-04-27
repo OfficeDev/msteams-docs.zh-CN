@@ -1,19 +1,20 @@
 ---
 title: 教程 - 使用工具创建第一Node.js
-description: 了解如何开始构建 Microsoft Teams 应用Node.js。
+description: 了解如何开始使用 Microsoft Teams Node.js。
 keywords: nodejs app Studio node.js入门
 ms.topic: tutorial
+localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 61be1056a07952c6cf166dbe183fa257ceaf7227
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: ae1b8b2b5b671488ff6f86a3a3295f448ebb6006
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294759"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020959"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>使用应用创建你的第一个 Microsoft Teams Node.js
 
-本教程可帮助你开始使用 Node.js 创建 Microsoft Teams 应用。
+本教程帮助你开始使用 Node.js 创建 Microsoft Teams Node.js。
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -27,18 +28,18 @@ ms.locfileid: "50294759"
 
 ### <a name="get-prerequisites"></a>获取先决条件
 
-若要完成本教程，您需要以下工具。 如果尚未安装它们，可以从这些链接安装它们。
+若要完成本教程，你需要以下工具。 如果尚未安装，可以通过这些链接进行安装。
 
 - [Git](https://git-scm.com/downloads)
-- [Node.js和 NPM](https://nodejs.org/)
-- 获取任何文本编辑器或 IDE。 你可以免费安装和Visual Studio [代码](https://code.visualstudio.com/download) 。
+- [Node.js 和 NPM](https://nodejs.org/)
+- 获取任何文本编辑器或 IDE。 你可以免费安装和 [Visual Studio代码](https://code.visualstudio.com/download) 。
 
-如果在安装过程中看到用于添加 、、和 PATH 的选项， `git` `node` `npm` `code` 请选择这样做。 它很方便。
+如果在安装过程中看到向 `git` PATH 添加 、、 和 `node` `npm` `code` 的选项，请选择这样做。 它很方便。
 
 在终端窗口中运行以下代码，验证这些工具是否可用：
 
 > [!NOTE]
-> 使用你在平台上最习惯的终端窗口。 这些示例使用 Git (中包含的 Bash) ，但这些脚本将在大多数平台上运行。
+> 使用你最熟悉平台的终端窗口。 这些示例使用 Git (中包含的 Bash) ，但这些脚本将在大多数平台上运行。
 
 ```bash
 $ git --version
@@ -55,11 +56,11 @@ CLI version 2.3.0
 Local version 4.0.2
 ```
 
-这些应用程序可能具有不同的版本。 这应该不是问题，但 gulp 除外。 对于 gulp，你将需要使用版本 4.0.0 或更高版本。
+这些应用程序可能具有不同的版本。 这应该不是问题，但 gulp 除外。 对于 gulp，你需要使用版本 4.0.0 或更高版本。
 
-如果未在终端窗口中安装 gulp (或安装了错误的) ，则现在通过运行终端 `npm install gulp` 窗口来这样做。
+如果没有在终端窗口中安装 gulp (或安装的版本) ，现在在终端窗口中 `npm install gulp` 运行。
 
-如果已安装Visual Studio代码，可以通过运行以下代码验证安装：
+如果已安装Visual Studio代码，则可以通过运行以下代码来验证安装：
 
 ```bash
 code --version
@@ -73,14 +74,14 @@ code --version
 
 ### <a name="download-the-sample"></a>下载示例
 
-我们提供了一个简单的 [Hello， World！](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) 示例，以开始使用。 在终端窗口中，运行以下命令将示例存储库克隆到本地计算机：
+我们提供了简单的 [Hello， World！](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) 示例，以开始。 在终端窗口中，运行以下命令将示例存储库克隆到本地计算机：
 
 ```bash
 git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> 如果要[修改并](https://help.github.com/articles/fork-a-repo/)签入对[](https://github.com/OfficeDev/Microsoft-Teams-Samples)GitHub 存储库的更改，可以分叉此存储库，供将来参考。
+> 如果你想要[修改并](https://help.github.com/articles/fork-a-repo/)[签入对](https://github.com/OfficeDev/Microsoft-Teams-Samples)GitHub 存储库的更改，供将来参考，可以分叉此存储库。
 
 <a name="BuildRun"></a>
 
@@ -104,7 +105,7 @@ npm install
 npm start
 ```
 
-当 hello-world 应用启动时，它会显示 `App started listening on port 3333` 在终端窗口中。
+当 Hello-world 应用启动时，它显示在 `App started listening on port 3333` 终端窗口中。
 
 > [!NOTE]
 > 如果看到上述消息中显示的端口号不同，这是因为您设置了一个 PORT 环境变量。 您可以继续使用该端口，也可以将环境变量更改为 3333。
@@ -120,9 +121,9 @@ npm start
 
 ### <a name="host-the-sample-app"></a>托管示例应用
 
-请记住，Microsoft Teams 中的应用是公开一个或多个功能的 Web 应用程序。 若要使 Teams 平台加载你的应用，必须从 Internet 访问你的应用。 若要使应用从 Internet 访问，你需要 *托管* 你的应用。
+请记住，Microsoft Teams 中的应用是公开一个或多个功能的 Web 应用程序。 若要使 Teams 平台加载你的应用，必须从 Internet 访问你的应用。 若要使你的应用从 Internet 上访问，你需要 *托管* 你的应用。
 
-对于本地测试，可以在本地计算机上运行应用，并创建一个使用 Web 终结点的隧道。 [ngrok](https://ngrok.com) 是一款免费工具，允许你执行这一操作。 通过 *ngrok，* 您可以获取 Web 地址，例如 (`https://d0ac14a5.ngrok.io` 此 URL 只是一个) 。 您可以 [为环境下载](https://ngrok.com/download)*并安装 ngrok。* 请确保将其添加到您的位置 `PATH` 。
+对于本地测试，可以在本地计算机上运行应用，并创建一个使用 Web 终结点的隧道。 [ngrok](https://ngrok.com) 是一款免费工具，允许你这样做。 使用 *ngrok，* 你可以获取 Web 地址 `https://d0ac14a5.ngrok.io` ， (此 URL 只是一个) 。 你可以 [为环境下载](https://ngrok.com/download)*并安装 ngrok。* 请确保将其添加到 中的位置 `PATH` 。
 
 安装后，可以打开一个新的终端窗口并运行以下命令以创建隧道。 此示例使用端口 3333，因此请务必在此处指定它。
 
@@ -130,27 +131,27 @@ npm start
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok* 将侦听来自 Internet 的请求，并路由到在端口 3333 上运行的应用。 可以通过打开浏览器并加载应用的 Hello 页面 `https://d0ac14a5.ngrok.io/hello` 进行验证。 请务必使用 *ngrok* 在控制台会话中显示的转发地址，而不是此 URL。
+*Ngrok* 将侦听来自 Internet 的请求，并将它们路由到在端口 3333 上运行的应用。 你可以打开浏览器并加载应用的 Hello 页面 `https://d0ac14a5.ngrok.io/hello` 来进行验证。 请务必使用 *ngrok* 在控制台会话中显示的转发地址，而不是此 URL。
 
 > [!NOTE]
 > 如果在以上构建和运行步骤中使用不同的端口 [](#build-and-run-the-sample)，请确保使用相同的端口号来设置 *ngrok* 隧道。
 > [!TIP]
-> 建议在不同的终端窗口中运行 *ngrok* 以保持其运行，而不会干扰节点应用，稍后可能需要停止、重新生成和重新运行。 *ngrok* 会话将在此窗口中返回有用的调试信息。
+> 建议在不同的终端窗口中运行 *ngrok* 以保持其运行，而不会影响节点应用，稍后您可能必须停止、重新生成和重新运行节点应用。 *ngrok* 会话将在此窗口中返回有用的调试信息。
 
-存在允许永久名称 *的付费版本的 ngrok。* 如果你使用免费版本，你的应用将仅在开发计算机上当前会话期间可用。 如果计算机已关闭或进入睡眠状态，服务将不再可用。 在共享应用供其他用户进行测试时，请记住这一点。 如果必须重新启动服务，它将返回一个新地址，并且必须更新使用该地址的每个位置。
+存在允许永久名称的 *ngrok* 付费版本。 如果你使用免费版本，你的应用将仅在开发计算机上当前会话期间可用。 如果计算机关闭或进入睡眠状态，服务将不再可用。 在共享应用供其他用户进行测试时，请记住这一点。 如果必须重新启动服务，它将返回一个新地址，并且必须更新使用该地址的每一处地址。
 
-请记住，记下应用的 URL，因为稍后使用 App studio 向 Teams 注册应用时将需要此 URL。 记事本可以正常使用。
+请记住，记下应用的 URL，因为稍后在使用 App studio 向 Teams 注册应用时将需要此 URL。 记事本适用于此目的。
 
 <a name="DeployToTeams"></a>
 
 ## <a name="deploy-your-app-to-microsoft-teams"></a>将应用部署到 Microsoft Teams
 
-此时，你拥有一个在 Internet 上托管的应用，但尚无法告知 Teams 在哪里查找它，甚至无法告知你应用被叫什么。 为此，你现在必须创建应用包。 这不仅仅是一个文本文件，其中包含应用清单和一些 Teams 客户端用于正确显示和标记应用的图标。 你可以手动创建此应用包，或者可以使用 App Studio，这是在 Teams 中运行的工具，可简化注册应用的过程。 App Studio 是建议创建和更新应用包的方法。
+此时，你拥有一个在 Internet 上托管的应用，但你无法告知 Teams 在哪里查找它，甚至无法告诉 Teams 你的应用被叫什么。 为此，现在必须创建应用包。 这不仅仅是一个包含应用清单和一些图标的文本文件，Teams 客户端将使用这些图标来正确显示你的应用并打造你的应用品牌。 你可以手动创建此应用包，或者可以使用 App Studio，这是在 Teams 中运行的工具，可简化注册应用的过程。 App Studio 是建议创建和更新应用包的方法。
 
-对于任一方法，你都需要以下各项：
+对于任一方法，你都需要：
 
-- 可在 Internet 上找到应用的 URL。
-- Teams 用于打造应用品牌的图标。 该示例附带位于"src\static\images"中的占位符图标。 如果需要，App Studio 还将提供默认图标。
+- 可以在 Internet 上找到应用的 URL。
+- Teams 用于打造应用品牌的图标。 此示例附带位于"src\static\images"中的占位符图标。 App Studio 还会根据需要提供默认图标。
 
 [!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
@@ -164,9 +165,9 @@ MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
-具体操作方式因应用托管方式不同而不同。 使用环境变量的一个重要内容是，这些值是环境的一部分，你的应用的代码可以访问这些值，但它们不会向可能检查网站文件的第三方公开。
+具体操作方式因应用托管方式不同而不同。 使用环境变量的一个重要内容是，这些值是环境的一部分，可通过应用的代码访问它们，但它们不会向可能检查网站文件的第三方公开。
 
-如果使用 ngrok 运行应用，则需要设置一些本地环境变量。 执行此操作的方法有很多，但如果使用的是 Visual Studio 代码，最简单的方法是添加启动 [配置](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)：
+如果使用 ngrok 运行应用，则需要设置一些本地环境变量。 执行此操作的方法有很多，但最简单的方法是添加启动Visual Studio[代码：](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)
 
 ``` 
 {
@@ -188,24 +189,24 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 其中：
 
-MICROSOFT_APP_ID自动MICROSOFT_APP_PASSWORD的 ID 和密码。
+MICROSOFT_APP_ID和MICROSOFT_APP_PASSWORD是自动程序 ID 和密码。
 NODE_DEBUG代码调试控制台中的自动程序Visual Studio发生的情况。
-NODE_CONFIG_DIR指向存储库 (根目录，当应用在本地运行时，它将在 src 文件夹的) 中查找它。
+NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当本地运行应用时，它将在 src 文件夹的) 。
 
 > [!Note]
-> 如果你尚未从本教程的前面部分停止 npm，则需要运行Visual Studio代码正确拾取启动配置 `npm stop` 变量。
+> 如果你尚未从本教程的前面部分停止 npm，则需要运行 ，以便Visual Studio代码正确拾取启动配置 `npm stop` 变量。
 
 <a name="ConfigureTheAppTab"></a>
 
-## <a name="configure-the-app-tab"></a>配置应用选项卡
+## <a name="configure-the-app-tab"></a>配置"应用"选项卡
 
-将应用安装到团队后，你需要将其配置为显示内容。 转到团队中的频道，然后单击 **"+"** 按钮以添加新选项卡。然后，可以从 `Hello World` "添加选项卡 **"列表中选择** 。 然后，将显示配置对话框。 此对话框将让你选择要在此通道中显示哪个选项卡。 选择选项卡并单击后 `Save` ，可以看到选项卡已 `Hello World` 加载，且已选择选项卡。
+将应用安装到团队后，你需要将其配置为显示内容。 转到团队中的频道，然后单击 **"+"** 按钮以添加新选项卡。然后，可以从 `Hello World` "添加 **选项卡"列表中选择** 。 然后，你将看到配置对话框。 此对话框将让你选择要在此通道中显示哪个选项卡。 选择该选项卡并单击后 `Save` ，即可看到使用 `Hello World` 你选择的选项卡加载的选项卡。
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
 ### <a name="test-your-bot-in-teams"></a>在 Teams 中测试机器人
 
-你现在可以在 Teams 中与机器人交互。 选择你注册应用的团队中的频道，然后键入 `@your-bot-name` ，然后键入消息。 这称为 **\@ 提及**。 发送到自动程序的任何邮件都将作为回复发送回。
+你现在可以在 Teams 中与机器人交互。 选择你注册应用的团队中的频道，然后键入 `@your-bot-name` ，然后键入消息。 这称为 **\@ 提及**。 向自动程序发送的任何消息都将作为回复发送回。
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 
@@ -219,6 +220,6 @@ NODE_CONFIG_DIR指向存储库 (根目录，当应用在本地运行时，它将
 
 <img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-选择其中一个随机文本，你将在底部看到一张格式化卡片，并准备好随自己的邮件一起发送。
+选择随机文本之一，你将在底部看到格式化的卡片，并准备好随自己的邮件一起发送。
 
 <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

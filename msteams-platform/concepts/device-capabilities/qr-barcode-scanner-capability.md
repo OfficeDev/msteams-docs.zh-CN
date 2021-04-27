@@ -1,15 +1,17 @@
 ---
 title: 集成 QR 或条码扫描仪功能
+author: Rajeshwari-v
 description: 如何使用 Teams JavaScript 客户端 SDK 利用 QR 或条形码扫描仪功能
 keywords: 相机媒体 qr 代码 qrcode 条形码条形码扫描仪扫描功能本机设备权限
+localization_priority: Normal
 ms.topic: conceptual
-ms.author: lajanuar
-ms.openlocfilehash: 956d56c9d52785820f95ca2df323d61dcacc586b
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.author: surbhigupta
+ms.openlocfilehash: 579137f31dd929a6105dd7bcc2d46d84c145ef50
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696288"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020735"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>集成 QR 或条码扫描仪功能 
 

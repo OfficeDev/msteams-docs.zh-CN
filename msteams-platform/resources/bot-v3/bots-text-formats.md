@@ -3,13 +3,14 @@ title: 对话中支持的文本格式
 description: 介绍自动程序对话中的文本格式支持
 keywords: 机器人对话消息传送
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: d8cb4ffd18871737ed4a64443800938f424910c9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696057"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019746"
 ---
 # <a name="formatting-bot-messages"></a>设置机器人消息的格式
 

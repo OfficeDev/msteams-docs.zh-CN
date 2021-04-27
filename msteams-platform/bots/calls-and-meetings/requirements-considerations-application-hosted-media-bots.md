@@ -2,14 +2,15 @@
 title: 应用程序托管的媒体机器人的要求和注意事项
 description: 了解与为 Microsoft Teams 创建应用程序托管的媒体机器人相关的重要要求和注意事项。
 ms.topic: conceptual
+localization_priority: Normal
 keywords: 应用程序托管的媒体 Windows 服务器 azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: 4a191bbde6b592c74930069d794ff37273785c1b
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 731cc53573d5c2b65eaed36d75793901fde86e54
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995951"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020054"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 
@@ -64,7 +65,7 @@ ms.locfileid: "51995951"
 
 应用程序托管的媒体机器人示例如下所示：
 
-| **示例名称** | **说明** | **Graph** |
+| **示例名称** | **描述** | **Graph** |
 |------------|-------------|-----------|
 | 本地媒体示例 | 说明不同本地媒体方案的示例。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | 远程媒体示例 | 演示不同远程媒体方案的示例。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |

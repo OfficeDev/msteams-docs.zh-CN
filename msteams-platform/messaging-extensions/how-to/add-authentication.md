@@ -2,14 +2,15 @@
 title: 向邮件扩展添加身份验证
 author: clearab
 description: 如何向消息传递扩展添加身份验证
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 04ece6fe6f5e824873ed6e69385bce017df6927d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 1670bcd68def5470f2a590b11f7c25a00ccd06b7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696771"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020707"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>向邮件扩展添加身份验证
 
@@ -133,7 +134,7 @@ ms.locfileid: "51696771"
 ```
 
 ## <a name="code-sample"></a>代码示例
-|**示例名称** | **Description** |**.NET** | **Node.js**|
+|**示例名称** | **描述** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
 |邮件扩展 - 身份验证和配置 | 具有配置页面、接受搜索请求和在用户登录后返回结果的消息扩展。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 

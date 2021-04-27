@@ -3,13 +3,14 @@ title: 向 Teams 自动程序添加身份验证
 author: clearab
 description: 如何将 OAuth 身份验证添加到 Microsoft Teams 中的自动程序。
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 71a24dad47b3686d207df3f4e3521bbe46508cb9
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d54d7fadb13626bb38de3a907b966f026cc6c485
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585867"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020947"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 自动程序添加身份验证
 
@@ -29,7 +30,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 - **如何将机器人部署到 Azure 并将其与标识提供程序关联**。 提供程序根据用户登录凭据颁发令牌。 机器人可以使用令牌访问需要身份验证的资源，如邮件服务。 有关详细信息，请参阅  [适用于机器人的 Microsoft Teams 身份验证流](auth-flow-bot.md)。
 - **如何在 Microsoft Teams 中集成机器人**。 集成自动程序后，可以在聊天中登录并交换消息。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 了解[自动程序基础知识][concept-basics][、管理状态][concept-state][、对话框库][concept-dialogs]以及如何[实现顺序对话流][simple-dialog]。
 - 了解 Azure 和 OAuth 2.0 开发。
@@ -65,7 +66,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
 1. 在 [**Azure 门户的**][azure-portal]左侧导航面板上，选择"**创建资源"。**
 1. 在搜索框中，键入 *应用服务计划*。 从 **搜索结果中选择"应用** 服务计划"卡。
-1. 选择“创建”。
+1. 选择“**创建**”。
 1. 将要求您提供以下信息：
     1. **订阅**。 可以使用现有订阅。
     1. **资源组**。 选择之前创建的组。
@@ -74,7 +75,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
     1. **区域**。 选择 *"美国* 西部"或"靠近你的应用程序的区域"。
     1. **定价层**。 确保选中 *"标准 S1"。* 此值应为默认值。
     1. 选择" **审阅并创建"** 按钮。 你应该会看到一个横幅，显示 *"验证通过"。*
-    1. 选择“创建”。 创建应用服务计划可能需要几分钟时间。 计划将在资源组中列出。
+    1. 选择“**创建**”。 创建应用服务计划可能需要几分钟时间。 计划将在资源组中列出。
 
 ## <a name="create-the-bot-channels-registration"></a>创建自动程序通道注册
 
@@ -260,7 +261,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
-1. 选择“创建”。
+1. 选择“**创建**”。
 1. 如果部署成功完成，则应该会看到部署Visual Studio。 此外，默认浏览器中会显示一个页面，*指出自动程序已准备就绪！。* URL 将类似于 `https://botteamsauth.azurewebsites.net/` ：。 将其保存到文件中。
 1. 在浏览器中，导航到 [**Azure 门户**][azure-portal]。
 1. 检查你的资源组，应列出自动程序以及其他资源。 下图是一个示例：

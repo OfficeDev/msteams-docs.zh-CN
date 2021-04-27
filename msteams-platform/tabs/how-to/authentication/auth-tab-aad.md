@@ -2,13 +2,14 @@
 title: 使用 Azure Active Directory 的选项卡的身份验证
 description: 介绍 Teams 中的身份验证以及如何在选项卡中使用它
 ms.topic: how-to
+localization_priority: Normal
 keywords: teams 身份验证选项卡 AAD
-ms.openlocfilehash: f2429653fe875406870ba82e27fce3d643ff69f6
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 2fdfc4448abb6980cca97e90951d7772611108da
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995902"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020385"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>在 Microsoft Teams 选项卡中对用户进行身份验证
 
@@ -51,7 +52,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>注释
+### <a name="notes"></a>注意
 
 * 您传递到的 URL `microsoftTeams.authentication.authenticate()` 是身份验证流的起始页。 此示例中为 `/tab-auth/simple-start` 。 这应该匹配你在 Azure AD 应用程序注册 [门户中注册的内容](https://apps.dev.microsoft.com)。
 
@@ -90,7 +91,7 @@ microsoftTeams.getContext(function (context) {
 
 用户完成授权后，用户将被重定向到你在 上为你的应用指定的回调页面 `/tab-auth/simple-end` 。
 
-### <a name="notes"></a>注释
+### <a name="notes"></a>注意
 
 * 请参阅 [获取用户上下文信息](~/tabs/how-to/access-teams-context.md) ，帮助构建身份验证请求和 URL。 例如，可以使用用户的登录名作为 Azure AD 登录的值，这意味着用户 `login_hint` 可能需要键入更少的内容。 请记住，不应直接使用此上下文作为标识证明，因为攻击者可能会在恶意浏览器中加载你的页面，并为用户提供其需要的任何信息。
 * 尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证，无论是作为选项卡内容 URL 的 URL 参数获取还是通过调用 Microsoft Teams 客户端 SDK 中的 函数。 `microsoftTeams.getContext()` 恶意参与者可能会使用自己的参数调用您的选项卡内容 URL，模拟 Microsoft Teams 的网页可以在 iframe 中加载您的选项卡内容 URL，并自行将数据返回到 `getContext()` 函数。 你应该将选项卡上下文中的标识相关信息视为提示，并验证这些信息，然后再使用。
@@ -135,7 +136,7 @@ if (hashParams["error"]) {
 
 此代码使用帮助程序函数分析从 Azure AD 收到的 `window.location.hash` 键值 `getHashParameters()` 对。 如果找到 ， 且 值与在身份验证流开始时提供的 相同，它将通过调用 将访问令牌返回到选项卡;否则，它将报告 `access_token` `state` `notifySuccess()` 错误 `notifyFailure()` 。
 
-### <a name="notes"></a>注释
+### <a name="notes"></a>注意
 
 `NotifyFailure()` 具有以下预定义失败原因：
 

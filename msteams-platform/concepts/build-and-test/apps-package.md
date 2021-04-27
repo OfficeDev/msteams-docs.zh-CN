@@ -1,13 +1,14 @@
 ---
 title: 打包应用
 description: 了解如何打包 Microsoft Teams 应用以进行测试、上传和应用商店发布。
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 222ea5459b3496c00b1186f15a68c3288ce419f7
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: c8341f3d83b5e6610e44276d6732affa1d1c1e91
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922508"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020138"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用创建应用包
 
@@ -42,7 +43,7 @@ Teams 应用包是包含以下内容的 .zip 文件：
 
 Teams 自动将图标进行缩小，以在多个方案中显示圆角的正方形，以及自动程序方案中的六边形。 在符号周围包含 48 像素的填充，以便进行这些种种时不会丢失任何详细信息。
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams 颜色图标设计指南。" border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams 颜色图标和设计指南。" border="false":::
 
 ### <a name="outline-icon"></a>大纲图标
 

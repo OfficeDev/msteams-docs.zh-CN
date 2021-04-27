@@ -3,13 +3,14 @@ title: 对话事件
 author: WashingtonKayaker
 description: 如何使用 Microsoft Teams 机器人中的对话事件。
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0736ce07f91f0f33505c5ac3fa031a201d01c2f9
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996028"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020026"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -1378,7 +1379,7 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | 对话机器人 | 机器人对话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

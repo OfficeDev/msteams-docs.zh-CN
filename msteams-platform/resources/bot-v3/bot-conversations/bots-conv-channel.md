@@ -2,14 +2,15 @@
 title: 与机器人的频道和群组聊天对话
 description: 介绍在 Microsoft Teams 中与频道中的机器人对话的端到端方案
 keywords: teams 方案频道对话机器人
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: be4610f45ab5891edcc6a9683ec994d2ba5c505c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 2eac067a75fc75c9991e8b30ec5d693d89ed8228
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696176"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019795"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>带有 Microsoft Teams 机器人的频道和群聊对话
 

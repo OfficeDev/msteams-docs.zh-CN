@@ -2,13 +2,14 @@
 title: 准备 Microsoft 365 租户
 description: 如何在 Microsoft 365 中开始使用 Teams
 ms.topic: how-to
+localization_priority: Normal
 keywords: 配置 Microsoft 365 租户 Teams 上传
-ms.openlocfilehash: 4fbe1dcc7ba202aff0b46c7fc50d9aebc0278c38
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946464"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019942"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 

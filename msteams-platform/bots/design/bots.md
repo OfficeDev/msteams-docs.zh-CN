@@ -3,13 +3,14 @@ title: 设计机器人
 description: 了解如何设计 Teams 自动程序并获取 Microsoft Teams UI Kit。
 author: heath-hamilton
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 1323d1070d29a501a6a87812a666c3a08b76ae74
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713571"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020131"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
@@ -99,10 +100,10 @@ ms.locfileid: "49713571"
 |1|**应用名称和图标**|
 |2|**"聊天** 选项卡"中：打开与机器人对话的空白（仅适用于个人应用）。|
 |3|**自定义选项卡**：打开与应用相关的其他内容。|
-|4|**关于选项卡**：显示有关应用的基本信息。|
-|5|**聊天气泡**：自动对话使用 Teams 消息框架。|
-|6|**自适应卡片**：如果自动执行者的答复包括自适应卡片，则卡片将占用聊天气泡的全部宽度。|
-|7|**命令菜单**：显示自动程序的标准命令（由你定义）。
+|4 |**关于选项卡**：显示有关应用的基本信息。|
+|5 |**聊天气泡**：自动对话使用 Teams 消息框架。|
+|6 |**自适应卡片**：如果自动执行者的答复包括自适应卡片，则卡片将占用聊天气泡的全部宽度。|
+|7 |**命令菜单**：显示自动程序的标准命令（由你定义）。
 
 ### <a name="command-menu"></a>命令菜单
 
@@ -208,7 +209,7 @@ ms.locfileid: "49713571"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示自动程序最佳做法的示例。" border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>工作：清楚传达你的机器人可以做什么
 
@@ -216,7 +217,7 @@ ms.locfileid: "49713571"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="示例展示了自动程序最佳实践。" border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>不要：遮住了机器人的功能
 
@@ -227,7 +228,7 @@ ms.locfileid: "49713571"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示自动程序最佳做法的示例。" border="false":::
 
 #### <a name="do-recognize-non-questions"></a>注意：识别非问题
 
@@ -235,7 +236,7 @@ ms.locfileid: "49713571"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="示例展示了自动程序最佳实践。" border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>不要：错过一些可喜欢的机会
 
@@ -248,7 +249,7 @@ ms.locfileid: "49713571"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="自动程序最佳实践示例。" border="false":::
 
 #### <a name="do-provide-help"></a>执行：提供帮助
 
@@ -256,7 +257,7 @@ ms.locfileid: "49713571"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="示例显示自动程序最佳做法。" border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>请勿参与：将用户困
 
@@ -269,7 +270,7 @@ ms.locfileid: "49713571"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示自动程序最佳做法的示例。" border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Do：使用任务模块或选项卡
 
@@ -277,7 +278,7 @@ ms.locfileid: "49713571"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="请参阅自动程序最佳实践示例。" border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>不要：进行多元交互，件非常乏味
 
@@ -290,7 +291,7 @@ ms.locfileid: "49713571"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="示例展示了自动程序最佳实践。" border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do：仅在个人上下文中显示敏感信息
 
@@ -298,7 +299,7 @@ ms.locfileid: "49713571"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="插图显示自动程序最佳做法。" border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>不要：某些内容并非由每个人看到
 

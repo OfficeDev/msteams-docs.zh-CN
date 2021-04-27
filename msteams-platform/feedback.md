@@ -1,14 +1,15 @@
 ---
 title: Microsoft Teams 开发人员支持和反馈
 description: Microsoft Teams 产品团队通过各种反馈和支持渠道响应开发人员社区。
+localization_priority: Normal
 ms.topic: reference
 keywords: teams 反馈开发人员问题 问题 联系支持请求 bug 参与社区讨论
-ms.openlocfilehash: 49dfe06dd1e343b04e8c15c7cc3bdb6957946706
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 08fb6908eeb4a79e5da622e7bc698111e2eba46a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034717"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020728"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams 开发人员社区频道
 

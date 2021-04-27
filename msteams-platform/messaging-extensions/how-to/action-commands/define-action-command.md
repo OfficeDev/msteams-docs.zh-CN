@@ -2,14 +2,15 @@
 title: 定义消息传递扩展操作命令
 author: clearab
 description: 邮件扩展操作命令概述
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 51c2ce5ac3b8ab265d9bec0b1101ba18138a9365
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f49e821ecb98659b4cfd68f93b37f1a8f611a9fb
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696927"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020714"
 ---
 # <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 
@@ -124,29 +125,29 @@ ms.locfileid: "51696927"
 |---|---|---|---|
 | `id` | 此属性是分配给此命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
 | `title` | 此属性是命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 此属性必须是 `action` 。 | 否 | 1.4 |
-| `fetchTask` | 对于任务模块的自适应卡片或嵌入式 Web 视图，以及参数的静态列表或加载 Web 视图时，此属性 `true` `false` 设置为 `taskInfo` 。 | 否 | 1.4 |
-| `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
+| `type` | 此属性必须是 `action` 。 | 不支持 | 1.4 |
+| `fetchTask` | 对于任务模块的自适应卡片或嵌入式 Web 视图，以及参数的静态列表或加载 Web 视图时，此属性 `true` `false` 设置为 `taskInfo` 。 | 不支持 | 1.4 |
+| `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 不支持 | 1.5 |
 
 如果使用参数的静态列表，则还必须添加以下参数：
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-| `parameters` | 此属性描述命令的参数静态列表。 仅在 为 时 `fetchTask` 使用 `false` 。 | 否 | 1.0 |
+| `parameters` | 此属性描述命令的参数静态列表。 仅在 为 时 `fetchTask` 使用 `false` 。 | 不支持 | 1.0 |
 | `parameter.name` | 此属性描述参数的名称。 这将在用户请求中发送到你的服务。 | 是 | 1.0 |
 | `parameter.description` | 此属性描述参数的用途或应提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
-| `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 `text` `textarea` `number` `date` 、、、、、。 `time` `toggle` 默认值设置为 `text` 。 | 否 | 1.4 |
+| `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 `text` `textarea` `number` `date` 、、、、、。 `time` `toggle` 默认值设置为 `text` 。 | 不支持 | 1.4 |
 
 如果你使用的是嵌入式 Web 视图，可以选择添加 对象来获取 Web 视图， `taskInfo` 而无需直接调用机器人。 如果选择此选项，则其行为类似于使用静态参数列表的行为。 因此，与机器人的第一次 [交互是响应任务模块提交操作](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 如果使用对象 `taskInfo` ，则必须将 参数 `fetchTask` 设置为 `false` 。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 否 | 1.4 |
-|`taskInfo.title`|初始任务模块标题。 |否 | 1.4 |
-|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 `large` 、 `medium` 或 `small` ）。 |否 | 1.4 |
-|`taskInfo.height`|任务模块高度，以像素为单位或默认布局（如 、 `large` `medium` 或 `small` ）。|否 | 1.4 |
-|`taskInfo.url`|初始 Web 视图 URL。|否 | 1.4 | 
+|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 不支持 | 1.4 |
+|`taskInfo.title`|初始任务模块标题。 |不支持 | 1.4 |
+|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 `large` 、 `medium` 或 `small` ）。 |不支持 | 1.4 |
+|`taskInfo.height`|任务模块高度，以像素为单位或默认布局（如 、 `large` `medium` 或 `small` ）。|不支持 | 1.4 |
+|`taskInfo.url`|初始 Web 视图 URL。|不支持 | 1.4 | 
 
 #### <a name="app-manifest-example"></a>应用清单示例
 

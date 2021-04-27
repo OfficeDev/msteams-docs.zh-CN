@@ -3,24 +3,25 @@ title: 设计会议扩展
 author: heath-hamilton
 description: 了解如何在 Teams 会议中设计应用并获取 Microsoft Teams UI 工具包。
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596250"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018472"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
 你可以创建应用来使会议更加高效。 例如，要求用户在呼叫过程中完成调查或发送不会中断会议流的快速提醒。
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI 工具包
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
 可以在 Microsoft Teams UI 工具包中查找更全面的设计指南，包括可根据需要获取和修改的元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI 工具包 (图) ](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展
 
@@ -38,7 +39,7 @@ ms.locfileid: "51596250"
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="示例演示如何在会议期间添加会议扩展名。" border="false":::
 
-## <a name="before-a-meeting"></a>会议之前
+## <a name="before-a-meeting"></a>会议前
 
 在会议之前，可以在选项卡中添加内容。以下示例显示了一个草稿调查问题，人员将在呼叫过程中回答该问题。
 
@@ -346,9 +347,9 @@ Teams 会议针对深色模式进行了优化，可帮助减少视觉和认知�
    :::column-end:::
 :::row-end:::
 
-## <a name="validate-your-design"></a>验证设计
+## <a name="validate-your-design"></a>验证你的设计
 
-如果你计划将应用发布到 AppSource，应了解在提交期间导致应用失败的常见设计问题。
+如果计划将应用发布到 AppSource，应了解提交过程中通常会导致应用出现故障的设计问题。
 
 > [!div class="nextstepaction"]
 > [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

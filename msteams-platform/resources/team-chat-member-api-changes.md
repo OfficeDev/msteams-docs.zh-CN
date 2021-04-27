@@ -3,14 +3,15 @@ title: 为团队和聊天成更改机器人 API
 author: ojasvichoudhary
 description: 介绍即将对用于检索团队和聊天成员的 Bot API 进行的更改和进行中的更改
 keywords: 机器人框架 apis 团队成员名单
+localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 38ccdd1d3052e906ceacaa47fa0cd14a1be7a41d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: ad03d14ca1c38eb810d43027e901e01199858992
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696517"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019676"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams 机器人 API 更改以提取团队或聊天成员
 

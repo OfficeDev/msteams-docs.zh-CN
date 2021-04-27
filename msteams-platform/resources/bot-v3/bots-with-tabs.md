@@ -3,13 +3,14 @@ title: 将机器人与选项卡组合在一起
 description: 介绍如何将选项卡和自动程序一同使用
 keywords: teams 机器人选项卡开发
 ms.topic: conceptual
+localization_priority: Normal
 ms.date: 03/15/2018
-ms.openlocfilehash: d8ef669f55d5edbb9795fa2d34277bd2e2dccc7c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b33d0bfcae4b522fc9e0c7d17b3d082979a62647
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696596"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020623"
 ---
 # <a name="combine-bots-with-tabs"></a>将机器人与选项卡组合在一起
 

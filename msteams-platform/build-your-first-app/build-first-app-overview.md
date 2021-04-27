@@ -3,14 +3,15 @@ title: 入门 - 生成首个应用概述和先决条件
 author: heath-hamilton
 description: 了解如何开始使用 Microsoft Teams 应用开发和设置环境。
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: d975383022089579a04317de73595106e7920c56
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762037"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019991"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>生成首个 Microsoft Teams 应用概述
 

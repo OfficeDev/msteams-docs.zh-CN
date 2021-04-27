@@ -2,13 +2,14 @@
 title: 生成出色的应用详细信息页面
 description: 描述应用详细信息页的要求
 ms.topic: reference
+localization_priority: Normal
 keywords: teams 发布应用商店 Office 发布策略 AppSource 内容 元数据屏幕截图徽标说明 应用名称图标简短说明
-ms.openlocfilehash: e7513fbb4ed2e56844931d1a587b6ee062e014a4
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 6b763180cc2beb1cef6095110af0f37169e1f7c8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634542"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020791"
 ---
 # <a name="build-a-great-app-details-page"></a>生成出色的应用详细信息页面
 

@@ -2,13 +2,14 @@
 title: 选项卡的身份验证流
 description: 描述选项卡中的身份验证流
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams 身份验证流选项卡
-ms.openlocfilehash: ccc507c08007c72e5393d9175d69ea3672d73609
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 012e38b0fa689527999237ccc07b7352fc00ae71
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995846"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020392"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>选项卡的 Microsoft Teams 身份验证流
 
@@ -48,7 +49,7 @@ OAuth 2.0 是 Azure Active Directory (AAD) 和许多其他标识提供程序使�
 
 显示选项卡身份验证过程的示例代码。
 
-| **示例名称** | **说明** | **C#** | **Node.js** |
+| **示例名称** | **描述** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
 | Teams 选项卡身份验证 | 使用 AAD 的选项卡的身份验证过程。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 

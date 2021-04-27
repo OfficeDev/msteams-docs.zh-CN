@@ -2,14 +2,15 @@
 title: Office 365 连接器
 description: 介绍如何在 Microsoft Teams 中开始使用 Office 365 连接器
 keywords: Teams o365 连接器
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: d0fe380cd168b8dcbddc5af0de96160e0bc259a9
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 8091f71e22fcbdc297e2f7b54665b47e597e670e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827919"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018395"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>为 Microsoft Teams 创建 Office 365 连接器
 
@@ -17,7 +18,7 @@ ms.locfileid: "50827919"
 
 ## <a name="adding-a-connector-to-your-teams-app"></a>将连接器添加到 Teams 应用
 
-你可以将已注册的连接器作为 Teams 应用包的一部分进行分发。 无论是作为独立解决方案，还是体验在 Teams 中启用的多种功能之一，都可以将[](~/concepts/build-and-test/apps-package.md)连接器打包[](~/concepts/deploy-and-publish/apps-publish.md)并发布为 AppSource 提交的一部分，也可以直接向用户提供连接器以在 Teams 中上传。 [](~/concepts/extensibility-points.md)
+你可以将已注册的连接器作为 Teams 应用包的一部分进行分布。 无论是作为独立解决方案，还是体验在 Teams 中启用的多种功能之一，都可以将[](~/concepts/build-and-test/apps-package.md)连接器打包[](~/concepts/deploy-and-publish/apps-publish.md)并发布为 AppSource 提交的一部分，也可以直接向用户提供连接器以在 Teams 中上传。 [](~/concepts/extensibility-points.md)
 
 若要分发连接器，你需要使用连接器开发人员仪表板 [进行注册](https://outlook.office.com/connectors/home/login/#/publish)。 默认情况下，一旦注册连接器，就会假定连接器将在支持连接器的所有 Office 365 产品（包括 Outlook 和 Teams）中工作。 如果并非如此 _，_ 并且你需要创建仅在 Microsoft Teams 中工作的连接器，请直接通过 Microsoft Teams [应用提交联系我们](mailto:teamsubm@microsoft.com)。
 
@@ -36,7 +37,7 @@ ms.locfileid: "50827919"
 
 可以重用现有 Web 配置体验或创建单独的版本以专门托管在 Teams 中。 代码应：
 
-1. 包括 Microsoft Teams JavaScript SDK。 这样，代码可以访问 API 来执行常见操作，如获取当前用户/频道/团队上下文和启动身份验证流。 通过调用 初始化 `microsoftTeams.initialize()` SDK。
+1. 包括 Microsoft Teams JavaScript SDK。 这样，代码可以访问 API 来执行常见操作，如获取当前用户/频道/团队上下文和启动身份验证流。 通过调用`microsoftTeams.initialize()`初始化 SDK。
 2. 在 `microsoftTeams.settings.setValidityState(true)` 要启用"保存"按钮时调用。 应作为对有效用户输入（如选择或字段更新）的响应来这样做。
 3. 注册 `microsoftTeams.settings.registerOnSaveHandler()` 事件处理程序，该事件处理程序在用户单击"保存"时调用。
 4. 调用 `microsoftTeams.settings.setSettings()` 以保存连接器设置。 如果用户尝试更新连接器的现有配置，此处保存的也是将在配置对话框中显示内容。
@@ -213,7 +214,7 @@ ms.locfileid: "50827919"
 1. 若要配置或修改连接器，请选择"配置 **"** 栏。
 
 ## <a name="code-sample"></a>代码示例
-|**示例名称** | **说明** | **.NET** | **Node.js** |
+|**示例名称** | **描述** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | 连接器    | 向团队频道生成通知的示例 Office 365 连接器。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 通用连接器示例 |易于为支持 Webhook 的任何系统自定义的通用连接器的示例代码。|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|

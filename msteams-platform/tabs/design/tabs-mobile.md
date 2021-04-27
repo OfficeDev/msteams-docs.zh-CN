@@ -2,13 +2,14 @@
 title: 移动设备上的选项卡
 description: 介绍设计适用于移动设备的选项卡的指南。
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams 设计指南参考框架个人应用移动应用选项卡
-ms.openlocfilehash: 72d1cf4623a9f4c1b5c993f1477f755b51d9fe64
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 6459d6af7899859f25b28587021e26ce6440fbef
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762023"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020406"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
 

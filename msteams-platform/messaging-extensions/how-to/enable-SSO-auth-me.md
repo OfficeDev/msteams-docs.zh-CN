@@ -2,14 +2,15 @@
 title: 对邮件扩展的 SSO 支持
 author: KirtiPereira
 description: 如何为邮件扩展启用 SSO 支持
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a5f75ef59a3d6fa3fe190b4dba4a1e5736a87562
-ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
+ms.openlocfilehash: f7dc689da3f0e3e06b8f9c68836b6449c2ae9120
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51378342"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020700"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>单一登录 (SSO) 邮件扩展支持
  
@@ -17,7 +18,7 @@ ms.locfileid: "51378342"
 
 本文档指导您如何启用 SSO 和存储身份验证令牌（如果需要）。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 为邮件扩展和链接展开启用 SSO 的先决条件如下所示：
 * 必须具有 [Azure](https://azure.microsoft.com/en-us/free/) 帐户。

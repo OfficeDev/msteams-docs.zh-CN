@@ -3,13 +3,14 @@ title: 与机器人的频道和群组对话
 author: clearab
 description: 如何发送、接收和处理频道或群聊中机器人的消息。
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: e1379a62e3ef7d58efe52c3f91fd9e02b3c46ac9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: cbc82471ce31edaf733bde6951648af86842ab62
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696365"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020931"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>与机器人的频道和群组聊天对话
 

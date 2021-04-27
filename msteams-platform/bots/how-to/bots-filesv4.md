@@ -3,13 +3,14 @@ title: 通过自动程序发送和接收文件
 description: 介绍如何通过自动程序发送和接收文件
 keywords: teams 自动程序文件发送接收
 ms.date: 05/20/2019
+localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: bc2cbaeedcc770f82e3fc1f6cfbbf1beda3948fd
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 7d5ea3434b10d60e20574ca6d1935943c687f4d7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996042"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020938"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>通过自动程序发送和接收文件
 
@@ -320,7 +321,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 以下代码示例演示了如何获取文件许可，以及如何从自动程序将文件上载到 Teams：
 
-|**示例名称** | **说明** | **.NET** | **Javascript** | **Python**|
+|**示例名称** | **描述** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | File upload | 演示如何获取文件同意，以及如何从机器人将文件上载到 Teams。 此外，如何接收发送到自动程序的文件。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 

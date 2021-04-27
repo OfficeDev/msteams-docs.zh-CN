@@ -3,14 +3,15 @@ title: 创建配置页
 author: laujan
 description: 如何创建配置页
 keywords: teams 选项卡组频道可配置
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 0866d11442f79cee33d4454dbd4ed4d6b4b1a840
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382364"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019592"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -112,7 +113,7 @@ ms.locfileid: "51382364"
 
 ### <a name="get-context-data-for-your-tab-settings"></a>获取选项卡设置的上下文数据
 
-您的选项卡可能需要上下文信息来显示相关内容。 上下文信息通过提供更加自定义的用户体验进一步增强选项卡的吸引力。
+你的选项卡可能需要上下文信息以显示相关内容。 上下文信息通过提供更加自定义的用户体验进一步增强选项卡的吸引力。
 
 有关用于选项卡配置的属性详细信息，请参阅 [上下文接口](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)。 通过以下两种方式收集上下文数据变量的值：
 

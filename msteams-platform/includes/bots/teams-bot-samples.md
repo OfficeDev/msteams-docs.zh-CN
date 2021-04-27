@@ -1,3 +1,18 @@
+---
+title: Teams 机器人示例
+description: 介绍了自动程序框架的 Teams 示例
+localization_priority: Normal
+ms.topic: overview
+ms.author: surbhigupta12
+ms.openlocfilehash: 663d676b636711b42a4bf07bac7ff9a83b70a3d4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020006"
+---
+## <a name="teams-bot-samples"></a>Teams 机器人示例
+
 ## <a name="code-sample"></a>代码示例
 
 有关演示此功能的完整工作示例，请参阅以下适用于 Bot Framework 的 Teams 示例：

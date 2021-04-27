@@ -3,14 +3,15 @@ title: 入门 - 生成邮件扩展
 author: heath-hamilton
 description: 使用 Microsoft Teams 策略快速创建 Microsoft Teams 消息传递Toolkit。
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: 09e851820314efd3dc114b926a0111603cac18a4
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f3b5bc9c749d5e5276c0c7af7ff92f4ff5a00d0b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696876"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020868"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>为 Microsoft Teams 生成消息传递扩展
 
@@ -32,7 +33,7 @@ ms.locfileid: "51696876"
 > * 为邮件扩展配置自动程序
 > * 在 Teams 中旁加载和测试消息传递扩展
 
-## <a name="before-you-begin"></a>准备工作
+## <a name="before-you-begin"></a>开始之前
 
 如果尚未了解，请确保 [了解并安装 Teams 开发先决条件](build-first-app-overview.md#get-prerequisites)。
 

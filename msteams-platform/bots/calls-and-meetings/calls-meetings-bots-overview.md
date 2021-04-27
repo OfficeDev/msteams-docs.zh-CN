@@ -2,13 +2,14 @@
 title: 通话和联机会议机器人
 description: 了解 Microsoft Teams 应用如何使用语音和视频与用户交互，使用 Microsoft Graph API 进行通话和联机会议。
 ms.topic: conceptual
+localization_priority: Normal
 keywords: 呼叫呼叫 音频视频 IVR 语音联机会议
-ms.openlocfilehash: be3286afe739c8b1d99af896ad64a3963875768d
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 52a7e1e24fdc0a2c17264087e4f4461b7c43a50a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995979"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020167"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
 
@@ -88,7 +89,7 @@ Teams 中的通话可以纯音频或音频和视频。 使用术语呼叫代替�
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **说明** | **Graph** |
+| **示例名称** | **描述** | **Graph** |
 |---------------|----------|--------|
 | 图形通信 | 图形通信以与 Microsoft 的通信平台交互。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 

@@ -3,14 +3,15 @@ title: 设计邮件扩展
 description: 了解如何设计 Teams 消息传递扩展和获取 Microsoft Teams UI 工具包。
 keywords: 团队设计指南参考消息传递扩展提示最佳做法
 author: heath-hamilton
+localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697009"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020721"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>设计 Microsoft Teams 消息传递扩展
 

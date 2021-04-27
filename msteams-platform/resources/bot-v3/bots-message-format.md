@@ -3,13 +3,14 @@ title: 自动程序消息格式
 description: 介绍自动程序消息格式的详细信息
 keywords: teams 方案频道对话机器人消息
 ms.topic: reference
+localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 4eccc8af8f2cdad153998a13502df2a1baf9ceec
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 06037bd3fb23ace11eea763747dc64d763ac3c42
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696617"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020644"
 ---
 # <a name="message-formatting-for-bots"></a>自动程序的邮件格式
 

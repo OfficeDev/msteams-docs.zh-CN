@@ -2,13 +2,14 @@
 title: 验证应用用户
 description: 介绍 Teams 中的身份验证以及如何在应用中使用它
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams 身份验证 OAuth SSO AAD
-ms.openlocfilehash: 33ef0c55842c495ca44495bc0653a47b147ebbfc
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 23e0e500ee041afa191e9381b6f69b4c3881c391
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995993"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019970"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>在 Microsoft Teams 中对用户进行身份验证
 
@@ -42,7 +43,7 @@ Azure Bot Framework 的 OAuthPrompt 使使用对话机器人的应用更容易�
 
 提供 Bot 身份验证 v3 SDK 示例。
 
-| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | 自动程序身份验证 | 此示例演示如何开始使用 Microsoft Teams 自动程序中的身份验证。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 

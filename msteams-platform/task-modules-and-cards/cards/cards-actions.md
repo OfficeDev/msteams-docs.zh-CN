@@ -1,20 +1,21 @@
 ---
 title: 在自动程序中添加卡片操作
 description: 介绍 Microsoft Teams 中的卡片操作以及如何在机器人中使用它们
+localization_priority: Normal
 ms.topic: conceptual
 keywords: teams 机器人卡片操作
-ms.openlocfilehash: f02e195f619fdfa2ebbc4b2ef00669a1cb5b38f6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696022"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019536"
 ---
 # <a name="card-actions"></a>卡片操作
 
 Teams 中的机器人和消息传递扩展使用的卡片支持以下 () [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) 类型。 请注意，在使用连接器时， `potentialActions` 这些操作不同于 Office 365 连接器卡。
 
-| 类型 | Action |
+| 类型 | 操作 |
 | --- | --- |
 | `openUrl` | 在默认浏览器中打开 URL。 |
 | `messageBack` | 从单击按钮或点击卡片 (用户向聊天机器人发送消息和负载) 并将单独的消息发送到聊天流。 |

@@ -2,13 +2,14 @@
 title: 选择用于测试和调试应用的设置
 description: 介绍用于测试和调试 Microsoft Teams 应用的选项
 keywords: 团队运行调试应用
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: fde8a5907e0815ff798a3acc316cba8336ab8704
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 8b80f988ed44ed04492356366362b0221717b292
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634732"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019949"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>选择用于测试和调试 Microsoft Teams 应用的设置
 

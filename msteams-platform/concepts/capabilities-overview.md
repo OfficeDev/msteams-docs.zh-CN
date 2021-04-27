@@ -3,14 +3,15 @@ title: 了解应用功能
 author: heath-hamilton
 description: 说明的 Teams 应用功能
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 6d08d06c55aed4b531fba4bb533c896c13073cfc
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: d1c6916c9433b15ddcd13e9128b25170dd990dd4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654431"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019928"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>了解 Microsoft Teams 应用功能
 

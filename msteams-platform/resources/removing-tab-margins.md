@@ -4,13 +4,14 @@ author: laujan
 description: 介绍删除制表位将如何增强开发人员的体验。
 keywords: 删除边距填充的选项卡
 ms.topic: reference
+localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 78d97dca73e7fce2bf4b911f5ea4588525667378
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585818"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019711"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 

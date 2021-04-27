@@ -4,13 +4,14 @@ author: laujan
 description: 创建团队会议应用
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: c9410e142c6831fa0aa1b1f5307d92d67739be0e
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: c733f89208e82c032f581109f9c3887f20c104b9
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885071"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018374"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -36,7 +37,7 @@ ms.locfileid: "51885071"
 
 ## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
-|API|说明|请求|Source|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在 Teams 选项卡中显示相关内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams 客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -282,7 +283,7 @@ POST /v3/conversations/{conversationId}/activities
 > * 移动客户端仅在会议前和会议后阶段支持选项卡。
 > * 移动客户端当前不支持会议内对话框和选项卡中的会议体验。 有关详细信息，请参阅 [为移动设备创建选项卡](../tabs/design/tabs-mobile.md) 时移动选项卡指南。
 
-### <a name="before-a-meeting"></a>会议之前
+### <a name="before-a-meeting"></a>会议前
 
 在会议之前，用户可以向会议添加选项卡、聊天机器人和消息传递扩展。 具有组织者和演示者角色的用户可以向会议添加选项卡。
 

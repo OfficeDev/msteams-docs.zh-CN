@@ -3,13 +3,14 @@ title: 发送主动邮件
 description: 介绍如何使用 Microsoft Teams 自动程序发送主动邮件。
 ms.topic: conceptual
 ms.author: anclear
+localization_priority: Normal
 Keywords: 发送消息获取用户 ID 通道 ID 对话 ID
-ms.openlocfilehash: 44e8f3335b7ade4f4a8b1e6192802d932cbd39ed
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: ae651ac94b1b092374f6fae284b67070036b561f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995839"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020917"
 ---
 # <a name="send-proactive-messages"></a>发送主动邮件
 
@@ -266,7 +267,7 @@ POST /v3/conversations
 
 下表提供了一个简单的代码示例，该示例将基本对话流合并到 Teams 应用程序中，以及如何在 Teams 中的频道中创建新的对话线程：
 
-| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
 | Teams 对话基础知识  | 演示 Teams 中对话的基础知识，包括发送一对一主动消息。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | 在频道中启动新线程 | 演示在频道中创建新线程。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |

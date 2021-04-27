@@ -1,14 +1,15 @@
 ---
 title: 获取选项卡的上下文
 description: 介绍如何将用户上下文获取有关选项卡的用户上下文
+localization_priority: Normal
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 88a9c8ac5b2bca539b931147e6f6feb1483a3b6c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 8e5a55c55c0249c5bf15eca011bfb8f604658d0a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696477"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020399"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>获取 Microsoft Teams 选项卡的上下文
 
