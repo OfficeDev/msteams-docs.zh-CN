@@ -5,51 +5,51 @@ description: 如何发送、接收和处理频道或群聊中机器人的消息�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: cbc82471ce31edaf733bde6951648af86842ab62
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7055042dfff4b633fdd570ce5d7318a17ac15cf6
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020931"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058591"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-bot"></a><span data-ttu-id="4feae-103">与机器人的频道和群组聊天对话</span><span class="sxs-lookup"><span data-stu-id="4feae-103">Channel and group chat conversations with a bot</span></span>
+# <a name="channel-and-group-chat-conversations-with-a-bot"></a><span data-ttu-id="e18a0-103">与机器人的频道和群组聊天对话</span><span class="sxs-lookup"><span data-stu-id="e18a0-103">Channel and group chat conversations with a bot</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="4feae-104">若要在团队或群聊中安装 Microsoft Teams 机器人，请向 `teams` 自动程序添加 或 `groupchat` 作用域。</span><span class="sxs-lookup"><span data-stu-id="4feae-104">To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot.</span></span> <span data-ttu-id="4feae-105">此操作允许对话的所有成员与你的机器人互动。</span><span class="sxs-lookup"><span data-stu-id="4feae-105">This allows all members of the conversation to interact with your bot.</span></span> <span data-ttu-id="4feae-106">安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。</span><span class="sxs-lookup"><span data-stu-id="4feae-106">After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members.</span></span> <span data-ttu-id="4feae-107">此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。</span><span class="sxs-lookup"><span data-stu-id="4feae-107">Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.</span></span>
+<span data-ttu-id="e18a0-104">若要在团队或群聊中安装 Microsoft Teams 机器人，请向 `teams` 自动程序添加 或 `groupchat` 作用域。</span><span class="sxs-lookup"><span data-stu-id="e18a0-104">To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot.</span></span> <span data-ttu-id="e18a0-105">此操作允许对话的所有成员与你的机器人互动。</span><span class="sxs-lookup"><span data-stu-id="e18a0-105">This allows all members of the conversation to interact with your bot.</span></span> <span data-ttu-id="e18a0-106">安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。</span><span class="sxs-lookup"><span data-stu-id="e18a0-106">After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members.</span></span> <span data-ttu-id="e18a0-107">此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。</span><span class="sxs-lookup"><span data-stu-id="e18a0-107">Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.</span></span>
 
-<span data-ttu-id="4feae-108">组或频道中的机器人仅在被提及时接收消息 `@botname` 。</span><span class="sxs-lookup"><span data-stu-id="4feae-108">Bots in a group or channel only receive messages when they are mentioned `@botname`.</span></span> <span data-ttu-id="4feae-109">他们不会收到发送到对话的其他任何消息。</span><span class="sxs-lookup"><span data-stu-id="4feae-109">They do not receive any other messages sent to the conversation.</span></span>
+<span data-ttu-id="e18a0-108">组或频道中的机器人仅在被提及时接收消息 `@botname` 。</span><span class="sxs-lookup"><span data-stu-id="e18a0-108">Bots in a group or channel only receive messages when they are mentioned `@botname`.</span></span> <span data-ttu-id="e18a0-109">他们不会收到发送到对话的其他任何消息。</span><span class="sxs-lookup"><span data-stu-id="e18a0-109">They do not receive any other messages sent to the conversation.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4feae-110">自动程序必须 `@mentioned` 直接。</span><span class="sxs-lookup"><span data-stu-id="4feae-110">The bot must be `@mentioned` directly.</span></span> <span data-ttu-id="4feae-111">当提到团队或频道时，或者当有人从你的机器人回复消息时，没有回复消息时，@mentioning消息。</span><span class="sxs-lookup"><span data-stu-id="4feae-111">Your bot does not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.</span></span>
+> <span data-ttu-id="e18a0-110">自动程序必须 `@mentioned` 直接。</span><span class="sxs-lookup"><span data-stu-id="e18a0-110">The bot must be `@mentioned` directly.</span></span> <span data-ttu-id="e18a0-111">当提到团队或频道时，或者当有人从你的机器人回复消息时，没有回复消息时，@mentioning消息。</span><span class="sxs-lookup"><span data-stu-id="e18a0-111">Your bot does not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.</span></span>
 
-## <a name="design-guidelines"></a><span data-ttu-id="4feae-112">设计准则</span><span class="sxs-lookup"><span data-stu-id="4feae-112">Design guidelines</span></span>
+## <a name="design-guidelines"></a><span data-ttu-id="e18a0-112">设计准则</span><span class="sxs-lookup"><span data-stu-id="e18a0-112">Design guidelines</span></span>
 
-<span data-ttu-id="4feae-113">与个人聊天不同，在群聊和频道中，机器人必须提供快速简介。</span><span class="sxs-lookup"><span data-stu-id="4feae-113">Unlike personal chats, in group chats and channels, your bot must provide a quick introduction.</span></span> <span data-ttu-id="4feae-114">必须遵循这些以及更多自动程序设计指南。</span><span class="sxs-lookup"><span data-stu-id="4feae-114">You must follow these and more bot design guidelines.</span></span> <span data-ttu-id="4feae-115">若要详细了解如何在 Teams 中设计机器人，请参阅如何在频道和聊天中设计 [机器人对话](~/bots/design/bots.md)。</span><span class="sxs-lookup"><span data-stu-id="4feae-115">For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).</span></span>
+<span data-ttu-id="e18a0-113">与个人聊天不同，在群聊和频道中，机器人必须提供快速简介。</span><span class="sxs-lookup"><span data-stu-id="e18a0-113">Unlike personal chats, in group chats and channels, your bot must provide a quick introduction.</span></span> <span data-ttu-id="e18a0-114">必须遵循这些以及更多自动程序设计指南。</span><span class="sxs-lookup"><span data-stu-id="e18a0-114">You must follow these and more bot design guidelines.</span></span> <span data-ttu-id="e18a0-115">若要详细了解如何在 Teams 中设计机器人，请参阅如何在频道和聊天中设计 [机器人对话](~/bots/design/bots.md)。</span><span class="sxs-lookup"><span data-stu-id="e18a0-115">For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).</span></span>
 
-<span data-ttu-id="4feae-116">现在，你可以创建新的对话线程并轻松管理频道中的不同对话。</span><span class="sxs-lookup"><span data-stu-id="4feae-116">Now, you can create new conversation threads and easily manage different conversations in channels.</span></span>
+<span data-ttu-id="e18a0-116">现在，你可以创建新的对话线程并轻松管理频道中的不同对话。</span><span class="sxs-lookup"><span data-stu-id="e18a0-116">Now, you can create new conversation threads and easily manage different conversations in channels.</span></span>
 
-## <a name="create-new-conversation-threads"></a><span data-ttu-id="4feae-117">创建新的对话线程</span><span class="sxs-lookup"><span data-stu-id="4feae-117">Create new conversation threads</span></span>
+## <a name="create-new-conversation-threads"></a><span data-ttu-id="e18a0-117">创建新的对话线程</span><span class="sxs-lookup"><span data-stu-id="e18a0-117">Create new conversation threads</span></span>
 
-<span data-ttu-id="4feae-118">在团队中安装自动程序时，必须创建新的对话线程，而不是答复现有对话线程。</span><span class="sxs-lookup"><span data-stu-id="4feae-118">When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one.</span></span> <span data-ttu-id="4feae-119">有时很难区分两个对话。</span><span class="sxs-lookup"><span data-stu-id="4feae-119">At times it is difficult to differentiate between two conversations.</span></span> <span data-ttu-id="4feae-120">如果会话是按线索组织的，则更易于组织和管理频道中的不同对话。</span><span class="sxs-lookup"><span data-stu-id="4feae-120">If the conversation is threaded, it is easier to organize and manage different conversations in channels.</span></span> <span data-ttu-id="4feae-121">这是一种 [主动消息形式](~/bots/how-to/conversations/send-proactive-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="4feae-121">This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
+<span data-ttu-id="e18a0-118">在团队中安装自动程序时，必须创建新的对话线程，而不是答复现有对话线程。</span><span class="sxs-lookup"><span data-stu-id="e18a0-118">When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one.</span></span> <span data-ttu-id="e18a0-119">有时很难区分两个对话。</span><span class="sxs-lookup"><span data-stu-id="e18a0-119">At times it is difficult to differentiate between two conversations.</span></span> <span data-ttu-id="e18a0-120">如果会话是按线索组织的，则更易于组织和管理频道中的不同对话。</span><span class="sxs-lookup"><span data-stu-id="e18a0-120">If the conversation is threaded, it is easier to organize and manage different conversations in channels.</span></span> <span data-ttu-id="e18a0-121">这是一种 [主动消息形式](~/bots/how-to/conversations/send-proactive-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="e18a0-121">This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
 
-<span data-ttu-id="4feae-122">接下来，可以使用 对象检索提及 `entities` 内容，然后使用 对象向邮件添加 `Mention` 提及。</span><span class="sxs-lookup"><span data-stu-id="4feae-122">Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.</span></span>
+<span data-ttu-id="e18a0-122">接下来，可以使用 对象检索提及 `entities` 内容，然后使用 对象向邮件添加 `Mention` 提及。</span><span class="sxs-lookup"><span data-stu-id="e18a0-122">Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.</span></span>
 
-## <a name="work-with-mentions"></a><span data-ttu-id="4feae-123">使用提及</span><span class="sxs-lookup"><span data-stu-id="4feae-123">Work with mentions</span></span>
+## <a name="work-with-mentions"></a><span data-ttu-id="e18a0-123">使用提及</span><span class="sxs-lookup"><span data-stu-id="e18a0-123">Work with mentions</span></span>
 
-<span data-ttu-id="4feae-124">从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中具有其名称的聊天机器人。</span><span class="sxs-lookup"><span data-stu-id="4feae-124">Every message to your bot from a group or channel contains an @mention with its name in the message text.</span></span> <span data-ttu-id="4feae-125">确保邮件分析处理@mention。</span><span class="sxs-lookup"><span data-stu-id="4feae-125">Ensure that your message parsing handles @mention.</span></span> <span data-ttu-id="4feae-126">自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。</span><span class="sxs-lookup"><span data-stu-id="4feae-126">Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.</span></span>
+<span data-ttu-id="e18a0-124">从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中具有其名称的聊天机器人。</span><span class="sxs-lookup"><span data-stu-id="e18a0-124">Every message to your bot from a group or channel contains an @mention with its name in the message text.</span></span> <span data-ttu-id="e18a0-125">确保邮件分析处理@mention。</span><span class="sxs-lookup"><span data-stu-id="e18a0-125">Ensure that your message parsing handles @mention.</span></span> <span data-ttu-id="e18a0-126">自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。</span><span class="sxs-lookup"><span data-stu-id="e18a0-126">Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.</span></span>
 
-<span data-ttu-id="4feae-127">还必须从自动程序@mentions内容中去除此限制。</span><span class="sxs-lookup"><span data-stu-id="4feae-127">You must also strip out the @mentions from the content of the message your bot receives.</span></span>
+<span data-ttu-id="e18a0-127">还必须从自动程序@mentions内容中去除此限制。</span><span class="sxs-lookup"><span data-stu-id="e18a0-127">You must also strip out the @mentions from the content of the message your bot receives.</span></span>
 
-### <a name="retrieve-mentions"></a><span data-ttu-id="4feae-128">检索提及</span><span class="sxs-lookup"><span data-stu-id="4feae-128">Retrieve mentions</span></span>
+### <a name="retrieve-mentions"></a><span data-ttu-id="e18a0-128">检索提及</span><span class="sxs-lookup"><span data-stu-id="e18a0-128">Retrieve mentions</span></span>
 
-<span data-ttu-id="4feae-129">在有效负载中的 对象中返回提及，同时包含用户的唯一 ID 和 `entities` 提及用户的名称。</span><span class="sxs-lookup"><span data-stu-id="4feae-129">Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned.</span></span> <span data-ttu-id="4feae-130">邮件文本还包括提及，例如 `<at>@John Smith<at>` 。</span><span class="sxs-lookup"><span data-stu-id="4feae-130">The text of the message also includes the mention, such as `<at>@John Smith<at>`.</span></span> <span data-ttu-id="4feae-131">但是，不要依赖邮件中的文本来检索有关用户的任何信息。</span><span class="sxs-lookup"><span data-stu-id="4feae-131">However, do not rely on the text in the message to retrieve any information about the user.</span></span> <span data-ttu-id="4feae-132">发送邮件的人可以更改它。</span><span class="sxs-lookup"><span data-stu-id="4feae-132">It is possible for the person sending the message to alter it.</span></span> <span data-ttu-id="4feae-133">因此，请使用 `entities` 对象。</span><span class="sxs-lookup"><span data-stu-id="4feae-133">Therefore, use the `entities` object.</span></span>
+<span data-ttu-id="e18a0-129">在有效负载中的 对象中返回提及，同时包含用户的唯一 ID 和 `entities` 提及用户的名称。</span><span class="sxs-lookup"><span data-stu-id="e18a0-129">Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned.</span></span> <span data-ttu-id="e18a0-130">邮件文本还包括提及，例如 `<at>@John Smith<at>` 。</span><span class="sxs-lookup"><span data-stu-id="e18a0-130">The text of the message also includes the mention, such as `<at>@John Smith<at>`.</span></span> <span data-ttu-id="e18a0-131">但是，不要依赖邮件中的文本来检索有关用户的任何信息。</span><span class="sxs-lookup"><span data-stu-id="e18a0-131">However, do not rely on the text in the message to retrieve any information about the user.</span></span> <span data-ttu-id="e18a0-132">发送邮件的人可以更改它。</span><span class="sxs-lookup"><span data-stu-id="e18a0-132">It is possible for the person sending the message to alter it.</span></span> <span data-ttu-id="e18a0-133">因此，请使用 `entities` 对象。</span><span class="sxs-lookup"><span data-stu-id="e18a0-133">Therefore, use the `entities` object.</span></span>
 
-<span data-ttu-id="4feae-134">可以通过调用 Bot Builder SDK 中的 函数来检索邮件中提及的所有内容，该 `GetMentions` 函数将返回对象 `Mention` 数组。</span><span class="sxs-lookup"><span data-stu-id="4feae-134">You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.</span></span>
+<span data-ttu-id="e18a0-134">可以通过调用 Bot Builder SDK 中的 函数来检索邮件中提及的所有内容，该 `GetMentions` 函数将返回对象 `Mention` 数组。</span><span class="sxs-lookup"><span data-stu-id="e18a0-134">You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.</span></span>
 
-<span data-ttu-id="4feae-135">以下代码显示检索提及的示例：</span><span class="sxs-lookup"><span data-stu-id="4feae-135">The following code shows an example of retrieving mentions:</span></span>
+<span data-ttu-id="e18a0-135">以下代码显示检索提及的示例：</span><span class="sxs-lookup"><span data-stu-id="e18a0-135">The following code shows an example of retrieving mentions:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="4feae-136">C#</span><span class="sxs-lookup"><span data-stu-id="4feae-136">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="e18a0-136">C#</span><span class="sxs-lookup"><span data-stu-id="e18a0-136">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -67,7 +67,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="4feae-137">TypeScript</span><span class="sxs-lookup"><span data-stu-id="4feae-137">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="e18a0-137">TypeScript</span><span class="sxs-lookup"><span data-stu-id="e18a0-137">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -83,7 +83,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="json"></a>[<span data-ttu-id="4feae-138">JSON</span><span class="sxs-lookup"><span data-stu-id="4feae-138">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="e18a0-138">JSON</span><span class="sxs-lookup"><span data-stu-id="e18a0-138">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -125,7 +125,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="4feae-139">Python</span><span class="sxs-lookup"><span data-stu-id="4feae-139">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="e18a0-139">Python</span><span class="sxs-lookup"><span data-stu-id="e18a0-139">Python</span></span>](#tab/python)
 
 ```python
 @staticmethod
@@ -140,20 +140,20 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 * * *
 
-### <a name="add-mentions-to-your-messages"></a><span data-ttu-id="4feae-140">向邮件添加提及</span><span class="sxs-lookup"><span data-stu-id="4feae-140">Add mentions to your messages</span></span>
+### <a name="add-mentions-to-your-messages"></a><span data-ttu-id="e18a0-140">向邮件添加提及</span><span class="sxs-lookup"><span data-stu-id="e18a0-140">Add mentions to your messages</span></span>
 
-<span data-ttu-id="4feae-141">机器人可以在发布至频道的消息中提及其他用户。</span><span class="sxs-lookup"><span data-stu-id="4feae-141">Your bot can mention other users in messages posted into channels.</span></span>
+<span data-ttu-id="e18a0-141">机器人可以在发布至频道的消息中提及其他用户。</span><span class="sxs-lookup"><span data-stu-id="e18a0-141">Your bot can mention other users in messages posted into channels.</span></span>
 
-<span data-ttu-id="4feae-142">`Mention`对象具有两个必须具有以下设置的属性：</span><span class="sxs-lookup"><span data-stu-id="4feae-142">The `Mention` object has two properties that you must set using the following:</span></span>
+<span data-ttu-id="e18a0-142">`Mention`对象具有两个必须具有以下设置的属性：</span><span class="sxs-lookup"><span data-stu-id="e18a0-142">The `Mention` object has two properties that you must set using the following:</span></span>
 
-* <span data-ttu-id="4feae-143">在 <at>@username</at> 文本中包括邮件。</span><span class="sxs-lookup"><span data-stu-id="4feae-143">Include <at>@username</at> in the message text.</span></span>
-* <span data-ttu-id="4feae-144">在 entities 集合中包括 mention 对象。</span><span class="sxs-lookup"><span data-stu-id="4feae-144">Include the mention object inside the entities collection.</span></span>
+* <span data-ttu-id="e18a0-143">在 <at>@username</at> 文本中包括邮件。</span><span class="sxs-lookup"><span data-stu-id="e18a0-143">Include <at>@username</at> in the message text.</span></span>
+* <span data-ttu-id="e18a0-144">在 entities 集合中包括 mention 对象。</span><span class="sxs-lookup"><span data-stu-id="e18a0-144">Include the mention object inside the entities collection.</span></span>
 
-<span data-ttu-id="4feae-145">Bot Framework SDK 提供了用于创建提及项的帮助程序方法和对象。</span><span class="sxs-lookup"><span data-stu-id="4feae-145">The Bot Framework SDK provides helper methods and objects to create mentions.</span></span>
+<span data-ttu-id="e18a0-145">Bot Framework SDK 提供了用于创建提及项的帮助程序方法和对象。</span><span class="sxs-lookup"><span data-stu-id="e18a0-145">The Bot Framework SDK provides helper methods and objects to create mentions.</span></span>
 
-<span data-ttu-id="4feae-146">以下代码显示向邮件添加提及的示例：</span><span class="sxs-lookup"><span data-stu-id="4feae-146">The following code shows an example of adding mentions to your messages:</span></span>
+<span data-ttu-id="e18a0-146">以下代码显示向邮件添加提及的示例：</span><span class="sxs-lookup"><span data-stu-id="e18a0-146">The following code shows an example of adding mentions to your messages:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="4feae-147">C#</span><span class="sxs-lookup"><span data-stu-id="4feae-147">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="e18a0-147">C#</span><span class="sxs-lookup"><span data-stu-id="e18a0-147">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -171,7 +171,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="4feae-148">TypeScript</span><span class="sxs-lookup"><span data-stu-id="4feae-148">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="e18a0-148">TypeScript</span><span class="sxs-lookup"><span data-stu-id="e18a0-148">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -190,9 +190,9 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="json"></a>[<span data-ttu-id="4feae-149">JSON</span><span class="sxs-lookup"><span data-stu-id="4feae-149">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="e18a0-149">JSON</span><span class="sxs-lookup"><span data-stu-id="e18a0-149">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="4feae-150">`text`数组中对象中的 `entities` 字段必须与邮件字段的一部分 `text` 匹配。</span><span class="sxs-lookup"><span data-stu-id="4feae-150">The `text` field in the object in the `entities` array must match a portion of the message `text` field.</span></span> <span data-ttu-id="4feae-151">如果没有，则忽略提及。</span><span class="sxs-lookup"><span data-stu-id="4feae-151">If it does not, the mention is ignored.</span></span>
+<span data-ttu-id="e18a0-150">`text`数组中对象中的 `entities` 字段必须与邮件字段的一部分 `text` 匹配。</span><span class="sxs-lookup"><span data-stu-id="e18a0-150">The `text` field in the object in the `entities` array must match a portion of the message `text` field.</span></span> <span data-ttu-id="e18a0-151">如果没有，则忽略提及。</span><span class="sxs-lookup"><span data-stu-id="e18a0-151">If it does not, the mention is ignored.</span></span>
 
 ```json
 {
@@ -234,7 +234,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="4feae-152">Python</span><span class="sxs-lookup"><span data-stu-id="4feae-152">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="e18a0-152">Python</span><span class="sxs-lookup"><span data-stu-id="e18a0-152">Python</span></span>](#tab/python)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
@@ -251,29 +251,28 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 * * *
 
-<span data-ttu-id="4feae-153">现在，可以在首次安装自动程序或将其添加到组或团队时发送简介消息。</span><span class="sxs-lookup"><span data-stu-id="4feae-153">Now you can send an introduction message when your bot is first installed or added to a group or team.</span></span>
+<span data-ttu-id="e18a0-153">现在，可以在首次安装自动程序或将其添加到组或团队时发送简介消息。</span><span class="sxs-lookup"><span data-stu-id="e18a0-153">Now you can send an introduction message when your bot is first installed or added to a group or team.</span></span>
 
-## <a name="send-a-message-on-installation"></a><span data-ttu-id="4feae-154">安装时发送邮件</span><span class="sxs-lookup"><span data-stu-id="4feae-154">Send a message on installation</span></span>
+## <a name="send-a-message-on-installation"></a><span data-ttu-id="e18a0-154">安装时发送邮件</span><span class="sxs-lookup"><span data-stu-id="e18a0-154">Send a message on installation</span></span>
 
-<span data-ttu-id="4feae-155">首次将机器人添加到组或团队时，必须发送一条介绍消息。</span><span class="sxs-lookup"><span data-stu-id="4feae-155">When your bot is first added to the group or team, an introduction message must be sent.</span></span> <span data-ttu-id="4feae-156">该消息必须提供自动程序功能及其使用方法的简要说明。</span><span class="sxs-lookup"><span data-stu-id="4feae-156">The message must provide a brief description of the bot's features and how to use them.</span></span> <span data-ttu-id="4feae-157">必须使用 `conversationUpdate` `teamMemberAdded` eventType 订阅事件。</span><span class="sxs-lookup"><span data-stu-id="4feae-157">You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.</span></span>  <span data-ttu-id="4feae-158">当添加任何新的团队成员时，将发送该事件。</span><span class="sxs-lookup"><span data-stu-id="4feae-158">The event is sent when any new team member is added.</span></span> <span data-ttu-id="4feae-159">检查添加的新增成员是否就是机器人。</span><span class="sxs-lookup"><span data-stu-id="4feae-159">Check if the new member added is the bot.</span></span> <span data-ttu-id="4feae-160">有关详细信息，请参阅 [向新团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="4feae-160">For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
+<span data-ttu-id="e18a0-155">首次将机器人添加到组或团队时，必须发送一条介绍消息。</span><span class="sxs-lookup"><span data-stu-id="e18a0-155">When your bot is first added to the group or team, an introduction message must be sent.</span></span> <span data-ttu-id="e18a0-156">该消息必须提供自动程序功能及其使用方法的简要说明。</span><span class="sxs-lookup"><span data-stu-id="e18a0-156">The message must provide a brief description of the bot's features and how to use them.</span></span> <span data-ttu-id="e18a0-157">必须使用 `conversationUpdate` `teamMemberAdded` eventType 订阅事件。</span><span class="sxs-lookup"><span data-stu-id="e18a0-157">You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.</span></span>  <span data-ttu-id="e18a0-158">当添加任何新的团队成员时，将发送该事件。</span><span class="sxs-lookup"><span data-stu-id="e18a0-158">The event is sent when any new team member is added.</span></span> <span data-ttu-id="e18a0-159">检查添加的新增成员是否就是机器人。</span><span class="sxs-lookup"><span data-stu-id="e18a0-159">Check if the new member added is the bot.</span></span> <span data-ttu-id="e18a0-160">有关详细信息，请参阅 [向新团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="e18a0-160">For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
 
-<span data-ttu-id="4feae-161">添加自动程序时，向每个团队成员发送个人消息。</span><span class="sxs-lookup"><span data-stu-id="4feae-161">Send a personal message to each team member when the bot is added.</span></span> <span data-ttu-id="4feae-162">为此，请获取团队名单，并给每个用户发送一条直接消息。</span><span class="sxs-lookup"><span data-stu-id="4feae-162">To do this, get the team roster and send each user a direct message.</span></span>
+<span data-ttu-id="e18a0-161">添加自动程序时，向每个团队成员发送个人消息。</span><span class="sxs-lookup"><span data-stu-id="e18a0-161">Send a personal message to each team member when the bot is added.</span></span> <span data-ttu-id="e18a0-162">为此，请获取团队名单，并给每个用户发送一条直接消息。</span><span class="sxs-lookup"><span data-stu-id="e18a0-162">To do this, get the team roster and send each user a direct message.</span></span>
 
-<span data-ttu-id="4feae-163">在下列情况下不要发送邮件：</span><span class="sxs-lookup"><span data-stu-id="4feae-163">Do not send a message in the following cases:</span></span>
+<span data-ttu-id="e18a0-163">在下列情况下不要发送邮件：</span><span class="sxs-lookup"><span data-stu-id="e18a0-163">Do not send a message in the following cases:</span></span>
 
-* <span data-ttu-id="4feae-164">例如，团队规模较大，成员超过 100 人。</span><span class="sxs-lookup"><span data-stu-id="4feae-164">The team is large, for example, larger than 100 members.</span></span> <span data-ttu-id="4feae-165">机器人可能会被视为垃圾邮件，添加它的人可能会收到投诉。</span><span class="sxs-lookup"><span data-stu-id="4feae-165">Your bot can be seen as spam and the person who added it can get complaints.</span></span> <span data-ttu-id="4feae-166">你必须向看到欢迎消息的每个人清楚地传达机器人的价值主张。</span><span class="sxs-lookup"><span data-stu-id="4feae-166">You must clearly communicate your bot's value proposition to everyone who sees the welcome message.</span></span>
-* <span data-ttu-id="4feae-167">你的机器人首先在组或频道中提及，而不是先添加到团队。</span><span class="sxs-lookup"><span data-stu-id="4feae-167">Your bot is first mentioned in a group or channel instead of being first added to a team.</span></span>
-* <span data-ttu-id="4feae-168">重命名组或频道。</span><span class="sxs-lookup"><span data-stu-id="4feae-168">A group or channel is renamed.</span></span>
-* <span data-ttu-id="4feae-169">将团队成员添加到组或频道。</span><span class="sxs-lookup"><span data-stu-id="4feae-169">A team member is added to a group or channel.</span></span>
+* <span data-ttu-id="e18a0-164">例如，团队规模较大，成员超过 100 人。</span><span class="sxs-lookup"><span data-stu-id="e18a0-164">The team is large, for example, larger than 100 members.</span></span> <span data-ttu-id="e18a0-165">机器人可能会被视为垃圾邮件，添加它的人可能会收到投诉。</span><span class="sxs-lookup"><span data-stu-id="e18a0-165">Your bot can be seen as spam and the person who added it can get complaints.</span></span> <span data-ttu-id="e18a0-166">你必须向看到欢迎消息的每个人清楚地传达机器人的价值主张。</span><span class="sxs-lookup"><span data-stu-id="e18a0-166">You must clearly communicate your bot's value proposition to everyone who sees the welcome message.</span></span>
+* <span data-ttu-id="e18a0-167">你的机器人首先在组或频道中提及，而不是先添加到团队。</span><span class="sxs-lookup"><span data-stu-id="e18a0-167">Your bot is first mentioned in a group or channel instead of being first added to a team.</span></span>
+* <span data-ttu-id="e18a0-168">重命名组或频道。</span><span class="sxs-lookup"><span data-stu-id="e18a0-168">A group or channel is renamed.</span></span>
+* <span data-ttu-id="e18a0-169">将团队成员添加到组或频道。</span><span class="sxs-lookup"><span data-stu-id="e18a0-169">A team member is added to a group or channel.</span></span>
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a><span data-ttu-id="4feae-170">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4feae-170">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e18a0-170">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e18a0-170">See also</span></span>
+
+- <span data-ttu-id="e18a0-171">[获取团队上下文](~/bots/how-to/get-teams-context.md)。</span><span class="sxs-lookup"><span data-stu-id="e18a0-171">[Get teams context](~/bots/how-to/get-teams-context.md).</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="e18a0-172">后续步骤</span><span class="sxs-lookup"><span data-stu-id="e18a0-172">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> <span data-ttu-id="4feae-171">[获取团队上下文](~/bots/how-to/get-teams-context.md)。</span><span class="sxs-lookup"><span data-stu-id="4feae-171">[Get teams context](~/bots/how-to/get-teams-context.md).</span></span>
-
-## <a name="next-step"></a><span data-ttu-id="4feae-172">后续步骤</span><span class="sxs-lookup"><span data-stu-id="4feae-172">Next step</span></span>
-
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="4feae-173">订阅对话事件</span><span class="sxs-lookup"><span data-stu-id="4feae-173">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [<span data-ttu-id="e18a0-173">订阅对话事件</span><span class="sxs-lookup"><span data-stu-id="e18a0-173">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

@@ -5,42 +5,42 @@ description: 如何处理初始调用操作，以及如何使用操作消息扩�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019844"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058626"
 ---
-# <a name="create-and-send-the-task-module"></a><span data-ttu-id="35511-103">创建并发送任务模块</span><span class="sxs-lookup"><span data-stu-id="35511-103">Create and send the task module</span></span>
+# <a name="create-and-send-the-task-module"></a><span data-ttu-id="830a5-103">创建并发送任务模块</span><span class="sxs-lookup"><span data-stu-id="830a5-103">Create and send the task module</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-<span data-ttu-id="35511-104">可以使用自适应卡片或嵌入式 Web 视图创建任务模块。</span><span class="sxs-lookup"><span data-stu-id="35511-104">You can create the task module using an Adaptive Card or an embedded web view.</span></span> <span data-ttu-id="35511-105">若要创建任务模块，必须执行称为初始调用请求的过程。</span><span class="sxs-lookup"><span data-stu-id="35511-105">To create a task module, you must perform the process called the initial invoke request.</span></span> <span data-ttu-id="35511-106">本文档涵盖初始调用请求、从一对一聊天、群聊、频道 (新帖子) 、频道 (回复线程) 和命令框调用任务模块时的有效负载活动属性。</span><span class="sxs-lookup"><span data-stu-id="35511-106">This document covers the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.</span></span> 
+<span data-ttu-id="830a5-104">可以使用自适应卡片或嵌入式 Web 视图创建任务模块。</span><span class="sxs-lookup"><span data-stu-id="830a5-104">You can create the task module using an Adaptive Card or an embedded web view.</span></span> <span data-ttu-id="830a5-105">若要创建任务模块，必须执行称为初始调用请求的过程。</span><span class="sxs-lookup"><span data-stu-id="830a5-105">To create a task module, you must perform the process called the initial invoke request.</span></span> <span data-ttu-id="830a5-106">本文档涵盖初始调用请求、从一对一聊天、群聊、频道 (新帖子) 、频道 (回复线程) 和命令框调用任务模块时的有效负载活动属性。</span><span class="sxs-lookup"><span data-stu-id="830a5-106">This document covers the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.</span></span> 
 > [!NOTE]
-> <span data-ttu-id="35511-107">如果没有使用应用清单中定义的参数填充任务模块，则必须为具有自适应卡片或嵌入式 Web 视图的用户创建任务模块。</span><span class="sxs-lookup"><span data-stu-id="35511-107">If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.</span></span>
+> <span data-ttu-id="830a5-107">如果没有使用应用清单中定义的参数填充任务模块，则必须为具有自适应卡片或嵌入式 Web 视图的用户创建任务模块。</span><span class="sxs-lookup"><span data-stu-id="830a5-107">If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.</span></span>
 
-## <a name="the-initial-invoke-request"></a><span data-ttu-id="35511-108">初始调用请求</span><span class="sxs-lookup"><span data-stu-id="35511-108">The initial invoke request</span></span>
+## <a name="the-initial-invoke-request"></a><span data-ttu-id="830a5-108">初始调用请求</span><span class="sxs-lookup"><span data-stu-id="830a5-108">The initial invoke request</span></span>
 
-<span data-ttu-id="35511-109">在初始调用请求过程中，你的服务接收一个类型 为 的对象，并且你必须使用包含自适应卡片或嵌入 Web 视图 `Activity` `composeExtension/fetchTask` 的 URL `task` 的对象进行响应。</span><span class="sxs-lookup"><span data-stu-id="35511-109">In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view.</span></span> <span data-ttu-id="35511-110">与标准自动程序活动属性一起，初始调用有效负载包含以下请求元数据：</span><span class="sxs-lookup"><span data-stu-id="35511-110">Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:</span></span>
+<span data-ttu-id="830a5-109">在初始调用请求过程中，你的服务接收一个类型 为 的对象，并且你必须使用包含自适应卡片或嵌入 Web 视图 `Activity` `composeExtension/fetchTask` 的 URL `task` 的对象进行响应。</span><span class="sxs-lookup"><span data-stu-id="830a5-109">In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view.</span></span> <span data-ttu-id="830a5-110">与标准自动程序活动属性一起，初始调用有效负载包含以下请求元数据：</span><span class="sxs-lookup"><span data-stu-id="830a5-110">Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:</span></span>
 
-|<span data-ttu-id="35511-111">属性名称</span><span class="sxs-lookup"><span data-stu-id="35511-111">Property name</span></span>|<span data-ttu-id="35511-112">用途</span><span class="sxs-lookup"><span data-stu-id="35511-112">Purpose</span></span>|
+|<span data-ttu-id="830a5-111">属性名称</span><span class="sxs-lookup"><span data-stu-id="830a5-111">Property name</span></span>|<span data-ttu-id="830a5-112">用途</span><span class="sxs-lookup"><span data-stu-id="830a5-112">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="35511-113">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="35511-113">Type of request.</span></span> <span data-ttu-id="35511-114">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="35511-114">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="35511-115">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="35511-115">Type of command that is issued to your service.</span></span> <span data-ttu-id="35511-116">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="35511-116">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="35511-117">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-117">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="35511-118">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="35511-118">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="35511-119">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-119">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="35511-120">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-120">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="35511-121">如果 (通道请求，频道 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="35511-121">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="35511-122">如果 (频道中提出请求，团队 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="35511-122">Team ID (if the request was made in a channel).</span></span> |
-|`value.commandId` | <span data-ttu-id="35511-123">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-123">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="35511-124">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="35511-124">The context that triggered the event.</span></span> <span data-ttu-id="35511-125">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="35511-125">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="35511-126">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="35511-126">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="35511-127">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="35511-127">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="830a5-113">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-113">Type of request.</span></span> <span data-ttu-id="830a5-114">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-114">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="830a5-115">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-115">Type of command that is issued to your service.</span></span> <span data-ttu-id="830a5-116">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-116">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="830a5-117">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-117">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="830a5-118">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-118">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="830a5-119">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-119">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="830a5-120">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-120">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="830a5-121">如果 (通道请求，频道 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="830a5-121">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="830a5-122">如果 (频道中提出请求，团队 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="830a5-122">Team ID (if the request was made in a channel).</span></span> |
+|`value.commandId` | <span data-ttu-id="830a5-123">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-123">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="830a5-124">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="830a5-124">The context that triggered the event.</span></span> <span data-ttu-id="830a5-125">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-125">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="830a5-126">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="830a5-126">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="830a5-127">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-127">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="35511-128">示例</span><span class="sxs-lookup"><span data-stu-id="35511-128">Example</span></span>
+### <a name="example"></a><span data-ttu-id="830a5-128">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-128">Example</span></span>
 
-<span data-ttu-id="35511-129">初始调用请求的代码如下例所示：</span><span class="sxs-lookup"><span data-stu-id="35511-129">The code for the initial invoke request is given in the following example:</span></span>
+<span data-ttu-id="830a5-129">初始调用请求的代码如下例所示：</span><span class="sxs-lookup"><span data-stu-id="830a5-129">The code for the initial invoke request is given in the following example:</span></span>
 
 ```json
 {
@@ -70,27 +70,27 @@ ms.locfileid: "52019844"
   "name": "composeExtension/fetchTask"
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a><span data-ttu-id="35511-130">从一对一聊天调用任务模块时的有效负载活动属性</span><span class="sxs-lookup"><span data-stu-id="35511-130">Payload activity properties when a task module is invoked from 1:1 chat</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a><span data-ttu-id="830a5-130">从一对一聊天调用任务模块时的有效负载活动属性</span><span class="sxs-lookup"><span data-stu-id="830a5-130">Payload activity properties when a task module is invoked from 1:1 chat</span></span> 
 
-<span data-ttu-id="35511-131">从一对一聊天调用任务模块时的有效负载活动属性列出如下：</span><span class="sxs-lookup"><span data-stu-id="35511-131">The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:</span></span>
+<span data-ttu-id="830a5-131">从一对一聊天调用任务模块时的有效负载活动属性列出如下：</span><span class="sxs-lookup"><span data-stu-id="830a5-131">The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:</span></span>
 
-|<span data-ttu-id="35511-132">属性名称</span><span class="sxs-lookup"><span data-stu-id="35511-132">Property name</span></span>|<span data-ttu-id="35511-133">用途</span><span class="sxs-lookup"><span data-stu-id="35511-133">Purpose</span></span>|
+|<span data-ttu-id="830a5-132">属性名称</span><span class="sxs-lookup"><span data-stu-id="830a5-132">Property name</span></span>|<span data-ttu-id="830a5-133">用途</span><span class="sxs-lookup"><span data-stu-id="830a5-133">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="35511-134">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="35511-134">Type of request.</span></span> <span data-ttu-id="35511-135">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="35511-135">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="35511-136">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="35511-136">Type of command that is issued to your service.</span></span> <span data-ttu-id="35511-137">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="35511-137">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="35511-138">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-138">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="35511-139">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="35511-139">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="35511-140">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-140">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="35511-141">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-141">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="35511-142">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="35511-142">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="35511-143">获取或设置邮件的回复 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-143">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="35511-144">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-144">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="35511-145">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="35511-145">The context that triggered the event.</span></span> <span data-ttu-id="35511-146">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="35511-146">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="35511-147">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="35511-147">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="35511-148">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="35511-148">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="830a5-134">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-134">Type of request.</span></span> <span data-ttu-id="830a5-135">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-135">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="830a5-136">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-136">Type of command that is issued to your service.</span></span> <span data-ttu-id="830a5-137">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-137">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="830a5-138">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-138">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="830a5-139">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-139">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="830a5-140">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-140">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="830a5-141">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-141">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="830a5-142">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-142">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="830a5-143">获取或设置邮件的回复 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-143">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="830a5-144">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-144">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="830a5-145">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="830a5-145">The context that triggered the event.</span></span> <span data-ttu-id="830a5-146">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-146">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="830a5-147">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="830a5-147">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="830a5-148">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-148">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="35511-149">示例</span><span class="sxs-lookup"><span data-stu-id="35511-149">Example</span></span>
+### <a name="example"></a><span data-ttu-id="830a5-149">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-149">Example</span></span>
 
-<span data-ttu-id="35511-150">以下示例提供从一对一聊天调用任务模块时的有效负载活动属性：</span><span class="sxs-lookup"><span data-stu-id="35511-150">The payload activity properties when a task module is invoked from 1:1 chat are given in the following example:</span></span>
+<span data-ttu-id="830a5-150">以下示例提供从一对一聊天调用任务模块时的有效负载活动属性：</span><span class="sxs-lookup"><span data-stu-id="830a5-150">The payload activity properties when a task module is invoked from 1:1 chat are given in the following example:</span></span>
 
 ```json
 {
@@ -120,27 +120,27 @@ ms.locfileid: "52019844"
   "name": "composeExtension/fetchTask"
 }
 ```
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a><span data-ttu-id="35511-151">从群聊中调用任务模块时的有效负载活动属性</span><span class="sxs-lookup"><span data-stu-id="35511-151">Payload activity properties when a task module is invoked from a group chat</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a><span data-ttu-id="830a5-151">从群聊中调用任务模块时的有效负载活动属性</span><span class="sxs-lookup"><span data-stu-id="830a5-151">Payload activity properties when a task module is invoked from a group chat</span></span> 
 
-<span data-ttu-id="35511-152">从群聊中调用任务模块时的有效负载活动属性列出如下：</span><span class="sxs-lookup"><span data-stu-id="35511-152">The payload activity properties when a task module is invoked from a group chat are listed as follows:</span></span>
+<span data-ttu-id="830a5-152">从群聊中调用任务模块时的有效负载活动属性列出如下：</span><span class="sxs-lookup"><span data-stu-id="830a5-152">The payload activity properties when a task module is invoked from a group chat are listed as follows:</span></span>
 
-|<span data-ttu-id="35511-153">属性名称</span><span class="sxs-lookup"><span data-stu-id="35511-153">Property name</span></span>|<span data-ttu-id="35511-154">用途</span><span class="sxs-lookup"><span data-stu-id="35511-154">Purpose</span></span>|
+|<span data-ttu-id="830a5-153">属性名称</span><span class="sxs-lookup"><span data-stu-id="830a5-153">Property name</span></span>|<span data-ttu-id="830a5-154">用途</span><span class="sxs-lookup"><span data-stu-id="830a5-154">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="35511-155">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="35511-155">Type of request.</span></span> <span data-ttu-id="35511-156">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="35511-156">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="35511-157">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="35511-157">Type of command that is issued to your service.</span></span> <span data-ttu-id="35511-158">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="35511-158">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="35511-159">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-159">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="35511-160">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="35511-160">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="35511-161">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-161">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="35511-162">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-162">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="35511-163">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="35511-163">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="35511-164">获取或设置邮件的回复 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-164">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="35511-165">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-165">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="35511-166">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="35511-166">The context that triggered the event.</span></span> <span data-ttu-id="35511-167">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="35511-167">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="35511-168">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="35511-168">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="35511-169">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="35511-169">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="830a5-155">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-155">Type of request.</span></span> <span data-ttu-id="830a5-156">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-156">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="830a5-157">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-157">Type of command that is issued to your service.</span></span> <span data-ttu-id="830a5-158">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-158">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="830a5-159">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-159">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="830a5-160">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-160">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="830a5-161">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-161">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="830a5-162">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-162">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="830a5-163">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-163">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="830a5-164">获取或设置邮件的回复 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-164">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="830a5-165">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-165">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="830a5-166">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="830a5-166">The context that triggered the event.</span></span> <span data-ttu-id="830a5-167">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-167">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="830a5-168">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="830a5-168">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="830a5-169">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-169">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="35511-170">示例</span><span class="sxs-lookup"><span data-stu-id="35511-170">Example</span></span>
+### <a name="example"></a><span data-ttu-id="830a5-170">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-170">Example</span></span>
 
-<span data-ttu-id="35511-171">以下示例中提供从群聊调用任务模块时的有效负载活动属性：</span><span class="sxs-lookup"><span data-stu-id="35511-171">The payload activity properties when a task module is invoked from a group chat are given in the following example:</span></span>
+<span data-ttu-id="830a5-171">以下示例中提供从群聊调用任务模块时的有效负载活动属性：</span><span class="sxs-lookup"><span data-stu-id="830a5-171">The payload activity properties when a task module is invoked from a group chat are given in the following example:</span></span>
 
 ```json
 {
@@ -177,29 +177,29 @@ ms.locfileid: "52019844"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a><span data-ttu-id="35511-172">从频道调用任务模块时的有效负载活动属性 (发布) </span><span class="sxs-lookup"><span data-stu-id="35511-172">Payload activity properties when a task module is invoked from a channel (new post)</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a><span data-ttu-id="830a5-172">从频道调用任务模块时的有效负载活动属性 (发布) </span><span class="sxs-lookup"><span data-stu-id="830a5-172">Payload activity properties when a task module is invoked from a channel (new post)</span></span> 
 
-<span data-ttu-id="35511-173">从频道调用任务模块时的有效负载活动属性 (发布) 如下所示：</span><span class="sxs-lookup"><span data-stu-id="35511-173">The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:</span></span>
+<span data-ttu-id="830a5-173">从频道调用任务模块时的有效负载活动属性 (发布) 如下所示：</span><span class="sxs-lookup"><span data-stu-id="830a5-173">The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:</span></span>
 
-|<span data-ttu-id="35511-174">属性名称</span><span class="sxs-lookup"><span data-stu-id="35511-174">Property name</span></span>|<span data-ttu-id="35511-175">用途</span><span class="sxs-lookup"><span data-stu-id="35511-175">Purpose</span></span>|
+|<span data-ttu-id="830a5-174">属性名称</span><span class="sxs-lookup"><span data-stu-id="830a5-174">Property name</span></span>|<span data-ttu-id="830a5-175">用途</span><span class="sxs-lookup"><span data-stu-id="830a5-175">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="35511-176">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="35511-176">Type of request.</span></span> <span data-ttu-id="35511-177">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="35511-177">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="35511-178">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="35511-178">Type of command that is issued to your service.</span></span> <span data-ttu-id="35511-179">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="35511-179">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="35511-180">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-180">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="35511-181">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="35511-181">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="35511-182">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-182">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="35511-183">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-183">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="35511-184">如果 (通道请求，频道 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="35511-184">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="35511-185">如果 (频道中提出请求，团队 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="35511-185">Team ID (if the request was made in a channel).</span></span> |
-|`channelData.source.name`| <span data-ttu-id="35511-186">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="35511-186">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="35511-187">获取或设置邮件的回复 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-187">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="35511-188">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-188">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="35511-189">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="35511-189">The context that triggered the event.</span></span> <span data-ttu-id="35511-190">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="35511-190">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="35511-191">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="35511-191">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="35511-192">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="35511-192">It must be `default`, `contrast`, or `dark`.</span></span> |
+|`type`| <span data-ttu-id="830a5-176">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-176">Type of request.</span></span> <span data-ttu-id="830a5-177">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-177">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="830a5-178">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-178">Type of command that is issued to your service.</span></span> <span data-ttu-id="830a5-179">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-179">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="830a5-180">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-180">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="830a5-181">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-181">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="830a5-182">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-182">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="830a5-183">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-183">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="830a5-184">如果 (通道请求，频道 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="830a5-184">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="830a5-185">如果 (频道中提出请求，团队 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="830a5-185">Team ID (if the request was made in a channel).</span></span> |
+|`channelData.source.name`| <span data-ttu-id="830a5-186">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-186">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="830a5-187">获取或设置邮件的回复 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-187">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="830a5-188">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-188">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="830a5-189">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="830a5-189">The context that triggered the event.</span></span> <span data-ttu-id="830a5-190">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-190">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="830a5-191">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="830a5-191">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="830a5-192">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-192">It must be `default`, `contrast`, or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="35511-193">示例</span><span class="sxs-lookup"><span data-stu-id="35511-193">Example</span></span>
+### <a name="example"></a><span data-ttu-id="830a5-193">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-193">Example</span></span>
 
-<span data-ttu-id="35511-194">从频道调用任务模块时的有效负载活动属性 (以下示例) 文章时的有效负载活动属性：</span><span class="sxs-lookup"><span data-stu-id="35511-194">The payload activity properties when a task module is invoked from a channel (new post) are given in the following example:</span></span>
+<span data-ttu-id="830a5-194">从频道调用任务模块时的有效负载活动属性 (以下示例) 文章时的有效负载活动属性：</span><span class="sxs-lookup"><span data-stu-id="830a5-194">The payload activity properties when a task module is invoked from a channel (new post) are given in the following example:</span></span>
 
 ```json
 {
@@ -243,29 +243,29 @@ ms.locfileid: "52019844"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a><span data-ttu-id="35511-195">从频道调用任务模块时的有效负载活动属性 (线程) </span><span class="sxs-lookup"><span data-stu-id="35511-195">Payload activity properties when a task module is invoked from a channel (reply to thread)</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a><span data-ttu-id="830a5-195">从频道调用任务模块时的有效负载活动属性 (线程) </span><span class="sxs-lookup"><span data-stu-id="830a5-195">Payload activity properties when a task module is invoked from a channel (reply to thread)</span></span> 
 
-<span data-ttu-id="35511-196">从频道调用任务模块时的有效负载活动属性 (主题) 如下所示：</span><span class="sxs-lookup"><span data-stu-id="35511-196">The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:</span></span>
+<span data-ttu-id="830a5-196">从频道调用任务模块时的有效负载活动属性 (主题) 如下所示：</span><span class="sxs-lookup"><span data-stu-id="830a5-196">The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:</span></span>
 
-|<span data-ttu-id="35511-197">属性名称</span><span class="sxs-lookup"><span data-stu-id="35511-197">Property name</span></span>|<span data-ttu-id="35511-198">用途</span><span class="sxs-lookup"><span data-stu-id="35511-198">Purpose</span></span>|
+|<span data-ttu-id="830a5-197">属性名称</span><span class="sxs-lookup"><span data-stu-id="830a5-197">Property name</span></span>|<span data-ttu-id="830a5-198">用途</span><span class="sxs-lookup"><span data-stu-id="830a5-198">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="35511-199">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="35511-199">Type of request.</span></span> <span data-ttu-id="35511-200">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="35511-200">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="35511-201">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="35511-201">Type of command that is issued to your service.</span></span> <span data-ttu-id="35511-202">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="35511-202">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="35511-203">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-203">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="35511-204">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="35511-204">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="35511-205">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-205">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="35511-206">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-206">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="35511-207">如果 (通道请求，频道 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="35511-207">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="35511-208">如果 (频道中提出请求，团队 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="35511-208">Team ID (if the request was made in a channel).</span></span> |
-|`channelData.source.name`| <span data-ttu-id="35511-209">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="35511-209">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="35511-210">获取或设置邮件的回复 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-210">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="35511-211">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-211">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="35511-212">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="35511-212">The context that triggered the event.</span></span> <span data-ttu-id="35511-213">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="35511-213">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="35511-214">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="35511-214">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="35511-215">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="35511-215">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="830a5-199">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-199">Type of request.</span></span> <span data-ttu-id="830a5-200">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-200">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="830a5-201">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-201">Type of command that is issued to your service.</span></span> <span data-ttu-id="830a5-202">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-202">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="830a5-203">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-203">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="830a5-204">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-204">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="830a5-205">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-205">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="830a5-206">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-206">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="830a5-207">如果 (通道请求，频道 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="830a5-207">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="830a5-208">如果 (频道中提出请求，团队 ID 将) 。</span><span class="sxs-lookup"><span data-stu-id="830a5-208">Team ID (if the request was made in a channel).</span></span> |
+|`channelData.source.name`| <span data-ttu-id="830a5-209">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-209">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="830a5-210">获取或设置邮件的回复 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-210">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="830a5-211">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-211">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="830a5-212">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="830a5-212">The context that triggered the event.</span></span> <span data-ttu-id="830a5-213">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-213">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="830a5-214">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="830a5-214">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="830a5-215">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-215">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="35511-216">示例</span><span class="sxs-lookup"><span data-stu-id="35511-216">Example</span></span>
+### <a name="example"></a><span data-ttu-id="830a5-216">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-216">Example</span></span>
 
-<span data-ttu-id="35511-217">从频道调用任务模块时的有效负载活动属性 (以下示例) 主题响应：</span><span class="sxs-lookup"><span data-stu-id="35511-217">The payload activity properties when a task module is invoked from a channel (reply to thread) are given in the following example:</span></span>
+<span data-ttu-id="830a5-217">从频道调用任务模块时的有效负载活动属性 (以下示例) 主题响应：</span><span class="sxs-lookup"><span data-stu-id="830a5-217">The payload activity properties when a task module is invoked from a channel (reply to thread) are given in the following example:</span></span>
 
 ```json
 {
@@ -352,26 +352,26 @@ ms.locfileid: "52019844"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a><span data-ttu-id="35511-218">从命令框调用任务模块时的有效负载活动属性</span><span class="sxs-lookup"><span data-stu-id="35511-218">Payload activity properties when a task module is invoked from a command box</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a><span data-ttu-id="830a5-218">从命令框调用任务模块时的有效负载活动属性</span><span class="sxs-lookup"><span data-stu-id="830a5-218">Payload activity properties when a task module is invoked from a command box</span></span> 
 
-<span data-ttu-id="35511-219">从命令框调用任务模块时的有效负载活动属性列出如下：</span><span class="sxs-lookup"><span data-stu-id="35511-219">The payload activity properties when a task module is invoked from a command box are listed as follows:</span></span>
+<span data-ttu-id="830a5-219">从命令框调用任务模块时的有效负载活动属性列出如下：</span><span class="sxs-lookup"><span data-stu-id="830a5-219">The payload activity properties when a task module is invoked from a command box are listed as follows:</span></span>
 
-|<span data-ttu-id="35511-220">属性名称</span><span class="sxs-lookup"><span data-stu-id="35511-220">Property name</span></span>|<span data-ttu-id="35511-221">用途</span><span class="sxs-lookup"><span data-stu-id="35511-221">Purpose</span></span>|
+|<span data-ttu-id="830a5-220">属性名称</span><span class="sxs-lookup"><span data-stu-id="830a5-220">Property name</span></span>|<span data-ttu-id="830a5-221">用途</span><span class="sxs-lookup"><span data-stu-id="830a5-221">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="35511-222">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="35511-222">Type of request.</span></span> <span data-ttu-id="35511-223">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="35511-223">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="35511-224">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="35511-224">Type of command that is issued to your service.</span></span> <span data-ttu-id="35511-225">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="35511-225">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="35511-226">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-226">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="35511-227">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="35511-227">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="35511-228">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-228">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="35511-229">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-229">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="35511-230">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="35511-230">The source name from where task module is invoked.</span></span> |
-|`value.commandId` | <span data-ttu-id="35511-231">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="35511-231">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="35511-232">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="35511-232">The context that triggered the event.</span></span> <span data-ttu-id="35511-233">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="35511-233">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="35511-234">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="35511-234">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="35511-235">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="35511-235">It must be `default`, `contrast`, or `dark`.</span></span> |
+|`type`| <span data-ttu-id="830a5-222">请求的类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-222">Type of request.</span></span> <span data-ttu-id="830a5-223">它必须是 `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-223">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="830a5-224">向服务发出的命令类型。</span><span class="sxs-lookup"><span data-stu-id="830a5-224">Type of command that is issued to your service.</span></span> <span data-ttu-id="830a5-225">它必须是 `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-225">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="830a5-226">发送请求的用户的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-226">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="830a5-227">发送请求的用户的名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-227">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="830a5-228">发送请求的用户的 Azure Active Directory 对象 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-228">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="830a5-229">Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-229">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="830a5-230">调用任务模块的源名称。</span><span class="sxs-lookup"><span data-stu-id="830a5-230">The source name from where task module is invoked.</span></span> |
+|`value.commandId` | <span data-ttu-id="830a5-231">包含已调用的命令的 ID。</span><span class="sxs-lookup"><span data-stu-id="830a5-231">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="830a5-232">触发事件的上下文。</span><span class="sxs-lookup"><span data-stu-id="830a5-232">The context that triggered the event.</span></span> <span data-ttu-id="830a5-233">它必须是 `compose` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-233">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="830a5-234">用户的客户端主题，对嵌入式 Web 视图格式非常有用。</span><span class="sxs-lookup"><span data-stu-id="830a5-234">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="830a5-235">它必须是 `default` 、 `contrast` 或 `dark` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-235">It must be `default`, `contrast`, or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="35511-236">示例</span><span class="sxs-lookup"><span data-stu-id="35511-236">Example</span></span>
+### <a name="example"></a><span data-ttu-id="830a5-236">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-236">Example</span></span>
 
-<span data-ttu-id="35511-237">下面的示例提供从命令框调用任务模块时的有效负载活动属性：</span><span class="sxs-lookup"><span data-stu-id="35511-237">The payload activity properties when a task module is invoked from a command box are given in the following example:</span></span>
+<span data-ttu-id="830a5-237">下面的示例提供从命令框调用任务模块时的有效负载活动属性：</span><span class="sxs-lookup"><span data-stu-id="830a5-237">The payload activity properties when a task module is invoked from a command box are given in the following example:</span></span>
 
 ```json
 {
@@ -414,11 +414,11 @@ ms.locfileid: "52019844"
 }
 ```
 
-### <a name="example"></a><span data-ttu-id="35511-238">示例</span><span class="sxs-lookup"><span data-stu-id="35511-238">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="830a5-238">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-238">Example</span></span> 
 
-<span data-ttu-id="35511-239">以下代码部分是请求 `fetchTask` 的一个示例：</span><span class="sxs-lookup"><span data-stu-id="35511-239">The following code section is an example of `fetchTask` request:</span></span>
+<span data-ttu-id="830a5-239">以下代码部分是请求 `fetchTask` 的一个示例：</span><span class="sxs-lookup"><span data-stu-id="830a5-239">The following code section is an example of `fetchTask` request:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="35511-240">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="35511-240">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="830a5-240">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="830a5-240">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -427,7 +427,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="35511-241">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="35511-241">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="830a5-241">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="830a5-241">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
@@ -437,7 +437,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="35511-242">JSON</span><span class="sxs-lookup"><span data-stu-id="35511-242">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="830a5-242">JSON</span><span class="sxs-lookup"><span data-stu-id="830a5-242">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -498,11 +498,11 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="initial-invoke-request-from-a-message"></a><span data-ttu-id="35511-243">来自邮件的初始调用请求</span><span class="sxs-lookup"><span data-stu-id="35511-243">Initial invoke request from a message</span></span>
+## <a name="initial-invoke-request-from-a-message"></a><span data-ttu-id="830a5-243">来自邮件的初始调用请求</span><span class="sxs-lookup"><span data-stu-id="830a5-243">Initial invoke request from a message</span></span>
 
-<span data-ttu-id="35511-244">从邮件调用自动程序时，初始调用请求中的对象必须包含从其中调用消息扩展 `value` 的消息的详细信息。</span><span class="sxs-lookup"><span data-stu-id="35511-244">When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from.</span></span> <span data-ttu-id="35511-245">和 数组是可选的，如果原始邮件中没有任何反应或提及，则它们 `reactions` `mentions` 不存在。</span><span class="sxs-lookup"><span data-stu-id="35511-245">The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.</span></span> <span data-ttu-id="35511-246">以下部分是 对象 `value` 的示例：</span><span class="sxs-lookup"><span data-stu-id="35511-246">The following section is an example of the `value` object:</span></span>
+<span data-ttu-id="830a5-244">从邮件调用自动程序时，初始调用请求中的对象必须包含从其中调用消息扩展 `value` 的消息的详细信息。</span><span class="sxs-lookup"><span data-stu-id="830a5-244">When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from.</span></span> <span data-ttu-id="830a5-245">和 数组是可选的，如果原始邮件中没有任何反应或提及，则它们 `reactions` `mentions` 不存在。</span><span class="sxs-lookup"><span data-stu-id="830a5-245">The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.</span></span> <span data-ttu-id="830a5-246">以下部分是 对象 `value` 的示例：</span><span class="sxs-lookup"><span data-stu-id="830a5-246">The following section is an example of the `value` object:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="35511-247">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="35511-247">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="830a5-247">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="830a5-247">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -514,7 +514,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="35511-248">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="35511-248">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="830a5-248">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="830a5-248">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -526,7 +526,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="35511-249">JSON</span><span class="sxs-lookup"><span data-stu-id="35511-249">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="830a5-249">JSON</span><span class="sxs-lookup"><span data-stu-id="830a5-249">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -598,37 +598,37 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a><span data-ttu-id="35511-250">响应 fetchTask</span><span class="sxs-lookup"><span data-stu-id="35511-250">Respond to the fetchTask</span></span>
+## <a name="respond-to-the-fetchtask"></a><span data-ttu-id="830a5-250">响应 fetchTask</span><span class="sxs-lookup"><span data-stu-id="830a5-250">Respond to the fetchTask</span></span>
 
-<span data-ttu-id="35511-251">使用包含具有自适应卡片或 Web URL 的对象或简单的字符串消息的对象响应 `task` `taskInfo` 调用请求。</span><span class="sxs-lookup"><span data-stu-id="35511-251">Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the Adaptive Card or web URL, or a simple string message.</span></span>
+<span data-ttu-id="830a5-251">使用包含具有自适应卡片或 Web URL 的对象或简单的字符串消息的对象响应 `task` `taskInfo` 调用请求。</span><span class="sxs-lookup"><span data-stu-id="830a5-251">Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the Adaptive Card or web URL, or a simple string message.</span></span>
 
-|<span data-ttu-id="35511-252">属性名称</span><span class="sxs-lookup"><span data-stu-id="35511-252">Property name</span></span>|<span data-ttu-id="35511-253">用途</span><span class="sxs-lookup"><span data-stu-id="35511-253">Purpose</span></span>|
+|<span data-ttu-id="830a5-252">属性名称</span><span class="sxs-lookup"><span data-stu-id="830a5-252">Property name</span></span>|<span data-ttu-id="830a5-253">用途</span><span class="sxs-lookup"><span data-stu-id="830a5-253">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="35511-254">可以是显示 `continue` 窗体，也可以 `message` 用于简单的弹出式窗体。</span><span class="sxs-lookup"><span data-stu-id="35511-254">Can be either `continue` to present a form, or `message` for a simple popup.</span></span> |
-|`value`| <span data-ttu-id="35511-255">窗体 `taskInfo` 的对象或邮件 `string` 的 。</span><span class="sxs-lookup"><span data-stu-id="35511-255">Either a `taskInfo` object for a form, or a `string` for a message.</span></span> |
+|`type`| <span data-ttu-id="830a5-254">可以是显示 `continue` 窗体，也可以 `message` 用于简单的弹出式窗体。</span><span class="sxs-lookup"><span data-stu-id="830a5-254">Can be either `continue` to present a form, or `message` for a simple popup.</span></span> |
+|`value`| <span data-ttu-id="830a5-255">窗体 `taskInfo` 的对象或邮件 `string` 的 。</span><span class="sxs-lookup"><span data-stu-id="830a5-255">Either a `taskInfo` object for a form, or a `string` for a message.</span></span> |
 
-<span data-ttu-id="35511-256">taskInfo 对象的架构为：</span><span class="sxs-lookup"><span data-stu-id="35511-256">The schema for the taskInfo object is:</span></span>
+<span data-ttu-id="830a5-256">taskInfo 对象的架构为：</span><span class="sxs-lookup"><span data-stu-id="830a5-256">The schema for the taskInfo object is:</span></span>
 
-|<span data-ttu-id="35511-257">属性名称</span><span class="sxs-lookup"><span data-stu-id="35511-257">Property name</span></span>|<span data-ttu-id="35511-258">用途</span><span class="sxs-lookup"><span data-stu-id="35511-258">Purpose</span></span>|
+|<span data-ttu-id="830a5-257">属性名称</span><span class="sxs-lookup"><span data-stu-id="830a5-257">Property name</span></span>|<span data-ttu-id="830a5-258">用途</span><span class="sxs-lookup"><span data-stu-id="830a5-258">Purpose</span></span>|
 |---|---|
-|`title`| <span data-ttu-id="35511-259">任务模块的标题。</span><span class="sxs-lookup"><span data-stu-id="35511-259">The title of the task module.</span></span>|
-|`height`| <span data-ttu-id="35511-260">它必须是整数值 (以像素为单位) 或 `small` 、 `medium` 、 `large` 。</span><span class="sxs-lookup"><span data-stu-id="35511-260">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
-|`width`| <span data-ttu-id="35511-261">它必须是整数值 (以像素为单位) 或 `small` 、 `medium` 、 `large` 。</span><span class="sxs-lookup"><span data-stu-id="35511-261">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
-|`card`| <span data-ttu-id="35511-262">定义表单的自适应卡片 (使用一个) 。</span><span class="sxs-lookup"><span data-stu-id="35511-262">The adaptive card defining the form (if using one).</span></span>
-|`url`| <span data-ttu-id="35511-263">在任务模块内作为嵌入 Web 视图打开的 URL。</span><span class="sxs-lookup"><span data-stu-id="35511-263">The URL to be opened inside of the task module as an embedded web view.</span></span>|
-|`fallbackUrl`| <span data-ttu-id="35511-264">如果客户端不支持任务模块功能，此 URL 在浏览器选项卡中打开。</span><span class="sxs-lookup"><span data-stu-id="35511-264">If a client does not support the task module feature, this URL is opened in a browser tab.</span></span> |
+|`title`| <span data-ttu-id="830a5-259">任务模块的标题。</span><span class="sxs-lookup"><span data-stu-id="830a5-259">The title of the task module.</span></span>|
+|`height`| <span data-ttu-id="830a5-260">它必须是整数值 (以像素为单位) 或 `small` 、 `medium` 、 `large` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-260">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
+|`width`| <span data-ttu-id="830a5-261">它必须是整数值 (以像素为单位) 或 `small` 、 `medium` 、 `large` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-261">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
+|`card`| <span data-ttu-id="830a5-262">定义表单的自适应卡片 (使用一个) 。</span><span class="sxs-lookup"><span data-stu-id="830a5-262">The adaptive card defining the form (if using one).</span></span>
+|`url`| <span data-ttu-id="830a5-263">在任务模块内作为嵌入 Web 视图打开的 URL。</span><span class="sxs-lookup"><span data-stu-id="830a5-263">The URL to be opened inside of the task module as an embedded web view.</span></span>|
+|`fallbackUrl`| <span data-ttu-id="830a5-264">如果客户端不支持任务模块功能，此 URL 在浏览器选项卡中打开。</span><span class="sxs-lookup"><span data-stu-id="830a5-264">If a client does not support the task module feature, this URL is opened in a browser tab.</span></span> |
 
-### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a><span data-ttu-id="35511-265">使用自适应卡片响应 fetchTask</span><span class="sxs-lookup"><span data-stu-id="35511-265">Respond to the fetchTask with an Adaptive Card</span></span>
+### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a><span data-ttu-id="830a5-265">使用自适应卡片响应 fetchTask</span><span class="sxs-lookup"><span data-stu-id="830a5-265">Respond to the fetchTask with an Adaptive Card</span></span>
 
-<span data-ttu-id="35511-266">使用自适应卡片时，必须使用对象响应包含自适应卡片 `task` `value` 的对象。</span><span class="sxs-lookup"><span data-stu-id="35511-266">When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.</span></span>
+<span data-ttu-id="830a5-266">使用自适应卡片时，必须使用对象响应包含自适应卡片 `task` `value` 的对象。</span><span class="sxs-lookup"><span data-stu-id="830a5-266">When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="35511-267">示例</span><span class="sxs-lookup"><span data-stu-id="35511-267">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="830a5-267">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-267">Example</span></span>
 
-<span data-ttu-id="35511-268">以下代码部分是使用自适应 `fetchTask` 卡片响应的示例：</span><span class="sxs-lookup"><span data-stu-id="35511-268">The following code section is an example to `fetchTask` response with an adaptive card:</span></span>
+<span data-ttu-id="830a5-268">以下代码部分是使用自适应 `fetchTask` 卡片响应的示例：</span><span class="sxs-lookup"><span data-stu-id="830a5-268">The following code section is an example to `fetchTask` response with an adaptive card:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="35511-269">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="35511-269">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="830a5-269">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="830a5-269">C#/.NET</span></span>](#tab/dotnet)
 
-<span data-ttu-id="35511-270">除了 Bot Framework SDK 之外，此示例还使用 [AdaptiveCards NuGet](https://www.nuget.org/packages/AdaptiveCards) 程序包。</span><span class="sxs-lookup"><span data-stu-id="35511-270">This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.</span></span>
+<span data-ttu-id="830a5-270">除了 Bot Framework SDK 之外，此示例还使用 [AdaptiveCards NuGet](https://www.nuget.org/packages/AdaptiveCards) 程序包。</span><span class="sxs-lookup"><span data-stu-id="830a5-270">This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.</span></span>
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -679,7 +679,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="35511-271">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="35511-271">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="830a5-271">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="830a5-271">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -727,7 +727,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="35511-272">JSON</span><span class="sxs-lookup"><span data-stu-id="35511-272">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="830a5-272">JSON</span><span class="sxs-lookup"><span data-stu-id="830a5-272">JSON</span></span>](#tab/json)
 
 ```json
  {
@@ -776,11 +776,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="create-a-task-module-with-an-embedded-web-view"></a><span data-ttu-id="35511-273">使用嵌入式 Web 视图创建任务模块</span><span class="sxs-lookup"><span data-stu-id="35511-273">Create a task module with an embedded web view</span></span>
+### <a name="create-a-task-module-with-an-embedded-web-view"></a><span data-ttu-id="830a5-273">使用嵌入式 Web 视图创建任务模块</span><span class="sxs-lookup"><span data-stu-id="830a5-273">Create a task module with an embedded web view</span></span>
 
-<span data-ttu-id="35511-274">使用嵌入的 Web 视图时，必须使用对象（该对象包含要加载的 Web 表单 `task` `value` 的 URL）进行响应。</span><span class="sxs-lookup"><span data-stu-id="35511-274">When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load.</span></span> <span data-ttu-id="35511-275">要加载的任何 URL 的域必须包含在应用清单的数组 `validDomains` 中。</span><span class="sxs-lookup"><span data-stu-id="35511-275">The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest.</span></span> <span data-ttu-id="35511-276">有关生成嵌入式 Web 视图的信息，请参阅 [任务模块文档](~/task-modules-and-cards/what-are-task-modules.md)。</span><span class="sxs-lookup"><span data-stu-id="35511-276">For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md).</span></span> 
+<span data-ttu-id="830a5-274">使用嵌入的 Web 视图时，必须使用对象（该对象包含要加载的 Web 表单 `task` `value` 的 URL）进行响应。</span><span class="sxs-lookup"><span data-stu-id="830a5-274">When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load.</span></span> <span data-ttu-id="830a5-275">要加载的任何 URL 的域必须包含在应用清单的数组 `validDomains` 中。</span><span class="sxs-lookup"><span data-stu-id="830a5-275">The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest.</span></span> <span data-ttu-id="830a5-276">有关生成嵌入式 Web 视图的信息，请参阅 [任务模块文档](~/task-modules-and-cards/what-are-task-modules.md)。</span><span class="sxs-lookup"><span data-stu-id="830a5-276">For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md).</span></span> 
 
-# <a name="cnet"></a>[<span data-ttu-id="35511-277">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="35511-277">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="830a5-277">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="830a5-277">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -812,7 +812,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="35511-278">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="35511-278">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="830a5-278">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="830a5-278">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -833,7 +833,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="35511-279">JSON</span><span class="sxs-lookup"><span data-stu-id="35511-279">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="830a5-279">JSON</span><span class="sxs-lookup"><span data-stu-id="830a5-279">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -852,15 +852,15 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="request-to-install-your-conversational-bot"></a><span data-ttu-id="35511-280">请求安装对话机器人</span><span class="sxs-lookup"><span data-stu-id="35511-280">Request to install your conversational bot</span></span>
+### <a name="request-to-install-your-conversational-bot"></a><span data-ttu-id="830a5-280">请求安装对话机器人</span><span class="sxs-lookup"><span data-stu-id="830a5-280">Request to install your conversational bot</span></span>
 
-<span data-ttu-id="35511-281">如果应用包含对话机器人，则安装对话中的机器人，然后加载任务模块。</span><span class="sxs-lookup"><span data-stu-id="35511-281">If the app contains a conversational bot, install the bot in the conversation and then load the task module.</span></span> <span data-ttu-id="35511-282">自动程序可用于获取任务模块的其他上下文。</span><span class="sxs-lookup"><span data-stu-id="35511-282">The bot is useful to get additional context for the task module.</span></span> <span data-ttu-id="35511-283">此方案的一个示例是提取名单以填充人员选取器控件或团队中的频道列表。</span><span class="sxs-lookup"><span data-stu-id="35511-283">An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.</span></span>
+<span data-ttu-id="830a5-281">如果应用包含对话机器人，则安装对话中的机器人，然后加载任务模块。</span><span class="sxs-lookup"><span data-stu-id="830a5-281">If the app contains a conversational bot, install the bot in the conversation and then load the task module.</span></span> <span data-ttu-id="830a5-282">自动程序可用于获取任务模块的其他上下文。</span><span class="sxs-lookup"><span data-stu-id="830a5-282">The bot is useful to get additional context for the task module.</span></span> <span data-ttu-id="830a5-283">此方案的一个示例是提取名单以填充人员选取器控件或团队中的频道列表。</span><span class="sxs-lookup"><span data-stu-id="830a5-283">An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.</span></span>
 
-<span data-ttu-id="35511-284">当消息扩展收到调用时，请检查自动程序是否安装在当前上下文中以便于 `composeExtension/fetchTask` 流。</span><span class="sxs-lookup"><span data-stu-id="35511-284">When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow.</span></span> <span data-ttu-id="35511-285">例如，使用获取名单呼叫检查流程。</span><span class="sxs-lookup"><span data-stu-id="35511-285">For example, check the flow with a get roster call.</span></span> <span data-ttu-id="35511-286">如果未安装自动程序，则返回自适应卡片以及请求用户安装自动程序的操作。</span><span class="sxs-lookup"><span data-stu-id="35511-286">If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot.</span></span> <span data-ttu-id="35511-287">用户必须有权将应用安装到该位置进行检查。</span><span class="sxs-lookup"><span data-stu-id="35511-287">The user must have the permission to install the apps in that location for checking.</span></span> <span data-ttu-id="35511-288">如果应用安装不成功，用户将收到一条消息，联系管理员。</span><span class="sxs-lookup"><span data-stu-id="35511-288">If the app installation is unsuccessful, the user receives a message to contact the administrator.</span></span>
+<span data-ttu-id="830a5-284">当消息扩展收到调用时，请检查自动程序是否安装在当前上下文中以便于 `composeExtension/fetchTask` 流。</span><span class="sxs-lookup"><span data-stu-id="830a5-284">When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow.</span></span> <span data-ttu-id="830a5-285">例如，使用获取名单呼叫检查流程。</span><span class="sxs-lookup"><span data-stu-id="830a5-285">For example, check the flow with a get roster call.</span></span> <span data-ttu-id="830a5-286">如果未安装自动程序，则返回自适应卡片以及请求用户安装自动程序的操作。</span><span class="sxs-lookup"><span data-stu-id="830a5-286">If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot.</span></span> <span data-ttu-id="830a5-287">用户必须有权将应用安装到该位置进行检查。</span><span class="sxs-lookup"><span data-stu-id="830a5-287">The user must have the permission to install the apps in that location for checking.</span></span> <span data-ttu-id="830a5-288">如果应用安装不成功，用户将收到一条消息，联系管理员。</span><span class="sxs-lookup"><span data-stu-id="830a5-288">If the app installation is unsuccessful, the user receives a message to contact the administrator.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="35511-289">示例</span><span class="sxs-lookup"><span data-stu-id="35511-289">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="830a5-289">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-289">Example</span></span> 
 
-<span data-ttu-id="35511-290">以下代码部分是响应的一个示例：</span><span class="sxs-lookup"><span data-stu-id="35511-290">The following code section is an example of the response:</span></span>
+<span data-ttu-id="830a5-290">以下代码部分是响应的一个示例：</span><span class="sxs-lookup"><span data-stu-id="830a5-290">The following code section is an example of the response:</span></span>
 
 ```json
 {
@@ -886,11 +886,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="35511-291">安装对话机器人后，它会收到另一条使用 和 的调用 `name = composeExtension/submitAction` 消息 `value.data.msteams.justInTimeInstall = true` 。</span><span class="sxs-lookup"><span data-stu-id="35511-291">After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.</span></span>
+<span data-ttu-id="830a5-291">安装对话机器人后，它会收到另一条使用 和 的调用 `name = composeExtension/submitAction` 消息 `value.data.msteams.justInTimeInstall = true` 。</span><span class="sxs-lookup"><span data-stu-id="830a5-291">After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="35511-292">示例</span><span class="sxs-lookup"><span data-stu-id="35511-292">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="830a5-292">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-292">Example</span></span> 
 
-<span data-ttu-id="35511-293">以下代码部分是调用的任务响应示例：</span><span class="sxs-lookup"><span data-stu-id="35511-293">The following code section is an example of the task response to the invoke:</span></span>
+<span data-ttu-id="830a5-293">以下代码部分是调用的任务响应示例：</span><span class="sxs-lookup"><span data-stu-id="830a5-293">The following code section is an example of the task response to the invoke:</span></span>
 
 ```json
 {
@@ -914,11 +914,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="35511-294">对调用的任务响应必须类似于已安装的机器人。</span><span class="sxs-lookup"><span data-stu-id="35511-294">The task response to the invoke must be similar to that of the installed bot.</span></span>
+<span data-ttu-id="830a5-294">对调用的任务响应必须类似于已安装的机器人。</span><span class="sxs-lookup"><span data-stu-id="830a5-294">The task response to the invoke must be similar to that of the installed bot.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="35511-295">示例</span><span class="sxs-lookup"><span data-stu-id="35511-295">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="830a5-295">示例</span><span class="sxs-lookup"><span data-stu-id="830a5-295">Example</span></span> 
 
-<span data-ttu-id="35511-296">以下代码部分是一个使用自适应卡片实时安装应用的示例：</span><span class="sxs-lookup"><span data-stu-id="35511-296">The following code section is an example of just-in time installation of app with Adaptive card:</span></span> 
+<span data-ttu-id="830a5-296">以下代码部分是一个使用自适应卡片实时安装应用的示例：</span><span class="sxs-lookup"><span data-stu-id="830a5-296">The following code section is an example of just-in time installation of app with Adaptive card:</span></span> 
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -937,21 +937,20 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 * * *
 
-## <a name="code-sample"></a><span data-ttu-id="35511-297">代码示例</span><span class="sxs-lookup"><span data-stu-id="35511-297">Code sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="830a5-297">代码示例</span><span class="sxs-lookup"><span data-stu-id="830a5-297">Code sample</span></span>
 
-| <span data-ttu-id="35511-298">示例名称</span><span class="sxs-lookup"><span data-stu-id="35511-298">Sample Name</span></span>           | <span data-ttu-id="35511-299">说明</span><span class="sxs-lookup"><span data-stu-id="35511-299">Description</span></span> | <span data-ttu-id="35511-300">.NET</span><span class="sxs-lookup"><span data-stu-id="35511-300">.NET</span></span>    | <span data-ttu-id="35511-301">Node.js</span><span class="sxs-lookup"><span data-stu-id="35511-301">Node.js</span></span>   |   
+| <span data-ttu-id="830a5-298">示例名称</span><span class="sxs-lookup"><span data-stu-id="830a5-298">Sample Name</span></span>           | <span data-ttu-id="830a5-299">说明</span><span class="sxs-lookup"><span data-stu-id="830a5-299">Description</span></span> | <span data-ttu-id="830a5-300">.NET</span><span class="sxs-lookup"><span data-stu-id="830a5-300">.NET</span></span>    | <span data-ttu-id="830a5-301">Node.js</span><span class="sxs-lookup"><span data-stu-id="830a5-301">Node.js</span></span>   |   
 |:---------------------|:--------------|:---------|:--------|
-|<span data-ttu-id="35511-302">Teams 消息传递扩展操作</span><span class="sxs-lookup"><span data-stu-id="35511-302">Teams messaging extension action</span></span>| <span data-ttu-id="35511-303">介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。</span><span class="sxs-lookup"><span data-stu-id="35511-303">Describes how to define action commands, create task module, and  respond to task module submit action.</span></span> |[<span data-ttu-id="35511-304">View</span><span class="sxs-lookup"><span data-stu-id="35511-304">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[<span data-ttu-id="35511-305">View</span><span class="sxs-lookup"><span data-stu-id="35511-305">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|<span data-ttu-id="35511-306">Teams 消息传递扩展搜索</span><span class="sxs-lookup"><span data-stu-id="35511-306">Teams messaging extension search</span></span>   |  <span data-ttu-id="35511-307">介绍如何定义搜索命令并响应搜索。</span><span class="sxs-lookup"><span data-stu-id="35511-307">Describes how to define search commands and respond to searches.</span></span>        |[<span data-ttu-id="35511-308">View</span><span class="sxs-lookup"><span data-stu-id="35511-308">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[<span data-ttu-id="35511-309">View</span><span class="sxs-lookup"><span data-stu-id="35511-309">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|<span data-ttu-id="830a5-302">Teams 消息传递扩展操作</span><span class="sxs-lookup"><span data-stu-id="830a5-302">Teams messaging extension action</span></span>| <span data-ttu-id="830a5-303">介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。</span><span class="sxs-lookup"><span data-stu-id="830a5-303">Describes how to define action commands, create task module, and  respond to task module submit action.</span></span> |[<span data-ttu-id="830a5-304">View</span><span class="sxs-lookup"><span data-stu-id="830a5-304">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[<span data-ttu-id="830a5-305">View</span><span class="sxs-lookup"><span data-stu-id="830a5-305">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|<span data-ttu-id="830a5-306">Teams 消息传递扩展搜索</span><span class="sxs-lookup"><span data-stu-id="830a5-306">Teams messaging extension search</span></span>   |  <span data-ttu-id="830a5-307">介绍如何定义搜索命令并响应搜索。</span><span class="sxs-lookup"><span data-stu-id="830a5-307">Describes how to define search commands and respond to searches.</span></span>        |[<span data-ttu-id="830a5-308">View</span><span class="sxs-lookup"><span data-stu-id="830a5-308">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[<span data-ttu-id="830a5-309">View</span><span class="sxs-lookup"><span data-stu-id="830a5-309">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a><span data-ttu-id="35511-310">另请参阅</span><span class="sxs-lookup"><span data-stu-id="35511-310">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="830a5-310">另请参阅</span><span class="sxs-lookup"><span data-stu-id="830a5-310">See also</span></span>
+
+- [<span data-ttu-id="830a5-311">定义操作命令</span><span class="sxs-lookup"><span data-stu-id="830a5-311">Define action commands</span></span>](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+
+
+## <a name="next-step"></a><span data-ttu-id="830a5-312">后续步骤</span><span class="sxs-lookup"><span data-stu-id="830a5-312">Next step</span></span>
 
 > [!div class="nextstepaction"] 
-> [<span data-ttu-id="35511-311">定义操作命令</span><span class="sxs-lookup"><span data-stu-id="35511-311">Define action commands</span></span>](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-
-
-## <a name="next-step"></a><span data-ttu-id="35511-312">后续步骤</span><span class="sxs-lookup"><span data-stu-id="35511-312">Next step</span></span>
-
-> [!div class="nextstepaction"] 
-> [<span data-ttu-id="35511-313">响应操作命令</span><span class="sxs-lookup"><span data-stu-id="35511-313">Respond to action command</span></span>](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [<span data-ttu-id="830a5-313">响应操作命令</span><span class="sxs-lookup"><span data-stu-id="830a5-313">Respond to action command</span></span>](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
