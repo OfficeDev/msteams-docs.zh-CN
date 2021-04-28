@@ -5,12 +5,12 @@ description: Microsoft Teams 平台上的消息扩展概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: fcd5661a2e0b601579fc5af843935d64ab487cef
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a5d30912d5cc580b6e85e19178c49d91811bc11f
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020693"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058535"
 ---
 # <a name="messaging-extensions"></a>消息扩展
 
@@ -70,15 +70,14 @@ ms.locfileid: "52020693"
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |------------|-------------|----------------|------------|
 | 使用基于操作的命令的邮件扩展 | 此示例演示如何构建基于操作的邮件扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | 使用基于搜索的命令的邮件扩展 | 此示例演示如何构建基于搜索的消息扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [创建邮件扩展](../build-your-first-app/build-messaging-extension.md)
+- [创建邮件扩展](../build-your-first-app/build-messaging-extension.md)
 
 
 ## <a name="next-step"></a>后续步骤

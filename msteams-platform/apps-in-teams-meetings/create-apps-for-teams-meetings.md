@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: c733f89208e82c032f581109f9c3887f20c104b9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 741f39c2aca6e99fb7bdfaa1171de4e2bb1e7755
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018374"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058346"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -324,7 +324,7 @@ POST /v3/conversations/{conversationId}/activities
 当用户在会议视图中并且用户可以发布撰写邮件扩展卡时，邮件扩展将按预期方式工作。 AppName 会议内是一个工具提示，用于指出会议 U 栏中的应用名称。
 
 > [!NOTE]
-> 使用 Teams [SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 版本 1.9.0 上载侧面板，因为之前的版本不支持侧面板。
+> 使用版本 1.7.0 或更高版本 [的 Teams SDK，](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)因为之前的版本不支持侧面板。
 
 #### <a name="in-meeting-dialog"></a>会议内的对话框
 

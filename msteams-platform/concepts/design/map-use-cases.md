@@ -5,12 +5,12 @@ description: 选择正确的应用范围
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 693adaae96cdf65a04c591d51c57d4bf7fe972b1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a3d9ec8f1a5c18025cffc0f97285e1ec764becb8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019872"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058451"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到 Teams 应用功能
 
@@ -105,7 +105,6 @@ Microsoft Teams 应用是一种与数据交互的不错方法，有多种集成�
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [构建 Microsoft Teams 应用](../../overview.md)
+- [构建 Microsoft Teams 应用](../../overview.md)
  
 

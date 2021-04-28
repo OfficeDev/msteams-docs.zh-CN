@@ -4,12 +4,12 @@ description: 介绍如何指定应用的默认安装选项。
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: a4b70df70c7b9442e29953dae8a8c4e892cb72c1
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 0afcce50a4779421016c23c4ec4e3d25cc3401d1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946486"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058612"
 ---
 # <a name="add-a-default-install-scope-and-group-capability"></a>添加默认安装范围和组功能
 
@@ -17,7 +17,7 @@ ms.locfileid: "51946486"
 
 ![添加应用](../../assets/images/compose-extensions/addanapp.png)
 
-如果你的应用的主要功能是自动程序，则还可以在用户将应用安装到团队时使机器人成为默认功能。 
+如果你的应用的主要功能是自动程序，则还可以在用户将应用安装到团队时使机器人成为默认功能。
 
 ## <a name="configure-your-apps-default-install-scope"></a>配置应用的默认安装作用域
 
@@ -26,7 +26,7 @@ ms.locfileid: "51946486"
 **在应用清单中配置默认安装作用域**
 
 1. 打开应用清单并添加 `defaultInstallScope` 属性。
-2. 设置 、 `personal` `team` 、 `groupchat` 或 `meetings` 值 (请参阅下面的示例) 。
+2. 将默认安装范围值设置为 `personal` `team` `groupchat` 、、、 或 `meetings` 。
 
     ```json
     "defaultInstallScope": "meetings",
@@ -37,14 +37,19 @@ ms.locfileid: "51946486"
 
 ## <a name="configure-the-default-capability-for-shared-scopes"></a>配置共享范围的默认功能
 
-为团队、会议或聊天安装应用时配置默认功能。
+为团队、会议或群聊安装应用时配置默认功能。
+
+> [!NOTE]
+> `defaultGroupCapability` 提供将添加到团队、群聊或会议的默认功能。 选择选项卡、机器人或连接器作为应用的默认功能，但必须确保你在应用定义中提供了所选功能。
 
 **在应用清单中配置详细信息**
 
 1. 打开应用清单，并添加 `defaultGroupCapability` 属性。
-2. 保存更新。
+2. 设置 、 `team` `groupchat` 或 的值 `meetings` 。
+3. 对于选定的组功能，可用的组功能是、 、 `bot` `tab` 或 `connector` 。 
 
-    下面是一个 JSON 示例：
+    > [!NOTE]
+    > 只能为选定的组功能选择一个默认功能 、 `bot` `tab` 或 `connector` 。
 
     ```json
     "defaultGroupCapability": {
@@ -53,8 +58,9 @@ ms.locfileid: "51946486"
         "meetings": "tab"
     }
     ```
+
 > [!NOTE]
-> 有关完整架构的信息，请参阅 [清单架构](~/resources/schema/manifest-schema.md)。
+> 有关详细信息，请参阅应用 [清单架构](~/resources/schema/manifest-schema.md)。
 
 ## <a name="next-step"></a>后续步骤
 

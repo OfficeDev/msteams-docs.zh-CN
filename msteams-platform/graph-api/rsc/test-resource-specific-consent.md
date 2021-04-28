@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: ea764ec2cbca653221d7194d0759ac39f93ec802
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 7f67df35954cd29810c387d05215eeec476a4ed4
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654424"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058325"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在 Teams 中测试特定于资源的同意权限
 
@@ -85,6 +85,5 @@ RSC (特定于资源的) 是 Microsoft Teams 和 Graph API 集成，使你的应
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [Microsoft Graph API 和 Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+- [Microsoft Graph API 和 Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

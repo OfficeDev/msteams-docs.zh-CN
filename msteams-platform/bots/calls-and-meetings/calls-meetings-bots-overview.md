@@ -4,12 +4,12 @@ description: 了解 Microsoft Teams 应用如何使用语音和视频与用户�
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 呼叫呼叫 音频视频 IVR 语音联机会议
-ms.openlocfilehash: 52a7e1e24fdc0a2c17264087e4f4461b7c43a50a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d4cec30e110eed5f73929305cc43b84eed4d7524
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020167"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058311"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
 
@@ -89,26 +89,25 @@ Teams 中的通话可以纯音频或音频和视频。 使用术语呼叫代替�
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **描述** | **Graph** |
+| **示例名称** | **说明** | **Graph** |
 |---------------|----------|--------|
 | 图形通信 | 图形通信以与 Microsoft 的通信平台交互。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [图形 API 参考](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-> [!div class="nextstepaction"]
-> [示例应用](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-> [!div class="nextstepaction"]
-> [注册支持通话和联机会议的机器人](./registering-calling-bot.md)
-> [!div class="nextstepaction"]
-> [呼叫和联机会议机器人的图形权限](./registering-calling-bot.md#add-graph-permissions)
-> [!div class="nextstepaction"]
-> [如何在计算机上开发通话和联机会议机器人](./debugging-local-testing-calling-meeting-bots.md)
-> [!div class="nextstepaction"]
-> [应用程序托管的媒体机器人的要求和注意事项](./requirements-considerations-application-hosted-media-bots.md)
-> [!div class="nextstepaction"]
-> [有关处理传入呼叫通知的技术信息](./call-notifications.md)
+- [图形 API 参考](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+
+- [示例应用](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+
+- [注册支持通话和联机会议的机器人](./registering-calling-bot.md)
+
+- [呼叫和联机会议机器人的图形权限](./registering-calling-bot.md#add-graph-permissions)
+
+- [如何在计算机上开发通话和联机会议机器人](./debugging-local-testing-calling-meeting-bots.md)
+
+- [应用程序托管的媒体机器人的要求和注意事项](./requirements-considerations-application-hosted-media-bots.md)
+
+- [有关处理传入呼叫通知的技术信息](./call-notifications.md)
 
 ## <a name="next-step"></a>后续步骤
 

@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Web 应用
-ms.openlocfilehash: 1f46c4a8b9457a00b5000e81c280759f584a50d2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0cc4c8bbecb51056e579478de64a5f4e73199674
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020420"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058689"
 ---
 # <a name="web-apps"></a>Web 应用 
 
@@ -123,5 +123,4 @@ Teams 具有单一登录 (SSO) Azure AD 的第三方应用机制。 它还提供
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+- [集成 web 应用](~/samples/integrate-web-apps-overview.md)

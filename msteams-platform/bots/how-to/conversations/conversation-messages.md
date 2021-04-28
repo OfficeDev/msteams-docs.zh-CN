@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5944cc299a8ad4bebdaf034d803919a54868e41f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5b23e3b2548e3d0eab98fae73d37316063fe60c1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020924"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058598"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
@@ -409,10 +409,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [发送主动邮件](~/bots/how-to/conversations/send-proactive-messages.md)
-> [!div class="nextstepaction"]
-> [订阅对话事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+- [发送主动邮件](~/bots/how-to/conversations/send-proactive-messages.md)
+
+- [订阅对话事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 ## <a name="next-step"></a>后续步骤
 

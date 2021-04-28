@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: 26423a52c1bd2f643a40222eafdb4b9c1087a1a1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: fb681cc2dc07f8ae042fe57d6249e986fefa1b7b
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020833"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058332"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -224,5 +224,4 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+- [集成 web 应用](~/samples/integrate-web-apps-overview.md)

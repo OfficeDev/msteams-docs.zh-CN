@@ -6,12 +6,12 @@ keywords: Microsoft Teams 模板示例演示
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 58cda9f400081a47bb9bebf20ba509ee3623dc0b
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ceec7e05ae08ff147fb87005403ec8264e0ec313
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020458"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058668"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -693,5 +693,4 @@ Workplace Workplace Workplace 是一个 Teams 应用模板，提供一个积极�
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+- [集成 web 应用](~/samples/integrate-web-apps-overview.md)

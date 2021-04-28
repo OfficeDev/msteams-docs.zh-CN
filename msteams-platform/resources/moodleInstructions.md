@@ -6,12 +6,12 @@ ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 091192054c5add7cfbdc1e7baabc86e34cef7631
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 2a99acbe9bc618ea940af3bbe898b30d342ad0cf
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020594"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058353"
 ---
 # <a name="install-moodle-lms"></a>安装 Moodle LMS
 
@@ -26,7 +26,7 @@ ms.locfileid: "52020594"
 
 若要详细了解此集成提供的功能，请参阅[Microsoft Teams 和 Teams。](https://education.microsoft.com/resource/3dffb3a8)
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 以下是安装和配置一个与设置一个组织应用程序有关的先决条件： 
 
@@ -251,11 +251,8 @@ Microsoft Teams 中的一个将一个将一起集成在 Microsoft Teams 中由 [
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+- [集成 web 应用](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [一位](https://moodle.org/)
+- [一位](https://moodle.org/)
 
-> [!div class="nextstepaction"]
-> [一个文档](https://docs.moodle.org/34/en/Installing_plugins)。
+- [一个文档](https://docs.moodle.org/34/en/Installing_plugins)。

@@ -6,12 +6,12 @@ keywords: teams 选项卡 sharepoint 框架开发
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 08a4aef329d0e5e1d063f05959f0a589581c9c03
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a2ea6c470f094a9d7b8617a210559e911f5f81c9
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020319"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058479"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>将 Teams 选项卡添加到 SharePoint 
 
@@ -137,17 +137,14 @@ ms.locfileid: "52020319"
 下图显示了 Sharepoint 中 Teams 应用的完整体验 ![ ：Sharepoint 中的选项卡图像](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="code-sample"></a>代码示例
-| **示例名称** | **描述** | **SPFx** |
+| **示例名称** | **说明** | **SPFx** |
 |-----------------|-----------------|----------|
 | SPFx Web 部件 | 选项卡、通道和组的 SPFx Web 部件示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [使用 SharePoint 框架生成 Microsoft Teams 选项卡 - 教程](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [使用 SharePoint 框架生成 Microsoft Teams 选项卡 - 教程](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-> [!div class="nextstepaction"]
-> [在 SharePoint Online 中使用单个部件应用程序页面](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [在 SharePoint Online 中使用单个部件应用程序页面](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
 
-> [!div class="nextstepaction"]
-> [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+- [集成 web 应用](~/samples/integrate-web-apps-overview.md)

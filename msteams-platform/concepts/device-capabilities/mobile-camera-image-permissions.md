@@ -6,12 +6,12 @@ keywords: 相机图像麦克风功能本机设备权限媒体
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 9e4ccf2dfd2c8743621ea44f340ca7a41e302adc
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 98b4cd80de20671d45f198e89e1c273e88b36a87
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020742"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058360"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能 
 
@@ -257,8 +257,6 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [在 Teams 中集成 QR 或条形码扫描仪功能](qr-barcode-scanner-capability.md)
+- [在 Teams 中集成 QR 或条形码扫描仪功能](qr-barcode-scanner-capability.md)
 
-> [!div class="nextstepaction"]
-> [在 Teams 中集成位置功能](location-capability.md)
+- [在 Teams 中集成位置功能](location-capability.md)

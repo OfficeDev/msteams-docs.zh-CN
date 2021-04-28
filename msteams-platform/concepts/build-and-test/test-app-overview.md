@@ -4,12 +4,12 @@ description: 介绍在 Microsoft 365 中测试 Teams 自定义应用的过程
 ms.topic: how-to
 localization_priority: Normal
 keywords: 配置 Microsoft 365 租户 Teams 上传测试应用
-ms.openlocfilehash: 8815e73c054cb75782660ef4afb3ae583b4f40fa
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d95d65961b060ff1938d51c0f3fafc2b1e56fa7e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019935"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058605"
 ---
 # <a name="test-your-app"></a>测试应用
 
@@ -37,14 +37,11 @@ ms.locfileid: "52019935"
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [调试选项卡](~/tabs/how-to/developer-tools.md)
+- [调试选项卡](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [调试机器人](~/bots/how-to/debug/locally-with-an-ide.md)
+- [调试机器人](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [测试 RSC 权限](~/graph-api/rsc/test-resource-specific-consent.md)
+- [测试 RSC 权限](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>后续步骤
 

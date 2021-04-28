@@ -5,12 +5,12 @@ description: 介绍用户可以在 Teams 中发现和使用应用的地方。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: f3f4af191400b6c04c41827ce689b4250c105ce0
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f2bdb35c76bdb7487e66a0e6b9ad01c6da9e04f8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019837"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058318"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams 应用的入口点
 
@@ -47,8 +47,7 @@ Teams 平台提供了一组灵活的入口点，例如团队、频道和聊天�
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [Teams 应用设计指南](../concepts/design/design-teams-app-overview.md)
+- [Teams 应用设计指南](../concepts/design/design-teams-app-overview.md)
 
 ## <a name="next-step"></a>后续步骤
 

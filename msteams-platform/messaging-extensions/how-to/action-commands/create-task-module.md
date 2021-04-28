@@ -5,12 +5,12 @@ description: 如何处理初始调用操作，以及如何使用操作消息扩�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019844"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058626"
 ---
 # <a name="create-and-send-the-task-module"></a>创建并发送任务模块
 
@@ -946,8 +946,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"] 
-> [定义操作命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+- [定义操作命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
 ## <a name="next-step"></a>后续步骤

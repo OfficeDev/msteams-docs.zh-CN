@@ -5,12 +5,12 @@ description: 在 Teams 平台中集成 Power Virtual Agents 聊天机器人
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d6d9f4292e22df7ca0f5841a2fc579b9e3b1d2f3
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bd1528d06f9e9f4ca3a03f167ecb3c537977fb61
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020088"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058619"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>添加 Power Virtual Agents 聊天机器人 
 
@@ -104,20 +104,16 @@ Teams 中的聊天机器人由应用清单 JSON 文件定义，该文件提供�
 将 Power Virtual Agents 聊天机器人添加到 Teams 的设置过程已完成。 现在可以在个人聊天中与机器人开始对话。
 
 ## <a name="see-also"></a>另请参阅
-> [!div class="nextstepaction"]
-> [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
-> [使用 Microsoft Power Virtual Agents 为 Teams 创建聊天机器人](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)。  
+- [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
->  [Power Virtual Agents 门户](https://powervirtualagents.microsoft.com)
+- [使用 Microsoft Power Virtual Agents 为 Teams 创建聊天机器人](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)。  
 
-> [!div class="nextstepaction"]
-> [发布 Power Virtual Agents 机器人](/power-virtual-agents/publication-fundamentals-publish-channels)
+- [Power Virtual Agents 门户](https://powervirtualagents.microsoft.com)
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams 中的安全性和合规性](/MicrosoftTeams/security-compliance-overview)。
+- [发布 Power Virtual Agents 机器人](/power-virtual-agents/publication-fundamentals-publish-channels)
+
+- [Microsoft Teams 中的安全性和合规性](/MicrosoftTeams/security-compliance-overview)。
 
 ## <a name="next-step"></a>后续步骤
 

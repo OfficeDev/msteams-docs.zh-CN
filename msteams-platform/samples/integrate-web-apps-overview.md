@@ -4,19 +4,19 @@ author: Rajeshwari-v
 description: 将 Web 应用程序和设备功能与 Microsoft Teams 应用集成概述。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6493f493b2bfc67a23aebfb5142aff60cf0afe93
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 01977e22d79f7e39986367e647a2d48ea9b2905c
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020238"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058654"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
 通过将现有 Web 应用程序的功能集成到 Microsoft Teams 平台，可以提供丰富的用户体验。 确保遵循 [Teams 设计指南](~/concepts/design/understand-use-cases.md) ，使你的应用成为 Teams 本机应用。
 本文档概述了将 Web 应用程序与 Teams 集成的先决条件、用于创建 Power Apps 的 Power 平台、Power 虚拟代理、虚拟助理、应用模板、Shift 连接器、在 LmS 中集成、为网站创建"共享到 Teams"按钮、在 SharePoint 中添加 Microsoft Teams 选项卡、创建深层链接以及集成设备功能。
 
-## <a name="prerequisites"></a>必备条件   
+## <a name="prerequisites"></a>先决条件   
 
 为了进行有效的集成，请确保更好地了解以下先决条件：
 * Teams 功能。 
@@ -79,41 +79,28 @@ Microsoft Teams 平台持续增强开发人员功能，以与内置第一方体�
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [将应用的用例映射到 Teams 平台功能](~/concepts/design/map-use-cases.md)
+- [将应用的用例映射到 Teams 平台功能](~/concepts/design/map-use-cases.md)
 
-> [!div class="nextstepaction"]
-> [确定应用的入口点](~/concepts/extensibility-points.md)
+- [确定应用的入口点](~/concepts/extensibility-points.md)
 
-> [!div class="nextstepaction"]
-> [集成 web 应用](~/samples/integrating-web-apps.md)
+- [集成 web 应用](~/samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [为 Microsoft Teams 创建低代码自定义应用](~/samples/teams-low-code-solutions.md)
+- [为 Microsoft Teams 创建低代码自定义应用](~/samples/teams-low-code-solutions.md)
 
-> [!div class="nextstepaction"]
-> [添加强大的虚拟代理聊天机器人](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+- [添加强大的虚拟代理聊天机器人](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [创建虚拟助理](~/samples/virtual-assistant.md)
+- [创建虚拟助理](~/samples/virtual-assistant.md)
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams 的应用模板](~/samples/app-templates.md)
+- [Microsoft Teams 的应用模板](~/samples/app-templates.md)
 
-> [!div class="nextstepaction"]
-> [生产就绪 Shift 连接器](~/samples/shifts-wfm-connectors.md)
+- [生产就绪 Shift 连接器](~/samples/shifts-wfm-connectors.md)
 
-> [!div class="nextstepaction"]
-> [安装 Moodle LMS](~/resources/moodleinstructions.md)
+- [安装 Moodle LMS](~/resources/moodleinstructions.md)
 
-> [!div class="nextstepaction"]
-> [创建“共享到Teams”按钮](~/concepts/build-and-test/share-to-teams.md)
+- [创建“共享到Teams”按钮](~/concepts/build-and-test/share-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [向 SharePoint 添加Teams选项卡](~/tabs/how-to/tabs-in-sharepoint.md)
+- [向 SharePoint 添加Teams选项卡](~/tabs/how-to/tabs-in-sharepoint.md)
 
-> [!div class="nextstepaction"]
-> [创建深层链接](~/concepts/build-and-test/deep-links.md)
+- [创建深层链接](~/concepts/build-and-test/deep-links.md)
 
-> [!div class="nextstepaction"]
-> [设备功能](~/concepts/device-capabilities/device-capabilities-overview.md)
+- [设备功能](~/concepts/device-capabilities/device-capabilities-overview.md)

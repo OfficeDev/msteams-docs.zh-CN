@@ -5,12 +5,12 @@ description: 使用 IDE 在本地测试和调试机器人
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 495e4dd2a3f29dbe0be61e8b42827bfc8c8a6f94
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 52676d35599560704e5bb72d85e09860174fdaf1
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020019"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058374"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
 
@@ -95,8 +95,6 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class=nextstep]
-> [使用检查中间件调试机器人](/azure/bot-service/bot-service-debug-inspection-middleware)
+- [使用检查中间件调试机器人](/azure/bot-service/bot-service-debug-inspection-middleware)
 
-> [!div class=nextstep]
-> [在本地调试呼叫和会议机器人](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+- [在本地调试呼叫和会议机器人](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
