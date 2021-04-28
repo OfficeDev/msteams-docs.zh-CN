@@ -46,13 +46,15 @@
       href: concepts/design/map-use-cases.md
 - name: 与Teams整合
   items:
+    - name: 概述
+      href: samples/integrate-web-apps-overview.md
     - name: Web 应用
       href: samples/integrating-web-apps.md
     - name: Power Platform 应用
       items:
         - name: 概述
           href: samples/teams-low-code-solutions.md
-        - name: 添加强大的虚拟代理聊天机器人
+        - name: 添加 Power Virtual Agent 聊天机器人
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
         - name: 创建虚拟助手
           href: samples/virtual-assistant.md
@@ -62,9 +64,9 @@
       href: samples/shifts-wfm-connectors.md
     - name: 安装 Moodle LMS
       href: resources/moodleInstructions.md
-    - name: 创建“共享到Teams”按钮
+    - name: 创建“共享到 Teams”按钮
       href: concepts/build-and-test/share-to-teams.md
-    - name: 向 SharePoint 添加Teams选项卡
+    - name: 将 Teams 选项卡添加到 SharePoint
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: 创建深层链接
       href: concepts/build-and-test/deep-links.md
