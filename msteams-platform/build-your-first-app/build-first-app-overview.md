@@ -1,117 +1,66 @@
 ---
 title: 入门 - 生成首个应用概述和先决条件
-author: heath-hamilton
+author: girliemac
 description: 了解如何开始使用 Microsoft Teams 应用开发和设置环境。
-ms.author: lajanuar
-localization_priority: Normal
-ms.date: 11/03/2020
+ms.author: timura
+ms.date: 03/18/2021
 ms.topic: quickstart
-ms.openlocfilehash: d975383022089579a04317de73595106e7920c56
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3bc99c535ea659f046b65dc26d9a60de0dd49cab
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019991"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068563"
 ---
-# <a name="build-your-first-microsoft-teams-app-overview"></a><span data-ttu-id="06f01-103">生成首个 Microsoft Teams 应用概述</span><span class="sxs-lookup"><span data-stu-id="06f01-103">Build your first Microsoft Teams app overview</span></span>
+# <a name="get-started-with-microsoft-teams-app-development"></a><span data-ttu-id="b050f-103">Microsoft Teams 应用开发入门</span><span class="sxs-lookup"><span data-stu-id="b050f-103">Get started with Microsoft Teams app development</span></span>
 
-<span data-ttu-id="06f01-104">在 **入门课程** 中，你将了解如何创建基本的 Teams 应用。</span><span class="sxs-lookup"><span data-stu-id="06f01-104">In the **get started** lessons, you learn how to create basic Teams apps.</span></span> <span data-ttu-id="06f01-105">每个教程将介绍如何生成简单的实际 Teams 应用，同时向用户介绍通用工具、基本概念和更高级的功能。</span><span class="sxs-lookup"><span data-stu-id="06f01-105">Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.</span></span>
+<span data-ttu-id="b050f-104">生成一个简单的应用，了解 Teams 应用开发的基本知识。</span><span class="sxs-lookup"><span data-stu-id="b050f-104">Build a simple app to learn the basics of Teams app development.</span></span> <span data-ttu-id="b050f-105">一旦看到"Hello， World！"，请尝试阅读任何其他入门文章，详细了解常见工具、基本概念和高级功能。</span><span class="sxs-lookup"><span data-stu-id="b050f-105">Once you see "Hello, World!", try any of the other get started articles for more information on common tools, fundamental concepts, and advanced features.</span></span>
 
-## <a name="what-youll-learn"></a><span data-ttu-id="06f01-106">您将了解哪些功能</span><span class="sxs-lookup"><span data-stu-id="06f01-106">What you'll learn</span></span>
 
-<span data-ttu-id="06f01-107">以下是在学习课程后你将了解的一些信息。</span><span class="sxs-lookup"><span data-stu-id="06f01-107">Here's an idea of what you'll know after going through the lessons.</span></span>
 
-> [!div class="checklist"]
-  >
-  > * <span data-ttu-id="06f01-108">使用 **Teams Toolkit** 快速启动并运行：Microsoft Teams Toolkit for Visual Studio Code 负责创建应用项目和基架，以便你可以数分钟内拥有正在运行的应用。</span><span class="sxs-lookup"><span data-stu-id="06f01-108">**Get up and running quickly with the Teams Toolkit**: The Microsoft Teams Toolkit for Visual Studio Code takes care of creating your app project and scaffolding so you can have a running app in minutes.</span></span>
-  > * <span data-ttu-id="06f01-109">**使用 App Studio 配置应用**：指定 Teams 应用使用的功能和服务。</span><span class="sxs-lookup"><span data-stu-id="06f01-109">**Configure your app with App Studio**: Specify the capabilities and services your Teams app uses.</span></span>
-  > * <span data-ttu-id="06f01-110">**确定应用受众的范围**：生成适用于个人使用和/或协作的 Teams 应用。</span><span class="sxs-lookup"><span data-stu-id="06f01-110">**Scope your app's audience**: Build a Teams app for personal use, collaboration, or both.</span></span>
-> * <span data-ttu-id="06f01-111">**获取 Teams 工具和 SDK** 体验：使用 Teams JavaScript 客户端 SDK 帮助自定义应用。</span><span class="sxs-lookup"><span data-stu-id="06f01-111">**Get experience with Teams tools and SDKs**: Customize your app with help from the Teams JavaScript client SDK.</span></span> <span data-ttu-id="06f01-112">例如，更改应用的配色方案以匹配 Teams 主题。</span><span class="sxs-lookup"><span data-stu-id="06f01-112">For example, change your app's color scheme to match the Teams theme.</span></span> <span data-ttu-id="06f01-113">此外，了解用于创建和管理机器人的常用工具。</span><span class="sxs-lookup"><span data-stu-id="06f01-113">Also, learn about common tools for creating and managing bots.</span></span>
-  > * <span data-ttu-id="06f01-114">**在应用中展开**：在整个课程过程中，你将找到你可能感兴趣的相关主题 (如身份验证和设计指南) 。</span><span class="sxs-lookup"><span data-stu-id="06f01-114">**Expand on your app**: Throughout the lessons, you'll find related topics you're probably interested in (such as authentication and design guidelines).</span></span>
+## <a name="what-youll-learn"></a><span data-ttu-id="b050f-106">您将了解哪些功能</span><span class="sxs-lookup"><span data-stu-id="b050f-106">What you'll learn</span></span>
 
-## <a name="teams-app-fundamentals"></a><span data-ttu-id="06f01-115">Teams 应用基础</span><span class="sxs-lookup"><span data-stu-id="06f01-115">Teams app fundamentals</span></span>
+* <span data-ttu-id="b050f-107">快速启动并运行 Teams Toolkit（Visual Studio代码扩展）</span><span class="sxs-lookup"><span data-stu-id="b050f-107">Get up and running quickly with the Teams Toolkit, a Visual Studio Code extension</span></span> 
+* <span data-ttu-id="b050f-108">使用 App Studio 配置应用</span><span class="sxs-lookup"><span data-stu-id="b050f-108">Configure your app with App Studio</span></span> 
+* <span data-ttu-id="b050f-109">熟悉 Teams 开发人员工具和 SDK</span><span class="sxs-lookup"><span data-stu-id="b050f-109">Get familiar with Teams developer tools and SDKs</span></span>
+* <span data-ttu-id="b050f-110">考虑重要的 Teams 应用概念，例如身份验证和设计最佳做法</span><span class="sxs-lookup"><span data-stu-id="b050f-110">Consider important Teams app concepts, such as authentication and design best practices</span></span>
 
-<span data-ttu-id="06f01-116">在开始教程之前，你应了解以下有关构建 Teams 应用的信息。</span><span class="sxs-lookup"><span data-stu-id="06f01-116">Before you begin the tutorials, you should know the following about building apps for Teams.</span></span>
+<span data-ttu-id="b050f-111">可以使用你选择的任何技术生成 Teams 应用，例如，使用 CLI (命令行) 。</span><span class="sxs-lookup"><span data-stu-id="b050f-111">You can build Teams app using any technology of your choice, for example, command-line interface (CLI).</span></span> <span data-ttu-id="b050f-112">但是，这些文章可帮助你开始使用以下推荐的工具和技术：</span><span class="sxs-lookup"><span data-stu-id="b050f-112">But, these articles help you get started with the following recommended tools and technologies:</span></span>
 
-### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a><span data-ttu-id="06f01-117">应用可以有多个功能和入口点</span><span class="sxs-lookup"><span data-stu-id="06f01-117">Apps can have multiple capabilities and entry points</span></span>
+* <span data-ttu-id="b050f-113">Teams Toolkit，Visual Studio代码扩展</span><span class="sxs-lookup"><span data-stu-id="b050f-113">Teams Toolkit, a Visual Studio Code extension</span></span>
+* <span data-ttu-id="b050f-114">React.js选项卡</span><span class="sxs-lookup"><span data-stu-id="b050f-114">React.js for tabs</span></span>
+* <span data-ttu-id="b050f-115">Node.js聊天机器人和消息扩展的扩展</span><span class="sxs-lookup"><span data-stu-id="b050f-115">Node.js for bots and messaging extensions</span></span>
 
-<span data-ttu-id="06f01-118">Teams 应用由一个或多个平台功能 (用户[](../concepts/capabilities-overview.md)如何使用应用) 以及 (使用应用的入口点) 。 [](../concepts/extensibility-points.md)</span><span class="sxs-lookup"><span data-stu-id="06f01-118">A Teams app is made up of one or more [platform capabilities](../concepts/capabilities-overview.md) (how people use the app) and [entry points](../concepts/extensibility-points.md) (where people use the app).</span></span>
 
-### <a name="teams-doesnt-host-your-app"></a><span data-ttu-id="06f01-119">Teams 不托管你的应用</span><span class="sxs-lookup"><span data-stu-id="06f01-119">Teams doesn't host your app</span></span>
+## <a name="teams-app-fundamentals"></a><span data-ttu-id="b050f-116">Teams 应用基础</span><span class="sxs-lookup"><span data-stu-id="b050f-116">Teams app fundamentals</span></span>
 
-<span data-ttu-id="06f01-120">Teams 应用包括以下重要部分：</span><span class="sxs-lookup"><span data-stu-id="06f01-120">A Teams app includes the following important pieces:</span></span>
+<span data-ttu-id="b050f-117">你可以为自己、组织中的人员或世界各地用户生成自定义 Teams 应用。</span><span class="sxs-lookup"><span data-stu-id="b050f-117">You can build custom Teams apps for yourself, people in your org, or people all over the world.</span></span> <span data-ttu-id="b050f-118">在开始之前，你应该了解以下有关 Teams 应用开发的基本概念：</span><span class="sxs-lookup"><span data-stu-id="b050f-118">Before you begin, you should understand the following fundamental concepts about Teams app development:</span></span>
 
-* <span data-ttu-id="06f01-121">支持你的应用的逻辑、数据存储和 API 调用。</span><span class="sxs-lookup"><span data-stu-id="06f01-121">The logic, data storage, and API calls that power your app.</span></span> <span data-ttu-id="06f01-122">这些服务不是由 Teams 托管的，必须通过 HTTPS 访问。</span><span class="sxs-lookup"><span data-stu-id="06f01-122">These services are not hosted by Teams and must be accessible via HTTPS.</span></span>
-* <span data-ttu-id="06f01-123">Teams 客户端 (Web、桌面或移动) ，用户可使用你的应用。</span><span class="sxs-lookup"><span data-stu-id="06f01-123">The Teams client (web, desktop, or mobile) where people use your app.</span></span>
-* <span data-ttu-id="06f01-124">应用 ID，允许你使用 App Studio 配置应用。</span><span class="sxs-lookup"><span data-stu-id="06f01-124">Your app ID, which lets you configure your app with App Studio.</span></span>
+### <a name="common-app-use-cases"></a><span data-ttu-id="b050f-119">常见应用用例</span><span class="sxs-lookup"><span data-stu-id="b050f-119">Common app use cases</span></span>
 
-## <a name="get-prerequisites"></a><span data-ttu-id="06f01-125">获取先决条件</span><span class="sxs-lookup"><span data-stu-id="06f01-125">Get prerequisites</span></span>
+<span data-ttu-id="b050f-120">自定义 Teams 应用可帮助的一些典型方案包括：</span><span class="sxs-lookup"><span data-stu-id="b050f-120">Some typical scenarios that a custom Teams app can help with are:</span></span>
 
-<span data-ttu-id="06f01-126">验证你拥有用于生成 Teams 应用所需的正确帐户，并安装一些推荐的开发工具。</span><span class="sxs-lookup"><span data-stu-id="06f01-126">Verify you have the right account for building Teams apps and install some recommended development tools.</span></span>
+* <span data-ttu-id="b050f-121">在 Teams 客户端中嵌入基于 Web 的内容，如 Web 应用或网站的一部分</span><span class="sxs-lookup"><span data-stu-id="b050f-121">Embed web-based content, such as a web app or part of a website, in the Teams client</span></span>
+* <span data-ttu-id="b050f-122">在另一个系统中快速查找信息并添加到 Teams 对话</span><span class="sxs-lookup"><span data-stu-id="b050f-122">Look up information quickly in another system and adding it to a Teams conversation</span></span> 
+* <span data-ttu-id="b050f-123">直接从对话中的内容触发工作流和进程</span><span class="sxs-lookup"><span data-stu-id="b050f-123">Trigger workflows and processes directly from what's said in a conversation</span></span> 
 
-### <a name="set-up-your-development-account"></a><span data-ttu-id="06f01-127">设置开发帐户</span><span class="sxs-lookup"><span data-stu-id="06f01-127">Set up your development account</span></span>
+### <a name="app-capabilities-and-tools"></a><span data-ttu-id="b050f-124">应用功能和工具</span><span class="sxs-lookup"><span data-stu-id="b050f-124">App capabilities and tools</span></span>
 
-<span data-ttu-id="06f01-128">你需要一个允许自定义应用旁加载的 Teams 帐户。</span><span class="sxs-lookup"><span data-stu-id="06f01-128">You need a Teams account that allows custom app sideloading.</span></span> <span data-ttu-id="06f01-129"> (你的帐户可能已经提供此功能) </span><span class="sxs-lookup"><span data-stu-id="06f01-129">(Your account may already provide this.)</span></span>
+<span data-ttu-id="b050f-125">应用由一个或多个 Teams 功能和用户交互点决定。</span><span class="sxs-lookup"><span data-stu-id="b050f-125">An app is made up of one or more Teams capabilities and user interaction points.</span></span> <span data-ttu-id="b050f-126">你的开发工具集将因所需的功能而异。</span><span class="sxs-lookup"><span data-stu-id="b050f-126">Your development toolset will vary depending on the capabilities you want.</span></span>
 
-1. <span data-ttu-id="06f01-130">如果你有 Teams 帐户，请验证你能否在 Teams 中旁加载应用：</span><span class="sxs-lookup"><span data-stu-id="06f01-130">If you have a Teams account, verify if you can sideload apps in Teams:</span></span>
-    1. <span data-ttu-id="06f01-131">在 Teams 客户端中，选择"**应用"。**</span><span class="sxs-lookup"><span data-stu-id="06f01-131">In the Teams client, select **Apps**.</span></span>
-    1. <span data-ttu-id="06f01-132">查找"上载自定义 **应用"选项**。</span><span class="sxs-lookup"><span data-stu-id="06f01-132">Look for an option to **Upload a custom app**.</span></span>
+| <span data-ttu-id="b050f-127">**应用功能**</span><span class="sxs-lookup"><span data-stu-id="b050f-127">**App capabilities**</span></span>| <span data-ttu-id="b050f-128">**交互点**</span><span class="sxs-lookup"><span data-stu-id="b050f-128">**Interaction points**</span></span> | <span data-ttu-id="b050f-129">**推荐的工具**</span><span class="sxs-lookup"><span data-stu-id="b050f-129">**Recommended tools**</span></span> | <span data-ttu-id="b050f-130">**SDK**</span><span class="sxs-lookup"><span data-stu-id="b050f-130">**SDKs**</span></span> | <span data-ttu-id="b050f-131">**技术堆栈**</span><span class="sxs-lookup"><span data-stu-id="b050f-131">**Technology stacks**</span></span> |
+|--------|--------|--------|--------|--------|
+| <span data-ttu-id="b050f-132">选项卡</span><span class="sxs-lookup"><span data-stu-id="b050f-132">Tabs</span></span> | <span data-ttu-id="b050f-133">用户可在个人上下文和共享上下文中与嵌入的 Web 内容交互的空间</span><span class="sxs-lookup"><span data-stu-id="b050f-133">Spaces where users can interact with embedded web content in personal and shared contexts</span></span> | <span data-ttu-id="b050f-134">使用 Teams 扩展或 Yeoman Toolkit VS 代码</span><span class="sxs-lookup"><span data-stu-id="b050f-134">VS Code with Teams Toolkit extension or Yeoman Generator</span></span> | <span data-ttu-id="b050f-135">团队 JavaScript 客户端 SDK</span><span class="sxs-lookup"><span data-stu-id="b050f-135">Teams JavaScript client SDK</span></span> | <span data-ttu-id="b050f-136">常规 Web 技术 (HTML、CSS 和 JavaScript) 或 React.js</span><span class="sxs-lookup"><span data-stu-id="b050f-136">General web technologies (HTML, CSS, and JavaScript) or React.js</span></span> |
+| <span data-ttu-id="b050f-137">机器人</span><span class="sxs-lookup"><span data-stu-id="b050f-137">Bots</span></span> | <span data-ttu-id="b050f-138">在个人上下文和共享上下文中与用户交互的聊天机器人</span><span class="sxs-lookup"><span data-stu-id="b050f-138">Chatbots that interact with users in personal and shared contexts</span></span> | <span data-ttu-id="b050f-139">使用 Teams 扩展或 Yeoman Toolkit VS 代码</span><span class="sxs-lookup"><span data-stu-id="b050f-139">VS Code with Teams Toolkit extension or Yeoman Generator</span></span> | <span data-ttu-id="b050f-140">Bot Franework SDK</span><span class="sxs-lookup"><span data-stu-id="b050f-140">Bot Franework SDK</span></span> | <span data-ttu-id="b050f-141">Node.js、C# 或 Python</span><span class="sxs-lookup"><span data-stu-id="b050f-141">Node.js, C#, or Python</span></span> | 
+| <span data-ttu-id="b050f-142">消息扩展</span><span class="sxs-lookup"><span data-stu-id="b050f-142">Messaging extensions</span></span> | <span data-ttu-id="b050f-143">插入应用内容或处理邮件而不离开对话的快捷方式</span><span class="sxs-lookup"><span data-stu-id="b050f-143">Shortcuts for inserting app content or acting on a message without navigating away from the conversation</span></span> | <span data-ttu-id="b050f-144">使用 Teams 扩展或 Yeoman Toolkit VS 代码</span><span class="sxs-lookup"><span data-stu-id="b050f-144">VS Code with Teams Toolkit extension or Yeoman Generator</span></span> | <span data-ttu-id="b050f-145">Bot Framework SDK</span><span class="sxs-lookup"><span data-stu-id="b050f-145">Bot Framework SDK</span></span> | <span data-ttu-id="b050f-146">Node.js、C# 或 Python</span><span class="sxs-lookup"><span data-stu-id="b050f-146">Node.js, C#, or Python</span></span> |
 
-    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="显示可以在 Teams 中上传自定义应用位置的图示。":::
-    
-    <span data-ttu-id="06f01-134">如果看不到该按钮，则没有在组织中的上载自定义应用的权限。可以通过注册免费的 Microsoft 365 开发人员订阅获取此功能。</span><span class="sxs-lookup"><span data-stu-id="06f01-134">If you don't see the button, you don't have permission to upload custom apps in your org. You can get this feature by signing up for a free Microsoft 365 developer subscription.</span></span>
+### <a name="teams-doesnt-host-your-app"></a><span data-ttu-id="b050f-147">Teams 不托管你的应用</span><span class="sxs-lookup"><span data-stu-id="b050f-147">Teams doesn't host your app</span></span>
 
-<!-- markdownlint-disable MD033 -->
-<details>
+<span data-ttu-id="b050f-148">当用户在 Teams 中安装你的应用时，他们仅安装包含配置文件 (也称为应用清单) 应用图标的应用包。</span><span class="sxs-lookup"><span data-stu-id="b050f-148">When a user installs your app in Teams, they only install an app package that contains a configuration file (also known as an app manifest) and your app’s icons.</span></span> <span data-ttu-id="b050f-149">应用的逻辑和数据存储托管在其他地方，如开发期间 Azure Web 服务或 localhost。</span><span class="sxs-lookup"><span data-stu-id="b050f-149">Your app’s logic and data storage are hosted elsewhere, such as Azure Web Services or localhost during development.</span></span> <span data-ttu-id="b050f-150">Teams 通过 HTTPS 访问这些资源。</span><span class="sxs-lookup"><span data-stu-id="b050f-150">Teams accesses these resources via HTTPS.</span></span>
 
-<summary><span data-ttu-id="06f01-135"><b>获取免费的 Microsoft 365 开发人员订阅</b></span><span class="sxs-lookup"><span data-stu-id="06f01-135"><b>Get your free Microsoft 365 developer subscription</b></span></span></summary>
+:::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="插图显示 Teams 上的应用指向云服务器中的应用逻辑。":::
 
-<span data-ttu-id="06f01-136">可以通过加入 Microsoft 365 开发人员计划获取允许应用旁加载的免费 Teams 测试帐户。</span><span class="sxs-lookup"><span data-stu-id="06f01-136">You can get a free Teams test account that allows app sideloading by joining the Microsoft 365 developer program.</span></span> <span data-ttu-id="06f01-137"> (注册过程大约需要两分钟) </span><span class="sxs-lookup"><span data-stu-id="06f01-137">(The registration process takes approximately two minutes.)</span></span>
-
-1. <span data-ttu-id="06f01-138">转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。</span><span class="sxs-lookup"><span data-stu-id="06f01-138">Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).</span></span>
-1. <span data-ttu-id="06f01-139">选择 **立即加入** 并按照屏幕上的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="06f01-139">Select **Join Now** and follow the onscreen instructions.</span></span>
-1. <span data-ttu-id="06f01-140">当你进入欢迎屏幕时，选择 **"设置 E5 订阅"。**</span><span class="sxs-lookup"><span data-stu-id="06f01-140">When you get to the welcome screen, select **Set up E5 subscription**.</span></span>
-1. <span data-ttu-id="06f01-141">设置管理员帐户。</span><span class="sxs-lookup"><span data-stu-id="06f01-141">Set up your administrator account.</span></span> <span data-ttu-id="06f01-142">完成后，你应该会看到如下所示的屏幕。</span><span class="sxs-lookup"><span data-stu-id="06f01-142">Once you finish, you should see a screen like this.</span></span>
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册 Microsoft 365 开发人员计划后看到的示例。":::
-1. <span data-ttu-id="06f01-144">使用刚设置的管理员帐户登录 Teams。</span><span class="sxs-lookup"><span data-stu-id="06f01-144">Log in to Teams using the administrator account you just set up.</span></span>
-1. <span data-ttu-id="06f01-145">验证你现在是否具有" **上载自定义应用"** 选项。</span><span class="sxs-lookup"><span data-stu-id="06f01-145">Verify if you now have the **Upload a custom app** option.</span></span>
-
-</details>
-
-> [!Note]
-> <span data-ttu-id="06f01-146">如果仍无法旁加载应用，请参阅 [启用自定义 Teams 应用并启用自定义应用上传](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。</span><span class="sxs-lookup"><span data-stu-id="06f01-146">If you still can't sideload apps, see [enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).</span></span>
-
-### <a name="install-your-development-tools"></a><span data-ttu-id="06f01-147">安装开发工具</span><span class="sxs-lookup"><span data-stu-id="06f01-147">Install your development tools</span></span>
-
-<span data-ttu-id="06f01-148">可以使用首选工具生成 Teams 应用，但以下课程显示了如何快速开始使用 Microsoft Teams Toolkit for Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="06f01-148">You can build Teams apps with your preferred tools, but these lessons show how you can get started quickly with the Microsoft Teams Toolkit for Visual Studio Code.</span></span>
-
-<span data-ttu-id="06f01-149">Teams 仅通过 HTTPS 连接显示应用内容。</span><span class="sxs-lookup"><span data-stu-id="06f01-149">Teams displays app content only through HTTPS connections.</span></span> <span data-ttu-id="06f01-150">若要在本地调试某些类型的应用（如机器人），你将了解如何使用 [ngrok](../concepts/build-and-test/debug.md#locally-hosted) 在 Teams 和你的应用之间设置安全隧道。</span><span class="sxs-lookup"><span data-stu-id="06f01-150">To debug certain types of apps locally, such as a bot, you'll learn how to use [ngrok to set up a secure tunnel](../concepts/build-and-test/debug.md#locally-hosted) between Teams and your app.</span></span> <span data-ttu-id="06f01-151"> (生产 Teams 应用托管在云中。) </span><span class="sxs-lookup"><span data-stu-id="06f01-151">(Production Teams apps are hosted in the cloud.)</span></span>
-
-1. <span data-ttu-id="06f01-152">安装 [Node.js](https://nodejs.org/en/)。</span><span class="sxs-lookup"><span data-stu-id="06f01-152">Install [Node.js](https://nodejs.org/en/).</span></span>
-1. <span data-ttu-id="06f01-153">如果要构建机器人或消息传递扩展，请安装 [ngrok，](https://ngrok.com/download) 然后使用 [ngrok 创建隧道](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok)。</span><span class="sxs-lookup"><span data-stu-id="06f01-153">Install [ngrok](https://ngrok.com/download) if you are building a bot or messaging extension and [create a tunnel using ngrok](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok).</span></span>
-1. <span data-ttu-id="06f01-154">安装最新版本的 [Visual Studio Code](https://code.visualstudio.com/download)。</span><span class="sxs-lookup"><span data-stu-id="06f01-154">Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download).</span></span> <span data-ttu-id="06f01-155"> (早期版本可能无法与工具包一) </span><span class="sxs-lookup"><span data-stu-id="06f01-155">(Earlier versions might not work with the toolkit.)</span></span>
-1. 在Visual Studio代码"中，选择左侧活动栏上的"扩展 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: "，然后安装 **Microsoft Teams Toolkit。**
-
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="此插图显示Visual Studio代码可以安装 Microsoft Teams Toolkit扩展。":::
-
-## <a name="about-the-tutorials"></a><span data-ttu-id="06f01-158">关于教程</span><span class="sxs-lookup"><span data-stu-id="06f01-158">About the tutorials</span></span>
-
-<span data-ttu-id="06f01-159">你可以从任何 Teams 入门 **课程** 开始。</span><span class="sxs-lookup"><span data-stu-id="06f01-159">You can start with any of the Teams **get started** lessons.</span></span> <span data-ttu-id="06f01-160">如果你不确定首先从何处开始，请按照初学者友好路径，生成"Hello， World！"</span><span class="sxs-lookup"><span data-stu-id="06f01-160">If you're not sure where to go first, follow our beginner friendly path and build a "Hello, World!"</span></span> <span data-ttu-id="06f01-161">应用。</span><span class="sxs-lookup"><span data-stu-id="06f01-161">app.</span></span>
-
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="显示 Teams&quot;入门&quot;课程的学习路径的技能树。" border="false":::
-
-## <a name="next-step"></a><span data-ttu-id="06f01-163">后续步骤</span><span class="sxs-lookup"><span data-stu-id="06f01-163">Next step</span></span>
-
-<span data-ttu-id="06f01-164">设置帐户和环境后，就可以开始构建了。</span><span class="sxs-lookup"><span data-stu-id="06f01-164">Once you set up your account and environment, you can start building.</span></span>
-
-### <a name="beginner-friendly-tutorial"></a><span data-ttu-id="06f01-165">初学者友好教程</span><span class="sxs-lookup"><span data-stu-id="06f01-165">Beginner friendly tutorial</span></span>
+## <a name="next-step"></a><span data-ttu-id="b050f-152">后续步骤</span><span class="sxs-lookup"><span data-stu-id="b050f-152">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="06f01-166">生成"Hello， World！"应用</span><span class="sxs-lookup"><span data-stu-id="06f01-166">Build a "Hello, World!" app</span></span>](../build-your-first-app/build-and-run.md)
-
-### <a name="other-tutorials"></a><span data-ttu-id="06f01-167">其他教程</span><span class="sxs-lookup"><span data-stu-id="06f01-167">Other tutorials</span></span>
-
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="06f01-168">创建机器人</span><span class="sxs-lookup"><span data-stu-id="06f01-168">Build a bot</span></span>](../build-your-first-app/build-bot.md)
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="06f01-169">创建邮件扩展</span><span class="sxs-lookup"><span data-stu-id="06f01-169">Build a messaging extension</span></span>](../build-your-first-app/build-messaging-extension.md)
+> [<span data-ttu-id="b050f-153">生成并运行你的第一个 Teams 应用</span><span class="sxs-lookup"><span data-stu-id="b050f-153">Build and run your first Teams app</span></span>](../build-your-first-app/build-and-run.md)
