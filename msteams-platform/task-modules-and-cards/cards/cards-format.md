@@ -5,12 +5,12 @@ keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: d2806271f99af53139c76dcbd1090a96adcd0f31
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922515"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068820"
 ---
 # <a name="format-cards-in-teams"></a>在 Teams 中设置卡片格式
 
@@ -45,7 +45,7 @@ Teams 中支持 Markdown 的卡片类型有两种：
 不支持以下 Markdown 标记：
 
 * 标头
-* 表格
+* Tables
 * 图像
 * 预设格式的文本
 * Blockquotes
@@ -164,7 +164,7 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 使用信息屏蔽属性可以屏蔽特定信息，如自适应卡片输入元素内用户的密码或 [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) 敏感信息。 
 
 > [!NOTE]
-> 该功能仅支持客户端信息屏蔽，将屏蔽的输入文本作为纯文本发送到在机器人配置期间指定的 https [终结点地址](../../build-your-first-app/build-bot.md#4-configure-your-bot)。 
+> 该功能仅支持客户端信息屏蔽，将屏蔽的输入文本作为纯文本发送到在机器人配置期间指定的 https [终结点地址](../../build-your-first-app/build-bot.md)。 
 
 > [!NOTE]
 > 信息屏蔽属性当前仅在开发人员预览版中可用。

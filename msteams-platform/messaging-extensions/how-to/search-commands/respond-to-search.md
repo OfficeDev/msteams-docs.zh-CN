@@ -4,12 +4,12 @@ author: clearab
 description: 如何从 Microsoft Teams 应用中的消息扩展响应搜索命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 044c6eebe9489ed404c9fa89b29c306cde8c7363
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058584"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075631"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -340,14 +340,14 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | 说明 | .NET    | Node.js   |   
+| 示例名称           | 描述 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams 消息传递扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams 消息传递扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>另请参阅
 
-- [向消息传递扩展添加配置](~/messaging-extensions/how-to/add-configuration-page.md)
+[向消息传递扩展添加配置](~/messaging-extensions/how-to/add-configuration-page.md)
  
 ## <a name="next-step"></a>后续步骤
 

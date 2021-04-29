@@ -5,12 +5,12 @@ description: 如何发送、接收和处理频道或群聊中机器人的消息�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7055042dfff4b633fdd570ce5d7318a17ac15cf6
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058591"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075750"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>与机器人的频道和群组聊天对话
 
@@ -270,7 +270,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="see-also"></a>另请参阅
 
-- [获取团队上下文](~/bots/how-to/get-teams-context.md)。
+[获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
 
 ## <a name="next-step"></a>后续步骤
 

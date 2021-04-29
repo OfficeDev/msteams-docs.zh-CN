@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 清单架构
-ms.openlocfilehash: 03740bb12e849126dcd43b8628521928d060a80f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: db7cb777dfc0f6d56f0e4876afb3ae49ba7d9926
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019690"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075708"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -405,14 +405,14 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 **可选** — 数组
 
-当你的应用体验具有团队频道选项卡体验时，需要在添加前进行额外配置。 可配置的选项卡仅在团队范围内受支持， (个人) ，并且当前每个应用仅支持一个选项卡。 
+当你的应用体验具有团队频道选项卡体验时，需要在添加前进行额外配置。 可配置的选项卡仅在团队范围内受支持，你可以多次配置相同的选项卡。 但是，只能在清单中定义它一次。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置 https:// 时将使用的 URL。|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
 |`canUpdateConfiguration`|boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值 **：true**。|
-|`context` |枚举数组|6 ||支持选项卡的范围 `contextItem` 集。 默认值 **：[channelTab、privateChatTab、meetingChatTab、meetingDetailsTab]**。|
+|`context` |枚举数组|6 ||支持选项卡的范围 `contextItem` [集](../../tabs/how-to/access-teams-context.md)。 默认值 **：[channelTab、privateChatTab、meetingChatTab、meetingDetailsTab]**。|
 |`sharePointPreviewImage`|string|2048||指向用于 SharePoint 的选项卡预览图像的相对文件路径。 大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义选项卡在 SharePoint 中的可用方法。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
@@ -435,6 +435,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |`context` | 枚举数组| 2|| 支持选项卡的范围 `contextItem` 集。|
 
 > [!NOTE]
+>  第三方开发人员无法使用 searchUrl 功能。
 > 如果你的选项卡需要与上下文相关的信息来显示相关内容或启动身份验证流，请参阅获取[Microsoft Teams 选项卡的上下文](../../tabs/how-to/access-teams-context.md)。
 
 ## <a name="bots"></a>bots

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 741f39c2aca6e99fb7bdfaa1171de4e2bb1e7755
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 8ccc4f39b62d7aefb8d0ff56e7f0dbd00d15e356
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058346"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075652"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -37,7 +37,7 @@ ms.locfileid: "52058346"
 
 ## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
-|API|说明|请求|源|
+|API|描述|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在 Teams 选项卡中显示相关内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams 客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -135,7 +135,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|说明|
+|响应代码|描述|
 |---|---|
 | **403** | 不允许应用获取参与者信息。 这是最常见的错误响应，如果会议未安装应用，将触发此错误响应。 例如，如果租户管理员禁用应用或在实时网站迁移期间阻止应用。|
 | **200** | 成功检索参与者信息。|
@@ -219,7 +219,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|说明|
+|响应代码|描述|
 |---|---|
 | **201** | 具有信号的活动已成功发送 |
 | **401** | 应用使用无效令牌进行响应。 |
@@ -377,10 +377,11 @@ POST /v3/conversations/{conversationId}/activities
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | .NET | Node.js |
+|示例名称 | 描述 | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | 会议可扩展性 | 用于传递令牌的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
 | 会议内容气泡机器人 | 用于与会议内容气泡机器人交互的 Microsoft Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Meeting SidePanel | Microsoft Teams 会议扩展性示例，用于与会议中的侧面板一起运行。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
 
 ## <a name="see-also"></a>另请参阅
 

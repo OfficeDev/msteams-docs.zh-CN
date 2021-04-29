@@ -1,117 +1,66 @@
 ---
 title: 入门 - 生成首个应用概述和先决条件
-author: heath-hamilton
+author: girliemac
 description: 了解如何开始使用 Microsoft Teams 应用开发和设置环境。
-ms.author: lajanuar
-localization_priority: Normal
-ms.date: 11/03/2020
+ms.author: timura
+ms.date: 03/18/2021
 ms.topic: quickstart
-ms.openlocfilehash: d975383022089579a04317de73595106e7920c56
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3bc99c535ea659f046b65dc26d9a60de0dd49cab
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019991"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068563"
 ---
-# <a name="build-your-first-microsoft-teams-app-overview"></a>生成首个 Microsoft Teams 应用概述
+# <a name="get-started-with-microsoft-teams-app-development"></a>Microsoft Teams 应用开发入门
 
-在 **入门课程** 中，你将了解如何创建基本的 Teams 应用。 每个教程将介绍如何生成简单的实际 Teams 应用，同时向用户介绍通用工具、基本概念和更高级的功能。
+生成一个简单的应用，了解 Teams 应用开发的基本知识。 一旦看到"Hello， World！"，请尝试阅读任何其他入门文章，详细了解常见工具、基本概念和高级功能。
+
+
 
 ## <a name="what-youll-learn"></a>您将了解哪些功能
 
-以下是在学习课程后你将了解的一些信息。
+* 快速启动并运行 Teams Toolkit（Visual Studio代码扩展） 
+* 使用 App Studio 配置应用 
+* 熟悉 Teams 开发人员工具和 SDK
+* 考虑重要的 Teams 应用概念，例如身份验证和设计最佳做法
 
-> [!div class="checklist"]
-  >
-  > * 使用 **Teams Toolkit** 快速启动并运行：Microsoft Teams Toolkit for Visual Studio Code 负责创建应用项目和基架，以便你可以数分钟内拥有正在运行的应用。
-  > * **使用 App Studio 配置应用**：指定 Teams 应用使用的功能和服务。
-  > * **确定应用受众的范围**：生成适用于个人使用和/或协作的 Teams 应用。
-> * **获取 Teams 工具和 SDK** 体验：使用 Teams JavaScript 客户端 SDK 帮助自定义应用。 例如，更改应用的配色方案以匹配 Teams 主题。 此外，了解用于创建和管理机器人的常用工具。
-  > * **在应用中展开**：在整个课程过程中，你将找到你可能感兴趣的相关主题 (如身份验证和设计指南) 。
+可以使用你选择的任何技术生成 Teams 应用，例如，使用 CLI (命令行) 。 但是，这些文章可帮助你开始使用以下推荐的工具和技术：
+
+* Teams Toolkit，Visual Studio代码扩展
+* React.js选项卡
+* Node.js聊天机器人和消息扩展的扩展
+
 
 ## <a name="teams-app-fundamentals"></a>Teams 应用基础
 
-在开始教程之前，你应了解以下有关构建 Teams 应用的信息。
+你可以为自己、组织中的人员或世界各地用户生成自定义 Teams 应用。 在开始之前，你应该了解以下有关 Teams 应用开发的基本概念：
 
-### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>应用可以有多个功能和入口点
+### <a name="common-app-use-cases"></a>常见应用用例
 
-Teams 应用由一个或多个平台功能 (用户[](../concepts/capabilities-overview.md)如何使用应用) 以及 (使用应用的入口点) 。 [](../concepts/extensibility-points.md)
+自定义 Teams 应用可帮助的一些典型方案包括：
+
+* 在 Teams 客户端中嵌入基于 Web 的内容，如 Web 应用或网站的一部分
+* 在另一个系统中快速查找信息并添加到 Teams 对话 
+* 直接从对话中的内容触发工作流和进程 
+
+### <a name="app-capabilities-and-tools"></a>应用功能和工具
+
+应用由一个或多个 Teams 功能和用户交互点决定。 你的开发工具集将因所需的功能而异。
+
+| **应用功能**| **交互点** | **推荐的工具** | **SDK** | **技术堆栈** |
+|--------|--------|--------|--------|--------|
+| 选项卡 | 用户可在个人上下文和共享上下文中与嵌入的 Web 内容交互的空间 | 使用 Teams 扩展或 Yeoman Toolkit VS 代码 | 团队 JavaScript 客户端 SDK | 常规 Web 技术 (HTML、CSS 和 JavaScript) 或 React.js |
+| 机器人 | 在个人上下文和共享上下文中与用户交互的聊天机器人 | 使用 Teams 扩展或 Yeoman Toolkit VS 代码 | Bot Franework SDK | Node.js、C# 或 Python | 
+| 消息扩展 | 插入应用内容或处理邮件而不离开对话的快捷方式 | 使用 Teams 扩展或 Yeoman Toolkit VS 代码 | Bot Framework SDK | Node.js、C# 或 Python |
 
 ### <a name="teams-doesnt-host-your-app"></a>Teams 不托管你的应用
 
-Teams 应用包括以下重要部分：
+当用户在 Teams 中安装你的应用时，他们仅安装包含配置文件 (也称为应用清单) 应用图标的应用包。 应用的逻辑和数据存储托管在其他地方，如开发期间 Azure Web 服务或 localhost。 Teams 通过 HTTPS 访问这些资源。
 
-* 支持你的应用的逻辑、数据存储和 API 调用。 这些服务不是由 Teams 托管的，必须通过 HTTPS 访问。
-* Teams 客户端 (Web、桌面或移动) ，用户可使用你的应用。
-* 应用 ID，允许你使用 App Studio 配置应用。
-
-## <a name="get-prerequisites"></a>获取先决条件
-
-验证你拥有用于生成 Teams 应用所需的正确帐户，并安装一些推荐的开发工具。
-
-### <a name="set-up-your-development-account"></a>设置开发帐户
-
-你需要一个允许自定义应用旁加载的 Teams 帐户。  (你的帐户可能已经提供此功能) 
-
-1. 如果你有 Teams 帐户，请验证你能否在 Teams 中旁加载应用：
-    1. 在 Teams 客户端中，选择"**应用"。**
-    1. 查找"上载自定义 **应用"选项**。
-
-    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="显示可以在 Teams 中上传自定义应用位置的图示。":::
-    
-    如果看不到该按钮，则没有在组织中的上载自定义应用的权限。可以通过注册免费的 Microsoft 365 开发人员订阅获取此功能。
-
-<!-- markdownlint-disable MD033 -->
-<details>
-
-<summary><b>获取免费的 Microsoft 365 开发人员订阅</b></summary>
-
-可以通过加入 Microsoft 365 开发人员计划获取允许应用旁加载的免费 Teams 测试帐户。  (注册过程大约需要两分钟) 
-
-1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
-1. 选择 **立即加入** 并按照屏幕上的说明进行操作。
-1. 当你进入欢迎屏幕时，选择 **"设置 E5 订阅"。**
-1. 设置管理员帐户。 完成后，你应该会看到如下所示的屏幕。
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册 Microsoft 365 开发人员计划后看到的示例。":::
-1. 使用刚设置的管理员帐户登录 Teams。
-1. 验证你现在是否具有" **上载自定义应用"** 选项。
-
-</details>
-
-> [!Note]
-> 如果仍无法旁加载应用，请参阅 [启用自定义 Teams 应用并启用自定义应用上传](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
-
-### <a name="install-your-development-tools"></a>安装开发工具
-
-可以使用首选工具生成 Teams 应用，但以下课程显示了如何快速开始使用 Microsoft Teams Toolkit for Visual Studio Code。
-
-Teams 仅通过 HTTPS 连接显示应用内容。 若要在本地调试某些类型的应用（如机器人），你将了解如何使用 [ngrok](../concepts/build-and-test/debug.md#locally-hosted) 在 Teams 和你的应用之间设置安全隧道。  (生产 Teams 应用托管在云中。) 
-
-1. 安装 [Node.js](https://nodejs.org/en/)。
-1. 如果要构建机器人或消息传递扩展，请安装 [ngrok，](https://ngrok.com/download) 然后使用 [ngrok 创建隧道](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok)。
-1. 安装最新版本的 [Visual Studio Code](https://code.visualstudio.com/download)。  (早期版本可能无法与工具包一) 
-1. 在Visual Studio代码"中，选择左侧活动栏上的"扩展 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: "，然后安装 **Microsoft Teams Toolkit。**
-
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="此插图显示Visual Studio代码可以安装 Microsoft Teams Toolkit扩展。":::
-
-## <a name="about-the-tutorials"></a>关于教程
-
-你可以从任何 Teams 入门 **课程** 开始。 如果你不确定首先从何处开始，请按照初学者友好路径，生成"Hello， World！" 应用。
-
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="显示 Teams&quot;入门&quot;课程的学习路径的技能树。" border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="插图显示 Teams 上的应用指向云服务器中的应用逻辑。":::
 
 ## <a name="next-step"></a>后续步骤
 
-设置帐户和环境后，就可以开始构建了。
-
-### <a name="beginner-friendly-tutorial"></a>初学者友好教程
-
 > [!div class="nextstepaction"]
-> [生成"Hello， World！"应用](../build-your-first-app/build-and-run.md)
-
-### <a name="other-tutorials"></a>其他教程
-
-> [!div class="nextstepaction"]
-> [创建机器人](../build-your-first-app/build-bot.md)
-> [!div class="nextstepaction"]
-> [创建邮件扩展](../build-your-first-app/build-messaging-extension.md)
+> [生成并运行你的第一个 Teams 应用](../build-your-first-app/build-and-run.md)

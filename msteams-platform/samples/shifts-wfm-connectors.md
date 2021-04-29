@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Microsoft Teams 连接器 kronos
 ms.author: lajanuar
-ms.openlocfilehash: d17e3e18cfd39fec8117ce46aa99cb99da6927bc
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 459797dd3f8425223c0dcbedc335955bf106ae37
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058696"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075736"
 ---
 # <a name="production-ready-shifts-connectors"></a>生产准备就绪的排班连接器  
 
@@ -72,4 +72,4 @@ Teams Shifts 员工 (WFM) 连接器是生产就绪型、开放源代码和社区
 
 ## <a name="see-also"></a>另请参阅
 
-- [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+[集成 web 应用](~/samples/integrate-web-apps-overview.md)

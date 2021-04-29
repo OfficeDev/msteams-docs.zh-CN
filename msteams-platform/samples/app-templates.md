@@ -6,12 +6,12 @@ keywords: Microsoft Teams 模板示例演示
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: ceec7e05ae08ff147fb87005403ec8264e0ec313
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 04f32e7f35863d7c4b3e8744984eb6e27ec63396
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058668"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075757"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -126,7 +126,7 @@ Building Access 是一款基于 Microsoft [Power Platform](https://powerapps.mic
 
 [在 GitHub 上获取](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
 
-## <a name="checklist"></a>清单
+## <a name="checklist"></a>检查表
 
 清单是一个自定义 Microsoft Teams [消息传递](../messaging-extensions/what-are-messaging-extensions.md) 扩展应用，使你能够在聊天或频道中通过创建共享清单与团队协作。 该应用在所有 Teams 平台客户端（如桌面浏览器、iOS 和 Android）中均受支持。 应用已准备好部署为 Microsoft 365 订阅的一部分。  
 
@@ -693,4 +693,4 @@ Workplace Workplace Workplace 是一个 Teams 应用模板，提供一个积极�
 
 ## <a name="see-also"></a>另请参阅
 
-- [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+[集成 web 应用](~/samples/integrate-web-apps-overview.md)

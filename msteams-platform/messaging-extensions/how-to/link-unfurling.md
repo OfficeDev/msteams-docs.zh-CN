@@ -5,12 +5,12 @@ description: 如何在 Microsoft Teams 应用中使用消息传递扩展执行�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ec4ac7329b2c0df64237692d450977148789eff8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 352de159871069896088559487df2fb94c83e2f9
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058514"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075715"
 ---
 # <a name="link-unfurling"></a>链接展开
 
@@ -178,4 +178,4 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 ## <a name="see-also"></a>另请参阅 
 
-- [什么是卡片](~/task-modules-and-cards/what-are-cards.md)
+[卡](~/task-modules-and-cards/what-are-cards.md)

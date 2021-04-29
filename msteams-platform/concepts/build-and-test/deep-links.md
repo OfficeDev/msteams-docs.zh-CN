@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: fb681cc2dc07f8ae042fe57d6249e986fefa1b7b
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 5ce9e4e1d86c6b4c040901fc9d6de10ff98a42e0
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058332"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075596"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -150,7 +150,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 以下深层链接格式可用于自动程序、连接器或邮件扩展卡：
 
-`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
 
 查询参数包括：
 
@@ -222,6 +222,12 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 若要将此深层链接与自动程序一同使用，可以在卡片按钮中指定此链接作为 URL 目标，或点击操作类型 `openUrl` 中的操作。
 
+## <a name="code-sample"></a>代码示例
+
+| 示例名称 | 描述 | .NET |
+|-------------|-------------|------|
+| 使用下级 ID 的深层链接 | 用于演示从聊天机器人聊天到选项卡使用子企业 ID 的深层链接的 Microsoft Teams 示例应用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+
 ## <a name="see-also"></a>另请参阅
 
-- [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+[集成 web 应用](~/samples/integrate-web-apps-overview.md)

@@ -5,12 +5,12 @@ description: 详细说明 Teams 的可用 Microsoft 低和无代码解决方案
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 78386c310ee4a82e5fdc6832f0cd288181674dbb
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: d294bf335a7688584e52c22d2585f3db2ef1c788
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058682"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075722"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为 Microsoft Teams 创建低代码自定义应用
 
@@ -83,4 +83,4 @@ Teams 中的 [新 Power Apps](https://go.microsoft.com/fwlink/?linkid=2143374) �
 
 ## <a name="see-also"></a>另请参阅
 
-- [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+[集成 web 应用](~/samples/integrate-web-apps-overview.md)

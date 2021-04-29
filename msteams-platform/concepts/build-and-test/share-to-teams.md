@@ -1,17 +1,17 @@
 ---
-title: 创建"共享到 Teams"按钮
+title: 创建“共享到 Teams”按钮
 description: 如何在网站上添加"共享到 Teams"嵌入按钮
 ms.topic: reference
 localization_priority: Normal
 keywords: 共享 Teams 共享到 Teams
-ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058472"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075645"
 ---
-# <a name="create-share-to-teams-button"></a>创建"共享到 Teams"按钮
+# <a name="create-share-to-teams-button"></a>创建“共享到 Teams”按钮
 
 第三方网站可以使用启动器脚本在其网页上嵌入 Share-to-Teams 按钮。 选择后，它将在弹出窗口中启动"共享到 Teams"体验。 这允许你直接将链接共享给任何人或 Microsoft Teams 频道，而无需切换上下文。 本文档指导你了解如何为网站创建和嵌入"共享到 Teams"按钮、制作网站预览以及扩展 Share-to-Teams 教育版。
 
@@ -79,7 +79,7 @@ ms.locfileid: "52058472"
 |值|Meta 标记| Open Graph|
 |----|----|----|
 |标题|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
-|说明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
+|描述|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |缩略图图像| 无。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
 可以使用 html 默认版本或 Open Graph 版本。
@@ -92,7 +92,7 @@ ms.locfileid: "52058472"
 
 ## <a name="full-launcherjs-definition"></a>完整launcher.js定义
 
-| 属性 | HTML 属性 | 类型 | 默认值 | 说明 |
+| Property | HTML 属性 | 类型 | 默认值 | 说明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | 不适用 | 要共享的内容的 href。 |
 | preview | `data-preview` | boolean (字符串类型)  | `true` | 是否显示要共享的内容的预览。 |
@@ -133,4 +133,4 @@ ms.locfileid: "52058472"
 
 ## <a name="see-also"></a>另请参阅
 
-- [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+[集成 web 应用](~/samples/integrate-web-apps-overview.md)

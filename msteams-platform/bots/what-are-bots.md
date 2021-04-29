@@ -5,12 +5,12 @@ description: Microsoft Teams 中的聊天机器人概述。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 9ba7b6b96a8cbd55fac968975794d7c41d57f514
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: e91211d7237384b1d39f877cf217dcddfc66cc1e
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058493"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075659"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
@@ -48,7 +48,7 @@ ms.locfileid: "52058493"
 
 ## <a name="see-also"></a>另请参阅
 
-- [创建适合 Teams 的机器人](~/bots/how-to/create-a-bot-for-teams.md)
+[创建适合 Teams 的机器人](~/bots/how-to/create-a-bot-for-teams.md)
 
 ## <a name="next-step"></a>后续步骤
 

@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams 发布应用商店 Office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: 8490230ad0b268d402a9ad7deb5f8b1e3f420f9d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 6c63bd5c71934d0a3342b31bc10feda38b8ae0d1
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020847"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075743"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft Teams 应用的本地化
 
@@ -132,3 +132,11 @@ Teams 客户端将按以下顺序应用字符串：默认语言字符串 ->用�
 ## <a name="handling-localized-text-submissions-from-your-users"></a>处理来自用户的本地化文本提交
 
 如果你提供应用程序的本地化版本，你的用户很可能将使用相同的语言进行响应。 Teams 不会将用户提交翻译回默认语言，因此你的应用将需要处理此情况。 例如，如果你提供本地化的 ，则对自动程序的响应将是命令的本地化文本， `commandList` 而不是默认语言。 你的应用将需要做出相应的响应。
+
+## <a name="code-sample"></a>代码示例
+
+| 示例名称 | 描述 | .NET |
+|-------------|-------------|------|
+| 应用本地化 | 使用机器人和选项卡进行 Microsoft Teams 应用本地化。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+
+

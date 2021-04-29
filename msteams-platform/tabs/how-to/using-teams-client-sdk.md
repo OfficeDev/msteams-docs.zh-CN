@@ -6,12 +6,12 @@ description: Microsoft Teams JavaScript 客户端 SDK 概述，可帮助你生�
 localization_priority: Normal
 keywords: teams 选项卡组通道可配置的静态 SDK JavaScript 个人
 ms.topic: conceptual
-ms.openlocfilehash: 6d40f005e863e0ef5687b20beecfdaf03ee8becb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c3bbdf9b71618148faf9822aaf051b85aecf17fb
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019557"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068722"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验
 
@@ -22,18 +22,20 @@ SDK 有助于开发具有以下任一 Teams 功能的应用：
 * [选项卡](../../tabs/what-are-tabs.md)
 * [任务模块](../../task-modules-and-cards/what-are-task-modules.md)
 
-例如，SDK 可以使选项卡 [对](../../build-your-first-app/build-personal-tab.md#3-update-the-tab-theme) 用户在 Teams 客户端中做出的主题更改做出响应。
+例如，SDK 可以使选项卡 [对](../../build-your-first-app/build-personal-tab.md) 用户在 Teams 客户端中做出的主题更改做出响应。
 
 ## <a name="getting-started"></a>入门
 
 根据您的开发首选项执行下列操作之一：
 
-* [使用 npm 或更新安装 SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
-* [克隆 GitHub (SDK) ](https://github.com/OfficeDev/microsoft-teams-library-js)
+
+* [使用 npm 或更新安装 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
 
 ## <a name="common-sdk-functions"></a>通用 SDK 函数
 
-请参阅下表以了解常用的 SDK 函数。 [SDK 参考文档提供了](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)更全面的信息。
+
+请参阅下表以了解常用的 SDK 函数。 [SDK 参考文档提供了](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)更全面的信息。
+
 
 ### <a name="basic-functions"></a>基本函数
 
