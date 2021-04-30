@@ -1,21 +1,21 @@
 ---
 title: 在自动程序中添加卡片操作
-description: 介绍 Microsoft Teams 中的卡片操作以及如何在机器人中使用它们
+description: 描述自动Microsoft Teams中的卡片操作以及如何在机器人中使用它们
 localization_priority: Normal
 ms.topic: conceptual
 keywords: teams 机器人卡片操作
-ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 75dcd6e1de1968f021a1ebe66c6770c4f641c94d
+ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019536"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "52088792"
 ---
 # <a name="card-actions"></a>卡片操作
 
-Teams 中的机器人和消息传递扩展使用的卡片支持以下 () [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) 类型。 请注意，在使用连接器时， `potentialActions` 这些操作不同于 Office 365 连接器卡。
+聊天机器人和邮件扩展中使用的Teams支持以下活动 () [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) 类型。 请注意，这些操作不同于 `potentialActions` Office 365连接器卡的这些操作。
 
-| 类型 | 操作 |
+| 类型 | Action |
 | --- | --- |
 | `openUrl` | 在默认浏览器中打开 URL。 |
 | `messageBack` | 从单击按钮或点击卡片 (用户向聊天机器人发送消息和负载) 并将单独的消息发送到聊天流。 |
@@ -24,12 +24,12 @@ Teams 中的机器人和消息传递扩展使用的卡片支持以下 () [`CardA
 | `signin` | 启动 OAuth 流，允许机器人与安全服务连接。 |
 
 > [!NOTE]
->* Teams 不支持 `CardAction` 上表中未列出的类型。
->* Teams 不支持 `potentialActions` 属性。
->* 卡片操作不同于 Bot [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Framework/Azure Bot Service 中的建议操作。 建议的操作在 Microsoft Teams 中不受支持：如果你希望按钮出现在 Teams 自动程序消息中，请使用卡片。
+>* Teams不支持 `CardAction` 上表中未列出的类型。
+>* Teams不支持 `potentialActions` 属性。
+>* 卡片操作不同于 Bot [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Framework/Azure Bot Service 中的建议操作。 建议的操作在自动程序Microsoft Teams：如果希望按钮显示在自动程序Teams，请使用卡片。
 >* 如果你使用卡片操作作为邮件扩展的一部分，那么在将卡片提交到频道之前，这些操作将不起作用 (当卡片位于撰写消息框中时) 。
 
-Teams 还 [支持自适应卡片操作](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)，这些操作仅由自适应卡片使用。 这些操作将在此参考末尾的其自己的部分中列出。
+Teams还支持[自适应卡片操作](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)，这些操作仅由自适应卡片使用。 这些操作将在此参考末尾的其自己的部分中列出。
 
 ## <a name="openurl"></a>openUrl
 
@@ -223,11 +223,12 @@ var button = new CardAction()
 
 ## <a name="adaptive-cards-actions"></a>自适应卡片操作
 
-自适应卡片支持三种操作类型：
+自适应卡片支持四种操作类型：
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+* [Action.Execute](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 除了上述操作之外，还可以修改自适应卡片有效负载，以支持使用 对象中的 属性执行现有 `Action.Submit` Bot Framework `msteams` `data` 操作 `Action.Submit` 。 以下各节详细介绍了如何将现有 Bot Framework 操作与自适应卡片一同使用。
 
