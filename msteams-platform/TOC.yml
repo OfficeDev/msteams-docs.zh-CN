@@ -8,17 +8,17 @@
 - name: 入门
   expanded: true
   items:
-    - name: 概述和先决条件
+    - name: 概述
       href: build-your-first-app/build-first-app-overview.md
-    - name: 创建 “你好，世界！”  应用
+    - name: '创建“Hello, World!”  应用'
       href: build-your-first-app/build-and-run.md
-    - name: 创建个人选项卡
+    - name: 构建个人选项卡
       href: build-your-first-app/build-personal-tab.md
-    - name: 创建频道和群组选项卡
+    - name: 建立首个频道和群组选项卡
       href: build-your-first-app/build-channel-tab.md
-    - name: 创建机器人
+    - name: 构建首个机器人
       href: build-your-first-app/build-bot.md
-    - name: 创建邮件扩展
+    - name: 构建首个消息传递扩展
       href: build-your-first-app/build-messaging-extension.md
 - name: 教程和代码示例
   items:
