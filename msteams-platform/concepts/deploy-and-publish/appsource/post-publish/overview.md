@@ -1,59 +1,61 @@
 ---
 title: 维护和支持已发布的应用
-description: 发布应用后要执行哪些操作
-ms.topic: how-to
+description: 在应用商店和 AppSource 上列出应用商店后Teams的考虑。
+ms.topic: conceptual
 localization_priority: Normal
-keywords: teams 发布更新认证应用更新清单
-ms.openlocfilehash: 11c32ce61664f34a246905124b767e17d3c6f536
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 57b57e268a4f2eafc14d0372b8b8383e410a80d5
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020798"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101749"
 ---
-# <a name="maintain-and-support-your-published-app"></a><span data-ttu-id="edb56-104">维护和支持已发布的应用</span><span class="sxs-lookup"><span data-stu-id="edb56-104">Maintain and support your published app</span></span> 
+# <a name="maintain-your-published-microsoft-teams-app"></a><span data-ttu-id="1c9f5-103">维护已发布Microsoft Teams应用程序</span><span class="sxs-lookup"><span data-stu-id="1c9f5-103">Maintain your published Microsoft Teams app</span></span>
 
-<span data-ttu-id="edb56-105">在公共应用目录中批准并列出应用后，可以通过完成 Microsoft 365 应用合规性计划或在网站上添加下载按钮来扩大应用范围。</span><span class="sxs-lookup"><span data-stu-id="edb56-105">After your app is approved and listed in the public app catalog, you can increase your reach by completing the Microsoft 365 App Compliance Program or by adding a download button on your website.</span></span>
+<span data-ttu-id="1c9f5-104">在应用商店中Microsoft Teams应用后，开始考虑如何继续维护应用并增加下载量和使用。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-104">With your app listed on the Microsoft Teams store, start thinking about how you'll maintain the app going forward and increase downloads and usage.</span></span>
 
-## <a name="microsoft-365-certified"></a><span data-ttu-id="edb56-106">Microsoft 365 认证</span><span class="sxs-lookup"><span data-stu-id="edb56-106">Microsoft 365 Certified</span></span>
+## <a name="publish-updates-to-your-app"></a><span data-ttu-id="1c9f5-105">将更新发布到应用</span><span class="sxs-lookup"><span data-stu-id="1c9f5-105">Publish updates to your app</span></span>
 
-<span data-ttu-id="edb56-107">[Microsoft 365 应用合规性计划](./application-certification.md)是应用安全性和合规性的三层方法。</span><span class="sxs-lookup"><span data-stu-id="edb56-107">The [Microsoft 365 App Compliance Program](./application-certification.md), is a three tier approach to app security and compliance.</span></span> <span data-ttu-id="edb56-108">每一层都基于下一层构建 - 提供分层计划以满足客户的需求。</span><span class="sxs-lookup"><span data-stu-id="edb56-108">Each tier builds upon the next – offering a layered program to meet your customer’s needs.</span></span> <span data-ttu-id="edb56-109">可以通过访问合规性页面来了解有关 Teams 应用的安全性和合规性[状态。](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)</span><span class="sxs-lookup"><span data-stu-id="edb56-109">You can learn more about the security and compliance posture of Teams apps by visiting the [compliance page](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).</span></span>
+<span data-ttu-id="1c9f5-106">你可以向应用提交更改 (如合作伙伴中心中的新功能) 元数据。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-106">You can submit changes to your app (such as new features or even metadata) in Partner Center.</span></span> <span data-ttu-id="1c9f5-107">这些更改需要新的审阅过程。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-107">These changes requires a new review process.</span></span>
 
-## <a name="add-a-download-button-to-your-product-site"></a><span data-ttu-id="edb56-110">将下载按钮添加到产品网站</span><span class="sxs-lookup"><span data-stu-id="edb56-110">Add a download button to your product site</span></span>
+<span data-ttu-id="1c9f5-108">发布更新时，请确保以下各项：</span><span class="sxs-lookup"><span data-stu-id="1c9f5-108">Ensure the following when publishing updates:</span></span>
 
-<span data-ttu-id="edb56-111">如果你的应用位于 Microsoft Teams 全局应用商店中，你可以为网站生成一个链接，用于启动 Teams，并显示用户添加应用的同意和安装对话框。</span><span class="sxs-lookup"><span data-stu-id="edb56-111">If your app is in the Microsoft Teams global store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.</span></span>
-<span data-ttu-id="edb56-112">格式为：其中 appID 是它们在提交的清单中  `https://teams.microsoft.com/l/app/<appId>` 声明的 GUID。</span><span class="sxs-lookup"><span data-stu-id="edb56-112">The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.</span></span>
-<span data-ttu-id="edb56-113">示例： `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` 是安装 Trello 的链接。</span><span class="sxs-lookup"><span data-stu-id="edb56-113">Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.</span></span>
+* <span data-ttu-id="1c9f5-109">不要更改应用 ID。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-109">Don't change your app ID.</span></span>
+* <span data-ttu-id="1c9f5-110">递增应用的版本号。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-110">Increment your app's version number.</span></span>
+* <span data-ttu-id="1c9f5-111">在合作伙伴中心中，不要选择" **添加新应用** "以执行更新。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-111">In Partner Center, don't select **Add a new app** to do the update.</span></span> <span data-ttu-id="1c9f5-112">改为转到应用页面。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-112">Go to your app's page instead.</span></span>
 
-## <a name="updating-your-existing-teams-app"></a><span data-ttu-id="edb56-114">更新现有 Teams 应用</span><span class="sxs-lookup"><span data-stu-id="edb56-114">Updating your existing Teams app</span></span>
+### <a name="app-updates-requiring-user-consent"></a><span data-ttu-id="1c9f5-113">需要用户同意的应用更新</span><span class="sxs-lookup"><span data-stu-id="1c9f5-113">App updates requiring user consent</span></span>
 
-* <span data-ttu-id="edb56-115">请勿使用 *"添加新应用"* 按钮重新提交应用。</span><span class="sxs-lookup"><span data-stu-id="edb56-115">Do not use the *Add a new app* button to resubmit your app.</span></span> <span data-ttu-id="edb56-116">改为使用"概述"选项卡上的应用磁贴。</span><span class="sxs-lookup"><span data-stu-id="edb56-116">Use the tile for your app on the Overview tab instead.</span></span>
-* <span data-ttu-id="edb56-117">更新后的清单中的 appId 应该与当前清单中的相同，并递增版本号。</span><span class="sxs-lookup"><span data-stu-id="edb56-117">The appId in the updated manifest should be the same as in the current manifest, with an incremented version number.</span></span>
-* <span data-ttu-id="edb56-118">如果你对提交（包括应用名称或清单中任何元数据）进行更改，则增加清单中的版本号。</span><span class="sxs-lookup"><span data-stu-id="edb56-118">Increment your version number in the manifest if you make any changes to your submission including app name or any metadata in the manifest.</span></span>
-* <span data-ttu-id="edb56-119">更新的提交需要经过新的审阅和验证过程。</span><span class="sxs-lookup"><span data-stu-id="edb56-119">Updated submissions are required to undergo a new review and validation process.</span></span>
+<span data-ttu-id="1c9f5-114">当用户安装你的应用时，他们必须向应用授予访问应用正常运行所需的服务和信息的权限。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-114">When a user installs your app, they must give the app permission to access the services and information the app requires to function.</span></span> <span data-ttu-id="1c9f5-115">在大多数情况下，用户只需执行一次此操作，并自动安装新版本的应用。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-115">In most cases, users only have to do this once and new versions of your app install automatically.</span></span>
 
-## <a name="app-updates-and-the-user-consent-flow"></a><span data-ttu-id="edb56-120">应用更新和用户同意流</span><span class="sxs-lookup"><span data-stu-id="edb56-120">App updates and the user consent flow</span></span>
+<span data-ttu-id="1c9f5-116">但是，如果你对应用进行以下任何更改，则现有用户必须接受另一个权限请求才能安装更新：</span><span class="sxs-lookup"><span data-stu-id="1c9f5-116">If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:</span></span>
 
-<span data-ttu-id="edb56-121">当用户安装您的应用程序时，他们首先执行的工作之一是同意向应用程序授予访问执行其作业所需的服务和信息的权限。</span><span class="sxs-lookup"><span data-stu-id="edb56-121">When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job.</span></span> <span data-ttu-id="edb56-122">在大多数情况下，完成应用更新后，将为最终用户自动显示新版本。</span><span class="sxs-lookup"><span data-stu-id="edb56-122">In most cases, after you complete an app update the new version will automatically appear for end users.</span></span> <span data-ttu-id="edb56-123">但是，Teams 应用清单的一[](../../../../resources/schema/manifest-schema.md)些更新需要用户接受才能完成，并可以重新触发此同意行为：</span><span class="sxs-lookup"><span data-stu-id="edb56-123">However, there are some updates to the [Teams app manifest](../../../../resources/schema/manifest-schema.md) that require user acceptance to complete and can re-trigger this consent behavior:</span></span>
+* <span data-ttu-id="1c9f5-117">添加或删除机器人。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-117">Add or remove a bot.</span></span>
+* <span data-ttu-id="1c9f5-118">更改机器人 ID。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-118">Change the bot ID.</span></span>
+* <span data-ttu-id="1c9f5-119">修改机器人的单向通知配置。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-119">Modify a bot's one-way notification configuration.</span></span>
+* <span data-ttu-id="1c9f5-120">修改自动程序对上载和下载文件的支持。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-120">Modify a bot's support for uploading and downloading files.</span></span>
+* <span data-ttu-id="1c9f5-121">添加或删除邮件扩展。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-121">Add or remove a messaging extension.</span></span>
+* <span data-ttu-id="1c9f5-122">添加个人选项卡。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-122">Add a personal tab.</span></span>
+* <span data-ttu-id="1c9f5-123">添加频道和组选项卡。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-123">Add a channel and group tab.</span></span>
+* <span data-ttu-id="1c9f5-124">添加连接器。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-124">Add a connector.</span></span>
+* <span data-ttu-id="1c9f5-125">修改与 Azure AD Azure Active Directory (应用) 相关的配置。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-125">Modify configurations related to your Azure Active Directory (Azure AD) app registration.</span></span> <span data-ttu-id="1c9f5-126">有关详细信息，请参阅 [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) 。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-126">For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).</span></span>
 
- >[!div class="checklist"]
->
-> * <span data-ttu-id="edb56-124">添加或删除自动程序。</span><span class="sxs-lookup"><span data-stu-id="edb56-124">A bot is added or removed.</span></span>
-> * <span data-ttu-id="edb56-125">更改现有自动程序 `botId` 的唯一值。</span><span class="sxs-lookup"><span data-stu-id="edb56-125">An existing bot's unique `botId` value is changed.</span></span>
-> * <span data-ttu-id="edb56-126">现有自动程序 `isNotificationOnly` 布尔值已更改。</span><span class="sxs-lookup"><span data-stu-id="edb56-126">An existing bot's `isNotificationOnly` boolean value is changed.</span></span>
-> * <span data-ttu-id="edb56-127">现有自动程序 `supportsFiles` 或 `supportsCalling` 布尔值已更改。</span><span class="sxs-lookup"><span data-stu-id="edb56-127">An existing bot's `supportsFiles` or `supportsCalling` boolean value is changed.</span></span>
-> * <span data-ttu-id="edb56-128">添加或删除 `composeExtensions` 邮件扩展。</span><span class="sxs-lookup"><span data-stu-id="edb56-128">A messaging extension `composeExtensions` is added or removed.</span></span>
-> * <span data-ttu-id="edb56-129">添加了一个新连接器。</span><span class="sxs-lookup"><span data-stu-id="edb56-129">A new connector is added.</span></span>
-> * <span data-ttu-id="edb56-130">添加了新的静态或个人选项卡。</span><span class="sxs-lookup"><span data-stu-id="edb56-130">A new static or personal tab is added.</span></span>
-> * <span data-ttu-id="edb56-131">添加了新的可配置组或频道选项卡。</span><span class="sxs-lookup"><span data-stu-id="edb56-131">A new configurable group or channel tab is added.</span></span>
-> * <span data-ttu-id="edb56-132">内部的属性 `webApplicationInfo` 已更改。</span><span class="sxs-lookup"><span data-stu-id="edb56-132">The properties inside `webApplicationInfo` are changed.</span></span> <span data-ttu-id="edb56-133">对于 的更改 `webApplicationInfo` ，仅在 Teams 范围内需要同意。</span><span class="sxs-lookup"><span data-stu-id="edb56-133">For changes to `webApplicationInfo`, consent is only required in the Teams scope.</span></span>
+## <a name="fix-issues-with-your-published-app"></a><span data-ttu-id="1c9f5-127">修复已发布应用的问题</span><span class="sxs-lookup"><span data-stu-id="1c9f5-127">Fix issues with your published app</span></span>
 
-### <a name="images-of-user-consent-flow"></a><span data-ttu-id="edb56-134">用户同意流程的图像：</span><span class="sxs-lookup"><span data-stu-id="edb56-134">Images of user consent flow:</span></span>
+<span data-ttu-id="1c9f5-128">Microsoft 对应用商店中列出的应用运行每日Teams测试。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-128">Microsoft runs daily automation tests on apps listed on the Teams store.</span></span> <span data-ttu-id="1c9f5-129">如果发现你的应用的问题，我们会通过详细报告联系你，以了解如何重现这些问题以及解决这些问题的建议。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-129">If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them.</span></span> <span data-ttu-id="1c9f5-130">如果无法修复已规定时间线中的问题，你的应用一览可能会从应用商店中删除。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-130">If you can't fix the problems within a stated timeline, your app listing may be removed from the store.</span></span>
 
-<span data-ttu-id="edb56-135">**设置连接器** - 此屏幕将仅为 Teams 用户显示。</span><span class="sxs-lookup"><span data-stu-id="edb56-135">**Set up a connector** —  This screen will appear only for Teams users.</span></span>
+## <a name="promote-your-app-on-another-site"></a><span data-ttu-id="1c9f5-131">在另一个网站上推广你的应用</span><span class="sxs-lookup"><span data-stu-id="1c9f5-131">Promote your app on another site</span></span>
 
-![同意流设置连接器图](../../../../assets/images/connector-teams-consentflow.png)
+<span data-ttu-id="1c9f5-132">当你的应用在应用商店Teams时，你可以创建一个链接来启动Teams并显示用于安装应用的对话框。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-132">When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app.</span></span> <span data-ttu-id="1c9f5-133">例如，可以在产品的营销页面上包含此链接和下载按钮。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-133">You could include this link, for example, with a download button on your product's marketing page.</span></span>
 
-<span data-ttu-id="edb56-137">**用户同意流** - 此屏幕在个人和组范围内都很常见。</span><span class="sxs-lookup"><span data-stu-id="edb56-137">**User consent flow** - This screen is common for both personal and group scope.</span></span> <span data-ttu-id="edb56-138">在此处，选中"**代表你的组织同意"复选框，** 然后选择"接受 **"。**</span><span class="sxs-lookup"><span data-stu-id="edb56-138">Here, select the **Consent on behalf of your organization** checkbox and choose **Accept**.</span></span>
+<span data-ttu-id="1c9f5-134">使用应用 ID 附加的以下 URL 创建链接 `https://teams.microsoft.com/l/app/<your-app-id>` ：。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-134">Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.</span></span>
 
-![权限图](../../../../assets/images/user-consent-flow.png)
+## <a name="complete-microsoft-365-certification"></a><span data-ttu-id="1c9f5-135">完成Microsoft 365认证</span><span class="sxs-lookup"><span data-stu-id="1c9f5-135">Complete Microsoft 365 Certification</span></span>
+
+<span data-ttu-id="1c9f5-136">[Microsoft 365](/microsoft-365-app-certification/docs/certification)认证可保证当在 Office 应用 生态系统中安装第三方 Office 应用 或外接程序时，数据和隐私Microsoft 365受保护。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-136">[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem.</span></span> <span data-ttu-id="1c9f5-137">认证确认你的应用与 Microsoft 技术兼容，符合云应用安全最佳做法，并且受 Microsoft 支持。</span><span class="sxs-lookup"><span data-stu-id="1c9f5-137">Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="1c9f5-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1c9f5-138">See also</span></span>
+
+* [<span data-ttu-id="1c9f5-139">通过 Microsoft 商业市场利用应用盈利</span><span class="sxs-lookup"><span data-stu-id="1c9f5-139">Monetize your app through Microsoft Commercial Marketplace</span></span>](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

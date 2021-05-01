@@ -1,97 +1,197 @@
 ---
-title: 应用商店提交清单
-description: 将 Microsoft Teams 应用发布到 AppSource 之前使用的清单
-ms.topic: reference
+title: 准备应用商店提交
+description: 介绍提交要列在应用商店Microsoft Teams应用之前的最后步骤。
+ms.topic: how-to
 localization_priority: Normal
-keywords: Teams 发布应用商店 Office 发布清单提交 Teams 应用应用资源验证
-ms.openlocfilehash: 1e7698e143d313ce46b834eada608571e3280b8a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: d46d21c3d984b5688c00857e485210b0f0fcf2c7
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020784"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101679"
 ---
-# <a name="prepare-for-appsource-submission"></a><span data-ttu-id="77ed8-104">准备 AppSource 提交</span><span class="sxs-lookup"><span data-stu-id="77ed8-104">Prepare for AppSource submission</span></span>  
+# <a name="prepare-your-microsoft-teams-store-submission"></a><span data-ttu-id="4e36a-103">准备Microsoft Teams应用商店提交</span><span class="sxs-lookup"><span data-stu-id="4e36a-103">Prepare your Microsoft Teams store submission</span></span>
 
-<span data-ttu-id="77ed8-105">若要在 AppSource 上列出，应用必须完成审批流程。</span><span class="sxs-lookup"><span data-stu-id="77ed8-105">To be listed on AppSource, your app must go through an approval process.</span></span> <span data-ttu-id="77ed8-106">这是 Microsoft Teams 组提供的一项免费服务，可验证你的应用是否按所述运行，包含所有适当的元数据，并提供对最终用户有价值的内容。</span><span class="sxs-lookup"><span data-stu-id="77ed8-106">This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user.</span></span> <span data-ttu-id="77ed8-107">为了帮助你快速获得批准，请确保你的应用满足以下要求和指南：</span><span class="sxs-lookup"><span data-stu-id="77ed8-107">To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:</span></span>
+<span data-ttu-id="4e36a-104">你已设计、生成和测试Microsoft Teams应用。</span><span class="sxs-lookup"><span data-stu-id="4e36a-104">You've designed, built, and tested your Microsoft Teams app.</span></span> <span data-ttu-id="4e36a-105">现在，你已准备好列出它，以便用户可以发现并开始使用你的应用。</span><span class="sxs-lookup"><span data-stu-id="4e36a-105">Now you're ready to list it so people can discover and start using your app.</span></span>
 
-* <span data-ttu-id="77ed8-108">**分发方法：** 确保你的应用适用于在应用商店平台上发布。</span><span class="sxs-lookup"><span data-stu-id="77ed8-108">**Distribution method:** Make sure your app is meant for publication on a store platform.</span></span> <span data-ttu-id="77ed8-109">还有其他 [一些选项](../../overview.md) 可用于分发应用，而无需发布到 AppSource。</span><span class="sxs-lookup"><span data-stu-id="77ed8-109">There are [other options](../../overview.md) to distribute your app without publishing to AppSource.</span></span>
-* <span data-ttu-id="77ed8-110">**验证策略：** 你的应用必须在提交之前通过所有 [当前的 AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) 验证策略。</span><span class="sxs-lookup"><span data-stu-id="77ed8-110">**Validation policies:** Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) before submission.</span></span> 
-  > [!NOTE] 
-  > <span data-ttu-id="77ed8-111">Appsource 验证策略可能会更改。</span><span class="sxs-lookup"><span data-stu-id="77ed8-111">The Appsource validation policies are subject to change.</span></span>
-* <span data-ttu-id="77ed8-112">**移动就绪情况：** 你的应用必须具有移动响应能力。</span><span class="sxs-lookup"><span data-stu-id="77ed8-112">**Mobile readiness:** Your app must be mobile responsive.</span></span> <span data-ttu-id="77ed8-113">如果你的应用包含选项卡，它们必须遵循移动设计指南[](~/tabs/design/tabs-mobile.md)，并且你的应用必须符合 iOS 和[](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment)Android (上的不) 。</span><span class="sxs-lookup"><span data-stu-id="77ed8-113">If your app contains tabs, they must follow the [mobile design guidelines](~/tabs/design/tabs-mobile.md) and your app must comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android).</span></span>
-* <span data-ttu-id="77ed8-114">**自行测试应用：** 使用清单验证工具 [测试应用](#teams-app-validation-tool)。</span><span class="sxs-lookup"><span data-stu-id="77ed8-114">**Self test your app:** Test your app using the [Manifest validation tool](#teams-app-validation-tool).</span></span>
-* <span data-ttu-id="77ed8-115">**应用详细信息页面：** 你的应用必须与应用详细信息  [页面清单一致](detail-page-checklist.md)。</span><span class="sxs-lookup"><span data-stu-id="77ed8-115">**App detail page:** Your app must align with the  [App detail page checklist](detail-page-checklist.md).</span></span>
-* <span data-ttu-id="77ed8-116">**提示和经常失败的情况：** 请额外注意列出的 [提示和经常失败的情况](frequently-failed-cases.md)  ，以改进应用提交和审批时间。</span><span class="sxs-lookup"><span data-stu-id="77ed8-116">**Tips and frequently failed cases:** Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.</span></span>
-* <span data-ttu-id="77ed8-117">**应用清单：** 根据应用清单清单 [检查应用清单](app-manifest-checklist.md)。</span><span class="sxs-lookup"><span data-stu-id="77ed8-117">**App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).</span></span>
-* <span data-ttu-id="77ed8-118">**测试和调试：** 确保你已 [完全测试和调试你的应用](../../../build-and-test/debug.md)。</span><span class="sxs-lookup"><span data-stu-id="77ed8-118">**Testing and debugging:** Make certain that you have fully [tested and debugged your app](../../../build-and-test/debug.md).</span></span>
-* <span data-ttu-id="77ed8-119">**测试说明：** 包括 [测试说明进行验证](#test-notes-for-validation)</span><span class="sxs-lookup"><span data-stu-id="77ed8-119">**Testing notes:** Include your [test notes for validation](#test-notes-for-validation)</span></span>
-* <span data-ttu-id="77ed8-120">**隐私策略：** 确保 [你的隐私策略、使用条款和支持 URL 遵循](#privacy-policy-terms-of-use-and-support-urls) 我们的指南。</span><span class="sxs-lookup"><span data-stu-id="77ed8-120">**Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.</span></span>
+<span data-ttu-id="4e36a-106">在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource)之前，请确保你已完成以下操作。</span><span class="sxs-lookup"><span data-stu-id="4e36a-106">Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.</span></span>
 
-<span data-ttu-id="77ed8-121">完成上述所有要求后，通过合作伙伴中心将程序包 [提交](/office/dev/store/use-partner-center-to-submit-to-appsource)到 AppSource。</span><span class="sxs-lookup"><span data-stu-id="77ed8-121">Once you have completed all of the above requirements, submit your package to AppSource through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).</span></span>
+## <a name="validate-your-app-package"></a><span data-ttu-id="4e36a-107">验证应用包</span><span class="sxs-lookup"><span data-stu-id="4e36a-107">Validate your app package</span></span>
 
-## <a name="teams-app-validation-tool"></a><span data-ttu-id="77ed8-122">Teams 应用验证工具</span><span class="sxs-lookup"><span data-stu-id="77ed8-122">Teams App Validation Tool</span></span>
+<span data-ttu-id="4e36a-108">当你的应用可能在测试环境中运行时，你应该检查你的应用包，以避免在提交过程中出现问题。</span><span class="sxs-lookup"><span data-stu-id="4e36a-108">While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.</span></span>
 
-<span data-ttu-id="77ed8-123">应用验证工具由应用 [验证器和](#teams-app-validator) 初步 [清单组成](#preliminary-checklist)。</span><span class="sxs-lookup"><span data-stu-id="77ed8-123">The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist).</span></span> <span data-ttu-id="77ed8-124">该工具复制 [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) 用于评估应用提交的相同测试用例。</span><span class="sxs-lookup"><span data-stu-id="77ed8-124">The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission.</span></span> <span data-ttu-id="77ed8-125">因此，在将解决方案提交到 AppSource 进行审批之前，必须通过所有测试用例至关重要。该工具可在 Teams 平台内的多个区域找到：</span><span class="sxs-lookup"><span data-stu-id="77ed8-125">Therefore,  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval.The tool can be found in several areas within the Teams platform:</span></span>
+<span data-ttu-id="4e36a-109">应用Microsoft Teams工具可帮助你在提交到合作伙伴中心之前识别和修复问题。</span><span class="sxs-lookup"><span data-stu-id="4e36a-109">The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center.</span></span> <span data-ttu-id="4e36a-110">该工具根据应用商店验证期间使用的相同测试用例自动检查应用的配置。</span><span class="sxs-lookup"><span data-stu-id="4e36a-110">The tool automatically checks your app's configurations against the same test cases used during store validation.</span></span>
 
-> [!div class="checklist"]
->
-> * [<span data-ttu-id="77ed8-126">**应用验证程序主页**</span><span class="sxs-lookup"><span data-stu-id="77ed8-126">**App Validator homepage**</span></span>](https://dev.teams.microsoft.com/appvalidation.html)
-> * [<span data-ttu-id="77ed8-127">**Teams Visual Studio Code 工具包**</span><span class="sxs-lookup"><span data-stu-id="77ed8-127">**Teams Visual Studio Code toolkit**</span></span>](/toolkit/visual-studio-code-overview.md)
-> * [<span data-ttu-id="77ed8-128">**应用程序 Studio**</span><span class="sxs-lookup"><span data-stu-id="77ed8-128">**App Studio**</span></span>](../../../build-and-test/app-studio-overview.md)
+1. <span data-ttu-id="4e36a-111">转到应用[Microsoft Teams工具](https://dev.teams.microsoft.com/appvalidation.html)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-111">Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).</span></span> <span data-ttu-id="4e36a-112"> (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) </span><span class="sxs-lookup"><span data-stu-id="4e36a-112">(Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)</span></span>
+1. <span data-ttu-id="4e36a-113">Upload应用包运行自动测试。</span><span class="sxs-lookup"><span data-stu-id="4e36a-113">Upload your app package to run the automated tests.</span></span>
+1. <span data-ttu-id="4e36a-114">转到" **初步检查表** "并查看难以自动化的测试用例。</span><span class="sxs-lookup"><span data-stu-id="4e36a-114">Go to the **Preliminary checklist** and review the test cases that are difficult to automate.</span></span>
+1. <span data-ttu-id="4e36a-115">[修复了当自动测试](~/resources/schema/manifest-schema.md) 出错或未满足检查表中所有条件时的配置或应用的问题。</span><span class="sxs-lookup"><span data-stu-id="4e36a-115">[Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general if the automated tests give you errors or you haven't met all the criteria in the checklist.</span></span>
 
-### <a name="teams-app-validator"></a><span data-ttu-id="77ed8-129">Teams 应用验证程序</span><span class="sxs-lookup"><span data-stu-id="77ed8-129">Teams app validator</span></span>
+## <a name="compile-testing-instructions"></a><span data-ttu-id="4e36a-116">编译测试说明</span><span class="sxs-lookup"><span data-stu-id="4e36a-116">Compile testing instructions</span></span>
 
-<span data-ttu-id="77ed8-130">" **验证** "页允许你在提交到 AppSource 之前检查应用包。</span><span class="sxs-lookup"><span data-stu-id="77ed8-130">The **Validate** page allows you to check your app package before submission to AppSource.</span></span> <span data-ttu-id="77ed8-131">只需上传应用包，验证工具将针对所有与清单相关的测试用例检查应用。</span><span class="sxs-lookup"><span data-stu-id="77ed8-131">Simply upload your app package and the validation tool will check your app against all manifest-related test cases.</span></span> <span data-ttu-id="77ed8-132">对于每个失败的测试，该说明都提供了一个文档链接，帮助您修复错误。</span><span class="sxs-lookup"><span data-stu-id="77ed8-132">For each failed test, the description provides a documentation link to help you fix the error.</span></span>
+<span data-ttu-id="4e36a-117">提供说明和资源来帮助审阅者测试你的应用，包括测试帐户、凭据和许可证密钥。</span><span class="sxs-lookup"><span data-stu-id="4e36a-117">Provide instructions and resources to help the reviewers test your app, including test accounts, credentials, and license keys.</span></span> <span data-ttu-id="4e36a-118">你可以添加合作伙伴中心中的说明，或将它们上载到 SharePoint 上的公开位置。</span><span class="sxs-lookup"><span data-stu-id="4e36a-118">You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.</span></span>
 
-![验证工具](../../../../assets/images/validation-tool/validator.png)
+### <a name="feature-list"></a><span data-ttu-id="4e36a-119">功能列表</span><span class="sxs-lookup"><span data-stu-id="4e36a-119">Feature list</span></span>
 
-### <a name="preliminary-checklist"></a><span data-ttu-id="77ed8-134">初步清单</span><span class="sxs-lookup"><span data-stu-id="77ed8-134">Preliminary checklist</span></span>
+<span data-ttu-id="4e36a-120">提供有关应用功能的详细信息，Teams测试每个功能的步骤。</span><span class="sxs-lookup"><span data-stu-id="4e36a-120">Provide details about your app's capabilities in Teams and steps for testing each one.</span></span>
 
-<span data-ttu-id="77ed8-135">对于难以自动化的测试方案，初步清单显示七个最常见的失败测试用例。</span><span class="sxs-lookup"><span data-stu-id="77ed8-135">For test scenarios that are difficult to automate, the preliminary checklist surfaces seven of the most commonly failed test cases.</span></span>
+### <a name="accounts"></a><span data-ttu-id="4e36a-121">帐户</span><span class="sxs-lookup"><span data-stu-id="4e36a-121">Accounts</span></span>
 
-![初步清单](../../../../assets/images/validation-tool/preliminary-checklist.png)
+<span data-ttu-id="4e36a-122">如果你的应用需要许可证或后端安全列表，则必须提供测试帐户。</span><span class="sxs-lookup"><span data-stu-id="4e36a-122">You must provide test accounts if your app requires a license or backend safelisting.</span></span> <span data-ttu-id="4e36a-123">你提供的所有帐户都必须包含预填充的数据，以便于测试。</span><span class="sxs-lookup"><span data-stu-id="4e36a-123">All accounts you provide must include pre-populated data to facilitate testing.</span></span>
 
-## <a name="privacy-policy-terms-of-use-and-support-urls"></a><span data-ttu-id="77ed8-137">隐私策略、使用条款和支持 URL</span><span class="sxs-lookup"><span data-stu-id="77ed8-137">Privacy policy, terms of use and support URLs</span></span>
+<span data-ttu-id="4e36a-124">根据应用的功能，可能需要提供以下所有功能：</span><span class="sxs-lookup"><span data-stu-id="4e36a-124">Depending on your app's features, you may need to provide all of the following:</span></span>
 
-### <a name="privacy-policy"></a><span data-ttu-id="77ed8-138">隐私策略</span><span class="sxs-lookup"><span data-stu-id="77ed8-138">Privacy policy</span></span>
+* <span data-ttu-id="4e36a-125">管理员帐户 (管理员) </span><span class="sxs-lookup"><span data-stu-id="4e36a-125">Admin account (required)</span></span>
+* <span data-ttu-id="4e36a-126">非管理员帐户 (必需) </span><span class="sxs-lookup"><span data-stu-id="4e36a-126">Non-admin account (required)</span></span>
+* <span data-ttu-id="4e36a-127">为了正确测试首次运行登录体验而未预配置的帐户 (要求) </span><span class="sxs-lookup"><span data-stu-id="4e36a-127">An account that isn't pre-configured in order to properly test the first-run sign-in experience (required)</span></span>
+* <span data-ttu-id="4e36a-128">有权访问高级或升级功能的帐户 (如果适用) </span><span class="sxs-lookup"><span data-stu-id="4e36a-128">An account with access to premium or upgraded features (if applicable)</span></span>
+* <span data-ttu-id="4e36a-129">同一租户中的两个帐户，用于测试在共享上下文中工作的应用的 (体验（如果适用) </span><span class="sxs-lookup"><span data-stu-id="4e36a-129">Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)</span></span>
 
-<span data-ttu-id="77ed8-139">隐私策略指南：</span><span class="sxs-lookup"><span data-stu-id="77ed8-139">Privacy policy guidelines:</span></span>
+### <a name="tenant-configurations"></a><span data-ttu-id="4e36a-130">租户配置</span><span class="sxs-lookup"><span data-stu-id="4e36a-130">Tenant configurations</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="77ed8-140">隐私策略可以特定于你的应用和/或所有服务的整体策略。</span><span class="sxs-lookup"><span data-stu-id="77ed8-140">The privacy policy can be specific to your app and/or an overall policy for all of your services.</span></span>
-> * <span data-ttu-id="77ed8-141">如果使用通用隐私策略，则必须引用"服务"、"应用程序"和"平台"，以包括 Teams 应用和网站。</span><span class="sxs-lookup"><span data-stu-id="77ed8-141">If you use a generic privacy policy, it must reference "services", "applications", and "platforms" to include your Teams app as well as your website.</span></span>
-> * <span data-ttu-id="77ed8-142">它必须包括如何处理用户数据存储、用户数据保留、删除和安全控制。</span><span class="sxs-lookup"><span data-stu-id="77ed8-142">It must include how you handle user data storage, user data retention, deletion, and security controls.</span></span>
-> * <span data-ttu-id="77ed8-143">它必须包含您的联系信息。</span><span class="sxs-lookup"><span data-stu-id="77ed8-143">It must include your contact information.</span></span>
-> * <span data-ttu-id="77ed8-144">它不应包含断开的链接、beta URL 或暂存 URL。</span><span class="sxs-lookup"><span data-stu-id="77ed8-144">It should not contain broken links, beta URLs, or staging URLs.</span></span>
+<span data-ttu-id="4e36a-131">如果必须配置Teams租户才能使用你的应用，请包含这些说明以及管理员和非管理员帐户进行验证。</span><span class="sxs-lookup"><span data-stu-id="4e36a-131">If you must configure a Teams tenant to use your app, include those instructions and admin and non-admin accounts for validation.</span></span>
 
-### <a name="terms-of-use"></a><span data-ttu-id="77ed8-145">使用条款</span><span class="sxs-lookup"><span data-stu-id="77ed8-145">Terms of use</span></span>
+### <a name="video-optional"></a><span data-ttu-id="4e36a-132">视频 (可选) </span><span class="sxs-lookup"><span data-stu-id="4e36a-132">Video (optional)</span></span>
 
-<span data-ttu-id="77ed8-146">使用条款声明应特定于应用和/或外接程序产品/服务。</span><span class="sxs-lookup"><span data-stu-id="77ed8-146">Your terms of use statement should be specific and applicable to your app and/or add-in offering.</span></span>
+<span data-ttu-id="4e36a-133">提供你的应用的录制，以便 Microsoft 可以完全了解其功能。</span><span class="sxs-lookup"><span data-stu-id="4e36a-133">Provide a recording of your app so that Microsoft can fully understand its functionality.</span></span>
 
-### <a name="support-urls"></a><span data-ttu-id="77ed8-147">支持 URL</span><span class="sxs-lookup"><span data-stu-id="77ed8-147">Support URLs</span></span>
+## <a name="create-your-store-listing-details"></a><span data-ttu-id="4e36a-134">创建应用商店一览详细信息</span><span class="sxs-lookup"><span data-stu-id="4e36a-134">Create your store listing details</span></span>
 
-<span data-ttu-id="77ed8-148">支持 URL 不应要求身份验证或登录凭据来就应用的任何问题联系你。</span><span class="sxs-lookup"><span data-stu-id="77ed8-148">Your support URLs should not require authentication or login credential to contact you for any issues with your app.</span></span>
+<span data-ttu-id="4e36a-135">你提交到合作伙伴[中心&#8212;包括](https://partner.microsoft.com)你的姓名、说明、图标和图像&#8212;成为应用的 Teams 应用商店和 Microsoft AppSource 一览。</span><span class="sxs-lookup"><span data-stu-id="4e36a-135">The information that you submit to [Partner Center](https://partner.microsoft.com)&#8212;including your name, descriptions, icons, and images&#8212;becomes the Teams store and Microsoft AppSource listing for your app.</span></span>
 
-## <a name="test-notes-for-validation"></a><span data-ttu-id="77ed8-149">用于验证的测试说明</span><span class="sxs-lookup"><span data-stu-id="77ed8-149">Test notes for validation</span></span>
+<span data-ttu-id="4e36a-136">应用商店一览可能是某人对你的应用的第一印象。</span><span class="sxs-lookup"><span data-stu-id="4e36a-136">A store listing may be someone's first impression of your app.</span></span> <span data-ttu-id="4e36a-137">通过可有效传达应用优势、功能和品牌一览增加安装量。</span><span class="sxs-lookup"><span data-stu-id="4e36a-137">Increase installations with a listing that effectively conveys your app's benefits, functionality, and brand.</span></span>
 
-<span data-ttu-id="77ed8-150">请包含以下内容：</span><span class="sxs-lookup"><span data-stu-id="77ed8-150">Please include the following:</span></span>
+### <a name="specify-a-short-name"></a><span data-ttu-id="4e36a-138">指定短名称</span><span class="sxs-lookup"><span data-stu-id="4e36a-138">Specify a short name</span></span>
 
-* <span data-ttu-id="77ed8-151">必须提供至少两个登录凭据，一个管理员和非管理员。</span><span class="sxs-lookup"><span data-stu-id="77ed8-151">You must provide at least two login credentials, one admin and one non-admin.</span></span>
+<span data-ttu-id="4e36a-139">特别是，你的应用 (，它的短) 在用户如何在应用商店[](~/resources/schema/manifest-schema.md#name)中发现它方面起到重要作用。</span><span class="sxs-lookup"><span data-stu-id="4e36a-139">Your app's name (specifically, its [*short name*](~/resources/schema/manifest-schema.md#name)) plays a crucial role in how users discover it in the store.</span></span>
 
-* <span data-ttu-id="77ed8-152">出于验证目的，你提供的帐户应具有足够的预填充数据。</span><span class="sxs-lookup"><span data-stu-id="77ed8-152">For verification purposes, the accounts you provide should have sufficient pre-populated data.</span></span>
+:::row:::
 
-* <span data-ttu-id="77ed8-153">对于企业应用、需要订阅的应用或具有 Office 365 租户/域依赖项的应用，必须在未为应用预配置的同一域中提供第三个帐户，以便我们可以验证首次运行的用户体验。</span><span class="sxs-lookup"><span data-stu-id="77ed8-153">For enterprise apps, apps where a subscription is required, or apps where there is an Office 365 tenant/domain dependency, you must provide a third account in the same domain that is not pre-configured for your app so that we can validate the first-run user experience.</span></span>
+   :::column span="3":::
+      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用的短名称的位置。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
 
-* <span data-ttu-id="77ed8-154">如果你的应用具有高级/升级功能，则必须提供具有必要访问权限的帐户来测试该体验。</span><span class="sxs-lookup"><span data-stu-id="77ed8-154">If your app has premium/upgraded features, an account with the necessary access must be provided to test that experience.</span></span>
+:::row-end:::
 
-* <span data-ttu-id="77ed8-155">你可以选择将测试备注上载到 SharePoint。</span><span class="sxs-lookup"><span data-stu-id="77ed8-155">You may choose to upload your test notes to SharePoint.</span></span> <span data-ttu-id="77ed8-156">如果是这样，请提供文件的公共链接。</span><span class="sxs-lookup"><span data-stu-id="77ed8-156">If so, please provide a public link to the file.</span></span>
+<span data-ttu-id="4e36a-141">确保你的短名称符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-141">Make sure your short name adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name).</span></span>
 
-* <span data-ttu-id="77ed8-157">**测试帐户**。</span><span class="sxs-lookup"><span data-stu-id="77ed8-157">**Test Accounts**.</span></span> <span data-ttu-id="77ed8-158">如果你的应用仅允许来自后端的许可帐户或安全列表，则测试帐户是必需的。</span><span class="sxs-lookup"><span data-stu-id="77ed8-158">A test account is required if your app only allows licensed accounts or safelisting from the backend.</span></span> <span data-ttu-id="77ed8-159">此外，如果应用中允许团队/群聊范围，则同一租户中需要两个测试帐户来验证团队协作方案。</span><span class="sxs-lookup"><span data-stu-id="77ed8-159">Also, if there is a team/group chat scope allowed in your app,  two test accounts in the same tenant are required to validate the team collaboration scenario.</span></span>
+### <a name="write-descriptions"></a><span data-ttu-id="4e36a-142">编写说明</span><span class="sxs-lookup"><span data-stu-id="4e36a-142">Write descriptions</span></span>
 
-* <span data-ttu-id="77ed8-160">**集成步骤**。</span><span class="sxs-lookup"><span data-stu-id="77ed8-160">**Integration steps**.</span></span> <span data-ttu-id="77ed8-161">如果需要租户管理员预配置才能使用应用，请包含步骤和/或提供配置的管理员和非管理员帐户进行验证。</span><span class="sxs-lookup"><span data-stu-id="77ed8-161">If pre-configuration by a tenant admin is required to use the app, include the steps and/or provide configured admin and non-admin accounts for validation.</span></span> <span data-ttu-id="77ed8-162">注意：你可以注册 [Office 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program) 订阅。</span><span class="sxs-lookup"><span data-stu-id="77ed8-162">Note: you can sign up for an [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription.</span></span> <span data-ttu-id="77ed8-163">它 *是免费的* 90 天，并且将持续续订，只要你使用它进行开发活动。</span><span class="sxs-lookup"><span data-stu-id="77ed8-163">It's *free* for 90 days and will continually renew as long as you're using it for development activity.</span></span>
+<span data-ttu-id="4e36a-143">必须对你的应用进行简短而详细的说明。</span><span class="sxs-lookup"><span data-stu-id="4e36a-143">You must have a short and long description of your app.</span></span>
 
-* <span data-ttu-id="77ed8-164">**有关 Teams 中的** 应用功能的注意事项：详细介绍 Teams 中应用提供的所有功能以及测试每个功能的步骤。</span><span class="sxs-lookup"><span data-stu-id="77ed8-164">**Notes regarding the app features in Teams**: Detail all of the capabilities the app offers within Teams and steps for testing each feature.</span></span>
+#### <a name="short-description"></a><span data-ttu-id="4e36a-144">简短说明</span><span class="sxs-lookup"><span data-stu-id="4e36a-144">Short description</span></span>
 
-* <span data-ttu-id="77ed8-165">**显示应用功能的视频 (可选**) ：你可以提供产品的视频录制，以便我们完全了解应用的功能。</span><span class="sxs-lookup"><span data-stu-id="77ed8-165">**Video showing the app functionality (Optional)**: You can provide a video recording of the product for us to fully understand the functionality of the app.</span></span>
+<span data-ttu-id="4e36a-145">应用简洁摘要，应原始、具有吸引力，并面向目标受众。</span><span class="sxs-lookup"><span data-stu-id="4e36a-145">A concise summary of your app that should be original, engaging, and directed at your target audience.</span></span> <span data-ttu-id="4e36a-146">将简短说明保留为一个句子。</span><span class="sxs-lookup"><span data-stu-id="4e36a-146">Keep the short description to one sentence.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用的简短说明的位置。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="4e36a-148">请确保简短说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-148">Make sure your short description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description).</span></span>
+
+#### <a name="long-description"></a><span data-ttu-id="4e36a-149">较长说明</span><span class="sxs-lookup"><span data-stu-id="4e36a-149">Long description</span></span>
+
+<span data-ttu-id="4e36a-150">长描述可以提供一个叙述性内容，其中突出显示了应用的主要功能、它所解决的问题及其目标受众。</span><span class="sxs-lookup"><span data-stu-id="4e36a-150">The long description can provide a narrative that highlights your app's main features, the problems it solves, and its target audience.</span></span> <span data-ttu-id="4e36a-151">虽然此说明可以有 4，000 个字符，但大多数用户只能阅读 300 到 500 个单词。</span><span class="sxs-lookup"><span data-stu-id="4e36a-151">While this description can be as long as 4,000 characters, most users will only read between 300-500 words.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用长说明的位置。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="4e36a-153">请确保你的详细说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-153">Make sure your long description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description).</span></span>
+
+### <a name="adhere-to-icon-design-guidelines"></a><span data-ttu-id="4e36a-154">遵守图标设计指南</span><span class="sxs-lookup"><span data-stu-id="4e36a-154">Adhere to icon design guidelines</span></span>
+
+<span data-ttu-id="4e36a-155">图标是用户在浏览应用商店时看到的主要元素之一。</span><span class="sxs-lookup"><span data-stu-id="4e36a-155">Icons are one of the main elements users see when browsing the store.</span></span> <span data-ttu-id="4e36a-156">图标应传达应用的品牌和用途，同时遵循Teams要求。</span><span class="sxs-lookup"><span data-stu-id="4e36a-156">Your icons should communicate your app's brand and purpose while also adhering to Teams requirements.</span></span>
+
+<span data-ttu-id="4e36a-157">有关详细信息，请参阅[有关创建应用图标Teams指南](~/concepts/build-and-test/apps-package.md#app-icons)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-157">For more information, see [guidance on creating Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).</span></span>
+
+### <a name="capture-screenshots"></a><span data-ttu-id="4e36a-158">捕获屏幕截图</span><span class="sxs-lookup"><span data-stu-id="4e36a-158">Capture screenshots</span></span>
+
+<span data-ttu-id="4e36a-159">Screenshots provide a prominent visual preview of your app to complement your app name， icon， and descriptions.</span><span class="sxs-lookup"><span data-stu-id="4e36a-159">Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="示例屏幕截图突出显示了应用屏幕截图在应用商店一览中的显示位置。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="4e36a-161">请记住以下有关屏幕截图：</span><span class="sxs-lookup"><span data-stu-id="4e36a-161">Remember the following about screenshots:</span></span>
+
+* <span data-ttu-id="4e36a-162">每个列表最多可以有五张屏幕截图。</span><span class="sxs-lookup"><span data-stu-id="4e36a-162">You can have up to five screenshots per listing.</span></span>
+* <span data-ttu-id="4e36a-163">受支持的文件类型包括 PNG、JPEG 和 GIF。</span><span class="sxs-lookup"><span data-stu-id="4e36a-163">Supported file types include PNG, JPEG, and GIF.</span></span>
+* <span data-ttu-id="4e36a-164">尺寸应为 1366x768 像素。</span><span class="sxs-lookup"><span data-stu-id="4e36a-164">Dimensions should be 1366x768 pixels.</span></span>
+* <span data-ttu-id="4e36a-165">最大大小为 1，024 KB。</span><span class="sxs-lookup"><span data-stu-id="4e36a-165">Maximum size of 1,024 KB.</span></span>
+
+<span data-ttu-id="4e36a-166">有关最佳做法，请参阅以下资源：</span><span class="sxs-lookup"><span data-stu-id="4e36a-166">For best practices, see the following resources:</span></span>
+
+* [<span data-ttu-id="4e36a-167">Teams应用商店验证指南</span><span class="sxs-lookup"><span data-stu-id="4e36a-167">Teams store validation guidelines</span></span>](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [<span data-ttu-id="4e36a-168">为 Microsoft 应用商店精心制作有效图像</span><span class="sxs-lookup"><span data-stu-id="4e36a-168">Craft effective images for Microsoft app stores</span></span>](/office/dev/store/craft-effective-appsource-store-images)
+
+### <a name="create-a-video"></a><span data-ttu-id="4e36a-169">创建视频</span><span class="sxs-lookup"><span data-stu-id="4e36a-169">Create a video</span></span>
+
+<span data-ttu-id="4e36a-170">一览中的视频可能是传达人们为什么应该使用你的应用的最有效方式。</span><span class="sxs-lookup"><span data-stu-id="4e36a-170">A video in your listing can be the most effective way to communicate why people should use your app.</span></span> <span data-ttu-id="4e36a-171">你应该在视频中回答以下问题：</span><span class="sxs-lookup"><span data-stu-id="4e36a-171">You should address the following questions in a video:</span></span>
+
+* <span data-ttu-id="4e36a-172">Who应用是否适用于？</span><span class="sxs-lookup"><span data-stu-id="4e36a-172">Who is your app for?</span></span>
+* <span data-ttu-id="4e36a-173">你的应用可以解决哪些问题？</span><span class="sxs-lookup"><span data-stu-id="4e36a-173">What problems can your app solve?</span></span>
+* <span data-ttu-id="4e36a-174">你的应用如何工作？</span><span class="sxs-lookup"><span data-stu-id="4e36a-174">How does your app work?</span></span>
+* <span data-ttu-id="4e36a-175">使用你的应用还有其他哪些好处？</span><span class="sxs-lookup"><span data-stu-id="4e36a-175">What other benefits do you get from using your app?</span></span>
+
+#### <a name="best-practices-for-videos"></a><span data-ttu-id="4e36a-176">视频最佳做法</span><span class="sxs-lookup"><span data-stu-id="4e36a-176">Best practices for videos</span></span>
+
+* <span data-ttu-id="4e36a-177">将视频保留 30-90 秒。</span><span class="sxs-lookup"><span data-stu-id="4e36a-177">Keep your video between 30-90 seconds.</span></span>
+* <span data-ttu-id="4e36a-178">以质量为目标。</span><span class="sxs-lookup"><span data-stu-id="4e36a-178">Aim for quality.</span></span> <span data-ttu-id="4e36a-179">在列表中，用户将在屏幕截图前看到视频。</span><span class="sxs-lookup"><span data-stu-id="4e36a-179">In a listing, users will see your video before screenshots.</span></span>
+
+### <a name="select-a-category-for-your-app"></a><span data-ttu-id="4e36a-180">为应用选择类别</span><span class="sxs-lookup"><span data-stu-id="4e36a-180">Select a category for your app</span></span>
+
+<span data-ttu-id="4e36a-181">在提交过程中，将要求你对应用进行分类。</span><span class="sxs-lookup"><span data-stu-id="4e36a-181">During submission, you're asked to categorize your app.</span></span> <span data-ttu-id="4e36a-182">下表将Teams应用商店类别映射到合作伙伴中心[中列出的类别](https://aka.ms/PartnerCenterHomePage)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-182">The following table maps Teams store categories to the categories listed in [Partner Center](https://aka.ms/PartnerCenterHomePage).</span></span>
+
+| <span data-ttu-id="4e36a-183">Teams类别</span><span class="sxs-lookup"><span data-stu-id="4e36a-183">Teams categories</span></span>       | <span data-ttu-id="4e36a-184">合作伙伴中心类别</span><span class="sxs-lookup"><span data-stu-id="4e36a-184">Partner Center categories</span></span>  |
+|:---------------------|:---------------|
+| <span data-ttu-id="4e36a-185">分析和 BI</span><span class="sxs-lookup"><span data-stu-id="4e36a-185">Analytics and BI</span></span> | <span data-ttu-id="4e36a-186">分析、数据可视化和 BI</span><span class="sxs-lookup"><span data-stu-id="4e36a-186">Analytics, Data Visualization and BI</span></span> |
+| <span data-ttu-id="4e36a-187">开发人员和 IT</span><span class="sxs-lookup"><span data-stu-id="4e36a-187">Developer and IT</span></span> | <span data-ttu-id="4e36a-188">开发人员工具、IT 管理员</span><span class="sxs-lookup"><span data-stu-id="4e36a-188">Developer Tools, IT Admin</span></span> |
+| <span data-ttu-id="4e36a-189">教育</span><span class="sxs-lookup"><span data-stu-id="4e36a-189">Education</span></span> | <span data-ttu-id="4e36a-190">教育</span><span class="sxs-lookup"><span data-stu-id="4e36a-190">Education</span></span> |
+| <span data-ttu-id="4e36a-191">人力资源</span><span class="sxs-lookup"><span data-stu-id="4e36a-191">Human resources</span></span> | <span data-ttu-id="4e36a-192">人力资源和招聘</span><span class="sxs-lookup"><span data-stu-id="4e36a-192">Human Resources and Recruiting</span></span> |
+| <span data-ttu-id="4e36a-193">工作效率</span><span class="sxs-lookup"><span data-stu-id="4e36a-193">Productivity</span></span> | <span data-ttu-id="4e36a-194">内容管理、文件和文档、生产力、培训和教程以及实用程序</span><span class="sxs-lookup"><span data-stu-id="4e36a-194">Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities</span></span> |
+| <span data-ttu-id="4e36a-195">项目管理</span><span class="sxs-lookup"><span data-stu-id="4e36a-195">Project management</span></span> | <span data-ttu-id="4e36a-196">通信、Project、工作流和业务管理</span><span class="sxs-lookup"><span data-stu-id="4e36a-196">Communication, Project Management, Workflow, and Business Management</span></span> |
+| <span data-ttu-id="4e36a-197">销售和支持</span><span class="sxs-lookup"><span data-stu-id="4e36a-197">Sales and support</span></span> | <span data-ttu-id="4e36a-198">客户和联系人管理、客户支持、金融服务、销售和市场营销</span><span class="sxs-lookup"><span data-stu-id="4e36a-198">Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing</span></span> |
+| <span data-ttu-id="4e36a-199">社交和有趣</span><span class="sxs-lookup"><span data-stu-id="4e36a-199">Social and fun</span></span> | <span data-ttu-id="4e36a-200">图像和视频库、生活方式、新闻和天气、社交、旅行和导航</span><span class="sxs-lookup"><span data-stu-id="4e36a-200">Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation</span></span> |
+
+### <a name="localize-your-store-listing"></a><span data-ttu-id="4e36a-201">本地化应用商店一览</span><span class="sxs-lookup"><span data-stu-id="4e36a-201">Localize your store listing</span></span>
+
+<span data-ttu-id="4e36a-202">合作伙伴中心 [支持本地化的应用商店一览](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-202">Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions).</span></span> <span data-ttu-id="4e36a-203">有关详细信息，请参阅[如何本地化你的Teams应用一览](../../../../concepts/build-and-test/apps-localization.md)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-203">For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).</span></span>
+
+## <a name="complete-publisher-verification"></a><span data-ttu-id="4e36a-204">完成Publisher验证</span><span class="sxs-lookup"><span data-stu-id="4e36a-204">Complete Publisher Verification</span></span>
+
+<span data-ttu-id="4e36a-205">[Publisher应用商店](/azure/active-directory/develop/publisher-verification-overview)中列出的Teams应用需要验证。有关详细信息，请参阅[常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、[如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)应用标记为发布者验证和发布者[验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。</span><span class="sxs-lookup"><span data-stu-id="4e36a-205">[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) is required for Teams apps listed in the store.For more information, see [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified), and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).</span></span>
+
+## <a name="complete-publisher-attestation"></a><span data-ttu-id="4e36a-206">完整Publisher证明</span><span class="sxs-lookup"><span data-stu-id="4e36a-206">Complete Publisher Attestation</span></span>
+
+<span data-ttu-id="4e36a-207">[Publisher应用商店](/microsoft-365-app-certification/docs/attestation)中列出的应用Teams证明也是必需的。</span><span class="sxs-lookup"><span data-stu-id="4e36a-207">[Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is also required for Teams apps listed in the store.</span></span> <span data-ttu-id="4e36a-208">此过程包括完成对应用的安全性、数据处理和合规性做法的自我评估，从而有助于潜在客户做出有关使用应用的明智决定。</span><span class="sxs-lookup"><span data-stu-id="4e36a-208">The process includes completing a self-assessment of your app's security, data handling, and compliance practices that can help potential customers make informed decisions about using your app.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="4e36a-209">如果你要提交新应用，则你无法正式完成Publisher证明，直到你的应用在应用商店Teams列出。</span><span class="sxs-lookup"><span data-stu-id="4e36a-209">If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams store.</span></span> <span data-ttu-id="4e36a-210">如果要更新列出的应用，请完成Publisher证明，然后再提交应用的最新版本进行验证。</span><span class="sxs-lookup"><span data-stu-id="4e36a-210">If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="4e36a-211">后续步骤</span><span class="sxs-lookup"><span data-stu-id="4e36a-211">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="4e36a-212">提交应用</span><span class="sxs-lookup"><span data-stu-id="4e36a-212">Submit your app</span></span>](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)

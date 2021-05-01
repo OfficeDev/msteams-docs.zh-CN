@@ -1,235 +1,194 @@
 ---
-title: 生成出色的应用详细信息页面
-description: 描述应用详细信息页的要求
-ms.topic: reference
+title: 为应用创建应用商店一览
+description: 介绍如何为应用创建应用商店Microsoft Teams列表。
+ms.topic: how-to
 localization_priority: Normal
-keywords: teams 发布应用商店 Office 发布策略 AppSource 内容 元数据屏幕截图徽标说明 应用名称图标简短说明
-ms.openlocfilehash: 6b763180cc2beb1cef6095110af0f37169e1f7c8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 270936ca967c17caaa8a56f85057b20ca3d6a409
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020791"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101427"
 ---
-# <a name="build-a-great-app-details-page"></a><span data-ttu-id="404b1-104">生成出色的应用详细信息页面</span><span class="sxs-lookup"><span data-stu-id="404b1-104">Build a great app details page</span></span>
+# <a name="create-a-store-listing-for-your-microsoft-teams-app"></a><span data-ttu-id="00692-103">为应用创建应用商店Microsoft Teams一览</span><span class="sxs-lookup"><span data-stu-id="00692-103">Create a store listing for your Microsoft Teams app</span></span>
 
-<span data-ttu-id="404b1-105">详细信息页面向用户呈现应用的第一印象。</span><span class="sxs-lookup"><span data-stu-id="404b1-105">The details page presents the first impression of your app to users.</span></span> <span data-ttu-id="404b1-106">详细信息页面的每个元素都可用于传达你的愿景和驱动器下载，考虑你想要如何在有限的空间中展示你的应用。</span><span class="sxs-lookup"><span data-stu-id="404b1-106">Each element of your details page can be used to convey your vision and drive downloads — consider how you want to showcase your app in a limited space.</span></span> <span data-ttu-id="404b1-107">下面是一些提示和技巧，可帮助你在用户安装应用之前与用户互动。</span><span class="sxs-lookup"><span data-stu-id="404b1-107">Here are some tips and tricks to help you engage your users before they even install your app.</span></span>
+<span data-ttu-id="00692-104">你提交到合作伙伴[中心&#8212;包括](https://partner.microsoft.com)你的姓名、说明、图标和图像&#8212;成为应用的 Microsoft Teams 应用商店和 Microsoft AppSource 一览。</span><span class="sxs-lookup"><span data-stu-id="00692-104">The information that you submit to [Partner Center](https://partner.microsoft.com)&#8212;including your name, descriptions, icons, and images&#8212;becomes the Microsoft Teams store and Microsoft AppSource listing for your app.</span></span>
+
+<span data-ttu-id="00692-105">应用商店一览可能是某人对你的应用的第一印象。</span><span class="sxs-lookup"><span data-stu-id="00692-105">A store listing may be someone's first impression of your app.</span></span> <span data-ttu-id="00692-106">使用可有效传达应用优势、功能和品牌一览来增加安装量。</span><span class="sxs-lookup"><span data-stu-id="00692-106">Increase your installations with a listing that effectively conveys your app's benefits, functionality, and brand.</span></span>
+
+## <a name="specify-a-short-name"></a><span data-ttu-id="00692-107">指定短名称</span><span class="sxs-lookup"><span data-stu-id="00692-107">Specify a short name</span></span>
+
+<span data-ttu-id="00692-108">特别是，你的应用 (，它的短) 在用户如何在应用商店[](~/resources/schema/manifest-schema.md#name)中发现它方面起到重要作用。</span><span class="sxs-lookup"><span data-stu-id="00692-108">Your app's name (specifically, its [*short name*](~/resources/schema/manifest-schema.md#name)) plays a crucial role in how users discover it in the store.</span></span>
+
+<span data-ttu-id="00692-109">以下示例突出显示了应用简短名称在应用商店一览中的显示位置。</span><span class="sxs-lookup"><span data-stu-id="00692-109">The following example highlights where an app's short name displays in a store listing.</span></span>
+
+:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用的短名称的位置。":::
+
+### <a name="best-practices-for-names"></a><span data-ttu-id="00692-111">名称最佳做法</span><span class="sxs-lookup"><span data-stu-id="00692-111">Best practices for names</span></span>
+
+<span data-ttu-id="00692-112">**应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-112">**Do:**</span></span>
+
+* <span data-ttu-id="00692-113">选择一个简单易记的名称，该名称将提示你的应用所应做操作。</span><span class="sxs-lookup"><span data-stu-id="00692-113">Choose a simple, memorable name that hints at what your app does.</span></span>
+* <span data-ttu-id="00692-114">独特。</span><span class="sxs-lookup"><span data-stu-id="00692-114">Be distinctive.</span></span>
+* <span data-ttu-id="00692-115">避免拼写错误和语法错误。</span><span class="sxs-lookup"><span data-stu-id="00692-115">Avoid typos and grammatical errors.</span></span>
+
+<span data-ttu-id="00692-116">**不应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-116">**Don't:**</span></span>
+
+* <span data-ttu-id="00692-117">使用冒犯性或冒犯性术语。</span><span class="sxs-lookup"><span data-stu-id="00692-117">Use profane or derogatory terms.</span></span>
+* <span data-ttu-id="00692-118">使用种族或文化不敏感的语言。</span><span class="sxs-lookup"><span data-stu-id="00692-118">Use racially or culturally insensitive language.</span></span>
+* <span data-ttu-id="00692-119">使用类似于现有应用的一般术语或名称。</span><span class="sxs-lookup"><span data-stu-id="00692-119">Use generic terms or names similar to existing apps.</span></span>
+* <span data-ttu-id="00692-120">在名称Teams"microsoft"、"现有/即将推出的 Microsoft 产品名称"或"应用"。</span><span class="sxs-lookup"><span data-stu-id="00692-120">Include "Teams", "Microsoft", existing/upcoming Microsoft product names, or  "app" in the name.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="404b1-108">确保你的应用信息遵循 [我们的 AppSource 指南来创建有效的应用商店一览](/office/dev/store/create-effective-office-store-listings)。</span><span class="sxs-lookup"><span data-stu-id="404b1-108">Make sure your app information follows our [AppSource guidance for creating an effective store listing](/office/dev/store/create-effective-office-store-listings).</span></span>
+> <span data-ttu-id="00692-121">如果你的应用是与 Microsoft 官方合作关系的一部分，则应用名称必须先 (例如 *Salesforce Connector for Microsoft Teams*) 。</span><span class="sxs-lookup"><span data-stu-id="00692-121">If your app is part of an official partnership with Microsoft, the name of your app must come first (for example, *Salesforce Connector for Microsoft Teams*).</span></span>
 
-## <a name="app-name"></a><span data-ttu-id="404b1-109">应用名称</span><span class="sxs-lookup"><span data-stu-id="404b1-109">App name</span></span>
+## <a name="write-descriptions"></a><span data-ttu-id="00692-122">编写说明</span><span class="sxs-lookup"><span data-stu-id="00692-122">Write descriptions</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="404b1-110">应用名称在用户如何在 AppSource 应用商店中发现它中扮演关键角色。</span><span class="sxs-lookup"><span data-stu-id="404b1-110">An app's name plays a critical role in how users discover it in the AppSource app store.</span></span> <span data-ttu-id="404b1-111">你的应用的短名称将显示在详细信息页面上。</span><span class="sxs-lookup"><span data-stu-id="404b1-111">Your app's short name is displayed on the details page.</span></span>
->* <span data-ttu-id="404b1-112">应用名称应反映你的应用，而不引用 Microsoft 或 Microsoft 产品。</span><span class="sxs-lookup"><span data-stu-id="404b1-112">The app name should reflect your app without any reference to Microsoft or Microsoft products.</span></span>
->
+<span data-ttu-id="00692-123">你需要对你的应用进行简短而详细的说明。</span><span class="sxs-lookup"><span data-stu-id="00692-123">You need a short and long description of your app.</span></span>
 
-> <span data-ttu-id="404b1-113">**注意**：如果你的应用是 Microsoft 的官方合作关系，则第三方应用的名称需要首先，例如，Microsoft Teams 的 *Salesforce 连接器*。</span><span class="sxs-lookup"><span data-stu-id="404b1-113">**Note**: If your app is an official partnership with Microsoft, then the name of the third-party app needs to be first, e.g., *Salesforce Connector for Microsoft Teams*.</span></span>
+### <a name="short-description"></a><span data-ttu-id="00692-124">简短说明</span><span class="sxs-lookup"><span data-stu-id="00692-124">Short description</span></span>
 
-> [!div class="checklist"]
->
->* <span data-ttu-id="404b1-114">使用这些资源提供指导：</span><span class="sxs-lookup"><span data-stu-id="404b1-114">Use these resources for guidance:</span></span>
+<span data-ttu-id="00692-125">应用简洁摘要，应原始、具有吸引力，并面向目标受众。</span><span class="sxs-lookup"><span data-stu-id="00692-125">A concise summary of your app that should be original, engaging, and directed at your target audience.</span></span> <span data-ttu-id="00692-126">理想情况下，将简短说明保留为一个句子。</span><span class="sxs-lookup"><span data-stu-id="00692-126">Ideally, keep the short description to one sentence.</span></span>
 
-* [<span data-ttu-id="404b1-115">应用名称指南</span><span class="sxs-lookup"><span data-stu-id="404b1-115">App name guide</span></span>](#app-name)
-* [<span data-ttu-id="404b1-116">Microsoft 商标和品牌准则</span><span class="sxs-lookup"><span data-stu-id="404b1-116">Microsoft Trademark and Brand Guidelines</span></span>](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
+<span data-ttu-id="00692-127">以下示例突出显示了应用的简短说明在应用商店一览中的显示位置：</span><span class="sxs-lookup"><span data-stu-id="00692-127">The following example highlights where an app's short description displays in a store listing:</span></span>
 
-<span data-ttu-id="404b1-117">**需要：**</span><span class="sxs-lookup"><span data-stu-id="404b1-117">**Do's:**</span></span>
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用的简短说明的位置。":::
 
-* <span data-ttu-id="404b1-118">选择一个简单易记的名称，该名称将提示你的应用所应做操作。</span><span class="sxs-lookup"><span data-stu-id="404b1-118">Choose a simple, memorable name that hints at what your app does.</span></span>
-* <span data-ttu-id="404b1-119">独特。</span><span class="sxs-lookup"><span data-stu-id="404b1-119">Be distinctive.</span></span>
-* <span data-ttu-id="404b1-120">如果需要，请使用 Microsoft 365 引用，而不是 Office 365。</span><span class="sxs-lookup"><span data-stu-id="404b1-120">If needed, use Microsoft 365 references instead of Office 365.</span></span>
+#### <a name="best-practices-for-short-descriptions"></a><span data-ttu-id="00692-129">简短说明的最佳实践</span><span class="sxs-lookup"><span data-stu-id="00692-129">Best practices for short descriptions</span></span>
 
-<span data-ttu-id="404b1-121">**请勿：**</span><span class="sxs-lookup"><span data-stu-id="404b1-121">**Don'ts:**</span></span>
+<span data-ttu-id="00692-130">**应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-130">**Do:**</span></span>
 
-* <span data-ttu-id="404b1-122">不要忽略空格、大小写不正确或应用名称中包含语言错误。</span><span class="sxs-lookup"><span data-stu-id="404b1-122">Don't omit spaces, have an incorrect case, or contain language errors in the app name.</span></span>
-* <span data-ttu-id="404b1-123">请勿使用类似于现有应用的一般术语或名称。</span><span class="sxs-lookup"><span data-stu-id="404b1-123">Don't use generic terms or names similar to existing apps.</span></span>
-* <span data-ttu-id="404b1-124">不要在应用名称中使用"Teams"、"Microsoft"、"现有/即将推出的 Microsoft 产品名称"或"应用"。</span><span class="sxs-lookup"><span data-stu-id="404b1-124">Don't use "Teams", "Microsoft", existing/upcoming Microsoft product names, or  "app" in your app name.</span></span>
-* <span data-ttu-id="404b1-125">请勿使用括号包含 Microsoft 产品，例如，适用于 Microsoft Teams (*Your-App-Name) 。*</span><span class="sxs-lookup"><span data-stu-id="404b1-125">Don't use parenthesis to include Microsoft products, e.g., *Your-App-Name (for Microsoft Teams)*.</span></span>
+* <span data-ttu-id="00692-131">首先放置最重要的信息。</span><span class="sxs-lookup"><span data-stu-id="00692-131">Put the most important information first.</span></span>
+* <span data-ttu-id="00692-132">包括客户可能搜索的关键字。</span><span class="sxs-lookup"><span data-stu-id="00692-132">Include keywords that customers are likely to search for.</span></span>
 
-![应用名称存储视图](../../../../assets/images/store-detail-page/AppName-02.png)
+<span data-ttu-id="00692-133">**不应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-133">**Don't:**</span></span>
 
-![应用名称 App Studio 视图](../../../../assets/images/store-detail-page/AppName-01.png)
+* <span data-ttu-id="00692-134">重复应用名称。</span><span class="sxs-lookup"><span data-stu-id="00692-134">Repeat your app name.</span></span>
+* <span data-ttu-id="00692-135">依赖行话或专业术语。</span><span class="sxs-lookup"><span data-stu-id="00692-135">Rely on jargon or specialized terminology.</span></span> <span data-ttu-id="00692-136"> (无法假定用户知道要查找) </span><span class="sxs-lookup"><span data-stu-id="00692-136">(You can't assume users know what to look for.)</span></span>
 
-## <a name="color-icon"></a><span data-ttu-id="404b1-128">颜色图标</span><span class="sxs-lookup"><span data-stu-id="404b1-128">Color icon</span></span>
+### <a name="long-description"></a><span data-ttu-id="00692-137">较长说明</span><span class="sxs-lookup"><span data-stu-id="00692-137">Long description</span></span>
 
-<span data-ttu-id="404b1-129">这是用户看到的第一批元素之一。</span><span class="sxs-lookup"><span data-stu-id="404b1-129">This is one of the first elements that users see.</span></span> <span data-ttu-id="404b1-130">在应用商店中滚动时，它应具有吸引力且具有吸引力。</span><span class="sxs-lookup"><span data-stu-id="404b1-130">It should be attractive and eye-catching when scrolling through the app store.</span></span> <span data-ttu-id="404b1-131">请确保它留下良好的第一印象，并传达你的品牌映像和目的。</span><span class="sxs-lookup"><span data-stu-id="404b1-131">Be sure it makes a good first impression and also communicates your brand's image and purpose.</span></span> <span data-ttu-id="404b1-132">AppSource 提供了更多有关创建 [一致视觉标识的提示](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity)。</span><span class="sxs-lookup"><span data-stu-id="404b1-132">AppSource has more tips on [creating a consistent visual identity](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity).</span></span>
+<span data-ttu-id="00692-138">长描述可以提供极具吸引力的叙述，其中突出显示了应用的主要功能、它所解决的问题及其目标受众。</span><span class="sxs-lookup"><span data-stu-id="00692-138">The long description can provide an engaging narrative that highlights your app's main features, the problems it solves, and its target audience.</span></span> <span data-ttu-id="00692-139">虽然此说明可以有 4000 个字符，但大多数用户只能阅读 300 到 500 个单词。</span><span class="sxs-lookup"><span data-stu-id="00692-139">While this description can be as long as 4000 characters, most users will only read between 300-500 words.</span></span>
 
-![应用图标应用商店视图](~/assets/images/store-detail-page/AppIcon-02.png)
+<span data-ttu-id="00692-140">以下示例突出显示了应用的详细说明在应用商店一览中的显示位置：</span><span class="sxs-lookup"><span data-stu-id="00692-140">The following example highlights where an app's long description displays in a store listing:</span></span>
 
-![应用图标 App Studio 视图](~/assets/images/store-detail-page/AppIcon-01.png)
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用长说明的位置。":::
 
-<span data-ttu-id="404b1-135">**请勿：**</span><span class="sxs-lookup"><span data-stu-id="404b1-135">**Don'ts:**</span></span>
+#### <a name="usage-examples"></a><span data-ttu-id="00692-142">用法示例</span><span class="sxs-lookup"><span data-stu-id="00692-142">Usage examples</span></span>
 
-* <span data-ttu-id="404b1-136">图标不得模仿你未拥有的任何受版权保护的产品。</span><span class="sxs-lookup"><span data-stu-id="404b1-136">Your icon must not mimic any copyrighted products that you don't own.</span></span>
-* <span data-ttu-id="404b1-137">图标的外观不得类似于任何 Microsoft 产品/品牌。</span><span class="sxs-lookup"><span data-stu-id="404b1-137">Your icon must not look similar to any Microsoft product/brands.</span></span>
+<span data-ttu-id="00692-143">以下短语是编写长说明时允许使用的示例：</span><span class="sxs-lookup"><span data-stu-id="00692-143">The following phrases are examples of what's allowed when writing long descriptions:</span></span>
 
-## <a name="outline-icon"></a><span data-ttu-id="404b1-138">大纲图标</span><span class="sxs-lookup"><span data-stu-id="404b1-138">Outline icon</span></span>
+* <span data-ttu-id="00692-144">"<*你的应用名称>* 适用于Microsoft Teams"</span><span class="sxs-lookup"><span data-stu-id="00692-144">"<*Your app name*> works with Microsoft Teams"</span></span>
+* <span data-ttu-id="00692-145">"...a <*type of app*> for Microsoft Teams"</span><span class="sxs-lookup"><span data-stu-id="00692-145">"... a <*type of app*> for Microsoft Teams"</span></span>
+* <span data-ttu-id="00692-146">"<*你的应用名称>* 与Microsoft Teams集成"</span><span class="sxs-lookup"><span data-stu-id="00692-146">"<*Your app name*> integrates with Microsoft Teams"</span></span>
+* <span data-ttu-id="00692-147">"...与 Microsoft Teams 集成"</span><span class="sxs-lookup"><span data-stu-id="00692-147">"... integrated with Microsoft Teams"</span></span>
+* <span data-ttu-id="00692-148">"...适用于使用 Microsoft Teams"</span><span class="sxs-lookup"><span data-stu-id="00692-148">"... for users working with Microsoft Teams"</span></span>
+* <span data-ttu-id="00692-149">"...for <*specific task>* within Microsoft Teams"</span><span class="sxs-lookup"><span data-stu-id="00692-149">"... for <*specific task*> within Microsoft Teams"</span></span>
+* <span data-ttu-id="00692-150">"...基于 ..."</span><span class="sxs-lookup"><span data-stu-id="00692-150">"... built on ..."</span></span>
+* <span data-ttu-id="00692-151">"...在 ..."</span><span class="sxs-lookup"><span data-stu-id="00692-151">"... runs on ..."</span></span>
+* <span data-ttu-id="00692-152">"...enabled by ..."</span><span class="sxs-lookup"><span data-stu-id="00692-152">"... enabled by ..."</span></span>
+* <span data-ttu-id="00692-153">"...针对 ..."</span><span class="sxs-lookup"><span data-stu-id="00692-153">"... developed for ..."</span></span>
+* <span data-ttu-id="00692-154">"...专为 ..."</span><span class="sxs-lookup"><span data-stu-id="00692-154">"... designed for ..."</span></span>
 
-<span data-ttu-id="404b1-139">此图标用于固定的消息传递扩展以及应用在 Teams 左侧显示时。</span><span class="sxs-lookup"><span data-stu-id="404b1-139">This icon is used for pinned messaging extensions and when your app displays on the left of Teams.</span></span> <span data-ttu-id="404b1-140">请参阅 [大纲图标的设计指南](../../../../concepts/build-and-test/apps-package.md#outline-icon)。</span><span class="sxs-lookup"><span data-stu-id="404b1-140">See [design guidance for the outline icon](../../../../concepts/build-and-test/apps-package.md#outline-icon).</span></span>
+#### <a name="best-practices-for-long-descriptions"></a><span data-ttu-id="00692-155">长描述的最佳实践</span><span class="sxs-lookup"><span data-stu-id="00692-155">Best practices for long descriptions</span></span>
 
-<span data-ttu-id="404b1-141">![应用图标大纲应用商店视图 ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
- ![ 应用图标大纲 App Studio 视图](../../../../assets/images/store-detail-page/AppIconOutline-01.png)</span><span class="sxs-lookup"><span data-stu-id="404b1-141">![App icon outline store view](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
-![App icon outline App Studio view](../../../../assets/images/store-detail-page/AppIconOutline-01.png)</span></span>
+<span data-ttu-id="00692-156">**应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-156">**Do:**</span></span>
 
-<span data-ttu-id="404b1-142">**请勿：**</span><span class="sxs-lookup"><span data-stu-id="404b1-142">**Don'ts:**</span></span>
+* <span data-ttu-id="00692-157">使用 [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) 设置说明的格式。</span><span class="sxs-lookup"><span data-stu-id="00692-157">Use [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to format your description.</span></span>
+* <span data-ttu-id="00692-158">列出带项目符号的功能，以便更轻松地扫描说明。</span><span class="sxs-lookup"><span data-stu-id="00692-158">List features with bullet points so it's easier to scan the description.</span></span>
+* <span data-ttu-id="00692-159">使用活动语音并直接与用户 (例如， *您可以 ...*) 。</span><span class="sxs-lookup"><span data-stu-id="00692-159">Use active voice and speak to users directly (for example, *You can ...*).</span></span>
+* <span data-ttu-id="00692-160">包括帮助或支持链接。</span><span class="sxs-lookup"><span data-stu-id="00692-160">Include a help or support link.</span></span>
+* <span data-ttu-id="00692-161">如果适用，请确定以下内容：限制、设置信息、帐户依赖关系和发布更新。</span><span class="sxs-lookup"><span data-stu-id="00692-161">Identify the following if applicable: limitations, set up information, account dependencies, and release updates.</span></span>
 
-* <span data-ttu-id="404b1-143">图标不得模仿你未拥有的任何受版权保护的产品。</span><span class="sxs-lookup"><span data-stu-id="404b1-143">Your icon must not mimic any copyrighted products you don't own.</span></span>
-* <span data-ttu-id="404b1-144">图标的外观不得类似于任何 Microsoft 产品/品牌。</span><span class="sxs-lookup"><span data-stu-id="404b1-144">Your icon must not look similar to any Microsoft product/brands.</span></span>
+<span data-ttu-id="00692-162">**不应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-162">**Don't:**</span></span>
 
-## <a name="short-description"></a><span data-ttu-id="404b1-145">简短说明</span><span class="sxs-lookup"><span data-stu-id="404b1-145">Short description</span></span>
+* <span data-ttu-id="00692-163">超过 500 个单词。</span><span class="sxs-lookup"><span data-stu-id="00692-163">Exceed 500 words.</span></span>
+* <span data-ttu-id="00692-164">包含太多关键字。</span><span class="sxs-lookup"><span data-stu-id="00692-164">Include too many keywords.</span></span> <span data-ttu-id="00692-165"> (它令人分心，并且不会帮助用户找到你的应用。) </span><span class="sxs-lookup"><span data-stu-id="00692-165">(It's distracting and won't help people find your app.)</span></span>
+* <span data-ttu-id="00692-166">除非应用已经过官方认证过程，否则请使用以下语言：</span><span class="sxs-lookup"><span data-stu-id="00692-166">Use the following language unless the app has gone through an official certification process:</span></span>
+  * <span data-ttu-id="00692-167">"...认证..."</span><span class="sxs-lookup"><span data-stu-id="00692-167">"... certified for ..."</span></span>
+  * <span data-ttu-id="00692-168">" ...由 ..."</span><span class="sxs-lookup"><span data-stu-id="00692-168">" ... powered by ..."</span></span>
 
-<span data-ttu-id="404b1-146">这是应用的简要摘要。</span><span class="sxs-lookup"><span data-stu-id="404b1-146">This is a concise summary of your app.</span></span> <span data-ttu-id="404b1-147">不妨原创有吸引力且面向目标受众的说明。</span><span class="sxs-lookup"><span data-stu-id="404b1-147">You want it to be original, engaging, and directed at your target audience.</span></span> <span data-ttu-id="404b1-148">理想情况下，请尝试用一个句子向用户描述你的解决方案及其价值。</span><span class="sxs-lookup"><span data-stu-id="404b1-148">Ideally, try and describe your solution and its value to your users in one sentence.</span></span>
+### <a name="best-practices-for-all-descriptions"></a><span data-ttu-id="00692-169">所有说明的最佳实践</span><span class="sxs-lookup"><span data-stu-id="00692-169">Best practices for all descriptions</span></span>
 
-<span data-ttu-id="404b1-149">**需要：**</span><span class="sxs-lookup"><span data-stu-id="404b1-149">**Do's:**</span></span>
+<span data-ttu-id="00692-170">**应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-170">**Do:**</span></span>
 
-* <span data-ttu-id="404b1-150">首先放置最重要的信息。</span><span class="sxs-lookup"><span data-stu-id="404b1-150">Put the most important information first.</span></span>
-* <span data-ttu-id="404b1-151">包括客户可能搜索的关键字。</span><span class="sxs-lookup"><span data-stu-id="404b1-151">Include keywords that customers are likely to search for.</span></span>
-* <span data-ttu-id="404b1-152">如果你需要提及 Microsoft Teams，Microsoft Teams 的第一个提及应完整地写成 *Microsoft Teams*。</span><span class="sxs-lookup"><span data-stu-id="404b1-152">If you need to mention Microsoft Teams, the first mention of Microsoft Teams should be written out in full as *Microsoft Teams*.</span></span> <span data-ttu-id="404b1-153">如果在同一描述中再次提到 Teams，可以将名称缩短为 *Teams*。</span><span class="sxs-lookup"><span data-stu-id="404b1-153">If Teams is mentioned again in the same description, the name can be shortened to *Teams*.</span></span>
-* <span data-ttu-id="404b1-154">对 Microsoft 或 Microsoft Teams 的任何引用都可以作为说明的一部分，并且应遵循 Microsoft 的品牌标准和指南。</span><span class="sxs-lookup"><span data-stu-id="404b1-154">Any references to Microsoft or Microsoft Teams can be part of the description and should follow Microsoft’s brand standards and guidelines.</span></span>
-* <span data-ttu-id="404b1-155">所有说明的语法必须正确，且没有语言错误。</span><span class="sxs-lookup"><span data-stu-id="404b1-155">All descriptions must be grammatically correct with no language errors.</span></span>
-* <span data-ttu-id="404b1-156">避免使用不必要的大写，例如，说明"用户"而不是"用户"。</span><span class="sxs-lookup"><span data-stu-id="404b1-156">Avoid unnecessary use of capitalizations, e.g., stating "Users" instead of "users".</span></span>
+* <span data-ttu-id="00692-171">仅在必要时引用 Microsoft 产品名称。</span><span class="sxs-lookup"><span data-stu-id="00692-171">Reference Microsoft product names only when necessary.</span></span> <span data-ttu-id="00692-172">有关指南详细信息，请参阅 Microsoft [商标和品牌指南](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)。</span><span class="sxs-lookup"><span data-stu-id="00692-172">For more information on the guidelines, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).</span></span>
+* <span data-ttu-id="00692-173">如果需要引用 Teams **，请** 编写第一个引用作为 **Microsoft Teams**。</span><span class="sxs-lookup"><span data-stu-id="00692-173">If you need to reference **Teams**, write the first reference as **Microsoft Teams**.</span></span> <span data-ttu-id="00692-174">后续引用可以缩短为 **Teams**。</span><span class="sxs-lookup"><span data-stu-id="00692-174">Subsequent references can be shortened to **Teams**.</span></span>
+* <span data-ttu-id="00692-175">请参阅 **Microsoft 365** 而不是 **Office 365**。</span><span class="sxs-lookup"><span data-stu-id="00692-175">Refer to **Microsoft 365** instead of **Office 365**.</span></span>
+* <span data-ttu-id="00692-176">避免拼写错误和语法错误。</span><span class="sxs-lookup"><span data-stu-id="00692-176">Avoid typos and grammatical errors.</span></span>
+* <span data-ttu-id="00692-177">避免不必要的大写 (例如 **，用户** 而不是 **用户**) 。</span><span class="sxs-lookup"><span data-stu-id="00692-177">Avoid unnecessary capitalizations (for example, **Users** instead of **users**).</span></span>
+* <span data-ttu-id="00692-178">避免使用首字母缩略词。</span><span class="sxs-lookup"><span data-stu-id="00692-178">Avoid acronyms.</span></span>
 
-<span data-ttu-id="404b1-157">**请勿：**</span><span class="sxs-lookup"><span data-stu-id="404b1-157">**Don'ts:**</span></span>
+<span data-ttu-id="00692-179">**不应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-179">**Don't:**</span></span>
 
-* <span data-ttu-id="404b1-158">不要重复标题。</span><span class="sxs-lookup"><span data-stu-id="404b1-158">Don't repeat the title.</span></span>
-* <span data-ttu-id="404b1-159">不要将 Microsoft 缩写为"MS"或"MSFT"。</span><span class="sxs-lookup"><span data-stu-id="404b1-159">Don't abbreviate Microsoft to "MS" or "MSFT".</span></span>
-* <span data-ttu-id="404b1-160">请勿使用行话或专用术语-不能假定用户知道要查找什么。</span><span class="sxs-lookup"><span data-stu-id="404b1-160">Don't use jargon or specialized terminology — you can't assume that users know what to look for.</span></span>
-* <span data-ttu-id="404b1-161">除非绝对必要，否则避免不必要的 Microsoft 产品名称引用。</span><span class="sxs-lookup"><span data-stu-id="404b1-161">Avoid unnecessary reference to Microsoft product names unless absolutely necessary.</span></span>
-* <span data-ttu-id="404b1-162">请勿指示或暗示应用是 Microsoft 提供的产品/服务。</span><span class="sxs-lookup"><span data-stu-id="404b1-162">Don't indicate or imply that the app is an offering from Microsoft.</span></span>
-* <span data-ttu-id="404b1-163">请勿使用自己没有的受版权保护的品牌名称。</span><span class="sxs-lookup"><span data-stu-id="404b1-163">Don't use copyrighted brand names you don't own.</span></span>
-* <span data-ttu-id="404b1-164">请勿以短名称使用"for Teams"。</span><span class="sxs-lookup"><span data-stu-id="404b1-164">Don't  use "for Teams" in a short name.</span></span>
+* <span data-ttu-id="00692-180">将 Microsoft 缩写为 **MS 或** **MSFT**。</span><span class="sxs-lookup"><span data-stu-id="00692-180">Abbreviate Microsoft as **MS** or **MSFT**.</span></span>
+* <span data-ttu-id="00692-181">指示应用是 Microsoft 提供的产品/服务，包括使用 Microsoft 标志或标签。</span><span class="sxs-lookup"><span data-stu-id="00692-181">Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.</span></span>
+* <span data-ttu-id="00692-182">使用您不拥有的受版权保护的品牌名称。</span><span class="sxs-lookup"><span data-stu-id="00692-182">Use copyrighted brand names you don't own.</span></span>
 
-![简短说明存储视图](~/assets/images/store-detail-page/ShortDescription-02.png)
+## <a name="adhere-to-icon-design-guidelines"></a><span data-ttu-id="00692-183">遵守图标设计指南</span><span class="sxs-lookup"><span data-stu-id="00692-183">Adhere to icon design guidelines</span></span>
 
-<span data-ttu-id="404b1-166">下面是 [App Studio](https://aka.ms/InstallTeamsAppStudio)中的视图：</span><span class="sxs-lookup"><span data-stu-id="404b1-166">Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):</span></span>
+<span data-ttu-id="00692-184">图标是用户在浏览应用商店时看到的主要元素之一。</span><span class="sxs-lookup"><span data-stu-id="00692-184">Icons are one of the main elements users see when browsing the store.</span></span> <span data-ttu-id="00692-185">图标应传达应用的品牌用途，同时遵循Teams要求。</span><span class="sxs-lookup"><span data-stu-id="00692-185">Your icons should communicate your app's brand purpose while also adhering to Teams requirements.</span></span>
 
-![简短说明 App Studio 视图](~/assets/images/store-detail-page/ShortDescription-01.png)
+<span data-ttu-id="00692-186">有关详细信息，请参阅[有关设计应用图标Teams指南](~/concepts/build-and-test/apps-package.md#app-icons)。</span><span class="sxs-lookup"><span data-stu-id="00692-186">For more information, see [specific guidance on designing Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).</span></span>
 
-## <a name="long-description"></a><span data-ttu-id="404b1-168">较长说明</span><span class="sxs-lookup"><span data-stu-id="404b1-168">Long description</span></span>
+## <a name="capture-screenshots"></a><span data-ttu-id="00692-187">捕获屏幕截图</span><span class="sxs-lookup"><span data-stu-id="00692-187">Capture screenshots</span></span>
 
-> [!div class="checklist"]
->
->* <span data-ttu-id="404b1-169">这提供了一个极具吸引力的叙述性内容，重点介绍解决方案的主要功能、解决方案所解决的问题和目标受众。</span><span class="sxs-lookup"><span data-stu-id="404b1-169">This provides an engaging narrative highlighting your solution's main features, the problems it solves, and the target audience.</span></span> <span data-ttu-id="404b1-170">通过传达应用的独特功能，用第一句吸引受众。</span><span class="sxs-lookup"><span data-stu-id="404b1-170">Draw in your audience with the first sentence by communicating your app's unique features.</span></span> <span data-ttu-id="404b1-171">说明必须不足 4000 个字符;大多数用户只能阅读 300 到 500 个单词。</span><span class="sxs-lookup"><span data-stu-id="404b1-171">Your description must be under 4000 characters; most users will only read between 300 and 500 words.</span></span>
->* <span data-ttu-id="404b1-172">允许使用什么？</span><span class="sxs-lookup"><span data-stu-id="404b1-172">What is allowed?</span></span>
+<span data-ttu-id="00692-188">Screenshots provide a prominent visual preview of your app to complement your app name， icon， and descriptions.</span><span class="sxs-lookup"><span data-stu-id="00692-188">Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.</span></span>
 
-* <span data-ttu-id="404b1-173">`<your_app>`  "使用 Microsoft Teams"</span><span class="sxs-lookup"><span data-stu-id="404b1-173">`<your_app>`  "works with Microsoft Teams"</span></span>
-* <span data-ttu-id="404b1-174">`<for users>`  "使用 Microsoft Teams"</span><span class="sxs-lookup"><span data-stu-id="404b1-174">`<for users>`  "working with Microsoft Teams"</span></span>
-* <span data-ttu-id="404b1-175">`<for tasks>`  "在 Microsoft Teams 中"</span><span class="sxs-lookup"><span data-stu-id="404b1-175">`<for tasks>`  "within Microsoft Teams"</span></span>
-* <span data-ttu-id="404b1-176">`<an app>`  "for Microsoft Teams"</span><span class="sxs-lookup"><span data-stu-id="404b1-176">`<an app>`  "for Microsoft Teams"</span></span>
-* <span data-ttu-id="404b1-177">`<your_app>`  "与 Microsoft Teams 集成"</span><span class="sxs-lookup"><span data-stu-id="404b1-177">`<your_app>`  "integrates with Microsoft Teams"</span></span>
-* <span data-ttu-id="404b1-178">"...与 Microsoft Teams 集成"</span><span class="sxs-lookup"><span data-stu-id="404b1-178">"...integrated with Microsoft Teams"</span></span>
-* <span data-ttu-id="404b1-179">"...构建于..."</span><span class="sxs-lookup"><span data-stu-id="404b1-179">"...built on…"</span></span>
-* <span data-ttu-id="404b1-180">"...运行..."</span><span class="sxs-lookup"><span data-stu-id="404b1-180">"...runs on…"</span></span>
-* <span data-ttu-id="404b1-181">"...enabled by..."</span><span class="sxs-lookup"><span data-stu-id="404b1-181">"…enabled by…"</span></span>
-* <span data-ttu-id="404b1-182">"...开发用于..."</span><span class="sxs-lookup"><span data-stu-id="404b1-182">"…developed for…"</span></span>
-* <span data-ttu-id="404b1-183">"...专为..."</span><span class="sxs-lookup"><span data-stu-id="404b1-183">"…designed for…"</span></span>
+### <a name="requirements-for-screenshots"></a><span data-ttu-id="00692-189">屏幕截图要求</span><span class="sxs-lookup"><span data-stu-id="00692-189">Requirements for screenshots</span></span>
 
-> <span data-ttu-id="404b1-184">**注意**：上述条款也适用于 Microsoft 365 的使用。</span><span class="sxs-lookup"><span data-stu-id="404b1-184">**Note**: The above terms also apply to the use of Microsoft 365.</span></span> <span data-ttu-id="404b1-185">Office 365 现在称为 Microsoft 365。</span><span class="sxs-lookup"><span data-stu-id="404b1-185">Office 365 is now called Microsoft 365.</span></span> <span data-ttu-id="404b1-186">请更新应用说明以反映这一点。</span><span class="sxs-lookup"><span data-stu-id="404b1-186">Please update your app descriptions to reflect this.</span></span>
+* <span data-ttu-id="00692-190">每个列表最多五张屏幕截图。</span><span class="sxs-lookup"><span data-stu-id="00692-190">Up to five screenshots per listing.</span></span>
+* <span data-ttu-id="00692-191">受支持的文件类型包括 PNG、JPEG 和 GIF。</span><span class="sxs-lookup"><span data-stu-id="00692-191">Supported file types include PNG, JPEG, and GIF.</span></span>
+* <span data-ttu-id="00692-192">尺寸应为 1366x768 像素。</span><span class="sxs-lookup"><span data-stu-id="00692-192">Dimensions should be 1366x768 pixels.</span></span>
+* <span data-ttu-id="00692-193">最大大小为 1，024 KB。</span><span class="sxs-lookup"><span data-stu-id="00692-193">Maximum size of 1,024 KB.</span></span>
 
->[!IMPORTANT]
-> <span data-ttu-id="404b1-187">请务必将你在 AppSource 条目中撰写的说明精确复制到应用清单中，这些值必须匹配。</span><span class="sxs-lookup"><span data-stu-id="404b1-187">Make sure to precisely copy the descriptions you wrote in your AppSource entry to your app manifest — the values must match.</span></span> <span data-ttu-id="404b1-188">Microsoft Teams 将仅使用你在应用清单中提供的说明。</span><span class="sxs-lookup"><span data-stu-id="404b1-188">Microsoft Teams will only use the descriptions you provide in the app manifest.</span></span>
+### <a name="best-practices-for-screenshots"></a><span data-ttu-id="00692-194">屏幕截图的最佳实践</span><span class="sxs-lookup"><span data-stu-id="00692-194">Best practices for screenshots</span></span>
 
-<span data-ttu-id="404b1-189">**需要：**</span><span class="sxs-lookup"><span data-stu-id="404b1-189">**Do's:**</span></span>
+<span data-ttu-id="00692-195">**应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-195">**Do:**</span></span>
 
-* <span data-ttu-id="404b1-190">使用 [Markdown 格式](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) 来阐明你的说明。</span><span class="sxs-lookup"><span data-stu-id="404b1-190">Use [Markdown formatting](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to illuminate your description.</span></span>  
-* <span data-ttu-id="404b1-191">列出有助于读者扫描说明的功能。</span><span class="sxs-lookup"><span data-stu-id="404b1-191">List features to aid readers in scanning your description.</span></span>
-* <span data-ttu-id="404b1-192">使用活动语音并直接与用户通话。</span><span class="sxs-lookup"><span data-stu-id="404b1-192">Use active voice and speak to users directly.</span></span>
-* <span data-ttu-id="404b1-193">使用项目符号点列出您的功能。</span><span class="sxs-lookup"><span data-stu-id="404b1-193">Use bullet points to list out your features.</span></span>
-* <span data-ttu-id="404b1-194">包括帮助或支持链接，以便你的用户知道在有疑问时如何联系你。</span><span class="sxs-lookup"><span data-stu-id="404b1-194">Include a help or support link so your users know how to reach you if they have questions.</span></span>
-* <span data-ttu-id="404b1-195">确保 Microsoft Teams 的第一个提及完整地写成 *"Microsoft Teams"。*</span><span class="sxs-lookup"><span data-stu-id="404b1-195">Make certain that the first mention of Microsoft Teams is written out in full as "*Microsoft Teams*".</span></span> <span data-ttu-id="404b1-196">如果稍后在同一描述中再次提到 Teams，可以将名称缩短为 *"Teams"。*</span><span class="sxs-lookup"><span data-stu-id="404b1-196">If Teams is mentioned again later in the same description, the name can be shortened to "*Teams*".</span></span>
-* <span data-ttu-id="404b1-197">仅在必要时才 (Microsoft 或 Microsoft Teams) 可能是详细说明的一部分，并且应遵循 Microsoft 的品牌标准和指南。</span><span class="sxs-lookup"><span data-stu-id="404b1-197">Any references to Microsoft or Microsoft Teams (only if necessary)  may be part of the long description and should follow Microsoft’s brand standards and guidelines.</span></span>
-* <span data-ttu-id="404b1-198">所有说明的语法必须正确，且没有语言错误。</span><span class="sxs-lookup"><span data-stu-id="404b1-198">All descriptions must be grammatically correct with no language errors.</span></span>
-* <span data-ttu-id="404b1-199">避免对描述中的术语使用不必要的大写 (例如：说明"用户"而不是"用户"。</span><span class="sxs-lookup"><span data-stu-id="404b1-199">Avoid unnecessary use of capitalizations for terms in your description (example: stating "Users" instead of "users".</span></span>
-* <span data-ttu-id="404b1-200">避免使用首字母缩略词。</span><span class="sxs-lookup"><span data-stu-id="404b1-200">Avoid acronyms.</span></span>
-* <span data-ttu-id="404b1-201">请确保调用限制、帐户依赖关系、配置设置、版本中的未来更新或任何使用限制</span><span class="sxs-lookup"><span data-stu-id="404b1-201">Make sure to call out limitations, account dependency, configuration set up, future updates in releases, or any usage constraints</span></span>
+* <span data-ttu-id="00692-196">重点关注应用的功能，例如 (机器人用户如何与) 。</span><span class="sxs-lookup"><span data-stu-id="00692-196">Focus on your app's capabilities (for example, how people can communicate with your bot).</span></span>
+* <span data-ttu-id="00692-197">包括准确表示你的应用的内容。</span><span class="sxs-lookup"><span data-stu-id="00692-197">Include content that accurately represents your app.</span></span>
+* <span data-ttu-id="00692-198">使用文本时要十分明智。</span><span class="sxs-lookup"><span data-stu-id="00692-198">Use text judiciously.</span></span>
+* 具有反映品牌和包含营销内容的颜色的帧屏幕截图，类似于以下[Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview)示例 (维度要求适用于整个图像，而不只是屏幕截图) ：第三方应用:::image type="content" source="../../../../assets/images/freshdesk.png" alt-text="Freshdesk":::的屏幕截图示例
 
->[!NOTE]
-> <span data-ttu-id="404b1-202">Microsoft Teams 支持以下 Markdown 语法：</span><span class="sxs-lookup"><span data-stu-id="404b1-202">Microsoft Teams supports the following Markdown syntax:</span></span>  
-> <span data-ttu-id="404b1-203">**链接**。</span><span class="sxs-lookup"><span data-stu-id="404b1-203">**Links**.</span></span> <span data-ttu-id="404b1-204">`[title](url/address/here)`.</span><span class="sxs-lookup"><span data-stu-id="404b1-204">`[title](url/address/here)`.</span></span>  
-><span data-ttu-id="404b1-205">**图像** `![alt text](url/address/here)` . .</span><span class="sxs-lookup"><span data-stu-id="404b1-205">**Images**.`![alt text](url/address/here)`.</span></span>  
-> <span data-ttu-id="404b1-206">**加粗**。</span><span class="sxs-lookup"><span data-stu-id="404b1-206">**Bold**.</span></span> <span data-ttu-id="404b1-207">`**bold text**`   `__bold text__`.</span><span class="sxs-lookup"><span data-stu-id="404b1-207">`**bold text**`   `__bold text__`.</span></span>  
-> <span data-ttu-id="404b1-208">**斜体**。</span><span class="sxs-lookup"><span data-stu-id="404b1-208">**Italics**.</span></span> <span data-ttu-id="404b1-209">`*italicized text*`  `_italicized text`.</span><span class="sxs-lookup"><span data-stu-id="404b1-209">`*italicized text*`  `_italicized text`.</span></span>  
-><span data-ttu-id="404b1-210">**[已排序列表](https://www.markdownguide.org/basic-syntax/#ordered-lists)**</span><span class="sxs-lookup"><span data-stu-id="404b1-210">**[Ordered Lists](https://www.markdownguide.org/basic-syntax/#ordered-lists)**</span></span><br>
->`1. first` 
-<br>` 1. second ` 
-<br>`1.third`<br>
-><span data-ttu-id="404b1-211">**[无序列表](https://www.markdownguide.org/basic-syntax/#unordered-lists)**</span><span class="sxs-lookup"><span data-stu-id="404b1-211">**[Unordered List](https://www.markdownguide.org/basic-syntax/#unordered-lists)**</span></span><br>
-` - short` <br>`- bulleted` <br>`- list`<br>
-><span data-ttu-id="404b1-212">**Newline**。</span><span class="sxs-lookup"><span data-stu-id="404b1-212">**Newline**.</span></span> <span data-ttu-id="404b1-213">使用 `\n` 字符指定新行。</span><span class="sxs-lookup"><span data-stu-id="404b1-213">Use a `\n` character to designate a newline.</span></span>
- ><span data-ttu-id="404b1-214">**转义。**</span><span class="sxs-lookup"><span data-stu-id="404b1-214">**Escape.**</span></span> <span data-ttu-id="404b1-215">使用内联反线转义特殊字符。</span><span class="sxs-lookup"><span data-stu-id="404b1-215">Use an inline backslash to escape special characters.</span></span> <span data-ttu-id="404b1-216">`\*asterisk`.</span><span class="sxs-lookup"><span data-stu-id="404b1-216">`\*asterisk`.</span></span>
+<span data-ttu-id="00692-200">**不应做：**</span><span class="sxs-lookup"><span data-stu-id="00692-200">**Don't:**</span></span>
 
-<span data-ttu-id="404b1-217">**Markdown 格式的示例**</span><span class="sxs-lookup"><span data-stu-id="404b1-217">**Example in Markdown format**</span></span>
+* <span data-ttu-id="00692-201">显示特定设备，如手机或笔记本电脑。</span><span class="sxs-lookup"><span data-stu-id="00692-201">Show specific devices, such as phones or laptops.</span></span>
+* <span data-ttu-id="00692-202">显示不在应用中的部件版式或 UI。</span><span class="sxs-lookup"><span data-stu-id="00692-202">Display chrome or UI that isn't in your app.</span></span>
+* <span data-ttu-id="00692-203">捕获Teams中的任意浏览器或浏览器 UI。</span><span class="sxs-lookup"><span data-stu-id="00692-203">Capture any Teams or browser UI in your screenshots.</span></span>
+* <span data-ttu-id="00692-204">包括不精确反映应用实际 UI 的模型，例如，在浏览器中显示应用，而不是Teams选项卡。</span><span class="sxs-lookup"><span data-stu-id="00692-204">Include mockups that inaccurately reflect your app's actual UI, such as showing your app in  a browser instead of a Teams tab.</span></span>
 
-|<span data-ttu-id="404b1-218">Markdown 格式</span><span class="sxs-lookup"><span data-stu-id="404b1-218">Markdown format for</span></span> |<span data-ttu-id="404b1-219">Markdown 格式</span><span class="sxs-lookup"><span data-stu-id="404b1-219">Markdown format</span></span> |<span data-ttu-id="404b1-220">显示的文本</span><span class="sxs-lookup"><span data-stu-id="404b1-220">Displayed text</span></span>|
-|:---------|:---------------|:-------------|
-|<span data-ttu-id="404b1-221">链接</span><span class="sxs-lookup"><span data-stu-id="404b1-221">Link</span></span>  |` [App name guide](#app-name)`| [<span data-ttu-id="404b1-222">应用名称指南</span><span class="sxs-lookup"><span data-stu-id="404b1-222">App name guide</span></span>](#app-name) |
-|<span data-ttu-id="404b1-223">图像</span><span class="sxs-lookup"><span data-stu-id="404b1-223">Image</span></span> |` ![App long description store view](~/assets/images/store-detail-page/LongDescription-02.png)`| ![应用长描述应用商店视图](~/assets/images/store-detail-page/LongDescription-02.png)|
-|<span data-ttu-id="404b1-225">粗体</span><span class="sxs-lookup"><span data-stu-id="404b1-225">Bold</span></span> |` **HR Tools**` | <span data-ttu-id="404b1-226">**HR 工具**</span><span class="sxs-lookup"><span data-stu-id="404b1-226">**HR Tools**</span></span>  |
-|<span data-ttu-id="404b1-227">斜体</span><span class="sxs-lookup"><span data-stu-id="404b1-227">Italics</span></span> |`*HR Tools*` |<span data-ttu-id="404b1-228">*HR 工具*</span><span class="sxs-lookup"><span data-stu-id="404b1-228">*HR Tools*</span></span>|
-|<span data-ttu-id="404b1-229">Newline</span><span class="sxs-lookup"><span data-stu-id="404b1-229">Newline</span></span> |` HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively. <br> No more flipping through paper records or juggling among 5 different apps.` |<span data-ttu-id="404b1-230">HR 工具提供了各种解决方案，可帮助组织有效地管理日常 HR 活动。</span><span class="sxs-lookup"><span data-stu-id="404b1-230">HR Tools provide wide range of solutions that help your organization to manage day-to-day HR activities effectively.</span></span> <br>  <span data-ttu-id="404b1-231">无需再在 5 个不同的应用中翻阅纸张记录或进行切换。</span><span class="sxs-lookup"><span data-stu-id="404b1-231">No more flipping through paper records or juggling among 5 different apps.</span></span>|
-|<span data-ttu-id="404b1-232">Escape</span><span class="sxs-lookup"><span data-stu-id="404b1-232">Escape</span></span>|`\*Payroll tools that help you manage your payroll and tax documents.` |<span data-ttu-id="404b1-233">\*工资单工具，可帮助你管理工资单和税务文档。</span><span class="sxs-lookup"><span data-stu-id="404b1-233">\*Payroll tools that help you manage your payroll and tax documents.</span></span> 
+<span data-ttu-id="00692-205">有关更多最佳做法，请参阅为 [Microsoft 应用商店精心制作有效的图像](/office/dev/store/craft-effective-appsource-store-images)。</span><span class="sxs-lookup"><span data-stu-id="00692-205">For more best practices, see [craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images).</span></span>
 
-<span data-ttu-id="404b1-234">**请勿：**</span><span class="sxs-lookup"><span data-stu-id="404b1-234">**Don'ts:**</span></span>
+## <a name="create-a-video"></a><span data-ttu-id="00692-206">创建视频</span><span class="sxs-lookup"><span data-stu-id="00692-206">Create a video</span></span>
 
-* <span data-ttu-id="404b1-235">请勿在描述中放入太多关键字，这令人分心，并且对应用的可发现性没有帮助。</span><span class="sxs-lookup"><span data-stu-id="404b1-235">Don't put too many keywords in your description — it's distracting and won't help your app's discoverability.</span></span>
-* <span data-ttu-id="404b1-236">请勿短名称使用 *"Teams"* 或 *"Microsoft Teams"。*</span><span class="sxs-lookup"><span data-stu-id="404b1-236">Don't use "*Teams*” or “*Microsoft Teams*” in a short name.</span></span>
-* <span data-ttu-id="404b1-237">除非绝对必要，否则避免不必要的 Microsoft 产品名称引用。</span><span class="sxs-lookup"><span data-stu-id="404b1-237">Avoid unnecessary reference to Microsoft product names unless absolutely necessary.</span></span>
-* <span data-ttu-id="404b1-238">不要指示该应用是 Microsoft 提供的产品/服务。</span><span class="sxs-lookup"><span data-stu-id="404b1-238">Don't indicate that the app is an offering from Microsoft.</span></span>
-* <span data-ttu-id="404b1-239">请勿使用自己没有的受版权保护的品牌名称。</span><span class="sxs-lookup"><span data-stu-id="404b1-239">Don't use copyrighted brand names you don't own.</span></span>
-* <span data-ttu-id="404b1-240">除非应用已经过官方认证过程，否则请勿使用以下语言：</span><span class="sxs-lookup"><span data-stu-id="404b1-240">Don't use the following language unless the app has gone through an official certification process:</span></span>
+<span data-ttu-id="00692-207">视频可能是传达人们为什么应该使用你的应用的最有效方式。</span><span class="sxs-lookup"><span data-stu-id="00692-207">A video can be the most effective way to communicate why people should use your app.</span></span> <span data-ttu-id="00692-208">你应该在视频中回答以下问题：</span><span class="sxs-lookup"><span data-stu-id="00692-208">You should address the following questions in a video:</span></span>
 
-  * <span data-ttu-id="404b1-241">"...认证..."</span><span class="sxs-lookup"><span data-stu-id="404b1-241">"…certified for…"</span></span>
-  * <span data-ttu-id="404b1-242">"...由..."</span><span class="sxs-lookup"><span data-stu-id="404b1-242">"…powered by…"</span></span>
+* <span data-ttu-id="00692-209">Who应用是否适用于？</span><span class="sxs-lookup"><span data-stu-id="00692-209">Who is your app for?</span></span>
+* <span data-ttu-id="00692-210">你的应用可以解决哪些问题？</span><span class="sxs-lookup"><span data-stu-id="00692-210">What problems can your app solve?</span></span>
+* <span data-ttu-id="00692-211">你的应用如何工作？</span><span class="sxs-lookup"><span data-stu-id="00692-211">How does your app work?</span></span>
+* <span data-ttu-id="00692-212">使用你的应用还有其他哪些好处？</span><span class="sxs-lookup"><span data-stu-id="00692-212">What other benefits do you get from using your app?</span></span>
 
-* <span data-ttu-id="404b1-243">不要将"Microsoft"缩写为"MS"或"MSFT"，完全写出 Microsoft。</span><span class="sxs-lookup"><span data-stu-id="404b1-243">Don't abbreviate “Microsoft” to “MS” or “MSFT” — write Microsoft out in full.</span></span>
-* <span data-ttu-id="404b1-244">说明或元数据的任何部分都未指明应用是官方 Microsoft 产品/服务。</span><span class="sxs-lookup"><span data-stu-id="404b1-244">No part of description or metadata can indicate the app as an official Microsoft offering.</span></span>
-* <span data-ttu-id="404b1-245">合作伙伴不得使用或模仿任何 Microsoft 标记，或在标记内使用任何 Microsoft 产品或服务的名称。</span><span class="sxs-lookup"><span data-stu-id="404b1-245">Partners may not use or imitate any Microsoft tagline, or use the name of any Microsoft product or service in the slogan or tagline.</span></span>
-* <span data-ttu-id="404b1-246">徽标不得错误地将应用描述为官方 Microsoft 产品/功能，或模仿任何现有或即将推出的 Microsoft 产品。</span><span class="sxs-lookup"><span data-stu-id="404b1-246">Logo must not wrongly depict the app as an official Microsoft product/ feature or mimic any of the existing or upcoming Microsoft products.</span></span>
+<span data-ttu-id="00692-213">如果包含视频，它将显示在列表的屏幕截图之前。</span><span class="sxs-lookup"><span data-stu-id="00692-213">If you include a video, it appears before your screenshots in the listing.</span></span>
 
-![应用长描述应用商店视图](~/assets/images/store-detail-page/LongDescription-02.png)
+### <a name="best-practices-for-videos"></a><span data-ttu-id="00692-214">视频最佳做法</span><span class="sxs-lookup"><span data-stu-id="00692-214">Best practices for videos</span></span>
 
-<span data-ttu-id="404b1-248">下面是 [App Studio](https://aka.ms/InstallTeamsAppStudio)中的视图：</span><span class="sxs-lookup"><span data-stu-id="404b1-248">Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):</span></span>
+* <span data-ttu-id="00692-215">将视频保留 30-90 秒。</span><span class="sxs-lookup"><span data-stu-id="00692-215">Keep your video between 30-90 seconds.</span></span>
+* <span data-ttu-id="00692-216">以质量为目标。</span><span class="sxs-lookup"><span data-stu-id="00692-216">Aim for quality.</span></span> <span data-ttu-id="00692-217">在列表中，用户将在屏幕截图前看到视频。</span><span class="sxs-lookup"><span data-stu-id="00692-217">In a listing, users will see your video before screenshots.</span></span>
 
-![应用长描述 App Studio 视图](~/assets/images/store-detail-page/LongDescription-01.png)
+## <a name="localize-your-store-listing"></a><span data-ttu-id="00692-218">本地化应用商店一览</span><span class="sxs-lookup"><span data-stu-id="00692-218">Localize your store listing</span></span>
 
-## <a name="screenshots"></a><span data-ttu-id="404b1-250">屏幕截图</span><span class="sxs-lookup"><span data-stu-id="404b1-250">Screenshots</span></span>
+<span data-ttu-id="00692-219">合作伙伴中心 [支持本地化的应用商店一览](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions)。</span><span class="sxs-lookup"><span data-stu-id="00692-219">Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions).</span></span> <span data-ttu-id="00692-220">有关详细信息，请参阅[如何本地化你的Teams应用一览](../../../../concepts/build-and-test/apps-localization.md)。</span><span class="sxs-lookup"><span data-stu-id="00692-220">For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).</span></span>
 
-<span data-ttu-id="404b1-251">在合作伙伴中心上载的屏幕截图显示在[](https://partner.microsoft.com) [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)和 Teams 客户端的应用一览中。</span><span class="sxs-lookup"><span data-stu-id="404b1-251">The screenshots uploaded on the [Partner Center](https://partner.microsoft.com) are displayed in both [AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) and your app listing in the Teams client.</span></span> <span data-ttu-id="404b1-252">它们提供应用的可视预览以及应用说明。</span><span class="sxs-lookup"><span data-stu-id="404b1-252">They provide a visual preview of your app along with your app description.</span></span>
-<span data-ttu-id="404b1-253">你可以提供一到五张格式设置为 .png、.jpg 或 .gif 文件的屏幕截图。</span><span class="sxs-lookup"><span data-stu-id="404b1-253">You can provide one to five screenshots formatted as .png, .jpg, or .gif files.</span></span> <span data-ttu-id="404b1-254">屏幕截图应为 1366 x 768 像素，最大大小为 1024 KB。</span><span class="sxs-lookup"><span data-stu-id="404b1-254">Screenshots should be 1366 x 768 pixels with a maximum size of 1024 KB.</span></span>
+## <a name="see-also"></a><span data-ttu-id="00692-221">另请参阅</span><span class="sxs-lookup"><span data-stu-id="00692-221">See also</span></span>
 
-<span data-ttu-id="404b1-255">**需要：**</span><span class="sxs-lookup"><span data-stu-id="404b1-255">**Do's:**</span></span>
+* [<span data-ttu-id="00692-222">创建有效的Microsoft 365应用商店一览</span><span class="sxs-lookup"><span data-stu-id="00692-222">Create effective Microsoft 365 Stores listings</span></span>](/office/dev/store/create-effective-office-store-listings)
+* <span data-ttu-id="00692-223">Teams复制和内容和品牌[表达式的应用](~/concepts/design/design-teams-app-fundamentals.md#copy-and-content)[设计指南](~/concepts/design/design-teams-app-fundamentals.md#brand-expression)</span><span class="sxs-lookup"><span data-stu-id="00692-223">Teams app design guidelines for [copy and content](~/concepts/design/design-teams-app-fundamentals.md#copy-and-content) and [brand expression](~/concepts/design/design-teams-app-fundamentals.md#brand-expression)</span></span>
+* [<span data-ttu-id="00692-224">Microsoft 商标和品牌准则</span><span class="sxs-lookup"><span data-stu-id="00692-224">Microsoft Trademark and Brand Guidelines</span></span>](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
-* <span data-ttu-id="404b1-256">专注于突出显示应用的所有功能。</span><span class="sxs-lookup"><span data-stu-id="404b1-256">Focus on highlighting all your app's capabilities.</span></span>
-* <span data-ttu-id="404b1-257">内容应准确地表示你的应用。</span><span class="sxs-lookup"><span data-stu-id="404b1-257">Content should accurately represent your app.</span></span>
-* <span data-ttu-id="404b1-258">文本应填充良好且不会过多。</span><span class="sxs-lookup"><span data-stu-id="404b1-258">Text should be well-populated without being excessive.</span></span>
-* <span data-ttu-id="404b1-259">你可以将屏幕截图用背景色环绕，并添加类似于 [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) 示例的营销内容;但是，尺寸不会仅包含屏幕截图，而是包括整体图像。</span><span class="sxs-lookup"><span data-stu-id="404b1-259">You can surround your screenshots with a background color and add marketing content similar to the [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) example; however, the dimensions won't be of the screenshot alone but will include the overall image.</span></span>
+## <a name="next-step"></a><span data-ttu-id="00692-225">后续步骤</span><span class="sxs-lookup"><span data-stu-id="00692-225">Next step</span></span>
 
-<img width="800px" alt="Freshdesk screenshot" src="../../../../assets/images/freshdesk.png" />
-
-<span data-ttu-id="404b1-260">**请勿：**</span><span class="sxs-lookup"><span data-stu-id="404b1-260">**Don'ts:**</span></span>
-
-* <span data-ttu-id="404b1-261">请勿显示特定设备，如手机或笔记本电脑。</span><span class="sxs-lookup"><span data-stu-id="404b1-261">Don't show specific devices, like phones or laptops.</span></span>
-* <span data-ttu-id="404b1-262">不要在应用外部显示任何部件版式/UI。</span><span class="sxs-lookup"><span data-stu-id="404b1-262">Don't show any chrome/UI from outside of your app.</span></span>
-* <span data-ttu-id="404b1-263">请勿在屏幕截图中捕获任何 Teams 或浏览器 UI。</span><span class="sxs-lookup"><span data-stu-id="404b1-263">Don't capture any Teams or browser UI in your screenshots.</span></span>
-* <span data-ttu-id="404b1-264">不要包含不精确反映应用实际 UI（如显示网站而不是 Teams 选项卡）的模拟。</span><span class="sxs-lookup"><span data-stu-id="404b1-264">Don't include mock-ups that inaccurately reflect your apps actual UI such as showing your website instead of your Teams tab.</span></span>
-
-<span data-ttu-id="404b1-265">有关更多最佳做法， *请参阅：* 精心制作 [有效的 AppSource 应用商店图像](/office/dev/store/craft-effective-appsource-store-images)。</span><span class="sxs-lookup"><span data-stu-id="404b1-265">For more best practices, *see*: [Crafting effective AppSource store images](/office/dev/store/craft-effective-appsource-store-images).</span></span>
-
-## <a name="videos"></a><span data-ttu-id="404b1-266">视频</span><span class="sxs-lookup"><span data-stu-id="404b1-266">Videos</span></span>
-
-<span data-ttu-id="404b1-267">如果图像值得一千字，则视频值得一千个图像。</span><span class="sxs-lookup"><span data-stu-id="404b1-267">If an image is worth a thousand words, then a video is worth a thousand images.</span></span> <span data-ttu-id="404b1-268">视频是传达使用你的应用的好处最有效的方法。</span><span class="sxs-lookup"><span data-stu-id="404b1-268">Videos are the most effective way to communicate the benefits of using your app.</span></span> <span data-ttu-id="404b1-269">它将放置在应用详细信息页面上所有屏幕截图的前面。</span><span class="sxs-lookup"><span data-stu-id="404b1-269">It will be placed in front of all your screenshots on the app details page.</span></span> <span data-ttu-id="404b1-270">请务必提到以下内容：</span><span class="sxs-lookup"><span data-stu-id="404b1-270">Make sure you mention the following:</span></span>
-
-* <span data-ttu-id="404b1-271">应用的工作原理。</span><span class="sxs-lookup"><span data-stu-id="404b1-271">How your app works.</span></span>
-* <span data-ttu-id="404b1-272">使用你的应用可实现的目标。</span><span class="sxs-lookup"><span data-stu-id="404b1-272">What can be achieved with your app.</span></span>
-* <span data-ttu-id="404b1-273">使用应用的好处。</span><span class="sxs-lookup"><span data-stu-id="404b1-273">The benefits of using your app.</span></span>
-* <span data-ttu-id="404b1-274">你的目标用户。</span><span class="sxs-lookup"><span data-stu-id="404b1-274">Who your is for.</span></span>
-
-<span data-ttu-id="404b1-275">请记住，保持演示文稿的简短和友好 - 介于 30 到 90 秒之间。</span><span class="sxs-lookup"><span data-stu-id="404b1-275">Remember to keep your presentation short and sweet — somewhere between 30-90 seconds.</span></span>
-
-## <a name="learn-more"></a><span data-ttu-id="404b1-276">了解详细信息</span><span class="sxs-lookup"><span data-stu-id="404b1-276">Learn more</span></span>
-
-<span data-ttu-id="404b1-277">[应用提交的清单](~/concepts/deploy-and-publish/appsource/publish.md)。</span><span class="sxs-lookup"><span data-stu-id="404b1-277">[Checklist for app submission](~/concepts/deploy-and-publish/appsource/publish.md).</span></span>  
-<span data-ttu-id="404b1-278">[为 Microsoft Teams 应用创建应用包](~/concepts/build-and-test/apps-package.md)。</span><span class="sxs-lookup"><span data-stu-id="404b1-278">[Create an app package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).</span></span>  
-<span data-ttu-id="404b1-279">[使用合作伙伴中心将你的解决方案提交到 AppSource](/office/dev/store/use-partner-center-to-submit-to-appsource)。</span><span class="sxs-lookup"><span data-stu-id="404b1-279">[Use Partner Center to submit your solution to AppSource](/office/dev/store/use-partner-center-to-submit-to-appsource).</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="00692-226">准备应用商店提交</span><span class="sxs-lookup"><span data-stu-id="00692-226">Prepare your store submission</span></span>](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
