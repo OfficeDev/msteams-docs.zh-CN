@@ -1,59 +1,61 @@
 ---
 title: 维护和支持已发布的应用
-description: 发布应用后要执行哪些操作
-ms.topic: how-to
+description: 在应用商店和 AppSource 上列出应用商店后Teams的考虑。
+ms.topic: conceptual
 localization_priority: Normal
-keywords: teams 发布更新认证应用更新清单
-ms.openlocfilehash: 11c32ce61664f34a246905124b767e17d3c6f536
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 57b57e268a4f2eafc14d0372b8b8383e410a80d5
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020798"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101749"
 ---
-# <a name="maintain-and-support-your-published-app"></a>维护和支持已发布的应用 
+# <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布Microsoft Teams应用程序
 
-在公共应用目录中批准并列出应用后，可以通过完成 Microsoft 365 应用合规性计划或在网站上添加下载按钮来扩大应用范围。
+在应用商店中Microsoft Teams应用后，开始考虑如何继续维护应用并增加下载量和使用。
 
-## <a name="microsoft-365-certified"></a>Microsoft 365 认证
+## <a name="publish-updates-to-your-app"></a>将更新发布到应用
 
-[Microsoft 365 应用合规性计划](./application-certification.md)是应用安全性和合规性的三层方法。 每一层都基于下一层构建 - 提供分层计划以满足客户的需求。 可以通过访问合规性页面来了解有关 Teams 应用的安全性和合规性[状态。](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)
+你可以向应用提交更改 (如合作伙伴中心中的新功能) 元数据。 这些更改需要新的审阅过程。
 
-## <a name="add-a-download-button-to-your-product-site"></a>将下载按钮添加到产品网站
+发布更新时，请确保以下各项：
 
-如果你的应用位于 Microsoft Teams 全局应用商店中，你可以为网站生成一个链接，用于启动 Teams，并显示用户添加应用的同意和安装对话框。
-格式为：其中 appID 是它们在提交的清单中  `https://teams.microsoft.com/l/app/<appId>` 声明的 GUID。
-示例： `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` 是安装 Trello 的链接。
+* 不要更改应用 ID。
+* 递增应用的版本号。
+* 在合作伙伴中心中，不要选择" **添加新应用** "以执行更新。 改为转到应用页面。
 
-## <a name="updating-your-existing-teams-app"></a>更新现有 Teams 应用
+### <a name="app-updates-requiring-user-consent"></a>需要用户同意的应用更新
 
-* 请勿使用 *"添加新应用"* 按钮重新提交应用。 改为使用"概述"选项卡上的应用磁贴。
-* 更新后的清单中的 appId 应该与当前清单中的相同，并递增版本号。
-* 如果你对提交（包括应用名称或清单中任何元数据）进行更改，则增加清单中的版本号。
-* 更新的提交需要经过新的审阅和验证过程。
+当用户安装你的应用时，他们必须向应用授予访问应用正常运行所需的服务和信息的权限。 在大多数情况下，用户只需执行一次此操作，并自动安装新版本的应用。
 
-## <a name="app-updates-and-the-user-consent-flow"></a>应用更新和用户同意流
+但是，如果你对应用进行以下任何更改，则现有用户必须接受另一个权限请求才能安装更新：
 
-当用户安装您的应用程序时，他们首先执行的工作之一是同意向应用程序授予访问执行其作业所需的服务和信息的权限。 在大多数情况下，完成应用更新后，将为最终用户自动显示新版本。 但是，Teams 应用清单的一[](../../../../resources/schema/manifest-schema.md)些更新需要用户接受才能完成，并可以重新触发此同意行为：
+* 添加或删除机器人。
+* 更改机器人 ID。
+* 修改机器人的单向通知配置。
+* 修改自动程序对上载和下载文件的支持。
+* 添加或删除邮件扩展。
+* 添加个人选项卡。
+* 添加频道和组选项卡。
+* 添加连接器。
+* 修改与 Azure AD Azure Active Directory (应用) 相关的配置。 有关详细信息，请参阅 [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) 。
 
- >[!div class="checklist"]
->
-> * 添加或删除自动程序。
-> * 更改现有自动程序 `botId` 的唯一值。
-> * 现有自动程序 `isNotificationOnly` 布尔值已更改。
-> * 现有自动程序 `supportsFiles` 或 `supportsCalling` 布尔值已更改。
-> * 添加或删除 `composeExtensions` 邮件扩展。
-> * 添加了一个新连接器。
-> * 添加了新的静态或个人选项卡。
-> * 添加了新的可配置组或频道选项卡。
-> * 内部的属性 `webApplicationInfo` 已更改。 对于 的更改 `webApplicationInfo` ，仅在 Teams 范围内需要同意。
+## <a name="fix-issues-with-your-published-app"></a>修复已发布应用的问题
 
-### <a name="images-of-user-consent-flow"></a>用户同意流程的图像：
+Microsoft 对应用商店中列出的应用运行每日Teams测试。 如果发现你的应用的问题，我们会通过详细报告联系你，以了解如何重现这些问题以及解决这些问题的建议。 如果无法修复已规定时间线中的问题，你的应用一览可能会从应用商店中删除。
 
-**设置连接器** - 此屏幕将仅为 Teams 用户显示。
+## <a name="promote-your-app-on-another-site"></a>在另一个网站上推广你的应用
 
-![同意流设置连接器图](../../../../assets/images/connector-teams-consentflow.png)
+当你的应用在应用商店Teams时，你可以创建一个链接来启动Teams并显示用于安装应用的对话框。 例如，可以在产品的营销页面上包含此链接和下载按钮。
 
-**用户同意流** - 此屏幕在个人和组范围内都很常见。 在此处，选中"**代表你的组织同意"复选框，** 然后选择"接受 **"。**
+使用应用 ID 附加的以下 URL 创建链接 `https://teams.microsoft.com/l/app/<your-app-id>` ：。
 
-![权限图](../../../../assets/images/user-consent-flow.png)
+## <a name="complete-microsoft-365-certification"></a>完成Microsoft 365认证
+
+[Microsoft 365](/microsoft-365-app-certification/docs/certification)认证可保证当在 Office 应用 生态系统中安装第三方 Office 应用 或外接程序时，数据和隐私Microsoft 365受保护。 认证确认你的应用与 Microsoft 技术兼容，符合云应用安全最佳做法，并且受 Microsoft 支持。
+
+## <a name="see-also"></a>另请参阅
+
+* [通过 Microsoft 商业市场利用应用盈利](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

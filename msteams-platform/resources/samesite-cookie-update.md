@@ -1,19 +1,19 @@
 ---
-title: 'Microsoft Teams 和 SameSite cookie 属性 (2020 更新) '
+title: 'Microsoft Teams 2020 更新 (和 SameSite cookie) '
 author: laujan
 description: 描述 SameSite Cookie 的属性
 keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 5713c7aae0461e577627ae7296f0a58a25ba062f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 1841e349f3da61c6f8077e5a56874989aa6212ca
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020434"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101812"
 ---
-# <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams 和 SameSite cookie 属性 (2020 更新) 
+# <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams 2020 更新 (和 SameSite cookie) 
 
 ## <a name="cookies-in-brief"></a>简短 Cookie
 
@@ -22,7 +22,7 @@ ms.locfileid: "52020434"
  |Cookie|范围|
  | ------ | ------ |
  |**第一方 Cookie**|第一方 Cookie 由用户访问的网站创建，用于保存数据，如购物车项目、登录凭据 (例如身份验证 cookie) 和其他分析。|
- |**第二方 Cookie**|从技术上说，第二方 Cookie 和第一方 Cookie 相同。 区别在于，数据通过数据合作关系协议（如 [Microsoft Teams](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference) 分析和报告 (）与第二方) 。 |
+ |**第二方 Cookie**|从技术上说，第二方 Cookie 和第一方 Cookie 相同。 区别在于，数据通过数据合作关系协议（例如， (分析和报告协议Microsoft Teams[第](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)二方) 。 |
  |**第三方 Cookie**|第三方 Cookie 由用户显式访问的域外的其他域安装，主要用于跟踪 (例如"喜欢"按钮) 、广告服务以及实时聊天。|
 
 ### <a name="cookies-and-http-requests"></a>Cookie 和 HTTP 请求
@@ -31,7 +31,7 @@ ms.locfileid: "52020434"
 
 ### <a name="samesite-attribute-initial-release"></a>SameSite 属性：初始版本
 
-Google Chrome 版本 51 引入了 SetCookie SameSite 规范作为 *可选* 属性。 从版本 17672 开始，Windows 10 引入了 [对 Microsoft Edge](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)浏览器的 SameSite Cookie 支持。
+Google Chrome 版本 51 引入了 SetCookie SameSite 规范作为 *可选* 属性。 从内部版本 17672 开始，Windows 10为浏览器引入了 SameSite [cookie Microsoft Edge支持](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)。
 
 开发人员可以选择不将 SameSite Cookie 属性添加到 SetCookie 标头，或者他们可以通过以下两个设置之一添加该属性 *：Lax* 和 *Strict*。 未启用的 SameSite 属性被视为默认状态。
 
@@ -39,43 +39,28 @@ Google Chrome 版本 51 引入了 SetCookie SameSite 规范作为 *可选* 属�
 
 Chrome 80 计划于 2020 年 2 月发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 可以将三个值传递到更新的 SameSite 属性 *：Strict、Lax* 或 *None*。  未指定 SameSite 属性的 Cookie 将默认为 `SameSite=Lax` 。
 
-|设置 | 强制 | 值 |属性规范 |
+|Setting | 强制 | 值 |属性规范 |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Cookie 仅在第一方上下文中和HTTP GET 请求中自动发送。 SameSite Cookie 将在跨站点子请求（如调用加载图像或 iframe）上保留，但在用户从外部网站导航到 URL 时（例如，通过以下链接）发送。| **默认** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Lax**  | Cookie 仅在第一方上下文中和HTTP GET 请求中自动发送。 SameSite Cookie 将在跨站点子请求（如调用加载图像或 iframe）上被保留，但在用户从外部网站导航到 URL 时（例如，通过以下链接）发送。| **默认** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |浏览器仅发送来自将 cookie 设置为 (的网站的第一方上下文请求的) 。 如果请求来自与当前位置不同的 URL，则不发送任何用 属性标记 `Strict` 的 Cookie。| 可选 |`Set-Cookie: key=value; SameSite=Strict`|
 | **无** | Cookie 将在第一方上下文和跨源请求中发送;但是，该值必须显式设置为 ，并且所有浏览器请求都必须遵循 HTTPS 协议并包括需要加密连接 **`None`**  **`Secure`** 的属性。 不满足该要求的 Cookie 将 **被拒绝**。 <br/>**这两个属性是必需项**。 如果 **`None`** 未指定 HTTPS 协议或未指定 HTTPS 协议，将拒绝第 **`Secure`**  三方 Cookie。| 可选，但如果已设置，则 HTTPS 协议是必需的。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
-## <a name="handling-incompatible-clients"></a>处理不兼容的客户端
+## <a name="teams-implications-and-adjustments"></a>Teams含义和调整
 
-> [!IMPORTANT]
-> 目前，不受 Teams 桌面客户端或较旧版本的 Chrome 或 `SameSite=None` Safari 支持。 [](/aspnet/core/security/samesite?view=aspnetcore-3.1#test-with-electron&preserve-view=true) **请参阅**[已知不兼容的客户端]( https://www.chromium.org/updates/same-site/incompatible-clients)。
->但是，有两 **种解决方法**：
->
->1. 检查用户代理以提供正确的 SameSite 属性。 可以在 C# 和Node.js中 [](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)[**实现用户代理Node.js。**](https://web.dev/samesite-cookie-recipes/)
->2. 使用新模型和旧模型设置 Cookie 属性。 *请参阅*[处理不兼容的客户端](https://web.dev/samesite-cookie-recipes/#handling-incompatible-clients)<br><br>
->**如果你的应用在 Teams 桌面客户端中运行，并且将 SameSite 属性设置为 `SameSite=None` ，你的应用将不会如期工作。**
-
-使用任一方法将确保在 Teams 桌面客户端升级到兼容版本的 Chromium 时，应用程序继续 `SameSite=None`   正常工作。
-
-## <a name="teams-implications-and-adjustments"></a>Teams 含义和调整
-
->[!WARNING]
->**在 Teams 桌面客户端中运行的应用程序与 属性不兼容 `SameSite=None`  ，它们不能正常工作。** 请参阅上面的 **解决方法** 解决方案。
-
-1. 为 Cookie 启用相关的 SameSite 设置，并验证应用和扩展是否继续在 Teams 中运行。
+1. 为 Cookie 启用相关的 SameSite 设置，并验证应用和扩展是否继续在 Teams。
 1. 如果你的应用或扩展失败，在 Chrome 80 版本之前进行必要的修复。
 1. 如果 Microsoft 内部合作伙伴需要此问题详细信息或帮助，可以加入以下团队 <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47> ：。
 
 > [!NOTE]
-> 最佳做法是，建议始终设置 SameSite 属性以反映 Cookie 的预定用途，不要依赖于默认浏览器行为。 *请参阅*[开发人员：为新的 SameSite=None 做好准备;安全 Cookie 设置](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)。
+> 为获得最佳方案，建议您始终设置 SameSite 属性以反映 Cookie 的预定用途。 不要依赖于默认浏览器行为。 有关详细信息，请参阅开发人员[：为新的 SameSite=None 做好准备;安全 Cookie 设置](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)。
 
 ### <a name="tabs-task-modules-and-message-extensions"></a>选项卡、任务模块和邮件扩展
 
-* Teams 选项卡用于嵌入在顶级或第一方上下文中查看 `<iframes>` 的内容。
+* Teams选项卡用于嵌入在顶级或第一方上下文中 `<iframes>` 查看的内容。
 * 任务模块允许你在 Teams 应用程序中创建模式弹出体验。 与选项卡类似，模式窗口在当前页面内打开。
 * 消息扩展允许您将扩充的内容插入到来自外部资源的聊天消息中。
 
-当网站显示在 中时，嵌入内容使用的任何 Cookie 都将被视为第三方 `<iframe>` 。 此外，如果页面上的任何远程资源依赖于通过请求 (（如标记、外部字体和个性化内容) ）发送的 `<img>` `<script>` Cookie，则需要确保它们标记为跨网站使用，或者确保回退已到位。 `SameSite=None; Secure`
+当网站显示在 中时，嵌入内容使用的任何 Cookie 都将被视为第三方 `<iframe>` 。 此外，如果页面上的任何远程资源依赖于通过请求和标记、外部字体和个性化内容发送的 Cookie，则必须确保这些已标记为跨网站使用，例如或确保已进行回退。 `<img>` `<script>` `SameSite=None; Secure`
 
 ### <a name="authentication"></a>身份验证
 
@@ -94,13 +79,13 @@ Android WebView 是允许 Android 应用显示 Web 内容的 Chrome 系统组件
 
 ## <a name="learn-more"></a>了解详细信息
 
-[SameSite 示例](https://github.com/GoogleChromeLabs/samesite-examples)
+* [SameSite 示例](https://github.com/GoogleChromeLabs/samesite-examples)
 
-[SameSite Cookie 食谱](https://web.dev/samesite-cookie-recipes/)
+* [SameSite Cookie 食谱](https://web.dev/samesite-cookie-recipes/)
 
-[已知不兼容的客户端]( https://www.chromium.org/updates/same-site/incompatible-clients)
+* [已知不兼容的客户端]( https://www.chromium.org/updates/same-site/incompatible-clients)
 
-[开发人员：为新的 SameSite=None 做好准备;安全 Cookie 设置](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [开发人员：为新的 SameSite=None 做好准备;安全 Cookie 设置](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
-**OpenId Connect 影响**<br>
-[即将在 ASP.NET 和 ASP.NET 核心中更改 SameSite Cookie](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+**OpenId 连接影响**<br>
+[即将在网站和网站 ASP.NET ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)

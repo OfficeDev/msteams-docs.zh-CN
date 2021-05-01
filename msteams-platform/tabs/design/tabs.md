@@ -1,31 +1,31 @@
 ---
 title: 设计适用于桌面和 Web 的选项卡
-description: 了解如何设计桌面和 Web (Teams 选项卡) 并获取 Microsoft Teams UI 工具包。
+description: 了解如何在桌面和 web Teams设计 (选项卡) 并获取 Microsoft Teams UI 工具包。
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 840cb9f65f867358615ea006594433d8a1099111
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9dc5489f4a6a4c6f0e1188250a9e2a9bc5793690
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019683"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101847"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>为 Microsoft Teams 桌面和 Web 设计选项卡
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>设计适用于桌面Microsoft Teams Web 的选项卡
 
-选项卡是内容的大型画布。 为了指导你的应用设计，以下信息介绍了并说明了用户如何在 Teams 中添加、使用和管理选项卡。
+选项卡是内容的大型画布。 为了指导应用设计，以下信息介绍了并说明了用户如何在应用中添加、使用和管理选项卡Teams。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-可以在 Microsoft Teams UI 工具包中查找全面的选项卡设计指南，包括可根据需要获取和修改的元素。 UI 工具包还具有辅助功能和响应式大小调整等基本主题，此处未介绍这些主题。
+你可以找到全面的选项卡设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。 UI 工具包还具有辅助功能和响应式大小调整等基本主题，此处未介绍这些主题。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>添加选项卡
 
-你可以从 AppSource (或以下) 之一添加一个选项卡：
+你可以从 AppSource Teams应用商店 (选项卡) 以下上下文之一：
 
 * 聊天
 * 频道
@@ -66,7 +66,7 @@ ms.locfileid: "52019683"
 
 ### <a name="designing-a-tab-setup-with-ui-templates"></a>使用 UI 模板设计选项卡设置
 
-使用以下 Teams UI 模板之一帮助设计选项卡设置体验：
+使用以下 UI 模板Teams之一来帮助设计选项卡设置体验：
 
 * [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目采取操作。
 * [表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单用于以结构化方式收集、验证和提交用户输入。
@@ -74,7 +74,7 @@ ms.locfileid: "52019683"
 
 ## <a name="view-a-tab"></a>查看选项卡
 
-选项卡在 Teams 中提供全屏 Web 体验，可在其中显示协作内容（如任务板和仪表板）和重要信息。
+选项卡提供了全屏 Web 体验，Teams显示协作内容（如任务板和仪表板）和重要信息。
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="示例显示一个包含任务板的选项卡。" border="false":::
 
@@ -91,7 +91,7 @@ ms.locfileid: "52019683"
 
 ### <a name="designing-a-tab-with-ui-templates"></a>使用 UI 模板设计选项卡
 
-使用以下 Teams UI 模板之一帮助设计选项卡体验：
+使用以下 UI 模板Teams之一来帮助设计选项卡体验：
 
 * [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目采取操作。
 * [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为看板或街道）是一组卡片，通常用于跟踪工作项或票证的状态。
@@ -144,6 +144,8 @@ ms.locfileid: "52019683"
 * **消息**：用户的活动源中显示一条消息，包含指向选项卡 [的深层链接](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)。
 
 ## <a name="best-practices"></a>最佳做法
+
+使用这些建议创建高质量的应用体验。
 
 ### <a name="collaboration"></a>协作
 
@@ -214,9 +216,9 @@ ms.locfileid: "52019683"
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="插图显示使用制表位设置要执行哪些操作。" border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>应做：利用 Teams 颜色令牌
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>应做：利用Teams令牌
 
-每个 Teams 主题都有自己的配色方案。 若要自动处理主题更改，请 <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank"> (Fluent UI </a>) 颜色标记。
+每个Teams主题都有自己的配色方案。 若要自动处理主题更改，请 <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank"> (Fluent UI </a>) 颜色标记。
 
    :::column-end:::
    :::column span="":::
@@ -224,14 +226,7 @@ ms.locfileid: "52019683"
 
 #### <a name="dont-hard-code-color-values"></a>请勿：硬编码颜色值
 
-如果不使用 Teams 颜色令牌，你的设计将不太可扩展，并且需要更多的时间进行管理。
+如果不使用颜色令牌Teams，你的设计将不太可扩展，并且需要更多的时间进行管理。
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>验证你的设计
-
-如果计划将应用发布到 AppSource，应了解提交过程中通常会导致应用出现故障的设计问题。
-
-> [!div class="nextstepaction"]
-> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

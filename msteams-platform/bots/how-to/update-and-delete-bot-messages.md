@@ -1,16 +1,16 @@
 ---
 title: 更新和删除从自动程序发送的消息
 author: WashingtonKayaker
-description: 如何更新和删除从 Microsoft Teams 自动程序发送的消息
+description: 如何更新和删除从自动程序发送Microsoft Teams消息
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: f1e9c068f4ce89f0fd3aa4f5a174a3d3c4b67a77
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 90dc50fd2ec153813457f199ac029e17a0157502
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019984"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101532"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>更新和删除从自动程序发送的消息
 
@@ -58,7 +58,7 @@ update_result = await context.update_activity(new_activity)
 
 > [!NOTE]
 
-> 可以使用任何 Web 编程技术开发 Teams 应用，并直接调用[Bot Connector 服务 REST API。](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) 为此，你需要使用 [API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) 请求实现身份验证安全过程。
+> 你可以以任何Teams技术开发自动程序应用，并直接调用 Bot Connector[服务 REST API。](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) 为此，你需要使用 [API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) 请求实现身份验证安全过程。
 
 若要更新对话中的现有活动，请包含 `conversationId` 请求 `activityId` 终结点中的 和 。 若要完成此方案，您必须缓存原始 Post 调用返回的活动 ID。
 
@@ -66,9 +66,9 @@ update_result = await context.update_activity(new_activity)
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Request 和 Responce** | **描述** |
+|请求 |响应 |
 |----|----|
-| 活动[对象](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)对象 |
+| 一 [个 Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) 对象。 | 一 [个 ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) 对象。 |
 
 ---
 * * *
@@ -112,7 +112,7 @@ await turn_context.update_activity(updated_activity)
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
 > [!NOTE]
-> 可以使用任何 Web 编程技术开发 Teams 应用，并直接调用[机器人连接器服务 REST API。](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) 为此，必须使用 [API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) 请求实现身份验证安全过程。
+> 可以使用任何 Web Teams技术开发自动程序应用，并直接调用[自动程序连接器服务 REST API。](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) 为此，必须使用 [API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) 请求实现身份验证安全过程。
 
 若要更新对话中的现有活动，请包含 `conversationId` 请求 `activityId` 终结点中的 和 。 若要完成此方案，您必须缓存原始 Post 调用返回的活动 ID。
 
@@ -170,7 +170,7 @@ for each activity_id in _list:
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Request 和 Responce** | **描述** |
+| **请求和响应** | **说明** |
 |----|----|
 | 不适用 | 指示操作结果的 HTTP 状态代码。 响应正文中未指定任何项。 |
 
@@ -180,11 +180,11 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 以下代码示例演示了对话的基础知识：
 
-| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Teams 对话基础知识  | 演示 Teams 中对话的基础知识，包括消息更新和删除。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams对话基础知识  | 演示邮件更新和删除Teams中对话的基础知识。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
+> [获取Teams上下文](~/bots/how-to/get-teams-context.md)

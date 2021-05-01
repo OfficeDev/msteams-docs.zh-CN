@@ -1,24 +1,24 @@
 ---
-title: 向 Teams 自动程序添加身份验证
+title: 向自动程序Teams身份验证
 author: clearab
-description: 如何将 OAuth 身份验证添加到 Microsoft Teams 中的自动程序。
+description: 如何将 OAuth 身份验证添加到自动程序Microsoft Teams。
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d54d7fadb13626bb38de3a907b966f026cc6c485
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7f171a791a9ee557e4af2e7d1e1b053046bd9db5
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020947"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101484"
 ---
-# <a name="add-authentication-to-your-teams-bot"></a>向 Teams 自动程序添加身份验证
+# <a name="add-authentication-to-your-teams-bot"></a>向自动程序Teams身份验证
 
-有时可能需要在 Microsoft Teams 中创建可以代表用户访问资源（如邮件服务）的机器人。
+有时可能需要在可代表用户Microsoft Teams访问资源（如邮件服务）的聊天机器人。
 
 本文演示如何使用基于 OAuth 2.0 的 Azure Bot Service v4 SDK 身份验证。 这使得开发能够基于用户凭据使用身份验证令牌的自动程序变得更简单。 所有这一切的关键是使用标识 **提供程序**，我们将在稍后看到。
 
-OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提供程序用于身份验证和授权的开放标准。 基本了解 OAuth 2.0 是在 Teams 中处理身份验证的先决条件。
+OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提供程序用于身份验证和授权的开放标准。 对 OAuth 2.0 有基本的了解是在 Teams 中进行身份验证的先决条件。
 
 有关[完整规范，请参阅 OAuth 2 Simplified](https://aka.ms/oauth2-simplified)了解基本信息，请参阅[OAuth 2.0。](https://oauth.net/2/)
 
@@ -27,10 +27,10 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 在本文中，您将了解：
 
 - **如何创建启用身份验证的机器人**。 你将使用 [cs-auth-sample][teams-auth-bot-cs] 来处理用户登录凭据和生成身份验证令牌。
-- **如何将机器人部署到 Azure 并将其与标识提供程序关联**。 提供程序根据用户登录凭据颁发令牌。 机器人可以使用令牌访问需要身份验证的资源，如邮件服务。 有关详细信息，请参阅  [适用于机器人的 Microsoft Teams 身份验证流](auth-flow-bot.md)。
-- **如何在 Microsoft Teams 中集成机器人**。 集成自动程序后，可以在聊天中登录并交换消息。
+- **如何将机器人部署到 Azure 并将其与标识提供程序关联**。 提供程序根据用户登录凭据颁发令牌。 机器人可以使用令牌访问需要身份验证的资源，如邮件服务。 有关详细信息，请参阅[Microsoft Teams的身份验证流](auth-flow-bot.md)。
+- **如何将自动程序集成到 Microsoft Teams。** 集成自动程序后，可以在聊天中登录并交换消息。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 了解[自动程序基础知识][concept-basics][、管理状态][concept-state][、对话框库][concept-dialogs]以及如何[实现顺序对话流][simple-dialog]。
 - 了解 Azure 和 OAuth 2.0 开发。
@@ -66,7 +66,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
 1. 在 [**Azure 门户的**][azure-portal]左侧导航面板上，选择"**创建资源"。**
 1. 在搜索框中，键入 *应用服务计划*。 从 **搜索结果中选择"应用** 服务计划"卡。
-1. 选择“**创建**”。
+1. 选择 **创建**。
 1. 将要求您提供以下信息：
     1. **订阅**。 可以使用现有订阅。
     1. **资源组**。 选择之前创建的组。
@@ -75,7 +75,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
     1. **区域**。 选择 *"美国* 西部"或"靠近你的应用程序的区域"。
     1. **定价层**。 确保选中 *"标准 S1"。* 此值应为默认值。
     1. 选择" **审阅并创建"** 按钮。 你应该会看到一个横幅，显示 *"验证通过"。*
-    1. 选择“**创建**”。 创建应用服务计划可能需要几分钟时间。 计划将在资源组中列出。
+    1. 选择 **创建**。 创建应用服务计划可能需要几分钟时间。 计划将在资源组中列出。
 
 ## <a name="create-the-bot-channels-registration"></a>创建自动程序通道注册
 
@@ -89,14 +89,14 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 > [!NOTE]
 > Bot Channels Registration 资源将显示 **全局区域** ，即使你选择了美国西部。 这是预期结果。
 
-有关详细信息，请参阅为 [Teams 创建自动程序](../create-a-bot-for-teams.md)。
+有关详细信息，请参阅为用户[创建自动程序Teams。](../create-a-bot-for-teams.md)
 
 ## <a name="create-the-identity-provider"></a>创建标识提供程序
 
 您需要一个可用于身份验证的标识提供程序。
 在此过程中，你将使用 Azure AD 提供程序;其他 Azure AD 支持的标识提供程序也可使用。
 
-1. 在 [**Azure 门户的**][azure-portal]左侧导航面板中，选择 **"Azure Active Directory"。**
+1. 在 [**Azure 门户的**][azure-portal]左侧导航面板上，选择 **"Azure Active Directory"。**
     > [!TIP]
     > 你需要在租户中创建和注册此 Azure AD 资源，你可以同意委派应用程序请求的权限。
     > 有关创建租户的说明，请参阅 [访问门户并创建租户](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)。
@@ -118,21 +118,23 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 1. 在左侧面板中， **选择** "&密码"，为应用程序创建客户端密码。
 
    1. 在 **"客户端密码**"下 **，&#x2795;"新建客户端密码"。**
-   1. 添加描述，从可能需要为此应用创建的其他人（如 Teams 中的自动程序标识应用）中标识 *此密码*。
+   1. 添加描述以从可能需要为此应用创建的其他人（例如，Teams 中的自动程序 *标识应用）标识此Teams。*
    1. 设置 **到期** 到你的选择。
    1. 选择“**添加**”。
    1. 在离开此页面之前， **请记录密码**。 稍后，当你向自动程序注册 Azure  AD 应用程序时，你将使用此值作为客户端密码。
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>配置标识提供程序连接，然后向自动程序注册该连接
 
-注意-此处有两个适用于服务提供商的选项-Azure AD V1 和 Azure AD V2。  此处总结了两个提供程序之间的差异，但通常[](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)V2 在更改自动程序权限方面提供了更大的灵活性。  Graph API 权限在范围字段中列出，当添加新权限时，自动程序将允许用户在下次登录时同意新权限。  对于 V1，用户必须删除自动程序同意，才能在 OAuth 对话框中提示新权限。 
+注意-此处有两个适用于服务提供商的选项-Azure AD V1 和 Azure AD V2。  此处总结了两个提供程序之间的差异，但通常[](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)V2 在更改自动程序权限方面提供了更大的灵活性。  GraphAPI 权限在范围字段中列出，当添加新权限时，自动程序将允许用户在下次登录时同意新权限。  对于 V1，用户必须删除自动程序同意，才能在 OAuth 对话框中提示新权限。 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
 1. 在 [**Azure 门户中**][azure-portal]，从仪表板中选择资源组。
 1. 选择自动程序通道注册链接。
-1. 在资源页上， **选择设置**。
-1. 在 **页面底部的"OAuth** 连接设置"下，选择"**添加设置"。**
+1. 打开资源页，**然后选择"配置****"设置。** 
+1. 选择 **"添加 OAuth 连接设置"。**    
+下图显示了资源页中的相应选择：  
+![SampleAppDemoBot 配置](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
 1. 如下所示完成表单：
 
     1. **名称**。 输入连接的名称。 你将在文件的自动程序中使用此 `appsettings.json` 名称。 例如 *BotTeamsAuthADv1*。
@@ -145,37 +147,40 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
         - 如果你选择了仅 *(Microsoft* 组织目录中的帐户 - 单租户) 或任何组织目录 (*Microsoft AAD* 目录 - 多租户) 请输入之前为 AAD 应用记录的租户 **ID。** 这将是与可以进行身份验证的用户关联的租户。
 
-        - 如果在任意组织目录中选择了"帐户 (任何 AAD 目录 - 多租户和个人 Microsoft 帐户（例如 *Skype、Xbox、Outlook) 请输入"common"* 一词而不是租户 ID）。 否则，AAD 应用会通过已选择 ID 的租户进行验证，并排除个人 Microsoft 帐户。
+        - 如果在任意组织目录中选择了"帐户 (任何 AAD 目录 - 多租户和个人 Microsoft 帐户（例如 *Skype、Xbox）Outlook)* 输入 common 一词，而不是租户ID。 否则，AAD 应用会通过已选择 ID 的租户进行验证，并排除个人 Microsoft 帐户。
 
     h. 对于 **"资源 URL"，** 输入 `https://graph.microsoft.com/` 。 当前代码示例中没有使用此功能。  
     i. 将 **"范围"** 留空。 下图是一个示例：
 
     ![teams 自动程序应用程序身份验证连接字符串 adv1 视图](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. 选择“**保存**”。
+1. 选择 **保存**。
 
 #### <a name="azure-ad-v2"></a>Azure AD V2
 
 1. 在 [**Azure 门户中**][azure-portal]，从仪表板中选择资源组。
 1. 选择自动程序通道注册链接。
-1. 在资源页上， **选择设置**。
-1. 在 **页面底部的"OAuth** 连接设置"下，选择"**添加设置"。**
+1. 打开资源页，**然后选择"配置****"设置。** 
+1. 选择 **"添加 OAuth 连接设置"。**  
+下图显示了资源页中的相应选择：        
+![SampleAppDemoBot 配置](~/assets/images/authentication/sample-app-demo-bot-configuration.png) 
+
 1. 如下所示完成表单：
 
     1. **名称**。 输入连接的名称。 你将在文件的自动程序中使用此 `appsettings.json` 名称。 例如 *BotTeamsAuthADv2*。
     1. **服务提供程序**。 选择 **"Azure Active Directory v2"。** 选择此选项后，将显示特定于 Azure AD 的字段。
     1. **客户端 ID**。在以上 (中) 为 Azure 标识提供程序应用记录的应用程序客户端标识 ID。
     1. **客户端密码**。 在以上步骤中输入为 Azure 标识提供程序应用记录机密。
-    1. **令牌 Exchange URL**。 保留此为空白。
+    1. **令牌Exchange URL**。 保留此为空白。
     1. **"租户 ID"， (** 之前为 Azure 标识应用录制的目录或租户) ID，具体取决于创建标识提供程序应用时选择的支持的帐户类型。  要决定要分配的值，请遵循以下条件：
 
         - 如果你选择了仅 *(Microsoft* 组织目录中的帐户 - 单租户) 或任何组织目录 (*Microsoft AAD* 目录 - 多租户) 请输入之前为 AAD 应用记录的租户 **ID。** 这将是与可以进行身份验证的用户关联的租户。
 
-        - 如果在任意组织目录中选择了"帐户 (任何 AAD 目录 - 多租户和个人 Microsoft 帐户（例如 *Skype、Xbox、Outlook) 请输入"common"* 一词而不是租户 ID）。 否则，AAD 应用会通过已选择 ID 的租户进行验证，并排除个人 Microsoft 帐户。
+        - 如果在任意组织目录中选择了"帐户 (任何 AAD 目录 - 多租户和个人 Microsoft 帐户（例如 *Skype、Xbox）Outlook)* 输入 common 一词，而不是租户ID。 否则，AAD 应用会通过已选择 ID 的租户进行验证，并排除个人 Microsoft 帐户。
 
     1. 对于 **Scopes，** 输入此应用程序所需的图形权限的空格分隔列表，例如：User.Read User.ReadBasic.All Mail.Read 
 
-1. 选择“**保存**”。
+1. 选择 **保存**。
 
 ### <a name="test-the-connection"></a>测试连接
 
@@ -201,7 +206,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
 1. 克隆 [cs-auth-sample][teams-auth-bot-cs]。
 1. 启动Visual Studio。
-1. 从工具栏中选择文件 **-> 打开 -> 项目/解决方案** 并打开自动程序项目。
+1. 从工具栏中选择文件 **-> 打开 -> Project/解决方案** 并打开自动程序项目。
 1. 在C#更新 **appsettings.js如下所示** 打开：
 
     - 设置为 `ConnectionName` 添加到自动程序通道注册的标识提供程序连接的名称。 此示例中使用的名称是 *BotTeamsAuthADv1*。
@@ -261,7 +266,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
-1. 选择“**创建**”。
+1. 选择 **创建**。
 1. 如果部署成功完成，则应该会看到部署Visual Studio。 此外，默认浏览器中会显示一个页面，*指出自动程序已准备就绪！。* URL 将类似于 `https://botteamsauth.azurewebsites.net/` ：。 将其保存到文件中。
 1. 在浏览器中，导航到 [**Azure 门户**][azure-portal]。
 1. 检查你的资源组，应列出自动程序以及其他资源。 下图是一个示例：
@@ -269,13 +274,13 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
     ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
 
 1. 在资源组中，选择自动程序通道注册 (链接) 。
-1. 在左侧面板中，选择"设置 **"。**
+1. 在左侧面板中，选择 **"设置"。**
 1. 在" **消息终结点** "框中，输入上面获得的 URL，后跟 `api/messages` 。 这是一个示例 `https://botteamsauth.azurewebsites.net/api/messages` ：。
 1. 选择左上角 **的"** 保存"按钮。
 
 ## <a name="test-the-bot-using-the-emulator"></a>使用仿真器测试机器人
 
-如果尚未安装，请安装 Microsoft Bot [Framework Emulator](https://aka.ms/bot-framework-emulator-readme)。 另请参阅 [使用仿真器调试](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
+如果尚未执行，请安装[Microsoft Bot Framework Emulator。](https://aka.ms/bot-framework-emulator-readme) 另请参阅 [使用仿真器调试](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
 
 为了让自动程序示例登录正常工作，必须配置仿真器，如下所示。
 
@@ -284,7 +289,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 如果机器人需要身份验证，则必须按如下所示配置仿真器。
 
 1. 启动仿真器。
-1. 在仿真器中，选择&#9881;左下角的齿轮图标，或右上角的"仿真器设置"选项卡。
+1. 在仿真器中，选择&#9881;左下角的齿轮图标，或选择右上角设置仿真器"选项卡。
 1. 选中"使用 **版本 1.0 身份验证令牌"复选框**。
 1. 输入 **ngrok** 工具的本地路径。 *请参阅* Bot Framework Emulator /ngrok 隧道集成 [Wiki。](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)) 有关详细信息，请参阅 [ngrok](https://ngrok.com/)。
 1. 当仿真器启动时 **，选中"运行 ngrok"框**。
@@ -303,7 +308,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 1. 在自动 **程序 URL** 中，输入机器人的本地 URL。 通常为 `http://localhost:3978/api/messages` 。
 1. 在 **Microsoft 应用 ID 中** ，从 输入机器人的应用 `appsettings.json` ID。
 1. 在 **Microsoft 应用密码中** ，从 输入自动程序的应用密码 `appsettings.json` 。
-1. 选择"**连接"。**
+1. 选择 **"连接"。**
 1. 启动并运行自动程序后，输入任何文本以显示登录卡。
 1. 选择" **登录"** 按钮。
 1. 将显示一个弹出对话框以确认打开 **URL。** 这是为了允许自动程序的用户 () 进行身份验证。  
@@ -359,7 +364,7 @@ and when for these, and just reference that from here, along with the set of ste
 > 如果登录时遇到问题，请尝试再次测试连接，如前面的步骤中所述。 这可重新创建身份验证令牌。
 > 使用 Azure 中的 Bot Framework Web Chat 客户端，可能需要多次登录，然后才能正确建立身份验证。
 
-## <a name="install-and-test-the-bot-in-teams"></a>在 Teams 中安装和测试机器人
+## <a name="install-and-test-the-bot-in-teams"></a>安装并测试自动程序Teams
 
 1. 在自动程序项目中，确保 `TeamsAppManifest` 文件夹包含 以及 `manifest.json` 和 `outline.png` `color.png` 文件。
 1. 在"解决方案资源管理器"中，导航到 `TeamsAppManifest` 文件夹。 通过 `manifest.json` 分配以下值进行编辑：
@@ -368,7 +373,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. 选择 并 **压缩** `manifest.json` 、 和 `outline.png` `color.png` 文件。
 1. 打开 **Microsoft Teams**。
 1. 在左侧面板的底部，选择应用 **图标**。
-1. 在右侧面板的底部，选择"**上传自定义应用"。**
+1. 在右侧面板的底部，选择 **"Upload应用"。**
 1. 导航到 `TeamsAppManifest` 文件夹并上载压缩的清单。
 将显示以下向导：
 
@@ -381,9 +386,9 @@ and when for these, and just reference that from here, along with the set of ste
 1. 选择清单 **编辑器** 选项卡。你应该会看到上传的自动程序图标。
 1. 此外，你应该能够看到聊天列表中列为联系人的聊天机器人，可用于与聊天机器人交换消息。
 
-### <a name="testing-the-bot-locally-in-teams"></a>在 Teams 中本地测试机器人
+### <a name="testing-the-bot-locally-in-teams"></a>在本地测试聊天机器人Teams
 
-Microsoft Teams 是完全基于云的产品，它要求它访问的所有服务都使用 HTTPS 终结点从云中提供。 因此，若要使自动程序 (我们的示例) 在 Teams 中工作，你需要将代码发布到你选择的云，或使本地运行的实例可通过隧道工具从外部访问。  我们建议  [使用 ngrok，](https://ngrok.com/download)这将为计算机上本地打开的端口创建一个外部可地址 URL。
+Microsoft Teams完全基于云的产品，它要求它访问的所有服务都使用 HTTPS 终结点从云中提供。 因此，若要使自动程序 (我们的示例) 在 Teams 中工作，你需要将代码发布到你选择的云，或通过隧道工具使本地运行的实例可从外部访问。  我们建议  [使用 ngrok，](https://ngrok.com/download)这将为计算机上本地打开的端口创建一个外部可地址 URL。
 若要设置 ngrok 以准备在本地运行 Microsoft Teams 应用，请按照以下步骤操作：
 
 1. 在终端窗口中，转到已安装的 `ngrok.exe` 目录。 我们建议将 *环境变量* 路径设置为指向该路径。
@@ -393,14 +398,14 @@ Microsoft Teams 是完全基于云的产品，它要求它访问的所有服务�
     ![teams 自动程序应用程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. 复制转发 HTTPS 地址。 它应类似于以下内容 `https://dea822bf.ngrok.io/` ：。
-1. Append `/api/messages` 以获取 `https://dea822bf.ngrok.io/api/messages` 。 这是自动 **程序** 在计算机本地运行的消息终结点，在 Microsoft Teams 中的聊天中可通过 Web 访问。
+1. Append `/api/messages` 以获取 `https://dea822bf.ngrok.io/api/messages` 。 这是自动 **程序** 在计算机本地运行的消息终结点，在 Microsoft Teams 聊天中可Microsoft Teams。
 1. 要执行的最后一步是更新已部署机器人的消息终结点。 在示例中，我们在 Azure 中部署了机器人。 因此，让我们执行以下步骤：
     1. 在浏览器中导航到 [**Azure 门户**][azure-portal]。
     1. 选择自动 **程序频道注册**。
-    1. 在左侧面板中，选择"设置 **"。**
+    1. 在左侧面板中，选择 **"设置"。**
     1. 在右侧面板的"消息 **终结点** "框中，输入 ngrok URL，在我们的示例中为 `https://dea822bf.ngrok.io/api/messages` 。
-1. 在本地启动机器人，例如，在Visual Studio模式下。
-1. 使用 Bot Framework 门户的测试 Web 聊天在本地运行时 **测试机器人**。 与仿真器一样，此测试不允许你访问特定于 Teams 的功能。
+1. 在本地启动自动程序，例如，在Visual Studio模式下。
+1. 使用 Bot Framework 门户的测试 Web 聊天在本地运行时 **测试机器人**。 与仿真器一样，此测试不允许你访问Teams功能。
 1. 在运行的终端窗口中，你可以看到自动程序与 Web 聊天客户端之间的 `ngrok` HTTP 流量。 如果需要更详细的视图，请在浏览器窗口中输入从上一个终端 `http://127.0.0.1:4040` 窗口获取的视图。 下图是一个示例：
 
     ![身份验证机器人团队 ngrok 测试](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
@@ -413,7 +418,7 @@ Microsoft Teams 是完全基于云的产品，它要求它访问的所有服务�
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.js打开
 
-此清单包含 Microsoft Teams 与自动程序连接时需要的信息。  
+此清单包含用户Microsoft Teams自动程序连接时需要的信息。  
 
 ```json
 {
@@ -460,7 +465,7 @@ Microsoft Teams 是完全基于云的产品，它要求它访问的所有服务�
 }
 ```
 
-使用身份验证时，Teams 的行为与其他频道稍有不同，如下所述。
+使用身份验证Teams与其他通道的行为稍有不同，如下所述。
 
 ### <a name="handling-invoke-activity"></a>处理调用活动
 

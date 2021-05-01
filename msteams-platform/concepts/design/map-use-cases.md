@@ -1,20 +1,20 @@
 ---
-title: 将用例映射到 Teams 应用功能
+title: 将用例映射到Teams功能
 author: clearab
-description: 选择正确的应用范围
+description: 确定你的应用用例在应用体验Teams工作。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: a3d9ec8f1a5c18025cffc0f97285e1ec764becb8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 271bb38a9d8cc3d9921c757b6fc722754bb63017
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058451"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101770"
 ---
-# <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到 Teams 应用功能
+# <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到Teams功能
 
-确定用户 *是谁* 以及要解决的问题后，可以决定 *如何* 解决问题了。 谁 *、什么* 和 *如何* 完成了解用例以及将用例映射到 Teams 应用功能的过程。 你需要根据从用户收到的查询响应来定义应用的范围，然后确定最适合生成应用的功能。
+确定用户 *是谁* 以及要解决的问题后，可以决定 *如何* 解决问题了。 The *who，* *what*， and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. 你需要根据从用户收到的查询响应来定义应用的范围，然后确定最适合生成应用的功能。
 
 > [!NOTE]
 > 你必须深入了解可用于应用的 [入口点和 UI](../../concepts/extensibility-points.md) 元素。 此外，还必须确保仔细考虑 [用例](../../concepts/design/understand-use-cases.md) 。
@@ -25,29 +25,28 @@ ms.locfileid: "52058451"
 
 * 应用可以跨范围存在。
 * 应用功能（如邮件扩展）可跨范围关注用户。
-* 用户通常对将应用添加到 Teams 或频道非常不常。
-* 来宾用户可以访问 Teams 或频道中公开的内容。
+* 用户通常对将应用添加到频道或Teams很不一样。
+* 来宾用户可以访问在一个或多个Teams公开的内容。
 
 你可以根据以下条件在个人范围和团队或频道范围之间选择：
 
-* 对于选择个人范围，请回答以下问题，例如：
+* 对于个人范围，请提出以下问题：
   * 出于隐私或其他原因，是否要求与应用进行一对一交互？ 例如，检查休假余额或其他私人信息。
-  * 可能没有任何常见 Teams 的用户之间是否将进行协作？ 例如，在公司中查找即将推出的组织范围事件。
-  * 是否有需要在整个 Teams 应用体验中发送给用户的任何个性化通知或消息？ 例如，审批或注册提醒。
-
-* 对于选择团队或频道范围，请回答以下问题，例如： 
+  * 用户之间是否可能没有任何共同协作Teams？ 例如，在公司中查找即将推出的组织范围事件。
+  * 在应用体验中，是否需要向用户发送任何Teams消息？ 例如，审批或注册提醒。
+* 对于共享范围 (团队、频道或聊天) ，请提出以下问题：
   * 应用在选项卡或机器人中呈现的信息是否与团队中的大多数成员相关且有用？ 例如，Scrum 应用。
   * 应用上下文是否可能随应用添加到的团队而更改？ 例如，Planner 的任务在不同团队中有所不同。 
   * 需要协作的人物中的所有成员是否可能是单个团队的一部分？ 例如，处理票证的代理。
 
-以下方案将指导你了解与 Teams 应用功能良好协作的入口点和 UI 元素的选择：
+以下方案将指导你了解与应用功能良好协作的入口点和 UI Teams选择：
 
 > [!NOTE]
 > 这不是一个详尽的列表，但有助于你思考一些可用的可能性。
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>在外部系统中创建、共享和协作处理项目
 
-Microsoft Teams 应用是一种与数据交互的不错方法，有多种集成点可供选择。
+Microsoft Teams应用是一种与数据交互的不错方法，并且有多种集成点可供选择。
 
 * **使用搜索命令的邮件扩展**：搜索外部系统，并作为交互式卡片共享结果。
 
@@ -55,7 +54,7 @@ Microsoft Teams 应用是一种与数据交互的不错方法，有多种集成�
 
 * **选项卡**：创建用于查看、处理和共享数据的嵌入式 Web 体验。
 
-* **连接器和 webhook：** 一种将数据推送和发送出 Teams 客户端的简单方法。
+* **连接器和 webhook：** 一种将数据推送和发送出客户端的简单Teams方法。
 
 * **任务模块**：需要它们收集或显示信息的交互式模式表单。
 
@@ -73,7 +72,7 @@ Microsoft Teams 应用是一种与数据交互的不错方法，有多种集成�
 
 ## <a name="send-notifications-and-alerts"></a>发送通知和警报
 
-在 Teams 中向用户发送异步通知和通知。 使用交互式卡片可以快速访问常用操作和指向其他信息的链接。
+向用户发送异步通知和通知，Teams。 使用交互式卡片可以快速访问常用操作和指向其他信息的链接。
 
 * **对话机器人**：向组、频道或单个用户发送主动消息。
 
@@ -85,7 +84,7 @@ Microsoft Teams 应用是一种与数据交互的不错方法，有多种集成�
 
 * **对话机器人**：自然语言处理、AI、机器学习以及所有话题。 使用由智能云支持自动程序将用户连接到他们需要的答案。
 
-* **选项卡**：在 Teams 中嵌入现有 Web 门户，或创建特定于 Teams 的版本以添加功能。
+* **选项卡**：将现有 Web 门户嵌入Teams或为添加Teams创建特定于 Web 门户的版本。
 
 ## <a name="get-social"></a>获取社交
 
@@ -93,11 +92,11 @@ Microsoft Teams 应用是一种与数据交互的不错方法，有多种集成�
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>从单页应用考虑
 
-选项卡是嵌入式网页。 在 SPA 中几乎可以执行很多操作，可以在 Teams 中的选项卡中执行。 只需注意作用域。 组和频道选项卡用于共享体验，个人选项卡用于个人体验。 团队的资料列表位于频道选项卡上，而资料列表在个人选项卡中。
+选项卡是嵌入式网页。 您可以在 SPA 中执行几乎任何操作，您可以在 Teams 中的选项卡中Teams。 只需注意作用域。 组和频道选项卡用于共享体验，个人选项卡用于个人体验。 团队的资料列表位于频道选项卡上，而资料列表在个人选项卡中。
 
 ## <a name="start-small"></a>小型启动
 
-不确定从何处开始？ 觉得使用各种可用选项有点不知所措？ 你必须选择应用的核心功能，然后开始操作。 在了解通过 Teams 中的各个上下文的信息流后，可以更加简单地了解更复杂的交互。
+不确定从何处开始？ 觉得使用各种可用选项有点不知所措？ 你必须选择应用的核心功能，然后开始操作。 在了解信息通过环境中的各个上下文Teams后，可以更加简单地了解更复杂的交互。
 
 ## <a name="put-it-all-together"></a>全部放在一起
 
@@ -105,6 +104,4 @@ Microsoft Teams 应用是一种与数据交互的不错方法，有多种集成�
 
 ## <a name="see-also"></a>另请参阅
 
-- [构建 Microsoft Teams 应用](../../overview.md)
- 
-
+* [构建 Microsoft Teams 应用](../../overview.md)

@@ -1,33 +1,33 @@
 ---
 title: 设计邮件扩展
-description: 了解如何设计 Teams 消息传递扩展和获取 Microsoft Teams UI 工具包。
+description: 了解如何设计一个Teams扩展并获取 Microsoft Teams UI 工具包。
 keywords: 团队设计指南参考消息传递扩展提示最佳做法
 author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 8b918c59910cbdc560fe415354d2c62c0fdd443c
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020721"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101574"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>设计 Microsoft Teams 消息传递扩展
+# <a name="designing-your-microsoft-teams-messaging-extension"></a>设计邮件Microsoft Teams扩展
 
 消息传递扩展是插入应用内容或在离开对话的情况下对消息操作快捷方式。
-为了指导你的应用设计，以下信息介绍了并说明了用户如何在 Teams 中添加、使用和管理消息传递扩展。
+为了指导应用设计，以下信息介绍了并说明了用户如何在应用中添加、使用和管理Teams。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-可以在 Microsoft Teams UI 工具包中查找全面的消息传递扩展设计指南，包括可根据需要获取和修改的元素。
+你可以找到全面的消息传递扩展设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>添加消息传递扩展
 
-可以在以下 Teams 上下文中添加消息传递扩展：
+可以在以下上下文上下文中添加Teams扩展：
 
 * 从 Teams 应用商店 （AppSource）。
 * 在靠近撰写框 (、在频道、聊天或会议) 、聊天或会议。 值得注意的是，如果您在这些位置之一添加邮件扩展，则仅可以在该上下文中使用它。
@@ -40,17 +40,17 @@ ms.locfileid: "52020721"
 
 身份验证不是强制性的，但是如果你的应用与票证跟踪工具类似，你可能需要用户登录以使用消息传递扩展。
 
-若要跨 Teams 应用保持一致，你无法自定义登录屏幕。 如果使用单一登录 (SSO) 身份验证，用户将自动登录。
+若要在Teams一致，你无法自定义登录屏幕。 如果使用单一登录 (SSO) 身份验证，用户将自动登录。
 
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="示例显示具有登录按钮的消息扩展设置屏幕。" border="false":::
 
 ## <a name="types-of-messaging-extensions"></a>邮件扩展类型
 
-邮件扩展可以具有搜索命令和/或操作命令。 你的命令取决于你的应用的功能以及这些功能在 Teams 用例中的适应情况。
+邮件扩展可以具有搜索命令和/或操作命令。 你的命令取决于你的应用的功能以及这些功能如何适应Teams用例。
 
 ### <a name="search-commands"></a>搜索命令
 
-借助搜索命令，用户可以使用邮件扩展快速查找外部内容并插入邮件。 搜索命令通常可在撰写框中使用。 例如，可以通过共享一段内容开始讨论或添加讨论，而无需离开 Teams。
+借助搜索命令，用户可以使用邮件扩展快速查找外部内容并插入邮件。 搜索命令通常可在撰写框中使用。 例如，您可以通过共享一段内容来开始讨论或添加讨论，而无需离开Teams。
 
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="示例显示从撰写框启动的基于搜索的邮件扩展。" border="false":::
 
@@ -62,7 +62,7 @@ ms.locfileid: "52020721"
 
 ### <a name="action-commands"></a>操作命令
 
-操作命令允许用户在 Teams 中的外部服务中触发操作并处理请求。 例如，如果您的应用程序跟踪订单，则用户可以使用同事消息的内容从聊天的右侧创建新订单。
+通过操作命令，用户能够触发操作并处理外部服务Teams。 例如，如果您的应用程序跟踪订单，则用户可以使用同事消息的内容从聊天的右侧创建新订单。
 
 基于操作的邮件扩展通常需要用户在模式内完成表单或某种其他种类的配置。 可以使用任务模块 创建 [这些体验](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)。
 
@@ -81,7 +81,7 @@ ms.locfileid: "52020721"
 添加后，用户可以选择聊天消息或频道帖子上的"更多"图标 :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 来查找扩展的操作命令。 扩展名可能列在"基于 **使用情况的更多** 操作"下。
 
 > [!NOTE]
-> Microsoft Teams 移动平台上不支持聊天消息或频道帖子中的更多操作。 
+> 对来自聊天消息或频道帖子的更多操作的支持在移动Microsoft Teams不可用。 
 
 #### <a name="chat-message"></a>聊天消息
 
@@ -161,6 +161,8 @@ ms.locfileid: "52020721"
 
 ## <a name="best-practices"></a>最佳做法
 
+使用这些建议创建高质量的应用体验。
+
 ### <a name="setup-and-general-usage"></a>设置和常规用法
 
 :::row:::
@@ -177,7 +179,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>请勿：使用户离开对话
 
-消息传递扩展是应该减少上下文切换的快捷方式。 例如，你的扩展不应将用户引导到 Teams 外部的网页。
+消息传递扩展是应该减少上下文切换的快捷方式。 例如，您的扩展不应将用户直接引导到 Teams。
 
    :::column-end:::
 :::row-end:::
@@ -192,9 +194,9 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="模板示例。" border="false":::
 
-#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>完成：如果可能，让 Teams 处理一些设计工作
+#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do：Teams处理一些设计工作（如果可能）
 
-如果对用例有意义，请考虑创建基于搜索的邮件扩展。 Teams 通过内置 theming 和辅助功能呈现这些类型的扩展。
+如果对用例有意义，请考虑创建基于搜索的邮件扩展。 Teams使用内置 theming 和辅助功能呈现这些类型的扩展。
 
    :::column-end:::
    :::column span="":::
@@ -213,9 +215,9 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="有关 theming 的示例。" border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>应做：利用 Teams 颜色令牌
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>应做：利用Teams令牌
 
-每个 Teams 主题都有自己的配色方案。 若要自动处理主题更改，请 <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank"> (Fluent UI </a>) 颜色标记。
+每个Teams主题都有自己的配色方案。 若要自动处理主题更改，请 <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank"> (Fluent UI </a>) 颜色标记。
 
    :::column-end:::
    :::column span="":::
@@ -223,7 +225,7 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
 #### <a name="dont-hard-code-color-values"></a>请勿：硬编码颜色值
 
-如果不使用 Teams 颜色令牌，你的设计将不太可扩展，并且需要更多的时间进行管理。
+如果不使用颜色令牌Teams，你的设计将不太可扩展，并且需要更多的时间进行管理。
 
    :::column-end:::
 :::row-end:::
@@ -262,10 +264,3 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 #### <a name="do-consider-zero-term-queries"></a>应做：考虑零术语查询
 
 例如，在用户向搜索框中写入任何内容之前，显示他们上次在你的应用上查看过什么内容。 他们可能会想要将这些内容插入对话中。
-
-## <a name="validate-your-design"></a>验证你的设计
-
-如果计划将应用发布到 AppSource，应了解提交过程中通常会导致应用出现故障的设计问题。
-
-> [!div class="nextstepaction"]
-> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

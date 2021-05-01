@@ -1,21 +1,21 @@
 ---
 title: 教程 - 使用 C 创建第一个应用#
-description: 了解如何开始使用 microsoft Teams 或 .NET C# Microsoft Teams 应用。
+description: 了解如何开始使用 Microsoft Teams 或 .NET C#应用程序。
 keywords: 入门 .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 52af53d61215e41a885e21081a9f6148e81a0fdf
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: be6c5865da04125b159792364bbd80ac219d9fd9
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020224"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101854"
 ---
-# <a name="create-your-first-teams-app-using-c-or-net"></a>使用 C# .NET 创建你的第一个 Teams 应用
+# <a name="create-your-first-teams-app-using-c"></a>使用 C Teams你的第一个应用#
 
-本教程帮助你使用 C# .NET 创建 Microsoft Teams 应用。 为此，你必须：
+本教程帮助你使用 Microsoft Teams 创建C#。 为此，你必须：
 
 * 准备环境
 * 获取先决条件
@@ -62,13 +62,13 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> 可以[分叉此](https://help.github.com/articles/fork-a-repo/)[存储库来](https://github.com/OfficeDev/Microsoft-Teams-Samples)修改更改并将其保存到 GitHub。
+> 可以[分叉此](https://help.github.com/articles/fork-a-repo/)[存储库以](https://github.com/OfficeDev/Microsoft-Teams-Samples)修改所做的更改并将其保存到GitHub。
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>生成和运行示例
 
-克隆存储库后，使用 Visual Studio 从示例的 **Microsoft-Teams-Samples/samples/app-hello-world/csharp** 目录中打开解决方案文件 **Microsoft.Teams.Samples.HelloWorld.sln。** 然后，从 **"生成"菜单中选择** "生成 **解决方案** "。 若要运行该示例，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。
+克隆存储库后，使用Visual Studio打开解决方案文件 **Microsoft.Teams。示例的** **Microsoft-Teams-Samples/samples/app-hello-world/csharp** 目录中的 Samples.HelloWorld.sln。 然后，从 **"生成"菜单中选择** "生成 **解决方案** "。 若要运行该示例，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。
 
 当应用启动时，浏览器窗口将打开，并启动应用的根。 你可以转到以下 URL 以验证是否正在加载所有应用 URL：
 
@@ -84,9 +84,9 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="host-the-sample-app"></a>托管示例应用
 
-Microsoft Teams 中的应用是提供一个或多个功能的 Web 应用程序。 若要使 Teams 平台加载你的应用，你的应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure 中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，请记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
+应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams加载应用，应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，请记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
 
-### <a name="tunnel-using-ngrok"></a>使用 ngrok 的隧道
+### <a name="tunnel-using-ngrok"></a>Tunnel ngrok
 
 为了快速测试，可以在计算机上运行应用，并通过 Web 终结点创建一个隧道。 [`ngrok`](https://ngrok.com) 是一款免费工具，可用于获取 Web 地址，例如 `https://d0ac14a5.ngrok.io` 。 你可以 [下载并安装](https://ngrok.com/download) ngrok，并将其添加到 中的位置 `PATH` 。
 
@@ -108,7 +108,7 @@ ngrok http 44327 -host-header=localhost:44327
 
 ### <a name="host-in-azure"></a>Azure 中的主机
 
-Microsoft Azure 使用共享基础结构在免费层托管 .NET 应用程序。 这足以运行 `Hello World` 示例。 有关详细信息，请参阅 [创建新的免费 Azure 帐户](https://azure.microsoft.com/free/)。
+Microsoft Azure共享基础结构在免费层托管 .NET 应用程序。 这足以运行 `Hello World` 示例。 有关详细信息，请参阅 [创建新的免费 Azure 帐户](https://azure.microsoft.com/free/)。
 
 Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内置支持。
 
@@ -118,7 +118,7 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>更新托管应用的凭据
 
-示例应用要求将环境变量设置为保存在文本文件中的值。
+示例应用要求将环境变量设置为文本文件中保存的值。
 
 打开 `appsettings.json`文件。 使用保存在文本文件中的自动程序 ID 更新 **MicrosoftAppId** 值。 使用保存的自动程序密码更新 **MicrosoftAppPassword。**
 
@@ -132,9 +132,9 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
 <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
-### <a name="test-your-bot-in-teams"></a>在 Teams 中测试机器人
+### <a name="test-your-bot-in-teams"></a>在设备中测试Teams
 
-现在，可以在 Teams 中测试机器人。 选择你注册应用的团队中的频道并键入 `@your-bot-name` 。 这称为 **\@ 提及**。 机器人将回复你发送的任何消息。
+现在，你可以测试自动程序Teams。 选择你注册应用的团队中的频道并键入 `@your-bot-name` 。 这称为 **\@ 提及**。 机器人将回复你发送的任何消息。
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 

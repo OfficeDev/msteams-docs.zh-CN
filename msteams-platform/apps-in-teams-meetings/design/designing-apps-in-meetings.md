@@ -1,31 +1,31 @@
 ---
 title: 设计会议扩展
 author: heath-hamilton
-description: 了解如何在 Teams 会议中设计应用并获取 Microsoft Teams UI 工具包。
+description: 了解如何在会议Teams设计应用并获取 Microsoft Teams UI 工具包。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3f12ed711b14d2ea6d9fee541b98f20012d6cf21
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018472"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101448"
 ---
-# <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
+# <a name="designing-your-microsoft-teams-meeting-extension"></a>设计会议Microsoft Teams扩展
 
 你可以创建应用来使会议更加高效。 例如，要求用户在呼叫过程中完成调查或发送不会中断会议流的快速提醒。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-可以在 Microsoft Teams UI 工具包中查找更全面的设计指南，包括可根据需要获取和修改的元素。
+你可以找到更全面的设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展
 
-您可以在会议之前和会议期间添加会议扩展名。 还可以直接从 AppSource 应用商店的 Teams 应用商店为特定会议 (应用) 。
+您可以在会议之前和会议期间添加会议扩展名。 还可以直接从 AppSource 应用商店或 AppSource 应用商店Teams特定 () 。
 
 ### <a name="add-before-a-meeting"></a>在会议前添加
 
@@ -57,7 +57,7 @@ ms.locfileid: "52018472"
 
 ### <a name="designing-with-ui-templates"></a>使用 UI 模板进行设计
 
-使用以下 Teams UI 模板之一帮助设计会议选项卡：
+使用以下 UI 模板Teams之一来帮助设计会议选项卡：
 
 * [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目采取操作。
 * [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为看板或街道）是一组卡片，通常用于跟踪工作项或票证的状态。
@@ -113,7 +113,7 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
 
 ## <a name="use-an-in-meeting-dialog"></a>使用会议内对话框
 
-会议中的对话框显示在 Teams 会议阶段。 它们需要用户的注意、确认或交互，但很细微，不会中断会议。 应谨慎使用这些模式，并针对轻型和面向任务的场景。
+会议中的对话框显示在会议Teams上。 它们需要用户的注意、确认或交互，但很细微，不会中断会议。 应谨慎使用这些模式，并针对轻型和面向任务的场景。
 
 ### <a name="use-cases"></a>用例
 
@@ -167,6 +167,8 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示会议后选项卡。" border="false":::
 
 ## <a name="best-practices"></a>最佳做法
+
+使用这些建议创建高质量的应用体验。
 
 ### <a name="interactions"></a>交互
 
@@ -245,7 +247,7 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
 
 #### <a name="dont-left-or-center-align-actions"></a>不：左对齐或居中对齐操作
 
-这偏离了用于对话框中控件放置的标准 Teams 模式，并且可能会与顶部对话框后面的对话框冲突。
+这偏离了用于Teams控件放置的标准模式，并且可能会与顶部对话框后面的对话框冲突。
 
    :::column-end:::
 :::row-end:::
@@ -258,7 +260,7 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
 
 #### <a name="do-scroll-vertically"></a>操作：垂直滚动
 
-用户期望 Teams (和任何其他位置的垂直) 。
+用户预期垂直滚动Teams (和任何其他位置) 。
 
    :::column-end:::
    :::column span="":::
@@ -266,7 +268,7 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
 
 #### <a name="dont-scroll-horizontally"></a>不：水平滚动
 
-水平滚动在 Teams 中不是预期行为。 会议环境中的其他画布垂直滚动。
+水平滚动并不是预期的行为Teams。 会议环境中的其他画布垂直滚动。
 
    :::column-end:::
 :::row-end:::
@@ -298,9 +300,9 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="显示具有深色主题的会议扩展名的示例。" border="false":::
 
-#### <a name="do-use-teams-color-tokens"></a>用途：使用 Teams 颜色令牌
+#### <a name="do-use-teams-color-tokens"></a>Do：使用Teams颜色令牌
 
-Teams 会议针对深色模式进行了优化，可帮助减少视觉和认知噪音，以便用户可以专注于讨论和共享内容。 了解如何使用<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">Fluent UI (颜色) 。 </a>
+Teams会议针对深色模式进行了优化，以帮助减少视觉和认知噪音，以便用户可以专注于讨论和共享内容。 了解如何使用<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">Fluent UI (颜色) 。 </a>
 
    :::column-end:::
    :::column span="":::
@@ -308,7 +310,7 @@ Teams 会议针对深色模式进行了优化，可帮助减少视觉和认知�
 
 #### <a name="dont-hard-code-hex-values"></a>请勿：硬编码十六进制值
 
-如果不使用 Teams 颜色令牌，你的设计将不太可扩展，并且需要更多的时间进行管理。
+如果不使用颜色令牌Teams，你的设计将不太可扩展，并且需要更多的时间进行管理。
 
    :::column-end:::
 :::row-end:::
@@ -346,10 +348,3 @@ Teams 会议针对深色模式进行了优化，可帮助减少视觉和认知�
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>验证你的设计
-
-如果计划将应用发布到 AppSource，应了解提交过程中通常会导致应用出现故障的设计问题。
-
-> [!div class="nextstepaction"]
-> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

@@ -1,28 +1,28 @@
 ---
-title: 了解用例
-author: clearab
-description: 了解用例
+title: 了解应用的用例
+author: heath-hamilton
+description: 在规划Microsoft Teams应用时，应首先了解应用尝试解决的问题。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 9afb7ffb9ef6c07857f4452ce41a7b86782d50cd
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: b1d51dd126f237584b5c53ca053cdd13bc470d0b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058661"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101784"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
-Microsoft Teams 平台提供应用可以利用的各种入口点和 [UI](../../concepts/extensibility-points.md) 元素。
+Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../concepts/extensibility-points.md)元素。
 > [!NOTE]
-> 在开始构建用例之前，你必须深入了解 Teams 功能以及使用 Teams 平台的可能功能。
+> 在开始构建用例之前，你必须深入了解Teams功能，以及使用这些功能的 Teams功能。
 
-与用户交互的每个方法都有其优点和缺点。 构建出色的 Teams 应用就是找到满足用户需求所需的正确组合。 如果要满足这些需求，首先需要了解这些需求。
+与用户交互的每个方法都有其优点和缺点。 在应用中Teams出色的功能与找到满足用户需求的正确组合有关。 如果要满足这些需求，首先需要了解这些需求。
 
 ## <a name="understand-the-problem"></a>了解问题
 
-每个良好的应用都有一个核心问题或需要它尝试解决。 在开始生成应用之前，你需要阐明该问题是什么。 Teams 的核心是一个协作平台，因此在实现有效协作方面架起桥梁的应用非常适合。 它还是一个社交平台，本机跨平台，位于 Office 365 的核心，并提供个人画布，供你创建应用。 在此社交平台中，可以通过 Teams 应用满足各种需求。 如果了解要尝试解决的问题，就可以解决各种各样的问题。 在开始生成应用之前，请提出相关问题，例如：
+每个良好的应用都有一个核心问题或需要它尝试解决。 在开始生成应用之前，你需要阐明该问题是什么。 其中心Teams是一个协作平台，因此，在实现有效协作方面架起桥梁的应用非常适合。 它还是一个社交平台，本机跨平台，位于Office 365的核心，并提供个人画布，让你创建应用。 在此社交平台中，可以通过一款应用满足各种Teams需求。 如果了解要尝试解决的问题，就可以解决各种各样的问题。 在开始生成应用之前，请提出相关问题，例如：
 
 * 用户当前使用的状态系统的优缺点是什么？
 * 自今天起，你的用户要解决的难处是什么？
@@ -30,7 +30,7 @@ Microsoft Teams 平台提供应用可以利用的各种入口点和 [UI](../../c
 
 ## <a name="understand-your-user"></a>了解用户
 
-了解你的用户是谁，并且你可以确定正确的分发模型，但更重要的是，它可以帮助你确定用户如何使用 Teams。 提出相关问题，例如：
+了解你的用户是谁，并且你可以确定正确的分发模型，但更重要的是，它可以帮助你确定用户如何使用Teams。 提出相关问题，例如：
 
 * 用户主要是移动客户端上的一线工作人员吗？
 * 你是否希望大量来宾用户需要访问你的应用？
@@ -38,30 +38,30 @@ Microsoft Teams 平台提供应用可以利用的各种入口点和 [UI](../../c
 * 主要用户的技术有多复杂？
 * 是否需要全面的载入体验或一些指针？
 
-有时答案是，我们希望为任何地方的所有 Teams 用户 *解决此问题。* 如果是这种情况，请花些时间了解发布到 [AppSource 需要哪些时间](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)。
+有时答案是，我们希望为任何地方的所有Teams *解决此问题。* 如果是这种情况，请花些时间了解发布到 [AppSource 需要哪些时间](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)。
 
 ## <a name="understand-the-limitations-of-the-app"></a>了解应用程序的限制
 
 了解应用在数据辅助功能和数据驻留要求方面的限制将有助于你设计更好的应用。 这一点很重要，因为了解谁拥有 API 的数据和可用性会影响解决方案体系结构。 同样，请提出相关问题，例如：
 
 * 当前应用的后端集成面临的难题是什么？
-* 谁拥有后端数据？ 内部或第三方。
+* Who拥有后端数据？ 内部或第三方。
 * 是否有影响应用正常运行的防火墙？
 * 是否有 API 可以访问运行应用所需的数据？ 
 
 ## <a name="provide-authentication"></a>提供身份验证
 
-您必须提前确定是否需要保护要公开的服务以及处于什么级别。 请记住，Teams 应用中公开的 Web 服务通过 Internet 公开提供。 因此，如果你需要保护他们，立即开始思考它。 如果需要一个解决方案，要求您为租户之外的用户提供来宾访问，则需要设置访问限制和权限来保护机密信息。 需要考虑来宾用户访问的限制，需要设计应用。 因此，请提问，例如： 
+您必须提前确定是否需要保护要公开的服务以及处于什么级别。 请记住，Teams应用程序中公开的 Web 服务通过 Internet 公开提供。 因此，如果你需要保护他们，立即开始思考它。 如果需要一个解决方案，要求您为租户之外的用户提供来宾访问，则需要设置访问限制和权限来保护机密信息。 需要考虑来宾用户访问的限制，需要设计应用。 因此，请提问，例如： 
 
 * 用户将基于其角色访问不同的数据视图吗？
 * 是否涉及 PII？
 * 交互还会基于用户角色吗？
 * 外部用户将访问该应用吗？
 
-## <a name="decide-what-goes-in-teams"></a>决定 Teams 中的功能
+## <a name="decide-what-goes-in-teams"></a>确定要Teams
 
-无论你是在构建新的解决方案还是将现有解决方案引入 Teams，决定整个应用是否将位于 Teams 客户端内部，这一点非常重要。 检查仅引入部分体验是否有意义。 通过选项卡、消息传递扩展、任务模块、自适应卡片和对话机器人的组合，可以在 Teams 中完全生成复杂的应用。
-请记住您的用户是谁以及您尝试解决的问题。 他们已有一个系统来解决大多数问题，或者你只需将一组功能扩展到 Teams？ 通常，如果要引入解决方案的一部分，则必须专注于共享、协作、启动和监视工作流。
+无论是构建新的解决方案还是将现有解决方案引入Teams，决定整个应用是否将位于 Teams 客户端中非常重要。 检查仅引入部分体验是否有意义。 通过选项卡、消息传递扩展、任务模块、自适应卡片和对话机器人的组合，你可以完全在 Teams。
+请记住您的用户是谁以及您尝试解决的问题。 他们已有一个系统来解决大多数问题，或者你只需将功能的一个子集扩展到Teams？ 通常，如果要引入解决方案的一部分，则必须专注于共享、协作、启动和监视工作流。
 
 ## <a name="plan-the-onboarding-experience"></a>规划载入体验
 
@@ -79,11 +79,9 @@ Microsoft Teams 平台提供应用可以利用的各种入口点和 [UI](../../c
 
 ## <a name="see-also"></a>另请参阅
 
-- [选择如何发布应用程序](../deploy-and-publish/overview.md)
-
-- [设计有效选项卡](../../tabs/design/tabs.md)
-
-- [设计令人惊叹的机器人](../../bots/design/bots.md)
+* [选择如何发布应用程序](../deploy-and-publish/overview.md)
+* [设计选项卡](../../tabs/design/tabs.md)
+* [设计机器人](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>后续步骤
 

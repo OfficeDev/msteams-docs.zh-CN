@@ -1,27 +1,27 @@
 ---
 title: 为应用设计自适应卡片
-description: 了解如何为 Teams 设计自适应卡片并获取 Microsoft Teams UI 工具包。
+description: 了解如何为用户设计自适应Teams并获取 Microsoft Teams UI 工具包。
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 67a2882a0a687d5ccb48759419ecefcdf9396fc3
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 14ffff1264e716e04a1ffb5549b71a8b7ec5fc14
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020280"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101735"
 ---
-# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡片
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为应用设计自适应Microsoft Teams卡片
 
 自适应卡片包含卡片元素和可选操作集的免费格式正文。 自适应卡片是内容可操作的代码段，可以通过机器人或消息传递扩展添加到对话中。 这些卡片使用文本、图形和按钮，向受众提供丰富的通信。
 
-自适应卡片框架适用于许多 Microsoft 产品，包括 Teams。 可以通过机器人或消息扩展向用户发送内部邮件卡片。 存在此情况时，用户可以对卡片采取操作。
+自适应卡片框架适用于许多 Microsoft 产品，包括Teams。 可以通过机器人或消息扩展向用户发送内部邮件卡片。 存在此情况时，用户可以对卡片采取操作。
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="示例显示自适应卡片。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="自适应卡片的概述示例。" border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-可以在 Microsoft Teams UI 工具包中查找有关 Teams 中自适应卡片的更全面的设计指南，包括可根据需要获取和修改的元素。 UI 工具包还涵盖了主题设置、辅助功能和响应式大小调整等重要主题。
+你可以找到适用于 Teams 中的自适应卡片的更全面的设计指南，包括可根据需要获取和修改的元素，Microsoft Teams UI 工具包。 UI 工具包还涵盖了主题设置、辅助功能和响应式大小调整等重要主题。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
@@ -39,65 +39,65 @@ ms.locfileid: "52020280"
 
 我们最大的卡片。 用于共享文章或场景，其中图像可以描述大部分情景。
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="示例显示自适应卡片。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="示例显示自适应卡片展示卡。" border="false":::
 
 ### <a name="thumbnail"></a>缩略图
 
 用于发送简单的可操作邮件。
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="自适应卡片的示例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="示例显示自适应卡片缩略图卡片。" border="false":::
 
 ### <a name="list"></a>列表
 
 在您希望用户从列表中选取项目，但项目不需要太多解释的情况下使用。
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="自适应卡片示例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="示例显示自适应卡片列表卡片。" border="false":::
 
 ### <a name="digest"></a>Digest
 
 用于新闻摘要和向上舍入帖子。 注意：我们建议使用单个更新或新闻项的缩略图卡片。
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="插图显示自适应卡片。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="示例显示自适应卡片摘要卡片。" border="false":::
 
-### <a name="media"></a>媒体
+### <a name="media"></a>Media
 
 在你想要组合文本和媒体（如音频或视频）时使用。
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="插图显示自适应卡片。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="示例显示自适应卡片媒体卡。" border="false":::
 
 ### <a name="people"></a>人员
 
 最适用于有效传达任务涉及人员。
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="自适应卡片的图示。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="示例显示自适应卡片人员卡片。" border="false":::
 
 ### <a name="request-ticket"></a>请求票证
 
 用于从用户处获取快速输入，以自动创建任务或票证。
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="自适应卡片的图示。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="示例显示自适应卡片请求票证卡。" border="false":::
 
 ### <a name="imageset"></a>ImageSet
 
 用于发送多个图像缩略图。
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="自适应卡片示例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="示例显示自适应卡片图像集卡。" border="false":::
 
 ### <a name="actionset"></a>ActionSet
 
 当你希望用户选择一个按钮，然后从同一卡片收集添加的用户输入时，使用 。
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="示例显示自适应卡片。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="示例显示自适应卡片操作集卡片。" border="false":::
 
 ### <a name="choiceset"></a>ChoiceSet
 
 用于收集用户的多个输入。
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="示例显示自适应卡片。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="示例显示自适应卡片选择集卡。" border="false":::
 
 ## <a name="anatomy"></a>解剖
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="显示自适应卡片的 UI 分析的图示。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="示例显示自适应卡片分析卡。" border="false":::
 
 自适应卡片具有很多灵活性。 但是，我们强烈建议至少将以下组件包括在每张卡片中：
 
@@ -109,11 +109,13 @@ ms.locfileid: "52020280"
 
 ## <a name="best-practices"></a>最佳做法
 
+使用这些建议创建高质量的应用体验。
+
 ### <a name="primary-and-secondary-actions"></a>主要操作和辅助操作
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="显示自适应卡片最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="有关如何在自适应卡片上仅包含一小组操作的最佳操作。" border="false":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>操作：最多使用六个主要操作
 
@@ -121,7 +123,7 @@ ms.locfileid: "52020280"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="示例展示了自适应卡片最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="有关在自适应卡片上不使用户不知所措以及操作太多的最佳操作。" border="false":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>请勿：使用超过 6 个主要操作
 
@@ -132,7 +134,7 @@ ms.locfileid: "52020280"
 
 ### <a name="frequency"></a>频率
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="显示自适应卡片最佳实践的图示。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="自适应卡片频率的最佳实践。" border="false":::
 
 #### <a name="do-be-concise"></a>应做：简洁
 

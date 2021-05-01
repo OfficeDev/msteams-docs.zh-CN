@@ -5,12 +5,12 @@ keywords: 机器人对话消息传送
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c43ce8697e5b3b2748416c3382ad6e34feb42d2b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019746"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101819"
 ---
 # <a name="formatting-bot-messages"></a>设置机器人消息的格式
 
@@ -18,7 +18,7 @@ ms.locfileid: "52019746"
 
 可以设置可选 [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) 属性来控制邮件文本内容的呈现方式。
 
-Microsoft Teams 支持以下格式选项：
+Microsoft Teams支持以下格式选项：
 
 | TextFormat 值 | 说明 |
 | --- | --- |
@@ -28,17 +28,17 @@ Microsoft Teams 支持以下格式选项：
 
 ## <a name="formatting-text-content"></a>设置文本内容的格式
 
-Microsoft Teams 支持 Markdown 和 XML 代码的一 (HTML) 格式标记。
+Microsoft Teams一部分 Markdown 和 XML (HTML) 格式标记。
 
 目前，存在以下限制：
 
 * 纯文本邮件不支持表格式设置
 
-有关卡片格式的信息，请参阅 Teams [卡片参考](~/task-modules-and-cards/cards/cards-reference.md)。
+有关卡片格式的信息，请参阅Teams[卡片参考](~/task-modules-and-cards/cards/cards-reference.md)。
 
 ### <a name="cross-platform-support"></a>跨平台支持
 
-若要确保你的格式可以在 Microsoft Teams 支持的所有平台上运行，请注意某些样式当前并非在所有平台上都受支持。
+为了确保格式设置在所有受 Microsoft Teams支持的平台中运行，请注意某些样式当前并非在所有平台上都受支持。
 
 | 样式                     | 纯文本邮件 | 卡片 (XML)  |
 |---------------------------|--------------------|------------------|
@@ -87,4 +87,4 @@ Microsoft Teams 支持 Markdown 和 XML 代码的一 (HTML) 格式标记。
 | 预设格式的文本 | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | 超链接 | [必应](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| 图像链接 | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| 图像链接 | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

@@ -1,26 +1,26 @@
 ---
 title: 设计任务模块
 author: heath-hamilton
-description: 了解如何为 Teams 应用设计任务模块并获取 Microsoft Teams UI 工具包。
+description: 了解如何为应用设计任务Teams并获取 Microsoft Teams UI 工具包。
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 3502a705bfe1bf99a5dc0edff5c5a54265cc6ca1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 347ce42c41706f698e2f8897a0518aae0850a275
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019543"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101728"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计任务模块
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>为应用程序设计Microsoft Teams模块
 
-可以使用任务模块在 Teams 应用中创建模式弹出体验。 使用此功能可显示富媒体和信息或完成复杂的任务。
+可以使用任务模块在 Teams应用中创建模式弹出体验。 使用此功能可显示富媒体和信息或完成复杂的任务。
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="示例显示任务模块。" border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-可以在 Microsoft Teams UI 工具包中查找更全面的任务模块设计指南，包括可根据需要获取和修改的元素。
+可以在自定义 UI 工具包中查找更全面的任务模块设计指南，包括可根据需要获取和修改Microsoft Teams元素。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
@@ -80,7 +80,7 @@ ms.locfileid: "52019543"
 
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="任务模块中的登录体验示例。" border="false":::
 
-### <a name="media"></a>媒体
+### <a name="media"></a>Media
 
 在任务模块中嵌入媒体内容，实现集中的观看体验。
 
@@ -106,11 +106,13 @@ ms.locfileid: "52019543"
 
 ## <a name="best-practices"></a>最佳做法
 
+使用这些建议创建高质量的应用体验。
+
 ### <a name="usability"></a>可用性
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="显示任务模块最佳实践的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="显示任务模块最佳实践的示例 (一个任务模块一) 。" border="false":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>应做：一次使用一个任务模块
 
@@ -118,7 +120,7 @@ ms.locfileid: "52019543"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="示例演示任务模块最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="示例显示任务模块最佳实践 (在任务模块模型顶部弹出) 。" border="false":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>请勿：在任务模块顶部弹出对话框
 
@@ -131,7 +133,7 @@ ms.locfileid: "52019543"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="示例显示任务模块最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="显示任务模块最佳实践的示例 (确保内容响应迅速) 。" border="false":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>应做：确保内容响应迅速
 
@@ -139,7 +141,7 @@ ms.locfileid: "52019543"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="示例显示任务模块最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="显示任务模块最佳实践的示例 (不使用水平滚动条) 。" border="false":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>禁止：使用水平滚动条
 
@@ -152,7 +154,7 @@ ms.locfileid: "52019543"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="示例显示任务模块最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="显示任务模块最佳实践的示例 (使任务模块) 。" border="false":::
 
 #### <a name="do-keep-it-short"></a>应做：保持简短
 
@@ -160,9 +162,9 @@ ms.locfileid: "52019543"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="显示任务模块最佳实践的图示。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="显示任务模块最佳实践的示例 (操作没有长交互) 。" border="false":::
 
-#### <a name="dont-do-long-interactions"></a>不要：执行长交互
+#### <a name="dont-have-long-interactions"></a>请勿：进行长交互
 
 尽量使交互保持简短并达到目标。
 
@@ -173,7 +175,7 @@ ms.locfileid: "52019543"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="插图显示任务模块最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="显示任务模块最佳实践的示例 (内嵌错误消息) 。" border="false":::
 
 #### <a name="do-use-inline-error-messages"></a>Do：使用内联错误消息
 
@@ -181,7 +183,7 @@ ms.locfileid: "52019543"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="插图显示任务模块最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="显示任务模块最佳实践的示例 (将错误消息放入对话框) 。" border="false":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>请勿：在对话框中放入错误消息
 

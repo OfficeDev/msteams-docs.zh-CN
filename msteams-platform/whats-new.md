@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: 5193c77a33ea53007c5292af7c7c3c343a48be36
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 94e8e573ac806fdfce0933129708be9bcdc82c45
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088785"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101392"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -22,8 +22,9 @@ ms.locfileid: "52088785"
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|04/30/2021|有关如何将应用发布到应用商店Teams指南。|[将应用发布到 Teams 应用商店](concepts/deploy-and-publish/appsource/publish.md) [，Teams应用商店验证指南](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 | 04/29/2021 | 新增：自适应卡片的通用操作。 | [自适应卡片的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| 应用自定义功能现已在开发人员预览版中提供。|[设计团队应用概述](concepts/design/design-teams-app-overview.md#app-customization)[、App studio 概述](concepts/build-and-test/app-studio-overview.md#connectors)和[清单架构](resources/schema/manifest-schema-dev-preview.md) |
+|04/08/2021| 应用自定义功能现已在开发人员预览版中提供。|[设计Teams应用概述](concepts/design/design-teams-app-overview.md#app-customization)[、App Studio 概述](concepts/build-and-test/app-studio-overview.md#connectors)和[清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意：更新到 Bot Framework SDK 版本 4.10 或以上版本，因为我们已开始弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 和 的过程。 | [团队/聊天成员的机器人 API 更改](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意：选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |
 |03/05/2021|默认安装范围和组功能在开发人员预览版中。| [默认安装范围和组功能](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -44,7 +45,7 @@ ms.locfileid: "52088785"
 |08/06/2020|支持选项卡 SSO 身份验证|["开发 SSO Microsoft Teams"选项卡](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph公共预览版中 (主动聊天机器人和) |[在 Microsoft Teams 中启用主动自动程序安装和主动Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |移动设备功能更新。|[请求用户选项卡的设备Microsoft Teams权限](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|TeamsAppSource 提交的应用验证工具。|[Teams应用验证工具](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
+|07/20/2020|TeamsAppSource 提交的应用验证工具。|[Teams应用包验证工具](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#validate-your-app-package)
 |07/15/2020|为虚拟助理创建Teams|[虚拟助理Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|显示本机加载指示器文档|[显示本机加载指示器](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|使用 Teams 开始构建Visual Studio Code Toolkit。|[使用 Microsoft Teams Toolkit 和 Visual Studio Code](toolkit/visual-studio-code-overview.md) |

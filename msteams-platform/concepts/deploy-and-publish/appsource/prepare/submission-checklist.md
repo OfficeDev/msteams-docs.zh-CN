@@ -1,97 +1,197 @@
 ---
-title: 应用商店提交清单
-description: 将 Microsoft Teams 应用发布到 AppSource 之前使用的清单
-ms.topic: reference
+title: 准备应用商店提交
+description: 介绍提交要列在应用商店Microsoft Teams应用之前的最后步骤。
+ms.topic: how-to
 localization_priority: Normal
-keywords: Teams 发布应用商店 Office 发布清单提交 Teams 应用应用资源验证
-ms.openlocfilehash: 1e7698e143d313ce46b834eada608571e3280b8a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: d46d21c3d984b5688c00857e485210b0f0fcf2c7
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020784"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101679"
 ---
-# <a name="prepare-for-appsource-submission"></a>准备 AppSource 提交  
+# <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
-若要在 AppSource 上列出，应用必须完成审批流程。 这是 Microsoft Teams 组提供的一项免费服务，可验证你的应用是否按所述运行，包含所有适当的元数据，并提供对最终用户有价值的内容。 为了帮助你快速获得批准，请确保你的应用满足以下要求和指南：
+你已设计、生成和测试Microsoft Teams应用。 现在，你已准备好列出它，以便用户可以发现并开始使用你的应用。
 
-* **分发方法：** 确保你的应用适用于在应用商店平台上发布。 还有其他 [一些选项](../../overview.md) 可用于分发应用，而无需发布到 AppSource。
-* **验证策略：** 你的应用必须在提交之前通过所有 [当前的 AppSource](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) 验证策略。 
-  > [!NOTE] 
-  > Appsource 验证策略可能会更改。
-* **移动就绪情况：** 你的应用必须具有移动响应能力。 如果你的应用包含选项卡，它们必须遵循移动设计指南[](~/tabs/design/tabs-mobile.md)，并且你的应用必须符合 iOS 和[](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment)Android (上的不) 。
-* **自行测试应用：** 使用清单验证工具 [测试应用](#teams-app-validation-tool)。
-* **应用详细信息页面：** 你的应用必须与应用详细信息  [页面清单一致](detail-page-checklist.md)。
-* **提示和经常失败的情况：** 请额外注意列出的 [提示和经常失败的情况](frequently-failed-cases.md)  ，以改进应用提交和审批时间。
-* **应用清单：** 根据应用清单清单 [检查应用清单](app-manifest-checklist.md)。
-* **测试和调试：** 确保你已 [完全测试和调试你的应用](../../../build-and-test/debug.md)。
-* **测试说明：** 包括 [测试说明进行验证](#test-notes-for-validation)
-* **隐私策略：** 确保 [你的隐私策略、使用条款和支持 URL 遵循](#privacy-policy-terms-of-use-and-support-urls) 我们的指南。
+在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource)之前，请确保你已完成以下操作。
 
-完成上述所有要求后，通过合作伙伴中心将程序包 [提交](/office/dev/store/use-partner-center-to-submit-to-appsource)到 AppSource。
+## <a name="validate-your-app-package"></a>验证应用包
 
-## <a name="teams-app-validation-tool"></a>Teams 应用验证工具
+当你的应用可能在测试环境中运行时，你应该检查你的应用包，以避免在提交过程中出现问题。
 
-应用验证工具由应用 [验证器和](#teams-app-validator) 初步 [清单组成](#preliminary-checklist)。 该工具复制 [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) 用于评估应用提交的相同测试用例。 因此，在将解决方案提交到 AppSource 进行审批之前，必须通过所有测试用例至关重要。该工具可在 Teams 平台内的多个区域找到：
+应用Microsoft Teams工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
-> [!div class="checklist"]
->
-> * [**应用验证程序主页**](https://dev.teams.microsoft.com/appvalidation.html)
-> * [**Teams Visual Studio Code 工具包**](/toolkit/visual-studio-code-overview.md)
-> * [**应用程序 Studio**](../../../build-and-test/app-studio-overview.md)
+1. 转到应用[Microsoft Teams工具](https://dev.teams.microsoft.com/appvalidation.html)。  (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) 
+1. Upload应用包运行自动测试。
+1. 转到" **初步检查表** "并查看难以自动化的测试用例。
+1. [修复了当自动测试](~/resources/schema/manifest-schema.md) 出错或未满足检查表中所有条件时的配置或应用的问题。
 
-### <a name="teams-app-validator"></a>Teams 应用验证程序
+## <a name="compile-testing-instructions"></a>编译测试说明
 
-" **验证** "页允许你在提交到 AppSource 之前检查应用包。 只需上传应用包，验证工具将针对所有与清单相关的测试用例检查应用。 对于每个失败的测试，该说明都提供了一个文档链接，帮助您修复错误。
+提供说明和资源来帮助审阅者测试你的应用，包括测试帐户、凭据和许可证密钥。 你可以添加合作伙伴中心中的说明，或将它们上载到 SharePoint 上的公开位置。
 
-![验证工具](../../../../assets/images/validation-tool/validator.png)
+### <a name="feature-list"></a>功能列表
 
-### <a name="preliminary-checklist"></a>初步清单
+提供有关应用功能的详细信息，Teams测试每个功能的步骤。
 
-对于难以自动化的测试方案，初步清单显示七个最常见的失败测试用例。
+### <a name="accounts"></a>帐户
 
-![初步清单](../../../../assets/images/validation-tool/preliminary-checklist.png)
+如果你的应用需要许可证或后端安全列表，则必须提供测试帐户。 你提供的所有帐户都必须包含预填充的数据，以便于测试。
 
-## <a name="privacy-policy-terms-of-use-and-support-urls"></a>隐私策略、使用条款和支持 URL
+根据应用的功能，可能需要提供以下所有功能：
 
-### <a name="privacy-policy"></a>隐私策略
+* 管理员帐户 (管理员) 
+* 非管理员帐户 (必需) 
+* 为了正确测试首次运行登录体验而未预配置的帐户 (要求) 
+* 有权访问高级或升级功能的帐户 (如果适用) 
+* 同一租户中的两个帐户，用于测试在共享上下文中工作的应用的 (体验（如果适用) 
 
-隐私策略指南：
+### <a name="tenant-configurations"></a>租户配置
 
-> [!div class="checklist"]
->
-> * 隐私策略可以特定于你的应用和/或所有服务的整体策略。
-> * 如果使用通用隐私策略，则必须引用"服务"、"应用程序"和"平台"，以包括 Teams 应用和网站。
-> * 它必须包括如何处理用户数据存储、用户数据保留、删除和安全控制。
-> * 它必须包含您的联系信息。
-> * 它不应包含断开的链接、beta URL 或暂存 URL。
+如果必须配置Teams租户才能使用你的应用，请包含这些说明以及管理员和非管理员帐户进行验证。
 
-### <a name="terms-of-use"></a>使用条款
+### <a name="video-optional"></a>视频 (可选) 
 
-使用条款声明应特定于应用和/或外接程序产品/服务。
+提供你的应用的录制，以便 Microsoft 可以完全了解其功能。
 
-### <a name="support-urls"></a>支持 URL
+## <a name="create-your-store-listing-details"></a>创建应用商店一览详细信息
 
-支持 URL 不应要求身份验证或登录凭据来就应用的任何问题联系你。
+你提交到合作伙伴[中心&#8212;包括](https://partner.microsoft.com)你的姓名、说明、图标和图像&#8212;成为应用的 Teams 应用商店和 Microsoft AppSource 一览。
 
-## <a name="test-notes-for-validation"></a>用于验证的测试说明
+应用商店一览可能是某人对你的应用的第一印象。 通过可有效传达应用优势、功能和品牌一览增加安装量。
 
-请包含以下内容：
+### <a name="specify-a-short-name"></a>指定短名称
 
-* 必须提供至少两个登录凭据，一个管理员和非管理员。
+特别是，你的应用 (，它的短) 在用户如何在应用商店[](~/resources/schema/manifest-schema.md#name)中发现它方面起到重要作用。
 
-* 出于验证目的，你提供的帐户应具有足够的预填充数据。
+:::row:::
 
-* 对于企业应用、需要订阅的应用或具有 Office 365 租户/域依赖项的应用，必须在未为应用预配置的同一域中提供第三个帐户，以便我们可以验证首次运行的用户体验。
+   :::column span="3":::
+      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用的短名称的位置。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
 
-* 如果你的应用具有高级/升级功能，则必须提供具有必要访问权限的帐户来测试该体验。
+:::row-end:::
 
-* 你可以选择将测试备注上载到 SharePoint。 如果是这样，请提供文件的公共链接。
+确保你的短名称符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)。
 
-* **测试帐户**。 如果你的应用仅允许来自后端的许可帐户或安全列表，则测试帐户是必需的。 此外，如果应用中允许团队/群聊范围，则同一租户中需要两个测试帐户来验证团队协作方案。
+### <a name="write-descriptions"></a>编写说明
 
-* **集成步骤**。 如果需要租户管理员预配置才能使用应用，请包含步骤和/或提供配置的管理员和非管理员帐户进行验证。 注意：你可以注册 [Office 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program) 订阅。 它 *是免费的* 90 天，并且将持续续订，只要你使用它进行开发活动。
+必须对你的应用进行简短而详细的说明。
 
-* **有关 Teams 中的** 应用功能的注意事项：详细介绍 Teams 中应用提供的所有功能以及测试每个功能的步骤。
+#### <a name="short-description"></a>简短说明
 
-* **显示应用功能的视频 (可选**) ：你可以提供产品的视频录制，以便我们完全了解应用的功能。
+应用简洁摘要，应原始、具有吸引力，并面向目标受众。 将简短说明保留为一个句子。
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用的简短说明的位置。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+请确保简短说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)。
+
+#### <a name="long-description"></a>较长说明
+
+长描述可以提供一个叙述性内容，其中突出显示了应用的主要功能、它所解决的问题及其目标受众。 虽然此说明可以有 4，000 个字符，但大多数用户只能阅读 300 到 500 个单词。
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="示例屏幕截图突出显示了在应用商店一览中显示应用长说明的位置。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+请确保你的详细说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)。
+
+### <a name="adhere-to-icon-design-guidelines"></a>遵守图标设计指南
+
+图标是用户在浏览应用商店时看到的主要元素之一。 图标应传达应用的品牌和用途，同时遵循Teams要求。
+
+有关详细信息，请参阅[有关创建应用图标Teams指南](~/concepts/build-and-test/apps-package.md#app-icons)。
+
+### <a name="capture-screenshots"></a>捕获屏幕截图
+
+Screenshots provide a prominent visual preview of your app to complement your app name， icon， and descriptions.
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="示例屏幕截图突出显示了应用屏幕截图在应用商店一览中的显示位置。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+请记住以下有关屏幕截图：
+
+* 每个列表最多可以有五张屏幕截图。
+* 受支持的文件类型包括 PNG、JPEG 和 GIF。
+* 尺寸应为 1366x768 像素。
+* 最大大小为 1，024 KB。
+
+有关最佳做法，请参阅以下资源：
+
+* [Teams应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [为 Microsoft 应用商店精心制作有效图像](/office/dev/store/craft-effective-appsource-store-images)
+
+### <a name="create-a-video"></a>创建视频
+
+一览中的视频可能是传达人们为什么应该使用你的应用的最有效方式。 你应该在视频中回答以下问题：
+
+* Who应用是否适用于？
+* 你的应用可以解决哪些问题？
+* 你的应用如何工作？
+* 使用你的应用还有其他哪些好处？
+
+#### <a name="best-practices-for-videos"></a>视频最佳做法
+
+* 将视频保留 30-90 秒。
+* 以质量为目标。 在列表中，用户将在屏幕截图前看到视频。
+
+### <a name="select-a-category-for-your-app"></a>为应用选择类别
+
+在提交过程中，将要求你对应用进行分类。 下表将Teams应用商店类别映射到合作伙伴中心[中列出的类别](https://aka.ms/PartnerCenterHomePage)。
+
+| Teams类别       | 合作伙伴中心类别  |
+|:---------------------|:---------------|
+| 分析和 BI | 分析、数据可视化和 BI |
+| 开发人员和 IT | 开发人员工具、IT 管理员 |
+| 教育 | 教育 |
+| 人力资源 | 人力资源和招聘 |
+| 工作效率 | 内容管理、文件和文档、生产力、培训和教程以及实用程序 |
+| 项目管理 | 通信、Project、工作流和业务管理 |
+| 销售和支持 | 客户和联系人管理、客户支持、金融服务、销售和市场营销 |
+| 社交和有趣 | 图像和视频库、生活方式、新闻和天气、社交、旅行和导航 |
+
+### <a name="localize-your-store-listing"></a>本地化应用商店一览
+
+合作伙伴中心 [支持本地化的应用商店一览](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions)。 有关详细信息，请参阅[如何本地化你的Teams应用一览](../../../../concepts/build-and-test/apps-localization.md)。
+
+## <a name="complete-publisher-verification"></a>完成Publisher验证
+
+[Publisher应用商店](/azure/active-directory/develop/publisher-verification-overview)中列出的Teams应用需要验证。有关详细信息，请参阅[常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、[如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)应用标记为发布者验证和发布者[验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。
+
+## <a name="complete-publisher-attestation"></a>完整Publisher证明
+
+[Publisher应用商店](/microsoft-365-app-certification/docs/attestation)中列出的应用Teams证明也是必需的。 此过程包括完成对应用的安全性、数据处理和合规性做法的自我评估，从而有助于潜在客户做出有关使用应用的明智决定。
+
+> [!NOTE]
+> 如果你要提交新应用，则你无法正式完成Publisher证明，直到你的应用在应用商店Teams列出。 如果要更新列出的应用，请完成Publisher证明，然后再提交应用的最新版本进行验证。
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [提交应用](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)

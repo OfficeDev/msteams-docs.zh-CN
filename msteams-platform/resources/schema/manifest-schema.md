@@ -1,20 +1,20 @@
 ---
 title: 清单架构参考
-description: 介绍 Microsoft Teams 的清单架构
+description: 描述列表的清单Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 清单架构
-ms.openlocfilehash: db7cb777dfc0f6d56f0e4876afb3ae49ba7d9926
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 984a5de5b2c8e24f79269e62c3a7fd422ecce63f
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075708"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101805"
 ---
-# <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
+# <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
-Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) 。 早期版本 1.0-1.4 也受 URL ("v1.x") 。
+Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) 。 早期版本 1.0-1.4 也受 URL ("v1.x") 。
 
 以下架构示例显示了所有扩展性选项。
 
@@ -314,7 +314,7 @@ Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必�
 
 **必需** - Microsoft 应用 ID
 
-ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序通过 Microsoft Bot Framework 注册，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，则你有一个 ID。 必须在此处输入 ID。 否则，必须在 Microsoft 应用程序注册门户[中生成一个新 ID。](https://aka.ms/appregistrations) 如果添加自动程序，请使用同一 ID。
+ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序通过 Microsoft Bot Framework，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，则你有一个 ID。 必须在此处输入 ID。 否则，必须在 Microsoft 应用程序注册门户[中生成一个新 ID。](https://aka.ms/appregistrations) 如果添加自动程序，请使用同一 ID。
 
 > [!NOTE]
 > 如果你要向 AppSource 中的现有应用提交更新，则清单中的 ID 不得修改。
@@ -323,7 +323,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **必需** — object
 
-提供有关你的公司的信息。 对于提交到 AppSource (Office 应用商店) ，这些值必须与 AppSource 条目中的信息匹配。 有关 [其他信息，](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) 请参阅发布指南。
+指定有关你的公司的信息。 对于提交到应用商店Teams，这些值必须与应用商店一览中的信息匹配。 有关详细信息，请参阅应用商店Teams[指南](~/concepts/deploy-and-publish/appsource/publish.md)。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -337,7 +337,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **必需** — object
 
-在 Teams 体验中向用户显示的应用体验名称。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值必须不同。
+应用体验的名称，在应用体验中向Teams显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值必须不同。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -386,7 +386,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **必需** — object
 
-Teams 应用中使用的图标。 图标文件必须作为上传程序包的一部分包含在内。 有关详细信息 [，](../../concepts/build-and-test/apps-package.md#app-icons) 请参阅图标。
+在应用内使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。 有关详细信息 [，](../../concepts/build-and-test/apps-package.md#app-icons) 请参阅图标。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -413,8 +413,8 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
 |`canUpdateConfiguration`|boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值 **：true**。|
 |`context` |枚举数组|6 ||支持选项卡的范围 `contextItem` [集](../../tabs/how-to/access-teams-context.md)。 默认值 **：[channelTab、privateChatTab、meetingChatTab、meetingDetailsTab]**。|
-|`sharePointPreviewImage`|string|2048||指向用于 SharePoint 的选项卡预览图像的相对文件路径。 大小 1024x768。 |
-|`supportedSharePointHosts`|枚举数组|1||定义选项卡在 SharePoint 中的可用方法。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
+|`sharePointPreviewImage`|string|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
+|`supportedSharePointHosts`|枚举数组|1||定义选项卡如何可用于SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -428,7 +428,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |---|---|---|---|---|
 |`entityId`|string|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|string|128 个字符|✔|选项卡显示名称界面中的列数。|
-|`contentUrl`|string||✔|指向要显示在 Teams 画布中的实体 UI 的 https:// URL。|
+|`contentUrl`|string||✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
 |`websiteUrl`|string|||用户 https:// 在浏览器中查看时指向的 URL。|
 |`searchUrl`|string|||用于 https:// 搜索查询的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
@@ -436,7 +436,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 > [!NOTE]
 >  第三方开发人员无法使用 searchUrl 功能。
-> 如果你的选项卡需要与上下文相关的信息来显示相关内容或启动身份验证流，请参阅获取[Microsoft Teams 选项卡的上下文](../../tabs/how-to/access-teams-context.md)。
+> 如果你的选项卡需要与上下文相关的信息来显示相关内容或启动身份验证流，请参阅获取你的Microsoft Teams[上下文。](../../tabs/how-to/access-teams-context.md)
 
 ## <a name="bots"></a>bots
 
@@ -476,7 +476,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 **可选** — 数组
 
-`connectors`此块为应用定义 Office 365 连接器。
+`connectors`块为应用Office 365连接器。
 
 对象是一个数组， (类型的所有元素) 1 个元素 `object` 。 只有提供连接器的解决方案才需要此块。
 
@@ -508,7 +508,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-邮件扩展必须声明一个或多个命令。 每个命令在 Microsoft Teams 中显示为基于 UI 的入口点的潜在交互。 最多有 10 个命令。
+邮件扩展必须声明一个或多个命令。 每个命令都Microsoft Teams UI 入口点的潜在交互。 最多有 10 个命令。
 
 每个命令项都是具有以下结构的对象：
 
@@ -563,11 +563,11 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 **可选**，但 **已指出的必需** 项除外
 
-应用预期在 Teams 客户端内加载的网站的有效域列表。 域列表可以包含通配符，例如 `*.example.com` ， 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。 如果你的选项卡配置或内容 UI 需要导航到除用于选项卡配置的其他任何其他域，则必须在此处指定该域。
+应用预期在客户端内加载的网站的有效Teams列表。 域列表可以包含通配符，例如 `*.example.com` ， 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。 如果你的选项卡配置或内容 UI 需要导航到除用于选项卡配置的其他任何其他域，则必须在此处指定该域。
 
 不需要 **在** 应用中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不得在 `validDomains[]` accounts.google.com。
 
-需要自己的 sharepoint URL 正常运行的 Teams 应用在有效域列表中包括"{teamsitedomain}"。
+Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其有效域列表中的"{teamsitedomain}"。
 
 > [!IMPORTANT]
 > 不要直接添加或通过通配符添加超出您控制的域。 例如， `yourapp.onmicrosoft.com` 是有效的，但 `*.onmicrosoft.com` 是 无效。
@@ -578,7 +578,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 **可选** — object
 
-提供 Azure Active Directory (AAD) 应用 ID 和 Microsoft Graph 信息，以帮助用户无缝登录你的应用。 如果你的应用在 AAD 中注册，则必须提供应用 ID，以便管理员可以在 Teams 管理中心轻松查看权限并授予同意。
+提供你的Azure Active Directory (AAD) 应用 ID 和 Microsoft Graph 信息，以帮助用户无缝登录你的应用。 如果你的应用在 AAD 中注册，则必须提供应用 ID，以便管理员可以轻松地查看权限，并授予管理员Teams许可。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|

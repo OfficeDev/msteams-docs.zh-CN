@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d2967abdc6c0055eca8c94ed4e4a7fdf1bdba322
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020131"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101693"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
@@ -197,9 +197,11 @@ ms.locfileid: "52020131"
 
 ## <a name="best-practices"></a>最佳做法
 
-### <a name="content"></a>内容
+使用这些建议创建高质量的应用体验。
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示机器人最佳做法的示例。" border="false":::
+### <a name="content"></a>Content
+
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示建立清晰人物的自动程序最佳做法的示例。" border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>执行：建立一个清晰的人
 
@@ -209,7 +211,7 @@ ms.locfileid: "52020131"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示自动程序最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示以清楚地传达机器人可以执行哪些功能的示例。" border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>工作：清楚传达你的机器人可以做什么
 
@@ -217,7 +219,7 @@ ms.locfileid: "52020131"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="示例展示了自动程序最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="显示不遮盖机器人功能的示例。" border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>不要：遮住了机器人的功能
 
@@ -228,7 +230,7 @@ ms.locfileid: "52020131"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示自动程序最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示自动程序应识别非问题的示例。" border="false":::
 
 #### <a name="do-recognize-non-questions"></a>注意：识别非问题
 
@@ -236,7 +238,7 @@ ms.locfileid: "52020131"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="示例展示了自动程序最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="显示应避免对简单自动程序消息的不一致响应的示例。" border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>不要：错过一些可喜欢的机会
 
@@ -249,7 +251,7 @@ ms.locfileid: "52020131"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="自动程序最佳实践示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="显示自动程序的示例应帮助用户了解如何使用机器人。" border="false":::
 
 #### <a name="do-provide-help"></a>执行：提供帮助
 
@@ -257,7 +259,7 @@ ms.locfileid: "52020131"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="示例显示自动程序最佳做法。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="显示自动程序不应将用户设置成这样一个示例。" border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>请勿参与：将用户困
 
@@ -270,7 +272,7 @@ ms.locfileid: "52020131"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示自动程序最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示你可以将任务模块或选项卡与自动程序一起用于复杂交互的示例。" border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Do：使用任务模块或选项卡
 
@@ -278,7 +280,7 @@ ms.locfileid: "52020131"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="请参阅自动程序最佳实践示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="显示自动程序应避免多向交互的示例。" border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>不要：进行多元交互，件非常乏味
 
@@ -291,7 +293,7 @@ ms.locfileid: "52020131"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="示例展示了自动程序最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="显示自动程序应如何在个人上下文中显示私人信息的示例。" border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do：仅在个人上下文中显示敏感信息
 
@@ -299,7 +301,7 @@ ms.locfileid: "52020131"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="插图显示自动程序最佳做法。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="显示机器人不应向组或人员显示敏感信息的示例。" border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>不要：某些内容并非由每个人看到
 
@@ -308,17 +310,10 @@ ms.locfileid: "52020131"
    :::column-end:::
 :::row-end:::
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="see-also"></a>另请参阅
 
 以下其他准则可帮助你进行机器人设计：
 
 * [设计个人应用](../../concepts/design/personal-apps.md)
 * [设计自适应卡片](../../task-modules-and-cards/cards/design-effective-cards.md)
 * [设计任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-
-## <a name="validate-your-design"></a>验证你的设计
-
-如果计划将应用发布到 AppSource，应了解提交过程中通常会导致应用出现故障的设计问题。
-
-> [!div class="nextstepaction"]
-> [检查设计验证准则](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
