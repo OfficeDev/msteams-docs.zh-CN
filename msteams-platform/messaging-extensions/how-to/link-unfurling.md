@@ -1,7 +1,7 @@
 ---
 title: 链接展开
 author: clearab
-description: 如何在 Microsoft Teams 应用中使用消息传递扩展执行链接取消链接。
+description: 如何在应用程序应用中使用消息传递扩展Microsoft Teams链接。
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
@@ -21,7 +21,7 @@ ms.locfileid: "52075715"
 > [!NOTE]
 > 目前，移动客户端不支持链接取消展开。
 
-Azure DevOps 邮件扩展使用链接取消点击查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户已粘贴 Azure DevOps 中工作项的 URL，邮件扩展已解析为卡片：
+邮件Azure DevOps扩展使用链接取消链接查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户已粘贴邮件扩展已解析为Azure DevOps中工作项的 URL：
 
 ![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -34,7 +34,7 @@ Azure DevOps 邮件扩展使用链接取消点击查找粘贴到指向工作项�
 
 ### <a name="add-link-unfurling-using-app-studio"></a>使用 App Studio 添加链接取消链接
 
-1. 从 Microsoft Teams 客户端打开 **App Studio，** 然后选择清单 **编辑器** 选项卡。
+1. 从 **客户端** 打开 App Studio Microsoft Teams，然后选择"**清单编辑器"** 选项卡。
 1. 加载应用清单。
 1. 在 **"消息扩展** "页上，在"邮件处理程序"部分添加 **要查找的** 域。 下图说明了此过程：
 
@@ -75,7 +75,7 @@ Azure DevOps 邮件扩展使用链接取消点击查找粘贴到指向工作项�
 
 * [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 ### <a name="example"></a>示例

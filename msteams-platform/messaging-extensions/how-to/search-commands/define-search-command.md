@@ -1,7 +1,7 @@
 ---
 title: 定义消息传递扩展搜索命令
 author: clearab
-description: 为 Microsoft Teams 应用定义消息传递扩展搜索命令。
+description: 为应用程序定义消息传递扩展Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
 ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
@@ -43,7 +43,7 @@ ms.locfileid: "51696787"
 
 **创建搜索命令**
 
-1. 从 Microsoft Teams 客户端打开 **App Studio，** 然后选择清单 **编辑器** 选项卡。
+1. 从 **客户端** 打开 App Studio Microsoft Teams，然后选择"**清单编辑器"** 选项卡。
 1.  如果你已在 **App Studio** 中创建应用包，请从列表中选择。 如果尚未创建应用包，请导入现有应用包。
 1. 导入应用包后，选择 **功能下的** 消息传递 **扩展**。 你获得一个弹出窗口来设置邮件扩展。
 1. 选择 **窗口中** 的"设置"，将消息传递扩展包括在你的应用体验中。 下图显示了邮件扩展设置页面： 
@@ -80,9 +80,9 @@ ms.locfileid: "51696787"
 | `description` | 此属性是一个帮助文本，用于指示此命令执行哪些操作。 此值显示在 UI 中。 | 是 | 1.0 |
 | `type` | 此属性必须为 `query` 。 | 否 | 1.4 |
 |`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
-| `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]` 。 | 否 | 1.5 |
+| `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
-必须添加搜索参数的详细信息，该参数定义在 Teams 客户端中对用户可见的文本。
+您必须添加搜索参数的详细信息，该参数定义您的用户在 Teams 客户端中可见的文本。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
@@ -126,8 +126,8 @@ ms.locfileid: "51696787"
 
 | 示例名称           | 说明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams 消息传递扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams 消息传递扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>后续步骤
 

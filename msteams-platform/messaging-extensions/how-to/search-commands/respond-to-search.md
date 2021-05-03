@@ -1,7 +1,7 @@
 ---
 title: 响应搜索命令
 author: clearab
-description: 如何从 Microsoft Teams 应用中的消息扩展响应搜索命令。
+description: 如何从应用程序应用中的消息扩展响应Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
 ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
@@ -20,7 +20,7 @@ ms.locfileid: "52075631"
 * 在搜索框中输入字符时。
 * `initialRun` 在应用清单中设置为 true，一旦调用搜索命令，就会收到调用消息。 有关详细信息，请参阅默认 [查询](#default-query)。
 
-本文档指导你了解如何以卡片和预览形式响应用户请求，以及 Microsoft Teams 发布默认查询的条件。
+本文档指导您如何以卡片和预览形式响应用户请求，以及用户Microsoft Teams默认查询的条件。
 
 请求参数位于请求中的 对象中 `value` ，其中包括以下属性：
 
@@ -78,7 +78,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ## <a name="respond-to-user-requests"></a>响应用户请求
 
-当用户执行查询时，Microsoft Teams 会向服务发送同步 HTTP 请求。 此时，代码有 `5` 几秒钟时间提供对请求的 HTTP 响应。 在此期间，你的服务可以执行其他查找，或执行为请求提供服务所需的任何其他业务逻辑。
+当用户执行查询时，Microsoft Teams向服务发送同步 HTTP 请求。 此时，代码有 `5` 几秒钟时间提供对请求的 HTTP 响应。 在此期间，你的服务可以执行其他查找，或执行为请求提供服务所需的任何其他业务逻辑。
 
 服务必须使用与用户查询匹配的结果进行响应。 该响应必须指示 的 HTTP 状态代码以及具有以下属性的有效 `200 OK` 应用程序或 JSON 对象：
 
@@ -93,26 +93,26 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ### <a name="response-card-types-and-previews"></a>响应卡类型和预览
 
-Teams 支持以下卡片类型：
+Teams支持以下卡片类型：
 
 * [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 若要更好地了解卡片并概览卡片，请参阅 [什么是卡片](~/task-modules-and-cards/what-are-cards.md)。
 
 若要了解如何使用缩略图和 Hero 卡片类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-有关 Office 365 连接器卡的其他信息，请参阅使用 [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+有关连接器卡的其他Office 365，请参阅使用 Office 365[连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
-结果列表显示在 Microsoft Teams UI 中，并预览每个项目。 预览以以下两种方式之一生成：
+结果列表显示在项目 UI 中Microsoft Teams每个项目的预览。 预览以以下两种方式之一生成：
 
 * 在 `preview` 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
 * 从附件的基本 `title` 、 `text` 和 `image` 属性中提取。 只有在属性未设置且这些属性可用 `preview` 时，才使用这些属性。
 * 预览卡片不支持 Hero 或 Thumbnail 卡片按钮和点击操作（调用除外）。
 
-可以使用自适应卡片或 Office 365 连接器卡片的预览属性在结果列表中显示该卡片的预览。 如果结果已是 Hero 或 Thumbnail 卡片，则不需要预览属性。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不显示任何内容。
+可以使用自适应卡片或连接器Office 365预览属性在结果列表中显示该卡片的预览。 如果结果已是 Hero 或 Thumbnail 卡片，则不需要预览属性。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不显示任何内容。
 
 ### <a name="response-example"></a>响应示例
 
@@ -313,7 +313,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="default-query"></a>默认查询
 
-如果在清单中设置为 ，Microsoft Teams 将在用户首次打开消息传递扩展时发送 `initialRun` `true` 默认查询。  你的服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息时，这非常有用。
+如果在清单中设置为 ，则Microsoft Teams用户首次打开邮件扩展时，将发送 `initialRun` `true` 默认查询。  你的服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息时，这非常有用。
 
 默认查询的结构与任何常规用户查询相同，字段设置为 并设置为 `name` `initialRun` `value` `true` ，如以下对象所示：
 
@@ -340,10 +340,10 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | 描述 | .NET    | Node.js   |   
+| 示例名称           | 说明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams 消息传递扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams 消息传递扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>另请参阅
 

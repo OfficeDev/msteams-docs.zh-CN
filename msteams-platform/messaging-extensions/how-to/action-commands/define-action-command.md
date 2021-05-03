@@ -16,7 +16,7 @@ ms.locfileid: "52020714"
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-操作命令允许你向用户显示 Teams 中称为任务模块的模式弹出窗口。 任务模块收集或显示信息、处理交互并将信息发送回 Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
+操作命令允许你向用户显示名为任务模块的模式弹出窗口Teams。 任务模块收集或显示信息、处理交互并将信息发送回Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
 
 在创建操作命令之前，必须确定以下因素：
 
@@ -45,7 +45,7 @@ ms.locfileid: "52020714"
 
 除了选择命令的调用位置之外，还必须选择如何为用户填充任务模块中的窗体。 有以下三个选项用于创建在任务模块内呈现的窗体：   
 
-* **参数的静态列表**：这是最简单的方法。 可以在 Teams 客户端呈现的应用清单中定义参数列表，但在这种情况下无法控制格式。
+* **参数的静态列表**：这是最简单的方法。 可以在客户端呈现的应用清单中定义Teams列表，但在这种情况下无法控制格式。
 * **自适应卡片**：可以选择使用自适应卡片，该卡片可以更好地控制 UI，但仍限制可用控件和格式设置选项。
 * **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以便完全控制 UI 和控件。 
 
@@ -71,7 +71,7 @@ ms.locfileid: "52020714"
 
 **创建操作命令**
 
-1. 从 Microsoft Teams 客户端打开 **App Studio，** 然后选择清单 **编辑器** 选项卡。
+1. 从 **客户端** 打开 App Studio Microsoft Teams选择"**清单编辑器"** 选项卡。
 1. 如果你已在 **App Studio** 中创建应用包，请从列表中选择它。 如果尚未创建应用包，请导入现有应用包。
 1. 导入应用包后，在"功能"下 **选择**"消息传递 **扩展"。** 你获得一个弹出窗口来设置邮件扩展。
 1. 选择 **窗口中** 的"设置"，将消息传递扩展包括在你的应用体验中。 下图显示了消息扩展设置窗口：
@@ -87,7 +87,7 @@ ms.locfileid: "52020714"
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. 选择 **"允许用户在 Teams 内触发外部服务中的操作"。** 下图显示了操作命令选择：
+1. 选择 **"允许用户在外部服务中触发操作，同时在Teams"。** 下图显示了操作命令选择：
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
@@ -114,7 +114,7 @@ ms.locfileid: "52020714"
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. 选择“**保存**”。
+1. 选择 **保存**。
 1. 若要添加更多参数，请选择" **参数"部分** 中的" **添加"** 按钮。
 
 ### <a name="create-an-action-command-manually"></a>手动创建操作命令
@@ -125,29 +125,29 @@ ms.locfileid: "52020714"
 |---|---|---|---|
 | `id` | 此属性是分配给此命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
 | `title` | 此属性是命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 此属性必须是 `action` 。 | 不支持 | 1.4 |
-| `fetchTask` | 对于任务模块的自适应卡片或嵌入式 Web 视图，以及参数的静态列表或加载 Web 视图时，此属性 `true` `false` 设置为 `taskInfo` 。 | 不支持 | 1.4 |
-| `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 不支持 | 1.5 |
+| `type` | 此属性必须是 `action` 。 | 否 | 1.4 |
+| `fetchTask` | 对于任务模块的自适应卡片或嵌入式 Web 视图，以及参数的静态列表或加载 Web 视图时，此属性 `true` `false` 设置为 `taskInfo` 。 | 否 | 1.4 |
+| `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
 如果使用参数的静态列表，则还必须添加以下参数：
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-| `parameters` | 此属性描述命令的参数静态列表。 仅在 为 时 `fetchTask` 使用 `false` 。 | 不支持 | 1.0 |
+| `parameters` | 此属性描述命令的参数静态列表。 仅在 为 时 `fetchTask` 使用 `false` 。 | 否 | 1.0 |
 | `parameter.name` | 此属性描述参数的名称。 这将在用户请求中发送到你的服务。 | 是 | 1.0 |
 | `parameter.description` | 此属性描述参数的用途或应提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
-| `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 `text` `textarea` `number` `date` 、、、、、。 `time` `toggle` 默认值设置为 `text` 。 | 不支持 | 1.4 |
+| `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 `text` `textarea` `number` `date` 、、、、、。 `time` `toggle` 默认值设置为 `text` 。 | 否 | 1.4 |
 
 如果你使用的是嵌入式 Web 视图，可以选择添加 对象来获取 Web 视图， `taskInfo` 而无需直接调用机器人。 如果选择此选项，则其行为类似于使用静态参数列表的行为。 因此，与机器人的第一次 [交互是响应任务模块提交操作](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 如果使用对象 `taskInfo` ，则必须将 参数 `fetchTask` 设置为 `false` 。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 不支持 | 1.4 |
-|`taskInfo.title`|初始任务模块标题。 |不支持 | 1.4 |
-|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 `large` 、 `medium` 或 `small` ）。 |不支持 | 1.4 |
-|`taskInfo.height`|任务模块高度，以像素为单位或默认布局（如 、 `large` `medium` 或 `small` ）。|不支持 | 1.4 |
-|`taskInfo.url`|初始 Web 视图 URL。|不支持 | 1.4 | 
+|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 否 | 1.4 |
+|`taskInfo.title`|初始任务模块标题。 |否 | 1.4 |
+|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 `large` 、 `medium` 或 `small` ）。 |否 | 1.4 |
+|`taskInfo.height`|任务模块高度，以像素为单位或默认布局（如 、 `large` `medium` 或 `small` ）。|否 | 1.4 |
+|`taskInfo.url`|初始 Web 视图 URL。|否 | 1.4 | 
 
 #### <a name="app-manifest-example"></a>应用清单示例
 
@@ -205,8 +205,8 @@ ms.locfileid: "52020714"
 
 | 示例名称           | 说明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams 消息传递扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams 消息传递扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>后续步骤
 

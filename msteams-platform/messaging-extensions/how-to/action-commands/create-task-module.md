@@ -30,7 +30,7 @@ ms.locfileid: "52075589"
 |`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask` 。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
-|`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
+|`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
 |`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
@@ -80,7 +80,7 @@ ms.locfileid: "52075589"
 |`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask` 。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
-|`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
+|`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
 |`channelData.source.name`| 调用任务模块的源名称。 |
 |`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
@@ -130,7 +130,7 @@ ms.locfileid: "52075589"
 |`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask` 。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
-|`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
+|`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
 |`channelData.source.name`| 调用任务模块的源名称。 |
 |`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
@@ -187,7 +187,7 @@ ms.locfileid: "52075589"
 |`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask` 。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
-|`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
+|`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
 |`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
@@ -253,7 +253,7 @@ ms.locfileid: "52075589"
 |`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask` 。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
-|`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
+|`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
 |`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
@@ -362,7 +362,7 @@ ms.locfileid: "52075589"
 |`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask` 。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
-|`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
+|`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
 |`channelData.source.name`| 调用任务模块的源名称。 |
 |`value.commandId` | 包含已调用的命令的 ID。 |
@@ -628,7 +628,7 @@ taskInfo 对象的架构为：
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-除了 Bot Framework SDK 之外，此示例还使用 [AdaptiveCards NuGet](https://www.nuget.org/packages/AdaptiveCards) 程序包。
+此示例除了使用 Bot Framework SDK NuGet还使用[AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) NuGet包。
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -939,10 +939,10 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | 描述 | .NET    | Node.js   |   
+| 示例名称           | 说明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams 消息传递扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams 消息传递扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>另请参阅
 

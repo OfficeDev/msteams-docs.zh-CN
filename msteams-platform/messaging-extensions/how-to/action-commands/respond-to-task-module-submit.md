@@ -17,7 +17,7 @@ ms.locfileid: "52019830"
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 本文档将指导你应用如何响应操作命令，如用户的任务模块提交操作。
-在用户提交任务模块后，Web 服务会收到一条调用消息，该消息包含 `composeExtension/submitAction` 命令 ID 和参数值。 你的应用有五秒钟时间响应调用，否则用户会收到错误消息"无法访问应用"，并且 Teams客户端将忽略对调用的任何回复。
+在用户提交任务模块后，Web 服务会收到一条调用消息，该消息包含 `composeExtension/submitAction` 命令 ID 和参数值。 你的应用有五秒钟时间响应调用，否则用户会收到一条错误消息"无法访问应用"，调用的任何回复都由 Teams 客户端忽略。
 
 有以下选项可以响应：
 
@@ -544,7 +544,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ![用户属性自动程序](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
-若要在团队中使用用户属性，必须在发送到 Teams 的有效负载中添加 `OnBehalfOf` mention `ChannelData` `Activity` 实体。
+若要在团队中使用用户属性，必须在发送到团队的有效负载中添加 `OnBehalfOf` mention `ChannelData` `Activity` Teams。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
 
@@ -595,8 +595,8 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 | 示例名称           | 说明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams 消息传递扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams 消息传递扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>后续步骤
 

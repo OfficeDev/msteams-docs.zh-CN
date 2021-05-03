@@ -18,13 +18,13 @@ ms.locfileid: "52019823"
 
 ## <a name="code-sample"></a>代码示例
 
-GitHub 上示例项目的 Teams 搜索身份验证配置演示了如何创建包含配置页面和自动程序服务身份验证的消息扩展。 这些示例还演示如何创建接受搜索请求的邮件扩展，并返回用户登录后的结果。
+The Teams Search Auth Config for sample projects on GitHub， demonstrate how to create messaging extensions that include a configuration page and Bot Service authentication. 这些示例还演示如何创建接受搜索请求的邮件扩展，并返回用户登录后的结果。
 
-| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|
 | 自动程序生成器 | 创建邮件扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## <a name="additional-code-sample"></a>其他代码示例
 
 > [!div class="nextstepaction"]
-> [在 GitHub 上查看更多 Bot Framework 示例](https://github.com/microsoft/BotBuilder-Samples)
+> [查看更多 Bot Framework 示例GitHub](https://github.com/microsoft/BotBuilder-Samples)

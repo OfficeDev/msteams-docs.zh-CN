@@ -30,7 +30,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 - **如何将机器人部署到 Azure 并将其与标识提供程序关联**。 提供程序根据用户登录凭据颁发令牌。 机器人可以使用令牌访问需要身份验证的资源，如邮件服务。 有关详细信息，请参阅[Microsoft Teams的身份验证流](auth-flow-bot.md)。
 - **如何将自动程序集成到 Microsoft Teams。** 集成自动程序后，可以在聊天中登录并交换消息。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 - 了解[自动程序基础知识][concept-basics][、管理状态][concept-state][、对话框库][concept-dialogs]以及如何[实现顺序对话流][simple-dialog]。
 - 了解 Azure 和 OAuth 2.0 开发。
