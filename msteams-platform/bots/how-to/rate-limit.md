@@ -1,21 +1,21 @@
 ---
 title: 通过团队中的速率限制来优化你的智能机器人
-description: Microsoft Teams 中的速率限制和最佳做法
+description: 速率限制和解决方案中的Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams 机器人速率限制
-ms.openlocfilehash: 23d75e7df021a5c746c4dd23d848ac085294c160
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020896"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230958"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 
 速率限制是一种将邮件限制为特定最大频率的方法。 一般来说，您的应用程序必须限制向单个聊天或频道对话发布的消息数。 这可确保最佳体验，并且邮件不会显示为垃圾邮件给用户。
 
-为了保护 Microsoft Teams 及其用户，机器人 API 提供了传入请求的速率限制。 超过此限制的应用将收到 `HTTP 429 Too Many Requests` 错误状态。 所有请求都受同一速率限制策略的限制，包括发送邮件、频道枚举和名单提取。
+为了保护Microsoft Teams用户，自动程序 API 为传入请求提供了速率限制。 超过此限制的应用将收到 `HTTP 429 Too Many Requests` 错误状态。 所有请求都受同一速率限制策略的限制，包括发送邮件、频道枚举和名单提取。
 
 由于速率限制的确切值可能会发生变化，因此当 API 返回 时，应用程序必须实现相应的退步行为 `HTTP 429 Too Many Requests` 。
 
@@ -80,7 +80,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-可以使用瞬态故障处理执行回发 [并重试](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 有关获取和安装 NuGet 程序包的指南，请参阅将瞬态 [错误处理应用程序块添加到你的解决方案](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 另请参阅 [瞬态故障处理](/azure/architecture/best-practices/transient-faults)。
+可以使用瞬态故障处理执行回发 [并重试](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 有关获取和安装 NuGet程序包的指南，请参阅将瞬态错误处理[应用程序块添加到你的解决方案](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 另请参阅 [瞬态故障处理](/azure/architecture/best-practices/transient-faults)。
 
 完成检测暂时性异常的示例后，请浏览指数退步示例。 可以使用指数退步，而不是在失败时重试。
 
@@ -121,12 +121,12 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 >[!NOTE]
 > * 3600 秒和 1800 个操作线程限制仅适用于向单个用户发送多个自动程序消息的情况。 
-> * 每个租户每个应用的全局限制为每秒 30 个请求数 (RPS) 。 因此，每秒自动程序消息总数不能超过线程限制。
+> * 每个租户每个应用的全局限制为每秒 50 个请求数 (RPS) 。 因此，每秒自动程序消息总数不能超过线程限制。
 > * 服务级别的邮件拆分结果高于预期的 RPS。 如果担心接近限制，则必须实施 [退约策略](#backoff-example)。 本节中提供的值仅用于估计。
 
 下表提供了每个机器人每个线程的限制：
 
-| 方案 | 时间段（以秒表示） | 允许的最大操作数 |
+| 应用场景 | 时间段（以秒表示） | 允许的最大操作数 |
 | --- | --- | --- |
 | 发送到对话 | 1 | 7  |
 | 发送到对话 | 2 | 8  |
@@ -156,7 +156,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 下表提供了所有自动程序每线程的限制：
 
-| 方案 | 时间段（以秒表示） | 允许的最大操作数 |
+| 应用场景 | 时间段（以秒表示） | 允许的最大操作数 |
 | --- | --- | --- |
 | 发送到对话 | 1 | 14  |
 | 发送到对话 | 2 | 16  |

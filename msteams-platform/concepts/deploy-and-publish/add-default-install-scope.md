@@ -4,18 +4,26 @@ description: 介绍如何指定应用的默认安装选项。
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 0afcce50a4779421016c23c4ec4e3d25cc3401d1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 561a4f2910e703db5ffce6176f6177dfd661d2ce
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058612"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230930"
 ---
-# <a name="add-a-default-install-scope-and-group-capability"></a>添加默认安装范围和组功能
+# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>配置应用的默认安装Microsoft Teams选项
 
 应用通常支持 Teams 中的多个方案，但你在设计时可能记住了特定的范围和功能。 例如，如果你的应用主要用于团队或频道，你可以确保用户在应用商店中看到的第一个安装选项是添加到 **团队**。
 
-![添加应用](../../assets/images/compose-extensions/addanapp.png)
+:::row:::
+   :::column span="2":::
+
+![添加应用下拉列表示例](../../assets/images/compose-extensions/addanapp.png)
+
+   :::column-end:::
+   :::column span="2":::
+   :::column-end:::
+:::row-end:::
 
 如果你的应用的主要功能是自动程序，则还可以在用户将应用安装到团队时使机器人成为默认功能。
 
@@ -65,4 +73,4 @@ ms.locfileid: "52058612"
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [选择如何发布应用程序](overview.md)
+> [创建应用包](~/concepts/build-and-test/apps-package.md)

@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: d46d21c3d984b5688c00857e485210b0f0fcf2c7
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: f73e36ca0587768421daf60229d0a241cae171e1
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101679"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230937"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
@@ -182,7 +182,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ## <a name="complete-publisher-verification"></a>完成Publisher验证
 
-[Publisher应用商店](/azure/active-directory/develop/publisher-verification-overview)中列出的Teams应用需要验证。有关详细信息，请参阅[常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、[如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)应用标记为发布者验证和发布者[验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。
+[Publisher应用商店](/azure/active-directory/develop/publisher-verification-overview)中列出的Teams应用需要验证。 有关详细信息，请参阅 [常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、 [如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)应用标记为发布者验证和发布者 [验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。
 
 ## <a name="complete-publisher-attestation"></a>完整Publisher证明
 
@@ -194,4 +194,4 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [提交应用](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
+> [提交你的应用](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)

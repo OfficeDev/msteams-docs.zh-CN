@@ -4,12 +4,12 @@ description: 介绍提交到 AppSource 应用商店Teams应用 (应用) 必须�
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: b4b9260be2a92c3a9029acf89b2eadae60a8fc7a
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: df60cf9e4a173186fbacacc90621c2efb23ba17f
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101890"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230923"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams应用商店验证指南
 
@@ -31,6 +31,7 @@ ms.locfileid: "52101890"
 * 如果你的应用是与 Microsoft 官方合作关系的一部分，则应用名称必须先 (例如 **Contoso Connector for Microsoft Teams**) 。
 * 不得复制应用商店中列出的应用名称或商业市场的其他产品/服务。
 * 不得包含冒犯性或冒犯性术语。 该名称不得包含种族或文化不敏感的语言。
+* 必须是唯一的。 例如，你不能为同一名称和功能不同的区域列出多个应用。
 
 另请参阅 [：4.0 应用包和应用商店一览](#40-app-package-and-store-listing)
 

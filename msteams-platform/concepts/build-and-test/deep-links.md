@@ -4,23 +4,23 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: 5ce9e4e1d86c6b4c040901fc9d6de10ff98a42e0
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: a7d1490fb2066df1fdd8727b78a1a3047a91c53f
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075596"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230951"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
-可以在 Teams 内创建指向信息和功能的链接。 创建深层链接很有用的方案如下所示：
+您可以创建指向网站内的信息和功能Teams。 创建深层链接很有用的方案如下所示：
 
 * 将用户导航到应用选项卡之一中的内容。 例如，你的应用可以有一个自动程序，用于向用户发送重要活动通知消息。 当用户点击通知时，深层链接将导航到选项卡，以便用户可以查看有关活动的更多详细信息。
 * 你的应用通过使用所需参数预先填充深层链接来自动执行或简化某些用户任务，例如创建聊天或安排会议。 这样可以避免用户手动输入信息。
 
 > [!NOTE]
 >
-> 深层链接在导航到内容之前先启动浏览器。 Teams 实体上深层链接的行为如下所示：
+> 深层链接在导航到内容之前先启动浏览器。 深入链接对实体Teams行为如下：
 >
 > **Tab**：  
 > ✔直接导航到深度链接 URL。
@@ -36,7 +36,7 @@ ms.locfileid: "52075596"
 
 ## <a name="deep-linking-to-your-tab"></a>到选项卡的深层链接
 
-可以在 Teams 中创建指向实体的深层链接。 这用于创建导航到选项卡中的内容和信息的链接。例如，如果选项卡包含任务列表，工作组成员可以创建并共享指向单个任务的链接。 选择该链接时，它将导航到以特定项目为焦点的选项卡。 若要实现此目标，你可以以 **最适合** 你的 UI 的任何方式向每个项目添加一个复制链接操作。 当用户执行该操作时，调用 以显示一个对话框，其中包含用户可 `shareDeepLink()` 复制到剪贴板的链接。 进行此调用时，还会传递项目的 ID，在单击链接并重新加载选项卡时，会返回[](~/tabs/how-to/access-teams-context.md)上下文 ID。
+可以创建指向网站中的实体的深层Teams。 这用于创建导航到选项卡中的内容和信息的链接。例如，如果选项卡包含任务列表，工作组成员可以创建并共享指向单个任务的链接。 选择该链接时，它将导航到以特定项目为焦点的选项卡。 若要实现此目标，你可以以 **最适合** 你的 UI 的任何方式向每个项目添加一个复制链接操作。 当用户执行该操作时，调用 以显示一个对话框，其中包含用户可 `shareDeepLink()` 复制到剪贴板的链接。 进行此调用时，还会传递项目的 ID，在单击链接并重新加载选项卡时，会返回[](~/tabs/how-to/access-teams-context.md)上下文 ID。
 
 或者，您也可以使用本主题稍后指定的格式以编程方式生成深层链接。 可以在机器人 [和连接器消息](~/bots/what-are-bots.md) 中 [使用](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) 深层链接，以通知用户选项卡或其中项目的更改。
 
@@ -69,8 +69,8 @@ ms.locfileid: "52075596"
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> 如果机器人发送包含深层链接的消息，则当用户选择链接时将打开 `TextBlock` 一个新的浏览器选项卡。 这发生在 Chrome 和 Microsoft Teams 桌面应用中，两者均在 Linux 上运行。
-> 如果机器人将相同的深层链接 URL 发送到 ，则当用户选择链接时，将在当前浏览器选项卡中打开 Teams `Action.OpenUrl` 选项卡。 未打开新的浏览器选项卡。
+> 如果机器人发送包含深层链接的消息，则当用户选择链接时将打开 `TextBlock` 一个新的浏览器选项卡。 这发生在 Chrome 和 Microsoft Teams 桌面应用中，这两者均在 Linux 上运行。
+> 如果自动程序将同一深层链接 URL 发送到 ，则当用户选择链接时，Teams当前浏览器选项卡中将打开"自动 `Action.OpenUrl` 链接"选项卡。 未打开新的浏览器选项卡。
 
 查询参数包括：
 
@@ -80,9 +80,9 @@ ms.locfileid: "52075596"
 | `entityId`&emsp; | 选项卡中项的 ID，在配置选项卡 [时提供](~/tabs/how-to/create-tab-pages/configuration-page.md)。|Tasklist123|
 | `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段。 | https://tasklist.example.com/123 或 https://tasklist.example.com/list123/task456 |
 | `entityLabel` 或 `subEntityLabel`&emsp; | 选项卡中项的标签，用于显示深层链接时。 | 任务列表 123 或"任务 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象</br></br> * 选项卡内项的 ID。 </br></br> * 选项卡上下文中提供的 Microsoft Teams 频道[ID。](~/tabs/how-to/access-teams-context.md) | 
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象</br></br> * 选项卡内项的 ID。 </br></br> * Microsoft Teams上下文提供的信息通道[ID。](~/tabs/how-to/access-teams-context.md) | 
 | `subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
-| `channelId`&emsp; | 选项卡上下文中提供的 Microsoft Teams 频道[ID。](~/tabs/how-to/access-teams-context.md) 此属性仅在具有团队作用域的可配置选项卡 **中可用**。 它在静态选项卡中不可用，静态选项卡具有个人 **作用域**。| 19：cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `channelId`&emsp; | 选项卡Microsoft Teams中提供的信息通道[ID。](~/tabs/how-to/access-teams-context.md) 此属性仅在具有团队作用域的可配置选项卡 **中可用**。 它在静态选项卡中不可用，静态选项卡具有个人 **作用域**。| 19：cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
 示例：
 
@@ -102,13 +102,13 @@ ms.locfileid: "52075596"
 
 ### <a name="consuming-a-deep-link-from-a-tab"></a>从选项卡使用深层链接
 
-导航到深层链接时，Microsoft Teams 只需导航到该选项卡，并通过 Microsoft Teams JavaScript 库提供一种机制来检索子实体 ID（如果存在）。
+导航到深层链接时，Microsoft Teams导航到选项卡，并通过 Microsoft Teams JavaScript 库提供一种机制，以检索子实体 ID（如果存在）。
 
 如果 [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) 选项卡通过深层链接导航，则调用将返回包含 `subEntityId` 字段的上下文。
 
 ## <a name="deep-linking-from-your-tab"></a>选项卡中的深层链接
 
-你可以从选项卡深入链接到 Teams 中的内容。如果你的选项卡需要链接到 Teams 中其他内容（如频道、消息、其他选项卡或甚至打开计划对话框），这将非常有用。 若要从选项卡触发深层链接，应调用：
+可以从选项卡深入链接到Teams中的内容。如果你的选项卡需要链接到其他内容（如Teams、消息、其他选项卡或者甚至打开计划对话框，这将非常有用。 若要从选项卡触发深层链接，应调用：
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
@@ -128,7 +128,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 通过指定一组参与者，可以创建指向用户之间的私人聊天的深层链接。 如果指定参与者不存在聊天，则链接将用户导航到空的新聊天。 在用户发送第一条消息之前，会以草稿状态创建新聊天。 否则，您可以指定聊天的名称（如果它不存在）以及应插入到用户的撰写框中的文本。 你可以将此功能视为用户执行手动操作以导航到或创建聊天，然后键入消息的快捷方式。
 
-例如，如果你将 Office 365 用户配置文件作为卡片从自动程序返回，此深层链接可以让用户轻松地与此人聊天。
+例如，如果你将一个Office 365作为卡片从自动程序返回一个用户配置文件，则此深层链接可以让用户轻松地与此人聊天。
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>生成聊天的深层链接
 
@@ -159,7 +159,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 * `objectUrl`：文件的对象 URL， https://microsoft.sharepoint.com/teams/(filepath)
 * `baseUrl`：文件的基本 URL， https://microsoft.sharepoint.com/teams
 * `serviceName`：服务名称、应用 ID
-* `threadId`：threadId 是存储文件的团队的团队 ID。 它是可选的，不能为存储在用户的 OneDrive 文件夹中的文件设置。 threadId - 19：f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `threadId`：threadId 是存储文件的团队的团队 ID。 它是可选的，并且不能为存储在用户的"文件夹"文件夹中OneDrive设置。 threadId - 19：f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`：文件组 ID ae063b79-5315-4ddb-ba70-27328ba6c31e
 
 以下是指向文件的深层链接的示例格式：
@@ -178,13 +178,13 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## <a name="deep-links-for-sharepoint-framework-tabs"></a>SharePoint 框架选项卡的深层链接
+## <a name="deep-links-for-sharepoint-framework-tabs"></a>选项卡的SharePoint 框架链接
 
 以下深层链接格式可用于机器人、连接器或邮件扩展卡： `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
-> 当机器人发送带深层链接的 TextBlock 消息时，当用户选择该链接时，将打开一个新的浏览器选项卡。 在 Linux 上运行的 Chrome 和 Microsoft Teams 桌面应用程序中会发生此情况。
-> 如果机器人将相同的深层链接 URL 发送到 ，则当用户选择链接时 `Action.OpenUrl` ，"Teams"选项卡将在当前浏览器中打开。 未打开新的浏览器选项卡。
+> 当机器人发送带深层链接的 TextBlock 消息时，当用户选择该链接时，将打开一个新的浏览器选项卡。 这发生在 Chrome 和Microsoft Teams Linux 上运行的桌面应用中。
+> 如果自动程序将同一深层链接 URL 发送到 ，Teams当用户选择链接时，将在当前浏览器中打开"自动 `Action.OpenUrl` 链接"选项卡。 未打开新的浏览器选项卡。
 
 查询参数包括：
 
@@ -201,7 +201,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 > [!NOTE]
 > 此功能目前处于开发人员预览阶段。
 
-可以创建指向 Teams 内置计划对话框的深层链接。 如果你的应用可帮助用户完成日历或计划相关任务，这将特别有用。
+可以创建指向内置计划Teams的深层链接。 如果你的应用可帮助用户完成日历或计划相关任务，这将特别有用。
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>生成到计划对话框的深层链接
 
@@ -224,10 +224,11 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称 | 描述 | .NET |
-|-------------|-------------|------|
-| 使用下级 ID 的深层链接 | 用于演示从聊天机器人聊天到选项卡使用子企业 ID 的深层链接的 Microsoft Teams 示例应用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+| 示例名称 | 说明 | C# |Node.js|
+|-------------|-------------|------|----|
+|使用下级 ID 的深层链接  |Microsoft Teams聊天到选项卡使用子企业 ID 的深层链接的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 
 [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+
