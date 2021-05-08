@@ -6,7 +6,6 @@
     - name: 新变化？
       href: whats-new.md
 - name: 入门
-  expanded: true
   items:
     - name: 概述
       href: build-your-first-app/build-first-app-overview.md
@@ -424,7 +423,7 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: 维护已发布的应用程序
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-- name: 清单
+- name: 应用部件清单
   items:
     - name: 应用程序清单架构
       href: resources/schema/manifest-schema.md
