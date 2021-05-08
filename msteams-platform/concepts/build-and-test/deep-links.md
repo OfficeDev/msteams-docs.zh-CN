@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: a7d1490fb2066df1fdd8727b78a1a3047a91c53f
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
+ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230951"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "52278150"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -46,7 +46,7 @@ ms.locfileid: "52230951"
 >[!NOTE]
 > 目前，shareDeepLink 在移动平台上不起作用。
 
-### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>显示指向选项卡内项目的深层链接
+### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>显示指向选项卡内某个项目的深层链接
 
 若要显示包含指向选项卡内项目的深层链接的对话框，请调用 `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
@@ -56,7 +56,7 @@ ms.locfileid: "52230951"
 * `subEntityLabel`：用于显示深层链接的项的标签。
 * `subEntityWebUrl`：在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段。
 
-### <a name="generating-a-deep-link-to-your-tab"></a>生成指向选项卡的深层链接
+### <a name="generate-a-deep-link-to-your-tab"></a>生成指向选项卡的深层链接
 
 > [!NOTE]
 > 个人选项卡具有 `personal` 范围，而频道和组选项卡使用 `team` 或 `group` 作用域。 这两个选项卡类型的语法略有不同，因为只有可配置的选项卡具有与其 `channel` 上下文对象关联的属性。 有关 [选项卡](~/resources/schema/manifest-schema.md) 作用域详细信息，请参阅清单参考。
@@ -100,7 +100,7 @@ ms.locfileid: "52230951"
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### <a name="consuming-a-deep-link-from-a-tab"></a>从选项卡使用深层链接
+### <a name="consume-a-deep-link-from-a-tab"></a>从选项卡使用深层链接
 
 导航到深层链接时，Microsoft Teams导航到选项卡，并通过 Microsoft Teams JavaScript 库提供一种机制，以检索子实体 ID（如果存在）。
 
@@ -196,14 +196,14 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 示例：https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="linking-to-the-scheduling-dialog"></a>链接到计划对话框
+## <a name="deep-link-to-the-scheduling-dialog"></a>到计划对话框的深层链接
 
 > [!NOTE]
 > 此功能目前处于开发人员预览阶段。
 
 可以创建指向内置计划Teams的深层链接。 如果你的应用可帮助用户完成日历或计划相关任务，这将特别有用。
 
-### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>生成到计划对话框的深层链接
+### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>生成到计划对话框的深层链接
 
 对可以在自动程序、连接器或邮件扩展卡中使用的深层链接使用以下格式： `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
@@ -221,6 +221,29 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 > 目前不支持指定位置。 你必须指定 UTC 偏移量，它表示生成开始时间和结束时间时时区。
 
 若要将此深层链接与自动程序一同使用，可以在卡片按钮中指定此链接作为 URL 目标，或点击操作类型 `openUrl` 中的操作。
+
+## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>到音频或音频视频呼叫的深层链接
+
+可以通过将呼叫类型指定为 *audio* 或 *av* 以及参与者来创建深层链接，以调用单个用户或一组用户的仅音频或音频视频呼叫。 调用深层链接之后和发出呼叫之前，Teams客户端会提示确认进行呼叫。 对于组呼叫，可以在相同的深度链接调用中调用一组 VoIP 用户和一组 PSTN 用户。 
+
+对于视频呼叫，客户端将要求确认，并打开呼叫者的视频。 呼叫接收者可以选择仅通过音频或音频和视频，通过呼叫通知Teams进行响应。
+
+> [!NOTE]
+> 此深度链接不能用于调用会议。
+
+### <a name="generate-a-deep-link-to-a-chat"></a>生成聊天的深层链接
+
+| 深层链接 | Format | 示例 |
+|-----------|--------|---------|
+| 进行音频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; &lt; 、user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
+| 进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; &lt; ，user2 &gt;&video=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
+|使用可选参数源进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ， &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| 对 VoIP 和 PSTN 用户的组合进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ，4： &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+  
+以下是查询参数：
+* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Azure AD UserPrincipalName（通常为电子邮件地址）或 PSTN 呼叫时，支持 pstn mri &lt; 4：phonenumber &gt; 。
+* `Withvideo`：这是可选参数，可用于进行视频呼叫。 设置此参数将仅打开呼叫者的相机。 呼叫接收者可以选择通过音频或音频和视频呼叫通过呼叫通知窗口Teams进行应答。 
+* `Source`：这是一个可选参数，用于通知深层链接的来源。
 
 ## <a name="code-sample"></a>代码示例
 
