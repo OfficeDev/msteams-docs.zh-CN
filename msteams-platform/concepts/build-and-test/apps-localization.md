@@ -12,41 +12,41 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/30/2021
 ms.locfileid: "52101707"
 ---
-# <a name="localization-for-microsoft-teams-apps"></a><span data-ttu-id="4c88b-104">应用程序Microsoft Teams本地化</span><span class="sxs-lookup"><span data-stu-id="4c88b-104">Localization for Microsoft Teams apps</span></span>
+# <a name="localization-for-microsoft-teams-apps"></a><span data-ttu-id="7db1c-104">应用程序Microsoft Teams本地化</span><span class="sxs-lookup"><span data-stu-id="7db1c-104">Localization for Microsoft Teams apps</span></span>
 
-<span data-ttu-id="4c88b-105">在本地化Microsoft Teams应用时，必须考虑以下事项：</span><span class="sxs-lookup"><span data-stu-id="4c88b-105">When localizing your Microsoft Teams app, you must consider the following:</span></span>
+<span data-ttu-id="7db1c-105">在本地化Microsoft Teams应用时，必须考虑以下事项：</span><span class="sxs-lookup"><span data-stu-id="7db1c-105">When localizing your Microsoft Teams app, you must consider the following:</span></span>
 
-1. <span data-ttu-id="4c88b-106">如果Teams， (应用商店一) 。</span><span class="sxs-lookup"><span data-stu-id="4c88b-106">Your Teams store listing (if applicable).</span></span>
-1. <span data-ttu-id="4c88b-107">应用清单中面向最终用户的字符串 (自动程序命令) 。</span><span class="sxs-lookup"><span data-stu-id="4c88b-107">The end-user facing strings in your app manifest (for example bot commands).</span></span>
-1. <span data-ttu-id="4c88b-108">响应从用户提交的本地化文本。</span><span class="sxs-lookup"><span data-stu-id="4c88b-108">Responding to localized text submitted from your users.</span></span>
+1. <span data-ttu-id="7db1c-106">如果Teams， (应用商店一) 。</span><span class="sxs-lookup"><span data-stu-id="7db1c-106">Your Teams store listing (if applicable).</span></span>
+1. <span data-ttu-id="7db1c-107">应用清单中面向最终用户的字符串 (自动程序命令) 。</span><span class="sxs-lookup"><span data-stu-id="7db1c-107">The end-user facing strings in your app manifest (for example bot commands).</span></span>
+1. <span data-ttu-id="7db1c-108">响应从用户提交的本地化文本。</span><span class="sxs-lookup"><span data-stu-id="7db1c-108">Responding to localized text submitted from your users.</span></span>
 
-## <a name="localizing-your-appsource-listing"></a><span data-ttu-id="4c88b-109">本地化 AppSource 一览</span><span class="sxs-lookup"><span data-stu-id="4c88b-109">Localizing your AppSource listing</span></span>
+## <a name="localizing-your-appsource-listing"></a><span data-ttu-id="7db1c-109">本地化 AppSource 一览</span><span class="sxs-lookup"><span data-stu-id="7db1c-109">Localizing your AppSource listing</span></span>
 
-<span data-ttu-id="4c88b-110">若要发布到应用商店，需要注意，尚不支持本地化 AppSource 一览。</span><span class="sxs-lookup"><span data-stu-id="4c88b-110">If you're publishing to the store, you need to be aware that localizing your AppSource listing is not yet supported.</span></span> <span data-ttu-id="4c88b-111">但是，在准备支持应用商店中的本地化一览时，你可以向一览添加其他语言。</span><span class="sxs-lookup"><span data-stu-id="4c88b-111">However, in preparation for support for localized listings in the app store you can add additional languages to your listing.</span></span> <span data-ttu-id="4c88b-112">目前，只有 (在合作伙伴中心) 中为一览提供的默认语言语言信息将显示在[](/office/dev/store/submit-to-appsource-via-partner-center)[应用的 AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)网站一览中。</span><span class="sxs-lookup"><span data-stu-id="4c88b-112">Currently only the default (English) language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing will appear in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) listing for your app.</span></span>
+<span data-ttu-id="7db1c-110">若要发布到应用商店，需要注意，尚不支持本地化 AppSource 一览。</span><span class="sxs-lookup"><span data-stu-id="7db1c-110">If you're publishing to the store, you need to be aware that localizing your AppSource listing is not yet supported.</span></span> <span data-ttu-id="7db1c-111">但是，在准备支持应用商店中的本地化一览时，你可以向一览添加其他语言。</span><span class="sxs-lookup"><span data-stu-id="7db1c-111">However, in preparation for support for localized listings in the app store you can add additional languages to your listing.</span></span> <span data-ttu-id="7db1c-112">目前，只有 (在合作伙伴中心) 中为一览提供的默认语言语言信息将显示在[](/office/dev/store/submit-to-appsource-via-partner-center)[应用的 AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)网站一览中。</span><span class="sxs-lookup"><span data-stu-id="7db1c-112">Currently only the default (English) language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing will appear in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) listing for your app.</span></span>
 
-### <a name="example-of-configuring-localization"></a><span data-ttu-id="4c88b-113">配置本地化的示例</span><span class="sxs-lookup"><span data-stu-id="4c88b-113">Example of configuring localization</span></span>
+### <a name="example-of-configuring-localization"></a><span data-ttu-id="7db1c-113">配置本地化的示例</span><span class="sxs-lookup"><span data-stu-id="7db1c-113">Example of configuring localization</span></span>
 
-<span data-ttu-id="4c88b-114">若要为应用配置其他语言，请在合作伙伴中心[](/office/dev/store/submit-to-appsource-via-partner-center)中选择英语和应用的其他语言。</span><span class="sxs-lookup"><span data-stu-id="4c88b-114">To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app.</span></span> <span data-ttu-id="4c88b-115">本示例使用法语。</span><span class="sxs-lookup"><span data-stu-id="4c88b-115">French is used in this example.</span></span>
+<span data-ttu-id="7db1c-114">若要为应用配置其他语言，请在合作伙伴中心[](/office/dev/store/submit-to-appsource-via-partner-center)中选择英语和应用的其他语言。</span><span class="sxs-lookup"><span data-stu-id="7db1c-114">To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app.</span></span> <span data-ttu-id="7db1c-115">本示例使用法语。</span><span class="sxs-lookup"><span data-stu-id="7db1c-115">French is used in this example.</span></span>
 
-1. <span data-ttu-id="4c88b-116">添加英语语言</span><span class="sxs-lookup"><span data-stu-id="4c88b-116">Add English language</span></span>
-    * <span data-ttu-id="4c88b-117">填写应用名称。</span><span class="sxs-lookup"><span data-stu-id="4c88b-117">Fill in the app name.</span></span>
-    * <span data-ttu-id="4c88b-118">以英语填写应用的简短说明。</span><span class="sxs-lookup"><span data-stu-id="4c88b-118">Fill in a short description of the app in English.</span></span>
-    * <span data-ttu-id="4c88b-119">使用英语填写应用的详细说明。</span><span class="sxs-lookup"><span data-stu-id="4c88b-119">Fill in the long description of the app in English.</span></span>
-    * <span data-ttu-id="4c88b-120">在详细说明中，另请添加行"此应用在"法语"中可用。</span><span class="sxs-lookup"><span data-stu-id="4c88b-120">In the long description, please also add the line “This app is available in “French”.</span></span>
-    * <span data-ttu-id="4c88b-121">Upload应用 UI 图像以英语 (显示) 。</span><span class="sxs-lookup"><span data-stu-id="4c88b-121">Upload the images of your app UI (in English).</span></span>
-2. <span data-ttu-id="4c88b-122">添加法语</span><span class="sxs-lookup"><span data-stu-id="4c88b-122">Add French language</span></span>
-    * <span data-ttu-id="4c88b-123">填写应用名称。</span><span class="sxs-lookup"><span data-stu-id="4c88b-123">Fill in the app name.</span></span>
-    * <span data-ttu-id="4c88b-124">使用法语填写应用的简短说明。</span><span class="sxs-lookup"><span data-stu-id="4c88b-124">Fill in a short description of the app in French.</span></span>
-    * <span data-ttu-id="4c88b-125">使用法语填写应用的详细说明。</span><span class="sxs-lookup"><span data-stu-id="4c88b-125">Fill in the long description of the app in French.</span></span>
-    * <span data-ttu-id="4c88b-126">Upload使用法语或法语 (应用 UI) 。</span><span class="sxs-lookup"><span data-stu-id="4c88b-126">Upload the images of your app UI (in French).</span></span>
+1. <span data-ttu-id="7db1c-116">添加英语语言</span><span class="sxs-lookup"><span data-stu-id="7db1c-116">Add English language</span></span>
+    * <span data-ttu-id="7db1c-117">填写应用名称。</span><span class="sxs-lookup"><span data-stu-id="7db1c-117">Fill in the app name.</span></span>
+    * <span data-ttu-id="7db1c-118">以英语填写应用的简短说明。</span><span class="sxs-lookup"><span data-stu-id="7db1c-118">Fill in a short description of the app in English.</span></span>
+    * <span data-ttu-id="7db1c-119">使用英语填写应用的详细说明。</span><span class="sxs-lookup"><span data-stu-id="7db1c-119">Fill in the long description of the app in English.</span></span>
+    * <span data-ttu-id="7db1c-120">在详细说明中，另请添加行"此应用在"法语"中可用。</span><span class="sxs-lookup"><span data-stu-id="7db1c-120">In the long description, please also add the line “This app is available in “French”.</span></span>
+    * <span data-ttu-id="7db1c-121">Upload应用 UI 图像以英语 (显示) 。</span><span class="sxs-lookup"><span data-stu-id="7db1c-121">Upload the images of your app UI (in English).</span></span>
+2. <span data-ttu-id="7db1c-122">添加法语</span><span class="sxs-lookup"><span data-stu-id="7db1c-122">Add French language</span></span>
+    * <span data-ttu-id="7db1c-123">填写应用名称。</span><span class="sxs-lookup"><span data-stu-id="7db1c-123">Fill in the app name.</span></span>
+    * <span data-ttu-id="7db1c-124">使用法语填写应用的简短说明。</span><span class="sxs-lookup"><span data-stu-id="7db1c-124">Fill in a short description of the app in French.</span></span>
+    * <span data-ttu-id="7db1c-125">使用法语填写应用的详细说明。</span><span class="sxs-lookup"><span data-stu-id="7db1c-125">Fill in the long description of the app in French.</span></span>
+    * <span data-ttu-id="7db1c-126">Upload使用法语或法语 (应用 UI) 。</span><span class="sxs-lookup"><span data-stu-id="7db1c-126">Upload the images of your app UI (in French).</span></span>
 
-<span data-ttu-id="4c88b-127">使用英语上传的图像将是 AppSource 中使用的图像。</span><span class="sxs-lookup"><span data-stu-id="4c88b-127">The images you upload with the English language will be the ones used in AppSource.</span></span>
+<span data-ttu-id="7db1c-127">使用英语上传的图像将是 AppSource 中使用的图像。</span><span class="sxs-lookup"><span data-stu-id="7db1c-127">The images you upload with the English language will be the ones used in AppSource.</span></span>
 
-## <a name="localizing-the-strings-in-your-app-manifest"></a><span data-ttu-id="4c88b-128">本地化应用清单中的字符串</span><span class="sxs-lookup"><span data-stu-id="4c88b-128">Localizing the strings in your app manifest</span></span>
+## <a name="localizing-the-strings-in-your-app-manifest"></a><span data-ttu-id="7db1c-128">本地化应用清单中的字符串</span><span class="sxs-lookup"><span data-stu-id="7db1c-128">Localizing the strings in your app manifest</span></span>
 
-<span data-ttu-id="4c88b-129">你必须使用 Microsoft Teams架构 v1.5+ 来正确本地化你的应用。</span><span class="sxs-lookup"><span data-stu-id="4c88b-129">You must use the Microsoft Teams app schema v1.5+ to properly localize your app.</span></span> <span data-ttu-id="4c88b-130">为此，可以将文件上的 manifest.js`$schema` 属性设置为""，将 https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json "manifestVersion"属性更新为"1.7"。</span><span class="sxs-lookup"><span data-stu-id="4c88b-130">You can do this by setting the `$schema` attribute in your manifest.json file to 'https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json' and updating the 'manifestVersion' property to '1.7'.</span></span>
+<span data-ttu-id="7db1c-129">你必须使用 Microsoft Teams架构 v1.5+ 来正确本地化你的应用。</span><span class="sxs-lookup"><span data-stu-id="7db1c-129">You must use the Microsoft Teams app schema v1.5+ to properly localize your app.</span></span> <span data-ttu-id="7db1c-130">为此，可以将文件上的 manifest.js`$schema` 属性设置为""，将 https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json "manifestVersion"属性更新为"1.7"。</span><span class="sxs-lookup"><span data-stu-id="7db1c-130">You can do this by setting the `$schema` attribute in your manifest.json file to 'https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json' and updating the 'manifestVersion' property to '1.7'.</span></span>
 
-### <a name="example-manifestjson-change"></a><span data-ttu-id="4c88b-131">更改manifest.js示例</span><span class="sxs-lookup"><span data-stu-id="4c88b-131">Example manifest.json change</span></span>
+### <a name="example-manifestjson-change"></a><span data-ttu-id="7db1c-131">更改manifest.js示例</span><span class="sxs-lookup"><span data-stu-id="7db1c-131">Example manifest.json change</span></span>
 
 ```json
 {
@@ -56,9 +56,9 @@ ms.locfileid: "52101707"
 }
 ```
 
-<span data-ttu-id="4c88b-132">然后，您需要使用应用程序支持的默认语言添加"localizationInfo"属性。</span><span class="sxs-lookup"><span data-stu-id="4c88b-132">You will then want to add the 'localizationInfo' property with the default language that your application supports.</span></span> <span data-ttu-id="4c88b-133">如果用户的客户端设置与任何其他语言不匹配，则默认语言将用作最终回退语言。</span><span class="sxs-lookup"><span data-stu-id="4c88b-133">The default language is used as the final fallback language if the user's client settings do not match any of your additional languages.</span></span>
+<span data-ttu-id="7db1c-132">然后，您需要使用应用程序支持的默认语言添加"localizationInfo"属性。</span><span class="sxs-lookup"><span data-stu-id="7db1c-132">You will then want to add the 'localizationInfo' property with the default language that your application supports.</span></span> <span data-ttu-id="7db1c-133">如果用户的客户端设置与任何其他语言不匹配，则默认语言将用作最终回退语言。</span><span class="sxs-lookup"><span data-stu-id="7db1c-133">The default language is used as the final fallback language if the user's client settings do not match any of your additional languages.</span></span>
 
-### <a name="example-manifestjson-change"></a><span data-ttu-id="4c88b-134">更改manifest.js示例</span><span class="sxs-lookup"><span data-stu-id="4c88b-134">Example manifest.json change</span></span>
+### <a name="example-manifestjson-change"></a><span data-ttu-id="7db1c-134">更改manifest.js示例</span><span class="sxs-lookup"><span data-stu-id="7db1c-134">Example manifest.json change</span></span>
 
 ```json
 {
@@ -70,25 +70,25 @@ ms.locfileid: "52101707"
 }
 ```
 
-<span data-ttu-id="4c88b-135">可以在清单中提供其他 .json 文件以及面向用户的字符串的翻译。</span><span class="sxs-lookup"><span data-stu-id="4c88b-135">You can provide additional .json files with translations of all the user facing strings in your manifest.</span></span> <span data-ttu-id="4c88b-136">这些文件必须遵循本地化文件 [JSON 架构](../../resources/schema/localization-schema.md) ，并且必须添加到清单的"localizationInfo"属性中。</span><span class="sxs-lookup"><span data-stu-id="4c88b-136">These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the 'localizationInfo' property of your manifest.</span></span> <span data-ttu-id="4c88b-137">每个文件与语言标记相关，Teams客户端使用它来选择适当的字符串。</span><span class="sxs-lookup"><span data-stu-id="4c88b-137">Each file correlates to a language tag which the Teams client uses to choose the appropriate strings.</span></span> <span data-ttu-id="4c88b-138">语言标记采用 的形式，但建议省略 部分，以面向支持所需 <language> - <region> <region> 语言的所有区域。</span><span class="sxs-lookup"><span data-stu-id="4c88b-138">The language tag takes the form of <language>-<region> but it is recommended to omit the <region> portion to target all regions that support the desired language.</span></span>
+<span data-ttu-id="7db1c-135">可以在清单中提供其他 .json 文件以及面向用户的字符串的翻译。</span><span class="sxs-lookup"><span data-stu-id="7db1c-135">You can provide additional .json files with translations of all the user facing strings in your manifest.</span></span> <span data-ttu-id="7db1c-136">这些文件必须遵循本地化文件 [JSON 架构](../../resources/schema/localization-schema.md) ，并且必须添加到清单的"localizationInfo"属性中。</span><span class="sxs-lookup"><span data-stu-id="7db1c-136">These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the 'localizationInfo' property of your manifest.</span></span> <span data-ttu-id="7db1c-137">每个文件与语言标记相关，Teams客户端使用它来选择适当的字符串。</span><span class="sxs-lookup"><span data-stu-id="7db1c-137">Each file correlates to a language tag which the Teams client uses to choose the appropriate strings.</span></span> <span data-ttu-id="7db1c-138">语言标记采用 的形式，但建议省略 部分，以面向支持所需 <language> - <region> <region> 语言的所有区域。</span><span class="sxs-lookup"><span data-stu-id="7db1c-138">The language tag takes the form of <language>-<region> but it is recommended to omit the <region> portion to target all regions that support the desired language.</span></span>
 
-<span data-ttu-id="4c88b-139">客户端Teams将按以下顺序应用字符串：默认语言字符串 -> 用户的语言仅字符串 -> 用户的语言 + 用户的区域字符串。</span><span class="sxs-lookup"><span data-stu-id="4c88b-139">The Teams client will apply the strings in this order: default language strings -> user's language only strings -> user's language + user's region strings.</span></span>
+<span data-ttu-id="7db1c-139">客户端Teams将按以下顺序应用字符串：默认语言字符串 -> 用户的语言仅字符串 -> 用户的语言 + 用户的区域字符串。</span><span class="sxs-lookup"><span data-stu-id="7db1c-139">The Teams client will apply the strings in this order: default language strings -> user's language only strings -> user's language + user's region strings.</span></span>
 
-<span data-ttu-id="4c88b-140">例如，你提供默认语言"fr" (法语、所有区域) 以及"en" (英语、所有地区) 和"en-gb" (英语、大英国) 的其他语言文件。</span><span class="sxs-lookup"><span data-stu-id="4c88b-140">For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain).</span></span> <span data-ttu-id="4c88b-141">如果用户的语言设置为"en-gb"：</span><span class="sxs-lookup"><span data-stu-id="4c88b-141">If the user's language is set to 'en-gb':</span></span>
+<span data-ttu-id="7db1c-140">例如，你提供默认语言"fr" (法语、所有区域) 以及"en" (英语、所有地区) 和"en-gb" (英语、大英国) 的其他语言文件。</span><span class="sxs-lookup"><span data-stu-id="7db1c-140">For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain).</span></span> <span data-ttu-id="7db1c-141">如果用户的语言设置为"en-gb"：</span><span class="sxs-lookup"><span data-stu-id="7db1c-141">If the user's language is set to 'en-gb':</span></span>
 
-1. <span data-ttu-id="4c88b-142">客户端Teams将"fr"字符串用"en"字符串覆盖它们。</span><span class="sxs-lookup"><span data-stu-id="4c88b-142">The Teams client will take the 'fr' strings overwrite them with the 'en' strings.</span></span>
-2. <span data-ttu-id="4c88b-143">使用"en-gb"字符串覆盖这些字符串。</span><span class="sxs-lookup"><span data-stu-id="4c88b-143">Overwrite those with the 'en-gb' strings.</span></span>
+1. <span data-ttu-id="7db1c-142">客户端Teams将"fr"字符串用"en"字符串覆盖它们。</span><span class="sxs-lookup"><span data-stu-id="7db1c-142">The Teams client will take the 'fr' strings overwrite them with the 'en' strings.</span></span>
+2. <span data-ttu-id="7db1c-143">使用"en-gb"字符串覆盖这些字符串。</span><span class="sxs-lookup"><span data-stu-id="7db1c-143">Overwrite those with the 'en-gb' strings.</span></span>
 
-<span data-ttu-id="4c88b-144">如果用户的语言设置为"en-ca"：</span><span class="sxs-lookup"><span data-stu-id="4c88b-144">If the user's language is set to 'en-ca':</span></span> 
+<span data-ttu-id="7db1c-144">如果用户的语言设置为"en-ca"：</span><span class="sxs-lookup"><span data-stu-id="7db1c-144">If the user's language is set to 'en-ca':</span></span> 
 
-1. <span data-ttu-id="4c88b-145">客户端Teams将"fr"字符串用"en"字符串覆盖它们。</span><span class="sxs-lookup"><span data-stu-id="4c88b-145">The Teams client will take the 'fr' strings overwrite them with the 'en' strings.</span></span>
-2. <span data-ttu-id="4c88b-146">由于未提供"en-ca"本地化，因此将使用"en"本地化。</span><span class="sxs-lookup"><span data-stu-id="4c88b-146">Since no 'en-ca' localization is supplied, the 'en' localizations will be used.</span></span>
+1. <span data-ttu-id="7db1c-145">客户端Teams将"fr"字符串用"en"字符串覆盖它们。</span><span class="sxs-lookup"><span data-stu-id="7db1c-145">The Teams client will take the 'fr' strings overwrite them with the 'en' strings.</span></span>
+2. <span data-ttu-id="7db1c-146">由于未提供"en-ca"本地化，因此将使用"en"本地化。</span><span class="sxs-lookup"><span data-stu-id="7db1c-146">Since no 'en-ca' localization is supplied, the 'en' localizations will be used.</span></span>
 
-<span data-ttu-id="4c88b-147">如果用户的语言设置为"es-es"，Teams客户端将接受"fr"字符串，并且不会用任何语言文件替代它们。</span><span class="sxs-lookup"><span data-stu-id="4c88b-147">If the user's language is set to 'es-es', the Teams client will take the 'fr' strings and will not override them with any of the language files.</span></span>
+<span data-ttu-id="7db1c-147">如果用户的语言设置为"es-es"，Teams客户端将接受"fr"字符串，并且不会用任何语言文件替代它们。</span><span class="sxs-lookup"><span data-stu-id="7db1c-147">If the user's language is set to 'es-es', the Teams client will take the 'fr' strings and will not override them with any of the language files.</span></span>
 
-<span data-ttu-id="4c88b-148">因此，强烈建议在清单 ("en"而非"en-us") 中提供顶级的仅语言翻译，并仅为需要这些翻译的一些字符串提供区域级替代。</span><span class="sxs-lookup"><span data-stu-id="4c88b-148">Therefore, it is strongly recommended to provide top-level, language-only translations in your manifest ('en' instead of 'en-us') and only provide region-level overrides for the few strings that need them.</span></span>
+<span data-ttu-id="7db1c-148">因此，强烈建议在清单 ("en"而非"en-us") 中提供顶级的仅语言翻译，并仅为需要这些翻译的一些字符串提供区域级替代。</span><span class="sxs-lookup"><span data-stu-id="7db1c-148">Therefore, it is strongly recommended to provide top-level, language-only translations in your manifest ('en' instead of 'en-us') and only provide region-level overrides for the few strings that need them.</span></span>
 
-### <a name="example-manifestjson-change"></a><span data-ttu-id="4c88b-149">更改manifest.js示例</span><span class="sxs-lookup"><span data-stu-id="4c88b-149">Example manifest.json change</span></span>
+### <a name="example-manifestjson-change"></a><span data-ttu-id="7db1c-149">更改manifest.js示例</span><span class="sxs-lookup"><span data-stu-id="7db1c-149">Example manifest.json change</span></span>
 
 ```json
 {
@@ -114,7 +114,7 @@ ms.locfileid: "52101707"
 }
 ```
 
-### <a name="example-localization-json-file"></a><span data-ttu-id="4c88b-150">示例本地化 .json 文件</span><span class="sxs-lookup"><span data-stu-id="4c88b-150">Example localization .json file</span></span>
+### <a name="example-localization-json-file"></a><span data-ttu-id="7db1c-150">示例本地化 .json 文件</span><span class="sxs-lookup"><span data-stu-id="7db1c-150">Example localization .json file</span></span>
 
 ```json
 {
@@ -131,14 +131,14 @@ ms.locfileid: "52101707"
 }
 ```
 
-## <a name="handling-localized-text-submissions-from-your-users"></a><span data-ttu-id="4c88b-151">处理来自用户的本地化文本提交</span><span class="sxs-lookup"><span data-stu-id="4c88b-151">Handling localized text submissions from your users</span></span>
+## <a name="handling-localized-text-submissions-from-your-users"></a><span data-ttu-id="7db1c-151">处理来自用户的本地化文本提交</span><span class="sxs-lookup"><span data-stu-id="7db1c-151">Handling localized text submissions from your users</span></span>
 
-<span data-ttu-id="4c88b-152">如果你提供应用程序的本地化版本，你的用户很可能将使用相同的语言进行响应。</span><span class="sxs-lookup"><span data-stu-id="4c88b-152">If your provide localized versions of your application it is very likely that your users will respond with the same language.</span></span> <span data-ttu-id="4c88b-153">Teams不会将用户提交翻译回默认语言，因此你的应用将需要处理此情况。</span><span class="sxs-lookup"><span data-stu-id="4c88b-153">Teams does not translate the user submissions back to the default language, so your app will need to handle that.</span></span> <span data-ttu-id="4c88b-154">例如，如果你提供本地化的 ，则对自动程序的响应将是命令的本地化文本， `commandList` 而不是默认语言。</span><span class="sxs-lookup"><span data-stu-id="4c88b-154">For example, if you provide a localized `commandList`, the responses to your bot will be the localized text of the command, not the default language.</span></span> <span data-ttu-id="4c88b-155">你的应用将需要做出相应的响应。</span><span class="sxs-lookup"><span data-stu-id="4c88b-155">Your app will need to respond appropriately.</span></span>
+<span data-ttu-id="7db1c-152">如果你提供应用程序的本地化版本，你的用户很可能将使用相同的语言进行响应。</span><span class="sxs-lookup"><span data-stu-id="7db1c-152">If your provide localized versions of your application it is very likely that your users will respond with the same language.</span></span> <span data-ttu-id="7db1c-153">Teams不会将用户提交翻译回默认语言，因此你的应用将需要处理此情况。</span><span class="sxs-lookup"><span data-stu-id="7db1c-153">Teams does not translate the user submissions back to the default language, so your app will need to handle that.</span></span> <span data-ttu-id="7db1c-154">例如，如果你提供本地化的 ，则对自动程序的响应将是命令的本地化文本， `commandList` 而不是默认语言。</span><span class="sxs-lookup"><span data-stu-id="7db1c-154">For example, if you provide a localized `commandList`, the responses to your bot will be the localized text of the command, not the default language.</span></span> <span data-ttu-id="7db1c-155">你的应用将需要做出相应的响应。</span><span class="sxs-lookup"><span data-stu-id="7db1c-155">Your app will need to respond appropriately.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="4c88b-156">代码示例</span><span class="sxs-lookup"><span data-stu-id="4c88b-156">Code sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="7db1c-156">代码示例</span><span class="sxs-lookup"><span data-stu-id="7db1c-156">Code sample</span></span>
 
-| <span data-ttu-id="4c88b-157">示例名称</span><span class="sxs-lookup"><span data-stu-id="4c88b-157">Sample name</span></span> | <span data-ttu-id="4c88b-158">说明</span><span class="sxs-lookup"><span data-stu-id="4c88b-158">Description</span></span> | <span data-ttu-id="4c88b-159">.NET</span><span class="sxs-lookup"><span data-stu-id="4c88b-159">.NET</span></span> |
+| <span data-ttu-id="7db1c-157">示例名称</span><span class="sxs-lookup"><span data-stu-id="7db1c-157">Sample name</span></span> | <span data-ttu-id="7db1c-158">说明</span><span class="sxs-lookup"><span data-stu-id="7db1c-158">Description</span></span> | <span data-ttu-id="7db1c-159">.NET</span><span class="sxs-lookup"><span data-stu-id="7db1c-159">.NET</span></span> |
 |-------------|-------------|------|
-| <span data-ttu-id="4c88b-160">应用本地化</span><span class="sxs-lookup"><span data-stu-id="4c88b-160">App Localization</span></span> | <span data-ttu-id="4c88b-161">Microsoft Teams自动程序和选项卡进行应用本地化。</span><span class="sxs-lookup"><span data-stu-id="4c88b-161">Microsoft Teams app localization using bot and tab.</span></span> | [<span data-ttu-id="4c88b-162">View</span><span class="sxs-lookup"><span data-stu-id="4c88b-162">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| <span data-ttu-id="7db1c-160">应用本地化</span><span class="sxs-lookup"><span data-stu-id="7db1c-160">App Localization</span></span> | <span data-ttu-id="7db1c-161">Microsoft Teams自动程序和选项卡进行应用本地化。</span><span class="sxs-lookup"><span data-stu-id="7db1c-161">Microsoft Teams app localization using bot and tab.</span></span> | [<span data-ttu-id="7db1c-162">View</span><span class="sxs-lookup"><span data-stu-id="7db1c-162">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 

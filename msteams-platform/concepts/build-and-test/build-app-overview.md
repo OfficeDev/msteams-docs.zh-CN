@@ -1,7 +1,7 @@
 ---
-title: Microsoft Teams 应用开发构建选项
+title: 应用开发Microsoft Teams生成选项
 author: heath-hamilton
-description: 描述可用于生成所有类型的 Teams 应用的 SDK、工具和 API。
+description: 描述可用于生成所有类型的应用应用的 SDK、工具和 API Teams API。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
@@ -12,6 +12,6 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020840"
 ---
-# <a name="build-options-for-microsoft-teams-app-development"></a><span data-ttu-id="c90d0-103">Microsoft Teams 应用开发构建选项</span><span class="sxs-lookup"><span data-stu-id="c90d0-103">Build options for Microsoft Teams app development</span></span>
+# <a name="build-options-for-microsoft-teams-app-development"></a><span data-ttu-id="8dd77-103">应用开发Microsoft Teams生成选项</span><span class="sxs-lookup"><span data-stu-id="8dd77-103">Build options for Microsoft Teams app development</span></span>
 
-<span data-ttu-id="c90d0-104">即将推出。。。</span><span class="sxs-lookup"><span data-stu-id="c90d0-104">Coming soon ...</span></span>
+<span data-ttu-id="8dd77-104">即将推出。。。</span><span class="sxs-lookup"><span data-stu-id="8dd77-104">Coming soon ...</span></span>

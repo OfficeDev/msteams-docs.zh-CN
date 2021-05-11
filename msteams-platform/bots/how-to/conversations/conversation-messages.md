@@ -1,6 +1,6 @@
 ---
 title: 智能机器人对话中的邮件
-description: 介绍与 Microsoft Teams 机器人对话的方法
+description: 介绍与自动程序Microsoft Teams的方法
 ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
@@ -12,25 +12,25 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2021
 ms.locfileid: "52058598"
 ---
-# <a name="messages-in-bot-conversations"></a><span data-ttu-id="fa1c2-103">智能机器人对话中的邮件</span><span class="sxs-lookup"><span data-stu-id="fa1c2-103">Messages in bot conversations</span></span>
+# <a name="messages-in-bot-conversations"></a><span data-ttu-id="f0b2c-103">智能机器人对话中的邮件</span><span class="sxs-lookup"><span data-stu-id="f0b2c-103">Messages in bot conversations</span></span>
 
-<span data-ttu-id="fa1c2-104">对话中每条消息都是一 `Activity` 个类型 为 的对象 `messageType: message` 。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-104">Each message in a conversation is an `Activity` object of type `messageType: message`.</span></span> <span data-ttu-id="fa1c2-105">当用户发送消息时，Teams 会向自动程序发布消息。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-105">When a user sends a message, Teams posts the message to your bot.</span></span> <span data-ttu-id="fa1c2-106">Teams 将 JSON 对象发送到机器人的消息终结点。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-106">Teams sends a JSON object to your bot's messaging endpoint.</span></span> <span data-ttu-id="fa1c2-107">自动程序将检查消息以确定其类型并相应地做出响应。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-107">Your bot examines the message to determine its type and responds accordingly.</span></span>
+<span data-ttu-id="f0b2c-104">对话中每条消息都是一 `Activity` 个类型 为 的对象 `messageType: message` 。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-104">Each message in a conversation is an `Activity` object of type `messageType: message`.</span></span> <span data-ttu-id="f0b2c-105">当用户发送消息时，Teams将邮件发送到自动程序。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-105">When a user sends a message, Teams posts the message to your bot.</span></span> <span data-ttu-id="f0b2c-106">Teams JSON 对象发送到机器人的消息终结点。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-106">Teams sends a JSON object to your bot's messaging endpoint.</span></span> <span data-ttu-id="f0b2c-107">自动程序将检查消息以确定其类型并相应地做出响应。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-107">Your bot examines the message to determine its type and responds accordingly.</span></span>
 
-<span data-ttu-id="fa1c2-108">基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-108">Basic conversations are handled through the Bot Framework connector, a single REST API.</span></span> <span data-ttu-id="fa1c2-109">此 API 使机器人能够与 Teams 和其他频道进行通信。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-109">This API enables your bot to communicate with Teams and other channels.</span></span> <span data-ttu-id="fa1c2-110">Bot Builder SDK 提供以下功能：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-110">The Bot Builder SDK provides the following features:</span></span>
+<span data-ttu-id="f0b2c-108">基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-108">Basic conversations are handled through the Bot Framework connector, a single REST API.</span></span> <span data-ttu-id="f0b2c-109">此 API 使机器人能够与Teams通信。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-109">This API enables your bot to communicate with Teams and other channels.</span></span> <span data-ttu-id="f0b2c-110">Bot Builder SDK 提供以下功能：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-110">The Bot Builder SDK provides the following features:</span></span>
 
-* <span data-ttu-id="fa1c2-111">轻松访问 Bot Framework 连接器。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-111">Easy access to the Bot Framework connector.</span></span>
-* <span data-ttu-id="fa1c2-112">用于管理对话流和状态的其他功能。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-112">Additional functionality to manage conversation flow and state.</span></span>
-* <span data-ttu-id="fa1c2-113">合并认知服务的简单方法，如自然语言处理 (NLP) 。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-113">Simple ways to incorporate cognitive services, such as natural language processing (NLP).</span></span>
+* <span data-ttu-id="f0b2c-111">轻松访问 Bot Framework 连接器。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-111">Easy access to the Bot Framework connector.</span></span>
+* <span data-ttu-id="f0b2c-112">用于管理对话流和状态的其他功能。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-112">Additional functionality to manage conversation flow and state.</span></span>
+* <span data-ttu-id="f0b2c-113">合并认知服务的简单方法，如自然语言处理 (NLP) 。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-113">Simple ways to incorporate cognitive services, such as natural language processing (NLP).</span></span>
 
-<span data-ttu-id="fa1c2-114">自动程序使用 属性接收来自 Teams 的消息， `Text` 并且它会向用户发送一个或多个消息响应。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-114">Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.</span></span>
+<span data-ttu-id="f0b2c-114">自动程序使用 Teams 接收来自用户的邮件，并且它会向用户发送一 `Text` 个或多个邮件响应。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-114">Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.</span></span>
 
-## <a name="receive-a-message"></a><span data-ttu-id="fa1c2-115">接收消息</span><span class="sxs-lookup"><span data-stu-id="fa1c2-115">Receive a message</span></span>
+## <a name="receive-a-message"></a><span data-ttu-id="f0b2c-115">接收消息</span><span class="sxs-lookup"><span data-stu-id="f0b2c-115">Receive a message</span></span>
 
-<span data-ttu-id="fa1c2-116">若要接收短信，请使用 `Activity` 对象的 `Text` 属性。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-116">To receive a text message, use the `Text` property of the `Activity` object.</span></span> <span data-ttu-id="fa1c2-117">在机器人的活动处理程序中，使用圈上下文对象的 `Activity` 来读取单一消息请求。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-117">In the bot's activity handler, use the turn context object's `Activity` to read a single message request.</span></span>
+<span data-ttu-id="f0b2c-116">若要接收短信，请使用 `Activity` 对象的 `Text` 属性。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-116">To receive a text message, use the `Text` property of the `Activity` object.</span></span> <span data-ttu-id="f0b2c-117">在机器人的活动处理程序中，使用圈上下文对象的 `Activity` 来读取单一消息请求。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-117">In the bot's activity handler, use the turn context object's `Activity` to read a single message request.</span></span>
 
-<span data-ttu-id="fa1c2-118">以下代码显示了一个接收邮件的示例：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-118">The following code shows an example of receiving a message:</span></span>
+<span data-ttu-id="f0b2c-118">以下代码显示了一个接收邮件的示例：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-118">The following code shows an example of receiving a message:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="fa1c2-119">C#</span><span class="sxs-lookup"><span data-stu-id="fa1c2-119">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="f0b2c-119">C#</span><span class="sxs-lookup"><span data-stu-id="f0b2c-119">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -40,7 +40,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="fa1c2-120">TypeScript</span><span class="sxs-lookup"><span data-stu-id="fa1c2-120">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="f0b2c-120">TypeScript</span><span class="sxs-lookup"><span data-stu-id="f0b2c-120">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 
@@ -56,7 +56,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="python"></a>[<span data-ttu-id="fa1c2-121">Python</span><span class="sxs-lookup"><span data-stu-id="fa1c2-121">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="f0b2c-121">Python</span><span class="sxs-lookup"><span data-stu-id="f0b2c-121">Python</span></span>](#tab/python)
 
 <!-- Verify -->
 ```python
@@ -66,7 +66,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="fa1c2-122">JSON</span><span class="sxs-lookup"><span data-stu-id="fa1c2-122">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="f0b2c-122">JSON</span><span class="sxs-lookup"><span data-stu-id="f0b2c-122">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -111,13 +111,13 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-## <a name="send-a-message"></a><span data-ttu-id="fa1c2-123">发送消息</span><span class="sxs-lookup"><span data-stu-id="fa1c2-123">Send a message</span></span>
+## <a name="send-a-message"></a><span data-ttu-id="f0b2c-123">发送消息</span><span class="sxs-lookup"><span data-stu-id="f0b2c-123">Send a message</span></span>
 
-<span data-ttu-id="fa1c2-124">若要发送短信，请指定你想要作为活动发送的字符串。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-124">To send a text message, specify the string you want to send as the activity.</span></span> <span data-ttu-id="fa1c2-125">在机器人的活动处理程序中，使用 turn context 对象的方法发送 `SendActivityAsync` 单个消息响应。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-125">In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response.</span></span> <span data-ttu-id="fa1c2-126">使用 对象的 `SendActivitiesAsync` 方法一次发送多个响应。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-126">Use the object's `SendActivitiesAsync` method to send multiple responses at once.</span></span>
+<span data-ttu-id="f0b2c-124">若要发送短信，请指定你想要作为活动发送的字符串。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-124">To send a text message, specify the string you want to send as the activity.</span></span> <span data-ttu-id="f0b2c-125">在机器人的活动处理程序中，使用 turn context 对象的方法发送 `SendActivityAsync` 单个消息响应。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-125">In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response.</span></span> <span data-ttu-id="f0b2c-126">使用 对象的 `SendActivitiesAsync` 方法一次发送多个响应。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-126">Use the object's `SendActivitiesAsync` method to send multiple responses at once.</span></span>
 
-<span data-ttu-id="fa1c2-127">以下代码显示向对话中添加用户时发送邮件的示例：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-127">The following code shows an example of sending a message when a user is added to a conversation:</span></span>
+<span data-ttu-id="f0b2c-127">以下代码显示向对话中添加用户时发送邮件的示例：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-127">The following code shows an example of sending a message when a user is added to a conversation:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="fa1c2-128">C#</span><span class="sxs-lookup"><span data-stu-id="fa1c2-128">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="f0b2c-128">C#</span><span class="sxs-lookup"><span data-stu-id="f0b2c-128">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -127,7 +127,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="fa1c2-129">TypeScript</span><span class="sxs-lookup"><span data-stu-id="fa1c2-129">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="f0b2c-129">TypeScript</span><span class="sxs-lookup"><span data-stu-id="f0b2c-129">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 
@@ -142,7 +142,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="fa1c2-130">Python</span><span class="sxs-lookup"><span data-stu-id="fa1c2-130">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="f0b2c-130">Python</span><span class="sxs-lookup"><span data-stu-id="f0b2c-130">Python</span></span>](#tab/python)
 
 <!-- Verify -->
 
@@ -157,7 +157,7 @@ async def on_members_added_activity(
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="fa1c2-131">JSON</span><span class="sxs-lookup"><span data-stu-id="fa1c2-131">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="f0b2c-131">JSON</span><span class="sxs-lookup"><span data-stu-id="f0b2c-131">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -203,32 +203,32 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> <span data-ttu-id="fa1c2-132">在同一活动有效负载中发送短信和附件时，将发生邮件拆分。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-132">Message splitting occurs when a text message and an attachment are sent in the same activity payload.</span></span> <span data-ttu-id="fa1c2-133">此活动由 Microsoft Teams 拆分为单独的活动，一个仅包含一条短信，另一个包含附件。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-133">This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment.</span></span> <span data-ttu-id="fa1c2-134">拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-134">As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively.</span></span> <span data-ttu-id="fa1c2-135">建议发送单独的活动，而不是根据邮件拆分。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-135">It is recommended to send separate activities instead of depending on message splitting.</span></span>
+> <span data-ttu-id="f0b2c-132">在同一活动有效负载中发送短信和附件时，将发生邮件拆分。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-132">Message splitting occurs when a text message and an attachment are sent in the same activity payload.</span></span> <span data-ttu-id="f0b2c-133">此活动按以下两Microsoft Teams拆分为单独的活动，一个仅包含一条短信，另一个包含附件。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-133">This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment.</span></span> <span data-ttu-id="f0b2c-134">拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-134">As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively.</span></span> <span data-ttu-id="f0b2c-135">建议发送单独的活动，而不是根据邮件拆分。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-135">It is recommended to send separate activities instead of depending on message splitting.</span></span>
 
-<span data-ttu-id="fa1c2-136">在用户和机器人之间发送的消息包含邮件中的内部通道数据。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-136">Messages sent between users and bots include internal channel data within the message.</span></span> <span data-ttu-id="fa1c2-137">此数据允许机器人在此频道上正常通信。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-137">This data allows the bot to communicate properly on that channel.</span></span> <span data-ttu-id="fa1c2-138">Bot Builder SDK 允许你修改消息结构。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-138">The Bot Builder SDK allows you to modify the message structure.</span></span>
+<span data-ttu-id="f0b2c-136">在用户和机器人之间发送的消息包含邮件中的内部通道数据。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-136">Messages sent between users and bots include internal channel data within the message.</span></span> <span data-ttu-id="f0b2c-137">此数据允许机器人在此频道上正常通信。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-137">This data allows the bot to communicate properly on that channel.</span></span> <span data-ttu-id="f0b2c-138">Bot Builder SDK 允许你修改消息结构。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-138">The Bot Builder SDK allows you to modify the message structure.</span></span>
 
-## <a name="teams-channel-data"></a><span data-ttu-id="fa1c2-139">Teams 频道数据</span><span class="sxs-lookup"><span data-stu-id="fa1c2-139">Teams channel data</span></span>
+## <a name="teams-channel-data"></a><span data-ttu-id="f0b2c-139">Teams频道数据</span><span class="sxs-lookup"><span data-stu-id="f0b2c-139">Teams channel data</span></span>
 
-<span data-ttu-id="fa1c2-140">对象 `channelData` 包含特定于 Teams 的信息，是团队和频道 ID 的权威性来源。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-140">The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs.</span></span> <span data-ttu-id="fa1c2-141">（可选）你可以缓存这些 ID 并用作本地存储的密钥。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-141">Optionally, you can cache and use these IDs as keys for local storage.</span></span> <span data-ttu-id="fa1c2-142">`TeamsActivityHandler`SDK 中的 从 对象提取重要信息 `channelData` ，使其易于访问。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-142">The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible.</span></span> <span data-ttu-id="fa1c2-143">但是，您始终可以从对象访问 `turnContext` 原始数据。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-143">However, you can always access the original data from the `turnContext` object.</span></span>
+<span data-ttu-id="f0b2c-140">`channelData`对象包含Teams特定的信息，是团队和频道的一个明确来源。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-140">The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs.</span></span> <span data-ttu-id="f0b2c-141">（可选）你可以缓存这些 ID 并用作本地存储的密钥。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-141">Optionally, you can cache and use these IDs as keys for local storage.</span></span> <span data-ttu-id="f0b2c-142">`TeamsActivityHandler`SDK 中的 从 对象提取重要信息 `channelData` ，使其易于访问。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-142">The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible.</span></span> <span data-ttu-id="f0b2c-143">但是，您始终可以从对象访问 `turnContext` 原始数据。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-143">However, you can always access the original data from the `turnContext` object.</span></span>
 
-<span data-ttu-id="fa1c2-144">`channelData`对象不包含在个人对话中的邮件中，因为邮件在频道外发生。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-144">The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.</span></span>
+<span data-ttu-id="f0b2c-144">`channelData`对象不包含在个人对话中的邮件中，因为邮件在频道外发生。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-144">The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.</span></span>
 
-<span data-ttu-id="fa1c2-145">发送给 `channelData` 自动程序的活动中的典型对象包含以下信息：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-145">A typical `channelData` object in an activity sent to your bot contains the following information:</span></span>
+<span data-ttu-id="f0b2c-145">发送给 `channelData` 自动程序的活动中的典型对象包含以下信息：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-145">A typical `channelData` object in an activity sent to your bot contains the following information:</span></span>
 
-* <span data-ttu-id="fa1c2-146">`eventType`：仅在频道修改事件的情况下传递的 Teams [事件类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-146">`eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
-* <span data-ttu-id="fa1c2-147">`tenant.id`：在所有上下文中传递的 Azure Active Directory 租户 ID。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-147">`tenant.id`: Azure Active Directory tenant ID passed in all contexts.</span></span>
-* <span data-ttu-id="fa1c2-148">`team`：仅在频道上下文中传递，而不是在个人聊天中传递。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-148">`team`: Passed only in channel contexts, not in personal chat.</span></span>
-  * <span data-ttu-id="fa1c2-149">`id`：通道的 GUID。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-149">`id`: GUID for the channel.</span></span>
-  * <span data-ttu-id="fa1c2-150">`name`：仅在团队重命名事件的情况下传递 [的团队名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-150">`name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
-* <span data-ttu-id="fa1c2-151">`channel`：仅在提到自动程序时在频道上下文中传递，或针对团队中已添加自动程序的团队中的事件传递。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-151">`channel`: Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.</span></span>
-  * <span data-ttu-id="fa1c2-152">`id`：通道的 GUID。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-152">`id`: GUID for the channel.</span></span>
-  * <span data-ttu-id="fa1c2-153">`name`：仅在通道修改事件的情况下传递 [的频道名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-153">`name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
-* <span data-ttu-id="fa1c2-154">`channelData.teamsTeamId`：已弃用。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-154">`channelData.teamsTeamId`: Deprecated.</span></span> <span data-ttu-id="fa1c2-155">此属性仅包含用于向后兼容。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-155">This property is only included for backward compatibility.</span></span>
-* <span data-ttu-id="fa1c2-156">`channelData.teamsChannelId`：已弃用。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-156">`channelData.teamsChannelId`: Deprecated.</span></span> <span data-ttu-id="fa1c2-157">此属性仅包含用于向后兼容。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-157">This property is only included for backward compatibility.</span></span>
+* <span data-ttu-id="f0b2c-146">`eventType`：Teams仅在通道修改事件的情况下传递[的事件类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-146">`eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+* <span data-ttu-id="f0b2c-147">`tenant.id`：Azure Active Directory上下文中传递的租户 ID。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-147">`tenant.id`: Azure Active Directory tenant ID passed in all contexts.</span></span>
+* <span data-ttu-id="f0b2c-148">`team`：仅在频道上下文中传递，而不是在个人聊天中传递。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-148">`team`: Passed only in channel contexts, not in personal chat.</span></span>
+  * <span data-ttu-id="f0b2c-149">`id`：通道的 GUID。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-149">`id`: GUID for the channel.</span></span>
+  * <span data-ttu-id="f0b2c-150">`name`：仅在团队重命名事件的情况下传递 [的团队名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-150">`name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+* <span data-ttu-id="f0b2c-151">`channel`：仅在提到自动程序时在频道上下文中传递，或针对团队中已添加自动程序的团队中的事件传递。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-151">`channel`: Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.</span></span>
+  * <span data-ttu-id="f0b2c-152">`id`：通道的 GUID。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-152">`id`: GUID for the channel.</span></span>
+  * <span data-ttu-id="f0b2c-153">`name`：仅在通道修改事件的情况下传递 [的频道名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-153">`name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+* <span data-ttu-id="f0b2c-154">`channelData.teamsTeamId`：已弃用。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-154">`channelData.teamsTeamId`: Deprecated.</span></span> <span data-ttu-id="f0b2c-155">此属性仅包含用于向后兼容。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-155">This property is only included for backward compatibility.</span></span>
+* <span data-ttu-id="f0b2c-156">`channelData.teamsChannelId`：已弃用。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-156">`channelData.teamsChannelId`: Deprecated.</span></span> <span data-ttu-id="f0b2c-157">此属性仅包含用于向后兼容。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-157">This property is only included for backward compatibility.</span></span>
 
-### <a name="example-channeldata-object-or-channelcreated-event"></a><span data-ttu-id="fa1c2-158">channelData 对象或 channelCreated 事件示例</span><span class="sxs-lookup"><span data-stu-id="fa1c2-158">Example channelData object or channelCreated event</span></span>
+### <a name="example-channeldata-object-or-channelcreated-event"></a><span data-ttu-id="f0b2c-158">channelData 对象或 channelCreated 事件示例</span><span class="sxs-lookup"><span data-stu-id="f0b2c-158">Example channelData object or channelCreated event</span></span>
 
-<span data-ttu-id="fa1c2-159">以下代码显示了 channelData 对象的示例：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-159">The following code shows an example of channelData object:</span></span>
+<span data-ttu-id="f0b2c-159">以下代码显示了 channelData 对象的示例：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-159">The following code shows an example of channelData object:</span></span>
 
 ```json
 "channelData": {
@@ -246,29 +246,29 @@ async def on_members_added_activity(
 }
 ```
 
-<span data-ttu-id="fa1c2-160">从自动程序接收或发送到自动程序的邮件可以包括不同类型的邮件内容。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-160">Messages received from or sent to your bot can include different types of message content.</span></span>
+<span data-ttu-id="f0b2c-160">从自动程序接收或发送到自动程序的邮件可以包括不同类型的邮件内容。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-160">Messages received from or sent to your bot can include different types of message content.</span></span>
 
-## <a name="message-content"></a><span data-ttu-id="fa1c2-161">邮件内容</span><span class="sxs-lookup"><span data-stu-id="fa1c2-161">Message content</span></span>
+## <a name="message-content"></a><span data-ttu-id="f0b2c-161">邮件内容</span><span class="sxs-lookup"><span data-stu-id="f0b2c-161">Message content</span></span>
 
-| <span data-ttu-id="fa1c2-162">格式</span><span class="sxs-lookup"><span data-stu-id="fa1c2-162">Format</span></span>    | <span data-ttu-id="fa1c2-163">从用户到机器人</span><span class="sxs-lookup"><span data-stu-id="fa1c2-163">From user to bot</span></span> | <span data-ttu-id="fa1c2-164">从自动程序到用户</span><span class="sxs-lookup"><span data-stu-id="fa1c2-164">From bot to user</span></span> | <span data-ttu-id="fa1c2-165">注意</span><span class="sxs-lookup"><span data-stu-id="fa1c2-165">Notes</span></span>                                                                                   |
+| <span data-ttu-id="f0b2c-162">Format</span><span class="sxs-lookup"><span data-stu-id="f0b2c-162">Format</span></span>    | <span data-ttu-id="f0b2c-163">从用户到机器人</span><span class="sxs-lookup"><span data-stu-id="f0b2c-163">From user to bot</span></span> | <span data-ttu-id="f0b2c-164">从自动程序到用户</span><span class="sxs-lookup"><span data-stu-id="f0b2c-164">From bot to user</span></span> | <span data-ttu-id="f0b2c-165">注释</span><span class="sxs-lookup"><span data-stu-id="f0b2c-165">Notes</span></span>                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| <span data-ttu-id="fa1c2-166">格式文本 </span><span class="sxs-lookup"><span data-stu-id="fa1c2-166">Rich text</span></span> | <span data-ttu-id="fa1c2-167">✔</span><span class="sxs-lookup"><span data-stu-id="fa1c2-167">✔</span></span>                | <span data-ttu-id="fa1c2-168">✔</span><span class="sxs-lookup"><span data-stu-id="fa1c2-168">✔</span></span>                | <span data-ttu-id="fa1c2-169">机器人可以发送格式文本、图片和卡片。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-169">Your bot can send rich text, pictures, and cards.</span></span> <span data-ttu-id="fa1c2-170">用户可以向自动程序发送格式文本和图片。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-170">Users can send rich text and pictures to your bot.</span></span>                                                                                        |
-| <span data-ttu-id="fa1c2-171">图片</span><span class="sxs-lookup"><span data-stu-id="fa1c2-171">Pictures</span></span>  | <span data-ttu-id="fa1c2-172">✔</span><span class="sxs-lookup"><span data-stu-id="fa1c2-172">✔</span></span>                | <span data-ttu-id="fa1c2-173">✔</span><span class="sxs-lookup"><span data-stu-id="fa1c2-173">✔</span></span>                | <span data-ttu-id="fa1c2-174">PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-174">Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format.</span></span> <span data-ttu-id="fa1c2-175">不支持动态 GIF。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-175">Animated GIF is not supported.</span></span>  |
-| <span data-ttu-id="fa1c2-176">卡</span><span class="sxs-lookup"><span data-stu-id="fa1c2-176">Cards</span></span>     | <span data-ttu-id="fa1c2-177">✖</span><span class="sxs-lookup"><span data-stu-id="fa1c2-177">✖</span></span>                | <span data-ttu-id="fa1c2-178">✔</span><span class="sxs-lookup"><span data-stu-id="fa1c2-178">✔</span></span>                | <span data-ttu-id="fa1c2-179">有关受支持的 [卡片，](~/task-modules-and-cards/cards/cards-reference.md) 请参阅 Teams 卡参考。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-179">See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards.</span></span> |
-| <span data-ttu-id="fa1c2-180">表情符号</span><span class="sxs-lookup"><span data-stu-id="fa1c2-180">Emojis</span></span>    | <span data-ttu-id="fa1c2-181">✖</span><span class="sxs-lookup"><span data-stu-id="fa1c2-181">✖</span></span>                | <span data-ttu-id="fa1c2-182">✔</span><span class="sxs-lookup"><span data-stu-id="fa1c2-182">✔</span></span>                | <span data-ttu-id="fa1c2-183">Teams 当前支持通过 UTF-16 使用表情符号，例如 U+1F600，用于表情符号。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-183">Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face.</span></span> |
+| <span data-ttu-id="f0b2c-166">格式文本 </span><span class="sxs-lookup"><span data-stu-id="f0b2c-166">Rich text</span></span> | <span data-ttu-id="f0b2c-167">✔</span><span class="sxs-lookup"><span data-stu-id="f0b2c-167">✔</span></span>                | <span data-ttu-id="f0b2c-168">✔</span><span class="sxs-lookup"><span data-stu-id="f0b2c-168">✔</span></span>                | <span data-ttu-id="f0b2c-169">机器人可以发送格式文本、图片和卡片。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-169">Your bot can send rich text, pictures, and cards.</span></span> <span data-ttu-id="f0b2c-170">用户可以向自动程序发送格式文本和图片。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-170">Users can send rich text and pictures to your bot.</span></span>                                                                                        |
+| <span data-ttu-id="f0b2c-171">图片</span><span class="sxs-lookup"><span data-stu-id="f0b2c-171">Pictures</span></span>  | <span data-ttu-id="f0b2c-172">✔</span><span class="sxs-lookup"><span data-stu-id="f0b2c-172">✔</span></span>                | <span data-ttu-id="f0b2c-173">✔</span><span class="sxs-lookup"><span data-stu-id="f0b2c-173">✔</span></span>                | <span data-ttu-id="f0b2c-174">PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-174">Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format.</span></span> <span data-ttu-id="f0b2c-175">不支持动态 GIF。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-175">Animated GIF is not supported.</span></span>  |
+| <span data-ttu-id="f0b2c-176">卡</span><span class="sxs-lookup"><span data-stu-id="f0b2c-176">Cards</span></span>     | <span data-ttu-id="f0b2c-177">✖</span><span class="sxs-lookup"><span data-stu-id="f0b2c-177">✖</span></span>                | <span data-ttu-id="f0b2c-178">✔</span><span class="sxs-lookup"><span data-stu-id="f0b2c-178">✔</span></span>                | <span data-ttu-id="f0b2c-179">有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-179">See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards.</span></span> |
+| <span data-ttu-id="f0b2c-180">表情符号</span><span class="sxs-lookup"><span data-stu-id="f0b2c-180">Emojis</span></span>    | <span data-ttu-id="f0b2c-181">✖</span><span class="sxs-lookup"><span data-stu-id="f0b2c-181">✖</span></span>                | <span data-ttu-id="f0b2c-182">✔</span><span class="sxs-lookup"><span data-stu-id="f0b2c-182">✔</span></span>                | <span data-ttu-id="f0b2c-183">Teams UTF-16 支持表情符号，例如 U+1F600 用于表情符号。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-183">Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face.</span></span> |
 
-<span data-ttu-id="fa1c2-184">您还可以使用 属性向邮件添加 `Notification.Alert` 通知。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-184">You can also add notifications to your message using the `Notification.Alert` property.</span></span>
+<span data-ttu-id="f0b2c-184">您还可以使用 属性向邮件添加 `Notification.Alert` 通知。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-184">You can also add notifications to your message using the `Notification.Alert` property.</span></span>
 
-## <a name="notifications-to-your-message"></a><span data-ttu-id="fa1c2-185">邮件通知</span><span class="sxs-lookup"><span data-stu-id="fa1c2-185">Notifications to your message</span></span>
+## <a name="notifications-to-your-message"></a><span data-ttu-id="f0b2c-185">邮件通知</span><span class="sxs-lookup"><span data-stu-id="f0b2c-185">Notifications to your message</span></span>
 
-<span data-ttu-id="fa1c2-186">通知会提醒用户有关新任务、提及和评论。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-186">Notifications alert users about new tasks, mentions, and comments.</span></span> <span data-ttu-id="fa1c2-187">这些警报与用户正在处理或必须通过向活动源中插入通知来查看内容相关。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-187">These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed.</span></span> <span data-ttu-id="fa1c2-188">对于从自动程序消息触发的通知，将 `TeamsChannelData` objects `Notification.Alert` 属性设置为 *true*。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-188">For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*.</span></span> <span data-ttu-id="fa1c2-189">是否引发通知取决于单个用户的 Teams 设置，你无法替代这些设置。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-189">Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings.</span></span> <span data-ttu-id="fa1c2-190">通知类型可以是横幅，也可以同时为横幅和电子邮件。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-190">The notification type is either a banner, or both a banner and an email.</span></span>
+<span data-ttu-id="f0b2c-186">通知会提醒用户有关新任务、提及和评论。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-186">Notifications alert users about new tasks, mentions, and comments.</span></span> <span data-ttu-id="f0b2c-187">这些警报与用户正在处理或必须通过向活动源中插入通知来查看内容相关。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-187">These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed.</span></span> <span data-ttu-id="f0b2c-188">对于从自动程序消息触发的通知，将 `TeamsChannelData` objects `Notification.Alert` 属性设置为 *true*。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-188">For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*.</span></span> <span data-ttu-id="f0b2c-189">是否引发通知取决于单个用户Teams设置，你无法替代这些设置。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-189">Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings.</span></span> <span data-ttu-id="f0b2c-190">通知类型可以是横幅，也可以同时为横幅和电子邮件。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-190">The notification type is either a banner, or both a banner and an email.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="fa1c2-191">" **摘要"** 字段将来自用户的任何文本显示为源中的通知消息。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-191">The **Summary** field displays any text from the user as a notification message in the feed.</span></span>
+> <span data-ttu-id="f0b2c-191">" **摘要"** 字段将来自用户的任何文本显示为源中的通知消息。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-191">The **Summary** field displays any text from the user as a notification message in the feed.</span></span>
 
-<span data-ttu-id="fa1c2-192">以下代码显示向邮件添加通知的示例：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-192">The following code shows an example of adding notifications to your message:</span></span>
+<span data-ttu-id="f0b2c-192">以下代码显示向邮件添加通知的示例：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-192">The following code shows an example of adding notifications to your message:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="fa1c2-193">C#</span><span class="sxs-lookup"><span data-stu-id="fa1c2-193">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="f0b2c-193">C#</span><span class="sxs-lookup"><span data-stu-id="f0b2c-193">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -280,7 +280,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="fa1c2-194">TypeScript</span><span class="sxs-lookup"><span data-stu-id="fa1c2-194">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="f0b2c-194">TypeScript</span><span class="sxs-lookup"><span data-stu-id="f0b2c-194">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -294,7 +294,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="python"></a>[<span data-ttu-id="fa1c2-195">Python</span><span class="sxs-lookup"><span data-stu-id="fa1c2-195">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="f0b2c-195">Python</span><span class="sxs-lookup"><span data-stu-id="f0b2c-195">Python</span></span>](#tab/python)
 
 ```python
 
@@ -306,7 +306,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="fa1c2-196">JSON</span><span class="sxs-lookup"><span data-stu-id="fa1c2-196">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="f0b2c-196">JSON</span><span class="sxs-lookup"><span data-stu-id="f0b2c-196">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -339,26 +339,26 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-<span data-ttu-id="fa1c2-197">若要增强邮件功能，可以将图片作为邮件附件进行添加。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-197">To enhance your message, you can include pictures as attachments to that message.</span></span>
+<span data-ttu-id="f0b2c-197">若要增强邮件功能，可以将图片作为邮件附件进行添加。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-197">To enhance your message, you can include pictures as attachments to that message.</span></span>
 
-## <a name="picture-messages"></a><span data-ttu-id="fa1c2-198">图片消息</span><span class="sxs-lookup"><span data-stu-id="fa1c2-198">Picture messages</span></span>
+## <a name="picture-messages"></a><span data-ttu-id="f0b2c-198">图片消息</span><span class="sxs-lookup"><span data-stu-id="f0b2c-198">Picture messages</span></span>
 
-<span data-ttu-id="fa1c2-199">图片通过向邮件添加附件来发送。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-199">Pictures are sent by adding attachments to a message.</span></span> <span data-ttu-id="fa1c2-200">有关附件详细信息，请参阅 [Bot Framework 文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-200">For more information on attachments, see [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).</span></span>
+<span data-ttu-id="f0b2c-199">图片通过向邮件添加附件来发送。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-199">Pictures are sent by adding attachments to a message.</span></span> <span data-ttu-id="f0b2c-200">有关附件详细信息，请参阅 [Bot Framework 文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-200">For more information on attachments, see [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).</span></span>
 
-<span data-ttu-id="fa1c2-201">图片可以是最多 1024×1024 和 1 MB PNG、 JPEG 或 GIF 格式。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-201">Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format.</span></span> <span data-ttu-id="fa1c2-202">不支持动态 GIF。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-202">Animated GIF is not supported.</span></span>
+<span data-ttu-id="f0b2c-201">图片可以是最多 1024×1024 和 1 MB PNG、 JPEG 或 GIF 格式。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-201">Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format.</span></span> <span data-ttu-id="f0b2c-202">不支持动态 GIF。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-202">Animated GIF is not supported.</span></span>
 
-<span data-ttu-id="fa1c2-203">使用 XML 指定每个图像的高度和宽度。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-203">Specify the height and width of each image by using XML.</span></span> <span data-ttu-id="fa1c2-204">在 markdown 中，图像大小默认为 256×256。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-204">In markdown, the image size defaults to 256×256.</span></span> <span data-ttu-id="fa1c2-205">例如：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-205">For example:</span></span>
+<span data-ttu-id="f0b2c-203">使用 XML 指定每个图像的高度和宽度。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-203">Specify the height and width of each image by using XML.</span></span> <span data-ttu-id="f0b2c-204">在 markdown 中，图像大小默认为 256×256。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-204">In markdown, the image size defaults to 256×256.</span></span> <span data-ttu-id="f0b2c-205">例如：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-205">For example:</span></span>
 
-* <span data-ttu-id="fa1c2-206">使用 `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` ：。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-206">Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.</span></span>
-* <span data-ttu-id="fa1c2-207">请勿使用 `![Duck on a rock](http://aka.ms/Fo983c)` ：。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-207">Do not use: `![Duck on a rock](http://aka.ms/Fo983c)`.</span></span>
+* <span data-ttu-id="f0b2c-206">使用 `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` ：。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-206">Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.</span></span>
+* <span data-ttu-id="f0b2c-207">请勿使用 `![Duck on a rock](http://aka.ms/Fo983c)` ：。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-207">Do not use: `![Duck on a rock](http://aka.ms/Fo983c)`.</span></span>
 
-<span data-ttu-id="fa1c2-208">对话机器人可以包含可简化业务工作流的自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-208">A conversational bot can include Adaptive Cards that simplify business workflows.</span></span> <span data-ttu-id="fa1c2-209">自适应卡片提供丰富的可自定义文本、语音、图像、按钮和输入字段。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-209">Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.</span></span>
+<span data-ttu-id="f0b2c-208">对话机器人可以包含可简化业务工作流的自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-208">A conversational bot can include Adaptive Cards that simplify business workflows.</span></span> <span data-ttu-id="f0b2c-209">自适应卡片提供丰富的可自定义文本、语音、图像、按钮和输入字段。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-209">Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.</span></span>
 
-## <a name="adaptive-cards"></a><span data-ttu-id="fa1c2-210">自适应卡</span><span class="sxs-lookup"><span data-stu-id="fa1c2-210">Adaptive Cards</span></span>
+## <a name="adaptive-cards"></a><span data-ttu-id="f0b2c-210">自适应卡</span><span class="sxs-lookup"><span data-stu-id="f0b2c-210">Adaptive Cards</span></span>
 
-<span data-ttu-id="fa1c2-211">自适应卡片可以在机器人中创作，并可在多个应用（如 Teams、网站等）中显示。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-211">Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on.</span></span> <span data-ttu-id="fa1c2-212">有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-212">For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).</span></span>
+<span data-ttu-id="f0b2c-211">自适应卡片可以在机器人中创作，并可在多个应用（如Teams网站等）中显示。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-211">Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on.</span></span> <span data-ttu-id="f0b2c-212">有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-212">For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).</span></span>
 
-<span data-ttu-id="fa1c2-213">以下代码显示发送简单自适应卡片的示例：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-213">The following code shows an example of sending a simple Adaptive Card:</span></span>
+<span data-ttu-id="f0b2c-213">以下代码显示发送简单自适应卡片的示例：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-213">The following code shows an example of sending a simple Adaptive Card:</span></span>
 
 ```json
 {
@@ -384,36 +384,36 @@ async def on_message_activity(self, turn_context: TurnContext):
 }
 ```
 
-<span data-ttu-id="fa1c2-214">若要了解有关机器人中的卡和卡的更多信息，请参阅 [卡片文档](~/task-modules-and-cards/what-are-cards.md)。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-214">To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).</span></span>
+<span data-ttu-id="f0b2c-214">若要了解有关机器人中的卡和卡的更多信息，请参阅 [卡片文档](~/task-modules-and-cards/what-are-cards.md)。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-214">To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).</span></span>
 
-## <a name="status-code-responses"></a><span data-ttu-id="fa1c2-215">状态代码响应</span><span class="sxs-lookup"><span data-stu-id="fa1c2-215">Status code responses</span></span>
+## <a name="status-code-responses"></a><span data-ttu-id="f0b2c-215">状态代码响应</span><span class="sxs-lookup"><span data-stu-id="f0b2c-215">Status code responses</span></span>
 
-<span data-ttu-id="fa1c2-216">以下是状态代码及其错误代码和消息值：</span><span class="sxs-lookup"><span data-stu-id="fa1c2-216">Following are the status codes and their error code and message values:</span></span>
+<span data-ttu-id="f0b2c-216">以下是状态代码及其错误代码和消息值：</span><span class="sxs-lookup"><span data-stu-id="f0b2c-216">Following are the status codes and their error code and message values:</span></span>
 
-| <span data-ttu-id="fa1c2-217">状态代码</span><span class="sxs-lookup"><span data-stu-id="fa1c2-217">Status code</span></span> | <span data-ttu-id="fa1c2-218">错误代码和消息值</span><span class="sxs-lookup"><span data-stu-id="fa1c2-218">Error code and message values</span></span> | <span data-ttu-id="fa1c2-219">说明</span><span class="sxs-lookup"><span data-stu-id="fa1c2-219">Description</span></span> |
+| <span data-ttu-id="f0b2c-217">状态代码</span><span class="sxs-lookup"><span data-stu-id="f0b2c-217">Status code</span></span> | <span data-ttu-id="f0b2c-218">错误代码和消息值</span><span class="sxs-lookup"><span data-stu-id="f0b2c-218">Error code and message values</span></span> | <span data-ttu-id="f0b2c-219">说明</span><span class="sxs-lookup"><span data-stu-id="f0b2c-219">Description</span></span> |
 |----------------|-----------------|-----------------|
-| <span data-ttu-id="fa1c2-220">403</span><span class="sxs-lookup"><span data-stu-id="fa1c2-220">403</span></span> | <span data-ttu-id="fa1c2-221">**代码**： `ConversationBlockedByUser`</span><span class="sxs-lookup"><span data-stu-id="fa1c2-221">**Code**: `ConversationBlockedByUser`</span></span> <br/> <span data-ttu-id="fa1c2-222">**消息**：用户阻止了与机器人的对话。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-222">**Message**: User blocked the conversation with the bot.</span></span> | <span data-ttu-id="fa1c2-223">用户通过审核设置在一对一聊天或频道中阻止机器人。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-223">User blocked the bot in 1:1 chat or a channel through moderation settings.</span></span> |
-| <span data-ttu-id="fa1c2-224">403</span><span class="sxs-lookup"><span data-stu-id="fa1c2-224">403</span></span> | <span data-ttu-id="fa1c2-225">**代码**： `BotNotInConversationRoster`</span><span class="sxs-lookup"><span data-stu-id="fa1c2-225">**Code**: `BotNotInConversationRoster`</span></span> <br/> <span data-ttu-id="fa1c2-226">**消息**：机器人不是对话名单中的一部分。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-226">**Message**: The bot is not part of the conversation roster.</span></span> | <span data-ttu-id="fa1c2-227">机器人不是对话的一部分。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-227">The bot is not part of the conversation.</span></span> |
-| <span data-ttu-id="fa1c2-228">403</span><span class="sxs-lookup"><span data-stu-id="fa1c2-228">403</span></span> | <span data-ttu-id="fa1c2-229">**代码**： `BotDisabledByAdmin`</span><span class="sxs-lookup"><span data-stu-id="fa1c2-229">**Code**: `BotDisabledByAdmin`</span></span> <br/> <span data-ttu-id="fa1c2-230">**消息**：租户管理员已禁用此自动程序。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-230">**Message**: The tenant admin disabled this bot.</span></span> | <span data-ttu-id="fa1c2-231">租户阻止了机器人。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-231">Tenant blocked the bot.</span></span> |
-| <span data-ttu-id="fa1c2-232">401</span><span class="sxs-lookup"><span data-stu-id="fa1c2-232">401</span></span> | <span data-ttu-id="fa1c2-233">**代码**： `BotNotRegistered`</span><span class="sxs-lookup"><span data-stu-id="fa1c2-233">**Code**: `BotNotRegistered`</span></span> <br/> <span data-ttu-id="fa1c2-234">**消息**：未找到此自动程序注册。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-234">**Message**: No registration found for this bot.</span></span> | <span data-ttu-id="fa1c2-235">未找到此自动程序注册。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-235">The registration for this bot was not found.</span></span> |
-| <span data-ttu-id="fa1c2-236">412</span><span class="sxs-lookup"><span data-stu-id="fa1c2-236">412</span></span> | <span data-ttu-id="fa1c2-237">**代码**： `PreconditionFailed`</span><span class="sxs-lookup"><span data-stu-id="fa1c2-237">**Code**: `PreconditionFailed`</span></span> <br/> <span data-ttu-id="fa1c2-238">**消息**：先决条件失败，请重试。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-238">**Message**: Precondition failed, please try again.</span></span> | <span data-ttu-id="fa1c2-239">由于同一对话上的多个并发操作，某一依赖项的前提条件失败。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-239">A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation.</span></span> |
-| <span data-ttu-id="fa1c2-240">404</span><span class="sxs-lookup"><span data-stu-id="fa1c2-240">404</span></span> | <span data-ttu-id="fa1c2-241">**代码**： `ConversationNotFound`</span><span class="sxs-lookup"><span data-stu-id="fa1c2-241">**Code**: `ConversationNotFound`</span></span> <br/> <span data-ttu-id="fa1c2-242">**消息**：未找到对话。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-242">**Message**: Conversation not found.</span></span> | <span data-ttu-id="fa1c2-243">未找到对话。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-243">The conversation was not found.</span></span> |
-| <span data-ttu-id="fa1c2-244">413</span><span class="sxs-lookup"><span data-stu-id="fa1c2-244">413</span></span> | <span data-ttu-id="fa1c2-245">**代码**： `MessageSizeTooBig`</span><span class="sxs-lookup"><span data-stu-id="fa1c2-245">**Code**: `MessageSizeTooBig`</span></span> <br/> <span data-ttu-id="fa1c2-246">**邮件**：邮件大小过大。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-246">**Message**: Message size too large.</span></span> | <span data-ttu-id="fa1c2-247">传入请求的大小太大。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-247">The size on the incoming request was too large.</span></span> |
-| <span data-ttu-id="fa1c2-248">429</span><span class="sxs-lookup"><span data-stu-id="fa1c2-248">429</span></span> | <span data-ttu-id="fa1c2-249">**代码**： `Throttled`</span><span class="sxs-lookup"><span data-stu-id="fa1c2-249">**Code**: `Throttled`</span></span> <br/> <span data-ttu-id="fa1c2-250">**消息**：请求过多。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-250">**Message**: Too many requests.</span></span> <span data-ttu-id="fa1c2-251">还返回在之后重试时间。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-251">Also returns when to retry after.</span></span> | <span data-ttu-id="fa1c2-252">机器人发送的请求过多。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-252">Too many requests were sent by the bot.</span></span> <span data-ttu-id="fa1c2-253">有关详细信息，请参阅速率 [限制](~/bots/how-to/rate-limit.md)。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-253">For more information, see [rate limit](~/bots/how-to/rate-limit.md).</span></span> |
+| <span data-ttu-id="f0b2c-220">403</span><span class="sxs-lookup"><span data-stu-id="f0b2c-220">403</span></span> | <span data-ttu-id="f0b2c-221">**代码**： `ConversationBlockedByUser`</span><span class="sxs-lookup"><span data-stu-id="f0b2c-221">**Code**: `ConversationBlockedByUser`</span></span> <br/> <span data-ttu-id="f0b2c-222">**消息**：用户阻止了与机器人的对话。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-222">**Message**: User blocked the conversation with the bot.</span></span> | <span data-ttu-id="f0b2c-223">用户通过审核设置在一对一聊天或频道中阻止机器人。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-223">User blocked the bot in 1:1 chat or a channel through moderation settings.</span></span> |
+| <span data-ttu-id="f0b2c-224">403</span><span class="sxs-lookup"><span data-stu-id="f0b2c-224">403</span></span> | <span data-ttu-id="f0b2c-225">**代码**： `BotNotInConversationRoster`</span><span class="sxs-lookup"><span data-stu-id="f0b2c-225">**Code**: `BotNotInConversationRoster`</span></span> <br/> <span data-ttu-id="f0b2c-226">**消息**：机器人不是对话名单中的一部分。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-226">**Message**: The bot is not part of the conversation roster.</span></span> | <span data-ttu-id="f0b2c-227">机器人不是对话的一部分。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-227">The bot is not part of the conversation.</span></span> |
+| <span data-ttu-id="f0b2c-228">403</span><span class="sxs-lookup"><span data-stu-id="f0b2c-228">403</span></span> | <span data-ttu-id="f0b2c-229">**代码**： `BotDisabledByAdmin`</span><span class="sxs-lookup"><span data-stu-id="f0b2c-229">**Code**: `BotDisabledByAdmin`</span></span> <br/> <span data-ttu-id="f0b2c-230">**消息**：租户管理员已禁用此自动程序。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-230">**Message**: The tenant admin disabled this bot.</span></span> | <span data-ttu-id="f0b2c-231">租户阻止了机器人。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-231">Tenant blocked the bot.</span></span> |
+| <span data-ttu-id="f0b2c-232">401</span><span class="sxs-lookup"><span data-stu-id="f0b2c-232">401</span></span> | <span data-ttu-id="f0b2c-233">**代码**： `BotNotRegistered`</span><span class="sxs-lookup"><span data-stu-id="f0b2c-233">**Code**: `BotNotRegistered`</span></span> <br/> <span data-ttu-id="f0b2c-234">**消息**：未找到此自动程序注册。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-234">**Message**: No registration found for this bot.</span></span> | <span data-ttu-id="f0b2c-235">未找到此自动程序注册。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-235">The registration for this bot was not found.</span></span> |
+| <span data-ttu-id="f0b2c-236">412</span><span class="sxs-lookup"><span data-stu-id="f0b2c-236">412</span></span> | <span data-ttu-id="f0b2c-237">**代码**： `PreconditionFailed`</span><span class="sxs-lookup"><span data-stu-id="f0b2c-237">**Code**: `PreconditionFailed`</span></span> <br/> <span data-ttu-id="f0b2c-238">**消息**：先决条件失败，请重试。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-238">**Message**: Precondition failed, please try again.</span></span> | <span data-ttu-id="f0b2c-239">由于同一对话上的多个并发操作，某一依赖项的前提条件失败。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-239">A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation.</span></span> |
+| <span data-ttu-id="f0b2c-240">404</span><span class="sxs-lookup"><span data-stu-id="f0b2c-240">404</span></span> | <span data-ttu-id="f0b2c-241">**代码**： `ConversationNotFound`</span><span class="sxs-lookup"><span data-stu-id="f0b2c-241">**Code**: `ConversationNotFound`</span></span> <br/> <span data-ttu-id="f0b2c-242">**消息**：未找到对话。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-242">**Message**: Conversation not found.</span></span> | <span data-ttu-id="f0b2c-243">未找到对话。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-243">The conversation was not found.</span></span> |
+| <span data-ttu-id="f0b2c-244">413</span><span class="sxs-lookup"><span data-stu-id="f0b2c-244">413</span></span> | <span data-ttu-id="f0b2c-245">**代码**： `MessageSizeTooBig`</span><span class="sxs-lookup"><span data-stu-id="f0b2c-245">**Code**: `MessageSizeTooBig`</span></span> <br/> <span data-ttu-id="f0b2c-246">**邮件**：邮件大小过大。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-246">**Message**: Message size too large.</span></span> | <span data-ttu-id="f0b2c-247">传入请求的大小太大。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-247">The size on the incoming request was too large.</span></span> |
+| <span data-ttu-id="f0b2c-248">429</span><span class="sxs-lookup"><span data-stu-id="f0b2c-248">429</span></span> | <span data-ttu-id="f0b2c-249">**代码**： `Throttled`</span><span class="sxs-lookup"><span data-stu-id="f0b2c-249">**Code**: `Throttled`</span></span> <br/> <span data-ttu-id="f0b2c-250">**消息**：请求过多。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-250">**Message**: Too many requests.</span></span> <span data-ttu-id="f0b2c-251">还返回在之后重试时间。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-251">Also returns when to retry after.</span></span> | <span data-ttu-id="f0b2c-252">机器人发送的请求过多。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-252">Too many requests were sent by the bot.</span></span> <span data-ttu-id="f0b2c-253">有关详细信息，请参阅速率 [限制](~/bots/how-to/rate-limit.md)。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-253">For more information, see [rate limit](~/bots/how-to/rate-limit.md).</span></span> |
 
-## <a name="code-sample"></a><span data-ttu-id="fa1c2-254">代码示例</span><span class="sxs-lookup"><span data-stu-id="fa1c2-254">Code sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="f0b2c-254">代码示例</span><span class="sxs-lookup"><span data-stu-id="f0b2c-254">Code sample</span></span>
 
-|<span data-ttu-id="fa1c2-255">示例名称</span><span class="sxs-lookup"><span data-stu-id="fa1c2-255">Sample name</span></span> | <span data-ttu-id="fa1c2-256">说明</span><span class="sxs-lookup"><span data-stu-id="fa1c2-256">Description</span></span> | <span data-ttu-id="fa1c2-257">.NETCore</span><span class="sxs-lookup"><span data-stu-id="fa1c2-257">.NETCore</span></span> | <span data-ttu-id="fa1c2-258">Node.js</span><span class="sxs-lookup"><span data-stu-id="fa1c2-258">Node.js</span></span> | <span data-ttu-id="fa1c2-259">Python</span><span class="sxs-lookup"><span data-stu-id="fa1c2-259">Python</span></span> |
+|<span data-ttu-id="f0b2c-255">示例名称</span><span class="sxs-lookup"><span data-stu-id="f0b2c-255">Sample name</span></span> | <span data-ttu-id="f0b2c-256">说明</span><span class="sxs-lookup"><span data-stu-id="f0b2c-256">Description</span></span> | <span data-ttu-id="f0b2c-257">.NETCore</span><span class="sxs-lookup"><span data-stu-id="f0b2c-257">.NETCore</span></span> | <span data-ttu-id="f0b2c-258">Node.js</span><span class="sxs-lookup"><span data-stu-id="f0b2c-258">Node.js</span></span> | <span data-ttu-id="f0b2c-259">Python</span><span class="sxs-lookup"><span data-stu-id="f0b2c-259">Python</span></span> |
 |----------------|-----------------|--------------|----------------|-----------|
-| <span data-ttu-id="fa1c2-260">Teams 对话自动程序</span><span class="sxs-lookup"><span data-stu-id="fa1c2-260">Teams conversation bot</span></span> | <span data-ttu-id="fa1c2-261">消息和对话事件处理。</span><span class="sxs-lookup"><span data-stu-id="fa1c2-261">Messaging and conversation event handling.</span></span> |[<span data-ttu-id="fa1c2-262">View</span><span class="sxs-lookup"><span data-stu-id="fa1c2-262">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="fa1c2-263">View</span><span class="sxs-lookup"><span data-stu-id="fa1c2-263">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [<span data-ttu-id="fa1c2-264">View</span><span class="sxs-lookup"><span data-stu-id="fa1c2-264">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| <span data-ttu-id="f0b2c-260">Teams 对话自动程序</span><span class="sxs-lookup"><span data-stu-id="f0b2c-260">Teams conversation bot</span></span> | <span data-ttu-id="f0b2c-261">消息和对话事件处理。</span><span class="sxs-lookup"><span data-stu-id="f0b2c-261">Messaging and conversation event handling.</span></span> |[<span data-ttu-id="f0b2c-262">View</span><span class="sxs-lookup"><span data-stu-id="f0b2c-262">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="f0b2c-263">View</span><span class="sxs-lookup"><span data-stu-id="f0b2c-263">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [<span data-ttu-id="f0b2c-264">View</span><span class="sxs-lookup"><span data-stu-id="f0b2c-264">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="see-also"></a><span data-ttu-id="fa1c2-265">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fa1c2-265">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0b2c-265">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f0b2c-265">See also</span></span>
 
-- [<span data-ttu-id="fa1c2-266">发送主动邮件</span><span class="sxs-lookup"><span data-stu-id="fa1c2-266">Send proactive messages</span></span>](~/bots/how-to/conversations/send-proactive-messages.md)
+- [<span data-ttu-id="f0b2c-266">发送主动邮件</span><span class="sxs-lookup"><span data-stu-id="f0b2c-266">Send proactive messages</span></span>](~/bots/how-to/conversations/send-proactive-messages.md)
 
-- [<span data-ttu-id="fa1c2-267">订阅对话事件</span><span class="sxs-lookup"><span data-stu-id="fa1c2-267">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+- [<span data-ttu-id="f0b2c-267">订阅对话事件</span><span class="sxs-lookup"><span data-stu-id="f0b2c-267">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
-## <a name="next-step"></a><span data-ttu-id="fa1c2-268">后续步骤</span><span class="sxs-lookup"><span data-stu-id="fa1c2-268">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="f0b2c-268">后续步骤</span><span class="sxs-lookup"><span data-stu-id="f0b2c-268">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="fa1c2-269">自动程序命令菜单</span><span class="sxs-lookup"><span data-stu-id="fa1c2-269">Bot command menus</span></span>](~/bots/how-to/create-a-bot-commands-menu.md)
+> [<span data-ttu-id="f0b2c-269">自动程序命令菜单</span><span class="sxs-lookup"><span data-stu-id="f0b2c-269">Bot command menus</span></span>](~/bots/how-to/create-a-bot-commands-menu.md)

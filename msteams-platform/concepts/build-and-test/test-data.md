@@ -12,28 +12,28 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/30/2021
 ms.locfileid: "52101742"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a><span data-ttu-id="f4284-104">将测试数据添加到Microsoft 365租户</span><span class="sxs-lookup"><span data-stu-id="f4284-104">Add test data to your Microsoft 365 test tenant</span></span>
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a><span data-ttu-id="78cb2-104">将测试数据添加到Microsoft 365租户</span><span class="sxs-lookup"><span data-stu-id="78cb2-104">Add test data to your Microsoft 365 test tenant</span></span>
 
-<span data-ttu-id="f4284-105">可以使用开发人员订阅Microsoft Teams示例数据测试Microsoft 365应用。</span><span class="sxs-lookup"><span data-stu-id="f4284-105">You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.</span></span>
+<span data-ttu-id="78cb2-105">可以使用开发人员订阅Microsoft Teams示例数据测试Microsoft 365应用。</span><span class="sxs-lookup"><span data-stu-id="78cb2-105">You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="f4284-106">先决条件</span><span class="sxs-lookup"><span data-stu-id="f4284-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="78cb2-106">先决条件</span><span class="sxs-lookup"><span data-stu-id="78cb2-106">Prerequisites</span></span>
 
-1. <span data-ttu-id="f4284-107">[如果您没有Microsoft 365，](/office/developer-program/office-365-developer-program)请加入开发人员计划。</span><span class="sxs-lookup"><span data-stu-id="f4284-107">[Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.</span></span>
-2. <span data-ttu-id="f4284-108">[设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。</span><span class="sxs-lookup"><span data-stu-id="f4284-108">[Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).</span></span>
-3. <span data-ttu-id="f4284-109">[将示例数据包与开发人员Microsoft 365一起安装 Users 内容包](/office/developer-program/install-sample-packs)。</span><span class="sxs-lookup"><span data-stu-id="f4284-109">[Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).</span></span>
-4. <span data-ttu-id="f4284-110">[安装 Teams PowerShell 模块](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。</span><span class="sxs-lookup"><span data-stu-id="f4284-110">[Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).</span></span>
-5. <span data-ttu-id="f4284-111">[安装 Azure AD PowerShell 模块](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="f4284-111">[Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).</span></span>
+1. <span data-ttu-id="78cb2-107">[如果您没有Microsoft 365，](/office/developer-program/office-365-developer-program)请加入开发人员计划。</span><span class="sxs-lookup"><span data-stu-id="78cb2-107">[Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.</span></span>
+2. <span data-ttu-id="78cb2-108">[设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。</span><span class="sxs-lookup"><span data-stu-id="78cb2-108">[Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).</span></span>
+3. <span data-ttu-id="78cb2-109">[将示例数据包与开发人员Microsoft 365一起安装 Users 内容包](/office/developer-program/install-sample-packs)。</span><span class="sxs-lookup"><span data-stu-id="78cb2-109">[Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).</span></span>
+4. <span data-ttu-id="78cb2-110">[安装 Teams PowerShell 模块](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。</span><span class="sxs-lookup"><span data-stu-id="78cb2-110">[Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).</span></span>
+5. <span data-ttu-id="78cb2-111">[安装 Azure AD PowerShell 模块](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="78cb2-111">[Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f4284-112">必须在租户中具有全局管理员权限才能运行脚本。</span><span class="sxs-lookup"><span data-stu-id="f4284-112">You must have global admin permissions in the tenant to run the scripts.</span></span>
+> <span data-ttu-id="78cb2-112">必须在租户中具有全局管理员权限才能运行脚本。</span><span class="sxs-lookup"><span data-stu-id="78cb2-112">You must have global admin permissions in the tenant to run the scripts.</span></span>
 
-## <a name="allow-users-to-upload-apps"></a><span data-ttu-id="f4284-113">允许用户上载应用</span><span class="sxs-lookup"><span data-stu-id="f4284-113">Allow users to upload apps</span></span>
+## <a name="allow-users-to-upload-apps"></a><span data-ttu-id="78cb2-113">允许用户上载应用</span><span class="sxs-lookup"><span data-stu-id="78cb2-113">Allow users to upload apps</span></span>
 
-<span data-ttu-id="f4284-114">默认情况下，只有全局管理员或Teams管理员才能在租户 () 旁加载应用。</span><span class="sxs-lookup"><span data-stu-id="f4284-114">By default, only global admins or Teams service admins can upload (sideload) apps in a tenant.</span></span> <span data-ttu-id="f4284-115">还可以允许用户上载自定义应用供自己使用或上载到团队进行测试。</span><span class="sxs-lookup"><span data-stu-id="f4284-115">You can also allow users to upload custom apps for their own use or to teams for testing.</span></span> <span data-ttu-id="f4284-116">有关详细信息，请参阅管理自定义[应用策略和](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)Teams。</span><span class="sxs-lookup"><span data-stu-id="f4284-116">For more information, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).</span></span>
+<span data-ttu-id="78cb2-114">默认情况下，只有全局管理员或Teams管理员才能在租户 () 旁加载应用。</span><span class="sxs-lookup"><span data-stu-id="78cb2-114">By default, only global admins or Teams service admins can upload (sideload) apps in a tenant.</span></span> <span data-ttu-id="78cb2-115">还可以允许用户上载自定义应用供自己使用或上载到团队进行测试。</span><span class="sxs-lookup"><span data-stu-id="78cb2-115">You can also allow users to upload custom apps for their own use or to teams for testing.</span></span> <span data-ttu-id="78cb2-116">有关详细信息，请参阅管理自定义[应用策略和](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)Teams。</span><span class="sxs-lookup"><span data-stu-id="78cb2-116">For more information, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).</span></span>
 
-## <a name="create-teams-and-channels-for-testing"></a><span data-ttu-id="f4284-117">创建用于测试的团队和频道</span><span class="sxs-lookup"><span data-stu-id="f4284-117">Create teams and channels for testing</span></span>
+## <a name="create-teams-and-channels-for-testing"></a><span data-ttu-id="78cb2-117">创建用于测试的团队和频道</span><span class="sxs-lookup"><span data-stu-id="78cb2-117">Create teams and channels for testing</span></span>
 
-1. <span data-ttu-id="f4284-118">将以下代码段另存 **为**.xml并记下文件路径。</span><span class="sxs-lookup"><span data-stu-id="f4284-118">Save the following snippet as a **.xml** file and note the file path.</span></span> <span data-ttu-id="f4284-119">此 XML 定义团队的结构和与其成员一起创建的频道：</span><span class="sxs-lookup"><span data-stu-id="f4284-119">This XML defines the structure of the team and channel that is created along with its members:</span></span>
+1. <span data-ttu-id="78cb2-118">将以下代码段另存 **为**.xml并记下文件路径。</span><span class="sxs-lookup"><span data-stu-id="78cb2-118">Save the following snippet as a **.xml** file and note the file path.</span></span> <span data-ttu-id="78cb2-119">此 XML 定义团队的结构和与其成员一起创建的频道：</span><span class="sxs-lookup"><span data-stu-id="78cb2-119">This XML defines the structure of the team and channel that is created along with its members:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -147,7 +147,7 @@ ms.locfileid: "52101742"
     </Teams>
     ```
 
-2. <span data-ttu-id="f4284-120">将以下代码段另存为 PowerShell 脚本 (.ps1) 并记下保存位置。</span><span class="sxs-lookup"><span data-stu-id="f4284-120">Save the following snippet as a PowerShell script (.ps1) and note where you have saved it.</span></span> <span data-ttu-id="f4284-121">此脚本执行创建团队和频道的步骤，并添加成员：</span><span class="sxs-lookup"><span data-stu-id="f4284-121">This script executes the steps to create the team and channel, and add members to them:</span></span>
+2. <span data-ttu-id="78cb2-120">将以下代码段另存为 PowerShell 脚本 (.ps1) 并记下保存位置。</span><span class="sxs-lookup"><span data-stu-id="78cb2-120">Save the following snippet as a PowerShell script (.ps1) and note where you have saved it.</span></span> <span data-ttu-id="78cb2-121">此脚本执行创建团队和频道的步骤，并添加成员：</span><span class="sxs-lookup"><span data-stu-id="78cb2-121">This script executes the steps to create the team and channel, and add members to them:</span></span>
 
     ```powershell
     Param(
@@ -238,16 +238,16 @@ ms.locfileid: "52101742"
     }
     ```
 
-3. <span data-ttu-id="f4284-122">在管理员Windows PowerShell打开一个会话会话，然后运行刚保存的脚本。</span><span class="sxs-lookup"><span data-stu-id="f4284-122">Open a Windows PowerShell session in Administrator mode, and run the script that you just saved.</span></span>
-4. <span data-ttu-id="f4284-123">当系统提示你提供凭据时，输入首次注册开发人员订阅时收到的全局管理员凭据。</span><span class="sxs-lookup"><span data-stu-id="f4284-123">When you are prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.</span></span>
+3. <span data-ttu-id="78cb2-122">在管理员Windows PowerShell打开一个会话会话，然后运行刚保存的脚本。</span><span class="sxs-lookup"><span data-stu-id="78cb2-122">Open a Windows PowerShell session in Administrator mode, and run the script that you just saved.</span></span>
+4. <span data-ttu-id="78cb2-123">当系统提示你提供凭据时，输入首次注册开发人员订阅时收到的全局管理员凭据。</span><span class="sxs-lookup"><span data-stu-id="78cb2-123">When you are prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.</span></span>
 
     > [!Note]
-    > <span data-ttu-id="f4284-124">不要关闭 PowerShell 会话，因为脚本需要几分钟时间才能执行。</span><span class="sxs-lookup"><span data-stu-id="f4284-124">Do not close your PowerShell session as the script takes several minutes to execute.</span></span> <span data-ttu-id="f4284-125">如果您修改了订阅中的用户，但从默认内容包中创建的内容进行了修改，则某些用户可能不会添加到Teams。</span><span class="sxs-lookup"><span data-stu-id="f4284-125">If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams.</span></span> <span data-ttu-id="f4284-126">当脚本执行时，它将显示成功或失败的操作。</span><span class="sxs-lookup"><span data-stu-id="f4284-126">As the script executes it displays successful or failed actions.</span></span>
+    > <span data-ttu-id="78cb2-124">不要关闭 PowerShell 会话，因为脚本需要几分钟时间才能执行。</span><span class="sxs-lookup"><span data-stu-id="78cb2-124">Do not close your PowerShell session as the script takes several minutes to execute.</span></span> <span data-ttu-id="78cb2-125">如果您修改了订阅中的用户，但从默认内容包中创建的内容进行了修改，则某些用户可能不会添加到Teams。</span><span class="sxs-lookup"><span data-stu-id="78cb2-125">If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams.</span></span> <span data-ttu-id="78cb2-126">当脚本执行时，它将显示成功或失败的操作。</span><span class="sxs-lookup"><span data-stu-id="78cb2-126">As the script executes it displays successful or failed actions.</span></span>
 
-5. <span data-ttu-id="f4284-127">脚本执行完毕后，可以使用其中一个用户帐户Teams登录客户端并查看新创建的团队。</span><span class="sxs-lookup"><span data-stu-id="f4284-127">After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.</span></span>
+5. <span data-ttu-id="78cb2-127">脚本执行完毕后，可以使用其中一个用户帐户Teams登录客户端并查看新创建的团队。</span><span class="sxs-lookup"><span data-stu-id="78cb2-127">After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f4284-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f4284-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78cb2-128">另请参阅</span><span class="sxs-lookup"><span data-stu-id="78cb2-128">See also</span></span>
 
-* [<span data-ttu-id="f4284-129">调试选项卡</span><span class="sxs-lookup"><span data-stu-id="f4284-129">Debug your tab</span></span>](~/tabs/how-to/developer-tools.md) 
-* [<span data-ttu-id="f4284-130">调试机器人</span><span class="sxs-lookup"><span data-stu-id="f4284-130">Debug your bots</span></span>](~/bots/how-to/debug/locally-with-an-ide.md)
-* [<span data-ttu-id="f4284-131">测试 RSC 权限</span><span class="sxs-lookup"><span data-stu-id="f4284-131">Test RSC permissions</span></span>](~/graph-api/rsc/test-resource-specific-consent.md)
+* [<span data-ttu-id="78cb2-129">调试选项卡</span><span class="sxs-lookup"><span data-stu-id="78cb2-129">Debug your tab</span></span>](~/tabs/how-to/developer-tools.md) 
+* [<span data-ttu-id="78cb2-130">调试机器人</span><span class="sxs-lookup"><span data-stu-id="78cb2-130">Debug your bots</span></span>](~/bots/how-to/debug/locally-with-an-ide.md)
+* [<span data-ttu-id="78cb2-131">测试 RSC 权限</span><span class="sxs-lookup"><span data-stu-id="78cb2-131">Test RSC permissions</span></span>](~/graph-api/rsc/test-resource-specific-consent.md)
