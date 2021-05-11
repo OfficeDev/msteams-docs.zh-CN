@@ -1,10 +1,10 @@
 ### YamlMime:Hub
-title: Microsoft Teams 开发人员文档
-summary: 获取文档、示例代码、教程等，帮助你生成自定义 Microsoft Teams 应用。
+title: Microsoft Teams开发人员文档
+summary: 获取文档、示例代码、教程等，以帮助你生成自定义Microsoft Teams应用。
 brand: teams
 metadata:
-  title: Microsoft Teams 平台开发人员文档
-  description: Microsoft Teams 开发人员平台使开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地做出决策、提供 (通过减少上下文切换) ，并围绕现有内容和工作流创建协作。 .
+  title: Microsoft Teams平台开发人员文档
+  description: 利用 Microsoft Teams 开发人员平台，开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快作出决策、通过减少上下文切换) 提供焦点 (以及围绕现有内容和工作流创建协作。 .
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -13,7 +13,7 @@ metadata:
   ms.date: 05/29/2020
 highlightedContent:
   items:
-    - title: "是 Teams 开发的新人？ \U0001F680从这里开始！"
+    - title: "新开发Teams？ \U0001F680从这里开始！"
       itemType: get-started
       url: /microsoftteams/platform/overview
     - title: 规划应用
@@ -25,10 +25,10 @@ highlightedContent:
     - title: 生成应用程序
       itemType: how-to-guide
       url: /microsoftteams/platform/overview#start-building
-    - title: 使用 Microsoft Graph 增强应用
+    - title: 使用 Microsoft Graph 增强你的应用
       itemType: how-to-guide
       url: /graph/teams-concept-overview
-    - title: 将应用发布到 Teams 应用商店
+    - title: 将应用发布到应用商店Teams应用商店
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: 教程和代码示例
@@ -58,22 +58,22 @@ conceptualContent:
           text: 团队应用程序功能
         - url: /microsoftteams/platform/concepts/design/map-use-cases
           itemType: overview
-          text: 将用例映射到 Microsoft Teams 功能
+          text: 将用例映射到Microsoft Teams功能
         - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
           itemType: how-to-guide
-          text: 使用应用生成 Teams Node.js
+          text: 使用Teams生成Node.js
         - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
           itemType: how-to-guide
-          text: 使用 C 生成 Teams 应用#
+          text: 使用 C Teams应用#
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
-          text: 使用 Microsoft Power Platform 生成低代码 Teams 应用、机器人和流
+          text: 使用 Microsoft Power Platform Teams应用、机器人和流构建低代码
         - url: /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
-          text: Teams 应用的清单架构
+          text: 应用程序清单Teams架构
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: Microsoft Teams 应用的构建方案
+          text: 生成应用Microsoft Teams方案
     - title: 学习
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
@@ -93,7 +93,7 @@ conceptualContent:
           text: 使用任务模块收集输入和收集信息
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: 使用 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
+          text: 连接 Web 服务通过 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
     - title: 集成
       links:
         - url: /microsoftteams/platform/samples/integrating-web-apps
@@ -101,13 +101,13 @@ conceptualContent:
           text: 集成 web 应用
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
-          text: 集成 Power Virtual Agents 聊天机器人
+          text: 集成聊天Power Virtual Agents聊天机器人
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
-          text: 为网站集成"共享到 Teams"按钮
+          text: 为网站集成"Teams"按钮
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
-          text: 将 Teams 选项卡与 SharePoint 集成
+          text: 将Teams选项卡与SharePoint
         - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: how-to-guide
           text: 与一个企业学习管理系统集成
@@ -124,22 +124,22 @@ conceptualContent:
           text: Microsoft Teams 开发人员博客
         - url: 'https://aka.ms/microsoftteamscommunitycall'
           itemType: overview
-          text: Microsoft Teams 社区通话
+          text: Microsoft Teams社区通话
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
           text: 公告
-    - title: 社区帮助
+    - title: Community帮助
       links:
         - url: /microsoftteams/platform/feedback
           itemType: overview
-          text: Microsoft Teams 开发人员社区与响应
+          text: Microsoft Teams开发人员Community和响应
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
-          text: 参与 Microsoft Teams 文档
+          text: 参与Microsoft Teams文档
 tools:
   title: SDK 和工具
   items:
-    - title: Microsoft Teams Toolkit Code Visual Studio扩展
+    - title: Microsoft Teams Toolkit扩展Visual Studio Code
       imageSrc: /media/logos/logo_vs-code.svg
       url: /microsoftteams/platform/toolkit/visual-studio-code-overview
     - title: Microsoft Teams Toolkit扩展Visual Studio

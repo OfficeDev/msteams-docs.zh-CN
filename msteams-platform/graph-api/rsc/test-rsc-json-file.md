@@ -1,6 +1,6 @@
 ---
-title: 在 Teams 中测试特定于资源的同意
-description: 如何使用 Postman 在 Teams 中测试特定于资源的同意
+title: 在测试中测试特定于资源的Teams
+description: 如何使用 Postman 在 Teams中测试特定于资源的同意
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 01/27/2021
 ms.locfileid: "50014514"
 ---
-# <a name="test-rsc-postman-collection-json"></a><span data-ttu-id="9fa2d-104">测试 RSC Postman 集合 JSON</span><span class="sxs-lookup"><span data-stu-id="9fa2d-104">Test RSC Postman collection JSON</span></span>
+# <a name="test-rsc-postman-collection-json"></a><span data-ttu-id="d0951-104">测试 RSC Postman 集合 JSON</span><span class="sxs-lookup"><span data-stu-id="d0951-104">Test RSC Postman collection JSON</span></span>
 
 ```json
 {
