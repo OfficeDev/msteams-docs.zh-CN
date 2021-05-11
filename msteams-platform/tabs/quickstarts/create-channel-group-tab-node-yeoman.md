@@ -1,7 +1,7 @@
 ---
-title: 使用 Microsoft Teams Node.js Yeoman 生成器创建自定义频道和组选项卡
+title: 使用自定义频道和组选项卡Node.js Yeoman 生成器进行Microsoft Teams
 author: laujan
-description: 使用适用于 Microsoft Teams 的 Yeoman 生成器创建频道和组选项卡的快速入门指南。
+description: 使用 Yeoman 生成器为用户创建频道和组选项卡的快速Microsoft Teams。
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
@@ -12,12 +12,12 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020301"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>使用 Microsoft Teams Node.js Yeoman 生成器创建自定义频道和组选项卡
+# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>使用自定义频道和组选项卡Node.js Yeoman 生成器进行Microsoft Teams
 
 >[!NOTE]
->本快速入门遵循 Microsoft OfficeDev GitHub 存储库中的构建 [首个 Microsoft Teams 应用](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki 中概述的步骤。
+>本快速入门遵循 Microsoft OfficeDev Microsoft Teams存储库中的构建第一个 Microsoft Teams [App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki 中概述GitHub步骤。
 
-在此快速入门中，我们将演练使用 [Teams Yeoman](https://github.com/OfficeDev/generator-teams/)生成器创建自定义频道和组选项卡。
+在此快速入门中，我们将演练使用[Yeoman](https://github.com/OfficeDev/generator-teams/)生成器创建自定义频道Teams选项卡。
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "52020301"
 
 ## <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-Microsoft Teams 是完全基于云的产品，要求使用 HTTPS 终结点从云中提供选项卡内容。 Teams 不允许本地托管，因此，你需要将选项卡发布到公用 URL 或使用将本地端口公开给面向 Internet 的 URL 的代理。
+Microsoft Teams完全基于云的产品，并且要求使用 HTTPS 终结点从云中提供选项卡内容。 Teams不允许本地托管，因此，你需要将选项卡发布到公用 URL 或使用将本地端口公开给面向 Internet 的 URL 的代理。
 
 若要测试选项卡扩展，你将使用内置于此应用程序中的[ngrok。](https://ngrok.com/docs) Ngrok 是反向代理软件工具，它将创建到本地运行的 Web 服务器公开可用的 HTTPS 终结点的隧道。 你的服务器的 Web 终结点将在本地计算机上在当前会话期间可用。 当计算机关闭或进入睡眠状态时，服务将不再可用。
 
@@ -81,12 +81,12 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > 将选项卡上传到 Microsoft 团队并成功保存后，可以在选项卡库中查看它，将其添加到选项卡栏，并与其交互，直到 ngrok 隧道会话结束。 如果重新启动 ngrok 会话，将需要使用新的 URL 更新应用。
 
-## <a name="upload-your-application-to-teams"></a>将应用程序上传到 Teams
+## <a name="upload-your-application-to-teams"></a>Upload应用程序以Teams
 
 - 打开 Microsoft Teams 客户端。 如果使用基于 [Web 的版本，](https://teams.microsoft.com) 可以使用浏览器的开发人员工具检查前端 [代码](~/tabs/how-to/developer-tools.md)。
 - 在左侧 *的 YourTeams* 面板中，选择用于测试选项卡的团队旁边的菜单，然后选择 `...` "**管理团队"。**
-- 在主面板中，**从选项卡** 栏中选择"应用"，然后选择"上载位于页面右下角的自定义应用"。 
-- 打开项目目录，浏览到 **./package** 文件夹，选择应用包 zip 文件夹并选择"打开 **"。** 你的选项卡将上传到 Teams。
+- 在主面板中，从选项卡栏中选择"应用"，Upload位于页面右下角的自定义应用。 
+- 打开项目目录，浏览到 **./package** 文件夹，选择应用包 zip 文件夹并选择"打开 **"。** 您的选项卡将上载到Teams。
 - 返回到团队，选择要显示选项卡的频道，从选项卡➕选择选项卡，然后从库中选择您的选项卡。
 - 按照添加选项卡的说明操作。请注意，频道/组选项卡有一个自定义配置对话框。
 - 选择 **"** 保存"，您的选项卡将添加到频道的选项卡栏中。

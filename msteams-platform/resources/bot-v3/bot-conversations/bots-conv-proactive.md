@@ -1,6 +1,6 @@
 ---
 title: 主动邮件
-description: 描述机器人可以在 Microsoft Teams 中启动对话
+description: 描述机器人可以在聊天机器人中启动Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 团队方案主动消息对话机器人
@@ -49,29 +49,29 @@ ms.locfileid: "52019788"
 
 * **发生了什么事。** 关于导致通知发生的情况的清晰指示。
 * **它发生了什么。** 应清楚哪些项/内容已更新，以引发通知。
-* **谁在做。** 谁采取导致发送通知的操作。
+* **Who已这样做。** Who已执行导致发送通知的操作。
 * **他们可以对它做什么。** 让用户能够轻松根据通知采取操作。
 * **如何选择退出。** 你需要为用户提供选择退出其他通知的路径。
 
 ## <a name="obtain-necessary-user-information"></a>获取必要的用户信息
 
-机器人可以通过获取用户的唯一 ID 和租户 *ID* 来与单个 Microsoft Teams 用户创建新 *对话。* 可以使用以下方法之一获取这些值：
+机器人可以通过获取用户的唯一 ID Microsoft Teams租户 *ID，* 与单个用户创建新 *对话。* 可以使用以下方法之一获取这些值：
 
 * 通过 [从应用安装通道](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) 获取团队名单。
 * 在用户与频道中的机器人交互时 [缓存它们](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)。
 * 当用户在频道 [@mentioned聊天时，](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) 机器人是其中一部分。
 * 当你在[个人范围内安装 `conversationUpdate` ](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)应用或将新成员添加到频道或群聊时，通过缓存它们
 
-### <a name="proactively-install-your-app-using-graph"></a>使用 Graph 主动安装应用
+### <a name="proactively-install-your-app-using-graph"></a>使用安装程序主动安装Graph
 
 > [!Note]
 > 使用 graph 主动安装应用目前处于 beta 阶段。
 
-有时，可能需要主动向之前未安装或与你的应用交互的用户发送消息。 例如，您希望使用公司通信 [程序](~/samples/app-templates.md#company-communicator) 向整个组织发送邮件。 对于此方案，可以使用 Graph API 主动为用户安装应用，然后根据应用在安装时收到的事件缓存 `conversationUpdate` 必要的值。
+有时，可能需要主动向之前未安装或与你的应用交互的用户发送消息。 例如，您希望使用公司通信 [程序](~/samples/app-templates.md#company-communicator) 向整个组织发送邮件。 对于此方案，可以使用 Graph API 主动为用户安装应用，然后从应用安装时收到的事件缓存 `conversationUpdate` 必要的值。
 
-只能安装组织应用目录中的应用或 Teams 应用商店。
+只能安装组织应用目录中的应用，或Teams应用商店。
 
-有关 [完整详细信息，请参阅](/graph/teams-proactive-messaging) Graph 文档中的安装用户应用。 .NET 中 [还有一个示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
+有关[完整详细信息，](/graph/teams-proactive-messaging)请参阅Graph安装用户应用。 .NET 中 [还有一个示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
 
 ## <a name="examples"></a>示例
 
@@ -109,7 +109,7 @@ POST /v3/conversations
 
 ### <a name="using-net"></a>使用 .NET
 
-此示例使用 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet 程序包。
+此示例使用[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)包。
 
 ```csharp
 // Create or get existing chat conversation with user
@@ -160,7 +160,7 @@ bot.send(msg);
 
 ## <a name="creating-a-channel-conversation"></a>创建频道对话
 
-团队添加的机器人可以发布到频道中，以创建新的回复链。 如果你使用的是 teams SDK Node.js，请使用 它为你提供具有正确活动 ID 和对话 ID 的完全 `startReplyChain()` 填充的地址。如果你使用的是C#，请参阅下面的示例。
+团队添加的机器人可以发布到频道中，以创建新的回复链。 如果你使用的是 Node.js Teams SDK，请使用 它为你提供具有正确活动 ID 和对话 ID 的完全 `startReplyChain()` 填充的地址。如果你使用的是C#，请参阅下面的示例。
 
 或者，您可以使用 REST API 向资源发出 POST [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) 请求。
 

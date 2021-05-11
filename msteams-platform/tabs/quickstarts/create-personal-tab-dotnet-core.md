@@ -1,7 +1,7 @@
 ---
-title: 创建具有核心 ASP.NET 选项卡
+title: 使用"个人"选项卡创建 ASP.NET Core
 author: laujan
-description: 使用 Core 创建自定义个人选项卡 ASP.NET 指南。
+description: 使用自定义选项卡创建自定义个人选项卡的快速 ASP.NET Core。
 ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
@@ -12,9 +12,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020294"
 ---
-# <a name="create-a-personal-tab-with-aspnet-core"></a>创建具有核心 ASP.NET 选项卡
+# <a name="create-a-personal-tab-with-aspnet-core"></a>使用"个人"选项卡创建 ASP.NET Core
 
-在此快速入门中，我们将演练创建自定义个人选项卡，该选项卡包含C#和 ASP.Net Core 用户页面。 我们还将使用 [适用于 Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) 的 App Studio 完成应用清单，将选项卡部署到 Teams。
+在此快速入门中，我们将演练创建自定义个人选项卡，该选项卡包含C#和 ASP.Net Core 用户页面。 我们还将使用 App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)完成应用清单，并部署选项卡以Teams。
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "52020294"
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-获得源代码后，打开"打开Visual Studio并选择"**打开项目或解决方案"。** 导航到选项卡应用程序目录，然后打开 **PersonalTab.sln**。
+获得源代码后，打开"Visual Studio并选择"**打开项目或解决方案"。** 导航到选项卡应用程序目录，然后打开 **PersonalTab.sln**。
 
 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。 在浏览器中，导航到下面的 URL 以验证应用程序是否加载正确：
 
@@ -39,7 +39,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 ### <a name="startupcs"></a>Startup.cs
 
-此项目从一个 ASP.NET Core 2.2 Web 应用程序空模板创建，在设置时选中了"高级 *- 配置 HTTPS"* 复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此静态文件中间件将添加到 `Configure()` 方法：
+此项目从 2.2 web 应用程序 ASP.NET Core模板创建，在设置时选中了"高级 *- 为 HTTPS* 配置"复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此静态文件中间件将添加到 `Configure()` 方法：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -55,11 +55,11 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="wwwroot-folder"></a>wwwroot 文件夹
 
-在 ASP.NET 核心中，Web 根文件夹是应用程序查找静态文件的位置。
+在 ASP.NET Core中，Web 根文件夹是应用程序查找静态文件的位置。
 
 ### <a name="indexcshtml"></a>Index.cshtml
 
-ASP.NET 核心将名为 *Index* 的文件视为网站的默认/主页。 当浏览器 URL 指向网站的根目录时 **，Index.cshtml** 将显示为应用程序的主页。
+ASP.NET Core将名为 *Index* 的文件视为网站的默认/主页。 当浏览器 URL 指向网站的根目录时 **，Index.cshtml** 将显示为应用程序的主页。
 
 ### <a name="appmanifest-folder"></a>AppManifest 文件夹
 
@@ -69,11 +69,11 @@ ASP.NET 核心将名为 *Index* 的文件视为网站的默认/主页。 当浏�
 - 一 **个 32** x 32 像素的透明边框图标。
 - 指定 **manifest.js** 属性的 on 文件。
 
-这些文件需要在应用包中压缩，以用于将选项卡上传到 Teams。 Microsoft Teams 将加载清单中指定的 ，将其嵌入 <`contentUrl` iframe \> 中，并将其呈现在选项卡中。
+这些文件需要在应用包中压缩，以用于将选项卡上载到Teams。 Microsoft Teams清单中加载指定的 ，将其嵌入 <`contentUrl` iframe 中，并将其 \> 呈现在选项卡中。
 
 ### <a name="csproj"></a>.csproj
 
-在"Visual Studio资源管理器"窗口中，右键单击项目并选择"编辑 **项目文件"。** 在文件底部，你将看到在应用程序生成时创建和更新 zip 文件夹的代码：
+在"Visual Studio资源管理器"窗口中，右键单击项目并选择"编辑Project **文件"。** 在文件底部，你将看到在应用程序生成时创建和更新 zip 文件夹的代码：
 
 ```xml
 <PropertyGroup>
@@ -110,7 +110,7 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 - 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 *ngrok* 是否正常运行。
 
 >[!TIP]
->你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果你需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且必须更新使用该 URL 的每一处。
+>你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且必须更新使用该 URL 的每一处。
 
 ### <a name="run-your-application"></a>运行应用程序
 

@@ -1,6 +1,6 @@
 ---
-title: 使用 Microsoft Teams 机器人中的任务模块
-description: 如何将任务模块与 Microsoft Teams 自动程序一同使用，包括 Bot Framework 卡、自适应卡片和深层链接
+title: 在自动程序Microsoft Teams模块
+description: 如何将任务模块与自动程序Microsoft Teams，包括 Bot Framework 卡、自适应卡片和深层链接
 localization_priority: Normal
 ms.topic: how-to
 keywords: 任务模块团队机器人
@@ -11,9 +11,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020273"
 ---
-# <a name="using-task-modules-from-microsoft-teams-bots"></a>使用 Microsoft Teams 机器人中的任务模块
+# <a name="using-task-modules-from-microsoft-teams-bots"></a>使用自动程序Microsoft Teams模块
 
-可以使用自适应卡片和自动程序框架卡上的按钮从 Microsoft Teams 自动程序调用任务模块 (Hero、Thumbnail 和 Office 365 Connector) 。 与开发人员必须跟踪机器人状态并允许用户中断/取消序列的多个对话步骤不同，任务模块通常是更好的用户体验。
+可以使用自适应卡片和自动程序框架Microsoft Teams上的按钮从自动程序调用任务模块 (Hero、Thumbnail 和 Office 365 Connector) 。 与开发人员必须跟踪机器人状态并允许用户中断/取消序列的多个对话步骤不同，任务模块通常是更好的用户体验。
 
 有两种调用任务模块的方法：
 
@@ -25,7 +25,7 @@ ms.locfileid: "52020273"
 
 ## <a name="invoking-a-task-module-via-taskfetch"></a>通过任务/提取调用任务模块
 
-当卡片操作的对象或以正确的方式初始化时 () 下面进行了详细说明，当用户按下按钮时，会向自动程序 `value` `invoke` `Action.Submit` `invoke` 发送消息。 在消息的 HTTP 响应中，有一个嵌入包装器对象中的 `invoke` [TaskInfo](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) 对象，Teams 使用该对象显示任务模块。
+当卡片操作的对象或以正确的方式初始化时 () 下面进行了详细说明，当用户按下按钮时，会向自动程序 `value` `invoke` `Action.Submit` `invoke` 发送消息。 在消息的 HTTP 响应中，包装器对象中嵌入了一个 `invoke` [TaskInfo](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)对象，Teams用于显示任务模块。
 
 ![task/fetch request/response](~/assets/images/task-module/task-module-invoke-request-response.png)
 
@@ -51,23 +51,23 @@ ms.locfileid: "52020273"
     ```
 
     从概念上说，事件及其对自动程序的响应与客户端 SDK 中的 `task/fetch` `microsoftTeams.tasks.startTask()` 函数类似。
-4. Microsoft Teams 显示任务模块。
+4. Microsoft Teams任务模块。
 
 ## <a name="submitting-the-result-of-a-task-module"></a>提交任务模块的结果
 
 当用户使用完任务模块后，将结果提交回自动程序与使用选项卡的方式类似，但[](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)存在一些差异，因此此处也进行了介绍。
 
-* **HTML/JavaScript `TaskInfo.url` ()**。 验证用户输入的信息后，可调用 SDK 函数 (以下称为" `microsoftTeams.tasks.submitTask()` `submitTask()` 可读性") 。 如果你仅希望 Teams 关闭任务模块，但大多数情况下你想要将对象或字符串传递到 你的 ，你可以调用不带任何 `submitTask()` 参数 `submitHandler` 的 。 只需传递它作为第一个参数， `result` 。 Teams 将 `submitHandler` 调用 `err` ：will `null` 和 will be `result` the object/string you passed to `submitTask()` 。 如果使用 参数调用 ，则必须传递 或 字符串数组：这允许 Teams 验证发送结果的应用是否与调用任务模块的应用 `submitTask()` `result`  `appId` `appId` 相同。 自动程序将收到 `task/submit` 一条消息， `result` 如下 [所述](#payload-of-taskfetch-and-tasksubmit-messages)。
+* **HTML/JavaScript `TaskInfo.url` ()**。 验证用户输入的信息后，可调用 SDK 函数 (以下称为" `microsoftTeams.tasks.submitTask()` `submitTask()` 可读性") 。 如果只想关闭任务模块，Teams调用不带任何参数，但大多数情况下，需要将对象或字符串传递到 `submitTask()` `submitHandler` 。 只需传递它作为第一个参数， `result` 。 Teams `submitHandler` 将调用 `err` ：will `null` 和 `result` will be the object/string you passed to `submitTask()` 。 如果使用 参数调用 ，则必须传递 或 字符串数组：这允许 Teams 验证发送结果的应用是否与调用任务模块的应用 `submitTask()` `result`  `appId` `appId` 相同。 自动程序将收到 `task/submit` 一条消息， `result` 如下 [所述](#payload-of-taskfetch-and-tasksubmit-messages)。
 * **自适应卡片 `TaskInfo.card` () 。** 自适应卡片正文 (用户填充) 当用户按下任何按钮时，会通过一条消息发送给 `task/submit` 自动 `Action.Submit` 程序。
 
 ## <a name="the-flexibility-of-tasksubmit"></a>任务/提交的灵活性
 
 在上一部分中，你了解了当用户完成从自动程序调用的任务模块时，机器人始终会收到 `task/submit invoke` 一条消息。 作为开发人员，在回复消息 *时，有几个* `task/submit` 选项：
 
-| HTTP 正文响应                      | 方案                                |
+| HTTP 正文响应                      | 应用场景                                |
 | --------------------------------------- | --------------------------------------- |
 | 无 (忽略 `task/submit` 消息)  | 最简单的响应是没有任何响应。 用户完成任务模块后，自动程序无需响应。 |
-| <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams 将在弹出消息 `value` 框中显示 的值。 |
+| <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams将在弹出消息 `value` 框中显示 的值。 |
 | <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | 允许你在向导/多步骤体验中将自适应卡片序列"链接"在一起。 _请注意，将自适应卡片链接至序列是一个高级方案，未在此处进行介绍。但是Node.js示例应用支持它，并且其工作方式记录在其 README.md [文件中](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs#implementation-notes)。_ |
 
 ## <a name="payload-of-taskfetch-and-tasksubmit-messages"></a>任务/提取和任务/提交消息的有效负载
@@ -78,7 +78,7 @@ ms.locfileid: "52020273"
 | -------- | ------------------------------------ |
 | `type`   | 将始终为 `invoke`              |
 | `name`   | 或 `task/fetch``task/submit` |
-| `value`  | 开发人员定义的有效负载。 通常，对象 `value` 的结构反映从 Teams 发送的对象。 但是，在这种情况下，这有所不同，因为我们希望同时支持从 Bot Framework () 和自适应卡片操作 () 获取动态提取 `task/fetch` `value` (`Action.Submit` `data`) ， `context` `value` / `data` 并且我们需要一种方法来将 Teams 与自动程序通信，除了 包含哪些内容。<br/><br/>我们通过将两者合并到父对象中来这样做：<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
+| `value`  | 开发人员定义的有效负载。 通常，对象 `value` 的结构反映从事件发送Teams。 但是，在这种情况下，这有所不同，因为我们希望同时支持从 Bot Framework () 和自适应卡片操作 () 获取动态提取 `task/fetch` `value` (`Action.Submit` `data`) ，并且 `context` `value` / `data` 我们需要一种方法来将 Teams 与自动程序进行通信，以及其中包括哪些内容。<br/><br/>我们通过将两者合并到父对象中来这样做：<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---nodejs"></a>示例：接收和响应任务/提取和任务/提交调用消息 - Node.js
 
@@ -163,11 +163,11 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
 }
 ```
 
-*另请参阅* Microsoft [Teams 任务模块示例代码 nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) 和  [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
+*另请参阅* [，Microsoft Teams模块示例代码 nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)和 [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---c"></a>示例：接收和响应任务/提取和任务/提交调用消息 - C#
 
-在C#中， `invoke` 消息由处理邮件 `HttpResponseMessage()` 的控制器 `Activity` 处理。 和 `task/fetch` `task/submit` 请求和响应为 JSON。 在C#中，处理原始 JSON 并不方便，因为它在 Node.js 中，因此你需要包装类来处理与 JSON 之间的序列化。 尚未在 Microsoft Teams [C# SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 中直接支持此功能，但你可以查看这些简单包装类在 C# [示例中的外观示例](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs)。
+在C#中， `invoke` 消息由处理邮件 `HttpResponseMessage()` 的控制器 `Activity` 处理。 和 `task/fetch` `task/submit` 请求和响应为 JSON。 在C#中，处理原始 JSON 并不方便，因为它在 Node.js 中，因此你需要包装类来处理与 JSON 之间的序列化。 尚未在 Microsoft Teams [C# SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)中对此进行直接支持，但你可以查看这些简单包装类在 C#[应用中的外观示例](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs)。
 
 下面是用于处理C#和使用这些包装类的邮件的示例代码 `task/fetch` `task/submit` `TaskInfo` ， (、) 示例摘录 `TaskEnvelope` ： [](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs)
 

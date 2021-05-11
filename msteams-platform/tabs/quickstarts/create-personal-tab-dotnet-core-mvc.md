@@ -14,7 +14,7 @@ ms.locfileid: "52019564"
 ---
 # <a name="create-a-custom-personal-tab-with-asp-net-core-mvc"></a>使用 ASP 创建自定义个人选项卡。 NET Core MVC
 
-在此快速入门中，我们将演练使用 C# 和 ASP 创建自定义个人选项卡。 Net Core MVC。 我们还将使用 [适用于 Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) 的 App Studio 完成应用清单，将选项卡部署到 Teams。
+在此快速入门中，我们将演练使用 C# 和 ASP 创建自定义个人选项卡。 Net Core MVC。 我们还将使用 App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)完成应用清单，并部署选项卡以Teams。
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "52019564"
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-获得源代码后，打开"打开Visual Studio并选择"**打开项目或解决方案"。** 导航到选项卡应用程序目录，然后打开 **PersonalTabMVC.sln**。
+获得源代码后，打开"Visual Studio并选择"**打开项目或解决方案"。** 导航到选项卡应用程序目录，然后打开 **PersonalTabMVC.sln**。
 
 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。 在浏览器中，导航到下面的 URL 以验证应用程序是否加载正确：
 
@@ -64,11 +64,11 @@ public void Configure(IApplicationBuilder app)
 * 一 **个 32** x 32 像素的透明边框图标。
 * 指定 **manifest.js** 属性的 on 文件。
 
-这些文件需要在应用包中压缩，以用于将选项卡上传到 Teams。 Microsoft Teams 将加载清单 `contentUrl` 中指定的 ，将其嵌入 IFrame，并将其呈现在选项卡中。
+这些文件需要在应用包中压缩，以用于将选项卡上载到Teams。 Microsoft Teams将加载清单中指定的 ，将其嵌入 `contentUrl` IFrame，并将其呈现在选项卡中。
 
 ### <a name="csproj"></a>.csproj
 
-在"Visual Studio资源管理器"窗口中，右键单击项目并选择"编辑 **项目文件"。** 在文件底部，你将看到在应用程序生成时创建和更新 zip 文件夹的代码：
+在"Visual Studio资源管理器"窗口中，右键单击项目并选择"编辑Project **文件"。** 在文件底部，你将看到在应用程序生成时创建和更新 zip 文件夹的代码：
 
 ``` xml
 <PropertyGroup>
@@ -100,7 +100,7 @@ ASP。 NET Core 将名为 *Index* 的文件视为网站的默认/主页。 当�
 
 #### <a name="shared"></a>共享的内容
 
-部分视图标记 *_Layout.cshtml* 包含应用程序的整体页面结构和共享的可视元素。 它还将引用 Teams 库。
+部分视图标记 *_Layout.cshtml* 包含应用程序的整体页面结构和共享的可视元素。 它还将引用Teams库。
 
 ### <a name="controllers"></a>控制器
 
@@ -122,7 +122,7 @@ ngrok http https://localhost:44345 -host-header="localhost:44345"
 
 * 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 *ngrok* 是否正常运行。
 
-> [! 提示] 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果你需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且必须更新使用该 URL 的每一处。
+> [! 提示] 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且必须更新使用该 URL 的每一处。
 
 ### <a name="run-your-application"></a>运行应用程序
 

@@ -1,6 +1,6 @@
 ---
 title: 仅限通知的机器人
-description: 介绍 Microsoft Teams 中什么是仅通知聊天机器人
+description: 描述什么是仅通知聊天机器人Microsoft Teams
 keywords: teams 自动程序通知
 ms.topic: conceptual
 localization_priority: Normal
@@ -12,7 +12,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019760"
 ---
-# <a name="notification-only-bots-in-microsoft-teams"></a>Microsoft Teams 中的仅通知机器人
+# <a name="notification-only-bots-in-microsoft-teams"></a>仅通知聊天机器人Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -24,7 +24,7 @@ ms.locfileid: "52019760"
 > [!NOTE]
 > 仅机器人应用将在两种情况下均在个人应用托盘中显示：或 `isNotificationOnly: true` `isNotificationOnly: false` 。
 
-## <a name="app-manifest"></a>应用清单
+## <a name="app-manifest"></a>应用部件清单
 
 若要启用此功能，请设置为 `isNotificationOnly` `true` 。
 

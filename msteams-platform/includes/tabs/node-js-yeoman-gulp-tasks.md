@@ -1,12 +1,12 @@
-## <a name="create-the-app-package"></a>创建应用程序包
+## <a name="create-the-app-package"></a>创建应用包
 
-您需要一个应用程序包来测试您在团队中的选项卡。 它是一个包含以下所需文件的 zip 文件夹：
+你需要一个应用包来测试应用中的Teams。 它是包含以下所需文件的 zip 文件夹：
 
-- 以 192 x 192 像素为单位的**完整彩色图标**。
-- 一个**透明的大纲图标**，用于度量 32 x 32 像素。
-- 一个指定应用程序的属性的**清单 json**文件。
+- 全 **色图标** ，大小为 192 x 192 像素。
+- 一 **个 32** x 32 像素的透明边框图标。
+- 指定 **manifest.js** 属性的 on 文件。
 
-该包是通过验证清单 json 文件的 gulp 任务创建的，并在中生成 zip 文件夹`./package directory`。 在命令提示符下输入：
+该包是通过 gulp 任务创建的，该任务验证 manifest.json 文件，并生成 中的 zip 文件夹 `./package directory` 。 在命令提示符中输入：
 
 ```bash
 gulp manifest
@@ -14,7 +14,7 @@ gulp manifest
 
 ## <a name="build-your-application"></a>生成应用程序
 
-"生成" 命令将您的解决方案 transpiles 到 */dist*文件夹中。 接下来，输入以下内容：
+生成命令将解决方案转换为 *./dist* 文件夹。 接下来，输入：
 
 ```bash
 gulp build
@@ -22,12 +22,12 @@ gulp build
 
 ## <a name="run-your-application-in-localhost"></a>在 localhost 中运行应用程序
 
-通过输入以下命令来启动本地 web 服务器：
+通过输入以下内容启动本地 Web 服务器：
 
 ```bash
 gulp serve
 ```
 
-在`http://localhost:3007/<yourDefaultAppNameTab>/`浏览器中输入并查看您的应用程序的主页：
+`http://localhost:3007/<yourDefaultAppNameTab>/`在浏览器中输入 ，然后查看应用程序的主页：
 
 ![主页屏幕截图](~/assets/images/tab-images/homePage.png)

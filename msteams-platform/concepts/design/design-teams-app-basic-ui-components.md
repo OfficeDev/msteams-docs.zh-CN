@@ -1,7 +1,7 @@
 ---
 title: 使用基本的 Fluent UI 组件设计应用
 author: heath-hamilton
-description: 了解通常用于生成 Microsoft Teams 应用和获取 Microsoft Teams UI 工具包的基元 UI 组件。
+description: 了解通常用于生成应用和获取 Microsoft Teams UI 工具包Microsoft Teams UI 组件。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
@@ -12,15 +12,15 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019886"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本的 Fluent UI 组件设计 Microsoft Teams 应用
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本的 Fluent UI Microsoft Teams设计应用程序
 
-Teams 应用通常使用以下基本的 Fluent UI 组件生成。 这些组件设计尽可能平面，可跨不同的用例、主题和屏幕大小工作。
+Teams通常使用以下基本的 Fluent UI 组件构建应用。 这些组件设计尽可能平面，可跨不同的用例、主题和屏幕大小工作。
 
-此页面上的插图显示了组件在 Teams 默认 (浅色) 和深色主题中的外观。
+此页面上的插图显示组件在默认Teams (浅色) 和深色主题中的外观。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，</a>包括专为生成 Teams 应用而设计的组件和模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
+基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成应用程序而设计的组件Teams模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
@@ -69,7 +69,7 @@ Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.wind
 
 :::image type="content" source="../../assets/images/components/group-list.png" alt-text="示例显示组列表 UI 组件。" border="false":::
 
-## <a name="hyperlink"></a>超链接
+## <a name="hyperlink"></a>Hyperlink
 
 :::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="示例显示超链接 UI 组件。" border="false":::
 
@@ -133,7 +133,7 @@ Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.wind
 
 ## <a name="other-resources"></a>其他资源
 
-获取此处和 Microsoft Teams UI 工具包中列出的某些组件的代码示例和实现详细信息。
+获取此处列出的某些组件的代码示例和实现详细信息，以及 Microsoft Teams UI 工具包。
 
 > [!div class="nextstepaction"]
 > [尝试使用 Fluent UI (组件) ](https://fluentsite.z22.web.core.windows.net/)

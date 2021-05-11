@@ -15,7 +15,7 @@ ms.locfileid: "52019732"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-基于操作的消息扩展允许你的用户在 Teams 内触发外部服务中的操作。
+基于操作的消息扩展允许你的用户在外部服务内触发Teams。
 
 ![邮件扩展卡示例](~/assets/images/compose-extensions/ceexample.png)
 
@@ -232,13 +232,13 @@ ms.locfileid: "52019732"
 
 ## <a name="collecting-input-from-users"></a>收集用户输入
 
-在 Teams 中，有三种方法可以收集最终用户的信息。
+有三种方法从最终用户那里Teams。
 
 ### <a name="static-parameter-list"></a>静态参数列表
 
-在此方法中，只需在清单中定义一个静态参数列表，如"创建要执行"命令所示。 若要使用此方法， `fetchTask` 请确保设置为 `false` ，并确保在清单中定义参数。
+在此方法中，只需在清单中定义一个静态参数列表，如"Create 微软待办"命令所示。 若要使用此方法， `fetchTask` 请确保设置为 `false` ，并确保在清单中定义参数。
 
-当用户选择具有静态参数的命令时，Teams 将在任务模块中生成一个包含清单中定义的参数的表单。 点击提交 `composeExtension/submitAction` 时，会向自动程序发送 。 有关预期 [响应集的详细信息](#responding-to-submit) ，请参阅主题响应提交。
+当用户选择具有静态参数的命令时，Teams将在任务模块中生成一个包含清单中定义的参数的窗体。 点击提交 `composeExtension/submitAction` 时，会向自动程序发送 。 有关预期 [响应集的详细信息](#responding-to-submit) ，请参阅主题响应提交。
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>使用自适应卡片的动态输入
 

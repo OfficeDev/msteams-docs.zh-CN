@@ -1,7 +1,7 @@
 ---
 title: 对话事件
 author: WashingtonKayaker
-description: 如何使用 Microsoft Teams 机器人中的对话事件。
+description: 如何处理来自自动程序的对话Microsoft Teams事件。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
@@ -16,7 +16,7 @@ ms.locfileid: "52020026"
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-为 Microsoft Teams 生成对话机器人时，可以使用对话事件。 Teams 会向自动程序发送有关在自动程序处于活动状态的范围中发生的对话事件的通知。 可以在代码中捕获这些事件，并执行以下操作：
+为用户生成对话机器人Microsoft Teams，可以使用对话事件。 Teams在自动程序处于活动状态的范围中发生的对话事件向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
 
 * 将机器人添加到团队时触发欢迎消息。
 * 在添加或删除新的团队成员时触发欢迎消息。
@@ -40,21 +40,21 @@ ms.locfileid: "52020026"
 
 当机器人收到关于其所属团队的成员身份更新信息时，`conversationUpdate` 事件就会发送到机器人。 它还在首次为个人对话添加更新时接收更新。
 
-下表显示了包含更多详细信息的 Teams 对话更新事件列表：
+下表显示了包含更多详细信息Teams对话更新事件的列表：
 
 | 已采取的操作        | EventType         | 调用的方法              | 说明                | 范围 |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| 已创建频道     | channelCreated    | OnTeamsChannelCreatedAsync | [将创建一个通道](#channel-created)。 | Team |
-| 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道被重命名](#channel-renamed)。 | Team |
-| 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道被删除](#channel-deleted)。 | Team |
-| 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [频道已还原](#channel-deleted)。 | Team |
-| 添加的成员   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 全部 |
+| 已创建频道     | channelCreated    | OnTeamsChannelCreatedAsync | [将创建一个通道](#channel-created)。 | 团队 |
+| 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道被重命名](#channel-renamed)。 | 团队 |
+| 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道被删除](#channel-deleted)。 | 团队 |
+| 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [频道已还原](#channel-deleted)。 | 团队 |
+| 添加的成员   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 所有 |
 | 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [将删除成员](#team-members-removed)。 | groupChat and team |
-| 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队重命名为](#team-renamed)。       | Team |
-| 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队已删除](#team-deleted)。       | Team |
-| 团队存档        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)。       | Team |
-| 团队未存档        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)。       | Team |
-| 已还原团队        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | Team |
+| 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队重命名为](#team-renamed)。       | 团队 |
+| 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队已删除](#team-deleted)。       | 团队 |
+| 团队存档        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)。       | 团队 |
+| 团队未存档        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)。       | 团队 |
+| 已还原团队        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | 团队 |
 
 ### <a name="channel-created"></a>已创建频道
 
@@ -1061,8 +1061,8 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 全部   |
-| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 全部 |
+| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 所有   |
+| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 所有 |
 
 ### <a name="reactions-added-to-bot-message"></a>添加到自动程序消息的反应
 
@@ -1292,7 +1292,7 @@ async def on_reactions_removed(
 > 升级应用程序，然后添加或删除自动程序时，该操作还会触发 `installationUpdate` 事件。 如果 **添加** 自动程序或删除自动 *程序*，则操作字段将设置为"添加升级"。 
 
 > [!IMPORTANT]
-> 安装更新事件目前为开发人员预览版，并将于 2021 年 3 月 (GA) 通用版本。 若要查看安装更新事件，可以将 Teams 客户端移动到公共开发人员预览版，并亲自将应用添加到团队或聊天中。
+> 安装更新事件目前为开发人员预览版，并将于 2021 年 3 月 (GA) 通用版本。 To see the installation update events， you can move your Teams client to public developer preview， and add your app personally or to a team or a chat.
 
 ### <a name="install-update-event"></a>安装更新事件
 使用 `installationUpdate` 事件在安装时从机器人发送介绍性消息。 此事件有助于满足隐私和数据保留要求。 还可以在卸载机器人时清理和删除用户或线程数据。
@@ -1379,7 +1379,7 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | 对话机器人 | 机器人对话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

@@ -1,6 +1,6 @@
 ---
 title: Office 365 连接器
-description: 介绍如何在 Microsoft Teams 中开始使用 Office 365 连接器
+description: 介绍如何开始使用 Office 365 中的连接器Microsoft Teams
 keywords: Teams o365 连接器
 localization_priority: Normal
 ms.topic: conceptual
@@ -12,30 +12,30 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52018395"
 ---
-# <a name="creating-office-365-connectors-for-microsoft-teams"></a>为 Microsoft Teams 创建 Office 365 连接器
+# <a name="creating-office-365-connectors-for-microsoft-teams"></a>创建Office 365连接器Microsoft Teams
 
->使用 Microsoft Teams 应用，可以添加现有 Office 365 连接器或生成要包括在 Microsoft Teams 中的新连接器。 有关详细信息 [，请参阅构建](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) 你自己的连接器。
+>通过Microsoft Teams应用，你可以添加现有 Office 365 连接器或生成要包括在 Microsoft Teams 中的新连接器。 有关详细信息 [，请参阅构建](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) 你自己的连接器。
 
 ## <a name="adding-a-connector-to-your-teams-app"></a>将连接器添加到 Teams 应用
 
-你可以将已注册的连接器作为 Teams 应用包的一部分进行分布。 无论是作为独立解决方案，还是体验在 Teams 中启用的多种功能之一，都可以将[](~/concepts/build-and-test/apps-package.md)连接器打包[](~/concepts/deploy-and-publish/apps-publish.md)并发布为 AppSource 提交的一部分，也可以直接向用户提供连接器以在 Teams 中上传。 [](~/concepts/extensibility-points.md)
+你可以将已注册的连接器作为 Teams 应用包的一部分进行分布。 无论是作为独立解决方案，还是体验在 Teams 中启用的多种功能之一，都可以将连接器打包[](~/concepts/build-and-test/apps-package.md)并发布[](~/concepts/deploy-and-publish/apps-publish.md)为 AppSource 提交的一部分，也可以直接向用户在 Teams 中上传。 [](~/concepts/extensibility-points.md)
 
-若要分发连接器，你需要使用连接器开发人员仪表板 [进行注册](https://outlook.office.com/connectors/home/login/#/publish)。 默认情况下，一旦注册连接器，就会假定连接器将在支持连接器的所有 Office 365 产品（包括 Outlook 和 Teams）中工作。 如果并非如此 _，_ 并且你需要创建仅在 Microsoft Teams 中工作的连接器，请直接通过 Microsoft Teams [应用提交联系我们](mailto:teamsubm@microsoft.com)。
+若要分发连接器，你需要使用连接器开发人员仪表板 [进行注册](https://outlook.office.com/connectors/home/login/#/publish)。 默认情况下，注册连接器后，假定连接器将在支持连接器的所有 Office 365 产品中工作，包括 Outlook 和 Teams。 如果并非如此 _，_ 并且你需要创建仅在 Microsoft Teams 中工作的连接器，请直接Microsoft Teams [应用提交。](mailto:teamsubm@microsoft.com)
 
 > [!IMPORTANT]
-> 在连接器 **开发人员** 仪表板中选择"保存"后，连接器即已注册。 如果你想要在 AppSource 中发布连接器，请按照将 Microsoft Teams 应用发布到 [AppSource 中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果你不希望在 AppSource 中发布应用，而只是直接将其分发到你的组织，可以通过发布到你的组织 [来这样做](#publish-connectors-for-your-organization)。 如果只想发布到组织，则无需在连接器仪表板上执行任何进一步的操作。
+> 在连接器 **开发人员** 仪表板中选择"保存"后，连接器即已注册。 若要在 AppSource 中发布连接器，请按照将应用发布到[AppSource Microsoft Teams中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果你不希望在 AppSource 中发布应用，而只是直接将其分发到你的组织，可以通过发布到你的组织 [来这样做](#publish-connectors-for-your-organization)。 如果只想发布到组织，则无需在连接器仪表板上执行任何进一步的操作。
 
 ### <a name="integrating-the-configuration-experience"></a>集成配置体验
 
-用户无需离开 Teams 客户端即可完成整个连接器配置体验。 为了实现此体验，Teams 将直接在 iframe 中嵌入你的配置页面。 操作顺序如下所示：
+您的用户将完成整个连接器配置体验，而无需离开 Teams 客户端。 若要实现此体验，Teams将配置页面直接嵌入 iframe 中。 操作顺序如下所示：
 
 1. 用户单击连接器开始配置过程。
-2. Teams 将在线加载你的配置体验。
+2. Teams将在线加载配置体验。
 3. 用户与 Web 体验交互以完成配置。
 4. 用户按"保存"，这将触发代码中的回调。
 5. 代码将处理保存事件，方法为检索以下 (webhook) 。 然后，代码应存储 Webhook 以稍后发布事件。
 
-可以重用现有 Web 配置体验或创建单独的版本以专门托管在 Teams 中。 代码应：
+可以重用现有 Web 配置体验，或创建一个单独的版本以专门托管在 Teams。 代码应：
 
 1. 包括 Microsoft Teams JavaScript SDK。 这样，代码可以访问 API 来执行常见操作，如获取当前用户/频道/团队上下文和启动身份验证流。 通过调用`microsoftTeams.initialize()`初始化 SDK。
 2. 在 `microsoftTeams.settings.setValidityState(true)` 要启用"保存"按钮时调用。 应作为对有效用户输入（如选择或字段更新）的响应来这样做。
@@ -136,7 +136,7 @@ ms.locfileid: "52018395"
 
 ### <a name="including-the-connector-in-your-manifest"></a>在清单中包括连接器
 
-你可以从门户下载自动生成的 Teams 应用清单。 但是，在使用它测试或发布应用之前，必须执行以下操作：
+你可以从门户下载自动生成Teams应用程序清单。 但是，在使用它测试或发布应用之前，必须执行以下操作：
 
 - [包括两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
 - 修改清单的 `icons` 部分，以便引用图标的文件名，而不是 URL。
@@ -194,7 +194,7 @@ ms.locfileid: "52018395"
 
 ![“连接器”对话框中上传部分的屏幕截图](~/assets/images/connectors/connector_dialog_uploaded.png)
 
-现在可启动配置体验。 请注意，此流完全作为托管体验在 Microsoft Teams 中发生。
+现在可启动配置体验。 请注意，此流完全作为托管体验Microsoft Teams内部发生。
 
 若要验证操作 `HttpPOST` 是否正常工作， [请将邮件发送到连接器](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
@@ -214,7 +214,7 @@ ms.locfileid: "52018395"
 1. 若要配置或修改连接器，请选择"配置 **"** 栏。
 
 ## <a name="code-sample"></a>代码示例
-|**示例名称** | **描述** | **.NET** | **Node.js** |
+|**示例名称** | **说明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| 连接器    | 向团队频道生成通知的示例 Office 365 连接器。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| 连接器    | 示例Office 365向团队频道生成通知的连接器。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 通用连接器示例 |易于为支持 Webhook 的任何系统自定义的通用连接器的示例代码。|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|

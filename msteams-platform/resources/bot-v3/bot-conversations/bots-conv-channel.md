@@ -1,6 +1,6 @@
 ---
 title: 与机器人的频道和群组聊天对话
-description: 介绍在 Microsoft Teams 中与频道中的机器人对话的端到端方案
+description: 介绍在 Microsoft Teams 中与频道中的机器人对话的端到端Microsoft Teams
 keywords: teams 方案频道对话机器人
 localization_priority: Normal
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.locfileid: "52019795"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams 允许用户将机器人引入其频道或群组聊天对话。 通过将聊天机器人添加到团队或聊天中，对话的所有用户都可以在对话中利用机器人功能。 还可以在自动程序内访问特定于 Teams 的功能，如查询团队信息和@mentioning用户。
+Microsoft Teams允许用户将机器人引入其频道或群组聊天对话。 通过将聊天机器人添加到团队或聊天中，对话的所有用户都可以在对话中利用机器人功能。 还可以在自动Teams访问特定于团队的功能，如查询团队信息和@mentioning用户。
 
 频道和群聊中的聊天不同于个人聊天，因为用户需要@mention聊天。 如果自动程序用于个人、 (或频道) 则需要检测自动程序消息来自的作用域，并相应地处理它们。
 
@@ -26,9 +26,9 @@ Microsoft Teams 允许用户将机器人引入其频道或群组聊天对话。 
 
 组或频道中的机器人应提供与所有成员相关且合适的信息。 尽管机器人当然可以提供与体验相关的任何信息，但请记住，与它的对话对所有人都可见。 因此，组或频道中出色的机器人应该为所有用户增加价值，并且当然不会无意中共享更适合于一对一对话的信息。
 
-与现在一样，自动程序可能在所有范围内完全相关，无需额外工作。 在 Microsoft Teams 中，机器人不会在所有范围内运行，但应确保自动程序在选择支持的任何作用域 (用户) 价值。 有关范围详细信息，请参阅 Microsoft [Teams 中的应用](~/concepts/build-and-test/app-studio-overview.md)。
+与现在一样，自动程序可能在所有范围内完全相关，无需额外工作。 In Microsoft Teams there is no expectation that your bot function in all scopes， but you should ensure that your bot provides user value in whichever scope (s) you choose to support. 有关范围详细信息，请参阅应用程序中[Microsoft Teams。](~/concepts/build-and-test/app-studio-overview.md)
 
-开发在组或频道中工作的自动程序使用与个人对话相同的许多功能。 有效负载中的其他事件和数据提供 Teams 组和频道信息。 以下各节介绍了这些差异以及常见功能的主要差异。
+开发在组或频道中工作的自动程序使用与个人对话相同的许多功能。 有效负载中的其他事件和数据Teams组和频道信息。 以下各节介绍了这些差异以及常见功能的主要差异。
 
 ### <a name="creating-messages"></a>创建邮件
 
@@ -38,7 +38,7 @@ Microsoft Teams 允许用户将机器人引入其频道或群组聊天对话。 
 
 对于组或频道中的自动程序，除了常规邮件架构之外[](https://docs.botframework.com/core-concepts/reference/#activity)，机器人还会收到以下属性：
 
-* `channelData` 请参阅 [Teams 频道数据](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data)。 在群聊中，包含特定于该聊天的信息。
+* `channelData`请参阅[Teams频道数据](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data)。 在群聊中，包含特定于该聊天的信息。
 * `conversation.id` 回复链 ID，由频道 ID 和回复链中第一封邮件的 ID 组成
 * `conversation.isGroup` 适用于 `true` 频道或群聊中的聊天机器人消息
 * `conversation.conversationType`或 `groupChat``channel`
@@ -52,7 +52,7 @@ Microsoft Teams 允许用户将机器人引入其频道或群组聊天对话。 
 
 在频道中，回复消息将显示为对启动回复链的回复。 `conversation.id`包含频道和顶级消息 ID。 尽管 Bot Framework 负责处理详细信息，但可以根据需要缓存该对话线程的将来 `conversation.id` 回复。
 
-### <a name="best-practice-welcome-messages-in-teams"></a>最佳做法：Teams 中的欢迎消息
+### <a name="best-practice-welcome-messages-in-teams"></a>最佳做法：欢迎邮件Teams
 
 首次将机器人添加到组或团队时，向所有用户发送向机器人介绍的欢迎消息通常很有用。 欢迎消息应提供自动程序功能和用户优势的说明。 理想情况下，消息还应包含用户与应用交互的命令。 为此，请确保自动程序在 对象中以 `conversationUpdate` `teamsAddMembers` eventType 响应 `channelData` 消息。 请确保 ID 是机器人的应用 ID 本身，因为在将用户添加到团队时将发送相同的 `memberAdded` 事件。 有关详细信息 [，请参阅团队成员或](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) 机器人添加。
 
@@ -119,7 +119,7 @@ if (message.entities) {
 
 #### <a name="net-example"></a>.NET 示例
 
-此示例使用 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet 程序包。
+此示例使用[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)包。
 
 ```csharp
 // Create reply activity
@@ -195,6 +195,6 @@ session.send(generalMessage);
 
 ## <a name="accessing-groupchat-or-channel-scope"></a>访问 groupChat 或 channel 作用域
 
-机器人可以执行更多操作，而不是在组和团队中发送和接收消息。 例如，它还可以提取成员列表，包括其配置文件信息以及频道列表。 有关详细信息 [，请参阅获取 Microsoft Teams 自动程序](~/resources/bot-v3/bots-context.md) 上下文。
+机器人可以执行更多操作，而不是在组和团队中发送和接收消息。 例如，它还可以提取成员列表，包括其配置文件信息以及频道列表。 若要[了解更多信息，请参阅Microsoft Teams聊天机器人](~/resources/bot-v3/bots-context.md)的上下文。
 
 *另请参阅* [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。

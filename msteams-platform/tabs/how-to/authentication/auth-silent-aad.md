@@ -14,9 +14,9 @@ ms.locfileid: "52019599"
 # <a name="silent-authentication"></a>无提示的身份验证
 
 > [!NOTE]
-> 若要在移动客户端上对选项卡进行身份验证，请确保你使用的是至少 1.4.1 版本的 Teams JavaScript SDK。
+> 若要在移动客户端上对选项卡进行身份验证，请确保使用的是至少 1.4.1 版本的 Teams JavaScript SDK。
 
-Azure Active Directory (AAD) 中的无提示身份验证通过静默刷新身份验证令牌来最大程度地减少用户输入登录凭据次数。 有关真正的单一登录支持，请参阅 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)。
+AAD Azure Active Directory (中的无提示身份验证) 静默刷新身份验证令牌，从而最大程度地减少用户输入登录凭据次数。 有关真正的单一登录支持，请参阅 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)。
 
 如果希望代码完全在客户端运行，可以使用适用于 JavaScript 的 [AAD](/azure/active-directory/develop/active-directory-authentication-libraries) 身份验证库以静默方式获取 AAD 访问令牌。 如果用户最近登录过，他们绝不会看到弹出对话框。
 
@@ -31,7 +31,7 @@ Azure Active Directory (AAD) 中的无提示身份验证通过静默刷新身份
 
 ## <a name="how-to-do-silent-authentication"></a>如何执行无提示身份验证
 
-本文中的代码来自 Teams 示例应用，该应用是 [Teams 身份验证示例节点](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
+本文中的代码来自Teams身份验证示例节点的 Teams[示例应用](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
 
 [使用 AAD 启动](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) 无提示且简单的身份验证可配置选项卡，并按照说明在本地计算机上运行示例。
 
@@ -127,7 +127,7 @@ if (authContext.isCallback(window.location.hash)) {
 使用以下代码处理 AAD 身份验证中的注销流：
 
 > [!NOTE]
-> 当 Teams 选项卡或自动程序注销完成时，当前会话也将清除。
+> 当用户Teams或自动程序注销时，当前会话也将清除。
 
 ```javascript
 function logout() {

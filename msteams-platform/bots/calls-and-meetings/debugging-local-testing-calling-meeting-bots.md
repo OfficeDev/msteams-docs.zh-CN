@@ -119,4 +119,4 @@ var mediaPlatform = new MediaPlatformSettings
 
 - Ngrok 免费 **帐户不提供** 端到端加密。 HTTPS 数据以 ngrok URL 结尾，数据流未加密，从 ngrok 到 `localhost` 。 如果需要端到端加密，请考虑使用付费 ngrok 帐户。 有关设置安全的端到端隧道的步骤，请参阅 [TLS](https://ngrok.com/docs#tls) 隧道。
 - 由于机器人回调 URL 是动态的，传入呼叫方案需要频繁更新 ngrok 终结点。 解决此问题的一个方法就是使用付费 ngrok 帐户，该帐户提供你可以将机器人和平台指向的固定子域。
-- Ngrok 隧道还可以与 Azure [Service Fabric 一同使用](/azure/service-fabric/service-fabric-overview)。 有关操作示例，请参阅 [HueBot 示例应用](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)。
+- Ngrok 隧道还可与 Azure Service Fabric[一Service Fabric。](/azure/service-fabric/service-fabric-overview) 有关操作示例，请参阅 [HueBot 示例应用](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)。

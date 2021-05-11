@@ -1,6 +1,6 @@
 ---
-title: 使用 Microsoft Teams 选项卡中的任务模块
-description: 介绍如何使用 Microsoft Teams 客户端 SDK 从 Teams 选项卡调用任务模块
+title: 在选项卡中Microsoft Teams模块
+description: 介绍如何使用 Teams 客户端 SDK 从Microsoft Teams调用任务模块
 localization_priority: Normal
 ms.topic: how-to
 keywords: 任务模块团队选项卡客户端 sdk
@@ -13,9 +13,9 @@ ms.locfileid: "52019522"
 ---
 # <a name="using-task-modules-in-tabs"></a>在选项卡中使用任务模块
 
-将任务模块添加到选项卡可以大大简化任何需要数据输入的工作流的用户体验。 任务模块允许你在 Teams 感知弹出窗口中收集他们的输入。 一个很好的示例是编辑 Planner 卡;可以使用任务模块来创建类似的体验。
+将任务模块添加到选项卡可以大大简化任何需要数据输入的工作流的用户体验。 任务模块允许你在可感知Teams中收集输入。 一个很好的示例是编辑 Planner 卡;可以使用任务模块来创建类似的体验。
 
-为了支持任务模块功能，向 Microsoft Teams 客户端 SDK 添加了两 [个新函数](/javascript/api/overview/msteams-client)：
+为了支持任务模块功能，向 Microsoft Teams SDK 添加了两[个新函数](/javascript/api/overview/msteams-client)：
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -76,9 +76,9 @@ microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 
 ### <a name="htmljavascript-taskinfourl"></a>HTML/JavaScript `TaskInfo.url` () 
 
-验证用户输入了哪些信息后，调用 SDK 函数 (以下称为" `microsoftTeams.tasks.submitTask()` `submitTask()` 可读性") 。 如果你仅希望 Teams 关闭任务模块，但大多数情况下你想要将对象或字符串传递到 你的 ，你可以调用不带任何 `submitTask()` 参数 `submitHandler` 的 。
+验证用户输入了哪些信息后，调用 SDK 函数 (以下称为" `microsoftTeams.tasks.submitTask()` `submitTask()` 可读性") 。 如果只想关闭任务模块，Teams调用不带任何参数，但大多数情况下，需要将对象或字符串传递到 `submitTask()` `submitHandler` 。
 
-将结果作为第一个参数传递。 Teams 将 `submitHandler` 调用 `err` 位置， `null` `result` 并且将是你传递给 的对象/字符串 `submitTask()` 。 如果使用 参数调用 ，则必须传递 或 字符串数组：这允许 Teams 验证发送结果的应用是否与调用任务模块的应用 `submitTask()` `result`  `appId` `appId` 相同。
+将结果作为第一个参数传递。 Teams调用 where `submitHandler` `err` will and will be `null` the `result` object/string you passed to `submitTask()` 。 如果使用 参数调用 ，则必须传递 或 字符串数组：这允许 Teams 验证发送结果的应用是否与调用任务模块的应用 `submitTask()` `result`  `appId` `appId` 相同。
 
 ### <a name="adaptive-card-taskinfocard"></a>自适应卡片 `TaskInfo.card` () 
 

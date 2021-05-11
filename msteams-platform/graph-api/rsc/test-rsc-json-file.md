@@ -1,6 +1,6 @@
 ---
-title: 在 Teams 中测试特定于资源的同意
-description: 如何使用 Postman 在 Teams 中测试特定于资源的同意
+title: 在测试中测试特定于资源的Teams
+description: 如何使用 Postman 在 Teams中测试特定于资源的同意
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar

@@ -1,6 +1,6 @@
 ---
-title: 使用 Microsoft Graph 将外部平台消息导入 Teams
-description: 介绍如何使用 Microsoft Graph 将邮件从外部平台导入到 Teams
+title: 使用 Microsoft Graph将外部平台消息导入Teams
+description: 介绍如何使用 Microsoft Graph将邮件从外部平台导入到Teams
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
@@ -15,7 +15,7 @@ ms.locfileid: "51403967"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
-使用 Microsoft Graph，可以将用户的现有邮件历史记录和数据从外部系统迁移到 Teams 频道。 通过支持在 Teams 内恢复第三方平台消息层次结构，用户可以无缝地继续通信并不间断地继续。
+使用 Microsoft Graph，可以将用户的现有邮件历史记录和数据从外部系统迁移到 Teams 通道。 通过支持在 Teams 内恢复第三方平台消息层次结构，用户可以无缝地继续通信并不间断地继续。
 
 > [!NOTE] 
 > 将来，Microsoft 可能要求你或你的客户根据导入的数据量支付其他费用。
@@ -36,17 +36,17 @@ ms.locfileid: "51403967"
 
 ✔查看第三方数据，以决定要迁移哪些内容。  
 ✔第三方聊天系统提取所选数据。  
-✔将第三方聊天结构映射到 Teams 结构。  
+✔将第三方聊天结构映射到Teams结构。  
 ✔将导入数据转换为迁移所需的格式。  
 
 ### <a name="set-up-your-office-365-tenant"></a>设置 Office 365 租户
 
-✔确保导入数据存在 Office 365 租户。 有关为 Teams 设置 Office 365 租户的信息，请参阅准备[Office 365 租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。  
-✔确保团队成员在 Azure Active Directory (AAD) 。  有关详细信息，*请参阅将*[新用户添加到](/azure/active-directory/fundamentals/add-users-azure-active-directory)Azure Active Directory。
+✔确保导入Office 365租户存在。 有关为租户设置Office 365租户Teams，请参阅准备Office 365[租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。   
+✔确保团队成员在 AAD Azure Active Directory () 。  有关详细信息，*请参阅向*[用户添加Azure Active Directory。](/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
 ## <a name="step-one-create-a-team"></a>步骤 1：创建团队
 
-由于正在迁移现有数据，因此在迁移过程中保留原始邮件时间戳并阻止邮件活动对于在 Teams 中重新创建用户的现有邮件流很关键。 实现此目的：：
+由于正在迁移现有数据，因此在迁移过程中保留原始邮件时间戳并阻止邮件活动对于在 Teams 中重新创建用户的现有邮件流Teams。 实现此目的：：
 
 > [使用 team 资源](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) 属性创建具有返回时间戳的新  `createdDateTime`  团队。 将新团队放在 `migration mode` 中，这是一种特殊状态，可禁止用户参与团队中的大多数活动，直到迁移过程完成。 在 POST 请求中包括具有 值的 instance 属性，以明确标识正在创建 `teamCreationMode` `migration` 用于迁移的新团队。  
 
@@ -58,7 +58,7 @@ ms.locfileid: "51403967"
 
 |ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理迁移到 Microsoft Teams 的资源|**仅应用程序**|**是**|`POST /teams`|
+|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理资源以迁移到Microsoft Teams|**仅应用程序**|**是**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>请求 (迁移状态创建) 
 
@@ -102,7 +102,7 @@ Content-Location: /teams/{team-id}
 
 |ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理迁移到 Microsoft Teams 的资源|**仅应用程序**|**是**|`POST /teams`|
+|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理资源以迁移到Microsoft Teams|**仅应用程序**|**是**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态创建) 
 
@@ -318,7 +318,7 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>步骤 5：添加团队成员
 
-可以使用 Teams UI 或 Microsoft Graph 添加成员 [API](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) 将成员 [添加到](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) 团队：
+可以使用以下 UI 或 Microsoft Teams添加成员[API](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)将成员Graph[团队](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)：
 
 #### <a name="request-add-member"></a>请求 (添加成员) 
 
@@ -339,7 +339,7 @@ Content-length: 30
 HTTP/1.1 204 No Content
 ```
 
-## <a name="tips-and-additional-information"></a>提示和其他信息
+## <a name="tips-and-additional-information"></a>使用技巧和其他信息
 
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
@@ -362,16 +362,16 @@ HTTP/1.1 204 No Content
 |团队和频道消息|1：1 和群聊消息|
 |原始邮件的创建时间|专用频道|
 |作为邮件一部分的内联图像|在提及时|
-|指向 SPO/OneDrive 中的现有文件的链接|反应|
+|指向 SPO/OneDrive|反应|
 |包含格式文本的邮件|视频|
 |邮件回复链|公告|
 |高吞吐量处理|代码段|
 ||贴纸|
 ||表情符号|
-||引号|
+||报价单|
 ||跨渠道发布|
 
 
 ## <a name="see-also"></a>另请参阅
 > [!div class="nextstepaction"]
-> [详细了解 Microsoft Graph 和 Teams 集成](/graph/teams-concept-overview)
+> [了解有关 Microsoft Graph 和 Teams 集成](/graph/teams-concept-overview)

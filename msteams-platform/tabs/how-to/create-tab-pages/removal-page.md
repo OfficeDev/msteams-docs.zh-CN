@@ -15,7 +15,7 @@ ms.locfileid: "52019585"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>修改或删除频道组选项卡
 
-可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams 允许用户重命名或删除频道/组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验可能包括指定在删除选项卡时对内容会发生什么情况，或者为用户提供删除后选项（如删除或存档内容）。
+可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams用户可以重命名或删除频道/组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验可能包括指定在删除选项卡时对内容会发生什么情况，或者为用户提供删除后选项（如删除或存档内容）。
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>启用选项卡以在安装后重新配置
 
@@ -25,7 +25,7 @@ ms.locfileid: "52019585"
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
 
-将选项卡上传到频道或群聊后，Teams 会为选项卡添加右键单击下拉菜单。可用选项由以下设置 `canUpdateConfiguration` 决定：
+将选项卡上载到频道或群聊时，Teams为选项卡添加右键单击下拉菜单。可用选项由以下设置 `canUpdateConfiguration` 决定：
 
 | `canUpdateConfiguration`| true   | false | 说明 |
 | ----------------------- | :----: | ----- | ----------- |
@@ -36,7 +36,7 @@ ms.locfileid: "52019585"
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>为应用程序创建选项卡删除页
 
-可选删除页是一个您托管的 HTML 页，在删除选项卡时将显示该页。 删除页面 URL 由配置页 `setSettings()` 中的 方法指定。 与应用中的所有页面一样，删除页面必须符合 [Teams 选项卡要求](../../../tabs/how-to/tab-requirements.md)。
+可选删除页是一个您托管的 HTML 页，在删除选项卡时将显示该页。 删除页面 URL 由配置页 `setSettings()` 中的 方法指定。 与应用内的所有页面一样，删除页面必须符合Teams[要求](../../../tabs/how-to/tab-requirements.md)。
 
 ### <a name="register-a-remove-handler"></a>注册删除处理程序
 
@@ -58,7 +58,7 @@ ms.locfileid: "52019585"
 
 #### <a name="include-authentication"></a>包括身份验证
 
-在允许用户删除选项卡内容之前，您可能需要进行身份验证。 上下文信息可用于帮助构建身份验证请求和授权页面 URL。 有关 [选项卡，请参阅 Microsoft Teams 身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)。 确保选项卡页中使用的所有域都列在 `manifest.json` `validDomains` 数组中。
+在允许用户删除选项卡内容之前，您可能需要进行身份验证。 上下文信息可用于帮助构建身份验证请求和授权页面 URL。 请参阅[Microsoft Teams的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)。 确保选项卡页中使用的所有域都列在 `manifest.json` `validDomains` 数组中。
 
 下面是一个示例选项卡删除代码块：
 
@@ -83,11 +83,11 @@ ms.locfileid: "52019585"
 
 ```
 
-当用户从选项卡的下拉菜单中选择"删除"时，Teams 将 (配置页中指定的可选页面) `removeUrl` IFrame 中。  此处，用户会使用函数加载按钮，该按钮调用并启用位于删除页面 IFrame 底部附近的"删除" `onClick()` `microsoftTeams.settings.setValidityState(true)` 按钮。 
+当用户从选项卡的下拉菜单中选择"删除"时，Teams将在配置 (中指定的可选页面) `removeUrl` IFrame 中。  此处，用户会使用函数加载按钮，该按钮调用并启用位于删除页面 IFrame 底部附近的"删除" `onClick()` `microsoftTeams.settings.setValidityState(true)` 按钮。 
 
-执行删除处理程序后， `removeEvent.notifySuccess()` 或 `removeEvent.notifyFailure()` 通知 Teams 内容删除结果。
+执行删除处理程序后，或 `removeEvent.notifySuccess()` `removeEvent.notifyFailure()` 通知Teams删除结果。
 
 >[!NOTE]
->为确保授权用户对选项卡的控制不会受到约束，Teams 将在成功和失败情况下删除选项卡。\
->Teams 在5 秒后启用"删除"按钮，即使你的选项卡未调用 `setValidityState()` 。\
->当用户选择" **删除** Teams"时，将在 30 秒后删除选项卡，无论操作是否已完成。
+>为了确保授权用户对选项卡的控制不会受到阻止，Teams成功和失败时删除选项卡。\
+>Teams 5 秒后启用 **"** 删除"按钮，即使选项卡未调用 `setValidityState()` 。\
+>当用户选择 **"删除**"Teams 30 秒后删除选项卡，无论操作是否已完成。

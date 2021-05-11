@@ -1,6 +1,6 @@
 ---
 title: 应用疑难解答
-description: 解决生成 Microsoft Teams 应用时的问题或错误
+description: 解决生成适用于 Microsoft Teams 的应用时的问题或Microsoft Teams
 keywords: teams 应用开发疑难解答
 localization_priority: Normal
 ms.topic: troubleshooting
@@ -12,13 +12,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020427"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>Microsoft Teams 应用疑难解答
+# <a name="troubleshoot-your-microsoft-teams-app"></a>对应用Microsoft Teams疑难解答
 
 ## <a name="troubleshooting-tabs"></a>疑难解答选项卡
 
 ### <a name="accessing-the-devtools"></a>访问 DevTools
 
-可以在 Teams 客户端中打开 [DevTools，](~/tabs/how-to/developer-tools.md) 获得与在 Windows) 上按 F12 (或在 MacOS (上的 Command-Option-I) 类似的体验。
+可以在 Teams 客户端中打开[DevTools，](~/tabs/how-to/developer-tools.md)获得与在浏览器中按 Windows) 上的 F12 (或 MacOS) 上的 Command-Option-I (类似的体验。
 
 ### <a name="blank-tab-screen"></a>空白选项卡屏幕
 
@@ -49,7 +49,7 @@ ms.locfileid: "52020427"
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>无法对用户进行身份验证或在选项卡中显示身份验证提供程序
 
-除非执行无提示身份验证，否则必须遵循 [Microsoft Teams JavaScript](/javascript/api/overview/msteams-client.md)客户端 SDK 提供的身份验证过程。
+除非执行无提示身份验证，否则必须遵循 JavaScript 客户端 SDK Microsoft Teams[身份验证过程](/javascript/api/overview/msteams-client.md)。
 
 > [!NOTE]
 >要求所有身份验证流在域上开始和结束，必须在清单中的 `validDomains` 对象中列出。
@@ -64,7 +64,7 @@ ms.locfileid: "52020427"
 
 ### <a name="cant-add-my-bot"></a>无法添加我的机器人
 
-应用必须由 Office 365 租户管理员启用，最终用户才能加载它们。 请注意，在某些情况下，Office 365 租户可能有多个与其关联的 SK，并且只有在所有 SK 中启用自动程序，机器人可以在任何 SK 中运行。 有关详细信息 [，请参阅准备 Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md) 租户。
+应用必须由租户管理员Office 365才能由最终用户加载。 请注意，在某些情况下，Office 365租户可能有多个与其关联的 SK，并且对于在任何 SK 中工作的自动程序，必须在所有 SK 中启用它们。 有关详细信息[，请参阅Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)租户。
 
 ### <a name="cant-add-bot-as-a-member-of-a-team"></a>无法将机器人添加为团队成员
 
@@ -86,12 +86,12 @@ ms.locfileid: "52020427"
 
 清单读取错误的常见原因：
 
-* 无效的 JSON。 使用 IDE（如 [Visual Studio Code](https://code.visualstudio.com) 或 [Visual Studio）](https://www.visualstudio.com/vs/) 自动验证 JSON 语法。
+* 无效的 JSON。 使用 IDE（如[Visual Studio Code](https://code.visualstudio.com)或[Visual Studio）](https://www.visualstudio.com/vs/)自动验证 JSON 语法。
 * 编码问题。 对 on 文件使用 UTF-8 *manifest.jsUTF-8。* 其他编码（特别是 BOM 编码）可能无法读取。
-* 格式错误的 .zip 包。 on *manifest.js* 文件必须位于 .zip 文件的顶层。 请注意，默认 Mac 文件压缩可能会将manifest.js放在子目录中，这不会在 Microsoft Teams 中正确加载。
+* 程序包格式.zip格式。 on *manifest.js* 文件必须位于文件.zip级别。 请注意，默认 Mac 文件压缩可能会将manifest.js放在子目录中，这样将不会在Microsoft Teams。
 
 ### <a name="another-extension-with-same-id-exists"></a>存在另一个 ID 相同的扩展
 
-如果试图重新上传 ID 相同的更新程序包，请选择选项卡的表格行末尾的"替换"图标，而不是"**上传"** 按钮。
+如果试图重新上传 ID 相同的更新程序包，请选择选项卡的表格行末尾的"替换"图标，而不是选择"Upload"**按钮**。
 
 如果未重新上载更新的程序包，请确保 ID 是唯一的。

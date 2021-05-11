@@ -1,7 +1,7 @@
 ---
-title: 使用核心 MVC 创建频道 ASP.NET 组选项卡
+title: 使用 MVC 创建频道和 ASP.NET Core选项卡
 author: laujan
-description: 使用核心 MVC 创建自定义频道和组选项卡 ASP.NET 快速入门指南
+description: 使用 MVC 创建自定义频道和组选项卡 ASP.NET Core指南
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
@@ -12,9 +12,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020308"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>使用核心 MVC 创建自定义频道 ASP.NET 组选项卡
+# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>使用 MVC 创建自定义频道和组 ASP.NET Core选项卡
 
-在此快速入门中，我们将演练使用核心 MVC 创建自定义频道/C#ASP.Net 选项卡。 我们还将使用 [适用于 Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) 的 App Studio 完成应用清单，将选项卡部署到 Teams。
+在此快速入门中，我们将演练使用核心 MVC 创建自定义频道/C#ASP.Net 选项卡。 我们还将使用 App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)完成应用清单，并部署选项卡以Teams。
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "52020308"
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-获得源代码后，打开"打开Visual Studio并选择"**打开项目或解决方案"。** 导航到选项卡应用程序目录，然后打开 **ChannelGroupTabMVC.sln**。
+获得源代码后，打开"Visual Studio并选择"**打开项目或解决方案"。** 导航到选项卡应用程序目录，然后打开 **ChannelGroupTabMVC.sln**。
 
 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。 在浏览器中，导航到下面的 URL 并验证应用程序是否加载正确：
 
@@ -38,7 +38,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 ### <a name="startupcs"></a>Startup.cs
 
-此项目从一个 ASP.NET Core 2.2 Web 应用程序空模板创建，在设置时选中了"高级 *- 配置 HTTPS"* 复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此静态文件中间件将添加到 `Configure()` 方法：
+此项目从 2.2 web 应用程序 ASP.NET Core模板创建，在设置时选中了"高级 *- 为 HTTPS* 配置"复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此静态文件中间件将添加到 `Configure()` 方法：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -54,7 +54,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="wwwroot-folder"></a>wwwroot 文件夹
 
-在 ASP.NET 核心中，Web 根文件夹是应用程序查找静态文件的位置。
+在 ASP.NET Core中，Web 根文件夹是应用程序查找静态文件的位置。
 
 ### <a name="appmanifest-folder"></a>AppManifest 文件夹
 
@@ -64,11 +64,11 @@ public void Configure(IApplicationBuilder app)
 - 一 **个 32** x 32 像素的透明边框图标。
 - 指定 **manifest.js** 属性的 on 文件。
 
-这些文件需要在应用包中压缩，以用于将选项卡上传到 Teams。
+这些文件需要在应用包中压缩，以用于将选项卡上载到Teams。
 
 ### <a name="csproj"></a>.csproj
 
-在"Visual Studio资源管理器"窗口中，右键单击项目并选择"编辑 **项目文件"。** 在文件底部，你将看到在应用程序生成时创建和更新 zip 文件夹的代码：
+在"Visual Studio资源管理器"窗口中，右键单击项目并选择"编辑Project **文件"。** 在文件底部，你将看到在应用程序生成时创建和更新 zip 文件夹的代码：
 
 ```xml
 <PropertyGroup>
@@ -96,11 +96,11 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="home"></a>主页
 
-ASP.NET 核心将名为 *Index* 的文件视为网站的默认/主页。 当浏览器 URL 指向网站的根目录时 **，Index.cshtml** 将显示为应用程序的主页。
+ASP.NET Core将名为 *Index* 的文件视为网站的默认/主页。 当浏览器 URL 指向网站的根目录时 **，Index.cshtml** 将显示为应用程序的主页。
 
 #### <a name="shared"></a>共享的内容
 
-部分视图标记 *_Layout.cshtml* 包含应用程序的整体页面结构和共享的可视元素。 它还将引用 Teams 库。
+部分视图标记 *_Layout.cshtml* 包含应用程序的整体页面结构和共享的可视元素。 它还将引用Teams库。
 
 ### <a name="controllers"></a>控制器
 
@@ -120,7 +120,7 @@ ngrok http https://localhost:443560 -host-header="localhost:44360"
 
 ## <a name="update-your-application"></a>更新应用程序
 
-在 **Tab.cshtml** 中，应用程序向用户显示两个选项按钮，用于显示带红色或灰色图标的选项卡。 选择" **选择灰色"** 或 **"选择红色** "按钮将分别触发或 ，设置 并启用配置页上的 `saveGray()` `saveRed()` `settings.setValidityState(true)` **"** 保存"按钮。 此代码可让 Teams 知道你已满足配置要求，并且可以继续安装。 保存时，将设置 `settings.setSettings` 的参数。 最后 `saveEvent.notifySuccess()` ，调用 以指示已成功解析内容 URL。
+在 **Tab.cshtml** 中，应用程序向用户显示两个选项按钮，用于显示带红色或灰色图标的选项卡。 选择" **选择灰色"** 或 **"选择红色** "按钮将分别触发或 ，设置 并启用配置页上的 `saveGray()` `saveRed()` `settings.setValidityState(true)` **"** 保存"按钮。 此代码Teams您满足配置要求，并且安装可以继续。 保存时，将设置 `settings.setSettings` 的参数。 最后 `saveEvent.notifySuccess()` ，调用 以指示已成功解析内容 URL。
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

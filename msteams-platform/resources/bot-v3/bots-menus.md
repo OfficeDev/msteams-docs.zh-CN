@@ -1,6 +1,6 @@
 ---
 title: 添加自动程序菜单
-description: 介绍如何在 Microsoft Teams 中为机器人创建菜单
+description: 介绍如何为聊天机器人创建Microsoft Teams
 keywords: teams 自动程序菜单创建
 ms.topic: how-to
 localization_priority: Normal
@@ -12,7 +12,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019767"
 ---
-# <a name="add-a-bot-menu-in-microsoft-teams"></a>在 Microsoft Teams 中添加自动程序菜单
+# <a name="add-a-bot-menu-in-microsoft-teams"></a>在"聊天机器人"菜单中添加Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -22,11 +22,11 @@ ms.locfileid: "52019767"
 
 当用户选择菜单项时，命令字符串将插入到文本框中，帮助用户完成自动程序消息。
 
-## <a name="bot-menu-support-on-teams-mobile-app"></a>Teams 移动应用上的自动程序菜单支持
+## <a name="bot-menu-support-on-teams-mobile-app"></a>移动应用上的自动Teams支持
 > [!NOTE] 
 > 自动程序菜单不显示在移动设备上
 
-## <a name="app-manifest"></a>应用清单
+## <a name="app-manifest"></a>应用部件清单
 
 若要创建自动程序菜单，请向应用清单的自动程序 [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) 部分下添加新对象。 对于自动程序支持的每个范围，可以使用单独的命令声明单个菜单 `personal` (，) 每个菜单最多支持 `groupChat` `team` 10 个命令。
 

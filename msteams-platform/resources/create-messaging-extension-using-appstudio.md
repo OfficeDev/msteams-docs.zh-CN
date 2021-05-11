@@ -1,7 +1,7 @@
 ---
 title: 使用 App Studio 创建消息传递
 author: clearab
-description: 了解如何使用 App Studio 创建 Microsoft Teams 消息传递扩展。
+description: 了解如何使用 App Studio Microsoft Teams邮件扩展。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
@@ -15,7 +15,7 @@ ms.locfileid: "52019739"
 # <a name="create-a-messaging-extension-using-app-studio"></a>使用 App Studio 创建消息传递
 
 > [!TIP]
-> 寻找更快速入门的方法？ 使用 Microsoft Teams [策略](../build-your-first-app/build-messaging-extension.md) 创建消息传递Toolkit。
+> 寻找更快速入门的方法？ 使用[邮件扩展创建](../build-your-first-app/build-messaging-extension.md)Microsoft Teams Toolkit。
 
 在高级别上，您需要完成以下步骤以创建邮件扩展。
 
@@ -25,9 +25,9 @@ ms.locfileid: "52019739"
 4. 创建应用包
 5. 将你的程序包上传到 Microsoft Teams
 
-创建 Web 服务、创建应用包以及使用 Bot Framework 注册 Web 服务可以按任意顺序完成。 由于这三个部分相互关联，因此无论按哪种顺序执行它们，都需要返回以更新其他部分。 注册需要来自部署的 Web 服务的消息终结点，并且 Web 服务需要通过注册创建的 ID 和密码。 你的应用清单还需要该 ID 以将 Teams 连接到 Web 服务。
+创建 Web 服务、创建应用包以及使用 Bot Framework 注册 Web 服务可以按任意顺序完成。 由于这三个部分相互关联，因此无论按哪种顺序执行它们，都需要返回以更新其他部分。 注册需要来自部署的 Web 服务的消息终结点，并且 Web 服务需要通过注册创建的 ID 和密码。 你的应用清单还需要该 ID 来Teams Web 服务。
 
-生成邮件扩展时，你将定期在更改应用清单和将代码部署到 Web 服务之间移动。 使用应用清单时，请记住，你可以手动操作 JSON 文件，或者通过 App Studio 进行更改。 无论采用哪种方式，在更改清单时) 在 Teams 中重新部署 (上传应用，但在将更改部署到 Web 服务时无需这样做。
+生成邮件扩展时，你将定期在更改应用清单和将代码部署到 Web 服务之间移动。 使用应用清单时，请记住，你可以手动操作 JSON 文件，或者通过 App Studio 进行更改。 无论采用哪种方式，在更改清单时，都需要在 Teams 中重新部署 (上传) ，但在将更改部署到 Web 服务时无需这样做。
 
 [!include[prepare environment](~/includes/prepare-environment.md)]
 
@@ -37,16 +37,16 @@ ms.locfileid: "52019739"
 
 * 使用我们的快速 [入门](#learn-more) 教程之一指导你创建 Web 服务。
 * 从 Bot [Framework](https://github.com/Microsoft/BotBuilder-Samples) 示例存储库中选择一个消息扩展示例。
-* 如果你使用的是 JavaScript，请使用 Microsoft Teams 的 [Yeoman](https://github.com/OfficeDev/generator-teams) 生成器为 Teams 应用（包括 Web 服务）搭建基架。
+* 如果你使用的是 JavaScript，请使用适用于 Microsoft Teams 的[Yeoman](https://github.com/OfficeDev/generator-teams)生成器为 Teams应用（包括 Web 服务）搭建基架。
 * 从头开始创建 Web 服务。 可选择添加面向你的语言的 Bot Framework SDK，也可以直接使用 JSON 有效负载。
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>使用 Bot Framework 注册你的 Web 服务
 
-邮件扩展利用 Bot Framework 的消息架构和安全通信协议;如果还没有，则需要在 Bot Framework 上注册 Web 服务。 Microsoft 应用 ID (我们将它作为来自 Teams 内部的自动程序 ID 进行引用，以便从你可能正在处理) 的其他应用 ID 中标识它，在 Bot Framework 中注册的消息终结点将在你的消息传递扩展中用于接收和响应请求。 如果你使用的是现有注册，请确保启用 Microsoft Teams [频道](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)。
+邮件扩展利用 Bot Framework 的消息架构和安全通信协议;如果还没有，则需要在 Bot Framework 上注册 Web 服务。 Microsoft 应用 ID (我们将它引用为 Teams 内的自动程序 ID，以便从你可能正在处理) 的其他应用 ID 中标识它，在 Bot Framework 中注册的邮件终结点将用于邮件扩展以接收和响应请求。 如果你使用的是现有注册，请确保启用Microsoft Teams[通道](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)。
 
 如果你遵循其中一个快速入门或从其中一个可用示例开始，将指导你完成注册 Web 服务。 如果要手动注册服务，有三个选项可进行注册。 如果选择注册而不使用 Azure 订阅，将无法利用 Bot Framework 提供的简化 OAuth 身份验证流。 创建后，你将能够将注册迁移到 Azure。
 
-* 如果你有 Azure 订阅 (或想要创建新的 Azure) ，可以使用 Azure 门户手动注册 Web 服务。 创建"Bot Channels Registration"资源。 你可以选择免费定价层，因为来自 Microsoft Teams 的消息不计入每月允许的消息总数。
+* 如果你有 Azure 订阅 (或想要创建新的 Azure) ，可以使用 Azure 门户手动注册 Web 服务。 创建"Bot Channels Registration"资源。 您可以选择免费定价层，因为来自 Microsoft Teams的邮件不会计入每月允许的邮件总数。
 * 如果你不希望使用 Azure 订阅，可以使用旧版 [注册门户](https://dev.botframework.com/bots/new)。
 * App Studio 还可以帮助你注册 Web 服务 (自动) 。 通过 App Studio 注册的 Web 服务未在 Azure 中注册。 可以使用旧 [门户查看](https://dev.botframework.com/bots) 、管理和迁移注册。
 
@@ -56,7 +56,7 @@ ms.locfileid: "52019739"
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>使用 App Studio 创建应用清单
 
-可以在 Microsoft Teams 客户端内使用 App Studio 应用来帮助创建应用清单。
+你可以从 Microsoft Teams 客户端内使用 App Studio 应用，以帮助创建应用清单。
 
 1. 在 Teams 客户端中，从左侧导航栏上的“**…**”溢出菜单中打开 App Studio。 如果尚未安装，则可以通过搜索来这样做。
 2. 在清单 **编辑器** 选项卡上 **，选择** 创建新应用 (或者如果你要向现有应用添加消息传递扩展，你可以将应用包) 
@@ -71,7 +71,7 @@ ms.locfileid: "52019739"
 
 ### <a name="create-your-app-manifest-manually"></a>手动创建应用清单
 
-与机器人和选项卡一样，更新 [应用](~/resources/schema/manifest-schema.md#composeextensions) 的应用清单以包含消息传递扩展属性。 这些属性控制邮件扩展在 Microsoft Teams 客户端中的显示和行为方式。 从清单的 v1.0 开始，支持消息传递扩展。
+与机器人和选项卡一样，更新 [应用](~/resources/schema/manifest-schema.md#composeextensions) 的应用清单以包含消息传递扩展属性。 这些属性控制邮件扩展在客户端中的显示Microsoft Teams行为。 从清单的 v1.0 开始，支持消息传递扩展。
 
 #### <a name="declare-your-messaging-extension"></a>声明邮件扩展
 
@@ -84,8 +84,8 @@ ms.locfileid: "52019739"
 
 | 属性名称 | 用途 | 是否必需？ |
 |---|---|---|
-| `botId` | 使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这通常应该与整个 Teams 应用的 ID 相同。 | 是 |
-| `canUpdateConfiguration` | 启用 **"设置"** 菜单项。 | 不支持 |
+| `botId` | 使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这通常应该与整个应用应用的 ID Teams相同。 | 是 |
+| `canUpdateConfiguration` | 启用 **设置** 菜单项。 | 否 |
 | `commands` | 此邮件扩展支持的命令数组。 只能使用 10 个命令。 | 是 |
 
 #### <a name="define-your-commands"></a>定义命令
@@ -227,12 +227,12 @@ ms.locfileid: "52019739"
 
 当用户触发消息扩展时，你需要处理初始调用消息，从用户收集一些信息，然后处理该信息并做出相应的响应。 为此，首先需要确定要添加到邮件扩展中的命令类型，并添加操作[命令或](~/messaging-extensions/how-to/action-commands/define-action-command.md)[添加搜索命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)。
 
-## <a name="messaging-extensions-in-teams-meetings"></a>Teams 会议中的消息扩展
+## <a name="messaging-extensions-in-teams-meetings"></a>会议中的消息传递Teams扩展
 
 > [!NOTE]
-> 如果会议或群聊在名单中有联盟用户，则 Teams 将禁止所有用户（包括组织者）访问消息传递扩展。
+> 如果会议或群聊在名单中有联盟用户，Teams禁止所有用户（包括组织者）访问消息传递扩展。
 
-会议开始后，Teams 参与者可以在实时呼叫期间直接与消息扩展进行交互。 生成会议内消息传递扩展时，请考虑以下事项：
+会议开始后，Teams参与者可以在实时呼叫期间直接与消息扩展进行交互。 生成会议内消息传递扩展时，请考虑以下事项：
 
 1. **Location**。 可以从会议聊天中的撰写消息区域、命令框或消息@mentioned消息扩展。
 
@@ -259,7 +259,7 @@ ms.locfileid: "52019739"
   * [使用基于操作的命令的邮件扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [使用基于搜索的命令的邮件扩展](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-详细了解 Teams 开发概念：
+详细了解如何Teams概念：
 
-* [了解 Teams 应用功能](../concepts/capabilities-overview.md)
+* [了解Teams应用功能](../concepts/capabilities-overview.md)
 * [什么是消息扩展？](../messaging-extensions/what-are-messaging-extensions.md)

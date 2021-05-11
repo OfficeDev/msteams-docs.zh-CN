@@ -14,17 +14,17 @@ ms.locfileid: "52020174"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 
-在 [注册 Microsoft Teams 的](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)通话和会议机器人时，提及用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
+在[注册呼叫和会议机器人以使用](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)Microsoft Teams 时，会提到用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
 
 ## <a name="protocol-determination"></a>协议确定
 
-传入通知以旧格式提供，以与以前的 Skype 协议 [兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将调用转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式并提供以下响应：
+传入通知以旧格式提供，用于与以前的 Skype[协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将呼叫转换为 Microsoft Graph协议，机器人必须确定通知是否采用旧格式并提供以下响应：
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-自动程序会再次收到通知，但这次在 Microsoft Graph 协议中。
+自动程序将再次接收通知，但这次在 Microsoft Graph协议。
 
 在实时媒体平台的未来版本中，你可以配置应用程序支持的协议，以避免接收旧格式的初始回调。
 
@@ -68,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-OAuth 令牌具有以下值，由 Skype 签名：
+OAuth 令牌具有以下值，由 Skype：
 
 ```json
 {

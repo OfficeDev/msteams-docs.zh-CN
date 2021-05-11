@@ -1,7 +1,7 @@
 ---
 title: 智能机器人活动处理程序
 author: clearab
-description: 了解 Teams 中的机器人活动处理程序。
+description: 了解聊天机器人活动处理程序Teams。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
@@ -14,52 +14,52 @@ ms.locfileid: "52020188"
 ---
 # <a name="bot-activity-handlers"></a>智能机器人活动处理程序
 
-本文档基于核心 Bot Framework 文档中 [有关](https://aka.ms/how-bots-work) 机器人 [如何工作的文章](https://aka.ms/azure-bot-service-docs)。 为 Microsoft Teams 开发的机器人和核心 Bot Framework 之间的主要区别在于 Teams 中提供的功能。
+本文档基于核心 Bot Framework 文档中 [有关](https://aka.ms/how-bots-work) 机器人 [如何工作的文章](https://aka.ms/azure-bot-service-docs)。 为自动程序开发Microsoft Teams核心 Bot Framework 之间的主要区别在于Teams。
 
-若要组织机器人的对话逻辑，则使用活动处理程序。 使用 Teams 活动处理程序和自动程序逻辑以两种方式处理活动。 Teams 活动处理程序添加了对特定于 Microsoft Teams 的事件和交互的支持。 机器人对象包含轮次的对话逻辑或逻辑，并公开一个轮次处理程序，这是可接受来自机器人适配器的传入活动的方法。
+若要组织机器人的对话逻辑，则使用活动处理程序。 使用活动处理程序和自动程序逻辑Teams两种方式处理活动。 活动Teams处理程序添加了对特定于Microsoft Teams事件和交互的支持。 机器人对象包含轮次的对话逻辑或逻辑，并公开一个轮次处理程序，这是可接受来自机器人适配器的传入活动的方法。
 
-## <a name="teams-activity-handlers"></a>Teams 活动处理程序
+## <a name="teams-activity-handlers"></a>Teams活动处理程序
 
-Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序。 在允许处理任何非 Teams 特定活动之前，它将路由所有 Teams 活动。
+Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 它先Teams所有活动，然后再Teams处理任何非活动。
 
-当 Teams 机器人收到活动时，它会路由到活动处理程序。 所有活动都通过一个称为轮转处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 Teams 机器人派生自 `TeamsActivityHandler` 类，该类派生自 Bot Framework 的 `ActivityHandler` 类。
+当聊天机器人Teams活动时，它会路由到活动处理程序。 所有活动都通过一个称为轮转处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 the Teams bot is derived from `TeamsActivityHandler` class， which is derived from the Bot Framework's `ActivityHandler` class.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-自动程序是使用 Bot Framework 创建的。 如果机器人收到消息活动，轮机处理程序将接收该传入活动的通知。 然后轮次处理程序将传入活动发送到 `OnMessageActivityAsync` 活动处理程序。 在 Teams 中，此功能保持不变。 如果机器人收到对话更新活动，则轮机处理程序将接收该传入活动的通知，并将传入活动发送到 `OnConversationUpdateActivityAsync` 。 Teams 活动处理程序首先检查任何 Teams 特定事件。 如果未找到任何事件，它会将它们传递给 Bot Framework 的活动处理程序。
+自动程序是使用 Bot Framework 创建的。 如果机器人收到消息活动，轮机处理程序将接收该传入活动的通知。 然后轮次处理程序将传入活动发送到 `OnMessageActivityAsync` 活动处理程序。 在Teams中，此功能保持不变。 如果机器人收到对话更新活动，则轮机处理程序将接收该传入活动的通知，并将传入活动发送到 `OnConversationUpdateActivityAsync` 。 活动Teams处理程序首先检查特定Teams事件。 如果未找到任何事件，它会将它们传递给 Bot Framework 的活动处理程序。
 
-在 Teams 活动处理程序类中，有两个主要的 Teams 活动处理程序 `OnConversationUpdateActivityAsync` 和 `OnInvokeActivityAsync` 。 `OnConversationUpdateActivityAsync` 路由所有对话更新活动 `OnInvokeActivityAsync` ，并路由所有 Teams 调用活动。
+在Teams处理程序类中，有两个主要Teams活动处理程序和 `OnConversationUpdateActivityAsync` `OnInvokeActivityAsync` 。 `OnConversationUpdateActivityAsync`路由所有对话更新活动 `OnInvokeActivityAsync` ，并路由Teams活动。
 
-若要为 Teams 特定活动处理程序实现逻辑，必须替代自动程序中的方法，如机器人逻辑 [部分](#bot-logic) 所示。 这些处理程序没有基本实现，因此，必须在替代中添加想要的逻辑。
+若要实现特定活动Teams的逻辑，必须替代自动程序中的方法，如自动程序逻辑[部分](#bot-logic)所示。 这些处理程序没有基本实现，因此，必须在替代中添加想要的逻辑。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-自动程序是使用 Bot Framework 创建的。 如果机器人收到消息活动，轮机处理程序将接收该传入活动的通知。 然后轮次处理程序将传入活动发送到 `onMessage` 活动处理程序。 在 Teams 中，此功能保持不变。 如果机器人收到对话更新活动，则轮机处理程序将接收该传入活动的通知，并将传入活动发送到 `dispatchConversationUpdateActivity` 。 Teams 活动处理程序首先检查任何 Teams 特定事件。 如果未找到任何事件，它会将它们传递给 Bot Framework 的活动处理程序。
+自动程序是使用 Bot Framework 创建的。 如果机器人收到消息活动，轮机处理程序将接收该传入活动的通知。 然后轮次处理程序将传入活动发送到 `onMessage` 活动处理程序。 在Teams中，此功能保持不变。 如果机器人收到对话更新活动，则轮机处理程序将接收该传入活动的通知，并将传入活动发送到 `dispatchConversationUpdateActivity` 。 活动Teams处理程序首先检查特定Teams事件。 如果未找到任何事件，它会将它们传递给 Bot Framework 的活动处理程序。
 
-在 Teams 活动处理程序类中，有两个主要的 Teams 活动处理程序 `dispatchConversationUpdateActivity` 和 `onInvokeActivity` 。 `dispatchConversationUpdateActivity` 路由所有对话更新活动 `onInvokeActivity` ，并路由所有 Teams 调用活动。
+在Teams处理程序类中，有两个主要Teams活动处理程序和 `dispatchConversationUpdateActivity` `onInvokeActivity` 。 `dispatchConversationUpdateActivity`路由所有对话更新活动 `onInvokeActivity` ，并路由Teams活动。
 
-若要为 Teams 特定活动处理程序实现逻辑，必须替代自动程序中的方法，如机器人逻辑 [部分](#bot-logic) 所示。 为这些处理程序定义自动程序逻辑，然后确保在末尾 `next()` 调用。 通过 `next()` 调用 ，可确保下一个处理程序运行。
+若要实现特定活动Teams的逻辑，必须替代自动程序中的方法，如自动程序逻辑[部分](#bot-logic)所示。 为这些处理程序定义自动程序逻辑，然后确保在末尾 `next()` 调用。 通过 `next()` 调用 ，可确保下一个处理程序运行。
 
 # <a name="python"></a>[Python](#tab/python)
 
-自动程序是使用 Bot Framework 创建的。 如果机器人收到消息活动，轮机处理程序将接收该传入活动的通知。 然后轮次处理程序将传入活动发送到 `on_message_activity` 活动处理程序。 在 Teams 中，此功能保持不变。 如果机器人收到对话更新活动，则轮机处理程序将接收该传入活动的通知，并将传入活动发送到 `on_conversation_update_activity` 。 Teams 活动处理程序首先检查任何 Teams 特定事件。 如果未找到任何事件，它会将它们传递给 Bot Framework 的活动处理程序。
+自动程序是使用 Bot Framework 创建的。 如果机器人收到消息活动，轮机处理程序将接收该传入活动的通知。 然后轮次处理程序将传入活动发送到 `on_message_activity` 活动处理程序。 在Teams中，此功能保持不变。 如果机器人收到对话更新活动，则轮机处理程序将接收该传入活动的通知，并将传入活动发送到 `on_conversation_update_activity` 。 活动Teams处理程序首先检查特定Teams事件。 如果未找到任何事件，它会将它们传递给 Bot Framework 的活动处理程序。
 
-在 Teams 活动处理程序类中，有两个主要的 Teams 活动处理程序 `on_conversation_update_activity` 和 `on_invoke_activity` 。 `on_conversation_update_activity` 路由所有对话更新活动 `on_invoke_activity` ，并路由所有 Teams 调用活动。
+在Teams处理程序类中，有两个主要Teams活动处理程序和 `on_conversation_update_activity` `on_invoke_activity` 。 `on_conversation_update_activity`路由所有对话更新活动 `on_invoke_activity` ，并路由Teams活动。
 
-若要为 Teams 特定活动处理程序实现逻辑，必须替代自动程序中的方法，如机器人逻辑 [部分](#bot-logic) 所示。 这些处理程序没有基本实现，因此，必须在替代中添加想要的逻辑。
+若要实现特定活动Teams的逻辑，必须替代自动程序中的方法，如自动程序逻辑[部分](#bot-logic)所示。 这些处理程序没有基本实现，因此，必须在替代中添加想要的逻辑。
 
 ---
 
 ## <a name="bot-logic"></a>自动程序逻辑
 
-机器人逻辑处理来自一个或多个自动程序通道的传入活动，并响应生成传出活动。 对于从 Teams 活动处理程序类派生的机器人，这一点仍然成立，此类首先会检查 Teams 活动。 检查 Teams 活动后，它会将所有其他活动传递给 Bot Framework 的活动处理程序。
+机器人逻辑处理来自一个或多个自动程序通道的传入活动，并响应生成传出活动。 对于从活动处理程序类派生的自动程序Teams，它首先检查活动Teams情况。 检查活动Teams，它会将所有其他活动传递给 Bot Framework 的活动处理程序。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
 #### <a name="core-bot-framework-handlers"></a>核心 Bot Framework 处理程序
 
 >[!NOTE]
-> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非 Teams 机器人一样工作。
+> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非自动程序一样Teams工作。
 
 活动处理程序在团队的上下文中有所不同，其中将新成员添加到团队，而不是消息线程。
 
@@ -77,22 +77,22 @@ Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序�
 | 收到的非令牌响应事件活动 | `OnEventAsync` | 可以重写此方法以处理其他类型的事件。 |
 | 收到的其他活动类型 | `OnUnrecognizedActivityTypeAsync` | 可以重写此方法以处理任何活动类型，否则无法处理。 |
 
-#### <a name="teams-specific-activity-handlers"></a>Teams 特定活动处理程序
+#### <a name="teams-specific-activity-handlers"></a>Teams特定活动处理程序
 
 `TeamsActivityHandler`扩展核心 Bot Framework 处理程序部分中的处理程序列表，以包括以下内容：
 
 | 事件 | Handler | 说明 |
 | :-- | :-- | :-- |
-| channelCreated | `OnTeamsChannelCreatedAsync` | 可以重写此方法以处理正在创建的 Teams 频道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| channelDeleted | `OnTeamsChannelDeletedAsync` | 可以重写此方法以处理要删除的 Teams 频道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| channelRenamed | `OnTeamsChannelRenamedAsync` | 可以重写此方法以处理正在重命名的 Teams 频道。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) 中 [重命名的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` 可以重写此方法来处理要重命名的 Teams 团队。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 中 [重命名的团队](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelCreated | `OnTeamsChannelCreatedAsync` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| channelDeleted | `OnTeamsChannelDeletedAsync` | 可以重写此方法以处理要Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelRenamed | `OnTeamsChannelRenamedAsync` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) 中 [重命名的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`可以重写此方法以处理正在Teams团队。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 中 [重命名的团队](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
 | MembersAdded | `OnTeamsMembersAddedAsync` | 此方法在 `OnMembersAddedAsync` 中调用 方法 `ActivityHandler` 。 可以重写 方法以处理加入团队的成员。 有关详细信息，请参阅在[对话更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added)[中添加的团队成员](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | 此方法在 `OnMembersRemovedAsync` 中调用 方法 `ActivityHandler` 。 可以重写 方法以处理离开团队的成员。 有关详细信息，请参阅对话[更新事件中删除](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed)[的团队成员](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
 
-#### <a name="teams-invoke-activities"></a>Teams 调用活动
+#### <a name="teams-invoke-activities"></a>Teams调用活动
 
-从 Teams 活动处理程序调用的 `OnInvokeActivityAsync` Teams 活动处理程序列表包括：
+从Teams活动处理程序调用的Teams `OnInvokeActivityAsync` 活动处理程序的列表包括：
 
 | 调用类型                    | Handler                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -105,14 +105,14 @@ Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序�
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | 此方法可以在派生类中重写，以提供提取任务模块时的逻辑。 |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | 此方法可以在派生类中重写，以提供提交任务模块时的逻辑。 |
 
-本部分中列出的调用活动适用于 Teams 中的对话机器人。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+本节中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 #### <a name="core-bot-framework-handlers"></a>核心 Bot Framework 处理程序
 
 >[!NOTE]
-> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非 Teams 机器人一样工作。
+> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非自动程序一样Teams工作。
 
 活动处理程序在团队的上下文中有所不同，其中，将新成员添加到团队，而不是消息线程。
 
@@ -129,22 +129,22 @@ Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序�
 | 收到的令牌响应事件活动 | `onTokenResponseEvent` | 此方法有助于处理令牌响应事件。 |
 | 收到的其他活动类型 | `onUnrecognizedActivityType` | 此方法有助于处理未经处理的任何活动类型。 |
 
-#### <a name="teams-specific-activity-handlers"></a>Teams 特定活动处理程序
+#### <a name="teams-specific-activity-handlers"></a>Teams特定活动处理程序
 
 `TeamsActivityHandler`扩展核心 Bot Framework 处理程序部分中的处理程序列表，以包括以下内容：
 
 | 事件 | Handler | 说明 |
 | :-- | :-- | :-- |
-| channelCreated | `OnTeamsChannelCreatedAsync` | 可以重写此方法以处理正在创建的 Teams 频道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| channelDeleted | `OnTeamsChannelDeletedAsync` | 可以重写此方法以处理要删除的 Teams 频道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| channelRenamed | `OnTeamsChannelRenamedAsync` | 可以重写此方法以处理正在重命名的 Teams 频道。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) 中 [重命名的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` 可以重写此方法来处理要重命名的 Teams 团队。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 中 [重命名的团队](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| channelCreated | `OnTeamsChannelCreatedAsync` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| channelDeleted | `OnTeamsChannelDeletedAsync` | 可以重写此方法以处理要Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelRenamed | `OnTeamsChannelRenamedAsync` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) 中 [重命名的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`可以重写此方法以处理正在Teams团队。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 中 [重命名的团队](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | MembersAdded | `OnTeamsMembersAddedAsync` | 此方法在 `OnMembersAddedAsync` 中调用 方法 `ActivityHandler` 。 可以重写 方法以处理加入团队的成员。 有关详细信息，请参阅在[对话更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added)[中添加的团队成员](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | 此方法在 `OnMembersRemovedAsync` 中调用 方法 `ActivityHandler` 。 可以重写 方法以处理离开团队的成员。 有关详细信息，请参阅对话[更新事件中删除](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed)[的团队成员](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 
-#### <a name="teams-invoke-activities"></a>Teams 调用活动
+#### <a name="teams-invoke-activities"></a>Teams调用活动
 
-从 Teams 活动处理程序调用的 `onInvokeActivity` Teams 活动处理程序列表包括：
+从Teams活动处理程序调用的Teams `onInvokeActivity` 活动处理程序的列表包括：
 
 | 调用类型                    | Handler                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -157,14 +157,14 @@ Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序�
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | 此方法可以在派生类中重写，以提供提取任务模块时的逻辑。 |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | 此方法可以在派生类中重写，以提供提交任务模块时的逻辑。 |
 
-本部分中列出的调用活动适用于 Teams 中的对话机器人。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+本节中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 # <a name="python"></a>[Python](#tab/python)
 
 #### <a name="core-bot-framework-handlers"></a>核心 Bot Framework 处理程序
 
 >[!NOTE]
-> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非 Teams 机器人一样工作。
+> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非自动程序一样Teams工作。
 
 活动处理程序在团队的上下文中有所不同，其中，将新成员添加到团队，而不是消息线程。
 
@@ -182,22 +182,22 @@ Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序�
 | 收到的非令牌响应事件活动 | `on_event` | 可以重写此方法以处理其他类型的事件。 |
 | 收到的其他活动类型 | `on_unrecognized_activity_type` | 可以重写此方法以处理任何未处理的活动类型。 |
 
-#### <a name="teams-specific-activity-handlers"></a>Teams 特定活动处理程序
+#### <a name="teams-specific-activity-handlers"></a>Teams特定活动处理程序
 
 扩展核心 Bot Framework 处理程序部分中的处理程序 `TeamsActivityHandler` 列表，以包括以下内容：
 
 | 事件 | Handler | 说明 |
 | :-- | :-- | :-- |
-| channelCreated | `on_teams_channel_created` | 可以重写此方法以处理正在创建的 Teams 频道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| channelDeleted | `on_teams_channel_deleted` | 可以重写此方法以处理要删除的 Teams 频道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| channelRenamed | `on_teams_channel_renamed` | 可以重写此方法以处理正在重命名的 Teams 频道。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) 中 [重命名的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| teamRenamed | `on_teams_team_renamed` | `return Task.CompletedTask;` 可以重写此方法来处理要重命名的 Teams 团队。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 中 [重命名的团队](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelCreated | `on_teams_channel_created` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| channelDeleted | `on_teams_channel_deleted` | 可以重写此方法以处理要Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelRenamed | `on_teams_channel_renamed` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) 中 [重命名的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| teamRenamed | `on_teams_team_renamed` | `return Task.CompletedTask;`可以重写此方法以处理正在Teams团队。 有关详细信息，请参阅对话 [更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 中 [重命名的团队](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
 | MembersAdded | `on_teams_members_added` | 此方法在 `OnMembersAddedAsync` 中调用 方法 `ActivityHandler` 。 可以重写 方法以处理加入团队的成员。 有关详细信息，请参阅在[对话更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added)[中添加的团队成员](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
 | MembersRemoved | `on_teams_members_removed` | 此方法在 `OnMembersRemovedAsync` 中调用 方法 `ActivityHandler` 。 可以重写 方法以处理离开团队的成员。 有关详细信息，请参阅对话[更新事件中删除](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed)[的团队成员](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
 
-#### <a name="teams-invoke-activities"></a>Teams 调用活动
+#### <a name="teams-invoke-activities"></a>Teams调用活动
 
-从 Teams 活动处理程序调用的 `on_invoke_activity` Teams 活动处理程序列表包括：
+从Teams活动处理程序调用的Teams `on_invoke_activity` 活动处理程序的列表包括：
 
 | 调用类型                    | Handler                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -210,7 +210,7 @@ Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序�
 | task/fetch                      | `on_teams_task_module_fetch`        | 此方法可以在派生类中重写，以提供提取任务模块时的逻辑。 |
 | task/submit                     | `on_teams_task_module_submit`       | 此方法可以在派生类中重写，以提供提交任务模块时的逻辑。 |
 
-本部分中列出的调用活动适用于 Teams 中的对话机器人。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+本节中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 ---
 

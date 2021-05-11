@@ -1,6 +1,6 @@
 ---
 title: 开发消息传递扩展
-description: 介绍如何在 Microsoft Teams 中开始使用消息传递扩展
+description: 介绍如何开始使用邮件扩展Microsoft Teams
 ms.topic: overview
 localization_priority: Normal
 keywords: teams 消息传递扩展消息传递扩展
@@ -11,11 +11,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020602"
 ---
-# <a name="develop-messaging-extensions-for-microsoft-teams"></a>为 Microsoft Teams 开发消息传递扩展
+# <a name="develop-messaging-extensions-for-microsoft-teams"></a>开发适用于用户的邮件Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-消息传递扩展是用户从 Microsoft Teams 使用你的应用的强大方式。 通过此功能，用户可以在服务中查询或发布信息，然后以卡片形式将该信息发布至消息中。
+消息传递扩展是一种功能强大的方法，用户可以从多个用户Microsoft Teams。 通过此功能，用户可以在服务中查询或发布信息，然后以卡片形式将该信息发布至消息中。
 
 ![邮件扩展卡示例](~/assets/images/compose-extensions/ceexample.png)
 
@@ -31,7 +31,7 @@ ms.locfileid: "52020602"
 
 ## <a name="types-of-messaging-extensions"></a>邮件扩展类型
 
-目前，你主要为 Teams 创建两种类型的消息传递扩展。 以下主题将指导你完成创建它们的过程：
+目前，你主要可以创建两种邮件Teams扩展。 以下主题将指导你完成创建它们的过程：
 
 * [基于搜索的消息扩展](~/resources/messaging-extension-v3/search-extensions.md)：在服务中查询信息并将其插入到邮件中。 示例：查找工作项
 * [基于操作的消息扩展](~/resources/messaging-extension-v3/create-extensions.md)：从用户收集信息并张贴到第三方服务。 示例：创建工作项

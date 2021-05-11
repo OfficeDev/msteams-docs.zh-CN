@@ -1,8 +1,8 @@
-### <a name="_layoutcshtml"></a>_Layout cshtml
+### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-若要在团队中显示您的选项卡，您必须包含 **Microsoft 团队 JavaScript 客户端 SDK** ，并在 `microsoftTeams.initialize()` 加载页面后包含一个调用。 这就是选项卡和团队客户端之间的通信方式：
+若要在页面中显示选项卡Teams，必须包含 **Microsoft Teams JavaScript** 客户端 SDK，并包括页面加载 `microsoftTeams.initialize()` 后对 的调用。 这是选项卡和客户端Teams的方式：
 
-- 导航到 **共享** 文件夹，打开 **_Layout. cshtml**，并将以下内容添加到 `<head>` 标记：
+- 导航到 **"共享** "文件夹，打开 **_Layout.cshtml**，然后向 标记中添加 `<head>` 以下内容：
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -10,17 +10,17 @@
 ```
 
 >[!IMPORTANT]
->请勿复制/粘贴 `<script src="...">` 此页面中的 url，因为它们可能不代表最新版本。 若要获取最新版本的 SDK，请始终转到： [Microsoft 团队 JAVASCRIPT API](https://www.npmjs.com/package/@microsoft/teams-js)。
+>不要复制/粘贴此页面中的 `<script src="...">` URL，因为它们可能并不代表最新版本。 若要获取最新版本的 SDK，请始终转到[：Microsoft Teams JavaScript API。](https://www.npmjs.com/package/@microsoft/teams-js)
 
-### <a name="tabcshtml"></a>选项卡. cshtml
+### <a name="tabcshtml"></a>Tab.cshtml
 
-打开 **选项卡. cshtml** 并更新嵌入的， `<script>` 如下所示：
+打开 **Tab.cshtml** 并更新嵌入 `<script>` 的内容，如下所示：
 
-- 在脚本的顶部，调用 `microsoftTeams.initialize()` 。
+- 在脚本顶部，调用 `microsoftTeams.initialize()` 。
 
-- `websiteUrl` `contentUrl` 使用 HTTPS ngrok URL 将每个函数中的和值更新到您的选项卡。
+- 将每个 `websiteUrl` 函数 `contentUrl` 中的 和 值更新为选项卡的 HTTPS ngrok URL。
 
-您的代码现在应如下所示， **y8rCgT2b** 替换为您的 ngrok URL：
+现在，您的代码应如下所示，将 **y8rCgT2b** 替换为 ngrok URL：
 
 ```javascript
     microsoftTeams.initialize();
@@ -50,79 +50,79 @@
     }
 ```
 
-请务必保存更新的 **选项卡. cshtml**。
+确保保存更新的 **Tab.cshtml**。
 
 ## <a name="build-and-run-your-application"></a>生成并运行应用程序
 
-- 在 Visual Studio 中按 **F5**，或从 "**调试**" 菜单中选择 "**启动调试**"。 通过在命令提示符窗口中提供的 ngrok HTTPS URL 打开浏览器并转到内容页，验证 **ngrok** 是否正在运行并正常运行。
+- In Visual Studio press **F5**， or choose **Start Debugging** from the **Debug** menu. 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正常运行。
 
 >[!TIP]
->您需要在 Visual Studio 和 ngrok 中同时运行应用程序，才能完成此快速入门。 如果需要在 Visual Studio 中停止运行应用程序以使用它， **请继续运行 ngrok**。 它将继续侦听，并将在 Visual Studio 中重新启动时继续路由应用程序的请求。 如果您必须重新启动 ngrok 服务，它将返回一个新的 URL，您必须使用新的 URL 更新应用程序。
+>你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果需要停止运行应用程序，Visual Studio运行 **ngrok。** 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须使用新 URL 更新应用程序。
 
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>将您的选项卡上传给具有应用程序 Studio 的团队
+## <a name="upload-your-tab-to-teams-with-app-studio"></a>Upload选项卡以Teams App Studio
 
 >[!Note]
-> 我们使用应用程序 Studio 编辑文件 **上的manifest.js** ，并将已完成的包上传给团队。 如果愿意，也可以手动编辑文件 **上的manifest.js** 。 如果这样做，请务必重新生成解决方案，以创建要上载的 **tab.zip** 文件。
+> 我们使用 App Studio 编辑你的manifest.js **文件**，将已完成的程序包上传到Teams。 如果需要，还可以手动编辑 **manifest.js** 上的文件。 如果这样做，请务必再次构建解决方案，以创建要 **tab.zip** 文件。
 
-- 打开 Microsoft 团队客户端。 如果您使用的是 [基于 web 的版本](https://teams.microsoft.com) ，则可以使用浏览器的 [开发人员工具](~/tabs/how-to/developer-tools.md)检查您的前端代码。
+- 打开 Microsoft Teams 客户端。 如果使用基于 [Web 的版本，](https://teams.microsoft.com) 可以使用浏览器的开发人员工具检查前端 [代码](~/tabs/how-to/developer-tools.md)。
 
-- 打开应用程序 studio 并选择 " **清单编辑器** " 选项卡。
+- 打开 App Studio 并选择清单 **编辑器** 选项卡。
 
-- 选择 "在清单编辑器中 **导入现有的应用程序** 磁贴" 以开始更新选项卡的应用程序包。源代码附带其自己完整的清单。 您的应用程序包的名称为 **tab.zip**。 应在此处找到：
+- 选择清单 **编辑器中的** "导入现有应用"磁贴，开始为选项卡更新应用包。源代码附带其自己的部分完整清单。 应用包的名称 **tab.zip。** 应在此处找到它：
 
 ```bash
 /bin/Debug/netcoreapp2.2/tab.zip
 ```
 
-- 将 **tab.zip** 上载到应用程序 Studio。
+- Uploadtab.zipApp  Studio。
 
-### <a name="update-your-app-package-with-manifest-editor"></a>使用清单编辑器更新应用程序包
+### <a name="update-your-app-package-with-manifest-editor"></a>使用清单编辑器更新应用包
 
-将应用程序包上载到应用程序 Studio 后，需要完成对其进行配置。
+将应用包上传到 App Studio 后，你将需要完成它的配置。
 
-- 在清单编辑器的 "欢迎" 页的右面板中，为新导入的选项卡选择磁贴。
+- 在清单编辑器欢迎页面的右侧面板中选择新导入选项卡的磁贴。
 
-清单编辑器的左侧有一个步骤列表，在右侧是需要为每个步骤的值提供值的属性的列表。 您的 *manifest.js* 提供了很多信息，但有一些字段需要更新：
+清单编辑器左侧有一个步骤列表，右侧是一个属性列表，其中每个步骤都需要有值。 大部分信息已由你的manifest.js *提供* ，但是有一些字段需要更新：
 
-#### <a name="details-app-details"></a>详细信息：应用程序详细信息
+#### <a name="details-app-details"></a>详细信息：应用详细信息
 
-- 在 " *标识* " 下选择 "**生成**" 以将占位符 id 替换为您的选项卡所需的 GUID。
+- Under *Identification* select ***Generate** _ to replace the placeholder id with the required GUID for your tab.
 
-- 在 "_Developer 信息" 下，使用您的 *ngrok* HTTPS url 更新 "**网站 URL** " 字段。
+- 在_Developer信息*下，使用 *ngrok* HTTPS URL 更新"网站 **URL"** 字段。
 
-- 在 "*应用程序 url* " 下，使用您的 *ngrok* HTTPS Url 更新 **隐私声明** 和 **使用条款** url 字段。 请记住将 */privacy* 和 */tou* 路径包含在 url 的末尾。
+- 在 *"应用程序 URL"***下，** 使用 *ngrok* HTTPS **URL** 更新隐私声明和使用条款 URL 字段。 请记住，在 URL 的末尾包含 */privacy* 和 */tou* 路径。
 
 #### <a name="capabilities-tabs"></a>功能：选项卡
 
-在 " *选项卡* " 部分：
+在" *选项卡"* 部分：
 
-- 在 " *团队" 选项卡* 下选择 " **添加**"。
+- 在"*团队选项卡"下*，选择"**添加"。**
 
-- 在 "团队" 选项卡弹出窗口中，将 *配置 URL* 更新为 `https://<yourngrokurl>/tab` 。
+- 在"团队"选项卡弹出窗口中，将 *"配置 URL"更新* 为 `https://<yourngrokurl>/tab` 。
 
-- 最后，请确保 *可以更新配置？* 将选中 "团队" 和 " *组" 聊天* 框，然后选择 " **保存**"。
+- 最后，确保 *可以更新配置？选中*"团队"和"*群聊*"框，然后选择"保存 **"。**
 
-#### <a name="finish-domains-and-permissions"></a>完成：域和权限
+#### <a name="finish-domains-and-permissions"></a>完成时间：域和权限
 
-在 " *域和权限* " 部分中，" *选项卡* " 字段中的域应包含不带 HTTPS 前缀的 ngrok URL `<yourngrokurl>.ngrok.io/` 。
+在 *"域和权限"* 部分，选项卡字段中的"域"应包含不包含 HTTPS 前缀的 ngrok URL- `<yourngrokurl>.ngrok.io/` 。
 
 #### <a name="test-and-distribute-test-and-distribute"></a>测试和分发：测试和分发
 
 >[!IMPORTANT]
->在右侧的 " **说明** " 字段中，将看到以下警告：
+>在 **右侧** "说明"字段中，你将看到以下警告：
 >
->&#9888; "**validDomains" 数组不能包含隧道站点 ...**"
+>&#9888; "**'validDomains' array cannot contain a tunneling site..."**
 >
->在测试选项卡时可以忽略此警告。
+>在测试选项卡时，可以忽略此警告。
 
-在 " *测试和分发* " 部分：
+在" *测试和分发"部分* ：
 
-- 选择“安装”。
+- 选择“**安装**”。
 
-- 在弹出窗口的 " *添加到团队" 或 "聊天* " 字段中，输入您的团队并选择 " **安装**"。
+- 在弹出窗口的"添加到团队或聊天"字段中，输入你的团队，然后选择"安装 **"。**
 
-- 在下一个弹出窗口中，选择要在其中显示选项卡的团队频道，然后选择 " **设置**"。
+- In the next pop-up window choose the team channel where you would like the tab displayed and select **Set up**.
 
-- 在最终弹出窗口中，选择选项卡页的值 (红色或灰色的图标) 然后选择 " **保存**"。
+- 在最终弹出窗口中，选择选项卡页的值 (红色或灰色图标) 保存 **"。**
 
-若要查看您的选项卡，请导航到安装它的团队，然后从选项卡栏中选择它。 应显示在配置过程中选择的页面。
+若要查看您的选项卡，请导航到安装它的团队，然后从选项卡栏中选择它。 应显示在配置期间选择的页面。

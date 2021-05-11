@@ -13,21 +13,21 @@ ms.locfileid: "52019606"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
-用户通过工作、学校或 Microsoft 帐户（即 Office 365、Outlook 等）登录 Microsoft Teams。 你可以利用这一点，允许单一登录在桌面或移动客户端上授权 Teams 选项卡或任务模块。 如果用户同意使用你的应用，则当他们自动登录时，他们不需要在另一台设备上再次同意。 此外，会预取访问令牌，以改进性能和加载时间。
+用户通过Microsoft Teams、学校或 Microsoft 帐户（Office 365、Outlook等）登录登录。 通过允许单一登录在桌面或移动客户端上授权Teams选项卡或任务模块，可以充分利用这一点。 如果用户同意使用你的应用，则当他们自动登录时，他们不需要在另一台设备上再次同意。 此外，会预取访问令牌，以改进性能和加载时间。
 
 > [!NOTE]
-> **支持 SSO 的 Teams 移动客户端版本**  
+> **Teams SSO 的移动客户端版本**  
 >
-> ✔ Android (1416/1.0.0.2020073101 及更高版本) 
+> ✔Teams Android (1416/1.0.0.2020073101 及更高版本) 
 >
-> ✔ iOS (版本 ：2.0.18 及更高版本)   
+> ✔Teams iOS (_版本_：2.0.18 及更高版本)   
 >
-> 为了获得最佳 Teams 体验，请使用最新版本的 iOS 和 Android。
+> 为了获得最佳体验Teams，请使用最新版本的 iOS 和 Android。
 
 > [!NOTE]
 > **快速入门**  
 >
-> 开始使用选项卡 SSO 的最简单路径是使用 Teams Visual Studio Code。 有关详细信息，请参阅使用 [Teams 工具包的 SSO 和选项卡Visual Studio代码](../../../toolkit/visual-studio-code-tab-sso.md)
+> 开始使用选项卡 SSO 的最简单路径是使用适用于 Teams 的 Visual Studio Code。 有关详细信息，请参阅[SSO with Teams toolkit 和 Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>运行时 SSO 的工作方式
 
@@ -36,35 +36,35 @@ ms.locfileid: "52019606"
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. 在选项卡中，对 进行 JavaScript 调用 `getAuthToken()` 。 这会指示 Teams 获取选项卡应用程序的身份验证令牌。
+1. 在选项卡中，对 进行 JavaScript 调用 `getAuthToken()` 。 这将Teams获取选项卡应用程序的身份验证令牌。
 2. 如果这是当前用户第一次使用你的选项卡应用程序，则当需要同意或处理双重身份验证等逐步身份验证时，会提示你同意。
-3. Teams 从当前用户的 Azure Active Directory (AAD) 请求选项卡应用程序令牌。
-4. AAD 将选项卡应用程序令牌发送到 Teams 应用程序。
-5. Teams 将选项卡应用程序令牌作为调用返回的结果对象的一部分发送到 `getAuthToken()` 选项卡。
+3. Teams从当前用户的 AAD Azure Active Directory (终结点) 选项卡应用程序令牌。
+4. AAD 将选项卡应用程序令牌发送到Teams应用程序。
+5. Teams将选项卡应用程序令牌作为调用返回的结果对象的一部分发送到 `getAuthToken()` 选项卡。
 6. 令牌使用 JavaScript 在选项卡应用程序中进行分析，以提取所需信息，如用户的电子邮件地址。
 
 > [!NOTE]
-> 仅在同意一组有限的用户级 API（即电子邮件、配置文件、offline_access `getAuthToken()` OpenId）时有效。 它不用于进一步 Graph 范围，如 `User.Read` 或 `Mail.Read` 。 有关建议的解决方法，请参阅其他 [Graph 范围](#apps-that-require-additional-graph-scopes)。
+> 仅在同意一组有限的用户级 API（即电子邮件、配置文件、offline_access `getAuthToken()` OpenId）时有效。 它不能用于进一步Graph范围，如 `User.Read` 或 `Mail.Read` 。 有关建议的解决方法，请参阅[其他Graph范围](#apps-that-require-additional-graph-scopes)。
 
 SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modules.md) Web 内容的任务模块。
 
-## <a name="develop-an-sso-microsoft-teams-tab"></a>开发 SSO Microsoft Teams 选项卡
+## <a name="develop-an-sso-microsoft-teams-tab"></a>"开发 SSO Microsoft Teams"选项卡
 
-本部分介绍创建使用 SSO 的 Teams 选项卡所涉及的任务。 这些任务与语言和框架无关。
+本节介绍创建使用 SSO 的 Teams 选项卡所涉及的任务。 这些任务与语言和框架无关。
 
 ### <a name="1-create-your-aad-application"></a>1. 创建 AAD 应用程序
 
 **在 AAD 门户概述 [中注册](https://azure.microsoft.com/features/azure-portal/) 应用程序**
 
 1. 获取[AAD 应用程序 ID。](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)
-2. 指定应用程序对 AAD 终结点和（可选）Graph 所需的权限。
-3. [授予 Teams](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) 桌面、Web 和移动应用程序的权限。
-4. 通过选择"添加范围"按钮对 Teams 进行预授权，在打开的面板中，输入 **access_as_user作为** 范围 **名称**。
+2. 指定应用程序所需的 AAD 终结点和（可选）Graph。
+3. [授予对](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)桌面Teams Web 和移动应用程序的权限。
+4. 通过选择Teams"范围"按钮预授权用户，在打开的面板中，输入"access_as_user"作为 **"范围名称"。**
 
 > [!NOTE]
 > 您必须了解一些重要的限制：
 >
-> * 仅支持用户级别的图形 API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果必须有权访问其他 Graph 范围（如 `User.Read` 或 `Mail.Read` ），请参阅 [建议的解决方法](#apps-that-require-additional-graph-scopes)。
+> * 仅支持用户Graph API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果必须有权访问其他作用域，Graph作用域，请参阅 `User.Read` `Mail.Read` 建议的[解决方法](#apps-that-require-additional-graph-scopes)。
 > * 应用程序的域名与为 AAD 应用程序注册的域名相同，这一点很重要。
 > * 目前不支持每个应用多个域。
 
@@ -77,22 +77,22 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
     2. 选择" **支持的帐户类型"，** 选择"单个租户"或"多租户帐户类型"。 ¹
     * 保留“重定向 URI”为空。
     3. 选择“注册”。
-4. 在概述页上，复制并保存应用程序 (**客户端) ID**。 稍后在更新 Teams 应用程序清单时必须拥有它。
+4. 在概述页上，复制并保存应用程序 (**客户端) ID**。 更新应用程序清单时，稍后必须Teams该清单。
 5. 在“**管理**”下，选择“**公开 API**”。
 6. 选择 **"设置**"链接以生成格式为 的应用程序 ID URI。 `api://{AppID}` 在双正斜杠和 GUID 之间插入完全限定域名，末尾附加一个正斜杠"/"。 整个 ID 的形式必须为 `api://fully-qualified-domain-name.com/{AppID}` 。 1。例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ， 。 完全限定的域名是提供应用时可读的域名。 如果使用的是隧道服务（如 ngrok），则必须在 ngrok 子域发生更改时更新此值。
 7. 选择 **"添加范围"。** 在打开的面板中，输入 **access_as_user** 作为范围 **名称**。
-8. 在"**谁可以同意？"** 框中，输入 **"管理员和用户"。**
+8. 在 **"Who同意？"** 框中，输入 **"管理员和用户"。**
 9. 在框中输入详细信息，以使用适用于作用域的值配置管理员和用户同意 `access_as_user` 提示：
-    * **管理员许可标题：** Teams 可以访问用户的个人资料。
-    * **管理员同意说明**：Teams 可以当前用户调用应用的 Web API。
-    * **用户同意标题**：Teams 可以访问你的个人资料并代表你提出请求。
-    * **用户同意说明：** Teams 可以使用你拥有的相同权限调用此应用的 API。
+    * **管理员同意标题** Teams用户可以访问用户配置文件。
+    * **管理员同意** 说明：Teams当前用户调用应用的 Web API。
+    * **用户同意标题**：Teams可以访问你的个人资料并代表你提出请求。
+    * **用户同意Teams：** 用户可以使用你拥有的相同权限调用此应用的 API。
 10. 确保将“状态”设置为“已启用”。
 11. 选择 **"添加范围** "以保存详细信息。 文本字段下方显示的 **作用域** 名称的域部分必须自动匹配上一步中设置的应用程序 **ID** URI，并 `/access_as_user` 追加到末尾 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` 。
 12. 在 **"授权客户端应用程序** "部分，确定要针对应用程序的 Web 应用程序授权的应用程序。 选择 **"添加客户端应用程序"。** 输入以下每个客户端 ID，然后选择在上一步中创建的授权作用域：
-    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` 适用于 Teams 移动或桌面应用程序。
-    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` 用于 Teams Web 应用程序。
-13. 导航到 **"API 权限"。** 选择 **"添加**  >  **权限""Microsoft Graph**  >  **委派权限"，** 然后从 Graph API 添加以下权限：
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`用于Teams或桌面应用程序。
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`Teams Web 应用程序。
+13. 导航到 **"API 权限"。** 选择 **"添加**  >  **Microsoft Graph** 委派权限"，然后从 API 添加以下  >  Graph权限：
     * 默认情况下启用 User.Read
     * email
     * offline_access
@@ -106,7 +106,7 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
     若要输入重定向 URI：
     * 选择 **"添加平台"。**
     * 选择 **"Web"。**
-    * 输入 **应用的重定向 URI。** 这是一个页面，其中成功的隐式授予流将重定向用户。 这是在步骤 5 中输入的完全限定域名，后跟发送身份验证响应的 API 路由。 如果你正在遵循任何 Teams 示例，则这是 `https://subdomain.example.com/auth-end` 。
+    * 输入 **应用的重定向 URI。** 这是一个页面，其中成功的隐式授予流将重定向用户。 这是在步骤 5 中输入的完全限定域名，后跟发送身份验证响应的 API 路由。 如果您遵循任何示例Teams，则此为 `https://subdomain.example.com/auth-end` 。
 
     通过选中以下框启用隐式授予：✔ ID 令牌✔访问令牌
 
@@ -114,13 +114,13 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 
 > [!NOTE]
 >
-> * ¹ 如果你的 AAD 应用在你要在 Teams 中提出身份验证请求的租户中注册，则不能要求用户同意，并且会获得访问令牌。 只有在 AAD 应用注册到其他租户时，用户才同意这些权限。
-> * 你已经收到一个错误，指出主机名不得基于已拥有域。 若要将自定义域添加到 AAD 并注册它，请按照向 [AAD](/azure/active-directory/fundamentals/add-custom-domain) 添加自定义域名过程操作，然后重复步骤 5。 如果未使用 Office 365 租赁中的管理员凭据登录，也会收到此错误。
+> * ¹ 如果你的 AAD 应用在 Teams 中进行身份验证请求的同一租户中注册，则不能要求用户同意并获取访问令牌。 只有在 AAD 应用注册到其他租户时，用户才同意这些权限。
+> * 你已经收到一个错误，指出主机名不得基于已拥有域。 若要将自定义域添加到 AAD 并注册它，请按照向 [AAD](/azure/active-directory/fundamentals/add-custom-domain) 添加自定义域名过程操作，然后重复步骤 5。 如果未使用租户租户中的管理员凭据登录，Office 365此错误。
 > * 如果未在返回的访问令牌 (UPN) ) 用户主体名称，可以在 AAD 中将其添加为可选声明。 [](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)
 
-### <a name="2-update-your-teams-application-manifest"></a>2. 更新 Teams 应用程序清单
+### <a name="2-update-your-teams-application-manifest"></a>2. 更新Teams应用程序清单
 
-使用以下代码将新属性添加到 Teams 清单：
+使用以下代码将新属性添加到Teams清单：
 
 ```json
 "webApplicationInfo": {
@@ -133,7 +133,7 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 
 > [!div class="checklist"]
 > * **id** - 应用程序的客户端 ID。 这是在向 Azure AD 注册应用程序时获取的应用程序 ID。
->* **resource** - 应用程序的域和子域。 这是相同的 URI (包括你在步骤 `api://` 6) 注册的协议 `scope` 和协议。 不得在资源 `access_as_user` 中包括路径。 此 URI 的域部分必须与 Teams 应用程序清单的 URL 中使用的域（包括任何子域）匹配。
+>* **resource** - 应用程序的域和子域。 这是相同的 URI (包括你在步骤 `api://` 6) 注册的协议 `scope` 和协议。 不得在资源 `access_as_user` 中包括路径。 此 URI 的域部分必须与在应用程序清单的 URL 中使用的域（包括任何子Teams匹配。
 
 > [!NOTE]
 >
@@ -162,15 +162,15 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ## <a name="code-sample"></a>代码示例
 
-|**示例名称**|**描述**|**C#**|**Node.js**|
+|**示例名称**|**说明**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| 选项卡 SSO |适用于选项卡 Azure AD SSO 的 Microsoft Teams 示例应用| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[查看](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| 选项卡 SSO |Microsoft Teams Azure AD SSO 的选项卡示例应用| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[查看](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>已知限制
 
-### <a name="apps-that-require-additional-graph-scopes"></a>需要其他 Graph 作用域的应用
+### <a name="apps-that-require-additional-graph-scopes"></a>需要其他作用域Graph应用
 
-我们的 SSO 当前实现仅授予用户级别权限（即电子邮件、配置文件、offline_access、OpenId）的许可，而不允许授予其他 API（如 User.Read 或 Mail.Read）的许可。 如果你的应用需要进一步 Graph 范围，下一部分将提供一些启用的解决方法。
+我们的 SSO 当前实现仅授予用户级别权限（即电子邮件、配置文件、offline_access、OpenId）的许可，而不允许授予其他 API（如 User.Read 或 Mail.Read）的许可。 如果你的应用需要进一步Graph范围，下一部分将提供一些启用的解决方法。
 
 #### <a name="tenant-admin-consent"></a>租户管理员同意
 
@@ -180,11 +180,11 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 #### <a name="ask-for-additional-consent-using-the-auth-api"></a>使用身份验证 API 请求其他同意
 
-获取其他 Graph 作用域的另一个方法是使用我们现有的基于 Web 的 [Azure AD](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) 身份验证方法显示同意对话框，该方法涉及弹出 Azure AD 同意对话框。 
+获取其他Graph范围的另一个方法是使用我们现有的基于 Web 的[Azure AD](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)身份验证方法显示同意对话框，该方法涉及弹出 Azure AD 同意对话框。 
 
 **使用身份验证 API 请求其他同意**
 
-1. 使用 检索到的令牌需要使用 AAD 代表流在服务器端进行交换，才能访问 `getAuthToken()` 这些额外的 Graph [](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) API。 确保对此交换使用 v2 Graph 终结点。
+1. 使用 检索到的令牌需要使用 AAD 代表流在服务器端进行交换，才能访问这些附加 Graph `getAuthToken()` API。 [](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) 确保对此 exchange 使用 v2 Graph终结点。
 2. 如果交换失败，AAD 将返回无效的授予异常。 通常有两条错误消息中的一条或 `invalid_grant` `interaction_required` 。
 3. 当交换失败时，必须请求其他同意。 在 UI (显示) 要求用户授予其他同意。 此 UI 必须包含使用 AAD 身份验证 API 触发 [AAD 同意对话框的按钮](~/concepts/authentication/auth-silent-aad.md)。
 4. 请求 AAD 的其他同意时，必须在 `prompt=consent` 查询 [字符串参数](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) 中包括 AAD，否则 AAD 不要求其他范围。

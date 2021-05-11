@@ -1,5 +1,5 @@
 ---
-title: 删除 Microsoft Teams 中的选项卡边距
+title: 删除选项卡页边距Microsoft Teams
 author: laujan
 description: 介绍删除制表位将如何增强开发人员的体验。
 keywords: 删除边距填充的选项卡
@@ -15,8 +15,8 @@ ms.locfileid: "52019711"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
-本文档介绍在 Microsoft Teams 中删除所有选项卡的边距将如何增强开发人员在生成应用时的体验。 这是 Microsoft Teams 在 2021 年引入的增强功能。
-删除所有选项卡周围的边距将允许开发人员生成看起来更原生于 Teams 的应用。 这也符合我们的 UI [工具包设计](~/tabs/design/tabs.md)。 大多数应用已看起来更好，没有围绕其体验的边距。 但是，某些选项卡会受此更改的视觉影响，开发人员必须进行必要的更改。
+本文档介绍删除文档中所有选项卡的边距Microsoft Teams如何在生成应用时增强开发人员的体验。 这是 2021 年 Microsoft Teams中引入的增强功能。
+删除所有选项卡周围的边距将允许开发人员生成看起来更本机的Teams。 这也符合我们的 UI [工具包设计](~/tabs/design/tabs.md)。 大多数应用已看起来更好，没有围绕其体验的边距。 但是，某些选项卡会受此更改的视觉影响，开发人员必须进行必要的更改。
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="选项卡上没有边距" border="false":::
 
@@ -30,9 +30,9 @@ ms.locfileid: "52019711"
 
 ## <a name="guidelines"></a>准则
 
-此更改将影响使用选项卡的 Microsoft Teams 应用。 开发人员必须切换到 [公共开发者预览版，](~/resources/dev-preview/developer-preview-intro.md) 以确定其选项卡会受到哪些影响，并进行必要的更改。
+Microsoft Teams选项卡的应用将受此更改的影响。 开发人员必须切换到 [公共开发者预览版，](~/resources/dev-preview/developer-preview-intro.md) 以确定其选项卡会受到哪些影响，并进行必要的更改。
 
-选项卡开发人员不得依赖 Teams 提供其选项卡周围的边距。 建议开发人员根据需要在选项卡设计周围添加边距。 生产中的应用设计可能看起来有额外的填充，即 Teams 提供的边距和选项卡提供的边距。但是，额外的填充只是临时的，将在几周后消失，仅留下应用提供的填充。
+选项卡开发人员不得依赖Teams选项卡周围的边距。 建议开发人员根据需要在选项卡设计周围添加边距。 生产中的应用设计可能看起来有额外的填充，即由Teams提供的边距和选项卡提供的边距。但是，额外的填充只是临时的，将在几周后消失，仅留下应用提供的填充。
 
 ## <a name="faq"></a>常见问题
 
@@ -44,7 +44,7 @@ ms.locfileid: "52019711"
 
 否，你必须在所有应用内容的左侧和右侧提供自己的填充或边距，以确保它不会触摸 UI 的边缘。 如果需要，还可以在选项卡顶部添加边距。
 
-**Teams 之前应用的边距大小如何？**
+**之前应用的边距Teams的大小？**
 
 * 左右：20px
 * 顶部：16px
@@ -53,4 +53,4 @@ ms.locfileid: "52019711"
 > [!IMPORTANT]
 > * 删除所有选项卡的边距：个人选项卡、 (组) 聊天选项卡、会议选项卡和频道选项卡。
 > * 无法选择加入或选择退出此更改。 它将应用于所有选项卡。
-> * 此更改可能会影响依赖 Microsoft Teams 提供其 UI 周围的边距的选项卡。
+> * 此更改可能会影响依赖其 UI Microsoft Teams提供边距的选项卡。

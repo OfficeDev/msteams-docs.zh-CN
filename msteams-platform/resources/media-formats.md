@@ -1,6 +1,6 @@
 ---
 title: 支持用于机器人的媒体格式
-description: Microsoft Teams 上的机器人仅支持音频和视频内容的以下媒体格式。
+description: Microsoft Teams上的自动程序仅支持音频和视频内容的以下媒体格式。
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 机器人媒体格式
@@ -13,9 +13,9 @@ ms.locfileid: "52020609"
 ---
 # <a name="supported-media-formats-for-bots"></a>支持用于机器人的媒体格式
 
-Microsoft Teams 上的机器人仅支持音频和视频内容的以下媒体格式：
+Microsoft Teams上的自动程序仅支持音频和视频内容的以下媒体格式：
 
-| 格式 | 更多信息 |
+| Format | 更多信息 |
 | --- | --- |
 | Vorbis | http://www.vorbis.com/ |
 | PCM_U8、PCM_S16LE、PCM_S32LE、PCM_F32LE、PCM_S16BE、PCM_S24BE、PCM_MULAW | https://wiki.multimedia.cx/?title=PCM |
@@ -31,4 +31,4 @@ Microsoft Teams 上的机器人仅支持音频和视频内容的以下媒体格�
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [对用于提取团队或聊天成员的 Teams 自动程序 API 的更改](~/resources/team-chat-member-api-changes.md)
+> [对用于Teams团队或聊天成员的聊天机器人 API 所做的更改](~/resources/team-chat-member-api-changes.md)

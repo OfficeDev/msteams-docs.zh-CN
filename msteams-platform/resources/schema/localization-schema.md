@@ -1,6 +1,6 @@
 ---
 title: 本地化文件 JSON 架构参考
-description: 介绍 Microsoft Teams 本地化文件支持的本地化架构
+description: 介绍本地化文件支持的本地化架构Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 清单架构本地化
@@ -14,7 +14,7 @@ ms.locfileid: "52019704"
 ---
 # <a name="reference-localization-file-json-schema"></a>参考：本地化文件 JSON 架构
 
-Microsoft Teams 本地化文件介绍了将基于客户端语言设置提供的语言翻译。 你的文件必须符合 托管在 的架构 [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) 。 有关其他信息，请参阅 [应用本地化](~/concepts/build-and-test/apps-localization.md)。
+本地化Microsoft Teams文件介绍了将基于客户端语言设置提供的语言翻译。 你的文件必须符合 托管在 的架构 [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) 。 有关其他信息，请参阅 [应用本地化](~/concepts/build-and-test/apps-localization.md)。
 
 ## <a name="sample"></a>示例
 
@@ -42,7 +42,7 @@ Microsoft Teams 本地化文件介绍了将基于客户端语言设置提供的�
 引用 https:// JSON 架构的 URL。
 
 > [!TIP]
-> 在清单的开头指定架构，以IntelliSense代码编辑器提供类似支持： `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> 在清单的开头指定架构，以IntelliSense代码编辑器提供类似支持：`"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="nameshort"></a>name.short
 
