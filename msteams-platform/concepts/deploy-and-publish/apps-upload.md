@@ -25,7 +25,7 @@ ms.locfileid: "52101567"
 * [在应用中启用自定义](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)Teams。
 * 确保你的应用正在运行，并且可通过 HTTPs 访问。
 
-## <a name="upload-your-app"></a>Upload应用
+## <a name="upload-your-app"></a>上传应用
 
 你可以将应用旁加载至团队、聊天、会议或个人使用，具体取决于你配置应用的范围。
 

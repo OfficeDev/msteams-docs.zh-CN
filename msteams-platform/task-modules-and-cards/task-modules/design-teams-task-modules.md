@@ -80,7 +80,7 @@ ms.locfileid: "52101728"
 
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="任务模块中的登录体验示例。" border="false":::
 
-### <a name="media"></a>Media
+### <a name="media"></a>媒体
 
 在任务模块中嵌入媒体内容，实现集中的观看体验。
 

@@ -83,7 +83,7 @@ Microsoft 提供的验证服务可帮助开发人员将应用发布到应用商�
 
 <summary><b>我的应用已进行 beta 测试。我能否提交我的应用以节省发布过程的时间？</b></summary>
 
-否。 Microsoft 仅验证生产就绪型应用。
+错误。 Microsoft 仅验证生产就绪型应用。
 
 <br>
 
@@ -93,7 +93,7 @@ Microsoft 提供的验证服务可帮助开发人员将应用发布到应用商�
 
 <summary><b>在合作伙伴中心 teamsubm@microsoft.com 提交我的应用之前，我可能需要联系客户吗？</b></summary>
 
-否。 在合作伙伴中心首次提交应用之前，Microsoft 不会开始验证你的应用。
+错误。 在合作伙伴中心首次提交应用之前，Microsoft 不会开始验证你的应用。
 
 <br>
 

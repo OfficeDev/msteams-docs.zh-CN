@@ -1,6 +1,6 @@
 ---
 title: 智能机器人对话中的邮件
-description: 介绍与 Microsoft Teams 机器人对话的方法
+description: 介绍与自动程序Microsoft Teams的方法
 ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
@@ -14,15 +14,15 @@ ms.locfileid: "52058598"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
-对话中每条消息都是一 `Activity` 个类型 为 的对象 `messageType: message` 。 当用户发送消息时，Teams 会向自动程序发布消息。 Teams 将 JSON 对象发送到机器人的消息终结点。 自动程序将检查消息以确定其类型并相应地做出响应。
+对话中每条消息都是一 `Activity` 个类型 为 的对象 `messageType: message` 。 当用户发送消息时，Teams将邮件发送到自动程序。 Teams JSON 对象发送到机器人的消息终结点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与 Teams 和其他频道进行通信。 Bot Builder SDK 提供以下功能：
+基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与Teams通信。 Bot Builder SDK 提供以下功能：
 
 * 轻松访问 Bot Framework 连接器。
 * 用于管理对话流和状态的其他功能。
 * 合并认知服务的简单方法，如自然语言处理 (NLP) 。
 
-自动程序使用 属性接收来自 Teams 的消息， `Text` 并且它会向用户发送一个或多个消息响应。
+自动程序使用 Teams 接收来自用户的邮件，并且它会向用户发送一 `Text` 个或多个邮件响应。
 
 ## <a name="receive-a-message"></a>接收消息
 
@@ -203,20 +203,20 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动由 Microsoft Teams 拆分为单独的活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。 建议发送单独的活动，而不是根据邮件拆分。
+> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动按以下两Microsoft Teams拆分为单独的活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。 建议发送单独的活动，而不是根据邮件拆分。
 
 在用户和机器人之间发送的消息包含邮件中的内部通道数据。 此数据允许机器人在此频道上正常通信。 Bot Builder SDK 允许你修改消息结构。
 
-## <a name="teams-channel-data"></a>Teams 频道数据
+## <a name="teams-channel-data"></a>Teams频道数据
 
-对象 `channelData` 包含特定于 Teams 的信息，是团队和频道 ID 的权威性来源。 （可选）你可以缓存这些 ID 并用作本地存储的密钥。 `TeamsActivityHandler`SDK 中的 从 对象提取重要信息 `channelData` ，使其易于访问。 但是，您始终可以从对象访问 `turnContext` 原始数据。
+`channelData`对象包含Teams特定的信息，是团队和频道的一个明确来源。 （可选）你可以缓存这些 ID 并用作本地存储的密钥。 `TeamsActivityHandler`SDK 中的 从 对象提取重要信息 `channelData` ，使其易于访问。 但是，您始终可以从对象访问 `turnContext` 原始数据。
 
 `channelData`对象不包含在个人对话中的邮件中，因为邮件在频道外发生。
 
 发送给 `channelData` 自动程序的活动中的典型对象包含以下信息：
 
-* `eventType`：仅在频道修改事件的情况下传递的 Teams [事件类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
-* `tenant.id`：在所有上下文中传递的 Azure Active Directory 租户 ID。
+* `eventType`：Teams仅在通道修改事件的情况下传递[的事件类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
+* `tenant.id`：Azure Active Directory上下文中传递的租户 ID。
 * `team`：仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id`：通道的 GUID。
   * `name`：仅在团队重命名事件的情况下传递 [的团队名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
@@ -250,18 +250,18 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>邮件内容
 
-| 格式    | 从用户到机器人 | 从自动程序到用户 | 注意                                                                                   |
+| Format    | 从用户到机器人 | 从自动程序到用户 | 注释                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
 | 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。 不支持动态 GIF。  |
-| 卡     | ✖                | ✔                | 有关受支持的 [卡片，](~/task-modules-and-cards/cards/cards-reference.md) 请参阅 Teams 卡参考。 |
-| 表情符号    | ✖                | ✔                | Teams 当前支持通过 UTF-16 使用表情符号，例如 U+1F600，用于表情符号。 |
+| 卡     | ✖                | ✔                | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
+| 表情符号    | ✖                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 用于表情符号。 |
 
 您还可以使用 属性向邮件添加 `Notification.Alert` 通知。
 
 ## <a name="notifications-to-your-message"></a>邮件通知
 
-通知会提醒用户有关新任务、提及和评论。 这些警报与用户正在处理或必须通过向活动源中插入通知来查看内容相关。 对于从自动程序消息触发的通知，将 `TeamsChannelData` objects `Notification.Alert` 属性设置为 *true*。 是否引发通知取决于单个用户的 Teams 设置，你无法替代这些设置。 通知类型可以是横幅，也可以同时为横幅和电子邮件。
+通知会提醒用户有关新任务、提及和评论。 这些警报与用户正在处理或必须通过向活动源中插入通知来查看内容相关。 对于从自动程序消息触发的通知，将 `TeamsChannelData` objects `Notification.Alert` 属性设置为 *true*。 是否引发通知取决于单个用户Teams设置，你无法替代这些设置。 通知类型可以是横幅，也可以同时为横幅和电子邮件。
 
 > [!NOTE]
 > " **摘要"** 字段将来自用户的任何文本显示为源中的通知消息。
@@ -356,7 +356,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="adaptive-cards"></a>自适应卡
 
-自适应卡片可以在机器人中创作，并可在多个应用（如 Teams、网站等）中显示。 有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+自适应卡片可以在机器人中创作，并可在多个应用（如Teams网站等）中显示。 有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 
 以下代码显示发送简单自适应卡片的示例：
 

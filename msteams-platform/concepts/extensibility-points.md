@@ -14,14 +14,14 @@ ms.locfileid: "52058318"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams 应用的入口点
 
-Teams 平台提供了一组灵活的入口点，例如团队、频道和聊天，用户可以在这里发现和使用你的应用。 应用程序非常简单，只需在选项卡或多维应用中嵌入现有 Web 内容，用户跨多个上下文进行交互。
-成功应用是 Teams 的原生应用，因此请谨慎选择应用的入口点。
+the Teams platform provides a flexible set of entry points， such as team， channel， and chat where people can discover and use your app. 应用程序非常简单，只需在选项卡或多维应用中嵌入现有 Web 内容，用户跨多个上下文进行交互。
+成功应用是本机应用的Teams，因此请谨慎选择应用的入口点。
 
 ## <a name="shared-app-experiences"></a>共享的应用体验
 
 团队、频道和聊天是协作空间。 这些上下文中的应用程序可供该空间中的每个人使用。 协作空间通常侧重于其他工作流或解锁新的社交交互。
 
-以下列表显示了 Teams 应用功能在协作上下文中的常见使用方式：
+下表显示了如何在Teams上下文中使用应用程序功能：
 
 * [**选项卡**](~/tabs/what-are-tabs.md)为团队、频道或群组聊天配置全屏嵌入的 Web 体验。 所有成员与基于 Web 的相同内容进行交互，因此无状态单页应用体验很典型。
 
@@ -39,7 +39,7 @@ Teams 平台提供了一组灵活的入口点，例如团队、频道和聊天�
 
 [个人应用](../concepts/design/personal-apps.md) 专注于与单个用户的交互。 此上下文中的体验是每位用户所特有的。
 
-以下列表显示了 Teams 功能在个人上下文中的常见使用方式：
+以下列表显示了Teams个人上下文中如何使用这些功能：
 
 * [**自动**](~/bots/what-are-bots.md)用户进行一对一对话。 需要多次对话或提供仅与特定用户相关的通知的自动程序最适合个人应用。
 
@@ -47,7 +47,7 @@ Teams 平台提供了一组灵活的入口点，例如团队、频道和聊天�
 
 ## <a name="see-also"></a>另请参阅
 
-- [Teams 应用设计指南](../concepts/design/design-teams-app-overview.md)
+- [Teams应用设计指南](../concepts/design/design-teams-app-overview.md)
 
 ## <a name="next-step"></a>后续步骤
 

@@ -18,7 +18,7 @@ ms.locfileid: "52020644"
 
 可以设置可选 [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) 属性来控制邮件文本内容的呈现方式。
 
-Microsoft Teams 支持以下格式选项：
+Microsoft Teams支持以下格式选项：
 
 | TextFormat 值 | 说明 |
 | --- | --- |
@@ -28,7 +28,7 @@ Microsoft Teams 支持以下格式选项：
 
 ## <a name="formatting-text-content"></a>设置文本内容的格式
 
-Microsoft Teams 支持 Markdown 和 XML 代码的一 (HTML) 格式标记。
+Microsoft Teams一部分 Markdown 和 XML (HTML) 格式标记。
 
 目前，存在以下限制：
 
@@ -38,7 +38,7 @@ Microsoft Teams 支持 Markdown 和 XML 代码的一 (HTML) 格式标记。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
-若要确保你的格式可以在 Microsoft Teams 支持的所有平台上运行，请注意某些样式当前并非在所有平台上都受支持。
+为了确保格式设置在所有受 Microsoft Teams支持的平台中运行，请注意某些样式当前并非在所有平台上都受支持。
 
 | 样式                     | 纯文本邮件 | 富卡 (XML)  |
 | ---                       | :---: | :---: |

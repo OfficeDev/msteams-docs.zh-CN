@@ -1,5 +1,5 @@
 ---
-title: 特定于用户的视图
+title: 用户特定视图
 description: 使用通用操作的用户特定视图示例
 author: surbhigupta12
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/29/2021
 ms.locfileid: "52088820"
 ---
-# <a name="user-specific-views"></a>特定于用户的视图
+# <a name="user-specific-views"></a>用户特定视图
 
 之前，如果自适应卡片是在Teams对话中发送的，则所有用户都可以看到完全相同的卡片内容。 随着通用操作模型和自适应卡片的引入，机器人开发人员现在可以为用户提供自适应卡片的用户 `refresh` 特定视图。 现在，相同的自适应卡片可以刷新到用户特定自适应卡片。
 
 例如，Contoso 的安全检查员 Megan 想要创建事件并将其分配给 Alex。 她还希望团队中的每个人都了解事件。 Megan 使用 Contoso 事件报告邮件扩展，该扩展由自适应卡片的通用操作支持。
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="特定于用户的视图":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="用户特定视图":::
 
 ## <a name="user-specific-views-for-adaptive-cards"></a>自适应卡片的用户特定视图
 
@@ -192,5 +192,5 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## <a name="see-also"></a>另请参阅
 
-* [使用自适应卡片的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
+* [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
 * [最新视图](Up-To-Date-Views.md)

@@ -114,7 +114,7 @@ ms.locfileid: "52020714"
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. 选择 **保存**。
+1. 选择“**保存**”。
 1. 若要添加更多参数，请选择" **参数"部分** 中的" **添加"** 按钮。
 
 ### <a name="create-an-action-command-manually"></a>手动创建操作命令

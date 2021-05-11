@@ -10,7 +10,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/29/2021
 ms.locfileid: "52088857"
 ---
-# <a name="universal-actions-for-adaptive-cards"></a>自适应卡片的通用操作
+# <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
 自适应卡片的通用操作从开发人员反馈中发展，尽管自适应卡片的布局和呈现是通用的，但操作处理不是。 即使开发人员希望将同一张卡片发送到不同位置，他们必须处理不同的操作。
 
@@ -26,7 +26,7 @@ ms.locfileid: "52088857"
 自适应卡片的通用操作通过启用以下方案来增强用户体验：
 
 * [通用操作](#universal-actions)
-* [特定于用户的视图](#user-specific-views)
+* [用户特定视图](#user-specific-views)
 * [顺序工作流支持](#sequential-workflow-support)
 * [最新视图](#up-to-date-views)
 
@@ -53,7 +53,7 @@ ms.locfileid: "52088857"
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="与 Teams 和 Outlook":::
 
-### <a name="user-specific-views"></a>特定于用户的视图
+### <a name="user-specific-views"></a>用户特定视图
 
 现在，聊天Teams频道中的每个用户都会在自适应卡片上看到完全相同的视图和按钮操作。 但是，在某些情况下，要求某些用户采取不同的行动，并有权访问同一聊天或频道中的不同信息。
 
@@ -61,7 +61,7 @@ ms.locfileid: "52088857"
 
 下图显示了一个票证消息传递扩展 (ME) ，其中聊天中的不同用户根据要求显示了不同的操作：
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="特定于用户的视图":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="用户特定视图":::
 
 有关详细信息，请参阅用户 [特定视图的示例](User-Specific-Views.md)。
 
@@ -105,4 +105,4 @@ ms.locfileid: "52088857"
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [使用自适应卡片的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
+> [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)

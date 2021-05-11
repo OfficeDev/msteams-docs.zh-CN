@@ -16,7 +16,7 @@ ms.locfileid: "52075750"
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-若要在团队或群聊中安装 Microsoft Teams 机器人，请向 `teams` 自动程序添加 或 `groupchat` 作用域。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
+若要在团队Microsoft Teams聊天中安装聊天机器人，请向 `teams` 自动程序添加 或 `groupchat` 范围。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
 
 组或频道中的机器人仅在被提及时接收消息 `@botname` 。 他们不会收到发送到对话的其他任何消息。
 
@@ -25,7 +25,7 @@ ms.locfileid: "52075750"
 
 ## <a name="design-guidelines"></a>设计准则
 
-与个人聊天不同，在群聊和频道中，机器人必须提供快速简介。 必须遵循这些以及更多自动程序设计指南。 若要详细了解如何在 Teams 中设计机器人，请参阅如何在频道和聊天中设计 [机器人对话](~/bots/design/bots.md)。
+与个人聊天不同，在群聊和频道中，机器人必须提供快速简介。 必须遵循这些以及更多自动程序设计指南。 若要详细了解如何在聊天中设计聊天机器人Teams，请参阅如何在频道和聊天中设计[机器人对话](~/bots/design/bots.md)。
 
 现在，你可以创建新的对话线程并轻松管理频道中的不同对话。
 
@@ -270,7 +270,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="see-also"></a>另请参阅
 
-[获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
+[获取Teams上下文](~/bots/how-to/get-teams-context.md)
 
 ## <a name="next-step"></a>后续步骤
 

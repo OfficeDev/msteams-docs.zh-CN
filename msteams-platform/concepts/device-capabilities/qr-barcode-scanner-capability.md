@@ -1,7 +1,7 @@
 ---
 title: 集成 QR 或条码扫描仪功能
 author: Rajeshwari-v
-description: 如何使用 Teams JavaScript 客户端 SDK 利用 QR 或条形码扫描仪功能
+description: 如何使用 JavaScript Teams SDK 利用 QR 或条形码扫描仪功能
 keywords: 相机媒体 qr 代码 qrcode 条形码条形码扫描仪扫描功能本机设备权限
 localization_priority: Normal
 ms.topic: conceptual
@@ -17,26 +17,26 @@ ms.locfileid: "52058339"
 
 本文档指导您如何集成 QR 或条形码扫描仪功能。 
 
-条形码是一种以可视和机器可读的形式表示数据的方法。 条码包含有关产品的信息，如条形图和空格形式的类型、大小、制造商和来源国家/地区。 该代码使用本机设备相机上的光学扫描仪进行读取。 为了获得更丰富的协作体验，可以将 Teams 平台中提供的 QR 或条形码扫描仪功能与 Teams 应用集成。   
+条形码是一种以可视和机器可读的形式表示数据的方法。 条码包含有关产品的信息，如条形图和空格形式的类型、大小、制造商和来源国家/地区。 该代码使用本机设备相机上的光学扫描仪进行读取。 为了获得更丰富的协作体验，你可以将 Teams 平台中提供的 QR 或条形码扫描仪功能与Teams集成。   
 
-可以使用 [Microsoft Teams JavaScript 客户端 SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户本机设备功能 [所需的工具](native-device-permissions.md)。 使用 `scanBarCode` API 将扫描程序功能集成到你的应用中。 
+可以使用[JavaScript Microsoft Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户的本机设备功能[所需的工具](native-device-permissions.md)。 使用 `scanBarCode` API 将扫描程序功能集成到你的应用中。 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>集成 QR 或条形码扫描仪功能的优势
 
 以下是 QR 或条形码扫描仪功能集成的优势： 
 
-* 集成允许 Teams 平台上的 Web 应用开发人员通过 Teams JavaScript 客户端 SDK 利用 QR 或条形码扫描功能。
+* 集成使 Web 应用开发者Teams JavaScript 客户端 SDK 利用 QR 或条形码Teams功能。
 * 使用此功能，用户只需在扫描仪 UI 中心的框架内对齐 QR 或条形码，代码将自动扫描。 存储的数据将重新与调用 Web 应用共享。 这样可以避免手动输入冗长的产品代码或其他相关信息带来的不便和人为错误。
 
 若要集成 QR 或条形码扫描仪功能，必须更新应用清单文件并调用 `scanBarCode` API。 为了进行有效的集成，你必须深入了解用于调用 API[](#code-snippet)的代码段，这允许你使用本机 `scanBarCode` QR 或条形码扫描仪功能。 API 为不支持的条形码标准提供错误。
-熟悉 API 响应错误以处理[](#error-handling)Teams 应用中的错误非常重要。
+熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
 
 > [!NOTE] 
-> 目前，Microsoft Teams 对 QR 或条形码扫描仪功能的支持仅适用于移动客户端。
+> 目前，Microsoft Teams QR 或条形码扫描仪功能的支持仅适用于移动客户端。
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 [manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) 并指定 ，更新你的 Teams 应用在文件 `devicePermissions` 上的应用 `media` 。 它允许你的应用在用户开始使用 QR 或条形码扫描仪功能之前向用户请求必要的权限。
+通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `media` 。 它允许你的应用在用户开始使用 QR 或条形码扫描仪功能之前向用户请求必要的权限。
 
 ``` json
 "devicePermissions": [
@@ -45,7 +45,7 @@ ms.locfileid: "52058339"
 ```
 
 > [!NOTE]
-> 启动 **相关的** Teams API 时，将自动显示"请求权限"提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。
+> 启动 **相关应用程序** API 时，将自动显示Teams权限提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。
 
 ## <a name="scanbarcode-api"></a>ScanBarCode API
 
@@ -75,7 +75,7 @@ API 调用允许用户扫描不同类型的条形码的扫描仪控件， `ScanB
 
 ## <a name="error-handling"></a>错误处理
 
-必须确保在 Teams 应用中正确处理这些错误。 下表列出了错误代码以及生成错误的条件： 
+必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
 |错误代码 |  错误名称     | Condition|
 | --------- | --------------- | -------- |
@@ -110,6 +110,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>另请参阅
 
-- [在 Teams 中集成媒体功能](mobile-camera-image-permissions.md)
+- [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
 
-- [在 Teams 中集成位置功能](location-capability.md)
+- [在 Teams 中集成位置Teams](location-capability.md)

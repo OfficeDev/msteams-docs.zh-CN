@@ -1,6 +1,6 @@
 ---
 title: 处理机器人事件
-description: 介绍如何处理 Microsoft Teams 机器人中的事件
+description: 介绍如何处理自动程序 for Microsoft Teams
 keywords: teams 机器人事件
 ms.date: 05/20/2019
 ms.topic: how-to
@@ -14,11 +14,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020637"
 ---
-# <a name="handle-bot-events-in-microsoft-teams"></a>在 Microsoft Teams 中处理机器人事件
+# <a name="handle-bot-events-in-microsoft-teams"></a>处理聊天机器人Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams 会向自动程序发送有关自动程序处于活动状态的范围中发生的更改或事件的通知。 可以使用这些事件触发服务逻辑，如下所示：
+Microsoft Teams自动程序在活动范围内发生的更改或事件，向自动程序发送通知。 可以使用这些事件触发服务逻辑，如下所示：
 
 * 将机器人添加到团队时触发欢迎消息
 * 将机器人添加到群聊时查询和缓存组信息
@@ -28,7 +28,7 @@ Microsoft Teams 会向自动程序发送有关自动程序处于活动状态的�
 
 每个自动程序事件都作为 `Activity` 对象发送，其中 `messageType` 定义了对象中的信息。 对于类型为 的邮件 `message` ，请参阅 [发送和接收邮件](~/resources/bot-v3/bot-conversations/bots-conversations.md)。
 
-Teams 和组事件通常从类型触发，它们具有作为对象的一部分传递的其他 Teams 事件信息，因此事件处理程序必须查询 Teams 的有效负载和其他特定于事件的 `conversationUpdate` `channelData` `channelData` `eventType` 元数据。
+Teams和组事件（通常从类型触发）具有作为对象一部分传递的其他 Teams 事件信息，因此事件处理程序必须查询 Teams 的有效负载和其他特定于事件的元数据。 `conversationUpdate` `channelData` `channelData` `eventType`
 
 下表列出了机器人可以接收并采取措施的事件。
 
@@ -49,7 +49,7 @@ Teams 和组事件通常从类型触发，它们具有作为对象的一部分�
 
 ### <a name="bot-or-user-added-to-a-team"></a>添加到团队的机器人或用户
 
-将机器人添加到团队或将新用户添加到已添加机器人的团队时，将发送有效负载中对象 `conversationUpdate` `membersAdded` 的事件。 Microsoft Teams 还会 `eventType.teamMemberAdded` 在 对象中 `channelData` 添加 。
+将机器人添加到团队或将新用户添加到已添加机器人的团队时，将发送有效负载中对象 `conversationUpdate` `membersAdded` 的事件。 Microsoft Teams还添加到 `eventType.teamMemberAdded` `channelData` 对象中。
 
 因为在这两种情况下都发送此事件，所以应分析对象以确定添加项是 `membersAdded` 用户还是自动程序本身。 对于后者，最佳做法是向频道发送欢迎消息，[](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams)以便用户可以了解机器人提供的功能。
 
@@ -228,7 +228,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="team-member-or-bot-removed"></a>已删除团队成员或机器人
 
-从团队中删除机器人或将用户从添加自动程序的团队中删除时，将发送有效负载中对象 `conversationUpdate` `membersRemoved` 的事件。 Microsoft Teams 还会 `eventType.teamMemberRemoved` 在 对象中 `channelData` 添加 。 与 对象一样，应分析机器人的应用 ID 对象 `membersAdded` `membersRemoved` 以确定已删除用户。
+从团队中删除机器人或将用户从添加自动程序的团队中删除时，将发送有效负载中对象 `conversationUpdate` `membersRemoved` 的事件。 Microsoft Teams还添加到 `eventType.teamMemberRemoved` `channelData` 对象中。 与 对象一样，应分析机器人的应用 ID 对象 `membersAdded` `membersRemoved` 以确定已删除用户。
 
 ### <a name="schema-example-team-member-removed"></a>架构示例：已删除团队成员
 
@@ -362,7 +362,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="channel-updates"></a>频道更新
 
-在已添加频道的团队中创建、重命名或删除频道时，将会通知机器人。 同样，会接收事件，并且特定于 Teams 的事件标识符作为对象的一部分发送，其中通道数据的 是频道 `conversationUpdate` `channelData.eventType` 的 GUID，并且包含通道  `channel.id` `channel.name` 名称本身。
+在已添加频道的团队中创建、重命名或删除频道时，将会通知机器人。 同样，将接收事件，并且Teams特定事件标识符作为对象的一部分发送，其中通道数据的 是通道 `conversationUpdate` `channelData.eventType` 的 GUID，并且包含通道 `channel.id` `channel.name` 名称本身。
 
 频道事件如下所示：
 

@@ -1,12 +1,12 @@
 ## <a name="prerequisites"></a>先决条件
 
-- 若要完成此快速入门，你需要一个 Office 365 租户和一个配置了启用"允许上载自定义应用 *"的团队* 。 若要了解更多信息，请参阅 [准备 Office 365 租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- 若要完成此快速入门，你需要一个Office 365租户和一个配置了"允许上载自定义应用 *"的团队*。 若要了解更多信息，请参阅[准备Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
-  - 如果当前没有 Office 365 帐户，可以通过 Office 365 开发人员计划注册免费订阅。 只要将订阅用于正在进行的开发，订阅就会保持活动状态。 请参阅 [欢迎使用 Office 365 开发人员计划](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program)。
+  - 如果你当前没有Office 365帐户，可以通过开发人员计划注册Office 365订阅。 只要将订阅用于正在进行的开发，订阅就会保持活动状态。 请参阅[欢迎使用 Office 365 开发人员计划](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program)。
 
 此外，此项目要求在开发环境中安装以下内容：
 
-- 任何文本编辑器或 IDE。 你可以免费安装和 [Visual Studio代码](https://code.visualstudio.com/download) 。
+- 任何文本编辑器或 IDE。 你可以免费安装和[Visual Studio Code](https://code.visualstudio.com/download)应用程序。
 
 - [Node.js/npm](https://nodejs.org/en/)。 你应该使用最新的 LTS 版本。 Node 程序包管理器 (npm) 将在安装 Node.js 时安装到系统中。
 
@@ -16,7 +16,7 @@
 npm install yo gulp-cli --global
 ```
 
-- 在命令提示符中键入以下内容，安装 Microsoft Teams 应用生成器：
+- 在命令Microsoft Teams键入以下内容，安装应用生成器：
 
 ```bash
 npm install generator-teams --global
@@ -44,7 +44,7 @@ yo teams
 
 您当前在项目目录中。 按 Enter。
 
-**Microsoft Teams 应用项目的标题**
+**你的应用Microsoft Teams标题？**
 
 这是你的应用包名称，将在应用清单和说明中使用。
 

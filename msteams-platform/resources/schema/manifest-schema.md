@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 清单架构
-ms.openlocfilehash: 984a5de5b2c8e24f79269e62c3a7fd422ecce63f
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: eeffd97c5cbe62b66cab343bfe650b7f617ce9f2
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101805"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304010"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
-Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) 。 早期版本 1.0-1.4 也受 URL ("v1.x") 。
+Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 早期版本 1.0-1.4 也受 URL ("v1.x") 。
 
 以下架构示例显示了所有扩展性选项。
 
@@ -22,8 +22,8 @@ Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.9",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.10",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -282,7 +282,18 @@ Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
-  }
+  },
+  "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", 
+     "largeImageUrl", 
+     "accentColor",
+     "websiteUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ]              
 }
 ```
 
@@ -298,7 +309,7 @@ Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须
 
 **必需** — 字符串
 
-此清单使用的清单架构版本。 必须为 1.9。
+此清单使用的清单架构版本。 必须为 1.10。
 
 ## <a name="version"></a>version
 
@@ -689,5 +700,26 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 |`team`|string|||当选择的安装范围为 `team` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
 |`groupchat`|string|||当选择的安装范围为 `groupchat` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
 |`meetings`|string|||当选择的安装范围为 `meetings` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
+
+## <a name="configurableproperties"></a>configurableProperties
+
+**可选** - 数组
+
+`configurableProperties`此块定义管理员可Teams应用属性。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
+
+> [!NOTE]
+> 必须定义至少一个属性。 最多可以在此块中定义九个属性。
+> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。
+
+可以定义以下任一属性：
+* `name`：允许管理员更改应用显示名称。
+* `shortDescription`：允许管理员更改应用的简短说明。
+* `longDescription`：允许管理员更改应用的详细说明。
+* `smallImageUrl`：它是 `outline` 清单块 `icons` 中的 属性。
+* `largeImageUrl`：它是 `color` 清单块 `icons` 中的 属性。
+* `accentColor`：它是要与 和 一起使用的颜色，作为大纲图标的背景。
+* `websiteUrl`：它是 https:// 网站的 URL。
+* `privacyUrl`：它是 https:// 隐私策略的 URL。
+* `termsOfUseUrl`：它是 https:// 使用条款的 URL。
 
 

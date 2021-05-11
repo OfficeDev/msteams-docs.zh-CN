@@ -2,7 +2,7 @@
 title: 使用 JavaScript 客户端 SDK 生成选项卡和其他托管体验
 author: heath-hamilton
 ms.author: surbhigupta
-description: Microsoft Teams JavaScript 客户端 SDK 概述，可帮助你生成托管在 <iframe>.
+description: JavaScript Microsoft Teams SDK 概述，它可以帮助你构建Teams托管在 <iframe>.
 localization_priority: Normal
 keywords: teams 选项卡组通道可配置的静态 SDK JavaScript 个人
 ms.topic: conceptual
@@ -13,16 +13,16 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52068722"
 ---
-# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验
+# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 JavaScript 客户端 SDK 生成选项卡Microsoft Teams托管体验
 
-Microsoft Teams JavaScript 客户端 SDK 可以帮助你在 Teams 中创建托管体验，这意味着在 iframe 中显示你的应用内容。
+JavaScript Microsoft Teams SDK 可以帮助你在 Teams 创建托管体验，这意味着在 iframe 中显示应用内容。
 
-SDK 有助于开发具有以下任一 Teams 功能的应用：
+SDK 有助于开发具有以下任一功能Teams应用：
 
 * [选项卡](../../tabs/what-are-tabs.md)
 * [任务模块](../../task-modules-and-cards/what-are-task-modules.md)
 
-例如，SDK 可以使选项卡 [对](../../build-your-first-app/build-personal-tab.md) 用户在 Teams 客户端中做出的主题更改做出响应。
+例如，SDK 可以使选项卡[响应](../../build-your-first-app/build-personal-tab.md)用户在客户端中Teams更改。
 
 ## <a name="getting-started"></a>入门
 
@@ -43,14 +43,14 @@ SDK 有助于开发具有以下任一 Teams 功能的应用：
 | -----     | -----     | -----    |
 | `microsoftTeams.initialize()` | 初始化 SDK。 必须先调用此函数，然后才能调用任何其他 SDK。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-&preserve-view=true)|
 |`microsoftTeams.getContext(callback: (context: Context)`| 获取正在运行页面的当前状态。 回调检索 **Context** 对象。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-&preserve-view=true)<br/>[context obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)|
-| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | 初始化 Teams 库，并设置选项卡 [的框架](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) 上下文，具体取决于 contentUrl 和 websiteUrl。 这可确保在正确的 URL 上运行"转到网站/重新加载"功能。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---&preserve-view=true)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | 初始化Teams库，并设置选项卡的框架[上下文，具体取决于](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)contentUrl 和 websiteUrl。 这可确保在正确的 URL 上运行"转到网站/重新加载"功能。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---&preserve-view=true)|
 | `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | 根据 contentUrl [和](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) websiteUrl 设置选项卡的框架上下文。 这可确保在正确的 URL 上运行"转到网站/重新加载"功能。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-&preserve-view=true)|
 | `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |当用户切换选项卡的全屏/窗口视图时注册的处理程序。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-&preserve-view=true)<br/>[boolean](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerFullScreenHandler__isFullScreen__boolean_____void_&preserve-view=true)|
-|`microsoftTeams.registerChangeSettingsHandler()` |在用户选择启用的"设置"按钮以重新配置选项卡时注册的处理程序。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-&preserve-view=true)|
+|`microsoftTeams.registerChangeSettingsHandler()` |在用户选择启用的选项卡按钮以重新配置选项卡 **设置** 注册的处理程序。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-&preserve-view=true)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |获取应用拥有的选项卡。 回调检索 **TabInformation** 对象。 **TabInstanceParameters** 对象是可选参数。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinformation?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.getMruTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters)`|获取用户最近使用的选项卡。 回调检索 **TabInformation** 对象。 **TabInstanceParameters** 对象是可选参数。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getmrutabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinformation?view=msteams-client-js-latest&preserve-view=true)<br/>[tabInstance obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinstanceparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.shareDeepLink(deepLinkParameters: DeepLinkParameters)`|将 **DeepLinkParameters** 对象作为输入，并共享一个深层链接对话框，用户可以使用该对话框导航到选项卡 *中的内容*。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#sharedeeplink-deeplinkparameters-&preserve-view=true)<br/>[deepLink obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/deeplinkparameters?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|将所需的 **deepLink** 作为输入，将用户导航到 URL 或触发客户端操作（如打开或安装 *Teams 中的应用*）。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
+|`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|将所需的 **deepLink** 作为输入，将用户导航到 URL 或触发客户端操作（如打开 *或* 安装）Teams。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
 |`microsoftTeams.navigateToTab(tabInstance: TabInstance, onComplete?: (status: boolean, reason?: string))`|将 **TabInstance** 对象作为输入并导航到指定的选项卡实例。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#navigatetotab-tabinstance-&preserve-view=true)<br/>[tabInstance obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinstance?view=msteams-client-js-latest&preserve-view=true)|
 
 ### <a name="authentication-namespace"></a>身份验证命名空间
@@ -66,8 +66,8 @@ SDK 有助于开发具有以下任一 Teams 功能的应用：
 | 功能  | 说明          | 文档|
 | -----     | -----     | -----    |
 |`microsoftTeams.settings.setValidityState(validityState: boolean)`|初始值为 false。 在有效性 **状态****为** true 时激活"保存或删除"按钮。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.settings.getSettings(callback: (instanceSettings: Settings)`|获取当前实例的设置。 回调将检索 **Settings** 对象。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)<br/>[settings obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.settings.setSettings(instanceSettings: Settings, onComplete?: (status: boolean, reason?: string)`|配置当前实例的设置。 有效设置由 Settings **对象** 定义。|[function](/https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest)<br/>[settings obj](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.settings.getSettings(callback: (instanceSettings: Settings)`|获取当前实例的设置。 回调检索 **设置** 对象。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)<br/>[settings obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.settings.setSettings(instanceSettings: Settings, onComplete?: (status: boolean, reason?: string)`|配置当前实例的设置。 有效设置由 设置 **对象定义**。|[function](/https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest)<br/>[settings obj](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.settings.registerOnSaveHandler(handler: (evt: SaveEvent)`|在用户选择"保存"按钮时注册 **的** 处理程序。 此处理程序应该用于创建或更新支持内容的基础资源。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.settings.registerOnRemoveHandler(handler: (evt: RemoveEvent)`|在用户选择"删除"按钮时注册 **的** 处理程序。 此处理程序应该用于删除支持内容的基础资源。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
 

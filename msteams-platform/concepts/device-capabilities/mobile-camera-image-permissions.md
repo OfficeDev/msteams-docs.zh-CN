@@ -1,7 +1,7 @@
 ---
 title: 集成媒体功能
 author: Rajeshwari-v
-description: 如何使用 Teams JavaScript 客户端 SDK 启用媒体功能
+description: 如何使用 JavaScript Teams SDK 启用媒体功能
 keywords: 相机图像麦克风功能本机设备权限媒体
 ms.topic: conceptual
 localization_priority: Normal
@@ -15,25 +15,25 @@ ms.locfileid: "52058360"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能 
 
-本文档指导您如何集成媒体功能。 此集成将本机设备功能（如相机和 **麦克风）** 与Teams 平台相结合。  
+本文档指导您如何集成媒体功能。 此集成将本机设备功能（如相机和 **麦克风**）与Teams平台。  
 
-可以使用 [Microsoft Teams JavaScript 客户端 SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户设备权限 [所需的工具](native-device-permissions.md)。 使用合适的媒体功能 API 将本机设备功能（如相机和麦克风）与Microsoft Teams 移动应用中的 Teams 平台集成，并构建更丰富的体验。 
+可以使用[JavaScript Microsoft Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户设备权限[所需的工具](native-device-permissions.md)。 使用合适的媒体功能 API 将本机设备功能（如相机和麦克风）与Microsoft Teams 移动应用中的 Teams 平台集成，并构建更丰富的体验。 
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>集成媒体功能的优势
 
-在 Teams 应用中集成设备功能的主要优点是它利用本机 Teams 控件来为用户提供丰富且沉浸式的体验。
+将设备功能集成到 Teams 应用中的主要优点是它利用本机 Teams 控件为用户提供丰富且沉浸式的体验。
 若要集成媒体功能，必须更新应用清单文件并调用媒体功能 API。 
 
 为了进行有效的集成，你必须深入了解用于调用相应[](#code-snippets)API 的代码段，这允许你使用本机媒体功能。
 
-熟悉 API 响应错误以处理[](#error-handling)Teams 应用中的错误非常重要。
+熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
 
 > [!NOTE] 
-> 目前，Microsoft Teams 对媒体功能的支持仅适用于移动客户端。
+> 目前，Microsoft Teams功能的支持仅适用于移动客户端。
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 [manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) 并指定 ，更新你的 Teams 应用在文件 `devicePermissions` 上的应用 `media` 。 它允许你的应用在用户开始使用相机捕获图像之前，向用户请求必要的权限，打开库以选择要作为附件提交的图像，或使用麦克风录制对话。 
+通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `media` 。 它允许你的应用在用户开始使用相机捕获图像之前，向用户请求必要的权限，打开库以选择要作为附件提交的图像，或使用麦克风录制对话。 
 
 ``` json
 "devicePermissions": [
@@ -42,7 +42,7 @@ ms.locfileid: "52058360"
 ```
 
 > [!NOTE]
-> 启动 **相关的** Teams API 时，将自动显示"请求权限"提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。
+> 启动 **相关应用程序** API 时，将自动显示Teams权限提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。
 
 ## <a name="media-capability-apis"></a>媒体功能 API
 
@@ -57,7 +57,7 @@ ms.locfileid: "52058360"
   * 通过相机扫描文档、白板和名片。
   
 > [!IMPORTANT]
-> * 可以从多个 Teams 图面（如任务模块、选项卡和个人应用）调用 、 和 `selectMedia` `getMedia` `viewImages` API。 有关详细信息，请参阅 [Teams 应用的入口点](../extensibility-points.md)。
+> * 可以从 `selectMedia` 多个任务Teams，如任务模块、选项卡和个人应用调用 、 和 `getMedia` `viewImages` API。 有关详细信息，请参阅应用[Teams点](../extensibility-points.md)。
 > * `selectMedia` API 已扩展以支持麦克风和音频属性。
 
 你必须使用以下一组 API 来启用设备的媒体功能：
@@ -71,14 +71,14 @@ ms.locfileid: "52058360"
 
 
 **用于用于图像功能 selectMedia API 的 Web 应用体验** 
- ![Teams 中的设备相机和图像体验](../../assets/images/tabs/image-capability.png)
+ ![设备相机和图像体验Teams](../../assets/images/tabs/image-capability.png)
 
 **用于麦克风功能 selectMedia API 的 Web 应用体验** 
  ![麦克风功能 Web 应用体验](../../assets/images/tabs/microphone-capability.png)
 
 ## <a name="error-handling"></a>错误处理
 
-必须确保在 Teams 应用中正确处理这些错误。 下表列出了错误代码以及生成错误的条件： 
+必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
 
 |错误代码 |  错误名称     | Condition|
@@ -257,6 +257,6 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 ## <a name="see-also"></a>另请参阅
 
-- [在 Teams 中集成 QR 或条形码扫描仪功能](qr-barcode-scanner-capability.md)
+- [将 QR 或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
 
-- [在 Teams 中集成位置功能](location-capability.md)
+- [在 Teams 中集成位置Teams](location-capability.md)

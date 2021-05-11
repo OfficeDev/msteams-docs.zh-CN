@@ -1,26 +1,26 @@
 ---
 title: 开发者预览版清单架构参考
-description: 介绍 Microsoft Teams 清单支持的架构
+description: 介绍清单支持的架构Microsoft Teams
 ms.topic: reference
 keywords: teams 清单架构开发者预览版
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 05a1becbd021a67e2a843a8ddb5f58ea76cf444e
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019697"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304017"
 ---
-# <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Microsoft Teams 的开发人员预览清单架构
+# <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>开发人员预览清单架构Microsoft Teams
 
 > [!NOTE]
 > 有关 [开发者预览版](~/resources/dev-preview/developer-preview-intro.md) 和如何加入的信息，请参阅 开发者预览版。
-> 如果未使用开发人员预览版，则不应使用此版本的清单。 有关 [清单的公共版本，请参阅参考：Microsoft Teams](~/resources/schema/manifest-schema.md) 的清单架构。
+> 如果未使用开发人员预览版，则不应使用此版本的清单。 请参阅[Reference： Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest。
 
-Microsoft Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
+Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
 
-有关可用功能详细信息，请参阅 [：Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)公共开发者预览版中的功能。
+有关可用功能详细信息，请参阅公共更新开发者预览版[中的Microsoft Teams。](~/resources/dev-preview/developer-preview-features.md)
 
 ## <a name="sample-full-manifest"></a>示例完整清单
 
@@ -246,7 +246,7 @@ Microsoft Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 **Required**
 
-指定有关你的公司的信息。 对于提交到 AppSource (Office 应用商店) ，这些值必须与 AppSource 条目中的信息匹配。
+指定有关你的公司的信息。 对于提交到 AppSource (之前Office应用商店) ，这些值必须与 AppSource 条目中的信息匹配。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -279,7 +279,7 @@ Microsoft Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 **Required**
 
-在 Teams 体验中向用户显示的应用体验名称。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值不应相同。
+应用体验的名称，在应用体验中向Teams显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值不应相同。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -303,7 +303,7 @@ Microsoft Teams 清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 **Required**
 
-Teams 应用中使用的图标。 图标文件必须作为上传程序包的一部分包含在内。
+在应用内使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -329,10 +329,10 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
-|`canUpdateConfiguration`|布尔值|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
+|`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
-|`sharePointPreviewImage`|String|2048||指向用于 SharePoint 的选项卡预览图像的相对文件路径。 大小 1024x768。 |
-|`supportedSharePointHosts`|枚举数组|1||定义选项卡在 SharePoint 中的可用方法。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
+|`sharePointPreviewImage`|String|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
+|`supportedSharePointHosts`|枚举数组|1||定义选项卡在页面SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -346,7 +346,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |---|---|---|---|---|
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|String|128 个字符|✔|选项卡显示名称界面中的列数。|
-|`contentUrl`|String|2048 个字符|✔|指向要显示在 Teams 画布中的实体 UI 的 https:// URL。|
+|`contentUrl`|String|2048 个字符|✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
 |`websiteUrl`|String|2048 个字符||用户 https:// 在浏览器中查看时指向的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
 
@@ -379,7 +379,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 **可选**
 
-`connectors`此块为应用定义 Office 365 连接器。
+`connectors`块为应用Office 365连接器。
 
 对象是一个数组， (类型的所有元素) 1 个元素 `object` 。 只有提供连接器的解决方案才需要此块。
 
@@ -403,12 +403,12 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 [ID 相同](#id)。|
-|`canUpdateConfiguration`|布尔值|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
+|`canUpdateConfiguration`|Boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
 |`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-邮件扩展应声明一个或多个命令。 每个命令在 Microsoft Teams 中显示为基于 UI 的入口点的潜在交互。 最多有 10 个命令。
+邮件扩展应声明一个或多个命令。 每个命令都Microsoft Teams UI 入口点的潜在交互。 最多有 10 个命令。
 
 每个命令项都是具有以下结构的对象：
 
@@ -418,9 +418,9 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 |`type`|字符串|64 个字符||命令的类型。 或 `query` `action` 之一。 默认值： `query`|
 |`title`|String|32 个字符|✔|用户友好命令名称|
 |`description`|String|128 个字符||向用户显示以指示此命令用途的说明|
-|`initialRun`|布尔值|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
+|`initialRun`|Boolean|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
 |`context`|Array of Strings|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose", "commandBox"]`|
-|`fetchTask`|布尔值|||一个布尔值，指示它应动态提取任务模块|
+|`fetchTask`|Boolean|||一个布尔值，指示它应动态提取任务模块|
 |`taskInfo`|Object|||指定在使用消息传递扩展命令时要预加载的任务模块|
 |`taskInfo.title`|String|64||初始对话框标题|
 |`taskInfo.width`|String|||对话框宽度 - 一个数字（以像素为单位）或默认布局，例如"large"、"medium"或"small"|
@@ -478,7 +478,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 **可选**
 
-指定 AAD 应用 ID 和 Graph 信息，以帮助用户无缝登录 AAD 应用。
+指定 AAD 应用 ID 和Graph信息以帮助用户无缝登录到 AAD 应用。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -489,7 +489,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 
 **可选** - 数组
 
-`configurableProperties`此块定义 Teams 管理员可以自定义的应用属性。 有关详细信息，请参阅在 [Microsoft Teams 中自定义应用](/MicrosoftTeams/customize-apps)。
+`configurableProperties`此块定义管理员可Teams应用属性。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
 
 > [!NOTE]
 > 必须定义至少一个属性。 最多可以在此块中定义九个属性。
@@ -499,10 +499,10 @@ Teams 应用中使用的图标。 图标文件必须作为上传程序包的一�
 * `name`：允许管理员更改应用显示名称。
 * `shortDescription`：允许管理员更改应用的简短说明。
 * `longDescription`：允许管理员更改应用的详细说明。
-* `smallImageUrl`：它是 `outline` 清单 `icons` 块中的 属性。
+* `smallImageUrl`：它是 `outline` 清单块 `icons` 中的 属性。
 * `largeImageUrl`：它是 `color` 清单块 `icons` 中的 属性。
 * `accentColor`：它是要与 和 一起使用的颜色，作为大纲图标的背景。
-* `developerUrl`：它是 https:// 网站的 URL。
+* `websiteUrl`：它是 https:// 网站的 URL。
 * `privacyUrl`：它是 https:// 隐私策略的 URL。
 * `termsOfUseUrl`：它是 https:// 使用条款的 URL。
 

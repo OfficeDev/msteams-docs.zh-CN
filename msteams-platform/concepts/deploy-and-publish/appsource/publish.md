@@ -52,4 +52,4 @@ ms.locfileid: "52101756"
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [查看应用商店验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+> [查看商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

@@ -20,7 +20,7 @@ ms.locfileid: "52020903"
 
 若要设置自动程序消息的格式，可以设置可选属性 [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) 以控制自动程序消息的文本内容的呈现方式。
 
-Microsoft Teams 支持以下格式选项：
+Microsoft Teams支持以下格式选项：
 
 | `TextFormat` value | 说明 |
 | --- | --- |
@@ -28,7 +28,7 @@ Microsoft Teams 支持以下格式选项：
 | markdown | 文本必须视为 markdown 格式，并在适当时呈现在频道上。 |
 | xml | 文本是简单的 XML 标记。 |
 
-Teams 支持 markdown 和 XML 或 HTML 格式标记的子集。
+Teams markdown 和 XML 或 HTML 格式标记的子集。
 
 目前，以下限制适用于格式设置：
 
@@ -36,7 +36,7 @@ Teams 支持 markdown 和 XML 或 HTML 格式标记的子集。
 * 格式卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。
 * 富卡片不支持 markdown 或表格格式。
 
-设置文本内容的格式后，请确保格式设置适用于 Microsoft Teams 支持的所有平台。
+设置文本内容格式后，请确保您的格式设置适用于所有受 Microsoft Teams。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
@@ -53,7 +53,7 @@ Teams 支持 markdown 和 XML 或 HTML 格式标记的子集。
 | 已排序列表              | ✖ | ✔ |
 | 预设格式的文本         | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ |
-| 超链接                 | ✔ | ✔ |
+| Hyperlink                 | ✔ | ✔ |
 | 图像链接                | ✔ | ✖ |
 
 检查跨平台支持后，请确保各个平台也提供支持。
@@ -77,7 +77,7 @@ Teams 支持 markdown 和 XML 或 HTML 格式标记的子集。
 | 已排序列表              | ✔ | ✖ | ✖ |
 | 预设格式的文本         | ✔ | ✔ | ✔ |
 | Blockquote                | ✔ | ✔ | ✔ |
-| 超链接                 | ✔ | ✔ | ✔ |
+| Hyperlink                 | ✔ | ✔ | ✔ |
 | 图像链接                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>卡

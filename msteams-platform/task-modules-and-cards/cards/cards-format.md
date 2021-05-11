@@ -1,6 +1,6 @@
 ---
 title: 卡片中的文本格式
-description: 介绍 Microsoft Teams 中的卡片文本格式
+description: 介绍卡片文本格式Microsoft Teams
 keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
@@ -12,23 +12,23 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52068820"
 ---
-# <a name="format-cards-in-teams"></a>在 Teams 中设置卡片格式
+# <a name="format-cards-in-teams"></a>格式化卡片Teams
 
 可以使用 Markdown 或 HTML 将格式文本格式添加到卡片，具体取决于卡片类型。
 
 卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。 可以使用 XML 格式的子集或 HTML (格式) Markdown 来指定格式，具体取决于卡片类型。 对于当前和未来开发，建议使用 Markdown 格式的自适应卡片。
 
-不同卡类型之间的格式支持不同，并且桌面版和移动版 Teams 客户端以及桌面浏览器中的 Teams 的卡片呈现可能略有不同。
+不同卡类型之间的格式支持不同，并且桌面版和移动版 Teams 客户端以及桌面Teams的卡片呈现可能略有不同。
 
-你可以将内联图像与任意 Teams 卡一起包含。 格式设置为 、 或 文件的图像不能超过  `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。 动态 GIF 不受正式支持。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
+你可以将内联图像与任意卡片Teams内。 格式设置为 、 或 文件的图像不能超过  `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。 动态 GIF 不受正式支持。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>使用 Markdown 格式化卡片
 
-Teams 中支持 Markdown 的卡片类型有两种：
+以下两种卡片类型支持 Markdown Teams：
 
 > [!div class="checklist"]
 > * **自适应卡片**： Markdown 在自适应卡片字段中以及 和 `Textblock` `Fact.Title` 中受支持 `Fact.Value` 。 自适应卡片不支持 HTML。
-> * **O365 连接器卡**：文本字段中的 Office 365 连接器卡支持 Markdown 和有限的 HTML。
+> * **O365 连接器卡**：文本字段中的 Office 365 连接器卡中支持 Markdown 和有限的 HTML。
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Markdown 格式：自适应卡片**](#tab/adaptive-md)
 
@@ -45,7 +45,7 @@ Teams 中支持 Markdown 的卡片类型有两种：
 不支持以下 Markdown 标记：
 
 * 标头
-* Tables
+* 表格
 * 图像
 * 预设格式的文本
 * Blockquotes
@@ -59,9 +59,9 @@ Teams 中支持 Markdown 的卡片类型有两种：
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>自适应卡片的移动和桌面差异
 
-桌面版和移动版 Teams 的格式略有不同。
+桌面版和移动设备版之间的格式稍有不同Teams。
 
-在桌面上，自适应卡片 Markdown 格式在 Web 浏览器和 Teams 客户端应用程序中如下所示：
+在桌面上，自适应卡片 Markdown 格式在 Web 浏览器和 web 客户端应用程序中Teams如下所示：
 
 ![桌面客户端中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -75,7 +75,7 @@ Teams 中支持 Markdown 的卡片类型有两种：
 
 ### <a name="more-information-on-adaptive-cards"></a>自适应卡片详细信息
 
-[自适应卡片中的文本功能](/adaptive-cards/create/textfeatures) 本主题中提到的日期和本地化功能在 Teams 中不受支持。
+[自适应卡片中的文本功能](/adaptive-cards/create/textfeatures)本主题中提到的日期和本地化功能在 Teams。
 
 ### <a name="formatting-sample-for-adaptive-cards"></a>自适应卡片的格式设置示例
 
@@ -118,7 +118,7 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 聊天机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。
 
 > [!NOTE]
-> * [Teams 平台上](https://adaptivecards.io/explorer/Media.html) 的自适应卡片 v1.2 当前不支持媒体元素。
+> * [媒体元素](https://adaptivecards.io/explorer/Media.html)当前在应用平台上的自适应卡片 v1.2 中Teams支持。
 > * 频道&团队提及在机器人消息中不受支持。
 
 #### <a name="constructing-mentions"></a>构造提及
@@ -126,7 +126,7 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 若要在自适应卡片中包括提及，你的应用需要包括以下元素：
 
 * `<at>username</at>` 在支持的自适应卡片元素中。
-* `mention`卡片内容 `msteams` 中属性内的对象，其中包括被提及用户的 Teams 用户 ID。
+* `mention`卡片内容中属性内的对象，Teams `msteams` 所提及的用户的用户 ID。
 * `userId`是自动程序 ID 和特定用户所特有的。 它可用于@mention用户。 `userId`可以使用获取用户 ID 中提到的选项之[一来检索](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>带提及功能的示例自适应卡片
@@ -277,7 +277,7 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 > 放大和缩小功能仅适用于自适应卡片 (图像) 图像元素。
 
 > [!NOTE]
-> 对于 Teams 移动应用，自适应卡片中的图像阶段视图功能默认可用，用户只需点击图像即可在阶段视图中查看自适应卡片图像，而不管属性是否 `allowExpand` 存在。
+> 对于 Teams 移动应用，自适应卡片中的图像阶段视图功能默认可用，用户只需点击图像即可在阶段视图中查看自适应卡片图像，无论属性是否存在。 `allowExpand`
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Markdown 格式：O365 连接器卡**](#tab/connector-md)
 
@@ -310,7 +310,7 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 
 问题：
 
-* 适用于 Teams 的 iOS 客户端不会在连接器卡中呈现 Markdown 或 HTML 内嵌图像。
+* iOS 客户端用于Teams连接器卡中呈现 Markdown 或 HTML 内联图像。
 * Blockquotes 呈现为缩进，但不带灰色背景。
 
 在 Android 上，连接器卡的 Markdown 格式如下所示：
@@ -475,7 +475,7 @@ HTML 标记支持简单的卡片，如 hero 和 thumbnail 卡片。 不支持 Ma
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>简单卡片的移动和桌面差异
 
-由于桌面平台和移动平台的分辨率差异，桌面版和移动版 Teams 的格式不同。
+由于桌面平台和移动平台的分辨率差异，桌面版和移动设备版之间的格式Teams。
 
 在桌面上，HTML 格式如下所示：
 
@@ -497,7 +497,7 @@ HTML 标记支持简单的卡片，如 hero 和 thumbnail 卡片。 不支持 Ma
 
 ### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>简单卡片中 HTML 格式的格式设置示例
 
-这些屏幕截图是使用 Teams AppStudio 创建的，其中 Hero 卡片的文本属性设置为以下字符串。 可以通过修改此代码在你自己的卡片中测试格式。
+这些屏幕截图是使用 appStudio Teams创建的，其中 Hero 卡片的文本属性设置为以下字符串。 可以通过修改此代码在你自己的卡片中测试格式。
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 

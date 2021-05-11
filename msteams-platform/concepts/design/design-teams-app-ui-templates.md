@@ -1,7 +1,7 @@
 ---
 title: 使用 UI 模板设计应用
 author: heath-hamilton
-description: 使用 Microsoft Teams 中常见的标准化 UI 组件、布局和模式更快地设计应用。
+description: 使用通常在整个应用中看到的标准化 UI 组件、布局和模式更快地Microsoft Teams。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
@@ -12,9 +12,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020763"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI 模板设计 Microsoft Teams 应用
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI Microsoft Teams设计应用
 
-使用 UI 模板更快地设计 Microsoft Teams 应用。 模板是基于 Fluent UI 的组件的集合，这些组件适用于常见的 Teams 用例，让你有更多的时间来为用户找到最佳体验。
+使用 UI Microsoft Teams更快地设计应用。 模板是基于 Fluent UI 的组件的集合，这些组件可跨常见Teams用例工作，从而为您提供更多时间来为用户找到最佳体验。
 
 ## <a name="getting-started-with-tools-and-samples"></a>工具和示例入门
 
@@ -22,29 +22,29 @@ ms.locfileid: "52020763"
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-从 Microsoft Teams UI 工具包获取应用设计的 UI 模板，其中还包括有关用法、结构分析、辅助功能和最佳做法的广泛信息。
+从应用 UI 工具包中为应用设计获取 UI 模板Microsoft Teams，其中还包括有关用法、结构分析、辅助功能和最佳做法的广泛信息。
 
 > [!div class="nextstepaction"]
 > [获取图 (UI) ](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI 库
+### <a name="microsoft-teams-ui-library"></a>Microsoft TeamsUI 库
 
-在浏览器中查看和测试单个 Teams UI 模板和相关组件。
+在浏览器中查看和测试Teams UI 模板和相关组件。
 
 > [!div class="nextstepaction"]
 > [尝试 UI 库 (场) ](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-直接将这些模板和相关组件导入到 Teams 应用项目中。
+将这些模板和相关组件直接导入到Teams应用项目中。
 
 > [!div class="nextstepaction"]
-> [使用 GitHub (获取 UI) ](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+> [获取 UI 库 (GitHub) ](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
 ### <a name="sample-app"></a>示例应用
 
-安装示例应用以查看 UI 模板在 Teams 上下文中的外观和行为。
+安装示例应用以查看 UI 模板在上下文中的外观Teams行为。
 
 > [!div class="nextstepaction"]
-> [从 GitHub (获取) ](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
+> [获取示例应用 (GitHub) ](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="list"></a>列表
 
@@ -59,7 +59,7 @@ ms.locfileid: "52020763"
 
 ## <a name="dashboard"></a>仪表板
 
-仪表板在 Teams 个人应用或选项卡 (集中显示不同类型的) 。 用户至少应该能够自定义他们在仪表板上看到部分内容。
+仪表板在中心位置显示不同类型的内容， (Teams应用或选项卡) 。 用户至少应该能够自定义他们在仪表板上看到部分内容。
 
 :::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="示例显示仪表板 UI 模板。" border="false":::
 
@@ -84,7 +84,7 @@ ms.locfileid: "52020763"
 
 ## <a name="sign-in"></a>登录
 
-你可以为不同的 Teams 上下文和标识提供程序设计应用登录流。 以下示例包括单一登录 (SSO) ，建议这样做以简化身份验证体验。
+你可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括单一登录 (SSO) ，建议这样做以简化身份验证体验。
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="示例显示登录 UI 模板。" border="false":::
 
@@ -154,13 +154,13 @@ ms.locfileid: "52020763"
 
 ## <a name="left-nav"></a>左导航
 
-使用左侧导航键浏览 Teams 选项卡内的多个页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
+使用左侧导航键浏览"导航"选项卡Teams页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="示例显示左侧导航模板。" border="false":::
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 浏览 Teams 选项卡内的多个页面
+* 浏览"页面"选项卡Teams页面
 * 将复杂应用分解为多个页面
 
 ## <a name="breadcrumb"></a>痕迹导航栏
@@ -188,7 +188,7 @@ ms.locfileid: "52020763"
 
 ## <a name="stage"></a>阶段
 
-Stage 为用户提供了一种在 Teams 中打开实体（如图像、文件或网站）的方法，而不是在另一个应用或浏览器中打开它。 阶段的主要用例是查看;图面不应用于复杂的交互。
+Stage 为用户提供了一种在应用程序中打开实体（如图像、文件或网站Teams而不是在另一个应用或浏览器中打开它的方法。 阶段的主要用例是查看;图面不应用于复杂的交互。
 
  (实现说明：使用大型任务模块[.) ](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 
@@ -196,5 +196,5 @@ Stage 为用户提供了一种在 Teams 中打开实体（如图像、文件或�
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 在 Teams 中打开实体，而不是其他应用或浏览器
+* 在浏览器中打开实体Teams而不是其他应用或浏览器
 * 聚焦媒体或其他内容

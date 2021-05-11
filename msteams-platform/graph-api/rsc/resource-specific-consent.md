@@ -19,7 +19,7 @@ RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，它使你的应�
 
 ## <a name="resource-specific-permissions"></a>特定于资源的权限
 
-|应用权限| Action |
+|应用权限| 操作 |
 | ----- | ----- |
 |TeamSettings.Read.Group | 获取此团队的设置。|
 |TeamSettings.ReadWrite.Group|更新此团队的设置。|

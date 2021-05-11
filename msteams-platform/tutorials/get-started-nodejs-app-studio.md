@@ -1,6 +1,6 @@
 ---
 title: 教程 - 使用工具创建第一Node.js
-description: 了解如何开始使用 Microsoft Teams Node.js。
+description: 了解如何开始使用 Microsoft Teams 生成Node.js。
 keywords: nodejs app Studio node.js入门
 ms.topic: tutorial
 localization_priority: Normal
@@ -12,9 +12,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020959"
 ---
-# <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>使用应用创建你的第一个 Microsoft Teams Node.js
+# <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>使用 Microsoft Teams 创建你的第一个Node.js
 
-本教程帮助你开始使用 Node.js 创建 Microsoft Teams Node.js。
+本教程帮助你开始使用 Microsoft Teams 创建Node.js。
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -22,7 +22,7 @@ ms.locfileid: "52020959"
 
 ## <a name="download-and-host-your-app"></a>下载和托管应用
 
-按照以下步骤在 Teams 中下载并托管简单的"hello world"应用。
+按照以下步骤在应用程序下载并托管简单的"hello world"Teams。
 
 <a name="GetPrerequisites"></a>
 
@@ -32,7 +32,7 @@ ms.locfileid: "52020959"
 
 - [Git](https://git-scm.com/downloads)
 - [Node.js 和 NPM](https://nodejs.org/)
-- 获取任何文本编辑器或 IDE。 你可以免费安装和 [Visual Studio代码](https://code.visualstudio.com/download) 。
+- 获取任何文本编辑器或 IDE。 你可以免费安装和[Visual Studio Code](https://code.visualstudio.com/download)应用程序。
 
 如果在安装过程中看到向 `git` PATH 添加 、、 和 `node` `npm` `code` 的选项，请选择这样做。 它很方便。
 
@@ -60,7 +60,7 @@ Local version 4.0.2
 
 如果没有在终端窗口中安装 gulp (或安装的版本) ，现在在终端窗口中 `npm install gulp` 运行。
 
-如果已安装Visual Studio代码，则可以通过运行以下代码来验证安装：
+如果已安装Visual Studio Code，可以运行以下代码验证安装：
 
 ```bash
 code --version
@@ -81,7 +81,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> 如果你想要[修改并](https://help.github.com/articles/fork-a-repo/)[签入对](https://github.com/OfficeDev/Microsoft-Teams-Samples)GitHub 存储库的更改，供将来参考，可以分叉此存储库。
+> 如果要[修改和](https://help.github.com/articles/fork-a-repo/)[签入对](https://github.com/OfficeDev/Microsoft-Teams-Samples)存储库所做的更改，可以分叉此存储库GitHub供将来参考。
 
 <a name="BuildRun"></a>
 
@@ -121,7 +121,7 @@ npm start
 
 ### <a name="host-the-sample-app"></a>托管示例应用
 
-请记住，Microsoft Teams 中的应用是公开一个或多个功能的 Web 应用程序。 若要使 Teams 平台加载你的应用，必须从 Internet 访问你的应用。 若要使你的应用从 Internet 上访问，你需要 *托管* 你的应用。
+请记住，Microsoft Teams应用程序是公开一个或多个功能的 Web 应用程序。 若要Teams加载应用，应用必须从 Internet 访问。 若要使你的应用从 Internet 上访问，你需要 *托管* 你的应用。
 
 对于本地测试，可以在本地计算机上运行应用，并创建一个使用 Web 终结点的隧道。 [ngrok](https://ngrok.com) 是一款免费工具，允许你这样做。 使用 *ngrok，* 你可以获取 Web 地址 `https://d0ac14a5.ngrok.io` ， (此 URL 只是一个) 。 你可以 [为环境下载](https://ngrok.com/download)*并安装 ngrok。* 请确保将其添加到 中的位置 `PATH` 。
 
@@ -140,18 +140,18 @@ ngrok http 3333 -host-header=localhost:3333
 
 存在允许永久名称的 *ngrok* 付费版本。 如果你使用免费版本，你的应用将仅在开发计算机上当前会话期间可用。 如果计算机关闭或进入睡眠状态，服务将不再可用。 在共享应用供其他用户进行测试时，请记住这一点。 如果必须重新启动服务，它将返回一个新地址，并且必须更新使用该地址的每一处地址。
 
-请记住，记下应用的 URL，因为稍后在使用 App studio 向 Teams 注册应用时将需要此 URL。 记事本适用于此目的。
+请记住，记下应用的 URL，因为稍后在使用 App studio 向应用注册Teams时将需要此 URL。 记事本适合此目的。
 
 <a name="DeployToTeams"></a>
 
-## <a name="deploy-your-app-to-microsoft-teams"></a>将应用部署到 Microsoft Teams
+## <a name="deploy-your-app-to-microsoft-teams"></a>将应用部署到Microsoft Teams
 
-此时，你拥有一个在 Internet 上托管的应用，但你无法告知 Teams 在哪里查找它，甚至无法告诉 Teams 你的应用被叫什么。 为此，现在必须创建应用包。 这不仅仅是一个包含应用清单和一些图标的文本文件，Teams 客户端将使用这些图标来正确显示你的应用并打造你的应用品牌。 你可以手动创建此应用包，或者可以使用 App Studio，这是在 Teams 中运行的工具，可简化注册应用的过程。 App Studio 是建议创建和更新应用包的方法。
+此时，你拥有一个在 Internet 上托管的应用，但你尚无法告知Teams在哪里查找它，甚至告诉用户你的应用被调用了什么。 为此，现在必须创建应用包。 这不仅仅是一个包含应用清单和一些图标的文本文件，Teams客户端将使用这些图标来正确显示你的应用并打造你的应用品牌。 你可以手动创建此应用包，或者可以使用 App Studio，这是一个在 Teams 中运行的工具，可简化注册应用的过程。 App Studio 是建议创建和更新应用包的方法。
 
 对于任一方法，你都需要：
 
 - 可以在 Internet 上找到应用的 URL。
-- Teams 用于打造应用品牌的图标。 此示例附带位于"src\static\images"中的占位符图标。 App Studio 还会根据需要提供默认图标。
+- 用于Teams应用品牌的图标。 此示例附带位于"src\static\images"中的占位符图标。 App Studio 还会根据需要提供默认图标。
 
 [!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
@@ -167,7 +167,7 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 具体操作方式因应用托管方式不同而不同。 使用环境变量的一个重要内容是，这些值是环境的一部分，可通过应用的代码访问它们，但它们不会向可能检查网站文件的第三方公开。
 
-如果使用 ngrok 运行应用，则需要设置一些本地环境变量。 执行此操作的方法有很多，但最简单的方法是添加启动Visual Studio[代码：](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)
+如果使用 ngrok 运行应用，则需要设置一些本地环境变量。 执行此操作的方法有很多，但如果使用的是Visual Studio Code，最简单的方法是添加启动[配置](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)：
 
 ``` 
 {
@@ -190,11 +190,11 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 其中：
 
 MICROSOFT_APP_ID和MICROSOFT_APP_PASSWORD是自动程序 ID 和密码。
-NODE_DEBUG代码调试控制台中的自动程序Visual Studio发生的情况。
+NODE_DEBUG将在调试控制台中显示自动程序Visual Studio Code发生了什么。
 NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当本地运行应用时，它将在 src 文件夹的) 。
 
 > [!Note]
-> 如果你尚未从本教程的前面部分停止 npm，则需要运行 ，以便Visual Studio代码正确拾取启动配置 `npm stop` 变量。
+> 如果你尚未从本教程的前面部分停止 npm，则需要运行 ，以便Visual Studio Code正确拾取启动配置 `npm stop` 变量。
 
 <a name="ConfigureTheAppTab"></a>
 
@@ -204,9 +204,9 @@ NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当本地运行应
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
-### <a name="test-your-bot-in-teams"></a>在 Teams 中测试机器人
+### <a name="test-your-bot-in-teams"></a>在设备中测试Teams
 
-你现在可以在 Teams 中与机器人交互。 选择你注册应用的团队中的频道，然后键入 `@your-bot-name` ，然后键入消息。 这称为 **\@ 提及**。 向自动程序发送的任何消息都将作为回复发送回。
+现在，你可以与自动程序在 Teams。 选择你注册应用的团队中的频道，然后键入 `@your-bot-name` ，然后键入消息。 这称为 **\@ 提及**。 向自动程序发送的任何消息都将作为回复发送回。
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 

@@ -18,7 +18,7 @@ ms.locfileid: "52020651"
 
 有两种方法向自动程序发送文件和从自动程序发送文件：
 
-* 使用 Microsoft Graph API。 此方法适用于 Teams 中所有作用域的机器人：
+* 使用 Microsoft Graph API。 此方法适用于所有范围内自动程序Teams：
   * `personal`
   * `channel`
   * `groupchat`
@@ -27,16 +27,16 @@ ms.locfileid: "52020651"
 
 ## <a name="using-the-microsoft-graph-apis"></a>使用 Microsoft Graph API
 
-可以使用适用于 OneDrive 和 [SharePoint](/onedrive/developer/rest-api/)的 Microsoft Graph API 发布引用现有 SharePoint 文件的带卡片附件的邮件。 使用 Graph API 需要通过标准 `personal` `groupchat` `channel` OAuth 2.0 授权流获取对用户的 OneDrive 文件夹 (和文件) 或团队频道 (中的文件) 的访问权限。 此方法适用于所有 Teams 范围。
+可以使用 Microsoft Graph API 发布包含卡片附件的邮件，这些附件引用现有 SharePoint 文件[，OneDrive SharePoint。](/onedrive/developer/rest-api/) 使用 Graph API 需要通过标准 `personal` `groupchat` `channel` OAuth 2.0 授权流获取对用户的 OneDrive 文件夹 (和文件) 或团队通道 (中的文件) 的访问权限。 此方法适用于所有Teams范围。
 
-## <a name="using-the-teams-bot-apis"></a>使用 Teams 自动程序 API
+## <a name="using-the-teams-bot-apis"></a>使用Teams程序 API
 
 > [!NOTE]
 > 此方法仅在上下文中 `personal` 有效。 它在 或 上下文中 `channel` `groupchat` 不起作用。
 
-机器人可以使用 Teams API 与上下文中的用户直接发送和接收文件（也称为个人 `personal` 聊天）。 这允许你实现费用报告、图像识别、文件存档、电子签名以及涉及直接处理文件内容的其他方案。 Teams 中共享的文件通常显示为卡片，并允许丰富的应用内查看。
+自动程序可以直接在上下文中与用户一起发送和接收文件（也称为个人聊天）。使用 Teams `personal` API。 这允许你实现费用报告、图像识别、文件存档、电子签名以及涉及直接处理文件内容的其他方案。 通常，Teams共享的文件显示为卡片，并允许丰富的应用内查看。
 
-以下各节介绍如何通过直接用户交互（如发送消息）来发送文件内容。 此 API 作为 Microsoft Teams 自动程序平台的一部分提供。
+以下各节介绍如何通过直接用户交互（如发送消息）来发送文件内容。 此 API 作为自动程序平台的一Microsoft Teams提供。
 
 ### <a name="configure-your-bot-to-support-files"></a>配置自动程序以支持文件
 
@@ -46,7 +46,7 @@ ms.locfileid: "52020651"
 
 ### <a name="receiving-files-in-personal-chat"></a>在个人聊天中接收文件
 
-当用户将文件发送到自动程序时，文件将首先上传到用户的 OneDrive for Business 存储。 然后，自动程序将收到一条消息活动，通知您用户上载。 活动将包含文件元数据，例如其名称和内容 URL。 可以直接从此 URL 读取，以提取其二进制内容。
+当用户将文件发送到自动程序时，该文件将首先上载到用户的OneDrive for Business存储。 然后，自动程序将收到一条消息活动，通知您用户上载。 活动将包含文件元数据，例如其名称和内容 URL。 可以直接从此 URL 读取，以提取其二进制内容。
 
 #### <a name="message-activity-with-file-attachment-example"></a>包含文件附件的邮件活动示例
 
@@ -70,8 +70,8 @@ ms.locfileid: "52020651"
 
 | 属性 | 用途 |
 | --- | --- |
-| `downloadUrl` | 用于提取文件内容的 OneDrive URL。 可以直接从此 URL `HTTP GET` 发出 。 |
-| `uniqueId` | 唯一文件 ID。 如果用户向自动程序发送文件，这将是 OneDrive 驱动器项 ID。 |
+| `downloadUrl` | OneDrive用于提取文件内容的 URL。 可以直接从此 URL `HTTP GET` 发出 。 |
+| `uniqueId` | 唯一文件 ID。 如果用户将文件OneDrive自动程序，这将是驱动器项 ID。 |
 | `fileType` | 文件扩展名类型，如 pdf 或 docx。 |
 
 作为最佳实践，您应通过向用户发送回一条消息来确认文件上载。
@@ -117,13 +117,13 @@ ms.locfileid: "52020651"
 | 属性 | 用途 |
 | --- | --- |
 | `description` | 文件的说明。 可能会向用户显示以描述其用途或汇总其内容。 |
-| `sizeInBytes` | 为用户提供估计的文件大小和在 OneDrive 中将占用的空间量。 |
+| `sizeInBytes` | 为用户提供估计的文件大小及其在文件空间OneDrive。 |
 | `acceptContext` | 当用户接受文件时，将静默传输到机器人的其他上下文。 |
 | `declineContext` | 当用户拒绝文件时将静默传输到机器人的其他上下文。 |
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>当用户接受文件时调用活动
 
-当用户接受文件时，会向机器人发送调用活动。 它包含 OneDrive for Business 占位符 URL，然后自动程序可以向 中发出 以 `PUT` 传输文件内容。 有关上传到 OneDrive URL 的信息，请阅读以下文章： [将字节上传到上传会话](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)。
+当用户接受文件时，会向机器人发送调用活动。 它包含一OneDrive for Business占位符 URL，然后机器人可以向 中发出 以 `PUT` 传输文件内容。 有关上载到 url 的信息，OneDrive阅读本文：Upload[字节数](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)。
 
 以下示例显示自动程序将收到的调用活动的精简版本：
 
@@ -165,7 +165,7 @@ ms.locfileid: "52020651"
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>通知用户已上传文件
 
-将文件上传到用户的 OneDrive 后，无论是使用上述机制还是 OneDrive 用户委派 API，都应向用户发送确认消息。 此邮件应包含用户可单击的附件，以预览、在 OneDrive 中打开或 `FileCard` 本地下载。
+将文件上载到用户OneDrive，无论使用上述机制还是 OneDrive 用户委派 API，都应向用户发送确认消息。 此邮件应包含用户可单击的附件，以预览该附件、在 OneDrive 中打开它或 `FileCard` 在本地下载。
 
 ```json
 {
@@ -185,7 +185,7 @@ ms.locfileid: "52020651"
 
 | 属性 | 用途 |
 | --- | --- |
-| `uniqueId` | OneDrive/SharePoint 驱动器项 ID。 |
+| `uniqueId` | OneDrive/SharePoint驱动器项 ID。 |
 | `fileType` | 文件类型，如 pdf 或 docx。 |
 
 ### <a name="basic-example-in-c"></a>C 中的基本示例#

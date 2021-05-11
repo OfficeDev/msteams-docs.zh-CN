@@ -1,6 +1,6 @@
 ---
 title: 使用自动程序发送和接收消息
-description: 介绍如何在 Microsoft Teams 中通过机器人发送和接收消息
+description: 介绍如何在邮件中通过自动程序发送和接收Microsoft Teams
 ms.topic: overview
 localization_priority: Normal
 keywords: teams 自动程序消息
@@ -12,7 +12,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020665"
 ---
-# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与 Microsoft Teams 机器人对话
+# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与自动程序Microsoft Teams对话
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -41,22 +41,22 @@ ms.locfileid: "52020665"
 
 每条消息是类型 `messageType: message` 的一个 `Activity` 对象。 当用户发送消息时，Teams 会将消息发布给你的机器人。具体地说，它会发送一个 JSON 对象给你的机器人的消息传递端点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-机器人还支持事件样式的消息。 有关详细信息 [，请参阅](~/resources/bot-v3/bots-notifications.md) 处理 Microsoft Teams 中的机器人事件。 语音当前不受支持。
+机器人还支持事件样式的消息。 有关[更多详细信息，](~/resources/bot-v3/bots-notifications.md)请参阅Microsoft Teams中的自动程序事件。 语音当前不受支持。
 
 消息在所有范围内大部分都相同，但在 UI 中访问自动程序的方式和你需要了解的场景差异存在差异。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理，使机器人能够与 Teams 和其他频道进行通信。 Bot Builder SDK 提供了轻松访问此 API、管理对话流和状态的其他功能，以及合并认知服务（如自然语言处理和 NLP (）) 。
+基本对话通过 Bot Framework 连接器进行处理，该连接器是一个 REST API，使机器人能够Teams和其他频道进行通信。 Bot Builder SDK 提供了轻松访问此 API、管理对话流和状态的其他功能，以及合并认知服务（如自然语言处理和 NLP (）) 。
 
 ## <a name="message-content"></a>邮件内容
 
-机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。 可以在自动程序 Microsoft Teams 设置页中指定自动程序可以处理的内容类型。
+机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。 你可以指定自动程序可以在自动程序Microsoft Teams设置页中处理的内容类型。
 
-| 格式 | 从用户到机器人  | 从自动程序到用户 |  注意 |
+| Format | 从用户到机器人  | 从自动程序到用户 |  注释 |
 | --- | :---: | :---: | --- |
 | 格式文本  | ✔ | ✔ |  |
 | 图片 | ✔ | ✔ | PNG、JPEG 或 GIF 格式的最大大小为 1024×1024 和 1 MB;不支持动态 GIF |
-| 卡 | ✖ | ✔ | 有关受支持的 [卡片，](~/task-modules-and-cards/cards/cards-reference.md) 请参阅 Teams 卡片参考 |
-| 表情符号 | ✖ | ✔ | Teams 当前支持通过 UTF-16 (表情符号，例如 U+1F600 用于面部)  |
+| 卡 | ✖ | ✔ | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考 |
+| 表情符号 | ✖ | ✔ | Teams UTF-16 支持表情符号 (如 U+1F600 用于面部)  |
 |
 
 有关自动程序框架 (团队中的机器人基于) 支持的机器人交互类型详细信息，请参阅适用于[.NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true)的 Bot Builder SDK 和适用于 Node.js[](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true)的 Bot [Builder SDK](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)文档中有关对话流和相关概念的 Bot Framework 文档。
@@ -66,7 +66,7 @@ ms.locfileid: "52020665"
 可以设置 [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) 的可选属性 `message` ，以控制邮件文本内容的呈现方式。 有关 [自动程序消息](~/resources/bot-v3/bots-message-format.md) 中支持的格式的详细说明，请参阅邮件格式。
 可以设置可选 [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) 属性来控制邮件文本内容的呈现方式。
 
-有关 Teams 如何支持团队中的文本格式的详细信息，请参阅自动 [程序消息中的文本格式](~/resources/bot-v3/bots-text-formats.md)。
+有关团队中文本格式Teams的详细信息，请参阅自动[程序消息中的文本格式](~/resources/bot-v3/bots-text-formats.md)。
 
 有关邮件中卡片格式的信息，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。
 
@@ -90,7 +90,7 @@ ms.locfileid: "52020665"
 
 对于传入消息，机器人会收到 [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) 类型 为 的对象 `messageType: message` 。 虽然对象可以包含其他类型的信息（如发送到机器人的频道更新），但类型 `Activity` 表示机器人[](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` 和用户之间的通信。
 
-自动程序会收到一个有效负载，其中包含用户消息，以及有关用户、消息源和 Teams 信息的其他 `Text` 信息。 注意：
+自动程序会收到包含用户消息的有效负载，以及有关用户的其他信息、消息源和Teams `Text` 信息。 注意：
 
 * `timestamp` 邮件的日期和时间（使用协调世界时 (UTC) 
 * `localTimestamp` 发件人时区的邮件日期和时间
@@ -154,16 +154,16 @@ ms.locfileid: "52020665"
 > [!NOTE]
 > 入站邮件的文本字段有时包含提及。 请务必正确检查并去除这些复选框。 有关详细信息，请参阅 [提及](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions)。
 
-## <a name="teams-channel-data"></a>Teams 频道数据
+## <a name="teams-channel-data"></a>Teams频道数据
 
-对象 `channelData` 包含特定于 Teams 的信息，是团队和频道 ID 的权威性来源。 应缓存这些 ID，并用作本地存储的密钥。
+对象 `channelData` 包含Teams特定的信息，是团队和频道的明确来源。 应缓存这些 ID，并用作本地存储的密钥。
 
 `channelData`对象不包含在个人对话中的邮件中，因为这些事件发生在任何频道之外。
 
 发送给自动程序的活动中的典型 channelData 对象包含以下信息：
 
-* `eventType` Teams 事件类型;仅在通道修改 [事件的情况下传递](~/resources/bot-v3/bots-notifications.md#channel-updates)
-* `tenant.id` Azure Active Directory 租户 ID;在所有上下文中传递
+* `eventType`Teams事件类型;仅在通道修改[事件的情况下传递](~/resources/bot-v3/bots-notifications.md#channel-updates)
+* `tenant.id`Azure Active Directory租户 ID;在所有上下文中传递
 * `team` 仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id` 频道的 GUID
   * `name` 团队名称;仅在团队重命名 [事件的情况下传递](~/resources/bot-v3/bots-notifications.md#team-name-updates)
@@ -193,7 +193,7 @@ ms.locfileid: "52020665"
 
 ### <a name="net-example"></a>.NET 示例
 
-[Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet 程序包提供一个专用对象，该对象公开用于 `TeamsChannelData` 访问特定于 Teams 的信息的属性。
+[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)包提供了一个专用对象，该对象公开用于访问Teams `TeamsChannelData` 特定信息的属性。
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();

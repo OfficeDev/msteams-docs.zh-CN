@@ -26,7 +26,7 @@ ms.locfileid: "52068757"
 * 为邮件扩展配置自动程序。
 * 旁加载和测试邮件扩展Teams。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 确保你了解如何设置和构建简单的Teams应用程序。 有关详细信息，请参阅创建[你的第一个Microsoft Teams Hello， World！"应用](../build-your-first-app/build-and-run.md)。
 

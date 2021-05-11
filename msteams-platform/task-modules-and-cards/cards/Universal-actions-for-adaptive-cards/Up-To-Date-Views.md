@@ -121,7 +121,7 @@ ms.locfileid: "52088825"
 2. 机器人在对话中发送审批基本卡。
 3. 对话中的所有其他用户将看到机器人发送的卡片。 为 Megan 和 Nestor 触发自动刷新，这些用户现在看到用户特定卡片包含"批准"或"拒绝"按钮，因为用户 MRIs 将添加到自适应卡片的 属性 `userIds` `refresh` 中的列表中。
 
-    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="特定于用户的视图":::
+    :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="用户特定视图":::
 
 4. Nestor **选择使用** 进行电源的"批准"按钮 `Action.Execute` 。 机器人获取一 `adaptiveCard/action` 个调用请求，它可以返回自适应卡片作为响应。
 5. 机器人使用更新的卡片触发邮件编辑，其中显示 Nestor 已批准请求，而 Megan 的审批挂起。
@@ -261,5 +261,5 @@ ms.locfileid: "52088825"
 
 ## <a name="see-also"></a>另请参阅
 
-* [使用自适应卡片的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
-* [特定于用户的视图](User-Specific-Views.md)
+* [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
+* [用户特定视图](User-Specific-Views.md)

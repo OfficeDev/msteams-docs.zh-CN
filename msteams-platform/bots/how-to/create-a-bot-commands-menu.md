@@ -1,7 +1,7 @@
 ---
 title: 为自动程序创建命令菜单
 author: clearab
-description: 如何为 Microsoft Teams 自动程序创建命令菜单
+description: 如何为自动程序创建Microsoft Teams菜单
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
@@ -164,7 +164,7 @@ ms.locfileid: "52020910"
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-可以使用 Microsoft Bot Framework 提供的静态方法分析邮件文本的 **\@ "** 提及"部分。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
+可以使用邮件文本的 **\@ "提及**"部分分析邮件文本的静态Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
 
 用于C#"提及"部分的代码如下所示： **\@**
 

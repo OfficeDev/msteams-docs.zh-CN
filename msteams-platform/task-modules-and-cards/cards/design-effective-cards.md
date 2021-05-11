@@ -59,7 +59,7 @@ ms.locfileid: "52101735"
 
 :::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="示例显示自适应卡片摘要卡片。" border="false":::
 
-### <a name="media"></a>Media
+### <a name="media"></a>媒体
 
 在你想要组合文本和媒体（如音频或视频）时使用。
 

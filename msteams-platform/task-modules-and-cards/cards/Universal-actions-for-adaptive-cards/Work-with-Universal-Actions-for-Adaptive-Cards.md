@@ -1,5 +1,5 @@
 ---
-title: 使用自适应卡片的通用操作
+title: 使用自适应卡的通用操作
 description: 使用自适应卡片的通用操作。
 ms.topic: conceptual
 localization_priority: Normal
@@ -10,7 +10,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/29/2021
 ms.locfileid: "52088821"
 ---
-# <a name="work-with-universal-actions-for-adaptive-cards"></a>使用自适应卡片的通用操作
+# <a name="work-with-universal-actions-for-adaptive-cards"></a>使用自适应卡的通用操作
 
 自适应卡片的通用操作提供了一种为用户和用户实现基于自适应卡片Teams Outlook。 本文档涵盖以下内容：
 

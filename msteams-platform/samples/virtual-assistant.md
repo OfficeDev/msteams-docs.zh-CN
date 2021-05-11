@@ -1,6 +1,6 @@
 ---
-title: 创建虚拟助理
-description: 如何创建虚拟助理机器人和技能以在 Microsoft Teams 中使用
+title: 创建虚拟助手
+description: 如何创建虚拟助理机器人和技能以用于Microsoft Teams
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 虚拟助理机器人
@@ -11,9 +11,9 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2021
 ms.locfileid: "52058675"
 ---
-# <a name="create-virtual-assistant"></a>创建虚拟助理 
+# <a name="create-virtual-assistant"></a>创建虚拟助手 
 
-虚拟助理是一个 Microsoft 开放源代码模板，它使您能够创建可靠的对话解决方案，同时保持对用户体验、组织品牌和必要数据的完全控制。 虚拟[助理核心](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template)模板是基本构建基块，将构建虚拟助理所需的 Microsoft 技术汇集在一起，包括[Bot Framework SDK、Language](https://github.com/microsoft/botframework-sdk) [Understanding (MICROSOFT) ](https://www.luis.ai/) [、QnA Maker。](https://www.qnamaker.ai/) 它还整合了基本功能，包括技能注册、链接帐户、基本对话意图，以便为用户提供一系列无缝交互和体验。 此外，模板功能包括可重用对话技能的丰富 [示例](https://microsoft.github.io/botframework-solutions/overview/skills)。  个人技能集成在虚拟助理解决方案中，以实现多个方案。 使用 Bot Framework SDK，技能以源代码形式呈现，让你可以根据需要进行自定义和扩展。 有关 Bot Framework 技能详细信息，请参阅 [什么是 Bot Framework 技能](https://microsoft.github.io/botframework-solutions/overview/skills/)。 本文档将指导你了解组织的虚拟助理实施注意事项、如何创建以 Teams 为中心的虚拟助理、相关示例、代码示例和虚拟助理的限制。
+虚拟助理是一个 Microsoft 开放源代码模板，它使您能够创建可靠的对话解决方案，同时保持对用户体验、组织品牌和必要数据的完全控制。 虚拟[助理核心](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template)模板是基本构建基块，将构建虚拟助理所需的 Microsoft 技术汇集在一起，包括[Bot Framework SDK、Language](https://github.com/microsoft/botframework-sdk) [Understanding (MICROSOFT) ](https://www.luis.ai/) [、QnA Maker。](https://www.qnamaker.ai/) 它还整合了基本功能，包括技能注册、链接帐户、基本对话意图，以便为用户提供一系列无缝交互和体验。 此外，模板功能包括可重用对话技能的丰富 [示例](https://microsoft.github.io/botframework-solutions/overview/skills)。  个人技能集成在虚拟助理解决方案中，以实现多个方案。 使用 Bot Framework SDK，技能以源代码形式呈现，让你可以根据需要进行自定义和扩展。 有关 Bot Framework 技能详细信息，请参阅 [什么是 Bot Framework 技能](https://microsoft.github.io/botframework-solutions/overview/skills/)。 本文档将指导您了解组织的虚拟助理实现注意事项、如何创建Teams虚拟助理的相关示例、代码示例和虚拟助理的限制。
 下图显示了虚拟助理的概述：
 
 ![虚拟助手概述图](../assets/images/bots/virtual-assistant/overview.png)
@@ -32,9 +32,9 @@ ms.locfileid: "52058675"
 
 ![中央团队负责维护助手，业务职能团队贡献技能](../assets/images/bots/virtual-assistant/business-functions.png)
 
-## <a name="create-a-teams-focused-virtual-assistant"></a>创建以 Teams 为中心的虚拟助理
+## <a name="create-a-teams-focused-virtual-assistant"></a>创建Teams虚拟助理
 
-Microsoft [发布了一Visual Studio](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) 虚拟助手和技能的模板。 使用Visual Studio模板，可以创建虚拟助理，该虚拟助理由基于文本的体验提供支持，支持具有操作限制的富卡片。 我们已增强基本Visual Studio模板，以包含 Microsoft Teams 平台功能并增强出色的 Teams 应用体验。 一些功能包括对丰富的自适应卡片、任务模块、团队或群聊以及消息传递扩展的支持。 有关将虚拟助理扩展到 Microsoft Teams 中有关详细信息，请参阅[教程：将虚拟助理扩展到 Microsoft Teams。](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)    
+Microsoft[发布了一Visual Studio](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)虚拟助手和技能的模板。 使用Visual Studio模板，可以创建虚拟助理，该虚拟助理由基于文本的体验提供支持，支持有限的富卡片和操作。 我们增强了基本Visual Studio模板，Microsoft Teams出色的平台功能，并Teams出色的应用体验。 一些功能包括对丰富的自适应卡片、任务模块、团队或群聊以及消息传递扩展的支持。 有关将虚拟助理扩展到虚拟Microsoft Teams，请参阅[教程：扩展虚拟助理以Microsoft Teams。](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)    
 下图显示了虚拟助理解决方案高级图表：
 
 ![虚拟助理解决方案高级关系图](../assets/images/bots/virtual-assistant/high-level-diagram.png)
@@ -223,7 +223,7 @@ Microsoft [发布了一Visual Studio](https://marketplace.visualstudio.com/items
 
 ### <a name="handle-collaborative-app-scopes"></a>处理协作应用范围
 
-Teams 应用可以存在于多个范围，包括一对一聊天、群聊和频道。 核心虚拟助理模板专为一对一聊天设计。 作为载入体验的一部分，虚拟助理会提示用户输入名称并保持用户状态。 由于该载入体验不适合群聊或频道范围，因此已将其删除。
+Teams应用可以存在于多个范围，包括一对一聊天、群聊和频道。 核心虚拟助理模板专为一对一聊天设计。 作为载入体验的一部分，虚拟助理会提示用户输入名称并保持用户状态。 由于该载入体验不适合群聊或频道范围，因此已将其删除。
 
 技能应处理多个范围的活动，如一对一聊天、群聊和频道对话。 如果其中任何范围不受支持，技能必须通过相应的消息进行响应。
 
@@ -333,7 +333,7 @@ Teams 应用可以存在于多个范围，包括一对一聊天、群聊和频�
 
 ## <a name="example"></a>示例
 
-以下示例演示如何将"预订会议室"应用模板转换为虚拟助理技能：会议室预订是一种 Microsoft Teams，允许用户从当前时间开始快速查找和预留会议室 30、60 或 90 分钟。 默认时间为 30 分钟。 Book-a-room bot scopes to personal o**r 1：1 conversations. 下图显示具有书籍的虚拟助理 **的聊天室技能** ：
+以下示例演示如何将"预订会议室"应用模板转换为虚拟助理技能：会议室是一种 Microsoft Teams，它允许用户从当前时间开始快速查找和预留会议室 30、60 或 90 分钟。 默认时间为 30 分钟。 Book-a-room bot scopes to personal o**r 1：1 conversations. 下图显示具有书籍的虚拟助理 **的聊天室技能** ：
 
 ![具有"预订会议室"技能的虚拟助理](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
@@ -341,7 +341,7 @@ Teams 应用可以存在于多个范围，包括一对一聊天、群聊和频�
 
 ### <a name="skill-manifest"></a>技能清单
 
-技能清单是公开技能的消息终结点、ID、名称和其他相关元数据的 JSON 文件。 此清单不同于在 Microsoft Teams 中旁加载应用的清单。 虚拟助手需要此文件的路径作为输入来附加技能。 我们已将以下清单添加到机器人的 wwwroot 文件夹中。
+技能清单是公开技能的消息终结点、ID、名称和其他相关元数据的 JSON 文件。 此清单不同于在应用中旁加载应用的Microsoft Teams。 虚拟助手需要此文件的路径作为输入来附加技能。 我们已将以下清单添加到机器人的 wwwroot 文件夹中。
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..
@@ -581,4 +581,4 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 - [预订聊天室](app-templates.md#book-a-room)
 
-- [Microsoft Teams 机器人](../bots/what-are-bots.md)
+- [Microsoft Teams自动程序](../bots/what-are-bots.md)

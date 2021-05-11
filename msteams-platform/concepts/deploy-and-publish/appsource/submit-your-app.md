@@ -19,7 +19,7 @@ ms.locfileid: "52101882"
 
 若要将应用发布到 Teams 应用商店和 AppSource，必须先[设置开发者帐户](https://docs.microsoft.com/office/dev/store/open-a-developer-account)。
 
-## <a name="submit-your-app"></a>提交应用
+## <a name="submit-your-app"></a>提交你的应用
 
 若要提交应用，请按照以下 [分步应用商店提交说明操作](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)。 创建新提交时，指定你要提交Teams应用。
 

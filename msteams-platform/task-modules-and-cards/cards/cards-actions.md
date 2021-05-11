@@ -15,7 +15,7 @@ ms.locfileid: "52088792"
 
 聊天机器人和邮件扩展中使用的Teams支持以下活动 () [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) 类型。 请注意，这些操作不同于 `potentialActions` Office 365连接器卡的这些操作。
 
-| 类型 | Action |
+| 类型 | 操作 |
 | --- | --- |
 | `openUrl` | 在默认浏览器中打开 URL。 |
 | `messageBack` | 从单击按钮或点击卡片 (用户向聊天机器人发送消息和负载) 并将单独的消息发送到聊天流。 |

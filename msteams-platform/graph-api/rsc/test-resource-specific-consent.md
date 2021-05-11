@@ -1,6 +1,6 @@
 ---
-title: 在 Teams 中测试特定于资源的同意权限
-description: 使用 Postman 在 Teams 中测试特定于资源的同意的详细信息
+title: 在应用程序内测试特定于资源的许可Teams
+description: 使用 Postman 在 Teams中测试资源特定许可的详细信息
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
@@ -13,15 +13,15 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52075617"
 ---
-# <a name="test-resource-specific-consent-permissions-in-teams"></a>在 Teams 中测试特定于资源的同意权限
+# <a name="test-resource-specific-consent-permissions-in-teams"></a>在应用程序内测试特定于资源的许可Teams
 
-RSC (特定于资源的) 是 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定团队。 有关详细信息，请参阅 [RSC](resource-specific-consent.md) (特定) — Microsoft Teams Graph API。
+RSC (特定于资源的) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定团队。 有关详细信息，请参阅[资源特定的同意 (RSC) — Microsoft Teams Graph API](resource-specific-consent.md)。
 
 > [!NOTE]
-> 若要测试 RSC 权限，Teams 应用清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
+> 若要测试 RSC 权限，Teams清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
 >
 > - **id**：Azure AD 应用 ID，请参阅在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
-> - **resource**：任何字符串，请参阅更新  [Teams 应用清单 中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
+> - **resource**：任何字符串，请参阅更新你的Teams [清单中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **应用程序权限**：应用的 RSC 权限，请参阅 [特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 
 ```json
@@ -57,9 +57,9 @@ RSC (特定于资源的) 是 Microsoft Teams 和 Graph API 集成，使你的应
 * `azureADAppId`：应用的 Azure AD 应用 ID。
 * `azureADAppSecret`：你的 Azure AD 应用密码。
 * `token_scope`：获取令牌需要 范围。 将值设置为 https://graph.microsoft.com/.default 。
-* `teamGroupId`：可以从 Teams 客户端获取团队组 ID，如下所示：
+* `teamGroupId`：可以从客户端获取团队Teams ID，如下所示：
 
-    1. 在 Teams 客户端中，从 **最** 左侧导航栏中选择 Teams。
+    1. 在 Teams 客户端 **中，Teams** 左侧导航栏中选择"导航"。
     2. 从下拉菜单中选择安装应用的团队。
     3. 选择" **更多选项"** 图标 (&#8943;) 。
     4. 选择 **获取团队链接**。 

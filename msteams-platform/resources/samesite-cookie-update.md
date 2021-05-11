@@ -39,7 +39,7 @@ Google Chrome 版本 51 引入了 SetCookie SameSite 规范作为 *可选* 属�
 
 Chrome 80 计划于 2020 年 2 月发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 可以将三个值传递到更新的 SameSite 属性 *：Strict、Lax* 或 *None*。  未指定 SameSite 属性的 Cookie 将默认为 `SameSite=Lax` 。
 
-|Setting | 强制 | 值 |属性规范 |
+|设置 | 强制 | 值 |属性规范 |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie 仅在第一方上下文中和HTTP GET 请求中自动发送。 SameSite Cookie 将在跨站点子请求（如调用加载图像或 iframe）上被保留，但在用户从外部网站导航到 URL 时（例如，通过以下链接）发送。| **默认** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |浏览器仅发送来自将 cookie 设置为 (的网站的第一方上下文请求的) 。 如果请求来自与当前位置不同的 URL，则不发送任何用 属性标记 `Strict` 的 Cookie。| 可选 |`Set-Cookie: key=value; SameSite=Strict`|

@@ -13,7 +13,7 @@ ms.locfileid: "52020854"
 ---
 # <a name="configure-identity-providers"></a>配置标识提供程序
 
-## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>配置应用程序以将 Azure Active Directory 用作标识提供程序
+## <a name="configuring-an-application-to-use-azure-active-directory-as-an-identity-provider"></a>将应用程序配置为将Azure Active Directory用作标识提供程序
 
 支持 OAuth 2.0 的身份提供程序不会对来自未知应用程序的请求进行身份验证;应用程序必须提前注册。 若要使用 Azure AD 完成此操作，请按照以下步骤操作：
 
@@ -21,7 +21,7 @@ ms.locfileid: "52020854"
 
 2. 选择你的应用以查看其属性，或单击"新建注册"按钮。 查找 **应用的重定向 URI** 部分。
 
-3. 在下拉菜单中，确保 **已选择"Web"。** 将 URL 更新到身份验证终结点。 对于 GitHub 上的 TypeScript/Node.js 和 C# 示例应用，重定向 URL 将类似于：
+3. 在下拉菜单中，确保 **已选择"Web"。** 将 URL 更新到身份验证终结点。 对于 TypeScript/Node.js 和 C# 上的示例GitHub，重定向 URL 将类似于：
 
     重定向 URL： `https://<hostname>/bot-auth/simple-start`
 

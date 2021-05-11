@@ -127,4 +127,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 * [用户中的自适应卡片Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
-* [使用自适应卡片的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
+* [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)

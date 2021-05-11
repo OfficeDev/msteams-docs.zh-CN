@@ -1,7 +1,7 @@
 ---
 title: " Microsoft Teams 中的自动程序"
 author: clearab
-description: Microsoft Teams 中的聊天机器人概述。
+description: 自动程序在Microsoft Teams。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
@@ -36,15 +36,15 @@ ms.locfileid: "52075659"
 
 此外，机器人是具有对话界面的应用。 可以使用文本、交互式卡片和语音与机器人交互。 根据对话是频道还是群聊对话，还是一对一对话，机器人的行为会有所不同。 对话通过 Bot Framework 连接器处理。 有关详细信息，请参阅 [对话基础知识](~/bots/how-to/conversations/conversation-basics.md)。
 
-自动程序需要上下文信息（如用户配置文件详细信息）来访问相关内容并增强机器人体验。 有关详细信息，请参阅获取 [Teams 上下文](~/bots/how-to/get-teams-context.md)。 
+自动程序需要上下文信息（如用户配置文件详细信息）来访问相关内容并增强机器人体验。 有关详细信息，请参阅获取[Teams上下文](~/bots/how-to/get-teams-context.md)。 
 
-还可使用 Graph API 或 Teams 自动程序 API 通过自动程序发送和接收文件。 有关详细信息，请参阅通过自动 [程序发送和接收文件](~/bots/how-to/bots-filesv4.md)。
+您还可以使用自动程序 API 或自动程序 API Graph发送和接收Teams文件。 有关详细信息，请参阅通过自动 [程序发送和接收文件](~/bots/how-to/bots-filesv4.md)。
 
-此外，速率限制用于优化用于 Teams 应用程序的聊天机器人。 为了保护 Microsoft Teams 及其用户，机器人 API 提供了传入请求的速率限制。 有关详细信息，请参阅在 [Teams 中通过速率限制优化机器人](~/bots/how-to/rate-limit.md)。
+此外，速率限制还用于优化用于应用程序应用程序的Teams程序。 为了保护Microsoft Teams用户，自动程序 API 为传入请求提供了速率限制。 有关详细信息，请参阅使用 Teams[中的速率限制优化自动程序](~/bots/how-to/rate-limit.md)。
 
-借助用于通话和联机会议的 Microsoft Graph API，Microsoft Teams 应用现在可以使用语音和视频与用户进行交互。 有关详细信息，请参阅 [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。 
+借助 Microsoft Graph API 进行呼叫和联机会议，Microsoft Teams应用现在可以使用语音和视频与用户进行交互。 有关详细信息，请参阅 [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。 
 
-可以使用 Teams 机器人 API 获取聊天或团队的一个或多个成员的信息。 有关详细信息，请参阅对 [Teams 自动程序 API 所做的更改，以提取团队或聊天成员](~/resources/team-chat-member-api-changes.md)。
+可以使用聊天Teams API 获取聊天或团队的一个或多个成员的信息。 有关详细信息，请参阅[对自动程序 API Teams获取团队或聊天成员的更改](~/resources/team-chat-member-api-changes.md)。
 
 ## <a name="see-also"></a>另请参阅
 
