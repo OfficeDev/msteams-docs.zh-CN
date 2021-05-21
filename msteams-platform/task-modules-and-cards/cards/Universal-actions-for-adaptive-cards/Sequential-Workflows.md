@@ -4,12 +4,12 @@ description: 使用通用操作的顺序工作流的示例
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 4b37e8603d34c070bdef3003c2f8ccb0bb41550b
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 7f285bf76aac4f0ca276321aee2ce4b4e5c3e7e4
+ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088822"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52555400"
 ---
 # <a name="sequential-workflows"></a>顺序工作流
 
@@ -118,7 +118,7 @@ var card = JsonConvert.DeserializeObject(cardJson);
 var adaptiveCardResponse = JObject.FromObject(new
  {
     statusCode = 200,
-    type = "application/vnd.microsoft.card.adaptive",
+    type = "application/vnd.microsoft.adaptive.card",
     value = card
  });
 ```

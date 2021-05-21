@@ -4,16 +4,16 @@ description: 若要将应用发布到 Microsoft Teams 应用商店，你需要�
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 768a711bc60c11c17c7016f9ec63a8a09915a6e5
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: ac31ff3d46a87814edfe2b7ec789d183e9c02e2f
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101869"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566038"
 ---
 # <a name="create-a-partner-center-developer-account"></a>创建合作伙伴中心开发人员帐户
 
-若要将应用发布到 Microsoft Teams 应用商店，你必须[设置合作伙伴中心开发人员帐户](https://docs.microsoft.com/office/dev/store/open-a-developer-account)。 根据你的方案，你或许可以使用现有帐户。
+若要将应用发布到 Microsoft Teams 应用商店，你必须[设置合作伙伴中心开发人员帐户](/office/dev/store/open-a-developer-account)。 根据你的方案，你或许可以使用现有帐户。
 
 ## <a name="faq"></a>常见问题
 
@@ -194,11 +194,11 @@ ms.locfileid: "52101869"
 
 向用户 <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> 以下详细信息：
 
-* **主题行**：合作伙伴中心帐户问题 *<your app name>*
+* **主题行**：合作伙伴中心帐户问题 *<your app name>* 。
 * **电子邮件正文**：
-    * 支持票证编号
-    * 卖家 ID
-    * 问题解决的屏幕截图 (如果可能) 
+    * 支持票证编号。
+    * 卖家 ID。
+    * 如果可能，问题 (屏幕截图) 。
 
 <br>
 
@@ -210,8 +210,8 @@ ms.locfileid: "52101869"
 
 以下资源还可以提供帮助：
 
-* [Microsoft 365应用提交常见问题解答](/office/dev/store/appsource-submission-faq)
-* [商业市场文档](/azure/marketplace/)
+* [Microsoft 365应用提交常见问题解答](/office/dev/store/appsource-submission-faq)。
+* [商业市场文档](/azure/marketplace/)。
 
 <br>
 

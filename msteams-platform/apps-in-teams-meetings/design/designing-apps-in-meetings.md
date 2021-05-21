@@ -5,12 +5,12 @@ description: 了解如何在会议Teams设计应用并获取 Microsoft Teams UI 
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 3f12ed711b14d2ea6d9fee541b98f20012d6cf21
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 0a888c333305e9caafcd0bac0e5549bf08ead424
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101448"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566024"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计会议Microsoft Teams扩展
 
@@ -74,9 +74,9 @@ ms.locfileid: "52101448"
 
 人们可能会使用"会议内"选项卡：
 
-* 提供详细的 (例如，评估候选人) 
-* 为会议参与者快速创建投票、调查或任务项
-* 显示与会议记录相关的 (例如，有关销售线索信息) 
+* 提供详细反馈。 例如，评估一个职位候选人。
+* 为会议参与者创建投票、调查或任务项。
+* 显示与会议相关的备注。 例如，有关销售线索的信息。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="示例演示如何在会议中的选项卡中显示投票内容。" border="false":::
 

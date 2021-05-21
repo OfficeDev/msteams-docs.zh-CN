@@ -5,12 +5,12 @@ keywords: teams 机器人上下文
 ms.topic: conceptual
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 154a276c65987955cfe20e5b7ce4ed2e8973cbfd
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: cda2e24816330964342b097f52bb955c8846c54a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020658"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566486"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>获取自动程序Microsoft Teams上下文
 
@@ -118,8 +118,6 @@ connector.fetchMembers(
 );
 ```
 
-另请参阅 [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
-
 ## <a name="fetch-user-profile-or-roster-in-personal-or-group-chat"></a>在个人或群组聊天中提取用户配置文件或名单
 
 你可以对任意个人聊天进行 API 调用，以获取与机器人聊天的用户的个人资料信息。
@@ -226,3 +224,7 @@ var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
     await context.PostAsync($"ClientInfo: clientinfo ");
 }
 ```
+
+## <a name="see-also"></a>另请参阅
+
+[Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。

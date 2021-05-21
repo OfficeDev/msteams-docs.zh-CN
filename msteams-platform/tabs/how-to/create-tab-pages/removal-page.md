@@ -6,12 +6,12 @@ keywords: teams 选项卡组频道可配置删除删除
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8f01780dce9aa0450169d4c699471bb2ac5bd9a0
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: e1a1f38a2bcb3b5bc4bc54f469c8727e44d8695e
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019585"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566668"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>修改或删除频道组选项卡
 
@@ -88,6 +88,6 @@ ms.locfileid: "52019585"
 执行删除处理程序后，或 `removeEvent.notifySuccess()` `removeEvent.notifyFailure()` 通知Teams删除结果。
 
 >[!NOTE]
->为了确保授权用户对选项卡的控制不会受到阻止，Teams成功和失败时删除选项卡。\
->Teams 5 秒后启用 **"** 删除"按钮，即使选项卡未调用 `setValidityState()` 。\
->当用户选择 **"删除**"Teams 30 秒后删除选项卡，无论操作是否已完成。
+> * 为了确保授权用户对选项卡的控制不会受到阻止，Teams成功和失败时删除选项卡。\
+> * Teams 5 秒后启用 **"** 删除"按钮，即使选项卡未调用 `setValidityState()` 。\
+> * 当用户选择 **"删除**"Teams 30 秒后删除选项卡，无论操作是否已完成。

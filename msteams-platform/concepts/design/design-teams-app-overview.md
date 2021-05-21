@@ -5,12 +5,12 @@ description: 了解如何设计Microsoft Teams应用。 资源包括Microsoft Te
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: ab311b6b9b8494308916ef602ee98785ab6de61e
-ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
+ms.openlocfilehash: 2f21872bd8c37026528ff6fde282e8c433d5e052
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52304024"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565114"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>设计Microsoft Teams应用
 
@@ -182,7 +182,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ## <a name="other-resources"></a>其他资源
 
-若要了解更多信息，请尝试以下资源之一。
+若要了解更多信息，请尝试以下资源之一：
 
 ### <a name="fluent-ui-documentation"></a>Fluent UI 文档
 

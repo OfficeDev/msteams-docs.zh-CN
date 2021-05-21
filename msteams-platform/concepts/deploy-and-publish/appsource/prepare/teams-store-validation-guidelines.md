@@ -4,16 +4,16 @@ description: 介绍提交到 AppSource 应用商店Teams应用 (应用) 必须�
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: df60cf9e4a173186fbacacc90621c2efb23ba17f
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 4daa8b027d7525f0fb3223c2000eee301043398a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230923"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565135"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams应用商店验证指南
 
-遵循这些准则会增加你的应用通过应用商店Microsoft Teams提交过程的可能性。 这些Teams准则[补充了](https://docs.microsoft.com/legal/marketplace/certification-policies)Microsoft 商业市场认证策略，并经常进行更新以反映新功能、用户反馈和业务规则更改。
+遵循这些准则会增加你的应用通过应用商店Microsoft Teams提交过程的可能性。 这些Teams准则[补充了](/legal/marketplace/certification-policies)Microsoft 商业市场认证策略，并经常进行更新以反映新功能、用户反馈和业务规则更改。
 
 > [!NOTE]
 > 某些指南可能不适用于你的应用。 例如，如果你的应用不包括自动程序，你可以忽略与机器人相关的指南。
@@ -33,11 +33,9 @@ ms.locfileid: "52230923"
 * 不得包含冒犯性或冒犯性术语。 该名称不得包含种族或文化不敏感的语言。
 * 必须是唯一的。 例如，你不能为同一名称和功能不同的区域列出多个应用。
 
-另请参阅 [：4.0 应用包和应用商店一览](#40-app-package-and-store-listing)
-
 ### <a name="12-suitable-for-workplace-consumption"></a>1.2 适合工作场所使用
 
-应用内容必须适用于常规工作场所使用，并遵守商业市场认证策略中列出的所有限制。 禁止与政治、时政、娱乐和长期娱乐相关的内容。 有关详细信息，请参阅商业 [市场认证策略](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content)。
+应用内容必须适用于常规工作场所使用，并遵守商业市场认证策略中列出的所有限制。 禁止与政治、时政、娱乐和长期娱乐相关的内容。 有关详细信息，请参阅商业 [市场认证策略](/legal/marketplace/certification-policies#10010-inappropriate-content)。
 
 你的应用必须促进组协作、提高个人工作效率或同时提高这两者。 用于团队绑定和社交的应用必须协作且专为多个参与者设计。 这些类型的应用也不应要求大量时间投资或对工作效率产生明显影响。
 
@@ -47,13 +45,13 @@ ms.locfileid: "52230923"
 
 ### <a name="14-feature-names"></a>1.4 功能名称
 
-按钮和其他 UI 文本中的应用功能名称不得与为 Teams 和其他 Microsoft 产品保留的术语冲突 (例如，"开始会议"、通话或"开始聊天") 。  如果无法完全避免这种情况，请包含你的应用名称，例如"开始 **Contoso 会议**"，而不是"**开始会议"。**
+按钮和其他 UI 文本中的应用功能名称不得与为 microsoft Teams和其他 Microsoft 产品保留的术语冲突。 例如，"**开始会议****"、"呼叫"** 或"**开始聊天"。** 如果无法完全避免这种情况，请包含你的应用名称，例如"开始 **Contoso 会议**"，而不是"**开始会议"。**
 
 ## <a name="20-security"></a>2.0 安全性
 
 ### <a name="21-microsoft-365-app-compliance-program"></a>2.1 Microsoft 365应用合规性计划
 
-应用[Microsoft 365合规性](https://docs.microsoft.com/microsoft-365-app-certification/overview)计划旨在帮助组织通过评估应用的安全性和合规性信息来评估和管理风险。 如果要将应用发布到应用商店Teams应用商店，则必须完成程序的以下层：
+应用[Microsoft 365合规性](/microsoft-365-app-certification/overview)计划旨在帮助组织通过评估应用的安全性和合规性信息来评估和管理风险。 如果要将应用发布到应用商店Teams应用商店，则必须完成程序的以下层：
 
 * [Publisher验证](/azure/active-directory/develop/publisher-verification-overview)：帮助管理员和最终用户了解与应用程序开发人员集成的应用程序开发人员Microsoft 标识平台。 完成后，Azure AD 对话框和其他屏幕上会显示一个蓝色Azure Active Directory (") "锁屏提醒。 有关详细信息，请参阅 [常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、 [如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)应用标记为发布者验证和发布者 [验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。
 * [Publisher证明](/microsoft-365-app-certification/docs/attestation)：一个共享常规、数据处理以及安全性和合规性信息以帮助潜在客户就使用你的应用做出明智决定的过程。
@@ -190,7 +188,7 @@ Teams应用必须在合理的时间范围内做出响应，这因功能而异。
 **应做：**
 
 * 使用 [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) 设置说明的格式。
-* 使用活动语音并直接与用户 (例如， *您可以 ...*) 。
+* 使用活动语音并直接与用户通话。 例如， *您可以 ...*。
 * 列出带项目符号的功能，以便更轻松地扫描说明。
 * 在用户安装应用之前，请清楚地描述列表和相关材料中所述的功能、功能和可交付结果的限制、条件或例外。 应用Teams的功能必须与一览描述的核心功能相关。
 * 包括帮助或支持链接。
@@ -267,7 +265,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ### <a name="48-localization"></a>4.8 本地化
 
-如果你的应用支持本地化，你的应用包必须包含一个文件，该文件具有基于语言设置显示Teams翻译。 该文件必须符合本地化Teams。 有关详细信息，请参阅本地化[Teams架构](~/concepts/build-and-test/apps-localization.md)
+如果你的应用支持本地化，你的应用包必须包含一个文件，该文件具有基于语言设置显示Teams翻译。 该文件必须符合本地化Teams。 有关详细信息，请参阅本地化[Teams架构](~/concepts/build-and-test/apps-localization.md)。
 
 ## <a name="50-tabs"></a>5.0 选项卡
 
@@ -296,7 +294,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
     * 页面页眉
     * 汉堡包菜单
 * 选项卡不应具有水平滚动。
-* 选项卡中的深层链接不能链接到外部网页，而是链接到外部网页Teams (例如任务模块或其他选项卡) 。
+* 选项卡中的深层链接不得链接到外部网页，而应链接到Teams。 例如，任务模块或其他选项卡。
 * 选项卡不应允许用户在外部导航Teams核心应用体验。
 
 ### <a name="54-usability"></a>5.4 可用性
@@ -305,10 +303,10 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * 用户必须能够撤消选项卡中的最后一个操作。
 * 个人上下文中的选项卡可以聚合来自应用的共享实例的内容。
 * 选项卡必须响应Teams主题。 当用户更改主题时，应用的主题必须反映选择。
-* 选项卡必须使用Teams样式的组件 (尽可能采用 Teams 字体、字体渐变、调色板、网格系统、运动、语音) 等。
+* 选项卡必须Teams样式的组件，如 Teams 字体、字体渐变、调色板、网格系统、动作、语音音调等。
 * 必须 **包含一个** 设置选项卡。
-* 选项卡必须Teams在 (内导航、对话框的位置和使用、信息层次结构等) 交互设计。
-* iframe 中的选项卡内容不得包含模拟 Teams 核心功能的功能 (例如机器人、消息传递扩展、呼叫、会议等) 。
+* 选项卡必须遵循Teams设计，如页面内导航、对话框的位置和使用、信息层次结构等。
+* iframe 中的选项卡内容不得包含模拟Teams功能的功能。 例如，机器人、消息传递扩展、呼叫、会议等。
 
 > [!TIP]
 >
@@ -339,7 +337,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * 仅通知机器人必须发送一条欢迎消息，传达将不会回复用户的消息。
 
 > [!TIP]
-> 在向单个用户发送的欢迎消息中，可进行一次环行导览，以有效概览自动程序以及任何其他应用功能。 包括允许用户尝试自动命令的按钮（例如， **创建任务**）。
+> 在向单个用户发送的欢迎消息中，可进行一次环行导览，以有效概览自动程序以及任何其他应用功能。 建议包括允许用户试用自动程序命令的按钮。 例如， **创建任务**。
 
 ### <a name="63-bot-message-spamming"></a>6.3 自动程序邮件垃圾邮件
 
@@ -403,7 +401,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 * 会议前和会议后屏幕必须遵守常规选项卡设计准则。 有关详细信息，请参阅设计[Teams指南](~/tabs/design/tabs.md)。
 * 选项卡不得具有水平滚动。
-* 选项卡在显示多个项目（例如， (10 多个投票或调查）时，应具有有序) 。 请参阅示例 [布局](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting)。
+* 当显示多个项目时，选项卡应具有有序布局。 例如，超过 10 次投票或调查。 请参阅示例 [布局](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting)。
 * 当导出调查或投票的结果时，应用必须通知用户"已成功下载结果"。
 
 ### <a name="92-in-meeting-experience"></a>9.2 会议内体验
@@ -429,7 +427,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ## <a name="100-notifications"></a>10.0 通知
 
-如果你的应用使用[Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications)提供的活动源 API，请确保它遵守以下准则。
+如果你的应用使用[Microsoft Graph](/graph/teams-send-activityfeednotifications)提供的活动源 API，请确保它遵守以下准则。
 
 ### <a name="101-general"></a>10.1 常规
 
@@ -456,6 +454,10 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 ## <a name="110-advertising"></a>11.0 Advertising
 
 应用不得在消息中显示广告，包括动态广告、横幅广告和广告。
+
+## <a name="see-also"></a>另请参阅
+
+[4.0 应用包和应用商店一览](#40-app-package-and-store-listing)
 
 ## <a name="next-step"></a>后续步骤
 

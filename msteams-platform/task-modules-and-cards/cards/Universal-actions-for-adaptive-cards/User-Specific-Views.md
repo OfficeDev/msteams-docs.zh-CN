@@ -4,12 +4,12 @@ description: 使用通用操作的用户特定视图示例
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 984b32511dda544942df11f7c5d8a25cca8e9a8a
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 696fc5ce25c79d749b301309bfe0c737e39ad294
+ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088820"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52555442"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
@@ -179,7 +179,7 @@ var card = JsonConvert.DeserializeObject(cardJson);
 var adaptiveCardResponse = JObject.FromObject(new
  {
     statusCode = 200,
-    type = "application/vnd.microsoft.card.adaptive",
+    type = "application/vnd.microsoft.adaptive.card",
     value = card
  });
 ```

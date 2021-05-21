@@ -4,12 +4,12 @@ description: 介绍设计适用于移动设备的选项卡的指南。
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams 设计指南参考框架个人应用移动应用选项卡
-ms.openlocfilehash: b9f09ce2603ee2617b8b93ba2132b900c61f2c31
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 853ab2c52edd1f4faedcc92e6f0e8d0821b580c7
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088757"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566696"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
 
@@ -59,7 +59,7 @@ ms.locfileid: "52088757"
 
 ### <a name="tabs-with-bots-on-mobile"></a>在移动设备上使用机器人的选项卡
 
-以下示例是包含选项卡和自动程序的个人应用。
+以下示例是包含选项卡和自动程序的个人应用：
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="插图显示移动设备Teams选项卡和自动程序的应用。" border="false":::
 
@@ -140,7 +140,7 @@ ms.locfileid: "52088757"
 
 #### <a name="apps-on-teams-store-approved-for-mobile"></a>经批准Teams移动的应用商店上的应用
 
-下表介绍了当应用在应用商店中列出并批准Teams时选项卡的可用性和行为。
+下表介绍了当应用在应用商店中列出并批准Teams时选项卡可用性和行为：
 
 |功能   |移动可用性？   |移动行为|
 |----------|-----------|------------|
@@ -149,11 +149,11 @@ ms.locfileid: "52088757"
 
 #### <a name="apps-on-teams-store-not-approved-for-mobile"></a>未批准Teams移动的应用商店上的应用
 
-下表介绍了当应用在应用商店中列出但Teams批准的移动用途时选项卡可用性和行为。
+下表介绍了当应用在应用商店中列出但Teams未批准的移动用途时选项卡可用性和行为：
 
-|功能   |移动可用性？|移动行为|
+| 功能 | 移动可用性？ | 移动行为 |
 |----------|-----------|------------|
-|"频道和组"选项卡|是|选项卡将在设备的默认浏览器中打开，而不是使用应用的配置 (而 Teams 移动客户端也必须包含在源代码的函数 `websiteUrl` `setSettings()` [](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions)) 。 但是，用户仍可在移动客户端Teams选项卡，方法为选择应用旁边的"更多"并选择"打开"，这将触发应用的 `contentUrl` 配置。|
+|"频道和组"选项卡|是|选项卡将在设备的默认浏览器中打开，而不是Teams应用的配置（还必须包含在源代码的 函数中）中的移动 `websiteUrl` `setSettings()` [客户端](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true)。 但是，用户仍可在移动客户端Teams选项卡，方法为选择应用旁边的"更多"并选择"打开"，这将触发应用的 `contentUrl` 配置。|
 |个人应用|不支持|不适用|
 
 #### <a name="apps-not-on-teams-store"></a>不在应用商店Teams应用

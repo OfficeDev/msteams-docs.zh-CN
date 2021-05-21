@@ -6,13 +6,13 @@
 
 - 导航到 **"共享** "文件夹，打开 **_Layout.cshtml**，然后向 `<head>` 标记部分添加以下内容：
 
-```html
-`<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
-`<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>`
-```
+    ```html
+    `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
+    `<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>`
+    ```
 
 ### <a name="personaltabcshtml"></a>PersonalTab.cshtml
 
 打开 **PersonalTab.cshtml，** 然后通过调用 `<script>` 更新嵌入标记 `microsoftTeams.initialize()` 。
 
-确保保存已更新的 *PersonalTab.cshtml*。
+确保保存已更新的 **PersonalTab.cshtml**。

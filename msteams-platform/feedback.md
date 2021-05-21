@@ -4,12 +4,12 @@ description: 产品Microsoft Teams团队通过各种反馈和支持渠道响应�
 localization_priority: Normal
 ms.topic: reference
 keywords: teams 反馈开发人员问题 问题 联系支持请求 bug 参与社区讨论
-ms.openlocfilehash: 08fb6908eeb4a79e5da622e7bc698111e2eba46a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0ced6a6e593f38e42833a81df9a22f4919b8c5bb
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020728"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566164"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams开发人员社区频道
 
@@ -37,5 +37,4 @@ Microsoft Teams开发人员社区使用 Stack Overflow 与其他开发人员联�
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [SDK 参考](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
+[SDK 参考](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)

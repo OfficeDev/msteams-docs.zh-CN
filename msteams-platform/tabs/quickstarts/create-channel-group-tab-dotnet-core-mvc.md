@@ -5,12 +5,12 @@ description: 使用 MVC 创建自定义频道和组选项卡 ASP.NET Core指南
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 9d89fd98bae9732a8f9e2d34b82d7fc0e6985e01
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ea929edf5a281a4bb80a37b2d5c6e19c82fce6e4
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020308"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52580460"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>使用 MVC 创建自定义频道和组 ASP.NET Core选项卡
 
@@ -110,9 +110,9 @@ ASP.NET Core将名为 *Index* 的文件视为网站的默认/主页。 当浏览
 
 - 打开项目目录根目录中的命令提示符并运行以下命令：
 
-```bash
-ngrok http https://localhost:443560 -host-header="localhost:44360"
-```
+    ```bash
+    ngrok http https://localhost:443560 -host-header="localhost:44360"
+    ```
 
 - Ngrok 将侦听来自 Internet 的请求，并且将在应用程序在端口 44355 上运行时将它们路由到您的应用程序。  它应 `https://y8rCgT2b.ngrok.io/` 类似于 *y8rCgT2b* 替换为 ngrok 字母数字 HTTPS URL。
 
@@ -123,5 +123,3 @@ ngrok http https://localhost:443560 -host-header="localhost:44360"
 在 **Tab.cshtml** 中，应用程序向用户显示两个选项按钮，用于显示带红色或灰色图标的选项卡。 选择" **选择灰色"** 或 **"选择红色** "按钮将分别触发或 ，设置 并启用配置页上的 `saveGray()` `saveRed()` `settings.setValidityState(true)` **"** 保存"按钮。 此代码Teams您满足配置要求，并且安装可以继续。 保存时，将设置 `settings.setSettings` 的参数。 最后 `saveEvent.notifySuccess()` ，调用 以指示已成功解析内容 URL。
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
-
-[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]

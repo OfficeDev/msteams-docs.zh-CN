@@ -5,12 +5,12 @@ description: 介绍用户可以在 Teams 中发现和使用应用的地方。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: f2bdb35c76bdb7487e66a0e6b9ad01c6da9e04f8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: c26b938f56af6f09c0e4ba274b9b3f4da19d08ee
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058318"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566171"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams 应用的入口点
 
@@ -33,7 +33,7 @@ the Teams platform provides a flexible set of entry points， such as team， ch
 
 * [**Web 部件和连接器**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)外部服务将消息发布到对话中，用户可将邮件发送到服务。
 
-* [**Microsoft Graph REST API**](https://docs.microsoft.com/graph/teams-concept-overview)团队、频道和群组聊天的数据，帮助自动执行和管理 Teams 流程。
+* [**Microsoft Graph REST API**](/graph/teams-concept-overview)团队、频道和群组聊天的数据，帮助自动执行和管理 Teams 流程。
 
 ## <a name="personal-app-experiences"></a>个人应用体验
 
@@ -47,7 +47,7 @@ the Teams platform provides a flexible set of entry points， such as team， ch
 
 ## <a name="see-also"></a>另请参阅
 
-- [Teams应用设计指南](../concepts/design/design-teams-app-overview.md)
+[Teams应用设计指南](../concepts/design/design-teams-app-overview.md)
 
 ## <a name="next-step"></a>后续步骤
 

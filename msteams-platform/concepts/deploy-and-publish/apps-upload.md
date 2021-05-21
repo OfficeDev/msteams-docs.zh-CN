@@ -4,20 +4,20 @@ description: 了解如何在应用中旁加载Microsoft Teams。 在开发期间
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: a82f7d6498db4cceb69f1b7f5ff53b1646371ce8
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 39e94317ceb615ecd7d5481276ffafed5afe5cde
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101567"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565191"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload应用Microsoft Teams
 
 你可以旁加载Microsoft Teams应用，而无需发布到你的组织或Teams应用商店。 在下列情况下，这是有意义的：
 
 * 你想要自己或与其他开发人员一起在本地测试和调试应用。
-* 例如，您构建了一个 (，用于自动执行工作流) 。
-* 你为一小组用户构建了一 (，如工作组) 。
+* 你只为自己生成了一个应用。 例如，自动化工作流。
+* 你为一小组用户（如工作组）生成了一个应用。
 
 ## <a name="prerequisites"></a>先决条件
 

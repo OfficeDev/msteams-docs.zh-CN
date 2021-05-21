@@ -5,12 +5,12 @@ description: 使用"Microsoft Teams快速创建一个"频道和组"Microsoft Tea
 ms.author: timura
 ms.date: 03/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 868a471499bf2015196b7b741e340d070d0ed458
-ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
+ms.openlocfilehash: ff9cfbfb7d099db52966f119add4ce8729929aa1
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52068740"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566066"
 ---
 # <a name="build-your-first-channel-and-group-tab-for-microsoft-teams"></a>为用户生成你的第一个频道和组Microsoft Teams
 
@@ -68,6 +68,7 @@ The Microsoft Teams Toolkit helps you to configure your app and set up the scaff
         </ul>
     </div>
     ```
+    
 1. 转到 `src/components` 目录并打开 `Tab.js` 文件。 找到 `render()` 函数，然后将代码粘贴到 内 `return()` ，如以下示例所示：
     ```JavaScript
     render() {
@@ -86,6 +87,7 @@ The Microsoft Teams Toolkit helps you to configure your app and set up the scaff
         );
     }
     ```
+    
 1. 转到 目录，然后用以下代码更新文件，使电子邮件链接更易于在任何使用的主题 `src/components` `App.css` 中阅读：
     ```CSS
     a {
@@ -120,12 +122,12 @@ The Microsoft Teams Toolkit helps you to configure your app and set up the scaff
 1. 转到 `src/components` 目录并打开 `TabConfig.js` 文件。
 1. 在 `suggestedDisplayName` 下面添加包含要默认显示的选项卡名称的属性 `microsoftTeams.settings.setSettings` ，如以下示例所示：
 
-  ```JavaScript
-    microsoftTeams.settings.setSettings({
-    "contentUrl": "https://localhost:3000/tab",
-    "suggestedDisplayName": "Team Contacts"
-  });
-  ```
+    ```JavaScript
+        microsoftTeams.settings.setSettings({
+        "contentUrl": "https://localhost:3000/tab",
+        "suggestedDisplayName": "Team Contacts"
+      });
+      ```
 
 ## <a name="6-build-and-run-your-app"></a>6. 生成并运行应用
 
@@ -160,12 +162,12 @@ The Microsoft Teams Toolkit helps you to configure your app and set up the scaff
 ## <a name="see-also"></a>另请参阅
 
 * [生成并运行你的第一个Microsoft Teams应用](../build-your-first-app/build-and-run.md) 
-* [团队 JavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [团队 JavaScript 客户端 SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [设计适用于桌面Microsoft Teams Web 的选项卡](../tabs/design/tabs.md) 
 * [使用 UI Microsoft Teams设计应用](../concepts/design/design-teams-app-ui-templates.md) 
 * [移动设备上的选项卡](../tabs/design/tabs-mobile.md)
 * [单一登录 (SSO) 选项卡支持](../tabs/how-to/authentication/auth-aad-sso.md)
-* [Microsoft Teams API 概述](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Microsoft Teams API 概述](/graph/teams-concept-overview)
 * [使用自定义个人选项卡和Node.js Yeoman 生成器创建自定义Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-step"></a>后续步骤

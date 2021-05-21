@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: f73e36ca0587768421daf60229d0a241cae171e1
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 975d3ef8fc8bdc8d6d7c336cf3a61a3a42ef5315
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230937"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566031"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
@@ -178,7 +178,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ### <a name="localize-your-store-listing"></a>本地化应用商店一览
 
-合作伙伴中心 [支持本地化的应用商店一览](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions)。 有关详细信息，请参阅[如何本地化你的Teams应用一览](../../../../concepts/build-and-test/apps-localization.md)。
+合作伙伴中心 [支持本地化的应用商店一览](/office/dev/store/prepare-localized-solutions)。 有关详细信息，请参阅[如何本地化你的Teams应用一览](../../../../concepts/build-and-test/apps-localization.md)。
 
 ## <a name="complete-publisher-verification"></a>完成Publisher验证
 
@@ -194,4 +194,4 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [提交你的应用](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
+> [提交你的应用](/office/dev/store/add-in-submission-guide)

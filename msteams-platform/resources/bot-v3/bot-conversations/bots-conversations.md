@@ -5,12 +5,12 @@ ms.topic: overview
 localization_priority: Normal
 keywords: teams 自动程序消息
 ms.date: 05/20/2019
-ms.openlocfilehash: 67dae46d0d34ff842d3fe6717f51e00ad4b8c80a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: e1926afe42bca45eda5f39be1be8342452b3aa24
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020665"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566493"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与自动程序Microsoft Teams对话
 
@@ -24,8 +24,8 @@ ms.locfileid: "52020665"
 
 自动程序的行为稍有不同，具体取决于它涉及的对话类型：
 
-* [频道和群聊对话中的](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) 聊天机器人要求用户 @ 提及机器人，以在频道中调用它。
-* [单个用户对话中的](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) 机器人不需要 @ 提及 - 用户只需键入。
+* [频道和群聊](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) 对话中的聊天机器人要求用户@mention自动程序在频道中调用它。
+* [单个用户对话中的](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) 自动程序不需要@mention -用户只需键入。
 
 为了使机器人能够处理特定范围，应在清单中列为支持该范围。 范围在清单参考中进行了进一步 [的定义和讨论](~/resources/schema/manifest-schema.md)。
 
@@ -41,7 +41,7 @@ ms.locfileid: "52020665"
 
 每条消息是类型 `messageType: message` 的一个 `Activity` 对象。 当用户发送消息时，Teams 会将消息发布给你的机器人。具体地说，它会发送一个 JSON 对象给你的机器人的消息传递端点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-机器人还支持事件样式的消息。 有关[更多详细信息，](~/resources/bot-v3/bots-notifications.md)请参阅Microsoft Teams中的自动程序事件。 语音当前不受支持。
+机器人还支持事件样式的消息。 有关详细信息，请参阅处理[Microsoft Teams 中的自动程序事件](~/resources/bot-v3/bots-notifications.md)。 语音当前不受支持。
 
 消息在所有范围内大部分都相同，但在 UI 中访问自动程序的方式和你需要了解的场景差异存在差异。
 
@@ -51,15 +51,15 @@ ms.locfileid: "52020665"
 
 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。 你可以指定自动程序可以在自动程序Microsoft Teams设置页中处理的内容类型。
 
-| Format | 从用户到机器人  | 从自动程序到用户 |  注释 |
+| Format | 从用户到机器人  | 从自动程序到用户 |  备注 |
 | --- | :---: | :---: | --- |
 | 格式文本  | ✔ | ✔ |  |
-| 图片 | ✔ | ✔ | PNG、JPEG 或 GIF 格式的最大大小为 1024×1024 和 1 MB;不支持动态 GIF |
-| 卡 | ✖ | ✔ | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考 |
-| 表情符号 | ✖ | ✔ | Teams UTF-16 支持表情符号 (如 U+1F600 用于面部)  |
+| 图片 | ✔ | ✔ | PNG、JPEG 或 GIF 格式的最大大小为 1024×1024 和 1 MB;不支持动态 GIF。 |
+| 卡 | ✖ | ✔ | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
+| 表情符号 | ✖ | ✔ | Teams UTF-16 支持表情符号，例如 U+1F600 表示表情符号。 |
 |
 
-有关自动程序框架 (团队中的机器人基于) 支持的机器人交互类型详细信息，请参阅适用于[.NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true)的 Bot Builder SDK 和适用于 Node.js[](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true)的 Bot [Builder SDK](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)文档中有关对话流和相关概念的 Bot Framework 文档。
+有关自动程序框架支持的机器人交互类型（团队中的机器人基于这些机器人）的信息，请参阅适用于[.NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true)的 Bot Builder [](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) SDK 和适用于 Node.js的 Bot [Builder SDK](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)文档中有关对话流和相关概念的 Bot Framework 文档。
 
 ## <a name="message-formatting"></a>消息格式
 
@@ -68,7 +68,7 @@ ms.locfileid: "52020665"
 
 有关团队中文本格式Teams的详细信息，请参阅自动[程序消息中的文本格式](~/resources/bot-v3/bots-text-formats.md)。
 
-有关邮件中卡片格式的信息，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。
+有关邮件中卡片格式设置详细信息，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。
 
 ## <a name="picture-messages"></a>图片消息
 
@@ -92,10 +92,10 @@ ms.locfileid: "52020665"
 
 自动程序会收到包含用户消息的有效负载，以及有关用户的其他信息、消息源和Teams `Text` 信息。 注意：
 
-* `timestamp` 邮件的日期和时间（使用协调世界时 (UTC) 
-* `localTimestamp` 发件人时区的邮件日期和时间
+* `timestamp` 使用协调世界时 UTC 格式 (邮件) 。
+* `localTimestamp` 发件人时区的邮件日期和时间。
 * `channelId` 始终为"msteams"。 这是指自动程序框架频道，而不是团队频道。
-* `from.id` 自动程序的用户的唯一加密 ID;如果应用需要存储用户数据，则适合用作密钥。 它对于自动程序来说是唯一的，不能以任何有意义的方式直接在自动程序实例外部使用来标识该用户
+* `from.id` 自动程序的用户的唯一加密 ID;如果应用需要存储用户数据，则适合用作密钥。 它对于自动程序来说是唯一的，不能以任何有意义的方式直接在自动程序实例外部使用来标识该用户。
 * `channelData.tenant.id` 用户的租户 ID。
 
 > [!NOTE]
@@ -162,13 +162,13 @@ ms.locfileid: "52020665"
 
 发送给自动程序的活动中的典型 channelData 对象包含以下信息：
 
-* `eventType`Teams事件类型;仅在通道修改[事件的情况下传递](~/resources/bot-v3/bots-notifications.md#channel-updates)
-* `tenant.id`Azure Active Directory租户 ID;在所有上下文中传递
+* `eventType`Teams事件类型;仅在通道修改[事件的情况下传递](~/resources/bot-v3/bots-notifications.md#channel-updates)。
+* `tenant.id`Azure Active Directory租户 ID;在所有上下文中传递。
 * `team` 仅在频道上下文中传递，而不是在个人聊天中传递。
-  * `id` 频道的 GUID
-  * `name` 团队名称;仅在团队重命名 [事件的情况下传递](~/resources/bot-v3/bots-notifications.md#team-name-updates)
-* `channel` 仅在提到自动程序时在频道上下文中传递，或针对团队中已添加机器人的频道中的事件传递
-  * `id` 频道的 GUID
+  * `id` 频道的 GUID。
+  * `name` 团队名称;仅在团队重命名 [事件的情况下传递](~/resources/bot-v3/bots-notifications.md#team-name-updates)。
+* `channel` 仅在提到自动程序时在频道上下文中传递，或针对团队中已添加自动程序的团队中的事件传递。
+  * `id` 频道的 GUID。
   * `name` 频道名称;仅在通道修改 [事件的情况下传递](~/resources/bot-v3/bots-notifications.md#channel-updates)。
 * `channelData.teamsTeamId` 已弃用。 此属性仅包含用于向后兼容。
 * `channelData.teamsChannelId` 已弃用。 此属性仅包含用于向后兼容。

@@ -5,14 +5,14 @@ description: 使用 Yeoman 生成器为用户创建个人选项卡的快速Micro
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 30143fa3c84a68ae6c34176b252badaa4cef9613
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 88ad05aacaed69d695bc918e3e8a44ec18e560ae
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019550"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566600"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>快速入门：使用 Node.js 和 Yeoman 生成器为用户创建自定义Microsoft Teams
+# <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>使用 Yeoman 生成器和 Node.js 的 Yeoman 生成器创建自定义个人Microsoft Teams
 
 >[!NOTE]
 >本快速入门遵循 Microsoft OfficeDev Microsoft Teams存储库中的构建第一个 Microsoft Teams [App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki 中概述GitHub步骤。
@@ -21,7 +21,7 @@ ms.locfileid: "52019550"
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**是否要创建可配置选项卡或静态选项卡？**
+**创建可配置选项卡或静态选项卡**
 
 使用箭头键选择静态选项卡。
 
@@ -36,37 +36,37 @@ ms.locfileid: "52019550"
 
 - 在代码编辑器中，新建 HTML 文件，personal.htm **l** 并添加以下标记：
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            <!-- Todo: add your a title here -->
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- inject:css -->
-        <!-- endinject -->
-    </head>
-        <body>
-            <h1>Personal Tab</h1>
-            <p><img src="/assets/icon.png"></p>
-            <p>This is your personal tab!</p>
-        </body>
-</html>
-```
+    ```html
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>
+                <!-- Todo: add your a title here -->
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- inject:css -->
+            <!-- endinject -->
+        </head>
+            <body>
+                <h1>Personal Tab</h1>
+                <p><img src="/assets/icon.png"></p>
+                <p>This is your personal tab!</p>
+            </body>
+    </html>
+    ```
 
 - 在 **personal.htm** Web 文件夹中保存personal.htm **l：**
 
-```bash
-./src/app/web/<yourDefaultTabNameTab>/personal.html
-```
+    ```bash
+    ./src/app/web/<yourDefaultTabNameTab>/personal.html
+    ```
 
 - 在 **manifest.js** 打开"打开"：
 
-```bash
-./src/manifest/manifest.json/
-```
+    ```bash
+    ./src/manifest/manifest.json/
+    ```
 
 将以下内容添加到空 `staticTabs` 数组 `staticTabs":[]` () 并添加以下 JSON 对象：
 
@@ -87,15 +87,15 @@ ms.locfileid: "52019550"
 
 - 必须在 IFrame 中提供内容页。 在 **代码编辑器中打开 Tab.ts：**
 
- ```bash
-./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
-```
+    ```bash
+    ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
+    ```
 
 - 将以下内容添加到 IFrame 修饰符列表中：
 
-```typescript
- @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
-```
+    ```typescript
+     @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
+    ```
 
 - 确保保存更新的 **Tab.ts** 文件。 您的选项卡代码已完成。
 
@@ -122,15 +122,20 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> 通过 *ngrok* 将选项卡上传到 Microsoft 团队并成功保存后，可以在 Teams 中查看它，直到隧道会话结束。
+> 通过 **ngrok** 将选项卡上传到 Microsoft 团队并成功保存后，可以在 Teams 中查看它，直到隧道会话结束。
 
 ## <a name="upload-your-application-to-teams"></a>Upload应用程序以Teams
 
 - 打开 Microsoft Teams 客户端。 如果使用基于 [Web 的版本，](https://teams.microsoft.com) 可以使用浏览器的开发人员工具检查前端 [代码](~/tabs/how-to/developer-tools.md)。
-- 在左侧 *的 YourTeams* 面板中，选择用于测试选项卡的团队旁边的菜单，然后选择 `...` "**管理团队"。**
+- 在左侧 **的 YourTeams** 面板中，选择用于测试选项卡的团队旁边的菜单，然后选择 `...` "**管理团队"。**
 - 在主面板中，从选项卡栏中选择"应用"，Upload位于页面右下角的自定义应用。 
 - 打开项目目录，浏览到 **./package** 文件夹，选择 zip 文件夹，右键单击，然后选择"打开 **"。** 您的选项卡将上载到Teams。
 
 ## <a name="view-your-personal-tabs"></a>查看个人选项卡
 
 在位于客户端最左侧的导航Teams，选择菜单，然后 `...` 从列表中选择你的应用。
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [使用 ASP.NETCore 创建个人选项卡](~/tabs/quickstarts/create-personal-tab-dotnet-core.md)

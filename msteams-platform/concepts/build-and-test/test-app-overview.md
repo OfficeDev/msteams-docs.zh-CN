@@ -4,20 +4,20 @@ description: 介绍在自定义应用中Teams自定义应用Microsoft 365
 ms.topic: how-to
 localization_priority: Normal
 keywords: 配置Microsoft 365测试Teams租户配置
-ms.openlocfilehash: d95d65961b060ff1938d51c0f3fafc2b1e56fa7e
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 2c9f23a5c6ae286ff4b7d911f370bd45b854a647
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058605"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565183"
 ---
 # <a name="test-your-app"></a>测试应用
 
 将应用与Microsoft Teams集成后，必须在发布应用之前测试它。 因此，最终目标是为你的应用获取数量多的用户，因此，请确保在用户可以使用的多个设备上测试该应用。 对于测试你的应用：
 
-* 准备 Microsoft 365 租户
-* 选择一个工作区来测试和调试你的应用
-* 将测试数据添加到Microsoft 365租户
+* 准备Microsoft 365租户。
+* 选择一个工作区来测试和调试你的应用。
+* 将测试数据添加到Microsoft 365租户。
 
 ## <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 

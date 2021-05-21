@@ -5,12 +5,12 @@ keywords: teams 方案频道对话机器人
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: 2eac067a75fc75c9991e8b30ec5d693d89ed8228
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: e254302271cf101638c897e1a1952d302705d6a4
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019795"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566794"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>带有 Microsoft Teams 机器人的频道和群聊对话
 
@@ -18,7 +18,7 @@ ms.locfileid: "52019795"
 
 Microsoft Teams允许用户将机器人引入其频道或群组聊天对话。 通过将聊天机器人添加到团队或聊天中，对话的所有用户都可以在对话中利用机器人功能。 还可以在自动Teams访问特定于团队的功能，如查询团队信息和@mentioning用户。
 
-频道和群聊中的聊天不同于个人聊天，因为用户需要@mention聊天。 如果自动程序用于个人、 (或频道) 则需要检测自动程序消息来自的作用域，并相应地处理它们。
+频道和群聊中的聊天不同于个人聊天，因为用户需要@mention聊天。 如果自动程序在多个范围（如个人、群聊或频道）中使用，则需要检测自动程序消息来自什么范围，并相应地处理它们。
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>为频道或组设计出色的自动程序
 
@@ -39,10 +39,10 @@ Microsoft Teams允许用户将机器人引入其频道或群组聊天对话。 �
 对于组或频道中的自动程序，除了常规邮件架构之外[](https://docs.botframework.com/core-concepts/reference/#activity)，机器人还会收到以下属性：
 
 * `channelData`请参阅[Teams频道数据](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data)。 在群聊中，包含特定于该聊天的信息。
-* `conversation.id` 回复链 ID，由频道 ID 和回复链中第一封邮件的 ID 组成
-* `conversation.isGroup` 适用于 `true` 频道或群聊中的聊天机器人消息
-* `conversation.conversationType`或 `groupChat``channel`
-* `entities` 可以包含一个或多个提及 (请参阅 [提及](#-mentions)) 
+* `conversation.id` 回复链 ID，由频道 ID 和回复链中第一封邮件的 ID 组成。
+* `conversation.isGroup` 适用于 `true` 频道或群聊中的聊天机器人消息。
+* `conversation.conversationType` 或 `groupChat` `channel` 。
+* `entities` 可以包含一个或多个提及。 有关详细信息，请参阅 [提及](#-mentions)。
 
 ### <a name="replying-to-messages"></a>回复邮件
 
@@ -60,10 +60,10 @@ Microsoft Teams允许用户将机器人引入其频道或群组聊天对话。 �
 
 建议自动程序 *在* 下列情况下不要发送欢迎消息：
 
-* 团队规模较大 (明显具有主观性，但例如，超过 100 个成员) 。 您的自动程序可能会被视为"spa一"，添加它的人可能会收到投诉，除非您向看到欢迎消息的每个人清楚地传达了机器人的价值主张。
-* 你的机器人首先在组或频道中 (，而不是先添加到团队) 
-* 重命名组或频道
-* 将团队成员添加到组或频道
+* 团队是一 (的成员，例如，超过 100 个成员) 。 您的自动程序可能会被视为"spa一"，添加它的人可能会收到投诉，除非您向看到欢迎消息的每个人清楚地传达了机器人的价值主张。
+* 你的机器人首先在组或频道中提及，而不是先添加到团队。
+* 重命名组或频道。
+* 将团队成员添加到组或频道。
 
 ## <a name="-mentions"></a>@ 提及
 
@@ -114,8 +114,8 @@ if (message.entities) {
 
 机器人可以在发布至频道的消息中提及其他用户。 为此，您的邮件必须执行以下操作：
 
-* 包括在 `<at>@username</at>` 邮件文本中
-* 在 `mention` entities 集合中包括对象
+* 包括在 `<at>@username</at>` 邮件文本中。
+* 将 `mention` 对象包括在 entities 集合中。
 
 #### <a name="net-example"></a>.NET 示例
 
@@ -195,6 +195,8 @@ session.send(generalMessage);
 
 ## <a name="accessing-groupchat-or-channel-scope"></a>访问 groupChat 或 channel 作用域
 
-机器人可以执行更多操作，而不是在组和团队中发送和接收消息。 例如，它还可以提取成员列表，包括其配置文件信息以及频道列表。 若要[了解更多信息，请参阅Microsoft Teams聊天机器人](~/resources/bot-v3/bots-context.md)的上下文。
+机器人可以执行更多操作，而不是在组和团队中发送和接收消息。 例如，它还可以提取成员列表，包括其配置文件信息以及频道列表。 有关详细信息，请参阅[获取自动程序Microsoft Teams上下文](~/resources/bot-v3/bots-context.md)。
 
-*另请参阅* [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
+## <a name="see-also"></a>另请参阅
+
+[Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

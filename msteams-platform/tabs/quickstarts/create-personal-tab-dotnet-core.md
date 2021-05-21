@@ -5,14 +5,14 @@ description: 使用自定义选项卡创建自定义个人选项卡的快速 ASP
 ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 858175c5afa742d7f2d818204fe1a6f09f6e2245
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 41aa916f4c69d50e48254d0f4934109429dab83c
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020294"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566892"
 ---
-# <a name="create-a-personal-tab-with-aspnet-core"></a>使用"个人"选项卡创建 ASP.NET Core
+# <a name="create-a-personal-tab-using-aspnetcore"></a>使用 ASP.NETCore 创建个人选项卡
 
 在此快速入门中，我们将演练创建自定义个人选项卡，该选项卡包含C#和 ASP.Net Core 用户页面。 我们还将使用 App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)完成应用清单，并部署选项卡以Teams。
 
@@ -39,7 +39,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 ### <a name="startupcs"></a>Startup.cs
 
-此项目从 2.2 web 应用程序 ASP.NET Core模板创建，在设置时选中了"高级 *- 为 HTTPS* 配置"复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此静态文件中间件将添加到 `Configure()` 方法：
+此项目从 2.2 web 应用程序 ASP.NET Core模板创建，在设置时选中了"高级 **- 为 HTTPS** 配置"复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此静态文件中间件将添加到 `Configure()` 方法：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -99,15 +99,15 @@ ASP.NET Core将名为 *Index* 的文件视为网站的默认/主页。 当浏览
 
 - 打开项目目录根目录中的命令提示符并运行以下命令：
 
-```bash
-ngrok http https://localhost:44325 -host-header="localhost:44325"
-```
+    ```bash
+    ngrok http https://localhost:44325 -host-header="localhost:44325"
+    ```
 
 - Ngrok 将侦听来自 Internet 的请求，并且将在应用程序在端口 44325 上运行时将它们路由到您的应用程序。  它应 `https://y8rPrT2b.ngrok.io/` 类似于 *y8rPrT2b* 替换为 ngrok 字母数字 HTTPS URL。
 
 - 请确保使命令提示符保持运行 ngrok，并记下 URL，稍后将需要它。
 
-- 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 *ngrok* 是否正常运行。
+- 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正常运行。
 
 >[!TIP]
 >你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且必须更新使用该 URL 的每一处。
@@ -117,3 +117,8 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 - In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [使用 ASP.NETCore MVC 创建自定义个人选项卡](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)

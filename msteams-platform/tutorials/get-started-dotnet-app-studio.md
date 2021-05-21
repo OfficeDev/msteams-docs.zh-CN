@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: be6c5865da04125b159792364bbd80ac219d9fd9
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: eaa37f1ccb7944ee18bb62ae47882dc4a715b165
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101854"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566885"
 ---
 # <a name="create-your-first-teams-app-using-c"></a>使用 C Teams你的第一个应用#
 
@@ -72,10 +72,10 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 当应用启动时，浏览器窗口将打开，并启动应用的根。 你可以转到以下 URL 以验证是否正在加载所有应用 URL：
 
-- [https://localhost:44327/](https://localhost:44327/)
-- [https://localhost:44327/hello](https://localhost:44327/hello)
-- [https://localhost:44327/first](https://localhost:44327/first)
-- [https://localhost:44327/second](https://localhost:44327/second)
+- `https://localhost:44327/`
+- `https://localhost:44327/hello`
+- `https://localhost:44327/first`
+- `https://localhost:44327/second`
 
 <a name="HostSample"></a>
 
@@ -110,7 +110,7 @@ ngrok http 44327 -host-header=localhost:44327
 
 Microsoft Azure共享基础结构在免费层托管 .NET 应用程序。 这足以运行 `Hello World` 示例。 有关详细信息，请参阅 [创建新的免费 Azure 帐户](https://azure.microsoft.com/free/)。
 
-Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内置支持。
+Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内置支持：
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 

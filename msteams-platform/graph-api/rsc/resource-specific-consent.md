@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 39e5c1bb8375fb5b5a3bd3900cb6ad870a3ff677
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: dabe0c33013fbb398eee7bf00ac2881cd86e6bc5
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101791"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566124"
 ---
 # <a name="resource-specific-consent-rsc"></a>RSC (资源特定的) 
 
@@ -66,7 +66,7 @@ RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，它使你的应�
 
 ## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a>通过 Azure AD Microsoft 标识平台注册应用
 
-Azure Active Directory门户提供了一个中央平台，用于注册和配置应用。 应用必须在 Azure AD 门户中注册，才能与 Microsoft 标识平台 并调用 Microsoft Graph API。 *请参阅*[向应用程序注册Microsoft 标识平台。](/graph/auth-register-app-v2)
+Azure Active Directory门户提供了一个中央平台，用于注册和配置应用。 应用必须在 Azure AD 门户中注册，才能与 Microsoft 标识平台 并调用 Microsoft Graph API。 有关详细信息，请参阅向应用程序[注册Microsoft 标识平台。](/graph/auth-register-app-v2)
 
 >[!WARNING]
 >不要将多个Teams应用注册到同一 Azure AD 应用 ID。应用 ID 对于每个应用必须是唯一的。 尝试将多个应用安装到同一应用 ID 将失败。
@@ -96,9 +96,9 @@ RSC 权限在应用清单 (JSON) 文件中声明。  将 [webApplicationInfo](..
 
 > [!div class="checklist"]
 >
-> - **id**  — Azure AD 应用 ID。 *请参阅* 在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
+> - **id**  — 你的 Azure AD 应用 ID。有关详细信息，请参阅在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
 > - **resource**  — 任何字符串。 此字段在 RSC 中没有任何操作，但必须添加该字段，并且必须具有值以避免错误响应;任何字符串将执行。
-> - **应用程序权限** — 应用的 RSC 权限。 *请参阅*[特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
+> - **应用程序权限** — 应用的 RSC 权限。 有关详细信息，请参阅资源 [特定的权限](resource-specific-consent.md#resource-specific-permissions)。
 
 >
 >[!IMPORTANT]
@@ -134,7 +134,7 @@ RSC 权限在应用清单 (JSON) 文件中声明。  将 [webApplicationInfo](..
 ## <a name="check-your-app-for-added-rsc-permissions"></a>检查应用是否添加了 RSC 权限
 
 >[!IMPORTANT]
->RSC 权限不归为用户。 调用使用应用程序权限而不是用户委派权限进行。 因此，可以允许应用执行用户无法执行的操作，例如创建频道或删除选项卡。在调用 RSC API 之前，应查看团队所有者对用例的意图。 *请参阅* [Microsoft Teams API 概述](/graph/teams-concept-overview)。
+>RSC 权限不归为用户。 调用使用应用程序权限而不是用户委派权限进行。 因此，可以允许应用执行用户无法执行的操作，例如创建频道或删除选项卡。在调用 RSC API 之前，应查看团队所有者对用例的意图。 有关详细信息，请参阅 Microsoft Teams [API 概述](/graph/teams-concept-overview)。
 
 将应用安装到团队后，可以使用Graph[资源管理器](https://developer.microsoft.com/graph/graph-explorer)查看已授予团队中应用的权限：
 
@@ -157,14 +157,9 @@ RSC 权限在应用清单 (JSON) 文件中声明。  将 [webApplicationInfo](..
 
 
 
-## <a name="test-resource-specific-consent"></a>测试特定于资源的同意
+## <a name="see-also"></a>另请参阅
  
-> [!div class="nextstepaction"]
-> [**在应用程序内测试特定于资源的许可Teams**](test-resource-specific-consent.md)
- 
-## <a name="related-topic-for-teams-administrators"></a>有关管理员Teams主题
+* [在应用程序内测试特定于资源的许可Teams](test-resource-specific-consent.md)
+* [管理员许可中Microsoft Teams特定资源的同意](/MicrosoftTeams/resource-specific-consent)
 
-> [!div class="nextstepaction"]
-> [**管理员许可中Microsoft Teams特定资源的同意**](/MicrosoftTeams/resource-specific-consent)
-> 
 

@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条形码条形码扫描扫描仪位置映射功能本机设备权限
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: d67b343e3e07d7aea79282ce02ef8247fcf77159
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 8df8341e8996e4bf380575ac59e05325da16bd0d
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230895"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566192"
 ---
 # <a name="device-capabilities"></a>设备功能
 
@@ -37,7 +37,7 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 
 获取设备功能的访问权限后，Teams媒体功能 API 将[媒体](mobile-camera-image-permissions.md)功能与 Teams 平台集成，以增强用户体验。 这些集成功能使你的应用能够：
 
-* 捕获和共享图像
-* 使用扫描仪控件扫描 QR [或条形码](qr-barcode-scanner-capability.md)
-* 通过麦克风录制音频
+* 捕获和共享图像。
+* 使用扫描仪控件扫描 QR [或条形码](qr-barcode-scanner-capability.md)。
+* 通过麦克风录制音频。
 * 使用位置选取 [器共享位置](location-capability.md)。

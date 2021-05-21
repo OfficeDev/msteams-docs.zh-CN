@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Web 应用
-ms.openlocfilehash: 6227964fdf114fe4e4cd38f18fd1932db8bc5960
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 6783a05079f876cf3c2475a0ad5ca0e1f6687fc4
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075729"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566220"
 ---
 # <a name="web-apps"></a>Web 应用 
 
@@ -23,7 +23,7 @@ ms.locfileid: "52075729"
 * **SharePoint：SharePoint** 中显示的页面Teams。
 
 你可以映射并按照适用于集成方案的适当准则执行。
-本文档概述了Teams功能、文件和数据存储的共享点要求、API 要求、身份验证以及应用与 Teams 的深层Teams。
+本文档概述了Teams功能、文件和数据存储的共享点要求、API 要求、身份验证以及应用与 Teams 的深层链接。
  
 ## <a name="get-to-know-teams-platform-capabilities"></a>了解Teams功能
 
@@ -57,12 +57,12 @@ ms.locfileid: "52075729"
 
 ***集成方案**： SharePoint*
 
-若要将现有[SharePoint页](https://docs.microsoft.com/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites)作为"Teams"选项卡集成，必须考虑以下事项：
+若要将现有[SharePoint页](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites)作为"Teams"选项卡集成，必须考虑以下事项：
 
 * 它必须是新式 *联机* SharePoint页面。
 * 仅支持个人选项卡。 无法将页面作为通道选项卡进行集成。
 
-或者，您也可以使用 Teams[生成一个SharePoint 框架](https://docs.microsoft.com/sharepoint/dev/spfx/integrate-with-teams-introduction)选项卡。
+或者，您也可以使用 Teams[生成一个SharePoint 框架](/sharepoint/dev/spfx/integrate-with-teams-introduction)选项卡。
 
 ## <a name="aim-towards-multi-tenancy"></a>旨在实现多租户
 
@@ -74,7 +74,7 @@ ms.locfileid: "52075729"
 
 ***集成方案**：独立应用、协作应用*
 
-与应用集成时，你必须使应用的现有 API 和数据结构支持Teams。 若要扩展支持，必须使用有关 Teams 的上下文信息扩充 API 和数据结构，以用于标识映射[](../concepts/authentication/configure-identity-provider.md)、深层链接[](../concepts/build-and-test/deep-links.md)支持以及合并 Microsoft [Graph。](https://docs.microsoft.com/graph/teams-concept-overview)
+与应用集成时，你必须使应用的现有 API 和数据结构支持Teams。 若要扩展支持，必须使用有关 Teams 的上下文信息扩充 API 和数据结构，以用于标识映射[](../concepts/authentication/configure-identity-provider.md)、深层链接[](../concepts/build-and-test/deep-links.md)支持以及合并 Microsoft [Graph。](/graph/teams-concept-overview)
 
 了解有关获取应用选项卡或自动程序Teams[上下文](../tabs/how-to/access-teams-context.md)[。](../bots/how-to/get-teams-context.md)
 
@@ -110,7 +110,7 @@ Teams Azure AD 为第三 (应用使用单一登录 (SSO) 机制。 它还提供�
 
 自动程序还允许你向单个 **用户** 或频道发送主动消息。 主动邮件是由外部事件触发的未经提示的消息，而不是发送给自动程序的消息。 例如，自动程序在安装或新用户加入频道时发送欢迎消息。 
 
-发送主动邮件Teams特定标识符。 您可以通过提取[名单或用户配置文件](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)数据、订阅对话事件，或者使用[](../bots/how-to/conversations/subscribe-to-conversation-events.md)Microsoft Graph[来捕获信息](https://docs.microsoft.com/graph/teams-proactive-messaging)。
+发送主动邮件Teams特定标识符。 您可以通过提取[名单或用户配置文件](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)数据、订阅对话事件，或者使用[](../bots/how-to/conversations/subscribe-to-conversation-events.md)Microsoft Graph[来捕获信息](/graph/teams-proactive-messaging)。
 
 不要向具有过多邮件的用户发送垃圾邮件。 如果Teams支持此功能，则用户可以为你的应用配置通知设置。   
 下面是一条通知邮件的示例： **不要向我发送不通知的邮件**。
@@ -119,7 +119,7 @@ Teams Azure AD 为第三 (应用使用单一登录 (SSO) 机制。 它还提供�
 
 ***集成方案：** 独立应用、协作应用SharePoint页面*
 
-创建团队时，还会SharePoint[网站](https://docs.microsoft.com/microsoftteams/sharepoint-onedrive-interact)集以支持该团队的文件和数据存储。 如果应用与文件交互，则必须利用此功能。 使用网站集将原始数据存储在SharePoint和Excel。
+创建团队时，还会SharePoint[网站](/microsoftteams/sharepoint-onedrive-interact)集以支持该团队的文件和数据存储。 如果应用与文件交互，则必须利用此功能。 使用网站集将原始数据存储在SharePoint和Excel。
 
 ## <a name="see-also"></a>另请参阅
 

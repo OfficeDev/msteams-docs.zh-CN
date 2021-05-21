@@ -4,12 +4,12 @@ description: 描述机器人可以在聊天机器人中启动Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 团队方案主动消息对话机器人
-ms.openlocfilehash: a13c565c8abe8c78fe6402d76796381b6a837393
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: baf148d0f4d0a669de582dfca70ed5d5bed0274c
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019788"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566787"
 ---
 # <a name="proactive-messaging-for-bots"></a>自动程序主动消息传递
 
@@ -17,9 +17,9 @@ ms.locfileid: "52019788"
 
 主动消息是由机器人发送以开始对话的消息。 希望机器人开始对话的原因可能有很多，其中包括:
 
-* 个人机器人对话的欢迎消息
-* 投票回复
-* 外部事件通知
+* 个人机器人对话的欢迎消息。
+* 投票响应。
+* 外部事件通知。
 
 发送消息以启动新对话线程与在响应现有对话时发送消息不同：当机器人启动新对话时，没有将邮件张贴到的预先存在的会话。 为了发送主动邮件，你需要：
 
@@ -27,7 +27,7 @@ ms.locfileid: "52019788"
 1. [获取用户的唯一 ID 和租户 ID](#obtain-necessary-user-information)
 1. [发送邮件](#examples)
 
-创建主动邮件时 **，必须** 调用 ，并传递服务 URL，然后再创建 ，以 `MicrosoftAppCredentials.TrustServiceUrl` `ConnectorClient` 用于发送邮件。 如果不这样做，你的应用将收到 `401: Unauthorized` 响应。 请参阅 [下面的示例](#net-example-from-this-sample)。
+创建主动邮件时 **，必须** 调用 ，并传递服务 URL，然后再创建 ，以 `MicrosoftAppCredentials.TrustServiceUrl` `ConnectorClient` 用于发送邮件。 如果不这样做，你的应用将收到 `401: Unauthorized` 响应。 有关详细信息，请参阅 [下面的示例](#net-example-from-this-sample)。
 
 ## <a name="best-practices-for-proactive-messaging"></a>主动邮件最佳做法
 
@@ -60,7 +60,7 @@ ms.locfileid: "52019788"
 * 通过 [从应用安装通道](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) 获取团队名单。
 * 在用户与频道中的机器人交互时 [缓存它们](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)。
 * 当用户在频道 [@mentioned聊天时，](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) 机器人是其中一部分。
-* 当你在[个人范围内安装 `conversationUpdate` ](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)应用或将新成员添加到频道或群聊时，通过缓存它们
+* 当你在[个人范围内安装 `conversationUpdate` ](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)应用或将新成员添加到该频道或群聊时，通过缓存它们来接收事件。
 
 ### <a name="proactively-install-your-app-using-graph"></a>使用安装程序主动安装Graph
 
@@ -156,13 +156,11 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
-*另请参阅* [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
-
 ## <a name="creating-a-channel-conversation"></a>创建频道对话
 
 团队添加的机器人可以发布到频道中，以创建新的回复链。 如果你使用的是 Node.js Teams SDK，请使用 它为你提供具有正确活动 ID 和对话 ID 的完全 `startReplyChain()` 填充的地址。如果你使用的是C#，请参阅下面的示例。
 
-或者，您可以使用 REST API 向资源发出 POST [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) 请求。
+或者，您可以使用 REST API 向资源发出 POST [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) 请求。
 
 ### <a name="net-example-from-this-sample"></a>此示例示例中 (.NET [) ](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
 
@@ -209,3 +207,7 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
     }
 }
 ```
+
+## <a name="see-also"></a>另请参阅
+
+[Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

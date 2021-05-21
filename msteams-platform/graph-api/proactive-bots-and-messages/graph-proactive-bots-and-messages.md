@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: 62974f6f3b26e53558658f0b6cfda815dee1de8a
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 06b50e5ab8594c257959430383bab5e355af4e06
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101798"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566150"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>使用 Graph API 以及发送邮件主动安装应用
 
@@ -22,12 +22,10 @@ ms.locfileid: "52101798"
 
 主动消息由机器人启动，以开始与用户的对话。 它们用于多种用途，包括发送欢迎消息、开展调查或投票以及广播组织范围内的通知。 邮件中的Teams消息 **可以临时对话** 或基于对话 **的对话传递：**
 
-|消息类型 | 说明 |
+|消息类型 | 描述 |
 |----------------|-------------- |
 |临时主动邮件| 机器人在不中断对话流的情况下与消息进行交互。|
 |基于对话框的主动消息 | 机器人创建新的对话线程、控制对话、传递主动消息、关闭并返回对上一对话框的控制。|
-
-请参阅向[用户发送主动通知 SDK v4。](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="proactive-app-installation-in-teams"></a>在应用中主动安装Teams
 
@@ -37,7 +35,7 @@ ms.locfileid: "52101798"
 
 Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true)资源类型权限可帮助你管理 Microsoft Teams 平台内所有 (个人) 或团队 (频道) 范围的应用的安装生命周期：
 
-|应用权限 | 说明|
+|应用权限 | 描述|
 |------------------|---------------------|
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|允许Teams应用为任何用户读取、安装、升级和卸载自身，而无需事先登录或使用。|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|允许Teams应用在任何团队中读取、安装、升级和卸载自身，而无需事先登录或使用。|
@@ -189,13 +187,12 @@ GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps
 
 自动程序 [可以在为用户或](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) 团队添加自动程序并接收所有用户信息后发送主动消息。
 
-## <a name="related-topic-for-teams-administrators"></a>有关管理员Teams主题
->
-> [!div class="nextstepaction"]
-> [**在应用中管理应用Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+## <a name="see-also"></a>另请参阅
+
+* [**在应用中管理应用Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [向用户发送主动通知 SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="view-additional-code-samples"></a>查看其他代码示例
 >
 > [!div class="nextstepaction"]
 > [**Teams主动邮件代码示例**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
->

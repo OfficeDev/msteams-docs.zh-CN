@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9dc5489f4a6a4c6f0e1188250a9e2a9bc5793690
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: baa17cd97ff4e2cad91615dced5c4e4cf5e533c8
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101847"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566878"
 ---
 # <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>设计适用于桌面Microsoft Teams Web 的选项卡
 
@@ -31,7 +31,7 @@ ms.locfileid: "52101847"
 * 频道
 * 会议 (之前、期间或之后) 
 
-下面的示例演示如何在频道中添加选项卡。
+下面的示例演示如何在频道中添加选项卡：
 
 :::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="示例显示正在频道中添加的选项卡。" border="false":::
 
@@ -51,7 +51,7 @@ ms.locfileid: "52101847"
 |----------|-----------|
 |1|**应用徽标**：应用的全彩色应用徽标。|
 |2|**应用名称**：应用的完整名称。|
-|3|**iframe：** 应用内容响应空间 (例如选项卡设置或身份验证) 。|
+|3|**iframe：** 应用内容的响应空间。 例如，选项卡设置或身份验证。|
 |4 |**关于链接**：打开一个对话框，其中显示有关应用的详细信息，例如完整说明、应用所需的权限以及指向隐私策略和服务条款的链接。
 |5 |**关闭按钮**：关闭模式。|
 |6 |**通知团队成员选项**：模式询问您是否要创建一个帖子，让其他人知道您添加了选项卡。|
@@ -145,7 +145,7 @@ ms.locfileid: "52101847"
 
 ## <a name="best-practices"></a>最佳做法
 
-使用这些建议创建高质量的应用体验。
+使用这些建议创建高质量的应用体验：
 
 ### <a name="collaboration"></a>协作
 

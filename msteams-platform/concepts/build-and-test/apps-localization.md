@@ -5,19 +5,19 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams 发布应用商店 Office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: 9a939b1990d1b09410af344f79dd39b8b02c404b
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: a55b8af97e5306843858e5844a017dd402ab3516
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101707"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566045"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>应用程序Microsoft Teams本地化
 
 在本地化Microsoft Teams应用时，必须考虑以下事项：
 
 1. 如果Teams， (应用商店一) 。
-1. 应用清单中面向最终用户的字符串 (自动程序命令) 。
+1. 应用清单中面向最终用户的字符串。 例如自动程序命令。
 1. 响应从用户提交的本地化文本。
 
 ## <a name="localizing-your-appsource-listing"></a>本地化 AppSource 一览
@@ -26,7 +26,7 @@ ms.locfileid: "52101707"
 
 ### <a name="example-of-configuring-localization"></a>配置本地化的示例
 
-若要为应用配置其他语言，请在合作伙伴中心[](/office/dev/store/submit-to-appsource-via-partner-center)中选择英语和应用的其他语言。 本示例使用法语。
+若要为应用配置其他语言，请在合作伙伴中心[](/office/dev/store/submit-to-appsource-via-partner-center)中选择英语和应用的其他语言。 本示例使用法语：
 
 1. 添加英语语言
     * 填写应用名称。
@@ -137,7 +137,7 @@ ms.locfileid: "52101707"
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称 | 说明 | .NET |
+| 示例名称 | 描述 | .NET |
 |-------------|-------------|------|
 | 应用本地化 | Microsoft Teams自动程序和选项卡进行应用本地化。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 

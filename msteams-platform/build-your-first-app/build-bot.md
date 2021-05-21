@@ -5,12 +5,12 @@ description: 使用Microsoft Teams快速创建自动程序Microsoft Teams Toolki
 ms.author: timura
 ms.date: 04/14/2020
 ms.topic: tutorial
-ms.openlocfilehash: dbb6f0a2497a0914d8e14473f1dbd6b2b225fc96
-ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
+ms.openlocfilehash: 2cbd90b293e8ac8343febc7b3d23278d5bb5bf82
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52068605"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565884"
 ---
 # <a name="create-your-first-bot-for-teams"></a>创建第一个自动程序Teams
 
@@ -31,8 +31,8 @@ ms.locfileid: "52068605"
 
 以下Microsoft Teams Toolkit可帮助你为应用设置以下组件： 
 
-* **与机器人相关的应用** 配置和基架
-* **自动** 注册到自动程序服务的Microsoft Azure自动程序
+* **与机器人相关的应用** 配置和基架。
+* **自动** 注册到自动程序服务Microsoft Azure自动程序。
 
 **创建应用项目**
 
@@ -64,7 +64,7 @@ ms.locfileid: "52068605"
 
 如果你在另一个教程中创建选项卡，则机器人的应用基架将有所不同。 与选项卡不同，机器人开发不需要你生成任何前端 Web 组件或使用 JavaScript Teams SDK。  相反，基架使用[Microsoft Bot Framework](https://dev.botframework.com/)，这是一个开源 SDK，用于构建可在 Web、移动以及当然Teams！ 
 
-该文件位于项目的根目录中，是Teams聊天机器人活动（如机器人如何响应特定消息）的 `botActivityHandler.js` 特定于 Teams 处理程序。 应用基架提供位于项目根目录中的文件是 Teams 特定处理程序，用于处理机器人活动，如机器人如何响应特定 `botActivityHandler.js` 消息。
+该文件位于项目的根目录中，是Teams聊天机器人活动（如机器人如何响应特定消息）的 `botActivityHandler.js` 特定于 Teams 处理程序。 应用基架提供位于项目根目录中的文件，是 Teams 特定处理程序，用于处理机器人活动，如机器人如何响应 `botActivityHandler.js` 特定消息。
 
 ## <a name="3-securely-expose-your-localhost-to-the-internet"></a>3. 安全地将 localhost 公开到 Internet
 
@@ -98,7 +98,7 @@ server.post('/api/messages', (req, res) => {
 
 若要在 Azure Teams自动程序，必须使用 Azure Bot 服务注册它。 当你使用应用设置应用时，这会自动Teams Toolkit。
 
-仍必须指定终结点地址，以接收并处理发送给机器人的用户消息或请求。 通常，URL 类似于 `https://HOST_URL/api/messages` 。 可以在工具包中快速进行配置。
+仍必须指定终结点地址，以接收并处理用户消息或发送给机器人的请求。 通常，URL 类似于 `https://HOST_URL/api/messages` 。 可以在工具包中对此进行配置。
 
 1. 在Visual Studio Code中，打开 **"Microsoft Teams Toolkit"。**
 1. 选择 **"自动**  >  **程序""** 现有自动程序注册"，然后选择在安装期间创建的自动程序。 
@@ -143,7 +143,7 @@ server.post('/api/messages', (req, res) => {
 
     :::image type="content" source="../assets/images/build-your-first-app/teams-client-bot.png" alt-text="显示用户向自动程序Teams&quot;Hello&quot;并收到响应的屏幕截图。":::
 
-    现在，你已创建一Teams聊天机器人，该聊天机器人可以一对一地与用户通信，或在组设置中 (频道和聊天) 🎉
+    现在，你已创建一Teams聊天机器人，该机器人可以与用户一对一进行通信，或在组设置中 (频道和聊天) 🎉。
 
 ## <a name="troubleshoot-your-bot"></a>自动程序疑难解答
 
@@ -152,9 +152,9 @@ server.post('/api/messages', (req, res) => {
 ### <a name="bot-isnt-connected-to-teams"></a>自动程序未连接到Teams
 
 
-如果你安装了应用，但自动程序无法工作，请确保自动程序已连接到 Azure 自动程序服务Teams [*频道*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)。
+如果你安装了应用，但自动程序无法工作，请确保自动程序已连接到 Azure 自动程序服务Teams [*频道*](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)。
 
-了解这一点与 Teams 中的频道Teams。 在这种情况下，通道是 Azure 自动程序服务如何将机器人连接到Teams受支持的 Microsoft 或第三方[通信应用](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)。
+了解这一点与 Teams 中的频道Teams。 在这种情况下，通道是 Azure 自动程序服务如何将机器人连接到Teams受支持的 Microsoft 或第三方[通信应用](/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)。
 
 ## <a name="see-also"></a>另请参阅
 

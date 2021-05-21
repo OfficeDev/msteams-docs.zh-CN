@@ -5,12 +5,12 @@ description: 使用 Microsoft Teams 快速创建邮件Microsoft Teams Toolkit。
 ms.author: timura
 ms.date: 03/25/2021
 ms.topic: tutorial
-ms.openlocfilehash: 91a5a15697163ee9103607511047a6411a5acf1a
-ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
+ms.openlocfilehash: c120a5b5d878c549cde008c3e1ccc71743a4e24f
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52068757"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566059"
 ---
 # <a name="build-your-first-messaging-extension-for-microsoft-teams"></a>生成首个邮件扩展Microsoft Teams
 
@@ -34,8 +34,8 @@ ms.locfileid: "52068757"
 
 下表Microsoft Teams Toolkit设置邮件扩展的以下组件：
 
-* **与邮件扩展相关的** 应用配置和基架
-* **自动** 程序用于自动注册到自动聊天机器人服务Microsoft Azure聊天扩展
+* **与邮件扩展相关的** 应用配置和基架。
+* **自动** 程序，用于向自动聊天机器人服务自动注册Microsoft Azure扩展。
 
 **创建应用项目**
 
@@ -79,7 +79,7 @@ ms.locfileid: "52068757"
 
 你已设置用于托管邮件扩展的 URL，并配置为处理搜索。 可以启动并运行应用了。
 
-1. 打开终端并转到应用项目的根目录
+1. 打开终端并转到应用项目的根目录。
 1. 运行 `npm install`。
 1. 运行 `npm start`。
 
@@ -112,9 +112,9 @@ ms.locfileid: "52068757"
 
 **自动程序未连接到Teams**
 
-如果你安装了应用，但它无法工作，请确保消息扩展的自动程序已连接到 Azure 自动程序服务的 Teams [*通道*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)。
+如果你安装了应用，但它无法工作，请确保消息扩展的自动程序已连接到 Azure 自动程序服务的 Teams [*通道*](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)。
 
-了解这一点与 Teams 中的频道Teams。 在这种情况下，通道是 Azure 自动程序服务如何将机器人连接到Teams受支持的 Microsoft 或第三方[通信应用](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)。
+了解这一点与 Teams 中的频道Teams。 在这种情况下，通道是 Azure 自动程序服务如何将机器人连接到Teams受支持的 Microsoft 或第三方[通信应用](/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -4,41 +4,41 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
 完成以下步骤以更新应用包：
 
-1. 若要在 Teams 安装 App Studio，请选择左侧栏底部的"应用"图标，然后搜索 **App Studio**。
+1. 若要在Teams App Studio，请选择左侧栏底部的"应用"图标，然后搜索 **App Studio：**
 
-<img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
+    <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
-2. 选择 **App Studio** 磁贴，然后选择"安装 **"。** 安装了 App Studio。
+1. 选择 **App Studio** 磁贴，然后选择"安装 **"。** 安装了 App Studio：
 
-<img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
+    <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-3. 若要为应用创建应用包Teams，请选择 App Studio **中的清单编辑器****选项卡**。
+1. 若要为应用创建应用包Teams，请选择 **App Studio****中的** 清单编辑器选项卡：
 
-<img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
+    <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-该示例附带自己的清单，旨在生成项目时生成应用包。 在 .NET 上，此操作在 Visual Studio 中完成Node.js在项目根目录中的命令行中 `gulp` 键入这一点。
+    该示例附带自己的清单，旨在生成项目时生成应用包。 在 .NET 上，此操作在 Visual Studio 中完成Node.js在项目根目录中的命令行中 `gulp` 键入这一点。
 
-```bash
-$ gulp
-[13:39:27] Using gulpfile ~\documents\github\msteams-samples-hello-world-nodejs\gulpfile.js
-[13:39:27] Starting 'clean'...
-[13:39:27] Starting 'generate-manifest'...
-[13:39:27] Finished 'generate-manifest' after 11 ms
-[13:39:27] Finished 'clean' after 21 ms
-[13:39:27] Starting 'default'...
-Build completed. Output in manifest folder
-[13:39:27] Finished 'default' after 62 μs
-```
+    ```bash
+    $ gulp
+    [13:39:27] Using gulpfile ~\documents\github\msteams-samples-hello-world-nodejs\gulpfile.js
+    [13:39:27] Starting 'clean'...
+    [13:39:27] Starting 'generate-manifest'...
+    [13:39:27] Finished 'generate-manifest' after 11 ms
+    [13:39:27] Finished 'clean' after 21 ms
+    [13:39:27] Starting 'default'...
+    Build completed. Output in manifest folder
+    [13:39:27] Finished 'default' after 62 μs
+    ```
 
-生成的应用包的名称 **helloworldapp.zip。** 如果当前使用的工具中的位置不明确，可以搜索此文件。
+    生成的应用包的名称 **helloworldapp.zip。** 如果当前使用的工具中的位置不明确，可以搜索此文件。
 
-4. 现在要修改此应用包，请选择 **"** 在清单编辑器中导入现有 **应用"。**
+1. 现在要修改此应用包，请选择 **"在清单编辑器** 中导入现有 **应用"：**
 
-<img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
+    <img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
 
-5. 选择新 **导入的应用** 的 Hello World 磁贴。
+1. 为新 **导入的应用** 选择 Hello World 磁贴：
 
-<img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
+    <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
 下图显示了 App Studio 中导入的应用包：
 
@@ -60,7 +60,7 @@ Build completed. Output in manifest folder
 
 ##### <a name="team-tab"></a>"团队"选项卡
 
-你的应用只能有一个"团队"选项卡。
+你的应用只能有一个"团队"选项卡：
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
@@ -83,7 +83,7 @@ Build completed. Output in manifest folder
 
 #### <a name="bots"></a>机器人
 
-将聊天机器人功能添加到你的应用很简单。 Hello **World** 示例应用已包含自动程序作为示例的一部分，但你必须向 Microsoft 注册它。
+将聊天机器人功能添加到你的应用很简单。 Hello **World** 示例应用已包含自动程序作为示例的一部分，但你必须向 Microsoft 注册它：
 
 <img  width="450px" alt="Adding a bot" src="~/assets/images/get-started/Bots.png"/>
 
@@ -95,16 +95,16 @@ Build completed. Output in manifest folder
 完成以下步骤以设置自动程序：
 
 1. 选择 **"** 自动程序"列表中导入的机器人旁边的"删除"。 现在，没有要展示的机器人。 
-2. 选择 **"** 设置" **以显示"设置自动程序** "对话框。
+1. 选择 **"** 设置" **以显示"设置自动程序** "对话框。
 
-<img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
+    <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-3. 添加自动程序名称 **Contoso 自动** 程序，并选中范围 下的所有三 **个复选框**。
-4. 选择 **"保存** "退出对话框。 App Studio 向 Microsoft 注册你的自动程序，在机器人列表中显示你的新机器人。 
-5. 现在，在记事本中打开一个文本文件，然后将新的自动程序 ID 复制并粘贴到该文件中。
-6. 单击 **"生成新密码**"，并记下你记录自动程序应用 ID 的同一文本文件中的密码。
-7. 将 **Bot 终结点地址更新** 为 `https://yourteamsapp.ngrok.io/api/messages` ，将 替换为托管应用 `yourteamsapp.ngrok.io` 时所使用的 URL。
-8. 现在保存您的文本文件，因为您必须将文件中的信息添加到托管应用，以允许与自动程序进行安全通信。
+1. 添加自动程序名称 **Contoso 自动** 程序，并选中范围 下的所有三 **个复选框**。
+1. 选择 **"保存** "退出对话框。 App Studio 向 Microsoft 注册你的自动程序，在机器人列表中显示你的新机器人。 
+1. 现在，在记事本中打开一个文本文件，然后将新的自动程序 ID 复制并粘贴到该文件中。
+1. 单击 **"生成新密码**"，并记下你记录自动程序应用 ID 的同一文本文件中的密码。
+1. 将 **Bot 终结点地址更新** 为 `https://yourteamsapp.ngrok.io/api/messages` ，将 替换为托管应用 `yourteamsapp.ngrok.io` 时所使用的 URL。
+1. 现在保存您的文本文件，因为您必须将文件中的信息添加到托管应用，以允许与自动程序进行安全通信。
 
 #### <a name="messaging-extensions"></a>消息扩展
 
@@ -112,48 +112,48 @@ Build completed. Output in manifest folder
 
 完成以下步骤以设置邮件扩展：
 
-1. 在 **App** Studio **左侧窗格中的** "功能"下选择"邮件扩展"以配置邮件扩展。
+1. 在 **App** Studio **左侧窗格中的** "功能"下选择"邮件扩展"以配置邮件扩展：
 
-<img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
+    <img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
-邮件扩展示例在"邮件扩展"窗格中 **列出。**
+    邮件扩展示例在"邮件扩展"窗格中 **列出。**
 
-2. 选择 **"** 删除"删除邮件扩展，选择" **设置"，** 然后按照用于机器人 [的相同步骤操作](#bots)。 将显示 **"消息传递扩展** "对话框。
-3. 选择"**使用现有自动程序**"选项卡和 **"从我现有的自动程序之一中选择"。**
-4. 从下拉菜单中选择你创建的自动程序。 添加自动 **程序名称，** 然后选择 **保存** 以关闭对话框。
-5. 在"**命令"部分** 下，选择"**添加"。** 若要添加基于搜索的命令，请选择"允许用户查询 **服务信息并将其插入邮件"** 选项。
-6. 在" **新建"** 命令对话框中，输入以下值：
+1. 选择 **"** 删除"删除邮件扩展，选择" **设置"，** 然后按照用于机器人 [的相同步骤操作](#bots)。 将显示 **"消息传递扩展** "对话框。
+1. 选择"**使用现有自动程序**"选项卡和 **"从我现有的自动程序之一中选择"。**
+1. 从下拉菜单中选择你创建的自动程序。 添加自动 **程序名称，** 然后选择 **保存** 以关闭对话框。
+1. 在"**命令"部分** 下，选择"**添加"。** 若要添加基于搜索的命令，请选择"允许用户查询 **服务信息并将其插入邮件"** 选项。
+1. 在" **新建"** 命令对话框中，输入以下值：
 
-在 **"新建"命令下**：
+    在 **"新建"命令下**：
 
-- **命令 ID：** 输入随机文本
-- **标题**：输入随机标题
-- **说明**：输入随机描述
+    - **命令 ID：** 输入随机文本
+    - **标题**：输入随机标题
+    - **说明**：输入随机描述
 
-在 **"参数"下**：
+    在 **"参数"下**：
 
-- **名称**：输入参数名称
-- **标题**：输入卡片标题
-- **说明**：输入卡片说明
+    - **名称**：输入参数名称
+    - **标题**：输入卡片标题
+    - **说明**：输入卡片说明
 
-7. 输入信息后，选择" **保存** "关闭对话框。
+1. 输入信息后，选择" **保存** "关闭对话框。
 
 #### <a name="register-your-app-in-teams"></a>在应用商店中Teams
 
 输入应用的详细信息后，完成以下步骤以在应用中注册Teams：
 
 1. 使用 **测试和分发** App Studio 在 Teams 中安装应用。 
-2. 使用自动程序的应用 ID 和密码更新托管的应用程序。 对于示例应用，请对机器人和消息扩展使用相同的应用 ID 和密码。 
-3. 选择 App Studio **左侧****窗格中的**"完成"下的"测试和分发"。
+1. 使用自动程序的应用 ID 和密码更新托管的应用程序。 对于示例应用，请对机器人和消息扩展使用相同的应用 ID 和密码。 
+1. 在 App Studio **的左侧**  窗格中 **，选择"** 测试和分发"下的"完成"：
 
-<img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
+    <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
-4. 若要将应用上传到Teams，请选择 **"测试和分发**"下的"**安装"按钮**。
+1. 若要将应用上传到Teams，请选择 **"测试和分发**"下的"**安装"按钮**：
 
-<img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
+    <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
 
-5. 选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。 你可以设置一个特殊的团队进行测试。
-6. 选择 **对话框** 底部的"安装"按钮。
+1. 选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。 你可以设置一个特殊的团队进行测试。
+1. 选择 **对话框** 底部的"安装"按钮。
 
 你的应用现已在 Teams 中提供。 但是，在用应用 ID 和密码更新托管应用程序环境之前，机器人和消息扩展将不起作用。
 

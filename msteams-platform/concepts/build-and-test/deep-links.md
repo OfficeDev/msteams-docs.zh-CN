@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: ccad5c6cc8daa513b12185efa2ed57e02438fd89
-ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
+ms.openlocfilehash: 837d180b06f69b9be49d898c62b9ab8ee64d51d0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52300554"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566052"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -48,7 +48,7 @@ ms.locfileid: "52300554"
 
 ### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>显示指向选项卡内某个项目的深层链接
 
-若要显示包含指向选项卡内项目的深层链接的对话框，请调用 `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
+若要显示包含指向选项卡内某个项目的深层链接的对话框，请调用 `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })` 。
 
 提供以下字段：
 
@@ -80,7 +80,7 @@ ms.locfileid: "52300554"
 | `entityId`&emsp; | 选项卡中项的 ID，在配置选项卡 [时提供](~/tabs/how-to/create-tab-pages/configuration-page.md)。|Tasklist123|
 | `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段。 | https://tasklist.example.com/123 或 https://tasklist.example.com/list123/task456 |
 | `entityLabel` 或 `subEntityLabel`&emsp; | 选项卡中项的标签，用于显示深层链接时。 | 任务列表 123 或"任务 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象</br></br> * 选项卡内项的 ID。 </br></br> * Microsoft Teams上下文提供的信息通道[ID。](~/tabs/how-to/access-teams-context.md) | 
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象：</br></br> * 选项卡内项的 ID。 </br></br> * Microsoft Teams上下文提供的信息通道[ID。](~/tabs/how-to/access-teams-context.md) | 
 | `subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
 | `channelId`&emsp; | 选项卡Microsoft Teams中提供的信息通道[ID。](~/tabs/how-to/access-teams-context.md) 此属性仅在具有团队作用域的可配置选项卡 **中可用**。 它在静态选项卡中不可用，静态选项卡具有个人 **作用域**。| 19：cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
@@ -136,7 +136,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
-示例：`https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+例如：`https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
 
 查询参数包括：
 
@@ -194,7 +194,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 * `entityWebUrl`：如果客户端不支持呈现选项卡或 ，则使用带回退 URL 的可选 https://tasklist.example.com/123 字段 https://tasklist.example.com/list123/task456 。
 * `entityName`：选项卡中项的标签，用于显示深层链接（任务列表 123 或任务 456）。
 
-示例：https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
+例如：https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
 ## <a name="deep-linking-to-the-scheduling-dialog"></a>到计划对话框的深层链接
 
@@ -207,7 +207,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 对可以在自动程序、连接器或邮件扩展卡中使用的深层链接使用以下格式： `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
-示例：`https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
+例如：`https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 查询参数包括：
 
@@ -231,7 +231,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 > [!NOTE]
 > 此深度链接不能用于调用会议。
 
-### <a name="generate-a-deep-link-to-a-chat"></a>生成聊天的深层链接
+### <a name="generate-a-deep-link-to-a-call"></a>生成到呼叫的深层链接
 
 | 深层链接 | Format | 示例 |
 |-----------|--------|---------|
@@ -247,7 +247,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称 | 说明 | C# |Node.js|
+| 示例名称 | 描述 | C# |Node.js|
 |-------------|-------------|------|----|
 |使用下级 ID 的深层链接  |Microsoft Teams聊天到选项卡使用子企业 ID 的深层链接的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 

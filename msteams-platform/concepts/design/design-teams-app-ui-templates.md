@@ -5,12 +5,12 @@ description: 使用通常在整个应用中看到的标准化 UI 组件、布局
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: d627ce3b29ffa071d0d7e238c572c7cb69fa4cd9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0cd5c6c4525e340f9aa53a78749211783880225a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020763"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566017"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI Microsoft Teams设计应用
 
@@ -100,9 +100,9 @@ ms.locfileid: "52020763"
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 项目管理。 分配任务和跟踪状态
-* 集体讨论。 在不同类别中添加想法
-* 对练习进行排序。 将任何类型的信息组织到存储桶
+* Project：分配任务和跟踪状态。
+* 集体讨论：在不同类别中添加想法。
+* 排序练习：将任何类型的信息组织到存储桶中。
 
 ## <a name="data-visualization"></a>数据可视化
 
@@ -160,8 +160,8 @@ ms.locfileid: "52020763"
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 浏览"页面"选项卡Teams页面
-* 将复杂应用分解为多个页面
+* 浏览"页面"选项卡Teams页面。
+* 将复杂应用分解为多个页面。
 
 ## <a name="breadcrumb"></a>痕迹导航栏
 
@@ -196,5 +196,5 @@ Stage 为用户提供了一种在应用程序中打开实体（如图像、文�
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 在浏览器中打开实体Teams而不是其他应用或浏览器
-* 聚焦媒体或其他内容
+* 在浏览器中打开实体Teams，而不是在另一个应用或浏览器中打开。
+* 聚焦媒体或其他内容。

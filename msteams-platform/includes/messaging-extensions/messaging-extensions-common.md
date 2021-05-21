@@ -43,12 +43,12 @@
 | `id` | 分配给此命令的唯一 ID。 用户请求将包含此 ID。 | 是 | 1.0 |
 | `title` | 命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
 | `description` | 指示此命令所执行操作的帮助文本。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 设置命令的类型。 可取值包括 `query` 和 `action`。 如果不存在，则默认值设置为 `query` | 否 | 1.4 |
+| `type` | 设置命令的类型。 可取值包括 `query` 和 `action`。 如果不存在，则默认值设置为 `query` 。 | 否 | 1.4 |
 | `initialRun` | 可选参数，与命令 `query` 一起使用。 如果设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
-| `fetchTask` | 可选参数，与命令 `action` 一起使用。 设置为 **true** 可获取要显示在任务模块 中的自适应卡片或 [Web URL。](~/task-modules-and-cards/what-are-task-modules.md) 当命令的输入是动态的（而不是静态的参数集） `action` 时，会使用此功能。 请注意，如果设置为 **true，** 则忽略命令的静态参数列表 | 否 | 1.4 |
+| `fetchTask` | 可选参数，与命令 `action` 一起使用。 设置为 **true** 可获取要显示在任务模块 中的自适应卡片或 [Web URL。](~/task-modules-and-cards/what-are-task-modules.md) 当命令的输入是动态的（而不是静态的参数集） `action` 时，会使用此功能。 请注意，如果设置为 **true，** 则忽略命令的静态参数列表。 | 否 | 1.4 |
 | `parameters` | 命令的参数静态列表。 | 是 | 1.0 |
 | `parameter.name` | 参数的名称。 这将在用户请求中发送到你的服务。 | 是 | 1.0 |
 | `parameter.description` | 描述此参数的用途或应提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 简短的用户友好参数标题或标签。 | 是 | 1.0 |
-| `parameter.inputType` | 设置为所需的输入类型。 可能的值包括 `text` `textarea` `number` 、、、、、。 `date` `time` `toggle` 默认值设置为 `text` | 否 | 1.4 |
+| `parameter.inputType` | 设置为所需的输入类型。 可能的值包括 `text` `textarea` `number` 、、、、、。 `date` `time` `toggle` 默认值设置为 `text` 。 | 否 | 1.4 |
 | `context` | 用于定义邮件操作可用的上下文的值的可选数组。 可能的值是 `message` 、 `compose` 或 `commandBox` 。 默认值为“`["compose", "commandBox"]`”。 | 否 | 1.5 |

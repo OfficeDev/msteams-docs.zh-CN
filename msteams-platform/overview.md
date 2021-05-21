@@ -6,12 +6,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 69c36cf5f925bdb9802e7ec081a7765187a06128
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 8724b669476b11aa8cb1aca6d9586fc7ea42587d
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101840"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566507"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
@@ -80,7 +80,7 @@ Teams应用是功能和[入口点](concepts/capabilities-overview.md)[的组合]
 
 ### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
 
-**利用Teams** [：Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview)提供对团队、频道、用户和消息的访问权限，这些信息可帮助你创建或增强应用的功能。
+**利用Teams** [：Microsoft Graph API for Teams](/graph/teams-concept-overview)提供对团队、频道、用户和消息的访问权限，这些信息可帮助你创建或增强应用的功能。
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Microsoft Graph API Teams。" border="false":::
 
@@ -127,7 +127,7 @@ Teams应用是功能和[入口点](concepts/capabilities-overview.md)[的组合]
 
 ## <a name="a-little-code-goes-a-long-way"></a>一个小代码会大有作为
 
-你无需成为专家程序员来构建出色的Teams应用。 请尝试多个低代码解决方案之一。
+你无需成为专家程序员来构建出色的Teams应用。 请尝试几种低代码解决方案之一。
 
 > [!div class="nextstepaction"]
 > [创建低代码应用](samples/teams-low-code-solutions.md)
@@ -158,6 +158,6 @@ Teams应用是功能和[入口点](concepts/capabilities-overview.md)[的组合]
 
 * [将"共享到Teams"按钮添加到您的网站](concepts/build-and-test/share-to-teams.md)
 * [设计Teams应用](concepts/design/design-teams-app-overview.md)
-* [Microsoft TeamsJavaScript 客户端 SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Microsoft TeamsJavaScript 客户端 SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * 适用于[JavaScript](https://github.com/Microsoft/botbuilder-js)和[.NET](https://github.com/Microsoft/botbuilder-dotnet/)的 Bot Framework SDK
 * [分发Teams应用](concepts/deploy-and-publish/apps-publish-overview.md)

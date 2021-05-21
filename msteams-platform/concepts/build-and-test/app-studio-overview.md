@@ -4,12 +4,12 @@ description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应�
 keywords: 应用室团队入门
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 0e6a00921b3f24381758b13bd6042da18a3ac2c1
-ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
+ms.openlocfilehash: 391086b85f0e68e1a864c3d4254bdbe62b5eaa1a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52304031"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565198"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams 快速开发应用
 
@@ -17,7 +17,7 @@ ms.locfileid: "52304031"
 
 ## <a name="installing-app-studio"></a>安装 App Studio
 
-App Studio 是一款可在 Teams 商店找到的 Teams 应用。 请通过此链接直接下载： [App Studio](https://aka.ms/InstallTeamsAppStudio) （在 App Store 中也可以找到该应用）。
+App Studio 是一款可在 Teams 商店找到的 Teams 应用。 按照此链接直接下载[App Studio。](https://aka.ms/InstallTeamsAppStudio) 还可以在应用商店中查找该应用。
 
 在应用商店中，搜索 App Studio。
 
@@ -27,11 +27,11 @@ App Studio 是一款可在 Teams 商店找到的 Teams 应用。 请通过此链
 
 ![配置 app studio](~/assets/images/get-started/teamsappstudioconfiguration.png)
 
-选择“*安装*”。
+选择“**安装**”。
 
 ![app studio](~/assets/images/get-started/teamsappstudio.png)
 
-在 App Studio 中后，单击 *清单编辑器* 选项卡，可在其中导入现有应用或创建新应用。
+在 App Studio 中后，单击 **清单编辑器** 选项卡，可在其中导入现有应用或创建新应用。
 
 ## <a name="app-studio-features"></a>App Studio 功能
 
@@ -67,39 +67,40 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
   你还必须提供选项卡期望从其加载或链接到的任何其他域。
 
-* **个人选项卡。** 通过此部分，可定义一组选项卡，默认情况下在个人应用体验中显示（即用户对于团队或频道外部的应用使用体验）。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 与 Teams 选项卡一样，提供选项卡应从其中加载或链接到的任何其他域。
+* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认在个人应用体验中显示 (用户在团队或频道应用的上下文之外使用你的应用时) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
 
 ##### <a name="bots"></a>机器人
 
 通过此部分，可以将一 [对话自动](~/bots/what-are-bots.md) 添加到应用中。 如果你已有注册了 Bot Framework 的自动程序，您可以通过单击 *"设置* 并单击自动程序的名称"自动框架 ID"并定义自动程序工作的范围来添加自动程序。
 
-如果你尚未在 Bot Framework 中注册自动 *，请单击"注册* 自动程序"以创建新的自动程序。 完成注册自动程序后，请返回清单编辑器的此部分，输入其名称和 Bot Framework ID。
+如果你尚未在 Bot Framework 中注册自动 **，请单击"注册** 自动程序"以创建新的自动程序。 完成注册自动程序后，请返回清单编辑器的此部分，输入其名称和 Bot Framework ID。
 
 提供自动程序信息后，你现在可以选择定义自动程序可以建议给用户的命令列表。 添加命令的名称、指示其语法和参数的命令说明以及此命令应应用于的范围。
 
-请注意，如果将自动程序定义为仅支持一个作用域，则为不受支持的范围指定的命令将被忽略。 你随时都可以编辑你的自动程序支持的范围。
+> [!NOTE]
+> 如果已定义自动程序仅支持一个作用域，则忽略为不受支持的范围指定的命令。 你随时都可以编辑你的自动程序支持的范围。
 
 ##### <a name="connectors"></a>连接器
 
-此部分允许向应用添加连接器。 如果已注册 Office 365 连接器，请选择" *设置* 并输入连接器的名称和 ID。 如果需要新的连接器，请单击 *注册* 以在浏览器中访问连接器开发人员仪表板。
+此部分允许向应用添加连接器。 如果已注册 Office 365 连接器，请选择" **设置** 并输入连接器的名称和 ID。 如果需要新的连接器，请单击 **注册** 以在浏览器中访问连接器开发人员仪表板。
 
 > [!NOTE]
-> 通过应用自定义，管理员可以更改通过机器人、消息传递扩展、选项卡和连接器加载的应用的外观。 例如，如果Teams将 *Contoso* 中的应用程序的名称自定义为 *Contoso 代理*，则应用将显示为用户的新名称 *Contoso Agent。* 但是，向聊天添加连接器时，连接器仍将在列表中显示应用的名称为 *Contoso*。
+> 通过应用自定义，管理员可以更改通过机器人、消息传递扩展、选项卡和连接器加载的应用的外观。 例如，如果Teams将 **Contoso** 中的应用程序的名称自定义为 **Contoso 代理**，则应用将显示为用户的新名称 **Contoso Agent。** 但是，向聊天添加连接器时，连接器仍将在列表中显示应用的名称为 **Contoso**。
 
 
 ##### <a name="messaging-extensions"></a>消息扩展
 
 [消息传递扩展](~/messaging-extensions/what-are-messaging-extensions.md) 是一种强大的方法，让用户在 Microsoft Teams 中参与你的应用。 用户可以查询服务的信息，将该信息以卡片形式发布到频道或聊天对话中。
 
-消息扩展由 Bot Framework 自动程序支持，因此它们要求配置自动程序运行。 如果拥有要为消息扩展提供 Power 的自动程序的名称和 Bot Framework ID，请输入该 ID。 否则，请单击 *注册* 创建一个，然后输入信息。 选择用户是否可以更新消息扩展的配置。
+消息扩展由 Bot Framework 自动程序支持，因此它们要求配置自动程序运行。 如果拥有要为消息扩展提供 Power 的自动程序的名称和 Bot Framework ID，请输入该 ID。 否则，请单击 **注册** 创建一个，然后输入信息。 选择用户是否可以更新消息扩展的配置。
 
 配置基础自动程序后，定义邮件扩展可以接受的命令和参数。
 
 每个命令都需要标题和 ID。 命令可以选择性地包含用户说明。 每个命令可支持最多五个参数，每个参数要求：
 
-* 在 Teams 客户端中显示且包含在用户请求中的参数名称
-* 方便使用的标题
-* 可选说明
+* 显示在客户端和用户请求Teams参数的名称。
+* 用户友好标题。
+* 可选说明。
 
 > [!NOTE]
 > 若要使用 app studio 创建消息传递扩展，请参阅 [使用 app studio 创建消息传递扩展](~/resources/create-messaging-extension-using-appstudio.md)。
@@ -115,14 +116,14 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 卡片是包含短信息或相关信息的容器。 Microsoft Teams 支持卡片，卡片可以有多个属性和附件。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。 
 
-为简化此过程，减少错误，"卡片编辑器"选项卡允许你使用表单生成"主卡"或"缩略图卡"，并且通过机器人验证和测试生成的卡片（完全与用户看到的一样）。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
+为了简化此过程且减少出错，可以使用"卡片编辑器"选项卡使用窗体生成主卡或缩略图卡，并验证和测试生成的卡片 (就像用户通过自动程序) 看到它一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
 
 如果已有要验证的卡片，可在 Teams 中将该卡的 JSON 粘贴到 *"添加卡信息"下的 JSON 选项卡中* 然后将其发送给自己以查看聊天中的外观。
 
 ### <a name="react-control-library"></a>反应控件库
 
 >[!Note]
-> 此"反应"控件库将在未来弃用。 请考虑使用系统 [Fluent-UI 反应控件作为](https://microsoft.github.io/fluent-ui-react/) （以前星号 UI）的一种替代方式。
+> 以后React弃用此控件库。 请考虑将 [Fluent-UI react 控件用作](https://microsoft.github.io/fluent-ui-react/) 以前作为 Stardust UI 的替代项。
 
 创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为更轻松地创建一致的 UI，App Studio 提供了几种符合 Teams 设计原则的 UI 控件类别。
 

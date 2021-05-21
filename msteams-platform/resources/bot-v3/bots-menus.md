@@ -5,12 +5,12 @@ keywords: teams 自动程序菜单创建
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: f4190d0b21abbe00994e082000202b7bc65b917c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: da6f36e1b7071b92f6411ab7d2afdccb795946b7
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019767"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566766"
 ---
 # <a name="add-a-bot-menu-in-microsoft-teams"></a>在"聊天机器人"菜单中添加Microsoft Teams
 
@@ -24,11 +24,11 @@ ms.locfileid: "52019767"
 
 ## <a name="bot-menu-support-on-teams-mobile-app"></a>移动应用上的自动Teams支持
 > [!NOTE] 
-> 自动程序菜单不显示在移动设备上
+> 自动程序菜单不会显示在移动设备上。
 
 ## <a name="app-manifest"></a>应用部件清单
 
-若要创建自动程序菜单，请向应用清单的自动程序 [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) 部分下添加新对象。 对于自动程序支持的每个范围，可以使用单独的命令声明单个菜单 `personal` (，) 每个菜单最多支持 `groupChat` `team` 10 个命令。
+若要创建自动程序菜单，请向应用清单的自动程序 [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) 部分下添加新对象。 对于自动程序支持的每个范围，可以使用单独的命令声明单个菜单 (、 或) 每个菜单最多支持 `personal` `groupChat` `team` 10 个命令。
 
 ### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>清单摘录 - 两个作用域的单个菜单
 

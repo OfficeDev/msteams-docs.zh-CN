@@ -7,12 +7,12 @@ ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5a7f7971d7f58af315222933f1c1f192868a4171
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: da624ea0e92e193f4ad7f334d958349d542dd6e0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020637"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566465"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>处理聊天机器人Microsoft Teams
 
@@ -20,11 +20,11 @@ ms.locfileid: "52020637"
 
 Microsoft Teams自动程序在活动范围内发生的更改或事件，向自动程序发送通知。 可以使用这些事件触发服务逻辑，如下所示：
 
-* 将机器人添加到团队时触发欢迎消息
-* 将机器人添加到群聊时查询和缓存组信息
-* 更新有关团队成员身份或频道信息的缓存信息
-* 删除自动程序时删除团队的缓存信息
-* 用户喜欢自动程序消息时
+* 将机器人添加到团队时触发欢迎消息。
+* 将机器人添加到群聊时查询和缓存组信息。
+* 更新有关团队成员身份或频道信息的缓存信息。
+* 如果删除了自动程序，则删除团队的缓存信息。
+* 当用户喜欢自动程序消息时。
 
 每个自动程序事件都作为 `Activity` 对象发送，其中 `messageType` 定义了对象中的信息。 对于类型为 的邮件 `message` ，请参阅 [发送和接收邮件](~/resources/bot-v3/bot-conversations/bots-conversations.md)。
 
@@ -32,7 +32,7 @@ Teams和组事件（通常从类型触发）具有作为对象一部分传递的
 
 下表列出了机器人可以接收并采取措施的事件。
 
-|类型|Payload 对象|Teams eventType |说明|范围|
+|类型|Payload 对象|Teams eventType |描述|范围|
 |---|---|---|---|---|
 | `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[添加到团队的成员](#team-member-or-bot-addition)| all |
 | `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[已从团队中删除成员](#team-member-or-bot-removed)| `groupChat` & `team` |
@@ -45,7 +45,7 @@ Teams和组事件（通常从类型触发）具有作为对象一部分传递的
 
 ## <a name="team-member-or-bot-addition"></a>添加团队成员或机器人
 
-当机器人收到有关已添加它的团队的成员身份更新的信息时，该事件 [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 将发送给机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。 请注意， () 信息对于自动程序来说是唯一的，可以缓存这些信息供你的服务 (如向特定用户发送 `Id`) 。
+当机器人收到有关已添加它的团队的成员身份更新的信息时，该事件 [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 将发送给机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。 请注意， () 信息对于自动程序来说是唯一的，可以缓存这些信息供你的服务将来使用，例如向特定用户 `Id` 发送邮件。
 
 ### <a name="bot-or-user-added-to-a-team"></a>添加到团队的机器人或用户
 
@@ -366,9 +366,9 @@ bot.on('conversationUpdate', (msg) => {
 
 频道事件如下所示：
 
-* **channelCreated** &emsp;用户向团队添加新频道
-* **channelRenamed** &emsp;用户重命名现有频道
-* **channelDeleted** &emsp;用户删除频道
+* **channelCreated** &emsp;用户向团队添加新频道。
+* **channelRenamed** &emsp;用户重命名现有频道。
+* **channelDeleted** &emsp;用户删除频道。
 
 ### <a name="full-schema-example-channelcreated"></a>完整架构示例：channelCreated
 

@@ -5,12 +5,12 @@ keywords: teams 机器人选项卡开发
 ms.topic: conceptual
 localization_priority: Normal
 ms.date: 03/15/2018
-ms.openlocfilehash: b33d0bfcae4b522fc9e0c7d17b3d082979a62647
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3273369ad1122355b792dc3d429c3a4eff7e1d47
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020623"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566451"
 ---
 # <a name="combine-bots-with-tabs"></a>将机器人与选项卡组合在一起
 
@@ -29,11 +29,12 @@ ms.locfileid: "52020623"
 
 ## <a name="constructing-deep-links-to-tabs-in-messages-from-your-bot"></a>从自动程序构造消息中选项卡的深层链接
 
-您可能需要使用选项卡来显示比卡片内部容纳更多的内容，或者提供一种使用选项卡画布完成复杂表单填写任务的方法。 例如，当用户从自动程序单击卡片时，请考虑将用户导航到选项卡。 为此，你需要对自动程序的消息进行编码，以包括深层链接 [URL（](~/concepts/build-and-test/deep-links.md) 通过标记或作为 openUrl 操作的目标）。
+您可能需要使用选项卡来显示比卡片内部容纳更多的内容，或者提供一种使用选项卡画布完成复杂表单填写任务的方法。 例如，当用户从自动程序单击卡片时，请考虑将用户导航到选项卡。 为此，你需要对机器人的消息进行编码，以包括深层链接 [URL（](~/concepts/build-and-test/deep-links.md) 通过标记或作为 openUrl 操作的目标）。
 
-深度链接依赖于 entityId，它是映射到系统中唯一实体的不透明值。 创建选项卡时，最好存储一些简单的状态 (例如，) 标记标记指示该选项卡已在通道中创建。 当机器人构造消息时，它可以面向与该选项卡关联的 entityId。
+深度链接依赖于 entityId，它是映射到系统中唯一实体的不透明值。 创建选项卡时，最好存储一些简单状态，例如，后端上指示该选项卡已在通道中创建的标志。 当机器人构造消息时，它可以面向与该选项卡关联的 entityId。
 
-**注意：** 在个人聊天中，由于选项卡是"静态"的，并且随应用一起安装，因此你始终可以假定它们存在，从而相应地构造深层链接。
+> [!NOTE]
+> 在个人聊天中，由于选项卡是"静态"的，并且随应用一起安装，因此你始终可以假定它们存在，从而相应地构造深层链接。
 
 ## <a name="sending-notifications-for-tab-updates"></a>发送选项卡更新通知
 

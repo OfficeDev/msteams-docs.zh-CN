@@ -5,12 +5,12 @@ description: 如何为邮件扩展启用 SSO 支持
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: f7dc689da3f0e3e06b8f9c68836b6449c2ae9120
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 02d08506a07e955693531908f4f3cf16573a02c0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020700"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566199"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>单一登录 (SSO) 邮件扩展支持
  
@@ -116,12 +116,7 @@ ms.locfileid: "52020700"
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [向邮件扩展添加身份验证](add-authentication.md)
-
-> [!div class="nextstepaction"]
-> [将 SSO 用于聊天机器人](../../bots/how-to/authentication/auth-aad-sso-bots.md)
-
-> [!div class="nextstepaction"]
-> [链接展开](link-unfurling.md)
+* [向邮件扩展添加身份验证](add-authentication.md)
+* [将 SSO 用于聊天机器人](../../bots/how-to/authentication/auth-aad-sso-bots.md)
+* [链接展开](link-unfurling.md)
 

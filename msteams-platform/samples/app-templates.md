@@ -6,12 +6,12 @@ keywords: Microsoft Teams模板示例演示
 localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 04f32e7f35863d7c4b3e8744984eb6e27ec63396
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 8cfb066ee3c202fb8611a61bbde3058207a62a35
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075757"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566251"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -148,7 +148,7 @@ Classroom Drop-in 是一款基于 Microsoft [Power Platform](https://powerapps.m
 
 ## <a name="company-communicator"></a>Company Communicator
 
-公司Communicator应用使企业团队可以创建和发送供多个团队或大量员工使用的消息，通过聊天允许组织在员工协作的地方与员工联系。 将此模板用于多种方案，例如新计划公告、员工入职培训、新式学习与开发或组织范围的广播。
+公司Communicator应用使企业团队可以创建和发送供多个团队或大量员工使用的消息，通过聊天允许组织在员工协作的地方与员工联系。 此模板可用于多个方案，例如新计划公告、员工入职培训、新式学习、开发或组织范围的广播。
 
 该应用为指定用户提供了一个简单的界面，用于创建、预览、协作和发送邮件。
 
@@ -195,7 +195,7 @@ Classroom Drop-in 是一款基于 Microsoft [Power Platform](https://powerapps.m
 
 自我表达是健康团队文化的核心。 此应用模板是[一个消息](~/messaging-extensions/what-are-messaging-extensions.md)扩展，使你的用户能够在应用中使用自定义贴纸Microsoft Teams。 此模板提供了一种基于 Web 的轻松配置体验，具有配置访问权限的任何人都可以上传希望用户拥有的 GIF、贴纸和图像，从而允许整个团队使用你选择的任何一组贴纸。
 
-此应用还支持跨团队轻松共享图像、GIF、贴纸，而无需访问 SharePoint 网站或单个通道作为存储和共享机制。 例如，产品团队可以编程方式轻松地将产品图像和 GIF 共享到社交媒体、市场营销和销售团队。 还可以在提供新映像和 GIF 时，通过向特定团队或个人触发通知流来扩展此应用。
+此应用还支持跨团队轻松共享图像、GIF、贴纸，而无需访问 SharePoint 网站或单个通道作为存储和共享机制。 例如，产品团队可以通过编程方式轻松地将产品图像和 GIF 共享到社交媒体、市场营销和销售团队。 还可以在提供新映像和 GIF 时，通过向特定团队或个人触发通知流来扩展此应用。
 
 [获取GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
@@ -288,7 +288,7 @@ E-Patients 是[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)一款�
 * 从 Power App 请求不同类别的帮助。
 * 发送给请求者的通知，告知他们分配了谁。
 * 发送给指定监督员的通知，告知他们谁需要协助。 
-* 分析 SharePoint 和 PowerBI.S 中的升级和模式
+* 分析 SharePoint 和 PowerBI.S 中的升级和模式。
 
 [获取GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 
@@ -344,6 +344,14 @@ E-Patients 是[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)一款�
     ![频道中的组活动通知消息](../assets/images/group-activities-2.png)
 :::column-end:::
 :::row-end:::
+
+## <a name="group-connect-9734"></a>组连接 &#9734;
+
+组连接是一Microsoft Teams应用程序，可帮助组织成员发现员工组并查找与员工组有关的信息。 该应用内置有丰富的功能，组织领导可以与员工就组、事件和资源进行沟通。 组连接应用还按所需频率相互匹配，以鼓励在组内建立网络和建立关系。 若要详细了解如何利用组和 连接 应用来帮助员工组在组织内部培养，请参阅 GitHub。
+
+[获取GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupconnect)
+
+![发现 D&I 组](https://github.com/OfficeDev/microsoft-teams-apps-diversityandinclusion/wiki/Images/temp_group_connect_landing.png)
 
 ## <a name="grow-your-skills"></a>提高技能
 

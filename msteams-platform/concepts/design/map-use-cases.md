@@ -5,12 +5,12 @@ description: 确定你的应用用例在应用体验Teams工作。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 271bb38a9d8cc3d9921c757b6fc722754bb63017
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 179d0a37d72577c36f2cc44a11a8217cb9f016b2
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101770"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566108"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到Teams功能
 
@@ -104,4 +104,4 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 ## <a name="see-also"></a>另请参阅
 
-* [构建 Microsoft Teams 应用](../../overview.md)
+[构建 Microsoft Teams 应用](../../overview.md)

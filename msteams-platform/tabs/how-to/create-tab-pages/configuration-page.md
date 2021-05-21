@@ -6,20 +6,20 @@ keywords: teams 选项卡组频道可配置
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0866d11442f79cee33d4454dbd4ed4d6b4b1a840
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: aeab1cf96d1e875db79d9143fefd0e46348f585a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019592"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566682"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
 配置页是一种特殊类型 [的内容页](content-page.md)。 用户使用配置页面配置 Microsoft Teams应用的一些方面，并使用以下配置：
 
-* 频道或群聊选项卡 - 从用户收集信息，并设置要 `contentUrl` 显示的内容页的 。
-* [消息传递扩展](~/messaging-extensions/what-are-messaging-extensions.md)
-* 连接器[Office 365连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* 频道或群聊选项卡：从用户收集信息，并设置要 `contentUrl` 显示的内容页的 。
+* 消息传递 [扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
+* 一[Office 365连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>配置频道或群聊选项卡
 

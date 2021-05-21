@@ -5,18 +5,18 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 清单架构
-ms.openlocfilehash: c0b8b6f5baa163d2292227f7d361b6d12849edec
-ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
+ms.openlocfilehash: 6c7cd02480f78d19aed269b5d78d0c6f470621d2
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "52336515"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566444"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
 Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 早期版本 1.0、1.1,..., 1.6 等也受 URL ("v1.x"支持) 。
 
-以下架构示例显示了所有扩展性选项。
+以下架构示例显示了所有扩展性选项：
 
 ## <a name="sample-full-manifest"></a>示例完整清单
 
@@ -378,7 +378,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **可选** — object
 
-允许指定默认语言，以及指向其他语言文件的指针。 请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
+允许指定默认语言，以及指向其他语言文件的指针。 有关详细信息，请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -424,7 +424,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
 |`canUpdateConfiguration`|boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值 **：true**。|
 |`context` |枚举数组|6 ||支持选项卡的范围 `contextItem` [集](../../tabs/how-to/access-teams-context.md)。 默认值 **：[channelTab、privateChatTab、meetingChatTab、meetingDetailsTab]**。|
-|`sharePointPreviewImage`|string|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
+|`sharePointPreviewImage`|字符串|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义选项卡如何可用于SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -438,16 +438,16 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|string|64 个字符|✔|选项卡显示的实体的唯一标识符。|
-|`name`|string|128 个字符|✔|选项卡显示名称界面中的列数。|
-|`contentUrl`|string||✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
-|`websiteUrl`|string|||用户 https:// 在浏览器中查看时指向的 URL。|
-|`searchUrl`|string|||用于 https:// 搜索查询的 URL。|
+|`name`|字符串|128 个字符|✔|选项卡显示名称界面中的列数。|
+|`contentUrl`|字符串||✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
+|`websiteUrl`|字符串|||用户 https:// 在浏览器中查看时指向的 URL。|
+|`searchUrl`|字符串|||用于 https:// 搜索查询的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
 |`context` | 枚举数组| 2|| 支持选项卡的范围 `contextItem` 集。|
 
 > [!NOTE]
 >  第三方开发人员无法使用 searchUrl 功能。
-> 如果你的选项卡需要与上下文相关的信息来显示相关内容或启动身份验证流，请参阅获取你的Microsoft Teams[上下文。](../../tabs/how-to/access-teams-context.md)
+> 如果你的选项卡需要上下文相关信息来显示相关内容或启动身份验证流，有关详细信息，请参阅获取 Microsoft Teams[上下文选项卡](../../tabs/how-to/access-teams-context.md)。
 
 ## <a name="bots"></a>bots
 
@@ -474,13 +474,13 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`items.scopes`|枚举数组|3|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
-|`items.commands`|对象数组|10  |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单描述或示例（字符串，128）|
+|`items.commands`|对象数组|10  |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例， (字符串，128) 。|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|title|string|12 |✔|自动程序命令名称|
+|title|string|12 |✔|自动程序命令名称。|
 |说明|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
 
 ## <a name="connectors"></a>连接器
@@ -495,7 +495,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置 https:// 时将使用的 URL。|
 |`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是仅针对单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
-|`connectorId`|string|64 个字符|✔|连接器的唯一标识符，与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
+|`connectorId`|字符串|64 个字符|✔|连接器的唯一标识符，与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -511,10 +511,10 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 ID 相同。|
-|`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
+|`commands`|对象数组|10  |✔|邮件扩展支持的命令数组。|
 |`canUpdateConfiguration`|boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值：**False**。|
 |`messageHandlers`|对象数组|5 ||允许满足某些条件时调用应用的处理程序列表。|
-|`messageHandlers.type`|string|||消息处理程序的类型。 必须是 `"link"`。|
+|`messageHandlers.type`|字符串|||消息处理程序的类型。 必须是 `"link"`。|
 |`messageHandlers.value.domains`|字符串数组|||链接邮件处理程序可以注册的域数组。|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -526,26 +526,26 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|string|64 个字符|✔|命令的 ID。|
-|`title`|string|32 个字符|✔|用户友好命令名称。|
-|`type`|string|64 个字符||命令的类型。 或 `query` `action` 之一。 默认值 **：query**。|
-|`description`|string|128 个字符||向用户显示以指示此命令用途的说明。|
+|`title`|字符串|32 个字符|✔|用户友好命令名称。|
+|`type`|字符串|64 个字符||命令的类型。 或 `query` `action` 之一。 默认值 **：query**。|
+|`description`|字符串|128 个字符||向用户显示以指示此命令用途的说明。|
 |`initialRun`|boolean|||布尔值指示命令最初是否运行，没有参数。 默认为 **false**。|
 |`context`|字符串数组|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为“`["compose","commandBox"]`”。|
 |`fetchTask`|boolean|||一个布尔值，指示它是否必须动态提取任务模块。 默认为 **false**。|
 |`taskInfo`|object|||指定在使用消息传递扩展命令时要预加载的任务模块。|
-|`taskInfo.title`|string|64 个字符||初始对话框标题。|
-|`taskInfo.width`|string|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
-|`taskInfo.height`|string|||对话框高度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
-|`taskInfo.url`|string|||初始 Web 视图 URL。|
+|`taskInfo.title`|字符串|64 个字符||初始对话框标题。|
+|`taskInfo.width`|字符串|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
+|`taskInfo.height`|字符串|||对话框高度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
+|`taskInfo.url`|字符串|||初始 Web 视图 URL。|
 |`parameters`|对象数组|5 个项目|✔|命令采用的参数列表。 最小值：1;最大值：5。|
-|`parameters.name`|string|64 个字符|✔|显示在客户端中的参数的名称。 这包括在用户请求中。|
-|`parameters.title`|string|32 个字符|✔|参数的用户友好标题。|
-|`parameters.description`|string|128 个字符||描述此参数用途的用户友好字符串。|
-|`parameters.value`|string|512 个字符||参数的初始值。|
-|`parameters.inputType`|string|128 个字符||定义在任务模块上显示的控件的类型 `fetchTask: true` 。 之一 `text, textarea, number, date, time, toggle, choiceset` 。|
+|`parameters.name`|字符串|64 个字符|✔|显示在客户端中的参数的名称。 这包括在用户请求中。|
+|`parameters.title`|字符串|32 个字符|✔|参数的用户友好标题。|
+|`parameters.description`|字符串|128 个字符||描述此参数用途的用户友好字符串。|
+|`parameters.value`|字符串|512 个字符||参数的初始值。|
+|`parameters.inputType`|字符串|128 个字符||定义在任务模块上显示的控件的类型 `fetchTask: true` 。 之一 `text, textarea, number, date, time, toggle, choiceset` 。|
 |`parameters.choices`|对象数组|10 个项目||的选项 `choiceset` 。 仅在 为 `parameter.inputType` `choiceset` 时使用 。|
-|`parameters.choices.title`|string|128 个字符|✔|选项的标题。|
-|`parameters.choices.value`|string|512 个字符|✔|选项的值。|
+|`parameters.choices.title`|字符串|128 个字符|✔|选项的标题。|
+|`parameters.choices.value`|字符串|512 个字符|✔|选项的值。|
 
 ## <a name="permissions"></a>权限
 
@@ -553,8 +553,8 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 一个数组，指定应用请求哪些权限，使最终用户 `string` 知道扩展的执行方式。 以下选项非独占：
 
-* `identity`&emsp;需要用户标识信息
-* `messageTeamMembers`&emsp;需要向团队成员发送直接消息的权限
+* `identity`&emsp;需要用户标识信息。
+* `messageTeamMembers`&emsp;需要向团队成员发送直接消息的权限。
 
 在应用更新期间更改这些权限，会导致用户在运行更新后的应用后重复同意过程。 有关详细信息 [，请参阅更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) 应用。
 
@@ -572,7 +572,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="validdomains"></a>validDomains
 
-**可选**，但 **已指出的必需** 项除外
+**可选**，除非 **有说明** ，否则必选。
 
 应用预期在客户端内加载的网站的有效Teams列表。 域列表可以包含通配符，例如 `*.example.com` ， 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。 如果你的选项卡配置或内容 UI 需要导航到除用于选项卡配置的其他任何其他域，则必须在此处指定该域。
 
@@ -594,7 +594,7 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|string|36 个字符|✔|应用的 AAD 应用程序 ID。 此 ID 必须是 GUID。|
-|`resource`|string|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。 </br> **注意：** 如果不使用 SSO，请确保在此字段中向应用清单输入虚拟字符串值，以避免 https://notapplicable 错误响应。 |
+|`resource`|字符串|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。 </br> **注意：** 如果不使用 SSO，请确保在此字段中向应用清单输入虚拟字符串值，以避免 https://notapplicable 错误响应。 |
 |`applicationPermissions`|array of strings|128 个字符||指定具体 [资源特定许可](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -627,8 +627,8 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`type`|string|32 个字符|✔|通知类型。 *请参阅下文*。|
-|`description`|string|128 个字符|✔|通知的简要说明。 *请参阅下文*。|
-|`templateText`|string|128 个字符|✔|例如："{actor} 已创建任务 {taskId}"|
+|`description`|字符串|128 个字符|✔|通知的简要说明。 *请参阅下文*。|
+|`templateText`|字符串|128 个字符|✔|例如："{actor} 已创建任务 {taskId}"|
 
 ```json
 {
@@ -698,8 +698,8 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`team`|string|||当选择的安装范围为 `team` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
-|`groupchat`|string|||当选择的安装范围为 `groupchat` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
-|`meetings`|string|||当选择的安装范围为 `meetings` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
+|`groupchat`|字符串|||当选择的安装范围为 `groupchat` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
+|`meetings`|字符串|||当选择的安装范围为 `meetings` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
 
 ## <a name="configurableproperties"></a>configurableProperties
 

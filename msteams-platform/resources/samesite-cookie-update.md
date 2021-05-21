@@ -6,12 +6,12 @@ keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 1841e349f3da61c6f8077e5a56874989aa6212ca
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: cf28a28050d50b2b6b2601a3231cdad30211ab2c
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101812"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566710"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams 2020 更新 (和 SameSite cookie) 
 
@@ -21,9 +21,9 @@ ms.locfileid: "52101812"
 
  |Cookie|范围|
  | ------ | ------ |
- |**第一方 Cookie**|第一方 Cookie 由用户访问的网站创建，用于保存数据，如购物车项目、登录凭据 (例如身份验证 cookie) 和其他分析。|
- |**第二方 Cookie**|从技术上说，第二方 Cookie 和第一方 Cookie 相同。 区别在于，数据通过数据合作关系协议（例如， (分析和报告协议Microsoft Teams[第](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)二方) 。 |
- |**第三方 Cookie**|第三方 Cookie 由用户显式访问的域外的其他域安装，主要用于跟踪 (例如"喜欢"按钮) 、广告服务以及实时聊天。|
+ |**第一方 Cookie**|第一方 Cookie 由用户访问的网站创建，用于保存数据，如购物车项目、登录凭据。 例如，身份验证 Cookie 和其他分析。|
+ |**第二方 Cookie**|从技术上说，第二方 Cookie 和第一方 Cookie 相同。 区别在于数据通过数据合作关系协议与第二方共享。 例如[，Microsoft Teams分析和报告](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)。 |
+ |**第三方 Cookie**|第三方 Cookie 由用户显式访问的域外的其他域安装，主要用于跟踪。 例如，"喜欢"按钮、广告投放和实时聊天。|
 
 ### <a name="cookies-and-http-requests"></a>Cookie 和 HTTP 请求
 
@@ -77,7 +77,7 @@ Android WebView 是允许 Android 应用显示 Web 内容的 Chrome 系统组件
 * 对于仅在第一方上下文中需要的 Cookie，应根据需要将其声明为 `SameSite=Lax` 或 `SameSite=Strict` 。
 * 对于第三方上下文中所需的 Cookie，应确保它们声明为 `SameSite=None; Secure` 。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="see-also"></a>另请参阅
 
 * [SameSite 示例](https://github.com/GoogleChromeLabs/samesite-examples)
 

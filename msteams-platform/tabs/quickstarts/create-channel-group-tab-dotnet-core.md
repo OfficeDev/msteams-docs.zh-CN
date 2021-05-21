@@ -5,14 +5,14 @@ description: 使用自定义频道和组选项卡创建自定义频道和组选�
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 8271e2d225d5ae3f6458b17b9595c4d23c3ca6c9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f748335b621e9bc93272aaeb8d7e12ecc3ebbee0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019571"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52580447"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a>使用自定义频道和组选项卡 ASP.NET Core
+# <a name="create-a-custom-channel-and-group-tab-with-aspnetcore"></a>使用 ASP.NETCore 创建自定义频道和组选项卡
 
 在此快速入门中，我们将演练创建自定义频道/组选项卡，该选项卡包含C#和 ASP.Net Core 用户页面。 我们还将使用 App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)完成应用清单，并部署选项卡以Teams。
 
@@ -100,9 +100,9 @@ ASP.NET Core将名为 *Index* 的文件视为网站的默认/主页。 当浏览
 
 - 打开项目目录根目录中的命令提示符并运行以下命令：
 
-```bash
-ngrok http https://localhost:44355 -host-header="localhost:44355"
-```
+    ```bash
+    ngrok http https://localhost:44355 -host-header="localhost:44355"
+    ```
 
 - Ngrok 将侦听来自 Internet 的请求，并且将在应用程序在端口 44355 上运行时将它们路由到您的应用程序。 它应 `https://y8rCgT2b.ngrok.io/` 类似于 *y8rCgT2b* 替换为 ngrok 字母数字 HTTPS URL。
 
@@ -114,3 +114,7 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [使用 ASP.NETCore MVC 创建自定义频道和组选项卡](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)

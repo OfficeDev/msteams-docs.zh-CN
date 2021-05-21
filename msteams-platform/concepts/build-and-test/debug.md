@@ -4,12 +4,12 @@ description: 介绍用于测试和调试应用Microsoft Teams选项
 keywords: 团队运行调试应用
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 8b80f988ed44ed04492356366362b0221717b292
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 1f11834ad83e8bea7e4114d25d022df2f62c1700
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019949"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565156"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>选择用于测试和调试应用Microsoft Teams设置
 
@@ -72,8 +72,8 @@ Microsoft Teams完全基于云的产品，它要求它访问的所有服务都�
 
 若要在应用程序内加载Microsoft Teams体验，你需要创建一个程序包并将其上传到Teams。 有关详细信息，请参阅：
 
-* [为应用创建Microsoft Teams包](~/concepts/build-and-test/apps-package.md)
-* [Upload应用Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [为应用创建Microsoft Teams包](~/concepts/build-and-test/apps-package.md)。
+* [Upload中的应用Microsoft Teams。](~/concepts/deploy-and-publish/apps-upload.md)
 
 ## <a name="next-step"></a>后续步骤
 

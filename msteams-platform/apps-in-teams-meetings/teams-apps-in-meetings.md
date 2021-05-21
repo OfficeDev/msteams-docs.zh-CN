@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 29a24b70921e51d63d804e7a3edd901f607d3148
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c1f7ef6b03b9f9c51d591fac7484a29492d81b41
+ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018381"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52583741"
 ---
 # <a name="apps-in-teams-meetings"></a>会议Teams应用
 
@@ -67,7 +67,7 @@ Teams应用程序扩展性基于以下概念：
 
 ✔选项卡应用可通过会议"详细信息"和"聊天 **"** 页面使用加号按钮➕访问。
 
-✔投票或调查数超过 10 个，则选项卡布局必须组织在一个状态。
+✔选项卡布局必须组织在一个组织状态，如果有多个 (十) 投票或调查。
 
 ### <a name="in-meeting-app-experience"></a>会议内应用体验
 
@@ -161,19 +161,12 @@ Teams应用程序扩展性基于以下概念：
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
+* [机器人](../bots/what-are-bots.md)
+* [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
+* [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-> [!div class="nextstepaction"]
-> [机器人](../bots/what-are-bots.md)
-
-> [!div class="nextstepaction"]
-> [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
-
-> [!div class="nextstepaction"]
-> [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-
-## <a name="next-steps"></a>后续步骤
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [生成应用程序](create-apps-for-teams-meetings.md)

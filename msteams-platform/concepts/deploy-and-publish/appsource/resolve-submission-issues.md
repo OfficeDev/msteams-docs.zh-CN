@@ -4,16 +4,16 @@ description: 了解如何排查并更正你的应用商店Microsoft Teams问题�
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 847534c68d013566e4bfbe0e5a1bbbe92e36e63e
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 23c751d7a9fec96de128521f660213a559534283
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101883"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565107"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>解决应用商店提交Microsoft Teams时的问题
 
-发布到应用商店Microsoft Teams应用必须满足Teams[验证](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)准则和商业市场[策略](https://docs.microsoft.com/legal/marketplace/certification-policies)。
+发布到应用商店Microsoft Teams应用必须满足Teams[验证](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)准则和商业市场[策略](/legal/marketplace/certification-policies)。
 
 如果你的应用商店提交失败，Microsoft 将提供一个验证验证服务，以帮助使你的应用合规并发布。
 
@@ -27,19 +27,19 @@ Microsoft 提供的验证服务可帮助开发人员将应用发布到应用商�
 
 必须先修复 Microsoft 验证团队报告的所有问题，然后才能在合作伙伴中心重新提交应用。 Microsoft 报告包含以下信息：
 
-* 针对 [每个问题](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) 的相应验证准则
-* 有关如何重现每个问题的说明
-* 推荐公开提供的开发人员文档解决每个问题
+* 针对 [每个问题的相应](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) 验证准则。
+* 有关如何重现每个问题的说明。
+* 推荐公开提供的开发人员文档解决每个问题。
 
 解决问题并重新提交应用的过程通常如下所示：
 
 1. 解决报告中的所有问题。
 1. 你可以将以下内容发送到 Microsoft 验证团队<a href="mailto:teamsubm@microsoft.com">，teamsubm@microsoft.com：</a>
    * 更新的应用包
-   * 如果你未在原始提交 (，则应用测试说明) ：
-      * 至少两个帐户的凭据 (一个管理员和非管理员帐户) 
-      * 配置应用并测试其功能的说明
-      * 显示应用程序中使用的应用Teams
+   * 如果你未在原始提交中包括这些说明，请为你的应用测试备注：
+      * 至少两个帐户的凭据 (一个管理员和非管理员) 。
+      * 配置应用并测试其功能的说明。
+      * 显示你的应用在应用中Teams。
 1. Microsoft 验证团队会全面测试更新后的应用。
 1. 执行下列操作之一：
    * 如果你的应用没有问题，请重新提交合作伙伴中心上的应用。
@@ -71,7 +71,7 @@ Microsoft 提供的验证服务可帮助开发人员将应用发布到应用商�
 执行以下操作可能会导致成功提交：
 
 1. 根据应用设计Teams[开发应用](~/concepts/design/design-teams-app-overview.md)。
-1. 确保你的应用遵守应用商店验证[Teams](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) [Microsoft 商业市场认证策略](https://docs.microsoft.com/legal/marketplace/certification-policies)。
+1. 确保你的应用遵守应用商店验证[Teams](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) [Microsoft 商业市场认证策略](/legal/marketplace/certification-policies)。
 1. 使用应用验证Microsoft Teams[测试应用包](https://dev.teams.microsoft.com/appvalidation.html)。
 1. [准备你的Teams提交](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)。
 
@@ -83,7 +83,7 @@ Microsoft 提供的验证服务可帮助开发人员将应用发布到应用商�
 
 <summary><b>我的应用已进行 beta 测试。我能否提交我的应用以节省发布过程的时间？</b></summary>
 
-错误。 Microsoft 仅验证生产就绪型应用。
+否。 Microsoft 仅验证生产就绪型应用。
 
 <br>
 
@@ -93,7 +93,7 @@ Microsoft 提供的验证服务可帮助开发人员将应用发布到应用商�
 
 <summary><b>在合作伙伴中心 teamsubm@microsoft.com 提交我的应用之前，我可能需要联系客户吗？</b></summary>
 
-错误。 在合作伙伴中心首次提交应用之前，Microsoft 不会开始验证你的应用。
+否。 在合作伙伴中心首次提交应用之前，Microsoft 不会开始验证你的应用。
 
 <br>
 

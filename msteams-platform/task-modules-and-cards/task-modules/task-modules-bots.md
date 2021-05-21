@@ -4,12 +4,12 @@ description: 如何将任务模块与自动程序Microsoft Teams，包括 Bot Fr
 localization_priority: Normal
 ms.topic: how-to
 keywords: 任务模块团队机器人
-ms.openlocfilehash: 948af0c71acb20f4d84fa25ba79618045dad9da7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bfaf3dfe791c1736aeb418e2689e513908f04534
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020273"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566564"
 ---
 # <a name="using-task-modules-from-microsoft-teams-bots"></a>使用自动程序Microsoft Teams模块
 
@@ -23,7 +23,7 @@ ms.locfileid: "52020273"
 >[!IMPORTANT]
 >为确保安全通信，每个和 `url` `fallbackUrl` 都必须实现 HTTPS 加密协议。
 
-## <a name="invoking-a-task-module-via-taskfetch"></a>通过任务/提取调用任务模块
+## <a name="invoking-a-task-module-through-taskfetch"></a>通过任务/提取调用任务模块
 
 当卡片操作的对象或以正确的方式初始化时 () 下面进行了详细说明，当用户按下按钮时，会向自动程序 `value` `invoke` `Action.Submit` `invoke` 发送消息。 在消息的 HTTP 响应中，包装器对象中嵌入了一个 `invoke` [TaskInfo](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)对象，Teams用于显示任务模块。
 
@@ -32,8 +32,8 @@ ms.locfileid: "52020273"
 让我们更详细地了解一下每个步骤：
 
 1. 本示例显示具有"Buy"卡片操作的 Bot Framework `invoke` [Hero 卡](~/task-modules-and-cards/cards/cards-actions.md#invoke)。 属性的值 `type` 为 `task/fetch` - 对象的其余部分 `value` 可以是您喜欢的任何对象。
-2. 机器人接收 HTTP `invoke` POST 消息。
-3. 机器人创建响应对象，并返回 HTTP 200 响应代码的 POST 响应正文。 有关任务 [/](#the-flexibility-of-tasksubmit)提交的讨论如下所述响应的架构，但现在需要记住的重要一点就是 HTTP 响应的正文包含嵌入包装对象中的 [TaskInfo](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) 对象，例如：
+1. 机器人接收 HTTP `invoke` POST 消息。
+1. 机器人创建响应对象，并返回 HTTP 200 响应代码的 POST 响应正文。 有关任务 [/](#the-flexibility-of-tasksubmit)提交的讨论如下所述响应的架构，但现在要记住的重要一点就是 HTTP 响应的正文包含嵌入包装对象的 [TaskInfo](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) 对象。 例如：
 
     ```json
     {
@@ -51,7 +51,7 @@ ms.locfileid: "52020273"
     ```
 
     从概念上说，事件及其对自动程序的响应与客户端 SDK 中的 `task/fetch` `microsoftTeams.tasks.startTask()` 函数类似。
-4. Microsoft Teams任务模块。
+1. Microsoft Teams任务模块。
 
 ## <a name="submitting-the-result-of-a-task-module"></a>提交任务模块的结果
 
@@ -74,7 +74,7 @@ ms.locfileid: "52020273"
 
 本部分定义机器人接收或 Bot Framework 对象时接收的内容 `task/fetch` `task/submit` `Activity` 的架构。 重要的顶级如下所示：
 
-| 属性 | 说明                          |
+| 属性 | 描述                          |
 | -------- | ------------------------------------ |
 | `type`   | 将始终为 `invoke`              |
 | `name`   | 或 `task/fetch``task/submit` |
@@ -163,8 +163,6 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
 }
 ```
 
-*另请参阅* [，Microsoft Teams模块示例代码 nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)和 [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
-
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---c"></a>示例：接收和响应任务/提取和任务/提交调用消息 - C#
 
 在C#中， `invoke` 消息由处理邮件 `HttpResponseMessage()` 的控制器 `Activity` 处理。 和 `task/fetch` `task/submit` 请求和响应为 JSON。 在C#中，处理原始 JSON 并不方便，因为它在 Node.js 中，因此你需要包装类来处理与 JSON 之间的序列化。 尚未在 Microsoft Teams [C# SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)中对此进行直接支持，但你可以查看这些简单包装类在 C#[应用中的外观示例](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs)。
@@ -237,3 +235,8 @@ Bot Framework 卡操作架构与自适应卡片操作略有不同 `Action.Submit
 | Bot Framework 卡操作                              | 自适应卡片 Action.Submit 操作                     |
 | ------------------------------------------------------ | ------------------------------------------------------ |
 | <pre>{<br/>  "type": "invoke",<br/>  "title": "Buy",<br/>  "value": {<br/>    "type": "task/fetch",<br/>    &lt;...&gt;<br/>  }<br/>}</pre> | <pre>{<br/>  "type": "Action.Submit",<br/>  "id": "btnBuy",<br/>  "title": "Buy",<br/>  "data": {<br/>    &lt;...&gt;,<br/>    "msteams": {<br/>      "type": "task/fetch"<br/>    }<br/>  }<br/>}</pre>  |
+
+## <a name="see-also"></a>另请参阅
+
+* [Microsoft Teams模块示例代码 — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
+* [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。

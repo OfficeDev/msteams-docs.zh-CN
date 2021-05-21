@@ -4,16 +4,16 @@ description: 如何创建虚拟助理机器人和技能以用于Microsoft Teams
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 虚拟助理机器人
-ms.openlocfilehash: 80a308050317e8a211b8f7a9e2dd459c1572af18
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 072d9cb5742cd39101587cad32e3048bd36cc1d8
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058675"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566871"
 ---
 # <a name="create-virtual-assistant"></a>创建虚拟助手 
 
-虚拟助理是一个 Microsoft 开放源代码模板，它使您能够创建可靠的对话解决方案，同时保持对用户体验、组织品牌和必要数据的完全控制。 虚拟[助理核心](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template)模板是基本构建基块，将构建虚拟助理所需的 Microsoft 技术汇集在一起，包括[Bot Framework SDK、Language](https://github.com/microsoft/botframework-sdk) [Understanding (MICROSOFT) ](https://www.luis.ai/) [、QnA Maker。](https://www.qnamaker.ai/) 它还整合了基本功能，包括技能注册、链接帐户、基本对话意图，以便为用户提供一系列无缝交互和体验。 此外，模板功能包括可重用对话技能的丰富 [示例](https://microsoft.github.io/botframework-solutions/overview/skills)。  个人技能集成在虚拟助理解决方案中，以实现多个方案。 使用 Bot Framework SDK，技能以源代码形式呈现，让你可以根据需要进行自定义和扩展。 有关 Bot Framework 技能详细信息，请参阅 [什么是 Bot Framework 技能](https://microsoft.github.io/botframework-solutions/overview/skills/)。 本文档将指导您了解组织的虚拟助理实现注意事项、如何创建Teams虚拟助理的相关示例、代码示例和虚拟助理的限制。
+虚拟助理是一个 Microsoft 开放源代码模板，它使您能够创建可靠的对话解决方案，同时保持对用户体验、组织品牌和必要数据的完全控制。 虚拟[助理核心](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template)模板是基本构建基块，将构建虚拟助理所需的 Microsoft 技术汇集在一起，包括[Bot Framework SDK、](https://github.com/microsoft/botframework-sdk)语言了解[ (、) 和](https://www.luis.ai/) [QnA Maker。](https://www.qnamaker.ai/) 它还整合了基本功能，包括技能注册、链接帐户、基本对话意图，以便为用户提供一系列无缝交互和体验。 此外，模板功能包括可重用对话技能的丰富 [示例](https://microsoft.github.io/botframework-solutions/overview/skills)。  个人技能集成在虚拟助理解决方案中，以实现多个方案。 使用 Bot Framework SDK，技能以源代码形式呈现，让你可以根据需要进行自定义和扩展。 有关 Bot Framework 技能详细信息，请参阅 [什么是 Bot Framework 技能](https://microsoft.github.io/botframework-solutions/overview/skills/)。 本文档将指导您了解组织的虚拟助理实现注意事项、如何创建Teams虚拟助理的相关示例、代码示例和虚拟助理的限制。
 下图显示了虚拟助理的概述：
 
 ![虚拟助手概述图](../assets/images/bots/virtual-assistant/overview.png)
@@ -27,7 +27,8 @@ ms.locfileid: "52058675"
 * 中央团队管理所有员工体验。 它能够构建虚拟助理体验和管理核心体验的更新，包括新技能的添加。
 * 跨业务功能存在多个应用程序，预计数量今后会增长。
 * 现有应用程序可自定义，归组织所有，并转换为虚拟助理的技能。
-* 中央员工体验团队能够将自定义设置影响现有应用。 它还提供有关将现有应用程序作为虚拟助理体验技能进行集成的必要指导。   
+* 中央员工体验团队能够将自定义设置影响现有应用。 它还提供有关将现有应用程序作为虚拟助理体验技能进行集成的必要指导。
+
 下图显示了虚拟助理的业务功能： 
 
 ![中央团队负责维护助手，业务职能团队贡献技能](../assets/images/bots/virtual-assistant/business-functions.png)
@@ -121,7 +122,7 @@ Microsoft[发布了一Visual Studio](https://marketplace.visualstudio.com/items?
 
 ### <a name="handle-interruptions"></a>处理中断
 
-在用户尝试调用技能时，另一个技能当前处于活动状态时，虚拟助理可以处理中断。 `TeamsSkillDialog`和 `TeamsSwitchSkillDialog` 基于 Bot Framework 的 [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) 和 [SwitchSkillDialog 引入](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs)。 它们使用户能够从卡片操作切换技能体验。 为了处理此请求，虚拟助理会向用户提示确认消息以切换技能。
+在用户尝试调用技能时，另一个技能当前处于活动状态时，虚拟助理可以处理中断。 `TeamsSkillDialog`和 `TeamsSwitchSkillDialog` 基于 Bot Framework 的 [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) 和 [SwitchSkillDialog 引入](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs)。 它们使用户能够从卡片操作切换技能体验。 为了处理此请求，虚拟助理会向用户提示确认消息以切换技能：
 
 ![切换到新技能时确认提示](../assets/images/bots/virtual-assistant/switch-skills-prompt.png)
 
@@ -333,7 +334,7 @@ Teams应用可以存在于多个范围，包括一对一聊天、群聊和频道
 
 ## <a name="example"></a>示例
 
-以下示例演示如何将"预订会议室"应用模板转换为虚拟助理技能：会议室是一种 Microsoft Teams，它允许用户从当前时间开始快速查找和预留会议室 30、60 或 90 分钟。 默认时间为 30 分钟。 Book-a-room bot scopes to personal o**r 1：1 conversations. 下图显示具有书籍的虚拟助理 **的聊天室技能** ：
+以下示例演示如何将"预订会议室"应用模板转换为虚拟助理技能：会议室是一种 Microsoft Teams，它允许用户从当前时间开始快速查找和预留会议室 30、60 或 90 分钟。 默认时间为 30 分钟。 Book-a-room bot 作用域为个人对话或 1：1 对话。 下图显示具有书籍的虚拟助理 **的聊天室技能** ：
 
 ![具有"预订会议室"技能的虚拟助理](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
@@ -522,7 +523,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 "AllowedCallers": [ "*" ],
 ```
 
-有关向技能添加声明验证详细信息，请参阅 [向技能添加声明验证](https://docs.microsoft.com/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true)。
+有关向技能添加声明验证详细信息，请参阅 [向技能添加声明验证](/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true)。
 
 ### <a name="limitation-of-card-refresh"></a>卡片刷新的限制 
 
@@ -554,7 +555,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
     }
 ```
 
-还可以利用 Bot Framework [解决方案](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) 存储库中的现有技能，或从头开始创建新技能。 有关创建新技能，请参阅 [创建新技能的教程](https://microsoft.github.io/botframework-solutions/overview/skills/)。 有关虚拟助手和技能体系结构文档，请参阅[虚拟助手和技能体系结构](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。  
+还可以利用 Bot Framework [解决方案](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) 存储库中的现有技能，或从头开始创建新技能。 有关创建新技能，请参阅 [创建新技能的教程](https://microsoft.github.io/botframework-solutions/overview/skills/)。 有关虚拟助手和技能体系结构文档，请参阅[虚拟助手和技能体系结构](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。  
 
 ## <a name="limitations-of-virtual-assistant"></a>虚拟助理的限制 
 
@@ -565,7 +566,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
   * 邮件扩展的配置范围不是单个命令，而是整个扩展本身。 这将通过虚拟助理限制各个技能的配置。
   * 消息扩展命令 ID 的最大长度为 [64 个字符](../resources/schema/manifest-schema.md#composeextensions) ，37 个字符用于嵌入技能信息。 因此，命令 ID 的更新约束限制为 27 个字符。
 
-还可以利用 Bot Framework [解决方案](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) 存储库中的现有技能，或从头开始创建新技能。 稍后的教程可在此处 [找到](https://microsoft.github.io/botframework-solutions/overview/skills/)。 请参阅虚拟 [助理和](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) 技能体系结构文档。
+还可以利用 Bot Framework [解决方案](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) 存储库中的现有技能，或从头开始创建新技能。 稍后的教程可在此处 [找到](https://microsoft.github.io/botframework-solutions/overview/skills/)。 请参阅虚拟 [助理和](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) 技能体系结构文档。
 
 ## <a name="code-sample"></a>代码示例
 

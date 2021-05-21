@@ -4,12 +4,12 @@ description: 描述选项卡中的身份验证流
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams 身份验证流选项卡
-ms.openlocfilehash: 012e38b0fa689527999237ccc07b7352fc00ae71
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 1282c149beba0ff5b424585f566a703f48234fa2
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020392"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566689"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams选项卡的身份验证流
 
@@ -47,7 +47,7 @@ OAuth 2.0 是一个开放标准，供 AAD Azure Active Directory (和许多其�
 
 ## <a name="code-sample"></a>代码示例
 
-显示选项卡身份验证过程的示例代码。
+显示选项卡身份验证过程的示例代码：
 
 | **示例名称** | **说明** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|

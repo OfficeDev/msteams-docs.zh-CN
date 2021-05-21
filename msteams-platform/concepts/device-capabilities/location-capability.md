@@ -6,12 +6,12 @@ keywords: 位置地图功能本机设备权限
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 55c3c6d82785b46580c3d8553d46a6e5e3a28fb4
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: b85f19e74d0a8121dd290fc395c1018178437b3a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101777"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566185"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能 
 
@@ -49,14 +49,14 @@ ms.locfileid: "52101777"
 
 你必须使用以下一组 API 来启用设备的位置功能：
 
-| API      | 说明   |
+| API      | 描述   |
 | --- | --- |
 |[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | 提供用户的当前设备位置或打开本机位置选取器并返回用户选择的位置。 |
-|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | 在地图上显示位置 |
+|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | 在地图上显示位置。 |
 
 > [!NOTE]
 
-> API `getLocation()` 附带以下 [输入配置](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)和 `allowChooseLocation` `showMap` 。 <br/> 如果 的 `allowChooseLocation` 值为 *true，* 则用户可以选择他们选择的任何位置。<br/>  如果值为 *false，* 则用户无法更改其当前位置。<br/> 如果 的 `showMap` 值为 *false，* 则提取当前位置而不显示地图。 `showMap` 如果 设置为 true ， `allowChooseLocation` 则 *忽略*。
+> API `getLocation()` 附带以下 [输入配置](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)和 `allowChooseLocation` `showMap` 。 <br/> 如果 的 `allowChooseLocation` 值为 *true，* 则用户可以选择他们选择的任何位置。<br/>  如果值为 *false，* 则用户无法更改其当前位置。<br/> 如果 的 `showMap` 值为 *false，* 则提取当前位置而不显示地图。 `showMap` 如果 设置为 true ， `allowChooseLocation` 则 *忽略*。
 
 **位置功能的 Web 应用体验** 
  ![位置功能的 Web 应用体验](../../assets/images/tabs/location-capability.png)

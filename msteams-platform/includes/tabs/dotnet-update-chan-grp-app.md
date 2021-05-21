@@ -4,10 +4,10 @@
 
 - 导航到 **"共享** "文件夹，打开 **_Layout.cshtml**，然后向 标记中添加 `<head>` 以下内容：
 
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
 
 >[!IMPORTANT]
 >不要复制/粘贴此页面中的 `<script src="...">` URL，因为它们可能并不代表最新版本。 若要获取最新版本的 SDK，请始终转到[：Microsoft Teams JavaScript API。](https://www.npmjs.com/package/@microsoft/teams-js)
@@ -59,7 +59,7 @@
 >[!TIP]
 >你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果需要停止运行应用程序，Visual Studio运行 **ngrok。** 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须使用新 URL 更新应用程序。
 
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>Upload选项卡以Teams App Studio
+## <a name="upload-your-tab-to-teams"></a>Upload选项卡以Teams
 
 >[!Note]
 > 我们使用 App Studio 编辑你的manifest.js **文件**，将已完成的程序包上传到Teams。 如果需要，还可以手动编辑 **manifest.js** 上的文件。 如果这样做，请务必再次构建解决方案，以创建要 **tab.zip** 文件。
@@ -70,9 +70,9 @@
 
 - 选择清单 **编辑器中的** "导入现有应用"磁贴，开始为选项卡更新应用包。源代码附带其自己的部分完整清单。 应用包的名称 **tab.zip。** 应在此处找到它：
 
-```bash
-/bin/Debug/netcoreapp2.2/tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
 
 - Uploadtab.zipApp  Studio。
 
@@ -86,17 +86,19 @@
 
 #### <a name="details-app-details"></a>详细信息：应用详细信息
 
-- Under *Identification* select ***Generate** _ to replace the placeholder id with the required GUID for your tab.
+在" *应用详细信息"* 部分中：
 
-- 在_Developer信息*下，使用 *ngrok* HTTPS URL 更新"网站 **URL"** 字段。
+- *标识*： **选择"** 生成"以将占位符 ID 替换为选项卡所需的 GUID。
 
-- 在 *"应用程序 URL"***下，** 使用 *ngrok* HTTPS **URL** 更新隐私声明和使用条款 URL 字段。 请记住，在 URL 的末尾包含 */privacy* 和 */tou* 路径。
+- *开发人员信息*：使用 *ngrok* **HTTPS URL** 更新"网站 URL"字段。
+
+- *应用 URL：* 将 **隐私声明更新** 为 ，将使用条款 `https://<yourngrokurl>/privacy` **更新** 为 `https://<yourngrokurl>/tou`>。
 
 #### <a name="capabilities-tabs"></a>功能：选项卡
 
 在" *选项卡"* 部分：
 
-- 在"*团队选项卡"下*，选择"**添加"。**
+- *团队选项卡：* 选择 **添加**。
 
 - 在"团队"选项卡弹出窗口中，将 *"配置 URL"更新* 为 `https://<yourngrokurl>/tab` 。
 
@@ -104,9 +106,11 @@
 
 #### <a name="finish-domains-and-permissions"></a>完成时间：域和权限
 
-在 *"域和权限"* 部分，选项卡字段中的"域"应包含不包含 HTTPS 前缀的 ngrok URL- `<yourngrokurl>.ngrok.io/` 。
+在 *"域和权限"* 部分：
 
-#### <a name="test-and-distribute-test-and-distribute"></a>测试和分发：测试和分发
+- 选项卡 *字段中的"* 域"应包含没有 HTTPS 前缀的 ngrok URL- `<yourngrokurl>.ngrok.io/` 。
+
+#### <a name="finish-test-and-distribute"></a>完成：测试和分发
 
 >[!IMPORTANT]
 >在 **右侧** "说明"字段中，你将看到以下警告：

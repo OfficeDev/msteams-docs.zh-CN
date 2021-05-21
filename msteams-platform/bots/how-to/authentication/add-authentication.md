@@ -5,12 +5,12 @@ description: 如何将 OAuth 身份验证添加到自动程序Microsoft Teams。
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 7f171a791a9ee557e4af2e7d1e1b053046bd9db5
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 36cb6f3de6f97af1d01512175923b79f69f630ad
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101484"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565968"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向自动程序Teams身份验证
 
@@ -36,7 +36,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 - 了解 Azure 和 OAuth 2.0 开发。
 - 当前版本的 Visual Studio 和 Git。
 - Azure 帐户。 如果需要，你可以创建 Azure [免费帐户](https://azure.microsoft.com/free/)。
-- 以下示例。
+- 以下示例：
 
     | 示例 | BotBuilder 版本 | 演示 |
     |:---|:---:|:---|
@@ -125,7 +125,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>配置标识提供程序连接，然后向自动程序注册该连接
 
-注意-此处有两个适用于服务提供商的选项-Azure AD V1 和 Azure AD V2。  此处总结了两个提供程序之间的差异，但通常[](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)V2 在更改自动程序权限方面提供了更大的灵活性。  GraphAPI 权限在范围字段中列出，当添加新权限时，自动程序将允许用户在下次登录时同意新权限。  对于 V1，用户必须删除自动程序同意，才能在 OAuth 对话框中提示新权限。 
+注意-此处有两个适用于服务提供商的选项-Azure AD V1 和 Azure AD V2。  此处总结了两个提供程序之间的差异，但通常[](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)V2 在更改自动程序权限方面提供了更大的灵活性。  GraphAPI 权限在范围字段中列出，当添加新权限时，自动程序将允许用户在下次登录时同意新权限。  对于 V1，用户必须删除自动程序同意，才能在 OAuth 对话框中提示新权限。 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
@@ -194,7 +194,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 1. 选择 **接受**。
 1. 然后，这会将您重定向到" **测试连接成功 \<your-connection-name> "** 页。 如果收到错误，请刷新页面。 下图是一个示例：
 
-  ![teams 自动程序应用程序身份验证连接 str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+    ![teams 自动程序应用程序身份验证连接 str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
 自动程序代码使用连接名称检索用户身份验证令牌。
 
@@ -264,7 +264,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 1. 选择" **发布"** 按钮。
 1. 在下一个对话框窗口中，输入所需信息。 示例如下：
 
-   ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
+    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
 1. 选择 **创建**。
 1. 如果部署成功完成，则应该会看到部署Visual Studio。 此外，默认浏览器中会显示一个页面，*指出自动程序已准备就绪！。* URL 将类似于 `https://botteamsauth.azurewebsites.net/` ：。 将其保存到文件中。
@@ -282,11 +282,11 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
 如果尚未执行，请安装[Microsoft Bot Framework Emulator。](https://aka.ms/bot-framework-emulator-readme) 另请参阅 [使用仿真器调试](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
 
-为了让自动程序示例登录正常工作，必须配置仿真器，如下所示。
+为了让机器人示例登录正常工作，必须配置仿真器。
 
 ### <a name="configure-the-emulator-for-authentication"></a>配置仿真器进行身份验证
 
-如果机器人需要身份验证，则必须按如下所示配置仿真器。
+如果机器人需要身份验证，则必须配置仿真器。 配置：
 
 1. 启动仿真器。
 1. 在仿真器中，选择&#9881;左下角的齿轮图标，或选择右上角设置仿真器"选项卡。
@@ -418,7 +418,7 @@ Microsoft Teams完全基于云的产品，它要求它访问的所有服务都�
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.js打开
 
-此清单包含用户Microsoft Teams自动程序连接时需要的信息。  
+此清单包含用户Microsoft Teams自动程序连接时需要的信息：  
 
 ```json
 {
@@ -566,17 +566,18 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 ---
 
-> [!div class="nextstepaction"]
-> [了解如何通过 Azure Bot 服务添加身份验证](https://aka.ms/azure-bot-add-authentication)
+## <a name="see-also"></a>另请参阅
+
+[通过 Azure Bot 服务添加身份验证](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 
 [azure-portal]: https://ms.portal.azure.com
 
-[concept-basics]: https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true
-[concept-state]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0&preserve-view=true
-[concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0&preserve-view=true
-[simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&preserve-view=true
+[concept-basics]: /azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true
+[concept-state]: /azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0&preserve-view=true
+[concept-dialogs]: /azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0&preserve-view=true
+[simple-dialog]: /azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&preserve-view=true
 
 [teams-auth-bot-cs]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 

@@ -4,12 +4,12 @@ description: 介绍Microsoft Teams中的身份验证流
 keywords: teams 身份验证流自动程序
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: ede626fe7f531c42d83cf9e74d93b93d70e162c3
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f3bf73c105dc38e1cea515bfa7bb7d5324b02ce4
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020040"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565899"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>聊天机器人的身份验证Microsoft Teams
 
@@ -57,8 +57,6 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 | Teams身份验证 | 此示例演示了Microsoft Teams身份验证。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
 | 自动程序身份验证 | 此示例将开始对自动程序运行中的自动程序运行Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
-## <a name="more-details"></a>更多详细信息
-
-有关面向 Azure AD 的自动程序身份验证的详细实现演练，请参阅：
+## <a name="see-also"></a>另请参阅
 
 [向自动程序Teams身份验证](add-authentication.md)

@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams 导入消息 api 图形 Microsoft 迁移迁移帖子
-ms.openlocfilehash: 1b5a8ccc243c795801552519b4b52f51366e047d
-ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
+ms.openlocfilehash: 5ea06e8b490bae0595abb31086848d0b050bded0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "51403967"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566157"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
@@ -25,7 +25,7 @@ ms.locfileid: "51403967"
 在高级别上，导入过程由以下内容组成：
 
 1. [创建具有返回时间戳的团队](#step-one-create-a-team)
-1. [创建具有返回时间戳的频道](#step-two-create-a-channel)  
+1. [创建具有返回时间戳的频道](#step-two-create-a-channel) 
 1. [导入外部实时日期消息](#step-three-import-messages)
 1. [完成团队和频道迁移过程](#step-four-complete-migration-mode)
 1. [添加团队成员](#step-five-add-team-members)
@@ -41,8 +41,8 @@ ms.locfileid: "51403967"
 
 ### <a name="set-up-your-office-365-tenant"></a>设置 Office 365 租户
 
-✔确保导入Office 365租户存在。 有关为租户设置Office 365租户Teams，请参阅准备Office 365[租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。   
-✔确保团队成员在 AAD Azure Active Directory () 。  有关详细信息，*请参阅向*[用户添加Azure Active Directory。](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+✔确保导入Office 365租户存在。 有关为租户设置Office 365租户Teams，请参阅准备Office 365[租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。  
+✔确保团队成员在 AAD Azure Active Directory () 。  有关详细信息，请参阅[向用户添加Azure Active Directory。](/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
 ## <a name="step-one-create-a-team"></a>步骤 1：创建团队
 
@@ -50,7 +50,8 @@ ms.locfileid: "51403967"
 
 > [使用 team 资源](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) 属性创建具有返回时间戳的新  `createdDateTime`  团队。 将新团队放在 `migration mode` 中，这是一种特殊状态，可禁止用户参与团队中的大多数活动，直到迁移过程完成。 在 POST 请求中包括具有 值的 instance 属性，以明确标识正在创建 `teamCreationMode` `migration` 用于迁移的新团队。  
 
-> **注意** `createdDateTime` ：将仅为已迁移的团队或频道的实例填充该字段。
+> [!Note]
+> `createdDateTime`将仅为已迁移的团队或频道的实例填充该字段。
 
 <!-- markdownlint-disable MD001 -->
 
@@ -58,7 +59,7 @@ ms.locfileid: "51403967"
 
 |ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理资源以迁移到Microsoft Teams|**仅应用程序**|**是**|`POST /teams`|
+|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理资源以迁移到Microsoft Teams。|**仅应用程序**|**是**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>请求 (迁移状态创建) 
 
@@ -102,7 +103,7 @@ Content-Location: /teams/{team-id}
 
 |ScopeName|DisplayName|说明|类型|管理员同意？|涵盖的实体/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理资源以迁移到Microsoft Teams|**仅应用程序**|**是**|`POST /teams`|
+|`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建、管理资源以迁移到Microsoft Teams。|**仅应用程序**|**是**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态创建) 
 
@@ -226,7 +227,8 @@ HTTP/1.1 200 OK
 
 #### <a name="request-post-a-message-with-inline-image"></a>请求 (内联图像消息 POST) 
 
-> **注意**：此方案中没有特殊权限范围，因为请求是 chatMessage 的一部分;chatMessage 的范围也适用于此处。
+> [!Note]
+> 此方案中没有特殊权限范围，因为请求是 chatMessage 的一部分;chatMessage 的范围也适用于此处。
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -373,5 +375,5 @@ HTTP/1.1 204 No Content
 
 
 ## <a name="see-also"></a>另请参阅
-> [!div class="nextstepaction"]
-> [了解有关 Microsoft Graph 和 Teams 集成](/graph/teams-concept-overview)
+
+[了解有关 Microsoft Graph 和 Teams 集成](/graph/teams-concept-overview)

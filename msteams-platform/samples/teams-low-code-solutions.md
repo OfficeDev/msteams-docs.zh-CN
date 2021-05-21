@@ -5,12 +5,12 @@ description: 详细说明了可用的 Microsoft 低和无代码解决方案Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: d294bf335a7688584e52c22d2585f3db2ef1c788
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: a5615c5b70e21ea1bcade3dc46c6a2b5b3bc4f92
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075722"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566206"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为用户创建低代码自定义Microsoft Teams
 
@@ -20,7 +20,7 @@ Microsoft Teams可扩展性和自适应性。 这意味着您可以为满足用�
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams和 Microsoft Power Platform
 
-Microsoft Power Platform 在一个强大的应用程序平台中组合了四种强大的 Microsoft 技术，如 Power BI、Power Apps、Power Automate、Microsoft Flow 和 Power Virtual Agents。 这些技术让你能够构建解决方案、自动化流程、分析数据，以及创建统一集成的环境中的虚拟代理：
+Microsoft Power Platform 在一个强大的应用程序平台中组合了四项强大的 Microsoft 技术，如 Power BI、Power Apps、Power Automate、Microsoft Flow 和 Power Virtual Agents。 这些技术让你能够构建解决方案、自动化流程、分析数据，以及创建统一集成的环境中的虚拟代理：
 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power 平台服务":::
 

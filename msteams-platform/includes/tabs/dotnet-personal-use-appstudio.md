@@ -9,9 +9,9 @@
 
 - 选择清单 **编辑器中的** "导入现有应用"磁贴，开始为选项卡更新应用包。源代码附带其自己的部分完整清单。 应用包的名称 **tab.zip。** 应在此处找到它：
 
-```bash
-/bin/Debug/netcoreapp2.2/Tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/Tab.zip
+    ```
 
 - UploadTab.zipApp  Studio。
 
@@ -25,33 +25,33 @@
 
 #### <a name="details-app-details"></a>详细信息：应用详细信息
 
-在" *应用详细信息"* 部分中：
+在" **应用详细信息"** 部分中：
 
-- 在 *"标识***"下，** 选择"生成"，为应用生成新的应用 ID。
+- 在 **"标识****"下，** 选择"生成"，为应用生成新的应用 ID。
 
-- 在 *"开发人员信息* "下 **，** 使用 *ngrok* HTTPS URL 更新网站 URL。
+- 在 **"开发人员信息** "下 **，** 使用 **ngrok** HTTPS URL 更新网站 URL。
 
-- 在 *"应用程序 URL"* 下 **，将隐私声明** 更新为 `https://<yourngrokurl>/privacy` 和 **使用条款** 以 `https://<yourngrokurl>/tou`>。
+- 在 **"应用程序 URL"** 下 **，将隐私声明** 更新为 `https://<yourngrokurl>/privacy` 和 **使用条款** 以 `https://<yourngrokurl>/tou`>。
 
 #### <a name="capabilities-tabs"></a>功能：选项卡
 
 在" *选项卡"* 部分：
 
-- 在 *"添加个人"选项卡下，选择*"***添加"。*** 系统将会显示一个弹出对话窗口。
+- 在 **"添加个人"选项卡下，选择**"**添加"。** 系统将会显示一个弹出对话窗口。
 
-- 填写" *名称"* 字段。
+- 填写" **名称"** 字段。
 
-- 完成 *"实体 ID"* 字段。
+- 完成 **"实体 ID"** 字段。
 
-- 将" *内容 URL"* 字段更新为 `https://<yourngrokurl>/personalTab` 。
+- 将" **内容 URL"** 字段更新为 `https://<yourngrokurl>/personalTab` 。
 
-- 将" *网站 URL"* 字段留空。
+- 将" **网站 URL"** 字段留空。
 
-- 选择“***保存***”。
+- 选择“**保存**”。
 
 #### <a name="finish-domains-and-permissions"></a>完成时间：域和权限
 
-在 *"域和权限"* 部分，选项卡字段中的"域"应包含不包含 HTTPS 前缀的 ngrok URL- `<yourngrokurl>.ngrok.io/` 。
+在 **"域和权限"** 部分，选项卡字段中的"域"应包含不包含 HTTPS 前缀的 ngrok URL- `<yourngrokurl>.ngrok.io/` 。
 
 ##### <a name="finish-test-and-distribute"></a>完成：测试和分发
 
@@ -62,11 +62,11 @@
 >
 >在测试选项卡时，可以忽略此警告。
 
-在" *测试和分发"部分* ：
+在" **测试和分发"部分** ：
 
 - 选择“**安装**”。
 
-- 在弹出窗口中，确保"为用户添加"设置为"是"，"添加到团队或 *聊天"设置为*"否 *"。* 
+- 在弹出窗口中，确保"为用户添加"设置为"是"，"添加到团队或 **聊天"设置为**"否 **"。** 
 
 - 选择“**安装**”。
 

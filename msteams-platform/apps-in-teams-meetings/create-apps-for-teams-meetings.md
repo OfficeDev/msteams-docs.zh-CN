@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 8ccc4f39b62d7aefb8d0ff56e7f0dbd00d15e356
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 84d0f5564d7e8e6e34dde1f3d59cc6e7a68d3332
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075652"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565912"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -37,7 +37,7 @@ ms.locfileid: "52075652"
 
 ## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
-|API|说明|请求|源|
+|API|描述|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -135,7 +135,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|说明|
+|响应代码|描述|
 |---|---|
 | **403** | 不允许应用获取参与者信息。 这是最常见的错误响应，如果会议未安装应用，将触发此错误响应。 例如，如果租户管理员禁用应用或在实时网站迁移期间阻止应用。|
 | **200** | 成功检索参与者信息。|
@@ -155,7 +155,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 |值|类型|必需|说明|
 |---|---|----|---|
-|**conversationId**| string | 是 | 对话标识符作为自动程序调用的一部分提供 |
+|**conversationId**| string | 是 | 对话标识符作为自动程序调用的一部分提供。 |
 
 #### <a name="example"></a>示例
 
@@ -219,9 +219,9 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|说明|
+|响应代码|描述|
 |---|---|
-| **201** | 具有信号的活动已成功发送 |
+| **201** | 具有信号的活动已成功发送。 |
 | **401** | 应用使用无效令牌进行响应。 |
 | **403** | 应用无法发送信号。 发生这种情况的原因有多种，例如租户管理员禁用应用、实时网站迁移期间阻止应用等。 在这种情况下，有效负载包含详细的错误消息。 |
 | **404** | 会议聊天不存在。 |
@@ -316,7 +316,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="sidepanel"></a>sidePanel
 
-借助 sidePanel，你可以自定义会议体验，使组织者和演示者拥有一组不同的视图和操作。 在应用清单中，必须将 sidePanel 添加到上下文数组。 在会议以及所有方案中，应用在宽度为 320 像素的"会议内"选项卡中呈现。 有关详细信息，请参阅 [FrameContext 接口](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+借助 sidePanel，你可以自定义会议体验，使组织者和演示者拥有一组不同的视图和操作。 在应用清单中，必须将 sidePanel 添加到上下文数组。 在会议以及所有方案中，应用在宽度为 320 像素的"会议内"选项卡中呈现。 有关详细信息，请参阅 [FrameContext 接口](/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
 )。
 
 若要使用 `userContext` API 相应地路由请求，请参阅[Teams SDK。](../tabs/how-to/access-teams-context.md#user-context) 请参阅[Teams的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流与网站的身份验证流非常相似。 因此选项卡可以直接使用 OAuth 2.0。 请参阅Microsoft 标识平台[OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
@@ -324,7 +324,7 @@ POST /v3/conversations/{conversationId}/activities
 当用户在会议视图中并且用户可以发布撰写邮件扩展卡时，邮件扩展将按预期方式工作。 AppName 会议内是一个工具提示，用于指出会议 U 栏中的应用名称。
 
 > [!NOTE]
-> 使用版本 1.7.0 或更高版本[的 Teams SDK，](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)因为它之前的版本不支持侧面板。
+> 使用版本 1.7.0 或更高版本[的 Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)因为它之前的版本不支持侧面板。
 
 #### <a name="in-meeting-dialog"></a>会议内的对话框
 
@@ -377,15 +377,13 @@ POST /v3/conversations/{conversationId}/activities
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | .NET | Node.js |
+|示例名称 | 描述 | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
-| 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
+| 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting SidePanel | Microsoft Teams会议扩展性示例，以在会议中通过侧面板进行激活。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [会议内对话设计指南](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-> [!div class="nextstepaction"]
-> [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
+* [会议内对话设计指南](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)

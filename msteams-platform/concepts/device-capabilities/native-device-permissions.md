@@ -4,12 +4,12 @@ keywords: teams 应用功能权限
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 452840c5809da32a79c231f85cd1de9f8746367a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 34f84285dc883cc474cf1720c42b1699f76c6653
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019851"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566178"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 
@@ -17,7 +17,7 @@ ms.locfileid: "52019851"
 
 > [!NOTE]
 > * 若要将媒体功能集成到Microsoft Teams移动应用中，请参阅[集成媒体功能](mobile-camera-image-permissions.md)。
-> * 若要将 QR 或条形码扫描仪功能集成到 Microsoft Teams 移动应用中，请参阅在应用中集成 QR 或条形码[扫描仪Teams](qr-barcode-scanner-capability.md)
+> * 若要将 QR 或条形码扫描仪功能集成到 Microsoft Teams 移动应用中，请参阅在应用中集成[QR 或条形码扫描仪Teams。](qr-barcode-scanner-capability.md)
 > * 若要在移动应用中集成位置Microsoft Teams，请参阅[集成位置功能](location-capability.md)。
 
 ## <a name="native-device-permissions"></a>本机设备权限
@@ -79,7 +79,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 每个属性都允许您提示用户请求其同意：
 
-| 属性      | 说明   |
+| 属性      | 描述   |
 | --- | --- |
 | media         | 使用相机、麦克风、扬声器和访问媒体库的权限。 |
 | 地理位置   | 返回用户位置的权限。      |

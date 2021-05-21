@@ -6,12 +6,12 @@ keywords: teams 选项卡传出 Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bc4d768751d34ccf305ef99e126159123a83ef3f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bb2306cb57c069d3bed06702495da2775694643a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018416"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566815"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Post external requests to Teams with incoming webhooks
 
@@ -27,7 +27,7 @@ ms.locfileid: "52018416"
 
 | 功能 | 说明 |
 | ------- | ----------- |
-|作用域配置|传入 Webhook 的范围和配置在频道级别 (例如，传出 Webhook 的范围和配置在团队级别) 。|
+|作用域配置|传入 Webhook 的范围和配置在通道级别。 例如，传出 Webhook 的范围和配置在团队级别。|
 |安全资源定义|邮件的格式设置为 JSON 有效负载。 此声明性消息结构可防止注入恶意代码，因为客户端上没有执行代码。|
 |可操作邮件支持|如果选择通过卡片发送邮件，则必须使用可 **操作邮件卡片** 格式。 可操作邮件卡在所有邮件组中Office 365，包括Teams。 以下是指向旧版可[操作邮件卡参考和](/outlook/actionable-messages/message-card-reference)[邮件卡片的编号的链接](https://messagecardplayground.azurewebsites.net)。|
 |独立 HTTPS 消息支持| 卡片是一种以清晰且一致的方式呈现信息的方式。 任何可以发送 HTTPS POST 请求的工具或框架都可以通过传入 webhook Teams消息。|
@@ -41,6 +41,8 @@ ms.locfileid: "52018416"
 > [!Important]  
 > 如果已选择设置"成员权限""允许成员创建、更新和删除连接器"，则任何团队成员都可以添加、修改  =>    =>  或删除连接器。
 
+**添加传入 Webhook**
+
 1. 导航到要添加 Webhook 的通道，然后从顶部导航栏中 (&#8226;&#8226;&#8226;) 选择 *"更多选项* "。
 1. 从 **下拉菜单中选择**"连接器"，然后搜索"传入 **Webhook"。**
 1. 选择 **"配置** "按钮，提供名称，并（可选）为 Webhook 上传图像头像。
@@ -48,6 +50,8 @@ ms.locfileid: "52018416"
 1. 选择" **完成"** 按钮。 webhook 将在团队频道中提供。
 
 ## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>从网络通道中删除Teams webhook
+
+**删除传入 Webhook**
 
 1. 导航到添加 webhook 的通道，然后从顶部导航 (&#8226;&#8226;&#8226;) *选择* "更多选项"。
 1. 从 **下拉菜单中选择** "连接器"。
@@ -65,6 +69,6 @@ ms.locfileid: "52018416"
 * 添加配置页面，将传入的 Webhook 包装在 [O365 连接器中](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * 将连接器打包并发布为 [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) 提交的一部分。
 
-## <a name="learn-more"></a>了解详细信息
+## <a name="see-also"></a>另请参阅
 
-* [将邮件发送到连接器和 Webhook](~/webhooks-and-connectors/how-to/connectors-using.md)
+[将邮件发送到连接器和 Webhook](~/webhooks-and-connectors/how-to/connectors-using.md)

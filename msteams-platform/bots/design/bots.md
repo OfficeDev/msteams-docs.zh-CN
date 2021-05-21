@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d2967abdc6c0055eca8c94ed4e4a7fdf1bdba322
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: da289b37340f575eda8eb858b13810df48783728
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101693"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566143"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
@@ -33,7 +33,7 @@ ms.locfileid: "52101693"
 * 通过使用应用飞出，选择 teams **"更多应用"** 图标。
 * 当有@mention聊天或撰写框时（以下示例显示了如何在群组聊天中执行这一操作）。
 
-:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="示例演示了如何使用智能机器人在群组聊天中添加@mention。" border="false":::
+    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="示例演示了如何使用智能机器人在群组聊天中添加@mention。" border="false":::
 
 ## <a name="introduce-a-bot"></a>介绍机器人
 
@@ -41,7 +41,7 @@ ms.locfileid: "52101693"
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>一对一聊天中的欢迎消息
 
-在个人环境中，欢迎消息可设置机器人的风格。 消息包括问候语、机器人可以做什么以及如何交互的一些建议（例如，"尝试询问我有关..."）。 如果可能，建议应返回存储的响应，无需登录。
+在个人环境中，欢迎消息可设置机器人的风格。 消息包括问候语、机器人可以做什么，以及一些如何交互的建议。 例如，"尝试询问我..."。 如果可能，建议应返回存储的响应，无需登录。
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="例如，显示了个人应用中的机器人简介。" border="false":::
 
@@ -61,14 +61,14 @@ ms.locfileid: "52101693"
 
 ### <a name="tours"></a>导览
 
-可在包含欢迎消息的教程以及自动程序响应类似"帮助"命令时包括教程。 教程是介绍机器人功能最有效的方法。 如果适用，它们还非常适用于描述应用的其他功能（例如，包含消息扩展的屏幕截图）。
+可在包含欢迎消息的教程以及自动程序响应类似"帮助"命令时包括教程。 教程是介绍机器人功能最有效的方法。 如果适用，它们还非常适用于描述应用的其他功能。 例如，包括邮件扩展的屏幕截图。
 
 > [!IMPORTANT]
 > 无需登录即可访问教程。
 
 #### <a name="one-on-one-chats"></a>一对一聊天
 
-在个人应用中，变盘可提供自动程序的有效概述以及应用的其他任意功能。 包括允许用户尝试自动命令的按钮（例如， **创建任务**）。
+在个人应用中，变盘可提供自动程序的有效概述以及应用的其他任意功能。 建议包括允许用户试用自动程序命令的按钮。 例如， **创建任务**。
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="一对一聊天中的自动浏览示例。" border="false":::
 
@@ -134,7 +134,7 @@ ms.locfileid: "52101693"
 
 设计智能机器人以识别意图，该意图可捕获智能机器人在响应邮件或查询时所捕获的信息。 意图将邮件或查询分为单个操作，包括受该操作影响的一个或多个数据对象。 
 
-以下示例概述了发送到自动程序的邮件中的用户意图和数据。
+以下示例概述了发送到自动程序的消息中的用户意图和数据：
 
 :::row:::
    :::column span="":::
@@ -152,7 +152,7 @@ ms.locfileid: "52101693"
 
 了解用户与机器人聊天时所说的内容。 随着你的用户群在不同位置和组织之间增长，这一过程将持续迭代。 可以使用 Microsoft 语言理解 （TUNE） 优化自动程序的语言识别和意图映射。
 
-* [了解组织](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence)：了解用户如何使用 AI 为应用数据提供自然语言理解 （NLU）。
+* [了解组织](/azure/cognitive-services/luis/artificial-intelligence)：了解用户如何使用 AI 为应用数据提供自然语言理解 （NLU）。
 * [与 COMPLEX](https://www.luis.ai/)集成：向机器人添加自然语言功能，而无需创建机器学习模型这个复杂流程。
 
 ## <a name="use-cases"></a>用例
@@ -167,7 +167,7 @@ ms.locfileid: "52101693"
 
 虽然自动程序可支持完整的请求和问题，但也应能够处理多位交互。 如果想了解可能的下一步操作，用户就更轻松完成整个任务流（而不是期望他们精心制作一个全面的请求）。
 
-在下面的示例中，自动程序会答复每封邮件，并包含接下来要执行的选项。
+在下面的示例中，自动程序使用选项响应每条消息，以选择下一步可能要执行哪些操作：
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="示例显示与自动程序之间的多元交互。" border="false":::
 
@@ -175,7 +175,7 @@ ms.locfileid: "52101693"
 
 通过主动消息传递，机器人可以充当摘要，以特定频率发送与个人、群组聊天或频道相关的通知。 文档更改了某些内容或关闭工作项目时，自动程序可能会发送邮件。
 
-在下面的示例中，用户收到一条留言，告知用户有机器人在另一个频道中发出消息。
+在下面的示例中，用户收到一条 Toast 通知，提示机器人在另一个频道中向用户发送消息：
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="示例显示了自动程序主动向另一个频道中的用户消息传递消息的祝念。" border="false":::
 
@@ -185,7 +185,7 @@ ms.locfileid: "52101693"
 
 ### <a name="use-tabs-with-bots"></a>将标签用于机器人
 
-选项卡可以使你的自动程序更易于使用。 例如，如果你的机器人可以创建工作项目，就太棒了在选项卡内的一个中心位置显示所有这些项。详细了解如何 [选项卡](../../tabs/design/tabs.md)。
+选项卡可以使你的自动程序更易于使用。 例如，如果你的机器人可以创建工作项，那么在选项卡内的中心位置显示所有这些项目将是一个不错的选择。有关详细信息，请参阅 [设计选项卡](../../tabs/design/tabs.md)。
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="示例显示选项卡可如何帮助整理自动程序内容。" border="false":::
 

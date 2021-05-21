@@ -5,12 +5,12 @@ keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: d2806271f99af53139c76dcbd1090a96adcd0f31
-ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
+ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52068820"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566578"
 ---
 # <a name="format-cards-in-teams"></a>格式化卡片Teams
 
@@ -20,7 +20,7 @@ ms.locfileid: "52068820"
 
 不同卡类型之间的格式支持不同，并且桌面版和移动版 Teams 客户端以及桌面Teams的卡片呈现可能略有不同。
 
-你可以将内联图像与任意卡片Teams内。 格式设置为 、 或 文件的图像不能超过  `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。 动态 GIF 不受正式支持。 *请参阅*[卡片参考](./cards-reference.md#inline-card-images)
+你可以将内联图像与任意卡片Teams内。 格式设置为 、 或 文件的图像不能超过  `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。 动态 GIF 不受正式支持。 有关详细信息，请参阅卡片 [参考](./cards-reference.md#inline-card-images)。
 
 ## <a name="formatting-cards-with-markdown"></a>使用 Markdown 格式化卡片
 
@@ -127,7 +127,7 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 
 * `<at>username</at>` 在支持的自适应卡片元素中。
 * `mention`卡片内容中属性内的对象，Teams `msteams` 所提及的用户的用户 ID。
-* `userId`是自动程序 ID 和特定用户所特有的。 它可用于@mention用户。 `userId`可以使用获取用户 ID 中提到的选项之[一来检索](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。
+* `userId`是自动程序 ID 和特定用户所特有的。 它可用于@mention用户。 `userId`可以使用获取用户 ID 中提到的选项之[一来检索](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>带提及功能的示例自适应卡片
 

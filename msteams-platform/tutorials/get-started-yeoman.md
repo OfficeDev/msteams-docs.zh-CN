@@ -5,12 +5,12 @@ keywords: nodejs yeoman node.js入门
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 9efbe6f6e6502120f1afdadb9b538182f1406c56
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 96a4f64d487e1d16bf25abd978759fedeac1061c
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018430"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566822"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>使用 Yeoman Microsoft Teams创建你的第一个应用
 
@@ -64,7 +64,7 @@ npm install generator-teams@preview --global
 **生成项目**
 
 1. 打开命令提示符并创建要创建项目的新目录，并运行命令 `yo teams` 。 生成器启动。
-1. 响应生成器提示的一组问题。
+1. 响应生成器提示的一组问题：
 
    ![yo teams](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -73,7 +73,7 @@ npm install generator-teams@preview --global
    1. 在下一个问题中，键入项目的标题。 此标题将在应用的清单和说明中使用。 
    1. 接下来，将要求您输入公司名称，该名称也将在清单中使用。
    1. 第五个问题询问您想要使用的清单版本。 对于本教程，请选择 `v1.5` ，这是当前可用的常规架构。
-   1. 接下来，生成器将询问要添加到项目中的项目。 可以选择单个项目或任意项目组合。 对于本教程，只需选择一 *个选项卡*。
+   1. 接下来，生成器将询问要添加到项目中的项目。 可以选择单个项目或任意项目组合。 对于本教程，只需选择 *一个选项卡*：
 
     ![项目选择](~/assets/yeoman-images/teams-first-app-2.png)
 
@@ -123,7 +123,7 @@ npm install generator-teams@preview --global
 
 若要运行应用，请使用 `gulp serve` 命令。 这将生成并启动本地 Web 服务器，以测试你的应用。 每次在项目中保存文件时，该命令也将重新生成应用程序。 
 
-现在，你应该能够浏览以确保 `http://localhost:3007/myFirstAppTab/` 选项卡正在呈现。 但是，尚不Microsoft Teams中。
+现在，你应该能够浏览以确保 `http://localhost:3007/myFirstAppTab/` 选项卡正在呈现。 但是，尚不Microsoft Teams：
 
 ![在浏览器中查看网站](~/assets/yeoman-images/teams-first-app-3.png)
 
@@ -133,11 +133,11 @@ Microsoft Teams不允许将应用托管在 localhost 上，因此你需要将其
 
 好消息是，搭建的项目具有此内置功能。 运行 ngrok 服务时，将在后台启动具有唯一的公用 DNS 条目，并且它还将清单打包为此唯一 URL，然后执行与 完全相同 `gulp ngrok-serve` 的操作 `gulp serve` 。
 
-运行 `gulp ngrok-serve` 后，创建新的Microsoft Teams团队，创建团队时单击团队名称，转到团队设置，然后选择应用。  在右下角，你应该会看到自定义Upload *的链接，* 选择它，然后浏览到项目文件夹和名为 的子文件夹 `package` 。 选择该文件夹中的 zip 文件，然后选择"打开"。 你的应用现在旁加载到Microsoft Teams。
+运行 `gulp ngrok-serve` 后，创建新的Microsoft Teams团队，创建团队时单击团队名称，转到团队设置，然后选择应用。  在右下角，你应该会看到自定义Upload *的链接，* 选择它，然后浏览到项目文件夹和名为 的子文件夹 `package` 。 选择该文件夹中的 zip 文件，然后选择"打开"。 你的应用现在旁加载到Microsoft Teams：
 
 ![旁加载的应用](~/assets/yeoman-images/teams-first-app-4.png)
 
-返回到 *常规频道，* 然后选择 *+* 添加新的选项卡。你应该在选项卡列表中看到您的选项卡。
+返回到 *常规频道，* 然后选择 *+* 添加新的选项卡。你应该在选项卡列表中看到您的选项卡：
 
 ![配置选项卡](~/assets/yeoman-images/teams-first-app-5.png)
 
@@ -161,11 +161,11 @@ Microsoft Teams不允许将应用托管在 localhost 上，因此你需要将其
    ```PowerShell
     yo
    ```
-3. 使用箭头键选择更新 **生成器**。
+3. 使用箭头键选择更新 **生成器**：
 
    ![YoSelectUpdatGen 的图像](~/assets/images/Update-Teams/YoSelectUpdateGen.png)
 
-4. 从生成器列表中选择你需要的生成器。
+4. 从生成器列表中选择你需要的生成器：
    > [!NOTE]
    > 使用空格键从可用选项Teams或清除所选版本。
 

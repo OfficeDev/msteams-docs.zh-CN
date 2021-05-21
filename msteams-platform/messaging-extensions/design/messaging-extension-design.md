@@ -6,12 +6,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: 8b918c59910cbdc560fe415354d2c62c0fdd443c
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: ed1f0f2eb2ce8d429a8a780bd2c4c4eb421d6d54
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101574"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566213"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>设计邮件Microsoft Teams扩展
 
@@ -32,7 +32,7 @@ ms.locfileid: "52101574"
 * 从 Teams 应用商店 （AppSource）。
 * 在靠近撰写框 (、在频道、聊天或会议) 、聊天或会议。 值得注意的是，如果您在这些位置之一添加邮件扩展，则仅可以在该上下文中使用它。
 
-以下示例演示如何在频道中添加消息扩展。
+以下示例演示如何在频道中添加消息扩展：
 
 :::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="示例演示如何在频道中的撰写框附近添加消息传递扩展。" border="false":::
 
@@ -68,11 +68,11 @@ ms.locfileid: "52101574"
 
 ## <a name="open-a-messaging-extension"></a>打开消息传递扩展
 
-撰写框和邮件/公告是人们使用邮件扩展的主要上下文。
+撰写框和消息或帖子是人们使用邮件扩展的主要上下文。
 
 ### <a name="from-the-compose-box"></a>从撰写框
 
-添加后，用户可以通过选择撰写框下方的应用图标来打开邮件扩展。 本示例中，扩展具有搜索和操作命令。
+添加后，用户可以通过选择撰写框下方的应用图标来打开邮件扩展。 本示例中，扩展具有搜索和操作命令：
 
 :::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="示例演示如何从撰写框中打开邮件扩展。" border="false":::
 

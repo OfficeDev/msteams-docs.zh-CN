@@ -5,12 +5,12 @@ keywords: nodejs app Studio node.js入门
 ms.topic: tutorial
 localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: ae1b8b2b5b671488ff6f86a3a3295f448ebb6006
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 46272671443e07432513b667af424b5c5be05f2e
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020959"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566536"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>使用 Microsoft Teams 创建你的第一个Node.js
 
@@ -112,10 +112,10 @@ npm start
 
 此时，你可以打开浏览器窗口并导航到以下 URL 以验证所有应用 URL 是否正在加载：
 
-- [http://localhost:3333](http://localhost:3333)
-- [http://localhost:3333/hello](http://localhost:3333/hello)
-- [http://localhost:3333/first](http://localhost:3333/first)
-- [http://localhost:3333/second](http://localhost:3333/second)
+- `http://localhost:3333`
+- `http://localhost:3333/hello`
+- `http://localhost:3333/first`
+- `http://localhost:3333/second`
 
 <a name="HostSample"></a>
 
@@ -125,7 +125,7 @@ npm start
 
 对于本地测试，可以在本地计算机上运行应用，并创建一个使用 Web 终结点的隧道。 [ngrok](https://ngrok.com) 是一款免费工具，允许你这样做。 使用 *ngrok，* 你可以获取 Web 地址 `https://d0ac14a5.ngrok.io` ， (此 URL 只是一个) 。 你可以 [为环境下载](https://ngrok.com/download)*并安装 ngrok。* 请确保将其添加到 中的位置 `PATH` 。
 
-安装后，可以打开一个新的终端窗口并运行以下命令以创建隧道。 此示例使用端口 3333，因此请务必在此处指定它。
+安装后，可以打开一个新的终端窗口并运行以下命令以创建隧道。 此示例使用端口 3333，因此请务必在此处指定它：
 
 ```bash
 ngrok http 3333 -host-header=localhost:3333
@@ -157,7 +157,7 @@ ngrok http 3333 -host-header=localhost:3333
 
 ## <a name="update-your-hosted-app"></a>更新托管的应用
 
-示例应用需要将以下环境变量设置为之前记下的值。
+示例应用需要将以下环境变量设置为之前记下的值：
 
 ```
 MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
@@ -200,13 +200,13 @@ NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当本地运行应
 
 ## <a name="configure-the-app-tab"></a>配置"应用"选项卡
 
-将应用安装到团队后，你需要将其配置为显示内容。 转到团队中的频道，然后单击 **"+"** 按钮以添加新选项卡。然后，可以从 `Hello World` "添加 **选项卡"列表中选择** 。 然后，你将看到配置对话框。 此对话框将让你选择要在此通道中显示哪个选项卡。 选择该选项卡并单击后 `Save` ，即可看到使用 `Hello World` 你选择的选项卡加载的选项卡。
+将应用安装到团队后，你需要将其配置为显示内容。 转到团队中的频道，然后单击 **"+"** 按钮以添加新选项卡。然后，可以从 `Hello World` "添加 **选项卡"列表中选择** 。 然后，你将看到配置对话框。 此对话框将让你选择要在此通道中显示哪个选项卡。 选择该选项卡并单击后，可以看到已加载选项卡 `Save` `Hello World` 的选项卡已选择：
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
 ### <a name="test-your-bot-in-teams"></a>在设备中测试Teams
 
-现在，你可以与自动程序在 Teams。 选择你注册应用的团队中的频道，然后键入 `@your-bot-name` ，然后键入消息。 这称为 **\@ 提及**。 向自动程序发送的任何消息都将作为回复发送回。
+现在，你可以与自动程序在 Teams。 选择你注册应用的团队中的频道，然后键入 `@your-bot-name` ，然后键入消息。 这称为 **\@ 提及**。 发送到自动程序的任何消息都将作为回复发送回：
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 
@@ -214,12 +214,12 @@ NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当本地运行应
 
 ### <a name="test-your-messaging-extension"></a>测试邮件扩展
 
-若要测试消息扩展，可以单击对话视图中输入框下方的三个点。 菜单将弹出，并包含 **"Hello World"** 应用。 单击它时，你将看到大量随机文本。 你可以选择其中任何一个，并将其插入到对话中。
+若要测试消息扩展，可以单击对话视图中输入框下方的三个点。 菜单将弹出，并包含 **"Hello World"** 应用。 单击它时，你将看到大量随机文本。 可以选择其中任何一个，并将其插入到对话中：
 
 <img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
 <img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-选择随机文本之一，你将在底部看到格式化的卡片，并准备好随自己的邮件一起发送。
+选择随机文本之一，你将在底部看到格式化的卡片，并准备好发送自己的邮件：
 
 <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

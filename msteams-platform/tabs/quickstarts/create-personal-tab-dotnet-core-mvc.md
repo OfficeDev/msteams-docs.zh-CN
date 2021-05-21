@@ -5,16 +5,16 @@ description: 使用 ASP 创建自定义个人选项卡的快速入门指南。 N
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 3ec6b5c054384653e30e46cbffed4a2af6662c33
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 01418adb32335660bb20f74ecfaa0e7e27230c93
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019564"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566622"
 ---
-# <a name="create-a-custom-personal-tab-with-asp-net-core-mvc"></a>使用 ASP 创建自定义个人选项卡。 NET Core MVC
+# <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>使用 MVC 创建自定义个人 ASP.NET Core选项卡
 
-在此快速入门中，我们将演练使用 C# 和 ASP 创建自定义个人选项卡。 Net Core MVC。 我们还将使用 App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)完成应用清单，并部署选项卡以Teams。
+在此快速入门中，我们将演练使用 C# 和 core MVC ASP.Net 自定义个人选项卡。 我们还将使用 App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)完成应用清单，并部署选项卡以Teams。
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -90,13 +90,13 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="models"></a>模型
 
-*PersonalTab.cs* 提供 Message 对象和方法，当用户在 PersonalTab 视图中选择按钮时，该对象和方法将从 *PersonalTabController* 调用。 
+**PersonalTab.cs** 提供 Message 对象和方法，当用户在 PersonalTab 视图中选择按钮时，该对象和方法将从 *PersonalTabController* 调用。 
 
 ### <a name="views"></a>视图
 
 #### <a name="home"></a>主页
 
-ASP。 NET Core 将名为 *Index* 的文件视为网站的默认/主页。 当浏览器 URL 指向网站的根目录时 *，Index.cshtml* 将显示为应用程序的主页。
+ASP。 NET Core 将名为 **Index** 的文件视为网站的默认页面或主页。 当浏览器 URL 指向网站的根目录时 **，Index.cshtml** 将显示为应用程序的主页。
 
 #### <a name="shared"></a>共享的内容
 
@@ -112,20 +112,26 @@ ASP。 NET Core 将名为 *Index* 的文件视为网站的默认/主页。 当�
 
 * 打开项目目录根目录中的命令提示符并运行以下命令：
 
-``` bash
-ngrok http https://localhost:44345 -host-header="localhost:44345"
-```
+    ``` bash
+    ngrok http https://localhost:44345 -host-header="localhost:44345"
+    ```
 
 * Ngrok 将侦听来自 Internet 的请求，并且将在应用程序在端口 44325 上运行时将它们路由到您的应用程序。  它应 `https://y8rPrT2b.ngrok.io/` 类似于 *y8rPrT2b* 替换为 ngrok 字母数字 HTTPS URL。
 
 * 请确保使命令提示符保持运行 ngrok，并记下 URL，稍后将需要它。
 
-* 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 *ngrok* 是否正常运行。
+* 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正常运行。
 
-> [! 提示] 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且必须更新使用该 URL 的每一处。
+> [!TIP]
+> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成此快速入门。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在服务器中重新启动时，它将继续侦听并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且必须更新使用该 URL 的每一处。
 
 ### <a name="run-your-application"></a>运行应用程序
 
 * In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [使用自定义频道和组选项卡，Node.js Yeoman 生成器进行Microsoft Teams](~/tabs/quickstarts/create-channel-group-tab-node-yeoman.md)

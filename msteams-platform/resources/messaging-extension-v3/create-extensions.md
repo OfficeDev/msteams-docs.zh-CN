@@ -4,12 +4,12 @@ description: 创建基于操作的消息扩展以允许用户触发外部服务
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 邮件扩展邮件扩展搜索
-ms.openlocfilehash: a3122dbaf79f57054cfec2e8aef2ed4f687338be
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bfb3295726c355164f080c15e3759ea36a99d914
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019732"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566738"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>使用消息传递扩展启动操作
 
@@ -130,7 +130,7 @@ ms.locfileid: "52019732"
 
 ### <a name="initiate-actions-from-messages"></a>从邮件启动操作
 
-除了从撰写邮件区域启动操作之外，您还可以使用邮件扩展从邮件启动操作。 这将允许你将邮件内容发送到自动程序进行处理，并可以选择使用"响应以提交"中所述的方法，通过响应回复 [邮件](#responding-to-submit)。 该响应将作为回复插入，您的用户可以在提交之前编辑该邮件。 你的用户可以从溢出菜单访问你的消息传递扩展 `...` ，然后选择 `Take action` 如下图所示。
+除了从撰写邮件区域启动操作之外，您还可以使用邮件扩展从邮件启动操作。 这将允许你将邮件内容发送到自动程序进行处理，并可以选择使用"响应以提交"中所述的方法，通过响应回复 [邮件](#responding-to-submit)。 该响应将作为回复插入，您的用户可以在提交之前编辑该邮件。 你的用户可以从溢出菜单访问你的消息传递扩展 `...` ，然后选择 `Take action` 如下图所示：
 
 ![从邮件启动操作的示例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -226,7 +226,7 @@ ms.locfileid: "52019732"
 
 ### <a name="test-via-uploading"></a>通过上传进行测试
 
-可以通过上传应用来测试邮件扩展。 有关详细信息 [，请参阅在团队中上传](~/concepts/deploy-and-publish/apps-upload.md) 应用。
+可以通过上传应用来测试邮件扩展。 有关详细信息，请参阅在团队 [中上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
 
 若要打开消息扩展，请导航到任何聊天或频道。 在撰写 **框中** 选择" (&#8943;) "按钮，然后选择邮件扩展。 
 
@@ -238,13 +238,13 @@ ms.locfileid: "52019732"
 
 在此方法中，只需在清单中定义一个静态参数列表，如"Create 微软待办"命令所示。 若要使用此方法， `fetchTask` 请确保设置为 `false` ，并确保在清单中定义参数。
 
-当用户选择具有静态参数的命令时，Teams将在任务模块中生成一个包含清单中定义的参数的窗体。 点击提交 `composeExtension/submitAction` 时，会向自动程序发送 。 有关预期 [响应集的详细信息](#responding-to-submit) ，请参阅主题响应提交。
+当用户选择具有静态参数的命令时，Teams将在任务模块中生成一个包含清单中定义的参数的窗体。 点击提交 `composeExtension/submitAction` 时，会向自动程序发送 。 有关预期响应集详细信息，请参阅 [响应以提交](#responding-to-submit)。
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>使用自适应卡片的动态输入
 
 在此方法中，你的服务可以定义一个自定义自适应卡片来收集最终用户的输入。 对于此方法，在 `fetchTask` 清单中将 `true` 参数设置为 。 请注意，如果设置为 `fetchTask` `true` 为命令定义的任何静态参数，将被忽略。
 
-在此方法中，你的服务将收到 `composeExtension/fetchTask` 事件，并且需要响应基于自适应卡片 [的任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 下面是一个包含自适应卡片的示例响应：
+在此方法中，你的服务将收到 `composeExtension/fetchTask` 事件，并且需要响应基于自适应卡片 [的任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 下面是包含自适应卡片的示例响应：
 
 ```json
 {
@@ -295,7 +295,7 @@ ms.locfileid: "52019732"
 
 在此方法中，你的服务可以显示 `<iframe>` 一个基于小部件来显示任何自定义 UI 并收集用户输入。 对于此方法，在 `fetchTask` 清单中将 `true` 参数设置为 。
 
-就像在自适应卡片流中一样，你的服务将发送事件，并且需要 `fetchTask` 响应基于 URL [的任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 下面是一个包含自适应卡片的示例响应：
+就像在自适应卡片流中一样，你的服务将发送事件，并且需要 `fetchTask` 响应基于 URL [的任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 下面是包含自适应卡片的示例响应：
 
 ```json
 {
@@ -312,7 +312,7 @@ ms.locfileid: "52019732"
 
 如果你的应用还包含对话机器人，可能需要在加载任务模块之前确保对话中已安装机器人。 当你需要获取任务模块的其他上下文时，这非常有用。 例如，您可能需要获取名单以填充人员选取器控件或团队中的频道列表。
 
-为了方便此流，当消息扩展首先收到调用检查以查看你的机器人是否安装在当前上下文中时 (可以通过尝试获取名单调用（例如) ）来实现此目的。 `composeExtension/fetchTask` 如果未安装自动程序，则返回自适应卡片以及请求用户安装自动程序的操作，请参阅下面的示例。 请注意，这要求用户有权在此位置安装应用;如果无法显示一条消息，要求他们联系其管理员。
+为了方便此流，当消息扩展首先收到调用检查以查看当前上下文中是否 `composeExtension/fetchTask` 安装了自动程序时。 可以通过尝试获取名单调用来完成此操作，例如，如果未安装自动程序，则返回自适应卡片，并返回一个操作，请求用户安装自动程序，请参阅下面的示例。 请注意，这要求用户有权在此位置安装应用;如果无法显示一条消息，要求他们联系其管理员。
 
 下面是一个响应示例：
 
@@ -380,7 +380,7 @@ ms.locfileid: "52019732"
 
 ### <a name="compose-extension-authconfig-response"></a>撰写扩展身份验证/配置响应
 
-当扩展需要进行身份验证或配置才能继续时，会使用此功能。 有关详细信息 [，请参阅](~/resources/messaging-extension-v3/search-extensions.md#authentication) 搜索部分中的身份验证部分。
+当扩展需要进行身份验证或配置才能继续时，会使用此功能。 有关详细信息，请参阅搜索 [部分](~/resources/messaging-extension-v3/search-extensions.md#authentication) 中的身份验证部分。
 
 ### <a name="compose-extension-result-response"></a>撰写扩展结果响应
 
@@ -558,8 +558,6 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-*另请参阅* [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
-
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 此示例使用[Microsoft.Bot.Connector.Teams SDK (v3) 。 ](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)
@@ -713,3 +711,7 @@ public class MessagesController : ApiController
 
 }
 ```
+
+## <a name="see-also"></a>另请参阅
+
+[Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

@@ -5,12 +5,12 @@ keywords: teams 自动程序文件发送接收
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: c5ee32d10e5a6adc5a08d1a0556a18be8367460a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f69a6ca9cfcdf3b1e559fbe8cf569accf3166f69
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020651"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566479"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>通过自动程序发送和接收文件
 
@@ -190,7 +190,7 @@ ms.locfileid: "52020651"
 
 ### <a name="basic-example-in-c"></a>C 中的基本示例#
 
-以下示例演示如何在自动程序对话框中处理文件上载和发送文件同意请求。
+以下示例演示如何在自动程序对话框中处理文件上载和发送文件同意请求：
 
 ```csharp
 

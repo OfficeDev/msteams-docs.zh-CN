@@ -5,14 +5,14 @@ description: 使用 Yeoman 生成器为用户创建频道和组选项卡的快�
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 962a558014a3bc84010860082df6891bb48c7715
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 559393884e3b8a4aad1787ea4ca8f9f4de54d151
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020301"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566641"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>使用自定义频道和组选项卡Node.js Yeoman 生成器进行Microsoft Teams
+# <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>使用自定义频道和组选项卡，Node.js Yeoman 生成器进行Microsoft Teams
 
 >[!NOTE]
 >本快速入门遵循 Microsoft OfficeDev Microsoft Teams存储库中的构建第一个 Microsoft Teams [App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki 中概述GitHub步骤。
@@ -90,3 +90,8 @@ gulp ngrok-serve
 - 返回到团队，选择要显示选项卡的频道，从选项卡➕选择选项卡，然后从库中选择您的选项卡。
 - 按照添加选项卡的说明操作。请注意，频道/组选项卡有一个自定义配置对话框。
 - 选择 **"** 保存"，您的选项卡将添加到频道的选项卡栏中。
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [使用 ASP.NETCore 创建自定义频道和组选项卡](~/tabs/quickstarts/create-channel-group-tab-dotnet-core.md)

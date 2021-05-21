@@ -5,16 +5,16 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 选项卡传出 Webhook 可操作邮件验证 webhook
-ms.openlocfilehash: cfa8bd550eaf1f198b83cdcc1ee699c75ac1d34d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a5a0cdfc9080ac4567f438b6fb6fd0671df8c19f
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020209"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566528"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>向使用传出 webhook Teams自定义聊天机器人
 
-## <a name="what-are-outgoing-webhooks-in-teams"></a>什么是 webhook 中的传出Teams？
+## <a name="outgoing-webhooks-in-teams"></a>webhook 中的传出 webhook Teams
 
 Webhook 是一种与外部Teams集成的方式。 webhook 实质上是发送到回调 URL 的 POST 请求。 传出 Webhook 允许用户向 Web 服务发送消息，而无需完成通过 Microsoft Bot Framework 创建[自动程序的完整过程](https://dev.botframework.com/)。
 
@@ -43,7 +43,7 @@ Webhook 是一种与外部Teams集成的方式。 webhook 实质上是发送到�
 
 `ActionCard` 操作支持三种输入类型：
 
-| 输入类型 | 说明 |
+| 输入类型 | 描述 |
 | ------- | ----------- |
 | `TextInput` | 具有可选长度限制的单行或多行文本字段。 |
 | `DateInput` | 具有可选时间选择器的日期选择器。 |
@@ -112,10 +112,10 @@ Webhook 是一种与外部Teams集成的方式。 webhook 实质上是发送到�
 1. 从窗口的右下角选择"**创建传出 Webhook"。**
 1. 在生成的弹出窗口中，填写必填字段：
 
->* **名称** - webhook 标题和@mention点击。
->* **回调 URL** - 接受 JSON 有效负载并接收来自客户端的 POST 请求的 HTTPS Teams。
->* **说明** - 显示在配置文件卡片和团队级应用仪表板中的详细字符串。
->* **个人资料图片** Webhook 的可选应用图标。
+>* **名称**：Webhook 标题和@mention点击
+>* **回调 URL：** 接受 JSON 有效负载并接收来自客户端的 POST 请求的 HTTPS Teams
+>* **说明**：显示在配置文件卡片和团队级应用仪表板中的详细字符串
+>* **个人资料图片**：Webhook 的可选应用图标
 >* Select the **Create** button from the lower right corner of the pop-up window and the outgoing webhook are added to the current team's channels.
 >* 下一个对话框窗口显示基于哈希的消息身份验证代码 ([HMAC](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301)) 安全令牌，该令牌用于对 Teams 和指定的外部服务之间的呼叫进行身份验证。
 >* 仅在 URL 有效且服务器和客户端身份验证令牌相等（例如 HMAC 握手）时，传出 Webhook 才可供团队用户使用。

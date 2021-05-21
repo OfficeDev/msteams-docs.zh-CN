@@ -4,12 +4,12 @@ description: 介绍自动程序可用的所有卡片和Teams
 localization_priority: Normal
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 1e8cf2e474b8a74f6cab1cd6ef3439924b91892d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: cab7f1659759f40beb1aba59531ee6c1a84662c1
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019529"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566857"
 ---
 # <a name="cards-reference"></a>卡参考
 
@@ -20,18 +20,18 @@ ms.locfileid: "52019529"
 有关如何使用卡的其他信息，请参阅 Bot Builder SDK v3 的文档。 代码示例也可在 Microsoft/BotBuilder-Samples 存储库上GitHub。
 
 * .NET
-  * [将卡片添加为邮件附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
-  * [卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+  * [将卡片添加为邮件的附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)。
+  * [卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)。
 
 * Node.js
-  * [将卡片添加为邮件附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-  * [卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
+  * [将卡片添加为邮件的附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)。
+  * [卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)。
 
 ## <a name="types-of-cards"></a>卡片类型
 
 此表显示了可供你使用卡片的类型：
 
-| 卡片类型 | 说明 |
+| 卡片类型 | 描述 |
 | --- | --- |
 | [自适应卡片](#adaptive-card) | 此卡片是可高度自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 |
 | [Hero card](#hero-card) | 此卡片通常包含一个大图像、一个或多个按钮和少量文本。 |
@@ -52,10 +52,10 @@ ms.locfileid: "52019529"
 
 图像必须最多为 1024×1024 PNG、JPEG 或 GIF 格式，并且不支持动态 GIF。
 
-| 属性 | 类型  | 说明 |
+| 属性 | 类型  | 描述 |
 | --- | --- | --- |
 | url | URL | 图像的 HTTPS URL。 |
-| alt | String | 图像的辅助说明。 |
+| alt | 字符串 | 图像的辅助说明。 |
 
 > [!NOTE]
 > 如果卡片包含的图像 URL 在最终图像之前经过重定向，则不支持图像 URL 中的重定向。 对于在公有云上共享的图像，会出现此情况。
@@ -72,7 +72,7 @@ ms.locfileid: "52019529"
 
 ## <a name="adaptive-card"></a>自适应卡片
 
-自适应卡片是可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 请参阅[自适应卡片 v1.2.0。](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)
+自适应卡片是可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 有关详细信息，请参阅[自适应卡片 v1.2.0。](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)
 
 ### <a name="support-for-adaptive-cards"></a>自适应卡片支持
 

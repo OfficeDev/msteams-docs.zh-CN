@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: 5f159d68a9a10da2737e627ad630be6a1725d334
-ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
+ms.openlocfilehash: aa78d187b3fa771c7e7f0fadfe1aa8f571203cb7
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "52336508"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566514"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|05/13/2021|添加了有关 mConnect 和 Skooler 的信息。|[可学习管理系统](resources/moodle-overview.md)
 |05/10/2021| 清单 v1.10 已发布。|[清单架构](resources/schema/manifest-schema.md) |
 |05/10/2021| 应用自定义功能。| [设计Microsoft Teams应用](~/concepts/design/design-teams-app-overview.md#app-customization) |
 |05/07/2021| 聊天中的音频和视频呼叫的深层链接。 |[深度链接](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
@@ -35,9 +36,9 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |03/18/2021|注意：更新到 Bot Framework SDK 版本 4.10 或以上版本，因为我们已开始弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 和 的过程。 | [团队/聊天成员的机器人 API 更改](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意：选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |
 |03/05/2021|默认安装范围和组功能在开发人员预览版中。| [默认安装范围和组功能](concepts/deploy-and-publish/add-default-install-scope.md) |
-|03/05/2021|对个人应用选项卡重新排序|[对个人应用中的聊天选项卡重新排序](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
+|03/05/2021|对个人应用选项卡重新排序。|[对个人应用中的聊天选项卡重新排序](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|自适应卡片中的信息屏蔽。| [自适应卡片中的信息屏蔽](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|02/19/2021|添加了位置功能。 <br/> 位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能和 QR 或条形码扫描仪功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md)、 [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)、 [集成 QR 或条形码](concepts/device-capabilities/qr-barcode-scanner-capability.md)扫描仪功能 、 [集成位置功能](concepts/device-capabilities/location-capability.md) |
+|02/19/2021|添加了位置功能。 <br/> 位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能以及 QR 或条形码扫描仪功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md)、 [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)、 [集成 QR 或条形码](concepts/device-capabilities/qr-barcode-scanner-capability.md)扫描仪功能 、 [集成位置功能](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|添加了 QR 或条形码扫描仪功能。 <br/> QR 或条形码扫描仪功能信息已添加到设备功能概述、本机设备权限和集成媒体功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md)、 [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)、 [集成 QR 或条形码扫描仪功能](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
 |02/09/2021|添加了设备功能概述。 <br/> 麦克风功能信息将添加到本机设备权限中，并集成媒体功能文件。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md) [、集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 
@@ -53,9 +54,9 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
-|11/30/2020|标识平台与选项卡Teams Toolkit Visual Studio Code集成|[使用选项卡的身份验证Teams Toolkit Visual Studio Code单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
-|11/16/2020|Teams更新到版本 1.8 的应用清单|[参考：Microsoft Teams](resources/schema/manifest-schema.md)|
-|11/10/2020|Teams自动程序设计指南|[机器人设计指南](bots/design/bots.md)|
+|11/30/2020|标识平台与选项卡Teams Toolkit和Visual Studio Code集成。|[使用选项卡的身份验证Teams Toolkit Visual Studio Code单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
+|11/16/2020|Teams更新到版本 1.8 的应用清单。|[参考：Microsoft Teams](resources/schema/manifest-schema.md)|
+|11/10/2020|Teams自动程序设计指南。|[机器人设计指南](bots/design/bots.md)|
 |09/30/2020|现在支持在移动设备上向机器人发送和接收文件。|[通过自动程序发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|有关开发入门的新Teams信息。|[生成首个Teams应用概述](build-your-first-app/build-first-app-overview.md)|
 |09/18/2020|支持会议Teams应用 (发布预览) 。|[创建用于会议Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md)[应用和应用Teams会议](apps-in-teams-meetings/teams-apps-in-meetings.md)|
@@ -87,7 +88,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
-| 12/26/2019 | 发送到自动程序的有效负载中的参数不再加密，从而允许您使用此值构造到这些消息 `replyToId` 的深层链接。 邮件有效负载包括 参数中的加密值。 `legacy.replyToId`.  |
+| 12/26/2019 | 发送到自动程序的有效负载中的参数不再加密，从而允许您使用此值构造到这些消息 `replyToId` 的深层链接。 邮件有效负载包括参数 中的加密值 `legacy.replyToId` 。  |
 | 11/05/2019 | 使用 JavaScript SDK Teams单一登录。 | [单一登录](tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | 更新了对话机器人和消息传递扩展文档以反映 4.6 Bot Framework SDK。 "资源"部分提供了 v3 SDK 文档。 | 所有机器人和消息传递扩展文档。 |
 | 10/31/2019 | 新的文档结构和主要文章重构。 请通过创建问题报告所有死链接或 404 GitHub问题。 | 全部都一样！ |
@@ -122,7 +123,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | 11/09/2018 | 现在，您可以创建指向用户之间的私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | SharePoint 框架 1.7 版附带了一项新功能，Microsoft Teams选项卡用作 SharePoint 框架 Web 部件。 | [选项卡在SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 11/05/2018 | 任务 **模块功能** 已发布。 任务模块允许你从机器人和选项卡在 Teams应用程序中创建模式弹出体验。 在弹出窗口中，可以运行自己的自定义 HTML/JavaScript 代码、显示基于小部件（如 YouTube 或 Microsoft Stream 视频）或 `<iframe>` 显示自适应 [卡片](/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)， [选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)，  [机器人中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
-| 10/05/2018 | 卡片的格式设置信息已更新，在桌面版、iOS 和 Android 客户端中进行了Teams。 | [卡片](~/concepts/cards/cards.md)[、卡片格式](~/concepts/cards/cards-format.md) |
+| 10/05/2018 | 卡片的格式信息已在桌面、iOS 和 Android 客户端中进行了更新和测试，Teams。 | [卡片](~/concepts/cards/cards.md)[、卡片格式](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | 适用于 Microsoft Graph 的呼叫和联机会议 API 已发布到 beta 版本，Teams现在可以使用语音和视频以丰富的方式与用户进行交互。 | [通话和联机会议](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人、[实时媒体](~/concepts/calls-and-meetings/real-time-media-concepts.md)概念、注册呼叫[](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人、[调试和](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)本地测试、应用程序托管的[媒体](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)、[处理传入呼叫通知](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | 选项卡配置页现在高度明显高。 | [选项卡设计](tabs/design/tabs.md) |
 | 08/15/2018 | 自适应卡片现在受 Teams。|[用户中的自适应卡片Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |

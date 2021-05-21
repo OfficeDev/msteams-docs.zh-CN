@@ -5,12 +5,12 @@ keywords: teams visual studio code toolkit
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 59f2943f37856c42346b2ffad4e01d88910679ae
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: efd0962e9c4c0d64dbac47caf29b2e56907937b3
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020259"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566556"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>使用 Teams Toolkit 和 Visual Studio Code
 
@@ -33,7 +33,7 @@ ms.locfileid: "52020259"
 
 ## <a name="set-up-a-new-teams-project"></a>设置新的Teams项目
 
-1. 在本地环境中为项目创建工作区/文件夹。
+1. 在本地环境中为项目创建工作区或文件夹。
 1. 在Visual Studio Code中，选择Teams图标 ![Teams 图标](../assets/icons/favicon-16x16.png) 从窗口左侧的活动栏中。
 1. 从 **命令Microsoft Teams Toolkit** 选择"打开"菜单。
 1. 从 **命令菜单中Teams新建** 应用"。
@@ -54,20 +54,20 @@ ms.locfileid: "52020259"
 应用程序的核心是Teams三个组件：
 
   1. The Microsoft Teams client (web， desktop or mobile) where users interact with your app.
-  1. 响应将在应用程序中显示的内容请求的服务器，Teams HTML 选项卡内容或自动程序自适应卡片。
+  1. 响应将在网站中显示的内容请求的服务器Teams。 例如，HTML 选项卡内容或自动程序自适应卡片。
   1. 一Teams[文件](/concepts/build-and-test/apps-package.md)组成的应用包：
 
-  > [!div class="checklist"]
-  >
-  > - 打开manifest.js 
-  > - [要显示在](../resources/schema/manifest-schema.md#icons)公共或组织应用程序目录中的应用的颜色图标
- > - 显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。
+      > [!div class="checklist"]
+      >
+      > - 打开manifest.js。 
+      > - 要 [显示在](../resources/schema/manifest-schema.md#icons) 公共或组织应用程序目录中的应用的颜色图标。
+      > - 显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。
 
 安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。
 
 1. 若要配置你的应用，请导航到 Microsoft Teams Toolkit **中的**"Visual Studio Code"。
 1. 选择 **"编辑应用包** "以查看 **"应用详细信息"** 页。
-1. 编辑"应用详细信息"页中的字段将更新manifest.js文件（最终作为应用包的一部分提供）上的内容。 *请参阅* [App Studio 清单编辑器](https://aka.ms/teams-toolkit-manifest)
+1. 编辑"应用详细信息"页中的字段将更新manifest.js文件（最终作为应用包的一部分提供）上的内容。 有关详细信息，请参阅 [App Studio 清单编辑器](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>打包应用
 
@@ -79,7 +79,7 @@ ms.locfileid: "52020259"
 
 ### <a name="install-and-run-your-app-locally"></a>在本地安装和运行应用
 
-有关如何打包 *和测试应用的* 详细说明，请参阅项目主页中的 *生成和运行内容。 通常，你需要安装应用的服务器，运行它，然后设置隧道解决方案，以便Teams从 localhost 运行的内容。
+有关如何打包 **和测试应用的** 详细说明，请参阅项目主页中的生成和运行内容。 通常，你需要安装应用的服务器，运行它，然后设置隧道解决方案，以便Teams从 localhost 运行的内容。
 
 ### <a name="enable-development-from-localhost"></a>从 localhost 启用开发
 
@@ -93,5 +93,7 @@ ms.locfileid: "52020259"
 1. 选择" **运行** "图标以显示 **"运行和调试"** 视图。
 1. 您还可以使用键盘快捷方式 `Ctrl+Shift+D` 。
 
+## <a name="next-step"></a>后续步骤
+
 > [!div class="nextstepaction"]
-> [下一步：维护和支持已发布的应用](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [维护和支持已发布的应用](../concepts/deploy-and-publish/appsource/post-publish/overview.md)

@@ -6,12 +6,12 @@ keywords: teams 选项卡组频道可配置
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8013c10050ae81ada0f2a27576cd43077eafe1e0
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a46a80401b29b5436807c9a5b94580beca3786f0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019578"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566661"
 ---
 # <a name="tab-requirements"></a>选项卡要求
 
@@ -21,10 +21,10 @@ Teams选项卡必须遵守以下要求：
   * 设置标头： `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
   * 对于Internet Explorer 11 兼容性，也 `X-Content-Security-Policy` 进行设置。
   * 或者，设置标头 `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/` 。 此标头已弃用，但仍受大多数浏览器支持。
-* 通常，作为防止点击攻击的一种安全措施，登录页不会呈现在 iFrame 中。 因此，身份验证逻辑需要使用重定向策略 (，例如，使用基于令牌或基于 Cookie 的身份验证) 。
+* 通常，作为防止点击攻击的一种安全措施，登录页不会呈现在 iFrame 中。 因此，身份验证逻辑需使用重定向方法。 例如，使用基于令牌或基于 Cookie 的身份验证。
 
 > [!NOTE]
-> Chrome 80 计划于 2020 年初发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 建议设置 Cookie 的预定用途，而不是依赖默认浏览器行为。 *请参阅* [SameSite cookie attribute (2020 update)](../../resources/samesite-cookie-update.md)。
+> Chrome 80 计划于 2020 年初发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 建议设置 Cookie 的预定用途，而不是依赖默认浏览器行为。 有关详细信息，请参阅 [SameSite cookie attribute (2020 update) ](../../resources/samesite-cookie-update.md)。
 
 * 浏览器遵守同源策略限制，该限制阻止网页向与提供网页的域不同的域提出请求。 但是，您可能需要将配置或内容页面重定向到另一个域或子域。 当加载或与选项卡通信时，跨域导航逻辑应允许 Teams 客户端针对应用程序清单中的静态 validDomains 列表验证源。
 
@@ -35,3 +35,8 @@ Teams选项卡必须遵守以下要求：
 * 若要在移动客户端上进行身份验证，必须将 JavaScript SDK Teams至少升级到版本 1.4.1。
 
 * 如果您选择让频道或组选项卡显示在Teams客户端上，则配置必须具有 `setSettings()` `websiteUrl` 属性的值。
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [使用 Yeoman 生成器和 Node.js 的 Yeoman 生成器创建自定义个人Microsoft Teams](~/tabs/quickstarts/create-personal-tab-node-yeoman.md)

@@ -4,27 +4,27 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 localization_priority: Normal
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 8e5a55c55c0249c5bf15eca011bfb8f604658d0a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0d9224a941ae4f6a5ad125c93d5877ec49b6df28
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020399"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566864"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>获取 Microsoft Teams 选项卡的上下文
 
-你的选项卡可能需要上下文信息以显示相关内容。
+您的选项卡必须要求上下文信息以显示相关内容：
 
-* 你的选项卡可能需要有关用户、团队或公司的基本信息。
-* 选项卡可能需要区域设置和主题信息。
-* 你的选项卡可能需要阅读`entityId``subEntityId`此选项卡中内容的内容的选项卡。
+* 有关用户、团队或公司的基本信息。
+* 区域设置和主题信息。
+* 读取 `entityId` 标识 `subEntityId` 此选项卡中的内容的 或。
 
 ## <a name="user-context"></a>用户上下文
 
-用户、团队或公司的上下文在
+在以下情况下，有关用户、团队或公司的上下文可能特别有用：
 
-* 需要将应用中的资源创建或与指定的用户或团队关联。
-* 想要针对 Azure Active Directory 或其他标识提供程序启动身份验证流程，并且不希望用户再次输入其用户名。 （有关在 Microsoft Teams 选项卡中进行身份验证详细信息，请参阅 [Microsoft Teams 选项卡中的用户身份验证](~/concepts/authentication/authentication.md)。）
+* 在应用中创建资源或将资源与指定的用户或团队关联。
+* 您针对用户或其他Azure Active Directory启动身份验证流，并且不希望要求用户再次输入其用户名。 有关在用户标签页中进行身份验证Microsoft Teams，请参阅"验证用户Microsoft Teams[选项卡。](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
 > 虽然此用户信息可帮助提供流畅的用户体验，但 *不应* 使用它作为身份证明。 例如，攻击者可能会将你的页面加载在"错误的浏览器"中，并呈现有害信息或请求。
@@ -33,8 +33,8 @@ ms.locfileid: "52020399"
 
 可以通过两种方式访问上下文信息：
 
-* 插入 URL 占位符值
-* 使用 Microsoft Teams JavaScript [SDK](/javascript/api/overview/msteams-client)
+* 插入 URL 占位符值。
+* 使用[Microsoft Teams JavaScript 客户端 SDK。](/javascript/api/overview/msteams-client)
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>通过插入 URL 占位符值获取上下文
 
@@ -48,23 +48,19 @@ ms.locfileid: "52020399"
 * {主题}：当前 UI 主题，如 `default`、 `dark`或 `contrast`。
 * {groupId}：选项卡所在的 Office 365 组的 ID。
 * {tid}：当前用户的 Azure AD 租户 ID。
-* {locale}：用户格式设置为 languageId-countryId 的当前区域设置（例如 en-us）。
+* {locale}：格式化为 languageId-countryId 的用户的当前区域设置。 例如，en-us。
 
 >[!NOTE]
 >上一 `{upn}` 占位符现已弃用。 出于向后兼容性，它目前是 `{loginHint}`的同义词。
 
-例如，假设在选项卡清单中，将 `configURL` 属性设置为
+例如，假设在选项卡清单中将 属性设置为 `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` ，登录用户具有以下属性：
 
-`"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
+* 其用户名为"user@example.com"。
+* 其公司租户 ID 为"e2653c-etc"。
+* 他们是 id 为"00209384-etc"Office 365组的成员。
+* 用户已设置其Teams主题为"深色"。
 
-已登录的用户具有以下属性：
-
-* 他们的用户名是"user@example.com"
-* 其公司租户 ID 为"e2653c 等"
-* 他们是 ID 为 "00209384-etc" 的 Office 365 组的成员。
-* 用户将 Teams 主题设置为"深色"
-
-当他们配置你的选项卡时，Teams 将调用此 URL：
+当他们配置选项卡时，Teams调用以下 URL：
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -72,7 +68,7 @@ ms.locfileid: "52020399"
 
 还可通过调用 `microsoftTeams.getContext(function(context) { /* ... */ })` 使用[ Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索前面列出的信息。
 
-上下文变量将类似以下示例。
+上下文变量如以下示例所示：
 
 ```json
 {
@@ -102,7 +98,7 @@ ms.locfileid: "52020399"
     "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, rigel",
     "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
-    "tenantSKU": "The license type for the current user tenant",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
     "userLicenseType": "The license type for the current user",
     "parentMessageId": "The parent message ID from which this task module is launched",
     "ringId": "The current ring ID",
@@ -121,12 +117,12 @@ ms.locfileid: "52020399"
 
 当你的内容页面加载在专用频道中时，从免费呼叫 `getContext` 接收的数据将被模糊显示，以保护频道的隐私。 当你的内容页面位于专用频道中时，会更改以下字段。 如果页面使用任意以下值，需检查 `channelType` 字段以确定页面是否加载在专用频道中，并作出相应响应。
 
-* `groupId` - 未定义专用频道
-* `teamId` - 设置为专用频道的会话 Id
-* `teamName` - 设置为专用频道的名称
-* `teamSiteUrl` - 设置为专用频道的独特 SharePoint 网站的 URL
-* `teamSitePath` - 设置为专用频道的独特 SharePoint 网站路径
-* `teamSiteDomain` - 设置为专用频道的独特 SharePoint 网站域的域
+* `groupId`：未为私人频道定义
+* `teamId`：设置为私人频道的 threadId
+* `teamName`：设置为私人频道的名称
+* `teamSiteUrl`：设置为专用频道的独特SharePoint网站的 URL
+* `teamSitePath`：设置为专用频道的独特SharePoint网站的路径
+* `teamSiteDomain`：设置为专用频道的唯一SharePoint网站域的域
 
 > [!Note]
 >  teamSiteUrl 也适用于标准频道。

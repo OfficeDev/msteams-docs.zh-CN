@@ -5,12 +5,12 @@ keywords: Teams o365 连接器
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 8091f71e22fcbdc297e2f7b54665b47e597e670e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9eaaedf88d907dd7a7422068ab5d20450345f0e7
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018395"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566808"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>创建Office 365连接器Microsoft Teams
 
@@ -110,7 +110,7 @@ ms.locfileid: "52018395"
 |-------------|---------|
 | `entityId`       | 实体 ID，由代码在调用 时设置 `setSettings()` 。 |
 | `configName`  | 调用 时由代码设置的配置名称 `setSettings()` 。 |
-| `contentUrl` | 配置页面的 URL，由代码在调用时设置 `setSettings()` |
+| `contentUrl` | 配置页面的 URL，由代码在调用 时设置 `setSettings()` 。 |
 | `webhookUrl` | 为此连接器创建的 webhook URL。 保留 webhook URL，并将其用于 POST 结构化 JSON 以将卡片发送到频道。 仅在应用程序成功返回时返回。 |
 | `appType` | 返回的值可以是 `mail`、`groups` 或 `teams`，分别对应 Office 365 邮件、Office 365 组或 Microsoft Teams。 |
 | `userObjectId` | 这是与启动连接器设置的 Office 365 用户对应的唯一 ID。 应该具备安全性。 可以使用此值将 Office 365 中设置配置的用户与服务中的用户关联起来。 |

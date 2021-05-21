@@ -4,12 +4,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams o365 连接器
-ms.openlocfilehash: 1a625524f4c0bd278bd19b3adecdf6a59bd818a6
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
+ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020202"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52583734"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>向连接器和 Webhook 发送邮件
 
@@ -103,7 +103,7 @@ ms.locfileid: "52020202"
 }
 ```
 
-此邮件在频道中生成以下卡片。
+此消息在频道中生成以下卡片：
 
 ![连接器卡的屏幕截图](~/assets/images/connectors/connector_message.png)
 
@@ -141,13 +141,13 @@ ms.locfileid: "52020202"
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>设置自定义传入 Webhook
 
-请按照以下步骤，了解如何向连接器发送简单卡。
+按照以下步骤了解如何将简单卡片发送到连接器：
 
 1. 在 Microsoft Teams 中，选择频道名称旁边的 **“更多选项”**(**&#8943;**) ，然后选择 **“连接器”**。
-2. 滚动浏览 **“传入 Webhook”** 的连接器列表，然后选择 **“添加”**。
-3. 输入 Webhook 的名称，上传图像以与 Webhook 中的数据相关联，然后选择 **“创建”**。
-4. 将 Webhook 复制到剪贴板并保存。 需要 Webhook URL 才能将信息发送到 Microsoft Teams。
-5. 选择 **“完成”**。
+1. 滚动浏览 **“传入 Webhook”** 的连接器列表，然后选择 **“添加”**。
+1. 输入 Webhook 的名称，上传图像以与 Webhook 中的数据相关联，然后选择 **“创建”**。
+1. 将 Webhook 复制到剪贴板并保存。 需要 Webhook URL 才能将信息发送到 Microsoft Teams。
+1. 选择 **“完成”**。
 
 ### <a name="post-a-message-to-the-webhook-using-curl"></a>使用 cURL 将邮件发布到 Webhook
 
@@ -165,8 +165,8 @@ ms.locfileid: "52020202"
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-2. 如果 POST 成功，则可以看到 `curl` 简单输出 **1**。
-3. 检查 Microsoft Team 客户端。 你应查看发布到团队的新卡片。
+1. 如果 POST 成功，则可以看到 `curl` 简单输出 **1**。
+1. 检查 Microsoft Team 客户端。 你应查看发布到团队的新卡片。
 
 ### <a name="post-a-message-to-the-webhook-using-powershell"></a>使用 PowerShell 将邮件发布到 Webhook
 
@@ -178,13 +178,13 @@ ms.locfileid: "52020202"
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-2. 如果 POST 成功，则可以看到 `Invoke-RestMethod` 简单输出 **1**。
-3. 检查与 Webhook URL 相关联的 Microsoft Teams 频道。 你应查看发布到频道的新卡片。
+1. 如果 POST 成功，则可以看到 `Invoke-RestMethod` 简单输出 **1**。
+1. 检查与 Webhook URL 相关联的 Microsoft Teams 频道。 你应查看发布到频道的新卡片。
 
 - [包括两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
 - 修改清单的 `icons` 部分，以便引用图标的文件名，而不是 URL。
 
-以下 manifest.json 文件包含测试和提交应用程序所需的基本元素。
+the following manifest.json file contains the basic elements needed to test and submit your app：
 
 > [!NOTE]
 > 将以下示例中的 `id` 和 `connectorId` 替换为连接器的 GUID。
@@ -239,40 +239,40 @@ ms.locfileid: "52020202"
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>通过传入 webhook 发送[自适应卡](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)的流程如下所示：
 
-**1.** 在 Teams 中 [设置自定义 webhook](#setting-up-a-custom-incoming-webhook)。</br></br>
-**2.** 创建自适应卡 JSON 文件：
+1. 在 Teams 中设置自定义[webhook。](#setting-up-a-custom-incoming-webhook)
+1. 创建自适应卡片 JSON 文件：
 
-```json
-{
-   "type":"message",
-   "attachments":[
-      {
-         "contentType":"application/vnd.microsoft.card.adaptive",
-         "contentUrl":null,
-         "content":{
-            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
-            "type":"AdaptiveCard",
-            "version":"1.2",
-            "body":[
-                {
-                "type": "TextBlock",
-                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
-                }
-            ]
-         }
-      }
-   ]
-}
-```
+    ```json
+    {
+       "type":"message",
+       "attachments":[
+          {
+             "contentType":"application/vnd.microsoft.card.adaptive",
+             "contentUrl":null,
+             "content":{
+                "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+                "type":"AdaptiveCard",
+                "version":"1.2",
+                "body":[
+                    {
+                    "type": "TextBlock",
+                    "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
+                    }
+                ]
+             }
+          }
+       ]
+    }
+    ```
 
-> [!div class="checklist"]
->
-> - `"type"` 字段必须为 `"message"`。
-> - `"attachments"` 阵列包含一组卡对象。
-> - `"contentType"` 字段必须设置为自适应卡类型。
-> - `"content"` 对象为采用 JSON 格式的卡。
+    > [!div class="checklist"]
+    >
+    > - `"type"` 字段必须为 `"message"`。
+    > - `"attachments"` 阵列包含一组卡对象。
+    > - `"contentType"` 字段必须设置为自适应卡类型。
+    > - `"content"` 对象为采用 JSON 格式的卡。
 
-**3.** 使用 Postman 测试自适应卡
+1. 使用 Postman 测试自适应卡片。
 
 可以使用 [Postman](https://www.postman.com) 测试自适应卡，以发送 POST 请求至在设置传入 webhook 时创建的 URL。 将 JSON 文件粘贴至请求主体中，并在 Teams 中查看自适应卡。
 
@@ -281,9 +281,9 @@ ms.locfileid: "52020202"
 
 ## <a name="testing-your-connector"></a>测试连接器
 
-若要测试连接器，请将其上传到团队中，就像使用任何其他应用程序一样。 可使用连接器开发人员仪表板中的清单文件（按照上一部分的说明进行修改）和两个图标文件来创建 .zip 包。
+若要测试连接器，请将其上传到团队中，就像使用任何其他应用程序一样。 可以使用连接器开发人员.zip仪表板中的清单文件创建一个程序包，该文件已按照前一部分中指示的修改和两个图标文件。
 
-上传应用程序后，从任意频道打开连接器列表。 向下滚动到底部，查看 **“上传”** 部分中的应用程序。
+上传应用程序后，从任意频道打开连接器列表。 滚动到底部，在"已上载"部分 **查看** 你的应用：
 
 ![“连接器”对话框中上传部分的屏幕截图](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -305,8 +305,6 @@ ms.locfileid: "52020202"
 | 7200 | 150  |
 | 86400  | 1800  |
 
-*另请参阅* [Office 365 连接器 - Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
-
 如下所示，[具有指数补偿的重试逻辑](/azure/architecture/patterns/retry)将减轻速率限制，以应对请求在一秒内超出限制的情况。 请参阅 [HTTP 429 响应](../../bots/how-to/rate-limit.md#handle-http-429-responses)以避免达到速率限制。
 
 ```csharp
@@ -326,3 +324,7 @@ try
 ```
  
 这些限制已就位，通过连接器减少频道垃圾邮件，并确保最终用户获得最佳体验。
+
+## <a name="see-also"></a>另请参阅
+
+[Office 365连接器 — Microsoft Teams](/connectors/teams/)

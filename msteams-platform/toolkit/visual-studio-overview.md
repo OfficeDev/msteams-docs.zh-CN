@@ -5,12 +5,12 @@ keywords: teams visual studio 工具包
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bf8250e42bdf96073d729a19e921c400f242c67a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: eb94a8de0355283344ebe890a6fa3a3050e243ea
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020251"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566549"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>使用 Teams Toolkit 和 Visual Studio
 
@@ -18,7 +18,7 @@ ms.locfileid: "52020251"
 
 ## <a name="prerequisites"></a>先决条件
 
-1. [启用开发人员预览](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
+1. [启用开发人员预览](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)。
 
 1. 确保已 ASP.NE **<span></span>T** 和 Web 开发模块添加到Visual Studio实例。 通过添加或删除工作负载和组件[文档，可以按照修改Visual Studio中的步骤进行](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true)检查。
 
@@ -58,20 +58,20 @@ ms.locfileid: "52020251"
 
   1. The Microsoft Teams client (web， desktop or mobile) where users interact with your app.
   1. 响应将在应用程序中显示的内容请求的服务器，Teams HTML 选项卡内容或自动程序自适应卡片。
-  1. 一Teams[文件](/concepts/build-and-test/apps-package.md)组成的应用包：
+  1. 应用Teams包包含三个文件：
 
-  > [!div class="checklist"]
-  >
-  > - 打开manifest.js
-  > - [要显示在](../resources/schema/manifest-schema.md#icons)公共或组织应用程序目录中的应用的颜色图标
- > - 显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。
+      > [!div class="checklist"]
+      >
+      > - 打开manifest.js
+      > - [要显示在](../resources/schema/manifest-schema.md#icons)公共或组织应用程序目录中的应用的颜色图标
+      > - 显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。
 
 安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。
 
 > [!NOTE]
 >如果尚未登录，则需要登录帐户或帐户Microsoft 365继续开发过程。
 >
-> 如果你没有帐户，Microsoft 365注册开发人员计划[Microsoft 365订阅。](https://developer.microsoft.com/microsoft-365/dev-program) 它 *是免费的* 90 天，并且将持续续订，只要你使用它进行开发活动。 如果你有一个 Visual Studio *Enterprise* 或 *Professional* 订阅，这两个计划均包括免费 Microsoft 365 [开发人员](https://aka.ms/MyVisualStudioBenefits)订阅，在订阅生命周期内Visual Studio有效。 *请参阅*[设置开发人员Microsoft 365订阅](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
+> 如果你没有帐户，Microsoft 365注册开发人员计划[Microsoft 365订阅。](https://developer.microsoft.com/microsoft-365/dev-program) 它 *是免费的* 90 天，并且将持续续订，只要你使用它进行开发活动。 如果你有一个 Visual Studio *Enterprise* 或 *Professional* 订阅，这两个计划均包括免费 Microsoft 365 [开发人员](https://aka.ms/MyVisualStudioBenefits)订阅，在订阅生命周期内Visual Studio有效。 有关详细信息，请参阅设置[开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
 >
 
 ### <a name="configuration-steps"></a>配置步骤
@@ -87,9 +87,9 @@ ms.locfileid: "52020251"
 
 ## <a name="install-and-run-your-app-locally"></a>在本地安装和运行应用
 
-1. 从"**解决方案配置"** 下拉菜单中，选择"部署 **"。**
+1. 从" **解决方案配置"** 下拉菜单中 **，选择"** 部署"，如下图所示：
 
-!["解决方案配置"菜单](../assets/images/solution-configurations.png)
+    !["解决方案配置"菜单](../assets/images/solution-configurations.png)
 
 2. 选择 **"IIS Express + Teams"** 按钮。
 
@@ -107,6 +107,8 @@ ms.locfileid: "52020251"
 
 ✔你可以返回到"发布"页面，检查提交状态并了解你的应用是否已被 IT 管理员批准或拒绝。这也是你向应用提交更新或取消任何当前处于活动状态的提交的地方。
 
+## <a name="next-step"></a>后续步骤
+
 > [!div class="nextstepaction"]
-> [下一步：维护和支持已发布的应用](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [维护和支持已发布的应用](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
 >

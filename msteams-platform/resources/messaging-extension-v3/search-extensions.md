@@ -5,22 +5,22 @@ keywords: teams 邮件扩展邮件扩展搜索
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 07/20/2019
-ms.openlocfilehash: 89b8a42f0a9ec86d22d194d2fe5145fba5489f20
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 515472838ff2ad35ef5dd295043ec27c53edb4f1
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019725"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566726"
 ---
 # <a name="search-with-messaging-extensions"></a>使用邮件扩展进行搜索
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-基于搜索的邮件扩展允许你查询服务，以卡片的形式将该信息张贴到邮件中
+基于搜索的邮件扩展允许你查询服务，以卡片的形式将该信息张贴到邮件中。
 
 ![邮件扩展卡示例](~/assets/images/compose-extensions/ceexample.png)
 
-以下各节介绍如何执行这一操作。
+以下各节介绍如何执行下列操作：
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
@@ -101,7 +101,7 @@ ms.locfileid: "52019725"
 
 邮件扩展在邮件扩展窗口中发生任何事件或发送到该窗口时 `onQuery` 接收事件。
 
-如果邮件扩展使用配置页，则 处理程序应首先检查任何存储的配置信息;如果未配置邮件扩展，则返回响应，并返回指向配置页面 `onQuery` `config` 的链接。 请注意，来自配置页面的响应也由 处理 `onQuery` 。  (唯一的例外是由 的处理程序调用配置页时; `onQuerySettingsUrl` 请参阅以下部分.) 
+如果邮件扩展使用配置页，则 处理程序应首先检查任何存储的配置信息;如果未配置邮件扩展，则返回响应，并返回指向配置页面 `onQuery` `config` 的链接。 请注意，来自配置页面的响应也由 处理 `onQuery` 。 唯一的例外是由 的处理程序调用配置页时; `onQuerySettingsUrl` 请参阅以下部分：
 
 如果邮件扩展需要身份验证，请检查用户状态信息;如果用户未登录，请按照本主题稍后的身份验证 [部分中](#authentication) 的说明进行操作。
 
@@ -115,7 +115,7 @@ ms.locfileid: "52019725"
 
 ![菜单项的位置设置屏幕截图](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
-的处理程序返回配置页的 URL;配置页关闭后，您的 `onQuerySettingsUrl` 处理程序接受 `onSettingsUpdate` 并保存返回的状态。  (这是一个无法从配置页面接收响应 `onQuery` 的情况。) 
+的处理程序返回配置页的 URL;配置页关闭后，您的 `onQuerySettingsUrl` 处理程序接受 `onSettingsUpdate` 并保存返回的状态。 这是一个无法 `onQuery` *从* 配置页面接收响应的情况。
 
 ## <a name="receive-and-respond-to-queries"></a>接收和响应查询
 
@@ -144,7 +144,7 @@ ms.locfileid: "52019725"
 | 属性名称 | 用途 |
 |---|---|
 | `commandId` | 用户调用的命令的名称，与在应用清单中声明的命令之一匹配。 |
-| `parameters` | 参数数组。 每个参数对象都包含参数名称以及用户提供的参数值。 |
+| `parameters` | 参数数组：每个参数对象都包含参数名称以及用户提供的参数值。 |
 | `queryOptions` | 分页参数： <br>`skip`：跳过此查询的计数 <br>`count`：要返回的元素数 |
 
 #### <a name="request-example"></a>请求示例
@@ -257,7 +257,7 @@ ms.locfileid: "52019725"
 * [Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-有关 [概述](~/task-modules-and-cards/what-are-cards.md) ，请参阅卡片。
+有关详细信息，请参阅有关概述 [的](~/task-modules-and-cards/what-are-cards.md) 卡片。
 
 若要了解如何使用缩略图和 Hero 卡片类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
@@ -486,7 +486,7 @@ ms.locfileid: "52019725"
 ```
 
 > [!NOTE]
-> 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。  (清单架构中查看[validDomains。) ](~/resources/schema/manifest-schema.md#validdomains)
+> 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流程
 
@@ -498,7 +498,7 @@ ms.locfileid: "52019725"
 
 当登录请求完成并重定向回你的页面时，它应执行以下步骤：
 
-1. 生成安全代码。  (这是一个随机数字。) 您需要在服务上缓存此代码，以及通过登录流获取的凭据 (如 OAuth 2.0 令牌) 。
+1. 生成安全代码。  (这是一个随机数字。) 您需要在服务上缓存此代码，以及通过登录流（如 OAuth 2.0 令牌）获取的凭据。
 2. 调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。
 
 此时，窗口关闭，控件将传递给Teams客户端。 客户端现在可以重新发送原始用户查询以及 属性中的安全 `state` 代码。 代码可以使用安全代码查找之前存储的凭据以完成身份验证序列，然后完成用户请求。
@@ -657,4 +657,7 @@ class App {
 const app = new App();
 app.run();
 ```
-*另请参阅* [Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
+
+## <a name="see-also"></a>另请参阅
+
+[Bot Framework 示例](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。

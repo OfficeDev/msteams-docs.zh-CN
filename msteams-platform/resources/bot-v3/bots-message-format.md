@@ -5,12 +5,12 @@ keywords: teams 方案频道对话机器人消息
 ms.topic: reference
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 06037bd3fb23ace11eea763747dc64d763ac3c42
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a9566331b259ba77f6770ff6394e8a788769af5d
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020644"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566472"
 ---
 # <a name="message-formatting-for-bots"></a>自动程序的邮件格式
 
@@ -20,11 +20,11 @@ ms.locfileid: "52020644"
 
 Microsoft Teams支持以下格式选项：
 
-| TextFormat 值 | 说明 |
+| TextFormat 值 | 描述 |
 | --- | --- |
-| plain | 文本应视为原始文本，而未应用任何格式 |
-| markdown | 文本应视为 Markdown 格式，并在适当时呈现在频道上;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容 |
-| xml | 文本是简单的 XML 标记;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容 |
+| plain | 文本应视为原始文本，而未应用任何格式。 |
+| markdown | 文本应视为 Markdown 格式，并在适当时呈现在频道上;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容。 |
+| xml | 文本是简单的 XML 标记;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容。 |
 
 ## <a name="formatting-text-content"></a>设置文本内容的格式
 
@@ -32,9 +32,9 @@ Microsoft Teams一部分 Markdown 和 XML (HTML) 格式标记。
 
 目前，存在以下限制：
 
-* 纯文本邮件不支持表格式设置
-* 格式卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置
-* 富卡不支持 Markdown 或表格格式
+* 纯文本邮件不支持表格格式。
+* 格式卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。
+* 富卡片不支持 Markdown 或表格格式。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
@@ -76,4 +76,4 @@ Microsoft Teams一部分 Markdown 和 XML (HTML) 格式标记。
 
 ### <a name="cards"></a>卡
 
-有关 [卡片支持，](~/task-modules-and-cards/cards/cards-format.md) 请参阅卡片格式。
+有关详细信息，请参阅 [卡片格式，](~/task-modules-and-cards/cards/cards-format.md) 获取卡片支持。

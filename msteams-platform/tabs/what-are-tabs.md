@@ -5,20 +5,20 @@ description: 自定义选项卡在 Teams 概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 2cdd431a1c4a5a6b98688bba52d1979f7ced38d7
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 19c51d5c30f938dc5368b28b69ffeb29330887b4
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101665"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566591"
 ---
-# <a name="what-are-microsoft-teams-tabs"></a>什么是Microsoft Teams选项卡？
+# <a name="microsoft-teams-tabs"></a>Microsoft Teams 选项卡
 
-选项卡是Teams网页中嵌入的可感知Microsoft Teams。 它们是简单的 HTML <iframe 标记，这些标记指向在应用程序清单中声明的域，并可以添加为单个用户的团队、群聊或个人应用中的频道的一 \> 部分。 可以将自定义选项卡与你的应用一起，以将自己的 Web 内容嵌入Teams或Teams Web 内容添加特定于 Web 的功能。 *请参阅* [Teams JavaScript 客户端 SDK。](/javascript/api/overview/msteams-client)
+选项卡是Teams网页中嵌入的可感知Microsoft Teams。 它们是简单的 HTML <iframe 标记，这些标记指向在应用程序清单中声明的域，并可以添加为单个用户的团队、群聊或个人应用中的频道的一 \> 部分。 可以将自定义选项卡与你的应用一起，以将自己的 Web 内容嵌入Teams或Teams Web 内容添加特定于 Web 的功能。 有关详细信息，请参阅[javaScript Teams SDK。](/javascript/api/overview/msteams-client)
 
 有两种类型的选项卡可用于Teams频道/组和个人。 频道/组选项卡将内容传送给频道和群聊，是围绕基于 Web 的专用内容创建协作空间的一种很好的方法。 个人选项卡和个人范围的自动程序是个人应用的一部分，范围为单个用户。 它们可固定到左侧导航栏，便于访问。
 
-## <a name="lesser-known-tab-features"></a>不太已知的选项卡功能
+## <a name="tab-features"></a>选项卡功能
 
 > [!div class="checklist"]
 >
@@ -41,7 +41,7 @@ ms.locfileid: "52101665"
 **应用场景：** 提供对用户定期与之交互的项目的访问权限，以便进行协作对话与协作。 \
 **示例：** 创建一个通道/组选项卡，该选项卡具有到各个项目的深层链接。
 
-## <a name="how-do-tabs-work"></a>选项卡如何工作？
+## <a name="understand-how-tabs-work"></a>了解选项卡如何工作
 
 自定义选项卡在应用包的应用清单中声明。 对于希望作为选项卡包含在应用中的每个网页，可定义 URL 和范围。 此外，你需要将 Teams [JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)添加到页面，并加载 `microsoftTeams.initialize()` 页面后调用。 这样做将Teams显示你的页面，让你能够访问 Teams 特定信息 (例如，如果 Teams 客户端正在运行深色主题 *) ，* 并允许你根据结果采取措施。
 
@@ -71,3 +71,8 @@ ms.locfileid: "52101665"
 * [集成媒体功能](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [集成 QR 或条形码扫描仪](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [集成位置功能](../concepts/device-capabilities/location-capability.md)
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [选项卡要求](~/tabs/how-to/tab-requirements.md)

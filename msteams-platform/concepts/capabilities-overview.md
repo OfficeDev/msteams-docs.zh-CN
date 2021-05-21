@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: f670f1f7b3db01f89fab4335c33f92e02cad1d9a
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 209d187681b1370440931fcd40744965395b13e8
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058486"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565149"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>了解Microsoft Teams应用功能
 
@@ -28,9 +28,9 @@ ms.locfileid: "52058486"
 * [机器人](../bots/what-are-bots.md)
 * [Webhook 和连接器](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-你的应用还可以利用高级功能，例如 Microsoft Graph API [for Teams。](https://docs.microsoft.com/graph/teams-concept-overview)
+你的应用还可以利用高级功能，例如 Microsoft Graph API [for Teams。](/graph/teams-concept-overview)
 
-下图展示了哪些功能将为你提供应用中想要的功能。
+下图展示了哪些功能将为你提供你需要的应用功能：
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="&quot;心图&quot;Teams应用功能是什么。":::
 
@@ -41,7 +41,7 @@ ms.locfileid: "52058486"
 
 ## <a name="see-also"></a>另请参阅
 
-- [生成适用于Teams](../overview.md)
+[生成适用于Teams](../overview.md)
 
 ## <a name="next-step"></a>后续步骤
 

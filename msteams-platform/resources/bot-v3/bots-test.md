@@ -5,12 +5,12 @@ keywords: teams 机器人测试
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/20/2019
-ms.openlocfilehash: 0f44a88bcf054f4e0f4112ddc8bd3fbfdc18117d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 269b0680e45d764cf4cb0269c40d3d202145edb8
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020630"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566458"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>测试和调试自动Microsoft Teams程序
 
@@ -26,7 +26,7 @@ ms.locfileid: "52020630"
 
 ## <a name="debug-your-bot-locally"></a>在本地调试机器人
 
-如果你在开发期间在本地托管机器人，则需要使用 [类似 ngrok](https://ngrok.com/) 的隧道服务来测试机器人。 下载并安装 ngrok 后，运行以下命令以启动隧道服务 (你可能需要将 ngrok 添加到路径) 。
+如果你在开发期间在本地托管机器人，则需要使用 [类似 ngrok](https://ngrok.com/) 的隧道服务来测试机器人。 下载并安装 ngrok 后，运行以下命令以启动隧道服务。 你可能需要将 ngrok 添加到你的路径。
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -90,4 +90,4 @@ ngrok http <port> -host-header=localhost:<port>
 
 ## <a name="removing-your-bot-from-appsource"></a>从 AppSource 中删除机器人
 
-如果你想要从 AppSource 中的 Teams 应用中删除自动程序 (以前是 Office Store) ，则必须从应用清单中删除自动程序并重新提交应用进行验证。 有关详细信息[，请参阅Microsoft Teams应用发布到 AppSource。](~/concepts/deploy-and-publish/apps-publish.md)
+如果你希望从 AppSource (Office Store) 中的 Teams 应用中删除自动程序，必须从应用清单中删除自动程序并重新提交应用进行验证。 有关详细信息，请参阅将[应用Microsoft Teams AppSource。](~/concepts/deploy-and-publish/apps-publish.md)

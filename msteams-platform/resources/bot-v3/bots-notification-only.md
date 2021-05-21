@@ -5,12 +5,12 @@ keywords: teams 自动程序通知
 ms.topic: conceptual
 localization_priority: Normal
 ms.date: 01/29/2020
-ms.openlocfilehash: 42a0b9acecbc1821ea492cb6c850c7a9b11bbbfe
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3de462f73733f5f7cf223444ffe6deeb53faaaaa
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019760"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566759"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>仅通知聊天机器人Microsoft Teams
 
@@ -50,4 +50,4 @@ ms.locfileid: "52019760"
 
 ## <a name="best-practices-and-limitations"></a>最佳做法和限制
 
-* 仅通知机器人使用主动消息与用户通信。 有关详细信息 [，请参阅自动程序](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) 主动消息传递。
+* 仅通知机器人使用主动消息与用户通信。 有关详细信息，请参阅 [自动程序主动消息传递](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
