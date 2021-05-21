@@ -5,28 +5,26 @@ ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: 应用提交提示频繁失败的情况验证指南
-ms.openlocfilehash: b00beb084b8ca9d149e46f1cc661b8d52e308cc4
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 50bbd2af3b4c834e2ac4776e1fc7db1d8bf45173
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101686"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565247"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>使用技巧成功提交应用Microsoft Teams成功
 
 >[!NOTE]
 >此页面将于 2021 年 5 月弃用。 有关成功发布应用的信息，请参阅应用商店Teams[验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 
-本文介绍提交的应用验证失败的常见原因。 虽然这不是应用的所有潜在问题的详尽列表，但遵循本指南将增加应用提交首次通过的可能性。 有关 [验证策略的](/legal/marketplace/certification-policies) 一个广泛列表，请参阅商业市场认证策略。
+本文介绍提交的应用验证失败的常见原因。 虽然这不是应用的所有潜在问题的详尽列表，但遵循本指南将增加应用提交首次通过的可能性。 有关详细信息，请参阅商业 [市场认证策略](/legal/marketplace/certification-policies) ，了解验证策略的一个广泛列表。
 
 >[!NOTE]
->**[第 1140](/legal/marketplace/certification-policies#1140-teams)** 部分特定于 Microsoft Teams，而子 **[部分 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** 解决了应用程序的功能Teams要求。
+>**[第 1140](/legal/marketplace/certification-policies#1140-teams)** 部分特定于 Microsoft Teams，而子 **[部分 1140.4](/legal/marketplace/certification-policies#11404-functionality)** 解决了应用程序的功能Teams要求。
 
 ## <a name="validation-guidelines--most-failed-test-cases"></a>针对大多数&测试用例的验证准则
 
 ### <a name="9989-general-considerations"></a>&#9989;一般注意事项
-
-另请参阅 [第 100 节 — 常规](/legal/marketplace/certification-policies#100-general)
 
 * 确保使用的是版本 1.4.1 或更高版本的[Microsoft Teams SDK。](https://www.npmjs.com/package/@microsoft/teams-js)
 * 请勿在验证过程进行时对应用进行更改。 执行此操作将需要对应用进行完整重新验证。
@@ -57,8 +55,6 @@ ms.locfileid: "52101686"
 * 个人应用使用户能够与其他团队成员共享来自个人应用体验的内容。
 
 ### <a name="9989-provide-a-clear-and-simple-sign-in-sign-out-and-sign-up-experience"></a>&#9989;提供简单明了的登录、注销和注册体验
-
-另请参阅 [第 1100.5 节 — 客户控制](/legal/marketplace/certification-policies#11005-customer-control)
 
 * 如果你的应用或外接程序依赖于外部帐户或服务，则登录、注销和注册体验必须在应用的所有功能中均明显且可到达。
 * 如果存在提供给用户的显式登录选项，则必须有相应的注销选项 (即使应用使用的是无提示身份验证) 。 [](../../../../tabs/how-to/authentication/auth-silent-aad.md)
@@ -162,7 +158,7 @@ ms.locfileid: "52101686"
   ![帮助命令示例](../../../../assets/images/faq/helpcommand.png)
 
 * **使用自适应卡片和任务模块使机器人响应清晰且可操作** 
-[使用调用任务模块的按钮的](/task-modules-and-cards/task-modules/task-modules-bots)自适应卡片可增强机器人用户体验。 与用户键入命令相反，这些卡片和按钮更易于在移动设备上使用。 此外，自动程序响应不得为长文本文本文本。 机器人必须使用自适应卡片和任务模块，而不是基于对话聊天的用户界面和冗长的文本响应。
+[使用调用任务模块的按钮的](/task-modules-and-cards/task-modules/task-modules-bots.md)自适应卡片可增强机器人用户体验。 与用户键入命令相反，这些卡片和按钮更易于在移动设备上使用。 此外，自动程序响应不得为长文本文本文本。 机器人必须使用自适应卡片和任务模块，而不是基于对话聊天的用户界面和冗长的文本响应。
 
 * **考虑所有范围**。 请确保当在频道和个人对话中提到 () `@*botname*` 自动程序提供适当的响应。 如果你的机器人在个人或团队范围内未提供有意义的上下文，请通过清单禁用该范围。  (清单 `bots` 架构参考[.Microsoft Teams 中的块) ](../../../../resources/schema/manifest-schema.md#bots)
 
@@ -251,5 +247,8 @@ Teams应用不得向不应查看该数据的受众发布敏感数据，如信用
 * 有关其他 [信息，请参阅](/azure/active-directory/develop/troubleshoot-publisher-verification) 疑难解答指南。
 * 通过合作伙伴中心完成自我证明。 填写"Self-Assessment **合规性"下的表单调查表**。
 
-> [!div class="nextstepaction"]
-> [详细了解如何Teams审批策略](/legal/marketplace/certification-policies#1140-teams)
+## <a name="see-also"></a>另请参阅
+
+* [详细了解如何Teams审批策略](/legal/marketplace/certification-policies#1140-teams)
+* [第 100 节 — 常规](/legal/marketplace/certification-policies#100-general)
+* [第 1100.5 节 — 客户控制](/legal/marketplace/certification-policies#11005-customer-control)

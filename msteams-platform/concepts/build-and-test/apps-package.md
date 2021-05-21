@@ -3,12 +3,12 @@ title: 打包应用
 description: 了解如何打包应用Microsoft Teams测试、上传和应用商店发布。
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: e477539a9b8eaa0c869a2070fcd20b74aecfe490
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 219e2d5341707ed51b7e0a3a8077f93df9eac640
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101700"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565212"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>创建Microsoft Teams应用包
 
@@ -74,7 +74,7 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，在机器
 
 #### <a name="dont-copy-other-brands"></a>不要：复制其他品牌
 
-图标不得模仿你未拥有的任何受版权保护 (例如，类似于 Microsoft 产品或品牌) 。
+图标不得模仿你未拥有的任何受版权保护的产品。 例如，类似于 Microsoft 产品或品牌的设计。
 
 ### <a name="examples"></a>示例
 

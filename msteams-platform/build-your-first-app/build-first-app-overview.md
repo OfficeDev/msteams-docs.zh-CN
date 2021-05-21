@@ -5,12 +5,12 @@ description: 了解如何开始使用应用Microsoft Teams和设置环境。
 ms.author: timura
 ms.date: 03/18/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3bc99c535ea659f046b65dc26d9a60de0dd49cab
-ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
+ms.openlocfilehash: dae942be9383ef1e0a931d238e6148651f334ef5
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52068563"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52565877"
 ---
 # <a name="get-started-with-microsoft-teams-app-development"></a>开始Microsoft Teams开发
 
@@ -20,12 +20,12 @@ ms.locfileid: "52068563"
 
 ## <a name="what-youll-learn"></a>您将了解哪些功能
 
-* 快速启动并运行 Teams Toolkit 扩展Visual Studio Code扩展 
-* 使用 App Studio 配置应用 
-* 熟悉开发人员Teams SDK
-* 考虑Teams概念，如身份验证和设计最佳做法
+* 快速启动并运行 Teams Toolkit 扩展Visual Studio Code扩展。 
+* 使用 App Studio 配置应用。
+* 熟悉开发人员Teams SDK。
+* 请考虑Teams概念，如身份验证和设计最佳做法。
 
-可以使用你Teams的任何技术来构建应用，例如，使用 CLI (命令行) 。 但是，这些文章可帮助你开始使用以下推荐的工具和技术：
+可以使用你选择Teams技术（例如，使用 CLI (命令行界面）生成) 。 但是，这些文章可帮助你开始使用以下推荐的工具和技术：
 
 * Teams Toolkit，Visual Studio Code扩展
 * React.js选项卡
@@ -40,9 +40,9 @@ ms.locfileid: "52068563"
 
 自定义应用可以使用的Teams一些典型方案包括：
 
-* 在客户端中嵌入基于 Web 的内容，如 Web 应用或Teams部分
-* 在另一个系统中快速查找信息并添加到Teams对话 
-* 直接从对话中的内容触发工作流和进程 
+* 在客户端中嵌入基于 Web 的内容，如 Web 应用或Teams部分。
+* 在另一个系统中快速查找信息，并添加到Teams对话。
+* 直接从对话中的内容触发工作流和进程。
 
 ### <a name="app-capabilities-and-tools"></a>应用功能和工具
 
@@ -50,9 +50,9 @@ ms.locfileid: "52068563"
 
 | **应用功能**| **交互点** | **推荐的工具** | **SDK** | **技术堆栈** |
 |--------|--------|--------|--------|--------|
-| 选项卡 | 用户可在个人上下文和共享上下文中与嵌入的 Web 内容交互的空间 | VS Code扩展Teams Toolkit Yeoman 生成器 | 团队 JavaScript 客户端 SDK | 常规 Web 技术 (HTML、CSS 和 JavaScript) 或 React.js |
-| 机器人 | 在个人上下文和共享上下文中与用户交互的聊天机器人 | VS Code扩展Teams Toolkit Yeoman 生成器 | Bot Franework SDK | Node.js、C# 或 Python | 
-| 消息扩展 | 插入应用内容或处理邮件而不离开对话的快捷方式 | VS Code扩展Teams Toolkit Yeoman 生成器 | Bot Framework SDK | Node.js、C# 或 Python |
+| 选项卡 | 用户可在个人上下文和共享上下文中与嵌入的 Web 内容进行交互的空间。 | VS Code扩展Teams Toolkit Yeoman 生成器 | 团队 JavaScript 客户端 SDK | 常规 Web 技术 (HTML、CSS 和 JavaScript) 或 React.js |
+| 机器人 | 在个人上下文和共享上下文中与用户交互的聊天机器人。 | VS Code扩展Teams Toolkit Yeoman 生成器 | Bot Framework SDK | Node.js、C# 或 Python | 
+| 消息扩展 | 插入应用内容或处理消息而不离开对话的快捷方式。 | VS Code扩展Teams Toolkit Yeoman 生成器 | Bot Framework SDK | Node.js、C# 或 Python |
 
 ### <a name="teams-doesnt-host-your-app"></a>Teams不托管应用
 
