@@ -5,12 +5,12 @@ description: 详细说明了可用的 Microsoft 低和无代码解决方案Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: a5615c5b70e21ea1bcade3dc46c6a2b5b3bc4f92
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 770657e34672a4314f6cbbc1e73951816f2efa1c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566206"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630661"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为用户创建低代码自定义Microsoft Teams
 
@@ -29,7 +29,7 @@ Microsoft Power Platform 在一个强大的应用程序平台中组合了四项�
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams 和 Power BI
 
-[Power BI](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/)的"Microsoft Teams"选项卡增加了对 Teams 工作区中报告的支持，并允许用户共享交互式[Power BI](/power-bi/collaborate-share/service-embed-report-microsoft-teams)内容，并与 Teams 频道和聊天中的[其他人协作](/power-bi/collaborate-share/service-collaborate-microsoft-teams)。 你可以从头开始创建[打包Power BI](/power-bi/collaborate-share/service-create-distribute-apps)应用内容，并将其作为应用分发，或在应用中创建[Power BI。](/connect-data/service-template-apps-create) 此外，使用 Power BI[中的](https://go.microsoft.com/fwlink/?linkid=2143643)Teams，将整个基本 Power BI 服务体验引入Teams。
+[Power BI](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/)的"Microsoft Teams"选项卡增加了对 Teams 工作区中报告的支持，并允许用户共享交互式[Power BI](/power-bi/collaborate-share/service-embed-report-microsoft-teams)内容，并与 Teams 频道和聊天中的[其他人协作](/power-bi/collaborate-share/service-collaborate-microsoft-teams)。 你可以从头开始创建[打包Power BI](/power-bi/collaborate-share/service-create-distribute-apps)应用内容，并将其作为应用分发，或在应用中创建[Power BI。](/power-bi/connect-data/service-template-apps-create) 此外，使用 Power BI[中的](https://go.microsoft.com/fwlink/?linkid=2143643)Teams，将整个基本 Power BI 服务体验引入Teams。
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams 和 Power Apps
 

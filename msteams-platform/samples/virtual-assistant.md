@@ -4,12 +4,12 @@ description: 如何创建虚拟助理机器人和技能以用于Microsoft Teams
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 虚拟助理机器人
-ms.openlocfilehash: 072d9cb5742cd39101587cad32e3048bd36cc1d8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566871"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630731"
 ---
 # <a name="create-virtual-assistant"></a>创建虚拟助手 
 
@@ -411,7 +411,7 @@ bf luis:convert --in <pathToLUIS.json> --out <pathToLuFile>
 - `Book room`
 - `Manage Favorites`
 
-我们通过了解这两个命令构建了一个"一个""一个"的"设计"模型。 必须在 中填充相应的密码 `cognitivemodels.json` 。 此处找到相应的"为"的 ["JSON"文件](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json)。
+我们通过了解这两个命令构建了一个"一个""一个"的"设计"模型。 必须在 中填充相应的密码 `cognitivemodels.json` 。 此处找到相应的"为"的 ["JSON"文件](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json)。
 以下 `.lu` 部分显示了相应的文件：
 
 ```
@@ -534,7 +534,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 若要将卡片操作或任务模块活动转发到关联的技能，该技能必须 `skillId` 嵌入到该技能中。
 `Book-a-room` bot card action， task module fetch and submit action payloads are modified to contain `skillId` as a parameter. 
 
-有关详细信息，请参阅 [本文档](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) 中的此部分。
+有关详细信息，请参阅 [本文档](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) 中的此部分。
 
 ### <a name="handle-activities-from-group-chat-or-channel-scope"></a>处理群聊或频道范围中的活动
 
@@ -555,7 +555,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
     }
 ```
 
-还可以利用 Bot Framework [解决方案](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) 存储库中的现有技能，或从头开始创建新技能。 有关创建新技能，请参阅 [创建新技能的教程](https://microsoft.github.io/botframework-solutions/overview/skills/)。 有关虚拟助手和技能体系结构文档，请参阅[虚拟助手和技能体系结构](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。  
+还可以利用 Bot Framework [解决方案](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) 存储库中的现有技能，或从头开始创建新技能。 有关创建新技能，请参阅 [创建新技能的教程](https://microsoft.github.io/botframework-solutions/overview/skills/)。 有关虚拟助手和技能体系结构文档，请参阅[虚拟助手和技能体系结构](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。  
 
 ## <a name="limitations-of-virtual-assistant"></a>虚拟助理的限制 
 
@@ -566,7 +566,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
   * 邮件扩展的配置范围不是单个命令，而是整个扩展本身。 这将通过虚拟助理限制各个技能的配置。
   * 消息扩展命令 ID 的最大长度为 [64 个字符](../resources/schema/manifest-schema.md#composeextensions) ，37 个字符用于嵌入技能信息。 因此，命令 ID 的更新约束限制为 27 个字符。
 
-还可以利用 Bot Framework [解决方案](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) 存储库中的现有技能，或从头开始创建新技能。 稍后的教程可在此处 [找到](https://microsoft.github.io/botframework-solutions/overview/skills/)。 请参阅虚拟 [助理和](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) 技能体系结构文档。
+还可以利用 Bot Framework [解决方案](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) 存储库中的现有技能，或从头开始创建新技能。 稍后的教程可在此处 [找到](https://microsoft.github.io/botframework-solutions/overview/skills/)。 请参阅虚拟 [助理和](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) 技能体系结构文档。
 
 ## <a name="code-sample"></a>代码示例
 
@@ -578,8 +578,6 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 ## <a name="see-also"></a>另请参阅
 
-- [集成 web 应用](~/samples/integrate-web-apps-overview.md)
-
-- [预订聊天室](app-templates.md#book-a-room)
-
-- [Microsoft Teams自动程序](../bots/what-are-bots.md)
+* [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+* [预订聊天室](app-templates.md#book-a-room)
+* [Microsoft Teams自动程序](../bots/what-are-bots.md)

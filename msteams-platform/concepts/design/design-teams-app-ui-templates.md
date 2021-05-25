@@ -5,12 +5,12 @@ description: 使用通常在整个应用中看到的标准化 UI 组件、布局
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 0cd5c6c4525e340f9aa53a78749211783880225a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5026554070396dcc55390496b6754961e8e037bc
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566017"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644816"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI Microsoft Teams设计应用
 
@@ -46,22 +46,9 @@ ms.locfileid: "52566017"
 > [!div class="nextstepaction"]
 > [获取示例应用 (GitHub) ](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="list"></a>列表
-
-可以使用列表以可扫描的格式显示相关项目，并允许用户对整个列表或单个项目采取操作。
-
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="示例显示列表 UI 模板。" border="false":::
-
-### <a name="top-use-cases"></a>热门用例
-
-* 显示数据
-* 应用内容的上下文操作
-
 ## <a name="dashboard"></a>仪表板
 
 仪表板在中心位置显示不同类型的内容， (Teams应用或选项卡) 。 用户至少应该能够自定义他们在仪表板上看到部分内容。
-
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="示例显示仪表板 UI 模板。" border="false":::
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -69,69 +56,38 @@ ms.locfileid: "52566017"
 * 报告指标
 * 在一个地方组织不同的信息
 
-## <a name="form"></a>表单
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
-表单用于以结构化方式收集、验证和提交用户输入。 对输入字段进行清晰标记和逻辑分组对于获得良好的用户体验至关重要。
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="示例显示桌面上的仪表板 UI 模板。" border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="示例显示表单 UI 模板。" border="false":::
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-### <a name="top-use-cases"></a>热门用例
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="示例显示移动设备上的仪表板 UI 模板。" border="false":::
 
-* 登录
-* 用户配置文件
-* 设置
-* 用户输入集合
-
-## <a name="sign-in"></a>登录
-
-你可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括单一登录 (SSO) ，建议这样做以简化身份验证体验。
-
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="示例显示登录 UI 模板。" border="false":::
-
-### <a name="top-use-case"></a>热门用例
-
-* 对用户进行身份验证
-
-## <a name="task-board"></a>任务板
-
-任务板（有时称为看板或街道）是一组卡片，通常用于跟踪工作项或票证的状态。 它还可用于将任何类型的内容分类为类别。 可以在列之间编辑和移动卡片。
-
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="示例显示任务板 UI 模板。" border="false":::
-
-### <a name="top-use-cases"></a>热门用例
-
-* Project：分配任务和跟踪状态。
-* 集体讨论：在不同类别中添加想法。
-* 排序练习：将任何类型的信息组织到存储桶中。
+---
 
 ## <a name="data-visualization"></a>数据可视化
 
 可以使用不同的卡片大小 (、双精度和) ，以在同一页面上堆叠和组织数据可视化效果。 卡片可缩放以适合列布局并填充空白区域。
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="示例显示数据可视化 UI 模板。" border="false":::
 
 ### <a name="top-use-cases"></a>热门用例
 
 * 显示复杂信息
 * 创建仪表板
 
-## <a name="wizard"></a>向导
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
-向导将指导用户完成多个屏幕以完成任务 (如设置过程) 。
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="示例显示桌面上的数据可视化 UI 模板。" border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="示例显示向导 UI 模板。" border="false":::
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-### <a name="top-use-cases"></a>热门用例
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="示例演示移动设备上的数据可视化 UI 模板。" border="false":::
 
-* 设置
-* 载入
-* 首次运行体验
+---
 
 ## <a name="empty-state"></a>空状态
 
 空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。 它非常灵活，可调整它以使用以下设计中一个组件、一些组件或所有组件。
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="示例显示空状态 UI 模板。" border="false":::
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -140,61 +96,135 @@ ms.locfileid: "52566017"
 * 成功消息
 * 错误消息
 
-## <a name="notification-bar"></a>通知栏
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
-通知栏是一个专用区域，用于显示无需用户立即采取措施的简短重要消息。 特定背景颜色和图标与特定类型的邮件相关联， (请参阅下面的) 。
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="示例在桌面上显示空状态 UI 模板。" border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="示例显示通知栏模板。" border="false":::
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-### <a name="top-use-cases"></a>热门用例
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="示例显示移动设备上的空状态 UI 模板。" border="false":::
 
-* 关键消息、错误和警告
-* 成功消息
-* 信息性或促销性消息
+---
 
-## <a name="left-nav"></a>左导航
+## <a name="filter"></a>筛选器
 
-使用左侧导航键浏览"导航"选项卡Teams页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
-
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="示例显示左侧导航模板。" border="false":::
+利用筛选器，您可以根据所选条件减少看到的信息。 您可以将筛选器与表、列表、卡片和其他用于组织内容的组件一起包含。
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 浏览"页面"选项卡Teams页面。
-* 将复杂应用分解为多个页面。
+组织内容，包括：
 
-## <a name="breadcrumb"></a>痕迹导航栏
+* 列表
+* 表格
+* 仪表板
+* 数据可视化
 
-痕迹导航是一种导航帮助，可传达应用的层次结构。 它们可帮助用户了解他们查看的页面如何适应整体体验，并提供了对层次结构中较高级别的一键访问。
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="示例显示筛选器模板。" border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="示例显示痕迹导航模板。" border="false":::
+## <a name="form"></a>表单
 
-### <a name="top-use-cases"></a>热门用例
-
-* 通信层次结构
-* 导航
-
-## <a name="toolbar"></a>工具栏
-
-工具栏是一个容器，用于对一组控件进行分组。
-
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="示例显示工具栏模板。" border="false":::
+表单用于以结构化方式收集、验证和提交用户输入。 对输入字段进行清晰标记和逻辑分组对于获得良好的用户体验至关重要。
 
 ### <a name="top-use-cases"></a>热门用例
 
+* 登录
+* 用户配置文件
+* 设置
+* 用户输入集合
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="示例在桌面上显示表单 UI 模板。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="示例显示移动设备上的表单 UI 模板。" border="false":::
+
+---
+
+## <a name="list"></a>列表
+
+可以使用列表以可扫描的格式显示相关项目，并允许用户对整个列表或单个项目采取操作。
+
+### <a name="top-use-cases"></a>热门用例
+
+* 显示数据
 * 应用内容的上下文操作
-* 上下文筛选器和查找
-* 导航和痕迹导航
 
-## <a name="stage"></a>阶段
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
-Stage 为用户提供了一种在应用程序中打开实体（如图像、文件或网站Teams而不是在另一个应用或浏览器中打开它的方法。 阶段的主要用例是查看;图面不应用于复杂的交互。
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="示例显示桌面上的列表 UI 模板。" border="false":::
 
- (实现说明：使用大型任务模块[.) ](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="示例显示阶段模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="示例显示移动设备上的列表 UI 模板。" border="false":::
+
+---
+
+## <a name="sign-in"></a>登录
+
+你可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括单一登录 (SSO) ，建议这样做以简化身份验证体验。
+
+### <a name="top-use-case"></a>热门用例
+
+* 对用户进行身份验证
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="示例显示桌面上的登录 UI 模板。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="示例显示移动设备上的登录 UI 模板。" border="false":::
+
+---
+
+## <a name="settings"></a>设置
+
+设置屏幕是用户可以使用你的应用配置其首选项的地方。  (注意：设置是基本[UI 组件的](~/concepts/design/design-teams-app-basic-ui-components.md)容器 。) 
+
+### <a name="top-use-case"></a>热门用例
+
+* 管理应用功能
+
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="示例显示设置模板。" border="false":::
+
+## <a name="task-board"></a>任务板
+
+任务板（有时称为看板或街道）是一组卡片，通常用于跟踪工作项或票证的状态。 它还可用于将任何类型的内容分类为类别。 可以在列之间编辑和移动卡片。
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 在浏览器中打开实体Teams，而不是在另一个应用或浏览器中打开。
-* 聚焦媒体或其他内容。
+* 项目管理。 分配任务和跟踪状态
+* 集体讨论。 在不同类别中添加想法
+* 对练习进行排序。 将任何类型的信息组织到存储桶
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="示例在桌面上显示任务板 UI 模板。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="示例显示移动设备上的任务板 UI 模板。" border="false":::
+
+---
+
+## <a name="wizard"></a>向导
+
+向导将指导用户完成多个屏幕以完成任务 (如设置过程) 。
+
+### <a name="top-use-cases"></a>热门用例
+
+* 设置
+* 载入
+* 首次运行体验
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="示例在桌面上显示向导 UI 模板。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="示例显示移动设备上的向导 UI 模板。" border="false":::
+
+---

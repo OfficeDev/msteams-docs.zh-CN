@@ -6,12 +6,12 @@ keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: cf28a28050d50b2b6b2601a3231cdad30211ab2c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566710"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629849"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams 2020 更新 (和 SameSite cookie) 
 
@@ -80,11 +80,8 @@ Android WebView 是允许 Android 应用显示 Web 内容的 Chrome 系统组件
 ## <a name="see-also"></a>另请参阅
 
 * [SameSite 示例](https://github.com/GoogleChromeLabs/samesite-examples)
-
 * [SameSite Cookie 食谱](https://web.dev/samesite-cookie-recipes/)
-
 * [已知不兼容的客户端]( https://www.chromium.org/updates/same-site/incompatible-clients)
-
 * [开发人员：为新的 SameSite=None 做好准备;安全 Cookie 设置](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 **OpenId 连接影响**<br>

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 84d0f5564d7e8e6e34dde1f3d59cc6e7a68d3332
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3bfbcd0eed1bd287303315ae57cd2f0db039890c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565912"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630178"
 ---
 # <a name="create-apps-for-teams-meetings"></a>创建适用于 Teams 会议的应用
 
@@ -37,7 +37,7 @@ ms.locfileid: "52565912"
 
 ## <a name="meeting-apps-api-reference"></a>会议应用 API 参考
 
-|API|描述|请求|源|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -135,7 +135,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|描述|
+|响应代码|说明|
 |---|---|
 | **403** | 不允许应用获取参与者信息。 这是最常见的错误响应，如果会议未安装应用，将触发此错误响应。 例如，如果租户管理员禁用应用或在实时网站迁移期间阻止应用。|
 | **200** | 成功检索参与者信息。|
@@ -219,7 +219,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>响应代码
 
-|响应代码|描述|
+|响应代码|说明|
 |---|---|
 | **201** | 具有信号的活动已成功发送。 |
 | **401** | 应用使用无效令牌进行响应。 |
@@ -316,8 +316,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="sidepanel"></a>sidePanel
 
-借助 sidePanel，你可以自定义会议体验，使组织者和演示者拥有一组不同的视图和操作。 在应用清单中，必须将 sidePanel 添加到上下文数组。 在会议以及所有方案中，应用在宽度为 320 像素的"会议内"选项卡中呈现。 有关详细信息，请参阅 [FrameContext 接口](/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
-)。
+借助 sidePanel，你可以自定义会议体验，使组织者和演示者拥有一组不同的视图和操作。 在应用清单中，必须将 sidePanel 添加到上下文数组。 在会议以及所有方案中，应用在宽度为 320 像素的"会议内"选项卡中呈现。 有关详细信息，请参阅 [FrameContext 接口](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)。
 
 若要使用 `userContext` API 相应地路由请求，请参阅[Teams SDK。](../tabs/how-to/access-teams-context.md#user-context) 请参阅[Teams的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流与网站的身份验证流非常相似。 因此选项卡可以直接使用 OAuth 2.0。 请参阅Microsoft 标识平台[OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
 
@@ -333,7 +332,7 @@ POST /v3/conversations/{conversationId}/activities
 会议内对话框不得使用任务模块。 会议聊天中不会调用任务模块。 外部资源 URL 用于在会议中显示内容气泡。 可以使用 方法 `submitTask` 在会议聊天中提交数据。
 
 > [!NOTE]
-> * 你必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
+> * 你必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest&preserve-view=true)。
 > * 如果希望你的应用支持匿名用户，则初始调用请求有效负载必须依赖于 对象中的请求元数据， `from.id` `from` 而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，也是Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 #### <a name="share-to-stage"></a>共享到阶段 
@@ -377,7 +376,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 描述 | .NET | Node.js |
+|示例名称 | 说明 | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|

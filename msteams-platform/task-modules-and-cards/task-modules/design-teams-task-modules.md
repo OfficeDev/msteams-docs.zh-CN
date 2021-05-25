@@ -5,12 +5,12 @@ description: 了解如何为应用设计任务Teams并获取 Microsoft Teams UI 
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 347ce42c41706f698e2f8897a0518aae0850a275
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 48e47a6c0bde0f0a3fefb8fcbfb362687ce58947
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101728"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629905"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>为应用程序设计Microsoft Teams模块
 
@@ -37,20 +37,36 @@ ms.locfileid: "52101728"
 
 ## <a name="anatomy"></a>解剖
 
+任务模块为托管应用体验提供了灵活的图面。 它们使用 iframe (桌面) 或 webview (移动) 生成，因此可以使用 UI 模板设计任务模块， (推荐) 设计任务模块。
+
+它们还可以与自适应 [卡片](../../task-modules-and-cards/cards/design-effective-cards.md) 框架一起生成，该框架可以更简单、更快速地促进常见方案 (如表单) 。
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="显示任务模块的 UI 分析的图示。" border="false":::
-
-任务模块非常灵活。 它们可以使用 iframe 生成，并拉取其他 UI 模板，以托管合作伙伴构建的体验。 这是最完善体验的首选。
-
-它们还可使用自适应卡片框架生成[](../../task-modules-and-cards/cards/design-effective-cards.md)，该框架可以更简单、更快速地执行窗体或 (应用场景) 。
 
 |计数器|说明|
 |----------|-----------|
 |1|**应用程序图标**|
 |2|**应用名称**：应用的完整名称。|
 |3|**标头**：使标题简洁明了。 描述希望用户完成的任务。
-|4 |**关闭按钮**：允许用户查找要插入的应用内容。|
+|4 |**关闭按钮**：关闭任务模块。 不在应用内容中应用未保存的更改。|
 |5 |**iframe：** 托管应用内容的响应空间。|
 |6 |**操作 (可选) ：** 与应用内容相关的按钮。|
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="插图显示移动设备上的任务模块的 UI 结构。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|1|**标头**：使标题简洁明了。 描述希望用户完成的任务。
+|2|**应用名称**：应用的完整名称。|
+|3|**关闭按钮**：关闭任务模块。 不在应用内容中应用未保存的更改。|
+|4 |**webview：** 托管应用内容的响应空间。|
+|5 |**操作 (可选) ：** 与应用内容相关的按钮。|
+
+---
 
 ## <a name="designing-with-ui-templates"></a>使用 UI 模板进行设计
 
@@ -66,43 +82,99 @@ ms.locfileid: "52101728"
 
 列表在任务模块中运行得非常好，因为它们易于扫描。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="任务模块中的示例列表。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="移动设备上的任务模块中的示例列表。" border="false":::
+
+---
 
 ### <a name="form"></a>表单
 
 任务模块是显示具有顺序用户输入和内联验证的表单的一个很好的位置。 可以利用自适应卡片作为嵌入表单元素的一种方式。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="任务模块中的示例窗体。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="移动任务模块中的示例窗体。" border="false":::
+
+---
 
 ### <a name="sign-in"></a>登录
 
 创建具有一系列任务模块的集中登录或注册流，使用户能够在顺序步骤中轻松移动。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="任务模块中的登录体验示例。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="移动任务模块中的登录体验示例。" border="false":::
+
+---
 
 ### <a name="media"></a>媒体
 
 在任务模块中嵌入媒体内容，实现集中的观看体验。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/media.png" alt-text="任务模块中的媒体内容示例。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="移动任务模块中的媒体内容示例。" border="false":::
+
+---
 
 ### <a name="empty-state"></a>空状态
 
 用于欢迎、错误和成功消息。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="任务模块中的空状态示例。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="移动任务模块中的空状态示例。" border="false":::
+
+---
 
 ### <a name="image-gallery"></a>图像库
 
-在 iframe 中嵌入库的盘点。
+在 iframe 桌面设备或 webview (移动设备中) 库 () 。
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="任务模块中的示例图像库。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="移动任务模块中的示例图像库。" border="false":::
+
+---
 
 ### <a name="poll"></a>投票
 
 此示例显示从自适应卡片启动的投票结果。 轮询也可以放置在任务模块内。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="任务模块中的轮询示例。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="移动任务模块中的轮询示例。" border="false":::
+
+---
 
 ## <a name="best-practices"></a>最佳做法
 

@@ -6,12 +6,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: ed1f0f2eb2ce8d429a8a780bd2c4c4eb421d6d54
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: fd870d8e10ef74c36f8f6d145d48980f53e9303c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566213"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631025"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>设计邮件Microsoft Teams扩展
 
@@ -29,12 +29,20 @@ ms.locfileid: "52566213"
 
 可以在以下上下文上下文中添加Teams扩展：
 
-* 从 Teams 应用商店 （AppSource）。
+* 从Teams存储。
 * 在靠近撰写框 (、在频道、聊天或会议) 、聊天或会议。 值得注意的是，如果您在这些位置之一添加邮件扩展，则仅可以在该上下文中使用它。
 
 以下示例演示如何在频道中添加消息扩展：
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="示例演示如何在频道中的撰写框附近添加消息传递扩展。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="示例演示如何在移动设备上的频道中的撰写框附近添加消息扩展。" border="false":::
+
+---
 
 ## <a name="set-up-a-messaging-extension"></a>设置邮件扩展
 
@@ -42,7 +50,15 @@ ms.locfileid: "52566213"
 
 若要在Teams一致，你无法自定义登录屏幕。 如果使用单一登录 (SSO) 身份验证，用户将自动登录。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="示例显示具有登录按钮的消息扩展设置屏幕。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="示例显示移动设备上具有登录按钮的邮件扩展设置屏幕。" border="false":::
+
+---
 
 ## <a name="types-of-messaging-extensions"></a>邮件扩展类型
 
@@ -52,7 +68,15 @@ ms.locfileid: "52566213"
 
 借助搜索命令，用户可以使用邮件扩展快速查找外部内容并插入邮件。 搜索命令通常可在撰写框中使用。 例如，您可以通过共享一段内容来开始讨论或添加讨论，而无需离开Teams。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="示例显示从撰写框启动的基于搜索的邮件扩展。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="示例显示从移动设备上的撰写框启动的基于搜索的邮件扩展。" border="false":::
+
+---
 
 #### <a name="compose-box-layout-options"></a>撰写框布局选项
 
@@ -72,9 +96,17 @@ ms.locfileid: "52566213"
 
 ### <a name="from-the-compose-box"></a>从撰写框
 
-添加后，用户可以通过选择撰写框下方的应用图标来打开邮件扩展。 本示例中，扩展具有搜索和操作命令：
+添加后，用户可以通过选择撰写框下方的应用图标来打开邮件扩展。 在这些示例中，扩展具有搜索和操作命令。
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
 :::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="示例演示如何从撰写框中打开邮件扩展。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="示例演示如何从移动设备上的撰写框中打开邮件扩展。" border="false":::
+
+---
 
 ### <a name="from-a-chat-message-or-channel-post"></a>从聊天消息或频道帖子
 
@@ -85,11 +117,18 @@ ms.locfileid: "52566213"
 
 #### <a name="chat-message"></a>聊天消息
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="示例演示如何从聊天消息中打开消息扩展。" border="false":::
 
-#### <a name="channel-post"></a>频道帖子
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="示例演示如何从频道帖子打开消息传递扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="示例演示如何从移动设备上的聊天帖子打开消息传递扩展。" border="false":::
+
+---
+':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+---
 
 ## <a name="use-a-messaging-extension"></a>使用消息传递扩展
 
@@ -99,21 +138,53 @@ ms.locfileid: "52566213"
 
 **1. 选择邮件扩展**。 用户可以从撰写框中搜索要共享的内容。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="示例显示用户搜索要从撰写框中插入的内容。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="示例显示用户搜索要从移动设备上的撰写框中插入的内容。" border="false":::
+
+---
 
 **2. 插入内容**。 发布后，其他人可以回复或选择内容以查看应用中的更多信息。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="示例显示用户在频道对话中发布内容。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="示例显示用户在移动设备上将内容发布到频道对话。" border="false":::
+
+---
 
 ### <a name="take-action-on-a-message"></a>对邮件采取措施
 
 **1. 选择邮件扩展**。 你的应用可以包含一个或多个操作命令。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="示例显示用户选择消息传递扩展操作命令。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="示例显示用户在移动设备上选择消息传递扩展操作命令。" border="false":::
+
+---
 
 **2. 完成操作**。 你的应用可以接收并处理邮件操作发送的任何内容或数据。 这允许用户保持其对话，并且（以下示例）无需担心直接在应用中输入信息。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="如何对邮件采取操作的示例。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="如何对移动设备上的邮件采取操作的示例。" border="false":::
+
+---
 
 ### <a name="preview-links"></a>预览链接
 
@@ -121,11 +192,27 @@ ms.locfileid: "52566213"
 
 **1. 在撰写框中** 粘贴可识别的链接。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="示例显示用户在合成器框中粘贴链接。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="示例显示用户将链接粘贴到移动设备上的合成器框中。" border="false":::
+
+---
 
 **2. 插入内容**。 如果你的应用识别撰写框中的 URL，它将链接呈现为提供 Web 内容的内容丰富的预览的卡片。  (有关详细信息， [请参阅自适应卡片](../../task-modules-and-cards/cards/design-effective-cards.md) 设计指南) 
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="示例显示 URL 如何由你的应用识别，在撰写框中包含一些丰富的内容。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="示例显示 URL 如何由你的应用识别，如何在移动设备上的撰写框中包含一些丰富的内容。" border="false":::
+
+---
 
 ## <a name="manage-a-messaging-extension"></a>管理消息传递扩展
 
@@ -136,6 +223,8 @@ ms.locfileid: "52566213"
 ### <a name="messaging-extension-in-the-compose-box"></a>撰写框中的消息扩展
 
 下面的示例是一个从撰写框打开的消息扩展。
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
 :::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="插图显示撰写框中消息传递扩展的 UI 结构。" border="false":::
 
@@ -149,6 +238,21 @@ ms.locfileid: "52566213"
 |6 |**操作命令菜单 (可选) ：** 如果指定任何 (，将显示操作命令) 。|
 |7 |**应用内容**：主要用于显示搜索结果。 此处的示例是使用列表布局 (网格布局是另一个选项) 。|
 |8 |**应用徽标**：应用徽标的大纲图标。|
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="插图显示移动设备上撰写框中消息传递扩展的 UI 结构。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|1|**应用名称**：应用的完整名称。|
+|2|**操作命令菜单图标 (可选**) ：如果指定任何命令， (邮件扩展策略打开操作) 。
+|3|**搜索框**：允许用户查找要插入的应用内容。|
+|4 |**选项卡菜单 (可选) ：** 提供多个内容类别。|
+|5 |**操作命令菜单 (可选) ：** 如果指定任何 (，将显示操作命令) 。|
+|6 |**应用内容**：主要用于显示搜索结果。|
+
+---
 
 ### <a name="messaging-extension-management-menu"></a>邮件扩展管理菜单
 

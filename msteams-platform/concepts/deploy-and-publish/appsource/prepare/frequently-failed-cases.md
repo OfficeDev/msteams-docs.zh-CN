@@ -5,12 +5,12 @@ ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: 应用提交提示频繁失败的情况验证指南
-ms.openlocfilehash: 50bbd2af3b4c834e2ac4776e1fc7db1d8bf45173
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565247"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629996"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>使用技巧成功提交应用Microsoft Teams成功
 
@@ -157,8 +157,7 @@ ms.locfileid: "52565247"
 
   ![帮助命令示例](../../../../assets/images/faq/helpcommand.png)
 
-* **使用自适应卡片和任务模块使机器人响应清晰且可操作** 
-[使用调用任务模块的按钮的](/task-modules-and-cards/task-modules/task-modules-bots.md)自适应卡片可增强机器人用户体验。 与用户键入命令相反，这些卡片和按钮更易于在移动设备上使用。 此外，自动程序响应不得为长文本文本文本。 机器人必须使用自适应卡片和任务模块，而不是基于对话聊天的用户界面和冗长的文本响应。
+* **使用自适应卡片和任务模块使机器人响应清晰且可操作** 使用调用任务模块的按钮的自适应卡片可增强机器人用户体验。 与用户键入命令相反，这些卡片和按钮更易于在移动设备上使用。 此外，自动程序响应不得为长文本文本文本。 机器人必须使用自适应卡片和任务模块，而不是基于对话聊天的用户界面和冗长的文本响应。
 
 * **考虑所有范围**。 请确保当在频道和个人对话中提到 () `@*botname*` 自动程序提供适当的响应。 如果你的机器人在个人或团队范围内未提供有意义的上下文，请通过清单禁用该范围。  (清单 `bots` 架构参考[.Microsoft Teams 中的块) ](../../../../resources/schema/manifest-schema.md#bots)
 

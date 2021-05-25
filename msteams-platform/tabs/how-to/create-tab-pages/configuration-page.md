@@ -6,12 +6,12 @@ keywords: teams 选项卡组频道可配置
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: aeab1cf96d1e875db79d9143fefd0e46348f585a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b8300f268f74bed4fd1180b7a97c3b21ddda820a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566682"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629961"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -104,7 +104,7 @@ ms.locfileid: "52566682"
 1. `microsoftTeams.settings.registerOnSaveHandler()`将触发事件处理程序。
 1. 应用的 **配置** 页面上的"保存"按钮（在 Teams 中上载）已启用。
 
-配置页面代码通知Teams配置要求，并且可以继续安装。 当用户选择"保存 **"** 时，将设置 的参数 `settings.setSettings()` ，如 接口 `Settings` 所定义。 有关详细信息，请参阅设置[接口](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true)。 在上一步 `saveEvent.notifySuccess()` 中，调用 以指示已成功解析内容 URL。
+配置页面代码通知Teams配置要求，并且可以继续安装。 当用户选择"保存 **"** 时，将设置 的参数 `settings.setSettings()` ，如 接口 `Settings` 所定义。 有关详细信息，请参阅设置[接口](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)。 在上一步 `saveEvent.notifySuccess()` 中，调用 以指示已成功解析内容 URL。
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ ms.locfileid: "52566682"
 
 你的选项卡可能需要上下文信息以显示相关内容。 上下文信息通过提供更加自定义的用户体验进一步增强选项卡的吸引力。
 
-有关用于选项卡配置的属性详细信息，请参阅 [上下文接口](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)。 通过以下两种方式收集上下文数据变量的值：
+有关用于选项卡配置的属性详细信息，请参阅 [上下文接口](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)。 通过以下两种方式收集上下文数据变量的值：
 
 1. 在清单 中插入 URL 查询字符串占位符 `configurationURL` 。
 
@@ -158,7 +158,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>使用 `getContext()` 函数检索上下文
 
-`microsoftTeams.getContext((context) => {})`函数在调用[时检索 Context](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)接口。 将此函数添加到配置页以检索上下文值：
+`microsoftTeams.getContext((context) => {})`函数在调用[时检索 Context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)接口。 将此函数添加到配置页以检索上下文值：
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -197,4 +197,4 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>移动客户端
 
-如果您选择让频道或组选项卡显示在Teams客户端上，则配置必须具有 `setSettings()` `websiteUrl` 属性的值。 有关详细信息，请参阅 [移动选项卡指南](~/tabs/design/tabs-mobile.md)。
+如果选择让频道或组选项卡显示在移动客户端Teams，则配置必须具有 `setSettings()` 的值 `websiteUrl` 。 有关详细信息，请参阅 [移动选项卡指南](~/tabs/design/tabs-mobile.md)。

@@ -5,16 +5,16 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: baa17cd97ff4e2cad91615dced5c4e4cf5e533c8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566878"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644711"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>设计适用于桌面Microsoft Teams Web 的选项卡
+# <a name="designing-your-tab-for-microsoft-teams"></a>为用户设计选项卡Microsoft Teams
 
-选项卡是内容的大型画布。 为了指导应用设计，以下信息介绍了并说明了用户如何在应用中添加、使用和管理选项卡Teams。
+选项卡是应用内容的大型画布。 为了指导应用设计，以下信息介绍了并说明了用户如何在应用中添加、使用和管理选项卡Teams。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
@@ -31,19 +31,29 @@ ms.locfileid: "52566878"
 * 频道
 * 会议 (之前、期间或之后) 
 
-下面的示例演示如何在频道中添加选项卡：
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
+下面的示例展示了用户如何在频道中添加选项卡。
 
 :::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="示例显示正在频道中添加的选项卡。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+用户可以通过选择频道中的"更多"按钮来访问选项卡 (例如) 添加这些选项卡的聊天或聊天。
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="示例显示正在频道中添加的移动选项卡。" border="false":::
+
+---
 
 ## <a name="set-up-a-tab"></a>设置选项卡
 
 有一个简短的设置过程，可以将应用添加为频道、聊天或会议选项卡。体验很大程度上取决于你。 例如，你可以拥有如何使用应用的说明和一些可选设置。 如果需要对用户进行身份验证，请在此处包括登录步骤。
 
-### <a name="tab-configuration-modal"></a>选项卡配置模式
+### <a name="tab-configuration-dialog"></a>选项卡配置对话框
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="示例显示选项卡配置模式。" border="false":::
 
-### <a name="anatomy-tab-configuration-modal"></a>结构：选项卡配置模式
+### <a name="anatomy-tab-configuration-dialog"></a>结构：选项卡配置对话框
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="显示选项卡配置模式 UI 分析的图示。" border="false":::
 
@@ -51,10 +61,10 @@ ms.locfileid: "52566878"
 |----------|-----------|
 |1|**应用徽标**：应用的全彩色应用徽标。|
 |2|**应用名称**：应用的完整名称。|
-|3|**iframe：** 应用内容的响应空间。 例如，选项卡设置或身份验证。|
-|4 |**关于链接**：打开一个对话框，其中显示有关应用的详细信息，例如完整说明、应用所需的权限以及指向隐私策略和服务条款的链接。
-|5 |**关闭按钮**：关闭模式。|
-|6 |**通知团队成员选项**：模式询问您是否要创建一个帖子，让其他人知道您添加了选项卡。|
+|3|**iframe：** 应用内容响应空间 (例如选项卡设置或身份验证) 。|
+|4 |**关于链接**：打开一个对话框，其中显示有关应用的详细信息，例如完整说明、应用所需的权限以及指向隐私策略和服务条款的链接。|
+|5 |**关闭按钮**：关闭对话框。|
+|6 |**通知团队成员选项**：对话框询问用户是否要创建一个帖子，让其他人知道他们添加了选项卡。|
 |7 |**"后退**"按钮：根据对话框打开位置转到上一步。|
 |8 |**保存按钮**：完成选项卡设置。|
 
@@ -76,9 +86,19 @@ ms.locfileid: "52566878"
 
 选项卡提供了全屏 Web 体验，Teams显示协作内容（如任务板和仪表板）和重要信息。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="示例显示一个包含任务板的选项卡。" border="false":::
 
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="示例显示一个包含任务板的移动选项卡。" border="false":::
+
+---
+
 ### <a name="anatomy-tab"></a>结构：选项卡
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="显示选项卡的 UI 分析的图示。" border="false":::
 
@@ -86,19 +106,31 @@ ms.locfileid: "52566878"
 |----------|-----------|
 |1|**选项卡名称**：选项卡的导航标签。|
 |2|**Tab 溢出**：打开选项卡操作，如重命名和删除。|
-|3|**选项卡聊天**：在右侧打开聊天线程，允许用户在内容旁边进行对话。|
-|4 |**iframe：** 显示选项卡的内容。
+|3|**选项卡聊天**：在右侧打开聊天，允许用户在内容旁边进行对话。|
+|4 |**iframe：** 显示应用内容。|
 
-### <a name="designing-a-tab-with-ui-templates"></a>使用 UI 模板设计选项卡
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-使用以下 UI 模板Teams之一来帮助设计选项卡体验：
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="显示选项卡的 UI 分析的图示。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|1|**选项卡名称**：选项卡的导航标签。|
+|2|**选项卡聊天**：打开允许用户在内容旁进行对话的聊天。|
+|3|**webview：** 显示应用内容。|
+
+---
+
+### <a name="designing-a-tab-with-ui-templates-and-advanced-components"></a>使用 UI 模板和高级组件设计选项卡
+
+使用以下模板和Teams之一来帮助设计选项卡体验：
 
 * [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目采取操作。
 * [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为看板或街道）是一组卡片，通常用于跟踪工作项或票证的状态。
 * [仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard)：仪表板是包含多个卡片的画布，可提供数据或内容的概述。
 * [表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单用于以结构化方式收集、验证和提交用户输入。
 * [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。
-* [左侧导航](../../concepts/design/design-teams-app-ui-templates.md#left-nav)：如果你的选项卡需要一些导航，左侧导航模板可以提供帮助。 通常，应使 Tab 键导航保持在最低程度。
+* [左侧导航](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)：如果你的选项卡需要一些导航，左侧导航组件会有所帮助。 通常，应使 Tab 键导航保持在最低程度。
 
 ## <a name="use-a-tab-to-collaborate"></a>使用选项卡进行协作
 
@@ -108,13 +140,29 @@ ms.locfileid: "52566878"
 
 用户一旦添加了新选项卡，就可以自动发布至频道或聊天。这不仅向团队成员通知新内容并提供指向选项卡的链接，还允许用户开始讨论选项卡。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="示例显示正在频道线程中讨论的选项卡。" border="false":::
 
-### <a name="side-by-side-discussion"></a>并行讨论
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-在查看选项卡内容时，用户下次可以有对话。
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="示例显示在频道线程中讨论的移动选项卡。" border="false":::
+
+---
+
+### <a name="tab-chat"></a>选项卡聊天
+
+用户可以在正在查看的选项卡内容旁边进行对话。 在桌面上，聊天将打开到应用内容的一侧。
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="示例显示一个在右侧打开聊天的选项卡。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="示例显示具有上下文内聊天区域的移动选项卡。" border="false":::
+
+---
 
 ### <a name="permissions-and-role-based-views"></a>权限和基于角色的视图
 
@@ -126,13 +174,29 @@ ms.locfileid: "52566878"
 
 ### <a name="anatomy-tab-menu"></a>结构：选项卡菜单
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="显示选项卡菜单的 UI 分析的图示。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |1|**设置**： (可选) 允许用户在添加选项卡后修改其设置。|
-|2|**重命名**：允许用户为选项卡指定一个对团队更有意义的名称。|
+|2|**重命名**：用户可以为选项卡指定对频道、聊天或会议有意义的名称。|
 |3|**删除**：从频道、聊天或会议中删除选项卡。|
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="显示移动选项卡菜单的 UI 分析的图示。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|1|**在浏览器中打开**：在设备的默认浏览器中打开应用。|
+|2|**复制链接**：用户可以复制并共享指向选项卡的链接。|
+|3|**设置： (** 选项卡) 后修改选项卡的设置的可选选项。|
+|4 |**重命名**：用户可以为选项卡指定对频道、聊天或会议有意义的名称。|
+|5 |**删除**：从频道、聊天或会议中删除选项卡。|
+
+---
 
 ## <a name="tab-notifications-and-deep-linking"></a>选项卡通知和深层链接
 

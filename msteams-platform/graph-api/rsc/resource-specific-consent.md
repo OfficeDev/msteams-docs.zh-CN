@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: dabe0c33013fbb398eee7bf00ac2881cd86e6bc5
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d751e5dba22b19edfe6ffda3eb6a73a37375f92b
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566124"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630675"
 ---
 # <a name="resource-specific-consent-rsc"></a>RSC (资源特定的) 
 
@@ -56,7 +56,7 @@ RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，它使你的应�
 
 > [!div class="checklist"]
 >
->- 以全局管理员/公司管理员登录 [Azure](https://portal.azure.com) [门户](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)。  
+>- 以全局管理员/公司管理员登录 [Azure](https://portal.azure.com) [门户](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。  
  > - [选择](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)**Azure Active Directory Enterprise**  =>    =>  **同意和权限**  =>  **用户同意设置"。**
 > - 使用标记为组所有者同意的控件启用、禁用或限制用户同意访问数据 (默认值为允许组所有者同意所有组所有者) 。  对于使用 RSC 安装应用的团队所有者，必须为该用户启用组所有者同意。
 

@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: teams 清单架构开发者预览版
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: b52d52f96312dc2978844b07a0f7ebb1d817166d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 333ed556ba8ba59c66f66d7eaa41dd0ea66dca0a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566703"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629863"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>开发人员预览清单架构Microsoft Teams
 
@@ -186,6 +186,27 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
      "mysite.someplace.com",
      "othersite.someplace.com"
   ],
+  "webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+  },
    "configurableProperties": [
      "name",
      "shortDescription",
@@ -328,10 +349,10 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`configurationUrl`|字符串|2048 个字符|✔|配置 https:// 时将使用的 URL。|
+|`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
 |`canUpdateConfiguration`|布尔值|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
-|`sharePointPreviewImage`|字符串|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
+|`sharePointPreviewImage`|String|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义选项卡在页面SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -345,9 +366,9 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
-|`name`|字符串|128 个字符|✔|选项卡显示名称界面中的列数。|
-|`contentUrl`|字符串|2048 个字符|✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
-|`websiteUrl`|字符串|2048 个字符||用户 https:// 在浏览器中查看时指向的 URL。|
+|`name`|String|128 个字符|✔|选项卡显示名称界面中的列数。|
+|`contentUrl`|String|2048 个字符|✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
+|`websiteUrl`|String|2048 个字符||用户 https:// 在浏览器中查看时指向的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
 
 ## <a name="bots"></a>bots
@@ -385,7 +406,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`configurationUrl`|字符串|2048 个字符|✔|配置 https:// 时将使用的 URL。|
+|`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
 |`connectorId`|字符串|64 个字符|✔|连接器的唯一标识符，与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
 |`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是仅针对单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
 
@@ -402,7 +423,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`botId`|字符串|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 [ID 相同](#id)。|
+|`botId`|String|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 [ID 相同](#id)。|
 |`canUpdateConfiguration`|布尔值|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
 |`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
 
@@ -416,27 +437,27 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |---|---|---|---|---|
 |`id`|字符串|64 个字符|✔|命令的 ID。|
 |`type`|字符串|64 个字符||命令的类型。 或 `query` `action` 之一。 默认值： `query`|
-|`title`|字符串|32 个字符|✔|用户友好命令名称。|
-|`description`|字符串|128 个字符||向用户显示以指示此命令用途的说明。|
+|`title`|String|32 个字符|✔|用户友好命令名称。|
+|`description`|String|128 个字符||向用户显示以指示此命令用途的说明。|
 |`initialRun`|布尔值|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
 |`context`|Array of Strings|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose", "commandBox"]`|
 |`fetchTask`|布尔值|||一个布尔值，指示它应动态提取任务模块。|
 |`taskInfo`|对象|||指定在使用消息传递扩展命令时要预加载的任务模块。|
-|`taskInfo.title`|字符串|64||初始对话框标题。|
-|`taskInfo.width`|字符串|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
-|`taskInfo.height`|字符串|||对话框高度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
-|`taskInfo.url`|字符串|||初始 Web 视图 URL。|
+|`taskInfo.title`|String|64||初始对话框标题。|
+|`taskInfo.width`|String|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
+|`taskInfo.height`|String|||对话框高度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
+|`taskInfo.url`|String|||初始 Web 视图 URL。|
 |`messageHandlers`|对象数组|5 ||允许满足某些条件时调用应用的处理程序列表。 还必须在 中列出域 `validDomains` 。|
-|`messageHandlers.type`|字符串|||消息处理程序的类型。 必须是 `"link"`。|
+|`messageHandlers.type`|String|||消息处理程序的类型。 必须是 `"link"`。|
 |`messageHandlers.value.domains`|Array of Strings|||链接邮件处理程序可以注册的域数组。|
 |`parameters`|对象数组|5 |✔|命令采用的参数列表。 最小值：1;最大值：5|
 |`parameter.name`|字符串|64 个字符|✔|显示在客户端中的参数的名称。 这包括在用户请求中。|
-|`parameter.title`|字符串|32 个字符|✔|参数的用户友好标题。|
-|`parameter.description`|字符串|128 个字符||描述此参数用途的用户友好字符串。|
-|`parameter.inputType`|字符串|128 个字符||定义在任务模块上显示的控件的类型 `fetchTask: true` 。 `text` `textarea` `number` `date` `time` 、、、、、、、 `toggle` 之一 `choiceset` 。|
+|`parameter.title`|String|32 个字符|✔|参数的用户友好标题。|
+|`parameter.description`|String|128 个字符||描述此参数用途的用户友好字符串。|
+|`parameter.inputType`|String|128 个字符||定义在任务模块上显示的控件的类型 `fetchTask: true` 。 `text` `textarea` `number` `date` `time` 、、、、、、、 `toggle` 之一 `choiceset` 。|
 |`parameter.choices`|对象数组|10  ||的选项 `choiceset` 。 仅在 为 `parameter.inputType` `choiceset` 时使用 。|
-|`parameter.choices.title`|字符串|128||选项的标题。|
-|`parameter.choices.value`|字符串|512||选项的值。|
+|`parameter.choices.title`|String|128||选项的标题。|
+|`parameter.choices.value`|String|512||选项的值。|
 
 ## <a name="permissions"></a>权限
 
@@ -482,8 +503,9 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`id`|字符串|36 个字符|✔|应用的 AAD 应用程序 ID。 此 ID 必须是 GUID。|
-|`resource`|字符串|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。|
+|`id`|String|36 个字符|✔|应用的 AAD 应用程序 ID。 此 ID 必须是 GUID。|
+|`resource`|String|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。|
+|`applicationPermissions`|数组|最多 100 个项目|✔|应用程序的资源权限。|
 
 ## <a name="configurableproperties"></a>configurableProperties
 

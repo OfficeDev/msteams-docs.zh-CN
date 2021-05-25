@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: 将 Web 应用程序和设备功能与应用集成Microsoft Teams概述。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 01977e22d79f7e39986367e647a2d48ea9b2905c
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 5136c598a3640b5cce92969ea3468c42a7a801db
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058654"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630444"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
@@ -79,28 +79,16 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 
 ## <a name="see-also"></a>另请参阅
 
-- [将应用的用例映射到Teams功能](~/concepts/design/map-use-cases.md)
-
-- [确定应用的入口点](~/concepts/extensibility-points.md)
-
-- [集成 web 应用](~/samples/integrating-web-apps.md)
-
-- [为用户创建低代码自定义Microsoft Teams](~/samples/teams-low-code-solutions.md)
-
-- [添加强大的虚拟代理聊天机器人](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
-
-- [创建虚拟助理](~/samples/virtual-assistant.md)
-
-- [Microsoft Teams 的应用模板](~/samples/app-templates.md)
-
-- [生产就绪 Shift 连接器](~/samples/shifts-wfm-connectors.md)
-
-- [安装 Moodle LMS](~/resources/moodleinstructions.md)
-
-- [创建“共享到Teams”按钮](~/concepts/build-and-test/share-to-teams.md)
-
-- [向 SharePoint 添加Teams选项卡](~/tabs/how-to/tabs-in-sharepoint.md)
-
-- [创建深层链接](~/concepts/build-and-test/deep-links.md)
-
-- [设备功能](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [将应用的用例映射到Teams功能](~/concepts/design/map-use-cases.md)
+* [确定应用的入口点](~/concepts/extensibility-points.md)
+* [集成 web 应用](~/samples/integrating-web-apps.md)
+* [为用户创建低代码自定义Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [添加强大的虚拟代理聊天机器人](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+* [创建虚拟助理](~/samples/virtual-assistant.md)
+* [Microsoft Teams 的应用模板](~/samples/app-templates.md)
+* [生产就绪 Shift 连接器](~/samples/shifts-wfm-connectors.md)
+* [安装 Moodle LMS](~/resources/moodleinstructions.md)
+* [创建“共享到Teams”按钮](~/concepts/build-and-test/share-to-teams.md)
+* [向 SharePoint 添加Teams选项卡](~/tabs/how-to/tabs-in-sharepoint.md)
+* [创建深层链接](~/concepts/build-and-test/deep-links.md)
+* [设备功能](~/concepts/device-capabilities/device-capabilities-overview.md)

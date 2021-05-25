@@ -4,12 +4,12 @@ description: 产品Microsoft Teams团队通过各种反馈和支持渠道响应�
 localization_priority: Normal
 ms.topic: reference
 keywords: teams 反馈开发人员问题 问题 联系支持请求 bug 参与社区讨论
-ms.openlocfilehash: 0ced6a6e593f38e42833a81df9a22f4919b8c5bb
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b052b50bdafd542904bf3a9dfc6ee9d1ad5cf769
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566164"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630479"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams开发人员社区频道
 
@@ -24,7 +24,7 @@ Microsoft Teams开发人员社区使用 Stack Overflow 与其他开发人员联�
 |  **文档更新**           |     在 **要** 更新的文章中选择"编辑"，然后向库中的文档Microsoft Teams [拉GitHub](https://github.com/MicrosoftDocs/msteams-docs)请求。                                                                                                                                                           |
 |       **功能建议**       |                                                                                                                                                                      在[UserVoice 上的Microsoft Teams反馈门户上发布功能建议](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform)。                                                                                                                                                                      |
 |       **一般问题**         |将有关开发人员平台的Microsoft Teams问题发送到Microsoft Teams Community[帮助。](mailto:microsoftteamsdev@microsoft.com) 我们鼓励在此处提及的频道上发布问题，并仅在其他通信模式不适用时使用电子邮件。                                                                                                                                                                      |
-|        **示例**         | 将示例问题提交到Microsoft Teams[示例](/microsoftteams/platform/tutorials/code-samples)存储库。|
+|        **示例**         | 将示例问题提交到Microsoft Teams[示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)存储库。|
 |           **选项卡 SDK 问题或建议**          |         将问题和功能请求提交到 JavaScript 库的 SDK [Microsoft Teams存储库](https://github.com/OfficeDev/microsoft-teams-library-js/issues)。 使用 `microsoft-teams` 标记在 Stack Overflow 上发布有关 SDK [的操作方法问题](https://stackoverflow.com/questions/tagged/microsoft-teams)。                                                                                                                                                                            |
 
 ## <a name="product-support-channels"></a>产品支持渠道

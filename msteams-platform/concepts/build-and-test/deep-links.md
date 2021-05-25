@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: 837d180b06f69b9be49d898c62b9ab8ee64d51d0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566052"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630143"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -78,7 +78,7 @@ ms.locfileid: "52566052"
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | 清单中的 ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | 选项卡中项的 ID，在配置选项卡 [时提供](~/tabs/how-to/create-tab-pages/configuration-page.md)。|Tasklist123|
-| `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段。 | https://tasklist.example.com/123 或 https://tasklist.example.com/list123/task456 |
+| `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段。 | `https://tasklist.example.com/123` 或 `https://tasklist.example.com/list123/task456` |
 | `entityLabel` 或 `subEntityLabel`&emsp; | 选项卡中项的标签，用于显示深层链接时。 | 任务列表 123 或"任务 456 |
 | `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象：</br></br> * 选项卡内项的 ID。 </br></br> * Microsoft Teams上下文提供的信息通道[ID。](~/tabs/how-to/access-teams-context.md) | 
 | `subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
@@ -156,8 +156,8 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 * `tenantId`：租户 ID 示例，0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`：受支持的文件类型，例如 docx、pptx、xlsx 和 pdf
-* `objectUrl`：文件的对象 URL， https://microsoft.sharepoint.com/teams/(filepath)
-* `baseUrl`：文件的基本 URL， https://microsoft.sharepoint.com/teams
+* `objectUrl`：文件的对象 URL， `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`：文件的基本 URL， `https://microsoft.sharepoint.com/teams`
 * `serviceName`：服务名称、应用 ID
 * `threadId`：threadId 是存储文件的团队的团队 ID。 它是可选的，并且不能为存储在用户的"文件夹"文件夹中OneDrive设置。 threadId - 19：f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`：文件组 ID ae063b79-5315-4ddb-ba70-27328ba6c31e
@@ -191,7 +191,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 * `appID`：清单 ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**。
 
 * `entityID`：配置选项卡时 [提供的项目 ID。](~/tabs/how-to/create-tab-pages/configuration-page.md)例如 **，tasklist123**。
-* `entityWebUrl`：如果客户端不支持呈现选项卡或 ，则使用带回退 URL 的可选 https://tasklist.example.com/123 字段 https://tasklist.example.com/list123/task456 。
+* `entityWebUrl`：如果客户端不支持呈现选项卡或 ，则使用带回退 URL 的可选 `https://tasklist.example.com/123` 字段 `https://tasklist.example.com/list123/task456` 。
 * `entityName`：选项卡中项的标签，用于显示深层链接（任务列表 123 或任务 456）。
 
 例如：https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
@@ -247,7 +247,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称 | 描述 | C# |Node.js|
+| 示例名称 | 说明 | C# |Node.js|
 |-------------|-------------|------|----|
 |使用下级 ID 的深层链接  |Microsoft Teams聊天到选项卡使用子企业 ID 的深层链接的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 

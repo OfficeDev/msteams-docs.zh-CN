@@ -5,12 +5,12 @@ keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566578"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630208"
 ---
 # <a name="format-cards-in-teams"></a>格式化卡片Teams
 
@@ -169,8 +169,6 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 > [!NOTE]
 > 信息屏蔽属性当前仅在开发人员预览版中可用。
 
-若要屏蔽自适应卡片中的信息，请添加 `isMasked` 属性以 **键入** `Input.Text` ，将其值设置为 *true*。
-
 #### <a name="sample-adaptive-card-with-masking-property"></a>具有屏蔽属性的示例自适应卡片
 
 ```json
@@ -178,8 +176,7 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 下图是自适应卡片中屏蔽信息的示例：
@@ -218,7 +215,7 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 
 完整宽度自适应卡片如下所示： ![ 全宽自适应卡片视图](../../assets/images/cards/full-width-adaptive-card.png)
 
-如果尚未将属性设置为 `width` *Full，* 则自适应卡片的默认视图如下所示： ![ 小宽度自适应卡片视图](../../assets/images/cards/small-width-adaptive-card.png)
+如果尚未将属性设置为 Full，则自适应卡片的默认视图如下所示 `width` ： ![ 小宽度自适应卡片视图](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### <a name="typeahead-support"></a>Typeahead 支持
 

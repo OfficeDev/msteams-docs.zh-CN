@@ -5,16 +5,16 @@ keywords: Teams o365 连接器
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 9eaaedf88d907dd7a7422068ab5d20450345f0e7
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566808"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629821"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>创建Office 365连接器Microsoft Teams
 
->通过Microsoft Teams应用，你可以添加现有 Office 365 连接器或生成要包括在 Microsoft Teams 中的新连接器。 有关详细信息 [，请参阅构建](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) 你自己的连接器。
+通过Microsoft Teams应用，你可以添加现有 Office 365 连接器或生成要包括在 Microsoft Teams 中的新连接器。 有关详细信息 [，请参阅构建](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) 你自己的连接器。
 
 ## <a name="adding-a-connector-to-your-teams-app"></a>将连接器添加到 Teams 应用
 
@@ -104,7 +104,7 @@ ms.locfileid: "52566808"
 #### <a name="getsettings-response-properties"></a>`GetSettings()` 响应属性
 
 >[!Note]
->此处调用返回的参数与从选项卡调用此方法时不同，并且 `getSettings` 与此处记录的参数 [不同](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)。
+>此处调用返回的参数与从选项卡调用此方法时不同，并且 `getSettings` 与此处记录的参数 [不同](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)。
 
 | 参数   | 详细信息 |
 |-------------|---------|
@@ -185,6 +185,25 @@ ms.locfileid: "52566808"
   "accentColor": "#FFFFFF"
 }
 ```
+
+## <a name="disable-or-enable-connectors-in-teams"></a>禁用或启用 Teams
+
+Exchange Online PowerShell V2 模块使用新式验证，并且与 MFA (MFA) 一起用于连接到 Microsoft 365 中所有与 Exchange 相关的 PowerShell 环境。 管理员可以使用 Exchange Online PowerShell 禁用整个租户或特定组邮箱的连接器，从而影响该租户或邮箱中的所有用户。 无法对部分（而非其他）禁用。 此外，默认情况下会为租户禁用GCC连接器。
+
+租户级别设置会覆盖组级别设置。 例如，如果管理员为组启用连接器，并禁用租户上的连接器，则组连接器将被禁用。 若要在 Teams中启用连接器，Exchange Online带或不带 MFA 的新式验证连接到[PowerShell。](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)
+
+### <a name="commands-to-disable-or-enable-connectors"></a>禁用或启用连接器的命令
+
+**在 PowerShell 中Exchange Online命令**
+
+* 若要禁用租户的连接器 `Set-OrganizationConfig -ConnectorsEnabled:$false` ：。
+* 若要禁用租户的可操作邮件 `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false` ：。
+* 若要为连接器启用Teams，请运行以下命令：
+    * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+    * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
+    * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
+
+有关 PowerShell 模块交换功能详细信息，请参阅[Set-OrganizationConfig。](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true) 若要启用或禁用Outlook连接器，[请将应用连接到](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)Outlook。
 
 ## <a name="testing-your-connector"></a>测试连接器
 

@@ -5,12 +5,12 @@ keywords: teams visual studio code toolkit
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: efd0962e9c4c0d64dbac47caf29b2e56907937b3
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566556"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629835"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>使用 Teams Toolkit 和 Visual Studio Code
 
@@ -45,7 +45,7 @@ ms.locfileid: "52566556"
 
 1. 在Visual Studio Code中，选择Teams图标 ![Teams 图标](../assets/icons/favicon-16x16.png) 从窗口左侧的活动栏中。
 1. 从 **命令菜单中选择** 导入应用包。
-1. 选择现有的应用[Teams包](../concepts/build-and-test/apps-package.md)zip 文件。
+1. 选择现有的应用Teams[包](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true)zip 文件。
 1. 选择" **选择发布程序包"** 按钮。 现在，应该使用应用的详细信息填充工具包的配置选项卡。
 1. In Visual Studio Code， select **File**  ->  **Add Folder to Workspace** to add your source code directory to the Visual Studio Code workspace.
 
@@ -55,7 +55,7 @@ ms.locfileid: "52566556"
 
   1. The Microsoft Teams client (web， desktop or mobile) where users interact with your app.
   1. 响应将在网站中显示的内容请求的服务器Teams。 例如，HTML 选项卡内容或自动程序自适应卡片。
-  1. 一Teams[文件](/concepts/build-and-test/apps-package.md)组成的应用包：
+  1. 应用Teams包包含三个文件：
 
       > [!div class="checklist"]
       >
@@ -83,7 +83,7 @@ ms.locfileid: "52566556"
 
 ### <a name="enable-development-from-localhost"></a>从 localhost 启用开发
 
-如果你想要使用 HTTPS 在 localhost 上调试基于选项卡的应用，则需要告诉浏览器信任从 中提供的应用 <https://localhost> 。 导航到 <https://localhost:3000/tab>。 如果您看到一条指示该网站不受信任的警告，请选择继续继续的选项。 现在，你的应用应可从 Teams访问。
+如果你想要使用 HTTPS 在 localhost 上调试基于选项卡的应用，则需要告诉浏览器信任从 中提供的应用 `<https://localhost>` 。 导航到 `<https://localhost:3000/tab>`。 如果您看到一条指示该网站不受信任的警告，请选择继续继续的选项。 现在，你的应用应可从 Teams访问。
 
 ### <a name="run-your-app-in-teams"></a>在应用商店中Teams
 

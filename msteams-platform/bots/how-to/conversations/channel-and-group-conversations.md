@@ -5,12 +5,12 @@ description: 如何发送、接收和处理频道或群聊中机器人的消息�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: ef5cf8464fa0e93d5ea3840003a2b0c04a4a5ef5
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075750"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630997"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>与机器人的频道和群组聊天对话
 
@@ -18,10 +18,12 @@ ms.locfileid: "52075750"
 
 若要在团队Microsoft Teams聊天中安装聊天机器人，请向 `teams` 自动程序添加 或 `groupchat` 范围。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
 
-组或频道中的机器人仅在被提及时接收消息 `@botname` 。 他们不会收到发送到对话的其他任何消息。
+组或频道中的聊天机器人仅在被提及时接收@botname。 他们不会收到发送到对话的其他任何消息。 必须直接 @mentioned 机器人。 当提到团队或频道时，或者当有人从你的机器人回复消息时，没有回复消息时，@mentioning消息。
 
 > [!NOTE]
-> 自动程序必须 `@mentioned` 直接。 当提到团队或频道时，或者当有人从你的机器人回复消息时，没有回复消息时，@mentioning消息。
+> 此功能目前仅适用于公共 [开发人员预览](../../../resources/dev-preview/developer-preview-intro.md) 版。
+>
+> 通过使用 RSC (资源) ，机器人可以接收团队中安装它的所有频道消息，而无需@mentioned。 有关详细信息，请参阅使用 [RSC 接收所有频道消息](channel-messages-with-rsc.md)。
 
 ## <a name="design-guidelines"></a>设计准则
 
@@ -37,7 +39,7 @@ ms.locfileid: "52075750"
 
 ## <a name="work-with-mentions"></a>使用提及
 
-从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中具有其名称的聊天机器人。 确保邮件分析处理@mention。 自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
+从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中具有其名称的聊天机器人。 自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
 
 还必须从自动程序@mentions内容中去除此限制。
 

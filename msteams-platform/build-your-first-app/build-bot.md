@@ -5,12 +5,12 @@ description: 使用Microsoft Teams快速创建自动程序Microsoft Teams Toolki
 ms.author: timura
 ms.date: 04/14/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2cbd90b293e8ac8343febc7b3d23278d5bb5bf82
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d54766d739ceaf585ab4a1e026f4a6e1150e3a2e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565884"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630976"
 ---
 # <a name="create-your-first-bot-for-teams"></a>创建第一个自动程序Teams
 
@@ -64,7 +64,7 @@ ms.locfileid: "52565884"
 
 如果你在另一个教程中创建选项卡，则机器人的应用基架将有所不同。 与选项卡不同，机器人开发不需要你生成任何前端 Web 组件或使用 JavaScript Teams SDK。  相反，基架使用[Microsoft Bot Framework](https://dev.botframework.com/)，这是一个开源 SDK，用于构建可在 Web、移动以及当然Teams！ 
 
-该文件位于项目的根目录中，是Teams聊天机器人活动（如机器人如何响应特定消息）的 `botActivityHandler.js` 特定于 Teams 处理程序。 应用基架提供位于项目根目录中的文件，是 Teams 特定处理程序，用于处理机器人活动，如机器人如何响应 `botActivityHandler.js` 特定消息。
+应用基架提供了一个文件，该文件位于项目的根目录中，是特定于 Teams 的处理程序，用于处理机器人活动，例如机器人如何响应特定 `botActivityHandler.js` 消息。
 
 ## <a name="3-securely-expose-your-localhost-to-the-internet"></a>3. 安全地将 localhost 公开到 Internet
 

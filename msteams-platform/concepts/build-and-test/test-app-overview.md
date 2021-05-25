@@ -4,12 +4,12 @@ description: 介绍在自定义应用中Teams自定义应用Microsoft 365
 ms.topic: how-to
 localization_priority: Normal
 keywords: 配置Microsoft 365测试Teams租户配置
-ms.openlocfilehash: 2c9f23a5c6ae286ff4b7d911f370bd45b854a647
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 37f917727aba1a0f9828434b1519b4bb787df7aa
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565183"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631004"
 ---
 # <a name="test-your-app"></a>测试应用
 
@@ -37,11 +37,9 @@ ms.locfileid: "52565183"
 
 ## <a name="see-also"></a>另请参阅
 
-- [调试选项卡](~/tabs/how-to/developer-tools.md)
- 
-- [调试机器人](~/bots/how-to/debug/locally-with-an-ide.md)
-
-- [测试 RSC 权限](~/graph-api/rsc/test-resource-specific-consent.md)
+* [调试选项卡](~/tabs/how-to/developer-tools.md)
+* [调试机器人](~/bots/how-to/debug/locally-with-an-ide.md)
+* [测试 RSC 权限](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>后续步骤
 

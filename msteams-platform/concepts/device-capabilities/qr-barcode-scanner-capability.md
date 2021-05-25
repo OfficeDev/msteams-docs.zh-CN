@@ -6,12 +6,12 @@ keywords: 相机媒体 qr 代码 qrcode 条形码条形码扫描仪扫描功能�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: ede791a6cd566a0fc725a04e0b615ae1b8eeb0eb
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 2bd5c5c1cfaab4e2f03423f078c04b133331de1a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058339"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630528"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>集成 QR 或条码扫描仪功能 
 
@@ -110,6 +110,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>另请参阅
 
-- [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
-
-- [在 Teams 中集成位置Teams](location-capability.md)
+* [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
+* [在 Teams 中集成位置Teams](location-capability.md)

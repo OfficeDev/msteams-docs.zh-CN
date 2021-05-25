@@ -6,12 +6,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 8724b669476b11aa8cb1aca6d9586fc7ea42587d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566507"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630491"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
@@ -24,69 +24,124 @@ Microsoft Teams应用将关键信息、常用工具和受信任流程引入人�
 
 ## <a name="what-are-teams-apps"></a>什么是Teams应用？
 
-Teams应用是功能和[入口点](concepts/capabilities-overview.md)[的组合](concepts/extensibility-points.md)。 例如，用户可以与你的应用的聊天机器人功能 (在) 入口点 (聊天) 。 
+Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应用使用简单的 (发送) ，而其他应用则复杂 (患者记录) 。 规划应用时，请记住Teams协作中心。 应用的最佳Teams有助于用户表达自己，并更好地协同工作。
 
-某些应用使用简单的 (发送) ，而其他应用则复杂 (患者记录) 。 规划应用时，请记住Teams协作中心。 应用的最佳Teams有助于用户表达自己，并更好地协同工作。
+### <a name="personal-apps"></a>个人应用
 
 :::row:::
-   :::column span="":::
+   :::column span="1":::
 
-### <a name="tabs"></a>选项卡
-
-**更方便地获取信息**：有时你只需使内容更易于查找。 在选项卡中[显示一个重要的](tabs/what-are-tabs.md)网页，它为网站中的静态和动态内容提供Teams。
-
-:::image type="content" source="assets/images/overview-tabs.png" alt-text="选项卡在客户端中的外观的概念Teams表示。" border="false":::
+**帮助用户关注**： [个人](concepts/design/personal-apps.md) 应用是一个专用空间或自动程序，可帮助用户专注于自己的任务或查看重要的活动。
 
    :::column-end:::
 
-   :::column span="":::
+   :::column span="3":::
 
-### <a name="bots"></a>机器人
-
-**将字词转换为操作**：对话通常导致需要执行某些操作 (生成订单、查看代码、检查票证状态等) 。 机器人[可以在](bots/what-are-bots.md)内部启动这些类型的Teams。
-
-:::image type="content" source="assets/images/overview-bots.png" alt-text="自动程序在客户端中的外观的概念Teams表示。" border="false":::
+:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="在概念上表示个人应用在 Teams 客户端中的外观。" border="false":::
 
    :::column-end:::
 
 :::row-end:::
 
+### <a name="tabs"></a>选项卡
+
+:::row:::
+   :::column span="1":::
+
+**协作更方便：** 在选项卡中显示基于 Web 的内容，[](tabs/what-are-tabs.md)用户可以在选项卡中一起讨论和处理内容。
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="选项卡在客户端中的外观的概念Teams表示。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+### <a name="bots"></a>机器人
+
+:::row:::
+   :::column span="1":::
+
+**将字词转换为操作**：对话通常导致需要执行某些操作 (生成订单、查看代码、检查票证状态等) 。 机器人[可以在](bots/what-are-bots.md)内部启动这些类型的Teams。
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-bots-2021.png" alt-text="自动程序在客户端中的外观的概念Teams表示。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+### <a name="messaging-extensions"></a>消息扩展
+
+:::row:::
+
+   :::column span="1":::
+
+**使多任务更容易**[：使用消息传递](messaging-extensions/what-are-messaging-extensions.md)扩展，可以在对话中快速共享外部信息。 还可以对消息采取行动，例如根据频道帖子的内容创建帮助票证。
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="在概念上表示邮件扩展在 Teams 中的外观。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="meeting-extensions"></a>会议扩展
+
+:::row:::
+
+   :::column span="1":::
+
+**为会议创建应用**：有一些选项用于将你的应用合并到Teams [体验](apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="在概念上表示会议扩展在 Teams 中的外观。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="webhooks-and-connectors"></a>Webhook 和连接器
+
 :::row:::
 
    :::column span="":::
 
-### <a name="messaging-extensions"></a>消息扩展
-
-**使多任务更容易**[：使用消息传递](messaging-extensions/what-are-messaging-extensions.md)扩展，可以在对话中快速共享外部信息。 还可以对消息采取行动，例如根据频道帖子的内容创建帮助票证。
-
-:::image type="content" source="assets\images\overview-messaging.png" alt-text="在概念上表示邮件扩展在 Teams 中的外观。" border="false":::
+**与外部应用通信**[：传入 Webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks)是一种将通知从另一个应用自动发送到 Teams 通道的简单方法。 使用 [传出 webhook，](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)使用 @mention 发送 web 服务。
 
    :::column-end:::
 
    :::column span="":::
-
-### <a name="webhooks"></a>Webhook
-
-**与外部应用通信**[：传入 Webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks)是一种将通知从另一个应用自动发送到 Teams 通道的简单方法。 使用 [传出 webhook，](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)使用 @mention 发送 web 服务。
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="连接器在客户端中的外观的概念Teams表示。" border="false":::
 
    :::column-end:::
 :::row-end:::
 
+### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
+
 :::row:::
 
    :::column span="":::
 
-### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
-
-**利用Teams** [：Microsoft Graph API for Teams](/graph/teams-concept-overview)提供对团队、频道、用户和消息的访问权限，这些信息可帮助你创建或增强应用的功能。
-
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Microsoft Graph API Teams。" border="false":::
+**利用 Teams** 数据：适用于 [Teams](/graph/teams-concept-overview)的 Microsoft Graph API 提供对团队、频道、用户和消息的访问权限，这些信息可帮助你创建或增强应用功能 (如丰富的通知) 。
 
    :::column-end:::
 
    :::column span="":::
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Microsoft Graph API Teams。" border="false":::
+
    :::column-end:::
 :::row-end:::
 
@@ -127,7 +182,7 @@ Teams应用是功能和[入口点](concepts/capabilities-overview.md)[的组合]
 
 ## <a name="a-little-code-goes-a-long-way"></a>一个小代码会大有作为
 
-你无需成为专家程序员来构建出色的Teams应用。 请尝试几种低代码解决方案之一。
+你无需成为专家程序员来构建出色的Teams应用。 请尝试多个低代码解决方案之一。
 
 > [!div class="nextstepaction"]
 > [创建低代码应用](samples/teams-low-code-solutions.md)

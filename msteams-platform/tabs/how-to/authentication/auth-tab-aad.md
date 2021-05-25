@@ -4,12 +4,12 @@ description: 介绍Teams中的身份验证以及如何在选项卡中使用它
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 身份验证选项卡 AAD
-ms.openlocfilehash: 2fdfc4448abb6980cca97e90951d7772611108da
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 138575ab28280f167c0627731c8219eccb07b7d9
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020385"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629982"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>在"用户"选项卡中Microsoft Teams用户
 
@@ -151,7 +151,7 @@ if (hashParams["error"]) {
 > Chrome 80 计划于 2020 年初发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 建议设置 Cookie 的预定用途，而不是依赖默认浏览器行为。 *请参阅* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md)。
 
 >[!NOTE]
->若要为免费和来宾Microsoft Teams获取正确的令牌，应用使用特定于租户的终结点 https://login.microsoftonline.com/ **{tenantId} 非常重要**。 你可以从自动程序消息或选项卡上下文获取 tenantId。 如果应用使用 ，用户将获取不正确的令牌，并登录到"主页"租户，而不是当前 https://login.microsoftonline.com/common 已登录的租户。
+>若要为免费和来宾Microsoft Teams获取正确的令牌，应用使用租户特定的终结点 非常重要 `https://login.microsoftonline.com/**{tenantId}**` 。 你可以从自动程序消息或选项卡上下文获取 tenantId。 如果应用使用 ，用户将获取不正确的令牌，并登录到"主页"租户，而不是当前 `https://login.microsoftonline.com/common` 已登录的租户。
 
 有关 Single Sign-On (SSO) 请参阅文章 [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)。
 

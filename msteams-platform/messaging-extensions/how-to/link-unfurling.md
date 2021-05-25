@@ -5,12 +5,12 @@ description: 如何在应用程序应用中使用消息传递扩展Microsoft Tea
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 352de159871069896088559487df2fb94c83e2f9
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 405b320b887300837d51332a9548ff60aff450d0
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075715"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630682"
 ---
 # <a name="link-unfurling"></a>链接展开
 
@@ -178,4 +178,5 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 ## <a name="see-also"></a>另请参阅 
 
-[卡](~/task-modules-and-cards/what-are-cards.md)
+* [卡](~/task-modules-and-cards/what-are-cards.md)
+* [选项卡链接取消展开和阶段视图](~/tabs/tabs-link-unfurling.md)

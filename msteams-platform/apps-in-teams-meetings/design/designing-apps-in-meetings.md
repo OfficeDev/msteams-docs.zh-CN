@@ -5,12 +5,12 @@ description: 了解如何在会议Teams设计应用并获取 Microsoft Teams UI 
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 0a888c333305e9caafcd0bac0e5549bf08ead424
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33b11a6dfc759fabd54ca2fe2c68978a5d5d1475
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566024"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644615"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计会议Microsoft Teams扩展
 
@@ -25,23 +25,33 @@ ms.locfileid: "52566024"
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展
 
-您可以在会议之前和会议期间添加会议扩展名。 还可以直接从 AppSource 应用商店或 AppSource 应用商店Teams特定 () 。
+用户可以在会议之前和会议期间添加会议扩展名。 他们还可以直接从应用商店添加特定会议Teams应用。
 
 ### <a name="add-before-a-meeting"></a>在会议前添加
 
-在会议详细信息中，选择 **"添加选项卡 +"** 以打开应用飞出控件并查找已针对会议优化的应用。
+在会议详细信息中，用户可以选择"添加选项卡 **+"** 以打开应用飞出控件并查找针对会议优化的应用。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="示例演示如何在会议之前添加会议扩展名。" border="false":::
 
 ### <a name="add-during-a-meeting"></a>会议期间添加
 
-在会议上，选择 **"更多** :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **添加应用**"，然后选择你需要的应用。
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
+在会议中，**用户可以选择"** 更多 :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **添加应用**"，然后选择他们需要的应用。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="示例演示如何在会议期间添加会议扩展名。" border="false":::
 
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+在会议中， **用户可以选择"** 更多 :::image type="icon" source="../../assets/icons/teams-client-more.png"::: "并选择他们需要的应用。
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="示例演示如何在移动会议期间添加会议扩展。" border="false":::
+
+---
+
 ## <a name="before-a-meeting"></a>会议前
 
-在会议之前，可以在选项卡中添加内容。以下示例显示了一个草稿调查问题，人员将在呼叫过程中回答该问题。
+在会议之前，用户可以在选项卡中添加内容。以下示例显示了一个草稿调查问题，人员将在呼叫过程中回答该问题。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="示例演示如何在呼叫之前应用会议详细信息中的内容。" border="false":::
 
@@ -64,7 +74,7 @@ ms.locfileid: "52566024"
 * [仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard)：仪表板是包含多个卡片的画布，可提供数据或内容的概述。
 * [表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单用于以结构化方式收集、验证和提交用户输入。
 * [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。
-* [左侧导航](../../concepts/design/design-teams-app-ui-templates.md#left-nav)：如果你的选项卡需要一些导航，左侧导航模板可以提供帮助。 通常，应使 Tab 键导航保持在最低程度。
+* [左侧导航](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)：如果你的选项卡需要一些导航，左侧导航组件会有所帮助。 通常，应该将导航保持在最低程度。
 
 ## <a name="use-an-in-meeting-tab"></a>使用会议内选项卡
 
@@ -78,7 +88,15 @@ ms.locfileid: "52566024"
 * 为会议参与者创建投票、调查或任务项。
 * 显示与会议相关的备注。 例如，有关销售线索的信息。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="示例演示如何在会议中的选项卡中显示投票内容。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="示例演示如何在移动设备上的&quot;会议&quot;选项卡中显示投票内容。" border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-tab"></a>结构：会议内选项卡
 
@@ -124,7 +142,15 @@ Iframe 内容应垂直滚动。 只能查看滚动到的内容， (上方或) �
 * 提交审批
 * 获取提醒
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="示例演示如何使用会议内对话框。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="示例演示如何在移动设备上使用会议内对话框。" border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-dialog"></a>结构：会议内对话框
 

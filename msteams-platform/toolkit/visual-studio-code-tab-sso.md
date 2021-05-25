@@ -5,12 +5,12 @@ keywords: teams visual studio code toolkit tabs sso graph authentication Azure i
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 11e642ce335dae4344f1c730b73763e9172fd76c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2ba9eb27d00f07ec46ddfe0c1cc13ed0864bbbc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566829"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630990"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>使用选项卡的身份验证Teams Toolkit Visual Studio Code单一登录身份验证
 
@@ -50,4 +50,4 @@ ms.locfileid: "52566829"
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 Microsoft Teams Toolkit 和 Visual Studio Code](visual-studio-code-overview.md)
+[使用 Microsoft Teams Toolkit 和 Visual Studio Code](visual-studio-code-overview.md)

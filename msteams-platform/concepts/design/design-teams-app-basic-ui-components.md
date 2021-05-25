@@ -5,16 +5,16 @@ description: 了解通常用于生成应用和获取 Microsoft Teams UI 工具�
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: fd6053b28bd56231d49c5830a00d40868a36509a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019886"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644908"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本的 Fluent UI Microsoft Teams设计应用程序
 
-Teams通常使用以下基本的 Fluent UI 组件构建应用。 这些组件设计尽可能平面，可跨不同的用例、主题和屏幕大小工作。
+可以使用以下基本的 Fluent UI Teams从头开始构建应用程序。 这些组件设计尽可能平面，可跨不同的用例、主题和屏幕大小工作。
 
 此页面上的插图显示组件在默认Teams (浅色) 和深色主题中的外观。
 

@@ -5,12 +5,12 @@ ms.topic: overview
 localization_priority: Normal
 keywords: teams 自动程序消息
 ms.date: 05/20/2019
-ms.openlocfilehash: e1926afe42bca45eda5f39be1be8342452b3aa24
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566493"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630458"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与自动程序Microsoft Teams对话
 
@@ -51,7 +51,7 @@ ms.locfileid: "52566493"
 
 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。 你可以指定自动程序可以在自动程序Microsoft Teams设置页中处理的内容类型。
 
-| Format | 从用户到机器人  | 从自动程序到用户 |  备注 |
+| Format | 从用户到机器人  | 从自动程序到用户 |  注释 |
 | --- | :---: | :---: | --- |
 | 格式文本  | ✔ | ✔ |  |
 | 图片 | ✔ | ✔ | PNG、JPEG 或 GIF 格式的最大大小为 1024×1024 和 1 MB;不支持动态 GIF。 |
@@ -88,7 +88,7 @@ ms.locfileid: "52566493"
 * **个人聊天** 用户只需在聊天历史记录中选择已添加的聊天机器人，或在新聊天的&quot;目标：&quot;框中键入其名称或应用 ID，即可与机器人在私人对话中进行交互。
 * **频道** 可以将机器人 (&quot;@_botname_") 如果已添加到团队，可以在频道中提及它。 请注意，频道中对自动程序的其他回复需要提及机器人。 它将不会在未提及的回复中回复。
 
-对于传入消息，机器人会收到 [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) 类型 为 的对象 `messageType: message` 。 虽然对象可以包含其他类型的信息（如发送到机器人的频道更新），但类型 `Activity` 表示机器人[](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` 和用户之间的通信。
+对于传入消息，机器人会收到类型 为 [的 Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) 对象 `messageType: message` 。 虽然对象可以包含其他类型的信息（如发送到机器人的频道更新），但类型 `Activity` 表示机器人[](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` 和用户之间的通信。
 
 自动程序会收到包含用户消息的有效负载，以及有关用户的其他信息、消息源和Teams `Text` 信息。 注意：
 

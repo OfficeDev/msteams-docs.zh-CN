@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b3f08c39a7900b80fb46d167fae8d9e8bdbcc574
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101553"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644884"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为用户设计个人Microsoft Teams
 
@@ -39,14 +39,16 @@ ms.locfileid: "52101553"
 
 ### <a name="anatomy-personal-app-private-workspace"></a>分析：个人应用 (专用工作区) 
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件分析。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |A|**应用属性**：应用徽标和名称。|
-|B|**选项卡**：为个人应用提供导航。 例如，包括"关于 **"** 或"帮助 **"** 选项卡。|
+|B|**选项卡**：为个人应用提供导航。|
 |C|**弹出视图**：将应用内容从父窗口推送到独立子窗口。|
-|D|**更多菜单**：包括其他应用信息和选项。  (您也可以将选项卡设置 tab.) |
+|D|**更多菜单**：包括其他应用选项和信息。  (您也可以将选项卡设置 tab.) |
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="示例显示个人选项卡的结构结构分析。" border="false":::
 
@@ -55,22 +57,44 @@ ms.locfileid: "52101553"
 |A|**选项卡**：为个人应用提供导航。|
 |1|**iframe：** 显示应用内容。|
 
-### <a name="designing-with-ui-templates"></a>使用 UI 模板进行设计
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-使用以下 UI 模板Teams之一来帮助设计个人选项卡：
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件分析。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|A|**应用属性**：你的应用名称。|
+|B|**选项卡**：为个人应用提供导航。|
+|C|**更多菜单**：包括其他应用选项和信息。|
+|D|**主导航**：提供对应用的其他主要导航Teams导航。|
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="示例显示个人选项卡的结构结构分析。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|A|**选项卡**：为个人应用提供导航。|
+|1|**webview：** 显示应用内容。|
+
+---
+
+### <a name="designing-with-ui-templates-and-advanced-components"></a>使用 UI 模板和高级组件进行设计
+
+使用以下模板和Teams之一来帮助设计个人选项卡：
 
 * [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目采取操作。
 * [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为看板或街道）是一组卡片，通常用于跟踪工作项或票证的状态。
 * [仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard)：仪表板是包含多个卡片的画布，可提供数据或内容的概述。
 * [表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单用于以结构化方式收集、验证和提交用户输入。
 * [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。
-* [左侧导航](../../concepts/design/design-teams-app-ui-templates.md#left-nav)：如果你的选项卡需要一些导航，左侧导航模板可以提供帮助。 通常，应使 Tab 键导航保持在最低程度。
+* [左侧导航](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav)：如果你的个人应用需要一些导航，左侧导航组件可以提供帮助。 通常，应该将导航保持在最低程度。
 
 ## <a name="use-a-personal-app-bot"></a>使用个人应用 (自动) 
 
 个人应用可以包含用于一对一对话的自动程序以及私人通知 (例如，当同事在剪贴板上发布评论时) 。 自动程序在指定的选项卡中可用。
 
 ### <a name="anatomy-personal-app-bot"></a>结构：个人应用 (自动) 
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
 
@@ -79,6 +103,19 @@ ms.locfileid: "52101553"
 |A|**自动程序** 选项卡：例如，包括一个 **聊天选项卡** 来访问机器人对话和通知。|
 |B|**自动程序** 消息：机器人通常以卡片形式发送消息和通知， (自适应卡片) 。|
 |C|**撰写框**：用于向自动程序发送邮件的输入字段。|
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|A|**自动程序入口点**：用户用于访问个人应用中的自动程序功能入口点。|
+|B|**"后退**"按钮：让用户返回到专用工作区。|
+|C|**自动程序** 消息：机器人通常以卡片形式发送消息和通知， (自适应卡片) 。|
+|D|**撰写框**：用于向自动程序发送邮件的输入字段。|
+
+---
 
 ## <a name="manage-a-personal-tab"></a>管理个人选项卡
 

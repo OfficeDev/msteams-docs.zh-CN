@@ -3,20 +3,26 @@ title: 设计自定义应用
 author: heath-hamilton
 description: 了解如何设计Microsoft Teams应用。 资源包括Microsoft Teams UI 工具包、最佳做法、示例等。
 localization_priority: Normal
-ms.author: lajanuar
+ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 2f21872bd8c37026528ff6fde282e8c433d5e052
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565114"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644873"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>设计Microsoft Teams应用
 
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="概念性图像，Microsoft Teams设计指南。":::
 
 无论你是使用低代码工具的设计人员、产品经理、开发人员还是制造商，这些指南都可以帮助你快速做出正确的设计决策，Microsoft Teams应用。
+
+## <a name="creating-a-cohesive-experience"></a>创建统一体验
+
+设计Teams应用与设计传统的 Web 应用类似，但有些不同。 有效的设计可突出显示应用的独特属性，同时自然地适应Teams和上下文。
+
+这些指南和资源可以帮助您实现此平衡。 你将了解在设计 Teams 应用模型时 (该做什么，例如选项卡应用中的多级) 。
 
 ## <a name="teams-app-design-principles"></a>Teams应用设计原则
 
@@ -107,27 +113,9 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
    :::column-end:::
 :::row-end:::
 
-## <a name="creating-a-cohesive-experience"></a>创建统一体验
-
-设计Teams应用与设计传统的 Web 应用类似，但有些不同。 有效的设计可突出显示应用的独特属性，同时自然地适应Teams和上下文。
-
-这些指南和资源可以帮助您实现此平衡。 你将了解在设计 Teams 应用模型时 (该做什么，例如选项卡应用中的多级) 。
-
-## <a name="planning-your-app"></a>规划应用
-
-若要设计高质量的Teams，你必须先了解希望应用执行哪些操作，以及你认为用户如何使用它。 如果尚未开始，请花些时间正确 [规划你的应用](../../concepts/extensibility-points.md)。
-
-## <a name="design-fundamentals"></a>设计基础知识
+## <a name="teams-design-system"></a>Teams设计系统
 
 了解[应用设计Teams基础](design-teams-app-fundamentals.md)，包括布局、配色方案等。
-
-## <a name="basic-fluent-ui-components-for-teams"></a>适用于用户的基本 Fluent UI Teams
-
-这些是基于 Fluent UI 的核心元素，用于创建熟悉的Teams[接口](design-teams-app-basic-ui-components.md)。
-
-## <a name="ui-templates"></a>UI 模板
-
-使用常见用例和工作流的模板快速Teams[高保真度设计](design-teams-app-ui-templates.md)。
 
 ## <a name="app-capabilities"></a>应用功能
 
@@ -138,17 +126,14 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 * [消息扩展](../../messaging-extensions/design/messaging-extension-design.md)
 * [机器人](../../bots/design/bots.md)
 * [会议扩展](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [自适应卡](../../task-modules-and-cards/cards/design-effective-cards.md)
 
-## <a name="app-customization"></a>应用自定义
+## <a name="ui-templates"></a>UI 模板
 
-了解Teams管理员如何根据组织需求自定义或重新品牌应用。 如果在清单架构中定义 ，则 `configurableProperties` 启用此自定义。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
+使用常见用例和工作流的模板快速Teams[高保真度设计](design-teams-app-ui-templates.md)。
 
-> [!NOTE]
-> 通过应用自定义，管理员可以更改通过机器人、消息传递扩展、选项卡和连接器加载的应用的外观。 例如，如果Teams将 *Contoso* 中的应用程序的名称自定义为 *Contoso 代理*，则应用将显示为用户的新名称 *Contoso Agent。* 但是，向聊天添加连接器时，连接器仍将在列表中显示应用的名称为 *Contoso*。
-> 
-> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
+## <a name="basic-ui-components"></a>基本 UI 组件
+
+这些是基于 Fluent UI 的核心[](design-teams-app-basic-ui-components.md)元素，可用于从头开始Teams体验。
 
 ## <a name="tools-and-samples"></a>工具和示例
 
@@ -175,7 +160,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ### <a name="sample-app"></a>示例应用
 
-安装示例应用以查看 UI 模板在上下文中的外观Teams行为。
+你可以上载示例应用，以查看应用在客户端中的外观Teams行为。
 
 > [!div class="nextstepaction"]
 > [获取示例应用 (GitHub) ](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
@@ -186,7 +171,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ### <a name="fluent-ui-documentation"></a>Fluent UI 文档
 
-获取用于构建用户体验的基于 Fluent UI 的组件的代码示例Teams详细信息。
+获取用于构建用户体验的基本 Fluent UI 组件的代码示例Teams详细信息。
 
 > [!div class="nextstepaction"]
 > [尝试Teams Fluent UI (UI 组件) ](https://fluentsite.z22.web.core.windows.net/)

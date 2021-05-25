@@ -78,7 +78,7 @@
 
     **是否对遥测使用 Azure 应用程序见解？ (y/N)**
 
-    选择 **不包括** [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md)。 默认值为"否";输入 **n**。
+    选择 **不包括** [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview)。 默认值为"否";输入 **n**。
 
     **默认选项卡名称 (最多为 16 个字符) ？**
 

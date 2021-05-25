@@ -4,12 +4,12 @@ keywords: teams 应用功能权限
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 34f84285dc883cc474cf1720c42b1699f76c6653
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dd317da0b2c8e214f7a44d13ef69bf9fea2aad93
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566178"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630535"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 
@@ -79,7 +79,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 每个属性都允许您提示用户请求其同意：
 
-| 属性      | 描述   |
+| 属性      | 说明   |
 | --- | --- |
 | media         | 使用相机、麦克风、扬声器和访问媒体库的权限。 |
 | 地理位置   | 返回用户位置的权限。      |
@@ -114,8 +114,8 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 利用适当的 HTML5 或 Teams API，显示获取访问设备权限同意的提示。
 
 > [!IMPORTANT]
-> * 对 `camera` 、 `gallery` 和 `microphone` 的支持通过 [**selectMedia API 启用**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。 将 [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) 用于单个映像捕获。
-> * 通过 `location` [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)启用对 的支持。 你必须将此功能用于位置，因为 HTML5 地理位置 API 当前在桌面客户端上Teams `getLocation API` 受到完全支持。
+> * 对 `camera` 、 `gallery` 和 `microphone` 的支持通过 [**selectMedia API 启用**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 将 [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) 用于单个映像捕获。
+> * 通过 `location` [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)启用对 的支持。 你必须将此功能用于位置，因为 HTML5 地理位置 API 当前在桌面客户端上Teams `getLocation API` 受到完全支持。
 
 例如：
  * 若要提示用户访问其位置，你必须调用 `getCurrentPosition()` ：

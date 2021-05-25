@@ -4,18 +4,18 @@ description: 了解如何为用户设计自适应Teams并获取 Microsoft Teams 
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 14ffff1264e716e04a1ffb5549b71a8b7ec5fc14
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: b4d5f43268c7bd5afecb56d26eb0d49ed6c9002b
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101735"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630263"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为应用设计自适应Microsoft Teams卡片
 
 自适应卡片包含卡片元素和可选操作集的免费格式正文。 自适应卡片是内容可操作的代码段，可以通过机器人或消息传递扩展添加到对话中。 这些卡片使用文本、图形和按钮，向受众提供丰富的通信。
 
-自适应卡片框架适用于许多 Microsoft 产品，包括Teams。 可以通过机器人或消息扩展向用户发送内部邮件卡片。 存在此情况时，用户可以对卡片采取操作。
+自适应卡片框架适用于许多 Microsoft 产品，包括Teams。 可以通过机器人或消息扩展向用户发送内部邮件卡片。 用户还可以在卡片上操作（存在）。
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="自适应卡片的概述示例。" border="false":::
 
@@ -39,73 +39,151 @@ ms.locfileid: "52101735"
 
 我们最大的卡片。 用于共享文章或场景，其中图像可以描述大部分情景。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="示例显示自适应卡片展示卡。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="示例显示移动设备上的自适应卡片展示卡。" border="false":::
+
+---
 
 ### <a name="thumbnail"></a>缩略图
 
 用于发送简单的可操作邮件。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="示例显示自适应卡片缩略图卡片。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="示例显示移动版自适应卡片缩略图卡片。" border="false":::
+
+---
 
 ### <a name="list"></a>列表
 
 在您希望用户从列表中选取项目，但项目不需要太多解释的情况下使用。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="示例显示自适应卡片列表卡片。" border="false":::
 
-### <a name="digest"></a>Digest
+# <a name="mobile"></a>[移动](#tab/mobile)
 
-用于新闻摘要和向上舍入帖子。 注意：我们建议使用单个更新或新闻项的缩略图卡片。
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="示例显示移动设备上的自适应卡片列表卡。" border="false":::
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="示例显示自适应卡片摘要卡片。" border="false":::
+---
+Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
+':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
+':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
+---
 
 ### <a name="media"></a>媒体
 
 在你想要组合文本和媒体（如音频或视频）时使用。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="示例显示自适应卡片媒体卡。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="示例显示移动设备上的自适应卡片媒体卡。" border="false":::
+
+---
 
 ### <a name="people"></a>人员
 
 最适用于有效传达任务涉及人员。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="示例显示自适应卡片人员卡片。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="示例显示移动设备上的自适应卡片人员卡片。" border="false":::
+
+---
 
 ### <a name="request-ticket"></a>请求票证
 
 用于从用户处获取快速输入，以自动创建任务或票证。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="示例显示自适应卡片请求票证卡。" border="false":::
 
-### <a name="imageset"></a>ImageSet
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="示例显示移动版自适应卡片请求票证卡。" border="false":::
+
+---
+
+### <a name="image-set"></a>图像集
 
 用于发送多个图像缩略图。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="示例显示自适应卡片图像集卡。" border="false":::
 
-### <a name="actionset"></a>ActionSet
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="示例显示移动设备上的自适应卡片图像集卡。" border="false":::
+
+---
+
+### <a name="action-set"></a>操作集
 
 当你希望用户选择一个按钮，然后从同一卡片收集添加的用户输入时，使用 。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="示例显示自适应卡片操作集卡片。" border="false":::
 
-### <a name="choiceset"></a>ChoiceSet
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="示例显示移动设备上的自适应卡片操作集卡片。" border="false":::
+
+---
+
+### <a name="choice-set"></a>选项集
 
 用于收集用户的多个输入。
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="示例显示自适应卡片选择集卡。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="示例显示移动设备上的自适应卡片选择集卡。" border="false":::
+
+---
 
 ## <a name="anatomy"></a>解剖
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="示例显示自适应卡片分析卡。" border="false":::
+自适应卡片具有很多灵活性。 但是，我们强烈建议至少将以下组件包括在每张卡中。
 
-自适应卡片具有很多灵活性。 但是，我们强烈建议至少将以下组件包括在每张卡片中：
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample 显示自适应卡片分析。" border="false":::
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="示例演示移动版自适应卡片分析。" border="false":::
+
+---
 
 |计数器|说明|
 |----------|-----------|
-|A|**标头**：使标题简洁明了，但具有描述性。|
-|B|**正文** 副本：用于传达太长或不够重要以包括在标头中的详细信息。|
-|C|**主要操作**：最佳做法包括 1-3 个主要操作。 最多允许六个。|
+|A|**标头**：使标题简洁明了。|
+|B|**正文副本**：传达太长或不够重要以包括在标头中的详细信息。|
+|C|**主要操作**：最佳做法包括 1-3 个主要操作。 你最多可以拥有六个。|
 
 ## <a name="best-practices"></a>最佳做法
 

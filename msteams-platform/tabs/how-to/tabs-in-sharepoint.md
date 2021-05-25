@@ -6,12 +6,12 @@ keywords: teams 选项卡 sharepoint 框架开发
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a2ea6c470f094a9d7b8617a210559e911f5f81c9
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: c6c5668c0d937e0512d8a6dba366f7fd545b8a96
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058479"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630409"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>将 Teams 选项卡添加到 SharePoint 
 
@@ -42,7 +42,7 @@ ms.locfileid: "52058479"
     </a>
 </li>
 <li>
-    <a href="https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
+    <a href="/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -143,8 +143,6 @@ ms.locfileid: "52058479"
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 SharePoint 框架生成 Microsoft Teams 选项卡 - 教程](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-
-- [在 SharePoint Online 中使用单个部件应用程序页面](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
-
-- [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+* [使用 SharePoint 框架生成 Microsoft Teams 选项卡 - 教程](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+* [在 SharePoint Online 中使用单个部件应用程序页面](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+* [集成 web 应用](~/samples/integrate-web-apps-overview.md)

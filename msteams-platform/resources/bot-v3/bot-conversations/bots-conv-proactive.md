@@ -4,12 +4,12 @@ description: 描述机器人可以在聊天机器人中启动Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 团队方案主动消息对话机器人
-ms.openlocfilehash: baf148d0f4d0a669de582dfca70ed5d5bed0274c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 82282c4e2a2d48acad8f4bb384976906296be8f9
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566787"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630465"
 ---
 # <a name="proactive-messaging-for-bots"></a>自动程序主动消息传递
 
@@ -71,7 +71,7 @@ ms.locfileid: "52566787"
 
 只能安装组织应用目录中的应用，或Teams应用商店。
 
-有关[完整详细信息，](/graph/teams-proactive-messaging)请参阅Graph安装用户应用。 .NET 中 [还有一个示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
+有关[完整详细信息，](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)请参阅Graph安装用户应用。 .NET 中 [还有一个示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
 
 ## <a name="examples"></a>示例
 

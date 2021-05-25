@@ -5,12 +5,12 @@ description: 如何处理来自自动程序的对话Microsoft Teams事件。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020026"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630703"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -48,7 +48,7 @@ ms.locfileid: "52020026"
 | 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道被重命名](#channel-renamed)。 | 团队 |
 | 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道被删除](#channel-deleted)。 | 团队 |
 | 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [频道已还原](#channel-deleted)。 | 团队 |
-| 添加的成员   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 所有 |
+| 添加的成员   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 全部 |
 | 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [将删除成员](#team-members-removed)。 | groupChat and team |
 | 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队重命名为](#team-renamed)。       | 团队 |
 | 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队已删除](#team-deleted)。       | 团队 |
@@ -143,7 +143,7 @@ async def on_teams_channel_created(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-renamed"></a>通道重命名
 
@@ -225,7 +225,7 @@ async def on_teams_channel_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-deleted"></a>频道已删除
 
@@ -309,7 +309,7 @@ async def on_teams_channel_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-restored"></a>已还原频道
 
@@ -398,7 +398,7 @@ async def on_teams_channel_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-members-added"></a>添加了工作组成员
 
@@ -542,7 +542,7 @@ async def on_teams_members_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-members-removed"></a>已删除团队成员
 
@@ -654,7 +654,7 @@ async def on_teams_members_removed(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-renamed"></a>团队重命名
 
@@ -734,7 +734,7 @@ async def on_teams_team_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-deleted"></a>团队已删除
 
@@ -810,7 +810,7 @@ async def on_teams_team_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-restored"></a>已还原团队
 
@@ -890,7 +890,7 @@ async def on_teams_team_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-archived"></a>团队存档
 
@@ -970,7 +970,7 @@ async def on_teams_team_archived(
     )
 ```
 
-* * *
+---
 
 
 ### <a name="team-unarchived"></a>团队未存档
@@ -1051,7 +1051,7 @@ async def on_teams_team_unarchived(
     )
 ```
 
-* * *
+---
 
 现在，你已使用对话更新事件，可以了解对消息的不同反应所发生的消息反应事件。
 
@@ -1061,8 +1061,8 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 所有   |
-| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 所有 |
+| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 全部   |
+| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 全部 |
 
 ### <a name="reactions-added-to-bot-message"></a>添加到自动程序消息的反应
 
@@ -1173,7 +1173,7 @@ async def on_reactions_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="reactions-removed-from-bot-message"></a>从自动程序消息中删除的反应
 
@@ -1282,7 +1282,7 @@ async def on_reactions_removed(
     return
 ```
 
-* * *
+---
 
 ## <a name="installation-update-event"></a>安装更新事件
 
@@ -1320,6 +1320,10 @@ turnContext, CancellationToken cancellationToken) {
 // TO:DO Installation workflow return;
 }
 ```
+
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
+
+不可用
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1375,7 +1379,12 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
-* * *
+
+# <a name="python"></a>[Python](#tab/python)
+
+不可用
+
+---
 
 ## <a name="code-sample"></a>代码示例
 
