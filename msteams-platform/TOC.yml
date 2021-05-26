@@ -89,30 +89,40 @@
   items:
     - name: 概述
       href: concepts/design/design-teams-app-overview.md
-    - name: 设计基础知识
+    - name: 了解设计过程
+      href: concepts/design/design-teams-app-process.md
+    - name: 设计系统
       href: concepts/design/design-teams-app-fundamentals.md
-    - name: 基本 UI 组件
-      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: 应用功能
+      items:
+        - name: 了解应用结构
+          href: concepts/design/app-structure.md
+        - name: 个人应用
+          href: concepts/design/personal-apps.md
+        - name: 选项卡
+          href: tabs/design/tabs.md
+        - name: 机器人
+          href: bots/design/bots.md
+        - name: 消息传递扩展
+          href: messaging-extensions/design/messaging-extension-design.md
+        - name: 会议扩展
+          href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
     - name: UI 模板
       href: concepts/design/design-teams-app-ui-templates.md
-    - name: 个人应用
-      href: concepts/design/personal-apps.md
-    - name: 选项卡
+    - name: UI 组件
       items:
-        - name: 桌面版和 Web 版
-          href: tabs/design/tabs.md
-        - name: 移动版
-          href: tabs/design/tabs-mobile.md
-    - name: 消息扩展
-      href: messaging-extensions/design/messaging-extension-design.md
-    - name: 机器人
-      href: bots/design/bots.md
-    - name: 会议扩展
-      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
-    - name: 自适应卡
-      href: task-modules-and-cards/cards/design-effective-cards.md
-    - name: 任务模块
-      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+        - name: 基本 UI 组件
+          href: concepts/design/design-teams-app-basic-ui-components.md
+        - name: 高级 UI 组件
+          href: concepts/design/design-teams-app-advanced-ui-components.md
+        - name: 自适应卡
+          href: task-modules-and-cards/cards/design-effective-cards.md
+        - name: 任务模块
+          href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+        - name: 活动源通知
+          href: concepts/design/activity-feed-notifications.md
+    - name: 启用应用自定义
+      href: concepts/design/enable-app-customization.md
 - name: 工具和 SDK
   items:
     - name: Visual Studio Code 的Teams工具包
@@ -123,6 +133,8 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: 应用程序 Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: Teams 开发人员门户
+      href: concepts/build-and-test/teams-developer-portal.md
     - name: 团队 JavaScript 客户端 SDK
       href: tabs/how-to/using-teams-client-sdk.md
     - name: 适用于机器人和消息扩展（GitHub）的 Node.js Bot Framework
@@ -179,6 +191,8 @@
   items:
     - name: 概述
       href: tabs/what-are-tabs.md
+    - name: 选项卡链接展开和阶段视图
+      href: tabs/tabs-link-unfurling.md
     - name: 选项卡要求
       href: tabs/how-to/tab-requirements.md
     - name: 快速入门
@@ -201,6 +215,8 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: 创建删除页面
       href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: 移动设备上的选项卡
+      href: tabs/design/tabs-mobile.md
     - name: 获取选项卡的上下文
       href: tabs/how-to/access-teams-context.md
 - name: 构建机器人
@@ -217,6 +233,9 @@
           href: bots/how-to/conversations/conversation-basics.md
         - name: 智能机器人对话中的邮件
           href: bots/how-to/conversations/conversation-messages.md
+          items:
+            - name: 使用 RSC 接收所有频道消息
+              href: bots/how-to/conversations/channel-messages-with-rsc.md
         - name: 为机器人创建命令菜单
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: 频道和群组对话
