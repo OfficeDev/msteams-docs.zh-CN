@@ -5,12 +5,12 @@ keywords: Teams o365 连接器
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 1598b84fc1c36547aa4c814cdf03404a3833779e
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629821"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646319"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>创建Office 365连接器Microsoft Teams
 
@@ -190,7 +190,7 @@ ms.locfileid: "52629821"
 
 Exchange Online PowerShell V2 模块使用新式验证，并且与 MFA (MFA) 一起用于连接到 Microsoft 365 中所有与 Exchange 相关的 PowerShell 环境。 管理员可以使用 Exchange Online PowerShell 禁用整个租户或特定组邮箱的连接器，从而影响该租户或邮箱中的所有用户。 无法对部分（而非其他）禁用。 此外，默认情况下会为租户禁用GCC连接器。
 
-租户级别设置会覆盖组级别设置。 例如，如果管理员为组启用连接器，并禁用租户上的连接器，则组连接器将被禁用。 若要在 Teams中启用连接器，Exchange Online带或不带 MFA 的新式验证连接到[PowerShell。](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)
+租户级别设置会覆盖组级别设置。 例如，如果管理员为组启用连接器，并禁用租户上的连接器，则组连接器将被禁用。 若要在 Teams中启用连接器，Exchange Online带或不带 MFA 的新式验证连接到[PowerShell。](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)
 
 ### <a name="commands-to-disable-or-enable-connectors"></a>禁用或启用连接器的命令
 
@@ -203,7 +203,7 @@ Exchange Online PowerShell V2 模块使用新式验证，并且与 MFA (MFA) 一
     * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
     * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-有关 PowerShell 模块交换功能详细信息，请参阅[Set-OrganizationConfig。](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true) 若要启用或禁用Outlook连接器，[请将应用连接到](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)Outlook。
+有关 PowerShell 模块交换功能详细信息，请参阅[Set-OrganizationConfig。](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true) 若要启用或禁用Outlook连接器，[请将应用连接到](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)Outlook。
 
 ## <a name="testing-your-connector"></a>测试连接器
 

@@ -6,12 +6,12 @@ keywords: 相机媒体 qr 代码 qrcode 条形码条形码扫描仪扫描功能�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 2bd5c5c1cfaab4e2f03423f078c04b133331de1a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630528"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646558"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>集成 QR 或条码扫描仪功能 
 
@@ -19,7 +19,7 @@ ms.locfileid: "52630528"
 
 条形码是一种以可视和机器可读的形式表示数据的方法。 条码包含有关产品的信息，如条形图和空格形式的类型、大小、制造商和来源国家/地区。 该代码使用本机设备相机上的光学扫描仪进行读取。 为了获得更丰富的协作体验，你可以将 Teams 平台中提供的 QR 或条形码扫描仪功能与Teams集成。   
 
-可以使用[JavaScript Microsoft Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户的本机设备功能[所需的工具](native-device-permissions.md)。 使用 `scanBarCode` API 将扫描程序功能集成到你的应用中。 
+可以使用[JavaScript Microsoft Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户的本机设备功能[所需的工具](native-device-permissions.md)。 使用 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API 将扫描程序功能集成到你的应用中。 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>集成 QR 或条形码扫描仪功能的优势
 
@@ -28,7 +28,7 @@ ms.locfileid: "52630528"
 * 集成使 Web 应用开发者Teams JavaScript 客户端 SDK 利用 QR 或条形码Teams功能。
 * 使用此功能，用户只需在扫描仪 UI 中心的框架内对齐 QR 或条形码，代码将自动扫描。 存储的数据将重新与调用 Web 应用共享。 这样可以避免手动输入冗长的产品代码或其他相关信息带来的不便和人为错误。
 
-若要集成 QR 或条形码扫描仪功能，必须更新应用清单文件并调用 `scanBarCode` API。 为了进行有效的集成，你必须深入了解用于调用 API[](#code-snippet)的代码段，这允许你使用本机 `scanBarCode` QR 或条形码扫描仪功能。 API 为不支持的条形码标准提供错误。
+若要集成 QR 或条形码扫描仪功能，必须更新应用清单文件并调用 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API。 为了进行有效的集成，你必须深入了解用于调用[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API 的代码段，这允许你使用本机 QR 或条形码扫描仪功能。 [](#code-snippet) API 为不支持的条形码标准提供错误。
 熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
 
 > [!NOTE] 
@@ -49,9 +49,9 @@ ms.locfileid: "52630528"
 
 ## <a name="scanbarcode-api"></a>ScanBarCode API
 
-API 调用允许用户扫描不同类型的条形码的扫描仪控件， `ScanBarCode` 并返回字符串形式的结果。
+[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API 调用扫描程序控件，使用户可以扫描不同类型的条形码，并返回字符串形式的结果。
 
-若要自定义条形码扫描体验，可选条形码配置作为输入传递到 `ScanBarCode` API。 可以使用 指定扫描的退出间隔（以秒为单位 `timeOutIntervalInSec` ）。 其默认值为 30 秒，最大值为 60 秒。
+若要自定义条形码扫描体验，可选 [条形码配置](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) 作为输入传递到 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API。 可以使用 指定扫描的退出间隔（以秒为单位 `timeOutIntervalInSec` ）。 其默认值为 30 秒，最大值为 60 秒。
 
 **scanBarCode ()** API 支持以下条形码类型：
 

@@ -5,13 +5,13 @@ description: 大致了解开发人员如何使用自定义Microsoft Teams扩展�
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
-ms.date: 09/22/2020
-ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.date: 05/24/2021
+ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630491"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646500"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
@@ -20,7 +20,7 @@ Microsoft Teams应用将关键信息、常用工具和受信任流程引入人�
 应用是扩展Teams以满足你的需求。 为现有应用创建全新的Teams或集成现有应用。
 
 > [!div class="nextstepaction"]
-> [从这里开始](build-your-first-app/build-first-app-overview.md)
+> [从这里开始](get-started/prerequisites.md)
 
 ## <a name="what-are-teams-apps"></a>什么是Teams应用？
 
@@ -153,7 +153,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 通过设置环境和创建简单的Teams快速熟悉构建环境。
 
 > [!div class="nextstepaction"]
-> [构建首个应用](build-your-first-app/build-first-app-overview.md)
+> [构建首个应用](get-started/prerequisites.md)
 
    :::column-end:::
    :::column span="":::

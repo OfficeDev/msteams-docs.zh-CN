@@ -5,12 +5,12 @@ keywords: 开发人员门户团队入门
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 857d2069c4f67bf15e1d3435af55a684a918df87
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 5f3335470a442fc8a3c94e9563e21fea75c4ef4b
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635077"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646331"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>使用开发人员门户管理应用Microsoft Teams
 
@@ -79,8 +79,8 @@ ms.locfileid: "52635077"
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *每月 R30* | 默认使用率指标。 它显示了在 UTC 时间滚动 30 天窗口内使用你的应用的唯一活动用户数。 |
 | *每天* | 显示以 UTC 格式在给定日期使用应用的唯一活动用户数。 |
-| *历史记录* | 显示过去七天、30 天和 60 天的每月使用情况和每日使用情况。 |
-| *延迟* | 您应在 24-48 小时内看到给定一天的使用情况。 新应用的使用情况最多可能需要 3-5 天才能显示。|
+
+显示过去七天、30 天和 60 天的每月使用情况和每日使用情况。 您应在 24-48 小时内看到给定一天的使用情况。 新应用的使用情况最多可能需要 3-5 天才能显示。
 
 ## <a name="use-tools-to-create-app-features"></a>使用工具创建应用功能
 
