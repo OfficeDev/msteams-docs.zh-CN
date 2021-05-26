@@ -4,12 +4,12 @@ description: 使用通用操作的用户特定视图示例
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 696fc5ce25c79d749b301309bfe0c737e39ad294
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: cadf66082582cfd9009a0497b3eb5e58f0a2ef02
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555442"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649622"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
@@ -17,7 +17,15 @@ ms.locfileid: "52555442"
 
 例如，Contoso 的安全检查员 Megan 想要创建事件并将其分配给 Alex。 她还希望团队中的每个人都了解事件。 Megan 使用 Contoso 事件报告邮件扩展，该扩展由自适应卡片的通用操作支持。
 
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="移动用户特定视图":::
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="用户特定视图":::
+
+* * *
 
 ## <a name="user-specific-views-for-adaptive-cards"></a>自适应卡片的用户特定视图
 

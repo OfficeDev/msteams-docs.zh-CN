@@ -4,16 +4,23 @@ description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应�
 keywords: 应用室团队入门
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 391086b85f0e68e1a864c3d4254bdbe62b5eaa1a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: eda6835a1453f878476b3cc296ff2c0e5dc889a5
+ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565198"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52651710"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams 快速开发应用
 
 无论你为企业开发自定义应用还是为世界各地的团队开发 SaaS 应用程序，App Studio 都可以轻松创建或集成你自己的 Microsoft Teams 应用，其方式包括简化应用程序的清单和包的创建，并提供卡片编辑器和响应控制库等有用工具。
+
+> [!IMPORTANT]
+> App Studio 当前在下列类型的组织Teams可用：
+>
+> * 政府社区云 (GCC)
+> * GCC 高
+> * DoD
 
 ## <a name="installing-app-studio"></a>安装 App Studio
 

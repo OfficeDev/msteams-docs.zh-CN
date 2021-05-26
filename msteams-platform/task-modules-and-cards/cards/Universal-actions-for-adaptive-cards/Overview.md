@@ -3,12 +3,12 @@ title: 自适应卡片的通用操作概述
 description: 自适应卡片的通用操作快速概述。
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f0adf3d1a01262ff9cbdf14128c9ffe088ae8072
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 8bdbc488c68bf9bef79363f1a22d66e63ec32e08
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088857"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649709"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
@@ -51,7 +51,15 @@ ms.locfileid: "52088857"
 
 下图描述了适用于用户和用户的通用自适应卡片Teams Outlook：
 
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="移动同一卡片Teams和Outlook":::
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="与 Teams 和 Outlook":::
+
+* * *
 
 ### <a name="user-specific-views"></a>用户特定视图
 
@@ -61,7 +69,15 @@ ms.locfileid: "52088857"
 
 下图显示了一个票证消息传递扩展 (ME) ，其中聊天中的不同用户根据要求显示了不同的操作：
 
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="移动用户特定视图":::
+
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="用户特定视图":::
+
+* * *
 
 有关详细信息，请参阅用户 [特定视图的示例](User-Specific-Views.md)。
 
@@ -91,7 +107,7 @@ ms.locfileid: "52088857"
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>自适应卡片和新的通用操作模型
 
-自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。 有关详细信息，请参阅自适应 [卡片](http://adaptivecards.io/)。 自适应卡片的新通用操作支持跨平台和应用程序常见处理自适应卡片操作。 有关详细信息，请参阅通用 [操作模型](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model)。
+自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。 有关详细信息，请参阅自适应 [卡片](http://adaptivecards.io/)。 自适应卡片的新通用操作支持跨平台和应用程序常见处理自适应卡片操作。 有关详细信息，请参阅通用 [操作模型](/adaptive-cards/authoring-cards/universal-action-model)。
 
 [使用适用于自适应卡片的通用操作](Work-with-universal-actions-for-adaptive-cards.md) 文档将介绍为解决方案使用通用操作自适应卡片功能的步骤。
 

@@ -3,12 +3,12 @@ title: 使用自适应卡的通用操作
 description: 使用自适应卡片的通用操作。
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 8c260a4893d38ad365cbb3bdd5a7613a1b42654f
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088821"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649697"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>使用自适应卡的通用操作
 
@@ -42,7 +42,7 @@ ms.locfileid: "52088821"
 
 如果将卡版本设置为小于 1.4，并使用 属性 和 或 两者之一， `refresh` `Action.Execute` 将发生以下情况：
 
-| Client | 行为 |
+| 客户端 | 行为 |
 | :-- | :-- |
 | Teams | 你的卡片停止工作。 卡片不会刷新， `Action.Execute` 并且不会呈现，具体取决于 Teams 版本。 若要确保应用程序的最大Teams，请通过 回退 `Action.Execute` `Action.Submit` 属性中的 定义 。 |
 
@@ -52,7 +52,7 @@ ms.locfileid: "52088821"
 
 创作自适应卡片时，请将 和 `Action.Submit` `Action.Http` 替换为 `Action.Execute` 。 的 `Action.Execute` 架构类似于 `Action.Submit` 。
 
-有关详细信息，请参阅Action.Exe[ 和属性](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
+有关详细信息，请参阅Action.Exe[ 和属性](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
 
 现在，可以使用刷新模型允许自适应卡片自动更新。
 
@@ -60,7 +60,7 @@ ms.locfileid: "52088821"
 
 若要自动刷新自适应卡片，请定义其 `refresh` 属性，这将嵌入类型和 `Action.Execute` 数组 `userIds` 的操作。
 
-有关详细信息，请参阅 [刷新架构和属性](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism)。
+有关详细信息，请参阅 [刷新架构和属性](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism)。
 
 ## <a name="user-ids-in-refresh"></a>刷新中的用户 ID
 
@@ -72,7 +72,7 @@ ms.locfileid: "52088821"
 
 * 添加 UserIds 属性是因为Teams频道可以包含大量成员。 如果所有成员同时查看频道，则无条件自动刷新会导致对机器人进行许多并发呼叫。 若要避免这种情况，必须始终包括 属性，以确定哪些用户必须自动刷新，最多 `userIds` *60 (60*) MRIs 。
 
-* 若要详细了解如何提取对话Teams用户 MRIs 以在自适应卡片刷新部分添加 userIds 列表，请参阅提取[名单或用户配置文件](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
+* 若要详细了解如何提取对话Teams用户 MRIs 以在自适应卡片刷新部分添加 userIds 列表，请参阅提取[名单或用户配置文件](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
 
 * 用户 MRI Teams示例`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -85,9 +85,9 @@ ms.locfileid: "52088821"
 
 When `Action.Execute` is executed in the client， a new type of Invoke activity `adaptiveCard/action` is made to your bot.
 
-有关详细信息，请参阅典型调用活动的请求 [格式 `adaptiveCard/action` 和属性](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#request-format)。
+有关详细信息，请参阅典型调用活动的请求 [格式 `adaptiveCard/action` 和属性](/adaptive-cards/authoring-cards/universal-action-model#request-format)。
 
-有关详细信息，请参阅具有受支持的 [响应类型的典型 `adaptiveCard/action` 调用活动的响应格式和属性](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#response-format)。
+有关详细信息，请参阅具有受支持的 [响应类型的典型 `adaptiveCard/action` 调用活动的响应格式和属性](/adaptive-cards/authoring-cards/universal-action-model#response-format)。
 
 接下来，你可以跨不同平台将向后兼容性应用到较旧的客户端，并兼容自适应卡片。
 
@@ -99,7 +99,13 @@ When `Action.Execute` is executed in the client， a new type of Invoke activity
 
 若要确保自适应卡片与旧版卡片的向后Teams，必须包含 属性，并 `fallback` 设置其值 `Action.Submit` 。 此外，自动程序代码必须同时处理 `Action.Execute` 和 `Action.Submit` 。
 
-有关详细信息，请参阅[上向后兼容性Teams。](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#teams)
+有关详细信息，请参阅[上向后兼容性Teams。](/adaptive-cards/authoring-cards/universal-action-model#teams)
+
+## <a name="code-sample"></a>代码示例
+
+|示例名称 | 说明 | .NETCore |
+|----------------|-----------------|--------------|
+| Teams机器人 | 创建使用自适应卡片接受食物订单的简单机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
 
 ## <a name="see-also"></a>另请参阅
 

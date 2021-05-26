@@ -4,12 +4,12 @@ description: 使用通用操作的顺序工作流的示例
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 7f285bf76aac4f0ca276321aee2ce4b4e5c3e7e4
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: f36e65133572569cd01de1053044336c810656f3
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555400"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649642"
 ---
 # <a name="sequential-workflows"></a>顺序工作流
 
@@ -122,6 +122,12 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+## <a name="code-sample"></a>代码示例
+
+|示例名称 | 说明 | .NETCore |
+|----------------|-----------------|--------------|
+| Teams机器人 | 创建使用自适应卡片接受食物订单的简单机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
 
 ## <a name="see-also"></a>另请参阅
 
