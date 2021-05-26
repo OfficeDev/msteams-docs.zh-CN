@@ -3,106 +3,122 @@ title: 自适应卡片的通用操作概述
 description: 自适应卡片的通用操作快速概述。
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f0adf3d1a01262ff9cbdf14128c9ffe088ae8072
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 8bdbc488c68bf9bef79363f1a22d66e63ec32e08
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088857"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649709"
 ---
-# <a name="universal-actions-for-adaptive-cards"></a><span data-ttu-id="a9c6c-103">自适应卡的通用操作</span><span class="sxs-lookup"><span data-stu-id="a9c6c-103">Universal Actions for Adaptive Cards</span></span>
+# <a name="universal-actions-for-adaptive-cards"></a><span data-ttu-id="78eeb-103">自适应卡的通用操作</span><span class="sxs-lookup"><span data-stu-id="78eeb-103">Universal Actions for Adaptive Cards</span></span>
 
-<span data-ttu-id="a9c6c-104">自适应卡片的通用操作从开发人员反馈中发展，尽管自适应卡片的布局和呈现是通用的，但操作处理不是。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-104">Universal Actions for Adaptive Cards evolved from developer feedback that even though layout and rendering for Adaptive Cards was universal, action handling was not.</span></span> <span data-ttu-id="a9c6c-105">即使开发人员希望将同一张卡片发送到不同位置，他们必须处理不同的操作。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-105">Even if a developer wanted to send the same card to different places, they have to handle actions differently.</span></span>
+<span data-ttu-id="78eeb-104">自适应卡片的通用操作从开发人员反馈中发展，尽管自适应卡片的布局和呈现是通用的，但操作处理不是。</span><span class="sxs-lookup"><span data-stu-id="78eeb-104">Universal Actions for Adaptive Cards evolved from developer feedback that even though layout and rendering for Adaptive Cards was universal, action handling was not.</span></span> <span data-ttu-id="78eeb-105">即使开发人员希望将同一张卡片发送到不同位置，他们必须处理不同的操作。</span><span class="sxs-lookup"><span data-stu-id="78eeb-105">Even if a developer wanted to send the same card to different places, they have to handle actions differently.</span></span>
 
-<span data-ttu-id="a9c6c-106">自适应卡片的通用操作将机器人作为处理操作的通用后端引入，并引入了新的操作类型，它适用于应用，如 Teams `Action.Execute` 和 Outlook。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-106">Universal Actions for Adaptive Cards brings the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.</span></span>
+<span data-ttu-id="78eeb-106">自适应卡片的通用操作将机器人作为处理操作的通用后端引入，并引入了新的操作类型，它适用于应用，如 Teams `Action.Execute` 和 Outlook。</span><span class="sxs-lookup"><span data-stu-id="78eeb-106">Universal Actions for Adaptive Cards brings the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.</span></span>
 
-<span data-ttu-id="a9c6c-107">本文档可帮助你了解如何使用通用操作模型增强跨平台和应用程序与自适应卡片交互的用户体验。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-107">This document helps you to understand how you can use Universal Actions model to enhance user experience of interacting with Adaptive Cards across platforms and applications.</span></span>
+<span data-ttu-id="78eeb-107">本文档可帮助你了解如何使用通用操作模型增强跨平台和应用程序与自适应卡片交互的用户体验。</span><span class="sxs-lookup"><span data-stu-id="78eeb-107">This document helps you to understand how you can use Universal Actions model to enhance user experience of interacting with Adaptive Cards across platforms and applications.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a9c6c-108">仅对自动程序发送的卡片支持自适应卡片的通用操作。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-108">Support for Universal Actions for Adaptive Cards is only available for cards sent by bot.</span></span> <span data-ttu-id="a9c6c-109">即将推出对通过撰写框和链接取消点击卡片发送的卡片的支持。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-109">Support for cards sent through compose box and link unfurling cards is coming soon.</span></span>
+> <span data-ttu-id="78eeb-108">仅对自动程序发送的卡片支持自适应卡片的通用操作。</span><span class="sxs-lookup"><span data-stu-id="78eeb-108">Support for Universal Actions for Adaptive Cards is only available for cards sent by bot.</span></span> <span data-ttu-id="78eeb-109">即将推出对通过撰写框和链接取消点击卡片发送的卡片的支持。</span><span class="sxs-lookup"><span data-stu-id="78eeb-109">Support for cards sent through compose box and link unfurling cards is coming soon.</span></span>
 
-## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a><span data-ttu-id="a9c6c-110">使用自适应卡片的通用操作增强用户体验</span><span class="sxs-lookup"><span data-stu-id="a9c6c-110">Enhance user experiences with Universal Actions for Adaptive Cards</span></span>
+## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a><span data-ttu-id="78eeb-110">使用自适应卡片的通用操作增强用户体验</span><span class="sxs-lookup"><span data-stu-id="78eeb-110">Enhance user experiences with Universal Actions for Adaptive Cards</span></span>
 
-<span data-ttu-id="a9c6c-111">自适应卡片的通用操作通过启用以下方案来增强用户体验：</span><span class="sxs-lookup"><span data-stu-id="a9c6c-111">Universal Actions for Adaptive Cards enhances user experience by enabling the following scenarios:</span></span>
+<span data-ttu-id="78eeb-111">自适应卡片的通用操作通过启用以下方案来增强用户体验：</span><span class="sxs-lookup"><span data-stu-id="78eeb-111">Universal Actions for Adaptive Cards enhances user experience by enabling the following scenarios:</span></span>
 
-* [<span data-ttu-id="a9c6c-112">通用操作</span><span class="sxs-lookup"><span data-stu-id="a9c6c-112">Universal Actions</span></span>](#universal-actions)
-* [<span data-ttu-id="a9c6c-113">用户特定视图</span><span class="sxs-lookup"><span data-stu-id="a9c6c-113">User Specific Views</span></span>](#user-specific-views)
-* [<span data-ttu-id="a9c6c-114">顺序工作流支持</span><span class="sxs-lookup"><span data-stu-id="a9c6c-114">Sequential Workflow support</span></span>](#sequential-workflow-support)
-* [<span data-ttu-id="a9c6c-115">最新视图</span><span class="sxs-lookup"><span data-stu-id="a9c6c-115">Up to date views</span></span>](#up-to-date-views)
+* [<span data-ttu-id="78eeb-112">通用操作</span><span class="sxs-lookup"><span data-stu-id="78eeb-112">Universal Actions</span></span>](#universal-actions)
+* [<span data-ttu-id="78eeb-113">用户特定视图</span><span class="sxs-lookup"><span data-stu-id="78eeb-113">User Specific Views</span></span>](#user-specific-views)
+* [<span data-ttu-id="78eeb-114">顺序工作流支持</span><span class="sxs-lookup"><span data-stu-id="78eeb-114">Sequential Workflow support</span></span>](#sequential-workflow-support)
+* [<span data-ttu-id="78eeb-115">最新视图</span><span class="sxs-lookup"><span data-stu-id="78eeb-115">Up to date views</span></span>](#up-to-date-views)
 
-### <a name="universal-actions"></a><span data-ttu-id="a9c6c-116">通用操作</span><span class="sxs-lookup"><span data-stu-id="a9c6c-116">Universal Actions</span></span>
+### <a name="universal-actions"></a><span data-ttu-id="78eeb-116">通用操作</span><span class="sxs-lookup"><span data-stu-id="78eeb-116">Universal Actions</span></span>
 
-<span data-ttu-id="a9c6c-117">在自适应卡片的通用操作之前，不同的主机提供不同的操作模型，如下所示：</span><span class="sxs-lookup"><span data-stu-id="a9c6c-117">Before the Universal Actions for Adaptive Cards, different hosts provided different action models as follows:</span></span>
+<span data-ttu-id="78eeb-117">在自适应卡片的通用操作之前，不同的主机提供不同的操作模型，如下所示：</span><span class="sxs-lookup"><span data-stu-id="78eeb-117">Before the Universal Actions for Adaptive Cards, different hosts provided different action models as follows:</span></span>
 
-* <span data-ttu-id="a9c6c-118">Teams或聊天机器人，这是一种将实际 `Action.Submit` 通信模型延迟到基础通道的方法。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-118">Teams or bots used `Action.Submit`, an approach which defers the actual communication model to the underlying channel.</span></span>
-* <span data-ttu-id="a9c6c-119">Outlook与 `Action.Http` 自适应卡片有效负载中显式指定的后端服务通信。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-119">Outlook used `Action.Http` to communicate with the backend service explicitly specified in the Adaptive Card payload.</span></span>
+* <span data-ttu-id="78eeb-118">Teams或聊天机器人，这是一种将实际 `Action.Submit` 通信模型延迟到基础通道的方法。</span><span class="sxs-lookup"><span data-stu-id="78eeb-118">Teams or bots used `Action.Submit`, an approach which defers the actual communication model to the underlying channel.</span></span>
+* <span data-ttu-id="78eeb-119">Outlook与 `Action.Http` 自适应卡片有效负载中显式指定的后端服务通信。</span><span class="sxs-lookup"><span data-stu-id="78eeb-119">Outlook used `Action.Http` to communicate with the backend service explicitly specified in the Adaptive Card payload.</span></span>
 
-<span data-ttu-id="a9c6c-120">下图显示了当前不一致的操作模型：</span><span class="sxs-lookup"><span data-stu-id="a9c6c-120">The following image shows the current inconsistent action model:</span></span>
+<span data-ttu-id="78eeb-120">下图显示了当前不一致的操作模型：</span><span class="sxs-lookup"><span data-stu-id="78eeb-120">The following image shows the current inconsistent action model:</span></span>
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="不一致的操作模型":::
 
-<span data-ttu-id="a9c6c-122">借助自适应卡片的通用操作，可用于 `Action.Execute` 跨不同平台的操作处理。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-122">With the Universal Actions for Adaptive Cards, you can use `Action.Execute` for action handling across different platforms.</span></span> <span data-ttu-id="a9c6c-123">`Action.Execute`适用于中心，包括Teams Outlook。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-123">`Action.Execute` works across hubs including Teams and Outlook.</span></span> <span data-ttu-id="a9c6c-124">此外，自适应卡片还可以作为触发的调用 `Action.Execute` 请求的响应返回。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-124">In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.</span></span>
+<span data-ttu-id="78eeb-122">借助自适应卡片的通用操作，可用于 `Action.Execute` 跨不同平台的操作处理。</span><span class="sxs-lookup"><span data-stu-id="78eeb-122">With the Universal Actions for Adaptive Cards, you can use `Action.Execute` for action handling across different platforms.</span></span> <span data-ttu-id="78eeb-123">`Action.Execute`适用于中心，包括Teams Outlook。</span><span class="sxs-lookup"><span data-stu-id="78eeb-123">`Action.Execute` works across hubs including Teams and Outlook.</span></span> <span data-ttu-id="78eeb-124">此外，自适应卡片还可以作为触发的调用 `Action.Execute` 请求的响应返回。</span><span class="sxs-lookup"><span data-stu-id="78eeb-124">In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.</span></span>
 
-<span data-ttu-id="a9c6c-125">下图显示了新的通用操作模型：</span><span class="sxs-lookup"><span data-stu-id="a9c6c-125">The following image shows the new Universal Action model:</span></span>
+<span data-ttu-id="78eeb-125">下图显示了新的通用操作模型：</span><span class="sxs-lookup"><span data-stu-id="78eeb-125">The following image shows the new Universal Action model:</span></span>
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="自适应卡片的新通用操作":::
 
-<span data-ttu-id="a9c6c-127">现在，你可以向两者发送相同的Teams和Outlook，然后使用基础自动程序保持它们相互同步。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-127">You can now send the same card to both, Teams and Outlook, and keep them in sync with each other using the underlying bot.</span></span> <span data-ttu-id="a9c6c-128">通过此内部版本，在任一平台上执行的任何操作都反映给另一个平台， (自适应卡片的通用操作) 模型。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-128">Any action taken on either platform is reflected to the other with this *build once, deploy anywhere* (Universal Actions for Adaptive Cards) model.</span></span>
+<span data-ttu-id="78eeb-127">现在，你可以向两者发送相同的Teams和Outlook，然后使用基础自动程序保持它们相互同步。</span><span class="sxs-lookup"><span data-stu-id="78eeb-127">You can now send the same card to both, Teams and Outlook, and keep them in sync with each other using the underlying bot.</span></span> <span data-ttu-id="78eeb-128">通过此内部版本，在任一平台上执行的任何操作都反映给另一个平台， (自适应卡片的通用操作) 模型。</span><span class="sxs-lookup"><span data-stu-id="78eeb-128">Any action taken on either platform is reflected to the other with this *build once, deploy anywhere* (Universal Actions for Adaptive Cards) model.</span></span>
 
-<span data-ttu-id="a9c6c-129">下图描述了适用于用户和用户的通用自适应卡片Teams Outlook：</span><span class="sxs-lookup"><span data-stu-id="a9c6c-129">The following image depicts the Universal Actions for Adaptive Cards for both Teams and Outlook:</span></span>
+<span data-ttu-id="78eeb-129">下图描述了适用于用户和用户的通用自适应卡片Teams Outlook：</span><span class="sxs-lookup"><span data-stu-id="78eeb-129">The following image depicts the Universal Actions for Adaptive Cards for both Teams and Outlook:</span></span>
+
+# <a name="mobile"></a>[<span data-ttu-id="78eeb-130">移动</span><span class="sxs-lookup"><span data-stu-id="78eeb-130">Mobile</span></span>](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="移动同一卡片Teams和Outlook":::
+
+# <a name="desktop"></a>[<span data-ttu-id="78eeb-132">桌面</span><span class="sxs-lookup"><span data-stu-id="78eeb-132">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="与 Teams 和 Outlook":::
 
-### <a name="user-specific-views"></a><span data-ttu-id="a9c6c-131">用户特定视图</span><span class="sxs-lookup"><span data-stu-id="a9c6c-131">User Specific Views</span></span>
+* * *
 
-<span data-ttu-id="a9c6c-132">现在，聊天Teams频道中的每个用户都会在自适应卡片上看到完全相同的视图和按钮操作。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-132">Today every user in the Teams chat or channel sees the exact same view and button actions on the Adaptive Card.</span></span> <span data-ttu-id="a9c6c-133">但是，在某些情况下，要求某些用户采取不同的行动，并有权访问同一聊天或频道中的不同信息。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-133">However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel.</span></span>
+### <a name="user-specific-views"></a><span data-ttu-id="78eeb-134">用户特定视图</span><span class="sxs-lookup"><span data-stu-id="78eeb-134">User Specific Views</span></span>
 
-<span data-ttu-id="a9c6c-134">例如，如果您在聊天或频道中发送事件报告卡，则只有分配了事件的用户才能看到"解决 **"** 按钮。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-134">For example, if you send an incident reporting card in a chat or channel, only the user who is assigned the incident must see a **Resolve** button.</span></span> <span data-ttu-id="a9c6c-135">另一方面，事件创建者必须看到"编辑"按钮，并且所有其他用户只能查看事件的详细信息。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-135">On the other hand, the incident creator must see an **Edit** button and all other users must only be able to view details of the incident.</span></span> <span data-ttu-id="a9c6c-136">这是由 属性启用的用户特定视图 `refresh` 所实现。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-136">This is made possible by User Specific Views that is enabled by the `refresh` property.</span></span>
+<span data-ttu-id="78eeb-135">现在，聊天Teams频道中的每个用户都会在自适应卡片上看到完全相同的视图和按钮操作。</span><span class="sxs-lookup"><span data-stu-id="78eeb-135">Today every user in the Teams chat or channel sees the exact same view and button actions on the Adaptive Card.</span></span> <span data-ttu-id="78eeb-136">但是，在某些情况下，要求某些用户采取不同的行动，并有权访问同一聊天或频道中的不同信息。</span><span class="sxs-lookup"><span data-stu-id="78eeb-136">However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel.</span></span>
 
-<span data-ttu-id="a9c6c-137">下图显示了一个票证消息传递扩展 (ME) ，其中聊天中的不同用户根据要求显示了不同的操作：</span><span class="sxs-lookup"><span data-stu-id="a9c6c-137">The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:</span></span>
+<span data-ttu-id="78eeb-137">例如，如果您在聊天或频道中发送事件报告卡，则只有分配了事件的用户才能看到"解决 **"** 按钮。</span><span class="sxs-lookup"><span data-stu-id="78eeb-137">For example, if you send an incident reporting card in a chat or channel, only the user who is assigned the incident must see a **Resolve** button.</span></span> <span data-ttu-id="78eeb-138">另一方面，事件创建者必须看到"编辑"按钮，并且所有其他用户只能查看事件的详细信息。</span><span class="sxs-lookup"><span data-stu-id="78eeb-138">On the other hand, the incident creator must see an **Edit** button and all other users must only be able to view details of the incident.</span></span> <span data-ttu-id="78eeb-139">这是由 属性启用的用户特定视图 `refresh` 所实现。</span><span class="sxs-lookup"><span data-stu-id="78eeb-139">This is made possible by User Specific Views that is enabled by the `refresh` property.</span></span>
+
+<span data-ttu-id="78eeb-140">下图显示了一个票证消息传递扩展 (ME) ，其中聊天中的不同用户根据要求显示了不同的操作：</span><span class="sxs-lookup"><span data-stu-id="78eeb-140">The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:</span></span>
+
+# <a name="mobile"></a>[<span data-ttu-id="78eeb-141">移动</span><span class="sxs-lookup"><span data-stu-id="78eeb-141">Mobile</span></span>](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="移动用户特定视图":::
+
+# <a name="desktop"></a>[<span data-ttu-id="78eeb-143">桌面</span><span class="sxs-lookup"><span data-stu-id="78eeb-143">Desktop</span></span>](#tab/desktop)
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="用户特定视图":::
 
-<span data-ttu-id="a9c6c-139">有关详细信息，请参阅用户 [特定视图的示例](User-Specific-Views.md)。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-139">For more information, see [sample for User Specific Views](User-Specific-Views.md).</span></span>
+* * *
 
-### <a name="sequential-workflow-support"></a><span data-ttu-id="a9c6c-140">顺序工作流支持</span><span class="sxs-lookup"><span data-stu-id="a9c6c-140">Sequential Workflow support</span></span>
+<span data-ttu-id="78eeb-145">有关详细信息，请参阅用户 [特定视图的示例](User-Specific-Views.md)。</span><span class="sxs-lookup"><span data-stu-id="78eeb-145">For more information, see [sample for User Specific Views](User-Specific-Views.md).</span></span>
 
-<span data-ttu-id="a9c6c-141">借助顺序工作流支持，用户可以执行一系列工作流，而无需单独发送不同的卡片。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-141">With Sequential Workflow support, users can progress through a series of workflows without sending different cards separately.</span></span> <span data-ttu-id="a9c6c-142">这是通过返回自适应卡片以响应操作 `Action.Execute` 而实现。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-142">This is made possible by the ability of `Action.Execute` to return an Adaptive Card in response to an action.</span></span> <span data-ttu-id="a9c6c-143">此外，聊天或频道中的任意用户都可以通过其工作流进行，而无需修改聊天中其他用户的卡片。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-143">Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat.</span></span>
+### <a name="sequential-workflow-support"></a><span data-ttu-id="78eeb-146">顺序工作流支持</span><span class="sxs-lookup"><span data-stu-id="78eeb-146">Sequential Workflow support</span></span>
 
-<span data-ttu-id="a9c6c-144">下图演示了一个食物订购机器人示例：</span><span class="sxs-lookup"><span data-stu-id="a9c6c-144">The following image illustrates a food ordering bot example:</span></span> <br/>
+<span data-ttu-id="78eeb-147">借助顺序工作流支持，用户可以执行一系列工作流，而无需单独发送不同的卡片。</span><span class="sxs-lookup"><span data-stu-id="78eeb-147">With Sequential Workflow support, users can progress through a series of workflows without sending different cards separately.</span></span> <span data-ttu-id="78eeb-148">这是通过返回自适应卡片以响应操作 `Action.Execute` 而实现。</span><span class="sxs-lookup"><span data-stu-id="78eeb-148">This is made possible by the ability of `Action.Execute` to return an Adaptive Card in response to an action.</span></span> <span data-ttu-id="78eeb-149">此外，聊天或频道中的任意用户都可以通过其工作流进行，而无需修改聊天中其他用户的卡片。</span><span class="sxs-lookup"><span data-stu-id="78eeb-149">Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat.</span></span>
+
+<span data-ttu-id="78eeb-150">下图演示了一个食物订购机器人示例：</span><span class="sxs-lookup"><span data-stu-id="78eeb-150">The following image illustrates a food ordering bot example:</span></span> <br/>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-<span data-ttu-id="a9c6c-145">下图显示了聊天或频道中不同用户的不同状态：</span><span class="sxs-lookup"><span data-stu-id="a9c6c-145">The following image shows the various states for different users in the chat or channel:</span></span>
+<span data-ttu-id="78eeb-151">下图显示了聊天或频道中不同用户的不同状态：</span><span class="sxs-lookup"><span data-stu-id="78eeb-151">The following image shows the various states for different users in the chat or channel:</span></span>
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="适应机器人状态":::
 
-<span data-ttu-id="a9c6c-147">有关详细信息，请参阅顺序 [工作流的示例](Sequential-Workflows.md)。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-147">For more information, see [sample for Sequential Workflow](Sequential-Workflows.md).</span></span>
+<span data-ttu-id="78eeb-153">有关详细信息，请参阅顺序 [工作流的示例](Sequential-Workflows.md)。</span><span class="sxs-lookup"><span data-stu-id="78eeb-153">For more information, see [sample for Sequential Workflow](Sequential-Workflows.md).</span></span>
 
-### <a name="up-to-date-views"></a><span data-ttu-id="a9c6c-148">最新视图</span><span class="sxs-lookup"><span data-stu-id="a9c6c-148">Up to date views</span></span>
+### <a name="up-to-date-views"></a><span data-ttu-id="78eeb-154">最新视图</span><span class="sxs-lookup"><span data-stu-id="78eeb-154">Up to date views</span></span>
 
-<span data-ttu-id="a9c6c-149">你可以创建自动更新的自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-149">You can create Adaptive Cards that update automatically.</span></span> <span data-ttu-id="a9c6c-150">例如，它可以是由用户发送的审批请求。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-150">For example, it can be an approval request sent by a user.</span></span> <span data-ttu-id="a9c6c-151">审批后，该卡片必须自动显示有关请求审批时间和批准请求者的详细信息。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-151">After approval, the card must automatically display details about the request approval time and who approved the request.</span></span> <span data-ttu-id="a9c6c-152">刷新模型使您能够提供此类最新视图。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-152">The refresh model enables you to provide such up to date views.</span></span> <span data-ttu-id="a9c6c-153">下图显示了多步骤审批流以及如何显示不同用户的视图。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-153">The following image shows a multi-step approval flow and how the views for different users is shown.</span></span>
+<span data-ttu-id="78eeb-155">你可以创建自动更新的自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="78eeb-155">You can create Adaptive Cards that update automatically.</span></span> <span data-ttu-id="78eeb-156">例如，它可以是由用户发送的审批请求。</span><span class="sxs-lookup"><span data-stu-id="78eeb-156">For example, it can be an approval request sent by a user.</span></span> <span data-ttu-id="78eeb-157">审批后，该卡片必须自动显示有关请求审批时间和批准请求者的详细信息。</span><span class="sxs-lookup"><span data-stu-id="78eeb-157">After approval, the card must automatically display details about the request approval time and who approved the request.</span></span> <span data-ttu-id="78eeb-158">刷新模型使您能够提供此类最新视图。</span><span class="sxs-lookup"><span data-stu-id="78eeb-158">The refresh model enables you to provide such up to date views.</span></span> <span data-ttu-id="78eeb-159">下图显示了多步骤审批流以及如何显示不同用户的视图。</span><span class="sxs-lookup"><span data-stu-id="78eeb-159">The following image shows a multi-step approval flow and how the views for different users is shown.</span></span>
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="最新用户特定视图":::
 
-<span data-ttu-id="a9c6c-155">有关详细信息，请参阅 [最新视图的示例](Up-To-Date-Views.md)。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-155">For more information, see [sample for up to date views](Up-To-Date-Views.md).</span></span>
+<span data-ttu-id="78eeb-161">有关详细信息，请参阅 [最新视图的示例](Up-To-Date-Views.md)。</span><span class="sxs-lookup"><span data-stu-id="78eeb-161">For more information, see [sample for up to date views](Up-To-Date-Views.md).</span></span>
 
-<span data-ttu-id="a9c6c-156">现在，你可以了解如何使用新的通用操作模型转换自适应卡片，以提供独特且增强的用户体验。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-156">Now, you can understand how Adaptive Cards can be transformed with the new Universal Actions model to provide a unique and enhanced user experience.</span></span>
+<span data-ttu-id="78eeb-162">现在，你可以了解如何使用新的通用操作模型转换自适应卡片，以提供独特且增强的用户体验。</span><span class="sxs-lookup"><span data-stu-id="78eeb-162">Now, you can understand how Adaptive Cards can be transformed with the new Universal Actions model to provide a unique and enhanced user experience.</span></span>
 
-## <a name="adaptive-cards-and-the-new-universal-actions-model"></a><span data-ttu-id="a9c6c-157">自适应卡片和新的通用操作模型</span><span class="sxs-lookup"><span data-stu-id="a9c6c-157">Adaptive Cards and the new Universal Actions model</span></span>
+## <a name="adaptive-cards-and-the-new-universal-actions-model"></a><span data-ttu-id="78eeb-163">自适应卡片和新的通用操作模型</span><span class="sxs-lookup"><span data-stu-id="78eeb-163">Adaptive Cards and the new Universal Actions model</span></span>
 
-<span data-ttu-id="a9c6c-158">自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-158">Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user.</span></span> <span data-ttu-id="a9c6c-159">有关详细信息，请参阅自适应 [卡片](http://adaptivecards.io/)。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-159">For more information, see [Adaptive Cards](http://adaptivecards.io/).</span></span> <span data-ttu-id="a9c6c-160">自适应卡片的新通用操作支持跨平台和应用程序常见处理自适应卡片操作。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-160">The new Universal Actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications.</span></span> <span data-ttu-id="a9c6c-161">有关详细信息，请参阅通用 [操作模型](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model)。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-161">For more information, see [Universal Action Model](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model).</span></span>
+<span data-ttu-id="78eeb-164">自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。</span><span class="sxs-lookup"><span data-stu-id="78eeb-164">Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user.</span></span> <span data-ttu-id="78eeb-165">有关详细信息，请参阅自适应 [卡片](http://adaptivecards.io/)。</span><span class="sxs-lookup"><span data-stu-id="78eeb-165">For more information, see [Adaptive Cards](http://adaptivecards.io/).</span></span> <span data-ttu-id="78eeb-166">自适应卡片的新通用操作支持跨平台和应用程序常见处理自适应卡片操作。</span><span class="sxs-lookup"><span data-stu-id="78eeb-166">The new Universal Actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications.</span></span> <span data-ttu-id="78eeb-167">有关详细信息，请参阅通用 [操作模型](/adaptive-cards/authoring-cards/universal-action-model)。</span><span class="sxs-lookup"><span data-stu-id="78eeb-167">For more information, see [Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model).</span></span>
 
-<span data-ttu-id="a9c6c-162">[使用适用于自适应卡片的通用操作](Work-with-universal-actions-for-adaptive-cards.md) 文档将介绍为解决方案使用通用操作自适应卡片功能的步骤。</span><span class="sxs-lookup"><span data-stu-id="a9c6c-162">[Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md) document takes you through the steps to use the capabilities of Universal Actions for Adaptive Cards for your solution.</span></span>
+<span data-ttu-id="78eeb-168">[使用适用于自适应卡片的通用操作](Work-with-universal-actions-for-adaptive-cards.md) 文档将介绍为解决方案使用通用操作自适应卡片功能的步骤。</span><span class="sxs-lookup"><span data-stu-id="78eeb-168">[Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md) document takes you through the steps to use the capabilities of Universal Actions for Adaptive Cards for your solution.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a9c6c-163">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a9c6c-163">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78eeb-169">另请参阅</span><span class="sxs-lookup"><span data-stu-id="78eeb-169">See also</span></span>
 
-* [<span data-ttu-id="a9c6c-164">什么是自动程序</span><span class="sxs-lookup"><span data-stu-id="a9c6c-164">What are bots</span></span>](~/bots/what-are-bots.md)
-* [<span data-ttu-id="a9c6c-165">自适应卡片概述</span><span class="sxs-lookup"><span data-stu-id="a9c6c-165">Adaptive Cards overview</span></span>](~/task-modules-and-cards/what-are-cards.md)
-* [<span data-ttu-id="a9c6c-166">自适应卡片 @ Microsoft Build 2020</span><span class="sxs-lookup"><span data-stu-id="a9c6c-166">Adaptive Cards @ Microsoft Build 2020</span></span>](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [<span data-ttu-id="a9c6c-167">Adaptive Cards @ Ignite 2020</span><span class="sxs-lookup"><span data-stu-id="a9c6c-167">Adaptive Cards @ Ignite 2020</span></span>](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [<span data-ttu-id="78eeb-170">什么是自动程序</span><span class="sxs-lookup"><span data-stu-id="78eeb-170">What are bots</span></span>](~/bots/what-are-bots.md)
+* [<span data-ttu-id="78eeb-171">自适应卡片概述</span><span class="sxs-lookup"><span data-stu-id="78eeb-171">Adaptive Cards overview</span></span>](~/task-modules-and-cards/what-are-cards.md)
+* [<span data-ttu-id="78eeb-172">自适应卡片 @ Microsoft Build 2020</span><span class="sxs-lookup"><span data-stu-id="78eeb-172">Adaptive Cards @ Microsoft Build 2020</span></span>](https://youtu.be/hEBhwB72Qn4?t=1393)
+* [<span data-ttu-id="78eeb-173">Adaptive Cards @ Ignite 2020</span><span class="sxs-lookup"><span data-stu-id="78eeb-173">Adaptive Cards @ Ignite 2020</span></span>](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
 
-## <a name="next-step"></a><span data-ttu-id="a9c6c-168">后续步骤</span><span class="sxs-lookup"><span data-stu-id="a9c6c-168">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="78eeb-174">后续步骤</span><span class="sxs-lookup"><span data-stu-id="78eeb-174">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="a9c6c-169">使用自适应卡的通用操作</span><span class="sxs-lookup"><span data-stu-id="a9c6c-169">Work with Universal Actions for Adaptive Cards</span></span>](Work-with-universal-actions-for-adaptive-cards.md)
+> [<span data-ttu-id="78eeb-175">使用自适应卡的通用操作</span><span class="sxs-lookup"><span data-stu-id="78eeb-175">Work with Universal Actions for Adaptive Cards</span></span>](Work-with-universal-actions-for-adaptive-cards.md)

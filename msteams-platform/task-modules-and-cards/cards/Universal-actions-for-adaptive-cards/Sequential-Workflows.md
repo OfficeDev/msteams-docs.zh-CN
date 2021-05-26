@@ -4,33 +4,33 @@ description: 使用通用操作的顺序工作流的示例
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 7f285bf76aac4f0ca276321aee2ce4b4e5c3e7e4
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: f36e65133572569cd01de1053044336c810656f3
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555400"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649642"
 ---
-# <a name="sequential-workflows"></a><span data-ttu-id="4c705-103">顺序工作流</span><span class="sxs-lookup"><span data-stu-id="4c705-103">Sequential Workflows</span></span>
+# <a name="sequential-workflows"></a><span data-ttu-id="fb690-103">顺序工作流</span><span class="sxs-lookup"><span data-stu-id="fb690-103">Sequential Workflows</span></span>
 
-<span data-ttu-id="4c705-104">自适应卡片现在支持顺序工作流，在用户操作上更新自适应卡片时，用户可以在一系列需要用户输入的卡片中前进。</span><span class="sxs-lookup"><span data-stu-id="4c705-104">Adaptive Cards now support Sequential Workflows that is when Adaptive Cards are updated on user action and user can progress through a series of cards that require user input.</span></span> <span data-ttu-id="4c705-105">这通过 支持 `Action.Execute` ，这允许机器人开发人员返回自适应卡片以响应用户操作。</span><span class="sxs-lookup"><span data-stu-id="4c705-105">This is supported through `Action.Execute`, which allows bot developers to return Adaptive Cards in response to a user action.</span></span>
+<span data-ttu-id="fb690-104">自适应卡片现在支持顺序工作流，在用户操作上更新自适应卡片时，用户可以在一系列需要用户输入的卡片中前进。</span><span class="sxs-lookup"><span data-stu-id="fb690-104">Adaptive Cards now support Sequential Workflows that is when Adaptive Cards are updated on user action and user can progress through a series of cards that require user input.</span></span> <span data-ttu-id="fb690-105">这通过 支持 `Action.Execute` ，这允许机器人开发人员返回自适应卡片以响应用户操作。</span><span class="sxs-lookup"><span data-stu-id="fb690-105">This is supported through `Action.Execute`, which allows bot developers to return Adaptive Cards in response to a user action.</span></span>
 
-<span data-ttu-id="4c705-106">例如，假设自助餐厅想要为团队或频道下订单。</span><span class="sxs-lookup"><span data-stu-id="4c705-106">For example, take a scenario where the cafeteria wants to take an order for a team or channel.</span></span> <span data-ttu-id="4c705-107">通过用户对各种商品（如食物、食物等）的选择，可以 `Action.Execute` 按顺序进行记录。</span><span class="sxs-lookup"><span data-stu-id="4c705-107">With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially.</span></span> <span data-ttu-id="4c705-108">用户还可以根据自动程序开发人员定义的逻辑来回浏览卡片。</span><span class="sxs-lookup"><span data-stu-id="4c705-108">User can also go back and forth through the cards as per the logic defined by the bot developer.</span></span> <br/>
+<span data-ttu-id="fb690-106">例如，假设自助餐厅想要为团队或频道下订单。</span><span class="sxs-lookup"><span data-stu-id="fb690-106">For example, take a scenario where the cafeteria wants to take an order for a team or channel.</span></span> <span data-ttu-id="fb690-107">通过用户对各种商品（如食物、食物等）的选择，可以 `Action.Execute` 按顺序进行记录。</span><span class="sxs-lookup"><span data-stu-id="fb690-107">With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially.</span></span> <span data-ttu-id="fb690-108">用户还可以根据自动程序开发人员定义的逻辑来回浏览卡片。</span><span class="sxs-lookup"><span data-stu-id="fb690-108">User can also go back and forth through the cards as per the logic defined by the bot developer.</span></span> <br/>
 
-<span data-ttu-id="4c705-109">下图显示了顺序工作流：</span><span class="sxs-lookup"><span data-stu-id="4c705-109">The following image shows the Sequential Workflow:</span></span>
+<span data-ttu-id="fb690-109">下图显示了顺序工作流：</span><span class="sxs-lookup"><span data-stu-id="fb690-109">The following image shows the Sequential Workflow:</span></span>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-<span data-ttu-id="4c705-110">用户可以在工作流中推进，而无需修改其他用户的卡片。</span><span class="sxs-lookup"><span data-stu-id="4c705-110">A user can progress through their workflow without modifying the card for other users.</span></span> <span data-ttu-id="4c705-111">这还可用于使用顺序自适应卡片进行测验。</span><span class="sxs-lookup"><span data-stu-id="4c705-111">This is also useful for conducting quizzes using sequential Adaptive Cards.</span></span> <span data-ttu-id="4c705-112">如下图所示，不同用户可以处于工作流的不同阶段，并且可以看到卡片的不同状态：</span><span class="sxs-lookup"><span data-stu-id="4c705-112">As shown in the following image, different users can be at different stages of the workflow and they see different states of the card:</span></span>
+<span data-ttu-id="fb690-110">用户可以在工作流中推进，而无需修改其他用户的卡片。</span><span class="sxs-lookup"><span data-stu-id="fb690-110">A user can progress through their workflow without modifying the card for other users.</span></span> <span data-ttu-id="fb690-111">这还可用于使用顺序自适应卡片进行测验。</span><span class="sxs-lookup"><span data-stu-id="fb690-111">This is also useful for conducting quizzes using sequential Adaptive Cards.</span></span> <span data-ttu-id="fb690-112">如下图所示，不同用户可以处于工作流的不同阶段，并且可以看到卡片的不同状态：</span><span class="sxs-lookup"><span data-stu-id="fb690-112">As shown in the following image, different users can be at different stages of the workflow and they see different states of the card:</span></span>
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="适应机器人状态":::
 
 > [!NOTE]
-> <span data-ttu-id="4c705-114">若要跨设备同步用户的进度，请使用自适应卡片 `refresh` JSON 中的 属性。</span><span class="sxs-lookup"><span data-stu-id="4c705-114">In order to sync the user's progress across devices, use the `refresh` property in Adaptive Card JSON.</span></span>
+> <span data-ttu-id="fb690-114">若要跨设备同步用户的进度，请使用自适应卡片 `refresh` JSON 中的 属性。</span><span class="sxs-lookup"><span data-stu-id="fb690-114">In order to sync the user's progress across devices, use the `refresh` property in Adaptive Card JSON.</span></span>
 
-## <a name="sequential-workflow-for-adaptive-cards"></a><span data-ttu-id="4c705-115">自适应卡片的顺序工作流</span><span class="sxs-lookup"><span data-stu-id="4c705-115">Sequential Workflow for Adaptive Cards</span></span>
+## <a name="sequential-workflow-for-adaptive-cards"></a><span data-ttu-id="fb690-115">自适应卡片的顺序工作流</span><span class="sxs-lookup"><span data-stu-id="fb690-115">Sequential Workflow for Adaptive Cards</span></span>
 
-<span data-ttu-id="4c705-116">以下代码提供了自适应卡片的示例：</span><span class="sxs-lookup"><span data-stu-id="4c705-116">The following code provides an example of Adaptive Cards:</span></span>
+<span data-ttu-id="fb690-116">以下代码提供了自适应卡片的示例：</span><span class="sxs-lookup"><span data-stu-id="fb690-116">The following code provides an example of Adaptive Cards:</span></span>
 
 ```JSON
 {
@@ -75,16 +75,16 @@ ms.locfileid: "52555400"
 }
 ```
 
-<span data-ttu-id="4c705-117">`Action.Execute`调用机器人可以返回自适应卡片作为响应，这将替换现有Teams。</span><span class="sxs-lookup"><span data-stu-id="4c705-117">`Action.Execute` invoking the bot can return Adaptive Cards as a response, which replaces the existing card in Teams.</span></span>
-<span data-ttu-id="4c705-118">以下示例提供了机器人在确认食物或食物选择或订单时返回内容：</span><span class="sxs-lookup"><span data-stu-id="4c705-118">The following example provides what the bot returns on food or drink selection or order confirmation:</span></span>
+<span data-ttu-id="fb690-117">`Action.Execute`调用机器人可以返回自适应卡片作为响应，这将替换现有Teams。</span><span class="sxs-lookup"><span data-stu-id="fb690-117">`Action.Execute` invoking the bot can return Adaptive Cards as a response, which replaces the existing card in Teams.</span></span>
+<span data-ttu-id="fb690-118">以下示例提供了机器人在确认食物或食物选择或订单时返回内容：</span><span class="sxs-lookup"><span data-stu-id="fb690-118">The following example provides what the bot returns on food or drink selection or order confirmation:</span></span>
 
-* <span data-ttu-id="4c705-119">在从卡片 1 选择食物时，机器人可以返回一张卡片，用于选择卡片 2。</span><span class="sxs-lookup"><span data-stu-id="4c705-119">On food selection from Card 1, bot can return a card for selection of drinks that is Card 2.</span></span>
-* <span data-ttu-id="4c705-120">在从卡片 2 选择时，自动程序可以返回一个订单确认卡，即卡片 3。</span><span class="sxs-lookup"><span data-stu-id="4c705-120">On drink selection from Card 2, bot can return an order confirmation card that is Card 3.</span></span>
-* <span data-ttu-id="4c705-121">在从卡片 3 确认订单后，自动程序可以返回已确认订单的卡片，即卡片 4。</span><span class="sxs-lookup"><span data-stu-id="4c705-121">On order confirmation from Card 3, bot can return an order confirmed card that is Card 4.</span></span>
+* <span data-ttu-id="fb690-119">在从卡片 1 选择食物时，机器人可以返回一张卡片，用于选择卡片 2。</span><span class="sxs-lookup"><span data-stu-id="fb690-119">On food selection from Card 1, bot can return a card for selection of drinks that is Card 2.</span></span>
+* <span data-ttu-id="fb690-120">在从卡片 2 选择时，自动程序可以返回一个订单确认卡，即卡片 3。</span><span class="sxs-lookup"><span data-stu-id="fb690-120">On drink selection from Card 2, bot can return an order confirmation card that is Card 3.</span></span>
+* <span data-ttu-id="fb690-121">在从卡片 3 确认订单后，自动程序可以返回已确认订单的卡片，即卡片 4。</span><span class="sxs-lookup"><span data-stu-id="fb690-121">On order confirmation from Card 3, bot can return an order confirmed card that is Card 4.</span></span>
 
-## <a name="invoke-request-received-on-bot-side"></a><span data-ttu-id="4c705-122">调用在自动程序端收到的请求</span><span class="sxs-lookup"><span data-stu-id="4c705-122">Invoke request received on bot side</span></span>
+## <a name="invoke-request-received-on-bot-side"></a><span data-ttu-id="fb690-122">调用在自动程序端收到的请求</span><span class="sxs-lookup"><span data-stu-id="fb690-122">Invoke request received on bot side</span></span>
 
-<span data-ttu-id="4c705-123">以下代码提供了在自动程序端收到的调用请求的示例：</span><span class="sxs-lookup"><span data-stu-id="4c705-123">The following code provides an example of an invoke request received on bot side:</span></span>
+<span data-ttu-id="fb690-123">以下代码提供了在自动程序端收到的调用请求的示例：</span><span class="sxs-lookup"><span data-stu-id="fb690-123">The following code provides an example of an invoke request received on bot side:</span></span>
 
 ```JSON
 { 
@@ -107,9 +107,9 @@ ms.locfileid: "52555400"
 }
 ```
 
-## <a name="invoke-response-to-return-adaptive-cards"></a><span data-ttu-id="4c705-124">调用响应以返回自适应卡片</span><span class="sxs-lookup"><span data-stu-id="4c705-124">Invoke response to return Adaptive Cards</span></span>
+## <a name="invoke-response-to-return-adaptive-cards"></a><span data-ttu-id="fb690-124">调用响应以返回自适应卡片</span><span class="sxs-lookup"><span data-stu-id="fb690-124">Invoke response to return Adaptive Cards</span></span>
 
-<span data-ttu-id="4c705-125">以下代码提供了用于返回自适应卡片的调用响应示例：</span><span class="sxs-lookup"><span data-stu-id="4c705-125">The following code provides an example of an invoke response to return Adaptive Cards:</span></span>
+<span data-ttu-id="fb690-125">以下代码提供了用于返回自适应卡片的调用响应示例：</span><span class="sxs-lookup"><span data-stu-id="fb690-125">The following code provides an example of an invoke response to return Adaptive Cards:</span></span>
 
 ```C#
 string cardJson = "<adaptive card json>";
@@ -123,8 +123,14 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-## <a name="see-also"></a><span data-ttu-id="4c705-126">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4c705-126">See also</span></span>
+## <a name="code-sample"></a><span data-ttu-id="fb690-126">代码示例</span><span class="sxs-lookup"><span data-stu-id="fb690-126">Code sample</span></span>
 
-* [<span data-ttu-id="4c705-127">用户中的自适应卡片Teams</span><span class="sxs-lookup"><span data-stu-id="4c705-127">Adaptive Card actions in Teams</span></span>](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
-* [<span data-ttu-id="4c705-128">机器人的工作方式</span><span class="sxs-lookup"><span data-stu-id="4c705-128">How bots work</span></span>](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
-* [<span data-ttu-id="4c705-129">使用自适应卡的通用操作</span><span class="sxs-lookup"><span data-stu-id="4c705-129">Work with Universal Actions for Adaptive Cards</span></span>](Work-with-universal-actions-for-adaptive-cards.md)
+|<span data-ttu-id="fb690-127">示例名称</span><span class="sxs-lookup"><span data-stu-id="fb690-127">Sample name</span></span> | <span data-ttu-id="fb690-128">说明</span><span class="sxs-lookup"><span data-stu-id="fb690-128">Description</span></span> | <span data-ttu-id="fb690-129">.NETCore</span><span class="sxs-lookup"><span data-stu-id="fb690-129">.NETCore</span></span> |
+|----------------|-----------------|--------------|
+| <span data-ttu-id="fb690-130">Teams机器人</span><span class="sxs-lookup"><span data-stu-id="fb690-130">Teams catering bot</span></span> | <span data-ttu-id="fb690-131">创建使用自适应卡片接受食物订单的简单机器人。</span><span class="sxs-lookup"><span data-stu-id="fb690-131">Create a simple bot that accepts food order using Adaptive Cards.</span></span> |[<span data-ttu-id="fb690-132">View</span><span class="sxs-lookup"><span data-stu-id="fb690-132">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+
+## <a name="see-also"></a><span data-ttu-id="fb690-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="fb690-133">See also</span></span>
+
+* [<span data-ttu-id="fb690-134">用户中的自适应卡片Teams</span><span class="sxs-lookup"><span data-stu-id="fb690-134">Adaptive Card actions in Teams</span></span>](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [<span data-ttu-id="fb690-135">机器人的工作方式</span><span class="sxs-lookup"><span data-stu-id="fb690-135">How bots work</span></span>](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
+* [<span data-ttu-id="fb690-136">使用自适应卡的通用操作</span><span class="sxs-lookup"><span data-stu-id="fb690-136">Work with Universal Actions for Adaptive Cards</span></span>](Work-with-universal-actions-for-adaptive-cards.md)
