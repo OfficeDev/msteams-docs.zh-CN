@@ -1,19 +1,19 @@
 ---
-title: 会议应用的先决条件和 API Teams参考
+title: Teams 会议中应用的先决条件和 API 参考
 author: laujan
 description: 使用用于会议Teams应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 6ee26142ad80021f00ffebf3502f68c124ab4b67
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: aeedd6ff4ee1e075d24020d872b5ebd216be4fb0
+ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651724"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "52684640"
 ---
-# <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>会议应用的先决条件和 API Teams参考
+# <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
 若要在会议生命周期内扩展应用功能，Teams使用会议Teams应用程序。 必须完成先决条件，并且可以使用会议应用 API 引用来增强会议体验。
 
@@ -489,7 +489,7 @@ public class MeetingStartEndEventValue
 |----------------|-----------------|--------------|--------------|
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | |
+| Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 

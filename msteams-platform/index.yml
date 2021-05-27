@@ -56,24 +56,21 @@ conceptualContent:
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: overview
           text: 团队应用程序功能
-        - url: /microsoftteams/platform/concepts/design/map-use-cases
-          itemType: overview
-          text: 将用例映射到Microsoft Teams功能
-        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-          itemType: how-to-guide
-          text: 使用Teams生成Node.js
-        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-          itemType: how-to-guide
-          text: 使用 C Teams应用#
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: 使用 Microsoft Power Platform Teams应用、机器人和流构建低代码
+        - url: 'https://dev.teams.microsoft.com/home'
+          itemType: reference
+          text: Teams 开发人员门户
         - url: /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: 应用程序清单Teams架构
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: 生成应用Microsoft Teams方案
+          text: 生成应用Teams方案
+        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          itemType: reference
+          text: 应用方案Teams最佳做法
     - title: 学习
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
