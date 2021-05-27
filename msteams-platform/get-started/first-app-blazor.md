@@ -5,12 +5,12 @@ description: 快速创建显示Microsoft Teams Hello， World！" 的 Web 应用
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 861b6921d7a2092a746ea7dc1399f8aaa523e207
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646677"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667452"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>使用 Blazor 生成Microsoft Teams应用程序
 
@@ -53,10 +53,10 @@ ms.locfileid: "52646677"
 1. 运行 `dotnet new -i` 以从以下位置安装NuGet：
 
    ``` bash
-   dotnet new -i Microsoft.TeamsApp.Blazor
+   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
    ```
 
-   你只需在首次或更新模板时这样做。
+   你只需在首次或更新模板时这样做。 检查[NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/)程序包的最新版本。
 
 1. 创建目录：
 

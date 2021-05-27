@@ -5,23 +5,28 @@ description: 如何为自动程序创建Microsoft Teams菜单
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: da87725fca6b4eeacd43f48f6946920251d772e9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f89c564a2843aaee010774e6b262a96ce4d6530f
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020910"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668833"
 ---
 # <a name="bot-command-menus"></a>自动程序命令菜单
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-> [!Note]
-> 自动程序菜单不显示在移动客户端上。
-
 若要定义自动程序可以响应的核心命令集，你可以添加一个命令菜单以及自动程序命令的下拉列表。 当用户与自动程序对话时，将在撰写邮件区域中显示命令列表。 Select a command from the list to insert the command string into the compose message box and select **Send**.
 
+# <a name="desktop"></a>[桌面](#tab/desktop)
+
 ![自动程序命令菜单](./conversations/media/bot-menu-sample.png)
+
+# <a name="mobile"></a>[移动](#tab/mobile)
+
+![移动机器人命令菜单](./conversations/media/mobile-bot-menu-sample.png)
+
+* * *
 
 ## <a name="create-a-command-menu-for-your-bot"></a>为自动程序创建命令菜单
 

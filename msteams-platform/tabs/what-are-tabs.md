@@ -5,12 +5,12 @@ description: 自定义选项卡在 Teams 概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 21499a4e18acee369b4b1bda6184e4b14b6262ec
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 06454530ab2d0b7e993120f6696f3507a7352bf3
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629968"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667410"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams 选项卡
 
@@ -43,6 +43,12 @@ ms.locfileid: "52629968"
 
 ## <a name="understand-how-tabs-work"></a>了解选项卡如何工作
 
+可以使用下列方法之一创建选项卡：
+* [在应用清单中声明自定义选项卡](#declare-custom-tab-in-app-manifest)
+* [使用自适应卡片生成选项卡](#use-adaptive-card-to-build-tabs)
+
+### <a name="declare-custom-tab-in-app-manifest"></a>在应用清单中声明自定义选项卡
+
 自定义选项卡在应用包的应用清单中声明。 对于希望作为选项卡包含在应用中的每个网页，可定义 URL 和范围。 此外，你需要将 Teams [JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)添加到页面，并加载 `microsoftTeams.initialize()` 页面后调用。 这样做将Teams显示你的页面，让你能够访问 Teams 特定信息 (例如，如果 Teams 客户端正在运行深色主题 *) ，* 并允许你根据结果采取措施。
 
 无论你选择在频道/组还是个人范围内公开选项卡，都需要在选项卡<iframe \> HTML 内容页面。 [](~/tabs/how-to/create-tab-pages/content-page.md)对于个人选项卡，内容 URL 直接在Teams清单中通过 `contentUrl` 数组中的 属性 `staticTabs` 进行设置。 对于所有用户，选项卡的内容都相同。
@@ -51,7 +57,12 @@ ms.locfileid: "52629968"
 
 你可以有多个频道或组选项卡，每个应用最多有 16 个个人选项卡。
 
-## <a name="mobile-considerations"></a>移动注意事项
+
+### <a name="use-adaptive-card-to-build-tabs"></a>使用自适应卡片生成选项卡
+
+使用传统方法开发选项卡时，需要考虑诸如 HTML、感觉本机的 CSS 注意事项、较慢的加载时间、iFrame 约束、服务器维护和成本等事项。 自适应卡片选项卡是一种在卡片中生成选项卡的Teams。 你可以将自适应卡片呈现到选项卡，而不是在 iframe 中嵌入 Web 内容。前端呈现为自适应卡片时，后端由机器人提供电源。 机器人负责接受请求，使用要呈现的自适应卡片进行相应的响应。
+
+## <a name="mobile-clients"></a>移动客户端
 
 如果您选择让频道或组选项卡显示在Teams客户端上，则配置必须具有 `setSettings()` `websiteUrl` 属性的值。 为了确保最佳的用户体验，在创建选项卡时，必须遵循针对[](~/tabs/design/tabs-mobile.md)移动选项卡的指南。 通过[应用商店分发Teams](~/concepts/deploy-and-publish/appsource/publish.md)对移动客户端具有单独的审批流程。 此类应用的默认行为如下所示：
 
@@ -61,7 +72,9 @@ ms.locfileid: "52629968"
 | **频道和组选项卡** | 选项卡使用 在 Teams 客户端中打开 `contentUrl` 。 | 选项卡使用 在 Teams 客户端外部的浏览器中打开 `websiteUrl` 。 |
 
 > [!NOTE]
->
+> [提交到 AppSource 以在](../concepts/deploy-and-publish/overview.md#publish-to-appsource)Teams应用会自动评估移动响应能力。 对于任何查询，请通过联系 teamsubm@microsoft.com。
+> 对于[未通过 AppSource](../concepts/deploy-and-publish/overview.md)分发的所有应用，默认情况下，选项卡在 Teams 客户端的应用内 Webview 中打开，并且不需要单独的审批流程。
+> 
 > 应用的默认行为仅在通过应用商店分发时Teams适用。 默认情况下，所有选项卡在 Teams 中打开。
 > 若要开始对应用进行移动友好评估，请通过 teamsubm@microsoft.com 与应用详细信息联系。
 

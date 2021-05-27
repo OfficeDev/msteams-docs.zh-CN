@@ -4,16 +4,16 @@ description: 介绍自动程序可用的所有卡片和Teams
 localization_priority: Normal
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: cab7f1659759f40beb1aba59531ee6c1a84662c1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566857"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668860"
 ---
 # <a name="cards-reference"></a>卡参考
 
-自动程序支持本文档中列出的Microsoft Teams。 它们基于 Bot Framework 定义的卡，Teams不支持所有 Bot Framework 卡，而是添加了一Teams聊天卡。 本文档的参考中已指出区别。
+自动程序支持本文档中列出的Microsoft Teams。 它们基于 Bot Framework (BF) 定义的卡，Teams不支持所有 Bot Framework 卡，而是添加了Teams一些自动程序卡。 本文档的参考中已指出区别。
 
 ## <a name="card-examples"></a>卡片示例
 
@@ -31,7 +31,7 @@ ms.locfileid: "52566857"
 
 此表显示了可供你使用卡片的类型：
 
-| 卡片类型 | 描述 |
+| 卡片类型 | 说明 |
 | --- | --- |
 | [自适应卡片](#adaptive-card) | 此卡片是可高度自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 |
 | [Hero card](#hero-card) | 此卡片通常包含一个大图像、一个或多个按钮和少量文本。 |
@@ -52,10 +52,10 @@ ms.locfileid: "52566857"
 
 图像必须最多为 1024×1024 PNG、JPEG 或 GIF 格式，并且不支持动态 GIF。
 
-| 属性 | 类型  | 描述 |
+| 属性 | 类型  | 说明 |
 | --- | --- | --- |
 | url | URL | 图像的 HTTPS URL。 |
-| alt | 字符串 | 图像的辅助说明。 |
+| alt | String | 图像的辅助说明。 |
 
 > [!NOTE]
 > 如果卡片包含的图像 URL 在最终图像之前经过重定向，则不支持图像 URL 中的重定向。 对于在公有云上共享的图像，会出现此情况。
