@@ -6,19 +6,20 @@
     - name: 新变化？
       href: whats-new.md
 - name: 入门
+  expanded: true
   items:
-    - name: 概述
-      href: build-your-first-app/build-first-app-overview.md
-    - name: '构建“Hello, World!” 应用'
-      href: build-your-first-app/build-and-run.md
-    - name: 构建个人选项卡
-      href: build-your-first-app/build-personal-tab.md
-    - name: 建立首个频道和群组选项卡
-      href: build-your-first-app/build-channel-tab.md
-    - name: 构建首个机器人
-      href: build-your-first-app/build-bot.md
-    - name: 构建首个消息传递扩展
-      href: build-your-first-app/build-messaging-extension.md
+    - name: 先决条件
+      href: get-started/prerequisites.md
+    - name: 创建个人应用（响应）
+      href: get-started/first-app-react.md
+    - name: 创建个人应用（Blazor）
+      href: get-started/first-app-blazor.md
+    - name: 创建个人应用 （SPApp）
+      href: get-started/first-app-spfx.md
+    - name: 创建对话机器人
+      href: get-started/first-app-bot.md
+    - name: 创建邮件扩展
+      href: get-started/first-message-extension.md
 - name: 教程和代码示例
   items:
     - name: 教程
@@ -191,10 +192,22 @@
   items:
     - name: 概述
       href: tabs/what-are-tabs.md
-    - name: 选项卡链接展开和阶段视图
-      href: tabs/tabs-link-unfurling.md
-    - name: 选项卡要求
-      href: tabs/how-to/tab-requirements.md
+    - name: 创建表格
+      items:
+        - name: 选项卡要求
+          href: tabs/how-to/tab-requirements.md
+        - name: 创建内容页
+          href: tabs/how-to/create-tab-pages/content-page.md
+        - name: 创建配置页
+          href: tabs/how-to/create-tab-pages/configuration-page.md
+        - name: 创建删除页面
+          href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: 获取选项卡的上下文
+          href: tabs/how-to/access-teams-context.md
+        - name: 具有自适应卡片的生成选项卡
+          href: tabs/how-to/build-adaptive-card-tabs.md
+        - name: 选项卡链接展开和阶段视图
+          href: tabs/tabs-link-unfurling.md
     - name: 快速入门
       items:
         - name: 带 node.js 的 个人选项卡
@@ -209,16 +222,6 @@
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
         - name: 带 C# /ASP.NET CORE MVC 的频道选项卡
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-    - name: 创建内容页
-      href: tabs/how-to/create-tab-pages/content-page.md
-    - name: 创建配置页
-      href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: 创建删除页面
-      href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: 移动设备上的选项卡
-      href: tabs/design/tabs-mobile.md
-    - name: 获取选项卡的上下文
-      href: tabs/how-to/access-teams-context.md
 - name: 构建机器人
   items:
     - name: 概述
@@ -298,8 +301,14 @@
   items:
     - name: 概述
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: 为会议构建一个应用程序
+    - name: 会议应用可扩展性
+      href: apps-in-teams-meetings/meeting-app-extensibility.md
+    - name: Teams 会议中应用的先决条件和 API 参考
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: 为会议启用和配置应用
+      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: 在 Teams 中的同框场景模式
+      href: apps-in-teams-meetings/teams-together-mode.md
 - name: 构建Webhook 和连接器
   items:
     - name: 概述
