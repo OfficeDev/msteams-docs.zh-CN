@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams 发布应用商店 Office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: a55b8af97e5306843858e5844a017dd402ab3516
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 6dbdeb6d16c99aada23f8d74a92d958f9c29b69d
+ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566045"
+ms.lasthandoff: 05/31/2021
+ms.locfileid: "52709626"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>应用程序Microsoft Teams本地化
 
@@ -137,8 +137,8 @@ ms.locfileid: "52566045"
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称 | 描述 | .NET |
-|-------------|-------------|------|
-| 应用本地化 | Microsoft Teams自动程序和选项卡进行应用本地化。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| 示例名称 | 说明 | .NET | Node.js |
+|-------------|-------------|------|------|
+| 应用本地化 | Microsoft Teams自动程序和选项卡进行应用本地化。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 

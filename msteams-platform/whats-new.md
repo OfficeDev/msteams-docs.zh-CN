@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: eb7252a8f3a48049de098c50b26f087df70e5b20
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 89cd0a0bd7d19aaaab1b40a4976b265b9aa04b5d
+ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668853"
+ms.lasthandoff: 05/31/2021
+ms.locfileid: "52709633"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -55,8 +55,9 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
-|05/24/2021|使用Teams等更新了应用设计指南。|[设计Teams应用](~/concepts/design/design-teams-app-overview.md)
-|05/13/2021|添加了有关 mConnect 和 Skooler 的信息。|[可学习管理系统](resources/moodle-overview.md)
+|05/31/2021| 对话选项卡 | [开始并继续选项卡中有关内容的对话](~/tabs/how-to/conversational-tabs.md) |
+|05/24/2021| 使用Teams等更新了应用设计指南。|[设计Teams应用](~/concepts/design/design-teams-app-overview.md)
+|05/13/2021| 添加了有关 mConnect 和 Skooler 的信息。|[可学习管理系统](resources/moodle-overview.md)
 |05/10/2021| 清单 v1.10 已发布。|[清单架构](resources/schema/manifest-schema.md) |
 |05/10/2021| 新的应用自定义功能。| [允许组织自定义应用](concepts/design/enable-app-customization.md) |
 |05/07/2021| 聊天中的音频和视频呼叫的深层链接。 |[深度链接](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
@@ -91,11 +92,11 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |09/22/2020|有关开发入门的新Teams信息。|[生成首个Teams应用概述](build-your-first-app/build-first-app-overview.md)|
 |09/18/2020|支持会议Teams应用 (发布预览) 。|[创建用于会议Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md)[应用和应用Teams会议](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|使用 Microsoft Teams 导入Graph。|[使用 Microsoft Graph 将第三方平台消息导入 Teams](graph-api/import-messages/import-external-messages-to-teams.md)
-| 08/12/2020 |已移动到 GA 的传入 Webhook 中的自适应卡片支持。|[使用传入 webhook 发送自适应卡](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/12/2020 |已移动到 GA 的传入 Webhook 中的自适应卡片支持。|[使用传入 webhook 发送自适应卡](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|使用 Teams 开始构建Visual Studio Toolkit。|[使用 Microsoft Teams Toolkit 和 Visual Studio Code](toolkit/visual-studio-overview.md) |
 |08/06/2020|支持选项卡 SSO 身份验证。|["开发 SSO Microsoft Teams"选项卡](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph公共预览版中 (自动程序) 。|[在 Microsoft Teams 中启用主动自动程序安装和主动Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
-| 07/22/2020 |移动设备功能更新。|[请求用户选项卡的设备Microsoft Teams权限](concepts/device-capabilities/native-device-permissions.md) |
+|07/22/2020 |移动设备功能更新。|[请求用户选项卡的设备Microsoft Teams权限](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|TeamsAppSource 提交的应用验证工具。|[Teams应用验证工具](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|为虚拟助理创建Teams。|[虚拟助理Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|显示本机加载指示器文档。|[显示本机加载指示器](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
@@ -104,7 +105,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |06/05/2020| 清单架构已更新到版本 1.7。| [参考：Microsoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|将Power Virtual Agents与Teams。|[将Power Virtual Agents聊天机器人与Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|将 WFM 系统与 Shifts Connector for Teams。|[Microsoft TeamsShifts WFM 连接器](samples/shifts-wfm-connectors.md)
-| 03/24/2020 | 添加了对检索对话中单个成员的支持，并添加了对检索分页成员的额外支持。 | [为机器人获取 Teams 上下文](~/bots/how-to/get-teams-context.md) |
+|03/24/2020 | 添加了对检索对话中单个成员的支持，并添加了对检索分页成员的额外支持。 | [为机器人获取 Teams 上下文](~/bots/how-to/get-teams-context.md) |
 
 <br>
 
