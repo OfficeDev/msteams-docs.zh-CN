@@ -5,12 +5,12 @@ description: 介绍如何从消息传递扩展操作命令响应任务模块提�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ae5171f45974e7977a45775facf6360d34a84f87
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019830"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710639"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -26,7 +26,7 @@ ms.locfileid: "52019830"
 * [卡片](#respond-with-a-card-inserted-into-the-compose-message-area)响应：可以使用用户可与之交互或插入邮件的卡片进行响应。
 * [自动程序中的自适应卡片](#bot-response-with-adaptive-card)：将自适应卡片直接插入对话中。
 * [请求用户进行身份验证](~/messaging-extensions/how-to/add-authentication.md)。
-* [请求用户提供其他配置](~/messaging-extensions/how-to/add-configuration-page.md)。
+* [请求用户提供其他配置]~/get-started/first-message-extension.md) 。
 
 对于身份验证或配置，在用户完成此过程后，原始调用将重新发至 Web 服务。 下表根据消息扩展的调用位置显示哪些类型的响应 `commandContext` 可用： 
 

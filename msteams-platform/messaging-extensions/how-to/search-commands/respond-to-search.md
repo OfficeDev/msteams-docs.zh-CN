@@ -4,12 +4,12 @@ author: clearab
 description: 如何从应用程序应用中的消息扩展响应Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 76bccc10763b99d7373e98e6e153c4f4aa51373a
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 15b48b135f656feeb3cfb28ffbe12852ddb66359
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075631"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710632"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -347,8 +347,8 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="see-also"></a>另请参阅
 
-[向消息传递扩展添加配置](~/messaging-extensions/how-to/add-configuration-page.md)
- 
+[向消息传递扩展添加配置](~/get-started/first-message-extension.md)
+
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
