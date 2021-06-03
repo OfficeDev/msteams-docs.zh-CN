@@ -5,49 +5,89 @@ keywords: teams visual studio code toolkit
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: bc97a78df5618c87dfc66fae179145acd749ad1f
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629835"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721820"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>使用 Teams Toolkit 和 Visual Studio Code
 
-借助 Microsoft Teams 工具包，可以直接在 Visual Studio Code 环境中创建自定义 Teams 应用程序。 此工具包将引导你完成整个过程，并提供构建、调试和启动 Teams 应用所需的一切资源。
+Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置"方法帮助开发人员创建和部署具有集成标识的 Teams 应用、对云存储的访问权限、Microsoft Graph 的数据以及 Azure 和 M365 中的其他服务。  
 
-## <a name="installing-the-teams-toolkit"></a>安装Teams Toolkit
+还可以将工具包与 Visual Studio一 (CLI `teamsfx`) 。
 
-可以从 Microsoft Teams Toolkit 应用商店Visual Studio Code下载 Visual Studio [for Visual Studio Code。](https://aka.ms/teams-toolkit)
+## <a name="install-the-teams-toolkit-for-visual-studio-code"></a>安装Teams Toolkit Visual Studio Code
 
-> [!TIP]
-> 安装后，您应在活动Teams Toolkit看到Visual Studio Code栏。 如果没有，请在活动栏中右键单击并选择"Microsoft Teams固定工具包以轻松访问。
+1. 打开 Visual Studio 代码。
+1. Select the Extensions view (**Ctrl+Shift+X**  /  **⌘⇧-X** or **View > Extensions**) .
+1. 在搜索框中，输入 _"Teams Toolkit"。_
+1. 在屏幕旁的绿色安装按钮上选择Teams Toolkit。
 
-## <a name="using-the-toolkit"></a>使用工具包
+您还可以在 Teams Toolkit Marketplace 上找到Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
+
+如果需要，Visual Studio Code安装以下工具。  如果已安装，将改为使用已安装的版本。  如果使用 Linux (WSL) ，则必须先安装这些工具，然后才能使用：
+
+- [Azure 函数核心工具](/azure/azure-functions/functions-run-local)
+
+    Azure Functions Core Tools 用于在本地调试运行期间在本地运行任何后端组件，包括在 Azure 中运行服务时所需的身份验证帮助程序。  它使用 npm (安装在项目目录中 `devDependencies`) 。
+
+- [.NET SDK](/dotnet/core/install/)
+
+    .NET SDK 用于安装用于本地调试和 Azure Functions 应用部署的自定义绑定。  如果尚未全局安装 .NET 3.1 (或更高版本) SDK，将安装可移植版本。
+
+- [ngrok](https://ngrok.com/download)
+
+    某些Teams应用功能 (对话机器人、消息传递扩展和传入 webhook) 需要入站连接。  你需要通过隧道公开开发Teams进行开发。  仅包含选项卡的应用不需要隧道。  此包安装在项目目录中， (npm `devDependencies`) 。
+
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>使用 Teams Toolkit for Visual Studio Code
 
 - [设置新项目](#set-up-a-new-teams-project)
-- [导入现有项目](#import-an-existing-teams-app-project)
 - [配置应用程序](#configure-your-app)
-- [打包应用](#package-your-app)
-- [在本地或本地运行Teams](#run-your-app)
+- [在本地运行应用](#install-and-run-your-app-locally)
+- [发布应用程序](#publish-your-app-to-teams)
 
 ## <a name="set-up-a-new-teams-project"></a>设置新的Teams项目
 
-1. 在本地环境中为项目创建工作区或文件夹。
-1. 在Visual Studio Code中，选择Teams图标 ![Teams 图标](../assets/icons/favicon-16x16.png) 从窗口左侧的活动栏中。
-1. 从 **命令Microsoft Teams Toolkit** 选择"打开"菜单。
-1. 从 **命令菜单中Teams新建** 应用"。
-1. 当系统提示时，输入工作区的名称。 这将同时用作项目将驻留的文件夹的名称以及应用的默认名称。
-1. 按 **Enter，** 你将到达" **添加功能"** 屏幕，为新应用配置属性。
-1. 选择" **完成** "按钮以完成配置过程。
+该Teams Toolkit可以创建React托管在 Azure 或 SPFx Web 部件中的应用程序，这些 Web 部件将托管在 M365 SharePoint环境中。  若要创建一React托管在 Azure 上的新应用：
 
-## <a name="import-an-existing-teams-app-project"></a>导入现有Teams应用程序项目
+1. 打开 Visual Studio Code。
+1. 通过选择边栏中的 Teams 图标，打开 Teams 工具包:
 
-1. 在Visual Studio Code中，选择Teams图标 ![Teams 图标](../assets/icons/favicon-16x16.png) 从窗口左侧的活动栏中。
-1. 从 **命令菜单中选择** 导入应用包。
-1. 选择现有的应用Teams[包](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true)zip 文件。
-1. 选择" **选择发布程序包"** 按钮。 现在，应该使用应用的详细信息填充工具包的配置选项卡。
-1. In Visual Studio Code， select **File**  ->  **Add Folder to Workspace** to add your source code directory to the Visual Studio Code workspace.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code 边栏中的 Teams 图标。":::
+
+1. 选择 **创建新项目**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。":::
+
+1. 选择 **创建新的 Teams 应用**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="&quot;创建新项目&quot;的向导启动":::
+
+1. 在 **选择功能** 步骤中， **选项卡** 功能已被选中。  还可以选择自动程序 **与****消息传递扩展**。  按 **确定**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="显示如何向新应用添加功能的屏幕截图。":::
+
+1. 在 **前端托管类型** 步骤中， 选择 **Azure**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="显示如何选择新应用的托管的屏幕截图。":::
+
+1.  (可选) **在云资源** 步骤中，选择应用程序将使用的云资源。  可以选择 CRUD (、读取、更新、) 或 API SQL访问：
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="显示如何为新应用添加云资源的屏幕截图。":::
+
+1. 在 **"编程语言"** 步骤中，可以选择 **"JavaScript"或****"TypeScript"：**
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="显示如何选择编程语言的屏幕截图。":::
+
+1. 选择工作区文件夹。  将在工作区文件夹中为正在创建的项目创建一个文件夹。
+
+1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
+
+将在数秒钟内创建你的 Teams 应用。  基架应用包含用于处理单一登录Azure Active Directory访问 Microsoft Graph。  如果你选择了 Azure 资源，则这些资源的代码也将可用。
+
+有关创建和发布SPFx的演练，请参阅 SPFx[教程](../get-started/first-app-spfx.md)。
 
 ## <a name="configure-your-app"></a>配置应用程序
 
@@ -59,39 +99,46 @@ ms.locfileid: "52629835"
 
       > [!div class="checklist"]
       >
-      > - 打开manifest.js。 
+      > - 打开manifest.js。
       > - 要 [显示在](../resources/schema/manifest-schema.md#icons) 公共或组织应用程序目录中的应用的颜色图标。
       > - 显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。
 
-安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。
+清单和图标在上载到项目之前存储在项目的 `.fx` 文件夹中Teams。 安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。
 
-1. 若要配置你的应用，请导航到 Microsoft Teams Toolkit **中的**"Visual Studio Code"。
-1. 选择 **"编辑应用包** "以查看 **"应用详细信息"** 页。
-1. 编辑"应用详细信息"页中的字段将更新manifest.js文件（最终作为应用包的一部分提供）上的内容。 有关详细信息，请参阅 [App Studio 清单编辑器](https://aka.ms/teams-toolkit-manifest)
+1. 若要配置你的应用，请导航到Teams Toolkit **中的**"Visual Studio Code"。
+1. 在 **"清单编辑器**"部分 **Project** 清单编辑器"。
 
-## <a name="package-your-app"></a>打包应用
-
-修改 **应用的**.publish文件夹中的应用程序详细信息页面、清单或 **.env** 文件将自动生成 **Development.zip文件。** 你需要在同一文件夹中 [包含两](../concepts/build-and-test/apps-package.md#app-icons) 个图标。
+编辑"应用详细信息"页中的字段将更新manifest.js文件（最终作为应用包的一部分提供）上的内容。
 
 ## <a name="install-and-run-your-app-locally"></a>在本地安装和运行应用
 
-## <a name="run-your-app"></a>运行应用
+若要在本地构建并运行应用程序:
 
-### <a name="install-and-run-your-app-locally"></a>在本地安装和运行应用
+1. 在 Visual Studio Code 中，按 **F5** 以在调试模式下运行应用程序。
 
-有关如何打包 **和测试应用的** 详细说明，请参阅项目主页中的生成和运行内容。 通常，你需要安装应用的服务器，运行它，然后设置隧道解决方案，以便Teams从 localhost 运行的内容。
+   > 首次运行该应用时，将下载所有依赖项并编译该应用。  编译完成后，将自动打开浏览器窗口。  这可能需要 3-5 分钟才能完成。
 
-### <a name="enable-development-from-localhost"></a>从 localhost 启用开发
+   如果需要，工具包将提示你安装本地证书。 此证书允许 Teams 从 `https://localhost`。 出现下列对话框时，选择"是"：
 
-如果你想要使用 HTTPS 在 localhost 上调试基于选项卡的应用，则需要告诉浏览器信任从 中提供的应用 `<https://localhost>` 。 导航到 `<https://localhost:3000/tab>`。 如果您看到一条指示该网站不受信任的警告，请选择继续继续的选项。 现在，你的应用应可从 Teams访问。
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
-### <a name="run-your-app-in-teams"></a>在应用商店中Teams
+1. Web 浏览器开始运行应用程序。 如果系统提示打开 Microsoft Teams，请选择"取消"以留在浏览器中。 系统可能也会提示你在其他时间Teams应用程序。 发生这种情况时，选择 Web 应用。
 
-先决条件：[启用Teams预览模式](https://aka.ms/teams-toolkit-enable-devpreview)
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
-1. 导航到"活动"窗口左侧的活动Visual Studio Code栏。
-1. 选择" **运行** "图标以显示 **"运行和调试"** 视图。
-1. 您还可以使用键盘快捷方式 `Ctrl+Shift+D` 。
+1. 系统可能会提示你登录。  如果是这样，则使用你的 M365 帐户登录。
+1. 系统提示将应用安装到 Teams 时，按 **添加**。
+
+后端和前端都挂钩到 Visual Studio Code调试器。  这允许你在代码中的任意位置设置断点并检查状态。  您还可以使用浏览器内的任何前端 (，React开发人员) 工具。  有关在脚本中调试Visual Studio Code，请参阅[文档](https://code.visualstudio.com/Docs/editor/debugging)。
+
+## <a name="publish-your-app-to-teams"></a>将应用发布到 Teams
+
+必须先将应用发布到开发人员门户，然后才能供其他人Teams。
+
+1. 若要发布应用，请导航到 Teams Toolkit **中的**"Visual Studio Code"。
+1. 选择 **"发布Teams"****部分中的**"Project"。
+
+如果使用 Azure 托管，则必须已预配并部署到云。 有关发布过程SPFx，请参阅 SPFx[教程](../get-started/first-app-spfx.md)。
 
 ## <a name="next-step"></a>后续步骤
 

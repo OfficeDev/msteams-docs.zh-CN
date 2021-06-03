@@ -1,18 +1,18 @@
 ---
-title: 设计适用于桌面和 Web 的选项卡
-description: 了解如何在桌面和 web Teams设计 (选项卡) 并获取 Microsoft Teams UI 工具包。
+title: 适用于桌面、Web 和移动的设计选项卡
+description: 了解如何为桌面、Teams和移动设备设计 Teams 选项卡，以及如何获取 Microsoft Teams UI 工具包。
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644711"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721841"
 ---
-# <a name="designing-your-tab-for-microsoft-teams"></a>为用户设计选项卡Microsoft Teams
+# <a name="design-your-tab-for-microsoft-teams"></a>设计选项卡Microsoft Teams
 
 选项卡是应用内容的大型画布。 为了指导应用设计，以下信息介绍了并说明了用户如何在应用中添加、使用和管理选项卡Teams。
 
@@ -74,7 +74,7 @@ ms.locfileid: "52644711"
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="示例显示选项卡身份验证屏幕。" border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a>使用 UI 模板设计选项卡设置
+### <a name="design-a-tab-setup-with-ui-templates"></a>使用 UI 模板设计选项卡设置
 
 使用以下 UI 模板Teams之一来帮助设计选项卡设置体验：
 
@@ -166,7 +166,7 @@ ms.locfileid: "52644711"
 
 ### <a name="permissions-and-role-based-views"></a>权限和基于角色的视图
 
-选项卡体验可能因用户的权限不同而不同。 例如，一个用户无需登录即可访问选项卡。 但是，另一个用户必须签名，并且会看到略有不同的内容。
+选项卡体验可能因用户的权限不同而不同。 例如，一个用户无需登录即可访问选项卡。 但是，另一个用户必须登录并查看略有不同的内容。
 
 ## <a name="manage-a-tab"></a>管理选项卡
 

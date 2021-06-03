@@ -3,14 +3,14 @@ title: 开始 - 使用回车功能生成第一个 Teams 应用
 author: adrianhall
 description: 快速创建显示"Hello，World！"的 Microsoft Teams 应用。 使用 Microsoft Teams 工具包并响应的消息。
 ms.author: adhal
-ms.date: 05/18/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4560e332834fec7b681a6b2babf3e881b5e472f7
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: 8c6a957dc01cfaac0f8463166a6647d6b18babed
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52698133"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721834"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>使用 React 构建和运行第一个 Microsoft Teams 应用
 
@@ -27,20 +27,20 @@ ms.locfileid: "52698133"
 
 ## <a name="create-your-project"></a>创建项目
 
-使用 Teams 工具包创建你的第一个项目：
+使用 Teams 工具包创建你的第一个项目:
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. 打开 Visual Studio 代码。
-1. 选择边栏中的"团队"图标打开 Teams 工具包：
+1. 打开 Visual Studio Code。
+1. 通过选择边栏中的 Teams 图标，打开 Teams 工具包:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio 代码边栏中的&quot;团队&quot;图标。":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code 边栏中的 Teams 图标。":::
 
-1. 选择 **"创建新的项目**。
+1. 选择 **创建新项目**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。":::
 
-1. 选择 **"创建新的 Teams 应用**。
+1. 选择 **创建新的 Teams 应用**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="&quot;创建新项目&quot;的向导启动":::
 
@@ -62,19 +62,19 @@ ms.locfileid: "52698133"
 
 1. 选择工作区文件夹。  将在工作区文件夹中为正在创建的项目创建一个文件夹。
 
-1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只必须包含字母数字字符。  按 **Enter** 以继续。
+1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
 
 将在数秒钟内创建你的 Teams 应用。
 
 # <a name="command-line"></a>[命令行](#tab/cli)
 
-使用 `teamsfx` CLI 创建您的第一个项目。  从要创建项目文件夹的文件夹开始。
+使用 `teamsfx` CLI 创建你的第一个项目。  从要创建项目文件夹的文件夹开始。
 
 ``` bash
 teamsfx new
 ```
 
-省/市/区会引导他们提出一些问题来创建项目。  每个问题将告诉你如何回答（例如，使用箭头键选择一个选项）。  如果已回答问题，请通过按 Enter 键 **确认**。
+CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该如何回答（例如，使用箭头键选择一个选项）。  如果已回答问题，请通过按 **Enter** 确认。
 
 1. 选择 **"创建新的 Teams 应用**。
 1. 选择" **选项卡** 功能。
@@ -82,9 +82,9 @@ teamsfx new
 1. 请勿选择任何云资源。
 1. 选择 **JavaScript** 作为编程语言。
 1. 按 **Enter** 选择默认工作区文件夹。
-1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只必须包含字母数字字符。
+1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。
 
-解答所有问题后，将创建项目。
+回答所有问题后，将创建项目。
 
 ---
 
@@ -124,25 +124,23 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 
 完成后，可在 Teams 客户端中加载该应用。  我们使用 Teams Web 客户端，以便可以在标准 Web 开发环境中查看 HTML、CSS 和 JavaScript 代码。
 
-[!INCLUDE [Adjust your browser launch settings](~/includes/get-started/browser-private-launch.md)]
-
 ### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>在 Visual Studio Code 本地生成和运行应用
 
 若要在本地构建和运行应用，请执行：
 
-1. 从 Visual Studio Code 中， **F5** 调试模式下运行应用程序。
+1. 在 Visual Studio Code 中，按 **F5** 以在调试模式下运行应用程序。
 
-   > 首次运行该应用时，将下载所有依赖项并构建该应用。  版本完成后，将自动打开浏览器窗口。  这可能需要 3-5 分钟才能完成。
+   > 首次运行该应用时，将下载所有依赖项并编译该应用。  编译完成后，将自动打开浏览器窗口。  这可能需要 3-5 分钟才能完成。
 
    如有必要，工具包会提示你安装本地证书。 此证书允许 Teams 从 `https://localhost`。 出现下列对话框时，选择"是"：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
-1. Web 浏览器开始运行应用程序。 如果系统提示打开 Microsoft Teams，请选择"取消"以保留在浏览器中。 系统提示时，选择 **使用 Web 应用，**。
+1. Web 浏览器开始运行该应用。 如果系统提示打开Teams，请选择 **"取消**"以保留在浏览器中。 系统有时还可能会提示你切换到Teams桌面;选择Teams Web 应用。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="屏幕截图显示启动后如何选择团队的 Web 版本":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
-1. 系统可能会提示您登录。  如果是这样，则使用你的 M365 帐户登录。
+1. 系统可能会提示你登录。  如果是这样，则使用你的 M365 帐户登录。
 1. 系统提示将应用安装到 Teams 时，按 **添加**。
 
 此时将显示应用：
@@ -155,7 +153,7 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 <details>
 <summary>在调试器中本地运行应用时，会发生什么情况。</summary>
 
-按 F5 时，Teams 工具包：
+按 F5 时，Teams 工具包:
 
 1. 使用 Azure Active Directory 注册应用程序。
 1. *已并行* Teams 中的应用。
@@ -179,10 +177,10 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 <details>
 <summary>了解将应用部署到 Azure 时会发生的情况</summary>
 
-部署之前，应用程序已在本地运行：
+部署之前，应用程序已在本地运行:
 
-1. 后端使用 _Azure 函数核心工具_。
-1. 应用程序 HTTP 终结点（这是 Microsoft Teams 其中加载应用程序）在本地运行。
+1. 后端使用 _Azure Functions Core Tools_ 运行。
+1. 应用程序 HTTP 终结点 (Microsoft Teams 在此加载应用程序) 在本地运行。
 
 部署涉及预配活动 Azure 订阅上的资源，以及将应用程序后端和前端代码部署（上传）到 Azure。
 

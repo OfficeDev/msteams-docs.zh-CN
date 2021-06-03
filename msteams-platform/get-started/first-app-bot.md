@@ -3,14 +3,14 @@ title: 入门 - 构建你的第一个对话机器人
 author: adrianhall
 description: 使用 Teams 工具包为 Microsoft Teams 创建对话机器人。
 ms.author: adhal
-ms.date: 05/20/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 3084020000cf53fbb33ffc25d141b41ffff83160
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: a2f1ccfa6cc708d655f3b9a54062ee39e8be14bd
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52697949"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721848"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>构建你的第一个 Microsoft Teams 对话机器人
 
@@ -109,7 +109,7 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
    > 首次运行该应用时，将下载所有依赖项并编译该应用。  编译完成后，将自动打开浏览器窗口。  这可能需要 3-5 分钟才能完成。
 
-1. 启动 Web 浏览器以运行应用程序。 如果系统提示打开 Microsoft Teams，请选择"取消"以留在浏览器中。 系统提示时，选择 **使用 Web 应用**。
+1. Web 浏览器开始运行该应用。 如果系统提示打开Teams，请选择 **"取消**"以保留在浏览器中。 系统有时还可能会提示你切换到Teams桌面;选择Teams Web 应用。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
