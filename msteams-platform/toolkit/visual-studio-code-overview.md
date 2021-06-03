@@ -5,95 +5,142 @@ keywords: teams visual studio code toolkit
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: bc97a78df5618c87dfc66fae179145acd749ad1f
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629835"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721820"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a><span data-ttu-id="06f43-104">使用 Teams Toolkit 和 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="06f43-104">Build apps with the Teams Toolkit and Visual Studio Code</span></span>
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a><span data-ttu-id="5f7e9-104">使用 Teams Toolkit 和 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5f7e9-104">Build apps with the Teams Toolkit and Visual Studio Code</span></span>
 
-<span data-ttu-id="06f43-105">借助 Microsoft Teams 工具包，可以直接在 Visual Studio Code 环境中创建自定义 Teams 应用程序。</span><span class="sxs-lookup"><span data-stu-id="06f43-105">The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.</span></span> <span data-ttu-id="06f43-106">此工具包将引导你完成整个过程，并提供构建、调试和启动 Teams 应用所需的一切资源。</span><span class="sxs-lookup"><span data-stu-id="06f43-106">The toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app.</span></span>
+<span data-ttu-id="5f7e9-105">Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置"方法帮助开发人员创建和部署具有集成标识的 Teams 应用、对云存储的访问权限、Microsoft Graph 的数据以及 Azure 和 M365 中的其他服务。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-105">The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a “zero-configuration” approach to the developer experience.</span></span>  
 
-## <a name="installing-the-teams-toolkit"></a><span data-ttu-id="06f43-107">安装Teams Toolkit</span><span class="sxs-lookup"><span data-stu-id="06f43-107">Installing the Teams Toolkit</span></span>
+<span data-ttu-id="5f7e9-106">还可以将工具包与 Visual Studio一 (CLI `teamsfx`) 。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-106">You also can use the toolkit with Visual Studio or as a CLI (called `teamsfx`).</span></span>
 
-<span data-ttu-id="06f43-108">可以从 Microsoft Teams Toolkit 应用商店Visual Studio Code下载 Visual Studio [for Visual Studio Code。](https://aka.ms/teams-toolkit)</span><span class="sxs-lookup"><span data-stu-id="06f43-108">The Microsoft Teams Toolkit for Visual Studio Code is available for download from the [Visual Studio Marketplace](https://aka.ms/teams-toolkit) or directly as an extension within Visual Studio Code.</span></span>
+## <a name="install-the-teams-toolkit-for-visual-studio-code"></a><span data-ttu-id="5f7e9-107">安装Teams Toolkit Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5f7e9-107">Install the Teams Toolkit for Visual Studio Code</span></span>
 
-> [!TIP]
-> <span data-ttu-id="06f43-109">安装后，您应在活动Teams Toolkit看到Visual Studio Code栏。</span><span class="sxs-lookup"><span data-stu-id="06f43-109">After installation, you should see the Teams Toolkit in the Visual Studio Code activity bar.</span></span> <span data-ttu-id="06f43-110">如果没有，请在活动栏中右键单击并选择"Microsoft Teams固定工具包以轻松访问。</span><span class="sxs-lookup"><span data-stu-id="06f43-110">If not, right-click within the activity bar and select **Microsoft Teams** to pin the toolkit for easy access.</span></span>
+1. <span data-ttu-id="5f7e9-108">打开 Visual Studio 代码。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-108">Open Visual Studio Code.</span></span>
+1. <span data-ttu-id="5f7e9-109">Select the Extensions view (**Ctrl+Shift+X**  /  **⌘⇧-X** or **View > Extensions**) .</span><span class="sxs-lookup"><span data-stu-id="5f7e9-109">Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).</span></span>
+1. <span data-ttu-id="5f7e9-110">在搜索框中，输入 _"Teams Toolkit"。_</span><span class="sxs-lookup"><span data-stu-id="5f7e9-110">In the search box, enter _Teams Toolkit_.</span></span>
+1. <span data-ttu-id="5f7e9-111">在屏幕旁的绿色安装按钮上选择Teams Toolkit。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-111">Select on the green install button next to the Teams Toolkit.</span></span>
 
-## <a name="using-the-toolkit"></a><span data-ttu-id="06f43-111">使用工具包</span><span class="sxs-lookup"><span data-stu-id="06f43-111">Using the toolkit</span></span>
+<span data-ttu-id="5f7e9-112">您还可以在 Teams Toolkit Marketplace 上找到Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-112">You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).</span></span>
 
-- [<span data-ttu-id="06f43-112">设置新项目</span><span class="sxs-lookup"><span data-stu-id="06f43-112">Set up a new project</span></span>](#set-up-a-new-teams-project)
-- [<span data-ttu-id="06f43-113">导入现有项目</span><span class="sxs-lookup"><span data-stu-id="06f43-113">Import an existing project</span></span>](#import-an-existing-teams-app-project)
-- [<span data-ttu-id="06f43-114">配置应用程序</span><span class="sxs-lookup"><span data-stu-id="06f43-114">Configure your app</span></span>](#configure-your-app)
-- [<span data-ttu-id="06f43-115">打包应用</span><span class="sxs-lookup"><span data-stu-id="06f43-115">Package your app</span></span>](#package-your-app)
-- [<span data-ttu-id="06f43-116">在本地或本地运行Teams</span><span class="sxs-lookup"><span data-stu-id="06f43-116">Run your app locally or in Teams</span></span>](#run-your-app)
+<span data-ttu-id="5f7e9-113">如果需要，Visual Studio Code安装以下工具。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-113">The following tools will be installed by the Visual Studio Code extension when they are needed.</span></span>  <span data-ttu-id="5f7e9-114">如果已安装，将改为使用已安装的版本。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-114">If already installed, the installed version will be used instead.</span></span>  <span data-ttu-id="5f7e9-115">如果使用 Linux (WSL) ，则必须先安装这些工具，然后才能使用：</span><span class="sxs-lookup"><span data-stu-id="5f7e9-115">If using Linux (including WSL), you must install these tools before use:</span></span>
 
-## <a name="set-up-a-new-teams-project"></a><span data-ttu-id="06f43-117">设置新的Teams项目</span><span class="sxs-lookup"><span data-stu-id="06f43-117">Set up a new Teams project</span></span>
+- [<span data-ttu-id="5f7e9-116">Azure 函数核心工具</span><span class="sxs-lookup"><span data-stu-id="5f7e9-116">Azure Functions Core Tools</span></span>](/azure/azure-functions/functions-run-local)
 
-1. <span data-ttu-id="06f43-118">在本地环境中为项目创建工作区或文件夹。</span><span class="sxs-lookup"><span data-stu-id="06f43-118">Create a workspace or folder for your project in your local environment.</span></span>
-1. <span data-ttu-id="06f43-119">在Visual Studio Code中，选择Teams图标</span><span class="sxs-lookup"><span data-stu-id="06f43-119">In Visual Studio Code, select the Teams icon</span></span> ![Teams 图标](../assets/icons/favicon-16x16.png) <span data-ttu-id="06f43-121">从窗口左侧的活动栏中。</span><span class="sxs-lookup"><span data-stu-id="06f43-121">from the activity bar on the left side of the window.</span></span>
-1. <span data-ttu-id="06f43-122">从 **命令Microsoft Teams Toolkit** 选择"打开"菜单。</span><span class="sxs-lookup"><span data-stu-id="06f43-122">Select **Open the Microsoft Teams Toolkit** from the command menu.</span></span>
-1. <span data-ttu-id="06f43-123">从 **命令菜单中Teams新建** 应用"。</span><span class="sxs-lookup"><span data-stu-id="06f43-123">Select **Create a new Teams app** from the command menu.</span></span>
-1. <span data-ttu-id="06f43-124">当系统提示时，输入工作区的名称。</span><span class="sxs-lookup"><span data-stu-id="06f43-124">When prompted, enter the name of the workspace .</span></span> <span data-ttu-id="06f43-125">这将同时用作项目将驻留的文件夹的名称以及应用的默认名称。</span><span class="sxs-lookup"><span data-stu-id="06f43-125">This will be used as both the name of the folder where your project will reside, and the default name of your app.</span></span>
-1. <span data-ttu-id="06f43-126">按 **Enter，** 你将到达" **添加功能"** 屏幕，为新应用配置属性。</span><span class="sxs-lookup"><span data-stu-id="06f43-126">Press **Enter** and you will arrive at the **Add capabilities** screen configure the properties for your new app.</span></span>
-1. <span data-ttu-id="06f43-127">选择" **完成** "按钮以完成配置过程。</span><span class="sxs-lookup"><span data-stu-id="06f43-127">Select the **Finish** button to complete the configuration process.</span></span>
+    <span data-ttu-id="5f7e9-117">Azure Functions Core Tools 用于在本地调试运行期间在本地运行任何后端组件，包括在 Azure 中运行服务时所需的身份验证帮助程序。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-117">Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure.</span></span>  <span data-ttu-id="5f7e9-118">它使用 npm (安装在项目目录中 `devDependencies`) 。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-118">It is installed within the project directory (using the npm `devDependencies`).</span></span>
 
-## <a name="import-an-existing-teams-app-project"></a><span data-ttu-id="06f43-128">导入现有Teams应用程序项目</span><span class="sxs-lookup"><span data-stu-id="06f43-128">Import an existing Teams app project</span></span>
+- [<span data-ttu-id="5f7e9-119">.NET SDK</span><span class="sxs-lookup"><span data-stu-id="5f7e9-119">.NET SDK</span></span>](/dotnet/core/install/)
 
-1. <span data-ttu-id="06f43-129">在Visual Studio Code中，选择Teams图标</span><span class="sxs-lookup"><span data-stu-id="06f43-129">In Visual Studio Code, select the Teams icon</span></span> ![Teams 图标](../assets/icons/favicon-16x16.png) <span data-ttu-id="06f43-131">从窗口左侧的活动栏中。</span><span class="sxs-lookup"><span data-stu-id="06f43-131">from the activity bar on the left side of the window.</span></span>
-1. <span data-ttu-id="06f43-132">从 **命令菜单中选择** 导入应用包。</span><span class="sxs-lookup"><span data-stu-id="06f43-132">Select **Import app package** from the command menu.</span></span>
-1. <span data-ttu-id="06f43-133">选择现有的应用Teams[包](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true)zip 文件。</span><span class="sxs-lookup"><span data-stu-id="06f43-133">Choose your existing Teams [app package](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true) zip file.</span></span>
-1. <span data-ttu-id="06f43-134">选择" **选择发布程序包"** 按钮。</span><span class="sxs-lookup"><span data-stu-id="06f43-134">Choose the **Select publishing package** button.</span></span> <span data-ttu-id="06f43-135">现在，应该使用应用的详细信息填充工具包的配置选项卡。</span><span class="sxs-lookup"><span data-stu-id="06f43-135">The configuration tab of the toolkit should now be populated with your app's details.</span></span>
-1. <span data-ttu-id="06f43-136">In Visual Studio Code， select **File**  ->  **Add Folder to Workspace** to add your source code directory to the Visual Studio Code workspace.</span><span class="sxs-lookup"><span data-stu-id="06f43-136">In Visual Studio Code, select **File** -> **Add Folder to Workspace** to add your source code directory to the Visual Studio Code workspace.</span></span>
+    <span data-ttu-id="5f7e9-120">.NET SDK 用于安装用于本地调试和 Azure Functions 应用部署的自定义绑定。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-120">The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments.</span></span>  <span data-ttu-id="5f7e9-121">如果尚未全局安装 .NET 3.1 (或更高版本) SDK，将安装可移植版本。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-121">If you have not installed the .NET 3.1 (or later) SDK globally, the portable version will be installed.</span></span>
 
-## <a name="configure-your-app"></a><span data-ttu-id="06f43-137">配置应用程序</span><span class="sxs-lookup"><span data-stu-id="06f43-137">Configure your app</span></span>
+- [<span data-ttu-id="5f7e9-122">ngrok</span><span class="sxs-lookup"><span data-stu-id="5f7e9-122">ngrok</span></span>](https://ngrok.com/download)
 
-<span data-ttu-id="06f43-138">应用程序的核心是Teams三个组件：</span><span class="sxs-lookup"><span data-stu-id="06f43-138">At its core, the Teams app embraces three components:</span></span>
+    <span data-ttu-id="5f7e9-123">某些Teams应用功能 (对话机器人、消息传递扩展和传入 webhook) 需要入站连接。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-123">Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections.</span></span>  <span data-ttu-id="5f7e9-124">你需要通过隧道公开开发Teams进行开发。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-124">You need to expose your development system to Teams through a tunnel.</span></span>  <span data-ttu-id="5f7e9-125">仅包含选项卡的应用不需要隧道。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-125">A tunnel is not required for apps that only include tabs.</span></span>  <span data-ttu-id="5f7e9-126">此包安装在项目目录中， (npm `devDependencies`) 。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-126">This package is installed within the project directory (using npm `devDependencies`).</span></span>
 
-  1. <span data-ttu-id="06f43-139">The Microsoft Teams client (web， desktop or mobile) where users interact with your app.</span><span class="sxs-lookup"><span data-stu-id="06f43-139">The Microsoft Teams client (web, desktop or mobile) where users interact with your app.</span></span>
-  1. <span data-ttu-id="06f43-140">响应将在网站中显示的内容请求的服务器Teams。</span><span class="sxs-lookup"><span data-stu-id="06f43-140">A server that responds to requests for content that will be displayed in Teams.</span></span> <span data-ttu-id="06f43-141">例如，HTML 选项卡内容或自动程序自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="06f43-141">For example, HTML tab content or a bot adaptive card.</span></span>
-  1. <span data-ttu-id="06f43-142">应用Teams包包含三个文件：</span><span class="sxs-lookup"><span data-stu-id="06f43-142">A Teams app package consists of three files:</span></span>
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a><span data-ttu-id="5f7e9-127">使用 Teams Toolkit for Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5f7e9-127">Use the Teams Toolkit for Visual Studio Code</span></span>
+
+- [<span data-ttu-id="5f7e9-128">设置新项目</span><span class="sxs-lookup"><span data-stu-id="5f7e9-128">Set up a new project</span></span>](#set-up-a-new-teams-project)
+- [<span data-ttu-id="5f7e9-129">配置应用程序</span><span class="sxs-lookup"><span data-stu-id="5f7e9-129">Configure your app</span></span>](#configure-your-app)
+- [<span data-ttu-id="5f7e9-130">在本地运行应用</span><span class="sxs-lookup"><span data-stu-id="5f7e9-130">Run your app locally</span></span>](#install-and-run-your-app-locally)
+- [<span data-ttu-id="5f7e9-131">发布应用程序</span><span class="sxs-lookup"><span data-stu-id="5f7e9-131">Publish your app</span></span>](#publish-your-app-to-teams)
+
+## <a name="set-up-a-new-teams-project"></a><span data-ttu-id="5f7e9-132">设置新的Teams项目</span><span class="sxs-lookup"><span data-stu-id="5f7e9-132">Set up a new Teams project</span></span>
+
+<span data-ttu-id="5f7e9-133">该Teams Toolkit可以创建React托管在 Azure 或 SPFx Web 部件中的应用程序，这些 Web 部件将托管在 M365 SharePoint环境中。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-133">The Teams Toolkit can create React apps that will be hosted in Azure or SPFx web parts that will be hosted on your M365 SharePoint environment.</span></span>  <span data-ttu-id="5f7e9-134">若要创建一React托管在 Azure 上的新应用：</span><span class="sxs-lookup"><span data-stu-id="5f7e9-134">To create a new React app to be hosted on Azure:</span></span>
+
+1. <span data-ttu-id="5f7e9-135">打开 Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-135">Open Visual Studio code.</span></span>
+1. <span data-ttu-id="5f7e9-136">通过选择边栏中的 Teams 图标，打开 Teams 工具包:</span><span class="sxs-lookup"><span data-stu-id="5f7e9-136">Open the Teams Toolkit by selecting the Teams icon in the sidebar:</span></span>
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code 边栏中的 Teams 图标。":::
+
+1. <span data-ttu-id="5f7e9-138">选择 **创建新项目**。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-138">Select **Create New Project**.</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。":::
+
+1. <span data-ttu-id="5f7e9-140">选择 **创建新的 Teams 应用**。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-140">Select **Create a new Teams app**.</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="&quot;创建新项目&quot;的向导启动":::
+
+1. <span data-ttu-id="5f7e9-142">在 **选择功能** 步骤中， **选项卡** 功能已被选中。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-142">On the **Select capabilities** step, the **Tab** capability will already be selected.</span></span>  <span data-ttu-id="5f7e9-143">还可以选择自动程序 **与\*\*\*\*消息传递扩展**。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-143">You can also optionally select **Bot** and **Messaging Extension**.</span></span>  <span data-ttu-id="5f7e9-144">按 **确定**。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-144">Press **OK**.</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="显示如何向新应用添加功能的屏幕截图。":::
+
+1. <span data-ttu-id="5f7e9-146">在 **前端托管类型** 步骤中， 选择 **Azure**。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-146">On the **Frontend hosting type** step, select **Azure**.</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="显示如何选择新应用的托管的屏幕截图。":::
+
+1. <span data-ttu-id="5f7e9-148"> (可选) **在云资源** 步骤中，选择应用程序将使用的云资源。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-148">(Optional) On the **Cloud resources** step, select cloud resources that your application will use.</span></span>  <span data-ttu-id="5f7e9-149">可以选择 CRUD (、读取、更新、) 或 API SQL访问：</span><span class="sxs-lookup"><span data-stu-id="5f7e9-149">You can select CRUD (create, read, update, delete) access to a SQL table or an API:</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="显示如何为新应用添加云资源的屏幕截图。":::
+
+1. <span data-ttu-id="5f7e9-151">在 **"编程语言"** 步骤中，可以选择 **"JavaScript"或\*\*\*\*"TypeScript"：**</span><span class="sxs-lookup"><span data-stu-id="5f7e9-151">On the **Programming Language** step, you can choose **JavaScript** or **TypeScript**:</span></span>
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="显示如何选择编程语言的屏幕截图。":::
+
+1. <span data-ttu-id="5f7e9-153">选择工作区文件夹。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-153">Select a workspace folder.</span></span>  <span data-ttu-id="5f7e9-154">将在工作区文件夹中为正在创建的项目创建一个文件夹。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-154">A folder will be created within your workspace folder for the project you are creating.</span></span>
+
+1. <span data-ttu-id="5f7e9-155">为应用输入合适的名称，如 `helloworld`。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-155">Enter a suitable name for your app, like `helloworld`.</span></span>  <span data-ttu-id="5f7e9-156">应用的名称只能包含字母数字字符。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-156">The name of the app must consist only of alphanumeric characters.</span></span>  <span data-ttu-id="5f7e9-157">按 **Enter** 以继续。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-157">Press **Enter** to continue.</span></span>
+
+<span data-ttu-id="5f7e9-158">将在数秒钟内创建你的 Teams 应用。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-158">Your Teams app will be created within a few seconds.</span></span>  <span data-ttu-id="5f7e9-159">基架应用包含用于处理单一登录Azure Active Directory访问 Microsoft Graph。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-159">The scaffolded app contains code to handle single sign-on with Azure Active Directory and access to the Microsoft Graph.</span></span>  <span data-ttu-id="5f7e9-160">如果你选择了 Azure 资源，则这些资源的代码也将可用。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-160">If you selected Azure resources, then the code for those resources will also be available.</span></span>
+
+<span data-ttu-id="5f7e9-161">有关创建和发布SPFx的演练，请参阅 SPFx[教程](../get-started/first-app-spfx.md)。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-161">For a walk-through of the SPFx creation and publication process, see the [SPFx tutorial](../get-started/first-app-spfx.md).</span></span>
+
+## <a name="configure-your-app"></a><span data-ttu-id="5f7e9-162">配置应用程序</span><span class="sxs-lookup"><span data-stu-id="5f7e9-162">Configure your app</span></span>
+
+<span data-ttu-id="5f7e9-163">应用程序的核心是Teams三个组件：</span><span class="sxs-lookup"><span data-stu-id="5f7e9-163">At its core, the Teams app embraces three components:</span></span>
+
+  1. <span data-ttu-id="5f7e9-164">The Microsoft Teams client (web， desktop or mobile) where users interact with your app.</span><span class="sxs-lookup"><span data-stu-id="5f7e9-164">The Microsoft Teams client (web, desktop or mobile) where users interact with your app.</span></span>
+  1. <span data-ttu-id="5f7e9-165">响应将在网站中显示的内容请求的服务器Teams。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-165">A server that responds to requests for content that will be displayed in Teams.</span></span> <span data-ttu-id="5f7e9-166">例如，HTML 选项卡内容或自动程序自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-166">For example, HTML tab content or a bot adaptive card.</span></span>
+  1. <span data-ttu-id="5f7e9-167">应用Teams包包含三个文件：</span><span class="sxs-lookup"><span data-stu-id="5f7e9-167">A Teams app package consists of three files:</span></span>
 
       > [!div class="checklist"]
       >
-      > - <span data-ttu-id="06f43-143">打开manifest.js。</span><span class="sxs-lookup"><span data-stu-id="06f43-143">The manifest.json.</span></span> 
-      > - <span data-ttu-id="06f43-144">要 [显示在](../resources/schema/manifest-schema.md#icons) 公共或组织应用程序目录中的应用的颜色图标。</span><span class="sxs-lookup"><span data-stu-id="06f43-144">A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog.</span></span>
-      > - <span data-ttu-id="06f43-145">显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。</span><span class="sxs-lookup"><span data-stu-id="06f43-145">An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.</span></span>
+      > - <span data-ttu-id="5f7e9-168">打开manifest.js。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-168">The manifest.json.</span></span>
+      > - <span data-ttu-id="5f7e9-169">要 [显示在](../resources/schema/manifest-schema.md#icons) 公共或组织应用程序目录中的应用的颜色图标。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-169">A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog.</span></span>
+      > - <span data-ttu-id="5f7e9-170">显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-170">An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.</span></span>
 
-<span data-ttu-id="06f43-146">安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。</span><span class="sxs-lookup"><span data-stu-id="06f43-146">When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.</span></span>
+<span data-ttu-id="5f7e9-171">清单和图标在上载到项目之前存储在项目的 `.fx` 文件夹中Teams。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-171">The manifest and icons are stored in the `.fx` folder of your project prior to being uploaded to Teams.</span></span> <span data-ttu-id="5f7e9-172">安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-172">When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.</span></span>
 
-1. <span data-ttu-id="06f43-147">若要配置你的应用，请导航到 Microsoft Teams Toolkit **中的**"Visual Studio Code"。</span><span class="sxs-lookup"><span data-stu-id="06f43-147">To configure your app, navigate to the **Microsoft Teams Toolkit** tab in Visual Studio Code.</span></span>
-1. <span data-ttu-id="06f43-148">选择 **"编辑应用包** "以查看 **"应用详细信息"** 页。</span><span class="sxs-lookup"><span data-stu-id="06f43-148">Select **Edit app package** to view the **App details** page.</span></span>
-1. <span data-ttu-id="06f43-149">编辑"应用详细信息"页中的字段将更新manifest.js文件（最终作为应用包的一部分提供）上的内容。</span><span class="sxs-lookup"><span data-stu-id="06f43-149">Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package.</span></span> <span data-ttu-id="06f43-150">有关详细信息，请参阅 [App Studio 清单编辑器](https://aka.ms/teams-toolkit-manifest)</span><span class="sxs-lookup"><span data-stu-id="06f43-150">For more information, See [App Studio manifest editor](https://aka.ms/teams-toolkit-manifest)</span></span>
+1. <span data-ttu-id="5f7e9-173">若要配置你的应用，请导航到Teams Toolkit **中的**"Visual Studio Code"。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-173">To configure your app, navigate to the **Teams Toolkit** tab in Visual Studio Code.</span></span>
+1. <span data-ttu-id="5f7e9-174">在 **"清单编辑器**"部分 **Project** 清单编辑器"。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-174">Select **Manifest Editor** in the **Project** section.</span></span>
 
-## <a name="package-your-app"></a><span data-ttu-id="06f43-151">打包应用</span><span class="sxs-lookup"><span data-stu-id="06f43-151">Package your app</span></span>
+<span data-ttu-id="5f7e9-175">编辑"应用详细信息"页中的字段将更新manifest.js文件（最终作为应用包的一部分提供）上的内容。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-175">Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package.</span></span>
 
-<span data-ttu-id="06f43-152">修改 **应用的**.publish文件夹中的应用程序详细信息页面、清单或 **.env** 文件将自动生成 **Development.zip文件。**</span><span class="sxs-lookup"><span data-stu-id="06f43-152">Modifying the **app details** page, **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file.</span></span> <span data-ttu-id="06f43-153">你需要在同一文件夹中 [包含两](../concepts/build-and-test/apps-package.md#app-icons) 个图标。</span><span class="sxs-lookup"><span data-stu-id="06f43-153">You'll need to include [two icons](../concepts/build-and-test/apps-package.md#app-icons) in that same folder.</span></span>
+## <a name="install-and-run-your-app-locally"></a><span data-ttu-id="5f7e9-176">在本地安装和运行应用</span><span class="sxs-lookup"><span data-stu-id="5f7e9-176">Install and run your app locally</span></span>
 
-## <a name="install-and-run-your-app-locally"></a><span data-ttu-id="06f43-154">在本地安装和运行应用</span><span class="sxs-lookup"><span data-stu-id="06f43-154">Install and run your app locally</span></span>
+<span data-ttu-id="5f7e9-177">若要在本地构建并运行应用程序:</span><span class="sxs-lookup"><span data-stu-id="5f7e9-177">To build and run your app locally:</span></span>
 
-## <a name="run-your-app"></a><span data-ttu-id="06f43-155">运行应用</span><span class="sxs-lookup"><span data-stu-id="06f43-155">Run your app</span></span>
+1. <span data-ttu-id="5f7e9-178">在 Visual Studio Code 中，按 **F5** 以在调试模式下运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-178">From Visual Studio Code, press **F5** to run your application in debug mode.</span></span>
 
-### <a name="install-and-run-your-app-locally"></a><span data-ttu-id="06f43-156">在本地安装和运行应用</span><span class="sxs-lookup"><span data-stu-id="06f43-156">Install and run your app locally</span></span>
+   > <span data-ttu-id="5f7e9-179">首次运行该应用时，将下载所有依赖项并编译该应用。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-179">When you run the app for the first time, all dependencies are downloaded and the app is built.</span></span>  <span data-ttu-id="5f7e9-180">编译完成后，将自动打开浏览器窗口。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-180">A browser window automatically opens when the build is complete.</span></span>  <span data-ttu-id="5f7e9-181">这可能需要 3-5 分钟才能完成。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-181">This can take 3-5 minutes to complete.</span></span>
 
-<span data-ttu-id="06f43-157">有关如何打包 **和测试应用的** 详细说明，请参阅项目主页中的生成和运行内容。</span><span class="sxs-lookup"><span data-stu-id="06f43-157">Refer to the **Build and Run** content in your project homepage for detailed instructions on how to package and test your app.</span></span> <span data-ttu-id="06f43-158">通常，你需要安装应用的服务器，运行它，然后设置隧道解决方案，以便Teams从 localhost 运行的内容。</span><span class="sxs-lookup"><span data-stu-id="06f43-158">In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost.</span></span>
+   <span data-ttu-id="5f7e9-182">如果需要，工具包将提示你安装本地证书。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-182">The toolkit will prompt you to install a local certificate if needed.</span></span> <span data-ttu-id="5f7e9-183">此证书允许 Teams 从 `https://localhost`。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-183">This certificate allows Teams to load your application from `https://localhost`.</span></span> <span data-ttu-id="5f7e9-184">出现下列对话框时，选择"是"：</span><span class="sxs-lookup"><span data-stu-id="5f7e9-184">Select yes when the following dialog appears:</span></span>
 
-### <a name="enable-development-from-localhost"></a><span data-ttu-id="06f43-159">从 localhost 启用开发</span><span class="sxs-lookup"><span data-stu-id="06f43-159">Enable development from localhost</span></span>
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
-<span data-ttu-id="06f43-160">如果你想要使用 HTTPS 在 localhost 上调试基于选项卡的应用，则需要告诉浏览器信任从 中提供的应用 `<https://localhost>` 。</span><span class="sxs-lookup"><span data-stu-id="06f43-160">If you wish to debug your tab based app on localhost using HTTPS, you will need to tell your browser to trust the app being served from `<https://localhost>`.</span></span> <span data-ttu-id="06f43-161">导航到 `<https://localhost:3000/tab>`。</span><span class="sxs-lookup"><span data-stu-id="06f43-161">Navigate to `<https://localhost:3000/tab>`.</span></span> <span data-ttu-id="06f43-162">如果您看到一条指示该网站不受信任的警告，请选择继续继续的选项。</span><span class="sxs-lookup"><span data-stu-id="06f43-162">If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway.</span></span> <span data-ttu-id="06f43-163">现在，你的应用应可从 Teams访问。</span><span class="sxs-lookup"><span data-stu-id="06f43-163">Your app should now be accessible from the Teams client.</span></span>
+1. <span data-ttu-id="5f7e9-186">Web 浏览器开始运行应用程序。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-186">Your web browser is started to run the application.</span></span> <span data-ttu-id="5f7e9-187">如果系统提示打开 Microsoft Teams，请选择"取消"以留在浏览器中。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-187">If prompted to open Microsoft Teams, select Cancel to remain within the browser.</span></span> <span data-ttu-id="5f7e9-188">系统可能也会提示你在其他时间Teams应用程序。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-188">You may also be prompted to switch to the Teams application at other times.</span></span> <span data-ttu-id="5f7e9-189">发生这种情况时，选择 Web 应用。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-189">Select the web app when this happens.</span></span>
 
-### <a name="run-your-app-in-teams"></a><span data-ttu-id="06f43-164">在应用商店中Teams</span><span class="sxs-lookup"><span data-stu-id="06f43-164">Run your app in Teams</span></span>
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
-<span data-ttu-id="06f43-165">先决条件：[启用Teams预览模式](https://aka.ms/teams-toolkit-enable-devpreview)</span><span class="sxs-lookup"><span data-stu-id="06f43-165">Prerequisites: [Enable Teams developer preview mode](https://aka.ms/teams-toolkit-enable-devpreview)</span></span>
+1. <span data-ttu-id="5f7e9-191">系统可能会提示你登录。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-191">You may be prompted to sign in.</span></span>  <span data-ttu-id="5f7e9-192">如果是这样，则使用你的 M365 帐户登录。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-192">If so, sign in with your M365 account.</span></span>
+1. <span data-ttu-id="5f7e9-193">系统提示将应用安装到 Teams 时，按 **添加**。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-193">When prompted to install the app onto Teams, press **Add**.</span></span>
 
-1. <span data-ttu-id="06f43-166">导航到"活动"窗口左侧的活动Visual Studio Code栏。</span><span class="sxs-lookup"><span data-stu-id="06f43-166">Navigate to the activity bar on the left side of the Visual Studio Code window.</span></span>
-1. <span data-ttu-id="06f43-167">选择" **运行** "图标以显示 **"运行和调试"** 视图。</span><span class="sxs-lookup"><span data-stu-id="06f43-167">Select the **Run** icon to display the **Run and Debug** view.</span></span>
-1. <span data-ttu-id="06f43-168">您还可以使用键盘快捷方式 `Ctrl+Shift+D` 。</span><span class="sxs-lookup"><span data-stu-id="06f43-168">You can also use the keyboard shortcut `Ctrl+Shift+D`.</span></span>
+<span data-ttu-id="5f7e9-194">后端和前端都挂钩到 Visual Studio Code调试器。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-194">Both the backend and frontend are hooked into the Visual Studio Code debugger.</span></span>  <span data-ttu-id="5f7e9-195">这允许你在代码中的任意位置设置断点并检查状态。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-195">This allows you to set breakpoints anywhere in your code and inspect state.</span></span>  <span data-ttu-id="5f7e9-196">您还可以使用浏览器内的任何前端 (，React开发人员) 工具。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-196">You can also use any frontend debugging tools (such as the React Developer Tools) within the browser.</span></span>  <span data-ttu-id="5f7e9-197">有关在脚本中调试Visual Studio Code，请参阅[文档](https://code.visualstudio.com/Docs/editor/debugging)。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-197">For more information about debugging in Visual Studio Code, review [the documentation](https://code.visualstudio.com/Docs/editor/debugging).</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="06f43-169">后续步骤</span><span class="sxs-lookup"><span data-stu-id="06f43-169">Next step</span></span>
+## <a name="publish-your-app-to-teams"></a><span data-ttu-id="5f7e9-198">将应用发布到 Teams</span><span class="sxs-lookup"><span data-stu-id="5f7e9-198">Publish your app to Teams</span></span>
+
+<span data-ttu-id="5f7e9-199">必须先将应用发布到开发人员门户，然后才能供其他人Teams。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-199">Before it can be used by other people, you must publish your app to the Developer Portal for Teams.</span></span>
+
+1. <span data-ttu-id="5f7e9-200">若要发布应用，请导航到 Teams Toolkit **中的**"Visual Studio Code"。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-200">To publish your app, navigate to the **Teams Toolkit** tab in Visual Studio Code.</span></span>
+1. <span data-ttu-id="5f7e9-201">选择 **"发布Teams"\*\*\*\*部分中的**"Project"。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-201">Select **Publish to Teams** in the **Project** section.</span></span>
+
+<span data-ttu-id="5f7e9-202">如果使用 Azure 托管，则必须已预配并部署到云。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-202">If using Azure hosting, you must have provisioned and deployed to the cloud.</span></span> <span data-ttu-id="5f7e9-203">有关发布过程SPFx，请参阅 SPFx[教程](../get-started/first-app-spfx.md)。</span><span class="sxs-lookup"><span data-stu-id="5f7e9-203">For a walk-through of the SPFx publication process, see the [SPFx tutorial](../get-started/first-app-spfx.md).</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="5f7e9-204">后续步骤</span><span class="sxs-lookup"><span data-stu-id="5f7e9-204">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="06f43-170">维护和支持已发布的应用</span><span class="sxs-lookup"><span data-stu-id="06f43-170">Maintaining and supporting your published app</span></span>](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [<span data-ttu-id="5f7e9-205">维护和支持已发布的应用</span><span class="sxs-lookup"><span data-stu-id="5f7e9-205">Maintaining and supporting your published app</span></span>](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
