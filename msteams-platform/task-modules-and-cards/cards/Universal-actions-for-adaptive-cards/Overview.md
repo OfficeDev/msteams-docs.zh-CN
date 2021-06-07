@@ -3,12 +3,12 @@ title: 自适应卡片的通用操作概述
 description: 自适应卡片的通用操作快速概述。
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: 8bdbc488c68bf9bef79363f1a22d66e63ec32e08
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: f8980743954c4dff2ced464bc599439c7519cefe
+ms.sourcegitcommit: d1d1143e285cac5f23590ccba5389616d08f94b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649709"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "52781616"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
@@ -109,7 +109,7 @@ ms.locfileid: "52649709"
 
 自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。 有关详细信息，请参阅自适应 [卡片](http://adaptivecards.io/)。 自适应卡片的新通用操作支持跨平台和应用程序常见处理自适应卡片操作。 有关详细信息，请参阅通用 [操作模型](/adaptive-cards/authoring-cards/universal-action-model)。
 
-[使用适用于自适应卡片的通用操作](Work-with-universal-actions-for-adaptive-cards.md) 文档将介绍为解决方案使用通用操作自适应卡片功能的步骤。
+可以通过使用快速入门指南更新方案 [并利用通用](Work-with-universal-actions-for-adaptive-cards.md) 操作开始。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: 89cd0a0bd7d19aaaab1b40a4976b265b9aa04b5d
-ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
+ms.openlocfilehash: d053c9c6d41788014ee0a1f252b0b65e1a30ecb8
+ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/31/2021
-ms.locfileid: "52709633"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "52736766"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -37,6 +37,9 @@ ms.locfileid: "52709633"
 | **Date** | **功能** | **已更改的主题** |
 | -------- | --------- | ------------------ |
 |04/29/2021 | 自适应卡片的通用操作。 | [自适应卡的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | 自适应卡片的用户特定视图。 | [用户特定视图](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
+|04/29/2021 | 自适应卡片的顺序工作流。 | [顺序工作流](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
+|04/29/2021 | 最新卡片。 | [最新卡片](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
 |04/08/2021| 应用自定义。|[设计团队应用概述](concepts/design/enable-app-customization.md)[、App studio 概述](concepts/build-and-test/app-studio-overview.md#connectors)和[清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |03/29/2021 | 设置卡片格式Teams。 | [格式化卡片Teams](task-modules-and-cards/cards/cards-format.md) |
 |02/19/2021|添加了位置功能。 <br/> 位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能以及 QR 或条形码扫描仪功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md)、 [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)、 [集成 QR 或条形码](concepts/device-capabilities/qr-barcode-scanner-capability.md)扫描仪功能 、 [集成位置功能](concepts/device-capabilities/location-capability.md) |
@@ -55,7 +58,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
-|05/31/2021| 对话选项卡 | [开始并继续选项卡中有关内容的对话](~/tabs/how-to/conversational-tabs.md) |
+|05/31/2021| 对话选项卡。 | [开始并继续选项卡中有关内容的对话](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| 使用Teams等更新了应用设计指南。|[设计Teams应用](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| 添加了有关 mConnect 和 Skooler 的信息。|[可学习管理系统](resources/moodle-overview.md)
 |05/10/2021| 清单 v1.10 已发布。|[清单架构](resources/schema/manifest-schema.md) |
@@ -63,6 +66,9 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |05/07/2021| 聊天中的音频和视频呼叫的深层链接。 |[深度链接](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|有关如何将应用发布到应用商店Teams指南。|[将应用发布到 Teams 应用商店](concepts/deploy-and-publish/appsource/publish.md) [，Teams应用商店验证指南](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | 自适应卡片的通用操作。 | [自适应卡的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | 用户特定视图。 | [用户特定视图](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
+|04/29/2021 | 顺序工作流。 | [顺序工作流](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
+|04/29/2021 | 最新卡片。 | [最新卡片](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
 |04/08/2021| 应用自定义功能。|[设计团队应用概述](concepts/design/enable-app-customization.md)[、App studio 概述](concepts/build-and-test/app-studio-overview.md#connectors)和[清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意：更新到 Bot Framework SDK 版本 4.10 或以上版本，因为我们已开始弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 和 的过程。 | [团队/聊天成员的机器人 API 更改](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意：选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |

@@ -1,16 +1,16 @@
 ---
-title: 会议应用程序扩展性
+title: 会议应用可扩展性
 author: laujan
 description: 了解会议应用程序扩展性
 ms.topic: conceptual
-ms.openlocfilehash: 96770a6a06d7a4478d8a00a7928c74b38d7b4b2c
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: 575952555bda288d791862140f7b40ce1792c868
+ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649770"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "52736752"
 ---
-# <a name="meeting-app-extensibility"></a>会议应用程序扩展性
+# <a name="meeting-app-extensibility"></a>会议应用可扩展性
 
 Teams应用程序扩展性基于以下概念：
 
@@ -141,7 +141,7 @@ Teams应用程序扩展性基于以下概念：
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 匿名用户 | 不可用 | 不可用 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 不可用 |
 | 属于租户 AAD 的来宾 | 允许交互。 不允许创建、更新和删除。 | 不可用 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 可用 |
-| Federated | 不可用 | 不可用 | 不可用 | 不可用 | 不可用 | 不可用 |
+| 联盟用户。 有关详细信息，请参阅 [非标准用户](/microsoftteams/non-standard-users)。 | 允许交互。 不允许创建、更新和删除。 | 允许交互。 不允许获取、更新和删除。 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 不可用 |
 
 ## <a name="see-also"></a>另请参阅
 
@@ -153,4 +153,4 @@ Teams应用程序扩展性基于以下概念：
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [会议应用的先决条件和 API Teams参考](create-apps-for-teams-meetings.md)
+> [Teams 会议中应用的先决条件和 API 参考](create-apps-for-teams-meetings.md)

@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 975d3ef8fc8bdc8d6d7c336cf3a61a3a42ef5315
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: c0f9c3328018884290c86a49b8026ce81022cd83
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566031"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763106"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
@@ -77,7 +77,7 @@ ms.locfileid: "52566031"
 
 :::row-end:::
 
-确保你的短名称符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)。
+确保你的短名称符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name)。
 
 ### <a name="write-descriptions"></a>编写说明
 
@@ -97,7 +97,7 @@ ms.locfileid: "52566031"
 
 :::row-end:::
 
-请确保简短说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)。
+请确保简短说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)。
 
 #### <a name="long-description"></a>较长说明
 
@@ -113,7 +113,7 @@ ms.locfileid: "52566031"
 
 :::row-end:::
 
-请确保你的详细说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)。
+请确保你的详细说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description)。
 
 ### <a name="adhere-to-icon-design-guidelines"></a>遵守图标设计指南
 
@@ -144,7 +144,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 有关最佳做法，请参阅以下资源：
 
-* [Teams应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [Teams应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [为 Microsoft 应用商店精心制作有效图像](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>创建视频
@@ -169,7 +169,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 |:---------------------|:---------------|
 | 分析和 BI | 分析、数据可视化和 BI |
 | 开发人员和 IT | 开发人员工具、IT 管理员 |
-| 教育 | 教育 |
+| 教育版 | 教育版 |
 | 人力资源 | 人力资源和招聘 |
 | 工作效率 | 内容管理、文件和文档、生产力、培训和教程以及实用程序 |
 | 项目管理 | 通信、Project、工作流和业务管理 |

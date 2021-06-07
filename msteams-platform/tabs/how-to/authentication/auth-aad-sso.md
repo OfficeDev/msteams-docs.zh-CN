@@ -4,12 +4,12 @@ description: '介绍 SSO (单一) '
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: 65e8d5e5387ec727e9ce02967516d8672bf67931
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 681481d4d4f764c260729d37d7b5f5f2ce58d0ec
+ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019606"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52760879"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
@@ -56,10 +56,10 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 
 **在 AAD 门户概述 [中注册](https://azure.microsoft.com/features/azure-portal/) 应用程序**
 
-1. 获取[AAD 应用程序 ID。](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)
-2. 指定应用程序所需的 AAD 终结点和（可选）Graph。
-3. [授予对](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)桌面Teams Web 和移动应用程序的权限。
-4. 通过选择Teams"范围"按钮预授权用户，在打开的面板中，输入"access_as_user"作为 **"范围名称"。**
+1. 获取[AAD 应用程序 ID。](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) 
+1. 指定应用程序所需的 AAD 终结点和（可选）Graph。
+1. [授予对](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)桌面Teams Web 和移动应用程序的权限。
+1. 通过选择Teams"范围"按钮预授权用户，在打开的面板中，输入"access_as_user"作为 **"范围名称"。**
 
 > [!NOTE]
 > 您必须了解一些重要的限制：
@@ -71,35 +71,39 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 **通过 AAD 门户注册应用**
 
 1. 在 AAD 应用注册门户 [中注册新](https://go.microsoft.com/fwlink/?linkid=2083908) 应用程序。
-2. 选择 **"新建注册"。** 将显示 **"注册应用程序"** 页。
-3. 在 **"注册应用程序"** 页中，输入以下值：
+1. 选择 **"新建注册"。** 将显示 **"注册应用程序"** 页。
+1. 在 **"注册应用程序"** 页中，输入以下值：
     1. 为 **应用输入** 名称。
     2. 选择" **支持的帐户类型"，** 选择"单个租户"或"多租户帐户类型"。 ¹
     * 保留“重定向 URI”为空。
     3. 选择“注册”。
-4. 在概述页上，复制并保存应用程序 (**客户端) ID**。 更新应用程序清单时，稍后必须Teams该清单。
-5. 在“**管理**”下，选择“**公开 API**”。
-6. 选择 **"设置**"链接以生成格式为 的应用程序 ID URI。 `api://{AppID}` 在双正斜杠和 GUID 之间插入完全限定域名，末尾附加一个正斜杠"/"。 整个 ID 的形式必须为 `api://fully-qualified-domain-name.com/{AppID}` 。 1。例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ， 。 完全限定的域名是提供应用时可读的域名。 如果使用的是隧道服务（如 ngrok），则必须在 ngrok 子域发生更改时更新此值。
-7. 选择 **"添加范围"。** 在打开的面板中，输入 **access_as_user** 作为范围 **名称**。
-8. 在 **"Who同意？"** 框中，输入 **"管理员和用户"。**
-9. 在框中输入详细信息，以使用适用于作用域的值配置管理员和用户同意 `access_as_user` 提示：
+1. 在概述页上，复制并保存应用程序 (**客户端) ID**。 更新应用程序清单时，稍后必须Teams该清单。
+1. 在“**管理**”下，选择“**公开 API**”。
+
+    > [!NOTE]
+    > 如果要使用自动程序和选项卡生成应用，请输入"应用程序 ID URI"作为 `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。
+
+1. 选择 **"设置**"链接以生成格式为 的应用程序 ID URI。 `api://{AppID}` 在双正斜杠和 GUID 之间插入完全限定域名，末尾附加一个正斜杠"/"。 整个 ID 的形式必须为 `api://fully-qualified-domain-name.com/{AppID}` 。 1。例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ， 。 完全限定的域名是提供应用时可读的域名。 如果使用的是隧道服务（如 ngrok），则必须在 ngrok 子域发生更改时更新此值。
+1. 选择 **"添加范围"。** 在打开的面板中，输入 **access_as_user** 作为范围 **名称**。
+1. 在 **"Who同意？"** 框中，输入 **"管理员和用户"。**
+1. 在框中输入详细信息，以使用适用于作用域的值配置管理员和用户同意 `access_as_user` 提示：
     * **管理员同意标题** Teams用户可以访问用户配置文件。
     * **管理员同意** 说明：Teams当前用户调用应用的 Web API。
     * **用户同意标题**：Teams可以访问你的个人资料并代表你提出请求。
     * **用户同意Teams：** 用户可以使用你拥有的相同权限调用此应用的 API。
-10. 确保将“状态”设置为“已启用”。
-11. 选择 **"添加范围** "以保存详细信息。 文本字段下方显示的 **作用域** 名称的域部分必须自动匹配上一步中设置的应用程序 **ID** URI，并 `/access_as_user` 追加到末尾 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` 。
-12. 在 **"授权客户端应用程序** "部分，确定要针对应用程序的 Web 应用程序授权的应用程序。 选择 **"添加客户端应用程序"。** 输入以下每个客户端 ID，然后选择在上一步中创建的授权作用域：
+1. 确保将“状态”设置为“已启用”。
+1. 选择 **"添加范围** "以保存详细信息。 文本字段下方显示的 **作用域** 名称的域部分必须自动匹配上一步中设置的应用程序 **ID** URI，并 `/access_as_user` 追加到末尾 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` 。
+1. 在 **"授权客户端应用程序** "部分，确定要针对应用程序的 Web 应用程序授权的应用程序。 选择 **"添加客户端应用程序"。** 输入以下每个客户端 ID，然后选择在上一步中创建的授权作用域：
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`用于Teams或桌面应用程序。
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`Teams Web 应用程序。
-13. 导航到 **"API 权限"。** 选择 **"添加**  >  **Microsoft Graph** 委派权限"，然后从 API 添加以下  >  Graph权限：
+1. 导航到 **"API 权限"。** 选择 **"添加**  >  **Microsoft Graph** 委派权限"，然后从 API 添加以下  >  Graph权限：
     * 默认情况下启用 User.Read
-    * email
+    * 电子邮件
     * offline_access
     * OpenId
     * 个人资料
 
-14. 导航到 **身份验证**。
+1. 导航到 **身份验证**。
 
     如果应用尚未获得 IT 管理员同意，用户第一次使用应用时必须同意。
 
@@ -116,7 +120,7 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 >
 > * ¹ 如果你的 AAD 应用在 Teams 中进行身份验证请求的同一租户中注册，则不能要求用户同意并获取访问令牌。 只有在 AAD 应用注册到其他租户时，用户才同意这些权限。
 > * 你已经收到一个错误，指出主机名不得基于已拥有域。 若要将自定义域添加到 AAD 并注册它，请按照向 [AAD](/azure/active-directory/fundamentals/add-custom-domain) 添加自定义域名过程操作，然后重复步骤 5。 如果未使用租户租户中的管理员凭据登录，Office 365此错误。
-> * 如果未在返回的访问令牌 (UPN) ) 用户主体名称，可以在 AAD 中将其添加为可选声明。 [](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)
+> * 如果未在返回的访问令牌 (UPN) ) 用户主体名称，可以在 AAD 中将其添加为可选声明。 [](/azure/active-directory/develop/active-directory-optional-claims)
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. 更新Teams应用程序清单
 
@@ -154,7 +158,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 调用 时，用户级别权限需要其他用户同意，将显示一个对话框，以向用户授予 `getAuthToken` 其他同意。
 
-在成功回调中收到访问令牌后，可以解码访问令牌以查看与该令牌关联的声明。 （可选）你可以手动将访问令牌复制并粘贴到工具中，jwt.ms 检查其内容[](https://jwt.ms/)。 如果未在返回的访问令牌中接收 UPN，可以在 AAD 中将其添加为[](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)可选声明。
+在成功回调中收到访问令牌后，可以解码访问令牌以查看与该令牌关联的声明。 （可选）你可以手动将访问令牌复制并粘贴到工具中，jwt.ms 检查其内容[](https://jwt.ms/)。 如果未在返回的访问令牌中接收 UPN，可以在 AAD 中将其添加为[](/azure/active-directory/develop/active-directory-optional-claims)可选声明。
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>

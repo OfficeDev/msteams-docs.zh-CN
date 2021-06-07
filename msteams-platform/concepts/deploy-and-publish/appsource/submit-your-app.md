@@ -5,11 +5,11 @@ author: heath-hamilton
 ms.author: lajanuar
 ms.topic: how-to
 ms.openlocfilehash: 732e283bffc253743e890b0c45dc7b0689108716
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101882"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52760887"
 ---
 # <a name="submit-your-microsoft-teams-app-to-partner-center"></a>将你的Microsoft Teams提交到合作伙伴中心
 
@@ -31,7 +31,7 @@ ms.locfileid: "52101882"
 |:---------------------|:---------------|
 | 分析和 BI | 分析、数据可视化和 BI |
 | 开发人员和 IT | 开发人员工具、IT 管理员 |
-| 教育 | 教育 |
+| 教育版 | 教育版 |
 | 人力资源 | 人力资源和招聘 |
 | 工作效率 | 内容管理、文件和文档、生产力、培训和教程以及实用程序 |
 | 项目管理 | 通信、Project、工作流和业务管理 |

@@ -5,11 +5,11 @@ keywords: 开发人员门户团队入门
 localization_priority: Normal
 ms.topic: conceptual
 ms.openlocfilehash: ce290bd7daa46467be279aae7c608321e75e2d57
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635085"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763127"
 ---
 # <a name="app-configuration"></a>应用配置
 
@@ -104,7 +104,7 @@ ms.locfileid: "52635085"
 
   在一起模式下的场景是场景开发人员使用 Microsoft Scene Studio 创建的一个项目，它以场景创建者所构想的创意设置将人们与视频流一起汇集在一起。 在构想的场景设置中，参与者具有指定席位，视频流呈现在这些座位中。 有关详细信息，请参阅Teams[模式](~/apps-in-teams-meetings/teams-together-mode.md)。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>权限
 
 可以使用本机设备Teams（如相机、麦克风和位置）丰富你的应用。
 
