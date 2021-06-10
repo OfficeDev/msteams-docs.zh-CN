@@ -1,18 +1,18 @@
 ---
-title: 使管理员能够自定义你的应用
+title: 启用要自定义的应用
 author: heath-hamilton
 description: 了解Teams如何为组织自定义你的应用。
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 1fba8bba86f1bf1b4bab754d0c01d03adb46dd4b
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 1b5e2670cdabc139ea945f3d0c5705d9262b5832
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631258"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853541"
 ---
-# <a name="enable-orgs-to-customize-your-microsoft-teams-app"></a>允许组织自定义Microsoft Teams应用程序
+# <a name="enable-your-microsoft-teams-app-to-be-customized"></a>启用Microsoft Teams自定义应用
 
 你可以允许组织 (管理员Teams自定义) 应用的一Microsoft Teams方面。 一些可能的示例包括：
 
