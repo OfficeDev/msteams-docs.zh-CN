@@ -81,7 +81,7 @@ ms.locfileid: "52630458"
 * 使用 `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * 请勿使用 `![Duck on a rock](http://aka.ms/Fo983c)`
 
-## <a name="receiving-messages&quot;></a>接收邮件
+## <a name="receiving-messages"></a>接收邮件
 
 根据声明的范围，自动程序可以在以下上下文中接收消息：
 
