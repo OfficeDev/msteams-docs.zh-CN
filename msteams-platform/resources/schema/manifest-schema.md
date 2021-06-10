@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 清单架构
-ms.openlocfilehash: d8427d23ba2caa73cecd173f6d1ef0d041252b3b
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: 75c29a1cf9c2897d7b419b45bfc1a4f0447c7aa3
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710625"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853527"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
@@ -291,7 +291,7 @@ Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ]              
@@ -706,21 +706,19 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 
 **可选** - 数组
 
-`configurableProperties`此块定义管理员可Teams应用属性。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
+`configurableProperties`此块定义管理员可Teams的应用程序属性。 有关详细信息，请参阅启用 [应用自定义](~/concepts/design/enable-app-customization.md)。
 
 > [!NOTE]
 > 必须定义至少一个属性。 最多可以在此块中定义九个属性。
-> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。
 
 可以定义以下任一属性：
-* `name`：允许管理员更改应用显示名称。
-* `shortDescription`：允许管理员更改应用的简短说明。
-* `longDescription`：允许管理员更改应用的详细说明。
-* `smallImageUrl`：它是 `outline` 清单块 `icons` 中的 属性。
-* `largeImageUrl`：它是 `color` 清单块 `icons` 中的 属性。
-* `accentColor`：它是要与 和 一起使用的颜色，作为大纲图标的背景。
-* `websiteUrl`：它是 https:// 网站的 URL。
-* `privacyUrl`：它是 https:// 隐私策略的 URL。
-* `termsOfUseUrl`：它是 https:// 使用条款的 URL。
 
-
+* `name`：应用显示名称。
+* `shortDescription`：应用的简短说明。
+* `longDescription`：应用的详细说明。
+* `smallImageUrl`：应用的大纲图标。
+* `largeImageUrl`：应用的颜色图标。
+* `accentColor`：要与 和 结合使用用作大纲图标背景的颜色。
+* `developerUrl`：开发人员网站的 HTTPS URL。
+* `privacyUrl`：开发人员隐私策略的 HTTPS URL。
+* `termsOfUseUrl`：开发人员使用条款的 HTTPS URL。

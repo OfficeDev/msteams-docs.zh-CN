@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: d053c9c6d41788014ee0a1f252b0b65e1a30ecb8
-ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
+ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52736766"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853520"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -23,7 +23,6 @@ ms.locfileid: "52736766"
 | -------- | --------- | ------------------ |
 |05/26/2021| 使用自适应卡片生成选项卡。 |[构建选项卡](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 针对 Teams Toolkit 和[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[更新](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [应用开发Teams入门](~/get-started/prerequisites.md) |
-|05/25/2021| 会议详细信息 API 和实时Teams事件。 | [创建适用于 Teams 会议的应用](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| 新的开发人员门户Teams管理你的 Teams 应用。 | [Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| 一起模式功能将参与者合并到单个虚拟场景，并将其视频流放在预定席位中。 | [一起模式](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| 自动程序可以使用 RSC (特定同意接收所有) 。|[使用 RSC、机器人](~/bots/how-to/conversations/channel-messages-with-rsc.md)对话[概述](~/bots/how-to/conversations/conversation-basics.md)、[频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)以及[开发人员预览](~/resources/schema/manifest-schema-dev-preview.md)清单架构接收所有消息 |
@@ -196,7 +195,6 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | -------- | --------- | ------------------ |
 |05/26/2021|具有自适应卡片的生成选项卡|[构建选项卡](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 针对 Teams Toolkit 和[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[更新](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [应用开发Teams入门](~/get-started/prerequisites.md) |
-|05/25/2021| 会议详细信息 API 和实时Teams会议事件 | [创建适用于 Teams 会议的应用](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| 新的开发人员门户Teams管理你的 Teams 应用。 | [Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| 一起模式功能将参与者合并到单个虚拟场景，并将其视频流放在预定席位中。 | [一起模式](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|自动程序可以使用 RSC (特定同意接收所有) 。|[使用 RSC、机器人](~/bots/how-to/conversations/channel-messages-with-rsc.md)对话[概述](~/bots/how-to/conversations/conversation-basics.md)、[频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)以及[开发人员预览](~/resources/schema/manifest-schema-dev-preview.md)清单架构接收所有消息 |

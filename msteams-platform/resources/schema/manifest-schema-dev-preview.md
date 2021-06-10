@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: teams 清单架构开发者预览版
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: a5c75046b950484a897fa2720444899c4817989c
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c582a6af0505680b9843c86be7fc800fab12129d
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667416"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853534"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>开发人员预览清单架构Microsoft Teams
 
@@ -215,7 +215,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ],
@@ -351,7 +351,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
-|`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
+|`canUpdateConfiguration`|布尔|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
 |`sharePointPreviewImage`|String|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义选项卡在页面SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
@@ -429,7 +429,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 [ID 相同](#id)。|
-|`canUpdateConfiguration`|Boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
+|`canUpdateConfiguration`|布尔|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
 |`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -444,9 +444,9 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |`type`|字符串|64 个字符||命令的类型。 或 `query` `action` 之一。 默认值： `query`|
 |`title`|String|32 个字符|✔|用户友好命令名称。|
 |`description`|String|128 个字符||向用户显示以指示此命令用途的说明。|
-|`initialRun`|Boolean|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
+|`initialRun`|布尔|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
 |`context`|Array of Strings|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||一个布尔值，指示它应动态提取任务模块。|
+|`fetchTask`|布尔|||一个布尔值，指示它应动态提取任务模块。|
 |`taskInfo`|对象|||指定在使用消息传递扩展命令时要预加载的任务模块。|
 |`taskInfo.title`|String|64||初始对话框标题。|
 |`taskInfo.width`|String|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
@@ -516,22 +516,22 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 **可选** - 数组
 
-`configurableProperties`此块定义管理员可Teams应用属性。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
+`configurableProperties`此块定义管理员可Teams的应用程序属性。 有关详细信息，请参阅启用 [应用自定义](~/concepts/design/enable-app-customization.md)。
 
 > [!NOTE]
 > 必须定义至少一个属性。 最多可以在此块中定义九个属性。
-> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 
 
 可以定义以下任一属性：
-* `name`：允许管理员更改应用显示名称。
-* `shortDescription`：允许管理员更改应用的简短说明。
-* `longDescription`：允许管理员更改应用的详细说明。
-* `smallImageUrl`：它是 `outline` 清单块 `icons` 中的 属性。
-* `largeImageUrl`：它是 `color` 清单块 `icons` 中的 属性。
-* `accentColor`：它是要与 和 一起使用的颜色，作为大纲图标的背景。
-* `websiteUrl`：它是 https:// 网站的 URL。
-* `privacyUrl`：它是 https:// 隐私策略的 URL。
-* `termsOfUseUrl`：它是 https:// 使用条款的 URL。
+
+* `name`：应用显示名称。
+* `shortDescription`：应用的简短说明。
+* `longDescription`：应用的详细说明。
+* `smallImageUrl`：应用的大纲图标。
+* `largeImageUrl`：应用的颜色图标。
+* `accentColor`：要与 和 结合使用用作大纲图标背景的颜色。
+* `developerUrl`：开发人员网站的 HTTPS URL。
+* `privacyUrl`：开发人员隐私策略的 HTTPS URL。
+* `termsOfUseUrl`：开发人员使用条款的 HTTPS URL。
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -557,4 +557,3 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |`team`|string|||当选择的安装范围为 `team` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
 |`groupchat`|string|||当选择的安装范围为 `groupchat` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
 |`meetings`|string|||当选择的安装范围为 `meetings` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
-

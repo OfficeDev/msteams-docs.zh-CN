@@ -4,16 +4,16 @@ description: 使用通用操作的用户特定视图示例
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: cadf66082582cfd9009a0497b3eb5e58f0a2ef02
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: c24697b300d07ed53a172df162d0d3851361f579
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649622"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853513"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
-之前，如果自适应卡片是在Teams对话中发送的，则所有用户都可以看到完全相同的卡片内容。 随着通用操作模型和自适应卡片的引入，机器人开发人员现在可以为用户提供自适应卡片的用户 `refresh` 特定视图。 现在，相同的自适应卡片可以刷新到用户特定自适应卡片。
+之前，如果自适应卡片是在Teams对话中发送的，则所有用户都可以看到完全相同的卡片内容。 随着通用操作模型和自适应卡片的引入，机器人开发人员现在可以为用户提供自适应卡片的用户 `refresh` 特定视图。 现在，相同的自适应卡片可以刷新到用户特定自适应卡片。 最多 60 个不同用户可以看到不同版本的卡，并包含其他信息或操作。 这提供了功能强大的方案，如审批、投票创建者控件、票证、事件管理和项目管理卡。
 
 例如，Contoso 的安全检查员 Megan 想要创建事件并将其分配给 Alex。 她还希望团队中的每个人都了解事件。 Megan 使用 Contoso 事件报告邮件扩展，该扩展由自适应卡片的通用操作支持。
 
@@ -196,7 +196,9 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 * 您可以通过在 部分中指定特定卡片，为发送到聊天或频道的特定卡片创建最多 **60** `userIds` 个用户特定 `refresh` 视图。
 * **基本卡片：** 机器人开发人员发送到聊天的卡的基本版本。 这是部分中未指定的所有用户的自适应卡片 `userIds` 版本。
-* 邮件更新或编辑可用于更新基本卡并同时刷新用户特定卡片。
+* 邮件更新可用于更新基本卡并同时刷新用户特定卡片。 打开聊天或频道还会刷新已启用刷新功能的用户的卡片。
+* 对于用户切换到操作视图的较大组（需要响应者的动态更新）的方案，可以不断向列表中添加多达 60 `userIds` 个用户。 当第 61 个用户做出响应时，可以从列表中删除第一个响应器。 对于从列表中删除的用户，可以提供手动刷新按钮或使用消息选项菜单中的刷新按钮 `userIds` 获取最新结果。
+* 提示用户获取用户特定视图，其中他们只能看到卡片的特定视图或某些操作。
 
 ## <a name="see-also"></a>另请参阅
 
