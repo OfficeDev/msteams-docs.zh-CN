@@ -4,12 +4,12 @@ description: 如何创建虚拟助理机器人和技能以用于Microsoft Teams
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 虚拟助理机器人
-ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a736dfc7a9a2f23389b2232b36beb800bc059ad5
+ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630731"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "52871844"
 ---
 # <a name="create-virtual-assistant"></a>创建虚拟助手 
 
@@ -570,10 +570,10 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **说明** | **C#** | **.NET** |
-|----------|-----------------|----------|------------------|
-| 更新的 Visual Studio 模板 | 用于支持团队功能的自定义模板。 | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
-| 预订聊天室机器人技能代码 | 可让你快速查找并预订会议室。 |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
+| **示例名称** | **描述** | **C#**  **.NET** |
+|----------|-----------------|---------------------------|
+| 更新的 Visual Studio 模板 | 用于支持团队功能的自定义模板。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
+| 预订聊天室机器人技能代码 | 可让你快速查找并预订会议室。 | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 
 ## <a name="see-also"></a>另请参阅

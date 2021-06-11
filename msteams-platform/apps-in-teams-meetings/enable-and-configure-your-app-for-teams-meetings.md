@@ -3,12 +3,12 @@ title: 为会议启用和配置Teams应用程序
 author: laujan
 description: 为会议启用和配置Teams应用程序
 ms.topic: conceptual
-ms.openlocfilehash: 3484e82f3f51a9a92da6588234744c42a86b5730
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: 6542a8d1b4b8055d09585da4cf8c1194b5f293d7
+ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651731"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "52871837"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
@@ -130,7 +130,7 @@ Teams会议可为组织提供独特的协作体验。 它提供了为不同的�
 
 #### <a name="in-meeting-dialog-box"></a>"会议内"对话框
 
-会议内对话框可用于在会议期间与参与者互动，并收集会议期间的信息或反馈。 使用 [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API 指示必须触发气泡通知。 作为通知请求有效负载的一部分，请包含要显示内容的托管 URL。
+会议内对话框可用于在会议期间与参与者互动，并收集会议期间的信息或反馈。 使用 [`NotificationSignal`](create-apps-for-teams-meetings.md#notificationsignal-api) API 指示必须触发气泡通知。 作为通知请求有效负载的一部分，请包含要显示内容的托管 URL。
 
 会议内对话框不得使用任务模块。 会议聊天中不会调用任务模块。 外部资源 URL 用于在会议中显示内容气泡。 可以使用 方法 `submitTask` 在会议聊天中提交数据。
 
