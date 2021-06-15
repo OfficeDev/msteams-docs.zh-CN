@@ -4,12 +4,12 @@ description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应�
 keywords: 应用室团队入门
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: eda6835a1453f878476b3cc296ff2c0e5dc889a5
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: a12a63af10f677050632f5493acb2d6089d46d78
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651710"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915095"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams 快速开发应用
 
@@ -65,7 +65,6 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 > [!NOTE]
 > 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
 
-
 ##### <a name="tabs"></a>选项卡
 
 * **团队选项卡。** 团队选项卡将成为频道的一部分，可提供对团队信息和资源的快速访问。 例如，频道的"Planner"选项卡包含单个计划;Power BI 选项卡映射到特定报表。 用户可以向下钻取相关上下文，但无法导航到选项卡外部。例如，Power BI 选项卡不会启用到其他 Power BI 报表的导航，但它允许" *转到网站* "按钮，该按钮在 Power BI 主网站中启动报表。
@@ -90,10 +89,6 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 ##### <a name="connectors"></a>连接器
 
 此部分允许向应用添加连接器。 如果已注册 Office 365 连接器，请选择" **设置** 并输入连接器的名称和 ID。 如果需要新的连接器，请单击 **注册** 以在浏览器中访问连接器开发人员仪表板。
-
-> [!NOTE]
-> 通过应用自定义，管理员可以更改通过机器人、消息传递扩展、选项卡和连接器加载的应用的外观。 例如，如果Teams将 **Contoso** 中的应用程序的名称自定义为 **Contoso 代理**，则应用将显示为用户的新名称 **Contoso Agent。** 但是，向聊天添加连接器时，连接器仍将在列表中显示应用的名称为 **Contoso**。
-
 
 ##### <a name="messaging-extensions"></a>消息扩展
 
