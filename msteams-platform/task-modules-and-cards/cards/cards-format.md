@@ -5,79 +5,79 @@ keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6a420ca549cd5131afc50813b5c8267f28073e5b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630208"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949761"
 ---
-# <a name="format-cards-in-teams"></a><span data-ttu-id="a193c-104">格式化卡片Teams</span><span class="sxs-lookup"><span data-stu-id="a193c-104">Format cards in Teams</span></span>
+# <a name="format-cards-in-teams"></a><span data-ttu-id="4893d-104">格式化卡片Teams</span><span class="sxs-lookup"><span data-stu-id="4893d-104">Format cards in Teams</span></span>
 
-<span data-ttu-id="a193c-105">可以使用 Markdown 或 HTML 将格式文本格式添加到卡片，具体取决于卡片类型。</span><span class="sxs-lookup"><span data-stu-id="a193c-105">You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type.</span></span>
+<span data-ttu-id="4893d-105">可以使用 Markdown 或 HTML 将格式文本格式添加到卡片，具体取决于卡片类型。</span><span class="sxs-lookup"><span data-stu-id="4893d-105">You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type.</span></span>
 
-<span data-ttu-id="a193c-106">卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。</span><span class="sxs-lookup"><span data-stu-id="a193c-106">Cards support formatting in the text property only, not in the title or subtitle properties.</span></span> <span data-ttu-id="a193c-107">可以使用 XML 格式的子集或 HTML (格式) Markdown 来指定格式，具体取决于卡片类型。</span><span class="sxs-lookup"><span data-stu-id="a193c-107">Formatting can be specified using a subset of XML (HTML) formatting, or Markdown depending on card type.</span></span> <span data-ttu-id="a193c-108">对于当前和未来开发，建议使用 Markdown 格式的自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="a193c-108">For current and future development Adaptive cards using Markdown formatting is recommended.</span></span>
+<span data-ttu-id="4893d-106">卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。</span><span class="sxs-lookup"><span data-stu-id="4893d-106">Cards support formatting in the text property only, not in the title or subtitle properties.</span></span> <span data-ttu-id="4893d-107">可以使用 XML 格式的子集或 HTML (格式) Markdown 来指定格式，具体取决于卡片类型。</span><span class="sxs-lookup"><span data-stu-id="4893d-107">Formatting can be specified using a subset of XML (HTML) formatting, or Markdown depending on card type.</span></span> <span data-ttu-id="4893d-108">对于当前和未来开发，建议使用 Markdown 格式的自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="4893d-108">For current and future development Adaptive cards using Markdown formatting is recommended.</span></span>
 
-<span data-ttu-id="a193c-109">不同卡类型之间的格式支持不同，并且桌面版和移动版 Teams 客户端以及桌面Teams的卡片呈现可能略有不同。</span><span class="sxs-lookup"><span data-stu-id="a193c-109">Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.</span></span>
+<span data-ttu-id="4893d-109">不同卡类型之间的格式支持不同，并且桌面版和移动版 Teams 客户端以及桌面Teams的卡片呈现可能略有不同。</span><span class="sxs-lookup"><span data-stu-id="4893d-109">Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.</span></span>
 
-<span data-ttu-id="a193c-110">你可以将内联图像与任意卡片Teams内。</span><span class="sxs-lookup"><span data-stu-id="a193c-110">You can include an inline image with any Teams card.</span></span> <span data-ttu-id="a193c-111">格式设置为 、 或 文件的图像不能超过  `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。</span><span class="sxs-lookup"><span data-stu-id="a193c-111">Images an be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB.</span></span> <span data-ttu-id="a193c-112">动态 GIF 不受正式支持。</span><span class="sxs-lookup"><span data-stu-id="a193c-112">Animated GIF is not officially supported.</span></span> <span data-ttu-id="a193c-113">有关详细信息，请参阅卡片 [参考](./cards-reference.md#inline-card-images)。</span><span class="sxs-lookup"><span data-stu-id="a193c-113">For more information, see [Cards reference](./cards-reference.md#inline-card-images).</span></span>
+<span data-ttu-id="4893d-110">你可以将内联图像与任意卡片Teams内。</span><span class="sxs-lookup"><span data-stu-id="4893d-110">You can include an inline image with any Teams card.</span></span> <span data-ttu-id="4893d-111">格式设置为 、 或 文件的图像不能超过  `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。</span><span class="sxs-lookup"><span data-stu-id="4893d-111">Images an be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB.</span></span> <span data-ttu-id="4893d-112">动态 GIF 不受正式支持。</span><span class="sxs-lookup"><span data-stu-id="4893d-112">Animated GIF is not officially supported.</span></span> <span data-ttu-id="4893d-113">有关详细信息，请参阅卡片 [参考](./cards-reference.md#inline-card-images)。</span><span class="sxs-lookup"><span data-stu-id="4893d-113">For more information, see [Cards reference](./cards-reference.md#inline-card-images).</span></span>
 
-## <a name="formatting-cards-with-markdown"></a><span data-ttu-id="a193c-114">使用 Markdown 格式化卡片</span><span class="sxs-lookup"><span data-stu-id="a193c-114">Formatting cards with Markdown</span></span>
+## <a name="formatting-cards-with-markdown"></a><span data-ttu-id="4893d-114">使用 Markdown 格式化卡片</span><span class="sxs-lookup"><span data-stu-id="4893d-114">Formatting cards with Markdown</span></span>
 
-<span data-ttu-id="a193c-115">以下两种卡片类型支持 Markdown Teams：</span><span class="sxs-lookup"><span data-stu-id="a193c-115">There are two card types that support Markdown in Teams:</span></span>
+<span data-ttu-id="4893d-115">以下两种卡片类型支持 Markdown Teams：</span><span class="sxs-lookup"><span data-stu-id="4893d-115">There are two card types that support Markdown in Teams:</span></span>
 
 > [!div class="checklist"]
-> * <span data-ttu-id="a193c-116">**自适应卡片**： Markdown 在自适应卡片字段中以及 和 `Textblock` `Fact.Title` 中受支持 `Fact.Value` 。</span><span class="sxs-lookup"><span data-stu-id="a193c-116">**Adaptive cards**: Markdown is supported in Adaptive card `Textblock` field, as well as `Fact.Title` and `Fact.Value`.</span></span> <span data-ttu-id="a193c-117">自适应卡片不支持 HTML。</span><span class="sxs-lookup"><span data-stu-id="a193c-117">HTML is not supported in Adaptive cards.</span></span>
-> * <span data-ttu-id="a193c-118">**O365 连接器卡**：文本字段中的 Office 365 连接器卡中支持 Markdown 和有限的 HTML。</span><span class="sxs-lookup"><span data-stu-id="a193c-118">**O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.</span></span>
+> * <span data-ttu-id="4893d-116">**自适应卡片**： Markdown 在自适应卡片字段中以及 和 `Textblock` `Fact.Title` 中受支持 `Fact.Value` 。</span><span class="sxs-lookup"><span data-stu-id="4893d-116">**Adaptive cards**: Markdown is supported in Adaptive card `Textblock` field, as well as `Fact.Title` and `Fact.Value`.</span></span> <span data-ttu-id="4893d-117">自适应卡片不支持 HTML。</span><span class="sxs-lookup"><span data-stu-id="4893d-117">HTML is not supported in Adaptive cards.</span></span>
+> * <span data-ttu-id="4893d-118">**O365 连接器卡**：文本字段中的 Office 365 连接器卡中支持 Markdown 和有限的 HTML。</span><span class="sxs-lookup"><span data-stu-id="4893d-118">**O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.</span></span>
 
-# <a name="markdown-formatting-adaptive-cards"></a>[<span data-ttu-id="a193c-119">**Markdown 格式：自适应卡片**</span><span class="sxs-lookup"><span data-stu-id="a193c-119">**Markdown formatting: Adaptive cards**</span></span>](#tab/adaptive-md)
+# <a name="markdown-formatting-adaptive-cards"></a>[<span data-ttu-id="4893d-119">**Markdown 格式：自适应卡片**</span><span class="sxs-lookup"><span data-stu-id="4893d-119">**Markdown formatting: Adaptive cards**</span></span>](#tab/adaptive-md)
 
- <span data-ttu-id="a193c-120">和 `Textblock` 支持的 `Fact.Title` `Fact.Value` 样式包括：</span><span class="sxs-lookup"><span data-stu-id="a193c-120">The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:</span></span>
+ <span data-ttu-id="4893d-120">和 `Textblock` 支持的 `Fact.Title` `Fact.Value` 样式包括：</span><span class="sxs-lookup"><span data-stu-id="4893d-120">The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:</span></span>
 
-| <span data-ttu-id="a193c-121">样式</span><span class="sxs-lookup"><span data-stu-id="a193c-121">Style</span></span> | <span data-ttu-id="a193c-122">示例</span><span class="sxs-lookup"><span data-stu-id="a193c-122">Example</span></span> | <span data-ttu-id="a193c-123">Markdown</span><span class="sxs-lookup"><span data-stu-id="a193c-123">Markdown</span></span> |
+| <span data-ttu-id="4893d-121">样式</span><span class="sxs-lookup"><span data-stu-id="4893d-121">Style</span></span> | <span data-ttu-id="4893d-122">示例</span><span class="sxs-lookup"><span data-stu-id="4893d-122">Example</span></span> | <span data-ttu-id="4893d-123">Markdown</span><span class="sxs-lookup"><span data-stu-id="4893d-123">Markdown</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="a193c-124">bold</span><span class="sxs-lookup"><span data-stu-id="a193c-124">bold</span></span> | <span data-ttu-id="a193c-125">**Bold**</span><span class="sxs-lookup"><span data-stu-id="a193c-125">**Bold**</span></span> | ```**Bold**``` |
-| <span data-ttu-id="a193c-126">italic</span><span class="sxs-lookup"><span data-stu-id="a193c-126">italic</span></span> | <span data-ttu-id="a193c-127">_Italic_</span><span class="sxs-lookup"><span data-stu-id="a193c-127">_Italic_</span></span> | ```_Italic_``` |
-| <span data-ttu-id="a193c-128">无序列表</span><span class="sxs-lookup"><span data-stu-id="a193c-128">unordered list</span></span> | <ul><li><span data-ttu-id="a193c-129">text</span><span class="sxs-lookup"><span data-stu-id="a193c-129">text</span></span></li><li><span data-ttu-id="a193c-130">text</span><span class="sxs-lookup"><span data-stu-id="a193c-130">text</span></span></li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| <span data-ttu-id="a193c-131">排序列表</span><span class="sxs-lookup"><span data-stu-id="a193c-131">ordered list</span></span> | <ol><li><span data-ttu-id="a193c-132">text</span><span class="sxs-lookup"><span data-stu-id="a193c-132">text</span></span></li><li><span data-ttu-id="a193c-133">text</span><span class="sxs-lookup"><span data-stu-id="a193c-133">text</span></span></li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| <span data-ttu-id="a193c-134">Hyperlinks</span><span class="sxs-lookup"><span data-stu-id="a193c-134">Hyperlinks</span></span> |[<span data-ttu-id="a193c-135">必应</span><span class="sxs-lookup"><span data-stu-id="a193c-135">Bing</span></span>](https://www.bing.com/)| ```[Title](url)``` |
+| <span data-ttu-id="4893d-124">bold</span><span class="sxs-lookup"><span data-stu-id="4893d-124">bold</span></span> | <span data-ttu-id="4893d-125">**Bold**</span><span class="sxs-lookup"><span data-stu-id="4893d-125">**Bold**</span></span> | ```**Bold**``` |
+| <span data-ttu-id="4893d-126">italic</span><span class="sxs-lookup"><span data-stu-id="4893d-126">italic</span></span> | <span data-ttu-id="4893d-127">_Italic_</span><span class="sxs-lookup"><span data-stu-id="4893d-127">_Italic_</span></span> | ```_Italic_``` |
+| <span data-ttu-id="4893d-128">无序列表</span><span class="sxs-lookup"><span data-stu-id="4893d-128">unordered list</span></span> | <ul><li><span data-ttu-id="4893d-129">text</span><span class="sxs-lookup"><span data-stu-id="4893d-129">text</span></span></li><li><span data-ttu-id="4893d-130">text</span><span class="sxs-lookup"><span data-stu-id="4893d-130">text</span></span></li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| <span data-ttu-id="4893d-131">排序列表</span><span class="sxs-lookup"><span data-stu-id="4893d-131">ordered list</span></span> | <ol><li><span data-ttu-id="4893d-132">text</span><span class="sxs-lookup"><span data-stu-id="4893d-132">text</span></span></li><li><span data-ttu-id="4893d-133">text</span><span class="sxs-lookup"><span data-stu-id="4893d-133">text</span></span></li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| <span data-ttu-id="4893d-134">Hyperlinks</span><span class="sxs-lookup"><span data-stu-id="4893d-134">Hyperlinks</span></span> |[<span data-ttu-id="4893d-135">必应</span><span class="sxs-lookup"><span data-stu-id="4893d-135">Bing</span></span>](https://www.bing.com/)| ```[Title](url)``` |
 
-<span data-ttu-id="a193c-136">不支持以下 Markdown 标记：</span><span class="sxs-lookup"><span data-stu-id="a193c-136">The following Markdown tags are not supported:</span></span>
+<span data-ttu-id="4893d-136">不支持以下 Markdown 标记：</span><span class="sxs-lookup"><span data-stu-id="4893d-136">The following Markdown tags are not supported:</span></span>
 
-* <span data-ttu-id="a193c-137">标头</span><span class="sxs-lookup"><span data-stu-id="a193c-137">Headers</span></span>
-* <span data-ttu-id="a193c-138">表格</span><span class="sxs-lookup"><span data-stu-id="a193c-138">Tables</span></span>
-* <span data-ttu-id="a193c-139">图像</span><span class="sxs-lookup"><span data-stu-id="a193c-139">Images</span></span>
-* <span data-ttu-id="a193c-140">预设格式的文本</span><span class="sxs-lookup"><span data-stu-id="a193c-140">Preformatted text</span></span>
-* <span data-ttu-id="a193c-141">Blockquotes</span><span class="sxs-lookup"><span data-stu-id="a193c-141">Blockquotes</span></span>
+* <span data-ttu-id="4893d-137">标头</span><span class="sxs-lookup"><span data-stu-id="4893d-137">Headers</span></span>
+* <span data-ttu-id="4893d-138">表格</span><span class="sxs-lookup"><span data-stu-id="4893d-138">Tables</span></span>
+* <span data-ttu-id="4893d-139">图像</span><span class="sxs-lookup"><span data-stu-id="4893d-139">Images</span></span>
+* <span data-ttu-id="4893d-140">预设格式的文本</span><span class="sxs-lookup"><span data-stu-id="4893d-140">Preformatted text</span></span>
+* <span data-ttu-id="4893d-141">Blockquotes</span><span class="sxs-lookup"><span data-stu-id="4893d-141">Blockquotes</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="a193c-142">自适应卡片不支持 HTML 格式。</span><span class="sxs-lookup"><span data-stu-id="a193c-142">Adaptive cards do not support HTML formatting.</span></span>
+> <span data-ttu-id="4893d-142">自适应卡片不支持 HTML 格式。</span><span class="sxs-lookup"><span data-stu-id="4893d-142">Adaptive cards do not support HTML formatting.</span></span>
 
-### <a name="newlines-for-adaptive-cards"></a><span data-ttu-id="a193c-143">自适应卡片的 Newlines</span><span class="sxs-lookup"><span data-stu-id="a193c-143">Newlines for Adaptive cards</span></span>
+### <a name="newlines-for-adaptive-cards"></a><span data-ttu-id="4893d-143">自适应卡片的 Newlines</span><span class="sxs-lookup"><span data-stu-id="4893d-143">Newlines for Adaptive cards</span></span>
 
-<span data-ttu-id="a193c-144">在列表中，可以将 `\r` 或 `\n` 转义序列用于新行。</span><span class="sxs-lookup"><span data-stu-id="a193c-144">In lists you can use the `\r` or `\n` escape sequences for newlines.</span></span> <span data-ttu-id="a193c-145">在 `\n\n` 列表中使用 将导致列表中的下一个元素缩进。</span><span class="sxs-lookup"><span data-stu-id="a193c-145">Using `\n\n` in a list will cause the next element in the list to be indented.</span></span> <span data-ttu-id="a193c-146">如果你需要在 textblock 中的其他地方使用 newlines，请使用 `\n\n` 。</span><span class="sxs-lookup"><span data-stu-id="a193c-146">If you need newlines elsewhere in the textblock, use `\n\n`.</span></span>
+<span data-ttu-id="4893d-144">在列表中，可以将 `\r` 或 `\n` 转义序列用于新行。</span><span class="sxs-lookup"><span data-stu-id="4893d-144">In lists you can use the `\r` or `\n` escape sequences for newlines.</span></span> <span data-ttu-id="4893d-145">在 `\n\n` 列表中使用 将导致列表中的下一个元素缩进。</span><span class="sxs-lookup"><span data-stu-id="4893d-145">Using `\n\n` in a list will cause the next element in the list to be indented.</span></span> <span data-ttu-id="4893d-146">如果你需要在 textblock 中的其他地方使用 newlines，请使用 `\n\n` 。</span><span class="sxs-lookup"><span data-stu-id="4893d-146">If you need newlines elsewhere in the textblock, use `\n\n`.</span></span>
 
-### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a><span data-ttu-id="a193c-147">自适应卡片的移动和桌面差异</span><span class="sxs-lookup"><span data-stu-id="a193c-147">Mobile and desktop differences for Adaptive cards</span></span>
+### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a><span data-ttu-id="4893d-147">自适应卡片的移动和桌面差异</span><span class="sxs-lookup"><span data-stu-id="4893d-147">Mobile and desktop differences for Adaptive cards</span></span>
 
-<span data-ttu-id="a193c-148">桌面版和移动设备版之间的格式稍有不同Teams。</span><span class="sxs-lookup"><span data-stu-id="a193c-148">Formatting is slightly different between the desktop and the mobile versions of Teams.</span></span>
+<span data-ttu-id="4893d-148">桌面版和移动设备版之间的格式稍有不同Teams。</span><span class="sxs-lookup"><span data-stu-id="4893d-148">Formatting is slightly different between the desktop and the mobile versions of Teams.</span></span>
 
-<span data-ttu-id="a193c-149">在桌面上，自适应卡片 Markdown 格式在 Web 浏览器和 web 客户端应用程序中Teams如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-149">On the desktop, Adaptive card Markdown formatting appears like this in both web browsers and in the Teams client application:</span></span>
+<span data-ttu-id="4893d-149">在桌面上，自适应卡片 Markdown 格式在 Web 浏览器和 web 客户端应用程序中Teams如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-149">On the desktop, Adaptive card Markdown formatting appears like this in both web browsers and in the Teams client application:</span></span>
 
 ![桌面客户端中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-<span data-ttu-id="a193c-151">在 iOS 上，自适应卡片 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-151">On iOS, Adaptive card Markdown formatting appears like this:</span></span>
+<span data-ttu-id="4893d-151">在 iOS 上，自适应卡片 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-151">On iOS, Adaptive card Markdown formatting appears like this:</span></span>
 
 ![iOS 中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
-<span data-ttu-id="a193c-153">在 Android 上，自适应卡片 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-153">On Android, Adaptive Card Markdown formatting appears like this:</span></span>
+<span data-ttu-id="4893d-153">在 Android 上，自适应卡片 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-153">On Android, Adaptive Card Markdown formatting appears like this:</span></span>
 
 ![Android 中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-Android.png)
 
-### <a name="more-information-on-adaptive-cards"></a><span data-ttu-id="a193c-155">自适应卡片详细信息</span><span class="sxs-lookup"><span data-stu-id="a193c-155">More information on Adaptive cards</span></span>
+### <a name="more-information-on-adaptive-cards"></a><span data-ttu-id="4893d-155">自适应卡片详细信息</span><span class="sxs-lookup"><span data-stu-id="4893d-155">More information on Adaptive cards</span></span>
 
-<span data-ttu-id="a193c-156">[自适应卡片中的文本功能](/adaptive-cards/create/textfeatures)本主题中提到的日期和本地化功能在 Teams。</span><span class="sxs-lookup"><span data-stu-id="a193c-156">[Text features in Adaptive cards](/adaptive-cards/create/textfeatures) The date and localization features mentioned in this topic are not supported in Teams.</span></span>
+<span data-ttu-id="4893d-156">[自适应卡片中的文本功能](/adaptive-cards/create/textfeatures)本主题中提到的日期和本地化功能在 Teams。</span><span class="sxs-lookup"><span data-stu-id="4893d-156">[Text features in Adaptive cards](/adaptive-cards/create/textfeatures) The date and localization features mentioned in this topic are not supported in Teams.</span></span>
 
-### <a name="formatting-sample-for-adaptive-cards"></a><span data-ttu-id="a193c-157">自适应卡片的格式设置示例</span><span class="sxs-lookup"><span data-stu-id="a193c-157">Formatting sample for Adaptive cards</span></span>
+### <a name="formatting-sample-for-adaptive-cards"></a><span data-ttu-id="4893d-157">自适应卡片的格式设置示例</span><span class="sxs-lookup"><span data-stu-id="4893d-157">Formatting sample for Adaptive cards</span></span>
 
 ``` json
 {
@@ -111,25 +111,25 @@ ms.locfileid: "52630208"
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a><span data-ttu-id="a193c-158">自适应卡片 v1.2 中的提及支持</span><span class="sxs-lookup"><span data-stu-id="a193c-158">Mention support within Adaptive cards v1.2</span></span>
+### <a name="mention-support-within-adaptive-cards-v12"></a><span data-ttu-id="4893d-158">自适应卡片 v1.2 中的提及支持</span><span class="sxs-lookup"><span data-stu-id="4893d-158">Mention support within Adaptive cards v1.2</span></span>
 
-<span data-ttu-id="a193c-159">Web、桌面和移动客户端支持基于卡片的提及。</span><span class="sxs-lookup"><span data-stu-id="a193c-159">Card based mentions are supported in web, desktop and mobile clients.</span></span> <span data-ttu-id="a193c-160">你可以为机器人和消息传递扩展响应在自适应卡片正文中添加 @ 提及。</span><span class="sxs-lookup"><span data-stu-id="a193c-160">You can add @ mentions within an adaptive card body for bots and messaging extension responses.</span></span> <span data-ttu-id="a193c-161">若要在卡片中添加 @ 提及，请遵循与频道和群聊对话中基于消息的提及相同的通知 [逻辑和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。</span><span class="sxs-lookup"><span data-stu-id="a193c-161">To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).</span></span>
+<span data-ttu-id="4893d-159">Web、桌面和移动客户端支持基于卡片的提及。</span><span class="sxs-lookup"><span data-stu-id="4893d-159">Card based mentions are supported in web, desktop and mobile clients.</span></span> <span data-ttu-id="4893d-160">你可以为机器人和消息传递扩展响应在自适应卡片正文中添加 @ 提及。</span><span class="sxs-lookup"><span data-stu-id="4893d-160">You can add @ mentions within an adaptive card body for bots and messaging extension responses.</span></span> <span data-ttu-id="4893d-161">若要在卡片中添加 @ 提及，请遵循与频道和群聊对话中基于消息的提及相同的通知 [逻辑和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。</span><span class="sxs-lookup"><span data-stu-id="4893d-161">To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).</span></span>
 
-<span data-ttu-id="a193c-162">聊天机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。</span><span class="sxs-lookup"><span data-stu-id="a193c-162">Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.</span></span>
+<span data-ttu-id="4893d-162">聊天机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。</span><span class="sxs-lookup"><span data-stu-id="4893d-162">Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="a193c-163">[媒体元素](https://adaptivecards.io/explorer/Media.html)当前在应用平台上的自适应卡片 v1.2 中Teams支持。</span><span class="sxs-lookup"><span data-stu-id="a193c-163">[Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.</span></span>
-> * <span data-ttu-id="a193c-164">频道&团队提及在机器人消息中不受支持。</span><span class="sxs-lookup"><span data-stu-id="a193c-164">Channel & Team mentions are not supported in bot messages.</span></span>
+> * <span data-ttu-id="4893d-163">[媒体元素](https://adaptivecards.io/explorer/Media.html)当前在应用平台上的自适应卡片 v1.2 中Teams支持。</span><span class="sxs-lookup"><span data-stu-id="4893d-163">[Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.</span></span>
+> * <span data-ttu-id="4893d-164">频道&团队提及在机器人消息中不受支持。</span><span class="sxs-lookup"><span data-stu-id="4893d-164">Channel & Team mentions are not supported in bot messages.</span></span>
 
-#### <a name="constructing-mentions"></a><span data-ttu-id="a193c-165">构造提及</span><span class="sxs-lookup"><span data-stu-id="a193c-165">Constructing mentions</span></span>
+#### <a name="constructing-mentions"></a><span data-ttu-id="4893d-165">构造提及</span><span class="sxs-lookup"><span data-stu-id="4893d-165">Constructing mentions</span></span>
 
-<span data-ttu-id="a193c-166">若要在自适应卡片中包括提及，你的应用需要包括以下元素：</span><span class="sxs-lookup"><span data-stu-id="a193c-166">To include a mention in an Adaptive Card your app needs to include the following elements:</span></span>
+<span data-ttu-id="4893d-166">若要在自适应卡片中包括提及，你的应用需要包括以下元素：</span><span class="sxs-lookup"><span data-stu-id="4893d-166">To include a mention in an Adaptive Card your app needs to include the following elements:</span></span>
 
-* <span data-ttu-id="a193c-167">`<at>username</at>` 在支持的自适应卡片元素中。</span><span class="sxs-lookup"><span data-stu-id="a193c-167">`<at>username</at>` in the supported Adaptive card elements.</span></span>
-* <span data-ttu-id="a193c-168">`mention`卡片内容中属性内的对象，Teams `msteams` 所提及的用户的用户 ID。</span><span class="sxs-lookup"><span data-stu-id="a193c-168">The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned.</span></span>
-* <span data-ttu-id="a193c-169">`userId`是自动程序 ID 和特定用户所特有的。</span><span class="sxs-lookup"><span data-stu-id="a193c-169">The `userId` is unique to your bot ID and a particular user.</span></span> <span data-ttu-id="a193c-170">它可用于@mention用户。</span><span class="sxs-lookup"><span data-stu-id="a193c-170">It can be used to @mention a particular user.</span></span> <span data-ttu-id="a193c-171">`userId`可以使用获取用户 ID 中提到的选项之[一来检索](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。</span><span class="sxs-lookup"><span data-stu-id="a193c-171">The `userId` can be retrieved using one of the options mentioned in [get the user ID](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).</span></span>
+* <span data-ttu-id="4893d-167">`<at>username</at>` 在支持的自适应卡片元素中。</span><span class="sxs-lookup"><span data-stu-id="4893d-167">`<at>username</at>` in the supported Adaptive card elements.</span></span>
+* <span data-ttu-id="4893d-168">`mention`卡片内容中属性内的对象，Teams `msteams` 所提及的用户的用户 ID。</span><span class="sxs-lookup"><span data-stu-id="4893d-168">The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned.</span></span>
+* <span data-ttu-id="4893d-169">`userId`是自动程序 ID 和特定用户所特有的。</span><span class="sxs-lookup"><span data-stu-id="4893d-169">The `userId` is unique to your bot ID and a particular user.</span></span> <span data-ttu-id="4893d-170">它可用于@mention用户。</span><span class="sxs-lookup"><span data-stu-id="4893d-170">It can be used to @mention a particular user.</span></span> <span data-ttu-id="4893d-171">`userId`可以使用获取用户 ID 中提到的选项之[一来检索](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。</span><span class="sxs-lookup"><span data-stu-id="4893d-171">The `userId` can be retrieved using one of the options mentioned in [get the user ID](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).</span></span>
 
-#### <a name="sample-adaptive-card-with-a-mention"></a><span data-ttu-id="a193c-172">带提及功能的示例自适应卡片</span><span class="sxs-lookup"><span data-stu-id="a193c-172">Sample Adaptive card with a mention</span></span>
+#### <a name="sample-adaptive-card-with-a-mention"></a><span data-ttu-id="4893d-172">带提及功能的示例自适应卡片</span><span class="sxs-lookup"><span data-stu-id="4893d-172">Sample Adaptive card with a mention</span></span>
 
 ``` json
 {
@@ -160,16 +160,16 @@ ms.locfileid: "52630208"
 }
 ```
 
-### <a name="information-masking-in-adaptive-cards"></a><span data-ttu-id="a193c-173">自适应卡片中的信息屏蔽</span><span class="sxs-lookup"><span data-stu-id="a193c-173">Information masking in Adaptive cards</span></span>
-<span data-ttu-id="a193c-174">使用信息屏蔽属性可以屏蔽特定信息，如自适应卡片输入元素内用户的密码或 [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) 敏感信息。</span><span class="sxs-lookup"><span data-stu-id="a193c-174">Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element.</span></span> 
+### <a name="information-masking-in-adaptive-cards"></a><span data-ttu-id="4893d-173">自适应卡片中的信息屏蔽</span><span class="sxs-lookup"><span data-stu-id="4893d-173">Information masking in Adaptive cards</span></span>
+<span data-ttu-id="4893d-174">使用信息屏蔽属性可以屏蔽特定信息，如自适应卡片输入元素内用户的密码或 [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) 敏感信息。</span><span class="sxs-lookup"><span data-stu-id="4893d-174">Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element.</span></span> 
 
 > [!NOTE]
-> <span data-ttu-id="a193c-175">该功能仅支持客户端信息屏蔽，将屏蔽的输入文本作为纯文本发送到在机器人配置期间指定的 https [终结点地址](../../build-your-first-app/build-bot.md)。</span><span class="sxs-lookup"><span data-stu-id="a193c-175">The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md).</span></span> 
+> <span data-ttu-id="4893d-175">该功能仅支持客户端信息屏蔽，将屏蔽的输入文本作为纯文本发送到在机器人配置期间指定的 https [终结点地址](../../build-your-first-app/build-bot.md)。</span><span class="sxs-lookup"><span data-stu-id="4893d-175">The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md).</span></span> 
 
 > [!NOTE]
-> <span data-ttu-id="a193c-176">信息屏蔽属性当前仅在开发人员预览版中可用。</span><span class="sxs-lookup"><span data-stu-id="a193c-176">The information masking property is currently available in the developer preview only.</span></span>
+> <span data-ttu-id="4893d-176">信息屏蔽属性当前仅在开发人员预览版中可用。</span><span class="sxs-lookup"><span data-stu-id="4893d-176">The information masking property is currently available in the developer preview only.</span></span>
 
-#### <a name="sample-adaptive-card-with-masking-property"></a><span data-ttu-id="a193c-177">具有屏蔽属性的示例自适应卡片</span><span class="sxs-lookup"><span data-stu-id="a193c-177">Sample Adaptive card with masking property</span></span>
+#### <a name="sample-adaptive-card-with-masking-property"></a><span data-ttu-id="4893d-177">具有屏蔽属性的示例自适应卡片</span><span class="sxs-lookup"><span data-stu-id="4893d-177">Sample Adaptive card with masking property</span></span>
 
 ```json
 {
@@ -179,18 +179,18 @@ ms.locfileid: "52630208"
 },
 ```
 
-<span data-ttu-id="a193c-178">下图是自适应卡片中屏蔽信息的示例：</span><span class="sxs-lookup"><span data-stu-id="a193c-178">The following image is an example of masking information in Adaptive cards:</span></span>
+<span data-ttu-id="4893d-178">下图是自适应卡片中屏蔽信息的示例：</span><span class="sxs-lookup"><span data-stu-id="4893d-178">The following image is an example of masking information in Adaptive cards:</span></span>
 
 ![屏蔽信息图像](../../assets/images/cards/masking-information-view.png)
 
-### <a name="full-width-adaptive-card"></a><span data-ttu-id="a193c-180">全宽自适应卡片</span><span class="sxs-lookup"><span data-stu-id="a193c-180">Full width Adaptive card</span></span>
-<span data-ttu-id="a193c-181">可以使用 属性扩展自适应卡片的宽度， `msteams` 并占用额外的画布空间。</span><span class="sxs-lookup"><span data-stu-id="a193c-181">You can use the `msteams` property to expand the width of an Adaptive card and make use of additional canvas space.</span></span> <span data-ttu-id="a193c-182">有关如何使用 属性的信息，请参阅以下示例：</span><span class="sxs-lookup"><span data-stu-id="a193c-182">For information on how to use the property, see the following example:</span></span>
+### <a name="full-width-adaptive-card"></a><span data-ttu-id="4893d-180">全宽自适应卡片</span><span class="sxs-lookup"><span data-stu-id="4893d-180">Full width Adaptive card</span></span>
+<span data-ttu-id="4893d-181">可以使用 属性扩展自适应卡片的宽度， `msteams` 并占用额外的画布空间。</span><span class="sxs-lookup"><span data-stu-id="4893d-181">You can use the `msteams` property to expand the width of an Adaptive card and make use of additional canvas space.</span></span> <span data-ttu-id="4893d-182">有关如何使用 属性的信息，请参阅以下示例：</span><span class="sxs-lookup"><span data-stu-id="4893d-182">For information on how to use the property, see the following example:</span></span>
 
-#### <a name="constructing-full-width-cards"></a><span data-ttu-id="a193c-183">构造全宽卡片</span><span class="sxs-lookup"><span data-stu-id="a193c-183">Constructing full width cards</span></span>
-<span data-ttu-id="a193c-184">若要制作全宽自适应卡片，必须将卡片内容 `width` `msteams` 中的 属性中的 对象设置为 `Full` 。</span><span class="sxs-lookup"><span data-stu-id="a193c-184">To make a full width Adaptive card the `width` object in `msteams` property in the card content must be set to `Full`.</span></span>
-<span data-ttu-id="a193c-185">此外，你的应用必须包含以下元素：</span><span class="sxs-lookup"><span data-stu-id="a193c-185">In addition, your app must include the following elements:</span></span>
+#### <a name="constructing-full-width-cards"></a><span data-ttu-id="4893d-183">构造全宽卡片</span><span class="sxs-lookup"><span data-stu-id="4893d-183">Constructing full width cards</span></span>
+<span data-ttu-id="4893d-184">若要制作全宽自适应卡片，必须将卡片内容 `width` `msteams` 中的 属性中的 对象设置为 `Full` 。</span><span class="sxs-lookup"><span data-stu-id="4893d-184">To make a full width Adaptive card the `width` object in `msteams` property in the card content must be set to `Full`.</span></span>
+<span data-ttu-id="4893d-185">此外，你的应用必须包含以下元素：</span><span class="sxs-lookup"><span data-stu-id="4893d-185">In addition, your app must include the following elements:</span></span>
 
-#### <a name="sample-adaptive-card-with-full-width"></a><span data-ttu-id="a193c-186">全宽自适应卡片示例</span><span class="sxs-lookup"><span data-stu-id="a193c-186">Sample adaptive card with full width</span></span>
+#### <a name="sample-adaptive-card-with-full-width"></a><span data-ttu-id="4893d-186">全宽自适应卡片示例</span><span class="sxs-lookup"><span data-stu-id="4893d-186">Sample adaptive card with full width</span></span>
 
 ``` json
 {
@@ -213,19 +213,19 @@ ms.locfileid: "52630208"
 }
 ```
 
-<span data-ttu-id="a193c-187">完整宽度自适应卡片如下所示： ![ 全宽自适应卡片视图](../../assets/images/cards/full-width-adaptive-card.png)</span><span class="sxs-lookup"><span data-stu-id="a193c-187">A full width Adaptive Card appears as follows: ![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)</span></span>
+<span data-ttu-id="4893d-187">完整宽度自适应卡片如下所示： ![ 全宽自适应卡片视图](../../assets/images/cards/full-width-adaptive-card.png)</span><span class="sxs-lookup"><span data-stu-id="4893d-187">A full width Adaptive Card appears as follows: ![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)</span></span>
 
-<span data-ttu-id="a193c-188">如果尚未将属性设置为 Full，则自适应卡片的默认视图如下所示 `width` ： ![ 小宽度自适应卡片视图](../../assets/images/cards/small-width-adaptive-card.png)</span><span class="sxs-lookup"><span data-stu-id="a193c-188">If you have not set the `width` property to *Full*, then the default view of the Adaptive Card appears as follows: ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)</span></span>
+<span data-ttu-id="4893d-188">如果尚未将属性设置为 Full，则自适应卡片的默认视图如下所示 `width` ： ![ 小宽度自适应卡片视图](../../assets/images/cards/small-width-adaptive-card.png)</span><span class="sxs-lookup"><span data-stu-id="4893d-188">If you have not set the `width` property to *Full*, then the default view of the Adaptive Card appears as follows: ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)</span></span>
 
-### <a name="typeahead-support"></a><span data-ttu-id="a193c-189">Typeahead 支持</span><span class="sxs-lookup"><span data-stu-id="a193c-189">Typeahead support</span></span>
+### <a name="typeahead-support"></a><span data-ttu-id="4893d-189">Typeahead 支持</span><span class="sxs-lookup"><span data-stu-id="4893d-189">Typeahead support</span></span>
 
-<span data-ttu-id="a193c-190">在架构元素中，要求用户通过大量选择进行筛选可能会显著降低 [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) 任务完成速度。</span><span class="sxs-lookup"><span data-stu-id="a193c-190">Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can significantly slow down task completion.</span></span> <span data-ttu-id="a193c-191">自适应卡片中的 Typeahead 支持可以在用户键入输入时缩小或筛选输入选项集，从而简化输入选择。</span><span class="sxs-lookup"><span data-stu-id="a193c-191">Typeahead support within Adaptive cards can simplify input selection by narrowing or filtering the set of input choices as a user is typing the input.</span></span> 
+<span data-ttu-id="4893d-190">在架构元素中，要求用户通过大量选择进行筛选可能会显著降低 [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) 任务完成速度。</span><span class="sxs-lookup"><span data-stu-id="4893d-190">Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can significantly slow down task completion.</span></span> <span data-ttu-id="4893d-191">自适应卡片中的 Typeahead 支持可以在用户键入输入时缩小或筛选输入选项集，从而简化输入选择。</span><span class="sxs-lookup"><span data-stu-id="4893d-191">Typeahead support within Adaptive cards can simplify input selection by narrowing or filtering the set of input choices as a user is typing the input.</span></span> 
 
-#### <a name="enable-typeahead-in-adaptive-cards"></a><span data-ttu-id="a193c-192">在自适应卡片中启用 typeahead</span><span class="sxs-lookup"><span data-stu-id="a193c-192">Enable typeahead in Adaptive cards</span></span>
+#### <a name="enable-typeahead-in-adaptive-cards"></a><span data-ttu-id="4893d-192">在自适应卡片中启用 typeahead</span><span class="sxs-lookup"><span data-stu-id="4893d-192">Enable typeahead in Adaptive cards</span></span>
 
-<span data-ttu-id="a193c-193">若要在 设置为 内启用 `Input.Choiceset` `style` typeahead， `filtered` 并确保 `isMultiSelect` 设置为 `false` 。</span><span class="sxs-lookup"><span data-stu-id="a193c-193">To enable typeahead within the `Input.Choiceset` set `style` to `filtered` and ensure `isMultiSelect` is set to `false`.</span></span> 
+<span data-ttu-id="4893d-193">若要在 设置为 内启用 `Input.Choiceset` `style` typeahead， `filtered` 并确保 `isMultiSelect` 设置为 `false` 。</span><span class="sxs-lookup"><span data-stu-id="4893d-193">To enable typeahead within the `Input.Choiceset` set `style` to `filtered` and ensure `isMultiSelect` is set to `false`.</span></span> 
 
-#### <a name="sample-adaptive-card-with-typeahead-support"></a><span data-ttu-id="a193c-194">具有 typeahead 支持的示例自适应卡片</span><span class="sxs-lookup"><span data-stu-id="a193c-194">Sample adaptive card with typeahead support</span></span>
+#### <a name="sample-adaptive-card-with-typeahead-support"></a><span data-ttu-id="4893d-194">具有 typeahead 支持的示例自适应卡片</span><span class="sxs-lookup"><span data-stu-id="4893d-194">Sample adaptive card with typeahead support</span></span>
 
 ``` json
 {
@@ -240,12 +240,9 @@ ms.locfileid: "52630208"
 }
 ``` 
 
-### <a name="stage-view-for-images-in-adaptive-cards"></a><span data-ttu-id="a193c-195">自适应卡片中的图像阶段视图</span><span class="sxs-lookup"><span data-stu-id="a193c-195">Stage view for images in Adaptive Cards</span></span>
+### <a name="stage-view-for-images-in-adaptive-cards"></a><span data-ttu-id="4893d-195">自适应卡片中的图像阶段视图</span><span class="sxs-lookup"><span data-stu-id="4893d-195">Stage view for images in Adaptive Cards</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="a193c-196">此功能目前仅在开发人员预览版中可用。</span><span class="sxs-lookup"><span data-stu-id="a193c-196">This feature is currently available in developer preview only.</span></span>
- 
-<span data-ttu-id="a193c-197">在自适应卡片中，可以使用 属性添加选择性地在阶段 `msteams` 视图中显示图像的能力。</span><span class="sxs-lookup"><span data-stu-id="a193c-197">In an Adaptive card, you can use the `msteams` property to add the ability to display images in stage view selectively.</span></span> <span data-ttu-id="a193c-198">当用户将鼠标悬停在图像上时，他们将看到展开图标，其 `allowExpand` 属性设置为 `true` 。</span><span class="sxs-lookup"><span data-stu-id="a193c-198">When users hover over the images, they would see an expand icon, for which the `allowExpand` attribute is set to `true`.</span></span> <span data-ttu-id="a193c-199">有关如何使用 属性的信息，请参阅以下示例：</span><span class="sxs-lookup"><span data-stu-id="a193c-199">For information on how to use the property, see the following example:</span></span>
+<span data-ttu-id="4893d-196">在自适应卡片中，可以使用 属性添加选择性地在阶段 `msteams` 视图中显示图像的能力。</span><span class="sxs-lookup"><span data-stu-id="4893d-196">In an Adaptive card, you can use the `msteams` property to add the ability to display images in stage view selectively.</span></span> <span data-ttu-id="4893d-197">当用户将鼠标悬停在图像上时，他们将看到展开图标，其 `allowExpand` 属性设置为 `true` 。</span><span class="sxs-lookup"><span data-stu-id="4893d-197">When users hover over the images, they would see an expand icon, for which the `allowExpand` attribute is set to `true`.</span></span> <span data-ttu-id="4893d-198">有关如何使用 属性的信息，请参阅以下示例：</span><span class="sxs-lookup"><span data-stu-id="4893d-198">For information on how to use the property, see the following example:</span></span>
 
 ``` json
 {
@@ -264,57 +261,57 @@ ms.locfileid: "52630208"
 }
 ```
 
-<span data-ttu-id="a193c-200">当用户将鼠标悬停在图像上方时，图像右上角将显示展开图标：带可展开图像的自适应 ![ 卡片](../../assets/images/cards/adaptivecard-hover-expand-icon.png)</span><span class="sxs-lookup"><span data-stu-id="a193c-200">When users hover over the image, an expand icon appears at top right corner of the image: ![Adaptive card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)</span></span>
+<span data-ttu-id="4893d-199">当用户将鼠标悬停在图像上方时，图像右上角将显示展开图标：带可展开图像的自适应 ![ 卡片](../../assets/images/cards/adaptivecard-hover-expand-icon.png)</span><span class="sxs-lookup"><span data-stu-id="4893d-199">When users hover over the image, an expand icon appears at top right corner of the image: ![Adaptive card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)</span></span>
 
-<span data-ttu-id="a193c-201">当用户选择展开按钮时，图像显示在阶段视图中：展开 ![ 到阶段视图的图像](../../assets/images/cards/adaptivecard-expand-image.png)</span><span class="sxs-lookup"><span data-stu-id="a193c-201">The image appears in stage view when the user selects the expand button: ![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)</span></span>
+<span data-ttu-id="4893d-200">当用户选择展开按钮时，图像显示在阶段视图中：展开 ![ 到阶段视图的图像](../../assets/images/cards/adaptivecard-expand-image.png)</span><span class="sxs-lookup"><span data-stu-id="4893d-200">The image appears in stage view when the user selects the expand button: ![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)</span></span>
 
-<span data-ttu-id="a193c-202">在阶段视图中，用户可以放大和缩小图像。</span><span class="sxs-lookup"><span data-stu-id="a193c-202">In the stage view, users can zoom in and zoom out of the image.</span></span> <span data-ttu-id="a193c-203">可以选择自适应卡片中的哪些图像需要具备此功能。</span><span class="sxs-lookup"><span data-stu-id="a193c-203">You can select which images in your Adaptive card needs to have this capability.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="a193c-204">放大和缩小功能仅适用于自适应卡片 (图像) 图像元素。</span><span class="sxs-lookup"><span data-stu-id="a193c-204">Zoom in and zoom out capability applies only to the image elements (Image type) in an Adaptive card.</span></span>
+<span data-ttu-id="4893d-201">在阶段视图中，用户可以放大和缩小图像。</span><span class="sxs-lookup"><span data-stu-id="4893d-201">In the stage view, users can zoom in and zoom out of the image.</span></span> <span data-ttu-id="4893d-202">可以选择自适应卡片中的哪些图像需要具备此功能。</span><span class="sxs-lookup"><span data-stu-id="4893d-202">You can select which images in your Adaptive card needs to have this capability.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="a193c-205">对于 Teams 移动应用，自适应卡片中的图像阶段视图功能默认可用，用户只需点击图像即可在阶段视图中查看自适应卡片图像，无论属性是否存在。 `allowExpand`</span><span class="sxs-lookup"><span data-stu-id="a193c-205">For Teams mobile apps, stage view functionality for images in Adaptive Cards are available by default and users will be able to view Adaptive card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.</span></span>
+> <span data-ttu-id="4893d-203">放大和缩小功能仅适用于自适应卡片 (图像) 图像元素。</span><span class="sxs-lookup"><span data-stu-id="4893d-203">Zoom in and zoom out capability applies only to the image elements (Image type) in an Adaptive card.</span></span>
 
-# <a name="markdown-formatting-o365-connector-cards"></a>[<span data-ttu-id="a193c-206">**Markdown 格式：O365 连接器卡**</span><span class="sxs-lookup"><span data-stu-id="a193c-206">**Markdown formatting: O365 Connector Cards**</span></span>](#tab/connector-md)
+> [!NOTE]
+> <span data-ttu-id="4893d-204">对于 Teams 移动应用，自适应卡片中的图像阶段视图功能默认可用，用户只需点击图像即可在阶段视图中查看自适应卡片图像，无论属性是否存在。 `allowExpand`</span><span class="sxs-lookup"><span data-stu-id="4893d-204">For Teams mobile apps, stage view functionality for images in Adaptive Cards are available by default and users will be able to view Adaptive card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.</span></span>
 
-<span data-ttu-id="a193c-207">连接器卡支持有限的 Markdown 和 HTML 格式。</span><span class="sxs-lookup"><span data-stu-id="a193c-207">Connector cards support limited Markdown and HTML formatting.</span></span> <span data-ttu-id="a193c-208">HTML 支持在上一节中介绍。</span><span class="sxs-lookup"><span data-stu-id="a193c-208">HTML support is described in the last section.</span></span>
+# <a name="markdown-formatting-o365-connector-cards"></a>[<span data-ttu-id="4893d-205">**Markdown 格式：O365 连接器卡**</span><span class="sxs-lookup"><span data-stu-id="4893d-205">**Markdown formatting: O365 Connector Cards**</span></span>](#tab/connector-md)
 
-| <span data-ttu-id="a193c-209">样式</span><span class="sxs-lookup"><span data-stu-id="a193c-209">Style</span></span> | <span data-ttu-id="a193c-210">示例</span><span class="sxs-lookup"><span data-stu-id="a193c-210">Example</span></span> | <span data-ttu-id="a193c-211">Markdown</span><span class="sxs-lookup"><span data-stu-id="a193c-211">Markdown</span></span> |
+<span data-ttu-id="4893d-206">连接器卡支持有限的 Markdown 和 HTML 格式。</span><span class="sxs-lookup"><span data-stu-id="4893d-206">Connector cards support limited Markdown and HTML formatting.</span></span> <span data-ttu-id="4893d-207">HTML 支持在上一节中介绍。</span><span class="sxs-lookup"><span data-stu-id="4893d-207">HTML support is described in the last section.</span></span>
+
+| <span data-ttu-id="4893d-208">样式</span><span class="sxs-lookup"><span data-stu-id="4893d-208">Style</span></span> | <span data-ttu-id="4893d-209">示例</span><span class="sxs-lookup"><span data-stu-id="4893d-209">Example</span></span> | <span data-ttu-id="4893d-210">Markdown</span><span class="sxs-lookup"><span data-stu-id="4893d-210">Markdown</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="a193c-212">bold</span><span class="sxs-lookup"><span data-stu-id="a193c-212">bold</span></span> | <span data-ttu-id="a193c-213">**text**</span><span class="sxs-lookup"><span data-stu-id="a193c-213">**text**</span></span> | `**text**` |
-| <span data-ttu-id="a193c-214">italic</span><span class="sxs-lookup"><span data-stu-id="a193c-214">italic</span></span> | <span data-ttu-id="a193c-215">*text*</span><span class="sxs-lookup"><span data-stu-id="a193c-215">*text*</span></span> | `*text*` |
-| <span data-ttu-id="a193c-216">页眉 (级别 1 &ndash; 3) </span><span class="sxs-lookup"><span data-stu-id="a193c-216">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="a193c-217">**Text**</span><span class="sxs-lookup"><span data-stu-id="a193c-217">**Text**</span></span> | `### Text`|
-| <span data-ttu-id="a193c-218">strikethrough</span><span class="sxs-lookup"><span data-stu-id="a193c-218">strikethrough</span></span> | <span data-ttu-id="a193c-219">~~text~~</span><span class="sxs-lookup"><span data-stu-id="a193c-219">~~text~~</span></span> | `~~text~~` |
-| <span data-ttu-id="a193c-220">无序列表</span><span class="sxs-lookup"><span data-stu-id="a193c-220">unordered list</span></span> | <ul><li><span data-ttu-id="a193c-221">text</span><span class="sxs-lookup"><span data-stu-id="a193c-221">text</span></span></li><li><span data-ttu-id="a193c-222">text</span><span class="sxs-lookup"><span data-stu-id="a193c-222">text</span></span></li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| <span data-ttu-id="a193c-223">排序列表</span><span class="sxs-lookup"><span data-stu-id="a193c-223">ordered list</span></span> | <ol><li><span data-ttu-id="a193c-224">text</span><span class="sxs-lookup"><span data-stu-id="a193c-224">text</span></span></li><li><span data-ttu-id="a193c-225">text</span><span class="sxs-lookup"><span data-stu-id="a193c-225">text</span></span></li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| <span data-ttu-id="a193c-226">预设格式的文本</span><span class="sxs-lookup"><span data-stu-id="a193c-226">preformatted text</span></span> | `text` | ``preformatted text`` |
-| <span data-ttu-id="a193c-227">blockquote</span><span class="sxs-lookup"><span data-stu-id="a193c-227">blockquote</span></span> | <span data-ttu-id="a193c-228">>blockquote 文本</span><span class="sxs-lookup"><span data-stu-id="a193c-228">>blockquote text</span></span> | `>blockquote text` |
-| <span data-ttu-id="a193c-229">超链接</span><span class="sxs-lookup"><span data-stu-id="a193c-229">hyperlink</span></span> | [<span data-ttu-id="a193c-230">必应</span><span class="sxs-lookup"><span data-stu-id="a193c-230">Bing</span></span>](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| <span data-ttu-id="a193c-231">图像链接</span><span class="sxs-lookup"><span data-stu-id="a193c-231">image link</span></span> |![在一个地心上闪避](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+| <span data-ttu-id="4893d-211">bold</span><span class="sxs-lookup"><span data-stu-id="4893d-211">bold</span></span> | <span data-ttu-id="4893d-212">**text**</span><span class="sxs-lookup"><span data-stu-id="4893d-212">**text**</span></span> | `**text**` |
+| <span data-ttu-id="4893d-213">italic</span><span class="sxs-lookup"><span data-stu-id="4893d-213">italic</span></span> | <span data-ttu-id="4893d-214">*text*</span><span class="sxs-lookup"><span data-stu-id="4893d-214">*text*</span></span> | `*text*` |
+| <span data-ttu-id="4893d-215">页眉 (级别 1 &ndash; 3) </span><span class="sxs-lookup"><span data-stu-id="4893d-215">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="4893d-216">**Text**</span><span class="sxs-lookup"><span data-stu-id="4893d-216">**Text**</span></span> | `### Text`|
+| <span data-ttu-id="4893d-217">strikethrough</span><span class="sxs-lookup"><span data-stu-id="4893d-217">strikethrough</span></span> | <span data-ttu-id="4893d-218">~~text~~</span><span class="sxs-lookup"><span data-stu-id="4893d-218">~~text~~</span></span> | `~~text~~` |
+| <span data-ttu-id="4893d-219">无序列表</span><span class="sxs-lookup"><span data-stu-id="4893d-219">unordered list</span></span> | <ul><li><span data-ttu-id="4893d-220">text</span><span class="sxs-lookup"><span data-stu-id="4893d-220">text</span></span></li><li><span data-ttu-id="4893d-221">text</span><span class="sxs-lookup"><span data-stu-id="4893d-221">text</span></span></li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| <span data-ttu-id="4893d-222">排序列表</span><span class="sxs-lookup"><span data-stu-id="4893d-222">ordered list</span></span> | <ol><li><span data-ttu-id="4893d-223">text</span><span class="sxs-lookup"><span data-stu-id="4893d-223">text</span></span></li><li><span data-ttu-id="4893d-224">text</span><span class="sxs-lookup"><span data-stu-id="4893d-224">text</span></span></li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| <span data-ttu-id="4893d-225">预设格式的文本</span><span class="sxs-lookup"><span data-stu-id="4893d-225">preformatted text</span></span> | `text` | ``preformatted text`` |
+| <span data-ttu-id="4893d-226">blockquote</span><span class="sxs-lookup"><span data-stu-id="4893d-226">blockquote</span></span> | <span data-ttu-id="4893d-227">>blockquote 文本</span><span class="sxs-lookup"><span data-stu-id="4893d-227">>blockquote text</span></span> | `>blockquote text` |
+| <span data-ttu-id="4893d-228">超链接</span><span class="sxs-lookup"><span data-stu-id="4893d-228">hyperlink</span></span> | [<span data-ttu-id="4893d-229">必应</span><span class="sxs-lookup"><span data-stu-id="4893d-229">Bing</span></span>](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| <span data-ttu-id="4893d-230">图像链接</span><span class="sxs-lookup"><span data-stu-id="4893d-230">image link</span></span> |![在一个地心上闪避](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-<span data-ttu-id="a193c-233">在连接器卡中，为 呈现新行 `\n\n` ，但不为 或 `\n` 呈现 `\r` 。</span><span class="sxs-lookup"><span data-stu-id="a193c-233">In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.</span></span>
+<span data-ttu-id="4893d-232">在连接器卡中，为 呈现新行 `\n\n` ，但不为 或 `\n` 呈现 `\r` 。</span><span class="sxs-lookup"><span data-stu-id="4893d-232">In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.</span></span>
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a><span data-ttu-id="a193c-234">使用 Markdown 的连接器卡的移动和桌面差异</span><span class="sxs-lookup"><span data-stu-id="a193c-234">Mobile and desktop differences for connector cards using Markdown</span></span>
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a><span data-ttu-id="4893d-233">使用 Markdown 的连接器卡的移动和桌面差异</span><span class="sxs-lookup"><span data-stu-id="4893d-233">Mobile and desktop differences for connector cards using Markdown</span></span>
 
-<span data-ttu-id="a193c-235">在桌面上，连接器卡的 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-235">On the desktop, Markdown formatting for connector cards looks like this:</span></span>
+<span data-ttu-id="4893d-234">在桌面上，连接器卡的 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-234">On the desktop, Markdown formatting for connector cards looks like this:</span></span>
 
 ![桌面客户端中连接器卡的 Markdown 格式](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
-<span data-ttu-id="a193c-237">在 iOS 上，连接器卡的 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-237">On iOS, Markdown formatting for connector cards looks like this:</span></span>
+<span data-ttu-id="4893d-236">在 iOS 上，连接器卡的 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-236">On iOS, Markdown formatting for connector cards looks like this:</span></span>
 
 ![iOS 客户端中连接器卡的 Markdown 格式](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
-<span data-ttu-id="a193c-239">问题：</span><span class="sxs-lookup"><span data-stu-id="a193c-239">Issues:</span></span>
+<span data-ttu-id="4893d-238">问题：</span><span class="sxs-lookup"><span data-stu-id="4893d-238">Issues:</span></span>
 
-* <span data-ttu-id="a193c-240">iOS 客户端用于Teams连接器卡中呈现 Markdown 或 HTML 内联图像。</span><span class="sxs-lookup"><span data-stu-id="a193c-240">The iOS client for Teams does not render Markdown or HTML inline images in Connector Cards.</span></span>
-* <span data-ttu-id="a193c-241">Blockquotes 呈现为缩进，但不带灰色背景。</span><span class="sxs-lookup"><span data-stu-id="a193c-241">Blockquotes are rendered as indented but without a gray background.</span></span>
+* <span data-ttu-id="4893d-239">iOS 客户端用于Teams连接器卡中呈现 Markdown 或 HTML 内联图像。</span><span class="sxs-lookup"><span data-stu-id="4893d-239">The iOS client for Teams does not render Markdown or HTML inline images in Connector Cards.</span></span>
+* <span data-ttu-id="4893d-240">Blockquotes 呈现为缩进，但不带灰色背景。</span><span class="sxs-lookup"><span data-stu-id="4893d-240">Blockquotes are rendered as indented but without a gray background.</span></span>
 
-<span data-ttu-id="a193c-242">在 Android 上，连接器卡的 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-242">On Android, Markdown formatting for connector cards looks like this:</span></span>
+<span data-ttu-id="4893d-241">在 Android 上，连接器卡的 Markdown 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-241">On Android, Markdown formatting for connector cards looks like this:</span></span>
 
 ![Android 客户端中连接器卡的 Markdown 格式](../../assets/images/cards/connector-android-markdown-combined.png)
 
-### <a name="formatting-example-for-markdown-connector-cards"></a><span data-ttu-id="a193c-244">Markdown 连接器卡的格式设置示例</span><span class="sxs-lookup"><span data-stu-id="a193c-244">Formatting example for Markdown Connector Cards</span></span>
+### <a name="formatting-example-for-markdown-connector-cards"></a><span data-ttu-id="4893d-243">Markdown 连接器卡的格式设置示例</span><span class="sxs-lookup"><span data-stu-id="4893d-243">Formatting example for Markdown Connector Cards</span></span>
 
 ``` json
 {
@@ -363,47 +360,47 @@ ms.locfileid: "52630208"
 
 ---
 
-## <a name="formatting-cards-with-html"></a><span data-ttu-id="a193c-245">使用 HTML 设置卡片格式</span><span class="sxs-lookup"><span data-stu-id="a193c-245">Formatting cards with HTML</span></span>
+## <a name="formatting-cards-with-html"></a><span data-ttu-id="4893d-244">使用 HTML 设置卡片格式</span><span class="sxs-lookup"><span data-stu-id="4893d-244">Formatting cards with HTML</span></span>
 
-# <a name="html-formatting-o365-connector-cards"></a>[<span data-ttu-id="a193c-246">**HTML 格式：O365 连接器卡**</span><span class="sxs-lookup"><span data-stu-id="a193c-246">**HTML formatting: O365 Connector Cards**</span></span>](#tab/connector-html)
+# <a name="html-formatting-o365-connector-cards"></a>[<span data-ttu-id="4893d-245">**HTML 格式：O365 连接器卡**</span><span class="sxs-lookup"><span data-stu-id="4893d-245">**HTML formatting: O365 Connector Cards**</span></span>](#tab/connector-html)
 
-<span data-ttu-id="a193c-247">连接器卡支持有限的 Markdown 和 HTML 格式。</span><span class="sxs-lookup"><span data-stu-id="a193c-247">Connector cards support limited Markdown and HTML formatting.</span></span> <span data-ttu-id="a193c-248">Markdown 将下一节介绍。</span><span class="sxs-lookup"><span data-stu-id="a193c-248">Markdown is described in the next section.</span></span>
+<span data-ttu-id="4893d-246">连接器卡支持有限的 Markdown 和 HTML 格式。</span><span class="sxs-lookup"><span data-stu-id="4893d-246">Connector cards support limited Markdown and HTML formatting.</span></span> <span data-ttu-id="4893d-247">Markdown 将下一节介绍。</span><span class="sxs-lookup"><span data-stu-id="4893d-247">Markdown is described in the next section.</span></span>
 
-| <span data-ttu-id="a193c-249">样式</span><span class="sxs-lookup"><span data-stu-id="a193c-249">Style</span></span> | <span data-ttu-id="a193c-250">示例</span><span class="sxs-lookup"><span data-stu-id="a193c-250">Example</span></span> | <span data-ttu-id="a193c-251">HTML</span><span class="sxs-lookup"><span data-stu-id="a193c-251">HTML</span></span> |
+| <span data-ttu-id="4893d-248">样式</span><span class="sxs-lookup"><span data-stu-id="4893d-248">Style</span></span> | <span data-ttu-id="4893d-249">示例</span><span class="sxs-lookup"><span data-stu-id="4893d-249">Example</span></span> | <span data-ttu-id="4893d-250">HTML</span><span class="sxs-lookup"><span data-stu-id="4893d-250">HTML</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="a193c-252">bold</span><span class="sxs-lookup"><span data-stu-id="a193c-252">bold</span></span> | <span data-ttu-id="a193c-253">**text**</span><span class="sxs-lookup"><span data-stu-id="a193c-253">**text**</span></span> | `<strong>text</strong>` |
-| <span data-ttu-id="a193c-254">italic</span><span class="sxs-lookup"><span data-stu-id="a193c-254">italic</span></span> | <span data-ttu-id="a193c-255">*text*</span><span class="sxs-lookup"><span data-stu-id="a193c-255">*text*</span></span> | `<em>text</em>` |
-| <span data-ttu-id="a193c-256">页眉 (级别 1 &ndash; 3) </span><span class="sxs-lookup"><span data-stu-id="a193c-256">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="a193c-257">**Text**</span><span class="sxs-lookup"><span data-stu-id="a193c-257">**Text**</span></span> | `<h3>Text</h3>` |
-| <span data-ttu-id="a193c-258">strikethrough</span><span class="sxs-lookup"><span data-stu-id="a193c-258">strikethrough</span></span> | <span data-ttu-id="a193c-259">~~text~~</span><span class="sxs-lookup"><span data-stu-id="a193c-259">~~text~~</span></span> | `<strike>text</strike>` |
-| <span data-ttu-id="a193c-260">无序列表</span><span class="sxs-lookup"><span data-stu-id="a193c-260">unordered list</span></span> | <ul><li><span data-ttu-id="a193c-261">text</span><span class="sxs-lookup"><span data-stu-id="a193c-261">text</span></span></li><li><span data-ttu-id="a193c-262">text</span><span class="sxs-lookup"><span data-stu-id="a193c-262">text</span></span></li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| <span data-ttu-id="a193c-263">排序列表</span><span class="sxs-lookup"><span data-stu-id="a193c-263">ordered list</span></span> | <ol><li><span data-ttu-id="a193c-264">text</span><span class="sxs-lookup"><span data-stu-id="a193c-264">text</span></span></li><li><span data-ttu-id="a193c-265">text</span><span class="sxs-lookup"><span data-stu-id="a193c-265">text</span></span></li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| <span data-ttu-id="a193c-266">预设格式的文本</span><span class="sxs-lookup"><span data-stu-id="a193c-266">preformatted text</span></span> | `text` | `<pre>text</pre>` |
-| <span data-ttu-id="a193c-267">blockquote</span><span class="sxs-lookup"><span data-stu-id="a193c-267">blockquote</span></span> | <blockquote><span data-ttu-id="a193c-268">text</span><span class="sxs-lookup"><span data-stu-id="a193c-268">text</span></span></blockquote> | `<blockquote>text</blockquote>` |
-| <span data-ttu-id="a193c-269">超链接</span><span class="sxs-lookup"><span data-stu-id="a193c-269">hyperlink</span></span> | [<span data-ttu-id="a193c-270">必应</span><span class="sxs-lookup"><span data-stu-id="a193c-270">Bing</span></span>](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| <span data-ttu-id="a193c-271">图像链接</span><span class="sxs-lookup"><span data-stu-id="a193c-271">image link</span></span> | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| <span data-ttu-id="4893d-251">bold</span><span class="sxs-lookup"><span data-stu-id="4893d-251">bold</span></span> | <span data-ttu-id="4893d-252">**text**</span><span class="sxs-lookup"><span data-stu-id="4893d-252">**text**</span></span> | `<strong>text</strong>` |
+| <span data-ttu-id="4893d-253">italic</span><span class="sxs-lookup"><span data-stu-id="4893d-253">italic</span></span> | <span data-ttu-id="4893d-254">*text*</span><span class="sxs-lookup"><span data-stu-id="4893d-254">*text*</span></span> | `<em>text</em>` |
+| <span data-ttu-id="4893d-255">页眉 (级别 1 &ndash; 3) </span><span class="sxs-lookup"><span data-stu-id="4893d-255">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="4893d-256">**Text**</span><span class="sxs-lookup"><span data-stu-id="4893d-256">**Text**</span></span> | `<h3>Text</h3>` |
+| <span data-ttu-id="4893d-257">strikethrough</span><span class="sxs-lookup"><span data-stu-id="4893d-257">strikethrough</span></span> | <span data-ttu-id="4893d-258">~~text~~</span><span class="sxs-lookup"><span data-stu-id="4893d-258">~~text~~</span></span> | `<strike>text</strike>` |
+| <span data-ttu-id="4893d-259">无序列表</span><span class="sxs-lookup"><span data-stu-id="4893d-259">unordered list</span></span> | <ul><li><span data-ttu-id="4893d-260">text</span><span class="sxs-lookup"><span data-stu-id="4893d-260">text</span></span></li><li><span data-ttu-id="4893d-261">text</span><span class="sxs-lookup"><span data-stu-id="4893d-261">text</span></span></li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| <span data-ttu-id="4893d-262">排序列表</span><span class="sxs-lookup"><span data-stu-id="4893d-262">ordered list</span></span> | <ol><li><span data-ttu-id="4893d-263">text</span><span class="sxs-lookup"><span data-stu-id="4893d-263">text</span></span></li><li><span data-ttu-id="4893d-264">text</span><span class="sxs-lookup"><span data-stu-id="4893d-264">text</span></span></li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| <span data-ttu-id="4893d-265">预设格式的文本</span><span class="sxs-lookup"><span data-stu-id="4893d-265">preformatted text</span></span> | `text` | `<pre>text</pre>` |
+| <span data-ttu-id="4893d-266">blockquote</span><span class="sxs-lookup"><span data-stu-id="4893d-266">blockquote</span></span> | <blockquote><span data-ttu-id="4893d-267">text</span><span class="sxs-lookup"><span data-stu-id="4893d-267">text</span></span></blockquote> | `<blockquote>text</blockquote>` |
+| <span data-ttu-id="4893d-268">超链接</span><span class="sxs-lookup"><span data-stu-id="4893d-268">hyperlink</span></span> | [<span data-ttu-id="4893d-269">必应</span><span class="sxs-lookup"><span data-stu-id="4893d-269">Bing</span></span>](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| <span data-ttu-id="4893d-270">图像链接</span><span class="sxs-lookup"><span data-stu-id="4893d-270">image link</span></span> | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-<span data-ttu-id="a193c-272">在连接器卡中，使用 标记以 HTML 格式呈现 `<p>` 新行。</span><span class="sxs-lookup"><span data-stu-id="a193c-272">In connector cards, newlines are rendered in HTML using the `<p>` tag.</span></span>
+<span data-ttu-id="4893d-271">在连接器卡中，使用 标记以 HTML 格式呈现 `<p>` 新行。</span><span class="sxs-lookup"><span data-stu-id="4893d-271">In connector cards, newlines are rendered in HTML using the `<p>` tag.</span></span>
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a><span data-ttu-id="a193c-273">使用 HTML 的连接器卡的移动和桌面差异</span><span class="sxs-lookup"><span data-stu-id="a193c-273">Mobile and desktop differences for connector cards using HTML</span></span>
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a><span data-ttu-id="4893d-272">使用 HTML 的连接器卡的移动和桌面差异</span><span class="sxs-lookup"><span data-stu-id="4893d-272">Mobile and desktop differences for connector cards using HTML</span></span>
 
-<span data-ttu-id="a193c-274">在桌面上，连接器卡的 HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-274">On the desktop, HTML formatting for connector cards looks like this:</span></span>
+<span data-ttu-id="4893d-273">在桌面上，连接器卡的 HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-273">On the desktop, HTML formatting for connector cards looks like this:</span></span>
 
 ![桌面客户端中连接器卡的 HTML 格式](../../assets/images/cards/Connector-desktop-html-combined.png)
 
-<span data-ttu-id="a193c-276">在 iOS 上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-276">On iOS, HTML formatting looks like this:</span></span>
+<span data-ttu-id="4893d-275">在 iOS 上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-275">On iOS, HTML formatting looks like this:</span></span>
 
 ![iOS 客户端中连接器卡的 HTML 格式](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
-<span data-ttu-id="a193c-278">问题：</span><span class="sxs-lookup"><span data-stu-id="a193c-278">Issues:</span></span>
+<span data-ttu-id="4893d-277">问题：</span><span class="sxs-lookup"><span data-stu-id="4893d-277">Issues:</span></span>
 
-* <span data-ttu-id="a193c-279">内联图像不会使用连接器卡中的 Markdown 或 HTML 呈现在 iOS 上。</span><span class="sxs-lookup"><span data-stu-id="a193c-279">Inline images are not rendered on iOS using either Markdown or HTML in Connector Cards.</span></span>
-* <span data-ttu-id="a193c-280">呈现预设格式的文本，但没有灰色背景。</span><span class="sxs-lookup"><span data-stu-id="a193c-280">Preformatted text is rendered but does not have a gray background.</span></span>
+* <span data-ttu-id="4893d-278">内联图像不会使用连接器卡中的 Markdown 或 HTML 呈现在 iOS 上。</span><span class="sxs-lookup"><span data-stu-id="4893d-278">Inline images are not rendered on iOS using either Markdown or HTML in Connector Cards.</span></span>
+* <span data-ttu-id="4893d-279">呈现预设格式的文本，但没有灰色背景。</span><span class="sxs-lookup"><span data-stu-id="4893d-279">Preformatted text is rendered but does not have a gray background.</span></span>
 
-<span data-ttu-id="a193c-281">在 Android 上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-281">On Android, HTML formatting looks like this:</span></span>
+<span data-ttu-id="4893d-280">在 Android 上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-280">On Android, HTML formatting looks like this:</span></span>
 
 ![Android 客户端中连接器卡的 HTML 格式](../../assets/images/cards/connector-android-html-combined.png)
 
-### <a name="formatting-sample-for-html-connector-cards"></a><span data-ttu-id="a193c-283">HTML 连接器卡的格式设置示例</span><span class="sxs-lookup"><span data-stu-id="a193c-283">Formatting sample for HTML Connector Cards</span></span>
+### <a name="formatting-sample-for-html-connector-cards"></a><span data-ttu-id="4893d-282">HTML 连接器卡的格式设置示例</span><span class="sxs-lookup"><span data-stu-id="4893d-282">Formatting sample for HTML Connector Cards</span></span>
 
 ``` json
 {
@@ -453,48 +450,48 @@ ms.locfileid: "52630208"
 
 ```
 
-# <a name="html-formatting-hero-and-thumbnail-cards"></a>[<span data-ttu-id="a193c-284">**HTML 格式：hero 和 thumbnail 卡片**</span><span class="sxs-lookup"><span data-stu-id="a193c-284">**HTML Formatting: hero and thumbnail cards**</span></span>](#tab/simple-html)
+# <a name="html-formatting-hero-and-thumbnail-cards"></a>[<span data-ttu-id="4893d-283">**HTML 格式：hero 和 thumbnail 卡片**</span><span class="sxs-lookup"><span data-stu-id="4893d-283">**HTML Formatting: hero and thumbnail cards**</span></span>](#tab/simple-html)
 
-<span data-ttu-id="a193c-285">HTML 标记支持简单的卡片，如 hero 和 thumbnail 卡片。</span><span class="sxs-lookup"><span data-stu-id="a193c-285">HTML tags are supported for simple cards such as the hero and thumbnail card.</span></span> <span data-ttu-id="a193c-286">不支持 Markdown。</span><span class="sxs-lookup"><span data-stu-id="a193c-286">Markdown is not supported.</span></span>
+<span data-ttu-id="4893d-284">HTML 标记支持简单的卡片，如 hero 和 thumbnail 卡片。</span><span class="sxs-lookup"><span data-stu-id="4893d-284">HTML tags are supported for simple cards such as the hero and thumbnail card.</span></span> <span data-ttu-id="4893d-285">不支持 Markdown。</span><span class="sxs-lookup"><span data-stu-id="4893d-285">Markdown is not supported.</span></span>
 
-| <span data-ttu-id="a193c-287">样式</span><span class="sxs-lookup"><span data-stu-id="a193c-287">Style</span></span> | <span data-ttu-id="a193c-288">示例</span><span class="sxs-lookup"><span data-stu-id="a193c-288">Example</span></span> | <span data-ttu-id="a193c-289">HTML</span><span class="sxs-lookup"><span data-stu-id="a193c-289">HTML</span></span> |
+| <span data-ttu-id="4893d-286">样式</span><span class="sxs-lookup"><span data-stu-id="4893d-286">Style</span></span> | <span data-ttu-id="4893d-287">示例</span><span class="sxs-lookup"><span data-stu-id="4893d-287">Example</span></span> | <span data-ttu-id="4893d-288">HTML</span><span class="sxs-lookup"><span data-stu-id="4893d-288">HTML</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="a193c-290">bold</span><span class="sxs-lookup"><span data-stu-id="a193c-290">bold</span></span> | <span data-ttu-id="a193c-291">**text**</span><span class="sxs-lookup"><span data-stu-id="a193c-291">**text**</span></span> | `<strong>text</strong>` |
-| <span data-ttu-id="a193c-292">italic</span><span class="sxs-lookup"><span data-stu-id="a193c-292">italic</span></span> | <span data-ttu-id="a193c-293">*text*</span><span class="sxs-lookup"><span data-stu-id="a193c-293">*text*</span></span> | `<em>text</em>` |
-| <span data-ttu-id="a193c-294">页眉 (级别 1 &ndash; 3) </span><span class="sxs-lookup"><span data-stu-id="a193c-294">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="a193c-295">**Text**</span><span class="sxs-lookup"><span data-stu-id="a193c-295">**Text**</span></span> | `<h3>Text</h3>` |
-| <span data-ttu-id="a193c-296">strikethrough</span><span class="sxs-lookup"><span data-stu-id="a193c-296">strikethrough</span></span> | <span data-ttu-id="a193c-297">~~text~~</span><span class="sxs-lookup"><span data-stu-id="a193c-297">~~text~~</span></span> | `<strike>text</strike>` |
-| <span data-ttu-id="a193c-298">无序列表</span><span class="sxs-lookup"><span data-stu-id="a193c-298">unordered list</span></span> | <ul><li><span data-ttu-id="a193c-299">text</span><span class="sxs-lookup"><span data-stu-id="a193c-299">text</span></span></li><li><span data-ttu-id="a193c-300">text</span><span class="sxs-lookup"><span data-stu-id="a193c-300">text</span></span></li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| <span data-ttu-id="a193c-301">排序列表</span><span class="sxs-lookup"><span data-stu-id="a193c-301">ordered list</span></span> | <ol><li><span data-ttu-id="a193c-302">text</span><span class="sxs-lookup"><span data-stu-id="a193c-302">text</span></span></li><li><span data-ttu-id="a193c-303">text</span><span class="sxs-lookup"><span data-stu-id="a193c-303">text</span></span></li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| <span data-ttu-id="a193c-304">预设格式的文本</span><span class="sxs-lookup"><span data-stu-id="a193c-304">preformatted text</span></span> | `text` | `<pre>text</pre>` |
-| <span data-ttu-id="a193c-305">blockquote</span><span class="sxs-lookup"><span data-stu-id="a193c-305">blockquote</span></span> | <blockquote><span data-ttu-id="a193c-306">text</span><span class="sxs-lookup"><span data-stu-id="a193c-306">text</span></span></blockquote> | `<blockquote>text</blockquote>` |
-| <span data-ttu-id="a193c-307">超链接</span><span class="sxs-lookup"><span data-stu-id="a193c-307">hyperlink</span></span> | [<span data-ttu-id="a193c-308">必应</span><span class="sxs-lookup"><span data-stu-id="a193c-308">Bing</span></span>](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| <span data-ttu-id="a193c-309">图像链接</span><span class="sxs-lookup"><span data-stu-id="a193c-309">image link</span></span> |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| <span data-ttu-id="4893d-289">bold</span><span class="sxs-lookup"><span data-stu-id="4893d-289">bold</span></span> | <span data-ttu-id="4893d-290">**text**</span><span class="sxs-lookup"><span data-stu-id="4893d-290">**text**</span></span> | `<strong>text</strong>` |
+| <span data-ttu-id="4893d-291">italic</span><span class="sxs-lookup"><span data-stu-id="4893d-291">italic</span></span> | <span data-ttu-id="4893d-292">*text*</span><span class="sxs-lookup"><span data-stu-id="4893d-292">*text*</span></span> | `<em>text</em>` |
+| <span data-ttu-id="4893d-293">页眉 (级别 1 &ndash; 3) </span><span class="sxs-lookup"><span data-stu-id="4893d-293">header (levels 1&ndash;3)</span></span> | <span data-ttu-id="4893d-294">**Text**</span><span class="sxs-lookup"><span data-stu-id="4893d-294">**Text**</span></span> | `<h3>Text</h3>` |
+| <span data-ttu-id="4893d-295">strikethrough</span><span class="sxs-lookup"><span data-stu-id="4893d-295">strikethrough</span></span> | <span data-ttu-id="4893d-296">~~text~~</span><span class="sxs-lookup"><span data-stu-id="4893d-296">~~text~~</span></span> | `<strike>text</strike>` |
+| <span data-ttu-id="4893d-297">无序列表</span><span class="sxs-lookup"><span data-stu-id="4893d-297">unordered list</span></span> | <ul><li><span data-ttu-id="4893d-298">text</span><span class="sxs-lookup"><span data-stu-id="4893d-298">text</span></span></li><li><span data-ttu-id="4893d-299">text</span><span class="sxs-lookup"><span data-stu-id="4893d-299">text</span></span></li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| <span data-ttu-id="4893d-300">排序列表</span><span class="sxs-lookup"><span data-stu-id="4893d-300">ordered list</span></span> | <ol><li><span data-ttu-id="4893d-301">text</span><span class="sxs-lookup"><span data-stu-id="4893d-301">text</span></span></li><li><span data-ttu-id="4893d-302">text</span><span class="sxs-lookup"><span data-stu-id="4893d-302">text</span></span></li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| <span data-ttu-id="4893d-303">预设格式的文本</span><span class="sxs-lookup"><span data-stu-id="4893d-303">preformatted text</span></span> | `text` | `<pre>text</pre>` |
+| <span data-ttu-id="4893d-304">blockquote</span><span class="sxs-lookup"><span data-stu-id="4893d-304">blockquote</span></span> | <blockquote><span data-ttu-id="4893d-305">text</span><span class="sxs-lookup"><span data-stu-id="4893d-305">text</span></span></blockquote> | `<blockquote>text</blockquote>` |
+| <span data-ttu-id="4893d-306">超链接</span><span class="sxs-lookup"><span data-stu-id="4893d-306">hyperlink</span></span> | [<span data-ttu-id="4893d-307">必应</span><span class="sxs-lookup"><span data-stu-id="4893d-307">Bing</span></span>](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| <span data-ttu-id="4893d-308">图像链接</span><span class="sxs-lookup"><span data-stu-id="4893d-308">image link</span></span> |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### <a name="mobile-and-desktop-differences-for-simple-cards"></a><span data-ttu-id="a193c-310">简单卡片的移动和桌面差异</span><span class="sxs-lookup"><span data-stu-id="a193c-310">Mobile and desktop differences for simple cards</span></span>
+### <a name="mobile-and-desktop-differences-for-simple-cards"></a><span data-ttu-id="4893d-309">简单卡片的移动和桌面差异</span><span class="sxs-lookup"><span data-stu-id="4893d-309">Mobile and desktop differences for simple cards</span></span>
 
-<span data-ttu-id="a193c-311">由于桌面平台和移动平台的分辨率差异，桌面版和移动设备版之间的格式Teams。</span><span class="sxs-lookup"><span data-stu-id="a193c-311">Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.</span></span>
+<span data-ttu-id="4893d-310">由于桌面平台和移动平台的分辨率差异，桌面版和移动设备版之间的格式Teams。</span><span class="sxs-lookup"><span data-stu-id="4893d-310">Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.</span></span>
 
-<span data-ttu-id="a193c-312">在桌面上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-312">On the desktop, HTML formatting appears like this:</span></span>
+<span data-ttu-id="4893d-311">在桌面上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-311">On the desktop, HTML formatting appears like this:</span></span>
 
 ![桌面客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-<span data-ttu-id="a193c-314">在 iOS 上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-314">On iOS, HTML formatting appears like this:</span></span>
+<span data-ttu-id="4893d-313">在 iOS 上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-313">On iOS, HTML formatting appears like this:</span></span>
 
 ![iOS 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
-<span data-ttu-id="a193c-316">问题：</span><span class="sxs-lookup"><span data-stu-id="a193c-316">Issues:</span></span>
+<span data-ttu-id="4893d-315">问题：</span><span class="sxs-lookup"><span data-stu-id="4893d-315">Issues:</span></span>
 
-* <span data-ttu-id="a193c-317">粗体和 italic 等字符格式不会呈现在 iOS 上。</span><span class="sxs-lookup"><span data-stu-id="a193c-317">Character formatting like bold and italic are not rendered on iOS.</span></span>
+* <span data-ttu-id="4893d-316">粗体和 italic 等字符格式不会呈现在 iOS 上。</span><span class="sxs-lookup"><span data-stu-id="4893d-316">Character formatting like bold and italic are not rendered on iOS.</span></span>
 
-<span data-ttu-id="a193c-318">在 Android 上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="a193c-318">On Android, HTML formatting appears like this:</span></span>
+<span data-ttu-id="4893d-317">在 Android 上，HTML 格式如下所示：</span><span class="sxs-lookup"><span data-stu-id="4893d-317">On Android, HTML formatting appears like this:</span></span>
 
 ![Android 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-<span data-ttu-id="a193c-320">在 Android 上正确显示粗体和 italic 等字符格式。</span><span class="sxs-lookup"><span data-stu-id="a193c-320">Character formatting like bold and italic display correctly on Android.</span></span>
+<span data-ttu-id="4893d-319">在 Android 上正确显示粗体和 italic 等字符格式。</span><span class="sxs-lookup"><span data-stu-id="4893d-319">Character formatting like bold and italic display correctly on Android.</span></span>
 
-### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a><span data-ttu-id="a193c-321">简单卡片中 HTML 格式的格式设置示例</span><span class="sxs-lookup"><span data-stu-id="a193c-321">Formatting sample for HTML formatting in simple cards</span></span>
+### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a><span data-ttu-id="4893d-320">简单卡片中 HTML 格式的格式设置示例</span><span class="sxs-lookup"><span data-stu-id="4893d-320">Formatting sample for HTML formatting in simple cards</span></span>
 
-<span data-ttu-id="a193c-322">这些屏幕截图是使用 appStudio Teams创建的，其中 Hero 卡片的文本属性设置为以下字符串。</span><span class="sxs-lookup"><span data-stu-id="a193c-322">These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string.</span></span> <span data-ttu-id="a193c-323">可以通过修改此代码在你自己的卡片中测试格式。</span><span class="sxs-lookup"><span data-stu-id="a193c-323">You can test formatting in your own cards by modifying this code.</span></span>
+<span data-ttu-id="4893d-321">这些屏幕截图是使用 appStudio Teams创建的，其中 Hero 卡片的文本属性设置为以下字符串。</span><span class="sxs-lookup"><span data-stu-id="4893d-321">These screenshots were created using Teams AppStudio, where the text property of a hero card was set to the following string.</span></span> <span data-ttu-id="4893d-322">可以通过修改此代码在你自己的卡片中测试格式。</span><span class="sxs-lookup"><span data-stu-id="4893d-322">You can test formatting in your own cards by modifying this code.</span></span>
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
