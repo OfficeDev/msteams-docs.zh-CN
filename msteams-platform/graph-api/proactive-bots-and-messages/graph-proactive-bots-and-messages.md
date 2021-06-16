@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: 06b50e5ab8594c257959430383bab5e355af4e06
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: db36c64e557b90699bb09e77dc67ca4c9a8e5853
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566150"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949663"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>使用 Graph API 以及发送邮件主动安装应用
+# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 主动安装应用以发送消息
 
 >[!IMPORTANT]
 > Microsoft Graph公共Microsoft Teams预览版可供早期访问和反馈使用。 尽管此版本已经过大量测试，但不适合在生产中使用。
@@ -22,7 +22,7 @@ ms.locfileid: "52566150"
 
 主动消息由机器人启动，以开始与用户的对话。 它们用于多种用途，包括发送欢迎消息、开展调查或投票以及广播组织范围内的通知。 邮件中的Teams消息 **可以临时对话** 或基于对话 **的对话传递：**
 
-|消息类型 | 描述 |
+|消息类型 | 说明 |
 |----------------|-------------- |
 |临时主动邮件| 机器人在不中断对话流的情况下与消息进行交互。|
 |基于对话框的主动消息 | 机器人创建新的对话线程、控制对话、传递主动消息、关闭并返回对上一对话框的控制。|
@@ -35,7 +35,7 @@ ms.locfileid: "52566150"
 
 Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true)资源类型权限可帮助你管理 Microsoft Teams 平台内所有 (个人) 或团队 (频道) 范围的应用的安装生命周期：
 
-|应用权限 | 描述|
+|应用权限 | 说明|
 |------------------|---------------------|
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|允许Teams应用为任何用户读取、安装、升级和卸载自身，而无需事先登录或使用。|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|允许Teams应用在任何团队中读取、安装、升级和卸载自身，而无需事先登录或使用。|

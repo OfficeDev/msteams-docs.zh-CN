@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 07eb03f2e9686c26a917ab1f2d72fc0668e59107
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630143"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949677"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -136,7 +136,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
-例如：`https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+示例：`https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
 
 查询参数包括：
 
@@ -178,6 +178,11 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
+
+## <a name="deep-linking-to-an-app"></a>到应用的深层链接
+
+在应用在应用商店中列出应用后，为应用Teams链接。 若要创建链接以启动Teams，将以下 URL 附加到应用 `https://teams.microsoft.com/l/app/<your-app-id>` ID：。 将显示一个对话框来安装该应用。 
+  
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>选项卡的深层SharePoint 框架链接
 
 以下深层链接格式可用于机器人、连接器或邮件扩展卡： `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -194,7 +199,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 * `entityWebUrl`：如果客户端不支持呈现选项卡或 ，则使用带回退 URL 的可选 `https://tasklist.example.com/123` 字段 `https://tasklist.example.com/list123/task456` 。
 * `entityName`：选项卡中项的标签，用于显示深层链接（任务列表 123 或任务 456）。
 
-例如：https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
+示例：https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
 ## <a name="deep-linking-to-the-scheduling-dialog"></a>到计划对话框的深层链接
 
@@ -207,7 +212,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 对可以在自动程序、连接器或邮件扩展卡中使用的深层链接使用以下格式： `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
-例如：`https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
+示例：`https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 查询参数包括：
 
@@ -233,7 +238,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="generate-a-deep-link-to-a-call"></a>生成到呼叫的深层链接
 
-| 深层链接 | Format | 示例 |
+| 深层链接 | 格式 | 示例 |
 |-----------|--------|---------|
 | 进行音频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; &lt; 、user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
 | 进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; &lt; ，user2 &gt;&video=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |

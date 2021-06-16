@@ -1,24 +1,24 @@
 ---
-title: 一起模式Teams
-description: 使用一起模式
+title: 自定义一起模式场景
+description: 使用自定义一起模式场景
 ms.topic: conceptual
-ms.openlocfilehash: 1620e01ef1825ec43e94614ff8ea355e764e10e0
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651738"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949747"
 ---
-# <a name="together-mode-in-teams"></a>一起模式Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>自定义一起模式场景中Teams
 
 > [!NOTE]
 > 此功能目前仅适用于公共 [开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版。
 
-Microsoft Teams"共同模式"提供了一个沉浸式且极具吸引力的会议环境，将人们汇集在一起，并鼓励他们打开视频。 它以数字方式将参与者合并到单个虚拟场景，将其视频流放入场景创建者设计和修复的预定席位中。
+Microsoft Teams中的自定义一起模式场景提供了一个沉浸式且极具吸引力的会议环境，将人们汇集在一起，并鼓励他们打开视频。 它以数字方式将参与者合并到单个虚拟场景，将其视频流放入场景创建者设计和修复的预定席位中。
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-一起模式下的场景是场景开发人员使用 Microsoft Scene studio 创建的项目。 在构想的场景设置中，参与者具有指定席位，视频流呈现在这些座位中。
+自定义一起模式场景中的场景是场景开发人员使用 Microsoft Scene studio 创建的项目。 在构想的场景设置中，参与者具有指定席位，视频流呈现在这些座位中。
 
 > [!NOTE]
 > 建议仅场景应用，因为此类应用的获取体验更加无缝。
@@ -33,7 +33,7 @@ Microsoft Teams"共同模式"提供了一个沉浸式且极具吸引力的会议
 
 ## <a name="prerequisites"></a>先决条件
 
-若要使用"共同模式"，你必须对以下内容有基本的了解：
+你必须对以下内容有基本的了解，以使用自定义"共同模式"场景：
 
 * 场景中场景和座位的定义。
 * 拥有 Microsoft 开发人员帐户，并熟悉 Microsoft Teams[门户和](../concepts/build-and-test/teams-developer-portal.md)App Studio。
@@ -145,14 +145,14 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
 1. In the **View in Teams** dialog box， select Preview in **Teams**.
 1. 在出现的对话框中， **选择添加**。
 
-    可通过创建测试会议并启动"共同模式"来测试或访问场景。 有关详细信息，请参阅[激活"共同模式"。](#activate-the-together-mode)
+    可通过创建测试会议并启动自定义一起模式场景来测试或访问场景。 有关详细信息，请参阅激活 [自定义一起模式场景](#activate-custom-together-mode-scenes)。
 
-    ![一起启动模式](../assets/images/apps-in-meetings/launchtogethermode.png)
+    ![启动自定义一起模式场景](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
     > * 选择 **"** 预览"Microsoft Teams创建一个可在开发人员门户的"应用"Teams查看的应用。
     > * 选择 **"** 预览"会自动创建一个应用包appmanifest.js位于场景后面。 如前面所述，这是抽象的，但你可通过从菜单导航到应用 **来访问自动** 创建的应用包。
-    > * 然后，可以在"共同模式"场景库中查看场景。
+    > * 然后，可以在自定义"共同模式"场景库中查看场景。
 
 1. （可选）可以从"保存"下拉菜单中选择"共享"，以创建可共享链接，以轻松分发场景供其他人使用。 打开此链接会为用户安装场景，他们可以开始使用它。
 
@@ -172,7 +172,7 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
 
 ## <a name="sample-scenejson"></a>示例scene.js打开
 
-Scene.js和图像一起指示座位的确切位置。 场景包含用于放入参与者视频的位图图像、子画面和矩形。 这些子画面和参与者框在一个世界坐标系中定义，其中 X 轴指向右侧，Y 轴指向向下。 "一起"模式支持放大当前参与者。 这对大型场景中的小会议很有用。 子画面是一种静态位图图像，位于世界。 子画面的 Z 值决定子画面的位置。 呈现从 Z 值最低的子画面开始，因此 Z 值越高，表示它离相机更近。 每个参与者都有自己的视频源，该源会进行分段，以便仅呈现前台。
+Scene.js和图像一起指示座位的确切位置。 场景包含用于放入参与者视频的位图图像、子画面和矩形。 这些子画面和参与者框在一个世界坐标系中定义，其中 X 轴指向右侧，Y 轴指向向下。 自定义一起模式场景支持放大当前参与者。 这对大型场景中的小会议很有用。 子画面是一种静态位图图像，位于世界。 子画面的 Z 值决定子画面的位置。 呈现从 Z 值最低的子画面开始，因此 Z 值越高，表示它离相机更近。 每个参与者都有自己的视频源，该源会进行分段，以便仅呈现前台。
 
 下面是示例scene.js示例：
 
@@ -246,13 +246,13 @@ Scene.js和图像一起指示座位的确切位置。 场景包含用于放入�
 
 zOrder 表示沿 Z 轴放置图像和座位的顺序。 在许多情况下，如果需要，它会提供深度或分区感。 有关详细信息，请参阅分步入门示例。 此示例利用 zOrder。
 
-现在，你已完成示例scene.js，你可以激活"共同模式"以参与场景。
+现在，你已执行示例scene.js，你可以激活自定义"共同模式"场景以参与场景。
 
-## <a name="activate-the-together-mode"></a>激活一起模式
+## <a name="activate-custom-together-mode-scenes"></a>激活自定义一起模式场景
 
-获取最终用户如何在一起模式下参与场景的端到端信息。
+获取最终用户如何在自定义"共同模式"场景中使用场景的端到端信息。
 
-**选择场景并激活"共同模式"**
+**选择场景并激活自定义"共同模式"场景**
 
 1. 创建新的测试会议。
 
@@ -265,14 +265,14 @@ zOrder 表示沿 Z 轴放置图像和座位的顺序。 在许多情况下，如
 
 1. 从 **"场景库"** 中，选择要用于会议的场景。
 
-1. （可选）会议组织者和演示者可以在会议中选择"将所有 **参与者切换到一** 起"模式。
+1. （可选）会议组织者和演示者可以更改 **会议中所有参与者** 的场景。
 
     >[!NOTE]
-    > 在任意时间点，只能将一个场景用于会议。 如果演示者或组织者更改场景，则场景将全部更改。 切换到或退出共同模式由单个参与者决定，但在一起模式下，所有参与者具有相同的场景。
+    > 在任意时间点，只能将一个场景用于会议。 如果演示者或组织者更改场景，则场景将全部更改。 切换为或退出自定义一起模式场景由单个参与者决定，但在自定义"共同模式"场景中，所有参与者具有相同的场景。
 
-1. 选择 **应用**。 Teams用户安装应用并应用场景。
+1. 选择“**应用**”。 Teams用户安装应用并应用场景。
 
-## <a name="open-a-together-mode-scene-package"></a>打开一起模式场景包
+## <a name="open-a-custom-together-mode-scenes-scene-package"></a>打开自定义一起模式场景场景包
 
 你可以将场景包（从场景.zip中检索到的场景包）共享给其他创建者，以进一步增强场景。 可以利用 **"导入** 场景"功能。 此工具可帮助解包场景包，让创建者继续生成场景。
 

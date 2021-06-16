@@ -5,12 +5,12 @@ keywords: 开发人员门户团队入门
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 950ca7e09f5b87647cb62b66a545a0b1cec33a7d
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: 6dca8723248441c3cf672931295b4b68e02cc24c
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667439"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949684"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>使用开发人员门户管理应用Microsoft Teams
 
@@ -86,6 +86,6 @@ ms.locfileid: "52667439"
 
 开发人员门户还包括可帮助你构建应用或应用Teams功能的工具。 其中一些工具包括：
 
-* **Scene studio：** 为会议设计自定义一Teams场景。
+* **Scene studio：** 为 [会议设计自定义](~/apps-in-teams-meetings/teams-together-mode.md)一Teams场景。
 * **自适应卡片编辑器**：创建和预览要包括在应用的自适应卡片。
 * **Microsoft 标识平台管理**：使用 Azure AD Azure Active Directory (注册) 以帮助用户登录并提供 API 访问权限。

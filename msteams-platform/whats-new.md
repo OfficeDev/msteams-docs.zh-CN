@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 86a39bc771873afb25d401534569498241b2daf1
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853520"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949656"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -24,7 +24,7 @@ ms.locfileid: "52853520"
 |05/26/2021| 使用自适应卡片生成选项卡。 |[构建选项卡](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 针对 Teams Toolkit 和[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[更新](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [应用开发Teams入门](~/get-started/prerequisites.md) |
 |05/25/2021| 新的开发人员门户Teams管理你的 Teams 应用。 | [Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| 一起模式功能将参与者合并到单个虚拟场景，并将其视频流放在预定席位中。 | [一起模式](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/25/2021| 自定义一起模式场景功能将参与者组合到单个虚拟场景，将其视频流放在预定席位中。 | [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| 自动程序可以使用 RSC (特定同意接收所有) 。|[使用 RSC、机器人](~/bots/how-to/conversations/channel-messages-with-rsc.md)对话[概述](~/bots/how-to/conversations/conversation-basics.md)、[频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)以及[开发人员预览](~/resources/schema/manifest-schema-dev-preview.md)清单架构接收所有消息 |
 |05/21/2021| 选项卡链接展开和阶段视图。 |[选项卡链接取消展开和阶段视图](tabs/tabs-link-unfurling.md) |
 
@@ -57,6 +57,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|06/09/2021| 自适应卡片中具有 属性的图像的阶段 `allowExpand` 视图。 | [自适应卡片中的图像阶段视图](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| 对话选项卡。 | [开始并继续选项卡中有关内容的对话](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| 使用Teams等更新了应用设计指南。|[设计Teams应用](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| 添加了有关 mConnect 和 Skooler 的信息。|[可学习管理系统](resources/moodle-overview.md)
@@ -196,7 +197,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |05/26/2021|具有自适应卡片的生成选项卡|[构建选项卡](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 针对 Teams Toolkit 和[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[更新](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [应用开发Teams入门](~/get-started/prerequisites.md) |
 |05/25/2021| 新的开发人员门户Teams管理你的 Teams 应用。 | [Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| 一起模式功能将参与者合并到单个虚拟场景，并将其视频流放在预定席位中。 | [一起模式](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/25/2021| 自定义一起模式场景功能将参与者组合到单个虚拟场景，将其视频流放在预定席位中。 | [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|自动程序可以使用 RSC (特定同意接收所有) 。|[使用 RSC、机器人](~/bots/how-to/conversations/channel-messages-with-rsc.md)对话[概述](~/bots/how-to/conversations/conversation-basics.md)、[频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)以及[开发人员预览](~/resources/schema/manifest-schema-dev-preview.md)清单架构接收所有消息 |
 |05/21/2021|选项卡链接取消展开和阶段视图|[选项卡链接取消展开和阶段视图](tabs/tabs-link-unfurling.md) |
 |03/05/2021| 选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |

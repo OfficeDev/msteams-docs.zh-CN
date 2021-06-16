@@ -5,12 +5,12 @@ keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6a420ca549cd5131afc50813b5c8267f28073e5b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630208"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949761"
 ---
 # <a name="format-cards-in-teams"></a>格式化卡片Teams
 
@@ -242,9 +242,6 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>自适应卡片中的图像阶段视图
 
-> [!NOTE]
-> 此功能目前仅在开发人员预览版中可用。
- 
 在自适应卡片中，可以使用 属性添加选择性地在阶段 `msteams` 视图中显示图像的能力。 当用户将鼠标悬停在图像上时，他们将看到展开图标，其 `allowExpand` 属性设置为 `true` 。 有关如何使用 属性的信息，请参阅以下示例：
 
 ``` json

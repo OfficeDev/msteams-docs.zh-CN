@@ -4,14 +4,17 @@ description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应�
 keywords: 应用室团队入门
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: a12a63af10f677050632f5493acb2d6089d46d78
-ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
+ms.openlocfilehash: c68a7a36212086c9c0929796cab66bc53f8cbb2b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2021
-ms.locfileid: "52915095"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949768"
 ---
-# <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams 快速开发应用
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams
+
+> [!TIP]
+> **试用开发人员门户**：App Studio 已发展。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
 
 无论你为企业开发自定义应用还是为世界各地的团队开发 SaaS 应用程序，App Studio 都可以轻松创建或集成你自己的 Microsoft Teams 应用，其方式包括简化应用程序的清单和包的创建，并提供卡片编辑器和响应控制库等有用工具。
 
@@ -125,7 +128,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 ### <a name="react-control-library"></a>反应控件库
 
 >[!Note]
-> 以后React弃用此控件库。 请考虑将 [Fluent-UI react 控件用作](https://microsoft.github.io/fluent-ui-react/) 以前作为 Stardust UI 的替代项。
+> 以后React弃用此控件库。 请考虑使用[Fluent UI react 控件作为](https://microsoft.github.io/fluent-ui-react/)替代的之前 Stardust UI。
 
 创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为更轻松地创建一致的 UI，App Studio 提供了几种符合 Teams 设计原则的 UI 控件类别。
 
