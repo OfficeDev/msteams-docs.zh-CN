@@ -212,6 +212,8 @@
           href: tabs/tabs-link-unfurling.md
         - name: 创建对话选项卡
           href: tabs/how-to/conversational-tabs.md
+        - name: 选项卡边距更改
+          href: resources/removing-tab-margins.md
     - name: 快速入门
       items:
         - name: 带 node.js 的 个人选项卡
@@ -309,7 +311,7 @@
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: 为会议启用和配置应用
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-    - name: 在 Teams 中的同框场景模式
+    - name: 在 Teams 中自定义同框场景模式
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: 构建Webhook 和连接器
   items:
@@ -371,8 +373,6 @@
           href: tabs/how-to/authentication/auth-silent-aad.md
         - name: 使用 SSO 身份验证
           href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 使用 Visual Studio 代码的 Teams 工具包添加 SSO
-          href: toolkit/visual-studio-code-tab-sso.md
     - name: 机器人
       items:
         - name: 机器人中的身份验证流
@@ -477,8 +477,6 @@
           href: concepts/build-and-test/apps-localization.md
         - name: 本地化 JSON 架构
           href: resources/schema/localization-schema.md
-    - name: 选项卡边距更改
-      href: resources/removing-tab-margins.md
     - name: SameSite cookie 属性（2020 更新）
       href: resources/samesite-cookie-update.md
     - name: 应用商店提交的常见失败情况
