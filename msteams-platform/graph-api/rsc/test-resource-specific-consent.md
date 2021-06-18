@@ -6,16 +6,19 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 328be5b4f1e3597457afb9ce1413eb35aa2df71e
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 29dc0241bfd5b42cb1853de3e89e43344c223c24
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075617"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994266"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在应用程序内测试特定于资源的许可Teams
 
-RSC (特定于资源的) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定团队。 有关详细信息，请参阅[资源特定的同意 (RSC) — Microsoft Teams Graph API](resource-specific-consent.md)。
+> [!NOTE]
+> 聊天范围的特定于资源的同意仅适用于 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md) 版。
+
+资源特定的同意 (RSC) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织中特定的资源（团队或聊天）。 有关详细信息，请参阅[资源特定的同意 (RSC) — Microsoft Teams Graph API](resource-specific-consent.md)。
 
 > [!NOTE]
 > 若要测试 RSC 权限，Teams清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
@@ -24,6 +27,7 @@ RSC (特定于资源的) 是一种 Microsoft Teams 和 Graph API 集成，使你
 > - **resource**：任何字符串，请参阅更新你的Teams [清单中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **应用程序权限**：应用的 RSC 权限，请参阅 [特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 
+## <a name="example-for-a-team"></a>团队示例
 ```json
 "webApplicationInfo":{
       "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
@@ -47,12 +51,36 @@ RSC (特定于资源的) 是一种 Microsoft Teams 和 Graph API 集成，使你
    }
 ```
 
+## <a name="example-for-a-chat"></a>聊天示例
+```json
+"webApplicationInfo":{
+      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+      "resource":"https://AnyString",
+      "applicationPermissions":[
+          "ChatSettings.Read.Chat",
+          "ChatSettings.ReadWrite.Chat",
+          "ChatMessage.Read.Chat",
+          "ChatMember.Read.Chat",
+          "Chat.Manage.Chat",
+          "TeamsTab.Read.Chat",
+          "TeamsTab.Create.Chat",
+          "TeamsTab.Delete.Chat",
+          "TeamsTab.ReadWrite.Chat",
+          "TeamsAppInstallation.Read.Chat",
+          "OnlineMeeting.ReadBasic.Chat"
+      ]
+   }
+```
+
 > [!IMPORTANT]
 > 在应用清单中，仅包含希望应用具有的 RSC 权限。
 
-## <a name="test-added-rsc-permissions-using-the-postman-app"></a>使用 Postman 应用测试添加的 RSC 权限
+>[!NOTE]
+>如果应用旨在支持在团队和聊天范围内安装，可以在 下的同一清单中指定团队和聊天权限 `applicationPermissions` 。
 
-若要检查 API 请求有效负载是否接受 RSC 权限，需要将 [RSC JSON](test-rsc-json-file.md) 测试代码复制到本地环境并更新以下值：
+## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>使用 Postman 应用测试向团队添加的 RSC 权限
+
+若要检查 API 请求有效负载是否接受 RSC 权限，需要将团队的 [RSC JSON](test-team-rsc-json-file.md) 测试代码复制到本地环境并更新以下值：
 
 * `azureADAppId`：应用的 Azure AD 应用 ID。
 * `azureADAppSecret`：你的 Azure AD 应用密码。
@@ -64,6 +92,21 @@ RSC (特定于资源的) 是一种 Microsoft Teams 和 Graph API 集成，使你
     3. 选择" **更多选项"** 图标 (&#8943;) 。
     4. 选择 **获取团队链接**。 
     5. 复制并保存字符串中的 **groupId** 值。
+
+## <a name="test-added-rsc-permissions-to-a-chat-using-the-postman-app"></a>使用 Postman 应用测试向聊天添加的 RSC 权限
+
+若要检查 API 请求有效负载是否接受 RSC 权限，需要将聊天的 [RSC JSON](test-chat-rsc-json-file.md) 测试代码复制到本地环境并更新以下值：
+
+* `azureADAppId`：应用的 Azure AD 应用 ID。
+* `azureADAppSecret`：你的 Azure AD 应用密码。
+* `token_scope`：获取令牌需要 范围。 将值设置为 https://graph.microsoft.com/.default 。
+* `tenantId`：租户的名称或 AAD 对象 ID。
+* `chatId`：可以从 Web 客户端获取聊天Teams *ID，* 如下所示：
+
+    1. 在 Teams 客户端中 **，从最** 左侧导航栏中选择"聊天"。
+    2. 从下拉菜单中选择应用安装位置的聊天。
+    3. 复制 Web URL，然后从字符串中保存聊天线程 ID。
+![来自 Web URL 的聊天线程 ID。](../../assets/images/chat-thread-id.png)
 
 ### <a name="use-postman"></a>使用 Postman
 
@@ -79,9 +122,11 @@ RSC (特定于资源的) 是一种 Microsoft Teams 和 Graph API 集成，使你
 
 ## <a name="test-revoked-rsc-permissions-using-postman"></a>使用[Postman](https://www.postman.com/)测试吊销的 RSC 权限
 
-1. 从特定团队卸载应用。
-2. 按照使用 [Postman 测试添加的 RSC 权限的步骤操作](#test-added-rsc-permissions-using-the-postman-app)。
-3. 检查所有响应状态代码，确认特定 API 调用已成功，但 **HTTP 403 状态代码失败**。
+1. 从特定资源卸载应用。
+2. 按照聊天或团队的步骤操作： 
+    1. [使用 Postman 测试向团队添加了 RSC 权限](#test-added-rsc-permissions-to-a-team-using-the-postman-app)。
+    2. [使用 Postman 测试向聊天添加的 RSC 权限](#test-added-rsc-permissions-to-a-chat-using-the-postman-app)。
+3. 检查所有响应状态代码，确认特定 API 调用失败，并 **包含 HTTP 403 状态代码**。
 
 ## <a name="see-also"></a>另请参阅
 

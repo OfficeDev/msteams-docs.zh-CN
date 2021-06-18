@@ -5,12 +5,12 @@ description: 使用 Teams 工具包为 Microsoft Teams 创建邮件扩展。
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: eaecb045993f8dfd21f4c2c4359a4a3388d659e6
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710646"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994201"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>构建并运行 Microsoft Teams 的第一个消息传递扩展
 
@@ -184,9 +184,7 @@ The Teams Search Auth Config for sample projects on GitHub， demonstrate how to
 > [!div class="nextstepaction"]
 > [查看更多 Bot Framework 示例GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## <a name="next-steps"></a>后续步骤
-
-了解创建 Teams 应用的其他方法:
+## <a name="see-also"></a>另请参阅
 
 - [使用 React 创建 Teams 应用](first-app-react.md)
 - [使用 Blazor 创建 Teams 应用](first-app-blazor.md)

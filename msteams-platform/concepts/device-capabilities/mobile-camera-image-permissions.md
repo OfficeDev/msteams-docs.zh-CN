@@ -6,12 +6,12 @@ keywords: 相机图像麦克风功能本机设备权限媒体
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 48566c6301141d8c7755482a1f5f5daec33449f3
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: e2d3c6e4b9e80d5b09cf597a29e7f3ba67355715
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630563"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994376"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能 
 
@@ -29,7 +29,8 @@ ms.locfileid: "52630563"
 熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
 
 > [!NOTE] 
-> 目前，Microsoft Teams功能的支持仅适用于移动客户端。
+> * 目前，Microsoft Teams功能的支持仅适用于移动客户端。    
+> * 目前，Teams不支持多窗口应用、选项卡和会议侧窗格的设备权限。 
 
 ## <a name="update-manifest"></a>更新清单
 
@@ -81,7 +82,7 @@ ms.locfileid: "52630563"
 必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
 
-|错误代码 |  错误名称     | Condition|
+|错误代码 |  错误名称     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **404** | FILE_NOT_FOUND | 在给定位置找不到指定的文件。|

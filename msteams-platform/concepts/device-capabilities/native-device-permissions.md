@@ -4,12 +4,12 @@ keywords: teams 应用功能权限
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: dd317da0b2c8e214f7a44d13ef69bf9fea2aad93
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630535"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994348"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 
@@ -29,6 +29,9 @@ ms.locfileid: "52630535"
 * 录制和共享简短视频。
 * 录制音频备注并保存供以后使用。
 * 使用用户的位置信息显示相关信息。
+
+> [!NOTE]
+> 目前，Teams不支持多窗口应用、选项卡和会议侧窗格的设备权限。 
 
 ## <a name="access-device-permissions"></a>访问设备权限
 

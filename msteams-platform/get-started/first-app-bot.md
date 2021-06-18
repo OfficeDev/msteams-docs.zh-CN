@@ -5,12 +5,12 @@ description: 使用 Teams 工具包为 Microsoft Teams 创建对话机器人。
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: a2f1ccfa6cc708d655f3b9a54062ee39e8be14bd
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: e59980e7f33c326c16faefd412f9845e47f234e5
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721848"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994257"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>构建你的第一个 Microsoft Teams 对话机器人
 
@@ -160,11 +160,13 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
 </details>
 
-## <a name="next-steps"></a>后续步骤
-
-了解创建 Teams 应用的其他方法:
+## <a name="see-also"></a>另请参阅
 
 - [使用 React 创建 Teams 应用](first-app-react.md)
 - [使用 Blazor 创建 Teams 应用](first-app-blazor.md)
 - [将 Teams 应用创建为 SharePoint Web 部件](first-app-spfx.md) (不需要 Azure)
-- [创建邮件扩展](first-message-extension.md)
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [创建邮件扩展](first-message-extension.md)

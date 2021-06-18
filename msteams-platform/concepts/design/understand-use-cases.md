@@ -5,12 +5,12 @@ description: 在规划Microsoft Teams应用时，应首先了解应用尝试解�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7e91ddcab88243baf83f11fad59539845724fc78
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 918f9f906136d4acd466ce54922588ce34a7e4ef
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630759"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994096"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 

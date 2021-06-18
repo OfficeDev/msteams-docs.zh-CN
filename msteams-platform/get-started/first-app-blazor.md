@@ -1,33 +1,33 @@
 ---
 title: 入门 - 使用 Blazor 生成Teams应用程序
 author: adrianhall
-description: 快速创建显示Microsoft Teams Hello， World！" 的 Web 应用 message using the Microsoft Teams Toolkit and .NET Blazor.
+description: 快速创建显示"Hello，World！"的 Microsoft Teams 应用。 message using the Microsoft Teams Toolkit and .NET Blazor.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667452"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994390"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>使用 Blazor 生成Microsoft Teams应用程序
 
 在本教程中，你将在 .NET/Blazor Microsoft Teams一个新的应用程序，该应用实现简单的个人应用以从 Microsoft Graph。  (个人应用包括一组作用域为供个人使用的选项卡。) 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 Azure。
 
-构建的应用显示当前用户的基本用户信息。  授予权限后，应用将连接到 Microsoft Graph作为当前用户获取完整配置文件。
+构建的应用将显示当前用户的基本用户信息。  授予权限后，应用会作为当前用户连接到 Microsoft Graph 以获取完整配置文件。
 
 ## <a name="before-you-begin"></a>准备工作
 
-通过安装必备组件确保已设置 [开发环境](prerequisites.md)
+通过安装[先决条件](prerequisites.md)确保您的开发环境已设置
 
 > [!div class="nextstepaction"]
 > [安装先决条件](prerequisites.md)
 
 ## <a name="create-your-project"></a>创建项目
 
-使用Teams Toolkit创建你的第一个项目：
+使用 Teams 工具包创建你的第一个项目:
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
@@ -41,7 +41,7 @@ ms.locfileid: "52667452"
 
 1. 提供应用程序名称和公司名称，然后按"创建 **"。**  应用程序名称和公司名称将显示给最终用户。
 
-1. 你的Teams应用将在几秒钟内创建。  创建项目后，使用 M365 设置单一登录：
+1. 将在数秒钟内创建你的 Teams 应用。  创建项目后，使用 M365 设置单一登录：
 
    - 选择 **Project**  >  **TeamsFx**  >  **配置 SSO..."。**
    - 系统提示时，登录到 M365 管理员帐户。
@@ -82,13 +82,13 @@ ms.locfileid: "52667452"
 
 ## <a name="take-a-tour-of-the-source-code"></a>浏览源代码
 
-如果你希望暂时跳过此部分，你可以 [在本地运行你的应用](#run-your-app-locally)。
+若要暂时跳过此部分， 你可以[运行本地应用](#run-your-app-locally)。
 
-配置Teams Toolkit后，你拥有组件来构建适用于用户的基本个人Teams。 项目目录和文件显示在 2019 年 10 月Visual Studio资源管理器"区域中。
+在 Teams 工具包配置你的项目后，你只需这些组件就可以使用这些组件为 Teams 构建基本的个人应用。 项目目录和文件显示在 2019 年 10 月Visual Studio资源管理器"区域中。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
 
-- 应用图标在 和 中存储为 PNG `color.png` 文件 `outline.png` 。
+- 应用图标在 `color.png` 和 `outline.png`中存储为 PNG 文件。
 - 用于通过开发人员门户发布的应用程序清单Teams存储在 中 `Properties/manifest.json` 。
 - 提供后端控制器以帮助 `Controllers/BackendController.cs` 进行身份验证。
 
@@ -101,41 +101,41 @@ ms.locfileid: "52667452"
 
 ## <a name="run-your-app-locally"></a>在本地运行应用
 
-Teams Toolkit允许你在本地运行应用。  这包括几个部件，这些部件是提供所需正确基础结构Teams所必需的：
+使用 Teams 工具包，你可以在本地运行应用。  这包含几个部分，是提供 Teams 所需的正确基础结构所必需的：
 
-- 向应用程序注册Azure Active Directory。  此应用程序具有与加载应用的位置及其访问的任何后端资源相关联的权限。
+- 应用程序已注册 Azure Active Directory。  此应用程序具有与从加载应用的位置及其访问的任何后端资源相关联的权限。
 - Web API 通过 (托管IIS Express) ，以帮助执行身份验证任务，充当应用和 Azure Active Directory。  
-- 生成应用清单，并存在于开发人员门户中Teams。  Teams使用应用清单告知连接的客户端从何处加载应用。
+- 生成应用清单，存在于 Teams 开发人员门户中。  Teams 使用应用清单告诉已连接客户端从何处加载应用。
 
-完成此操作后，应用可以在客户端Teams加载。  我们使用 Teams Web 客户端，以便可以在标准 Web 开发环境中查看 HTML、CSS 和 JavaScript 代码。
+完成后，可在 Teams 客户端中加载该应用。  我们使用 Teams Web 客户端，以便可以在标准 Web 开发环境中查看 HTML、CSS 和 JavaScript 代码。
 
-若要在本地生成和运行应用，请执行：
+若要在本地构建并运行应用程序:
 
-1. 在Visual Studio Code中，按 **F5** 以在调试模式下运行应用程序。
+1. 在 Visual Studio Code 中，按 **F5** 以在调试模式下运行应用程序。
 
 1. 如果需要，请安装自签名 SSL 证书进行本地调试。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
-1. Teams在 Web 浏览器中加载，系统将会提示你登录。 如果系统提示打开Microsoft Teams，请选择"取消"以保留在浏览器中。 使用 M365 帐户登录。
-1. 当系统提示将应用安装到Teams，请按 **"添加"。**
+1. 将在 Web 浏览器中加载 Teams，并提示进行登录。 如果系统提示打开 Microsoft Teams，请选择"取消"以保留在浏览器中。 使用 M365 帐户登录。
+1. 系统提示将应用安装到 Teams 时，按 **添加**。
 
-现在将显示你的应用：
+此时将显示应用：
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="已完成应用的屏幕截图":::
 
-你可以执行正常的调试活动，就像执行任何其他 Web 应用程序操作 (如设置断点) 。 应用支持热重新加载。  如果更改项目中的任何文件，将重新加载页面。
+你可以像调试任何其他 Web 应用程序一样执行正常调试活动（例如设置断点）。 该应用支持热重新加载。  如果更改了项目内的任何文件，将重新加载页面。
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>了解在调试器中本地运行应用时会发生什么情况。</summary>
+<summary>在调试器中本地运行应用时，会发生什么情况。</summary>
 
-按 F5 时，Teams Toolkit：
+按 F5 时，Teams 工具包:
 
-1. 向应用程序注册Azure Active Directory。
-1. 已针对应用程序中的"旁加载"注册Microsoft Teams。
+1. 使用 Azure Active Directory 注册应用程序。
+1. 在 Microsoft Teams 中将你的应用程序注册为“旁加载”。
 1. 在本地启动应用程序后端运行。
-1. 在本地托管的应用程序前端启动。
+1. 启动应用程序本地托管的前端。
 1. 已Microsoft Teams Web 浏览器中使用命令启动，以指示Teams在应用程序清单 (中注册 URL 时旁加载) 。
 
 </details>
@@ -144,7 +144,7 @@ Teams Toolkit允许你在本地运行应用。  这包括几个部件，这些�
 <details>
 <summary>了解如何在本地运行应用时解决常见问题。</summary>
 
-若要在应用中成功运行Teams，你必须拥有一个Microsoft 365支持应用旁加载的一个开发帐户。 有关帐户打开详细信息，请参阅 [先决条件](prerequisites.md#enable-sideloading)。
+若要在应用中成功运行Teams，你必须拥有一个Microsoft 365支持应用旁加载的一个开发帐户。 有关开设帐户的详细信息，请参阅 [先决条件](prerequisites.md#enable-sideloading)。
 
 </details>
 
@@ -269,11 +269,14 @@ Visual Studio将应用部署到 Azure 应用服务，并且 Web 应用在浏览�
 
 现在，可以使用页面顶部的"Teams预览"按钮在应用中启动Teams。
 
-## <a name="next-steps"></a>后续步骤
+## <a name="see-also"></a>另请参阅
 
-了解创建应用的其他Teams方法：
-
-- [使用Teams创建React](first-app-react.md)
-- [创建Teams应用作为 azure](first-app-spfx.md) SharePoint Web 部件 (应用，) 
+- [使用 React 创建 Teams 应用](first-app-react.md)
+- [创建Teams应用作为SharePoint Web 部件](first-app-spfx.md)
 - [创建对话机器人应用](first-app-bot.md)
 - [创建邮件扩展](first-message-extension.md)
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [创建Teams应用作为SharePoint Web 部件](first-app-spfx.md)

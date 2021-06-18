@@ -5,12 +5,12 @@ description: 了解如何使用自定义选项卡生成SharePoint 框架
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 54886b47bbe70fed5dd1f010517e6c91d8d5a50d
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 23df721a28225a8c453274e6e77efa8f756e84f3
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646638"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994369"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>使用应用生成并运行Microsoft Teams应用SharePoint 框架 (SPFx) 
 
@@ -18,7 +18,7 @@ ms.locfileid: "52646638"
 
 ## <a name="before-you-begin"></a>准备工作
 
-通过安装必备组件确保已设置 [开发环境](prerequisites.md)
+通过安装[先决条件](prerequisites.md)确保您的开发环境已设置
 
 > [!div class="nextstepaction"]
 > [安装先决条件](prerequisites.md)
@@ -29,24 +29,24 @@ ms.locfileid: "52646638"
 
 ## <a name="create-your-project"></a>创建项目
 
-使用Teams Toolkit创建你的第一个项目：
+使用 Teams 工具包创建你的第一个项目:
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. 打开Visual Studio代码。
-1. 通过Teams Toolkit边栏中的"Teams图标打开该图标：
+1. 打开 Visual Studio Code。
+1. 通过选择边栏中的 Teams 图标，打开 Teams 工具包:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Teams边栏中的Visual Studio Code图标。":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code 边栏中的 Teams 图标。":::
 
-1. 选择 **"新建Project"。**
+1. 选择 **创建新项目**。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="&quot;新建网站Project链接在Teams Toolkit栏中的位置。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。":::
 
-1. 选择 **"新建Teams应用"。**
+1. 选择 **创建新的 Teams 应用**。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="新建向导向导Project":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="&quot;创建新项目&quot;的向导启动":::
 
-1. 在 **"选择功能"** 步骤中，已选择 **Tab** 功能。  按“确定”。
+1. 在 **选择功能** 步骤中， **选项卡** 功能已被选中。  按 **确定**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="显示如何向新应用添加功能的屏幕截图。":::
 
@@ -64,11 +64,11 @@ ms.locfileid: "52646638"
 
 1. 当系统要求 **使用编程语言时**，按 **Enter** 接受默认值。
 
-1. 选择工作区文件夹。  将在工作区文件夹中为要创建的项目创建文件夹。
+1. 选择工作区文件夹。  将在工作区文件夹中为正在创建的项目创建一个文件夹。
 
-1. 为应用输入合适的名称，如 `helloworld` 。  应用的名称必须仅包含字母数字字符。  按 **Enter** 继续。
+1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
 
-你的Teams应用将在几秒钟内创建。
+将在数秒钟内创建你的 Teams 应用。
 
 # <a name="command-line"></a>[命令行](#tab/cli)
 
@@ -78,17 +78,17 @@ ms.locfileid: "52646638"
 teamsfx new
 ```
 
-CLI 将演练创建项目的一些问题。  每个问题将告诉你如何回答 (例如，使用箭头键选择一个选项) 。  在回答该问题后，按 Enter 确认 **您的选择**。
+CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该如何回答（例如，使用箭头键选择一个选项）。  如果已回答问题，请通过按 **Enter** 确认。
 
-1. 选择 **"新建Teams应用"。**
-1. 选择 **Tab** 功能。
+1. 选择 **"创建新的 Teams 应用**。
+1. 选择" **选项卡** 功能。
 1. 选择 **SharePoint 框架 (SPFx)** 前端托管。
 1. 选择 **React** 框架"。
 1. 按 **Enter** 作为 **Web 部件名称**。
 1. 按 **Enter** 键查看 **Web 部件说明**。
 1. 按 **Enter** 键 **以使用编程语言**。
 1. 按 **Enter** 选择默认工作区文件夹。
-1. 为应用输入合适的名称，如 `helloworld` 。  应用的名称必须仅包含字母数字字符。
+1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。
 
 回答所有问题后，将创建项目。
 
@@ -98,17 +98,17 @@ CLI 将演练创建项目的一些问题。  每个问题将告诉你如何回�
 
 ## <a name="take-a-tour-of-the-source-code"></a>浏览源代码
 
-如果你希望暂时跳过此部分，你可以 [在本地运行你的应用](#run-your-app-locally)。
+若要暂时跳过此部分，可以 [在本地运行应用](#run-your-app-locally)。
 
-配置Teams Toolkit后，你具有组件来构建托管在项目Teams应用程序内的基本个人SharePoint 框架。  项目目录和文件显示在浏览器的"资源管理器"Visual Studio Code。
+配置Teams Toolkit后，你具有组件来构建托管在项目Teams应用程序内的基本个人SharePoint 框架。  项目目录和文件显示在 Visual Studio 代码的资源管理器区域中。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="显示 Visual Studio Code 中个人应用的应用项目文件的屏幕截图。":::
 
-该Toolkit基于在安装过程中添加的功能，在项目目录中自动创建基架。 该Teams Toolkit在目录中维护应用 `.fx` 的状态。  此目录中的其他项之一：
+工具包根据你在设置过程中添加的功能，自动在项目目录中创建标点文件夹。 Teams 工具包将保持其对于新目录中 `.fx` 的状态。  此目录中的其他项：
 
-- 应用图标在 和 中存储为 PNG `color.png` 文件 `outline.png` 。
+- 应用图标在 `color.png` 和 `outline.png`中存储为 PNG 文件。
 - 发布到开发人员门户 for Teams的应用程序清单存储在 中 `manifest.source.json` 。
-- 创建项目时选择的设置存储在 中 `settings.json` 。
+- 创建项目时选择的设置存储在 `settings.json`。
 
 由于你选择了SPFx Web 部件项目，因此以下文件与 UI 相关：
 
@@ -121,23 +121,23 @@ CLI 将演练创建项目的一些问题。  每个问题将告诉你如何回�
 
 Teams Toolkit允许你在本地托管应用，并通过工作台SharePoint 框架[它](/sharepoint/dev/spfx/debug-in-vscode)。
 
-### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>在本地生成并运行应用Visual Studio Code
+### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>在 Visual Studio Code 本地生成和运行应用
 
-若要在本地生成和运行应用，请执行：
+若要在本地构建和运行应用，请执行：
 
 1. 从Visual Studio Code，按 **F5。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="显示如何在本地工作台SPFx应用屏幕截图。":::
 
    > [!NOTE]
-   > 首次运行应用时，将下载所有依赖项并生成应用。  生成完成后，浏览器窗口将自动打开并SharePoint工作台。  这可能需要 3-5 分钟才能完成。
+   > 首次运行该应用时，将下载所有依赖项并编译该应用。  生成完成后，浏览器窗口将自动打开并SharePoint工作台。  这可能需要 3-5 分钟才能完成。
 
    加载SharePoint工作台后。
 
    >[!NOTE]
-   > 如果需要Toolkit，系统将会提示你安装本地证书。 此证书允许Teams加载应用程序 `https://localhost` 。 出现以下对话框时，选择"是"：
+   > 如有必要，工具包会提示你安装本地证书。 此证书允许 Teams 从 `https://localhost`。 出现下列对话框时，选择"是"：
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
 1. 按"添加 **Web 部件** " (+) 图标之一添加 Web 部件。
 
@@ -158,7 +158,7 @@ Teams Toolkit允许你在本地托管应用，并通过工作台SharePoint 框�
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. 打开Visual Studio Code。
+1. 打开 Visual Studio 代码。
 1. 选择Teams Toolkit图标，从边栏Teams图标。
 1. 选择 **"在云中预配"。**
 
@@ -219,7 +219,7 @@ the SharePoint package is located `SPFx/sharepoint/solution` in within your proj
 
 1. 找到 `{project}.sppkg` 位于项目内的 `SPFx/sharepoint/solution` 文件夹中的文件。  按 **"打开"。**
 
-1. 按“确定”。
+1. 按 **确定**。
 
 1. 将自动SharePoint部署过程。  确保 **选中"使此解决方案对组织的所有网站** 都可用"，然后按"部署 **"。**
 
@@ -236,11 +236,13 @@ the SharePoint package is located `SPFx/sharepoint/solution` in within your proj
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="显示应用程序内应用的Teams":::
 
-## <a name="next-steps"></a>后续步骤
+## <a name="see-also"></a>另请参阅
 
-了解创建应用的其他Teams方法：
-
-- [使用Teams创建React](first-app-react.md)
-- [使用 Blazor Teams应用程序](first-app-blazor.md)
-- [创建对话机器人应用](first-app-bot.md)
+- [使用 React 创建 Teams 应用](first-app-react.md)
+- [使用 Blazor 创建 Teams 应用](first-app-blazor.md)
 - [创建邮件扩展](first-message-extension.md)
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [创建对话机器人应用](first-app-bot.md)

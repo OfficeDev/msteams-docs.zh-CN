@@ -4,17 +4,14 @@ description: 了解你的Microsoft Teams应用如何使用语音和视频与用�
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 呼叫呼叫 音频视频 IVR 语音联机会议
-ms.openlocfilehash: d4cec30e110eed5f73929305cc43b84eed4d7524
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 02354bb37c564d2ad30a502c9a4a28d1f899c2b1
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058311"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994229"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
-
-> [!NOTE]
-> 当前不支持在移动平台上支持Microsoft Teams聊天机器人。
 
 机器人可以使用实时Teams、视频和屏幕共享与呼叫和会议进行交互。 借助[Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)API 进行呼叫和联机会议，Teams应用现在可以使用语音和视频与用户进行交互，以增强体验。 这些 API 允许你添加以下新功能：
 
@@ -53,6 +50,10 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 以下是调用所需的不同呼叫类型和权限：
 
 * 用户可以使用机器人发起对等呼叫或邀请机器人加入现有的多方呼叫。 多部分调用尚未在 Teams用户界面中启用。
+
+    > [!NOTE]
+    > 用户向自动程序发起的呼叫当前在移动Microsoft Teams不受支持。
+
 * Graph自动程序发起对等呼叫不需要权限。 机器人需要其他权限才能参与多方呼叫，或者机器人需要其他权限来发起与用户的对等呼叫。
 * 呼叫可以对等启动，并最终成为多方呼叫。 如果你的机器人拥有适当的权限，则机器人可以通过邀请其他人来发起多方呼叫。 如果你的机器人无权参与组通话，并且某位参与者向该呼叫添加了另一个参与者，则你的机器人会从通话中丢弃。
 

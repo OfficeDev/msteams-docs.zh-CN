@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: 发送消息获取用户 ID 通道 ID 对话 ID
-ms.openlocfilehash: d2e9900e6c7d1f5ea5edfabe6dacb2f18b429b3f
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 56411fe381a05318d0e12d6876cf26138baba42c
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949775"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994215"
 ---
 # <a name="send-proactive-messages"></a>发送主动邮件
 
@@ -67,9 +67,7 @@ ms.locfileid: "52949775"
 
 ## <a name="send-the-message"></a>发送邮件
 
-现在，您具有正确的地址信息，您可以发送邮件。 如果你使用的是 SDK，你将使用 方法以及 和 进行直接 `continueConversation` `conversationId` API `tenantId` 调用。 必须正确设置 `conversationParameters` ，以成功发送邮件。 请参阅 [示例](#samples) 部分或使用代码示例部分中列出的示例 [之](#code-sample) 一。
-
-如果使用的是 SDK，则必须使用 和 方法，并直接 `continueConversation` `conversationId` 调用 `tenantId` API 来发送消息。 必须正确设置 `conversationParameters` ，以成功发送邮件。
+现在，您具有正确的地址信息，您可以发送邮件。 如果你使用的是 SDK，则必须使用 方法以及 和 `continueConversation` `conversationId` `tenantId` 进行直接 API 调用。 必须正确设置 `conversationParameters` ，以成功发送邮件。 请参阅 [示例](#samples) 部分或使用代码示例部分中列出的示例 [之](#code-sample) 一。
 
 现在，你已发送主动邮件，在发送主动邮件时必须遵循这些最佳做法，以便用户和机器人之间更好地交换信息。
 
@@ -115,7 +113,7 @@ ms.locfileid: "52949775"
 
 只能安装组织应用目录或 Teams 应用商店中的应用。
 
-请参阅[应用文档中的为用户](/graph/api/userteamwork-post-installedapps)安装Graph，以及使用 Teams 中的主动自动程序[Graph。](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) 此外，还有一个[Microsoft .NET framework 示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)在 GitHub 平台上。
+请参阅 [Graph 文档中的为用户](/graph/api/userteamwork-post-installedapps) 安装应用，以及使用 Graph 在 Teams 中主动安装机器人 [和消息传递](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。 GitHub 平台上还有一个 [Microsoft .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) 框架示例。
 
 ## <a name="samples"></a>示例
 
@@ -280,8 +278,11 @@ POST /v3/conversations
 > [!div class="nextstepaction"]
 > [Teams主动邮件代码示例](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
+## <a name="see-also"></a>另请参阅
+
+[**Teams主动邮件代码示例**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [**Teams主动邮件代码示例**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
-> [设置自动程序消息的格式](~/bots/how-to/format-your-bot-messages.md)
+> [设置你的智能机器人邮件格式](~/bots/how-to/format-your-bot-messages.md)

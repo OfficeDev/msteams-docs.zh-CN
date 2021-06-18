@@ -6,12 +6,12 @@ description: JavaScript Microsoft Teams SDK 概述，它可以帮助你构建Tea
 localization_priority: Normal
 keywords: teams 选项卡组通道可配置的静态 SDK JavaScript 个人
 ms.topic: conceptual
-ms.openlocfilehash: 04c6bb9d7687a068375bce548588e6713fd57747
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: eaf89b230d9092b83de358352d0534e010cb9536
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630339"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994362"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 JavaScript 客户端 SDK 生成选项卡Microsoft Teams托管体验
 
@@ -58,6 +58,7 @@ SDK 有助于开发具有以下任一功能Teams应用：
 |`microsoftTeams.authentication.authenticate(authenticateParameters?: AuthenticateParameters)`|启动身份验证请求，该请求使用调用方提供的参数打开新窗口。 可选输入值由 **AuthenticateParameters 对象** 定义。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)<br/>[auth obj](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|通知启动身份验证请求的框架请求已成功并关闭身份验证窗口|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|通知启动身份验证请求的帧请求失败并关闭身份验证窗口。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|发送代表应用颁发 Azure AD 令牌的请求。 如果令牌尚未过期，可以从缓存获取。 否则，会向 Azure AD 发送请求以获取新令牌。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
 
 ### <a name="settings-namespace"></a>设置命名空间
 

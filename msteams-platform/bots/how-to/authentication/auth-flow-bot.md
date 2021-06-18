@@ -4,12 +4,12 @@ description: 介绍Microsoft Teams中的身份验证流
 keywords: teams 身份验证流自动程序
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: f3bf73c105dc38e1cea515bfa7bb7d5324b02ce4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 68ba2024d0e0f2f92a52e93614e4576dcde8dcbc
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565899"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994222"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>聊天机器人的身份验证Microsoft Teams
 
@@ -28,7 +28,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
     > OAuth 2.0 授权代码授予对身份验证请求中参数的调用，该请求包含一个唯一的会话令牌，用于防止跨站点请求 `state` [伪造攻击](https://en.wikipedia.org/wiki/Cross-site_request_forgery)。 此示例使用随机生成的 GUID。
 4. 当用户选择登录按钮时，Teams打开一个弹出窗口并导航到起始页。 
    > [!NOTE]
-   > 弹出窗口的大小可以通过 URL 中的 width 和 height 查询字符串参数进行控制。 例如，如果添加 width=500 且 height=500，则弹出窗口的大小为 500x500 像素。 Teams显示具有给定像素大小的弹出窗口，最大像素大小为主窗口大小的百分比。
+   > 弹出窗口的大小可以通过 URL 中的 width 和 height 查询字符串参数进行控制。 例如，如果添加 width=600 和 height=600，则弹出窗口的大小为 600x600 像素。 弹出窗口的实际大小以主窗口大小的百Teams百分比表示。 如果Teams窗口较小，则弹出窗口小于指定的尺寸。
 
 5. 起始页将用户重定向到标识提供程序的 `authorize` 终结点。  ([查看代码](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56)) 
 6. 在提供商的网站上，用户登录并授予对机器人的访问权限。

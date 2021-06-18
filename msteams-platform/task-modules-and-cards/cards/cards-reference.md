@@ -4,12 +4,12 @@ description: 介绍自动程序可用的所有卡片和Teams
 localization_priority: Normal
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 741980ea79dd23659dd2b8a240d767b8292ca251
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668860"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994383"
 ---
 # <a name="cards-reference"></a>卡参考
 
@@ -82,7 +82,8 @@ ms.locfileid: "52668860"
 
 > [!NOTE]
 > * Teams平台支持 v1.2 或更早的自适应卡片功能。
-> * 媒体元素当前在应用平台上的自适应卡片 v1.2 中Teams支持。
+> * 在游戏平台上的自适应卡片中不支持正面或破坏性Teams样式。
+> * 媒体元素当前在 Teams 平台上的自适应卡片中不受支持。
 
 ### <a name="example-of-an-adaptive-card"></a>自适应卡片示例
 

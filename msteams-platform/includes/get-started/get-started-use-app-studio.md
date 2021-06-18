@@ -16,7 +16,11 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    该示例附带自己的清单，旨在生成项目时生成应用包。 在 .NET 上，此操作在 Visual Studio 中完成Node.js在项目根目录中的命令行中 `gulp` 键入这一点。
+    该示例附带自己的清单，旨在生成项目时生成应用包。 可以使用应用包在 .NET 上生成Visual Studio。 在Visual Studio中，manifest.json 文件位于 中的 **清单** 下 `Microsoft.Teams.Samples.HelloWorld.Web` 。 此步骤如下图所示：  
+    
+    <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
+    
+    可以通过在项目的根目录中Node.js命令行，在应用程序上生成 `gulp` 应用包。
 
     ```bash
     $ gulp

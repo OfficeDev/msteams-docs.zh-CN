@@ -5,22 +5,22 @@ description: 快速创建显示"Hello，World！"的 Microsoft Teams 应用。 �
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 8c6a957dc01cfaac0f8463166a6647d6b18babed
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: edd7cf8048dd89156b4b91afecb329d91baf3f53
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721834"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994111"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>使用 React 构建和运行第一个 Microsoft Teams 应用
 
-在本教程中，将在回车应用中创建新的 Microsoft Teams 应用，该应用实施简单的个人应用，从 Microsoft Graph 提取信息。 （ *个人应用* 包括一组适用于个人使用的选项卡。）在本教程中，你将了解 Teams 应用的结构、在本地运行应用以及如何将应用部署到 Azure。
+在本教程中，将在回车应用中创建新的 Microsoft Teams 应用，该应用实施简单的个人应用，从 Microsoft Graph 提取信息。 例如，个人 *应用包括* 一组作用域为供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 Azure。
 
-构建的应用将显示当前用户的基本用户信息。  授予权限后，应用会作为当前用户连接到 Microsoft Graph 以获取完整配置文件。
+构建的应用将显示当前用户的基本用户信息。 授予权限后，应用会作为当前用户连接到 Microsoft Graph 以获取完整配置文件。
 
 ## <a name="before-you-begin"></a>准备工作
 
-通过安装[先决条件](prerequisites.md)确保您的开发环境已设置
+请确保通过安装必备组件来设置开发 [环境](prerequisites.md)。
 
 > [!div class="nextstepaction"]
 > [安装先决条件](prerequisites.md)
@@ -44,7 +44,7 @@ ms.locfileid: "52721834"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="&quot;创建新项目&quot;的向导启动":::
 
-1. 在 **选择功能** 步骤中， **选项卡** 功能已被选中。  按 **确定**。
+1. 在 **"选择功能"** 步骤中， **已** 选择 Tab 功能。 按 **确定**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="显示如何向新应用添加功能的屏幕截图。":::
 
@@ -60,11 +60,11 @@ ms.locfileid: "52721834"
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="显示如何选择编程语言的屏幕截图。":::
 
-1. 选择工作区文件夹。  将在工作区文件夹中为正在创建的项目创建一个文件夹。
+1. 选择工作区文件夹。 在工作区文件夹中为要创建的项目创建文件夹。
 
-1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
+1. 为应用输入合适的名称，如 `helloworld`。 应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
 
-将在数秒钟内创建你的 Teams 应用。
+你的应用Teams数秒钟内创建。
 
 # <a name="command-line"></a>[命令行](#tab/cli)
 
@@ -74,7 +74,7 @@ ms.locfileid: "52721834"
 teamsfx new
 ```
 
-CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该如何回答（例如，使用箭头键选择一个选项）。  如果已回答问题，请通过按 **Enter** 确认。
+CLI 会提出一些问题来引导创建项目。 每个问题将告诉你如何回答它，例如，使用箭头键来选择一个选项。 如果已回答问题，请通过按 **Enter** 确认。
 
 1. 选择 **"创建新的 Teams 应用**。
 1. 选择" **选项卡** 功能。
@@ -84,7 +84,7 @@ CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该�
 1. 按 **Enter** 选择默认工作区文件夹。
 1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。
 
-回答所有问题后，将创建项目。
+在回答所有问题后，将创建项目。
 
 ---
 
@@ -132,7 +132,7 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 
    > 首次运行该应用时，将下载所有依赖项并编译该应用。  编译完成后，将自动打开浏览器窗口。  这可能需要 3-5 分钟才能完成。
 
-   如有必要，工具包会提示你安装本地证书。 此证书允许 Teams 从 `https://localhost`。 出现下列对话框时，选择"是"：
+   如果需要Toolkit，系统会提示您安装本地证书。 此证书允许 Teams 从 `https://localhost`。 出现下列对话框时，选择"是"：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
@@ -143,11 +143,11 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 1. 系统可能会提示你登录。  如果是这样，则使用你的 M365 帐户登录。
 1. 系统提示将应用安装到 Teams 时，按 **添加**。
 
-此时将显示应用：
+现在将显示你的应用：
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="已完成应用的屏幕截图":::
 
-你可以像调试任何其他 Web 应用程序一样执行正常调试活动（例如设置断点）。 该应用支持热重新加载。  如果更改了项目内的任何文件，将重新加载页面。
+你可以像执行任何其他 Web 应用程序一样执行正常的调试活动，例如设置断点。 该应用支持热重新加载。 如果更改了项目内的任何文件，将重新加载页面。
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -159,7 +159,7 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 1. *已并行* Teams 中的应用。
 1. 使用 Azure 函数核心工具中心 [本地运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。
 1. 启动应用程序本地托管的前端。
-1. 在 Web 浏览器中启动 Microsoft Teams，命令命令 Teams 从 `https://localhost:3000/tab` （URL 在应用程序清单中注册） 并排加载应用程序。
+1. 启动Microsoft Teams Web 浏览器中使用命令指示Teams从 旁加载应用程序 `https://localhost:3000/tab` 。 这是在应用程序清单中注册的 URL。
 
 </details>
 
@@ -179,21 +179,24 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 
 部署之前，应用程序已在本地运行:
 
-1. 后端使用 _Azure Functions Core Tools_ 运行。
+1. 后端使用 **Azure Functions Core Tools** 运行。
 1. 应用程序 HTTP 终结点 (Microsoft Teams 在此加载应用程序) 在本地运行。
 
-部署涉及预配活动 Azure 订阅上的资源，以及将应用程序后端和前端代码部署（上传）到 Azure。
+部署涉及在活动的 Azure 订阅上预配资源，以及将应用程序的后端和前端代码部署或上载到 Azure。
 
-1. 后端（如果已配置）使用多种 Azure 服务，包括 Azure 应用服务和 Azure 存储。
+1. 后端（如果已配置）使用各种 Azure 服务，包括 Azure 应用服务和 Azure 存储空间。
 1. 将前端应用程序部署到配置用于静态 Web 托管的 Azure 存储帐户。
 
 </details>
 
-## <a name="next-steps"></a>后续步骤
-
-了解创建 Teams 应用的其他方法：
+## <a name="see-also"></a>另请参阅
 
 - [使用 Blazor 创建 Teams 应用](first-app-blazor.md)
 - [创建 Teams 应用作为 SharePoint Web 部件](first-app-spfx.md) （不需要 Azure）
 - [创建对话机器人应用](first-app-bot.md)
 - [创建邮件扩展](first-message-extension.md)
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [使用 Blazor 创建 Teams 应用](first-app-blazor.md)

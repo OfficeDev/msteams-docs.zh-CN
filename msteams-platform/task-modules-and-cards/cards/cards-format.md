@@ -5,12 +5,12 @@ keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 6a420ca549cd5131afc50813b5c8267f28073e5b
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: eead38b7f28ca740473a1df029e35b9ac624391d
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949761"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994166"
 ---
 # <a name="format-cards-in-teams"></a>格式化卡片Teams
 
@@ -165,9 +165,6 @@ Web、桌面和移动客户端支持基于卡片的提及。 你可以为机器�
 
 > [!NOTE]
 > 该功能仅支持客户端信息屏蔽，将屏蔽的输入文本作为纯文本发送到在机器人配置期间指定的 https [终结点地址](../../build-your-first-app/build-bot.md)。 
-
-> [!NOTE]
-> 信息屏蔽属性当前仅在开发人员预览版中可用。
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>具有屏蔽属性的示例自适应卡片
 

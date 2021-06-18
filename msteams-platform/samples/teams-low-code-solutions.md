@@ -5,18 +5,18 @@ description: 详细说明了可用的 Microsoft 低和无代码解决方案Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 770657e34672a4314f6cbbc1e73951816f2efa1c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 7c35002752a4cdd1481c7e23bf49d2777cbcb26d
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630661"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994082"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为用户创建低代码自定义Microsoft Teams
 
-Microsoft Teams可扩展性和自适应性。 这意味着您可以为满足用户不同Teams自定义应用程序。 低代码自定义应用比从头开始创建的应用节省时间、提供快速的解决方案并满足需求。 本文档概述了 Microsoft Power Platform、Power Virtual Agents聊天机器人和虚拟助手。
+Microsoft Teams可扩展性和自适应性。 这意味着您可以为满足用户不同Teams自定义应用程序。 低代码自定义应用比从头开始创建的应用节省时间、提供快速的解决方案并满足需求。 本文档概述了 Microsoft Power Platform、Power Virtual Agents chatbot 和 虚拟助理。
 
-低代码平台提供了一种直观的软件开发方法，并且几乎不需要编码即可构建应用程序和流程。 它们允许没有经验的开发人员轻松生成自定义应用，几乎无需编码，专业开发人员可以快速开发和部署应用。 这些平台包括可视接口、后端服务的连接器以及内置应用生命周期管理系统，用于构建、调试、部署和维护应用程序。 Microsoft Power Platform 是使用低代码Teams快速构建兼容应用的创新网关。
+低代码平台提供了一种直观的软件开发方法，最少或无需编码即可构建应用程序和流程。 它们允许没有经验的开发人员轻松生成自定义应用，几乎无需编码，专业开发人员可以快速开发和部署应用。 这些平台包括可视接口、后端服务的连接器以及内置应用生命周期管理系统，用于构建、调试、部署和维护应用程序。 Microsoft Power Platform 是使用低代码Teams快速构建兼容应用的创新网关。
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams和 Microsoft Power Platform
 
@@ -47,9 +47,9 @@ Power Apps[中的](https://go.microsoft.com/fwlink/?linkid=2143374)新 Teams 应
 
 使用 Power Virtual Agents[中的](https://aka.ms/pva-teams-docs)新Teams，从用户内部轻松创建、管理和发布对话聊天Teams。 你可以与组织的其他人员共享聊天机器人，并获取他们问题的答案。
 
-### <a name="-virtual-assistant-for-teams"></a>✔虚拟助理Teams
+### <a name="-virtual-assistant-for-teams"></a>✔ 虚拟助理Teams
 
-虚拟助理是一个 Microsoft 开放源代码模板，它使您能够创建可靠的对话解决方案，同时保持对用户体验、组织品牌和必要数据的完全控制。 可以将虚拟助理配置为[集成到Teams环境中](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)。 
+虚拟助理是一个 Microsoft 开源模板，它使您能够创建可靠的对话解决方案，同时保持对用户体验、组织品牌和必要数据的完全控制。 可以将虚拟助理配置为[集成到Teams环境中](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)。 
 
 ### <a name="-power-platform-learn-modules"></a>✔ Power Platform Learn 模块
 
