@@ -6,19 +6,19 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 215b528310137da331b0aef6ab004e0448dbfadf
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 31e3dd0c33e548acd35d86492718875d45931d0b
+ms.sourcegitcommit: 60a8d314e4fb48f6789d79dbc2f69321aaff99d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994312"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "53022976"
 ---
 # <a name="resource-specific-consent-rsc"></a>RSC (资源特定的) 
 
 > [!NOTE]
 > 聊天范围的特定于资源的同意仅适用于 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md) 版。
 
-特定于资源的同意 (RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 RSC) 权限模型的特定于资源的许可 (允许团队所有者和聊天所有者分别授予应用程序访问和/或修改团队数据和聊天数据的许可。 具体、Teams特定的 RSC 权限定义应用程序可以在特定资源中执行哪些操作：
+特定于资源的同意 (RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 RSC) 权限模型的特定于资源的许可 (允许团队所有者和聊天所有者分别授予应用程序访问和/或修改团队数据和聊天数据的许可。 细化的 RSC 权限定义应用程序可以在特定资源中执行哪些操作：
 
 ## <a name="resource-specific-permissions"></a>特定于资源的权限
 
@@ -29,17 +29,17 @@ ms.locfileid: "52994312"
 |TeamSettings.ReadWrite.Group|更新此团队的设置。|
 |ChannelSettings.Read.Group|获取此团队的频道名称、频道说明和频道设置。|
 |ChannelSettings.ReadWrite.Group|更新此团队的频道名称、频道说明和频道设置。|
-|Channel.Create.Group|在这个团队中创建频道。|
-|Channel.Delete.Group|删除此团队中的频道。|
-|ChannelMessage.Read.Group |获取此团队的频道消息。|
+|Channel.Create.Group|在这个团队中创建频道。 |
+|Channel.Delete.Group|删除此团队中的频道。 |
+|ChannelMessage.Read.Group |获取此团队的频道消息。 |
 |TeamsAppInstallation.Read.Group|获取此团队已安装应用的列表。|
 |TeamsTab.Read.Group|获取此团队的选项卡列表。|
-|TeamsTab.Create.Group|在此团队中创建选项卡。|
-|TeamsTab.ReadWrite.Group|更新此团队的选项卡。|
-|TeamsTab.Delete.Group|删除此团队的选项卡。|
-|TeamMember.Read.Group|获取此团队的成员。|
+|TeamsTab.Create.Group|在此团队中创建选项卡。 |
+|TeamsTab.ReadWrite.Group|更新此团队的选项卡。 |
+|TeamsTab.Delete.Group|删除此团队的选项卡。 |
+|TeamMember.Read.Group|获取此团队的成员。 |
 
-有关详细信息，请参阅Teams[特定资源的同意权限](/graph/permissions-reference#teams-resource-specific-consent-permissions)。
+有关详细信息，请参阅团队 [资源特定的许可权限](/graph/permissions-reference#team-resource-specific-consent-permissions)。
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>聊天的特定于资源的权限
 |应用权限| 操作 |
