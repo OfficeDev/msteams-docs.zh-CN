@@ -427,8 +427,10 @@
       items:
         - name: 测试资源特定许可权限
           href: graph-api/rsc/test-resource-specific-consent.md
-        - name: 特定资源的同意 JSON 测试文件
-          href: graph-api/rsc/test-rsc-json-file.md
+        - name: 团队 JSON 测试文件的特定于资源的许可
+          href: graph-api/rsc/test-team-rsc-json-file.md
+        - name: 聊天 JSON 测试文件的特定于资源的许可
+          href: graph-api/rsc/test-chat-rsc-json-file.md
 - name: 分发应用
   items:
     - name: 概述
