@@ -5,12 +5,12 @@ description: 使用 Teams 工具包为 Microsoft Teams 创建对话机器人。
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: e59980e7f33c326c16faefd412f9845e47f234e5
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 68b266b1cf9d8f7e9b4b98611d3ba982a2e18a47
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994257"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037647"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>构建你的第一个 Microsoft Teams 对话机器人
 
@@ -89,7 +89,7 @@ CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="机器人项目的文件布局。":::
 
-机器人程序代码存储在 `bot` 文件夹中。  `bots/teamsBot.js` 是机器人的主入口点，对话将存储在 `dialogs` 文件夹中。
+机器人程序代码存储在 `bot` 文件夹中。  `bot/teamsBot.js` 是机器人的主入口点，对话将存储在 `dialogs` 文件夹中。
 
 > [!Tip]
 > 在将第一个机器人集成到 Teams 中之前，请熟悉 Teams 以外的机器人。  可以通过查看 [Azure 机器人服务](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)教程找到有关机器人的更多信息。

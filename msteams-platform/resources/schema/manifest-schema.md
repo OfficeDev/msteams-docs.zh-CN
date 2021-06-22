@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 清单架构
-ms.openlocfilehash: 75c29a1cf9c2897d7b419b45bfc1a4f0447c7aa3
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 44bae986d5ea78a044cb66d48e6e093d489f4473
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853527"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037626"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
@@ -260,7 +260,7 @@ Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须
       "Owner.Read.Group",
       "Member.ReadWrite.Group",
       "Owner.ReadWrite.Group"
-    ],
+    ]
   },
   "showLoadingIndicator": false,
   "isFullScreen": false,

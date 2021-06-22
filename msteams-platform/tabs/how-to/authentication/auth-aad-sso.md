@@ -4,12 +4,12 @@ description: '介绍 SSO (单一) '
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: 681481d4d4f764c260729d37d7b5f5f2ce58d0ec
-ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
+ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52760879"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049034"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
@@ -98,7 +98,7 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`Teams Web 应用程序。
 1. 导航到 **"API 权限"。** 选择 **"添加**  >  **Microsoft Graph** 委派权限"，然后从 API 添加以下  >  Graph权限：
     * 默认情况下启用 User.Read
-    * 电子邮件
+    * email
     * offline_access
     * OpenId
     * 个人资料
@@ -120,7 +120,7 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 >
 > * ¹ 如果你的 AAD 应用在 Teams 中进行身份验证请求的同一租户中注册，则不能要求用户同意并获取访问令牌。 只有在 AAD 应用注册到其他租户时，用户才同意这些权限。
 > * 你已经收到一个错误，指出主机名不得基于已拥有域。 若要将自定义域添加到 AAD 并注册它，请按照向 [AAD](/azure/active-directory/fundamentals/add-custom-domain) 添加自定义域名过程操作，然后重复步骤 5。 如果未使用租户租户中的管理员凭据登录，Office 365此错误。
-> * 如果未在返回的访问令牌 (UPN) ) 用户主体名称，可以在 AAD 中将其添加为可选声明。 [](/azure/active-directory/develop/active-directory-optional-claims)
+> * 如果未在返回的访问令牌 (UPN) 用户主体名称，可以在 AAD 中将其添加为可选声明。 [](/azure/active-directory/develop/active-directory-optional-claims)
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. 更新Teams应用程序清单
 
@@ -166,7 +166,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ## <a name="code-sample"></a>代码示例
 
-|**示例名称**|**说明**|**C#**|**Node.js**|
+|**示例名称**|**描述**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | 选项卡 SSO |Microsoft Teams Azure AD SSO 的选项卡示例应用| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[查看](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 

@@ -5,12 +5,12 @@ description: 如何处理来自自动程序的对话Microsoft Teams事件。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 39d3a6d54b275fd6b9f28eb38b124435e9ba8bfd
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630703"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049042"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -48,7 +48,7 @@ ms.locfileid: "52630703"
 | 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道被重命名](#channel-renamed)。 | 团队 |
 | 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道被删除](#channel-deleted)。 | 团队 |
 | 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [频道已还原](#channel-deleted)。 | 团队 |
-| 添加的成员   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 全部 |
+| 添加的成员   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 所有 |
 | 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [将删除成员](#team-members-removed)。 | groupChat and team |
 | 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队重命名为](#team-renamed)。       | 团队 |
 | 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队已删除](#team-deleted)。       | 团队 |
@@ -1061,8 +1061,8 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 全部   |
-| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 全部 |
+| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 所有   |
+| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 所有 |
 
 ### <a name="reactions-added-to-bot-message"></a>添加到自动程序消息的反应
 
@@ -1386,9 +1386,27 @@ turnContext, CancellationToken cancellationToken) {
 
 ---
 
+## <a name="uninstall-behavior-for-personal-app-with-bot"></a>使用自动程序卸载个人应用的行为
+
+> [!NOTE]
+> 使用自动程序的个人应用的卸载行为当前仅适用于公共开发人员 [预览版](../../../resources/dev-preview/developer-preview-intro.md)。
+
+卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有 Teams 和 groupChat 作用域的个人作用域中的聊天机器人的帖子卸载行为已保持一致。 卸载应用后，你无法发送或接收邮件。
+
+<img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
+
+## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
+
+使用这些安装和卸载事件时，在一些实例中，自动程序在从用户接收意外事件时Teams。 在下列情况下会出现此情况：
+
+* 无需使用 SDK Microsoft Bot Framework自动程序，因此机器人在收到意外事件时出现异常。
+* 使用 Microsoft Bot Framework SDK 生成自动程序，并选择通过替代基本事件句柄来更改默认事件行为。
+
+了解以后可以随时添加新事件，并且机器人开始接收它们，了解这一点很重要。 因此，您必须针对接收意外事件的可能性进行设计。 如果你使用的是 Bot Framework SDK，则自动程序会自动对未选择处理的任何事件进行 200 – OK 响应。
+
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | 对话机器人 | 机器人对话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

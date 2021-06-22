@@ -1,47 +1,47 @@
 ---
 title: 入门 - 先决条件
 author: adrianhall
-description: 了解如何开始使用 Microsoft Teams 应用开发和设置环境。
+description: 了解如何开始使用应用Microsoft Teams并设置你的环境。
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 6496d238b3858c1df974732fa57c28eed7c54eb2
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 7310d54322b6cbfd24e30eef37ea63a7969c001c
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994187"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037640"
 ---
-# <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>先决条件：Microsoft Teams 应用开发入门
+# <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>先决条件：开始Microsoft Teams开发
 
 创建第一个 Teams 应用之前，必须安装一些工具并设置开发环境。
 
 ## <a name="install-required-tools"></a>安装所需的工具
 
-你需要的一些工具取决于你更喜欢如何生成 Teams 应用：
+你需要的一些工具取决于你更希望如何生成Teams应用：
 
 - [Node.js(](https://nodejs.org/en/download/) 使用最新的 v14 LTS 版本) 
-- 具有开发人员工具的浏览器 - 如 [Microsoft Edge](https://www.microsoft.com/edge) (推荐) Google [Chrome](https://www.google.com/chrome/)
-- 如果使用 JavaScript、TypeScript 或 SharePoint 框架 (SPFx) ，请安装 Visual Studio [Code](https://code.visualstudio.com/download)版本 1.55 或更高版本。  
-- 如果要使用 .NET 进行开发，请安装[Visual Studio 2019。](https://visualstudio.com/download) 确保安装 ASP.NET **Web 开发** 或 **.NET Core 跨平台开发** 工作负载。
+- 具有开发人员工具的浏览器 -例如[Microsoft Edge (](https://www.microsoft.com/edge)推荐) [Google Chrome](https://www.google.com/chrome/)
+- 如果使用 JavaScript、TypeScript 或 SharePoint 框架 (SPFx) 进行开发，Visual Studio Code版本 1.55 或更高版本。 [](https://code.visualstudio.com/download)  
+- 如果使用 .NET 进行开发，请安装[Visual Studio 2019。](https://visualstudio.com/download) 确保安装 ASP.NET **Web 开发** 或 **.NET Core 跨平台开发** 工作负载。
 
 > [!WARNING]
 > 存在与 打包在 Node `npm@7` v15 及更高版本中的已知问题。 如果在运行时遇到问题 `npm install` ，请确保使用节点 v14 (LTS) 
 
-## <a name="install-the-teams-toolkit"></a>安装 Teams Toolkit
+## <a name="install-the-teams-toolkit"></a>安装Teams Toolkit
 
-Teams Toolkit使用工具为应用预配和部署云资源、发布到 Teams 应用商店等，帮助简化开发过程。 你可以将工具包与Visual Studio代码、Visual Studio或称为 (CLI `teamsfx`) 。
+该Teams Toolkit使用工具来为应用预配和部署云资源、发布到 Teams 应用商店等，帮助简化开发过程。 你可以将工具包与 Visual Studio Code、Visual Studio 或作为称为 (的 CLI `teamsfx`) 。
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. 打开 Visual Studio 代码。
 1. Select the Extensions view (**Ctrl+Shift+X**  /  **⌘⇧-X** or **View > Extensions**) .
-1. 在搜索框中，输入 **Teams Toolkit**。
-1. 选择 Teams 应用旁边的绿色安装Toolkit。
+1. 在搜索框中，输入 **"Teams Toolkit"。**
+1. Select the green install button next to the Teams Toolkit.
 
-还可以在"Toolkit代码Visual Studio [上找到 Teams 服务](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
+您还可以在 Teams Toolkit Marketplace 上找到Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
-如果需要，可以使用代码扩展Visual Studio安装以下工具。 如果已安装，可以改为使用已安装的版本。 如果使用 Linux（包括 WSL），则必须先安装这些工具，然后才能使用：
+如果需要，Visual Studio Code安装以下工具。 如果已安装，可以改为使用已安装的版本。 如果使用 Linux（包括 WSL），则必须先安装这些工具，然后才能使用：
 
 - [Azure 函数核心工具](/azure/azure-functions/functions-run-local)
 
@@ -53,18 +53,18 @@ Teams Toolkit使用工具为应用预配和部署云资源、发布到 Teams 应
 
 - [ngrok](https://ngrok.com/download)
 
-    一些 Teams 应用 (对话机器人、消息传递扩展和传入 webhook) 需要入站连接。 你需要通过隧道向 Teams 公开你的开发系统。 仅包含选项卡的应用不需要隧道。 此包安装在项目目录中， (npm `devDependencies`) 。
+    某些Teams应用功能 (对话机器人、消息传递扩展和传入 webhook) 需要入站连接。 你需要通过隧道公开开发Teams进行开发。 仅包含选项卡的应用不需要隧道。 此包安装在项目目录中， (npm `devDependencies`) 。
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
-可以使用 Visual Studio 2019 在 .NET 中通过 Blazor Server 开发 Teams 应用。 如果不打算在 .NET 中开发 Teams 应用，请安装 Visual Studio Code 版本的 Teams Toolkit。
+您可以使用 Visual Studio 2019 在 .NET Teams Blazor Server 开发应用程序。 如果不打算在 .NET 中Teams应用程序，请安装 Visual Studio Code 版本的 Teams Toolkit。
 
-若要安装 Teams Toolkit扩展：
+若要安装 Teams Toolkit 扩展：
 
 1. 打开Visual Studio 2019。
 1. 选择 **扩展**  >  **管理扩展**。
-1. 在搜索框中，输入 **Teams Toolkit**。
-1. 选择 Teams Toolkit扩展， **然后选择下载**。
+1. 在搜索框中，输入 **"Teams Toolkit"。**
+1. 选择"Teams Toolkit扩展并选择"下载 **"。**
 
 可以下载扩展。 关闭 Visual Studio 2019 以安装扩展。
 
@@ -95,65 +95,65 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 
 ## <a name="install-optional-tools"></a>安装可选工具
 
-安装用于应用开发的浏览器工具。 例如，如果你的应用是使用 React 编写的，可以使用 React 开发人员工具：
+安装用于应用开发的浏览器工具。 例如，如果你的应用是使用React编写的，可以使用React工具：
 
-- [Chrome 的 React 开发人员工具](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [ReactChrome 开发人员工具](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
 如果你想要访问 Azure 中存储的数据或在 Azure 中为 Teams 应用部署基于云的后端，请安装以下工具：
 
-- [Azure 代码Visual Studio工具](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+- [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [Azure CLI](/cli/azure/install-azure-cli)
 
-如果你使用 Microsoft Graph 数据，你应该了解 Microsoft Graph 资源管理器并添加书签。 此基于浏览器的工具允许你在应用外部查询 Microsoft Graph。
+如果你使用 Microsoft Graph数据，你应该了解 Microsoft Graph浏览器并添加书签。 此基于浏览器的工具允许你在应用Graph查询 Microsoft 帐户。
 
 - [Microsoft Graph 浏览器](https://developer.microsoft.com/graph/graph-explorer)
 
-通过 Teams 开发人员门户，你可以配置、管理和分发 Teams 应用，包括你的组织或 Teams 应用商店。
+借助开发人员门户Teams，你可以配置、管理和分发你的 Teams 应用，包括你的组织或 Teams 应用商店。
 
 - [Teams 开发人员门户](https://dev.teams.microsoft.com/)
 
 ## <a name="enable-sideloading"></a>启用旁加载
 
-在开发期间，你必须在 Teams 中加载你的应用，而不分发它。 这称为"旁加载"。
+在开发期间，你必须在应用程序内加载Teams而不分发它。 这称为"旁加载"。
 
-1. 如果你有 Teams 帐户，请验证你能否在 Teams 中旁加载应用：
+1. 如果你有一个Teams帐户，请验证你能否在应用中旁加载Teams：
 
-    1. 在 Teams 客户端中，选择"**应用"。**
-    1. 查找"上载自定义 **应用"选项**。
+    1. 在客户端Teams，选择"应用 **"。**
+    1. 查找用于自定义 **Upload的选项**。
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="显示可以在 Teams 中上传自定义应用位置的图示。":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="插图显示可以在Teams上传自定义应用。":::
 
 > [!NOTE]
-> 如果仍无法旁加载应用，请与 Teams 管理员联系。 有关详细信息 [，请参阅](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) 启用自定义 Teams 应用并启用自定义应用上传。
+> 如果仍然无法旁加载应用，请与管理员Teams联系。 有关详细信息[，请参阅Teams应用和启用自定义应用](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)上传。
 
-## <a name="get-a-free-teams-developer-tenant-optional"></a>获取免费的 Teams 开发人员租户 (可选) 
+## <a name="get-a-free-teams-developer-tenant-optional"></a>获取一个Teams开发人员租户 (可选) 
 
-如果看不到旁加载选项，或者没有 Teams 帐户，可以通过加入 M365 开发人员计划获取免费的 Teams 开发人员帐户。  注册过程大约需要两分钟。
+如果看不到旁加载选项，或者没有 Teams 帐户，可以通过加入 M365 开发人员计划Teams免费帐户。  注册过程大约需要两分钟。
 
-1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
+1. 转到开发人员[Microsoft 365计划](https://developer.microsoft.com/microsoft-365/dev-program)。
 1. 选择 **立即加入** 并按照屏幕上的说明进行操作。
 1. 当你进入欢迎屏幕时，选择 **"设置 E5 订阅"。**
 1. 设置管理员帐户。 完成后，你应该会看到如下所示的屏幕。
 
-    :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册 Microsoft 365 开发人员计划后看到的示例。":::
+    :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册开发人员计划后看到Microsoft 365的示例。":::
 
-1. 使用刚设置的管理员帐户登录 Teams。
-1. 验证你现在是否具有" **上载自定义应用"** 选项。
+1. 使用刚Teams的管理员帐户登录登录。
+1. 验证你现在是否具有Upload **应用选项**。
 
 ## <a name="get-a-free-azure-account"></a>获取免费的 Azure 帐户
 
 如果你想要在 Azure 中托管应用或访问资源，则必须拥有 Azure 订阅。  可以在 [开始之前创建一](https://azure.microsoft.com/free/) 个免费帐户。
 
-## <a name="sign-in-to-your-microsoft-365-and-azure-accounts"></a>登录到 Microsoft 365 和 Azure 帐户
+## <a name="sign-in-to-your-microsoft-365-and-azure-accounts"></a>登录到你的 Microsoft 365 和 Azure 帐户
 
 您必须有权访问两个帐户：
 
-- 你的 Microsoft 365 帐户凭据。 这是用于登录 Teams 的帐户。 如果你使用的是 Microsoft 365 开发人员计划租户，这是你在注册该计划时设置的管理员帐户。
+- 你的Microsoft 365帐户凭据。 这是用于登录帐户的帐户Teams。 如果你使用的是开发人员Microsoft 365租户，这是注册该计划时设置的管理员帐户。
 - - 你的 Azure 凭据。 这是用于访问 Azure 门户和预配新的云资源以支持你的应用的帐户。
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-1. 打开Visual Studio代码
+1. 打开Visual Studio Code
 1. 选择Teams栏中的"设置"图标：
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code 边栏中的 Teams 图标。":::

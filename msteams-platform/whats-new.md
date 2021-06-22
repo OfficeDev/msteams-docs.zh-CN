@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: b2237119c046c85593cf1979b7076b88279187cf
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: b5253c1769ebaac5548c779b3f66a87abb195ed8
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994341"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049055"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -195,6 +195,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|06/21/2021|使用自动程序卸载个人应用的行为 | [使用自动程序卸载个人应用中的行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| 聊天的特定于资源的同意。 |[特定于资源的同意](graph-api/rsc/resource-specific-consent.md) [，测试资源中的特定于资源的同意Teams](graph-api/rsc/test-resource-specific-consent.md)|  
 |05/26/2021|具有自适应卡片的生成选项卡|[构建选项卡](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 针对 Teams Toolkit 和[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[更新](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [应用开发Teams入门](~/get-started/prerequisites.md) |
