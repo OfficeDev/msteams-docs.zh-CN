@@ -1,76 +1,76 @@
 ---
 title: 为自动程序创建命令菜单
-author: clearab
+author: surbhigupta
 description: 如何为自动程序创建Microsoft Teams菜单
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: f89c564a2843aaee010774e6b262a96ce4d6530f
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 0b8793666e6478e69698c355fb9209d2ca5f5d1e
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668833"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068999"
 ---
-# <a name="bot-command-menus"></a><span data-ttu-id="de4f5-103">自动程序命令菜单</span><span class="sxs-lookup"><span data-stu-id="de4f5-103">Bot command menus</span></span>
+# <a name="bot-command-menus"></a><span data-ttu-id="673ae-103">自动程序命令菜单</span><span class="sxs-lookup"><span data-stu-id="673ae-103">Bot command menus</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="de4f5-104">若要定义自动程序可以响应的核心命令集，你可以添加一个命令菜单以及自动程序命令的下拉列表。</span><span class="sxs-lookup"><span data-stu-id="de4f5-104">To define a set of core commands that your bot can respond to, you can add a command menu with a drop-down list of commands for your bot.</span></span> <span data-ttu-id="de4f5-105">当用户与自动程序对话时，将在撰写邮件区域中显示命令列表。</span><span class="sxs-lookup"><span data-stu-id="de4f5-105">The list of commands is presented to the users in the compose message area when they are in conversation with your bot.</span></span> <span data-ttu-id="de4f5-106">Select a command from the list to insert the command string into the compose message box and select **Send**.</span><span class="sxs-lookup"><span data-stu-id="de4f5-106">Select a command from the list to insert the command string into the compose message box and select **Send**.</span></span>
+<span data-ttu-id="673ae-104">若要定义自动程序可以响应的核心命令集，你可以添加一个命令菜单以及自动程序命令的下拉列表。</span><span class="sxs-lookup"><span data-stu-id="673ae-104">To define a set of core commands that your bot can respond to, you can add a command menu with a drop-down list of commands for your bot.</span></span> <span data-ttu-id="673ae-105">当用户与自动程序对话时，将在撰写邮件区域中显示命令列表。</span><span class="sxs-lookup"><span data-stu-id="673ae-105">The list of commands is presented to the users in the compose message area when they are in conversation with your bot.</span></span> <span data-ttu-id="673ae-106">Select a command from the list to insert the command string into the compose message box and select **Send**.</span><span class="sxs-lookup"><span data-stu-id="673ae-106">Select a command from the list to insert the command string into the compose message box and select **Send**.</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="de4f5-107">桌面</span><span class="sxs-lookup"><span data-stu-id="de4f5-107">Desktop</span></span>](#tab/desktop)
+# <a name="desktop"></a>[<span data-ttu-id="673ae-107">桌面</span><span class="sxs-lookup"><span data-stu-id="673ae-107">Desktop</span></span>](#tab/desktop)
 
 ![自动程序命令菜单](./conversations/media/bot-menu-sample.png)
 
-# <a name="mobile"></a>[<span data-ttu-id="de4f5-109">移动</span><span class="sxs-lookup"><span data-stu-id="de4f5-109">Mobile</span></span>](#tab/mobile)
+# <a name="mobile"></a>[<span data-ttu-id="673ae-109">移动</span><span class="sxs-lookup"><span data-stu-id="673ae-109">Mobile</span></span>](#tab/mobile)
 
 ![移动机器人命令菜单](./conversations/media/mobile-bot-menu-sample.png)
 
 * * *
 
-## <a name="create-a-command-menu-for-your-bot"></a><span data-ttu-id="de4f5-111">为自动程序创建命令菜单</span><span class="sxs-lookup"><span data-stu-id="de4f5-111">Create a command menu for your bot</span></span>
+## <a name="create-a-command-menu-for-your-bot"></a><span data-ttu-id="673ae-111">为自动程序创建命令菜单</span><span class="sxs-lookup"><span data-stu-id="673ae-111">Create a command menu for your bot</span></span>
 
-<span data-ttu-id="de4f5-112">命令菜单在应用清单中定义。</span><span class="sxs-lookup"><span data-stu-id="de4f5-112">Command menus are defined in your app manifest.</span></span> <span data-ttu-id="de4f5-113">可以使用 App **Studio 创建** 它们，或在应用清单中手动添加它们。</span><span class="sxs-lookup"><span data-stu-id="de4f5-113">You can either use **App Studio** to create them or add them manually in the app manifest.</span></span>
+<span data-ttu-id="673ae-112">命令菜单在应用清单中定义。</span><span class="sxs-lookup"><span data-stu-id="673ae-112">Command menus are defined in your app manifest.</span></span> <span data-ttu-id="673ae-113">可以使用 App **Studio 创建** 它们，或在应用清单中手动添加它们。</span><span class="sxs-lookup"><span data-stu-id="673ae-113">You can either use **App Studio** to create them or add them manually in the app manifest.</span></span>
 
-### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a><span data-ttu-id="de4f5-114">使用 App Studio 为机器人创建命令菜单</span><span class="sxs-lookup"><span data-stu-id="de4f5-114">Create a command menu for your bot using App Studio</span></span>
+### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a><span data-ttu-id="673ae-114">使用 App Studio 为机器人创建命令菜单</span><span class="sxs-lookup"><span data-stu-id="673ae-114">Create a command menu for your bot using App Studio</span></span>
 
-<span data-ttu-id="de4f5-115">为自动程序创建命令菜单的先决条件是必须编辑现有应用清单。</span><span class="sxs-lookup"><span data-stu-id="de4f5-115">A prerequisite to create a command menu for your bot is that you must edit an existing app manifest.</span></span> <span data-ttu-id="de4f5-116">无论是创建新清单还是编辑现有清单，添加命令菜单的步骤都是相同的。</span><span class="sxs-lookup"><span data-stu-id="de4f5-116">The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.</span></span>
+<span data-ttu-id="673ae-115">为自动程序创建命令菜单的先决条件是必须编辑现有应用清单。</span><span class="sxs-lookup"><span data-stu-id="673ae-115">A prerequisite to create a command menu for your bot is that you must edit an existing app manifest.</span></span> <span data-ttu-id="673ae-116">无论是创建新清单还是编辑现有清单，添加命令菜单的步骤都是相同的。</span><span class="sxs-lookup"><span data-stu-id="673ae-116">The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.</span></span>
 
-<span data-ttu-id="de4f5-117">**使用 App Studio 为机器人创建命令菜单**</span><span class="sxs-lookup"><span data-stu-id="de4f5-117">**To create a command menu for your bot using App Studio**</span></span>
+<span data-ttu-id="673ae-117">**使用 App Studio 为机器人创建命令菜单**</span><span class="sxs-lookup"><span data-stu-id="673ae-117">**To create a command menu for your bot using App Studio**</span></span>
 
-1. <span data-ttu-id="de4f5-118">打开 **Teams，然后** 从左窗格中选择"应用"。</span><span class="sxs-lookup"><span data-stu-id="de4f5-118">Open Teams and select **Apps** from the left pane.</span></span> <span data-ttu-id="de4f5-119">在"**应用"** 页中，搜索 **App Studio，** 然后选择"打开 **"。**</span><span class="sxs-lookup"><span data-stu-id="de4f5-119">In the **Apps** page, search for **App Studio**, and select **Open**.</span></span> 
+1. <span data-ttu-id="673ae-118">打开 **Teams，然后** 从左窗格中选择"应用"。</span><span class="sxs-lookup"><span data-stu-id="673ae-118">Open Teams and select **Apps** from the left pane.</span></span> <span data-ttu-id="673ae-119">在"**应用"** 页中，搜索 **App Studio，** 然后选择"打开 **"。**</span><span class="sxs-lookup"><span data-stu-id="673ae-119">In the **Apps** page, search for **App Studio**, and select **Open**.</span></span> 
    > [!NOTE]
-   > <span data-ttu-id="de4f5-120">如果你没有 **App Studio，** 可以下载它。</span><span class="sxs-lookup"><span data-stu-id="de4f5-120">If you do not have **App Studio**, you can download it.</span></span> <span data-ttu-id="de4f5-121">有关详细信息，请参阅安装[App Studio。](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)</span><span class="sxs-lookup"><span data-stu-id="de4f5-121">For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).</span></span>
+   > <span data-ttu-id="673ae-120">如果你没有 **App Studio，** 可以下载它。</span><span class="sxs-lookup"><span data-stu-id="673ae-120">If you do not have **App Studio**, you can download it.</span></span> <span data-ttu-id="673ae-121">有关详细信息，请参阅安装[App Studio。](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)</span><span class="sxs-lookup"><span data-stu-id="673ae-121">For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).</span></span>
 
     ![应用程序 Studio](./conversations/media/AppStudio.png)
 
-2. <span data-ttu-id="de4f5-123">在 **App Studio** 中，选择 **"清单编辑器"** 选项卡。如果你没有现有应用包，可以创建或导入现有应用。</span><span class="sxs-lookup"><span data-stu-id="de4f5-123">In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app.</span></span> <span data-ttu-id="de4f5-124">有关详细信息，请参阅 [更新应用包](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。</span><span class="sxs-lookup"><span data-stu-id="de4f5-124">For more information, see [update an app package](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).</span></span>
+2. <span data-ttu-id="673ae-123">在 **App Studio** 中，选择 **"清单编辑器"** 选项卡。如果你没有现有应用包，可以创建或导入现有应用。</span><span class="sxs-lookup"><span data-stu-id="673ae-123">In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app.</span></span> <span data-ttu-id="673ae-124">有关详细信息，请参阅 [更新应用包](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。</span><span class="sxs-lookup"><span data-stu-id="673ae-124">For more information, see [update an app package](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).</span></span>
 
-3. <span data-ttu-id="de4f5-125">在清单编辑器的左侧 **窗格中的**"功能"部分，选择"**自动程序"。**</span><span class="sxs-lookup"><span data-stu-id="de4f5-125">In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.</span></span>
+3. <span data-ttu-id="673ae-125">在清单编辑器的左侧 **窗格中的**"功能"部分，选择"**自动程序"。**</span><span class="sxs-lookup"><span data-stu-id="673ae-125">In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.</span></span>
 
-4. <span data-ttu-id="de4f5-126">在清单编辑器的右侧 **窗格中的**"命令"部分 **，选择**"添加 **"。**</span><span class="sxs-lookup"><span data-stu-id="de4f5-126">In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**.</span></span> <span data-ttu-id="de4f5-127">将显示 **"新建命令** "屏幕。</span><span class="sxs-lookup"><span data-stu-id="de4f5-127">The **New Command** screen appears.</span></span>
+4. <span data-ttu-id="673ae-126">在清单编辑器的右侧 **窗格中的**"命令"部分 **，选择**"添加 **"。**</span><span class="sxs-lookup"><span data-stu-id="673ae-126">In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**.</span></span> <span data-ttu-id="673ae-127">将显示 **"新建命令** "屏幕。</span><span class="sxs-lookup"><span data-stu-id="673ae-127">The **New Command** screen appears.</span></span>
 
     ![App Studio 命令菜单添加按钮](./conversations/media/AppStudio-CommandMenu-Add.png)
 
-5. <span data-ttu-id="de4f5-129">输入 **命令文本** ，该文本必须显示为自动程序的命令菜单。</span><span class="sxs-lookup"><span data-stu-id="de4f5-129">Enter the **Command text** that must appear as the command menu for your bot.</span></span>
+5. <span data-ttu-id="673ae-129">输入 **命令文本** ，该文本必须显示为自动程序的命令菜单。</span><span class="sxs-lookup"><span data-stu-id="673ae-129">Enter the **Command text** that must appear as the command menu for your bot.</span></span>
 
-6. <span data-ttu-id="de4f5-130">输入 **必须在菜单中** 的命令文本下显示的帮助文本。</span><span class="sxs-lookup"><span data-stu-id="de4f5-130">Enter the **Help text** that must appear under the command text in the menu.</span></span> <span data-ttu-id="de4f5-131">**帮助文本** 必须是命令用途的简要说明。</span><span class="sxs-lookup"><span data-stu-id="de4f5-131">**Help text** must be a brief explanation of the purpose of the command.</span></span>
+6. <span data-ttu-id="673ae-130">输入 **必须在菜单中** 的命令文本下显示的帮助文本。</span><span class="sxs-lookup"><span data-stu-id="673ae-130">Enter the **Help text** that must appear under the command text in the menu.</span></span> <span data-ttu-id="673ae-131">**帮助文本** 必须是命令用途的简要说明。</span><span class="sxs-lookup"><span data-stu-id="673ae-131">**Help text** must be a brief explanation of the purpose of the command.</span></span>
 
-7. <span data-ttu-id="de4f5-132">选中"**范围**"复选框以选择此命令菜单必须显示在何处，然后选择"保存 **"。**</span><span class="sxs-lookup"><span data-stu-id="de4f5-132">Select the **Scope** check boxes to select where this command menu must appear, and select **Save**.</span></span>
+7. <span data-ttu-id="673ae-132">选中"**范围**"复选框以选择此命令菜单必须显示在何处，然后选择"保存 **"。**</span><span class="sxs-lookup"><span data-stu-id="673ae-132">Select the **Scope** check boxes to select where this command menu must appear, and select **Save**.</span></span>
 
     ![App Studio 新命令菜单按钮](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a><span data-ttu-id="de4f5-134">通过编辑"打开"菜单为自动程序Manifest.js菜单</span><span class="sxs-lookup"><span data-stu-id="de4f5-134">Create a command menu for your bot by editing Manifest.json</span></span>
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a><span data-ttu-id="673ae-134">通过编辑"打开"菜单为自动程序Manifest.js菜单</span><span class="sxs-lookup"><span data-stu-id="673ae-134">Create a command menu for your bot by editing Manifest.json</span></span>
 
-<span data-ttu-id="de4f5-135">创建命令菜单的另一种方式是在开发自动程序源代码时直接在清单文件中创建它。</span><span class="sxs-lookup"><span data-stu-id="de4f5-135">Another way to create a command menu is to create it directly in the manifest file while developing your bot source code.</span></span> <span data-ttu-id="de4f5-136">若要使用此方法，请遵循以下几点：</span><span class="sxs-lookup"><span data-stu-id="de4f5-136">To use this method, follow these points:</span></span>
+<span data-ttu-id="673ae-135">创建命令菜单的另一种方式是在开发自动程序源代码时直接在清单文件中创建它。</span><span class="sxs-lookup"><span data-stu-id="673ae-135">Another way to create a command menu is to create it directly in the manifest file while developing your bot source code.</span></span> <span data-ttu-id="673ae-136">若要使用此方法，请遵循以下几点：</span><span class="sxs-lookup"><span data-stu-id="673ae-136">To use this method, follow these points:</span></span>
 
-* <span data-ttu-id="de4f5-137">每个菜单最多支持 10 个命令。</span><span class="sxs-lookup"><span data-stu-id="de4f5-137">Each menu supports up to ten commands.</span></span>
-* <span data-ttu-id="de4f5-138">创建在所有范围内工作的单个命令菜单。</span><span class="sxs-lookup"><span data-stu-id="de4f5-138">Create a single command menu that works in all scopes.</span></span>
-* <span data-ttu-id="de4f5-139">为每个范围创建不同的命令菜单。</span><span class="sxs-lookup"><span data-stu-id="de4f5-139">Create a different command menu for each scope.</span></span>
+* <span data-ttu-id="673ae-137">每个菜单最多支持 10 个命令。</span><span class="sxs-lookup"><span data-stu-id="673ae-137">Each menu supports up to ten commands.</span></span>
+* <span data-ttu-id="673ae-138">创建在所有范围内工作的单个命令菜单。</span><span class="sxs-lookup"><span data-stu-id="673ae-138">Create a single command menu that works in all scopes.</span></span>
+* <span data-ttu-id="673ae-139">为每个范围创建不同的命令菜单。</span><span class="sxs-lookup"><span data-stu-id="673ae-139">Create a different command menu for each scope.</span></span>
 
-#### <a name="manifest-example-for-single-menu-for-both-scopes"></a><span data-ttu-id="de4f5-140">两个作用域的单个菜单的清单示例</span><span class="sxs-lookup"><span data-stu-id="de4f5-140">Manifest example for single menu for both scopes</span></span>
+#### <a name="manifest-example-for-single-menu-for-both-scopes"></a><span data-ttu-id="673ae-140">两个作用域的单个菜单的清单示例</span><span class="sxs-lookup"><span data-stu-id="673ae-140">Manifest example for single menu for both scopes</span></span>
 
-<span data-ttu-id="de4f5-141">两个作用域的单个菜单的清单示例代码如下所示：</span><span class="sxs-lookup"><span data-stu-id="de4f5-141">The manifest example code for single menu for both scopes is as follows:</span></span>
+<span data-ttu-id="673ae-141">两个作用域的单个菜单的清单示例代码如下所示：</span><span class="sxs-lookup"><span data-stu-id="673ae-141">The manifest example code for single menu for both scopes is as follows:</span></span>
 
 ```json
 {
@@ -114,9 +114,9 @@ ms.locfileid: "52668833"
 }
 ```
 
-#### <a name="manifest-example-for-the-menu-for-each-scope"></a><span data-ttu-id="de4f5-142">每个范围的菜单的清单示例</span><span class="sxs-lookup"><span data-stu-id="de4f5-142">Manifest example for the menu for each scope</span></span>
+#### <a name="manifest-example-for-the-menu-for-each-scope"></a><span data-ttu-id="673ae-142">每个范围的菜单的清单示例</span><span class="sxs-lookup"><span data-stu-id="673ae-142">Manifest example for the menu for each scope</span></span>
 
-<span data-ttu-id="de4f5-143">每个范围的菜单的清单示例代码如下所示：</span><span class="sxs-lookup"><span data-stu-id="de4f5-143">The manifest example code for the menu for each scope is as follows:</span></span>
+<span data-ttu-id="673ae-143">每个范围的菜单的清单示例代码如下所示：</span><span class="sxs-lookup"><span data-stu-id="673ae-143">The manifest example code for the menu for each scope is as follows:</span></span>
 
 ```json
 {
@@ -158,40 +158,40 @@ ms.locfileid: "52668833"
 }
 ```
 
-<span data-ttu-id="de4f5-144">处理来自用户的任何消息时，必须在自动程序代码中处理菜单命令。</span><span class="sxs-lookup"><span data-stu-id="de4f5-144">You must handle menu commands in your bot code as you handle any message from users.</span></span> <span data-ttu-id="de4f5-145">可以通过解析邮件文本的"提及"部分来处理自动程序 **\@ 代码中** 的菜单命令。</span><span class="sxs-lookup"><span data-stu-id="de4f5-145">You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.</span></span>
+<span data-ttu-id="673ae-144">处理来自用户的任何消息时，必须在自动程序代码中处理菜单命令。</span><span class="sxs-lookup"><span data-stu-id="673ae-144">You must handle menu commands in your bot code as you handle any message from users.</span></span> <span data-ttu-id="673ae-145">可以通过解析邮件文本的"提及"部分来处理自动程序 **\@ 代码中** 的菜单命令。</span><span class="sxs-lookup"><span data-stu-id="673ae-145">You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.</span></span>
 
-## <a name="handle-menu-commands-in-your-bot-code"></a><span data-ttu-id="de4f5-146">处理自动程序代码中的菜单命令</span><span class="sxs-lookup"><span data-stu-id="de4f5-146">Handle menu commands in your bot code</span></span>
+## <a name="handle-menu-commands-in-your-bot-code"></a><span data-ttu-id="673ae-146">处理自动程序代码中的菜单命令</span><span class="sxs-lookup"><span data-stu-id="673ae-146">Handle menu commands in your bot code</span></span>
 
-<span data-ttu-id="de4f5-147">组或频道中的机器人仅在消息中提到时 `@botname` 进行响应。</span><span class="sxs-lookup"><span data-stu-id="de4f5-147">Bots in a group or channel respond only when they are mentioned `@botname` in a message.</span></span> <span data-ttu-id="de4f5-148">自动程序在组或频道范围中收到的每封邮件在返回的消息文本中包含其名称。</span><span class="sxs-lookup"><span data-stu-id="de4f5-148">Every message received by a bot when in a group or channel scope contains its name in the message text returned.</span></span> <span data-ttu-id="de4f5-149">在处理返回的命令之前，邮件分析必须处理自动程序使用其名称接收的消息。</span><span class="sxs-lookup"><span data-stu-id="de4f5-149">Before handling the command being returned, your message parsing must handle the message received by a bot with its name.</span></span>
+<span data-ttu-id="673ae-147">组或频道中的机器人仅在消息中提到时 `@botname` 进行响应。</span><span class="sxs-lookup"><span data-stu-id="673ae-147">Bots in a group or channel respond only when they are mentioned `@botname` in a message.</span></span> <span data-ttu-id="673ae-148">自动程序在组或频道范围中收到的每封邮件在返回的消息文本中包含其名称。</span><span class="sxs-lookup"><span data-stu-id="673ae-148">Every message received by a bot when in a group or channel scope contains its name in the message text returned.</span></span> <span data-ttu-id="673ae-149">在处理返回的命令之前，邮件分析必须处理自动程序使用其名称接收的消息。</span><span class="sxs-lookup"><span data-stu-id="673ae-149">Before handling the command being returned, your message parsing must handle the message received by a bot with its name.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="de4f5-150">若要在代码中处理命令，它们作为常规消息发送到自动程序。</span><span class="sxs-lookup"><span data-stu-id="de4f5-150">To handle the commands in code, they are sent to your bot as a regular message.</span></span> <span data-ttu-id="de4f5-151">必须像处理用户发送的其他任何邮件一样处理邮件。</span><span class="sxs-lookup"><span data-stu-id="de4f5-151">You must handle them as you would handle any other message from your users.</span></span> <span data-ttu-id="de4f5-152">代码中的命令在文本框中插入预配置的文本。</span><span class="sxs-lookup"><span data-stu-id="de4f5-152">The commands in code insert pre-configured text into the text box.</span></span> <span data-ttu-id="de4f5-153">然后，用户必须像发送任何其他邮件一样发送该文本。</span><span class="sxs-lookup"><span data-stu-id="de4f5-153">The user must then send that text as they do for any other message.</span></span>
+> <span data-ttu-id="673ae-150">若要在代码中处理命令，它们作为常规消息发送到自动程序。</span><span class="sxs-lookup"><span data-stu-id="673ae-150">To handle the commands in code, they are sent to your bot as a regular message.</span></span> <span data-ttu-id="673ae-151">必须像处理用户发送的其他任何邮件一样处理邮件。</span><span class="sxs-lookup"><span data-stu-id="673ae-151">You must handle them as you would handle any other message from your users.</span></span> <span data-ttu-id="673ae-152">代码中的命令在文本框中插入预配置的文本。</span><span class="sxs-lookup"><span data-stu-id="673ae-152">The commands in code insert pre-configured text into the text box.</span></span> <span data-ttu-id="673ae-153">然后，用户必须像发送任何其他邮件一样发送该文本。</span><span class="sxs-lookup"><span data-stu-id="673ae-153">The user must then send that text as they do for any other message.</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="de4f5-154">C#</span><span class="sxs-lookup"><span data-stu-id="de4f5-154">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="673ae-154">C#</span><span class="sxs-lookup"><span data-stu-id="673ae-154">C#</span></span>](#tab/dotnet)
 
-<span data-ttu-id="de4f5-155">可以使用邮件文本的 **\@ "提及**"部分分析邮件文本的静态Microsoft Bot Framework。</span><span class="sxs-lookup"><span data-stu-id="de4f5-155">You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework.</span></span> <span data-ttu-id="de4f5-156">它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。</span><span class="sxs-lookup"><span data-stu-id="de4f5-156">It is a method of the `Activity` class named `RemoveRecipientMention`.</span></span>
+<span data-ttu-id="673ae-155">可以使用邮件文本的 **\@ "提及**"部分分析邮件文本的静态Microsoft Bot Framework。</span><span class="sxs-lookup"><span data-stu-id="673ae-155">You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework.</span></span> <span data-ttu-id="673ae-156">它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。</span><span class="sxs-lookup"><span data-stu-id="673ae-156">It is a method of the `Activity` class named `RemoveRecipientMention`.</span></span>
 
-<span data-ttu-id="de4f5-157">用于C#"提及"部分的代码如下所示： **\@**</span><span class="sxs-lookup"><span data-stu-id="de4f5-157">The C# code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
+<span data-ttu-id="673ae-157">用于C#"提及"部分的代码如下所示： **\@**</span><span class="sxs-lookup"><span data-stu-id="673ae-157">The C# code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# <a name="javascript"></a>[<span data-ttu-id="de4f5-158">JavaScript</span><span class="sxs-lookup"><span data-stu-id="de4f5-158">JavaScript</span></span>](#tab/javascript)
+# <a name="javascript"></a>[<span data-ttu-id="673ae-158">JavaScript</span><span class="sxs-lookup"><span data-stu-id="673ae-158">JavaScript</span></span>](#tab/javascript)
 
-<span data-ttu-id="de4f5-159">可以使用自动程序框架提供的静态 **\@** 方法分析邮件文本的"提及"部分。</span><span class="sxs-lookup"><span data-stu-id="de4f5-159">You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework.</span></span> <span data-ttu-id="de4f5-160">它是名为 的 `TurnContext` 类的一个方法 `removeMentionText` 。</span><span class="sxs-lookup"><span data-stu-id="de4f5-160">It is a method of the `TurnContext` class named `removeMentionText`.</span></span>
+<span data-ttu-id="673ae-159">可以使用自动程序框架提供的静态 **\@** 方法分析邮件文本的"提及"部分。</span><span class="sxs-lookup"><span data-stu-id="673ae-159">You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework.</span></span> <span data-ttu-id="673ae-160">它是名为 的 `TurnContext` 类的一个方法 `removeMentionText` 。</span><span class="sxs-lookup"><span data-stu-id="673ae-160">It is a method of the `TurnContext` class named `removeMentionText`.</span></span>
 
-<span data-ttu-id="de4f5-161">用于解析邮件文本的 **\@ "** 提及"部分的 JavaScript 代码如下所示：</span><span class="sxs-lookup"><span data-stu-id="de4f5-161">The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
+<span data-ttu-id="673ae-161">用于解析邮件文本的 **\@ "** 提及"部分的 JavaScript 代码如下所示：</span><span class="sxs-lookup"><span data-stu-id="673ae-161">The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 
-# <a name="python"></a>[<span data-ttu-id="de4f5-162">Python</span><span class="sxs-lookup"><span data-stu-id="de4f5-162">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="673ae-162">Python</span><span class="sxs-lookup"><span data-stu-id="673ae-162">Python</span></span>](#tab/python)
 
-<span data-ttu-id="de4f5-163">可以使用 Bot Framework **@Mention** 静态方法解析邮件文本的 @Mention 部分。</span><span class="sxs-lookup"><span data-stu-id="de4f5-163">You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework.</span></span> <span data-ttu-id="de4f5-164">它是名为 的 `TurnContext` 类的一个方法 `remove_recipient_mention` 。</span><span class="sxs-lookup"><span data-stu-id="de4f5-164">It is a method of the `TurnContext` class named `remove_recipient_mention`.</span></span>
+<span data-ttu-id="673ae-163">可以使用 Bot Framework **@Mention** 静态方法解析邮件文本的 @Mention 部分。</span><span class="sxs-lookup"><span data-stu-id="673ae-163">You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework.</span></span> <span data-ttu-id="673ae-164">它是名为 的 `TurnContext` 类的一个方法 `remove_recipient_mention` 。</span><span class="sxs-lookup"><span data-stu-id="673ae-164">It is a method of the `TurnContext` class named `remove_recipient_mention`.</span></span>
 
-<span data-ttu-id="de4f5-165">用于分析邮件文本的 **\@ "提及**"部分的 Python 代码如下所示：</span><span class="sxs-lookup"><span data-stu-id="de4f5-165">The Python code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
+<span data-ttu-id="673ae-165">用于分析邮件文本的 **\@ "提及**"部分的 Python 代码如下所示：</span><span class="sxs-lookup"><span data-stu-id="673ae-165">The Python code to parse out the **\@Mention** portion of the message text is as follows:</span></span>
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -199,20 +199,20 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 * * *
 
-<span data-ttu-id="de4f5-166">若要使自动程序代码顺利运行，必须遵循一些最佳做法。</span><span class="sxs-lookup"><span data-stu-id="de4f5-166">To enable smooth functioning of your bot code, there are few best practices that you must follow.</span></span>
+<span data-ttu-id="673ae-166">若要使自动程序代码顺利运行，必须遵循一些最佳做法。</span><span class="sxs-lookup"><span data-stu-id="673ae-166">To enable smooth functioning of your bot code, there are few best practices that you must follow.</span></span>
 
-## <a name="command-menu-best-practices"></a><span data-ttu-id="de4f5-167">命令菜单最佳实践</span><span class="sxs-lookup"><span data-stu-id="de4f5-167">Command menu best practices</span></span>
+## <a name="command-menu-best-practices"></a><span data-ttu-id="673ae-167">命令菜单最佳实践</span><span class="sxs-lookup"><span data-stu-id="673ae-167">Command menu best practices</span></span>
 
-<span data-ttu-id="de4f5-168">以下是命令菜单最佳实践：</span><span class="sxs-lookup"><span data-stu-id="de4f5-168">Following are the command menu best practices:</span></span>
+<span data-ttu-id="673ae-168">以下是命令菜单最佳实践：</span><span class="sxs-lookup"><span data-stu-id="673ae-168">Following are the command menu best practices:</span></span>
 
-* <span data-ttu-id="de4f5-169">保持简单：自动程序菜单旨在显示自动程序的关键功能。</span><span class="sxs-lookup"><span data-stu-id="de4f5-169">Keep it simple: The bot menu is meant to present the key capabilities of your bot.</span></span>
-* <span data-ttu-id="de4f5-170">保持简短：菜单选项不能长，不能是复杂的自然语言语句。</span><span class="sxs-lookup"><span data-stu-id="de4f5-170">Keep it short: Menu options must not be long and must not be complex natural language statements.</span></span> <span data-ttu-id="de4f5-171">它们必须是简单的命令。</span><span class="sxs-lookup"><span data-stu-id="de4f5-171">They must be simple commands.</span></span>
-* <span data-ttu-id="de4f5-172">保持它可以进行通话：自动程序菜单操作或命令必须始终可用，无论对话的状态或聊天机器人位于哪个对话中。</span><span class="sxs-lookup"><span data-stu-id="de4f5-172">Keep it invokable: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.</span></span>
+* <span data-ttu-id="673ae-169">保持简单：自动程序菜单旨在显示自动程序的关键功能。</span><span class="sxs-lookup"><span data-stu-id="673ae-169">Keep it simple: The bot menu is meant to present the key capabilities of your bot.</span></span>
+* <span data-ttu-id="673ae-170">保持简短：菜单选项不能长，不能是复杂的自然语言语句。</span><span class="sxs-lookup"><span data-stu-id="673ae-170">Keep it short: Menu options must not be long and must not be complex natural language statements.</span></span> <span data-ttu-id="673ae-171">它们必须是简单的命令。</span><span class="sxs-lookup"><span data-stu-id="673ae-171">They must be simple commands.</span></span>
+* <span data-ttu-id="673ae-172">保持它可以进行通话：自动程序菜单操作或命令必须始终可用，无论对话的状态或聊天机器人位于哪个对话中。</span><span class="sxs-lookup"><span data-stu-id="673ae-172">Keep it invokable: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="de4f5-173">如果从清单中删除任何命令，则必须重新部署应用来实现更改。</span><span class="sxs-lookup"><span data-stu-id="de4f5-173">If you remove any commands from your manifest, you must redeploy your app to implement the changes.</span></span> <span data-ttu-id="de4f5-174">通常，对清单的任何更改都需要重新部署应用。</span><span class="sxs-lookup"><span data-stu-id="de4f5-174">In general, any changes to the manifest require you to redeploy your app.</span></span>
+> <span data-ttu-id="673ae-173">如果从清单中删除任何命令，则必须重新部署应用来实现更改。</span><span class="sxs-lookup"><span data-stu-id="673ae-173">If you remove any commands from your manifest, you must redeploy your app to implement the changes.</span></span> <span data-ttu-id="673ae-174">通常，对清单的任何更改都需要重新部署应用。</span><span class="sxs-lookup"><span data-stu-id="673ae-174">In general, any changes to the manifest require you to redeploy your app.</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="de4f5-175">后续步骤</span><span class="sxs-lookup"><span data-stu-id="de4f5-175">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="673ae-175">后续步骤</span><span class="sxs-lookup"><span data-stu-id="673ae-175">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="de4f5-176">频道和群组对话</span><span class="sxs-lookup"><span data-stu-id="de4f5-176">Channel and group conversations</span></span>](~/bots/how-to/conversations/channel-and-group-conversations.md)
+> [<span data-ttu-id="673ae-176">频道和群组对话</span><span class="sxs-lookup"><span data-stu-id="673ae-176">Channel and group conversations</span></span>](~/bots/how-to/conversations/channel-and-group-conversations.md)
