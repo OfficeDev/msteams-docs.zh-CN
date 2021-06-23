@@ -126,8 +126,17 @@ Teams 中提供多种选项，来显示消息扩展搜索结果，包括[列表�
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="示例：在移动设备上，如何从聊天消息打开消息传递扩展。" border="false":::
 
 ---
-':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
-':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+
+#### Channel post
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
+
 ---
 
 ## <a name="use-a-messaging-extension"></a>使用邮件扩展
