@@ -1,17 +1,17 @@
 ---
 title: 'Microsoft Teams 2020 更新 (和 SameSite cookie) '
-author: laujan
+author: surbhigupta
 description: 描述 SameSite Cookie 的属性
 keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9e899cd7f4e8adcf55a39fc5cef434a7faa4b0ba
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629849"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068630"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams 2020 更新 (和 SameSite cookie) 
 

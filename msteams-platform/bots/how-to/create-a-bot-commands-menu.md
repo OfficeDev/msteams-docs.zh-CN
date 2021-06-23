@@ -1,16 +1,16 @@
 ---
 title: 为自动程序创建命令菜单
-author: clearab
+author: surbhigupta
 description: 如何为自动程序创建Microsoft Teams菜单
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: f89c564a2843aaee010774e6b262a96ce4d6530f
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 0b8793666e6478e69698c355fb9209d2ca5f5d1e
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668833"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068999"
 ---
 # <a name="bot-command-menus"></a>自动程序命令菜单
 

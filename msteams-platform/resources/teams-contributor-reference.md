@@ -1,20 +1,20 @@
 ---
 title: 参与Microsoft Teams文档
 description: 创建和发布文档Teams的步骤
-author: laujan
+author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: 52253bb096857e2cb883295c8ae6b58518506d9a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33296219b9d42b2ca26eb3c44df5c6429f5259ce
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566227"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069161"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>参与Microsoft Teams文档
 
-[Teams文档](/microsoftteams/platform/overview)是[Microsoft Docs 技术](https://docs.microsoft.com/)文档库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在 *docs <span></span> .microsoft.com 之后具有相同的* URL 路径 microsoft.com。  例如， `/docs.microsoft.com/microsoftteams/...` 是文档Teams路径的开头。 Teams文章以[MarkDown](#markdown-reference)语法编写，并托管在 GitHub[上](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)。
+[Teams文档](/microsoftteams/platform/overview)是[Microsoft Docs 技术](https://docs.microsoft.com)文档库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在 *docs <span></span> .microsoft.com 之后具有相同的* URL 路径 microsoft.com。  例如， `/docs.microsoft.com/microsoftteams/...` 是文档Teams路径的开头。 Teams文章以[MarkDown](#markdown-reference)语法编写，并托管在 GitHub[上](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)。
 
 ## <a name="set-up-your-workspace"></a>设置工作区
 

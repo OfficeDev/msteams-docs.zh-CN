@@ -1,16 +1,16 @@
 ---
 title: 定义消息传递扩展操作命令
-author: clearab
+author: surbhigupta
 description: 邮件扩展操作命令概述
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f49e821ecb98659b4cfd68f93b37f1a8f611a9fb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b4420247d3a0c1116bd1aed09fa2edccf18ae902
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020714"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068931"
 ---
 # <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 

@@ -1,16 +1,16 @@
 ---
 title: 在本地测试和调试机器人
-author: clearab
+author: surbhigupta
 description: 使用 IDE 在本地测试和调试机器人
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: af4b8d38b763d2266ec64fef0fe8c487b9120773
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 0c34d46069c52dfb51f828ed89298f50362ea021
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631011"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068992"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
 
@@ -44,7 +44,7 @@ ngrok http <port> -host-header=localhost:<port>
 
 有时，可能需要测试自动程序，而无需将其安装为 Teams。 我们提供两种测试自动程序的方法。 在不将机器人安装为应用的情况下测试它对于确保自动程序可用并做出响应非常有用，但它不允许你测试可能已添加到自动程序的全部 Microsoft Teams 功能。 如果你需要完全测试自动程序，请参阅 [通过上传 进行测试](#test-by-uploading-to-teams)。
 
-### <a name="use-the-bot-emulator"></a>使用自动程序仿真器
+### <a name="use-the-bot-emulator"></a>使用自动程序Emulator
 
 the Bot Framework Emulator is a desktop application that permits bot developers to test and debug their bots local or remotely. 仿真器可帮助你与机器人聊天并检查机器人发送和接收的消息。 这可用于验证机器人是否可用并做出响应。 但是，仿真器不允许测试已添加到自动程序的任何特定于 Teams 的功能，来自自动程序的响应也不能准确地直观地表示它们在 Teams 中的呈现方式。 如果你需要测试其中任一内容，最好上传 [自动程序](#test-by-uploading-to-teams)。
 

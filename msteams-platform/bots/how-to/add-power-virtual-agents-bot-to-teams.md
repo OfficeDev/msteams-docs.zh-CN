@@ -1,16 +1,16 @@
 ---
 title: 将Power Virtual Agents聊天机器人添加到Teams
-author: laujan
+author: surbhigupta
 description: 在Power Virtual Agents平台中集成Teams聊天机器人
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: a38b2447bba42e70d8a1c3c9dca5d92e41cfb77c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 85f2d91d2c5cfdb0ae746a00c7a9f3d6a0c15972
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630591"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069019"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>添加 Power Virtual Agent 聊天机器人 
 

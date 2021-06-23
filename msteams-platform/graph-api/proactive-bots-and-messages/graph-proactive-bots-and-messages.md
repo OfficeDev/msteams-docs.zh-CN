@@ -2,16 +2,16 @@
 title: 使用 Microsoft Graph授权主动自动程序安装和邮件Teams
 description: 介绍企业中的主动Teams以及如何实现。
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: db36c64e557b90699bb09e77dc67ca4c9a8e5853
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 0ece7d3ec3a9e00774ff2f529f7c38bc1932469d
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949663"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069088"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 主动安装应用以发送消息
 

@@ -1,17 +1,17 @@
 ---
 title: 删除选项卡页边距Microsoft Teams
-author: laujan
+author: surbhigupta
 description: 介绍删除制表位将如何增强开发人员的体验。
 keywords: 删除边距填充的选项卡
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 78d97dca73e7fce2bf4b911f5ea4588525667378
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019711"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069166"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
@@ -34,7 +34,7 @@ Microsoft Teams选项卡的应用将受此更改的影响。 开发人员必须�
 
 选项卡开发人员不得依赖Teams选项卡周围的边距。 建议开发人员根据需要在选项卡设计周围添加边距。 生产中的应用设计可能看起来有额外的填充，即由Teams提供的边距和选项卡提供的边距。但是，额外的填充只是临时的，将在几周后消失，仅留下应用提供的填充。
 
-## <a name="faq"></a>常见问题
+## <a name="faq"></a>FAQ
 
 **应用部件版式（如标题栏或任务栏）是否适合触摸我们设计的边缘？**
 

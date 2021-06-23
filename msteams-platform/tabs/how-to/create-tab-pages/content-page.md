@@ -1,17 +1,17 @@
 ---
 title: 创建内容页
-author: laujan
+author: surbhigupta
 description: 如何创建内容页
 keywords: teams 选项卡组通道可配置静态
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 136160cb9154d62be40d8e29075ac1fc86135a6b
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: abb073cee4a9417ee4a9f095acdbe18c5e6d7713
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566675"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068522"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>为选项卡创建内容页
 

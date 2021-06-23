@@ -5,13 +5,13 @@ keywords: Teams一流应用集成插件
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: d7fddad80ca08fd4ca8dee352cdcbc46e8e97dcd
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 54f4fec4e240f866c686ed715bd5093a319a2a48
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566717"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069175"
 ---
 # <a name="install-moodle-lms"></a>安装 Moodle LMS
 
@@ -228,7 +228,7 @@ ms.locfileid: "52566717"
 
 资源部署到 Azure 后，必须使用消息终结点Microsoft 365一个设置一个将一个"一Microsoft 365一个 Pluginle 插件。 你必须从 Azure 中的机器人获取终结点：
 
-1. 登录到 [Azure 门户](https://portal.azure.com)。
+1. 登录 [Azure 门户](https://portal.azure.com)。
 
 1. 在左侧窗格中，选择" **资源组** "，并选择你使用或创建的资源组，同时部署机器人。
 

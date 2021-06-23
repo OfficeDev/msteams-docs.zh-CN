@@ -1,16 +1,16 @@
 ---
 title: 消息扩展
-author: clearab
+author: surbhigupta
 description: 邮件扩展在 Microsoft Teams 概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ee59a7ad96572f5a8ebc6afedd2e0e8485169e5a
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 6bf4b9a3147e9916f2eac05a890fc8fc134799be
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075666"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069098"
 ---
 # <a name="messaging-extensions"></a>消息扩展
 
@@ -33,7 +33,7 @@ ms.locfileid: "52075666"
 消息扩展由您托管的 Web 服务和应用程序清单组成，它定义 Web 服务在 Microsoft Teams 客户端中的调用位置。 Web 服务利用 Bot Framework 的消息架构和安全通信协议，因此你必须在 Bot Framework 中将 Web 服务注册为自动程序。 
 
 > [!NOTE]
-> 虽然可以手动创建 Web 服务，但使用 [Bot Framework SDK](https://github.com/microsoft/botframework) 处理协议。
+> 虽然可以手动创建 Web 服务，但使用 [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) 处理协议。
 
 在应用程序的应用清单Microsoft Teams，使用最多十个不同的命令定义单个消息传递扩展。 每个命令都定义一种类型，如操作或搜索以及客户端中调用它的位置。 调用位置包括撰写邮件区域、命令栏和邮件。 在调用时，Web 服务会收到一条包含 JSON 有效负载的 HTTPS 消息，其中包括所有相关信息。 使用 JSON 有效负载进行响应，Teams客户端知道要启用的下一次交互。 
 

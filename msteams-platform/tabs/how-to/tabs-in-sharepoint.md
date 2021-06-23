@@ -1,17 +1,17 @@
 ---
 title: 将 Teams 选项卡添加到 SharePoint
-author: laujan
+author: surbhigupta
 description: 如何将现有"Teams"选项卡SharePoint Web SharePoint 框架部件。
 keywords: teams 选项卡 sharepoint 框架开发
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c6c5668c0d937e0512d8a6dba366f7fd545b8a96
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6720cf3fdc8a02d325bf775f4bf319b9d07ec17c
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630409"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068648"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>将 Teams 选项卡添加到 SharePoint 
 

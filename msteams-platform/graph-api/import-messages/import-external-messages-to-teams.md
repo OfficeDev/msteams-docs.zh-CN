@@ -2,16 +2,16 @@
 title: 使用 Microsoft Graph将外部平台消息导入Teams
 description: 介绍如何使用 Microsoft Graph将邮件从外部平台导入到Teams
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams 导入消息 api 图形 Microsoft 迁移迁移帖子
-ms.openlocfilehash: 5ea06e8b490bae0595abb31086848d0b050bded0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ad4e494264a72a3fdb1d926323bc2878d10cf44d
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566157"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069138"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 

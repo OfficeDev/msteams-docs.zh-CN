@@ -1,16 +1,16 @@
 ---
 title: 智能机器人和 SDK
-author: clearab
+author: surbhigupta
 description: 聊天机器人和 SDK Microsoft Teams。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2a77b629a645625398fccfd6a18eb1ed3f09844e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b1b8f18a457c45a7b0be6ccf6a1d7328d9c50027
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020181"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069026"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -41,7 +41,7 @@ Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于�
 
 ## <a name="bots-and-the-microsoft-power-virtual-agents"></a>机器人和 Microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是一项基于 Microsoft Power 平台和 Bot Framework 构建的 chatbot 服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户创建聊天Power Virtual Agents[后](https://powervirtualagents.microsoft.com)，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门详细信息，请参阅Power Virtual Agents[文档](https://docs.microsoft.com/power-virtual-agents/)。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是一项基于 Microsoft Power 平台和 Bot Framework 构建的 chatbot 服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户创建聊天Power Virtual Agents[后](https://powervirtualagents.microsoft.com)，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门详细信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
 
 ## <a name="bots-and-webhooks-and-connectors"></a>机器人、Webhook 和连接器
 

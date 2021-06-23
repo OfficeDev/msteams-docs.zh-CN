@@ -1,16 +1,16 @@
 ---
 title: 使用"个人"选项卡创建 ASP.NET Core
-author: laujan
+author: surbhigupta
 description: 使用自定义选项卡创建自定义个人选项卡的快速 ASP.NET Core。
 ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 41aa916f4c69d50e48254d0f4934109429dab83c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a839ae126a2cfdb137b22108038dd15a4b47b95a
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566892"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069049"
 ---
 # <a name="create-a-personal-tab-using-aspnetcore"></a>使用 ASP.NETCore 创建个人选项卡
 

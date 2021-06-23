@@ -1,17 +1,17 @@
 ---
 title: Post external requests to Microsoft Teams with incoming webhooks
-author: laujan
+author: surbhigupta
 description: 如何将传入 Webhook 添加到Teams应用
 keywords: teams 选项卡传出 Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bb2306cb57c069d3bed06702495da2775694643a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: acaf2c7ba8c9c6d34399b51f3c0ef9a1110c0fb4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566815"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068937"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>Post external requests to Teams with incoming webhooks
 

@@ -1,323 +1,314 @@
 ---
-title: 设计邮件扩展
-description: 了解如何设计一个Teams扩展并获取 Microsoft Teams UI 工具包。
-keywords: 团队设计指南参考消息传递扩展提示最佳做法
+title: 设计消息传递扩展
+description: 了解如何设计 Microsoft Teams 消息传递并获取 Microsoft Teams UI Kit。
+keywords: Microsoft Teams 设计指南参考消息传递扩展提示最佳实践
 author: heath-hamilton
-localization_priority: Normal
+localization_priority: Priority
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: fd870d8e10ef74c36f8f6d145d48980f53e9303c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
-ms.translationtype: MT
+ms.openlocfilehash: f4d1ba1e6e0b71b37e2b7b2d2a32fb729822ba1c
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631025"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037668"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>设计邮件Microsoft Teams扩展
+# <a name="designing-your-microsoft-teams-messaging-extension"></a>设计 Microsoft Teams 消息传递
 
-消息传递扩展是插入应用内容或在离开对话的情况下对消息操作快捷方式。
-为了指导应用设计，以下信息介绍了并说明了用户如何在应用中添加、使用和管理Teams。
+消息传递是插入应用程序内容或对消息采取行动的快捷方式，而无需从对话中导航。
+为指导应用设计，以下信息描述并说明用户可以如何在 Teams 中添加、使用和管理消息传递。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-你可以找到全面的消息传递扩展设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。
+可在 Microsoft Teams UI Kit 中查看全面的消息传递设计指南，包括可根据需要获取和修改的元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>添加消息传递扩展
 
-可以在以下上下文上下文中添加Teams扩展：
+可以在以下 Teams 上下文中添加消息传递扩展：
 
-* 从Teams存储。
-* 在靠近撰写框 (、在频道、聊天或会议) 、聊天或会议。 值得注意的是，如果您在这些位置之一添加邮件扩展，则仅可以在该上下文中使用它。
+* 从 Teams 应用商店。
+* 在频道、聊天或会议（会议之前、期间和之后）中的撰写框旁边。 值得注意的是，如果在这些位置之一添加消息传递扩展，则只能在该上下文中使用。
 
-以下示例演示如何在频道中添加消息扩展：
+下面的示例演示了如何在频道中添加消息传递扩展：
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="示例演示如何在频道中的撰写框附近添加消息传递扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="示例：如何在频道的撰写框附近添加消息传递扩展。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="示例演示如何在移动设备上的频道中的撰写框附近添加消息扩展。" border="false":::
-
----
-
-## <a name="set-up-a-messaging-extension"></a>设置邮件扩展
-
-身份验证不是强制性的，但是如果你的应用与票证跟踪工具类似，你可能需要用户登录以使用消息传递扩展。
-
-若要在Teams一致，你无法自定义登录屏幕。 如果使用单一登录 (SSO) 身份验证，用户将自动登录。
-
-# <a name="desktop"></a>[桌面](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="示例显示具有登录按钮的消息扩展设置屏幕。" border="false":::
-
-# <a name="mobile"></a>[移动](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="示例显示移动设备上具有登录按钮的邮件扩展设置屏幕。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="示例：在移动设备上，如何在频道的撰写框附近添加消息传递扩展。" border="false":::
 
 ---
 
-## <a name="types-of-messaging-extensions"></a>邮件扩展类型
+## <a name="set-up-a-messaging-extension"></a>设置消息传递扩展
 
-邮件扩展可以具有搜索命令和/或操作命令。 你的命令取决于你的应用的功能以及这些功能如何适应Teams用例。
+虽然并不强制进行身份验证，但如果应用类似于票证跟踪工具，则需要用户登录才能使用消息传递扩展。
+
+为确保 Teams 应用的一致性，你无法自定义登录屏幕。 如果使用单一登录 (SSO) 身份验证，则用户会自动登录。
+
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="示例：带有登录按钮的消息传递扩展设置屏幕。" border="false":::
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="示例：移动设备上带有登录按钮的消息传递扩展设置屏幕。" border="false":::
+
+---
+
+## <a name="types-of-messaging-extensions"></a>消息扩展类型
+
+消息传递扩展可以包含搜索命令、操作命令或两者兼有。 你的命令取决于应用的功能以及这些功能在 Teams 用例中的适用性。
 
 ### <a name="search-commands"></a>搜索命令
 
-借助搜索命令，用户可以使用邮件扩展快速查找外部内容并插入邮件。 搜索命令通常可在撰写框中使用。 例如，您可以通过共享一段内容来开始讨论或添加讨论，而无需离开Teams。
+借助搜索命令，用户可以使用消息传递扩展来快速查找外部内容并插入到消息中。 搜索命令通常在撰写框中可用。 例如，你可以通过共享一段内容来开始讨论或添加到讨论中，而无需离开 Teams。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="示例显示从撰写框启动的基于搜索的邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="示例：从撰写框启动的基于搜索的消息传递扩展。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="示例显示从移动设备上的撰写框启动的基于搜索的邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="示例：在移动设备上，从撰写框启动的基于搜索的消息传递扩展。" border="false":::
 
 ---
 
 #### <a name="compose-box-layout-options"></a>撰写框布局选项
 
-有一些选项用于显示邮件扩展搜索结果，包括 [列表和网格视图](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)。
+Teams 中提供多种选项，来显示消息扩展搜索结果，包括[列表和网格视图](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)。
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="插图显示邮件扩展搜索结果的布局选项。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="图例：消息传递扩展搜索结果的布局选项" border="false":::
 
 ### <a name="action-commands"></a>操作命令
 
-通过操作命令，用户能够触发操作并处理外部服务Teams。 例如，如果您的应用程序跟踪订单，则用户可以使用同事消息的内容从聊天的右侧创建新订单。
+操作命令允许用户在 Teams 中触发外部服务的操作和流程请求。 例如，如果应用跟踪订单，则用户可以直接从聊天中，使用同事的消息内容新建订单。
 
-基于操作的邮件扩展通常需要用户在模式内完成表单或某种其他种类的配置。 可以使用任务模块 创建 [这些体验](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)。
+基于操作的消息传递扩展通常要求用户填写某个模式中的一个表单或一些其他类型的配置。 你可以使用[任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)创建这些体验。
 
-## <a name="open-a-messaging-extension"></a>打开消息传递扩展
+## <a name="open-a-messaging-extension"></a>打开邮件扩展
 
-撰写框和消息或帖子是人们使用邮件扩展的主要上下文。
+撰写框和消息或帖子是用户使用消息扩展的主要上下文。
 
 ### <a name="from-the-compose-box"></a>从撰写框
 
-添加后，用户可以通过选择撰写框下方的应用图标来打开邮件扩展。 在这些示例中，扩展具有搜索和操作命令。
+添加后，用户可以选择撰写框下方的应用图标来打开消息传递扩展。 在这些示例中，扩展同时拥有搜索和操作命令。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="示例演示如何从撰写框中打开邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="示例：如何从撰写框打开消息传递扩展。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="示例演示如何从移动设备上的撰写框中打开邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="示例：在移动设备上，如何从撰写框打开消息传递扩展。" border="false":::
 
 ---
 
 ### <a name="from-a-chat-message-or-channel-post"></a>从聊天消息或频道帖子
 
-添加后，用户可以选择聊天消息或频道帖子上的"更多"图标 :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 来查找扩展的操作命令。 扩展名可能列在"基于 **使用情况的更多** 操作"下。
+添加后，用户可以选择聊天消息或频道帖子上的“**更多**:::image type="icon" source="../../assets/icons/teams-client-more.png":::”图标来查找扩展的操作命令。 根据使用情况，扩展可能列在 **更多操作** 的下方。
 
 > [!NOTE]
-> 对来自聊天消息或频道帖子的更多操作的支持在移动Microsoft Teams不可用。 
+> Microsoft Teams 移动平台上不支持通过聊天消息或频道帖子执行更多操作。 
 
 #### <a name="chat-message"></a>聊天消息
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="示例演示如何从聊天消息中打开消息扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="示例：如何从聊天消息打开消息传递扩展。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="示例演示如何从移动设备上的聊天帖子打开消息传递扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="示例：在移动设备上，如何从聊天消息打开消息传递扩展。" border="false":::
+
+---
+':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+---
+
+## <a name="use-a-messaging-extension"></a>使用邮件扩展
+
+以下场景介绍了用户使用消息传递扩展的主要方式。
+
+### <a name="insert-content-into-a-message"></a>在消息中插入内容
+
+**1. 选择消息传递扩展**。 用户可以从撰写框中搜索要共享的内容。
+
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="示例：用户从撰写框搜索要插入的内容。" border="false":::
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="示例：用户在移动设备上从撰写框搜索要插入的内容。" border="false":::
 
 ---
 
-#### Channel post
+**2. 插入内容**。 发布内容后，其他人可以回复或选择内容，查看应用中的详细信息。
 
-# [Desktop](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="示例：用户在频道对话中发布内容。" border="false":::
 
-# [Mobile](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
----
-
-## <a name="use-a-messaging-extension"></a>使用消息传递扩展
-
-以下方案显示了人们使用邮件扩展的主要方式。
-
-### <a name="insert-content-into-a-message"></a>将内容插入到邮件中
-
-**1. 选择邮件扩展**。 用户可以从撰写框中搜索要共享的内容。
-
-# <a name="desktop"></a>[桌面](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="示例显示用户搜索要从撰写框中插入的内容。" border="false":::
-
-# <a name="mobile"></a>[移动](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="示例显示用户搜索要从移动设备上的撰写框中插入的内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="示例：用户在移动设备上，在频道对话中发布内容。" border="false":::
 
 ---
 
-**2. 插入内容**。 发布后，其他人可以回复或选择内容以查看应用中的更多信息。
+### <a name="take-action-on-a-message"></a>对消息执行操作
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+**1. 选择消息传递扩展**。 应用可以包含一个或多个操作命令。
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="示例显示用户在频道对话中发布内容。" border="false":::
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="示例：用户选择消息传递扩展操作命令。" border="false":::
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="示例显示用户在移动设备上将内容发布到频道对话。" border="false":::
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
----
-
-### <a name="take-action-on-a-message"></a>对邮件采取措施
-
-**1. 选择邮件扩展**。 你的应用可以包含一个或多个操作命令。
-
-# <a name="desktop"></a>[桌面](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="示例显示用户选择消息传递扩展操作命令。" border="false":::
-
-# <a name="mobile"></a>[移动](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="示例显示用户在移动设备上选择消息传递扩展操作命令。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="示例：用户在移动设备上选择消息传递扩展操作命令。" border="false":::
 
 ---
 
-**2. 完成操作**。 你的应用可以接收并处理邮件操作发送的任何内容或数据。 这允许用户保持其对话，并且（以下示例）无需担心直接在应用中输入信息。
+**2. 完成操作**。 应用可以接收和处理消息操作发送的任何内容或数据。 这样，用户可以留在对话中（如以下示例），安心地直接在应用中输入信息。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="如何对邮件采取操作的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="示例：如何对消息执行操作。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="如何对移动设备上的邮件采取操作的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="示例：如何在移动设备上对消息执行操作。" border="false":::
 
 ---
 
 ### <a name="preview-links"></a>预览链接
 
-邮件扩展还允许您将识别的 URL 中的丰富链接插入邮件 (此功能称为链接取消展开[.) ](../../messaging-extensions/how-to/link-unfurling.md)
+消息传递扩展还允许将识别到的 URL 中的富链接插入到消息中（此功能称为“[链接特殊解析](../../messaging-extensions/how-to/link-unfurling.md)”。）
 
-**1. 在撰写框中** 粘贴可识别的链接。
+**1. 在撰写框中粘贴识别到的链接**。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="示例显示用户在合成器框中粘贴链接。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="示例：用户在撰写框中粘贴链接。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="示例显示用户将链接粘贴到移动设备上的合成器框中。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="示例：用户在移动设备上，在撰写框中粘贴链接。" border="false":::
 
 ---
 
-**2. 插入内容**。 如果你的应用识别撰写框中的 URL，它将链接呈现为提供 Web 内容的内容丰富的预览的卡片。  (有关详细信息， [请参阅自适应卡片](../../task-modules-and-cards/cards/design-effective-cards.md) 设计指南) 
+**2. 插入内容**。 如果应用识别撰写框中的 URL，则会将链接呈现为提供 Web 内容内容丰富的预览卡片。 （有关详细信息，请参阅[自适应卡设计准则](../../task-modules-and-cards/cards/design-effective-cards.md)。）
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="示例显示 URL 如何由你的应用识别，在撰写框中包含一些丰富的内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="示例：在被应用识别后，URL 如何在撰写框中包含一些丰富内容。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="示例显示 URL 如何由你的应用识别，如何在移动设备上的撰写框中包含一些丰富的内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="示例：移动设备上，在被应用识别后，URL 如何在撰写框中包含一些丰富内容。" border="false":::
 
 ---
 
 ## <a name="manage-a-messaging-extension"></a>管理消息传递扩展
 
-通过右键单击图标，用户可以固定、删除或配置邮件扩展。
+用户可以右键单击图标来固定、删除或配置消息传递扩展。
 
 ## <a name="anatomy"></a>解剖
 
-### <a name="messaging-extension-in-the-compose-box"></a>撰写框中的消息扩展
+### <a name="messaging-extension-in-the-compose-box"></a>撰写框中的消息传递扩展
 
-下面的示例是一个从撰写框打开的消息扩展。
+下面的示例是从撰写框打开的消息传递扩展。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="插图显示撰写框中消息传递扩展的 UI 结构。" border="false":::
-
-|计数器|说明|
-|----------|-----------|
-|1|**应用徽标**：应用徽标的颜色图标。|
-|2|**应用名称**：应用的完整名称。|
-|3|**操作命令菜单图标 (可选**) ：如果指定任何命令， (邮件扩展策略打开操作) 。
-|4 |**搜索框**：允许用户查找要插入的应用内容。|
-|5 |**选项卡菜单 (可选) ：** 提供多个内容类别。|
-|6 |**操作命令菜单 (可选) ：** 如果指定任何 (，将显示操作命令) 。|
-|7 |**应用内容**：主要用于显示搜索结果。 此处的示例是使用列表布局 (网格布局是另一个选项) 。|
-|8 |**应用徽标**：应用徽标的大纲图标。|
-
-# <a name="mobile"></a>[移动](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="插图显示移动设备上撰写框中消息传递扩展的 UI 结构。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="图例：撰写框中消息传递扩展的 UI 解剖。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
-|1|**应用名称**：应用的完整名称。|
-|2|**操作命令菜单图标 (可选**) ：如果指定任何命令， (邮件扩展策略打开操作) 。
+|1|**应用徽标**：应用徽标的彩色图标。|
+|2|**应用名称**：应用的全名。|
+|3|**操作命令菜单图标（可选）**：打开消息传递扩展的操作命令列表（如果指定）。
+|4|**搜索框**：允许用户查找要插入的应用内容。|
+|5|**选项卡菜单（可选）**：提供多个内容类别。|
+|6|**操作命令菜单（可选）**：显示操作命令列表（如果指定）。|
+|7|**应用内容**：主要用于显示搜索结果。 此处的示例使用的是列表布局（另一个选项是网格布局）。|
+|8|**应用徽标**：应用徽标的大纲图标。|
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="图例：在移动设备上撰写框中消息传递扩展的 UI 解剖。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|1|**应用名称**：应用的全名。|
+|2|**操作命令菜单图标（可选）**：打开消息传递扩展的操作命令列表（如果指定）。
 |3|**搜索框**：允许用户查找要插入的应用内容。|
-|4 |**选项卡菜单 (可选) ：** 提供多个内容类别。|
-|5 |**操作命令菜单 (可选) ：** 如果指定任何 (，将显示操作命令) 。|
-|6 |**应用内容**：主要用于显示搜索结果。|
+|4|**选项卡菜单（可选）**：提供多个内容类别。|
+|5|**操作命令菜单（可选）**：显示操作命令列表（如果指定）。|
+|6|**应用内容**：主要用于显示搜索结果。|
 
 ---
 
-### <a name="messaging-extension-management-menu"></a>邮件扩展管理菜单
+### <a name="messaging-extension-management-menu"></a>消息传递扩展管理菜单
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="插图显示消息扩展管理菜单的 UI 结构。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="图例：消息传递扩展管理菜单的 UI 解剖。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
-|1|**取消固定**：如果用户已固定你的应用，则可用。|
-|2|**删除**：从频道、聊天或会议中删除消息扩展。|
+|1|**取消固定**：如果用户已固定应用，则可用。|
+|2|**删除**：从频道、聊天或会议中删除消息传递扩展。|
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
-使用这些建议创建高质量的应用体验。
+使用上述建议打造优质应用体验。
 
-### <a name="setup-and-general-usage"></a>设置和常规用法
+### <a name="setup-and-general-usage"></a>设置和一般用途
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="有关安装和常规用法的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="示例：设置和一般用途。" border="false":::
 
-#### <a name="do-integrate-with-single-sign-on"></a>操作：与单一登录集成
+#### <a name="do-integrate-with-single-sign-on"></a>建议：与单一登录集成
 
-SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登录到你的个人应用，他们也不必再次登录来访问邮件扩展。
+单一登录可使登录过程更轻松、更快速、更安全。 此外，如果用户已登录到你的个人应用，则无需再次登录即可访问消息传递扩展。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="与单一登录集成的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="示例：与单一登录集成。" border="false":::
 
-#### <a name="dont-take-users-away-from-the-conversation"></a>请勿：使用户离开对话
+#### <a name="dont-take-users-away-from-the-conversation"></a>不建议：让用户离开对话
 
-消息传递扩展是应该减少上下文切换的快捷方式。 例如，您的扩展不应将用户直接引导到 Teams。
+消息传递扩展是旨在减少上下文切换的快捷方式。 例如，你的扩展不应将用户定向到 Teams 外部的网页。
 
    :::column-end:::
 :::row-end:::
 
-#### <a name="do-highlight-your-messaging-extension"></a>要执行：突出显示邮件扩展
+#### <a name="do-highlight-your-messaging-extension"></a>建议：突出显示消息传递扩展
 
-邮件扩展并不总是易于查找。 在应用详细信息页面中包括如何使用它的屏幕截图。 如果你的应用还包括机器人，你可以将消息传递扩展帮助文档包括在机器人欢迎教程中。
+要找到消息传递扩展常常并不容易。 在应用详细信息页面中包含如何使用教程屏幕截图。 如果应用还包括机器人，则可以在机器人欢迎教程中包含消息传递扩展帮助文档。
 
-### <a name="templating"></a>模板
+### <a name="templating"></a>模板化
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="模板示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="示例：模板化。" border="false":::
 
-#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do：Teams处理一些设计工作（如果可能）
+#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>建议：如果可能，让 Teams 处理一些设计工作
 
-如果对用例有意义，请考虑创建基于搜索的邮件扩展。 Teams使用内置 theming 和辅助功能呈现这些类型的扩展。
+如果对用例有意义，请考虑创建基于搜索的消息传递扩展。 Teams 使用内置主题和辅助功能来呈现这一类型的扩展。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="有关处理设计工作的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="示例：处理设计工作。" border="false":::
 
-#### <a name="dont-embed-your-entire-app-in-a-task-module"></a>请勿：在任务模块中嵌入整个应用
+#### <a name="dont-embed-your-entire-app-in-a-task-module"></a>不建议：在任务模块中嵌入整个应用
 
-如果邮件扩展需要操作命令，请保持任务模块简单，并仅显示完成该操作所需的组件。
+如果消息传递扩展需要操作命令，请保持任务模块的简洁性，并仅显示完成操作所需的组件。
 
    :::column-end:::
 :::row-end:::
@@ -326,19 +317,19 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="有关 theming 的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="示例：主题。" border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>应做：利用Teams令牌
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>建议：充分利用 Teams 颜色令牌
 
-每个Teams主题都有自己的配色方案。 若要自动处理主题更改，请 <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank"> (Fluent UI </a>) 颜色标记。
+每个 Teams 主题都有自己的配色方案。 若要自动处理主题更改，请在设计中使用<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">颜色令牌 (Fluent UI)</a>。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="有关颜色令牌的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="示例：颜色令牌。" border="false":::
 
-#### <a name="dont-hard-code-color-values"></a>请勿：硬编码颜色值
+#### <a name="dont-hard-code-color-values"></a>不建议：硬编码颜色值
 
-如果不使用颜色令牌Teams，你的设计将不太可扩展，并且需要更多的时间进行管理。
+如果不使用 Teams 颜色令牌，则设计将无法缩放，并需要更多时间进行管理。
 
    :::column-end:::
 :::row-end:::
@@ -347,33 +338,33 @@ SSO 使登录过程更加轻松、快速和安全。 此外，如果用户已登
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="操作示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="示例：操作。" border="false":::
 
-#### <a name="do-include-action-commands-that-make-sense-in-context"></a>应做：在上下文中包括有意义的操作命令
+#### <a name="do-include-action-commands-that-make-sense-in-context"></a>建议：包含上下文中有意义的操作命令
 
-邮件操作应该与用户正在查看的内容相关。 例如，为用户提供使用某人帖子中的文本创建问题或工作项的快捷方式。
+消息操作应与用户正在查看的内容相关。 例如，为用户提供使用某人帖子中的文本创建问题或工作项的快捷方式。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="操作命令示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="示例：操作命令。" border="false":::
 
-#### <a name="dont-include-actions-commands-that-arent-contextual"></a>请勿：包括不与上下文相关的操作命令
+#### <a name="dont-include-actions-commands-that-arent-contextual"></a>不建议：包含与上下文无关的操作命令
 
-查看仪表板 **的消息** 操作可能看起来与大多数对话断开连接。
+用于 **查看仪表板** 的消息操作，可能似乎与绝大多数对话都没有关联。
 
    :::column-end:::
 :::row-end:::
 
 ### <a name="searches"></a>搜索
 
-#### <a name="do-show-search-results-while-typing"></a>Do：在键入时显示搜索结果
+#### <a name="do-show-search-results-while-typing"></a>建议：键入时显示搜索结果
 
-在用户键入时提供建议的搜索结果。 他们可以以最少的字符更快地找到所需的内容。
+当用户键入时，提供建议的搜索结果。 用户可以用最少的字符数量，更快地查找到所需内容。
 
-#### <a name="dont-require-users-to-submit-a-query"></a>请勿：要求用户提交查询
+#### <a name="dont-require-users-to-submit-a-query"></a>不建议：要求用户提交查询
 
-你可以让用户按某个键或选择一个按钮将查询发送到你的应用。 虽然这在你的应用服务服务上可能更容易，但人们可能会感到困惑，因为他们不会在键入时看到实时搜索结果。
+可以让用户按一个键或选择一个按钮将查询发送到应用。 虽然从应用服务来看，这样做可能更容易，但用户可能会感到困惑，因为他们在键入时并不能看到实时搜索结果。
 
-#### <a name="do-consider-zero-term-queries"></a>应做：考虑零术语查询
+#### <a name="do-consider-zero-term-queries"></a>建议：考虑零关键词查询
 
-例如，在用户向搜索框中写入任何内容之前，显示他们上次在你的应用上查看过什么内容。 他们可能会想要将这些内容插入对话中。
+例如，当用户在搜索框中写入任何内容之前，显示他们上次在应用中查看的内容。 这些可能正是他们希望插入到对话中的内容。

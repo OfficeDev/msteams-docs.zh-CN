@@ -1,17 +1,17 @@
 ---
 title: Teams 会议中应用的先决条件和 API 参考
-author: laujan
+author: surbhigupta
 description: 使用用于会议Teams应用程序
 ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: f42e827801e21bbd039f52dbb685d4559ae5cf81
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: e6d1c442f77f4d271c43d866c819d65697262b6b
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853506"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068566"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
@@ -45,7 +45,7 @@ ms.locfileid: "52853506"
 
 下表提供了这些 API 的列表：
 
-|API|说明|请求|源|
+|API|说明|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|

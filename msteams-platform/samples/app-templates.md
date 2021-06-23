@@ -5,13 +5,13 @@ ms.topic: reference
 keywords: Microsoft Teams模板示例演示
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: 8cfb066ee3c202fb8611a61bbde3058207a62a35
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566251"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069185"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -42,7 +42,7 @@ CMP (平台) 模板可帮助你管理、扩展和激发团队合作冠军取得�
 
 [获取GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>采用工具- Microsoft 365学习路径 (入门) &#9734;
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>采用工具- Microsoft 365 Learning路径 (入门) &#9734;
 
 通过入门应用模板，你可以将学习路径Microsoft 365到 Microsoft Teams。 此应用程序模板允许你轻松访问特定培训页面或其他 Intranet 资产，并直接在 Teams。 还可以更改应用名称或徽标，以匹配你的公司品牌。
 
@@ -73,7 +73,7 @@ CMP (平台) 模板可帮助你管理、扩展和激发团队合作冠军取得�
 
 ## <a name="associate-insights"></a>员工见解
 
-关联见解是一[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)模板，它使一线员工可以直接捕获和提交客户的意见、情绪和认知。 一线员工通常是第一个在一对一联系点与客户互动的公司代表。 收集的数据由业务团队共享和协同使用，例如通过"Power BI Teams"选项卡，以改进产品并增强客户体验。
+关联Insights是一[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)模板，它使一线员工可以直接捕获和提交客户的意见、情绪和感知。 一线员工通常是第一个在一对一联系点与客户互动的公司代表。 收集的数据由业务团队共享和协同使用，例如通过"Power BI Teams"选项卡，以改进产品并增强客户体验。
 
 [获取GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -380,13 +380,13 @@ HR 支持机器人是一个友好的&聊天机器人，当无法提供帮助时�
 
 ## <a name="icebreaker"></a>Icebreaker
 
-Icebreaker 是一[Microsoft Teams](../bots/what-are-bots.md)聊天机器人，通过每周配对两个随机团队成员来开会来帮助你的团队建立关系。 自动程序通过自动建议适用于这两个成员的空闲时间来轻松安排日程。 通过此应用加强个人连接并构建紧密社区。
+Icebreaker是一[Microsoft Teams](../bots/what-are-bots.md)聊天机器人，通过每周配对两个随机团队成员来开会来帮助你的团队建立关系。 自动程序通过自动建议适用于这两个成员的空闲时间来轻松安排日程。 通过此应用加强个人连接并构建紧密社区。
 
-除了鼓励整个团队中的个人连接之外，Icebreaker 应用还可以帮助促进组织中基于兴趣的社区。 例如，你可以将该应用用于一个DevOps组，以帮助在组织中自然地传播想法和最佳做法。
+除了鼓励整个团队中的个人连接之外，Icebreaker应用还有助于在组织中促进基于兴趣的社区。 例如，你可以将该应用用于一个DevOps组，以帮助在组织中自然地传播想法和最佳做法。
 
 [获取GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Icebreaker 应用](../assets/images/icebreaker.png)
+![Icebreaker应用](../assets/images/icebreaker.png)
 
 ## <a name="incentives"></a>奖励
 

@@ -1,17 +1,17 @@
 ---
 title: 会议Teams应用程序
-author: laujan
+author: surbhigupta
 description: 基于参与者和用户Teams会议的应用概述
 ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 69016f818a333cb4f7cecc252539e076838a0735
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 0ba475e852b8dc673d33ac818077b3b0951ac5f9
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949649"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068571"
 ---
 # <a name="apps-for-teams-meetings"></a>会议Teams应用程序
 

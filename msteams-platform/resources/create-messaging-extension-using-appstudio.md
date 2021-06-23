@@ -1,16 +1,16 @@
 ---
 title: 使用 App Studio 创建消息传递
-author: clearab
+author: surbhigupta
 description: 了解如何使用 App Studio Microsoft Teams邮件扩展。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 10de4c6f9e7b81e1edc47622cb5c0c814d2eb3a7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019739"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069224"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>使用 App Studio 创建消息传递
 

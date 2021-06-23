@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 选项卡传出 Webhook 可操作邮件验证 webhook
-ms.openlocfilehash: a5a0cdfc9080ac4567f438b6fb6fd0671df8c19f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 2fac6f42e27a4c8cb3d079ea281d458a4dfe41ed
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566528"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069183"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>向使用传出 webhook Teams自定义聊天机器人
 
@@ -43,7 +43,7 @@ Webhook 是一种与外部Teams集成的方式。 webhook 实质上是发送到�
 
 `ActionCard` 操作支持三种输入类型：
 
-| 输入类型 | 描述 |
+| 输入类型 | 说明 |
 | ------- | ----------- |
 | `TextInput` | 具有可选长度限制的单行或多行文本字段。 |
 | `DateInput` | 具有可选时间选择器的日期选择器。 |
@@ -104,6 +104,110 @@ Webhook 是一种与外部Teams集成的方式。 webhook 实质上是发送到�
     "text": "This is a reply!"
 }
 ```
+
+> [!NOTE]
+> * 可以使用传出 Webhook 将自适应卡片、Hero 卡片和文本消息作为附件发送。
+> * 卡片支持格式设置。 有关详细信息，请参阅使用 [markdown 格式化卡片](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#formatting-cards-with-markdown)。
+
+以下代码是自适应卡片响应的示例：
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+string content = await this.Request.Content.ReadAsStringAsync();
+Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
+{
+    Body = new List<AdaptiveElement>()
+    {
+        new AdaptiveTextBlock(){Text= $"Request sent by: {incomingActivity.From.Name}"},
+        new AdaptiveImage(){Url=new Uri("https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6")},
+        new AdaptiveTextBlock(){Text="Sample image for Adaptive Card.."}
+    }
+};
+
+var attachment = new Attachment()
+{
+    ContentType = AdaptiveCard.ContentType,
+    Content = Card
+};
+
+var sampleResponseActivity = new Activity
+{
+    Attachments = new [] { attachment }
+};
+
+return sampleResponseActivity;
+```
+
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+
+```javascript
+var receivedMsg = JSON.parse(payload);
+var responseMsg = JSON.stringify({
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "contentUrl": null,
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Request sent by: " + receivedMsg.from.name
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card."
+                    }
+                ]
+            },
+            "name": null,
+            "thumbnailUrl": null
+        }
+    ]
+});
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Request sent by: Megan"
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card.."
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
+* * *
 
 ## <a name="create-an-outgoing-webhook"></a>创建传出 Webhook
 

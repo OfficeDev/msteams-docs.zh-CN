@@ -1,16 +1,16 @@
 ---
 title: 什么是任务模块？
-author: clearab
+author: surbhigupta
 description: 添加模式弹出窗口体验，以从你的应用收集信息或向用户Microsoft Teams信息
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 23157e30ce25c2dfa1c21e7f5c4ddd4f735b660f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: e4937fc4909535506c61b4ac353283322d5f3631
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566837"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068604"
 ---
 # <a name="task-modules"></a>任务模块
 
@@ -61,10 +61,10 @@ ms.locfileid: "52566837"
 | `title` | string | 显示在应用程序名称下方以及应用程序图标的右侧。 |
 | `height` | number or string | 它可以是表示任务模块的高度（以像素为单位）或 `small` 、 `medium` 或 `large` 。 [请参阅下文，了解如何处理高度和宽度](#task-module-sizing)。 |
 | `width` | number or string | 它可以是表示任务模块的宽度（以像素为单位）或 `small` 、 `medium` 或 `large` 的数。 [请参阅下文，了解如何处理高度和宽度](#task-module-sizing)。 |
-| `url` | 字符串 | 作为任务模块内部加载 `<iframe>` 的页面的 URL。 URL 的域必须在你的应用清单中的 [应用的 validDomains](~/resources/schema/manifest-schema.md#validdomains) 数组中。 |
+| `url` | string | 作为任务模块内部加载 `<iframe>` 的页面的 URL。 URL 的域必须在你的应用清单中的 [应用的 validDomains](~/resources/schema/manifest-schema.md#validdomains) 数组中。 |
 | `card` | 自适应卡片或自适应卡片自动程序卡附件 | 要显示在任务模块中的自适应卡片的 JSON。 如果你从自动程序调用，则需要在 Bot Framework 对象中使用自适应卡片 `attachment` JSON。 从选项卡中，你只需使用自适应卡片。 [下面是一个示例。](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | 字符串 | 如果客户端不支持任务模块功能，此 URL 在浏览器选项卡中打开。 |
-| `completionBotId` | 字符串 | 指定要发送用户与任务模块交互结果的自动程序应用 ID。 如果指定，机器人将收到事件负载中具有 `task/submit invoke` JSON 对象的事件。 |
+| `fallbackUrl` | string | 如果客户端不支持任务模块功能，此 URL 在浏览器选项卡中打开。 |
+| `completionBotId` | string | 指定要发送用户与任务模块交互结果的自动程序应用 ID。 如果指定，机器人将收到事件负载中具有 `task/submit invoke` JSON 对象的事件。 |
 
 > [!NOTE]
 > 任务模块功能要求要加载的任何 URL 的域包含在应用清单的数组 `validDomains` 中。

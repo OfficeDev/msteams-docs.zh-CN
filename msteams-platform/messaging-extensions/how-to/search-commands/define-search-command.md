@@ -1,15 +1,15 @@
 ---
 title: 定义消息传递扩展搜索命令
-author: clearab
+author: surbhigupta
 description: 为应用程序定义消息传递扩展Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 6333840e6817761911b2b5acd4b53849448b5b68
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696787"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068914"
 ---
 # <a name="define-messaging-extension-search-commands"></a>定义消息传递扩展搜索命令
 

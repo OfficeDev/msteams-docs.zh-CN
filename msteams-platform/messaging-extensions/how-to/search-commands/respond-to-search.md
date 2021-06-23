@@ -1,15 +1,15 @@
 ---
 title: 响应搜索命令
-author: clearab
+author: surbhigupta
 description: 如何从应用程序应用中的消息扩展响应Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 15b48b135f656feeb3cfb28ffbe12852ddb66359
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: 3d82c7be0a0bbe5cf0ef991a90b277de38fcf4d5
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710632"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068944"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 

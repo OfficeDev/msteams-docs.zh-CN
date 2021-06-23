@@ -1,16 +1,16 @@
 ---
 title: 为用户创建低代码自定义Microsoft Teams
-author: laujan
+author: surbhigupta
 description: 详细说明了可用的 Microsoft 低和无代码解决方案Teams
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 7c35002752a4cdd1481c7e23bf49d2777cbcb26d
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 3c7f2dc76f01a47226598e5480e9b39ce9dd173a
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994082"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069129"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为用户创建低代码自定义Microsoft Teams
 

@@ -1,16 +1,16 @@
 ---
 title: 什么是自定义选项卡Teams？
-author: laujan
+author: surbhigupta
 description: 自定义选项卡在 Teams 概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 06454530ab2d0b7e993120f6696f3507a7352bf3
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: 792604c7763628ce0d45b332064e23c14e94aeb2
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667410"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069194"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams 选项卡
 

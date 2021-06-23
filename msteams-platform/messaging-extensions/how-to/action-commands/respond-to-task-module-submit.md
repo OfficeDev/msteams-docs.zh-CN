@@ -1,16 +1,16 @@
 ---
 title: 响应任务模块提交操作
-author: clearab
+author: surbhigupta
 description: 介绍如何从消息传递扩展操作命令响应任务模块提交操作
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ae5171f45974e7977a45775facf6360d34a84f87
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: 9d0690a620efc3e658372cfaecf31504787b3d71
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710639"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068955"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -30,7 +30,7 @@ ms.locfileid: "52710639"
 
 对于身份验证或配置，在用户完成此过程后，原始调用将重新发至 Web 服务。 下表根据消息扩展的调用位置显示哪些类型的响应 `commandContext` 可用： 
 
-|响应类型 | 撰写 | 命令栏 | 邮件 |
+|响应类型 | 撰写 | 命令栏 | 消息 |
 |--------------|:-------------:|:-------------:|:---------:|
 |卡片响应 | ✔ | ✔ | ✔ |
 |另一个任务模块 | ✔ | ✔ | ✔ |

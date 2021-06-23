@@ -1,16 +1,16 @@
 ---
 title: 向自动程序Teams身份验证
-author: clearab
+author: surbhigupta
 description: 如何将 OAuth 身份验证添加到自动程序Microsoft Teams。
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 36cb6f3de6f97af1d01512175923b79f69f630ad
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3e36d6166dcf3f835252fb2310b6672cb115d7d4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565968"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069015"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向自动程序Teams身份验证
 
@@ -278,24 +278,24 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 1. 在" **消息终结点** "框中，输入上面获得的 URL，后跟 `api/messages` 。 这是一个示例 `https://botteamsauth.azurewebsites.net/api/messages` ：。
 1. 选择左上角 **的"** 保存"按钮。
 
-## <a name="test-the-bot-using-the-emulator"></a>使用仿真器测试机器人
+## <a name="test-the-bot-using-the-emulator"></a>使用自动程序测试Emulator
 
-如果尚未执行，请安装[Microsoft Bot Framework Emulator。](https://aka.ms/bot-framework-emulator-readme) 另请参阅 [使用仿真器调试](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
+如果尚未执行，请安装[Microsoft Bot Framework Emulator。](https://aka.ms/bot-framework-emulator-readme) 另请参阅[使用 Emulator 调试](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
 
-为了让机器人示例登录正常工作，必须配置仿真器。
+为了让机器人示例登录正常工作，你必须配置Emulator。
 
-### <a name="configure-the-emulator-for-authentication"></a>配置仿真器进行身份验证
+### <a name="configure-the-emulator-for-authentication"></a>配置Emulator身份验证策略
 
-如果机器人需要身份验证，则必须配置仿真器。 配置：
+如果机器人需要身份验证，则必须配置Emulator。 配置：
 
-1. 启动仿真器。
-1. 在仿真器中，选择&#9881;左下角的齿轮图标，或选择右上角设置仿真器"选项卡。
+1. 启动Emulator。
+1. 在Emulator中，选择&#9881;左下角的齿轮图标，或Emulator 设置右上角的"齿轮"选项卡。 
 1. 选中"使用 **版本 1.0 身份验证令牌"复选框**。
 1. 输入 **ngrok** 工具的本地路径。 *请参阅* Bot Framework Emulator /ngrok 隧道集成 [Wiki。](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)) 有关详细信息，请参阅 [ngrok](https://ngrok.com/)。
-1. 当仿真器启动时 **，选中"运行 ngrok"框**。
+1. 选中在启动应用程序 **时运行 ngrok Emulator复选框**。
 1. 选择" **保存"** 按钮。
 
-当机器人显示登录卡并且用户选择登录按钮时，仿真器将打开一个页面，用户可使用该页面登录身份验证提供程序。
+当机器人显示登录卡并且用户选择登录按钮时，Emulator会打开一个页面，用户可使用该页面登录身份验证提供程序。
 一旦用户这样做，提供程序将生成用户令牌并将其发送给机器人。 之后，机器人可以代表用户操作。
 
 ### <a name="test-the-bot-locally"></a>在本地测试机器人
@@ -303,7 +303,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 配置身份验证机制后，可以执行实际的自动程序测试。  
 
 1. 例如，通过 Visual Studio计算机上本地运行自动程序示例。
-1. 启动仿真器。
+1. 启动Emulator。
 1. 选择" **打开自动程序"** 按钮。
 1. 在自动 **程序 URL** 中，输入机器人的本地 URL。 通常为 `http://localhost:3978/api/messages` 。
 1. 在 **Microsoft 应用 ID 中** ，从 输入机器人的应用 `appsettings.json` ID。
@@ -314,7 +314,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 1. 将显示一个弹出对话框以确认打开 **URL。** 这是为了允许自动程序的用户 () 进行身份验证。  
 1. 选择“**确认**”。
 1. 如果系统询问，请选择适用的用户帐户。
-1. 根据用于模拟器的配置，你可以获取以下选项之一：
+1. 根据用于测试Emulator，您将获得以下选项之一：
     1. **使用登录验证码**  
       &#x2713;打开一个显示验证代码的窗口。  
       &#x2713;将验证代码复制并输入到聊天框中以完成登录。
@@ -405,7 +405,7 @@ Microsoft Teams完全基于云的产品，它要求它访问的所有服务都�
     1. 在左侧面板中，选择 **"设置"。**
     1. 在右侧面板的"消息 **终结点** "框中，输入 ngrok URL，在我们的示例中为 `https://dea822bf.ngrok.io/api/messages` 。
 1. 在本地启动自动程序，例如，在Visual Studio模式下。
-1. 使用 Bot Framework 门户的测试 Web 聊天在本地运行时 **测试机器人**。 与仿真器一样，此测试不允许你访问Teams功能。
+1. 使用 Bot Framework 门户的测试 Web 聊天在本地运行时 **测试机器人**。 与Emulator一样，此测试不允许你Teams特定功能。
 1. 在运行的终端窗口中，你可以看到自动程序与 Web 聊天客户端之间的 `ngrok` HTTP 流量。 如果需要更详细的视图，请在浏览器窗口中输入从上一个终端 `http://127.0.0.1:4040` 窗口获取的视图。 下图是一个示例：
 
     ![身份验证机器人团队 ngrok 测试](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
