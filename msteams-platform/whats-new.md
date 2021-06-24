@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: b5253c1769ebaac5548c779b3f66a87abb195ed8
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: 4fd391e7d3baecb5fe3f5c34256e8e93b1b6ab04
+ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049055"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53095519"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -195,6 +195,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|06/23/2021| 会议详细信息 API 和实时Teams事件。 | [创建适用于 Teams 会议的应用](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|使用自动程序卸载个人应用的行为 | [使用自动程序卸载个人应用中的行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| 聊天的特定于资源的同意。 |[特定于资源的同意](graph-api/rsc/resource-specific-consent.md) [，测试资源中的特定于资源的同意Teams](graph-api/rsc/test-resource-specific-consent.md)|  
 |05/26/2021|具有自适应卡片的生成选项卡|[构建选项卡](tabs/how-to/build-adaptive-card-tabs.md)|
