@@ -6,12 +6,12 @@ keywords: 机器人框架 apis 团队成员名单
 localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 333a29664f0d60e89039f906fce77e71054d486f
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: d2eb75a69100a6daaf3af3a021b9896c42abe5f1
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555435"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114243"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams自动程序 API 更改以提取团队或聊天成员
 
@@ -72,4 +72,4 @@ ms.locfileid: "52555435"
     > `objectId` 更改为匹配 `aadObjectId` Bot Framework 消息的对象 `Activity` 中调用的对象。 新 API 适用于 4.8 版或更高版本的 Bot Framework SDK。 它还在 Teams SDK 扩展 Bot Framework 3.x 中提供。 同时，您可以使用 [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) 终结点。
 
 * `TeamsInfo.GetMembersAsync` 中C# TypeScript 或 `TeamsInfo.getMembers` Node.js已正式弃用。 新 API 可用后，必须更新机器人以使用它。 这也适用于这些 API[使用的基础 REST API。](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json)
-* 到 2021 年底，聊天机器人无法主动检索 `userPrincipalName` 聊天或 `email` 团队成员的 或 属性。 机器人必须使用Graph来检索它们。 从 `userPrincipalName` `email` `GetConversationPagedMembers` 2021 年后期开始，不会从新 API 返回 和 属性。 自动程序必须Graph访问令牌来检索信息。 机器人必须更轻松地获取访问令牌，并简化和简化最终用户同意过程。
+* 到 2022 年底，聊天机器人无法主动检索 `userPrincipalName` 聊天或 `email` 团队成员的 或 属性。 机器人必须使用Graph来检索它们。 从 `userPrincipalName` `email` `GetConversationPagedMembers` 2022 年后期开始，不会从新 API 返回 和 属性。 自动程序必须Graph访问令牌来检索信息。 机器人必须更轻松地获取访问令牌，并简化和简化最终用户同意过程。

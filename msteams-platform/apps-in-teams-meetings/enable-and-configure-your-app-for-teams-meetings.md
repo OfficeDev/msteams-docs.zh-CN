@@ -3,12 +3,12 @@ title: 为会议启用和配置Teams应用程序
 author: surbhigupta
 description: 为会议启用和配置Teams应用程序
 ms.topic: conceptual
-ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4b71673b683129ef00c01297ce14a677864d4eb4
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068639"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114178"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
@@ -79,11 +79,12 @@ ms.locfileid: "53068639"
 > * 移动客户端当前不支持会议内对话框和选项卡中的会议体验。 有关详细信息，请参阅 [为移动设备创建选项卡](../tabs/design/tabs-mobile.md) 时有关移动选项卡的指南。
 
 Teams会议可为组织提供独特的协作体验。 它提供了为不同的会议方案配置应用的机会。 你可以配置应用，以基于参与者角色或用户类型增强会议体验。 现在，您可以确定可以在以下会议方案中执行哪些操作：
-* [会议前](#pre-meeting)
-* [会议内](#in-meeting)
-* [会议后](#post-meeting)
 
-### <a name="pre-meeting"></a>会议前
+* [会议前](#before-a-meeting)
+* [会议期间](#during-a-meeting)
+* [会议后](#after-a-meeting)
+
+### <a name="before-a-meeting"></a>会议前
 
 在会议之前，用户可以添加选项卡、聊天机器人和消息传递扩展。 具有组织者和演示者角色的用户可以向会议添加选项卡。
 
@@ -113,7 +114,7 @@ Teams会议可为组织提供独特的协作体验。 它提供了为不同的�
 > * 根据用户角色，应用能够提供特定于角色的体验。 例如，轮询应用仅允许组织者和演示者创建新的轮询。
 > * 可以在会议进行时更改角色分配。 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
 
-### <a name="in-meeting"></a>会议内
+### <a name="during-a-meeting"></a>会议期间
 
 在会议期间，可以使用 meetingSidePanel 或会议内对话框为应用构建独特的体验。
 
@@ -138,19 +139,18 @@ Teams会议可为组织提供独特的协作体验。 它提供了为不同的�
 > * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 > * 如果希望你的应用支持匿名用户，则初始调用请求有效负载必须依赖于 对象中的请求元数据， `from.id` `from` 而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，也是Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
-#### <a name="share-to-stage"></a>共享到阶段
+#### <a name="shared-meeting-stage"></a>共享会议阶段
 
 > [!NOTE]
 > * 此功能目前仅适用于开发人员 [预览](../resources/dev-preview/developer-preview-intro.md) 版。
-> * 若要使用此功能，应用必须支持会议内 meetingSidePanel。
 
-此功能使开发人员能够将应用共享到会议阶段。 通过启用共享到会议阶段，会议参与者可以实时协作。
+共享会议阶段允许会议参与者实时与应用内容进行交互和协作。
 
 必需的上下文 `meetingStage` 位于应用程序清单中。 这样做的先决条件是拥有 `meetingSidePanel` 上下文。 这将在 meetingSidePanel 中启用"共享"。
 
 ![在会议体验期间共享到阶段](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-启用此功能所需的清单更改如下所示：
+若要启用共享会议阶段，请配置应用清单，如下所示：
 
 ```json
 "configurableTabs": [
@@ -168,15 +168,17 @@ Teams会议可为组织提供独特的协作体验。 它提供了为不同的�
   ]
 ```
 
-### <a name="post-meeting"></a>会议后
+了解如何设计 [共享会议阶段体验](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
 
-会议后和 [会议前](#pre-meeting) 配置相同。
+### <a name="after-a-meeting"></a>会议后
+
+会议后 [和会议之前](#before-a-meeting) 的配置相同。
 
 ## <a name="code-sample"></a>代码示例
 
 |示例名称 | 说明 | 示例 |
 |----------------|-----------------|--------------|----------------|-----------|
-| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌，该令牌按顺序生成，以便每个参与者都有机会进行互动。 这可用于 scrum 会议、问答&等情况。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌，该令牌是按顺序生成的，以便每个参与者都有机会参与会议。 这可在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>另请参阅
 

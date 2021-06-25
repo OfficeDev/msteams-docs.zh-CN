@@ -6,12 +6,12 @@ keywords: Microsoft Teams模板示例演示
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
+ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069185"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53111158"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -679,6 +679,40 @@ Icebreaker是一[Microsoft Teams](../bots/what-are-bots.md)聊天机器人，通
     ![访问者到达通知](../assets/images/visitor-management-notify-host.png)
 :::column-end:::
 :::row-end:::
+
+## <a name="water-cooler-9734"></a>水&#9734;
+
+Water Water 是一Teams应用，使公司团队可以创建、邀请和加入团队成员之间的随意对话，例如由"水球"或聊天室进行的对话。 可针对多个方案使用此模板，例如新的非项目相关公告、感兴趣的主题、当前事件或有关爱好的对话。 该应用为任何人提供了查找现有对话或启动新对话的简便界面。 它是构建自定义目标通信功能的基础，可促进在中断期间可能没有社交机会的同事之间的交互。    
+
+[获取GitHub](https://github.com/microsoft/csapps-msteams-watercooler)     
+
+![水光应用屏幕](../assets/images/appScreens.gif)    
+
+### <a name="key-features"></a>关键功能
+
+**水都主页**：可以浏览团队成员正在与特定人员或感兴趣的主题进行现有对话的现有聊天室。 主页上的活动 **对话** 显示会议室名称、简短描述、呼叫持续时间和会议室图像。 
+
+![水都主页](../assets/images/home-page.png)
+
+**加入聊天室**：使用 **"加入会议室** "功能立即加入正在进行的对话。 选择 **"从** 活动对话加入"以加入聊天室。
+
+![加入会议室](../assets/images/joinRoom.gif)
+
+**聊天室创建**：使用 **聊天室创建** 功能创建Teams所有与会者交互的通话或聊天。 通过指定会议室名称、简短说明、最多五个同事作为初始组以及从提供的一组会议室图像中选择，轻松创建聊天室。 
+
+![聊天室创建](../assets/images/createRoom.gif)
+
+**查找会议室**：使用 **"查找会议室** "功能搜索与持续对话的主题或简短说明匹配的关键字。
+
+![查找对话](../assets/images/findConversation.gif)
+
+**与会者邀请**：创建聊天室 **后，** 使用与会者邀请功能邀请其他用户。 这类似于Teams调用。
+
+![与会者邀请](../assets/images/attendeeInvitation.gif)
+
+**应用锁** 屏提醒：左侧菜单上的 **"水** 绿色"图标显示锁屏提醒，其中显示使用任意应用时Teams活动对话的数量。 
+
+![应用锁屏提醒](../assets/images/badge.gif)
 
 ## <a name="workplace-awards"></a>Workplace Awards
 

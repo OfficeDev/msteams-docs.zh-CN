@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 92c6d5d96c103fb5e0da6afd91357b5887b2ba10
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 8f5b293557ef7de9e4d551c5ae2bd7216e6e3fc0
+ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069079"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53111126"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在应用程序内测试特定于资源的许可Teams
 
@@ -23,7 +23,7 @@ ms.locfileid: "53069079"
 > [!NOTE]
 > 若要测试 RSC 权限，Teams清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
 >
-> - **id**：Azure AD 应用 ID，请参阅在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
+> - **id**：Azure AD 应用 ID，请参阅在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
 > - **resource**：任何字符串，请参阅更新你的Teams [清单中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **应用程序权限**：应用的 RSC 权限，请参阅 [特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 

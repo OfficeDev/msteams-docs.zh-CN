@@ -1,5 +1,8 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>使用 App Studio 更新应用包
 
+> [!TIP]
+> **试用开发人员门户**：App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+
 App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应用程序的创建和注册过程。
 
 完成以下步骤以更新应用包：
@@ -16,11 +19,15 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    该示例附带自己的清单，旨在生成项目时生成应用包。 可以使用应用包在 .NET 上生成Visual Studio。 在Visual Studio中，manifest.json 文件位于 中的 **清单** 下 `Microsoft.Teams.Samples.HelloWorld.Web` 。 此步骤如下图所示：  
+
+    该示例附带自己的清单，旨在生成项目时生成应用包。 在 .NET 上，manifest.json 文件位于 下的清单Visual Studio中 ```Microsoft.Teams.Samples.HelloWorld.Web``` 。 在Node.js，这是通过键入项目的根目录中的命令行 `gulp` 完成。
+
+     在Visual Studio中，manifest.json 文件位于 中的 **清单** 下 `Microsoft.Teams.Samples.HelloWorld.Web` 。 此步骤如下图所示：  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     
     可以通过在项目的根目录中Node.js命令行，在应用程序上生成 `gulp` 应用包。
+
 
     ```bash
     $ gulp
@@ -44,11 +51,11 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
     <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
-下图显示了 App Studio 中导入的应用包：
+    下图显示了 App Studio 中导入的应用包：
 
-<img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
+    <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-在清单编辑器的左侧有一个步骤列表。 右侧有一个属性列表，需要针对每个步骤进行填充。 当你开始使用示例应用时，大部分信息已经完成。 接下来的步骤将使您能够更新 Hello World 应用的属性。
+    在清单编辑器的左侧有一个步骤列表。 右侧有一个属性列表，需要针对每个步骤进行填充。 当你开始使用示例应用时，大部分信息已经完成。 接下来的步骤将使您能够更新 Hello World 应用的属性。
 
 #### <a name="app-details"></a>应用详细信息
 
@@ -68,7 +75,7 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-在此示例中，"团队"选项卡是显示配置页面的地方。 Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. 将 URL 更改为 ，其中 必须替换为托管应用时所使用的 `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` [URL。](#host-the-sample-app)
+在此示例中，"团队"选项卡是显示配置页面的地方。 Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. 将 URL 更改为必须替换为托管应用时所使用的 `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` URL。
 
 ##### <a name="personal-tabs"></a>个人选项卡
 
@@ -159,6 +166,6 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 1. 选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。 你可以设置一个特殊的团队进行测试。
 1. 选择 **对话框** 底部的"安装"按钮。
 
-你的应用现已在 Teams 中提供。 但是，在用应用 ID 和密码更新托管应用程序环境之前，机器人和消息扩展将不起作用。
+    你的应用现已在 Teams 中提供。 但是，在用应用 ID 和密码更新托管应用程序环境之前，机器人和消息扩展将不起作用。
 
-<img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
+    <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
