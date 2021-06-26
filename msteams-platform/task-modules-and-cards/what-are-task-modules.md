@@ -1,250 +1,60 @@
 ---
-title: 什么是任务模块？
+title: 任务模块
 author: surbhigupta
 description: 添加模式弹出窗口体验，以从你的应用收集信息或向用户Microsoft Teams信息
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e4937fc4909535506c61b4ac353283322d5f3631
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 257ca54ab53d310116cc301dded01a7582c11532
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068604"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140535"
 ---
-# <a name="task-modules"></a><span data-ttu-id="b99ef-103">任务模块</span><span class="sxs-lookup"><span data-stu-id="b99ef-103">Task modules</span></span>
+# <a name="task-modules"></a><span data-ttu-id="a9d1e-103">任务模块</span><span class="sxs-lookup"><span data-stu-id="a9d1e-103">Task modules</span></span>
 
-<span data-ttu-id="b99ef-104">任务模块允许你在 Teams 应用程序中创建模式弹出体验。</span><span class="sxs-lookup"><span data-stu-id="b99ef-104">Task modules allow you to create modal popup experiences in your Teams application.</span></span> <span data-ttu-id="b99ef-105">在弹出窗口中，可以运行自己的自定义 HTML/JavaScript 代码，显示基于小部件（如 YouTube 或 Microsoft Stream 视频）或 `<iframe>` 显示 [自适应卡片](/adaptive-cards/)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-105">Inside the popup you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video or display an [Adaptive card](/adaptive-cards/).</span></span> <span data-ttu-id="b99ef-106">它们对于启动和完成任务或显示丰富的信息（如视频或仪表板）Power BI非常有用。</span><span class="sxs-lookup"><span data-stu-id="b99ef-106">They are especially useful for initiating and completing tasks or displaying rich information like videos or Power BI dashboards.</span></span> <span data-ttu-id="b99ef-107">与选项卡或基于对话的自动程序体验相比，用户启动和完成任务通常更自然。</span><span class="sxs-lookup"><span data-stu-id="b99ef-107">A popup experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.</span></span>
+<span data-ttu-id="a9d1e-104">任务模块允许在任务应用程序中创建模式弹出Teams体验。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-104">Task modules permit you to create modal pop-up experiences in your Teams application.</span></span> <span data-ttu-id="a9d1e-105">在弹出窗口中，您可以：</span><span class="sxs-lookup"><span data-stu-id="a9d1e-105">In the pop-up, you can:</span></span>
 
-<span data-ttu-id="b99ef-108">任务模块基于选项卡Microsoft Teams构建;它们实质上是弹出窗口中的一个选项卡。</span><span class="sxs-lookup"><span data-stu-id="b99ef-108">Task modules build on the foundation of Microsoft Teams tabs; they are essentially a tab inside a popup window.</span></span> <span data-ttu-id="b99ef-109">它们使用相同的 SDK，因此如果你已生成选项卡，则你已经 90% 能够创建任务模块。</span><span class="sxs-lookup"><span data-stu-id="b99ef-109">They use the same SDK, so if you've built a tab you are already 90% of the way to being able to create a task module.</span></span>
+* <span data-ttu-id="a9d1e-106">运行你自己的自定义 HTML 或 JavaScript 代码。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-106">Run your own custom HTML or JavaScript code.</span></span>
+* <span data-ttu-id="a9d1e-107">显示 `<iframe>` 基于小部件（如 YouTube 或 Microsoft Stream 视频）。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-107">Show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video.</span></span>
+* <span data-ttu-id="a9d1e-108">显示 [自适应卡片](/adaptive-cards/)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-108">Display an [Adaptive Card](/adaptive-cards/).</span></span>
 
-<span data-ttu-id="b99ef-110">可通过 3 种方式调用任务模块：</span><span class="sxs-lookup"><span data-stu-id="b99ef-110">Task modules can be invoked in three ways:</span></span>
+<span data-ttu-id="a9d1e-109">任务模块可用于启动和完成任务或显示丰富的信息，例如视频或 POWER Business Intelligence (BI) 仪表板。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-109">Task modules are useful for initiating and completing tasks or displaying rich information, such as videos or Power Business Intelligence (BI) dashboards.</span></span> <span data-ttu-id="a9d1e-110">与选项卡或基于对话的机器人体验相比，用户启动和完成任务通常更自然。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-110">A pop-up experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.</span></span>
 
-* <span data-ttu-id="b99ef-111">**频道或个人选项卡**：使用 Microsoft Teams Tabs SDK，可以从选项卡上的按钮、链接或菜单调用任务模块。此处详细介绍 [了这一点。](~/task-modules-and-cards/task-modules/task-modules-tabs.md)</span><span class="sxs-lookup"><span data-stu-id="b99ef-111">**Channel or personal tabs**: Using the Microsoft Teams Tabs SDK you can invoke task modules from buttons, links or menus on your tab. [This is covered in detail here.](~/task-modules-and-cards/task-modules/task-modules-tabs.md)</span></span>
-* <span data-ttu-id="b99ef-112">**自动程序**：从自动 [程序发送](~/task-modules-and-cards/cards/cards-reference.md) 的卡片上的按钮。</span><span class="sxs-lookup"><span data-stu-id="b99ef-112">**Bots**: Buttons on [cards](~/task-modules-and-cards/cards/cards-reference.md) sent from your bot.</span></span> <span data-ttu-id="b99ef-113">当你不需要频道中的每个人查看你正在使用机器人做什么时，这尤其有用。</span><span class="sxs-lookup"><span data-stu-id="b99ef-113">This is particularly useful when you don't need everyone in a channel to see what you are doing with a bot.</span></span> <span data-ttu-id="b99ef-114">例如，让用户在频道中回复投票时，看到创建该投票的记录并没有多大用处。</span><span class="sxs-lookup"><span data-stu-id="b99ef-114">For example, when having users respond to a poll in a channel it's not terribly useful to see a record of that poll being created.</span></span> [<span data-ttu-id="b99ef-115">此处详细介绍了这一点。</span><span class="sxs-lookup"><span data-stu-id="b99ef-115">This is covered in detail here.</span></span>](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* <span data-ttu-id="b99ef-116">**在Teams** 链接之外：还可以创建 URL 以从任何位置调用任务模块。</span><span class="sxs-lookup"><span data-stu-id="b99ef-116">**Outside of Teams from a deep link**: You can also create URLs to invoke a task module from anywhere.</span></span> [<span data-ttu-id="b99ef-117">此处详细介绍了这一点。</span><span class="sxs-lookup"><span data-stu-id="b99ef-117">This is covered in detail here.</span></span>](#task-module-deep-link-syntax)
+<span data-ttu-id="a9d1e-111">任务模块基于选项卡Microsoft Teams构建。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-111">Task modules build on the foundation of Microsoft Teams tabs.</span></span> <span data-ttu-id="a9d1e-112">它们实质上是弹出窗口中的一个选项卡。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-112">They are essentially a tab inside a pop-up window.</span></span> <span data-ttu-id="a9d1e-113">它们使用相同的 SDK，因此如果你已生成了一个选项卡，则你已经熟悉如何创建任务模块。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-113">They use the same SDK, so if you have built a tab you are already familiar with creating a task module.</span></span>
 
-## <a name="task-module-looks-like"></a><span data-ttu-id="b99ef-118">任务模块类似于</span><span class="sxs-lookup"><span data-stu-id="b99ef-118">Task module looks like</span></span>
+<span data-ttu-id="a9d1e-114">可通过 3 种方式调用任务模块：</span><span class="sxs-lookup"><span data-stu-id="a9d1e-114">Task modules can be invoked in three ways:</span></span>
 
-<span data-ttu-id="b99ef-119">下面是从没有彩色矩形和带编号的圆圈的自动程序 (调用任务模块时的外观，当然) ：</span><span class="sxs-lookup"><span data-stu-id="b99ef-119">Here's what a task module looks like when invoked from a bot (without the colored rectangles and numbered circles, of course):</span></span>
+* <span data-ttu-id="a9d1e-115">频道或个人选项卡：使用 Microsoft Teams 选项卡 SDK，可以从选项卡上的按钮、链接或菜单调用任务模块。有关详细信息，请参阅在[选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-115">Channel or personal tabs: Using the Microsoft Teams Tabs SDK, you can invoke task modules from buttons, links, or menus on your tab. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).</span></span>
+* <span data-ttu-id="a9d1e-116">自动程序：使用从自动程序 [发送](~/task-modules-and-cards/cards/cards-reference.md) 的卡片上的按钮。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-116">Bots: Using buttons on [cards](~/task-modules-and-cards/cards/cards-reference.md) sent from your bot.</span></span> <span data-ttu-id="a9d1e-117">当你不要求频道中的每个人都查看你使用机器人执行什么操作时，这非常有用。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-117">This is useful when you do not require everyone in a channel to see what you are doing with a bot.</span></span> <span data-ttu-id="a9d1e-118">例如，当用户在频道中回复投票时，查看所创建的轮询记录将没有用。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-118">For example, when having users respond to a poll in a channel it is not useful to see a record of that poll being created.</span></span> <span data-ttu-id="a9d1e-119">有关详细信息，请参阅使用[自动程序中Teams模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-119">For more information, see [using task modules from Teams bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).</span></span>
+* <span data-ttu-id="a9d1e-120">在Teams链接之外：还可以创建 URL 以从任何位置调用任务模块。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-120">Outside of Teams from a deep link: You can also create URLs to invoke a task module from anywhere.</span></span> <span data-ttu-id="a9d1e-121">有关详细信息，请参阅任务 [模块深度链接语法](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-121">For more information, see [task module deep link syntax](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).</span></span>
+
+## <a name="components-of-a-task-module"></a><span data-ttu-id="a9d1e-122">任务模块的组件</span><span class="sxs-lookup"><span data-stu-id="a9d1e-122">Components of a task module</span></span>
+
+<span data-ttu-id="a9d1e-123">下面是从自动程序调用任务模块时的外观：</span><span class="sxs-lookup"><span data-stu-id="a9d1e-123">Here is what a task module looks like when invoked from a bot:</span></span>
 
 ![任务模块示例](~/assets/images/task-module/task-module-example.png)
 
-<span data-ttu-id="b99ef-121">让我们演练一下：</span><span class="sxs-lookup"><span data-stu-id="b99ef-121">Let's walk through it:</span></span>
+<span data-ttu-id="a9d1e-125">任务模块包括以下内容，如上图所示：</span><span class="sxs-lookup"><span data-stu-id="a9d1e-125">A task module includes the following as shown in the previous image:</span></span>
 
-1. <span data-ttu-id="b99ef-122">应用的[ `color` 图标](~/resources/schema/manifest-schema.md#icons)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-122">Your app's [`color` icon](~/resources/schema/manifest-schema.md#icons).</span></span>
-1. <span data-ttu-id="b99ef-123">应用[ `short` 的名称](~/resources/schema/manifest-schema.md#name)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-123">Your app's [`short` name](~/resources/schema/manifest-schema.md#name).</span></span>
-1. <span data-ttu-id="b99ef-124">任务模块的标题在 `title` [TaskInfo](#the-taskinfo-object)对象的 属性中指定。</span><span class="sxs-lookup"><span data-stu-id="b99ef-124">The task module's title specified in the `title` property of the [TaskInfo object](#the-taskinfo-object).</span></span>
-1. <span data-ttu-id="b99ef-125">任务模块的关闭/取消按钮。</span><span class="sxs-lookup"><span data-stu-id="b99ef-125">The task module's close/cancel button.</span></span> <span data-ttu-id="b99ef-126">如果用户按此键，你的应用将收到一 `err` 个事件，如此处 [所述](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-126">If the user presses this, your app will receive an `err` event as described [here](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module).</span></span>
-    > [!Note]
-    > <span data-ttu-id="b99ef-127">从自动程序调用任务模块时，当前无法检测此事件。</span><span class="sxs-lookup"><span data-stu-id="b99ef-127">It is currently not possible to detect this event when a task module is invoked from a bot.</span></span>
-1. <span data-ttu-id="b99ef-128">如果正在使用 TaskInfo 对象的 属性加载自己的网页，则蓝色矩形是显示 `url` [网页的位置](#the-taskinfo-object)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-128">The blue rectangle is the where your web page appears if you are loading your own web page using the `url` property of the [TaskInfo object](#the-taskinfo-object).</span></span> <span data-ttu-id="b99ef-129">下面的任务模块 [大小调整部分提供了更多详细信息](#task-module-sizing) 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-129">More detail is in the [task module sizing](#task-module-sizing) section below.</span></span>
-1. <span data-ttu-id="b99ef-130">如果你要通过 TaskInfo 对象的 属性显示自适应卡片，则添加填充，否则你需要自己 `card` [处理。](#task-module-css-for-htmljavascript-task-modules) [](#the-taskinfo-object)</span><span class="sxs-lookup"><span data-stu-id="b99ef-130">If you are displaying an Adaptive card via the `card` property of the [TaskInfo object](#the-taskinfo-object) the padding is added for you, otherwise you'll need to [handle this yourself](#task-module-css-for-htmljavascript-task-modules).</span></span>
-1. <span data-ttu-id="b99ef-131">自适应卡片按钮将在此处呈现。</span><span class="sxs-lookup"><span data-stu-id="b99ef-131">Adaptive card buttons will render here.</span></span> <span data-ttu-id="b99ef-132">如果正在使用自己的页面，则必须创建自己的按钮。</span><span class="sxs-lookup"><span data-stu-id="b99ef-132">If you're using your own page you must create your own buttons.</span></span>
+1. <span data-ttu-id="a9d1e-126">应用的[ `color` 图标](~/resources/schema/manifest-schema.md#icons)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-126">Your app's [`color` icon](~/resources/schema/manifest-schema.md#icons).</span></span>
+2. <span data-ttu-id="a9d1e-127">应用[ `short` 的名称](~/resources/schema/manifest-schema.md#name)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-127">Your app's [`short` name](~/resources/schema/manifest-schema.md#name).</span></span>
+3. <span data-ttu-id="a9d1e-128">任务模块的标题在 `title` [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)对象的 属性中指定。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-128">The task module's title specified in the `title` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).</span></span>
+4. <span data-ttu-id="a9d1e-129">任务模块的关闭或取消按钮。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-129">The task module's close or cancel button.</span></span> <span data-ttu-id="a9d1e-130">如果用户选择此按钮，你的应用将收到 `err` 事件。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-130">If the user selects this button, your app receives an `err` event.</span></span> <span data-ttu-id="a9d1e-131">有关详细信息，请参阅 [用于提交任务模块结果的示例](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-131">For more information, see [example for submitting the result of a task module](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module).</span></span>
 
-## <a name="overview-of-invoking-and-dismissing-task-modules"></a><span data-ttu-id="b99ef-133">调用和消除任务模块概述</span><span class="sxs-lookup"><span data-stu-id="b99ef-133">Overview of invoking and dismissing task modules</span></span>
+    > [!NOTE]
+    > <span data-ttu-id="a9d1e-132">当前无法从自动程序 `err` 调用任务模块时检测事件。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-132">It is currently not possible to detect the `err` event when a task module is invoked from a bot.</span></span>
 
-<span data-ttu-id="b99ef-134">可以从选项卡、聊天机器人或深层链接调用任务模块，其中显示的内容可以是 HTML 或自适应卡片，因此在如何调用任务模块以及如何处理用户交互的结果方面，存在很多灵活性。</span><span class="sxs-lookup"><span data-stu-id="b99ef-134">Task modules can be invoked from tabs, bots or deep links and what appears in one can be either HTML or an Adaptive card, so there's a lot of flexibility in terms of how they are invoked and how to deal with the result of a user's interaction.</span></span> <span data-ttu-id="b99ef-135">下表总结了此操作的工作原理：</span><span class="sxs-lookup"><span data-stu-id="b99ef-135">The table below summarizes how this works:</span></span>
+5. <span data-ttu-id="a9d1e-133">如果正在使用 TaskInfo 对象的 属性加载自己的网页，则蓝色矩形是显示 `url` [网页的位置](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-133">The blue rectangle is where your web page appears if you are loading your own web page using the `url` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).</span></span> <span data-ttu-id="a9d1e-134">有关详细信息，请参阅任务 [模块大小调整](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-134">For more information, see [task module sizing](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing).</span></span>
+6. <span data-ttu-id="a9d1e-135">如果你使用 TaskInfo 对象的 属性显示自适应卡片 `card` [，](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) 则添加填充。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-135">If you are displaying an Adaptive Card using the `card` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) the padding is added for you.</span></span> <span data-ttu-id="a9d1e-136">有关详细信息，请参阅 HTML [任务模块 CSS 或 JavaScript 任务模块](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-136">For more information, see [task module CSS for HTML or JavaScript task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules).</span></span>
+7. <span data-ttu-id="a9d1e-137">选择注册 后，自适应卡片 **按钮呈现**。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-137">Adaptive Card buttons render after you select **Sign up**.</span></span> <span data-ttu-id="a9d1e-138">使用你自己的页面时，创建你自己的按钮。</span><span class="sxs-lookup"><span data-stu-id="a9d1e-138">When using your own page, create your own buttons.</span></span>
 
-| <span data-ttu-id="b99ef-136">**通过...**</span><span class="sxs-lookup"><span data-stu-id="b99ef-136">**Invoked via...**</span></span> | <span data-ttu-id="b99ef-137">**任务模块为 HTML/JavaScript**</span><span class="sxs-lookup"><span data-stu-id="b99ef-137">**Task module is HTML/JavaScript**</span></span> | <span data-ttu-id="b99ef-138">**任务模块是自适应卡片**</span><span class="sxs-lookup"><span data-stu-id="b99ef-138">**Task module is Adaptive card**</span></span> |
-| --- | --- | --- |
-| <span data-ttu-id="b99ef-139">**选项卡中的 JavaScript**</span><span class="sxs-lookup"><span data-stu-id="b99ef-139">**JavaScript in a tab**</span></span> | <span data-ttu-id="b99ef-140">1. 将 Teams客户端 SDK 函数 `tasks.startTask()` 与可选回调 `submitHandler(err, result)` 函数一同使用。</span><span class="sxs-lookup"><span data-stu-id="b99ef-140">1. Use the Teams client SDK function `tasks.startTask()` with an optional `submitHandler(err, result)` callback function.</span></span> <br/><br/> <span data-ttu-id="b99ef-141">2. 在任务模块代码中，当用户完成时，使用对象作为参数Teams SDK `tasks.submitTask()` `result` 函数。</span><span class="sxs-lookup"><span data-stu-id="b99ef-141">2. In the task module code, when the user is finished, call the Teams SDK function `tasks.submitTask()` with a `result` object as a parameter.</span></span> <span data-ttu-id="b99ef-142">如果在 `submitHandler` 中指定了回调 `tasks.startTask()` ，Teams使用 作为 `result` 参数调用它。</span><span class="sxs-lookup"><span data-stu-id="b99ef-142">If a `submitHandler` callback was specified in `tasks.startTask()`, Teams calls it with `result` as a parameter.</span></span><br/><br/> <span data-ttu-id="b99ef-143">3. 如果在调用 时出错，则改为 `tasks.startTask()` `submitHandler` 使用字符串调用 `err` 函数。</span><span class="sxs-lookup"><span data-stu-id="b99ef-143">3. If there was an error when invoking `tasks.startTask()`, the `submitHandler` function is called with an `err` string instead.</span></span> <br/><br/> <span data-ttu-id="b99ef-144">4. 还可以在呼叫 `completionBotId` 时指定 `teams.startTask()` - 在这种情况下 `result` ，会改为发送到机器人。</span><span class="sxs-lookup"><span data-stu-id="b99ef-144">4. You can also specify a `completionBotId` when calling `teams.startTask()` - in that case `result` is sent to the bot instead.</span></span> | <span data-ttu-id="b99ef-145">1. 使用 TaskInfo Teams并包含要显示在任务模块弹出窗口中的自适应卡片的 JSON 来调用客户端 SDK `tasks.startTask()` [](#the-taskinfo-object) `TaskInfo.card` 函数。</span><span class="sxs-lookup"><span data-stu-id="b99ef-145">1. Call the Teams client SDK function `tasks.startTask()` with a [TaskInfo object](#the-taskinfo-object) and `TaskInfo.card` containing the JSON for the Adaptive card to show in the task module popup.</span></span> <br/><br/> <span data-ttu-id="b99ef-146">2. 如果在 中指定了回调，Teams如果调用时出错或用户关闭任务模块弹出窗口（使用右上角的 X）则使用字符串 `submitHandler` `tasks.startTask()` `err` `tasks.startTask()` 调用它。</span><span class="sxs-lookup"><span data-stu-id="b99ef-146">2. If a `submitHandler` callback was specified in `tasks.startTask()`, Teams calls it with an `err` string if there was an error when invoking `tasks.startTask()` or if the user closes the task module popup using the X at the upper right.</span></span> <br/><br/> <span data-ttu-id="b99ef-147">3. 如果用户按下 Action.Submit 按钮，则其 `data` 对象将返回为 的值 `result` 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-147">3. If the user presses an Action.Submit button then its `data` object is returned as the value of `result`.</span></span> |
-| <span data-ttu-id="b99ef-148">**自动程序卡按钮**</span><span class="sxs-lookup"><span data-stu-id="b99ef-148">**Bot card button**</span></span> | <span data-ttu-id="b99ef-149">1. 自动程序卡片按钮可以通过两种方式调用任务模块，具体取决于按钮的类型：深层链接 URL 或 `task/fetch` 发送消息。</span><span class="sxs-lookup"><span data-stu-id="b99ef-149">1. Bot card buttons, depending on the type of button, can invoke task modules in two ways: a deep link URL or by sending a `task/fetch` message.</span></span> <span data-ttu-id="b99ef-150">有关链接 URL 工作深度的详细信息，请参阅下文。</span><span class="sxs-lookup"><span data-stu-id="b99ef-150">See below for how deep link URLs work.</span></span> <br/><br/> <span data-ttu-id="b99ef-151">2. 如果按钮的操作是自适应卡片) 的 (按钮类型，) 下的事件 (HTTP POST 将发送给机器人，机器人使用 `type` `task/fetch` HTTP `Action.Submit` 200 响应 POST，响应正文包含 `task/fetch invoke` [TaskInfo](#the-taskinfo-object)对象周围的包装器。</span><span class="sxs-lookup"><span data-stu-id="b99ef-151">2. If the button's action `type` is `task/fetch` (`Action.Submit` button type for Adaptive cards), a `task/fetch invoke` event (an HTTP POST under the covers) is sent to the bot, and the bot responds to the POST with HTTP 200 and the response body containing a wrapper around the [TaskInfo object](#the-taskinfo-object).</span></span> <span data-ttu-id="b99ef-152">在通过 [task/fetch 调用任务模块时对此进行了详细说明](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-through-taskfetch)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-152">This is explained in detail in [invoking a task module via task/fetch](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-through-taskfetch).</span></span><br/><br/> <span data-ttu-id="b99ef-153">3. Teams任务模块;用户完成后，调用 Teams SDK `tasks.submitTask()` 函数，将 对象 `result` 作为参数。</span><span class="sxs-lookup"><span data-stu-id="b99ef-153">3. Teams displays the task module; when the user is finished, call the Teams SDK function `tasks.submitTask()` with a `result` object as a parameter.</span></span> <br/><br/> <span data-ttu-id="b99ef-154">4. 机器人会收到 `task/submit invoke` 包含对象 `result` 的消息。</span><span class="sxs-lookup"><span data-stu-id="b99ef-154">4. The bot receives a `task/submit invoke` message that contains the `result` object.</span></span> <span data-ttu-id="b99ef-155">有三种不同的方法来响应消息：不执行任何操作 (任务成功完成) 、在弹出窗口中向用户显示消息，或调用另一个任务模块窗口 (即创建类似向导的体验 `task/submit`) 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-155">You have three different ways to respond to the `task/submit` message: by doing nothing (the task completed successfully), by displaying a message to the user in a popup window, or by invoking another task module window (i.e. creating a wizard-like experience).</span></span> <span data-ttu-id="b99ef-156">有关任务/提交 [的详细讨论中将详细讨论这三个选项](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-156">These three options are discussed more [in the detailed discussion on task/submit](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit).</span></span> | <span data-ttu-id="b99ef-157">1. 与 Bot Framework 卡上的按钮类似，自适应卡片上的按钮支持两种调用任务模块的方法：带按钮的深层链接 URL 和使用 `Action.openUrl` `task/fetch` `Action.Submit` 按钮。</span><span class="sxs-lookup"><span data-stu-id="b99ef-157">1. Like buttons on Bot Framework cards, buttons on Adaptive cards support two ways of invoking task modules: deep link URLs with `Action.openUrl` buttons, and via `task/fetch` using `Action.Submit` buttons.</span></span> <br/><br/> <span data-ttu-id="b99ef-158">2. 具有自适应卡片的任务模块与 HTML/JavaScript 用例 (请参阅左侧) 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-158">2. Task modules with Adaptive cards work very similarly to the HTML/JavaScript case (see left).</span></span> <span data-ttu-id="b99ef-159">主要区别在于，由于在使用自适应卡片时没有 JavaScript，因此无法调用 `tasks.submitTask()` 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-159">The major difference is that since there's no JavaScript when you're using Adaptive cards, there's no way to call `tasks.submitTask()`.</span></span> <span data-ttu-id="b99ef-160">相反，Teams 对象，并返回作为 事件的有效负载， `data` `Action.Submit` 如此处 `task/submit` [所述](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-160">Instead, Teams takes the `data` object from `Action.Submit` and returns it as the payload of in the `task/submit` event, as described [here](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit).</span></span> |
-| <span data-ttu-id="b99ef-161">**深层链接 URL**</span><span class="sxs-lookup"><span data-stu-id="b99ef-161">**Deep link URL**</span></span> <br/>[<span data-ttu-id="b99ef-162">URL 语法</span><span class="sxs-lookup"><span data-stu-id="b99ef-162">URL syntax</span></span>](#task-module-deep-link-syntax) | <span data-ttu-id="b99ef-163">1. Teams调用任务模块;在深层链接 `<iframe>` 的参数中指定的 内 `url` 出现的 URL。</span><span class="sxs-lookup"><span data-stu-id="b99ef-163">1. Teams invokes the task module; the URL that appears inside the `<iframe>` specified in the `url` parameter of the deep link.</span></span> <span data-ttu-id="b99ef-164">没有 `submitHandler` 回调。</span><span class="sxs-lookup"><span data-stu-id="b99ef-164">There is no `submitHandler` callback.</span></span> <br/><br/> <span data-ttu-id="b99ef-165">2. 在任务模块中页面的 JavaScript 内，调用 以使用对象作为参数关闭它，就像从选项卡或自动程序卡按钮调用它一 `tasks.submitTask()` `result` 样。</span><span class="sxs-lookup"><span data-stu-id="b99ef-165">2. Within the JavaScript of the page in the task module, call `tasks.submitTask()` to close it with a `result` object as a parameter, the same as when invoking it from a tab or a bot card button.</span></span> <span data-ttu-id="b99ef-166">不过，完成逻辑略有不同。</span><span class="sxs-lookup"><span data-stu-id="b99ef-166">Completion logic is slightly different, however.</span></span> <span data-ttu-id="b99ef-167">如果你的完成逻辑驻留在客户端 (即如果没有自动程序) 则没有回调，因此任何完成逻辑都必须位于 调用 之前 `submitHandler` 的代码 `tasks.submitTask()` 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-167">If your completion logic resides on the client (i.e. if there is no bot) there is no `submitHandler` callback, so any completion logic must be in the code preceding the call to `tasks.submitTask()`.</span></span> <span data-ttu-id="b99ef-168">调用错误仅通过控制台报告。</span><span class="sxs-lookup"><span data-stu-id="b99ef-168">Invocation errors are only reported via the console.</span></span> <span data-ttu-id="b99ef-169">如果你有自动程序，可以在深层链接中指定参数，以 `completionBotId` 通过事件 `result` 发送 `task/submit` 对象。</span><span class="sxs-lookup"><span data-stu-id="b99ef-169">If you have a bot, then you can specify a `completionBotId` parameter in the deep link to send the `result` object via a `task/submit` event.</span></span> | <span data-ttu-id="b99ef-170">1. Teams调用任务模块;自适应卡片的 JSON 卡正文指定为深层链接参数的 URL `card` 编码值。</span><span class="sxs-lookup"><span data-stu-id="b99ef-170">1. Teams invokes the task module; the JSON card body of the Adaptive card is specified as a URL-encoded value of the `card` parameter of the deep link.</span></span> <br/><br/> <span data-ttu-id="b99ef-171">2. 用户通过单击任务模块右上角的 X 或按卡片上的按钮来 `Action.Submit` 关闭任务模块。</span><span class="sxs-lookup"><span data-stu-id="b99ef-171">2. The user closes the task module by clicking on the X at the upper right of the task module or by pressing an `Action.Submit` button on the card.</span></span> <span data-ttu-id="b99ef-172">由于没有要调用的，因此你必须有一个自动程序将自适应卡片 `submitHandler` 字段的值发送到。</span><span class="sxs-lookup"><span data-stu-id="b99ef-172">Since there is no `submitHandler` to call, you must have a bot to send the value of the Adaptive card fields to.</span></span> <span data-ttu-id="b99ef-173">使用深层 `completionBotId` 链接中的 参数指定通过事件将数据发送到的 `task/submit invoke` 自动程序。</span><span class="sxs-lookup"><span data-stu-id="b99ef-173">You use the `completionBotId` parameter in the deep link to specify the bot to send the data to via a `task/submit invoke` event.</span></span> |
+## <a name="see-also"></a><span data-ttu-id="a9d1e-139">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a9d1e-139">See also</span></span>
 
-## <a name="the-taskinfo-object"></a><span data-ttu-id="b99ef-174">TaskInfo 对象</span><span class="sxs-lookup"><span data-stu-id="b99ef-174">The TaskInfo object</span></span>
+[<span data-ttu-id="a9d1e-140">卡</span><span class="sxs-lookup"><span data-stu-id="a9d1e-140">Cards</span></span>](~/task-modules-and-cards/what-are-cards.md)
 
-<span data-ttu-id="b99ef-175">`TaskInfo`对象包含任务模块的元数据。</span><span class="sxs-lookup"><span data-stu-id="b99ef-175">The `TaskInfo` object contains the metadata for a task module.</span></span> <span data-ttu-id="b99ef-176">对象定义如下所示。</span><span class="sxs-lookup"><span data-stu-id="b99ef-176">The object definition is below.</span></span> <span data-ttu-id="b99ef-177">你必须 **为** 嵌入 `url` 的 iFrame 或 `card` 自适应卡片定义 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-177">You **must** define either `url` for an embedded iFrame or `card` for an Adaptive Card.</span></span>
+## <a name="next-step"></a><span data-ttu-id="a9d1e-141">后续步骤</span><span class="sxs-lookup"><span data-stu-id="a9d1e-141">Next step</span></span>
 
-| <span data-ttu-id="b99ef-178">属性</span><span class="sxs-lookup"><span data-stu-id="b99ef-178">Attribute</span></span> | <span data-ttu-id="b99ef-179">类型</span><span class="sxs-lookup"><span data-stu-id="b99ef-179">Type</span></span> | <span data-ttu-id="b99ef-180">说明</span><span class="sxs-lookup"><span data-stu-id="b99ef-180">Description</span></span> |
-| --- | --- | --- |
-| `title` | <span data-ttu-id="b99ef-181">string</span><span class="sxs-lookup"><span data-stu-id="b99ef-181">string</span></span> | <span data-ttu-id="b99ef-182">显示在应用程序名称下方以及应用程序图标的右侧。</span><span class="sxs-lookup"><span data-stu-id="b99ef-182">Appears below the app name and to the right of the app icon.</span></span> |
-| `height` | <span data-ttu-id="b99ef-183">number or string</span><span class="sxs-lookup"><span data-stu-id="b99ef-183">number or string</span></span> | <span data-ttu-id="b99ef-184">它可以是表示任务模块的高度（以像素为单位）或 `small` 、 `medium` 或 `large` 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-184">This can be a number representing the task module's height in pixels, or `small`, `medium`, or `large`.</span></span> <span data-ttu-id="b99ef-185">[请参阅下文，了解如何处理高度和宽度](#task-module-sizing)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-185">[See below for how height and width are handled](#task-module-sizing).</span></span> |
-| `width` | <span data-ttu-id="b99ef-186">number or string</span><span class="sxs-lookup"><span data-stu-id="b99ef-186">number or string</span></span> | <span data-ttu-id="b99ef-187">它可以是表示任务模块的宽度（以像素为单位）或 `small` 、 `medium` 或 `large` 的数。</span><span class="sxs-lookup"><span data-stu-id="b99ef-187">This can be a number representing the task module's width in pixels, or `small`, `medium`, or `large`.</span></span> <span data-ttu-id="b99ef-188">[请参阅下文，了解如何处理高度和宽度](#task-module-sizing)。</span><span class="sxs-lookup"><span data-stu-id="b99ef-188">[See below for how height and width are handled](#task-module-sizing).</span></span> |
-| `url` | <span data-ttu-id="b99ef-189">string</span><span class="sxs-lookup"><span data-stu-id="b99ef-189">string</span></span> | <span data-ttu-id="b99ef-190">作为任务模块内部加载 `<iframe>` 的页面的 URL。</span><span class="sxs-lookup"><span data-stu-id="b99ef-190">The URL of the page loaded as an `<iframe>` inside the task module.</span></span> <span data-ttu-id="b99ef-191">URL 的域必须在你的应用清单中的 [应用的 validDomains](~/resources/schema/manifest-schema.md#validdomains) 数组中。</span><span class="sxs-lookup"><span data-stu-id="b99ef-191">The URL's domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest.</span></span> |
-| `card` | <span data-ttu-id="b99ef-192">自适应卡片或自适应卡片自动程序卡附件</span><span class="sxs-lookup"><span data-stu-id="b99ef-192">Adaptive card or an Adaptive card bot card attachment</span></span> | <span data-ttu-id="b99ef-193">要显示在任务模块中的自适应卡片的 JSON。</span><span class="sxs-lookup"><span data-stu-id="b99ef-193">The JSON for the Adaptive card to appear in the task module.</span></span> <span data-ttu-id="b99ef-194">如果你从自动程序调用，则需要在 Bot Framework 对象中使用自适应卡片 `attachment` JSON。</span><span class="sxs-lookup"><span data-stu-id="b99ef-194">If you're invoking from a bot, you'll need to use the Adaptive card JSON in a Bot Framework `attachment` object.</span></span> <span data-ttu-id="b99ef-195">从选项卡中，你只需使用自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="b99ef-195">From a tab you'll use just an Adaptive Card.</span></span> [<span data-ttu-id="b99ef-196">下面是一个示例。</span><span class="sxs-lookup"><span data-stu-id="b99ef-196">Here's an example.</span></span>](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | <span data-ttu-id="b99ef-197">string</span><span class="sxs-lookup"><span data-stu-id="b99ef-197">string</span></span> | <span data-ttu-id="b99ef-198">如果客户端不支持任务模块功能，此 URL 在浏览器选项卡中打开。</span><span class="sxs-lookup"><span data-stu-id="b99ef-198">If a client does not support the task module feature, this URL is opened in a browser tab.</span></span> |
-| `completionBotId` | <span data-ttu-id="b99ef-199">string</span><span class="sxs-lookup"><span data-stu-id="b99ef-199">string</span></span> | <span data-ttu-id="b99ef-200">指定要发送用户与任务模块交互结果的自动程序应用 ID。</span><span class="sxs-lookup"><span data-stu-id="b99ef-200">Specifies a bot App ID to send the result of the user's interaction with the task module to.</span></span> <span data-ttu-id="b99ef-201">如果指定，机器人将收到事件负载中具有 `task/submit invoke` JSON 对象的事件。</span><span class="sxs-lookup"><span data-stu-id="b99ef-201">If specified, the bot will receive a `task/submit invoke` event with a JSON object in the event payload.</span></span> |
-
-> [!NOTE]
-> <span data-ttu-id="b99ef-202">任务模块功能要求要加载的任何 URL 的域包含在应用清单的数组 `validDomains` 中。</span><span class="sxs-lookup"><span data-stu-id="b99ef-202">The task module feature requires that the domains of any URLs you want to load are included in the `validDomains` array in your app's manifest.</span></span>
-
-## <a name="task-module-sizing"></a><span data-ttu-id="b99ef-203">任务模块大小调整</span><span class="sxs-lookup"><span data-stu-id="b99ef-203">Task module sizing</span></span>
-
-<span data-ttu-id="b99ef-204">使用 和 `TaskInfo.width` 的 `TaskInfo.height` 整数将设置高度和宽度（以像素为单位）。</span><span class="sxs-lookup"><span data-stu-id="b99ef-204">Using integers for `TaskInfo.width` and `TaskInfo.height` will set the height and width in pixels.</span></span> <span data-ttu-id="b99ef-205">但是，根据团队窗口的大小和屏幕分辨率，在保持纵横比和宽度/高度比例 (按比例) 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-205">However, depending on the size of the Team's window and screen resolution they will be reduced proportionally while maintaining the aspect ratio (width/height).</span></span>
-
-<span data-ttu-id="b99ef-206">如果 和 为 ，或者上图中红色矩形的大小与可用空间的比例为 `TaskInfo.width` `TaskInfo.height` `"small"` `"medium"` `"large"` ：20%、50%、60%、20%、50%、66%。 `width` `height`</span><span class="sxs-lookup"><span data-stu-id="b99ef-206">If `TaskInfo.width` and `TaskInfo.height` are `"small"`, `"medium"` or `"large"` the size of the red rectangle in the picture above is a proportion of the available space: 20%, 50%, 60% for `width` and 20%, 50%, 66% for `height`.</span></span>
-
-<span data-ttu-id="b99ef-207">从选项卡调用的任务模块可以动态调整大小。</span><span class="sxs-lookup"><span data-stu-id="b99ef-207">Task modules invoked from a tab can be dynamically resized.</span></span> <span data-ttu-id="b99ef-208">调用后 `tasks.startTask()` ，可以调用 newSize 对象的高度和宽度属性符合 `tasks.updateTask(newSize)` TaskInfo 规范（例如 (要求）。</span><span class="sxs-lookup"><span data-stu-id="b99ef-208">After calling `tasks.startTask()` you can call `tasks.updateTask(newSize)` where height and width properties on the newSize object conform to the TaskInfo spec (ex.</span></span> <span data-ttu-id="b99ef-209">`{ height: 'medium', width: 'medium' }`).</span><span class="sxs-lookup"><span data-stu-id="b99ef-209">`{ height: 'medium', width: 'medium' }`).</span></span>
-
-## <a name="task-module-css-for-htmljavascript-task-modules"></a><span data-ttu-id="b99ef-210">HTML/JavaScript 任务模块的任务模块 CSS</span><span class="sxs-lookup"><span data-stu-id="b99ef-210">Task module CSS for HTML/JavaScript task modules</span></span>
-
-<span data-ttu-id="b99ef-211">基于 HTML/JavaScript 的任务模块可以访问标题下方的整个任务模块区域。</span><span class="sxs-lookup"><span data-stu-id="b99ef-211">HTML/JavaScript-based task modules have access to the entire area of the task module below the header.</span></span> <span data-ttu-id="b99ef-212">虽然这提供了极大的灵活性，但如果你想要在边缘周围填充以与标头元素对齐，并避免不必要的滚动条，则需要提供正确的 CSS。</span><span class="sxs-lookup"><span data-stu-id="b99ef-212">While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scrollbars you'll need to provide the right CSS.</span></span> <span data-ttu-id="b99ef-213">下面是几个用例的一些示例。</span><span class="sxs-lookup"><span data-stu-id="b99ef-213">Here are some examples for a few use cases.</span></span>
-
-### <a name="example-1---youtube-video"></a><span data-ttu-id="b99ef-214">示例 1 - YouTube 视频</span><span class="sxs-lookup"><span data-stu-id="b99ef-214">Example 1 - YouTube video</span></span>
-
-<span data-ttu-id="b99ef-215">YouTube 提供在网页上嵌入视频的能力。</span><span class="sxs-lookup"><span data-stu-id="b99ef-215">YouTube offers the ability to embed videos on web pages.</span></span> <span data-ttu-id="b99ef-216">使用简单的存根网页很容易在任务模块中显示：</span><span class="sxs-lookup"><span data-stu-id="b99ef-216">Using a simple stub web page it's easy to show this in a task module:</span></span>
-
-![YouTube 视频](~/assets/images/task-module/youtube-example.png)
-
-<span data-ttu-id="b99ef-218">下面是此页面的 HTML，不含 CSS：</span><span class="sxs-lookup"><span data-stu-id="b99ef-218">Here's the HTML for this page, without the CSS:</span></span>
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  ⋮
-</head>
-<body>
-  <div id="embed-container">
-    <iframe width="1000" height="700" src="https://www.youtube.com/embed/rd0Rd8w3FZ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-</body>
-</html>
-```
-
-<span data-ttu-id="b99ef-219">CSS 如下所示：</span><span class="sxs-lookup"><span data-stu-id="b99ef-219">The CSS looks like this:</span></span>
-
-```css
-#embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 95%;
-    height: 95%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: none;
-}
-```
-
-### <a name="example-2---powerapp"></a><span data-ttu-id="b99ef-220">示例 2 - PowerApp</span><span class="sxs-lookup"><span data-stu-id="b99ef-220">Example 2 - PowerApp</span></span>
-
-<span data-ttu-id="b99ef-221">也可以使用相同的方法嵌入 PowerApp。</span><span class="sxs-lookup"><span data-stu-id="b99ef-221">You can use the same approach to embed a PowerApp as well.</span></span> <span data-ttu-id="b99ef-222">由于任何单个 PowerApp 的高度/宽度都是可自定义的，因此可能需要调整高度和宽度才能实现所需的演示文稿。</span><span class="sxs-lookup"><span data-stu-id="b99ef-222">As the height/width of any individual PowerApp is customizable, you may need to adjust the height and width to achieve your desired presentation.</span></span>
-
-![资产管理 PowerApp](~/assets/images/task-module/powerapp-example.png)
-
-```html
-<iframe width="720" height="520" src="https://web.powerapps.com/webplayer/iframeapp?source=iframe&screenColor=rgba(104,101,171,1)&appId=/providers/Microsoft.PowerApps/apps/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></iframe>
-```
-
-<span data-ttu-id="b99ef-224">CSS 为：</span><span class="sxs-lookup"><span data-stu-id="b99ef-224">And the CSS is:</span></span>
-
-```css
-#embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 94%;
-    height: 95%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: none;
-}
-```
-
-## <a name="adaptive-card-or-adaptive-card-bot-card-attachment"></a><span data-ttu-id="b99ef-225">自适应卡片或自适应卡片自动程序卡附件</span><span class="sxs-lookup"><span data-stu-id="b99ef-225">Adaptive card or Adaptive card bot card attachment</span></span>
-
-<span data-ttu-id="b99ef-226">如上所述，根据调用方式，你将需要使用自适应卡片或自适应卡片自动程序卡附件 (该附件只是包装在附件对象) `card` 中的自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="b99ef-226">As we noted above, depending on how you're invoking your `card` you'll need to use either an Adaptive card, or an Adaptive card bot card attachment (which is just an Adaptive card wrapped in an attachment object).</span></span>
-
-<span data-ttu-id="b99ef-227">从选项卡调用时，将需要使用自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="b99ef-227">When you're invoking from a tab, you'll need to use an adaptive card.</span></span> <span data-ttu-id="b99ef-228">下面是一个非常简单的示例：</span><span class="sxs-lookup"><span data-stu-id="b99ef-228">Here's a very simple example:</span></span>
-
-```json
-{
-    "type": "AdaptiveCard",
-    "body": [
-        {
-            "type": "TextBlock",
-            "text": "Here is a ninja cat:"
-        },
-        {
-            "type": "Image",
-            "url": "http://adaptivecards.io/content/cats/1.png",
-            "size": "Medium"
-        }
-    ],
-    "version": "1.0"
-}
-```
-
-<span data-ttu-id="b99ef-229">从自动程序调用时，将需要使用自适应卡片自动程序卡附件，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="b99ef-229">When you're invoking from a bot you'll need to use an Adaptive card bot card attachment as in the example below:</span></span>
-
-```json
-{
-    "contentType": "application/vnd.microsoft.card.adaptive",
-    "content": {
-        "type": "AdaptiveCard",
-        "body": [
-            {
-                "type": "TextBlock",
-                "text": "Here is a ninja cat:"
-            },
-            {
-                "type": "Image",
-                "url": "http://adaptivecards.io/content/cats/1.png",
-                "size": "Medium"
-            }
-        ],
-        "version": "1.0"
-    }
-}
-```
-
-<span data-ttu-id="b99ef-230">你将需要记住是调用包含自动程序或选项卡中的自适应卡片的任务模块。</span><span class="sxs-lookup"><span data-stu-id="b99ef-230">You'll need to remember whether you are invoking a task module containing an Adaptive card from a bot or a tab.</span></span>
-
-## <a name="task-module-deep-link-syntax"></a><span data-ttu-id="b99ef-231">任务模块深度链接语法</span><span class="sxs-lookup"><span data-stu-id="b99ef-231">Task module deep link syntax</span></span>
-
-<span data-ttu-id="b99ef-232">任务模块深层链接只是 [TaskInfo](#the-taskinfo-object) 对象的序列化，包含两条其他信息，以及可选的 `APP_ID` `BOT_APP_ID` ：</span><span class="sxs-lookup"><span data-stu-id="b99ef-232">A task module deep link is just a serialization of the [TaskInfo object](#the-taskinfo-object) with two other pieces of information, `APP_ID` and optionally the `BOT_APP_ID`:</span></span>
-
-`https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
-
-`https://teams.microsoft.com/l/task/APP_ID?card=<TaskInfo.card>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
-
-<span data-ttu-id="b99ef-233">请参阅 [TaskInfo 对象](#the-taskinfo-object) ，了解数据类型以及 、 、 和 的允许 `<TaskInfo.url>` `<TaskInfo.card>` `<TaskInfo.height>` `<TaskInfo.width>` 值 `<TaskInfo.title>` 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-233">See [TaskInfo object](#the-taskinfo-object) for the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`.</span></span>
-
-> [!TIP]
-> <span data-ttu-id="b99ef-234">请确保 URL 对深层链接进行编码，尤其是在使用参数 (`card` 例如，JavaScript[ `encodeURI()` 的 function) 。](https://www.w3schools.com/jsref/jsref_encodeURI.asp)</span><span class="sxs-lookup"><span data-stu-id="b99ef-234">Be sure to URL encode the deep link, especially when using the `card` parameter (for example, JavaScript's [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp)).</span></span>
-
-<span data-ttu-id="b99ef-235">以下是 和 `APP_ID` 的信息 `BOT_APP_ID` ：</span><span class="sxs-lookup"><span data-stu-id="b99ef-235">Here's the information on `APP_ID` and `BOT_APP_ID`:</span></span>
-
-| <span data-ttu-id="b99ef-236">值</span><span class="sxs-lookup"><span data-stu-id="b99ef-236">Value</span></span> | <span data-ttu-id="b99ef-237">类型</span><span class="sxs-lookup"><span data-stu-id="b99ef-237">Type</span></span> | <span data-ttu-id="b99ef-238">是否必需？</span><span class="sxs-lookup"><span data-stu-id="b99ef-238">Required?</span></span> | <span data-ttu-id="b99ef-239">说明</span><span class="sxs-lookup"><span data-stu-id="b99ef-239">Description</span></span> |
-| --- | --- | --- | --- |
-| `APP_ID` | <span data-ttu-id="b99ef-240">string</span><span class="sxs-lookup"><span data-stu-id="b99ef-240">string</span></span> | <span data-ttu-id="b99ef-241">是</span><span class="sxs-lookup"><span data-stu-id="b99ef-241">Yes</span></span> | <span data-ttu-id="b99ef-242">[调用](~/resources/schema/manifest-schema.md#id)任务模块的应用的 ID。</span><span class="sxs-lookup"><span data-stu-id="b99ef-242">The [id](~/resources/schema/manifest-schema.md#id) of the app invoking the task module.</span></span> <span data-ttu-id="b99ef-243">的 [清单中的 validDomains](~/resources/schema/manifest-schema.md#validdomains) `APP_ID` 数组必须包含 `url` 的域的 if 位于 URL `url` 中。</span><span class="sxs-lookup"><span data-stu-id="b99ef-243">The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is in the URL.</span></span> <span data-ttu-id="b99ef-244"> (从选项卡或自动程序调用任务模块时，应用 ID 已已知，这就是它未包含在 `TaskInfo` .) </span><span class="sxs-lookup"><span data-stu-id="b99ef-244">(The app ID is already known when a task module is invoked from a tab or a bot, which is why it's not included in `TaskInfo`.)</span></span> |
-| `BOT_APP_ID` | <span data-ttu-id="b99ef-245">string</span><span class="sxs-lookup"><span data-stu-id="b99ef-245">string</span></span> | <span data-ttu-id="b99ef-246">否</span><span class="sxs-lookup"><span data-stu-id="b99ef-246">No</span></span> | <span data-ttu-id="b99ef-247">如果指定了 值，则对象通过消息 `completionBotId` `result` `task/submit invoke` 发送给指定的自动程序。</span><span class="sxs-lookup"><span data-stu-id="b99ef-247">If a value for `completionBotId` is specified, the `result` object is sent via a a `task/submit invoke` message to the specified bot.</span></span> <span data-ttu-id="b99ef-248">`BOT_APP_ID` 必须在应用清单中指定为自动程序，即不能只将其发送到任何自动程序。</span><span class="sxs-lookup"><span data-stu-id="b99ef-248">`BOT_APP_ID` must be specified as a bot in the app's manifest, i.e. you can't just send it to any bot.</span></span> |
-
-<span data-ttu-id="b99ef-249">请注意，它对于 和 相同有效，并且在许多情况下，如果应用有自动程序，因为建议将该应用用作应用的 `APP_ID` `BOT_APP_ID` ID（如果有）。</span><span class="sxs-lookup"><span data-stu-id="b99ef-249">Note that it's valid for `APP_ID` and `BOT_APP_ID` to be the same, and in many cases will be if an app has a bot since it's recommended to use that as an app's ID if there is one.</span></span>
-
-## <a name="keyboard-and-accessibility-guidelines"></a><span data-ttu-id="b99ef-250">键盘和辅助功能指南</span><span class="sxs-lookup"><span data-stu-id="b99ef-250">Keyboard and accessibility guidelines</span></span>
-
-<span data-ttu-id="b99ef-251">对于基于 HTML/JavaScript 的任务模块，你有责任确保应用的任务模块可以与键盘一同使用。</span><span class="sxs-lookup"><span data-stu-id="b99ef-251">With HTML/JavaScript-based task modules it is your responsibility to ensure your app's task module can be used with a keyboard.</span></span> <span data-ttu-id="b99ef-252">屏幕阅读器程序还取决于使用键盘进行导航的能力。</span><span class="sxs-lookup"><span data-stu-id="b99ef-252">Screen reader programs also depend on the ability to navigate using the keyboard.</span></span> <span data-ttu-id="b99ef-253">从实际上说，这有两点意义：</span><span class="sxs-lookup"><span data-stu-id="b99ef-253">As a practical matter this means two things:</span></span>
-
-1. <span data-ttu-id="b99ef-254">使用 HTML 标记中的 [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) 属性控制哪些元素可以聚焦以及是否/在哪里参与顺序键盘导航 (通常使用 <kbd>Tab</kbd> 和 <kbd>Shift-Tab</kbd> 键) 。</span><span class="sxs-lookup"><span data-stu-id="b99ef-254">Using the [tabindex attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused and if/where it participates in sequential keyboard navigation (usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys).</span></span>
-2. <span data-ttu-id="b99ef-255">在 <kbd>JavaScript</kbd> 中为任务模块处理 Esc 键。</span><span class="sxs-lookup"><span data-stu-id="b99ef-255">Handling the <kbd>Esc</kbd> key in the JavaScript for your task module.</span></span> <span data-ttu-id="b99ef-256">下面是一个显示如何执行此操作的代码示例：</span><span class="sxs-lookup"><span data-stu-id="b99ef-256">Here's a code sample showing how to do this:</span></span>
-
-  ```javascript
-  // Handle the Esc key
-  document.onkeyup = function(event) {
-  if ((event.key === 27) || (event.key === "Escape")) {
-    microsoftTeams.submitTask(null); // this will return an err object to the completionHandler()
-    }
-  }
-  ```
-
-<span data-ttu-id="b99ef-257">Microsoft Teams可确保键盘导航从任务模块标头正常进入 HTML，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="b99ef-257">Microsoft Teams will ensure that keyboard navigation works properly from the task module header into your HTML and vice-versa.</span></span>
-
-## <a name="code-sample"></a><span data-ttu-id="b99ef-258">代码示例</span><span class="sxs-lookup"><span data-stu-id="b99ef-258">Code sample</span></span>
-|<span data-ttu-id="b99ef-259">**示例名称**</span><span class="sxs-lookup"><span data-stu-id="b99ef-259">**Sample name**</span></span> | <span data-ttu-id="b99ef-260">**说明**</span><span class="sxs-lookup"><span data-stu-id="b99ef-260">**Description**</span></span> | <span data-ttu-id="b99ef-261">**.NET**</span><span class="sxs-lookup"><span data-stu-id="b99ef-261">**.NET**</span></span> | <span data-ttu-id="b99ef-262">**Node.js**</span><span class="sxs-lookup"><span data-stu-id="b99ef-262">**Node.js**</span></span>|
-|----------------|-----------------|--------------|----------------|
-|<span data-ttu-id="b99ef-263">Bots-V4 (任务模块) </span><span class="sxs-lookup"><span data-stu-id="b99ef-263">Task module sample (Bots-V4)</span></span> | <span data-ttu-id="b99ef-264">用于创建任务模块的示例。</span><span class="sxs-lookup"><span data-stu-id="b99ef-264">Samples for creating task modules.</span></span> |[<span data-ttu-id="b99ef-265">View</span><span class="sxs-lookup"><span data-stu-id="b99ef-265">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[<span data-ttu-id="b99ef-266">View</span><span class="sxs-lookup"><span data-stu-id="b99ef-266">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
-|<span data-ttu-id="b99ef-267">任务模块示例 (选项卡 + Bots-V3) </span><span class="sxs-lookup"><span data-stu-id="b99ef-267">Task module sample (Tabs + Bots-V3)</span></span> | <span data-ttu-id="b99ef-268">用于创建任务模块的示例。</span><span class="sxs-lookup"><span data-stu-id="b99ef-268">Samples for creating task modules.</span></span> |[<span data-ttu-id="b99ef-269">View</span><span class="sxs-lookup"><span data-stu-id="b99ef-269">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[<span data-ttu-id="b99ef-270">View</span><span class="sxs-lookup"><span data-stu-id="b99ef-270">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
-
-## <a name="see-also"></a><span data-ttu-id="b99ef-271">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b99ef-271">See also</span></span>
-
-* [<span data-ttu-id="b99ef-272">请求设备权限</span><span class="sxs-lookup"><span data-stu-id="b99ef-272">Request device permissions</span></span>](../concepts/device-capabilities/native-device-permissions.md)
-* [<span data-ttu-id="b99ef-273">集成媒体功能</span><span class="sxs-lookup"><span data-stu-id="b99ef-273">Integrate media capabilities</span></span>](../concepts/device-capabilities/mobile-camera-image-permissions.md)
-* [<span data-ttu-id="b99ef-274">将 QR 或条形码扫描仪功能集成到 Teams</span><span class="sxs-lookup"><span data-stu-id="b99ef-274">Integrate QR or barcode scanner capability in Teams</span></span>](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [<span data-ttu-id="b99ef-275">在 Teams 中集成位置Teams</span><span class="sxs-lookup"><span data-stu-id="b99ef-275">Integrate location capabilities in Teams</span></span>](../concepts/device-capabilities/location-capability.md)
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="a9d1e-142">调用和消除任务模块</span><span class="sxs-lookup"><span data-stu-id="a9d1e-142">Invoke and dismiss task modules</span></span>](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

@@ -1,93 +1,120 @@
 ---
-title: 卡参考
+title: 卡片类型
 description: 介绍自动程序可用的所有卡片和Teams
 localization_priority: Normal
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 741980ea79dd23659dd2b8a240d767b8292ca251
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: be38454daac519530d0fdf10b5170e128219f6fc
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994383"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140468"
 ---
-# <a name="cards-reference"></a><span data-ttu-id="555b8-104">卡参考</span><span class="sxs-lookup"><span data-stu-id="555b8-104">Cards reference</span></span>
+# <a name="types-of-cards"></a><span data-ttu-id="afb8e-104">卡片类型</span><span class="sxs-lookup"><span data-stu-id="afb8e-104">Types of cards</span></span>
 
-<span data-ttu-id="555b8-105">自动程序支持本文档中列出的Microsoft Teams。</span><span class="sxs-lookup"><span data-stu-id="555b8-105">The cards listed in this document are supported in bots for Microsoft Teams.</span></span> <span data-ttu-id="555b8-106">它们基于 Bot Framework (BF) 定义的卡，Teams不支持所有 Bot Framework 卡，而是添加了Teams一些自动程序卡。</span><span class="sxs-lookup"><span data-stu-id="555b8-106">They are based on cards defined by the Bot Framework (BF), but Teams does not support all Bot Framework cards and instead some Teams cards have been added.</span></span> <span data-ttu-id="555b8-107">本文档的参考中已指出区别。</span><span class="sxs-lookup"><span data-stu-id="555b8-107">Differences are called out in the references in this document.</span></span>
+<span data-ttu-id="afb8e-105">自动程序支持自适应、Office 365、列表、Office 365 连接器、收据、登录以及缩略图卡和卡片Microsoft Teams。</span><span class="sxs-lookup"><span data-stu-id="afb8e-105">Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams.</span></span> <span data-ttu-id="afb8e-106">它们基于 Bot Framework 定义的卡，Teams不支持所有 Bot Framework 卡，并添加了一些自己的卡。</span><span class="sxs-lookup"><span data-stu-id="afb8e-106">They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own.</span></span>
 
-## <a name="card-examples"></a><span data-ttu-id="555b8-108">卡片示例</span><span class="sxs-lookup"><span data-stu-id="555b8-108">Card examples</span></span>
+<span data-ttu-id="afb8e-107">确定不同的卡片类型之前，请了解如何创建 Hero 卡片、缩略图卡片或自适应卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-107">Before you identify the different card types, understand how to create a a hero card, thumbnail card, or Adaptive Card.</span></span>
 
-<span data-ttu-id="555b8-109">有关如何使用卡的其他信息，请参阅 Bot Builder SDK v3 的文档。</span><span class="sxs-lookup"><span data-stu-id="555b8-109">You can find additional information on how to use cards in the documentation for the Bot Builder SDK v3.</span></span> <span data-ttu-id="555b8-110">代码示例也可在 Microsoft/BotBuilder-Samples 存储库上GitHub。</span><span class="sxs-lookup"><span data-stu-id="555b8-110">Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub.</span></span>
+## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a><span data-ttu-id="afb8e-108">创建 Hero 卡片、缩略图卡或自适应卡片</span><span class="sxs-lookup"><span data-stu-id="afb8e-108">Create a hero card, thumbnail card, or Adaptive Card</span></span>
 
-* <span data-ttu-id="555b8-111">.NET</span><span class="sxs-lookup"><span data-stu-id="555b8-111">.NET</span></span>
-  * <span data-ttu-id="555b8-112">[将卡片添加为邮件的附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="555b8-112">[Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true).</span></span>
-  * <span data-ttu-id="555b8-113">[卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)。</span><span class="sxs-lookup"><span data-stu-id="555b8-113">[Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards).</span></span>
+<span data-ttu-id="afb8e-109">**从 App Studio 创建 Hero 卡片、缩略图卡片或自适应卡片**</span><span class="sxs-lookup"><span data-stu-id="afb8e-109">**To create a hero card, thumbnail card, or Adaptive Card from App Studio**</span></span>
 
-* <span data-ttu-id="555b8-114">Node.js</span><span class="sxs-lookup"><span data-stu-id="555b8-114">Node.js</span></span>
-  * <span data-ttu-id="555b8-115">[将卡片添加为邮件的附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="555b8-115">[Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true).</span></span>
-  * <span data-ttu-id="555b8-116">[卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)。</span><span class="sxs-lookup"><span data-stu-id="555b8-116">[Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards).</span></span>
+1. <span data-ttu-id="afb8e-110">从应用商店 **转到 App Studio** Teams。</span><span class="sxs-lookup"><span data-stu-id="afb8e-110">Go to **App Studio** from Teams.</span></span>
+1. <span data-ttu-id="afb8e-111">选择 **"卡片编辑器"。**</span><span class="sxs-lookup"><span data-stu-id="afb8e-111">Select **Card editor**.</span></span>
+1. <span data-ttu-id="afb8e-112">选择 **创建新卡片**。</span><span class="sxs-lookup"><span data-stu-id="afb8e-112">Select **Create a new card**.</span></span>
+1. <span data-ttu-id="afb8e-113">从 **Hero Card、Thumbnail** **Card** 或 **Adaptive** Card 中选择其中一张卡片 **的"创建"。**</span><span class="sxs-lookup"><span data-stu-id="afb8e-113">Select **Create** for one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**.</span></span> <span data-ttu-id="afb8e-114">显示该卡片的元数据详细信息、按钮以及 json、csharp 和节点代码示例。</span><span class="sxs-lookup"><span data-stu-id="afb8e-114">The metadata details, buttons, and json, csharp, and node code examples are shown for that card.</span></span>
 
-## <a name="types-of-cards"></a><span data-ttu-id="555b8-117">卡片类型</span><span class="sxs-lookup"><span data-stu-id="555b8-117">Types of cards</span></span>
+    ![Hero card details](~/assets/images/Cards/Herocarddetails.png)
 
-<span data-ttu-id="555b8-118">此表显示了可供你使用卡片的类型：</span><span class="sxs-lookup"><span data-stu-id="555b8-118">This table shows the types of cards available to you:</span></span>
+1. <span data-ttu-id="afb8e-116">选择 **"向我发送此卡"。**</span><span class="sxs-lookup"><span data-stu-id="afb8e-116">Select **Send me this card**.</span></span> <span data-ttu-id="afb8e-117">该卡片作为聊天消息发送给您。</span><span class="sxs-lookup"><span data-stu-id="afb8e-117">The card is sent to you as a chat message.</span></span>
 
-| <span data-ttu-id="555b8-119">卡片类型</span><span class="sxs-lookup"><span data-stu-id="555b8-119">Card type</span></span> | <span data-ttu-id="555b8-120">说明</span><span class="sxs-lookup"><span data-stu-id="555b8-120">Description</span></span> |
+## <a name="card-examples"></a><span data-ttu-id="afb8e-118">卡片示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-118">Card examples</span></span>
+
+<span data-ttu-id="afb8e-119">有关如何使用卡的其他信息，请参阅 Bot Builder SDK v3 的文档。</span><span class="sxs-lookup"><span data-stu-id="afb8e-119">You can find additional information on how to use cards in the documentation for the Bot Builder SDK v3.</span></span> <span data-ttu-id="afb8e-120">代码示例也可在 **Microsoft/BotBuilder-Samples** 存储库上GitHub。</span><span class="sxs-lookup"><span data-stu-id="afb8e-120">Code samples are also available in the **Microsoft/BotBuilder-Samples** repository on GitHub.</span></span> <span data-ttu-id="afb8e-121">以下是一些卡片示例：</span><span class="sxs-lookup"><span data-stu-id="afb8e-121">Following are a few card examples:</span></span>
+
+* <span data-ttu-id="afb8e-122">.NET</span><span class="sxs-lookup"><span data-stu-id="afb8e-122">.NET</span></span>
+  * <span data-ttu-id="afb8e-123">[将卡片添加为邮件的附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-123">[Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true).</span></span>
+  * <span data-ttu-id="afb8e-124">[卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-124">[Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards).</span></span>
+
+* <span data-ttu-id="afb8e-125">Node.js</span><span class="sxs-lookup"><span data-stu-id="afb8e-125">Node.js</span></span>
+  * <span data-ttu-id="afb8e-126">[将卡片添加为邮件的附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-126">[Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true).</span></span>
+  * <span data-ttu-id="afb8e-127">[卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-127">[Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards).</span></span>
+
+## <a name="card-types"></a><span data-ttu-id="afb8e-128">卡片类型</span><span class="sxs-lookup"><span data-stu-id="afb8e-128">Card types</span></span>
+
+<span data-ttu-id="afb8e-129">你可以根据应用程序要求标识和使用不同类型的卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-129">You can identify and use different types of cards based on your application requirements.</span></span> <span data-ttu-id="afb8e-130">下表显示了可供你使用卡片的类型：</span><span class="sxs-lookup"><span data-stu-id="afb8e-130">The following table shows the types of cards available to you:</span></span>
+
+| <span data-ttu-id="afb8e-131">卡片类型</span><span class="sxs-lookup"><span data-stu-id="afb8e-131">Card type</span></span> | <span data-ttu-id="afb8e-132">说明</span><span class="sxs-lookup"><span data-stu-id="afb8e-132">Description</span></span> |
 | --- | --- |
-| [<span data-ttu-id="555b8-121">自适应卡片</span><span class="sxs-lookup"><span data-stu-id="555b8-121">Adaptive card</span></span>](#adaptive-card) | <span data-ttu-id="555b8-122">此卡片是可高度自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。</span><span class="sxs-lookup"><span data-stu-id="555b8-122">This card is highly customizable card that can contain any combination of text, speech, images, buttons, and input fields.</span></span> |
-| [<span data-ttu-id="555b8-123">Hero card</span><span class="sxs-lookup"><span data-stu-id="555b8-123">Hero card</span></span>](#hero-card) | <span data-ttu-id="555b8-124">此卡片通常包含一个大图像、一个或多个按钮和少量文本。</span><span class="sxs-lookup"><span data-stu-id="555b8-124">This card typically contains a single large image, one or more buttons, and a small amount of text.</span></span> |
-| [<span data-ttu-id="555b8-125">列表卡</span><span class="sxs-lookup"><span data-stu-id="555b8-125">List card</span></span>](#list-card) | <span data-ttu-id="555b8-126">此卡片是项的滚动列表。</span><span class="sxs-lookup"><span data-stu-id="555b8-126">This card is a scrolling list of items.</span></span> |
-| [<span data-ttu-id="555b8-127">Office 365连接器卡</span><span class="sxs-lookup"><span data-stu-id="555b8-127">Office 365 connector card</span></span>](#office-365-connector-card) | <span data-ttu-id="555b8-128">此卡片具有具有多个分区、字段、图像和操作的灵活性布局。</span><span class="sxs-lookup"><span data-stu-id="555b8-128">This card has a flexible layout with multiple sections, fields, images, and actions.</span></span> |
-| [<span data-ttu-id="555b8-129">收据卡</span><span class="sxs-lookup"><span data-stu-id="555b8-129">Receipt card</span></span>](#receipt-card) | <span data-ttu-id="555b8-130">此卡为用户提供收据。</span><span class="sxs-lookup"><span data-stu-id="555b8-130">This card provides a receipt to the user.</span></span> |
-| [<span data-ttu-id="555b8-131">登录卡</span><span class="sxs-lookup"><span data-stu-id="555b8-131">Signin card</span></span>](#signin-card) | <span data-ttu-id="555b8-132">此卡使机器人可以请求用户登录。</span><span class="sxs-lookup"><span data-stu-id="555b8-132">This card enables a bot to request that a user signs in.</span></span> |
-| [<span data-ttu-id="555b8-133">缩略图卡片</span><span class="sxs-lookup"><span data-stu-id="555b8-133">Thumbnail card</span></span>](#thumbnail-card) | <span data-ttu-id="555b8-134">此卡片通常包含一个缩略图图像、一些短文本以及一个或多个按钮。</span><span class="sxs-lookup"><span data-stu-id="555b8-134">This card typically contains a single thumbnail image, some short text, and one or more buttons.</span></span> |
-| [<span data-ttu-id="555b8-135">卡片集合</span><span class="sxs-lookup"><span data-stu-id="555b8-135">Card collections</span></span>](#card-collections) | <span data-ttu-id="555b8-136">此卡片用于在单个响应中返回多个项目。</span><span class="sxs-lookup"><span data-stu-id="555b8-136">This cards is used to return multiple items in a single response.</span></span> |
+| [<span data-ttu-id="afb8e-133">自适应卡片</span><span class="sxs-lookup"><span data-stu-id="afb8e-133">Adaptive Card</span></span>](#adaptive-card) | <span data-ttu-id="afb8e-134">此卡片可高度自定义，可以包含文本、语音、图像、按钮和输入字段的任意组合。</span><span class="sxs-lookup"><span data-stu-id="afb8e-134">This card is highly customizable and can contain any combination of text, speech, images, buttons, and input fields.</span></span> |
+| [<span data-ttu-id="afb8e-135">Hero card</span><span class="sxs-lookup"><span data-stu-id="afb8e-135">Hero card</span></span>](#hero-card) | <span data-ttu-id="afb8e-136">此卡片通常包含一个大图像、一个或多个按钮和少量文本。</span><span class="sxs-lookup"><span data-stu-id="afb8e-136">This card typically contains a single large image, one or more buttons, and a small amount of text.</span></span> |
+| [<span data-ttu-id="afb8e-137">列表卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-137">List card</span></span>](#list-card) | <span data-ttu-id="afb8e-138">此卡片包含项目的滚动列表。</span><span class="sxs-lookup"><span data-stu-id="afb8e-138">This card contains a scrolling list of items.</span></span> |
+| [<span data-ttu-id="afb8e-139">Office 365连接器卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-139">Office 365 Connector card</span></span>](#office-365-connector-card) | <span data-ttu-id="afb8e-140">此卡片具有具有多个分区、字段、图像和操作的灵活性布局。</span><span class="sxs-lookup"><span data-stu-id="afb8e-140">This card has a flexible layout with multiple sections, fields, images, and actions.</span></span> |
+| [<span data-ttu-id="afb8e-141">收据卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-141">Receipt card</span></span>](#receipt-card) | <span data-ttu-id="afb8e-142">此卡为用户提供收据。</span><span class="sxs-lookup"><span data-stu-id="afb8e-142">This card provides a receipt to the user.</span></span> |
+| [<span data-ttu-id="afb8e-143">登录卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-143">Signin card</span></span>](#signin-card) | <span data-ttu-id="afb8e-144">此卡使机器人可以请求用户登录。</span><span class="sxs-lookup"><span data-stu-id="afb8e-144">This card enables a bot to request that a user signs in.</span></span> |
+| [<span data-ttu-id="afb8e-145">缩略图卡片</span><span class="sxs-lookup"><span data-stu-id="afb8e-145">Thumbnail card</span></span>](#thumbnail-card) | <span data-ttu-id="afb8e-146">此卡片通常包含一个缩略图图像、一些短文本以及一个或多个按钮。</span><span class="sxs-lookup"><span data-stu-id="afb8e-146">This card typically contains a single thumbnail image, some short text, and one or more buttons.</span></span> |
+| [<span data-ttu-id="afb8e-147">卡片集合</span><span class="sxs-lookup"><span data-stu-id="afb8e-147">Card collections</span></span>](#card-collections) | <span data-ttu-id="afb8e-148">此卡片集合用于在单个响应中返回多个项目。</span><span class="sxs-lookup"><span data-stu-id="afb8e-148">This card collection is used to return multiple items in a single response.</span></span> |
 
-## <a name="common-properties-for-all-cards"></a><span data-ttu-id="555b8-137">所有卡片的常见属性</span><span class="sxs-lookup"><span data-stu-id="555b8-137">Common properties for all cards</span></span>
+## <a name="common-properties-for-all-cards"></a><span data-ttu-id="afb8e-149">所有卡片的常见属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-149">Common properties for all cards</span></span>
 
-### <a name="inline-card-images"></a><span data-ttu-id="555b8-138">内联卡片图像</span><span class="sxs-lookup"><span data-stu-id="555b8-138">Inline card images</span></span>
+<span data-ttu-id="afb8e-150">你可以浏览一些适用于所有卡片的常见属性。</span><span class="sxs-lookup"><span data-stu-id="afb8e-150">You can go through some common properties that are applicable to all cards.</span></span>
 
-<span data-ttu-id="555b8-139">卡片可以包含内联图像，包括指向公开可用图像的链接。</span><span class="sxs-lookup"><span data-stu-id="555b8-139">The card can contain an inline image by including a link to the publicly available image.</span></span> <span data-ttu-id="555b8-140">出于性能目的，强烈建议您将映像托管在公共内容交付网络或 (CDN) 。</span><span class="sxs-lookup"><span data-stu-id="555b8-140">For performance purposes, it is highly recommended you host the image on a public content-delivery network (CDN).</span></span>
+### <a name="inline-card-images"></a><span data-ttu-id="afb8e-151">内联卡片图像</span><span class="sxs-lookup"><span data-stu-id="afb8e-151">Inline card images</span></span>
 
-<span data-ttu-id="555b8-141">在保持纵横比以覆盖图像区域的同时，图像大小会向上或向下扩展。</span><span class="sxs-lookup"><span data-stu-id="555b8-141">Images are scaled up or down in size while maintaining the aspect ratio to cover the image area.</span></span> <span data-ttu-id="555b8-142">然后从中心裁剪图像，以实现卡片的适当纵横比。</span><span class="sxs-lookup"><span data-stu-id="555b8-142">Images are then cropped from center to achieve the appropriate aspect ratio for the card.</span></span>
+<span data-ttu-id="afb8e-152">卡片可以包含内联图像，包括指向公开可用图像的链接。</span><span class="sxs-lookup"><span data-stu-id="afb8e-152">The card can contain an inline image by including a link to the publicly available image.</span></span> <span data-ttu-id="afb8e-153">出于性能目的，强烈建议你将映像托管在公用内容分发网络 (CDN) 。</span><span class="sxs-lookup"><span data-stu-id="afb8e-153">For performance purposes, it is highly recommended you host the image on a public Content Delivery Network (CDN).</span></span>
 
-<span data-ttu-id="555b8-143">图像必须最多为 1024×1024 PNG、JPEG 或 GIF 格式，并且不支持动态 GIF。</span><span class="sxs-lookup"><span data-stu-id="555b8-143">Images must be at most 1024×1024, in PNG, JPEG, or GIF format, and do not support animated GIF.</span></span>
+<span data-ttu-id="afb8e-154">图像的大小会向上或向下扩展，以保持覆盖图像区的纵横比。</span><span class="sxs-lookup"><span data-stu-id="afb8e-154">Images are scaled up or down in size to maintain the aspect ratio for covering the image area.</span></span> <span data-ttu-id="afb8e-155">然后从中心裁剪图像，以实现卡片的适当纵横比。</span><span class="sxs-lookup"><span data-stu-id="afb8e-155">Images are then cropped from center to achieve the appropriate aspect ratio for the card.</span></span>
 
-| <span data-ttu-id="555b8-144">属性</span><span class="sxs-lookup"><span data-stu-id="555b8-144">Property</span></span> | <span data-ttu-id="555b8-145">类型</span><span class="sxs-lookup"><span data-stu-id="555b8-145">Type</span></span>  | <span data-ttu-id="555b8-146">说明</span><span class="sxs-lookup"><span data-stu-id="555b8-146">Description</span></span> |
+<span data-ttu-id="afb8e-156">图像必须最多为 1024×1024 和 PNG、JPEG 或 GIF 格式。</span><span class="sxs-lookup"><span data-stu-id="afb8e-156">Images must be at most 1024×1024 and in PNG, JPEG, or GIF format.</span></span> <span data-ttu-id="afb8e-157">不支持动态 GIF。</span><span class="sxs-lookup"><span data-stu-id="afb8e-157">Animated GIF is not supported.</span></span>
+
+<span data-ttu-id="afb8e-158">下表提供了内联卡片图像的属性：</span><span class="sxs-lookup"><span data-stu-id="afb8e-158">The following table provides the properties of inline card images:</span></span>
+
+| <span data-ttu-id="afb8e-159">属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-159">Property</span></span> | <span data-ttu-id="afb8e-160">类型</span><span class="sxs-lookup"><span data-stu-id="afb8e-160">Type</span></span>  | <span data-ttu-id="afb8e-161">说明</span><span class="sxs-lookup"><span data-stu-id="afb8e-161">Description</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="555b8-147">url</span><span class="sxs-lookup"><span data-stu-id="555b8-147">url</span></span> | <span data-ttu-id="555b8-148">URL</span><span class="sxs-lookup"><span data-stu-id="555b8-148">URL</span></span> | <span data-ttu-id="555b8-149">图像的 HTTPS URL。</span><span class="sxs-lookup"><span data-stu-id="555b8-149">HTTPS URL to the image.</span></span> |
-| <span data-ttu-id="555b8-150">alt</span><span class="sxs-lookup"><span data-stu-id="555b8-150">alt</span></span> | <span data-ttu-id="555b8-151">String</span><span class="sxs-lookup"><span data-stu-id="555b8-151">String</span></span> | <span data-ttu-id="555b8-152">图像的辅助说明。</span><span class="sxs-lookup"><span data-stu-id="555b8-152">Accessible description of the image.</span></span> |
+| <span data-ttu-id="afb8e-162">url</span><span class="sxs-lookup"><span data-stu-id="afb8e-162">url</span></span> | <span data-ttu-id="afb8e-163">URL</span><span class="sxs-lookup"><span data-stu-id="afb8e-163">URL</span></span> | <span data-ttu-id="afb8e-164">图像的 HTTPS URL。</span><span class="sxs-lookup"><span data-stu-id="afb8e-164">HTTPS URL to the image.</span></span> |
+| <span data-ttu-id="afb8e-165">alt</span><span class="sxs-lookup"><span data-stu-id="afb8e-165">alt</span></span> | <span data-ttu-id="afb8e-166">String</span><span class="sxs-lookup"><span data-stu-id="afb8e-166">String</span></span> | <span data-ttu-id="afb8e-167">图像的辅助说明。</span><span class="sxs-lookup"><span data-stu-id="afb8e-167">Accessible description of the image.</span></span> |
 
 > [!NOTE]
-> <span data-ttu-id="555b8-153">如果卡片包含的图像 URL 在最终图像之前经过重定向，则不支持图像 URL 中的重定向。</span><span class="sxs-lookup"><span data-stu-id="555b8-153">If a card includes an image URL that goes through a redirect before the final image, the redirect in image URL is not supported.</span></span> <span data-ttu-id="555b8-154">对于在公有云上共享的图像，会出现此情况。</span><span class="sxs-lookup"><span data-stu-id="555b8-154">This occurs for images shared on the public cloud.</span></span>
+> <span data-ttu-id="afb8e-168">如果卡片包含的图像 URL 在最终图像之前重定向，则不支持图像 URL 中的重定向。</span><span class="sxs-lookup"><span data-stu-id="afb8e-168">If a card includes an image URL that is redirected before the final image, the redirect in image URL is not supported.</span></span> <span data-ttu-id="afb8e-169">对于在公有云上共享的图像，会出现此情况。</span><span class="sxs-lookup"><span data-stu-id="afb8e-169">This occurs for images shared on the public cloud.</span></span>
 
-### <a name="buttons"></a><span data-ttu-id="555b8-155">按钮</span><span class="sxs-lookup"><span data-stu-id="555b8-155">Buttons</span></span>
+### <a name="buttons"></a><span data-ttu-id="afb8e-170">按钮</span><span class="sxs-lookup"><span data-stu-id="afb8e-170">Buttons</span></span>
 
-<span data-ttu-id="555b8-156">按钮显示在卡片底部堆叠。</span><span class="sxs-lookup"><span data-stu-id="555b8-156">Buttons are shown stacked at the bottom of the card.</span></span> <span data-ttu-id="555b8-157">按钮文本始终位于单行，如果文本超过按钮宽度，则将被截断。</span><span class="sxs-lookup"><span data-stu-id="555b8-157">Button text is always on a single line and is truncated if the text exceeds the button width.</span></span> <span data-ttu-id="555b8-158">不会显示超过卡支持的最大数目的其他任何按钮。</span><span class="sxs-lookup"><span data-stu-id="555b8-158">Any additional buttons beyond the maximum number supported by the card are not shown.</span></span>
+<span data-ttu-id="afb8e-171">按钮显示在卡片底部堆叠。</span><span class="sxs-lookup"><span data-stu-id="afb8e-171">Buttons are shown stacked at the bottom of the card.</span></span> <span data-ttu-id="afb8e-172">按钮文本始终位于单行，如果文本超过按钮宽度，则将被截断。</span><span class="sxs-lookup"><span data-stu-id="afb8e-172">Button text is always on a single line and is truncated if the text exceeds the button width.</span></span> <span data-ttu-id="afb8e-173">不会显示超过卡支持的最大数目的其他任何按钮。</span><span class="sxs-lookup"><span data-stu-id="afb8e-173">Any additional buttons beyond the maximum number supported by the card are not shown.</span></span>
 
-<span data-ttu-id="555b8-159">有关详细信息，请参阅 [卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。</span><span class="sxs-lookup"><span data-stu-id="555b8-159">For more information, see [card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
+<span data-ttu-id="afb8e-174">有关详细信息，请参阅 [卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-174">For more information, see [card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
 
-### <a name="card-formatting"></a><span data-ttu-id="555b8-160">卡片格式</span><span class="sxs-lookup"><span data-stu-id="555b8-160">Card formatting</span></span>
+### <a name="card-formatting"></a><span data-ttu-id="afb8e-175">卡片格式</span><span class="sxs-lookup"><span data-stu-id="afb8e-175">Card formatting</span></span>
 
-<span data-ttu-id="555b8-161">有关卡片中的文本格式设置详细信息，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。</span><span class="sxs-lookup"><span data-stu-id="555b8-161">For more information on text formatting in cards, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).</span></span>
+<span data-ttu-id="afb8e-176">有关卡片中的文本格式设置详细信息，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-176">For more information on text formatting in cards, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).</span></span>
 
-## <a name="adaptive-card"></a><span data-ttu-id="555b8-162">自适应卡片</span><span class="sxs-lookup"><span data-stu-id="555b8-162">Adaptive card</span></span>
+<span data-ttu-id="afb8e-177">确定所有卡片的常见属性后，你现在可以使用自适应卡片，这可通过将可操作内容直接添加到你使用的应用来帮助你提高参与度和效率。</span><span class="sxs-lookup"><span data-stu-id="afb8e-177">After identifying the common properties for all cards, you can now work with Adaptive Cards, which help you increase engagement and efficiency by adding your actionable content directly into the apps you use.</span></span>
 
-<span data-ttu-id="555b8-163">自适应卡片是可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。</span><span class="sxs-lookup"><span data-stu-id="555b8-163">An adaptive card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields.</span></span> <span data-ttu-id="555b8-164">有关详细信息，请参阅[自适应卡片 v1.2.0。](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)</span><span class="sxs-lookup"><span data-stu-id="555b8-164">For more information, see [adaptive cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).</span></span>
+## <a name="adaptive-card"></a><span data-ttu-id="afb8e-178">自适应卡片</span><span class="sxs-lookup"><span data-stu-id="afb8e-178">Adaptive Card</span></span>
 
-### <a name="support-for-adaptive-cards"></a><span data-ttu-id="555b8-165">自适应卡片支持</span><span class="sxs-lookup"><span data-stu-id="555b8-165">Support for adaptive cards</span></span>
+> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-| <span data-ttu-id="555b8-166">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-166">Bots in Teams</span></span> | <span data-ttu-id="555b8-167">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-167">Messaging extensions</span></span>  | <span data-ttu-id="555b8-168">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-168">Connectors</span></span> | <span data-ttu-id="555b8-169">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-169">Bot Framework</span></span> |
+<span data-ttu-id="afb8e-179">自适应卡片是可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。</span><span class="sxs-lookup"><span data-stu-id="afb8e-179">An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields.</span></span> <span data-ttu-id="afb8e-180">有关详细信息，请参阅自适应[卡片 v1.2.0。](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)</span><span class="sxs-lookup"><span data-stu-id="afb8e-180">For more information, see [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).</span></span>
+
+### <a name="support-for-adaptive-cards"></a><span data-ttu-id="afb8e-181">自适应卡片支持</span><span class="sxs-lookup"><span data-stu-id="afb8e-181">Support for Adaptive Cards</span></span>
+
+<span data-ttu-id="afb8e-182">下表提供支持自适应卡片的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-182">The following table provides the features that support Adaptive Cards:</span></span>
+
+| <span data-ttu-id="afb8e-183">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-183">Bots in Teams</span></span> | <span data-ttu-id="afb8e-184">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-184">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-185">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-185">Connectors</span></span> | <span data-ttu-id="afb8e-186">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-186">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-170">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-170">✔</span></span> | <span data-ttu-id="555b8-171">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-171">✔</span></span> | <span data-ttu-id="555b8-172">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-172">✖</span></span> | <span data-ttu-id="555b8-173">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-173">✔</span></span> |
+| <span data-ttu-id="afb8e-187">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-187">✔</span></span> | <span data-ttu-id="afb8e-188">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-188">✔</span></span> | <span data-ttu-id="afb8e-189">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-189">✖</span></span> | <span data-ttu-id="afb8e-190">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-190">✔</span></span> |
 
 > [!NOTE]
-> * <span data-ttu-id="555b8-174">Teams平台支持 v1.2 或更早的自适应卡片功能。</span><span class="sxs-lookup"><span data-stu-id="555b8-174">Teams platform supports v1.2 or earlier of adaptive card features.</span></span>
-> * <span data-ttu-id="555b8-175">在游戏平台上的自适应卡片中不支持正面或破坏性Teams样式。</span><span class="sxs-lookup"><span data-stu-id="555b8-175">Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.</span></span>
-> * <span data-ttu-id="555b8-176">媒体元素当前在 Teams 平台上的自适应卡片中不受支持。</span><span class="sxs-lookup"><span data-stu-id="555b8-176">Media elements are currently not supported in Adaptive Cards on the Teams platform.</span></span>
+> * <span data-ttu-id="afb8e-191">Teams平台支持 v1.2 或更早的自适应卡片功能。</span><span class="sxs-lookup"><span data-stu-id="afb8e-191">Teams platform supports v1.2 or earlier of Adaptive Card features.</span></span>
+> * <span data-ttu-id="afb8e-192">在游戏平台上的自适应卡片中不支持正面或破坏性Teams样式。</span><span class="sxs-lookup"><span data-stu-id="afb8e-192">Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.</span></span>
+> * <span data-ttu-id="afb8e-193">媒体元素当前在应用平台上的自适应卡片Teams支持。</span><span class="sxs-lookup"><span data-stu-id="afb8e-193">Media elements are currently not supported in Adaptive Card on the Teams platform.</span></span>
 
-### <a name="example-of-an-adaptive-card"></a><span data-ttu-id="555b8-177">自适应卡片示例</span><span class="sxs-lookup"><span data-stu-id="555b8-177">Example of an adaptive card</span></span>
+### <a name="example-of-adaptive-card"></a><span data-ttu-id="afb8e-194">自适应卡片示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-194">Example of Adaptive Card</span></span>
 
 ![自适应卡片示例](~/assets/images/cards/adaptivecard.png)
+
+<span data-ttu-id="afb8e-196">以下代码显示了自适应卡片的示例：</span><span class="sxs-lookup"><span data-stu-id="afb8e-196">The following code shows an example of an Adaptive Card:</span></span>
 
 ```json
 {
@@ -222,37 +249,45 @@ ms.locfileid: "52994383"
 }
 ```
 
-#### <a name="additional-information-on-adaptive-cards"></a><span data-ttu-id="555b8-179">自适应卡片的其他信息</span><span class="sxs-lookup"><span data-stu-id="555b8-179">Additional information on adaptive cards</span></span>
+#### <a name="additional-information-on-adaptive-cards"></a><span data-ttu-id="afb8e-197">自适应卡片的其他信息</span><span class="sxs-lookup"><span data-stu-id="afb8e-197">Additional information on Adaptive Cards</span></span>
 
-<span data-ttu-id="555b8-180">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="555b8-180">Bot Framework reference:</span></span>
+<span data-ttu-id="afb8e-198">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="afb8e-198">Bot Framework reference:</span></span>
 
-* [<span data-ttu-id="555b8-181">自适应卡片Node.js</span><span class="sxs-lookup"><span data-stu-id="555b8-181">Adaptive cards Node.js</span></span>](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-* [<span data-ttu-id="555b8-182">自适应卡片 C#</span><span class="sxs-lookup"><span data-stu-id="555b8-182">Adaptive card C#</span></span>](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+* [<span data-ttu-id="afb8e-199">自适应卡片节点</span><span class="sxs-lookup"><span data-stu-id="afb8e-199">Adaptive Cards Node</span></span>](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [<span data-ttu-id="afb8e-200">自适应卡片 C#</span><span class="sxs-lookup"><span data-stu-id="afb8e-200">Adaptive Card C#</span></span>](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
-## <a name="hero-card"></a><span data-ttu-id="555b8-183">Hero card</span><span class="sxs-lookup"><span data-stu-id="555b8-183">Hero card</span></span>
+<span data-ttu-id="afb8e-201">你现在可以使用一张 hero card，这是一种用于直观突出显示潜在用户选择的多用途卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-201">You can now work with a hero card, which is a multipurpose card used to visually highlight a potential user selection.</span></span>
 
-<span data-ttu-id="555b8-184">通常包含单个大图像、一个或多个按钮和文本的卡片。</span><span class="sxs-lookup"><span data-stu-id="555b8-184">A card that typically contains a single large image, one or more buttons, and text.</span></span>
+## <a name="hero-card"></a><span data-ttu-id="afb8e-202">Hero card</span><span class="sxs-lookup"><span data-stu-id="afb8e-202">Hero card</span></span>
 
-### <a name="support-for-hero-cards"></a><span data-ttu-id="555b8-185">支持人物卡片</span><span class="sxs-lookup"><span data-stu-id="555b8-185">Support for hero cards</span></span>
+<span data-ttu-id="afb8e-203">通常包含单个大图像、一个或多个按钮和文本的卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-203">A card that typically contains a single large image, one or more buttons, and text.</span></span>
 
-| <span data-ttu-id="555b8-186">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-186">Bots in Teams</span></span> | <span data-ttu-id="555b8-187">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-187">Messaging extensions</span></span>  | <span data-ttu-id="555b8-188">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-188">Connectors</span></span> | <span data-ttu-id="555b8-189">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-189">Bot Framework</span></span> |
+### <a name="support-for-hero-cards"></a><span data-ttu-id="afb8e-204">支持人物卡片</span><span class="sxs-lookup"><span data-stu-id="afb8e-204">Support for hero cards</span></span>
+
+<span data-ttu-id="afb8e-205">下表提供了支持人物卡片的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-205">The following table provides the features that support hero cards:</span></span>
+
+| <span data-ttu-id="afb8e-206">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-206">Bots in Teams</span></span> | <span data-ttu-id="afb8e-207">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-207">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-208">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-208">Connectors</span></span> | <span data-ttu-id="afb8e-209">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-209">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-190">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-190">✔</span></span> | <span data-ttu-id="555b8-191">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-191">✔</span></span> | <span data-ttu-id="555b8-192">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-192">✖</span></span> | <span data-ttu-id="555b8-193">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-193">✔</span></span> |
+| <span data-ttu-id="afb8e-210">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-210">✔</span></span> | <span data-ttu-id="afb8e-211">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-211">✔</span></span> | <span data-ttu-id="afb8e-212">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-212">✖</span></span> | <span data-ttu-id="afb8e-213">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-213">✔</span></span> |
 
-### <a name="properties-of-a-hero-card"></a><span data-ttu-id="555b8-194">Hero 卡片的属性</span><span class="sxs-lookup"><span data-stu-id="555b8-194">Properties of a hero card</span></span>
+### <a name="properties-of-a-hero-card"></a><span data-ttu-id="afb8e-214">Hero 卡片的属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-214">Properties of a hero card</span></span>
 
-| <span data-ttu-id="555b8-195">属性</span><span class="sxs-lookup"><span data-stu-id="555b8-195">Property</span></span> | <span data-ttu-id="555b8-196">类型</span><span class="sxs-lookup"><span data-stu-id="555b8-196">Type</span></span>  | <span data-ttu-id="555b8-197">说明</span><span class="sxs-lookup"><span data-stu-id="555b8-197">Description</span></span> |
+<span data-ttu-id="afb8e-215">下表提供 Hero 卡片的属性：</span><span class="sxs-lookup"><span data-stu-id="afb8e-215">The following table provides the properties of a hero card:</span></span>
+
+| <span data-ttu-id="afb8e-216">属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-216">Property</span></span> | <span data-ttu-id="afb8e-217">类型</span><span class="sxs-lookup"><span data-stu-id="afb8e-217">Type</span></span>  | <span data-ttu-id="afb8e-218">说明</span><span class="sxs-lookup"><span data-stu-id="afb8e-218">Description</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="555b8-198">title</span><span class="sxs-lookup"><span data-stu-id="555b8-198">title</span></span> | <span data-ttu-id="555b8-199">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-199">Rich text</span></span> | <span data-ttu-id="555b8-200">卡片的标题。</span><span class="sxs-lookup"><span data-stu-id="555b8-200">Title of the card.</span></span> <span data-ttu-id="555b8-201">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="555b8-201">Maximum 2 lines.</span></span> |
-| <span data-ttu-id="555b8-202">subtitle</span><span class="sxs-lookup"><span data-stu-id="555b8-202">subtitle</span></span> | <span data-ttu-id="555b8-203">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-203">Rich text</span></span> | <span data-ttu-id="555b8-204">卡片的副标题。</span><span class="sxs-lookup"><span data-stu-id="555b8-204">Subtitle of the card.</span></span> <span data-ttu-id="555b8-205">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="555b8-205">Maximum 2 lines.</span></span>|
-| <span data-ttu-id="555b8-206">text</span><span class="sxs-lookup"><span data-stu-id="555b8-206">text</span></span> | <span data-ttu-id="555b8-207">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-207">Rich text</span></span> | <span data-ttu-id="555b8-208">文本显示在副标题下。</span><span class="sxs-lookup"><span data-stu-id="555b8-208">Text appears under the subtitle.</span></span> <span data-ttu-id="555b8-209">有关格式设置选项，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。</span><span class="sxs-lookup"><span data-stu-id="555b8-209">For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).</span></span> |
-| <span data-ttu-id="555b8-210">images</span><span class="sxs-lookup"><span data-stu-id="555b8-210">images</span></span> | <span data-ttu-id="555b8-211">图像数组</span><span class="sxs-lookup"><span data-stu-id="555b8-211">Array of images</span></span> | <span data-ttu-id="555b8-212">显示在卡片顶部的图像。</span><span class="sxs-lookup"><span data-stu-id="555b8-212">Image displayed at the top of the card.</span></span> <span data-ttu-id="555b8-213">纵横比 16：9。</span><span class="sxs-lookup"><span data-stu-id="555b8-213">Aspect ratio 16:9.</span></span> |
-| <span data-ttu-id="555b8-214">按钮</span><span class="sxs-lookup"><span data-stu-id="555b8-214">buttons</span></span> | <span data-ttu-id="555b8-215">操作对象数组</span><span class="sxs-lookup"><span data-stu-id="555b8-215">Array of action objects</span></span> | <span data-ttu-id="555b8-216">适用于当前卡片的操作集。</span><span class="sxs-lookup"><span data-stu-id="555b8-216">Set of actions applicable to the current card.</span></span> <span data-ttu-id="555b8-217">最大值 6。</span><span class="sxs-lookup"><span data-stu-id="555b8-217">Maximum 6.</span></span> |
-| <span data-ttu-id="555b8-218">点击</span><span class="sxs-lookup"><span data-stu-id="555b8-218">tap</span></span> | <span data-ttu-id="555b8-219">Action 对象</span><span class="sxs-lookup"><span data-stu-id="555b8-219">Action object</span></span> | <span data-ttu-id="555b8-220">当用户点击卡片本身时激活。</span><span class="sxs-lookup"><span data-stu-id="555b8-220">Activated when the user taps on the card itself.</span></span> |
+| <span data-ttu-id="afb8e-219">title</span><span class="sxs-lookup"><span data-stu-id="afb8e-219">title</span></span> | <span data-ttu-id="afb8e-220">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-220">Rich text</span></span> | <span data-ttu-id="afb8e-221">卡片的标题。</span><span class="sxs-lookup"><span data-stu-id="afb8e-221">Title of the card.</span></span> <span data-ttu-id="afb8e-222">最多两行。</span><span class="sxs-lookup"><span data-stu-id="afb8e-222">Maximum two lines.</span></span> |
+| <span data-ttu-id="afb8e-223">subtitle</span><span class="sxs-lookup"><span data-stu-id="afb8e-223">subtitle</span></span> | <span data-ttu-id="afb8e-224">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-224">Rich text</span></span> | <span data-ttu-id="afb8e-225">卡片的副标题。</span><span class="sxs-lookup"><span data-stu-id="afb8e-225">Subtitle of the card.</span></span> <span data-ttu-id="afb8e-226">最多两行。</span><span class="sxs-lookup"><span data-stu-id="afb8e-226">Maximum two lines.</span></span>|
+| <span data-ttu-id="afb8e-227">text</span><span class="sxs-lookup"><span data-stu-id="afb8e-227">text</span></span> | <span data-ttu-id="afb8e-228">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-228">Rich text</span></span> | <span data-ttu-id="afb8e-229">文本显示在副标题下。</span><span class="sxs-lookup"><span data-stu-id="afb8e-229">Text appears under the subtitle.</span></span> <span data-ttu-id="afb8e-230">有关格式设置选项，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-230">For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).</span></span> |
+| <span data-ttu-id="afb8e-231">images</span><span class="sxs-lookup"><span data-stu-id="afb8e-231">images</span></span> | <span data-ttu-id="afb8e-232">图像数组</span><span class="sxs-lookup"><span data-stu-id="afb8e-232">Array of images</span></span> | <span data-ttu-id="afb8e-233">显示在卡片顶部的图像。</span><span class="sxs-lookup"><span data-stu-id="afb8e-233">Image displayed at the top of the card.</span></span> <span data-ttu-id="afb8e-234">纵横比 16：9。</span><span class="sxs-lookup"><span data-stu-id="afb8e-234">Aspect ratio 16:9.</span></span> |
+| <span data-ttu-id="afb8e-235">按钮</span><span class="sxs-lookup"><span data-stu-id="afb8e-235">buttons</span></span> | <span data-ttu-id="afb8e-236">操作对象数组</span><span class="sxs-lookup"><span data-stu-id="afb8e-236">Array of action objects</span></span> | <span data-ttu-id="afb8e-237">适用于当前卡片的操作集。</span><span class="sxs-lookup"><span data-stu-id="afb8e-237">Set of actions applicable to the current card.</span></span> <span data-ttu-id="afb8e-238">最多六个。</span><span class="sxs-lookup"><span data-stu-id="afb8e-238">Maximum six.</span></span> |
+| <span data-ttu-id="afb8e-239">点击</span><span class="sxs-lookup"><span data-stu-id="afb8e-239">tap</span></span> | <span data-ttu-id="afb8e-240">Action 对象</span><span class="sxs-lookup"><span data-stu-id="afb8e-240">Action object</span></span> | <span data-ttu-id="afb8e-241">当用户点击卡片本身时激活。</span><span class="sxs-lookup"><span data-stu-id="afb8e-241">Activated when the user taps on the card itself.</span></span> |
 
-### <a name="example-of-a-hero-card"></a><span data-ttu-id="555b8-221">Hero 卡片示例</span><span class="sxs-lookup"><span data-stu-id="555b8-221">Example of a hero card</span></span>
+### <a name="example-of-a-hero-card"></a><span data-ttu-id="afb8e-242">Hero 卡片示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-242">Example of a hero card</span></span>
 
 ![Hero 卡片示例](~/assets/images/cards/hero.png)
+
+<span data-ttu-id="afb8e-244">以下代码显示了一个展示卡片的示例：</span><span class="sxs-lookup"><span data-stu-id="afb8e-244">The following code shows an example of a hero card:</span></span>
 
 ```json
 {
@@ -283,32 +318,38 @@ ms.locfileid: "52994383"
 
 ```
 
-### <a name="additional-information-on-hero-cards"></a><span data-ttu-id="555b8-223">有关 hero cards 的其他信息</span><span class="sxs-lookup"><span data-stu-id="555b8-223">Additional information on hero cards</span></span>
+### <a name="additional-information-on-hero-cards"></a><span data-ttu-id="afb8e-245">有关 hero cards 的其他信息</span><span class="sxs-lookup"><span data-stu-id="afb8e-245">Additional information on hero cards</span></span>
 
-<span data-ttu-id="555b8-224">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="555b8-224">Bot Framework reference:</span></span>
+<span data-ttu-id="afb8e-246">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="afb8e-246">Bot Framework reference:</span></span>
 
-* [<span data-ttu-id="555b8-225">Hero card Node.js</span><span class="sxs-lookup"><span data-stu-id="555b8-225">Hero card Node.js</span></span>](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
-* [<span data-ttu-id="555b8-226">Hero card C#</span><span class="sxs-lookup"><span data-stu-id="555b8-226">Hero card C#</span></span>](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
+* [<span data-ttu-id="afb8e-247">Hero card Node.js</span><span class="sxs-lookup"><span data-stu-id="afb8e-247">Hero card Node.js</span></span>](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [<span data-ttu-id="afb8e-248">Hero card C#</span><span class="sxs-lookup"><span data-stu-id="afb8e-248">Hero card C#</span></span>](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
-## <a name="list-card"></a><span data-ttu-id="555b8-227">列表卡</span><span class="sxs-lookup"><span data-stu-id="555b8-227">List card</span></span>
+## <a name="list-card"></a><span data-ttu-id="afb8e-249">列表卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-249">List card</span></span>
 
-<span data-ttu-id="555b8-228">列表卡片已由列表Teams，以提供列表集合可以提供的功能之外的功能。</span><span class="sxs-lookup"><span data-stu-id="555b8-228">The list card has been added by Teams to provide functions beyond what the list collection can provide.</span></span> <span data-ttu-id="555b8-229">列表卡片提供项的滚动列表。</span><span class="sxs-lookup"><span data-stu-id="555b8-229">The list card provides a scrolling list of items.</span></span>
+<span data-ttu-id="afb8e-250">列表卡片已由列表Teams，以提供列表集合可以提供的功能之外的功能。</span><span class="sxs-lookup"><span data-stu-id="afb8e-250">The list card has been added by Teams to provide functions beyond what the list collection can provide.</span></span> <span data-ttu-id="afb8e-251">列表卡片提供项的滚动列表。</span><span class="sxs-lookup"><span data-stu-id="afb8e-251">The list card provides a scrolling list of items.</span></span>
 
-### <a name="support-for-list-cards"></a><span data-ttu-id="555b8-230">支持列表卡</span><span class="sxs-lookup"><span data-stu-id="555b8-230">Support for list cards</span></span>
+### <a name="support-for-list-cards"></a><span data-ttu-id="afb8e-252">支持列表卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-252">Support for list cards</span></span>
 
-| <span data-ttu-id="555b8-231">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-231">Bots in Teams</span></span> | <span data-ttu-id="555b8-232">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-232">Messaging extensions</span></span>  | <span data-ttu-id="555b8-233">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-233">Connectors</span></span> | <span data-ttu-id="555b8-234">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-234">Bot Framework</span></span> |
+<span data-ttu-id="afb8e-253">下表提供了支持列表卡片的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-253">The following table provides the features that support list cards:</span></span>
+
+| <span data-ttu-id="afb8e-254">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-254">Bots in Teams</span></span> | <span data-ttu-id="afb8e-255">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-255">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-256">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-256">Connectors</span></span> | <span data-ttu-id="afb8e-257">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-257">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-235">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-235">✔</span></span> | <span data-ttu-id="555b8-236">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-236">✖</span></span> | <span data-ttu-id="555b8-237">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-237">✖</span></span> |<span data-ttu-id="555b8-238">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-238">✔</span></span> |
+| <span data-ttu-id="afb8e-258">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-258">✔</span></span> | <span data-ttu-id="afb8e-259">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-259">✖</span></span> | <span data-ttu-id="afb8e-260">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-260">✖</span></span> |<span data-ttu-id="afb8e-261">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-261">✔</span></span> |
 
-### <a name="properties-of-a-list-card"></a><span data-ttu-id="555b8-239">列表卡片的属性</span><span class="sxs-lookup"><span data-stu-id="555b8-239">Properties of a list card</span></span>
+### <a name="properties-of-a-list-card"></a><span data-ttu-id="afb8e-262">列表卡片的属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-262">Properties of a list card</span></span>
 
-| <span data-ttu-id="555b8-240">属性</span><span class="sxs-lookup"><span data-stu-id="555b8-240">Property</span></span> | <span data-ttu-id="555b8-241">类型</span><span class="sxs-lookup"><span data-stu-id="555b8-241">Type</span></span>  | <span data-ttu-id="555b8-242">说明</span><span class="sxs-lookup"><span data-stu-id="555b8-242">Description</span></span> |
+<span data-ttu-id="afb8e-263">下表提供列表卡片的属性：</span><span class="sxs-lookup"><span data-stu-id="afb8e-263">The following table provides the properties of a list card:</span></span>
+
+| <span data-ttu-id="afb8e-264">属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-264">Property</span></span> | <span data-ttu-id="afb8e-265">类型</span><span class="sxs-lookup"><span data-stu-id="afb8e-265">Type</span></span>  | <span data-ttu-id="afb8e-266">说明</span><span class="sxs-lookup"><span data-stu-id="afb8e-266">Description</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="555b8-243">title</span><span class="sxs-lookup"><span data-stu-id="555b8-243">title</span></span> | <span data-ttu-id="555b8-244">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-244">Rich text</span></span> | <span data-ttu-id="555b8-245">卡片的标题。</span><span class="sxs-lookup"><span data-stu-id="555b8-245">Title of the card.</span></span> <span data-ttu-id="555b8-246">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="555b8-246">Maximum 2 lines.</span></span>|
-| <span data-ttu-id="555b8-247">项目</span><span class="sxs-lookup"><span data-stu-id="555b8-247">items</span></span> | <span data-ttu-id="555b8-248">列表项数组</span><span class="sxs-lookup"><span data-stu-id="555b8-248">Array of list items</span></span> ||
-| <span data-ttu-id="555b8-249">按钮</span><span class="sxs-lookup"><span data-stu-id="555b8-249">buttons</span></span> | <span data-ttu-id="555b8-250">操作对象数组</span><span class="sxs-lookup"><span data-stu-id="555b8-250">Array of action objects</span></span> | <span data-ttu-id="555b8-251">适用于当前卡片的操作集。</span><span class="sxs-lookup"><span data-stu-id="555b8-251">Set of actions applicable to the current card.</span></span> <span data-ttu-id="555b8-252">最大值 6。</span><span class="sxs-lookup"><span data-stu-id="555b8-252">Maximum 6.</span></span> |
+| <span data-ttu-id="afb8e-267">title</span><span class="sxs-lookup"><span data-stu-id="afb8e-267">title</span></span> | <span data-ttu-id="afb8e-268">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-268">Rich text</span></span> | <span data-ttu-id="afb8e-269">卡片的标题。</span><span class="sxs-lookup"><span data-stu-id="afb8e-269">Title of the card.</span></span> <span data-ttu-id="afb8e-270">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="afb8e-270">Maximum 2 lines.</span></span>|
+| <span data-ttu-id="afb8e-271">项目</span><span class="sxs-lookup"><span data-stu-id="afb8e-271">items</span></span> | <span data-ttu-id="afb8e-272">列表项数组</span><span class="sxs-lookup"><span data-stu-id="afb8e-272">Array of list items</span></span> | <span data-ttu-id="afb8e-273">适用于卡片的项目集。</span><span class="sxs-lookup"><span data-stu-id="afb8e-273">Set of items applicable to the card.</span></span>|
+| <span data-ttu-id="afb8e-274">按钮</span><span class="sxs-lookup"><span data-stu-id="afb8e-274">buttons</span></span> | <span data-ttu-id="afb8e-275">操作对象数组</span><span class="sxs-lookup"><span data-stu-id="afb8e-275">Array of action objects</span></span> | <span data-ttu-id="afb8e-276">适用于当前卡片的操作集。</span><span class="sxs-lookup"><span data-stu-id="afb8e-276">Set of actions applicable to the current card.</span></span> <span data-ttu-id="afb8e-277">最大值 6。</span><span class="sxs-lookup"><span data-stu-id="afb8e-277">Maximum 6.</span></span> |
 
-### <a name="example-of-a-list-card"></a><span data-ttu-id="555b8-253">列表卡片示例</span><span class="sxs-lookup"><span data-stu-id="555b8-253">Example of a list card</span></span>
+### <a name="example-of-a-list-card"></a><span data-ttu-id="afb8e-278">列表卡片示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-278">Example of a list card</span></span>
+
+<span data-ttu-id="afb8e-279">以下代码显示了列表卡片的示例：</span><span class="sxs-lookup"><span data-stu-id="afb8e-279">The following code shows an example of a list card:</span></span>
 
 ```json
 {
@@ -362,59 +403,66 @@ ms.locfileid: "52994383"
 }
 ```
 
-## <a name="office-365-connector-card"></a><span data-ttu-id="555b8-254">Office 365连接器卡</span><span class="sxs-lookup"><span data-stu-id="555b8-254">Office 365 connector card</span></span>
+## <a name="office-365-connector-card"></a><span data-ttu-id="afb8e-280">Office 365连接器卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-280">Office 365 connector card</span></span>
 
-<span data-ttu-id="555b8-255">自动Office 365支持自动Teams，而不是 Bot Framework。</span><span class="sxs-lookup"><span data-stu-id="555b8-255">The Office 365 connector card is supported in Teams, not in Bot Framework.</span></span> <span data-ttu-id="555b8-256">此卡片提供具有多个分区、字段、图像和操作的灵活性布局。</span><span class="sxs-lookup"><span data-stu-id="555b8-256">This card provides a flexible layout with multiple sections, fields, images, and actions.</span></span> <span data-ttu-id="555b8-257">此卡封装连接器卡，以便机器人可以使用它。</span><span class="sxs-lookup"><span data-stu-id="555b8-257">This card encapsulates a connector card so that it can be used by bots.</span></span> <span data-ttu-id="555b8-258">有关连接器卡和 O365 卡之间的差异，请参阅连接器卡[上的Office 365注释](#notes-on-the-office-365-connector-card)。</span><span class="sxs-lookup"><span data-stu-id="555b8-258">For differences between connector cards and the O365 card, see [Notes on the Office 365 connector card](#notes-on-the-office-365-connector-card).</span></span>
+<span data-ttu-id="afb8e-281">可以使用提供灵活布局的 Office 365 连接器卡，这是获取有用信息的一种很好的方法。</span><span class="sxs-lookup"><span data-stu-id="afb8e-281">You can work with an Office 365 Connector card that provides a flexible layout and is a great way to get useful information.</span></span> <span data-ttu-id="afb8e-282">自动Office 365支持自动Teams，而不是 Bot Framework。</span><span class="sxs-lookup"><span data-stu-id="afb8e-282">The Office 365 connector card is supported in Teams, not in Bot Framework.</span></span> <span data-ttu-id="afb8e-283">此卡片提供具有多个分区、字段、图像和操作的灵活性布局。</span><span class="sxs-lookup"><span data-stu-id="afb8e-283">This card provides a flexible layout with multiple sections, fields, images, and actions.</span></span> <span data-ttu-id="afb8e-284">此卡包含连接器卡，以便机器人可以使用它。</span><span class="sxs-lookup"><span data-stu-id="afb8e-284">This card contains a connector card so that it can be used by bots.</span></span> <span data-ttu-id="afb8e-285">有关连接器卡和连接器Office 365卡之间的差异，请参阅连接器Office 365[卡上的其他信息](#additional-information-on-the-office-365-connector-card)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-285">For differences between connector cards and the Office 365 Connector card, see [Additional information on the Office 365 Connector card](#additional-information-on-the-office-365-connector-card).</span></span>
 
-### <a name="support-for-office-365-connector-cards"></a><span data-ttu-id="555b8-259">支持 Office 365 连接器卡</span><span class="sxs-lookup"><span data-stu-id="555b8-259">Support for Office 365 connector cards</span></span>
+### <a name="support-for-office-365-connector-cards"></a><span data-ttu-id="afb8e-286">支持 Office 365 连接器卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-286">Support for Office 365 Connector cards</span></span>
 
-| <span data-ttu-id="555b8-260">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-260">Bots in Teams</span></span> | <span data-ttu-id="555b8-261">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-261">Messaging extensions</span></span>  | <span data-ttu-id="555b8-262">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-262">Connectors</span></span> | <span data-ttu-id="555b8-263">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-263">Bot Framework</span></span> |
+<span data-ttu-id="afb8e-287">下表提供了支持连接器Office 365的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-287">The following table provides the features that support Office 365 Connector cards:</span></span>
+
+| <span data-ttu-id="afb8e-288">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-288">Bots in Teams</span></span> | <span data-ttu-id="afb8e-289">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-289">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-290">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-290">Connectors</span></span> | <span data-ttu-id="afb8e-291">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-291">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-264">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-264">✔</span></span> | <span data-ttu-id="555b8-265">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-265">✔</span></span> | <span data-ttu-id="555b8-266">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-266">✔</span></span> | <span data-ttu-id="555b8-267">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-267">✖</span></span> |
+| <span data-ttu-id="afb8e-292">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-292">✔</span></span> | <span data-ttu-id="afb8e-293">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-293">✔</span></span> | <span data-ttu-id="afb8e-294">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-294">✔</span></span> | <span data-ttu-id="afb8e-295">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-295">✖</span></span> |
 
-### <a name="properties-of-the-office-365-connector-card"></a><span data-ttu-id="555b8-268">连接器Office 365的属性</span><span class="sxs-lookup"><span data-stu-id="555b8-268">Properties of the Office 365 connector card</span></span>
+### <a name="properties-of-the-office-365-connector-card"></a><span data-ttu-id="afb8e-296">连接器Office 365的属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-296">Properties of the Office 365 Connector card</span></span>
 
-| <span data-ttu-id="555b8-269">属性</span><span class="sxs-lookup"><span data-stu-id="555b8-269">Property</span></span> | <span data-ttu-id="555b8-270">类型</span><span class="sxs-lookup"><span data-stu-id="555b8-270">Type</span></span>  | <span data-ttu-id="555b8-271">说明</span><span class="sxs-lookup"><span data-stu-id="555b8-271">Description</span></span> |
+<span data-ttu-id="afb8e-297">下表提供了连接器卡Office 365属性：</span><span class="sxs-lookup"><span data-stu-id="afb8e-297">The following table provides the properties of the Office 365 connector card:</span></span>
+
+| <span data-ttu-id="afb8e-298">属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-298">Property</span></span> | <span data-ttu-id="afb8e-299">类型</span><span class="sxs-lookup"><span data-stu-id="afb8e-299">Type</span></span>  | <span data-ttu-id="afb8e-300">说明</span><span class="sxs-lookup"><span data-stu-id="afb8e-300">Description</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="555b8-272">title</span><span class="sxs-lookup"><span data-stu-id="555b8-272">title</span></span> | <span data-ttu-id="555b8-273">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-273">Rich text</span></span> | <span data-ttu-id="555b8-274">卡片的标题。</span><span class="sxs-lookup"><span data-stu-id="555b8-274">Title of the card.</span></span> <span data-ttu-id="555b8-275">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="555b8-275">Maximum 2 lines.</span></span> |
-| <span data-ttu-id="555b8-276">摘要</span><span class="sxs-lookup"><span data-stu-id="555b8-276">summary</span></span> | <span data-ttu-id="555b8-277">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-277">Rich text</span></span> | <span data-ttu-id="555b8-278">卡片摘要。</span><span class="sxs-lookup"><span data-stu-id="555b8-278">Summary of the card.</span></span> <span data-ttu-id="555b8-279">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="555b8-279">Maximum 2 lines.</span></span> |
-| <span data-ttu-id="555b8-280">text</span><span class="sxs-lookup"><span data-stu-id="555b8-280">text</span></span> | <span data-ttu-id="555b8-281">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-281">Rich text</span></span> | <span data-ttu-id="555b8-282">文本显示在副标题下。</span><span class="sxs-lookup"><span data-stu-id="555b8-282">Text appears under the subtitle.</span></span> <span data-ttu-id="555b8-283">有关格式设置选项，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。</span><span class="sxs-lookup"><span data-stu-id="555b8-283">For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).</span></span> |
-| <span data-ttu-id="555b8-284">themeColor</span><span class="sxs-lookup"><span data-stu-id="555b8-284">themeColor</span></span> | <span data-ttu-id="555b8-285">十六进制字符串</span><span class="sxs-lookup"><span data-stu-id="555b8-285">HEX string</span></span> | <span data-ttu-id="555b8-286">替代应用程序清单中提供的 accentColor 的颜色。</span><span class="sxs-lookup"><span data-stu-id="555b8-286">Color that overrides the accentColor provided from the application manifest.</span></span> |
+| <span data-ttu-id="afb8e-301">title</span><span class="sxs-lookup"><span data-stu-id="afb8e-301">title</span></span> | <span data-ttu-id="afb8e-302">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-302">Rich text</span></span> | <span data-ttu-id="afb8e-303">卡片的标题。</span><span class="sxs-lookup"><span data-stu-id="afb8e-303">Title of the card.</span></span> <span data-ttu-id="afb8e-304">最多两行。</span><span class="sxs-lookup"><span data-stu-id="afb8e-304">Maximum two lines.</span></span> |
+| <span data-ttu-id="afb8e-305">摘要</span><span class="sxs-lookup"><span data-stu-id="afb8e-305">summary</span></span> | <span data-ttu-id="afb8e-306">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-306">Rich text</span></span> | <span data-ttu-id="afb8e-307">卡片摘要。</span><span class="sxs-lookup"><span data-stu-id="afb8e-307">Summary of the card.</span></span> <span data-ttu-id="afb8e-308">最多两行。</span><span class="sxs-lookup"><span data-stu-id="afb8e-308">Maximum two lines.</span></span> |
+| <span data-ttu-id="afb8e-309">text</span><span class="sxs-lookup"><span data-stu-id="afb8e-309">text</span></span> | <span data-ttu-id="afb8e-310">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-310">Rich text</span></span> | <span data-ttu-id="afb8e-311">文本显示在副标题下。</span><span class="sxs-lookup"><span data-stu-id="afb8e-311">Text appears under the subtitle.</span></span> <span data-ttu-id="afb8e-312">有关格式设置选项，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-312">For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).</span></span> |
+| <span data-ttu-id="afb8e-313">themeColor</span><span class="sxs-lookup"><span data-stu-id="afb8e-313">themeColor</span></span> | <span data-ttu-id="afb8e-314">十六进制字符串</span><span class="sxs-lookup"><span data-stu-id="afb8e-314">HEX string</span></span> | <span data-ttu-id="afb8e-315">替代应用程序清单 `accentColor` 中提供的颜色。</span><span class="sxs-lookup"><span data-stu-id="afb8e-315">Color that overrides the `accentColor` provided from the application manifest.</span></span> |
 
-### <a name="notes-on-the-office-365-connector-card"></a><span data-ttu-id="555b8-287">连接器卡Office 365备注</span><span class="sxs-lookup"><span data-stu-id="555b8-287">Notes on the Office 365 connector card</span></span>
+### <a name="additional-information-on-the-office-365-connector-card"></a><span data-ttu-id="afb8e-316">连接器卡上Office 365信息</span><span class="sxs-lookup"><span data-stu-id="afb8e-316">Additional information on the Office 365 Connector card</span></span>
 
-<span data-ttu-id="555b8-288">Office 365连接器卡在 Microsoft Teams中正常工作，包括[ActionCard 操作](/outlook/actionable-messages/card-reference#actioncard-action)。</span><span class="sxs-lookup"><span data-stu-id="555b8-288">Office 365 connector cards function properly in Microsoft Teams, including [ActionCard actions](/outlook/actionable-messages/card-reference#actioncard-action).</span></span>
+<span data-ttu-id="afb8e-317">Office 365连接器卡在连接器Microsoft Teams，包括[ `ActionCard` 操作](/outlook/actionable-messages/card-reference#actioncard-action)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-317">Office 365 Connector cards function properly in Microsoft Teams, including [`ActionCard` actions](/outlook/actionable-messages/card-reference#actioncard-action).</span></span>
 
-<span data-ttu-id="555b8-289">从连接器使用连接器卡和在机器人中使用连接器卡之间的一个重要区别是处理卡操作。</span><span class="sxs-lookup"><span data-stu-id="555b8-289">One important difference between using connector cards from a connector and using connector cards in your bot is the handling of card actions.</span></span>
+<span data-ttu-id="afb8e-318">在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。</span><span class="sxs-lookup"><span data-stu-id="afb8e-318">The important difference between using connector cards from a connector and using connector cards in your bot is the handling of card actions.</span></span> <span data-ttu-id="afb8e-319">下表列出了区别：</span><span class="sxs-lookup"><span data-stu-id="afb8e-319">The following table lists the difference:</span></span>
 
-* <span data-ttu-id="555b8-290">对于连接器，终结点通过 HTTP POST 接收卡有效负载。</span><span class="sxs-lookup"><span data-stu-id="555b8-290">For a connector, the endpoint receives the card payload through HTTP POST.</span></span>
-* <span data-ttu-id="555b8-291">对于自动程序，该操作将触发仅向自动程序发送操作 ID 和 `HttpPOST` `invoke` 正文的活动。</span><span class="sxs-lookup"><span data-stu-id="555b8-291">For a bot, the `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.</span></span>
+| <span data-ttu-id="afb8e-320">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-320">Connector</span></span> | <span data-ttu-id="afb8e-321">机器人</span><span class="sxs-lookup"><span data-stu-id="afb8e-321">Bot</span></span> |
+| --- | --- |
+| <span data-ttu-id="afb8e-322">终结点通过 HTTP POST 接收卡有效负载。</span><span class="sxs-lookup"><span data-stu-id="afb8e-322">The endpoint receives the card payload through HTTP POST.</span></span> | <span data-ttu-id="afb8e-323">`HttpPOST`该操作将触发 `invoke` 仅向自动程序发送操作 ID 和正文的活动。</span><span class="sxs-lookup"><span data-stu-id="afb8e-323">The `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.</span></span>|
 
-<span data-ttu-id="555b8-292">每个连接器卡最多可以显示 10 个部分，每个部分最多可以包含 5 个图像和 5 个操作。</span><span class="sxs-lookup"><span data-stu-id="555b8-292">Each connector card can display a maximum of ten sections, and each section can contain a maximum of five images and five actions.</span></span>
+<span data-ttu-id="afb8e-324">每个连接器卡最多可以显示 10 个部分，每个部分最多可以包含 5 个图像和 5 个操作。</span><span class="sxs-lookup"><span data-stu-id="afb8e-324">Each connector card can display a maximum of ten sections, and each section can contain a maximum of five images and five actions.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="555b8-293">邮件中不显示任何其他节、图像或操作。</span><span class="sxs-lookup"><span data-stu-id="555b8-293">Any additional sections, images, or actions in a message do not appear.</span></span>
+> <span data-ttu-id="afb8e-325">邮件中不显示任何其他节、图像或操作。</span><span class="sxs-lookup"><span data-stu-id="afb8e-325">Any additional sections, images, or actions in a message do not appear.</span></span>
 
-<span data-ttu-id="555b8-294">所有文本字段都支持 markdown 和 HTML。</span><span class="sxs-lookup"><span data-stu-id="555b8-294">All text fields support markdown and HTML.</span></span> <span data-ttu-id="555b8-295">您可以通过在邮件中设置 属性来控制使用 markdown 或 HTML `markdown` 的部分。</span><span class="sxs-lookup"><span data-stu-id="555b8-295">You can control which sections use markdown or HTML by setting the `markdown` property in a message.</span></span> <span data-ttu-id="555b8-296">默认情况下， `markdown` 设置为 `true` 。</span><span class="sxs-lookup"><span data-stu-id="555b8-296">By default, `markdown` is set to `true`.</span></span> <span data-ttu-id="555b8-297">如果要改为使用 HTML，请设置为 `markdown` `false` 。</span><span class="sxs-lookup"><span data-stu-id="555b8-297">If you want to use HTML instead, set `markdown` to `false`.</span></span>
+<span data-ttu-id="afb8e-326">所有文本字段都支持 Markdown 和 HTML。</span><span class="sxs-lookup"><span data-stu-id="afb8e-326">All text fields support Markdown and HTML.</span></span> <span data-ttu-id="afb8e-327">您可以通过在邮件中设置 属性来控制哪些部分使用 Markdown `markdown` 或 HTML。</span><span class="sxs-lookup"><span data-stu-id="afb8e-327">You can control which sections use Markdown or HTML by setting the `markdown` property in a message.</span></span> <span data-ttu-id="afb8e-328">默认情况下， `markdown` 设置为 `true` 。</span><span class="sxs-lookup"><span data-stu-id="afb8e-328">By default, `markdown` is set to `true`.</span></span> <span data-ttu-id="afb8e-329">如果要改为使用 HTML，请设置为 `markdown` `false` 。</span><span class="sxs-lookup"><span data-stu-id="afb8e-329">If you want to use HTML instead, set `markdown` to `false`.</span></span>
 
-<span data-ttu-id="555b8-298">如果指定 `themeColor` 属性，它将替代 `accentColor` 应用清单中的 属性。</span><span class="sxs-lookup"><span data-stu-id="555b8-298">If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.</span></span>
+<span data-ttu-id="afb8e-330">如果指定 `themeColor` 属性，它将替代 `accentColor` 应用清单中的 属性。</span><span class="sxs-lookup"><span data-stu-id="afb8e-330">If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.</span></span>
 
-<span data-ttu-id="555b8-299">若要指定 的呈现样式 `activityImage` ，可以按 `activityImageType` 如下方式设置：</span><span class="sxs-lookup"><span data-stu-id="555b8-299">To specify the rendering style for `activityImage`, you can set `activityImageType` as follows:</span></span>
+<span data-ttu-id="afb8e-331">若要指定 的呈现样式 `activityImage` ，可以如下 `activityImageType` 表所示进行设置：</span><span class="sxs-lookup"><span data-stu-id="afb8e-331">To specify the rendering style for `activityImage`, you can set `activityImageType` as shown in the following table:</span></span>
 
-| <span data-ttu-id="555b8-300">值</span><span class="sxs-lookup"><span data-stu-id="555b8-300">Value</span></span> | <span data-ttu-id="555b8-301">说明</span><span class="sxs-lookup"><span data-stu-id="555b8-301">Description</span></span> |
+| <span data-ttu-id="afb8e-332">值</span><span class="sxs-lookup"><span data-stu-id="afb8e-332">Value</span></span> | <span data-ttu-id="afb8e-333">说明</span><span class="sxs-lookup"><span data-stu-id="afb8e-333">Description</span></span> |
 | --- | --- |
-| `avatar` | <span data-ttu-id="555b8-302">默认值; `activityImage` 裁剪为圆形。</span><span class="sxs-lookup"><span data-stu-id="555b8-302">Default; `activityImage` is cropped as a circle.</span></span> |
-| `article` | <span data-ttu-id="555b8-303">`activityImage` 显示为矩形并保留其纵横比。</span><span class="sxs-lookup"><span data-stu-id="555b8-303">`activityImage` is displayed as a rectangle and retains its aspect ratio.</span></span> |
+| `avatar` | <span data-ttu-id="afb8e-334">默认值 `activityImage` ，裁剪为圆形。</span><span class="sxs-lookup"><span data-stu-id="afb8e-334">Default, `activityImage` is cropped as a circle.</span></span> |
+| `article` | <span data-ttu-id="afb8e-335">`activityImage` 显示为矩形并保留其纵横比。</span><span class="sxs-lookup"><span data-stu-id="afb8e-335">`activityImage` is displayed as a rectangle and retains its aspect ratio.</span></span> |
 
-<span data-ttu-id="555b8-304">有关连接器卡属性的所有其他详细信息，请参阅 [可操作邮件卡参考](/outlook/actionable-messages/card-reference)。</span><span class="sxs-lookup"><span data-stu-id="555b8-304">For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference).</span></span> <span data-ttu-id="555b8-305">当前不支持的唯Microsoft Teams连接器卡属性如下所示：</span><span class="sxs-lookup"><span data-stu-id="555b8-305">The only connector card properties that Microsoft Teams does not currently support are as follows:</span></span>
+<span data-ttu-id="afb8e-336">有关连接器卡属性的所有其他详细信息，请参阅 [可操作邮件卡参考](/outlook/actionable-messages/card-reference)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-336">For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference).</span></span> <span data-ttu-id="afb8e-337">当前不支持的唯Teams连接器卡属性如下所示：</span><span class="sxs-lookup"><span data-stu-id="afb8e-337">The only connector card properties that Teams does not currently support are as follows:</span></span>
 
 * `heroImage`
 * `hideOriginalBody`
-* <span data-ttu-id="555b8-306">`startGroup`始终视为 `true` 在Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-306">`startGroup` always treated as `true` in Teams</span></span>
+* <span data-ttu-id="afb8e-338">`startGroup`始终视为 `true` 在Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-338">`startGroup` always treated as `true` in Teams</span></span>
 * `originator`
 * `correlationId`
 
-### <a name="example-of-an-office-365-connector-card"></a><span data-ttu-id="555b8-307">连接Office 365示例</span><span class="sxs-lookup"><span data-stu-id="555b8-307">Example of an Office 365 connector card</span></span>
+### <a name="example-of-an-office-365-connector-card"></a><span data-ttu-id="afb8e-339">连接器Office 365示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-339">Example of an Office 365 Connector card</span></span>
+
+<span data-ttu-id="afb8e-340">以下代码显示了连接器Office 365示例：</span><span class="sxs-lookup"><span data-stu-id="afb8e-340">The following code shows an example of an Office 365 Connector card:</span></span>
 
 ```json
 {
@@ -477,19 +525,23 @@ ms.locfileid: "52994383"
 }
 ```
 
-## <a name="receipt-card"></a><span data-ttu-id="555b8-308">收据卡</span><span class="sxs-lookup"><span data-stu-id="555b8-308">Receipt card</span></span>
+## <a name="receipt-card"></a><span data-ttu-id="afb8e-341">收据卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-341">Receipt card</span></span>
 
-<span data-ttu-id="555b8-309">Teams支持收据卡。</span><span class="sxs-lookup"><span data-stu-id="555b8-309">Teams supports receipt card.</span></span> <span data-ttu-id="555b8-310">它是使机器人能够为用户提供收据的卡片。</span><span class="sxs-lookup"><span data-stu-id="555b8-310">It is a card that enables a bot to provide a receipt to the user.</span></span> <span data-ttu-id="555b8-311">它通常包含要包含在收据上的项目列表，如税务和总信息。</span><span class="sxs-lookup"><span data-stu-id="555b8-311">It typically contains the list of items to include on the receipt, such as tax and total information.</span></span>
+<span data-ttu-id="afb8e-342">Teams支持收据卡。</span><span class="sxs-lookup"><span data-stu-id="afb8e-342">Teams supports receipt card.</span></span> <span data-ttu-id="afb8e-343">它是使机器人能够为用户提供收据的卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-343">It is a card that enables a bot to provide a receipt to the user.</span></span> <span data-ttu-id="afb8e-344">它通常包含要包含在收据上的项目列表，如税务和总信息。</span><span class="sxs-lookup"><span data-stu-id="afb8e-344">It typically contains the list of items to include on the receipt, such as tax and total information.</span></span>
 
-### <a name="support-for-receipt-cards"></a><span data-ttu-id="555b8-312">支持收据卡</span><span class="sxs-lookup"><span data-stu-id="555b8-312">Support for receipt cards</span></span>
+### <a name="support-for-receipt-cards"></a><span data-ttu-id="afb8e-345">支持收据卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-345">Support for receipt cards</span></span>
 
-| <span data-ttu-id="555b8-313">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-313">Bots in Teams</span></span> | <span data-ttu-id="555b8-314">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-314">Messaging extensions</span></span>  | <span data-ttu-id="555b8-315">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-315">Connectors</span></span> | <span data-ttu-id="555b8-316">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-316">Bot Framework</span></span> |
+<span data-ttu-id="afb8e-346">下表提供了支持收据卡的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-346">The following table provides the features that support receipt cards:</span></span>
+
+| <span data-ttu-id="afb8e-347">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-347">Bots in Teams</span></span> | <span data-ttu-id="afb8e-348">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-348">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-349">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-349">Connectors</span></span> | <span data-ttu-id="afb8e-350">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-350">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-317">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-317">✔</span></span> | <span data-ttu-id="555b8-318">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-318">✔</span></span> | <span data-ttu-id="555b8-319">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-319">✖</span></span> | <span data-ttu-id="555b8-320">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-320">✔</span></span> |
+| <span data-ttu-id="afb8e-351">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-351">✔</span></span> | <span data-ttu-id="afb8e-352">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-352">✔</span></span> | <span data-ttu-id="afb8e-353">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-353">✖</span></span> | <span data-ttu-id="afb8e-354">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-354">✔</span></span> |
 
-### <a name="example-of-a-receipt-card"></a><span data-ttu-id="555b8-321">收据卡示例</span><span class="sxs-lookup"><span data-stu-id="555b8-321">Example of a receipt card</span></span>
+### <a name="example-of-a-receipt-card"></a><span data-ttu-id="afb8e-355">收据卡示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-355">Example of a receipt card</span></span>
 
 ![收据卡示例](~/assets/images/cards/receipt.png)
+
+<span data-ttu-id="afb8e-357">以下代码显示收据卡的示例：</span><span class="sxs-lookup"><span data-stu-id="afb8e-357">The following code shows an example of a receipt card:</span></span>
 
 ```json
 {
@@ -538,56 +590,64 @@ ms.locfileid: "52994383"
 }
 ```
 
-### <a name="additional-information-on-receipt-cards"></a><span data-ttu-id="555b8-323">收据卡上的其他信息</span><span class="sxs-lookup"><span data-stu-id="555b8-323">Additional information on receipt cards</span></span>
+### <a name="additional-information-on-receipt-cards"></a><span data-ttu-id="afb8e-358">收据卡上的其他信息</span><span class="sxs-lookup"><span data-stu-id="afb8e-358">Additional information on receipt cards</span></span>
 
-<span data-ttu-id="555b8-324">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="555b8-324">Bot Framework reference:</span></span>
+<span data-ttu-id="afb8e-359">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="afb8e-359">Bot Framework reference:</span></span>
 
-* [<span data-ttu-id="555b8-325">收据卡Node.js</span><span class="sxs-lookup"><span data-stu-id="555b8-325">Receipt card Node.js</span></span>](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
-* [<span data-ttu-id="555b8-326">收据卡 C#</span><span class="sxs-lookup"><span data-stu-id="555b8-326">Receipt card C#</span></span>](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [<span data-ttu-id="afb8e-360">收据卡Node.js</span><span class="sxs-lookup"><span data-stu-id="afb8e-360">Receipt card Node.js</span></span>](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [<span data-ttu-id="afb8e-361">收据卡 C#</span><span class="sxs-lookup"><span data-stu-id="afb8e-361">Receipt card C#</span></span>](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## <a name="signin-card"></a><span data-ttu-id="555b8-327">登录卡</span><span class="sxs-lookup"><span data-stu-id="555b8-327">Signin card</span></span>
+## <a name="signin-card"></a><span data-ttu-id="afb8e-362">登录卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-362">Signin card</span></span>
 
-<span data-ttu-id="555b8-328">登录卡使机器人可以请求用户登录。</span><span class="sxs-lookup"><span data-stu-id="555b8-328">Signin card enables a bot to request a user to sign in.</span></span> <span data-ttu-id="555b8-329">在自动Teams中支持它，其形式与 Bot Framework 中略有不同。</span><span class="sxs-lookup"><span data-stu-id="555b8-329">It is supported in Teams in a slightly different form than is found in the Bot Framework.</span></span> <span data-ttu-id="555b8-330">自动Teams中的登录卡类似于 Bot 框架中的登录卡，只不过 Teams 中的登录卡仅支持两个操作： 和 `signin` `openUrl` 。</span><span class="sxs-lookup"><span data-stu-id="555b8-330">The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions: `signin` and `openUrl`.</span></span>
+<span data-ttu-id="afb8e-363">自动Teams中的登录卡类似于 Bot 框架中的登录卡，只不过 Teams 中的登录卡仅支持两个 `signin` 操作 `openUrl` 和 。</span><span class="sxs-lookup"><span data-stu-id="afb8e-363">The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.</span></span>
 
-<span data-ttu-id="555b8-331">登录操作可以从登录卡Teams，而不只是从登录卡使用。</span><span class="sxs-lookup"><span data-stu-id="555b8-331">The signin action can be used from any card in Teams, not just the signin card.</span></span> <span data-ttu-id="555b8-332">有关身份验证详细信息，请参阅自动[Microsoft Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。</span><span class="sxs-lookup"><span data-stu-id="555b8-332">For more information on authentication, see [Microsoft Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).</span></span>
+<span data-ttu-id="afb8e-364">登录操作可以从登录卡Teams，而不只是从登录卡使用。</span><span class="sxs-lookup"><span data-stu-id="afb8e-364">The signin action can be used from any card in Teams, not just the signin card.</span></span> <span data-ttu-id="afb8e-365">有关详细信息，请参阅自动[Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-365">For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).</span></span>
 
-### <a name="support-for-signin-cards"></a><span data-ttu-id="555b8-333">支持登录卡</span><span class="sxs-lookup"><span data-stu-id="555b8-333">Support for signin cards</span></span>
+### <a name="support-for-signin-cards"></a><span data-ttu-id="afb8e-366">支持登录卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-366">Support for signin cards</span></span>
 
-| <span data-ttu-id="555b8-334">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-334">Bots in Teams</span></span> | <span data-ttu-id="555b8-335">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-335">Messaging extensions</span></span>  | <span data-ttu-id="555b8-336">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-336">Connectors</span></span> | <span data-ttu-id="555b8-337">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-337">Bot Framework</span></span> |
+<span data-ttu-id="afb8e-367">下表提供了支持登录卡的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-367">The following table provides the features that support signin cards:</span></span>
+
+| <span data-ttu-id="afb8e-368">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-368">Bots in Teams</span></span> | <span data-ttu-id="afb8e-369">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-369">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-370">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-370">Connectors</span></span> | <span data-ttu-id="afb8e-371">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-371">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-338">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-338">✔</span></span> | <span data-ttu-id="555b8-339">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-339">✖</span></span> | <span data-ttu-id="555b8-340">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-340">✖</span></span> | <span data-ttu-id="555b8-341">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-341">✔</span></span> |
+| <span data-ttu-id="afb8e-372">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-372">✔</span></span> | <span data-ttu-id="afb8e-373">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-373">✖</span></span> | <span data-ttu-id="afb8e-374">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-374">✖</span></span> | <span data-ttu-id="afb8e-375">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-375">✔</span></span> |
 
-### <a name="additional-information-on-signin-cards"></a><span data-ttu-id="555b8-342">登录卡的其他信息</span><span class="sxs-lookup"><span data-stu-id="555b8-342">Additional information on signin cards</span></span>
+### <a name="additional-information-on-signin-cards"></a><span data-ttu-id="afb8e-376">登录卡的其他信息</span><span class="sxs-lookup"><span data-stu-id="afb8e-376">Additional information on signin cards</span></span>
 
-<span data-ttu-id="555b8-343">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="555b8-343">Bot Framework reference:</span></span>
+<span data-ttu-id="afb8e-377">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="afb8e-377">Bot Framework reference:</span></span>
 
-* [<span data-ttu-id="555b8-344">登录卡Node.js</span><span class="sxs-lookup"><span data-stu-id="555b8-344">Signin card Node.js</span></span>](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
-* [<span data-ttu-id="555b8-345">登录卡 C#</span><span class="sxs-lookup"><span data-stu-id="555b8-345">Signin card C#</span></span>](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [<span data-ttu-id="afb8e-378">登录卡Node.js</span><span class="sxs-lookup"><span data-stu-id="afb8e-378">Signin card Node.js</span></span>](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [<span data-ttu-id="afb8e-379">登录卡 C#</span><span class="sxs-lookup"><span data-stu-id="afb8e-379">Signin card C#</span></span>](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## <a name="thumbnail-card"></a><span data-ttu-id="555b8-346">缩略图卡片</span><span class="sxs-lookup"><span data-stu-id="555b8-346">Thumbnail card</span></span>
+## <a name="thumbnail-card"></a><span data-ttu-id="afb8e-380">缩略图卡片</span><span class="sxs-lookup"><span data-stu-id="afb8e-380">Thumbnail card</span></span>
 
-<span data-ttu-id="555b8-347">通常包含单个缩略图图像、一个或多个按钮和文本的卡片。</span><span class="sxs-lookup"><span data-stu-id="555b8-347">A card that typically contains a single thumbnail image, one or more buttons, and text.</span></span>
+<span data-ttu-id="afb8e-381">可以使用用于发送简单的可操作邮件的缩略图卡。</span><span class="sxs-lookup"><span data-stu-id="afb8e-381">You can work with a thumbnail card that is used for sending a simple actionable message.</span></span> <span data-ttu-id="afb8e-382">通常包含单个缩略图图像、一个或多个按钮和文本的卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-382">A card that typically contains a single thumbnail image, one or more buttons, and text.</span></span>
 
-### <a name="support-for-thumbnail-cards"></a><span data-ttu-id="555b8-348">对缩略图卡的支持</span><span class="sxs-lookup"><span data-stu-id="555b8-348">Support for thumbnail cards</span></span>
+### <a name="support-for-thumbnail-cards"></a><span data-ttu-id="afb8e-383">对缩略图卡的支持</span><span class="sxs-lookup"><span data-stu-id="afb8e-383">Support for thumbnail cards</span></span>
 
-| <span data-ttu-id="555b8-349">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-349">Bots in Teams</span></span> | <span data-ttu-id="555b8-350">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-350">Messaging extensions</span></span>  | <span data-ttu-id="555b8-351">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-351">Connectors</span></span> | <span data-ttu-id="555b8-352">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-352">Bot Framework</span></span> |
+<span data-ttu-id="afb8e-384">下表提供了支持缩略图卡的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-384">The following table provides the features that support thumbnail cards:</span></span>
+
+| <span data-ttu-id="afb8e-385">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-385">Bots in Teams</span></span> | <span data-ttu-id="afb8e-386">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-386">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-387">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-387">Connectors</span></span> | <span data-ttu-id="afb8e-388">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-388">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-353">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-353">✔</span></span> | <span data-ttu-id="555b8-354">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-354">✔</span></span> | <span data-ttu-id="555b8-355">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-355">✖</span></span> | <span data-ttu-id="555b8-356">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-356">✔</span></span> |
+| <span data-ttu-id="afb8e-389">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-389">✔</span></span> | <span data-ttu-id="afb8e-390">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-390">✔</span></span> | <span data-ttu-id="afb8e-391">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-391">✖</span></span> | <span data-ttu-id="afb8e-392">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-392">✔</span></span> |
 
 ![缩略图卡片示例](~/assets/images/cards/thumbnail.png)
 
-### <a name="properties-of-a-thumbnail-card"></a><span data-ttu-id="555b8-358">缩略图卡片的属性</span><span class="sxs-lookup"><span data-stu-id="555b8-358">Properties of a thumbnail card</span></span>
+### <a name="properties-of-a-thumbnail-card"></a><span data-ttu-id="afb8e-394">缩略图卡片的属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-394">Properties of a thumbnail card</span></span>
 
-| <span data-ttu-id="555b8-359">属性</span><span class="sxs-lookup"><span data-stu-id="555b8-359">Property</span></span> | <span data-ttu-id="555b8-360">类型</span><span class="sxs-lookup"><span data-stu-id="555b8-360">Type</span></span>  | <span data-ttu-id="555b8-361">说明</span><span class="sxs-lookup"><span data-stu-id="555b8-361">Description</span></span> |
+<span data-ttu-id="afb8e-395">下表提供缩略图卡片的属性：</span><span class="sxs-lookup"><span data-stu-id="afb8e-395">The following table provides the properties of a thumbnail card:</span></span>
+
+| <span data-ttu-id="afb8e-396">属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-396">Property</span></span> | <span data-ttu-id="afb8e-397">类型</span><span class="sxs-lookup"><span data-stu-id="afb8e-397">Type</span></span>  | <span data-ttu-id="afb8e-398">说明</span><span class="sxs-lookup"><span data-stu-id="afb8e-398">Description</span></span> |
 | --- | --- | --- |
-| <span data-ttu-id="555b8-362">title</span><span class="sxs-lookup"><span data-stu-id="555b8-362">title</span></span> | <span data-ttu-id="555b8-363">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-363">Rich text</span></span> | <span data-ttu-id="555b8-364">卡片的标题。</span><span class="sxs-lookup"><span data-stu-id="555b8-364">Title of the card.</span></span> <span data-ttu-id="555b8-365">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="555b8-365">Maximum 2 lines.</span></span>|
-| <span data-ttu-id="555b8-366">subtitle</span><span class="sxs-lookup"><span data-stu-id="555b8-366">subtitle</span></span> | <span data-ttu-id="555b8-367">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-367">Rich text</span></span> | <span data-ttu-id="555b8-368">卡片的副标题。</span><span class="sxs-lookup"><span data-stu-id="555b8-368">Subtitle of the card.</span></span> <span data-ttu-id="555b8-369">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="555b8-369">Maximum 2 lines.</span></span>|
-| <span data-ttu-id="555b8-370">text</span><span class="sxs-lookup"><span data-stu-id="555b8-370">text</span></span> | <span data-ttu-id="555b8-371">格式文本 </span><span class="sxs-lookup"><span data-stu-id="555b8-371">Rich text</span></span> | <span data-ttu-id="555b8-372">文本显示在副标题下。</span><span class="sxs-lookup"><span data-stu-id="555b8-372">Text appears under the subtitle.</span></span> <span data-ttu-id="555b8-373">有关格式设置选项，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。</span><span class="sxs-lookup"><span data-stu-id="555b8-373">For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).</span></span> |
-| <span data-ttu-id="555b8-374">images</span><span class="sxs-lookup"><span data-stu-id="555b8-374">images</span></span> | <span data-ttu-id="555b8-375">图像数组</span><span class="sxs-lookup"><span data-stu-id="555b8-375">Array of images</span></span> | <span data-ttu-id="555b8-376">显示在卡片顶部的图像。</span><span class="sxs-lookup"><span data-stu-id="555b8-376">Image displayed at the top of the card.</span></span> <span data-ttu-id="555b8-377">纵横比 1：1 正方形。</span><span class="sxs-lookup"><span data-stu-id="555b8-377">Aspect ratio 1:1 square.</span></span> |
-| <span data-ttu-id="555b8-378">按钮</span><span class="sxs-lookup"><span data-stu-id="555b8-378">buttons</span></span> | <span data-ttu-id="555b8-379">操作对象数组</span><span class="sxs-lookup"><span data-stu-id="555b8-379">Array of action objects</span></span> | <span data-ttu-id="555b8-380">适用于当前卡片的操作集。</span><span class="sxs-lookup"><span data-stu-id="555b8-380">Set of actions applicable to the current card.</span></span> <span data-ttu-id="555b8-381">最大值 6。</span><span class="sxs-lookup"><span data-stu-id="555b8-381">Maximum 6.</span></span> |
-| <span data-ttu-id="555b8-382">点击</span><span class="sxs-lookup"><span data-stu-id="555b8-382">tap</span></span> | <span data-ttu-id="555b8-383">Action 对象</span><span class="sxs-lookup"><span data-stu-id="555b8-383">Action object</span></span> | <span data-ttu-id="555b8-384">当用户点击卡片本身时激活。</span><span class="sxs-lookup"><span data-stu-id="555b8-384">Activated when the user taps on the card itself.</span></span> |
+| <span data-ttu-id="afb8e-399">title</span><span class="sxs-lookup"><span data-stu-id="afb8e-399">title</span></span> | <span data-ttu-id="afb8e-400">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-400">Rich text</span></span> | <span data-ttu-id="afb8e-401">卡片的标题。</span><span class="sxs-lookup"><span data-stu-id="afb8e-401">Title of the card.</span></span> <span data-ttu-id="afb8e-402">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="afb8e-402">Maximum 2 lines.</span></span>|
+| <span data-ttu-id="afb8e-403">subtitle</span><span class="sxs-lookup"><span data-stu-id="afb8e-403">subtitle</span></span> | <span data-ttu-id="afb8e-404">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-404">Rich text</span></span> | <span data-ttu-id="afb8e-405">卡片的副标题。</span><span class="sxs-lookup"><span data-stu-id="afb8e-405">Subtitle of the card.</span></span> <span data-ttu-id="afb8e-406">最多 2 行。</span><span class="sxs-lookup"><span data-stu-id="afb8e-406">Maximum 2 lines.</span></span>|
+| <span data-ttu-id="afb8e-407">text</span><span class="sxs-lookup"><span data-stu-id="afb8e-407">text</span></span> | <span data-ttu-id="afb8e-408">格式文本 </span><span class="sxs-lookup"><span data-stu-id="afb8e-408">Rich text</span></span> | <span data-ttu-id="afb8e-409">文本显示在副标题下。</span><span class="sxs-lookup"><span data-stu-id="afb8e-409">Text appears under the subtitle.</span></span> <span data-ttu-id="afb8e-410">有关格式设置选项，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。</span><span class="sxs-lookup"><span data-stu-id="afb8e-410">For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).</span></span> |
+| <span data-ttu-id="afb8e-411">images</span><span class="sxs-lookup"><span data-stu-id="afb8e-411">images</span></span> | <span data-ttu-id="afb8e-412">图像数组</span><span class="sxs-lookup"><span data-stu-id="afb8e-412">Array of images</span></span> | <span data-ttu-id="afb8e-413">显示在卡片顶部的图像。</span><span class="sxs-lookup"><span data-stu-id="afb8e-413">Image displayed at the top of the card.</span></span> <span data-ttu-id="afb8e-414">纵横比 1：1 正方形。</span><span class="sxs-lookup"><span data-stu-id="afb8e-414">Aspect ratio 1:1 square.</span></span> |
+| <span data-ttu-id="afb8e-415">按钮</span><span class="sxs-lookup"><span data-stu-id="afb8e-415">buttons</span></span> | <span data-ttu-id="afb8e-416">操作对象数组</span><span class="sxs-lookup"><span data-stu-id="afb8e-416">Array of action objects</span></span> | <span data-ttu-id="afb8e-417">适用于当前卡片的操作集。</span><span class="sxs-lookup"><span data-stu-id="afb8e-417">Set of actions applicable to the current card.</span></span> <span data-ttu-id="afb8e-418">最大值 6。</span><span class="sxs-lookup"><span data-stu-id="afb8e-418">Maximum 6.</span></span> |
+| <span data-ttu-id="afb8e-419">点击</span><span class="sxs-lookup"><span data-stu-id="afb8e-419">tap</span></span> | <span data-ttu-id="afb8e-420">Action 对象</span><span class="sxs-lookup"><span data-stu-id="afb8e-420">Action object</span></span> | <span data-ttu-id="afb8e-421">当用户点击卡片本身时激活。</span><span class="sxs-lookup"><span data-stu-id="afb8e-421">Activated when the user taps on the card itself.</span></span> |
 
-### <a name="example-of-a-thumbnail-card"></a><span data-ttu-id="555b8-385">缩略图卡片示例</span><span class="sxs-lookup"><span data-stu-id="555b8-385">Example of a thumbnail card</span></span>
+### <a name="example-of-a-thumbnail-card"></a><span data-ttu-id="afb8e-422">缩略图卡片示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-422">Example of a thumbnail card</span></span>
+
+<span data-ttu-id="afb8e-423">以下代码显示了缩略图卡片的示例：</span><span class="sxs-lookup"><span data-stu-id="afb8e-423">The following code shows an example of a thumbnail card:</span></span>
 
 ```json
 {
@@ -630,39 +690,41 @@ ms.locfileid: "52994383"
 }
 ```
 
-### <a name="additional-information"></a><span data-ttu-id="555b8-386">其他信息</span><span class="sxs-lookup"><span data-stu-id="555b8-386">Additional information</span></span>
+### <a name="additional-information"></a><span data-ttu-id="afb8e-424">其他信息</span><span class="sxs-lookup"><span data-stu-id="afb8e-424">Additional information</span></span>
 
-<span data-ttu-id="555b8-387">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="555b8-387">Bot Framework reference:</span></span>
+<span data-ttu-id="afb8e-425">Bot Framework 参考：</span><span class="sxs-lookup"><span data-stu-id="afb8e-425">Bot Framework reference:</span></span>
 
-* [<span data-ttu-id="555b8-388">缩略图卡片Node.js</span><span class="sxs-lookup"><span data-stu-id="555b8-388">Thumbnail card Node.js</span></span>](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
-* [<span data-ttu-id="555b8-389">缩略图卡片 C#</span><span class="sxs-lookup"><span data-stu-id="555b8-389">Thumbnail card C#</span></span>](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [<span data-ttu-id="afb8e-426">缩略图卡片Node.js</span><span class="sxs-lookup"><span data-stu-id="afb8e-426">Thumbnail card Node.js</span></span>](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [<span data-ttu-id="afb8e-427">缩略图卡片 C#</span><span class="sxs-lookup"><span data-stu-id="afb8e-427">Thumbnail card C#</span></span>](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## <a name="card-collections"></a><span data-ttu-id="555b8-390">卡片集合</span><span class="sxs-lookup"><span data-stu-id="555b8-390">Card collections</span></span>
+## <a name="card-collections"></a><span data-ttu-id="afb8e-428">卡片集合</span><span class="sxs-lookup"><span data-stu-id="afb8e-428">Card collections</span></span>
 
-<span data-ttu-id="555b8-391">Teams卡片集合。</span><span class="sxs-lookup"><span data-stu-id="555b8-391">Teams supports Card collections.</span></span>
+<span data-ttu-id="afb8e-429">可以使用包括木马和列表集合的卡片集合。</span><span class="sxs-lookup"><span data-stu-id="afb8e-429">You can work with card collections that include carousel and list collections.</span></span> <span data-ttu-id="afb8e-430">Teams支持卡片集合。</span><span class="sxs-lookup"><span data-stu-id="afb8e-430">Teams supports card collections.</span></span> <span data-ttu-id="afb8e-431">卡片集合包括 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 和 。</span><span class="sxs-lookup"><span data-stu-id="afb8e-431">Card collections include `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`.</span></span> <span data-ttu-id="afb8e-432">这些集合包含自适应、hero 或缩略图卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-432">These collections contain Adaptive, hero, or thumbnail cards.</span></span>
 
-<span data-ttu-id="555b8-392">卡片集合包括 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 和 。</span><span class="sxs-lookup"><span data-stu-id="555b8-392">Card collections include `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`.</span></span> <span data-ttu-id="555b8-393">这些集合包含自适应、hero 或缩略图卡片。</span><span class="sxs-lookup"><span data-stu-id="555b8-393">These collections contain adaptive, hero, or thumbnail cards.</span></span>
+### <a name="carousel-collection"></a><span data-ttu-id="afb8e-433">Carousel 集合</span><span class="sxs-lookup"><span data-stu-id="afb8e-433">Carousel collection</span></span>
 
-## <a name="carousel-collection"></a><span data-ttu-id="555b8-394">Carousel 集合</span><span class="sxs-lookup"><span data-stu-id="555b8-394">Carousel collection</span></span>
+<span data-ttu-id="afb8e-434">盘 [选布局](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) 显示卡片的盘选（可选）以及关联的操作按钮。</span><span class="sxs-lookup"><span data-stu-id="afb8e-434">The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.</span></span>
 
-<span data-ttu-id="555b8-395">盘 [选布局](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) 显示卡片的盘选（可选）以及关联的操作按钮。</span><span class="sxs-lookup"><span data-stu-id="555b8-395">The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.</span></span>
+#### <a name="support-for-carousel-collections"></a><span data-ttu-id="afb8e-435">支持木马集合</span><span class="sxs-lookup"><span data-stu-id="afb8e-435">Support for carousel collections</span></span>
 
-### <a name="support-for-carousel-collections"></a><span data-ttu-id="555b8-396">支持木马集合</span><span class="sxs-lookup"><span data-stu-id="555b8-396">Support for carousel collections</span></span>
+<span data-ttu-id="afb8e-436">下表提供了支持盘车集合的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-436">The following table provides the features that support carousel collections:</span></span>
 
-| <span data-ttu-id="555b8-397">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-397">Bots in Teams</span></span> | <span data-ttu-id="555b8-398">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-398">Messaging extensions</span></span>  | <span data-ttu-id="555b8-399">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-399">Connectors</span></span> | <span data-ttu-id="555b8-400">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-400">Bot Framework</span></span> |
+| <span data-ttu-id="afb8e-437">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-437">Bots in Teams</span></span> | <span data-ttu-id="afb8e-438">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-438">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-439">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-439">Connectors</span></span> | <span data-ttu-id="afb8e-440">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-440">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-401">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-401">✔</span></span> | <span data-ttu-id="555b8-402">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-402">✖</span></span> | <span data-ttu-id="555b8-403">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-403">✖</span></span> | <span data-ttu-id="555b8-404">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-404">✔</span></span> |
+| <span data-ttu-id="afb8e-441">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-441">✔</span></span> | <span data-ttu-id="afb8e-442">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-442">✖</span></span> | <span data-ttu-id="afb8e-443">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-443">✖</span></span> | <span data-ttu-id="afb8e-444">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-444">✔</span></span> |
 
 > [!NOTE]
-> <span data-ttu-id="555b8-405">一个盘式消息最多可显示每封邮件 10 张卡片。</span><span class="sxs-lookup"><span data-stu-id="555b8-405">A carousel can display a maximum of ten cards per message.</span></span>
+> <span data-ttu-id="afb8e-445">一个盘式消息最多可显示每封邮件 10 张卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-445">A carousel can display a maximum of ten cards per message.</span></span>
 
-### <a name="properties-of-a-carousel-card"></a><span data-ttu-id="555b8-406">单盘式卡片的属性</span><span class="sxs-lookup"><span data-stu-id="555b8-406">Properties of a carousel card</span></span>
+#### <a name="properties-of-a-carousel-card"></a><span data-ttu-id="afb8e-446">单盘式卡片的属性</span><span class="sxs-lookup"><span data-stu-id="afb8e-446">Properties of a carousel card</span></span>
 
-<span data-ttu-id="555b8-407">单盘式播放卡片的属性与 hero 卡和缩略图卡片的属性相同。</span><span class="sxs-lookup"><span data-stu-id="555b8-407">Properties of a carousel card are same as those of the hero and thumbnail cards.</span></span>
+<span data-ttu-id="afb8e-447">单盘式播放卡片的属性与 hero 和 thumbnail 卡片相同。</span><span class="sxs-lookup"><span data-stu-id="afb8e-447">Properties of a carousel card are same as the hero and thumbnail cards.</span></span>
 
-### <a name="example-of-a-carousel-collection"></a><span data-ttu-id="555b8-408">一个木马集合的示例</span><span class="sxs-lookup"><span data-stu-id="555b8-408">Example of a carousel collection</span></span>
+#### <a name="example-of-a-carousel-collection"></a><span data-ttu-id="afb8e-448">一个木马集合的示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-448">Example of a carousel collection</span></span>
 
 ![卡片的盘点示例](~/assets/images/cards/carousel.png)
+
+<span data-ttu-id="afb8e-450">以下代码显示了一个盘车集合示例：</span><span class="sxs-lookup"><span data-stu-id="afb8e-450">The following code shows an example of a carousel collection:</span></span>
 
 ```json
 {
@@ -829,39 +891,46 @@ ms.locfileid: "52994383"
 }
 ```
 
-### <a name="syntax-for-carousel-collections"></a><span data-ttu-id="555b8-410">盘车集合的语法</span><span class="sxs-lookup"><span data-stu-id="555b8-410">Syntax for carousel collections</span></span>
+#### <a name="syntax-for-carousel-collections"></a><span data-ttu-id="afb8e-451">盘车集合的语法</span><span class="sxs-lookup"><span data-stu-id="afb8e-451">Syntax for carousel collections</span></span>
 
-<span data-ttu-id="555b8-411">`builder.AttachmentLayoutTypes.Carousel` 是木马集合的语法。</span><span class="sxs-lookup"><span data-stu-id="555b8-411">`builder.AttachmentLayoutTypes.Carousel` is the syntax for carousel collections.</span></span>
+<span data-ttu-id="afb8e-452">`builder.AttachmentLayoutTypes.Carousel` 是木马集合的语法。</span><span class="sxs-lookup"><span data-stu-id="afb8e-452">`builder.AttachmentLayoutTypes.Carousel` is the syntax for carousel collections.</span></span>
 
-## <a name="list-collection"></a><span data-ttu-id="555b8-412">列表集合</span><span class="sxs-lookup"><span data-stu-id="555b8-412">List collection</span></span>
+### <a name="list-collection"></a><span data-ttu-id="afb8e-453">列表集合</span><span class="sxs-lookup"><span data-stu-id="afb8e-453">List collection</span></span>
 
-### <a name="support-for-list-collections"></a><span data-ttu-id="555b8-413">支持列表集合</span><span class="sxs-lookup"><span data-stu-id="555b8-413">Support for list collections</span></span>
+<span data-ttu-id="afb8e-454">列表布局显示卡片的垂直堆叠列表（可选）以及关联的操作按钮。</span><span class="sxs-lookup"><span data-stu-id="afb8e-454">The list layout shows a vertically stacked list of cards, optionally with associated action buttons.</span></span>
 
-<span data-ttu-id="555b8-414">列表布局显示卡片的垂直堆叠列表（可选）以及关联的操作按钮。</span><span class="sxs-lookup"><span data-stu-id="555b8-414">The list layout shows a vertically stacked list of cards, optionally with associated action buttons.</span></span>
+#### <a name="support-for-list-collections"></a><span data-ttu-id="afb8e-455">支持列表集合</span><span class="sxs-lookup"><span data-stu-id="afb8e-455">Support for list collections</span></span>
 
-| <span data-ttu-id="555b8-415">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-415">Bots in Teams</span></span> | <span data-ttu-id="555b8-416">消息扩展</span><span class="sxs-lookup"><span data-stu-id="555b8-416">Messaging extensions</span></span>  | <span data-ttu-id="555b8-417">连接器</span><span class="sxs-lookup"><span data-stu-id="555b8-417">Connectors</span></span> | <span data-ttu-id="555b8-418">机器人框架</span><span class="sxs-lookup"><span data-stu-id="555b8-418">Bot Framework</span></span> |
+<span data-ttu-id="afb8e-456">下表提供了支持列表集合的功能：</span><span class="sxs-lookup"><span data-stu-id="afb8e-456">The following table provides the features that support list collections:</span></span>
+
+| <span data-ttu-id="afb8e-457">聊天机器人Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-457">Bots in Teams</span></span> | <span data-ttu-id="afb8e-458">消息扩展</span><span class="sxs-lookup"><span data-stu-id="afb8e-458">Messaging extensions</span></span>  | <span data-ttu-id="afb8e-459">连接器</span><span class="sxs-lookup"><span data-stu-id="afb8e-459">Connectors</span></span> | <span data-ttu-id="afb8e-460">机器人框架</span><span class="sxs-lookup"><span data-stu-id="afb8e-460">Bot Framework</span></span> |
 | --- | --- | --- | --- |
-| <span data-ttu-id="555b8-419">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-419">✔</span></span> | <span data-ttu-id="555b8-420">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-420">✔</span></span> | <span data-ttu-id="555b8-421">✖</span><span class="sxs-lookup"><span data-stu-id="555b8-421">✖</span></span> | <span data-ttu-id="555b8-422">✔</span><span class="sxs-lookup"><span data-stu-id="555b8-422">✔</span></span> |
+| <span data-ttu-id="afb8e-461">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-461">✔</span></span> | <span data-ttu-id="afb8e-462">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-462">✔</span></span> | <span data-ttu-id="afb8e-463">✖</span><span class="sxs-lookup"><span data-stu-id="afb8e-463">✖</span></span> | <span data-ttu-id="afb8e-464">✔</span><span class="sxs-lookup"><span data-stu-id="afb8e-464">✔</span></span> |
 
-### <a name="example-of-a-list-collection"></a><span data-ttu-id="555b8-423">列表集合的示例</span><span class="sxs-lookup"><span data-stu-id="555b8-423">Example of a list collection</span></span>
+#### <a name="example-of-a-list-collection"></a><span data-ttu-id="afb8e-465">列表集合的示例</span><span class="sxs-lookup"><span data-stu-id="afb8e-465">Example of a list collection</span></span>
 
 ![卡片列表示例](~/assets/images/cards/list.png)
 
-<span data-ttu-id="555b8-425">属性与 hero 或 thumbnail 卡片的属性相同。</span><span class="sxs-lookup"><span data-stu-id="555b8-425">Properties are the same as for the hero or thumbnail card.</span></span>
+<span data-ttu-id="afb8e-467">列表集合的属性与 hero 或 thumbnail 卡片相同。</span><span class="sxs-lookup"><span data-stu-id="afb8e-467">Properties of list collections are same as the hero or thumbnail cards.</span></span>
 
-<span data-ttu-id="555b8-426">列表最多可显示每封邮件 10 张卡片。</span><span class="sxs-lookup"><span data-stu-id="555b8-426">A list can display a maximum of ten cards per message.</span></span>
+<span data-ttu-id="afb8e-468">列表最多可显示每封邮件 10 张卡片。</span><span class="sxs-lookup"><span data-stu-id="afb8e-468">A list can display a maximum of ten cards per message.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="555b8-427">iOS 和 Android 上尚不支持列表卡的一些组合。</span><span class="sxs-lookup"><span data-stu-id="555b8-427">Some combinations of list cards are not yet supported on iOS and Android.</span></span>
+> <span data-ttu-id="afb8e-469">iOS 和 Android 上尚不支持列表卡的一些组合。</span><span class="sxs-lookup"><span data-stu-id="afb8e-469">Some combinations of list cards are not yet supported on iOS and Android.</span></span>
 
-### <a name="syntax-for-list-collections"></a><span data-ttu-id="555b8-428">列表集合的语法</span><span class="sxs-lookup"><span data-stu-id="555b8-428">Syntax for list collections</span></span>
+#### <a name="syntax-for-list-collections"></a><span data-ttu-id="afb8e-470">列表集合的语法</span><span class="sxs-lookup"><span data-stu-id="afb8e-470">Syntax for list collections</span></span>
 
-<span data-ttu-id="555b8-429">`builder.AttachmentLayout.list` 是列表集合的语法。</span><span class="sxs-lookup"><span data-stu-id="555b8-429">`builder.AttachmentLayout.list` is the syntax for list collections.</span></span>
+<span data-ttu-id="afb8e-471">`builder.AttachmentLayout.list` 是列表集合的语法。</span><span class="sxs-lookup"><span data-stu-id="afb8e-471">`builder.AttachmentLayout.list` is the syntax for list collections.</span></span>
 
-## <a name="cards-not-supported-in-teams"></a><span data-ttu-id="555b8-430">不支持的Teams</span><span class="sxs-lookup"><span data-stu-id="555b8-430">Cards not supported in Teams</span></span>
+## <a name="cards-not-supported-in-teams"></a><span data-ttu-id="afb8e-472">不支持的Teams</span><span class="sxs-lookup"><span data-stu-id="afb8e-472">Cards not supported in Teams</span></span>
 
-<span data-ttu-id="555b8-431">以下卡片由 Bot Framework 实现，但不受自动程序Teams：</span><span class="sxs-lookup"><span data-stu-id="555b8-431">The following cards are implemented by the Bot Framework, but are not supported by Teams:</span></span>
+<span data-ttu-id="afb8e-473">以下卡片由 Bot Framework 实现，但不受自动程序Teams：</span><span class="sxs-lookup"><span data-stu-id="afb8e-473">The following cards are implemented by the Bot Framework, but are not supported by Teams:</span></span>
 
-* <span data-ttu-id="555b8-432">动画卡</span><span class="sxs-lookup"><span data-stu-id="555b8-432">Animation cards</span></span>
-* <span data-ttu-id="555b8-433">音频卡</span><span class="sxs-lookup"><span data-stu-id="555b8-433">Audio cards</span></span>
-* <span data-ttu-id="555b8-434">视频卡</span><span class="sxs-lookup"><span data-stu-id="555b8-434">Video cards</span></span>
+* <span data-ttu-id="afb8e-474">动画卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-474">Animation cards</span></span>
+* <span data-ttu-id="afb8e-475">音频卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-475">Audio cards</span></span>
+* <span data-ttu-id="afb8e-476">视频卡</span><span class="sxs-lookup"><span data-stu-id="afb8e-476">Video cards</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="afb8e-477">另请参阅</span><span class="sxs-lookup"><span data-stu-id="afb8e-477">See also</span></span>
+
+* [<span data-ttu-id="afb8e-478">任务模块</span><span class="sxs-lookup"><span data-stu-id="afb8e-478">Task modules</span></span>](~/task-modules-and-cards/what-are-task-modules.md)
+* [<span data-ttu-id="afb8e-479">格式化卡片</span><span class="sxs-lookup"><span data-stu-id="afb8e-479">Format cards</span></span>](~/task-modules-and-cards/cards/cards-format.md)
