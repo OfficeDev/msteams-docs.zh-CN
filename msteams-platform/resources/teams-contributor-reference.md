@@ -1,20 +1,20 @@
 ---
-title: 参与Microsoft Teams文档
+title: 参与Teams文档
 description: 创建和发布文档Teams的步骤
 author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: 33296219b9d42b2ca26eb3c44df5c6429f5259ce
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: a567b0462397780650d6173df9dae1b340a06f97
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069161"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140508"
 ---
-# <a name="contributing-to-microsoft-teams-documentation"></a>参与Microsoft Teams文档
+# <a name="contribute-to-teams-documentation"></a>参与Teams文档
 
-[Teams文档](/microsoftteams/platform/overview)是[Microsoft Docs 技术](https://docs.microsoft.com)文档库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在 *docs <span></span> .microsoft.com 之后具有相同的* URL 路径 microsoft.com。  例如， `/docs.microsoft.com/microsoftteams/...` 是文档Teams路径的开头。 Teams文章以[MarkDown](#markdown-reference)语法编写，并托管在 GitHub[上](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)。
+Teams文档是 **Microsoft Docs 技术** 文档库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在更改后具有相同的 URL **docs.microsoft.com。** 例如， `/docs.microsoft.com/microsoftteams/...` 是文档Teams路径的开头。 Teams文章以 Markdown 语法编写，并托管在GitHub。
 
 ## <a name="set-up-your-workspace"></a>设置工作区
 
@@ -27,52 +27,59 @@ ms.locfileid: "53069161"
 
 > [!div class="checklist"]
 >
-> * 从安装VS Code：
+> * 安装VS Code：
 
-   1. 选择侧活动栏上的"扩展"图标或使用"视图 **=>** 扩展"命令 (Ctrl+Shift+X) 并搜索 Microsoft) 文档创作包 (。
-   1. 选择" **安装"** 按钮。
-   1. 安装完成后，" **安装"** 按钮将更改为" **管理齿轮"** 按钮。
+   1. 选择侧 **活动** 栏上的扩展图标或使用 View = **> Extensions** 命令或 Ctrl+Shift+X，搜索 **Microsoft Docs Authoring Pack。**
+   1. 选择“安装”。
+   1. 安装后 **，"安装"** 将更改到 **"管理齿轮** "按钮。
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>查看 Microsoft Docs Contributors 指南
 
-参与者 [指南](/contribute) 提供了在 Microsoft Docs 平台上创建、发布和更新技术内容的指导。
+参与者指南提供了在 **Microsoft Docs** 平台上创建、发布和更新技术内容的指导。 
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft 编写、样式和内容指南
 
-* **[Microsoft 写作风格指南](/style-guide/welcome)**。 请考虑将此联机指南添加到浏览器 **的收藏夹** 菜单。 它是当今技术写作的全面资源，反映了 Microsoft 的新式语音和风格方法。
+* **[Microsoft 写作风格指南](/style-guide/welcome)**：Microsoft 写作风格指南是一个全面的技术写作资源，反映了 Microsoft 的新式语音和风格方法。 为便于参考，将此联机指南添加到浏览器的 **"收藏夹"** 菜单中。
 
-* **[编写开发人员内容](/style-guide/developer-content/)**。 Teams内容面向对编程概念和过程有基本了解的开发人员受众。 在保持 Microsoft 的声调和风格的同时，以引人注目的方式提供清晰、技术准确的信息非常重要。
+* **[编写开发人员内容](/style-guide/developer-content/)**：Teams内容面向对编程概念和过程有基本了解的开发人员受众。 你必须以引人注目的方式提供清晰、技术准确的信息，同时保持 Microsoft 的声调和风格，这一点非常重要。
 
-* **[编写分步说明](/style-guide/procedures-instructions/writing-step-by-step-instructions)**。 应用和交互式体验是开发人员了解 Microsoft 产品和技术的一种很好的方法。 以渐进格式呈现复杂或简单的过程很自然且用户友好。
+* **[编写分步说明](/style-guide/procedures-instructions/writing-step-by-step-instructions)**：应用和交互式体验是开发人员了解 Microsoft 产品和技术的一种很好的方法。 以渐进式格式呈现复杂或简单的过程自然且用户友好。
 
 ## <a name="markdown-reference"></a>MarkDown 参考
 
- Microsoft Docs 页面使用 MarkDown 语法编写并通过 [Markdig](https://github.com/lunet-io/markdig) 引擎进行分析。 请参阅 *特定*[标记和](/contribute/markdown-reference)格式约定的文档 Markdown 参考。
+**Microsoft Docs** 页面使用 **MarkDown** 语法编写并通过 [Markdig](https://github.com/lunet-io/markdig) 引擎进行分析。 有关特定标记和格式约定的信息，请参阅 [Docs Markdown 参考](/contribute/markdown-reference)。
 
 ## <a name="file-paths"></a>文件路径
 
-为文档中的超链接设置有效的文件路径可能是一项挑战，尤其是在使用相对路径和创建指向其他文档集的链接时。  如果文件路径不正确或无效GitHub生成将不会成功。
+在使用相对路径并创建指向其他文档集的链接时，在文档中设置超链接的有效文件路径非常重要。 只有在文件路径正确GitHub，你的生成才成功。
+ 
+有关超链接和文件路径详细信息，请参阅 [文档中的链接](/contribute/how-to-write-links)。
 
-有关超链接和文件路径详细信息，请参阅 [使用文档中的链接](/contribute/how-to-write-links)。
-
->[!IMPORTANT]
-> 若要引用属于以下平台 *文档* 集Teams文章：<br>
+> [!IMPORTANT]
+> 若要引用属于以下平台 **文档** 集Teams文章：<br>
 > &emsp;&#x2714; 使用不带前导正斜杠的相对路径。<br>
 > &emsp;&#x2714;包括 Markdown 文件扩展名。<br>
->例如  **：父目录/目录/路径到 article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> 若要引用一篇 Microsoft Docs *库文章，* 该文章不是 Teams文档集的一部分：<br>
+>例如 **：父目录/目录/路径到** article.md —>[生成适用于Microsoft Teams](../concepts/building-an-app.md) <br><br>
+> 若要引用一篇 Microsoft Docs **库文章，** 该文章不是 Teams文档集的一部分：<br>
 > &emsp;&#x2714; 使用以正斜杠开头的相对路径。<br>
-> &emsp;&#x2714;不包括文件扩展名。 <br> 例如  **：/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> &emsp;&#x2714;不包括文件扩展名。 <br> 例如 **：/docset/address-to-file-location** — > [Microsoft Graph API 处理Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > 若要引用 Microsoft Docs 库外部的页面，GitHub，请使用完整的 `https` 文件路径。<br>
 
 ## <a name="code-samples-and-snippets"></a>代码示例和代码段
 
-代码示例在帮助开发人员成功使用 API 和 SDK 方面起到重要作用。 呈现良好的代码示例可以比描述性文本和说明性信息更加清楚地传达工作方式。 您的代码示例应准确、简洁、记录良好，最重要的是，读者友好。 易于阅读的代码也易于理解、测试、调试、维护、修改和扩展。 有关详细信息，请参阅 [如何在文档中包括代码](/contribute/code-in-docs)。
+代码示例在有效地使用 API 和 SDK 方面起到重要作用。 良好的代码示例可以比描述性文本和说明性信息更加清楚地传达工作方式。 您的代码示例必须准确、简洁、记录良好且读者友好。 易于阅读的代码必须易于理解、测试、调试、维护、修改和扩展。 有关详细信息，请参阅 [如何在文档中包括代码](/contribute/code-in-docs)。
 
 ## <a name="see-also"></a>另请参阅
 
+* [Microsoft Docs](/)
+* [参与者指南](/contribute)
 * [文档样式和语音快速入门](/contribute/style-quick-start)
-* [剪切边缘 ：源代码可读使用技巧。](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
+* [剪切边缘：源代码可读使用技巧](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
+* [Teams文档](/microsoftteams/platform/overview)
+* [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
+
+
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Docs 更新和最新公告](/teamblog)

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 6a773720f55f2b4e0aeb3a61bfdbde63a775abb8
-ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
+ms.openlocfilehash: da67b447644242caccf5f3a7cfe8d9435286787c
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53095505"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53139989"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
@@ -58,7 +58,7 @@ ms.locfileid: "53095505"
 
 ### <a name="getusercontext-api"></a>GetUserContext API
 
-若要标识和检索选项卡内容的上下文信息，请参阅获取选项卡Teams[上下文](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library)。`meetingId`在会议上下文中运行时选项卡使用，并添加响应有效负载。
+若要标识和检索选项卡内容的上下文信息，请参阅获取选项卡Teams[上下文](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)。`meetingId`在会议上下文中运行时选项卡使用，并添加响应有效负载。
 
 ### <a name="getparticipant-api"></a>GetParticipant API
 

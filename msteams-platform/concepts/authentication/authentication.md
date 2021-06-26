@@ -4,12 +4,12 @@ description: 介绍Teams中的身份验证以及如何在应用中使用它
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams 身份验证 OAuth SSO AAD
-ms.openlocfilehash: c48f58c9d6f22b406a94e8370bab4b6a908fb2c8
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 3a6967fcd026f5c87684df81c713af4abb27ac04
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994075"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140045"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>对用户进行身份验证Microsoft Teams
 
@@ -49,6 +49,6 @@ Azure Bot Framework 的 OAuthPrompt 使使用对话机器人的应用更容易�
 
 ## <a name="configure-the-identity-provider"></a>配置标识提供程序
 
-无论应用的身份验证流如何，配置标识提供程序以与Teams通信。 大多数示例和演练主要涉及将 AAD 用作标识提供程序。 但是，无论标识提供程序如何，概念都适用。
+无论应用的身份验证流如何，配置标识提供程序以与Teams通信。 大多数示例和演练主要涉及将 AAD 用作标识提供程序。 但是，无论标识提供程序如何，概念均适用。
 
 有关详细信息，请参阅 [配置标识提供程序](~/concepts/authentication/configure-identity-provider.md)。

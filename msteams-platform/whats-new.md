@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: 4fd391e7d3baecb5fe3f5c34256e8e93b1b6ab04
-ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
+ms.openlocfilehash: 61b302b198a9dabdd597388e111eda6b03f7331b
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53095519"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140297"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -58,6 +58,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|06/25/2021| 引入了发送主动邮件的分步指南。 | [发送主动邮件的分步指南](sbs-send-proactive.yml) |
 |06/09/2021| 自适应卡片中具有 属性的图像的阶段 `allowExpand` 视图。 | [自适应卡片中的图像阶段视图](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| 对话选项卡。 | [开始并继续选项卡中有关内容的对话](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| 使用Teams等更新了应用设计指南。|[设计Teams应用](~/concepts/design/design-teams-app-overview.md)
@@ -74,7 +75,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |03/18/2021|注意：更新到 Bot Framework SDK 版本 4.10 或以上版本，因为我们已开始弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 和 的过程。 | [团队/聊天成员的机器人 API 更改](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意：选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |
 |03/05/2021|默认安装范围和组功能。| [默认安装范围和组功能](concepts/deploy-and-publish/add-default-install-scope.md) |
-|03/05/2021|对个人应用选项卡重新排序。|[对个人应用中的聊天选项卡重新排序](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
+|03/05/2021|对个人应用选项卡重新排序。|[对个人应用中的聊天选项卡重新排序](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
 |03/04/2021|自适应卡片中的信息屏蔽。| [自适应卡片中的信息屏蔽](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|添加了位置功能。 <br/> 位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能以及 QR 或条形码扫描仪功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md)、 [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)、 [集成 QR 或条形码](concepts/device-capabilities/qr-barcode-scanner-capability.md)扫描仪功能 、 [集成位置功能](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|添加了 QR 或条形码扫描仪功能。 <br/> QR 或条形码扫描仪功能信息已添加到设备功能概述、本机设备权限和集成媒体功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md)、 [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)、 [集成 QR 或条形码扫描仪功能](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
@@ -131,7 +132,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | 10/31/2019 | 更新了对话机器人和消息传递扩展文档以反映 4.6 Bot Framework SDK。 "资源"部分提供了 v3 SDK 文档。 | 所有机器人和消息传递扩展文档。 |
 | 10/31/2019 | 新的文档结构和主要文章重构。 请通过创建问题报告所有死链接或 404 GitHub问题。 | 全部都一样！ |
 | 09/13/2019 | 从基于操作的消息扩展安装请求自动程序。 | [使用消息传递扩展启动操作](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 08/28/2019 | 支持选项卡和连接器中的私人频道。 | [获取选项卡的上下文](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 08/28/2019 | 支持选项卡和连接器中的私人频道。 | [获取选项卡的上下文](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
 | 06/20/2019 | 从外部网站将外部网站共享到外部Teams通道。 | [共享到Teams](~/share-to-teams.md) |
 | 05/25/2019 | 使用来自任务模块的自动程序消息进行响应。 | [使用来自任务模块的自动程序消息进行响应](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | 群聊中的聊天机器人。 | [在群聊或频道中与机器人交互](~/concepts/bots/bot-conversations/bots-conv-channel.md) |

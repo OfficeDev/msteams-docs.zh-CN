@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: bf84ad1d52cf46e9242bf4122dc5e900461ab806
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a574ebeb5416e614152bb24d52cc798f0032943c
+ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631261"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53133380"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>了解Microsoft Teams结构
 
@@ -18,27 +18,51 @@ ms.locfileid: "52631261"
 
 以下框架图显示：
 
-* 你可以在每个应用功能中自定义Teams以蓝色 (轮廓的) 。
+* 你可以在每个应用功能中自定义Teams， (粉色) 。
 * 每个功能支持的范围。
 
-> [!NOTE]
+> [!TIP]
 > **范围意味着什么？** 范围是用户Teams应用中的一个区域。 应用可以具有一个或多个范围，包括个人、频道、聊天和会议。
 
 ## <a name="personal-apps"></a>个人应用
 
-个人应用提供一个大型画布来为单个用户托管你的应用内容。 画布是 iframe，因此你可以完全自定义体验。
+个人应用提供一个大型画布来为单个用户托管你的应用内容。
 
 ***支持的范围**：个人*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps.png" alt-text="概念图像，显示开发人员可自定义Teams应用中的前端区域。" border="false":::
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+画布是 iframe，因此你可以完全自定义体验。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="概念图像，显示开发人员可针对桌面Teams自定义的前端区域。" border="false":::
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+画布是 Web 视图，因此你可以完全自定义体验。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="显示开发人员可针对移动版个人Teams自定义的前端区域的概念图像。" border="false":::
+
+---
 
 ## <a name="tabs"></a>选项卡
 
-选项卡提供了一个大型画布，用于为一组用户托管你的应用内容。 可以在共享空间（如频道、聊天和会议邀请）中包括选项卡。 画布是 iframe，因此你可以完全自定义体验。
+选项卡提供了一个大型画布，用于为一组用户托管你的应用内容。 可以在共享空间（如频道、聊天和会议邀请）中包括选项卡。
 
 ***支持的范围**：频道、聊天、会议*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs.png" alt-text="显示开发人员可以自定义选项卡的Teams区域的概念图像。" border="false":::
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+画布是 iframe，因此你可以完全自定义体验。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="概念图像，显示开发人员可以自定义Teams桌面选项卡的前端区域。" border="false":::
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+画布是 Web 视图，因此你可以完全自定义体验。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="概念图像，显示开发人员可以针对Teams选项卡自定义的前端区域。" border="false":::
+
+---
 
 ## <a name="bots"></a>机器人
 
@@ -46,20 +70,48 @@ ms.locfileid: "52631261"
 
 ***支持的范围**：个人、频道、聊天、会议*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots.png" alt-text="概念图像，显示开发人员可以自定义Teams中的前端区域。" border="false":::
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="显示开发人员可在桌面上为Teams自动程序自定义的前端区域的概念图像。" border="false":::
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="概念图像，显示开发人员可以针对Teams自动程序自定义的前端区域。" border="false":::
+
+---
 
 ## <a name="messaging-extensions"></a>消息扩展
 
-消息传递扩展是插入应用内容或在离开对话的情况下对消息操作快捷方式。 基于操作的邮件扩展可让你更加控制体验，Teams处理大部分基于搜索的邮件扩展呈现内容。
+消息传递是插入应用程序内容或对消息采取行动的快捷方式，而无需从对话中导航。 基于操作的邮件扩展可让你更加控制体验，Teams处理大部分基于搜索的邮件扩展呈现内容。
 
 ***支持的范围**：个人、频道、聊天、会议*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions.png" alt-text="概念图像，显示开发人员可Teams邮件扩展自定义的前端区域。" border="false":::
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="概念图像，显示开发人员可自定义Teams桌面消息扩展的前端区域。" border="false":::
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="概念图像，显示开发人员可针对Teams邮件扩展自定义的前端区域。" border="false":::
+
+---
 
 ## <a name="meeting-extensions"></a>会议扩展
 
-会议扩展是增强实时会议的应用。 可以在多种方案中托管应用内容，包括会议之前、期间和之后。 图面是 iframe，可让你自定义体验，但请记住，这些应用在会议期间深色且较窄。
+会议扩展是增强实时会议的应用。 可以在多种方案中托管应用内容，包括会议之前、期间和之后。
 
 ***支持的范围**：会议、聊天*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions.png" alt-text="概念图像，显示开发人员可针对会议Teams自定义的前端区域。" border="false":::
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+图面是 iframe，可让你自定义体验，但请记住，在会议期间，这些应用使用深色主题且较窄。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="概念图像，显示开发人员可自定义Teams桌面会议扩展的前端区域。" border="false":::
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+图面是 Web 视图，可让你自定义体验，但请记住，在会议期间，这些应用使用深色主题。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="概念图像，显示开发人员可Teams移动版会议扩展自定义的前端区域。" border="false":::
+
+---

@@ -1,18 +1,18 @@
 ---
 title: 发送主动邮件
-description: 介绍如何使用 Microsoft Teams 自动程序发送主动邮件。
+description: 介绍如何使用自动程序发送主动Microsoft Teams消息。
 ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: 发送消息获取用户 ID 通道 ID 对话 ID
-ms.openlocfilehash: 56411fe381a05318d0e12d6876cf26138baba42c
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 443988cc70f009ab657a1a29a91e8989dfed4f43
+ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994215"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53130193"
 ---
-# <a name="send-proactive-messages"></a>发送主动邮件
+# <a name="proactive-messages"></a>主动邮件
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -22,7 +22,7 @@ ms.locfileid: "52994215"
 * 通知
 * 计划邮件
 
-若要让机器人向用户、群聊或团队发送主动消息，它必须具有发送消息的访问权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。 如果需要[，可在团队](#proactively-install-your-app-using-graph)中主动使用 Microsoft Graph 安装应用，或使用应用策略将应用[](/microsoftteams/teams-custom-app-policies-and-settings)推送到租户中的团队和用户。 对于用户，必须为用户安装你的应用，或者用户必须是安装应用的团队的一部分。
+若要让机器人向用户、群聊或团队发送主动消息，它必须具有发送消息的访问权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。 如果需要[，可以使用 Microsoft Graph](#proactively-install-your-app-using-graph)在团队中主动安装应用，或使用应用策略将应用推送到团队和[](/microsoftteams/teams-custom-app-policies-and-settings)租户中的用户。 对于用户，必须为用户安装你的应用，或者用户必须是安装应用的团队的一部分。
 
 发送主动邮件与发送常规邮件不同。 没有用于 `turnContext` 答复的活动。 在发送邮件之前，必须创建对话。 例如，频道中的新一对一聊天或新对话线程。 不能在具有主动消息的团队中创建新的群聊或新频道。
 
@@ -35,7 +35,7 @@ ms.locfileid: "52994215"
 
 示例部分的代码段用于创建一[](#samples)对一对话。 有关一对一对话和组或频道的完整工作示例的链接，请参阅 [代码示例](#code-sample)。
 
-要有效地使用主动邮件，请参阅 [主动邮件的最佳实践](#best-practices-for-proactive-messaging)。 对于某些方案，你必须使用 Graph 主动 [安装应用](#proactively-install-your-app-using-graph)。 示例部分的代码段用于创建一[](#samples)对一对话。 有关一对一对话以及组或频道的完整工作示例，请参阅 [代码示例](#code-sample)。
+要有效地使用主动邮件，请参阅 [主动邮件的最佳实践](#best-practices-for-proactive-messaging)。 对于某些方案，你必须使用 Graph 主动[安装你的应用](#proactively-install-your-app-using-graph)。 示例部分的代码段用于创建一[](#samples)对一对话。 有关一对一对话以及组或频道的完整工作示例，请参阅 [代码示例](#code-sample)。
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>获取用户 ID、团队 ID 或频道 ID
 
@@ -91,11 +91,11 @@ ms.locfileid: "52994215"
 
 * 发生的情况：关于导致通知发生的情况的清晰指示。
 * 结果是什么：必须清楚更新了哪些项，以引发通知。
-* 触发它的人或原因：导致发送通知的操作者或行为。
+* Who或触发它的原因：Who或导致发送通知的操作。
 * 用户可在响应中执行哪些操作：使用户能够轻松根据通知采取操作。
 * 用户如何选择退出：你必须为用户提供选择退出其他通知的路径。
 
-若要向一大组用户发送消息（例如，发送到组织）请主动使用 Graph 安装应用。
+若要向一大组用户发送消息（例如，向组织发送邮件，请主动使用 Graph。
 
 ### <a name="scheduled-messages"></a>计划邮件
 
@@ -104,16 +104,16 @@ ms.locfileid: "52994215"
 * 用户为什么收到邮件：让用户轻松了解收到邮件的原因。
 * 用户接下来可以做什么：用户可以根据邮件内容采取所需操作。
 
-## <a name="proactively-install-your-app-using-graph"></a>使用 Graph 主动安装应用
+## <a name="proactively-install-your-app-using-graph"></a>使用安装程序主动安装Graph
 
 > [!Note]
-> 使用 Graph 主动安装应用目前处于 beta 阶段。
+> 目前，使用 Graph安装应用处于 beta 阶段。
 
 主动向之前未安装或与你的应用交互的用户发送消息。 例如，您希望使用公司通信 [程序](~/samples/app-templates.md#company-communicator) 向整个组织发送邮件。 在这种情况下，可以使用 Graph API 主动为用户安装应用。 缓存应用在安装 `conversationUpdate` 时收到的事件所需的值。
 
-只能安装组织应用目录或 Teams 应用商店中的应用。
+你只能安装组织应用程序目录中或应用商店Teams应用。
 
-请参阅 [Graph 文档中的为用户](/graph/api/userteamwork-post-installedapps) 安装应用，以及使用 Graph 在 Teams 中主动安装机器人 [和消息传递](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。 GitHub 平台上还有一个 [Microsoft .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) 框架示例。
+请参阅[应用文档中的为用户](/graph/api/userteamwork-post-installedapps)安装Graph，以及使用 Teams 中的主动自动程序[Graph。](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) 此外，还有一个[Microsoft .NET framework 示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)在 GitHub 平台上。
 
 ## <a name="samples"></a>示例
 

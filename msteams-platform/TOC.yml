@@ -22,13 +22,13 @@
       href: get-started/first-message-extension.md
 - name: 教程和代码示例
   items:
-    - name: 教程
+    - name: 概述
       href: tutorials/code-samples.md
-    - name: 使用或 C# .NET 创建应用
+    - name: 使用 C# 或 .NET 生成第一个应用
       href: tutorials/get-started-dotnet-app-studio.md
-    - name: 使用Node.js创建应用
+    - name: 使用 Node.js 生成第一个应用
       href: tutorials/get-started-nodejs-app-studio.md
-    - name: 使用 Yeoman 生成器创建应用
+    - name: 使用 Yeoman 生成器生成第一个应用
       href: tutorials/get-started-yeoman.md
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
@@ -395,9 +395,9 @@
       href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: 入门
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
-    - name: 启用资源特定许可
+    - name: 资源特定许可
       href: graph-api/rsc/resource-specific-consent.md
-    - name: 使用 Graph API 以及发送邮件主动安装应用
+    - name: 使用 Graph API 发送邮件的应用主动安装
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: 导入第三方消息
       href: graph-api/import-messages/import-external-messages-to-teams.md

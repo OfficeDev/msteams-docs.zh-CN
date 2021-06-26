@@ -3,12 +3,12 @@ title: 为会议启用和配置Teams应用程序
 author: surbhigupta
 description: 为会议启用和配置Teams应用程序
 ms.topic: conceptual
-ms.openlocfilehash: 4b71673b683129ef00c01297ce14a677864d4eb4
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: c123cc5cf15a7d0af64e2de16e96a673a2e4435c
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114178"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53139968"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
@@ -136,7 +136,7 @@ Teams会议可为组织提供独特的协作体验。 它提供了为不同的�
 会议内对话框不得使用任务模块。 会议聊天中不会调用任务模块。 外部资源 URL 用于在会议中显示内容气泡。 可以使用 方法 `submitTask` 在会议聊天中提交数据。
 
 > [!NOTE]
-> * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
+> * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 > * 如果希望你的应用支持匿名用户，则初始调用请求有效负载必须依赖于 对象中的请求元数据， `from.id` `from` 而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，也是Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 #### <a name="shared-meeting-stage"></a>共享会议阶段

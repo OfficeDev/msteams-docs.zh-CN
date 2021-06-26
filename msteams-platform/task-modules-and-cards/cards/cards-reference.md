@@ -1,23 +1,38 @@
 ---
-title: 卡参考
+title: 卡片类型
 description: 介绍自动程序可用的所有卡片和Teams
 localization_priority: Normal
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 741980ea79dd23659dd2b8a240d767b8292ca251
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: be38454daac519530d0fdf10b5170e128219f6fc
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994383"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140468"
 ---
-# <a name="cards-reference"></a>卡参考
+# <a name="types-of-cards"></a>卡片类型
 
-自动程序支持本文档中列出的Microsoft Teams。 它们基于 Bot Framework (BF) 定义的卡，Teams不支持所有 Bot Framework 卡，而是添加了Teams一些自动程序卡。 本文档的参考中已指出区别。
+自动程序支持自适应、Office 365、列表、Office 365 连接器、收据、登录以及缩略图卡和卡片Microsoft Teams。 它们基于 Bot Framework 定义的卡，Teams不支持所有 Bot Framework 卡，并添加了一些自己的卡。
+
+确定不同的卡片类型之前，请了解如何创建 Hero 卡片、缩略图卡片或自适应卡片。
+
+## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>创建 Hero 卡片、缩略图卡或自适应卡片
+
+**从 App Studio 创建 Hero 卡片、缩略图卡片或自适应卡片**
+
+1. 从应用商店 **转到 App Studio** Teams。
+1. 选择 **"卡片编辑器"。**
+1. 选择 **创建新卡片**。
+1. 从 **Hero Card、Thumbnail** **Card** 或 **Adaptive** Card 中选择其中一张卡片 **的"创建"。** 显示该卡片的元数据详细信息、按钮以及 json、csharp 和节点代码示例。
+
+    ![Hero card details](~/assets/images/Cards/Herocarddetails.png)
+
+1. 选择 **"向我发送此卡"。** 该卡片作为聊天消息发送给您。
 
 ## <a name="card-examples"></a>卡片示例
 
-有关如何使用卡的其他信息，请参阅 Bot Builder SDK v3 的文档。 代码示例也可在 Microsoft/BotBuilder-Samples 存储库上GitHub。
+有关如何使用卡的其他信息，请参阅 Bot Builder SDK v3 的文档。 代码示例也可在 **Microsoft/BotBuilder-Samples** 存储库上GitHub。 以下是一些卡片示例：
 
 * .NET
   * [将卡片添加为邮件的附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)。
@@ -27,30 +42,34 @@ ms.locfileid: "52994383"
   * [将卡片添加为邮件的附件](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)。
   * [卡片示例代码自动程序生成器 v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)。
 
-## <a name="types-of-cards"></a>卡片类型
+## <a name="card-types"></a>卡片类型
 
-此表显示了可供你使用卡片的类型：
+你可以根据应用程序要求标识和使用不同类型的卡片。 下表显示了可供你使用卡片的类型：
 
 | 卡片类型 | 说明 |
 | --- | --- |
-| [自适应卡片](#adaptive-card) | 此卡片是可高度自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 |
+| [自适应卡片](#adaptive-card) | 此卡片可高度自定义，可以包含文本、语音、图像、按钮和输入字段的任意组合。 |
 | [Hero card](#hero-card) | 此卡片通常包含一个大图像、一个或多个按钮和少量文本。 |
-| [列表卡](#list-card) | 此卡片是项的滚动列表。 |
+| [列表卡](#list-card) | 此卡片包含项目的滚动列表。 |
 | [Office 365连接器卡](#office-365-connector-card) | 此卡片具有具有多个分区、字段、图像和操作的灵活性布局。 |
 | [收据卡](#receipt-card) | 此卡为用户提供收据。 |
 | [登录卡](#signin-card) | 此卡使机器人可以请求用户登录。 |
 | [缩略图卡片](#thumbnail-card) | 此卡片通常包含一个缩略图图像、一些短文本以及一个或多个按钮。 |
-| [卡片集合](#card-collections) | 此卡片用于在单个响应中返回多个项目。 |
+| [卡片集合](#card-collections) | 此卡片集合用于在单个响应中返回多个项目。 |
 
 ## <a name="common-properties-for-all-cards"></a>所有卡片的常见属性
 
+你可以浏览一些适用于所有卡片的常见属性。
+
 ### <a name="inline-card-images"></a>内联卡片图像
 
-卡片可以包含内联图像，包括指向公开可用图像的链接。 出于性能目的，强烈建议您将映像托管在公共内容交付网络或 (CDN) 。
+卡片可以包含内联图像，包括指向公开可用图像的链接。 出于性能目的，强烈建议你将映像托管在公用内容分发网络 (CDN) 。
 
-在保持纵横比以覆盖图像区域的同时，图像大小会向上或向下扩展。 然后从中心裁剪图像，以实现卡片的适当纵横比。
+图像的大小会向上或向下扩展，以保持覆盖图像区的纵横比。 然后从中心裁剪图像，以实现卡片的适当纵横比。
 
-图像必须最多为 1024×1024 PNG、JPEG 或 GIF 格式，并且不支持动态 GIF。
+图像必须最多为 1024×1024 和 PNG、JPEG 或 GIF 格式。 不支持动态 GIF。
+
+下表提供了内联卡片图像的属性：
 
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
@@ -58,7 +77,7 @@ ms.locfileid: "52994383"
 | alt | String | 图像的辅助说明。 |
 
 > [!NOTE]
-> 如果卡片包含的图像 URL 在最终图像之前经过重定向，则不支持图像 URL 中的重定向。 对于在公有云上共享的图像，会出现此情况。
+> 如果卡片包含的图像 URL 在最终图像之前重定向，则不支持图像 URL 中的重定向。 对于在公有云上共享的图像，会出现此情况。
 
 ### <a name="buttons"></a>按钮
 
@@ -70,11 +89,17 @@ ms.locfileid: "52994383"
 
 有关卡片中的文本格式设置详细信息，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。
 
+确定所有卡片的常见属性后，你现在可以使用自适应卡片，这可通过将可操作内容直接添加到你使用的应用来帮助你提高参与度和效率。
+
 ## <a name="adaptive-card"></a>自适应卡片
 
-自适应卡片是可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 有关详细信息，请参阅[自适应卡片 v1.2.0。](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)
+> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
+
+自适应卡片是可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 有关详细信息，请参阅自适应[卡片 v1.2.0。](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)
 
 ### <a name="support-for-adaptive-cards"></a>自适应卡片支持
+
+下表提供支持自适应卡片的功能：
 
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
@@ -83,11 +108,13 @@ ms.locfileid: "52994383"
 > [!NOTE]
 > * Teams平台支持 v1.2 或更早的自适应卡片功能。
 > * 在游戏平台上的自适应卡片中不支持正面或破坏性Teams样式。
-> * 媒体元素当前在 Teams 平台上的自适应卡片中不受支持。
+> * 媒体元素当前在应用平台上的自适应卡片Teams支持。
 
-### <a name="example-of-an-adaptive-card"></a>自适应卡片示例
+### <a name="example-of-adaptive-card"></a>自适应卡片示例
 
 ![自适应卡片示例](~/assets/images/cards/adaptivecard.png)
+
+以下代码显示了自适应卡片的示例：
 
 ```json
 {
@@ -226,8 +253,10 @@ ms.locfileid: "52994383"
 
 Bot Framework 参考：
 
-* [自适应卡片Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [自适应卡片节点](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [自适应卡片 C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+
+你现在可以使用一张 hero card，这是一种用于直观突出显示潜在用户选择的多用途卡片。
 
 ## <a name="hero-card"></a>Hero card
 
@@ -235,24 +264,30 @@ Bot Framework 参考：
 
 ### <a name="support-for-hero-cards"></a>支持人物卡片
 
+下表提供了支持人物卡片的功能：
+
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 ### <a name="properties-of-a-hero-card"></a>Hero 卡片的属性
 
+下表提供 Hero 卡片的属性：
+
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
-| title | 格式文本  | 卡片的标题。 最多 2 行。 |
-| subtitle | 格式文本  | 卡片的副标题。 最多 2 行。|
+| title | 格式文本  | 卡片的标题。 最多两行。 |
+| subtitle | 格式文本  | 卡片的副标题。 最多两行。|
 | text | 格式文本  | 文本显示在副标题下。 有关格式设置选项，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。 |
 | images | 图像数组 | 显示在卡片顶部的图像。 纵横比 16：9。 |
-| 按钮 | 操作对象数组 | 适用于当前卡片的操作集。 最大值 6。 |
+| 按钮 | 操作对象数组 | 适用于当前卡片的操作集。 最多六个。 |
 | 点击 | Action 对象 | 当用户点击卡片本身时激活。 |
 
 ### <a name="example-of-a-hero-card"></a>Hero 卡片示例
 
 ![Hero 卡片示例](~/assets/images/cards/hero.png)
+
+以下代码显示了一个展示卡片的示例：
 
 ```json
 {
@@ -296,19 +331,25 @@ Bot Framework 参考：
 
 ### <a name="support-for-list-cards"></a>支持列表卡
 
+下表提供了支持列表卡片的功能：
+
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
 ### <a name="properties-of-a-list-card"></a>列表卡片的属性
 
+下表提供列表卡片的属性：
+
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
 | title | 格式文本  | 卡片的标题。 最多 2 行。|
-| 项目 | 列表项数组 ||
+| 项目 | 列表项数组 | 适用于卡片的项目集。|
 | 按钮 | 操作对象数组 | 适用于当前卡片的操作集。 最大值 6。 |
 
 ### <a name="example-of-a-list-card"></a>列表卡片示例
+
+以下代码显示了列表卡片的示例：
 
 ```json
 {
@@ -364,9 +405,11 @@ Bot Framework 参考：
 
 ## <a name="office-365-connector-card"></a>Office 365连接器卡
 
-自动Office 365支持自动Teams，而不是 Bot Framework。 此卡片提供具有多个分区、字段、图像和操作的灵活性布局。 此卡封装连接器卡，以便机器人可以使用它。 有关连接器卡和 O365 卡之间的差异，请参阅连接器卡[上的Office 365注释](#notes-on-the-office-365-connector-card)。
+可以使用提供灵活布局的 Office 365 连接器卡，这是获取有用信息的一种很好的方法。 自动Office 365支持自动Teams，而不是 Bot Framework。 此卡片提供具有多个分区、字段、图像和操作的灵活性布局。 此卡包含连接器卡，以便机器人可以使用它。 有关连接器卡和连接器Office 365卡之间的差异，请参阅连接器Office 365[卡上的其他信息](#additional-information-on-the-office-365-connector-card)。
 
 ### <a name="support-for-office-365-connector-cards"></a>支持 Office 365 连接器卡
+
+下表提供了支持连接器Office 365的功能：
 
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
@@ -374,39 +417,42 @@ Bot Framework 参考：
 
 ### <a name="properties-of-the-office-365-connector-card"></a>连接器Office 365的属性
 
+下表提供了连接器卡Office 365属性：
+
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
-| title | 格式文本  | 卡片的标题。 最多 2 行。 |
-| 摘要 | 格式文本  | 卡片摘要。 最多 2 行。 |
+| title | 格式文本  | 卡片的标题。 最多两行。 |
+| 摘要 | 格式文本  | 卡片摘要。 最多两行。 |
 | text | 格式文本  | 文本显示在副标题下。 有关格式设置选项，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。 |
-| themeColor | 十六进制字符串 | 替代应用程序清单中提供的 accentColor 的颜色。 |
+| themeColor | 十六进制字符串 | 替代应用程序清单 `accentColor` 中提供的颜色。 |
 
-### <a name="notes-on-the-office-365-connector-card"></a>连接器卡Office 365备注
+### <a name="additional-information-on-the-office-365-connector-card"></a>连接器卡上Office 365信息
 
-Office 365连接器卡在 Microsoft Teams中正常工作，包括[ActionCard 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
+Office 365连接器卡在连接器Microsoft Teams，包括[ `ActionCard` 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
 
-从连接器使用连接器卡和在机器人中使用连接器卡之间的一个重要区别是处理卡操作。
+在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。 下表列出了区别：
 
-* 对于连接器，终结点通过 HTTP POST 接收卡有效负载。
-* 对于自动程序，该操作将触发仅向自动程序发送操作 ID 和 `HttpPOST` `invoke` 正文的活动。
+| 连接器 | 机器人 |
+| --- | --- |
+| 终结点通过 HTTP POST 接收卡有效负载。 | `HttpPOST`该操作将触发 `invoke` 仅向自动程序发送操作 ID 和正文的活动。|
 
 每个连接器卡最多可以显示 10 个部分，每个部分最多可以包含 5 个图像和 5 个操作。
 
 > [!NOTE]
 > 邮件中不显示任何其他节、图像或操作。
 
-所有文本字段都支持 markdown 和 HTML。 您可以通过在邮件中设置 属性来控制使用 markdown 或 HTML `markdown` 的部分。 默认情况下， `markdown` 设置为 `true` 。 如果要改为使用 HTML，请设置为 `markdown` `false` 。
+所有文本字段都支持 Markdown 和 HTML。 您可以通过在邮件中设置 属性来控制哪些部分使用 Markdown `markdown` 或 HTML。 默认情况下， `markdown` 设置为 `true` 。 如果要改为使用 HTML，请设置为 `markdown` `false` 。
 
 如果指定 `themeColor` 属性，它将替代 `accentColor` 应用清单中的 属性。
 
-若要指定 的呈现样式 `activityImage` ，可以按 `activityImageType` 如下方式设置：
+若要指定 的呈现样式 `activityImage` ，可以如下 `activityImageType` 表所示进行设置：
 
 | 值 | 说明 |
 | --- | --- |
-| `avatar` | 默认值; `activityImage` 裁剪为圆形。 |
+| `avatar` | 默认值 `activityImage` ，裁剪为圆形。 |
 | `article` | `activityImage` 显示为矩形并保留其纵横比。 |
 
-有关连接器卡属性的所有其他详细信息，请参阅 [可操作邮件卡参考](/outlook/actionable-messages/card-reference)。 当前不支持的唯Microsoft Teams连接器卡属性如下所示：
+有关连接器卡属性的所有其他详细信息，请参阅 [可操作邮件卡参考](/outlook/actionable-messages/card-reference)。 当前不支持的唯Teams连接器卡属性如下所示：
 
 * `heroImage`
 * `hideOriginalBody`
@@ -414,7 +460,9 @@ Office 365连接器卡在 Microsoft Teams中正常工作，包括[ActionCard 操
 * `originator`
 * `correlationId`
 
-### <a name="example-of-an-office-365-connector-card"></a>连接Office 365示例
+### <a name="example-of-an-office-365-connector-card"></a>连接器Office 365示例
+
+以下代码显示了连接器Office 365示例：
 
 ```json
 {
@@ -483,6 +531,8 @@ Teams支持收据卡。 它是使机器人能够为用户提供收据的卡片�
 
 ### <a name="support-for-receipt-cards"></a>支持收据卡
 
+下表提供了支持收据卡的功能：
+
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
@@ -490,6 +540,8 @@ Teams支持收据卡。 它是使机器人能够为用户提供收据的卡片�
 ### <a name="example-of-a-receipt-card"></a>收据卡示例
 
 ![收据卡示例](~/assets/images/cards/receipt.png)
+
+以下代码显示收据卡的示例：
 
 ```json
 {
@@ -547,11 +599,13 @@ Bot Framework 参考：
 
 ## <a name="signin-card"></a>登录卡
 
-登录卡使机器人可以请求用户登录。 在自动Teams中支持它，其形式与 Bot Framework 中略有不同。 自动Teams中的登录卡类似于 Bot 框架中的登录卡，只不过 Teams 中的登录卡仅支持两个操作： 和 `signin` `openUrl` 。
+自动Teams中的登录卡类似于 Bot 框架中的登录卡，只不过 Teams 中的登录卡仅支持两个 `signin` 操作 `openUrl` 和 。
 
-登录操作可以从登录卡Teams，而不只是从登录卡使用。 有关身份验证详细信息，请参阅自动[Microsoft Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
+登录操作可以从登录卡Teams，而不只是从登录卡使用。 有关详细信息，请参阅自动[Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
 
 ### <a name="support-for-signin-cards"></a>支持登录卡
+
+下表提供了支持登录卡的功能：
 
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
@@ -566,9 +620,11 @@ Bot Framework 参考：
 
 ## <a name="thumbnail-card"></a>缩略图卡片
 
-通常包含单个缩略图图像、一个或多个按钮和文本的卡片。
+可以使用用于发送简单的可操作邮件的缩略图卡。 通常包含单个缩略图图像、一个或多个按钮和文本的卡片。
 
 ### <a name="support-for-thumbnail-cards"></a>对缩略图卡的支持
+
+下表提供了支持缩略图卡的功能：
 
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
@@ -577,6 +633,8 @@ Bot Framework 参考：
 ![缩略图卡片示例](~/assets/images/cards/thumbnail.png)
 
 ### <a name="properties-of-a-thumbnail-card"></a>缩略图卡片的属性
+
+下表提供缩略图卡片的属性：
 
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
@@ -588,6 +646,8 @@ Bot Framework 参考：
 | 点击 | Action 对象 | 当用户点击卡片本身时激活。 |
 
 ### <a name="example-of-a-thumbnail-card"></a>缩略图卡片示例
+
+以下代码显示了缩略图卡片的示例：
 
 ```json
 {
@@ -639,15 +699,15 @@ Bot Framework 参考：
 
 ## <a name="card-collections"></a>卡片集合
 
-Teams卡片集合。
+可以使用包括木马和列表集合的卡片集合。 Teams支持卡片集合。 卡片集合包括 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 和 。 这些集合包含自适应、hero 或缩略图卡片。
 
-卡片集合包括 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 和 。 这些集合包含自适应、hero 或缩略图卡片。
-
-## <a name="carousel-collection"></a>Carousel 集合
+### <a name="carousel-collection"></a>Carousel 集合
 
 盘 [选布局](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) 显示卡片的盘选（可选）以及关联的操作按钮。
 
-### <a name="support-for-carousel-collections"></a>支持木马集合
+#### <a name="support-for-carousel-collections"></a>支持木马集合
+
+下表提供了支持盘车集合的功能：
 
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
@@ -656,13 +716,15 @@ Teams卡片集合。
 > [!NOTE]
 > 一个盘式消息最多可显示每封邮件 10 张卡片。
 
-### <a name="properties-of-a-carousel-card"></a>单盘式卡片的属性
+#### <a name="properties-of-a-carousel-card"></a>单盘式卡片的属性
 
-单盘式播放卡片的属性与 hero 卡和缩略图卡片的属性相同。
+单盘式播放卡片的属性与 hero 和 thumbnail 卡片相同。
 
-### <a name="example-of-a-carousel-collection"></a>一个木马集合的示例
+#### <a name="example-of-a-carousel-collection"></a>一个木马集合的示例
 
 ![卡片的盘点示例](~/assets/images/cards/carousel.png)
+
+以下代码显示了一个盘车集合示例：
 
 ```json
 {
@@ -829,32 +891,34 @@ Teams卡片集合。
 }
 ```
 
-### <a name="syntax-for-carousel-collections"></a>盘车集合的语法
+#### <a name="syntax-for-carousel-collections"></a>盘车集合的语法
 
 `builder.AttachmentLayoutTypes.Carousel` 是木马集合的语法。
 
-## <a name="list-collection"></a>列表集合
-
-### <a name="support-for-list-collections"></a>支持列表集合
+### <a name="list-collection"></a>列表集合
 
 列表布局显示卡片的垂直堆叠列表（可选）以及关联的操作按钮。
+
+#### <a name="support-for-list-collections"></a>支持列表集合
+
+下表提供了支持列表集合的功能：
 
 | 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-### <a name="example-of-a-list-collection"></a>列表集合的示例
+#### <a name="example-of-a-list-collection"></a>列表集合的示例
 
 ![卡片列表示例](~/assets/images/cards/list.png)
 
-属性与 hero 或 thumbnail 卡片的属性相同。
+列表集合的属性与 hero 或 thumbnail 卡片相同。
 
 列表最多可显示每封邮件 10 张卡片。
 
 > [!NOTE]
 > iOS 和 Android 上尚不支持列表卡的一些组合。
 
-### <a name="syntax-for-list-collections"></a>列表集合的语法
+#### <a name="syntax-for-list-collections"></a>列表集合的语法
 
 `builder.AttachmentLayout.list` 是列表集合的语法。
 
@@ -865,3 +929,8 @@ Teams卡片集合。
 * 动画卡
 * 音频卡
 * 视频卡
+
+## <a name="see-also"></a>另请参阅
+
+* [任务模块](~/task-modules-and-cards/what-are-task-modules.md)
+* [格式化卡片](~/task-modules-and-cards/cards/cards-format.md)

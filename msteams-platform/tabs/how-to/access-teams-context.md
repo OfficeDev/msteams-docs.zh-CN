@@ -4,16 +4,16 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 localization_priority: Normal
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 0d9224a941ae4f6a5ad125c93d5877ec49b6df28
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 29f574ae924ddde52b63590aba3fcc06a3d446af
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566864"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140276"
 ---
-# <a name="get-context-for-your-microsoft-teams-tab"></a>获取 Microsoft Teams 选项卡的上下文
+# <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
-您的选项卡必须要求上下文信息以显示相关内容：
+您的选项卡需要上下文信息来显示相关内容：
 
 * 有关用户、团队或公司的基本信息。
 * 区域设置和主题信息。
@@ -24,51 +24,51 @@ ms.locfileid: "52566864"
 在以下情况下，有关用户、团队或公司的上下文可能特别有用：
 
 * 在应用中创建资源或将资源与指定的用户或团队关联。
-* 您针对用户或其他Azure Active Directory启动身份验证流，并且不希望要求用户再次输入其用户名。 有关在用户标签页中进行身份验证Microsoft Teams，请参阅"验证用户Microsoft Teams[选项卡。](~/concepts/authentication/authentication.md)
+* 从 AAD Azure Active Directory (或其他) 启动身份验证流，并且不需要用户再次输入其用户名。 有关详细信息，请参阅"验证[用户身份Microsoft Teams选项卡。](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
-> 虽然此用户信息可帮助提供流畅的用户体验，但 *不应* 使用它作为身份证明。 例如，攻击者可能会将你的页面加载在"错误的浏览器"中，并呈现有害信息或请求。
+> 虽然此用户信息可帮助提供流畅的用户体验，但不得使用它作为标识证明。 例如，攻击者可以在浏览器中加载页面并呈现有害的信息或请求。
 
-## <a name="accessing-context"></a>访问上下文
+## <a name="access-context-information"></a>访问上下文信息
 
 可以通过两种方式访问上下文信息：
 
 * 插入 URL 占位符值。
 * 使用[Microsoft Teams JavaScript 客户端 SDK。](/javascript/api/overview/msteams-client)
 
-### <a name="getting-context-by-inserting-url-placeholder-values"></a>通过插入 URL 占位符值获取上下文
+### <a name="get-context-by-inserting-url-placeholder-values"></a>通过插入 URL 占位符值获取上下文
 
-在配置或内容 URL 中使用占位符。 确定实际配置或内容 URL 时，Microsoft Teams 会使用相关值替换占位符。 可用的占位符包含上下文对象 [上](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) 字段。 常用占位符包括以下内容：
+在配置或内容 URL 中使用占位符。 确定实际配置或内容 URL 时，Microsoft Teams 会使用相关值替换占位符。 可用占位符包括上下文对象上 [的所有](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) 字段。 常用占位符包括以下内容：
 
 * {entityId}：首次配置选项卡列表时， [此选项卡中提供的](~/tabs/how-to/create-tab-pages/configuration-page.md)。
-* {subEntityId}：此选项卡内为特定项目 [深链接](~/concepts/build-and-test/deep-links.md) 提供 _ID_。这应用于还原到实体中的特定状态;例如，滚动到特定部分的内容或激活特定部分的内容。
-* {loginHint}：适用于 Azure AD 登录提示的值。这通常是当前用户的家庭租户中的登录名。
+* {subEntityId}：为此选项卡内的特定项生成深层链接时[](~/concepts/build-and-test/deep-links.md)提供的 ID。这必须用于还原到实体中的特定状态;例如，滚动到或激活特定内容部分。
+* {loginHint}：适合用作 AAD 登录提示的值。 这通常是其主租户中当前用户的登录名。
 * {userPrincipalName}：当前租户中当前用户的用户主体名称。
-* {userObjectId}：当前租户中的当前用户的 Azure AD 对象 ID。
-* {主题}：当前 UI 主题，如 `default`、 `dark`或 `contrast`。
-* {groupId}：选项卡所在的 Office 365 组的 ID。
-* {tid}：当前用户的 Azure AD 租户 ID。
+* {userObjectId}：当前租户中当前用户的 AAD 对象 ID。
+* {theme}：当前用户界面 (UI) 主题，如 、 `default` `dark` 或 `contrast` 。
+* {groupId}：选项卡Office 365组 ID。
+* {tid}：当前用户的 AAD 租户 ID。
 * {locale}：格式化为 languageId-countryId 的用户的当前区域设置。 例如，en-us。
 
->[!NOTE]
->上一 `{upn}` 占位符现已弃用。 出于向后兼容性，它目前是 `{loginHint}`的同义词。
+> [!NOTE]
+> 上一 `{upn}` 占位符现已弃用。 出于向后兼容性，它目前是 `{loginHint}`的同义词。
 
-例如，假设在选项卡清单中将 属性设置为 `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` ，登录用户具有以下属性：
+例如，在选项卡清单中，将 `configURL` 属性设置为 `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` ，登录用户具有以下属性：
 
-* 其用户名为"user@example.com"。
-* 其公司租户 ID 为"e2653c-etc"。
-* 他们是 id 为"00209384-etc"Office 365组的成员。
-* 用户已设置其Teams主题为"深色"。
+* 其用户名为 **user@example.com**。
+* 他们的公司租户 ID 是 **e2653c-etc。**
+* 他们是 id 为 **00209384 Office 365组的成员。**
+* 用户已设置其Teams主题为 **深色**。
 
-当他们配置选项卡时，Teams调用以下 URL：
+在配置选项卡时，Teams调用以下 URL：
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>使用 Microsoft Teams JavaScript 库获取上下文
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>使用 JavaScript Microsoft Teams获取上下文
 
 还可通过调用 `microsoftTeams.getContext(function(context) { /* ... */ })` 使用[ Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索前面列出的信息。
 
-上下文变量如以下示例所示：
+以下代码提供了上下文变量的示例：
 
 ```json
 {
@@ -110,12 +110,12 @@ ms.locfileid: "52566864"
 }
 ```
 
-## <a name="retrieving-context-in-private-channels"></a>在专用频道中检索上下文
+## <a name="retrieve-context-in-private-channels"></a>检索私人频道中的上下文
 
 > [!Note]
 > 专用频道目前为私人开发人员预览版。
 
-当你的内容页面加载在专用频道中时，从免费呼叫 `getContext` 接收的数据将被模糊显示，以保护频道的隐私。 当你的内容页面位于专用频道中时，会更改以下字段。 如果页面使用任意以下值，需检查 `channelType` 字段以确定页面是否加载在专用频道中，并作出相应响应。
+当你的内容页面加载到私人频道中时，你通过调用收到的数据会混淆以保护 `getContext` 通道的隐私。 当内容页位于私人频道中时，将更改以下字段：
 
 * `groupId`：未为私人频道定义
 * `teamId`：设置为私人频道的 threadId
@@ -124,11 +124,33 @@ ms.locfileid: "52566864"
 * `teamSitePath`：设置为专用频道的独特SharePoint网站的路径
 * `teamSiteDomain`：设置为专用频道的唯一SharePoint网站域的域
 
+如果页面使用了这些值中的任意值，则必须检查字段以确定页面是否加载到私人频道中并 `channelType` 做出相应的响应。
+
 > [!Note]
->  teamSiteUrl 也适用于标准频道。
+> `teamSiteUrl` 还适用于标准频道。
 
-## <a name="theme-change-handling"></a>主题更改处理
+## <a name="handle-theme-change"></a>处理主题更改
 
-可致电组织，注册应用，告知主题是否 `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`。
+你可以注册应用，以在主题发生更改时通过调用 通知 `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` 。
 
-函数 `theme` 参数将为一个字符串，其值为 `default`、 `dark`或 `contrast`。
+函数 `theme` 中的参数是值为 、 `default` 或 的 `dark` 字符串 `contrast` 。
+
+## <a name="see-also"></a>另请参阅
+
+* [选项卡设计指南](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Teams选项卡](~/tabs/what-are-tabs.md)
+* [先决条件](~/tabs/how-to/tab-requirements.md)
+* [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
+* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
+* [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
+* [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
+* [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)
+* [选项卡边距更改](~/resources/removing-tab-margins.md)
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)

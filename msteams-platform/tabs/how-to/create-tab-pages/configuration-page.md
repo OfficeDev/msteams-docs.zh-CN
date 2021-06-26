@@ -6,12 +6,12 @@ keywords: teams 选项卡组频道可配置
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 041ef78fcc6e3f5203842e808949e86e8dd3aae4
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 00aac64465dcc0c59a0146ea37f863f16c976a52
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069217"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140220"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -21,17 +21,17 @@ ms.locfileid: "53069217"
 * 消息传递 [扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
 * 一[Office 365连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
-## <a name="configuring-a-channel-or-group-chat-tab"></a>配置频道或群聊选项卡
+## <a name="configure-a-channel-or-group-chat-tab"></a>配置频道或群聊选项卡
 
-应用程序必须引用[JavaScript Microsoft Teams SDK 并](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)调用 `microsoft.initialize()` 。 此外，使用的 URL 必须是安全的 HTTPS 终结点，并且可从云中访问。 
+应用程序必须引用[JavaScript Microsoft Teams SDK 并](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)调用 `microsoft.initialize()` 。 使用的 URL 必须是安全的 HTTPS 终结点，并且可从云中访问。
 
 ### <a name="example"></a>示例
 
-配置页的示例如下图所示： 
+配置页的示例如下图所示：
 
 <img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
 
-下一节显示了配置页的相应代码：
+以下代码是配置页的相应代码示例：
 
 ```html
 <head>
@@ -88,7 +88,7 @@ ms.locfileid: "53069217"
 ...
 ```
 
-选择配置 **页中的**"选择灰色"或"选择红色"按钮，以显示带灰色或红色图标的选项卡内容。 
+选择配置 **页中的**"选择灰色"或"选择红色"按钮，以显示带灰色或红色图标的选项卡内容。
 
 下图显示带灰色图标的选项卡内容：
 
@@ -98,13 +98,13 @@ ms.locfileid: "53069217"
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
-选择相对按钮将触发 `saveGray()` 或 `saveRed()` ，并调用以下内容：
+选择相应的按钮将触发 `saveGray()` 或 `saveRed()` ，并调用以下内容：
 
-1. `settings.setValidityState(true)`设置为 true。
-1. `microsoftTeams.settings.registerOnSaveHandler()`将触发事件处理程序。
-1. 应用的 **配置** 页面上的"保存"按钮（在 Teams 中上载）已启用。
+* 设置为 `settings.setValidityState(true)` true。 
+* `microsoftTeams.settings.registerOnSaveHandler()`将触发事件处理程序。
+* **在** 应用的配置页面上保存已启用。
 
-配置页面代码通知Teams配置要求，并且可以继续安装。 当用户选择"保存 **"** 时，将设置 的参数 `settings.setSettings()` ，如 接口 `Settings` 所定义。 有关详细信息，请参阅设置[接口](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)。 在上一步 `saveEvent.notifySuccess()` 中，调用 以指示已成功解析内容 URL。
+配置页面代码Teams配置要求，并可以继续安装。 当用户选择"保存 **"** 时，将设置 的参数 `settings.setSettings()` ，如 接口 `Settings` 所定义。 有关详细信息，请参阅设置 [接口](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)。 `saveEvent.notifySuccess()` 调用 以指示已成功解析内容 URL。
 
 >[!NOTE]
 >
@@ -113,13 +113,13 @@ ms.locfileid: "53069217"
 
 ### <a name="get-context-data-for-your-tab-settings"></a>获取选项卡设置的上下文数据
 
-你的选项卡可能需要上下文信息以显示相关内容。 上下文信息通过提供更加自定义的用户体验进一步增强选项卡的吸引力。
+您的选项卡需要上下文信息来显示相关内容。 上下文信息通过提供更加自定义的用户体验进一步增强选项卡的吸引力。
 
 有关用于选项卡配置的属性详细信息，请参阅 [上下文接口](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)。 通过以下两种方式收集上下文数据变量的值：
 
-1. 在清单 中插入 URL 查询字符串占位符 `configurationURL` 。
+* 在清单 中插入 URL 查询字符串占位符 `configurationURL` 。
 
-1. 使用[Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` 方法。
+* 使用[Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` 方法。
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>在 中插入占位符 `configurationUrl`
 
@@ -141,7 +141,7 @@ ms.locfileid: "53069217"
 ...
 ```
 
-上载页面后，Teams使用相关值更新查询字符串占位符。 在配置页中包括用于检索和使用这些值的逻辑。 有关使用 URL 查询字符串的信息，请参阅 MDN Web Docs 中的 [URLSearchParams。](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) 以下示例描述从 属性中提取值 `configurationUrl` 的方法：
+上载页面后，Teams使用相关值更新查询字符串占位符。 在配置页中包括用于检索和使用这些值的逻辑。 有关使用 URL 查询字符串的信息，请参阅 MDN Web Docs 中的 [URLSearchParams。](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) 下面的代码示例提供了从 属性中提取值 `configurationUrl` 的方法：
 
 ```html
 <script>
@@ -158,7 +158,9 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>使用 `getContext()` 函数检索上下文
 
-`microsoftTeams.getContext((context) => {})`函数在调用[时检索 Context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)接口。 将此函数添加到配置页以检索上下文值：
+`microsoftTeams.getContext((context) => {})`函数在调用[时检索](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)上下文接口。
+
+以下代码提供了一个向配置页添加此函数以检索上下文值的示例：
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -176,14 +178,13 @@ document.write(getId());
 
 ## <a name="context-and-authentication"></a>上下文和身份验证
 
- 在允许用户配置你的应用之前进行身份验证。 否则，您的内容可能包括具有其身份验证协议的源。 有关详细信息，请参阅在"验证[用户身份"选项卡Microsoft Teams用户。](~/tabs/how-to/authentication/auth-flow-tab.md)使用上下文信息构建身份验证请求和授权页面 URL。
-确保 选项卡页中使用的所有域都列在 `manifest.json` 和 `validDomains` 数组中。
+在允许用户配置你的应用之前进行身份验证。 否则，您的内容可能包括具有其身份验证协议的源。 有关详细信息，请参阅在"身份验证["选项卡中Microsoft Teams用户。](~/tabs/how-to/authentication/auth-flow-tab.md)使用上下文信息构建身份验证请求和授权页面 URL。 确保 选项卡页中使用的所有域都列在 `manifest.json` 和 `validDomains` 数组中。
 
 ## <a name="modify-or-remove-a-tab"></a>修改或删除选项卡
 
-支持的删除选项可进一步优化用户体验。 将清单的 属性设置为 ，以便用户能够修改、重新配置或 `canUpdateConfiguration` `true` 重命名组或频道选项卡。此外，通过包括应用中的删除选项页面和在配置中设置属性的值，指示删除选项卡时内容会发生什么 `removeUrl`  `setSettings()` 情况。 用户可以卸载"个人"选项卡，但不能修改它们。 有关详细信息，请参阅为选项卡 [创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。
+将清单的 属性设置为 ，以便用户能够修改、重新配置或 `canUpdateConfiguration` `true` 重命名频道或组选项卡。此外，通过包括应用中的删除选项页面和在配置中设置属性的值，指示删除选项卡时内容会发生什么 `removeUrl`  `setSettings()` 情况。 用户可以卸载个人选项卡，但不能修改它们。 有关详细信息，请参阅 [为选项卡创建删除页面](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
-Microsoft Teams删除 () 的 setSettings 配置：
+`setSettings()`Microsoft Teams删除页面的配置：
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -198,3 +199,22 @@ microsoftTeams.settings.setSettings({
 ## <a name="mobile-clients"></a>移动客户端
 
 如果选择让频道或组选项卡显示在移动客户端Teams，则配置必须具有 `setSettings()` 的值 `websiteUrl` 。 有关详细信息，请参阅 [移动选项卡指南](~/tabs/design/tabs-mobile.md)。
+
+## <a name="see-also"></a>另请参阅
+
+* [Teams选项卡](~/tabs/what-are-tabs.md)
+* [先决条件](~/tabs/how-to/tab-requirements.md)
+* [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
+* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
+* [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
+* [获取选项卡的上下文](~/tabs/how-to/access-teams-context.md)
+* [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
+* [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)
+* [选项卡边距更改](~/resources/removing-tab-margins.md)
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)

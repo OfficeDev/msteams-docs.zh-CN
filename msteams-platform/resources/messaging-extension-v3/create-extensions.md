@@ -4,12 +4,12 @@ description: 创建基于操作的消息扩展以允许用户触发外部服务
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 邮件扩展邮件扩展搜索
-ms.openlocfilehash: bfb3295726c355164f080c15e3759ea36a99d914
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5604d86f05bad42bf3a00f611711afc34beedf42
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566738"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140367"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>使用消息传递扩展启动操作
 
@@ -244,7 +244,7 @@ ms.locfileid: "52566738"
 
 在此方法中，你的服务可以定义一个自定义自适应卡片来收集最终用户的输入。 对于此方法，在 `fetchTask` 清单中将 `true` 参数设置为 。 请注意，如果设置为 `fetchTask` `true` 为命令定义的任何静态参数，将被忽略。
 
-在此方法中，你的服务将收到 `composeExtension/fetchTask` 事件，并且需要响应基于自适应卡片 [的任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 下面是包含自适应卡片的示例响应：
+在此方法中，你的服务接收 `composeExtension/fetchTask` 事件，并响应基于自适应卡片 [的任务模块响应](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)。 下面是包含自适应卡片的示例响应：
 
 ```json
 {
@@ -295,7 +295,7 @@ ms.locfileid: "52566738"
 
 在此方法中，你的服务可以显示 `<iframe>` 一个基于小部件来显示任何自定义 UI 并收集用户输入。 对于此方法，在 `fetchTask` 清单中将 `true` 参数设置为 。
 
-就像在自适应卡片流中一样，你的服务将发送事件，并且需要 `fetchTask` 响应基于 URL [的任务模块响应](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 下面是包含自适应卡片的示例响应：
+就像在自适应卡片流中一样，你的服务发送 `fetchTask` 事件，并响应基于 URL [的任务模块响应](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)。 下面是包含自适应卡片的示例响应：
 
 ```json
 {

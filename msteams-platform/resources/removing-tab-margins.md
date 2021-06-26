@@ -6,12 +6,12 @@ keywords: 删除边距填充的选项卡
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 086ce3a375416291a64e3222e698d7e363a651e6
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069166"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140570"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
@@ -34,7 +34,7 @@ Microsoft Teams选项卡的应用将受此更改的影响。 开发人员必须�
 
 选项卡开发人员不得依赖Teams选项卡周围的边距。 建议开发人员根据需要在选项卡设计周围添加边距。 生产中的应用设计可能看起来有额外的填充，即由Teams提供的边距和选项卡提供的边距。但是，额外的填充只是临时的，将在几周后消失，仅留下应用提供的填充。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>常见问题
 
 **应用部件版式（如标题栏或任务栏）是否适合触摸我们设计的边缘？**
 
@@ -54,3 +54,18 @@ Microsoft Teams选项卡的应用将受此更改的影响。 开发人员必须�
 > * 删除所有选项卡的边距：个人选项卡、 (组) 聊天选项卡、会议选项卡和频道选项卡。
 > * 无法选择加入或选择退出此更改。 它将应用于所有选项卡。
 > * 此更改可能会影响依赖其 UI Microsoft Teams提供边距的选项卡。
+
+## <a name="see-also"></a>另请参阅
+
+* [Teams选项卡](~/tabs/what-are-tabs.md)
+* [先决条件](~/tabs/how-to/tab-requirements.md)
+* [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
+* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
+* [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
+* [获取选项卡的上下文](~/tabs/how-to/access-teams-context.md)
+* [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
+* [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)

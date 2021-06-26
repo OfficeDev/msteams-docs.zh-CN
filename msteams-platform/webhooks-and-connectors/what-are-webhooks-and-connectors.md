@@ -1,41 +1,54 @@
 ---
-title: 什么是 Webhook 和连接器？
-author: surbhigupta
+title: Webhook 和连接器
+author: clearab
 description: 了解 webhook 和连接器如何将 Web 服务连接到 Teams 客户端。
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3e8105c9f069428bf93fb9bc2533895878f5ded1
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 2cb763a6637abd3faa500de871119f0b829871bf
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069043"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140052"
 ---
-# <a name="what-are-webhooks-and-connectors"></a>什么是 Webhook 和连接器？
+# <a name="webhooks-and-connectors"></a>Webhook 和连接器
 
-Webhook 和连接器是将 Web 服务连接到 Microsoft Teams 中的频道和团队的一种简单方法。 
+Webhook 和连接器有助于将 Web 服务连接到 Microsoft Teams。 Webhook 是用户定义的 HTTP 回调，用于通知用户有关在 Microsoft Teams 通道中发生的任何操作。 它是应用获取实时数据的方法。 连接器允许用户订阅以接收来自 Web 服务的通知和消息。 它们公开你的服务的 HTTPS 终结点，以卡片形式发布消息。
 
-## <a name="outgoing-webhooks"></a>传出 webhook
+## <a name="outgoing-webhooks"></a>传出 Webhook
 
-通过传出 webhook，用户可以将文本消息从频道发送到 Web 服务。 配置后，用户将能够@mention发送 Webhook，并发送消息到服务。 你的服务将在五秒钟内发送对邮件的响应，其中可能包含文本或卡片。
+Webhook 可帮助Teams外部应用集成。 使用传出 Webhook，您可以将短信从频道发送到 Web 服务。 配置传出 Webhook 后，用户可以@mention传出 Webhook 并将消息发送到 Web 服务。 该服务在 10 秒钟内使用文本或卡片对邮件做出响应。
 
-传出 Webhook 基于每个团队进行配置，不能作为常规 webhook 应用的一Teams一部分。 它们最适合完成不需要收集或交换大量信息的特定于团队的工作负荷。
-
-有关详细信息，请参阅创建 [传出 Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)。
+> [!NOTE]
+> 传出 Webhook 基于每个团队进行配置，不能作为正常 webhook 应用的一Teams一部分。
 
 ## <a name="connectors"></a>连接器
 
-连接器允许用户订阅以接收来自 Web 服务的通知和消息。 它们公开你的服务的 HTTPS 终结点，以将消息张贴到 - 通常采用卡片形式。
+连接器允许用户订阅从 Web 服务接收通知和消息。 它们公开服务的 HTTPS 终结点，以将消息Teams频道，通常采用卡片形式。
 
 ### <a name="incoming-webhooks"></a>传入 Webhook
 
-传入 webhook 是最简单的连接器类型。 对于团队策略 (如果已启用该团队) 你可以选择公开接受正确格式的 JSON 的 HTTPS 终结点，并将消息插入到该通道中。 它们是将频道连接到服务的一种快速而简单的方式，并且最适用于特定团队所特有的方案。 例如，可以在客户端通道中创建传入 webhook DevOps配置生成、部署和监控服务以发送警报。
-
-有关详细信息，请参阅创建[传入 Webhook。](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+传入 Webhook 可帮助将邮件从应用发布到Teams。 如果在任何频道中为团队启用了传入 Webhook，它将公开 HTTPS 终结点，该终结点接受格式正确的 JSON 并将消息插入到该通道中。 例如，可以在客户端通道DevOps传入 Webhook，配置生成，并同时部署和监视服务以发送警报。
 
 ### <a name="office-365-connectors"></a>Office 365 连接器
 
-Office 365连接器允许你为传入 Webhook 创建自定义配置页面，将它们打包为 Teams 应用的一部分。 然后，你可以更广泛地分发该应用，甚至分发到我们的应用商店。 你主要使用Office 365连接器卡发送邮件，并且还能够向它们添加一组有限的卡片操作。 例如，天气连接器允许用户选择一天中的位置和时间，以接收有关明天天气的更新。 它们在频道级别配置，但安装在团队级别。
+Office 365连接器允许你为传入 Webhook 创建自定义配置页，并打包它们作为 Teams 应用的一部分。 你主要使用 Office 365 连接器卡发送邮件，并且能够向这些连接器卡添加一组有限的卡片操作。 例如，天气连接器允许用户选择一天中的位置和时间，以接收有关明天天气的更新。 它们在频道级别配置，但安装在团队级别。
 
-有关详细信息，请参阅创建[Office 365连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)。
+> [!NOTE]
+> 您可以将 Office 365 连接器Teams应用程序分发到我们的 AppStore。
+
+## <a name="create-and-send-messages"></a>创建和发送邮件
+
+可操作邮件允许用户在不离开其电子邮件客户端的情况下采取措施，从而增加用户参与度。 使用 Office 365 和传入 Webhook，可以通过将 JSON 有效负载发布到 webhook URL 来发送消息。
+
+## <a name="see-also"></a>另请参阅
+
+* [创建传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [创建 Office 365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [创建和发送邮件](~/webhooks-and-connectors/how-to/connectors-using.md)
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [创建传出 Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
