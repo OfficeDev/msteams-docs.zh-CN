@@ -192,42 +192,30 @@
   items:
     - name: 概述
       href: tabs/what-are-tabs.md
-    - name: 创建表格
-      items:
-        - name: 选项卡要求
-          href: tabs/how-to/tab-requirements.md
-        - name: 创建内容页
-          href: tabs/how-to/create-tab-pages/content-page.md
-        - name: 创建配置页
-          href: tabs/how-to/create-tab-pages/configuration-page.md
-        - name: 创建删除页面
-          href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: 移动设备上的选项卡
-          href: tabs/design/tabs-mobile.md
-        - name: 获取选项卡的上下文
-          href: tabs/how-to/access-teams-context.md
-        - name: 具有自适应卡片的生成选项卡
-          href: tabs/how-to/build-adaptive-card-tabs.md
-        - name: 选项卡链接展开和阶段视图
-          href: tabs/tabs-link-unfurling.md
-        - name: 创建对话选项卡
-          href: tabs/how-to/conversational-tabs.md
-        - name: 选项卡边距更改
-          href: resources/removing-tab-margins.md
-    - name: 快速入门
-      items:
-        - name: 带 node.js 的 个人选项卡
-          href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: 带 C#/ASP.NET 核心的个人选项卡
-          href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: 带 C# /ASP.NET CORE MVC 的个人选项卡
-          href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: 带 node.js 的频道选项卡
-          href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-        - name: 带 C#/ASP.NET 核心的频道选项卡
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: 带 C# /ASP.NET CORE MVC 的频道选项卡
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+    - name: 先决条件
+      href: tabs/how-to/tab-requirements.md
+    - name: 创建个人选项卡
+      href: tabs/how-to/create-personal-tab.md
+    - name: 创建频道选项卡
+      href: tabs/how-to/create-channel-group-tab.md
+    - name: 创建内容页
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: 创建配置页
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: 创建删除页面
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: 移动设备上的选项卡
+      href: tabs/design/tabs-mobile.md
+    - name: 获取选项卡的上下文
+      href: tabs/how-to/access-teams-context.md
+    - name: 具有自适应卡片的生成选项卡
+      href: tabs/how-to/build-adaptive-card-tabs.md
+    - name: 选项卡链接展开和阶段视图
+      href: tabs/tabs-link-unfurling.md
+    - name: 创建对话选项卡
+      href: tabs/how-to/conversational-tabs.md
+    - name: 选项卡边距更改
+      href: resources/removing-tab-margins.md
 - name: 构建机器人
   items:
     - name: 概述
@@ -251,8 +239,11 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Teams 智能机器人中的对话活动
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: 发送主动邮件
+        - name: 主动邮件
           href: bots/how-to/conversations/send-proactive-messages.md
+          items:
+            - name: 分步指南
+              href: sbs-send-proactive.yml
         - name: 设置你的智能机器人邮件格式
           href: bots/how-to/format-your-bot-messages.md
         - name: 更新和删除机器人消息
@@ -317,26 +308,28 @@
   items:
     - name: 概述
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: 创建传入 Webhook
-      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
     - name: 创建传出 Webhook
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+    - name: 创建传入 Webhooks
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
     - name: 创建 Office 365 连接器
       href: webhooks-and-connectors/how-to/connectors-creating.md
-    - name: 向连接器和 Webhook 发送消息
+    - name: 创建和发送邮件
       href: webhooks-and-connectors/how-to/connectors-using.md
 - name: 构建卡和任务模块
   items:
+    - name: 概述
+      href: task-modules-and-cards/cards-and-task-modules.md
     - name: 构建卡
       items:
         - name: 概述
           href: task-modules-and-cards/what-are-cards.md
-        - name: 设置卡文本格式
-          href: task-modules-and-cards/cards/cards-format.md
-        - name: 发送和响应卡操作
-          href: task-modules-and-cards/cards/cards-actions.md
-        - name: 卡参考
+        - name: 卡片类型
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Microsoft Teams 中的格式卡
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: 卡片操作
+          href: task-modules-and-cards/cards/cards-actions.md
         - name: 自适应卡的通用操作
           items:
             - name: 概述
@@ -353,9 +346,11 @@
       items:
         - name: 概述
           href: task-modules-and-cards/what-are-task-modules.md
+        - name: 调用和关闭任务模块
+          href: task-modules-and-cards/task-modules/invoking-task-modules.md
         - name: 在选项卡中使用任务模块
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-        - name: 在机器人中使用任务模块
+        - name: 使用机器人的任务模块
           href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: 添加身份验证
   items:
@@ -477,13 +472,13 @@
       items:
         - name: 本地化应用
           href: concepts/build-and-test/apps-localization.md
-        - name: 本地化 JSON 架构
+        - name: 本地化 JSON 架构参考
           href: resources/schema/localization-schema.md
-    - name: SameSite cookie 属性（2020 更新）
+    - name: SameSite cookie 属性
       href: resources/samesite-cookie-update.md
     - name: 应用商店提交的常见失败情况
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: 为Teams文档做贡献
+    - name: 参与 Teams 文档
       href: resources/teams-contributor-reference.md
 - name: 支持和反馈
   href: feedback.md
