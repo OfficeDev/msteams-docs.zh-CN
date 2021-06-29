@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 1495bba765d149d23156b136be85f39d07c2d94b
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: b54eb5942d19749b39bb9bb504dd8645f5655ef3
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140171"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179942"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -141,16 +141,8 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 * [取消展开消息传递扩展链接](~/messaging-extensions/how-to/link-unfurling.md)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
-* [先决条件](~/tabs/how-to/tab-requirements.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-* [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
-* [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
-* [获取选项卡的上下文](~/tabs/how-to/access-teams-context.md)
-* [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [选项卡边距更改](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>后续步骤
 

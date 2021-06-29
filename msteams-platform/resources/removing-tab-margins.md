@@ -6,12 +6,12 @@ keywords: 删除边距填充的选项卡
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 086ce3a375416291a64e3222e698d7e363a651e6
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5fab0e0145288718adb7eb96f8f103f75527ec58
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140570"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179739"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
@@ -58,14 +58,6 @@ Microsoft Teams选项卡的应用将受此更改的影响。 开发人员必须�
 ## <a name="see-also"></a>另请参阅
 
 * [Teams选项卡](~/tabs/what-are-tabs.md)
-* [先决条件](~/tabs/how-to/tab-requirements.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-* [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
-* [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
-* [获取选项卡的上下文](~/tabs/how-to/access-teams-context.md)
-* [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
-* [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)

@@ -5,20 +5,24 @@ description: 自定义选项卡在 Teams 概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1564d7410cd0ce18d27afbbb3729cc30cfcfc4f6
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140158"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179916"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams 选项卡
 
 选项卡是Teams网页中嵌入的可感知Microsoft Teams。 它们是简单的 HTML <iframe 标记，这些标记指向在应用程序清单中声明的域，并可以添加为单个用户的团队、群聊或个人应用中的频道的一 \> 部分。 可以将自定义选项卡与你的应用一起，以将自己的 Web 内容嵌入Teams或Teams Web 内容添加特定于 Web 的功能。 有关详细信息，请参阅[javaScript Teams SDK。](/javascript/api/overview/msteams-client)
 
+下图显示了个人选项卡：
+
+![个人选项卡](../assets/images/tabs/personaltab.png)
+
 下图显示了 Contoso 频道选项卡：
 
-![频道或组和个人选项卡](../assets/images/tabs/tabs.png)
+![频道或组选项卡](../assets/images/tabs/tabs.png)
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: da67b447644242caccf5f3a7cfe8d9435286787c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139989"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179697"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
@@ -49,7 +49,7 @@ ms.locfileid: "53139989"
 
 下表提供了这些 API 的列表：
 
-|API|说明|请求|Source|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -262,6 +262,19 @@ POST /v3/conversations/{conversationId}/activities
 
 会议详细信息 API 使你的应用能够获取静态会议元数据。 这些是不会动态更改的数据点。
 API 通过 Bot Services 提供。
+#### <a name="pre-requisite"></a>先决条件
+在使用会议详细信息 API 之前，必须获取必要的 RSC 权限。 应用程序清单必须具有以下 webApplicationInfo：
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+  }
+ ```
 
 #### <a name="query-parameter"></a>查询参数
 
@@ -337,6 +350,20 @@ GET /v1/meetings/{meetingId}
 用户可以接收实时会议事件。 只要任何应用与会议关联，就会与机器人共享实际会议开始时间和会议结束时间。
 
 会议的实际开始时间和结束时间与计划的开始时间和结束时间不同。 会议详细信息 API 提供计划的开始时间和结束时间，而事件提供实际的开始时间和结束时间。
+
+#### <a name="pre-requisite"></a>先决条件
+应用程序清单必须具有以下 webApplicationInfo 才能成功接收会议开始和结束事件。
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+  }
+ ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>会议开始事件有效负载的示例
 
@@ -488,6 +515,7 @@ public class MeetingStartEndEventValue
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| 会议详细信息选项卡 | Microsoft Teams会议扩展性示例，以在会议中通过详细信息选项卡进行激活。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 

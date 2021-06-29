@@ -5,12 +5,12 @@ description: 快速创建显示"Hello，World！"的 Microsoft Teams 应用。 m
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f40331ed06a401d60092e884add2cfa747c3ebdc
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994390"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179949"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>使用 Blazor 生成Microsoft Teams应用程序
 
@@ -111,7 +111,7 @@ ms.locfileid: "52994390"
 
 若要在本地构建并运行应用程序:
 
-1. 在 Visual Studio Code 中，按 **F5** 以在调试模式下运行应用程序。
+1. 在Visual Studio中，按 **F5** 以在调试模式下运行应用程序。
 
 1. 如果需要，请安装自签名 SSL 证书进行本地调试。
 
@@ -228,7 +228,7 @@ Visual Studio将应用部署到 Azure 应用服务，并且 Web 应用在浏览�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="选择基本信息":::
 
-1. 清单中有几个位置将 列出为 `locahost:XXXXX` URL 的一部分。  将出现的所有事件 `{{azure_app_url}}` 替换为 (括号，包括大括号) 。
+1. 清单中有几个位置将 列出为 `localhost:XXXXX` URL 的一部分。  将出现的所有事件 `{{azure_app_url}}` 替换为 (括号，包括大括号) 。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="调整环境的基本信息":::
 

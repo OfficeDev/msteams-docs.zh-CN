@@ -4,12 +4,12 @@ author: KirtiPereira
 description: 使用自适应卡片生成选项卡
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: c551ae748805ddc380fb3213b67f704c73060a2f
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4359b20d5839b86955082b7a5da8db262e13600c
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140283"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179900"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -416,16 +416,9 @@ ms.locfileid: "53140283"
 
 * [自适应卡片](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
-* [先决条件](~/tabs/how-to/tab-requirements.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-* [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
-* [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
-* [获取选项卡的上下文](~/tabs/how-to/access-teams-context.md)
-* [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)
-* [选项卡边距更改](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>后续步骤
 

@@ -5,12 +5,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams o365 连接器
-ms.openlocfilehash: e396d0048831634f683b6df925853464698fb96a
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140526"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179893"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -200,7 +200,7 @@ ms.locfileid: "53140526"
 
 **通过传入 Webhook 发送自适应卡片**
 
-1. 在 Teams 中设置自定义[webhook。](/add-incoming-webhook.md)
+1. 在 Teams 中设置自定义[webhook。](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 1. 使用下面的代码创建自适应卡片 JSON 文件：
 
     ```json

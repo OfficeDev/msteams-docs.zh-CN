@@ -3,12 +3,12 @@ title: 移动设备上的选项卡
 description: 介绍在移动设备上实现选项卡的开发人员Microsoft Teams注意事项。
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 612084a1ff4258da16dc00f9b5a6844eead57f54
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5053160f2456a5d1c5f68cb74ea3ccc5c5eabca5
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140290"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179718"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
 
@@ -71,16 +71,8 @@ ms.locfileid: "53140290"
 
 * [选项卡设计指南](~/tabs/design/tabs.md)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
-* [先决条件](~/tabs/how-to/tab-requirements.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-* [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
-* [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
-* [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)
-* [选项卡边距更改](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>后续步骤
 

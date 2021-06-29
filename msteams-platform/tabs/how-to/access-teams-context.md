@@ -4,12 +4,12 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 localization_priority: Normal
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 29f574ae924ddde52b63590aba3fcc06a3d446af
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8c91cf5a65f13d9f58f6ae8aa2678266c37338c8
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140276"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179725"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -139,16 +139,8 @@ ms.locfileid: "53140276"
 
 * [选项卡设计指南](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
-* [先决条件](~/tabs/how-to/tab-requirements.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-* [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
-* [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
-* [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
-* [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)
-* [选项卡边距更改](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>后续步骤
 

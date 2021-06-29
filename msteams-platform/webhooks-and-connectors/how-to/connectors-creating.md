@@ -1,19 +1,19 @@
 ---
-title: 创建Office 365连接器
+title: 创建 Office 365 连接器
 author: laujan
 description: 介绍如何开始使用 Office 365 中的连接器Microsoft Teams
 keywords: Teams o365 连接器
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 95e3c9f2f7e188c158ae8c9161b2306c5e7f27e5
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 28a2b35e868baf34e35a11a00e10b30b0f09c236
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140417"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179753"
 ---
-# <a name="create-office-365-connectors"></a>创建Office 365连接器
+# <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
 借助Microsoft Teams，你可以添加现有 Office 365 连接器，或在 Teams 中生成一个新的连接器。 有关详细信息，请参阅构建 [你自己的连接器](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)。
 
@@ -24,7 +24,7 @@ ms.locfileid: "53140417"
 若要分发连接器，必须通过连接器开发人员仪表板 [进行注册](https://outlook.office.com/connectors/home/login/#/publish)。 注册连接器时，假定它适用于支持应用程序的Office 365产品，包括 Outlook 和 Teams。 如果不是这种情况，并且你必须创建仅在 Microsoft Teams 中工作的连接器，请联系：Microsoft Teams[应用提交电子邮件](mailto:teamsubm@microsoft.com)。
 
 > [!IMPORTANT]
-> 连接器在连接器开发人员 **仪表板中选择"** 保存"后注册。 如果你想要在 AppSource 中发布连接器，请按照将应用发布到[AppSource Microsoft Teams中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果不想在 AppSource 中发布应用，请将其直接分发到组织。 为 [组织发布连接器后](/connectors-creating.md)，无需在连接器仪表板上执行其他操作。
+> 连接器在连接器开发人员 **仪表板中选择"** 保存"后注册。 如果你想要在 AppSource 中发布连接器，请按照将应用发布到[AppSource Microsoft Teams中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果不想在 AppSource 中发布应用，请将其直接分发到组织。 为 [组织发布连接器后](#publish-connectors-for-the-organization)，无需在连接器仪表板上执行其他操作。
 
 ### <a name="integrate-the-configuration-experience"></a>集成配置体验
 
@@ -262,7 +262,7 @@ PowerShell V2 模块Exchange Online新式验证，并适用于多重身份验证
 
 下表提供了示例名称及其说明：
 
-|**示例名称** | **说明** | **.NET** | **Node.js** |
+|**示例名称** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | 连接器    | 示例Office 365将通知生成到Teams连接器。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 通用连接器示例 |通用连接器的示例代码，易于为支持 Webhook 的任何系统进行自定义。|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
