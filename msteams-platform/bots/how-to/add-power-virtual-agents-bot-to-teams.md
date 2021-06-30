@@ -5,12 +5,12 @@ description: 在Power Virtual Agents平台中集成Teams聊天机器人
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 85f2d91d2c5cfdb0ae746a00c7a9f3d6a0c15972
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 2aa8cc510033768b68cf01cbb5b0327bffe13154
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069019"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53196248"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>添加 Power Virtual Agent 聊天机器人 
 
@@ -102,7 +102,7 @@ App Studio 是一款Teams应用。 从 Teams 应用商店安装 App Studio，从
 ## <a name="see-also"></a>另请参阅
 
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [使用 Microsoft Teams 创建聊天Power Virtual Agents。](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)  
+* [使用 Microsoft Teams 创建聊天Power Virtual Agents。](../bot-features.md#bots-with-power-virtual-agents)  
 * [Power Virtual Agents门户](https://powervirtualagents.microsoft.com)
 * [发布自动Power Virtual Agents程序](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [安全与合规Microsoft Teams。](/MicrosoftTeams/security-compliance-overview)
@@ -110,5 +110,4 @@ App Studio 是一款Teams应用。 从 Teams 应用商店安装 App Studio，从
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [创建虚拟助理](~/samples/virtual-assistant.md)
-
+> [创建虚拟助手](~/samples/virtual-assistant.md)

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179697"
+ms.locfileid: "53196234"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
@@ -262,18 +262,19 @@ POST /v3/conversations/{conversationId}/activities
 
 会议详细信息 API 使你的应用能够获取静态会议元数据。 这些是不会动态更改的数据点。
 API 通过 Bot Services 提供。
-#### <a name="pre-requisite"></a>先决条件
-在使用会议详细信息 API 之前，必须获取必要的 RSC 权限。 应用程序清单必须具有以下 webApplicationInfo：
 
-# <a name="json"></a>[JSON](#tab/json)
+#### <a name="prerequisite"></a>先决条件
 
-```"webApplicationInfo": {
+若要使用会议详细信息 API，必须获取 RSC 权限。 使用以下示例配置应用清单 `webApplicationInfo` 的属性：
+
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 #### <a name="query-parameter"></a>查询参数
@@ -351,18 +352,18 @@ GET /v1/meetings/{meetingId}
 
 会议的实际开始时间和结束时间与计划的开始时间和结束时间不同。 会议详细信息 API 提供计划的开始时间和结束时间，而事件提供实际的开始时间和结束时间。
 
-#### <a name="pre-requisite"></a>先决条件
-应用程序清单必须具有以下 webApplicationInfo 才能成功接收会议开始和结束事件。
+### <a name="prerequisite"></a>先决条件
 
-# <a name="json"></a>[JSON](#tab/json)
+应用清单必须具有 `webApplicationInfo` 属性，以接收会议开始和结束事件。 使用以下示例配置清单：
 
-```"webApplicationInfo": {
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>会议开始事件有效负载的示例

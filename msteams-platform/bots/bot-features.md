@@ -1,33 +1,38 @@
 ---
 title: 智能机器人和 SDK
 author: surbhigupta
-description: 聊天机器人和 SDK Microsoft Teams。
+description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b1b8f18a457c45a7b0be6ccf6a1d7328d9c50027
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c346d7b7a1c720e651a847fb8a650fc549689654
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069026"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53196241"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
-若要创建在 Microsoft Teams中工作的自动程序，可以使用下列方法之一：
-* 基于 sdk 构建的现有Microsoft Bot Framework程序。
-* Power Virtual Agents chatbot 服务。
-* Webhook 和连接器。
+你可以创建适用于以下工具Microsoft Teams之一的聊天机器人：
 
-## <a name="bots-and-the-microsoft-bot-framework"></a>机器人和Microsoft Bot Framework
+* [Microsoft Bot FrameworkSDK](#bots-with-the-microsoft-bot-framework)
+* [Power Virtual Agents](#bots-with-power-virtual-agents)
+* [虚拟助理](~/samples/virtual-assistant.md)
+* [Webhook 和连接器](#bots-with-webhooks-and-connectors)
 
-你的Teams自动程序由以下三个元素组成：
+## <a name="bots-with-the-microsoft-bot-framework"></a>具有自动程序Microsoft Bot Framework
 
-* 由你主持的公共访问的 Web 服务。
-* 使用 Bot Framework 注册自动程序。
-* 你的应用Teams清单一起打包应用包。 这是您的用户安装和将 Teams 客户端连接到通过自动程序服务路由的 Web 服务的内容。
+你的Teams自动程序由以下内容组成：
 
-Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于创建使用 C#、Java、Python 和 JavaScript 的聊天机器人。 如果已有基于 Bot Framework 的自动程序，可以轻松修改它以在 Microsoft Teams。 使用 C# 或 Node.js 来利用[我们的 SDK。](/microsoftteams/platform/#pivot=sdk-tools) 这些包扩展基本 Bot Builder SDK 类和方法，如下所示：
+* 由你托管的可公开访问的 Web 服务。
+* Web 服务的自动程序框架注册。
+* 你的Teams应用包，可将Teams客户端连接到 Web 服务。
+
+> [!TIP]
+> 使用开发人员门户向 Bot Framework 注册 Web 服务并指定应用配置。 有关详细信息，请参阅使用开发人员门户[管理应用Teams。](~/concepts/build-and-test/teams-developer-portal.md)
+
+Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于创建使用 C#、Java、Python 和 JavaScript 的聊天机器人。 如果你已有基于 Bot Framework 的自动程序，你可以轻松修改它以在 Teams。 使用 C# 或 Node.js 来利用[我们的 SDK。](/microsoftteams/platform/#pivot=sdk-tools) 这些包扩展基本 Bot Builder SDK 类和方法，如下所示：
 
 * 使用专用卡类型，如Office 365卡。
 * 在Teams设置特定于频道的数据。
@@ -36,14 +41,11 @@ Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于�
 > [!IMPORTANT]
 > 可以使用任何 Web Teams技术开发应用，并直接调用 Bot [Framework REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
 
-> [!TIP]
-> TeamsApp Studio 可帮助你创建和配置应用清单，以及将 Web 服务注册为 Bot Framework 上的自动程序。 它还包含一个React库和交互式卡片生成器。 有关详细信息，请参阅[App Studio Teams入门](~/concepts/build-and-test/app-studio-overview.md)。
-
-## <a name="bots-and-the-microsoft-power-virtual-agents"></a>机器人和 Microsoft Power Virtual Agents
+## <a name="bots-with-power-virtual-agents"></a>具有自动程序Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是一项基于 Microsoft Power 平台和 Bot Framework 构建的 chatbot 服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户创建聊天Power Virtual Agents[后](https://powervirtualagents.microsoft.com)，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门详细信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
 
-## <a name="bots-and-webhooks-and-connectors"></a>机器人、Webhook 和连接器
+## <a name="bots-with-webhooks-and-connectors"></a>具有 Webhook 和连接器的机器人
 
 Webhook 和连接器将机器人连接到 Web 服务。 使用 webhook 和连接器，可以创建简单的机器人进行基本交互，例如创建工作流或其他简单命令。 它们仅在创建它们的团队中可用，并且适用于特定于公司工作流的简单流程。 有关详细信息，请参阅什么是 [Webhook 和连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
