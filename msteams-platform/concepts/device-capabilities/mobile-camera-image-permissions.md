@@ -6,18 +6,16 @@ keywords: 相机图像麦克风功能本机设备权限媒体
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: e2d3c6e4b9e80d5b09cf597a29e7f3ba67355715
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 22d4a791e83cf36f18b75a3846865835b0ee024f
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994376"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211623"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能 
 
-本文档指导您如何集成媒体功能。 此集成将本机设备功能（如相机和 **麦克风**）与Teams平台。  
-
-可以使用[JavaScript Microsoft Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户设备权限[所需的工具](native-device-permissions.md)。 使用合适的媒体功能 API 将本机设备功能（如相机和麦克风）与Microsoft Teams 移动应用中的 Teams 平台集成，并构建更丰富的体验。 
+你可以将本机设备功能（如相机和 **麦克风**）与你的应用Teams集成。 对于集成，可以使用[javaScript Microsoft Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户设备权限[所需的工具](native-device-permissions.md)。 使用合适的媒体功能 API 将设备功能（如相机和麦克风）与Microsoft Teams 移动应用中的 Teams 平台集成，并构建更丰富的体验。 
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>集成媒体功能的优势
 
@@ -29,12 +27,12 @@ ms.locfileid: "52994376"
 熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
 
 > [!NOTE] 
-> * 目前，Microsoft Teams功能的支持仅适用于移动客户端。    
-> * 目前，Teams不支持多窗口应用、选项卡和会议侧窗格的设备权限。 
+> * 目前Microsoft Teams媒体功能的支持仅适用于移动客户端。   
+> * 目前，Teams不支持多窗口应用、选项卡和会议侧窗格的设备权限。    
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `media` 。 它允许你的应用在用户开始使用相机捕获图像之前，向用户请求必要的权限，打开库以选择要作为附件提交的图像，或使用麦克风录制对话。 
+通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `media` 。 它允许你的应用在用户开始使用相机捕获图像之前，向用户请求必要的权限，打开库以选择要作为附件提交的图像，或使用麦克风录制对话。  应用清单的更新如下所示：
 
 ``` json
 "devicePermissions": [
@@ -70,30 +68,26 @@ ms.locfileid: "52994376"
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| 此 API 检索 API 以区块捕获的媒体， `selectMedia` 而不考虑媒体大小。 这些区块将组合在一起，作为文件或 blob 发送回 Web 应用。 将媒体分成较小的区块便于大型文件传输。 |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| 此 API 使用户能够在全屏模式下以可滚动列表的方式查看图像。|
 
+下图描述了 API 的 Web 应用体验 `selectMedia` ，用于图像功能：
 
-**用于用于图像功能 selectMedia API 的 Web 应用体验** 
- ![设备相机和图像体验Teams](../../assets/images/tabs/image-capability.png)
+![设备相机和图像体验Teams](../../assets/images/tabs/image-capability.png)
 
-**用于麦克风功能 selectMedia API 的 Web 应用体验** 
- ![麦克风功能 Web 应用体验](../../assets/images/tabs/microphone-capability.png)
+下图描述了 API 的麦克风功能 `selectMedia` Web 应用体验：
+
+![麦克风功能 Web 应用体验](../../assets/images/tabs/microphone-capability.png)
 
 ## <a name="error-handling"></a>错误处理
 
 必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
-
-|错误代码 |  错误名称     | 条件|
+|错误代码 |  错误名称     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **404** | FILE_NOT_FOUND | 在给定位置找不到指定的文件。|
 | **500** | INTERNAL_ERROR | 执行所需操作时遇到内部错误。|
 | **1000** | PERMISSION_DENIED |用户拒绝权限。|
-| **2000** |NETWORK_ERROR | 网络问题。|
 | **3000** | NO_HW_SUPPORT | 基础硬件不支持该功能。|
 | **4000**| INVALID_ARGUMENTS | 一个或多个参数无效。|
-| **5000** | UNAUTHORIZED_USER_OPERATION | 用户无权完成此操作。|
-| **6000** |INSUFFICIENT_RESOURCES | 由于资源不足，无法完成操作。|
-|**7000** | THROTTLE | 由于经常调用 API，平台限制请求。|
 |  **8000** | USER_ABORT |用户中止操作。|
 | **9000**| OLD_PLATFORM | 平台代码已过时，不实现此 API。|
 | **10000**| SIZE_EXCEEDED |  返回值太大，已超出平台大小边界。|
@@ -260,3 +254,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [将 QR 或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
 * [在 Teams 中集成位置Teams](location-capability.md)
+* [将人员选取器功能集成到Teams](people-picker-capability.md)
+

@@ -6,16 +6,14 @@ keywords: 相机媒体 qr 代码 qrcode 条形码条形码扫描仪扫描功能�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 4e34e75a6b439c67c831352e07344fd2cf011543
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646558"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211574"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>集成 QR 或条码扫描仪功能 
-
-本文档指导您如何集成 QR 或条形码扫描仪功能。 
 
 条形码是一种以可视和机器可读的形式表示数据的方法。 条码包含有关产品的信息，如条形图和空格形式的类型、大小、制造商和来源国家/地区。 该代码使用本机设备相机上的光学扫描仪进行读取。 为了获得更丰富的协作体验，你可以将 Teams 平台中提供的 QR 或条形码扫描仪功能与Teams集成。   
 
@@ -36,7 +34,7 @@ ms.locfileid: "52646558"
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `media` 。 它允许你的应用在用户开始使用 QR 或条形码扫描仪功能之前向用户请求必要的权限。
+通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `media` 。 它允许你的应用在用户开始使用 QR 或条形码扫描仪功能之前向用户请求必要的权限。 应用清单的更新如下所示：
 
 ``` json
 "devicePermissions": [
@@ -70,8 +68,9 @@ ms.locfileid: "52646558"
 | UPC-A | 是 | 是 |
 | UPC-E | 是 | 是 |
 
-**的 Web 应用体验 `ScanBarCode`QR 或条形码扫描仪功能** 
- ![ Web 应用体验的 API，适用于 qr 或条形码扫描仪功能](../../assets/images/tabs/qr-barcode-scanner-capability.png)
+下图描述了 QR 或条形码扫描仪功能 Web 应用体验：
+
+![qr 或条形码扫描仪功能 Web 应用体验](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
 ## <a name="error-handling"></a>错误处理
 
@@ -112,3 +111,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
 * [在 Teams 中集成位置Teams](location-capability.md)
+* [将人员选取器功能集成到Teams](people-picker-capability.md)
+

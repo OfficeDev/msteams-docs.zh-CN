@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条形码条形码扫描扫描仪位置映射功能本机设备权限
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 8df8341e8996e4bf380575ac59e05325da16bd0d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 069bd27057784076b3b701d013ead209ec6fa3a9
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566192"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211581"
 ---
 # <a name="device-capabilities"></a>设备功能
 
@@ -41,3 +41,5 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 * 使用扫描仪控件扫描 QR [或条形码](qr-barcode-scanner-capability.md)。
 * 通过麦克风录制音频。
 * 使用位置选取 [器共享位置](location-capability.md)。
+
+此外，你可以集成本机Teams选取器控件，[](people-picker-capability.md)以允许用户在 Web 应用体验中搜索和选择人员。

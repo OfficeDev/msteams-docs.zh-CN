@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: 38a7a5fdf9794fb95b4141f2c73e8282a9bf8601
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196234"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211588"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
@@ -124,7 +124,7 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-* * *
+---
 
 API 的 JSON 响应 `GetParticipant` 正文为：
 
@@ -276,7 +276,7 @@ API 通过 Bot Services 提供。
     ]
 }
  ```
-
+ 
 #### <a name="query-parameter"></a>查询参数
 
 会议详细信息 API 包括以下查询参数：

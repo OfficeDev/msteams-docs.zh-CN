@@ -5,17 +5,17 @@ description: 如何使用 JavaScript Teams SDK 利用位置功能
 keywords: 位置地图功能本机设备权限
 ms.topic: conceptual
 localization_priority: Normal
-ms.author: lajanuar
-ms.openlocfilehash: 47fd11c918725b3195636f972ba37cbdde0c4a60
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.author: surbhigupta
+ms.openlocfilehash: 3e6c4bda9a1a0024380cb295cd280db1d630f019
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630745"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211609"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能 
 
-本文档指导你如何将本机设备的位置功能与你的应用Teams集成。  
+你可以将本机设备的位置功能与你的应用Teams集成。  
 
 可以使用[JavaScript Microsoft Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户的本机设备功能[所需的工具](native-device-permissions.md)。 使用位置 API（如 [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) 和 [showLocation）](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) 将功能集成到你的应用中。 
 
@@ -34,7 +34,7 @@ ms.locfileid: "52630745"
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `geolocation` 。 它允许你的应用在开始使用位置功能之前向用户请求必要的权限。
+通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `geolocation` 。 它允许你的应用在开始使用位置功能之前向用户请求必要的权限。 应用清单的更新如下所示：
 
 ``` json
 "devicePermissions": [
@@ -57,23 +57,11 @@ ms.locfileid: "52630745"
 > [!NOTE]
 > API `getLocation()` 附带以下 [输入配置](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)和 `allowChooseLocation` `showMap` 。 <br/> 如果 的 `allowChooseLocation` 值为 *true，* 则用户可以选择他们选择的任何位置。<br/>  如果值为 *false，* 则用户无法更改其当前位置。<br/> 如果 的 `showMap` 值为 *false，* 则提取当前位置而不显示地图。 `showMap` 如果 设置为 true ， `allowChooseLocation` 则 *忽略*。
 
-**位置功能的 Web 应用体验** 
- ![位置功能的 Web 应用体验](../../assets/images/tabs/location-capability.png)
+下图描述了位置功能的 Web 应用体验：
 
-## <a name="error-handling"></a>错误处理
+![位置功能的 Web 应用体验](../../assets/images/tabs/location-capability.png)
 
-必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
-
-|错误代码 |  错误名称     | Condition|
-| --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
-| **500** | INTERNAL_ERROR | 执行所需操作时遇到内部错误。|
-| **1000** | PERMISSION_DENIED |用户拒绝对 Teams 应用或 Web 应用的位置权限。|
-| **4000** | INVALID_ARGUMENTS | 使用错误或不足的强制参数调用 API。|
-| **8000** | USER_ABORT |用户已取消操作。|
-| **9000** | OLD_PLATFORM | 用户位于不存在 API 实现的旧平台版本上。 升级版本应该可以解决此问题。|
-
-## <a name="code-snippets"></a>代码段
+### <a name="code-snippets"></a>代码段
 
 **调用 `getLocation` API 以检索位置：**
 
@@ -101,7 +89,21 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
+## <a name="error-handling"></a>错误处理
+
+必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
+
+|错误代码 |  错误名称     | Condition|
+| --------- | --------------- | -------- |
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
+| **500** | INTERNAL_ERROR | 执行所需操作时遇到内部错误。|
+| **1000** | PERMISSION_DENIED |用户拒绝对 Teams 应用或 Web 应用的位置权限。|
+| **4000** | INVALID_ARGUMENTS | 使用错误或不足的强制参数调用 API。|
+| **8000** | USER_ABORT |用户已取消操作。|
+| **9000** | OLD_PLATFORM | 用户位于不存在 API 实现的旧平台版本上。 升级版本应该可以解决此问题。|
+
 ## <a name="see-also"></a>另请参阅
 
 * [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
 * [将 QR 代码或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
+* [将人员选取器功能集成到Teams](people-picker-capability.md)

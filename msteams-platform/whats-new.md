@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: 61b302b198a9dabdd597388e111eda6b03f7331b
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 1319b209bcc2543afa901bfbbf0ad33000b9d805
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140297"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211595"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -58,6 +58,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|06/28/2021|集成人员选取器功能。|[集成人员选取器功能](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| 引入了发送主动邮件的分步指南。 | [发送主动邮件的分步指南](sbs-send-proactive.yml) |
 |06/09/2021| 自适应卡片中具有 属性的图像的阶段 `allowExpand` 视图。 | [自适应卡片中的图像阶段视图](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| 对话选项卡。 | [开始并继续选项卡中有关内容的对话](~/tabs/how-to/conversational-tabs.md) |

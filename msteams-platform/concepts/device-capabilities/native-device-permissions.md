@@ -4,12 +4,12 @@ keywords: teams 应用功能权限
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 37312912b4901cd31feeb9b0ee9bc76a3e03826a
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994348"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211616"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 
@@ -19,6 +19,7 @@ ms.locfileid: "52994348"
 > * 若要将媒体功能集成到Microsoft Teams移动应用中，请参阅[集成媒体功能](mobile-camera-image-permissions.md)。
 > * 若要将 QR 或条形码扫描仪功能集成到 Microsoft Teams 移动应用中，请参阅在应用中集成[QR 或条形码扫描仪Teams。](qr-barcode-scanner-capability.md)
 > * 若要在移动应用中集成位置Microsoft Teams，请参阅[集成位置功能](location-capability.md)。
+> * 若要将人员选取器功能集成到 Microsoft Teams 移动应用中，请参阅在应用中集成[人员选取器Teams。](people-picker-capability.md)
 
 ## <a name="native-device-permissions"></a>本机设备权限
 
@@ -46,7 +47,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 用户可以通过选择"允许"或"拒绝Teams特定应用来管理设备权限。 
  
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 1. 打开你的Teams应用。
 1. 选择窗口右上角的配置文件图标。
@@ -55,7 +56,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
    ![设备权限桌面设置屏幕](../../assets/images/tabs/device-permissions.png)
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 1. 打开Teams。
 1. 转到 **设置**  >  **应用权限"。**
@@ -68,7 +69,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 ## <a name="specify-permissions"></a>指定权限
 
-通过添加并指定在应用程序中使用的五个属性中的哪一个来更新 `manifest.json` `devicePermissions` 应用：
+通过添加并指定在应用程序中使用的以下五个属性中的哪一个来 `manifest.json` `devicePermissions` 更新应用：
 
 ``` json
 "devicePermissions": [
@@ -173,11 +174,11 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
       /* ... *
     /});
     ```
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
    ![选项卡桌面设备权限提示](~/assets/images/tabs/device-permissions-prompt.png)
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
    ![选项卡移动设备权限提示](../../assets/images/tabs/MobileLocationPermission.png)
 
@@ -200,3 +201,6 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 > [!div class="nextstepaction"]
 > [在 Teams 中集成位置Teams](location-capability.md)
+
+> [!div class="nextstepaction"]
+> [将人员选取器功能集成到Teams](people-picker-capability.md)
