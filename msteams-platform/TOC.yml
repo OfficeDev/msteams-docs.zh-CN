@@ -86,6 +86,8 @@
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
         - name: 集成位置功能
           href: concepts/device-capabilities/location-capability.md
+        - name: 集成人员选取器功能
+          href: concepts/device-capabilities/people-picker-capability.md
 - name: 设计应用
   items:
     - name: 概述
