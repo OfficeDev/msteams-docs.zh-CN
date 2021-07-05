@@ -8,28 +8,26 @@
 - name: 入门
   expanded: true
   items:
+    - name: 概述
+      href: get-started/code-samples.md
     - name: 先决条件
       href: get-started/prerequisites.md
-    - name: 创建个人应用（响应）
+    - name: 使用 React 生成第一个应用
       href: get-started/first-app-react.md
-    - name: 创建个人应用（Blazor）
+    - name: 使用 Blazor 生成第一个应用
       href: get-started/first-app-blazor.md
-    - name: 创建个人应用 （SPApp）
+    - name: 使用 SPFx 生成第一个应用
       href: get-started/first-app-spfx.md
-    - name: 创建对话机器人
-      href: get-started/first-app-bot.md
-    - name: 创建邮件扩展
-      href: get-started/first-message-extension.md
-- name: 教程和代码示例
-  items:
-    - name: 概述
-      href: tutorials/code-samples.md
     - name: 使用 C# 或 .NET 生成第一个应用
-      href: tutorials/get-started-dotnet-app-studio.md
+      href: get-started/get-started-dotnet-app-studio.md
     - name: 使用 Node.js 生成第一个应用
-      href: tutorials/get-started-nodejs-app-studio.md
+      href: get-started/get-started-nodejs-app-studio.md
     - name: 使用 Yeoman 生成器生成第一个应用
-      href: tutorials/get-started-yeoman.md
+      href: get-started/get-started-yeoman.md
+    - name: 生成第一个对话机器人
+      href: get-started/first-app-bot.md
+    - name: 构建首个消息传递扩展
+      href: get-started/first-message-extension.md
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: 应用程序基础知识
@@ -44,36 +42,6 @@
       href: concepts/design/understand-use-cases.md
     - name: 将用例映射到 Teams 应用功能
       href: concepts/design/map-use-cases.md
-- name: 与Teams整合
-  items:
-    - name: 概述
-      href: samples/integrate-web-apps-overview.md
-    - name: Web 应用
-      href: samples/integrating-web-apps.md
-    - name: Power Platform 应用
-      items:
-        - name: 概述
-          href: samples/teams-low-code-solutions.md
-        - name: 添加 Power Virtual Agent 聊天机器人
-          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: 创建虚拟助手
-          href: samples/virtual-assistant.md
-    - name: Microsoft Teams 的应用模板
-      href: samples/app-templates.md
-    - name: 生产准备就绪的排班连接器
-      href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS
-      items:
-        - name: 概述
-          href: resources/moodle-overview.md
-        - name: 安装 Moodle LMS
-          href: resources/moodleInstructions.md
-    - name: 创建“共享到 Teams”按钮
-      href: concepts/build-and-test/share-to-teams.md
-    - name: 向 SharePoint 添加Teams选项卡
-      href: tabs/how-to/tabs-in-sharepoint.md
-    - name: 创建深层链接
-      href: concepts/build-and-test/deep-links.md
     - name: 设备功能
       items:
         - name: 概述
@@ -468,6 +436,36 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: 功能
           href: resources/dev-preview/developer-preview-features.md
+- name: 与Teams整合
+  items:
+    - name: 概述
+      href: samples/integrate-web-apps-overview.md
+    - name: Web 应用
+      href: samples/integrating-web-apps.md
+    - name: Power Platform 应用
+      items:
+        - name: 概述
+          href: samples/teams-low-code-solutions.md
+        - name: 添加 Power Virtual Agent 聊天机器人
+          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+        - name: 创建虚拟助手
+          href: samples/virtual-assistant.md
+    - name: Microsoft Teams 的应用模板
+      href: samples/app-templates.md
+    - name: 生产准备就绪的排班连接器
+      href: samples/shifts-wfm-connectors.md
+    - name: Moodle LMS
+      items:
+        - name: 概述
+          href: resources/moodle-overview.md
+        - name: 安装 Moodle LMS
+          href: resources/moodleInstructions.md
+    - name: 创建“共享到 Teams”按钮
+      href: concepts/build-and-test/share-to-teams.md
+    - name: 向 SharePoint 添加Teams选项卡
+      href: tabs/how-to/tabs-in-sharepoint.md
+    - name: 创建深层链接
+      href: concepts/build-and-test/deep-links.md
 - name: 资源
   items:
     - name: 本地化
