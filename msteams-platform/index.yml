@@ -33,8 +33,8 @@ highlightedContent:
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: 教程和代码示例
       itemType: sample
-      url: /microsoftteams/platform/tutorials/code-samples
-    - title: Microsoft Build 2021- 新增功能
+      url: /microsoftteams/platform/get-started/code-samples
+    - title: 新变化？
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
 conceptualContent:

@@ -4,47 +4,16 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: 1319b209bcc2543afa901bfbbf0ad33000b9d805
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: a18e602dea253f552dbcfffe7eb6620bba3bba67
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211595"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254193"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
-了解Microsoft Teams Microsoft Build 2021 中引入的、通用 (GA) 和开发人员预览版中引入的一些平台功能。
-
-## <a name="microsoft-build-2021"></a>Microsoft Build 2021
-
-# <a name="features-in-developer-preview"></a>[开发人员预览版中的功能](#tab/devpreview)
-
-| **Date** | **功能** | **已更改的主题** |
-| -------- | --------- | ------------------ |
-|06/16/2021| 聊天的特定于资源的同意。 |[特定于资源的同意](graph-api/rsc/resource-specific-consent.md) [，测试资源中的特定于资源的同意Teams](graph-api/rsc/test-resource-specific-consent.md)|
-|05/26/2021| 使用自适应卡片生成选项卡。 |[构建选项卡](tabs/how-to/build-adaptive-card-tabs.md)|
-|05/25/2021| 针对 Teams Toolkit 和[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[更新](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [应用开发Teams入门](~/get-started/prerequisites.md) |
-|05/25/2021| 新的开发人员门户Teams管理你的 Teams 应用。 | [Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| 自定义一起模式场景功能将参与者组合到单个虚拟场景，将其视频流放在预定席位中。 | [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md) |
-|05/24/2021| 自动程序可以使用 RSC (特定同意接收所有) 。|[使用 RSC、机器人](~/bots/how-to/conversations/channel-messages-with-rsc.md)对话[概述](~/bots/how-to/conversations/conversation-basics.md)、[频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)以及[开发人员预览](~/resources/schema/manifest-schema-dev-preview.md)清单架构接收所有消息 |
-|05/21/2021| 选项卡链接展开和阶段视图。 |[选项卡链接取消展开和阶段视图](tabs/tabs-link-unfurling.md) |
-
-> [!NOTE]
-> 有关开发人员预览版中提供的功能的详细信息，请参阅[公共开发人员预览版Teams。](~/resources/dev-preview/developer-preview-intro.md)
-
-# <a name="features-in-ga"></a>[GA 中的功能](#tab/GA)
-
-| **Date** | **功能** | **已更改的主题** |
-| -------- | --------- | ------------------ |
-|04/29/2021 | 自适应卡片的通用操作。 | [自适应卡的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/29/2021 | 自适应卡片的用户特定视图。 | [用户特定视图](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
-|04/29/2021 | 自适应卡片的顺序工作流。 | [顺序工作流](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
-|04/29/2021 | 最新卡片。 | [最新卡片](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
-|04/08/2021| 应用自定义。|[设计团队应用概述](concepts/design/enable-app-customization.md)[、App studio 概述](concepts/build-and-test/app-studio-overview.md#connectors)和[清单架构](resources/schema/manifest-schema-dev-preview.md) |
-|03/29/2021 | 设置卡片格式Teams。 | [格式化卡片Teams](task-modules-and-cards/cards/cards-format.md) |
-|02/19/2021|添加了位置功能。 <br/> 位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能以及 QR 或条形码扫描仪功能文件中。|[概述](concepts/device-capabilities/device-capabilities-overview.md)、 [请求设备权限](concepts/device-capabilities/native-device-permissions.md)、 [集成媒体功能](concepts/device-capabilities/mobile-camera-image-permissions.md)、 [集成 QR 或条形码](concepts/device-capabilities/qr-barcode-scanner-capability.md)扫描仪功能 、 [集成位置功能](concepts/device-capabilities/location-capability.md) |
-
----
+发现Microsoft Teams GA 版本和开发人员预览版 () 平台功能。
 
 ## <a name="ga-features"></a>GA 功能
 

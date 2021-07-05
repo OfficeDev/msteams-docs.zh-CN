@@ -5,23 +5,23 @@ description: 了解如何开始使用应用Microsoft Teams并设置你的环境�
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 7310d54322b6cbfd24e30eef37ea63a7969c001c
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037640"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254258"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>先决条件：开始Microsoft Teams开发
 
-创建第一个 Teams 应用之前，必须安装一些工具并设置开发环境。
+在开始创建第一个 Teams 应用之前，必须安装一些工具并设置开发环境。
 
 ## <a name="install-required-tools"></a>安装所需的工具
 
 你需要的一些工具取决于你更希望如何生成Teams应用：
 
 - [Node.js(](https://nodejs.org/en/download/) 使用最新的 v14 LTS 版本) 
-- 具有开发人员工具的浏览器 -例如[Microsoft Edge (](https://www.microsoft.com/edge)推荐) [Google Chrome](https://www.google.com/chrome/)
+- 具有开发人员工具的浏览器，例如[Microsoft Edge (](https://www.microsoft.com/edge)推荐) [Google Chrome](https://www.google.com/chrome/)
 - 如果使用 JavaScript、TypeScript 或 SharePoint 框架 (SPFx) 进行开发，Visual Studio Code版本 1.55 或更高版本。 [](https://code.visualstudio.com/download)  
 - 如果使用 .NET 进行开发，请安装[Visual Studio 2019。](https://visualstudio.com/download) 确保安装 ASP.NET **Web 开发** 或 **.NET Core 跨平台开发** 工作负载。
 
@@ -35,9 +35,9 @@ ms.locfileid: "53037640"
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. 打开 Visual Studio 代码。
-1. Select the Extensions view (**Ctrl+Shift+X**  /  **⌘⇧-X** or **View > Extensions**) .
+1. Select the **Extensions** view (**Ctrl+Shift+X**  /  **⌘⇧-X** or **View > Extensions**) .
 1. 在搜索框中，输入 **"Teams Toolkit"。**
-1. Select the green install button next to the Teams Toolkit.
+1. 选择 **"** 安装"旁边的Teams Toolkit。
 
 您还可以在 Teams Toolkit Marketplace 上找到Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
@@ -64,9 +64,8 @@ ms.locfileid: "53037640"
 1. 打开Visual Studio 2019。
 1. 选择 **扩展**  >  **管理扩展**。
 1. 在搜索框中，输入 **"Teams Toolkit"。**
-1. 选择"Teams Toolkit扩展并选择"下载 **"。**
-
-可以下载扩展。 关闭 Visual Studio 2019 以安装扩展。
+1. 选择"Teams Toolkit扩展并选择"下载 **"。** 下载扩展。
+1. 关闭 Visual Studio 2019 以安装扩展。
 
 # <a name="command-line"></a>[命令行](#tab/cli)
 
@@ -114,12 +113,12 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 
 ## <a name="enable-sideloading"></a>启用旁加载
 
-在开发期间，你必须在应用程序内加载Teams而不分发它。 这称为"旁加载"。
+在开发期间，你必须在应用程序内加载Teams而不分发它。 这称为旁加载。
 
-1. 如果你有一个Teams帐户，请验证你能否在应用中旁加载Teams：
+如果你有一个Teams帐户，请验证你能否在应用中旁加载Teams：
 
-    1. 在客户端Teams，选择"应用 **"。**
-    1. 查找用于自定义 **Upload的选项**。
+1. 在客户端Teams，选择"应用 **"。**
+1. 选择 **Upload自定义应用。**
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="插图显示可以在Teams上传自定义应用。":::
 
@@ -132,13 +131,12 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 
 1. 转到开发人员[Microsoft 365计划](https://developer.microsoft.com/microsoft-365/dev-program)。
 1. 选择 **立即加入** 并按照屏幕上的说明进行操作。
-1. 当你进入欢迎屏幕时，选择 **"设置 E5 订阅"。**
+1. 在欢迎屏幕中，选择 **"设置 E5 订阅"。**
 1. 设置管理员帐户。 完成后，你应该会看到如下所示的屏幕。
 
     :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册开发人员计划后看到Microsoft 365的示例。":::
 
-1. 使用刚Teams的管理员帐户登录登录。
-1. 验证你现在是否具有Upload **应用选项**。
+1. 使用刚Teams的管理员帐户登录登录。 验证是否具有Upload **应用选项**。
 
 ## <a name="get-a-free-azure-account"></a>获取免费的 Azure 帐户
 
@@ -149,7 +147,7 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 您必须有权访问两个帐户：
 
 - 你的Microsoft 365帐户凭据。 这是用于登录帐户的帐户Teams。 如果你使用的是开发人员Microsoft 365租户，这是注册该计划时设置的管理员帐户。
-- - 你的 Azure 凭据。 这是用于访问 Azure 门户和预配新的云资源以支持你的应用的帐户。
+- 你的 Azure 凭据。 这是用于访问 Azure 门户和预配新的云资源以支持你的应用的帐户。
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -162,16 +160,16 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="用于登录的&quot;帐户&quot;部分的位置。":::
 
-1. 登录过程开始使用正常的 Web 浏览器。 完成 M365 帐户的登录过程。 当可以关闭浏览器并返回到浏览器时，系统将Visual Studio Code。
+    登录过程开始使用正常的 Web 浏览器。 完成 M365 帐户的登录过程。 系统提示时，可以关闭浏览器并返回到Visual Studio Code。
 1. 返回到Teams Toolkit中的Visual Studio Code。
 1. 选择 **"登录到 Azure"。**
 
     > [!TIP]
     > 如果已安装 Azure 帐户扩展并使用相同的帐户，可以跳过此步骤。 请使用与其他扩展中相同的帐户。
 
-1. 登录过程开始使用正常的 Web 浏览器。  完成 Azure 帐户的登录过程。 当可以关闭浏览器并返回到浏览器时，系统将Visual Studio Code。
+1. 登录过程开始使用正常的 Web 浏览器。  完成 Azure 帐户的登录过程。 当系统提示时，可以关闭浏览器并返回到Visual Studio Code。
 
-完成后，边栏的 **"帐户** "部分将分别显示两个帐户以及可用的 Azure 订阅数。 确保至少有一个可用的 Azure 订阅可用。 如果没有，请注销并使用其他帐户。
+    完成后，边栏的 **"帐户** "部分将分别显示两个帐户以及可用的 Azure 订阅数。 确保至少有一个可用的 Azure 订阅可用。 如果没有，请注销并使用其他帐户。
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
@@ -195,20 +193,21 @@ Visual Studio 2019 会提示您登录每个服务（如果需要）。 无需提
 
     登录过程开始使用正常的 Web 浏览器。 完成 Azure 帐户的登录过程。 当可以关闭浏览器时，系统将提示你。
 
-帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。
+    帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。
 
----
 
-现在，你的开发环境已配置，你可以创建、生成和部署你的第一个Teams应用。
+
+    现在，你的开发环境已配置，你可以创建、生成和部署你的第一个Teams应用。
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 Blazor 创建Teams应用程序](first-app-blazor.md)
-- [使用 Teams 创建第一个SharePoint 框架 (SPFx) ](first-app-spfx.md)
-- [创建对话机器人应用](first-app-bot.md)
-- [创建邮件扩展](first-message-extension.md)
-
-## <a name="next-step"></a>后续步骤
-
-> [!div class="nextstepaction"]
-> [使用 Teams 创建你的第一个React](first-app-react.md)
+* [教程概述](code-samples.md) 
+* [使用应用程序创建React](first-app-react.md)
+* [使用 Blazor 创建应用](first-app-blazor.md)
+* [使用应用程序创建SPFx](first-app-spfx.md)
+* [使用或 C# .NET 创建应用](get-started-dotnet-app-studio.md)
+* [使用Node.js创建应用](get-started-nodejs-app-studio.md)
+* [使用 Yeoman 生成器创建应用](get-started-yeoman.md)
+* [创建对话机器人应用](first-app-bot.md)
+* [创建邮件扩展](first-message-extension.md)
+* [代码示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)

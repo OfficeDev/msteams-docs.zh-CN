@@ -5,25 +5,25 @@ description: 使用 Teams 工具包为 Microsoft Teams 创建邮件扩展。
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: cb37bc97c3b9de8ce469728e4c1b0e09ba1c2942
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 3566bc55c9995a8407b1344fbdb7d1548e210046
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037633"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254285"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>构建并运行 Microsoft Teams 的第一个消息传递扩展
+
+本教程介绍如何创建搜索命令以搜索外部数据并将结果插入到邮件中。 
 
 有两种类型的 Teams **消息扩展**：
 
 - [搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md)允许您搜索外部系统并将搜索结果以卡片的形式插入到消息中。
 - [动作命令](../messaging-extensions/how-to/action-commands/define-action-command.md)允许为用户提供一个模式弹出式窗口来收集或显示信息，然后处理他们的互动并将信息发送回 Teams。
 
-在本教程中，您将创建一 *搜索命令* 搜索外部数据并将结果插入邮件。  
+## <a name="before-you-begin"></a>开始之前
 
-## <a name="before-you-begin"></a>准备工作
-
-通过安装[先决条件](prerequisites.md)确保你的开发环境已设置
+通过安装先决条件确保已设置开发环境。
 
 > [!div class="nextstepaction"]
 > [安装先决条件](prerequisites.md)
@@ -35,7 +35,7 @@ ms.locfileid: "53037633"
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. 打开 Visual Studio 代码。
-1. 选择边栏中的"团队"图标打开 Teams 工具包：
+1. 选择边Teams图标以打开Teams Toolkit。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code 边栏中的 Teams 图标。":::
 
@@ -47,18 +47,18 @@ ms.locfileid: "53037633"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="&quot;创建新项目&quot;的向导启动":::
 
-1. 在" **选择功能"** 步骤 ， 选择 **邮件扩展** ，然后取消选择 **选项卡**。 按 **确定**。
+1. 在"**选择功能"** 部分，选择"**邮件扩展**"，取消选择 **"选项卡**"，然后选择"确定 **"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-create-project-capabilities.png" alt-text="显示如何向新应用添加功能的屏幕截图。":::
 
-1. 在 **机器人注册** 步骤中，选择 **创建新的机器人注册**。
+1. 在"**自动程序注册"** 部分，**选择"创建新的自动程序注册"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="选择创建新的自动注册":::
 
    > [!NOTE]
    > 消息扩展依赖于自动程序，在用户和你的代码之间提供对话框。
 
-1. 在" **编程语言** 步骤中， 选择 **JavaScript**。
+1. 在"**编程语言"部分**，选择 **"JavaScript"。**
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="显示如何选择编程语言的屏幕截图。":::
 
@@ -66,7 +66,7 @@ ms.locfileid: "53037633"
 
 1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
 
-将在数秒钟内创建你的 Teams 应用。
+   将在数秒钟内创建你的 Teams 应用。
 
 # <a name="command-line"></a>[命令行](#tab/cli)
 
@@ -78,14 +78,14 @@ teamsfx new
 
 CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该如何回答（例如，使用箭头键选择一个选项）。  如果已回答问题，请通过按 **Enter** 确认。
 
-1. 选择 **"创建新的 Teams 应用**。
-1. 选择 **邮件扩展** 功能，然后取消选择" **选项卡** 功能。
-1. 选择 **创建新的自动注册**。
+1. 选择 **创建新的 Teams 应用**。
+1. 选择"**邮件扩展"，** 然后取消选择 **"选项卡"。**
+1. 选择 **创建新的机器人注册**。
 1. 选择 **JavaScript** 作为编程语言。
 1. 按 **Enter** 选择默认工作区文件夹。
 1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。
 
-回答所有问题后，将创建项目。
+   在回答所有问题后，将创建项目。
 
 ---
 
@@ -113,31 +113,31 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
 若要在本地构建和运行应用，请执行：
 
-1. 在 Visual Studio Code 中，按 **F5** 以在调试模式下运行应用程序。
+1. 在Visual Studio Code中，按 **F5** 键以在调试模式下运行应用程序。
 
    > 首次运行该应用时，将下载所有依赖项并编译该应用。  编译完成后，将自动打开浏览器窗口。  这可能需要 3-5 分钟才能完成。
 
 1. 将在 Web 浏览器中加载 Teams，并提示进行登录。 如果系统提示打开 Microsoft Teams，请选择"取消"以保留在浏览器中。 使用 M365 帐户登录。
 
-1. 按 **添加** 将应用添加到你的帐户。
+1. 选择 **"** 添加"将应用添加到你的帐户。
 
-加载应用后，你将直接进入搜索对话框：
+   加载应用后，你将直接进入搜索对话框：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="操作中基于搜索的邮件扩展":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="操作中基于搜索的邮件扩展":::
 
-在搜索框中键入文本，然后选择其中一个选项。  自适应卡片将添加到输入框中。
+   在搜索框中键入文本，然后选择其中一个选项。  自适应卡片将添加到输入框中。
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>在调试器中本地运行应用时，会发生什么情况。</summary>
 
-按 F5 时，Teams 工具包:
+按 **F5 键** 时，Teams Toolkit：
 
-1. 使用 Azure Active Directory 注册应用程序。
-1. 在 Microsoft Teams 中将你的应用程序注册为“旁加载”。
-1. 使用 [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start) 启动在本地运行的应用程序后端。
-1. 启动 ngrok 隧道，以便 Teams 可以与你的应用通信。
-1. 启动 Microsoft Teams，并用命令指示 Teams 旁加载该应用程序。
+1. 向应用程序注册Azure Active Directory。
+1. 将应用程序注册为"旁加载"Microsoft Teams。
+1. 使用 Azure 函数核心工具 启动本地 [运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。
+1. 启动 ngrok 隧道，Teams应用进行通信。
+1. 首先Microsoft Teams命令指示Teams旁加载应用程序。
 
 </details>
 
@@ -175,7 +175,7 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
 The Teams Search Auth Config for sample projects on GitHub， demonstrate how to create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples). 这些示例还演示如何创建接受搜索请求的邮件扩展，并返回用户登录后的结果。
 
-| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|--------|
 | 自动程序生成器 | 创建邮件扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
@@ -186,7 +186,12 @@ The Teams Search Auth Config for sample projects on GitHub， demonstrate how to
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 React 创建 Teams 应用](first-app-react.md)
-- [使用 Blazor 创建 Teams 应用](first-app-blazor.md)
-- [创建 Teams 应用作为 SharePoint Web 部件](first-app-spfx.md) （不需要 Azure）
-- [创建对话机器人](first-app-bot.md)
+* [教程概述](code-samples.md) 
+* [使用应用程序创建React](first-app-react.md)
+* [使用 Blazor 创建应用](first-app-blazor.md)
+* [使用应用程序创建SPFx](first-app-spfx.md)
+* [使用或 C# .NET 创建应用](get-started-dotnet-app-studio.md)
+* [使用Node.js创建应用](get-started-nodejs-app-studio.md)
+* [使用 Yeoman 生成器创建应用](get-started-yeoman.md)
+* [创建对话机器人应用](first-app-bot.md)
+* [代码示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)

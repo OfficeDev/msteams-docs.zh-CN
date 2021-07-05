@@ -5,12 +5,12 @@ description: 如何为自动程序创建Microsoft Teams菜单
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0b8793666e6478e69698c355fb9209d2ca5f5d1e
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4ee8c48b2f3b10c8924b0e81dae0a0c1f6014414
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068999"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254312"
 ---
 # <a name="bot-command-menus"></a>自动程序命令菜单
 
@@ -18,11 +18,11 @@ ms.locfileid: "53068999"
 
 若要定义自动程序可以响应的核心命令集，你可以添加一个命令菜单以及自动程序命令的下拉列表。 当用户与自动程序对话时，将在撰写邮件区域中显示命令列表。 Select a command from the list to insert the command string into the compose message box and select **Send**.
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 ![自动程序命令菜单](./conversations/media/bot-menu-sample.png)
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 ![移动机器人命令菜单](./conversations/media/mobile-bot-menu-sample.png)
 
@@ -44,7 +44,7 @@ ms.locfileid: "53068999"
 
     ![应用程序 Studio](./conversations/media/AppStudio.png)
 
-2. 在 **App Studio** 中，选择 **"清单编辑器"** 选项卡。如果你没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [更新应用包](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。
+2. 在 **App Studio** 中，选择 **"清单编辑器"** 选项卡。如果你没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [更新应用包](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。
 
 3. 在清单编辑器的左侧 **窗格中的**"功能"部分，选择"**自动程序"。**
 

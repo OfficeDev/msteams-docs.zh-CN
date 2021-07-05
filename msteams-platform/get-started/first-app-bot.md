@@ -5,20 +5,20 @@ description: 使用 Teams 工具包为 Microsoft Teams 创建对话机器人。
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 68b266b1cf9d8f7e9b4b98611d3ba982a2e18a47
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 96bbddd99b6901a4b92e1e2f2dc98482c755dc66
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037647"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254249"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>构建你的第一个 Microsoft Teams 对话机器人
 
-机器人是 Teams 用户和 Web 服务之间的中介。  用户可以与机器人聊天，以快速获取信息、启动工作流或启动 Web 服务能够执行的任何操作。  在本教程中，你将了解如何构建、运行和部署 Teams 机器人应用。
+在本教程中，你将了解如何构建、运行和部署 Teams 机器人应用。 机器人是 Teams 用户和 Web 服务之间的中介。  用户可以与机器人聊天，以快速获取信息、启动工作流或启动 Web 服务能够执行的任何操作。 
 
-## <a name="before-you-begin"></a>准备工作
+## <a name="before-you-begin"></a>开始之前
 
-通过安装[先决条件](prerequisites.md)确保你的开发环境已设置
+通过安装先决条件确保已设置开发环境。
 
 > [!div class="nextstepaction"]
 > [安装先决条件](prerequisites.md)
@@ -30,7 +30,7 @@ ms.locfileid: "53037647"
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. 打开 Visual Studio Code。
-1. 通过选择边栏中的 Teams 图标，打开 Teams 工具包:
+1. 选择边Teams图标以打开Teams Toolkit。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code 边栏中的 Teams 图标。":::
 
@@ -42,21 +42,21 @@ ms.locfileid: "53037647"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="&quot;创建新项目&quot;的向导启动":::
 
-1. 在 **选择功能** 步骤，选择 **机器人**，然后取消选择 **选项卡**。按 **确定**。
+1. 在"**选择功能"** 部分，选择"**自动** 程序"，取消选择 **"选项卡**"，然后选择"确定 **"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities-bot.png" alt-text="显示如何向新应用添加功能的屏幕截图。":::
 
-1. 在 **机器人注册** 步骤中，选择 **创建新的机器人注册**。
+1. 在"**自动程序注册"** 部分，**选择"创建新的自动程序注册"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="选择创建新的机器人注册":::
 
-1. 在 **编程语言** 步骤中，选择 **JavaScript**。
+1. 在"**编程语言"部分**，选择 **"JavaScript"。**
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="显示如何选择编程语言的屏幕截图。":::
 
 1. 选择工作区文件夹。  将在工作区文件夹中为正在创建的项目创建一个文件夹。
 
-1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
+1. 为应用输入合适的名称，如 `helloworld`。  应用的名称必须仅包含字母数字字符。  按 **Enter** 以继续。
 
 将在数秒钟内创建你的 Teams 应用。
 
@@ -71,13 +71,13 @@ teamsfx new
 CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该如何回答（例如，使用箭头键选择一个选项）。  如果已回答问题，请通过按 **Enter** 确认。
 
 1. 选择 **创建新的 Teams 应用**。
-1. 选择 **机器人** 功能，然后取消选择 **选项卡** 功能。
+1. 选择 **自动程序** ，然后取消选择 **选项卡**。
 1. 选择 **创建新的机器人注册**。
 1. 选择 **JavaScript** 作为编程语言。
 1. 按 **Enter** 选择默认工作区文件夹。
 1. 为应用输入合适的名称，如 `helloworld`。  应用的名称只能包含字母数字字符。
 
-回答所有问题后，将创建项目。
+在回答所有问题后，将创建项目。
 
 ---
 
@@ -105,7 +105,7 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
 若要在本地构建并运行应用程序:
 
-1. 在 Visual Studio Code 中，按 **F5** 以在调试模式下运行应用程序。
+1. 在Visual Studio Code中，按 **F5** 键以在调试模式下运行应用程序。
 
    > 首次运行该应用时，将下载所有依赖项并编译该应用。  编译完成后，将自动打开浏览器窗口。  这可能需要 3-5 分钟才能完成。
 
@@ -114,23 +114,23 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
 1. 系统可能会提示你登录。  如果是这样，则使用你的 M365 帐户登录。
-1. 系统提示将应用安装到 Teams 时，按 **添加**。
+1. 当系统提示将应用安装到 Teams 时，选择"添加 **"。**
 
-加载应用后，你将直接进入与机器人的聊天会话。  你可以键入 `intro` 以显示简介卡，键入 `show` 以显示你在 Microsoft Graph 中的详细信息。  (这需要额外审批权限)。
+   加载应用后，你将直接进入与机器人的聊天会话。  你可以键入 `intro` 以显示简介卡，键入 `show` 以显示你在 Microsoft Graph 中的详细信息。  (这需要额外审批权限)。
 
-调试工作如你通常预期一样 - 自己试一试！ 打开 `bot/dialogs/rootDialog.js` 文件并找到 `triggerCommand(...)` 方法。  为默认情况设置断点。  然后键入一些文本。
+   调试工作如你通常预期一样 - 自己试一试！ 打开 `bot/dialogs/rootDialog.js` 文件并找到 `triggerCommand(...)` 方法。  为默认情况设置断点。  然后键入一些文本。
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>在本地调试器中运行应用时，了解会发生什么情况。</summary>
 
-按 F5 时，Teams 工具包:
+按 **F5 键** 时，Teams Toolkit：
 
-1. 使用 Azure Active Directory 注册应用程序。
-1. 在 Microsoft Teams 中将你的应用程序注册为“旁加载”。
-1. 使用 [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start) 启动在本地运行的应用程序后端。
-1. 启动 ngrok 隧道，以便 Teams 可以与你的应用通信。
-1. 启动 Microsoft Teams，并用命令指示 Teams 旁加载该应用程序。
+1. 向应用程序注册Azure Active Directory。
+1. 将应用程序注册为"旁加载"Microsoft Teams。
+1. 使用 Azure 函数核心工具 启动本地 [运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。
+1. 启动 ngrok 隧道，Teams应用进行通信。
+1. 首先Microsoft Teams命令指示Teams旁加载应用程序。
 
 </details>
 
@@ -156,17 +156,18 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 1. 后端使用 _Azure Functions Core Tools_ 运行。
 1. 应用程序 HTTP 终结点 (Microsoft Teams 在此加载应用程序) 在本地运行。
 
-部署涉及预配活动 Azure 订阅上的资源，以及将应用程序后端和前端代码部署（上传）到 Azure。 后端使用多种 Azure 服务，包括 Azure 应用服务 和 Azure 机器人服务。
+   部署涉及预配活动 Azure 订阅上的资源，以及将应用程序后端和前端代码部署（上传）到 Azure。 后端使用多种 Azure 服务，包括 Azure 应用服务 和 Azure 机器人服务。
 
 </details>
 
 ## <a name="see-also"></a>另请参阅
 
-- [使用 React 创建 Teams 应用](first-app-react.md)
-- [使用 Blazor 创建 Teams 应用](first-app-blazor.md)
-- [将 Teams 应用创建为 SharePoint Web 部件](first-app-spfx.md) (不需要 Azure)
-
-## <a name="next-step"></a>后续步骤
-
-> [!div class="nextstepaction"]
-> [创建邮件扩展](first-message-extension.md)
+* [教程概述](code-samples.md) 
+* [使用应用程序创建React](first-app-react.md)
+* [使用 Blazor 创建应用](first-app-blazor.md)
+* [使用应用程序创建SPFx](first-app-spfx.md)
+* [使用或 C# .NET 创建应用](get-started-dotnet-app-studio.md)
+* [使用Node.js创建应用](get-started-nodejs-app-studio.md)
+* [使用 Yeoman 生成器创建应用](get-started-yeoman.md)
+* [创建邮件扩展](first-message-extension.md)
+* [代码示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)

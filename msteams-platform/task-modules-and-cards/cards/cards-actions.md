@@ -4,12 +4,12 @@ description: 描述自动Microsoft Teams中的卡片操作以及如何在机器�
 localization_priority: Normal
 ms.topic: conceptual
 keywords: teams 机器人卡片操作
-ms.openlocfilehash: 1b20ca8003ab74c5dd2860e754024ae64ff94527
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140087"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254200"
 ---
 # <a name="card-actions"></a>卡片操作
 
@@ -18,7 +18,7 @@ ms.locfileid: "53140087"
 > [!NOTE]
 > 操作 `CardAction` 不同于从 `potentialActions` 连接器Office 365连接器卡的操作。
 
-| 类型 | 操作 |
+| 类型 | Action |
 | --- | --- |
 | `openUrl` | 在默认浏览器中打开 URL。 |
 | `messageBack` | 从选择按钮或点击卡片的用户向机器人发送消息和有效负载。 向聊天流发送单独的消息。 |
@@ -533,7 +533,7 @@ CardFactory.actions([
 ```json
 {
   "type": "Action.Submit",
-  "title": "submit"
+  "title": "submit",
   "data": {
     "msteams": {
         "type": "task/fetch"
