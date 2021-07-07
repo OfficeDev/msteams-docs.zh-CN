@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: 发送消息获取用户 ID 通道 ID 对话 ID
-ms.openlocfilehash: 443988cc70f009ab657a1a29a91e8989dfed4f43
-ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
+ms.openlocfilehash: 5c169e8ef7735b42233bef9992de3540a6fbbee1
+ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53130193"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "53300296"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -117,7 +117,7 @@ ms.locfileid: "53130193"
 
 ## <a name="samples"></a>示例
 
-以下代码显示了一个简单的代码示例，该示例使用 Graph：
+以下代码显示如何发送主动邮件：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -272,6 +272,7 @@ POST /v3/conversations
 |---------------|--------------|--------|-------------|--------|
 | Teams对话基础知识  | 演示在电子邮件中Teams，包括发送一对一主动消息。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | 在频道中启动新线程 | 演示在频道中创建新线程。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| 主动安装应用并发送主动通知 | 此示例演示如何使用用户主动安装应用，以及如何通过调用 Microsoft Graph发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>其他代码示例
 

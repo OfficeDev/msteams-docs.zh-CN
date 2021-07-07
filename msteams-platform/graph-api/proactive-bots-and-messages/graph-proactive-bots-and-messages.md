@@ -6,14 +6,14 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: 222c69f6349177a72f4b8599068ea1ebacbf6d16
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: 0f59a74cc24b7d80dd3afd4aa4369a47d56e4d59
+ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114236"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "53300303"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 主动安装应用以发送消息
+# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
 
 >[!IMPORTANT]
 > Microsoft Graph公共Microsoft Teams预览版可供早期访问和反馈使用。 尽管此版本已经过大量测试，但不适合在生产中使用。
@@ -190,6 +190,12 @@ Content-Type: application/json
 
 自动程序 [可以在为用户或](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) 团队添加自动程序并接收所有用户信息后发送主动消息。
 
+## <a name="code-sample"></a>代码示例
+
+| **示例名称** | **说明** | **.NET** | **Node.js** |
+|---------------|--------------|--------|-------------|--------|
+| 主动安装应用并发送主动通知 | 此示例演示如何使用用户主动安装应用，以及如何通过调用 Microsoft Graph发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+
 ## <a name="see-also"></a>另请参阅
 
 * [**在应用中管理应用Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
@@ -198,4 +204,4 @@ Content-Type: application/json
 ## <a name="additional-code-samples"></a>其他代码示例
 >
 > [!div class="nextstepaction"]
-> [**Teams主动邮件代码示例**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [**Teams主动邮件代码示例**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
