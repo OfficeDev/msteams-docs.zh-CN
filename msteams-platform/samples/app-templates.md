@@ -6,12 +6,12 @@ keywords: Microsoft Teams模板示例演示
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
-ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
+ms.openlocfilehash: 72bb5506e552dfa3d35426e99a7ee74088ef41f6
+ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53111158"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53333692"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -286,9 +286,9 @@ E-Patients 是[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)一款�
 
 "获取支持"应用由使用 Microsoft Teams 的组织使用，以允许任何一组用户向主管请求帮助。 此应用程序包括以下功能：
 * 从 Power App 请求不同类别的帮助。
-* 发送给请求者的通知，告知他们分配了谁。
+* 发送给请求者的通知，告知他们分配了哪些人。
 * 发送给指定监督员的通知，告知他们谁需要协助。 
-* 分析 SharePoint 和 PowerBI.S 中的升级和模式。
+* 分析 SharePoint 和 Power BI 中的升级和Power BI。
 
 [获取GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 

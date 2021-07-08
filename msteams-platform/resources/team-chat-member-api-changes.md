@@ -6,22 +6,22 @@ keywords: 机器人框架 apis 团队成员名单
 localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: d2eb75a69100a6daaf3af3a021b9896c42abe5f1
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: 9c6444967d330d27a415ac596a3858c05c49236e
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114243"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328063"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams自动程序 API 更改以提取团队或聊天成员
 
 >[!NOTE]
 > 和 API 的弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 过程已启动。 最初，它们被严格限制为每分钟五个请求，并且每个团队最多返回 10，000 个成员。 这样，随着团队规模增加，不会返回全部名单。
-> 必须更新到 4.10 版或更高版本的 Bot Framework SDK，并切换到分页 API 终结点或 `TeamsInfo.GetMemberAsync` 单个用户 API。 这也适用于自动程序，即使你未直接使用这些 API，因为较旧的 SDK 在 [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) 事件期间调用这些 API。 若要查看即将进行的更改的列表，请参阅 API [更改](team-chat-member-api-changes.md#api-changes)。 
+> 必须更新到 4.10 版或更高版本的 Bot Framework SDK，并切换到分页 API 终结点或 `TeamsInfo.GetMemberAsync` 单个用户 API。 这也适用于自动程序，即使你未直接使用这些 API，因为较旧的 SDK 在 [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) 事件期间调用这些 API。 若要查看即将进行的更改的列表，请参阅 API [更改](team-chat-member-api-changes.md#api-changes)。
 
-目前，要检索聊天或团队的一个或多个成员信息的聊天机器人开发人员使用 Microsoft Teams 自动程序 API C# 或 `TeamsInfo.GetMembersAsync` TypeScript 或 `TeamsInfo.getMembers` Node.js API。 有关详细信息，请参阅提取 [名单或用户配置文件](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)。 这些 API 存在一些缺点。
+目前，如果要检索聊天或团队的一个或多个成员的信息，可以使用[Microsoft Teams 自动](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)程序 API C# 或 TypeScript 或 `TeamsInfo.GetMembersAsync` Node.js `TeamsInfo.getMembers` API。 有关详细信息，请参阅提取 [名单或用户配置文件](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)。
 
-目前，如果要检索聊天或团队的一个或多个成员的信息，可以使用[Microsoft Teams 自动](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)程序 API C# 或 TypeScript 或 `TeamsInfo.GetMembersAsync` Node.js `TeamsInfo.getMembers` API。 这些 API 有以下缺点：
+这些 API 有以下缺点：
 
 * 对于大型团队，性能较差且超时的可能性较大：自 2017 年初发布以来，最大团队Teams大大增加。 作为或返回整个成员列表，对于大型团队，API 调用需要很长时间来返回，并且调用通常要过长，必须 `GetMembersAsync` `getMembers` 重试。
 * 获取单个用户的配置文件详细信息非常困难：若要获取单个用户的配置文件信息，您必须检索整个成员列表，然后搜索您想要的成员列表。 Bot Framework SDK 中提供了一个帮助程序函数，使其更简单，但效率并不高。

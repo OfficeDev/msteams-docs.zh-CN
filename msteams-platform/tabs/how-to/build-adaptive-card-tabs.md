@@ -4,12 +4,12 @@ author: KirtiPereira
 description: 使用自适应卡片生成选项卡
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4359b20d5839b86955082b7a5da8db262e13600c
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5a66f49db3710885b926a7abce45ef858bf0b092
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179900"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328056"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -98,6 +98,9 @@ ms.locfileid: "53179900"
 ## <a name="invoke-activities"></a>调用活动
 
 自适应卡片选项卡和自动程序之间的通信通过活动 `invoke` 完成。 每个 `invoke` 活动都有一个对应的 **名称**。 使用每个活动的名称来区分每个请求。 `tab/fetch``tab/submit`和 是本节中介绍的活动。
+
+> [!NOTE]
+> 机器人需要向服务 URL 发送 [所有响应](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 服务 URL 作为传入有效负载的一 `activity` 部分接收。
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>提取自适应卡片以呈现到选项卡
 

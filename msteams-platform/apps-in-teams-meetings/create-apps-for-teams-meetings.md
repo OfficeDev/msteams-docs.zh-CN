@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 38a7a5fdf9794fb95b4141f2c73e8282a9bf8601
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
+ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211588"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53333685"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
@@ -49,7 +49,7 @@ ms.locfileid: "53211588"
 
 下表提供了这些 API 的列表：
 
-|API|说明|请求|源|
+|API|说明|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -87,7 +87,7 @@ API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
@@ -154,7 +154,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 #### <a name="response-codes"></a>响应代码
 
-`GetParticipant`API 包括以下响应代码：
+`GetParticipant`API 返回以下响应代码：
 
 |响应代码|说明|
 |---|---|
@@ -162,7 +162,6 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 | **200** | 成功检索参与者信息。|
 | **401** | 应用使用无效令牌进行响应。|
 | **404** | 会议已过期或找不到参与者。|
-| **500** | 自会议结束以来 (超过 60) 会议已过期，或者参与者没有基于其角色的权限。|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal API
 
@@ -197,15 +196,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-
-activity.ChannelData = new TeamsChannelData
-  {
-    Notification = new NotificationInfo()
-                    {
-                        AlertInMeeting = true,
-                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-                    }
-  };
+activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -292,7 +283,7 @@ API 通过 Bot Services 提供。
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
 var creds = connectorClient.Credentials as AppCredentials;
 var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
 var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));

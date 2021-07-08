@@ -4,12 +4,12 @@ description: 介绍自动程序可用的所有卡片和Teams
 localization_priority: Normal
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: be38454daac519530d0fdf10b5170e128219f6fc
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: d3b84344eccee7c2595b0e978c72d7e331b198cb
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140468"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328070"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -57,6 +57,21 @@ ms.locfileid: "53140468"
 | [缩略图卡片](#thumbnail-card) | 此卡片通常包含一个缩略图图像、一些短文本以及一个或多个按钮。 |
 | [卡片集合](#card-collections) | 此卡片集合用于在单个响应中返回多个项目。 |
 
+## <a name="features-that-support-different-card-types"></a>支持不同卡片类型的功能
+
+| 卡片类型 | 机器人 | 邮件扩展预览 | 邮件扩展结果 | 任务模块 | 传出 Webhook | 传入 Webhook | O365 连接器 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 自适应卡片 | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
+| O365 连接器卡 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Hero card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| 缩略图卡片 | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| 列表卡 | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
+| 收据卡 | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
+| 登录卡 | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+
+> [!NOTE]
+> 对于传入 Webhook 中的自适应卡片，完全支持除 以外的所有本机自适应 `Action.Submit` 卡片架构元素。 支持的操作包括 Action.OpenURL、Action.ShowCard、Action.ToggleVisibility [**和Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。 [](https://adaptivecards.io/explorer/Action.OpenUrl.html) [](https://adaptivecards.io/explorer/Action.ShowCard.html) [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
+
 ## <a name="common-properties-for-all-cards"></a>所有卡片的常见属性
 
 你可以浏览一些适用于所有卡片的常见属性。
@@ -74,7 +89,7 @@ ms.locfileid: "53140468"
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
 | url | URL | 图像的 HTTPS URL。 |
-| alt | String | 图像的辅助说明。 |
+| alt | 字符串 | 图像的辅助说明。 |
 
 > [!NOTE]
 > 如果卡片包含的图像 URL 在最终图像之前重定向，则不支持图像 URL 中的重定向。 对于在公有云上共享的图像，会出现此情况。
@@ -432,7 +447,7 @@ Office 365连接器卡在连接器Microsoft Teams，包括[ `ActionCard` 操作]
 
 在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。 下表列出了区别：
 
-| 连接器 | 机器人 |
+| Connector | Bot |
 | --- | --- |
 | 终结点通过 HTTP POST 接收卡有效负载。 | `HttpPOST`该操作将触发 `invoke` 仅向自动程序发送操作 ID 和正文的活动。|
 
