@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
-ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
+ms.openlocfilehash: 2dce62aaf94e68c14183f0d91e5ba823f2ef3d7e
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/08/2021
-ms.locfileid: "53333685"
+ms.locfileid: "53335345"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
@@ -45,7 +45,7 @@ ms.locfileid: "53333685"
 
 ## <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
-新的会议可扩展性为您提供了可转换会议体验的 API。 借助此新功能，可以在会议生命周期内生成应用或集成现有应用。 可以使用 API 让应用了解会议。 你可以选择想要用于增强会议体验的 API。
+新的会议可扩展性提供了用于转换会议体验的 API。 你可以构建应用或在会议生命周期内集成现有应用。 可以使用 API 让应用了解会议。 可以选择要用于增强会议体验的 API。
 
 下表提供了这些 API 的列表：
 

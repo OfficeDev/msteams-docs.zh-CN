@@ -3,12 +3,12 @@ title: 会议应用可扩展性
 author: surbhigupta
 description: 了解会议应用程序扩展性
 ms.topic: conceptual
-ms.openlocfilehash: 0daa3b1976754eff6fed057de0c3659b51506f96
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068631"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335383"
 ---
 # <a name="meeting-app-extensibility"></a>会议应用可扩展性
 
@@ -32,8 +32,7 @@ Teams应用程序扩展性基于以下概念：
 > 如果已将选项卡与会议集成，则应用必须遵循选项卡的 Teams 单一登录[ (SSO) 身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 > [!NOTE]
-> * 移动客户端仅在会议前和会议后阶段支持选项卡。 会议内对话框和面板中的会议体验当前在移动设备上不可用。
-> * 应用仅在私人安排的会议中受支持。
+> 应用仅在私人安排的会议中受支持。
 
 #### <a name="pre-meeting-app-experience"></a>会议前应用体验
 
@@ -48,42 +47,86 @@ Teams应用程序扩展性基于以下概念：
 
 1. 在选项卡库中，选择要添加的应用并按照所需步骤操作。 应用作为选项卡安装。
 
-    ![会议前选项卡视图](../assets/images/apps-in-meetings/PreMeetingTab.png)
-
     > [!NOTE]
     > * 您还可以使用现有会议中的"会议 **聊天** "选项卡添加选项卡。
     > * 如果投票或调查超过 10 个，则选项卡布局必须组织在一个状态。
+
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+![会议前选项卡视图](../assets/images/apps-in-meetings/PreMeetingTab.png)
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+将选项卡添加到桌面或 Web 上的现有会议后，可以在会议详细信息的"更多部分"下看到会议前体验中的相同应用。
+
+<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+
+---
 
 #### <a name="in-meeting-app-experience"></a>会议内应用体验
 
 借助会议内应用体验，可以使用应用和会议内对话框在会议期间与参与者互动。 会议应用程序作为会议中的选项卡托管在会议窗口的顶部栏中。使用"会议内"对话框为会议参与者展示可操作内容。 有关详细信息，请参阅[为会议创建Teams应用](create-apps-for-teams-meetings.md)。
 
+对于移动版，会议应用可从会议>省略号 &#x25CF;&#x25CF;&#x25CF; 提供。 选择 **"** 应用"以查看会议提供的所有应用。
+
 **在会议期间使用选项卡**
 
-1. 进入会议后，从聊天窗口的顶部栏中，选择想要使用的应用。 应用在侧面板Teams会议对话框中的"会议"对话框中可见。
+1. 转到Teams。
+1. 在日历中，选择要使用选项卡的会议。
+1. 进入会议后，从聊天窗口的顶部栏中，选择所需的应用。
+    应用在侧面板Teams会议对话框中的"会议"对话框中可见。
 1. 在"会议内"对话框中，输入你的回复作为反馈。
 
-    ![对话框视图](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-    > [!NOTE]
-    > * 应用可以利用 Teams 客户端 SDK 来访问 `meetingId` 、 `userMri` 和 `frameContext` ，并适当地呈现体验。
-    > * 如果成功呈现了会议内对话框，则通知你已成功下载结果。
-    > * 应用清单指定希望它们显示的位置。 上下文字段用于此目的。 它还可以是共享托盘体验的一部分，但需遵循指定的设计准则。
+![对话框视图](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
-    下图演示了会议侧面板：
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
-    ![会议侧面板](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+进入会议并添加桌面或 Web 中的应用后，该应用在移动Teams应用程序部分 **下可见**。 选择 **"** 应用"以显示应用列表。 用户可以启动任何应用作为应用的会议侧面板。
+
+将显示"会议内"对话框，可在其中输入回复作为反馈。
+
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+
+> [!NOTE]
+> 无需更改应用清单，应用就适用于移动设备。
+
+---
+
+> [!NOTE]
+> * 应用可以利用 Teams 客户端 SDK 来访问 `meetingId` 、 `userMri` 和 `frameContext` ，并适当地呈现体验。
+> * 如果成功呈现了会议内对话框，则你得到一条通知，告知已成功下载结果。
+> * 应用清单指定希望它们显示的位置。 上下文字段用于此目的。 它还是共享托盘体验的一部分，但需遵循指定的设计准则。
+
+下图演示了会议侧面板：
+
+![会议侧面板](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+下表介绍了应用程序在获得批准和未获得批准时的行为：
+
+|应用功能 | 应用已批准 | 应用未获得批准 |
+|---|---|---|
+| 会议可扩展性 | 该应用将显示在会议中。 | 该应用不会显示在移动客户端的会议中。 |
 
 #### <a name="post-meeting-app-experience"></a>会议后应用体验
 
-通过会议后应用体验，你可以查看会议结果，如投票测试结果或反馈。 Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> 添加选项卡并获取组织者和与会者必须采取措施的会议笔记和结果。
+通过会议后应用体验，可以查看会议结果，如投票调查结果或反馈。 Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> 添加选项卡、获取会议笔记以及组织者和与会者必须采取措施的结果。
 
 下图显示了 **"Contoso"** 选项卡，其中显示来自与会者的投票结果和反馈：
 
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
 ![会议后视图](../assets/images/apps-in-meetings/PostMeeting.png)
 
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+
+---
+
 > [!NOTE]
-> 当投票或调查多于 10 个时，必须组织选项卡布局。
+> 当有 10 多个投票或调查时，必须组织选项卡布局。
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>将机器人集成到会议生命周期
 
@@ -146,7 +189,7 @@ Teams应用程序扩展性基于以下概念：
 ## <a name="see-also"></a>另请参阅
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [机器人](../bots/what-are-bots.md)
+* [Bot](../bots/what-are-bots.md)
 * [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 

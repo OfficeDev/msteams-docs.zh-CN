@@ -5,12 +5,12 @@ description: 了解如何在会议Teams设计应用并获取 Microsoft Teams UI 
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 7196017f92bebb776d1b73680893ebfe3684a74c
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114279"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335408"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计会议Microsoft Teams扩展
 
@@ -43,7 +43,7 @@ ms.locfileid: "53114279"
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-在会议中， **用户可以选择"** 更多 :::image type="icon" source="../../assets/icons/teams-client-more.png"::: "并选择他们需要的应用。
+在桌面上添加应用后，可以选择该应用，并且可以通过选择"更多"在会议使用 **该应用** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="示例演示如何在移动会议期间添加会议扩展。" border="false":::
 
@@ -62,8 +62,8 @@ ms.locfileid: "53114279"
 |计数器|说明|
 |----------|-----------|
 |1|**选项卡名称**：选项卡的导航标签。|
-|2 |**Tab 溢出**：打开选项卡操作，如重命名和删除。|
-|3 |**iframe：** 显示应用内容。|
+|2|**Tab 溢出**：打开选项卡操作，如重命名和删除。|
+|3|**iframe：** 显示应用内容。|
 
 ### <a name="designing-with-ui-templates"></a>使用 UI 模板进行设计
 
@@ -105,8 +105,8 @@ ms.locfileid: "53114279"
 |计数器|说明|
 |----------|-----------|
 |1|**应用图标 (选择**) ：16 像素透明应用徽标。|
-|2 |**应用名称**|
-|3 |**标头**：包括你的应用名称。|
+|2|**应用名称**|
+|3|**标头**：包括你的应用名称。|
 |4 |**关闭按钮**：关闭选项卡。始终使用右上方的关闭图标，而不是页脚中的操作。|
 |5 |**通知栏**：错误警报显示在标题正下方，将 iframe 内容向下推送 20 像素。|
 |6 |**iframe：** 显示应用内容。|
@@ -163,7 +163,7 @@ ms.locfileid: "53114279"
 |计数器|说明|
 |----------|-----------|
 |1|**标头**：包括应用图标、名称、操作字符串和关闭图标。|
-|2 |**iframe：** 显示应用内容。|
+|2|**iframe：** 显示应用内容。|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>结构：会议内对话框标头
 
@@ -174,8 +174,8 @@ ms.locfileid: "53114279"
 |计数器|说明|
 |----------|-----------|
 |1|**头** 像：启动会议对话的人。|
-|2 |**应用程序图标**|
-|3 |**应用名称**|
+|2|**应用程序图标**|
+|3|**应用名称**|
 |4 |**关闭按钮**：关闭对话框。|
 |5 |**操作字符串**：通常描述启动对话框的人。|
 
@@ -246,8 +246,8 @@ ms.locfileid: "53114279"
 |计数器|说明|
 |----------|-----------|
 |1|**应用图标**：突出显示的图标表示应用的"会议中"选项卡已打开。|
-|2 |**共享到会议阶段按钮**：将应用共享到会议阶段的入口点。 显示是否将应用配置为使用共享会议阶段。|
-|3 |**iframe：** 显示应用内容。|
+|2|**共享到会议阶段按钮**：将应用共享到会议阶段的入口点。 显示是否将应用配置为使用共享会议阶段。|
+|3|**iframe：** 显示应用内容。|
 |4 |**"停止共享"** 按钮：停止将应用共享到会议阶段。 仅显示启动共享的参与者。|
 |5 |**演示者属性**：显示共享应用的参与者的姓名。|
 

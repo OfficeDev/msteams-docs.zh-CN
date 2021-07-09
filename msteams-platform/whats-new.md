@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: a18e602dea253f552dbcfffe7eb6620bba3bba67
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: b9ef7cbe1a7fa1a673a60375bab893a86c2dbf6b
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254193"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335352"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|07/08/2021|移动版提供会议应用扩展性。 移动客户端在会议期间支持应用。 |[会议应用可扩展性](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|集成人员选取器功能。|[集成人员选取器功能](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| 引入了发送主动邮件的分步指南。 | [发送主动邮件的分步指南](sbs-send-proactive.yml) |
 |06/09/2021| 自适应卡片中具有 属性的图像的阶段 `allowExpand` 视图。 | [自适应卡片中的图像阶段视图](~/task-modules-and-cards/cards/cards-format.md) |

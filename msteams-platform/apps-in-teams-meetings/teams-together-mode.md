@@ -2,14 +2,14 @@
 title: 自定义一起模式场景
 description: 使用自定义一起模式场景
 ms.topic: conceptual
-ms.openlocfilehash: b2a81d92724785acbcd198d6240eec7d8d510e1c
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949747"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335373"
 ---
-# <a name="custom-together-mode-scenes-in-teams"></a>自定义一起模式场景中Teams
+# <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
 > [!NOTE]
 > 此功能目前仅适用于公共 [开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版。
@@ -252,7 +252,7 @@ zOrder 表示沿 Z 轴放置图像和座位的顺序。 在许多情况下，如
 
 获取最终用户如何在自定义"共同模式"场景中使用场景的端到端信息。
 
-**选择场景并激活自定义"共同模式"场景**
+**选择场景并激活自定义一起模式场景**
 
 1. 创建新的测试会议。
 

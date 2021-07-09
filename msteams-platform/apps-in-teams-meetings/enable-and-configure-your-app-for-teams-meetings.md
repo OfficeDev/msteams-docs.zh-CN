@@ -3,12 +3,12 @@ title: 为会议启用和配置Teams应用程序
 author: surbhigupta
 description: 为会议启用和配置Teams应用程序
 ms.topic: conceptual
-ms.openlocfilehash: c123cc5cf15a7d0af64e2de16e96a673a2e4435c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139968"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335366"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
@@ -61,22 +61,17 @@ ms.locfileid: "53139968"
 |---|---|
 | **channelTab** | 团队频道标题中的选项卡。 |
 | **privateChatTab** | 一组用户之间的群聊标题中的选项卡，不在团队或会议上下文中。 |
-| **meetingChatTab** | 计划会议上下文中的一组用户之间的群聊标题中的选项卡。 |
-| **meetingDetailsTab** | 日历的会议详细信息视图标题中的选项卡。 |
+| **meetingChatTab** | 计划会议上下文中的一组用户之间的群聊标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中运行。 |
+| **meetingDetailsTab** | 日历的会议详细信息视图标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中运行。 |
 | **meetingSidePanel** | 通过统一栏打开的会议内面板 (U 条形图) 。 |
-| **meetingStage** | meetingSidePanel 中的应用可以共享到会议阶段。 |
-
-> [!NOTE]
-> `Context` 属性当前在移动客户端上不受支持。
+| **meetingStage** | meetingSidePanel 中的应用可以共享到会议阶段。 此选项卡在移动电话上不受支持。 |
 
 为会议启用应用Teams，必须在会议前、会议期间和会议后配置应用。
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>为会议方案配置应用
 
 > [!NOTE]
-> * 若要使应用在选项卡库中可见，它必须支持可配置的选项卡和群聊范围。
-> * 移动客户端仅在会议前和会议后阶段支持选项卡。
-> * 移动客户端当前不支持会议内对话框和选项卡中的会议体验。 有关详细信息，请参阅 [为移动设备创建选项卡](../tabs/design/tabs-mobile.md) 时有关移动选项卡的指南。
+> 若要使应用在选项卡库中可见，它必须支持可配置的选项卡和群聊范围。
 
 Teams会议可为组织提供独特的协作体验。 它提供了为不同的会议方案配置应用的机会。 你可以配置应用，以基于参与者角色或用户类型增强会议体验。 现在，您可以确定可以在以下会议方案中执行哪些操作：
 

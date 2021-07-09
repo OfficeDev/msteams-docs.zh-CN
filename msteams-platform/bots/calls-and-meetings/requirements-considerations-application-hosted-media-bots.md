@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: 应用程序托管的媒体 Windows 服务器 azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: 731cc53573d5c2b65eaed36d75793901fde86e54
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020054"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335359"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 
@@ -59,7 +59,10 @@ ms.locfileid: "52020054"
 
 ## <a name="scalability-and-performance-considerations"></a>可伸缩性和性能注意事项
 
-应用程序托管的媒体机器人需要以下可伸缩性和性能注意事项：
+应用程序托管的媒体自动程序需要以下可伸缩性和性能注意事项：
+- 与邮件自动程序 (，应用程序托管的媒体) 需要更多的计算和网络带宽，并且可能会产生更高的运营成本。 实时媒体自动程序开发人员必须仔细衡量机器人的可伸缩性，并确保机器人不接受多于它可以管理的并发呼叫数。 如果使用的是"原始"RGB24 或 NV12 视频格式，则启用视频的机器人只能维持每个 CPU 内核的一个或两个并发媒体 (。) 。
+- 实时媒体平台当前不会利用 VM 上提供的任何图形处理单元 (GPU) 来对 H.264 视频编码/解码进行非负载处理。 相反，视频编码和解码在 CPU 上的软件中完成。 如果 GPU 可用，机器人可能会利用它来呈现自己的图形，例如，如果机器人使用的是 3D 图形引擎。
+- 托管实时媒体机器人的 VM 实例必须至少具有 2 个 CPU 内核。 对于 Azure，建议使用 Dv2 系列虚拟机。 对于其他 Azure VM 类型，具有四个虚拟 CPU (vCPU) 是所需的最小大小。 Azure 文档中提供了有关 Azure VM 类型 [的详细信息](/azure/virtual-machines/windows/sizes-general)。 
 
 ## <a name="code-sample"></a>代码示例
 
