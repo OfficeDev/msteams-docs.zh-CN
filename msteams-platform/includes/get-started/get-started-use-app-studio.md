@@ -162,6 +162,9 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 1. 若要将应用上传到Teams，请选择 **"测试和分发**"下的"**安装"按钮**：
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
+    
+    > [!NOTE]
+    > 如果无法旁加载应用，请验证是否已启用 [自定义应用上传](#prepare-your-development-environment)。
 
 1. 选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。 你可以设置一个特殊的团队进行测试。
 1. 选择 **对话框** 底部的"安装"按钮。
