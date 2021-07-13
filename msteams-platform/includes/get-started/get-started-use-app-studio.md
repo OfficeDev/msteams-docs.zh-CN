@@ -1,32 +1,32 @@
-### <a name="use-app-studio-to-update-the-app-package"></a><span data-ttu-id="c3d35-101">使用 App Studio 更新应用包</span><span class="sxs-lookup"><span data-stu-id="c3d35-101">Use App Studio to update the app package</span></span>
+### <a name="use-app-studio-to-update-the-app-package"></a><span data-ttu-id="97106-101">使用 App Studio 更新应用包</span><span class="sxs-lookup"><span data-stu-id="97106-101">Use App Studio to update the app package</span></span>
 
 > [!TIP]
-> <span data-ttu-id="c3d35-102">**试用开发人员门户**：App Studio 即将被弃用。</span><span class="sxs-lookup"><span data-stu-id="c3d35-102">**Try the Developer Portal**: App Studio will soon be depricated.</span></span> <span data-ttu-id="c3d35-103">使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。</span><span class="sxs-lookup"><span data-stu-id="c3d35-103">Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).</span></span>
+> <span data-ttu-id="97106-102">**试用开发人员门户**：App Studio 即将被弃用。</span><span class="sxs-lookup"><span data-stu-id="97106-102">**Try the Developer Portal**: App Studio will soon be depricated.</span></span> <span data-ttu-id="97106-103">使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。</span><span class="sxs-lookup"><span data-stu-id="97106-103">Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).</span></span>
 
-<span data-ttu-id="c3d35-104">App Studio 是Teams应用商店中安装的应用Teams应用。</span><span class="sxs-lookup"><span data-stu-id="c3d35-104">App Studio is a Teams app that you can install from the Teams store.</span></span> <span data-ttu-id="c3d35-105">它简化了应用程序的创建和注册过程。</span><span class="sxs-lookup"><span data-stu-id="c3d35-105">It simplifies the creation and registration of an app.</span></span>
+<span data-ttu-id="97106-104">App Studio 是Teams应用商店中安装的应用Teams应用。</span><span class="sxs-lookup"><span data-stu-id="97106-104">App Studio is a Teams app that you can install from the Teams store.</span></span> <span data-ttu-id="97106-105">它简化了应用程序的创建和注册过程。</span><span class="sxs-lookup"><span data-stu-id="97106-105">It simplifies the creation and registration of an app.</span></span>
 
-<span data-ttu-id="c3d35-106">完成以下步骤以更新应用包：</span><span class="sxs-lookup"><span data-stu-id="c3d35-106">Complete the following steps to update the app package:</span></span>
+<span data-ttu-id="97106-106">完成以下步骤以更新应用包：</span><span class="sxs-lookup"><span data-stu-id="97106-106">Complete the following steps to update the app package:</span></span>
 
-1. <span data-ttu-id="c3d35-107">若要在Teams App Studio，请选择左侧栏底部的"应用"图标，然后搜索 **App Studio：**</span><span class="sxs-lookup"><span data-stu-id="c3d35-107">To install App Studio in Teams, select the **Apps** icon at the bottom of the left-hand bar, and search for **App Studio**:</span></span>
+1. <span data-ttu-id="97106-107">若要在Teams App Studio，请选择左侧栏底部的"应用"图标，然后搜索 **App Studio：**</span><span class="sxs-lookup"><span data-stu-id="97106-107">To install App Studio in Teams, select the **Apps** icon at the bottom of the left-hand bar, and search for **App Studio**:</span></span>
 
     <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
-1. <span data-ttu-id="c3d35-108">选择 **App Studio** 磁贴，然后选择"安装 **"。**</span><span class="sxs-lookup"><span data-stu-id="c3d35-108">Select the **App Studio** tile and choose **Install**.</span></span> <span data-ttu-id="c3d35-109">安装了 App Studio：</span><span class="sxs-lookup"><span data-stu-id="c3d35-109">The App Studio is installed:</span></span>
+1. <span data-ttu-id="97106-108">选择 **App Studio** 磁贴，然后选择"安装 **"。**</span><span class="sxs-lookup"><span data-stu-id="97106-108">Select the **App Studio** tile and choose **Install**.</span></span> <span data-ttu-id="97106-109">安装了 App Studio：</span><span class="sxs-lookup"><span data-stu-id="97106-109">The App Studio is installed:</span></span>
 
     <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-1. <span data-ttu-id="c3d35-110">若要为应用创建应用包Teams，请选择 **App Studio\*\*\*\*中的** 清单编辑器选项卡：</span><span class="sxs-lookup"><span data-stu-id="c3d35-110">To create the app package for your Teams app, select the **Manifest editor** tab in **App Studio**:</span></span>
+1. <span data-ttu-id="97106-110">若要为应用创建应用包Teams，请选择 **App Studio\*\*\*\*中的** 清单编辑器选项卡：</span><span class="sxs-lookup"><span data-stu-id="97106-110">To create the app package for your Teams app, select the **Manifest editor** tab in **App Studio**:</span></span>
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
 
-    <span data-ttu-id="c3d35-111">该示例附带自己的清单，旨在生成项目时生成应用包。</span><span class="sxs-lookup"><span data-stu-id="c3d35-111">The sample comes with its own manifest and is designed to build an app package when the project is built.</span></span> <span data-ttu-id="c3d35-112">在 .NET 上，manifest.json 文件位于 下的清单Visual Studio中 ```Microsoft.Teams.Samples.HelloWorld.Web``` 。</span><span class="sxs-lookup"><span data-stu-id="c3d35-112">On .NET, the manifest.json file can be located in Visual Studio in Manifest under ```Microsoft.Teams.Samples.HelloWorld.Web```.</span></span> <span data-ttu-id="c3d35-113">在Node.js，这是通过键入项目的根目录中的命令行 `gulp` 完成。</span><span class="sxs-lookup"><span data-stu-id="c3d35-113">On Node.js, this is done by typing `gulp` at the command line in the root directory of the project.</span></span>
+    <span data-ttu-id="97106-111">该示例附带自己的清单，旨在生成项目时生成应用包。</span><span class="sxs-lookup"><span data-stu-id="97106-111">The sample comes with its own manifest and is designed to build an app package when the project is built.</span></span> <span data-ttu-id="97106-112">在 .NET 上，manifest.json 文件位于 下的清单Visual Studio中 ```Microsoft.Teams.Samples.HelloWorld.Web``` 。</span><span class="sxs-lookup"><span data-stu-id="97106-112">On .NET, the manifest.json file can be located in Visual Studio in Manifest under ```Microsoft.Teams.Samples.HelloWorld.Web```.</span></span> <span data-ttu-id="97106-113">在Node.js，这是通过键入项目的根目录中的命令行 `gulp` 完成。</span><span class="sxs-lookup"><span data-stu-id="97106-113">On Node.js, this is done by typing `gulp` at the command line in the root directory of the project.</span></span>
 
-     <span data-ttu-id="c3d35-114">在Visual Studio中，manifest.json 文件位于 中的 **清单** 下 `Microsoft.Teams.Samples.HelloWorld.Web` 。</span><span class="sxs-lookup"><span data-stu-id="c3d35-114">In Visual Studio, the manifest.json file is located in under **Manifest** in `Microsoft.Teams.Samples.HelloWorld.Web`.</span></span> <span data-ttu-id="c3d35-115">此步骤如下图所示：</span><span class="sxs-lookup"><span data-stu-id="c3d35-115">This step is described by the following image:</span></span>  
+     <span data-ttu-id="97106-114">在Visual Studio中，manifest.json 文件位于 中的 **清单** 下 `Microsoft.Teams.Samples.HelloWorld.Web` 。</span><span class="sxs-lookup"><span data-stu-id="97106-114">In Visual Studio, the manifest.json file is located in under **Manifest** in `Microsoft.Teams.Samples.HelloWorld.Web`.</span></span> <span data-ttu-id="97106-115">此步骤如下图所示：</span><span class="sxs-lookup"><span data-stu-id="97106-115">This step is described by the following image:</span></span>  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     
-    <span data-ttu-id="c3d35-116">可以通过在项目的根目录中Node.js命令行，在应用程序上生成 `gulp` 应用包。</span><span class="sxs-lookup"><span data-stu-id="c3d35-116">You can build the app package on Node.js by typing `gulp` at the command line in the root directory of the project.</span></span>
+    <span data-ttu-id="97106-116">可以通过在项目的根目录中Node.js命令行，在应用程序上生成 `gulp` 应用包。</span><span class="sxs-lookup"><span data-stu-id="97106-116">You can build the app package on Node.js by typing `gulp` at the command line in the root directory of the project.</span></span>
 
 
     ```bash
@@ -41,131 +41,134 @@
     [13:39:27] Finished 'default' after 62 μs
     ```
 
-    <span data-ttu-id="c3d35-117">生成的应用包的名称 **helloworldapp.zip。**</span><span class="sxs-lookup"><span data-stu-id="c3d35-117">The name of the generated app package is **helloworldapp.zip**.</span></span> <span data-ttu-id="c3d35-118">如果当前使用的工具中的位置不明确，可以搜索此文件。</span><span class="sxs-lookup"><span data-stu-id="c3d35-118">You can search for this file if the location is not clear in the tool you are using.</span></span>
+    <span data-ttu-id="97106-117">生成的应用包的名称 **helloworldapp.zip。**</span><span class="sxs-lookup"><span data-stu-id="97106-117">The name of the generated app package is **helloworldapp.zip**.</span></span> <span data-ttu-id="97106-118">如果当前使用的工具中的位置不明确，可以搜索此文件。</span><span class="sxs-lookup"><span data-stu-id="97106-118">You can search for this file if the location is not clear in the tool you are using.</span></span>
 
-1. <span data-ttu-id="c3d35-119">现在要修改此应用包，请选择 **"在清单编辑器** 中导入现有 **应用"：**</span><span class="sxs-lookup"><span data-stu-id="c3d35-119">Now to modify this app package, select **Import an existing app** in the **Manifest editor**:</span></span>
+1. <span data-ttu-id="97106-119">现在要修改此应用包，请选择 **"在清单编辑器** 中导入现有 **应用"：**</span><span class="sxs-lookup"><span data-stu-id="97106-119">Now to modify this app package, select **Import an existing app** in the **Manifest editor**:</span></span>
 
     <img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
 
-1. <span data-ttu-id="c3d35-120">为新 **导入的应用** 选择 Hello World 磁贴：</span><span class="sxs-lookup"><span data-stu-id="c3d35-120">Select the **Hello World** tile for your newly imported app:</span></span>
+1. <span data-ttu-id="97106-120">为新 **导入的应用** 选择 Hello World 磁贴：</span><span class="sxs-lookup"><span data-stu-id="97106-120">Select the **Hello World** tile for your newly imported app:</span></span>
 
     <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
-    <span data-ttu-id="c3d35-121">下图显示了 App Studio 中导入的应用包：</span><span class="sxs-lookup"><span data-stu-id="c3d35-121">The following image shows the imported app package in App Studio:</span></span>
+    <span data-ttu-id="97106-121">下图显示了 App Studio 中导入的应用包：</span><span class="sxs-lookup"><span data-stu-id="97106-121">The following image shows the imported app package in App Studio:</span></span>
 
     <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-    <span data-ttu-id="c3d35-122">在清单编辑器的左侧有一个步骤列表。</span><span class="sxs-lookup"><span data-stu-id="c3d35-122">On the left-hand side of the Manifest editor there is a list of steps.</span></span> <span data-ttu-id="c3d35-123">右侧有一个属性列表，需要针对每个步骤进行填充。</span><span class="sxs-lookup"><span data-stu-id="c3d35-123">On the right-hand side there is a list of properties that need to be filled in for each step.</span></span> <span data-ttu-id="c3d35-124">当你开始使用示例应用时，大部分信息已经完成。</span><span class="sxs-lookup"><span data-stu-id="c3d35-124">As you started with a sample app, much of the information is already completed.</span></span> <span data-ttu-id="c3d35-125">接下来的步骤将使您能够更新 Hello World 应用的属性。</span><span class="sxs-lookup"><span data-stu-id="c3d35-125">The next steps enable you to update the properties of the Hello World app.</span></span>
+    <span data-ttu-id="97106-122">在清单编辑器的左侧有一个步骤列表。</span><span class="sxs-lookup"><span data-stu-id="97106-122">On the left-hand side of the Manifest editor there is a list of steps.</span></span> <span data-ttu-id="97106-123">右侧有一个属性列表，需要针对每个步骤进行填充。</span><span class="sxs-lookup"><span data-stu-id="97106-123">On the right-hand side there is a list of properties that need to be filled in for each step.</span></span> <span data-ttu-id="97106-124">当你开始使用示例应用时，大部分信息已经完成。</span><span class="sxs-lookup"><span data-stu-id="97106-124">As you started with a sample app, much of the information is already completed.</span></span> <span data-ttu-id="97106-125">接下来的步骤将使您能够更新 Hello World 应用的属性。</span><span class="sxs-lookup"><span data-stu-id="97106-125">The next steps enable you to update the properties of the Hello World app.</span></span>
 
-#### <a name="app-details"></a><span data-ttu-id="c3d35-126">应用详细信息</span><span class="sxs-lookup"><span data-stu-id="c3d35-126">App details</span></span>
+#### <a name="app-details"></a><span data-ttu-id="97106-126">应用详细信息</span><span class="sxs-lookup"><span data-stu-id="97106-126">App details</span></span>
 
-<span data-ttu-id="c3d35-127">在 **详细信息下选择** 应用 **详细信息**。</span><span class="sxs-lookup"><span data-stu-id="c3d35-127">Select **App details** under **Details**.</span></span> <span data-ttu-id="c3d35-128">选择" **生成** "按钮以创建新的应用 ID。</span><span class="sxs-lookup"><span data-stu-id="c3d35-128">Select the **Generate** button to create a new App ID.</span></span>
+<span data-ttu-id="97106-127">在 **详细信息下选择** 应用 **详细信息**。</span><span class="sxs-lookup"><span data-stu-id="97106-127">Select **App details** under **Details**.</span></span> <span data-ttu-id="97106-128">选择" **生成** "按钮以创建新的应用 ID。</span><span class="sxs-lookup"><span data-stu-id="97106-128">Select the **Generate** button to create a new App ID.</span></span>
 
-<span data-ttu-id="c3d35-129">新的应用 ID 类似于 `2322041b-72bf-459d-b107-f4f335bc35bd` 。</span><span class="sxs-lookup"><span data-stu-id="c3d35-129">Your new App ID is similar to `2322041b-72bf-459d-b107-f4f335bc35bd`.</span></span>
+<span data-ttu-id="97106-129">新的应用 ID 类似于 `2322041b-72bf-459d-b107-f4f335bc35bd` 。</span><span class="sxs-lookup"><span data-stu-id="97106-129">Your new App ID is similar to `2322041b-72bf-459d-b107-f4f335bc35bd`.</span></span>
 
-<span data-ttu-id="c3d35-130">在右侧窗格中查看应用详细信息，包括 **开发人员信息和\*\*\*\*品牌打造** 详细信息。</span><span class="sxs-lookup"><span data-stu-id="c3d35-130">Go through the app details in the right-hand pane including **Developer information** and **Branding** details.</span></span> <span data-ttu-id="c3d35-131">如果你要编写要分发的新应用，这些详细信息非常重要。</span><span class="sxs-lookup"><span data-stu-id="c3d35-131">These details are important if you are writing a new app for distribution.</span></span>
+<span data-ttu-id="97106-130">在右侧窗格中查看应用详细信息，包括 **开发人员信息和\*\*\*\*品牌打造** 详细信息。</span><span class="sxs-lookup"><span data-stu-id="97106-130">Go through the app details in the right-hand pane including **Developer information** and **Branding** details.</span></span> <span data-ttu-id="97106-131">如果你要编写要分发的新应用，这些详细信息非常重要。</span><span class="sxs-lookup"><span data-stu-id="97106-131">These details are important if you are writing a new app for distribution.</span></span>
 
-#### <a name="tabs"></a><span data-ttu-id="c3d35-132">选项卡</span><span class="sxs-lookup"><span data-stu-id="c3d35-132">Tabs</span></span>
+#### <a name="tabs"></a><span data-ttu-id="97106-132">选项卡</span><span class="sxs-lookup"><span data-stu-id="97106-132">Tabs</span></span>
 
-<span data-ttu-id="c3d35-133">向应用程序添加选项卡Teams非常简单。</span><span class="sxs-lookup"><span data-stu-id="c3d35-133">It is simple to add tabs to a Teams app.</span></span> <span data-ttu-id="c3d35-134">示例应用已支持多个选项卡，你可以启用它们。</span><span class="sxs-lookup"><span data-stu-id="c3d35-134">The sample app already supports several tabs, and you can enable them.</span></span>
+<span data-ttu-id="97106-133">向应用程序添加选项卡Teams非常简单。</span><span class="sxs-lookup"><span data-stu-id="97106-133">It is simple to add tabs to a Teams app.</span></span> <span data-ttu-id="97106-134">示例应用已支持多个选项卡，你可以启用它们。</span><span class="sxs-lookup"><span data-stu-id="97106-134">The sample app already supports several tabs, and you can enable them.</span></span>
 
-##### <a name="team-tab"></a><span data-ttu-id="c3d35-135">"团队"选项卡</span><span class="sxs-lookup"><span data-stu-id="c3d35-135">Team tab</span></span>
+##### <a name="team-tab"></a><span data-ttu-id="97106-135">"团队"选项卡</span><span class="sxs-lookup"><span data-stu-id="97106-135">Team tab</span></span>
 
-<span data-ttu-id="c3d35-136">你的应用只能有一个"团队"选项卡：</span><span class="sxs-lookup"><span data-stu-id="c3d35-136">Your app can only have one Team tab:</span></span>
+<span data-ttu-id="97106-136">你的应用只能有一个"团队"选项卡：</span><span class="sxs-lookup"><span data-stu-id="97106-136">Your app can only have one Team tab:</span></span>
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-<span data-ttu-id="c3d35-137">在此示例中，"团队"选项卡是显示配置页面的地方。</span><span class="sxs-lookup"><span data-stu-id="c3d35-137">In this sample, the Team tab is where your configuration page is displayed.</span></span> <span data-ttu-id="c3d35-138">Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu.</span><span class="sxs-lookup"><span data-stu-id="c3d35-138">Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu.</span></span> <span data-ttu-id="c3d35-139">将 URL 更改为必须替换为托管应用时所使用的 `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` URL。</span><span class="sxs-lookup"><span data-stu-id="c3d35-139">Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` must be replaced with the URL that you used when hosting your app.</span></span>
+<span data-ttu-id="97106-137">在此示例中，"团队"选项卡是显示配置页面的地方。</span><span class="sxs-lookup"><span data-stu-id="97106-137">In this sample, the Team tab is where your configuration page is displayed.</span></span> <span data-ttu-id="97106-138">Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu.</span><span class="sxs-lookup"><span data-stu-id="97106-138">Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu.</span></span> <span data-ttu-id="97106-139">将 URL 更改为必须替换为托管应用时所使用的 `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` URL。</span><span class="sxs-lookup"><span data-stu-id="97106-139">Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` must be replaced with the URL that you used when hosting your app.</span></span>
 
-##### <a name="personal-tabs"></a><span data-ttu-id="c3d35-140">个人选项卡</span><span class="sxs-lookup"><span data-stu-id="c3d35-140">Personal tabs</span></span>
+##### <a name="personal-tabs"></a><span data-ttu-id="97106-140">个人选项卡</span><span class="sxs-lookup"><span data-stu-id="97106-140">Personal tabs</span></span>
 
-<span data-ttu-id="c3d35-141">你的应用可具有最多 16 个选项卡，包括"团队"选项卡。</span><span class="sxs-lookup"><span data-stu-id="c3d35-141">Your app can have up to 16 tabs, including the Team tab.</span></span>
+<span data-ttu-id="97106-141">你的应用可具有最多 16 个选项卡，包括"团队"选项卡。</span><span class="sxs-lookup"><span data-stu-id="97106-141">Your app can have up to 16 tabs, including the Team tab.</span></span>
 
-<span data-ttu-id="c3d35-142">个人选项卡不同于"团队"选项卡 **。"Hello"选项卡** 已列在具有占位符值 的个人选项卡列表中 `com.contoso.helloworld.hellotab` 。</span><span class="sxs-lookup"><span data-stu-id="c3d35-142">Personal tabs are different from the Team tab. **Hello Tab** is already listed in the personal tabs list with a placeholder value `com.contoso.helloworld.hellotab`.</span></span> <span data-ttu-id="c3d35-143">Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu.</span><span class="sxs-lookup"><span data-stu-id="c3d35-143">Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu.</span></span> <span data-ttu-id="c3d35-144">将显示以下对话框：</span><span class="sxs-lookup"><span data-stu-id="c3d35-144">The following dialog box appears:</span></span>
+<span data-ttu-id="97106-142">个人选项卡不同于"团队"选项卡 **。"Hello"选项卡** 已列在具有占位符值 的个人选项卡列表中 `com.contoso.helloworld.hellotab` 。</span><span class="sxs-lookup"><span data-stu-id="97106-142">Personal tabs are different from the Team tab. **Hello Tab** is already listed in the personal tabs list with a placeholder value `com.contoso.helloworld.hellotab`.</span></span> <span data-ttu-id="97106-143">Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu.</span><span class="sxs-lookup"><span data-stu-id="97106-143">Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu.</span></span> <span data-ttu-id="97106-144">将显示以下对话框：</span><span class="sxs-lookup"><span data-stu-id="97106-144">The following dialog box appears:</span></span>
 
 <img  width="450px" alt="Adding a personal tab dialog" src="~/assets/images/get-started/PersonalTab.png"/>
 
-<span data-ttu-id="c3d35-145">使用你的应用 URL 更新以下框：</span><span class="sxs-lookup"><span data-stu-id="c3d35-145">Update the following boxes with your app URL:</span></span>
+<span data-ttu-id="97106-145">使用你的应用 URL 更新以下框：</span><span class="sxs-lookup"><span data-stu-id="97106-145">Update the following boxes with your app URL:</span></span>
 
-- <span data-ttu-id="c3d35-146">将" **内容 URL"** 框更改为 `https://yourteamsapp.ngrok.io/hello`</span><span class="sxs-lookup"><span data-stu-id="c3d35-146">Change the **Content URL** box to `https://yourteamsapp.ngrok.io/hello`</span></span>
-- <span data-ttu-id="c3d35-147">将" **网站 URL"** 框更改为 `https://yourteamsapp.ngrok.io/hello`</span><span class="sxs-lookup"><span data-stu-id="c3d35-147">Change the **Website URL** box to `https://yourteamsapp.ngrok.io/hello`</span></span>
+- <span data-ttu-id="97106-146">将" **内容 URL"** 框更改为 `https://yourteamsapp.ngrok.io/hello`</span><span class="sxs-lookup"><span data-stu-id="97106-146">Change the **Content URL** box to `https://yourteamsapp.ngrok.io/hello`</span></span>
+- <span data-ttu-id="97106-147">将" **网站 URL"** 框更改为 `https://yourteamsapp.ngrok.io/hello`</span><span class="sxs-lookup"><span data-stu-id="97106-147">Change the **Website URL** box to `https://yourteamsapp.ngrok.io/hello`</span></span>
 
-<span data-ttu-id="c3d35-148">将 `yourteamsapp.ngrok.io` 替换为托管应用时所使用的 URL。</span><span class="sxs-lookup"><span data-stu-id="c3d35-148">Replace `yourteamsapp.ngrok.io` by the URL that you used when hosting your app.</span></span>
+<span data-ttu-id="97106-148">将 `yourteamsapp.ngrok.io` 替换为托管应用时所使用的 URL。</span><span class="sxs-lookup"><span data-stu-id="97106-148">Replace `yourteamsapp.ngrok.io` by the URL that you used when hosting your app.</span></span>
 
-#### <a name="bots"></a><span data-ttu-id="c3d35-149">机器人</span><span class="sxs-lookup"><span data-stu-id="c3d35-149">Bots</span></span>
+#### <a name="bots"></a><span data-ttu-id="97106-149">机器人</span><span class="sxs-lookup"><span data-stu-id="97106-149">Bots</span></span>
 
-<span data-ttu-id="c3d35-150">将聊天机器人功能添加到你的应用很简单。</span><span class="sxs-lookup"><span data-stu-id="c3d35-150">It is easy to add the bots functionality to your app.</span></span> <span data-ttu-id="c3d35-151">Hello **World** 示例应用已包含自动程序作为示例的一部分，但你必须向 Microsoft 注册它：</span><span class="sxs-lookup"><span data-stu-id="c3d35-151">The **Hello World** sample app already has a bot as part of the sample, but you must register it with Microsoft:</span></span>
+<span data-ttu-id="97106-150">将聊天机器人功能添加到你的应用很简单。</span><span class="sxs-lookup"><span data-stu-id="97106-150">It is easy to add the bots functionality to your app.</span></span> <span data-ttu-id="97106-151">Hello **World** 示例应用已包含自动程序作为示例的一部分，但你必须向 Microsoft 注册它：</span><span class="sxs-lookup"><span data-stu-id="97106-151">The **Hello World** sample app already has a bot as part of the sample, but you must register it with Microsoft:</span></span>
 
 <img  width="450px" alt="Adding a bot" src="~/assets/images/get-started/Bots.png"/>
 
-<span data-ttu-id="c3d35-152">从示例导入的机器人没有关联的应用 ID。</span><span class="sxs-lookup"><span data-stu-id="c3d35-152">The bot that was imported from the sample does not have an associated App ID.</span></span> <span data-ttu-id="c3d35-153">必须创建新的自动程序，以便 App Studio 可以创建新的应用 ID，然后向 Microsoft 注册它。</span><span class="sxs-lookup"><span data-stu-id="c3d35-153">You must create a new bot so that App Studio can create a new App ID and register it with Microsoft.</span></span>
+<span data-ttu-id="97106-152">从示例导入的机器人没有关联的应用 ID。</span><span class="sxs-lookup"><span data-stu-id="97106-152">The bot that was imported from the sample does not have an associated App ID.</span></span> <span data-ttu-id="97106-153">必须创建新的自动程序，以便 App Studio 可以创建新的应用 ID，然后向 Microsoft 注册它。</span><span class="sxs-lookup"><span data-stu-id="97106-153">You must create a new bot so that App Studio can create a new App ID and register it with Microsoft.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c3d35-154">App Studio 为自动程序创建的应用 ID 与为应用创建的应用 ID 不同。</span><span class="sxs-lookup"><span data-stu-id="c3d35-154">The App ID created by App Studio for the bot is different from the App ID created for the app.</span></span> <span data-ttu-id="c3d35-155">应用的每个自动程序都需要自己的应用 ID。</span><span class="sxs-lookup"><span data-stu-id="c3d35-155">Each bot in an app requires its own App ID.</span></span>
+> <span data-ttu-id="97106-154">App Studio 为自动程序创建的应用 ID 与为应用创建的应用 ID 不同。</span><span class="sxs-lookup"><span data-stu-id="97106-154">The App ID created by App Studio for the bot is different from the App ID created for the app.</span></span> <span data-ttu-id="97106-155">应用的每个自动程序都需要自己的应用 ID。</span><span class="sxs-lookup"><span data-stu-id="97106-155">Each bot in an app requires its own App ID.</span></span>
 
-<span data-ttu-id="c3d35-156">完成以下步骤以设置自动程序：</span><span class="sxs-lookup"><span data-stu-id="c3d35-156">Complete the following steps to setup your bot:</span></span>
+<span data-ttu-id="97106-156">完成以下步骤以设置自动程序：</span><span class="sxs-lookup"><span data-stu-id="97106-156">Complete the following steps to setup your bot:</span></span>
 
-1. <span data-ttu-id="c3d35-157">选择 **"** 自动程序"列表中导入的机器人旁边的"删除"。</span><span class="sxs-lookup"><span data-stu-id="c3d35-157">Select **Delete** next to the imported bot in the bot list.</span></span> <span data-ttu-id="c3d35-158">现在，没有要展示的机器人。</span><span class="sxs-lookup"><span data-stu-id="c3d35-158">Now there are no bots left to show.</span></span> 
-1. <span data-ttu-id="c3d35-159">选择 **"** 设置" **以显示"设置自动程序** "对话框。</span><span class="sxs-lookup"><span data-stu-id="c3d35-159">Select **Setup** to display the **Set up a bot** dialog box.</span></span>
+1. <span data-ttu-id="97106-157">选择 **"** 自动程序"列表中导入的机器人旁边的"删除"。</span><span class="sxs-lookup"><span data-stu-id="97106-157">Select **Delete** next to the imported bot in the bot list.</span></span> <span data-ttu-id="97106-158">现在，没有要展示的机器人。</span><span class="sxs-lookup"><span data-stu-id="97106-158">Now there are no bots left to show.</span></span> 
+1. <span data-ttu-id="97106-159">选择 **"** 设置" **以显示"设置自动程序** "对话框。</span><span class="sxs-lookup"><span data-stu-id="97106-159">Select **Setup** to display the **Set up a bot** dialog box.</span></span>
 
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-1. <span data-ttu-id="c3d35-160">添加自动程序名称 **Contoso 自动** 程序，并选中范围 下的所有三 **个复选框**。</span><span class="sxs-lookup"><span data-stu-id="c3d35-160">Add a bot name **Contoso bot** and select all three check boxes under **Scope**.</span></span>
-1. <span data-ttu-id="c3d35-161">选择 **"保存** "退出对话框。</span><span class="sxs-lookup"><span data-stu-id="c3d35-161">Choose **Save** to exit the dialog box.</span></span> <span data-ttu-id="c3d35-162">App Studio 向 Microsoft 注册你的自动程序，在机器人列表中显示你的新机器人。</span><span class="sxs-lookup"><span data-stu-id="c3d35-162">App Studio registers your bot with Microsoft and displays your new bot in the bot list.</span></span> 
-1. <span data-ttu-id="c3d35-163">现在，在记事本中打开一个文本文件，然后将新的自动程序 ID 复制并粘贴到该文件中。</span><span class="sxs-lookup"><span data-stu-id="c3d35-163">Now open a text file in notepad and copy and paste your new bot ID into it.</span></span>
-1. <span data-ttu-id="c3d35-164">单击 **"生成新密码**"，并记下你记录自动程序应用 ID 的同一文本文件中的密码。</span><span class="sxs-lookup"><span data-stu-id="c3d35-164">Click **Generate New Password**, and note the password in the same text file you noted your bot App ID.</span></span>
-1. <span data-ttu-id="c3d35-165">将 **Bot 终结点地址更新** 为 `https://yourteamsapp.ngrok.io/api/messages` ，将 替换为托管应用 `yourteamsapp.ngrok.io` 时所使用的 URL。</span><span class="sxs-lookup"><span data-stu-id="c3d35-165">Update the **Bot endpoint address** to `https://yourteamsapp.ngrok.io/api/messages`, and replace `yourteamsapp.ngrok.io` with the URL that you used when hosting your app.</span></span>
-1. <span data-ttu-id="c3d35-166">现在保存您的文本文件，因为您必须将文件中的信息添加到托管应用，以允许与自动程序进行安全通信。</span><span class="sxs-lookup"><span data-stu-id="c3d35-166">Now save your text file as you must add the information from the file to your hosted app to allow secure communication with your bot.</span></span>
+1. <span data-ttu-id="97106-160">添加自动程序名称 **Contoso 自动** 程序，并选中范围 下的所有三 **个复选框**。</span><span class="sxs-lookup"><span data-stu-id="97106-160">Add a bot name **Contoso bot** and select all three check boxes under **Scope**.</span></span>
+1. <span data-ttu-id="97106-161">选择 **"保存** "退出对话框。</span><span class="sxs-lookup"><span data-stu-id="97106-161">Choose **Save** to exit the dialog box.</span></span> <span data-ttu-id="97106-162">App Studio 向 Microsoft 注册你的自动程序，在机器人列表中显示你的新机器人。</span><span class="sxs-lookup"><span data-stu-id="97106-162">App Studio registers your bot with Microsoft and displays your new bot in the bot list.</span></span> 
+1. <span data-ttu-id="97106-163">现在，在记事本中打开一个文本文件，然后将新的自动程序 ID 复制并粘贴到该文件中。</span><span class="sxs-lookup"><span data-stu-id="97106-163">Now open a text file in notepad and copy and paste your new bot ID into it.</span></span>
+1. <span data-ttu-id="97106-164">单击 **"生成新密码**"，并记下你记录自动程序应用 ID 的同一文本文件中的密码。</span><span class="sxs-lookup"><span data-stu-id="97106-164">Click **Generate New Password**, and note the password in the same text file you noted your bot App ID.</span></span>
+1. <span data-ttu-id="97106-165">将 **Bot 终结点地址更新** 为 `https://yourteamsapp.ngrok.io/api/messages` ，将 替换为托管应用 `yourteamsapp.ngrok.io` 时所使用的 URL。</span><span class="sxs-lookup"><span data-stu-id="97106-165">Update the **Bot endpoint address** to `https://yourteamsapp.ngrok.io/api/messages`, and replace `yourteamsapp.ngrok.io` with the URL that you used when hosting your app.</span></span>
+1. <span data-ttu-id="97106-166">现在保存您的文本文件，因为您必须将文件中的信息添加到托管应用，以允许与自动程序进行安全通信。</span><span class="sxs-lookup"><span data-stu-id="97106-166">Now save your text file as you must add the information from the file to your hosted app to allow secure communication with your bot.</span></span>
 
-#### <a name="messaging-extensions"></a><span data-ttu-id="c3d35-167">消息扩展</span><span class="sxs-lookup"><span data-stu-id="c3d35-167">Messaging extensions</span></span>
+#### <a name="messaging-extensions"></a><span data-ttu-id="97106-167">消息扩展</span><span class="sxs-lookup"><span data-stu-id="97106-167">Messaging extensions</span></span>
 
-<span data-ttu-id="c3d35-168">消息扩展允许用户从你的服务请求信息并发布该信息。</span><span class="sxs-lookup"><span data-stu-id="c3d35-168">Messaging extensions let users ask for information from your service and post that information.</span></span> <span data-ttu-id="c3d35-169">信息以卡片的形式张贴到频道对话中。</span><span class="sxs-lookup"><span data-stu-id="c3d35-169">The information is posted in the form of cards into the channel conversation.</span></span> <span data-ttu-id="c3d35-170">邮件扩展显示在撰写框的底部。</span><span class="sxs-lookup"><span data-stu-id="c3d35-170">Messaging extensions appear at the bottom of the compose box.</span></span>
+<span data-ttu-id="97106-168">消息扩展允许用户从你的服务请求信息并发布该信息。</span><span class="sxs-lookup"><span data-stu-id="97106-168">Messaging extensions let users ask for information from your service and post that information.</span></span> <span data-ttu-id="97106-169">信息以卡片的形式张贴到频道对话中。</span><span class="sxs-lookup"><span data-stu-id="97106-169">The information is posted in the form of cards into the channel conversation.</span></span> <span data-ttu-id="97106-170">邮件扩展显示在撰写框的底部。</span><span class="sxs-lookup"><span data-stu-id="97106-170">Messaging extensions appear at the bottom of the compose box.</span></span>
 
-<span data-ttu-id="c3d35-171">完成以下步骤以设置邮件扩展：</span><span class="sxs-lookup"><span data-stu-id="c3d35-171">Complete the following steps to setup your messaging extension:</span></span>
+<span data-ttu-id="97106-171">完成以下步骤以设置邮件扩展：</span><span class="sxs-lookup"><span data-stu-id="97106-171">Complete the following steps to setup your messaging extension:</span></span>
 
-1. <span data-ttu-id="c3d35-172">在 **App** Studio **左侧窗格中的** "功能"下选择"邮件扩展"以配置邮件扩展：</span><span class="sxs-lookup"><span data-stu-id="c3d35-172">Select **Messaging extensions** under **Capabilities** in the left-hand pane of App Studio to configure the messaging extension:</span></span>
+1. <span data-ttu-id="97106-172">在 **App** Studio **左侧窗格中的** "功能"下选择"邮件扩展"以配置邮件扩展：</span><span class="sxs-lookup"><span data-stu-id="97106-172">Select **Messaging extensions** under **Capabilities** in the left-hand pane of App Studio to configure the messaging extension:</span></span>
 
     <img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
-    <span data-ttu-id="c3d35-173">邮件扩展示例在"邮件扩展"窗格中 **列出。**</span><span class="sxs-lookup"><span data-stu-id="c3d35-173">The sample messaging extension is listed in the **Messaging Extensions** pane.</span></span>
+    <span data-ttu-id="97106-173">邮件扩展示例在"邮件扩展"窗格中 **列出。**</span><span class="sxs-lookup"><span data-stu-id="97106-173">The sample messaging extension is listed in the **Messaging Extensions** pane.</span></span>
 
-1. <span data-ttu-id="c3d35-174">选择 **"** 删除"删除邮件扩展，选择" **设置"，** 然后按照用于机器人 [的相同步骤操作](#bots)。</span><span class="sxs-lookup"><span data-stu-id="c3d35-174">Select **Delete** to remove the messaging extension, select **Set up**, and follow the same steps used for [bots](#bots).</span></span> <span data-ttu-id="c3d35-175">将显示 **"消息传递扩展** "对话框。</span><span class="sxs-lookup"><span data-stu-id="c3d35-175">The **Messaging Extension** dialog box is displayed.</span></span>
-1. <span data-ttu-id="c3d35-176">选择"**使用现有自动程序**"选项卡和 **"从我现有的自动程序之一中选择"。**</span><span class="sxs-lookup"><span data-stu-id="c3d35-176">Select the **Use existing bot** tab and **Select from one of my existing bots**.</span></span>
-1. <span data-ttu-id="c3d35-177">从下拉菜单中选择你创建的自动程序。</span><span class="sxs-lookup"><span data-stu-id="c3d35-177">Select the bot you created from the drop-down menu.</span></span> <span data-ttu-id="c3d35-178">添加自动 **程序名称，** 然后选择 **保存** 以关闭对话框。</span><span class="sxs-lookup"><span data-stu-id="c3d35-178">Add a **Bot name** and select **Save** to close the dialog box.</span></span>
-1. <span data-ttu-id="c3d35-179">在"**命令"部分** 下，选择"**添加"。**</span><span class="sxs-lookup"><span data-stu-id="c3d35-179">Under the **Command** section, select **Add**.</span></span> <span data-ttu-id="c3d35-180">若要添加基于搜索的命令，请选择"允许用户查询 **服务信息并将其插入邮件"** 选项。</span><span class="sxs-lookup"><span data-stu-id="c3d35-180">To add a search-based command, select the **Allow users to query your service for information and insert that into a message** option.</span></span>
-1. <span data-ttu-id="c3d35-181">在" **新建"** 命令对话框中，输入以下值：</span><span class="sxs-lookup"><span data-stu-id="c3d35-181">In the **New command** dialog box, enter the following values:</span></span>
+1. <span data-ttu-id="97106-174">选择 **"** 删除"删除邮件扩展，选择" **设置"，** 然后按照用于机器人 [的相同步骤操作](#bots)。</span><span class="sxs-lookup"><span data-stu-id="97106-174">Select **Delete** to remove the messaging extension, select **Set up**, and follow the same steps used for [bots](#bots).</span></span> <span data-ttu-id="97106-175">将显示 **"消息传递扩展** "对话框。</span><span class="sxs-lookup"><span data-stu-id="97106-175">The **Messaging Extension** dialog box is displayed.</span></span>
+1. <span data-ttu-id="97106-176">选择"**使用现有自动程序**"选项卡和 **"从我现有的自动程序之一中选择"。**</span><span class="sxs-lookup"><span data-stu-id="97106-176">Select the **Use existing bot** tab and **Select from one of my existing bots**.</span></span>
+1. <span data-ttu-id="97106-177">从下拉菜单中选择你创建的自动程序。</span><span class="sxs-lookup"><span data-stu-id="97106-177">Select the bot you created from the drop-down menu.</span></span> <span data-ttu-id="97106-178">添加自动 **程序名称，** 然后选择 **保存** 以关闭对话框。</span><span class="sxs-lookup"><span data-stu-id="97106-178">Add a **Bot name** and select **Save** to close the dialog box.</span></span>
+1. <span data-ttu-id="97106-179">在"**命令"部分** 下，选择"**添加"。**</span><span class="sxs-lookup"><span data-stu-id="97106-179">Under the **Command** section, select **Add**.</span></span> <span data-ttu-id="97106-180">若要添加基于搜索的命令，请选择"允许用户查询 **服务信息并将其插入邮件"** 选项。</span><span class="sxs-lookup"><span data-stu-id="97106-180">To add a search-based command, select the **Allow users to query your service for information and insert that into a message** option.</span></span>
+1. <span data-ttu-id="97106-181">在" **新建"** 命令对话框中，输入以下值：</span><span class="sxs-lookup"><span data-stu-id="97106-181">In the **New command** dialog box, enter the following values:</span></span>
 
-    <span data-ttu-id="c3d35-182">在 **"新建"命令下**：</span><span class="sxs-lookup"><span data-stu-id="c3d35-182">Under **New command**:</span></span>
+    <span data-ttu-id="97106-182">在 **"新建"命令下**：</span><span class="sxs-lookup"><span data-stu-id="97106-182">Under **New command**:</span></span>
 
-    - <span data-ttu-id="c3d35-183">**命令 ID：** 输入随机文本</span><span class="sxs-lookup"><span data-stu-id="c3d35-183">**Command ID**: Enter random text</span></span>
-    - <span data-ttu-id="c3d35-184">**标题**：输入随机标题</span><span class="sxs-lookup"><span data-stu-id="c3d35-184">**Title**: Enter random title</span></span>
-    - <span data-ttu-id="c3d35-185">**说明**：输入随机描述</span><span class="sxs-lookup"><span data-stu-id="c3d35-185">**Description**: Enter random description</span></span>
+    - <span data-ttu-id="97106-183">**命令 ID：** 输入随机文本</span><span class="sxs-lookup"><span data-stu-id="97106-183">**Command ID**: Enter random text</span></span>
+    - <span data-ttu-id="97106-184">**标题**：输入随机标题</span><span class="sxs-lookup"><span data-stu-id="97106-184">**Title**: Enter random title</span></span>
+    - <span data-ttu-id="97106-185">**说明**：输入随机描述</span><span class="sxs-lookup"><span data-stu-id="97106-185">**Description**: Enter random description</span></span>
 
-    <span data-ttu-id="c3d35-186">在 **"参数"下**：</span><span class="sxs-lookup"><span data-stu-id="c3d35-186">Under **Parameter**:</span></span>
+    <span data-ttu-id="97106-186">在 **"参数"下**：</span><span class="sxs-lookup"><span data-stu-id="97106-186">Under **Parameter**:</span></span>
 
-    - <span data-ttu-id="c3d35-187">**名称**：输入参数名称</span><span class="sxs-lookup"><span data-stu-id="c3d35-187">**Name**: Enter the parameter name</span></span>
-    - <span data-ttu-id="c3d35-188">**标题**：输入卡片标题</span><span class="sxs-lookup"><span data-stu-id="c3d35-188">**Title**: Enter the card title</span></span>
-    - <span data-ttu-id="c3d35-189">**说明**：输入卡片说明</span><span class="sxs-lookup"><span data-stu-id="c3d35-189">**Description**: Enter card description</span></span>
+    - <span data-ttu-id="97106-187">**名称**：输入参数名称</span><span class="sxs-lookup"><span data-stu-id="97106-187">**Name**: Enter the parameter name</span></span>
+    - <span data-ttu-id="97106-188">**标题**：输入卡片标题</span><span class="sxs-lookup"><span data-stu-id="97106-188">**Title**: Enter the card title</span></span>
+    - <span data-ttu-id="97106-189">**说明**：输入卡片说明</span><span class="sxs-lookup"><span data-stu-id="97106-189">**Description**: Enter card description</span></span>
 
-1. <span data-ttu-id="c3d35-190">输入信息后，选择" **保存** "关闭对话框。</span><span class="sxs-lookup"><span data-stu-id="c3d35-190">After you enter the information, select **Save** to close the dialog box.</span></span>
+1. <span data-ttu-id="97106-190">输入信息后，选择" **保存** "关闭对话框。</span><span class="sxs-lookup"><span data-stu-id="97106-190">After you enter the information, select **Save** to close the dialog box.</span></span>
 
-#### <a name="register-your-app-in-teams"></a><span data-ttu-id="c3d35-191">在应用商店中Teams</span><span class="sxs-lookup"><span data-stu-id="c3d35-191">Register your app in Teams</span></span>
+#### <a name="register-your-app-in-teams"></a><span data-ttu-id="97106-191">在应用商店中Teams</span><span class="sxs-lookup"><span data-stu-id="97106-191">Register your app in Teams</span></span>
 
-<span data-ttu-id="c3d35-192">输入应用的详细信息后，完成以下步骤以在应用中注册Teams：</span><span class="sxs-lookup"><span data-stu-id="c3d35-192">After entering the details of your app, complete the following steps to register your app in Teams:</span></span>
+<span data-ttu-id="97106-192">输入应用的详细信息后，完成以下步骤以在应用中注册Teams：</span><span class="sxs-lookup"><span data-stu-id="97106-192">After entering the details of your app, complete the following steps to register your app in Teams:</span></span>
 
-1. <span data-ttu-id="c3d35-193">使用 **测试和分发** App Studio 在 Teams 中安装应用。</span><span class="sxs-lookup"><span data-stu-id="c3d35-193">Use **Test and distribute** of App Studio to install your app in Teams.</span></span> 
-1. <span data-ttu-id="c3d35-194">使用自动程序的应用 ID 和密码更新托管的应用程序。</span><span class="sxs-lookup"><span data-stu-id="c3d35-194">Update your hosted application with the App ID and password for your bot.</span></span> <span data-ttu-id="c3d35-195">对于示例应用，请对机器人和消息扩展使用相同的应用 ID 和密码。</span><span class="sxs-lookup"><span data-stu-id="c3d35-195">For the sample app, use the same App ID and password for both bot and messaging extension.</span></span> 
-1. <span data-ttu-id="c3d35-196">在 App Studio **的左侧**  窗格中 **，选择"** 测试和分发"下的"完成"：</span><span class="sxs-lookup"><span data-stu-id="c3d35-196">Select **Test and distribute**  under **Finish** in the left-hand pane of App Studio:</span></span>
+1. <span data-ttu-id="97106-193">使用 **测试和分发** App Studio 在 Teams 中安装应用。</span><span class="sxs-lookup"><span data-stu-id="97106-193">Use **Test and distribute** of App Studio to install your app in Teams.</span></span> 
+1. <span data-ttu-id="97106-194">使用自动程序的应用 ID 和密码更新托管的应用程序。</span><span class="sxs-lookup"><span data-stu-id="97106-194">Update your hosted application with the App ID and password for your bot.</span></span> <span data-ttu-id="97106-195">对于示例应用，请对机器人和消息扩展使用相同的应用 ID 和密码。</span><span class="sxs-lookup"><span data-stu-id="97106-195">For the sample app, use the same App ID and password for both bot and messaging extension.</span></span> 
+1. <span data-ttu-id="97106-196">在 App Studio **的左侧**  窗格中 **，选择"** 测试和分发"下的"完成"：</span><span class="sxs-lookup"><span data-stu-id="97106-196">Select **Test and distribute**  under **Finish** in the left-hand pane of App Studio:</span></span>
 
     <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
-1. <span data-ttu-id="c3d35-197">若要将应用上传到Teams，请选择 **"测试和分发**"下的"**安装"按钮**：</span><span class="sxs-lookup"><span data-stu-id="c3d35-197">To upload your app to Teams, select the **Install** button under **Test and Distribute**:</span></span>
+1. <span data-ttu-id="97106-197">若要将应用上传到Teams，请选择 **"测试和分发**"下的"**安装"按钮**：</span><span class="sxs-lookup"><span data-stu-id="97106-197">To upload your app to Teams, select the **Install** button under **Test and Distribute**:</span></span>
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
+    
+    > [!NOTE]
+    > <span data-ttu-id="97106-198">如果无法旁加载应用，请验证是否已启用 [自定义应用上传](#prepare-your-development-environment)。</span><span class="sxs-lookup"><span data-stu-id="97106-198">If you are unable to sideload the app, verify whether you have [enabled custom app uploading](#prepare-your-development-environment).</span></span>
 
-1. <span data-ttu-id="c3d35-198">选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。</span><span class="sxs-lookup"><span data-stu-id="c3d35-198">Select the **Search** box in the **Add to a team** section and select a team to add the sample app.</span></span> <span data-ttu-id="c3d35-199">你可以设置一个特殊的团队进行测试。</span><span class="sxs-lookup"><span data-stu-id="c3d35-199">You can set up a special team for testing.</span></span>
-1. <span data-ttu-id="c3d35-200">选择 **对话框** 底部的"安装"按钮。</span><span class="sxs-lookup"><span data-stu-id="c3d35-200">Select the **Install** button at the bottom of the dialog box.</span></span>
+1. <span data-ttu-id="97106-199">选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。</span><span class="sxs-lookup"><span data-stu-id="97106-199">Select the **Search** box in the **Add to a team** section and select a team to add the sample app.</span></span> <span data-ttu-id="97106-200">你可以设置一个特殊的团队进行测试。</span><span class="sxs-lookup"><span data-stu-id="97106-200">You can set up a special team for testing.</span></span>
+1. <span data-ttu-id="97106-201">选择 **对话框** 底部的"安装"按钮。</span><span class="sxs-lookup"><span data-stu-id="97106-201">Select the **Install** button at the bottom of the dialog box.</span></span>
 
-    <span data-ttu-id="c3d35-201">你的应用现已在 Teams 中提供。</span><span class="sxs-lookup"><span data-stu-id="c3d35-201">Your app is now available in Teams.</span></span> <span data-ttu-id="c3d35-202">但是，在用应用 ID 和密码更新托管应用程序环境之前，机器人和消息扩展将不起作用。</span><span class="sxs-lookup"><span data-stu-id="c3d35-202">However, the bot and the messaging extension will not work until you update the hosted applications environment with the App IDs and passwords.</span></span>
+    <span data-ttu-id="97106-202">你的应用现已在 Teams 中提供。</span><span class="sxs-lookup"><span data-stu-id="97106-202">Your app is now available in Teams.</span></span> <span data-ttu-id="97106-203">但是，在用应用 ID 和密码更新托管应用程序环境之前，机器人和消息扩展将不起作用。</span><span class="sxs-lookup"><span data-stu-id="97106-203">However, the bot and the messaging extension will not work until you update the hosted applications environment with the App IDs and passwords.</span></span>
 
     <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
