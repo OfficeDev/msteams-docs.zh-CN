@@ -4,12 +4,12 @@ description: 速率限制和解决方案中的Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams 机器人速率限制
-ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 41070bec7905c7003afb917aedcdd08495418602
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230958"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428693"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 
@@ -51,7 +51,7 @@ catch (HttpOperationException ex)
 处理响应 `HTTP 429` 后，可以浏览检测暂时性异常的示例。
 
 > [!NOTE]
-> 除了重新设置错误代码 **429** 之外，还必须重试错误代码 **412、502** 和 **504。** 
+> 除了重试错误代码 **429** 之外，还必须重试错误代码 **412、502** 和 **504。** 
 
 ## <a name="detect-transient-exceptions-example"></a>检测暂时性异常示例
 

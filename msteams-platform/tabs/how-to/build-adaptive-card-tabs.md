@@ -4,12 +4,12 @@ author: KirtiPereira
 description: 使用自适应卡片生成选项卡
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5a66f49db3710885b926a7abce45ef858bf0b092
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328056"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428714"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -19,13 +19,13 @@ ms.locfileid: "53328056"
 
 使用传统方法开发选项卡时，您可能会遇到这些问题，如 HTML 和 CSS 注意事项、加载时间较慢、iFrame 约束以及服务器维护和成本。 自适应卡片选项卡是一种在卡片中生成选项卡的Teams。 你可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。前端使用自适应卡片呈现，而后端由机器人提供电源。 机器人负责接受请求，以及使用呈现的自适应卡片进行相应响应。
 
-可以使用现成的用户界面和 UI 构建选项卡 (UI) 在桌面、Web 和移动设备上具有本机外观的 Lego 块。 本文可帮助你了解对应用清单所需的更改、调用活动如何请求和发送带自适应卡片的选项卡信息，以及对任务模块工作流的影响。
+可以使用现成的用户界面 (和 UI) 构建基块（在桌面、Web 和移动设备上外观) 构建基块）生成选项卡。 本文可帮助你了解对应用清单所需的更改、调用活动如何请求和发送带自适应卡片的选项卡信息，以及对任务模块工作流的影响。
 
 下图描述了使用桌面和移动版自适应卡片生成选项卡：
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="选项卡中呈现的自适应卡片示例。" border="false":::
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 在开始使用自适应卡片生成选项卡之前，你必须：
 

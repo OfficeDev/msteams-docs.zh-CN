@@ -8,18 +8,18 @@ metadata:
   ms.date: 06/23/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
-  nextTutorialTitle: 发送主动邮件
+  nextTutorialTitle: 阅读有关主动消息的更多内容
   ms.custom: mvc
-  ms.openlocfilehash: 844e4c0ed85159f8ae7b080dff073e0d70f38748
-  ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
+  ms.openlocfilehash: 4a6a30bd038c5117024c67a7786995391351e0fe
+  ms.sourcegitcommit: 7f9b3c1654536a88015f1b11b6c8a0f612b111c4
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "53133449"
+  ms.lasthandoff: 07/14/2021
+  ms.locfileid: "53434464"
 items:
 - durationInMinutes: 1
-  content: "主动消息是自动程序发送的任何不响应用户请求的消息。 这可能包括邮件，例如：\n - 欢迎消息\n - 通知\n - 计划邮件\n \n此分步指南可帮助你从自动程序发送主动邮件。 你将看到以下输出：\n\n* 聊天中的主动 Hello 消息        \n![主动聊天 hello](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* 自适应卡片中的主动 Hello 消息    \n![自适应卡片中的主动 hello](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
-- title: 先决条件
+  content: "主动消息是自动程序发送的任何不响应用户请求的消息。 这可能包括邮件，例如：\n - 欢迎消息\n - 通知\n - 计划邮件\n \n此分步指南可帮助你从自动程序发送主动邮件。 你将看到以下输出：\n\n* 聊天中的主动 Hello 消息        \n![主动聊天 hello](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* 作为自适应卡片的主动 Hello 消息    \n![自适应卡片中的主动 hello](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
+- title: 必备条件
   durationInMinutes: 2
   content: "确保安装以下内容：    \n\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)年。\n* [ASP.NET 和 Web 开发](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.301-windows-x64-installer)，或[.NET Core](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer)跨平台开发工作负载。\n* [ngrok：](https://ngrok.com/download)一个跨平台应用程序，使你能够以最少的工作量将本地开发服务器公开到 Internet。\n* [获取开发人员Teams免费订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。\n"
 - title: 设置本地环境

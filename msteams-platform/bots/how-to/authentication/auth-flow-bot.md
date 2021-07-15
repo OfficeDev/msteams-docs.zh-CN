@@ -4,12 +4,12 @@ description: 介绍Microsoft Teams中的身份验证流
 keywords: teams 身份验证流自动程序
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 68ba2024d0e0f2f92a52e93614e4576dcde8dcbc
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: fdce053ce837bb9a244712a63515194d05adb3a8
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994222"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428700"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>聊天机器人的身份验证Microsoft Teams
 
@@ -55,7 +55,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 | **示例名称** | **说明** | **Node.js** | **.NET** | **Python** |
 |-----------------|----------------|--------------|----------|-----------|
 | Teams身份验证 | 此示例演示了Microsoft Teams身份验证。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
-| 自动程序身份验证 | 此示例将开始对自动程序运行中的自动程序运行Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
+| 自动程序身份验证 | 此示例演示如何对在 Microsoft Teams 中运行的自动程序使用Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
 ## <a name="see-also"></a>另请参阅
 

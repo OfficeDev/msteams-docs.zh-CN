@@ -5,12 +5,12 @@ description: 快速创建显示"Hello，World！"的 Microsoft Teams 应用。 m
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c14f55d014af120cab88044d31ee8600017e3c57
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: a749d70875948d606f42688fea74c1e0bf79817e
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254305"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428735"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>使用 Blazor 生成Microsoft Teams应用程序
 
@@ -41,7 +41,7 @@ ms.locfileid: "53254305"
 
 1. 输入应用程序名称和公司名称。
 
-1. 选择“创建”。  应用程序名称和公司名称将显示给最终用户。 将在数秒钟内创建你的 Teams 应用。  创建项目后，使用 M365 设置单一登录：
+1. 选择“**创建**”。  应用程序名称和公司名称将显示给最终用户。 将在数秒钟内创建你的 Teams 应用。  创建项目后，使用 M365 设置单一登录：
 
    1. 选择 **Project**  >  **TeamsFx**  >  **配置 SSO..."。**
    1. 系统提示时，登录到 M365 管理员帐户。
@@ -236,7 +236,7 @@ ms.locfileid: "53254305"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="选择基本信息":::
 
-1. 清单中有几个位置将 列出为 `locahost:XXXXX` URL 的一部分。  将所有匹配项替换为 `{{azure_app_url}}` ，包括大括号。
+1. 清单中有几个位置将 列出为 `localhost:XXXXX` URL 的一部分。  将所有匹配项替换为 `{{azure_app_url}}` ，包括大括号。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="调整环境的基本信息":::
 
