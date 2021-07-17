@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 4573140e33bffb0daafbdc9f929b5afd49231af8
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: ce4076ff8cb9945f3b7dd1a7e809391292ec314a
+ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114418"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455218"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 
@@ -26,7 +26,7 @@ ms.locfileid: "53114418"
 
 ### <a name="resource-specific-permissions-for-a-team"></a>团队的特定于资源的权限
 
-|应用权限| 操作 |
+|应用权限| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | 获取此团队的设置。|
 |TeamSettings.ReadWrite.Group|更新此团队的设置。|
@@ -48,7 +48,7 @@ ms.locfileid: "53114418"
 
 下表提供了聊天的特定于资源的权限：
 
-|应用权限| 操作 |
+|应用权限| Action |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | 获取此聊天的设置。                                    |
 | ChatSettings.ReadWrite.Chat    | 更新此聊天的设置。                          |
@@ -138,7 +138,7 @@ AAD 门户提供了一个中央平台，用于注册和配置应用。 你的应
 
 RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到具有以下值的应用清单：
 
-|名称| 类型 | 说明|
+|姓名| 类型 | 说明|
 |---|---|---|
 |`id` |String |AAD 应用 ID。 有关详细信息，请参阅在 [AAD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
 |`resource`|String| 此字段在 RSC 中没有任何操作，但必须添加该字段，并且必须具有值以避免错误响应;任何字符串将执行。|
@@ -158,7 +158,7 @@ RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../..
     "applicationPermissions": [
       "TeamSettings.Read.Group",
       "ChannelMessage.Read.Group",
-      "TeamSettings.Edit.Group",
+      "TeamSettings.ReadWrite.Group",
       "ChannelSettings.ReadWrite.Group",
       "Channel.Create.Group",
       "Channel.Delete.Group",

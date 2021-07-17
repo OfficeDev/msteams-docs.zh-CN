@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams 发布应用商店 Office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: c73188bb24960b9ef0706955d09d23b618c04e5c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5410d6f829c3fec9b5d631452e459bd276df472e
+ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140038"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455211"
 ---
 # <a name="localize-your-app"></a>本地化应用
 
@@ -22,7 +22,7 @@ ms.locfileid: "53140038"
 
 ## <a name="localize-your-appsource-listing"></a>本地化 AppSource 一览
 
-如果要将应用发布到应用商店，则必须注意，尚不支持本地化 AppSource 一览。 若要支持应用商店中的本地化一览，你可以向一览添加其他语言。 在合作伙伴中心中为一览 [提供](/office/dev/store/submit-to-appsource-via-partner-center) 的默认语言信息将显示在 [应用的 AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) 网站一览中。 目前，默认语言为英语。
+如果要将应用发布到应用商店，则必须注意，尚不支持本地化 AppSource 一览。 若要支持应用商店中的本地化一览，你可以向一览添加其他语言。 在合作伙伴中心中为一览 [提供](/office/dev/store/submit-to-appsource-via-partner-center) 的默认语言信息将显示在 [应用的 AppSource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource 是满足团队所有需求的地方。将聊天、会议、通话、文件和工具等一切汇集在一起，以实现更高效的团队合作。") 网站一览中。 目前，默认语言为英语。
 
 ### <a name="configure-localization"></a>配置本地化
 
