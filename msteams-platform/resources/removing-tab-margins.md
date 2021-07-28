@@ -6,12 +6,12 @@ keywords: 删除边距填充的选项卡
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 5fab0e0145288718adb7eb96f8f103f75527ec58
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 4bbf7bce62e24c61d23e7fa90f1ccd3e6c5a3371
+ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179739"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53534598"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
@@ -26,7 +26,7 @@ ms.locfileid: "53179739"
 ## <a name="timelines"></a>日程表
 
 * 2021 年 3 月 5 日 - 在 Public 开发者预览版 [中删除边距](~/resources/dev-preview/developer-preview-intro.md)。
-* 2021 年 6 月 15 日 - 将在生产中删除边距。
+* 2021 年 7 月 31 日 - 将在生产中删除边距。
 
 ## <a name="guidelines"></a>准则
 
