@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: 0f59a74cc24b7d80dd3afd4aa4369a47d56e4d59
-ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
+ms.openlocfilehash: a118d8aae91603dd4368ca644745b186a47a6176
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "53300303"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726836"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
 
@@ -74,7 +74,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
     **HTTP GET** 请求：
 
     ```http
-        GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+    GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
     请求必须返回对象 `teamsApp` `id` ，即应用的目录生成的应用程序 ID。 这不同于在应用清单中Teams ID：
@@ -193,9 +193,8 @@ Content-Type: application/json
 ## <a name="code-sample"></a>代码示例
 
 | **示例名称** | **说明** | **.NET** | **Node.js** |
-|---------------|--------------|--------|-------------|--------|
+|---------------|--------------|--------|-------------|
 | 主动安装应用并发送主动通知 | 此示例演示如何使用用户主动安装应用，以及如何通过调用 Microsoft Graph发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-
 ## <a name="see-also"></a>另请参阅
 
 * [**在应用中管理应用Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)

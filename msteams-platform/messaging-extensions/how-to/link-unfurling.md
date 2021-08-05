@@ -5,12 +5,12 @@ description: 如何在应用程序应用中使用消息传递扩展Microsoft Tea
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7713fe794c9d15453438cfe3e1bde0238bde9d8c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 3f3fca5483fb3828f4e3957d0d22dc1e361f7ffb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068946"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726927"
 ---
 # <a name="link-unfurling"></a>链接展开
 
@@ -78,6 +78,8 @@ ms.locfileid: "53068946"
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+
+可以使用自适应卡片或连接器Office 365预览属性在结果列表中显示该卡片的预览。 如果结果已是 Hero 或 Thumbnail 卡片，则不需要预览属性。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不显示任何内容。
 
 ### <a name="example"></a>示例
 
@@ -179,5 +181,5 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 ## <a name="see-also"></a>另请参阅 
 
-* [卡](~/task-modules-and-cards/what-are-cards.md)
+* [卡片](~/task-modules-and-cards/what-are-cards.md)
 * [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 2dce62aaf94e68c14183f0d91e5ba823f2ef3d7e
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 21189d09be19152f6580e4d3a75766c3bb6cbfcf
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335345"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726843"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
@@ -401,7 +401,7 @@ GET /v1/meetings/{meetingId}
     "value": { 
         "MeetingType": "Scheduled", 
         "Title": "Meeting Start/End Event", 
-        "Id":"meeting id", 
+        "Id": "meeting id", 
         "JoinUrl": "url" 
         "StartTime": "2021-04-29T16:17:17.4388966Z" 
     }, 
@@ -465,7 +465,13 @@ GET /v1/meetings/{meetingId}
 
 机器人通过处理程序接收 `OnEventActivityAsync` 事件。
 
-为了反初始化 json 有效负载，引入了一个模型对象，用于获取会议元数据。 会议元数据驻留在事件有效 `value` 负载中的 属性中。 将 `MeetingStartEndEventvalue` 创建模型对象，其成员变量对应于事件有效负载 `value` 中的 属性下的键。
+为了反初始化 json 有效负载，引入了一个模型对象，用于获取会议元数据。 会议元数据驻留在事件有效 `value` 负载中的 属性中。 将 `MeetingStartEndEventvalue` 创建模型对象，其成员变量对应于事件有效负载 `value` 中的 属性下的键。     
+      
+> [!NOTE]      
+> * 从 获取会议 `turnContext.ChannelData` ID。    
+> * 不要将对话 ID 用作会议 ID。     
+> * 请勿使用会议事件有效负载中的会议 `turncontext.activity.value` ID。 
+      
 
 以下代码演示如何从会议开始和结束事件捕获会议元数据，即 、 和 `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` ：
 
@@ -515,7 +521,7 @@ public class MeetingStartEndEventValue
 * [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
 * [会议Teams应用程序](teams-apps-in-meetings.md)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [为会议启用和配置Teams应用程序](enable-and-configure-your-app-for-teams-meetings.md)

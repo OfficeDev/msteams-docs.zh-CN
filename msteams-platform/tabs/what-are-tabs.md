@@ -5,12 +5,12 @@ description: 自定义选项卡在 Teams 概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179916"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726857"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams 选项卡
 
@@ -77,6 +77,10 @@ ms.locfileid: "53179916"
 
 你可以有多个频道或组选项卡，每个应用最多有 16 个个人选项卡。
 
+### <a name="tools-you-can-use-to-build-tabs"></a>可用于生成选项卡的工具
+* [Teams Toolkit Visual Stuido Code](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit Visual Stuido](../toolkit/visual-studio-overview.md)
+
 ## <a name="see-also"></a>另请参阅
 
 * [请求设备权限](../concepts/device-capabilities/native-device-permissions.md)
@@ -84,7 +88,7 @@ ms.locfileid: "53179916"
 * [集成 QR 或条形码扫描仪](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [集成位置功能](../concepts/device-capabilities/location-capability.md)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [先决条件](~/tabs/how-to/tab-requirements.md)

@@ -3,22 +3,22 @@ title: 会议应用可扩展性
 author: surbhigupta
 description: 了解会议应用程序扩展性
 ms.topic: conceptual
-ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 01f1d7ce6675e65b9310eab7b04fd83a129f28cb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335383"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726878"
 ---
 # <a name="meeting-app-extensibility"></a>会议应用可扩展性
 
 Teams应用程序扩展性基于以下概念：
 
-* 会议生命周期具有不同的阶段，如会议前、会中和会议后。  
+* 会议生命周期具有各种阶段，如会议前、会中和会议后。  
 * 会议有三个不同的参与者角色：组织者、演示者和与会者。 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
 * 会议有 [各种](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) 用户类型：租户内用户、 [来宾](/microsoftteams/guest-access)用户、 [联盟用户](/microsoftteams/manage-external-access)和匿名用户。
 
-本文介绍了有关会议生命周期以及如何在会议中集成选项卡、聊天机器人和消息传递扩展的信息。 它提供用于标识不同参与者角色和用于执行任务的不同用户类型的信息。
+本文介绍了有关会议生命周期以及如何在会议中集成选项卡、机器人和消息传递扩展的信息。 它提供用于标识各种参与者角色和用户类型以执行任务的信息。
 
 ## <a name="meeting-lifecycle"></a>会议生命周期
 
@@ -48,7 +48,7 @@ Teams应用程序扩展性基于以下概念：
 1. 在选项卡库中，选择要添加的应用并按照所需步骤操作。 应用作为选项卡安装。
 
     > [!NOTE]
-    > * 您还可以使用现有会议中的"会议 **聊天** "选项卡添加选项卡。
+    > * 您还可以使用"会议聊天"选项卡向现有会议 **添加** 选项卡。
     > * 如果投票或调查超过 10 个，则选项卡布局必须组织在一个状态。
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
@@ -65,7 +65,7 @@ Teams应用程序扩展性基于以下概念：
 
 #### <a name="in-meeting-app-experience"></a>会议内应用体验
 
-借助会议内应用体验，可以使用应用和会议内对话框在会议期间与参与者互动。 会议应用程序作为会议中的选项卡托管在会议窗口的顶部栏中。使用"会议内"对话框为会议参与者展示可操作内容。 有关详细信息，请参阅[为会议创建Teams应用](create-apps-for-teams-meetings.md)。
+借助会议内应用体验，可以使用应用和会议内对话框在会议期间与参与者互动。 会议应用程序作为会议中的选项卡托管在会议窗口的工具栏上。使用"会议内"对话框为会议参与者展示可操作内容。 有关详细信息，请参阅[为会议创建Teams应用](create-apps-for-teams-meetings.md)。
 
 对于移动版，会议应用可从会议>省略号 &#x25CF;&#x25CF;&#x25CF; 提供。 选择 **"** 应用"以查看会议提供的所有应用。
 
@@ -73,7 +73,7 @@ Teams应用程序扩展性基于以下概念：
 
 1. 转到Teams。
 1. 在日历中，选择要使用选项卡的会议。
-1. 进入会议后，从聊天窗口的顶部栏中，选择所需的应用。
+1. 进入会议后，从聊天窗口的工具栏中选择所需的应用。
     应用在侧面板Teams会议对话框中的"会议"对话框中可见。
 1. 在"会议内"对话框中，输入你的回复作为反馈。
 
@@ -97,7 +97,7 @@ Teams应用程序扩展性基于以下概念：
 > [!NOTE]
 > * 应用可以利用 Teams 客户端 SDK 来访问 `meetingId` 、 `userMri` 和 `frameContext` ，并适当地呈现体验。
 > * 如果成功呈现了会议内对话框，则你得到一条通知，告知已成功下载结果。
-> * 应用清单指定希望它们显示的位置。 上下文字段用于此目的。 它还是共享托盘体验的一部分，但需遵循指定的设计准则。
+> * 应用清单指定希望应用显示的位置。 上下文字段用于此目的。 它还是共享托盘体验的一部分，但需遵循指定的设计准则。
 
 下图演示了会议侧面板：
 
@@ -111,7 +111,7 @@ Teams应用程序扩展性基于以下概念：
 
 #### <a name="post-meeting-app-experience"></a>会议后应用体验
 
-通过会议后应用体验，可以查看会议结果，如投票调查结果或反馈。 Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> 添加选项卡、获取会议笔记以及组织者和与会者必须采取措施的结果。
+通过会议后应用体验，可以查看会议结果，如投票调查结果或反馈。 选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> 添加选项卡，获取会议笔记，并查看组织者和与会者必须采取措施的结果。
 
 下图显示了 **"Contoso"** 选项卡，其中显示来自与会者的投票结果和反馈：
 
@@ -162,7 +162,7 @@ Teams应用程序扩展性基于以下概念：
 
 会议中的用户类型（如组织者、演示者或与会者）可以在会议中执行其中一 [个参与者角色](#participant-roles-in-a-meeting)。
 
-以下列表详细介绍了不同的用户类型及其辅助功能和性能：
+以下列表详细介绍了各种用户类型及其辅助功能和性能：
 
 * **租户内**：租户内用户属于组织，在租户的 AAD Azure Active Directory () 凭据。 他们通常是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
 * **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有与Teams团队成员相同的功能，可以访问团队聊天、会议和文件。 来宾用户可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾访问](/microsoftteams/guest-access)。
@@ -193,7 +193,7 @@ Teams应用程序扩展性基于以下概念：
 * [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [Teams 会议中应用的先决条件和 API 参考](create-apps-for-teams-meetings.md)

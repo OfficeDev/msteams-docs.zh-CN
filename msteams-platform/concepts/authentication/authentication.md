@@ -4,12 +4,12 @@ description: 介绍Teams中的身份验证以及如何在应用中使用它
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams 身份验证 OAuth SSO AAD
-ms.openlocfilehash: 6511b1223e70d09ed2d158f6649a391999553ed1
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: ed169e3cc5f9190571890cb891665a493bd052d1
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179886"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726941"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>对用户进行身份验证Microsoft Teams
 
@@ -18,11 +18,11 @@ ms.locfileid: "53179886"
 
 为了访问受 AAD Azure Active Directory (保护的用户信息) 以及访问 Facebook 和 Twitter 等服务的数据，该应用与这些提供商建立了受信任的连接。 如果应用在用户Graph使用 Microsoft API，请对用户进行身份验证以检索相应的身份验证令牌。
 
-在Teams中，应用有两个不同的身份验证流。 在嵌入选项卡、配置页或任务模块的内容[](~/tabs/how-to/create-tab-pages/content-page.md)页中执行传统的基于 Web 的身份验证流。 如果应用包含对话机器人，请使用 OAuthPrompt 流和 Azure Bot Framework 的令牌服务（可选）将用户作为对话的一部分进行身份验证。
+在Teams中，应用有两个不同的身份验证流。 在嵌入选项卡、配置页或任务模块的内容[](~/tabs/how-to/create-tab-pages/content-page.md)页中执行传统的基于 Web 的身份验证流。 如果应用包含对话机器人，请使用 OAuthPrompt 流和 Azure Bot Framework 的令牌服务（可选），在对话中对用户进行身份验证。
 
-## <a name="web-based-authentication-flow"></a>基于 Web 的身份验证流
+## <a name="web-based-authentication-flow"></a>基于 Web 的身份验证流程
 
-对选项卡使用基于 Web 的[](~/tabs/what-are-tabs.md)身份验证流，并选择与对话机器人[](~/bots/what-are-bots.md)或消息扩展[一起使用它](~/messaging-extensions/what-are-messaging-extensions.md)。 使用 web Microsoft Teams页面中的[JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 启用身份验证。 启用身份验证后，在选项卡、配置页或任务模块中嵌入内容页。 有关基于 Web 的身份验证流详细信息，请参阅：
+对选项卡使用基于 Web 的[](~/tabs/what-are-tabs.md)身份验证流，并选择与对话机器人[](~/bots/what-are-bots.md)或消息扩展[一起使用它](~/messaging-extensions/what-are-messaging-extensions.md)。 使用 web Microsoft Teams页面中的[JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 启用身份验证。 启用身份验证后，将内容页面嵌入到选项卡、配置页面或任务模块中。 有关基于 Web 的身份验证流详细信息，请参阅：
 
 * [Add authentication to the Teams bot](~/bots/how-to/authentication/add-authentication.md)介绍如何将基于 Web 的身份验证流与对话机器人一同使用。
 * [选项卡中的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)介绍了选项卡身份验证在Teams。 这将显示用于选项卡的典型基于 Web 的身份验证流。
@@ -32,7 +32,7 @@ ms.locfileid: "53179886"
 
 ## <a name="the-oauthprompt-flow-for-conversational-bots"></a>用于对话机器人的 OAuthPrompt 流
 
-Azure Bot Framework 的 OAuthPrompt 使使用对话机器人的应用更容易进行身份验证。 使用 Azure Bot Framework 的令牌服务来帮助进行令牌缓存。
+Azure Bot Framework OAuth Prompt 使你可以更轻松地对使用对话机器人的应用程序进行身份验证。 使用 Azure Bot Framework 的令牌服务来协助进行令牌缓存。
 
 有关使用 OAuthPrompt 的信息，请参阅：
 
@@ -43,10 +43,10 @@ Azure Bot Framework 的 OAuthPrompt 使使用对话机器人的应用更容易�
 
 提供 Bot 身份验证 v3 SDK 示例。
 
-| **示例名称** | **Description** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | 自动程序身份验证 | 此示例演示如何开始在自动程序 for Microsoft Teams。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| 使用 SSO 的选项卡、聊天 () 扩展 | 此示例演示 Tab、Bot 和 ME 的 SSO - 搜索、操作、linkunfurl。 | 不可用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
+| 使用 SSO 的选项卡、聊天 () 扩展 | 此示例演示 Tab、Bot 和 ME 的 SSO - 搜索、操作、linkunfurl。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
 
 
 ## <a name="configure-the-identity-provider"></a>配置标识提供程序

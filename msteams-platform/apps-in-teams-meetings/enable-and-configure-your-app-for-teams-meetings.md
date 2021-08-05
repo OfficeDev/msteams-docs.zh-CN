@@ -3,12 +3,12 @@ title: 为会议启用和配置Teams应用程序
 author: surbhigupta
 description: 为会议启用和配置Teams应用程序
 ms.topic: conceptual
-ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 69ff70c7dedb1c05728cb4ac8ed797dd6c6df959
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335366"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726864"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
@@ -113,7 +113,7 @@ Teams会议可为组织提供独特的协作体验。 它提供了为不同的�
 
 在会议期间，可以使用 meetingSidePanel 或会议内对话框为应用构建独特的体验。
 
-#### <a name="meetingsidepanel"></a>meetingSidePanel
+#### <a name="meeting-sidepanel"></a>会议侧窗格
 
 使用 meetingSidePanel，你可以自定义会议体验，使组织者和演示者拥有一组不同的视图和操作。 在应用清单中，必须将 meetingSidePanel 添加到上下文数组。 在会议以及所有方案中，应用在宽度为 320 像素的"会议内"选项卡中呈现。 有关详细信息，请参阅 [FrameContext 接口](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)。
 

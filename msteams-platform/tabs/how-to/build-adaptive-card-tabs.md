@@ -4,12 +4,12 @@ author: KirtiPereira
 description: 使用自适应卡片生成选项卡
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: aaa6ae00e4a70ea27c27638ed9475bc7edec25da
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: 4ec3cab39fa8383b89a5f9574cf8a7f864abd341
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428714"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726850"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -17,15 +17,22 @@ ms.locfileid: "53428714"
 > * 此功能 [在公用开发者预览版](~/resources/dev-preview/developer-preview-intro.md) 桌面和移动版中受支持。 即将推出 Web 浏览器中的支持。
 > * 带自适应卡片的选项卡当前仅作为个人应用受支持。
 
-使用传统方法开发选项卡时，您可能会遇到这些问题，如 HTML 和 CSS 注意事项、加载时间较慢、iFrame 约束以及服务器维护和成本。 自适应卡片选项卡是一种在卡片中生成选项卡的Teams。 你可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。前端使用自适应卡片呈现，而后端由机器人提供电源。 机器人负责接受请求，以及使用呈现的自适应卡片进行相应响应。
+使用传统方法开发选项卡时，您可能会遇到这些问题：
 
-可以使用现成的用户界面 (和 UI) 构建基块（在桌面、Web 和移动设备上外观) 构建基块）生成选项卡。 本文可帮助你了解对应用清单所需的更改、调用活动如何请求和发送带自适应卡片的选项卡信息，以及对任务模块工作流的影响。
+* HTML 和 CSS 注意事项
+* 加载时间较慢
+* iFrame 约束
+* 服务器维护和成本
 
-下图描述了使用桌面和移动版自适应卡片生成选项卡：
+自适应卡片选项卡是一种在卡片中生成选项卡的Teams。 你可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。使用自适应卡片呈现前端时，后端由机器人提供电源。 机器人负责接受请求，以及使用呈现的自适应卡片进行相应响应。
+
+可以使用现成的用户界面来构建选项卡， (UI) 桌面、Web 和移动设备上的本机构建基块。 本文帮助你了解对应用清单进行更改所需的更改。 本文还介绍了调用活动如何请求和发送带自适应卡片的选项卡信息，及其对任务模块工作流的影响。
+
+下图显示了桌面和移动版中具有自适应卡片的生成选项卡：
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="选项卡中呈现的自适应卡片示例。" border="false":::
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 在开始使用自适应卡片生成选项卡之前，你必须：
 
@@ -160,7 +167,7 @@ ms.locfileid: "53428714"
 
 ### <a name="handle-submits-from-adaptive-card"></a>处理自适应卡片中的提交
 
-在选项卡中呈现自适应卡片后，它必须能够响应用户交互。 此响应由调用 `tab/submit` 请求处理。
+在选项卡中呈现自适应卡片后，它可以响应用户交互。 此响应由调用 `tab/submit` 请求处理。
 
 当用户在"自适应卡片"选项卡上选择按钮时，会通过自适应卡片的功能将请求触发到具有相应数据的 `tab/submit` `Action.Submit` 机器人。 自适应卡片数据通过请求的 data 属性 `tab/submit` 提供。 您收到以下请求响应之一：
 
@@ -220,7 +227,7 @@ ms.locfileid: "53428714"
 
 任务模块还使用自适应卡片 `task/fetch` 调用和 `task/submit` 请求和响应。 有关详细信息，请参阅使用[自动程序中Microsoft Teams模块](../../task-modules-and-cards/task-modules/task-modules-bots.md)。
 
-随着自适应卡片选项卡的引入，机器人响应请求方式会 `task/submit` 发生变化。 如果你使用的是自适应卡片选项卡，机器人会使用标准选项卡继续响应来响应调用请求，并 `task/submit` 关闭任务模块。 通过呈现选项卡继续响应正文中提供的新卡片列表，可 **更新** "自适应卡片"选项卡。
+引入自适应卡片选项卡后，机器人响应请求方式会 `task/submit` 发生变化。 如果你使用的是自适应卡片选项卡，机器人会使用标准选项卡继续响应响应调用请求，并 `task/submit` 关闭任务模块。  通过呈现选项卡继续响应正文中提供的新卡片列表，可 **更新** "自适应卡片"选项卡。
 
 ### <a name="invoke-taskfetch"></a>Invoke `task/fetch`
 
@@ -325,9 +332,9 @@ ms.locfileid: "53428714"
 
 ## <a name="authentication"></a>身份验证
 
-在本文的前面几节中，你已看到大部分开发范例都可以从任务模块请求和响应扩展到选项卡请求和响应中。 处理身份验证时，自适应卡片选项卡的工作流遵循邮件扩展的身份验证模式。 有关详细信息，请参阅 [添加身份验证](../../messaging-extensions/how-to/add-authentication.md)。
+在之前的部分中，你已看到大多数开发范例都可以从任务模块请求和响应扩展到选项卡请求和响应中。 处理身份验证时，自适应卡片选项卡的工作流遵循邮件扩展的身份验证模式。 有关详细信息，请参阅 [添加身份验证](../../messaging-extensions/how-to/add-authentication.md)。
 
-`tab/fetch` 请求可以有继续 **响应** 或 **身份验证** 响应。 当 `tab/fetch` 触发请求并收到选项卡 **身份验证** 响应时，登录页会向用户显示。
+`tab/fetch` 请求可以有继续 **响应** 或 **身份验证** 响应。 当 `tab/fetch` 触发请求并收到选项卡 **身份验证** 响应时，登录页将显示给用户。
 
 **通过调用获取身份验证 `tab/fetch` 代码**
 
@@ -336,7 +343,7 @@ ms.locfileid: "53428714"
     > [!NOTE]
     > 应用徽标通过应用 `icon` 清单中定义的 属性提供。 在选项卡身份验证响应正文中返回的属性中定义徽标后显示 `title` 的标题。 
 
-1. 选择“**登录**”。 您将重定向到身份验证响应正文的 属性中提供的 `value` 身份验证 URL。 
+1. 选择“**登录**”。 您将重定向到身份验证响应正文的 属性中提供的 `value` **身份验证** URL。
 1. 将出现一个弹出窗口。 此弹出窗口使用身份验证 URL 托管网页。
 1. 登录后，关闭窗口。 身份验证 **代码** 将发送到 Teams 客户端。
 1. 然后Teams客户端重新向服务提出请求，其中包括托管网页提供的 `tab/fetch` 身份验证代码。
@@ -415,6 +422,12 @@ ms.locfileid: "53428714"
 }
 ```
 
+## <a name="code-sample"></a>代码示例
+
+|**示例名称** | **说明** |**.NET** | **Node.js** |
+|----------------|-----------------|--------------|--------------|
+| 在"自适应卡片"选项卡Teams自适应卡片 | Microsoft Teams选项卡示例代码，它演示如何在 Teams 中显示自适应卡片。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+
 ## <a name="see-also"></a>另请参阅
 
 * [自适应卡片](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
@@ -423,7 +436,7 @@ ms.locfileid: "53428714"
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)

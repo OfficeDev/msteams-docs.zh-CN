@@ -6,12 +6,12 @@ keywords: teams 选项卡组频道可配置
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179935"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726829"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -39,13 +39,21 @@ Teams选项卡必须遵循以下先决条件：
 
 * MS Teams 选项卡不支持加载使用自签名证书的 Intranet 网站。
 
+## <a name="tools-you-can-use-to-build-tabs"></a>可用于生成选项卡的工具
+* [Visual Studio Code 的Teams工具包](../../toolkit/visual-studio-code-overview.md)
+* [Visual Studio 的Teams工具包](../../toolkit/visual-studio-overview.md)
+
 ## <a name="see-also"></a>另请参阅
 
 * [Teams选项卡](~/tabs/what-are-tabs.md)
-* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [使用 React 生成第一个应用](../../get-started/first-app-react.md)
+* [使用 Blazor 生成第一个应用](../../get-started/first-app-blazor.md)
+* [使用 SPFx 生成第一个应用](../../get-started/first-app-spfx.md)
+* [生成第一个对话机器人](../../get-started/first-app-bot.md)
+* [生成首个邮件扩展](../../get-started/first-message-extension.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)

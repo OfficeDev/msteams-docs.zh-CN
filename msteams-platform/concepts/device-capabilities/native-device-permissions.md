@@ -4,12 +4,12 @@ keywords: teams 应用功能权限
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 37312912b4901cd31feeb9b0ee9bc76a3e03826a
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 420b874770a4ad506dbedd575600f333a51ad5c0
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211616"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726948"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 
@@ -190,6 +190,12 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 > [!NOTE]
 > 当你同意本机设备权限时，它仅对当前的登录 _会话_ 有效。
+
+## <a name="code-sample"></a>代码示例
+
+| **示例名称** | **说明** | **Node.js** |
+|---------------|--------------|--------|
+|设备权限 | 使用Microsoft Teams选项卡示例应用演示设备权限 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
 ## <a name="next-steps"></a>后续步骤
 
