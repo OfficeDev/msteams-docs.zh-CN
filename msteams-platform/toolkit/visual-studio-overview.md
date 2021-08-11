@@ -5,12 +5,12 @@ keywords: teams visual studio 工具包
 localization_priority: Normal
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: 6a0f466ba0d95312695be8b5460fc949e3f70811
-ms.sourcegitcommit: 4ac93d69927791a8ccf678ca5ee83e63b51566b4
+ms.openlocfilehash: f72b8d723b5511e6e68a94617e256e280ce2ed50ee33544ccb3c8c237ddd9832
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53095512"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701806"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>使用 Teams Toolkit 和 Visual Studio
 

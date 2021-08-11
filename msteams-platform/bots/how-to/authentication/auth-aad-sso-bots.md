@@ -4,12 +4,12 @@ description: 介绍如何获取用户令牌。 目前，机器人开发人员可
 keywords: 令牌， 用户令牌， 自动程序 SSO 支持
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: a43c2a46561149ff97d039a3ba8fe9f4472e2073
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 30a92de9f7d5ad9615ef2f86244b8607a47cea356030ebfb93ed3c1ffcb127a8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566079"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709603"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>单一登录 (SSO) 自动程序支持
 
@@ -24,16 +24,16 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 
 完成以下步骤，获取身份验证和自动程序应用程序令牌：
 
-1. 机器人使用包含 属性的 OAuthCard 发送邮件 `tokenExchangeResource` 。 它Teams自动程序应用程序获取身份验证令牌。 用户在所有活动用户终结点接收消息。
+1. 机器人使用包含 `tokenExchangeResource` 属性的 OAuthCard 发送消息。 它Teams自动程序应用程序获取身份验证令牌。 用户在所有活动用户终结点接收消息。
 
     > [!NOTE]
-    >* 一个用户一次可以具有多个活动终结点。
-    >* 自动程序令牌从每个活动用户终结点接收。
-    >* 应用必须安装在个人范围内，SSO 支持。
+    >* 一个用户一次可以有多个活动终结点。
+    >* 机器人令牌接收自每个活动用户终结点。
+    >* 应用必须安装在个人作用域内才能支持 SSO。
 
 1. 如果当前用户第一次使用自动程序应用程序，将显示请求提示，请求用户执行下列操作之一：
     * 如果需要，请提供同意。
-    * 处理逐步身份验证，如双重身份验证。
+    * 处理逐步处理的身份验证，例如双因素身份验证。
 
 1. Teams当前用户的 AAD 终结点请求自动程序应用程序令牌。
 
@@ -41,7 +41,7 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 
 1. Teams名称为 **sign-in/tokenExchange** 的调用活动返回的值对象，将令牌发送到自动程序。
   
-1. 自动程序应用程序中的已分析令牌提供所需信息，如用户的电子邮件地址。
+1. 机器人应用程序中分析的令牌提供用户的电子邮件地址等所需信息。
   
 ## <a name="develop-an-sso-teams-bot"></a>开发 SSO Teams自动程序
   
@@ -75,7 +75,7 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 
 5. 选择应用程序对 AAD 终结点和 Microsoft Graph（可选）所需的权限。
 6. [授予对](/azure/active-directory/develop/v2-permissions-and-consent)桌面Teams Web 和移动应用程序的权限。
-7. 选择 **"添加范围"。**
+7. 选择“**添加作用域**”。
 8. 在打开的面板中，输入 作为范围名称 `access_as_user` 添加 **客户端应用**。
 
     >[!NOTE]
@@ -83,7 +83,7 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
     >
     > 您必须了解以下重要限制：
     >
-    > * 仅支持用户级别的 Microsoft Graph API 权限，如电子邮件、配置文件、offline_access和 OpenId。 如果需要访问其他 Microsoft Graph作用域，例如 `User.Read` 或 `Mail.Read` ，请参阅[建议的解决方法](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes)。
+    > * 仅支持用户级别的 Microsoft Graph API 权限，如电子邮件、配置文件、offline_access和 OpenId。 如果需要访问其他 Microsoft Graph作用域（如 或 ），请参阅获取具有 Graph `User.Read` `Mail.Read` [权限的访问令牌](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)。
     > * 应用程序的域名必须与为 AAD 应用程序注册的域名相同。
     > * 当前不支持每个应用程序的多个域。
     > * 使用域 `azurewebsites.net` 的应用程序不受支持，因为它很常见，并且可能是安全风险。
@@ -96,7 +96,7 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 
 2. 转到 **API 权限**。 选择 **"添加**  >  **Microsoft Graph** 委派权限"，然后从 Microsoft Graph API  >  添加以下权限：
     * User.Read (默认启用) 
-    * email
+    * 电子邮件
     * offline_access
     * OpenId
     * 个人资料
@@ -161,9 +161,9 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 
 !["同意"对话框](../../../assets/images/bots/bots-consent-dialogbox.png)
 
-当用户选择"继续 **"时**，将发生以下事件：
+当用户选择“**继续**”时，将发生以下事件：
 
-* 如果机器人定义了登录按钮，则自动程序登录流程的触发方式类似于来自邮件流中 OAuth 卡按钮的登录流。 开发人员必须决定需要征得用户同意的权限。 如果需要权限超过 的令牌，建议采用此方法 `openId` 。 例如，如果要交换图形资源的令牌。
+* 如果机器人定义了登录按钮，则自动程序登录流程的触发方式类似于来自邮件流中 OAuth 卡按钮的登录流。 开发人员必须决定哪些权限需要用户同意。 如果需要权限超过 的令牌，建议采用此方法 `openId` 。 例如，如果要交换图形资源的令牌。
 
 * 如果自动程序未在 OAuth 卡上提供登录按钮，需要用户同意才能获得最低权限集。 此令牌可用于基本身份验证和获取用户的电子邮件地址。
 

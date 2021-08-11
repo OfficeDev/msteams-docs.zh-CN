@@ -4,12 +4,12 @@ description: 了解构建可进行实时音频和视频呼叫和联机会议的�
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 音频流视频流 音频/视频呼叫会议实时媒体应用程序托管的媒体服务托管的媒体
-ms.openlocfilehash: 0cfb8f345702f03ae356789d8dad1573902dcfb4
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 23a4573c39968f3b5c53badc32fd80ecc4dc889087dd8d98253be9d46555919c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585947"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709543"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>实时媒体通话和与会议Microsoft Teams
 
@@ -65,7 +65,7 @@ ms.locfileid: "53585947"
 
 应用程序托管的媒体机器人需要 .NET 或 C# Windows Server。 有关详细信息，请参阅 [应用程序托管的媒体机器人的要求和注意事项](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [注册通话机器人](~/bots/calls-and-meetings/registering-calling-bot.md)

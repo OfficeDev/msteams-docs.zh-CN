@@ -6,12 +6,12 @@ keywords: Teams o365 连接器
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 28a2b35e868baf34e35a11a00e10b30b0f09c236
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: e52402e841b675de7d0c19302b8c8090bcb90cef27ac61e8ac3d6dd69a0bb076
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179753"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709316"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -250,6 +250,9 @@ PowerShell V2 模块Exchange Online新式验证，并适用于多重身份验证
 1. 在搜索框中，键入团队或频道名称。
 1. 从 **对话框窗口** 右下角的下拉菜单中选择"设置连接器"。
 
+> [!IMPORTANT]
+> 目前，自定义连接器在 doD 政府社区云 (GCC) 、GCC-High 和国防部 (不可用) 。
+
 该连接器位于该团队的 &#9679;&#9679;&#9679; > "更多 **选项**""连接器  >    >    >  **""所有** 连接器"部分中。 可以通过滚动到此部分或搜索连接器应用来导航。 若要配置或修改连接器，请选择"配置 **"。**
 
 ## <a name="distribute-webhook-and-connector"></a>分发 Webhook 和连接器
@@ -262,7 +265,7 @@ PowerShell V2 模块Exchange Online新式验证，并适用于多重身份验证
 
 下表提供了示例名称及其说明：
 
-|**示例名称** | **Description** | **.NET** | **Node.js** |
+|**示例名称** | **说明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | 连接器    | 示例Office 365将通知生成到Teams连接器。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 通用连接器示例 |通用连接器的示例代码，易于为支持 Webhook 的任何系统进行自定义。|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|

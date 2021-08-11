@@ -5,16 +5,19 @@ description: 自定义选项卡在 Teams 概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 890b1fb71a7b139aedec6869a734611578a78ceaaaf1510661529430ee7b9f26
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726857"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823219"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams 选项卡
 
 选项卡是Teams网页中嵌入的可感知Microsoft Teams。 它们是简单的 HTML <iframe 标记，这些标记指向在应用程序清单中声明的域，并可以添加为单个用户的团队、群聊或个人应用中的频道的一 \> 部分。 可以将自定义选项卡与你的应用一起，以将自己的 Web 内容嵌入Teams或Teams Web 内容添加特定于 Web 的功能。 有关详细信息，请参阅[javaScript Teams SDK。](/javascript/api/overview/msteams-client)
+
+> [!IMPORTANT]
+> 目前，自定义选项卡可用于 政府社区云 (GCC) 、GCC-High 和国防部 (DOD) 。
 
 下图显示了个人选项卡：
 
@@ -78,7 +81,7 @@ ms.locfileid: "53726857"
 你可以有多个频道或组选项卡，每个应用最多有 16 个个人选项卡。
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>可用于生成选项卡的工具
-* [Teams Toolkit Visual Stuido Code](../toolkit/visual-studio-code-overview.md)
+* [Visual Studio Code 的Teams工具包](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit Visual Stuido](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>另请参阅
@@ -88,7 +91,7 @@ ms.locfileid: "53726857"
 * [集成 QR 或条形码扫描仪](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [集成位置功能](../concepts/device-capabilities/location-capability.md)
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [先决条件](~/tabs/how-to/tab-requirements.md)

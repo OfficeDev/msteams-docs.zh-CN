@@ -5,12 +5,12 @@ description: 了解 webhook 和连接器如何将 Web 服务连接到 Teams 客�
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2cb763a6637abd3faa500de871119f0b829871bf
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 199f1e8a82f067cbd8124553481ed54693d241f1c3a50c085b32203b89f4f63d
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140052"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708634"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook 和连接器
 

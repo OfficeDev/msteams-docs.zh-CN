@@ -4,12 +4,12 @@ description: 了解如何为用户注册新的音频/视频呼叫Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: a11350a3c5bae0b2eb3a36b9e1233ed92e1705c8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5013ebcbce0bc94199e846f20fc6ee52238d302f1dd1b05872245ef2c6e32d91
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020146"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709565"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>为会议注册呼叫和会议Microsoft Teams
 

@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 localization_priority: Normal
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: 07eb03f2e9686c26a917ab1f2d72fc0668e59107
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 2f382e3612b0df026a12b8b37fdbbc278df6ecf8fe8e0c67582c3486eb91c5be
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949677"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823212"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -238,16 +238,16 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="generate-a-deep-link-to-a-call"></a>生成到呼叫的深层链接
 
-| 深层链接 | 格式 | 示例 |
+| 深度链接 | 格式 | 示例 |
 |-----------|--------|---------|
 | 进行音频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; &lt; 、user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| 进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; &lt; ，user2 &gt;&video=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
-|使用可选参数源进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ， &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| 进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; &lt; ，user2 &gt;&Video=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
+|使用可选参数源进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; &lt; ，user2 &gt;&video=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
 | 对 VoIP 和 PSTN 用户的组合进行音频和视频呼叫 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ，4： &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 以下是查询参数：
 * `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Azure AD UserPrincipalName（通常为电子邮件地址）或 PSTN 呼叫时，支持 pstn mri &lt; 4：phonenumber &gt; 。
-* `Withvideo`：这是可选参数，可用于进行视频呼叫。 设置此参数将仅打开呼叫者的相机。 呼叫接收者可以选择通过音频或音频和视频呼叫通过呼叫通知窗口Teams进行应答。 
+* `withVideo`：这是可选参数，可用于进行视频呼叫。 设置此参数将仅打开呼叫者的相机。 呼叫接收者可以选择通过音频或音频和视频呼叫通过呼叫通知窗口Teams进行应答。 
 * `Source`：这是一个可选参数，用于通知深层链接的来源。
 
 ## <a name="code-sample"></a>代码示例

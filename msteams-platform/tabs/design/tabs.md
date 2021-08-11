@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721841"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709386"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>设计选项卡Microsoft Teams
 
@@ -21,7 +21,7 @@ ms.locfileid: "52721841"
 你可以找到全面的选项卡设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。 UI 工具包还具有辅助功能和响应式大小调整等基本主题，此处未介绍这些主题。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>添加选项卡
 
@@ -31,13 +31,13 @@ ms.locfileid: "52721841"
 * 频道
 * 会议 (之前、期间或之后) 
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 下面的示例展示了用户如何在频道中添加选项卡。
 
 :::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="示例显示正在频道中添加的选项卡。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 用户可以通过选择频道中的"更多"按钮来访问选项卡 (例如) 添加这些选项卡的聊天或聊天。
 
@@ -60,7 +60,7 @@ ms.locfileid: "52721841"
 |计数器|说明|
 |----------|-----------|
 |1|**应用徽标**：应用的全彩色应用徽标。|
-|2|**应用名称**：应用的完整名称。|
+|2|**应用名称**：应用的全名。|
 |3|**iframe：** 应用内容响应空间 (例如选项卡设置或身份验证) 。|
 |4 |**关于链接**：打开一个对话框，其中显示有关应用的详细信息，例如完整说明、应用所需的权限以及指向隐私策略和服务条款的链接。|
 |5 |**关闭按钮**：关闭对话框。|
@@ -86,11 +86,11 @@ ms.locfileid: "52721841"
 
 选项卡提供了全屏 Web 体验，Teams显示协作内容（如任务板和仪表板）和重要信息。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="示例显示一个包含任务板的选项卡。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="示例显示一个包含任务板的移动选项卡。" border="false":::
 
@@ -98,7 +98,7 @@ ms.locfileid: "52721841"
 
 ### <a name="anatomy-tab"></a>结构：选项卡
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="显示选项卡的 UI 分析的图示。" border="false":::
 
@@ -109,7 +109,7 @@ ms.locfileid: "52721841"
 |3|**选项卡聊天**：在右侧打开聊天，允许用户在内容旁边进行对话。|
 |4 |**iframe：** 显示应用内容。|
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="显示选项卡的 UI 分析的图示。" border="false":::
 
@@ -140,11 +140,11 @@ ms.locfileid: "52721841"
 
 用户一旦添加了新选项卡，就可以自动发布至频道或聊天。这不仅向团队成员通知新内容并提供指向选项卡的链接，还允许用户开始讨论选项卡。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="示例显示正在频道线程中讨论的选项卡。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="示例显示在频道线程中讨论的移动选项卡。" border="false":::
 
@@ -154,11 +154,11 @@ ms.locfileid: "52721841"
 
 用户可以在正在查看的选项卡内容旁边进行对话。 在桌面上，聊天将打开到应用内容的一侧。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="示例显示一个在右侧打开聊天的选项卡。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="示例显示具有上下文内聊天区域的移动选项卡。" border="false":::
 
@@ -174,7 +174,7 @@ ms.locfileid: "52721841"
 
 ### <a name="anatomy-tab-menu"></a>结构：选项卡菜单
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="显示选项卡菜单的 UI 分析的图示。" border="false":::
 
@@ -184,7 +184,7 @@ ms.locfileid: "52721841"
 |2|**重命名**：用户可以为选项卡指定对频道、聊天或会议有意义的名称。|
 |3|**删除**：从频道、聊天或会议中删除选项卡。|
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="显示移动选项卡菜单的 UI 分析的图示。" border="false":::
 
@@ -280,15 +280,15 @@ ms.locfileid: "52721841"
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="插图显示使用制表位设置要执行哪些操作。" border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>应做：利用Teams令牌
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>建议：充分利用 Teams 颜色令牌
 
-每个Teams主题都有自己的配色方案。 若要自动处理主题更改，请 <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank"> (Fluent UI </a>) 颜色标记。
+每个 Teams 主题都有自己的配色方案。 若要自动处理主题更改，请在设计中使用<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">颜色令牌 (Fluent UI)</a>。
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="插图显示不与选项卡设置有关的内容。" border="false":::
 
-#### <a name="dont-hard-code-color-values"></a>请勿：硬编码颜色值
+#### <a name="dont-hard-code-color-values"></a>不建议：硬编码颜色值
 
 如果不使用颜色令牌Teams，你的设计将不太可扩展，并且需要更多的时间进行管理。
 

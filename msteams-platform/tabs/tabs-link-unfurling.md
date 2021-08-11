@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: b54eb5942d19749b39bb9bb504dd8645f5655ef3
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: a76bf6f5d97114655893dd80ebf0de81fc242ea4d6b444516565b952aab883fe
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179942"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708672"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 

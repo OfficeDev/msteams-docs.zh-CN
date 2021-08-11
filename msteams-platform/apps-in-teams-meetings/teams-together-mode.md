@@ -2,12 +2,12 @@
 title: 自定义一起模式场景
 description: 使用自定义一起模式场景
 ms.topic: conceptual
-ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
-ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
+ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53463322"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823233"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
@@ -155,12 +155,12 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
 
 1. （可选）可以从"保存"下拉菜单中选择"共享"，以创建可共享链接，以轻松分发场景供其他人使用。 打开此链接会为用户安装场景，他们可以开始使用它。
 
-1. 预览后，可通过按照应用提交步骤将场景作为应用Teams交付到应用。
+1. 预览后，可以通过进入开发人员中心Teams应用部分将场景作为应用交付Teams应用。 你可以在此处下载应用包或直接发布到你的组织。
 
     >[!NOTE]
     > 对于已设计的场景，此步骤需要不同于场景包的应用包。 可在开发人员中心的应用部分找到自动创建Teams包。
 
-1. （可选）可通过从"保存"下拉菜单中选择"导出"**来检索场景** 包。 下载.zip文件（即场景包）。
+1. （可选）可通过从"保存"下拉菜单 **中选择"导出**"来保存场景包。 下载.zip文件（即场景包）。
 
     ![导出场景](../assets/images/apps-in-meetings/build-a-scene.png)
 

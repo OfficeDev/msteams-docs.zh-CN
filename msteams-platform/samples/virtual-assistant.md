@@ -4,12 +4,12 @@ description: 如何创建虚拟助理聊天机器人和技能以用于Microsoft 
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 虚拟助理机器人
-ms.openlocfilehash: 976dacbd8b0bef7a3158d5ff35c5c38d97707c63
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: aec0b731b73607cd8f881509ab77da7b8fd35f21c121b97220fdd5019fc53df2
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428721"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708374"
 ---
 # <a name="create-virtual-assistant"></a>创建虚拟助手 
 

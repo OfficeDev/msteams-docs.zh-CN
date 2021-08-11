@@ -4,12 +4,12 @@ description: 了解如何在应用中旁加载Microsoft Teams。 在开发期间
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: a54068ffd57a5d622cad72267c049cee69b18d58
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
+ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "52684647"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708705"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload应用Microsoft Teams
 
@@ -18,6 +18,9 @@ ms.locfileid: "52684647"
 * 你想要自己或与其他开发人员一起在本地测试和调试应用。
 * 你只为自己生成了一个应用。 例如，自动化工作流。
 * 你为一小组用户（如工作组）生成了一个应用。
+
+> [!IMPORTANT]
+> 目前，旁加载应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。
 
 ## <a name="prerequisites"></a>先决条件
 

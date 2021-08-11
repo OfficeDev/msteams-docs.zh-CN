@@ -4,12 +4,12 @@ description: 卡片和任务模块。
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 64079bc8bb653e5fb9ac3af2e3fb0d848a0c6835
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5980759e1a6650dd801b92fae804994a776dd6fd8edbfb257a915f9092d7a1f9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140776"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709557"
 ---
 # <a name="cards-and-task-modules"></a>卡片和任务模块
 
@@ -34,5 +34,5 @@ ms.locfileid: "53140776"
 
 ## <a name="see-also"></a>另请参阅
 
-* [卡](~/task-modules-and-cards/what-are-cards.md)
+* [卡片](~/task-modules-and-cards/what-are-cards.md)
 * [任务模块](~/task-modules-and-cards/what-are-task-modules.md)

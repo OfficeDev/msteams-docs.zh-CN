@@ -6,12 +6,12 @@ author: heath-hamilton
 localization_priority: Priority
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: f4d1ba1e6e0b71b37e2b7b2d2a32fb729822ba1c
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 63bdbd0afbf2d0c4a3b7506330fb56e463a10169379c0674dd68496e3cc8de19
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037668"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703278"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>设计 Microsoft Teams 消息传递
 
@@ -126,17 +126,8 @@ Teams 中提供多种选项，来显示消息扩展搜索结果，包括[列表�
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="示例：在移动设备上，如何从聊天消息打开消息传递扩展。" border="false":::
 
 ---
-
-#### Channel post
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
+':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
 ---
 
 ## <a name="use-a-messaging-extension"></a>使用邮件扩展
@@ -284,7 +275,7 @@ Teams 中提供多种选项，来显示消息扩展搜索结果，包括[列表�
 
 #### <a name="do-integrate-with-single-sign-on"></a>建议：与单一登录集成
 
-单一登录可使登录过程更轻松、更快速、更安全。 此外，如果用户已登录到你的个人应用，则无需再次登录即可访问消息传递扩展。
+SSO 使登录过程更轻松、更快、更安全。此外，如果用户已登录到你的个人应用，则他们不必再次登录即可访问消息传递扩展。
 
    :::column-end:::
    :::column span="":::

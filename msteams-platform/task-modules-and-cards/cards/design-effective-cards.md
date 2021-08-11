@@ -4,12 +4,12 @@ description: 了解如何设计 Microsoft Teams 自适应卡并获取 Microsoft 
 localization_priority: Priority
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8e56928da44e22006feb59715c8bdbf821ec4c42
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: ca7c38f112808f98ae1555e91f794f032e880c862a697e1218953d40cbb410aa
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037654"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708489"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡
 
@@ -37,7 +37,7 @@ ms.locfileid: "53037654"
 
 ### <a name="hero"></a>主图
 
-我们最大的卡片。 用于共享文章或应用场景，用一张图像讲述故事主体。
+我们最大的卡片。用于共享用一张图像讲述大部分故事的文章或场景。
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
@@ -76,19 +76,9 @@ ms.locfileid: "53037654"
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="示例：移动设备上的自适应卡列表卡。" border="false":::
 
 ---
-
-### Digest
-
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
-
+':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
+':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
 ---
 
 ### <a name="media"></a>媒体

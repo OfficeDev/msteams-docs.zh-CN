@@ -5,16 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98e36bf55e61ef59261959021409d9e60d8542f5
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630059"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709657"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
 自动程序是执行一组特定任务的对话应用。 根据 Microsoft <a href="https://dev.botframework.com/" target="_blank">框架</a>，自动程序会与用户进行通信、回复其问题，并主动通知他们更改和其他事件。 这是一个很好的方法。
+
+> [!IMPORTANT]
+> 目前，自动程序在 政府社区云 (GCC) 中可用，但在 doD GCC-High 和国防部 (中) 。
 
 为指导应用设计，以下信息描述并说明用户可以如何在 Teams 中添加、使用和管理机器人。
 
@@ -29,17 +32,17 @@ ms.locfileid: "52630059"
 
 自动程序可用于聊天、频道和个人应用。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 用户可以添加自动程序，方法如下：
 
-* 从Teams存储。
+* 从 Teams 应用商店。
 * 通过使用应用飞出，选择 teams **"更多应用"** 图标。
 * 当有@mention聊天或撰写框时（以下示例显示了如何在群组聊天中执行这一操作）。
 
     :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="示例演示了如何使用智能机器人在群组聊天中添加@mention。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 用户可以访问在桌面上使用自动程序添加的@mention。
 
@@ -55,11 +58,11 @@ ms.locfileid: "52630059"
 
 在个人环境中，欢迎消息可设置机器人的风格。 消息包括问候语、机器人可以做什么，以及一些如何交互的建议。 例如，"尝试询问我..."。 如果可能，建议应返回存储的响应，无需登录。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="例如，显示了个人应用中的机器人简介。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="示例显示了移动版个人应用中的机器人简介。" border="false":::
 
@@ -69,11 +72,11 @@ ms.locfileid: "52630059"
 
 与个人空间相比，机器人在频道和群聊中的介绍应该略有不同 (如个人应用) 。 在现实中，如果进入一个人员完整的房间;你可自我介绍，而不是每个已存在的人。 将这一思路融入你的机器人设计中。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="在协作上下文中显示自动介绍的示例。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="示例演示了在移动版协作上下文中的机器人简介。" border="false":::
 
@@ -85,11 +88,11 @@ ms.locfileid: "52630059"
 
 请不要忘记：在自动程序命令菜单（**我该怎么办？**）中，还必须提供一个命令以注销。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="示例显示具有登录按钮的自动程序。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="示例显示移动版上具有登录按钮的自动程序。" border="false":::
 
@@ -106,11 +109,11 @@ ms.locfileid: "52630059"
 
 在个人应用中，变盘可提供自动程序的有效概述以及应用的其他任意功能。 建议包括允许用户试用自动程序命令的按钮。 例如， **创建任务**。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="一对一聊天中的自动浏览示例。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="示例演示了机器人在移动版一对一聊天中的教程。" border="false":::
 
@@ -120,11 +123,11 @@ ms.locfileid: "52630059"
 
 在频道和群组聊天中，应在模式（也称为 [任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) 中打开浏览，这样不会中断持续对话。 还可选择为教程实施基于角色的视图。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="示例显示频道中的自动浏览。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="示例演示移动频道中的自动程序教程。" border="false":::
 
@@ -145,7 +148,7 @@ ms.locfileid: "52630059"
 
 ### <a name="anatomy"></a>解剖
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="示例显示了机器人的结构分析。" border="false":::
 
@@ -159,7 +162,7 @@ ms.locfileid: "52630059"
 |6 |**自适应卡片**：如果你的机器人响应包含自适应卡片，该卡片将占用聊天气泡的全部宽度。|
 |7 |**命令菜单**：显示自动程序的标准命令（由你定义）。|
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="示例演示移动机器人的结构结构分析。" border="false":::
 
@@ -229,11 +232,11 @@ ms.locfileid: "52630059"
 
 自动程序可提供查询或一组相关匹配项的精确匹配，有助于进行语言不匹配。 相关匹配项，使用列表卡对内容进行分组。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="示例显示与自动程序的简单查询交互。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="示例显示与移动机器人的简单查询交互。" border="false":::
 
@@ -245,12 +248,12 @@ ms.locfileid: "52630059"
 
 在下面的示例中，自动程序使用可能想要执行下一步操作的选项来响应每条消息。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="示例显示与自动程序之间的多元交互。" border="false":::
 
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="示例演示了与移动设备上的机器人的多向交互。" border="false":::
 
@@ -261,7 +264,7 @@ ms.locfileid: "52630059"
 
 通过主动消息传递，机器人可以充当摘要，以特定频率发送与个人、群组聊天或频道相关的通知。 文档更改了某些内容或关闭工作项目时，自动程序可能会发送邮件。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 在下面的示例中，用户收到一条 Toast 通知，提示机器人在另一个频道中向用户发送消息。
 
@@ -271,7 +274,7 @@ ms.locfileid: "52630059"
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="示例显示用户查看自动程序主动的消息。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 在下面的示例中，用户收到一条通知，提示机器人在另一个频道中向用户发送消息。
 
@@ -287,11 +290,11 @@ ms.locfileid: "52630059"
 
 在个人应用中，选项卡可以补充机器人可以执行哪些操作。 例如，如果你的机器人可以创建工作项目，就太棒了在选项卡内的一个中心位置显示所有这些项。详细了解如何 [选项卡](../../tabs/design/tabs.md)。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="示例显示选项卡可如何帮助整理自动程序内容。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="示例显示选项卡如何有助于在移动设备上组织聊天机器人内容。" border="false":::
 
@@ -305,9 +308,9 @@ ms.locfileid: "52630059"
 
 ## <a name="best-practices"></a>最佳做法
 
-使用这些建议创建高质量的应用体验。
+使用上述建议打造优质应用体验。
 
-### <a name="content"></a>Content
+### <a name="content"></a>内容
 
 :::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示建立清晰人物的自动程序最佳做法的示例。" border="false":::
 
