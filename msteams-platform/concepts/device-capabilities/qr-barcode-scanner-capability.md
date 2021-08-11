@@ -6,12 +6,12 @@ keywords: 相机媒体 qr 代码 qrcode 条形码条形码扫描仪扫描功能�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4e34e75a6b439c67c831352e07344fd2cf011543
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: ab346c9bf3a2359ce33a5ec73b743d9b340a71b3c27b9555a6978a00c3ca1e8f
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211574"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702766"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>集成 QR 或条码扫描仪功能 
 
@@ -76,7 +76,7 @@ ms.locfileid: "53211574"
 
 必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
-|错误代码 |  错误名称     | Condition|
+|错误代码 |  错误名称     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **500** | INTERNAL_ERROR | 执行所需操作时遇到内部错误。|

@@ -5,12 +5,12 @@ description: 邮件扩展在 Microsoft Teams 概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6bf4b9a3147e9916f2eac05a890fc8fc134799be
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 9f222e8b4baa60433e2fb7298cc94f53b180c05a83107cbd1bfd374fec1481a5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069098"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706026"
 ---
 # <a name="messaging-extensions"></a>消息扩展
 

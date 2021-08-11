@@ -4,15 +4,15 @@ description: 介绍卡片文本格式Microsoft Teams
 keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
-ms.date: 03/29/2018
-ms.openlocfilehash: 877a16f884e91138dc656434438a5fe1dd2ffd6e
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.date: 06/25/2021
+ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140590"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706129"
 ---
-# <a name="format-cards-in-microsoft-teams"></a>格式化卡片Microsoft Teams
+# <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
 以下是向卡片添加格式文本格式的两种方法：
 * [Markdown](#format-cards-with-markdown)
@@ -51,7 +51,7 @@ ms.locfileid: "53140590"
 
 不支持以下 Markdown 标记：
 
-* 标头
+* 标题
 * 表格
 * 图像
 * 预设格式的文本
@@ -303,7 +303,7 @@ ms.locfileid: "53140590"
 | 已排序列表 | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | 预设格式的文本 | `text` | ``preformatted text`` |
 | Blockquote | >blockquote 文本 | `>blockquote text` |
-| Hyperlink | [必应](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| 超链接 | [必应](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | 图像链接 |![在一个地心上闪避](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
 在连接器卡中，为 呈现新行 `\n\n` ，但不为 或 `\n` 呈现 `\r` 。
@@ -401,7 +401,7 @@ ms.locfileid: "53140590"
 | 已排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | 预设格式的文本 | `text` | `<pre>text</pre>` |
 | Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Hyperlink | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| 超链接 | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 图像链接 | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 在连接器卡中，使用 标记以 HTML 格式呈现 `<p>` 新行。
@@ -491,7 +491,7 @@ ms.locfileid: "53140590"
 | 已排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | 预设格式的文本 | `text` | `<pre>text</pre>` |
 | Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Hyperlink | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| 超链接 | [必应](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 图像链接 |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>简单卡片的移动和桌面差异

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644884"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705726"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为用户设计个人Microsoft Teams
 
@@ -23,7 +23,7 @@ ms.locfileid: "52644884"
 你可以找到全面的个人应用设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。 UI 工具包还具有辅助功能和响应式大小调整等基本主题，此处未介绍这些主题。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>添加个人应用
 
@@ -39,7 +39,7 @@ ms.locfileid: "52644884"
 
 ### <a name="anatomy-personal-app-private-workspace"></a>分析：个人应用 (专用工作区) 
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件分析。" border="false":::
 
@@ -57,7 +57,7 @@ ms.locfileid: "52644884"
 |A|**选项卡**：为个人应用提供导航。|
 |1|**iframe：** 显示应用内容。|
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件分析。" border="false":::
 
@@ -94,7 +94,7 @@ ms.locfileid: "52644884"
 
 ### <a name="anatomy-personal-app-bot"></a>结构：个人应用 (自动) 
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
 
@@ -104,7 +104,7 @@ ms.locfileid: "52644884"
 |B|**自动程序** 消息：机器人通常以卡片形式发送消息和通知， (自适应卡片) 。|
 |C|**撰写框**：用于向自动程序发送邮件的输入字段。|
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
 
@@ -123,9 +123,9 @@ ms.locfileid: "52644884"
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="示例显示用于管理个人应用的选项。" border="false":::
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
-使用这些建议创建高质量的应用体验。
+使用上述建议打造优质应用体验。
 
 ### <a name="tab-priority"></a>选项卡优先级
 

@@ -1,18 +1,18 @@
 ---
-title: 参与Teams文档
+title: 参与 Teams 文档
 description: 创建和发布文档Teams的步骤
 author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: a567b0462397780650d6173df9dae1b340a06f97
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: d09f946926f7377b65910c7bccce7cef8e30ef739afa31b94c83354cffbd7c27
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140508"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708054"
 ---
-# <a name="contribute-to-teams-documentation"></a>参与Teams文档
+# <a name="contribute-to-teams-documentation"></a>参与 Teams 文档
 
 Teams文档是 **Microsoft Docs 技术** 文档库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在更改后具有相同的 URL **docs.microsoft.com。** 例如， `/docs.microsoft.com/microsoftteams/...` 是文档Teams路径的开头。 Teams文章以 Markdown 语法编写，并托管在GitHub。
 

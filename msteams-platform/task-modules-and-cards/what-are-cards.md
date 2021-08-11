@@ -1,17 +1,17 @@
 ---
-title: 卡
+title: 卡片
 description: 介绍卡以及如何在机器人、连接器和消息传递扩展中使用
 localization_priority: Normal
 keywords: 连接器机器人卡片消息传递
 ms.topic: overview
-ms.openlocfilehash: f895423e5755dd85a7618b8907c4c3b0acbc3cf4
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5fce5983e5197bfde37d2c92d427e8135b294d422eb019ef207eeb7f0e5be9f3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140542"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706630"
 ---
-# <a name="cards"></a>卡
+# <a name="cards"></a>卡片
 
 卡片是用户界面， (UI) 或相关信息的容器。 卡片可以有多个属性和附件，也可以包括按钮，可触发 [卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。 使用卡片，您可以将信息组织到组中，并使用户能够与信息的特定部分进行交互。
 

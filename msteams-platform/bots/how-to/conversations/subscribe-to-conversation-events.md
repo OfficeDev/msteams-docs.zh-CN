@@ -5,12 +5,12 @@ description: 如何处理来自自动程序的对话Microsoft Teams事件。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 39d3a6d54b275fd6b9f28eb38b124435e9ba8bfd
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: c50409720bdb700295934171d8a2a3474205adb59e8397dcc64a01b9aec23fa3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049042"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703616"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -45,15 +45,15 @@ ms.locfileid: "53049042"
 | 已采取的操作        | EventType         | 调用的方法              | 说明                | 范围 |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | 已创建频道     | channelCreated    | OnTeamsChannelCreatedAsync | [将创建一个通道](#channel-created)。 | 团队 |
-| 通道重命名     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道被重命名](#channel-renamed)。 | 团队 |
-| 频道已删除     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道被删除](#channel-deleted)。 | 团队 |
+| 已重命名频道     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道被重命名](#channel-renamed)。 | 团队 |
+| 已删除频道     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道被删除](#channel-deleted)。 | 团队 |
 | 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [频道已还原](#channel-deleted)。 | 团队 |
-| 添加的成员   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 所有 |
+| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 全部 |
 | 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [将删除成员](#team-members-removed)。 | groupChat and team |
-| 团队重命名        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队重命名为](#team-renamed)。       | 团队 |
+| 已重命名团队        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队重命名为](#team-renamed)。       | 团队 |
 | 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队已删除](#team-deleted)。       | 团队 |
-| 团队存档        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)。       | 团队 |
-| 团队未存档        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)。       | 团队 |
+| 已存档团队        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)。       | 团队 |
+| 未存档团队        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)。       | 团队 |
 | 已还原团队        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | 团队 |
 
 ### <a name="channel-created"></a>已创建频道
@@ -145,7 +145,7 @@ async def on_teams_channel_created(
 
 ---
 
-### <a name="channel-renamed"></a>通道重命名
+### <a name="channel-renamed"></a>已重命名频道
 
 只要频道在安装自动程序的团队中重命名，频道重命名事件就会发送到机器人。
 
@@ -227,7 +227,7 @@ async def on_teams_channel_renamed(
 
 ---
 
-### <a name="channel-deleted"></a>频道已删除
+### <a name="channel-deleted"></a>已删除频道
 
 只要在安装了自动程序的团队中删除频道，频道删除事件就会发送给机器人。
 
@@ -656,7 +656,7 @@ async def on_teams_members_removed(
 
 ---
 
-### <a name="team-renamed"></a>团队重命名
+### <a name="team-renamed"></a>已重命名团队
 
 当自动程序位于的团队重命名时，将会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamRenamed` 事件 `channelData` 。
 
@@ -892,7 +892,7 @@ async def on_teams_team_restored(
 
 ---
 
-### <a name="team-archived"></a>团队存档
+### <a name="team-archived"></a>已存档团队
 
 自动程序在存档安装它的团队时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamarchived` 事件 `channelData` 。
 
@@ -973,7 +973,7 @@ async def on_teams_team_archived(
 ---
 
 
-### <a name="team-unarchived"></a>团队未存档
+### <a name="team-unarchived"></a>未存档团队
 
 自动程序在安装它的团队未存档时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamUnarchived` 事件 `channelData` 。
 
@@ -1061,8 +1061,8 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 所有   |
-| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 所有 |
+| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 全部   |
+| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 全部 |
 
 ### <a name="reactions-added-to-bot-message"></a>添加到自动程序消息的反应
 
@@ -1406,7 +1406,7 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | 对话机器人 | 机器人对话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

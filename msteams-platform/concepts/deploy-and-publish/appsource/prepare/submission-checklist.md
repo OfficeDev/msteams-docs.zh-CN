@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c0f9c3328018884290c86a49b8026ce81022cd83
-ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
+ms.openlocfilehash: d18cd98bf9b5b0921a45c4f4a4affb4b51153c90668da7cb990b2fd9b9f669f7
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52763106"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706479"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
@@ -169,7 +169,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 |:---------------------|:---------------|
 | 分析和 BI | 分析、数据可视化和 BI |
 | 开发人员和 IT | 开发人员工具、IT 管理员 |
-| 教育版 | 教育版 |
+| 教育 | 教育 |
 | 人力资源 | 人力资源和招聘 |
 | 工作效率 | 内容管理、文件和文档、生产力、培训和教程以及实用程序 |
 | 项目管理 | 通信、Project、工作流和业务管理 |

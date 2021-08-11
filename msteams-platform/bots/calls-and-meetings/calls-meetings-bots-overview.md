@@ -4,12 +4,12 @@ description: 了解你的Microsoft Teams应用如何使用语音和视频与用�
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 呼叫呼叫 音频视频 IVR 语音联机会议
-ms.openlocfilehash: d23b069d1f728cc54941f90e531d01acae6ab989
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 578c10ab2566e8bbf51a2224b8d474fb74c92092ea815386865a4e28efe059c6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179907"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706793"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
 
@@ -90,7 +90,7 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **Description** | **Graph** |
+| **示例名称** | **说明** | **Graph** |
 |---------------|----------|--------|
 | Graph通信 | Graph与 Microsoft 的通信平台进行交互。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 | 通话和会议机器人 | 示例应用将启动机器人如何创建呼叫、加入会议以及转接呼叫。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |

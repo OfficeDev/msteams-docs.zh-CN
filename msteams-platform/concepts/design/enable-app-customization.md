@@ -5,16 +5,19 @@ description: 了解Teams如何为组织自定义你的应用。
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: bf1b43629c87dd4123520c634772e5dea14e0bb5
-ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
+ms.openlocfilehash: 8d7cad42bcb8e6892c25c3c24b50f938624e665a50274395bad00c07f0f1576c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2021
-ms.locfileid: "52915081"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703598"
 ---
 # <a name="enable-your-microsoft-teams-app-to-be-customized"></a>启用Microsoft Teams自定义应用
 
 你可以允许客户在管理中心中Microsoft Teams应用的某些Teams方面。 仅发布到应用商店的应用支持Teams此功能。 无法自定义为组织发布的旁加载应用。
+
+> [!IMPORTANT]
+> 目前，旁加载应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。
 
 此功能的一些可能示例包括：
 

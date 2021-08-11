@@ -1,29 +1,29 @@
 ---
-title: 使用基本的 Fluent UI 组件设计应用
+title: 使用基本的 UI 组件Fluent应用
 author: heath-hamilton
 description: 了解通常用于生成应用和获取 Microsoft Teams UI 工具包Microsoft Teams UI 组件。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: e58a64014be2b576f8ca16d707e315fa8056f9b717ae8dd976f80c544c57ba31
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644908"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704134"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本的 Fluent UI Microsoft Teams设计应用程序
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本 Microsoft Teams UI 组件Fluent应用
 
-可以使用以下基本的 Fluent UI Teams从头开始构建应用程序。 这些组件设计尽可能平面，可跨不同的用例、主题和屏幕大小工作。
+可以使用以下基本 Teams UI 组件从头开始构建Fluent应用。 这些组件设计尽可能平面，可跨不同的用例、主题和屏幕大小工作。
 
 此页面上的插图显示组件在默认Teams (浅色) 和深色主题中的外观。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成应用程序而设计的组件Teams模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
+基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成应用而设计的组件Teams模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>通知
 
@@ -69,7 +69,7 @@ ms.locfileid: "52644908"
 
 :::image type="content" source="../../assets/images/components/group-list.png" alt-text="示例显示组列表 UI 组件。" border="false":::
 
-## <a name="hyperlink"></a>Hyperlink
+## <a name="hyperlink"></a>超链接
 
 :::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="示例显示超链接 UI 组件。" border="false":::
 
@@ -123,7 +123,7 @@ ms.locfileid: "52644908"
 
 ## <a name="toggle"></a>切换
 
-注意：在 Fluent UI 中，切换是一种复选框。
+注意：Fluent UI 中，切换是一种复选框。
 
 :::image type="content" source="../../assets/images/components/toggle.png" alt-text="示例显示切换 UI 组件。" border="false":::
 
@@ -136,4 +136,4 @@ ms.locfileid: "52644908"
 获取此处列出的某些组件的代码示例和实现详细信息，以及 Microsoft Teams UI 工具包。
 
 > [!div class="nextstepaction"]
-> [尝试使用 Fluent UI (组件) ](https://fluentsite.z22.web.core.windows.net/)
+> [尝试 UI (Fluent组件) ](https://fluentsite.z22.web.core.windows.net/)

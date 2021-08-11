@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Web 应用
-ms.openlocfilehash: b7f530198a8e1c240e3cf4b227d786af94f6c89e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 4a25649a8a791efc3f33572da203e36c7f39cb11f64676218f3a3f240da956c1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630430"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708327"
 ---
 # <a name="web-apps"></a>Web 应用 
 
@@ -86,6 +86,9 @@ Azure Active Directory (AD) 是用户标识Teams。 如果你的应用使用不�
 
 Teams Azure AD 为第三 (应用使用单一登录 (SSO) 机制。 它还提供使用 OAuth 和开放 ID 身份验证等标准（称为 OIDC）将身份验证流连接其他标识提供程序。
 
+> [!IMPORTANT]
+> 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开适用于用户的第三方GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+
 对于SharePoint，如果你希望 SSO 适用于另一个应用，则只能使用 SSO，并且不能添加另一个 Azure AD ID，因为 ID SharePoint应用。
 
 了解有关身份验证[在 Teams 中Teams。](../concepts/authentication/authentication.md)
@@ -94,7 +97,7 @@ Teams Azure AD 为第三 (应用使用单一登录 (SSO) 机制。 它还提供�
 
 ***集成方案**：独立应用、协作应用*
 
-确保遵循[Teams准则](../concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。 无法将现有应用内容迁移到"Teams选项卡。有关应用设计详细信息，请参阅[Fluent Design System。](https://fluentsite.z22.web.core.windows.net/)
+确保遵循[Teams准则](../concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。 无法将现有应用内容迁移到"Teams选项卡。有关应用设计详细信息[，请参阅](https://fluentsite.z22.web.core.windows.net/)Fluent Design System。
 
 ## <a name="maximize-deep-linking"></a>最大化深层链接
 

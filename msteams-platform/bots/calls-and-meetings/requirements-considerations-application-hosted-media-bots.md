@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: 应用程序托管的媒体 Windows 服务器 azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 20f4327ee967cdc75b72eb5525b684c0fb61acb3c90fb96c26eeb23d815fe4e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335359"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702828"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 

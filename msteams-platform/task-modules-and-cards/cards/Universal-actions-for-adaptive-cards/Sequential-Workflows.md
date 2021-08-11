@@ -4,24 +4,24 @@ description: 使用通用操作的顺序工作流的示例
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: f36e65133572569cd01de1053044336c810656f3
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649642"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705517"
 ---
 # <a name="sequential-workflows"></a>顺序工作流
 
-自适应卡片现在支持顺序工作流，在用户操作上更新自适应卡片时，用户可以在一系列需要用户输入的卡片中前进。 这通过 支持 `Action.Execute` ，这允许机器人开发人员返回自适应卡片以响应用户操作。
+自适应卡片现在支持在用户操作上更新的顺序工作流。 使用顺序工作流，自适应卡片针对用户操作进行更新，用户可以在一系列需要用户输入的卡片中前进。 `Action.Execute` 支持顺序工作流，这允许机器人开发人员返回自适应卡片以响应用户操作。
 
-例如，假设自助餐厅想要为团队或频道下订单。 通过用户对各种商品（如食物、食物等）的选择，可以 `Action.Execute` 按顺序进行记录。 用户还可以根据自动程序开发人员定义的逻辑来回浏览卡片。 <br/>
+例如，假设自助餐厅想要为团队或频道下订单。 通过用户对各种商品（如食物和食物）的选择，可以 `Action.Execute` 按顺序进行记录。 用户还可以根据自动程序开发人员定义的逻辑来回浏览卡片。 <br/>
 
 下图显示了顺序工作流：
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-用户可以在工作流中推进，而无需修改其他用户的卡片。 这还可用于使用顺序自适应卡片进行测验。 如下图所示，不同用户可以处于工作流的不同阶段，并且可以看到卡片的不同状态：
+用户可以在工作流中推进，而无需修改其他用户的卡片。 工作流还可用于使用顺序自适应卡片进行测验。 下图显示了不同用户可以处于工作流的不同阶段和卡片状态：
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="适应机器人状态":::
 
@@ -123,11 +123,13 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-## <a name="code-sample"></a>代码示例
+## <a name="code-samples"></a>代码示例
 
-|示例名称 | 说明 | .NETCore |
-|----------------|-----------------|--------------|
-| Teams机器人 | 创建使用自适应卡片接受食物订单的简单机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|示例名称 | 说明 | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Teams机器人 | 创建使用自适应卡片接受食物订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
+| 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新的自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+
 
 ## <a name="see-also"></a>另请参阅
 

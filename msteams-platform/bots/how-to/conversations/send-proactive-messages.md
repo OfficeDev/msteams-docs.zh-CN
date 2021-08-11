@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: 发送消息获取用户 ID 通道 ID 对话 ID
-ms.openlocfilehash: 5c169e8ef7735b42233bef9992de3540a6fbbee1
-ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
+ms.openlocfilehash: 5a999769879c8661d16b79f885b463166be557903a6448c709eb06ed16e49345
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "53300296"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705698"
 ---
 # <a name="proactive-messages"></a>主动邮件
 

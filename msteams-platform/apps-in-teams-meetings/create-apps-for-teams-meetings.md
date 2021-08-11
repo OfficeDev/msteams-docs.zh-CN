@@ -6,32 +6,32 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 21189d09be19152f6580e4d3a75766c3bb6cbfcf
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: a8b606242f4fe5498f1d370fdf79b3712d430a3c4bdd0006752d5fe463e8865d
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726843"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702324"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件和 API 参考
 
-若要在会议生命周期内扩展应用功能，Teams使用会议Teams应用程序。 必须完成先决条件，并且可以使用会议应用 API 引用来增强会议体验。
+若要在会议生命周期中扩展应用功能，Teams使您可以使用适用于会议Teams应用程序。 完成先决条件并使用会议应用 API 参考来增强会议体验。
 
 ## <a name="prerequisites"></a>先决条件
 
-使用用于会议Teams，您必须了解以下内容：
+使用会议Teams之前，您必须了解以下先决条件：
 
-* 你必须知道如何开发应用Teams知识。 有关详细信息，请参阅应用[Teams开发](../overview.md)。
+* 了解如何开发Teams应用程序。 若要详细了解如何开发应用Teams，请参阅Teams[应用开发](../overview.md)。
 
-* 必须更新Teams清单，以指示该应用可用于会议。 有关详细信息，请参阅 [应用清单](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest)。
+* 更新Teams应用清单，以指示该应用可用于会议。 有关详细信息，请参阅 [应用清单](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest)。
 
 * 您的应用程序必须支持 groupchat 作用域中的可配置选项卡，你的应用必须在会议生命周期中作为选项卡运行。有关详细信息，请参阅 [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md)。
 
-* 对于会议前和Teams方案，必须遵循常规选项卡设计准则。 有关会议期间的体验，请参阅会议内选项卡和会议内对话框设计指南。 有关详细信息，请参阅Teams[选项卡设计指南](../tabs/design/tabs.md)、会议中的[选项卡](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)设计指南和[会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
+* 遵守Teams和会议后方案的常规选项卡设计准则。 有关会议期间的体验，请参阅会议内选项卡和会议内对话框设计指南。 有关详细信息，请参阅Teams[选项卡设计指南](../tabs/design/tabs.md)、会议中的[选项卡](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)设计指南和[会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
 
-* 必须支持范围才能在会议前和会议后聊天 `groupchat` 中启用应用。 通过会议前应用体验，你可以查找和添加会议应用并执行会议前任务。 通过会议后应用体验，可以查看会议结果，如投票调查结果或反馈。
+* 支持 `groupchat` 范围以在会议前和会议后聊天中启用你的应用。 通过会议前应用体验，你可以查找和添加会议应用，以及执行会议前任务。 通过会议后应用体验，可以查看会议结果，如投票调查结果或反馈。
 
-* 会议 API URL 参数必须具有 `meetingId` 、 `userId` 和 `tenantId` 。 它们作为客户端 SDK 和自动程序Teams的一部分提供。 此外，您可以使用选项卡 SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
+* 会议 API URL 参数必须具有 `meetingId` 、 `userId` 和 `tenantId` 。 这些参数作为客户端 SDK 和自动程序Teams的一部分提供。 此外，您可以使用选项卡 SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 * `GetParticipant`API 必须具有自动程序注册和 ID，以生成身份验证令牌。 有关详细信息，请参阅自动[程序注册和 ID。](../build-your-first-app/build-bot.md)
 
@@ -45,16 +45,28 @@ ms.locfileid: "53726843"
 
 ## <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
-新的会议可扩展性提供了用于转换会议体验的 API。 你可以构建应用或在会议生命周期内集成现有应用。 可以使用 API 让应用了解会议。 可以选择要用于增强会议体验的 API。
+以下新的会议扩展提供了用于转换会议体验的 API：
+
+* 在会议生命周期内生成应用或集成现有应用。
+* 使用 API 让应用了解会议。
+* 选择要用于增强会议体验的 API。
 
 下表提供了这些 API 的列表：
 
-|API|说明|请求|Source|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
 |**NotificationSignal** | 此 API 使你能够提供使用用户-机器人聊天的现有对话通知 API 传递的会议信号。 它允许您根据显示会议内对话框的用户操作发出信号。 |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot FrameworkSDK|
 |**会议详细信息** | 此 API 使你能够获取静态会议元数据。 |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+
+下表提供了适用于 API 的 Bot Framework SDK 方法：
+
+|API|Bot Framework SDK 方法|
+|---|---|
+|**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
+|**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
+|**会议详细信息** | `TeamsMeetingInfo (string id = default);` |
 
 ### <a name="getusercontext-api"></a>GetUserContext API
 
@@ -158,7 +170,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 |响应代码|说明|
 |---|---|
-| **403** | 不允许应用获取参与者信息。 这是最常见的错误响应，如果会议未安装应用，将触发此错误响应。 例如，如果租户管理员禁用应用或在实时网站迁移期间阻止应用。|
+| **403** | 不会与应用共享获取参与者信息。 如果会议未安装该应用，它将触发最常见的错误响应 403。 如果租户管理员在实时网站迁移期间禁用或阻止应用，将触发 403 错误响应。 |
 | **200** | 成功检索参与者信息。|
 | **401** | 应用使用无效令牌进行响应。|
 | **404** | 会议已过期或找不到参与者。|
@@ -243,7 +255,7 @@ POST /v3/conversations/{conversationId}/activities
 |---|---|
 | **201** | 具有信号的活动已成功发送。 |
 | **401** | 应用使用无效令牌进行响应。 |
-| **403** | 应用无法发送信号。 发生这种情况的原因有多种，例如租户管理员禁用应用、实时网站迁移期间阻止应用等。 在这种情况下，有效负载包含详细的错误消息。 |
+| **403** | 应用无法发送信号。 403 响应代码可能会由于各种原因发生，例如租户管理员在实时网站迁移期间禁用和阻止应用。 在这种情况下，有效负载包含详细的错误消息。 |
 | **404** | 会议聊天不存在。 |
 
 ### <a name="meeting-details-api"></a>会议详细信息 API
@@ -251,7 +263,7 @@ POST /v3/conversations/{conversationId}/activities
 > [!NOTE]
 > 此功能目前仅适用于公共 [开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版。
 
-会议详细信息 API 使你的应用能够获取静态会议元数据。 这些是不会动态更改的数据点。
+会议详细信息 API 使你的应用能够获取静态会议元数据。 元数据提供不动态更改的数据点。
 API 通过 Bot Services 提供。
 
 #### <a name="prerequisite"></a>先决条件
@@ -341,7 +353,7 @@ GET /v1/meetings/{meetingId}
 
 用户可以接收实时会议事件。 只要任何应用与会议关联，就会与机器人共享实际会议开始时间和会议结束时间。
 
-会议的实际开始时间和结束时间与计划的开始时间和结束时间不同。 会议详细信息 API 提供计划的开始时间和结束时间，而事件提供实际的开始时间和结束时间。
+会议的实际开始时间和结束时间与计划的开始时间和结束时间不同。 会议详细信息 API 提供计划的开始时间和结束时间。 该事件提供实际的开始时间和结束时间。
 
 ### <a name="prerequisite"></a>先决条件
 
@@ -465,14 +477,13 @@ GET /v1/meetings/{meetingId}
 
 机器人通过处理程序接收 `OnEventActivityAsync` 事件。
 
-为了反初始化 json 有效负载，引入了一个模型对象，用于获取会议元数据。 会议元数据驻留在事件有效 `value` 负载中的 属性中。 将 `MeetingStartEndEventvalue` 创建模型对象，其成员变量对应于事件有效负载 `value` 中的 属性下的键。     
-      
+为了反初始化 json 有效负载，引入了一个模型对象，用于获取会议元数据。 会议元数据位于事件 `value` 有效负载中的 属性中。 将 `MeetingStartEndEventvalue` 创建模型对象，其成员变量对应于事件有效负载 `value` 中的 属性下的键。
+     
 > [!NOTE]      
 > * 从 获取会议 `turnContext.ChannelData` ID。    
 > * 不要将对话 ID 用作会议 ID。     
 > * 请勿使用会议事件有效负载中的会议 `turncontext.activity.value` ID。 
       
-
 以下代码演示如何从会议开始和结束事件捕获会议元数据，即 、 和 `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` ：
 
 ```csharp
@@ -513,7 +524,7 @@ public class MeetingStartEndEventValue
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会议详细信息选项卡 | Microsoft Teams会议扩展性示例，以在会议中通过详细信息选项卡进行激活。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| 会议详细信息选项卡 | Microsoft Teams会议详细信息选项卡交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 
@@ -521,7 +532,7 @@ public class MeetingStartEndEventValue
 * [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
 * [会议Teams应用程序](teams-apps-in-meetings.md)
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [为会议启用和配置Teams应用程序](enable-and-configure-your-app-for-teams-meetings.md)

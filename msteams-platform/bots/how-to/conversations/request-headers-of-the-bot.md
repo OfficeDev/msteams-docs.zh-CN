@@ -3,12 +3,12 @@ title: 将租户 ID 和对话 ID 发送到机器人的请求标头
 description: 介绍如何将租户 ID 和对话 ID 发送到机器人的请求标头。
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 76f667453114ab202d43217b9a4c01a6d14cc1a8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a775c09589f59a6d487bf403544afccd5b59f797ac12cf60a9deb1fc2de16644
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565891"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706666"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>将租户 ID 和对话 ID 发送到机器人的请求标头
 

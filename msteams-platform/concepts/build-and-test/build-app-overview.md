@@ -5,12 +5,12 @@ description: 描述可用于生成所有类型的应用应用的 SDK、工具和
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 8c9beb3fc5a1550da4ef4203b0488e7ee0a57a13
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3945647cfd1e7f6951039f9e1d6810c03cd606bcbc8711df95f70ae35adaa0d8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020840"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704751"
 ---
 # <a name="build-options-for-microsoft-teams-app-development"></a>应用开发Microsoft Teams生成选项
 

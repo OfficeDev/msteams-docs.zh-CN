@@ -4,12 +4,12 @@ description: 详细介绍公共Microsoft Teams中的开发者预览版
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 预览开发人员功能
-ms.openlocfilehash: 84683420a5c61bb1eb493f8191bfbcbe97f6fb46
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: f24f95245707097cb5fc79c041582efb5e1f11ef29877855003baf3707842c4c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230902"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704394"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>公共服务开发者预览版中的Microsoft Teams
 

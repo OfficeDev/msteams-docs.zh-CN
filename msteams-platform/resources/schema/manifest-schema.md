@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 清单架构
-ms.openlocfilehash: 44bae986d5ea78a044cb66d48e6e093d489f4473
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: f1f40a3cc28410fe41f114ac749f06124fbbc1f850a02771bfe67ba40c77aae3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037626"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708026"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
-Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 早期版本 1.0、1.1,..., 1.6 等也受 URL ("v1.x"支持) 。
+Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 早期版本 1.0、1.1,..., 和 1.6 也受 URL ("v1.x") 。
 有关在每个版本中所做的更改详细信息，请参阅 [清单更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
 
 以下架构示例显示了所有扩展性选项：
@@ -302,38 +302,38 @@ Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须
 
 ## <a name="schema"></a>$schema
 
-可选，但推荐 — 字符串
+可选，但建议使用 string
 
 引用 https:// JSON 架构的 URL。
 
 ## <a name="manifestversion"></a>manifestVersion
 
-**必需** — 字符串
+**必需**-string
 
 此清单使用的清单架构版本。 必须为 1.10。
 
 ## <a name="version"></a>version
 
-**必需** — 字符串
+**必需**-string
 
-特定应用的版本。 如果更新清单中的某些内容，则版本也必须递增。 这样，在安装新清单时，它将覆盖现有清单，并且用户会收到新功能。 如果此应用已提交到应用商店，则必须重新提交和重新验证新的清单。 应用用户会在清单获得批准后的数小时内自动收到新的更新清单。
+特定应用的版本。 在清单中更新某些内容时，版本也必须递增。 这样，在安装新清单时，它将覆盖现有清单，并且用户会收到新功能。 当此应用提交到应用商店时，必须重新提交并重新验证新的清单。 应用用户会在清单获得批准后的数小时内自动收到新的更新清单。
 
-如果应用对权限的请求发生变化，将提示用户升级并重新同意应用。
+如果应用程序对权限的请求更改，将提示用户升级并重新与应用进行升级。
 
 此版本字符串必须遵循 [Semver](http://semver.org/) 标准 (MAJOR。MINOR。PATCH) 。
 
 ## <a name="id"></a>id
 
-**必需** - Microsoft 应用 ID
+**必需**- Microsoft 应用 ID
 
-ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序通过 Microsoft Bot Framework，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，则你有一个 ID。 必须在此处输入 ID。 否则，必须在 Microsoft 应用程序注册门户[中生成一个新 ID。](https://aka.ms/appregistrations) 如果添加自动程序，请使用同一 ID。
+ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序通过 Microsoft Bot Framework 注册，则你有一个 ID。 如果你的选项卡的 Web 应用已经使用 Microsoft 登录，你有一个 ID。 必须在此处输入 ID。 否则，必须在 Microsoft 应用程序注册门户[中生成一个新 ID。](https://aka.ms/appregistrations) 如果添加自动程序，请使用同一 ID。
 
 > [!NOTE]
 > 如果你要向 AppSource 中的现有应用提交更新，则清单中的 ID 不得修改。
 
 ## <a name="developer"></a>developer
 
-**必需** — object
+**必需**—object
 
 指定有关你的公司的信息。 对于提交到应用商店Teams，这些值必须与应用商店一览中的信息匹配。 有关详细信息，请参阅应用商店Teams[指南](~/concepts/deploy-and-publish/appsource/publish.md)。
 
@@ -347,7 +347,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="name"></a>name
 
-**必需** — object
+**必需**—object
 
 应用体验的名称，在应用体验中向Teams显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值必须不同。
 
@@ -358,11 +358,11 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="description"></a>说明
 
-**必需** — object
+**必需**—object
 
 向用户描述你的应用。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
-确保你的描述准确地描述了你的体验，并提供相关信息来帮助潜在客户了解你的体验。 如果需要使用外部帐户，则必须在完整说明中记下。 和 `short` `full` 的值必须不同。 简短说明不得在详细说明中重复，且不得包含任何其他应用名称。
+请确保您的描述描述您的体验并帮助潜在客户了解您的体验。 如果需要使用外部帐户，则必须在完整说明中记下。 和 `short` `full` 的值必须不同。 简短说明不能在详细说明中重复，并且不得包含任何其他应用名称。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -371,15 +371,15 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="packagename"></a>packageName
 
-**可选** — 字符串
+**可选**—string
 
 反向域表示法的应用的唯一标识符;例如，com.example.myapp。 最大长度：64 个字符。
 
 ## <a name="localizationinfo"></a>localizationInfo
 
-**可选** — object
+**可选**—object
 
-允许指定默认语言，以及指向其他语言文件的指针。 有关详细信息，请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
+允许指定默认语言并提供指向更多语言文件的指针。 有关详细信息，请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -387,7 +387,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
 
-指定其他语言翻译的对象数组。
+指定更多语言翻译的对象数组。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -396,9 +396,9 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="icons"></a>图标
 
-**必需** — object
+**必需**—object
 
-在应用内使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。 有关详细信息 [，](../../concepts/build-and-test/apps-package.md#app-icons) 请参阅图标。
+在应用内使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。 有关详细信息， [请参阅图标](../../concepts/build-and-test/apps-package.md#app-icons)。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -407,17 +407,17 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="accentcolor"></a>accentColor
 
-**可选** — HTML 十六进制颜色代码
+**可选**—HTML 十六进制颜色代码
 
-要与 和 结合使用用作大纲图标背景的颜色。
+要用作边框图标背景的颜色。
 
 该值必须是以"#"开头的有效 HTML 颜色代码，例如 `#4464ee` 。
 
 ## <a name="configurabletabs"></a>configurableTabs
 
-**可选** — 数组
+**可选**—array
 
-当你的应用体验具有团队频道选项卡体验时，需要在添加前进行额外配置。 可配置的选项卡仅在团队范围内受支持，你可以多次配置相同的选项卡。 但是，只能在清单中定义它一次。
+当你的应用体验具有团队频道选项卡体验时，需要在添加前进行额外配置。 可配置的选项卡仅在 和 作用域 `team` 中 `groupchat` 受支持，你可以多次配置相同的选项卡。 但是，只能在清单中定义它一次。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -430,7 +430,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="statictabs"></a>staticTabs
 
-**可选** — 数组
+**可选**—array
 
 定义一组默认情况下可以"固定"的选项卡，而无需用户手动添加它们。 范围中声明 `personal` 的静态选项卡始终固定到应用的个人体验。 作用域中声明的 `team` 静态选项卡当前不受支持。
 
@@ -452,30 +452,30 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="bots"></a>bots
 
-**可选** — 数组
+**可选**—array
 
 定义自动程序解决方案以及默认命令属性等可选信息。
 
-该项目是一个 (，当前每个应用仅允许一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
+该项目是一个数组 (，当前每个应用最多只能有一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`botId`|string|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这可能与整个应用 [ID 相同](#id)。|
+|`botId`|string|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 ID 可以与整个应用 ID [相同](#id)。|
 |`scopes`|枚举数组|3|✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
-|`needsChannelSelector`|boolean|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 默认值： **`false`**|
+|`needsChannelSelector`|boolean|||描述机器人是否使用用户提示将机器人添加到特定频道。 默认值： **`false`**|
 |`isNotificationOnly`|boolean|||指示自动程序是否为单向、仅通知的自动程序，而不是对话自动程序。 默认值： **`false`**|
 |`supportsFiles`|boolean|||指示自动程序是否支持在个人聊天中上传/下载文件。 默认值： **`false`**|
-|`supportsCalling`|boolean|||指示机器人支持音频呼叫位置的值。 **重要** 提示：此属性当前为实验属性。 实验属性可能不完整，并且可能在完全可用之前发生更改。  它仅供测试和探索之用，不得在生产应用程序中使用。 默认值： **`false`**|
-|`supportsVideo`|boolean|||指示机器人支持视频呼叫位置的值。 **重要** 提示：此属性当前为实验属性。 实验属性可能不完整，并且可能在完全可用之前发生更改。  它仅供测试和探索之用，不得在生产应用程序中使用。 默认值： **`false`**|
+|`supportsCalling`|boolean|||指示机器人支持音频呼叫位置的值。 **重要** 提示：此属性当前为实验属性。 实验属性可能不完整，并且可能在完全可用之前发生更改。  该属性仅供测试和探索使用，不得在生产应用程序中使用。 默认值： **`false`**|
+|`supportsVideo`|boolean|||指示机器人支持视频呼叫位置的值。 **重要** 提示：此属性当前为实验属性。 实验属性可能不完整，并且可能在完全可用之前发生更改。  该属性仅供测试和探索使用，不得在生产应用程序中使用。 默认值： **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含 2 个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息 [，](~/bots/how-to/create-a-bot-commands-menu.md) 请参阅自动程序菜单。
+自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含两个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的命令 `object` 列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`items.scopes`|枚举数组|3|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
-|`items.commands`|对象数组|10  |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例， (字符串，128) 。|
+|`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例， (字符串，128) 。|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
 
@@ -486,11 +486,11 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="connectors"></a>连接器
 
-**可选** — 数组
+**可选**—array
 
 `connectors`块为应用Office 365连接器。
 
-对象是一个数组， (类型的所有元素) 1 个元素 `object` 。 只有提供连接器的解决方案才需要此块。
+对象是一个数组， (类型的所有元素) 一个元素 `object` 。 只有提供连接器的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -500,19 +500,19 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="composeextensions"></a>composeExtensions
 
-**可选** — 数组
+**可选**—array
 
 为应用定义消息传递扩展。
 
 > [!NOTE]
 > 2017 年 11 月，功能名称从"撰写扩展"更改为"邮件扩展"，但清单名称保持不变，以便现有扩展继续工作。
 
-项目是一个数组， (类型的所有元素) 1 个元素 `object` 。 只有提供邮件扩展的解决方案才需要此块。
+该项目是一个数组， (类型的所有元素) 一个元素 `object` 。 只有提供邮件扩展的解决方案才需要此块。
 
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`botId`|string|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 ID 相同。|
-|`commands`|对象数组|10  |✔|邮件扩展支持的命令数组。|
+|`botId`|string|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 ID 可以与整个应用 ID 相同。|
+|`commands`|对象数组|10 |✔|邮件扩展支持的命令数组。|
 |`canUpdateConfiguration`|boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值：**False**。|
 |`messageHandlers`|对象数组|5 ||允许满足某些条件时调用应用的处理程序列表。|
 |`messageHandlers.type`|string|||消息处理程序的类型。 必须是 `"link"`。|
@@ -520,7 +520,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-邮件扩展必须声明一个或多个命令。 每个命令都Microsoft Teams UI 入口点的潜在交互。 最多有 10 个命令。
+邮件扩展必须声明一个或多个最多包含 10 个命令的命令。 每个命令都Microsoft Teams UI 入口点的潜在交互。
 
 每个命令项都是具有以下结构的对象：
 
@@ -539,7 +539,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`taskInfo.height`|string|||对话框高度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
 |`taskInfo.url`|string|||初始 Web 视图 URL。|
 |`parameters`|对象数组|5 个项目|✔|命令采用的参数列表。 最小值：1;最大值：5。|
-|`parameters.name`|string|64 个字符|✔|显示在客户端中的参数的名称。 这包括在用户请求中。|
+|`parameters.name`|string|64 个字符|✔|显示在客户端中的参数的名称。 参数名称包含在用户请求中。|
 |`parameters.title`|string|32 个字符|✔|参数的用户友好标题。|
 |`parameters.description`|string|128 个字符||描述此参数用途的用户友好字符串。|
 |`parameters.value`|string|512 个字符||参数的初始值。|
@@ -550,18 +550,18 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="permissions"></a>权限
 
-**可选** — 字符串数组
+**可选**— 字符串数组
 
-一个数组，指定应用请求哪些权限，使最终用户 `string` 知道扩展的执行方式。 以下选项非独占：
+的数组，指定应用请求哪些权限，让最终用户 `string` 知道扩展执行什么操作。 以下选项非独占：
 
 * `identity`&emsp;需要用户标识信息。
 * `messageTeamMembers`&emsp;需要向团队成员发送直接消息的权限。
 
-在应用更新期间更改这些权限，会导致用户在运行更新后的应用后重复同意过程。 有关详细信息 [，请参阅更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) 应用。
+在应用更新期间更改这些权限，会导致用户在运行更新后的应用后重复同意过程。 有关详细信息，请参阅 [更新应用](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)。
 
 ## <a name="devicepermissions"></a>devicePermissions
 
-**可选** — 字符串数组
+**可选**— 字符串数组
 
 在应用请求访问的用户设备上提供本机功能。 选项有：
 
@@ -575,9 +575,9 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **可选**，除非 **有说明** ，否则必选。
 
-应用预期在客户端内加载的网站的有效Teams列表。 域列表可以包含通配符，例如 `*.example.com` ， 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。 如果你的选项卡配置或内容 UI 需要导航到除用于选项卡配置的其他任何其他域，则必须在此处指定该域。
+应用预期在客户端内加载的网站的有效Teams列表。 域列表可以包含通配符，例如 `*.example.com` ， 。 有效域与域的一个段完全匹配;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。 如果你的选项卡配置或内容 UI 导航到除选项卡配置外任何其他域，则必须在此处指定该域。
 
-不需要 **在** 应用中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不得在 `validDomains[]` accounts.google.com。
+**请勿** 在应用中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不得在 `validDomains[]` accounts.google.com。
 
 Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其有效域列表中的"{teamsitedomain}"。
 
@@ -588,9 +588,9 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 
 ## <a name="webapplicationinfo"></a>webApplicationInfo
 
-**可选** — object
+**可选**—object
 
-提供你的Azure Active Directory (AAD) 应用 ID 和 Microsoft Graph 信息，以帮助用户无缝登录你的应用。 如果你的应用在 AAD 中注册，则必须提供应用 ID，以便管理员可以轻松地查看权限，并授予管理员Teams许可。
+提供你的Azure Active Directory (AAD) 应用 ID 和 Microsoft Graph 信息，以帮助用户无缝登录你的应用。 如果你的应用在 AAD 中注册，则必须提供应用 ID。 管理员可以在管理中心内轻松查看权限Teams许可。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -600,7 +600,7 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
-**可选** — 布尔值
+**可选**—boolean
 
 指示在加载应用或选项卡时是否显示加载指示器。 默认为 **false**。
 >[!NOTE]
@@ -609,13 +609,13 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 
 ## <a name="isfullscreen"></a>isFullScreen
 
- **可选** — 布尔值
+ **可选**—boolean
 
 指示在具有或没有选项卡标题栏的情况下呈现个人应用。 默认为 **false**。
 
 ## <a name="activities"></a>activities
 
-**可选** — object
+**可选**—object
 
 定义应用用于发布用户活动源的属性。
 
@@ -718,7 +718,7 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
 * `longDescription`：应用的详细说明。
 * `smallImageUrl`：应用的大纲图标。
 * `largeImageUrl`：应用的颜色图标。
-* `accentColor`：要与 和 结合使用用作大纲图标背景的颜色。
+* `accentColor`：用于边框图标的颜色和背景。
 * `developerUrl`：开发人员网站的 HTTPS URL。
 * `privacyUrl`：开发人员隐私策略的 HTTPS URL。
 * `termsOfUseUrl`：开发人员使用条款的 HTTPS URL。

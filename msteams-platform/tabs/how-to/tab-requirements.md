@@ -6,12 +6,12 @@ keywords: teams 选项卡组频道可配置
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 36d5a6ee785779c8ba186a00ec80519a189ac278e7ec2298bba82fb53f0a848a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726829"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701798"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -53,7 +53,7 @@ Teams选项卡必须遵循以下先决条件：
 * [生成首个邮件扩展](../../get-started/first-message-extension.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)

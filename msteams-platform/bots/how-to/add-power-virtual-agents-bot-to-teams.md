@@ -5,12 +5,12 @@ description: 在Power Virtual Agents平台中集成Teams聊天机器人
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2aa8cc510033768b68cf01cbb5b0327bffe13154
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: ed788fe2acdd2425a435ea7ad608e461c1b4d306a89d7fe3b57eee054b94e69e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196248"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705278"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>添加 Power Virtual Agent 聊天机器人 
 

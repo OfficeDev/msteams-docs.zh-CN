@@ -5,12 +5,12 @@ description: 向自动程序消息添加丰富的格式
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 56a34edee372cc6c5bcc5808015783f04867f141
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: fba55b6b08785d375f80923133d3af70434cbaf57adf8feaf4e9f50f478f5e61
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068984"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705599"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
@@ -80,7 +80,7 @@ Teams markdown 和 XML 或 HTML 格式标记的子集。
 | 超链接                 | ✔ | ✔ | ✔ |
 | 图像链接                | ✔ | ✔ | ✔ |
 
-### <a name="cards"></a>卡
+### <a name="cards"></a>卡片
 
 有关卡支持，请参阅 [卡片格式](~/task-modules-and-cards/cards/cards-format.md)。
 

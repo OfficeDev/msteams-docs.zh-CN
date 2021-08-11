@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: ce4076ff8cb9945f3b7dd1a7e809391292ec314a
-ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
+ms.openlocfilehash: c2fd0a335d992eb026ae1b61c186830d25217d52491c997a9a2baf1dc58152e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53455218"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707607"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 
@@ -138,7 +138,7 @@ AAD 门户提供了一个中央平台，用于注册和配置应用。 你的应
 
 RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到具有以下值的应用清单：
 
-|姓名| 类型 | 说明|
+|名称| 类型 | 说明|
 |---|---|---|
 |`id` |String |AAD 应用 ID。 有关详细信息，请参阅在 [AAD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
 |`resource`|String| 此字段在 RSC 中没有任何操作，但必须添加该字段，并且必须具有值以避免错误响应;任何字符串将执行。|

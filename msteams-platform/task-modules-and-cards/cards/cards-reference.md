@@ -4,12 +4,12 @@ description: 介绍自动程序可用的所有卡片和Teams
 localization_priority: Normal
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: d3b84344eccee7c2595b0e978c72d7e331b198cb
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: 4c386b3e237f89345bf94bc8cfa23d7e46477de21da0e7a99eb63663b19446af
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328070"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705481"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -89,7 +89,7 @@ ms.locfileid: "53328070"
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
 | url | URL | 图像的 HTTPS URL。 |
-| alt | 字符串 | 图像的辅助说明。 |
+| alt | String | 图像的辅助说明。 |
 
 > [!NOTE]
 > 如果卡片包含的图像 URL 在最终图像之前重定向，则不支持图像 URL 中的重定向。 对于在公有云上共享的图像，会出现此情况。
@@ -447,7 +447,7 @@ Office 365连接器卡在连接器Microsoft Teams，包括[ `ActionCard` 操作]
 
 在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。 下表列出了区别：
 
-| Connector | Bot |
+| 连接器 | Bot |
 | --- | --- |
 | 终结点通过 HTTP POST 接收卡有效负载。 | `HttpPOST`该操作将触发 `invoke` 仅向自动程序发送操作 ID 和正文的活动。|
 

@@ -5,16 +5,19 @@ description: 自动程序在Microsoft Teams。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 655684ef4f2a93d3f9c3858e3bf5a84eab4bd43c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 94540e4d9edd3cb41c249563d50780448d4e08dbe285967eaaece715930a29be
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068970"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706227"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
 聊天机器人也称为聊天机器人或对话机器人，它是运行由用户（如客户服务或支持人员）执行的简单且重复的自动化任务的应用。 日常使用中的机器人示例包括提供有关天气信息的机器人、预订预订或提供旅行信息。 机器人交互可以是一个快速的问题和答案，也可以是提供对服务的访问权限的复杂对话。
+
+> [!IMPORTANT]
+> 目前，自动程序在 政府社区云 (GCC) 中可用，但在 doD GCC-High 和国防部 (中) 。
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 

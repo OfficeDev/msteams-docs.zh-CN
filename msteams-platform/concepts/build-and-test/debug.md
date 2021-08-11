@@ -4,18 +4,18 @@ description: 介绍用于测试和调试应用Microsoft Teams选项
 keywords: 团队运行调试应用
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 1f11834ad83e8bea7e4114d25d022df2f62c1700
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5d358e7f37972f1b0954f2c4c5f6a892aeff8d8f4f08b4be22d4ae0215acbebe
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565156"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707314"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>选择用于测试和调试应用Microsoft Teams设置
 
 Microsoft Teams应用包含一个或多个功能，并且运行甚至托管它们的方式是不同的。 对于调试，请使用以下方法之一：
 
-* **纯本地**：对于机器人，可以在 Bot 模拟器中测试你的体验。 对于其他内容，可以在浏览器中本地运行，并通过 地址内容 `http://localhost` 。
+* **纯本地**：对于自动程序，你可以测试在自动程序Emulator。 对于其他内容，可以在浏览器中本地运行，并通过 地址内容 `http://localhost` 。
 * **本地托管在 Teams** 中：这包括在隧道软件中本地运行应用，并创建要上传到 [](~/concepts/build-and-test/apps-package.md)Teams。 [](~/concepts/deploy-and-publish/apps-upload.md) 这让你可以轻松地在客户端中运行和调试Teams应用程序。
 * **云托管在 Teams** 中：这真正模拟了对 Teams 应用的生产级别支持。 它涉及将解决方案上载到您所选择的可从外部访问的服务器或云提供商，以及创建要[](~/concepts/build-and-test/apps-package.md)上传到 Teams。 [](~/concepts/deploy-and-publish/apps-upload.md)
 
@@ -29,12 +29,12 @@ Microsoft Teams应用包含一个或多个功能，并且运行甚至托管它�
 ## <a name="purely-local"></a>纯本地
 
 > [!NOTE]
-> 在本地运行自动程序不会授予你访问Teams或特定于Teams自动程序功能（如名单呼叫和其他特定于频道的功能）的访问权限。 此外，Bot Emulator 中的自动程序框架允许某些功能，这些功能在自动程序仿真器中运行时Microsoft Teams。
+> 在本地运行自动程序不会授予你访问Teams或特定于Teams自动程序功能（如名单呼叫和其他特定于频道的功能）的访问权限。 此外，Bot 框架还允许 Bot Emulator某些功能在自动程序Microsoft Teams。
 
-机器人可以在自动程序仿真器中运行。 这使你能够测试机器人的一些核心逻辑、查看消息的粗略布局和执行简单测试。 步骤如下：
+自动程序可以在自动程序Emulator。 这使你能够测试机器人的一些核心逻辑、查看消息的粗略布局和执行简单测试。 步骤如下：
 
 1. 在本地运行代码。
-2. 启动自动程序仿真器并设置 URL：
+2. 启动自动程序Emulator并设置 URL：
    * Node.js： `http://localhost:3978/api/messages`
    * .NET/C#： `http://localhost:3979/api/messages`
 3. 将 Microsoft 应用 ID 和 Microsoft 应用密码留空，以匹配默认环境变量。

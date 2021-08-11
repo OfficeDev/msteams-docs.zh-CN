@@ -5,12 +5,12 @@ description: 快速创建显示"Hello，World！"的 Microsoft Teams 应用。 m
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: a749d70875948d606f42688fea74c1e0bf79817e
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: eb3f5c66a8e7c6f19c96d192fb8b84124b6203d47d54f161633dd12969adbb17
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428735"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707139"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>使用 Blazor 生成Microsoft Teams应用程序
 
@@ -41,7 +41,7 @@ ms.locfileid: "53428735"
 
 1. 输入应用程序名称和公司名称。
 
-1. 选择“**创建**”。  应用程序名称和公司名称将显示给最终用户。 将在数秒钟内创建你的 Teams 应用。  创建项目后，使用 M365 设置单一登录：
+1. 选择 **创建**。  应用程序名称和公司名称将显示给最终用户。 将在数秒钟内创建你的 Teams 应用。  创建项目后，使用 M365 设置单一登录：
 
    1. 选择 **Project**  >  **TeamsFx**  >  **配置 SSO..."。**
    1. 系统提示时，登录到 M365 管理员帐户。

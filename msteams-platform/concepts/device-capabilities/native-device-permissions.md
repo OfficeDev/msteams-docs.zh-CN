@@ -4,12 +4,12 @@ keywords: teams 应用功能权限
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 420b874770a4ad506dbedd575600f333a51ad5c0
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: a8c7e2f198a13823aaa44034e11f4bb9b1d3bb0957d9a838a675a05fbfc83705
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726948"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702815"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 

@@ -6,12 +6,12 @@ keywords: teams 选项卡组通道可配置静态
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d1a0f6dd3593209f94966140ea94b33ac0c8d10
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: f6f673420de73d786ddee95b4da7870750f3e6851a80f6ad71b1e606d650ba60
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726871"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708306"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>为选项卡创建内容页
 
@@ -109,7 +109,7 @@ ms.locfileid: "53726871"
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)

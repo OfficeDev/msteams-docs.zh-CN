@@ -4,16 +4,16 @@ description: 如何在网站上添加"共享Teams嵌入按钮
 ms.topic: reference
 localization_priority: Normal
 keywords: 共享Teams到共享Teams
-ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075645"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707711"
 ---
 # <a name="create-share-to-teams-button"></a>创建“共享到 Teams”按钮
 
-第三方网站可以使用启动器脚本将"共享到Teams按钮嵌入到其网页上。 选择后，它将在弹出窗口中Teams"共享到共享"体验。 这允许你直接将链接共享给任何人员或Microsoft Teams频道，而无需切换上下文。 本文档指导您如何为网站创建和嵌入"共享到 Teams"按钮、制作网站预览以及扩展适用于教育的 share-to-Teams 按钮。
+第三方网站可以使用启动器脚本将"共享到Teams按钮嵌入到其网页上。 选择后，它将在弹出窗口中Teams"共享到共享"体验。 这允许你直接将链接共享给任何人员或Microsoft Teams频道，而无需切换上下文。 本文档指导您如何为网站创建和嵌入"共享到 Teams"按钮、制作网站预览以及扩展"共享到Teams 教育版"。
 
 > [!NOTE]
 > * 仅支持桌面版 Edge 和 Chrome。
@@ -84,7 +84,7 @@ ms.locfileid: "52075645"
 
 您可以使用 html 默认版本或 Open Graph版本。
 
-## <a name="share-to-teams-for-education"></a>共享到 Teams 教育
+## <a name="share-to-teams-for-education"></a>共享到Teams 教育版
 
 对于使用"共享到Teams"按钮的教师，还有一个附加选项 `Create an Assignment` 。 这使您能够基于共享链接在所选团队中快速创建工作分配。 下图显示了适用于教育的Teams共享： 
 

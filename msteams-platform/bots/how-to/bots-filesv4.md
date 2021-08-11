@@ -5,12 +5,12 @@ keywords: teams 自动程序文件发送接收
 ms.date: 05/20/2019
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 7d5ea3434b10d60e20574ca6d1935943c687f4d7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f6d738bfe3456ad9434512fd84d7e65d6062e57076656a57592cdf6a3f23790e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020938"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708101"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>通过自动程序发送和接收文件
 

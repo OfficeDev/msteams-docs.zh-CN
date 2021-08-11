@@ -6,12 +6,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: c114eba3e022f153ccaa9e9031086989eca5d019bd472fb0b9f5da583465deb9
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646500"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707487"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
@@ -208,6 +208,13 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column-end:::
 :::row-end:::
+
+## <a name="integrate-teams-in-your-external-app"></a>将Teams集成到外部应用中
+此页面重点介绍通过构建应用将你自己的Microsoft Teams嵌入Teams体验。 如果你想要反向此模型，并将Teams或其他通信功能集成到你自己的外部应用体验中，请参阅[Azure Communication Services。](/azure/communication-services/overview) Azure Communication Services 是基于云的服务，具有 REST API 和客户端库 SDK，可帮助你将通信集成到你自己的自定义应用程序中。 借助 UI 库，Teams嵌入常规React样式的 Web 组件，以调用[和聊天](https://azure.github.io/communication-ui-library/)。
+
+Azure Communication Services 应用程序可以使用公共预览功能与[Teams，并](/azure/communication-services/concepts/teams-interop)启用自定义应用程序以匿名Teams会议。 例如，您可以将视频呼叫集成到移动银行应用程序中，并允许最终用户使用 Microsoft Teams 与银行员工进行虚拟Microsoft Teams。 
+
+还可以集成Microsoft 365标识，以构建代表用户嵌入视频和 PSTN 呼叫Teams应用程序。 如果你过去使用过[Skype for Business](/skype-sdk/appsdk/skypeappsdk) SDK，建议将这些功能作为 Azure Communication Services 的一部分作为替代。
 
 ## <a name="see-also"></a>另请参阅
 

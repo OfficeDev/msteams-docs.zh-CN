@@ -3,12 +3,12 @@ title: 会议应用可扩展性
 author: surbhigupta
 description: 了解会议应用程序扩展性
 ms.topic: conceptual
-ms.openlocfilehash: 01f1d7ce6675e65b9310eab7b04fd83a129f28cb
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 44c7397d94d98af5cbc9df4f291bd7cc037b5df832715dcaa943edee543f3b09
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726878"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702241"
 ---
 # <a name="meeting-app-extensibility"></a>会议应用可扩展性
 
@@ -171,6 +171,9 @@ Teams应用程序扩展性基于以下概念：
     > [!NOTE]
     > 你的Teams用户可以在主持与其他组织的会议或聊天时添加应用。 当用户加入由其他组织托管的会议或聊天时，用户可以使用由外部用户共享的应用。 托管用户组织的数据策略以及该用户组织共享的第三方应用的数据共享做法将生效。
 
+    > [!IMPORTANT]
+    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开适用于用户的第三方GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+
 * **匿名**：匿名用户没有 AAD 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会在会议中预测。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
 
     > [!NOTE]
@@ -193,7 +196,7 @@ Teams应用程序扩展性基于以下概念：
 * [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [Teams 会议中应用的先决条件和 API 参考](create-apps-for-teams-meetings.md)

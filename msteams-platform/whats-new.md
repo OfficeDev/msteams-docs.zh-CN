@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams 新增功能
-ms.openlocfilehash: 00b100ad634c1155446ab0b908c13b6b6eb3038c
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: e2ab4728b765cf93f069f9a26679e5ea641a8ecafe0819666a0abacc1714572d
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428707"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706887"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **Date** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
+|08/04/2021| 选项卡将不再具有围绕其体验的边距。  | [删除制表位边距](resources/removing-tab-margins.md) |
 |07/08/2021|移动版提供会议应用扩展性。 移动客户端在会议期间支持应用。 |[会议应用可扩展性](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|集成人员选取器功能。|[集成人员选取器功能](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| 引入了发送主动邮件的分步指南。 | [发送主动邮件的分步指南](sbs-send-proactive.yml) |
@@ -44,7 +45,6 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |04/29/2021 | 最新卡片。 | [最新卡片](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
 |04/08/2021| 应用自定义功能。|[设计团队应用概述](concepts/design/enable-app-customization.md)[、App studio 概述](concepts/build-and-test/app-studio-overview.md#connectors)和[清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意：更新到 Bot Framework SDK 版本 4.10 或以上版本，因为我们已开始弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 和 的过程。 | [团队/聊天成员的机器人 API 更改](resources/team-chat-member-api-changes.md) |
-|03/05/2021|注意：选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |
 |03/05/2021|默认安装范围和组功能。| [默认安装范围和组功能](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|对个人应用选项卡重新排序。|[对个人应用中的聊天选项卡重新排序](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
 |03/04/2021|自适应卡片中的信息屏蔽。| [自适应卡片中的信息屏蔽](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
@@ -176,7 +176,6 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |05/25/2021| 自定义一起模式场景功能将参与者组合到单个虚拟场景，将其视频流放在预定席位中。 | [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|自动程序可以使用 RSC (特定同意接收所有) 。|[使用 RSC、机器人](~/bots/how-to/conversations/channel-messages-with-rsc.md)对话[概述](~/bots/how-to/conversations/conversation-basics.md)、[频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)以及[开发人员预览](~/resources/schema/manifest-schema-dev-preview.md)清单架构接收所有消息 |
 |05/21/2021|选项卡链接取消展开和阶段视图|[选项卡链接取消展开和阶段视图](tabs/tabs-link-unfurling.md) |
-|03/05/2021| 选项卡将不再具有围绕其体验的边距。 选项卡开发人员应查看和更新其应用。 | [删除制表位边距](resources/removing-tab-margins.md) |
 
 有关详细信息，请参阅[公共开发人员预览版Teams。](~/resources/dev-preview/developer-preview-intro.md)
 

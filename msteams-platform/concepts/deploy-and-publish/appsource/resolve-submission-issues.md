@@ -4,12 +4,12 @@ description: 了解如何排查并更正你的应用商店Microsoft Teams问题�
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 23c751d7a9fec96de128521f660213a559534283
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a18aff23b8523bc91485835c991cc6608deb8eae93ce175ff3403e699dc6c5e5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565107"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705557"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>解决应用商店提交Microsoft Teams时的问题
 
@@ -83,7 +83,7 @@ Microsoft 提供的验证服务可帮助开发人员将应用发布到应用商�
 
 <summary><b>我的应用已进行 beta 测试。我能否提交我的应用以节省发布过程的时间？</b></summary>
 
-否。 Microsoft 仅验证生产就绪型应用。
+不是。 Microsoft 仅验证生产就绪型应用。
 
 <br>
 
@@ -93,7 +93,7 @@ Microsoft 提供的验证服务可帮助开发人员将应用发布到应用商�
 
 <summary><b>在合作伙伴中心 teamsubm@microsoft.com 提交我的应用之前，我可能需要联系客户吗？</b></summary>
 
-否。 在合作伙伴中心首次提交应用之前，Microsoft 不会开始验证你的应用。
+不是。 在合作伙伴中心首次提交应用之前，Microsoft 不会开始验证你的应用。
 
 <br>
 

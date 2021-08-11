@@ -5,12 +5,12 @@ description: 如何更新和删除从自动程序发送Microsoft Teams消息
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 90dc50fd2ec153813457f199ac029e17a0157502
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 8f1738894aa5580f62b91fa44edf06d54fcc99f7786bae33ffc8cc7b95669fcc
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101532"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706090"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>更新和删除从自动程序发送的消息
 

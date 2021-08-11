@@ -4,12 +4,12 @@ description: 描述自动Microsoft Teams中的卡片操作以及如何在机器�
 localization_priority: Normal
 ms.topic: conceptual
 keywords: teams 机器人卡片操作
-ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: b7c6641078d835ec92975924aaf64da1573757211413da99184bd86c9465b53e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254200"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705326"
 ---
 # <a name="card-actions"></a>卡片操作
 

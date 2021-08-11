@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: teams 清单架构开发者预览版
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: c2009038341a22664b0f055fa9756a9d1eba87b9
-ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
+ms.openlocfilehash: 1c7d4cdc8ab9fca674cae14b6e1563f1561b219e53f23b621fc19ada830732e3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2021
-ms.locfileid: "52915088"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702337"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>开发人员预览清单架构Microsoft Teams
 
@@ -267,7 +267,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 ## <a name="developer"></a>developer
 
-**Required**
+**必需**
 
 指定有关你的公司的信息。 对于提交到 AppSource (之前Office应用商店) ，这些值必须与 AppSource 条目中的信息匹配。
 
@@ -300,7 +300,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 ## <a name="name"></a>name
 
-**Required**
+**必需**
 
 应用体验的名称，在应用体验中向Teams显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值不应相同。
 
@@ -311,7 +311,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 ## <a name="description"></a>说明
 
-**Required**
+**必需**
 
 向用户描述你的应用。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
@@ -324,7 +324,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 ## <a name="icons"></a>图标
 
-**Required**
+**必需**
 
 在应用内使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。
 
@@ -400,7 +400,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`items.scopes`|枚举数组|3|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
-|`items.commands`|对象数组|10  |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称 (字符串，32) 。<br>`description`：命令语法及其参数的简单说明或示例， (字符串，128) 。|
+|`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称 (字符串，32) 。<br>`description`：命令语法及其参数的简单说明或示例， (字符串，128) 。|
 
 ## <a name="connectors"></a>连接器
 
@@ -431,7 +431,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |---|---|---|---|---|
 |`botId`|String|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 [ID 相同](#id)。|
 |`canUpdateConfiguration`|Boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
-|`commands`|对象数组|10  |✔|邮件扩展支持的命令数组|
+|`commands`|对象数组|10 |✔|邮件扩展支持的命令数组|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -448,7 +448,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |`initialRun`|Boolean|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
 |`context`|Array of Strings|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||一个布尔值，指示它应动态提取任务模块。|
-|`taskInfo`|对象|||指定在使用消息传递扩展命令时要预加载的任务模块。|
+|`taskInfo`|Object|||指定在使用消息传递扩展命令时要预加载的任务模块。|
 |`taskInfo.title`|String|64||初始对话框标题。|
 |`taskInfo.width`|String|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
 |`taskInfo.height`|String|||对话框高度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
@@ -461,7 +461,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |`parameter.title`|String|32 个字符|✔|参数的用户友好标题。|
 |`parameter.description`|String|128 个字符||描述此参数用途的用户友好字符串。|
 |`parameter.inputType`|String|128 个字符||定义在任务模块上显示的控件的类型 `fetchTask: true` 。 `text` `textarea` `number` `date` `time` 、、、、、、、 `toggle` 之一 `choiceset` 。|
-|`parameter.choices`|对象数组|10  ||的选项 `choiceset` 。 仅在 为 `parameter.inputType` `choiceset` 时使用 。|
+|`parameter.choices`|对象数组|10 ||的选项 `choiceset` 。 仅在 为 `parameter.inputType` `choiceset` 时使用 。|
 |`parameter.choices.title`|String|128||选项的标题。|
 |`parameter.choices.value`|String|512||选项的值。|
 

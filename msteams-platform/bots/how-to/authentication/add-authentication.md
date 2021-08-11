@@ -5,12 +5,12 @@ description: 如何将 OAuth 身份验证添加到自动程序Microsoft Teams。
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 3e36d6166dcf3f835252fb2310b6672cb115d7d4
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 76ea98feb27640ffb7b310ca097e5e7a810ac1aed31b8bf0d8aa2e09d73d341a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069015"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703710"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向自动程序Teams身份验证
 
@@ -87,7 +87,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
 > [!NOTE]
-> Bot Channels Registration 资源将显示 **全局区域** ，即使你选择了美国西部。 这是预期结果。
+> Bot Channels Registration 资源将显示 **全局区域** ，即使你选择了美国西部。 这是正常的。
 
 有关详细信息，请参阅为用户[创建自动程序Teams。](../create-a-bot-for-teams.md)
 
@@ -120,7 +120,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
    1. 在 **"客户端密码**"下 **，&#x2795;"新建客户端密码"。**
    1. 添加描述以从可能需要为此应用创建的其他人（例如，Teams 中的自动程序 *标识应用）标识此Teams。*
    1. 设置 **到期** 到你的选择。
-   1. 选择“**添加**”。
+   1. 选择 **添加**。
    1. 在离开此页面之前， **请记录密码**。 稍后，当你向自动程序注册 Azure  AD 应用程序时，你将使用此值作为客户端密码。
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>配置标识提供程序连接，然后向自动程序注册该连接
@@ -138,7 +138,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 1. 如下所示完成表单：
 
     1. **名称**。 输入连接的名称。 你将在文件的自动程序中使用此 `appsettings.json` 名称。 例如 *BotTeamsAuthADv1*。
-    1. **服务提供程序**。 选择 **Azure Active Directory**。 选择此选项后，将显示特定于 Azure AD 的字段。
+    1. **服务提供程序**。 选择“**Azure Active Directory**”。 选择此选项后，将显示特定于 Azure AD 的字段。
     1. **客户端 ID**。在以上 (中) 为 Azure 标识提供程序应用记录的应用程序客户端标识 ID。
     1. **客户端密码**。 在以上步骤中输入为 Azure 标识提供程序应用记录机密。
     1. **授予类型**。 输入 `authorization_code` 。
@@ -191,7 +191,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 
     ![teams 自动程序身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
-1. 选择 **接受**。
+1. 选择“**接受**”。
 1. 然后，这会将您重定向到" **测试连接成功 \<your-connection-name> "** 页。 如果收到错误，请刷新页面。 下图是一个示例：
 
     ![teams 自动程序应用程序身份验证连接 str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
@@ -310,7 +310,7 @@ OAuth 2.0 是 Azure Active Directory (Azure AD) 和许多其他身份标识提�
 1. 在 **Microsoft 应用密码中** ，从 输入自动程序的应用密码 `appsettings.json` 。
 1. 选择 **"连接"。**
 1. 启动并运行自动程序后，输入任何文本以显示登录卡。
-1. 选择" **登录"** 按钮。
+1. 选择“**登录**”按钮。
 1. 将显示一个弹出对话框以确认打开 **URL。** 这是为了允许自动程序的用户 () 进行身份验证。  
 1. 选择“**确认**”。
 1. 如果系统询问，请选择适用的用户帐户。

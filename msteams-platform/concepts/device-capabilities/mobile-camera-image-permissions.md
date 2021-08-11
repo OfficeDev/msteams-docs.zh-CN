@@ -6,12 +6,12 @@ keywords: 相机图像麦克风功能本机设备权限媒体
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 22d4a791e83cf36f18b75a3846865835b0ee024f
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 41132cacc23628e0d585eaeae634eef263a62030443a362bf38075a2534ab544
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211623"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704961"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能 
 
@@ -80,7 +80,7 @@ ms.locfileid: "53211623"
 
 必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
-|错误代码 |  错误名称     | Condition|
+|错误代码 |  错误名称     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **404** | FILE_NOT_FOUND | 在给定位置找不到指定的文件。|

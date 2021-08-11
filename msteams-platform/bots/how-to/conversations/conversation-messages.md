@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5b23e3b2548e3d0eab98fae73d37316063fe60c1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 49e6af7ef71d0794210e554d8d8b42fe714fbe592d3ca7de43c7996283f54a2c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058598"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707548"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
@@ -250,11 +250,11 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>邮件内容
 
-| Format    | 从用户到机器人 | 从自动程序到用户 | 注释                                                                                   |
+| 格式    | 从用户到机器人 | 从自动程序到用户 | 注释                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
 | 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。 不支持动态 GIF。  |
-| 卡     | ✖                | ✔                | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
+| 卡片     | ✖                | ✔                | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
 | 表情符号    | ✖                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 用于表情符号。 |
 
 您还可以使用 属性向邮件添加 `Notification.Alert` 通知。

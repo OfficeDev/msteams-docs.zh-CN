@@ -4,25 +4,25 @@ description: 使用通用自动程序查看最新视图的示例
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 2027d07961929fb40e7afc3ee268e1267b235a02
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 83cb86bc4b9b8b3a8cfc48cfbb761cf71c8417267731f3cbfc44f077ca5e99b8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088825"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707415"
 ---
 # <a name="up-to-date-cards"></a>最新卡片
 
-现在可以在自适应卡片上将刷新和邮件编辑组合在一起，为用户提供最新Teams。 这样，当服务发生变化时，你可以动态地将用户特定视图更新到其最新状态。 例如，对于项目管理或票证卡，可以更新注释和任务的状态。 在批准的情况下，最新状态会反映出来，同时还提供不同的信息和操作。
+现在可以在自适应卡片上为用户提供最新信息。 将刷新和邮件编辑组合在Teams。 当服务发生变化时，将用户特定视图动态更新到其最新状态。 例如，对于项目管理或票证卡，更新注释和任务状态。 对于审批，最新状态会反映出来，同时还提供不同的信息和操作。
 
 例如，用户可以在资源审批对话中Teams请求。 Alex 创建审批请求并将其分配给 Megan 和 Nestor。 以下是创建审批请求的两个部分：
 
-* 可以使用自适应卡片的 属性利用用户 `refresh` 特定视图。
+* 可以使用自适应卡片的 属性应用用户 `refresh` 特定视图。
 使用用户特定视图一个可以向一组用户显示具有"批准"或"拒绝"按钮的卡片，并且向其他用户显示没有这些按钮的卡片。
 
-* 若要始终更新卡片状态，Teams邮件编辑机制。 例如，每次审批时，自动程序都可以触发对所有用户的邮件编辑。 此自动程序消息编辑会触发所有自动刷新用户的调用请求，自动程序可以使用更新的用户特定 `adaptiveCard/action` 卡片对此进行响应。
+* 若要使卡片状态始终更新，Teams可以使用邮件编辑机制。 例如，对于每次审批，自动程序可以触发对所有用户的邮件编辑。 此自动程序消息编辑会触发所有自动刷新用户的调用请求，自动程序可以使用更新的用户特定 `adaptiveCard/action` 卡片对此进行响应。
 
-有关详细信息，请参阅 [如何执行自动程序消息编辑](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)。
+有关详细信息，请参阅 [如何执行自动程序消息编辑](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)。
 
 ## <a name="approval-base-card"></a>审批基本卡
 
@@ -110,9 +110,9 @@ ms.locfileid: "52088825"
 }
 ```
 
-下面是根据用户参与审批请求而向用户显示的两个角色：
+下面是根据审批请求向用户显示的两个角色：
 
-* 审批基本卡：向以下用户显示：这些用户不是审批者列表的一部分，并且尚未批准或拒绝请求，并且不是自适应卡片 `userIds` JSON 属性中的 `refresh` 列表的一部分。
+* 审批基本卡：向不是审批者列表一部分的用户显示，并且请求尚未获得批准或拒绝，以及自适应卡片 JSON 属性中列表的一 `userIds` `refresh` 部分。
 * 具有" **批准"** 或 **"** 拒绝"按钮的审批卡片：向作为审批者列表的一部分的用户和自适应卡片 JSON 的 属性中的列表 `userIds` `refresh` 显示。
 
 **发送资产审批请求**
@@ -123,8 +123,8 @@ ms.locfileid: "52088825"
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="用户特定视图":::
 
-4. Nestor **选择使用** 进行电源的"批准"按钮 `Action.Execute` 。 机器人获取一 `adaptiveCard/action` 个调用请求，它可以返回自适应卡片作为响应。
-5. 机器人使用更新的卡片触发邮件编辑，其中显示 Nestor 已批准请求，而 Megan 的审批挂起。
+4. Nestor 选择" **批准"** 按钮，该按钮由 支持 `Action.Execute` 。 机器人获取一 `adaptiveCard/action` 个调用请求，它可以返回自适应卡片作为响应。
+5. 机器人使用更新的卡片触发邮件编辑，其中显示 Nestor 已批准请求，而 Megan 的审批等待审批。
 6. 自动程序消息编辑会触发 Megan 的自动刷新，她看到更新的用户特定卡片，其中显示 Nestor 已批准了请求，但还看到"批准"**或"** 拒绝"按钮。 Nestor 的用户 MRI 从步骤 4 和 5 中此自适应 `userIds` 卡片 JSON 的 属性中删除 `refresh` 。 现在，仅针对 Megan 触发自动刷新。
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="最新用户特定视图":::
@@ -258,6 +258,12 @@ ms.locfileid: "52088825"
   ]
 }
 ```
+
+## <a name="code-sample"></a>代码示例
+
+|示例名称 | 说明 | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新的自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 

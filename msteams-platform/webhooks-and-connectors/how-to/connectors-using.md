@@ -5,12 +5,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams o365 连接器
-ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: afef216c7ef6f6813dc1ece807fa917a801687eb060f2711be7df3c2cb42ac12
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179893"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703124"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -251,7 +251,7 @@ ms.locfileid: "53179893"
 
 | 时间（以秒表示）  | 允许的最大请求数  |
 |---|---|
-| 1    | 4   |  
+| 1   | 4   |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |

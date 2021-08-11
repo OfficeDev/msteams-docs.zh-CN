@@ -4,12 +4,12 @@ description: 介绍如何使用客户端 SDK 从Teams调用任务Microsoft Teams
 localization_priority: Normal
 ms.topic: how-to
 keywords: 任务模块团队选项卡客户端 sdk
-ms.openlocfilehash: 8afd2c93261f28aa7ced4c98d29be27dca35f8b1
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 3fe0a20d751b1eb08d70385648be1283a9d9b0c32e5849626df4abd36ba5bdce
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140550"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703578"
 ---
 # <a name="use-task-modules-in-tabs"></a>在选项卡中使用任务模块
 
@@ -135,7 +135,7 @@ function validateForm() {
 
 ## <a name="see-also"></a>另请参阅
 
-[调用和消除任务模块](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+[调用和关闭任务模块](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
 
 ## <a name="next-step"></a>后续步骤
 

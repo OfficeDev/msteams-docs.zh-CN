@@ -5,12 +5,12 @@ description: 了解如何为应用设计任务Teams并获取 Microsoft Teams UI 
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 48e47a6c0bde0f0a3fefb8fcbfb362687ce58947
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: f96684614766f5129bad31dc143b9be83e901ffa82df2f204a20e12fc79e7e49
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629905"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708152"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>为应用程序设计Microsoft Teams模块
 
@@ -23,7 +23,7 @@ ms.locfileid: "52629905"
 可以在自定义 UI 工具包中查找更全面的任务模块设计指南，包括可根据需要获取和修改Microsoft Teams元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="open-a-task-module"></a>打开任务模块
 
@@ -41,27 +41,27 @@ ms.locfileid: "52629905"
 
 它们还可以与自适应 [卡片](../../task-modules-and-cards/cards/design-effective-cards.md) 框架一起生成，该框架可以更简单、更快速地促进常见方案 (如表单) 。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="显示任务模块的 UI 分析的图示。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |1|**应用程序图标**|
-|2|**应用名称**：应用的完整名称。|
+|2|**应用名称**：应用的全名。|
 |3|**标头**：使标题简洁明了。 描述希望用户完成的任务。
 |4 |**关闭按钮**：关闭任务模块。 不在应用内容中应用未保存的更改。|
 |5 |**iframe：** 托管应用内容的响应空间。|
 |6 |**操作 (可选) ：** 与应用内容相关的按钮。|
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="插图显示移动设备上的任务模块的 UI 结构。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |1|**标头**：使标题简洁明了。 描述希望用户完成的任务。
-|2|**应用名称**：应用的完整名称。|
+|2|**应用名称**：应用的全名。|
 |3|**关闭按钮**：关闭任务模块。 不在应用内容中应用未保存的更改。|
 |4 |**webview：** 托管应用内容的响应空间。|
 |5 |**操作 (可选) ：** 与应用内容相关的按钮。|
@@ -82,11 +82,11 @@ ms.locfileid: "52629905"
 
 列表在任务模块中运行得非常好，因为它们易于扫描。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="任务模块中的示例列表。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="移动设备上的任务模块中的示例列表。" border="false":::
 
@@ -96,11 +96,11 @@ ms.locfileid: "52629905"
 
 任务模块是显示具有顺序用户输入和内联验证的表单的一个很好的位置。 可以利用自适应卡片作为嵌入表单元素的一种方式。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="任务模块中的示例窗体。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="移动任务模块中的示例窗体。" border="false":::
 
@@ -110,25 +110,25 @@ ms.locfileid: "52629905"
 
 创建具有一系列任务模块的集中登录或注册流，使用户能够在顺序步骤中轻松移动。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="任务模块中的登录体验示例。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="移动任务模块中的登录体验示例。" border="false":::
 
 ---
 
-### <a name="media"></a>媒体
+### <a name="media"></a>Media
 
 在任务模块中嵌入媒体内容，实现集中的观看体验。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/media.png" alt-text="任务模块中的媒体内容示例。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="移动任务模块中的媒体内容示例。" border="false":::
 
@@ -138,11 +138,11 @@ ms.locfileid: "52629905"
 
 用于欢迎、错误和成功消息。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="任务模块中的空状态示例。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="移动任务模块中的空状态示例。" border="false":::
 
@@ -152,11 +152,11 @@ ms.locfileid: "52629905"
 
 在 iframe 桌面设备或 webview (移动设备中) 库 () 。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="任务模块中的示例图像库。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="移动任务模块中的示例图像库。" border="false":::
 
@@ -166,19 +166,19 @@ ms.locfileid: "52629905"
 
 此示例显示从自适应卡片启动的投票结果。 轮询也可以放置在任务模块内。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="任务模块中的轮询示例。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="移动任务模块中的轮询示例。" border="false":::
 
 ---
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
-使用这些建议创建高质量的应用体验。
+使用上述建议打造优质应用体验。
 
 ### <a name="usability"></a>可用性
 

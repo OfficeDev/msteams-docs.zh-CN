@@ -5,12 +5,12 @@ description: 了解如何设计Microsoft Teams应用。 资源包括Microsoft Te
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f05bf979a5c0f75cfa009bc5b105fa5233447c20c1f98874221ad2b0761690aa
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644873"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705030"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>设计Microsoft Teams应用
 
@@ -133,7 +133,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ## <a name="basic-ui-components"></a>基本 UI 组件
 
-这些是基于 Fluent UI 的核心[](design-teams-app-basic-ui-components.md)元素，可用于从头开始Teams体验。
+根据Fluent UI，这些是你可以从头开始创建Teams体验[](design-teams-app-basic-ui-components.md)的核心元素。
 
 ## <a name="tools-and-samples"></a>工具和示例
 
@@ -169,16 +169,16 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 若要了解更多信息，请尝试以下资源之一：
 
-### <a name="fluent-ui-documentation"></a>Fluent UI 文档
+### <a name="fluent-ui-documentation"></a>FluentUI 文档
 
-获取用于构建用户体验的基本 Fluent UI 组件的代码示例Teams详细信息。
+获取用于生成体验的基本 Fluent UI 组件的代码示例Teams详细信息。
 
 > [!div class="nextstepaction"]
-> [尝试Teams Fluent UI (UI 组件) ](https://fluentsite.z22.web.core.windows.net/)
+> [尝试Teams UI (Fluent UI) ](https://fluentsite.z22.web.core.windows.net/)
 
-### <a name="adaptive-cards-designer"></a>自适应卡片设计器
+### <a name="adaptive-cards-designer"></a>自适应卡设计器
 
 在基于 Web 的工具中设计自适应卡片。
 
 > [!div class="nextstepaction"]
-> [试用自适应卡片设计器](https://adaptivecards.io/designer/)
+> [适用自适应卡设计器](https://adaptivecards.io/designer/)

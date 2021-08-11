@@ -1,50 +1,43 @@
 ---
-title: 删除选项卡页边距Microsoft Teams
+title: 选项卡边距更改
 author: surbhigupta
-description: 介绍删除制表位将如何增强开发人员的体验。
+description: 介绍删除制表位如何增强应用生成体验。
 keywords: 删除边距填充的选项卡
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 4bbf7bce62e24c61d23e7fa90f1ccd3e6c5a3371
-ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
+ms.openlocfilehash: 4ca8356bddc0e578bc58b38112fb1268302a5ad0e84631bf81864c70cffbcb64
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53534598"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704381"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
-本文档介绍删除文档中所有选项卡的边距Microsoft Teams如何在生成应用时增强开发人员的体验。 这是 2021 年 Microsoft Teams中引入的增强功能。
-删除所有选项卡周围的边距将允许开发人员生成看起来更本机的Teams。 这也符合我们的 UI [工具包设计](~/tabs/design/tabs.md)。 大多数应用已看起来更好，没有围绕其体验的边距。 但是，某些选项卡会受此更改的视觉影响，开发人员必须进行必要的更改。
+本文档介绍删除文档中所有选项卡的边距Microsoft Teams增强应用生成体验。 这是 2021 年 Microsoft Teams中引入的增强功能。
+可以通过删除所有选项卡周围的边距Teams看起来更本机的应用。 具有已删除边距的选项卡与Microsoft Teams [UI 工具包设计一致](~/tabs/design/tabs.md)。 大多数应用都体验无边距的增强外观。
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="选项卡上没有边距" border="false":::
 
 > [!NOTE]
-> 此功能不适用于移动客户端，因为移动客户端中查看的选项卡没有边距。 
-
-## <a name="timelines"></a>日程表
-
-* 2021 年 3 月 5 日 - 在 Public 开发者预览版 [中删除边距](~/resources/dev-preview/developer-preview-intro.md)。
-* 2021 年 7 月 31 日 - 将在生产中删除边距。
+> 此功能不适用于移动客户端，因为在移动客户端中查看的选项卡没有边距。 
 
 ## <a name="guidelines"></a>准则
 
-Microsoft Teams选项卡的应用将受此更改的影响。 开发人员必须切换到 [公共开发者预览版，](~/resources/dev-preview/developer-preview-intro.md) 以确定其选项卡会受到哪些影响，并进行必要的更改。
-
-选项卡开发人员不得依赖Teams选项卡周围的边距。 建议开发人员根据需要在选项卡设计周围添加边距。 生产中的应用设计可能看起来有额外的填充，即由Teams提供的边距和选项卡提供的边距。但是，额外的填充只是临时的，将在几周后消失，仅留下应用提供的填充。
+删除选项卡边距会影响Teams选项卡的应用。 在这种情况下，你可以根据需要在选项卡设计周围添加边距。 生产中的应用设计具有额外的填充效果，即由Teams提供的边距和选项卡提供的边距。但是，额外的填充只是临时的，在几周后会消失，仅留下应用提供的填充。
 
 ## <a name="faq"></a>常见问题
 
 **应用部件版式（如标题栏或任务栏）是否适合触摸我们设计的边缘？**
 
-是的，这很好，建议这样做。 这有助于应用感觉本机。
+是的，这没有问题，Teams此类设计。 它帮助应用感觉本机。
 
 **对于文本、徽标和图像等应用内容，触摸设计的左右边缘是否正常？**
 
-否，你必须在所有应用内容的左侧和右侧提供自己的填充或边距，以确保它不会触摸 UI 的边缘。 如果需要，还可以在选项卡顶部添加边距。
+否，必须在所有应用内容的左右两侧提供自己的填充或边距，以确保它不会触摸 UI 的边缘。 如果需要，还可以在选项卡顶部添加边距。
 
-**之前应用的边距Teams的大小？**
+**之前应用的制表位Teams的大小？**
 
 * 左右：20px
 * 顶部：16px
@@ -52,8 +45,8 @@ Microsoft Teams选项卡的应用将受此更改的影响。 开发人员必须�
 
 > [!IMPORTANT]
 > * 删除所有选项卡的边距：个人选项卡、 (组) 聊天选项卡、会议选项卡和频道选项卡。
-> * 无法选择加入或选择退出此更改。 它将应用于所有选项卡。
-> * 此更改可能会影响依赖其 UI Microsoft Teams提供边距的选项卡。
+> * 制表位删除更改适用于所有选项卡。 无法选择加入或选择退出更改。 
+> * 选项卡边距的变化可能会影响依赖标签的选项卡Microsoft Teams UI 周围的边距。
 
 ## <a name="see-also"></a>另请参阅
 

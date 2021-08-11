@@ -5,12 +5,12 @@ description: 了解跨应用程序使用的 UI Teams。
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 6f2bd9cd237751adb15db45bbd6e3cdfea35ce09
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: a23cd05947ac2d9d4e8117420bf2e2c11613e430989613bf2d267e5c892bf39c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328077"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703486"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI Microsoft Teams设计应用
 

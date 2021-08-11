@@ -5,12 +5,12 @@ description: 了解如何开始使用应用Microsoft Teams并设置你的环境�
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254258"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703153"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>先决条件：开始Microsoft Teams开发
 
@@ -30,7 +30,7 @@ ms.locfileid: "53254258"
 
 ## <a name="install-the-teams-toolkit"></a>安装Teams Toolkit
 
-该Teams Toolkit使用工具来为应用预配和部署云资源、发布到 Teams 应用商店等，帮助简化开发过程。 你可以将工具包与 Visual Studio Code、Visual Studio 或作为称为 (的 CLI `teamsfx`) 。
+该Teams Toolkit使用工具来为应用预配和部署云资源、发布到 Teams 应用商店等，帮助简化开发过程。 你可以将工具包与 Visual Studio Code、Visual Studio 或作为称为 (的 CLI `teamsfx`) 。 有关详细信息，请参阅 Teams Toolkit [for Visual Studio Code、Teams Toolkit](../toolkit/visual-studio-code-overview.md) [for Visual Studio 和](../toolkit/visual-studio-overview.md) [Teamsfx CLI 工具](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)。
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 

@@ -5,22 +5,22 @@ description: 了解如何为应用设计活动源Teams并获取 Microsoft Teams 
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 61a2a6da2a5ed0cb3126b9798094b06c575c9b6c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 4a2b5510c2e5d0b26897593bbf0fdc0dc493b46ead3be669ff8b72d7cc3970eb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631251"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705133"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>为应用设计活动源Microsoft Teams通知
 
 活动源是一个图面，用户可在活动源中访问Microsoft Teams。 源将保留过去四周的通知。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="示例显示显示在活动源中的Teams通知。" border="false":::
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="示例显示显示在移动活动源Teams应用程序通知。" border="false":::
 
@@ -53,7 +53,7 @@ ms.locfileid: "52631251"
 
 每个活动都会生成一个系统通知。 显示内容取决于用户在通知设置中配置哪些内容。 用户还可以基于其操作系统选择通知样式。
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="不同操作系统Teams活动卡的变体。" border="false":::
 
@@ -63,7 +63,7 @@ ms.locfileid: "52631251"
 |2|Windows|
 |3|Mac|
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Android 和 iOS Teams活动源卡的变体。" border="false":::
 

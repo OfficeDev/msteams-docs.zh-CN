@@ -1,19 +1,19 @@
 ---
-title: SameSite Cookie 属性
+title: SameSite cookie 属性
 author: laujan
 description: 描述 SameSite Cookie 的属性
 keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 34674ab58cc9808525d315cea3db464ddf11b4f9
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140563"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708334"
 ---
-# <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性 
+# <a name="samesite-cookie-attribute"></a>SameSite cookie 属性 
 
 Cookie 是文本字符串，从网站发送，并且由 Web 浏览器存储在计算机上。 它们用于身份验证和个性化。 例如，Cookie 用于调用状态信息、保留用户设置、记录浏览活动以及显示相关广告。 Cookie 始终链接到特定域，并且由各方安装。 
 
@@ -89,6 +89,6 @@ Android WebView 是允许 Android 应用显示 Web 内容的 Chrome 系统组件
 * [SameSite 示例](https://github.com/GoogleChromeLabs/samesite-examples)
 * [SameSite Cookie 食谱](https://web.dev/samesite-cookie-recipes/)
 * [已知不兼容的客户端]( https://www.chromium.org/updates/same-site/incompatible-clients)
-* [开发人员：为新的 SameSite=None 做好准备;安全 Cookie 设置](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-* [即将在网站和网站 ASP.NET ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [开发人员：为新的 SameSite=None 做准备；安全 Cookie 设置](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [ASP.NET 和 ASP.NET Core 中即将发生的 SameSite Cookie 更改](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [HTTP Cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies)

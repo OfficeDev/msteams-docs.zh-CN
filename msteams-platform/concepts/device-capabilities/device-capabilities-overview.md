@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条形码条形码扫描扫描仪位置映射功能本机设备权限
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: e1ee7f81c5280baafb1325a5c6537f9fa00f53ad
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 90874dd1bfe7142e48e44a613cbe91d95b77d98b504dbbda47fd9c0e8678f937
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726934"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706359"
 ---
 # <a name="device-capabilities"></a>设备功能
 

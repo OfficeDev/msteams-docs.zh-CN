@@ -1,17 +1,17 @@
 ---
-title: 调用和消除任务模块
+title: 调用和关闭任务模块
 description: 调用和消除任务模块。
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: a23d5cee3f13967772a4b58ed973bf08906e36a6
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 88544199007b92b2f29d99153cde7bca760a44f3c92c7ce710cdd8db4ebff986
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140767"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706640"
 ---
-# <a name="invoke-and-dismiss-task-modules"></a>调用和消除任务模块
+# <a name="invoke-and-dismiss-task-modules"></a>调用和关闭任务模块
 
 可以从选项卡、自动程序或深层链接调用任务模块。 响应可以是 HTML、JavaScript 或自适应卡片。 在如何调用任务模块以及如何处理用户交互的响应方面，存在很多灵活性。 下表总结了此操作的工作原理：
 

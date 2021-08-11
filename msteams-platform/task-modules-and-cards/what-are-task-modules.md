@@ -5,12 +5,12 @@ description: 添加模式弹出窗口体验，以从你的应用收集信息或�
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 257ca54ab53d310116cc301dded01a7582c11532
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 3b0e639acc8901a3637189e435fcfc159e992ae3a674a437733474087103193c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140535"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707680"
 ---
 # <a name="task-modules"></a>任务模块
 
@@ -52,9 +52,9 @@ ms.locfileid: "53140535"
 
 ## <a name="see-also"></a>另请参阅
 
-[卡](~/task-modules-and-cards/what-are-cards.md)
+[卡片](~/task-modules-and-cards/what-are-cards.md)
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [调用和消除任务模块](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+> [调用和关闭任务模块](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

@@ -5,12 +5,12 @@ description: 在规划Microsoft Teams应用时，应首先了解应用尝试解�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 918f9f906136d4acd466ce54922588ce34a7e4ef
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 5171ce800c09c31486cfddcffcca7069ed81f0bf8d913876acaaaef4144d7bf7
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994096"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703171"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
@@ -82,6 +82,7 @@ Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../
 * [选择如何发布应用程序](../deploy-and-publish/apps-publish-overview.md)
 * [设计选项卡](../../tabs/design/tabs.md)
 * [设计机器人](../../bots/design/bots.md)
+* [生成首个 Microsoft Teams 应用](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>后续步骤
 

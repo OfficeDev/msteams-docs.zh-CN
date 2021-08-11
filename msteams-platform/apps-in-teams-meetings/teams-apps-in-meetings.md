@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 0ba475e852b8dc673d33ac818077b3b0951ac5f9
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: f86e6fe359b5c3cdf76372e82a4faa0403d529bfd94d473e7f924e449826aa29
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068571"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702136"
 ---
 # <a name="apps-for-teams-meetings"></a>会议Teams应用程序
 
@@ -36,7 +36,7 @@ ms.locfileid: "53068571"
 ## <a name="see-also"></a>另请参阅
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [机器人](../bots/what-are-bots.md)
+* [Bot](../bots/what-are-bots.md)
 * [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Teams 会议中应用的先决条件和 API 参考](create-apps-for-teams-meetings.md)

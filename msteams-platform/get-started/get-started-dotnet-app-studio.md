@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: f63e729400fa74f1675faddbe0b5f8fa101c8824
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 72cbaadbd3e641b9f142cec51b4d9fd9ef170f727c87ed97c84e392943b84af3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254333"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707325"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>使用 C 生成Teams应用#
 
@@ -106,7 +106,7 @@ ngrok http 44327 -host-header=localhost:44327
 
 **验证响应**
 
-1. 打开浏览器并转到 `https://d0ac14a5.ngrok.io/hello` 。 这将加载应用的 Hello 页面。
+1. 打开浏览器并转到 `https://d0ac14a5.ngrok.io/hello`。 这将加载应用的 Hello 页面。
 1. 使用控制台会话中显示的转发地址，而不是步骤 1 中提到的 `ngrok` URL。
     > [!NOTE]
     > 如果在生成和运行步骤中使用不同的 [端口，请确保](#build-and-run-the-sample) 使用相同的端口号来设置 `ngrok` 隧道。

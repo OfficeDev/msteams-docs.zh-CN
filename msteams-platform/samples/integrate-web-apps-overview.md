@@ -4,17 +4,17 @@ author: Rajeshwari-v
 description: 将 Web 应用程序和设备功能与应用集成Microsoft Teams概述。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5136c598a3640b5cce92969ea3468c42a7a801db
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 125139abceb01218766dba1cd8d6c95850abd1272583e37e148aabebe68b778a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630444"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707300"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
 通过将现有 Web 应用程序的功能集成到新平台，可以提供丰富的Microsoft Teams体验。 确保遵循[Teams准则](~/concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。
-本文档概述了将 Web 应用程序与 Teams 集成的先决条件、用于创建 Power 应用、Power Virtual Agents、虚拟助手、应用模板、Shift 连接器、将 LmS、为您的网站创建"共享到 Teams"按钮、在 SharePoint 中添加 Microsoft Teams 选项卡、创建深层链接以及集成设备功能的先决条件。
+本文档概述了将 Web 应用程序与 Teams 集成的先决条件、用于创建 Power 应用、Power Virtual Agents、虚拟助理、应用模板、Shift 连接器、用户 LMS、为网站创建"共享到 Teams"按钮、在 SharePoint 中添加 Microsoft Teams 选项卡、创建深层链接以及集成设备功能的先决条件。
 
 ## <a name="prerequisites"></a>先决条件   
 
@@ -47,7 +47,7 @@ Power Virtual Agent 是无代码、引导的图形界面解决方案。 它基�
 
 ### <a name="create-virtual-assistant"></a>创建虚拟助手
 
-虚拟助理是一个 Microsoft 开放源代码模板，它使您能够创建可靠的对话解决方案，同时保持对用户体验、组织品牌和必要数据的完全控制。 
+虚拟助理是一个 Microsoft 开源模板，它使您能够创建可靠的对话解决方案，同时保持对用户体验、组织品牌和必要数据的完全控制。 
 
 ## <a name="app-templates"></a>应用模板
 
@@ -59,7 +59,7 @@ Teams轮班工作组管理连接器是生产就绪型、开放源代码和社区
 
 ## <a name="install-moodle-lms"></a>安装 Moodle LMS
 
-在 LMS 中，一个受欢迎的开放源代码 (系统) 。 现在，它与 Microsoft Teams。 此集成可帮助教师和教师协作处理一些与开发方案课程有关的问题，提出有关成绩和作业的问题，并直接在 Teams。
+在 LMS Learning，一 (开放源代码) 。 现在，它与 Microsoft Teams。 此集成可帮助教师和教师协作处理一些与开发方案课程有关的问题，提出有关成绩和作业的问题，并直接在 Teams。
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>为网站创建“共享到 Teams”按钮
 

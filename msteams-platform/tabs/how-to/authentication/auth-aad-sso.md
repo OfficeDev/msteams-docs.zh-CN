@@ -4,12 +4,12 @@ description: '介绍 SSO (单一) '
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 身份验证 SSO AAD 单一登录 api
-ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: f51f34f103682207551d1b53d47a763f7c3b464085b6806c1241c1e14636bc06
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049034"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701892"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>单一登录 (SSO) 选项卡支持
 
@@ -36,7 +36,7 @@ ms.locfileid: "53049034"
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. 在选项卡中，对 进行 JavaScript 调用 `getAuthToken()` 。 这将Teams获取选项卡应用程序的身份验证令牌。
+1. 在选项卡中，对 `getAuthToken()` 进行 JavaScript 调用。 这将Teams获取选项卡应用程序的身份验证令牌。
 2. 如果这是当前用户第一次使用你的选项卡应用程序，则当需要同意或处理双重身份验证等逐步身份验证时，会提示你同意。
 3. Teams从当前用户的 AAD Azure Active Directory (终结点) 选项卡应用程序令牌。
 4. AAD 将选项卡应用程序令牌发送到Teams应用程序。
@@ -44,7 +44,8 @@ ms.locfileid: "53049034"
 6. 令牌使用 JavaScript 在选项卡应用程序中进行分析，以提取所需信息，如用户的电子邮件地址。
 
 > [!NOTE]
-> 仅在同意一组有限的用户级 API（即电子邮件、配置文件、offline_access `getAuthToken()` OpenId）时有效。 它不能用于进一步Graph范围，如 `User.Read` 或 `Mail.Read` 。 有关建议的解决方法，请参阅[其他Graph范围](#apps-that-require-additional-graph-scopes)。
+> 仅在同意一组有限的用户级 API（即电子邮件、配置文件、offline_access `getAuthToken()` OpenId）时有效。 它不能用于进一步Graph范围，如 `User.Read` 或 `Mail.Read` 。 有关建议的解决方法，请参阅使用[权限获取Graph令牌](#get-an-access-token-with-graph-permissions)。
+
 
 SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modules.md) Web 内容的任务模块。
 
@@ -64,7 +65,7 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
 > [!NOTE]
 > 您必须了解一些重要的限制：
 >
-> * 仅支持用户Graph API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果必须有权访问其他作用域，Graph作用域，请参阅 `User.Read` `Mail.Read` 建议的[解决方法](#apps-that-require-additional-graph-scopes)。
+> * 仅支持用户Graph API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果必须有权访问诸如 或 Graph 等作用域，请参阅获取具有 Graph `User.Read` `Mail.Read` [权限的访问令牌](#get-an-access-token-with-graph-permissions)。
 > * 应用程序的域名与为 AAD 应用程序注册的域名相同，这一点很重要。
 > * 目前不支持每个应用多个域。
 
@@ -84,10 +85,10 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
     > 如果要使用自动程序和选项卡生成应用，请输入"应用程序 ID URI"作为 `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。
 
 1. 选择 **"设置**"链接以生成格式为 的应用程序 ID URI。 `api://{AppID}` 在双正斜杠和 GUID 之间插入完全限定域名，末尾附加一个正斜杠"/"。 整个 ID 的形式必须为 `api://fully-qualified-domain-name.com/{AppID}` 。 1。例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` ， 。 完全限定的域名是提供应用时可读的域名。 如果使用的是隧道服务（如 ngrok），则必须在 ngrok 子域发生更改时更新此值。
-1. 选择 **"添加范围"。** 在打开的面板中，输入 **access_as_user** 作为范围 **名称**。
+1. 选择“**添加作用域**”。 在打开的面板中，输入 **access_as_user** 作为范围 **名称**。
 1. 在 **"Who同意？"** 框中，输入 **"管理员和用户"。**
 1. 在框中输入详细信息，以使用适用于作用域的值配置管理员和用户同意 `access_as_user` 提示：
-    * **管理员同意标题** Teams用户可以访问用户配置文件。
+    * **管理员同意标题:** Teams 可以访问用户的配置文件。
     * **管理员同意** 说明：Teams当前用户调用应用的 Web API。
     * **用户同意标题**：Teams可以访问你的个人资料并代表你提出请求。
     * **用户同意Teams：** 用户可以使用你拥有的相同权限调用此应用的 API。
@@ -98,7 +99,7 @@ SSO API 还适用于 [嵌入](../../../task-modules-and-cards/what-are-task-modu
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`Teams Web 应用程序。
 1. 导航到 **"API 权限"。** 选择 **"添加**  >  **Microsoft Graph** 委派权限"，然后从 API 添加以下  >  Graph权限：
     * 默认情况下启用 User.Read
-    * email
+    * 电子邮件
     * offline_access
     * OpenId
     * 个人资料
@@ -166,19 +167,17 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ## <a name="code-sample"></a>代码示例
 
-|**示例名称**|**描述**|**C#**|**Node.js**|
+|**示例名称**|**说明**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
 | 选项卡 SSO |Microsoft Teams Azure AD SSO 的选项卡示例应用| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[查看](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>已知限制
 
-### <a name="apps-that-require-additional-graph-scopes"></a>需要其他作用域Graph应用
+### <a name="get-an-access-token-with-graph-permissions"></a>获取具有权限Graph令牌
 
-我们的 SSO 当前实现仅授予用户级别权限（即电子邮件、配置文件、offline_access、OpenId）的许可，而不允许授予其他 API（如 User.Read 或 Mail.Read）的许可。 如果你的应用需要进一步Graph范围，下一部分将提供一些启用的解决方法。
+我们的 SSO 当前实现仅授予用户级别权限的许可，这些权限不能用于进行Graph调用。 若要获取执行 Graph 调用 (所需的) 作用域的权限，SSO 解决方案必须实现自定义 Web 服务，以交换从 Teams JavaScript SDK 获取的令牌，以交换包含所需范围的令牌。 这是使用 AAD 的代表 [流完成的](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)。
 
 #### <a name="tenant-admin-consent"></a>租户管理员同意
-
-最简单的方法是让租户管理员代表组织预先同意。 这意味着用户不需要同意这些作用域，然后可以使用 AAD 的代表流自由交换令牌 [服务器端](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)。 此解决方法对于内部业务线应用程序是可接受的，但不足以供无法依赖租户管理员审批的第三方开发人员使用。
 
 代表组织作为租户管理员同意的一种简单方法就是引用 `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>` 。
 

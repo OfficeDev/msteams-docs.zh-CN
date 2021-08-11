@@ -5,12 +5,12 @@ description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c346d7b7a1c720e651a847fb8a650fc549689654
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: e34d89b0ea8aaeb533899309cfb8fdf34d4ceb4994a6e87db398cc3dfc577abd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196241"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707097"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 

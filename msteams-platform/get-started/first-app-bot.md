@@ -5,18 +5,21 @@ description: 使用 Teams 工具包为 Microsoft Teams 创建对话机器人。
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 96bbddd99b6901a4b92e1e2f2dc98482c755dc66
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 3c70db137bc61e2beef09b130269ca34838d40dd344858215fc8d71f583b315a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254249"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707031"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>构建你的第一个 Microsoft Teams 对话机器人
 
-在本教程中，你将了解如何构建、运行和部署 Teams 机器人应用。 机器人是 Teams 用户和 Web 服务之间的中介。  用户可以与机器人聊天，以快速获取信息、启动工作流或启动 Web 服务能够执行的任何操作。 
+在本教程中，你将了解如何构建、运行和部署 Teams 机器人应用。 机器人是 Teams 用户和 Web 服务之间的中介。 用户可以与机器人聊天，以快速获取信息、启动工作流或启动 Web 服务能够执行的任何操作。 
 
-## <a name="before-you-begin"></a>开始之前
+> [!IMPORTANT]
+> 目前，自动程序在 政府社区云 (GCC) 中可用，但在 doD GCC-High 和国防部 (中) 。
+
+## <a name="before-you-begin"></a>准备工作
 
 通过安装先决条件确保已设置开发环境。
 
@@ -139,6 +142,9 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 <summary>了解如何在本地运行应用时解决常见问题。</summary>
 
 若要在 Teams 中成功运行应用，必须具有允许应用程序旁加载的 Microsoft 365 开发帐户。 有关开设帐户的详细信息，请参阅 [先决条件](prerequisites.md#enable-sideloading)。
+
+> [!IMPORTANT]
+> 目前，旁加载应用在 政府社区云 (GCC) 、GCC-High 和 DOD 中可用。
 
 > [!TIP]
 > 在旁加载应用之前，使用工具包中包含的 [应用验证工具](https://dev.teams.microsoft.com/appvalidation.html) 检查问题。 修复错误以成功旁加载应用。

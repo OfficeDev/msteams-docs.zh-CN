@@ -5,18 +5,18 @@ description: 了解如何使用自定义选项卡生成SharePoint 框架
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4df2bb71837af520a2d2500a45b8605e5fae08b2
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 25f4a815add4a5712883976b9899131fb108046d75f813517c8261c3cca8e5af
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254221"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706905"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>使用应用生成并运行Microsoft Teams应用SharePoint 框架 (SPFx) 
 
 本教程介绍如何在实现简单个人Microsoft Teams应用中SharePoint 框架 SPFx应用。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 SharePoint。
 
-## <a name="before-you-begin"></a>开始之前
+## <a name="before-you-begin"></a>准备工作
 
 请确保通过安装必备组件来设置开发环境。
 

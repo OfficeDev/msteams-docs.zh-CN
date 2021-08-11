@@ -3,12 +3,12 @@ title: 自适应卡片的通用操作概述
 description: 自适应卡片的通用操作快速概述。
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f8980743954c4dff2ced464bc599439c7519cefe
-ms.sourcegitcommit: d1d1143e285cac5f23590ccba5389616d08f94b3
+ms.openlocfilehash: 20231245af5a1fe479277558367e6265f4391ff0925dfcf96288912470b09b38
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52781616"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706342"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
@@ -51,11 +51,11 @@ ms.locfileid: "52781616"
 
 下图描述了适用于用户和用户的通用自适应卡片Teams Outlook：
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="移动同一卡片Teams和Outlook":::
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="与 Teams 和 Outlook":::
 
@@ -69,11 +69,11 @@ ms.locfileid: "52781616"
 
 下图显示了一个票证消息传递扩展 (ME) ，其中聊天中的不同用户根据要求显示了不同的操作：
 
-# <a name="mobile"></a>[移动](#tab/mobile)
+# <a name="mobile"></a>[移动设备](#tab/mobile)
 
 :::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="移动用户特定视图":::
 
-# <a name="desktop"></a>[桌面](#tab/desktop)
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="用户特定视图":::
 
@@ -114,7 +114,7 @@ ms.locfileid: "52781616"
 ## <a name="see-also"></a>另请参阅
 
 * [什么是自动程序](~/bots/what-are-bots.md)
-* [自适应卡片概述](~/task-modules-and-cards/what-are-cards.md)
+* [自适应卡概述](~/task-modules-and-cards/what-are-cards.md)
 * [自适应卡片 @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
 

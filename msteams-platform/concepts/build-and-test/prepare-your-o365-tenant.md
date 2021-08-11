@@ -4,12 +4,12 @@ description: 如何开始使用Teams Microsoft 365
 ms.topic: how-to
 localization_priority: Normal
 keywords: 配置Microsoft 365租户Teams上载
-ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019942"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704414"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 
@@ -18,7 +18,7 @@ Microsoft 365订阅者可以使用以下Microsoft Teams之一开发适用于用�
 * 基本
 * 标准
 * EnterpriseE1、E3 和 E5
-* Developer
+* 开发人员版
 * 教育版、教育增强版和教育版 E5
 
 > [!NOTE]
@@ -37,7 +37,7 @@ Enable Teams for your organization and for more information， see [enabling Tea
 
 **为开发人员租户启用自定义应用上传或旁加载**
 
-1. 使用管理员[Microsoft 365](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)登录管理中心。
+1. 登录以[Microsoft 365 管理中心](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)管理员凭据登录。
 
 2. 选择 **"显示所有**  >  **Teams"。**
 

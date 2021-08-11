@@ -3,32 +3,32 @@ title: 使用自适应卡的通用操作
 description: 使用自适应卡片的通用操作。
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649697"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701964"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>使用自适应卡的通用操作
 
-自适应卡片的通用操作提供了一种为用户和用户实现基于自适应卡片Teams Outlook。 本文档涵盖以下内容：
+自适应卡片的通用操作提供了一种为用户和用户实现基于自适应卡片Teams Outlook。 本文档涵盖下列主题：
 
 * [用于自适应卡片的通用操作架构](#schema-for-universal-actions-for-adaptive-cards)
 * [刷新模型](#refresh-model)
 * [`adaptiveCard/action` 调用活动](#adaptivecardaction-invoke-activity)
 * [向后兼容性](#backward-compatibility)
 
-## <a name="quick-start-guide-to-leverage-universal-actions-for-adaptive-cards-in-teams"></a>快速入门指南，用于将通用操作用于自适应卡片Teams
+## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>将通用操作用于自适应卡片的快速入门指南Teams
 
 1. 将 的所有 实例 `Action.Submit` 替换为 ， `Action.Execute` 以更新现有Teams。
-2. 如果你希望利用自动刷新模型或你的方案需要特定于用户的视图，则向 `refresh` 自适应卡片中添加子句。
+2. 如果你想要使用自动刷新模型或你的方案需要特定于用户的视图，则向 `refresh` 自适应卡片中添加子句。
 
     >[!NOTE]
     > 指定 `userIds` 要标识哪些用户获得自动更新的属性。
 
 3. 处理 `adaptiveCard/action` 机器人中的调用请求。
-4. 使用调用请求的上下文通过专为用户创建的卡片进行响应。
+4. 使用调用请求的上下文通过为用户创建的卡片进行响应。
 
     > [!NOTE]
     > 只要机器人处理 后返回新卡， `Action.Execute` 响应就必须符合响应格式。
@@ -66,13 +66,13 @@ ms.locfileid: "52649697"
 
 以下是刷新中的 UserIds 的功能：
 
-* UserIds 是用户 MRI 的数组，它是自适应卡片 `refresh` 中属性的一部分。
+* UserIds 是用户 MRIs 的数组，它是自适应卡片 `refresh` 中属性的一部分。
 
 * 如果在卡片的刷新部分中指定了 list 属性，则不会自动 `userIds` `userIds: []` 刷新该卡片。 而是 **在** Web 或桌面的三点菜单和移动设备（即 Android 或 iOS）中的长按上下文菜单中向用户显示"刷新卡片"选项，以手动刷新卡片。
 
-* 添加 UserIds 属性是因为Teams频道可以包含大量成员。 如果所有成员同时查看频道，则无条件自动刷新会导致对机器人进行许多并发呼叫。 若要避免这种情况，必须始终包括 属性，以确定哪些用户必须自动刷新，最多 `userIds` *60 (60*) MRIs 。
+* 添加 UserIds 属性是因为Teams频道可以包含大量成员。 如果所有成员同时查看频道，则无条件自动刷新会导致对机器人进行许多并发呼叫。 必须始终包含 属性，以确定哪些用户必须自动刷新，最多 `userIds` *60 (60*) MRIs 。
 
-* 若要详细了解如何提取对话Teams用户 MRIs 以在自适应卡片刷新部分添加 userIds 列表，请参阅提取[名单或用户配置文件](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
+* 您可以提取Teams成员的用户 MRIs。 若要详细了解如何在自适应卡片的刷新部分添加 userIds 列表，请参阅 [提取名单或用户配置文件](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
 
 * 用户 MRI Teams示例`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -101,11 +101,12 @@ When `Action.Execute` is executed in the client， a new type of Invoke activity
 
 有关详细信息，请参阅[上向后兼容性Teams。](/adaptive-cards/authoring-cards/universal-action-model#teams)
 
-## <a name="code-sample"></a>代码示例
+## <a name="code-samples"></a>代码示例
 
-|示例名称 | 说明 | .NETCore |
-|----------------|-----------------|--------------|
-| Teams机器人 | 创建使用自适应卡片接受食物订单的简单机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|示例名称 | 说明 | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Teams机器人 | 创建使用自适应卡片接受食物订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
+| 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新的自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 

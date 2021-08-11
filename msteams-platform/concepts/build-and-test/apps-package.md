@@ -3,12 +3,12 @@ title: 打包应用
 description: 了解如何打包应用Microsoft Teams测试、上传和应用商店发布。
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 219e2d5341707ed51b7e0a3a8077f93df9eac640
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: fc489f6f00a267cde3ca5fdc8852240ad2f07f4dcc7912cba9550728fdcd9402
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565212"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703884"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>创建Microsoft Teams应用包
 

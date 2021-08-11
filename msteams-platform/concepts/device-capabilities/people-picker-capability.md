@@ -6,12 +6,12 @@ keywords: 人员选取器控件
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 8399eeb1a088e4b60c466d51c223b9405ebf1711
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211631"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702780"
 ---
 # <a name="integrate-people-picker-capability"></a>集成人员选取器功能 
 
@@ -82,7 +82,7 @@ API 说明如下：
 
 必须确保在 Web 应用中正确处理错误。 下表列出了错误代码以及生成错误的条件： 
 
-|错误代码 |  错误名称     | Condition|
+|错误代码 |  错误名称     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **500** | INTERNAL_ERROR | 启动人员选取器时遇到内部错误。|

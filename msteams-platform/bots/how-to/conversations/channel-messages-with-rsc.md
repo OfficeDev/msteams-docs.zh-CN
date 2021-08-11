@@ -4,12 +4,12 @@ author: surbhigupta12
 description: 接收具有 RSC 权限的所有频道消息
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 833bdbc015cf852fcd899ce4e75f742448b89978
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 8ddbb3cd7ffa8f02caea2fb0e1e74abb9b64ffe94bb34b8a09561e744cea25b5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631269"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705872"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>使用 RSC 接收所有频道消息
 

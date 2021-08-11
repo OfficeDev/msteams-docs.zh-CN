@@ -4,12 +4,12 @@ description: 介绍发布应用Microsoft Teams选项。
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: b321fee132b23556dcc8299cdbbf6fb5d6ccd3cf
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: c5dc026627ba912e0beebb9321c664f0a5af4ccf38905eb969226da8103b9a4a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230909"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701983"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>分发Microsoft Teams应用
 
@@ -19,13 +19,16 @@ ms.locfileid: "52230909"
 
 旁加载应用供个人使用、与团队协作或测试和调试。 这种分发不需要正式的审阅过程。
 
+> [!IMPORTANT]
+> 目前，旁加载应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。
+
 有关详细信息，请参阅上传[应用Teams。](apps-upload.md)
 
 ## <a name="publish-your-app-to-your-org"></a>将应用发布到组织
 
 使你的应用可供组织中的人员使用。此类分发需要Teams管理员的批准。
 
-有关详细信息，请参阅在管理[中心管理Teams应用](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)。
+有关详细信息，请参阅在管理[中心管理Teams应用](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)。
 
 ### <a name="government-community-cloud-gcc-organizations"></a>政府社区云 (GCC) 组织
 

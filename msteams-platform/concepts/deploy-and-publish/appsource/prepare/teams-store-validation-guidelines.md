@@ -4,12 +4,12 @@ description: 介绍提交到 AppSource 应用商店Teams应用 (应用) 必须�
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 79cdc032ee1e7479f7737e5dc71f8f01bb024da8
-ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
+ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52763113"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703605"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams应用商店验证指南
 
@@ -355,7 +355,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 自适应卡片是高度推荐的显示自动程序消息的方法。 你的卡片必须轻量，并且仅包含 1-3 个操作。 如果需要显示更多内容，请考虑使用任务模块或选项卡。
 
-有关详细信息，请参阅下列资源：
+有关更多信息，请参阅以下资源：
 
 * [设计自适应卡片](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [卡参考](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)

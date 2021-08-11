@@ -4,12 +4,12 @@ description: 介绍Teams中的身份验证以及如何在选项卡中使用它
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 身份验证选项卡 AAD
-ms.openlocfilehash: 138575ab28280f167c0627731c8219eccb07b7d9
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 69b05edd2cb0106ccf951490c36e2268f947af418a50dd9cc53fe7ec1b3e1311
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629982"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707785"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>在"用户"选项卡中Microsoft Teams用户
 
@@ -159,6 +159,6 @@ if (hashParams["error"]) {
 
 显示使用 Azure AD 的选项卡身份验证过程的示例代码：
 
-| **示例名称** | **说明** | **.NET** | **Node.js** |
+| **示例名称** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teams选项卡身份验证 | 使用 Azure AD 的选项卡身份验证过程。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |

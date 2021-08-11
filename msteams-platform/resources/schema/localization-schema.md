@@ -5,12 +5,12 @@ ms.topic: reference
 localization_priority: Normal
 keywords: teams 清单架构本地化
 ms.date: 05/20/2019
-ms.openlocfilehash: 6e8f666cc6bfa693d7f2f469fc58fd6ee4860a80
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 7a7c5e61e8e9db2526a725d676a237d9c37f7d71ea74d42117e0b59b51cae969
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140509"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705543"
 ---
 # <a name="localize-json-schema-reference"></a>本地化 JSON 架构参考
 

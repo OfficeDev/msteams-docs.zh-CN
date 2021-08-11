@@ -5,12 +5,12 @@ description: 为频道选项卡创建对话子实体聊天
 keywords: Teams 选项卡频道可配置
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: b563510b9ce232a98572430c76f1b8e59ddb4886
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 6c2574453f00735d4441c389648df375fc1d01046d2c8f558b470efe4f3392ca
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179690"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705101"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
