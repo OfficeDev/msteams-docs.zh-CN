@@ -5,12 +5,12 @@ keywords: nodejs yeoman node.js入门
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 2a75c5bfd24facb8be1897997fc94896e1f62990547da12d35c783d38be2e077
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823240"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703185"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>使用 Yeoman Microsoft Teams生成首个应用
 
@@ -82,7 +82,7 @@ npm init yo teams@preview
 
     ![项目选择](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. 根据在步骤 3 中选定的项目回答出现的下一组后续问题。
+1. 响应根据在步骤 2 中选定的项目出现的下一组后续问题。
 1. 输入解决方案的托管位置的 URL。 
 
    > [!NOTE]

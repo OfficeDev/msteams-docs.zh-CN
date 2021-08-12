@@ -5,12 +5,12 @@ description: 确定你的应用用例在应用体验Teams工作。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 82b7c4cf29eb6b5d31c55dbc420a3c2c6c3038dfa710ba6257fc5486a97713bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 28f6b0af0854d19826d8f3542bb11ba0e025cbe1
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709550"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586031"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到Teams功能
 
@@ -26,7 +26,7 @@ ms.locfileid: "57709550"
 * 应用可以跨范围存在。
 * 应用功能（如邮件扩展）可跨范围关注用户。
 * 用户通常对将应用添加到频道或Teams很不一样。
-* 来宾可以访问在频道或Teams公开的内容。
+* 来宾用户可以访问在一个或多个Teams公开的内容。
 
 你可以根据以下条件在个人范围和团队或频道范围之间选择：
 
@@ -104,4 +104,4 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 ## <a name="see-also"></a>另请参阅
 
-[生成首个 Microsoft Teams 应用](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[生成首个 Microsoft Teams 应用](../build-your-first-app/build-first-app-overview.md)

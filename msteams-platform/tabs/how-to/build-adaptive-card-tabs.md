@@ -4,16 +4,17 @@ author: KirtiPereira
 description: 使用自适应卡片生成选项卡
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 8f1b8bbc27a2b10d8e4fbca8e87c75eeb29c8c36efacd6eb3cf921295e27b88b
-ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
+ms.openlocfilehash: 6b969461669f9edb7d7f3e216b3b91dd700881b34de17389f8a43348b09830f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "57823226"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705080"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
 > [!IMPORTANT]
+> * 此功能 [在公用开发者预览版](~/resources/dev-preview/developer-preview-intro.md) 桌面和移动版中受支持。 即将推出 Web 浏览器中的支持。
 > * 带自适应卡片的选项卡当前仅作为个人应用受支持。
 
 使用传统方法开发选项卡时，您可能会遇到这些问题：
@@ -37,6 +38,7 @@ ms.locfileid: "57823226"
 
 * 熟悉自动程序[开发、](../../bots/what-are-bots.md)[自适应卡片](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)和 Teams[](../../task-modules-and-cards/task-modules/task-modules-bots.md)中的任务模块。
 * 使机器人在 Teams中运行，以用于你的开发。
+* 在公共[开发者预览版。](~/resources/dev-preview/developer-preview-intro.md)
 
 ## <a name="changes-to-app-manifest"></a>对应用清单的更改
 
