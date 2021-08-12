@@ -5,12 +5,12 @@ description: 介绍开发平台Teams概念。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: ab69cedd9bd6fd25a9d7566b0f3e93ff1c38ef29
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 7ffdfbb735f2c7c6cf5cbcf0f1e7f2134f92f613989cd3f8eac84f22cd73543e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585933"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706076"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams应用开发基础
 
@@ -38,7 +38,7 @@ Microsoft Teams应用基础提供创建自定义应用Teams方向。 你可以�
 * [将 Web 应用与 Teams](../samples/integrating-web-apps.md)
 * [生成首个 Microsoft Teams 应用](../build-your-first-app/build-first-app-overview.md) 
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [了解Teams应用功能](capabilities-overview.md)
