@@ -5,19 +5,19 @@ keywords: nodejs yeoman node.js入门
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703185"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345176"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>使用 Yeoman Microsoft Teams生成首个应用
 
 > [!Note]
 > 本教程来自适用于 wiki[的 Yeoman Teams生成器](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)。
 
-本教程介绍如何使用 Yeoman Microsoft Teams生成首个Microsoft Teams应用。 它还指导你完成使用 Yeoman 生成器Teams升级应用程序的过程。 在开始之前，你必须拥有一个Teams[允许应用旁加载的帐户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+本教程介绍如何使用 Yeoman Microsoft Teams生成首个Microsoft Teams应用。 它还指导你完成使用 Yeoman 生成器Teams升级应用程序的过程。 在开始之前，你必须拥有一个Teams允许[应用旁加载的帐户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
 ![yeoman 生成器 git](~/assets/yeoman-demo.gif)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57703185"
 
 * 代码编辑器
 
-   你需要一个代码编辑器。 本文档和图像中的大多数内容都指使用[Visual Studio Code。](https://code.visualstudio.com) 但是，您可以随意使用您喜欢的任何文本编辑器。
+   你需要一个代码编辑器。 本文档和图像大部分都指使用[Visual Studio Code](https://code.visualstudio.com)。 但是，您可以随意使用您喜欢的任何文本编辑器。
 
 * Yeoman 和 Gulp CLI
 
@@ -82,13 +82,13 @@ npm init yo teams@preview
 
     ![项目选择](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. 响应根据在步骤 2 中选定的项目出现的下一组后续问题。
+1. 根据在步骤 3 中选定的项目回答出现的下一组后续问题。
 1. 输入解决方案的托管位置的 URL。 
 
    > [!NOTE]
    > 该 URL 可以是任何 URL，但默认情况下，生成器建议 Azure 网站 URL。
 
-1. 确认是否要包含解决方案的单元测试。 默认响应为 **"是"。** 如果选择包括单元测试，则生成的项目将具有单元测试框架和一些针对基架的不同项目的默认单元测试。 
+1. 确认是否要包含解决方案的单元测试。 默认响应为 **"是"。** 如果选择包括单元测试，则生成的项目将具有一个单元测试框架和一些针对基架的不同项目的默认单元测试。 
    > [!NOTE]
    > * 对于本教程，选择不包括测试框架。
    > * 生成器具有许多内置高级功能，你可以选择加入或选择退出。
@@ -106,7 +106,7 @@ npm init yo teams@preview
 
 您的选项卡位于 `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` 文件中。 这是选项卡React TypeScript 类。 
 
-1. 找到 `render()` 方法，在控件中添加一 `<PanelBody>` 行代码，如下所示：
+1. 找到 `render()` 方法，在控件中添加一行代码 `<PanelBody>` ，如下所示：
 
    ``` TypeScript
    <PanelBody>
@@ -126,7 +126,7 @@ npm init yo teams@preview
 
 ## <a name="run-your-app"></a>运行应用
 
-若要运行应用，请使用 `gulp serve` 命令。 这将生成并启动本地 Web 服务器，以测试你的应用。 每次在项目中保存文件时，该命令也将重新生成应用程序。 
+若要运行应用，请使用 `gulp serve` 命令。 这将生成并启动本地 Web 服务器，供你测试应用。 每次在项目中保存文件时，该命令也将重新生成应用程序。 
 
 现在应转到 ， `http://localhost:3007/myFirstAppTab/` 并确保选项卡正在呈现。 但是，它尚未Microsoft Teams中。 
 
@@ -138,11 +138,11 @@ npm init yo teams@preview
 
 Microsoft Teams不允许将应用托管在 localhost 上，因此你需要将其发布到公用 URL 或使用代理（如 ngrok）。 好消息是，搭建的项目具有此内置功能。 
 
-**若要在应用商店中运行Teams**
+**在应用程序中运行Teams**
 
-1. 在 `gulp ngrok-serve` 终端中运行。 运行 ngrok 服务时，将在后台启动具有唯一的公用 DNS 条目，并且它还将清单打包为此唯一 URL，然后执行与 完全相同 `gulp ngrok-serve` 的操作 `gulp serve` 。
+1. 在 `gulp ngrok-serve` 终端中运行。 运行 ngrok 服务时，将在后台启动具有唯一的公用 DNS 条目，并且它还会使用该唯一 URL 打包清单，然后执行与 完全相同 `gulp ngrok-serve` 的相同操作 `gulp serve` 。
 1. 创建新的团队Microsoft Teams团队。
-1. Select the Team name > Teams 设置 > Apps.
+1. 选择"团队名称> Teams 设置 >应用"。
 1. 从右下角，选择 **"Upload应用"。**
 1. 转到项目 `package` 文件夹下的文件夹。 
 1. 选择该文件夹中的 zip 文件，然后选择"打开"。 
@@ -156,7 +156,7 @@ Microsoft Teams不允许将应用托管在 localhost 上，因此你需要将其
 
 ### <a name="upgrade-microsoft-teams"></a>升级Microsoft Teams
 
-还可使用 Yeoman Microsoft Teams将当前 Microsoft Teams 版本升级到最新版本。
+还可使用 Yeoman Microsoft Teams将当前版本升级到最新版本Microsoft Teams版本。
 
 **升级Microsoft Teams**
 

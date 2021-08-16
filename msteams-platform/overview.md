@@ -1,23 +1,23 @@
 ---
 title: 生成适用于 Microsoft Teams 平台的应用
 author: heath-hamilton
-description: 大致了解开发人员如何使用自定义Microsoft Teams扩展自定义功能。
+description: 获取开发人员如何使用自定义应用扩展Microsoft Teams功能的概述。
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: c114eba3e022f153ccaa9e9031086989eca5d019bd472fb0b9f5da583465deb9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: df871894a1353301edaeb12af3cb940f0bb47472
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707487"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345612"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
-Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
+Microsoft Teams应用将关键信息、常用工具和受信任流程引入用户越来越集中、学习和工作的地方。
 
-应用是扩展Teams以满足你的需求。 为现有应用创建全新的Teams或集成现有应用。
+应用是扩展Teams以满足你的需求。 为应用创建全新的Teams或集成现有应用。
 
 > [!div class="nextstepaction"]
 > [从这里开始](get-started/prerequisites.md)
@@ -54,7 +54,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="选项卡在客户端中的外观的概念Teams表示。" border="false":::
+:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="在概念上表示选项卡在 Teams 中的外观。" border="false":::
 
    :::column-end:::
 
@@ -89,7 +89,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="在概念上表示邮件扩展在 Teams 中的外观。" border="false":::
+:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="在概念上表示邮件扩展在 Teams 客户端中的外观。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -100,7 +100,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column span="1":::
 
-**为会议创建应用**：有一些选项用于将你的应用合并到Teams [体验](apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
+**创建会议应用**：有一些选项用于将你的应用合并到Teams [体验中](apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
 
    :::column-end:::
 
@@ -117,13 +117,13 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column span="":::
 
-**与外部应用通信**[：传入 Webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks)是一种将通知从另一个应用自动发送到 Teams 通道的简单方法。 使用 [传出 webhook，](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)使用 @mention 发送 web 服务。
+**与外部应用通信**[：传入 Webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks)是一种将通知从另一个应用自动发送到 Teams 通道的简单方法。 使用 [传出 Webhook，](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)使用 @mention 向 Web 服务发送消息。
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="assets/images/overview-connectors.png" alt-text="连接器在客户端中的外观的概念Teams表示。" border="false":::
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="在概念上表示连接器在 Teams 客户端中的外观。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -150,7 +150,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
 ## <a name="start-building"></a>开始构建
 
-通过设置环境和创建简单的Teams快速熟悉构建环境。
+通过设置环境和创建一个简单的Teams快速熟悉构建环境。
 
 > [!div class="nextstepaction"]
 > [构建首个应用](get-started/prerequisites.md)
@@ -182,7 +182,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
 ## <a name="a-little-code-goes-a-long-way"></a>一个小代码会大有作为
 
-你无需成为专家程序员来构建出色的Teams应用。 请尝试多个低代码解决方案之一。
+你无需成为专家程序员，就无需构建出色的Teams应用。 请尝试多个低代码解决方案之一。
 
 > [!div class="nextstepaction"]
 > [创建低代码应用](samples/teams-low-code-solutions.md)
@@ -198,7 +198,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
 ## <a name="get-ideas-for-your-app"></a>获取应用灵感
 
-寻找应用开发灵感？ 浏览我们具有高保真概念的实际方案和行业解决方案列表，了解应用Teams用户的各种方式。
+寻找应用开发灵感？ 浏览我们具有高保真概念的实际方案和行业解决方案列表，了解应用Teams用户的各种方法。
 
 > [!div class="nextstepaction"]
 > [请参阅应用方案](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
@@ -209,16 +209,16 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
    :::column-end:::
 :::row-end:::
 
-## <a name="integrate-teams-in-your-external-app"></a>将Teams集成到外部应用中
-此页面重点介绍通过构建应用将你自己的Microsoft Teams嵌入Teams体验。 如果你想要反向此模型，并将Teams或其他通信功能集成到你自己的外部应用体验中，请参阅[Azure Communication Services。](/azure/communication-services/overview) Azure Communication Services 是基于云的服务，具有 REST API 和客户端库 SDK，可帮助你将通信集成到你自己的自定义应用程序中。 借助 UI 库，Teams嵌入常规React样式的 Web 组件，以调用[和聊天](https://azure.github.io/communication-ui-library/)。
+## <a name="integrate-teams-in-your-external-app"></a>在Teams应用程序中集成应用程序
+此页面重点介绍通过构建应用将你自己的Microsoft Teams嵌入Teams体验。 如果你想要反向此模型，并将Teams或其他通信功能集成到你自己的外部应用体验中，请参阅[Azure Communication Services。](/azure/communication-services/overview) Azure Communication Services 是基于云的服务，具有 REST API 和客户端库 SDK，可帮助你将通信集成到你自己的自定义应用程序中。 借助 UI 库，Teams嵌入常规或React样式的 Web 组件，以调用[和聊天](https://azure.github.io/communication-ui-library/)。
 
-Azure Communication Services 应用程序可以使用公共预览功能与[Teams，并](/azure/communication-services/concepts/teams-interop)启用自定义应用程序以匿名Teams会议。 例如，您可以将视频呼叫集成到移动银行应用程序中，并允许最终用户使用 Microsoft Teams 与银行员工进行虚拟Microsoft Teams。 
+Azure Communication Services 应用程序可以使用公共预览功能与[Teams，并](/azure/communication-services/concepts/teams-interop)启用自定义应用程序以匿名Teams加入会议。 例如，您可以将视频通话集成到移动银行应用程序中，并允许最终用户使用 Microsoft Teams 与银行员工进行虚拟Microsoft Teams。 
 
 还可以集成Microsoft 365标识，以构建代表用户嵌入视频和 PSTN 呼叫Teams应用程序。 如果你过去使用过[Skype for Business](/skype-sdk/appsdk/skypeappsdk) SDK，建议将这些功能作为 Azure Communication Services 的一部分作为替代。
 
 ## <a name="see-also"></a>另请参阅
 
-* [将"共享到Teams"按钮添加到您的网站](concepts/build-and-test/share-to-teams.md)
+* [将"共享到Teams"按钮添加到网站](concepts/build-and-test/share-to-teams.md)
 * [设计Teams应用](concepts/design/design-teams-app-overview.md)
 * [Microsoft TeamsJavaScript 客户端 SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * 适用于[JavaScript](https://github.com/Microsoft/botbuilder-js)和[.NET](https://github.com/Microsoft/botbuilder-dotnet/)的 Bot Framework SDK

@@ -4,12 +4,12 @@ description: 介绍发布应用Microsoft Teams选项。
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: c5dc026627ba912e0beebb9321c664f0a5af4ccf38905eb969226da8103b9a4a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: eeaa0dc7804938a663156ad019123b32630eb14f
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701983"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345702"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>分发Microsoft Teams应用
 
@@ -37,7 +37,7 @@ ms.locfileid: "57701983"
 > [!IMPORTANT]
 >如果你的应用包含自动程序或消息传递扩展，则必须在 Azure 中设置自动程序与 Teams 之间的通道时，选择"Microsoft Teams政府"选项。 有关详细信息，请参阅 [将机器人连接到频道](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)。
 
-## <a name="publish-your-app-to-the-teams-store"></a>将应用发布到应用商店Teams应用商店
+## <a name="publish-your-app-to-the-teams-store"></a>将应用发布到 Teams 应用商店
 
 使应用可供所有人使用。 此类分发需要 Microsoft 批准。
 

@@ -5,19 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b6b6712a6372a37886ef227fd941cb70f24a57ce2d65a8e3492bea8c080c74ef
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ea0392868b06653657beff60b157070eaef7f4ba
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709657"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345646"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
 自动程序是执行一组特定任务的对话应用。 根据 Microsoft <a href="https://dev.botframework.com/" target="_blank">框架</a>，自动程序会与用户进行通信、回复其问题，并主动通知他们更改和其他事件。 这是一个很好的方法。
 
 > [!IMPORTANT]
-> 目前，自动程序在 政府社区云 (GCC) 中可用，但在 doD GCC-High 和国防部 (中) 。
+> 目前，自动程序政府社区云 (GCC) DOD GCC-High和国防部 (中) 。
 
 为指导应用设计，以下信息描述并说明用户可以如何在 Teams 中添加、使用和管理机器人。
 
@@ -44,7 +44,7 @@ ms.locfileid: "57709657"
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-用户可以访问在桌面上使用自动程序添加的@mention。
+用户可以访问使用自动程序在桌面上添加的@mention。
 
 :::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="示例演示如何使用移动设备访问群聊中的@mention。" border="false":::
 
@@ -70,7 +70,7 @@ ms.locfileid: "57709657"
 
 ### <a name="welcome-message-in-channels-and-group-chats"></a>频道和群聊中的欢迎消息
 
-与个人空间相比，机器人在频道和群聊中的介绍应该略有不同 (如个人应用) 。 在现实中，如果进入一个人员完整的房间;你可自我介绍，而不是每个已存在的人。 将这一思路融入你的机器人设计中。
+与个人空间（如个人应用聊天）相比，机器人在频道和群组聊天中的 () 略有不同。 在现实中，如果进入一个人员完整的房间;你可自我介绍，而不是每个已存在的人。 将这一思路融入你的机器人设计中。
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
@@ -156,7 +156,7 @@ ms.locfileid: "57709657"
 |----------|-----------|
 |1|**应用名称和图标**|
 |2|**"聊天** 选项卡"中：打开与机器人对话的空白（仅适用于个人应用）。|
-|3|**自定义选项卡**：打开与应用相关的其他内容。|
+|3 |**自定义选项卡**：打开与应用相关的其他内容。|
 |4 |**关于选项卡**：显示有关应用的基本信息。|
 |5 |**聊天气泡**：自动对话使用 Teams 消息框架。|
 |6 |**自适应卡片**：如果你的机器人响应包含自适应卡片，该卡片将占用聊天气泡的全部宽度。|
@@ -170,7 +170,7 @@ ms.locfileid: "57709657"
 |----------|-----------|
 |1|**应用名称和图标**|
 |2|**"聊天** 选项卡"中：打开与机器人对话的空白（仅适用于个人应用）。|
-|3|**自定义选项卡**：打开与应用相关的其他内容。|
+|3 |**自定义选项卡**：打开与应用相关的其他内容。|
 |4 |**聊天气泡**：自动对话使用 Teams 消息框架。|
 |5 |**自适应卡片**：如果你的机器人响应包含自适应卡片，该卡片将占用聊天气泡的全部宽度。|
 
@@ -255,7 +255,7 @@ ms.locfileid: "57709657"
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="示例演示了与移动设备上的机器人的多向交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="示例显示与移动设备上的机器人的多向交互。" border="false":::
 
 
 ---
@@ -306,7 +306,7 @@ ms.locfileid: "57709657"
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="示例显示一个任务模块，用于配置机器人的设置。" border="false":::
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
 使用上述建议打造优质应用体验。
 

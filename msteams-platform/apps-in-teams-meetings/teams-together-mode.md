@@ -2,12 +2,12 @@
 title: 自定义一起模式场景
 description: 使用自定义一起模式场景
 ms.topic: conceptual
-ms.openlocfilehash: b10f5506012dd3b204187dde1ef5e45d2e4bb3536ea9106f2643b0d846fbe640
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d19f99ab55654eab03d56de8a001484bb518a7f2
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702150"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345267"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
@@ -40,7 +40,7 @@ Microsoft Teams中的自定义一起模式场景提供了一个沉浸式且极�
 * [应用旁加载的概念](../concepts/deploy-and-publish/apps-upload.md)。
 * 确保管理员已授予访问自定义Upload [**以及**](../concepts/deploy-and-publish/apps-upload.md)分别选择所有筛选器作为应用设置和会议策略的一部分的权限。
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
 在生成场景之前，请考虑以下事项，以打造无缝的场景生成体验：
 
@@ -64,7 +64,7 @@ Microsoft Teams中的自定义一起模式场景提供了一个沉浸式且极�
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>使用 Scene studio 生成场景
 
-Microsoft 有一个 Scene studio，允许你生成场景。 它可以在场景编辑器[- Teams开发人员门户上提供](https://dev.teams.microsoft.com/scenes)。
+Microsoft 有一个 Scene studio，允许你生成场景。 它可在场景编辑器[- Teams门户上提供](https://dev.teams.microsoft.com/scenes)。
 
 > [!NOTE]
 > 本文档引用了开发人员门户中的 scene studio Microsoft Teams。 在 App Studio 场景设计器中，界面和功能都相同。
@@ -84,7 +84,7 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
 * 所有座位和图像的 XYZ 坐标。
 * 隐藏为一个图像的图像的集合。
 
-席位尺寸成为呈现参与者视频流的画布。 下图显示了每个展示为虚拟形象的席位，用于生成场景：
+席位尺寸将成为呈现参与者视频流的画布。 下图显示了每个展示为虚拟形象的席位，用于生成场景：
 
 ![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
@@ -93,10 +93,10 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
 1. 转到场景[编辑器 - Teams开发人员门户](https://dev.teams.microsoft.com/scenes)。
 
     >[!NOTE]
-    > * 若要打开 Scene studio，你可以导航到开发人员门户的Teams [并选择](https://dev.teams.microsoft.com/home)**"为会议创建自定义场景"。**
-    > * 若要打开 Scene studio，你可以导航到 Teams 开发人员门户的主页，从左侧部分选择"工具 ["，](https://dev.teams.microsoft.com/home)然后从"工具"部分选择 **"Scene studio"。**
+    > * 若要打开 Scene studio，你可以导航到开发人员门户Teams [主页，](https://dev.teams.microsoft.com/home)然后选择 **为会议创建自定义场景**。
+    > * 若要打开 Scene Studio，你可以导航到 Teams [门户](https://dev.teams.microsoft.com/home)的主页，从左侧选择"工具"部分，然后从"工具"部分选择 **"Scene studio"。** 
 
-1. 在"**场景编辑器"** 页中，选择 **"创建新场景"。**
+1. 在"**场景编辑器"** 页中，**选择"创建新场景"。**
 
 1. 在 **"场景** "框中，输入场景的名称。
 
@@ -107,7 +107,7 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
 1. 将图像拖放到环境中，如下图所示：
 
     >[!NOTE]
-    > * 你可以下载[包含SampleScene.zipSampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)[文件。](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip)
+    > * 你可以下载[SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)[和SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip)图像的文件。
     > * 或者，可以使用添加图像将背景图像添加到 **场景**。
 
     ![拖动到场景](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
@@ -140,13 +140,13 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
 1. 选择 **"保存****"，** 然后选择"Teams"以快速测试场景中的Microsoft Teams。
 
     >[!NOTE]
-    > * 选择 **"Teams"** 将自动创建一Microsoft Teams应用程序，可在开发人员门户的"应用"Teams查看该应用。 
-    > * 选择 **场景中的Teams** 将自动创建一个应用包，appmanifest.js场景后显示。 如前面所述，这是抽象的，但你可通过从菜单导航到应用 **来访问自动** 创建的应用包。
-    > * 若要删除你创建的场景，请选择顶 **栏** 上的"删除场景"。
+    > * 选择 **"Teams"** 将自动创建一个Microsoft Teams应用程序，可在开发人员门户的"应用"Teams查看该应用。 
+    > * 选择 **场景中的Teams** 会自动创建一个应用包，appmanifest.js场景后打开。 如前面所述，这是抽象的，但你可通过从菜单导航到应用 **来访问自动** 创建的应用包。
+    > * 若要删除你创建的场景，请选择顶 **栏上的** "删除场景"。
 
 1. 在出现的对话框中， **选择添加**。
 
-    可通过创建测试会议并启动自定义一起模式场景来测试或访问场景。 有关详细信息，请参阅激活 [自定义一起模式场景](#activate-custom-together-mode-scenes)。
+    可通过创建测试会议并启动自定义"共同模式"场景来测试或访问场景。 有关详细信息，请参阅激活 [自定义一起模式场景](#activate-custom-together-mode-scenes)。
 
     ![启动自定义一起模式场景](../assets/images/apps-in-meetings/launchtogethermode.png)
 
@@ -155,7 +155,7 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
 
 1. （可选）可以从"保存"下拉菜单中选择"共享"，以创建可共享链接，以轻松分发场景供其他人使用。 打开此链接会为用户安装场景，他们可以开始使用它。
 
-1. 预览后，可以通过进入开发人员中心Teams应用部分将场景作为应用交付Teams应用。 你可以在此处下载应用包或直接发布到你的组织。
+1. 预览后，可通过进入开发人员中心中的Teams应用部分将场景作为应用交付Teams应用。 你可以在此处下载应用包或直接发布到你的组织。
 
     >[!NOTE]
     > 对于已设计的场景，此步骤需要不同于场景包的应用包。 可在开发人员中心的应用部分找到自动创建Teams包。
@@ -165,13 +165,13 @@ Scene studio 上下文中的场景是一个包含以下内容的项目：
     ![导出场景](../assets/images/apps-in-meetings/build-a-scene.png)
 
     >[!NOTE]
-    > 场景包由一个scene.js和用于生成场景的 PNG 资源组成。 可以审阅场景包以合并其他更改，如本文档scene.js示例部分所述。
+    > 场景包由一scene.js和用于生成场景的 PNG 资源组成。 可以审阅场景包以合并其他更改，如本文档scene.js示例部分所述。
 
 分步入门示例中演示了利用 Z 轴的更复杂的场景。
 
 ## <a name="sample-scenejson"></a>示例scene.js打开
 
-Scene.js和图像一起指示座位的确切位置。 场景包含用于放入参与者视频的位图图像、子画面和矩形。 这些子画面和参与者框在一个世界坐标系中定义，其中 X 轴指向右侧，Y 轴指向向下。 自定义一起模式场景支持放大当前参与者。 这对大型场景中的小会议很有用。 子画面是一种静态位图图像，位于世界。 子画面的 Z 值决定子画面的位置。 呈现从 Z 值最低的子画面开始，因此 Z 值越高，表示它离相机更近。 每个参与者都有自己的视频源，该源会进行分段，以便仅呈现前台。
+Scene.js和图像一起指示座位的准确位置。 场景由位图图像、子画面和矩形组成，用于放入参与者视频。 这些子画面和参与者框在一个世界坐标系中定义，其中 X 轴指向右侧，Y 轴指向向下。 自定义一起模式场景支持放大当前参与者。 这对大型场景中的小会议很有用。 子画面是一种静态位图图像，位于世界。 子画面的 Z 值决定子画面的位置。 呈现从 Z 值最低的子画面开始，因此 Z 值越高，表示它离相机更近。 每个参与者都有自己的视频源，该源会进行分段，以便仅呈现前台。
 
 下面是示例scene.js示例：
 
@@ -245,7 +245,7 @@ Scene.js和图像一起指示座位的确切位置。 场景包含用于放入�
 
 zOrder 表示沿 Z 轴放置图像和座位的顺序。 在许多情况下，如果需要，它会提供深度或分区感。 有关详细信息，请参阅分步入门示例。 此示例利用 zOrder。
 
-现在，你已执行示例scene.js，你可以激活自定义"共同模式"场景以参与场景。
+现在，你已执行示例scene.js，你可以激活自定义的"共同模式"场景以参与场景。
 
 ## <a name="activate-custom-together-mode-scenes"></a>激活自定义一起模式场景
 
@@ -256,9 +256,9 @@ zOrder 表示沿 Z 轴放置图像和座位的顺序。 在许多情况下，如
 1. 创建新的测试会议。
 
     >[!NOTE]
-    > 在选择 **Scene** studio 中的"预览"时，场景会作为应用安装在Microsoft Teams。 这是开发人员在 Scene studio 中测试和试用场景的模型。 将场景作为应用交付后，用户将在场景库中看到这些场景。
+    > 选择 **Scene studio** 中的"预览"时，场景会作为应用安装在Microsoft Teams。 这是开发人员在 Scene studio 中测试和试用场景的模型。 将场景作为应用交付后，用户将在场景库中看到这些场景。
 
-1. 从左上角 **的"库**"下拉列表中，选择"共同 **模式"。** 将出现 **选取** 器对话框，并且添加的场景可用。
+1. 从左上角 **的"库**"下拉列表中，选择"一起 **模式"。** 将出现 **选取** 器对话框，并且添加的场景可用。
 
 1. 选择 **"更改场景** "以更改默认场景。
 
@@ -267,7 +267,7 @@ zOrder 表示沿 Z 轴放置图像和座位的顺序。 在许多情况下，如
 1. （可选）会议组织者和演示者可以更改 **会议中所有参与者** 的场景。
 
     >[!NOTE]
-    > 在任意时间点，只能将一个场景用于会议。 如果演示者或组织者更改场景，则场景将全部更改。 切换为或退出自定义一起模式场景由单个参与者决定，但在自定义"共同模式"场景中，所有参与者具有相同的场景。
+    > 在任意时间点，只能将一个场景用于会议。 如果演示者或组织者更改场景，则场景将全部更改。 切换为或退出自定义共同模式场景由单个参与者决定，但在自定义"共同模式"场景中，所有参与者具有相同的场景。
 
 1. 选择“**应用**”。 Teams用户安装应用并应用场景。
 

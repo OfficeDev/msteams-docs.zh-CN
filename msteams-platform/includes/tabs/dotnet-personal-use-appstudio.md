@@ -1,15 +1,15 @@
 ## <a name="upload-your-tab-with-app-studio"></a>Upload App Studio 打开选项卡
 
 >[!NOTE]
-> 我们使用 **App Studio** 编辑 **你的manifest.js** 文件，将已完成的程序包上传到Teams。 还可以在 上手动 **manifest.js文件**。 如果这样做，请确保再次生成解决方案以创建要 **Tab.zip文件。**
+> 我们使用 **App Studio** 编辑 **你的manifest.js** 文件，将已完成的程序包上传到Teams。 还可以在 上手动 **manifest.js文件**。 如果这样做，请确保再次生成解决方案以创建要 **Tab.zip** 文件。
 
 **使用 App Studio 上传选项卡**
 
 1. 转到Microsoft Teams。 如果使用基于 [Web 的版本，](https://teams.microsoft.com) 可以使用浏览器的开发人员工具检查前端 [代码](~/tabs/how-to/developer-tools.md)。
 
-1. 转到 **App Studio，** 然后选择清单 **编辑器** 选项卡。
+1. 转到 **App Studio** 并选择清单 **编辑器** 选项卡。
 
-1. 选择 **"在清单编辑器** 中导入现有 **应用"** 开始为选项卡更新应用包。源代码附带其自己的部分完整清单。 应用包的名称 **tab.zip。** 可从以下路径获得：
+1. 在 **清单编辑器中选择** 导入现有 **应用** ，开始更新选项卡的应用包。源代码附带其自己的部分完整清单。 应用包的名称 **tab.zip。** 可从以下路径获得：
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
@@ -23,17 +23,17 @@
 
 在清单编辑器欢迎页面的右侧面板中选择新导入选项卡的磁贴。
 
-清单编辑器左侧有一个步骤列表，右侧是一个属性列表，其中每个步骤都必须具有值。 大部分信息已由你的用户 **manifest.js，但** 有些字段必须更新。
+清单编辑器左侧有一个步骤列表，右侧是一个属性列表，其中每个步骤都必须具有值。 大部分信息已由用户 **manifest.js，但** 有些字段必须更新。
 
 #### <a name="details-app-details"></a>详细信息：应用详细信息
 
-在" **应用详细信息"** 部分中：
+在" **应用详细信息"** 部分：
 
 1. 在 **"标识**" **下，** 选择"生成"为应用生成新的应用 ID。
 
-1. 在 **"开发人员信息**"下，使用 **ngrok** HTTPS URL 更新网站。
+1. 在 **"开发人员信息**"下 **，使用** **ngrok** HTTPS URL 更新网站。
 
-1. 在 **"应用程序 URL"** 下，将隐私声明更新为 和 `https://<yourngrokurl>/privacy` **使用条款** 以 `https://<yourngrokurl>/tou`>。
+1. 在 **"应用程序 URL"** 下，将隐私声明更新为 `https://<yourngrokurl>/privacy` 和 **使用条款** 以 `https://<yourngrokurl>/tou`>。
 
 #### <a name="capabilities-tabs"></a>功能：选项卡
 
@@ -62,7 +62,7 @@
 >
 > **&#9888;"validDomains"数组不能包含隧道站点...**
 >
->在测试选项卡时，可以忽略此警告。
+>在测试您的选项卡时，可以忽略此警告。
 
 1. 在"**测试和分发"部分**，选择"安装 **"。**
 
@@ -74,6 +74,6 @@
 
 ## <a name="view-your-personal-tab"></a>查看个人选项卡
 
-1. 在位于应用最左侧的导航Teams，选择省略号 &#x25CF;&#x25CF;&#x25CF;。 将显示个人应用列表。
+1. 在位于应用最左侧的导航栏中，Teams省略号 &#x25CF;&#x25CF;&#x25CF;。 将显示个人应用列表。
 
 1. 从列表中选择您的选项卡进行查看。

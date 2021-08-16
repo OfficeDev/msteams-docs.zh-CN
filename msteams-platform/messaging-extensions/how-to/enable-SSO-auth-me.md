@@ -5,12 +5,12 @@ description: 如何为邮件扩展启用 SSO 支持
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3e965ed19e603bf888b107ca9ecda01aa81af192a020c41cfd26eb9bb905fd53
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 656c17612c74ee55b870fd2e7e13dea60e6ed2f8
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705743"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345239"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>单一登录 (SSO) 邮件扩展支持
  
@@ -21,8 +21,8 @@ ms.locfileid: "57705743"
 ## <a name="prerequisites"></a>先决条件
 
 为邮件扩展和链接展开启用 SSO 的先决条件如下所示：
-* 必须具有 [Azure](https://azure.microsoft.com/en-us/free/) 帐户。
-* 必须通过 AAD 门户配置应用，并更新自动程序Teams应用程序清单，如通过 AAD 门户注册应用[中的定义](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)。
+* 必须具有 [Azure](https://azure.microsoft.com/free/) 帐户。
+* 必须通过 AAD 门户配置应用，并更新自动程序Teams应用程序清单，如通过 AAD 门户注册应用[所定义](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)。
 
 > [!NOTE]
 > 有关创建 Azure 帐户和更新应用清单的信息，请参阅单一登录 [ (SSO) 自动程序支持](../../bots/how-to/authentication/auth-aad-sso-bots.md)。
@@ -41,7 +41,7 @@ ms.locfileid: "57705743"
     > [!NOTE]
     > 我们不支持其他处理程序 `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` SSO，TeamsMessagingExtensionsSearchAuthConfigBot.cs 文件除外。
    
-4. 在有效负载中的 处理程序中或在 中接收令牌，具体取决于你要为以下项启用 `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` `OnTeamsAppBasedLinkQueryAsync` SSO 的方案：
+4. 在有效负载或 中的 处理程序中接收令牌，具体取决于你要为以下项启用 `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` `OnTeamsAppBasedLinkQueryAsync` SSO 的方案：
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);

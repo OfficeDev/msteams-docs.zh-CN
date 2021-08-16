@@ -1,22 +1,22 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
+description: 如何取消链接，打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a76bf6f5d97114655893dd80ebf0de81fc242ea4d6b444516565b952aab883fe
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f465530dcc53ff3b0174f5b78ebf2240665a7d9e
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708672"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345274"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
 > [!NOTE]
 > 此功能仅在公共 [开发人员预览版中](../resources/dev-preview/developer-preview-intro.md) 可用。
 
-阶段视图是 UI (组件) 用户界面，允许你呈现在 Teams 中全屏打开并固定为选项卡的内容。
+阶段视图是 UI (组件) 用户界面，允许你呈现在屏幕中全屏打开Teams固定为选项卡的内容。
  
 > [!NOTE]
 > 目前，Teams客户端不支持选项卡链接取消展开和阶段视图。 移动客户端使用开发人员提供的 属性在设备的 Web 浏览器中 `websiteUrl` 打开页面。
@@ -27,7 +27,7 @@ ms.locfileid: "57708672"
 
 ## <a name="advantage-of-stage-view"></a>阶段视图的优点
 
-阶段视图有助于提供在网站中查看内容的Teams。 用户无需离开上下文即可打开和查看应用提供的内容，并且可以将内容固定到聊天或频道，以便将来快速访问。 这可提高用户对你的应用的参与度。
+阶段视图有助于提供在网站中查看内容Teams。 用户无需离开上下文即可打开和查看应用提供的内容，并且可以将内容固定到聊天或频道，以便将来快速访问。 这可提高用户对你的应用的参与度。
 
 ## <a name="stage-view-vs-task-module"></a>阶段视图与任务模块
 
@@ -91,7 +91,7 @@ ms.locfileid: "57708672"
 * 机器人使用代码 `200` 进行响应。
 
 > [!NOTE]
-> 目前，Teams客户端不支持阶段视图功能。 当用户在移动 **客户端上** 选择"查看"时，用户会访问设备的浏览器。 浏览器打开在 对象的 参数 `websiteUrl` 中指定的 `TabInfo` URL。
+> 目前，Teams客户端不支持阶段视图功能。 当用户 **选择"在** 移动客户端上查看"时，用户会访问设备的浏览器。 浏览器打开在 对象的 参数 `websiteUrl` 中指定的 `TabInfo` URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
@@ -132,10 +132,10 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | 属性名称 | 类型 | 字符数 | 说明 |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
-| `name` | String | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
-| `contentUrl` | String | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
-| `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
-| `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
+| `name` | 字符串 | 128 | 此属性是显示名称界面中选项卡的列数。 这是一个可选字段。|
+| `contentUrl` | 字符串 | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
+| `websiteUrl?` | 字符串 | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
+| `removeUrl?` | 字符串 | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
 
 ## <a name="see-also"></a>另请参阅
 

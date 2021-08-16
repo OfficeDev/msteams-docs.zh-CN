@@ -5,19 +5,19 @@ description: 自动程序在Microsoft Teams。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 94540e4d9edd3cb41c249563d50780448d4e08dbe285967eaaece715930a29be
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 69a9802c568875a871d4a83b59d489ac21044d98
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706227"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345584"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
 聊天机器人也称为聊天机器人或对话机器人，它是运行由用户（如客户服务或支持人员）执行的简单且重复的自动化任务的应用。 日常使用中的机器人示例包括提供有关天气信息的机器人、预订预订或提供旅行信息。 机器人交互可以是一个快速的问题和答案，也可以是提供对服务的访问权限的复杂对话。
 
 > [!IMPORTANT]
-> 目前，自动程序在 政府社区云 (GCC) 中可用，但在 doD GCC-High 和国防部 (中) 。
+> 目前，自动程序政府社区云 (GCC) DOD GCC-High和国防部 (中) 。
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
@@ -43,11 +43,11 @@ ms.locfileid: "57706227"
 
 您还可以使用自动程序 API 或自动程序 API Graph发送和接收Teams文件。 有关详细信息，请参阅通过自动 [程序发送和接收文件](~/bots/how-to/bots-filesv4.md)。
 
-此外，速率限制还用于优化用于应用程序应用程序的Teams程序。 为了保护Microsoft Teams用户，自动程序 API 为传入请求提供了速率限制。 有关详细信息，请参阅使用 Teams[中的速率限制优化自动程序](~/bots/how-to/rate-limit.md)。
+此外，速率限制还用于优化用于你的应用程序Teams聊天机器人。 为了保护Microsoft Teams用户，自动程序 API 为传入请求提供速率限制。 有关详细信息，请参阅使用 Teams[中的速率限制优化机器人](~/bots/how-to/rate-limit.md)。
 
 借助 Microsoft Graph API 进行呼叫和联机会议，Microsoft Teams应用现在可以使用语音和视频与用户进行交互。 有关详细信息，请参阅 [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。 
 
-可以使用聊天Teams API 获取聊天或团队的一个或多个成员的信息。 有关详细信息，请参阅[对自动程序 API Teams获取团队或聊天成员的更改](~/resources/team-chat-member-api-changes.md)。
+可以使用聊天Teams API 获取聊天或团队的一个或多个成员的信息。 有关详细信息，请参阅[对用于提取团队Teams聊天成员的](~/resources/team-chat-member-api-changes.md)聊天机器人 API 的更改。
 
 ## <a name="see-also"></a>另请参阅
 

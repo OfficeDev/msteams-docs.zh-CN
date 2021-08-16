@@ -4,14 +4,14 @@ description: 了解如何在应用中旁加载Microsoft Teams。 在开发期间
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 93df0d92ce6912888dd1932be3295ca92fa5a967
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708705"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345260"
 ---
-# <a name="upload-your-app-in-microsoft-teams"></a>Upload应用Microsoft Teams
+# <a name="upload-your-app-in-microsoft-teams"></a>Upload应用中Microsoft Teams
 
 你可以旁加载Microsoft Teams应用，而无需发布到你的组织或Teams应用商店。 在下列情况下，这是有意义的：
 
@@ -32,8 +32,8 @@ ms.locfileid: "57708705"
 
 你可以将应用旁加载至团队、聊天、会议或个人使用，具体取决于你配置应用的范围。
 
-1. 使用你的Teams帐户登录到[Microsoft 365 客户端](~/build-your-first-app/build-and-run.md#prerequisites)。
-1. 选择 **应用**，然后选择 **Upload自定义应用。**
+1. 使用你的 Teams 开发帐户 登录到[Microsoft 365 客户端](~/build-your-first-app/build-and-run.md#prerequisites)。
+1. 选择 **"应用****"，Upload自定义应用"。**
 1. 选择应用包.zip文件。 将显示安装对话框。
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 1. 将应用添加到Teams。
@@ -56,12 +56,12 @@ Teams提供了几种打开应用的方法。 有关详细信息，请参阅访�
 
 ## <a name="remove-your-app"></a>删除应用
 
-若要删除你的应用，请右键单击应用中Teams **并选择卸载**。
+若要删除你的应用，请右键单击应用中Teams **并选择卸载。**
 
 > [!NOTE]
-> 你无法完全删除个人自动程序活动。 如果删除应用并再次添加它，则与机器人的新通信将附加到其上一次对话中。
+> 你无法完全删除个人自动程序活动。 如果删除应用并再次添加它，则与机器人的新通信将附加到上一次与该应用的对话中。
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [使用Teams应用](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+> [使用 Teams 应用](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)

@@ -2,7 +2,7 @@
 
 ### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-若要在页面中显示选项卡Teams，必须包含 **Microsoft Teams JavaScript** 客户端 SDK，并包括页面加载 `microsoftTeams.initialize()` 后对 的调用。 这是选项卡与应用Teams方式：
+若要使选项卡显示在 Teams中，必须包含 **Microsoft Teams JavaScript** 客户端 SDK，并包括加载 `microsoftTeams.initialize()` 页面后对 的调用。 这是选项卡与应用Teams方式：
 
 转到" **共享"** 文件夹，打开 **_Layout.cshtml，** 然后向 `<head>` 标记部分添加以下内容：
 

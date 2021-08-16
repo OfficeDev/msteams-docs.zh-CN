@@ -5,16 +5,16 @@ description: 确定你的应用用例在应用体验Teams工作。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 28f6b0af0854d19826d8f3542bb11ba0e025cbe1
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 77e8db5e0d0e4738cf479ccfddb9766507f7170c
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53586031"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345549"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到Teams功能
 
-确定用户 *是谁* 以及要解决的问题后，可以决定 *如何* 解决问题了。 The *who，* *what*， and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. 你需要根据从用户收到的查询响应来定义应用的范围，然后确定最适合生成应用的功能。
+确定用户 *是谁* 以及要解决什么问题后，可以决定 *如何* 解决问题了。 The *who，* *what*， *and how* completes the process of understanding and mapping your use cases to Teams app capabilities. 你需要根据从用户收到的查询响应来定义应用的范围，然后确定最适合生成应用的功能。
 
 > [!NOTE]
 > 你必须深入了解可用于应用的 [入口点和 UI](../../concepts/extensibility-points.md) 元素。 此外，还必须确保仔细考虑 [用例](../../concepts/design/understand-use-cases.md) 。
@@ -25,18 +25,18 @@ ms.locfileid: "53586031"
 
 * 应用可以跨范围存在。
 * 应用功能（如邮件扩展）可跨范围关注用户。
-* 用户通常对将应用添加到频道或Teams很不一样。
-* 来宾用户可以访问在一个或多个Teams公开的内容。
+* 用户通常对将应用添加到频道或Teams非常的。
+* 来宾可以访问在频道或Teams公开的内容。
 
 你可以根据以下条件在个人范围和团队或频道范围之间选择：
 
 * 对于个人范围，请提出以下问题：
   * 出于隐私或其他原因，是否要求与应用进行一对一交互？ 例如，检查休假余额或其他私人信息。
-  * 用户之间是否可能没有任何共同协作Teams？ 例如，在公司中查找即将推出的组织范围事件。
+  * 是否有可能没有任何常见协作功能的用户之间的Teams？ 例如，在公司中查找即将推出的组织范围事件。
   * 在应用体验中，是否需要向用户发送任何Teams消息？ 例如，审批或注册提醒。
 * 对于共享范围 (团队、频道或聊天) ，请提出以下问题：
   * 应用在选项卡或机器人中呈现的信息是否与团队中的大多数成员相关且有用？ 例如，Scrum 应用。
-  * 应用上下文是否可能随应用添加到的团队而更改？ 例如，Planner 的任务在不同团队中有所不同。 
+  * 应用上下文是否可能因添加到其中的团队而更改？ 例如，Planner 的任务在不同团队中有所不同。 
   * 需要协作的人物中的所有成员是否可能是单个团队的一部分？ 例如，处理票证的代理。
 
 以下方案将指导你了解与应用功能良好协作的入口点和 UI Teams选择：
@@ -50,11 +50,11 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 * **使用搜索命令的邮件扩展**：搜索外部系统，并作为交互式卡片共享结果。
 
-* **使用操作命令的消息** 扩展：收集信息以插入数据存储或执行高级搜索。
+* **使用操作命令的消息扩展**：收集信息以插入数据存储或执行高级搜索。
 
 * **选项卡**：创建用于查看、处理和共享数据的嵌入式 Web 体验。
 
-* **连接器和 webhook：** 一种将数据推送和发送出客户端的简单Teams方法。
+* **连接器和 webhook：** 在客户端中推送数据和发送数据Teams方法。
 
 * **任务模块**：需要它们收集或显示信息的交互式模式表单。
 
@@ -88,7 +88,7 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 ## <a name="get-social"></a>获取社交
 
-协作平台本质上是一个社交平台。 让创造力的一面是免费的，为工作场所添加一些有趣的内容。 所有用户都必须能够发送彩信、提供 kudos、获取一些 meme、删除一些表情符号或其他任何能够影响你奇特感的符号。
+协作平台本质上是一个社交平台。 让创造力的一面是免费的，为工作场所添加一些有趣的内容。 所有用户都必须能够发送彩信、提供 kudos、获取一些 Meme、删除一些表情符号或其他任何能够影响你奇特感的符号。
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>从单页应用考虑
 
@@ -100,8 +100,8 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 ## <a name="put-it-all-together"></a>全部放在一起
 
-也就是说，最佳应用通常组合多个功能，从而创建在正确的上下文中使用正确功能吸引用户的应用。 不得将任何功能强制放入不属于它的位置。 仅仅因为有一对一对话机器人，并不意味着将其添加到任何团队。 不同的扩展点适用于不同的内容，可以发挥它们创建成功应用的优势。
+也就是说，最佳应用通常组合多个功能，从而创建一个应用，以在正确的时间使用正确的功能在正确的上下文中吸引用户。 不得将任何功能强制放入不属于它的位置。 仅仅因为有一对一对话机器人，并不意味着将其添加到任何团队。 不同的扩展点适用于不同的内容，可以发挥它们创建成功应用的优势。
 
 ## <a name="see-also"></a>另请参阅
 
-[生成首个 Microsoft Teams 应用](../build-your-first-app/build-first-app-overview.md)
+[生成首个Microsoft Teams应用](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

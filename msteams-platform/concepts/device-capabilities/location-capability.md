@@ -6,12 +6,12 @@ keywords: 位置地图功能本机设备权限
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 94eb8735092f97f35a03b7b19eee9e20c75eaaac7463d1869c4c2718d55ef3bf
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705986"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345653"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能 
 
@@ -27,7 +27,7 @@ ms.locfileid: "57705986"
 * 在工厂中，主管可以跟踪工作者的出席情况，让他们在工厂附近自家，并通过指定的应用共享它。 位置数据也会与图像一起捕获和发送。
 * 位置功能使服务提供商的维护人员能够与管理层共享手机网络的真实运行状况数据。 管理层可以比较捕获的位置信息与维护人员提交的数据之间的任何不匹配情况。
 
-若要集成位置功能，必须更新应用清单文件并调用 API。 为了进行有效的集成，您必须深入了解用于调用位置[](#code-snippets)API 的代码段。 熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
+若要集成位置功能，必须更新应用清单文件并调用 API。 为了进行有效的集成，您必须深入了解用于调用位置[](#code-snippets)API 的代码段。 熟悉 API 响应错误以处理应用[](#error-handling)或应用中的错误Teams很重要。
 
 > [!NOTE] 
 > 目前Microsoft Teams对位置功能的支持仅适用于移动客户端。
@@ -91,7 +91,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="error-handling"></a>错误处理
 
-必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
+必须确保在应用应用中正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
 |错误代码 |  错误名称     | 条件|
 | --------- | --------------- | -------- |
@@ -106,4 +106,4 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 * [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
 * [将 QR 代码或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
-* [将人员选取器功能集成到Teams](people-picker-capability.md)
+* [将人员选取器集成到Teams](people-picker-capability.md)

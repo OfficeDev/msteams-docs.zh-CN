@@ -4,16 +4,16 @@ author: Rajeshwari-v
 description: 将 Web 应用程序和设备功能与应用集成Microsoft Teams概述。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 125139abceb01218766dba1cd8d6c95850abd1272583e37e148aabebe68b778a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: dd9498fe60d4e97b41072b78b5134f2fbc3af174
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707300"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345765"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
-通过将现有 Web 应用程序的功能集成到新平台，可以提供丰富的Microsoft Teams体验。 确保遵循[Teams准则](~/concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。
+通过将现有 Web 应用程序的功能集成到新平台，可以提供丰富的Microsoft Teams体验。 确保遵循[Teams设计指南](~/concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。
 本文档概述了将 Web 应用程序与 Teams 集成的先决条件、用于创建 Power 应用、Power Virtual Agents、虚拟助理、应用模板、Shift 连接器、用户 LMS、为网站创建"共享到 Teams"按钮、在 SharePoint 中添加 Microsoft Teams 选项卡、创建深层链接以及集成设备功能的先决条件。
 
 ## <a name="prerequisites"></a>先决条件   
@@ -35,11 +35,11 @@ ms.locfileid: "57707300"
 
 ## <a name="microsoft-power-platform"></a>Microsoft Power 平台
 
-Microsoft Power 平台将四项强大的 Microsoft 技术（如 Power BI、Power Apps、Power Automate 和 Power Virtual Agents）组合在一个功能强大的应用程序平台中。 这些技术使您可以在统一集成的环境中生成解决方案、自动处理、分析数据以及创建虚拟代理。
+Microsoft Power 平台将四种强大的 Microsoft 技术（如 Power BI、Power Apps、Power Automate 和 Power Virtual Agents）组合在一个功能强大的应用程序平台中。 这些技术使您可以在统一集成的环境中生成解决方案、自动处理、分析数据以及创建虚拟代理。
 
 ### <a name="power-apps"></a>Power Apps
 
-通过Power Apps，你可以构建连接到业务数据并针对组织需求定制的业务应用。 Power Apps支持多种应用方案，以通过画布应用解决业务挑战。 生成应用后，你可以将其从 Power Apps 制造商门户导出并嵌入Microsoft Teams。
+通过Power Apps，你可以构建连接到业务数据并针对组织需求定制的业务应用。 Power Apps支持多种应用方案，以通过画布应用解决业务挑战。 生成应用后，你可以将其从 Power Apps 工具门户导出并嵌入Microsoft Teams。
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
@@ -51,7 +51,7 @@ Power Virtual Agent 是无代码、引导的图形界面解决方案。 它基�
 
 ## <a name="app-templates"></a>应用模板
 
-可以使用应用模板创建自定义应用以满足组织需求。 这些是生产就绪型应用Microsoft Teams社区驱动的开放源代码，可在 GitHub。 每个模板都包含为组织部署和安装应用的详细说明。 它提供了一个现成的应用程序，您可以立即安装并开始使用该应用程序。 
+可以使用应用模板创建自定义应用以满足组织需求。 这些是适用于生产环境的生产Microsoft Teams，由社区驱动、开放源代码，GitHub。 每个模板都包含为组织部署和安装应用的详细说明。 它提供了一个现成的应用程序，您可以立即安装并开始使用该应用程序。 
 
 ## <a name="teams-shifts-work-force-management-connectors"></a>TeamsShifts Work Force Management 连接器
 
@@ -59,15 +59,15 @@ Teams轮班工作组管理连接器是生产就绪型、开放源代码和社区
 
 ## <a name="install-moodle-lms"></a>安装 Moodle LMS
 
-在 LMS Learning，一 (开放源代码) 。 现在，它与 Microsoft Teams。 此集成可帮助教师和教师协作处理一些与开发方案课程有关的问题，提出有关成绩和作业的问题，并直接在 Teams。
+在 LMS 中，一Learning是一 (开源) 。 现在，它与 Microsoft Teams。 此集成可帮助教师和教师协作处理与完成组织课程有关成绩和作业的问题，并直接在 Teams 中随时Teams。
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>为网站创建“共享到 Teams”按钮
 
-第三方网站可以使用启动器脚本将"共享"嵌入Teams网页上的"共享"按钮。 当你选择该按钮时，它将在弹出窗口中Teams共享以添加体验。 这允许你直接将链接共享给任何人员或Microsoft Teams频道，而无需切换上下文。
+第三方网站可以使用启动器脚本将"共享"Teams网页上的"共享"按钮。 当你选择该按钮时，它将在弹出窗口Teams"共享到共享"体验。 这允许你直接将链接共享到任何人员或Microsoft Teams频道，而无需切换上下文。
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>在Microsoft Teams中添加SharePoint
 
-通过将 Microsoft Teams 中的 Microsoft Teams 选项卡添加为 SharePoint Web 部件，Microsoft Teams和 SharePoint 之间SPFx丰富的集成体验。 
+通过将 Microsoft Teams 选项卡添加为 Microsoft Teams Web SharePoint，SharePoint和 SPFx 丰富的集成体验。 
 
 ## <a name="create-deep-link"></a>创建深层链接
 
@@ -76,6 +76,10 @@ Teams轮班工作组管理连接器是生产就绪型、开放源代码和社区
 ## <a name="integrate-device-capabilities"></a>集成设备功能
 
 Microsoft Teams平台持续增强开发人员功能，以与内置第一方体验保持一致。 借助增强的 Teams 平台，合作伙伴可以使用 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 访问和集成本机设备功能，例如相机、QR 或条形码扫描仪、照片库、麦克风和位置。 
+
+## <a name="integrate-people-picker"></a>集成人员选取器
+
+你可以集成本机Teams选取器控件，以允许用户在 Web 应用体验中搜索和选择人员。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -92,3 +96,4 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 * [向 SharePoint 添加Teams选项卡](~/tabs/how-to/tabs-in-sharepoint.md)
 * [创建深层链接](~/concepts/build-and-test/deep-links.md)
 * [设备功能](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [人员选取器控件](~/concepts/device-capabilities/people-picker-capability.md)
