@@ -5,12 +5,12 @@ keywords: teams 自动程序卡格式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e62d79b6bd07031800116bc3295ce55a06e3bc86
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706129"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345716"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
@@ -20,11 +20,11 @@ ms.locfileid: "57706129"
 
 卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。 可以使用 XML 或 HTML 格式的子集或 Markdown 指定格式，具体取决于卡片类型。 对于自适应卡片的当前和未来开发，建议使用 Markdown 格式。
 
-卡片类型之间的格式支持不同。 桌面版和移动版客户端之间的卡片呈现可能略有不同Microsoft Teams客户端，Teams在桌面浏览器中呈现。
+卡片类型之间的格式支持不同。 桌面版和移动版客户端之间以及桌面浏览器中Microsoft Teams卡的呈现Teams略有不同。
 
 你可以将内联图像与任意卡片Teams内。 图像的格式可以设置为 、 或 文件，并且不能超过 `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。 不支持动态 GIF。 有关详细信息，请参阅 [卡片类型](./cards-reference.md#inline-card-images)。
 
-可以使用 Markdown 格式化自适应卡片Office 365连接器卡，其中包括某些受支持的样式。
+可以使用 Markdown 设置自适应卡片和Office 365连接器卡的格式，其中包括某些受支持的样式。
 
 ## <a name="format-cards-with-markdown"></a>使用 Markdown 格式化卡片
 
@@ -52,7 +52,7 @@ ms.locfileid: "57706129"
 不支持以下 Markdown 标记：
 
 * 标题
-* 表格
+* 表
 * 图像
 * 预设格式的文本
 * Blockquotes
@@ -118,7 +118,7 @@ ms.locfileid: "57706129"
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>自适应卡片 v1.2 中的提及支持
 
-你可以将@mentions自动程序和消息传递扩展响应的自适应卡片正文中。 若要在@mentions，请遵循与频道和群聊对话中基于消息的提及相同的通知 [逻辑和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
+你可以将@mentions自动程序和消息传递扩展响应的自适应卡片正文中。 若要在@mentions，请遵循与频道和群聊对话中基于消息的提及内容相同的通知逻辑 [和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
 
 聊天机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。
 
@@ -239,7 +239,7 @@ ms.locfileid: "57706129"
 
 #### <a name="sample-adaptive-card-with-typeahead-support"></a>具有字头支持的示例自适应卡片
 
-以下代码显示了具有 typeahead 支持的自适应卡片的示例：
+以下代码演示了具有 typeahead 支持的自适应卡片的示例：
 
 ``` json
 {
@@ -297,7 +297,7 @@ ms.locfileid: "57706129"
 | --- | --- | --- |
 | 粗体 | **text** | `**text**` |
 | 斜体 | *text* | `*text*` |
-| 页眉 (级别 1 &ndash; 3)  | **Text** | `### Text`|
+| 标题 (级别 1 &ndash; 3)  | **Text** | `### Text`|
 | 删除线 | ~~text~~ | `~~text~~` |
 | 未排序列表 | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 已排序列表 | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -395,7 +395,7 @@ ms.locfileid: "57706129"
 | --- | --- | --- |
 | 粗体 | **text** | `<strong>text</strong>` |
 | 斜体 | *text* | `<em>text</em>` |
-| 页眉 (级别 1 &ndash; 3)  | **Text** | `<h3>Text</h3>` |
+| 标题 (级别 1 &ndash; 3)  | **Text** | `<h3>Text</h3>` |
 | 删除线 | ~~text~~ | `<strike>text</strike>` |
 | 未排序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 已排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -485,7 +485,7 @@ ms.locfileid: "57706129"
 | --- | --- | --- |
 | 粗体 | **text** | `<strong>text</strong>` |
 | 斜体 | *text* | `<em>text</em>` |
-| 页眉 (级别 1 &ndash; 3)  | **Text** | `<h3>Text</h3>` |
+| 标题 (级别 1 &ndash; 3)  | **Text** | `<h3>Text</h3>` |
 | 删除线 | ~~text~~ | `<strike>text</strike>` |
 | 未排序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 已排序列表 | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -496,7 +496,7 @@ ms.locfileid: "57706129"
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>简单卡片的移动和桌面差异
 
-由于桌面平台和移动平台之间存在解决方案差异，因此桌面和移动设备版本之间的格式设置Teams。
+由于桌面平台和移动平台之间存在解决方案差异，因此桌面和移动设备版本之间的格式Teams。
 
 在桌面上，HTML 格式显示如下图所示：
 
@@ -516,7 +516,7 @@ ms.locfileid: "57706129"
 
 ### <a name="format-example-for-simple-cards"></a>简单卡片的格式示例
 
-上一部分中的图像是使用 Teams **App Studio** 创建的，其中，hero 卡片的文本属性设置为以下字符串：
+上一部分中的图像是使用 Teams **App Studio** 创建的，其中 hero 卡片的文本属性设置为以下字符串：
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 

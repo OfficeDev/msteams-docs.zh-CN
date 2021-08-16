@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条形码条形码扫描扫描仪位置映射功能本机设备权限
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 90874dd1bfe7142e48e44a613cbe91d95b77d98b504dbbda47fd9c0e8678f937
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4b09d4d81301aa8fc125da98a3633dc79e05d3d1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706359"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345723"
 ---
 # <a name="device-capabilities"></a>设备功能
 
@@ -19,7 +19,7 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 
 ## <a name="native-device-capabilities"></a>本机设备功能
 
-移动或桌面设备具有内置的设备，如相机和麦克风，称为功能。 可以通过 JavaScript 客户端 SDK 中提供的专用 API 在移动或桌面上Microsoft Teams[以下设备功能](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)：
+移动或桌面设备具有内置的设备，如相机和麦克风，称为功能。 可以通过 JavaScript 客户端 SDK 中提供的专用 API 在移动或桌面上访问[Microsoft Teams功能](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)：
 * 媒体功能，例如
     * 相机
     * 麦克风
@@ -31,16 +31,17 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 
 ## <a name="request-device-permissions"></a>请求设备权限
 
-使用[JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)客户端 SDK Microsoft Teams中的工具请求访问本机设备功能[](native-device-permissions.md)所需的权限。 虽然新式 Web 浏览器中对这些功能的访问是标准操作，但你必须Teams更新应用清单来通知用户有关你使用的功能的信息。 此更新允许你在移动或桌面客户端上运行应用Teams请求权限。
+使用[JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) Microsoft Teams SDK 中提供的工具请求访问本机设备[](native-device-permissions.md)功能所需的权限。 虽然新式 Web 浏览器中对这些功能的访问是标准操作，但你必须Teams更新应用清单来通知用户有关你使用的功能的信息。 此更新允许你在移动或桌面客户端上运行应用Teams请求权限。
  
  ## <a name="integrate-device-capabilities"></a>集成设备功能
 
-获取设备功能的访问权限后，Teams媒体功能 API 将[媒体](mobile-camera-image-permissions.md)功能与 Teams 平台集成，以增强用户体验。 这些集成功能使你的应用能够：
+访问设备功能后，Teams媒体功能 API 将[媒体](mobile-camera-image-permissions.md)功能与 Teams 平台集成，以增强用户体验。 这些集成功能使你的应用能够：
 
 * 捕获和共享图像。
 * 使用扫描仪控件扫描 QR [或条形码](qr-barcode-scanner-capability.md)。
 * 通过麦克风录制音频。
 * 使用位置选取 [器共享位置](location-capability.md)。
 
-此外，你可以集成本机Teams选取器控件，[](people-picker-capability.md)以允许用户在 Web 应用体验中搜索和选择人员。
+此外，你可以集成本机Teams选取器控件，以[](people-picker-capability.md)允许用户在 Web 应用体验中搜索和选择人员。
+
 
