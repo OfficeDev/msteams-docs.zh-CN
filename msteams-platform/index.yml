@@ -4,7 +4,7 @@ summary: 获取文档、示例代码、教程等，以帮助你生成自定义Mi
 brand: teams
 metadata:
   title: Microsoft Teams平台开发人员文档
-  description: 利用 Microsoft Teams 开发人员平台，开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快作出决策、通过减少上下文切换) 提供焦点 (以及围绕现有内容和工作流创建协作。 .
+  description: 利用 Microsoft Teams 开发人员平台，开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地作出决策、通过减少上下文切换)  (以及围绕现有内容和工作流创建协作来提供焦点 (。 .
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -28,7 +28,7 @@ highlightedContent:
     - title: 使用 Microsoft Graph 增强你的应用
       itemType: how-to-guide
       url: /graph/teams-concept-overview
-    - title: 将应用发布到应用商店Teams应用商店
+    - title: 将应用发布到 Teams 应用商店
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: 教程和代码示例
@@ -58,7 +58,7 @@ conceptualContent:
           text: 团队应用程序功能
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
-          text: 使用 Microsoft Power Platform Teams应用、机器人和流构建低代码
+          text: 使用 Microsoft Power Platform Teams应用、机器人和流生成低代码
         - url: 'https://dev.teams.microsoft.com/home'
           itemType: reference
           text: Teams 开发人员门户
@@ -90,7 +90,7 @@ conceptualContent:
           text: 使用任务模块收集输入和收集信息
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: 连接 Web 服务通过 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
+          text: 连接 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
     - title: 集成
       links:
         - url: /microsoftteams/platform/samples/integrating-web-apps
@@ -125,7 +125,7 @@ conceptualContent:
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
           text: 公告
-    - title: Community帮助
+    - title: 帮助
       links:
         - url: /microsoftteams/platform/feedback
           itemType: overview

@@ -3,17 +3,17 @@ title: 创建“共享到 Teams”按钮
 description: 如何在网站上添加"共享Teams嵌入按钮
 ms.topic: reference
 localization_priority: Normal
-keywords: 共享Teams到共享Teams
-ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+keywords: 共享Teams共享到Teams
+ms.openlocfilehash: 4bbf29bb355726b519975bec5d6fad3419b81ce3
+ms.sourcegitcommit: 09067fb9886323f144384254c41e93469c433382
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707711"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "58358620"
 ---
 # <a name="create-share-to-teams-button"></a>创建“共享到 Teams”按钮
 
-第三方网站可以使用启动器脚本将"共享到Teams按钮嵌入到其网页上。 选择后，它将在弹出窗口中Teams"共享到共享"体验。 这允许你直接将链接共享给任何人员或Microsoft Teams频道，而无需切换上下文。 本文档指导您如何为网站创建和嵌入"共享到 Teams"按钮、制作网站预览以及扩展"共享到Teams 教育版"。
+第三方网站可以使用启动器脚本将"共享到Teams按钮嵌入到其网页上。 选择后，它将在弹出窗口中Teams"共享到用户"体验。 这允许你直接将链接共享给任何人员或Microsoft Teams频道，而无需切换上下文。 本文档指导您如何为网站创建和嵌入"共享到 Teams"按钮、制作网站预览以及扩展"共享到Teams 教育版"。
 
 > [!NOTE]
 > * 仅支持桌面版 Edge 和 Chrome。
@@ -23,7 +23,7 @@ ms.locfileid: "57707711"
 
 !["共享到Teams"弹出窗口](~/assets/images/share-to-teams-popup.png)
 
-## <a name="embed-a-share-to-teams-button"></a>嵌入"共享到Teams按钮
+## <a name="embed-a-share-to-teams-button"></a>嵌入"共享到Teams"按钮
 
 1. 在 `launcher.js` 网页上添加脚本。
 
@@ -31,7 +31,7 @@ ms.locfileid: "57707711"
     <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
     ```
 
-1. 在网页上添加一个 HTML 元素，其 `teams-share-button` 类属性和要共享的属性 `data-href` 链接。
+1. 在网页上添加一个 HTML 元素，该元素具有 `teams-share-button` 类属性和要共享属性 `data-href` 中的链接。
 
     ```html
     <div
@@ -44,7 +44,7 @@ ms.locfileid: "57707711"
 
     ![共享到Teams图标](~/assets/icons/share-to-teams-icon.png)
 
-1. 或者，如果希望"共享对象"按钮具有不同的图标大小Teams，请使用 `data-icon-px-size` 属性。
+1. 或者，如果您希望"共享对象"按钮具有不同的图标大小Teams，请使用 `data-icon-px-size` 属性。
 
     ```html
     <div
@@ -53,7 +53,7 @@ ms.locfileid: "57707711"
       data-icon-px-size="64">
     </div>
     ```
-1. 如果共享链接需要用户身份验证，并且要共享的链接中的 URL 预览在 Teams 中无法很好地呈现，则可以通过将 属性设置为 禁用 URL `data-preview` 预览 `false` 。
+1. 如果共享链接需要用户身份验证，并且要共享的链接中的 URL 预览在 Teams 中无法很好地呈现，则可以通过将 属性设置为 来禁用 URL `data-preview` 预览 `false` 。
 
     ```html
     <div
@@ -63,11 +63,11 @@ ms.locfileid: "57707711"
     </div>
     ```
 
-1. 如果页面动态呈现内容，可以使用 方法强制"共享"按钮在管道 `shareToMicrosoftTeams.renderButtons()` 中的适当位置呈现。
+1. 如果页面动态呈现内容，可以使用 方法强制共享在管道中的适当 `shareToMicrosoftTeams.renderButtons()` 位置呈现。
 
 ## <a name="craft-your-website-preview"></a>制作网站预览
 
-当你的网站共享到Teams时，插入选定频道的卡片将包含你的网站的预览。 您可以通过确保将适当的元数据添加到要共享的网站（如 URL）来控制此预览 `data-href` 的行为。  
+将网站共享到Teams时，插入选定频道的卡片将包含网站的预览。 您可以通过确保将适当的元数据添加到要共享的网站（如 URL）来控制此预览 `data-href` 的行为。  
 
 **显示预览**
 
@@ -82,11 +82,11 @@ ms.locfileid: "57707711"
 |说明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |缩略图图像| 无。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-您可以使用 html 默认版本或 Open Graph版本。
+可以使用 HTML 默认版本或 Open Graph版本。
 
 ## <a name="share-to-teams-for-education"></a>共享到Teams 教育版
 
-对于使用"共享到Teams"按钮的教师，还有一个附加选项 `Create an Assignment` 。 这使您能够基于共享链接在所选团队中快速创建工作分配。 下图显示了适用于教育的Teams共享： 
+对于使用"共享到Teams按钮的教师，还有一个附加选项 `Create an Assignment` 。 这使您能够基于共享链接在所选团队中快速创建工作分配。 下图显示了适用于教育的Teams共享： 
 
 ![共享到Teams弹出式教育](~/assets/images/share-to-teams-popup-edu.png)
 
@@ -107,11 +107,11 @@ ms.locfileid: "57707711"
 
 `options` (可选) ： `{ elements?: HTMLElement[] }`
 
-目前，所有共享按钮都呈现在页面上。 如果随元素列表一起提供可选对象 `options` ，则这些元素将呈现到共享按钮中。
+目前，所有共享按钮都呈现在页面上。 如果随 `options` 元素列表一起提供可选对象，则这些元素将呈现到共享按钮中。
 
 ### <a name="set-default-form-values"></a>设置默认表单值
 
-可以选择在"共享"表单上设置以下字段的Teams值：
+可以选择在"共享"表单上为以下字段设置Teams值：
 
 * 对此说一些： `msgText`
 * 工作分配说明： `assignInstr`
