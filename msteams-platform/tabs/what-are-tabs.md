@@ -1,20 +1,20 @@
 ---
 title: Microsoft Teams 选项卡
 author: surbhigupta
-description: 自定义选项卡在 Teams 概述
+description: 自定义选项卡在自定义Teams概述
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bafaa54bd4c7b01fcdebae48ccf9a88adfe03a3b
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 5a884be8133129ea98abf2557e529c3c88657d15
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345709"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398646"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams 选项卡
 
-选项卡是Teams网页中嵌入的可感知Microsoft Teams。 它们是简单的 HTML <iframe 标记，这些标记指向在应用程序清单中声明的域，并可以添加为单个用户的团队、群聊或个人应用中的频道的一 \> 部分。 可以将自定义选项卡与你的应用一起，以将自己的 Web 内容嵌入Teams或Teams Web 内容添加特定于 Web 的功能。 有关详细信息，请参阅[javaScript Teams SDK。](/javascript/api/overview/msteams-client)
+选项卡Teams嵌入网页中的可感知Microsoft Teams。 它们是简单的 HTML <iframe 标记，指向在应用程序清单中声明的域，并可以添加为单个用户的团队、群聊或个人应用中的频道的一 \> 部分。 可以将自定义选项卡与你的应用一起，以将自己的 Web 内容嵌入Teams或Teams Web 内容添加特定于 Web 的功能。 有关详细信息，请参阅[javaScript Teams SDK。](/javascript/api/overview/msteams-client)
 
 > [!IMPORTANT]
 > 目前，自定义选项卡可用于 政府社区云 (GCC) 、GCC-High 和国防部 (DOD) 。
@@ -38,7 +38,7 @@ ms.locfileid: "58345709"
 
 您可以将 [内容页创建](~/tabs/how-to/create-tab-pages/content-page.md) 为个人选项卡、频道或组选项卡或任务模块的一部分。 您可以创建[一个配置](~/tabs/how-to/create-tab-pages/configuration-page.md)页，使用户能够配置 Microsoft Teams 应用，并使用它配置频道或群聊选项卡、消息扩展或 Office 365 连接器。 您可以允许用户在安装后重新配置选项卡， [并创建应用程序的选项卡](~/tabs/how-to/create-tab-pages/removal-page.md) 删除页。 生成包含选项卡Teams应用时，必须测试选项卡在 Android 和 iOS 和[iOS Teams运行。](~/tabs/design/tabs-mobile.md) 您的选项卡 [必须通过基本](~/tabs/how-to/access-teams-context.md) 信息、区域设置和主题信息获取上下文，或者确定 `entityId` `subEntityId` 选项卡中的内容。
 
-你可以生成带自适应卡片的选项卡，并Teams所有应用功能，无需为机器人和选项卡提供不同的后端。 [阶段视图](~/tabs/tabs-link-unfurling.md)是一个新的 UI 组件，允许你呈现以全屏模式打开Teams固定为选项卡的内容。现有[链接取消点击](~/tabs/tabs-link-unfurling.md)服务已更新，以便它可用于使用自适应卡片和聊天服务将 URL 转换为选项卡。 可以使用对话[](~/tabs/how-to/conversational-tabs.md)子实体创建对话选项卡，这些子实体允许用户就选项卡中的子实体（如特定任务、患者和销售机会）展开对话，而不是讨论整个选项卡。你可以更改选项卡[边距](~/resources/removing-tab-margins.md)，以增强开发人员在构建应用时的体验。
+你可以生成带自适应卡片的选项卡，并Teams应用的所有功能，无需为机器人和选项卡提供不同的后端。 [阶段视图](~/tabs/tabs-link-unfurling.md)是一个新的 UI 组件，允许你呈现在屏幕中全屏打开Teams固定为选项卡的内容。现有[链接取消点击](~/tabs/tabs-link-unfurling.md)服务已更新，以便它可用于使用自适应卡片和聊天服务将 URL 转换为选项卡。 可以使用对话[](~/tabs/how-to/conversational-tabs.md)子实体创建对话选项卡，这些子实体允许用户就选项卡中的子实体（如特定任务、患者和销售机会）展开对话，而不是讨论整个选项卡。你可以更改选项卡[边距](~/resources/removing-tab-margins.md)，以增强开发人员在构建应用时的体验。
 
 ## <a name="tab-features"></a>选项卡功能
 
@@ -55,9 +55,9 @@ ms.locfileid: "58345709"
 ## <a name="tabs-user-scenarios"></a>选项卡用户方案
 
 **应用场景：** 将基于 Web 的现有资源引入Teams。 \
-**示例：** 在向用户显示信息Teams个人选项卡的应用中创建个人选项卡。
+**示例：** 在应用程序应用中创建个人Teams，向用户显示信息性公司网站。
 
-**应用场景：** 向自动程序或消息传递Teams添加支持页面。 \
+**应用场景：** 向自动程序或消息Teams添加支持页面。 \
 **示例：** 创建个人选项卡，为用户提供 **关于** 网页的内容和帮助网页内容。
 
 **应用场景：** 提供对用户定期与之交互的项目的访问权限，以便进行协作对话与协作。 \
@@ -72,17 +72,17 @@ ms.locfileid: "58345709"
 
 ### <a name="declare-custom-tab-in-app-manifest"></a>在应用清单中声明自定义选项卡
 
-自定义选项卡在应用包的应用清单中声明。 对于希望作为选项卡包含在应用中的每个网页，可定义 URL 和范围。 此外，你可以将[Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)添加到页面，并加载 `microsoftTeams.initialize()` 页面后调用。 Teams显示你的页面，并提供Teams特定信息的访问权限，例如Teams客户端运行的是深色主题。
+自定义选项卡在应用包的应用清单中声明。 对于希望作为选项卡包含在应用中的每个网页，可定义 URL 和范围。 此外，可以将[JavaScript Teams SDK](/javascript/api/overview/msteams-client)添加到页面，在页面加载 `microsoftTeams.initialize()` 后调用。 Teams显示你的页面，并提供Teams特定信息的访问权限，例如Teams客户端正在运行深色主题。
 
-无论你选择在频道或组还是个人范围内公开选项卡，都必须在选项卡<显示一个 iframe \> HTML 内容页。 [](~/tabs/how-to/create-tab-pages/content-page.md)对于个人选项卡，内容 URL 直接在Teams清单中由 数组中的 属性 `contentUrl` `staticTabs` 设置。 您的选项卡的内容对于所有用户都是相同的。
+无论是选择在频道、组或个人范围内公开选项卡，都必须在选项卡<iframe HTML 内容 \> 页。 [](~/tabs/how-to/create-tab-pages/content-page.md)对于个人选项卡，内容 URL 直接在Teams中的 属性在应用程序清单 `contentUrl` 中 `staticTabs` 设置。 您的选项卡的内容对于所有用户都是相同的。
 
-对于频道或组选项卡，还可以创建其他配置页面。 此页面允许您配置内容页 URL，通常使用 URL 查询字符串参数加载该上下文的适当内容。 这是因为频道或组选项卡可以添加到多个团队或群组聊天中。 每次后续安装时，您的用户可以配置选项卡，从而允许您根据需要定制体验。 当用户添加或配置选项卡时，URL 与 UI Teams用户界面 (选项卡) 。 配置选项卡只是向该 URL 添加其他参数。 例如，当您添加"Azure Boards"选项卡时，配置页允许您选择哪一个选项卡加载。 配置页面 URL 由应用清单  `configurationUrl` 的 `configurableTabs` 数组中的 属性指定。
+对于频道或组选项卡，还可以创建其他配置页面。 此页面允许您配置内容页 URL，通常使用 URL 查询字符串参数加载该上下文的适当内容。 这是因为频道或组选项卡可以添加到多个团队或群组聊天中。 每次后续安装时，用户都可以配置选项卡，从而允许您根据需求定制体验。 当用户添加或配置选项卡时，URL 与 UI Teams用户界面 (选项卡) 。 配置选项卡只是向该 URL 添加其他参数。 例如，当您添加"Azure Boards"选项卡时，配置页允许您选择哪一个选项卡加载。 配置页面 URL 由应用清单  `configurationUrl` 的 `configurableTabs` 数组中的 属性指定。
 
 你可以有多个频道或组选项卡，每个应用最多有 16 个个人选项卡。
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>可用于生成选项卡的工具
 * [Visual Studio Code 的Teams工具包](../toolkit/visual-studio-code-overview.md)
-* [Teams Toolkit Visual Stuido](../toolkit/visual-studio-overview.md)
+* [Visual Studio 的Teams工具包](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>另请参阅
 

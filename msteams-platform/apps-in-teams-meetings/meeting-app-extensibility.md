@@ -3,12 +3,12 @@ title: 会议应用可扩展性
 author: surbhigupta
 description: 了解会议应用程序扩展性
 ms.topic: conceptual
-ms.openlocfilehash: 0da7a68fec5ea3cf01adfbb4edabded23a9f3311
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: f4801c1fbaa641d539435e214f87f7f9885d2dc7
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345281"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398681"
 ---
 # <a name="meeting-app-extensibility"></a>会议应用可扩展性
 
@@ -29,10 +29,11 @@ Teams应用程序扩展性基于以下概念：
 选项卡允许团队成员访问会议内特定空间中的服务和内容。 该团队直接与选项卡协作，并展开有关选项卡中可用的工具和数据的对话。 在Teams中，用户可以通过选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>，并选择要安装的应用。
 
 > [!IMPORTANT]
-> 如果已将选项卡与会议集成，则应用必须遵循 SSO Teams单一登录 (选项卡) [身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
+> 如果已将选项卡与会议集成，则应用必须遵循选项卡的 Teams 单一登录[ (SSO) 身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 > [!NOTE]
-> 应用仅在私人安排的会议中受支持。
+> * 专用计划会议仅支持应用。
+> * 在 Web 客户端Teams会议扩展选项卡应用添加Teams选项。
 
 #### <a name="pre-meeting-app-experience"></a>会议前应用体验
 
@@ -130,11 +131,11 @@ Teams应用程序扩展性基于以下概念：
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>将机器人集成到会议生命周期
 
-在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请从[构建自动程序开始](../build-your-first-app/build-bot.md)，然后继续[为会议创建Teams应用](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)。
+在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请从生成自动程序[开始](../build-your-first-app/build-bot.md)，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)。
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>将消息传递扩展集成到会议生命周期
 
-若要实现消息传递扩展，请从[生成](../messaging-extensions/how-to/create-messaging-extension.md)消息传递扩展开始，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)。
+若要实现消息传递扩展，请从[构建](../messaging-extensions/how-to/create-messaging-extension.md)消息传递扩展开始，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)。
 
 会议Teams可扩展性允许你根据会议中的参与者角色设计应用。
 
@@ -164,15 +165,15 @@ Teams应用程序扩展性基于以下概念：
 
 以下列表详细介绍了各种用户类型及其辅助功能和性能：
 
-* **租户内**：租户内用户属于组织，拥有租户Azure Active Directory (AAD) 凭据。 他们通常是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
-* **来宾**：来宾是受邀访问组织租户中Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有与本机团队成员Teams访问团队聊天、会议和文件的访问权限的相同功能。 来宾用户可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾访问](/microsoftteams/guest-access)。
+* **租户内**：租户内用户属于组织，在租户的 AAD Azure Active Directory () 凭据。 他们通常是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
+* **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有与本机团队成员Teams访问团队聊天、会议和文件的访问权限的相同功能。 来宾用户可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾访问](/microsoftteams/guest-access)。
 * **联盟或外部**：联盟用户是Teams组织中受邀加入会议的外部用户。 联盟用户具有联盟伙伴的有效凭据，并且由联盟Teams。 他们无法访问你的团队或组织的其他共享资源。 对于外部用户来说，来宾访问是访问团队和频道的更好选择。 有关详细信息，请参阅管理[Teams 中的外部访问](/microsoftteams/manage-external-access)。
 
     > [!NOTE]
     > 你的Teams用户可以在主持与其他组织的会议或聊天时添加应用。 当用户加入由其他组织托管的会议或聊天时，用户可以使用由外部用户共享的应用。 托管用户组织的数据策略以及该用户组织共享的第三方应用的数据共享做法将生效。
 
     > [!IMPORTANT]
-    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，第三方应用会关闭GCC。 若要打开适用于用户的第三方GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
 * **匿名**：匿名用户没有 AAD 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会在会议中预测。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
 

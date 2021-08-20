@@ -1,22 +1,22 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 如何取消链接，打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
+description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: f465530dcc53ff3b0174f5b78ebf2240665a7d9e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 74f385476887ab14d9b3eac12bfb8e0735b295d5
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345274"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398674"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
 > [!NOTE]
 > 此功能仅在公共 [开发人员预览版中](../resources/dev-preview/developer-preview-intro.md) 可用。
 
-阶段视图是 UI (组件) 用户界面，允许你呈现在屏幕中全屏打开Teams固定为选项卡的内容。
+阶段视图是 UI (组件) 用户界面，允许你呈现在 Teams 中全屏打开并固定为选项卡的内容。
  
 > [!NOTE]
 > 目前，Teams客户端不支持选项卡链接取消展开和阶段视图。 移动客户端使用开发人员提供的 属性在设备的 Web 浏览器中 `websiteUrl` 打开页面。
@@ -132,10 +132,17 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | 属性名称 | 类型 | 字符数 | 说明 |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
-| `name` | 字符串 | 128 | 此属性是显示名称界面中选项卡的列数。 这是一个可选字段。|
-| `contentUrl` | 字符串 | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
-| `websiteUrl?` | 字符串 | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
-| `removeUrl?` | 字符串 | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
+| `name` | String | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
+| `contentUrl` | String | 2048 | 此属性是 https:// UI 的 URL，它指向要显示在Teams UI。 这是必填字段。|
+| `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
+| `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
+
+## <a name="code-sample"></a>代码示例
+
+| 示例名称 | 说明 | C# |Node.js|
+|-------------|-------------|------|----|
+|阶段视图中的选项卡 |Microsoft Teams阶段视图中演示选项卡的选项卡示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+    
 
 ## <a name="see-also"></a>另请参阅
 
