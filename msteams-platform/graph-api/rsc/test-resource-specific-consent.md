@@ -6,22 +6,22 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 629d798e600a3a9a9ba1cbd7fd75bdc8de13a507
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 89b9dceebfd0732fb29fe497edc000249d073aab
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528941"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822218"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在应用程序内测试特定于资源的许可Teams
 
 > [!NOTE]
 > 聊天范围的特定于资源的同意仅适用于 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md) 版。
 
-资源特定的同意 (RSC) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 有关详细信息，请参阅[RSC](resource-specific-consent.md) (资源特定的) — Microsoft Teams Graph API。
+特定于资源的 (RSC) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 有关详细信息，请参阅[RSC](resource-specific-consent.md) (资源特定的) — Microsoft Teams Graph API。
 
 > [!NOTE]
-> 若要测试 RSC 权限，Teams清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
+> 若要测试 RSC 权限，Teams应用程序清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
 >
 > - **id**：Azure AD 应用 ID，请参阅在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
 > - **resource**：任何字符串，请参阅更新应用Teams [中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
@@ -45,7 +45,8 @@ ms.locfileid: "58528941"
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
    }
 ```
@@ -68,7 +69,8 @@ ms.locfileid: "58528941"
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
    }
 ```
@@ -90,7 +92,7 @@ ms.locfileid: "58528941"
 * `token_scope`：获取令牌需要 范围。 将值设置为 https://graph.microsoft.com/.default 。
 * `teamGroupId`：可以从客户端获取团队Teams ID，如下所示：
 
-    1. 在Teams客户端 **中，Teams** 左侧导航栏中选择"导航"。
+    1. 在Teams客户端中，Teams **左侧导航** 栏中选择"导航栏"。
     2. 从下拉菜单中选择安装应用的团队。
     3. 选择" **更多选项"** 图标 (&#8943;) 。
     4. 选择 **获取团队链接**。 
@@ -104,7 +106,7 @@ ms.locfileid: "58528941"
 * `azureADAppSecret`：你的 Azure AD 应用密码。
 * `token_scope`：获取令牌需要 范围。 将值设置为 https://graph.microsoft.com/.default 。
 * `tenantId`：租户的名称或 AAD 对象 ID。
-* `chatId`：可以从 Web 客户端获取聊天Teams *ID，* 如下所示：
+* `chatId`：可以从 Web 客户端获取Teams *ID，* 如下所示：
 
     1. 在 Teams 客户端中 **，从最** 左侧导航栏中选择"聊天"。
     2. 从下拉菜单中选择应用安装位置的聊天。

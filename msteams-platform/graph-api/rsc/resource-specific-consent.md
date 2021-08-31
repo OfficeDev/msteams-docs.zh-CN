@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 授权 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: c013153470b4be54df82fa313b5d2f8dca16fe9a
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528948"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822211"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 
@@ -43,6 +43,7 @@ ms.locfileid: "58528948"
 |TeamsTab.ReadWrite.Group|更新此团队的选项卡。 |
 |TeamsTab.Delete.Group|删除此团队的选项卡。 |
 |TeamMember.Read.Group|获取此团队的成员。 |
+|TeamsActivity.Send.Group|在此团队中用户的活动源中创建新通知。 |
 
 有关详细信息，请参阅团队 [资源特定的许可权限](/graph/permissions-reference#teams-resource-specific-consent-permissions)。
 
@@ -65,6 +66,7 @@ ms.locfileid: "58528948"
 | OnlineMeeting.ReadBasic.Chat   | 读取与此聊天关联的会议的基本属性，如姓名、日程安排、组织者、加入链接和开始/结束通知。 |
 | Calls.AccessMedia.Chat         | 访问与此聊天或会议关联的通话中的媒体流。                                    |
 | Calls.JoinGroupCalls.Chat         | 加入与此聊天或会议关联的通话。                                    |
+| TeamsActivity.Send.Chat         | 在此聊天中用户的活动源中创建新通知。 |
 
 有关详细信息，请参阅 [聊天资源特定的许可权限](/graph/permissions-reference#chat-resource-specific-consent-permissions)。
 
@@ -104,7 +106,7 @@ ms.locfileid: "58528948"
 可以直接在 Azure 门户 [中启用](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) 或禁用用户同意：
 
 1. 以全局管理员或公司管理员登录 [Azure](https://portal.azure.com) [门户](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
-1. 选择  >  **Azure Active Directory Enterprise**  >  **同意和权限**  >  [**用户同意设置"。**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)
+1. 选择 **Azure Active Directory Enterprise**  >    >  **同意和权限**  >  [**用户同意设置"。**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)
 1. 使用标记为"应用程序的用户同意"的控件启用、禁用 **或限制用户同意**。 默认值为 **"允许用户同意应用"。** 若要聊天成员使用 RSC 安装应用，必须为该用户启用用户同意。
 
     ![Azure RSC 聊天配置](../../assets/images/azure-rsc-chat-configuration.png)
@@ -124,7 +126,7 @@ AAD 门户提供了一个中央平台，用于注册和配置应用。 你的应
 1. 从 **左窗格中选择"API** 权限"，然后浏览应用的 **"已配置权限"** 列表。 如果你的应用仅进行 RSC Graph API 调用，请删除该页面上的所有权限。 如果你的应用还进行非 RSC 调用，请保留所需的权限。
 
 > [!IMPORTANT]
-> AAD 门户不能用于请求 RSC 权限。 RSC 权限当前专用于安装在 Teams 客户端中的 Teams 应用程序，这些权限在 Teams 应用清单 (JSON) 文件中声明。
+> AAD 门户不能用于请求 RSC 权限。 RSC 权限当前专用于安装在 Teams 客户端中的 Teams 应用程序，这些应用程序在 Teams 应用程序清单 (JSON) 文件中声明。
 
 ## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>从应用程序获取访问Microsoft 标识平台
 
@@ -144,8 +146,8 @@ RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../..
 
 |名称| 类型 | 说明|
 |---|---|---|
-|`id` |字符串 |AAD 应用 ID。 有关详细信息，请参阅在 [AAD 门户中注册你的应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
-|`resource`|字符串| 此字段在 RSC 中没有任何操作，但必须添加该字段，并且必须具有值以避免错误响应;任何字符串将执行。|
+|`id` |String |AAD 应用 ID。 有关详细信息，请参阅在 [AAD 门户中注册你的应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
+|`resource`|String| 此字段在 RSC 中没有任何操作，但必须添加该字段，并且必须具有值以避免错误响应;任何字符串将执行。|
 |`applicationPermissions`|字符串数组|应用的 RSC 权限。 有关详细信息，请参阅特定于 [资源的权限](resource-specific-consent.md#resource-specific-permissions)。|
 
 >
@@ -172,7 +174,8 @@ RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../..
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
   }
 ```
@@ -196,7 +199,8 @@ RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../..
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
   }
 ```
@@ -206,7 +210,7 @@ RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../..
 
 ## <a name="sideload-your-app-in-teams"></a>在应用程序中旁加载Teams
 
-如果你Teams管理员允许自定义应用上传，你可以将应用直接旁加载到[](~/concepts/deploy-and-publish/apps-upload.md)特定团队或聊天。
+如果你Teams允许自定义应用上传，你可以将应用直接旁加载到特定[](~/concepts/deploy-and-publish/apps-upload.md)团队或聊天。
 
 ## <a name="check-your-app-for-added-rsc-permissions"></a>检查应用是否添加了 RSC 权限
 
@@ -217,16 +221,16 @@ RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../..
 
 ### <a name="check-your-app-for-added-rsc-permissions-in-a-team"></a>检查你的应用在团队中是否添加了 RSC 权限
 
-1. 从以下组获取团队的 **groupId** Teams。
-1. 在Teams窗格中 **，Teams** 最左侧的窗格中选择"下一个"。
+1. 从组获取 **团队的 groupId** Teams。
+1. In Teams， select **Teams** from the leftmost pane.
 1. 选择要安装应用的团队。
 1. 选择该团队 &#x25CF;&#x25CF;&#x25CF; 省略号。
 1. 从 **团队下拉菜单中选择** 获取团队链接。
 1. 复制并保存"获取团队链接"弹出对话框中的 **groupId** 值。
-1. 登录到 **"Graph资源管理器"。**
+1. 登录到 Graph **资源管理器**。
 1. 对此终结点 **进行 GET** 调用 `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` ：。 响应 `clientAppId` 中的字段将映射到应用程序清单 `webApplicationInfo.id` Teams中指定的。
 
-    ![Graph对获取团队 RSC 权限的 GET 调用的浏览器响应](../../assets/images/team-graph-permissions.png)
+    ![Graph对团队 RSC 权限的 GET 调用的浏览器响应](../../assets/images/team-graph-permissions.png)
 
 若要详细了解如何获取特定团队中安装的应用的详细信息，请参阅获取指定团队中安装的应用 [的名称和其他详细信息](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps)。
 
@@ -239,7 +243,7 @@ RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../..
 
     ![来自 Web URL 的聊天线程 ID](../../assets/images/chat-thread-id.png)
 
-1. 登录到 **"Graph资源管理器"。**
+1. 登录到 Graph **资源管理器**。
 1. 对以下 **终结点** 进行 GET 调用 `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants` ：。 响应 `clientAppId` 中的字段将映射到应用程序清单 `webApplicationInfo.id` Teams中指定的。
 
     ![Graph对聊天 RSC 权限的 GET 调用的浏览器响应](../../assets/images/chat-graph-permissions.png)
@@ -248,7 +252,7 @@ RSC 权限在应用清单 JSON 文件中声明。 将 [webApplicationInfo](../..
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **说明** | **.NET** |**Node.js** |
+| **示例名称** | **Description** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
 | Resource-Specific RSC (同意)  | 使用 RSC 调用Graph API。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 

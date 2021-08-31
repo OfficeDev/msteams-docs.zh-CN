@@ -266,12 +266,14 @@
   items:
     - name: 概述
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: 会议应用可扩展性
+    - name: 统一会议应用
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Teams 会议中应用的先决条件和 API 参考
+    - name: Teams 会议中应用的先决条件
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: 为会议启用和配置应用
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: 会议应用 API 参考
+      href: apps-in-teams-meetings/API-references.md
     - name: 在 Teams 中自定义同框场景模式
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: 构建Webhook 和连接器
@@ -346,6 +348,8 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: 使用 SSO 身份验证
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+        - name: 使用 SSO 的机器人的分步指南
+          href: sbs-bots-with-sso.yml
     - name: 消息扩展
       items:
         - name: 向邮件扩展添加身份验证
