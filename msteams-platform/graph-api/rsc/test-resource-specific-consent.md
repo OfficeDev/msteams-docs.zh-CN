@@ -6,69 +6,70 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 8dd206abd4724bd5e23217504ff45edcc580d492e7af9f10ca46d70d64488cc9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 629d798e600a3a9a9ba1cbd7fd75bdc8de13a507
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708082"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528941"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在应用程序内测试特定于资源的许可Teams
 
 > [!NOTE]
 > 聊天范围的特定于资源的同意仅适用于 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md) 版。
 
-资源特定的同意 (RSC) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织中特定的资源（团队或聊天）。 有关详细信息，请参阅[资源特定的同意 (RSC) — Microsoft Teams Graph API](resource-specific-consent.md)。
+资源特定的同意 (RSC) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 有关详细信息，请参阅[RSC](resource-specific-consent.md) (资源特定的) — Microsoft Teams Graph API。
 
 > [!NOTE]
 > 若要测试 RSC 权限，Teams清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
 >
 > - **id**：Azure AD 应用 ID，请参阅在 [Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
-> - **resource**：任何字符串，请参阅更新你的Teams [清单中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
+> - **resource**：任何字符串，请参阅更新应用Teams [中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **应用程序权限**：应用的 RSC 权限，请参阅 [特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 
 ## <a name="example-for-a-team"></a>团队示例
 ```json
 "webApplicationInfo":{
-      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-      "resource":"https://AnyString",
-      "applicationPermissions":[
-         "Channel.Create.Group",
-         "Channel.Delete.Group",
-         "ChannelMessage.Read.Group",
-         "ChannelSettings.Read.Group",
-         "ChannelSettings.Edit.Group",
-         "Member.Read.Group",
-         "Owner.Read.Group",
-         "TeamsApp.Read.Group",
-         "TeamsTab.Read.Group",
-         "TeamsTab.Create.Group",
-         "TeamsTab.Edit.Group",
-         "TeamsTab.Delete.Group",
-         "TeamSettings.Read.Group",
-         "TeamSettings.Edit.Group"
-      ]
+    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource":"https://AnyString",
+    "applicationPermissions":[
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group"
+    ]
    }
 ```
 
 ## <a name="example-for-a-chat"></a>聊天示例
 ```json
 "webApplicationInfo":{
-      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-      "resource":"https://AnyString",
-      "applicationPermissions":[
-          "ChatSettings.Read.Chat",
-          "ChatSettings.ReadWrite.Chat",
-          "ChatMessage.Read.Chat",
-          "ChatMember.Read.Chat",
-          "Chat.Manage.Chat",
-          "TeamsTab.Read.Chat",
-          "TeamsTab.Create.Chat",
-          "TeamsTab.Delete.Chat",
-          "TeamsTab.ReadWrite.Chat",
-          "TeamsAppInstallation.Read.Chat",
-          "OnlineMeeting.ReadBasic.Chat"
-      ]
+    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource":"https://AnyString",
+    "applicationPermissions":[
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat"
+    ]
    }
 ```
 
@@ -77,6 +78,8 @@ ms.locfileid: "57708082"
 
 >[!NOTE]
 >如果应用旨在支持在团队和聊天范围内安装，可以在 下的同一清单中指定团队和聊天权限 `applicationPermissions` 。
+
+>如果应用旨在访问呼叫/媒体 API，则 `webApplicationInfo.Id` 应为 Azure Bot 服务的 AAD 应用[ID。](/graph/cloud-communications-get-started#register-a-bot)
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>使用 Postman 应用测试向团队添加的 RSC 权限
 
@@ -87,7 +90,7 @@ ms.locfileid: "57708082"
 * `token_scope`：获取令牌需要 范围。 将值设置为 https://graph.microsoft.com/.default 。
 * `teamGroupId`：可以从客户端获取团队Teams ID，如下所示：
 
-    1. 在 Teams 客户端 **中，Teams** 左侧导航栏中选择"导航"。
+    1. 在Teams客户端 **中，Teams** 左侧导航栏中选择"导航"。
     2. 从下拉菜单中选择安装应用的团队。
     3. 选择" **更多选项"** 图标 (&#8943;) 。
     4. 选择 **获取团队链接**。 

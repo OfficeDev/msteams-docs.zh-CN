@@ -1,24 +1,26 @@
 ---
-title: 会议应用可扩展性
+title: 统一会议应用
 author: surbhigupta
-description: 了解会议应用程序扩展性
+description: 了解统一会议应用
 ms.topic: conceptual
-ms.openlocfilehash: f4801c1fbaa641d539435e214f87f7f9885d2dc7
-ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
+ms.openlocfilehash: 330156d28bf78723c3c6a670cc34cd97b48ad7a4
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "58398681"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528892"
 ---
-# <a name="meeting-app-extensibility"></a>会议应用可扩展性
+# <a name="unified-meetings-apps"></a>统一会议应用
 
-Teams应用程序扩展性基于以下概念：
+Teams统一会议应用基于以下概念：
 
-* 会议生命周期具有各种阶段，如会议前、会中和会议后。  
+* 会议生命周期具有不同的阶段：会议前、会议内和会议后。  
 * 会议有三种不同的参与者角色：组织者、演示者和与会者。 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
 * 会议有 [各种](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) 用户类型：租户内用户、 [来宾](/microsoftteams/guest-access)用户、 [联盟用户](/microsoftteams/manage-external-access)和匿名用户。
 
-本文介绍了有关会议生命周期以及如何在会议中集成选项卡、机器人和消息传递扩展的信息。 它提供用于标识各种参与者角色和用户类型以执行任务的信息。
+> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
+
+本文介绍了有关会议生命周期以及如何集成选项卡、聊天机器人和消息传递扩展的信息。 它标识不同的参与者角色和用户类型。
 
 ## <a name="meeting-lifecycle"></a>会议生命周期
 
@@ -26,7 +28,7 @@ Teams应用程序扩展性基于以下概念：
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>将选项卡集成到会议生命周期
 
-选项卡允许团队成员访问会议内特定空间中的服务和内容。 该团队直接与选项卡协作，并展开有关选项卡中可用的工具和数据的对话。 在Teams中，用户可以通过选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>，并选择要安装的应用。
+通过选项卡，团队成员可以访问会议内特定空间中的服务和内容。 该团队直接与选项卡协作，并展开有关选项卡中可用的工具和数据的对话。 在Teams中，可以通过选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>，然后选择要安装的应用。
 
 > [!IMPORTANT]
 > 如果已将选项卡与会议集成，则应用必须遵循选项卡的 Teams 单一登录[ (SSO) 身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
@@ -37,20 +39,20 @@ Teams应用程序扩展性基于以下概念：
 
 #### <a name="pre-meeting-app-experience"></a>会议前应用体验
 
-通过会议前应用体验，你可以查找和添加会议应用并执行会议前任务，例如开发投票以调查会议参与者。
+通过会议前应用体验，你可以查找和添加会议应用。 还可以执行会议前任务，例如开发投票以调查会议参与者。
 
 **向现有会议添加选项卡**
 
 1. 在日历中，选择要添加选项卡的会议。
 1. 选择" **详细信息"** 选项卡并选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. 将显示选项卡库。
 
-    ![会议前体验](../assets/images/apps-in-meetings/PreMeeting.png)
+    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
 
 1. 在选项卡库中，选择要添加的应用并按照所需步骤操作。 应用作为选项卡安装。
 
-    > [!NOTE]
-    > * 您还可以使用"会议聊天"选项卡向现有会议 **添加** 选项卡。
-    > * 如果投票或调查超过 10 个，则选项卡布局必须组织在一个状态。
+   > [!NOTE]
+   > * 您还可以使用"会议聊天"选项卡向现有会议 **添加** 选项卡。
+   > * 如果投票或调查超过 10 个，则选项卡布局必须组织在一个状态。
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
@@ -58,7 +60,7 @@ Teams应用程序扩展性基于以下概念：
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-将选项卡添加到桌面或 Web 上的现有会议后，可以在会议详细信息的"更多部分"下看到会议前体验中的相同应用。
+将选项卡添加到移动设备上的现有会议后，可以在会议详细信息的"更多部分"下看到会议前体验中的相同应用。
 
 <img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
@@ -86,7 +88,7 @@ Teams应用程序扩展性基于以下概念：
 
 进入会议并添加桌面或 Web 中的应用后，该应用在移动Teams应用程序部分 **下可见**。 选择 **"** 应用"以显示应用列表。 用户可以启动任何应用作为应用的会议侧面板。
 
-将显示"会议内"对话框，可在其中输入回复作为反馈。
+将显示"会议内"对话框，可在其中输入作为反馈的响应。
 
 <img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
 
@@ -97,18 +99,26 @@ Teams应用程序扩展性基于以下概念：
 
 > [!NOTE]
 > * 应用可以利用 Teams 客户端 SDK 来访问 `meetingId` 、 `userMri` 和 `frameContext` ，并适当地呈现体验。
-> * 如果成功呈现了会议内对话框，则你得到一条通知，告知已成功下载结果。
+> * 如果成功呈现会议内对话框，则它会发送成功下载结果的通知。
 > * 应用清单指定希望应用显示的位置。 上下文字段用于此目的。 它还是共享托盘体验的一部分，但需遵循指定的设计准则。
 
 下图演示了会议侧面板：
 
+# <a name="desktop"></a>[桌面设备](#tab/desktop)
+
 ![会议侧面板](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+# <a name="mobile"></a>[移动设备](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
+
+---
 
 下表介绍了应用程序在获得批准和未获得批准时的行为：
 
 |应用功能 | 应用已批准 | 应用未获得批准 |
 |---|---|---|
-| 会议可扩展性 | 该应用将显示在会议中。 | 该应用不会显示在移动客户端的会议中。 |
+| 会议可扩展性 | 该应用将显示在会议中。 | 该应用不会在移动客户端的会议中显示。 |
 
 #### <a name="post-meeting-app-experience"></a>会议后应用体验
 
@@ -131,13 +141,13 @@ Teams应用程序扩展性基于以下概念：
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>将机器人集成到会议生命周期
 
-在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请从生成自动程序[开始](../build-your-first-app/build-bot.md)，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)。
+在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请从[生成自动程序开始](../build-your-first-app/build-bot.md)，然后继续[为会议创建Teams应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>将消息传递扩展集成到会议生命周期
 
-若要实现消息传递扩展，请从[构建](../messaging-extensions/how-to/create-messaging-extension.md)消息传递扩展开始，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references)。
+若要实现消息传递扩展，请从[构建](../messaging-extensions/how-to/create-messaging-extension.md)消息传递扩展开始，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
-会议Teams可扩展性允许你根据会议中的参与者角色设计应用。
+通过Teams会议应用，你可以根据会议中的参与者角色设计应用。
 
 ## <a name="participant-roles-in-a-meeting"></a>会议中的参与者角色
 
@@ -145,9 +155,9 @@ Teams应用程序扩展性基于以下概念：
 
 默认参与者设置由组织的 IT 管理员确定。 以下是会议中的参与者角色：
 
-* **组织者**：组织者安排会议、设置会议选项、分配会议角色和启动会议。 只有拥有 M365 帐户和Teams的用户才能成为组织者，并控制与会者权限。 会议组织者可以更改特定会议的设置。 组织者可以在"会议选项" **网页上进行** 这些更改。
-* **演示** 者：演示者具有与排除项相同的组织者功能。 演示者无法从会话中删除组织者或修改会话的会议选项。 默认情况下，加入会议的参与者具有演示者角色。
-* **与会者**：与会者是受邀参加会议但无权担任演示者的用户。 与会者可以与其他会议成员交互，但不能管理任何会议设置或共享内容。
+* **组织者**：组织者安排会议、设置会议选项、分配会议角色和启动会议。 拥有用户帐户Microsoft 365许可证Teams只能是组织者，并且只能控制与会者权限。 会议组织者可以更改特定会议的设置。 组织者可以在"会议选项" **网页上进行** 这些更改。
+* **演示** 者：演示者与排除的组织者具有相同的功能。 演示者无法从会话中删除组织者或修改会话的会议选项。 默认情况下，加入会议的参与者具有演示者角色。
+* **与会者**：与会者是受邀参加会议的用户。 但与会者无权担任演示者。 与会者可以与其他会议成员交互，但不能管理任何会议设置或共享内容。
 
 > [!NOTE]
 > 只有组织者或演示者才能添加、删除或卸载应用。
@@ -158,31 +168,31 @@ Teams应用程序扩展性基于以下概念：
 
 ## <a name="user-types-in-a-meeting"></a>会议中的用户类型
 
+会议中的组织者、演示者或与会者等用户类型可以执行会议 [中的参与者角色之一](#participant-roles-in-a-meeting)。
+
 > [!NOTE]
 > 用户类型不包含在 **getParticipantRole** API 中。
 
-会议中的用户类型（如组织者、演示者或与会者）可以在会议中执行其中一 [个参与者角色](#participant-roles-in-a-meeting)。
-
 以下列表详细介绍了各种用户类型及其辅助功能和性能：
 
-* **租户内**：租户内用户属于组织，在租户的 AAD Azure Active Directory () 凭据。 他们通常是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
-* **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有与本机团队成员Teams访问团队聊天、会议和文件的访问权限的相同功能。 来宾用户可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾访问](/microsoftteams/guest-access)。
+* **租户内**：租户内用户属于组织，在租户的 AAD Azure Active Directory () 凭据。 他们是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
+* **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有Teams团队成员的相同功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾Teams。](/microsoftteams/guest-access)
 * **联盟或外部**：联盟用户是Teams组织中受邀加入会议的外部用户。 联盟用户具有联盟伙伴的有效凭据，并且由联盟Teams。 他们无法访问你的团队或组织的其他共享资源。 对于外部用户来说，来宾访问是访问团队和频道的更好选择。 有关详细信息，请参阅管理[Teams 中的外部访问](/microsoftteams/manage-external-access)。
 
     > [!NOTE]
     > 你的Teams用户可以在主持与其他组织的会议或聊天时添加应用。 当用户加入由其他组织托管的会议或聊天时，用户可以使用由外部用户共享的应用。 托管用户组织的数据策略以及该用户组织共享的第三方应用的数据共享做法将生效。
 
     > [!IMPORTANT]
-    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，第三方应用会关闭GCC。 若要打开适用于用户的第三方GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
-* **匿名**：匿名用户没有 AAD 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会在会议中预测。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
+* **匿名**：匿名用户没有 AAD 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会显示在会议中。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
 
     > [!NOTE]
     > 匿名用户继承全局默认用户级别应用程序权限策略。 有关详细信息，请参阅管理 [应用](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)。
 
 来宾或匿名用户无法添加、删除或卸载应用。
 
-下表提供了用户类型以及每个用户可以访问的功能：
+下表提供了用户类型并列出了每个用户可以访问的功能：
 
 | 用户类型 | 选项卡 | 机器人 | 消息传递扩展 | 自适应卡 | 任务模块 | 会议内的对话框 |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |

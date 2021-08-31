@@ -5,22 +5,22 @@ description: 为频道选项卡创建对话子实体聊天
 keywords: Teams 选项卡频道可配置
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: 6c2574453f00735d4441c389648df375fc1d01046d2c8f558b470efe4f3392ca
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705101"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58529005"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
-会话子实体提供了一种方法，允许用户就选项卡中的子实体（如特定任务、患者和销售机会）展开对话，而不是讨论整个选项卡（也称为实体）。 传统的频道或可配置的选项卡允许用户就选项卡进行对话，但用户需要更集中的对话。 如果内容太多，无法进行集中讨论，或者内容随着时间的推移而发生更改，使对话与显示的内容无关，则可能会出现更集中的对话的要求。 对话子实体为动态选项卡提供了更加集中的对话体验。
+会话子实体提供了一种方法，允许用户就选项卡中的子实体（如特定任务、患者和销售机会）展开对话，而不是讨论整个选项卡（也称为实体）。 传统的频道或可配置的选项卡允许用户就选项卡进行对话，但用户需要更集中的对话。 如果内容太多，无法进行集中讨论，或者内容随着时间的推移而发生更改，使对话与显示的内容无关，则可能会出现更集中的对话的要求。 会话子实体为动态选项卡提供了更加集中的对话体验。
 
-对话子实体仅在频道中受支持。 它们可用于从个人选项卡或静态选项卡创建或继续已固定到频道的选项卡中的对话。 如果你想要为用户提供一个位置来查看和访问跨多个渠道发生的对话，静态选项卡非常有用。
+对话子实体仅在频道中受支持。 它们可用于从个人选项卡或静态选项卡创建或继续已固定到频道的选项卡中的对话。 如果要为用户提供一个位置来查看和访问跨多个渠道发生的对话，静态选项卡非常有用。
 
 ## <a name="prerequisites"></a>先决条件
 
-为了支持对话子实体，您的选项卡 Web 应用程序必须能够在后端数据库中存储子实体与↔之间的映射。 `conversationId`提供了 ，但您必须存储此内容，Teams `conversationId` 以便用户继续对话。
+为了支持对话子实体，您的选项卡 Web 应用程序必须能够在后端数据库中存储子实体↔会话之间的映射。 `conversationId`提供了 ，但您必须存储它，Teams `conversationId` 以便用户继续对话。
 
 ## <a name="start-a-new-conversation"></a>启动新对话
 
@@ -61,7 +61,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 
 ## <a name="continue-a-conversation"></a>继续对话
 
-开始对话后，后续调用要求你提供与开始新对话中相同的输入， `openConversation()` 但还包括 [](#start-a-new-conversation) **conversationId**。 将在视图中为具有相应对话的用户打开对话面板。 用户能够实时查看新邮件或传入邮件。
+开始对话后，后续调用要求你提供与开始新对话相同的输入， `openConversation()` 但还包括 [](#start-a-new-conversation)**conversationId**。 将在视图中为具有相应对话的用户打开对话面板。 用户能够实时查看新邮件或传入邮件。
 
 下图显示了包含相应对话的对话面板：
 
@@ -71,7 +71,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 
 您的选项卡包含到子实体的深层链接 [，这一点很重要](~/concepts/build-and-test/deep-links.md)。 例如，用户从频道对话中选择选项卡深度链接。 预期行为是接收深度链接，打开该子实体，然后打开该子实体的对话面板。
 
-若要从个人选项卡或静态选项卡支持对话子实体，则不需要在实现中更改任何内容。 我们仅支持从已固定的频道选项卡开始或继续对话。 通过支持静态选项卡，您可以为用户提供一个位置来与您的所有子实体进行交互。 在静态选项卡中打开对话视图时，在最初在频道中创建选项卡时，保存 、 和 具有正确的属性，这一点 `subEntityId` `entityId` `channelId` 很重要。
+若要从个人选项卡或静态选项卡支持对话子实体，则不需要在实现中更改任何内容。 我们仅支持从已固定的频道选项卡开始或继续对话。 通过支持静态选项卡，您可以为用户提供一个位置来与您的所有子实体进行交互。 在静态选项卡中打开对话视图时，在最初在频道中创建选项卡时，保存 、 和 具有正确的属性， `subEntityId` `entityId` `channelId` 这一点很重要。
 
 ## <a name="close-a-conversation"></a>关闭对话
 
@@ -88,6 +88,12 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
     // console.log(conversationResponse)
 };
 ```
+
+## <a name="code-sample"></a>代码示例
+
+| 示例名称 | 说明 | C# |Node.js|
+|-------------|-------------|------|----|
+|创建"对话"选项卡| Microsoft Teams创建对话选项卡的选项卡示例应用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 

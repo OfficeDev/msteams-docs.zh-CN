@@ -6,18 +6,18 @@ keywords: teams 选项卡组频道可配置
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f3781cdf8be3bf39480511258616c1e5dc5dedc107910480a3b02758fa28610c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 67b4a0ae121acfe53b99dbc56d47dda27f2bf1a5
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708347"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528787"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
 配置页是一种特殊类型 [的内容页](content-page.md)。 用户使用配置页面配置 Microsoft Teams应用的一些方面，并使用以下配置：
 
-* 频道或群聊选项卡：从用户收集信息，并设置要 `contentUrl` 显示的内容页的 。
+* 频道或群聊选项卡：从用户收集信息，并设置 `contentUrl` 要显示的内容页的 。
 * 消息传递 [扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
 * 一[Office 365连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
@@ -141,7 +141,7 @@ ms.locfileid: "57708347"
 ...
 ```
 
-上载页面后，Teams使用相关值更新查询字符串占位符。 在配置页中包括用于检索和使用这些值的逻辑。 有关使用 URL 查询字符串的信息，请参阅 MDN Web Docs 中的 [URLSearchParams。](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) 下面的代码示例提供了从 属性中提取值 `configurationUrl` 的方法：
+上载页面后，Teams相关值更新查询字符串占位符。 在配置页中包括用于检索和使用这些值的逻辑。 有关使用 URL 查询字符串的信息，请参阅 MDN Web Docs 中的 [URLSearchParams。](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) 下面的代码示例提供了从 属性中提取值 `configurationUrl` 的方法：
 
 ```html
 <script>
@@ -178,18 +178,18 @@ document.write(getId());
 
 ## <a name="context-and-authentication"></a>上下文和身份验证
 
-在允许用户配置你的应用之前进行身份验证。 否则，您的内容可能包括具有其身份验证协议的源。 有关详细信息，请参阅在"身份验证["选项卡中Microsoft Teams用户。](~/tabs/how-to/authentication/auth-flow-tab.md)使用上下文信息构建身份验证请求和授权页面 URL。 确保 选项卡页中使用的所有域都列在 `manifest.json` 和 `validDomains` 数组中。
+在允许用户配置你的应用之前进行身份验证。 否则，您的内容可能包含具有其身份验证协议的源。 有关详细信息，请参阅在"身份验证["选项卡中Microsoft Teams用户。](~/tabs/how-to/authentication/auth-flow-tab.md)使用上下文信息构建身份验证请求和授权页面 URL。 确保 选项卡页中使用的所有域都列在 `manifest.json` 和 `validDomains` 数组中。
 
 ## <a name="modify-or-remove-a-tab"></a>修改或删除选项卡
 
-将清单的 属性设置为 ，以便用户能够修改、重新配置或 `canUpdateConfiguration` `true` 重命名频道或组选项卡。此外，通过包括应用中的删除选项页面和在配置中设置属性的值，指示删除选项卡时内容会发生什么 `removeUrl`  `setSettings()` 情况。 用户可以卸载个人选项卡，但不能修改它们。 有关详细信息，请参阅 [为选项卡创建删除页面](~/tabs/how-to/create-tab-pages/removal-page.md)。
+将清单的 属性设置为 ，以便用户能够修改、重新配置或 `canUpdateConfiguration` `true` 重命名频道或组选项卡。此外，通过包括应用中的删除选项页和在配置中设置属性的值，指示删除选项卡时内容 `removeUrl`  `setSettings()` 会发生什么情况。 用户可以卸载个人选项卡，但不能修改它们。 有关详细信息，请参阅 [为选项卡创建删除页面](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
 `setSettings()`Microsoft Teams删除页面的配置：
 
 ```javascript
 microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
-    entityId: "add unique name here",
+    entityId: "add a unique identifier here",
     suggestedDisplayName: "add name to display on tab here",
     websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
     removeUrl: "add removal page URL here"

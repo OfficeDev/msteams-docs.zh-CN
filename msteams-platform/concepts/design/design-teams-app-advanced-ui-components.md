@@ -5,20 +5,20 @@ description: 了解跨应用程序使用的 UI Teams。
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: a23cd05947ac2d9d4e8117420bf2e2c11613e430989613bf2d267e5c892bf39c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 90dcf95cfde1d7c6c2878da7a10d8b3b0245de3f
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703486"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408690"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI Microsoft Teams设计应用
 
-以下组件是基本[UI](~/concepts/design/design-teams-app-basic-ui-components.md)组件的组合，可用于常见Teams设计情况，如导航。
+以下组件是基本[UI](~/concepts/design/design-teams-app-basic-ui-components.md)组件的组合，可用于常见设计Teams，如导航。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成应用而设计的组件Teams模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
+基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成 Teams 应用而设计的组件和模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
@@ -32,15 +32,13 @@ ms.locfileid: "57703486"
 * 通信层次结构
 * 导航
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="示例在桌面上显示痕迹导航模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="示例演示移动版痕迹导航模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="示例在桌面上显示痕迹导航模板。" border="false":::
 
 ## <a name="left-nav"></a>左导航
 
@@ -51,19 +49,17 @@ ms.locfileid: "57703486"
 * 浏览"页面"选项卡Teams页面。
 * 将复杂应用分解为多个页面。
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="示例在桌面上显示左侧导航模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="示例显示移动版上的左侧导航模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="示例在桌面上显示左侧导航模板。" border="false":::
 
 ## <a name="notification-bar"></a>通知栏
 
-通知栏是一个专用区域，用于显示无需用户立即采取措施的简短重要消息。 特定背景颜色和图标与特定类型的邮件相关联， (请参阅下面的) 。
+通知栏是一个专用区域，用于显示无需用户立即采取措施的简短重要消息。 特定背景颜色和图标与特定类型的消息相关联， (请参阅下面的) 。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -71,15 +67,13 @@ ms.locfileid: "57703486"
 * 成功消息
 * 信息性或促销性消息
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="示例显示桌面上的通知栏 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="示例显示移动设备上的通知栏 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="示例显示桌面上的通知栏 UI 模板。" border="false":::
 
 ## <a name="stage"></a>阶段
 
@@ -92,17 +86,15 @@ ms.locfileid: "57703486"
 * 在浏览器内的较大图面Teams而不是其他应用或浏览器
 * 聚焦媒体或其他丰富内容
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="示例在桌面上显示阶段模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 你的应用可以从自适应卡片、共享链接或视觉组件启动阶段 (如图表) 。
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="示例演示移动设备上的阶段模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="示例在桌面上显示阶段模板。" border="false":::
 
 ## <a name="toolbar"></a>工具栏
 
@@ -114,12 +106,10 @@ ms.locfileid: "57703486"
 * 上下文筛选器和查找
 * 导航和痕迹导航
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="示例在桌面上显示工具栏模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="示例显示移动设备上的工具栏模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="示例在桌面上显示工具栏模板。" border="false":::

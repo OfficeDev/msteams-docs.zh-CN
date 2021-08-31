@@ -1,16 +1,16 @@
 ---
 title: 了解应用的用例
 author: heath-hamilton
-description: 在规划Microsoft Teams应用时，应首先了解应用尝试解决的问题。
+description: 在规划Microsoft Teams应用时，你应该首先了解你的应用正在尝试解决的问题。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 5171ce800c09c31486cfddcffcca7069ed81f0bf8d913876acaaaef4144d7bf7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6669492c25cb3701f5c937b3f99e39d411fbc4a4
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703171"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408542"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
@@ -18,7 +18,7 @@ Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../
 > [!NOTE]
 > 在开始构建用例之前，你必须深入了解Teams功能，以及使用这些功能的 Teams功能。
 
-与用户交互的每个方法都有其优点和缺点。 在应用中Teams出色的功能与找到满足用户需求的正确组合有关。 如果要满足这些需求，首先需要了解这些需求。
+与用户交互的每个方法都有其优点和缺点。 构建出色的Teams应用就是找到满足用户需求所需的正确组合。 如果要满足这些需求，首先需要了解这些需求。
 
 ## <a name="understand-the-problem"></a>了解问题
 
@@ -30,7 +30,7 @@ Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../
 
 ## <a name="understand-your-user"></a>了解用户
 
-了解你的用户是谁，并且你可以确定正确的分发模型，但更重要的是，它可以帮助你确定用户如何使用Teams。 提出相关问题，例如：
+了解用户是谁，并识别正确的分发模型，但更重要的是，它可以帮助您确定用户如何使用Teams。 提出相关问题，例如：
 
 * 用户主要是移动客户端上的一线工作人员吗？
 * 你是否希望大量来宾用户需要访问你的应用？
@@ -51,7 +51,7 @@ Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../
 
 ## <a name="provide-authentication"></a>提供身份验证
 
-您必须提前确定是否需要保护要公开的服务以及处于什么级别。 请记住，Teams应用程序中公开的 Web 服务通过 Internet 公开提供。 因此，如果你需要保护他们，立即开始思考它。 如果需要一个解决方案，要求您为租户之外的用户提供来宾访问，则需要设置访问限制和权限来保护机密信息。 需要考虑来宾用户访问的限制，需要设计应用。 因此，请提问，例如： 
+您必须提前确定是否需要保护要公开的服务以及处于什么级别。 请记住，Teams中公开的 Web 服务通过 Internet 公开提供。 因此，如果你需要保护他们，立即开始思考它。 如果需要一个解决方案，要求您为租户之外的用户提供来宾访问，则需要设置访问限制和权限来保护机密信息。 需要考虑来宾用户访问的限制，需要设计应用。 因此，请提问，例如： 
 
 * 用户将基于其角色访问不同的数据视图吗？
 * 是否涉及 PII？
@@ -60,7 +60,7 @@ Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../
 
 ## <a name="decide-what-goes-in-teams"></a>确定要Teams
 
-无论是构建新的解决方案还是将现有解决方案引入Teams，决定整个应用是否将位于 Teams 客户端中非常重要。 检查仅引入部分体验是否有意义。 通过选项卡、消息传递扩展、任务模块、自适应卡片和对话机器人的组合，你可以完全在 Teams。
+无论是构建新的解决方案，还是将现有解决方案引入Teams，决定整个应用是否将位于 Teams 客户端中非常重要。 检查仅引入部分体验是否有意义。 通过选项卡、消息传递扩展、任务模块、自适应卡片和对话机器人的组合，你可以完全在 Teams。
 请记住您的用户是谁以及您尝试解决的问题。 他们已有一个系统来解决大多数问题，或者你只需将功能的一个子集扩展到Teams？ 通常，如果要引入解决方案的一部分，则必须专注于共享、协作、启动和监视工作流。
 
 ## <a name="plan-the-onboarding-experience"></a>规划载入体验
@@ -76,13 +76,6 @@ Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../
 ## <a name="plan-for-the-future"></a>规划未来
 
 确定用户希望在当前解决方案中具有的新功能。 如果你有要添加到应用的新功能的路线图，则设计和体系结构将受到影响。
-
-## <a name="see-also"></a>另请参阅
-
-* [选择如何发布应用程序](../deploy-and-publish/apps-publish-overview.md)
-* [设计选项卡](../../tabs/design/tabs.md)
-* [设计机器人](../../bots/design/bots.md)
-* [生成首个 Microsoft Teams 应用](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>后续步骤
 

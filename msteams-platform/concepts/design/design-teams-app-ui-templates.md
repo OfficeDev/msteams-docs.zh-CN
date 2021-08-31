@@ -1,20 +1,20 @@
 ---
 title: 使用 UI 模板设计应用
 author: heath-hamilton
-description: 使用通常在整个应用中看到的标准化 UI 组件、布局和模式更快地Microsoft Teams。
+description: 使用通常在整个应用中看到的标准化 UI 组件、布局和模式更快地设计Microsoft Teams。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 7d46829be50e6c88dc7629376437878a4b5fecf93d82e805a12093c96b3677ba
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6405c8a35b9d80c0a7fbcb9d28ae5e1a637a2ea6
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702842"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408677"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI Microsoft Teams设计应用
 
-使用 UI Microsoft Teams更快地设计应用。 这些模板是一组基于 ui Fluent的组件的集合，这些组件适用于常见Teams用例，让你有更多的时间来为用户找到最佳体验。
+使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 UI Fluent的组件的集合，这些组件适用于常见的 Teams 用例，让你有更多的时间来为用户找到最佳体验。
 
 ## <a name="getting-started-with-tools-and-samples"></a>工具和示例入门
 
@@ -34,7 +34,7 @@ ms.locfileid: "57702842"
 > [!div class="nextstepaction"]
 > [尝试 UI 库 (场) ](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-将这些模板和相关组件直接导入到Teams应用项目中。
+直接将这些模板和相关组件导入到Teams应用项目中。
 
 > [!div class="nextstepaction"]
 > [获取 UI 库 (GitHub) ](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
@@ -56,15 +56,13 @@ ms.locfileid: "57702842"
 * 报告指标
 * 在一个地方组织不同的信息
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="示例显示桌面上的仪表板 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="示例显示移动设备上的仪表板 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="示例显示桌面上的仪表板 UI 模板。" border="false":::
 
 ## <a name="data-visualization"></a>数据可视化
 
@@ -75,15 +73,13 @@ ms.locfileid: "57702842"
 * 显示复杂信息
 * 创建仪表板
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="示例显示桌面上的数据可视化 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="示例演示移动设备上的数据可视化 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="示例显示桌面上的数据可视化 UI 模板。" border="false":::
 
 ## <a name="empty-state"></a>空状态
 
@@ -96,19 +92,17 @@ ms.locfileid: "57702842"
 * 成功消息
 * 错误消息
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="示例在桌面上显示空状态 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="示例显示移动设备上的空状态 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
 
-## <a name="filter"></a>筛选器
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="示例在桌面上显示空状态 UI 模板。" border="false":::
 
-利用筛选器，您可以根据所选条件减少看到的信息。 您可以将筛选器与表、列表、卡片和其他用于组织内容的组件一起包含。
+## <a name="filter"></a>筛选
+
+利用筛选器，您可以根据所选条件减少看到的信息。 您可以将筛选器与表、列表、卡片以及组织内容的其他组件一起包含。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -132,15 +126,13 @@ ms.locfileid: "57702842"
 * 设置
 * 用户输入集合
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="示例在桌面上显示表单 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="示例显示移动设备上的表单 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="示例在桌面上显示表单 UI 模板。" border="false":::
 
 ## <a name="list"></a>列表
 
@@ -151,33 +143,29 @@ ms.locfileid: "57702842"
 * 显示数据
 * 应用内容的上下文操作
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="示例显示桌面上的列表 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="示例显示移动设备上的列表 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="示例显示桌面上的列表 UI 模板。" border="false":::
 
 ## <a name="sign-in"></a>登录
 
-你可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括单一登录 (SSO) ，建议这样做以简化身份验证体验。
+您可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括 SSO (单一) ，建议这样做以简化身份验证体验。
 
 ### <a name="top-use-case"></a>热门用例
 
 * 对用户进行身份验证
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="示例显示桌面上的登录 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="示例显示移动设备上的登录 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="示例显示桌面上的登录 UI 模板。" border="false":::
 
 ## <a name="settings"></a>设置
 
@@ -199,15 +187,13 @@ ms.locfileid: "57702842"
 * 集体讨论。 在不同类别中添加想法
 * 对练习进行排序。 将任何类型的信息组织到存储桶
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="示例在桌面上显示任务板 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="示例显示移动设备上的任务板 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="示例在桌面上显示任务板 UI 模板。" border="false":::
 
 ## <a name="wizard"></a>向导
 
@@ -215,16 +201,14 @@ ms.locfileid: "57702842"
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 设置
+* 安装
 * 载入
 * 首次运行体验
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="示例在桌面上显示向导 UI 模板。" border="false":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="示例显示移动设备上的向导 UI 模板。" border="false":::
 
----
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="示例在桌面上显示向导 UI 模板。" border="false":::

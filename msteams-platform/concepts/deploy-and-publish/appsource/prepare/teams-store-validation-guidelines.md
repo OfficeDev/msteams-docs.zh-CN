@@ -1,19 +1,19 @@
 ---
-title: Microsoft Teams应用商店验证指南
-description: 介绍提交到 AppSource 应用商店Teams应用 (应用) 必须遵循的准则。
+title: Microsoft Teams应用商店验证准则
+description: 介绍提交到 AppSource 应用商店应用商店Teams应用 (必须遵循) 准则。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 3902c714970ed6e7214e4345dcbe162f28d26487
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703605"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408536"
 ---
-# <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams应用商店验证指南
+# <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams应用商店验证准则
 
-遵循这些准则会增加你的应用通过应用商店Microsoft Teams提交过程的可能性。 这些Teams准则[补充了](/legal/marketplace/certification-policies)Microsoft 商业市场认证策略，并经常进行更新以反映新功能、用户反馈和业务规则更改。
+遵循这些指南会增加你的应用通过应用商店Microsoft Teams提交过程的可能性。 这些Teams准则[补充了](/legal/marketplace/certification-policies)Microsoft 商业市场认证策略，并经常进行更新以反映新功能、用户反馈和业务规则更改。
 
 > [!NOTE]
 > 某些指南可能不适用于你的应用。 例如，如果你的应用不包括自动程序，你可以忽略与机器人相关的指南。
@@ -22,13 +22,13 @@ ms.locfileid: "57703605"
 
 ### <a name="app-name"></a>应用名称
 
-应用名称在用户如何在应用商店中发现它中扮演关键角色。 对于应用名称，请记住以下几点：
+应用名称在用户如何在应用商店中发现它中扮演关键角色。 对于应用名称，请记住以下事项：
 
 * 该名称必须包含与用户相关的术语。
-* 核心Teams功能的名称&#8212;如聊天、联系人、日历、呼叫、**文件**、活动 **、Teams、** 应用和帮助&#8212;不应包含在你的应用名称中。   
+* 核心 Teams 功能的名称&#8212;如聊天、联系人、日历、呼叫、**文件**、活动 **、Teams、** 应用和帮助&#8212;不应包含在你的应用名称中。   
 * 常用名词必须以开发人员的姓名作为前缀或后缀 (例如 **，Contoso Tasks** 而不是 **Tasks**) 。
-* 不得使用 **Teams** 或可能错误地指示共同品牌或共同销售的其他 Microsoft 产品名称。  (有关引用 Microsoft 软件、产品和服务详细信息，请参阅 [Microsoft 商标](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general) 和品牌指南) 。
-* 如果你的应用是与 Microsoft 官方合作关系的一部分，则应用名称必须先 (例如 **Contoso Connector for Microsoft Teams**) 。
+* 不得使用 **Teams** 或可能错误地指示共同品牌或共同销售的其他 Microsoft 产品名称。  (有关引用 Microsoft 软件、产品和服务的信息，请参阅 [Microsoft 商标和](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general) 品牌准则) 。
+* 如果你的应用是与 Microsoft 官方合作关系的一部分，则应用名称必须先 (，例如 **Contoso Connector for Microsoft Teams**) 。
 * 不得复制应用商店中列出的应用名称或商业市场的其他产品/服务。
 * 不得包含冒犯性或冒犯性术语。 该名称不得包含种族或文化不敏感的语言。
 * 必须是唯一的。 例如，你不能为同一名称和功能不同的区域列出多个应用。
@@ -37,7 +37,7 @@ ms.locfileid: "57703605"
 
 应用内容必须适用于常规工作场所使用，并遵守商业市场认证策略中列出的所有限制。 禁止与政治、时政、娱乐和长期娱乐相关的内容。 有关详细信息，请参阅商业 [市场认证策略](/legal/marketplace/certification-policies#10010-inappropriate-content)。
 
-你的应用必须促进组协作、提高个人工作效率或同时提高这两者。 用于团队绑定和社交的应用必须协作且专为多个参与者设计。 这些类型的应用也不应要求大量时间投资或对工作效率产生明显影响。
+你的应用必须促进组协作、提高个人工作效率或同时提高这两者。 用于团队绑定和社交的应用必须协作且专为多个参与者设计。 这些类型的应用也不应要求大量时间投入或对工作效率产生明显影响。
 
 ### <a name="similar-platforms-and-services"></a>类似的平台和服务
 
@@ -45,29 +45,29 @@ ms.locfileid: "57703605"
 
 ### <a name="feature-names"></a>功能名称
 
-按钮和其他 UI 文本中的应用功能名称不得与为 microsoft Teams和其他 Microsoft 产品保留的术语冲突。 例如，"**开始会议****"、"呼叫"** 或"**开始聊天"。** 如果无法完全避免这种情况，请包含你的应用名称，例如"开始 **Contoso 会议**"，而不是"**开始会议"。**
+按钮和其他 UI 文本中的应用功能名称不得与为 microsoft 和其他 Microsoft 产品Teams术语冲突。 例如，"**开始会议****"、"呼叫"** 或"**开始聊天"。** 如果无法完全避免这种情况，请包含你的应用名称，例如"开始 **Contoso 会议**"，而不是"开始 **会议"。**
 
 ## <a name="security"></a>安全性
 
 ### <a name="microsoft-365-app-compliance-program"></a>Microsoft 365 应用合规计划
 
-应用[Microsoft 365合规性](/microsoft-365-app-certification/overview)计划旨在帮助组织通过评估应用的安全性和合规性信息来评估和管理风险。 如果要将应用发布到应用商店Teams应用商店，则必须完成程序的以下层：
+应用[Microsoft 365合规性](/microsoft-365-app-certification/overview)计划旨在帮助组织通过评估应用的安全性和合规性信息来评估和管理风险。 如果要将应用发布到 Teams 应用商店，则必须完成程序的以下层：
 
-* [Publisher验证](/azure/active-directory/develop/publisher-verification-overview)：帮助管理员和最终用户了解与应用程序开发人员集成的应用程序开发人员Microsoft 标识平台。 完成后，Azure AD 对话框和其他屏幕上会显示一个蓝色Azure Active Directory (") "锁屏提醒。 有关详细信息，请参阅 [常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、 [如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)应用标记为发布者验证和发布者 [验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。
-* [Publisher证明](/microsoft-365-app-certification/docs/attestation)：一个共享常规、数据处理以及安全性和合规性信息以帮助潜在客户就使用你的应用做出明智决定的过程。
+* [Publisher验证](/azure/active-directory/develop/publisher-verification-overview)：帮助管理员和最终用户了解与应用程序开发人员集成的应用程序开发人员Microsoft 标识平台。 完成后，Azure AD 对话框和其他屏幕上将显示蓝色Azure Active Directory (") "锁屏提醒。 有关详细信息，请参阅 [常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、 [如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)你的应用标记为发布者验证和发布者 [验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。
+* [Publisher证明](/microsoft-365-app-certification/docs/attestation)：共享常规、数据处理以及安全性和合规性信息以帮助潜在客户就使用你的应用做出明智决定的过程。
 
 > [!NOTE]
-> 如果你要提交之前未列出的应用，则你无法正式完成 Publisher 证明，直到你的应用位于 Teams 应用商店中。 如果要更新列出的应用，请Publisher应用的最新版本之前完成"证明"。
+> 如果你要提交之前未列出的应用，则你无法正式完成Publisher证明，直到你的应用位于 Teams 应用商店中。 如果要更新列出的应用，请Publisher应用最新版本之前完成"证明"。
 
 ### <a name="bots"></a>机器人
 
-对于使用 Microsoft Azure Bot Service (（如聊天机器人和消息传递扩展) ）的应用，必须遵循 Microsoft Online Services 条款中定义[的所有要求](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)。
+对于使用自动程序Microsoft Azure服务 (聊天机器人和消息传递扩展) ，必须遵循 Microsoft Online Services 条款中定义[的所有要求](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)。
 
-自动程序必须始终请求上传文件的权限，在文件上载后显示确认消息。
+自动程序必须始终请求上传文件的权限，文件上载后显示确认消息。
 
 ### <a name="external-domains"></a>外部域
 
-在大多数情况下，不得将组织控制权限之外的域 (包括) 域配置中的通配符和隧道服务。 以下例外包括：
+在大多数情况下，不得将组织控制权限之外的域 (包括通配符) 和应用的域配置中的隧道服务。 以下例外包括：
 
 * 如果你的应用使用 Azure Bot Service 的 OAuthCard，则必须包含为有效的域，否则"登录" `token.botframework.com` 按钮将不起作用。 
 * 如果你的应用依赖于SharePoint，可以使用 context 属性将关联的根SharePoint网站作为有效 `{teamSiteDomain}` 域。
@@ -83,7 +83,7 @@ ms.locfileid: "57703605"
 * **登录、注销和注册体验**：
   * 依赖于外部帐户或服务的应用必须提供清晰而简单的登录、注销和注册体验。
   * 当用户注销时，他们只能从应用注销，并仍登录到Teams。
-* 内容共享体验：需要与外部服务进行身份验证以在 Teams 频道中共享内容的应用必须在帮助文档 (或类似资源中清楚地说明) 如果外部服务支持该功能，如何断开连接或取消共享内容。 这并不意味着取消共享内容的能力必须存在于你的Teams应用中。
+* 内容共享体验：需要与外部服务进行身份验证以在 Teams 频道中共享内容的应用必须在帮助文档 (或类似资源) 如果外部服务支持该功能，则必须清楚地说明如何断开连接或取消共享内容。 这并不意味着取消共享内容的能力必须存在于你的Teams应用中。
 
 #### <a name="government-community-cloud-listings"></a>政府社区云列表
 
@@ -93,7 +93,7 @@ ms.locfileid: "57703605"
 
 你的应用不得发布敏感数据，例如信用卡或财务付款方式数据。 该应用还不得向不适合查看该内容 (访问群体) 运行状况、联系人跟踪或其他个人身份信息。
 
-在应用将任何文件或可执行文件下载到用户 (.exe) 环境之前警告用户。
+在应用将任何文件或可执行文件下载到 (.exe) 计算机或环境中之前警告用户。
 
 ### <a name="financial-information"></a>财务信息
 
@@ -101,10 +101,10 @@ ms.locfileid: "57703605"
 
 只有在用户同意使用应用之前，在使用条款、隐私策略或任何配置文件页或网站中进行了适当的披露，才能链接到安全的外部付款服务。
 
-在 iOS 或 Android 版本上运行Teams必须遵循以下准则：
+在 iOS 或 Android 版本上运行Teams必须遵守以下准则：
 
 * 应用不得包括旨在向上销售付费版本的应用内购买、试用产品/服务或 UI，或指向在线商店（用户可以购买或获取其他内容、应用或外接程序）的链接。
-* 如果你的应用需要帐户，用户必须能够免费注册帐户。 禁止 **使用"免费** "或 **"免费帐户** "一词。
+* 如果你的应用需要帐户，用户必须能够免费注册帐户。 禁止使用"免费 **"或****"免费帐户**"一词。
 * 你可以确定帐户是无限期处于活动状态还是有限时间处于活动状态，但如果帐户过期，则可能不会显示任何指示需要付款的 UI、文本或链接。
 * 您的应用程序的隐私策略和使用条款页面不得包含任何与商业相关的 UI 或链接。
 
@@ -114,7 +114,7 @@ ms.locfileid: "57703605"
 
 应用不得使用户无法Teams核心用户方案。 应用内容和交互可以在Teams（如机器人、卡片和任务模块）内发生。
 
-您应将用户链接到 Teams，而不是外部站点或应用。 对于需要外部功能的方案，你的应用必须具有启动该功能的显式用户权限。
+您应将用户链接到 Teams中的某位置，而不是外部站点或应用。 对于需要外部功能的方案，你的应用必须具有启动该功能的显式用户权限。
 
 ### <a name="compatibility"></a>兼容性
 
@@ -132,7 +132,7 @@ ms.locfileid: "57703605"
 
 Teams应用必须在合理的时间范围内做出响应，这因功能而异。
 
-* 选项卡必须在三秒钟内响应，或显示加载的消息或警告。
+* 选项卡必须在三秒钟内做出响应，或者显示加载的消息或警告。
 * 机器人必须在两秒钟内响应用户命令或显示键入指示器。
 * 消息扩展必须在五秒钟内响应用户命令。
 * 通知必须在用户操作五秒钟内显示。
@@ -143,19 +143,19 @@ Teams应用必须在合理的时间范围内做出响应，这因功能而异。
 
 ### <a name="app-manifest"></a>应用部件清单
 
-应用Teams清单定义应用配置。
+应用程序Teams定义应用的配置。
 
 * 清单必须符合最新的清单架构。 有关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。
 * 如果你的应用包含自动程序或消息传递扩展，则清单必须与 Bot Framework 元数据（包括自动程序名称、徽标、隐私策略链接和服务条款链接）一致。
-* 如果你的应用使用 Azure Active Directory (Azure AD) 进行身份验证，在清单中包括 Azure AD 应用程序 (客户端) ID。 有关详细信息，请参阅清单 [参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* 如果你的应用使用 Azure Active Directory (Azure AD) 进行身份验证，请包含 Azure AD 应用程序 (清单) 客户端 ID。 有关详细信息，请参阅清单 [参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ### <a name="app-icons"></a>应用图标
 
 图标是用户浏览应用商店时看到的主要Teams之一。 图标应传达应用的品牌和用途，同时遵循以下要求：
 
 * 应用包必须包含两个 PNG 版本的应用图标：颜色图标和大纲图标。
-* 图标的颜色版本在大多数应用场景中Teams必须为 192x192 像素。 图标符号 (96x96 像素) 可以是任何颜色，但它必须位于纯色或完全透明的方形背景上。
-* 图标的大纲版本会在你的应用在使用中时和在 Teams 左侧的应用栏上显示"弯曲"以及用户固定应用的消息扩展时。 它必须是 32x32 像素，并且可以是白色（背景透明）或透明（白色背景 (不允许使用任何其他颜色) 。 图标不应在符号周围有任何额外的填充。
+* 图标的颜色版本在大多数情况下都Teams，并且必须为 192x192 像素。 图标符号 (96x96 像素) 可以是任何颜色，但它必须位于纯色或完全透明的方形背景上。
+* 图标的大纲版本在应用使用和在 Teams 左侧的应用栏上显示"弯曲"时，以及当用户固定应用的消息扩展时。 它必须是 32x32 像素，并且可以是白色（背景透明）或透明（白色背景 (不允许使用任何其他颜色) 。 图标不应在符号周围有任何额外的填充。
 * 应用包中必须包含大小正确和格式正确的图标。 图标还必须与使用应用商店一览元数据提交内容匹配。
 
 有关详细信息、最佳做法和示例，请参阅应用Teams[指南](~/concepts/build-and-test/apps-package.md#app-icons)。
@@ -164,7 +164,7 @@ Teams应用必须在合理的时间范围内做出响应，这因功能而异。
 
 必须对你的应用进行简短而详细的说明。 应用配置和合作伙伴中心中的说明必须相同。
 
-说明不应直接或通过输入来说明 Microsoft 拥有 (其他品牌) 。 确保你的说明不包含无法显示 (例如，"保证效率提高 200%") 。
+说明不应直接或通过输入来说明 Microsoft 拥有 (品牌或其他) 。 确保你的说明不包含无法显示 (例如，"保证效率提高 200%") 。
 
 #### <a name="short-description"></a>简短说明
 
@@ -183,22 +183,27 @@ Teams应用必须在合理的时间范围内做出响应，这因功能而异。
 
 #### <a name="long-description"></a>较长说明
 
-长描述可以提供极具吸引力的叙述，其中突出显示了应用的价值主张、主要受众和目标行业。 虽然此说明可以有 4，000 个字符，但大多数用户只能阅读 300 到 500 个单词。
+长描述可提供极具吸引力的叙述，重点介绍应用的价值主张、主要受众和目标行业。 虽然此说明可以有 4，000 个字符，但大多数用户只能阅读 300 到 500 个单词。
 
 **应做：**
 
 * 使用 [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) 设置说明的格式。
-* 使用活动语音并直接与用户通话。 例如， *您可以 ...*。
+* 使用活动语音并直接与用户通话。 例如， *可以 ...*。
 * 列出带项目符号的功能，以便更轻松地扫描说明。
 * 在用户安装应用之前，请清楚地描述列表和相关材料中所述的功能、功能和可交付结果的限制、条件或例外。 应用Teams的功能必须与一览描述的核心功能相关。
 * 包括帮助或支持链接。
 * 请参阅 **Microsoft 365** 而不是 **Office 365**。
 * 如果需要引用 Teams **，请** 编写第一个引用作为 **Microsoft Teams**。 后续引用可以缩短为 **Teams**。
-* 在描述应用如何与应用或应用一起Teams (以下Microsoft 365) ：
+* 在描述应用如何与应用或应用Teams (或Microsoft 365) ：
   * "...适用于Microsoft Teams。"
   * "...使用 Microsoft Teams。"
   * "...内部Microsoft Teams。"
   * "...for Microsoft Teams."
+  * "...与 Microsoft Teams 集成。"
+  * "...专为..."
+  * "...针对..."
+  * "...专为..."
+
 
 **不应做：**
 
@@ -206,18 +211,11 @@ Teams应用必须在合理的时间范围内做出响应，这因功能而异。
 * 将 **Microsoft** 缩写为 **MS 或** **MSFT**。
 * 指示应用是 Microsoft 提供的产品/服务，包括使用 Microsoft 标志或标签。
 * 使用您不拥有的受版权保护的品牌名称。
-* 包括拼写错误、语法错误和不必要的大写 (例如 **，Users（** 而不是 **用户** ）) 。
+* 包括拼写错误、语法错误和不必要的大写 (例如 **，Users** 而不是 **) 。**
 * 包括指向 AppSource 的链接。
 * 除非你是经过认证的 Microsoft 合作伙伴，否则请使用以下语言：
-  * "...与 Microsoft Teams 集成"
-  * "...与 ...集成
-  * "...为 ...而生成"
-  * "...基于 ..."
-  * "...在 ..."
-  * "...enabled by ..."
   * "...认证..."
-  * "...针对 ..."
-  * "...专为 ..."
+  * "...由 ..."
 
 ### <a name="screenshots"></a>屏幕截图
 
@@ -230,20 +228,20 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 **应做：**
 
-* 重点关注应用的功能，例如 (机器人用户如何与) 。
+* 专注于你的应用的功能，例如 (用户如何与自动程序通信) 。
 * 包括准确表示你的应用的内容。
 * 使用文本时要十分明智。
-* 具有反映品牌和包含营销内容的颜色的帧屏幕截图，与 [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) 一览示例类似 (维度要求适用于整个图像，而不只是应用于) 。
+* 具有反映品牌和包含营销内容的颜色的帧屏幕截图，与 [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) 一览示例类似 (维度要求适用于整个图像，而不只是应用于屏幕截图) 。
 
 **不应做：**
 
 * 显示特定设备，如手机或笔记本电脑。
 * 显示不在应用中的部件版式或 UI。
-* 捕获Teams中的任意浏览器或浏览器 UI。
+* 在屏幕截图Teams任何内容或浏览器 UI。
 * 包括不精确反映应用实际 UI 的模型，例如显示正在应用外部Teams。
 
 > [!TIP]
-> 视频可能是传达人们为什么应该使用你的应用的最有效方式。 默认情况下，视频也是用户在一览中看到的第一 (，视频显示在屏幕截图显示之前) 。 有关详细信息，请参阅 [为应用商店一览创建视频](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video)。
+> 视频可能是传达人们为什么应该使用你的应用的最有效方式。 默认情况下，视频也是用户在一览中看到的第一 (，视频会在屏幕截图显示前) 。 有关详细信息，请参阅 [为应用商店一览创建视频](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video)。
 
 ### <a name="privacy-policy"></a>隐私策略
 
@@ -265,7 +263,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ### <a name="localization"></a>本地化
 
-如果你的应用支持本地化，你的应用包必须包含一个文件，该文件具有基于语言设置显示Teams翻译。 该文件必须符合本地化Teams。 有关详细信息，请参阅本地化[Teams架构](~/concepts/build-and-test/apps-localization.md)。
+如果你的应用支持本地化，你的应用包必须包含一个包含基于语言设置显示的语言翻译Teams文件。 该文件必须符合本地化Teams。 有关详细信息，请参阅本地化[Teams架构](~/concepts/build-and-test/apps-localization.md)。
 
 ## <a name="tabs"></a>选项卡
 
@@ -274,7 +272,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 > [!TIP]
 > 有关创建高质量应用体验的信息，请参阅 Teams[选项卡设计指南](~/tabs/design/tabs.md)。
 
-### <a name="setup"></a>设置
+### <a name="setup"></a>安装
 
 * 选项卡设置不得使新用户死台。 提供有关如何完成操作或工作流的消息。
 * 身份验证应在选项卡设置期间而不是之后发生。
@@ -294,7 +292,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
     * 页面页眉
     * 汉堡包菜单
 * 选项卡不应具有水平滚动。
-* 选项卡中的深层链接不得链接到外部网页，而应链接到Teams。 例如，任务模块或其他选项卡。
+* 选项卡中的深层链接不得链接到外部网页，而是链接到Teams。 例如，任务模块或其他选项卡。
 * 选项卡不应允许用户在外部导航Teams核心应用体验。
 
 ### <a name="usability"></a>可用性
@@ -303,10 +301,10 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * 用户必须能够撤消选项卡中的最后一个操作。
 * 个人上下文中的选项卡可以聚合来自应用的共享实例的内容。
 * 选项卡必须响应Teams主题。 当用户更改主题时，应用的主题必须反映选择。
-* 选项卡必须Teams样式的组件，如 Teams 字体、字体渐变、调色板、网格系统、动作、语音音调等。
-* 必须 **包含一个** 设置选项卡。
-* 选项卡必须遵循Teams设计，如页面内导航、对话框的位置和使用、信息层次结构等。
-* iframe 中的选项卡内容不得包含模拟Teams功能的功能。 例如，机器人、消息传递扩展、呼叫、会议等。
+* 选项卡必须Teams样式的组件，如Teams字体、字体渐变、调色板、网格系统、运动、语音音调等。
+* 必须包含一个 **设置** 选项卡。
+* 选项卡必须遵循Teams设计，如页内导航、对话框的位置和使用、信息层次结构等。
+* iframe 中的选项卡内容不得包含模仿核心Teams的功能。 例如，机器人、消息传递分机、呼叫、会议等。
 
 > [!TIP]
 >
@@ -322,18 +320,18 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ### <a name="bot-commands"></a>自动程序命令
 
-分析用户输入和预测用户意图非常困难。 自动程序命令为用户提供了一组机器人可以理解的字词或短语， (自动程序) 也不必猜到。
+分析用户输入和预测用户意图非常困难。 自动程序命令为用户提供自动程序理解的一组字词或短语， (自动程序) 也不必猜到。
 
 * 强烈建议在应用配置中列出受支持的自动程序命令。 这些命令在用户尝试向自动程序发送消息时显示在撰写框中。
 * 自动程序支持的所有命令必须正常工作，包括 **Hi、Hello** 和 **Help** 命令。
 
 > [!TIP]
-> 对于个人自动程序 **，包括进** 一步描述机器人可以执行哪些操作的帮助选项卡。
+> 对于个人机器人 **，包括进** 一步描述机器人可以执行哪些操作的帮助选项卡。
 
 ### <a name="bot-welcome-messages"></a>机器人欢迎消息
 
 * 自动程序几乎应始终在首次运行时发送欢迎消息。 为了获得最佳体验，消息应包括自动程序的价值主张、如何配置自动程序，并简要描述所有受支持的自动程序命令。 可以使用带按钮的自适应卡片显示消息，从而提供更好的可用性。 有关详细信息，请参阅 [如何触发机器人欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。
-* 首次运行时，频道和聊天中的聊天机器人欢迎消息是可选的，尤其是在自动程序可供个人使用并执行类似操作时。 如果你的机器人确实发送了欢迎邮件，它不得单独向用户发送 ([这被视为垃圾邮件](#bot-message-spamming)) 。 邮件还应提及添加自动程序的人。
+* 首次运行时，频道和聊天中的聊天机器人欢迎消息是可选的，尤其是在自动程序可供个人使用并执行类似操作时。 如果你的自动程序确实发送欢迎邮件，它不得将其单独发送给用户 ([这被视为垃圾邮件](#bot-message-spamming)) 。 邮件还应提及添加自动程序的人。
 * 仅通知机器人必须发送一条欢迎消息，传达将不会回复用户的消息。
 
 > [!TIP]
@@ -360,7 +358,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * [设计自适应卡片](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [卡参考](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
-## <a name="messaging-extensions"></a>消息扩展
+## <a name="messaging-extensions"></a>消息传递扩展
 
 如果你的应用包括消息传递扩展，请确保它遵守这些准则。
 
@@ -371,12 +369,12 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 基于操作的邮件扩展应执行以下操作：
 
-* 允许用户在未完成中间步骤（如登录）的情况下对邮件触发操作。
+* 允许用户在未完成中间步骤（如登录）的情况下触发对邮件的操作。
 * 将消息上下文传递到下一个工作状态。
 
 ### <a name="preview-links-link-unfurling"></a>预览链接 (链接取消) 
 
-邮件扩展应在"撰写"框中预览可识别Teams的链接。 不要添加位于您控制之外的域 (绝对 URL 或通配符) 。 例如， `yourapp.onmicrosoft.com` 有效， `*.onmicrosoft.com` 但无效。 顶级域也被禁止 (例如，或 `*.com` `*.org`) 。
+邮件扩展应在"邮件撰写"框中预览Teams的链接。 不要添加位于您控制之外的域 (绝对 URL 或通配符) 。 例如， `yourapp.onmicrosoft.com` 有效， `*.onmicrosoft.com` 但无效。 顶级域也被禁止 (例如，或 `*.com` `*.org`) 。
 
 ### <a name="search-commands"></a>搜索命令
 
@@ -415,7 +413,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * 必须响应。 确保保持填充和组件大小。
 * 如果存在多个导航层，则必须有一个后退按钮。
 * 不得包含多个消除或关闭按钮。 这可能会导致用户混淆，因为已有一个可消除选项卡的内置标题按钮。
-* 不得具有水平滚动。
+* 不得有水平滚动。
 
 ### <a name="in-meeting-dialogs"></a>会议内对话框
 
@@ -449,7 +447,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 ### <a name="navigation-and-layout"></a>导航和布局
 
 * 通知必须遵循活动Teams布局和体验。
-* 选择通知时，用户必须定向到 Teams 内的相关内容，并且不会从Teams体验。
+* 选择通知时，用户必须定向到 Teams内的相关内容，并且不会从 Teams体验。
 
 ## <a name="advertising"></a>广告
 

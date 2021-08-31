@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705726"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408620"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为用户设计个人Microsoft Teams
 
@@ -27,37 +27,19 @@ ms.locfileid: "57705726"
 
 ## <a name="add-a-personal-app"></a>添加个人应用
 
-可以通过选择 Teams (左侧的"更多"图标从 Teams app) Source ( (应用商店或应用Teams (添加个人应用，如以下示例) 所示。
+用户可以从应用商店或应用Teams添加个人应用，方法为选择示例 Teams (左侧的"更多") 。
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="示例演示如何从应用飞出内容添加个人应用。" border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>使用个人应用 (工作区) 
 
-使用专用工作区，可以在中心位置查看对你有意义的应用内容，而无需离开Teams。
+使用专用工作区，用户可以在中心位置查看有意义的应用内容，而无需离开Teams。
 
- (：专用工作区基于个人 [*选项卡功能*](../../build-your-first-app/build-personal-tab.md) 。) 
+ (：专用工作区基于个人选项卡功能。) [](../../build-your-first-app/build-personal-tab.md)
 
-### <a name="anatomy-personal-app-private-workspace"></a>分析：个人应用 (专用工作区) 
+### <a name="anatomy-personal-app-private-workspace"></a>结构：个人应用 (专用工作区) 
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件分析。" border="false":::
-
-|计数器|说明|
-|----------|-----------|
-|A|**应用属性**：应用徽标和名称。|
-|B|**选项卡**：为个人应用提供导航。|
-|C|**弹出视图**：将应用内容从父窗口推送到独立子窗口。|
-|D|**更多菜单**：包括其他应用选项和信息。  (您也可以将选项卡设置 tab.) |
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="示例显示个人选项卡的结构结构分析。" border="false":::
-
-|计数器|说明|
-|----------|-----------|
-|A|**选项卡**：为个人应用提供导航。|
-|1|**iframe：** 显示应用内容。|
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+#### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件分析。" border="false":::
 
@@ -75,9 +57,25 @@ ms.locfileid: "57705726"
 |A|**选项卡**：为个人应用提供导航。|
 |1|**webview：** 显示应用内容。|
 
----
+#### <a name="desktop"></a>桌面
 
-### <a name="designing-with-ui-templates-and-advanced-components"></a>使用 UI 模板和高级组件进行设计
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件分析。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|A|**应用属性**：应用徽标和名称。|
+|B|**选项卡**：为个人应用提供导航。|
+|C|**弹出视图**：将应用内容从父窗口推送到独立子窗口。|
+|D|**更多菜单**：包括其他应用选项和信息。  (您也可以将选项卡设置 tab.) |
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="示例显示个人选项卡的结构结构分析。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|A|**选项卡**：为个人应用提供导航。|
+|1|**iframe：** 显示应用内容。|
+
+### <a name="design-with-ui-templates-and-advanced-components"></a>使用 UI 模板和高级组件进行设计
 
 使用以下模板和Teams之一来帮助设计个人选项卡：
 
@@ -90,21 +88,11 @@ ms.locfileid: "57705726"
 
 ## <a name="use-a-personal-app-bot"></a>使用个人应用 (自动) 
 
-个人应用可以包含用于一对一对话的自动程序以及私人通知 (例如，当同事在剪贴板上发布评论时) 。 自动程序在指定的选项卡中可用。
+个人应用可以包含用于一对一对话的自动程序以及私人通知 (例如，当同事在剪贴板上发布评论时) 。 用户与您指定的选项卡中的自动程序交互。
 
 ### <a name="anatomy-personal-app-bot"></a>结构：个人应用 (自动) 
 
-# <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
-
-|计数器|说明|
-|----------|-----------|
-|A|**自动程序** 选项卡：例如，包括一个 **聊天选项卡** 来访问机器人对话和通知。|
-|B|**自动程序** 消息：机器人通常以卡片形式发送消息和通知， (自适应卡片) 。|
-|C|**撰写框**：用于向自动程序发送邮件的输入字段。|
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
+#### <a name="mobile"></a>移动
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
 
@@ -112,10 +100,18 @@ ms.locfileid: "57705726"
 |----------|-----------|
 |A|**自动程序入口点**：用户用于访问个人应用中的自动程序功能入口点。|
 |B|**"后退**"按钮：让用户返回到专用工作区。|
-|C|**自动程序** 消息：机器人通常以卡片形式发送消息和通知， (自适应卡片) 。|
+|C|**自动程序** 消息：机器人通常以卡片形式发送消息和通知 (如自适应卡片) 。|
 |D|**撰写框**：用于向自动程序发送邮件的输入字段。|
 
----
+#### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|A|**自动程序** 选项卡：例如，包括一个 **聊天选项卡** 以访问机器人对话和通知。|
+|B|**自动程序** 消息：机器人通常以卡片形式发送消息和通知 (如自适应卡片) 。|
+|C|**撰写框**：用于向自动程序发送邮件的输入字段。|
 
 ## <a name="manage-a-personal-tab"></a>管理个人选项卡
 
@@ -159,7 +155,7 @@ ms.locfileid: "57705726"
 
 #### <a name="do-include-a-first-run-experience"></a>应做：包括首次运行体验
 
-首次使用个人应用时，应该至少有一个欢迎屏幕。 对于自动程序，描述自动程序可以执行哪些操作并提供快速操作，例如登录按钮。
+首次使用个人应用时，应该至少有一个欢迎屏幕。 对于自动程序，描述机器人可以执行哪些操作并提供快速操作，如登录按钮。
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="示例显示个人应用首次运行体验期间要执行哪些操作。" border="false":::
 
@@ -199,13 +195,13 @@ ms.locfileid: "57705726"
 
 #### <a name="dont-include-your-entire-app"></a>请勿：包括整个应用
 
-除非你专门为用户创建了Teams，否则你在协作工具中可能没有意义的功能。
+除非你专门为用户创建了Teams，否则你可能在协作工具中具有的功能没有意义。
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="示例演示如何不通过个人应用处理复杂的应用功能。" border="false":::
 
 ## <a name="see-also"></a>另请参阅
 
-以下其他设计指南可能会有所帮助，具体取决于你的个人应用的范围：
+根据你的个人应用的范围，以下其他设计指南可能会有所帮助：
 
 * [设计选项卡](../../tabs/design/tabs.md)
 * [正在设计自动程序](../../bots/design/bots.md)
