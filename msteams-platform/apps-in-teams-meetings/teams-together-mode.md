@@ -2,17 +2,14 @@
 title: 自定义一起模式场景
 description: 使用自定义一起模式场景
 ms.topic: conceptual
-ms.openlocfilehash: 9a0ef7eb2d6a014aaf831a0e1765d4b4ca44b8c6
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 32b7cb32eb3f422641dbf28e635e39d978bad002
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528814"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849438"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
-
-> [!NOTE]
-> 此功能目前仅适用于公共 [开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版。
 
 自定义会议模式场景中Microsoft Teams通过以下操作提供沉浸式且极具吸引力的会议环境：
 
@@ -37,7 +34,7 @@ ms.locfileid: "58528814"
 * 定义场景和场景中的座位。
 * 拥有 Microsoft 开发人员帐户，并熟悉 Microsoft Teams[门户和](../concepts/build-and-test/teams-developer-portal.md)App Studio。
 * 了解 [应用旁加载 的概念](../concepts/deploy-and-publish/apps-upload.md)。
-* 确保管理员已授予访问自定义Upload [**的权限，**](../concepts/deploy-and-publish/apps-upload.md)并分别选择所有筛选器作为应用设置和会议策略的一部分。
+* 确保管理员已授予对自定义Upload [**的权限，**](../concepts/deploy-and-publish/apps-upload.md)并分别选择所有筛选器作为应用设置和会议策略的一部分。
 
 ## <a name="best-practices"></a>最佳做法
 
@@ -51,7 +48,7 @@ ms.locfileid: "58528814"
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>使用 Scene studio 生成场景
 
-Microsoft 有一个 Scene studio，允许你生成场景。 在场景编辑器 - 开发人员[门户中Teams可用](https://dev.teams.microsoft.com/scenes)。 本文档引用开发人员门户中的 Scene studio Microsoft Teams。 在 App Studio 场景设计器中，界面和功能都相同。
+Microsoft 有一个 Scene studio，允许你生成场景。 它在场景编辑器 - 开发人员[门户中Teams可用](https://dev.teams.microsoft.com/scenes)。 本文档引用了开发人员门户中的 scene studio Microsoft Teams。 在 App Studio 场景设计器中，界面和功能都相同。
 
 Scene studio 上下文中的场景是一个包含以下元素的项目：
 
@@ -71,7 +68,7 @@ Scene studio 上下文中的场景是一个包含以下元素的项目：
 
 1. 转到场景[编辑器 - Teams开发人员门户](https://dev.teams.microsoft.com/scenes)。
 
-    或者，若要打开 Scene studio，你可以转到开发人员门户Teams[主页：](https://dev.teams.microsoft.com/home)
+    或者，若要打开 Scene studio，你可以转到开发人员门户Teams[主页](https://dev.teams.microsoft.com/home)：
     * 选择 **"为会议创建自定义场景"。**
     * 从 **左侧** 部分选择"工具"，然后从"工具"**部分****选择"场景** Studio"。
 
@@ -87,7 +84,7 @@ Scene studio 上下文中的场景是一个包含以下元素的项目：
     ![将图像添加到环境中](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * 你可以下载包含[SampleScene.zipSampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)[文件。](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip)
+    > * 你可以下载[包含SampleScene.zipSampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)[文件。](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip)
 
 1. 选择已添加的图像。
 
@@ -110,7 +107,7 @@ Scene studio 上下文中的场景是一个包含以下元素的项目：
 1. 选择 **"保存****"，然后选择"Teams"** 以快速测试场景中的Microsoft Teams。
 
     * 选择 **"Teams"** 将自动创建一个Microsoft Teams应用程序，可在开发人员门户的"应用"Teams查看该应用。 
-    * 选择 **场景中的Teams** 会自动创建一个应用包，appmanifest.js场景后打开。 你可以从菜单  **转到应用** 并访问自动创建的应用包。
+    * 选择 **"Teams** 自动创建一个应用包，appmanifest.js位于场景后面。 你可以从菜单  **转到应用** 并访问自动创建的应用包。
     * 若要删除你创建的场景，请选择顶 **栏上的** "删除场景"。
 
 1. In **View in Teams，** select **Preview in Teams**.
@@ -218,7 +215,7 @@ Scene.js和图像一起指示座位的准确位置。 场景由位图图像、�
 1. 创建新的测试会议。
 
     >[!NOTE]
-    > 在场景 studio 中选择"预览"时，场景会作为应用安装在Microsoft Teams。 这是开发人员在 Scene studio 中测试和试用场景的模型。 将场景作为应用交付后，用户将在场景库中看到这些场景。
+    > 选择 **Scene Studio** 中的"预览"时，场景会作为应用安装在Microsoft Teams。 这是开发人员在 Scene studio 中测试和试用场景的模型。 将场景作为应用交付后，用户将在场景库中看到这些场景。
 
 1. 从左上角 **的"库**"下拉列表中，选择"一起 **模式"。** 将出现 **选取** 器对话框，并且添加的场景可用。
 

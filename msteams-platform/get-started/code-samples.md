@@ -4,16 +4,16 @@ description: 适用于开发人员平台的示例应用程序Microsoft Teams和�
 localization_priority: Normal
 ms.topic: reference
 keywords: Microsoft Teams开发人员示例
-ms.openlocfilehash: 05884025f91377764d65242d501314c3798d3a73a430e103de885692c1e2ee63
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c261aebc327d09265db8831c2b7a8549f30a34fe
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709586"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849424"
 ---
 # <a name="overview"></a>概述
 
-本教程介绍如何使用 React、Blazor、SPFx、C# 或 .NET、Node.js 和 Yeoman 生成器创建应用。 你还将了解如何创建你的第一个机器人和消息传递扩展。 本教程将指导你完成选项卡、聊天机器人、消息传递扩展、Webhook 和连接器以及 Graph API 的多个代码示例，帮助你自定义和配置应用。 此外，还可以参阅 Microsoft Learn 部分，通过创建自定义应用Teams开发人员平台功能。  
+本教程介绍如何使用 React、Blazor、SPFx、C# 或 .NET、Node.js 和 Yeoman 生成器创建应用。 你还将了解如何创建你的第一个机器人和消息传递扩展。 本教程将指导你完成选项卡、聊天机器人、消息传递扩展、Webhook 和连接器以及 Graph API 的多个代码示例，帮助你自定义和配置应用。 此外，还可以参阅 Microsoft Learn 部分，通过创建自定义应用Teams扩展开发人员平台功能。  
 
 ## <a name="getting-started-with-microsoft-learn"></a>Microsoft Learn 入门
 
@@ -45,15 +45,19 @@ A Teams app is made up of one or more [platform capabilities](../concepts/capabi
 
 根据应用所需的功能，你将需要相应的开发工具集。
 
-|应用功能|用户交互|推荐的工具|SDK |技术堆栈| |--------|-------------||--------||--------||--------| |选项卡|全屏嵌入式 Web 体验。 |VS Code扩展Teams Toolkit或 YoTeams (Yeoman Generator) |[Teams客户端 SDK](/javascript/api/overview/msteams-client) |通常，HTML、CSS 和 JavaScript | |自动程序|与成员对话的聊天机器人。 |VS Code扩展Teams Toolkit或 YoTeams (Yeoman Generator) |[Bot Framework SDK](https://dev.botframework.com/) |Node.js、C# 或 Python | |邮件扩展|用于将外部内容插入对话或对邮件采取措施的快捷方式。 |VS Code扩展Teams Toolkit或 YoTeams (Yeoman Generator) |[Bot Framework SDK](https://dev.botframework.com/) |Node.js、C# 或 Python |
+| 应用功能 | 用户交互 | 推荐的工具 | SDK | 技术堆栈 |
+|--------|-------------|--------|--------|--------|
+| 选项卡 | 全屏嵌入式 Web 体验。 | VS Code扩展Teams Toolkit YoTeams (Yeoman Generator)  | [Teams客户端 SDK](/javascript/api/overview/msteams-client) | 一般情况下，HTML、CSS 和 JavaScript 的 Web 技术 |
+| 机器人 | 与成员对话的聊天机器人。 | VS Code扩展Teams Toolkit YoTeams (Yeoman Generator)  | [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C# 或 Python |
+| 消息传递扩展 | 用于将外部内容插入对话或对邮件采取措施的快捷方式。 | VS Code扩展Teams Toolkit YoTeams (Yeoman Generator)  | [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C# 或 Python |
 
-入门部分将介绍推荐的工具集和常用技术，例如 Visual Studio Code 和 Teams 扩展、React.js（适用于选项卡）和 Node.js（适用于机器人和消息传递扩展，尽管不限于使用这些特定 *堆栈）。*
+入门部分将介绍推荐的工具集和常用技术，例如 Visual Studio Code 和 Teams 扩展、React.js（适用于选项卡）和 Node.js for bots 和 messaging extensions（尽管不限于使用这些特定 *堆栈）。*
 
-如果你更喜欢使用命令行界面和 CLI (CLI) ，请参阅使用[Yeoman](../get-started/get-started-yeoman.md)Microsoft Teams创建你的第一个 Microsoft Teams 应用。
+如果你更喜欢使用使用 CLI (CLI) ，请参阅使用[Yeoman](../get-started/get-started-yeoman.md)Microsoft Teams创建你的第一个 Microsoft Teams 应用。
 
 ### <a name="teams-does-not-host-your-app"></a>Teams托管你的应用
 
-你将仅将包含配置文件（称为清单和应用图标）的应用包安装到Teams客户端。 其余的应用逻辑和数据存储托管在其他地方，如 Azure Web 服务。 在开发过程中，云或 localhost 中的应用通过 HTTPS Teams访问。
+你仅将包含配置文件（称为清单和应用图标）的应用包安装到Teams客户端。 其余的应用逻辑和数据存储托管在其他地方，如 Azure Web 服务。 在开发期间，云或 localhost 中的应用通过 HTTPS Teams访问。
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="插图显示应用Teams指向云服务器中的应用逻辑。":::
 
