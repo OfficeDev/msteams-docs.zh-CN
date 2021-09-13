@@ -1,24 +1,24 @@
 ---
-title: 使用证书的自动程序Azure Active Directory
-description: 介绍 azure AD 身份验证Teams以及如何在机器人中使用它
+title: 使用身份验证对自动程序Azure Active Directory
+description: 介绍 azure AD 身份验证Teams以及如何在自动程序中使用它
 keywords: teams 身份验证机器人 AAD
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
 ms.openlocfilehash: c3f2f7fe3eb6b10faef2b24b3212081a881d6f8f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020686"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155756"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>在自动程序Microsoft Teams用户
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-你可能希望在你的 Teams 应用中使用许多服务，其中大多数服务都需要进行身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 以及当然Teams。 用户Teams Microsoft Azure Active Directory (Azure AD) 中存储Graph。 本文将重点介绍使用 Azure AD 进行身份验证，以访问此信息。
+你可能希望在你的 Teams 应用中使用许多服务，其中大多数服务都需要进行身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 以及当然Teams。 用户Teams使用 Microsoft Azure Active Directory (Azure AD) 中存储Graph。 本文将重点介绍使用 Azure AD 进行身份验证，以访问此信息。
 
-OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证的开放式标准。 了解 OAuth 2.0 是使用 Teams 和 Azure AD 中的身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流，目的是最终从 Azure AD 和 Microsoft Graph 中读取用户配置文件信息。
+OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证的开放式标准。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中进行身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流，目的是最终从 Azure AD 和 Microsoft Graph 中读取用户配置文件信息。
 
 本文中介绍的身份验证流与选项卡的身份验证流非常相似，只是选项卡可以使用基于 Web 的身份验证流，而自动程序要求从代码驱动身份验证。 从移动平台实现身份验证时，本文中的概念也很有用。
 
@@ -26,7 +26,7 @@ OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证的开
 
 ## <a name="configuring-identity-providers"></a>配置标识提供程序
 
-有关[将](~/concepts/authentication/configure-identity-provider.md)OAuth 2.0 回调重定向 URL 配置为标识提供程序 () 配置 OAuth 2.0 Azure Active Directory的详细信息，请参阅主题。
+有关[将](~/concepts/authentication/configure-identity-provider.md)OAuth 2.0 回调重定向 URL (用作标识提供程序) 配置 Azure Active Directory 的详细信息，请参阅主题 Configure identity providers。
 
 ## <a name="initiate-authentication-flow"></a>启动身份验证流
 
@@ -69,7 +69,7 @@ protected async promptForAction(session: builder.Session): Promise<void> {
 
 ## <a name="showing-user-profile-information"></a>显示用户配置文件信息
 
-尽管由于不同网站之间的所有转换以及必须解决的安全问题，获取访问令牌非常困难，但一旦拥有令牌，从网站Azure Active Directory非常简单。 机器人使用访问令牌 `me` Graph访问终结点。 Graph对登录人员的用户信息做出响应。 响应中的信息用于构建并发送自动程序卡。
+尽管由于不同网站之间的所有转换以及必须解决的安全问题，获取访问令牌非常困难，但一旦拥有令牌，从网站Azure Active Directory非常简单。 机器人使用访问令牌 `me` Graph访问终结点。 Graph使用登录人员的用户信息进行响应。 响应中的信息用于构建并发送自动程序卡。
 
 ```typescript
 // Show user profile

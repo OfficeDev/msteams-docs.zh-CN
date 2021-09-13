@@ -2,31 +2,31 @@
 title: 与机器人的频道和群组聊天对话
 description: 介绍在 Microsoft Teams 中与频道中的机器人对话的端到端Microsoft Teams
 keywords: teams 方案频道对话机器人
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: e254302271cf101638c897e1a1952d302705d6a4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 8e4336e8b0db7c6c720b8fb7adcb281685b6a6ba
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566794"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155752"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>带有 Microsoft Teams 机器人的频道和群聊对话
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams允许用户将机器人引入其频道或群组聊天对话。 通过将聊天机器人添加到团队或聊天中，对话的所有用户都可以在对话中利用机器人功能。 还可以在自动Teams访问特定于团队的功能，如查询团队信息和@mentioning用户。
+Microsoft Teams允许用户将机器人引入其频道或群组聊天对话。 通过将聊天机器人添加到团队或聊天中，对话的所有用户都可以在对话中充分利用机器人功能。 还可以在自动Teams访问特定于团队的功能，如查询团队信息和@mentioning用户。
 
 频道和群聊中的聊天不同于个人聊天，因为用户需要@mention聊天。 如果自动程序在多个范围（如个人、群聊或频道）中使用，则需要检测自动程序消息来自什么范围，并相应地处理它们。
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>为频道或组设计出色的自动程序
 
-添加到团队的机器人将成为另一个团队成员，@mentioned对话的一部分。 事实上，聊天机器人仅在@mentioned接收消息，因此频道上的其他对话不会发送给机器人。
+添加到团队的机器人将成为另一个团队成员，@mentioned对话的一部分。 事实上，聊天机器人仅在收到@mentioned接收消息，因此频道上的其他对话不会发送给机器人。
 
 组或频道中的机器人应提供与所有成员相关且合适的信息。 尽管机器人当然可以提供与体验相关的任何信息，但请记住，与它的对话对所有人都可见。 因此，组或频道中出色的机器人应该为所有用户增加价值，并且当然不会无意中共享更适合于一对一对话的信息。
 
-与现在一样，自动程序可能在所有范围内完全相关，无需额外工作。 In Microsoft Teams there is no expectation that your bot function in all scopes， but you should ensure that your bot provides user value in whichever scope (s) you choose to support. 有关范围详细信息，请参阅应用程序中[Microsoft Teams。](~/concepts/build-and-test/app-studio-overview.md)
+与现在一样，自动程序可能在所有范围内完全相关，无需额外工作。 In Microsoft Teams there is no expectation that your bot function in all scopes， but you should ensure that your bot provides user value in whichever scope (s) you choose to support. 有关范围详细信息，请参阅应用程序[Microsoft Teams。](~/concepts/build-and-test/app-studio-overview.md)
 
 开发在组或频道中工作的自动程序使用与个人对话相同的许多功能。 有效负载中的其他事件和数据Teams组和频道信息。 以下各节介绍了这些差异以及常见功能的主要差异。
 
@@ -50,7 +50,7 @@ Microsoft Teams允许用户将机器人引入其频道或群组聊天对话。 �
 
 如果选择使用 REST API，还可以调用 [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) 终结点。
 
-在频道中，回复消息将显示为对启动回复链的回复。 `conversation.id`包含频道和顶级消息 ID。 尽管 Bot Framework 负责处理详细信息，但可以根据需要缓存该对话线程的将来 `conversation.id` 回复。
+在频道中，回复消息将显示为对启动回复链的回复。 `conversation.id`包含通道和顶级消息 ID。 尽管 Bot Framework 负责处理详细信息，但可以根据需要缓存该对话线程的将来 `conversation.id` 回复。
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>最佳做法：欢迎邮件Teams
 
@@ -67,11 +67,11 @@ Microsoft Teams允许用户将机器人引入其频道或群组聊天对话。 �
 
 ## <a name="-mentions"></a>@ 提及
 
-由于组或频道中的机器人仅在邮件中提到 ("@_botname_") 时做出响应，因此组频道中的自动程序接收的每封邮件都包含其自己的名称，因此必须确保邮件分析能够处理。 此外，机器人可以分析提及的其他用户，并提及用户作为消息的一部分。
+由于组或频道中的自动程序仅在邮件中提到 ("@_botname_") 时做出响应，因此组频道中的自动程序接收的每封邮件都包含其自己的名称，因此必须确保邮件分析可以处理该名称。 此外，机器人可以分析提及的其他用户，并提及用户作为消息的一部分。
 
 ### <a name="retrieving-mentions"></a>检索提及
 
-提及在有效负载中的 对象中返回，并且包含用户的唯一 ID，并且在大多数情况下，还包含 `entities` 提及的用户名称。 可以通过调用 .NET 的 Bot Builder SDK 中的 函数来检索邮件中提及的所有内容，该函数 `GetMentions` 将返回对象 `Mentioned` 数组。
+在有效负载中的 对象中返回提及，并且包含用户的唯一 ID，并且在大多数情况下，还包含 `entities` 提及的用户名称。 可以通过调用 .NET 的 Bot Builder SDK 中的 函数来检索邮件中提及的所有内容，该函数 `GetMentions` 将返回对象 `Mentioned` 数组。
 
 #### <a name="net-example-code-check-for-and-strip-bot-mention"></a>.NET 示例代码：检查并去除@bot提及
 
@@ -115,7 +115,7 @@ if (message.entities) {
 机器人可以在发布至频道的消息中提及其他用户。 为此，您的邮件必须执行以下操作：
 
 * 包括在 `<at>@username</at>` 邮件文本中。
-* 将 `mention` 对象包括在 entities 集合中。
+* 将 `mention` 对象包括在 entities 集合内。
 
 #### <a name="net-example"></a>.NET 示例
 
@@ -195,7 +195,7 @@ session.send(generalMessage);
 
 ## <a name="accessing-groupchat-or-channel-scope"></a>访问 groupChat 或 channel 作用域
 
-机器人可以执行更多操作，而不是在组和团队中发送和接收消息。 例如，它还可以提取成员列表，包括其配置文件信息以及频道列表。 有关详细信息，请参阅[获取自动程序Microsoft Teams上下文](~/resources/bot-v3/bots-context.md)。
+机器人可以执行更多操作，而不是在组和团队中发送和接收消息。 例如，它还可以提取成员列表，包括其配置文件信息以及频道列表。 有关详细信息，请参阅[Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md)。
 
 ## <a name="see-also"></a>另请参阅
 

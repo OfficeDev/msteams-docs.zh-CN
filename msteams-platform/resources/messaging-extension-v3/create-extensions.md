@@ -1,15 +1,15 @@
 ---
 title: 使用消息传递扩展启动操作
 description: 创建基于操作的消息扩展以允许用户触发外部服务
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams 邮件扩展邮件扩展搜索
-ms.openlocfilehash: 5604d86f05bad42bf3a00f611711afc34beedf42
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: f028a26693eef03686ad6ad57423b30d4d861934
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140367"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155755"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>使用消息传递扩展启动操作
 
@@ -134,7 +134,7 @@ ms.locfileid: "53140367"
 
 ![从邮件启动操作的示例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-若要使邮件扩展从邮件中工作，你需要将 参数添加到应用清单中邮件扩展的对象， `context` `commands` 如以下示例所示。 数组的有效 `context` 字符串是 `"message"` 、 `"commandBox"` 和 `"compose"` 。 默认值为 `["compose", "commandBox"]`。 有关参数 [的完整详细信息](#define-commands) ，请参阅定义命令 `context` 部分。
+若要使邮件扩展从邮件中工作，你需要将 参数添加到应用清单中邮件扩展的对象，如 `context` `commands` 以下示例所示。 数组的有效 `context` 字符串是 `"message"` 、 `"commandBox"` 和 `"compose"` 。 默认值为 `["compose", "commandBox"]`。 有关参数 [的完整详细信息](#define-commands) ，请参阅定义命令 `context` 部分。
 
 ```json
 "composeExtensions": [
@@ -232,11 +232,11 @@ ms.locfileid: "53140367"
 
 ## <a name="collecting-input-from-users"></a>收集用户输入
 
-有三种方法从最终用户那里Teams。
+有三种方法可以收集最终用户在 Teams。
 
 ### <a name="static-parameter-list"></a>静态参数列表
 
-在此方法中，只需在清单中定义一个静态参数列表，如"Create 微软待办"命令所示。 若要使用此方法， `fetchTask` 请确保设置为 `false` ，并确保在清单中定义参数。
+在此方法中，只需在清单中定义参数静态列表，如"Create 微软待办"命令所示。 若要使用此方法， `fetchTask` 请确保设置为 `false` ，并确保在清单中定义参数。
 
 当用户选择具有静态参数的命令时，Teams将在任务模块中生成一个包含清单中定义的参数的窗体。 点击提交 `composeExtension/submitAction` 时，会向自动程序发送 。 有关预期响应集详细信息，请参阅 [响应以提交](#responding-to-submit)。
 
@@ -312,7 +312,7 @@ ms.locfileid: "53140367"
 
 如果你的应用还包含对话机器人，可能需要在加载任务模块之前确保对话中已安装机器人。 当你需要获取任务模块的其他上下文时，这非常有用。 例如，您可能需要获取名单以填充人员选取器控件或团队中的频道列表。
 
-为了方便此流，当消息扩展首先收到调用检查以查看当前上下文中是否 `composeExtension/fetchTask` 安装了自动程序时。 可以通过尝试获取名单调用来完成此操作，例如，如果未安装自动程序，则返回自适应卡片，并返回一个操作，请求用户安装自动程序，请参阅下面的示例。 请注意，这要求用户有权在此位置安装应用;如果无法显示一条消息，要求他们联系其管理员。
+为便于此流，当消息扩展首先收到调用检查以查看当前上下文中是否 `composeExtension/fetchTask` 安装了自动程序时。 可以通过尝试获取名单呼叫来完成此操作，例如，如果未安装自动程序，则返回自适应卡片，并返回一个操作，请求用户安装自动程序，请参阅下面的示例。 请注意，这要求用户有权在此位置安装应用;如果无法显示一条消息，要求他们联系其管理员。
 
 下面是一个响应示例：
 
@@ -443,7 +443,7 @@ ms.locfileid: "53140367"
 1. 与自适应卡片交互将更改消息，然后再发送它。
 1. 用户单击自动 `Send` 程序后，就会将消息张贴到频道。
 
-若要启用此流，任务模块应做出响应，如以下示例所示，这将向用户显示预览消息。
+若要启用此流，任务模块应做出响应，如以下示例所示，这会向用户显示预览消息。
 
 >[!Note]
 >必须 `activityPreview` 包含正好包含 `message` 1 个自适应卡片附件的活动。
@@ -465,7 +465,7 @@ ms.locfileid: "53140367"
 }
 ```
 
-现在，邮件扩展需要响应两种新类型的交互和 `value.botMessagePreviewAction = "send"` `value.botMessagePreviewAction = "edit"` 。 下面是需要 `value` 处理的对象示例：
+现在，邮件扩展需要响应两种新类型的交互， `value.botMessagePreviewAction = "send"` `value.botMessagePreviewAction = "edit"` 和 。 下面是需要 `value` 处理的对象示例：
 
 ```json
 {

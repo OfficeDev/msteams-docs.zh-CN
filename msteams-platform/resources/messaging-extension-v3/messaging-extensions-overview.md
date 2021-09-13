@@ -2,24 +2,24 @@
 title: 开发消息传递扩展
 description: 介绍如何开始使用邮件扩展Microsoft Teams
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 消息传递扩展消息传递扩展
-ms.openlocfilehash: 2301a9af7574c193c7327bb45e38f91bedc73793
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ea07ae8c7a7a16f5187adfe6dbe5f52d8bf47056
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020602"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155751"
 ---
-# <a name="develop-messaging-extensions-for-microsoft-teams"></a>开发适用于用户的邮件Microsoft Teams
+# <a name="develop-messaging-extensions-for-microsoft-teams"></a>为用户开发消息传递Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-消息传递扩展是一种功能强大的方法，用户可以从多个用户Microsoft Teams。 通过此功能，用户可以在服务中查询或发布信息，然后以卡片形式将该信息发布至消息中。
+消息传递扩展是一种功能强大的方法，用户可从多个用户Microsoft Teams。 通过此功能，用户可以在服务中查询或发布信息，然后以卡片形式将该信息发布至消息中。
 
 ![邮件扩展卡示例](~/assets/images/compose-extensions/ceexample.png)
 
-邮件扩展沿撰写框的底部显示。 一些内置，如表情符号、Giphy 和贴纸。 选择 **"更多选项**" (&#8943;) 查看其他消息传递扩展，包括从应用库添加或自己上传的邮件扩展。 
+邮件扩展沿撰写框的底部显示。 一些内置，如表情符号、Giphy 和贴纸。 选择 **"更多选项**" (&#8943;) 查看其他消息传递扩展，包括从应用库添加或自己上传的邮件扩展。
 
 如何使用消息传递扩展？ 下面提供了一些可能性：
 
@@ -29,7 +29,7 @@ ms.locfileid: "52020602"
 * 图像和媒体内容
 * 销售机会和潜在客户
 
-## <a name="types-of-messaging-extensions"></a>邮件扩展类型
+## <a name="types-of-messaging-extensions"></a>消息扩展类型
 
 目前，你主要可以创建两种邮件Teams扩展。 以下主题将指导你完成创建它们的过程：
 
