@@ -3,14 +3,14 @@ title: 使用高级 UI 组件设计应用
 author: heath-hamilton
 description: 了解跨应用程序使用的 UI Teams。
 ms.author: surbhigupta
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 90dcf95cfde1d7c6c2878da7a10d8b3b0245de3f
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408690"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155993"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI Microsoft Teams设计应用
 
@@ -32,7 +32,7 @@ ms.locfileid: "58408690"
 * 通信层次结构
 * 导航
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="示例演示移动版痕迹导航模板。" border="false":::
 
@@ -42,14 +42,14 @@ ms.locfileid: "58408690"
 
 ## <a name="left-nav"></a>左导航
 
-使用左侧导航键浏览"导航"选项卡Teams页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
+使用左侧导航键浏览"浏览"选项卡中的Teams页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
 
 ### <a name="top-use-cases"></a>热门用例
 
 * 浏览"页面"选项卡Teams页面。
 * 将复杂应用分解为多个页面。
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="示例显示移动版上的左侧导航模板。" border="false":::
 
@@ -59,7 +59,7 @@ ms.locfileid: "58408690"
 
 ## <a name="notification-bar"></a>通知栏
 
-通知栏是一个专用区域，用于显示无需用户立即采取措施的简短重要消息。 特定背景颜色和图标与特定类型的消息相关联， (请参阅下面的) 。
+通知栏是一个专用区域，用于显示无需用户立即采取措施的简短重要消息。 特定背景颜色和图标与特定类型的邮件相关联， (请参阅下面的) 。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -67,7 +67,7 @@ ms.locfileid: "58408690"
 * 成功消息
 * 信息性或促销性消息
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="示例显示移动设备上的通知栏 UI 模板。" border="false":::
 
@@ -86,7 +86,7 @@ ms.locfileid: "58408690"
 * 在浏览器内的较大图面Teams而不是其他应用或浏览器
 * 聚焦媒体或其他丰富内容
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 你的应用可以从自适应卡片、共享链接或视觉组件启动阶段 (如图表) 。
 
@@ -106,7 +106,7 @@ ms.locfileid: "58408690"
 * 上下文筛选器和查找
 * 导航和痕迹导航
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="示例显示移动设备上的工具栏模板。" border="false":::
 

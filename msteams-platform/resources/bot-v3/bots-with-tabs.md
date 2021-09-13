@@ -3,14 +3,14 @@ title: 将机器人与选项卡组合在一起
 description: 介绍如何将选项卡和自动程序一同使用
 keywords: teams 机器人选项卡开发
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: 3273369ad1122355b792dc3d429c3a4eff7e1d47
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3053dbca3b1e91683564eb902d8b142fd4a30ddb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566451"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155912"
 ---
 # <a name="combine-bots-with-tabs"></a>将机器人与选项卡组合在一起
 
@@ -20,7 +20,7 @@ ms.locfileid: "52566451"
 
 ## <a name="associating-user-identities-across-bot-and-tab"></a>跨自动程序与选项卡关联用户标识
 
-例如：假设您的选项卡应用程序使用专有 ID 系统保护其内容。 假设您还有一个可以与用户交互的机器人。 通常，你需要在选项卡中显示特定于查看用户的内容。 挑战在于，系统中用户 ID 可能不同于Microsoft Teams ID。 那么，如何关联这两个标识？
+例如：假设您的选项卡应用程序使用专有 ID 系统保护其内容。 假设您还有一个可以与用户交互的机器人。 通常，您希望在选项卡中显示特定于查看用户的内容。 挑战在于，系统中用户 ID 可能不同于Microsoft Teams ID。 那么，如何关联这两个标识？
 通常，建议的方法是使用用于为选项卡内容提供身份验证的相同身份系统，使用自动程序让用户登录。 可以通过登录操作实现此操作，此操作通常通过 OAuth 流在用户中登录。
 
 如果标识提供程序实现 OAuth 2.0 协议，则此流最有效。 然后，可以将Teams ID 与你自己的标识服务中的用户凭据关联。

@@ -3,21 +3,21 @@ title: 创建配置页
 author: surbhigupta
 description: 如何创建配置页
 keywords: teams 选项卡组频道可配置
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 67b4a0ae121acfe53b99dbc56d47dda27f2bf1a5
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: cb69a23a3f8446c3f9b78cffbe0dc88d686c4a8a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528787"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155324"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
-配置页是一种特殊类型 [的内容页](content-page.md)。 用户使用配置页面配置 Microsoft Teams应用的一些方面，并使用以下配置：
+配置页是一种特殊类型 [的内容页](content-page.md)。 用户使用配置页面配置 Microsoft Teams应用的一些方面，并使用该配置作为以下部分的一部分：
 
-* 频道或群聊选项卡：从用户收集信息，并设置 `contentUrl` 要显示的内容页的 。
+* 频道或群聊选项卡：从用户收集信息，并设置要 `contentUrl` 显示的内容页的 。
 * 消息传递 [扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
 * 一[Office 365连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 

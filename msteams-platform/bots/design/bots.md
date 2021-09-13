@@ -3,14 +3,14 @@ title: 设计机器人
 description: 了解如何设计 Teams 自动程序并获取 Microsoft Teams UI Kit。
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a52aa742d51ab637b850d8c55b15ab1305566e35
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: feeb80a0cd96172431e7682835e3f078cdd7983c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408669"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155905"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
@@ -32,7 +32,7 @@ ms.locfileid: "58408669"
 
 自动程序可用于聊天、频道和个人应用。
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 用户可以访问在桌面上使用自动程序添加的@mention。
 
@@ -56,7 +56,7 @@ ms.locfileid: "58408669"
 
 在个人环境中，欢迎消息可设置机器人的风格。 消息包括问候语、机器人可以做什么，以及一些如何交互的建议。 例如，"尝试询问我..."。 如果可能，建议应返回存储的响应，无需登录。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="示例显示了移动版个人应用中的机器人简介。" border="false":::
 
@@ -66,9 +66,9 @@ ms.locfileid: "58408669"
 
 ### <a name="welcome-message-in-channels-and-group-chats"></a>频道和群聊中的欢迎消息
 
-与个人空间相比，机器人在频道和群组聊天中的介绍应该略有不同 (如个人应用) 。 在现实中，如果进入一个人员完整的房间;你可自我介绍，而不是每个已存在的人。 将这一思路融入你的机器人设计中。
+与个人空间相比，机器人在频道和群聊中的介绍应该略有不同 (如个人应用) 。 在现实中，如果进入一个人员完整的房间;你可自我介绍，而不是每个已存在的人。 将这一思路融入你的机器人设计中。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="示例演示了在移动版协作上下文中的机器人简介。" border="false":::
 
@@ -82,7 +82,7 @@ ms.locfileid: "58408669"
 
 请不要忘记：在自动程序命令菜单（**我该怎么办？**）中，还必须提供一个命令以注销。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="示例显示移动版上具有登录按钮的自动程序。" border="false":::
 
@@ -101,7 +101,7 @@ ms.locfileid: "58408669"
 
 在个人应用中，变盘可提供自动程序的有效概述以及应用的其他任意功能。 建议包括允许用户试用自动程序命令的按钮。 例如， **创建任务**。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="示例演示了机器人在移动版一对一聊天中的教程。" border="false":::
 
@@ -113,7 +113,7 @@ ms.locfileid: "58408669"
 
 在频道和群组聊天中，应在模式（也称为 [任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) 中打开浏览，这样不会中断持续对话。 还可选择为教程实施基于角色的视图。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="示例演示移动频道中的自动程序教程。" border="false":::
 
@@ -136,7 +136,7 @@ ms.locfileid: "58408669"
 
 ### <a name="anatomy"></a>解剖
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="示例演示移动机器人的结构结构分析。" border="false":::
 
@@ -219,7 +219,7 @@ ms.locfileid: "58408669"
 
 自动程序可提供查询或一组相关匹配项的精确匹配，有助于进行语言不匹配。 相关匹配项，使用列表卡对内容进行分组。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="示例显示与移动机器人的简单查询交互。" border="false":::
 
@@ -233,7 +233,7 @@ ms.locfileid: "58408669"
 
 在下面的示例中，自动程序使用可能想要执行下一步操作的选项来响应每条消息。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="示例显示与移动设备上的机器人的多向交互。" border="false":::
 
@@ -245,7 +245,7 @@ ms.locfileid: "58408669"
 
 通过主动消息传递，机器人可以充当摘要，以特定频率发送与个人、群组聊天或频道相关的通知。 文档更改了某些内容或关闭工作项目时，自动程序可能会发送邮件。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 在下面的示例中，用户收到一条通知，提示机器人在另一个频道中向用户发送消息。
 
@@ -269,7 +269,7 @@ ms.locfileid: "58408669"
 
 在个人应用中，选项卡可以补充机器人可以执行哪些操作。 例如，如果你的机器人可以创建工作项，那么在选项卡内的中心位置显示所有这些项目是一个不错的选择。请参阅有关设计 [选项卡的更多内容](../../tabs/design/tabs.md)。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="示例显示选项卡如何有助于在移动设备上组织聊天机器人内容。" border="false":::
 

@@ -4,15 +4,15 @@ description: 员工管理 针对员工的轮班Teams
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Microsoft Teams连接器 kronos
 ms.author: lajanuar
-ms.openlocfilehash: afdd71cedbc0fe2d09e6f6716f8e4fac87619f65c87e0f5831379e3a2b4ee2e3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f734bc4491826f5afee4147b55fdbc10b69fd433
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705016"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155341"
 ---
 # <a name="production-ready-shifts-connectors"></a>生产准备就绪的排班连接器  
 
@@ -34,17 +34,17 @@ TeamsShifts 员工 (WFM) 连接器是生产就绪型、开放源代码和社区�
 
 * **详细的文档&支持：**  所有 Shifts WFM 连接器都附带了有关解决方案体系结构、部署和配置步骤的端到端文档。 连接器存储库受到监视，以便可以通过存储库的"问题跟踪器"报告遇到GitHub问题。
 
-* **无缝集成：** WFM 解决方案与 Teams Shifts 之间的集成允许一线工作人员使用 Teams Shifts 应用查看或管理其日程安排和班次时间，并使用 Teams 中提供的所有其他丰富的协作功能，而无需将上下文切换到其他应用。  
+* **无缝集成：** WFM 解决方案与 Teams Shifts 之间的集成允许一线工作人员使用 Teams Shifts 应用查看或管理其日程安排和班次时间，并使用 Teams 中提供的所有其他丰富协作功能，而无需将上下文切换到其他应用。  
 
 **在"打开"视图中打开Teams** 
 
 以下图像Teams班次视图： 
 
-![在"打开"Teams](../assets/images/teams-open-shifts-view.png)
+![打开Teams](../assets/images/teams-open-shifts-view.png)
 
 ## <a name="kronos-to-teams-shifts-connector"></a>Kronos 到 Teams Shifts 连接器
 
-借助开放源代码，可以将 Kronos 员工中心版本 8.1 及以上版本与 Teams 班次（如桌面或移动 Teams 应用）集成，以用于以下一线员工和经理方案：
+借助开放源代码，你可以将 Kronos 员工中心版本 8.1 及以上版本与 Teams 班次（如桌面或移动 Teams 应用）集成，用于以下一线员工和经理方案：
 
 * 查看日程安排。
 
@@ -56,7 +56,7 @@ TeamsShifts 员工 (WFM) 连接器是生产就绪型、开放源代码和社区�
 
 * 提供班次。
 
-有关部署 Kronos 到 Teams Shifts 连接器[GitHub。](https://aka.ms/KronosShiftsConnector)
+有关部署 Kronos-to-Teams Shifts 连接器[GitHub。](https://aka.ms/KronosShiftsConnector)
 
 ## <a name="jda-to-teams-shifts-connector"></a>JDA 到 Teams Shifts 连接器
 
@@ -68,7 +68,7 @@ TeamsShifts 员工 (WFM) 连接器是生产就绪型、开放源代码和社区�
 
 * 使用适用于班次的[Microsoft Graph API 设置用户可用性](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true)。
 
-有关贡献和建议的信息，请参阅在"开始["GitHub。](https://aka.ms/JDAShiftsConnector)</br></br>
+有关贡献和建议的更多信息，请参阅在[GitHub 上获取](https://aka.ms/JDAShiftsConnector)。</br></br>
 
 ## <a name="see-also"></a>另请参阅
 

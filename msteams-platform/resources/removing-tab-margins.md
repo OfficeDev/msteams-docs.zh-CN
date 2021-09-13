@@ -4,14 +4,14 @@ author: surbhigupta
 description: 介绍删除制表位如何增强应用生成体验。
 keywords: 删除边距填充的选项卡
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 2dc024bea28dbd8f98c658ccfa4a7494e77e19d9
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 79c4d887a028d9da722325985f9bbd62740e3781
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345598"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156012"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
@@ -31,7 +31,7 @@ ms.locfileid: "58345598"
 
 **应用部件版式（如标题栏或任务栏）是否适合触摸我们设计的边缘？**
 
-是的，这没有问题，Teams此类设计。 它帮助应用感觉本机。
+是的，这没有问题，Teams这种设计。 它帮助应用感觉本机。
 
 **对于文本、徽标和图像等应用内容，触摸设计的左右边缘是否正常？**
 

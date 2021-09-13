@@ -1,16 +1,17 @@
 ---
 title: 入门 - 先决条件
 author: adrianhall
-description: 了解如何开始使用应用Microsoft Teams和设置环境。
+description: 了解如何开始使用应用Microsoft Teams并设置你的环境。
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 58326e81f7fe68f67b4c054b9a615696276cc610
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.localizationpriority: none
+ms.openlocfilehash: de9b351761f45999ce8cb0438c5d83041727f7f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822225"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155763"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>先决条件：开始Microsoft Teams开发
 
@@ -22,22 +23,22 @@ ms.locfileid: "58822225"
 
 - [Node.js(](https://nodejs.org/en/download/) 使用最新的 v14 LTS 版本) 
 - 具有开发人员工具的浏览器，例如[Microsoft Edge (](https://www.microsoft.com/edge)推荐) [Google Chrome](https://www.google.com/chrome/)
-- 如果你使用 JavaScript、TypeScript 或 SharePoint 框架 (SPFx) 进行开发，Visual Studio Code[版本](https://code.visualstudio.com/download)1.55 或更高版本。  
-- 如果要使用 .NET 进行开发，请安装[Visual Studio 2019。](https://visualstudio.com/download) 确保安装 ASP.NET **Web 开发或** **.NET Core 跨平台开发** 工作负载。
+- 如果你使用 JavaScript、TypeScript 或 SharePoint 框架 (SPFx) 进行开发，Visual Studio Code版本[](https://code.visualstudio.com/download)1.55 或更高版本。  
+- 如果要使用 .NET 进行开发，请安装[Visual Studio 2019。](https://visualstudio.com/download) 确保安装 ASP.NET **Web 开发** 或 **.NET Core 跨平台开发** 工作负载。
 
 > [!WARNING]
-> 存在与 打包在 Node `npm@7` v15 及更高版本中的已知问题。 如果在运行时遇到问题 `npm install` ，请确保使用 LtS 节点 v14 (LTS) 
+> 存在与 打包在 Node `npm@7` v15 及更高版本中的已知问题。 如果在运行时遇到问题 `npm install` ，请确保使用 Node v14 (LTS) 
 
 ## <a name="install-the-teams-toolkit"></a>安装Teams Toolkit
 
-该Teams Toolkit使用工具来为应用预配和部署云资源、发布到 Teams 商店等，帮助简化开发过程。 你可以将工具包与 Visual Studio Code、Visual Studio 或用作称为) 的 CLI (`teamsfx` 一) 。 有关详细信息，请参阅 Teams Toolkit [for Visual Studio Code](../toolkit/visual-studio-code-overview.md) [、Teams Toolkit for Visual Studio 和](../toolkit/visual-studio-overview.md) [Teamsfx CLI 工具](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)。
+此Teams Toolkit使用工具来为应用预配和部署云资源、发布到 Teams 应用商店等， 帮助简化开发过程。 你可以将工具包与Visual Studio Code、Visual Studio或称为 (CLI `teamsfx`) 。 有关详细信息，请参阅 Teams Toolkit [for Visual Studio Code 、Teams Toolkit](../toolkit/visual-studio-code-overview.md) [for Visual Studio 和](../toolkit/visual-studio-overview.md) [Teamsfx CLI 工具](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)。
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. 打开 Visual Studio 代码。
 1. Select the **Extensions** view (**Ctrl+Shift+X**  /  **⌘⇧-X** or **View > Extensions**) .
 1. 在搜索框中，输入 **"Teams Toolkit"。**
-1. 选择 **"** 安装"旁边的"Teams Toolkit"。
+1. 选择 **"** 安装"旁边的Teams Toolkit。
 
 您还可以在 Teams Toolkit Marketplace 上Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
@@ -83,7 +84,7 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 
 这更常见于 Linux 和 macOS 系统。
 
-确保将 npm 全局缓存添加到 PATH。 这通常作为安装程序的一Node.js一部分。  
+确保将 npm 全局缓存添加到 PATH。 这通常是作为安装程序的一Node.js一部分。  
 
 可以将 CLI 与 命令 `teamsfx` 一同使用。 通过运行 验证命令是否正常工作 `teamsfx -h` 。
 
@@ -99,12 +100,12 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 - [ReactChrome 开发人员工具](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - [ReactEdge 开发人员工具](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
-如果你想要访问 Azure 中存储的数据或在 Azure 中为 Teams 应用部署基于云的后端，请安装以下工具：
+如果你希望访问 Azure 中存储的数据或为 Azure 中的 Teams 应用部署基于云的后端，请安装以下工具：
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [Azure CLI](/cli/azure/install-azure-cli)
 
-如果你使用 Microsoft Graph数据，你应了解 Microsoft Graph Explorer 并添加书签。 此基于浏览器的工具允许你在应用Graph查询 Microsoft 帐户。
+如果你使用 Microsoft Graph数据，你应该了解 Microsoft Graph Explorer 并添加书签。 此基于浏览器的工具允许你在应用Graph查询 Microsoft 帐户。
 
 - [Microsoft Graph 浏览器](https://developer.microsoft.com/graph/graph-explorer)
 
@@ -118,17 +119,17 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 
 如果你有一个Teams帐户，请验证你能否在Teams：
 
-1. 在客户端Teams，选择"**应用"。**
-1. 选择 **Upload自定义应用。**
+1. 在客户端Teams，选择"应用 **"。**
+1. 选择 **Upload应用"。**
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="此插图显示Teams上传自定义应用。":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="插图显示可以在Teams上传自定义应用。":::
 
 > [!NOTE]
-> 如果仍然无法旁加载应用，请与管理员Teams联系。 有关详细信息[，请参阅Teams自定义应用和启用自定义](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)应用上传。
+> 如果仍然无法旁加载应用，请与管理员Teams联系。 有关详细信息[，请参阅Teams自定义应用和自定义应用](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)上传。
 
 ## <a name="get-a-free-teams-developer-tenant-optional"></a>获取一个Teams开发人员租户 (可选) 
 
-如果看不到旁加载选项，或者没有 Teams 帐户，则可以通过加入 M365 开发人员计划Teams免费获取开发人员帐户。  注册过程大约需要两分钟。
+如果看不到旁加载选项，或者没有 Teams 帐户，可以通过加入 M365 开发人员计划Teams免费帐户。  注册过程大约需要两分钟。
 
 1. 转到开发人员[Microsoft 365计划](https://developer.microsoft.com/microsoft-365/dev-program)。
 1. 选择 **立即加入** 并按照屏幕上的说明进行操作。
@@ -174,7 +175,7 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
-Visual Studio 2019 会提示您登录每个服务（如果需要）。 无需提前登录 M365 和 Azure 帐户。
+Visual Studio 2019 年 10 月会提示您登录每个服务（如果需要）。 无需提前登录 M365 和 Azure 帐户。
 
 # <a name="command-line"></a>[命令行](#tab/cli)
 
@@ -198,7 +199,7 @@ Visual Studio 2019 会提示您登录每个服务（如果需要）。 无需提
 
 
 
-    现在，你的开发环境已配置，你可以创建、生成和部署你的第一个Teams应用程序。
+    现在已配置开发环境，你可以创建、生成和部署你的第一个Teams应用程序。
 
 ## <a name="see-also"></a>另请参阅
 

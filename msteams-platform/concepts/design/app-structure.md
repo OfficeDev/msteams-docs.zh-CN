@@ -3,14 +3,14 @@ title: 设计应用 - 了解应用结构
 description: 了解在设计应用时，可以在 Microsoft Teams自定义哪些内容。
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: eb7e26a726313c366765f3ee4fd36aebc064ca78
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408578"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155944"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>了解Microsoft Teams结构
 
@@ -30,7 +30,7 @@ ms.locfileid: "58408578"
 
 ***支持的范围**：个人*
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 画布是 Web 视图，因此你可以完全自定义体验。
 
@@ -40,7 +40,7 @@ ms.locfileid: "58408578"
 
 画布是 iframe，因此你可以完全自定义体验。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="概念图像，显示开发人员可针对Teams桌面应用自定义的前端区域。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="概念图像，显示开发人员Teams桌面版应用自定义的前端区域。" border="false":::
 
 ## <a name="tabs"></a>选项卡
 
@@ -48,7 +48,7 @@ ms.locfileid: "58408578"
 
 ***支持的范围**：频道、聊天、会议*
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 画布是 Web 视图，因此你可以完全自定义体验。
 
@@ -62,25 +62,25 @@ ms.locfileid: "58408578"
 
 ## <a name="bots"></a>机器人
 
-自动程序是对话应用，Teams本机消息传递功能集成，因此会处理 UI 工作。 从设计的角度来看，仍有机会使用我们的自然语言处理功能（NLP 支持平台和自适应卡片 (功能) 个性化、自定义功能和丰富的可操作信息。
+聊天机器人是对话应用，Teams本机消息传递功能集成，因此会处理 UI 工作。 从设计的角度来看，仍有机会使用我们的自然语言处理功能添加个性、自定义功能和丰富且可操作的信息 (NLP) 和自适应卡片平台。
 
 ***支持的范围**：个人、频道、聊天、会议*
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="概念图像，显示开发人员可以针对Teams自动程序自定义的前端区域。" border="false":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="显示开发人员可以在桌面上为Teams自动程序自定义的前端区域的概念图像。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="概念图像，显示开发人员可在Teams自动程序自定义的前端区域。" border="false":::
 
-## <a name="messaging-extensions"></a>消息传递扩展
+## <a name="messaging-extensions"></a>消息扩展
 
 消息传递是插入应用程序内容或对消息采取行动的快捷方式，而无需从对话中导航。 基于操作的邮件扩展可让你更加控制体验，Teams处理大部分基于搜索的邮件扩展呈现内容。
 
 ***支持的范围**：个人、频道、聊天、会议*
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="概念图像，显示开发人员可以针对Teams邮件扩展自定义的前端区域。" border="false":::
 
@@ -94,7 +94,7 @@ ms.locfileid: "58408578"
 
 ***支持的范围**：会议、聊天*
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 图面是 Web 视图，可让你自定义体验，但请记住，在会议期间，这些应用使用深色主题。
 

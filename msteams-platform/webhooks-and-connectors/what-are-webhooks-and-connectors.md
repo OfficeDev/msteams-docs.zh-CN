@@ -2,15 +2,15 @@
 title: Webhook 和连接器
 author: clearab
 description: 了解 webhook 和连接器如何将 Web 服务连接到 Teams 客户端。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 199f1e8a82f067cbd8124553481ed54693d241f1c3a50c085b32203b89f4f63d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708634"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156006"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook 和连接器
 
@@ -18,14 +18,14 @@ Webhook 和连接器有助于将 Web 服务连接到 Microsoft Teams。 Webhook 
 
 ## <a name="outgoing-webhooks"></a>传出 Webhook
 
-Webhook 可帮助Teams外部应用集成。 使用传出 Webhook，您可以将短信从频道发送到 Web 服务。 配置传出 Webhook 后，用户可以@mention传出 Webhook 并将消息发送到 Web 服务。 该服务在 10 秒钟内使用文本或卡片对邮件做出响应。
+Webhook 可帮助Teams外部应用集成。 使用传出 Webhook，您可以将短信从频道发送到 Web 服务。 配置传出 Webhook 后，用户可以@mention传出 Webhook 并将消息发送到 Web 服务。 该服务在十秒钟内使用文本或卡片对邮件做出响应。
 
 > [!NOTE]
-> 传出 Webhook 基于每个团队进行配置，不能作为正常 webhook 应用的一Teams一部分。
+> 传出 Webhook 基于每个团队进行配置，不能作为常规 webhook 应用的一Teams一部分。
 
 ## <a name="connectors"></a>连接器
 
-连接器允许用户订阅从 Web 服务接收通知和消息。 它们公开服务的 HTTPS 终结点，以将消息Teams频道，通常采用卡片形式。
+连接器允许用户订阅从 Web 服务接收通知和消息。 它们公开服务的 HTTPS 终结点，以将消息Teams通道，通常采用卡片形式。
 
 ### <a name="incoming-webhooks"></a>传入 Webhook
 
@@ -33,14 +33,14 @@ Webhook 可帮助Teams外部应用集成。 使用传出 Webhook，您可以将�
 
 ### <a name="office-365-connectors"></a>Office 365 连接器
 
-Office 365连接器允许你为传入 Webhook 创建自定义配置页，并打包它们作为 Teams 应用的一部分。 你主要使用 Office 365 连接器卡发送邮件，并且能够向这些连接器卡添加一组有限的卡片操作。 例如，天气连接器允许用户选择一天中的位置和时间，以接收有关明天天气的更新。 它们在频道级别配置，但安装在团队级别。
+Office 365连接器允许你为传入 Webhook 创建自定义配置页，并将它们打包为 Teams 应用的一部分。 你主要使用Office 365连接器卡发送邮件，并且能够向它们添加一组有限的卡片操作。 例如，天气连接器允许用户选择一天中的位置和时间，以接收有关明天天气的更新。 它们在频道级别配置，但安装在团队级别。
 
 > [!NOTE]
 > 您可以将 Office 365 连接器Teams应用程序分发到我们的 AppStore。
 
 ## <a name="create-and-send-messages"></a>创建和发送邮件
 
-可操作邮件允许用户在不离开其电子邮件客户端的情况下采取措施，从而增加用户参与度。 使用 Office 365 和传入 Webhook，可以通过将 JSON 有效负载发布到 webhook URL 来发送消息。
+可操作邮件允许用户在不离开其电子邮件客户端的情况下采取措施，从而增加用户参与度。 使用Office 365 Webhook 和传入 Webhook，可以通过将 JSON 有效负载发布到 webhook URL 来发送消息。
 
 ## <a name="see-also"></a>另请参阅
 

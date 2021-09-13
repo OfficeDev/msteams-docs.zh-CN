@@ -5,21 +5,22 @@ description: 使用 Teams 工具包为 Microsoft Teams 创建对话机器人。
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 2b39dc51c1c175e738b88376a298df82f25a582a
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345639"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155799"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>构建你的第一个 Microsoft Teams 对话机器人
 
 在本教程中，你将了解如何构建、运行和部署 Teams 机器人应用。 机器人是 Teams 用户和 Web 服务之间的中介。 用户可以与机器人聊天，以快速获取信息、启动工作流或启动 Web 服务能够执行的任何操作。 
 
 > [!IMPORTANT]
-> 目前，自动程序政府社区云 (GCC) DOD GCC-High和国防部 (中) 。
+> 目前，自动程序在 政府社区云 (GCC) 中可用，但在 doD GCC-High 和国防部 (中) 。
 
-## <a name="before-you-begin"></a>准备工作
+## <a name="before-you-begin"></a>开始之前
 
 通过安装先决条件确保已设置开发环境。
 
@@ -112,12 +113,12 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
    > 首次运行该应用时，将下载所有依赖项并编译该应用。  编译完成后，将自动打开浏览器窗口。  这可能需要 3-5 分钟才能完成。
 
-1. Web 浏览器开始运行该应用。 如果系统提示打开Teams，请选择 **"取消**"以保留在浏览器中。 系统可能也会提示你在其他时间切换到Teams桌面;选择Teams Web 应用。
+1. Web 浏览器开始运行该应用。 如果系统提示打开Teams，请选择 **"取消**"以保留在浏览器中。 系统也可能提示你在其他时间切换到Teams桌面;选择Teams Web 应用。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
 1. 系统可能会提示你登录。  如果是这样，则使用你的 M365 帐户登录。
-1. 当系统提示将应用安装到Teams，选择"添加 **"。**
+1. 当系统提示将应用安装到 Teams，选择"添加 **"。**
 
    加载应用后，你将直接进入与机器人的聊天会话。  你可以键入 `intro` 以显示简介卡，键入 `show` 以显示你在 Microsoft Graph 中的详细信息。  (这需要额外审批权限)。
 
@@ -133,7 +134,7 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 1. 将应用程序注册为"旁加载"Microsoft Teams。
 1. 使用 Azure 函数核心工具 启动本地 [运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。
 1. 启动 ngrok 隧道，Teams应用进行通信。
-1. 使用Microsoft Teams启动命令以指示Teams旁加载应用程序。
+1. 首先Microsoft Teams命令指示Teams旁加载应用程序。
 
 </details>
 

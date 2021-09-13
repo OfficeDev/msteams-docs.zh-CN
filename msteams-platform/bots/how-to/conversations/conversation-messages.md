@@ -3,26 +3,26 @@ title: 智能机器人对话中的邮件
 description: 介绍与自动程序Microsoft Teams的方法
 ms.topic: overview
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 49e6af7ef71d0794210e554d8d8b42fe714fbe592d3ca7de43c7996283f54a2c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f2cb661ac20d8313101144be275a54a90f4f2db3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707548"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155366"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
 对话中每条消息都是一 `Activity` 个类型 为 的对象 `messageType: message` 。 当用户发送消息时，Teams将邮件发送到自动程序。 Teams JSON 对象发送到机器人的消息终结点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与Teams通信。 Bot Builder SDK 提供以下功能：
+基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与用户Teams通信。 Bot Builder SDK 提供以下功能：
 
 * 轻松访问 Bot Framework 连接器。
 * 用于管理对话流和状态的其他功能。
 * 合并认知服务的简单方法，如自然语言处理 (NLP) 。
 
-自动程序使用 Teams 接收来自用户的邮件，并且它会向用户发送一 `Text` 个或多个邮件响应。
+自动程序使用 Teams 接收来自用户的邮件， `Text` 并且它会向用户发送一个或多个消息响应。
 
 ## <a name="receive-a-message"></a>接收消息
 
@@ -113,7 +113,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>发送消息
 
-若要发送短信，请指定你想要作为活动发送的字符串。 在机器人的活动处理程序中，使用 turn context 对象的方法发送 `SendActivityAsync` 单个消息响应。 使用 对象的 `SendActivitiesAsync` 方法一次发送多个响应。
+若要发送短信，请指定你想要作为活动发送的字符串。 在机器人的活动处理程序中，使用 turn context 对象的方法 `SendActivityAsync` 发送单个消息响应。 使用 对象的 `SendActivitiesAsync` 方法一次发送多个响应。
 
 以下代码显示向对话中添加用户时发送邮件的示例：
 
@@ -203,7 +203,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动按以下两Microsoft Teams拆分为单独的活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。 建议发送单独的活动，而不是根据邮件拆分。
+> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动按以下方式拆分为Microsoft Teams活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。 建议发送单独的活动，而不是根据邮件拆分。
 
 在用户和机器人之间发送的消息包含邮件中的内部通道数据。 此数据允许机器人在此频道上正常通信。 Bot Builder SDK 允许你修改消息结构。
 
@@ -215,7 +215,7 @@ async def on_members_added_activity(
 
 发送给 `channelData` 自动程序的活动中的典型对象包含以下信息：
 
-* `eventType`：Teams仅在通道修改事件的情况下传递[的事件类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
+* `eventType`：Teams修改事件时传递的事件[类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
 * `tenant.id`：Azure Active Directory上下文中传递的租户 ID。
 * `team`：仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id`：通道的 GUID。
@@ -250,7 +250,7 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>邮件内容
 
-| 格式    | 从用户到机器人 | 从自动程序到用户 | 注释                                                                                   |
+| 格式    | 从用户到机器人 | 从自动程序到用户 | 注意                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
 | 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。 不支持动态 GIF。  |

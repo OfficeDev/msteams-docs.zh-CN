@@ -4,12 +4,13 @@ author: surbhigupta
 description: 如何从应用程序应用中的消息扩展响应Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3d82c7be0a0bbe5cf0ef991a90b277de38fcf4d5
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.localizationpriority: none
+ms.openlocfilehash: 23c4e6d2db9396fc03ed2a75ccc09052f1130423
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068944"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155261"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -80,7 +81,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 当用户执行查询时，Microsoft Teams向服务发送同步 HTTP 请求。 此时，代码有 `5` 几秒钟时间提供对请求的 HTTP 响应。 在此期间，你的服务可以执行其他查找，或执行为请求提供服务所需的任何其他业务逻辑。
 
-服务必须使用与用户查询匹配的结果进行响应。 该响应必须指示 的 HTTP 状态代码以及具有以下属性的有效 `200 OK` 应用程序或 JSON 对象：
+服务必须使用与用户查询匹配的结果进行响应。 该响应必须指示 的 HTTP 状态代码以及具有以下属性的有效 application 或 `200 OK` JSON 对象：
 
 |属性名称|用途|
 |---|---|
@@ -104,7 +105,7 @@ Teams支持以下卡片类型：
 
 若要了解如何使用缩略图和 Hero 卡片类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-有关连接器卡的其他Office 365，请参阅使用 Office 365[连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+有关连接器卡的其他Office 365，请参阅使用[Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
 结果列表显示在项目 UI 中Microsoft Teams每个项目的预览。 预览以以下两种方式之一生成：
 
@@ -313,7 +314,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="default-query"></a>默认查询
 
-如果在清单中设置为 ，则Microsoft Teams用户首次打开邮件扩展时，将发送 `initialRun` `true` 默认查询。  你的服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息时，这非常有用。
+如果在清单中设置为 ，则Microsoft Teams用户首次打开邮件扩展时，将发送 `initialRun` `true` 默认查询。  你的服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息时，此功能非常有用。
 
 默认查询的结构与任何常规用户查询相同，字段设置为 并设置为 `name` `initialRun` `value` `true` ，如以下对象所示：
 

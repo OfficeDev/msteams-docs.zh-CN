@@ -1,19 +1,19 @@
 ---
 title: 用户特定视图
-description: 使用通用操作的用户特定视图示例
+description: 使用通用操作的用户特定视图的示例
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 00d6c8e5109fdd9cdf83662f9585a9a2d9e7fd86
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.localizationpriority: medium
+ms.openlocfilehash: d607250d0d34367c097cdfd25050e4180f72eeda
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585982"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155346"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
-之前，如果自适应卡片是在Teams对话中发送的，则所有用户都可以看到完全相同的卡片内容。 随着通用操作模型和自适应卡片的引入，机器人开发人员现在可以为用户提供自适应卡片的用户 `refresh` 特定视图。 现在，相同的自适应卡片可以刷新到用户特定自适应卡片。 最多 60 个不同用户可以看到不同版本的卡，并包含其他信息或操作。 自适应卡片提供功能强大的方案，如审批、投票创建者控件、票证、事件管理和项目管理卡。
+之前，如果自适应卡片是在Teams对话中发送的，则所有用户都可以看到完全相同的卡片内容。 随着通用操作模型和自适应卡片的引入，机器人开发人员现在可以为用户提供自适应卡片的用户 `refresh` 特定视图。 现在，相同的自适应卡片可以刷新到用户特定自适应卡片。 最多 60 个不同的用户可以看到不同版本的卡，并包含其他信息或操作。 自适应卡片提供功能强大的方案，如审批、投票创建者控件、票证、事件管理和项目管理卡。
 
 例如，Contoso 的安全检查员 Megan 想要创建事件并将其分配给 Alex。 Megan 还希望团队中的每个人都了解事件。 Megan 使用 Contoso 事件报告邮件扩展，该扩展由自适应卡片的通用操作支持。
 
@@ -62,14 +62,14 @@ ms.locfileid: "53585982"
 
 **若要发送自适应卡片，请刷新用户特定视图，并调用对自动程序的请求**
 
-1. 当 Megan 创建新事件时，机器人会发送自适应卡片或公用卡片（包含事件详细信息）Teams对话。
+1. 当 Megan 创建新事件时，机器人会发送自适应卡片或公用卡片（包含事件详细信息Teams对话中。
 2. 现在，此卡片将自动刷新到 Megan 和 Alex 的用户特定视图。 Alex 和 Megan 的用户 MRIs 添加到自适应卡片 JSON 的 `userIds` `refresh` 属性中。 对于对话中的其他用户，该卡片保持不变。
 3. 对于 Megan，自动刷新会触发 `adaptiveCard/action` 对机器人的调用请求。 机器人可以返回事件创建者卡片，并添加 `Edit` 按钮作为对此调用请求的响应。
 4. 同样，对于 Alex，自动刷新将触发 `adaptiveCard/action` 对自动程序的另一个调用请求。 机器人可以返回事件所有者卡片 `Resolve` 按钮作为对此调用请求的响应。
 
 ## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>调用从 Teams 客户端发送到自动程序的请求
 
-以下代码提供了从 Alex 和 Megan 的 Teams 客户端发送到机器人的调用请求示例：
+以下代码提供了从 Alex 和 Megan 的 Teams 客户端发送到机器人的调用请求的示例：
 
 ```JSON
 { 
@@ -197,8 +197,8 @@ var adaptiveCardResponse = JObject.FromObject(new
 * 您可以通过在 部分中指定特定卡片，为发送到聊天或频道的特定卡片创建最多 **60** `userIds` 个用户特定 `refresh` 视图。
 * **基本卡片：** 机器人开发人员发送到聊天的卡的基本版本。 基本版本是部分中未指定的所有用户的自适应卡片 `userIds` 版本。
 * 邮件更新可用于更新基本卡并同时刷新用户特定卡片。 打开聊天或频道还会刷新已启用刷新功能的用户的卡片。
-* 对于用户切换到操作视图的较大组（需要响应者的动态更新）的方案，可以不断向列表中添加多达 60 `userIds` 个用户。 当第 61 个用户做出响应时，可以从列表中删除第一个响应器。 对于从列表中删除的用户，可以提供手动刷新按钮或使用消息选项菜单中的刷新按钮 `userIds` 获取最新结果。
-* 提示用户获取用户特定视图，其中他们只能看到卡片的特定视图或某些操作。
+* 对于用户切换到操作视图的较大组（需要响应者的动态更新）的方案，你可以不断向列表中添加多达 60 `userIds` 个用户。 当第 61 个用户做出响应时，可以从列表中删除第一个响应器。 对于从列表中删除的用户，可以提供手动刷新按钮或使用消息选项菜单中的刷新按钮 `userIds` 获取最新结果。
+* 提示用户获取用户特定视图，其中他们只能看到卡片的特定视图或一些操作。
 
 ## <a name="code-sample"></a>代码示例
 

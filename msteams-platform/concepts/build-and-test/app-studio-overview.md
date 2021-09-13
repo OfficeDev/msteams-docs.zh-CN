@@ -2,14 +2,14 @@
 title: App Studio for Microsoft Teams 入门
 description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应用
 keywords: 应用室团队入门
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 507a044098e479c7b737d6d7711a4e912ec81cbfe56fda2345a088618c47b36b
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 22fb1deb55671120d3f40fc9d6e5cbfc2f27330f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704044"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155884"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams
 
@@ -66,7 +66,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 清单编辑器的功能部分介绍定义应用的功能并列出其中每个功能的详细信息。
 
 > [!NOTE]
-> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
+> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅自定义[Microsoft Teams。](/MicrosoftTeams/customize-apps)
 
 ##### <a name="tabs"></a>选项卡
 
@@ -76,7 +76,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
   你还必须提供选项卡期望从其加载或链接到的任何其他域。
 
-* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认在个人应用体验中显示 (用户在团队或频道应用的上下文之外使用你的应用时) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
+* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认在个人应用体验中显示 (用户在团队或频道应用的上下文之外使用你的应用) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
 
 ##### <a name="bots"></a>机器人
 
@@ -121,14 +121,14 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 卡片是包含短信息或相关信息的容器。 Microsoft Teams 支持卡片，卡片可以有多个属性和附件。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。 
 
-为了简化此过程且减少出错，可以使用"卡片编辑器"选项卡使用窗体生成主卡或缩略图卡，并验证和测试生成的卡片 (就像用户通过自动程序) 看到它一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
+为了简化此过程且减少出错，可以使用"卡片编辑器"选项卡使用窗体生成主卡或缩略图卡片，并验证和测试生成的卡片 (就像用户通过自动程序) 一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
 
 如果已有要验证的卡片，可在 Teams 中将该卡的 JSON 粘贴到 *"添加卡信息"下的 JSON 选项卡中* 然后将其发送给自己以查看聊天中的外观。
 
 ### <a name="react-control-library"></a>反应控件库
 
 >[!Note]
-> 以后React弃用此控件库。 请考虑使用[Fluent UI react 控件作为](https://microsoft.github.io/fluent-ui-react/)替代的之前 Stardust UI。
+> 以后React弃用此控件库。 请考虑将[Fluent UI react 控件用作](https://microsoft.github.io/fluent-ui-react/)之前替代的 Stardust UI。
 
 创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为更轻松地创建一致的 UI，App Studio 提供了几种符合 Teams 设计原则的 UI 控件类别。
 

@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: 如何使用 JavaScript Teams SDK 集成人员选取器控件
 keywords: 人员选取器控件
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 7afc856705bdf6e9495e2063356428d07e25c21a
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 5f686b247397c89a5a1ab8fe80ac9e97017ea051
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345288"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155831"
 ---
 # <a name="integrate-people-picker"></a>集成人员选取器  
 
@@ -29,7 +29,7 @@ ms.locfileid: "58345288"
 你必须调用 `selectPeople` API 以将人员选取器控件集成到Teams应用中。 为了进行有效的集成，你必须了解 [用于](#code-snippet) 调用 API 的代码段。 熟悉 API 响应错误以处理 [Web](#error-handling) 应用中的错误非常重要。
 
 > [!NOTE] 
-> 目前，Microsoft Teams对人员选取器的支持仅适用于移动客户端。
+> 目前Microsoft Teams对人员选取器的支持仅适用于移动客户端。
 
 ## <a name="selectpeople-api"></a>`selectPeople` API 
 
@@ -45,9 +45,9 @@ API 说明如下：
 |配置参数|类型|说明| 默认值|
 |-----|------|--------------|------|
 |`title`| String| 它是可选参数。 它设置人员选取器控件的标题。 | 选择人员|
-|`setSelected`|字符串| 它是可选参数。 必须传递要预先选择的人的 AAD ID。 此参数在启动人员选取器控件时预选人员。 在单选的情况下，仅预填充第一个有效用户，忽略其余用户。 |NULL| 
-|`openOrgWideSearchInChatOrChannel`|布尔值 | 它是可选参数。 设置为 true 时，它将在组织范围内启动人员选取器，即使该应用已添加到聊天或频道也是如此。 |错误|
-|`singleSelect`|布尔值|它是可选参数。 设置为 true 时，它会启动人员选取器，将选择限制为仅一个用户。 |错误|
+|`setSelected`|String| 它是可选参数。 必须传递要预先选择的人的 AAD ID。 此参数在启动人员选取器控件时预选人员。 在单选的情况下，仅预填充第一个有效用户，忽略其余用户。 |NULL| 
+|`openOrgWideSearchInChatOrChannel`|Boolean | 它是可选参数。 设置为 true 时，它将在组织范围内启动人员选取器，即使该应用已添加到聊天或频道也是如此。 |False|
+|`singleSelect`|布尔值|它是可选参数。 设置为 true 时，它会启动人员选取器，将选择限制为仅一个用户。 |False|
 
 下图描述了示例 Web 应用中人员选取器的体验：
 
@@ -82,7 +82,7 @@ API 说明如下：
 
 必须确保在 Web 应用中正确处理错误。 下表列出了错误代码以及生成错误的条件： 
 
-|错误代码 |  错误名称     | 条件|
+|错误代码 |  错误名称     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **500** | INTERNAL_ERROR | 启动人员选取器时遇到内部错误。|
@@ -92,6 +92,6 @@ API 说明如下：
 
 ## <a name="see-also"></a>另请参阅
 
-* [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
+* [集成媒体中的媒体Teams](mobile-camera-image-permissions.md)
 * [将 QR 代码或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
-* [将位置功能集成到Teams](location-capability.md)
+* [在 Teams 中集成位置Teams](location-capability.md)

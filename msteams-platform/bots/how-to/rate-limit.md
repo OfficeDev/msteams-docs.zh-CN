@@ -2,20 +2,20 @@
 title: 通过团队中的速率限制来优化你的智能机器人
 description: 速率限制和解决方案中的Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 机器人速率限制
-ms.openlocfilehash: d113cc0236de78a34211b9348105916740189d81
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345591"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155365"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 
 速率限制是一种将邮件限制为特定最大频率的方法。 一般来说，您的应用程序必须限制向单个聊天或频道对话发布的消息数。 这可确保最佳体验，并且邮件不会显示为垃圾邮件给用户。
 
-为了保护Microsoft Teams用户，自动程序 API 为传入请求提供速率限制。 超过此限制的应用将收到 `HTTP 429 Too Many Requests` 错误状态。 所有请求都受同一速率限制策略的限制，包括发送邮件、频道枚举和名单提取。
+为了保护Microsoft Teams用户，自动程序 API 为传入请求提供了速率限制。 超过此限制的应用将收到 `HTTP 429 Too Many Requests` 错误状态。 所有请求都受同一速率限制策略的限制，包括发送邮件、频道枚举和名单提取。
 
 由于速率限制的确切值可能会更改，因此当 API 返回 时，应用程序必须实现相应的退步行为 `HTTP 429 Too Many Requests` 。
 
@@ -83,7 +83,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-可以使用暂时性错误处理 执行退回 [并重试](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 有关获取和安装 NuGet程序包的指南，请参阅将瞬态错误处理[应用程序块添加到解决方案](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 另请参阅 [瞬态故障处理](/azure/architecture/best-practices/transient-faults)。
+可以使用暂时性错误处理 执行退回 [并重试](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 有关获取和安装 NuGet 程序包的指南，请参阅将瞬态[错误处理应用程序块添加到解决方案](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 另请参阅 [瞬态故障处理](/azure/architecture/best-practices/transient-faults)。
 
 完成检测暂时性异常的示例后，请浏览指数退步示例。 可以使用指数退步，而不是在失败时重试。
 
@@ -131,19 +131,19 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | 方案 | 时间段（以秒表示） | 允许的最大操作数 |
 | --- | --- | --- |
-| 发送到对话 | 1  | 7  |
+| 发送到对话 | 1 | 7  |
 | 发送到对话 | 2 | 8  |
 | 发送到对话 | 30 | 60 |
 | 发送到对话 | 3600 | 1800 |
-| 创建对话 | 1  | 7  |
+| 创建对话 | 1 | 7  |
 | 创建对话 | 2 | 8  |
 | 创建对话 | 30 | 60 |
 | 创建对话 | 3600 | 1800 |
-| 获取对话成员| 1  | 14  |
+| 获取对话成员| 1 | 14  |
 | 获取对话成员| 2 | 16  |
 | 获取对话成员| 30 | 120 |
 | 获取对话成员| 3600 | 3600 |
-| 获取对话 | 1  | 14  |
+| 获取对话 | 1 | 14  |
 | 获取对话 | 2 | 16  |
 | 获取对话 | 30 | 120 |
 | 获取对话 | 3600 | 3600 |
@@ -161,15 +161,15 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | 方案 | 时间段（以秒表示） | 允许的最大操作数 |
 | --- | --- | --- |
-| 发送到对话 | 1  | 14  |
+| 发送到对话 | 1 | 14  |
 | 发送到对话 | 2 | 16  |
-| 创建对话 | 1  | 14  |
+| 创建对话 | 1 | 14  |
 | 创建对话 | 2 | 16  |
-| 创建对话| 1  | 14  |
+| 创建对话| 1 | 14  |
 | 创建对话| 2 | 16  |
-| 获取对话成员| 1  | 28 |
+| 获取对话成员| 1 | 28 |
 | 获取对话成员| 2 | 32 |
-| 获取对话 | 1  | 28 |
+| 获取对话 | 1 | 28 |
 | 获取对话 | 2 | 32 |
 
 ## <a name="next-step"></a>后续步骤

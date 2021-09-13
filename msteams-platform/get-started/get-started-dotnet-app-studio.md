@@ -3,19 +3,19 @@ title: 教程 - 使用 C 创建第一个应用#
 description: 了解如何开始使用 Microsoft Teams 或 .NET C#应用程序。
 keywords: 入门 .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 72cbaadbd3e641b9f142cec51b4d9fd9ef170f727c87ed97c84e392943b84af3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707325"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155791"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>使用 C 生成Teams应用#
 
-本教程介绍如何使用 .NET 或 Microsoft Teams 生成首个 C#。 它还将引导你完成以下步骤：
+本教程介绍如何使用 .NET 或 Microsoft Teams 生成首个C#。 它还将引导你完成以下步骤：
 
 1. [准备环境](#prepare-your-environment)
 1. [获取先决条件](#GetPrerequisites)
@@ -90,7 +90,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     <a name="hostsample"></a>
     ## <a name="deploy-your-sample-app"></a>部署示例应用
 
-    应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams加载应用，应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
+    应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams应用，你的应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel ngrok
 
@@ -131,7 +131,7 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
 # <a name="developer-portal"></a>[开发人员门户](#tab/DP)
 
-**安装开发人员门户 (预览) 中Teams**
+**若要安装开发人员门户 (预览) 中Teams**
 
 
 1. 选择 **左侧** 栏底部的"应用"图标，然后搜索"开发人员 **门户"。**
@@ -142,7 +142,7 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
     <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
 
-1. 选择"应用"选项卡，然后选择 **"导入现有应用"。**
+1. 选择应用选项卡，然后选择 **导入现有应用**。
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
 
@@ -185,7 +185,7 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
 现在可以在 Teams 中测试自动程序。 
 
-**测试机器人**
+**测试自动程序**
 
 * 选择你注册应用的团队中的频道并键入 `@your-bot-name` 。 这称为 **\@ 提及**。 机器人将回复你发送的任何消息。
 

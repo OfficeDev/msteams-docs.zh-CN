@@ -15,7 +15,7 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
     <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-1. 若要为应用创建应用包Teams，请选择 **App Studio****中的** 清单编辑器选项卡：
+1. 若要为应用创建应用包Teams，请选择 App Studio **中的** 清单 **编辑器选项卡**：
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
@@ -63,7 +63,7 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
 新的应用 ID 类似于 `2322041b-72bf-459d-b107-f4f335bc35bd` 。
 
-在右侧窗格中查看应用详细信息，包括 **开发人员信息和****品牌打造** 详细信息。 如果你要编写要分发的新应用，这些详细信息非常重要。
+在右侧窗格中查看应用详细信息，包括 **开发人员信息和****品牌** 打造详细信息。 如果你要编写要分发的新应用，这些详细信息非常重要。
 
 #### <a name="tabs"></a>选项卡
 
@@ -75,13 +75,13 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-在此示例中，"团队"选项卡是显示配置页面的地方。 Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. 将 URL 更改为必须替换为托管应用时所使用的 `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` URL。
+本示例中，"团队"选项卡是显示配置页面的地方。 Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. 将 URL 更改为必须替换为托管应用时所使用的 `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` URL。
 
 ##### <a name="personal-tabs"></a>个人选项卡
 
 你的应用可具有最多 16 个选项卡，包括"团队"选项卡。
 
-个人选项卡不同于"团队"选项卡 **。"Hello"选项卡** 已列在具有占位符值 的个人选项卡列表中 `com.contoso.helloworld.hellotab` 。 Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. 将显示以下对话框：
+个人选项卡不同于"团队"选项卡。Hello **选项卡** 已列在具有占位符值 的个人选项卡列表中 `com.contoso.helloworld.hellotab` 。 Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. 将显示以下对话框：
 
 <img  width="450px" alt="Adding a personal tab dialog" src="~/assets/images/get-started/PersonalTab.png"/>
 
@@ -115,7 +115,7 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 1. 现在，在记事本中打开一个文本文件，然后将新的自动程序 ID 复制并粘贴到该文件中。
 1. 单击 **"生成新密码**"，并记下你记录自动程序应用 ID 的同一文本文件中的密码。
 1. 将 **Bot 终结点地址更新** 为 `https://yourteamsapp.ngrok.io/api/messages` ，将 替换为托管应用 `yourteamsapp.ngrok.io` 时所使用的 URL。
-1. 现在保存您的文本文件，因为您必须将文件中的信息添加到托管应用，以允许与自动程序进行安全通信。
+1. 现在保存你的文本文件，因为你必须将文件中的信息添加到托管的应用，以允许与机器人进行安全通信。
 
 #### <a name="messaging-extensions"></a>消息扩展
 
@@ -123,7 +123,7 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
 完成以下步骤以设置邮件扩展：
 
-1. 在 **App** Studio **左侧窗格中的** "功能"下选择"邮件扩展"以配置邮件扩展：
+1. 在 App Studio **左侧窗格中的**"功能"下选择"邮件扩展"以配置邮件扩展：
 
     <img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
@@ -149,7 +149,7 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
 1. 输入信息后，选择" **保存** "关闭对话框。
 
-#### <a name="register-your-app-in-teams"></a>在应用商店中Teams
+#### <a name="register-your-app-in-teams"></a>在应用商店中注册Teams
 
 输入应用的详细信息后，完成以下步骤以在应用中注册Teams：
 
@@ -166,9 +166,9 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
     > [!NOTE]
     > 如果无法旁加载应用，请验证是否已启用 [自定义应用上传](#prepare-your-development-environment)。
 
-1. 选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。 你可以设置一个特殊的团队进行测试。
+1. 选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。 你可以设置一个特殊团队进行测试。
 1. 选择 **对话框** 底部的"安装"按钮。
 
-    你的应用现已在 Teams 中提供。 但是，在用应用 ID 和密码更新托管应用程序环境之前，机器人和消息扩展将不起作用。
+    你的应用现已在 Teams。 但是，在用应用 ID 和密码更新托管应用程序环境之前，机器人和消息扩展将不起作用。
 
     <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>

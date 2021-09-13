@@ -1,19 +1,19 @@
 ---
-title: 会议应用的先决条件Teams会议
+title: Teams 会议中应用的先决条件
 author: surbhigupta
 description: 确定会议Teams的先决条件
 ms.topic: conceptual
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: c237a3131eac0286a60fe5bbd398439b51245ee9
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 0ba25480dc253f0ef757411a8e658b547b4090ef
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822204"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155644"
 ---
-# <a name="prerequisites-for-apps-in-teams-meetings"></a>会议应用的先决条件Teams会议
+# <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件
 
 借助Teams会议，可以在会议生命周期内扩展应用的功能。 使用会议Teams之前，必须满足以下先决条件：
 
@@ -23,7 +23,7 @@ ms.locfileid: "58822204"
 
 * 使用支持 groupchat 作用域中的可配置选项卡的应用。 有关详细信息，请参阅群[聊范围和](../resources/schema/manifest-schema.md#configurabletabs)[构建组选项卡](../build-your-first-app/build-channel-tab.md)。
 
-* 遵守Teams和会议后方案的常规选项卡设计准则。 有关会议期间的体验，请参阅会议中的选项卡和会议内对话框设计指南。 有关详细信息，请参阅Teams[选项卡](../tabs/design/tabs.md)设计指南、会议中的选项卡设计指南[](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)和[会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
+* 遵守Teams和会议后方案的常规选项卡设计准则。 有关会议期间的体验，请参阅会议中的选项卡和会议内对话框设计指南。 有关详细信息，请参阅Teams[选项卡](../tabs/design/tabs.md)设计指南、会议中的[选项卡](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)设计指南和[会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
 
 * 支持 `groupchat` 范围以在会议前和会议后聊天中启用你的应用。 通过会议前应用体验，你可以查找和添加会议应用，以及执行会议前任务。 使用会议后应用体验，可以查看会议结果，例如投票调查结果或费用
 * 会议 API URL 参数必须具有 `meetingId` 、 `userId` 和 `tenantId` 。 这些参数作为客户端 SDK 和自动程序Teams的一部分提供。 此外，您可以使用选项卡 SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
@@ -175,7 +175,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 会议中的所有用户都接收通过 API 发送 `NotificationSignal` 的通知。
 
 > [!NOTE]
-> * 调用会议中的对话框时，内容将显示为聊天消息。
+> * 调用会议内对话框时，内容将显示为聊天消息。
 > * 目前，不支持发送定向通知。
 
 API 使你能够提供使用用户-机器人聊天的现有对话通知 API 传递 `NotificationSignal` 的会议信号。 此 API 允许你根据显示会议内对话框的用户操作发出信号。 API 包括查询参数、示例和响应代码。

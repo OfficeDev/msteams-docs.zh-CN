@@ -2,27 +2,27 @@
 title: 设计自定义应用
 author: heath-hamilton
 description: 了解如何设计Microsoft Teams应用。 资源包括Microsoft Teams UI 工具包、最佳做法、示例等。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f05bf979a5c0f75cfa009bc5b105fa5233447c20c1f98874221ad2b0761690aa
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 56a988b174739fbbf14f17d5454943a9081358ed
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705030"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155991"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>设计Microsoft Teams应用
 
-:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="概念性图像，Microsoft Teams设计指南。":::
+:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="介绍设计指南Microsoft Teams概念图像。":::
 
 无论你是使用低代码工具的设计人员、产品经理、开发人员还是制造商，这些指南都可以帮助你快速做出正确的设计决策，Microsoft Teams应用。
 
 ## <a name="creating-a-cohesive-experience"></a>创建统一体验
 
-设计Teams应用与设计传统的 Web 应用类似，但有些不同。 有效的设计可突出显示应用的独特属性，同时自然地适应Teams和上下文。
+设计Teams应用与设计传统的 Web 应用类似，但有些不同。 有效的设计突出显示应用的独特属性，同时自然地适应Teams功能和上下文。
 
-这些指南和资源可以帮助您实现此平衡。 你将了解在设计 Teams 应用模型时 (该做什么，例如选项卡应用中的多级) 。
+这些指南和资源可以帮助您实现此平衡。 你将了解在设计应用模型时要Teams应避免 (如选项卡应用中的多级) 。
 
 ## <a name="teams-app-design-principles"></a>Teams应用设计原则
 
@@ -67,7 +67,7 @@ Teams应用可帮助用户共同实现更多目标。 使用这些原则来指�
 
 ### <a name="native-or-distinct"></a>本机或不同
 
-应用使用本机Teams设计组件或你自己的组件。 不混合配色方案、控件等。
+该应用使用本机Teams设计组件或你自己的组件。 配色方案、控件等不会混合使用。
 
    :::column-end:::
    :::column span="":::
@@ -141,7 +141,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-设计Teams UI 组件、模板以及可根据需要拖放和修改的示例设计应用。 UI 工具包还包括有关应用在不同的应用场景中的外观和行为Teams信息。
+设计Teams UI 组件、模板以及可根据需要拖放和修改的示例来设计应用。 UI 工具包还包括有关应用在不同的应用场景中的外观和行为Teams信息。
 
 > [!div class="nextstepaction"]
 > [获取图 (UI) ](https://www.figma.com/community/file/916836509871353159)
@@ -153,7 +153,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 > [!div class="nextstepaction"]
 > [尝试 UI 库 (场) ](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-将这些模板和相关组件直接导入到Teams应用项目中。
+直接将这些模板和相关组件导入到Teams应用项目中。
 
 > [!div class="nextstepaction"]
 > [获取 UI 库 (GitHub) ](https://github.com/OfficeDev/microsoft-teams-ui-component-library)

@@ -1,17 +1,17 @@
 ---
 title: 创建传入 Webhook
 author: laujan
-description: 介绍如何将传入 Webhook 添加到 Teams 应用，以及将外部请求Teams传入 Webhook
+description: 介绍如何将传入 Webhook Teams应用程序，以及将外部请求Teams传入 Webhook
 keywords: teams 选项卡传出 Webhook
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c5f90da64fe846e6579bc47de2edcd900d6ee6ba3a640788fba440734f55b7ec
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c07456288a26e3152a552644b704e2c6e6de38cc
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705340"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155263"
 ---
 # <a name="create-incoming-webhook"></a>创建传入 Webhook
 
@@ -35,7 +35,7 @@ ms.locfileid: "57705340"
 |安全资源定义|邮件的格式设置为 JSON 有效负载。 此声明性消息结构可防止插入恶意代码。|
 
 > [!NOTE]
-> * Teams机器人、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片，这是一个开放的跨卡平台框架。 目前[，Teams](../../webhooks-and-connectors/how-to/connectors-creating.md)连接器不支持自适应卡片。 但是，可以创建一个将[自适应卡片张贴](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)到Teams流。
+> * Teams自动程序、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片，这是一个开放的跨卡平台框架。 目前[，Teams](../../webhooks-and-connectors/how-to/connectors-creating.md)连接器不支持自适应卡片。 但是，可以创建一个将自适应卡片[](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)张贴到新频道Teams流。
 > * 有关卡片和 Webhook 的信息，请参阅[自适应卡片和传入 Webhook。](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
 ## <a name="create-incoming-webhook"></a>创建传入 Webhook
@@ -59,17 +59,17 @@ ms.locfileid: "57705340"
 webhook 在 Teams 中可用。
 
 > [!NOTE]
-> 在Teams中，设置"成员权限""允许成员创建、更新和删除连接器"，以便任何团队成员都可以添加、修改  >    >  或删除连接器。
+> 在Teams"中，设置"成员权限""允许成员创建、更新和删除连接器"，以便任何团队成员都可以添加、修改  >    >  或删除连接器。
 
 ## <a name="remove-incoming-webhook"></a>删除传入 Webhook
 
-**从传入 Webhook 通道Teams Webhook**
+**从传入 Webhook 通道中删除Teams Webhook**
 
 1. 转到频道。
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
 1. 从 **下拉菜单中选择** "连接器"。
 1. 在左侧的"管理 **"下，** 选择"**已配置"。**
-1. 选择 **< *"1>"*** 以查看当前连接器的列表：
+1. 选择 **< *"1*>"** 以查看当前连接器的列表：
 
     ![已配置的 Webhook](~/assets/images/configured.png)
 

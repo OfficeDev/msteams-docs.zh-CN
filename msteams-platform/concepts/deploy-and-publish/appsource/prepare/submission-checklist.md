@@ -2,15 +2,15 @@
 title: 准备应用商店提交
 description: 介绍提交要列在应用商店Microsoft Teams应用之前的最后步骤。
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: d18cd98bf9b5b0921a45c4f4a4affb4b51153c90668da7cb990b2fd9b9f669f7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f02eb250925ce262ad78e5be1edbe42f4b9469e5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706479"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155322"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
@@ -24,14 +24,14 @@ ms.locfileid: "57706479"
 
 应用Microsoft Teams工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
-1. 转到应用[Microsoft Teams工具](https://dev.teams.microsoft.com/appvalidation.html)。  (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) 
+1. 转到应用[Microsoft Teams工具 。](https://dev.teams.microsoft.com/appvalidation.html)  (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) 
 1. Upload应用包运行自动测试。
 1. 转到" **初步检查表** "并查看难以自动化的测试用例。
 1. [修复了当自动测试](~/resources/schema/manifest-schema.md) 出错或未满足检查表中所有条件时的配置或应用的问题。
 
 ## <a name="compile-testing-instructions"></a>编译测试说明
 
-提供说明和资源来帮助审阅者测试你的应用，包括测试帐户、凭据和许可证密钥。 你可以添加合作伙伴中心中的说明，或将它们上载到 SharePoint 上的公开位置。
+提供说明和资源来帮助审阅者测试你的应用，包括测试帐户、凭据和许可证密钥。 你可以添加合作伙伴中心中的说明，或将它们上载到 SharePoint。
 
 ### <a name="feature-list"></a>功能列表
 
@@ -43,10 +43,10 @@ ms.locfileid: "57706479"
 
 根据应用的功能，可能需要提供以下所有功能：
 
-* 管理员帐户 (管理员) 
-* 非管理员帐户 (必需) 
+* 管理员帐户 (必需) 
+* 非管理员帐户 (需要) 
 * 为了正确测试首次运行登录体验而未预配置的帐户 (要求) 
-* 有权访问高级或升级功能的帐户 (如果适用) 
+* 有权访问高级或升级功能的帐户 (（如果适用) 
 * 同一租户中的两个帐户，用于测试在共享上下文中工作的应用的 (体验（如果适用) 
 
 ### <a name="tenant-configurations"></a>租户配置
@@ -65,7 +65,7 @@ ms.locfileid: "57706479"
 
 ### <a name="specify-a-short-name"></a>指定短名称
 
-特别是，你的应用 (，它的短) 在用户如何在应用商店[](~/resources/schema/manifest-schema.md#name)中发现它方面起到重要作用。
+特别是，你的应用 (，它的短 [*名称) 在*](~/resources/schema/manifest-schema.md#name) 用户如何在应用商店中发现它方面起到重要作用。
 
 :::row:::
 
@@ -101,7 +101,7 @@ ms.locfileid: "57706479"
 
 #### <a name="long-description"></a>较长说明
 
-长描述可以提供一个叙述性内容，其中突出显示了应用的主要功能、它所解决的问题及其目标受众。 虽然此说明可以有 4，000 个字符，但大多数用户只能阅读 300 到 500 个单词。
+长描述可提供一个叙述性内容，其中突出显示了应用的主要功能、它所解决的问题及其目标受众。 虽然此说明可以有 4，000 个字符，但大多数用户只能阅读 300 到 500 个单词。
 
 :::row:::
 
@@ -119,7 +119,7 @@ ms.locfileid: "57706479"
 
 图标是用户在浏览应用商店时看到的主要元素之一。 图标应传达应用的品牌和用途，同时遵循Teams要求。
 
-有关详细信息，请参阅[有关创建应用图标Teams指南](~/concepts/build-and-test/apps-package.md#app-icons)。
+有关详细信息，请参阅[有关创建应用Teams指南](~/concepts/build-and-test/apps-package.md#app-icons)。
 
 ### <a name="capture-screenshots"></a>捕获屏幕截图
 
@@ -144,7 +144,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 有关最佳做法，请参阅以下资源：
 
-* [Teams应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
+* [Teams应用商店验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [为 Microsoft 应用商店精心制作有效图像](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>创建视频
@@ -182,7 +182,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ## <a name="complete-publisher-verification"></a>完成Publisher验证
 
-[Publisher应用商店](/azure/active-directory/develop/publisher-verification-overview)中列出的Teams应用需要验证。 有关详细信息，请参阅 [常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、 [如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)应用标记为发布者验证和发布者 [验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。
+[Publisher应用商店](/azure/active-directory/develop/publisher-verification-overview)中列出的Teams应用需要验证。 有关详细信息，请参阅 [常见问题](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、 [如何将](/azure/active-directory/develop/mark-app-as-publisher-verified)你的应用标记为发布者验证和发布者 [验证疑难解答](/azure/active-directory/develop/troubleshoot-publisher-verification)。
 
 ## <a name="complete-publisher-attestation"></a>完整Publisher证明
 

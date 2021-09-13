@@ -4,12 +4,13 @@ author: Rajeshwari-v
 description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 74f385476887ab14d9b3eac12bfb8e0735b295d5
-ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
+ms.localizationpriority: none
+ms.openlocfilehash: 4444830d47345908445d62bdd276e8706a0c1a03
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "58398674"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155926"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -44,7 +45,7 @@ ms.locfileid: "58398674"
 
 ## <a name="invoke-stage-view-from-adaptive-card"></a>从自适应卡片调用阶段视图
 
-当用户在桌面客户端上Teams URL 时，将调用自动程序并返回自适应卡片，并可选择在[](../task-modules-and-cards/cards/cards-actions.md)阶段中打开 URL。 启动阶段并提供了 后，你可以 `tabInfo` 添加将阶段固定为选项卡的能力。  
+当用户在桌面客户端上Teams URL 时，将调用自动程序并返回自适应卡片，并可选择[](../task-modules-and-cards/cards/cards-actions.md)在阶段中打开 URL。 启动阶段并提供了 后，你可以 `tabInfo` 添加将阶段固定为选项卡的能力。  
 
 下图显示从自适应卡片打开的阶段：
 
@@ -133,7 +134,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
 | `name` | String | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
-| `contentUrl` | String | 2048 | 此属性是 https:// UI 的 URL，它指向要显示在Teams UI。 这是必填字段。|
+| `contentUrl` | String | 2048 | 此属性是指向 https:// UI 以在页面画布中显示的实体 UI Teams URL。 这是必填字段。|
 | `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
 | `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
 

@@ -1,22 +1,22 @@
 ---
-title: 使用 Microsoft Graph授权主动自动程序安装和邮件Teams
+title: 使用 Microsoft Graph在客户端中授权主动安装自动程序Teams
 description: 介绍企业中的主动Teams以及如何实现。
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: e6a14dbc94ceb86fc6c457a7c589260b36c8fdf4
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 7d08097155ba69715508998ef4d2d9d50807b2ff
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585961"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155883"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
 
 >[!IMPORTANT]
-> Microsoft Graph公共Microsoft Teams预览版可供早期访问和反馈使用。 尽管此版本已经过大量测试，但不适合在生产中使用。
+> Microsoft Graph和 Microsoft Teams 公共预览版可供早期访问和反馈。 尽管此版本已经过大量测试，但不适合在生产中使用。
 
 ## <a name="proactive-messaging-in-teams"></a>邮件中的主动Teams
 
@@ -25,11 +25,11 @@ ms.locfileid: "53585961"
 |消息类型 | 说明 |
 |----------------|-------------- |
 |临时主动邮件| 机器人在不中断对话流的情况下与消息进行交互。|
-|基于对话框的主动消息 | 机器人创建新的对话线程、控制对话、传递主动消息、关闭并返回对上一对话框的控制。|
+|基于对话框的主动消息 | 机器人创建新的对话框线程、控制对话、传递主动消息、关闭控件，以及将控制权返回到上一个对话框。|
 
 ## <a name="proactive-app-installation-in-teams"></a>在应用中主动安装Teams
 
-在自动程序可以主动向用户发送消息之前，它必须作为个人应用或用户是成员的团队进行安装。 有时，你需要主动向尚未安装或之前与你的应用交互的用户发送消息。 例如，需要向组织中的每个人发送重要信息。 对于此类方案，可以使用 Microsoft Graph API 主动为用户安装自动程序。
+在自动程序可以主动向用户发送消息之前，它必须作为个人应用或用户是成员的团队进行安装。 有时，你需要主动向尚未安装或之前未与你的应用交互的用户发送消息。 例如，需要向组织中的每个人发送重要信息。 对于此类方案，可以使用 Microsoft Graph API 主动为用户安装自动程序。
 
 ## <a name="permissions"></a>权限
 
@@ -37,7 +37,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 |应用权限 | 说明|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|允许Teams应用为任何用户读取、安装、升级和卸载自身，而无需事先登录或使用。|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|允许Teams用户读取、安装、升级和卸载自身，而无需事先登录或使用。 |
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|允许Teams应用在任何团队中读取、安装、升级和卸载自身，而无需事先登录或使用。|
 
 若要使用这些权限，必须将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到具有以下值的应用清单：
@@ -74,7 +74,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
     **HTTP GET** 请求：
 
     ```http
-        GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+    GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
     请求必须返回对象 `teamsApp` `id` ，即应用的目录生成的应用程序 ID。 这不同于在应用清单中Teams ID：
@@ -95,7 +95,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 * 如果你的应用已在个人范围内为用户上载或旁加载：
 
-    **Microsoft Graph页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+    **Microsoft Graph页参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
     **HTTP GET** 请求：
 
@@ -120,7 +120,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 您可以确定当前是否已为邮件收件人安装自动程序，如下所示：
 
-**Microsoft Graph页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+**Microsoft Graph页参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 请求：
 
@@ -194,7 +194,7 @@ Content-Type: application/json
 
 | **示例名称** | **说明** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
-| 主动安装应用并发送主动通知 | 此示例演示如何使用用户主动安装应用，以及如何通过调用 Microsoft Graph发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+| 主动安装应用并发送主动通知 | 此示例演示如何通过调用 Microsoft Graph API 为用户使用主动安装应用并发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 ## <a name="see-also"></a>另请参阅
 
 * [**在应用中管理应用Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)

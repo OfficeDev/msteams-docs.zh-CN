@@ -2,15 +2,15 @@
 title: 创建个人选项卡
 author: laujan
 description: 使用 Yeoman 生成器为用户创建个人选项卡的快速Microsoft Teams。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: e45474d41404e057f2d73f7d1fad24a19e56b4f5
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 03ac2ede55f15f683267fe207538073fa8582f8a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345674"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155325"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -25,24 +25,24 @@ ms.locfileid: "58345674"
 > [!NOTE]
 > 本文遵循构建 Microsoft OfficeDev Microsoft Teams存储库中的第一个 GitHub [App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki 中概述的步骤。
 
-可以使用 Yeoman 生成器 中的 Teams[自定义个人选项卡](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)。 应用程序也会上载到Teams。
+可以使用[Yeoman](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)生成器 创建自定义Teams选项卡。 应用程序也会上载到Teams。
 
 ### <a name="prerequisites-for-teams-apps"></a>应用Teams的先决条件
 
 您必须了解以下先决条件：
 
-- 你必须拥有一个Office 365租户和一个已启用"允许上载自定义 **应用"的团队**。 有关详细信息，请参阅[准备你的Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- 你必须拥有一个Office 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备你的Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
-    > 如果你没有免费帐户，Office 365开发人员计划注册免费订阅Office 365订阅。 只要将订阅用于正在进行的开发，订阅就保持活动状态。 请参阅[欢迎使用 Office 365 开发人员计划](/office/developer-program/microsoft-365-developer-program)。
+    > 如果你没有免费帐户Office 365，可以通过开发人员计划注册免费订阅Office 365订阅。 只要将订阅用于正在进行的开发，订阅就保持活动状态。 请参阅[欢迎使用 Office 365 开发人员计划](/office/developer-program/microsoft-365-developer-program)。
 
 此外，此项目要求在开发环境中安装以下内容：
 
 - 任何文本编辑器或 IDE。 你可以免费安装和[Visual Studio Code](https://code.visualstudio.com/download)应用程序。
 
-- [Node.js/npm](https://nodejs.org/en/)。 使用最新的 LTS 版本。 Node 程序包管理器 (npm) 安装在系统中，并安装 Node.js。
+- [Node.js/npm](https://nodejs.org/en/)。 使用最新的 LTS 版本。 在系统中程序包管理器 (npm) 安装 Node Node.js。
 
-- 在成功安装 Node.js，在命令提示符中输入以下命令来安装 [Yeoman](https://yeoman.io/) 和 [gulp-cli](https://www.npmjs.com/package/gulp-cli) 程序包：
+- 在成功安装 Node.js，在命令提示符中输入以下命令，安装 [Yeoman](https://yeoman.io/) 和 [gulp-cli](https://www.npmjs.com/package/gulp-cli) 程序包：
 
     ```bash
     npm install yo gulp-cli --global
@@ -66,7 +66,7 @@ ms.locfileid: "58345674"
     yo teams
     ```
 
-1. 接下来，提供一系列用于应用程序对文件进行 **manifest.js的值：**
+1. 接下来，提供一系列用于应用程序文件上的 **manifest.js值：**
 
     ![生成器打开屏幕截图](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -78,11 +78,11 @@ ms.locfileid: "58345674"
 
     您当前在项目目录中。 选择 **Enter**。
 
-    **你的Microsoft Teams项目的标题？**
+    **你的应用Microsoft Teams的标题？**
 
     标题是你的应用包名称，在应用清单和说明中使用。 输入标题或按 **Enter** 接受默认名称。
 
-    **你的 (公司) 名称？ (最多 32 个字符)**
+    **贵公司 () 名称？ (最多 32 个字符)**
 
     你的公司名称将在应用清单中使用。 输入公司名称或按 **Enter** 接受默认名称。
 
@@ -122,11 +122,11 @@ ms.locfileid: "58345674"
 
     选择不包括 ESLint 支持。 默认值为否，输入 **n**。
 
-    **是否将 Azure 应用程序Insights遥测？ (y/N)**
+    **是否希望将 Azure 应用程序Insights遥测？ (y/N)**
 
     选择 **不包括** [Azure 应用程序Insights。](/azure/azure-monitor/app/app-insights-overview) 默认值为"否";输入 **n**。
 
-    **默认选项卡名称 (最多包含 16 个字符) ？**
+    **默认选项卡名称 (最多包含 16) ？**
 
     命名选项卡。此选项卡名称在整个项目中用作文件或 URL 路径组件。
 
@@ -181,7 +181,7 @@ ms.locfileid: "58345674"
     ./src/manifest/manifest.json/
     ```
 
-1. 将以下内容添加到空 `staticTabs` 数组 `staticTabs":[]` () 并添加以下 JSON 对象：
+1. 将以下内容添加到空 `staticTabs` 数组 () `staticTabs":[]` 并添加以下 JSON 对象：
 
     ```json
     {
@@ -195,7 +195,7 @@ ms.locfileid: "58345674"
 
 1. 使用实际选项卡名称更新 **contentURL** 路径组件 **yourDefaultTabNameTab。**
 
-1. 将更新manifest.js **文件** 上。
+1. 保存更新manifest.js **文件** 。
 
 1. 若要在 IFrame 中提供内容页，请从以下路径在代码编辑器中打开 **Tab.ts：**
 
@@ -223,7 +223,7 @@ ms.locfileid: "58345674"
 - 一 **个 32** x 32 像素的透明边框图标。
 - 指定 **manifest.js** 属性的 on 文件。
 
-程序包通过 gulp 任务创建，该任务验证文件上的manifest.js，并生成 **./package** 目录中的 zip 文件夹。 在命令提示符中，输入以下命令：
+该包是通过 gulp 任务创建的，该任务验证 manifest.json 文件，并生成 **./package** 目录中的 zip 文件夹。 在命令提示符中，输入以下命令：
 
 ```bash
 gulp manifest
@@ -291,18 +291,18 @@ gulp ngrok-serve
 
 ### <a name="create-a-custom-personal-tab-using-aspnet-core"></a>使用自定义选项卡创建自定义个人 ASP.NET Core
 
-You can create a custom personal tab using C# and ASP.NET Core 一页. [App Studio](~/concepts/build-and-test/app-studio-overview.md)还用于完成应用清单，并部署选项卡以Teams。
+You can create a custom personal tab using C# and ASP.NET Core Pages. [App Studio](~/concepts/build-and-test/app-studio-overview.md)还用于完成应用清单，并部署选项卡以Teams。
 
 ### <a name="prerequisites-for-personal-tab"></a>个人选项卡的先决条件
 
 您必须了解以下先决条件：
 
-- 你必须拥有一个Office 365租户和一个已启用"允许上载自定义 **应用"的团队**。 有关详细信息，请参阅[准备你的Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- 你必须拥有一个Office 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备你的Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
     > 如果你没有帐户，Microsoft 365 Microsoft 开发人员计划注册免费[订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
 
-- 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio，**请选择应用** 左下角的 Teams ![ ](~/assets/images/tab-images/storeApp.png) 应用，然后搜索 **App Studio**。 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
+- 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio，**请选择** App Studio 应用的左下角Teams ![ ](~/assets/images/tab-images/storeApp.png) 应用"，然后搜索 **App Studio。** 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
 
 此外，此项目要求在开发环境中安装以下内容：
 
@@ -336,7 +336,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是在安装程序选中"高级 ASP.NET Core **配置 HTTPS"** 复选框的 2.2 Web 应用程序空模板中创建的。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下 `Configure()` 代码的方法中：
+此项目是使用在安装程序 ASP.NET Core"高级 - 配置 **HTTPS"** 复选框的 2.2 Web 应用程序空模板创建的。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下 `Configure()` 代码的方法中：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -366,7 +366,7 @@ ASP.NET Core将名为 **Index** 的文件视为网站的默认页面或主页。
 - 一 **个 32** x 32 像素的透明边框图标。
 - 指定 **manifest.js** 属性的 on 文件。
 
-必须将这些文件压缩到应用包中，以用于将选项卡上载到Teams。 Microsoft Teams清单中指定的 ，将其嵌入到 <iframe 中，并将其 `contentUrl` \> 呈现在选项卡中。
+必须将这些文件压缩到应用包中，以用于将选项卡上载到Teams。 Microsoft Teams清单中加载指定的 ，将其嵌入 <iframe 中，并将其 `contentUrl` \> 呈现在选项卡中。
 
 #### <a name="csproj"></a>.csproj
 
@@ -390,11 +390,11 @@ ASP.NET Core将名为 **Index** 的文件视为网站的默认页面或主页。
   </ItemGroup>
 ```
 
-### <a name="update-your-application-for-teams"></a>更新应用程序Teams
+### <a name="update-your-application-for-teams"></a>更新应用程序以Teams
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-若要在页面中显示选项卡Teams，必须包含 **Microsoft Teams JavaScript** 客户端 SDK，并包括加载 `microsoftTeams.initialize()` 页面后对 的调用。 你的选项卡和Teams应用通过以下方式进行通信：
+若要在页面中显示选项卡Teams，必须包含 **Microsoft Teams JavaScript** 客户端 SDK，并包括页面加载后的 `microsoftTeams.initialize()` 调用。 你的选项卡和Teams应用通过以下方式进行通信：
 
 转到" **共享"** 文件夹，打开 **_Layout.cshtml，** 然后向 `<head>` 标记部分添加以下内容：
 
@@ -430,7 +430,7 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 2. 通过打开浏览器并通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正在运行且正常运行。
 
 > [!TIP]
-> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成本文中提供的步骤。 如果你需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在应用程序中重新启动时，它会侦听应用程序请求并Visual Studio。 如果您必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须更新使用该 URL 的每一处。
+> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成本文中提供的步骤。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在应用程序中重新启动时，它会侦听应用程序请求并Visual Studio。 如果您必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须更新使用该 URL 的每一处。
 
 #### <a name="run-your-application"></a>运行应用程序
 
@@ -461,7 +461,7 @@ In Visual Studio， press **F5** or choose **Start Debugging** from your applica
 
 选择清单编辑器欢迎页面的新导入选项卡的磁贴。
 
-清单编辑器左侧有一系列步骤。 在清单编辑器的右侧有一个属性列表，其中每个步骤都必须具有值。 大部分信息已由用户提供manifest.js但有些字段必须更新。
+清单编辑器左侧有一系列步骤。 在清单编辑器的右侧有一个属性列表，其中每个步骤都必须具有值。 大部分信息已由用户 **manifest.js，但** 有些字段必须更新。
 
 ##### <a name="details-app-details"></a>详细信息：应用详细信息
 
@@ -514,13 +514,13 @@ In Visual Studio， press **F5** or choose **Start Debugging** from your applica
 
 ### <a name="view-your-personal-tab-in-teams"></a>在"页面"中查看Teams
 
-1. 在位于应用最左侧的导航栏中，Teams省略号 &#x25CF;&#x25CF;&#x25CF;。 将显示个人应用列表。
+1. 在位于应用最左侧的导航Teams，选择省略号 &#x25CF;&#x25CF;&#x25CF;。 将显示个人应用列表。
 
 1. 从列表中选择您的选项卡进行查看。
 
 # <a name="aspnet-core-mvc"></a>[ASP.NET CoreMVC](#tab/aspnetcoremvc)
 
-### <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>使用 MVC 创建自定义个人 ASP.NET Core选项卡
+### <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>使用 MVC 创建自定义 ASP.NET Core选项卡
 
 可以使用自定义个人选项卡和 MVC C#ASP.NET Core选项卡。 [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)还用于完成应用清单，并部署选项卡以Teams。
 
@@ -564,7 +564,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是在安装程序选中"高级 ASP.NET Core **配置 HTTPS"** 复选框的 2.2 Web 应用程序空模板中创建的。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下 `Configure()` 代码的方法中：
+此项目从一个 2.2 ASP.NET Core Web 应用程序空模板创建，在设置时选中了"高级 **- 配置 HTTPS"** 复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，默认情况下，空模板不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下 `Configure()` 代码的方法中：
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -624,7 +624,7 @@ public void Configure(IApplicationBuilder app)
 
 * 主页：ASP.NET Core将名为 **Index** 的文件视为网站的默认页面或主页。 当浏览器 URL 指向网站的根目录时 **，Index.cshtml** 将显示为应用程序的主页。
 
-* Shared： the partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. 它还引用Teams库。
+* Shared：部分视图标记 **_Layout.cshtml** 包含应用程序的整体页面结构和共享的可视元素。 它还引用Teams库。
 
 #### <a name="controllers"></a>控制器
 
@@ -649,11 +649,11 @@ public void Configure(IApplicationBuilder app)
 1. 通过打开浏览器并通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正在运行且正常运行。
 
 > [!TIP]
-> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成本文中提供的步骤。 如果你需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在应用程序中重新启动时，它会侦听应用程序请求并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且必须更新使用该 URL 的每一处。
+> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成本文中提供的步骤。 如果你需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在服务器中重新启动时，它会侦听应用程序请求并Visual Studio。 如果您必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须更新使用该 URL 的每一处。
 
 #### <a name="run-your-application"></a>运行应用程序
 
-在Visual Studio中，按 **F5****或从** 应用程序的"调试"菜单中选择"开始 **调试**"。
+In Visual Studio， press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 

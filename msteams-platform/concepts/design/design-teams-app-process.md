@@ -2,15 +2,15 @@
 title: 应用设计过程
 author: heath-hamilton
 description: 了解如何使用 Microsoft 工具和资源设计有效的应用，以及Microsoft Teams概念。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f4d406426cdadd946e3579cec85e8c5c8133c2b5206a00fc1e32a29a2442b7cd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 34401bf53196601b8836012fa4c96296510472a8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704487"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155990"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>应用程序的设计Microsoft Teams过程
 
@@ -20,7 +20,7 @@ ms.locfileid: "57704487"
 
 ## <a name="plan-your-app"></a>规划应用
 
-设计高质量的Teams需要了解希望应用执行哪些操作，以及你认为用户会如何使用它。 但在开始设计之前，请回答以下问题：
+设计高质量的Teams需要了解希望应用执行哪些操作，以及你认为用户如何使用它。 但在开始设计之前，请回答以下问题：
 
 * 你的用户是谁？
 * 他们有什么问题？
@@ -37,7 +37,7 @@ Microsoft 提供了工具，可更轻松地设计Teams应用。 我们强烈建�
 
 ### <a name="get-the-microsoft-teams-ui-kit"></a>获取 Microsoft Teams UI 工具包
 
-Microsoft Teams UI 工具包可以帮助你在最短时间内Teams开发有效的应用。 UI 工具包包含你在这些与应用设计相关的文档Teams，包括大量示例和变体。
+Microsoft Teams UI 工具包可以帮助你在最短时间内Teams开发有效的应用。 UI 工具包包含这些与应用设计相关的文档Teams内容，包括大量示例和变体。
 
 UI 工具包还具有预建的模板和组件，你可以根据需要复制和修改这些模板和组件，以便你可以花费更多时间来设计最佳用户体验，而不是担心按钮的外观。
 
@@ -45,7 +45,7 @@ UI 工具包还具有预建的模板和组件，你可以根据需要复制和�
 > **UI 工具包是否适合我？** 如果你对创建应用有Teams，可以。 了解如何制作 Teams 应用不仅对设计人员、产品经理、使用 ID 的开发人员以及使用低代码工具（如 Microsoft Power Platform) ）构建的 (也很有帮助。
 
 1. 转到["Microsoft Teams UI 工具包""图块"页面](https://www.figma.com/community/file/916836509871353159)。
-1. 选择 **"复制** "以打开 UI 工具包。  (可能需要先创建一个图块帐户。) 
+1. 选择 **"重复** "以打开 UI 工具包。  (您可能必须首先创建一个"图块"帐户。) 
 
 ### <a name="try-the-sample-app"></a>试用示例应用
 
@@ -70,14 +70,14 @@ UI 工具包预先构建了设计，可展示用户通常如何添加、设置�
 
 ## <a name="design-your-ux-flow"></a>设计用户体验流
 
-拥有基本应用设计后，你可以根据需要修改和优化它，Teams UI 模板和基本组件。
+一旦拥有基本应用设计，你可以根据需要修改和优化它，Teams UI 模板和基本组件。
 
 ### <a name="design-with-ui-templates"></a>使用 UI 模板进行设计
 
 UI 模板是复杂的高保真设计，适用于Teams用例和工作流。 我们建议您使用这些模板来简化和加快设计过程，而不是从底部开始使用基本组件。
 
 1. 在 UI 工具包的左侧导航中，转到 **"UI 模板"。**
-1. 复制对你的应用设计有意义的模板。<br />
+1. 复制对应用设计有意义的模板。<br />
    例如，如果你正在设计个人应用，你可能想要使用仪表板模板。
 
 ### <a name="design-with-basic-ui-components"></a>使用基本 UI 组件进行设计
@@ -93,7 +93,7 @@ UI 模板是复杂的高保真设计，适用于Teams用例和工作流。 我�
 
 ### <a name="build-with-ui-templates"></a>使用 UI 模板生成
 
-如果在设计中使用了 UI 模板，可以使用 Microsoft Teams UI 库 (一个 React 组件库来实现这些模板，Fluent UI) 。
+如果在设计中使用了 UI 模板，可以使用 Microsoft Teams UI 库实现这些模板 (基于 React UI Fluent组件库) 。
 
 目前，并非 UI 工具包中列出的所有模板在库中都可用。
 
@@ -102,9 +102,9 @@ UI 模板是复杂的高保真设计，适用于Teams用例和工作流。 我�
 
 ### <a name="build-with-basic-ui-components"></a>使用基本 UI 组件生成
 
-与设计阶段不同，如果 UI 模板缺少你所需的内容，或者你只想从头开始构建应用，你可以在你的应用项目中Fluent UI 组件。 
+与设计阶段不同，如果 UI 模板缺少你需要的内容，或者你只想从头开始构建应用，你可以在你的应用项目中使用这些 ui Fluent UI 组件。 
 
- (注意：如果你注意到缺少某些内容或对模板有一些想法，请考虑为Teams UI 库存储库) 
+ (注意：如果你注意到缺少某些内容或对模板有所了解，请考虑为 Teams UI 库存储库做贡献。) 
 
 > [!div class="nextstepaction"]
 > [获取 UI (Fluent库) ](https://fluentsite.z22.web.core.windows.net/)
@@ -113,6 +113,6 @@ UI 模板是复杂的高保真设计，适用于Teams用例和工作流。 我�
 
 无论你是刚开始使用应用还是接近生产就绪型应用，我们建议你定期查看以下资源：
 
-* **Microsoft Teams：** 提供所有应用都应Teams的标准，而不只是应用商店中列出的应用。 有关详细信息，请参阅 [指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
+* **Microsoft Teams应用商店验证** 指南：提供所有Teams应用都应当努力的标准，而不只是应用商店中列出的应用。 有关详细信息，请参阅 [指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 * **设计最佳做法**：这些文档和 UI 工具包提供了设计高质量应用的最佳方案。 例如，请参阅 [设计机器人的最佳实践](~/bots/design/bots.md#best-practices)。
 

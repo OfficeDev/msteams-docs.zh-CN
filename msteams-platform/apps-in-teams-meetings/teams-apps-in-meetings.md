@@ -4,14 +4,14 @@ author: surbhigupta
 description: 基于参与者和用户角色Teams会议应用概述
 ms.topic: overview
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: ac2f2433ddea126b343afa48c11efdf547ad0023
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: b84975296b443ad71fb78042729f225a31ba9afe
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528872"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155383"
 ---
 # <a name="apps-for-teams-meetings"></a>会议Teams应用程序
 
@@ -29,11 +29,11 @@ ms.locfileid: "58528872"
 
 ![会议应用可扩展性](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-本文概述了会议应用的可扩展性、API 引用、为会议启用和配置应用，以及会议中自定义的"共同Teams。
+本文概述了会议应用的可扩展性、API 引用、为会议启用和配置应用，以及会议中的自定义一Teams。
 
-使用会议可扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，可在其中集成选项卡、聊天机器人和消息传递扩展。 您可以确定各种参与者角色和用户类型、获取会议事件并生成会议对话。
+使用会议可扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，可在其中集成选项卡、聊天机器人和消息传递扩展。 您可以确定各种参与者角色和用户类型、获取会议事件以及生成会议对话。
 
-若要自定义Teams会议应用，请通过更新应用清单Teams会议应用，并针对会议方案配置应用。
+若要自定义Teams会议应用，请通过更新应用清单Teams会议启用应用，并针对会议方案配置应用。
 
 新的自定义"共同模式"场景功能使用户能够在一个地方与团队一起在一个会议中协作。
 

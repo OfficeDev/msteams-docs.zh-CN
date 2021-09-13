@@ -3,24 +3,24 @@ title: 使用 RSC 接收所有频道消息
 author: surbhigupta12
 description: 接收具有 RSC 权限的所有频道消息
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 1499bf4c78edd67af531e3fe8fa47ddfe196a923
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: medium
+ms.openlocfilehash: ea247d7718b76f1e48bbb2c9839606dcb5cbab51
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528899"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155267"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>使用 RSC 接收所有频道消息
 
 > [!NOTE]
 > 此功能目前仅适用于公共 [开发人员预览](../../../resources/dev-preview/developer-preview-intro.md) 版。
 
-RSC (权限) （最初针对 Teams Graph API 开发）的特定资源许可现在扩展到自动程序方案。
+RSC (权限) （最初针对 Teams Graph API 开发）的特定资源许可现在扩展到机器人方案。
 
-目前，聊天机器人在登录时只能接收@mentioned。 使用 RSC，你现在可以请求团队所有者同意自动程序在团队中跨标准频道接收用户消息，而无需@mentioned。 此功能通过指定已启用 RSC 的应用清单中的权限Teams `ChannelMessage.Read.Group` 启用。 配置完成后，团队所有者可以在应用安装过程中授予同意。
+目前，自动程序仅在收到用户频道消息时才能收到@mentioned。 使用 RSC，你现在可以请求团队所有者同意自动程序在团队中跨标准频道接收用户消息，而无需@mentioned。 此功能通过指定已启用 RSC 的应用清单中的权限Teams `ChannelMessage.Read.Group` 启用。 配置完成后，团队所有者可以在应用安装过程中授予同意。
 
-有关为应用启用 RSC 的信息，请参阅 Teams 中的资源[特定许可](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest)。
+有关为应用启用 RSC 的信息，请参阅 Teams 中的[资源特定许可](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest)。
 
 ## <a name="enable-bots-to-receive-all-channel-messages"></a>使机器人能够接收所有频道消息
 
@@ -28,7 +28,7 @@ RSC (权限) （最初针对 Teams Graph API 开发）的特定资源许可现�
 
 ## <a name="update-app-manifest"></a>更新应用清单
 
-若要使机器人接收所有频道消息，必须在应用清单中配置 RSC Teams属性中 `ChannelMessage.Read.Group` 指定 `webApplicationInfo` 的权限。
+若要使机器人接收所有频道消息，必须在应用清单Teams属性中指定的权限配置 `ChannelMessage.Read.Group` `webApplicationInfo` RSC。
 
 ![更新应用清单](~/bots/how-to/conversations/Media/appmanifest.png)
 
@@ -84,7 +84,7 @@ RSC (权限) （最初针对 Teams Graph API 开发）的特定资源许可现�
 
 | 示例名称 | 说明 | C# |Node.js|
 |-------------|-------------|------|----|
-|具有 RSC 权限的频道消息| Microsoft Teams自动程序如何使用 RSC 接收所有频道消息而不进行传输的示例@mentioned。|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
+|具有 RSC 权限的频道消息| Microsoft Teams演示机器人如何使用 RSC 接收所有频道消息而不进行@mentioned。|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 

@@ -2,26 +2,26 @@
 title: 为会议注册呼叫和会议Microsoft Teams
 description: 了解如何为用户注册新的音频/视频呼叫Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: 5013ebcbce0bc94199e846f20fc6ee52238d302f1dd1b05872245ef2c6e32d91
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2724e9be913b18416f0ad6646f0879a41f134201
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709565"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155968"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>为会议注册呼叫和会议Microsoft Teams
 
 参与音频或视频呼叫和联机会议的机器人是Microsoft Teams自动程序，具有以下用于注册机器人的额外功能：
 
-* 新版应用清单Teams另外两个设置 和 `supportsCalling` `supportsVideo` 。 这些设置包含在开发人员[预览版本的](../../resources/dev-preview/developer-preview-intro.md)应用程序清单Teams中。
+* 新版应用清单Teams两个附加设置 和 `supportsCalling` `supportsVideo` 。 这些设置包含在开发人员[预览版本的](../../resources/dev-preview/developer-preview-intro.md)应用程序清单Teams中。
 * [必须为Graph](./registering-calling-bot.md#add-graph-permissions)的 Microsoft 应用 ID 配置 Microsoft 应用权限。
-* 呼叫Graph联机会议 API 权限需要租户管理员同意。
+* 会议Graph联机会议 API 权限需要租户管理员同意。
 
 ## <a name="new-manifest-settings"></a>新清单设置
 
-通话和联机会议自动程序在 manifest.js中具有以下两个其他设置，这些设置可针对 Teams 中的机器人启用音频或Teams。
+通话和联机会议自动程序在 manifest.js中具有以下两个额外设置，这些设置为 Teams 中的机器人启用音频或Teams。
 
 * `bots[0].supportsCalling`. 如果存在并设置为 `true` ，Teams自动程序可以参与通话和联机会议。
 * `bots[0].supportsVideo`. 如果存在并设置为 `true` ，Teams自动程序支持视频。
@@ -42,7 +42,7 @@ ms.locfileid: "57709565"
 
 1. 使用此链接可创建新的自动程序 `https://dev.botframework.com/bots/new` 。 或者，如果你选择 Bot  Framework 门户中的"创建自动程序"按钮，你将在 Microsoft Azure 创建自动程序，你必须拥有 Azure 帐户。
 1. 添加Teams通道。
-1. 选择"**通话频道**"页面上Teams"选项卡。 选择 **"启用呼叫**"，然后更新 **Webhook (，** 以) 接收传入通知的 HTTPS URL 调用 Webhook，例如 `https://contoso.com/teamsapp/api/calling` 。 有关详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels)。
+1. 选择"**通话频道**"页面上Teams"选项卡。 选择 **"启用呼叫**"，然后更新 **Webhook (，** 以便) 接收传入通知的 HTTPS URL 调用 Webhook，例如 `https://contoso.com/teamsapp/api/calling` 。 有关详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels)。
 
     ![配置Teams频道信息](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
@@ -50,7 +50,7 @@ ms.locfileid: "57709565"
 
 ## <a name="add-graph-permissions"></a>添加Graph权限
 
-应用程序Graph粒度权限来控制应用对资源的访问权限。 你可以决定应用请求Graph哪些权限。 调用GRAPH API 支持应用程序权限，这些权限由在没有登录用户的情况下运行的应用使用。 租户管理员必须同意应用程序权限。
+应用程序Graph粒度权限来控制应用对资源的访问权限。 你可以决定应用请求Graph的权限。 调用GRAPH API 支持应用程序权限，这些权限由在没有登录用户的情况下运行的应用使用。 租户管理员必须同意应用程序权限。
 
 ### <a name="application-permissions-for-calls"></a>调用的应用程序权限
 
@@ -78,7 +78,7 @@ ms.locfileid: "57709565"
 
 ### <a name="assign-permissions"></a>分配权限
 
-如果你想要使用 AAD) V1 终结点，则必须使用[Azure](https://aka.ms/aadapplist)门户提前为自动程序[Azure Active Directory (应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
+如果你想要使用 AAD) [V1](/azure/active-directory/develop/azure-ad-endpoint-comparison)终结点，则必须使用 Azure Active Directory ([Azure](https://aka.ms/aadapplist)门户提前配置自动程序的应用程序权限。
 
 ### <a name="get-tenant-administrator-consent"></a>获取租户管理员同意
 
@@ -87,7 +87,7 @@ ms.locfileid: "57709565"
 你可以依赖管理员在 Azure 门户授予应用 [所需的权限](https://portal.azure.com)。 更好的选择是使用 AAD V2 终结点为管理员提供注册 `/adminconsent` 体验。 有关详细信息，请参阅 [有关构造管理员同意 URL 的说明](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent)。
 
 > [!NOTE]
-> 若要构建租户管理员同意 URL，需要应用注册门户中配置的重定向 URI[](https://apps.dev.microsoft.com/)或回复 URL。 若要为自动程序添加回复 URL，访问自动程序注册，选择"高级选项""  >  **编辑应用程序清单"。** 将重定向 URL 添加到 `replyUrls` 集合。
+> 若要构建租户管理员同意 URL，需要应用注册门户中配置的重定向 URI[](https://apps.dev.microsoft.com/)或回复 URL。 若要为自动程序添加回复 URL，访问自动程序注册，选择"高级选项  >  **""编辑应用程序清单"。** 将重定向 URL 添加到 `replyUrls` 集合。
 
 > [!IMPORTANT]
 > 无论何时更改应用程序权限，都必须重复管理员同意过程。 在租户管理员重新应用同意之前，不会反映应用注册门户中所做的更改。

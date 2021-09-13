@@ -3,12 +3,13 @@ title: 统一会议应用
 author: surbhigupta
 description: 了解统一会议应用
 ms.topic: conceptual
-ms.openlocfilehash: 330156d28bf78723c3c6a670cc34cd97b48ad7a4
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: 4a367af1b2941547143ff7e0ec4b897b1174e26e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528892"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155382"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -20,7 +21,7 @@ Teams统一会议应用基于以下概念：
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
 
-本文介绍了有关会议生命周期以及如何集成选项卡、聊天机器人和消息传递扩展的信息。 它标识不同的参与者角色和用户类型。
+本文介绍了有关会议生命周期以及如何集成选项卡、机器人和消息传递扩展的信息。 它标识不同的参与者角色和用户类型。
 
 ## <a name="meeting-lifecycle"></a>会议生命周期
 
@@ -35,7 +36,7 @@ Teams统一会议应用基于以下概念：
 
 > [!NOTE]
 > * 专用计划会议仅支持应用。
-> * 在 Web 客户端Teams会议扩展选项卡应用添加Teams选项。
+> * 在 Web 客户端Teams会议扩展选项卡应用的添加Teams选项。
 
 #### <a name="pre-meeting-app-experience"></a>会议前应用体验
 
@@ -164,7 +165,7 @@ Teams统一会议应用基于以下概念：
 
 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
 
-根据会议中的参与者角色设计应用后，你可以为会议标识每个用户类型并选择他们可以访问的类型。
+在基于会议中的参与者角色设计应用后，你可以为会议标识每个用户类型并选择他们可以访问的类型。
 
 ## <a name="user-types-in-a-meeting"></a>会议中的用户类型
 
@@ -176,14 +177,14 @@ Teams统一会议应用基于以下概念：
 以下列表详细介绍了各种用户类型及其辅助功能和性能：
 
 * **租户内**：租户内用户属于组织，在租户的 AAD Azure Active Directory () 凭据。 他们是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
-* **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有Teams团队成员的相同功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾Teams。](/microsoftteams/guest-access)
+* **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有Teams团队成员的相同功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾访问](/microsoftteams/guest-access)。
 * **联盟或外部**：联盟用户是Teams组织中受邀加入会议的外部用户。 联盟用户具有联盟伙伴的有效凭据，并且由联盟Teams。 他们无法访问你的团队或组织的其他共享资源。 对于外部用户来说，来宾访问是访问团队和频道的更好选择。 有关详细信息，请参阅管理[Teams 中的外部访问](/microsoftteams/manage-external-access)。
 
     > [!NOTE]
     > 你的Teams用户可以在主持与其他组织的会议或聊天时添加应用。 当用户加入由其他组织托管的会议或聊天时，用户可以使用由外部用户共享的应用。 托管用户组织的数据策略以及该用户组织共享的第三方应用的数据共享做法将生效。
 
     > [!IMPORTANT]
-    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要启用第三方应用GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
 * **匿名**：匿名用户没有 AAD 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会显示在会议中。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
 

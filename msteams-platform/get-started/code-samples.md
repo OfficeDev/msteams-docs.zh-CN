@@ -1,19 +1,19 @@
 ---
 title: 应用代码示例
 description: 适用于开发人员平台的示例应用程序Microsoft Teams和说明
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams开发人员示例
-ms.openlocfilehash: c261aebc327d09265db8831c2b7a8549f30a34fe
-ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
+ms.openlocfilehash: 34c914898f7ae83022f1278bc11cc33ac5084ba5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "58849424"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155803"
 ---
 # <a name="overview"></a>概述
 
-本教程介绍如何使用 React、Blazor、SPFx、C# 或 .NET、Node.js 和 Yeoman 生成器创建应用。 你还将了解如何创建你的第一个机器人和消息传递扩展。 本教程将指导你完成选项卡、聊天机器人、消息传递扩展、Webhook 和连接器以及 Graph API 的多个代码示例，帮助你自定义和配置应用。 此外，还可以参阅 Microsoft Learn 部分，通过创建自定义应用Teams扩展开发人员平台功能。  
+本教程介绍如何使用 React、Blazor、SPFx、C# 或 .NET、Node.js 和 Yeoman 生成器创建应用。 你还将了解如何创建你的第一个机器人和消息传递扩展。 本教程将指导你完成选项卡、聊天机器人、消息传递扩展、Webhook 和连接器以及 Graph API 的多个代码示例，帮助你自定义和配置应用。 此外，还可以参阅 Microsoft Learn 部分，你可以在这里通过创建自定义应用Teams开发人员平台功能。  
 
 ## <a name="getting-started-with-microsoft-learn"></a>Microsoft Learn 入门
 
@@ -27,7 +27,7 @@ ms.locfileid: "58849424"
 
 ## <a name="build-your-first-microsoft-teams-app-overview"></a>生成首个Microsoft Teams应用概述
 
-在 **入门课程** 中，你将了解如何创建基本Teams应用。 每个教程将介绍如何生成简单的实际 Teams 应用，同时向用户介绍通用工具、基本概念和更高级的功能。
+在 **入门课程** 中，你将了解如何创建基本Teams应用。 每个教程将介绍如何生成简单的实际 Teams 应用，同时向用户介绍常用工具、基本概念和更高级的功能。
 
 ### <a name="teams-app-fundamentals"></a>Teams应用基础
 
@@ -53,9 +53,9 @@ A Teams app is made up of one or more [platform capabilities](../concepts/capabi
 
 入门部分将介绍推荐的工具集和常用技术，例如 Visual Studio Code 和 Teams 扩展、React.js（适用于选项卡）和 Node.js for bots 和 messaging extensions（尽管不限于使用这些特定 *堆栈）。*
 
-如果你更喜欢使用使用 CLI (CLI) ，请参阅使用[Yeoman](../get-started/get-started-yeoman.md)Microsoft Teams创建你的第一个 Microsoft Teams 应用。
+如果你更喜欢使用使用 CLI (命令行接口) ，请参阅使用[Yeoman](../get-started/get-started-yeoman.md)生成器Microsoft Teams你的第一个 Microsoft Teams 应用。
 
-### <a name="teams-does-not-host-your-app"></a>Teams托管你的应用
+### <a name="teams-does-not-host-your-app"></a>Teams不托管你的应用
 
 你仅将包含配置文件（称为清单和应用图标）的应用包安装到Teams客户端。 其余的应用逻辑和数据存储托管在其他地方，如 Azure Web 服务。 在开发期间，云或 localhost 中的应用通过 HTTPS Teams访问。
 

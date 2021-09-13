@@ -2,20 +2,20 @@
 title: 教程 - 使用 Yeoman 生成器创建第一个应用
 description: 了解如何开始使用 Yeoman Microsoft Teams生成应用。
 keywords: nodejs yeoman node.js入门
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 90bd997de1e5bbfc92e366d466c156f052cbe3bf
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345176"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155767"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>使用 Yeoman Microsoft Teams生成首个应用
 
 > [!Note]
-> 本教程来自适用于 wiki[的 Yeoman Teams生成器](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)。
+> 本教程来自适用于 wiki 的[Yeoman Teams生成器](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)。
 
 本教程介绍如何使用 Yeoman Microsoft Teams生成首个Microsoft Teams应用。 它还指导你完成使用 Yeoman 生成器Teams升级应用程序的过程。 在开始之前，你必须拥有一个Teams允许[应用旁加载的帐户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
@@ -31,11 +31,11 @@ ms.locfileid: "58345176"
 
 * Node.js
 
-   你需要将Node.js计算机上安装。 你应该使用最新的 [LTS 版本](https://nodejs.org)。
+   你需要在计算机上安装Node.js软件。 你应该使用最新的 [LTS 版本](https://nodejs.org)。
 
 * 代码编辑器
 
-   你需要一个代码编辑器。 本文档和图像大部分都指使用[Visual Studio Code](https://code.visualstudio.com)。 但是，您可以随意使用您喜欢的任何文本编辑器。
+   你需要一个代码编辑器。 本文档和图像中的大多数内容[都指使用](https://code.visualstudio.com)Visual Studio Code。 但是，您可以随意使用您喜欢的任何文本编辑器。
 
 * Yeoman 和 Gulp CLI
 
@@ -104,9 +104,9 @@ npm init yo teams@preview
 
 生成器完成后，可以在最喜爱的代码编辑器中打开解决方案。 请花一两分钟的时间，熟悉代码的整理方式。 有关详细信息，请参阅Project[结构](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure)文档。
 
-您的选项卡位于 `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` 文件中。 这是选项卡React TypeScript 类。 
+您的选项卡位于 `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` 文件中。 这是选项卡React基于 TypeScript 的类。 
 
-1. 找到 `render()` 方法，在控件中添加一行代码 `<PanelBody>` ，如下所示：
+1. 找到 `render()` 方法，在控件中添加一 `<PanelBody>` 行代码，如下所示：
 
    ``` TypeScript
    <PanelBody>
@@ -143,24 +143,24 @@ Microsoft Teams不允许将应用托管在 localhost 上，因此你需要将其
 1. 在 `gulp ngrok-serve` 终端中运行。 运行 ngrok 服务时，将在后台启动具有唯一的公用 DNS 条目，并且它还会使用该唯一 URL 打包清单，然后执行与 完全相同 `gulp ngrok-serve` 的相同操作 `gulp serve` 。
 1. 创建新的团队Microsoft Teams团队。
 1. 选择"团队名称> Teams 设置 >应用"。
-1. 从右下角，选择 **"Upload应用"。**
+1. 从右下角，选择Upload **应用"。**
 1. 转到项目 `package` 文件夹下的文件夹。 
 1. 选择该文件夹中的 zip 文件，然后选择"打开"。 
-   你的应用现在旁加载到Microsoft Teams：
+   你的应用现在旁加载至Microsoft Teams：
 
    ![旁加载的应用](~/assets/yeoman-images/teams-first-app-4.png)
 1. 返回到 **常规频道，** 然后选择 **+** 添加新的选项卡。你应该在选项卡列表中看到您的选项卡： ![ 配置选项卡](~/assets/yeoman-images/teams-first-app-5.png)
-1. 选择您的选项卡，然后按照说明添加它。 请注意，有一个自定义配置对话框，您可以编辑其源。 选择 *"保存* "将选项卡添加到频道。 现在选项卡已加载到 Microsoft Teams！
+1. 选择您的选项卡，然后按照说明添加它。 请注意，有一个自定义配置对话框，您可以编辑源。 选择 *"保存* "将选项卡添加到频道。 现在选项卡已加载到 Microsoft Teams！
 
    ![teams 中的"运行"选项卡](~/assets/yeoman-images/teams-first-app-6.png)
 
 ### <a name="upgrade-microsoft-teams"></a>升级Microsoft Teams
 
-还可使用 Yeoman Microsoft Teams将当前版本升级到最新版本Microsoft Teams版本。
+您还可以使用 Yeoman Microsoft Teams将当前版本升级到最新版本Microsoft Teams版本。
 
 **升级Microsoft Teams**
 
-1. 通过以下命令Teams获取当前版本的版本：
+1. 通过以下Teams获取当前版本的版本：
 
    ```PowerShell
     yo teams --version
@@ -176,7 +176,7 @@ Microsoft Teams不允许将应用托管在 localhost 上，因此你需要将其
 
 4. 从生成器列表中选择你需要的生成器：
    > [!NOTE]
-   > 使用空格键从可用选项Teams或清除所选版本。
+   > 使用空格键从可用选项中选择或清除Teams版本。
 
     ![UseSpaceToSelectGenerators 的图像](~/assets/images/Update-Teams/UseSpaceToSelectGenerators.png)
     

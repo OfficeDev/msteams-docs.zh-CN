@@ -3,14 +3,14 @@ title: 智能机器人和 SDK
 author: surbhigupta
 description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e34d89b0ea8aaeb533899309cfb8fdf34d4ceb4994a6e87db398cc3dfc577abd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 395338cf394412b031f2b1f21fccb9587be84df5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707097"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155305"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -43,11 +43,11 @@ Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于�
 
 ## <a name="bots-with-power-virtual-agents"></a>具有自动程序Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是一项基于 Microsoft Power 平台和 Bot Framework 构建的 chatbot 服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户创建聊天Power Virtual Agents[后](https://powervirtualagents.microsoft.com)，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门详细信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在 Power Virtual Agents[门户创建聊天](https://powervirtualagents.microsoft.com)机器人后，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
 
 ## <a name="bots-with-webhooks-and-connectors"></a>具有 Webhook 和连接器的机器人
 
-Webhook 和连接器将机器人连接到 Web 服务。 使用 webhook 和连接器，可以创建简单的机器人进行基本交互，例如创建工作流或其他简单命令。 它们仅在创建它们的团队中可用，并且适用于特定于公司工作流的简单流程。 有关详细信息，请参阅什么是 [Webhook 和连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
+Webhook 和连接器将机器人连接到 Web 服务。 使用 webhook 和连接器，可以创建简单的机器人进行基本交互，例如创建工作流或其他简单命令。 它们仅在创建它们的团队中可用，适用于特定于公司工作流的简单流程。 有关详细信息，请参阅什么是 [Webhook 和连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
 ## <a name="advantages-of-bots"></a>自动程序的优点
 
@@ -63,7 +63,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 频道包含多个人员之间的线程对话，甚至最多包含两千个。 这可能会导致自动程序大规模访问，但个人交互必须简洁。 传统的多向交互不起作用。 相反，必须查找使用交互式卡片或任务模块，或将对话移动到一对一对话以收集大量信息。 自动程序仅有权访问其为 的邮件 `@mentioned` 。 您可以使用 Microsoft 权限和组织级别权限从Graph检索其他邮件。
 
-在下列情况下，自动程序在频道中可以更好地工作：
+在下列情况下，自动程序在频道中效果更好：
 
 * 通知，你提供交互式卡片供用户获取其他信息。
 * 反馈方案，如投票和调查。
@@ -78,7 +78,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="in-a-one-to-one-chat"></a>在一对一聊天中
 
-一对一聊天是对话机器人与用户交互的传统方式。 一对一对话机器人的一些示例包括 Q&A bot、在其他系统中启动工作流的机器人、告知机器人和记录笔记的机器人。 在创建一对一聊天机器人之前，请考虑基于对话的界面是否是显示功能的最佳方法。
+一对一聊天是对话机器人与用户交互的传统方式。 一对一对话机器人的一些示例包括问答&自动程序、在其他系统中启动工作流的机器人、告诉机器人和做笔记的机器人。 在创建一对一聊天机器人之前，请考虑基于对话的界面是否是显示功能的最佳方法。
 
 ## <a name="disadvantages-of-bots"></a>机器人的缺点
 

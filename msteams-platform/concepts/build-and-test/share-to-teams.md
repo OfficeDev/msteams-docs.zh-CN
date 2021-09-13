@@ -2,18 +2,18 @@
 title: 创建“共享到 Teams”按钮
 description: 如何在网站上添加"共享Teams嵌入按钮
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 共享Teams共享到Teams
-ms.openlocfilehash: 4bbf29bb355726b519975bec5d6fad3419b81ce3
-ms.sourcegitcommit: 09067fb9886323f144384254c41e93469c433382
+ms.openlocfilehash: 0d0fb0d7baf18038cfe87b648d2550bbd20b593a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2021
-ms.locfileid: "58358620"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155300"
 ---
 # <a name="create-share-to-teams-button"></a>创建“共享到 Teams”按钮
 
-第三方网站可以使用启动器脚本将"共享到Teams按钮嵌入到其网页上。 选择后，它将在弹出窗口中Teams"共享到用户"体验。 这允许你直接将链接共享给任何人员或Microsoft Teams频道，而无需切换上下文。 本文档指导您如何为网站创建和嵌入"共享到 Teams"按钮、制作网站预览以及扩展"共享到Teams 教育版"。
+第三方网站可以使用启动器脚本将"共享到Teams按钮嵌入到其网页上。 选择后，它将在弹出窗口中Teams"共享到共享"体验。 这允许你直接将链接共享给任何人员或Microsoft Teams频道，而无需切换上下文。 本文档指导您如何为网站创建和嵌入"共享到 Teams"按钮、制作网站预览以及扩展"共享到Teams 教育版"。
 
 > [!NOTE]
 > * 仅支持桌面版 Edge 和 Chrome。
@@ -23,7 +23,7 @@ ms.locfileid: "58358620"
 
 !["共享到Teams"弹出窗口](~/assets/images/share-to-teams-popup.png)
 
-## <a name="embed-a-share-to-teams-button"></a>嵌入"共享到Teams"按钮
+## <a name="embed-a-share-to-teams-button"></a>嵌入"共享到Teams按钮
 
 1. 在 `launcher.js` 网页上添加脚本。
 
@@ -44,7 +44,7 @@ ms.locfileid: "58358620"
 
     ![共享到Teams图标](~/assets/icons/share-to-teams-icon.png)
 
-1. 或者，如果您希望"共享对象"按钮具有不同的图标大小Teams，请使用 `data-icon-px-size` 属性。
+1. 或者，如果您希望 Share-to Teams按钮具有不同的图标大小，请使用 `data-icon-px-size` 属性。
 
     ```html
     <div
@@ -94,11 +94,11 @@ ms.locfileid: "58358620"
 
 | 属性 | HTML 属性 | 类型 | 默认值 | 说明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | 不适用 | 要共享的内容的 href。 |
+| href | `data-href` | 字符串 | 不适用 | 要共享的内容的 href。 |
 | preview | `data-preview` | boolean (字符串类型)  | `true` | 是否显示要共享的内容的预览。 |
-| iconPxSize | `data-icon-px-size` | 数字 (字符串形式)  | `32` | 要呈现的"共享到Teams按钮的大小（以像素为单位）。 |
+| iconPxSize | `data-icon-px-size` | number (作为字符串)  | `32` | 要呈现的"共享到Teams按钮的大小（以像素为单位）。 |
 | msgText | `data-msg-text` | string | 不适用 | 要插入到邮件撰写框中的链接之前的默认文本。 最大字符数为 200。 |
-| assignInstr | `data-assign-instr` | string | 不适用 | 要插入到工作分配"说明"字段中的默认文本。 最大字符数为 200。 |
+| assignInstr | `data-assign-instr` | 字符串 | 不适用 | 要插入到工作分配"说明"字段中的默认文本。 最大字符数为 200。 |
 | assignTitle | `data-assign-title` | string | 不适用 | 要插入到工作分配"标题"字段中的默认文本。 最大字符数为 50。 |
 
 ### <a name="methods"></a>方法

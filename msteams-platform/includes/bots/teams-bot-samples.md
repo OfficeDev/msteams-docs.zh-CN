@@ -1,17 +1,17 @@
 ---
-title: Teams机器人示例
+title: Teams自动程序示例
 description: 介绍Teams框架的示例
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta12
-ms.openlocfilehash: 663d676b636711b42a4bf07bac7ff9a83b70a3d4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5b8e690868f0537d15847104841197ac817b8ac52c7f758cf262bfecdefa0f1f
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020006"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706267"
 ---
-## <a name="teams-bot-samples"></a>Teams机器人示例
+## <a name="teams-bot-samples"></a>Teams自动程序示例
 
 ## <a name="code-sample"></a>代码示例
 

@@ -3,27 +3,27 @@ title: 与机器人的频道和群组对话
 author: surbhigupta
 description: 如何发送、接收和处理频道或群聊中机器人的消息。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8ff89cf88bf56a905bdf507e1bc6e4ebbbd691f70d94289c8e206024c5657fa9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ea8de08de966b9ed15e02f5ead8e33e06c6da68f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708411"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155302"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>与机器人的频道和群组聊天对话
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-若要在团队Microsoft Teams聊天中安装聊天机器人，请向 `teams` 自动程序添加 或 `groupchat` 范围。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
+若要在Microsoft Teams聊天中安装聊天机器人，请向 `teams` 机器人添加 或 `groupchat` 作用域。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
 
-组或频道中的聊天机器人仅在被提及时接收@botname。 他们不会收到发送到对话的其他任何消息。 必须直接 @mentioned 机器人。 当提到团队或频道时，或者当有人从你的机器人回复消息时，没有回复消息时，@mentioning消息。
+组或频道中的机器人仅在被提及时接收@botname。 他们不会收到发送到对话的其他任何消息。 必须直接 @mentioned 机器人。 当提到团队或频道时，或者当有人未经回复而回复来自你的机器人的消息时，机器人不会收到@mentioning消息。
 
 > [!NOTE]
 > 此功能目前仅适用于公共 [开发人员预览](../../../resources/dev-preview/developer-preview-intro.md) 版。
 >
-> 通过使用 RSC (资源) ，机器人可以接收团队中安装它的所有频道消息，而无需@mentioned。 有关详细信息，请参阅使用 [RSC 接收所有频道消息](channel-messages-with-rsc.md)。
+> 使用 RSC (特定) ，机器人可以接收团队中安装它的所有频道消息，而无需@mentioned。 有关详细信息，请参阅使用 [RSC 接收所有频道消息](channel-messages-with-rsc.md)。
 
 ## <a name="design-guidelines"></a>设计准则
 
@@ -39,7 +39,7 @@ ms.locfileid: "57708411"
 
 ## <a name="work-with-mentions"></a>使用提及
 
-从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中具有其名称的聊天机器人。 自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
+从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中包含其名称的聊天机器人。 自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
 
 还必须从自动程序@mentions内容中去除此限制。
 
@@ -148,7 +148,7 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 `Mention`对象具有两个必须具有以下设置的属性：
 
-* 在 <at>@username</at> 文本中包括邮件。
+* 在 *@username* 文本中包括邮件。
 * 在 entities 集合中包括 mention 对象。
 
 Bot Framework SDK 提供了用于创建提及项的帮助程序方法和对象。

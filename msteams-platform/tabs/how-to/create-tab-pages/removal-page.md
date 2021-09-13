@@ -3,19 +3,19 @@ title: 创建选项卡删除页
 author: surbhigupta
 description: 如何创建选项卡删除页
 keywords: teams 选项卡组频道可配置删除删除
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5cfe79bc026f7326f258b994540958aab0a83c29f08846447d2b5859f10794dd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706784"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155347"
 ---
 # <a name="create-a-removal-page"></a>创建删除页面
 
-可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams用户可以重命名或删除频道或组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验为用户提供删除后选项，以删除或存档内容。
+可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams用户可以重命名或删除频道或组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验为用户提供删除后选项来删除或存档内容。
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>启用选项卡以在安装后重新配置
 
@@ -23,9 +23,9 @@ ms.locfileid: "57706784"
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值为“`true`”。 |
+|`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值为 `true`。 |
 
-将选项卡上载到频道或群聊时，Teams为选项卡添加右键单击下拉菜单。可用选项由设置 `canUpdateConfiguration` 确定。 下表提供了设置详细信息：
+将选项卡上载到频道或群聊时，Teams为选项卡添加右键单击下拉菜单。可用选项由设置 `canUpdateConfiguration` 决定。 下表提供了设置详细信息：
 
 | `canUpdateConfiguration`| true   | false | 说明 |
 | ----------------------- | :----: | ----- | ----------- |
@@ -84,12 +84,12 @@ ms.locfileid: "57706784"
 
 当用户从选项卡的下拉菜单中选择"删除"时，Teams将配置页中分配的可选页面加载 `removeUrl` 至 IFrame 中。 向用户显示一个使用 函数加载的按钮，该按钮调用并启用删除页面 IFrame 底部显示的 `onClick()` `microsoftTeams.settings.setValidityState(true)` "删除"按钮。 
 
-执行删除处理程序后， `removeEvent.notifySuccess()` 或 `removeEvent.notifyFailure()` 通知Teams删除结果。
+执行删除处理程序后， `removeEvent.notifySuccess()` 或 `removeEvent.notifyFailure()` Teams删除结果通知用户。
 
 >[!NOTE]
 > * 为了确保授权用户对选项卡的控制不会受到约束，Teams成功和失败情况下删除选项卡。
 > * Teams五秒后启用 **"删除**"按钮，即使选项卡尚未调用 `setValidityState()` 。
-> * 当用户选择删除 **时**，Teams 30 秒后删除选项卡，无论操作是否已完成。
+> * 当用户选择 **"删除"** 时，Teams 30 秒后删除选项卡，而不管操作是否已完成。
 
 ## <a name="see-also"></a>另请参阅
 

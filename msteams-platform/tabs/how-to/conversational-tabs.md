@@ -5,12 +5,13 @@ description: 为频道选项卡创建对话子实体聊天
 keywords: Teams 选项卡频道可配置
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: a0dae824f27edfac6eea64ffe72fc112e46a71d7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529005"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156008"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
@@ -20,7 +21,7 @@ ms.locfileid: "58529005"
 
 ## <a name="prerequisites"></a>先决条件
 
-为了支持对话子实体，您的选项卡 Web 应用程序必须能够在后端数据库中存储子实体↔会话之间的映射。 `conversationId`提供了 ，但您必须存储它，Teams `conversationId` 以便用户继续对话。
+为了支持对话子实体，您的选项卡 Web 应用程序必须能够在后端数据库中存储子实体与↔之间的映射。 `conversationId`提供了 ，但您必须存储此内容，Teams `conversationId` 以便用户继续对话。
 
 ## <a name="start-a-new-conversation"></a>启动新对话
 
@@ -36,7 +37,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 * **entityId**：这是选项卡实例创建时 ID。 ID 必须引用回同一个选项卡实例。
 * **channelId：** 这是选项卡实例所在的通道。
    > [!NOTE]
-   > **channelId** 对于频道选项卡是可选的。 但是，如果你想要保持通道和静态选项卡的实现相同，则建议这样做。
+   > **channelId** 对于频道选项卡是可选的。 但是，如果你想要保持通道和静态选项卡上的实现相同，则建议这样做。
 * **title**：这是在聊天面板中向用户显示的标题。
 
 大部分这些值也可从 `getContext` API 中检索。

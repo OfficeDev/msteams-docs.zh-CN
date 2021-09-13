@@ -3,20 +3,20 @@ title: 对话事件
 author: WashingtonKayaker
 description: 如何处理来自自动程序的对话Microsoft Teams事件。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 94bbb43110e45c9ab84c686f8fc8e2ade19d6998
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: e9dc8649cde02b2d19feaca001b55795c671cecb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528998"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156005"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-为用户生成对话机器人Microsoft Teams，可以使用对话事件。 Teams在自动程序处于活动状态的范围中发生的对话事件向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
+为用户生成对话机器人Microsoft Teams，可以使用对话事件。 Teams自动程序在活动范围内发生的对话事件向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
 
 * 将机器人添加到团队时触发欢迎消息。
 * 在添加或删除新的团队成员时触发欢迎消息。
@@ -28,7 +28,7 @@ ms.locfileid: "58528998"
 可以使用对话更新事件提供更好的通知和更有效的自动程序操作。
 
 > [!IMPORTANT]
-> * 你随时都可以添加新事件，并且机器人开始接收它们。
+> * 你随时都可以添加新事件，并且你的机器人开始接收它们。
 > * 必须将机器人设计为接收意外事件。
 > * 如果你使用的是 Bot Framework SDK，则自动自动响应你选择不处理 `200 - OK` 的任何事件。
 
@@ -147,7 +147,7 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>已重命名频道
 
-只要频道在安装了自动程序的团队中重命名，频道重命名事件就会发送到机器人。
+只要频道在安装自动程序的团队中重命名，频道重命名事件就会发送到机器人。
 
 以下代码显示了通道重命名事件的示例：
 
@@ -1389,13 +1389,13 @@ turnContext, CancellationToken cancellationToken) {
 > [!NOTE]
 > 使用自动程序的个人应用的卸载行为当前仅适用于公共开发人员 [预览版](../../../resources/dev-preview/developer-preview-intro.md)。
 
-卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有组聊天和 groupChat 作用域的个人Teams聊天机器人的卸载后行为已保持一致。 卸载应用后，你无法发送或接收邮件。
+卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有组聊天和 groupChat 作用域的个人Teams聊天机器人的帖子卸载行为已保持一致。 卸载应用后，你无法发送或接收邮件。
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
 
-使用这些安装和卸载事件时，在某些情况下，自动程序会提供从客户端接收意外事件的Teams。 在下列情况下会出现此情况：
+使用这些安装和卸载事件时，在某些情况下，自动程序会提供从事件接收意外事件的Teams。 在下列情况下会出现此情况：
 
 * 无需使用 SDK Microsoft Bot Framework自动程序，因此机器人在收到意外事件时出现异常。
 * 使用 Microsoft Bot Framework SDK 生成自动程序，并选择通过覆盖基本事件句柄来更改默认事件行为。

@@ -1,22 +1,23 @@
 ---
-title: 为会议启用和配置Teams应用程序
+title: 为会议启用和配置Teams应用
 author: surbhigupta
-description: 为会议启用和配置Teams应用程序
+description: 为会议启用和配置Teams应用
 ms.topic: conceptual
-ms.openlocfilehash: 1827257e4577aee6f3ac26b646a6c36f2e8eb523
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: 1695b3e63a08935abd2db264ff171ebdf1d49fc3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528885"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155384"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
-每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议应用程序。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
+每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议。 为会议启用Teams，并在其应用清单中将应用配置为在会议范围内可用。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
-若要为应用启用Teams会议，请更新应用清单并使用上下文属性确定应用必须出现在何处。
+若要为应用启用Teams会议，请更新应用清单，并使用上下文属性确定应用必须出现在何处。
 
 ### <a name="update-your-app-manifest"></a>更新应用清单
 
@@ -55,7 +56,7 @@ ms.locfileid: "58528885"
 
 ### <a name="context-property"></a>Context 属性
 
-属性确定当用户在会议调用应用时必须显示哪些内容，具体取决于用户 `context` 调用该应用的地方。 选项卡 `context` 和 `scopes` 属性使你可以确定应用必须出现在何处。 或 作用域 `team` 中的 `groupchat` 选项卡可以具有多个上下文。 以下是可以使用所有或部分 `context` 值的 属性的值：
+属性确定当用户在会议调用应用时必须显示哪些内容，具体取决于用户 `context` 调用该应用的地方。 选项卡 `context` 和 `scopes` 属性使你可以确定应用必须显示在哪里。 或 作用域 `team` 中的 `groupchat` 选项卡可以具有多个上下文。 以下是可以使用所有或部分 `context` 值的属性的值：
 
 |值|说明|
 |---|---|
@@ -125,8 +126,8 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 会议内对话框不得使用任务模块。 会议聊天中不调用任务模块。 外部资源 URL 用于在会议中显示内容气泡。 可以使用 方法 `submitTask` 在会议聊天中提交数据。
 
 > [!NOTE]
-> * 你必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
-> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，是Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+> * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
+> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，是Azure Active Directory (的 AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 #### <a name="shared-meeting-stage"></a>共享会议阶段
 
@@ -167,7 +168,7 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 |示例名称 | 说明 | 示例 |
 |----------------|-----------------|--------------|----------------|-----------|
-| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 该令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>另请参阅
 

@@ -3,14 +3,14 @@ title: Teams 应用的入口点
 author: heath-hamilton
 description: 介绍用户可以在 Teams 中发现和使用应用的地方。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 9a98cbebd1ada8708b75256ebff1d93b0f528251b6250524d79bac45f59fb9f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702758"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155807"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams 应用的入口点
 
@@ -21,7 +21,7 @@ the Teams platform provides a flexible set of entry points， such as team， ch
 
 团队、频道和聊天是协作空间。 这些上下文中的应用程序可供该空间中的每个人使用。 协作空间通常侧重于其他工作流或解锁新的社交交互。
 
-下表显示了如何在Teams上下文中使用应用程序功能：
+下面的列表演示如何Teams协作上下文中使用应用程序功能：
 
 * [**选项卡**](~/tabs/what-are-tabs.md)为团队、频道或群组聊天配置全屏嵌入的 Web 体验。 所有成员与基于 Web 的相同内容进行交互，因此无状态单页应用体验很典型。
 
@@ -29,7 +29,7 @@ the Teams platform provides a flexible set of entry points， such as team， ch
 
 * [**机器人**](~/bots/what-are-bots.md) 通过聊天和响应事件（例如添加新成员或重命名频道）与对话成员进行交互。 
    > [!NOTE]
-   > 与自动程序在这些上下文中的对话对团队、频道或组的所有成员都可见，因此自动程序对话必须与所有人相关。
+   > 与自动程序在这些上下文中的对话对团队、频道或组的所有成员都是可见的，因此自动程序对话必须与所有人相关。
 
 * [**Web 部件和连接器**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)外部服务将消息发布到对话中，用户可将邮件发送到服务。
 
@@ -48,7 +48,7 @@ the Teams platform provides a flexible set of entry points， such as team， ch
 ## <a name="see-also"></a>另请参阅
 
 [Teams应用设计指南](../concepts/design/design-teams-app-overview.md) <br>
-[生成首个 Microsoft Teams 应用](../build-your-first-app/build-first-app-overview.md)
+[生成首个Microsoft Teams应用](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>后续步骤
 

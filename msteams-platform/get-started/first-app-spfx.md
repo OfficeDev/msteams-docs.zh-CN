@@ -5,18 +5,19 @@ description: 了解如何使用自定义选项卡生成SharePoint 框架
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 25f4a815add4a5712883976b9899131fb108046d75f813517c8261c3cca8e5af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706905"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155795"
 ---
-# <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>使用应用生成并运行Microsoft Teams应用SharePoint 框架 (SPFx) 
+# <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>生成并运行第一个Microsoft Teams应用程序SharePoint 框架 (SPFx) 
 
 本教程介绍如何在实现简单个人Microsoft Teams应用中SharePoint 框架 SPFx应用。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 SharePoint。
 
-## <a name="before-you-begin"></a>准备工作
+## <a name="before-you-begin"></a>开始之前
 
 请确保通过安装必备组件来设置开发环境。
 
@@ -100,7 +101,7 @@ CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该�
 
 若要暂时跳过此部分，可以 [在本地运行应用](#run-your-app-locally)。
 
-配置Teams Toolkit后，你具有组件来为托管在项目Teams应用程序生成基本个人SharePoint 框架。  项目目录和文件显示在 Visual Studio 代码的资源管理器区域中。
+在Teams Toolkit项目后，你具有组件来为托管在项目Teams应用程序生成基本个人SharePoint 框架。  项目目录和文件显示在 Visual Studio 代码的资源管理器区域中。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="显示 Visual Studio Code 中个人应用的应用项目文件的屏幕截图。":::
 
@@ -115,17 +116,17 @@ CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该�
 - 该文件夹 `SPFx/src/webparts/{webpart}` 包含你的SPFx Web 部件。
 - 该文件 `.vscode/launch.json` 描述了调试调色板中提供的调试配置。
 
-有关 Web 部件SharePoint有关详细信息，Teams请参阅[SharePoint文档](/sharepoint/dev/spfx/build-for-teams-overview)。
+有关 web 部件SharePoint有关Teams，请参阅[SharePoint文档](/sharepoint/dev/spfx/build-for-teams-overview)。
 
 ## <a name="run-your-app-locally"></a>在本地运行应用
 
-Teams Toolkit允许你在本地托管应用，并通过工作台SharePoint 框架[它](/sharepoint/dev/spfx/debug-in-vscode)。
+Teams Toolkit允许你在本地托管应用，并通过工作台 SharePoint 框架[运行它](/sharepoint/dev/spfx/debug-in-vscode)。
 
 ### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>在 Visual Studio Code 本地生成和运行应用
 
 若要在本地构建和运行应用，请执行：
 
-1. 从Visual Studio Code按 **F5** 键。
+1. 在Visual Studio Code按 **F5** 键。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="显示如何在本地工作台SPFx应用屏幕截图。":::
 
@@ -147,7 +148,7 @@ Teams Toolkit允许你在本地托管应用，并通过工作台SharePoint 框�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a webpart selection.":::
 
-   你的应用现在应该正在运行。  你可以执行正常的调试活动，就像在 Web 部件SPFx一样 (例如设置断点) 。
+   你的应用现在应该正在运行。  你可以执行正常的调试活动，就像在 Web 部件SPFx任何其他调试 (例如设置断点) 。
 
    > [!TIP]
    > 请尝试在 的 render 方法中放置断点 `SPFx/src/webparts/{webpart}/{webpart}.ts` 并重新加载浏览器窗口。 VS Code断点处停止。
@@ -204,7 +205,7 @@ the SharePoint package is located `SPFx/sharepoint/solution` in within your proj
 1. 登录到 M365 管理控制台，然后导航到SharePoint应用程序目录。
 
    1. 打开 `https://admin.microsoft.com/AdminPortal/Home` 。
-   1. 在 **"管理中心**"下 **，SharePoint管理** 中心"。
+   1. 在 **"管理中心**"下 **，SharePoint** 管理中心"。
    1. 从 **边栏菜单中** 选择"更多功能"。
    1. 按 **"应用"** 下的"**打开"。**
    1. 选择 **"应用程序目录"。**
@@ -227,7 +228,7 @@ the SharePoint package is located `SPFx/sharepoint/solution` in within your proj
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="选择应用程序目录中的文件SharePoint选项卡。":::
 
-1. 选择已部署的程序包，**然后选择"同步** Teams右上角选择" 同步"。
+1. 选择已部署的程序包，**然后选择"同步** Teams右上角选择"同步"。
 
     > [!Note]
     > 同步到Teams可能需要几分钟。  你将在浏览器的右侧看到一条消息，指示应用已成功同步到Teams。

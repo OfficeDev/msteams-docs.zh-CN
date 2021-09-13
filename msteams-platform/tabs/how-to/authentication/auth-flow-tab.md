@@ -2,14 +2,14 @@
 title: 选项卡的身份验证流
 description: 描述选项卡中的身份验证流
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 身份验证流选项卡
-ms.openlocfilehash: ccafd5b14e95e2cf319dcf53263e747e0bd67dd062c724ba9c8b736ec6c547db
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f95a9c89fd8d40078de064da0ca7c33d929dc0a1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705222"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155283"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams选项卡的身份验证流
 
@@ -19,7 +19,7 @@ ms.locfileid: "57705222"
 
 OAuth 2.0 是一个开放标准，供 AAD Azure Active Directory (和许多其他) 使用的身份验证和授权。 对 OAuth 2.0 有基本的了解是在 Teams 中进行身份验证的先决条件。 有关详细信息，请参阅 [OAuth 2 简化](https://aaronparecki.com/oauth-2-simplified/) ，比正式规范 [更易于遵循](https://oauth.net/2/)。 选项卡和聊天机器人的身份验证流不同，因为选项卡类似于网站，因此可以直接使用 OAuth 2.0。 机器人执行一些不同操作，但核心概念是相同的。
 
-有关使用 Node 和 [OAuth 2.0](https://oauth.net/2/grant-types/implicit/)隐式授予类型的选项卡和自动程序身份验证流的示例，请参阅 [启动选项卡的身份验证流](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow)。
+有关使用 Node 和 [OAuth 2.0](https://oauth.net/2/grant-types/implicit/)隐式授予类型的选项卡和聊天机器人的身份验证流示例，请参阅 [启动选项卡的身份验证流](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow)。
 
 > [!NOTE]
 > 在向 **用户显示登录** 按钮并调用 API 以响应选择该按钮之前，必须等待 `microsoftTeams.authentication.authenticate` SDK 初始化完成。 你可以将回调传递到 `microsoftTeams.initialize` 初始化完成时调用的 API。
@@ -43,7 +43,7 @@ OAuth 2.0 是一个开放标准，供 AAD Azure Active Directory (和许多其�
 
 ## <a name="treat-tab-context-as-hints"></a>将选项卡上下文视为提示
 
-尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证。 即使您将信息作为 URL 参数获取至您的选项卡内容 URL，或者通过调用 Microsoft Teams SDK 中的 函数， `microsoftTeams.getContext()` 也可以对用户进行身份验证。 恶意参与者可以使用自己的参数调用您的选项卡内容 URL。 参与者还可以调用模拟 web 页面Microsoft Teams在 iframe 中加载选项卡内容 URL，并返回其自己的 `getContext()` 数据到 函数。 你必须将选项卡上下文中的标识相关信息视为提示，并验证这些信息，然后再使用。 请参阅从弹出式页面导航到 [授权页中的注释](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)。
+尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证。 即使您将信息作为 URL 参数获取至您的选项卡内容 URL，或者通过调用 Microsoft Teams SDK 中的 函数，也可以 `microsoftTeams.getContext()` 对用户进行身份验证。 恶意参与者可以使用自己的参数调用您的选项卡内容 URL。 主角还可以调用模拟 web 页面Microsoft Teams在 iframe 中加载选项卡内容 URL，然后向 函数返回自己的 `getContext()` 数据。 你必须将选项卡上下文中的标识相关信息视为提示，并使用前进行验证。 请参阅从弹出式页面导航到 [授权页中的注释](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)。
 
 ## <a name="code-sample"></a>代码示例
 

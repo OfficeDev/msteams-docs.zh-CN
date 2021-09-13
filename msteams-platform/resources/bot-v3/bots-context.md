@@ -1,16 +1,16 @@
 ---
 title: 获取自动程序Microsoft Teams上下文
-description: 介绍如何获取自动程序在Microsoft Teams
+description: 介绍如何在聊天机器人中获取Microsoft Teams
 keywords: teams 机器人上下文
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: cda2e24816330964342b097f52bb955c8846c54a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5c9dac9712f6bdc9a62262614ceaf90fd100e19e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566486"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155872"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>获取自动程序Microsoft Teams上下文
 
@@ -20,7 +20,7 @@ ms.locfileid: "52566486"
 
 > [!NOTE]
 >
-> * Microsoft Teams聊天机器人生成器 SDK 的扩展，可以最好地访问特定于自动程序 API。
+> * Microsoft Teams聊天机器人 SDK 的扩展，可以最好地访问特定于自动程序 API。
 > * 对于 C# 或 .NET，请下载[Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet 程序包。
 > * For Node.js development， the Bot Builder for Teams functionality is incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6.
 
@@ -165,7 +165,7 @@ Response body
 
 #### <a name="net-example"></a>.NET 示例
 
-下面的示例使用来自适用于 `FetchChannelList` [.NET 的自动Teams SDK 的扩展的调用](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)：
+下面的示例使用来自自动 `FetchChannelList` 程序生成器[SDK for .NET Teams扩展的调用](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)：
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);

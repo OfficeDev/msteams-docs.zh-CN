@@ -1,19 +1,19 @@
 ---
 title: 准备 Microsoft 365 租户
-description: 如何开始使用Teams Microsoft 365
+description: 如何开始使用 Teams Microsoft 365
 ms.topic: how-to
-localization_priority: Normal
-keywords: 配置Microsoft 365租户Teams上载
-ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+keywords: 配置Microsoft 365租户Teams上传
+ms.openlocfilehash: 83d45d567c11ff26b5c788371cd4a676f9c3ca2c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704414"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155301"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 
-Microsoft 365订阅者可以使用以下Microsoft Teams之一开发适用于用户的应用程序：
+Microsoft 365订阅者可以使用以下Microsoft Teams之一开发适用于以下应用程序的应用：
 
 * 基本
 * 标准
@@ -27,9 +27,9 @@ Microsoft 365订阅者可以使用以下Microsoft Teams之一开发适用于用�
 
 ## <a name="create-your-development-environment"></a>创建开发环境
 
-如果你没有帐户，Microsoft 365注册开发人员计划Microsoft 365[订阅](https://developer.microsoft.com/microsoft-365/dev-program)。 订阅将免费 90 天，并持续续订，只要将订阅用于开发活动。 如果你有一个Visual Studio Enterprise或Professional订阅，这两个计划均包括免费Microsoft 365[开发人员订阅](https://aka.ms/MyVisualStudioBenefits)。 只要你的订阅处于活动状态，Visual Studio就有效。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
+如果你没有帐户，Microsoft 365注册开发人员计划[Microsoft 365订阅。](https://developer.microsoft.com/microsoft-365/dev-program) 订阅将免费 90 天，并持续续订，只要将订阅用于开发活动。 如果你有一个Visual Studio Enterprise或Professional订阅，这两个计划均包括免费Microsoft 365[开发人员订阅](https://aka.ms/MyVisualStudioBenefits)。 只要你的订阅处于活动状态，Visual Studio就处于活动状态。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
 
-## <a name="enable-teams-for-your-organization"></a>为Teams启用管理
+## <a name="enable-teams-for-your-organization"></a>为Teams启用启用
 
 Enable Teams for your organization and for more information， see [enabling Teams for your organization](/microsoftteams/enable-features-office-365).
 
@@ -59,7 +59,7 @@ Enable Teams for your organization and for more information， see [enabling Tea
 
     ![Upload应用视图](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-有关这些设置如何交互的完整信息，请参阅管理[](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)Teams 中的自定义应用策略和设置[Teams。](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)
+有关这些设置如何交互的完整信息，请参阅管理自定义[](/microsoftteams/teams-custom-app-policies-and-settings)应用策略和Teams中的自定义应用策略[Teams。](/microsoftteams/teams-app-setup-policies)
 
 ## <a name="next-step"></a>后续步骤
 

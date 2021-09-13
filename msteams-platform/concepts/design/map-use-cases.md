@@ -3,18 +3,18 @@ title: 将用例映射到Teams功能
 author: surbhigupta
 description: 确定你的应用用例在应用体验Teams工作。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 77e8db5e0d0e4738cf479ccfddb9766507f7170c
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345549"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155349"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到Teams功能
 
-确定用户 *是谁* 以及要解决什么问题后，可以决定 *如何* 解决问题了。 The *who，* *what*， *and how* completes the process of understanding and mapping your use cases to Teams app capabilities. 你需要根据从用户收到的查询响应来定义应用的范围，然后确定最适合生成应用的功能。
+确定用户 *是谁* 以及要解决什么问题后，可以决定 *如何* 解决问题了。 The *who，* *what*， and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. 你需要根据从用户收到的查询响应来定义应用的范围，然后确定最适合生成应用的功能。
 
 > [!NOTE]
 > 你必须深入了解可用于应用的 [入口点和 UI](../../concepts/extensibility-points.md) 元素。 此外，还必须确保仔细考虑 [用例](../../concepts/design/understand-use-cases.md) 。
@@ -25,14 +25,14 @@ ms.locfileid: "58345549"
 
 * 应用可以跨范围存在。
 * 应用功能（如邮件扩展）可跨范围关注用户。
-* 用户通常对将应用添加到频道或Teams非常的。
+* 用户通常对将应用添加到频道或Teams很不一样。
 * 来宾可以访问在频道或Teams公开的内容。
 
 你可以根据以下条件在个人范围和团队或频道范围之间选择：
 
 * 对于个人范围，请提出以下问题：
   * 出于隐私或其他原因，是否要求与应用进行一对一交互？ 例如，检查休假余额或其他私人信息。
-  * 是否有可能没有任何常见协作功能的用户之间的Teams？ 例如，在公司中查找即将推出的组织范围事件。
+  * 是否有可能没有任何常见协作的用户之间的Teams？ 例如，在公司中查找即将推出的组织范围事件。
   * 在应用体验中，是否需要向用户发送任何Teams消息？ 例如，审批或注册提醒。
 * 对于共享范围 (团队、频道或聊天) ，请提出以下问题：
   * 应用在选项卡或机器人中呈现的信息是否与团队中的大多数成员相关且有用？ 例如，Scrum 应用。
@@ -42,7 +42,7 @@ ms.locfileid: "58345549"
 以下方案将指导你了解与应用功能良好协作的入口点和 UI Teams选择：
 
 > [!NOTE]
-> 这不是一个详尽的列表，但有助于你思考一些可用的可能性。
+> 这不是一个详尽的列表，但有助于你考虑一些可用的可能性。
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>在外部系统中创建、共享和协作处理项目
 
@@ -54,7 +54,7 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 * **选项卡**：创建用于查看、处理和共享数据的嵌入式 Web 体验。
 
-* **连接器和 webhook：** 在客户端中推送数据和发送数据Teams方法。
+* **连接器和 webhook：** 一种将数据推送到客户端并将其从 Teams 发送的简单方法。
 
 * **任务模块**：需要它们收集或显示信息的交互式模式表单。
 
@@ -96,7 +96,7 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 ## <a name="start-small"></a>小型启动
 
-不确定从何处开始？ 觉得使用各种可用选项有点不知所措？ 你必须选择应用的核心功能，然后开始操作。 在了解信息通过环境中的各个上下文Teams后，可以更加简单地了解更复杂的交互。
+不确定从何处开始？ 觉得使用各种可用选项有点不知所措？ 你必须选择应用的核心功能，然后开始操作。 在了解信息在环境中的各个上下文中Teams后，可以更加简单地了解更复杂的交互。
 
 ## <a name="put-it-all-together"></a>全部放在一起
 

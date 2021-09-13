@@ -1,29 +1,29 @@
 ---
 title: 通话和联机会议机器人
-description: 了解你的Microsoft Teams应用如何使用语音和视频与用户使用 Microsoft Graph API 进行通话和联机会议交互。
+description: 了解你的 Microsoft Teams 应用如何使用语音和视频与用户使用 Microsoft Graph API 进行通话和联机会议交互。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 呼叫呼叫 音频视频 IVR 语音联机会议
-ms.openlocfilehash: 578c10ab2566e8bbf51a2224b8d474fb74c92092ea815386865a4e28efe059c6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e94cb425f7931582067bc3439e890b74b64e0f51
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706793"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155969"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
 
-机器人可以使用实时Teams、视频和屏幕共享与呼叫和会议进行交互。 借助[Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)API 进行呼叫和联机会议，Teams应用现在可以使用语音和视频与用户进行交互，以增强体验。 这些 API 允许你添加以下新功能：
+机器人可以使用实时Teams、视频和屏幕共享与呼叫和会议进行交互。 借助[Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)API 进行呼叫和联机会议，Teams应用现在可以使用语音和视频与用户交互，以增强体验。 这些 API 允许你添加以下新功能：
 
 * IVR (互动语音) 。
 * 呼叫控制。
 * 访问实时音频和视频流，包括桌面应用共享。
 
-若要在 Graph应用中使用这些 Teams API，请创建一个自动程序并指定其他一些信息和权限。
+若要在 Graph应用中使用这些 Teams API，请创建一个自动程序并指定一些其他信息和权限。
 
-此外，实时媒体平台还允许机器人使用实时Teams、视频和屏幕共享与通话和会议进行交互。 参与音频或视频呼叫和联机会议的机器人是一种Microsoft Teams聊天机器人，具有用于注册机器人的一些额外功能。
+此外，实时媒体平台允许机器人使用实时Teams、视频和屏幕共享与通话和会议进行交互。 参与音频或视频通话和联机会议的机器人是一种Microsoft Teams聊天机器人，具有用于注册机器人的一些额外功能。
 
-The Teams app manifest with two additional settings `supportsCalling` and `supportsVideo` ， Graph permissions for your bot's Microsoft App ID， and tenant admin consent enable you to register the bot. 为聊天机器人注册Teams时，会提到 Webhook URL，它是对自动程序的所有传入呼叫的 webhook 终结点。 应用程序托管的媒体机器人需要 Microsoft。Graph。Communications.Calls.Media .NET 库，用于访问音频和视频媒体流，机器人必须部署在 Azure 中的 Windows Server 计算机或 Windows Server 来宾操作系统 (OS) 上。 自动程序Teams音频和视频内容仅支持一组特定的媒体格式。
+The Teams app manifest with two additional settings `supportsCalling` and `supportsVideo` ， Graph permissions for your bot's Microsoft App ID， and tenant admin consent enable you to register the bot. 在注册呼叫和会议机器人Teams时，会提到 Webhook URL，它是对自动程序的所有传入呼叫的 webhook 终结点。 应用程序托管的媒体机器人需要 Microsoft。Graph。Communications.Calls.Media .NET 库，用于访问音频和视频媒体流，机器人必须部署在 Azure 中的 Windows Server 计算机或 Windows Server 来宾操作系统 (操作系统) 上。 自动程序Teams音频和视频内容仅支持一组特定的媒体格式。
 
 现在，您必须了解一些核心概念、术语和约定。
 
@@ -74,7 +74,7 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
 ### <a name="real-time-media"></a>实时媒体
 
-当机器人参与呼叫或联机会议时，它必须处理音频和视频流。 当用户在通话中通话、在摄像头上显示自己或在会议中演示屏幕时，机器人会显示为音频和视频流。 如果机器人想要说出一些简单的内容，请按 **0** 以在 IVR (交互语音响应中) 接线员，则需要播放 。WAV 文件。 这统称为媒体或实时媒体。
+当机器人参与呼叫或联机会议时，它必须处理音频和视频流。 当用户在通话中通话、在摄像头上显示自己或在会议中演示屏幕时，机器人会显示为音频和视频流。 如果机器人想要说出一些非常简单的话，请按 **0** 以在 IVR (交互语音响应中) 接线员，则需要播放 。WAV 文件。 这统称为媒体或实时媒体。
 
 实时媒体是指必须实时处理媒体（而不是播放以前录制的音频或视频）的方案。 处理媒体流（尤其是实时媒体流）非常复杂。 Microsoft 已创建实时媒体平台来处理这些方案，并尽可能卸载传统繁重的媒体处理工作。 当机器人应答传入呼叫或加入新呼叫或现有呼叫时，需要告诉实时媒体平台如何处理媒体。 如果要构建 IVR 应用程序，可以将昂贵的音频处理卸载到 Microsoft。 或者，如果你的机器人需要直接访问媒体流，则也支持该方案。 有两种类型的媒体处理：
 
@@ -103,7 +103,7 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
 - [注册支持通话和联机会议的机器人](./registering-calling-bot.md)
 
-- [Graph聊天机器人的联机会议权限](./registering-calling-bot.md#add-graph-permissions)
+- [Graph联机会议自动程序的权限](./registering-calling-bot.md#add-graph-permissions)
 
 - [如何在计算机上开发通话和联机会议机器人](./debugging-local-testing-calling-meeting-bots.md)
 

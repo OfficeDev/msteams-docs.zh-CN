@@ -2,15 +2,15 @@
 title: 本地化 JSON 架构参考
 description: 介绍本地化文件支持的本地化架构Microsoft Teams
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 清单架构本地化
 ms.date: 05/20/2019
-ms.openlocfilehash: 7a7c5e61e8e9db2526a725d676a237d9c37f7d71ea74d42117e0b59b51cae969
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 8c5f32fb8244f70fadc610ed7c193d97f11171f2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705543"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155672"
 ---
 # <a name="localize-json-schema-reference"></a>本地化 JSON 架构参考
 
@@ -42,7 +42,7 @@ ms.locfileid: "57705543"
 
 |属性|类型|最大长度|说明|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|不适用|引用 https:// JSON 架构的 URL。|
+|`$schema`|URI|不适用|the https:// URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|将应用清单中的相应字符串替换为此处提供的值。|
 |`name.full`|字符串|100|将应用清单中的相应字符串替换为此处提供的值。|
 |`description.short`|String|80|将应用清单中的相应字符串替换为此处提供的值。|

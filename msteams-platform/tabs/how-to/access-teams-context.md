@@ -1,15 +1,15 @@
 ---
 title: 获取选项卡的上下文
 description: 介绍如何将用户上下文获取有关选项卡的用户上下文
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 32c8606d172a785356107750eac8168b1987d7f6b41d44f02297f0c19d22aa61
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d0cdb107ef57c705589e225f1441a48caf427e5d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709328"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156011"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -24,7 +24,7 @@ ms.locfileid: "57709328"
 在以下情况下，有关用户、团队或公司的上下文可能特别有用：
 
 * 在应用中创建资源或将资源与指定的用户或团队关联。
-* 从 AAD Azure Active Directory (或其他) 启动身份验证流，并且不需要用户再次输入其用户名。 有关详细信息，请参阅"验证[用户身份Microsoft Teams选项卡。](~/concepts/authentication/authentication.md)
+* 从 AAD Azure Active Directory (或其他标识) 启动身份验证流，并且不需要用户再次输入其用户名。 有关详细信息，请参阅"验证[用户身份Microsoft Teams选项卡。](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
 > 虽然此用户信息可帮助提供流畅的用户体验，但不得使用它作为标识证明。 例如，攻击者可以在浏览器中加载页面并呈现有害的信息或请求。
@@ -45,7 +45,7 @@ ms.locfileid: "57709328"
 * {loginHint}：适合用作 AAD 登录提示的值。 这通常是其主租户中当前用户的登录名。
 * {userPrincipalName}：当前租户中当前用户的用户主体名称。
 * {userObjectId}：当前租户中当前用户的 AAD 对象 ID。
-* {theme}：当前用户界面 (UI) 主题，如 、 `default` `dark` 或 `contrast` 。
+* {theme}：当前用户界面 (UI) 主题，如 、 `default` 或 `dark` `contrast` 。
 * {groupId}：选项卡Office 365组 ID。
 * {tid}：当前用户的 AAD 租户 ID。
 * {locale}：格式化为 languageId-countryId 的用户的当前区域设置。 例如，en-us。
@@ -57,8 +57,8 @@ ms.locfileid: "57709328"
 
 * 其用户名为 **user@example.com**。
 * 他们的公司租户 ID 是 **e2653c-etc。**
-* 他们是 id 为 **00209384 Office 365组的成员。**
-* 用户已设置其Teams主题为 **深色**。
+* 他们是 id 为 **00209384-etc** Office 365组的成员。
+* 用户已设置其Teams主题 **为深色**。
 
 在配置选项卡时，Teams调用以下 URL：
 

@@ -2,15 +2,15 @@
 title: 定义消息传递扩展操作命令
 author: surbhigupta
 description: 邮件扩展操作命令概述
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b4420247d3a0c1116bd1aed09fa2edccf18ae902
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: d9e2e482ed15c99613bbd786ab685a0b388de502
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068931"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155262"
 ---
 # <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 
@@ -31,7 +31,7 @@ ms.locfileid: "53068931"
 * 撰写邮件区域：撰写邮件区域底部的按钮。
 * 命令框：@mentioning命令框中显示你的应用。 
    > [!NOTE]
-   > 如果从命令框调用消息扩展，则不能使用直接插入对话中的自动程序消息进行响应。
+   > 如果从命令框调用消息传递扩展，则不能使用直接插入对话的自动程序消息进行响应。
 
 * 消息：直接通过邮件上的溢出 `...` 菜单从现有邮件发送。 
     > [!NOTE] 
@@ -46,10 +46,10 @@ ms.locfileid: "53068931"
 除了选择命令的调用位置之外，还必须选择如何为用户填充任务模块中的窗体。 有以下三个选项用于创建在任务模块内呈现的窗体：   
 
 * **参数的静态列表**：这是最简单的方法。 可以在客户端呈现的应用清单中定义Teams列表，但在这种情况下无法控制格式。
-* **自适应卡片**：可以选择使用自适应卡片，该卡片可以更好地控制 UI，但仍限制可用控件和格式设置选项。
+* **自适应卡片**：可以选择使用自适应卡片，该卡片可以更好地控制 UI，但仍限制你可用的控件和格式设置选项。
 * **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以便完全控制 UI 和控件。 
 
-如果选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
+如果您选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
 
 ## <a name="select-how-the-final-message-is-sent"></a>选择最终邮件的发送
 
@@ -71,7 +71,7 @@ ms.locfileid: "53068931"
 
 **创建操作命令**
 
-1. 从 **客户端** 打开 App Studio Microsoft Teams选择"**清单编辑器"** 选项卡。
+1. 从 **客户端** 打开 App Studio Microsoft Teams选择清单 **编辑器** 选项卡。
 1. 如果你已在 **App Studio** 中创建应用包，请从列表中选择它。 如果尚未创建应用包，请导入现有应用包。
 1. 导入应用包后，在"功能"下 **选择**"消息传递 **扩展"。** 你获得一个弹出窗口来设置邮件扩展。
 1. 选择 **窗口中** 的"设置"，将消息传递扩展包括在你的应用体验中。 下图显示了消息扩展设置窗口：
@@ -87,7 +87,7 @@ ms.locfileid: "53068931"
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. 选择 **"允许用户在外部服务中触发操作，同时在Teams"。** 下图显示了操作命令选择：
+1. 选择 **"允许用户在外部服务内触发Teams"。** 下图显示了操作命令选择：
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
@@ -105,12 +105,12 @@ ms.locfileid: "53068931"
 
    <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
 
-1. 若要使用动态参数，请选择"从自动程序提取动态 **参数集"。** 下图显示了操作命令参数选择：
+1. 若要使用动态参数，请选择"从自动程序获取一组 **动态参数"。** 下图显示了操作命令参数选择：
 
     <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
     
 1. 添加命令 **ID** 和 **标题**。
-1. 选择要从其中调用操作命令的位置。 下图显示了操作命令调用位置：
+1. 选择要调用操作命令的位置。 下图显示了操作命令调用位置：
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
@@ -125,7 +125,7 @@ ms.locfileid: "53068931"
 |---|---|---|---|
 | `id` | 此属性是分配给此命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
 | `title` | 此属性是命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 此属性必须是 `action` 。 | 否 | 1.4 |
+| `type` | 此属性必须为 `action` 。 | 不支持 | 1.4 |
 | `fetchTask` | 对于任务模块的自适应卡片或嵌入式 Web 视图，以及参数的静态列表或加载 Web 视图时，此属性 `true` `false` 设置为 `taskInfo` 。 | 否 | 1.4 |
 | `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
@@ -143,15 +143,15 @@ ms.locfileid: "53068931"
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 否 | 1.4 |
+|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 不支持 | 1.4 |
 |`taskInfo.title`|初始任务模块标题。 |否 | 1.4 |
-|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 `large` 、 `medium` 或 `small` ）。 |否 | 1.4 |
+|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 、 `large` `medium` 或 `small` ）。 |否 | 1.4 |
 |`taskInfo.height`|任务模块高度，以像素为单位或默认布局（如 、 `large` `medium` 或 `small` ）。|否 | 1.4 |
-|`taskInfo.url`|初始 Web 视图 URL。|否 | 1.4 | 
+|`taskInfo.url`|初始 Web 视图 URL。|不支持 | 1.4 | 
 
 #### <a name="app-manifest-example"></a>应用清单示例
 
-下一节是定义两个 `composeExtensions` 操作命令的对象的示例。 这不是完整清单的示例。 有关完整的应用清单架构，请参阅 [应用清单架构](~/resources/schema/manifest-schema.md)：
+下一节是定义两 `composeExtensions` 个操作命令的对象的示例。 这不是完整清单的示例。 有关完整的应用清单架构，请参阅 [应用清单架构](~/resources/schema/manifest-schema.md)：
 
 ```json
 ...
@@ -215,7 +215,7 @@ ms.locfileid: "53068931"
 > [!div class="nextstepaction"]
 > [使用任务模块创建和响应](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-如果要将参数或嵌入的 Web 视图与对象一同使用，下一 `taskInfo` 步是：
+如果要将参数或嵌入的 Web 视图与对象一同 `taskInfo` 使用，下一步是：
 
 > [!div class="nextstepaction"]
 > [响应任务模块提交](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

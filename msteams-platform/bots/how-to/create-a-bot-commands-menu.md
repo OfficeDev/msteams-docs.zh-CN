@@ -3,14 +3,14 @@ title: 为自动程序创建命令菜单
 author: surbhigupta
 description: 如何为自动程序创建Microsoft Teams菜单
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 978c34a950669386464037850601878a98c191c50710cc62c556f4104ad325e6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704074"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155687"
 ---
 # <a name="bot-command-menus"></a>自动程序命令菜单
 
@@ -169,7 +169,7 @@ ms.locfileid: "57704074"
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-可以使用邮件文本的 **\@ "提及**"部分分析邮件文本的静态Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
+可以使用与邮件正文一起提供的静态方法分析邮件文本的 **\@ "** 提及"Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
 
 用于C#"提及"部分的代码如下所示： **\@**
 

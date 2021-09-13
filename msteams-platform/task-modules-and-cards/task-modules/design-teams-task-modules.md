@@ -1,16 +1,16 @@
 ---
 title: 设计任务模块
 author: heath-hamilton
-description: 了解如何设计适用于应用的任务Teams并获取 Microsoft Teams UI 工具包。
-localization_priority: Normal
+description: 了解如何为应用设计任务Teams并获取 Microsoft Teams UI 工具包。
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9248fba30726511d025e71957c0d9f2bac4c9866
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 8edcc24d5fca7ba7e8260d2cc20ee8c6d7282af2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408613"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155712"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>为应用程序设计Microsoft Teams模块
 
@@ -20,7 +20,7 @@ ms.locfileid: "58408613"
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-可以在自定义 UI 工具包中查找更全面的任务模块设计指南，包括可根据需要获取和修改Microsoft Teams元素。
+你可以找到更全面的任务模块设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
@@ -31,17 +31,17 @@ ms.locfileid: "58408613"
 
 * **Tab：** 可以从选项卡内的任何链接启动任务模块。在希望用户专注于交互的方案中使用。
 * **自动** 程序：可以从自动程序消息内的链接启动任务模块。
-* **自适应卡片**：任务模块可以从随消息传递扩展 (发送的自适应卡片启动，也可在用户选择按钮) 自动程序启动。
+* **自适应卡片**：任务模块可以从随消息传递扩展 (发送的自适应卡片或自动程序) 用户选择按钮时启动。
 * **邮件扩展 (操作) ：** 邮件扩展允许您对邮件内容执行特定操作。 选择操作将打开任务模块。
 * **邮件扩展 (撰写**) ：在撰写框中，可以设计邮件扩展以打开任务模块，而不是典型的飞出框。 保留用于复杂交互的任务模块，例如完成表单。
 
 ## <a name="anatomy"></a>解剖
 
-任务模块为托管应用体验提供了灵活的图面。 它们使用 iframe (桌面) 或 webview (移动) 生成，因此可以使用 UI 模板设计任务模块 (推荐) 从头开始设计任务模块。
+任务模块为托管应用体验提供了灵活的图面。 它们使用 iframe (桌面) 或 webview (移动) 生成，因此可以使用 UI 模板设计任务模块 (推荐) 或从头开始设计任务模块。
 
-它们还可以与自适应卡片框架一[](../../task-modules-and-cards/cards/design-effective-cards.md)起生成，该框架可以更简单、更快地促进常见应用场景 (表单) 。
+它们还可以与自适应 [卡片](../../task-modules-and-cards/cards/design-effective-cards.md) 框架一起生成，该框架可以更简单、更快速地促进常见方案 (如表单) 。
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="插图显示移动设备上的任务模块的 UI 结构。" border="false":::
 
@@ -80,7 +80,7 @@ ms.locfileid: "58408613"
 
 列表在任务模块中运行得非常好，因为它们易于扫描。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="移动设备上的任务模块中的示例列表。" border="false":::
 
@@ -92,7 +92,7 @@ ms.locfileid: "58408613"
 
 任务模块是显示具有顺序用户输入和内联验证的表单的一个很好的位置。 可以利用自适应卡片作为嵌入表单元素的一种方式。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="移动任务模块中的示例窗体。" border="false":::
 
@@ -104,7 +104,7 @@ ms.locfileid: "58408613"
 
 创建具有一系列任务模块的集中登录或注册流，使用户能够在顺序步骤中轻松移动。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="移动任务模块中的登录体验示例。" border="false":::
 
@@ -116,7 +116,7 @@ ms.locfileid: "58408613"
 
 在任务模块中嵌入媒体内容，实现集中的观看体验。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="移动任务模块中的媒体内容示例。" border="false":::
 
@@ -128,7 +128,7 @@ ms.locfileid: "58408613"
 
 用于欢迎、错误和成功消息。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="移动任务模块中的空状态示例。" border="false":::
 
@@ -138,9 +138,9 @@ ms.locfileid: "58408613"
 
 ### <a name="image-gallery"></a>图像库
 
-在 iframe 桌面设备或 webview (移动设备) 嵌入库 () 。
+在 iframe 桌面设备或 webview (移动设备中) 库 () 。
 
-##### <a name="mobile"></a>移动
+##### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="移动任务模块中的示例图像库。" border="false":::
 
@@ -152,7 +152,7 @@ ms.locfileid: "58408613"
 
 此示例显示从自适应卡片启动的投票结果。 轮询也可以放置在任务模块内。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="移动任务模块中的轮询示例。" border="false":::
 
@@ -176,7 +176,7 @@ ms.locfileid: "58408613"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="显示任务模块最佳实践的示例 (在任务模块对话框顶部弹出) 。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="示例显示任务模块最佳实践 (在任务模块对话框顶部弹出) 。" border="false":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>请勿：在任务模块顶部弹出对话框
 
@@ -189,7 +189,7 @@ ms.locfileid: "58408613"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="示例显示任务模块最佳实践 (确保内容响应迅速) 。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="显示任务模块最佳实践的示例 (确保内容响应迅速) 。" border="false":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>应做：确保内容响应迅速
 
@@ -214,11 +214,11 @@ ms.locfileid: "58408613"
 
 #### <a name="do-keep-it-short"></a>应做：保持简短
 
-你可以轻松创建多步骤向导，但这并不意味着你应该！ 多屏幕任务模块可能会出现问题，因为传入的消息会分散注意力并吸引用户退出。 如果确实涉及你的任务，请弹出到整个网页，而不是任务模块。
+你可以轻松创建多步骤向导，但这并不意味着你应该！ 多屏幕任务模块可能会出现问题，因为传入的消息会分散注意力并吸引用户退出。 如果确实涉及你的任务，请弹出到完整网页，而不是任务模块。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="显示任务模块最佳实践的示例 (操作没有长交互) 。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="显示任务模块最佳做法的示例 (操作没有长交互) 。" border="false":::
 
 #### <a name="dont-have-long-interactions"></a>请勿：进行长交互
 

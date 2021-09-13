@@ -2,15 +2,15 @@
 title: 设计活动源通知
 author: heath-hamilton
 description: 了解如何为应用设计活动源Teams并获取 Microsoft Teams UI 工具包。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 7bc5527a4ac849ab6a46692da85b051f86606f92
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408550"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155945"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>为应用设计活动源Microsoft Teams通知
 
@@ -18,7 +18,7 @@ ms.locfileid: "58408550"
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="示例显示一个应用通知，Teams移动活动源中。" border="false":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="示例显示显示在移动活动源Teams应用程序通知。" border="false":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
@@ -28,13 +28,13 @@ ms.locfileid: "58408550"
 
 ## <a name="anatomy"></a>解剖
 
-:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-anatomy.png" alt-text="活动源Teams的设计结构。" border="false":::
+:::image type="content" source="../../assets/images/activity-feed/activity-feed-card-anatomy.png" alt-text="活动源Teams设计结构。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |1|**头** 像：显示发起活动的人。|
 |2|**活动类型/应用图标**：描述活动的类型。 对于应用通知，行图标将替换为应用图标。|
-|3|**标题 (一) ：Actor + reason**： *Actor*：发起活动的用户或应用的名称。 *Reason*：描述活动。|
+|3|**标题 (一行) ：Actor + reason**： *Actor*：发起活动的用户或应用的名称。 *Reason*：描述活动。|
 |4 |**时间戳：** 显示活动发生的时间。|
 |5 |**Location (second line)**： Shows where the activity happened in Teams.|
 |6 |**第三 (第三行) ：** 可选。 显示预览文本或其他信息。|
@@ -47,7 +47,7 @@ ms.locfileid: "58408550"
 
 ## <a name="manage-activity-feed-notifications"></a>管理活动源通知
 
-用户可以在"设置"页中管理从Teams发送的通知。
+用户可以在"设置"页中管理Teams发送的通知。
 
 ## <a name="related-system-notifications"></a>相关系统通知
 

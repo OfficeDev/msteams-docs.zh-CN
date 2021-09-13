@@ -1,25 +1,25 @@
 ---
-title: 使用选项卡的身份验证Teams Toolkit Visual Studio Code单一登录身份验证
-description: 生成一个支持单一登录和 Microsoft Graph直接在Visual Studio Code内调用的Microsoft Teams Toolkit
+title: 使用选项卡的Teams Toolkit Visual Studio Code单一登录身份验证
+description: 使用 Graph 生成支持单一登录和 Microsoft Visual Studio Code调用的Microsoft Teams Toolkit
 keywords: teams visual studio code toolkit tabs sso graph authentication Azure identity platform
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 9854ac7dff400a5ef9b4695eab2f1679966043ac5fe5b65a2df5d4c5c7c6da8b
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2ef409a45b92240cced09d2d77793af33945589e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707405"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155925"
 ---
-# <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>使用选项卡的身份验证Teams Toolkit Visual Studio Code单一登录身份验证
+# <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>使用选项卡的Teams Toolkit Visual Studio Code单一登录身份验证
 
 > [!IMPORTANT]
-> **本文档引用早期版本的 Teams Toolkit**
+> **本文档引用旧版本Teams Toolkit**
 >
 > 有关当前信息，请阅读 [先决条件，](../get-started/prerequisites.md) 并按照其中一个较新的教程操作。
 
-利用Microsoft Teams Toolkit，你可以直接在 (内为选项卡) 创建单一登录 Visual Studio Code。 该工具包将指导你完成该过程，并提供你所需的一切，包括在 Azure 门户Microsoft 标识平台你的应用注册。
+利用Microsoft Teams Toolkit，你可以直接在 Visual Studio Code 内为选项卡 (SSO) 创建单一登录Visual Studio Code。 该工具包将指导你完成此过程，并提供你所需的一切，包括Microsoft 标识平台 Azure 门户中的注册。
 
 ## <a name="get-started--create-a-project"></a>入门 — 创建项目
 
@@ -46,7 +46,7 @@ ms.locfileid: "57707405"
 1. 从 **文件夹选择 npm** `api-server` 安装。 然后 **npm 启动**。
 1. 从 **文件夹选择 npm** `.src` 安装。 然后 **npm 启动**。
 1. 如果你使用的是像 [ngrok](https://ngrok.com/)这样的隧道服务，请运行它并确保 URL 与你在项目创建向导中输入的内容相匹配。 如果没有，则需要在 Azure 中创建的应用注册中更新 _API URI_ 和重定向 URL。 
-1. 导航到"活动"窗口左侧的活动Visual Studio Code栏。
+1. 导航到"活动栏"窗口左侧Visual Studio Code栏。
 1. 选择" **运行** "图标以显示 **"运行和调试"** 视图。
 1. 您还可以使用键盘快捷方式 **Ctrl+Shift+D**。
 

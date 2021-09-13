@@ -3,19 +3,19 @@ title: 将 Teams 选项卡添加到 SharePoint
 author: surbhigupta
 description: 如何将现有"Teams"选项卡SharePoint Web SharePoint 框架部件。
 keywords: teams 选项卡 sharepoint 框架开发
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8410b0734845e6bc6a79fa58a3ee5c89228ef927ee111cdfa10285daff4c062f
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6561164f177277e76b80e3c33ee57b9383bbd527
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704509"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155647"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>将 Teams 选项卡添加到 SharePoint 
 
-通过将 Microsoft Teams 中的 Microsoft Teams 选项卡添加为 SharePoint Web 部件，Microsoft Teams和 SharePoint 之间SPFx丰富的集成体验。 本文档指导您如何从示例应用中Microsoft Teams选项卡，以及如何在 SharePoint。 
+通过将 Microsoft Teams 选项卡添加为 SharePoint Web 部件，Microsoft Teams和 SharePoint 之间SPFx丰富的集成体验。 本文档指导您如何从示例应用中Microsoft Teams选项卡，以及如何在 SharePoint。 
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>Teams 和 SharePoint
 
@@ -34,7 +34,7 @@ ms.locfileid: "57704509"
                     </div>
                     <div class="cardText">
                         <h3>Teams选项卡在SharePoint</h3>
-                        <p>在本文SharePoint将你的 Teams 应用引入SharePoint (丰富的应用) 。</p>
+                        <p>通过将你的 Teams 应用引入 SharePoint，在 SharePoint (中) 。</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@ ms.locfileid: "57704509"
 
 ### <a name="teams-tabs-in-sharepoint"></a>Teams选项卡SharePoint
 
-使用 SharePoint 框架 v.1.7，可以在 SharePoint 中托管Teams选项卡。 作为托管在 SharePoint的选项卡获得类似的完整页面体验，公开 Teams 选项卡的所有功能，同时保留 SharePoint 网站的上下文和熟悉度。
+使用 SharePoint 框架 v.1.7，可以在 Teams 中托管SharePoint。 作为托管在 SharePoint的选项卡获得类似的完整页面体验，公开 Teams 选项卡的所有功能，同时保留 SharePoint 网站的上下文和熟悉度。
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint 框架Teams
 
@@ -78,14 +78,14 @@ ms.locfileid: "57704509"
 
 ### <a name="benefits-of-this-approach"></a>此方法的好处
 
-* 使用SharePoint选项卡联系Teams用户。
-* Upload将应用程序清单直接SharePoint应用程序目录。 [Teams应用程序包](~/concepts/build-and-test/apps-package.md)现在受 SharePoint。
+* 使用SharePoint"选项卡联系Teams用户。
+* Upload应用程序清单直接SharePoint应用程序目录。 [Teams应用程序包](~/concepts/build-and-test/apps-package.md)现在受 SharePoint。
 * 用户配置页面上的选项卡，就像任何其他 web SharePoint一样。
 * 当在选项卡内部[运行时](~/tabs/how-to/access-teams-context.md)，选项卡可以访问其Teams。
 
 **将Teams选项卡添加到SharePoint**
 
-执行以下步骤以将"Teams"选项卡SharePoint：
+执行以下步骤以将"Teams"选项卡添加到SharePoint：
 
 ## <a name="1-test-the-sample-app"></a>1. 测试示例应用程序
 
@@ -101,12 +101,12 @@ ms.locfileid: "57704509"
  
     ![Azure 中的 TalentMgmt](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
-1. 你可以看到人才管理应用的安装或许可屏幕。 选择要安装的团队。 
+1. 你可以查看人才管理应用的安装或许可屏幕。 选择要安装的团队。 
 1. 选择 **安装** 并开始对应用进行试验。
 
 ## <a name="2-use-teams-tab-in-sharepoint"></a>2. 使用Teams中的"SharePoint
 
-1. Upload 访问 ，Teams应用程序包SharePoint应用程序目录 `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` 。 例如，`https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`。
+1. Upload访问 ，将Teams应用程序包部署到SharePoint应用程序目录 `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` 。 例如，`https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`。
 
 1. 当系统提示时，启用 **"使此解决方案对组织的所有网站都可用"。**
 下图显示了相应的屏幕：
@@ -118,9 +118,9 @@ ms.locfileid: "57704509"
 
    ![Sharepoint 视图](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-1. You can see the SharePoint pages authoring experience. 将页面名称为 **"我的Teams选项卡"。**
+1. You can see the SharePoint pages authoring experience. 将页面名称为 **My Teams Tab**。
 
-1. 通过选择该按钮打开 Web 部件工具箱，然后选择Teams `+` 选项卡，名为 **Contoso HR**。 Web 部件按字母顺序排序。 如果是长列表，可以使用搜索栏来查找它。 这将在画布上创建一个 Web 部件，其中包含Teams选项卡。下图显示了选项卡视图：
+1. 通过选择按钮打开 Web 部件工具箱，然后选择"Teams `+` 选项卡，名为 **"Contoso HR"。** Web 部件按字母顺序排序。 如果是长列表，可以使用搜索栏来查找它。 这将在画布上创建一个 Web 部件，其中包含Teams选项卡。下图显示了选项卡视图：
 
    ![选项卡视图](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
@@ -130,7 +130,7 @@ ms.locfileid: "57704509"
 
    ![Sharepoint 图像中的选项卡](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
-## <a name="3-explore-app-pages-in-sharepoint"></a>3. 在应用程序中浏览SharePoint
+## <a name="3-explore-app-pages-in-sharepoint"></a>3. 浏览应用程序中SharePoint
 
 发布页面后，你可以探索将Teams[应用转换为更完整的](/sharepoint/dev/spfx/web-parts/single-part-app-pages)SharePoint。 这会将当前页面转换为"应用页面"，以"SharePoint"选项卡的完整页面体验显示正常页面Teams布局。 
 
@@ -139,7 +139,7 @@ ms.locfileid: "57704509"
 ## <a name="code-sample"></a>代码示例
 | **示例名称** | **说明** | **SPFx** |
 |-----------------|-----------------|----------|
-| SPFx Web 部件 | SPFx、通道和组的 Web 部件示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
+| SPFx Web 部件 | SPFx选项卡、通道和组的 Web 部件示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
 
 ## <a name="see-also"></a>另请参阅
 

@@ -3,14 +3,14 @@ title: 对话中支持的文本格式
 description: 介绍自动程序对话中的文本格式支持
 keywords: 机器人对话消息传送
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: dfb91e18a2ad895ae5b48c905046a22449304fc6
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 466b2383230ce0cf8086ba4a3dd45a5488ed24b2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566745"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155286"
 ---
 # <a name="formatting-bot-messages"></a>设置机器人消息的格式
 
@@ -20,7 +20,7 @@ ms.locfileid: "52566745"
 
 Microsoft Teams支持以下格式选项：
 
-| TextFormat 值 | 描述 |
+| TextFormat 值 | 说明 |
 | --- | --- |
 | plain | 文本应视为原始文本，而未应用任何格式。 |
 | markdown | 文本应视为 Markdown 格式，并在适当时呈现在频道上;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容。 |
@@ -34,7 +34,7 @@ Microsoft Teams一部分 Markdown 和 XML (HTML) 格式标记。
 
 * 纯文本邮件不支持表格式设置
 
-有关卡片格式的信息，请参阅Teams[卡片参考。](~/task-modules-and-cards/cards/cards-reference.md)
+有关卡片格式的信息，请参阅Teams[卡片参考](~/task-modules-and-cards/cards/cards-reference.md)。
 
 ### <a name="cross-platform-support"></a>跨平台支持
 

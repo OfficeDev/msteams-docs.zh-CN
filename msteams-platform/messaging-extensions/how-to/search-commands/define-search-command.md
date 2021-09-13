@@ -4,12 +4,13 @@ author: surbhigupta
 description: 为应用程序定义消息传递扩展Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6333840e6817761911b2b5acd4b53849448b5b68
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.localizationpriority: none
+ms.openlocfilehash: 88153523db6bd3f4957d03a0603e3b4cbdd02266
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068914"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155879"
 ---
 # <a name="define-messaging-extension-search-commands"></a>定义消息传递扩展搜索命令
 
@@ -79,7 +80,7 @@ ms.locfileid: "53068914"
 | `title` | 此属性是命令名称。 此值显示在用户界面用户界面 (UI) 。 | 是 | 1.0 |
 | `description` | 此属性是一个帮助文本，用于指示此命令执行哪些操作。 此值显示在 UI 中。 | 是 | 1.0 |
 | `type` | 此属性必须为 `query` 。 | 否 | 1.4 |
-|`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
+|`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 不支持 | 1.0 |
 | `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
 您必须添加搜索参数的详细信息，该参数定义您的用户在 Teams 客户端中可见的文本。
@@ -94,7 +95,7 @@ ms.locfileid: "53068914"
 
 #### <a name="example"></a>示例
 
-以下部分是定义搜索命令的对象的简单应用 `composeExtensions` 清单的示例： 
+以下部分是定义搜索命令的对象的简单 `composeExtensions` 应用清单的示例： 
 
 ```json
 {

@@ -2,18 +2,18 @@
 title: 为应用配置默认安装选项
 description: 介绍如何指定应用的默认安装选项。
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: e4568b0d562226dec955b3a0d843d1358132bd8bc270ae004a35218e26c35ef6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 48f12faca9d8f67ec78e08736f16f8ad5a43dcd2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708069"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155951"
 ---
 # <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>配置应用的默认安装Microsoft Teams选项
 
-应用通常支持 Teams 中的多个方案，但你在设计时可能记住了特定的范围和功能。 例如，如果你的应用主要用于团队或频道，你可以确保用户在应用商店中看到的第一个安装选项是添加到 **团队**。
+应用通常支持应用中的多个Teams，但你在设计时可能记住了特定的范围和功能。 例如，如果你的应用主要用于团队或频道，你可以确保用户在应用商店中看到的首个安装选项是添加到 **团队**。
 
 :::row:::
    :::column span="2":::
@@ -25,7 +25,7 @@ ms.locfileid: "57708069"
    :::column-end:::
 :::row-end:::
 
-如果你的应用的主要功能是自动程序，则还可以在用户将应用安装到团队时使机器人成为默认功能。
+如果你的应用的主要功能是自动程序，还可以在用户将应用安装到团队时使机器人成为默认功能。
 
 ## <a name="configure-your-apps-default-install-scope"></a>配置应用的默认安装作用域
 
@@ -34,7 +34,7 @@ ms.locfileid: "57708069"
 **在应用清单中配置默认安装作用域**
 
 1. 打开应用清单并添加 `defaultInstallScope` 属性。
-2. 将默认安装范围值设置为 `personal` `team` `groupchat` 、、、 或 `meetings` 。
+2. 将默认安装范围值设置为 、 `personal` `team` `groupchat` 或 `meetings` 。
 
     ```json
     "defaultInstallScope": "meetings",

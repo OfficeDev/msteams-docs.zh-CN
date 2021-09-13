@@ -3,18 +3,18 @@ title: 设置你的智能机器人邮件格式
 author: surbhigupta
 description: 向自动程序消息添加丰富的格式
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: fba55b6b08785d375f80923133d3af70434cbaf57adf8feaf4e9f50f478f5e61
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1c5c4fc9190712e042398882ae95d31673fc0f37
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705599"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155683"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
-邮件格式使您能够在自动程序消息中获得最佳效果。 您可以设置自动程序消息的格式，以包含包含交互式元素（如按钮、文本、图像、音频、视频等）的附件的富卡片。
+邮件格式使您能够在自动程序消息中获得最佳效果。 你可以设置自动程序消息的格式，以包含包含交互式元素（如按钮、文本、图像、音频、视频等）的附件的富卡片。
 
 ## <a name="format-text-content"></a>设置文本内容的格式
 
@@ -36,17 +36,17 @@ Teams markdown 和 XML 或 HTML 格式标记的子集。
 * 格式卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。
 * 富卡片不支持 markdown 或表格格式。
 
-设置文本内容格式后，请确保您的格式设置适用于所有受 Microsoft Teams。
+设置文本内容的格式后，请确保格式设置适用于所有受文本Microsoft Teams。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
-某些样式当前并非在所有平台上都受支持。 下表提供了样式列表，以及纯文本消息和格式卡片支持哪些样式：
+某些样式当前并非在所有平台上都受支持。 下表提供了一个样式列表，其中哪些样式在纯文本邮件和富卡片中受支持：
 
 | 样式                     | 纯文本邮件 | 富卡片 - 仅 XML |
 | ---                       | :---: | :---: |
 | 粗体                      | ✔ | ✖ |
 | 斜体                    | ✔ | ✔ |
-| 页眉 (级别 1 &ndash; 3)  | ✖ | ✔ |
+| 标题 (级别 1 &ndash; 3)  | ✖ | ✔ |
 | 删除线             | ✖ | ✔ |
 | 水平规则           | ✖ | ✖ |
 | 未排序列表            | ✖ | ✔ |
@@ -70,7 +70,7 @@ Teams markdown 和 XML 或 HTML 格式标记的子集。
 | ---                       | :---: | :---: | :---: |
 | 粗体                      | ✔ | ✔ | ✔ |
 | 斜体                    | ✔ | ✔ | ✔ |
-| 页眉 (级别 1 &ndash; 3)  | ✖ | ✖ | ✖ |
+| 标题 (级别 1 &ndash; 3)  | ✖ | ✖ | ✖ |
 | 删除线             | ✔ | ✔ | ✖ |
 | 水平规则           | ✖ | ✖ | ✖ |
 | 未排序列表            | ✔ | ✖ | ✖ |

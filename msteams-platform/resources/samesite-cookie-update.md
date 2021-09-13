@@ -4,14 +4,14 @@ author: laujan
 description: 描述 SameSite Cookie 的属性
 keywords: cookie 属性 samesite
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708334"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155929"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite cookie 属性 
 
@@ -25,7 +25,7 @@ Cookie 类型及其相应的范围如下所示：
 | ------ | ------ |
 |第一方 Cookie|第一方 Cookie 由用户访问的网站创建。 它用于保存数据（如购物车项目）和登录凭据。 例如，身份验证 Cookie 和其他分析。|
 |第二方 Cookie|从技术上说，第二方 Cookie 和第一方 Cookie 相同。 区别在于，通过数据合作关系协议与第二方共享数据。 例如[，Microsoft Teams分析和报告](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)。 |
-|第三方 Cookie|第三方 Cookie 由用户显式访问的域外的其他域安装，主要用于跟踪。 例如 **，"喜欢** "按钮、广告投放和实时聊天。|
+|第三方 Cookie|第三方 Cookie 由用户显式访问的域外的其他域安装，主要用于跟踪。 例如 **，"喜欢** "按钮、广告服务以及实时聊天。|
 
 ## <a name="cookies-and-http-requests"></a>Cookie 和 HTTP 请求
 
@@ -35,7 +35,7 @@ Cookie 类型及其相应的范围如下所示：
 
 Google Chrome 版本 51 引入了 `SetCookie SameSite` 规范作为可选属性。 从内部版本 17672 开始，Windows 10为浏览器引入了 SameSite [cookie Microsoft Edge支持](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)。
 
-你可以选择不向标头添加 SameSite Cookie 属性，或者使用两个设置之一 `SetCookie` **Lax** 和 **Strict** 添加它。 未启用的 SameSite 属性被视为默认状态。
+你可以选择不向标头添加 SameSite cookie 属性，或者使用两个设置之一 `SetCookie` **Lax** 和 **Strict** 添加它。 未启用的 SameSite 属性被视为默认状态。
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite Cookie 属性：2020 版本
 
@@ -43,15 +43,15 @@ Chrome 80 于 2020 年 2 月发布，引入了新的 Cookie 值，并默认实�
  
 SameSite Cookie 属性如下所示：
 
-|设置 | 强制 | 值 |属性规范 |
+|Setting | 强制 | 值 |属性规范 |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Cookie 仅在第一 **方上下文中和** HTTP GET 请求中自动发送。 SameSite Cookie 在跨网站子请求（如调用加载图像或 iframe）上被保留。 当用户从外部网站导航到 URL 时发送，例如，通过以下链接发送。| **默认** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Lax**  | Cookie 仅在第一 **方上下文中和** HTTP GET 请求中自动发送。 SameSite Cookie 在跨站点子请求（例如，对加载图像或 iframe 的调用）上被预扣。 当用户从外部网站导航到 URL 时发送，例如，通过以下链接发送。| **默认** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |浏览器仅发送第一方上下文请求的 Cookie。 这些是来自设置 Cookie 的网站的请求。 如果请求的 URL 与当前位置的 URL 不同，则不发送任何用 属性标记的 `Strict` Cookie。| 可选 |`Set-Cookie: key=value; SameSite=Strict`|
 | **无** | Cookie 在第一方上下文和跨源请求中发送;但是，该值必须显式设置为 ，并且所有浏览器请求都必须遵循 HTTPS 协议并包括需要加密连接 **`None`**  **`Secure`** 的属性。 不满足该要求的 Cookie 将 **被拒绝**。 <br/>**这两个属性是必需项**。 如果未指定 HTTPS 协议或未指定 HTTPS 协议，则拒绝第  **`None`** **`Secure`**  三方 Cookie。| 可选，但如果已设置，则 HTTPS 协议是必需的。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teams含义和调整
 
-1. 为 Cookie 启用相关的 SameSite 设置，并验证应用和扩展是否继续在 Teams。
+1. 为 Cookie 启用相关的 SameSite 设置，并验证您的应用程序和扩展是否继续在 Teams。
 1. 如果你的应用或扩展失败，在 Chrome 80 版本之前进行必要的修复。
 1. Microsoft 内部合作伙伴可以加入以下团队，获取此问题详细信息或帮助 <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47> ：。
 
@@ -78,7 +78,7 @@ SameSite Cookie 属性如下所示：
 
 ## <a name="android-system-webview"></a>Android System WebView
 
-Android WebView 是允许 Android 应用显示 Web 内容的 Chrome 系统组件。 虽然新限制是默认限制，但从 Chrome 80 开始，不会立即在 WebView 上强制执行这些限制。 将来将应用这些策略。 为了做好准备，Android 允许本机应用直接通过[CookieManager API 设置 Cookie。](https://developer.android.com/reference/android/webkit/CookieManager)
+Android WebView 是允许 Android 应用显示 Web 内容的 Chrome 系统组件。 虽然新限制是默认限制，但从 Chrome 80 开始，不会立即在 WebView 上强制执行这些限制。 将来将应用这些策略。 为进行准备，Android 允许本机应用直接通过[CookieManager API 设置 Cookie。](https://developer.android.com/reference/android/webkit/CookieManager)
 
 > [!NOTE]     
 > * 必须在适当时将第一方 `SameSite=Lax` Cookie 声明为 或 `SameSite=Strict` 。      

@@ -1,19 +1,19 @@
 ---
 title: 卡片类型
 description: 介绍自动程序可用的所有卡片和Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 4c386b3e237f89345bf94bc8cfa23d7e46477de21da0e7a99eb63663b19446af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705481"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155973"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
-自动程序支持自适应、Office 365、列表、Office 365 连接器、收据、登录以及缩略图卡和卡片Microsoft Teams。 它们基于 Bot Framework 定义的卡，Teams不支持所有 Bot Framework 卡，并添加了一些自己的卡。
+自适应、hero、list、Office 365 连接器、收据、登录以及缩略图卡和卡片集合在自动程序中Microsoft Teams。 它们基于 Bot Framework 定义的卡，Teams不支持所有 Bot Framework 卡，并且已添加了一些自己的卡。
 
 确定不同的卡片类型之前，请了解如何创建 Hero 卡片、缩略图卡片或自适应卡片。
 
@@ -28,7 +28,7 @@ ms.locfileid: "57705481"
 
     ![Hero card details](~/assets/images/Cards/Herocarddetails.png)
 
-1. 选择 **"向我发送此卡"。** 该卡片作为聊天消息发送给您。
+1. 选择 **"将此卡发送给我"。** 该卡片作为聊天消息发送给您。
 
 ## <a name="card-examples"></a>卡片示例
 
@@ -70,7 +70,7 @@ ms.locfileid: "57705481"
 | 登录卡 | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
 
 > [!NOTE]
-> 对于传入 Webhook 中的自适应卡片，完全支持除 以外的所有本机自适应 `Action.Submit` 卡片架构元素。 支持的操作包括 Action.OpenURL、Action.ShowCard、Action.ToggleVisibility [**和Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。 [](https://adaptivecards.io/explorer/Action.OpenUrl.html) [](https://adaptivecards.io/explorer/Action.ShowCard.html) [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
+> 对于传入 Webhook 中的自适应卡片，完全支持除 以外的所有本机自适应 `Action.Submit` 卡片架构元素。 支持的操作包括 Action.OpenURL、Action.ShowCard、Action.ToggleVisibility 和 [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。 [](https://adaptivecards.io/explorer/Action.OpenUrl.html) [](https://adaptivecards.io/explorer/Action.ShowCard.html) [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
 
 ## <a name="common-properties-for-all-cards"></a>所有卡片的常见属性
 
@@ -271,7 +271,7 @@ Bot Framework 参考：
 * [自适应卡片节点](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [自适应卡片 C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
-你现在可以使用一张 hero card，这是一种用于直观突出显示潜在用户选择的多用途卡片。
+你现在可以使用一张 Hero 卡片，这是一种用于直观突出显示潜在用户选择的多用途卡片。
 
 ## <a name="hero-card"></a>Hero card
 
@@ -281,7 +281,7 @@ Bot Framework 参考：
 
 下表提供了支持人物卡片的功能：
 
-| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -348,7 +348,7 @@ Bot Framework 参考：
 
 下表提供了支持列表卡片的功能：
 
-| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -359,7 +359,7 @@ Bot Framework 参考：
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
 | title | 格式文本  | 卡片的标题。 最多 2 行。|
-| 项目 | 列表项数组 | 适用于卡片的项目集。|
+| items | 列表项数组 | 适用于卡片的项目集。|
 | 按钮 | 操作对象数组 | 适用于当前卡片的操作集。 最大值 6。 |
 
 ### <a name="example-of-a-list-card"></a>列表卡片示例
@@ -420,7 +420,7 @@ Bot Framework 参考：
 
 ## <a name="office-365-connector-card"></a>Office 365连接器卡
 
-可以使用提供灵活布局的 Office 365 连接器卡，这是获取有用信息的一种很好的方法。 自动Office 365支持自动Teams，而不是 Bot Framework。 此卡片提供具有多个分区、字段、图像和操作的灵活性布局。 此卡包含连接器卡，以便机器人可以使用它。 有关连接器卡和连接器Office 365卡之间的差异，请参阅连接器Office 365[卡上的其他信息](#additional-information-on-the-office-365-connector-card)。
+可以使用一个Office 365连接器卡，该卡提供灵活的布局，是获取有用信息的一种好方法。 自动Office 365支持自动Teams，而不是 Bot Framework。 此卡片提供具有多个分区、字段、图像和操作的灵活性布局。 此卡包含连接器卡，以便机器人可以使用它。 有关连接器卡与 Office 365 连接器卡之间的差异，请参阅连接器Office 365[卡的其他信息](#additional-information-on-the-office-365-connector-card)。
 
 ### <a name="support-for-office-365-connector-cards"></a>支持 Office 365 连接器卡
 
@@ -443,11 +443,11 @@ Bot Framework 参考：
 
 ### <a name="additional-information-on-the-office-365-connector-card"></a>连接器卡上Office 365信息
 
-Office 365连接器卡在连接器Microsoft Teams，包括[ `ActionCard` 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
+Office 365连接器卡在连接器中Microsoft Teams，包括[ `ActionCard` 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
 
 在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。 下表列出了区别：
 
-| 连接器 | Bot |
+| Connector | Bot |
 | --- | --- |
 | 终结点通过 HTTP POST 接收卡有效负载。 | `HttpPOST`该操作将触发 `invoke` 仅向自动程序发送操作 ID 和正文的活动。|
 
@@ -477,7 +477,7 @@ Office 365连接器卡在连接器Microsoft Teams，包括[ `ActionCard` 操作]
 
 ### <a name="example-of-an-office-365-connector-card"></a>连接器Office 365示例
 
-以下代码显示了连接器Office 365示例：
+以下代码显示连接器Office 365示例：
 
 ```json
 {
@@ -548,7 +548,7 @@ Teams支持收据卡。 它是使机器人能够为用户提供收据的卡片�
 
 下表提供了支持收据卡的功能：
 
-| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -614,15 +614,15 @@ Bot Framework 参考：
 
 ## <a name="signin-card"></a>登录卡
 
-自动Teams中的登录卡类似于 Bot 框架中的登录卡，只不过 Teams 中的登录卡仅支持两个 `signin` 操作 `openUrl` 和 。
+自动Teams中的登录卡与 Bot 框架中的登录卡类似，只不过 Teams 中的登录卡仅支持两个 `signin` 操作 `openUrl` 和 。
 
-登录操作可以从登录卡Teams，而不只是从登录卡使用。 有关详细信息，请参阅自动[Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
+The signin action can be used from any card in Teams， not just the signin card. 有关详细信息，请参阅自动[Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
 
 ### <a name="support-for-signin-cards"></a>支持登录卡
 
 下表提供了支持登录卡的功能：
 
-| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -641,7 +641,7 @@ Bot Framework 参考：
 
 下表提供了支持缩略图卡的功能：
 
-| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -714,7 +714,7 @@ Bot Framework 参考：
 
 ## <a name="card-collections"></a>卡片集合
 
-可以使用包括木马和列表集合的卡片集合。 Teams支持卡片集合。 卡片集合包括 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 和 。 这些集合包含自适应、hero 或缩略图卡片。
+可以使用包括木马和列表集合的卡片集合。 Teams卡片集合。 卡片集合包括 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 和 。 这些集合包含自适应、hero 或缩略图卡片。
 
 ### <a name="carousel-collection"></a>Carousel 集合
 
@@ -724,7 +724,7 @@ Bot Framework 参考：
 
 下表提供了支持盘车集合的功能：
 
-| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -739,7 +739,7 @@ Bot Framework 参考：
 
 ![卡片的盘点示例](~/assets/images/cards/carousel.png)
 
-以下代码显示了一个盘车集合示例：
+以下代码显示了一个可进行盘车操作的集合示例：
 
 ```json
 {

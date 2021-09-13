@@ -2,15 +2,15 @@
 title: 在本地调试呼叫和会议机器人
 description: 了解如何使用 ngrok 在本地电脑上开发呼叫和联机会议机器人。
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 本地开发 ngrok 隧道
 ms.date: 11/18/2018
-ms.openlocfilehash: c38fe4aa04b359dca19c48add1b1a0a52e83ec46c4cb942788671820d29bb9a7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f09457e920a08b1f56973c349209dc07fc539db3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706398"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155380"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>在本地电脑上开发通话和联机会议机器人
 
@@ -22,13 +22,13 @@ ms.locfileid: "57706398"
 
 转到 [ngrok](https://ngrok.com) 并注册免费帐户或登录到现有帐户。 登录后，转到 [仪表板并获取](https://dashboard.ngrok.com) 身份验证令牌。
 
-创建 ngrok 配置文件 `ngrok.yml` 并添加以下行。 有关文件可以位于的位置详细信息，请参阅 [ngrok](https://ngrok.com/docs#config)：
+创建 ngrok 配置文件 `ngrok.yml` 并添加以下行。 有关文件可位于的位置详细信息，请参阅 [ngrok](https://ngrok.com/docs#config)：
 
   `authtoken: <Your-AuthToken>`
 
 ## <a name="set-up-signaling"></a>设置信号
 
-在 [通话和联机会议机器人](./calls-meetings-bots-overview.md)中，我们讨论了呼叫信号，关于机器人如何在呼叫期间检测和响应新呼叫和事件。 呼叫信号事件通过 HTTP POST 发送到机器人的呼叫终结点。
+在 [通话和联机会议机器人](./calls-meetings-bots-overview.md)中，我们讨论了机器人如何在通话过程中检测和响应新呼叫和事件的呼叫信号。 呼叫信号事件通过 HTTP POST 发送到机器人的呼叫终结点。
 
 与机器人的消息 API 一样，对于实时媒体平台与机器人通信，必须通过 Internet 访问机器人。 Ngrok 使这一点变得简单。 将以下行添加到 ngrok.yml：
 
@@ -42,7 +42,7 @@ tunnels:
 ## <a name="set-up-local-media"></a>设置本地媒体
 
 > [!NOTE]
-> 只有应用程序托管的媒体机器人才需要此部分，并且如果你自己不托管媒体，可以跳过此部分。
+> 只有应用程序托管的媒体机器人才需要此部分，如果你自己不托管媒体，可以跳过此部分。
 
 应用程序托管的媒体使用证书和 TCP 隧道。 需要执行以下步骤：
 
@@ -86,7 +86,7 @@ statefulClientBuilder.SetNotificationUrl(
 ```
 
 > [!NOTE]
-> 将 signal 替换为 ngrok 提供的 信号，将 替换为接收 `NotificationEndpoint` 通知的控制器路径。
+> 将 signal 替换为 ngrok 提供的 ，将 替换为接收 `NotificationEndpoint` 通知的控制器路径。
 
 > [!IMPORTANT]
 > * 中的 URL `SetNotificationUrl` 必须为 HTTPS。

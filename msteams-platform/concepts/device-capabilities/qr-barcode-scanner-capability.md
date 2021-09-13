@@ -3,15 +3,15 @@ title: 集成 QR 或条码扫描仪功能
 author: Rajeshwari-v
 description: 如何使用 JavaScript Teams SDK 利用 QR 或条形码扫描仪功能
 keywords: 相机媒体 qr 代码 qrcode 条形码条形码扫描仪扫描功能本机设备权限
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 02332ad1f0805bfc4972333086e48552761a48a8
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 470360fcc489248806d746587344c7a19c91145c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345253"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155808"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>集成 QR 或条码扫描仪功能 
 
@@ -27,14 +27,14 @@ ms.locfileid: "58345253"
 * 使用此功能，用户只需在扫描仪 UI 中心的框架内对齐 QR 或条形码，代码将自动扫描。 存储的数据将重新与调用 Web 应用共享。 这样可以避免手动输入冗长的产品代码或其他相关信息带来的不便和人为错误。
 
 若要集成 QR 或条形码扫描仪功能，必须更新应用清单文件并调用 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API。 为了进行有效的集成，你必须深入了解用于调用[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API 的代码段，这允许你使用本机 QR 或条形码扫描仪功能。 [](#code-snippet) API 为不支持的条形码标准提供错误。
-熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
+熟悉 API 响应错误以处理应用[](#error-handling)或应用中的错误Teams很重要。
 
 > [!NOTE] 
 > 目前，Microsoft Teams QR 或条形码扫描仪功能的支持仅适用于移动客户端。
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新文件 `devicePermissions` 上的应用。 `media` 它允许你的应用在用户开始使用 QR 或条形码扫描仪功能之前向用户请求必要的权限。 应用清单的更新如下所示：
+通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在文件上的 `devicePermissions` 应用 `media` 。 它允许你的应用在用户开始使用 QR 或条形码扫描仪功能之前向用户请求必要的权限。 应用清单的更新如下所示：
 
 ``` json
 "devicePermissions": [
@@ -43,7 +43,7 @@ ms.locfileid: "58345253"
 ```
 
 > [!NOTE]
-> 启动 **相关 API** 时，将自动显示Teams权限提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。
+> 启动 **相关应用程序** API 时，将自动显示Teams权限提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。
 
 ## <a name="scanbarcode-api"></a>ScanBarCode API
 
@@ -74,9 +74,9 @@ ms.locfileid: "58345253"
 
 ## <a name="error-handling"></a>错误处理
 
-必须确保在应用应用中正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
+必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
-|错误代码 |  错误名称     | 条件|
+|错误代码 |  错误名称     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **500** | INTERNAL_ERROR | 执行所需操作时遇到内部错误。|

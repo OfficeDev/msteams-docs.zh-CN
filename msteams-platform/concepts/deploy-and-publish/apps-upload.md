@@ -4,14 +4,15 @@ description: 了解如何在应用中旁加载Microsoft Teams。 在开发期间
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 93df0d92ce6912888dd1932be3295ca92fa5a967
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 7648f0f4ae1a3a89e051bea45249855c41befd9d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345260"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155361"
 ---
-# <a name="upload-your-app-in-microsoft-teams"></a>Upload应用中Microsoft Teams
+# <a name="upload-your-app-in-microsoft-teams"></a>Upload应用Microsoft Teams
 
 你可以旁加载Microsoft Teams应用，而无需发布到你的组织或Teams应用商店。 在下列情况下，这是有意义的：
 
@@ -32,7 +33,7 @@ ms.locfileid: "58345260"
 
 你可以将应用旁加载至团队、聊天、会议或个人使用，具体取决于你配置应用的范围。
 
-1. 使用你的 Teams 开发帐户 登录到[Microsoft 365 客户端](~/build-your-first-app/build-and-run.md#prerequisites)。
+1. 使用你的 Teams 开发帐户[登录到 Microsoft 365 客户端](~/build-your-first-app/build-and-run.md#prerequisites)。
 1. 选择 **"应用****"，Upload自定义应用"。**
 1. 选择应用包.zip文件。 将显示安装对话框。
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
@@ -48,18 +49,18 @@ ms.locfileid: "58345260"
 
 ## <a name="access-your-app"></a>访问应用
 
-Teams提供了几种打开应用的方法。 有关详细信息，请参阅访问[Teams 中的应用程序](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)。
+Teams提供了多种打开应用的方法。 有关详细信息，请参阅在应用中[Teams。](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)
 
 ## <a name="update-your-app"></a>更新应用
 
-如果你对代码进行更改，则不必再次旁加载你的应用 (这些更改会Teams实时) 。 但是，如果更改任何应用配置，则必须重新安装。
+如果你更改了代码，则不必再次旁加载你的应用 (这些更改Teams实时) 。 但是，如果更改任何应用配置，则必须重新安装。
 
 ## <a name="remove-your-app"></a>删除应用
 
-若要删除你的应用，请右键单击应用中Teams **并选择卸载。**
+若要删除你的应用，请右键单击应用中的应用Teams **并选择卸载。**
 
 > [!NOTE]
-> 你无法完全删除个人自动程序活动。 如果删除应用并再次添加它，则与机器人的新通信将附加到上一次与该应用的对话中。
+> 你无法完全删除个人自动程序活动。 如果删除应用并再次添加它，则与机器人的新通信将附加到其上一次对话中。
 
 ## <a name="next-step"></a>后续步骤
 

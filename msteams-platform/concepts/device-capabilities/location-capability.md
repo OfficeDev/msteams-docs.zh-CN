@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: 如何使用 JavaScript Teams SDK 利用位置功能
 keywords: 位置地图功能本机设备权限
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: ac3227d963baea6f55da81596f2003fd865f32b1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345653"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155985"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能 
 
@@ -21,7 +21,7 @@ ms.locfileid: "58345653"
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>集成位置功能的优点
 
-在 Teams 应用中集成位置功能的主要优点是，它允许 Teams 平台上的 Web 应用开发人员利用 Microsoft Teams JavaScript 客户端 SDK 的位置功能。 
+在 Teams 应用中集成位置功能的主要优点是，它允许 Teams 平台上的 Web 应用开发人员通过 Microsoft Teams JavaScript 客户端 SDK 利用位置功能。 
 
 以下示例显示如何在不同方案中使用位置功能的集成：
 * 在工厂中，主管可以跟踪工作者的出席情况，让他们在工厂附近自家，并通过指定的应用共享它。 位置数据也会与图像一起捕获和发送。
@@ -34,7 +34,7 @@ ms.locfileid: "58345653"
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在 `devicePermissions` 文件上的应用 `geolocation` 。 它允许你的应用在开始使用位置功能之前向用户请求必要的权限。 应用清单的更新如下所示：
+通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在文件上的 `devicePermissions` 应用 `geolocation` 。 它允许你的应用在开始使用位置功能之前向用户请求必要的权限。 应用清单的更新如下所示：
 
 ``` json
 "devicePermissions": [
@@ -91,9 +91,9 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="error-handling"></a>错误处理
 
-必须确保在应用应用中正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
+必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
-|错误代码 |  错误名称     | 条件|
+|错误代码 |  错误名称     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **500** | INTERNAL_ERROR | 执行所需操作时遇到内部错误。|
@@ -104,6 +104,6 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="see-also"></a>另请参阅
 
-* [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
+* [集成媒体中的媒体Teams](mobile-camera-image-permissions.md)
 * [将 QR 代码或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
 * [将人员选取器集成到Teams](people-picker-capability.md)

@@ -1,17 +1,17 @@
 ---
-title: 使用 Microsoft Graph将外部平台消息导入Teams
-description: 介绍如何使用 Microsoft Graph将邮件从外部平台导入到Teams
-localization_priority: Normal
+title: 使用 Microsoft Graph将外部平台消息导入到Teams
+description: 介绍如何使用 Microsoft Graph将邮件从外部平台导入Teams
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams 导入消息 api 图形 Microsoft 迁移迁移帖子
-ms.openlocfilehash: 17e68db9803e00d3dfb8743ba3b371753508fb5a3471317c25d7a42c8027c248
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704401"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155984"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
@@ -107,7 +107,7 @@ Content-Location: /teams/{team-id}
 |-|-|-|-|-|-|
 |`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建和管理资源以迁移到Microsoft Teams。|**仅应用程序**|**是**|`POST /teams`|
 
-#### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态创建) 
+#### <a name="request-create-a-channel-in-migration-state"></a>请求 (迁移状态策略创建) 
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
@@ -327,7 +327,7 @@ HTTP/1.1 204 NoContent
 
 可以使用以下 UI 将成员添加到团队[Teams](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) Microsoft Graph[添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)API：
 
-#### <a name="request-add-member"></a>请求 (添加成员) 
+#### <a name="request-add-member"></a>请求 (成员) 
 
 ```http
 POST https://graph.microsoft.com/beta/teams/{team-id}/members

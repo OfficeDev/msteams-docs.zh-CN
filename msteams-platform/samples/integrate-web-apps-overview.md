@@ -4,17 +4,18 @@ author: Rajeshwari-v
 description: 将 Web 应用程序和设备功能与应用集成Microsoft Teams概述。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: dd9498fe60d4e97b41072b78b5134f2fbc3af174
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 83252b1f93b0c148bafaea4a911ea758e0ec9c14
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345765"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155907"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
 通过将现有 Web 应用程序的功能集成到新平台，可以提供丰富的Microsoft Teams体验。 确保遵循[Teams设计指南](~/concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。
-本文档概述了将 Web 应用程序与 Teams 集成的先决条件、用于创建 Power 应用、Power Virtual Agents、虚拟助理、应用模板、Shift 连接器、用户 LMS、为网站创建"共享到 Teams"按钮、在 SharePoint 中添加 Microsoft Teams 选项卡、创建深层链接以及集成设备功能的先决条件。
+本文档概述了将 Web 应用程序与 Teams 集成、Power 平台以创建 Power 应用、Power Virtual Agents、虚拟助理、应用模板、Shift 连接器、用户 LMS、为网站创建"共享到 Teams"按钮、在 SharePoint 中添加 Microsoft Teams 选项卡、创建深层链接以及集成设备功能的先决条件。
 
 ## <a name="prerequisites"></a>先决条件   
 
@@ -39,11 +40,11 @@ Microsoft Power 平台将四种强大的 Microsoft 技术（如 Power BI、Power
 
 ### <a name="power-apps"></a>Power Apps
 
-通过Power Apps，你可以构建连接到业务数据并针对组织需求定制的业务应用。 Power Apps支持多种应用方案，以通过画布应用解决业务挑战。 生成应用后，你可以将其从 Power Apps 工具门户导出并嵌入Microsoft Teams。
+使用 Power Apps，你可以构建连接到业务数据并针对组织需求定制的业务应用。 Power Apps支持多种应用方案，以通过画布应用解决业务挑战。 生成应用后，你可以将其从 Power Apps制造商门户导出并嵌入Microsoft Teams。
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
-Power Virtual Agent 是无代码、引导的图形界面解决方案。 它基于 Microsoft Power Platform 和 Bot Framework 构建。 它使团队的每位成员能够创建和维护丰富的对话聊天机器人，这些聊天机器人可轻松与Teams集成。 你可以设计、开发和发布智能虚拟代理Teams而无需设置开发环境、创建 Web 服务或直接在 Bot Framework 中注册。
+Power Virtual Agent 是无代码、引导的图形界面解决方案。 它基于 Microsoft Power Platform 和 Bot Framework 构建。 它使团队的每位成员能够创建和维护丰富的对话聊天机器人，这些聊天机器人可轻松与 Teams集成。 你可以设计、开发和发布智能虚拟代理Teams而无需设置开发环境、创建 Web 服务或直接在 Bot Framework 中注册。
 
 ### <a name="create-virtual-assistant"></a>创建虚拟助手
 
@@ -51,7 +52,7 @@ Power Virtual Agent 是无代码、引导的图形界面解决方案。 它基�
 
 ## <a name="app-templates"></a>应用模板
 
-可以使用应用模板创建自定义应用以满足组织需求。 这些是适用于生产环境的生产Microsoft Teams，由社区驱动、开放源代码，GitHub。 每个模板都包含为组织部署和安装应用的详细说明。 它提供了一个现成的应用程序，您可以立即安装并开始使用该应用程序。 
+可以使用应用模板创建自定义应用以满足组织需求。 这些是生产就绪型应用，Microsoft Teams社区驱动的开放源代码，可在 GitHub。 每个模板都包含为组织部署和安装应用的详细说明。 它提供了一个现成的应用程序，您可以立即安装并开始使用该应用程序。 
 
 ## <a name="teams-shifts-work-force-management-connectors"></a>TeamsShifts Work Force Management 连接器
 
@@ -59,23 +60,23 @@ Teams轮班工作组管理连接器是生产就绪型、开放源代码和社区
 
 ## <a name="install-moodle-lms"></a>安装 Moodle LMS
 
-在 LMS 中，一Learning是一 (开源) 。 现在，它与 Microsoft Teams。 此集成可帮助教师和教师协作处理与完成组织课程有关成绩和作业的问题，并直接在 Teams 中随时Teams。
+对于 LMS 组织，一Learning开放源代码 (系统) 。 现在，它已与Microsoft Teams。 此集成可帮助教师和教师协作处理与完成组织课程有关成绩和作业的问题，并直接在 Teams 中随时Teams。
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>为网站创建“共享到 Teams”按钮
 
-第三方网站可以使用启动器脚本将"共享"Teams网页上的"共享"按钮。 当你选择该按钮时，它将在弹出窗口Teams"共享到共享"体验。 这允许你直接将链接共享到任何人员或Microsoft Teams频道，而无需切换上下文。
+第三方网站可以使用启动器脚本将"共享"Teams网页上的"共享"按钮。 当你选择该按钮时，它将在弹出窗口中Teams共享和共享体验。 这允许你直接将链接共享到任何人员或Microsoft Teams频道，而无需切换上下文。
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>在Microsoft Teams中添加SharePoint
 
-通过将 Microsoft Teams 选项卡添加为 Microsoft Teams Web SharePoint，SharePoint和 SPFx 丰富的集成体验。 
+通过将 Microsoft Teams Microsoft Teams 选项卡添加为 Microsoft Teams Web 部件，SharePoint和 SharePoint 之间SPFx丰富的集成体验。 
 
 ## <a name="create-deep-link"></a>创建深层链接
 
-可以创建指向网站中的实体的深层Teams。 您可以创建指向网站内的信息和功能Teams。 这些深层链接可导航到选项卡中的内容和信息。可以使用深层链接将你的应用与Teams，因为它们将应用的多个部分关联在一起，获得更本机的Teams体验。
+可以创建指向网站中的实体的深层Teams。 您可以创建指向网站内的信息和功能Teams。 这些深层链接可导航到选项卡中的内容和信息。可以使用深层链接将你的应用与Teams，因为它们将应用的多个部分关联在一起，获得更加本机的Teams体验。
 
 ## <a name="integrate-device-capabilities"></a>集成设备功能
 
-Microsoft Teams平台持续增强开发人员功能，以与内置第一方体验保持一致。 借助增强的 Teams 平台，合作伙伴可以使用 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 访问和集成本机设备功能，例如相机、QR 或条形码扫描仪、照片库、麦克风和位置。 
+Microsoft Teams平台持续增强开发人员功能，与内置第一方体验保持一致。 借助增强的 Teams 平台，合作伙伴可以使用 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 访问和集成本机设备功能，例如相机、QR 或条形码扫描仪、照片库、麦克风和位置。 
 
 ## <a name="integrate-people-picker"></a>集成人员选取器
 

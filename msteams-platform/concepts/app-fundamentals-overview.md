@@ -3,14 +3,14 @@ title: 应用开发基础概述
 author: heath-hamilton
 description: 介绍开发平台Teams概念。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 57c2cdbf4900de58166bbf4f75191943aeeb1db1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345577"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155953"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams应用开发基础
 
@@ -18,11 +18,11 @@ Microsoft Teams应用基础为创建自定义应用提供Teams方向。 你可�
 
 ## <a name="capabilities-and-entry-points"></a>功能和入口点
 
-可以通过多种方式扩展Teams应用程序。 为了能够扩展你的应用，你必须了解在协作空间中工作的所有核心功能和入口点。 你可以尝试构建应用的扩展点。 重要应用项目组件可帮助你正确配置应用页面。 Teams应用可以[有多个功能和](../concepts/capabilities-overview.md)[入口点](../concepts/extensibility-points.md)。
+可以通过多种方式扩展Teams应用。 为了能够扩展你的应用，你必须了解在协作空间中工作的所有核心功能和入口点。 你可以尝试构建应用的扩展点。 重要应用项目组件可帮助你正确配置应用页面。 Teams应用可以[有多个功能和](../concepts/capabilities-overview.md)[入口点](../concepts/extensibility-points.md)。
 
 ## <a name="understand-your-use-cases"></a>了解用例
 
-你可以识别用户问题并确定用户面临的一些常见问题的解答。 可以通过找到Teams满足用户需求的正确组合来构建你的应用。 [了解用例](../concepts/design/understand-use-cases.md) 以了解最终用户如何与你的应用交互。 了解如何了解用户及其问题。 回答的一些常见问题如下所示：
+你可以识别用户问题并确定用户面临的一些常见问题的解答。 可以通过找到Teams满足用户需求的组合来构建你的应用。 [了解用例](../concepts/design/understand-use-cases.md) 以了解最终用户如何与你的应用交互。 了解如何了解用户及其问题。 回答的一些常见问题如下所示：
 
 * 是否需要身份验证？
 * 你的应用要解决什么问题？
@@ -40,7 +40,7 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 ## <a name="see-also"></a>另请参阅
 
 * [将 Web 应用与 Teams](../samples/integrating-web-apps.md)
-* [生成首个 Microsoft Teams 应用](../build-your-first-app/build-first-app-overview.md) 
+* [生成首个Microsoft Teams应用](../build-your-first-app/build-first-app-overview.md) 
 
 ## <a name="next-step"></a>后续步骤
 

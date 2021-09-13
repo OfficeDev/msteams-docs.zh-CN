@@ -4,14 +4,14 @@ author: surbhigupta
 description: 确定会议应用 API 引用
 ms.topic: conceptual
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 78fb6d5927241b8fd3697c3bfe40528bb9fd35d0
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: ebb8bb95f9011e45afba59ad7b624bb2494c0b74
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529070"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155643"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -150,7 +150,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 会议中的所有用户都接收通过 API 发送 `NotificationSignal` 的通知。
 
 > [!NOTE]
-> * 调用会议中的对话框时，内容将显示为聊天消息。
+> * 调用会议内对话框时，内容将显示为聊天消息。
 > * 目前，不支持发送定向通知。
 
 `NotificationSignal` API 使你能够提供使用用户-机器人聊天的现有对话通知 API 传递的会议信号。 此 API 允许你根据显示会议内对话框的用户操作发出信号。 API 包括查询参数、示例和响应代码。
@@ -469,8 +469,8 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 |----------------|-----------------|--------------|--------------|
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting meetingSidePanel | Microsoft Teams会议扩展性示例，用于与会议中的侧面板交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会议详细信息选项卡 | Microsoft Teams会议扩展性示例，用于与会议详细信息选项卡进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| 会议详细信息选项卡 | Microsoft Teams会议详细信息选项卡交互的扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 
@@ -480,4 +480,4 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [为会议启用和配置Teams应用程序](enable-and-configure-your-app-for-teams-meetings.md)
+> [为会议启用和配置Teams应用](enable-and-configure-your-app-for-teams-meetings.md)

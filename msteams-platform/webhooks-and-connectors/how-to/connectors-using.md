@@ -3,14 +3,14 @@ title: 创建和发送邮件
 author: laujan
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Teams o365 连接器
-ms.openlocfilehash: afef216c7ef6f6813dc1ece807fa917a801687eb060f2711be7df3c2cb42ac12
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703124"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156009"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -24,7 +24,7 @@ ms.locfileid: "57703124"
 
 - `ActionCard`：显示一个或多个输入类型和关联的操作。
 - `HttpPOST`：向 URL 发送 POST 请求。
-- `OpenUri`：在单独的浏览器或应用中打开 URI，并基于操作系统选择面向不同的 URI。
+- `OpenUri`：在单独的浏览器或应用中打开 URI，根据操作系统选择面向不同的 URI。
 
 `ActionCard` 操作支持三种输入类型：
 
@@ -257,7 +257,7 @@ ms.locfileid: "57703124"
 | 7200 | 150  |
 | 86400  | 1800  |
 
-对于 [请求在](/azure/architecture/patterns/retry) 一秒钟内超出限制的情况，具有指数退信的重试逻辑可以缓解速率限制。 请 [遵循最佳做法](../../bots/how-to/rate-limit.md) 以避免达到速率限制。
+对于 [请求在](/azure/architecture/patterns/retry) 一秒钟内超出限制的情况，具有指数退信的重试逻辑可以缓解速率限制。 遵循 [最佳做法以避免](../../bots/how-to/rate-limit.md) 达到速率限制。
 
 > [!NOTE]
 > 对于 [请求在](/azure/architecture/patterns/retry) 一秒钟内超出限制的情况，具有指数退信的重试逻辑可以缓解速率限制。 请参阅 [HTTP 429 响应](../../bots/how-to/rate-limit.md#handle-http-429-responses)以避免达到速率限制。

@@ -3,14 +3,14 @@ title: 获取Teams程序的特定上下文
 author: surbhigupta
 description: 如何获取机器人的 Microsoft 团队的特定上下文，包括对话名单、详细信息和频道列表。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 4e3717b5931b673fa52c82b54d9c79380d9ae8d8907c8c2cf51f46499386cb28
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 8baf33c7c66ebee69248306cd9273c33b6123db3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706266"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156004"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>获取Teams程序的特定上下文
 
@@ -20,7 +20,7 @@ ms.locfileid: "57706266"
 
 ## <a name="fetch-the-roster-or-user-profile"></a>获取名单或用户配置文件
 
-机器人可以查询成员列表及其基本用户配置文件，包括 Teams 用户 ID 和 Azure Active Directory (AAD) 信息，如名称和 objectId。 可以使用此信息来关联用户标识。 例如，要检查用户是否通过 AAD 凭据登录到选项卡，是团队的成员。 对于获取对话成员，最小或最大页面大小取决于实现。 小于 50、被视为 50 且大于 500 的页面大小限定为 500。 即使你使用非分页版本，它在大型团队中也不可靠，并且不得使用。 有关详细信息，请参阅[对自动程序 API Teams获取团队或聊天成员的更改](~/resources/team-chat-member-api-changes.md)。
+机器人可以查询成员列表及其基本用户配置文件，包括 Teams 用户 ID 和 Azure Active Directory (AAD) 信息，如名称和 objectId。 可以使用此信息来关联用户标识。 例如，要检查用户是否通过 AAD 凭据登录到选项卡，是团队的成员。 对于获取对话成员，最小或最大页面大小取决于实现。 小于 50、被视为 50 且大于 500 的页面大小限定为 500。 即使你使用非分页版本，它在大型团队中也不可靠，并且不得使用。 有关详细信息，请参阅[对自动Teams API 的更改，以提取团队或聊天成员](~/resources/team-chat-member-api-changes.md)。
 
 以下示例代码使用分页终结点提取名单：
 
@@ -82,7 +82,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。 响应有效负载还指示用户是常规用户还是匿名用户。
+你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` ，使用 的值 `serviceUrl` 作为 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。 响应有效负载还指示用户是常规用户还是匿名用户。
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -123,7 +123,7 @@ Response body
 
 * * *
 
-获取名单或用户配置文件后，可以获取单个成员的详细信息。 目前，若要检索聊天或团队的一个或多个成员的信息，请使用 Microsoft Teams 聊天机器人 API 或 `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` C# Api。
+获取名单或用户配置文件后，可以获取单个成员的详细信息。 目前，若要检索聊天或团队的一个或多个成员的信息，请使用 Microsoft Teams 自动程序 API C# `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` TypeScript API。
 
 ## <a name="get-single-member-details"></a>获取单个成员详细信息
 
@@ -171,7 +171,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/members/{userId}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。 这可用于常规用户和匿名用户。
+你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/members/{userId}` ，使用 的值 `serviceUrl` 作为 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。 这可用于常规用户和匿名用户。
 
 下面是常规用户的响应示例：
 
@@ -207,7 +207,7 @@ Response body
 
 * * *
 
-获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用 Microsoft Teams 或 TypeScript C# `TeamsInfo.GetMemberDetailsAsync` `TeamsInfo.getTeamDetails` 自动程序 API。
+获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用适用于 Microsoft Teams 或 TypeScript C# `TeamsInfo.GetMemberDetailsAsync` 自动程序 `TeamsInfo.getTeamDetails` API。
 
 ## <a name="get-teams-details"></a>获取团队的详细信息
 
@@ -267,7 +267,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。
+你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}` ，使用 的值 `serviceUrl` 作为 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -341,7 +341,7 @@ async def _show_channels(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}/conversations` ，将 的值 `serviceUrl` 用作 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。
+你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}/conversations` ，使用 的值 `serviceUrl` 作为 终结点。 的值 `serviceUrl` 稳定，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl` 。
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations

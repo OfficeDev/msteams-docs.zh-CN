@@ -5,16 +5,17 @@ description: 快速创建显示"Hello，World！"的 Microsoft Teams 应用。 m
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: eb3f5c66a8e7c6f19c96d192fb8b84124b6203d47d54f161633dd12969adbb17
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707139"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155800"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>使用 Blazor 生成Microsoft Teams应用程序
 
-本教程介绍如何在 .NET/Blazor 中创建新的 Microsoft Teams 应用，该应用实现简单的个人应用，以从 Microsoft Graph。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 Azure。
+本教程介绍如何在 .NET/Blazor 中创建新的 Microsoft Teams 应用，实现简单的个人应用，以从 Microsoft Graph。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 Azure。
 
 构建的应用将显示当前用户的基本用户信息。  授予权限后，应用会作为当前用户连接到 Microsoft Graph 以获取完整配置文件。
 
@@ -35,13 +36,13 @@ ms.locfileid: "57707139"
 
 1. 选择 **创建新项目**。
 
-1. 选择 **Microsoft Teams应用"，** 然后选择"下一 **步"。**  若要帮助您查找模板，请使用项目类型 **Microsoft Teams**。
+1. 选择 **Microsoft Teams应用**"，然后选择"下一 **步"。**  若要帮助您查找模板，请使用项目类型 **Microsoft Teams。**
 
 1. 输入名称，然后选择下一 **步**。
 
 1. 输入应用程序名称和公司名称。
 
-1. 选择 **创建**。  应用程序名称和公司名称将显示给最终用户。 将在数秒钟内创建你的 Teams 应用。  创建项目后，使用 M365 设置单一登录：
+1. 选择“**创建**”。  应用程序名称和公司名称将显示给最终用户。 将在数秒钟内创建你的 Teams 应用。  创建项目后，使用 M365 设置单一登录：
 
    1. 选择 **Project**  >  **TeamsFx**  >  **配置 SSO..."。**
    1. 系统提示时，登录到 M365 管理员帐户。
@@ -50,7 +51,7 @@ ms.locfileid: "57707139"
 
 1. 打开终端并选择你希望创建项目的目录。
 
-1. 运行 `dotnet new -i` 以从以下位置安装NuGet：
+1. 运行 `dotnet new -i` 以从以下位置NuGet：
 
    ``` bash
    dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
@@ -76,7 +77,7 @@ ms.locfileid: "57707139"
    teamsfx init
    ```
 
-   现在可以在 Visual Studio 中打开解决方案进行调试。
+   现在，可以在 Visual Studio中打开该解决方案进行调试。
 
 ---
 
@@ -84,7 +85,7 @@ ms.locfileid: "57707139"
 
 若要暂时跳过此部分，可以 [在本地运行应用](#run-your-app-locally)。
 
-在Teams Toolkit项目后，你拥有组件来构建基本个人应用Teams。 项目目录和文件显示在 2019 年 10 月Visual Studio资源管理器"区域中。
+在Teams Toolkit项目后，你具有用于生成基本个人应用Teams。 项目目录和文件显示在 2019 年 10 月Visual Studio资源管理器"区域中。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
 
@@ -97,7 +98,7 @@ ms.locfileid: "57707139"
 - `Pages/Tab.razor` 是前端应用程序的入口点。
 - `TeamsFx.cs``JS/src/index.js`和 用于初始化与主机Teams通信。
 
-可以通过向应用程序添加其他 ASP.NET Core控制器来添加后端功能。
+可以通过向应用程序添加其他 ASP.NET Core添加后端功能。
 
 ## <a name="run-your-app-locally"></a>在本地运行应用
 
@@ -121,7 +122,7 @@ ms.locfileid: "57707139"
 
 1. 将在 Web 浏览器中加载 Teams，并提示进行登录。 如果系统提示打开 Microsoft Teams，请选择"取消"以保留在浏览器中。 使用 M365 帐户登录。
 
-1. 当系统提示将应用安装到 Teams 时，选择"添加 **"。**
+1. 当系统提示将应用安装到 Teams，选择"添加 **"。**
 
    此时将显示应用：
 
@@ -139,7 +140,7 @@ ms.locfileid: "57707139"
 1. 将应用程序注册为"旁加载"Microsoft Teams。
 1. 在本地运行启动应用程序后端。
 1. 在本地托管应用程序前端启动。
-1. 使用Microsoft Teams启动 Web 浏览器中的 url，以指示Teams应用程序旁加载 (URL 在应用程序清单) 。
+1. 使用Microsoft Teams启动 Web 浏览器中的 url，以指示Teams在应用程序清单 (中注册 URL 时旁加载) 。
 
 </details>
 
@@ -147,7 +148,7 @@ ms.locfileid: "57707139"
 <details>
 <summary>了解如何在本地运行应用时解决常见问题。</summary>
 
-若要在应用中成功运行Teams，你必须拥有一个Microsoft 365支持应用旁加载的一个开发帐户。 有关开设帐户的详细信息，请参阅 [先决条件](prerequisites.md#enable-sideloading)。
+若要在应用中成功运行Teams，你必须拥有一个Microsoft 365应用程序旁加载的一个开发帐户。 有关开设帐户的详细信息，请参阅 [先决条件](prerequisites.md#enable-sideloading)。
 
 </details>
 
@@ -172,7 +173,7 @@ ms.locfileid: "57707139"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="选择 Azure 作为发布目标":::
 
-1. 选择 **Azure 应用服务 (Windows) ，** 然后选择下一 **步**。
+1. 选择 **"Azure 应用服务 (Windows)** 并选择"下一 **步"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="选择 Azure 应用服务作为发布目标":::
 
@@ -180,7 +181,7 @@ ms.locfileid: "57707139"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="创建新实例。":::
 
-1. 在"**创建应用服务 (Windows)** 对话框中，将填充"名称"、"订阅名称"、"资源组"和"**托管** 计划"条目字段。  如果已运行应用服务，则选择现有设置。  可以选择创建新的资源组和托管计划。  准备就绪后，选择"创建 **"。**
+1. 在"**创建应用服务 (Windows)** 对话框中 **，将填充**"名称"、订阅名称、"资源组"和"**托管** 计划"条目字段。  如果已运行应用服务，则选择现有设置。  可以选择创建新的资源组和托管计划。  准备就绪后，选择"创建 **"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="选择托管计划和订阅":::
 
@@ -188,7 +189,7 @@ ms.locfileid: "57707139"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish6.png" alt-text="选择新实例。":::
 
-1. 选择部署 **(** 旁边的 **) "编辑** 铅笔图标"，然后选择"**自包含"。**
+1. 选择部署 **(** 旁边的 **) 铅笔图标**"，然后选择"**自包含"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish8.png" alt-text="选择自包含部署模式。":::
 
@@ -202,7 +203,7 @@ ms.locfileid: "57707139"
 
 ## <a name="create-an-environment-for-your-app"></a>为应用创建环境
 
-开发人员门户的 Teams管理使用 Environment 加载应用的选项卡 **位置**。  
+开发人员门户 for Teams管理使用 Environment 加载应用的选项卡 **位置**。  
 
 **创建环境：**
 
@@ -255,7 +256,7 @@ ms.locfileid: "57707139"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="编辑个人选项卡 URL":::
 
-1. 选择 **“更新”**。
+1. 选择“**更新**”。
 
 1. 选择“**保存**”。
 
@@ -275,7 +276,7 @@ ms.locfileid: "57707139"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="添加域":::
 
-   现在，可以使用页面顶部的"Teams预览"选项在应用中启动Teams。
+   现在，可以使用页面顶部的"Teams预览"选项在页面内启动Teams。
 
 ## <a name="see-also"></a>另请参阅
 

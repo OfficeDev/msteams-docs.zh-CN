@@ -2,17 +2,17 @@
 title: 将租户 ID 和对话 ID 发送到机器人的请求标头
 description: 介绍如何将租户 ID 和对话 ID 发送到机器人的请求标头。
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: a775c09589f59a6d487bf403544afccd5b59f797ac12cf60a9deb1fc2de16644
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: bdfe224824fb7fd42fdc8ea93dc7d492bc731218
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706666"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155364"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>将租户 ID 和对话 ID 发送到机器人的请求标头
 
-当前向自动程序发出的传出请求在标头或 URL 中不包含任何有助于机器人在不解压缩整个负载的情况下路由流量的信息。 活动通过类似于 https：//<your_domain>/api/messages 的 URL 发送给机器人。 收到在标头中显示对话 ID 和租户 ID 的请求。
+当前向自动程序发出的传出请求在标头或 URL 中不包含任何有助于机器人在不解压缩整个负载的情况下路由流量的信息。 活动通过类似于 https：//<your_domain>/api/messages 的 URL 发送给自动程序。 收到在标头中显示对话 ID 和租户 ID 的请求。
 
 ## <a name="request-header-fields"></a>请求头字段
 
@@ -20,7 +20,7 @@ ms.locfileid: "57706666"
 
 | 字段键 | 值 |
 |----------------|-----------------|
-| x-ms-conversation-id | 与请求活动对应的对话 ID（如果适用，经确认或验证）。 |
+| x-ms-conversation-id | 与请求活动对应的对话 ID（如果适用，已确认或已验证）。 |
 | x-ms-tenant-id | 与请求活动中的对话对应的租户 ID。 |
 
 如果租户或对话 ID 不存在于活动中，或者未在服务端进行验证，则值为空。

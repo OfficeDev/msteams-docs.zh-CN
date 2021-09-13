@@ -2,15 +2,15 @@
 title: 创建频道或组选项卡
 author: laujan
 description: 使用 Yeoman 生成器为用户创建频道和组选项卡的快速Microsoft Teams。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: fedaf3ec639917110e16c666734fa3eedbcda18e
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179974"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155326"
 ---
 # <a name="create-a-channel-or-group-tab"></a>创建频道或组选项卡
 
@@ -20,7 +20,7 @@ ms.locfileid: "53179974"
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
-### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>使用 Yeoman 生成器和 Node.js创建自定义频道和组选项卡
+### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>使用自定义频道和组选项卡Node.js Yeoman 生成器
 
 > [!NOTE]
 > 本文遵循 Microsoft OfficeDev Microsoft Teams存储库中构建您的第一个 GitHub [App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki 中概述的步骤。
@@ -48,7 +48,7 @@ You can create a custom channel or group tab using the [Teams Yeoman generator](
     npm install yo gulp-cli --global
     ```
 
-- 在命令Microsoft Teams输入以下内容，安装应用生成器：
+- 在命令Microsoft Teams输入以下内容，安装应用程序生成器：
 
     ```bash
     npm install generator-teams --global
@@ -78,13 +78,13 @@ You can create a custom channel or group tab using the [Teams Yeoman generator](
 
     您当前在项目目录中。 选择 **Enter**。
 
-    **你的应用Microsoft Teams标题？**
+    **你的应用Microsoft Teams的标题？**
 
     这是你的应用包名称，将在应用清单和说明中使用。 输入标题或按 **Enter** 接受默认名称。
 
-    **你的 (公司) 名称？ (最多 32 个字符)**
+    **贵公司 () 名称？ (最多 32 个字符)**
 
-    你的公司名称将在应用清单中使用。 输入公司名称或选择 **Enter** 接受默认名称。
+    你的公司名称将在应用清单中使用。 输入公司名称或按 **Enter** 接受默认名称。
 
     **要使用哪个清单版本？**
 
@@ -96,7 +96,7 @@ You can create a custom channel or group tab using the [Teams Yeoman generator](
 
     **输入你的 Microsoft 合作伙伴 ID（如果有） (留空可跳过)**
 
-    此字段不是必需的，并且应该仅在你已是 Microsoft 合作伙伴网络的一 [部分时使用](https://partner.microsoft.com)。
+    此字段不是必需的，并且只应在你已是 Microsoft 合作伙伴网络的一 [部分时使用](https://partner.microsoft.com)。
 
     **要向项目添加哪些内容？**
 
@@ -104,7 +104,7 @@ You can create a custom channel or group tab using the [Teams Yeoman generator](
 
     **将在其中托管此解决方案的 URL？**
 
-    默认情况下，生成器建议 Azure 网站 URL。 由于你仅在本地测试应用，因此不需要有效的 URL。
+    默认情况下，生成器建议 Azure 网站 URL。 你仅在本地测试应用，因此，不需要有效的 URL。
 
     **在应用/选项卡加载时是否显示加载指示器？**
 
@@ -118,11 +118,11 @@ You can create a custom channel or group tab using the [Teams Yeoman generator](
 
     选择 **不包括** 此项目的测试框架。 默认值为 yes;输入 **n**。
 
-    **是否将 Azure 应用程序Insights遥测？ (y/N)**
+    **是否希望将 Azure 应用程序Insights遥测？ (y/N)**
 
     选择 **不包括** [Azure 应用程序Insights。](/azure/azure-monitor/app/app-insights-overview) 默认值为"否";输入 **n**。
 
-    **默认选项卡名称 (最多为 16 个字符) ？**
+    **默认选项卡名称 (最多包含 16) ？**
 
     命名选项卡。此选项卡名称将在整个项目中用作文件或 URL 路径组件。
 
@@ -134,7 +134,7 @@ You can create a custom channel or group tab using the [Teams Yeoman generator](
 
     可以选择团队或群聊。
 
-    **是否需对选项卡提供 Azure AD 单一登录支持？**
+    **是否需对选项卡提供 Azure AD 单一登录支持?**
 
     选择 **不包括** 选项卡的 Azure AD 单一登录支持。默认值为"是"，输入 **n**。
 
@@ -177,7 +177,7 @@ You can create a custom channel or group tab using the [Teams Yeoman generator](
 - 一 **个 32** x 32 像素的透明边框图标。
 - 指定 **manifest.js** 属性的 on 文件。
 
-程序包通过 gulp 任务创建，该任务验证文件上的manifest.js，并生成 **./package** 目录中的 zip 文件夹。 在命令提示符中，输入以下命令：
+该包是通过 gulp 任务创建的，该任务验证 manifest.json 文件，并生成 **./package** 目录中的 zip 文件夹。 在命令提示符中，输入以下命令：
 
 ```bash
 gulp manifest
@@ -199,7 +199,7 @@ gulp build
     gulp serve
     ```
 
-1. `http://localhost:3007/<yourDefaultAppNameTab>/`在浏览器中输入 ，将 替换为选项卡名称，然后查看应用程序的主页 **<yourDefaultAppNameTab>** ，如下图所示：
+1. `http://localhost:3007/<yourDefaultAppNameTab>/`Enter in your browser， replace **yourDefaultAppNameTab** with your tab name， and view your application's home page as shown in the following image：
 
     ![主页屏幕截图](~/assets/images/tab-images/homePage.png)
 
@@ -220,7 +220,7 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> 将选项卡上载到 Microsoft Teams 并成功保存后，可以在选项卡库中查看它、将其添加到选项卡栏并与其交互，直到 ngrok 隧道会话结束。 如果重新启动 ngrok 会话，则必须使用新 URL 更新应用。
+> 将选项卡上载到 Microsoft Teams并成功保存后，可以在选项卡库中查看它，将其添加到选项卡栏，并与其交互，直到 ngrok 隧道会话结束。 如果重新启动 ngrok 会话，则必须使用新 URL 更新应用。
 
 ### <a name="upload-your-application-to-teams"></a>Upload应用程序以Teams
 
@@ -234,7 +234,7 @@ gulp ngrok-serve
     ![添加的"频道"选项卡](../../assets/images/tab-images/channeltabadded.png)
 
 1. 在 **弹出** 对话框中选择"添加"。 您的选项卡将上载到Teams。
-1. 返回到团队，选择要显示选项卡的频道，从选项卡➕选择选项卡，然后从库中选择您的选项卡。
+1. 返回到团队，选择要显示选项卡的频道，从选项卡➕中选择"选项卡"，然后从库中选择您的选项卡。
 1. 按照添加选项卡的说明操作。频道或组选项卡有一个自定义配置对话框。
 1. 选择 **"** 保存"，您的选项卡将添加到频道的选项卡栏中。
 
@@ -244,7 +244,7 @@ gulp ngrok-serve
 
 ### <a name="create-a-custom-channel-or-group-tab-with-aspnet-core"></a>使用自定义频道或组选项卡 ASP.NET Core
 
-可以使用"Core 用户"页面C#自定义频道 ASP.Net 组选项卡。 [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)还用于完成应用清单，并部署选项卡以Teams。
+可以使用"Core 用户"页面C#和 ASP.Net 频道或组选项卡。 [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)还用于完成应用清单，并部署选项卡以Teams。
 
 ### <a name="prerequisites-for-teams-apps"></a>应用Teams的先决条件
 
@@ -259,7 +259,7 @@ gulp ngrok-serve
 
 此外，此项目要求在开发环境中安装以下内容：
 
-- 当前版本的 IDE Visual Studio **安装了 .NET CORE 跨平台开发** 工作负载。 如果尚未安装Visual Studio，可以免费下载和安装[Microsoft Visual Studio Community版本。](https://visualstudio.microsoft.com/downloads)
+- 当前版本的 IDE Visual Studio **.NET CORE 跨平台开发** 工作负载。 如果尚未安装Visual Studio，可以免费下载和安装最新的[Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads)版本。
 
 - [ngrok](https://ngrok.com)反向代理工具。 使用 ngrok 创建到本地运行的 Web 服务器的公开可用的 HTTPS 终结点的隧道。 您可以 [下载 ngrok](https://ngrok.com/download)。
 
@@ -275,7 +275,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 **生成并运行选项卡项目**
 
-1. 获得源代码后，转到"打开Visual Studio并选择"打开 **项目或解决方案"。**
+1. 获得源代码后，转到"Visual Studio并选择"打开 **项目或解决方案"。**
 1. 转到选项卡应用程序目录，然后打开 **ChannelGroupTab.sln**。
 1. 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。
 1. 在浏览器中，转到以下 URL 并验证应用程序是否加载正确：
@@ -288,7 +288,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目从 2.2 web 应用程序 ASP.NET Core模板创建，在设置时选中了"高级 **- 为 HTTPS** 配置"复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，空模板默认情况下不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下 `Configure()` 代码的方法中：
+此项目是使用在安装程序 ASP.NET Core"高级 - 配置 **HTTPS"** 复选框的 2.2 Web 应用程序空模板创建的。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，空模板默认情况下不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下 `Configure()` 代码的方法中：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -322,7 +322,7 @@ ASP.NET Core将名为 **Index** 的文件视为网站的默认页面或主页。
 - 一 **个 32** x 32 像素的透明边框图标。
 - 指定 **manifest.js** 属性的 on 文件。
 
-这些文件需要在应用包中压缩，以用于将选项卡上载到Teams。 当用户选择添加或更新选项卡时，Microsoft Teams清单中指定的内容，将其嵌入 IFrame 中，并将其呈现在 `configurationUrl` 选项卡中。
+这些文件需要在应用包中压缩，以用于将选项卡上传到Teams。 当用户选择添加或更新选项卡时，Microsoft Teams清单中指定的内容，将其嵌入 IFrame 中，并将其呈现在 `configurationUrl` 选项卡中。
 
 #### <a name="csproj"></a>.csproj
 
@@ -368,7 +368,7 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-若要在页面中显示选项卡Teams，必须包含 **Microsoft Teams JavaScript** 客户端 SDK，并包括页面加载 `microsoftTeams.initialize()` 后对 的调用。 这是选项卡和客户端Teams的方式：
+若要在页面中显示选项卡Teams，必须包含 **Microsoft Teams JavaScript** 客户端 SDK，并包括页面加载后的 `microsoftTeams.initialize()` 调用。 这是选项卡和客户端Teams的方式：
 
 转到" **共享"** 文件夹，打开 **_Layout.cshtml，** 然后向 标记中添加 `<head>` 以下内容：
 
@@ -378,13 +378,13 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 ```
 
 > [!IMPORTANT]
-> 不要复制并粘贴此页 `<script src="...">` 中的 URL，因为它们不表示最新版本。 若要获取最新版本的 SDK，请始终转到[Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js)。
+> 不要复制并粘贴此页 `<script src="...">` 中的 URL，因为它们不表示最新版本。 若要获取最新版本的 SDK，请始终转到[Microsoft Teams JavaScript API。](https://www.npmjs.com/package/@microsoft/teams-js)
 
 #### <a name="tabcshtml"></a>Tab.cshtml
 
 **更新 Tab.cshtml**
 
-1. 在 **"文件"中Visual Studio Tab.cshtml** 并更新嵌入的 `<script>` 。
+1. 打开 **选项卡中的 Tab.cshtml** Visual Studio并更新嵌入 `<script>` 的 。
 
 1. 在脚本顶部，调用 `microsoftTeams.initialize()` 。
 
@@ -430,20 +430,20 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 1. 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正常运行。
 
 > [!TIP]
-> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成本文中提供的步骤。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在应用程序中重新启动时，它会侦听并恢复Visual Studio。 如果您必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须使用新 URL 更新您的应用程序。
+> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成本文中提供的步骤。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在应用程序中重新启动时，它会侦听应用程序请求并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须使用新 URL 更新应用程序。
 
 ### <a name="upload-your-tab-for-teams"></a>Upload选项卡进行Teams
 
 > [!NOTE]
-> App Studio 可用于编辑 **文件上的** manifest.js，以及将已完成的程序包上传到Teams。 还可以手动编辑 on **manifest.js** 文件。 如果这样做，请确保再次生成解决方案以创建要 **tab.zip文件。**
+> App Studio 可用于编辑 **文件上的** manifest.js，将已完成的程序包上传到Teams。 还可以手动编辑 on **manifest.js** 文件。 如果这样做，请确保再次生成解决方案以创建要 **tab.zip文件。**
 
 **使用 App Studio 上传选项卡**
 
 1. 转到Microsoft Teams。 如果使用基于 [Web 的版本，](https://teams.microsoft.com)可以使用浏览器的开发人员工具检查前端 [代码](~/tabs/how-to/developer-tools.md)。
 
-1. 转到 **App Studio，** 然后选择清单 **编辑器** 选项卡。
+1. 转到 **App Studio** 并选择清单 **编辑器** 选项卡。
 
-1. 选择 **"在清单编辑器** 中导入现有 **应用"** 开始为选项卡更新应用包。源代码附带其自己的部分完整清单。 应用包的名称 **tab.zip。** 可从以下路径获得：
+1. 在 **清单编辑器中选择** 导入现有 **应用** ，开始更新选项卡的应用包。源代码附带其自己的部分完整清单。 应用包的名称 **tab.zip。** 可从以下路径获得：
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
@@ -461,7 +461,7 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 
 ##### <a name="details-app-details"></a>详细信息：应用详细信息
 
-在" **应用详细信息"** 部分中：
+在" **应用详细信息"** 部分：
 
 1. 在 **"标识****"下**，选择"生成"以将占位符 ID 替换为选项卡所需的 GUID。
 
@@ -490,17 +490,17 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 >
 > &#9888; "**'validDomains' array cannot contain a tunneling site..."**
 >
-> 在测试选项卡时，可以忽略此警告。
+> 在测试您的选项卡时，可以忽略此警告。
 
 1. 在"**测试和分发"部分**，选择"安装 **"。**
 
-1. 在弹出对话框中，选择"添加到团队 **"** 或从下拉列表中选择"**添加到聊天"。**
+1. 在弹出对话框中，选择"添加到团队"或从下拉列表中选择"**添加到聊天"。**
 
 1. 选择要显示选项卡的团队或聊天，然后选择"**设置选项卡"。**
 
 1. 在下一个弹出对话框中，**选择"选择** 灰色"或"**选择红色**"，然后选择"保存 **"。**
 
-1. 若要查看您的选项卡，请转到安装选项卡的团队或聊天，然后从选项卡栏中选择它。 将显示在配置过程中选择的页面。
+1. 若要查看选项卡，请转到安装选项卡的团队或聊天，然后从选项卡栏中选择它。 将显示在配置过程中选择的页面。
 
     ![频道选项卡 ASPNET 已上载](../../assets/images/tab-images/channeltabaspnetuploaded.png)
 
@@ -512,22 +512,22 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 
 ### <a name="prerequisites-for-custom-channel-or-group-tab"></a>自定义频道或组选项卡的先决条件
 
-- 你必须拥有一个Microsoft 365租户和一个已启用"允许上载自定义 **应用"的团队**。 有关详细信息，请参阅[准备你的Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- 你必须拥有一个Microsoft 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备你的Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
     > 如果你当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册免费[订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
 
-- 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio，**请选择应用** 左下角的 Teams ![ ](~/assets/images/tab-images/storeApp.png) 应用，然后搜索 **App Studio**。 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
+- 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio，**请选择** App Studio 应用的左下角Teams ![ ](~/assets/images/tab-images/storeApp.png) 应用"，然后搜索 **App Studio。** 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
 
 此外，此项目要求在开发环境中安装以下内容：
 
-- 当前版本的 IDE Visual Studio **安装了 .NET CORE 跨平台开发** 工作负载。 如果尚未安装Visual Studio，可以免费下载和安装[Microsoft Visual Studio Community版本。](https://visualstudio.microsoft.com/downloads)
+- 当前版本的 IDE Visual Studio **.NET CORE 跨平台开发** 工作负载。 如果尚未安装Visual Studio，可以免费下载和安装最新的[Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads)版本。
 
 - [ngrok](https://ngrok.com)反向代理工具。 使用 ngrok 创建到本地运行的 Web 服务器的公开可用的 HTTPS 终结点的隧道。 您可以 [下载 ngrok](https://ngrok.com/download)。
 
 ### <a name="get-the-source-code"></a>获取源代码
 
-在命令提示符下，为选项卡项目创建新目录。 提供了一 [个简单的"频道组](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) 选项卡"项目，方便你入门。 使用下面的命令将示例存储库克隆到新目录中：
+在命令提示符下，为选项卡项目创建新目录。 提供了一 [个简单的"频道组选项卡](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) "项目，方便你入门。 使用下面的命令将示例存储库克隆到新目录中：
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
@@ -537,7 +537,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 **生成并运行选项卡项目**
 
-1. 获得源代码后，转到"打开Visual Studio并选择"打开 **项目或解决方案"。**
+1. 获得源代码后，转到"Visual Studio并选择"打开 **项目或解决方案"。**
 1. 转到选项卡应用程序目录，然后打开 **ChannelGroupTabMVC.sln**。
 1. 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。
 1. 在浏览器中，导航到以下 URL 并验证应用程序是否加载正确：
@@ -550,7 +550,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目从 2.2 web 应用程序 ASP.NET Core模板创建，在设置时选中了"高级 **- 为 HTTPS** 配置"复选框。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，空模板默认情况下不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下 `Configure()` 代码的方法中：
+此项目是使用在安装程序 ASP.NET Core"高级 - 配置 **HTTPS"** 复选框的 2.2 Web 应用程序空模板创建的。 MVC 服务由依赖关系注入框架的方法 `ConfigureServices()` 注册。 此外，空模板默认情况下不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下 `Configure()` 代码的方法中：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -576,7 +576,7 @@ public void Configure(IApplicationBuilder app)
 - 一 **个 32** x 32 像素的透明边框图标。
 - 指定 **manifest.js** 属性的 on 文件。
 
-这些文件需要在应用包中压缩，以用于将选项卡上载到Teams。
+这些文件需要在应用包中压缩，以用于将选项卡上传到Teams。
 
 #### <a name="csproj"></a>.csproj
 
@@ -608,7 +608,7 @@ public void Configure(IApplicationBuilder app)
 
 这些是 MVC 中 ASP.NET Core视图：
 
-* 主页：ASP.NET Core将名为 **Index** 的文件视为网站的默认页面或主页。 当浏览器 URL 指向网站的根目录时 **，Index.cshtml** 将显示为应用程序的主页。
+* 主页：ASP.NET Core将名为 **Index** 的文件视为网站的默认或主页。 当浏览器 URL 指向网站的根目录时 **，Index.cshtml** 将显示为应用程序的主页。
 
 * Shared：部分视图标记 **_Layout.cshtml** 包含应用程序的整体页面结构和共享的可视元素。 它还将引用Teams库。
 
@@ -630,7 +630,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="update-your-application"></a>更新应用程序
 
-在 **Tab.cshtml** 中，应用程序向用户显示两个选项按钮，用于显示带红色或灰色图标的选项卡。 选择"**选择灰色**"或"**选择红色**"按钮，分别触发或 ，设置 并启用配置页上的" `saveGray()` `saveRed()` `settings.setValidityState(true)` 保存"按钮。  此代码Teams您已完成配置要求，并且可以继续安装。 保存时，将设置 `settings.setSettings` 的参数。 最后 `saveEvent.notifySuccess()` ，调用 以指示已成功解析内容 URL。
+在 **Tab.cshtml** 中，应用程序向用户显示两个选项按钮，用于显示带红色或灰色图标的选项卡。 选择"**选择灰色**"或"**选择** 红色"按钮，分别触发或 ，设置 并启用配置页上的" `saveGray()` `saveRed()` `settings.setValidityState(true)` 保存"按钮。  此代码Teams您已完成配置要求，并且可以继续安装。 保存时，将设置 `settings.setSettings` 的参数。 最后 `saveEvent.notifySuccess()` ，调用 以指示已成功解析内容 URL。
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

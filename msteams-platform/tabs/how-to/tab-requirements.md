@@ -3,15 +3,15 @@ title: 先决条件
 author: surbhigupta
 description: 每个选项卡Microsoft Teams都必须遵守这些要求。
 keywords: teams 选项卡组频道可配置
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 36d5a6ee785779c8ba186a00ec80519a189ac278e7ec2298bba82fb53f0a848a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 786b4a74085acb57b4b87a5671a3a9b7ae9b0a41
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701798"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155648"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -27,9 +27,9 @@ Teams选项卡必须遵循以下先决条件：
     > [!NOTE]
     > Chrome 80 计划于 2020 年初发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 建议您设置 Cookie 的预定用途，而不是依赖默认浏览器行为。 有关详细信息，请参阅 [SameSite cookie 属性](../../resources/samesite-cookie-update.md)。
 
-* 浏览器遵守同源策略限制。 它会阻止网页向与所提供网页不同的域提出请求。 但是，您可以将配置或内容页重定向到另一个域或子域。 当加载或与选项卡通信时，跨域导航逻辑Teams客户端根据应用清单中的静态列表验证 `validDomains` 源。
+* 浏览器遵守同源策略限制。 它会阻止网页向与所提供网页不同的域提出请求。 但是，您可以将配置或内容页重定向到另一个域或子域。 当加载或与选项卡通信时，跨域导航逻辑必须允许Teams客户端针对应用清单中的静态列表 `validDomains` 验证源。
 
-* 您必须基于客户端的主题、Teams设计及意图设置选项卡的样式。 通常，当选项卡专为满足特定需求而构建，并且侧重于一小组任务或与选项卡的通道位置相关的数据子集时，选项卡运行效果最佳。
+* 必须基于客户端的主题、Teams设计及意图设置选项卡的样式。 通常，当选项卡专为满足特定需求而构建，并且侧重于一小组任务或与选项卡的通道位置相关的数据子集时，选项卡运行效果最佳。
 
 * 在内容页中，添加对使用脚本标记[Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)的引用。 加载页面后，调用 `microsoftTeams.initialize()` ，否则不显示页面。
 

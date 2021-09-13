@@ -1,18 +1,18 @@
 ---
 title: 处理机器人事件
-description: 介绍如何处理自动程序 for Microsoft Teams
+description: 介绍如何在自动程序中处理Microsoft Teams
 keywords: teams 机器人事件
 ms.date: 05/20/2019
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 6a9eaab388927fcff51d7883e1a61ca1cec81fac
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 6189460e16459e737656f68945f1b0a2a3549834
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069072"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155931"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>处理聊天机器人Microsoft Teams
 
@@ -45,7 +45,7 @@ Teams和组事件（通常从类型触发）具有作为对象一部分传递的
 
 ## <a name="team-member-or-bot-addition"></a>添加团队成员或机器人
 
-当机器人收到有关已添加它的团队的成员身份更新的信息时，该事件 [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 将发送给机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。 请注意， () 信息对于自动程序来说是唯一的，可以缓存这些信息供你的服务将来使用，例如向特定用户 `Id` 发送邮件。
+当机器人收到有关已添加它的团队的成员身份更新的信息时，该事件 [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 将发送给机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。 请注意， () 信息对于自动程序来说是唯一的，可以缓存这些信息供服务将来使用，例如向特定用户 `Id` 发送邮件。
 
 ### <a name="bot-or-user-added-to-a-team"></a>添加到团队的机器人或用户
 
@@ -187,7 +187,7 @@ bot.on('conversationUpdate', (msg) => {
 当用户直接为个人聊天添加时，机器人 `conversationUpdate` `membersAdded` 会收到 with。 在这种情况下，机器人收到的负载不包含 `channelData.team` 对象。 如果你希望机器人根据范围提供不同的欢迎消息，你应使用此筛选器。 [](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations)
 
 > [!NOTE]
-> 对于个人范围的自动程序，你的自动程序将接收事件多次，即使机器人 `conversationUpdate` 已删除并重新添加。 对于开发和测试，你可能会发现添加一个支持你完全重置机器人的帮助程序函数会很有用。 有关实现[Node.js的详细信息](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts)[，请参阅C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238)示例或示例。
+> 对于个人范围的自动程序，你的自动程序将接收该事件多次，即使机器人 `conversationUpdate` 被删除并重新添加。 对于开发和测试，你可能会发现添加一个支持你完全重置机器人的帮助程序函数会很有用。 有关实现 [Node.js的详细信息](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) ， [请参阅C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) 示例或示例。
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>架构示例：添加到个人上下文的机器人
 
@@ -228,7 +228,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="team-member-or-bot-removed"></a>已删除团队成员或机器人
 
-从团队中删除机器人或将用户从添加自动程序的团队中删除时，将发送有效负载中对象 `conversationUpdate` `membersRemoved` 的事件。 Microsoft Teams还添加到 `eventType.teamMemberRemoved` `channelData` 对象中。 与 对象一样，应分析机器人的应用 ID 对象 `membersAdded` `membersRemoved` 以确定已删除用户。
+从团队中删除机器人或将用户从添加自动程序的团队中删除时，将发送有效负载中对象 `conversationUpdate` `membersRemoved` 的事件。 Microsoft Teams还添加到 `eventType.teamMemberRemoved` `channelData` 对象中。 与 对象一样，应分析机器人的应用 ID 对象以确定 `membersAdded` `membersRemoved` 已删除用户。
 
 ### <a name="schema-example-team-member-removed"></a>架构示例：已删除团队成员
 
@@ -494,7 +494,7 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="schema-example-a-user-un-likes-a-message"></a>架构示例：用户取消喜欢消息
+### <a name="schema-example-a-user-un-likes-a-message"></a>架构示例：用户取消喜欢邮件
 
 ```json
 {

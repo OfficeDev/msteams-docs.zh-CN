@@ -4,12 +4,13 @@ author: KirtiPereira
 description: 使用自适应卡片生成选项卡
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 31954b046c550d34155bc7a9ec66cfc61b74ecf4
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 902b57145a2ba0919e810e6785f077e626949970
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345570"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156010"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -25,7 +26,7 @@ ms.locfileid: "58345570"
 
 自适应卡片选项卡是一种在卡片中生成选项卡的Teams。 你可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。使用自适应卡片呈现前端时，后端由机器人提供电源。 机器人负责接受请求，以及使用呈现的自适应卡片进行相应响应。
 
-可以使用现成的用户界面来构建选项卡， (UI) 桌面、Web 和移动设备上的本机构建基块。 本文帮助你了解对应用清单进行更改所需的更改。 本文还介绍了调用活动如何请求和发送带自适应卡片的选项卡信息，及其对任务模块工作流的影响。
+可以使用现成的用户界面构建选项卡， (UI) 桌面、Web 和移动设备上的本机构建基块。 本文帮助你了解对应用清单进行更改所需的更改。 本文还介绍了调用活动如何请求和发送带自适应卡片的选项卡信息，及其对任务模块工作流的影响。
 
 下图显示了桌面和移动版中具有自适应卡片的生成选项卡：
 
@@ -36,7 +37,7 @@ ms.locfileid: "58345570"
 在开始使用自适应卡片生成选项卡之前，你必须：
 
 * 熟悉自动程序[开发、](../../bots/what-are-bots.md)[自适应卡片](https://adaptivecards.io/)和 Teams[](../../task-modules-and-cards/task-modules/task-modules-bots.md)中的任务模块。
-* 使机器人在 Teams中运行，以用于开发。
+* 使机器人在 Teams中运行，以用于你的开发。
 
 ## <a name="changes-to-app-manifest"></a>对应用清单的更改
 
@@ -343,8 +344,8 @@ ms.locfileid: "58345570"
 
 1. 选择“**登录**”。 您将重定向到身份验证响应正文的 属性中提供的 `value` **身份验证** URL。
 1. 将出现一个弹出窗口。 此弹出窗口使用身份验证 URL 托管网页。
-1. 登录后，关闭窗口。 身份验证 **代码** 将发送到Teams客户端。
-1. 然后Teams客户端重新向服务提出请求，其中包括托管网页提供的 `tab/fetch` 身份验证代码。
+1. 登录后，关闭窗口。 身份验证 **代码** 将发送到 Teams 客户端。
+1. 然后Teams客户端重新发送对服务的请求，其中包括托管网页提供的 `tab/fetch` 身份验证代码。
 
 ### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` 身份验证数据流
 
@@ -424,7 +425,7 @@ ms.locfileid: "58345570"
 
 |**示例名称** | **说明** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| 在"工具"选项卡Teams自适应卡片 | Microsoft Teams选项卡示例代码，它演示如何在 Teams 中显示自适应卡片。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| 在"自适应卡片"选项卡Teams自适应卡片 | Microsoft Teams选项卡示例代码，它演示如何在 Teams 中显示自适应卡片。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 

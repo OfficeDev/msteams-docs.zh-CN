@@ -1,20 +1,20 @@
 ---
 title: 教程 - 使用工具创建第一Node.js
-description: 了解如何开始使用 Microsoft Teams 生成Node.js。
+description: 了解如何开始构建Microsoft Teams应用Node.js。
 keywords: nodejs app Studio node.js入门
 ms.topic: tutorial
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 5abde3b1866556ff20e9ee145e761915f88f7288c581556460f5e0e3f3386ecb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 67cbc37e156b19f9e059f434a7dbfab4b9932256
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704592"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155768"
 ---
-# <a name="build-your-first-microsoft-teams-app-using-nodejs"></a>使用应用生成Microsoft Teams应用Node.js
+# <a name="build-your-first-microsoft-teams-app-using-nodejs"></a>使用 Microsoft Teams 生成首个Node.js
 
-本教程介绍如何使用应用生成首个Microsoft Teams应用Node.js。 它还将引导你完成以下步骤： 
+在本教程中，你将了解如何使用 Microsoft Teams 生成首个Node.js。 它还将引导你完成以下步骤： 
 
 1. [准备环境](#prepare-environment)
 1. [获取先决条件](#GetPrerequisites)
@@ -118,7 +118,7 @@ npm start
 当 Hello-world 应用启动时，它显示在 `App started listening on port 3333` 终端窗口中。
 
 > [!NOTE]
-> 如果看到上述消息中显示的端口号不同，这是因为您设置了一个 PORT 环境变量。 您可以继续使用该端口，也可以将环境变量更改为 3333。
+> 如果看到上述消息中显示的端口号不同，这是因为您设置了 PORT 环境变量。 您可以继续使用该端口，也可以将环境变量更改为 3333。
 
 此时，你可以打开浏览器窗口并导航到以下 URL 以验证所有应用 URL 是否正在加载：
 
@@ -133,7 +133,7 @@ npm start
 
 请记住，Microsoft Teams应用程序是公开一个或多个功能的 Web 应用程序。 若要Teams加载应用，应用必须从 Internet 访问。 若要使你的应用从 Internet 上访问，你需要 *托管* 你的应用。
 
-对于本地测试，可以在本地计算机上运行应用，并创建一个使用 Web 终结点的隧道。 [ngrok](https://ngrok.com) 是一款免费工具，允许你这样做。 使用 *ngrok，* 你可以获取 Web 地址 `https://d0ac14a5.ngrok.io` ， (此 URL 只是一个) 。 你可以 [为环境下载](https://ngrok.com/download)*并安装 ngrok。* 请确保将其添加到 中的位置 `PATH` 。
+对于本地测试，可以在本地计算机上运行应用，然后使用 Web 终结点创建一个隧道。 [ngrok](https://ngrok.com) 是一款免费工具，允许你这样做。 使用 *ngrok，* 你可以获取 Web 地址 `https://d0ac14a5.ngrok.io` ， (此 URL 只是一个) 。 你可以 [为环境下载](https://ngrok.com/download)*并安装 ngrok。* 请确保将其添加到 中的位置 `PATH` 。
 
 安装后，可以打开一个新的终端窗口并运行以下命令以创建隧道。 此示例使用端口 3333，因此请务必在此处指定它：
 
@@ -141,16 +141,16 @@ npm start
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok* 将侦听来自 Internet 的请求，并将它们路由到在端口 3333 上运行的应用。 你可以打开浏览器并加载应用的 Hello 页面 `https://d0ac14a5.ngrok.io/hello` 来进行验证。 请务必使用 *ngrok* 在控制台会话中显示的转发地址，而不是此 URL。
+*Ngrok* 将侦听来自 Internet 的请求，并将它们路由到在端口 3333 上运行的应用。 你可以打开浏览器并加载应用的 hello 页面 `https://d0ac14a5.ngrok.io/hello` 来进行验证。 请务必使用 *ngrok* 在控制台会话中显示的转发地址，而不是此 URL。
 
 > [!NOTE]
 > 如果在以上构建和运行步骤中使用不同的端口 [](#build-and-run-the-sample)，请确保使用相同的端口号来设置 *ngrok* 隧道。
 > [!TIP]
 > 建议在不同的终端窗口中运行 *ngrok* 以保持其运行，而不会影响节点应用，稍后您可能必须停止、重新生成和重新运行节点应用。 *ngrok* 会话将在此窗口中返回有用的调试信息。
 
-存在允许永久名称的 *ngrok* 付费版本。 如果你使用免费版本，你的应用将仅在开发计算机上当前会话期间可用。 如果计算机关闭或进入睡眠状态，服务将不再可用。 在共享应用供其他用户进行测试时，请记住这一点。 如果必须重新启动服务，它将返回一个新地址，并且必须更新使用该地址的每一处地址。
+存在允许永久名称的 *ngrok* 付费版本。 如果你使用免费版本，你的应用将仅在开发计算机上当前会话期间可用。 如果计算机关闭或进入睡眠状态，服务将不再可用。 在共享应用供其他用户测试时，请记住这一点。 如果必须重新启动服务，它将返回一个新地址，并且必须更新使用该地址的每一处地址。
 
-记下应用的 URL。 稍后在使用 App studio 或开发人员门户向 Teams注册应用时，将需要此操作。
+记下应用的 URL。 以后在使用 App studio 或开发人员门户向 Teams注册应用时，将需要此操作。
 
 <a name="DeployToTeams"></a>
 
@@ -171,7 +171,7 @@ ngrok http 3333 -host-header=localhost:3333
 
 # <a name="developer-portal"></a>[开发人员门户](#tab/DP)
 
-**安装开发人员门户 (预览) 中Teams**
+**若要安装开发人员门户 (预览) 中Teams**
 
 1. 选择 **左侧** 栏底部的"应用"图标，然后搜索"开发人员 **门户"。**
 
@@ -181,7 +181,7 @@ ngrok http 3333 -host-header=localhost:3333
 
     <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
 
-1. 选择"应用"选项卡，然后选择 **"导入现有应用"。**
+1. 选择应用选项卡，然后选择 **导入现有应用**。
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
 
@@ -230,7 +230,7 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 MICROSOFT_APP_ID和MICROSOFT_APP_PASSWORD是自动程序 ID 和密码。
 NODE_DEBUG将在调试控制台中显示自动程序Visual Studio Code发生了什么。
-NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当本地运行应用时，它将在 src 文件夹的) 。
+NODE_CONFIG_DIR指向存储库根目录 (默认情况下，当应用在本地运行时，它会在 src 文件夹的) 中查找它。
 
 > [!Note]
 > 如果你尚未从本教程的前面部分停止 npm，则需要运行 ，以便Visual Studio Code正确拾取启动配置 `npm stop` 变量。
@@ -239,7 +239,7 @@ NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当本地运行应
 
 ## <a name="configure-the-app-tab"></a>配置"应用"选项卡
 
-将应用安装到团队后，你需要将其配置为显示内容。 转到团队中的频道，然后单击 **"+"** 按钮以添加新选项卡。然后，可以从 `Hello World` "添加 **选项卡"列表中选择** 。 然后，你将看到配置对话框。 此对话框将让你选择要在此通道中显示哪个选项卡。 选择选项卡并单击"保存 **"** 后，可以看到已加载选项卡 `Hello World` 的选项卡已选择：
+将应用安装到团队后，需要将其配置为显示内容。 转到团队中的频道，然后单击 **"+"** 按钮以添加新选项卡。然后，可以从 `Hello World` "添加 **选项卡"列表中选择** 。 然后，你将看到配置对话框。 此对话框将让你选择要在此通道中显示哪个选项卡。 选择选项卡并单击"保存 **"** 后，可以看到已加载选项卡 `Hello World` 的选项卡已选择：
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
@@ -261,7 +261,7 @@ NODE_CONFIG_DIR指向存储库根目录（默认情况下 (，当本地运行应
 
     <img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result1.png" />
 
-1. 选择随机文本之一，你将在底部看到格式化的卡片，并准备好发送自己的邮件：
+1. 选择随机文本之一，你将在底部看到格式化的卡片，并准备好发送你自己的邮件：
 
     <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 

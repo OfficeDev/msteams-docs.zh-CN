@@ -1,14 +1,14 @@
 ---
 title: 打包应用
-description: 了解如何打包应用Microsoft Teams测试、上传和应用商店发布。
-localization_priority: Normal
+description: 了解如何打包应用Microsoft Teams、上传和应用商店发布。
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: fc489f6f00a267cde3ca5fdc8852240ad2f07f4dcc7912cba9550728fdcd9402
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703884"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155924"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>创建Microsoft Teams应用包
 
@@ -34,9 +34,9 @@ ms.locfileid: "57703884"
 
 ### <a name="color-icon"></a>颜色图标
 
-图标的颜色版本在大多数应用场景中Teams必须为 192x192 像素。 图标符号 (96x96 像素) 可以是任何颜色，但它必须位于纯色或完全透明的方形背景上。
+在大多数情况下，图标的颜色版本Teams必须为 192x192 像素。 图标符号 (96x96 像素) 可以是任何颜色，但它必须位于纯色或完全透明的方形背景上。
 
-Teams自动种图标，以在多个方案中显示圆角的正方形，在机器人方案中显示六边形形状。 若要裁剪符号而不丢失任何细节，请在你的符号周围包含 48 像素的填充。
+Teams自动种图标，以在多个方案中显示圆角的正方形，以及自动程序方案中的六边形。 若要裁剪符号而不丢失任何细节，请在你的符号周围包含 48 像素的填充。
 
 :::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams颜色图标和设计指南。" border="false":::
 
@@ -44,10 +44,10 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，在机器
 
 大纲图标在两种方案中显示：
 
-* 当你的应用在使用中时，在应用栏的左侧应用栏上Teams。
+* 当你的应用在使用中且在应用左侧的应用栏上"被Teams。
 * 当用户固定你的应用的消息扩展时。
 
-图标必须为 32x32 像素。 它可以是白色且具有透明背景，或者使用白色背景 (不允许使用任何其他颜色) 。 大纲图标不应在符号周围有任何额外的填充。
+图标必须为 32x32 像素。 它可以是白色（带透明背景）或透明（使用白色背景 (不允许使用任何其他颜色) 。 大纲图标不应在符号周围有任何额外的填充。
 
 :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams大纲图标设计指南。" border="false":::
 
@@ -78,7 +78,7 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，在机器
 
 ### <a name="examples"></a>示例
 
-下面是应用图标在不同功能和上下文中Teams的方式。
+下面将说明应用图标在不同的Teams和上下文中的显示方式。
 
 #### <a name="personal-app"></a>个人应用
 

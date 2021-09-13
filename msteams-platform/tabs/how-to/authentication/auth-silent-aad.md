@@ -2,14 +2,14 @@
 title: 无提示的身份验证
 description: 描述无提示身份验证
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 身份验证 SSO 无提示 AAD
-ms.openlocfilehash: 1bdb75941f612be68ef0c6c2efa798a4888a88753434f1f3264243a135decc14
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 02078775ef3349ae5bb35e999e0f65587ab943d1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701882"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155281"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
@@ -20,14 +20,14 @@ AAD Azure Active Directory (中的无提示身份验证) 静默刷新身份验�
 
 如果希望代码完全在客户端运行，可以使用适用于 JavaScript 的 [AAD](/azure/active-directory/develop/active-directory-authentication-libraries) 身份验证库以静默方式获取 AAD 访问令牌。 如果用户最近登录过，他们绝不会看到弹出对话框。
 
-尽管 ADAL.js库已针对 AngularJS 应用程序进行了优化，但它也适用于纯 JavaScript 单页应用程序。
+即使 ADAL.js库针对 AngularJS 应用程序进行了优化，它也适用于纯 JavaScript 单页应用程序。
 
 > [!NOTE]
 > 目前，无提示身份验证仅适用于选项卡。 从自动程序登录时，它不起作用。
 
 ## <a name="how-silent-authentication-works"></a>无提示身份验证的工作原理
 
-该ADAL.js库为 OAuth 2.0 隐式授权流创建隐藏的 iframe。 但库指定 `prompt=none` ，因此 Azure AD 永远不会显示登录页面。 如果由于用户需要登录或授予对应用程序的访问权限而需要用户交互，AAD 会立即返回一个错误，ADAL.js报告给应用。 此时，你的应用可以显示登录按钮（如果需要）。
+该ADAL.js库为 OAuth 2.0 隐式授权流创建隐藏的 iframe。 但库指定 `prompt=none` ，因此 Azure AD 永远不会显示登录页面。 如果由于用户需要登录或授予对应用程序的访问权限而需要用户交互，AAD 将立即返回一个错误，ADAL.js报告给你的应用。 此时，你的应用可以显示登录按钮（如果需要）。
 
 ## <a name="how-to-do-silent-authentication"></a>如何执行无提示身份验证
 
@@ -37,7 +37,7 @@ AAD Azure Active Directory (中的无提示身份验证) 静默刷新身份验�
 
 ### <a name="include-and-configure-adal"></a>包括和配置 ADAL
 
-将 ADAL.js 库包括在选项卡页中，然后使用客户端 ID 和重定向 URL 配置 ADAL：
+将ADAL.js库包括在选项卡页中，然后使用客户端 ID 和重定向 URL 配置 ADAL：
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -107,7 +107,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ADAL.js登录回调页中调用来分析 AAD `AuthenticationContext.handleWindowCallback(hash)` 的结果。
 
-检查用户是否有效，并调用 `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 将状态报告给主选项卡内容页。
+检查用户是否有效，并调用 `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 将状态报告给主选项卡内容页面。
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
@@ -127,7 +127,7 @@ if (authContext.isCallback(window.location.hash)) {
 使用以下代码处理 AAD 身份验证中的注销流：
 
 > [!NOTE]
-> 当用户Teams或自动程序注销时，当前会话也将清除。
+> 虽然已注销Teams或自动程序，但当前会话也会清除。
 
 ```javascript
 function logout() {

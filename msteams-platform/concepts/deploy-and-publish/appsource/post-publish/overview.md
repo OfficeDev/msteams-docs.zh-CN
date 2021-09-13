@@ -2,35 +2,35 @@
 title: 维护和支持已发布的应用
 description: 在应用商店和 AppSource 上列出应用商店后Teams的考虑。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 80821eaad18998d087aeeb4f20db03ea02d9cab6d78d367add179b763e501249
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 82f85543fcf579f656704bc6c0faa47a322c2707
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704279"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155840"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布Microsoft Teams应用程序
 
-在应用商店中Microsoft Teams应用后，开始考虑如何继续维护应用并增加下载量和使用。
+在应用商店中Microsoft Teams应用后，开始考虑如何继续维护应用并增加下载量和使用量。
 
 ## <a name="publish-updates-to-your-app"></a>将更新发布到应用
 
-你可以向应用提交更改 (如合作伙伴中心中的新功能) 元数据。 这些更改需要新的审阅过程。
+你可以向应用提交更改 (如新功能，甚至是合作伙伴中心) 元数据。 这些更改需要新的审阅过程。
 
 发布更新时，请确保以下各项：
 
 * 不要更改应用 ID。
 * 递增应用的版本号。
-* 在合作伙伴中心中，不要选择" **添加新应用** "以执行更新。 改为转到应用页面。
+* 在合作伙伴中心中，不要选择添加新 **应用** 以执行更新。 改为转到应用页面。
 
 ### <a name="app-updates-requiring-user-consent"></a>需要用户同意的应用更新
 
 当用户安装你的应用时，他们必须向应用授予访问应用正常运行所需的服务和信息的权限。 在大多数情况下，用户只需执行一次此操作，并自动安装新版本的应用。
 
-但是，如果你对应用进行以下任何更改，则现有用户必须接受另一个权限请求才能安装更新：
+但是，如果对应用进行以下任何更改，现有用户必须接受其他权限请求才能安装更新：
 
 * 添加或删除机器人。
 * 更改机器人 ID。
@@ -44,11 +44,11 @@ ms.locfileid: "57704279"
 
 ## <a name="fix-issues-with-your-published-app"></a>修复已发布应用的问题
 
-Microsoft 对应用商店中列出的应用运行每日Teams测试。 如果发现你的应用的问题，我们会通过详细报告联系你，以了解如何重现这些问题以及解决这些问题的建议。 如果无法修复已规定时间线中的问题，你的应用一览可能会从应用商店中删除。
+Microsoft 对应用商店中列出的应用运行每日Teams测试。 如果发现应用问题，我们会通过详细报告联系你，以了解如何重现问题以及解决这些问题的建议。 如果无法修复已规定时间线中的问题，你的应用一览可能会从应用商店中删除。
 
 ## <a name="promote-your-app-on-another-site"></a>在另一个网站上推广你的应用
 
-当你的应用在应用商店Teams时，你可以创建一个链接来启动Teams并显示用于安装应用的对话框。 例如，可以在产品的营销页面上包含此链接和下载按钮。
+当你的应用在应用商店Teams时，你可以创建一个链接来启动Teams并显示一个对话框来安装你的应用。 例如，可以在产品的营销页面上包含此链接和下载按钮。
 
 使用应用 ID 附加的以下 URL 创建链接 `https://teams.microsoft.com/l/app/<your-app-id>` ：。
 

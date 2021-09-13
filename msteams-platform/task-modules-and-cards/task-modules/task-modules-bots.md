@@ -1,24 +1,24 @@
 ---
 title: 使用自动程序Microsoft Teams模块
 description: 如何将任务模块与自动程序Microsoft Teams，包括 Bot Framework 卡、自适应卡片和深层链接。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: 任务模块团队机器人
-ms.openlocfilehash: 7a4c5b0a3986f5a6a59064a05bcbc68587955effca0ea7fab80a7097a9732b6f
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a548f0d0ae3853f447ba55409bf9edbecced4e60
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701869"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155971"
 ---
 # <a name="use-task-modules-from-bots"></a>使用机器人的任务模块
 
-可以使用自适应卡片和自动程序框架Microsoft Teams、缩略图和自动程序连接器上的按钮从自动程序调用任务Office 365模块。 任务模块通常是比多个对话步骤更好的用户体验。 跟踪自动程序状态并允许用户中断或取消序列。
+可以使用自适应卡片和自动程序Microsoft Teams、缩略图和自动程序连接器上的按钮从自动程序调用任务Office 365模块。 任务模块通常是比多个对话步骤更好的用户体验。 跟踪自动程序状态并允许用户中断或取消序列。
 
 有两种调用任务模块的方法：
 
-* 一种新的调用消息：使用 Bot Framework 卡片的卡片操作或自适应卡片的卡片操作，以及 任务模块的 URL 或自适应卡片，从自动程序动态获取 `task/fetch` `invoke` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) `Action.Submit` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) `task/fetch` 。
-* 深层链接 URL：使用任务[](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)模块的深层链接语法，可以分别使用 Bot Framework 卡片的卡片操作或自适应卡片的卡片 `openUrl` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) `Action.OpenUrl` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)操作。 使用深层链接 URL，任务模块 URL 或自适应卡片正文已知以避免相对于 的服务器往返 `task/fetch` 。
+* 一种新的调用消息：将卡片操作用于 Bot Framework 卡片，或将卡片操作用于自适应卡片（使用 ，任务模块可以是 URL 或自适应卡片）从机器人动态 `task/fetch` `invoke` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) `Action.Submit` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) `task/fetch` 获取。
+* 深层链接 URL：使用任务[](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)模块的深层链接语法，可以分别使用 Bot Framework 卡片的卡片操作或自适应卡片的卡片 `openUrl` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) `Action.OpenUrl` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)操作。 使用深层链接 URL，任务模块 URL 或自适应卡片正文已知，以避免相对于 的服务器往返 `task/fetch` 行程。
 
 > [!IMPORTANT]
 > 每个 `url` 和 `fallbackUrl` 都必须实现 HTTPS 加密协议。
@@ -62,7 +62,7 @@ ms.locfileid: "57701869"
 
 当用户完成任务模块后，将结果提交回自动程序与使用选项卡的方式类似。 有关详细信息，请参阅 [提交任务模块的结果的示例](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module)。 存在以下一些区别：
 
-* HTML 或 JavaScript，即 ：在验证用户输入内容后，出于可读性目的，调用以下引用的 `TaskInfo.url` `microsoftTeams.tasks.submitTask()` SDK `submitTask()` 函数。 如果希望关闭任务模块Teams调用不带任何参数，但必须将对象或字符串传递给 `submitTask()` `submitHandler` 。 将它作为第一个参数传递 `result` 。 Teams调用 `submitHandler` 、 、 `err` 和 `null` `result` 是传递给 的对象或字符串 `submitTask()` 。 如果使用 参数 `submitTask()` 调用 `result` ，则必须传递 或 `appId` 字符串 `appId` 数组。 这Teams验证发送结果的应用是否与调用任务模块的应用相同。 自动程序会收到一 `task/submit` 条消息，其中包括 `result` 。 有关详细信息，请参阅 [和 `task/fetch` 邮件 `task/submit` 的有效负载](#payload-of-taskfetch-and-tasksubmit-messages)。
+* HTML 或 JavaScript，即 ：验证用户输入内容后，出于可读性目的，调用以下引用的 `TaskInfo.url` `microsoftTeams.tasks.submitTask()` SDK `submitTask()` 函数。 如果希望关闭任务模块，可以调用不带Teams参数，但必须将对象或字符串传递给 `submitTask()` `submitHandler` 。 将它作为第一个参数传递 `result` 。 Teams调用 `submitHandler` 、 、 `err` 和 `null` `result` 是传递给 的对象或字符串 `submitTask()` 。 如果使用 参数 `submitTask()` 调用 `result` ，则必须传递 或 `appId` 字符串 `appId` 数组。 这Teams验证发送结果的应用是否与调用任务模块的应用相同。 自动程序会收到一 `task/submit` 条消息，其中包括 `result` 。 有关详细信息，请参阅 [和 `task/fetch` 邮件 `task/submit` 的有效负载](#payload-of-taskfetch-and-tasksubmit-messages)。
 * 自适应卡片，即 ：当用户选择任何按钮时，用户填充的自适应卡片正文通过消息 `TaskInfo.card` `task/submit` 发送给 `Action.Submit` 机器人。
 
 下一节提供有关 灵活性的详细信息 `task/submit` 。
@@ -71,7 +71,7 @@ ms.locfileid: "57701869"
 
 当用户完成从自动程序调用的任务模块时，机器人始终会收到 `task/submit invoke` 一条消息。 回复邮件时有几种选项 `task/submit` ，如下所示：
 
-| HTTP 正文响应                      | 应用场景                                |
+| HTTP 正文响应                      | 方案                                |
 | --------------------------------------- | --------------------------------------- |
 | None 将忽略 `task/submit` 该消息 | 最简单的响应是没有任何响应。 用户完成任务模块后，自动程序无需响应。 |
 | <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams在弹出 `value` 消息框中显示 的值。 |
@@ -84,15 +84,15 @@ ms.locfileid: "57701869"
 
 ## <a name="payload-of-taskfetch-and-tasksubmit-messages"></a>任务/提取和任务/提交消息的有效负载
 
-本部分定义机器人接收或 Bot Framework 对象时接收的内容 `task/fetch` `task/submit` `Activity` 的架构。 下表提供了 和 消息的有效负载 `task/fetch` `task/submit` 的属性：
+本部分定义机器人接收或自动程序框架对象时接收的内容 `task/fetch` `task/submit` `Activity` 的架构。 下表提供了 和 消息的有效负载 `task/fetch` `task/submit` 的属性：
 
 | 属性 | 说明                          |
 | -------- | ------------------------------------ |
 | `type`   | 始终 `invoke` 为 。           |
 | `name`   | 是 `task/fetch` 或 `task/submit` 。 |
-| `value`  | 是开发人员定义的有效负载。 对象的结构与从对象 `value` 发送Teams。 但在这种情况下，情况有所不同。 它需要对来自自动程序框架的动态提取（即 和 `task/fetch` `value` 自适应卡片操作） `Action.Submit` 的支持，即 `data` 。 除了 或 中Teams外，需要一种与自动程序 `context` 通信 `value` 的方法 `data` 。<br/><br/>将"value"和"data"合并到父对象中：<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
+| `value`  | 是开发人员定义的有效负载。 对象的结构与从对象 `value` 发送Teams。 但在这种情况下，情况有所不同。 它需要对来自自动程序框架的动态提取（即 和 `task/fetch` `value` 自适应卡片操作） `Action.Submit` 的支持，即 `data` 。 除了 或 Teams 外，需要一种与自动程序通信 `context` `value` 的方法 `data` 。<br/><br/>将"value"和"data"合并到父对象中：<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
-下一节提供了一个在邮件中接收、响应 `task/fetch` `task/submit` 和调用Node.js。
+下一节提供了一个在邮件中接收、响应 `task/fetch` 和 `task/submit` 调用Node.js。
 
 ## <a name="example-of-taskfetch-and-tasksubmit-invoke-messages-in-nodejs-and-c"></a>任务/提取和任务/提交调用消息的示例Node.js和 C#
 

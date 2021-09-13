@@ -2,15 +2,15 @@
 title: 向邮件扩展添加身份验证
 author: surbhigupta
 description: 如何向消息传递扩展添加身份验证
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d1ebde822e1a0216edaa1b85ac6142234ae34b78
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c486ddcdda8ea23dc562f17ef42b3fc26a2c73c5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068923"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155760"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>向邮件扩展添加身份验证
 
@@ -18,7 +18,7 @@ ms.locfileid: "53068923"
 
 ## <a name="identify-the-user"></a>标识用户
 
-每个对服务的请求都包括用户 ID、显示名称Azure Active Directory对象 ID。
+每个对服务的请求都包括用户 ID、显示名称和Azure Active Directory ID。
 
 ```json
 "from": {
@@ -28,15 +28,15 @@ ms.locfileid: "53068923"
 },
 ```
 
-和 `id` `aadObjectId` 值保证经过身份验证的用户Teams。 它们用作在服务中查找凭据或任何缓存状态的密钥。 此外，每个请求都包含Azure Active Directory租户 ID，用于标识用户的组织。 如果适用，请求还包含发起请求的团队 ID 和频道 ID。
+和 `id` `aadObjectId` 值保证经过身份验证的用户Teams。 它们用作在服务中查找凭据或任何缓存状态的密钥。 此外，每个请求都包含Azure Active Directory的租户 ID，用于标识用户的组织。 如果适用，请求还包含发起请求的团队 ID 和频道 ID。
 
 ## <a name="authentication"></a>身份验证
 
 如果服务需要用户身份验证，则用户必须先登录，然后才能使用消息传递扩展。 身份验证步骤类似于自动程序或选项卡的步骤。顺序如下所示：
 
 1. 用户发出查询，或者默认查询将自动发送到您的服务。
-1. 你的服务通过检查用户 ID 来检查用户Teams身份验证。
-1. 如果用户未经过身份验证，请通过建议的操作（包括身份验证 `auth` `openUrl` URL）发送回响应。
+1. 服务通过检查用户 ID 来检查用户Teams身份验证。
+1. 如果用户未经过身份验证，请发送回包含建议操作（包括身份验证 `auth` `openUrl` URL）的响应。
 1. 客户端Microsoft Teams给定身份验证 URL 启动托管网页的对话框。
 1. 用户登录后，应关闭窗口，并将身份验证代码发送到 Teams客户端。
 1. 然后Teams客户端向服务重新提供查询，其中包括步骤 5 中传递的身份验证代码。
@@ -67,11 +67,11 @@ ms.locfileid: "53068923"
 ```
 
 > [!NOTE]
-> 若要在弹出窗口中托管登录体验Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
+> 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流程
 
-登录体验必须响应迅速且适合弹出窗口。 它应与使用消息传递[Microsoft Teams JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 集成。
+登录体验必须响应迅速且适合弹出窗口。 它应与使用消息Microsoft Teams [JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)集成。
 
 与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
 

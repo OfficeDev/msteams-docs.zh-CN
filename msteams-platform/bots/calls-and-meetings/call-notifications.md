@@ -2,23 +2,23 @@
 title: 来电通知
 description: 有关处理来自传入呼叫的通知的详细技术信息
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 调用呼叫通知回调区域相关性
 ms.date: 04/02/2019
-ms.openlocfilehash: 5c24aa83b26999070f65978fce9b19139f2445955acb8f5aa7b5c0a46255c927
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: eb05499b32a0e62b9aa5b073770632c081b8526a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705043"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155303"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 
-在[注册呼叫和会议机器人以使用](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)Microsoft Teams 时，会提到用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
+在[注册呼叫和会议机器人以使用 Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)时，会提到用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
 
 ## <a name="protocol-determination"></a>协议确定
 
-传入通知以旧格式提供，用于与以前的 Skype[协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将呼叫转换为 Microsoft Graph协议，机器人必须确定通知是否采用旧格式并提供以下响应：
+传入通知以旧格式提供，用于与以前的 Skype[协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将呼叫转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式并提供以下响应：
 
 ```http
 HTTP/1.1 204 No Content
@@ -41,7 +41,7 @@ Location: your-new-location
 
 使机器人能够使用应答 API 应答 [传入](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) 呼叫。 可以指定 以处理 `callbackUri` 此特定调用。 这适用于特定分区处理呼叫且您希望在 中嵌入此信息以路由到正确实例的有状态 `callbackUri` 实例。
 
-下一节将提供有关通过检查张贴到 Webhook 的令牌来验证回调的详细信息。
+下一节将提供有关通过检查张贴到 Webhook 的令牌对回调进行身份验证的详细信息。
 
 ## <a name="authenticate-the-callback"></a>对回调进行身份验证
 
@@ -87,7 +87,7 @@ OAuth 令牌具有以下值，由 Skype：
 * `tid` 是租户的租户 id Contoso.com。
 * `iss` 是令牌颁发者 `https://api.botframework.com` 。
 
-对于代码处理，Webhook 必须验证令牌，确保令牌尚未过期，并检查它是否已由发布的 OpenID 配置签名。 在接受回调请求之前，还必须检查 aud 是否与应用 ID 匹配。
+对于代码处理，webhook 必须验证令牌，确保令牌尚未过期，并检查它是否已由发布的 OpenID 配置签名。 在接受回调请求之前，还必须检查 aud 是否与应用 ID 匹配。
 
 有关详细信息，请参阅验证 [入站请求](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
 

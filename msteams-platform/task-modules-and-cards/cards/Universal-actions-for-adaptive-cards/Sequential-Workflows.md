@@ -3,13 +3,13 @@ title: 顺序工作流
 description: 使用通用操作的顺序工作流的示例
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: c3065080a0a470104fa2b7c06c9b0c8105a829a6
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705517"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155720"
 ---
 # <a name="sequential-workflows"></a>顺序工作流
 
@@ -75,12 +75,12 @@ ms.locfileid: "57705517"
 }
 ```
 
-`Action.Execute`调用机器人可以返回自适应卡片作为响应，这将替换现有Teams。
-以下示例提供了机器人在确认食物或食物选择或订单时返回内容：
+`Action.Execute`调用自动程序可以返回自适应卡片作为响应，这将替换 Teams。
+以下示例提供机器人在确认食物或食物选择或订单时返回内容：
 
-* 在从卡片 1 选择食物时，机器人可以返回一张卡片，用于选择卡片 2。
+* 在从卡片 1 选择食物时，自动程序可以返回一张卡片，用于选择卡 2。
 * 在从卡片 2 选择时，自动程序可以返回一个订单确认卡，即卡片 3。
-* 在从卡片 3 确认订单后，自动程序可以返回已确认订单的卡片，即卡片 4。
+* 在从卡 3 确认订单后，自动程序可以返回已确认订单的卡片，即卡片 4。
 
 ## <a name="invoke-request-received-on-bot-side"></a>调用在自动程序端收到的请求
 
@@ -133,6 +133,6 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## <a name="see-also"></a>另请参阅
 
-* [用户中的自适应卡片Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [自适应卡片在Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)

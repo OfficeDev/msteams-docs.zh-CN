@@ -3,14 +3,14 @@ title: 自动程序消息格式
 description: 介绍自动程序消息格式的详细信息
 keywords: teams 方案频道对话机器人消息
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: a9566331b259ba77f6770ff6394e8a788769af5d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: e737cd42d2aa00e3e4f302b4917fef67adaa5645
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566472"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155843"
 ---
 # <a name="message-formatting-for-bots"></a>自动程序的邮件格式
 
@@ -20,7 +20,7 @@ ms.locfileid: "52566472"
 
 Microsoft Teams支持以下格式选项：
 
-| TextFormat 值 | 描述 |
+| TextFormat 值 | 说明 |
 | --- | --- |
 | plain | 文本应视为原始文本，而未应用任何格式。 |
 | markdown | 文本应视为 Markdown 格式，并在适当时呈现在频道上;请参阅 [格式化支持样式](#formatting-text-content) 的文本内容。 |
@@ -74,6 +74,6 @@ Microsoft Teams一部分 Markdown 和 XML (HTML) 格式标记。
 | 超链接                 | ✔ | ✔ | ✔ |
 | 图像链接                | ✔ | ✔ | ✔ |
 
-### <a name="cards"></a>卡
+### <a name="cards"></a>卡片
 
 有关详细信息，请参阅 [卡片格式，](~/task-modules-and-cards/cards/cards-format.md) 获取卡片支持。

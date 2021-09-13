@@ -2,15 +2,15 @@
 title: 响应任务模块提交操作
 author: surbhigupta
 description: 介绍如何从消息传递扩展操作命令响应任务模块提交操作
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 9d0690a620efc3e658372cfaecf31504787b3d71
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068955"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156025"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -30,7 +30,7 @@ ms.locfileid: "53068955"
 
 对于身份验证或配置，在用户完成此过程后，原始调用将重新发至 Web 服务。 下表根据消息扩展的调用位置显示哪些类型的响应 `commandContext` 可用： 
 
-|响应类型 | 撰写 | 命令栏 | 消息 |
+|响应类型 | 撰写 | 命令栏 | 邮件 |
 |--------------|:-------------:|:-------------:|:---------:|
 |卡片响应 | ✔ | ✔ | ✔ |
 |另一个任务模块 | ✔ | ✔ | ✔ |
@@ -38,7 +38,7 @@ ms.locfileid: "53068955"
 | 无响应 | ✔ | ✔ | ✔ |
 
 > [!NOTE]
-> * 当你选择 **"Action.Submit** through ME cards"时，它会发送名称为 **composeExtension** 的 invoke 活动，其中值等于常规有效负载。
+> * 当你选择 **"Action.Submit** through ME cards"时，它会发送名称为 **composeExtension** 的调用活动，其中值等于常规有效负载。
 > * 选择 **"Action.Submit** through conversation"时，将收到名称为 **onCardButtonClicked** 的邮件活动，其中值等于常规有效负载。
 
 ## <a name="the-submitaction-invoke-event"></a>submitAction 调用事件
@@ -201,9 +201,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 ## <a name="bot-response-with-adaptive-card"></a>使用自适应卡片的自动程序响应
 
 > [!NOTE]
-> 使用自适应卡片获取自动程序响应的先决条件是，必须将对象添加到应用清单，并定义自动程序 `bot` 所需的作用域。 使用与自动程序的邮件扩展相同的 ID。
+> 使用自适应卡片获取机器人响应的先决条件是，必须将对象添加到应用清单，并定义自动程序 `bot` 所需的作用域。 使用与自动程序的邮件扩展相同的 ID。
  
-您还可以通过自动程序将带自适应卡片的消息插入 `submitAction` 频道来响应 。 用户可以在提交邮件之前预览邮件。 在创建自适应卡片响应之前收集用户的信息，或者当你在某人与之交互后更新卡片时，这非常有用。 
+您还可以通过自动程序将带自适应卡片的消息插入 `submitAction` 频道来响应 。 用户可以在提交邮件之前预览邮件。 在创建自适应卡片响应之前从用户收集信息，或在某人与之交互后更新卡片时，这非常有用。 
 
 以下方案显示应用 Polly 如何配置轮询，而不在频道对话中包括配置步骤：
 
@@ -329,7 +329,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="the-botmessagepreview-send-and-edit-events"></a>botMessagePreview 发送和编辑事件
 
-消息扩展必须响应两种新类型的调用，其中 `composeExtension/submitAction` 和 `value.botMessagePreviewAction = "send"` `value.botMessagePreviewAction = "edit"` 。
+消息扩展必须响应两种新调用类型，其中 `composeExtension/submitAction` 和 `value.botMessagePreviewAction = "send"` `value.botMessagePreviewAction = "edit"` 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -540,11 +540,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 在机器人代表用户发送邮件的情况下，将消息归为该用户有助于参与，并展示更自然的交互流。 此功能允许你将来自自动程序的邮件属性属性给代表其发送该邮件的用户。
 
-在下图的左侧是自动程序发送的无用户属性的卡片消息，右侧是自动程序发送的具有用户属性的卡片。
+在下图的左侧是无用户属性的自动程序发送的卡片消息，右侧是机器人发送的具有用户属性的卡片。
 
 ![用户属性自动程序](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
-若要在团队中使用用户属性，必须在发送到团队的有效负载中添加 `OnBehalfOf` mention `ChannelData` `Activity` Teams。
+若要在团队中使用用户属性，必须在发送到团队的有效负载中添加 `OnBehalfOf` mention `ChannelData` `Activity` 实体Teams。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
 

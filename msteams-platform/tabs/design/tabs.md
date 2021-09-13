@@ -1,16 +1,16 @@
 ---
 title: 适用于桌面、Web 和移动的设计选项卡
-description: 了解如何为桌面、Teams和移动设备设计一个自定义选项卡，以及如何获取 Microsoft Teams UI 工具包。
+description: 了解如何为桌面、Teams和移动设备设计 Teams 选项卡，以及如何获取 Microsoft Teams UI 工具包。
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a949687ee53186b4449ad086b4db6c89cc151995
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: a33bc00f26d9a296d4b76e3885cd12d772e8f8e8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408627"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155285"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>设计选项卡Microsoft Teams
 
@@ -25,15 +25,15 @@ ms.locfileid: "58408627"
 
 ## <a name="add-a-tab"></a>添加选项卡
 
-你可以从 AppSource Teams添加 (，) 以下上下文之一：
+你可以从 AppSource Teams应用商店 (选项卡) 以下上下文之一：
 
 * 聊天
 * 频道
-* 会议 (、会议期间或之后) 
+* 会议 (会议之前、期间或之后) 
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
-用户可以通过选择频道中的"更多"按钮来访问选项卡 (例如) 或添加这些选项卡的聊天。
+用户可以通过选择频道中的"更多"按钮来访问选项卡 (下面的示例) 添加选项卡或聊天。
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="示例显示正在频道中添加的移动选项卡。" border="false":::
 
@@ -84,7 +84,7 @@ ms.locfileid: "58408627"
 
 选项卡提供了全屏 Web 体验，Teams显示协作内容（如任务板和仪表板）和重要信息。
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="示例显示具有任务板的移动选项卡。" border="false":::
 
@@ -94,19 +94,19 @@ ms.locfileid: "58408627"
 
 ### <a name="anatomy-tab"></a>结构：选项卡
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="显示选项卡的 UI 分析的图示。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |1|**选项卡名称**：选项卡的导航标签。|
-|2|**选项卡聊天**：打开允许用户在内容旁进行对话的聊天。|
+|2|**选项卡聊天**：打开允许用户在内容旁边进行对话的聊天。|
 |3|**webview：** 显示应用内容。|
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="显示选项卡的 UI 分析的图示。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="此图显示了选项卡的 UI 结构。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
@@ -134,7 +134,7 @@ ms.locfileid: "58408627"
 
 用户一旦添加了新选项卡，就可以自动发布至频道或聊天。这不仅向团队成员通知新内容并提供指向选项卡的链接，还允许用户开始讨论选项卡。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="示例显示在频道线程中讨论的移动选项卡。" border="false":::
 
@@ -146,7 +146,7 @@ ms.locfileid: "58408627"
 
 用户可以在正在查看的选项卡内容旁边进行对话。 在桌面上，聊天将打开到应用内容的一侧。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="示例显示具有上下文内聊天区域的移动选项卡。" border="false":::
 
@@ -164,7 +164,7 @@ ms.locfileid: "58408627"
 
 ### <a name="anatomy-tab-menu"></a>结构：选项卡菜单
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="显示移动选项卡菜单的 UI 分析的图示。" border="false":::
 
@@ -172,7 +172,7 @@ ms.locfileid: "58408627"
 |----------|-----------|
 |1|**在浏览器中打开**：在设备的默认浏览器中打开应用。|
 |2|**复制链接**：用户可以复制并共享指向选项卡的链接。|
-|3|**设置： (** 添加) 后修改选项卡的设置的可选选项。|
+|3|**设置**： (可选) 添加后修改选项卡的设置。|
 |4 |**重命名**：用户可以为选项卡指定对频道、聊天或会议有意义的名称。|
 |5 |**删除**：从频道、聊天或会议中删除选项卡。|
 
@@ -188,7 +188,7 @@ ms.locfileid: "58408627"
 
 ## <a name="tab-notifications-and-deep-linking"></a>选项卡通知和深层链接
 
-你可以向选项卡发送包含深层链接的邮件。例如，卡片显示用户可选择在选项卡中查看整个 Bug 的 Bug 数据的摘要。发送有关选项卡活动的消息可提升感知度，而无需明确通知 (，即无噪音活动) 。 如果需要，@mention特定用户。
+你可以向选项卡发送包含深层链接的邮件。例如，卡片显示用户可选择在选项卡中查看整个 Bug 的 Bug 数据的摘要。发送有关选项卡活动的消息可提升感知度，而无需明确通知 (，即无干扰活动) 。 如果需要，@mention特定用户。
 
 通过以下方法之一通知用户选项卡活动：
 

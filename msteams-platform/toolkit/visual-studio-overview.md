@@ -1,16 +1,16 @@
 ---
 title: 使用 Teams Toolkit 和 Visual Studio
-description: 开始使用自定义工具直接在Visual Studio生成出色的自定义Microsoft Teams Toolkit
+description: 开始使用自定义工具直接在Visual Studio生成出色的Microsoft Teams Toolkit
 keywords: teams visual studio 工具包
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: f72b8d723b5511e6e68a94617e256e280ce2ed50ee33544ccb3c8c237ddd9832
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4f7da132f8cc63c65936c7c879226b04c87b3beb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701806"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155268"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>使用 Teams Toolkit 和 Visual Studio
 
@@ -26,7 +26,7 @@ ms.locfileid: "57701806"
 
 ## <a name="install-the-teams-toolkit"></a>安装Teams Toolkit
 
-可以从 Microsoft Teams Toolkit Visual Studio 应用商店或直接从 Visual Studio[内的](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit)"扩展"菜单中下载Visual Studio。 
+可以从 Microsoft Teams Toolkit 应用商店Visual Studio"扩展"菜单中Visual Studio"扩展"菜单[](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit)下载Visual Studio。 
 
 ## <a name="use-the-toolkit"></a>使用工具包
 
@@ -42,14 +42,14 @@ ms.locfileid: "57701806"
 2. 选择 **创建新项目**。
 3. 搜索 **"Microsoft Teams应用"，** 然后选择"下一 **步"。**
 4. 在"**配置新项目"中**，输入Project **名称、****位置** 和 **解决方案名称**。
-5. 选择 **"** 下一步"输入应用的名称。
-6. 在"其他信息"屏幕中，输入应用程序名称和开发人员 **或公司名称**，Teams应用。
+5. 选择 **"** 下一步"以输入应用的名称。
+6. 在"附加信息"屏幕中 **，输入应用程序** 名称和开发人员 **或公司名称**，Teams应用。
 
 ## <a name="configure-your-app"></a>配置应用程序
 
 应用程序的核心是Teams三个组件：
 
-- The Microsoft Teams client (web， desktop or mobile) where users interact with your app.
+- Microsoft Teams客户端 (Web、桌面或移动) 用户与你的应用交互。
 - 响应对网站中显示的内容的请求的服务器Teams。 例如，HTML 选项卡内容或自动程序自适应卡片。
 - 应用Teams包包含三个文件：
 
@@ -64,7 +64,7 @@ ms.locfileid: "57701806"
 > [!NOTE]
 >如果尚未登录，则必须登录到 Microsoft 365 帐户，以继续进行开发过程。
 >
-> 如果你没有帐户，Microsoft 365注册开发人员计划[Microsoft 365订阅。](https://developer.microsoft.com/microsoft-365/dev-program) 它是免费的 90 天，只要你使用它进行开发活动，它将续订。 如果你有一个 Visual Studio Enterprise 或 Professional 订阅，这两个计划均Microsoft 365[免费](https://aka.ms/MyVisualStudioBenefits)开发人员订阅，在订阅生命周期内Visual Studio有效。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
+> 如果你没有帐户，Microsoft 365注册开发人员计划Microsoft 365[订阅](https://developer.microsoft.com/microsoft-365/dev-program)。 它是免费的 90 天，只要你使用它进行开发活动，它将续订。 如果你有一个 Visual Studio Enterprise 或 Professional 订阅，这两个计划Microsoft 365[免费](https://aka.ms/MyVisualStudioBenefits)开发人员订阅，在订阅生命周期内Visual Studio有效。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
 
 ### <a name="configuration-steps"></a>配置步骤
 
@@ -82,7 +82,7 @@ ms.locfileid: "57701806"
 
 ## <a name="publish-your-app-to-teams"></a>将应用发布到 Teams
 
-在[](https://dev.teams.microsoft.com/home)Teams 开发人员门户中，你可以将应用上载到团队、将应用提交到组织中用户的公司自定义应用商店，或将应用提交到所有 Teams 用户的应用源。
+在[](https://dev.teams.microsoft.com/home)Teams 开发人员门户中，你可以将应用上载到团队、将应用提交到组织中用户的公司自定义应用商店，或将应用提交到所有 Teams 应用程序源。
 
 - IT 管理员将审阅这些提交。
 - 你可以返回到发布 **页面** ，检查你的提交状态，并了解你的应用是否已被 IT 管理员批准或拒绝。这同样也是你可以向应用提交更新或取消任何当前处于活动状态的提交的地方。

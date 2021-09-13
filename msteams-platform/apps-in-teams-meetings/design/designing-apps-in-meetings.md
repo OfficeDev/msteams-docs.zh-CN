@@ -1,16 +1,16 @@
 ---
 title: 设计会议扩展
 author: heath-hamilton
-description: 了解如何在会议Teams应用并获取 Microsoft Teams UI 工具包。
+description: 了解如何在会议Teams设计应用并获取 Microsoft Teams UI 工具包。
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7da7d6c23f0f66fd73e976fb92d1883f9befd0d2
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528913"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155385"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计会议Microsoft Teams扩展
 
@@ -35,9 +35,9 @@ ms.locfileid: "58528913"
 
 ### <a name="add-during-a-meeting"></a>会议期间添加
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
-例如，在桌面 (添加应用后，) 选择"更多"，即可在会议中 **访问该应用** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
+例如，在桌面 (添加应用后) ，用户可以通过选择"更多"来访问 **会议中的应用** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="示例演示如何在移动会议期间添加会议扩展。" border="false":::
 
@@ -55,7 +55,7 @@ ms.locfileid: "58528913"
 
 ### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>结构：会议 (会议之前和之后) 
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="示例显示会议之前和之后的会议选项卡的结构结构分析。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="示例显示会议之前和之后的会议选项卡的结构结构。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
@@ -86,7 +86,7 @@ ms.locfileid: "58528913"
 * 为会议参与者创建投票、调查或任务项。
 * 显示与会议相关的备注。 例如，有关销售线索的信息。
 
-#### <a name="mobile"></a>移动
+#### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="示例演示如何在移动设备上的&quot;会议&quot;选项卡中显示投票内容。" border="false":::
 
@@ -131,18 +131,18 @@ ms.locfileid: "58528913"
 
 ## <a name="use-an-in-meeting-dialog"></a>使用会议内对话框
 
-会议内对话框显示在会议Teams上。 它们需要用户的注意、确认或交互，但很细微，不会中断会议。 应谨慎使用这些模式，并针对轻型和面向任务的场景。
+会议中的对话框显示在会议Teams上。 它们需要用户的注意、确认或交互，但很细微，不会中断会议。 应谨慎使用这些模式，并针对轻型和面向任务的场景。
 
 ### <a name="use-cases"></a>用例
 
-会议内对话框由用户触发 (，例如会议组织者) 可能希望参与者：
+会议内对话框由以下用户触发 (例如会议组织者) 可能希望参与者：
 
 * 提供简短反馈
 * 参加简短调查或投票
 * 提交审批
 * 获取提醒
 
-### <a name="mobile"></a>移动
+### <a name="mobile"></a>移动设备
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="示例演示如何在移动设备上使用会议内对话框。" border="false":::
 
@@ -258,7 +258,7 @@ ms.locfileid: "58528913"
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="显示关闭侧面板时共享会议阶段响应的图像。" border="false":::
 
-#### <a name="meeting-stage-with-side-panel"></a>带侧 (面板的会议) 
+#### <a name="meeting-stage-with-side-panel"></a>使用侧 (面板的会议) 
 
 侧面板打开时，默认情况下，会议阶段为 918x540 像素，并且至少为 472x382 像素。
 
@@ -309,7 +309,7 @@ ms.locfileid: "58528913"
 
 #### <a name="dont-include-competing-surfaces"></a>不要：包括竞争面
 
-你的应用应仅要求用户一次专注于单个图面，无论它是在阶段进行协作还是响应会议内对话框。  (注意：当你的应用处于阶段时，你无法保留由其他应用触发的)  
+你的应用应仅要求用户一次专注于单个图面，无论它是在阶段进行协作还是响应会议内对话框。  (注意：当应用处于阶段时，无法保留由其他应用触发的)  
 
    :::column-end:::
 :::row-end:::
@@ -370,7 +370,7 @@ ms.locfileid: "58528913"
 
 #### <a name="dont-left-or-center-align-actions"></a>不：左对齐或居中对齐操作
 
-这偏离了用于Teams控件放置的标准模式，并且可能会与顶部对话框后面的对话框冲突。
+这偏离对话框中Teams控件放置的标准模式，并且可能会与顶部对话框后面的对话框冲突。
 
    :::column-end:::
 :::row-end:::
@@ -397,7 +397,7 @@ ms.locfileid: "58528913"
 
 #### <a name="dont-scroll-horizontally"></a>请勿：水平滚动
 
-在包括会议环境或会议环境在内的环境中，水平滚动Teams (预期) 。
+在会议环境中，水平滚动不是预期Teams (包括会议) 。
 
    :::column-end:::
 :::row-end:::
@@ -445,7 +445,7 @@ Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪
 
 #### <a name="dont-use-unfamiliar-colors"></a>请勿：使用不熟悉的颜色
 
-与会议环境发生冲突的颜色可能会分散注意力，对会议环境Teams。 了解颜色渐变[Teams，](https://developer.microsoft.com/fluentui#/styles/web/colors/products)包括调用中性主题。
+与会议环境发生冲突的颜色可能会分散注意力，对会议环境Teams。 了解颜色渐变Teams，包括调用[](https://developer.microsoft.com/fluentui#/styles/web/colors/products)中性主题。
 
    :::column-end:::
 :::row-end:::
@@ -475,11 +475,11 @@ Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="显示会议选项卡 (模式或) 模块的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="示例显示会议 (中的模式) 模块或任务模块。" border="false":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>警告：避免会议内选项卡中的模式
 
-模式 (也称为任务模块) 在已经较窄的"会议"选项卡中可能会封装和遮盖内容。
+模式 (也称为任务模块) 在已经较窄的会议内选项卡中可能会封装和遮盖内容。
 
    :::column-end:::
 :::row-end:::

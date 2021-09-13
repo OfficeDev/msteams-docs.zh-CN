@@ -5,16 +5,17 @@ description: 快速创建显示"Hello，World！"的 Microsoft Teams 应用。 �
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 7d043c904521f33946510de60f539dc27dd6b687bc74bbb89aa35f9d267fe8ef
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: cfe3dc5f303de9035b363f1e3b8224456ff6588e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707072"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155796"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>使用 React 构建和运行第一个 Microsoft Teams 应用
 
-本教程介绍如何在 React 中创建新的 Microsoft Teams 应用，该应用实现简单的个人应用，以从 Microsoft Graph。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 Azure。
+在本教程中，你将了解如何在 Microsoft Teams 中创建新的 React 应用，该应用实现简单的个人应用以从 Microsoft Graph。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 Azure。
 
 构建的应用将显示当前用户的基本用户信息。 授予权限后，应用会作为当前用户连接到 Microsoft Graph 以获取完整配置文件。
 
@@ -64,7 +65,7 @@ ms.locfileid: "57707072"
 
 1. 为应用输入合适的名称，如 `helloworld`。 应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
 
-   你的应用Teams数秒钟内创建。
+   应用程序Teams数秒钟内创建。
 
 # <a name="command-line"></a>[命令行](#tab/cli)
 
@@ -91,7 +92,7 @@ CLI 会提出一些问题来引导创建项目。 每个问题将告诉你如何
 
 若要暂时跳过此部分，可以 [在本地运行应用](#run-your-app-locally)。
 
-在Teams Toolkit项目后，你拥有组件来构建基本个人应用Teams。 项目目录和文件显示在 Visual Studio 代码的资源管理器区域中。
+在Teams Toolkit项目后，你具有用于生成基本个人应用Teams。 项目目录和文件显示在 Visual Studio 代码的资源管理器区域中。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="显示 Visual Studio Code 中个人应用的应用项目文件的屏幕截图。":::
 
@@ -135,7 +136,7 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
-1. Web 浏览器开始运行该应用。 如果系统提示打开Teams，请选择 **"取消**"以保留在浏览器中。 系统有时还可能会提示你切换到Teams桌面;选择Teams Web 应用。
+1. Web 浏览器开始运行该应用。 如果系统提示打开Teams，请选择 **"取消**"以保留在浏览器中。 系统也可能提示你在其他时间切换到Teams桌面;选择Teams Web 应用。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
@@ -158,7 +159,7 @@ Teams 运行时需要几个选项卡，包括隐私声明、使用条款和配�
 * *在应用中* 旁加载Teams。
 * 使用 Azure 函数核心工具 启动本地 [运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。
 * 在本地托管应用程序前端启动。
-* 使用Microsoft Teams命令在 Web 浏览器中启动 Teams，以从 旁加载应用程序 `https://localhost:3000/tab` 。 这是在应用程序清单中注册的 URL。
+* 使用命令Microsoft Teams启动 Web 浏览器中的 Teams，以从 旁加载应用程序 `https://localhost:3000/tab` 。 这是在应用程序清单中注册的 URL。
 
 </details>
 

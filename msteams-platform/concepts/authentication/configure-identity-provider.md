@@ -2,14 +2,14 @@
 title: 配置 OAuth 2.0 标识提供程序
 description: 介绍如何以 Azure AD 为焦点配置标识提供程序
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 身份验证 AAD oauth 标识提供程序
-ms.openlocfilehash: f41e03717c24095b527adc471a89f8aee5de3a3ddba8773376fca49ee12bbbcc
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a7630dce11e052eadf39e5bd695bae1b8411f33d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705564"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155888"
 ---
 # <a name="configure-identity-providers"></a>配置标识提供程序
 

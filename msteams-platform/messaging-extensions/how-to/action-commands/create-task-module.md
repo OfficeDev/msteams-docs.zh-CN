@@ -1,16 +1,16 @@
 ---
 title: 创建并发送任务模块
 author: surbhigupta
-description: 如何处理初始调用操作，以及如何使用操作消息扩展命令中的任务模块进行响应
-localization_priority: Normal
+description: 如何处理初始调用操作，以及使用操作消息扩展命令中的任务模块进行响应
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c93b660e3187328f022be5108456d9e1064cd557
-ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
+ms.openlocfilehash: 891608b2346e09570ba88ee2b868177e1aca619c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "53534605"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155265"
 ---
 # <a name="create-and-send-the-task-module"></a>创建并发送任务模块
 
@@ -32,7 +32,7 @@ ms.locfileid: "53534605"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
+|`channelData.channel.id`| 如果在 (通道中提出请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
 |`value.commandId` | 包含已调用的命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须是 `compose` 。 |
@@ -232,7 +232,7 @@ ms.locfileid: "53534605"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
+|`channelData.channel.id`| 如果在 (通道中提出请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
 |`channelData.source.name`| 调用任务模块的源名称。 |
 |`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
@@ -242,7 +242,7 @@ ms.locfileid: "53534605"
 
 ### <a name="example"></a>示例
 
-从频道调用任务模块时的有效负载活动属性 (以下示例) 文章时的有效负载活动属性：
+从频道调用任务模块时的有效负载活动属性 (以下示例) 新文章：
 
 ```json
 {
@@ -298,7 +298,7 @@ ms.locfileid: "53534605"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
+|`channelData.channel.id`| 如果在 (通道中提出请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
 |`channelData.source.name`| 调用任务模块的源名称。 |
 |`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
@@ -308,7 +308,7 @@ ms.locfileid: "53534605"
 
 ### <a name="example"></a>示例
 
-从频道调用任务模块时的有效负载活动属性 (以下示例) 主题响应：
+从频道调用任务模块时的有效负载活动属性 (对线程) 如以下示例所示：
 
 ```json
 {
@@ -821,7 +821,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="create-a-task-module-with-an-embedded-web-view"></a>使用嵌入式 Web 视图创建任务模块
 
-使用嵌入的 Web 视图时，必须使用对象（该对象包含要加载的 Web 表单 `task` `value` 的 URL）进行响应。 要加载的任何 URL 的域必须包含在应用清单的数组 `validDomains` 中。 有关生成嵌入式 Web 视图的信息，请参阅 [任务模块文档](~/task-modules-and-cards/what-are-task-modules.md)。 
+使用嵌入式 Web 视图时，必须使用对象响应包含要加载的 Web 表单 `task` `value` 的 URL 的对象。 要加载的任何 URL 的域必须包含在应用清单的数组 `validDomains` 中。 有关生成嵌入式 Web 视图的信息，请参阅 [任务模块文档](~/task-modules-and-cards/what-are-task-modules.md)。 
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -992,7 +992,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 [定义操作命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"] 
 > [响应操作命令](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

@@ -1,29 +1,29 @@
 ---
 title: 将Power Virtual Agents聊天机器人添加到Teams
 author: surbhigupta
-description: 在Power Virtual Agents平台中集成Teams聊天机器人
+description: 在Power Virtual Agents平台中集成聊天Teams程序
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ed788fe2acdd2425a435ea7ad608e461c1b4d306a89d7fe3b57eee054b94e69e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 5a4aa24ceb5a73be56cfd069b02ca7b980d17055
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705278"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155967"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>添加 Power Virtual Agent 聊天机器人 
 
 Power Virtual Agents无代码的引导式图形界面解决方案，它使团队的每位成员能够创建丰富的对话聊天机器人，这些聊天机器人可轻松与 Teams 集成。 在网站中创作Power Virtual Agents内容自然地呈现在Teams。 Power Virtual Agents聊天机器人与本机聊天画布Teams用户互动。 IT 管理员、业务分析师、域专家和熟练应用开发人员可以针对 Teams 设计、开发和发布智能虚拟代理，而无需设置开发环境。 他们可以创建 Web 服务，或直接在 Bot Framework 中注册。 
 
-本文档指导您如何通过 Teams 门户Teams Power Virtual Agents聊天机器人，以及如何使用 App Studio Teams聊天机器人。 
+本文档指导您如何通过 Teams 门户Teams聊天机器人，以及如何使用 App Studio Power Virtual Agents聊天机器人Teams聊天机器人。 
 
 Power Virtual Agents可以创建功能强大的聊天机器人，这些聊天机器人可以回答客户、其他员工或您的网站或服务的访问者提出的问题。
 
 无需数据工作者或开发人员，即可轻松创建这些机器人。
 
 > [!NOTE]
-> 通过将聊天机器人Microsoft Teams聊天机器人，一些数据（如聊天机器人内容和用户聊天内容）会与用户Microsoft Teams。 这意味着你的数据流在组织的合规性以及地理或 [区域边界之外](/power-virtual-agents/data-location)。 <br/>
+> 通过将聊天机器人添加到聊天Microsoft Teams，一些数据（如聊天机器人内容和用户聊天内容）会与用户Microsoft Teams。 这意味着你的数据流在组织的合规性以及地理或 [区域边界之外](/power-virtual-agents/data-location)。 <br/>
 
 ## <a name="make-your-chatbot-available-in-teams-through-the-power-virtual-agents-portal"></a>通过 Teams 门户Power Virtual Agents聊天机器人
 
@@ -42,14 +42,14 @@ Power Virtual Agents可以创建功能强大的聊天机器人，这些聊天机
    ![电源虚拟代理门户中的通道](../../assets/images/pva-channels.png)
 
 1. **为聊天机器人生成应用 ID**  
-将Teams添加到聊天机器人后 **，在对话框中** 生成应用 ID。 应用 ID 是 Microsoft 为自动程序生成的唯一标识符。 保存应用 ID，为应用创建应用Teams。
+将Teams添加到聊天机器人后 **，将在此** 对话框中生成应用 ID。 应用 ID 是 Microsoft 为自动程序生成的唯一标识符。 保存应用 ID，为应用创建应用Teams。
 
 ## <a name="add-your-bot-to-teams-using-app-studio"></a>使用 App Studio Teams聊天机器人
 
 如果在[Teams](/microsoftteams/admin-settings)实例中启用了上载自定义应用，Teams App Studio 直接上载聊天机器人并立即开始使用它。 若要共享聊天机器人，你可以请求管理员在租户应用目录中提供机器人，也可以将应用包发送给其他人，让他们单独上传它。
 
 1. **在 Teams 安装 App Studio**  
-App Studio 是一款Teams应用。 从 Teams 应用商店安装 App Studio，从而简化在应用商店中创建和注册Teams： 
+App Studio 是一款Teams应用。 从应用商店中Teams App Studio，从而简化在应用商店中创建和注册Teams： 
 
    1. 从应用程序实例中选择Teams图标，然后搜索 **App Studio**。
 
@@ -60,7 +60,7 @@ App Studio 是一款Teams应用。 从 Teams 应用商店安装 App Studio，从
       &emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 1. **在 App Studio Teams应用清单**  
-聊天机器人Teams应用清单 JSON 文件定义，该文件提供有关自动程序及其功能的基本信息。 在 **App Studio** 中， **选择清单编辑器**，然后选择 **创建新应用**。
+聊天Teams中的自动程序由应用清单 JSON 文件定义，该文件提供有关自动程序及其功能的基本信息。 在 **App Studio** 中， **选择清单编辑器**，然后选择 **创建新应用**。
 
     ![创建新应用](../../assets/images/get-started/create-new-app.png)
 
@@ -71,7 +71,7 @@ App Studio 是一款Teams应用。 从 Teams 应用商店安装 App Studio，从
 
 1. **设置自动程序** 若要设置自动程序，请执行以下步骤： 
      1. 打开 **"机器人"** 选项卡。 
-     1. 选择 **"**  >  **设置现有自动** 程序"，然后输入机器人的名称。
+     1. 选择 **"**  >  **设置""** 现有自动程序"，然后输入自动程序的名称。
 
    ![自动程序设置](../../assets/images/get-started/bot-set-up.png) 
 
@@ -81,7 +81,7 @@ App Studio 是一款Teams应用。 从 Teams 应用商店安装 App Studio，从
        
 1. **添加应用 ID**  
 若要添加应用 ID，请执行以下步骤：  
-    1. 选择 **连接自动程序 ID，** 并粘贴 **之前** 复制的应用 ID。 
+    1. 选择 **连接自动程序 ID，** 并粘贴 **之前复制** 的应用 ID。 
     1. 选择 **"作用域**  >  **个人**  >  **保存"。**
 
     ![添加应用 ID](../../assets/images/get-started/add-app-id.png)
@@ -94,15 +94,15 @@ App Studio 是一款Teams应用。 从 Teams 应用商店安装 App Studio，从
     ```
 
 1. **测试和分发机器人**  
-打开 **测试和分发选项卡****，然后选择安装** 以将机器人直接添加到你的Teams实例。 或者，你可以下载已完成的应用包，以便与Teams共享，或提供给管理员以在租户应用目录中提供自动程序。
+打开 **测试和分发选项卡****，然后选择安装** 以将机器人直接添加到你的Teams实例。 或者，你可以下载已完成的应用包，以便与Teams共享，或提供给管理员，使机器人在租户应用目录中可用。
 
 1. **启动聊天**   
-将聊天聊天机器人添加到聊天Power Virtual Agents的Teams过程已完成。 现在可以在个人聊天中与机器人开始对话。
+将聊天聊天机器人添加到聊天Power Virtual Agents设置Teams已完成。 现在可以在个人聊天中与机器人开始对话。
 
 ## <a name="see-also"></a>另请参阅
 
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [使用 Microsoft Teams 创建聊天Power Virtual Agents。](../bot-features.md#bots-with-power-virtual-agents)  
+* [创建聊天机器人，Teams Microsoft Power Virtual Agents。](../bot-features.md#bots-with-power-virtual-agents)  
 * [Power Virtual Agents门户](https://powervirtualagents.microsoft.com)
 * [发布自动Power Virtual Agents程序](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [安全与合规Microsoft Teams。](/MicrosoftTeams/security-compliance-overview)

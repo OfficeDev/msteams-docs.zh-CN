@@ -3,19 +3,19 @@ title: 创建传出 Webhook
 author: laujan
 description: 介绍如何创建传出 Webhook
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: teams 选项卡传出 Webhook 可操作邮件验证 webhook
-ms.openlocfilehash: 8dabf78cd27f0f59bd8ce617eb83ded24ecc3dc92478e7233bf8f8bb6a2a4e19
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 2039ffdbc307b266e7bc0f93c1638450a8be9037
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704301"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155688"
 ---
 # <a name="create-outgoing-webhook"></a>创建传出 Webhook
 
-传出 Webhook 充当自动程序，使用 @mention 在频道 **中搜索消息**。 它将通知发送到外部 Web 服务，并响应丰富的消息，其中包括卡片和图像。 它有助于跳过通过以下过程创建[Microsoft Bot Framework。](https://dev.botframework.com/)
+传出 Webhook 充当自动程序，使用 @mention 在 **频道中搜索消息**。 它将通知发送到外部 Web 服务，并响应丰富的消息，其中包括卡片和图像。 它有助于跳过通过以下过程创建[Microsoft Bot Framework。](https://dev.botframework.com/)
 
 ## <a name="key-features-of-outgoing-webhook"></a>传出 Webhook 的主要功能
 
@@ -34,7 +34,7 @@ ms.locfileid: "57704301"
 
 **创建传出 Webhook**
 
-1. Select **Teams** from the left pane. 将显示 **Teams** 页：
+1. 从 **Teams** 窗格中选择"下一个"。 将显示 **Teams** 页：
 
     ![Teams 频道](~/assets/images/teamschannel.png)
 
@@ -57,7 +57,7 @@ ms.locfileid: "57704301"
     * **说明**：显示在配置文件卡片和团队级应用仪表板中的详细字符串。
     * **个人资料图片**：Webhook 的应用图标，可选。
 
-1. 选择 **创建**。 传出 Webhook 将添加到当前团队的频道：
+1. 选择“**创建**”。 传出 Webhook 将添加到当前团队的频道：
 
     ![创建传出 Webhook](~/assets/images/outgoingwebhook.png)
 
@@ -74,14 +74,14 @@ ms.locfileid: "57704301"
 # <a name="url-json-payload"></a>[URL JSON 有效负载](#tab/urljsonpayload)
 **在应用服务器上创建 URL 以接受并处理具有 JSON 有效负载的 POST 请求**
 
-你的服务接收标准 Azure 自动程序服务消息架构中的邮件。 Bot Framework 连接器是一项 RESTful 服务，它支持通过 HTTPS 协议处理 JSON 格式邮件的交换，如 [Azure Bot Service API 中记录](/bot-framework/rest-api/bot-framework-rest-connector-api-reference)。 或者，你可以按照 Microsoft Bot Framework SDK 处理和分析消息。 有关详细信息，请参阅 [Azure Bot 服务概述](/azure/bot-service/bot-service-overview-introduction)。
+你的服务接收标准 Azure 自动程序服务消息架构中的邮件。 Bot Framework 连接器是一项 RESTful 服务，它支持通过 HTTPS 协议处理 JSON 格式邮件的交换，如 [Azure Bot Service API 中记录](/bot-framework/rest-api/bot-framework-rest-connector-api-reference)。 或者，也可以按照 Microsoft Bot Framework SDK 处理和分析消息。 有关详细信息，请参阅 [Azure Bot 服务概述](/azure/bot-service/bot-service-overview-introduction)。
 
 传出 Webhook 的范围为级别 `team` ，并且所有团队成员都可以看到。 用户需要 **\@ 提及传出** Webhook 的名称，以在频道中调用它。
 
 # <a name="verify-hmac-token"></a>[验证 HMAC 令牌](#tab/verifyhmactoken)
 **创建用于验证传出 Webhook HMAC 令牌的方法**
 
-使用入站邮件和 ID 示例：{"contoso"的 SigningKeyDictionary 的"contoso"，"vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" }。
+使用入站邮件和 ID 的示例：{"contoso"的 SigningKeyDictionary 的"contoso"，"vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" }。
 
 在请求标头的授权中，使用值"HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U="。
 

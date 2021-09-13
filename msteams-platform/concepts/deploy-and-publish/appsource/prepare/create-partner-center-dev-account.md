@@ -4,12 +4,13 @@ description: 若要将应用发布到 Microsoft Teams 应用商店，你需要�
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708649"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59155949"
 ---
 # <a name="create-a-partner-center-developer-account"></a>创建合作伙伴中心开发人员帐户
 
@@ -172,7 +173,7 @@ ms.locfileid: "57708649"
 
 <summary><b>业务验证过程通常需要多久？</b></summary>
 
-如果提交所有必需的文档，则业务验证需要一到两个工作日才能完成。
+如果提交所有所需的文档，则业务验证需要一到两个工作日才能完成。
 
 <br>
 
@@ -194,7 +195,7 @@ ms.locfileid: "57708649"
 
 向用户 <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> 以下详细信息：
 
-* **主题行**：合作伙伴中心帐户问题 *<your app name>* 。
+* **主题行**：合作伙伴中心帐户问题 *的应用名称*。
 * **电子邮件正文**：
     * 支持票证编号。
     * 卖家 ID。

@@ -3,14 +3,14 @@ title: 使用邮件扩展进行搜索
 description: 介绍如何开发基于搜索的邮件扩展
 keywords: teams 邮件扩展邮件扩展搜索
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 515472838ff2ad35ef5dd295043ec27c53edb4f1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a8e4a80835dade53c129e9efe1b21cd6715104ce
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566726"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156013"
 ---
 # <a name="search-with-messaging-extensions"></a>使用邮件扩展进行搜索
 
@@ -107,7 +107,7 @@ ms.locfileid: "52566726"
 
 接下来，检查是否已设置;如果是，则采取相应的操作，例如提供说明 `initialRun` 或响应列表。
 
-其余处理程序会提示用户输入信息，显示预览卡片列表，并返回 `onQuery` 用户选择的卡片。
+其余处理程序将提示用户输入信息，显示预览卡片列表，并返回 `onQuery` 用户选择的卡片。
 
 ### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>处理 onQuerySettingsUrl 和 onSettingsUpdate 事件
 
@@ -135,7 +135,7 @@ ms.locfileid: "52566726"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
+|`channelData.channel.id`| 如果在 (通道中提出请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
 |`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>`country`该字段包含用户的检测位置。<br>`platform`字段描述消息客户端平台。 <br>有关其他信息，请参阅 *非* [IRI 实体类型 — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
 
@@ -195,7 +195,7 @@ ms.locfileid: "52566726"
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>从插入撰写消息框的链接接收请求
 
-作为一 (或除了) 外部服务外，您还可以使用插入到撰写消息框中的 URL 查询您的服务并返回卡片。 在下面的屏幕截图中，用户已粘贴到邮件Azure DevOps已解析为卡片的工作项目的 URL。
+作为一 (或除了) 外部服务外，您还可以使用插入到撰写消息框中的 URL 查询您的服务并返回一张卡片。 在下面的屏幕截图中，用户已粘贴到邮件扩展已解析为Azure DevOps中工作项的 URL。
 
 ![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -268,11 +268,11 @@ ms.locfileid: "52566726"
 * 在 `preview` 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
 * 从附件的基本 `title` 、 `text` 和 `image` 属性中提取。 只有在属性未设置且这些属性可用 `preview` 时，才使用这些属性。
 
-只需设置自适应连接器或Office 365预览属性，就可以在结果列表中显示该卡片的预览;如果结果已是 hero 或 thumbnail 卡片，则不需要这样做。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不会显示任何内容。
+只需设置自适应或Office 365预览属性，就可以在结果列表中显示自适应或连接器卡片的预览;如果结果已是 hero 或 thumbnail 卡片，则不需要这样做。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不会显示任何内容。
 
 #### <a name="response-example"></a>响应示例
 
-此示例显示一个包含两个结果的响应，混合了不同的卡片格式：Office 365 Connector 和 Adaptive。 虽然你可能想要在响应中坚持使用一个卡片格式，但它显示了集合中每个元素的 属性如何显式定义以 hero 或 thumbnail 格式的预览 `preview` `attachments` ，如上所述。
+此示例显示包含两个结果的响应，混合了不同的卡片格式：Office 365 Connector 和 Adaptive。 虽然你可能想要在响应中坚持使用一个卡片格式，但它显示了集合中每个元素的 属性如何显式定义以 hero 或 thumbnail 格式的预览 `preview` `attachments` ，如上所述。
 
 ```json
 {
@@ -490,9 +490,9 @@ ms.locfileid: "52566726"
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流程
 
-你的登录体验应响应迅速且适合弹出窗口。 它应与使用消息传递[Microsoft Teams JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 集成。
+你的登录体验应响应迅速且适合弹出窗口。 它应与使用消息Microsoft Teams [JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)集成。
 
-与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口中，然后可以将它传递到 OAuth 登录 URL。
+与其他嵌入体验一样，Microsoft Teams内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口，然后可以将它传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流程
 
@@ -602,7 +602,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-#### <a name="example-code-in-nodejs"></a>示例代码中Node.js
+#### <a name="example-code-in-nodejs"></a>示例代码Node.js
 
 ```javascript
 require('dotenv').config();
