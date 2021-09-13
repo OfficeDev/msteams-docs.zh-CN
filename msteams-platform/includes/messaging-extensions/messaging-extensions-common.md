@@ -1,6 +1,6 @@
 ## <a name="add-a-messaging-extension-to-your-app"></a>向应用添加消息传递扩展
 
-消息传递扩展是一种云托管服务，可侦听用户请求，然后使用结构化数据（如卡片） [做出响应](~/task-modules-and-cards/what-are-cards.md)。 通过 Bot Framework 对象将服务Microsoft Teams集成在 `Activity` 一起。 Bot Builder SDK 的 Node.js .NET 和扩展可帮助你向应用添加消息传递扩展功能。
+消息传递扩展是一种云托管服务，可侦听用户请求，然后使用结构化数据（如卡片） [做出响应](~/task-modules-and-cards/what-are-cards.md)。 通过 Bot Framework 对象将服务Microsoft Teams集成在 `Activity` 一起。 Bot Builder SDK Node.js的 .NET 和扩展插件可帮助你向应用添加消息传递扩展功能。
 
 ![邮件扩展的消息流关系图](~/assets/images/compose-extensions/ceflow.png)
 
@@ -32,7 +32,7 @@
 
 #### <a name="define-commands"></a>定义命令
 
-邮件扩展应声明一个命令，当用户从撰写框中的"更多选项" (&#8943;) 选择你的应用时，将显示此命令。
+邮件扩展应声明一个命令，当用户从撰写框中的"更多选项" (&#8943;) 选择你的应用时，将显示此命令。 
 
 ![邮件扩展中邮件扩展列表的Teams](~/assets/images/compose-extensions/compose-extension-list.png)
 
@@ -51,4 +51,4 @@
 | `parameter.description` | 描述此参数的用途或应提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 简短的用户友好参数标题或标签。 | 是 | 1.0 |
 | `parameter.inputType` | 设置为所需的输入类型。 可能的值包括 `text` `textarea` `number` 、、、、、。 `date` `time` `toggle` 默认值设置为 `text` 。 | 否 | 1.4 |
-| `context` | 用于定义邮件操作可用的上下文的值的可选数组。 可能的值是 `message` 、 `compose` 或 `commandBox` 。 默认值为“`["compose", "commandBox"]`”。 | 否 | 1.5 |
+| `context` | 用于定义邮件操作可用的上下文的值的可选数组。 可能的值是 `message` 、 `compose` 或 `commandBox` 。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
