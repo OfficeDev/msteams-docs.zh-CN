@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: ebb8bb95f9011e45afba59ad7b624bb2494c0b74
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 31e8f96dd2e701cbb6a6c3b47174d1d70ee36576
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155643"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360452"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -23,7 +23,7 @@ ms.locfileid: "59155643"
 
 下表提供了 API 列表：
 
-|API|说明|请求|Source|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 使机器人能够按会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -150,7 +150,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 会议中的所有用户都接收通过 API 发送 `NotificationSignal` 的通知。
 
 > [!NOTE]
-> * 调用会议内对话框时，内容将显示为聊天消息。
+> * 调用会议中的对话框时，内容将显示为聊天消息。
 > * 目前，不支持发送定向通知。
 
 `NotificationSignal` API 使你能够提供使用用户-机器人聊天的现有对话通知 API 传递的会议信号。 此 API 允许你根据显示会议内对话框的用户操作发出信号。 API 包括查询参数、示例和响应代码。
@@ -465,12 +465,13 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | .NET | Node.js |
+|示例名称 | 说明 | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| Meeting meetingSidePanel | Microsoft Teams会议扩展性示例，用于与会议中的侧面板交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | 会议详细信息选项卡 | Microsoft Teams会议详细信息选项卡交互的扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+|会议事件示例|显示实时会议事件Teams应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,16 +1,16 @@
 ---
 title: 设计个人应用
-description: 了解如何设计一个Teams应用并获取 Microsoft Teams UI 工具包。
+description: 了解如何设计个人Teams并获取 Microsoft Teams UI 工具包。
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ae75a79ebc6293b99e7e4db310cfb0545ce5037a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155987"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360716"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为用户设计个人Microsoft Teams
 
@@ -27,7 +27,7 @@ ms.locfileid: "59155987"
 
 ## <a name="add-a-personal-app"></a>添加个人应用
 
-用户可以从应用商店或应用Teams添加个人应用，方法为选择 Teams (左侧的"更多"图标，如以下示例) 。
+用户可以从应用商店或应用Teams添加个人应用，方法为选择以下示例Teams (左侧的"更多") 。 
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="示例演示如何从应用飞出内容添加个人应用。" border="false":::
 
@@ -37,7 +37,7 @@ ms.locfileid: "59155987"
 
  (：专用工作区基于个人 [*选项卡功能*](../../build-your-first-app/build-personal-tab.md) 。) 
 
-### <a name="anatomy-personal-app-private-workspace"></a>分析：个人应用 (专用工作区) 
+### <a name="anatomy-personal-app-private-workspace"></a>分析：个人应用 (个人工作区) 
 
 #### <a name="mobile"></a>移动设备
 
@@ -94,7 +94,7 @@ ms.locfileid: "59155987"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例展示了个人机器人组件分析。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
@@ -155,7 +155,7 @@ ms.locfileid: "59155987"
 
 #### <a name="do-include-a-first-run-experience"></a>应做：包括首次运行体验
 
-首次使用个人应用时，应该至少有一个欢迎屏幕。 对于自动程序，描述自动程序可以执行哪些操作并提供快速操作，例如登录按钮。
+首次使用个人应用时，应该至少有一个欢迎屏幕。 对于自动程序，描述机器人可以执行哪些操作并提供快速操作，如登录按钮。
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="示例显示个人应用首次运行体验期间要执行哪些操作。" border="false":::
 
@@ -195,7 +195,7 @@ ms.locfileid: "59155987"
 
 #### <a name="dont-include-your-entire-app"></a>请勿：包括整个应用
 
-除非你专门为用户创建了Teams，否则你在协作工具中可能具有不有意义的功能。
+除非你专门为用户创建了Teams，否则你可能具有在协作工具中无意义的功能。
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="示例演示如何不通过个人应用处理复杂的应用功能。" border="false":::
 

@@ -1,19 +1,19 @@
 ---
-title: 入门 - 构建你的第一个对话机器人
+title: 入门 - 生成首个自动程序
 author: adrianhall
-description: 使用 Teams 工具包为 Microsoft Teams 创建对话机器人。
+description: 使用 Microsoft Teams 创建自动程序Teams Toolkit。
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7e41de915e63b509da1db5b1cbe8e018be4d586d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155799"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360598"
 ---
-# <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>构建你的第一个 Microsoft Teams 对话机器人
+# <a name="build-your-first-bot-for-microsoft-teams"></a>生成首个自动程序Microsoft Teams
 
 在本教程中，你将了解如何构建、运行和部署 Teams 机器人应用。 机器人是 Teams 用户和 Web 服务之间的中介。 用户可以与机器人聊天，以快速获取信息、启动工作流或启动 Web 服务能够执行的任何操作。 
 
@@ -93,7 +93,7 @@ CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="机器人项目的文件布局。":::
 
-机器人程序代码存储在 `bot` 文件夹中。  `bot/teamsBot.js` 是机器人的主入口点，对话将存储在 `dialogs` 文件夹中。
+机器人程序代码存储在 `bot` 文件夹中。  `bot/teamsBot.js`是自动程序的主要入口点。
 
 > [!Tip]
 > 在将第一个机器人集成到 Teams 中之前，请熟悉 Teams 以外的机器人。  可以通过查看 [Azure 机器人服务](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)教程找到有关机器人的更多信息。
@@ -104,7 +104,6 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
 - Azure Active Directory 应用程序是在 M365 租户中注册的。
 - 向 Teams 开发人员中心提交应用清单。
-- 在本地使用 Azure Functions Core Tools 运行 API，以支持你的应用。
 - [ngrok](https://ngrok.io) 安装并用于在 Teams 和机器人代码之间提供一个隧道。
 
 若要在本地构建并运行应用程序:
@@ -120,9 +119,9 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 1. 系统可能会提示你登录。  如果是这样，则使用你的 M365 帐户登录。
 1. 当系统提示将应用安装到 Teams，选择"添加 **"。**
 
-   加载应用后，你将直接进入与机器人的聊天会话。  你可以键入 `intro` 以显示简介卡，键入 `show` 以显示你在 Microsoft Graph 中的详细信息。  (这需要额外审批权限)。
+   加载应用后，你将直接进入与机器人的聊天会话。  你可以键入 `welcome` 以显示简介卡片，并 `learn` 转到自适应卡片和自动程序命令文档。 
 
-   调试工作如你通常预期一样 - 自己试一试！ 打开 `bot/dialogs/rootDialog.js` 文件并找到 `triggerCommand(...)` 方法。  为默认情况设置断点。  然后键入一些文本。
+   调试工作如你通常预期一样 - 自己试一试！ 打开 `bot/teamsBot.js` 文件并找到 `onMessage()` 方法。  在任何案例上设置断点。  然后键入一些文本。
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -132,8 +131,7 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
 1. 向应用程序注册Azure Active Directory。
 1. 将应用程序注册为"旁加载"Microsoft Teams。
-1. 使用 Azure 函数核心工具 启动本地 [运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。
-1. 启动 ngrok 隧道，Teams应用进行通信。
+1. 启动 ngrok 隧道Teams应用进行通信。
 1. 首先Microsoft Teams命令指示Teams旁加载应用程序。
 
 </details>
@@ -160,7 +158,6 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
 部署之前，应用程序已在本地运行:
 
-1. 后端使用 _Azure Functions Core Tools_ 运行。
 1. 应用程序 HTTP 终结点 (Microsoft Teams 在此加载应用程序) 在本地运行。
 
    部署涉及预配活动 Azure 订阅上的资源，以及将应用程序后端和前端代码部署（上传）到 Azure。 后端使用多种 Azure 服务，包括 Azure 应用服务 和 Azure 机器人服务。

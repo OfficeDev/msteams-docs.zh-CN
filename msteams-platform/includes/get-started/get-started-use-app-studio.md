@@ -1,7 +1,7 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>使用 App Studio 更新应用包
 
 > [!TIP]
-> **试用开发人员门户**：App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+> **试用开发人员门户**：App Studio 已发展。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
 
 App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应用程序的创建和注册过程。
 
@@ -15,18 +15,18 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
     <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-1. 若要为应用创建应用包Teams，请选择 App Studio **中的** 清单 **编辑器选项卡**：
+1. 若要为应用创建应用包 **Teams，** 请选择 App Studio **中的清单编辑器** 选项卡：
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
 
-    该示例附带自己的清单，旨在生成项目时生成应用包。 在 .NET 上，manifest.json 文件位于 下的清单Visual Studio中 ```Microsoft.Teams.Samples.HelloWorld.Web``` 。 在Node.js，这是通过键入项目的根目录中的命令行 `gulp` 完成。
+    该示例附带自己的清单，旨在生成项目时生成应用包。 在 .NET 上，manifest.json 文件可以位于 清单Visual Studio下的 清单中 ```Microsoft.Teams.Samples.HelloWorld.Web``` 。 在Node.js，这是通过键入项目的根目录中的命令行 `gulp` 完成。
 
      在Visual Studio中，manifest.json 文件位于 中的 **清单** 下 `Microsoft.Teams.Samples.HelloWorld.Web` 。 此步骤如下图所示：  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     
-    可以通过在项目的根目录中Node.js命令行，在应用程序上生成 `gulp` 应用包。
+    可以通过在项目的根目录中Node.js命令行，在应用程序上 `gulp` 生成应用包。
 
 
     ```bash
@@ -67,7 +67,7 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
 #### <a name="tabs"></a>选项卡
 
-向应用程序添加选项卡Teams非常简单。 示例应用已支持多个选项卡，你可以启用它们。
+向应用添加选项卡Teams非常简单。 示例应用已支持多个选项卡，你可以启用它们。
 
 ##### <a name="team-tab"></a>"团队"选项卡
 
@@ -123,7 +123,7 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
 完成以下步骤以设置邮件扩展：
 
-1. 在 App Studio **左侧窗格中的**"功能"下选择"邮件扩展"以配置邮件扩展：
+1. 在 **App** Studio **左侧窗格中的** "功能"下选择"邮件扩展"以配置邮件扩展：
 
     <img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
@@ -154,12 +154,12 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 输入应用的详细信息后，完成以下步骤以在应用中注册Teams：
 
 1. 使用 **测试和分发** App Studio 在 Teams 中安装应用。 
-1. 使用自动程序的应用 ID 和密码更新托管的应用程序。 对于示例应用，请对机器人和消息扩展使用相同的应用 ID 和密码。 
+1. 使用自动程序的应用 ID 和密码更新托管的应用程序。 对于示例应用，请对机器人和消息传递扩展使用相同的应用 ID 和密码。 
 1. 在 App Studio **的左侧**  窗格中 **，选择"** 测试和分发"下的"完成"：
 
     <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
-1. 若要将应用上传到Teams，请选择 **"测试和分发**"下的"**安装"按钮**：
+1. 若要将应用上传到Teams，请选择"测试和分发"下的"**安装"按钮**：
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
     

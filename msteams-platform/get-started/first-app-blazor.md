@@ -6,16 +6,16 @@ ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d014ba82f8e499b8b38f1dbc13a9ee68ef29f1c9
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155800"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360652"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>使用 Blazor 生成Microsoft Teams应用程序
 
-本教程介绍如何在 .NET/Blazor 中创建新的 Microsoft Teams 应用，实现简单的个人应用，以从 Microsoft Graph。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 Azure。
+本教程介绍如何在 .NET/Blazor 中创建新的 Microsoft Teams 应用，该应用实现简单的个人应用，以从 Microsoft Graph。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 Azure。
 
 构建的应用将显示当前用户的基本用户信息。  授予权限后，应用会作为当前用户连接到 Microsoft Graph 以获取完整配置文件。
 
@@ -30,13 +30,11 @@ ms.locfileid: "59155800"
 
 使用 Teams 工具包创建你的第一个项目:
 
-# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
-
 1. 打开Visual Studio 2019。
 
 1. 选择 **创建新项目**。
 
-1. 选择 **Microsoft Teams应用**"，然后选择"下一 **步"。**  若要帮助您查找模板，请使用项目类型 **Microsoft Teams。**
+1. 选择 **Microsoft Teams应用**"，然后选择"下一 **步"。**  若要帮助您查找模板，请使用项目类型 **Microsoft Teams**。
 
 1. 输入名称，然后选择下一 **步**。
 
@@ -47,45 +45,13 @@ ms.locfileid: "59155800"
    1. 选择 **Project**  >  **TeamsFx**  >  **配置 SSO..."。**
    1. 系统提示时，登录到 M365 管理员帐户。
 
-# <a name="command-line"></a>[命令行](#tab/cli)
-
-1. 打开终端并选择你希望创建项目的目录。
-
-1. 运行 `dotnet new -i` 以从以下位置NuGet：
-
-   ``` bash
-   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
-   ```
-
-   你只需在首次或更新模板时这样做。 检查[NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/)程序包的最新版本。
-
-1. 创建目录：
-
-   ``` bash
-   mkdir helloworld
-   ```
-
-1. 运行 `dotnet new` 以创建新项目：
-
-   ``` bash
-   dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
-   ```
-
-1. 搭建基架后，配置用于部署Teams项目：
-
-   ``` bash
-   teamsfx init
-   ```
-
-   现在，可以在 Visual Studio中打开该解决方案进行调试。
-
 ---
 
 ## <a name="take-a-tour-of-the-source-code"></a>浏览源代码
 
 若要暂时跳过此部分，可以 [在本地运行应用](#run-your-app-locally)。
 
-在Teams Toolkit项目后，你具有用于生成基本个人应用Teams。 项目目录和文件显示在 2019 年 10 月Visual Studio资源管理器"区域中。
+在Teams Toolkit项目后，你拥有组件来构建适用于用户的基本个人Teams。 项目目录和文件显示在 2019 年 10 月Visual Studio区域。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
 
@@ -105,7 +71,7 @@ ms.locfileid: "59155800"
 使用 Teams 工具包，你可以在本地运行应用。  这包含几个部分，是提供 Teams 所需的正确基础结构所必需的：
 
 - 应用程序已注册 Azure Active Directory。  此应用程序具有与从加载应用的位置及其访问的任何后端资源相关联的权限。
-- Web API 通过 (托管IIS Express) ，以帮助执行身份验证任务，充当应用和 Azure Active Directory。  
+- Web API 通过 (托管IIS Express) ，以帮助执行身份验证任务，充当应用和 Azure Active Directory 之间的代理。  
 - 生成应用清单，存在于 Teams 开发人员门户中。  Teams 使用应用清单告诉已连接客户端从何处加载应用。
 
 完成此操作后，应用可以在客户端Teams加载。  我们使用 Teams Web 客户端，以便可以在标准 Web 开发环境中查看 HTML、CSS 和 JavaScript 代码。
@@ -148,7 +114,7 @@ ms.locfileid: "59155800"
 <details>
 <summary>了解如何在本地运行应用时解决常见问题。</summary>
 
-若要在应用中成功运行Teams，你必须拥有一个Microsoft 365应用程序旁加载的一个开发帐户。 有关开设帐户的详细信息，请参阅 [先决条件](prerequisites.md#enable-sideloading)。
+若要在应用中成功运行Teams，你必须拥有一个Microsoft 365支持应用旁加载的一个开发帐户。 有关开设帐户的详细信息，请参阅 [先决条件](prerequisites.md#enable-sideloading)。
 
 </details>
 
@@ -161,7 +127,7 @@ ms.locfileid: "59155800"
 
 > **预览**
 >
-> 对 Blazor 应用的支持是 Teams Toolkit。  设置和部署是结合 Visual Studio 2019 和开发人员门户Teams。
+> 对 Blazor 应用的支持是 Teams Toolkit。  设置和部署是结合 Visual Studio 2019 和开发人员门户进行Teams。
 
 ## <a name="provision-and-deploy-your-app-to-azure-app-service"></a>预配应用并部署到 Azure 应用服务
 
@@ -169,11 +135,11 @@ ms.locfileid: "59155800"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="选择项目的&quot;发布&quot;操作":::
 
-1. 在"**发布"** 窗口中，选择 **"Azure"，** 然后选择"下一步 **"。**
+1. 在"**发布"** 窗口中，选择 **"Azure"，** 然后选择"下一 **步"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="选择 Azure 作为发布目标":::
 
-1. 选择 **"Azure 应用服务 (Windows)** 并选择"下一 **步"。**
+1. 选择 **Azure 应用服务 (Windows) ，** 然后选择下一 **步**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="选择 Azure 应用服务作为发布目标":::
 
@@ -181,7 +147,7 @@ ms.locfileid: "59155800"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="创建新实例。":::
 
-1. 在"**创建应用服务 (Windows)** 对话框中 **，将填充**"名称"、订阅名称、"资源组"和"**托管** 计划"条目字段。  如果已运行应用服务，则选择现有设置。  可以选择创建新的资源组和托管计划。  准备就绪后，选择"创建 **"。**
+1. 在"**创建应用服务 (Windows)** 对话框中，将填充"名称"、订阅名称、"资源组"和"**托管** 计划"条目字段。  如果已运行应用服务，则选择现有设置。  可以选择创建新的资源组和托管计划。  准备就绪后，选择"创建 **"。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="选择托管计划和订阅":::
 

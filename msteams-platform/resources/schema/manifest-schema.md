@@ -1,18 +1,18 @@
 ---
 title: 清单架构参考
-description: 描述列表的清单Microsoft Teams
+description: 介绍列表的清单Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 清单架构
-ms.openlocfilehash: 07575bec4d0fc9b6defbf3cbefc9ae5330a45d73
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: aadb17d0cd8644908b9d44328dcc30819859fdee
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155910"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360487"
 ---
-# <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
+# <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：列表的清单Microsoft Teams
 
 Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 早期版本 1.0、1.1,..., 和 1.6 也受 URL ("v1.x") 。
 有关在每个版本中所做的更改详细信息，请参阅 [清单更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
@@ -356,7 +356,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`short`|30 个字符|✔|应用的显示名称。|
 |`full`|100 个字符||应用的完整名称，在完整应用名称超过 30 个字符时使用。|
 
-## <a name="description"></a>说明
+## <a name="description"></a>description
 
 **必需**—object
 
@@ -434,7 +434,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 定义一组默认情况下可以"固定"的选项卡，而无需用户手动添加它们。 范围中声明 `personal` 的静态选项卡始终固定到应用的个人体验。 作用域中声明的 `team` 静态选项卡当前不受支持。
 
-此项是一个数组 (类型的所有元素) 最多包含 16 个元素 `object` 。 只有提供静态选项卡解决方案的解决方案才需要此块。
+此项是一个数组， (类型的所有元素) 最多包含 16 个元素 `object` 。 只有提供静态选项卡解决方案的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -482,7 +482,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |title|string|12 |✔|自动程序命令名称。|
-|说明|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
+|description|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
 
 ## <a name="connectors"></a>连接器
 
@@ -495,7 +495,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置 https:// 时将使用的 URL。|
-|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是单独为单个用户提供 `team` `personal` () 。 目前，仅 `team` 支持范围。|
+|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是仅针对单个用户或单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
 |`connectorId`|string|64 个字符|✔|连接器的唯一标识符，该标识符与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -612,6 +612,9 @@ Teams需要自己的 sharepoint URL 正常运行的应用程序，请包括其�
  **可选**—boolean
 
 指示在具有或没有选项卡标题栏的情况下呈现个人应用。 默认为 **false**。
+
+> [!NOTE]
+> `isFullScreen`仅适用于选项卡SharePoint存储应用。
 
 ## <a name="activities"></a>activities
 

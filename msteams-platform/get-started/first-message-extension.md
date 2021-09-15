@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 39659b6c58b61f8b8880bd277effba1c8f9d115e
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155792"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360679"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>构建并运行 Microsoft Teams 的第一个消息传递扩展
 
@@ -122,22 +122,26 @@ Teams 工具包允许你在本地托管应用。  为此，请执行以下操作
 
 1. 选择 **"** 添加"将应用添加到你的帐户。
 
-   加载应用后，你将直接进入搜索对话框：
+   加载应用后，你可以尝试使用示例功能：你可以从撰写区域中的三个点启动消息扩展，然后尝试从搜索栏中搜索 npm 包。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="操作中基于搜索的邮件扩展":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="操作中基于搜索的邮件扩展":::
+   
+   您还可以尝试 @ 邮件扩展实例，从邮件扩展实例的首行中的Teams搜索 npm 包。
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="操作中基于搜索的邮件扩展":::
 
-   在搜索框中键入文本，然后选择其中一个选项。  自适应卡片将添加到输入框中。
+   在搜索框中键入一些文本，然后选择其中一个选项，你可以创建和发送搜索结果的自适应卡片。
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="操作中基于搜索的邮件扩展":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>在调试器中本地运行应用时，会发生什么情况。</summary>
+<summary>在本地调试器中运行应用时，了解会发生什么情况。</summary>
 
 按 **F5 键** 时，Teams Toolkit：
 
 1. 向应用程序注册Azure Active Directory。
 1. 将应用程序注册为"旁加载"Microsoft Teams。
 1. 使用 Azure 函数核心工具 启动本地 [运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。
-1. 启动 ngrok 隧道，Teams应用进行通信。
+1. 启动 ngrok 隧道Teams应用进行通信。
 1. 首先Microsoft Teams命令指示Teams旁加载应用程序。
 
 </details>

@@ -6,16 +6,16 @@ ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 36aa779db0c45ab3724673cb0030a97cceef6a78
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155795"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360808"
 ---
-# <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>生成并运行第一个Microsoft Teams应用程序SharePoint 框架 (SPFx) 
+# <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>使用应用生成并运行Microsoft Teams应用SharePoint 框架 (SPFx) 
 
-本教程介绍如何在实现简单个人Microsoft Teams应用中SharePoint 框架 SPFx应用。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 SharePoint。
+在本教程中，你将了解如何在Microsoft Teams应用SharePoint 框架 SPFx一个简单的个人应用。 例如，个人 *应用包括* 一组供个人使用的选项卡。 在本教程中，你将了解 Teams 应用的结构、如何在本地运行应用以及如何将应用部署到 SharePoint。
 
 ## <a name="before-you-begin"></a>开始之前
 
@@ -101,22 +101,27 @@ CLI 会提出一些问题来引导创建项目。  每个问题将告诉你该�
 
 若要暂时跳过此部分，可以 [在本地运行应用](#run-your-app-locally)。
 
-在Teams Toolkit项目后，你具有组件来为托管在项目Teams应用程序生成基本个人SharePoint 框架。  项目目录和文件显示在 Visual Studio 代码的资源管理器区域中。
+在Teams Toolkit项目后，你具有组件来构建托管在项目Teams应用程序内的基本个人SharePoint 框架。  项目目录和文件显示在 Visual Studio 代码的资源管理器区域中。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="显示 Visual Studio Code 中个人应用的应用项目文件的屏幕截图。":::
 
-工具包根据你在设置过程中添加的功能，自动在项目目录中创建标点文件夹。 Teams 工具包将保持其对于新目录中 `.fx` 的状态。  此目录中的其他项：
+工具包根据你在设置过程中添加的功能，自动在项目目录中创建标点文件夹。 Teams 工具包将保持其对于新目录中 `.fx` 的状态。 
 
-- 应用图标在 `color.png` 和 `outline.png`中存储为 PNG 文件。
-- 发布到开发人员门户 for Teams的应用程序清单存储在 中 `manifest.source.json` 。
-- 创建项目时选择的设置存储在 `settings.json`。
+- 创建项目时选择的设置存储在 `.fx/settings.json`。
+- 项目的状态存储在 中 `.fx/env.*.json` 。
+
+并且Teams应用程序信息存储在 `appPackage` 目录中。
+
+- 应用图标在 `appPackage/color.png` 和 `appPackage/outline.png`中存储为 PNG 文件。
+- 发布到开发人员门户的应用程序清单Teams存储在 中 `appPackage/manifest.source.json` 。
+
 
 由于你选择了SPFx Web 部件项目，因此以下文件与 UI 相关：
 
 - 该文件夹 `SPFx/src/webparts/{webpart}` 包含你的SPFx Web 部件。
 - 该文件 `.vscode/launch.json` 描述了调试调色板中提供的调试配置。
 
-有关 web 部件SharePoint有关Teams，请参阅[SharePoint文档](/sharepoint/dev/spfx/build-for-teams-overview)。
+有关 Web 部件SharePoint，Teams请参阅[SharePoint文档](/sharepoint/dev/spfx/build-for-teams-overview)。
 
 ## <a name="run-your-app-locally"></a>在本地运行应用
 
@@ -196,7 +201,7 @@ Teams Toolkit允许你在本地托管应用，并通过工作台 SharePoint 框�
    teamsfx deploy
    ```
 
-1. 当系统提示时，选择生成 **SharePoint包"。**
+1. 当系统提示时，选择生成 **SharePoint包"**。
 
 ---
 
@@ -205,12 +210,12 @@ the SharePoint package is located `SPFx/sharepoint/solution` in within your proj
 1. 登录到 M365 管理控制台，然后导航到SharePoint应用程序目录。
 
    1. 打开 `https://admin.microsoft.com/AdminPortal/Home` 。
-   1. 在 **"管理中心**"下 **，SharePoint** 管理中心"。
+   1. 在 **"管理中心**"下，选择 **SharePoint** 管理中心"。
    1. 从 **边栏菜单中** 选择"更多功能"。
    1. 按 **"应用"** 下的"**打开"。**
    1. 选择 **"应用程序目录"。**
 
-1. 选择 **"为用户分配SharePoint"。**
+1. 选择 **"分配适用于SharePoint"。**
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="分配适用于SharePoint。":::
 
@@ -228,7 +233,7 @@ the SharePoint package is located `SPFx/sharepoint/solution` in within your proj
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="选择应用程序目录中的文件SharePoint选项卡。":::
 
-1. 选择已部署的程序包，**然后选择"同步** Teams右上角选择"同步"。
+1. 选择已部署的程序包，**然后选择"同步** Teams右上角选择" 同步"。
 
     > [!Note]
     > 同步到Teams可能需要几分钟。  你将在浏览器的右侧看到一条消息，指示应用已成功同步到Teams。

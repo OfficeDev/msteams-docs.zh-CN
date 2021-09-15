@@ -1,17 +1,17 @@
 ---
 title: 教程 - 使用 C 创建第一个应用#
-description: 了解如何开始使用 Microsoft Teams 或 .NET C#应用程序。
+description: 了解如何开始使用 .NET Microsoft Teams生成C#应用。
 keywords: 入门 .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155791"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360725"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>使用 C 生成Teams应用#
 
@@ -69,7 +69,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="build-and-run-the-sample"></a>生成和运行示例
 
-可以在克隆 smaple 后生成并运行它。 
+可以在克隆示例后生成并运行该示例。 
 
 **生成并运行克隆的示例**
 
@@ -90,7 +90,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     <a name="hostsample"></a>
     ## <a name="deploy-your-sample-app"></a>部署示例应用
 
-    应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams应用，你的应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
+    应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams应用，应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel ngrok
 
@@ -131,7 +131,7 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
 # <a name="developer-portal"></a>[开发人员门户](#tab/DP)
 
-**若要安装开发人员门户 (预览) 中Teams**
+**安装开发人员门户 (预览) 中Teams**
 
 
 1. 选择 **左侧** 栏底部的"应用"图标，然后搜索"开发人员 **门户"。**
