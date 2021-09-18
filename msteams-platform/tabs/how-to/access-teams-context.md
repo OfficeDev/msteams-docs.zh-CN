@@ -4,12 +4,12 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: d0cdb107ef57c705589e225f1441a48caf427e5d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
+ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156011"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59439695"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -24,7 +24,7 @@ ms.locfileid: "59156011"
 在以下情况下，有关用户、团队或公司的上下文可能特别有用：
 
 * 在应用中创建资源或将资源与指定的用户或团队关联。
-* 从 AAD Azure Active Directory (或其他标识) 启动身份验证流，并且不需要用户再次输入其用户名。 有关详细信息，请参阅"验证[用户身份Microsoft Teams选项卡。](~/concepts/authentication/authentication.md)
+* 您从 AAD Azure Active Directory (或其他标识) 启动身份验证流，并且不需要用户再次输入其用户名。 有关详细信息，请参阅"验证[用户身份"选项卡Microsoft Teams用户](~/concepts/authentication/authentication.md)。
 
 > [!IMPORTANT]
 > 虽然此用户信息可帮助提供流畅的用户体验，但不得使用它作为标识证明。 例如，攻击者可以在浏览器中加载页面并呈现有害的信息或请求。
@@ -45,8 +45,8 @@ ms.locfileid: "59156011"
 * {loginHint}：适合用作 AAD 登录提示的值。 这通常是其主租户中当前用户的登录名。
 * {userPrincipalName}：当前租户中当前用户的用户主体名称。
 * {userObjectId}：当前租户中当前用户的 AAD 对象 ID。
-* {theme}：当前用户界面 (UI) 主题，如 、 `default` 或 `dark` `contrast` 。
-* {groupId}：选项卡Office 365组 ID。
+* {theme}：当前用户界面 (UI) 主题，如 、 或 `default` `dark` `contrast` 。
+* {groupId}：选项卡Office 365的组 ID。
 * {tid}：当前用户的 AAD 租户 ID。
 * {locale}：格式化为 languageId-countryId 的用户的当前区域设置。 例如，en-us。
 
@@ -58,7 +58,7 @@ ms.locfileid: "59156011"
 * 其用户名为 **user@example.com**。
 * 他们的公司租户 ID 是 **e2653c-etc。**
 * 他们是 id 为 **00209384-etc** Office 365组的成员。
-* 用户已设置其Teams主题 **为深色**。
+* 用户已设置其Teams主题为 **深色**。
 
 在配置选项卡时，Teams调用以下 URL：
 
@@ -121,8 +121,8 @@ ms.locfileid: "59156011"
 * `teamId`：设置为私人频道的 threadId
 * `teamName`：设置为私人频道的名称
 * `teamSiteUrl`：设置为专用频道的独特SharePoint网站的 URL
-* `teamSitePath`：设置为专用频道的独特SharePoint网站的路径
-* `teamSiteDomain`：设置为专用频道的唯一SharePoint网站域的域
+* `teamSitePath`：设置为专用频道的独特、唯SharePoint网站的路径
+* `teamSiteDomain`：设置为专用频道的独特、唯SharePoint网站域的域
 
 如果页面使用了这些值中的任意值，则必须检查字段以确定页面是否加载到私人频道中并 `channelType` 做出相应的响应。
 
@@ -137,7 +137,7 @@ ms.locfileid: "59156011"
 
 ## <a name="see-also"></a>另请参阅
 
-* [选项卡设计指南](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [选项卡设计指南](../../tabs/design/tabs.md)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
