@@ -81,12 +81,12 @@ ms.locfileid: "59155876"
 * 使用 `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * 请勿使用 `![Duck on a rock](http://aka.ms/Fo983c)`。
 
-## <a name="receiving-messages&quot;></a>接收邮件
+## <a name="receiving-messages"></a>接收邮件
 
 根据声明的范围，自动程序可以在以下上下文中接收消息：
 
 * **个人聊天** 用户只需在聊天历史记录中选择已添加的聊天机器人，或在新聊天的&quot;目标：&quot;框中键入其名称或应用 ID，即可与机器人在私人对话中进行交互。
-* **频道** 可以将机器人 (&quot;@_botname_") 如果已添加到团队，可以在频道中提及它。 请注意，频道中对自动程序的其他回复需要提及机器人。 它将不会在未提及的回复中回复。
+* **频道** 可以将机器人 ("@_botname_") 如果已添加到团队，可以在频道中提及它。 请注意，频道中对自动程序的其他回复需要提及机器人。 它将不会在未提及的回复中回复。
 
 对于传入消息，机器人会收到类型 为 [的 Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) 对象 `messageType: message` 。 虽然对象可以包含其他类型的信息（如发送到机器人的频道更新），但类型 `Activity` 表示机器人[](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` 和用户之间的通信。
 
