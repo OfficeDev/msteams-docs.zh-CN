@@ -5,12 +5,12 @@ description: 了解如何在会议Teams设计应用并获取 Microsoft Teams UI 
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155385"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475697"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计会议Microsoft Teams扩展
 
@@ -37,7 +37,7 @@ ms.locfileid: "59155385"
 
 #### <a name="mobile"></a>移动设备
 
-例如，在桌面 (添加应用后) ，用户可以通过选择"更多"来访问 **会议中的应用** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
+例如，在桌面 (添加应用后，) 选择"更多"，即可在会议中访问 **该应用** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="示例演示如何在移动会议期间添加会议扩展。" border="false":::
 
@@ -53,9 +53,9 @@ ms.locfileid: "59155385"
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="示例演示如何在呼叫之前应用会议详细信息中的内容。" border="false":::
 
-### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>结构：会议 (会议之前和之后) 
+### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>结构：会议 (会议之前和之后的会议选项卡) 
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="示例显示会议之前和之后的会议选项卡的结构结构。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="示例显示会议之前和之后的会议选项卡的结构结构分析。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
@@ -104,12 +104,12 @@ ms.locfileid: "59155385"
 |2|**应用名称**|
 |3|**标头**：包括你的应用名称。|
 |4 |**关闭按钮**：关闭选项卡。始终使用右上方的关闭图标，而不是页脚中的操作。|
-|5 |**通知栏**：错误警报显示在标题正下方，将 iframe 内容向下推送 20 像素。|
+|5|**通知栏**：错误警报显示在标题正下方，将 iframe 内容向下推送 20 像素。|
 |6 |**iframe：** 显示应用内容。|
 
 ### <a name="spacing"></a>Spacing
 
-优化会议选项卡，以适应 280 像素宽的 iframe 区域中的边缘到边缘。 在 iframe 的左侧和右侧以及选项卡标题之间有 20 个像素的填充。 iframe 完全出血到选项卡底部。
+优化会议选项卡以适合 280 像素宽的 iframe 区域中的边缘到边缘。 在 iframe 的左侧和右侧以及选项卡标题之间有 20 个像素的填充。 iframe 完全出血到选项卡底部。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="示例显示会议中的选项卡间距尺寸。" border="false":::
 
@@ -135,7 +135,7 @@ ms.locfileid: "59155385"
 
 ### <a name="use-cases"></a>用例
 
-会议内对话框由以下用户触发 (例如会议组织者) 可能希望参与者：
+会议内对话框由用户用户触发 (例如会议组织者) 可能希望参与者：
 
 * 提供简短反馈
 * 参加简短调查或投票
@@ -171,11 +171,11 @@ ms.locfileid: "59155385"
 |2|**应用程序图标**|
 |3|**应用名称**|
 |4 |**关闭按钮**：关闭对话框。|
-|5 |**操作字符串**：通常描述启动对话框的人。|
+|5|**操作字符串**：通常描述启动对话框的人。|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>响应行为：会议内对话框
 
-根据不同的方案，会议内对话框的大小可能会有所不同。 确保保持填充和组件大小。
+根据不同的方案，会议内对话框的大小可能会有所不同。 请确保保持填充和组件大小。
 
 * **Width：** 可以指定对话框的 iframe 的宽度（在支持的大小范围内的任何位置）。
 * **高度**：可以在支持的大小范围内的任何位置指定对话框的 iframe 的高度。 如果应用内容超出最大高度，还可以允许用户垂直滚动。
@@ -186,10 +186,13 @@ ms.locfileid: "59155385"
 
 ## <a name="use-the-shared-meeting-stage"></a>使用共享会议阶段
 
-共享会议阶段可帮助会议参与者实时地与应用内容进行交互和协作。 例如，用户可以将会议集中在编辑文档、使用白板进行集体讨论或查看仪表板上。
+共享会议阶段可帮助会议参与者实时与应用内容进行交互和协作。 例如，用户可以将会议集中在编辑文档、使用白板进行集体讨论或查看仪表板上。
 
 共享到会议阶段的应用占用的空间与共享屏幕相同。 该阶段将针对所有会议参与者进行重定向。
 
+> [!NOTE]
+> 目前，如果共享应用以在桌面上进行阶段，它将只向移动会议的用户显示。
+ 
 ### <a name="use-cases"></a>用例
 
 共享会议阶段与协作和参与有关。 下面是帮助您入门的一些示例方案。
@@ -243,7 +246,7 @@ ms.locfileid: "59155385"
 |2|**共享到会议阶段按钮**：将应用共享到会议阶段的入口点。 显示是否将应用配置为使用共享会议阶段。|
 |3|**iframe：** 显示应用内容。|
 |4 |**"停止共享"** 按钮：停止将应用共享到会议阶段。 仅显示启动共享的参与者。|
-|5 |**演示者属性**：显示共享应用的参与者的姓名。|
+|5|**演示者属性**：显示共享应用的参与者的姓名。|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>响应行为：共享会议阶段
 
@@ -258,7 +261,7 @@ ms.locfileid: "59155385"
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="显示关闭侧面板时共享会议阶段响应的图像。" border="false":::
 
-#### <a name="meeting-stage-with-side-panel"></a>使用侧 (面板的会议) 
+#### <a name="meeting-stage-with-side-panel"></a>带侧 (面板的) 
 
 侧面板打开时，默认情况下，会议阶段为 918x540 像素，并且至少为 472x382 像素。
 
@@ -266,7 +269,7 @@ ms.locfileid: "59155385"
 
 ## <a name="after-a-meeting"></a>会议后
 
-可以在会议结束后返回到会议并查看应用内容。 本示例中，会议组织者可以在 **Contoso** 选项卡中查看投票结果。 (注意：从设计的角度来看，会议前和会议后选项卡体验之间没有任何区别。) 
+可以在会议结束后返回到会议并查看应用内容。 本示例中，会议组织者可以在 **Contoso** 选项卡中查看投票结果。 (注意：从设计的角度来看，会议前和会议后选项卡体验之间没有区别。) 
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示会议后选项卡。" border="false":::
 
@@ -370,7 +373,7 @@ ms.locfileid: "59155385"
 
 #### <a name="dont-left-or-center-align-actions"></a>不：左对齐或居中对齐操作
 
-这偏离对话框中Teams控件放置的标准模式，并且可能会与顶部对话框后面的对话框冲突。
+这偏离了用于Teams控件放置的标准模式，并且可能会与顶部对话框后面的对话框冲突。
 
    :::column-end:::
 :::row-end:::
@@ -386,7 +389,7 @@ ms.locfileid: "59155385"
 
 #### <a name="do-scroll-vertically"></a>操作：垂直滚动
 
-用户预期垂直滚动Teams (其他位置) 。 如果你具有一个创意画布（如白板，用户可以在 x 和 y 轴上平移）时，这可能不适用。
+用户期望垂直滚动在Teams (和任何其他位置) 。 如果你具有一个创意画布（如白板，用户可以在 x 和 y 轴上平移）时，这可能不适用。
 
    :::column-end:::
    :::column span="":::
@@ -397,7 +400,7 @@ ms.locfileid: "59155385"
 
 #### <a name="dont-scroll-horizontally"></a>请勿：水平滚动
 
-在会议环境中，水平滚动不是预期Teams (包括会议) 。
+在包括会议环境或会议Teams (，水平滚动并不是预期) 。
 
    :::column-end:::
 :::row-end:::
@@ -445,7 +448,7 @@ Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪
 
 #### <a name="dont-use-unfamiliar-colors"></a>请勿：使用不熟悉的颜色
 
-与会议环境发生冲突的颜色可能会分散注意力，对会议环境Teams。 了解颜色渐变Teams，包括调用[](https://developer.microsoft.com/fluentui#/styles/web/colors/products)中性主题。
+与会议环境发生冲突的颜色可能会分散注意力，对会议环境Teams。 了解颜色渐变[Teams，](https://developer.microsoft.com/fluentui#/styles/web/colors/products)包括调用中性主题。
 
    :::column-end:::
 :::row-end:::
@@ -475,7 +478,7 @@ Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="示例显示会议 (中的模式) 模块或任务模块。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="显示会议选项卡 (模式或) 模块的示例。" border="false":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>警告：避免会议内选项卡中的模式
 

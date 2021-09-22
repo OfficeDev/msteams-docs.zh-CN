@@ -3,23 +3,23 @@ title: 自适应卡片的通用操作概述
 description: 自适应卡片的通用操作快速概述。
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155723"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475711"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
 自适应卡片的通用操作从开发人员反馈中发展，尽管自适应卡片的布局和呈现是通用的，但操作处理不是。 即使开发人员希望将同一张卡片发送到不同位置，他们必须处理不同的操作。
 
-自适应卡片的通用操作将机器人作为处理操作的通用后端引入，并引入了新的操作类型，它适用于应用，Teams `Action.Execute` 和Outlook。
+自适应卡片的通用操作将机器人作为处理操作的通用后端引入，并引入了新的操作类型，它适用于应用，如Teams `Action.Execute` 和Outlook。
 
 本文档可帮助你了解如何使用通用操作模型增强跨平台和应用程序与自适应卡片交互的用户体验。
 
 > [!NOTE]
-> 仅对自动程序发送的卡片支持自适应卡片的通用操作。 即将推出对通过撰写框和链接取消点击卡片发送的卡片的支持。
+> 仅对自动程序发送的自适应卡片 v1.4 的通用操作的支持可用。 即将推出对通过撰写框和链接取消点击卡片发送的卡片的支持。
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>使用自适应卡片的通用操作增强用户体验
 
@@ -34,8 +34,8 @@ ms.locfileid: "59155723"
 
 在自适应卡片的通用操作之前，不同的主机提供不同的操作模型，如下所示：
 
-* Teams或自动程序，这是一种将实际 `Action.Submit` 通信模型延迟到基础通道的方法。
-* Outlook与自适应卡片有效负载中显式指定的 `Action.Http` 后端服务通信。
+* Teams或自动程序 `Action.Submit` 使用 ，这是一种将实际通信模型延迟到基础通道的方法。
+* Outlook与自适应卡片有效负载中显式指定的后端 `Action.Http` 服务通信。
 
 下图显示了当前不一致的操作模型：
 
@@ -47,13 +47,13 @@ ms.locfileid: "59155723"
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="自适应卡片的新通用操作":::
 
-现在，你可以将同一卡片发送给 Teams 和 Outlook，然后使用基础自动程序将它们保持同步。 通过此内部版本，在任一平台上执行的任何操作都反映给另一个平台， (自适应卡片的通用操作) 模型。
+现在，你可以向用户和用户发送Teams Outlook，然后使用基础自动程序保持彼此同步。 在此内部版本下，在任一平台上执行的任何操作都反映给另一个平台， (自适应卡片的通用操作) 模型。
 
 下图描述了适用于用户和用户的通用自适应卡片Teams Outlook：
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="移动同一张Teams和Outlook":::
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="移动同一卡片Teams和Outlook":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 

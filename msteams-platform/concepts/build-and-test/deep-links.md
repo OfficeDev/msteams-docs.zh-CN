@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: 团队深层链接深度链接
-ms.openlocfilehash: e61f926e36d379cb6a69816922cca7a8f3a3d17f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a9d3ec021de52f4ae9d5b17eab9306d1c7974280
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155913"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475774"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -70,7 +70,7 @@ ms.locfileid: "59155913"
 
 > [!NOTE]
 > 如果机器人发送包含深层链接的消息，则当用户选择链接时将打开 `TextBlock` 一个新的浏览器选项卡。 这发生在 Chrome 和 Microsoft Teams 桌面应用中，这两者均在 Linux 上运行。
-> 如果自动程序将同一深层链接 URL 发送到 ，则当用户选择链接时，Teams当前浏览器选项卡中将打开"自动 `Action.OpenUrl` 链接"选项卡。 未打开新的浏览器选项卡。
+> 如果自动程序将同一深层链接 URL 发送到 ，则当用户选择链接时，Teams"选项卡将在当前浏览器选项卡 `Action.OpenUrl` 中打开。 未打开新的浏览器选项卡。
 
 查询参数包括：
 
@@ -80,9 +80,9 @@ ms.locfileid: "59155913"
 | `entityId`&emsp; | 选项卡中项的 ID，在配置选项卡 [时提供](~/tabs/how-to/create-tab-pages/configuration-page.md)。|Tasklist123|
 | `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 在客户端不支持呈现选项卡时，使用带回退 URL 的可选字段。 | `https://tasklist.example.com/123` 或 `https://tasklist.example.com/list123/task456` |
 | `entityLabel` 或 `subEntityLabel`&emsp; | 选项卡中项的标签，用于显示深层链接时。 | 任务列表 123 或"任务 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象：</br></br> * 选项卡内项的 ID。 </br></br> * Microsoft Teams选项卡上下文提供的频道[ID。](~/tabs/how-to/access-teams-context.md) | 
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象：</br></br> * 选项卡内项的 ID。 </br></br> * Microsoft Teams上下文提供的频道[ID。](~/tabs/how-to/access-teams-context.md) | 
 | `subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
-| `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). 此属性仅在具有团队作用域的可配置选项卡 **中可用**。 它在静态选项卡中不可用，这些选项卡具有个人 **作用域**。| 19：cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `channelId`&emsp; | 选项卡Microsoft Teams中提供的信息通道[ID。](~/tabs/how-to/access-teams-context.md) 此属性仅在具有团队作用域的可配置选项卡 **中可用**。 它在静态选项卡中不可用，这些选项卡具有个人 **作用域**。| 19：cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
 示例：
 
@@ -108,7 +108,7 @@ ms.locfileid: "59155913"
 
 ## <a name="deep-linking-from-your-tab"></a>选项卡中的深层链接
 
-可以从选项卡深入链接到Teams中的内容。如果你的选项卡需要链接到项目的其他内容，Teams、消息、其他选项卡或者甚至打开计划对话框，这将非常有用。 若要从选项卡触发深层链接，应调用：
+可以从选项卡深入链接到Teams中的内容。如果你的选项卡需要链接到其他内容，Teams、消息、其他选项卡，甚至打开计划对话框，这将非常有用。 若要从选项卡触发深层链接，应调用：
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
@@ -128,7 +128,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 通过指定一组参与者，可以创建指向用户之间的私人聊天的深层链接。 如果指定参与者不存在聊天，则链接将用户导航到空的新聊天。 在用户发送第一条消息之前，会以草稿状态创建新聊天。 否则，您可以指定聊天的名称（如果它不存在）以及应插入到用户的撰写框中的文本。 你可以将此功能视为用户执行手动操作以导航到或创建聊天，然后键入消息的快捷方式。
 
-例如，如果你将一个Office 365作为卡片从自动程序返回一个用户配置文件，那么此深层链接可以让用户轻松地与此人聊天。
+例如，如果你从自动程序Office 365用户个人资料作为卡片，那么此深层链接可以让用户轻松地与此人聊天。
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>生成聊天的深层链接
 
@@ -193,8 +193,8 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 以下深层链接格式可用于机器人、连接器或邮件扩展卡： `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
-> 当机器人发送带深层链接的 TextBlock 消息时，当用户选择该链接时，将打开一个新的浏览器选项卡。 这发生在 Chrome 和Microsoft Teams Linux 上运行的桌面应用。
-> 如果自动程序将同一深层链接 URL 发送到 ，则Teams用户选择链接时，将在当前浏览器中打开"自动 `Action.OpenUrl` 链接"选项卡。 未打开新的浏览器选项卡。
+> 当机器人发送带深层链接的 TextBlock 消息时，当用户选择该链接时，将打开一个新的浏览器选项卡。 这发生在 Chrome 中Microsoft Teams Linux 上运行的桌面应用。
+> 如果自动程序将同一深层链接 URL 发送到 ，Teams 当用户选择链接时，将在当前浏览器中打开"自动 `Action.OpenUrl` 链接"选项卡。 未打开新的浏览器选项卡。
 
 查询参数包括：
 
@@ -219,6 +219,9 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 例如：`https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
+> [!NOTE]
+> 搜索参数不支持信号 `+` 来表示空格 ` ` () 。 例如，确保你的 uri 编码代码 `%20` 返回空格 `?subject=test%20subject` ，良好， `?subject=test+subject` 但错误。
+
 查询参数包括：
 
 * `attendees`：可选的以逗号分隔的用户 ID 列表，表示会议与会者。 执行该操作的用户是会议组织者。 用户 ID 字段当前仅支持 Azure AD UserPrincipalName，通常为电子邮件地址。
@@ -234,9 +237,9 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>到音频或音频视频呼叫的深层链接
 
-可以通过将呼叫类型指定为 *audio* 或 *av* 以及参与者来创建深层链接，以调用单个用户或一组用户的仅音频呼叫或音频视频呼叫。 调用深层链接之后以及发出呼叫Teams，桌面客户端会提示确认进行呼叫。 对于组呼叫，可以在相同的深度链接调用中调用一组 VoIP 用户和一组 PSTN 用户。 
+可以通过将呼叫类型指定为 *audio* 或 *av* 以及参与者来创建深层链接，以调用单个用户或一组用户的仅音频或音频视频呼叫。 调用深层链接之后和发出呼叫之前，Teams客户端提示确认进行呼叫。 对于组呼叫，可以在相同的深度链接调用中调用一组 VoIP 用户和一组 PSTN 用户。 
 
-对于视频呼叫，客户端将要求确认，并打开呼叫者的视频。 呼叫接收者可以选择仅通过音频或音频和视频，通过呼叫通知Teams进行响应。
+对于视频呼叫，客户端将要求确认，并打开呼叫者的视频。 呼叫接收者可选择仅通过音频或音频和视频，通过呼叫Teams进行响应。
 
 > [!NOTE]
 > 此深度链接不能用于调用会议。
@@ -252,7 +255,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
   
 以下是查询参数：
 * `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Azure AD UserPrincipalName，通常为电子邮件地址，或者对于 PSTN 呼叫，它支持 pstn mri &lt; 4：phonenumber &gt; 。
-* `withVideo`：这是可选参数，可用于进行视频呼叫。 设置此参数将仅打开呼叫者的相机。 呼叫接收者可以选择通过呼叫通知窗口通过音频或音频和视频Teams进行应答。 
+* `withVideo`：这是可选参数，可用于进行视频呼叫。 设置此参数将仅打开呼叫者的相机。 呼叫接收者可以选择通过音频或音频和视频呼叫通过呼叫通知窗口Teams进行应答。 
 * `Source`：这是一个可选参数，用于通知深层链接的来源。
 
 ## <a name="code-sample"></a>代码示例

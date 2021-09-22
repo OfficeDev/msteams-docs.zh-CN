@@ -5,12 +5,12 @@ description: 了解 webhook 和连接器如何将 Web 服务连接到 Teams 客�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3b7dd6b907ec1af0467c40bda53422cc75e503bc
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156006"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475754"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook 和连接器
 
@@ -33,14 +33,14 @@ Webhook 可帮助Teams外部应用集成。 使用传出 Webhook，您可以将�
 
 ### <a name="office-365-connectors"></a>Office 365 连接器
 
-Office 365连接器允许你为传入 Webhook 创建自定义配置页，并将它们打包为 Teams 应用的一部分。 你主要使用Office 365连接器卡发送邮件，并且能够向它们添加一组有限的卡片操作。 例如，天气连接器允许用户选择一天中的位置和时间，以接收有关明天天气的更新。 它们在频道级别配置，但安装在团队级别。
+Office 365连接器允许你为传入 Webhook 创建自定义配置页，并打包它们作为 Teams 应用的一部分。 你主要使用 Office 365 连接器卡发送邮件，并且能够向这些连接器卡添加一组有限的卡片操作。 例如，天气连接器允许用户选择一个位置和一天中的某个时间，以接收有关明天天气的更新。 它们在频道级别配置，但安装在团队级别。
 
 > [!NOTE]
-> 您可以将 Office 365 连接器Teams应用程序分发到我们的 AppStore。
+> 可以将 Office 365 连接器Teams应用程序分发到我们的 AppStore。
 
 ## <a name="create-and-send-messages"></a>创建和发送邮件
 
-可操作邮件允许用户在不离开其电子邮件客户端的情况下采取措施，从而增加用户参与度。 使用Office 365 Webhook 和传入 Webhook，可以通过将 JSON 有效负载发布到 webhook URL 来发送消息。
+可操作邮件允许用户在不离开其电子邮件客户端的情况下采取措施，从而增加用户参与度。 使用 Office 365 和传入 Webhook，可以通过将 JSON 有效负载发布到 webhook URL 来发送消息。
 
 ## <a name="see-also"></a>另请参阅
 

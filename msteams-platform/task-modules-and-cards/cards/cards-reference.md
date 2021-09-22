@@ -1,19 +1,19 @@
 ---
 title: 卡片类型
-description: 介绍自动程序可用的所有卡片和Teams
+description: 介绍自动程序可用的所有卡片和卡片Teams
 ms.localizationpriority: medium
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155973"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475592"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
-自适应、hero、list、Office 365 连接器、收据、登录以及缩略图卡和卡片集合在自动程序中Microsoft Teams。 它们基于 Bot Framework 定义的卡，Teams不支持所有 Bot Framework 卡，并且已添加了一些自己的卡。
+自动程序支持自适应、Office 365、列表、Office 365 连接器、收据、登录以及缩略图卡和卡片Microsoft Teams。 它们基于 Bot Framework 定义的卡，Teams不支持所有 Bot Framework 卡，并且添加了一些自己的卡。
 
 确定不同的卡片类型之前，请了解如何创建 Hero 卡片、缩略图卡片或自适应卡片。
 
@@ -59,10 +59,10 @@ ms.locfileid: "59155973"
 
 ## <a name="features-that-support-different-card-types"></a>支持不同卡片类型的功能
 
-| 卡片类型 | 机器人 | 邮件扩展预览 | 邮件扩展结果 | 任务模块 | 传出 Webhook | 传入 Webhook | O365 连接器 |
+| 卡片类型 | 机器人 | 邮件扩展预览 | 邮件扩展结果 | 任务模块 | 传出 Webhook | 传入 Webhook | Office 365 连接器 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 自适应卡片 | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| O365 连接器卡 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Office 365连接器卡 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | Hero card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | 缩略图卡片 | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | 列表卡 | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
@@ -70,11 +70,14 @@ ms.locfileid: "59155973"
 | 登录卡 | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
 
 > [!NOTE]
-> 对于传入 Webhook 中的自适应卡片，完全支持除 以外的所有本机自适应 `Action.Submit` 卡片架构元素。 支持的操作包括 Action.OpenURL、Action.ShowCard、Action.ToggleVisibility 和 [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。 [](https://adaptivecards.io/explorer/Action.OpenUrl.html) [](https://adaptivecards.io/explorer/Action.ShowCard.html) [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
+> 对于传入 Webhook 中的自适应卡片，完全支持除 以外的所有本机自适应 `Action.Submit` 卡片架构元素。 支持的操作包括 Action.OpenURL、Action.ShowCard、Action.ToggleVisibility 和 [**Action.Execute。**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute) [](https://adaptivecards.io/explorer/Action.OpenUrl.html) [](https://adaptivecards.io/explorer/Action.ShowCard.html) [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
 
 ## <a name="common-properties-for-all-cards"></a>所有卡片的常见属性
 
 你可以浏览一些适用于所有卡片的常见属性。
+
+> [!NOTE]
+> 具有多个操作的 Hero 和缩略图卡片会自动拆分为多个卡片，在一个木马布局中。
 
 ### <a name="inline-card-images"></a>内联卡片图像
 
@@ -110,7 +113,7 @@ ms.locfileid: "59155973"
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-自适应卡片是可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 有关详细信息，请参阅自适应[卡片 v1.2.0。](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)
+自适应卡片是可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 有关详细信息，请参阅自适应 [卡片](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07)。
 
 ### <a name="support-for-adaptive-cards"></a>自适应卡片支持
 
@@ -121,7 +124,8 @@ ms.locfileid: "59155973"
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams平台支持 v1.2 或更早的自适应卡片功能。
+> * Teams平台支持 v1.4 或更早的自适应卡片功能，适用于机器人发送的卡和基于操作的消息扩展。
+> * Teams平台支持 v1.3 或更早的自适应卡片功能用于其他功能，例如用户 (基于搜索的消息扩展发送的卡片以及取消展开) 、选项卡和任务模块的链接。
 > * 在游戏平台上的自适应卡片中不支持正面或破坏性Teams样式。
 > * 媒体元素当前在应用平台上的自适应卡片Teams支持。
 
@@ -281,7 +285,7 @@ Bot Framework 参考：
 
 下表提供了支持人物卡片的功能：
 
-| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -348,7 +352,7 @@ Bot Framework 参考：
 
 下表提供了支持列表卡片的功能：
 
-| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -420,7 +424,7 @@ Bot Framework 参考：
 
 ## <a name="office-365-connector-card"></a>Office 365连接器卡
 
-可以使用一个Office 365连接器卡，该卡提供灵活的布局，是获取有用信息的一种好方法。 自动Office 365支持自动Teams，而不是 Bot Framework。 此卡片提供具有多个分区、字段、图像和操作的灵活性布局。 此卡包含连接器卡，以便机器人可以使用它。 有关连接器卡与 Office 365 连接器卡之间的差异，请参阅连接器Office 365[卡的其他信息](#additional-information-on-the-office-365-connector-card)。
+可以使用一个Office 365连接器卡，该卡提供灵活的布局，是获取有用信息的一种很好的方法。 自动Office 365支持自动Teams，而不是 Bot 框架。 此卡片提供具有多个分区、字段、图像和操作的灵活性布局。 此卡包含连接器卡，以便机器人可以使用它。 有关连接器卡和 Office 365 连接器卡之间的差异，请参阅连接器Office 365[卡上的其他信息](#additional-information-on-the-office-365-connector-card)。
 
 ### <a name="support-for-office-365-connector-cards"></a>支持 Office 365 连接器卡
 
@@ -445,7 +449,7 @@ Bot Framework 参考：
 
 Office 365连接器卡在连接器中Microsoft Teams，包括[ `ActionCard` 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
 
-在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。 下表列出了区别：
+在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。 下表列出了差异：
 
 | Connector | Bot |
 | --- | --- |
@@ -548,7 +552,7 @@ Teams支持收据卡。 它是使机器人能够为用户提供收据的卡片�
 
 下表提供了支持收据卡的功能：
 
-| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -614,7 +618,7 @@ Bot Framework 参考：
 
 ## <a name="signin-card"></a>登录卡
 
-自动Teams中的登录卡与 Bot 框架中的登录卡类似，只不过 Teams 中的登录卡仅支持两个 `signin` 操作 `openUrl` 和 。
+自动Teams中的登录卡类似于 Bot 框架中的登录卡，只不过 Teams 中的登录卡仅支持两个 `signin` 操作 `openUrl` 和 。
 
 The signin action can be used from any card in Teams， not just the signin card. 有关详细信息，请参阅自动[Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
 
@@ -622,7 +626,7 @@ The signin action can be used from any card in Teams， not just the signin card
 
 下表提供了支持登录卡的功能：
 
-| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -641,7 +645,7 @@ Bot Framework 参考：
 
 下表提供了支持缩略图卡的功能：
 
-| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -714,7 +718,7 @@ Bot Framework 参考：
 
 ## <a name="card-collections"></a>卡片集合
 
-可以使用包括木马和列表集合的卡片集合。 Teams卡片集合。 卡片集合包括 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 和 。 这些集合包含自适应、hero 或缩略图卡片。
+可以使用包括木马和列表集合的卡片集合。 Teams支持卡片集合。 卡片集合包括 `builder.AttachmentLayout.carousel` `builder.AttachmentLayout.list` 和 。 这些集合包含自适应、hero 或缩略图卡片。
 
 ### <a name="carousel-collection"></a>Carousel 集合
 
@@ -724,7 +728,7 @@ Bot Framework 参考：
 
 下表提供了支持盘车集合的功能：
 
-| 聊天机器人Teams | 消息传递扩展  | 连接器 | 机器人框架 |
+| 聊天机器人Teams | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 

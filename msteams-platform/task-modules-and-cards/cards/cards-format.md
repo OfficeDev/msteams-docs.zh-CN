@@ -5,12 +5,12 @@ keywords: teams 自动程序卡格式
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: abbdc0d1fa77744ae061e5430c4450d0e7cf83c7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8afbd5f4904a378a4433965c128136fa8b39590d
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155719"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475806"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
@@ -20,7 +20,7 @@ ms.locfileid: "59155719"
 
 卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。 可以使用 XML 或 HTML 格式的子集或 Markdown 指定格式，具体取决于卡片类型。 对于自适应卡片的当前和未来开发，建议使用 Markdown 格式。
 
-卡片类型之间的格式支持不同。 桌面版和移动版客户端之间的卡片呈现可能略有不同Microsoft Teams，Teams在桌面浏览器中呈现。
+卡片类型之间的格式支持不同。 桌面版和 Microsoft Teams移动版客户端之间以及桌面浏览器中Teams卡的呈现可能略有不同。
 
 你可以将内联图像与任意卡片Teams内。 图像的格式可以设置为 、 或 文件，并且不能超过 `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。 不支持动态 GIF。 有关详细信息，请参阅 [卡片类型](./cards-reference.md#inline-card-images)。
 
@@ -31,7 +31,7 @@ ms.locfileid: "59155719"
 以下卡片类型支持 Markdown 格式Teams：
 
 * 自适应卡片：自适应卡片字段以及 和 中都支持 `Textblock` `Fact.Title` `Fact.Value` Markdown。 自适应卡片不支持 HTML。
-* O365 连接器卡：文本字段中的 O365 连接器卡支持 Markdown 和有限的 HTML。
+* Office 365连接器卡：文本字段中的连接器Office 365支持 Markdown 和有限的 HTML。
 
 你可以将新行用于自适应卡片，或者对列表中新行使用转 `\r` `\n` 义序列。 适用于自适应卡片的桌面版和移动版Teams不同。 Web、桌面和移动客户端支持基于卡片的提及。 可以使用信息屏蔽属性来屏蔽特定信息，如自适应卡片输入元素内用户的密码或 `Input.Text` 敏感信息。 可以使用 对象扩展自适应卡片 `width` 的宽度。 可以在自适应卡片中启用 typeahead 支持，在用户键入输入时筛选输入选项集。 可以使用 属性 `msteams` 添加选择性地在阶段视图中显示图像的能力。
 
@@ -63,7 +63,7 @@ ms.locfileid: "59155719"
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>自适应卡片的移动和桌面差异
 
-在桌面上，自适应卡片 Markdown 格式显示如下图所示，在 Web 浏览器和 Teams 应用程序中：
+在桌面上，自适应卡片 Markdown 格式显示如下图中所示，在 Web 浏览器和 Teams 应用程序中：
 
 ![桌面客户端中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -116,14 +116,14 @@ ms.locfileid: "59155719"
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a>自适应卡片 v1.2 中的提及支持
+### <a name="mention-support-within-adaptive-cards"></a>自适应卡片中的提及支持 
 
-可以在自适应@mentions正文中添加聊天机器人和消息传递扩展响应的联系人。 若要在@mentions，请遵循与频道和群聊对话中基于消息的提及相同的通知 [逻辑和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
+可以在自动@mentions消息扩展响应的自适应卡片正文中添加邮件。 若要在@mentions中添加内容，请遵循与频道和群聊对话中基于消息的提及内容相同的通知 [逻辑和呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
 
 聊天机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。
 
 > [!NOTE]
-> * [媒体元素](https://adaptivecards.io/explorer/Media.html)当前在 Teams 平台上的自适应卡片 v1.2 中不受支持。
+> * [媒体元素](https://adaptivecards.io/explorer/Media.html)当前在应用平台上的自适应卡片Teams支持。
 > * 机器人消息不支持频道和团队提及。
 
 若要在自适应卡片中包括提及，你的应用需要包括以下元素：
@@ -164,6 +164,130 @@ ms.locfileid: "59155719"
   }
 }
 ```
+
+### <a name="aad-object-id-and-upn-in-user-mention"></a>用户提及的 AAD 对象 ID 和 UPN 
+
+Teams平台除了现有提及 ID 外，还允许使用 AAD 对象 ID 和用户原则名称 (UPN) 提及用户。 具有自适应卡片的机器人和具有传入 Webhook 的连接器支持两个用户提及的 ID。 
+
+下表介绍了新支持的用户提及 ID：
+
+|ID  | 支持功能 |   说明 | 示例 |
+|----------|--------|---------------|---------|
+| AAD 对象 ID | 机器人，连接器 |  AAD 用户的对象 ID |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | 机器人，连接器 | AAD 用户的 UPN | john.smith@microsoft.com |
+
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>使用自适应卡片的机器人中的用户提及 
+
+除了现有 ID 外，机器人还支持用户通过 AAD 对象 ID 和 UPN 进行提及。 在短信、自适应卡片正文和消息传递扩展响应的机器人中提供对两个新 ID 的支持。 机器人支持会话和方案中的提及 `invoke` 设备。 用户在与 ID 一起@mentioned活动源通知。 
+
+> [!NOTE]
+> 对于自动程序中的自适应卡片，用户无需提及架构更新和 UI/UX 更改。
+
+##### <a name="example"></a>示例 
+
+使用自适应卡片的机器人中的用户提及示例，如下所示：
+
+```json 
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+    }
+  ],
+  "msteams": {
+    "entities": [
+      {
+        "type": "mention",
+        "text": "<at>Adele UPN</at>",
+        "mentioned": {
+          "id": "AdeleV@contoso.onmicrosoft.com",
+          "name": "Adele Vance"
+        }
+      },
+      {
+        "type": "mention",
+        "text": "<at>Adele AAD</at>",
+        "mentioned": {
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+          "name": "Adele Vance"
+        }
+      }
+    ]
+  }
+}
+```
+
+下图展示了用户在 Bot 中通过自适应卡片提及的功能：
+
+![使用自适应卡片在机器人中提及的用户](~/assets/images/authentication/user-mention-in-bot.png)
+
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>使用自适应卡片传入 Webhook 中的用户提及 
+
+传入 Webhook 开始支持使用 AAD 对象 ID 和 UPN 的自适应卡片中的用户提及。
+
+> [!NOTE]    
+> * 在架构中为传入 Webhook 启用用户提及功能，以支持 AAD 对象 ID 和 UPN。 
+> * 对于使用 AAD 对象 ID 和 UPN 的用户提及，无需 UI/UX 更改。      
+> * 传入 Webhook 的活动源通知以及用户提及的通知将在将来的版本中提供。
+
+##### <a name="example"></a>示例 
+
+传入 Webhook 中的用户提及示例，如下所示：
+
+```json
+{
+    "type": "message",
+    "attachments": [
+        {
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+            "type": "AdaptiveCard",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Sample Adaptive Card with User Mention"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0",
+            "msteams": {
+                "entities": [
+                    {
+                        "type": "mention",
+                        "text": "<at>Adele UPN</at>",
+                        "mentioned": {
+                          "id": "AdeleV@contoso.onmicrosoft.com",
+                          "name": "Adele Vance"
+                        }
+                      },
+                      {
+                        "type": "mention",
+                        "text": "<at>Adele AAD</at>",
+                        "mentioned": {
+                          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+                          "name": "Adele Vance"
+                        }
+                      }
+                ]
+            }
+        }
+    }]
+}
+```
+
+下图展示了传入 Webhook 中的用户提及：
+
+![传入 Webhook 中的用户提及](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
 
 ### <a name="information-masking-in-adaptive-cards"></a>自适应卡片中的信息屏蔽
 
@@ -289,7 +413,7 @@ ms.locfileid: "59155719"
 > * 放大和缩小功能仅适用于自适应卡片中的图像类型图像元素。
 > * 对于Teams应用，自适应卡片中的图像阶段视图功能默认可用。 用户只需点击图像即可在阶段视图中查看自适应卡片图像，无论属性 `allowExpand` 是否存在。
 
-# <a name="markdown-format-for-o365-connector-cards"></a>[O365 连接器卡的 Markdown 格式](#tab/connector-md)
+# <a name="markdown-format-for-office-365-connector-cards"></a>[Office 365 连接器卡的 Markdown 格式](#tab/connector-md)
 
 连接器卡支持有限的 Markdown 和 HTML 格式。
 
@@ -320,7 +444,7 @@ ms.locfileid: "59155719"
 
 使用 Markdown for iOS 的连接器卡包括以下问题：
 
-* iOS 客户端用于Teams连接器卡中呈现 Markdown 或 HTML 内联图像。
+* iOS 客户端用于Teams连接器卡中呈现 Markdown 或 HTML 内嵌图像。
 * Blockquotes 呈现为缩进，但不带灰色背景。
 
 在 Android 上，连接器卡的 Markdown 格式显示如下图所示：
@@ -382,12 +506,12 @@ ms.locfileid: "59155719"
 
 以下卡片类型支持 HTML 格式Teams：
 
-* O365 连接器卡：连接器卡支持有限的 Markdown 和 HTML Office 365格式。
+* Office 365连接器卡：连接器卡支持有限的 Markdown 和 HTML Office 365格式。
 * Hero 和 thumbnail cards：简单卡片支持 HTML 标记，例如 hero 和 thumbnail 卡片。
 
-适用于 O365 连接器卡和简单卡的桌面版和移动版Teams不同。 在此部分中，您可以浏览连接器卡和简单卡片的 HTML 格式示例。
+桌面版和移动版连接器卡和简单的Teams卡Office 365不同。 在此部分中，您可以浏览连接器卡和简单卡片的 HTML 格式示例。
 
-# <a name="html-format-for-o365-connector-cards"></a>[O365 连接器卡的 HTML 格式](#tab/connector-html)
+# <a name="html-format-for-office-365-connector-cards"></a>[连接器卡Office 365 HTML 格式](#tab/connector-html)
 
 连接器卡支持有限的 Markdown 和 HTML 格式。
 

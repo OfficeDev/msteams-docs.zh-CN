@@ -5,12 +5,12 @@ description: 使用自适应卡片生成选项卡
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 902b57145a2ba0919e810e6785f077e626949970
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8a43efabbd9c40537854450581a4e7d996086fc5
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156010"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475585"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -26,13 +26,13 @@ ms.locfileid: "59156010"
 
 自适应卡片选项卡是一种在卡片中生成选项卡的Teams。 你可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。使用自适应卡片呈现前端时，后端由机器人提供电源。 机器人负责接受请求，以及使用呈现的自适应卡片进行相应响应。
 
-可以使用现成的用户界面构建选项卡， (UI) 桌面、Web 和移动设备上的本机构建基块。 本文帮助你了解对应用清单进行更改所需的更改。 本文还介绍了调用活动如何请求和发送带自适应卡片的选项卡信息，及其对任务模块工作流的影响。
+可以使用现成的用户界面来构建选项卡， (UI) 桌面、Web 和移动设备上的本机构建基块。 本文帮助你了解对应用清单进行更改所需的更改。 本文还介绍了调用活动如何请求和发送带自适应卡片的选项卡信息，及其对任务模块工作流的影响。
 
 下图显示了桌面和移动版中具有自适应卡片的生成选项卡：
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="选项卡中呈现的自适应卡片示例。" border="false":::
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 在开始使用自适应卡片生成选项卡之前，你必须：
 
@@ -106,7 +106,8 @@ ms.locfileid: "59156010"
 自适应卡片选项卡和自动程序之间的通信通过活动 `invoke` 完成。 每个 `invoke` 活动都有一个对应的 **名称**。 使用每个活动的名称来区分每个请求。 `tab/fetch``tab/submit`和 是本节中介绍的活动。
 
 > [!NOTE]
-> 机器人需要向服务 URL 发送 [所有响应](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 服务 URL 作为传入有效负载的一 `activity` 部分接收。
+> * 机器人需要向服务 URL 发送 [所有响应](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 服务 URL 作为传入有效负载的一 `activity` 部分接收。
+> * 调用负载大小已增加到 80kb。
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>提取自适应卡片以呈现到选项卡
 
