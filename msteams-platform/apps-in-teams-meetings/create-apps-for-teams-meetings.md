@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 0ba25480dc253f0ef757411a8e658b547b4090ef
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e3392e92965d03c33cd07ae5b65d607d3f86aa5d
+ms.sourcegitcommit: d6917d41233a530dc5fd564a67d24731edeb50f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155644"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59487478"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件
 
@@ -48,7 +48,7 @@ ms.locfileid: "59155644"
 
 下表提供了这些 API 的列表：
 
-|API|说明|请求|Source|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -65,7 +65,7 @@ ms.locfileid: "59155644"
 
 ### <a name="getusercontext-api"></a>GetUserContext API
 
-若要标识和检索选项卡内容的上下文信息，请参阅获取选项卡[Teams上下文](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)。`meetingId`在会议上下文中运行时选项卡使用，并添加响应有效负载。
+若要标识和检索选项卡内容的上下文信息，请参阅获取选项卡Teams[上下文](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)。`meetingId`在会议上下文中运行时选项卡使用，并添加响应有效负载。
 
 ### <a name="getparticipant-api"></a>GetParticipant API
 
@@ -73,7 +73,7 @@ ms.locfileid: "59155644"
 > * 不要缓存参与者角色，因为会议组织者可以随时更改角色。
 > * Teams API 当前不支持超过 350 个参与者的大型通讯组列表或名单 `GetParticipant` 大小。
 
-API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 API 包括查询参数、示例和响应代码。
+API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 API 包括查询参数、示例和响应代码。 该 API 在私人计划会议或定期会议以及频道计划会议或定期会议中均受支持。 
 
 #### <a name="query-parameters"></a>查询参数
 
@@ -175,7 +175,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 会议中的所有用户都接收通过 API 发送 `NotificationSignal` 的通知。
 
 > [!NOTE]
-> * 调用会议内对话框时，内容将显示为聊天消息。
+> * 调用会议中的对话框时，内容将显示为聊天消息。
 > * 目前，不支持发送定向通知。
 
 API 使你能够提供使用用户-机器人聊天的现有对话通知 API 传递 `NotificationSignal` 的会议信号。 此 API 允许你根据显示会议内对话框的用户操作发出信号。 API 包括查询参数、示例和响应代码。
