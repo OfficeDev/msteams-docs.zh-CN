@@ -3,21 +3,21 @@ title: 设计机器人
 description: 了解如何设计 Teams 自动程序并获取 Microsoft Teams UI Kit。
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: feeb80a0cd96172431e7682835e3f078cdd7983c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155905"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475823"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
 自动程序是执行一组特定任务的对话应用。 根据 Microsoft <a href="https://dev.botframework.com/" target="_blank">框架</a>，自动程序会与用户进行通信、回复其问题，并主动通知他们更改和其他事件。 这是一个很好的方法。
 
 > [!IMPORTANT]
-> 自动程序可用于政府社区云 (GCC) 环境，GCC高级和国防部 (DoD) 环境。
+> 机器人在 政府社区云 （GCC） 环境中可用，但不适用于GCC High和国防部 （DoD） 环境。
 
 为指导应用设计，以下信息描述并说明用户可以如何在 Teams 中添加、使用和管理机器人。
 
@@ -34,13 +34,13 @@ ms.locfileid: "59155905"
 
 ### <a name="mobile"></a>移动设备
 
-用户可以访问在桌面上使用自动程序添加的@mention。
+用户可以使用@mention访问在桌面上添加的机器人。
 
-:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="示例演示如何使用移动设备访问群聊中的@mention。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="示例演示如何使用 @mention.</a 在群组聊天中访问移动机器人>
 
 ### <a name="desktop"></a>桌面
 
-用户可以添加自动程序，方法如下：
+可以以下方法之一添加自动程序：
 
 * 从 Teams 应用商店。
 * 通过使用应用飞出，选择 teams **"更多应用"** 图标。
@@ -54,23 +54,23 @@ ms.locfileid: "59155905"
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>一对一聊天中的欢迎消息
 
-在个人环境中，欢迎消息可设置机器人的风格。 消息包括问候语、机器人可以做什么，以及一些如何交互的建议。 例如，"尝试询问我..."。 如果可能，建议应返回存储的响应，无需登录。
+在个人环境中，欢迎消息可设置机器人的风格。 该消息包括问候语、机器人可以执行的操作以及有关如何交互的一些建议。 例如，"请尝试询问我 …"。 如果可能，建议应返回存储的响应，无需登录。
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="示例显示了移动版个人应用中的机器人简介。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="示例显示移动设备上个人应用中的自动程序简介。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="例如，显示了个人应用中的机器人简介。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="示例显示个人应用中的自动程序简介。" border="false":::
 
-### <a name="welcome-message-in-channels-and-group-chats"></a>频道和群聊中的欢迎消息
+### <a name="welcome-message-in-channels-and-group-chats"></a>频道和群组聊天中的欢迎消息
 
-与个人空间相比，机器人在频道和群聊中的介绍应该略有不同 (如个人应用) 。 在现实中，如果进入一个人员完整的房间;你可自我介绍，而不是每个已存在的人。 将这一思路融入你的机器人设计中。
+与个人空间（如个人应用）相比，自动程序在频道和群组聊天中的介绍应该略有不同。 在现实中，如果进入一个人员完整的房间;你可自我介绍，而不是每个已存在的人。 将这一思路融入你的机器人设计中。
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="示例演示了在移动版协作上下文中的机器人简介。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="示例显示移动设备上协作上下文中的自动程序简介。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
@@ -84,7 +84,7 @@ ms.locfileid: "59155905"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="示例显示移动版上具有登录按钮的自动程序。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="示例显示移动设备上带有登录按钮的自动程序。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
@@ -92,18 +92,18 @@ ms.locfileid: "59155905"
 
 ### <a name="tours"></a>导览
 
-可在包含欢迎消息的教程以及自动程序响应类似"帮助"命令时包括教程。 教程是介绍机器人功能最有效的方法。 如果适用，它们还非常适用于描述应用的其他功能。 例如，包括邮件扩展的屏幕截图。
+可在包含欢迎消息的教程以及自动程序响应类似"帮助"命令时包括教程。 教程是介绍机器人功能最有效的方法。 如果适用，它们还非常适合描述应用的其他功能。 例如，包括消息传递扩展的屏幕截图。
 
 > [!IMPORTANT]
 > 无需登录即可访问教程。
 
 ### <a name="one-on-one-chats"></a>一对一聊天
 
-在个人应用中，变盘可提供自动程序的有效概述以及应用的其他任意功能。 建议包括允许用户试用自动程序命令的按钮。 例如， **创建任务**。
+在个人应用中，变盘可提供自动程序的有效概述以及应用的其他任意功能。 包括允许用户尝试自动命令的按钮。 例如，**创建任务**。
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="示例演示了机器人在移动版一对一聊天中的教程。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="示例在移动设备上的一对一聊天中演示自动程序教程。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
@@ -138,15 +138,15 @@ ms.locfileid: "59155905"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="示例演示移动机器人的结构结构分析。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="示例显示了移动自动程序的结构解析。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |1|**应用名称和图标**|
 |2|**"聊天** 选项卡"中：打开与机器人对话的空白（仅适用于个人应用）。|
 |3|**自定义选项卡**：打开与应用相关的其他内容。|
-|4 |**聊天气泡**：自动对话使用 Teams 消息框架。|
-|5 |**自适应卡片**：如果你的机器人响应包含自适应卡片，该卡片将占用聊天气泡的全部宽度。|
+|4|**聊天气泡**：自动对话使用 Teams 消息框架。|
+|5|**自适应卡片**：如果机器人的响应包括自适应卡片，则该卡将占据聊天气泡的全半角。|
 
 #### <a name="desktop"></a>桌面
 
@@ -157,10 +157,10 @@ ms.locfileid: "59155905"
 |1|**应用名称和图标**|
 |2|**"聊天** 选项卡"中：打开与机器人对话的空白（仅适用于个人应用）。|
 |3|**自定义选项卡**：打开与应用相关的其他内容。|
-|4 |**关于选项卡**：显示有关应用的基本信息。|
-|5 |**聊天气泡**：自动对话使用 Teams 消息框架。|
-|6 |**自适应卡片**：如果你的机器人响应包含自适应卡片，该卡片将占用聊天气泡的全部宽度。|
-|7 |**命令菜单**：显示自动程序的标准命令（由你定义）。|
+|4|**关于选项卡**：显示有关应用的基本信息。|
+|5|**聊天气泡**：自动对话使用 Teams 消息框架。|
+|6|**自适应卡片**：如果机器人的响应包括自适应卡片，则该卡将占据聊天气泡的全半角。|
+|7|**命令菜单**：显示自动程序的标准命令（由你定义）。|
 
 ### <a name="command-menu"></a>命令菜单
 
@@ -192,7 +192,7 @@ ms.locfileid: "59155905"
 
 设计智能机器人以识别意图，该意图可捕获智能机器人在响应邮件或查询时所捕获的信息。 意图将邮件或查询分为单个操作，包括受该操作影响的一个或多个数据对象。 
 
-以下示例概述了发送到自动程序的消息中的用户意图和数据：
+以下示例概述了发送到自动程序的邮件中的用户意图和数据。
 
 :::row:::
    :::column span="":::
@@ -221,7 +221,7 @@ ms.locfileid: "59155905"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="示例显示与移动机器人的简单查询交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="示例演示了在移动设备上与机器人的简单查询交互。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
@@ -231,11 +231,11 @@ ms.locfileid: "59155905"
 
 虽然自动程序可支持完整的请求和问题，但也应能够处理多位交互。 如果想了解可能的下一步操作，用户就更轻松完成整个任务流（而不是期望他们精心制作一个全面的请求）。
 
-在下面的示例中，自动程序使用可能想要执行下一步操作的选项来响应每条消息。
+在以下示例中，机器人会响应每条消息，并提供下一步可能要执行的操作的选项。
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="示例显示与移动设备上的机器人的多向交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="示例显示了与移动设备上的机器人的多轮次交互。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
@@ -247,17 +247,17 @@ ms.locfileid: "59155905"
 
 #### <a name="mobile"></a>移动设备
 
-在下面的示例中，用户收到一条通知，提示机器人在另一个频道中向用户发送消息。
+在下面的示例中，用户会收到一条通知，指出机器人在另一个通道中向他们发送了消息。
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="示例显示自动程序从移动版上另一个频道主动传送用户的 Toast。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="示例显示机器人的 toast 主动通过移动设备上的另一个通道向用户发送消息。" border="false":::
 
 现在，用户可以从自动程序阅读其邮件。
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="示例显示用户正在移动设备上查看机器人的主动消息。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="示例显示用户在移动设备上查看机器人的主动消息。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
-在下面的示例中，用户收到一条 Toast 通知，提示机器人在另一个频道中向用户发送消息。
+在下面的示例中，用户会收到一条 toast 通知，指出机器人在另一个通道中向他们发送了消息。
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="示例显示了自动程序主动向另一个频道中的用户消息传递消息的祝念。" border="false":::
 
@@ -267,11 +267,11 @@ ms.locfileid: "59155905"
 
 ### <a name="use-tabs-with-bots"></a>将标签用于机器人
 
-在个人应用中，选项卡可以补充机器人可以执行哪些操作。 例如，如果你的机器人可以创建工作项，那么在选项卡内的中心位置显示所有这些项目是一个不错的选择。请参阅有关设计 [选项卡的更多内容](../../tabs/design/tabs.md)。
+在个人应用中，选项卡可以补充机器人可以执行的操作。 例如，如果机器人可以创建工作项，最好在选项卡内的中心位置显示所有这些项。请参阅有关 [设计选项卡](../../tabs/design/tabs.md)的详细信息。
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="示例显示选项卡如何有助于在移动设备上组织聊天机器人内容。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="示例演示选项卡如何帮助组织移动设备上的机器人内容。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
@@ -289,7 +289,7 @@ ms.locfileid: "59155905"
 
 ### <a name="content"></a>内容
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示建立清晰人物的自动程序最佳做法的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示机器人建立清晰角色的最佳做法。" border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>执行：建立一个清晰的人
 
@@ -299,7 +299,7 @@ ms.locfileid: "59155905"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示以清楚地传达机器人可以执行哪些功能的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示以清楚地传达机器人可以执行的操作。" border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>工作：清楚传达你的机器人可以做什么
 
@@ -307,18 +307,18 @@ ms.locfileid: "59155905"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="显示不遮盖机器人功能的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="显示不遮盖机器人的功能。" border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>不要：遮住了机器人的功能
 
-第一印象很重要。 当显示非描述登录邮件时，用户可能会困惑或可疑。
+第一印象很重要。当显示非描述性登录消息时，用户可能会感到困惑或可疑。
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示自动程序应识别非问题的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示机器人应识别非问题。" border="false":::
 
 #### <a name="do-recognize-non-questions"></a>注意：识别非问题
 
@@ -326,7 +326,7 @@ ms.locfileid: "59155905"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="显示应避免对简单自动程序消息的不一致响应的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="示例显示应避免对简单机器人消息的 clumsy 响应。" border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>不要：错过一些可喜欢的机会
 
@@ -339,7 +339,7 @@ ms.locfileid: "59155905"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="显示自动程序的示例应帮助用户了解如何使用机器人。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="显示机器人的示例应帮助用户了解如何使用 bots." border="false":::
 
 #### <a name="do-provide-help"></a>执行：提供帮助
 
@@ -347,7 +347,7 @@ ms.locfileid: "59155905"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="显示自动程序不应将用户设置成这样一个示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="显示机器人不应使用户连接的示例。" border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>请勿参与：将用户困
 
@@ -360,7 +360,7 @@ ms.locfileid: "59155905"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示你可以将任务模块或选项卡与自动程序一起用于复杂交互的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示可以将任务模块或选项卡与机器人一起用于复杂交互。" border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Do：使用任务模块或选项卡
 
@@ -368,7 +368,7 @@ ms.locfileid: "59155905"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="显示自动程序应避免多向交互的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="显示机器人应如何避免多轮次交互。" border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>不要：进行多元交互，件非常乏味
 
@@ -381,7 +381,7 @@ ms.locfileid: "59155905"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="显示自动程序应如何在个人上下文中显示私人信息的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="显示机器人应如何仅在个人上下文中显示私有信息。" border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do：仅在个人上下文中显示敏感信息
 
@@ -389,7 +389,7 @@ ms.locfileid: "59155905"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="显示机器人不应向组或人员显示敏感信息的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="显示机器人不应如何向组或人员显示敏感信息。" border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>不要：某些内容并非由每个人看到
 

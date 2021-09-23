@@ -4,12 +4,12 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams 新增功能
-ms.openlocfilehash: 4d664213b3a2a62a6ac99ef5f93ca276bfed9268
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 7bc3aebbe0acdbef410beb18041d1ac998216ebe
+ms.sourcegitcommit: e1e37cfbecba3a6b382f19379996cc423cd99dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475739"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59485766"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
@@ -30,7 +30,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **日期** | **注释** | **已更改的主题** |
 | -------- | --------- | ------------------ |
-|09/21/2021|Teams自动程序和传入 Webhook 的用户提及中支持 AAD 对象 ID 和 UPN。 | [Microsoft Teams 中的格式卡](task-modules-and-cards/cards/cards-format.md)|
+|09/21/2021|Teams自动程序和传入 Webhook 的用户提及中支持 AAD 对象 ID 和 UPN。 |[AAD 对象 ID 和 UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)， [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| 支持在自适应卡片 (v1.3 上验证所有功能) 和通用操作 (v1.4 支持自动发送的) 。 |[输入验证](/adaptive-cards/authoring-cards/input-validation)， [自适应卡片的通用操作 v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|会议阶段现已在 GA 中提供。|[为会议启用和配置Teams应用](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| 自定义一起模式场景功能将参与者合并到单个虚拟场景，并将其视频流放在预先确定的座位中。 | [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md) |
@@ -74,12 +74,12 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **日期** | **注释** | **已更改的主题** |
 | -------- | --------- | ------------------ |
-|11/30/2020|标识平台与选项卡Teams Toolkit和Visual Studio Code集成。|[使用选项卡的Teams Toolkit Visual Studio Code单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
+|11/30/2020|标识平台与选项卡Teams Toolkit和Visual Studio Code集成。|[使用选项卡的 Teams Toolkit 和 Visual Studio Code 单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams更新到版本 1.8 的应用清单。|[参考：Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams自动程序设计指南。|[机器人设计指南](bots/design/bots.md)|
 |09/30/2020|现在支持在移动设备上向机器人发送和接收文件。|[通过自动程序发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|开发入门的新Teams信息。|[生成首个Teams应用概述](build-your-first-app/build-first-app-overview.md)|
-|09/18/2020|支持会议Teams应用 (发布预览) 。|[创建用于会议Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md)[应用和会议Teams应用](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|09/18/2020|支持会议Teams应用 (发布预览) 。|[创建用于会议Teams](apps-in-teams-meetings/create-apps-for-teams-meetings.md)[应用和应用Teams会议](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|使用 Microsoft Teams 导入Graph。|[使用 Microsoft Graph 将第三方平台消息导入 Teams](graph-api/import-messages/import-external-messages-to-teams.md)
 |08/12/2020 |已移动到 GA 的传入 Webhook 中的自适应卡片支持。|[使用传入 webhook 发送自适应卡](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|使用 Teams 开始构建Visual Studio Toolkit。|[使用应用和Microsoft Teams Toolkit生成Visual Studio Code](toolkit/visual-studio-overview.md) |
@@ -114,7 +114,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | 10/31/2019 | 新的文档结构和主要文章重构。 请通过创建问题报告任何死链接或 404 GitHub问题。 | 全部都一样！ |
 | 09/13/2019 | 从基于操作的消息扩展安装请求自动程序。 | [使用消息传递扩展启动操作](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 08/28/2019 | 支持选项卡和连接器中的私人频道。 | [获取选项卡的上下文](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
-| 06/20/2019 | 从外部网站将外部网站共享到外部Teams通道。 | [共享到Teams](~/share-to-teams.md) |
+| 06/20/2019 | 从外部网站将外部网站共享到一个Teams通道。 | [共享到Teams](~/share-to-teams.md) |
 | 05/25/2019 | 使用来自任务模块的自动程序消息进行响应。 | [使用来自任务模块的自动程序消息进行响应](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | 群聊中的聊天机器人。 | [在群聊或频道中与机器人交互](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | 应用清单本地化。 | [应用本地化](~/publishing/apps-localization.md) |
@@ -143,7 +143,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | 11/09/2018 | 现在，您可以创建指向用户之间的私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 11/08/2018 | SharePoint 框架 1.7 版附带了一项新功能，Microsoft Teams选项卡作为 SharePoint 框架 Web 部件。 | [选项卡SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 11/05/2018 | 任务 **模块功能** 已发布。 任务模块允许你从机器人和选项卡在 Teams应用程序中创建模式弹出体验。 在弹出窗口中，可以运行自己的自定义 HTML/JavaScript 代码、显示基于小部件（如 YouTube 或 Microsoft Stream 视频）或 `<iframe>` 显示自适应 [卡片](/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)， [选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)，  [机器人中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
-| 10/05/2018 | 卡片的格式设置信息已在桌面、iOS 和 Android 客户端中更新和测试，Teams。 | [卡片](~/concepts/cards/cards.md)[、卡片格式](~/concepts/cards/cards-format.md) |
+| 10/05/2018 | 卡片的格式设置信息已在桌面、iOS 和 Android 客户端中更新和测试Teams。 | [卡片](~/concepts/cards/cards.md)[、卡片格式](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | 适用于 Microsoft Graph 的呼叫和联机会议 API 已发布到 beta 版本，Teams应用现在可以通过多种使用语音和视频的方式与用户进行交互。 | [通话和联机会议](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人、[实时媒体](~/concepts/calls-and-meetings/real-time-media-concepts.md)概念、注册呼叫[](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人、[调试和](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)本地测试、应用程序托管的[媒体](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)、[处理传入呼叫通知](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | 选项卡配置页面现在高度明显高。 | [选项卡设计](tabs/design/tabs.md) |
 | 08/15/2018 | 自适应卡片现在受 Teams。|[用户中的自适应卡片Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
