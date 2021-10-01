@@ -5,18 +5,18 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: b46ce611ca09c4d5883cc66e0078291422e2b65a
-ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
+ms.openlocfilehash: 8ef68f351e8d0d7ee39dfc5ae3816337fc592920
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59491672"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017329"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
 对话中每条消息都是一 `Activity` 个类型 为 的对象 `messageType: message` 。 当用户发送消息时，Teams将邮件发送到自动程序。 Teams JSON 对象发送到机器人的消息终结点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与Teams通信。 Bot Builder SDK 提供以下功能：
+基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与用户Teams通信。 Bot Builder SDK 提供以下功能：
 
 * 轻松访问 Bot Framework 连接器。
 * 用于管理对话流和状态的其他功能。
@@ -119,7 +119,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>发送消息
 
-若要发送短信，请指定你想要作为活动发送的字符串。 在机器人的活动处理程序中，使用 turn context 对象的方法发送 `SendActivityAsync` 单个消息响应。 使用 对象的 `SendActivitiesAsync` 方法一次发送多个响应。
+若要发送短信，请指定你想要作为活动发送的字符串。 在机器人的活动处理程序中，使用 turn context 对象的方法 `SendActivityAsync` 发送单个消息响应。 使用 对象的 `SendActivitiesAsync` 方法一次发送多个响应。
 
 以下代码显示向对话中添加用户时发送邮件的示例：
 
@@ -167,43 +167,23 @@ async def on_members_added_activity(
 
 ```json
 {
-    "text": "hi",
-    "textFormat": "plain",
     "type": "message",
-    "timestamp": "2019-10-31T20:57:27.2347285Z",
-    "localTimestamp": "2019-10-31T13:57:27.2347285-07:00",
-    "id": "1572555447214",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1Xv-kvy4dKirR0rZfSF_kAVUzotoT1SXuEzkC9XGkuZng8YBw8qyu5uh4128fQRjlGgvEiRLx-0XP4KYMwcgdZw",
-        "name": "Jane Doe",
-        "aadObjectId": "df486eae-88fd-42a5-b45e-c581588186db"
+        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+        "name": "Teams TestBot"
     },
     "conversation": {
-        "conversationType": "personal",
-        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-        "id": "a:1oAmWTVBBe9E0JrpGxauqNyx4CCE_iQf2ZuWon9D42722Fon3wYIpbhgbRChE3wgVS1Gwl9zS1pZy4FSu6-x1vGEq5KBQK-EbBgyPyeP_C-lbLBY3vxnGk9m9D_282jbg"
+        "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+        "name": "Convo1"
+   },
+   "recipient": {
+        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+        "name": "Megan Bowen"
     },
-    "recipient": {
-        "id": "28:5baea8d1-d4ea-43a1-b101-882f4c8d9cb4",
-        "name": "Imported Bot"
-    },
-    "entities": [
-        {
-            "locale": "en-US",
-            "country": "US",
-            "platform": "Windows",
-            "type": "clientInfo"
-        }
-    ],
-    "channelData": {
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-        }
-    },
-    "locale": "en-US"
+    "text": "My bot's reply",
+    "replyToId": "1632474074231"
 }
+
 ```
 
 ---
@@ -213,7 +193,7 @@ async def on_members_added_activity(
 
 在用户和机器人之间发送的消息包含邮件中的内部通道数据。 此数据允许机器人在此频道上正常通信。 Bot Builder SDK 允许你修改消息结构。
 
-## <a name="teams-channel-data"></a>Teams通道数据
+## <a name="teams-channel-data"></a>Teams频道数据
 
 `channelData`对象包含Teams特定的信息，是团队和频道的一个明确来源。 （可选）你可以缓存这些 ID 并用作本地存储的密钥。 `TeamsActivityHandler`SDK 中的 从 对象提取重要信息 `channelData` ，使其易于访问。 但是，您始终可以从对象访问 `turnContext` 原始数据。
 
@@ -256,10 +236,10 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>邮件内容
 
-| 格式    | 从用户到机器人 | 从自动程序到用户 | 注意                                                                                   |
+| 格式    | 从用户到机器人 | 从自动程序到用户 | 备注                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
-| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式的最大大小为 1024×1024 和 1 MB。 不支持动态 GIF。  |
+| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式× 1024 MB 和 1 MB。 不支持动态 GIF。  |
 | 卡片     | ✖                | ✔                | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
 | 表情符号    | ✖                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 用于表情符号。 |
 
@@ -402,7 +382,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 | 403 | **代码**： `BotNotInConversationRoster` <br/> **消息**：机器人不是对话名单中的一部分。 | 机器人不是对话的一部分。 |
 | 403 | **代码**： `BotDisabledByAdmin` <br/> **消息**：租户管理员已禁用此自动程序。 | 租户阻止了机器人。 |
 | 401 | **代码**： `BotNotRegistered` <br/> **消息**：未找到此自动程序注册。 | 未找到此自动程序注册。 |
-| 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一对话上的多个并发操作，某一依赖项的前提条件失败。 |
+| 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一对话上的多个并发操作，某一依赖项的前置条件失败。 |
 | 404 | **代码**： `ConversationNotFound` <br/> **消息**：未找到对话。 | 未找到对话。 |
 | 413 | **代码**： `MessageSizeTooBig` <br/> **邮件**：邮件大小过大。 | 传入请求的大小太大。 |
 | 429 | **代码**： `Throttled` <br/> **消息**：请求过多。 还返回在之后重试时间。 | 机器人发送的请求过多。 有关详细信息，请参阅速率 [限制](~/bots/how-to/rate-limit.md)。 |

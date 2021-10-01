@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 清单架构
-ms.openlocfilehash: d1fa68cc4ae69e8a35c0d812192bb5c15a7cf130
-ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
+ms.openlocfilehash: 99b41d9caaf2fb37d9721c67555fdbd3d8684fa6
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59491679"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017322"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
-Teams清单介绍了应用如何集成到Microsoft Teams产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 早期版本 1.0、1.1,..., 和 1.6 也受 URL ("v1.x") 。
+Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 早期版本 1.0、1.1,..., 和 1.6 也受 URL ("v1.x"支持) 。
 有关在每个版本中所做的更改详细信息，请参阅 [清单更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
 
 以下架构示例显示了所有扩展性选项：
@@ -368,13 +368,13 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`short`|30 个字符|✔|应用的显示名称。|
 |`full`|100 个字符||应用的完整名称，在完整应用名称超过 30 个字符时使用。|
 
-## <a name="description"></a>description
+## <a name="description"></a>说明
 
 **必需**—object
 
 向用户描述你的应用。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
-确保你的描述描述你的体验，并帮助潜在客户了解你的体验。 如果需要使用外部帐户，则必须在完整说明中记下。 和 `short` `full` 的值必须不同。 简短说明不能在详细说明中重复，并且不得包含任何其他应用名称。
+请确保您的描述描述您的体验并帮助潜在客户了解您的体验。 如果需要使用外部帐户，则必须在完整说明中记下。 和 `short` `full` 的值必须不同。 简短说明不能在详细说明中重复，并且不得包含任何其他应用名称。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -419,7 +419,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ## <a name="accentcolor"></a>accentColor
 
-**可选**—HTML 十六进制颜色代码
+**必需**— HTML 十六进制颜色代码
 
 要用作边框图标背景的颜色。
 
@@ -453,14 +453,14 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`entityId`|string|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|string|128 个字符|✔|the 显示名称 of the tab in the channel interface.|
 |`contentUrl`|string||✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
-|`websiteUrl`|string|||用户 https:// 在浏览器中查看时指向的 URL。|
+|`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
 |`searchUrl`|string|||用于 https:// 搜索查询的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
 |`context` | 枚举数组| 2|| 支持选项卡的范围 `contextItem` 集。|
 
 > [!NOTE]
 >  第三方开发人员无法使用 searchUrl 功能。
-> 如果您的选项卡需要依赖上下文的信息来显示相关内容或启动身份验证流，有关详细信息，请参阅获取 Microsoft Teams[上下文选项卡](../../tabs/how-to/access-teams-context.md)。
+> 如果您的选项卡需要与上下文相关的信息来显示相关内容或启动身份验证流，有关详细信息，请参阅获取 Microsoft Teams[上下文选项卡](../../tabs/how-to/access-teams-context.md)。
 
 ## <a name="bots"></a>bots
 
@@ -468,7 +468,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 定义自动程序解决方案以及默认命令属性等可选信息。
 
-项目是一个 (，当前每个应用最多只能有一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
+该项目是一个数组 (，当前每个应用最多只能有一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -482,7 +482,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含两个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
+自动程序可以推荐给用户的命令的可选列表。 对象是一个数组 (，最多包含两个元素) 类型的所有元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -494,13 +494,13 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |title|string|12 |✔|自动程序命令名称。|
-|description|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
+|说明|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
 
 ## <a name="connectors"></a>连接器
 
 **可选**—array
 
-`connectors`块为应用Office 365连接器。
+`connectors`此块定义Office 365连接器。
 
 对象是一个数组， (类型的所有元素) 一个元素 `object` 。 只有提供连接器的解决方案才需要此块。
 
@@ -519,13 +519,13 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 > [!NOTE]
 > 2017 年 11 月，功能名称从"撰写扩展"更改为"邮件扩展"，但清单名称保持不变，以便现有扩展继续工作。
 
-项目是一个数组， (类型的所有元素) 一个元素 `object` 。 只有提供邮件扩展的解决方案才需要此块。
+该项目是一个数组 (类型的所有元素) 一个元素 `object` 。 只有提供邮件扩展的解决方案才需要此块。
 
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 ID 可以与整个应用 ID 相同。|
 |`commands`|对象数组|10 |✔|邮件扩展支持的命令数组。|
-|`canUpdateConfiguration`|布尔|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值：**False**。|
+|`canUpdateConfiguration`|boolean|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值：**False**。|
 |`messageHandlers`|对象数组|5||允许满足某些条件时调用应用的处理程序列表。|
 |`messageHandlers.type`|string|||消息处理程序的类型。 必须是 `"link"`。|
 |`messageHandlers.value.domains`|字符串数组|||链接邮件处理程序可以注册的域数组。|
@@ -587,11 +587,11 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **可选**，除非 **有说明** ，否则必选。
 
-应用预期在 Teams 客户端内加载的网站的有效域列表。 域列表可以包含通配符，例如 `*.example.com` ， 。 有效域与域的一个段完全匹配;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。 如果你的选项卡配置或内容 UI 导航到除选项卡配置外任何其他域，则必须在此处指定该域。
+应用预期在客户端内加载的网站的有效Teams列表。 域列表可以包含通配符，例如 `*.example.com` ， 。 有效域与域的一个段完全匹配;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。 如果你的选项卡配置或内容 UI 导航到除选项卡配置外任何其他域，则必须在此处指定该域。
 
 **请勿** 在应用中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，需要重定向到 accounts.google.com，但不得在 `validDomains[]` accounts.google.com。
 
-需要自己的 SharePoint URL 正常运行的 Teams 应用在有效域列表中包括"{teamsitedomain}"。
+Teams需要其自己的 url SharePoint应用程序，其有效域列表中包括"{teamsitedomain}"。
 
 > [!IMPORTANT]
 > 不要直接添加或通过通配符添加超出您控制的域。 例如， `yourapp.onmicrosoft.com` 是有效的，但 `*.onmicrosoft.com` 是 无效。
@@ -602,7 +602,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **可选**—object
 
-提供 Azure Active Directory (AAD) 应用 ID 和 Microsoft Graph 信息，以帮助用户无缝登录你的应用。 如果你的应用在 AAD 中注册，则必须提供应用 ID。 管理员可以在 Teams 管理中心轻松查看权限并授予同意。
+提供你的Azure Active Directory (AAD) 应用 ID 和 Microsoft Graph信息，以帮助用户无缝登录你的应用。 如果你的应用在 AAD 中注册，则必须提供应用 ID。 管理员可以在管理中心内轻松查看权限Teams同意。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -626,7 +626,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 指示在具有或没有选项卡标题栏的情况下呈现个人应用。 默认为 **false**。
 
 > [!NOTE]
-> `isFullScreen` 仅适用于 SharePoint 选项卡和存储应用程序。
+> `isFullScreen`仅适用于选项卡SharePoint存储应用。
 
 ## <a name="activities"></a>activities
 

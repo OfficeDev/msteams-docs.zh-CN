@@ -1,29 +1,29 @@
 ---
 title: Teams 会议中应用的先决条件
 author: surbhigupta
-description: 确定会议Teams的先决条件
+description: 确定会议应用Teams的先决条件
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: e3392e92965d03c33cd07ae5b65d607d3f86aa5d
-ms.sourcegitcommit: d6917d41233a530dc5fd564a67d24731edeb50f1
+ms.openlocfilehash: 56219323f6106619a9dd4f1b26289ecf86d297f3
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59487478"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017315"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件
 
 借助Teams会议，可以在会议生命周期内扩展应用的功能。 使用会议Teams之前，必须满足以下先决条件：
 
-* 了解如何开发Teams应用。 若要详细了解如何开发应用Teams，请参阅Teams[应用开发](../overview.md)。
+* 了解如何开发Teams应用程序。 若要详细了解如何开发应用Teams，请参阅Teams[应用开发](../overview.md)。
 
 * 更新Teams应用清单，以指示该应用可用于会议。 有关详细信息，请参阅 [应用清单](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest)。
 
 * 使用支持 groupchat 作用域中的可配置选项卡的应用。 有关详细信息，请参阅群[聊范围和](../resources/schema/manifest-schema.md#configurabletabs)[构建组选项卡](../build-your-first-app/build-channel-tab.md)。
 
-* 遵守Teams和会议后方案的常规选项卡设计准则。 有关会议期间的体验，请参阅会议中的选项卡和会议内对话框设计指南。 有关详细信息，请参阅Teams[选项卡](../tabs/design/tabs.md)设计指南、会议中的[选项卡](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)设计指南和[会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
+* 遵守Teams和会议后方案的常规选项卡设计准则。 有关会议期间的体验，请参阅会议中的选项卡和会议内对话框设计指南。 有关详细信息，请参阅Teams[选项卡设计指南](../tabs/design/tabs.md)、会议中的[选项卡](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)设计指南和[会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
 
 * 支持 `groupchat` 范围以在会议前和会议后聊天中启用你的应用。 通过会议前应用体验，你可以查找和添加会议应用，以及执行会议前任务。 使用会议后应用体验，可以查看会议结果，例如投票调查结果或费用
 * 会议 API URL 参数必须具有 `meetingId` 、 `userId` 和 `tenantId` 。 这些参数作为客户端 SDK 和自动程序Teams的一部分提供。 此外，您可以使用选项卡 SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
@@ -48,7 +48,7 @@ ms.locfileid: "59487478"
 
 下表提供了这些 API 的列表：
 
-|API|说明|请求|源|
+|API|说明|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -65,7 +65,7 @@ ms.locfileid: "59487478"
 
 ### <a name="getusercontext-api"></a>GetUserContext API
 
-若要标识和检索选项卡内容的上下文信息，请参阅获取选项卡Teams[上下文](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)。`meetingId`在会议上下文中运行时选项卡使用，并添加响应有效负载。
+若要标识和检索选项卡内容的上下文信息，请参阅获取选项卡[Teams上下文](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)。`meetingId`在会议上下文中运行时选项卡使用，并添加响应有效负载。
 
 ### <a name="getparticipant-api"></a>GetParticipant API
 
@@ -290,17 +290,8 @@ API 通过 Bot Services 提供。
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-var creds = connectorClient.Credentials as AppCredentials;
-var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
-var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
-request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
-string content;
-if (response.Content != null)
-{
-    content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-}
+MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
+await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
@@ -479,24 +470,27 @@ API 的 JSON 响应 `Meeting Details` 正文如下所示：
 > * 不要将对话 ID 用作会议 ID。     
 > * 请勿使用会议事件有效负载中的会议 `turncontext.activity.value` ID。 
       
-以下代码演示如何从会议开始和结束事件捕获会议元数据，即 、 和 `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` ：
+以下代码演示如何从会议开始/结束事件捕获会议元数据，即 、 和 `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` ：
+
+会议开始事件
 
 ```csharp
 protected override async Task OnEventActivityAsync(
 ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
-    // Event Name is either 'application/vnd.microsoft.meetingStart' or 'application/vnd.microsoft.meetingEnd'
-    var meetingEventName = turnContext.Activity.Name;
-    // Value contains meeting information (ex: meeting type, start time, etc).
-    var meetingEventInfo = turnContext.Activity.Value as JObject; 
-    var meetingEventInfoObject =
-meetingEventInfo.ToObject<MeetingStartEndEventValue>();
-    // Create a very simple adaptive card with meeting information
-var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
-meetingEventInfoObject);
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
+
+会议结束事件
+
+```csharp
+protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
+}
+```
+
 * 在会议 API URL 中具有 参数 `meetingId` `userId` 、 和 `tenantId` 。 这些参数作为客户端 SDK 和自动程序Teams的一部分提供。 此外，您可以使用选项卡 SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 * 在 API 中拥有自动程序注册 `GetParticipant` 和 ID 以生成身份验证令牌。 有关详细信息，请参阅自动[程序注册和 ID。](../build-your-first-app/build-bot.md)

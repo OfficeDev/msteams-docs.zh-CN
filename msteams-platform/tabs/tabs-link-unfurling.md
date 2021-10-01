@@ -1,16 +1,16 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
+description: 如何取消链接，打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 4444830d47345908445d62bdd276e8706a0c1a03
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cc77667a8782f2f519d6dc3e6af74949a9dcbed2
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155926"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017301"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -28,7 +28,7 @@ ms.locfileid: "59155926"
 
 ## <a name="advantage-of-stage-view"></a>阶段视图的优点
 
-阶段视图有助于提供在网站中查看内容Teams。 用户无需离开上下文即可打开和查看应用提供的内容，并且可以将内容固定到聊天或频道，以便将来快速访问。 这可提高用户对你的应用的参与度。
+阶段视图有助于提供在网站中查看内容的Teams。 用户无需离开上下文即可打开和查看应用提供的内容，并且可以将内容固定到聊天或频道，以便将来快速访问。 这可提高用户对你的应用的参与度。
 
 ## <a name="stage-view-vs-task-module"></a>阶段视图与任务模块
 
@@ -104,10 +104,10 @@ ms.locfileid: "59155926"
 
 ### <a name="syntax"></a>语法
 
-以下是 deeplink 语法：  
- 
-https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl"："[contentUrl]"，"websiteUrl"："[websiteUrl]"，"name"："[name]"}
+以下是 deeplink 语法： 
 
+https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" ： \" "[contentUrl]" \" ， \" websiteUrl ： \" \" "[websiteUrl]" \" ， name ： \" \" \" Contoso \" }
+ 
 ### <a name="examples"></a>示例
 
 当用户输入 URL 时，该 URL 将取消展开到自适应卡片中。
@@ -133,9 +133,9 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | 属性名称 | 类型 | 字符数 | 说明 |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
-| `name` | String | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
+| `name` | 字符串 | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
 | `contentUrl` | String | 2048 | 此属性是指向 https:// UI 以在页面画布中显示的实体 UI Teams URL。 这是必填字段。|
-| `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
+| `websiteUrl?` | 字符串 | 2048 | 如果用户选择在 https:// 查看，则此属性为要指向的 URL。 这是必填字段。|
 | `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
 
 ## <a name="code-sample"></a>代码示例
