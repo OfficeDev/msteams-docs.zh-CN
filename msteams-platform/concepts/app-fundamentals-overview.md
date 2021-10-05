@@ -5,24 +5,24 @@ description: 介绍开发平台Teams概念。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6756152ee90c741c7f475fc5153c4b27f9a3bf84
+ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155953"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60119648"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams应用开发基础
 
-Microsoft Teams应用基础为创建自定义应用提供Teams方向。 你可以识别规划应用所需的Teams框架。 本文档可帮助你了解用户-应用通信，并找出你需要使用的应用图面类型或你的应用在进程中可能需要的 API。 获得一些灵感，以在集成应用体验时融入交互性Teams。
+Microsoft Teams应用基础为创建自定义应用提供Teams方向。 你可以识别规划应用所需的Teams框架。 本文档可帮助你了解用户-应用通信，并找出你需要使用的应用图面类型或你的应用在进程中可能需要的 API。 获得一些灵感，以利用交互性，在集成应用时可加深Teams。
 
 ## <a name="capabilities-and-entry-points"></a>功能和入口点
 
-可以通过多种方式扩展Teams应用。 为了能够扩展你的应用，你必须了解在协作空间中工作的所有核心功能和入口点。 你可以尝试构建应用的扩展点。 重要应用项目组件可帮助你正确配置应用页面。 Teams应用可以[有多个功能和](../concepts/capabilities-overview.md)[入口点](../concepts/extensibility-points.md)。
+可以通过多种方式扩展Teams应用程序。 为了能够扩展你的应用，你必须了解在协作空间中工作的所有核心功能和入口点。 你可以尝试构建应用的扩展点。 重要应用项目组件可帮助你正确配置应用页面。 Teams应用可以[有多个功能和](../concepts/capabilities-overview.md)[入口点](../concepts/extensibility-points.md)。
 
 ## <a name="understand-your-use-cases"></a>了解用例
 
-你可以识别用户问题并确定用户面临的一些常见问题的解答。 可以通过找到Teams满足用户需求的组合来构建你的应用。 [了解用例](../concepts/design/understand-use-cases.md) 以了解最终用户如何与你的应用交互。 了解如何了解用户及其问题。 回答的一些常见问题如下所示：
+你可以识别用户问题并确定用户面临的一些常见问题的解答。 可以通过找到Teams满足用户需求的正确组合来构建你的应用。 [了解用例](../concepts/design/understand-use-cases.md) 以了解最终用户如何与你的应用交互。 了解如何了解用户及其问题。 回答的一些常见问题如下所示：
 
 * 是否需要身份验证？
 * 你的应用要解决什么问题？
@@ -32,6 +32,9 @@ Microsoft Teams应用基础为创建自定义应用提供Teams方向。 你可�
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到Teams功能
 
 [映射用例涵盖了](../concepts/design/map-use-cases.md) 一些常见方案以及如何选择应用的功能。 提供了在外部系统中共享应用和协作处理项目的信息。 您还可以了解如何启动工作流和向用户发送通知。 获取有关开始位置、如何与用户社交、对话机器人以及组合多个功能的其他提示。
+
+## <a name="plan-responsive-tabs-for-teams-mobile"></a>为移动版规划响应Teams选项卡
+[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md)涵盖了常见方案，有助于规划适用于移动Teams应用。 文档指南将指导如何对移动设备上的应用进行规范。 还可以了解应用应用的不同Teams类型。
 
 ## <a name="integrate-device-capabilities"></a>集成设备功能
 

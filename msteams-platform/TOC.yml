@@ -44,6 +44,8 @@
       href: concepts/design/understand-use-cases.md
     - name: 将用例映射到 Teams 应用功能
       href: concepts/design/map-use-cases.md
+    - name: 规划 Teams 移动版的响应式选项卡
+      href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     - name: 设备功能
       items:
         - name: 概述
