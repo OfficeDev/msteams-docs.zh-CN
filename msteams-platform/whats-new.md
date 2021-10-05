@@ -4,14 +4,14 @@ description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams 新增功能
-ms.openlocfilehash: a0970151a4d4a9849362cc71d30de3936c50c20b
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 13e749352662872d0b457085cc919b2357e9c348
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/05/2021
-ms.locfileid: "60119655"
+ms.locfileid: "60127285"
 ---
-# <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员的新增Microsoft Teams
+# <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员在 Microsoft Teams
 
 发现Microsoft Teams GA 版本和开发人员预览版 () 平台功能。
 
@@ -28,14 +28,16 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 <summary><b>2021</b></summary>
 
-| **Date** | **备注** | **已更改的主题** |
+| **日期** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
-|10/05/2021|规划移动Teams应用|[规划移动版响应Teams选项卡](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
-|10/04/2021| 新的开发人员门户Teams用于管理你的 Teams 应用。 | [Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
+|10/05/2021| 隐藏Teams应用程序，直到管理员允许取消隐藏应用。 | [在Teams批准前隐藏应用](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
+|10/05/2021|规划移动Teams应用|[规划 Teams 移动版的响应式选项卡](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
+|10/04/2021| 新的开发人员门户Teams管理你的 Teams 应用。 | [Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams自动程序和传入 Webhook 的用户提及中支持 AAD 对象 ID 和 UPN。 |[AAD 对象 ID 和 UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)， [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
-|08/16/2021| 支持在自适应卡片 (v1.3 上验证所有功能) 和通用操作 (v1.4 for bot sent cards) 。 |[输入验证](/adaptive-cards/authoring-cards/input-validation)， [自适应卡片的通用操作 v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|09/08/2021|会议阶段现已在 GA 中提供。|[为会议启用和配置Teams应用](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
+|08/16/2021| 支持在自适应卡片 (v1.3 上验证所有功能) 和通用操作 (v1.4，用于自动程序发送的) 。 |[输入验证](/adaptive-cards/authoring-cards/input-validation)， [自适应卡片的通用操作 v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|会议阶段现已在 GA 中提供。|[为会议启用和配置Teams应用](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|08/30/2021| 自定义一起模式场景功能将参与者合并到单个虚拟场景，并将其视频流放在预先确定的座位中。 | [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md) |
+|08/30/2021| 自定义一起模式场景功能将参与者组合到单个虚拟场景，将其视频流放在预定席位中。 | [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| 引入了分步指南，以使用 SSO Teams单一登录 (自动) 。 | [使用 SSO 创建自动程序Teams分步指南](sbs-bots-with-sso.yml) |
 |08/19/2021| 安装聊天机器人到对话线程时收到的安装更新事件。 | [安装更新事件](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|具有自适应卡片的生成选项卡|[具有自适应卡片的生成选项卡](tabs/how-to/build-adaptive-card-tabs.md)|
@@ -74,7 +76,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
   
 <summary><b>2020</b></summary>
 
-| **Date** | **备注** | **已更改的主题** |
+| **日期** | **备注** | **已更改的主题** |
 | -------- | --------- | ------------------ |
 |11/30/2020|标识平台与选项卡Teams Toolkit和Visual Studio Code集成。|[使用选项卡的 Teams Toolkit 和 Visual Studio Code 单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams更新到版本 1.8 的应用清单。|[参考：Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -165,7 +167,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | 04/02/2018 | 使用机器人为应用发送通知。 |[仅限通知的机器人](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | 主动邮件的扩展文档。 |[开始对话](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 03/15/2018 | 卡片的重构文档。 |[卡片](~/concepts/cards/cards.md)、[卡片操作](~/concepts/cards/cards-actions.md)[、卡片格式、](~/concepts/cards/cards-format.md)[卡片参考](~/concepts/cards/cards-reference.md)|
-| 03/03/2018 | 添加了 App Studio Teams文档。 |[使用 App Studio Teams](~/get-started/get-started-app-studio.md)App Studio 快速开发[应用，使用 App Studio 中的控件库](~/get-started/app-studio-component-library.md)|
+| 03/03/2018 | 添加了 App Studio Teams文档。 |[使用 App Studio 中的控件Teams](~/get-started/get-started-app-studio.md)App Studio 快速[开发应用](~/get-started/app-studio-component-library.md)|
 | 02/27/2018 | 添加了示例代码以演示 AsTeamsChannelAccounts () 方法。 |[获取机器人的背景资料](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | 添加了有关开始使用 C#。 |[开始在 Microsoft Teams 平台上使用 C#/.NET ](./get-started/get-started-dotnet-app-studio.md)|
 
@@ -183,7 +185,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |06/21/2021|使用自动程序卸载个人应用的行为 | [使用自动程序卸载个人应用中的行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| 聊天的特定于资源的同意。 |[特定于资源的同意](graph-api/rsc/resource-specific-consent.md)，[测试资源特定的许可权限在](graph-api/rsc/test-resource-specific-consent.md)Teams|
 |05/25/2021| 针对 Teams Toolkit 和[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)更新[Visual Studio。](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview) | [应用开发Teams入门](~/get-started/prerequisites.md) |
-|05/24/2021|自动程序可以使用 RSC (特定同意接收所有) 。|[使用 RSC、机器人](~/bots/how-to/conversations/channel-messages-with-rsc.md)对话[概述](~/bots/how-to/conversations/conversation-basics.md)、[频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)以及[开发人员预览](~/resources/schema/manifest-schema-dev-preview.md)清单架构接收所有消息 |
+|05/24/2021|自动程序可以使用 RSC (特定资源许可来接收) 。|[使用 RSC、机器人](~/bots/how-to/conversations/channel-messages-with-rsc.md)对话[概述](~/bots/how-to/conversations/conversation-basics.md)、[频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)以及[开发人员预览](~/resources/schema/manifest-schema-dev-preview.md)清单架构接收所有消息 |
 |05/21/2021|选项卡链接取消展开和阶段视图|[选项卡链接取消展开和阶段视图](tabs/tabs-link-unfurling.md) |
 
 有关详细信息，请参阅[公共开发人员预览版Teams。](~/resources/dev-preview/developer-preview-intro.md)
@@ -194,7 +196,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 ## <a name="submit-your-feedback"></a>提交反馈
 
-我们鼓励Teams开发人员提问、提交 Bug、提交功能请求和做出贡献。 可以通过任何可用渠道 [提交反馈](feedback.md)。
+我们鼓励Teams开发人员提问、提交 Bug、提交功能请求并做出贡献。 可以通过任何可用渠道 [提交反馈](feedback.md)。
 
 ## <a name="get-latest-updates"></a>获取最新更新
 
