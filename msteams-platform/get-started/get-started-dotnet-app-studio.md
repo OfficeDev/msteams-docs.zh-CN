@@ -1,21 +1,21 @@
 ---
 title: 教程 - 使用 C 创建第一个应用#
-description: 了解如何开始使用 .NET Microsoft Teams生成C#应用。
+description: 了解如何开始使用 Microsoft Teams .NET C#应用程序。
 keywords: 入门 .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: dac0874850094c7f3bbe83f6cbc4f26209213410
+ms.sourcegitcommit: 5bb12fd185a3bd6e308cc3a65b54341a5ae10af9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096688"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60116733"
 ---
-# <a name="build-your-first-teams-app-using-c"></a>使用 C 生成Teams应用#
+# <a name="build-your-first-teams-app-using-c"></a>使用 C 生成Teams一个应用#
 
-本教程介绍如何使用 .NET 或 Microsoft Teams生成首个 C#。 它还将引导你完成以下步骤：
+本教程介绍如何使用 .NET 或 Microsoft Teams 生成首个C#。 它还将引导你完成以下步骤：
 
 1. [准备环境](#prepare-your-environment)
 1. [获取先决条件](#GetPrerequisites)
@@ -63,7 +63,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> 可以[分叉此](https://help.github.com/articles/fork-a-repo/)[存储库以](https://github.com/OfficeDev/Microsoft-Teams-Samples)修改所做的更改并将其保存到GitHub。
+> 可以[分叉](https://help.github.com/articles/fork-a-repo/)此[存储库来](https://github.com/OfficeDev/Microsoft-Teams-Samples)修改所做的更改并将其保存到GitHub。
 
 <a name="BuildRun"></a>
 
@@ -90,7 +90,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     <a name="hostsample"></a>
     ## <a name="deploy-your-sample-app"></a>部署示例应用
 
-    应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams加载应用，应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
+    应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams应用，应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure 中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel ngrok
 
@@ -126,7 +126,7 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 **更新应用包**
 
 > [!NOTE]
->  App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+>  App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams[和管理应用](https://dev.teams.microsoft.com/)。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
@@ -134,10 +134,10 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
 # <a name="developer-portal"></a>[开发人员门户](#tab/DP)
 
-**若要在开发人员门户中配置应用包 (预览) 预览Teams**
+**在开发人员门户中配置应用包Teams**
 
 
-1. 1.转到 **[开发人员门户](https://dev.teams.microsoft.com/)**。
+1. 转到开发人员 **[门户](https://dev.teams.microsoft.com/)**。
 
      <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
