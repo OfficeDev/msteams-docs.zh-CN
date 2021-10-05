@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 2453a8541a168db2c8417b8a3d80985c95efa12a
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: a01d08e4d1892109395a541522a0bb12e1a9c2e2
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475781"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096561"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
@@ -22,12 +22,17 @@ ms.locfileid: "59475781"
 
 当你的应用可能在测试环境中运行时，你应该检查你的应用包，以避免在提交过程中出现问题。
 
-应用Microsoft Teams工具可帮助你在提交到合作伙伴中心之前修复问题。 该工具根据应用商店验证期间使用的测试用例自动检查应用的配置。
+> [!NOTE]
+>  App Studio 即将被弃用。 使用新的开发人员门户配置、Teams[和管理应用](https://dev.teams.microsoft.com/)
 
-1. 转到应用[Microsoft Teams工具 。](https://dev.teams.microsoft.com/appvalidation.html)  (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) 
+应用Microsoft Teams工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
+
+1. 转到Microsoft Teams[门户中的应用](https://dev.teams.microsoft.com/validation)验证工具。 
+    > [!NOTE]
+    > App Studio 中也提供应用 [验证工具](../../../build-and-test/app-studio-overview.md)。
 1. Upload应用包运行自动测试。
 1. 转到" **初步检查表** "并查看难以自动化的测试用例。
-1. [通常修复配置或](~/resources/schema/manifest-schema.md) 应用的问题。 如果自动测试为您提供错误，或者您未满足检查表中的所有条件，将会出现这些问题。
+1. [一般情况下修复配置](~/resources/schema/manifest-schema.md) 或应用的问题。 如果自动测试为您提供错误，或者您未满足检查表中的所有条件，将会出现这些问题。
 
 ## <a name="compile-testing-instructions"></a>编译测试说明
 
@@ -36,7 +41,7 @@ ms.locfileid: "59475781"
 * 凭据
 * 许可证密钥
 
-可以在合作伙伴中心中添加说明，或将它们上载到 SharePoint 上的公开位置。
+可以在合作伙伴中心中添加说明，或将其上载到 SharePoint。
 
 ### <a name="feature-list"></a>功能列表
 
@@ -48,7 +53,7 @@ ms.locfileid: "59475781"
 
 根据应用的功能，可能需要提供以下所有帐户：
 
-* 管理员帐户 (必需) 
+* 管理员帐户 (管理员) 
 * 非管理员帐户 (必需) 
 * 未预配置为正确测试首次运行登录体验的帐户 (要求) 
 * 有权访问高级或升级功能的帐户 (（如果适用) 
@@ -70,7 +75,7 @@ ms.locfileid: "59475781"
 
 ### <a name="specify-a-short-name"></a>指定短名称
 
-特别是，你的应用 (，它的短 [*名称) 在*](~/resources/schema/manifest-schema.md#name) 用户如何在应用商店中发现它方面起到重要作用。
+特别是，你的应用的名称 (，它的短) 在用户[](~/resources/schema/manifest-schema.md#name)如何在应用商店中发现它方面起到重要作用。
 
 :::row:::
 
@@ -178,7 +183,7 @@ ms.locfileid: "59475781"
 
 ### <a name="select-a-category-for-your-app"></a>为应用选择类别
 
-在提交过程中，将要求你对应用进行分类。 下表将应用商店Teams映射到合作伙伴中心中列出的[类别](https://aka.ms/PartnerCenterHomePage)。
+在提交过程中，将要求你对应用进行分类。 下表将应用商店Teams映射到合作伙伴中心 中列出的[类别](https://aka.ms/PartnerCenterHomePage)。
 
 | Teams类别       | 合作伙伴中心类别  |
 |:---------------------|:---------------|
@@ -204,7 +209,7 @@ ms.locfileid: "59475781"
 [Publisher应用商店](/microsoft-365-app-certification/docs/attestation)中列出的应用Teams证明也是必需的。 此过程包括完成对应用的安全性、数据处理和合规性做法的自我评估。 此过程可帮助潜在客户做出有关使用你的应用的明智决定。
 
 > [!NOTE]
-> 如果你要提交新应用，则你无法正式完成Publisher证明，除非你的应用在应用商店Teams列出。 如果要更新列出的应用，请完成Publisher证明，然后再提交应用的最新版本进行验证。
+> 如果你要提交新应用，则你无法正式完成Publisher证明，直到你的应用在应用商店Teams列出。 如果要更新列出的应用，请Publisher验证，然后再提交应用的最新版本进行验证。
 
 ## <a name="next-step"></a>后续步骤
 

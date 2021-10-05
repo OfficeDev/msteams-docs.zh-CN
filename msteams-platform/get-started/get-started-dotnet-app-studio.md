@@ -6,16 +6,16 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360725"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096688"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>使用 C 生成Teams应用#
 
-本教程介绍如何使用 .NET 或 Microsoft Teams 生成首个C#。 它还将引导你完成以下步骤：
+本教程介绍如何使用 .NET 或 Microsoft Teams生成首个 C#。 它还将引导你完成以下步骤：
 
 1. [准备环境](#prepare-your-environment)
 1. [获取先决条件](#GetPrerequisites)
@@ -75,7 +75,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 1. 打开解决方案文件 **Microsoft.Teams。示例的** **Microsoft-Teams-Samples/samples/app-hello-world/csharp** 目录中的 Samples.HelloWorld.sln。
 1. 从 **"生成"菜单中** 选择" **生成解决方案** "。
-1. 选择 **F5** 键，或者从"调试 **"** 菜单中选择"开始调试"以运行示例。
+1. 选择 **F5** 键，或从"调试 **"** 菜单中选择"开始调试"以运行示例。
 
     当应用启动时，浏览器窗口将打开，并启动应用的根。 你可以转到以下 URL 以验证是否正在加载所有应用 URL：
 
@@ -90,7 +90,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     <a name="hostsample"></a>
     ## <a name="deploy-your-sample-app"></a>部署示例应用
 
-    应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams应用，应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
+    应用程序中Microsoft Teams是提供一个或多个功能的 Web 应用程序。 若要Teams加载应用，应用必须在 Internet 上可用。 为此，你需要托管应用。 你可以免费在 Microsoft Azure中托管它，或者使用 创建到计算机上本地进程的隧道 `ngrok` 。 托管应用后，记下其根 URL，如 `https://yourteamsapp.ngrok.io` 或 `https://yourteamsapp.azurewebsites.net` 。
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel ngrok
 
@@ -125,32 +125,35 @@ Visual Studio对将应用部署到不同提供程序（包括 Azure）提供内�
 
 **更新应用包**
 
+> [!NOTE]
+>  App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 # <a name="developer-portal"></a>[开发人员门户](#tab/DP)
 
-**安装开发人员门户 (预览) 中Teams**
+**若要在开发人员门户中配置应用包 (预览) 预览Teams**
 
 
-1. 选择 **左侧** 栏底部的"应用"图标，然后搜索"开发人员 **门户"。**
+1. 1.转到 **[开发人员门户](https://dev.teams.microsoft.com/)**。
 
-    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+     <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
-1. 选择 **"开发人员门户"，** 然后选择"打开 **"。**
+1. 转到应用。
 
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    <img width="600px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
 
-1. 选择应用选项卡，然后选择 **导入现有应用**。
+1. 选择 **"导入现有应用"。**
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    <img width="600px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. 选择 **Hello World，****然后选择导入**。 Hello **World** 应用在开发人员门户中导入。 
 
     可以使用开发人员门户配置Teams应用。 清单位于"分发"下。 可以使用清单为应用配置功能、必需资源和重要的属性。 有关如何使用开发人员门户配置应用的更多详细信息，请参阅开发人员Teams[门户](../concepts/build-and-test/teams-developer-portal.md)。
 
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+    <img width="600px" alt="Screenshot of configure tdp" src="~/assets/images/tdp/Screen4.png"/>
 ---
 
 <a name="updatecredentials"></a>

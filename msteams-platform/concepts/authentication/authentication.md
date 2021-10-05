@@ -4,12 +4,12 @@ description: 介绍Teams中的身份验证以及如何在应用中使用它
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 身份验证 OAuth SSO AAD
-ms.openlocfilehash: 9bcb5eb42cc22185684933caae210c5630414a4c
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: a49c209b3f421006b2a75f314fb0cbe4a591d86c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475767"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096708"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>对用户进行身份验证Microsoft Teams
 
@@ -26,7 +26,7 @@ ms.locfileid: "59475767"
 
 * [Add authentication to the Teams bot](~/bots/how-to/authentication/add-authentication.md)介绍如何将基于 Web 的身份验证流与对话机器人一同使用。
 * [选项卡中的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)介绍了选项卡身份验证在Teams。 这将显示用于选项卡的典型基于 Web 的身份验证流。
-* [选项卡中的 AAD](~/tabs/how-to/authentication/auth-tab-AAD.md)身份验证描述如何从应用中的选项卡内连接到 AAD Teams。
+* [选项卡中的 AAD](~/tabs/how-to/authentication/auth-tab-AAD.md)身份验证介绍如何从 Teams 应用中的选项卡内连接到 AAD。
 * [无提示身份验证 AAD](~/tabs/how-to/authentication/auth-silent-AAD.md) 介绍如何使用 AAD 减少应用中的登录或同意提示。
 * [.Net、C#、JavaScript](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) [或 Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) 提供了基于 Web 的身份验证的示例。
 
@@ -36,22 +36,22 @@ Azure Bot Framework OAuth Prompt 使你可以更轻松地对使用对话机器�
 
 有关使用 OAuthPrompt 的信息，请参阅：
 
-* [自动程序身份验证流概述](~/bots/how-to/authentication/auth-flow-bot.md)介绍了身份验证在 Teams 应用中自动程序Teams。 这将显示一个非基于 Web 的身份验证流，用于 Teams Web、桌面应用和移动应用上的聊天机器人。
+* [自动程序身份验证流概述](~/bots/how-to/authentication/auth-flow-bot.md)介绍了身份验证在 Teams 应用中自动程序Teams。 这显示了用于在 Web、桌面应用和移动应用Teams聊天机器人的非基于 Web 的身份验证流。
 * [自动程序](~/bots/how-to/authentication/add-authentication.md)身份验证介绍如何向自动程序添加 OAuth Teams身份验证。
 
 ## <a name="code-sample"></a>代码示例
 
-提供 Bot 身份验证 v3 SDK 示例。
+Bot Framework v4 身份验证示例。
 
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | 自动程序身份验证 | 此示例演示如何开始使用自动程序 for Microsoft Teams。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| 选项卡、聊天机器人和消息传递扩展 (ME) SSO | 此示例演示 Tab、Bot 和 ME 的 SSO - 搜索、操作、linkunfurl。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
+| 使用 SSO 的选项卡、聊天 (消息) 扩展 | 此示例演示 Tab、Bot 和 ME 的 SSO - 搜索、操作、linkunfurl。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不适用 |
 
 
 ## <a name="configure-the-identity-provider"></a>配置标识提供程序
 
-无论应用的身份验证流如何，配置标识提供程序以与 Teams 通信。 大多数示例和演练主要涉及将 AAD 用作标识提供程序。 但是，无论标识提供程序如何，概念均适用。
+无论应用的身份验证流如何，配置标识提供程序以与Teams通信。 大多数示例和演练主要涉及将 AAD 用作标识提供程序。 但是，无论标识提供程序如何，概念均适用。
 
 有关详细信息，请参阅 [配置标识提供程序](~/concepts/authentication/configure-identity-provider.md)。
 

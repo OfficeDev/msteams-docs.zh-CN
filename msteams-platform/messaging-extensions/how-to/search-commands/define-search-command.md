@@ -5,12 +5,12 @@ description: 为应用程序定义消息传递扩展Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 88153523db6bd3f4957d03a0603e3b4cbdd02266
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d87936832e3d302be295e14bbf952379a41aa694
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155879"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096590"
 ---
 # <a name="define-messaging-extension-search-commands"></a>定义消息传递扩展搜索命令
 
@@ -38,9 +38,17 @@ ms.locfileid: "59155879"
 
 若要将搜索命令添加到应用清单，必须将新对象添加到应用清单 `composeExtension` JSON 的顶层。 可以在 App Studio 的帮助下或手动添加搜索命令。
 
-### <a name="create-a-search-command-using-app-studio"></a>使用 App Studio 创建搜索命令
+### <a name="create-a-search-command"></a>创建搜索命令 
 
-创建搜索命令的先决条件是，必须已创建邮件扩展。 若要了解如何创建邮件扩展，请参阅创建 [邮件扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
+可以使用 ** App Studio** 或开发人员门户 **创建搜索命令**。
+
+> [!NOTE]
+>  App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+
+# <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
+
+> [!NOTE]
+> 创建搜索命令的先决条件是，必须已创建邮件扩展。 若要了解如何创建邮件扩展，请参阅创建 [邮件扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
 **创建搜索命令**
 
@@ -70,6 +78,49 @@ ms.locfileid: "59155879"
 
 1. 添加搜索参数，然后选择"保存 **"。**
 
+# <a name="developer-portal"></a>[开发人员门户](#tab/DP)
+
+**使用开发人员门户创建搜索命令**
+
+1. 转到开发人员 **[门户](https://dev.teams.microsoft.com/)**。
+    
+   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
+    
+1. 转到应用。
+    
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    
+1. 如果你已在开发人员门户中创建应用包 **，** 请从列表中选择它。 如果尚未创建应用包，请选择"**导入现有应用"。**
+
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+
+1. 转到应用 **功能**。  
+
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. 从 **应用功能中选择消息传递****扩展**。 将出现一个弹出窗口来设置邮件扩展。
+    
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+
+1. Select **an message extension bot** from the drop down list under Message **extensions ID** and select **Save**.
+
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. 选择 **"添加命令"。** 将出现一个弹出式窗口，用于添加命令。
+
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+1. 选择 **"基于搜索"** 以搜索命令并输入命令字段。
+
+    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
+
+1. 输入参数字段，然后选择"保存 **"。**
+
+    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
+
+---
+
+
 ### <a name="create-a-search-command-manually"></a>手动创建搜索命令 
 
 若要将邮件扩展搜索命令手动添加到应用清单，必须将以下参数添加到 `composeExtension.commands` 对象数组：
@@ -77,10 +128,10 @@ ms.locfileid: "59155879"
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
 | `id` | 此属性是分配给搜索命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
-| `title` | 此属性是命令名称。 此值显示在用户界面用户界面 (UI) 。 | 是 | 1.0 |
+| `title` | 此属性是命令名称。 此值显示在用户界面和 UI () 。 | 是 | 1.0 |
 | `description` | 此属性是一个帮助文本，用于指示此命令执行哪些操作。 此值显示在 UI 中。 | 是 | 1.0 |
 | `type` | 此属性必须为 `query` 。 | 否 | 1.4 |
-|`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 不支持 | 1.0 |
+|`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
 | `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
 您必须添加搜索参数的详细信息，该参数定义您的用户在 Teams 客户端中可见的文本。

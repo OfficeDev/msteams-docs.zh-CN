@@ -5,12 +5,12 @@ ms.topic: conceptual
 keywords: teams 机器人开发
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 939a4b2830d14b0b1a82f09d361e56d5651a1592
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: afa83478ee478d74dbdedb5cd805719fc8434070
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155288"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096547"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>向应用添加Microsoft Teams程序
 
@@ -35,7 +35,7 @@ ms.locfileid: "59155288"
 
 有关详细信息，请参阅与自动程序[Microsoft Teams对话](~/resources/bot-v3/bot-conversations/bots-conversations.md)。
 
-通过Microsoft Teams应用，你可以使机器人成为你体验的星形，或只是一个帮助程序。 自动程序作为更广泛的应用包的一部分进行分发，其中可以包含选项卡或消息传递扩展[等其他功能](~/messaging-extensions/what-are-messaging-extensions.md)。 [](~/tabs/what-are-tabs.md)
+通过Microsoft Teams应用，你可以使机器人成为你体验的星形，或者只是一个帮助程序。 自动程序作为更广泛的应用包的一部分进行分发，其中可以包含选项卡或消息传递扩展[等其他功能](~/messaging-extensions/what-are-messaging-extensions.md)。 [](~/tabs/what-are-tabs.md)
 
 ## <a name="bot-apis"></a>自动程序 API
 
@@ -47,12 +47,12 @@ Microsoft Teams支持[大多数Microsoft Bot Framework。](https://dev.botframew
 
 SDK 扩展将安装依赖项，包括 Bot Builder SDK。
 
-* **.NET** 若要使用适用于 .NET Microsoft Teams聊天机器人生成器 SDK 的 Microsoft Teams 扩展，请安装 [Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)程序包，Visual Studio项目中。 对于Node.js，botBuilder for Microsoft Teams 功能自 v4.6 起已合并到[Bot Framework SDK](https://github.com/microsoft/botframework-sdk)中。
+* **.NET** 若要使用适用于 .NET Microsoft Teams聊天机器人生成器 SDK 的 Microsoft Teams 扩展，请在你的 Visual Studio 项目中安装 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet程序包。 对于Node.js，botBuilder for Microsoft Teams 功能自 v4.6 起已合并到[Bot Framework SDK](https://github.com/microsoft/botframework-sdk)中。
 
 > [!IMPORTANT]
-> 可以使用任何其他 web Teams技术开发应用程序并直接调用 Bot Framework [REST](/bot-framework/rest-api/bot-framework-rest-overview) API，但你必须自己执行所有令牌处理。
+> 可以使用任何其他Teams技术开发应用程序并直接调用[Bot Framework REST](/bot-framework/rest-api/bot-framework-rest-overview) API，但你必须自己执行所有令牌处理。
 
-*Teams App Studio* 可帮助你创建和配置应用清单，并可以创建自动程序框架自动程序。 它还包含一个React库和交互式卡片生成器。
+*Teams App Studio* 可帮助你创建和配置应用清单，并可以创建自动程序框架自动程序。 它还包含一个React库和交互式卡片生成器。 
 
 ## <a name="outgoing-webhooks"></a>传出 webhook
 
@@ -63,7 +63,7 @@ SDK 扩展将安装依赖项，包括 Bot Builder SDK。
 以下主题将指导你完成为用户创建出色的自动程序Teams：
 
 * [创建自动程序](~/resources/bot-v3/bots-create.md)：利用 Bot Framework 团队提供的出色的工具、文档和社区。
-* [与机器人交谈](~/resources/bot-v3/bot-conversations/bots-conversations.md)：添加基本对话流并利用特定于频道的功能。 如果使用 .NET 或 Node.js进行开发，请使用 Bot Builder SDK 的扩展来简化你的工作。
+* [与机器人交谈](~/resources/bot-v3/bot-conversations/bots-conversations.md)：添加基本对话流并利用特定于频道的功能。 如果使用 .NET 或 Node.js 开发，请使用 Bot Builder SDK 的扩展来简化你的工作。
 * [在机器人中使用卡片](~/resources/bot-v3/bots-cards.md)：设计卡片以传达并接受用户响应。
 * [响应机器人事件](~/resources/bot-v3/bots-notifications.md)
 * [仅通知机器人](~/resources/bot-v3/bots-notification-only.md)：使用机器人为应用发送通知。

@@ -5,12 +5,12 @@ description: 邮件扩展操作命令概述
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d9e2e482ed15c99613bbd786ab685a0b388de502
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8049100e8b72d1e1b7145f8427c6f7e94b5e8af6
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155262"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096656"
 ---
 # <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 
@@ -46,10 +46,10 @@ ms.locfileid: "59155262"
 除了选择命令的调用位置之外，还必须选择如何为用户填充任务模块中的窗体。 有以下三个选项用于创建在任务模块内呈现的窗体：   
 
 * **参数的静态列表**：这是最简单的方法。 可以在客户端呈现的应用清单中定义Teams列表，但在这种情况下无法控制格式。
-* **自适应卡片**：可以选择使用自适应卡片，该卡片可以更好地控制 UI，但仍限制你可用的控件和格式设置选项。
+* **自适应卡片**：可以选择使用自适应卡片，该卡片可以更好地控制 UI，但仍限制可用控件和格式设置选项。
 * **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以便完全控制 UI 和控件。 
 
-如果您选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
+如果选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
 
 ## <a name="select-how-the-final-message-is-sent"></a>选择最终邮件的发送
 
@@ -66,12 +66,19 @@ ms.locfileid: "59155262"
 
 ### <a name="create-an-action-command-using-app-studio"></a>使用 App Studio 创建操作命令
 
+可以使用 ** App Studio** 或开发人员门户 **创建操作命令**。
+
+> [!NOTE]
+>  App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+
+# <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
+
 > [!NOTE]
 > 创建操作命令的先决条件是，已创建邮件扩展。 若要了解如何创建邮件扩展，请参阅创建 [邮件扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
 **创建操作命令**
 
-1. 从 **客户端** 打开 App Studio Microsoft Teams选择清单 **编辑器** 选项卡。
+1. 从 **客户端** 打开 App Studio Microsoft Teams选择"**清单编辑器"** 选项卡。
 1. 如果你已在 **App Studio** 中创建应用包，请从列表中选择它。 如果尚未创建应用包，请导入现有应用包。
 1. 导入应用包后，在"功能"下 **选择**"消息传递 **扩展"。** 你获得一个弹出窗口来设置邮件扩展。
 1. 选择 **窗口中** 的"设置"，将消息传递扩展包括在你的应用体验中。 下图显示了消息扩展设置窗口：
@@ -105,7 +112,7 @@ ms.locfileid: "59155262"
 
    <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
 
-1. 若要使用动态参数，请选择"从自动程序获取一组 **动态参数"。** 下图显示了操作命令参数选择：
+1. 若要使用动态参数，请选择"从自动程序提取动态 **参数集"。** 下图显示了操作命令参数选择：
 
     <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
     
@@ -117,6 +124,56 @@ ms.locfileid: "59155262"
 1. 选择“**保存**”。
 1. 若要添加更多参数，请选择" **参数"部分** 中的" **添加"** 按钮。
 
+# <a name="developer-portal"></a>[开发人员门户](#tab/DP)
+
+**使用开发人员门户创建操作命令**
+
+1. 转到开发人员 **[门户](https://dev.teams.microsoft.com/)**。
+    
+      ![TDP 的屏幕截图](~/assets/images/tdp/tdp_home_1.png)
+
+1. 转到应用。
+    
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    
+1. 如果你已在开发人员门户中创建应用包 **，** 请从列表中选择它。 如果不是，请选择 **"导入现有应用"。**
+
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+
+1. 转到应用 **功能**。 
+
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. 从 **应用功能中选择消息传递****扩展**。 将出现一个弹出窗口来设置邮件扩展。
+    
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+ 
+1. Select **an message extension bot** from the drop down list under Messag **extensions ID** and select **Save**.
+
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. 选择 **"添加命令"。** 将出现一个弹出窗口来添加命令。
+
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+1. 选择命令的类型作为基于 **操作来** 配置邮件扩展。 选择 **"动态参数"** 以创建动态操作命令。
+
+    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
+
+1. 选择 **"静态参数"** 创建静态操作命令。   
+
+    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
+
+1. 输入命令字段。 
+
+    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
+
+1. 输入参数字段，然后选择"保存 **"。**
+
+    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
+ 
+---
+
 ### <a name="create-an-action-command-manually"></a>手动创建操作命令
 
 若要手动将基于操作的消息扩展命令添加到应用清单，必须将以下参数添加到 `composeExtension.commands` 对象数组：
@@ -125,7 +182,7 @@ ms.locfileid: "59155262"
 |---|---|---|---|
 | `id` | 此属性是分配给此命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
 | `title` | 此属性是命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 此属性必须为 `action` 。 | 不支持 | 1.4 |
+| `type` | 此属性必须是 `action` 。 | 否 | 1.4 |
 | `fetchTask` | 对于任务模块的自适应卡片或嵌入式 Web 视图，以及参数的静态列表或加载 Web 视图时，此属性 `true` `false` 设置为 `taskInfo` 。 | 否 | 1.4 |
 | `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
@@ -143,11 +200,11 @@ ms.locfileid: "59155262"
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 不支持 | 1.4 |
+|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 否 | 1.4 |
 |`taskInfo.title`|初始任务模块标题。 |否 | 1.4 |
 |`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 、 `large` `medium` 或 `small` ）。 |否 | 1.4 |
 |`taskInfo.height`|任务模块高度，以像素为单位或默认布局（如 、 `large` `medium` 或 `small` ）。|否 | 1.4 |
-|`taskInfo.url`|初始 Web 视图 URL。|不支持 | 1.4 | 
+|`taskInfo.url`|初始 Web 视图 URL。|否 | 1.4 | 
 
 #### <a name="app-manifest-example"></a>应用清单示例
 
