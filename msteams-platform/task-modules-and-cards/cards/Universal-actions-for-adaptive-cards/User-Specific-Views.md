@@ -4,12 +4,12 @@ description: 使用通用操作的用户特定视图的示例
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d607250d0d34367c097cdfd25050e4180f72eeda
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 10f9b63f59629e592f2dee75d3e91bab97ff9a08
+ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155346"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "60223039"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
@@ -43,7 +43,8 @@ ms.locfileid: "59155346"
       "title": "Refresh",
       "verb": "editOrResolveView",
       "data": {
-              "refresh info": "<refresh info>"
+            "refresh info": "<refresh info>"
+      }
     },
     "userIds": ["<Megan's user MRI>", "<Alex's user MRI>"]
   },
@@ -62,7 +63,7 @@ ms.locfileid: "59155346"
 
 **若要发送自适应卡片，请刷新用户特定视图，并调用对自动程序的请求**
 
-1. 当 Megan 创建新事件时，机器人会发送自适应卡片或公用卡片（包含事件详细信息Teams对话中。
+1. 当 Megan 创建新事件时，机器人会发送自适应卡片或公用卡片（包含事件详细信息Teams对话中）。
 2. 现在，此卡片将自动刷新到 Megan 和 Alex 的用户特定视图。 Alex 和 Megan 的用户 MRIs 添加到自适应卡片 JSON 的 `userIds` `refresh` 属性中。 对于对话中的其他用户，该卡片保持不变。
 3. 对于 Megan，自动刷新会触发 `adaptiveCard/action` 对机器人的调用请求。 机器人可以返回事件创建者卡片，并添加 `Edit` 按钮作为对此调用请求的响应。
 4. 同样，对于 Alex，自动刷新将触发 `adaptiveCard/action` 对自动程序的另一个调用请求。 机器人可以返回事件所有者卡片 `Resolve` 按钮作为对此调用请求的响应。
@@ -202,7 +203,7 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | .NETCore | Node.js |
+|示例名称 | 描述 | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新的自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
