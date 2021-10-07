@@ -4,7 +4,7 @@ summary: 获取文档、示例代码、教程等，以帮助你生成自定义Mi
 brand: teams
 metadata:
   title: Microsoft Teams平台开发人员文档
-  description: 利用 Microsoft Teams 开发人员平台，开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地作出决策、通过减少上下文切换)  (以及围绕现有内容和工作流创建协作来提供焦点 (。 .
+  description: 开发人员Microsoft Teams开发人员平台使开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地作出决策、通过减少上下文切换来提供焦点，并围绕现有内容和工作流创建协作。
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -13,6 +13,9 @@ metadata:
   ms.date: 05/29/2020
 highlightedContent:
   items:
+    - title: 新变化？
+      itemType: whats-new
+      url: /microsoftteams/platform/whats-new
     - title: "新开发Teams？ \U0001F680从这里开始！"
       itemType: get-started
       url: /microsoftteams/platform/overview
@@ -28,49 +31,15 @@ highlightedContent:
     - title: 使用 Microsoft Graph 增强你的应用
       itemType: how-to-guide
       url: /graph/teams-concept-overview
-    - title: 将应用发布到 Teams 应用商店
+    - title: 将应用发布到应用商店Teams应用商店
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: 教程和代码示例
       itemType: sample
       url: /microsoftteams/platform/get-started/code-samples
-    - title: 新变化？
-      itemType: whats-new
-      url: /microsoftteams/platform/whats-new
 conceptualContent:
   title: 指南和资源
   items:
-    - title: 受众
-      links:
-        - url: 'https://developer.microsoft.com/microsoft-teams'
-          itemType: concept
-          text: 开发者
-        - url: /microsoftteams/microsoft-teams
-          itemType: concept
-          text: IT 专业人员
-        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
-          itemType: concept
-          text: 最终用户
-    - title: 浏览
-      links:
-        - url: /microsoftteams/platform/concepts/capabilities-overview
-          itemType: overview
-          text: 团队应用程序功能
-        - url: /microsoftteams/platform/samples/teams-low-code-solutions
-          itemType: how-to-guide
-          text: 使用 Microsoft Power Platform Teams应用、机器人和流生成低代码
-        - url: 'https://dev.teams.microsoft.com/home'
-          itemType: reference
-          text: Teams 开发人员门户
-        - url: /microsoftteams/platform/resources/schema/manifest-schema
-          itemType: reference
-          text: 应用程序清单Teams架构
-        - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
-          itemType: reference
-          text: 生成应用Teams方案
-        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
-          itemType: reference
-          text: 应用方案Teams最佳做法
     - title: 学习
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
@@ -91,17 +60,54 @@ conceptualContent:
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
           text: 连接 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
+    - title: 功能
+      links:
+        - url: /microsoftteams/platform/tabs/what-are-tabs
+          itemType: overview
+          text: 选项卡
+        - url: /microsoftteams/platform/bots/what-are-bots
+          itemType: overview
+          text: 机器人
+        - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+          itemType: overview
+          text: 消息传递扩展
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+          itemType: overview
+          text: 会议Teams应用程序
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+          itemType: concept
+          text: 卡片和任务模块
+        - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+          itemType: overview
+          text: Webhook 和连接器
+    - title: 浏览
+      links:
+        - url: /microsoftteams/platform/concepts/authentication/authentication
+          itemType: concept
+          text: 用户身份验证和 SSO
+        - url: /microsoftteams/platform/samples/teams-low-code-solutions
+          itemType: how-to-guide
+          text: 使用 Microsoft Power Platform Teams应用、机器人和流构建低代码
+        - url: 'https://dev.teams.microsoft.com/home'
+          itemType: reference
+          text: Teams 开发人员门户
+        - url: /microsoftteams/platform/resources/schema/manifest-schema
+          itemType: reference
+          text: 应用程序清单Teams架构
+        - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
+          itemType: reference
+          text: 生成应用Teams方案
+        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          itemType: reference
+          text: 应用方案Teams最佳做法
     - title: 集成
       links:
-        - url: /microsoftteams/platform/samples/integrating-web-apps
-          itemType: concept
-          text: 集成 web 应用
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: 集成聊天Power Virtual Agents聊天机器人
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
-          text: 为网站集成"Teams"按钮
+          text: 为网站集成Teams"共享到目标"按钮
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
           text: 将Teams选项卡与SharePoint
@@ -114,7 +120,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: 集成生产就绪型 Shifts 连接器
-    - title: 连接
+    - title: 社区
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -125,14 +131,23 @@ conceptualContent:
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
           text: 公告
-    - title: 帮助
-      links:
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams开发人员Community和响应
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: 参与Microsoft Teams文档
+    - title: 受众
+      links:
+        - url: 'https://developer.microsoft.com/microsoft-teams'
+          itemType: concept
+          text: 开发者
+        - url: /microsoftteams/microsoft-teams
+          itemType: concept
+          text: IT 专业人员
+        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+          itemType: concept
+          text: 最终用户
 tools:
   title: SDK 和工具
   items:
