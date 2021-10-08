@@ -1,14 +1,14 @@
 - name: Microsoft Teams 开发人员文档
   href: /microsoftteams/platform
 - name: 概述
-  expanded: true
+  expanded: false
   items:
     - name: 构建 Microsoft Teams 应用
       href: overview.md
     - name: 新变化？
       href: whats-new.md
 - name: 入门
-  expanded: true
+  expanded: false
   items:
     - name: 概述
       href: get-started/code-samples.md
