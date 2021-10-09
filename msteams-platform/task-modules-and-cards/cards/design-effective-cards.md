@@ -4,12 +4,12 @@ description: 了解如何设计 Microsoft Teams 自适应卡并获取 Microsoft 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0a8964de024b01237632db1214ce24fdd5b6bd29
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bf0119f8cab7eeaf15745b27b6117063b108f8f8
+ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155972"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60249791"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡
 
@@ -119,7 +119,7 @@ ms.locfileid: "59155972"
 
 :::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="示例显示了自适应卡请求票证卡。" border="false":::
 
-### <a name="image-set"></a>图像集
+### <a name="imageset"></a>ImageSet
 
 用于发送多个图像缩略图。
 
@@ -131,7 +131,7 @@ ms.locfileid: "59155972"
 
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="示例显示了自适应卡图像集卡。" border="false":::
 
-### <a name="action-set"></a>操作集
+### <a name="actionset"></a>ActionSet
 
 当希望用户选择按钮，然后从同一张卡中收集添加用户输入时使用。
 
@@ -143,7 +143,7 @@ ms.locfileid: "59155972"
 
 :::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="示例显示了自适应卡操作集卡。" border="false":::
 
-### <a name="choice-set"></a>选择集
+### <a name="choiceset"></a>ChoiceSet
 
 用于从一个用户收集多个输入。
 
@@ -181,9 +181,477 @@ ms.locfileid: "59155972"
 
 ## <a name="best-practices"></a>最佳实践
 
-使用上述建议打造优质应用体验。
+专为窄屏幕设计的卡片在宽屏幕上可以很好地缩放（反之则不然）。 你还应该假设用户不会只在桌面上查看你的卡片。
 
-### <a name="primary-and-secondary-actions"></a>主要和次要操作
+### <a name="column-layouts"></a>列布局
+
+使用 [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) 将卡片内容格式化为表格或网格。 有几种设置列宽格式的选项。 这些指南可帮助你了解何时使用每个指南。
+
+* `"width": "auto"`：`ColumnSet` 中每个列的大小，适合包含到该列中的任何应用内容。
+   * **请**：当你有不同宽度的内容并且不需要优先考虑特定列时使用。
+   * **请**：对于每个 `TextBlock`，设置 `"wrap": true`，因为默认情况下文本不换行。
+   * **请勿**：对每个列容器设置 `"width": "auto"`。 例如，如果你有一个并排的输入和按钮，则该按钮可能会在某些屏幕上被切断。 相反，为带有按钮和其他其他必须始终完全可见的内容的列设置为 `auto`。
+* `"width": "stretch"`：根据可用的 `ColumnSet` 宽度调整列大小。 当多个列使用 `"stretch"` 值时，它们平均共享可用宽度。
+   * **请**：如果所有其他列都有静态宽度，请与一列一同使用。 例如，在一列中有宽 50 像素的缩略图。
+* `"width": "<number>"`：使用可用的 `ColumnSet` 宽度的比例调整列大小。 例如，如果使用 `"width": "1"`、`"width": "4"` 和 `"width": "5"` 设置三列，则各列将占可用宽度的 10%、40% 和 50%。
+* `"width": "<number>px"`：将列大小调整为特定的像素宽度。 此方法在创建表时很有用。
+   * **请**：在显示的内容的宽度不需要更改时使用（例如，数字和百分比）。
+   * **请勿**：意外超过卡片可以显示的宽度。 请记住，可用屏幕宽度取决于设备。 Teams 移动版也不支持像 Teams 桌面版那样的水平滚动。
+
+#### <a name="example-knowing-when-to-stretch-columns"></a>示例：了解何时拉伸列
+
+# <a name="design"></a>[设计](#tab/design)
+
+**请**：在此屏幕中，将卡片底部设为两列。 输入组件宽度设置为 `stretch`，而 **选择** 按钮宽度设置为 `auto`。 这将确保按钮完全保留在视图中。
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="图像显示如何在自适应卡片中设置列宽。":::
+
+**请勿**：在此屏幕中，将两列 `width` 均设置为 `auto`。 与输入相比，这会导致右侧的 **选择** 按钮被略微切断。
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="图像显示如何不在自适应卡片中设置列宽。":::
+
+# <a name="code"></a>[代码](#tab/code)
+
+下面是用于实现应遵循的设计示例的代码。
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "I wasn't able to identify the type of expense. Select from the list:",
+      "wrap": true,
+      "id": "typePrompt",
+      "spacing": "Medium",
+      "size": "Medium"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Phone Bill",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Phone Bill",
+              "action": "Phone Bill"
+            },
+            "action": "Phone Bill"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Taxi and Other Transportation",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Taxi and Other Transportation",
+              "action": "Taxi and Other Transportation"
+            },
+            "action": "Taxi and Other Transportation"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Entertainment_misc",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Entertainment_misc",
+              "action": "Entertainment_misc"
+            },
+            "action": "Entertainment_misc"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Car Rental",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Car Rental",
+              "action": "Car Rental"
+            },
+            "action": "Car Rental"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Airfare",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Airfare",
+              "action": "Airfare"
+            },
+            "action": "Airfare"
+          }
+        }
+      ],
+      "spacing": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "     ",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.ChoiceSet",
+              "choices": [
+                {
+                  "title": "Meals",
+                  "value": "Meals"
+                },
+                {
+                  "title": "Parking/Tolls",
+                  "value": "Parking/Tolls"
+                },
+                {
+                  "title": "Accomodation",
+                  "value": "Accomodation"
+                },
+                {
+                  "title": "Fuel-Gas/Petrol/Diesel",
+                  "value": "Fuel-Gas/Petrol/Diesel"
+                },
+                {
+                  "title": "Hotel",
+                  "value": "Hotel"
+                },
+                {
+                  "title": "Meals - Employees Only",
+                  "value": "Meals - Employees Only"
+                },
+                {
+                  "title": "Accomodations",
+                  "value": "Accomodations"
+                },
+                {
+                  "title": "Misc.Expenses",
+                  "value": "Misc.Expenses"
+                },
+                {
+                  "title": "Please Categorize",
+                  "value": "Please Categorize"
+                }
+              ],
+              "placeholder": "All",
+              "id": "expenseTypes",
+              "value": "Meals - Employees Only"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "title": "Select",
+                  "data": {
+                    "msteams": {
+                      "type": "messageBack",
+                      "displayText": "Select",
+                      "action": "applyType"
+                    },
+                    "action": "applyType"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "spacing": "ExtraLarge"
+    }
+  ]
+}
+```
+
+---
+
+#### <a name="example-using-fewer-columns"></a>示例：使用较少的列
+
+**请**：在具有较少列的移动设备上显示布局效果更佳。
+
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="图像显示自适应卡片中正确数量的列。":::
+
+**请勿**：使用过多的列会使你的卡片内容在移动设备上变得混乱。
+
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="图像显示太多列会对自适应卡片布局产生负面影响。":::
+
+#### <a name="example-fixed-width-has-its-place"></a>示例：固定宽度有其位置
+
+# <a name="design"></a>[设计](#tab/design)
+
+当显示内容的大小不需要更改时，将列设置为特定的像素宽度。 此示例显示大小为 50 像素的左列，而缩略图旁边的说明会拉伸卡片的长度
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="图像显示如何在自适应卡片中设置列宽。":::
+
+# <a name="code"></a>[代码](#tab/code)
+
+下面是用于实现设计示例的代码。
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Pick up where you left off?",
+      "weight": "bolder"
+    },
+    {
+      "type": "ColumnSet",
+      "spacing": "medium",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1083",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Silver Star Mountain Range"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Maps",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.msn.com"
+      }
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1082",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "style": "emphasis",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Kitchen Remodel for Homes"
+            },
+            {
+              "type": "TextBlock",
+              "text": "With EMPHASIS",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.AdaptiveCards.io"
+      }
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1080",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "The Witcher: A Series"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Netflix",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.outlook.com"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Resume all",
+      "url": "ms-cortana:resume-all"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "More activities",
+      "url": "ms-cortana:more-activities"
+    }
+  ]
+}
+```
+
+---
+
+### <a name="text"></a>Text
+
+无论是使用 [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html)、[`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) 或 [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html)，将 `wrap` 属性设置为 `true`，这样卡片文本不会在移动电话上截断。
+
+#### <a name="example-making-sure-text-doesnt-truncate"></a>示例：确保文本不截断
+
+# <a name="design"></a>[设计](#tab/design)
+
+**请**：在此屏幕中，将卡片的 `wrap` 属性设置为 `true`。 这允许文本适应任何屏幕大小。
+
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="图像显示如何在自适应卡片中换行文本。":::
+
+**请勿**：在此屏幕中，卡片不使用 `wrap` 属性，因此文本在移动屏幕上被切断。
+
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="图像显示如果不在自适应卡片中换行，会发生什么情况。":::
+
+# <a name="code"></a>[代码](#tab/code)
+
+下面是用于实现应遵循的设计示例的代码。
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "What cuisine do you want?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "myColor",
+      "style": "compact",
+      "isMultiSelect": false,
+      "value": "1",
+      "choices": [
+        {
+          "title": "Chineese",
+          "value": "1"
+        },
+        {
+          "title": "Indian",
+          "value": "2"
+        },
+        {
+          "title": "Italian",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Select the dishes that you like?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "myColor2",
+      "style": "expanded",
+      "wrap" : true,
+      "isMultiSelect": false,
+      "value": "1",
+      "choices": [
+        {
+          "title": "Cauliflower with potatoes sautéed with garam masala",
+          "wrap" : true,
+          "value": "1"
+        },
+        {
+          "title": "Patties of potato mixed with some vegetables fried",
+          "wrap" : true,
+          "value": "2"
+        },
+        {
+          "title": "Green capsicum with potatoes sautéed with cumin seeds",
+          "wrap" : true,
+          "value": "3"
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+### <a name="containers"></a>容器
+
+使用 `Container` 可以将一组相关元素组合在一起。
+
+* **请**：使用 `style` 属性突出容器。
+* **请**：使用 `selectAction` 属性将操作与容器中的其他元素关联。
+* **请**：使用 `Action.ToggleVisibility` 属性使一组元素可折叠。
+* **请勿**：出于上述原因以外的任何原因使用容器。
+
+### <a name="images"></a>图像
+
+在卡片中包含图像时，请遵循以下指南。
+
+* **请**：为高 DPI 屏幕设计图像以避免像素化。 在 50x50 像素下显示 100x100 像素图像比以其他方式显示效果更好。
+* **请**：如果你需要控制图像的确切大小，请使用 `width` 和 `height` 属性。
+* **请勿**：在图像中包含填充。 这通常会引入不需要的间距和布局问题。
+* 关于背景色：
+   * **请**：使用透明背景，使图像适应任何 Teams 主题。 
+   * **请勿**：包含固定的背景色，除非用户必须看到特定颜色。
+   * **请勿**：将背景色添加到 `TextBlock`，损害可读性。 例如，如果你的背景为深色，则使用较浅的文本颜色，反之亦然。
+
+### <a name="actions"></a>操作
 
 :::row:::
    :::column span="":::
