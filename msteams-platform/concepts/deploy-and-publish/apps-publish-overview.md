@@ -5,16 +5,16 @@ ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: d53bab5e951f64876f1d97d5e90b3788a206aa67
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 308d0722928111c1a9d6e6afa44e3c261dd59a3d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155950"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260616"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>分发Microsoft Teams应用
 
-你可以向Microsoft Teams、团队、组织或想要使用它的任何人提供你的应用。 分配方式取决于多个因素，包括用户需求、业务和技术要求以及应用的目标。
+你可以向Microsoft Teams、团队、组织或想要使用它的任何人提供你的应用。 分配方式取决于多个因素，包括用户需求、业务、技术要求以及应用的目标。
 
 ## <a name="upload-your-app-in-teams"></a>Upload应用Teams
 
@@ -36,9 +36,9 @@ ms.locfileid: "59155950"
 在GCC Teams环境中，默认情况下会启用合规的 Microsoft 应用。 但是，在发布应用之前，请确保应用的所有终结点都符合GCC组织的要求。
 
 > [!IMPORTANT]
->如果你的应用包含自动程序或消息传递扩展，则必须在 Azure 中设置Microsoft Teams程序与用户之间的频道时，选择"Teams政府"选项。 有关详细信息，请参阅 [将机器人连接到频道](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)。
+>如果你的应用包含自动程序或消息传递扩展，则必须在 Azure 中设置自动Microsoft Teams用户之间的频道时选择"Teams政府"选项。 有关详细信息，请参阅 [将机器人连接到频道](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)。
 
-## <a name="publish-your-app-to-the-teams-store"></a>将应用发布到Teams应用商店
+## <a name="publish-your-app-to-the-teams-store"></a>将应用发布到 Teams 应用商店
 
 使应用可供所有人使用。 此类分发需要 Microsoft 批准。
 
@@ -46,7 +46,7 @@ ms.locfileid: "59155950"
 
 ## <a name="see-also"></a>另请参阅
 
-* [Microsoft 365 应用合规计划](/microsoft-365-app-certification/overview)
+* [Microsoft 365 应用合规性](/microsoft-365-app-certification/overview)
 
 ## <a name="next-step"></a>后续步骤
 

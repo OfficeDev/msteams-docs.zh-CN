@@ -6,12 +6,12 @@ keywords: teams 选项卡传出 Webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c07456288a26e3152a552644b704e2c6e6de38cc
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 546ca7643ee64412dab6c383e4090dd631a643c8
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155263"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260699"
 ---
 # <a name="create-incoming-webhook"></a>创建传入 Webhook
 
@@ -35,14 +35,14 @@ ms.locfileid: "59155263"
 |安全资源定义|邮件的格式设置为 JSON 有效负载。 此声明性消息结构可防止插入恶意代码。|
 
 > [!NOTE]
-> * Teams自动程序、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片，这是一个开放的跨卡平台框架。 目前[，Teams](../../webhooks-and-connectors/how-to/connectors-creating.md)连接器不支持自适应卡片。 但是，可以创建一个将自适应卡片[](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)张贴到新频道Teams流。
+> * Teams机器人、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片，这是一个开放的跨卡平台框架。 目前[，Teams](../../webhooks-and-connectors/how-to/connectors-creating.md)连接器不支持自适应卡片。 但是，可以创建一个将自适应卡片[](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)张贴到一个Teams流。
 > * 有关卡片和 Webhook 的信息，请参阅[自适应卡片和传入 Webhook。](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
 ## <a name="create-incoming-webhook"></a>创建传入 Webhook
 
 **将传入 Webhook 添加到 Teams 通道**
 
-1. 转到要添加 Webhook 的频道，然后从顶部导航 &#8226;&#8226;&#8226; 选择"更多选项"。
+1. 转到要添加 Webhook 的频道，然后从顶部导航 &#8226;&#8226;&#8226; **选择** "更多选项"。
 1. 从 **下拉菜单中选择** "连接器"：
 
     ![选择连接器](~/assets/images/connectors.png)
@@ -63,7 +63,7 @@ webhook 在 Teams 中可用。
 
 ## <a name="remove-incoming-webhook"></a>删除传入 Webhook
 
-**从传入 Webhook 通道中删除Teams Webhook**
+**从传入 Webhook 通道Teams Webhook**
 
 1. 转到频道。
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.

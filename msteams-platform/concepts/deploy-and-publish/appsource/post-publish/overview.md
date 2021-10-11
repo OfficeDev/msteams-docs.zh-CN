@@ -1,16 +1,16 @@
 ---
 title: 维护和支持已发布的应用
-description: 在应用商店和 AppSource 上列出应用商店后Teams的考虑。
+description: 在应用商店和 AppSource 上列出应用商店后Teams的想法。
 ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 82f85543fcf579f656704bc6c0faa47a322c2707
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ef4ccb10dbfecd10610ef30971ddd43285c0cb0e
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155840"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260628"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布Microsoft Teams应用程序
 
@@ -18,17 +18,17 @@ ms.locfileid: "59155840"
 
 ## <a name="publish-updates-to-your-app"></a>将更新发布到应用
 
-你可以向应用提交更改 (如新功能，甚至是合作伙伴中心) 元数据。 这些更改需要新的审阅过程。
+你可以向应用提交更改 (如合作伙伴中心中的新功能) 元数据。 这些更改需要新的审阅过程。
 
 发布更新时，请确保以下各项：
 
 * 不要更改应用 ID。
 * 递增应用的版本号。
-* 在合作伙伴中心中，不要选择添加新 **应用** 以执行更新。 改为转到应用页面。
+* 在合作伙伴中心中，不要选择" **添加新应用** "以执行更新。 改为转到应用页面。
 
 ### <a name="app-updates-requiring-user-consent"></a>需要用户同意的应用更新
 
-当用户安装你的应用时，他们必须向应用授予访问应用正常运行所需的服务和信息的权限。 在大多数情况下，用户只需执行一次此操作，并自动安装新版本的应用。
+当用户安装你的应用时，他们必须向应用授予访问应用正常运行所需的服务和信息的权限。 在大多数情况下，用户必须执行一次此操作，并且应用的新版本将自动安装。
 
 但是，如果对应用进行以下任何更改，现有用户必须接受其他权限请求才能安装更新：
 
@@ -54,7 +54,7 @@ Microsoft 对应用商店中列出的应用运行每日Teams测试。 如果发�
 
 ## <a name="complete-microsoft-365-certification"></a>完成Microsoft 365认证
 
-[Microsoft 365](/microsoft-365-app-certification/docs/certification)认证可保证当在 Office 应用 生态系统中安装第三方 Office 应用 或外接程序时，数据和隐私Microsoft 365受保护。 认证确认你的应用与 Microsoft 技术兼容，符合云应用安全最佳做法，并且受 Microsoft 支持。
+[Microsoft 365](/microsoft-365-app-certification/docs/certification)认证可保证在 Microsoft 365 生态系统中安装第三方 Office 应用 或外接程序时，数据和隐私受到充分Microsoft 365保护。 认证确认你的应用与 Microsoft 技术兼容，符合云应用安全最佳做法，并且受 Microsoft 支持。
 
 ## <a name="see-also"></a>另请参阅
 

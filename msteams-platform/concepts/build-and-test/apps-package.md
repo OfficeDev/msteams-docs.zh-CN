@@ -3,12 +3,12 @@ title: 打包应用
 description: 了解如何打包应用Microsoft Teams、上传和应用商店发布。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 926d6051024ae6e9a5f3d857bdb97fa02f56e8db
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155924"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260671"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>创建Microsoft Teams应用包
 
@@ -21,7 +21,7 @@ ms.locfileid: "59155924"
 
 应用清单文件必须位于包的顶级，名称为 `manifest.json` 。 
 
-发布到应用商店Teams，请确保清单引用最新的[架构](~/resources/schema/manifest-schema.md)。
+发布到应用商店Teams，请确保清单对最新架构[的引用](~/resources/schema/manifest-schema.md)。
 
 ## <a name="app-icons"></a>应用图标
 
@@ -30,11 +30,11 @@ ms.locfileid: "59155924"
 > [!Note]
 > 如果你的应用具有自动程序或消息传递扩展，你的图标也将包含在你的自动Microsoft Azure注册中。
 
-若要使应用通过Teams评价，这些图标必须满足以下大小要求。
+若要使应用通过Teams评审，这些图标必须满足以下大小要求。
 
 ### <a name="color-icon"></a>颜色图标
 
-在大多数情况下，图标的颜色版本Teams必须为 192x192 像素。 图标符号 (96x96 像素) 可以是任何颜色，但它必须位于纯色或完全透明的方形背景上。
+图标的彩色版本在大多数 Teams 方案中显示，必须为 192x192 像素。 图标符号 (96x96 像素) 可以是任何颜色，但它必须位于纯色或完全透明的方形背景上。
 
 Teams自动种图标，以在多个方案中显示圆角的正方形，以及自动程序方案中的六边形。 若要裁剪符号而不丢失任何细节，请在你的符号周围包含 48 像素的填充。
 
@@ -44,7 +44,7 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，以及自
 
 大纲图标在两种方案中显示：
 
-* 当你的应用在使用中且在应用左侧的应用栏上"被Teams。
+* 当你的应用在使用中，并且位于应用栏左侧的应用栏上Teams。
 * 当用户固定你的应用的消息扩展时。
 
 图标必须为 32x32 像素。 它可以是白色（带透明背景）或透明（使用白色背景 (不允许使用任何其他颜色) 。 大纲图标不应在符号周围有任何额外的填充。
@@ -78,7 +78,7 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，以及自
 
 ### <a name="examples"></a>示例
 
-下面将说明应用图标在不同的Teams和上下文中的显示方式。
+下面是应用图标在不同功能和上下文中Teams的方式。
 
 #### <a name="personal-app"></a>个人应用
 

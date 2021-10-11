@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: 本地开发 ngrok 隧道
 ms.date: 11/18/2018
-ms.openlocfilehash: f09457e920a08b1f56973c349209dc07fc539db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b3da582f6529fd676ae8964acb09a038e39162a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155380"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260656"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>在本地电脑上开发通话和联机会议机器人
 
@@ -119,4 +119,6 @@ var mediaPlatform = new MediaPlatformSettings
 
 - Ngrok 免费 **帐户不提供** 端到端加密。 HTTPS 数据以 ngrok URL 结尾，数据流未加密，从 ngrok 到 `localhost` 。 如果需要端到端加密，请考虑使用付费 ngrok 帐户。 有关设置安全的端到端隧道的步骤，请参阅 [TLS](https://ngrok.com/docs#tls) 隧道。
 - 由于机器人回调 URL 是动态的，传入呼叫方案需要频繁更新 ngrok 终结点。 解决此问题的一个方法就是使用付费 ngrok 帐户，该帐户提供你可以将机器人和平台指向的固定子域。
-- Ngrok 隧道还可与 Azure Service Fabric[一Service Fabric。](/azure/service-fabric/service-fabric-overview) 有关操作示例，请参阅 [HueBot 示例应用](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)。
+- Ngrok 隧道还可与 Azure Service Fabric[一Service Fabric。](/azure/service-fabric/service-fabric-overview) 有关操作示例，请参阅 [HueBot 示例应用](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot)。
+
+ 

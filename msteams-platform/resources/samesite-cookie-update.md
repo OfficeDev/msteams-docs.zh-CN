@@ -6,16 +6,16 @@ keywords: cookie 属性 samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155929"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260648"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite cookie 属性 
 
-Cookie 是文本字符串，从网站发送，并且由 Web 浏览器存储在计算机上。 它们用于身份验证和个性化。 例如，Cookie 用于调用状态信息、保留用户设置、记录浏览活动以及显示相关广告。 Cookie 始终链接到特定域，并且由各方安装。 
+Cookie 是由网站发送的文本字符串，由 Web 浏览器存储在计算机上。 它们用于身份验证和个性化。 例如，Cookie 用于调用状态信息、保留用户设置、记录浏览活动以及显示相关广告。 Cookie 始终链接到特定域，并且由各方安装。 
 
 ## <a name="types-of-cookies"></a>Cookie 的类型
 
@@ -43,7 +43,7 @@ Chrome 80 于 2020 年 2 月发布，引入了新的 Cookie 值，并默认实�
  
 SameSite Cookie 属性如下所示：
 
-|Setting | 强制 | 值 |属性规范 |
+|设置 | 强制 | 值 |属性规范 |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie 仅在第一 **方上下文中和** HTTP GET 请求中自动发送。 SameSite Cookie 在跨站点子请求（例如，对加载图像或 iframe 的调用）上被预扣。 当用户从外部网站导航到 URL 时发送，例如，通过以下链接发送。| **默认** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |浏览器仅发送第一方上下文请求的 Cookie。 这些是来自设置 Cookie 的网站的请求。 如果请求的 URL 与当前位置的 URL 不同，则不发送任何用 属性标记的 `Strict` Cookie。| 可选 |`Set-Cookie: key=value; SameSite=Strict`|

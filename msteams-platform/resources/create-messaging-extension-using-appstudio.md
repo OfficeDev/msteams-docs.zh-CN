@@ -5,22 +5,22 @@ description: 了解如何使用 App Studio Microsoft Teams邮件扩展。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6b7de5b5178d893e391b0e97a699f1cba029d59d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155675"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260644"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>使用 App Studio 创建消息传递
 
 > [!TIP]
-> 寻找更快速入门的方法？ 使用[邮件扩展创建](../build-your-first-app/build-messaging-extension.md)Microsoft Teams Toolkit。
+> 寻找更快速入门的方法？ 使用[Microsoft Teams Toolkit。](../build-your-first-app/build-messaging-extension.md)
 
 在高级别上，您需要完成以下步骤以创建邮件扩展。
 
 1. 准备开发环境
-2. 在开发时创建和部署 (服务使用隧道服务（如 ngrok）在本地运行) 
+2. 在开发时创建和 (Web 服务应用程序使用隧道服务（如 ngrok）在本地运行) 
 3. 使用 Bot Framework 注册你的 Web 服务
 4. 创建应用包
 5. 将你的程序包上传到 Microsoft Teams
@@ -37,18 +37,19 @@ ms.locfileid: "59155675"
 
 * 使用我们的快速 [入门](#learn-more) 教程之一指导你创建 Web 服务。
 * 选择 Bot [Framework](https://github.com/Microsoft/BotBuilder-Samples) 示例存储库中提供的消息扩展示例之一，以开始。
-* 如果你使用的是 JavaScript，请使用适用于 Microsoft Teams 的[Yeoman](https://github.com/OfficeDev/generator-teams)生成器为 Teams应用（包括 Web 服务）搭建基架。
+* 如果你使用的是 JavaScript，请使用适用于 Microsoft Teams 的[Yeoman](https://github.com/OfficeDev/generator-teams)生成器Teams应用（包括 Web 服务）。
 * 从头开始创建 Web 服务。 可选择添加面向你的语言的 Bot Framework SDK，也可以直接使用 JSON 有效负载。
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>使用 Bot Framework 注册你的 Web 服务
 
-邮件扩展利用 Bot Framework 的消息架构和安全通信协议;如果还没有，则需要在 Bot Framework 上注册 Web 服务。 Microsoft 应用 ID (我们将它引用为 Teams 内的自动程序 ID，以便从你可能正在处理) 的其他应用 ID 中标识它，在 Bot Framework 中注册的消息终结点将用于邮件扩展以接收和响应请求。 如果你使用的是现有注册，请确保启用Microsoft Teams[通道](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)。
+邮件扩展利用 Bot Framework 的消息架构和安全通信协议;如果还没有，则需要在 Bot Framework 上注册 Web 服务。 Microsoft 应用 ID (我们将它引用为 Teams 内的自动程序 ID，以便从你可能正在处理) 的其他应用 ID 中标识它，在 Bot Framework 中注册的邮件终结点将用于邮件扩展以接收和响应请求。 如果你使用的是现有注册，请确保启用Microsoft Teams[通道](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)。
+
 
 如果你遵循其中一个快速入门或从其中一个可用示例开始，将指导你完成注册 Web 服务。 如果要手动注册服务，有三个选项可进行注册。 如果选择注册而不使用 Azure 订阅，将无法利用 Bot Framework 提供的简化 OAuth 身份验证流。 创建后，你将能够将注册迁移到 Azure。
 
 * 如果你有 Azure 订阅 (或想要创建新的 Azure) ，可以使用 Azure 门户手动注册 Web 服务。 创建"Bot Channels Registration"资源。 您可以选择免费定价层，因为来自 Microsoft Teams的邮件不会计入每月允许的邮件总数。
 * 如果你不希望使用 Azure 订阅，可以使用旧版 [注册门户](https://dev.botframework.com/bots/new)。
-* App Studio 还可以帮助你注册 Web 服务， (自动) 。 通过 App Studio 注册的 Web 服务未在 Azure 中注册。 可以使用旧 [门户查看](https://dev.botframework.com/bots) 、管理和迁移注册。
+* App Studio 还可以帮助你注册 Web 服务 (自动) 。 通过 App Studio 注册的 Web 服务未在 Azure 中注册。 可以使用旧 [门户查看](https://dev.botframework.com/bots) 、管理和迁移注册。
 
 ## <a name="create-your-app-manifest"></a>创建应用清单
 
@@ -59,15 +60,15 @@ ms.locfileid: "59155675"
 你可以从 Microsoft Teams 客户端内使用 App Studio 应用，以帮助创建应用清单。
 
 1. 在 Teams 客户端中，从左侧导航栏上的“**…**”溢出菜单中打开 App Studio。 如果尚未安装，则可以通过搜索来这样做。
-2. 在清单 **编辑器** 选项卡上 **，** 选择创建新应用 (或者如果你要向现有应用添加消息传递扩展，你可以将应用包) 
+2. 在清单 **编辑器** 选项卡上 **，选择** 创建新应用 (或者如果你要向现有应用添加消息传递扩展，你可以将应用包) 
 3. 添加应用详细信息（有关每个字段的完整说明，请参阅[清单架构定义](~/resources/schema/manifest-schema.md)）。
 4. 在" **消息扩展"** 选项卡上，单击" **设置"** 按钮。
-5. 你可以创建新的 Web 服务 (自动) 供邮件扩展使用，或者如果你已注册一个，请在此处选择/添加它。
+5. 你可以创建新的 Web 服务 (自动) 供邮件扩展使用，或者如果你已注册一个选择/添加它。
 6. 如有必要，请更新自动程序终结点地址以指向你的自动程序。 它应该类似于 `https://someplace.com/api/messages`。
 7. "**命令****"部分中的**"添加"按钮将指导你向邮件扩展添加命令。 有关添加 [命令详细信息](#learn-more) 的链接，请参阅了解详细信息部分。 请记住，您可以为邮件扩展定义最多 10 个命令。
 8. " **消息处理程序"** 部分允许您添加邮件将触发的域。 有关详细信息 [，请参阅链接](~/messaging-extensions/how-to/link-unfurling.md) 取消链接。
 
-从"完成 **=>** 测试和分发"选项卡中，你可以下载应用包 (其中包括你的应用清单以及应用图标) 或安装程序包。 
+从"完成 **=>** 测试和分发"选项卡中，你可以下载应用包 (其中包含应用清单以及应用图标) 或安装程序包。 
 
 ### <a name="create-your-app-manifest-manually"></a>手动创建应用清单
 
@@ -234,7 +235,7 @@ ms.locfileid: "59155675"
 
 会议开始后，Teams可以在实时呼叫期间直接与消息扩展进行交互。 生成会议内消息传递扩展时，请考虑以下事项：
 
-1. **Location**。 可以从会议聊天中的撰写消息区域、命令框或消息@mentioned消息扩展。
+1. **Location**。 可以从会议聊天中的撰写消息区域、命令框或@mentioned消息扩展。
 
 1. **元数据**。 调用消息扩展时，它可以从 和 标识用户和 `userId` 租户 `tenantId` 。 可在 `channelData` 对象中找到 `meetingId`。 你的应用可以使用 和 `userId` `meetingId`  的 API `GetParticipant` 请求检索用户角色。
 
