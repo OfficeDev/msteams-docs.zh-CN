@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475704"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260531"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -84,7 +84,7 @@ ms.locfileid: "59475704"
 * **登录、注销和注册体验**:
   * 依赖于外部帐户或服务的应用必须提供清晰而简单的登录、注销和注册体验。
   * 当用户注销时，他们必须仅从应用中注销并保持登录到 Teams。
-* **内容共享体验**: 需要通过外部服务进行身份验证以便在 Teams 频道中共享内容的应用，必须在帮助文档 (或类似位置) 中清楚地说明用户如何断开连接或取消共享内容 (如果外部服务支持此功能)。 这并不意味着取消分享内容的能力必须存在于 Teams 应用中。
+* **内容共享体验**：需要通过外部服务进行身份验证以便在 Teams 频道中共享内容的应用，必须在帮助文档 (或类似位置) 中清楚地说明用户如何断开连接或取消共享内容 (如果外部服务支持此功能)。这不意味着取消内容共享的功能必须在你的 Teams 应用中。
 
 #### <a name="government-community-cloud-listings"></a>政府社区云列表
 
@@ -148,7 +148,7 @@ Teams 应用清单定义应用的配置。
 
 * 清单必须符合最新的清单架构。 相关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。
 * 如果应用包括机器人或消息传递扩展，则清单必须与机器人框架元数据保持一致，包括机器人名称、徽标、隐私策略链接和服务条款链接。
-* 如果应用使用 Azure Active Directory (Azure AD) 进行身份验证，请在清单中包含Azure AD应用程序 (客户端) ID。 更多相关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* 如果应用使用 Azure Active Directory (Azure AD) 进行身份验证，请在清单中包含Azure AD应用程序 (客户端) ID。有关更多信息，请参阅[清单引用](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ### <a name="app-icons"></a>应用图标
 
@@ -341,7 +341,7 @@ Teams 应用清单定义应用的配置。
 * 仅发送通知的机器人必须发送欢迎消息，表示其不会回复用户的消息。
 
 > [!TIP]
-> 在向单个用户发送的欢迎消息中，传送教程可以提供机器人和任何其他应用功能的有效概述。 包括允许用户尝试自动命令的按钮。 例如，**创建任务**。
+> 在向单个用户发送的欢迎消息中，传送教程可以提供机器人和任何其他应用功能的有效概述。 鼓励包括允许用户尝试自动命令的按钮。 例如，**创建任务**。
 
 ### <a name="bot-message-spamming"></a>机器人邮件垃圾邮件
 
