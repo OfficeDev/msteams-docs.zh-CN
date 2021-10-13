@@ -5,12 +5,12 @@ description: 介绍如何从消息传递扩展操作命令响应任务模块提�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cab33a36862ed027f9c110eccaac43d4e4aff20e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156025"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291637"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -190,7 +190,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-with-another-task-module"></a>使用另一个任务模块响应
 
-您可以选择使用附加任务 `submitAction` 模块来响应事件。 这适用于：
+可以选择使用附加任务 `submitAction` 模块来响应事件。 这适用于：
 
 * 您需要收集大量信息。
 * 你需要根据用户输入动态更改正在收集的信息。
@@ -221,7 +221,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-to-initial-submit-action"></a>响应初始提交操作
 
-任务模块必须使用自动程序发送到频道的卡片预览来响应 `composeExtension/submitAction` 初始消息。 用户可以在发送前验证该卡，如果尚未安装自动程序，还可以尝试在对话中安装机器人。
+任务模块必须使用自动程序发送到频道的卡片预览来响应 `composeExtension/submitAction` 初始消息。 用户可以在发送前验证卡片，如果尚未安装自动程序，请尝试在对话中安装机器人。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -400,7 +400,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>响应 botMessagePreview 编辑
 
-如果用户在发送前编辑卡片，则 **通过选择"** 编辑"，将收到 `composeExtension/submitAction` 一个调用 `value.botMessagePreviewAction = edit` 。 为了响应开始交互的初始调用，必须返回发送的任务 `composeExtension/fetchTask` 模块进行响应。 这允许用户通过重新输入原始信息来启动该过程。 使用可用信息更新任务模块，以便用户无需从头开始填写所有信息。
+如果用户在发送前编辑卡片，则 **通过选择"** 编辑"，将收到 `composeExtension/submitAction` 一个调用 `value.botMessagePreviewAction = edit` 。 必须返回发送的任务模块进行响应，以响应开始交互 `composeExtension/fetchTask` 的初始调用。 这允许用户通过重新输入原始信息来启动该过程。 使用可用信息更新任务模块，以便用户无需从头开始填写所有信息。
 有关响应初始事件的信息 `fetchTask` ，请参阅 [响应初始 `fetchTask` 事件](~/messaging-extensions/how-to/action-commands/create-task-module.md)。
 
 ### <a name="respond-to-botmessagepreview-send"></a>响应 botMessagePreview 发送
@@ -544,7 +544,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ![用户属性自动程序](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
-若要在团队中使用用户属性，必须在发送到团队的有效负载中添加 `OnBehalfOf` mention `ChannelData` `Activity` 实体Teams。
+若要在团队中使用用户属性，必须在发送到团队的有效负载中添加 `OnBehalfOf` mention `ChannelData` `Activity` Teams。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
 
@@ -588,7 +588,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 |:---|:---|:---|
 |`itemId`|整数|描述项目的标识。 其值必须为 `0` 。|
 |`mentionType`|String|描述"人"的提及。|
-|`mri`|String|邮件资源 (MRI) 代表其发送邮件的人的 MRI 标识符。 邮件发件人名称将显示为" \<user\> 到 \<bot name\> "。|
+|`mri`|字符串|邮件资源 (MRI) 代表其发送邮件的人的 MRI 标识符。 邮件发件人名称将显示为" \<user\> 到 \<bot name\> "。|
 |`displayName`|String|人员的姓名。 在名称解析不可用时用作回退。|
   
 ## <a name="code-sample"></a>代码示例

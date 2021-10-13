@@ -5,24 +5,24 @@ description: 如何在应用程序应用中使用消息传递扩展Microsoft Tea
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 76e58602bde9dbb3cb58882163f1e86b6e9adef3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 99dbfaa2bf66ee50341e52d4e8a274f7ab20a73e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155764"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291721"
 ---
 # <a name="link-unfurling"></a>链接展开
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-本文档指导你如何使用 App studio 和手动将链接取消点击添加到应用清单。 使用链接展开，当粘贴某一域的 URL 到撰写消息区域，你的应用可以注册接收`invoke`活动。 包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可取消展开的卡片进行响应，从而 `invoke` 提供其他信息或操作。 这类似于 URL 用作搜索词的搜索命令。
+本文档指导你如何使用 App studio 和手动将链接取消点击添加到应用清单。 通过链接取消链接，当特定域的 URL 粘贴到撰写邮件区域中时，你的应用可以注册以接收 `invoke` 活动。 包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可取消展开的卡片进行响应，从而 `invoke` 提供其他信息或操作。 这类似于 URL 用作搜索词的搜索命令。
 
 > [!NOTE]
 > * 目前，移动客户端不支持链接取消展开。
 > * 链接取消点击结果缓存 30 分钟。
 
-邮件Azure DevOps扩展使用链接取消点击来查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户粘贴了邮件扩展已解析为Azure DevOps中工作项的 URL：
+邮件Azure DevOps扩展使用链接取消链接查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户粘贴了邮件扩展已解析为Azure DevOps中工作项的 URL：
 
 ![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 

@@ -5,12 +5,12 @@ description: 邮件扩展操作命令概述
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8049100e8b72d1e1b7145f8427c6f7e94b5e8af6
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096656"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291672"
 ---
 # <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 
@@ -66,10 +66,10 @@ ms.locfileid: "60096656"
 
 ### <a name="create-an-action-command-using-app-studio"></a>使用 App Studio 创建操作命令
 
-可以使用 ** App Studio** 或开发人员门户 **创建操作命令**。
+可以使用 App Studio 或 **开发人员** 门户 **创建操作命令**。
 
 > [!NOTE]
->  App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+> App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
@@ -121,7 +121,7 @@ ms.locfileid: "60096656"
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. 选择“**保存**”。
+1. 选择“保存”。
 1. 若要添加更多参数，请选择" **参数"部分** 中的" **添加"** 按钮。
 
 # <a name="developer-portal"></a>[开发人员门户](#tab/DP)

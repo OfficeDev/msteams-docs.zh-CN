@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams 导入消息 api 图形 Microsoft 迁移迁移帖子
-ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a34a6efe98e14d5c28126275ed2378a24d34efa0
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155984"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291707"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
@@ -42,7 +42,7 @@ ms.locfileid: "59155984"
 ### <a name="set-up-your-office-365-tenant"></a>设置 Office 365 租户
 
 * 确保导入Office 365租户存在。 有关为租户设置Office 365租户Teams，请参阅[准备Office 365租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。
-* 确保团队成员在 AAD Azure Active Directory () 。 有关详细信息，请参阅向 AAD [添加新](/azure/active-directory/fundamentals/add-users-azure-active-directory) 用户。
+* 确保团队成员在Azure Active Directory (AAD) 。 有关详细信息，请参阅[向用户添加AAD。](/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
 ## <a name="step-1-create-a-team"></a>步骤 1：创建团队
 
@@ -107,7 +107,7 @@ Content-Location: /teams/{team-id}
 |-|-|-|-|-|-|
 |`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建和管理资源以迁移到Microsoft Teams。|**仅应用程序**|**是**|`POST /teams`|
 
-#### <a name="request-create-a-channel-in-migration-state"></a>请求 (迁移状态策略创建) 
+#### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态创建) 
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
@@ -325,9 +325,9 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>步骤 5：添加团队成员
 
-可以使用以下 UI 将成员添加到团队[Teams](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) Microsoft Graph[添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)API：
+可以使用以下 UI 将成员添加到[](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)团队Teams Microsoft Graph[添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)API：
 
-#### <a name="request-add-member"></a>请求 (成员) 
+#### <a name="request-add-member"></a>请求 (添加成员) 
 
 ```http
 POST https://graph.microsoft.com/beta/teams/{team-id}/members

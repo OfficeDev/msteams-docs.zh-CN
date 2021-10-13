@@ -1,15 +1,15 @@
 ---
 title: 卡片类型
-description: 介绍自动程序可用的所有卡片和卡片Teams
+description: 介绍自动程序可用的所有卡片和Teams
 ms.localizationpriority: medium
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: adb8695ad6a7057cea5e95b1760addd27c3713e9
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475592"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291658"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -85,14 +85,14 @@ ms.locfileid: "59475592"
 
 图像的大小会向上或向下扩展，以保持覆盖图像区的纵横比。 然后从中心裁剪图像，以实现卡片的适当纵横比。
 
-图像必须最多为 1024×1024 和 PNG、JPEG 或 GIF 格式。 不支持动态 GIF。
+图像最多必须为 1024×1024 和 PNG、JPEG 或 GIF 格式。 不支持动态 GIF。
 
 下表提供了内联卡片图像的属性：
 
 | 属性 | 类型  | 说明 |
 | --- | --- | --- |
 | url | URL | 图像的 HTTPS URL。 |
-| alt | String | 图像的辅助说明。 |
+| alt | 字符串 | 图像的辅助说明。 |
 
 > [!NOTE]
 > 如果卡片包含的图像 URL 在最终图像之前重定向，则不支持图像 URL 中的重定向。 对于在公有云上共享的图像，会出现此情况。
@@ -424,7 +424,7 @@ Bot Framework 参考：
 
 ## <a name="office-365-connector-card"></a>Office 365连接器卡
 
-可以使用一个Office 365连接器卡，该卡提供灵活的布局，是获取有用信息的一种很好的方法。 自动Office 365支持自动Teams，而不是 Bot 框架。 此卡片提供具有多个分区、字段、图像和操作的灵活性布局。 此卡包含连接器卡，以便机器人可以使用它。 有关连接器卡和 Office 365 连接器卡之间的差异，请参阅连接器Office 365[卡上的其他信息](#additional-information-on-the-office-365-connector-card)。
+可以使用一个Office 365连接器卡，该卡提供灵活的布局，是获取有用信息的一种好方法。 自动Office 365支持自动Teams，而不是 Bot 框架。 此卡片提供具有多个分区、字段、图像和操作的灵活性布局。 此卡包含连接器卡，以便机器人可以使用它。 有关连接器卡和 Office 365 连接器卡之间的差异，请参阅连接器Office 365[卡上的其他信息](#additional-information-on-the-office-365-connector-card)。
 
 ### <a name="support-for-office-365-connector-cards"></a>支持 Office 365 连接器卡
 
@@ -447,9 +447,9 @@ Bot Framework 参考：
 
 ### <a name="additional-information-on-the-office-365-connector-card"></a>连接器卡上Office 365信息
 
-Office 365连接器卡在连接器中Microsoft Teams，包括[ `ActionCard` 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
+Office 365连接器卡在连接器Microsoft Teams，包括[ `ActionCard` 操作](/outlook/actionable-messages/card-reference#actioncard-action)。
 
-在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。 下表列出了差异：
+在机器人中从连接器使用连接器卡和使用连接器卡之间的重要区别是处理卡操作。 下表列出了区别：
 
 | Connector | Bot |
 | --- | --- |
@@ -481,7 +481,7 @@ Office 365连接器卡在连接器中Microsoft Teams，包括[ `ActionCard` 操�
 
 ### <a name="example-of-an-office-365-connector-card"></a>连接器Office 365示例
 
-以下代码显示连接器Office 365示例：
+以下代码显示了连接器Office 365示例：
 
 ```json
 {
@@ -618,9 +618,9 @@ Bot Framework 参考：
 
 ## <a name="signin-card"></a>登录卡
 
-自动Teams中的登录卡类似于 Bot 框架中的登录卡，只不过 Teams 中的登录卡仅支持两个 `signin` 操作 `openUrl` 和 。
+自动程序Teams中的登录卡类似于 Bot 框架中的登录卡，只不过 Teams 中的登录卡仅支持两个 `signin` 操作 `openUrl` 和 。
 
-The signin action can be used from any card in Teams， not just the signin card. 有关详细信息，请参阅自动[Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
+the signin action can be used from any card in Teams， not just the signin card. 有关详细信息，请参阅自动[Teams的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
 
 ### <a name="support-for-signin-cards"></a>支持登录卡
 
@@ -743,7 +743,7 @@ Bot Framework 参考：
 
 ![卡片的盘点示例](~/assets/images/cards/carousel.png)
 
-以下代码显示了一个可进行盘车操作的集合示例：
+以下代码显示了一个盘车集合的示例：
 
 ```json
 {
