@@ -1,23 +1,23 @@
 ---
-title: 开发者预览版清单架构参考
+title: 公共开发人员预览清单架构参考
 description: 介绍清单支持的架构Microsoft Teams
 ms.topic: reference
 keywords: teams 清单架构开发者预览版
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 2fd4b3c19fd7e88277d2aa6da025142f8ef8c4a5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 886b1d69052e9379f71e062da2f6f13eebcee1a2
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155345"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378903"
 ---
-# <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>开发人员预览清单架构Microsoft Teams
+# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：公共开发人员预览清单架构Microsoft Teams
 
 若要了解如何启用开发人员预览，请参阅公共[开发人员预览Microsoft Teams。](~/resources/dev-preview/developer-preview-intro.md)
 
 > [!NOTE]
-> * 如果不使用开发人员预览功能，请改为使用 GA [功能的应用清单](~/resources/schema/manifest-schema.md) 。
+> 如果不使用开发人员预览功能，请改为使用 GA [功能的应用清单](~/resources/schema/manifest-schema.md) 。
 
 Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
 
@@ -223,6 +223,9 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
+  },
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -233,7 +236,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 *可选，但建议* &ndash; 字符串
 
-the https:// URL referencing the JSON Schema for the manifest.
+引用 https:// JSON 架构的 URL。
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -249,13 +252,13 @@ the https:// URL referencing the JSON Schema for the manifest.
 
 如果应用请求的权限更改，将提示用户升级并重新同意应用。
 
-此版本字符串必须遵循 [Semver](http://semver.org/) 标准 (MAJOR。MINOR。PATCH) 。
+此版本字符串必须遵循 [semver](http://semver.org/) 标准 (MAJOR。MINOR。PATCH) 。
 
 ## <a name="id"></a>id
 
 **必需** &ndash; Microsoft 应用 ID
 
-此应用的唯一 Microsoft 生成的标识符。 如果你已经通过 Microsoft Bot Framework 注册了自动程序，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，你应该已经拥有 ID，并且应在此处输入它。 否则，应在"我的应用程序" (Microsoft 应用程序注册门户) 生成一[](https://apps.dev.microsoft.com)个新 ID，在此处输入，然后在添加自动程序时重复使用[它](~/bots/how-to/create-a-bot-for-teams.md)。
+此应用的唯一 Microsoft 生成的标识符。 如果你已经通过 Microsoft Bot Framework 注册了自动程序，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，你应该已经拥有 ID，并且应在此处输入它。 否则，应在"我的应用程序" (Microsoft 应用程序注册门户 [) 生成](https://apps.dev.microsoft.com) 一个新 ID，在此处输入，然后在添加自动程序时重复使用 [它](~/bots/how-to/create-a-bot-for-teams.md)。
 
 ## <a name="packagename"></a>packageName
 
@@ -300,7 +303,7 @@ the https:// URL referencing the JSON Schema for the manifest.
 
 **Required**
 
-应用体验的名称，在体验中向Teams显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值不应相同。
+应用体验的名称，在应用体验中向Teams显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值不应相同。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -313,7 +316,7 @@ the https:// URL referencing the JSON Schema for the manifest.
 
 向用户描述你的应用。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
-确保你的描述准确地描述了你的体验，并提供相关信息来帮助潜在客户了解你的体验。 还应在完整说明中注意，如果需要使用外部帐户。 和 `short` `full` 的值不应相同。  简短说明不得在详细说明中重复，且不得包含任何其他应用名称。
+确保你的说明准确地描述了你的体验，并提供相关信息来帮助潜在客户了解你的体验。 还应在完整说明中注意，如果需要使用外部帐户。 和 `short` `full` 的值不应相同。  简短说明不得在详细说明中重复，且不得包含任何其他应用名称。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -350,7 +353,7 @@ the https:// URL referencing the JSON Schema for the manifest.
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
-|`canUpdateConfiguration`|布尔值|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
+|`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
 |`sharePointPreviewImage`|String|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义选项卡在页面SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
@@ -370,8 +373,8 @@ the https:// URL referencing the JSON Schema for the manifest.
 |---|---|---|---|---|
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|String|128 个字符|✔|the 显示名称 of the tab in the channel interface.|
-|`contentUrl`|String|2048 个字符|✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
-|`contentBotId`|   | | | 在Microsoft Teams框架门户中为机器人指定的应用 ID。 |
+|`contentUrl`|String|2048 个字符|✔|指向 https:// 画布中显示的实体 UI 的Teams URL。|
+|`contentBotId`|   | | | 自动Microsoft Teams门户中为自动程序指定的应用 ID。 |
 |`websiteUrl`|String|2048 个字符||用户 https:// 在浏览器中查看时指向的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
 
@@ -381,7 +384,7 @@ the https:// URL referencing the JSON Schema for the manifest.
 
 定义自动程序解决方案以及默认命令属性等可选信息。
 
-对象是一个 (，当前每个应用仅允许一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
+对象是一个 (，当前每个应用最多只能有一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -393,7 +396,7 @@ the https:// URL referencing the JSON Schema for the manifest.
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含 2 个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
+自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，其中最多包含 2 个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -412,7 +415,7 @@ the https:// URL referencing the JSON Schema for the manifest.
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
 |`connectorId`|字符串|64 个字符|✔|连接器的唯一标识符，该标识符与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
-|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是单独为单个用户提供 `team` `personal` () 。 目前，仅 `team` 支持范围。|
+|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是仅针对单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -445,16 +448,16 @@ the https:// URL referencing the JSON Schema for the manifest.
 |`description`|String|128 个字符||向用户显示以指示此命令用途的说明。|
 |`initialRun`|Boolean|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
 |`context`|Array of Strings|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose", "commandBox"]`|
-|`fetchTask`|布尔值|||一个布尔值，指示它应动态提取任务模块。|
+|`fetchTask`|Boolean|||一个布尔值，指示它应动态提取任务模块。|
 |`taskInfo`|Object|||指定在使用消息传递扩展命令时要预加载的任务模块。|
 |`taskInfo.title`|String|64||初始对话框标题。|
 |`taskInfo.width`|String|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
 |`taskInfo.height`|String|||对话框高度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|
 |`taskInfo.url`|String|||初始 Web 视图 URL。|
-|`messageHandlers`|对象数组|5 ||允许满足某些条件时调用应用的处理程序列表。 还必须在 中列出域 `validDomains` 。|
+|`messageHandlers`|对象数组|5||允许满足某些条件时调用应用的处理程序列表。 还必须在 中列出域 `validDomains` 。|
 |`messageHandlers.type`|String|||消息处理程序的类型。 必须是 `"link"`。|
 |`messageHandlers.value.domains`|Array of Strings|||链接邮件处理程序可以注册的域数组。|
-|`parameters`|对象数组|5 |✔|命令采用的参数列表。 最小值：1;最大值：5|
+|`parameters`|对象数组|5|✔|命令采用的参数列表。 最小值：1;最大值：5|
 |`parameter.name`|字符串|64 个字符|✔|显示在客户端中的参数的名称。 这包括在用户请求中。|
 |`parameter.title`|String|32 个字符|✔|参数的用户友好标题。|
 |`parameter.description`|String|128 个字符||描述此参数用途的用户友好字符串。|
@@ -503,11 +506,11 @@ the https:// URL referencing the JSON Schema for the manifest.
 
 **可选**
 
-指定 AAD 应用 ID 和Graph信息以帮助用户无缝登录到 AAD 应用。
+指定你的Azure AD ID 和Graph信息，以帮助用户无缝登录到 Auzre AD 应用。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`id`|String|36 个字符|✔|应用的 AAD 应用程序 ID。 此 ID 必须是 GUID。|
+|`id`|String|36 个字符|✔|Azure AD应用程序 ID。 此 ID 必须是 GUID。|
 |`resource`|String|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。|
 |`applicationPermissions`|数组|最多 100 个项目|✔|应用程序的资源权限。|
 
@@ -515,7 +518,7 @@ the https:// URL referencing the JSON Schema for the manifest.
 
 **可选** - 数组
 
-`configurableProperties`此块定义管理员可Teams的应用程序属性。 有关详细信息，请参阅启用 [应用自定义](~/concepts/design/enable-app-customization.md)。
+`configurableProperties`此块定义管理员可Teams应用属性。 有关详细信息，请参阅启用 [应用自定义](~/concepts/design/enable-app-customization.md)。
 
 > [!NOTE]
 > 必须定义至少一个属性。 最多可以在此块中定义九个属性。
@@ -556,3 +559,13 @@ the https:// URL referencing the JSON Schema for the manifest.
 |`team`|string|||当选择的安装范围为 `team` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
 |`groupchat`|string|||当选择的安装范围为 `groupchat` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
 |`meetings`|string|||当选择的安装范围为 `meetings` 时，此字段指定可用的默认功能。 选项 `tab` ：、 `bot` 或 `connector` 。|
+
+## <a name="subscriptionoffer"></a>subscriptionOffer
+
+**可选** - object
+
+指定与你的应用关联的 SaaS 产品/服务。
+
+|名称| 类型| 最大大小 | 必需 | 说明|
+|---|---|---|---|---|
+|`offerId`| string | 2，048 个字符 | ✔ | 包含你的产品/服务 ID Publisher产品/服务 ID 的唯一标识符，可在合作伙伴[中心找到。](https://partner.microsoft.com/dashboard) 必须将字符串格式为 `publisherId.offerId` 。|
