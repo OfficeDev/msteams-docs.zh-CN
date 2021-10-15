@@ -36,7 +36,7 @@ ms.locfileid: "59475823"
 
 用户可以使用@mention访问在桌面上添加的机器人。
 
-:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="示例演示如何使用 @mention.</a 在群组聊天中访问移动机器人>
+:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="示例演示如何使用 @mention  在群组聊天中访问移动机器人" border="false":::
 
 ### <a name="desktop"></a>桌面
 
