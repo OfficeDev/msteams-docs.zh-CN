@@ -432,6 +432,9 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: 维护已发布的应用程序
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+        - name: 在应用中包含 SaaS 产品/服务
+          href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+- name: 资源
 - name: 应用部件清单
   items:
     - name: 应用程序清单架构

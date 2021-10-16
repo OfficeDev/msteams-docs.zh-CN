@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260531"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378896"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -108,6 +108,9 @@ ms.locfileid: "60260531"
 * 如果应用需要帐户，则用户必须能够免费注册帐户。 禁止使用 **免费** 或 **免费帐户** 的术语。
 * 可以决定账户是无限期的还是有限期的，但若账户过期，则可能无法显示表明需要支付的用户界面、文字或链接。
 * 应用的隐私策略和使用条款页面必须不含任何与商业相关的 UI 或链接。
+
+> [!NOTE]
+> Teams 应用商店一览可以包括可供购买的应用订阅计划或许可证。 有关详细信息，请参阅[为你的用户添加 SaaS 产品/服务](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)。
 
 ## <a name="general-functionality-and-performance"></a>常规功能和性能
 
