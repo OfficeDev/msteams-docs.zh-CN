@@ -1,21 +1,18 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 如何取消链接，打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
+description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: cc77667a8782f2f519d6dc3e6af74949a9dcbed2
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 04eef9691e1858916827da00f97c1a309bfe4970
+ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017301"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60483497"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
-
-> [!NOTE]
-> 此功能仅在公共 [开发人员预览版中](../resources/dev-preview/developer-preview-intro.md) 可用。
 
 阶段视图是 UI (组件) 用户界面，允许你呈现在 Teams 中全屏打开并固定为选项卡的内容。
  
@@ -45,7 +42,7 @@ ms.locfileid: "60017301"
 
 ## <a name="invoke-stage-view-from-adaptive-card"></a>从自适应卡片调用阶段视图
 
-当用户在桌面客户端上Teams URL 时，将调用自动程序并返回自适应卡片，并可选择[](../task-modules-and-cards/cards/cards-actions.md)在阶段中打开 URL。 启动阶段并提供了 后，你可以 `tabInfo` 添加将阶段固定为选项卡的能力。  
+当用户在桌面客户端上Teams URL 时，将调用自动程序并返回自适应卡片，并可选择在[](../task-modules-and-cards/cards/cards-actions.md)阶段中打开 URL。 启动阶段并提供了 后，你可以 `tabInfo` 添加将阶段固定为选项卡的能力。  
 
 下图显示从自适应卡片打开的阶段：
 
@@ -133,9 +130,9 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | 属性名称 | 类型 | 字符数 | 说明 |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
-| `name` | 字符串 | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
-| `contentUrl` | String | 2048 | 此属性是指向 https:// UI 以在页面画布中显示的实体 UI Teams URL。 这是必填字段。|
-| `websiteUrl?` | 字符串 | 2048 | 如果用户选择在 https:// 查看，则此属性为要指向的 URL。 这是必填字段。|
+| `name` | String | 128 | 此属性是显示名称界面中选项卡的列数。 这是一个可选字段。|
+| `contentUrl` | String | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
+| `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
 | `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
 
 ## <a name="code-sample"></a>代码示例
