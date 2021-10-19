@@ -6,12 +6,12 @@ keywords: 相机图像麦克风功能本机设备权限媒体
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 907409b9fec308b118e8e323b91fe6d740abf85e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a6c69aa266eb337f6936cd78ecc1128ffcf95855
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155309"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496198"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能 
 
@@ -24,15 +24,16 @@ ms.locfileid: "59155309"
 
 为了进行有效的集成，你必须深入了解用于调用相应[](#code-snippets)API 的代码段，这允许你使用本机媒体功能。
 
-熟悉 API 响应错误以处理应用[](#error-handling)或应用中的错误Teams很重要。
+熟悉 API 响应错误以处理应用程序[](#error-handling)应用中的错误Teams很重要。
 
 > [!NOTE] 
 > * 目前Microsoft Teams对媒体功能的支持仅适用于移动客户端。   
-> * 目前，Teams不支持多窗口应用、选项卡和会议侧窗格的设备权限。    
+> * 目前，Teams不支持多窗口应用、选项卡和会议侧窗格的设备权限。   
+> * 设备权限在浏览器中不同。 有关详细信息，请参阅 [浏览器设备权限](browser-device-permissions.md)。 
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在文件上的 `devicePermissions` 应用 `media` 。 它允许你的应用在用户开始使用相机捕获图像之前，向用户请求必要的权限，打开库以选择要作为附件提交的图像，或使用麦克风录制对话。  应用清单的更新如下所示：
+通过添加 Teams 并指定 来更新应用程序清单[.json](../../resources/schema/manifest-schema.md#devicepermissions) `devicePermissions` 文件 `media` 。 它允许你的应用在用户开始使用相机捕获图像之前，向用户请求必要的权限，打开库以选择要作为附件提交的图像，或使用麦克风录制对话。  应用清单的更新如下所示：
 
 ``` json
 "devicePermissions": [
@@ -70,7 +71,7 @@ ms.locfileid: "59155309"
 
 下图描述了 API 的 Web 应用体验 `selectMedia` ，用于图像功能：
 
-![设备相机和图像体验在Teams](../../assets/images/tabs/image-capability.png)
+![设备相机和图像体验Teams](../../assets/images/tabs/image-capability.png)
 
 下图描述了 API 的麦克风功能 `selectMedia` Web 应用体验：
 
@@ -80,7 +81,7 @@ ms.locfileid: "59155309"
 
 必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
-|错误代码 |  错误名称     | Condition|
+|错误代码 |  错误名称     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **404** | FILE_NOT_FOUND | 在给定位置找不到指定的文件。|
@@ -253,6 +254,6 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 ## <a name="see-also"></a>另请参阅
 
 * [将 QR 或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
-* [在 Teams 中集成位置Teams](location-capability.md)
+* [将位置功能集成到Teams](location-capability.md)
 * [将人员选取器集成到Teams](people-picker-capability.md)
 
