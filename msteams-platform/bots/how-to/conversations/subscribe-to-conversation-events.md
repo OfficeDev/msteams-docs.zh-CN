@@ -5,18 +5,18 @@ description: 如何处理来自自动程序的对话Microsoft Teams事件。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9dc8649cde02b2d19feaca001b55795c671cecb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6dbefee88b1af763d02b3647d21bdc44da9541ec
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156005"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566251"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-为用户生成对话机器人Microsoft Teams，可以使用对话事件。 Teams自动程序在活动范围内发生的对话事件向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
+为用户构建对话Microsoft Teams时，可以使用对话事件。 Teams在自动程序处于活动状态的范围中发生的对话事件向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
 
 * 将机器人添加到团队时触发欢迎消息。
 * 在添加或删除新的团队成员时触发欢迎消息。
@@ -28,7 +28,7 @@ ms.locfileid: "59156005"
 可以使用对话更新事件提供更好的通知和更有效的自动程序操作。
 
 > [!IMPORTANT]
-> * 你随时都可以添加新事件，并且你的机器人开始接收它们。
+> * 你随时都可以添加新事件，并且机器人开始接收它们。
 > * 必须将机器人设计为接收意外事件。
 > * 如果你使用的是 Bot Framework SDK，则自动自动响应你选择不处理 `200 - OK` 的任何事件。
 
@@ -229,7 +229,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>已删除频道
 
-只要在安装了自动程序的团队中删除频道，频道删除事件就会发送给机器人。
+只要在安装了自动程序的团队中删除频道，频道删除事件就会发送到机器人。
 
 以下代码显示了频道删除事件的示例：
 
@@ -313,7 +313,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>已还原频道
 
-只要在已安装自动程序的团队中还原以前删除的频道，就会将频道还原事件发送给机器人。
+只要在已安装自动程序的团队中还原之前删除的频道，就会将频道还原事件发送给机器人。
 
 以下代码显示了通道还原事件的示例：
 
@@ -402,7 +402,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>添加了工作组成员
 
-`teamMemberAdded`该事件在首次添加到对话时发送到机器人。 每次将新用户添加到安装自动程序的团队或群聊时，都会将该事件发送到机器人。 ID 为 ID 的用户信息对于自动程序是唯一的，可以缓存此信息供服务将来使用，例如向特定用户发送消息。
+`teamMemberAdded`该事件在首次添加到对话时发送到机器人。 每次将新用户添加到安装自动程序的团队或群聊时，都会将该事件发送到机器人。 ID 是 ID 的用户信息，对于自动程序是唯一的，可以缓存此信息供你的服务将来使用，例如向特定用户发送消息。
 
 以下代码显示了团队成员添加事件的示例：
 
@@ -658,7 +658,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>已重命名团队
 
-当自动程序位于的团队重命名时，将会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamRenamed` 事件 `channelData` 。
+重命名团队时，将通知机器人。 它接收 `conversationUpdate` 对象中的 `eventType.teamRenamed` 事件 `channelData` 。
 
 以下代码显示了团队重命名事件的示例：
 
@@ -738,7 +738,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>团队已删除
 
-当自动程序位于的团队被删除时，将会收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamDeleted` 事件 `channelData` 。
+删除团队时，将通知机器人。 它接收 `conversationUpdate` 对象中的 `eventType.teamDeleted` 事件 `channelData` 。
 
 以下代码显示了团队已删除事件的示例：
 
@@ -894,7 +894,7 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>已存档团队
 
-自动程序在存档安装它的团队时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamarchived` 事件 `channelData` 。
+机器人在安装并存档团队时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamarchived` 事件 `channelData` 。
 
 以下代码显示了团队存档事件的示例：
 
@@ -975,7 +975,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>未存档团队
 
-自动程序在安装它的团队未存档时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamUnarchived` 事件 `channelData` 。
+机器人在安装团队并取消存档时收到通知。 它接收 `conversationUpdate` 对象中的 `eventType.teamUnarchived` 事件 `channelData` 。
 
 以下代码显示了团队未存档事件的示例：
 
@@ -1061,8 +1061,8 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 全部   |
-| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 全部 |
+| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 所有   |
+| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 所有 |
 
 ### <a name="reactions-added-to-bot-message"></a>添加到自动程序消息的反应
 
@@ -1389,15 +1389,15 @@ turnContext, CancellationToken cancellationToken) {
 > [!NOTE]
 > 使用自动程序的个人应用的卸载行为当前仅适用于公共开发人员 [预览版](../../../resources/dev-preview/developer-preview-intro.md)。
 
-卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有组聊天和 groupChat 作用域的个人Teams聊天机器人的帖子卸载行为已保持一致。 卸载应用后，你无法发送或接收邮件。
+卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有 Teams 和 groupChat 作用域的个人作用域中的聊天机器人的帖子卸载行为已保持一致。 卸载应用后，你无法发送或接收邮件。
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
 
-使用这些安装和卸载事件时，在某些情况下，自动程序会提供从事件接收意外事件的Teams。 在下列情况下会出现此情况：
+使用这些安装和卸载事件时，在某些情况下，自动程序会提供从客户端接收意外事件的Teams。 在下列情况下会出现此情况：
 
-* 无需使用 SDK Microsoft Bot Framework自动程序，因此机器人在收到意外事件时出现异常。
+* 无需使用 Microsoft Bot Framework SDK 即可生成自动程序，因此机器人在收到意外事件时出现异常。
 * 使用 Microsoft Bot Framework SDK 生成自动程序，并选择通过覆盖基本事件句柄来更改默认事件行为。
 
 了解以后可以随时添加新事件，并且机器人开始接收它们，了解这一点很重要。 因此，您必须针对接收意外事件的可能性进行设计。 如果你使用的是 Bot Framework SDK，则自动程序会自动响应 200 – 确定你未选择处理的任何事件。

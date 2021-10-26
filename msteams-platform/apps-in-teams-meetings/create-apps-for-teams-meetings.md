@@ -1,17 +1,17 @@
 ---
 title: Teams 会议中应用的先决条件
 author: surbhigupta
-description: 确定会议应用Teams的先决条件
+description: 确定会议Teams的先决条件
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 56219323f6106619a9dd4f1b26289ecf86d297f3
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 2cd0012a36d3cc941ebcf7e83a4156c9780149a6
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017315"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566132"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件
 
@@ -73,7 +73,7 @@ ms.locfileid: "60017315"
 > * 不要缓存参与者角色，因为会议组织者可以随时更改角色。
 > * Teams API 当前不支持超过 350 个参与者的大型通讯组列表或名单 `GetParticipant` 大小。
 
-API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 API 包括查询参数、示例和响应代码。 该 API 在私人计划会议或定期会议以及频道计划会议或定期会议中均受支持。 
+API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 API 包括查询参数、示例和响应代码。 该 API 在专用计划会议或定期会议以及频道计划会议或定期会议中均受支持。 
 
 #### <a name="query-parameters"></a>查询参数
 
@@ -215,7 +215,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID'
     }
 };
 await context.sendActivity(replyActivity);
@@ -333,9 +333,6 @@ API 的 JSON 响应 `Meeting Details` 正文如下所示：
 ```
 
 ## <a name="real-time-teams-meeting-events"></a>实时Teams会议事件
-
-> [!NOTE]
-> 此功能目前仅适用于公共 [开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版。
 
 用户可以接收实时会议事件。 只要任何应用与会议关联，就会与机器人共享实际会议开始时间和会议结束时间。
 

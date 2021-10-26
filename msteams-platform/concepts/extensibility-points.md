@@ -5,23 +5,23 @@ description: 介绍用户可以在 Teams 中发现和使用应用的地方。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3d4f3150447603fe8462b3a8166f6bc76de7cc03
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155807"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566349"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams 应用的入口点
 
-the Teams platform provides a flexible set of entry points， such as team， channel， and chat where people can discover and use your app. 应用程序非常简单，只需在选项卡或多维应用中嵌入现有 Web 内容，用户跨多个上下文进行交互。
-成功应用是本机应用的Teams，因此请谨慎选择应用的入口点。
+the Teams platform provides a flexible set of entry points， such as team， channel， and chat， where people can discover and use your app. 应用程序非常简单，只需在选项卡或多维应用中嵌入现有 Web 内容，用户跨多个上下文进行交互。
+成功应用是本机应用的Teams，因此请仔细选择应用的入口点。
 
 ## <a name="shared-app-experiences"></a>共享的应用体验
 
 团队、频道和聊天是协作空间。 这些上下文中的应用程序可供该空间中的每个人使用。 协作空间通常侧重于其他工作流或解锁新的社交交互。
 
-下面的列表演示如何Teams协作上下文中使用应用程序功能：
+下表显示了如何在Teams上下文中使用应用程序功能：
 
 * [**选项卡**](~/tabs/what-are-tabs.md)为团队、频道或群组聊天配置全屏嵌入的 Web 体验。 所有成员与基于 Web 的相同内容进行交互，因此无状态单页应用体验很典型。
 

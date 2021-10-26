@@ -5,12 +5,12 @@ description: 为应用程序定义消息传递扩展Microsoft Teams命令。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: d87936832e3d302be295e14bbf952379a41aa694
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: aaea89aa14e556dfa00e81e8ec72fe5fb4bbe744
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096590"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566363"
 ---
 # <a name="define-messaging-extension-search-commands"></a>定义消息传递扩展搜索命令
 
@@ -28,7 +28,7 @@ ms.locfileid: "60096590"
 * 撰写邮件区域：撰写邮件区域底部的按钮。
 * 命令框：@mentioning命令框中显示。
 
-从撰写邮件区域调用搜索命令时，用户将结果发送到对话。 从命令框调用它时，用户与生成的卡片交互，或复制该卡片以在其他地方使用。
+  从撰写邮件区域调用搜索命令时，用户将结果发送到对话。 从命令框调用它时，用户与生成的卡片交互，或复制该卡片以在其他地方使用。
 
 下图显示了搜索命令的调用位置：
 
@@ -128,13 +128,13 @@ ms.locfileid: "60096590"
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
 | `id` | 此属性是分配给搜索命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
-| `title` | 此属性是命令名称。 此值显示在用户界面和 UI () 。 | 是 | 1.0 |
+| `title` | 此属性是命令名称。 此值显示在用户界面用户界面 (UI) 。 | 是 | 1.0 |
 | `description` | 此属性是一个帮助文本，用于指示此命令执行哪些操作。 此值显示在 UI 中。 | 是 | 1.0 |
 | `type` | 此属性必须为 `query` 。 | 否 | 1.4 |
 |`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
 | `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
-您必须添加搜索参数的详细信息，该参数定义您的用户在 Teams 客户端中可见的文本。
+您必须添加搜索参数的详细信息，该参数定义用户在 Teams 客户端中可见的文本。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|

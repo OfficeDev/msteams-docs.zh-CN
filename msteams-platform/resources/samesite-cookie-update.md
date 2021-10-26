@@ -6,12 +6,12 @@ keywords: cookie 属性 samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b5f66a9f3e542b5abff96c695c3da488773d10cb
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260648"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566125"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite cookie 属性 
 
@@ -35,7 +35,7 @@ Cookie 类型及其相应的范围如下所示：
 
 Google Chrome 版本 51 引入了 `SetCookie SameSite` 规范作为可选属性。 从内部版本 17672 开始，Windows 10为浏览器引入了 SameSite [cookie Microsoft Edge支持](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)。
 
-你可以选择不向标头添加 SameSite cookie 属性，或者使用两个设置之一 `SetCookie` **Lax** 和 **Strict** 添加它。 未启用的 SameSite 属性被视为默认状态。
+你可以选择不向标头添加 SameSite Cookie 属性，或者使用两个设置之一 `SetCookie` **Lax** 和 **Strict** 添加它。 未启用的 SameSite 属性被视为默认状态。
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite Cookie 属性：2020 版本
 
@@ -43,7 +43,7 @@ Chrome 80 于 2020 年 2 月发布，引入了新的 Cookie 值，并默认实�
  
 SameSite Cookie 属性如下所示：
 
-|设置 | 强制 | 值 |属性规范 |
+|Setting | 强制 | 值 |属性规范 |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie 仅在第一 **方上下文中和** HTTP GET 请求中自动发送。 SameSite Cookie 在跨站点子请求（例如，对加载图像或 iframe 的调用）上被预扣。 当用户从外部网站导航到 URL 时发送，例如，通过以下链接发送。| **默认** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |浏览器仅发送第一方上下文请求的 Cookie。 这些是来自设置 Cookie 的网站的请求。 如果请求的 URL 与当前位置的 URL 不同，则不发送任何用 属性标记的 `Strict` Cookie。| 可选 |`Set-Cookie: key=value; SameSite=Strict`|

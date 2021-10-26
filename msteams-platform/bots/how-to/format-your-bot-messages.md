@@ -5,12 +5,12 @@ description: 向自动程序消息添加丰富的格式
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c5c4fc9190712e042398882ae95d31673fc0f37
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155683"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566223"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
@@ -36,7 +36,7 @@ Teams markdown 和 XML 或 HTML 格式标记的子集。
 * 格式卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。
 * 富卡片不支持 markdown 或表格格式。
 
-设置文本内容的格式后，请确保格式设置适用于所有受文本Microsoft Teams。
+设置文本内容的格式后，请确保您的格式设置适用于所有受 Microsoft Teams。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
@@ -64,7 +64,7 @@ Teams markdown 和 XML 或 HTML 格式标记的子集。
 
 ### <a name="text-only-messages"></a>纯文本邮件
 
-下表提供了样式列表，以及哪些样式在桌面、iOS 和 Android 上受支持：
+下表提供了桌面、iOS 和 Android 上支持的样式列表：
 
 | 样式                     | 桌面 | iOS | Android |
 | ---                       | :---: | :---: | :---: |

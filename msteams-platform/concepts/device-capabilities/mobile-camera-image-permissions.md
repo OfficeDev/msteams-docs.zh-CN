@@ -6,12 +6,12 @@ keywords: 相机图像麦克风功能本机设备权限媒体
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a6c69aa266eb337f6936cd78ecc1128ffcf95855
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: f1c091195b85bab84d01ea88cc8234d2e415b9f7
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496198"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566118"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能 
 
@@ -24,11 +24,11 @@ ms.locfileid: "60496198"
 
 为了进行有效的集成，你必须深入了解用于调用相应[](#code-snippets)API 的代码段，这允许你使用本机媒体功能。
 
-熟悉 API 响应错误以处理应用程序[](#error-handling)应用中的错误Teams很重要。
+熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
 
 > [!NOTE] 
 > * 目前Microsoft Teams对媒体功能的支持仅适用于移动客户端。   
-> * 目前，Teams不支持多窗口应用、选项卡和会议侧窗格的设备权限。   
+> * 目前，Teams不支持多窗口应用、选项卡和会议侧面板的设备权限。   
 > * 设备权限在浏览器中不同。 有关详细信息，请参阅 [浏览器设备权限](browser-device-permissions.md)。 
 
 ## <a name="update-manifest"></a>更新清单
@@ -53,11 +53,11 @@ ms.locfileid: "60496198"
 * 使用 **本机库支持** 以允许用户 **选择设备图像作为** 附件。
 * 使用本机 **图像查看器控件一****次预览** 多个图像。
 * 通过 SDK **桥** (从 1 MB 到 50 MB) 大图像传输。
-* 支持 **允许用户预览** 和编辑图像的高级图像功能：
+* 支持 **高级图像功能** 允许用户预览和编辑图像：
   * 通过相机扫描文档、白板和名片。
   
 > [!IMPORTANT]
-> * 、和 API 可以从多个Teams接口（如任务模块、选项卡和个人应用） `selectMedia` `getMedia` `viewImages` 调用。 有关详细信息，请参阅应用[Teams点](../extensibility-points.md)。
+> * 可以从多个任务Teams调用 、 和 API，例如任务模块、选项卡 `selectMedia` `getMedia` `viewImages` 和个人应用。 有关详细信息，请参阅应用[Teams点](../extensibility-points.md)。
 > * `selectMedia` API 已扩展以支持麦克风和音频属性。
 
 你必须使用以下一组 API 来启用设备的媒体功能：
@@ -66,12 +66,12 @@ ms.locfileid: "60496198"
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**Camera)**| 此 API 允许用户从 **设备相机捕获** 或选择媒体，并返回到 Web 应用。 用户可以在提交之前编辑、裁剪、旋转、批注或绘制图像。 作为响应，Web 应用接收所选图像的媒体 `selectMedia` ID 和所选媒体的缩略图。 可以通过 [ImageProps](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageprops?view=msteams-client-js-latest&preserve-view=true) 配置进一步配置此 API。 |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**麦克风**) | 在 [API 中将 mediaType](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true) `4` 设置为 `selectMedia` ，以访问麦克风功能。 此 API 还允许用户从设备麦克风录制音频，将录制的剪辑返回到 Web 应用。 用户可以在提交之前暂停、重新录制和播放录制预览。 作为对 **selectMedia 的响应**，Web 应用接收所选音频录制的媒体 ID。 <br/> 如果需要 `maxDuration` 为录制对话配置持续时间（以分钟表示）。请使用 。 录制的当前持续时间为 10 分钟，之后将终止录制。  |
-| [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| 此 API 检索 API 以区块捕获的媒体， `selectMedia` 而不考虑媒体大小。 这些区块将组合在一起，作为文件或 blob 发送回 Web 应用。 将媒体分成较小的区块便于大型文件传输。 |
+| [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| 此 API 检索 API 以区块捕获的媒体， `selectMedia` 而不考虑媒体大小。 这些区块将组合在一起，作为文件或 blob 发送回 Web 应用。 将媒体分解为较小的块便于传输大文件。 |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| 此 API 使用户能够在全屏模式下以可滚动列表的方式查看图像。|
 
 下图描述了 API 的 Web 应用体验 `selectMedia` ，用于图像功能：
 
-![设备相机和图像体验Teams](../../assets/images/tabs/image-capability.png)
+![设备中的设备相机和图像Teams](../../assets/images/tabs/image-capability.png)
 
 下图描述了 API 的麦克风功能 `selectMedia` Web 应用体验：
 
@@ -254,6 +254,6 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 ## <a name="see-also"></a>另请参阅
 
 * [将 QR 或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
-* [将位置功能集成到Teams](location-capability.md)
+* [将位置功能集成到 Teams](location-capability.md)
 * [将人员选取器集成到Teams](people-picker-capability.md)
 

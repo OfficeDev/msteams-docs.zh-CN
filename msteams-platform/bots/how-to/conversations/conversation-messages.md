@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 8ef68f351e8d0d7ee39dfc5ae3816337fc592920
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017329"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566237"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
@@ -22,7 +22,7 @@ ms.locfileid: "60017329"
 * 用于管理对话流和状态的其他功能。
 * 合并认知服务的简单方法，如自然语言处理 (NLP) 。
 
-自动程序使用 Teams接收来自用户的邮件 `Text` ，并且它会向用户发送一个或多个邮件响应。
+自动程序使用 Teams 接收来自用户的消息，并且它会向用户发送一 `Text` 个或多个邮件响应。
 
 ## <a name="receive-a-message"></a>接收消息
 
@@ -119,7 +119,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>发送消息
 
-若要发送短信，请指定你想要作为活动发送的字符串。 在机器人的活动处理程序中，使用 turn context 对象的方法 `SendActivityAsync` 发送单个消息响应。 使用 对象的 `SendActivitiesAsync` 方法一次发送多个响应。
+若要发送短信，请指定你想要作为活动发送的字符串。 在机器人的活动处理程序中，使用 turn context 对象的方法发送 `SendActivityAsync` 单个消息响应。 使用 对象的 `SendActivitiesAsync` 方法一次发送多个响应。
 
 以下代码显示向对话中添加用户时发送邮件的示例：
 
@@ -189,11 +189,11 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动按以下方式拆分为Microsoft Teams活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。 建议发送单独的活动，而不是根据邮件拆分。
+> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动被拆分为单独的Microsoft Teams活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。 建议发送单独的活动，而不是根据邮件拆分。
 
 在用户和机器人之间发送的消息包含邮件中的内部通道数据。 此数据允许机器人在此频道上正常通信。 Bot Builder SDK 允许你修改消息结构。
 
-## <a name="teams-channel-data"></a>Teams频道数据
+## <a name="teams-channel-data"></a>Teams通道数据
 
 `channelData`对象包含Teams特定的信息，是团队和频道的一个明确来源。 （可选）你可以缓存这些 ID 并用作本地存储的密钥。 `TeamsActivityHandler`SDK 中的 从 对象提取重要信息 `channelData` ，使其易于访问。 但是，您始终可以从对象访问 `turnContext` 原始数据。
 
@@ -201,12 +201,12 @@ async def on_members_added_activity(
 
 发送给 `channelData` 自动程序的活动中的典型对象包含以下信息：
 
-* `eventType`：Teams仅在通道修改事件的情况下传递[的事件类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
+* `eventType`：Teams修改事件时传递的事件[类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
 * `tenant.id`：Azure Active Directory上下文中传递的租户 ID。
 * `team`：仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id`：通道的 GUID。
   * `name`：仅在团队重命名事件的情况下传递 [的团队名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
-* `channel`：仅在提到自动程序时在频道上下文中传递，或针对团队中已添加自动程序的团队中的事件传递。
+* `channel`：仅在频道上下文中传递，当提到自动程序时或在团队中为频道中的事件传递，其中添加了自动程序。
   * `id`：通道的 GUID。
   * `name`：仅在通道修改事件的情况下传递 [的频道名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
 * `channelData.teamsTeamId`：已弃用。 此属性仅包含用于向后兼容。
@@ -239,9 +239,9 @@ async def on_members_added_activity(
 | 格式    | 从用户到机器人 | 从自动程序到用户 | 备注                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
-| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式× 1024 MB 和 1 MB。 不支持动态 GIF。  |
+| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。 不支持动态 GIF。  |
 | 卡片     | ✖                | ✔                | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
-| 表情符号    | ✖                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 用于表情符号。 |
+| 表情符号    | ✖                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 表示表情符号。 |
 
 您还可以使用 属性向邮件添加 `Notification.Alert` 通知。
 
@@ -342,7 +342,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="adaptive-cards"></a>自适应卡
 
-自适应卡片可以在机器人中创作，并可在多个应用（如Teams网站等）中显示。 有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+自适应卡片可以在机器人中创作，并可在多个应用（如 Teams、你的网站等）中显示。 有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 
 以下代码显示发送简单自适应卡片的示例：
 

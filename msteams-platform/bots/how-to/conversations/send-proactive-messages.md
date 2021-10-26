@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: 发送消息获取用户 ID 通道 ID 对话 ID
-ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155964"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566279"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -35,7 +35,7 @@ ms.locfileid: "59155964"
 
 示例部分的代码段用于创建一[](#samples)对一对话。 有关一对一对话和组或频道的完整工作示例的链接，请参阅 [代码示例](#code-sample)。
 
-要有效地使用主动邮件，请参阅 [主动邮件的最佳实践](#best-practices-for-proactive-messaging)。 对于某些应用场景，你必须[使用](#proactively-install-your-app-using-graph)Graph。 示例部分的代码段用于创建一[](#samples)对一对话。 有关一对一对话以及组或频道的完整工作示例，请参阅 [代码示例](#code-sample)。
+要有效地使用主动邮件，请参阅 [主动邮件的最佳实践](#best-practices-for-proactive-messaging)。 对于某些方案，你必须使用 Graph 主动[安装你的应用](#proactively-install-your-app-using-graph)。 示例部分的代码段用于创建一[](#samples)对一对话。 有关一对一对话以及组或频道的完整工作示例，请参阅 [代码示例](#code-sample)。
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>获取用户 ID、团队 ID 或频道 ID
 
@@ -90,8 +90,8 @@ ms.locfileid: "59155964"
 若要使用主动消息发送通知，请确保你的用户有一个清晰的路径，可以基于你的通知采取常见操作。 确保用户清楚地了解他们为何收到通知。 良好的通知消息通常包括以下内容：
 
 * 发生的情况：关于导致通知发生的情况的清晰指示。
-* 结果是什么：必须清楚更新了哪些项，以引发通知。
-* Who或触发它的原因：Who或哪些操作导致发送通知。
+* 结果是什么：必须清楚，更新了哪些项才能收到通知。
+* Who或触发它的原因：Who或已采取操作，导致发送通知。
 * 用户可在响应中执行哪些操作：使用户能够轻松根据通知采取操作。
 * 用户如何选择退出：你必须为用户提供选择退出其他通知的路径。
 
@@ -107,13 +107,13 @@ ms.locfileid: "59155964"
 ## <a name="proactively-install-your-app-using-graph"></a>使用安装程序主动安装Graph
 
 > [!Note]
-> 目前，使用 Graph安装应用处于 beta 阶段。
+> 使用 Graph应用目前处于 beta 阶段。
 
 主动向之前未安装或与你的应用交互的用户发送消息。 例如，您希望使用公司通信 [程序](~/samples/app-templates.md#company-communicator) 向整个组织发送邮件。 在这种情况下，可以使用 Graph API 主动为用户安装应用。 缓存应用在安装 `conversationUpdate` 时收到的事件所需的值。
 
 你只能安装组织应用程序目录中或应用商店Teams应用。
 
-请参阅[windows 文档中的为用户](/graph/api/userteamwork-post-installedapps)安装Graph，以及使用 Teams 中的主动自动程序[Graph。](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) 此外，还有一个[Microsoft .NET framework 示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)在 GitHub 平台上。
+请参阅[Graph](/graph/api/userteamwork-post-installedapps)文档中的为用户安装应用，以及使用 Teams 中的主动[Graph。](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) 此外，还有一个[Microsoft .NET framework 示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)在 GitHub 平台上。
 
 ## <a name="samples"></a>示例
 
@@ -266,13 +266,13 @@ POST /v3/conversations
 
 ## <a name="code-sample"></a>代码示例
 
-下表提供了一个简单的代码示例，该示例将基本对话流合并到 Teams 应用程序中，以及如何在 Teams 中的频道中创建新的Teams：
+下表提供了一个简单的代码示例，该示例将基本对话流合并到 Teams 应用程序中，以及如何在 Teams 中的频道中创建新的对话线程：
 
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Teams对话基础知识  | 演示电子邮件中对话Teams包括发送一对一主动消息。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Teams对话基础知识  | 演示活动对话的Teams包括发送一对一主动消息。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | 在频道中启动新线程 | 演示在频道中创建新线程。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| 主动安装应用并发送主动通知 | 此示例演示如何使用用户主动安装应用，以及如何通过调用 Microsoft Graph发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| 主动安装应用并发送主动通知 | 此示例演示如何通过调用 Microsoft Graph API 为用户使用主动安装应用并发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>其他代码示例
 

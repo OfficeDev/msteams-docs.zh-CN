@@ -6,16 +6,16 @@ keywords: 相机媒体 qr 代码 qrcode 条形码条形码扫描仪扫描功能�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 470360fcc489248806d746587344c7a19c91145c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3ec2b8735c0d1a9a234fba6a34e7040d819fc9b
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155808"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566356"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>集成 QR 或条码扫描仪功能 
 
-条形码是一种以可视和机器可读的形式表示数据的方法。 条码包含有关产品的信息，如条形图和空格形式的类型、大小、制造商和来源国家/地区。 该代码使用本机设备相机上的光学扫描仪进行读取。 为了获得更丰富的协作体验，可以将 Teams 平台中提供的 QR 或条形码扫描仪功能与 Teams 应用集成。   
+条形码是一种以可视和机器可读的形式表示数据的方法。 条码包含有关产品的信息，如条形图和空格形式的类型、大小、制造商和来源国家/地区。 该代码使用本机设备相机上的光学扫描仪进行读取。 为了获得更丰富的协作体验，你可以将 Teams 平台中提供的 QR 或条形码扫描仪功能与Teams集成。   
 
 可以使用[JavaScript Microsoft Teams SDK，](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)它提供应用访问用户的本机设备功能[所需的工具](native-device-permissions.md)。 使用 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API 将扫描程序功能集成到你的应用中。 
 
@@ -24,7 +24,7 @@ ms.locfileid: "59155808"
 以下是 QR 或条形码扫描仪功能集成的优势： 
 
 * 集成使 Web 应用开发人员Teams JavaScript 客户端 SDK 利用 QR 或条形码Teams功能。
-* 使用此功能，用户只需在扫描仪 UI 中心的框架内对齐 QR 或条形码，代码将自动扫描。 存储的数据将重新与调用 Web 应用共享。 这样可以避免手动输入冗长的产品代码或其他相关信息带来的不便和人为错误。
+* 使用此功能，用户只需在扫描仪 UI 中心的框架内对齐 QR 或条形码，代码将自动扫描。 存储的数据将重新与调用 Web 应用共享。 这可以避免手动输入冗长的产品代码或其他相关信息带来的不便和人为错误。
 
 若要集成 QR 或条形码扫描仪功能，必须更新应用清单文件并调用 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API。 为了进行有效的集成，你必须深入了解用于调用[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API 的代码段，这允许你使用本机 QR 或条形码扫描仪功能。 [](#code-snippet) API 为不支持的条形码标准提供错误。
 熟悉 API 响应错误以处理应用[](#error-handling)或应用中的错误Teams很重要。
@@ -34,7 +34,7 @@ ms.locfileid: "59155808"
 
 ## <a name="update-manifest"></a>更新清单
 
-通过添加 Teams 并[manifest.js](../../resources/schema/manifest-schema.md#devicepermissions) ，更新应用在文件上的 `devicePermissions` 应用 `media` 。 它允许你的应用在用户开始使用 QR 或条形码扫描仪功能之前向用户请求必要的权限。 应用清单的更新如下所示：
+通过添加 Teams 并指定 来更新应用程序清单[.json](../../resources/schema/manifest-schema.md#devicepermissions) `devicePermissions` 文件 `media` 。 它允许你的应用在用户开始使用 QR 或条形码扫描仪功能之前向用户请求必要的权限。 应用清单的更新如下所示：
 
 ``` json
 "devicePermissions": [
@@ -74,9 +74,9 @@ ms.locfileid: "59155808"
 
 ## <a name="error-handling"></a>错误处理
 
-必须确保在你的应用内正确处理这些Teams错误。 下表列出了错误代码以及生成错误的条件： 
+必须确保在应用或应用中正确处理Teams错误。 下表列出了错误代码以及生成错误的条件： 
 
-|错误代码 |  错误名称     | Condition|
+|错误代码 |  错误名称     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
 | **500** | INTERNAL_ERROR | 执行所需操作时遇到内部错误。|
@@ -109,7 +109,7 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>另请参阅
 
-* [集成媒体中的媒体Teams](mobile-camera-image-permissions.md)
-* [在 Teams 中集成位置Teams](location-capability.md)
+* [将媒体功能集成到 Teams](mobile-camera-image-permissions.md)
+* [将位置功能集成到 Teams](location-capability.md)
 * [将人员选取器集成到Teams](people-picker-capability.md)
 

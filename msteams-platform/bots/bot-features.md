@@ -5,12 +5,12 @@ description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 395338cf394412b031f2b1f21fccb9587be84df5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8c05fecc656264b3e7e98839c65bab2c9eda0952
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155305"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566342"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -39,11 +39,11 @@ Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于�
 * 处理邮件扩展请求。
 
 > [!IMPORTANT]
-> 可以使用任何 Web Teams技术开发应用，并直接调用 Bot [Framework REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
+> 你可以以任何Teams技术开发应用，并直接调用 Bot Framework [REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
 
 ## <a name="bots-with-power-virtual-agents"></a>具有自动程序Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在 Power Virtual Agents[门户创建聊天](https://powervirtualagents.microsoft.com)机器人后，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户中Power Virtual Agents[聊天](https://powervirtualagents.microsoft.com)机器人后，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
 
 ## <a name="bots-with-webhooks-and-connectors"></a>具有 Webhook 和连接器的机器人
 
@@ -78,7 +78,11 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="in-a-one-to-one-chat"></a>在一对一聊天中
 
-一对一聊天是对话机器人与用户交互的传统方式。 一对一对话机器人的一些示例包括问答&自动程序、在其他系统中启动工作流的机器人、告诉机器人和做笔记的机器人。 在创建一对一聊天机器人之前，请考虑基于对话的界面是否是显示功能的最佳方法。
+一对一聊天是对话机器人与用户交互的传统方式。 一对一对话机器人的一些示例如下：
+* Q&A bots
+* 启动其他系统中工作流的机器人 
+* 告知机器人
+* 在创建一对一聊天机器人之前，请考虑基于对话的界面是否是显示功能的最佳方法。
 
 ## <a name="disadvantages-of-bots"></a>机器人的缺点
 

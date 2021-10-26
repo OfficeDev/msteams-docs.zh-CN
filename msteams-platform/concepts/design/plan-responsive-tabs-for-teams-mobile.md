@@ -5,14 +5,14 @@ description: 规划在移动设备上创建应用Teams指南
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: a2c8c601ef2c007c112f1e0e5309f0aa90fce106
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60123873"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566146"
 ---
-# <a name="plan-responsive-tabs-for-teams-mobile"></a>为移动版规划响应Teams选项卡
+# <a name="plan-responsive-tabs-for-teams-mobile"></a>规划 Teams 移动版的响应式选项卡
 
  Teams平台提供了在移动和桌面上生成应用的机会。 你的应用用户可以首选桌面或移动设备，也可以同时选择两者。 用户可以在桌面上准备数据，但使用移动设备使用和共享更多数据。 构建任何应用的关键是了解并满足用户的需求。 有一些功能（如机器人、消息传递扩展和连接器）在桌面和移动设备上无缝工作。 但是，生成选项卡和任务模块需要规划在移动设备上托管 web Teams体验。 在移动设备上规划响应式网页的文档Teams指南。
 
@@ -22,11 +22,11 @@ ms.locfileid: "60123873"
 
 * 考虑应用跨设备Teams功能。 例如，如果你在桌面上有一个性能良好的应用，你可以浏览在移动设备上生成类似的应用。 最初，移动版上转换整个桌面体验可能比较困难。 你可以从基本但常见的方案开始。 收集更多见解和用户反馈后添加特性和功能。
 
-* 确保面向移动版上的相应用户人物。 例如，如果你正在构建一个向最终用户提供服务，并且还为开发人员和高级经理提供数据访问权限的应用，那么当你开始在 Teams 移动版上生成应用时，最终用户可以更多使用此应用。 你可以适应桌面应用上拥有的所有角色，但是，建议从具有更大基础和可能的早期采用者角色开始，实现较小的屏幕体验。 根据该示例，最终用户是相应的用户角色。 可以逐步添加功能以支持移动设备上的其他用户Teams角色。 
+* 确保面向移动版上的相应用户人物。 例如，如果你正在构建一个向最终用户提供服务，并且还为开发人员和高级经理提供数据访问权限的应用，那么当你开始在 Teams 移动版上构建应用时，最终用户可以更多使用该应用。 你可以适应桌面应用上的所有角色，但是，建议从具有更大基础和可能的早期采用者角色开始，实现较小的屏幕体验。 根据该示例，最终用户是相应的用户角色。 可以逐步添加功能以支持移动设备上的其他用户Teams角色。 
 
 ## <a name="understand-different-stages-to-build-apps"></a>了解构建应用的不同阶段
 
-确定应用范围后，可以了解以下三个阶段，在移动版上规划Teams并增强用户体验：
+确定应用范围后，可以了解以下三个阶段，在移动版上规划任何应用Teams增强用户体验：
 
 1. **消耗**
 
@@ -41,11 +41,11 @@ ms.locfileid: "60123873"
    提供在移动设备上参与的完整应用体验。 当用户使用你的应用时，在移动设备上提供完整的沉浸式体验（与桌面体验一样或优于桌面体验）。 若要为用户提供良好的体验，请使所有用例在移动设备上快速响应。
 
 > [!TIP]
-> 若要获取有关设计指南的信息，请参阅适用于应用[的设计Teams过程](design-teams-app-process.md)。
+> 若要获取有关设计指南的信息，请参阅适用于应用[Teams过程](design-teams-app-process.md)。
 
 ## <a name="use-cases"></a>用例
 
-让我们看一下以下用例，了解如何为移动设备规划不同类型的Teams应用：
+让我们看一下以下用例，了解如何为移动版规划不同类型的Teams应用：
 
 <br>
 
@@ -53,7 +53,7 @@ ms.locfileid: "60123873"
 
 <summary><b>仪表板和数据可视化应用程序</b></summary>
 
-你可以了解如何在移动平台上为仪表板和数据可视化应用规划Teams选项卡。
+你可以了解如何在移动平台上为仪表板和数据可视化应用规划响应Teams选项卡。
 
 **消耗**
 
@@ -183,6 +183,6 @@ ms.locfileid: "60123873"
 以下设计和验证指南根据应用的范围提供帮助：
 
 * [设计选项卡](../../tabs/design/tabs.md)
-* [正在设计自动程序](../../bots/design/bots.md)
+* [设计机器人](../../bots/design/bots.md)
 * [设计任务模块](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [验证准则](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

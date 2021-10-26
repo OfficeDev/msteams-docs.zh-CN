@@ -5,23 +5,23 @@ description: 介绍如何从消息传递扩展操作命令响应任务模块提�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cab33a36862ed027f9c110eccaac43d4e4aff20e
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: 92a7080d57b1ea6de3924da53a968d3fc960029a
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291637"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566384"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 本文档将指导你应用如何响应操作命令，如用户的任务模块提交操作。
-在用户提交任务模块后，Web 服务会收到一条调用消息，该消息包含 `composeExtension/submitAction` 命令 ID 和参数值。 你的应用有五秒钟时间响应调用，否则用户会收到一条错误消息"无法访问应用"，调用的任何回复都由 Teams 客户端忽略。
+在用户提交任务模块后，Web 服务会收到一条调用消息，该消息包含 `composeExtension/submitAction` 命令 ID 和参数值。 你的应用有五秒钟时间要响应调用，否则用户会收到一条错误消息"无法访问该应用"，要调用的任何答复都由 Teams 客户端忽略。 
 
 有以下选项可以响应：
 
-* 无响应：使用提交操作在外部系统中触发进程，不向用户提供任何反馈。 这适用于长时间运行的过程，并且可以选择备用提供反馈。 例如，可以使用主动消息 [提供反馈](~/bots/how-to/conversations/send-proactive-messages.md)。
+* 无响应：使用提交操作在外部系统中触发进程，并且不会向用户提供任何对长时间运行的过程有用的反馈，并选择备用提供反馈。 例如，可以使用主动消息 [提供反馈](~/bots/how-to/conversations/send-proactive-messages.md)。
 * [另一个](#respond-with-another-task-module)任务模块 ：作为多步骤交互的一部分，可以使用其他任务模块进行响应。
 * [卡片](#respond-with-a-card-inserted-into-the-compose-message-area)响应：可以使用用户可与之交互或插入邮件的卡片进行响应。
 * [自动程序中的自适应卡片](#bot-response-with-adaptive-card)：将自适应卡片直接插入对话中。
@@ -40,6 +40,8 @@ ms.locfileid: "60291637"
 > [!NOTE]
 > * 当你选择 **"Action.Submit** through ME cards"时，它会发送名称为 **composeExtension** 的调用活动，其中值等于常规有效负载。
 > * 选择 **"Action.Submit** through conversation"时，将收到名称为 **onCardButtonClicked** 的邮件活动，其中值等于常规有效负载。
+
+如果应用包含对话机器人，则安装对话中的机器人，然后加载任务模块。 自动程序可用于获取任务模块的其他上下文。 若要安装对话机器人，请参阅 [请求安装对话机器人](create-task-module.md#request-to-install-your-conversational-bot)。
 
 ## <a name="the-submitaction-invoke-event"></a>submitAction 调用事件
 
@@ -69,7 +71,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是您收到的 JSON 对象的示例。 `commandContext`参数指示从何处触发邮件扩展。 `data`对象包含作为参数的表单上的字段以及用户提交的值。 此处的 JSON 对象已缩短，以突出显示最相关的字段。
+这是您收到的 JSON 对象的示例。 `commandContext`参数指示从何处触发邮件扩展。 `data`对象包含作为参数的表单上的字段以及用户提交的值。 JSON 对象突出显示最相关的字段。
 
 ```json
 {
@@ -190,20 +192,20 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-with-another-task-module"></a>使用另一个任务模块响应
 
-可以选择使用附加任务 `submitAction` 模块来响应事件。 这适用于：
+您可以选择使用附加任务 `submitAction` 模块来响应事件。 当你需要：
 
-* 您需要收集大量信息。
-* 你需要根据用户输入动态更改正在收集的信息。
-* 您需要验证用户提交的信息，如果出现错误，请重新发送包含错误消息的表单。 
+* 收集大量信息。
+* 根据用户输入动态更改信息集合。
+* 验证用户提交的信息，如果出现错误，则重新发送包含错误消息的表单。 
 
-响应 方法与响应初始事件 [ `fetchTask` 相同](~/messaging-extensions/how-to/action-commands/create-task-module.md)。 如果你使用的是 Bot Framework SDK，则针对这两个提交操作使用相同的事件触发器。 为此，您必须添加确定正确响应的逻辑。
+响应 方法与响应初始事件 [ `fetchTask` 相同](~/messaging-extensions/how-to/action-commands/create-task-module.md)。 如果你使用的是 Bot Framework SDK，这两个提交操作具有相同的事件触发器。 为此，您必须添加确定正确响应的逻辑。
 
 ## <a name="bot-response-with-adaptive-card"></a>使用自适应卡片的自动程序响应
 
 > [!NOTE]
 > 使用自适应卡片获取机器人响应的先决条件是，必须将对象添加到应用清单，并定义自动程序 `bot` 所需的作用域。 使用与自动程序的邮件扩展相同的 ID。
  
-您还可以通过自动程序将带自适应卡片的消息插入 `submitAction` 频道来响应 。 用户可以在提交邮件之前预览邮件。 在创建自适应卡片响应之前从用户收集信息，或在某人与之交互后更新卡片时，这非常有用。 
+您还可以通过自动程序将带自适应卡片的消息插入 `submitAction` 频道来响应 。 用户可以在提交邮件之前预览邮件。 当你在创建自适应卡片响应之前从用户收集信息，或者当你在某人与之交互后更新卡片时，这非常有用。 
 
 以下方案显示应用 Polly 如何配置轮询，而不在频道对话中包括配置步骤：
 
@@ -400,7 +402,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>响应 botMessagePreview 编辑
 
-如果用户在发送前编辑卡片，则 **通过选择"** 编辑"，将收到 `composeExtension/submitAction` 一个调用 `value.botMessagePreviewAction = edit` 。 必须返回发送的任务模块进行响应，以响应开始交互 `composeExtension/fetchTask` 的初始调用。 这允许用户通过重新输入原始信息来启动该过程。 使用可用信息更新任务模块，以便用户无需从头开始填写所有信息。
+如果用户在发送前编辑卡片，则 **通过选择"** 编辑"，将收到 `composeExtension/submitAction` 一个调用 `value.botMessagePreviewAction = edit` 。 通过返回你发送的任务模块进行响应，以响应开始交互 `composeExtension/fetchTask` 的初始调用。 这允许用户通过重新输入原始信息来启动该过程。 使用可用信息更新任务模块，以便用户无需从头开始填写所有信息。
 有关响应初始事件的信息 `fetchTask` ，请参阅 [响应初始 `fetchTask` 事件](~/messaging-extensions/how-to/action-commands/create-task-module.md)。
 
 ### <a name="respond-to-botmessagepreview-send"></a>响应 botMessagePreview 发送
@@ -588,7 +590,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 |:---|:---|:---|
 |`itemId`|整数|描述项目的标识。 其值必须为 `0` 。|
 |`mentionType`|String|描述"人"的提及。|
-|`mri`|字符串|邮件资源 (MRI) 代表其发送邮件的人的 MRI 标识符。 邮件发件人名称将显示为" \<user\> 到 \<bot name\> "。|
+|`mri`|String|邮件资源 (MRI) 代表其发送邮件的人的 MRI 标识符。 邮件发件人名称将显示为" \<user\> 到 \<bot name\> "。|
 |`displayName`|String|人员的姓名。 在名称解析不可用时用作回退。|
   
 ## <a name="code-sample"></a>代码示例

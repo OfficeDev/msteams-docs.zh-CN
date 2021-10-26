@@ -5,12 +5,12 @@ description: 确定你的应用用例在应用体验Teams工作。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155349"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566286"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到Teams功能
 
@@ -24,7 +24,7 @@ ms.locfileid: "59155349"
 选择应用范围时，请考虑以下事项：
 
 * 应用可以跨范围存在。
-* 应用功能（如邮件扩展）可跨范围关注用户。
+* 应用功能（如邮件扩展）会关注各个作用域的用户。
 * 用户通常对将应用添加到频道或Teams很不一样。
 * 来宾可以访问在频道或Teams公开的内容。
 
@@ -32,7 +32,7 @@ ms.locfileid: "59155349"
 
 * 对于个人范围，请提出以下问题：
   * 出于隐私或其他原因，是否要求与应用进行一对一交互？ 例如，检查休假余额或其他私人信息。
-  * 是否有可能没有任何常见协作的用户之间的Teams？ 例如，在公司中查找即将推出的组织范围事件。
+  * 是否有可能没有任何常见功能的用户之间的Teams？ 例如，在公司中查找即将推出的组织范围事件。
   * 在应用体验中，是否需要向用户发送任何Teams消息？ 例如，审批或注册提醒。
 * 对于共享范围 (团队、频道或聊天) ，请提出以下问题：
   * 应用在选项卡或机器人中呈现的信息是否与团队中的大多数成员相关且有用？ 例如，Scrum 应用。
@@ -46,7 +46,7 @@ ms.locfileid: "59155349"
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>在外部系统中创建、共享和协作处理项目
 
-Microsoft Teams应用是一种与数据交互的不错方法，并且有多种集成点可供选择。
+Microsoft Teams应用程序是一种与数据交互的不错方法，并且有多种集成点可供选择。
 
 * **使用搜索命令的邮件扩展**：搜索外部系统，并作为交互式卡片共享结果。
 
@@ -54,7 +54,7 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 * **选项卡**：创建用于查看、处理和共享数据的嵌入式 Web 体验。
 
-* **连接器和 webhook：** 一种将数据推送到客户端并将其从 Teams 发送的简单方法。
+* **连接器和 webhook：** 在客户端中推送数据和发送数据Teams方法。
 
 * **任务模块**：需要它们收集或显示信息的交互式模式表单。
 
@@ -84,11 +84,11 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 * **对话机器人**：自然语言处理、AI、机器学习以及所有话题。 使用由智能云支持自动程序将用户连接到他们需要的答案。
 
-* **选项卡**：将现有 Web 门户嵌入Teams或为添加Teams创建特定于 Web 门户的版本。
+* **选项卡**：将现有 Web 门户嵌入Teams或创建Teams特定版本来添加功能。
 
 ## <a name="get-social"></a>获取社交
 
-协作平台本质上是一个社交平台。 让创造力的一面是免费的，为工作场所添加一些有趣的内容。 所有用户都必须能够发送彩信、提供 kudos、获取一些 Meme、删除一些表情符号或其他任何能够影响你奇特感的符号。
+协作平台本质上是一个社交平台。 让创造力的一面是免费的，为工作场所添加一些有趣的内容。 所有用户都必须能够发送彩信、提供 kudos、获取一些 meme、删除一些表情符号或其他任何能够影响你奇特感的符号。
 
 ## <a name="think-in-terms-of-a-single-page-app"></a>从单页应用考虑
 
@@ -96,7 +96,7 @@ Microsoft Teams应用是一种与数据交互的不错方法，并且有多种�
 
 ## <a name="start-small"></a>小型启动
 
-不确定从何处开始？ 觉得使用各种可用选项有点不知所措？ 你必须选择应用的核心功能，然后开始操作。 在了解信息在环境中的各个上下文中Teams后，可以更加简单地了解更复杂的交互。
+不确定从何处开始？ 觉得使用各种可用选项有点不知所措？ 你必须选择应用的核心功能，然后开始操作。 在了解信息在环境中的各个上下文中的Teams后，可以更加简单地了解更复杂的交互。
 
 ## <a name="put-it-all-together"></a>全部放在一起
 
