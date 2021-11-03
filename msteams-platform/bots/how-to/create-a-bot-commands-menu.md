@@ -5,12 +5,12 @@ description: 如何为自动程序创建Microsoft Teams菜单
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155687"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720104"
 ---
 # <a name="bot-command-menus"></a>自动程序命令菜单
 
@@ -44,7 +44,7 @@ ms.locfileid: "59155687"
 
     ![应用程序 Studio](./conversations/media/AppStudio.png)
 
-2. 在 **App Studio** 中，选择 **"清单编辑器"** 选项卡。如果你没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [更新应用包](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。
+2. 在 **App Studio** 中，选择 **"清单编辑器"** 选项卡。如果你没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [更新应用包](~/get-started/deploy-csharp-app-studio.md)。
 
 3. 在清单编辑器的左侧 **窗格中的**"功能"部分，选择"**自动程序"。**
 
@@ -60,7 +60,7 @@ ms.locfileid: "59155687"
 
     ![App Studio 新命令菜单按钮](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑"打开"菜单为自动程序Manifest.js菜单
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑 Manifest.json 为机器人创建命令菜单
 
 创建命令菜单的另一种方式是在开发自动程序源代码时直接在清单文件中创建它。 若要使用此方法，请遵循以下几点：
 
@@ -169,7 +169,7 @@ ms.locfileid: "59155687"
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-可以使用与邮件正文一起提供的静态方法分析邮件文本的 **\@ "** 提及"Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
+可以使用与邮件文本一起提供的静态方法分析邮件文本的 **\@ "** 提及"Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
 
 用于C#"提及"部分的代码如下所示： **\@**
 
@@ -189,7 +189,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-可以使用 Bot Framework **@Mention** 静态方法解析邮件文本的 @Mention 部分。 它是名为 的 `TurnContext` 类的一个方法 `remove_recipient_mention` 。
+可以使用自动程序 **框架@Mention** 静态方法解析邮件文本的 @Mention 部分。 它是名为 的 `TurnContext` 类的一个方法 `remove_recipient_mention` 。
 
 用于分析邮件文本的 **\@ "提及**"部分的 Python 代码如下所示：
 
@@ -212,7 +212,7 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 > [!NOTE]
 > 如果从清单中删除任何命令，则必须重新部署应用来实现更改。 通常，对清单的任何更改都需要重新部署应用。
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [频道和群组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)

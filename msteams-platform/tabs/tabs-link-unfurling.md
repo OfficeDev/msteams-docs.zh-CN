@@ -5,27 +5,24 @@ description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 04eef9691e1858916827da00f97c1a309bfe4970
-ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
+ms.openlocfilehash: 86525e0a26dbc9b80d03751078cb6ee248b876fb
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60483497"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720342"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
 阶段视图是 UI (组件) 用户界面，允许你呈现在 Teams 中全屏打开并固定为选项卡的内容。
  
-> [!NOTE]
-> 目前，Teams客户端不支持选项卡链接取消展开和阶段视图。 移动客户端使用开发人员提供的 属性在设备的 Web 浏览器中 `websiteUrl` 打开页面。
-
 ## <a name="stage-view"></a>阶段视图
 
 阶段视图是一个全屏 UI 组件，你可以调用它来显示 Web 内容。 现有链接取消点击服务已更新，以便它可用于使用自适应卡片和聊天服务将 URL 转换为选项卡。 当用户在聊天或频道中发送 URL 时，该 URL 将取消展开到自适应卡片。 用户可以 **选择卡片中的** "查看"，并直接从"阶段视图"将内容固定为选项卡。
 
 ## <a name="advantage-of-stage-view"></a>阶段视图的优点
 
-阶段视图有助于提供在网站中查看内容的Teams。 用户无需离开上下文即可打开和查看应用提供的内容，并且可以将内容固定到聊天或频道，以便将来快速访问。 这可提高用户对你的应用的参与度。
+阶段视图有助于提供在网站中查看内容Teams。 用户无需离开上下文即可打开和查看应用提供的内容，并且可以将内容固定到聊天或频道，以便将来快速访问，从而提高用户对你的应用的参与度。
 
 ## <a name="stage-view-vs-task-module"></a>阶段视图与任务模块
 
@@ -89,7 +86,7 @@ ms.locfileid: "60483497"
 * 机器人使用代码 `200` 进行响应。
 
 > [!NOTE]
-> 目前，Teams客户端不支持阶段视图功能。 当用户 **选择"在** 移动客户端上查看"时，用户会访问设备的浏览器。 浏览器打开在 对象的 参数 `websiteUrl` 中指定的 `TabInfo` URL。
+> 在Teams客户端上，调用通过 Teams 应用商店分发的应用的阶段[视图](/platform/concepts/deploy-and-publish/apps-publish-overview.md)，并且没有 moblie 优化体验，这将打开设备的默认 Web 浏览器。 浏览器打开在 对象的 参数 `websiteUrl` 中指定的 `TabInfo` URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
@@ -122,7 +119,6 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > * 在 `name` 深层链接中是可选的。 如果未包含，则应用名称将替换它。
 > * 深度链接也可通过操作 `OpenURL` 传递。
-> * 目前，Teams客户端不支持阶段视图功能。 当用户选择到阶段视图的深层链接时，他们会进入其设备的 Web 浏览器。 Web 浏览器将打开深层链接的 `websiteUrl` 参数中指定的 URL。
 > * 当你从特定上下文启动阶段时，请确保你的应用在该上下文中工作。 例如，如果你的阶段视图从个人应用启动，则必须确保你的应用具有个人作用域。
 
 ## <a name="tab-information-property"></a>选项卡信息属性
@@ -130,8 +126,8 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | 属性名称 | 类型 | 字符数 | 说明 |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
-| `name` | String | 128 | 此属性是显示名称界面中选项卡的列数。 这是一个可选字段。|
-| `contentUrl` | String | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
+| `name` | String | 128 | 此属性是显示名称界面中选项卡的一部分。 这是一个可选字段。|
+| `contentUrl` | 字符串 | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
 | `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
 | `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
 
@@ -149,7 +145,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)

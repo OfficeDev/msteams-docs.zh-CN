@@ -5,18 +5,18 @@ description: 邮件扩展操作命令概述
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291672"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720139"
 ---
 # <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-操作命令允许你向用户显示名为任务模块的模式弹出窗口Teams。 任务模块收集或显示信息、处理交互并将信息发送回Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
+操作命令允许你向用户显示名为任务模块的模式弹出框Teams。 任务模块收集或显示信息、处理交互并将信息发送回Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
 
 在创建操作命令之前，必须确定以下因素：
 
@@ -49,7 +49,7 @@ ms.locfileid: "60291672"
 * **自适应卡片**：可以选择使用自适应卡片，该卡片可以更好地控制 UI，但仍限制可用控件和格式设置选项。
 * **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以便完全控制 UI 和控件。 
 
-如果选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
+如果您选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
 
 ## <a name="select-how-the-final-message-is-sent"></a>选择最终邮件的发送
 
@@ -121,58 +121,8 @@ ms.locfileid: "60291672"
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. 选择“保存”。
+1. 选择“**保存**”。
 1. 若要添加更多参数，请选择" **参数"部分** 中的" **添加"** 按钮。
-
-# <a name="developer-portal"></a>[开发人员门户](#tab/DP)
-
-**使用开发人员门户创建操作命令**
-
-1. 转到开发人员 **[门户](https://dev.teams.microsoft.com/)**。
-    
-      ![TDP 的屏幕截图](~/assets/images/tdp/tdp_home_1.png)
-
-1. 转到应用。
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. 如果你已在开发人员门户中创建应用包 **，** 请从列表中选择它。 如果不是，请选择 **"导入现有应用"。**
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. 转到应用 **功能**。 
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. 从 **应用功能中选择消息传递****扩展**。 将出现一个弹出窗口来设置邮件扩展。
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
- 
-1. Select **an message extension bot** from the drop down list under Messag **extensions ID** and select **Save**.
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. 选择 **"添加命令"。** 将出现一个弹出窗口来添加命令。
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. 选择命令的类型作为基于 **操作来** 配置邮件扩展。 选择 **"动态参数"** 以创建动态操作命令。
-
-    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
-
-1. 选择 **"静态参数"** 创建静态操作命令。   
-
-    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
-
-1. 输入命令字段。 
-
-    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
-
-1. 输入参数字段，然后选择"保存 **"。**
-
-    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
- 
----
 
 ### <a name="create-an-action-command-manually"></a>手动创建操作命令
 
@@ -265,7 +215,7 @@ ms.locfileid: "60291672"
 |Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 如果你使用的是自适应卡片或没有对象的嵌入 Web 视图，下一 `taskInfo` 步是：
 

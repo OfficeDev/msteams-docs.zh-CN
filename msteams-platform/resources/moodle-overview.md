@@ -5,26 +5,39 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: surbhigupta
 author: KirtiPereira
-ms.openlocfilehash: eb45c741bc60bea3466edeb6abe3f21b4453bec8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c653e8a27da47ab38b4209eee5a57d3cf00ab1a9
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155344"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719775"
 ---
 # <a name="moodle-learning-management-system"></a>可学习管理系统
 
-一个全球最大的开放源代码学习管理系统。 此应用通过强大的测验工具、评分讨论和各种作业类型（供学生使用内容）等有价值的功能帮助教师创建和组织课程。  
+一个全球最大的开放源代码学习管理系统。 
+
+此应用通过有价值的功能帮助教师创建和组织他们的课程，其中包括：
+* 强大的测验工具 
+* 已评分讨论
+* 供学生使用内容的各种作业类型  
  
-与 Microsoft Teams 集成。 Teams是实时协作、团队合作和工作效率的中心。 借助与 Office 365 的无缝集成，以及多达 300 个参与者的数百个应用、聊天和实时会议功能，Teams 使教职员工和学生无论身在何处，都能够更高效地协作。 
+与 Microsoft Teams 集成。 Teams是实时协作、团队合作和工作效率的中心。 与多达 300 Office 365数百个应用、聊天和实时会议功能的无缝集成。 Teams使教职员工和学生无论在哪里，都能够更高效地协作。 
  
-此外，Microsoft 365功能插件通过为教职员工和学生提供全面体验来补充了一个将一直使用在一起的人。 通过 Microsoft 365的一个功能插件，网站管理员可以在 Office 365 和与用户进行同步、自动进行用户匹配、将课程同步到 Microsoft Teams 和文件库、连接 OneNote 作业以及嵌入 Office 文档。  
+Microsoft 365在向教职员工和学生提供全面体验后，可开发开发插件补充了一个与一起播放的"开发工具"。 通过 Microsoft 365的一个 Pluginle 插件，网站管理员可以将用户与：
+
+* Office 365和将
+* 自动执行用户匹配
+* 将课程同步到Microsoft Teams和文件存储库
+* 连接 OneNote作业
+* 嵌入Office文档
  
-此外，Microsoft Teams应用（如 Skooler 的 mConnect）和 Microsoft 365 的"将将一个将一位用户和学生集成到 Teams"的 Teams 插件，教职员工和学生可以利用一些独特的功能，同时参与实时通信和协作。
+Microsoft Teams应用（如 Skooler 的 mConnect 和由 Microsoft 365 的 Plugins）将一起将一个将用户 Teams。
+
+教职员工和学生可以在实时通信和协作中利用用户的独特功能。
 
 ## <a name="mconnect-app-by-skooler"></a>Skooler 的 mConnect 应用
 
-Skooler 的 mConnect 应用允许你轻松通过 Teams虚拟学习。
+Skooler 的 mConnect 应用允许你通过 Teams轻松交付虚拟学习。
 
 ### <a name="why-mconnect-and-teams"></a>为什么使用 mConnect 和 Teams
 
@@ -32,7 +45,7 @@ Skooler 的 mConnect 应用允许你轻松通过 Teams虚拟学习。
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
 
-从 mConnect 内部，课程参与者在 Microsoft Teams 提供实时协作和通信中访问完整的一流课程体验。
+从 mConnect 内部，课程参与者在 Microsoft Teams 提供实时协作和通信内访问完整的一流课程体验。
 
 ### <a name="get-started-with-mconnect-and-teams"></a>mConnect 和 Teams
 
@@ -44,5 +57,5 @@ Skooler 的 mConnect 应用允许你轻松通过 Teams虚拟学习。
 
 ## <a name="microsoft-365-moodle-plugins"></a>Microsoft 365Pluginle 插件
 
-适用于课程的Teams插件使计划、交付和协作处理课程内容变得简单。 安装插件，以无缝地将一个与用户学习管理系统Teams。 有关详细信息，请参阅安装一个[LmS。](moodleInstructions.md)
+适用于课程的Teams插件使计划、交付和协作处理课程内容变得简单。 安装插件，以无缝地将用户学习管理系统引入Teams。 有关详细信息，请参阅安装一个[LmS。](moodleInstructions.md)
 

@@ -5,16 +5,16 @@ description: 确定你的应用用例在应用体验Teams工作。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c424b2c03f71449c5c43adc345ed0197eb6ef247
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566286"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720384"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>将用例映射到Teams功能
 
-确定用户 *是谁* 以及要解决什么问题后，可以决定 *如何* 解决问题了。 The *who，* *what*， and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. 你需要根据从用户收到的查询响应来定义应用的范围，然后确定最适合生成应用的功能。
+确定用户 *是谁* 以及要解决什么问题后，可以决定 *如何* 解决问题了。 The *who，* *what*， *and how* completes the process of understanding and mapping your use cases to Teams app capabilities. 你需要根据从用户收到的查询响应来定义应用的范围，然后确定最适合生成应用的功能。
 
 > [!NOTE]
 > 你必须深入了解可用于应用的 [入口点和 UI](../../concepts/extensibility-points.md) 元素。 此外，还必须确保仔细考虑 [用例](../../concepts/design/understand-use-cases.md) 。
@@ -42,11 +42,11 @@ ms.locfileid: "60566286"
 以下方案将指导你了解与应用功能良好协作的入口点和 UI Teams选择：
 
 > [!NOTE]
-> 这不是一个详尽的列表，但有助于你考虑一些可用的可能性。
+> 这不是一个详尽的列表，但有助于你思考一些可用的可能性。
 
 ## <a name="create-share-and-collaborate-on-items-in-an-external-system"></a>在外部系统中创建、共享和协作处理项目
 
-Microsoft Teams应用程序是一种与数据交互的不错方法，并且有多种集成点可供选择。
+Microsoft Teams应用是一种与数据交互的不错方法，并且有多种集成点可供选择。
 
 * **使用搜索命令的邮件扩展**：搜索外部系统，并作为交互式卡片共享结果。
 
@@ -60,7 +60,7 @@ Microsoft Teams应用程序是一种与数据交互的不错方法，并且有�
 
 ## <a name="initiate-workflows-and-processes"></a>启动工作流和流程
 
-有时，只需一种在外部系统中快速启动流程或工作流的方法。
+有时，你只需一种在外部系统中启动流程或工作流的快速方法。
 
 * **邮件扩展操作命令**：从邮件触发，允许用户将邮件内容快速发送到 Web 服务。
 
@@ -84,7 +84,7 @@ Microsoft Teams应用程序是一种与数据交互的不错方法，并且有�
 
 * **对话机器人**：自然语言处理、AI、机器学习以及所有话题。 使用由智能云支持自动程序将用户连接到他们需要的答案。
 
-* **选项卡**：将现有 Web 门户嵌入Teams或创建Teams特定版本来添加功能。
+* **选项卡**：将现有 Web 门户嵌入Teams或为添加Teams创建特定于 Web 门户的版本。
 
 ## <a name="get-social"></a>获取社交
 
@@ -94,9 +94,9 @@ Microsoft Teams应用程序是一种与数据交互的不错方法，并且有�
 
 选项卡是嵌入式网页。 您可以在 SPA 中执行几乎任何操作，您可以在 Teams 中的选项卡中Teams。 只需注意作用域。 组和频道选项卡用于共享体验，个人选项卡用于个人体验。 团队的资料列表位于频道选项卡上，而资料列表在个人选项卡中。
 
-## <a name="start-small"></a>小型启动
+## <a name="initiate-small"></a>启动小型
 
-不确定从何处开始？ 觉得使用各种可用选项有点不知所措？ 你必须选择应用的核心功能，然后开始操作。 在了解信息在环境中的各个上下文中的Teams后，可以更加简单地了解更复杂的交互。
+不确定从何处启动？ 觉得使用各种可用选项有点不知所措？ 你必须选择应用的核心功能并启动它。 在了解信息在环境中的各个上下文中Teams后，可以更加简单地了解更复杂的交互。
 
 ## <a name="put-it-all-together"></a>全部放在一起
 
@@ -104,4 +104,4 @@ Microsoft Teams应用程序是一种与数据交互的不错方法，并且有�
 
 ## <a name="see-also"></a>另请参阅
 
-[生成首个Microsoft Teams应用](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[生成首个Microsoft Teams应用](../../get-started/get-started-overview.md)

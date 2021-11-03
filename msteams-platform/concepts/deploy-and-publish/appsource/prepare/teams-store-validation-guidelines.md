@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378896"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720223"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -191,7 +191,7 @@ Teams 应用清单定义应用的配置。
 
 **应做:**
 
-* 使用 [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) 设置说明的格式。
+* 使用 Markdown 设置说明的格式。
 * 使用主动语音并直接与用户交谈。 例如，*可以...*。
 * 列出带项目符号点的功能，以便更轻松地扫描说明。
 * 在用户安装应用之前，清楚地描述列表和相关材料中所述的功能、特点和可交付结果的限制、条件或例外情况。 应用支持的 Teams 功能必须与列表描述的核心函数相关。

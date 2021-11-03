@@ -1,23 +1,23 @@
 ---
-title: 为会议启用和配置Teams应用
+title: 为会议启用和配置Teams应用程序
 author: surbhigupta
-description: 为会议启用和配置Teams应用
+description: 为会议启用和配置Teams应用程序
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360480"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720209"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
-每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议。 为会议启用Teams，并在其应用清单内将应用配置为在会议范围内可用。
+每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
-若要为应用启用Teams会议，请更新应用清单，并使用上下文属性确定应用必须出现在何处。
+若要为应用启用Teams会议，请更新应用清单并使用上下文属性确定应用必须出现在何处。
 
 ### <a name="update-your-app-manifest"></a>更新应用清单
 
@@ -97,6 +97,7 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 在会议聊天中，输入 **@** 密钥并选择"**获取机器人"。**
 
 > [!NOTE]
+> * 内容气泡在用户可以访问的会议聊天中同时发布自适应卡片或卡片。 这可帮助用户最小化会议或Teams应用。
 > * 必须使用选项卡 SSO 确认 [用户标识](../tabs/how-to/authentication/auth-aad-sso.md)。 身份验证后，应用可以使用 API 检索用户 `GetParticipant` 角色。
 > * 根据用户角色，应用能够提供特定于角色的体验。 例如，轮询应用仅允许组织者和演示者创建新的轮询。
 > * 可以在会议进行时更改角色分配。 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
@@ -124,7 +125,7 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 > [!NOTE]
 > * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
-> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，也是Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 #### <a name="shared-meeting-stage"></a>共享会议阶段
 

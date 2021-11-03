@@ -4,24 +4,24 @@ author: surbhigupta
 description: 了解统一会议应用
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: a69d0f709cdf3af52164d8ab336d3ec2a8f7de74
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 15a43721e8f5091f0a0bb3b69f781f1472b8e681
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260685"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720181"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
 Teams统一会议应用基于以下概念：
 
 * 会议生命周期具有不同的阶段：会议前、会议内和会议后。  
-* 会议有三个不同的参与者角色：组织者、演示者和与会者。 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
+* 会议有三种不同的参与者角色：组织者、演示者和与会者。 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
 * 会议有 [各种](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) 用户类型：租户内用户、 [来宾](/microsoftteams/guest-access)用户、 [联盟用户](/microsoftteams/manage-external-access)和匿名用户。
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
 
-本文介绍了有关会议生命周期以及如何集成选项卡、机器人和消息传递扩展的信息。 它标识不同的参与者角色和用户类型。
+本文介绍了有关会议生命周期以及如何集成选项卡、聊天机器人和消息传递扩展的信息。 它标识不同的参与者角色和用户类型。
 
 ## <a name="meeting-lifecycle"></a>会议生命周期
 
@@ -71,14 +71,14 @@ Teams统一会议应用基于以下概念：
 
 借助会议内应用体验，可以使用应用和会议内对话框在会议期间与参与者互动。 会议应用程序作为会议中的选项卡托管在会议窗口的工具栏上。使用"会议内"对话框为会议参与者展示可操作内容。 有关详细信息，请参阅[为会议创建Teams应用](create-apps-for-teams-meetings.md)。
 
-对于移动版，会议应用程序>会议 &#x25CF;&#x25CF;&#x25CF; 省略号。 选择 **"** 应用"以查看会议提供的所有应用。
+对于移动版，会议应用可从会议>省略号 &#x25CF;&#x25CF;&#x25CF; 提供。 选择 **"** 应用"以查看会议提供的所有应用。
 
 **在会议期间使用选项卡**
 
 1. 转到Teams。
 1. 在日历中，选择要使用选项卡的会议。
 1. 进入会议后，从聊天窗口的工具栏中选择所需的应用。
-    应用在侧面板Teams会议对话框中的"会议"对话框中可见。
+    应用在侧面板Teams会议对话框中的会议对话框中可见。
 1. 在"会议内"对话框中，输入你的回复作为反馈。
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
@@ -142,7 +142,7 @@ Teams统一会议应用基于以下概念：
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>将机器人集成到会议生命周期
 
-在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请从[生成自动程序开始](../build-your-first-app/build-bot.md)，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
+在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请首先[构建自动](../build-your-first-app/build-bot.md)程序，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>将消息传递扩展集成到会议生命周期
 
@@ -165,7 +165,7 @@ Teams统一会议应用基于以下概念：
 
 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
 
-在基于会议中的参与者角色设计应用后，你可以为会议标识每个用户类型并选择他们可以访问的类型。
+根据会议中的参与者角色设计应用后，你可以为会议标识每个用户类型并选择他们可以访问的类型。
 
 ## <a name="user-types-in-a-meeting"></a>会议中的用户类型
 
@@ -176,8 +176,8 @@ Teams统一会议应用基于以下概念：
 
 以下列表详细介绍了各种用户类型及其辅助功能和性能：
 
-* **租户内**：租户内用户属于组织，在租户的 AAD Azure Active Directory () 凭据。 他们是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
-* **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的 AAD，并且具有与本地Teams相同的功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾访问](/microsoftteams/guest-access)。
+* **租户内**：租户内用户属于组织，拥有租户Azure Active Directory (AAD) 凭据。 他们是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
+* **来宾**：来宾是受邀访问组织租户中Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的成员AAD具有与本机Teams相同的功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾访问](/microsoftteams/guest-access)。
 * **联盟或外部**：联盟用户是Teams组织中受邀加入会议的外部用户。 联盟用户具有联盟伙伴的有效凭据，并且由联盟Teams。 他们无法访问你的团队或组织的其他共享资源。 对于外部用户来说，来宾访问是访问团队和频道的更好选择。 有关详细信息，请参阅管理[Teams 中的外部访问](/microsoftteams/manage-external-access)。
 
     > [!NOTE]
@@ -186,7 +186,7 @@ Teams统一会议应用基于以下概念：
     > [!IMPORTANT]
     > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
-* **匿名**：匿名用户没有 AAD 标识，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会显示在会议中。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
+* **匿名**：匿名用户没有AAD身份，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会显示在会议中。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
 
     > [!NOTE]
     > 匿名用户继承全局默认用户级别应用程序权限策略。 有关详细信息，请参阅管理 [应用](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)。
@@ -197,9 +197,9 @@ Teams统一会议应用基于以下概念：
 
 | 用户类型 | 选项卡 | 机器人 | 消息传递扩展 | 自适应卡 | 任务模块 | 会议内的对话框 | 会议阶段 | 
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 匿名用户 | 不可用 | 不可用 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 不可用 | 可以在会议阶段查看但无法与应用交互 |
-| 属于租户 AAD 的来宾 | 允许交互。 不允许创建、更新和删除。 | 不可用 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 可用 | 可在会议阶段查看应用并与之交互 |
-| 联盟用户。 有关详细信息，请参阅 [非标准用户](/microsoftteams/non-standard-users)。 | 允许交互。 不允许创建、更新和删除。 | 允许交互。 不允许获取、更新和删除。 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 不可用 | 可在会议阶段查看应用并与之交互 |
+| 匿名用户 | 不可用 | 不可用 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 不可用 | 可在会议阶段查看应用并与之交互 |
+| 来宾，租户租户的一AAD | 允许交互。 不允许创建、更新和删除。 | 不可用 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 可用 | 可以在会议阶段启动、查看应用并与之交互 |
+| 联合用户，有关详细信息，请参阅 [非标准用户](/microsoftteams/non-standard-users)。 | 允许交互。 不允许创建、更新和删除。 | 允许交互。 不允许获取、更新和删除。 | 不可用 | 允许会议聊天中的交互。 | 允许通过自适应卡片在会议聊天中交互。 | 不可用 | 可以在会议阶段启动、查看应用并与之交互 |
 
 ## <a name="see-also"></a>另请参阅
 
@@ -208,7 +208,7 @@ Teams统一会议应用基于以下概念：
 * [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [Teams 会议中应用的先决条件和 API 参考](create-apps-for-teams-meetings.md)

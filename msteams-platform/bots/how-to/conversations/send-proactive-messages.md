@@ -5,18 +5,18 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: 发送消息获取用户 ID 通道 ID 对话 ID
-ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d51c418c2269bb5fe74f7c80cbcabed6fe98f93a
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566279"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720076"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-主动消息是自动程序发送的任何不响应用户请求的消息。 这可能包括邮件，例如：
+主动邮件是自动程序发送的任何不响应用户请求的消息。 这可能包括邮件，例如：
 
 * 欢迎消息
 * 通知
@@ -24,7 +24,7 @@ ms.locfileid: "60566279"
 
 若要让机器人向用户、群聊或团队发送主动消息，它必须具有发送消息的访问权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。 如果需要[，可以使用 Microsoft Graph](#proactively-install-your-app-using-graph)在团队中主动安装应用，或使用应用策略将应用推送到团队和[](/microsoftteams/teams-custom-app-policies-and-settings)租户中的用户。 对于用户，必须为用户安装你的应用，或者用户必须是安装应用的团队的一部分。
 
-发送主动邮件与发送常规邮件不同。 没有用于 `turnContext` 答复的活动。 在发送邮件之前，必须创建对话。 例如，频道中的新一对一聊天或新对话线程。 不能在具有主动消息的团队中创建新的群聊或新频道。
+发送主动邮件与发送常规邮件不同。 没有用于回复 `turnContext` 的活动。 在发送邮件之前，必须创建对话。 例如，频道中的新一对一聊天或新对话线程。 你不能在具有主动消息的团队中创建新群聊或新频道。
 
 **发送主动邮件**
 
@@ -49,13 +49,13 @@ ms.locfileid: "60566279"
 
 无论如何获取信息，都必须存储 和 或 `tenantId` `userId` `channelId` 以创建新对话。 您还可以使用 在团队的常规频道或默认频道中创建新的 `teamId` 对话线程。
 
-`userId`是自动程序 ID 和特定用户所特有的。 您不能在自动程序 `userId` 之间重复使用。 `channelId`是全局的。 但是，必须先在团队中安装自动程序，然后才能向频道发送主动消息。
+`userId`是自动程序 ID 和特定用户所特有的。 你不能在自动程序 `userId` 之间重复使用。 `channelId`是全局的。 但是，必须先在团队中安装自动程序，然后才能向频道发送主动消息。
 
 获得用户或频道信息后，必须创建对话。
 
 ## <a name="create-the-conversation"></a>创建对话
 
-如果对话不存在或您不知道 ，则必须创建 `conversationId` 对话。 只能创建一次对话并存储 `conversationId` 值或 `conversationReference` 对象。
+如果对话不存在或不知道 ，则必须创建 `conversationId` 对话。 只能创建一次对话并存储 `conversationId` 值或 `conversationReference` 对象。
 
 创建对话后，必须获取对话 ID。
 
@@ -67,13 +67,13 @@ ms.locfileid: "60566279"
 
 ## <a name="send-the-message"></a>发送邮件
 
-现在，您具有正确的地址信息，您可以发送邮件。 如果你使用的是 SDK，则必须使用 方法以及 和 `continueConversation` `conversationId` `tenantId` 进行直接 API 调用。 必须正确设置 `conversationParameters` ，以成功发送邮件。 请参阅 [示例](#samples) 部分或使用代码示例部分中列出的示例 [之](#code-sample) 一。
+现在，您具有正确的地址信息，您可以发送邮件。 如果你使用的是 SDK，则必须使用 方法以及 和 进行 `continueConversation` 直接 `conversationId` `tenantId` API 调用。 必须正确设置 `conversationParameters` ，以成功发送邮件。 请参阅 [示例](#samples) 部分或使用代码示例部分中列出的示例 [之](#code-sample) 一。
 
-现在，你已发送主动邮件，在发送主动邮件时必须遵循这些最佳做法，以便用户和机器人之间更好地交换信息。
+现在，你已发送主动邮件，你必须在发送主动邮件时遵循这些最佳做法，以便用户和机器人之间更好地交换信息。
 
 ## <a name="best-practices-for-proactive-messaging"></a>主动邮件最佳做法
 
-向用户发送主动邮件是一种与用户通信的有效方式。 但是，从他们的角度来看，此消息可能完全不提示，对于欢迎消息，这是他们第一次与你的应用交互。 因此，请谨慎使用主动邮件，而不是向用户发送垃圾邮件，并提供足够信息让用户了解接收邮件的原因，这一点非常重要。
+向用户发送主动邮件是一种与用户通信的有效方式。 但是，从用户的角度来看，该消息显示为不提示。 如果有欢迎消息，这将是他们第一次与你的应用交互。 使用此功能并为用户提供完整信息以理解此消息的用途非常重要。
 
 ### <a name="welcome-messages"></a>欢迎消息
 
@@ -82,24 +82,23 @@ ms.locfileid: "60566279"
 * 用户为什么收到邮件：用户必须非常清楚地了解他们接收邮件的原因。 如果你的自动程序安装在频道中，并且你向所有用户发送了欢迎消息，请让他们知道它安装在什么频道以及谁安装了它。
 * 你提供什么：用户必须能够确定他们可以对你的应用执行哪些操作，以及你可以为用户带来什么价值。
 * 接下来应执行什么操作：邀请用户试用命令，或与你的应用交互。
-
-较差的欢迎消息可能会导致用户阻止机器人。 写入要点并清除欢迎消息。 如果欢迎消息没有达到预期效果，则对欢迎消息进行 Iterate。
+较差的欢迎消息会导致用户阻止机器人。 写入要点并清除欢迎消息。 如果欢迎消息没有达到预期效果，则对欢迎消息进行 Iterate。
 
 ### <a name="notification-messages"></a>通知消息
 
-若要使用主动消息发送通知，请确保你的用户有一个清晰的路径，可以基于你的通知采取常见操作。 确保用户清楚地了解他们为何收到通知。 良好的通知消息通常包括以下内容：
+若要使用主动消息发送通知，请确保你的用户有一个清晰的路径，可以基于你的通知采取常见操作。 确保用户清楚地了解收到通知的原因。 良好的通知消息通常包括以下内容：
 
 * 发生的情况：关于导致通知发生的情况的清晰指示。
 * 结果是什么：必须清楚，更新了哪些项才能收到通知。
-* Who或触发它的原因：Who或已采取操作，导致发送通知。
+* Who或触发它的原因：Who或已采取行动，导致发送通知。
 * 用户可在响应中执行哪些操作：使用户能够轻松根据通知采取操作。
 * 用户如何选择退出：你必须为用户提供选择退出其他通知的路径。
 
-若要向一大组用户发送消息（例如，向组织发送邮件，请主动使用 Graph。
+若要向一大组用户发送消息（例如，发送到你的组织，请主动使用 Graph。
 
 ### <a name="scheduled-messages"></a>计划邮件
 
-使用主动消息向用户发送计划邮件时，请验证时区是否更新到其时区。 这可确保在相关时间将邮件传递给用户。 计划邮件通常包括：
+使用主动消息向用户发送计划邮件时，请验证时区已更新到其时区。 这可确保在相关时间将邮件传递给用户。 计划邮件通常包括：
 
 * 用户为什么收到邮件：让用户轻松了解收到邮件的原因。
 * 用户接下来可以做什么：用户可以根据邮件内容采取所需操作。
@@ -111,9 +110,9 @@ ms.locfileid: "60566279"
 
 主动向之前未安装或与你的应用交互的用户发送消息。 例如，您希望使用公司通信 [程序](~/samples/app-templates.md#company-communicator) 向整个组织发送邮件。 在这种情况下，可以使用 Graph API 主动为用户安装应用。 缓存应用在安装 `conversationUpdate` 时收到的事件所需的值。
 
-你只能安装组织应用程序目录中或应用商店Teams应用。
+只能安装组织应用程序目录中的应用或 Teams App Store。
 
-请参阅[Graph](/graph/api/userteamwork-post-installedapps)文档中的为用户安装应用，以及使用 Teams 中的主动[Graph。](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) 此外，还有一个[Microsoft .NET framework 示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)在 GitHub 平台上。
+请参阅[应用文档中的为用户](/graph/api/userteamwork-post-installedapps)安装Graph，以及使用 Graph 中的主动自动程序安装和[Teams](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)消息。 此外，还有一个[Microsoft .NET framework 示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)在 GitHub 平台上。
 
 ## <a name="samples"></a>示例
 
@@ -262,7 +261,7 @@ POST /v3/conversations
 ---
 
 > [!NOTE]
-> 目前，机器人无法通过聊天机器人 API 或聊天工具创建Graph。 `createConversation` 仅适用于一对一聊天。
+> 目前，机器人无法通过聊天机器人 API 或聊天机器人Graph。 `createConversation` 仅适用于一对一聊天。
 
 ## <a name="code-sample"></a>代码示例
 
@@ -270,7 +269,7 @@ POST /v3/conversations
 
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Teams对话基础知识  | 演示活动对话的Teams包括发送一对一主动消息。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Teams对话基础知识  | 演示电子邮件中对话Teams包括发送一对一主动消息。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | 在频道中启动新线程 | 演示在频道中创建新线程。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 | 主动安装应用并发送主动通知 | 此示例演示如何通过调用 Microsoft Graph API 为用户使用主动安装应用并发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
@@ -283,7 +282,7 @@ POST /v3/conversations
 
 [**Teams主动邮件代码示例**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [设置你的智能机器人邮件格式](~/bots/how-to/format-your-bot-messages.md)

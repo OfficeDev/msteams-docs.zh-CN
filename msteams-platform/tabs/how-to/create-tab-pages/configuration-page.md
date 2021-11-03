@@ -6,18 +6,18 @@ keywords: teams 选项卡组频道可配置
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cb69a23a3f8446c3f9b78cffbe0dc88d686c4a8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155324"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720188"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
-配置页是一种特殊类型 [的内容页](content-page.md)。 用户使用配置页面配置 Microsoft Teams应用的一些方面，并使用该配置作为以下部分的一部分：
+配置页是一种特殊类型 [的内容页](content-page.md)。 用户使用配置页面配置 Microsoft Teams应用的一些方面，并作为以下配置的一部分使用该配置：
 
-* 频道或群聊选项卡：从用户收集信息，并设置要 `contentUrl` 显示的内容页的 。
+* 频道或群聊选项卡：从用户收集信息，并设置 `contentUrl` 要显示的内容页的 。
 * 消息传递 [扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
 * 一[Office 365连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
@@ -90,11 +90,11 @@ ms.locfileid: "59155324"
 
 选择配置 **页中的**"选择灰色"或"选择红色"按钮，以显示带灰色或红色图标的选项卡内容。
 
-下图显示带灰色图标的选项卡内容：
+下图显示了选中了灰色图标 **的选项卡** 内容：
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-下图显示带红色图标的选项卡内容：
+下图显示了已选择红色图标的 **选项卡** 内容：
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
@@ -141,7 +141,7 @@ ms.locfileid: "59155324"
 ...
 ```
 
-上载页面后，Teams相关值更新查询字符串占位符。 在配置页中包括用于检索和使用这些值的逻辑。 有关使用 URL 查询字符串的信息，请参阅 MDN Web Docs 中的 [URLSearchParams。](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) 下面的代码示例提供了从 属性中提取值 `configurationUrl` 的方法：
+上载页面后，Teams使用相关值更新查询字符串占位符。 在配置页中包括用于检索和使用这些值的逻辑。 有关使用 URL 查询字符串的信息，请参阅 MDN Web Docs 中的 [URLSearchParams。](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) 下面的代码示例提供了从 属性中提取值 `configurationUrl` 的方法：
 
 ```html
 <script>
@@ -198,7 +198,7 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>移动客户端
 
-如果选择让频道或组选项卡显示在移动客户端Teams，则配置必须具有 `setSettings()` 的值 `websiteUrl` 。 有关详细信息，请参阅 [移动选项卡指南](~/tabs/design/tabs-mobile.md)。
+如果选择让频道或组选项卡显示在移动客户端Teams，则配置 `setSettings()` 必须具有 的值 `websiteUrl` 。 有关详细信息，请参阅 [移动选项卡指南](~/tabs/design/tabs-mobile.md)。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -208,7 +208,7 @@ microsoftTeams.settings.setSettings({
 * [创建内容页](~/tabs/how-to/create-tab-pages/content-page.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)

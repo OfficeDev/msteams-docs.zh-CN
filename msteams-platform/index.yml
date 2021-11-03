@@ -4,7 +4,7 @@ summary: 获取文档、示例代码、教程等，以帮助你生成自定义Mi
 brand: teams
 metadata:
   title: Microsoft Teams平台开发人员文档
-  description: 开发人员Microsoft Teams开发人员平台使开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地作出决策、通过减少上下文切换来提供焦点，并围绕现有内容和工作流创建协作。
+  description: 开发人员Microsoft Teams开发人员平台使开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地做出决策、通过减少上下文切换来提供焦点，并围绕现有内容和工作流创建协作。
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -28,7 +28,7 @@ highlightedContent:
     - title: 生成应用程序
       itemType: how-to-guide
       url: /microsoftteams/platform/overview#start-building
-    - title: 使用 Microsoft Graph 增强你的应用
+    - title: 使用 Microsoft Graph 增强Graph
       itemType: how-to-guide
       url: /graph/teams-concept-overview
     - title: 将应用发布到应用商店Teams应用商店
@@ -59,7 +59,7 @@ conceptualContent:
           text: 使用任务模块收集输入和收集信息
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: 连接 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
+          text: 连接 Web 服务通过 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
     - title: 功能
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs
@@ -87,7 +87,7 @@ conceptualContent:
           text: 用户身份验证和 SSO
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
-          text: 使用 Microsoft Power Platform Teams应用、机器人和流构建低代码
+          text: 使用 Microsoft Power Platform Teams应用、机器人和流生成低代码
         - url: 'https://dev.teams.microsoft.com/home'
           itemType: reference
           text: Teams 开发人员门户
@@ -107,7 +107,7 @@ conceptualContent:
           text: 集成聊天Power Virtual Agents聊天机器人
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
-          text: 为网站集成Teams"共享到目标"按钮
+          text: 为您的网站集成"Teams"按钮
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
           text: 将Teams选项卡与SharePoint
@@ -149,7 +149,7 @@ conceptualContent:
           itemType: concept
           text: 最终用户
 tools:
-  title: SDK 和工具
+  title: 工具和 SDK
   items:
     - title: Microsoft Teams Toolkit扩展Visual Studio Code
       imageSrc: /media/logos/logo_vs-code.svg
@@ -157,6 +157,12 @@ tools:
     - title: Microsoft Teams Toolkit扩展Visual Studio
       imageSrc: /media/logos/logo_vs-ide.svg
       url: /microsoftteams/platform/toolkit/visual-studio-overview
+    - title: 开发人员门户
+      imageSrc: ./assets/icons/devp-logo.png
+      url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal
+    - title: Microsoft Graph SDK
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - title: 适用于选项卡和其他托管体验的 JavaScript 客户端 SDK
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
@@ -166,12 +172,6 @@ tools:
     - title: 适用于自动程序和消息传递扩展的.NET Bot Framework SDK
       imageSrc: ./assets/icons/logo_net.png
       url: 'https://github.com/Microsoft/botbuilder-dotnet/'
-    - title: Microsoft Graph SDK
-      imageSrc: ./assets/icons/graph-icon-1.png
-      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
-    - title: Microsoft Teams App Studio
-      imageSrc: ./assets/icons/AppStudioIcon.png
-      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
-    - title: 适用于 Microsoft Teams 的 Yeoman 生成器
+    - title: 适用于 Microsoft Teams 的 Yeoman Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: 'https://github.com/OfficeDev/generator-teams'

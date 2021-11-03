@@ -5,12 +5,12 @@ description: 了解如何为应用设计活动源Teams并获取 Microsoft Teams 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d566def261d6fd1177fed46c31466d248c8e5e3b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155945"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719915"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>为应用设计活动源Microsoft Teams通知
 
@@ -18,7 +18,7 @@ ms.locfileid: "59155945"
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="示例显示显示在移动活动源Teams应用程序通知。" border="false":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="示例显示一个应用通知，Teams移动活动源中。" border="false":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
@@ -34,10 +34,10 @@ ms.locfileid: "59155945"
 |----------|-----------|
 |1|**头** 像：显示发起活动的人。|
 |2|**活动类型/应用图标**：描述活动的类型。 对于应用通知，行图标将替换为应用图标。|
-|3|**标题 (一行) ：Actor + reason**： *Actor*：发起活动的用户或应用的名称。 *Reason*：描述活动。|
+|3|**标题 (一) ：Actor + reason**： *Actor*：发起活动的用户或应用的名称。 *Reason*：描述活动。|
 |4 |**时间戳：** 显示活动发生的时间。|
-|5 |**Location (second line)**： Shows where the activity happened in Teams.|
-|6 |**第三 (第三行) ：** 可选。 显示预览文本或其他信息。|
+|5|**Location (second line)**： Shows where the activity happened in Teams.|
+|6 |**文本预览 (第三) ：** 显示从通知开始截断的行。|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>活动源通知卡的类型
 
@@ -74,7 +74,7 @@ ms.locfileid: "59155945"
 
 ---
 
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 
 > [!div class="nextstepaction"]
 > [实现活动源通知](/graph/teams-send-activityfeednotifications)

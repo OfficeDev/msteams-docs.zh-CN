@@ -5,12 +5,12 @@ description: 了解跨应用程序使用的 UI Teams。
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155993"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719845"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI Microsoft Teams设计应用
 
@@ -18,7 +18,7 @@ ms.locfileid: "59155993"
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成 Teams 应用而设计的组件和模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
+基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成应用而设计的组件Teams模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
@@ -42,7 +42,7 @@ ms.locfileid: "59155993"
 
 ## <a name="left-nav"></a>左导航
 
-使用左侧导航键浏览"浏览"选项卡中的Teams页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
+使用左侧导航键浏览"导航"选项卡Teams页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -59,7 +59,7 @@ ms.locfileid: "59155993"
 
 ## <a name="notification-bar"></a>通知栏
 
-通知栏是一个专用区域，用于显示无需用户立即采取措施的简短重要消息。 特定背景颜色和图标与特定类型的邮件相关联， (请参阅下面的) 。
+通知栏是一个专用区域，用于显示无需用户立即采取措施的简短重要消息。 特定背景颜色和图标与特定类型的消息相关联， (请参阅下面的) 。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -75,11 +75,11 @@ ms.locfileid: "59155993"
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="示例显示桌面上的通知栏 UI 模板。" border="false":::
 
-## <a name="stage"></a>阶段
+## <a name="stage-view"></a>阶段视图
 
-阶段允许用户在大型图面上查看内容（如图像、文件或网站Teams而无需切换上下文。 阶段主要用于查看内容。 不要对复杂的交互使用阶段。
+阶段视图允许用户在大型图面上查看内容（如图像、文件或网站Teams而无需切换上下文。 此组件主要用于查看内容。 不要用于复杂的交互。
 
-了解如何实现 [阶段](~/tabs/tabs-link-unfurling.md)。
+请参阅如何实现 [阶段视图](~/tabs/tabs-link-unfurling.md)。
 
 ### <a name="top-use-cases"></a>热门用例
 
