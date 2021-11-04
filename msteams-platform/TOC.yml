@@ -10,26 +10,18 @@
 - name: 入门
   expanded: false
   items:
-    - name: 概述
-      href: get-started/code-samples.md
-    - name: 先决条件
-      href: get-started/prerequisites.md
-    - name: 使用 React 生成第一个应用
-      href: get-started/first-app-react.md
+    - name: 入门概述
+      href: get-started/get-started-overview.md
+    - name: 使用 JavaScript 生成第一个应用
+      href: sbs-gs-javascript.yml
     - name: 使用 Blazor 生成第一个应用
-      href: get-started/first-app-blazor.md
+      href: sbs-gs-blazor.yml
     - name: 使用 SPFx 生成第一个应用
-      href: get-started/first-app-spfx.md
+      href: sbs-gs-spfx.yml
     - name: 使用 C# 或 .NET 生成第一个应用
-      href: get-started/get-started-dotnet-app-studio.md
+      href: sbs-gs-csharp.yml
     - name: 使用 Node.js 生成第一个应用
-      href: get-started/get-started-nodejs-app-studio.md
-    - name: 使用 Yeoman 生成器生成第一个应用
-      href: get-started/get-started-yeoman.md
-    - name: 生成第一个对话机器人
-      href: get-started/first-app-bot.md
-    - name: 构建首个消息传递扩展
-      href: get-started/first-message-extension.md
+      href: sbs-gs-nodejs.yml
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: 应用程序基础知识
