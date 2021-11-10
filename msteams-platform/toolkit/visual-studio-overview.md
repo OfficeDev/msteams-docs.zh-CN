@@ -1,18 +1,18 @@
 ---
-title: 使用 Teams Toolkit 和 Visual Studio
-description: 开始使用自定义工具直接在Visual Studio生成出色的Microsoft Teams Toolkit
+title: 使用应用和Teams Toolkit生成Visual Studio
+description: 开始使用 Windows 2013 直接在 Visual Studio生成出色的Microsoft Teams Toolkit。 了解如何在应用中配置Visual Studio、验证应用，以及从开发人员Visual Studio发布它。
 keywords: teams visual studio 工具包
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: 4f7da132f8cc63c65936c7c879226b04c87b3beb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af4f4c1511460e79a99d437dbcc75e2c748d1506
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155268"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888011"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>使用 Teams Toolkit 和 Visual Studio
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>使用应用和Teams Toolkit生成Visual Studio
 
 借助 Microsoft Teams 工具包，可以直接在 Visual Studio 集成开发环境（IDE）中创建自定义 Teams 应用程序。 Microsoft Teams 工具包将引导你完成整个过程，并提供构建、调试和启动 Teams 应用所需的一切资源。
 
@@ -26,7 +26,7 @@ ms.locfileid: "59155268"
 
 ## <a name="install-the-teams-toolkit"></a>安装Teams Toolkit
 
-可以从 Microsoft Teams Toolkit 应用商店Visual Studio"扩展"菜单中Visual Studio"扩展"菜单[](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit)下载Visual Studio。 
+可以从 Microsoft Teams Toolkit 应用商店Visual Studio"扩展"菜单中Visual Studio"扩展"菜单中下载[](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit)Visual Studio。 
 
 ## <a name="use-the-toolkit"></a>使用工具包
 
@@ -41,40 +41,40 @@ ms.locfileid: "59155268"
 1. 启动 Visual Studio 2019。
 2. 选择 **创建新项目**。
 3. 搜索 **"Microsoft Teams应用"，** 然后选择"下一 **步"。**
-4. 在"**配置新项目"中**，输入Project **名称、****位置** 和 **解决方案名称**。
+4. 在"**配置新项目"中**，Project **名称、****位置** 和 **解决方案名称**。
 5. 选择 **"** 下一步"以输入应用的名称。
-6. 在"附加信息"屏幕中 **，输入应用程序** 名称和开发人员 **或公司名称**，Teams应用。
+6. 在"其他信息"屏幕中，输入应用程序名称和开发人员 **或公司名称**，Teams应用。
 
 ## <a name="configure-your-app"></a>配置应用程序
 
 应用程序的核心是Teams三个组件：
 
-- Microsoft Teams客户端 (Web、桌面或移动) 用户与你的应用交互。
+- The Microsoft Teams client (web， desktop or mobile) where users interact with your app.
 - 响应对网站中显示的内容的请求的服务器Teams。 例如，HTML 选项卡内容或自动程序自适应卡片。
 - 应用Teams包包含三个文件：
 
     > [!div class="checklist"]
     >
-    > - 打开manifest.js
+    > - manifest.json
     > - 要 [显示在](../resources/schema/manifest-schema.md#icons) 公共或组织应用程序目录中的应用的颜色图标。
     > - 显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。
 
 安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。
 
 > [!NOTE]
->如果尚未登录，则必须登录到 Microsoft 365 帐户，以继续进行开发过程。
+>如果尚未登录，则必须登录到 Microsoft 365 帐户以继续进行开发过程。
 >
-> 如果你没有帐户，Microsoft 365注册开发人员计划Microsoft 365[订阅](https://developer.microsoft.com/microsoft-365/dev-program)。 它是免费的 90 天，只要你使用它进行开发活动，它将续订。 如果你有一个 Visual Studio Enterprise 或 Professional 订阅，这两个计划Microsoft 365[免费](https://aka.ms/MyVisualStudioBenefits)开发人员订阅，在订阅生命周期内Visual Studio有效。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
+> 如果你没有帐户，Microsoft 365注册开发人员计划[Microsoft 365订阅。](https://developer.microsoft.com/microsoft-365/dev-program) 它是免费的 90 天，只要你使用它进行开发活动，它将续订。 如果你有一个 Visual Studio Enterprise 或 Professional 订阅，这两个计划均Microsoft 365[免费](https://aka.ms/MyVisualStudioBenefits)开发人员订阅，在订阅生命周期内Visual Studio有效。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
 
 ### <a name="configuration-steps"></a>配置步骤
 
-1. 若要配置应用，请选择"Project > **TeamsFx >配置 SSO..."** 菜单。
+1. 若要配置应用，请选择"Project > **TeamsFx >为 SSO...配置**"菜单。
 
 当系统提示时，登录到具有 M365 租户的 Microsoft 帐户。
 
 ## <a name="install-and-run-your-app-locally"></a>在本地安装和运行应用
 
-按 F5 开始调试。 应用程序安装对话框将显示在客户端Teams中。
+按 F5 开始调试。 应用程序安装对话框显示在客户端Teams中。
 
 ## <a name="validate-your-app"></a>验证你的应用
 

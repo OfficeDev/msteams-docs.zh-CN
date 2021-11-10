@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 发布应用商店 Office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: 7d9b805f54d4040ff83b0fd0e704dd349a025fa4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 50dc306a5a06dd7a73a47fbcf94a8a70aa5d6aa6
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155839"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887551"
 ---
 # <a name="localize-your-app"></a>本地化应用
 
@@ -38,19 +38,19 @@ ms.locfileid: "59155839"
     * 输入应用名称。
     * 使用法语输入应用的简短说明。
     * 使用法语输入应用的详细说明。
-    * Upload法语版本 (应用 UI) 。
+    * Upload法语或法语 (应用 UI) 。
 
 使用英语上载的图像在 AppSource 中使用。
 
 ## <a name="localize-strings-in-your-app-manifest"></a>本地化应用清单中的字符串
 
-你必须使用Microsoft Teams `v1.5` 架构和更高版本来本地化你的应用。 为此，可以将 on manifest.js中的 属性设置为或更高，并更新属性到 (版本， `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `$schema` `1.5` 在这种情况下) 。 
+你必须使用Microsoft Teams `v1.5` 架构和更高版本来本地化你的应用。 为此，可以将 manifest.json 文件中的属性设置为或更高，并更新属性到版本 (`$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `$schema` `1.5` 在这种情况下) 。 
 
 必须使用应用程序 `localizationInfo` 支持的默认语言添加 属性。 如果用户的客户端设置与任何其他语言不匹配，则默认语言将用作最终回退语言。
 
-### <a name="example-manifestjson-change"></a>更改manifest.js示例
+### <a name="example-manifestjson-change"></a>manifest.json 更改示例
 
-以下 manifest.json 有助于使用应用程序支持的默认语言以及 添加 `localizationInfo` 属性 `additionalLanguages` ：
+以下 manifest.json 可帮助使用应用程序支持的默认语言以及 添加 `localizationInfo` 属性 `additionalLanguages` ：
 
 ```json
 {
@@ -88,7 +88,7 @@ ms.locfileid: "59155839"
 
 Teams客户端按以下顺序应用字符串：默认语言字符串 -> 用户的语言仅字符串 -> 用户的语言 + 用户的区域字符串。
 
-例如，你提供默认语言"fr" (法语、所有地区) 以及"en" (英语、所有地区) 和"en-gb" (英语、英国) 的其他语言文件，用户的语言设置为"en-gb"。 将基于语言选择进行以下更改：
+例如，你提供默认语言"fr" (法语、所有区域) 以及"en" (英语、所有地区) 和"en-gb" (英语、英国) ，用户的语言设置为"en-gb"。 将基于语言选择进行以下更改：
 
 1. 客户端Teams"fr"字符串，然后用"en"字符串覆盖它们。
 1. 使用"en-gb"字符串覆盖"en"字符串。
@@ -98,13 +98,13 @@ Teams客户端按以下顺序应用字符串：默认语言字符串 -> 用户�
 1. 客户端Teams"fr"字符串，然后用"en"字符串覆盖它们。
 1. 由于未提供"en-ca"本地化，因此使用"en"本地化。
 
-如果用户的语言设置为"es-es"，则客户端Teams"fr"字符串。 the Teams client does not override the strings with any of the language files as no 'es' or 'es-es' translation is provided.
+如果用户的语言设置为"es-es"，则客户端Teams"fr"字符串。 由于Teams"es"或"es-es"翻译，因此客户端不会用任何语言文件替代字符串。
 
 因此，您必须在清单中提供顶级的仅语言翻译。 例如，"en"而不是"en-us"。 您必须仅为需要这些替代的少数字符串提供区域级别替代。 
 
-### <a name="example-manifestjson-change"></a>更改manifest.js示例
+### <a name="example-manifestjson-change"></a>manifest.json 更改示例
 
-更改manifest.js如以下示例所示：
+manifest.json 更改如以下示例所示：
 
 ```json
 {
@@ -132,7 +132,7 @@ Teams客户端按以下顺序应用字符串：默认语言字符串 -> 用户�
 
 ### <a name="example-localization-json-file"></a>示例本地化 .json 文件
 
- 更改localization.js如以下示例所示：
+ 以下示例显示了 localization.json 更改：
 
 ```json
 {
@@ -151,7 +151,7 @@ Teams客户端按以下顺序应用字符串：默认语言字符串 -> 用户�
 
 ## <a name="handle-localized-text-submissions-from-your-users"></a>处理来自用户的本地化文本提交
 
-如果你提供应用程序的本地化版本，则用户使用相同的语言进行响应。 由于Teams提交不会将用户提交翻译回默认语言，因此你的应用必须处理本地化语言响应。 例如，如果你提供本地化的 ，则对自动程序的响应是命令的本地化文本， `commandList` 而不是默认语言。 你的应用必须做出相应的响应。
+如果你提供应用程序的本地化版本，则用户使用相同的语言进行响应。 由于Teams不会将用户提交翻译回默认语言，因此你的应用必须处理本地化语言响应。 例如，如果你提供本地化的 ，则对自动程序的响应是命令的本地化文本， `commandList` 而不是默认语言。 你的应用必须做出相应的响应。
 
 ## <a name="code-sample"></a>代码示例
 
@@ -159,3 +159,6 @@ Teams客户端按以下顺序应用字符串：默认语言字符串 -> 用户�
 |-------------|-------------|------|------|
 | 应用本地化 | Microsoft Teams自动程序和选项卡进行应用本地化。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
+## <a name="see-also"></a>另请参阅
+
+[本地化 JSON 架构参考](~/resources/schema/localization-schema.md)

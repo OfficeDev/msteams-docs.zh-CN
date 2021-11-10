@@ -1,16 +1,16 @@
 ---
 title: 公共开发人员预览清单架构参考
-description: 介绍清单支持的架构Microsoft Teams
+description: 示例清单文件及其支持的所有组件Microsoft Teams
 ms.topic: reference
 keywords: teams 清单架构开发者预览版
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 886b1d69052e9379f71e062da2f6f13eebcee1a2
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: f1b3a7d3d002f9aec698509b36bc72b4421eb138
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378903"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888543"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：公共开发人员预览清单架构Microsoft Teams
 
@@ -236,7 +236,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 *可选，但建议* &ndash; 字符串
 
-引用 https:// JSON 架构的 URL。
+the https:// URL referencing the JSON Schema for the manifest.
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -252,7 +252,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 如果应用请求的权限更改，将提示用户升级并重新同意应用。
 
-此版本字符串必须遵循 [semver](http://semver.org/) 标准 (MAJOR。MINOR。PATCH) 。
+此版本字符串必须遵循 [Semver](http://semver.org/) 标准 (MAJOR。MINOR。PATCH) 。
 
 ## <a name="id"></a>id
 
@@ -316,7 +316,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 向用户描述你的应用。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
-确保你的说明准确地描述了你的体验，并提供相关信息来帮助潜在客户了解你的体验。 还应在完整说明中注意，如果需要使用外部帐户。 和 `short` `full` 的值不应相同。  简短说明不得在详细说明中重复，且不得包含任何其他应用名称。
+确保你的描述准确地描述了你的体验，并提供相关信息来帮助潜在客户了解你的体验。 还应在完整说明中注意，如果需要使用外部帐户。 和 `short` `full` 的值不应相同。  简短说明不得在详细说明中重复，且不得包含任何其他应用名称。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -356,7 +356,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
 |`sharePointPreviewImage`|String|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
-|`supportedSharePointHosts`|枚举数组|1||定义选项卡在页面SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
+|`supportedSharePointHosts`|枚举数组|1||定义如何在你的选项卡中SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -372,8 +372,8 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
-|`name`|String|128 个字符|✔|the 显示名称 of the tab in the channel interface.|
-|`contentUrl`|String|2048 个字符|✔|指向 https:// 画布中显示的实体 UI 的Teams URL。|
+|`name`|String|128 个字符|✔|在显示名称界面中选项卡的显示内容。|
+|`contentUrl`|String|2048 个字符|✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
 |`contentBotId`|   | | | 自动Microsoft Teams门户中为自动程序指定的应用 ID。 |
 |`websiteUrl`|String|2048 个字符||用户 https:// 在浏览器中查看时指向的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
@@ -384,7 +384,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 定义自动程序解决方案以及默认命令属性等可选信息。
 
-对象是一个 (，当前每个应用最多只能有一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
+对象是一个数组 (最多只有 1 个元素当前每个应用仅允许一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -396,7 +396,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，其中最多包含 2 个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
+自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含 2 个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -415,7 +415,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
 |`connectorId`|字符串|64 个字符|✔|连接器的唯一标识符，该标识符与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
-|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是仅针对单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
+|`scopes`|枚举数组|1|✔|指定连接器是提供在 中的频道上下文中的体验，还是仅针对单个用户或单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -436,7 +436,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-邮件扩展应声明一个或多个命令。 每个命令都Microsoft Teams UI 入口点的潜在交互。 最多有 10 个命令。
+邮件扩展应声明一个或多个命令。 每个命令都Microsoft Teams UI 入口点进行潜在的交互。 最多有 10 个命令。
 
 每个命令项都是具有以下结构的对象：
 
@@ -568,4 +568,4 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 �
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`offerId`| string | 2，048 个字符 | ✔ | 包含你的产品/服务 ID Publisher产品/服务 ID 的唯一标识符，可在合作伙伴[中心找到。](https://partner.microsoft.com/dashboard) 必须将字符串格式为 `publisherId.offerId` 。|
+|`offerId`| string | 2，048 个字符 | ✔ | 包含你的产品/服务 ID Publisher产品/服务 ID 的唯一标识符，可在合作伙伴[中心找到](https://partner.microsoft.com/dashboard)。 必须将字符串格式为 `publisherId.offerId` 。|

@@ -1,22 +1,23 @@
 ---
 title: 为自动程序创建命令菜单
 author: surbhigupta
-description: 如何为自动程序创建Microsoft Teams菜单
+description: 了解如何使用代码示例为自动程序Microsoft Teams菜单。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: 命令菜单撰写邮件对话@mention
+ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720104"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888235"
 ---
 # <a name="bot-command-menus"></a>自动程序命令菜单
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-若要定义自动程序可以响应的核心命令集，你可以添加一个命令菜单以及自动程序命令的下拉列表。 当用户与自动程序对话时，将在撰写邮件区域中显示命令列表。 Select a command from the list to insert the command string into the compose message box and select **Send**.
+若要定义自动程序可以响应的核心命令集，你可以添加一个命令菜单以及自动程序命令的下拉列表。 当用户与自动程序对话时，将在撰写消息区域中显示命令列表。 Select a command from the list to insert the command string into the compose message box and select **Send**.
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
@@ -38,7 +39,7 @@ ms.locfileid: "60720104"
 
 **使用 App Studio 为机器人创建命令菜单**
 
-1. 打开 **Teams，然后** 从左窗格中选择"应用"。 在"**应用"** 页中，搜索 **App Studio，** 然后选择"打开 **"。** 
+1. 打开 **Teams，然后** 从左窗格中选择"应用"。 在"**应用"** 页中，搜索 **App Studio，** 然后选择"打开 **"。**
    > [!NOTE]
    > 如果你没有 **App Studio，** 可以下载它。 有关详细信息，请参阅安装[App Studio。](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)
 
@@ -169,7 +170,7 @@ ms.locfileid: "60720104"
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-可以使用与邮件文本一起提供的静态方法分析邮件文本的 **\@ "** 提及"Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
+可以使用邮件文本的静态方法分析邮件文本的 **\@ "** 提及"部分Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
 
 用于C#"提及"部分的代码如下所示： **\@**
 
@@ -212,7 +213,7 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 > [!NOTE]
 > 如果从清单中删除任何命令，则必须重新部署应用来实现更改。 通常，对清单的任何更改都需要重新部署应用。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [频道和群组对话](~/bots/how-to/conversations/channel-and-group-conversations.md)

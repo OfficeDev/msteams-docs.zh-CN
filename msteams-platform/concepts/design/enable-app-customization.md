@@ -1,22 +1,23 @@
 ---
 title: 自定义Teams应用
 author: heath-hamilton
-description: 了解Teams管理员如何为组织自定义你的应用。
+description: 了解Teams如何为组织自定义你的应用。
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 4e6699d2c021eb15f5a977517b616aeb256430c1
-ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
+keywords: 主题色品牌隐藏应用审批
+ms.openlocfilehash: 3519ad5dc91b27d947c752161bfe3c477281f1f7
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60127266"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888165"
 ---
 # <a name="customize-your-teams-app"></a>自定义Teams应用
 
 ## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>启用Microsoft Teams自定义应用
 
-你可以允许客户在管理中心Microsoft Teams应用的某些Teams方面。 只有发布到应用商店的应用才支持Teams此功能。 无法自定义为组织发布的旁加载应用。
+你可以允许客户在管理中心Microsoft Teams应用的某些Teams方面。 仅发布到应用商店的应用支持Teams此功能。 无法自定义为组织发布的旁加载应用。
 
 此功能的一些可能示例包括：
 
@@ -31,13 +32,13 @@ ms.locfileid: "60127266"
 
 ### <a name="user-considerations"></a>用户注意事项
 
-为特别需要 (应用的Teams管理员) 提供指南。 有关详细信息，请参阅自定义[Teams。](/MicrosoftTeams/customize-apps)
+为特别需要 (应用的Teams管理员) 提供指南。 有关详细信息，请参阅自定义[应用程序中Teams。](/MicrosoftTeams/customize-apps)
 
 ## <a name="hide-teams-app-until-admin-approves"></a>在Teams批准前隐藏应用
 
-为了Teams应用体验，默认情况下，你可以向用户隐藏应用，直到管理员允许取消隐藏该应用。 例如，Contoso 电子产品已经创建了一个适用于 Teams。 为了能够正常运行应用，Contoso 电子产品希望客户先设置应用的特定属性。 默认情况下，应用处于隐藏状态，并且仅在管理员允许后才能供用户使用。
+为了Teams应用体验，默认情况下，你可以向用户隐藏应用，直到管理员允许取消隐藏该应用。 例如，Contoso 电子产品创建了一个适用于 Teams。 为了能够正常运行应用，Contoso 电子产品希望客户先设置应用的特定属性。 默认情况下，应用处于隐藏状态，并且仅在管理员允许后才能供用户使用。
 
-若要隐藏应用，在应用清单文件中，将 `defaultBlockUntilAdminAction` 属性设置为 `true` 。 当属性设置为 时，在管理Teams管理>中，"被发布者阻止"将显示在 `true` 应用的"状态 **"中**： 
+若要隐藏应用，在应用清单文件中，将 `defaultBlockUntilAdminAction` 属性设置为 `true` 。 当属性设置为 时，在Teams管理中心>管理应用"中，"被发布者阻止"将显示在 `true` 应用的 **"状态"中**：  
 
 ![管理由发布者阻止的应用](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
 
@@ -52,4 +53,6 @@ ms.locfileid: "60127266"
 
 ## <a name="see-also"></a>另请参阅
 
-[在管理中心Teams应用](/MicrosoftTeams/customize-apps)
+* [应用管理架构](/MicrosoftTeams/manifest-schema)
+* [在管理中心Teams应用](/MicrosoftTeams/customize-apps)
+

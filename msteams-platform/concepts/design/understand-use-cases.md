@@ -1,20 +1,20 @@
 ---
 title: 了解应用的用例
 author: heath-hamilton
-description: 在规划Microsoft Teams应用时，你应该首先了解你的应用尝试解决的问题。
+description: 规划应用、了解用户及其需求、了解应用可以解决的用户问题、规划用户身份验证及其载入体验
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6257475dfdb80128fbfc857bb760306583ad16ee
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 835e40e2c93387ee7db9fab7eb1f8c56951019c9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720153"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888417"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
-该Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../concepts/extensibility-points.md)元素。
+Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../concepts/extensibility-points.md)元素。
 > [!NOTE]
 > 在开始构建用例之前，你必须深入了解Teams功能，以及使用这些功能的 Teams功能。
 
@@ -22,7 +22,7 @@ ms.locfileid: "60720153"
 
 ## <a name="understand-the-problem"></a>了解问题
 
-每个应用都有一个核心问题或需要解决的问题。 在开始生成应用之前，你需要阐明该问题是什么。 它的核心Teams是一个协作平台，因此在实现有效协作方面架起差距的应用非常适合。 它还是一个社交平台，本机跨平台，位于Office 365的核心，并提供个人画布，供你创建应用。 在此社交平台中，可以通过一款应用满足各种Teams需求。 如果了解要尝试解决的问题，就可以解决各种各样的问题。 在开始生成应用之前，请提出相关问题，例如：
+每个应用都有一个核心问题或需要解决的问题。 在开始生成应用之前，你需要阐明该问题是什么。 其中心Teams是一个协作平台，因此在实现有效协作方面架起差距的应用非常适合。 它还是一个社交平台，本机跨平台，位于Office 365的核心，并提供个人画布，供你创建应用。 在此社交平台中，可以通过一款应用满足各种Teams需求。 如果了解要尝试解决的问题，就可以解决各种各样的问题。 在开始生成应用之前，请提出相关问题，例如：
 
 * 用户当前使用的状态系统的优缺点是什么？
 * 要解决的用户所面临的问题是什么？
@@ -30,7 +30,7 @@ ms.locfileid: "60720153"
 
 ## <a name="understand-your-user"></a>了解用户
 
-了解用户是谁，并可以确定正确的分发模型。 它可以帮助你确定用户如何使用Teams。 提出相关问题，例如：
+了解用户是谁，并可以确定正确的分发模型。 它可帮助你确定用户如何使用Teams。 提出相关问题，例如：
 
 * 用户主要是移动客户端上的一线工作人员吗？
 * 你是否希望许多来宾用户需要访问你的应用？
@@ -51,7 +51,7 @@ ms.locfileid: "60720153"
 
 ## <a name="provide-authentication"></a>提供身份验证
 
-您必须提前确定是否需要保护要公开的服务以及处于什么级别。 请记住，Teams应用程序中公开的 Web 服务通过 Internet 公开提供。 因此，如果你需要保护他们，立即开始思考它。 如果需要一个解决方案，要求您为租户之外的用户提供来宾访问，则需要设置访问限制和权限来保护机密信息。 需要考虑来宾用户访问的限制，需要设计应用。 因此，请提问，例如： 
+您必须提前确定您是否需要保护要公开的服务以及处于什么级别。 请记住，Teams应用程序中公开的 Web 服务通过 Internet 公开提供。 因此，如果你需要保护他们，立即开始思考它。 如果需要一个解决方案，要求您为租户之外的用户提供来宾访问，则需要设置访问限制和权限来保护机密信息。 需要考虑来宾用户访问的限制，需要设计应用。 因此，请提问，例如： 
 
 * 用户将基于其角色访问不同的数据视图吗？
 * 是否涉及 PII？
@@ -60,7 +60,7 @@ ms.locfileid: "60720153"
 
 ## <a name="decide-what-goes-in-teams"></a>确定要Teams
 
-无论是构建新的解决方案还是将现有解决方案引入 Teams，决定整个应用是否位于 Teams 客户端中非常重要。 检查仅引入部分体验是否有意义。 通过选项卡、消息传递扩展、任务模块、自适应卡片和对话机器人的组合，你可以完全在 Teams。
+无论是构建新的解决方案还是将现有解决方案引入Teams，决定整个应用是否将位于 Teams 客户端中非常重要。 检查仅引入部分体验是否有意义。 通过选项卡、消息传递扩展、任务模块、自适应卡片和对话机器人的组合，你可以完全在 Teams。
 请记住您的用户是谁以及您尝试解决的问题。 他们已有一个系统来解决大多数问题，或者你只需将功能的一个子集扩展到Teams？ 通常，如果要引入解决方案的一部分，则必须专注于共享、协作、启动和监视工作流。
 
 ## <a name="plan-the-onboarding-experience"></a>规划用户体验
@@ -77,7 +77,11 @@ ms.locfileid: "60720153"
 
 确定用户希望在当前解决方案中具有的新功能。 如果你有要添加到应用的新功能的路线图，则设计和体系结构将受到影响。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [映射用例](../../concepts/design/map-use-cases.md)
+
+## <a name="see-also"></a>另请参阅
+
+[设备功能](~/concepts/device-capabilities/device-capabilities-overview.md)

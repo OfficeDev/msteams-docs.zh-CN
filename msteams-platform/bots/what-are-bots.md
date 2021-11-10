@@ -5,19 +5,19 @@ description: 自动程序在Microsoft Teams。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a5702afcc4e87486d23f363e2e7ec0476f597a71
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 17f6e34cbed0980b379e317db976a46c0cf9fc3f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155362"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887850"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
-聊天机器人也称为聊天机器人或对话机器人，它是运行由用户（如客户服务或支持人员）执行的简单和重复的自动化任务的应用。 日常使用中的机器人示例包括提供有关天气信息的机器人、预订预订或提供旅行信息。 机器人交互可以是一个快速的问题和答案，也可以是提供对服务的访问权限的复杂对话。
+聊天机器人也称为聊天机器人或对话机器人，它是运行由用户（如客户服务或支持人员）执行的简单且重复的自动化任务的应用。 日常使用中的机器人示例包括提供有关天气信息的机器人、预订预订或提供旅行信息。 机器人交互可以是一个快速的问题和答案，也可以是提供对服务的访问权限的复杂对话。
 
 > [!IMPORTANT]
-> 目前，自动程序在 政府社区云 (GCC) 中可用，但在 doD GCC-High 和国防部 (中) 。
+> 目前，自动程序在 政府社区云 (GCC) 中可用，GCC-High DOD (中不可用) 。
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
@@ -41,19 +41,23 @@ ms.locfileid: "59155362"
 
 自动程序需要上下文信息（如用户配置文件详细信息）来访问相关内容并增强机器人体验。 有关详细信息，请参阅获取[Teams上下文](~/bots/how-to/get-teams-context.md)。 
 
-您还可以使用自动程序 API 或自动程序 API Graph发送和接收Teams文件。 有关详细信息，请参阅通过自动 [程序发送和接收文件](~/bots/how-to/bots-filesv4.md)。
+还可使用自动程序 API 或自动程序 API Graph发送和接收Teams文件。 有关详细信息，请参阅通过自动 [程序发送和接收文件](~/bots/how-to/bots-filesv4.md)。
 
-此外，速率限制还用于优化用于应用程序Teams程序。 为了保护Microsoft Teams用户，自动程序 API 为传入请求提供了速率限制。 有关详细信息，请参阅使用 Teams[中的速率限制优化自动程序](~/bots/how-to/rate-limit.md)。
+此外，速率限制还用于优化用于应用程序Teams聊天机器人。 为了保护Microsoft Teams用户，自动程序 API 为传入请求提供了速率限制。 有关详细信息，[请参阅使用中](~/bots/how-to/rate-limit.md)速率限制优化Teams。
 
 借助 Microsoft Graph API 进行呼叫和联机会议，Microsoft Teams应用现在可以使用语音和视频与用户进行交互。 有关详细信息，请参阅 [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。 
 
 可以使用聊天Teams API 获取聊天或团队的一个或多个成员的信息。 有关详细信息，请参阅[对自动程序 API Teams获取团队或聊天成员的更改](~/resources/team-chat-member-api-changes.md)。
 
-## <a name="see-also"></a>另请参阅
-
-[创建适合 Teams 的机器人](~/bots/how-to/create-a-bot-for-teams.md)
-
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [智能机器人和 SDK](~/bots/bot-features.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [创建适合 Teams 的机器人](~/bots/how-to/create-a-bot-for-teams.md)
+* [为会议注册呼叫和会议Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
+* [向自动程序Teams身份验证](~/bots/how-to/authentication/add-authentication.md)
+* [智能机器人活动处理程序](~/bots/bot-basics.md)
+* [Teams 智能机器人中的对话活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

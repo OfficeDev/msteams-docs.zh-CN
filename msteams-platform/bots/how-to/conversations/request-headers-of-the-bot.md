@@ -3,16 +3,16 @@ title: 将租户 ID 和对话 ID 发送到机器人的请求标头
 description: 介绍如何将租户 ID 和对话 ID 发送到机器人的请求标头。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bdfe224824fb7fd42fdc8ea93dc7d492bc731218
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 054b5bed99b1569a74ba4f69b144bd1edd60fd3d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155364"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889277"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>将租户 ID 和对话 ID 发送到机器人的请求标头
 
-当前向自动程序发出的传出请求在标头或 URL 中不包含任何有助于机器人在不解压缩整个负载的情况下路由流量的信息。 活动通过类似于 https：//<your_domain>/api/messages 的 URL 发送给自动程序。 收到在标头中显示对话 ID 和租户 ID 的请求。
+当前向自动程序发出的传出请求在标头或 URL 中不包含任何有助于机器人在不解压缩整个负载的情况下路由流量的信息。 活动通过类似于 https：//<your_domain>/api/messages 的 URL 发送给机器人。 收到在标头中显示对话 ID 和租户 ID 的请求。
 
 ## <a name="request-header-fields"></a>请求头字段
 

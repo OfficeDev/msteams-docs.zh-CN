@@ -1,29 +1,29 @@
 ---
 title: 与机器人的频道和群组对话
 author: surbhigupta
-description: 如何发送、接收和处理频道或群聊中机器人的消息。
+description: 如何发送、接收和处理频道或群聊中机器人的消息。 了解设计指南、使用代码示例创建@mentions线程
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ea8de08de966b9ed15e02f5ead8e33e06c6da68f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ab856bb7d07e23d9dc6d6fed318313262779b79f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155302"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889312"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>与机器人的频道和群组聊天对话
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-若要在Microsoft Teams聊天中安装聊天机器人，请向 `teams` 机器人添加 或 `groupchat` 作用域。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
+若要在Microsoft Teams聊天中安装聊天机器人，请向 `teams` 自动程序添加 或 `groupchat` 作用域。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
 
 组或频道中的机器人仅在被提及时接收@botname。 他们不会收到发送到对话的其他任何消息。 必须直接 @mentioned 机器人。 当提到团队或频道时，或者当有人未经回复而回复来自你的机器人的消息时，机器人不会收到@mentioning消息。
 
 > [!NOTE]
 > 此功能目前仅适用于公共 [开发人员预览](../../../resources/dev-preview/developer-preview-intro.md) 版。
 >
-> 使用 RSC (特定) ，机器人可以接收团队中安装它的所有频道消息，而无需@mentioned。 有关详细信息，请参阅使用 [RSC 接收所有频道消息](channel-messages-with-rsc.md)。
+> 通过使用 RSC (资源) ，机器人可以接收团队中安装它的所有频道消息，而无需@mentioned。 有关详细信息，请参阅使用 [RSC 接收所有频道消息](channel-messages-with-rsc.md)。
 
 ## <a name="design-guidelines"></a>设计准则
 
@@ -33,13 +33,13 @@ ms.locfileid: "59155302"
 
 ## <a name="create-new-conversation-threads"></a>创建新的对话线程
 
-在团队中安装自动程序时，必须创建新的对话线程，而不是答复现有对话线程。 有时很难区分两个对话。 如果会话是按线索组织的，则更易于组织和管理频道中的不同对话。 这是一种 [主动消息形式](~/bots/how-to/conversations/send-proactive-messages.md)。
+在团队中安装自动程序时，必须创建新的对话线程，而不是回复现有对话线程。 有时很难区分两个对话。 如果会话是按线索组织的，则更易于组织和管理频道中的不同对话。 这是一种 [主动消息形式](~/bots/how-to/conversations/send-proactive-messages.md)。
 
 接下来，可以使用 对象检索提及 `entities` 内容，然后使用 对象向邮件添加 `Mention` 提及。
 
 ## <a name="work-with-mentions"></a>使用提及
 
-从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中包含其名称的聊天机器人。 自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
+从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中包含其名称的自动程序。 机器人还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
 
 还必须从自动程序@mentions内容中去除此限制。
 
@@ -270,11 +270,11 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>另请参阅
-
-[获取Teams上下文](~/bots/how-to/get-teams-context.md)
-
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [订阅对话事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+
+## <a name="see-also"></a>另请参阅
+
+[获取Teams上下文](~/bots/how-to/get-teams-context.md)

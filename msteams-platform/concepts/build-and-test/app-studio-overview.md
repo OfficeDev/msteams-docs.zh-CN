@@ -4,12 +4,12 @@ description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应�
 keywords: 应用室团队入门
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 22fb1deb55671120d3f40fc9d6e5cbfc2f27330f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: adbd6bf8c2c2ec0dae8444d222fc3f3b26279e8f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155884"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888564"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams
 
@@ -66,7 +66,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 清单编辑器的功能部分介绍定义应用的功能并列出其中每个功能的详细信息。
 
 > [!NOTE]
-> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅自定义[Microsoft Teams。](/MicrosoftTeams/customize-apps)
+> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
 
 ##### <a name="tabs"></a>选项卡
 
@@ -76,7 +76,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
   你还必须提供选项卡期望从其加载或链接到的任何其他域。
 
-* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认在个人应用体验中显示 (用户在团队或频道应用的上下文之外使用你的应用) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
+* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认在个人应用体验中 (用户在团队或频道应用的上下文之外使用你的应用时) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
 
 ##### <a name="bots"></a>机器人
 
@@ -128,7 +128,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 ### <a name="react-control-library"></a>反应控件库
 
 >[!Note]
-> 以后React弃用此控件库。 请考虑将[Fluent UI react 控件用作](https://microsoft.github.io/fluent-ui-react/)之前替代的 Stardust UI。
+> 以后React弃用此控件库。 请考虑使用[Fluent UI react 控件作为](https://microsoft.github.io/fluent-ui-react/)之前其他 Stardust UI。
 
 创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为更轻松地创建一致的 UI，App Studio 提供了几种符合 Teams 设计原则的 UI 控件类别。
 
@@ -148,3 +148,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 * 选项卡
 * 表格
 * 图标
+
+## <a name="see-also"></a>另请参阅
+
+[使用开发人员门户管理应用Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 7648f0f4ae1a3a89e051bea45249855c41befd9d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 02ea6d9caf4acc43bcd9a361113baf7ce9f8464a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155361"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888186"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Upload应用Microsoft Teams
 
@@ -33,8 +33,8 @@ ms.locfileid: "59155361"
 
 你可以将应用旁加载至团队、聊天、会议或个人使用，具体取决于你配置应用的范围。
 
-1. 使用你的 Teams 开发帐户[登录到 Microsoft 365 客户端](~/build-your-first-app/build-and-run.md#prerequisites)。
-1. 选择 **"应用****"，Upload自定义应用"。**
+1. 使用你的Teams帐户登录到[Microsoft 365 客户端](~/build-your-first-app/build-and-run.md#prerequisites)。
+1. 选择 **"** 应用 **"，Upload自定义应用"。**
 1. 选择应用包.zip文件。 将显示安装对话框。
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 1. 将应用添加到Teams。
@@ -49,7 +49,7 @@ ms.locfileid: "59155361"
 
 ## <a name="access-your-app"></a>访问应用
 
-Teams提供了多种打开应用的方法。 有关详细信息，请参阅在应用中[Teams。](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)
+Teams提供了几种打开应用的方法。 有关详细信息，请参阅访问[Teams 中的应用程序](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)。
 
 ## <a name="update-your-app"></a>更新应用
 
@@ -57,12 +57,17 @@ Teams提供了多种打开应用的方法。 有关详细信息，请参阅在�
 
 ## <a name="remove-your-app"></a>删除应用
 
-若要删除你的应用，请右键单击应用中的应用Teams **并选择卸载。**
+若要删除你的应用，请右键单击应用中Teams **并选择卸载。**
 
 > [!NOTE]
-> 你无法完全删除个人自动程序活动。 如果删除应用并再次添加它，则与机器人的新通信将附加到其上一次对话中。
+> 你无法完全删除个人自动程序活动。 如果删除应用并再次添加它，则与机器人的新通信将附加到上一次与该应用的对话中。
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [使用 Teams 应用](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+> [使用Teams应用](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+
+## <a name="see-also"></a>另请参阅
+
+* [配置默认安装选项](~/concepts/deploy-and-publish/add-default-install-scope.md)
+* [维护已发布Microsoft Teams应用程序](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)

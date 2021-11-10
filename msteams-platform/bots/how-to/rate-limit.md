@@ -1,15 +1,15 @@
 ---
 title: 通过团队中的速率限制来优化你的智能机器人
-description: 速率限制和解决方案中的Microsoft Teams
+description: 了解使用代码示例处理每个机器人每线程限制和每个限制的自动程序速率限制。 此外，请了解企业中的速率限制Microsoft Teams。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 机器人速率限制
-ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1be6377a6d7497b4f1b53f034eb631547dcf4a5c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155365"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889291"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 
@@ -83,7 +83,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-可以使用暂时性错误处理 执行退回 [并重试](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 有关获取和安装 NuGet 程序包的指南，请参阅将瞬态[错误处理应用程序块添加到解决方案](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 另请参阅 [瞬态故障处理](/azure/architecture/best-practices/transient-faults)。
+可以使用暂时性错误处理 执行退回 [并重试](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 有关获取和安装 NuGet程序包的指南，请参阅将瞬态错误处理[应用程序块添加到解决方案](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 另请参阅 [瞬态故障处理](/azure/architecture/best-practices/transient-faults)。
 
 完成检测暂时性异常的示例后，请浏览指数退步示例。 可以使用指数退步，而不是在失败时重试。
 
@@ -129,7 +129,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 下表提供了每个机器人每个线程的限制：
 
-| 方案 | 时间段（以秒表示） | 允许的最大操作数 |
+| 应用场景 | 时间段（以秒表示） | 允许的最大操作数 |
 | --- | --- | --- |
 | 发送到对话 | 1 | 7  |
 | 发送到对话 | 2 | 8  |
@@ -140,11 +140,11 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | 创建对话 | 30 | 60 |
 | 创建对话 | 3600 | 1800 |
 | 获取对话成员| 1 | 14  |
-| 获取对话成员| 2 | 16  |
+| 获取对话成员| 2 | 16 |
 | 获取对话成员| 30 | 120 |
 | 获取对话成员| 3600 | 3600 |
 | 获取对话 | 1 | 14  |
-| 获取对话 | 2 | 16  |
+| 获取对话 | 2 | 16 |
 | 获取对话 | 30 | 120 |
 | 获取对话 | 3600 | 3600 |
 
@@ -159,14 +159,14 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 下表提供了所有自动程序每线程的限制：
 
-| 方案 | 时间段（以秒表示） | 允许的最大操作数 |
+| 应用场景 | 时间段（以秒表示） | 允许的最大操作数 |
 | --- | --- | --- |
 | 发送到对话 | 1 | 14  |
-| 发送到对话 | 2 | 16  |
+| 发送到对话 | 2 | 16 |
 | 创建对话 | 1 | 14  |
-| 创建对话 | 2 | 16  |
+| 创建对话 | 2 | 16 |
 | 创建对话| 1 | 14  |
-| 创建对话| 2 | 16  |
+| 创建对话| 2 | 16 |
 | 获取对话成员| 1 | 28 |
 | 获取对话成员| 2 | 32 |
 | 获取对话 | 1 | 28 |
@@ -176,4 +176,3 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 > [!div class="nextstepaction"]
 > [通话和会议智能机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-

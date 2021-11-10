@@ -1,22 +1,22 @@
 ---
 title: 定义消息传递扩展操作命令
 author: surbhigupta
-description: 邮件扩展操作命令概述
+description: 包含应用清单示例的邮件扩展操作命令概述
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720139"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887990"
 ---
 # <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-操作命令允许你向用户显示名为任务模块的模式弹出框Teams。 任务模块收集或显示信息、处理交互并将信息发送回Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
+操作命令允许你向用户显示名为任务模块的模式弹出窗口Teams。 任务模块收集或显示信息、处理交互并将信息发送回Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
 
 在创建操作命令之前，必须确定以下因素：
 
@@ -49,7 +49,7 @@ ms.locfileid: "60720139"
 * **自适应卡片**：可以选择使用自适应卡片，该卡片可以更好地控制 UI，但仍限制可用控件和格式设置选项。
 * **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以便完全控制 UI 和控件。 
 
-如果您选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
+如果选择创建包含参数静态列表的任务模块，并且当用户提交任务模块时，将调用消息扩展。 使用嵌入式 Web 视图或自适应卡片时，邮件扩展必须处理来自用户的初始调用事件、创建任务模块，并返回到客户端。
 
 ## <a name="select-how-the-final-message-is-sent"></a>选择最终邮件的发送
 
@@ -69,7 +69,7 @@ ms.locfileid: "60720139"
 可以使用 App Studio 或 **开发人员** 门户 **创建操作命令**。
 
 > [!NOTE]
-> App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+> App Studio 即将被弃用。 使用新的开发人员门户 配置、Teams[和管理应用](https://dev.teams.microsoft.com/)。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
@@ -132,7 +132,7 @@ ms.locfileid: "60720139"
 |---|---|---|---|
 | `id` | 此属性是分配给此命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
 | `title` | 此属性是命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 此属性必须是 `action` 。 | 否 | 1.4 |
+| `type` | 此属性必须为 `action` 。 | 否 | 1.4 |
 | `fetchTask` | 对于任务模块的自适应卡片或嵌入式 Web 视图，以及参数的静态列表或加载 Web 视图时，此属性 `true` `false` 设置为 `taskInfo` 。 | 否 | 1.4 |
 | `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
@@ -210,12 +210,12 @@ ms.locfileid: "60720139"
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | 说明 | .NET    | Node.js   |   
+| 示例名称           | 描述 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 如果你使用的是自适应卡片或没有对象的嵌入 Web 视图，下一 `taskInfo` 步是：
 
@@ -226,4 +226,3 @@ ms.locfileid: "60720139"
 
 > [!div class="nextstepaction"]
 > [响应任务模块提交](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-

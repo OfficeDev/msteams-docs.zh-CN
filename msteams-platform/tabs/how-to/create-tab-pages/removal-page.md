@@ -6,20 +6,20 @@ keywords: teams 选项卡组频道可配置删除删除
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155347"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889235"
 ---
 # <a name="create-a-removal-page"></a>创建删除页面
 
-可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams用户可以重命名或删除频道或组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验为用户提供删除后选项来删除或存档内容。
+可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams用户可以重命名或删除频道或组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验为用户提供删除后选项，以删除或存档内容。
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>启用选项卡以在安装后重新配置
 
-你的 **manifest.js** 定义选项卡的特性和功能。 选项卡实例属性采用一个布尔值，该值指示用户是否可以在选项卡创建后修改或 `canUpdateConfiguration` 重新配置它。 下表提供了属性详细信息：
+**manifest.json** 定义选项卡的特性和功能。 选项卡实例属性采用一个布尔值，该值指示用户是否可以在选项卡创建后修改或 `canUpdateConfiguration` 重新配置它。 下表提供了属性详细信息：
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -82,14 +82,19 @@ ms.locfileid: "59155347"
 
 ```
 
-当用户从选项卡的下拉菜单中选择"删除"时，Teams将配置页中分配的可选页面加载 `removeUrl` 至 IFrame 中。 向用户显示一个使用 函数加载的按钮，该按钮调用并启用删除页面 IFrame 底部显示的 `onClick()` `microsoftTeams.settings.setValidityState(true)` "删除"按钮。 
+当用户从选项卡的下拉菜单中选择"删除"时，Teams将配置页中分配的可选页面 `removeUrl` 加载至 IFrame 中。  向用户显示一个使用 函数加载的按钮，该按钮调用并启用删除页面 IFrame 底部显示的 `onClick()` `microsoftTeams.settings.setValidityState(true)` "删除"按钮。 
 
-执行删除处理程序后， `removeEvent.notifySuccess()` 或 `removeEvent.notifyFailure()` Teams删除结果通知用户。
+执行删除处理程序后， `removeEvent.notifySuccess()` 或 `removeEvent.notifyFailure()` 通知Teams删除结果。
 
 >[!NOTE]
-> * 为了确保授权用户对选项卡的控制不会受到约束，Teams成功和失败情况下删除选项卡。
-> * Teams五秒后启用 **"删除**"按钮，即使选项卡尚未调用 `setValidityState()` 。
+> * 为了确保授权用户对选项卡的控制不会受到约束，Teams成功和失败时删除选项卡。
+> * Teams五秒钟后启用 **"** 删除"按钮，即使选项卡尚未调用 `setValidityState()` 。
 > * 当用户选择 **"删除"** 时，Teams 30 秒后删除选项卡，而不管操作是否已完成。
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 
 ## <a name="see-also"></a>另请参阅
 
@@ -97,8 +102,3 @@ ms.locfileid: "59155347"
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
-
-## <a name="next-step"></a>后续步骤
-
-> [!div class="nextstepaction"]
-> [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)

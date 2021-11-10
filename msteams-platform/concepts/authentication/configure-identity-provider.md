@@ -4,12 +4,12 @@ description: 介绍如何配置标识提供程序，并重点关注Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 身份验证AAD oauth 标识提供程序
-ms.openlocfilehash: d14dc4811faae13535ad1029a8820c5904f44774
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: cae2cc3d2feba8c17ad895864fd1b5995095f71b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291616"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887432"
 ---
 # <a name="configure-identity-providers"></a>配置标识提供程序
 
@@ -19,13 +19,13 @@ ms.locfileid: "60291616"
 
 1. 打开 [应用程序注册门户](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)。
 
-2. 选择你的应用以查看其属性，或单击"新建注册"按钮。 查找 **应用的重定向 URI** 部分。
+2. 选择应用以查看其属性，或选择"新建注册"按钮。 查找 **应用的重定向 URI** 部分。
 
-3. 在下拉菜单中，确保 **已选择"Web"。** 将 URL 更新到身份验证终结点。 对于 TypeScript/Node.js 和 C# 上的示例GitHub，重定向 URL 将类似于：
+3. 从 **下拉菜单** 中选择"Web"。 将 URL 更新到身份验证终结点。 对于 TypeScript/Node.js 和 C# 上的示例GitHub，重定向 URL 将类似于以下内容：
 
     重定向 URL： `https://<hostname>/bot-auth/simple-start`
 
-将 `<hostname>` 替换为实际主机。 这可能是专用托管站点，如 Azure、Glitch 或开发计算机上 localhost 的 ngrok 隧道（如 `abcd1234.ngrok.io` ）。 如果你尚未完成或托管你的应用 (或上面提到的) 示例应用，你可能没有此信息，但当该信息已知时，你始终可以返回到此页面。
+将 替换为实际主机，该主机可能是专用托管站点，如 Azure、Glitch 或开发计算机上 `<hostname>` localhost 的 ngrok 隧道（如 `abcd1234.ngrok.io` ）。 如果你尚未完成或托管应用 (或上面提到的) 示例应用，你可能没有此信息，但当该信息已知时，你始终可以返回到此页面。
 
 ## <a name="other-authentication-providers"></a>其他身份验证提供程序
 

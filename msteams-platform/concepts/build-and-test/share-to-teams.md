@@ -1,15 +1,15 @@
 ---
 title: 创建“共享到 Teams”按钮
-description: 如何在网站上添加"共享Teams嵌入按钮
+description: 了解如何使用代码示例Teams网站预览中的"共享到嵌入"按钮
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 共享Teams共享到Teams
-ms.openlocfilehash: 0d0fb0d7baf18038cfe87b648d2550bbd20b593a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0f9425ae28312aeb9700d260d9ac2cf208351d4c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155300"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889284"
 ---
 # <a name="create-share-to-teams-button"></a>创建“共享到 Teams”按钮
 
@@ -44,7 +44,7 @@ ms.locfileid: "59155300"
 
     ![共享到Teams图标](~/assets/icons/share-to-teams-icon.png)
 
-1. 或者，如果您希望 Share-to Teams按钮具有不同的图标大小，请使用 `data-icon-px-size` 属性。
+1. 或者，如果您希望"共享对象"按钮具有不同的图标大小Teams，请使用 `data-icon-px-size` 属性。
 
     ```html
     <div
@@ -53,7 +53,7 @@ ms.locfileid: "59155300"
       data-icon-px-size="64">
     </div>
     ```
-1. 如果共享链接需要用户身份验证，并且要共享的链接中的 URL 预览在 Teams 中无法很好地呈现，则可以通过将 属性设置为 来禁用 URL `data-preview` 预览 `false` 。
+1. 如果共享链接需要用户身份验证，并且要共享的链接中的 URL 预览在 Teams 中无法很好地呈现，则可以通过添加设置为 的属性来禁用 URL `data-preview` 预览 `false` 。
 
     ```html
     <div
@@ -78,7 +78,7 @@ ms.locfileid: "59155300"
 
 |值|Meta 标记| 打开Graph|
 |----|----|----|
-|标题|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |说明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |缩略图图像| 无。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
@@ -86,7 +86,7 @@ ms.locfileid: "59155300"
 
 ## <a name="share-to-teams-for-education"></a>共享到Teams 教育版
 
-对于使用"共享到Teams按钮的教师，还有一个附加选项 `Create an Assignment` 。 这使您能够基于共享链接在所选团队中快速创建工作分配。 下图显示了适用于教育的Teams共享： 
+对于使用"共享到Teams"按钮的教师，还有一个附加选项 `Create an Assignment` 。 这使您能够基于共享链接在所选团队中快速创建工作分配。 下图显示了适用于教育的Teams共享： 
 
 ![共享到Teams弹出式教育](~/assets/images/share-to-teams-popup-edu.png)
 
@@ -94,11 +94,11 @@ ms.locfileid: "59155300"
 
 | 属性 | HTML 属性 | 类型 | 默认值 | 说明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | 字符串 | 不适用 | 要共享的内容的 href。 |
+| href | `data-href` | string | 不适用 | 要共享的内容的 href。 |
 | preview | `data-preview` | boolean (字符串类型)  | `true` | 是否显示要共享的内容的预览。 |
-| iconPxSize | `data-icon-px-size` | number (作为字符串)  | `32` | 要呈现的"共享到Teams按钮的大小（以像素为单位）。 |
+| iconPxSize | `data-icon-px-size` | 数字 (字符串形式)  | `32` | 要呈现的"共享到Teams按钮的大小（以像素为单位）。 |
 | msgText | `data-msg-text` | string | 不适用 | 要插入到邮件撰写框中的链接之前的默认文本。 最大字符数为 200。 |
-| assignInstr | `data-assign-instr` | 字符串 | 不适用 | 要插入到工作分配"说明"字段中的默认文本。 最大字符数为 200。 |
+| assignInstr | `data-assign-instr` | string | 不适用 | 要插入到工作分配"说明"字段中的默认文本。 最大字符数为 200。 |
 | assignTitle | `data-assign-title` | string | 不适用 | 要插入到工作分配"标题"字段中的默认文本。 最大字符数为 50。 |
 
 ### <a name="methods"></a>方法

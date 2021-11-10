@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: b84975296b443ad71fb78042729f225a31ba9afe
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c6a872f9e43f5394a3d10ef5bf3ab8f2650ca9b4
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155383"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887690"
 ---
 # <a name="apps-for-teams-meetings"></a>会议Teams应用程序
 
@@ -31,22 +31,22 @@ ms.locfileid: "59155383"
 
 本文概述了会议应用的可扩展性、API 引用、为会议启用和配置应用，以及会议中的自定义一Teams。
 
-使用会议可扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，可在其中集成选项卡、聊天机器人和消息传递扩展。 您可以确定各种参与者角色和用户类型、获取会议事件以及生成会议对话。
+使用会议可扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，可在其中集成选项卡、聊天机器人和消息传递扩展。 您可以确定各种参与者角色和用户类型、获取会议事件并生成会议对话。
 
-若要自定义Teams会议应用，请通过更新应用清单Teams会议启用应用，并针对会议方案配置应用。
+若要自定义Teams会议应用，请通过更新应用清单Teams会议应用，并针对会议方案配置应用。
 
 新的自定义"共同模式"场景功能使用户能够在一个地方与团队一起在一个会议中协作。
-
-## <a name="see-also"></a>另请参阅
-
-* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [Bot](../bots/what-are-bots.md)
-* [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
-* [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Teams 会议中应用的先决条件和 API 参考](create-apps-for-teams-meetings.md)
-* [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md)
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [会议应用可扩展性](meeting-app-extensibility.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [Teams 会议中应用的先决条件和 API 参考](create-apps-for-teams-meetings.md)
+* [设计会议Microsoft Teams扩展](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [会议应用 API 参考 - Teams](~/apps-in-teams-meetings/api-references.md)
+* [自定义一起模式场景](~/apps-in-teams-meetings/teams-together-mode.md)
+* [为会议启用和配置Teams应用程序](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [会议生命周期](meeting-app-extensibility.md#meeting-lifecycle)

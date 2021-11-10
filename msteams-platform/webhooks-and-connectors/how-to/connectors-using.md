@@ -5,16 +5,16 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams o365 连接器
-ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156009"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887390"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
-您可以创建可操作邮件，并通过传入 Webhook 或 Office 365 连接器发送。
+您可以创建可操作邮件并通过传入 Webhook 或 Office 365 连接器发送。
 
 ## <a name="create-actionable-messages"></a>创建可操作邮件
 
@@ -47,9 +47,9 @@ ms.locfileid: "59156009"
 > * 在 Microsoft Teams 中指定 `style` 属性的 `compact` 与在 Microsoft Outlook 中指定 `style` 属性的 `normal` 相同。
 > * 对于 HttpPOST 操作，请求中包括承载令牌。 此令牌包括已执行该操作的 Office 365 用户的 Azure AD 标识。
 
-## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>通过传入 Webhook 或 Office 365 连接器发送邮件
+## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>通过传入 Webhook 或连接器Office 365消息
 
-若要通过传入 Webhook 或 Office 365 连接器发送邮件，请将 JSON 有效负载张贴到 webhook URL。 此有效负载必须以连接器Office 365[的形式。](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+若要通过传入 Webhook 或 Office 365 连接器发送消息，请将 JSON 有效负载张贴到 webhook URL。 此有效负载必须以连接器Office 365[的形式。](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 
 您还可以使用此 JSON 创建包含丰富输入（如文本输入、多选或选择日期和时间）的卡片。 生成卡片并张贴到 webhook URL 的代码可以在任何托管服务中运行。 这些卡片定义为可操作邮件的一部分，在卡片中也受[](~/task-modules-and-cards/what-are-cards.md)支持，用于Teams聊天机器人和消息传递扩展。
 
@@ -251,7 +251,7 @@ ms.locfileid: "59156009"
 
 | 时间（以秒表示）  | 允许的最大请求数  |
 |---|---|
-| 1   | 4   |  
+| 1   | 4  |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |
@@ -285,3 +285,5 @@ try
 * [Office 365连接器Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [创建传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [创建传出 Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [自动程序Teams速率限制](~/bots/how-to/rate-limit.md)
+* [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)

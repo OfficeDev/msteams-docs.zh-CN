@@ -1,16 +1,16 @@
 ---
 title: 对邮件扩展的 SSO 支持
 author: KirtiPereira
-description: 如何为邮件扩展启用 SSO 支持
+description: 了解如何使用代码示例为邮件扩展启用 SSO 支持。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: fb9f323b81ff6e42e0ae78bc2bb476b629bfb206
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: cccd27f5507125d0525c5a2d180379dad213dcae
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720055"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889389"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>邮件扩展的单一登录支持
  
@@ -22,7 +22,7 @@ SSO (单一) 支持现在可用于邮件扩展和链接取消点击。 默认情
 
 为邮件扩展和链接展开启用 SSO 的先决条件如下所示：
 * 必须具有 [Azure](https://azure.microsoft.com/free/) 帐户。
-* 你必须通过 AAD 门户配置你的应用，并更新Teams程序的应用程序清单，就像通过 AAD 门户注册应用一样[。](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)
+* 你必须通过应用门户配置AAD，Teams门户注册应用时定义的自动程序AAD[清单](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)。
 
 > [!NOTE]
 > 有关创建 Azure 帐户和更新应用清单的信息，请参阅单一登录 [ (SSO) 自动程序支持](../../bots/how-to/authentication/auth-aad-sso-bots.md)。
@@ -119,4 +119,3 @@ SSO (单一) 支持现在可用于邮件扩展和链接取消点击。 默认情
 * [向邮件扩展添加身份验证](add-authentication.md)
 * [将 SSO 用于聊天机器人](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [链接展开](link-unfurling.md)
-

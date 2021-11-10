@@ -1,27 +1,27 @@
 ---
 title: 调用和关闭任务模块
-description: 调用和消除任务模块。
+description: 了解如何使用代码示例调用和消除任务模块、任务信息对象、任务模块大小调整、任务模块深层链接语法
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ab6425ae90c04e142e5d69f4a41ff49358731a23
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 226548dca8001fecce4cd784a7411d4ca5841e5e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155711"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887530"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>调用和关闭任务模块
 
 可以从选项卡、自动程序或深层链接调用任务模块。 响应可以是 HTML、JavaScript 或自适应卡片。 在如何调用任务模块以及如何处理用户交互的响应方面，存在很多灵活性。 下表总结了此操作的工作原理：
 
-| 使用 调用 | 包含 HTML 或 JavaScript 的任务模块 | 具有自适应卡片的任务模块 |
+| 使用 调用 | 包含 HTML 或 JavaScript 的任务模块 | 带自适应卡片的任务模块 |
 | --- | --- | --- |
-| 选项卡中的 JavaScript | 1. 将 Teams客户端 SDK `tasks.startTask()` 函数与可选回调 `submitHandler(err, result)` 函数一同使用。 <br/><br/> 2. 在任务模块代码中，当用户已执行这些操作时，Teams对象作为参数调用 sdk `tasks.submitTask()` `result` 函数。 如果在 `submitHandler` 中指定了回调 `tasks.startTask()` ，Teams将 调用它 `result` 作为参数。 如果在调用 时出错，则 `tasks.startTask()` `submitHandler` 改为使用字符串调用 `err` 函数。 <br/><br/> 3.还可以在调用 时 `completionBotId` 指定 `teams.startTask()` 。 然后 `result` ，将 改为发送到自动程序。 | 1. 使用 TaskInfo Teams并包含要显示在任务模块弹出窗口中的自适应卡片的 JSON 来调用客户端 SDK `tasks.startTask()` [](#the-taskinfo-object) `TaskInfo.card` 函数。 <br/><br/> 2. 如果在 中指定了回调，Teams使用字符串调用它，如果在调用时出现错误，或者用户关闭任务模块弹出窗口（使用右上角的 `submitHandler` `tasks.startTask()` `err` `tasks.startTask()` X）。 <br/><br/> 3. 如果用户按下某个 `Action.Submit` 按钮，则其 `data` 对象将返回为 的值 `result` 。 |
-| 自动程序卡按钮 | 1. 自动程序卡片按钮可以通过两种方式（深度链接 URL 或发送消息）调用任务模块，具体取决于按钮 `task/fetch` 的类型。 <br/><br/> 2. 如果按钮的操作是自适应卡片的按钮类型，则 HTTP POST 事件 `type` `task/fetch` 将发送给 `Action.Submit` `task/fetch invoke` 机器人。 机器人使用 HTTP 200 响应 POST，响应正文包含 [TaskInfo 对象周围的包装](#the-taskinfo-object)器。 有关详细信息，请参阅使用[调用任务模块 `task/fetch` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoke-a-task-module-using-taskfetch)。 Teams任务模块。 <br/><br/> 3. 用户执行这些操作后，Teams对象作为参数调用 sdk `tasks.submitTask()` `result` 函数。 机器人会收到 `task/submit invoke` 一条消息，其中包含 `result` 对象。 <br/><br/> 4. 通过不执行任何操作（即任务成功完成、在弹出窗口中向用户显示消息或调用其他任务模块窗口）来响应邮件，有三种不同的方法。 `task/submit` 有关详细信息，请参阅[上的详细说明 `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 | <ul><li> 与 Bot Framework 卡片上的按钮类似，自适应卡片上的按钮支持两种调用任务模块的方法、包含按钮的深层链接 URL `Action.openUrl` `task/fetch` 和使用 `Action.Submit` 按钮。 </li></ul> <br/><br/> <ul><li> 具有自适应卡片的任务模块与 HTML 或 JavaScript 的情况非常类似。 主要区别在于，由于在使用自适应卡片时没有 JavaScript，因此无法调用 `tasks.submitTask()` 。 相反，Teams对象， `data` `Action.Submit` 并作为事件的有效负载 `task/submit` 返回该对象。 有关详细信息，请参阅[的灵活性 `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 </li></ul> |
-| 深层链接 URL <br/>[URL 语法](#task-module-deep-link-syntax) | 1. Teams调用作为 URL 的任务模块，该 URL 显示在深层链接的参数中指定的 `<iframe>` `url` 内部。 没有 `submitHandler` 回调。 <br/><br/> 2. 在任务模块中页面的 JavaScript 中，调用 以使用对象作为参数关闭它，就像从选项卡或自动程序卡按钮调用它一 `tasks.submitTask()` `result` 样。 但是，完成逻辑略有不同。 如果你的完成逻辑驻留在没有自动程序的客户端上，则没有回调，因此任何完成逻辑都必须位于 调用 `submitHandler` 之前的代码 `tasks.submitTask()` 。 调用错误仅通过控制台报告。 如果你有自动程序，可以在深度链接中指定参数以 `completionBotId` 通过事件 `result` 发送 `task/submit` 对象。 | 1. Teams调用任务模块，该任务模块是自适应卡片的 JSON 卡正文，指定为深层链接参数的 URL 编码 `card` 值。 <br/><br/> 2. 用户通过选择任务模块右上角的 X 或按卡片上的按钮来 `Action.Submit` 关闭任务模块。 由于没有要调用的项，因此用户必须具有自动程序来发送自适应卡片 `submitHandler` 字段的值。 用户必须使用深层链接中的 参数指定使用事件 `completionBotId` 将数据发送到的 `task/submit invoke` 机器人。 |
+| 选项卡中的 JavaScript | 1. 将 Teams SDK 函数 `tasks.startTask()` 与可选回调 `submitHandler(err, result)` 函数一同使用。 <br/><br/> 2. 在任务模块代码中，当用户已执行这些操作时，Teams对象作为参数调用 sdk `tasks.submitTask()` `result` 函数。 如果在 `submitHandler` 中指定了回调 `tasks.startTask()` ，Teams将 调用它 `result` 作为参数。 如果在调用 时出错，则 `tasks.startTask()` `submitHandler` 改为使用字符串调用 `err` 函数。 <br/><br/> 3.还可以在调用 时 `completionBotId` 指定 `teams.startTask()` 。 然后 `result` ，将 改为发送到自动程序。 | 1. 使用 TaskInfo Teams并包含要显示在任务模块弹出窗口中的自适应卡片的 JSON 来调用客户端 SDK `tasks.startTask()` [](#the-taskinfo-object) `TaskInfo.card` 函数。 <br/><br/> 2. 如果在 中指定了回调，Teams如果调用时出现错误或者用户关闭任务模块弹出窗口（使用右上角的 `submitHandler` `tasks.startTask()` `err` X）使用字符串调用它 `tasks.startTask()` 。 <br/><br/> 3. 如果用户按下某个 `Action.Submit` 按钮，则其 `data` 对象将返回为 的值 `result` 。 |
+| 自动程序卡按钮 | 1. 自动程序卡片按钮可以通过两种方式（深度链接 URL 或发送消息）调用任务模块，具体取决于按钮 `task/fetch` 的类型。 <br/><br/> 2. 如果按钮的操作是自适应卡片的按钮类型，则 HTTP POST 事件 `type` `task/fetch` 将发送给 `Action.Submit` `task/fetch invoke` 机器人。 机器人使用 HTTP 200 响应 POST，响应正文包含 [TaskInfo 对象周围的包装](#the-taskinfo-object)器。 有关详细信息，请参阅使用[调用任务模块 `task/fetch` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoke-a-task-module-using-taskfetch)。 Teams任务模块。 <br/><br/> 3. 用户执行这些操作后，Teams对象作为参数调用 sdk `tasks.submitTask()` `result` 函数。 机器人会收到 `task/submit invoke` 一条消息，其中包含 `result` 对象。 <br/><br/> 4. 通过不执行任何操作（即任务成功完成、在弹出窗口中向用户显示消息或调用其他任务模块窗口）来响应邮件，有三种不同的方法。 `task/submit` 有关详细信息，请参阅[上的详细说明 `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 | <ul><li> 与 Bot Framework 卡上的按钮类似，自适应卡片上的按钮支持两种调用任务模块的方法、包含按钮的深层链接 URL `Action.openUrl` `task/fetch` 和使用 `Action.Submit` 按钮。 </li></ul> <br/><br/> <ul><li> 具有自适应卡片的任务模块与 HTML 或 JavaScript 的情况非常类似。 主要区别在于，由于在使用自适应卡片时没有 JavaScript，因此无法调用 `tasks.submitTask()` 。 相反，Teams对象， `data` `Action.Submit` 并返回该对象作为事件 `task/submit` 的有效负载。 有关详细信息，请参阅[的灵活性 `task/submit` ](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 </li></ul> |
+| 深层链接 URL <br/>[URL 语法](#task-module-deep-link-syntax) | 1. Teams调用任务模块，该模块是显示在深层链接的参数中指定的内的 `<iframe>` `url` URL。 没有 `submitHandler` 回调。 <br/><br/> 2. 在任务模块中页面的 JavaScript 中，调用 以使用对象作为参数关闭它，就像从选项卡或自动程序卡按钮调用它一 `tasks.submitTask()` `result` 样。 但是，完成逻辑略有不同。 如果你的完成逻辑驻留在没有自动程序的客户端上，则没有回调，因此任何完成逻辑都必须位于 调用 `submitHandler` 之前的代码 `tasks.submitTask()` 。 调用错误仅通过控制台报告。 如果你有自动程序，可以在深度链接中指定参数以 `completionBotId` 通过事件 `result` 发送 `task/submit` 对象。 | 1. Teams调用任务模块，该任务模块是自适应卡片的 JSON 卡片正文，指定为深层链接参数的 URL 编码 `card` 值。 <br/><br/> 2. 用户通过选择任务模块右上角的 X 或按卡片上的按钮来 `Action.Submit` 关闭任务模块。 由于没有要调用的项，因此用户必须拥有一个自动程序来发送自适应卡片 `submitHandler` 字段的值。 用户必须使用深层链接中的 参数指定使用事件 `completionBotId` 将数据发送到的 `task/submit invoke` 机器人。 |
 
-下一节指定定义任务模块 `TaskInfo` 的某些属性的对象。
+下一节指定定义任务 `TaskInfo` 模块的某些属性的对象。
 
 ## <a name="the-taskinfo-object"></a>TaskInfo 对象
 
@@ -32,10 +32,10 @@ ms.locfileid: "59155711"
 | `title` | string | 此属性显示在应用名称下方和应用图标右侧。 |
 | `height` | number or string | 此属性可以是一个数字，表示任务模块的高度，以像素为单位，或 `small` 、 或 `medium` `large` 。 有关详细信息，请参阅任务 [模块大小调整](#task-module-sizing)。 |
 | `width` | number or string | 此属性可以是一个数字，表示任务模块的宽度，以像素为单位，或 `small` 、 或 `medium` `large` 。 有关详细信息，请参阅任务 [模块大小调整](#task-module-sizing)。 |
-| `url` | 字符串 | 此属性是作为任务模块内部加载的页面 `<iframe>` 的 URL。 URL 的域必须在你的应用清单中的 [应用的 validDomains](~/resources/schema/manifest-schema.md#validdomains) 数组中。 |
+| `url` | string | 此属性是作为任务模块内部加载的页面 `<iframe>` 的 URL。 URL 的域必须在你的应用清单中的 [应用的 validDomains](~/resources/schema/manifest-schema.md#validdomains) 数组中。 |
 | `card` | 自适应卡片或自适应卡片自动程序卡附件 | 此属性是要显示在任务模块中的自适应卡片的 JSON。 如果用户从自动程序调用，请使用 Bot Framework 对象中的自适应卡片 `attachment` JSON。 在选项卡中，用户必须使用自适应卡片。 有关详细信息，请参阅自适应 [卡片或自适应卡片自动程序卡附件](#adaptive-card-or-adaptive-card-bot-card-attachment) |
 | `fallbackUrl` | string | 如果客户端不支持任务模块功能，则此属性将在浏览器选项卡中打开 URL。 |
-| `completionBotId` | 字符串 | 此属性指定要发送用户与任务模块交互结果的自动程序应用 ID。 如果指定，机器人将接收事件负载 `task/submit invoke` 中具有 JSON 对象的事件。 |
+| `completionBotId` | string | 此属性指定要发送用户与任务模块交互结果的自动程序应用 ID。 如果指定，机器人将接收事件负载 `task/submit invoke` 中具有 JSON 对象的事件。 |
 
 > [!NOTE]
 > 任务模块功能要求要加载的任何 URL 的域包含在应用清单的数组 `validDomains` 中。
@@ -229,14 +229,14 @@ Microsoft Teams确保键盘导航从任务模块标头正常进入 HTML，反之
 |任务模块示例 bots-V4 | 用于创建任务模块的示例。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 |任务模块示例选项卡和 bots-V3 | 用于创建任务模块的示例。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+
 ## <a name="see-also"></a>另请参阅
 
 * [请求设备权限](~/concepts/device-capabilities/native-device-permissions.md)
 * [集成媒体功能](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [将 QR 或条形码扫描仪功能集成到 Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [在 Teams 中集成位置Teams](~/concepts/device-capabilities/location-capability.md)
-
-## <a name="next-step"></a>后续步骤
-
-> [!div class="nextstepaction"]
-> [在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [将位置功能集成到 Teams](~/concepts/device-capabilities/location-capability.md)

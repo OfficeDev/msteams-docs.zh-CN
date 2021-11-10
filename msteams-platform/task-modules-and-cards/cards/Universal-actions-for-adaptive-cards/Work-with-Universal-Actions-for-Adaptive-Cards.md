@@ -1,14 +1,14 @@
 ---
 title: 使用自适应卡的通用操作
-description: 使用自适应卡片的通用操作。
+description: 了解如何使用自适应卡片的通用操作，包括适用于自适应卡片的通用操作架构、刷新模型以及使用代码示例的向后兼容性。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b732308586d89f378b50056d7c98884a2990fb11
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155716"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888361"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>使用自适应卡的通用操作
 
@@ -31,7 +31,7 @@ ms.locfileid: "59155716"
 4. 使用调用请求的上下文通过为用户创建的卡片进行响应。
 
     > [!NOTE]
-    > 只要机器人处理 后返回新卡， `Action.Execute` 响应就必须符合响应格式。
+    > 只要自动程序由于处理 而返回新卡，响应 `Action.Execute` 就必须符合响应格式。
 
 ## <a name="schema-for-universal-actions-for-adaptive-cards"></a>自适应卡片的通用操作架构
 
@@ -44,7 +44,7 @@ ms.locfileid: "59155716"
 
 | Client | 行为 |
 | :-- | :-- |
-| Teams | 你的卡片停止工作。 卡不会刷新， `Action.Execute` 并且不会呈现，具体取决于客户端Teams版本。 若要确保应用程序的最大Teams，请 `Action.Execute` 通过 回退属性中的 定义 `Action.Submit` 。 |
+| Teams | 你的卡片停止工作。 卡片不会刷新， `Action.Execute` 并且不会呈现，具体取决于客户端Teams版本。 若要确保应用程序的最大Teams，请通过 回退属性 `Action.Execute` 中的 `Action.Submit` 定义 。 |
 
 若要详细了解如何支持旧客户端，请参阅 [向后兼容性](#backward-compatibility)。
 
@@ -52,7 +52,7 @@ ms.locfileid: "59155716"
 
 创作自适应卡片时，请将 和 `Action.Submit` `Action.Http` 替换为 `Action.Execute` 。 的 `Action.Execute` 架构类似于 `Action.Submit` 。
 
-有关详细信息，请参阅Action.Exe[ 和属性](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
+有关详细信息，请参阅 [Action.Execute 架构和属性](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
 
 现在，可以使用刷新模型允许自适应卡片自动更新。
 
@@ -97,18 +97,20 @@ When `Action.Execute` is executed in the client， a new type of Invoke activity
 
 ### <a name="teams"></a>Teams
 
-若要确保自适应卡片与早期版本的 Teams向后兼容，必须包含 属性，并 `fallback` 设置其值 `Action.Submit` 。 此外，自动程序代码必须同时处理 `Action.Execute` 和 `Action.Submit` 。
+若要确保自适应卡片与旧版卡片的向后Teams，必须包含 属性，并 `fallback` 设置其值 `Action.Submit` 。 此外，自动程序代码必须同时处理 `Action.Execute` 和 `Action.Submit` 。
 
 有关详细信息，请参阅[上向后兼容性Teams。](/adaptive-cards/authoring-cards/universal-action-model#teams)
 
 ## <a name="code-samples"></a>代码示例
 
-|示例名称 | 说明 | .NETCore | Node.js |
+|示例名称 | 描述 | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Teams机器人 | 创建使用自适应卡片接受食物订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
 | 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新的自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 
-* [自适应卡片在Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [自适应卡片中的Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
+* [顺序工作流](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
+* [最新卡片](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)

@@ -1,16 +1,17 @@
 ---
 title: 获取Teams程序的特定上下文
 author: surbhigupta
-description: 如何获取机器人的 Microsoft 团队的特定上下文，包括对话名单、详细信息和频道列表。
+description: 如何获取机器人的 Microsoft 团队的特定上下文，包括对话名单、单个成员或团队的详细信息、频道列表、代码示例。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 8baf33c7c66ebee69248306cd9273c33b6123db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: 自动程序上下文名单用户配置文件通道列表
+ms.openlocfilehash: eb935515e4f130e57cf634dd9716306cce9f3a05
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156004"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888242"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>获取Teams程序的特定上下文
 
@@ -20,7 +21,7 @@ ms.locfileid: "59156004"
 
 ## <a name="fetch-the-roster-or-user-profile"></a>获取名单或用户配置文件
 
-机器人可以查询成员列表及其基本用户配置文件，包括 Teams 用户 ID 和 Azure Active Directory (AAD) 信息，如名称和 objectId。 可以使用此信息来关联用户标识。 例如，要检查用户是否通过 AAD 凭据登录到选项卡，是团队的成员。 对于获取对话成员，最小或最大页面大小取决于实现。 小于 50、被视为 50 且大于 500 的页面大小限定为 500。 即使你使用非分页版本，它在大型团队中也不可靠，并且不得使用。 有关详细信息，请参阅[对自动Teams API 的更改，以提取团队或聊天成员](~/resources/team-chat-member-api-changes.md)。
+机器人可以查询成员列表及其基本用户配置文件，包括Teams ID 和Azure Active Directory (AAD) 信息，如名称和 objectId。 可以使用此信息来关联用户标识。 例如，要检查用户是否通过凭据登录选项卡AAD，是团队的成员。 对于获取对话成员，最小或最大页面大小取决于实现。 小于 50、被视为 50 且大于 500 的页面大小限定为 500。 即使你使用非分页版本，它在大型团队中也不可靠，并且不得使用。 有关详细信息，请参阅[对自动Teams API 的更改，以提取团队或聊天成员](~/resources/team-chat-member-api-changes.md)。
 
 以下示例代码使用分页终结点提取名单：
 
@@ -123,11 +124,11 @@ Response body
 
 * * *
 
-获取名单或用户配置文件后，可以获取单个成员的详细信息。 目前，若要检索聊天或团队的一个或多个成员的信息，请使用 Microsoft Teams 自动程序 API C# `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` TypeScript API。
+获取名单或用户配置文件后，可以获取单个成员的详细信息。 目前，若要检索聊天或团队的一个或多个成员的信息，请使用 Microsoft Teams 聊天机器人 API 或 `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` C# Api。
 
 ## <a name="get-single-member-details"></a>获取单个成员详细信息
 
-您还可以使用特定用户的用户 ID、UPN 或 AAD Teams检索其详细信息。
+您还可以使用特定用户的用户 ID、UPN 或 Teams对象 ID 来检索AAD的详细信息。
 
 以下示例代码用于获取单个成员详细信息：
 
@@ -207,11 +208,11 @@ Response body
 
 * * *
 
-获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用适用于 Microsoft Teams 或 TypeScript C# `TeamsInfo.GetMemberDetailsAsync` 自动程序 `TeamsInfo.getTeamDetails` API。
+获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用适用于 Microsoft Teams 或 TypeScript C# `TeamsInfo.GetMemberDetailsAsync` `TeamsInfo.getTeamDetails` 自动程序 API。
 
 ## <a name="get-teams-details"></a>获取团队的详细信息
 
-在团队中安装后，机器人可以查询有关该团队的元数据，包括 AAD 组 ID。
+在团队中安装后，机器人可以查询有关该团队的元数据，包括AAD ID。
 
 以下示例代码用于获取团队的详细信息：
 

@@ -1,19 +1,19 @@
 ---
 title: 为应用配置默认安装选项
-description: 介绍如何指定应用的默认安装选项。
+description: 介绍如何为共享范围指定应用的默认安装选项和默认功能。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 48f12faca9d8f67ec78e08736f16f8ad5a43dcd2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ad59f6645e0d302e973647f9ff63b2898362f6ee
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155951"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889088"
 ---
 # <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>配置应用的默认安装Microsoft Teams选项
 
-应用通常支持应用中的多个Teams，但你在设计时可能记住了特定的范围和功能。 例如，如果你的应用主要用于团队或频道，你可以确保用户在应用商店中看到的首个安装选项是添加到 **团队**。
+应用通常支持 Teams 中的多个方案，但你在设计时可能记住了特定的范围和功能。 例如，如果你的应用主要用于团队或频道，你可以确保用户在应用商店中看到的首个安装选项是添加到 **团队**。
 
 :::row:::
    :::column span="2":::

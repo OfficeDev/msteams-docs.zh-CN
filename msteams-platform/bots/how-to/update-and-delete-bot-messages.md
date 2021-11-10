@@ -1,16 +1,16 @@
 ---
 title: 更新和删除从自动程序发送的消息
 author: WashingtonKayaker
-description: 如何更新和删除从自动程序发送Microsoft Teams消息
+description: 了解如何在不同环境中使用代码示例通过 REST API 更新和删除Microsoft Teams自动程序发送的消息。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 2db2ad28da41fd464f82ce5836acc8202f118923
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b92eb5c566df1d23b0228a218afa546160a3bb91
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155363"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889340"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>更新和删除从自动程序发送的消息
 
@@ -112,7 +112,7 @@ await turn_context.update_activity(updated_activity)
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
 > [!NOTE]
-> 可以在任何 web Teams技术中开发自动程序应用，并直接调用[机器人连接器服务 REST API。](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) 为此，必须使用 [API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) 请求实现身份验证安全过程。
+> 可以使用任何 Web Teams技术开发自动程序应用，并直接调用机器人连接器[服务 REST API。](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true) 为此，必须使用 [API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) 请求实现身份验证安全过程。
 
 若要更新对话中的现有活动，请包含 `conversationId` 请求 `activityId` 终结点中的 和 。 若要完成此方案，您必须缓存原始 Post 调用返回的活动 ID。
 

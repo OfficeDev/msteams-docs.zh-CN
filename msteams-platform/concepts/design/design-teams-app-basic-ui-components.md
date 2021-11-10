@@ -1,26 +1,27 @@
 ---
 title: 使用基本的 UI 组件Fluent应用
 author: heath-hamilton
-description: 了解通常用于生成应用和获取 Microsoft Teams UI 工具包Microsoft Teams UI 组件。
+description: 了解通常用于生成应用和获取 Microsoft Teams UI 工具包Microsoft Teams UI 组件。 了解组件，例如痕迹导航、卡片、旋转式旋转、下拉列表、标志、选取器、透视表、切换、工具提示等。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: b905a95f35abb083b5c8bba7c096e1012adb223d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: UI 组件 fluent kit 痕迹导航按钮卡旋转式下拉列表标记选取器透视表切换工具提示
+ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155832"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887495"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本 Microsoft Teams UI 组件设计Fluent应用
 
 可以使用以下基本 Teams UI 组件从头开始构建Fluent应用。 这些组件设计尽可能平面，可跨不同的用例、主题和屏幕大小工作。
 
-此页面上的插图显示组件在默认Teams (浅) 和深色主题中的外观。
+此页面上的插图显示组件在默认Teams (浅色) 和深色主题中的外观。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成 Teams 应用而设计的组件和模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
+基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成应用而设计的组件Teams模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
@@ -133,7 +134,7 @@ ms.locfileid: "59155832"
 
 ## <a name="other-resources"></a>其他资源
 
-获取此处和 Microsoft Teams UI 工具包中列出的某些组件的代码示例和实现详细信息。
+获取此处列出的某些组件的代码示例和实现详细信息，以及 Microsoft Teams UI 工具包。
 
 > [!div class="nextstepaction"]
 > [尝试 UI (Fluent组件) ](https://fluentsite.z22.web.core.windows.net/)

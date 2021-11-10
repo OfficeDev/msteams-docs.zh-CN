@@ -1,22 +1,23 @@
 ---
 title: 对话事件
 author: WashingtonKayaker
-description: 如何处理来自自动程序的对话Microsoft Teams事件。
+description: 如何使用代码示例处理来自自动程序的对话Microsoft Teams、频道事件更新、团队成员事件和消息反应事件。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6dbefee88b1af763d02b3647d21bdc44da9541ec
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: 事件机器人频道消息反应对话
+ms.openlocfilehash: bc99091e3eac4a35514cbab4327082223edffa40
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566251"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888277"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-为用户构建对话Microsoft Teams时，可以使用对话事件。 Teams在自动程序处于活动状态的范围中发生的对话事件向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
+为用户生成对话机器人Microsoft Teams，可以使用对话事件。 Teams在自动程序处于活动状态的范围中发生的对话事件，向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
 
 * 将机器人添加到团队时触发欢迎消息。
 * 在添加或删除新的团队成员时触发欢迎消息。
@@ -147,7 +148,7 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>已重命名频道
 
-只要频道在安装自动程序的团队中重命名，频道重命名事件就会发送到机器人。
+只要频道在安装了自动程序的团队中重命名，频道重命名事件就会发送到机器人。
 
 以下代码显示了通道重命名事件的示例：
 
@@ -1061,8 +1062,8 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 所有   |
-| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 所有 |
+| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 全部   |
+| messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 全部 |
 
 ### <a name="reactions-added-to-bot-message"></a>添加到自动程序消息的反应
 
@@ -1286,7 +1287,7 @@ async def on_reactions_removed(
 
 ## <a name="installation-update-event"></a>安装更新事件
 
-当您将机器人 `installationUpdate` 安装到对话线程时，机器人会收到一个事件。 从线程卸载自动程序也会触发事件。 安装自动程序时，事件的操作字段设置为 *添加*，当卸载自动程序时，操作字段设置为 *删除*。 
+当您将机器人 `installationUpdate` 安装到对话线程时，机器人会收到一个事件。 从线程卸载自动程序也会触发事件。 安装自动程序时，事件的操作字段设置为 *添加*，当卸载机器人时，操作字段设置为 *删除*。 
  
 > [!NOTE]
 > 升级应用程序，然后添加或删除自动程序时，该操作还会触发 `installationUpdate` 事件。 如果 **添加** 自动程序或删除自动 *程序*，则操作字段将设置为"添加升级"。
@@ -1389,16 +1390,16 @@ turnContext, CancellationToken cancellationToken) {
 > [!NOTE]
 > 使用自动程序的个人应用的卸载行为当前仅适用于公共开发人员 [预览版](../../../resources/dev-preview/developer-preview-intro.md)。
 
-卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有 Teams 和 groupChat 作用域的个人作用域中的聊天机器人的帖子卸载行为已保持一致。 卸载应用后，你无法发送或接收邮件。
+卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有组聊天和 groupChat 作用域的个人Teams聊天机器人的帖子卸载行为已保持一致。 卸载应用后，你无法发送或接收邮件。
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
 
-使用这些安装和卸载事件时，在某些情况下，自动程序会提供从客户端接收意外事件的Teams。 在下列情况下会出现此情况：
+使用这些安装和卸载事件时，在某些情况下，自动程序会为从用户接收意外事件Teams。 在下列情况下会出现此情况：
 
-* 无需使用 Microsoft Bot Framework SDK 即可生成自动程序，因此机器人在收到意外事件时出现异常。
-* 使用 Microsoft Bot Framework SDK 生成自动程序，并选择通过覆盖基本事件句柄来更改默认事件行为。
+* 无需使用 SDK Microsoft Bot Framework自动程序，因此机器人在收到意外事件时出现异常。
+* 使用 Microsoft Bot Framework SDK 生成自动程序，并选择通过替代基本事件句柄来更改默认事件行为。
 
 了解以后可以随时添加新事件，并且机器人开始接收它们，了解这一点很重要。 因此，您必须针对接收意外事件的可能性进行设计。 如果你使用的是 Bot Framework SDK，则自动程序会自动响应 200 – 确定你未选择处理的任何事件。
 

@@ -1,16 +1,16 @@
 ---
 title: 向邮件扩展添加身份验证
 author: surbhigupta
-description: 如何向消息传递扩展添加身份验证
+description: 了解如何使用代码示例和示例向消息传递扩展添加身份验证
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 85353608e062d30529d67184716f65c3e2de1863
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 2d8bcb6896d1a97e6350b397e725afad2e8961a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719859"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889403"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>向邮件扩展添加身份验证
 
@@ -35,10 +35,10 @@ ms.locfileid: "60719859"
 如果服务需要用户身份验证，则用户必须先登录，然后才能使用消息传递扩展。 身份验证步骤类似于自动程序或选项卡的步骤。顺序如下所示：
 
 1. 用户发出查询或默认查询将自动发送到您的服务。
-1. 服务通过检查用户 ID 来检查用户Teams身份验证。
+1. 你的服务通过检查用户 ID 来检查用户Teams身份验证。
 1. 如果用户未经过身份验证，请发送回包含建议操作（包括身份验证 `auth` `openUrl` URL）的响应。
-1. 客户端Microsoft Teams给定身份验证 URL 来启动托管网页的对话框。
-1. 用户登录后，应关闭窗口，并将身份验证代码发送到 Teams客户端。
+1. 客户端Microsoft Teams给定身份验证 URL 启动托管网页的对话框。
+1. 用户登录后，应关闭窗口并将身份验证代码发送到 Teams客户端。
 1. 然后Teams客户端向服务重新提供查询，其中包括步骤 5 中传递的身份验证代码。
 
 服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码匹配。 这可确保恶意用户不会尝试欺骗或破坏登录流。 这实际上"关闭循环"以完成安全身份验证序列。
@@ -67,13 +67,13 @@ ms.locfileid: "60719859"
 ```
 
 > [!NOTE]
-> 若要在弹出窗口中托管登录体验Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
+> 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流程
 
 登录体验必须响应迅速且适合弹出窗口。 它应与[JavaScript Microsoft Teams SDK](/javascript/api/overview/msteams-client)集成，它使用消息传递。
 
-与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
+与其他嵌入体验一样，Microsoft Teams内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流程
 
@@ -138,4 +138,6 @@ ms.locfileid: "60719859"
 |----------------|-----------------|--------------|----------------|
 |邮件扩展 - 身份验证和配置 | 具有配置页面、接受搜索请求和在用户登录后返回结果的消息扩展。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
- 
+## <a name="see-also"></a>另请参阅
+
+[单一登录 (SSO) 邮件扩展支持](~/messaging-extensions/how-to/enable-sso-auth-me.md)

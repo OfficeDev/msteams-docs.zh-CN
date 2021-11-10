@@ -1,20 +1,20 @@
 ---
 title: 无提示的身份验证
-description: 描述无提示身份验证
+description: 描述选项卡的无提示Azure Active Directory、单一登录和登录
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams 身份验证 SSO 无提示AAD
-ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: teams 身份验证 SSO 无提示AAD选项卡
+ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291623"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888025"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
 > [!NOTE]
-> 若要在移动客户端上对选项卡进行身份验证，请确保使用至少 1.4.1 版本的 Teams JavaScript SDK。
+> 若要在移动客户端上对选项卡进行身份验证，请确保你使用的是至少 1.4.1 版本的 Teams JavaScript SDK。
 
 Azure Active Directory (AAD) 中的无提示身份验证通过静默刷新身份验证令牌来最大程度地减少用户输入登录凭据次数。 有关真正的单一登录支持，请参阅 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)。
 
@@ -27,13 +27,13 @@ Azure Active Directory (AAD) 中的无提示身份验证通过静默刷新身份
 
 ## <a name="how-silent-authentication-works"></a>无提示身份验证的工作原理
 
-该ADAL.js库为 OAuth 2.0 隐式授权流创建隐藏的 iframe。 但库指定 `prompt=none` ，因此Azure AD显示登录页。 如果由于用户需要登录或授予对应用程序的访问权限而需要用户交互，AAD将立即返回错误，ADAL.js报告给应用。 此时，你的应用可以显示登录按钮（如果需要）。
+该ADAL.js库为 OAuth 2.0 隐式授权流创建隐藏的 iframe。 但库指定 `prompt=none` ，因此Azure AD显示登录页。 如果用户由于需要登录或授予对应用程序的访问权限而需要用户交互，AAD将立即返回错误，ADAL.js报告给应用。 此时，你的应用可以显示登录按钮（如果需要）。
 
 ## <a name="how-to-do-silent-authentication"></a>如何执行无提示身份验证
 
 本文中的代码来自Teams身份验证示例节点的 Teams[示例应用](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
 
-使用 AAD 启动无提示且简单的身份验证可配置[选项卡，然后](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp)按照说明在本地计算机上运行示例。
+使用 AAD 启动无提示且简单的身份验证可配置[选项卡，](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp)然后按照说明在本地计算机上运行示例。
 
 ### <a name="include-and-configure-adal"></a>包括和配置 ADAL
 
@@ -135,3 +135,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## <a name="see-also"></a>另请参阅
+
+[配置标识提供程序以使用AAD](~/concepts/authentication/configure-identity-provider.md)

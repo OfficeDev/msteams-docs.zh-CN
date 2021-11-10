@@ -5,24 +5,25 @@ description: 了解聊天机器人活动处理程序Teams。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d9d9dee13a59a0727bf3bc7889f6e0fc2acd06f1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: 活动处理程序框架自动程序卡许可通道事件
+ms.openlocfilehash: 6350d9f0e280f345780eeac277e334fef867a67f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155306"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889130"
 ---
 # <a name="bot-activity-handlers"></a>智能机器人活动处理程序
 
 本文档基于核心 Bot Framework 文档中 [有关](https://aka.ms/how-bots-work) 机器人 [如何工作的文章](https://aka.ms/azure-bot-service-docs)。 为自动程序开发Microsoft Teams核心 Bot Framework 之间的主要区别在于 Teams 中提供的功能。
 
-若要组织机器人的对话逻辑，则使用活动处理程序。 使用活动处理程序和自动程序逻辑Teams两种方法处理活动。 活动Teams处理程序添加了对特定于Microsoft Teams事件和交互的支持。 机器人对象包含轮次的对话逻辑或逻辑，并公开一个轮次处理程序，这是一种可接受来自机器人适配器的传入活动的方法。
+若要组织机器人的对话逻辑，则使用活动处理程序。 使用活动处理程序和自动程序逻辑Teams两种方式处理活动。 活动Teams处理程序添加了对特定于Microsoft Teams事件和交互的支持。 机器人对象包含轮次的对话逻辑或逻辑，并公开一个轮次处理程序，这是一种可接受来自机器人适配器的传入活动的方法。
 
 ## <a name="teams-activity-handlers"></a>Teams活动处理程序
 
 Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 它先Teams所有活动，然后再Teams处理任何非活动。
 
-当聊天机器人Teams活动时，它会路由到活动处理程序。 所有活动都通过一个称为轮转处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 自动Teams程序派生自类，该类 `TeamsActivityHandler` 派生自 Bot Framework 的 `ActivityHandler` 类。
+当聊天机器人Teams活动时，它会路由到活动处理程序。 所有活动都通过一个称为轮转处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 the Teams bot is derived from `TeamsActivityHandler` class， which is derived from the Bot Framework's `ActivityHandler` class.
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -52,20 +53,20 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 
 ## <a name="bot-logic"></a>自动程序逻辑
 
-机器人逻辑处理来自一个或多个自动程序通道的传入活动，并响应生成传出活动。 对于从活动处理程序类派生的自动程序Teams，它首先检查活动Teams情况。 检查活动Teams，它会将所有其他活动传递给 Bot Framework 的活动处理程序。
+机器人逻辑处理来自一个或多个自动程序通道的传入活动，并响应生成传出活动。 对于从活动处理程序类派生的自动程序Teams，它首先会检查Teams活动。 在检查Teams活动后，它会将所有其他活动传递给 Bot Framework 的活动处理程序。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
 #### <a name="core-bot-framework-handlers"></a>核心 Bot Framework 处理程序
 
 >[!NOTE]
-> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非活动自动程序一样Teams工作。
+> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非自动程序一样Teams工作。
 
 活动处理程序在团队的上下文中有所不同，其中将新成员添加到团队，而不是消息线程。
 
 中定义的处理程序列表 `ActivityHandler` 包括：
 
-| Event | Handler | 说明 |
+| Event | Handler | 描述 |
 | :-- | :-- | :-- |
 | 接收的任何活动类型 | `OnTurnAsync` | 此方法根据收到的活动类型调用其他处理程序之一。 |
 | 收到的邮件活动 | `OnMessageActivityAsync` | 可以重写此方法以处理 `Message` 活动。 |
@@ -92,7 +93,7 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 
 #### <a name="teams-invoke-activities"></a>Teams调用活动
 
-从 Teams 活动处理程序调用的Teams `OnInvokeActivityAsync` 活动处理程序的列表包括：
+从活动Teams处理程序调用的Teams `OnInvokeActivityAsync` 活动处理程序的列表包括：
 
 | 调用类型                    | Handler                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -105,14 +106,14 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | 此方法可以在派生类中重写，以提供提取任务模块时的逻辑。 |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | 此方法可以在派生类中重写，以提供提交任务模块时的逻辑。 |
 
-本部分中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+本节中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 #### <a name="core-bot-framework-handlers"></a>核心 Bot Framework 处理程序
 
 >[!NOTE]
-> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非活动自动程序一样Teams工作。
+> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非自动程序一样Teams工作。
 
 活动处理程序在团队的上下文中有所不同，其中将新成员添加到团队，而不是消息线程。
 
@@ -122,7 +123,7 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 | :-- | :-- | :-- |
 | 接收的任何活动类型 | `onTurn` | 此方法根据收到的活动类型调用其他处理程序之一。 |
 | 收到的邮件活动 | `onMessage` | 此方法有助于处理 `Message` 活动。 |
-| 收到的对话更新活动 | `onConversationUpdate` | 如果活动上除机器人成员加入或离开对话外的成员，此方法将调用 `ConversationUpdate` 处理程序。 |
+| 收到的对话更新活动 | `onConversationUpdate` | 如果活动上除机器人加入或离开对话的成员外，此方法将调用 `ConversationUpdate` 处理程序。 |
 | 非自动程序成员已加入对话 | `onMembersAdded` | 此方法有助于处理加入对话的成员。 |
 | 非自动程序成员离开对话 | `onMembersRemoved` | 此方法有助于处理离开对话的成员。 |
 | 收到的事件活动 | `onEvent` | 此方法在活动上调用特定于事件类型的 `Event` 处理程序。 |
@@ -133,7 +134,7 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 
 扩展核心 Bot Framework 处理程序部分中的处理程序 `TeamsActivityHandler` 列表，以包括以下内容：
 
-| Event | Handler | 说明 |
+| Event | Handler | 描述 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | 可以重写此方法以处理要Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -144,7 +145,7 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 
 #### <a name="teams-invoke-activities"></a>Teams调用活动
 
-从 Teams 活动处理程序调用的Teams `onInvokeActivity` 活动处理程序的列表包括：
+从活动Teams处理程序调用的Teams `onInvokeActivity` 活动处理程序的列表包括：
 
 | 调用类型                    | Handler                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -157,20 +158,20 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | 此方法可以在派生类中重写，以提供提取任务模块时的逻辑。 |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | 此方法可以在派生类中重写，以提供提交任务模块时的逻辑。 |
 
-本部分中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+本节中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 # <a name="python"></a>[Python](#tab/python)
 
 #### <a name="core-bot-framework-handlers"></a>核心 Bot Framework 处理程序
 
 >[!NOTE]
-> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非活动自动程序一样Teams工作。
+> 除了添加 **和****删除** 的成员的活动之外，本节中所述的所有活动处理程序将继续像处理非自动程序一样Teams工作。
 
 活动处理程序在团队的上下文中有所不同，其中将新成员添加到团队，而不是消息线程。
 
 中定义的处理程序列表 `ActivityHandler` 包括：
 
-| Event | Handler | 说明 |
+| Event | Handler | 描述 |
 | :-- | :-- | :-- |
 | 接收的任何活动类型 | `on_turn` | 此方法根据收到的活动类型调用其他处理程序之一。 |
 | 收到的邮件活动 | `on_message_activity` | 可以重写此方法以处理 `Message` 活动。 |
@@ -186,7 +187,7 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 
 扩展核心 Bot Framework 处理程序部分中的处理程序 `TeamsActivityHandler` 列表，以包括以下内容：
 
-| Event | Handler | 说明 |
+| Event | Handler | 描述 |
 | :-- | :-- | :-- |
 | channelCreated | `on_teams_channel_created` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `on_teams_channel_deleted` | 可以重写此方法以处理要Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -197,7 +198,7 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 
 #### <a name="teams-invoke-activities"></a>Teams调用活动
 
-从活动Teams处理程序调用的Teams `on_invoke_activity` 活动处理程序的列表包括：
+从活动Teams处理程序调用的活动Teams `on_invoke_activity` 列表包括：
 
 | 调用类型                    | Handler                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -210,7 +211,7 @@ Teams活动处理程序派生自Microsoft Bot Framework的活动处理程序。 
 | task/fetch                      | `on_teams_task_module_fetch`        | 此方法可以在派生类中重写，以提供提取任务模块时的逻辑。 |
 | task/submit                     | `on_teams_task_module_submit`       | 此方法可以在派生类中重写，以提供提交任务模块时的逻辑。 |
 
-本部分中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+本节中列出的调用活动适用于远程聊天机器人Teams。 Bot Framework SDK 还支持调用特定于消息传递扩展的活动。 有关详细信息，请参阅 [什么是邮件扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 ---
 

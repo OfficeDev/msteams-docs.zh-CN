@@ -5,12 +5,13 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: surbhigupta
 author: KirtiPereira
-ms.openlocfilehash: c653e8a27da47ab38b4209eee5a57d3cf00ab1a9
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: 将 LMS mConnect 深度链接
+ms.openlocfilehash: beaac8d139b164b26f791b46a089a44cd8a4681d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719775"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888452"
 ---
 # <a name="moodle-learning-management-system"></a>可学习管理系统
 
@@ -23,7 +24,7 @@ ms.locfileid: "60719775"
  
 与 Microsoft Teams 集成。 Teams是实时协作、团队合作和工作效率的中心。 与多达 300 Office 365数百个应用、聊天和实时会议功能的无缝集成。 Teams使教职员工和学生无论在哪里，都能够更高效地协作。 
  
-Microsoft 365在向教职员工和学生提供全面体验后，可开发开发插件补充了一个与一起播放的"开发工具"。 通过 Microsoft 365的一个 Pluginle 插件，网站管理员可以将用户与：
+Microsoft 365在向教职员工和学生提供全面体验后，可开发开发插件补充了一个与一起播放的"开发工具"。 通过Microsoft 365一个功能插件，网站管理员可以将用户与：
 
 * Office 365和将
 * 自动执行用户匹配
@@ -31,13 +32,13 @@ Microsoft 365在向教职员工和学生提供全面体验后，可开发开发�
 * 连接 OneNote作业
 * 嵌入Office文档
  
-Microsoft Teams应用（如 Skooler 的 mConnect 和由 Microsoft 365 的 Plugins）将一起将一个将用户 Teams。
+Microsoft Teams应用（如 Skooler 的 mConnect）和由 Microsoft 365 Plugins 开发的应用，将一起将一Teams。
 
 教职员工和学生可以在实时通信和协作中利用用户的独特功能。
 
 ## <a name="mconnect-app-by-skooler"></a>Skooler 的 mConnect 应用
 
-Skooler 的 mConnect 应用允许你通过 Teams轻松交付虚拟学习。
+Skooler 的 mConnect 应用允许你轻松通过 Teams虚拟学习。
 
 ### <a name="why-mconnect-and-teams"></a>为什么使用 mConnect 和 Teams
 

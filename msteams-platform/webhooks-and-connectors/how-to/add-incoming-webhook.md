@@ -1,17 +1,17 @@
 ---
 title: 创建传入 Webhook
 author: laujan
-description: 介绍如何将传入 Webhook Teams应用程序，以及将外部请求Teams传入 Webhook
+description: 介绍如何将传入 Webhook 添加到 Teams 应用，以及将外部请求Teams传入 Webhook
 keywords: teams 选项卡传出 Webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 546ca7643ee64412dab6c383e4090dd631a643c8
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: c0d0ad53f95a009b9b5629b1ec7b74a1a9886b92
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260699"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888312"
 ---
 # <a name="create-incoming-webhook"></a>创建传入 Webhook
 
@@ -25,7 +25,7 @@ ms.locfileid: "60260699"
 
 下表提供了传入 Webhook 的功能和说明：
 
-| 功能 | 说明 |
+| 功能 | 描述 |
 | ------- | ----------- |
 |使用传入 Webhook 的自适应卡片|自适应卡片可以通过传入 Webhook 发送。 有关详细信息，请参阅使用 [传入 Webhook 发送自适应卡片](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook)。|
 |可操作邮件支持|可操作邮件卡在所有邮件组中Office 365，包括Teams。 如果通过卡片发送邮件，则必须使用可操作邮件卡片格式。 有关详细信息，请参阅旧版可[操作邮件卡参考](/outlook/actionable-messages/message-card-reference)[和邮件卡的场](https://messagecardplayground.azurewebsites.net)。|
@@ -35,7 +35,7 @@ ms.locfileid: "60260699"
 |安全资源定义|邮件的格式设置为 JSON 有效负载。 此声明性消息结构可防止插入恶意代码。|
 
 > [!NOTE]
-> * Teams机器人、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片，这是一个开放的跨卡平台框架。 目前[，Teams](../../webhooks-and-connectors/how-to/connectors-creating.md)连接器不支持自适应卡片。 但是，可以创建一个将自适应卡片[](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)张贴到一个Teams流。
+> * Teams聊天机器人、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片，这是一个开放的跨卡平台框架。 目前[，Teams](../../webhooks-and-connectors/how-to/connectors-creating.md)连接器不支持自适应卡片。 但是，可以创建一个将自适应卡片[](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)张贴到 Teams 流。
 > * 有关卡片和 Webhook 的信息，请参阅[自适应卡片和传入 Webhook。](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
 ## <a name="create-incoming-webhook"></a>创建传入 Webhook
@@ -96,3 +96,5 @@ webhook 在 Teams 中可用。
 * [创建传出 Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [创建 Office 365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [创建和发送邮件](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [创建“共享到 Teams”按钮](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [集成 web 应用](~/samples/integrate-web-apps-overview.md)

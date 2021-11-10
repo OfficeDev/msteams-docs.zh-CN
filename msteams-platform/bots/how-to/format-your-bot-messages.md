@@ -1,16 +1,16 @@
 ---
 title: 设置你的智能机器人邮件格式
 author: surbhigupta
-description: 向自动程序消息添加丰富的格式
+description: 向自动程序消息添加丰富的格式，例如删除线、已排序和无序列表、超链接、图像链接等。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 3116b13f524279d4cca88fe649602d14d3542bbc
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566223"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887425"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
@@ -22,7 +22,7 @@ ms.locfileid: "60566223"
 
 Microsoft Teams支持以下格式选项：
 
-| `TextFormat` value | 说明 |
+| `TextFormat` value | 描述 |
 | --- | --- |
 | plain | 必须将文本视为原始文本，不应用任何格式。|
 | markdown | 文本必须视为 markdown 格式，并在适当时呈现在频道上。 |
@@ -36,7 +36,7 @@ Teams markdown 和 XML 或 HTML 格式标记的子集。
 * 格式卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。
 * 富卡片不支持 markdown 或表格格式。
 
-设置文本内容的格式后，请确保您的格式设置适用于所有受 Microsoft Teams。
+设置文本内容的格式后，请确保格式设置适用于所有受文本Microsoft Teams。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 

@@ -1,20 +1,21 @@
 ---
 title: 准备应用商店提交
-description: 介绍提交要列在应用商店Microsoft Teams应用之前的最后步骤。
+description: 介绍提交要列在应用商店Microsoft Teams应用之前的最后步骤。 了解如何验证应用包、编译测试说明以及创建应用商店一览详细信息。
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: 提交应用商店分发验证应用包指南本地化
+ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720349"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889165"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
-你已设计、生成和测试你的Microsoft Teams应用。 现在，你已准备好列出它，以便用户可以发现并开始使用你的应用。
+你已设计、生成和测试Microsoft Teams应用。 现在，你已准备好列出它，以便用户可以发现并开始使用你的应用。
 
 在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource)之前，请确保你已完成以下操作。
 
@@ -27,7 +28,7 @@ ms.locfileid: "60720349"
 
 应用Microsoft Teams工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
-1. 转到应用[Microsoft Teams工具 。](https://dev.teams.microsoft.com/appvalidation.html)  (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) 
+1. 转到应用[Microsoft Teams工具](https://dev.teams.microsoft.com/appvalidation.html)。  (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) 
 1. Upload应用包运行自动测试。
 1. 转到" **初步检查表** "并查看难以自动化的测试用例。
 1. [一般情况下修复配置](~/resources/schema/manifest-schema.md) 或应用的问题。 如果自动测试为您提供错误，或者您未满足检查表中的所有条件，将会出现这些问题。
@@ -39,11 +40,11 @@ ms.locfileid: "60720349"
 * 凭据
 * 许可证密钥
 
-你可以添加合作伙伴中心中的说明，或将它们上载到 SharePoint。
+可以在合作伙伴中心中添加说明，或将其上载到 SharePoint 上公开提供的位置。
 
 ### <a name="feature-list"></a>功能列表
 
-在应用中提供有关应用功能的详细信息Teams测试每个功能的步骤。
+提供有关应用功能的详细信息，Teams测试每个功能的步骤。
 
 ### <a name="accounts"></a>帐户
 
@@ -52,10 +53,10 @@ ms.locfileid: "60720349"
 根据应用的功能，可能需要提供以下所有帐户：
 
 * 管理员帐户 (必需) 
-* 非管理员帐户 (需要) 
+* 非管理员帐户 (必需) 
 * 未预配置为正确测试首次运行登录体验的帐户 (要求) 
-* 有权访问高级或升级功能的帐户 (如果适用) 
-* 同一租户中的两个帐户，用于测试在共享上下文中工作的应用的协作 (（如果适用) 
+* 有权访问高级或升级功能的帐户 (（如果适用) 
+* 同一租户中的两个帐户，用于测试在共享上下文中工作的应用的 (体验（如果适用) 
 
 ### <a name="tenant-configurations"></a>租户配置
 
@@ -73,7 +74,7 @@ ms.locfileid: "60720349"
 
 ### <a name="specify-a-short-name"></a>指定短名称
 
-特别是，你的应用 (，其短) 名称在用户如何在[](~/resources/schema/manifest-schema.md#name)应用商店中发现它中扮演重要角色。
+特别是，你的应用的名称 (，它的短) 在用户如何在[](~/resources/schema/manifest-schema.md#name)应用商店中发现它中扮演重要角色。
 
 :::row:::
 
@@ -133,7 +134,7 @@ ms.locfileid: "60720349"
 
 图标是用户在浏览应用商店时看到的主要元素之一。 图标应传达应用的品牌和用途，同时遵循Teams要求。
 
-有关详细信息，请参阅[有关创建应用Teams指南](~/concepts/build-and-test/apps-package.md#app-icons)。
+有关详细信息，请参阅[有关创建应用图标Teams指南](~/concepts/build-and-test/apps-package.md#app-icons)。
 
 ### <a name="capture-screenshots"></a>捕获屏幕截图
 
@@ -202,14 +203,18 @@ ms.locfileid: "60720349"
 
 [Publisher应用商店](/azure/active-directory/develop/publisher-verification-overview)中列出的Teams应用需要验证。 有关详细信息，请参阅 [常见问题解答](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)，[如何将应用标记为发布者验证](/azure/active-directory/develop/mark-app-as-publisher-verified)，以及 [排除发布者验证的故障](/azure/active-directory/develop/troubleshoot-publisher-verification)。
 
-## <a name="complete-publisher-attestation"></a>完整Publisher证明
+## <a name="complete-publisher-attestation"></a>完成Publisher证明
 
 [Publisher应用商店](/microsoft-365-app-certification/docs/attestation)中列出的应用Teams证明也是必需的。 此过程包括完成对应用的安全性、数据处理和合规性做法的自我评估。 此过程可帮助潜在客户做出有关使用你的应用的明智决定。
 
 > [!NOTE]
-> 如果你要提交新应用，则你无法正式完成Publisher证明，直到你的应用在应用商店Teams列出。 如果要更新列出的应用，请Publisher验证，然后再提交应用的最新版本进行验证。
+> 如果你要提交新应用，则你无法正式完成Publisher证明，直到你的应用在应用商店Teams列出。 如果要更新列出的应用，请完成Publisher证明，然后再提交应用的最新版本进行验证。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [提交你的应用](/office/dev/store/add-in-submission-guide)
+
+## <a name="see-also"></a>另请参阅
+
+[解决应用商店提交Microsoft Teams时的问题](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

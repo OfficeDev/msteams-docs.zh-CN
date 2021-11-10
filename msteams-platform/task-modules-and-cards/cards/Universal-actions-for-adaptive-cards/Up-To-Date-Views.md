@@ -1,19 +1,20 @@
 ---
 title: 最新视图
-description: 使用通用自动程序查看最新视图的示例
+description: 了解使用具有代码的通用自动程序示例查看最新视图
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 96f87f8795fdd2fed2276b2d67e58d1c394b05f6
-ms.sourcegitcommit: d0f1333d5dc5aede963dc59cfb1c2eca70aaf521
+keywords: 审批基本卡拒绝自适应
+ms.openlocfilehash: 2e7feb96ecefd0e6253c0f3a86e3863e0ae7a53b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "60238235"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887404"
 ---
 # <a name="up-to-date-cards"></a>最新卡片
 
-现在可以在自适应卡片上为用户提供最新信息。 将刷新和邮件编辑组合在Teams。 当服务发生变化时，将用户特定视图动态更新到其最新状态。 例如，对于项目管理或票证卡，更新注释和任务状态。 对于审批，最新状态会反映出来，同时还提供不同的信息和操作。
+现在可以在自适应卡片上为用户提供最新信息。 包括刷新和邮件编辑组合在Teams。 当服务发生变化时，将用户特定视图动态更新到其最新状态。 例如，对于项目管理或票证卡，更新注释和任务状态。 对于审批，最新状态会反映出来，同时还提供不同的信息和操作。
 
 例如，用户可以在资源审批对话中Teams请求。 Alex 创建审批请求并将其分配给 Megan 和 Nestor。 以下是创建审批请求的两个部分：
 
@@ -113,11 +114,11 @@ ms.locfileid: "60238235"
 下面是根据审批请求向用户显示的两个角色：
 
 * 审批基本卡：向不是审批者列表一部分的用户显示，并且请求尚未获得批准或拒绝，以及自适应卡片 JSON 属性中列表的一 `userIds` `refresh` 部分。
-* 包含" **批准"** 或 **"** 拒绝"按钮的审批卡：向作为审批者列表的一部分的用户和自适应卡片 JSON 的 属性中的列表 `userIds` `refresh` 显示。
+* 具有" **批准"** 或 **"** 拒绝"按钮的审批卡片：向作为审批者列表的一部分的用户和自适应卡片 JSON 的 属性中的列表 `userIds` `refresh` 显示。
 
 **发送资产审批请求**
 
-1. Alex 在对话中提出资产审批Teams并将其分配给 Megan 和 Nestor。
+1. Alex 在资产审批对话中Teams资产审批请求，并将其分配给 Megan 和 Nestor。
 2. 机器人在对话中发送审批基本卡。
 3. 对话中的所有其他用户将看到机器人发送的卡片。 为 Megan 和 Nestor 触发自动刷新，他们现在看到用户特定卡片包含"批准"或"拒绝"按钮，因为用户 MRIs 将添加到自适应卡片的 属性 `userIds` `refresh` 中的列表中。
 

@@ -1,21 +1,21 @@
 ---
 title: SameSite cookie 属性
 author: laujan
-description: 描述 SameSite Cookie 的属性
+description: 了解 Cookie 的类型，包括 SameSite Cookie、其属性、Teams 选项卡、任务模块和消息传递扩展中的含义，以及 cookie 在 Teams
 keywords: cookie 属性 samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: b5f66a9f3e542b5abff96c695c3da488773d10cb
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 34347e172206228bed86874b44b768f87c2a63b9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566125"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887941"
 ---
-# <a name="samesite-cookie-attribute"></a>SameSite cookie 属性 
+# <a name="samesite-cookie-attribute"></a>SameSite cookie 属性
 
-Cookie 是由网站发送的文本字符串，由 Web 浏览器存储在计算机上。 它们用于身份验证和个性化。 例如，Cookie 用于调用状态信息、保留用户设置、记录浏览活动以及显示相关广告。 Cookie 始终链接到特定域，并且由各方安装。 
+Cookie 是由网站发送的文本字符串，由 Web 浏览器存储在计算机上。 它们用于身份验证和个性化。 例如，Cookie 用于调用状态信息、保留用户设置、记录浏览活动以及显示相关广告。 Cookie 始终链接到特定域，并且由各方安装。
 
 ## <a name="types-of-cookies"></a>Cookie 的类型
 
@@ -39,7 +39,7 @@ Google Chrome 版本 51 引入了 `SetCookie SameSite` 规范作为可选属性�
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite Cookie 属性：2020 版本
 
-Chrome 80 于 2020 年 2 月发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 将三个值传递到更新的 SameSite 属性 **：Strict、Lax** 或 **None**。  如果未指定，则 Cookie SameSite 属性默认采用 `SameSite=Lax` 值。    
+Chrome 80 于 2020 年 2 月发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 将三个值传递到更新的 SameSite 属性 **：Strict、Lax** 或 **None**。  如果未指定，则 Cookie SameSite 属性默认采用 `SameSite=Lax` 值。
  
 SameSite Cookie 属性如下所示：
 
@@ -60,7 +60,7 @@ SameSite Cookie 属性如下所示：
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>选项卡、任务模块和消息传递扩展
 
-* Teams选项卡用于嵌入在顶级或第一方 `<iframes>` 上下文中查看的内容。
+* Teams选项卡 `<iframes>` 用于嵌入在顶级或第一方上下文中查看的内容。
 * 任务模块允许你在 Teams 应用程序中创建模式弹出体验。 与选项卡类似，模式窗口在当前页面内打开。
 * 消息扩展允许您将扩充的内容插入到来自外部资源的聊天消息中。
 
@@ -78,11 +78,11 @@ SameSite Cookie 属性如下所示：
 
 ## <a name="android-system-webview"></a>Android System WebView
 
-Android WebView 是允许 Android 应用显示 Web 内容的 Chrome 系统组件。 虽然新限制是默认限制，但从 Chrome 80 开始，不会立即在 WebView 上强制执行这些限制。 将来将应用这些策略。 为进行准备，Android 允许本机应用直接通过[CookieManager API 设置 Cookie。](https://developer.android.com/reference/android/webkit/CookieManager)
+Android WebView 是一个 Chrome 系统组件，它允许 Android 应用显示 Web 内容。 虽然新限制是默认限制，但从 Chrome 80 开始，不会立即在 WebView 上强制执行这些限制。 将来将应用这些策略。 为进行准备，Android 允许本机应用直接通过[CookieManager API 设置 Cookie。](https://developer.android.com/reference/android/webkit/CookieManager)
 
-> [!NOTE]     
-> * 必须在适当时将第一方 `SameSite=Lax` Cookie 声明为 或 `SameSite=Strict` 。      
-> * 必须将第三方 Cookie 声明为 `SameSite=None; Secure` 。   
+> [!NOTE]
+> * 必须在适当时将第一方 `SameSite=Lax` Cookie 声明为 或 `SameSite=Strict` 。
+> * 必须将第三方 Cookie 声明为 `SameSite=None; Secure` 。
 
 ## <a name="see-also"></a>另请参阅
 

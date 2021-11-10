@@ -1,22 +1,22 @@
 ---
 title: 创建并发送任务模块
 author: surbhigupta
-description: 如何处理初始调用操作，以及使用操作消息扩展命令中的任务模块进行响应
+description: 了解如何使用代码示例和示例处理初始调用操作，以及如何使用操作消息扩展命令中的任务模块进行响应。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 891608b2346e09570ba88ee2b868177e1aca619c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b30388e88505e9d0049da5271187c06c68efd5f5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155265"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889179"
 ---
 # <a name="create-and-send-the-task-module"></a>创建并发送任务模块
-
+ 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-可以使用自适应卡片或嵌入式 Web 视图创建任务模块。 若要创建任务模块，必须执行称为初始调用请求的过程。 本文档涵盖初始调用请求、从一对一聊天、群聊、频道 (新帖子) 、频道 (回复线程) 和命令框调用任务模块时的有效负载活动属性。 
+可以使用自适应卡片或嵌入式 Web 视图创建任务模块。 若要创建任务模块，必须执行称为初始调用请求的过程。 本文档涵盖初始调用请求、从一对一聊天调用任务模块时的有效负载活动属性、群聊、频道 (新帖子) 、频道 (回复线程) 和命令框。 
 > [!NOTE]
 > 如果没有使用应用清单中定义的参数填充任务模块，则必须为具有自适应卡片或嵌入式 Web 视图的用户创建任务模块。
 
@@ -32,8 +32,8 @@ ms.locfileid: "59155265"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果在 (通道中提出请求，频道 ID 将) 。 |
-|`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
+|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
+|`channelData.team.id`| 团队 ID (是在频道请求中) 。 |
 |`value.commandId` | 包含已调用的命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须是 `compose` 。 |
 |`value.context.theme` | 用户的客户端主题，对嵌入式 Web 视图格式非常有用。 它必须是 `default` 、 `contrast` 或 `dark` 。 |
@@ -232,8 +232,8 @@ ms.locfileid: "59155265"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果在 (通道中提出请求，频道 ID 将) 。 |
-|`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
+|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
+|`channelData.team.id`| 团队 ID (是在频道请求中) 。 |
 |`channelData.source.name`| 调用任务模块的源名称。 |
 |`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
 |`value.commandId` | 包含已调用的命令的 ID。 |
@@ -242,7 +242,7 @@ ms.locfileid: "59155265"
 
 ### <a name="example"></a>示例
 
-从频道调用任务模块时的有效负载活动属性 (以下示例) 新文章：
+从频道调用任务模块时的有效负载活动属性 (以下示例) 文章时有效负载活动属性：
 
 ```json
 {
@@ -298,7 +298,7 @@ ms.locfileid: "59155265"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果在 (通道中提出请求，频道 ID 将) 。 |
+|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
 |`channelData.source.name`| 调用任务模块的源名称。 |
 |`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
@@ -308,7 +308,7 @@ ms.locfileid: "59155265"
 
 ### <a name="example"></a>示例
 
-从频道调用任务模块时的有效负载活动属性 (对线程) 如以下示例所示：
+从频道调用任务模块时的有效负载活动属性 (以下示例中) 对线程的回复：
 
 ```json
 {
@@ -655,8 +655,8 @@ taskInfo 对象的架构为：
 |属性名称|用途|
 |---|---|
 |`title`| 任务模块的标题。|
-|`height`| 它必须是整数值 (以像素为单位) 或 `small` 、 `medium` 、 `large` 。|
-|`width`| 它必须是整数值 (以像素为单位) 或 `small` 、 `medium` 、 `large` 。|
+|`height`| 它必须是整数值 (以像素为单位) ，或 `small` 、 `medium` 、 `large` 。|
+|`width`| 它必须是整数值 (以像素为单位) ，或 `small` 、 `medium` 、 `large` 。|
 |`card`| 定义表单的自适应卡片 (使用一个) 。
 |`url`| 在任务模块内作为嵌入 Web 视图打开的 URL。|
 |`fallbackUrl`| 如果客户端不支持任务模块功能，此 URL 在浏览器选项卡中打开。 |
@@ -987,13 +987,11 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 |Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>另请参阅
-
-[定义操作命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-
-
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"] 
 > [响应操作命令](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
+## <a name="see-also"></a>另请参阅
+
+[定义操作命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)

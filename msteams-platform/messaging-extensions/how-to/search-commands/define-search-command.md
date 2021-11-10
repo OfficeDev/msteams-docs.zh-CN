@@ -1,16 +1,16 @@
 ---
 title: 定义消息传递扩展搜索命令
 author: surbhigupta
-description: 为应用程序定义消息传递扩展Microsoft Teams命令。
+description: 了解应用的邮件扩展搜索Microsoft Teams，通过应用清单创建搜索命令，并手动使用代码示例和示例。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720125"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889382"
 ---
 # <a name="define-messaging-extension-search-commands"></a>定义消息传递扩展搜索命令
 
@@ -70,7 +70,7 @@ ms.locfileid: "60720125"
 
 1. 添加搜索参数，然后选择"保存 **"。**
 
-### <a name="create-a-search-command-manually"></a>手动创建搜索命令 
+### <a name="create-a-search-command-manually"></a>手动创建搜索命令
 
 若要将邮件扩展搜索命令手动添加到应用清单，必须将以下参数添加到 `composeExtension.commands` 对象数组：
 
@@ -83,7 +83,7 @@ ms.locfileid: "60720125"
 |`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
 | `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
-您必须添加搜索参数的详细信息，该参数定义用户在 Teams 客户端中可见的文本。
+您必须添加搜索参数的详细信息，该参数定义在 Teams 客户端中可见的文本。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
@@ -95,7 +95,7 @@ ms.locfileid: "60720125"
 
 #### <a name="example"></a>示例
 
-以下部分是定义搜索命令的对象的简单 `composeExtensions` 应用清单的示例： 
+以下部分是定义搜索命令的对象的简单 `composeExtensions` 应用清单的示例：
 
 ```json
 {
@@ -130,7 +130,7 @@ ms.locfileid: "60720125"
 |Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [响应搜索命令](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。

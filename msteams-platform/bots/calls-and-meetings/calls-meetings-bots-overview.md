@@ -1,15 +1,15 @@
 ---
 title: 通话和联机会议机器人
-description: 了解你的 Microsoft Teams 应用如何使用语音和视频与用户使用 Microsoft Graph API 进行通话和联机会议交互。
+description: 了解你的 Microsoft Teams 应用如何使用语音和视频与用户交互（使用 Microsoft Graph API 进行通话和联机会议）并了解实时媒体流
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: 呼叫呼叫 音频视频 IVR 语音联机会议
-ms.openlocfilehash: e94cb425f7931582067bc3439e890b74b64e0f51
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: 呼叫音频视频 IVR 语音联机会议实时媒体流机器人
+ms.openlocfilehash: 17464683c8a5f6aa515d67be721968d56d1d2fb7
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155969"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889144"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
 
@@ -19,11 +19,11 @@ ms.locfileid: "59155969"
 * 呼叫控制。
 * 访问实时音频和视频流，包括桌面应用共享。
 
-若要在 Graph应用中使用这些 Teams API，请创建一个自动程序并指定一些其他信息和权限。
+若要在Graph应用中使用这些 api，Teams自动程序并指定其他一些信息和权限。
 
-此外，实时媒体平台允许机器人使用实时Teams、视频和屏幕共享与通话和会议进行交互。 参与音频或视频通话和联机会议的机器人是一种Microsoft Teams聊天机器人，具有用于注册机器人的一些额外功能。
+此外，实时媒体平台允许机器人使用实时Teams、视频和屏幕共享与呼叫和会议进行交互。 参与音频或视频通话和联机会议的机器人是一种Microsoft Teams聊天机器人，具有用于注册机器人的一些额外功能。
 
-The Teams app manifest with two additional settings `supportsCalling` and `supportsVideo` ， Graph permissions for your bot's Microsoft App ID， and tenant admin consent enable you to register the bot. 在注册呼叫和会议机器人Teams时，会提到 Webhook URL，它是对自动程序的所有传入呼叫的 webhook 终结点。 应用程序托管的媒体机器人需要 Microsoft。Graph。Communications.Calls.Media .NET 库，用于访问音频和视频媒体流，机器人必须部署在 Azure 中的 Windows Server 计算机或 Windows Server 来宾操作系统 (操作系统) 上。 自动程序Teams音频和视频内容仅支持一组特定的媒体格式。
+The Teams app manifest with two additional settings `supportsCalling` and `supportsVideo` ， Graph permissions for your bot's Microsoft App ID， and tenant admin consent enable you to register the bot. 为聊天机器人注册Teams时，会提到 Webhook URL，它是对自动程序的所有传入呼叫的 webhook 终结点。 应用程序托管的媒体机器人需要 Microsoft。Graph。Communications.Calls.Media .NET 库，用于访问音频和视频媒体流，机器人必须部署在 Azure 中的 Windows Server 计算机或 Windows Server 来宾操作系统 (OS) 上。 自动程序Teams音频和视频内容仅支持一组特定的媒体格式。
 
 现在，您必须了解一些核心概念、术语和约定。
 
@@ -49,13 +49,13 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
 以下是调用所需的不同呼叫类型和权限：
 
-* 用户可以使用机器人发起对等呼叫或邀请机器人加入现有的多方呼叫。 多部分调用尚未在 Teams用户界面中启用。
+* 用户可以使用机器人发起对等呼叫或邀请机器人加入现有的多方呼叫。 在用户界面中尚未启用多方Teams。
 
     > [!NOTE]
     > 用户向自动程序发起的呼叫当前在移动Microsoft Teams不受支持。
 
 * Graph自动程序发起对等呼叫不需要权限。 机器人需要其他权限才能参与多方呼叫，或者机器人需要其他权限来发起与用户的对等呼叫。
-* 呼叫可以对等启动，并最终成为多方呼叫。 如果你的机器人拥有适当的权限，则机器人可以通过邀请其他人来发起多方呼叫。 如果你的机器人无权参与组通话，并且某位参与者向该呼叫添加了另一个参与者，则你的机器人会从通话中丢弃。
+* 呼叫可以对等启动，并最终成为多方呼叫。 如果你的机器人拥有适当的权限，则机器人可以通过邀请其他人来发起多方呼叫。 如果你的机器人无权参与组呼叫，并且某参与者向该呼叫添加了另一个参与者，则你的机器人会从呼叫中被删除。
 
 ### <a name="signals"></a>信号
 
@@ -74,7 +74,7 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
 ### <a name="real-time-media"></a>实时媒体
 
-当机器人参与呼叫或联机会议时，它必须处理音频和视频流。 当用户在通话中通话、在摄像头上显示自己或在会议中演示屏幕时，机器人会显示为音频和视频流。 如果机器人想要说出一些非常简单的话，请按 **0** 以在 IVR (交互语音响应中) 接线员，则需要播放 。WAV 文件。 这统称为媒体或实时媒体。
+当机器人参与呼叫或联机会议时，它必须处理音频和视频流。 当用户在通话中通话、在摄像头上显示自己或在会议中演示屏幕时，机器人会显示为音频和视频流。 如果机器人想要说出一些简单内容，请按 **0** 以在 IVR (交互语音响应中) 接线员，则需要播放 。WAV 文件。 这统称为媒体或实时媒体。
 
 实时媒体是指必须实时处理媒体（而不是播放以前录制的音频或视频）的方案。 处理媒体流（尤其是实时媒体流）非常复杂。 Microsoft 已创建实时媒体平台来处理这些方案，并尽可能卸载传统繁重的媒体处理工作。 当机器人应答传入呼叫或加入新呼叫或现有呼叫时，需要告诉实时媒体平台如何处理媒体。 如果要构建 IVR 应用程序，可以将昂贵的音频处理卸载到 Microsoft。 或者，如果你的机器人需要直接访问媒体流，则也支持该方案。 有两种类型的媒体处理：
 
@@ -86,7 +86,7 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
     例如，知道用户何时按 **0** 到达接线员。
 
-* **应用程序托管的媒体**：若要使机器人直接访问媒体，它需要特定的Graph权限。 在机器人拥有权限后，实时媒体[](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)库和 Graph[调用 SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder)可帮助你生成丰富的实时媒体和通话机器人。 必须在 Windows 环境中托管应用程序托管的机器人。 有关详细信息，请参阅 [应用程序托管的媒体机器人](./requirements-considerations-application-hosted-media-bots.md)。
+* **应用程序托管的媒体**：若要使机器人直接访问媒体，它需要特定的Graph权限。 在机器人拥有权限后，实时媒体[](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)库和Graph [SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder)可帮助你生成丰富的实时媒体和通话机器人。 必须在 Windows 环境中托管应用程序托管的机器人。 有关详细信息，请参阅 [应用程序托管的媒体机器人](./requirements-considerations-application-hosted-media-bots.md)。
 
 ## <a name="code-sample"></a>代码示例
 
@@ -95,23 +95,17 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 | Graph通信 | Graph与 Microsoft 的通信平台进行交互。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 | 通话和会议机器人 | 示例应用将启动机器人如何创建呼叫、加入会议以及转接呼叫。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
-## <a name="see-also"></a>另请参阅
-
-- [GraphAPI 参考](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-
-- [示例应用](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-
-- [注册支持通话和联机会议的机器人](./registering-calling-bot.md)
-
-- [Graph联机会议自动程序的权限](./registering-calling-bot.md#add-graph-permissions)
-
-- [如何在计算机上开发通话和联机会议机器人](./debugging-local-testing-calling-meeting-bots.md)
-
-- [应用程序托管的媒体机器人的要求和注意事项](./requirements-considerations-application-hosted-media-bots.md)
-
-- [有关处理传入呼叫通知的技术信息](./call-notifications.md)
-
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [实时媒体通话与会议](~/bots/calls-and-meetings/real-time-media-concepts.md)
+
+## <a name="see-also"></a>另请参阅
+
+- [GraphAPI 参考](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+- [示例应用](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+- [注册支持通话和联机会议的机器人](./registering-calling-bot.md)
+- [Graph和联机会议自动程序授予权限](./registering-calling-bot.md#add-graph-permissions)
+- [如何在计算机上开发通话和联机会议机器人](./debugging-local-testing-calling-meeting-bots.md)
+- [应用程序托管的媒体机器人的要求和注意事项](./requirements-considerations-application-hosted-media-bots.md)
+- [有关处理传入呼叫通知的技术信息](./call-notifications.md)

@@ -1,15 +1,15 @@
 ---
 title: 顺序工作流
-description: 使用通用操作的顺序工作流的示例
+description: 了解将通用操作与代码示例一同用于自适应卡片的顺序工作流
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: c3065080a0a470104fa2b7c06c9b0c8105a829a6
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e80f3d41e4dcbd281654c8070862fd5df9b0c128
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155720"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889109"
 ---
 # <a name="sequential-workflows"></a>顺序工作流
 
@@ -133,6 +133,6 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## <a name="see-also"></a>另请参阅
 
-* [自适应卡片在Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [用户中的自适应卡片Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)

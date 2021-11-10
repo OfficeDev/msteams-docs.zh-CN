@@ -1,16 +1,16 @@
 ---
 title: 通过自动程序发送和接收文件
-description: 介绍如何通过自动程序发送和接收文件
+description: 了解如何通过自动程序发送和接收文件、Graph所有 Teams 范围的 Graph API、使用代码示例和示例的 Teams bot API。
 keywords: teams 自动程序文件发送接收
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: cb82643ad55439ac12d707d9fff0378afa99e363
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a65db945c5d32586c648bb2aeec9d1ad7b08112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155367"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889172"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>通过自动程序发送和接收文件
 
@@ -19,7 +19,7 @@ ms.locfileid: "59155367"
 
 有两种方法向自动程序发送和接收文件：
 
-* [**使用 Microsoft Graph API：**](#use-the-graph-apis)此方法适用于所有作用域Microsoft Teams聊天机器人：
+* [**使用 Microsoft Graph API：**](#use-the-graph-apis)此方法适用于所有作用域中的Microsoft Teams程序：
   * `personal`
   * `channel`
   * `groupchat`
@@ -28,7 +28,7 @@ ms.locfileid: "59155367"
 
 ## <a name="use-the-graph-apis"></a>使用Graph API
 
-使用 OneDrive 和 SharePoint 的 Graph API 发布包含卡片附件的邮件，这些附件SharePoint[现有SharePoint。](/onedrive/developer/rest-api/) 若要使用Graph API，请通过标准 OAuth 2.0 授权流获取对以下任一项的访问权限：
+使用 SharePoint 和 SharePoint 的 Graph OneDrive API 发布包含卡片附件[的邮件](/onedrive/developer/rest-api/)。 若要使用Graph API，请通过标准 OAuth 2.0 授权流获取对以下任一项的访问权限：
 
 * 用户的文件OneDrive `personal` 文件夹 `groupchat` 。
 * 团队频道中的 `channel` 文件。
@@ -40,7 +40,7 @@ GraphAPI 在所有作用域Teams工作。 有关详细信息，请参阅 [发送
 ## <a name="use-the-teams-bot-apis"></a>使用Teams程序 API
 
 > [!NOTE]
-> Teams自动程序 API 仅在上下文中 `personal` 工作。 它们在 或 上下文中 `channel` `groupchat` 不起作用。
+> Teams程序 API 仅在上下文中 `personal` 工作。 它们在 或 上下文中 `channel` `groupchat` 不起作用。
 
 通过使用Teams API，机器人可以直接在上下文中与用户一起发送和接收文件，也称为 `personal` 个人聊天。 实现涉及文件内容编辑的费用报告、图像识别、文件存档和电子签名等功能。 通常，Teams共享的文件显示为卡片并允许丰富的应用内查看。
 
@@ -54,7 +54,7 @@ GraphAPI 在所有作用域Teams工作。 有关详细信息，请参阅 [发送
 
 ### <a name="receive-files-in-personal-chat"></a>接收个人聊天中的文件
 
-当用户向自动程序发送文件时，文件首先上传到用户OneDrive存储。 然后，机器人会收到一条消息活动，通知用户有关用户上载的信息。 活动包含文件元数据，例如其名称和内容 URL。 用户可以直接从此 URL 读取，以提取其二进制内容。
+当用户向自动程序发送文件时，文件首先上传到用户的 OneDrive存储。 然后，机器人会收到一条消息活动，通知用户有关用户上载的信息。 活动包含文件元数据，例如其名称和内容 URL。 用户可以直接从此 URL 读取，以提取其二进制内容。
 
 #### <a name="message-activity-with-file-attachment-example"></a>包含文件附件的邮件活动示例
 
@@ -319,7 +319,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 ## <a name="code-sample"></a>代码示例
 
-以下代码示例演示如何获取文件同意，以及如何将文件上载Teams自动程序：
+以下代码示例演示了如何获取文件同意，以及如何从自动程序Teams文件：
 
 |**示例名称** | **说明** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|

@@ -1,15 +1,15 @@
 ---
 title: 使用选项卡中的任务Microsoft Teams模块
-description: 介绍如何使用客户端 SDK 从Teams调用任务Microsoft Teams模块。
+description: 介绍如何从选项卡调用Teams模块，以及如何使用 Microsoft Teams SDK 提交结果。 它包括代码示例。
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: 任务模块团队选项卡客户端 sdk
-ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 618775644b43f16a6de49f7bc2fa92a512b73591
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155906"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888557"
 ---
 # <a name="use-task-modules-in-tabs"></a>在选项卡中使用任务模块
 
@@ -82,11 +82,11 @@ microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 
 验证用户输入后，调用 `microsoftTeams.tasks.submitTask()` 称为 的 SDK 函数 `submitTask()` 。 如果 `submitTask()` 只想关闭任务模块，Teams调用不带任何参数。 可以将对象或字符串传递到 `submitHandler` 。
 
-将结果作为第一个参数传递。 Teams调用 `submitHandler` ，其中 `err` 是 `null` `result` 和 是传递给 的对象或字符串 `submitTask()` 。 如果使用 参数 `submitTask()` 调用 `result` ，则必须传递 或 `appId` 字符串 `appId` 数组。 这允许Teams验证发送结果的应用是否与调用的任务模块相同。
+将结果作为第一个参数传递。 Teams调用 `submitHandler` where is `err` 和 `null` `result` 是传递给 的对象或字符串 `submitTask()` 。 如果使用 参数 `submitTask()` 调用 `result` ，则必须传递 或 `appId` 字符串 `appId` 数组。 这允许Teams验证发送结果的应用是否与调用的任务模块相同。
 
 ### <a name="adaptive-card-taskinfocard"></a>自适应卡片 `TaskInfo.card`
 
-当你使用 调用任务模块且用户选择一个按钮时，卡片中的值将返回 `submitHandler` `Action.Submit` 为 的值 `result` 。 如果用户选择 Esc 键或右上方的 X，则 `err` 改为返回 。 如果你的应用包含除选项卡外还包含自动程序，则只需在 对象中包含 自动程序 作为 `appId` `completionBotId` `TaskInfo` 的值。 当用户选择按钮时，使用消息将用户填充的自适应卡片 `task/submit invoke` 正文发送给 `Action.Submit` 自动程序。 你接收的对象的架构非常类似于你为任务/提取和任务/提交邮件 [收到的架构](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)。 唯一的区别是 JSON 对象的架构是自适应卡片对象，而不是包含自适应卡片对象的对象，就像自适应卡片用于机器人 [一样](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)。
+当你使用 调用任务模块且用户选择一个按钮时，卡片中的值将返回 `submitHandler` `Action.Submit` 为 的值 `result` 。 如果用户选择 Esc 键或右上方的 X，则 `err` 改为返回 。 如果你的应用包含除选项卡外还包含自动程序，则只需在 对象中包含 自动程序 作为 `appId` `completionBotId` `TaskInfo` 的值。 当用户选择按钮时，使用消息将用户填充的自适应卡片 `task/submit invoke` 正文发送给 `Action.Submit` 自动程序。 你接收的对象的架构非常类似于你为任务/提取和任务/提交消息收到的 [架构](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)。 唯一的区别是 JSON 对象的架构是自适应卡片对象，而不是包含自适应卡片对象的对象，就像自适应卡片用于机器人 [一样](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)。
 
 下一节提供了一个提交任务模块结果的示例。
 
@@ -133,11 +133,11 @@ function validateForm() {
 |----------------|-----------------|--------------|----------------|
 |任务模块示例选项卡和 bots-V3 | 用于创建任务模块的示例。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
-## <a name="see-also"></a>另请参阅
-
-[调用和关闭任务模块](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
-
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [使用自动程序中的任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+
+## <a name="see-also"></a>另请参阅
+
+[调用和关闭任务模块](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

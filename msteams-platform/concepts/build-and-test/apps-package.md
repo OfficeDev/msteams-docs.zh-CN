@@ -3,12 +3,12 @@ title: 打包应用
 description: 了解如何打包应用Microsoft Teams、上传和应用商店发布。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 926d6051024ae6e9a5f3d857bdb97fa02f56e8db
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 44b8f21361c39bd723ff375b385569125b65ea27
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260671"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889305"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>创建Microsoft Teams应用包
 
@@ -30,7 +30,7 @@ ms.locfileid: "60260671"
 > [!Note]
 > 如果你的应用具有自动程序或消息传递扩展，你的图标也将包含在你的自动Microsoft Azure注册中。
 
-若要使应用通过Teams评审，这些图标必须满足以下大小要求。
+若要使应用通过Teams评价，这些图标必须满足以下大小要求。
 
 ### <a name="color-icon"></a>颜色图标
 
@@ -44,10 +44,10 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，以及自
 
 大纲图标在两种方案中显示：
 
-* 当你的应用在使用中，并且位于应用栏左侧的应用栏上Teams。
+* 当你的应用在使用中时，在应用栏的左侧应用栏上Teams。
 * 当用户固定你的应用的消息扩展时。
 
-图标必须为 32x32 像素。 它可以是白色（带透明背景）或透明（使用白色背景 (不允许使用任何其他颜色) 。 大纲图标不应在符号周围有任何额外的填充。
+图标必须为 32x32 像素。 它可以是白色且具有透明背景，或者使用白色背景 (不允许使用任何其他颜色) 。 大纲图标不应在符号周围有任何额外的填充。
 
 :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams大纲图标设计指南。" border="false":::
 
@@ -78,7 +78,7 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，以及自
 
 ### <a name="examples"></a>示例
 
-下面是应用图标在不同功能和上下文中Teams的方式。
+下面将说明应用图标在不同的Teams和上下文中的显示方式。
 
 #### <a name="personal-app"></a>个人应用
 
@@ -102,3 +102,7 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，以及自
 > [将应用发布到组织](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
 > [将应用发布到应用商店](~/concepts/deploy-and-publish/appsource/publish.md)
+
+## <a name="see-also"></a>另请参阅
+
+[使用开发人员门户管理应用Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

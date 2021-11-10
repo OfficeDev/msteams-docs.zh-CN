@@ -5,16 +5,16 @@ keywords: teams visual studio code toolkit
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4425ea5ac6daa400d33497e031cf37639cd2722a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155280"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889319"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>使用 Teams Toolkit 和 Visual Studio Code
 
-Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置"方法帮助开发人员创建和部署具有集成标识的 Teams 应用、对云存储的访问权限、Microsoft Graph 的数据以及 Azure 和 M365 中的其他服务。  
+Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置"方法帮助开发人员创建和部署具有集成标识的 Teams 应用、对云存储的访问权限、Microsoft Graph 的数据，以及 Azure 和 M365 中的其他服务。  
 
 还可以将工具包与 Visual Studio一 (CLI `teamsfx`) 。
 
@@ -31,7 +31,7 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
 - [Azure 函数核心工具](/azure/azure-functions/functions-run-local)
 
-    Azure Functions Core Tools 用于在本地调试运行期间在本地运行任何后端组件，包括在 Azure 中运行服务时所需的身份验证帮助程序。 它使用 npm 安装在项目目录中 `devDependencies` 。
+    Azure Functions 核心工具用于在本地调试运行期间在本地运行任何后端组件，包括在 Azure 中运行服务时所需的身份验证帮助程序。 它使用 npm 安装在项目目录中 `devDependencies` 。
 
 - [.NET SDK](/dotnet/core/install/)
 
@@ -73,7 +73,7 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="显示如何选择新应用的托管的屏幕截图。":::
 
-1. （可选）在"云 **资源"** 步骤中，选择应用程序使用的云资源。 可以选择 CRUD (、读取、更新和删除) 表或 API SQL访问：
+1. （可选）在"云 **资源"** 步骤中，选择应用程序使用的云资源。 可以选择 CRUD (创建、读取、更新和删除) 表SQL API 的访问权限：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="显示如何为新应用添加云资源的屏幕截图。":::
 
@@ -85,7 +85,7 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
 1. 为应用输入合适的名称，如 `helloworld`。 应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
 
-你的应用Teams数秒钟内创建。 基架应用包含用于处理单一登录Azure Active Directory访问 Microsoft Graph。  如果你选择了 Azure 资源，则这些资源的代码也可用。
+应用程序Teams数秒钟内创建。 基架应用包含用于处理单一登录Azure Active Directory访问 Microsoft Graph。  如果你选择了 Azure 资源，则这些资源的代码也可用。
 
 有关创建和发布SPFx的演练，请参阅 SPFx[教程](../get-started/first-app-spfx.md)。
 
@@ -93,22 +93,22 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
 应用程序的核心是Teams三个组件：
 
-  1. Microsoft Teams客户端 (Web、桌面或移动) 用户与你的应用交互。
+  1. The Microsoft Teams client (web， desktop or mobile) where users interact with your app.
   1. 响应对网站中显示的内容的请求的服务器Teams。 例如，HTML 选项卡内容或自动程序自适应卡片。
   1. 应用Teams包包含三个文件：
 
       > [!div class="checklist"]
       >
-      > - 打开manifest.js。
+      > - manifest.json。
       > - 要 [显示在](../resources/schema/manifest-schema.md#icons) 公共或组织应用程序目录中的应用的颜色图标。
       > - 显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。
 
 清单和图标在上载到项目之前存储在项目的 `.fx` 文件夹中Teams。 安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。
 
 1. 若要配置你的应用，请导航到 Teams Toolkit **中的**"Visual Studio Code"。
-1. 在 **"清单编辑器**"部分 **Project** 编辑器"。
+1. 在 **"清单编辑器**"部分 **Project** 清单编辑器"。
 
-编辑"应用详细信息"页中的字段将更新manifest.js作为应用包的一部分交付的 on 文件的内容。
+编辑"应用详细信息"页中的字段将更新 manifest.json 文件的内容，该文件最终作为应用包的一部分交付。
 
 ## <a name="install-and-run-your-app-locally"></a>在本地安装和运行应用
 
@@ -122,7 +122,7 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
-1. Web 浏览器开始运行应用程序。 如果系统提示打开 Microsoft Teams，请选择"取消"以留在浏览器中。 系统可能也会提示你在其他时间Teams应用程序。 发生这种情况时，选择 Web 应用。
+1. Web 浏览器开始运行应用程序。 如果系统提示打开 Microsoft Teams，请选择"取消"以留在浏览器中。 系统可能也会提示你在其他Teams切换到应用程序。 发生这种情况时，选择 Web 应用。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
@@ -138,9 +138,14 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 1. 若要发布应用，请导航到 Teams Toolkit **中的**"Visual Studio Code"。
 1. 选择 **"发布Teams"****部分中的**"Project"。
 
-如果使用 Azure 托管，则必须已预配并部署到云。 有关发布过程SPFx，请参阅SPFx[教程](../get-started/first-app-spfx.md)。
+如果使用 Azure 托管，则必须已预配并部署到云。 有关发布过程SPFx，请参阅 SPFx[教程](../get-started/first-app-spfx.md)。
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [维护和支持已发布的应用](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [使用 Teams Toolkit 和 Visual Studio](~/toolkit/visual-studio-overview.md)
+* [使用 JavaScript 客户端 SDK 生成选项卡Microsoft Teams托管体验](~/tabs/how-to/using-teams-client-sdk.md)

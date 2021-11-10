@@ -4,19 +4,19 @@ description: 描述自动Microsoft Teams中的卡片操作以及如何在机器�
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: teams 机器人卡片操作
-ms.openlocfilehash: fb1ff1df6e91c17efd5a01123935fb03f0a0ed98
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3509ab49f8e2031176743a9330ee3b6757b70277
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155715"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889326"
 ---
 # <a name="card-actions"></a>卡片操作
 
 聊天机器人和邮件扩展中使用的Teams支持以下活动 [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) 类型：
 
 > [!NOTE]
-> 操作 `CardAction` 不同于从 `potentialActions` 连接器Office 365连接器卡的操作。
+> 当 `CardAction` 与连接器一Office 365 `potentialActions` 连接器卡时，操作会有所不同。
 
 | 类型 | Action |
 | --- | --- |
@@ -41,7 +41,7 @@ ms.locfileid: "59155715"
 
 使用 `openUrl` ，可以创建具有以下属性的操作：
 
-| 属性 | 说明 |
+| 属性 | 描述 |
 | --- | --- |
 | `title` | 显示为按钮标签。 |
 | `value` | 此字段必须包含格式正确的完整 URL。 |
@@ -60,7 +60,7 @@ ms.locfileid: "59155715"
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `openUrl` 操作类型示例C#：
+以下代码显示了一个操作 `openUrl` 类型示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -121,7 +121,7 @@ CardFactory.actions([
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `messageBack` 操作类型示例C#：
+以下代码显示了一个操作 `messageBack` 类型示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -231,7 +231,7 @@ CardFactory.actions([
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `imBack` 操作类型示例C#：
+以下代码显示了一个操作 `imBack` 类型示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -291,7 +291,7 @@ CardFactory.actions([
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `invoke` 操作类型示例C#：
+以下代码显示了一个操作 `invoke` 类型示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -304,7 +304,7 @@ var button = new CardAction()
 
 # <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-以下代码显示了以下代码中 `invoke` 的操作类型Node.js：
+以下代码显示了一个 `invoke` 操作类型示例Node.js：
 
 ```javascript
 CardFactory.actions([
@@ -375,7 +375,7 @@ CardFactory.actions([
 
 `signin` 操作类型启动 OAuth 流，该流允许机器人与安全服务连接。 有关详细信息，请参阅自动 [程序中的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
 
-Teams还[支持仅由](#adaptive-cards-actions)自适应卡片使用的自适应卡片操作。
+Teams还支持[仅由](#adaptive-cards-actions)自适应卡片使用的自适应卡片操作。
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -438,7 +438,7 @@ CardFactory.actions([
 > [!NOTE]
 > 如果需要，可以在对象中包括其他 `data` 隐藏属性。
 
-| 属性 | 说明 |
+| 属性 | 描述 |
 | --- | --- |
 | `type` | 设置为 `messageBack` 。 |
 | `displayText` | 可选。 操作执行时由聊天流中的用户使用。 此文本不会发送到自动程序。 |
@@ -516,7 +516,7 @@ CardFactory.actions([
 }
 ```
 
-### <a name="adaptive-cards-with-invoke-action"></a>具有调用操作的自适应卡片
+### <a name="adaptive-cards-with-invoke-action"></a>具有调用操作自适应卡片
 
 若要在 `invoke` 自适应卡片中包括操作，请包含对象中的以下 `msteams` 详细信息：
 
@@ -542,7 +542,7 @@ CardFactory.actions([
 }
 ```
 
-以下代码显示了具有其他有效负载数据的自适应卡片 `invoke` 示例：
+以下代码显示了一个包含其他有效负载数据的 `invoke` 自适应卡片示例：
 
 ```json
 {
@@ -556,12 +556,14 @@ CardFactory.actions([
   }
 }
 ```
-
-## <a name="see-also"></a>另请参阅
-
-[卡参考](./cards-reference.md)
-
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [自适应卡的通用操作](../cards/Universal-actions-for-adaptive-cards/Overview.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [卡参考](./cards-reference.md)
+* [使用机器人的任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [机器人中的自适应卡片](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [自适应卡的通用操作](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)

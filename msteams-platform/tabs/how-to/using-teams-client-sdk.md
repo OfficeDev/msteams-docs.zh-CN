@@ -2,20 +2,20 @@
 title: 使用 JavaScript 客户端 SDK 生成选项卡和其他托管体验
 author: heath-hamilton
 ms.author: surbhigupta
-description: JavaScript Microsoft Teams SDK 概述，它可以帮助你构建Teams托管在 <iframe>.
+description: JavaScript Microsoft Teams SDK 概述，它可以帮助你构建Teams托管在 <iframe>. 它包括基本函数、身份验证命名空间和设置命名空间。
 ms.localizationpriority: medium
 keywords: teams 选项卡组通道可配置的静态 SDK JavaScript 个人
 ms.topic: conceptual
-ms.openlocfilehash: ae1192a7221300fc702093d64c97b31bb990d2e9
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5c4a42e78a234616a0b88ef241c63b98fb7a0265
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155928"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887542"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 JavaScript 客户端 SDK 生成选项卡Microsoft Teams托管体验
 
-JavaScript Microsoft Teams SDK 可以帮助你在 Teams 创建托管体验，这意味着在 iframe 中显示应用内容。
+JavaScript Microsoft Teams SDK 可帮助你在 Teams 创建托管体验，这意味着在 iframe 中显示应用内容。
 
 SDK 有助于开发具有以下任一功能Teams应用：
 
@@ -47,7 +47,7 @@ SDK 有助于开发具有以下任一功能Teams应用：
 |`microsoftTeams.registerChangeSettingsHandler()` |在用户选择启用的选项卡按钮以重新配置选项卡 **设置** 注册的处理程序。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-&preserve-view=true)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |获取应用拥有的选项卡。 回调检索 **TabInformation** 对象。 **TabInstanceParameters** 对象是可选参数。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.getMruTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters)`|获取用户最近使用的选项卡。 回调检索 **TabInformation** 对象。 **TabInstanceParameters** 对象是可选参数。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getmrutabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest&preserve-view=true)<br/>[tabInstance obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinstanceparameters?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.shareDeepLink(deepLinkParameters: DeepLinkParameters)`|将 **DeepLinkParameters** 对象作为输入并共享深层链接对话框，用户可以使用该对话框导航到选项卡 *中的内容*。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#sharedeeplink-deeplinkparameters-&preserve-view=true)<br/>[deepLink obj](/javascript/api/@microsoft/teams-js/microsoftteams.deeplinkparameters?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.shareDeepLink(deepLinkParameters: DeepLinkParameters)`|将 **DeepLinkParameters** 对象作为输入并共享一个深层链接对话框，用户可以使用该对话框导航到选项卡 *中的内容*。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#sharedeeplink-deeplinkparameters-&preserve-view=true)<br/>[deepLink obj](/javascript/api/@microsoft/teams-js/microsoftteams.deeplinkparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|将所需的 **deepLink** 作为输入，将用户导航到 URL 或触发客户端操作（如打开 *或* 安装）Teams。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
 |`microsoftTeams.navigateToTab(tabInstance: TabInstance, onComplete?: (status: boolean, reason?: string))`|将 **TabInstance** 对象作为输入并导航到指定的选项卡实例。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#navigatetotab-tabinstance-&preserve-view=true)<br/>[tabInstance obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinstance?view=msteams-client-js-latest&preserve-view=true)|
 
@@ -58,7 +58,7 @@ SDK 有助于开发具有以下任一功能Teams应用：
 |`microsoftTeams.authentication.authenticate(authenticateParameters?: AuthenticateParameters)`|启动身份验证请求，该请求使用调用方提供的参数打开新窗口。 可选输入值由 **AuthenticateParameters 对象** 定义。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)<br/>[auth obj](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|通知启动身份验证请求的框架请求已成功并关闭身份验证窗口|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|通知启动身份验证请求的帧请求失败并关闭身份验证窗口。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|代表应用发送请求以颁发 Azure AD 令牌。 如果令牌尚未过期，可以从缓存获取。 否则，会向 Azure AD 发送请求以获取新令牌。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
+|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|发送请求Azure AD应用颁发令牌。 如果令牌尚未过期，可以从缓存获取。 否则，请求将发送到 Azure AD以获取新令牌。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
 
 ### <a name="settings-namespace"></a>设置命名空间
 

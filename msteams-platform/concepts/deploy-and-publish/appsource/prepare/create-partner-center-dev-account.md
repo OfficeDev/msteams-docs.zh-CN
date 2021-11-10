@@ -1,16 +1,16 @@
 ---
 title: 创建合作伙伴中心开发人员帐户
-description: 若要将应用发布到 Microsoft Teams 应用商店，你需要合作伙伴中心开发人员帐户。
+description: 用于创建将应用发布到应用商店的合作伙伴中心开发人员帐户的Microsoft Teams常见问题。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155949"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889417"
 ---
 # <a name="create-a-partner-center-developer-account"></a>创建合作伙伴中心开发人员帐户
 
@@ -127,7 +127,7 @@ ms.locfileid: "59155949"
 
 * 电子邮件验证链接的有效期只有七天。
 * 可以通过访问合作伙伴配置文件页面并选择"重新发送验证电子邮件"链接，请求重新 **发送电子邮件** 。
-* 为了确保您收到电子邮件，安全列表 **microsoft.com** 安全域并检查垃圾邮件文件夹。
+* 为确保收到电子邮件，安全列表 microsoft.com 安全域并检查垃圾邮件文件夹。
 
 <br>
 
@@ -153,7 +153,7 @@ ms.locfileid: "59155949"
 * 清除浏览器缓存，转到合作伙伴中心帐户仪表板，然后选择 **重新发送验证电子邮件**。
 * 尝试从其他 **浏览器访问"重新发送** 验证电子邮件"链接。
 * 与 IT 部门合作，确保您的电子邮件服务器不会阻止验证电子邮件。
-* 调整服务器的垃圾邮件筛选器，以允许或安全列出来自 **maccount@microsoft.com。**
+* 调整服务器的垃圾邮件筛选器，以允许或安全列出来自 maccount@microsoft.com **。**
 
 <br>
 

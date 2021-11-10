@@ -1,20 +1,21 @@
 ---
 title: 设计应用 - 了解设计系统
-description: 了解设计应用Microsoft Teams的基础知识，包括布局、配色方案等。
+description: 了解设计虚拟Microsoft Teams的基础知识，包括头像、布局、图标、配色方案等。
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: cfcba2da5560e54fb260fd29f817404a68a4d8cd
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: 布局网格头像图标 segoe ui typography
+ms.openlocfilehash: 6e372f049b18e5e95b1381c81f8f2f1f1f2a1e8d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155992"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887746"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams应用设计系统
 
-快速了解应用设计Teams基础。 可以在图ma Microsoft Teams UI 工具包 (<a href="https://www.figma.com/community/file/916836509871353159" target="_blank">指南和</a>) 。
+快速了解应用设计Teams基础。 可以在图ma Microsoft Teams Ui 工具包 (<a href="https://www.figma.com/community/file/916836509871353159" target="_blank">指南和</a>) 。
 
 ## <a name="layout"></a>布局
 
@@ -22,9 +23,9 @@ ms.locfileid: "59155992"
 
    :::column span="3":::
 
-      Teams依赖于网格布局，以确保设计组件之间保持一致和美观的关系。 网格的 4 像素基本单位允许组件在网格中跨所有显示大小Teams。
+      Teams依赖网格布局来确保设计组件之间保持一致和美观的关系。 网格的 4 像素基本单位允许组件在网格中跨所有显示大小一致Teams。
 
-      * [请参阅图 (图的完整) ](https://www.figma.com/community/file/916836509871353159)
+      * [请参阅图 (的完整布局) ](https://www.figma.com/community/file/916836509871353159)
       * [实现 UI (Fluent布局) ](https://developer.microsoft.com/fluentui#/styles/web/layout)
 
    :::column-end:::
@@ -62,7 +63,7 @@ ms.locfileid: "59155992"
 
       还可以在整个应用中Fluent UI 图标：
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">获取图Fluent图 (的最新) </a>
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">获取"图Fluent图 (的最新) </a>
       * [实现 UI (Fluent图标) ](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
@@ -100,7 +101,7 @@ ms.locfileid: "59155992"
 
       Teams Web 和桌面支持默认 (浅) 、深色和高对比度主题，而 Teams 移动设备支持浅色和深色主题。 每个主题都有自己的配色方案。
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅使用"图块" (的完整颜色指南和) </a>
+      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅图图ma 的完整颜色指南和 (颜色) </a>
       * [在 UI (Fluent实现) ](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
@@ -118,8 +119,8 @@ ms.locfileid: "59155992"
 
       可以使用形状和仰角在应用中创建其他层次结构。 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅图块 (的完整形状和) </a>
-      * [使用 UI 模型实现 (Fluent和提升) ](https://developer.microsoft.com/fluentui#/styles/web/elevation)
+      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅图块 (的完整形状和仰角) </a>
+      * [实现形状和提升 (Fluent UI) ](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
    :::column span="1":::

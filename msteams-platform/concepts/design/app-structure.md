@@ -5,12 +5,13 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 481ed07682767a303efed50ec06a22cbbb393408
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: 线框频道聊天会议消息传递扩展移动桌面
+ms.openlocfilehash: 3d63cc705ac567b0b19db2e3caf4a84420dae9bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155944"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887572"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>了解Microsoft Teams结构
 
@@ -34,13 +35,13 @@ ms.locfileid: "59155944"
 
 画布是 Web 视图，因此你可以完全自定义体验。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="概念图像，显示开发人员可以针对Teams个人应用自定义的前端区域。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="显示开发人员可以针对移动版个人Teams自定义的前端区域的概念图像。" border="false":::
 
 ### <a name="desktop"></a>桌面
 
 画布是 iframe，因此你可以完全自定义体验。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="概念图像，显示开发人员Teams桌面版应用自定义的前端区域。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="概念图像，显示开发人员可Teams桌面应用自定义的前端区域。" border="false":::
 
 ## <a name="tabs"></a>选项卡
 
@@ -52,7 +53,7 @@ ms.locfileid: "59155944"
 
 画布是 Web 视图，因此你可以完全自定义体验。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="概念图像，显示开发人员可以针对Teams选项卡自定义的前端区域。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="概念图像，显示开发人员可Teams移动选项卡自定义的前端区域。" border="false":::
 
 ### <a name="desktop"></a>桌面
 
@@ -62,7 +63,7 @@ ms.locfileid: "59155944"
 
 ## <a name="bots"></a>机器人
 
-聊天机器人是对话应用，Teams本机消息传递功能集成，因此会处理 UI 工作。 从设计的角度来看，仍有机会使用我们的自然语言处理功能添加个性、自定义功能和丰富且可操作的信息 (NLP) 和自适应卡片平台。
+自动程序是对话应用，Teams本机消息传递功能集成，因此会处理 UI 工作。 从设计的角度来看，仍有机会使用我们的自然语言处理功能添加个性、自定义功能和丰富的可操作信息， (NLP) 和自适应卡片平台。
 
 ***支持的范围**：个人、频道、聊天、会议*
 
@@ -104,4 +105,4 @@ ms.locfileid: "59155944"
 
 图面是 iframe，可让你自定义体验，但请记住，在会议期间，这些应用使用深色主题且较窄。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="概念图像，显示开发人员可自定义Teams桌面会议扩展的前端区域。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="概念图像，显示开发人员可Teams桌面会议扩展自定义的前端区域。" border="false":::

@@ -1,20 +1,20 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 如何取消链接、打开"阶段视图"，然后使用"Microsoft Teams固定选项卡。
+description: 了解如何取消链接、打开"阶段视图"，以及使用"Microsoft Teams固定选项卡。 了解阶段视图，以及使用代码示例和示例使用自适应卡片调用它。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 86525e0a26dbc9b80d03751078cb6ee248b876fb
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720342"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887565"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
-阶段视图是 UI (组件) 用户界面，允许你呈现在 Teams 中全屏打开并固定为选项卡的内容。
+阶段视图是 UI) 组件中的 (用户界面，允许你呈现在 Teams 中全屏打开并固定为选项卡的内容。
  
 ## <a name="stage-view"></a>阶段视图
 
@@ -123,11 +123,11 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>选项卡信息属性
 
-| 属性名称 | 类型 | 字符数 | 说明 |
+| 属性名称 | 类型 | 字符数 | 描述 |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
-| `name` | String | 128 | 此属性是显示名称界面中选项卡的一部分。 这是一个可选字段。|
-| `contentUrl` | 字符串 | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
+| `name` | String | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
+| `contentUrl` | String | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
 | `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
 | `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
 
@@ -138,14 +138,14 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |阶段视图中的选项卡 |Microsoft Teams阶段视图中演示选项卡的选项卡示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     
 
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)
+
 ## <a name="see-also"></a>另请参阅
 
 * [取消展开消息传递扩展链接](~/messaging-extensions/how-to/link-unfurling.md)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>下一步
-
-> [!div class="nextstepaction"]
-> [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)

@@ -1,16 +1,16 @@
 ---
 title: 智能机器人对话中的邮件
-description: 介绍与自动程序Microsoft Teams的方法
+description: 介绍与自动程序进行Microsoft Teams的方法。 了解Teams数据、消息通知、图片消息、使用代码示例的自适应卡片。
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d417d0cc737b088a5f04ac8a45c834cd83bbbde5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566237"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889333"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
@@ -22,7 +22,7 @@ ms.locfileid: "60566237"
 * 用于管理对话流和状态的其他功能。
 * 合并认知服务的简单方法，如自然语言处理 (NLP) 。
 
-自动程序使用 Teams 接收来自用户的消息，并且它会向用户发送一 `Text` 个或多个邮件响应。
+自动程序使用 Teams 接收来自用户的消息，并且 `Text` 它会向用户发送一个或多个消息响应。
 
 ## <a name="receive-a-message"></a>接收消息
 
@@ -236,12 +236,12 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>邮件内容
 
-| 格式    | 从用户到机器人 | 从自动程序到用户 | 备注                                                                                   |
+| 格式    | 从用户到机器人 | 从自动程序到用户 | 注释                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
-| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。 不支持动态 GIF。  |
+| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式的最大大小为 1024×1024 和 1 MB。 不支持动态 GIF。  |
 | 卡片     | ✖                | ✔                | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
-| 表情符号    | ✖                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 表示表情符号。 |
+| 表情符号    | ✖                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 用于表情符号。 |
 
 您还可以使用 属性向邮件添加 `Notification.Alert` 通知。
 
@@ -342,7 +342,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="adaptive-cards"></a>自适应卡
 
-自适应卡片可以在机器人中创作，并可在多个应用（如 Teams、你的网站等）中显示。 有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+自适应卡片可以在机器人中创作，并可在多个应用（如Teams网站等）中显示。 有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 
 以下代码显示发送简单自适应卡片的示例：
 
@@ -376,13 +376,13 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 以下是状态代码及其错误代码和消息值：
 
-| 状态代码 | 错误代码和消息值 | 说明 |
+| 状态代码 | 错误代码和消息值 | 描述 |
 |----------------|-----------------|-----------------|
 | 403 | **代码**： `ConversationBlockedByUser` <br/> **消息**：用户阻止了与机器人的对话。 | 用户通过审核设置在一对一聊天或频道中阻止机器人。 |
 | 403 | **代码**： `BotNotInConversationRoster` <br/> **消息**：机器人不是对话名单中的一部分。 | 机器人不是对话的一部分。 |
 | 403 | **代码**： `BotDisabledByAdmin` <br/> **消息**：租户管理员已禁用此自动程序。 | 租户阻止了机器人。 |
 | 401 | **代码**： `BotNotRegistered` <br/> **消息**：未找到此自动程序注册。 | 未找到此自动程序注册。 |
-| 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一对话上的多个并发操作，某一依赖项的前置条件失败。 |
+| 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一对话上的多个并发操作，某一依赖项的前提条件失败。 |
 | 404 | **代码**： `ConversationNotFound` <br/> **消息**：未找到对话。 | 未找到对话。 |
 | 413 | **代码**： `MessageSizeTooBig` <br/> **邮件**：邮件大小过大。 | 传入请求的大小太大。 |
 | 429 | **代码**： `Throttled` <br/> **消息**：请求过多。 还返回在之后重试时间。 | 机器人发送的请求过多。 有关详细信息，请参阅速率 [限制](~/bots/how-to/rate-limit.md)。 |
@@ -393,13 +393,14 @@ async def on_message_activity(self, turn_context: TurnContext):
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams 对话自动程序 | 消息和对话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="see-also"></a>另请参阅
-
-- [发送主动邮件](~/bots/how-to/conversations/send-proactive-messages.md)
-
-- [订阅对话事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [自动程序命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [发送主动邮件](~/bots/how-to/conversations/send-proactive-messages.md)
+* [订阅对话事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [通过自动程序发送和接收文件](~/bots/how-to/bots-filesv4.md)
+* [将租户 ID 和对话 ID 发送到机器人的请求标头](~/bots/how-to/conversations/request-headers-of-the-bot.md)

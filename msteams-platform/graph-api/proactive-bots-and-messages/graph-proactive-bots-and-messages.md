@@ -1,26 +1,26 @@
 ---
-title: 使用 Microsoft Graph在客户端中授权主动安装自动程序Teams
-description: 介绍企业中的主动Teams以及如何实现。
+title: 使用 Microsoft Graph授权主动自动程序安装和邮件Teams
+description: 介绍邮件中的主动Teams以及如何实现它。 了解如何使用代码示例启用主动应用安装和消息传递。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: 7d08097155ba69715508998ef4d2d9d50807b2ff
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3b7ffd24f7601c8247f1f11c6fe1a562d9cd847
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155883"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888004"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
 
 >[!IMPORTANT]
-> Microsoft Graph和 Microsoft Teams 公共预览版可供早期访问和反馈。 尽管此版本已经过大量测试，但不适合在生产中使用。
+> Microsoft Graph公共Microsoft Teams预览版可供早期访问和反馈使用。 尽管此版本已经过大量测试，但不适合在生产中使用。
 
 ## <a name="proactive-messaging-in-teams"></a>邮件中的主动Teams
 
-主动消息由机器人启动，以开始与用户的对话。 它们用于多种用途，包括发送欢迎消息、开展调查或投票以及广播组织范围内的通知。 邮件中的Teams消息 **可以临时对话** 或基于对话 **的对话传递：**
+主动消息由机器人启动，以开始与用户的对话。 它们用于多种用途，包括发送欢迎消息、开展调查或投票以及广播组织范围内的通知。 可以Teams对话或基于对话的对话传递活动 **邮件**： 
 
 |消息类型 | 说明 |
 |----------------|-------------- |
@@ -29,7 +29,7 @@ ms.locfileid: "59155883"
 
 ## <a name="proactive-app-installation-in-teams"></a>在应用中主动安装Teams
 
-在自动程序可以主动向用户发送消息之前，它必须作为个人应用或用户是成员的团队进行安装。 有时，你需要主动向尚未安装或之前未与你的应用交互的用户发送消息。 例如，需要向组织中的每个人发送重要信息。 对于此类方案，可以使用 Microsoft Graph API 主动为用户安装自动程序。
+在自动程序可以主动向用户发送消息之前，它必须作为个人应用或用户是成员的团队进行安装。 有时，你需要主动向尚未安装或之前未与你的应用交互的用户发送消息。 例如，需要向组织中的每个人发送重要信息。 对于此类情况，可以使用 Microsoft Graph API 主动为用户安装自动程序。
 
 ## <a name="permissions"></a>权限
 
@@ -42,14 +42,14 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 若要使用这些权限，必须将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到具有以下值的应用清单：
 
-* **id**：你的Azure Active Directory (AAD) 应用 ID。
+* **id**：Azure Active Directory (AAD) 应用 ID。
 * **resource：** 应用的资源 URL。
 
 > [!NOTE]
 >
 > * 自动程序需要应用程序权限，而不是用户委派权限，因为安装适用于其他人。
 >
-> * AAD 租户管理员 [必须对应用程序显式授予权限](/graph/security-authorization#grant-permissions-to-an-application)。 向应用程序授予权限后，AAD 租户的所有成员都获得已授予的权限。
+> * 租户AAD必须[明确授予对应用程序的权限](/graph/security-authorization#grant-permissions-to-an-application)。 在向应用程序授予权限后，AAD的所有成员都获得已授予的权限。
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>启用主动应用安装和消息传递
 
@@ -195,12 +195,13 @@ Content-Type: application/json
 | **示例名称** | **说明** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
 | 主动安装应用并发送主动通知 | 此示例演示如何通过调用 Microsoft Graph API 为用户使用主动安装应用并发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-## <a name="see-also"></a>另请参阅
-
-* [**在应用中管理应用Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
-* [向用户发送主动通知 SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="additional-code-samples"></a>其他代码示例
 >
 > [!div class="nextstepaction"]
 > [**Teams主动邮件代码示例**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
+## <a name="see-also"></a>另请参阅
+
+* [**在应用中管理应用Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [向用户发送主动通知 SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)

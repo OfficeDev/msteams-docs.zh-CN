@@ -1,33 +1,34 @@
 ---
 title: 设计个人应用
-description: 了解如何设计个人Teams并获取 Microsoft Teams UI 工具包。
+description: 了解如何设计适用于Teams应用和获取 Microsoft Teams UI 工具包、创建组件（如仪表板、表单、适用于移动和桌面体验的任务板）。 了解开发个人应用的最佳方案。
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+keywords: ui 工具包个人应用 Webview 导航机器人选项卡 iframe 仪表板表单模板
+ms.openlocfilehash: 44196ee6b1d91754e29b62dd3f6c6e40b3246602
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360716"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888158"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为用户设计个人Microsoft Teams
 
 个人应用可以是自动程序、专用工作区，也可以同时为两者。 有时，它的功能与创建或查看内容的位置类似，其他时候，当应用被配置为多个频道中的选项卡时，它会为用户提供其所有内容的鸟眼视图。
 
-为了指导你的应用设计，以下信息介绍了并说明了用户如何添加、使用和管理应用中的个人Teams。
+为了指导应用设计，以下信息介绍了并说明了用户如何添加、使用和管理应用中的个人Teams。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-你可以找到全面的个人应用设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。 UI 工具包还具有辅助功能和响应式大小调整等基本主题，此处未介绍这些主题。
+你可以找到全面的个人应用设计指南，包括你可以根据需要获取和修改的元素，Microsoft Teams UI 工具包。 UI 工具包还包含基本主题，如此处未介绍的辅助功能和响应式大小调整。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit (用户)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>添加个人应用
 
-用户可以从应用商店或应用Teams添加个人应用，方法为选择以下示例Teams (左侧的"更多") 。 
+用户可以通过选择 Teams 左侧的"更多"图标从 Teams 应用商店或应用飞出添加个人应用Teams (如以下示例所示) 。
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="示例演示如何从应用飞出内容添加个人应用。" border="false":::
 
@@ -37,7 +38,7 @@ ms.locfileid: "59360716"
 
  (：专用工作区基于个人 [*选项卡功能*](../../build-your-first-app/build-personal-tab.md) 。) 
 
-### <a name="anatomy-personal-app-private-workspace"></a>分析：个人应用 (个人工作区) 
+### <a name="anatomy-personal-app-private-workspace"></a>结构：个人应用 (专用工作区) 
 
 #### <a name="mobile"></a>移动设备
 
@@ -55,7 +56,7 @@ ms.locfileid: "59360716"
 |计数器|说明|
 |----------|-----------|
 |A|**选项卡**：为个人应用提供导航。|
-|1|**webview：** 显示应用内容。|
+|1|**webview**: 显示应用内容。|
 
 #### <a name="desktop"></a>桌面
 
@@ -66,35 +67,35 @@ ms.locfileid: "59360716"
 |A|**应用属性**：应用徽标和名称。|
 |B|**选项卡**：为个人应用提供导航。|
 |C|**弹出视图**：将应用内容从父窗口推送到独立子窗口。|
-|D|**更多菜单**：包括其他应用选项和信息。  (您也可以将选项卡设置 tab.) |
+|D|**更多菜单**：包括其他应用选项和信息。  (您也可以将选项卡 **设置** tab.) |
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="本示例显示个人选项卡的结构结构分析。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |A|**选项卡**：为个人应用提供导航。|
-|1|**iframe：** 显示应用内容。|
+|1|**iframe**: 显示应用内容。|
 
 ### <a name="design-with-ui-templates-and-advanced-components"></a>使用 UI 模板和高级组件进行设计
 
 使用以下模板和Teams之一来帮助设计个人选项卡：
 
-* [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目采取操作。
-* [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为看板或街道）是一组卡片，通常用于跟踪工作项或票证的状态。
-* [仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard)：仪表板是包含多个卡片的画布，可提供数据或内容的概述。
-* [表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单用于以结构化方式收集、验证和提交用户输入。
-* [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。
+* [列表](../../concepts/design/design-teams-app-ui-templates.md#list): 列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目执行操作。
+* [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board): 任务板 (有时称为看板或泳道) 是通常用于跟踪工作项或票证状态的卡片集合。
+* [仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard): 仪表板是包含多个卡片的画布，可提供数据或内容的概述。
+* [表单](../../concepts/design/design-teams-app-ui-templates.md#form): 表单是用于收集、验证和提交用户输入的结构化方式。
+* [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空状态模板可用于许多方案，包括登录、首次运行体验、错误消息等。
 * [左侧导航](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav)：如果你的个人应用需要一些导航，左侧导航组件可以提供帮助。 通常，应该将导航保持在最低程度。
 
 ## <a name="use-a-personal-app-bot"></a>使用个人应用 (自动) 
 
-个人应用可以包含用于一对一对话的自动程序以及私人通知 (例如，当同事在剪贴板上发布评论时) 。 用户与您指定的选项卡中的自动程序交互。
+个人应用可以包括用于一对一对话的自动程序以及私人通知 (例如，当同事在剪贴板上发布评论时) 。 用户与您指定的选项卡中的自动程序交互。
 
 ### <a name="anatomy-personal-app-bot"></a>结构：个人应用 (自动) 
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例展示了个人机器人组件分析。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例显示个人自动程序组件分析。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
@@ -109,7 +110,7 @@ ms.locfileid: "59360716"
 
 |计数器|说明|
 |----------|-----------|
-|A|**自动程序** 选项卡：例如，包括一个 **聊天选项卡** 以访问机器人对话和通知。|
+|A|**自动程序** 选项卡：例如，包括一个 **聊天选项卡** 来访问机器人对话和通知。|
 |B|**自动程序** 消息：机器人通常以卡片形式发送消息和通知， (自适应卡片) 。|
 |C|**撰写框**：用于向自动程序发送邮件的输入字段。|
 
@@ -119,7 +120,7 @@ ms.locfileid: "59360716"
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="示例显示用于管理个人应用的选项。" border="false":::
 
-## <a name="best-practices"></a>最佳实践
+## <a name="best-practices"></a>最佳做法
 
 使用上述建议打造优质应用体验。
 
@@ -195,7 +196,7 @@ ms.locfileid: "59360716"
 
 #### <a name="dont-include-your-entire-app"></a>请勿：包括整个应用
 
-除非你专门为用户创建了Teams，否则你可能具有在协作工具中无意义的功能。
+除非你专门为用户创建了Teams，否则你可能具有协作工具中没有意义的功能。
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="示例演示如何不通过个人应用处理复杂的应用功能。" border="false":::
 

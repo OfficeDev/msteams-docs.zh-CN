@@ -1,29 +1,29 @@
 ---
 title: 为会议注册呼叫和会议Microsoft Teams
-description: 了解如何为用户注册新的音频/视频呼叫Microsoft Teams
+description: 了解如何为用户注册新的音频/视频呼叫Microsoft Teams、创建新的机器人或添加呼叫功能以及添加图形权限。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: 945066cf58f5b5adcf5b69f18335551913832e87
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 144e623ea21da51b8a06bf20f50a60345dda081a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260661"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889102"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>为会议注册呼叫和会议Microsoft Teams
 
-参与音频或视频呼叫和联机会议的机器人是一个Microsoft Teams聊天机器人，具有以下用于注册机器人的额外功能：
+参与音频或视频呼叫和联机会议的机器人是Microsoft Teams聊天机器人，具有以下用于注册机器人的额外功能：
 
-* 有一个新版本的 Teams 应用清单，其中新增了两个设置 `supportsCalling` 和 `supportsVideo` 。 这些设置包含在开发人员预览[版本的](../../resources/dev-preview/developer-preview-intro.md)应用清单Teams中。
+* 有一个新版本的 Teams 应用清单，其中新增了两个设置 `supportsCalling` 和 `supportsVideo` 。 这些设置包含在开发人员[预览版本的](../../resources/dev-preview/developer-preview-intro.md)应用程序清单Teams中。
 * [必须为Graph](./registering-calling-bot.md#add-graph-permissions)的 Microsoft 应用 ID 配置 Microsoft 应用权限。
-* 会议Graph联机会议 API 权限需要租户管理员同意。
+* 呼叫Graph联机会议 API 权限需要租户管理员同意。
 
 ## <a name="new-manifest-settings"></a>新清单设置
 
-呼叫和联机会议自动程序在 manifest.json 中具有以下两个其他设置，这些设置在 Teams 中为机器人启用音频或Teams。
+呼叫和联机会议自动程序在 manifest.json 中具有以下两个其他设置，这些设置为 Teams 中的机器人启用音频或Teams。
 
-* `bots[0].supportsCalling`. 如果存在 并设置为 `true` ，Teams自动程序可以参与通话和联机会议。
+* `bots[0].supportsCalling`. 如果存在并设置为 `true` ，Teams自动程序可以参与通话和联机会议。
 * `bots[0].supportsVideo`. 如果存在并设置为 `true` ，Teams自动程序支持视频。
 
 如果希望 IDE 正确验证通话和会议机器人的 manifest.json 架构是否包含这些值，可以按如下方式更改 `$schema` 属性：
@@ -42,7 +42,7 @@ ms.locfileid: "60260661"
 
 1. 使用此链接可创建新的自动程序 `https://dev.botframework.com/bots/new` 。 或者，如果你选择 Bot  Framework 门户中的"创建自动程序"按钮，你将在 Microsoft Azure 创建自动程序，你必须拥有 Azure 帐户。
 1. 添加Teams通道。
-1. 选择"**通话频道**"页面上Teams选项卡。 选择 **"启用呼叫**"，然后更新 **Webhook (，** 以便) 接收传入通知的 HTTPS URL 调用 Webhook，例如 `https://contoso.com/teamsapp/api/calling` 。 有关详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels)。
+1. 选择"**通话** 频道"页面上Teams"选项卡。 选择 **"启用呼叫**"，然后更新 Webhook (，以) 接收传入通知的 HTTPS URL 调用 **Webhook，** 例如 `https://contoso.com/teamsapp/api/calling` 。 有关详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels)。
 
     ![配置Teams频道信息](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
@@ -56,7 +56,7 @@ ms.locfileid: "60260661"
 
 下表提供了用于调用的应用程序权限列表：
 
-|权限    |显示字符串   |说明 |需要管理员同意 |
+|权限    |显示字符串   |描述 |需要管理员同意 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |从应用预览启动传出 1：1 呼叫。 |允许应用在没有登录用户的情况下，向单个用户发起播出通话并将通话转接到组织目录中的用户。|是|
 | Calls.InitiateGroupCall.All |从应用预览启动传出组呼叫。 |允许应用在没有登录用户的情况下，向多个用户发起播出通话并向组织中的会议添加参与者。|是|
@@ -71,23 +71,23 @@ ms.locfileid: "60260661"
 
 下表提供了联机会议的应用程序权限列表：
 
-|权限    |显示字符串   |说明 |需要管理员同意 |
+|权限    |显示字符串   |描述 |需要管理员同意 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | OnlineMeetings.Read.All |从应用预览中读取联机会议详细信息|允许应用在没有登录用户的情况下读取组织的联机会议详细信息。|是|
 | OnlineMeetings.ReadWrite.All |代表用户从应用预览中读取和创建联机会议|允许应用在没有登录用户的情况下代表用户在你的组织中创建联机会议。|是|
 
 ### <a name="assign-permissions"></a>分配权限
 
-如果你想要使用 AAD) V1 终结点，则必须使用 Azure Active Directory ([Azure](https://aka.ms/aadapplist)门户提前配置自动程序[的应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
+如果你想要使用 Azure Active Directory (AAD) V1 终结点，则必须使用[Azure](https://aka.ms/aadapplist)门户提前配置[自动程序的应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
 
 ### <a name="get-tenant-administrator-consent"></a>获取租户管理员同意
 
-对于使用 AAD V1 终结点的应用，当应用安装在其组织中时，租户管理员可以使用 [Azure](https://portal.azure.com) 门户同意应用程序权限。 或者，可以在应用中提供注册体验，管理员可通过此体验同意你配置的权限。 AAD 记录管理员同意后，你的应用无需再次请求同意即可请求令牌。
+对于使用 AAD V1 终结点的应用，当应用安装在其组织中时，租户管理员可以使用[Azure](https://portal.azure.com)门户同意应用程序权限。 或者，可以在应用中提供注册体验，管理员可通过此体验同意你配置的权限。 管理员同意由管理员记录AAD，你的应用无需再次请求同意即可请求令牌。
 
-你可以依赖管理员在 Azure 门户授予应用 [所需的权限](https://portal.azure.com)。 更好的选择是使用 AAD V2 终结点为管理员提供注册 `/adminconsent` 体验。 有关详细信息，请参阅 [有关构造管理员同意 URL 的说明](/graph/uth-v2-service#3-get-administrator-consent)。
+你可以依赖管理员在 Azure 门户授予应用 [所需的权限](https://portal.azure.com)。 更好的选择是使用 V2 终结点为管理员提供AAD `/adminconsent` 体验。 有关详细信息，请参阅 [有关构造管理员同意 URL 的说明](/graph/uth-v2-service#3-get-administrator-consent)。
 
 > [!NOTE]
-> 若要构建租户管理员同意 URL，需要应用注册门户中配置的重定向 URI[](https://apps.dev.microsoft.com/)或回复 URL。 若要为自动程序添加回复 URL，访问自动程序注册，选择"高级选项""  >  **编辑应用程序清单"。** 将重定向 URL 添加到 `replyUrls` 集合。
+> 若要构建租户管理员同意 URL，需要应用注册门户中配置的重定向 URI[](https://apps.dev.microsoft.com/)或回复 URL。 若要为自动程序添加回复 URL，访问自动程序注册，选择"高级选项  >  **""编辑应用程序清单"。** 将重定向 URL 添加到 `replyUrls` 集合。
 
 > [!IMPORTANT]
 > 无论何时更改应用程序权限，都必须重复管理员同意过程。 在租户管理员重新应用同意之前，不会反映应用注册门户中所做的更改。
@@ -96,3 +96,8 @@ ms.locfileid: "60260661"
 
 > [!div class="nextstepaction"]
 > [来电通知](~/bots/calls-and-meetings/call-notifications.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [来电通知](~/bots/calls-and-meetings/call-notifications.md)
+* [在本地电脑上开发通话和联机会议机器人](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

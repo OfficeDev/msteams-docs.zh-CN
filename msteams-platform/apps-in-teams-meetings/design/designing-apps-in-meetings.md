@@ -1,16 +1,17 @@
 ---
 title: 设计会议扩展
 author: heath-hamilton
-description: 了解如何在会议Teams设计应用并获取 Microsoft Teams UI 工具包。
+description: 了解如何在 Teams 中设计应用，并获取 Microsoft Teams UI 工具包、会议中的选项卡和用例、响应行为、共享会议阶段以及主题和导航。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: UI 工具包模板会议响应行为共享会议阶段
+ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475697"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887843"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计会议Microsoft Teams扩展
 
@@ -37,7 +38,7 @@ ms.locfileid: "59475697"
 
 #### <a name="mobile"></a>移动设备
 
-例如，在桌面 (添加应用后，) 选择"更多"，即可在会议中访问 **该应用** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
+添加应用后 (例如，在桌面) ，用户可以通过选择"更多"来访问 **会议中的应用** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="示例演示如何在移动会议期间添加会议扩展。" border="false":::
 
@@ -59,20 +60,20 @@ ms.locfileid: "59475697"
 
 |计数器|说明|
 |----------|-----------|
-|1|**选项卡名称**：选项卡的导航标签。|
-|2|**Tab 溢出**：打开选项卡操作，如重命名和删除。|
-|3|**iframe：** 显示应用内容。|
+|1|**选项卡名称**: 选项卡的导航标签。|
+|2|**选项卡溢出**: 打开选项卡操作，如重命名和删除。|
+|3|**iframe**: 显示应用内容。|
 
 ### <a name="design-with-ui-templates"></a>使用 UI 模板进行设计
 
 使用以下 UI 模板Teams之一来帮助设计会议选项卡：
 
-* [列表](../../concepts/design/design-teams-app-ui-templates.md#list)：列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目采取操作。
-* [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board)：任务板（有时称为看板或街道）是一组卡片，通常用于跟踪工作项或票证的状态。
-* [仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard)：仪表板是包含多个卡片的画布，可提供数据或内容的概述。
-* [表单](../../concepts/design/design-teams-app-ui-templates.md#form)：表单用于以结构化方式收集、验证和提交用户输入。
-* [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state)：空状态模板可用于多种方案，包括登录、首次运行体验、错误消息等。
-* [左侧导航](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav)：如果你的选项卡需要一些导航，左侧导航组件会有所帮助。 通常，应该将导航保持在最低程度。
+* [列表](../../concepts/design/design-teams-app-ui-templates.md#list): 列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目执行操作。
+* [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board): 任务板 (有时称为看板或泳道) 是通常用于跟踪工作项或票证状态的卡片集合。
+* [仪表板](../../concepts/design/design-teams-app-ui-templates.md#dashboard): 仪表板是包含多个卡片的画布，可提供数据或内容的概述。
+* [表单](../../concepts/design/design-teams-app-ui-templates.md#form): 表单是用于收集、验证和提交用户输入的结构化方式。
+* [空状态](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空状态模板可用于许多方案，包括登录、首次运行体验、错误消息等。
+* [左侧导航](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): 如果选项卡需要导航，左侧导航组件可提供帮助。 通常，应该将导航保持在最低程度。
 
 ## <a name="use-an-in-meeting-tab"></a>使用会议内选项卡
 
@@ -103,13 +104,13 @@ ms.locfileid: "59475697"
 |1|**选择的应用 (图标**) ：16 像素透明应用徽标。|
 |2|**应用名称**|
 |3|**标头**：包括你的应用名称。|
-|4 |**关闭按钮**：关闭选项卡。始终使用右上方的关闭图标，而不是页脚中的操作。|
+|4|**关闭按钮**：关闭选项卡。始终使用右上方的关闭图标，而不是页脚中的操作。|
 |5|**通知栏**：错误警报显示在标题正下方，将 iframe 内容向下推送 20 像素。|
-|6 |**iframe：** 显示应用内容。|
+|6 |**iframe**: 显示应用内容。|
 
 ### <a name="spacing"></a>Spacing
 
-优化会议选项卡以适合 280 像素宽的 iframe 区域中的边缘到边缘。 在 iframe 的左侧和右侧以及选项卡标题之间有 20 个像素的填充。 iframe 完全出血到选项卡底部。
+优化会议选项卡，以适应 280 像素宽的 iframe 区域中的边缘到边缘。 在 iframe 的左侧和右侧以及选项卡标题之间有 20 个像素的填充。 iframe 完全出血到选项卡底部。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="示例显示会议中的选项卡间距尺寸。" border="false":::
 
@@ -135,7 +136,7 @@ ms.locfileid: "59475697"
 
 ### <a name="use-cases"></a>用例
 
-会议内对话框由用户用户触发 (例如会议组织者) 可能希望参与者：
+会议内对话框由以下用户触发 (例如会议组织者) 可能希望参与者：
 
 * 提供简短反馈
 * 参加简短调查或投票
@@ -157,7 +158,7 @@ ms.locfileid: "59475697"
 |计数器|说明|
 |----------|-----------|
 |1|**标头**：包括应用图标、名称、操作字符串和关闭图标。|
-|2|**iframe：** 显示应用内容。|
+|2|**iframe**: 显示应用内容。|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>结构：会议内对话框标头
 
@@ -168,9 +169,9 @@ ms.locfileid: "59475697"
 |计数器|说明|
 |----------|-----------|
 |1|**头** 像：启动会议对话的人。|
-|2|**应用程序图标**|
+|2|**应用图标**|
 |3|**应用名称**|
-|4 |**关闭按钮**：关闭对话框。|
+|4|**关闭按钮**：关闭对话框。|
 |5|**操作字符串**：通常描述启动对话框的人。|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>响应行为：会议内对话框
@@ -191,7 +192,7 @@ ms.locfileid: "59475697"
 共享到会议阶段的应用占用的空间与共享屏幕相同。 该阶段将针对所有会议参与者进行重定向。
 
 > [!NOTE]
-> 目前，如果共享应用以在桌面上进行阶段，它将只向移动会议的用户显示。
+> 从桌面共享时，会议中的所有用户都可以看到该应用。 但是，目前无法从移动设备共享应用以阶段。
  
 ### <a name="use-cases"></a>用例
 
@@ -244,8 +245,8 @@ ms.locfileid: "59475697"
 |----------|-----------|
 |1|**应用图标**：突出显示的图标表示应用的"会议中"选项卡已打开。|
 |2|**共享到会议阶段按钮**：将应用共享到会议阶段的入口点。 显示是否将应用配置为使用共享会议阶段。|
-|3|**iframe：** 显示应用内容。|
-|4 |**"停止共享"** 按钮：停止将应用共享到会议阶段。 仅显示启动共享的参与者。|
+|3|**iframe**: 显示应用内容。|
+|4|**"停止共享"** 按钮：停止将应用共享到会议阶段。 仅显示启动共享的参与者。|
 |5|**演示者属性**：显示共享应用的参与者的姓名。|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>响应行为：共享会议阶段
@@ -261,7 +262,7 @@ ms.locfileid: "59475697"
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="显示关闭侧面板时共享会议阶段响应的图像。" border="false":::
 
-#### <a name="meeting-stage-with-side-panel"></a>带侧 (面板的) 
+#### <a name="meeting-stage-with-side-panel"></a>带侧面板 (会议) 
 
 侧面板打开时，默认情况下，会议阶段为 918x540 像素，并且至少为 472x382 像素。
 
@@ -269,11 +270,11 @@ ms.locfileid: "59475697"
 
 ## <a name="after-a-meeting"></a>会议后
 
-可以在会议结束后返回到会议并查看应用内容。 本示例中，会议组织者可以在 **Contoso** 选项卡中查看投票结果。 (注意：从设计的角度来看，会议前和会议后选项卡体验之间没有区别。) 
+可以在会议结束后返回到会议并查看应用内容。 本示例中，会议组织者可以在 **Contoso** 选项卡中查看投票结果。 (注意：从设计的角度来看，会议前和会议后选项卡体验之间没有任何区别。) 
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示会议后选项卡。" border="false":::
 
-## <a name="best-practices"></a>最佳实践
+## <a name="best-practices"></a>最佳做法
 
 使用上述建议打造优质应用体验。
 
@@ -373,7 +374,7 @@ ms.locfileid: "59475697"
 
 #### <a name="dont-left-or-center-align-actions"></a>不：左对齐或居中对齐操作
 
-这偏离了用于Teams控件放置的标准模式，并且可能会与顶部对话框后面的对话框冲突。
+这偏离了Teams控件放置的标准模式，并且可能会与顶部对话框后面的对话框冲突。
 
    :::column-end:::
 :::row-end:::
@@ -389,7 +390,7 @@ ms.locfileid: "59475697"
 
 #### <a name="do-scroll-vertically"></a>操作：垂直滚动
 
-用户期望垂直滚动在Teams (和任何其他位置) 。 如果你具有一个创意画布（如白板，用户可以在 x 和 y 轴上平移）时，这可能不适用。
+用户期望垂直滚动Teams (其他位置) 。 如果你具有一个创意画布（如白板，用户可以在 x 和 y 轴上平移）时，这可能不适用。
 
    :::column-end:::
    :::column span="":::
@@ -400,7 +401,7 @@ ms.locfileid: "59475697"
 
 #### <a name="dont-scroll-horizontally"></a>请勿：水平滚动
 
-在包括会议环境或会议Teams (，水平滚动并不是预期) 。
+在包括会议环境或会议环境在内的环境中，水平滚动Teams (预期) 。
 
    :::column-end:::
 :::row-end:::
@@ -448,7 +449,7 @@ Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪
 
 #### <a name="dont-use-unfamiliar-colors"></a>请勿：使用不熟悉的颜色
 
-与会议环境发生冲突的颜色可能会分散注意力，对会议环境Teams。 了解颜色渐变[Teams，](https://developer.microsoft.com/fluentui#/styles/web/colors/products)包括调用中性主题。
+与会议环境发生冲突的颜色可能会分散注意力，对会议环境Teams。 了解颜色渐变[Teams，](https://developer.microsoft.com/fluentui#/styles/web/colors/products)包括呼叫主题中性。
 
    :::column-end:::
 :::row-end:::
@@ -482,7 +483,7 @@ Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>警告：避免会议内选项卡中的模式
 
-模式 (也称为任务模块) 在已经较窄的会议内选项卡中可能会封装和遮盖内容。
+模式 (也称为任务模块) 在已经窄的会议内选项卡中可能会封装和遮盖内容。
 
    :::column-end:::
 :::row-end:::

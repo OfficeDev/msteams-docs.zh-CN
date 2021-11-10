@@ -1,18 +1,18 @@
 ---
-title: 使用自动程序Microsoft Teams模块
+title: 在自动程序Microsoft Teams模块
 description: 如何将任务模块与自动程序Microsoft Teams，包括 Bot Framework 卡、自适应卡片和深层链接。
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: 任务模块团队机器人
-ms.openlocfilehash: a548f0d0ae3853f447ba55409bf9edbecced4e60
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: 任务模块团队机器人深层链接自适应卡片
+ms.openlocfilehash: c46b647ca9fa446db6ae51ae6d33dbabdef18296
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155971"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888305"
 ---
 # <a name="use-task-modules-from-bots"></a>使用机器人的任务模块
-
+ 
 可以使用自适应卡片和自动程序Microsoft Teams、缩略图和自动程序连接器上的按钮从自动程序调用任务Office 365模块。 任务模块通常是比多个对话步骤更好的用户体验。 跟踪自动程序状态并允许用户中断或取消序列。
 
 有两种调用任务模块的方法：
@@ -27,7 +27,7 @@ ms.locfileid: "59155971"
 
 ## <a name="invoke-a-task-module-using-taskfetch"></a>使用任务/提取调用任务模块
 
-当卡片的对象操作或初始化时，以及当用户选择该按钮时，会向自动 `value` `invoke` `Action.Submit` `invoke` 程序发送一条消息。 在消息的 HTTP 响应中，包装对象中嵌入了一个 `invoke` [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) Teams该对象用于显示任务模块。
+当卡片的对象操作或初始化时，以及当用户选择该按钮时，会向自动 `value` `invoke` `Action.Submit` `invoke` 程序发送一条消息。 在消息的 HTTP 响应中，包装对象中嵌入了一个 `invoke` [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)对象，Teams该对象用于显示任务模块。
 
 ![任务/提取请求或响应](~/assets/images/task-module/task-module-invoke-request-response.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "59155971"
 
 当用户完成从自动程序调用的任务模块时，机器人始终会收到 `task/submit invoke` 一条消息。 回复邮件时有几种选项 `task/submit` ，如下所示：
 
-| HTTP 正文响应                      | 方案                                |
+| HTTP 正文响应                      | 应用场景                                |
 | --------------------------------------- | --------------------------------------- |
 | None 将忽略 `task/submit` 该消息 | 最简单的响应是没有任何响应。 用户完成任务模块后，自动程序无需响应。 |
 | <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams在弹出 `value` 消息框中显示 的值。 |
@@ -86,11 +86,11 @@ ms.locfileid: "59155971"
 
 本部分定义机器人接收或自动程序框架对象时接收的内容 `task/fetch` `task/submit` `Activity` 的架构。 下表提供了 和 消息的有效负载 `task/fetch` `task/submit` 的属性：
 
-| 属性 | 说明                          |
+| 属性 | 描述                          |
 | -------- | ------------------------------------ |
 | `type`   | 始终 `invoke` 为 。           |
 | `name`   | 是 `task/fetch` 或 `task/submit` 。 |
-| `value`  | 是开发人员定义的有效负载。 对象的结构与从对象 `value` 发送Teams。 但在这种情况下，情况有所不同。 它需要对来自自动程序框架的动态提取（即 和 `task/fetch` `value` 自适应卡片操作） `Action.Submit` 的支持，即 `data` 。 除了 或 Teams 外，需要一种与自动程序通信 `context` `value` 的方法 `data` 。<br/><br/>将"value"和"data"合并到父对象中：<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
+| `value`  | 是开发人员定义的有效负载。 对象的结构 `value` 与从对象发送Teams。 但在这种情况下，情况有所不同。 它需要对来自自动程序框架的动态提取（即 和 `task/fetch` `value` 自适应卡片操作，即 `Action.Submit` `data` ）的支持。 除了 或 中Teams外，需要一种与自动程序 `context` 通信 `value` 的方法 `data` 。<br/><br/>将"value"和"data"合并到父对象中：<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 下一节提供了一个在邮件中接收、响应 `task/fetch` 和 `task/submit` 调用Node.js。
 

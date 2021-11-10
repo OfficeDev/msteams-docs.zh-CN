@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 5b485e08029ba6a1028ffa19482cd767007b2444
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720223"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888508"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -466,3 +466,10 @@ Teams 应用清单定义应用的配置。
 
 > [!div class="nextstepaction"]
 > [创建合作伙伴中心帐户](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [分发应用](~/concepts/deploy-and-publish/apps-publish-overview.md)
+* [准备应用商店提交](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [测试和调试应用](~/concepts/build-and-test/debug.md)
+* [创建合作伙伴中心开发人员帐户](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)

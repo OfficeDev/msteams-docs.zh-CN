@@ -6,25 +6,25 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: fcec0e01f6f9d635896ef14eb4efee5e56f9e761
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 878b6fd22373edb8f9cbbf28c15c8d5dd10ee3e0
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720111"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888032"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
 
-应用是扩展Teams以满足你的需求。 为应用创建全新的Teams或集成现有应用。
+应用是扩展Teams以满足你的需求。 为现有应用创建全新的Teams或集成现有应用。
 
 > [!div class="nextstepaction"]
 > [从这里开始](get-started/get-started-overview.md)
 
 ## <a name="what-are-teams-apps"></a>什么是Teams应用？
 
-Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应用使用简单的 (发送) ，而其他应用则复杂 (患者记录) 。 规划应用时，请记住Teams协作中心。 应用的最佳Teams有助于用户表达自己，并更好地协同工作。
+Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应用使用简单的 (发送) ，而其他应用则复杂 (患者记录) 。 规划应用时，请记住Teams协作中心。 最佳应用Teams帮助用户表达自己，并更好地协同工作。
 
 ### <a name="personal-apps"></a>个人应用
 
@@ -37,7 +37,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="在概念上表示个人应用在 Teams 中的外观。" border="false":::
+:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="个人应用在客户端中的外观的概念Teams表示。" border="false":::
 
    :::column-end:::
 
@@ -54,7 +54,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="在概念上表示选项卡在 Teams 中的外观。" border="false":::
+:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="选项卡在客户端中的外观的概念Teams表示。" border="false":::
 
    :::column-end:::
 
@@ -65,19 +65,19 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 :::row:::
    :::column span="1":::
 
-**将字词转换为操作**：对话通常导致需要执行某些操作 (生成订单、查看代码、检查票证状态等) 。 自动[程序](bots/what-are-bots.md)可以在内部启动这些类型的Teams。
+**将字词转换为操作**：对话通常导致需要执行某些操作 (生成订单、查看代码、检查票证状态等) 。 机器人[可以在](bots/what-are-bots.md)内部启动这些类型的Teams。
 
    :::column-end:::
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-bots-2021.png" alt-text="在概念上表示自动程序在 Teams 中的外观。" border="false":::
+:::image type="content" source="assets/images/overview-bots-2021.png" alt-text="自动程序在客户端中的外观的概念Teams表示。" border="false":::
 
    :::column-end:::
 
 :::row-end:::
 
-### <a name="messaging-extensions"></a>消息传递扩展
+### <a name="messaging-extensions"></a>消息扩展
 
 :::row:::
 
@@ -89,7 +89,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="在概念上表示邮件扩展在 Teams 客户端中的外观。" border="false":::
+:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="在概念上表示邮件扩展在 Teams 中的外观。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -100,7 +100,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 
    :::column span="1":::
 
-**创建会议应用**：有一些选项用于将你的应用合并到Teams [体验](apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
+**为会议创建应用**：有一些选项用于将你的应用合并到Teams [体验](apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
 
    :::column-end:::
 
@@ -134,7 +134,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 
    :::column span="":::
 
-**利用 Teams** 数据：适用于 Teams 的 [Microsoft Graph API](/graph/teams-concept-overview)提供对团队、频道、用户和消息的访问权限，这些信息可帮助你创建或增强应用功能 (如丰富的通知) 。
+**利用 Teams** 数据：适用于 [Teams](/graph/teams-concept-overview)的 Microsoft Graph API 提供对团队、频道、用户和消息的访问权限，这些信息可帮助你创建或增强应用功能 (如丰富的通知) 。
 
    :::column-end:::
 
@@ -150,7 +150,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 
 ## <a name="start-building"></a>开始构建
 
-通过设置环境和创建简单的Teams快速熟悉构建环境。
+通过设置环境和创建一个简单的Teams快速熟悉构建环境。
 
 > [!div class="nextstepaction"]
 > [构建首个应用](get-started/get-started-overview.md)
@@ -166,7 +166,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 
 ## <a name="integrate-with-teams"></a>与Teams整合
 
-将用户喜欢的现有 Web 应用、服务或系统的功能与 Teams。
+将用户喜欢的现有 Web 应用、服务或系统的功能与 web 应用的协作功能Teams。
 
 > [!div class="nextstepaction"]
 > [集成现有应用](samples/integrating-web-apps.md)
@@ -211,8 +211,6 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 一些应�
 
 ## <a name="see-also"></a>另请参阅
 
-* [将"共享到Teams"按钮添加到您的网站](concepts/build-and-test/share-to-teams.md)
-* [设计Teams应用](concepts/design/design-teams-app-overview.md)
-* [Microsoft TeamsJavaScript 客户端 SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* 适用于[JavaScript](https://github.com/Microsoft/botbuilder-js)和[.NET](https://github.com/Microsoft/botbuilder-dotnet/)的 Bot Framework SDK
-* [分发Teams应用](concepts/deploy-and-publish/apps-publish-overview.md)
+* [应用程序基础知识](~/concepts/app-fundamentals-overview.md)
+* [设计Teams应用](~/concepts/design/design-teams-app-process.md)
+* [将用例映射到Teams功能](~/concepts/design/map-use-cases.md)

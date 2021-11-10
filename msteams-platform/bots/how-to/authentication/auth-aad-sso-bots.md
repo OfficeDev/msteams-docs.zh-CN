@@ -1,22 +1,22 @@
 ---
 title: 为机器人提供单一登录支持
 description: 介绍如何获取用户令牌。 目前，机器人开发人员可以使用登录卡或具有 OAuth 卡支持的 azure 自动程序服务。
-keywords: 令牌， 用户令牌， 自动程序 SSO 支持
+keywords: 令牌， 用户令牌， 自动程序 SSO 支持， 权限， Microsoft Graph， AAD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e3f4c7a1c803baba2687e3803a820dc351f9ca33
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 55f1185dfca79a2457e563bcf5ebbc035859a7f2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475726"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887864"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>单一登录 (SSO) 自动程序支持
 
-AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷新身份验证令牌，最大程度地减少用户输入登录凭据所需的次数。 如果用户同意使用你的应用，他们无需在另一台设备上再次提供同意，可自动登录。 该流类似于选项卡[SSO](../../../tabs/how-to/authentication/auth-aad-sso.md)Microsoft Teams流，但是，区别在于自动程序如何请求令牌和[接收响应的协议](#receive-the-bot-token)。 [](#request-a-bot-token)
+Azure Active Directory (AAD) 中的单一登录身份验证通过静默刷新身份验证令牌，最大程度地减少用户输入登录凭据所需的次数。 如果用户同意使用你的应用，他们无需在另一台设备上再次提供同意，可自动登录。 该流程类似于选项卡[SSO](../../../tabs/how-to/authentication/auth-aad-sso.md)Microsoft Teams流，但是，区别在于自动程序如何请求令牌和[接收响应的协议](#receive-the-bot-token)。 [](#request-a-bot-token)
 
 >[!NOTE]
-> OAuth 2.0 是 AAD 和许多其他标识提供程序使用的身份验证和授权的开放式标准。 对 OAuth 2.0 有基本的了解是在 Teams 中进行身份验证的先决条件。
+> OAuth 2.0 是一个开放标准，用于身份验证和授权，AAD和许多其他标识提供程序。 对 OAuth 2.0 有基本的了解是在 Teams 中进行身份验证的先决条件。
 
 ## <a name="bot-sso-at-runtime"></a>运行时自动程序 SSO
 
@@ -35,9 +35,9 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
     * 如果需要，请提供同意。
     * 处理逐步处理的身份验证，例如双因素身份验证。
 
-1. Teams当前用户的 AAD 终结点请求自动程序应用程序令牌。
+1. Teams从当前用户的 AAD 终结点请求自动程序应用程序令牌。
 
-1. AAD 将自动程序应用程序令牌发送到Teams应用程序。
+1. AAD自动程序应用程序令牌发送到Teams应用程序。
 
 1. Teams名称为 **sign-in/tokenExchange** 的调用活动返回的值对象，将令牌发送到自动程序。
   
@@ -47,15 +47,15 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
   
 完成以下步骤以开发 SSO 自动Teams程序：
 
-1. [通过 AAD 门户注册应用](#register-your-app-through-the-aad-portal)。
+1. [通过应用门户 注册AAD应用](#register-your-app-through-the-aad-portal)。
 1. [更新自动Teams的应用程序清单](#update-your-teams-application-manifest-for-your-bot)。
 1. [添加代码以请求和接收自动程序令牌](#add-the-code-to-request-and-receive-a-bot-token)。
 
-### <a name="register-your-app-through-the-aad-portal"></a>通过 AAD 门户注册应用
+### <a name="register-your-app-through-the-aad-portal"></a>通过应用门户AAD应用
 
-通过 AAD 门户注册应用的步骤与选项卡 [SSO 流类似](../../../tabs/how-to/authentication/auth-aad-sso.md)。 完成以下步骤以注册应用：
+通过应用门户注册应用AAD与选项卡[SSO 流类似](../../../tabs/how-to/authentication/auth-aad-sso.md)。 完成以下步骤以注册应用：
 
-1. 在应用注册门户Azure Active Directory[注册新](https://go.microsoft.com/fwlink/?linkid=2083908)应用程序。
+1. 在"应用注册Azure Active Directory[注册新](https://go.microsoft.com/fwlink/?linkid=2083908)应用程序。
 2. 选择 **"新建注册"。** 将显示 **"注册应用程序"** 页。
 3. 在 **"注册应用程序"** 页中，输入以下值：
     1. 为 **应用输入** 名称。
@@ -63,18 +63,18 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 
         > [!NOTE]
         >
-        > 如果用户在同一租户中注册了 AAD 应用，并且他们在同一租户中提出身份验证请求，则系统不会要求用户同意并Teams。 但是，如果用户在不同的租户中注册了 AAD 应用，则必须同意这些权限。
+        > 如果用户在 Teams 中进行身份验证请求的租户中注册 AAD 应用，则系统不会要求用户同意并授予访问Teams。 但是，如果用户在不同的租户中注册 AAD，用户必须同意这些权限。
 
     3. 选择 **“注册”**。
 4. 在概述页面上，复制并保存应用程序 (**客户端) ID**。 稍后在更新应用程序清单时Teams它。
 5. 在“**管理**”下，选择“**公开 API**”。 
 
    > [!IMPORTANT]
-    > * 如果要构建独立自动程序，请输入应用程序 ID URI 作为 `api://botid-{YourBotId}` 。 此处 **YourBotId** 是 AAD 应用程序 ID。
+    > * 如果要构建独立自动程序，请输入应用程序 ID URI 作为 `api://botid-{YourBotId}` 。 此处 **YourBotId** 是AAD应用程序 ID。
     > * 如果要使用自动程序和选项卡生成应用，请输入应用程序 ID URI 作为 `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。
 
-5. 选择应用程序对 AAD 终结点和 Microsoft Graph（可选）所需的权限。
-6. [为桌面](/azure/active-directory/develop/v2-permissions-and-consent)Teams Web 和移动应用程序授予权限。
+5. 选择应用程序对 AAD 终结点和 Microsoft Graph 所需的权限。
+6. [为桌面](/azure/active-directory/develop/v2-permissions-and-consent)、Teams和移动应用程序授予权限。
 7. 选择“**添加作用域**”。
 8. 在打开的面板中，输入 作为范围名称 `access_as_user` 添加 **客户端应用**。
 
@@ -84,7 +84,7 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
     > 您必须了解以下重要限制：
     >
     > * 仅支持用户级别的 Microsoft Graph API 权限，如电子邮件、配置文件、offline_access和 OpenId。 如果需要访问其他 Microsoft Graph作用域（如 或 ），请参阅获取具有 Graph `User.Read` `Mail.Read` [权限的访问令牌](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)。
-    > * 应用程序的域名必须与为 AAD 应用程序注册的域名相同。
+    > * 应用程序的域名必须与为应用程序注册的域名AAD相同。
     > * 当前不支持每个应用多个域。
     > * 使用域 `azurewebsites.net` 的应用程序不受支持，因为它很常见，并且可能是安全风险。
 
@@ -99,7 +99,7 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
     * 电子邮件
     * offline_access
     * OpenId
-    * profile
+    * 个人资料
 
 3. 在 Azure 门户中，转到 [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 4. 选择 **左** 窗格上的"配置"。
@@ -110,19 +110,19 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 6. 执行以下步骤以完成"新建 **连接设置"** 表单：
 
     >[!NOTE]
-    > **AAD** 应用程序中可能需要隐式授权。
+    > **在应用程序** 内可能需要隐式AAD授权。
 
     1. 在" **新建连接** 设置 **"页中输入名称** 。 这是在运行时自动程序 SSO 步骤 *5* 中的自动程序服务代码设置 [内引用的名称](#bot-sso-at-runtime)。
     2. 从"**服务提供程序"** 下拉列表中，选择 **"Azure Active Directory v2"。**
-    3. 输入客户端凭据，例如 AAD 应用程序的 **客户端** **ID** 和客户端密码。
-    4. 对于 **令牌Exchange URL，** 请使用在更新自动程序Teams应用程序清单中 [定义的作用域值](#update-your-teams-application-manifest-for-your-bot)。 令牌Exchange URL 向 SDK 指示此 AAD 应用程序已针对 SSO 进行配置。
+    3. 输入客户端凭据，如客户端 **id** 和客户端 **密码，AAD** 应用程序。
+    4. 对于 **令牌Exchange URL，** 请使用在更新自动程序的应用程序Teams [中定义的作用域值](#update-your-teams-application-manifest-for-your-bot)。 令牌Exchange URL 向 SDK 指示AAD为 SSO 配置此令牌应用程序。
     5. 在" **租户 ID"** 框中，输入 *常用*。
-    6. 添加 **为** AAD 应用程序指定下游 API 的权限时配置的所有作用域。 提供客户端 ID 和客户端密码后，令牌存储将令牌交换为具有定义权限的图形令牌。
-    7. 选择 **“保存”**。
+    6. 添加 **为应用程序** 指定下游 API 的权限时配置AAD范围。 提供客户端 ID 和客户端密码后，令牌存储将令牌交换为具有定义权限的图形令牌。
+    7. 选择“**保存**”。
 
     ![VuSSOBotConnection 设置视图](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 
-### <a name="update-your-teams-application-manifest-for-your-bot"></a>为自动Teams更新你的应用程序清单
+### <a name="update-your-teams-application-manifest-for-your-bot"></a>更新自动Teams应用程序清单
 
 如果应用程序包含独立自动程序，则使用以下代码将新属性添加到Teams清单：
 
@@ -145,14 +145,14 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 
 **webApplicationInfo** 是以下元素的父元素：
 
-* **id** - 应用程序的客户端 ID。 这是在向 AAD 注册应用程序时获取的应用程序 ID。 不要与多个应用程序共享此应用程序 ID Teams应用。 为使用 的每个应用程序清单创建新的 AAD 应用 `webApplicationInfo` 。
-* **resource** - 应用程序的域和子域。 这是相同的 URI，包括在通过 AAD 门户注册应用时注册 `api://` `scope` [的协议](#register-your-app-through-the-aad-portal)。 不得在资源 `access_as_user` 中包括路径。 此 URI 的域部分必须与应用程序清单的 URL 中使用的域和子Teams匹配。
+* **id** - 应用程序的客户端 ID。 这是在向应用程序注册应用程序时获取的应用程序 ID AAD。 不要将此应用程序 ID 与多个应用程序Teams共享。 为使用 的每个AAD清单创建新的应用程序应用程序 `webApplicationInfo` 。
+* **resource** - 应用程序的域和子域。 这是相同的 URI，包括在通过应用门户注册应用时注册 `api://` `scope` [AAD协议](#register-your-app-through-the-aad-portal)。 不得在资源 `access_as_user` 中包括路径。 此 URI 的域部分必须与应用程序清单的 URL 中使用的域和子Teams匹配。
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>添加代码以请求和接收自动程序令牌
 
 #### <a name="request-a-bot-token"></a>请求自动程序令牌
 
-获取令牌的请求是使用现有邮件架构的普通 POST 邮件请求。 它包含在 OAuthCard 的附件中。 OAuthCard 类的架构在 Microsoft [Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) 中定义，它类似于登录卡。 Teams在卡片上填充属性时，将此请求视为 `TokenExchangeResource` 无提示令牌获取。 对于Teams通道，仅会使用唯一标识 `Id` 令牌请求的属性。
+获取令牌的请求是使用现有邮件架构的普通 POST 邮件请求。 它包含在 OAuthCard 的附件中。 OAuthCard 类的架构在 Microsoft [Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) 中定义，它类似于登录卡。 Teams在卡片上填充属性时，将此请求视为 `TokenExchangeResource` 无提示令牌获取。 对于Teams通道，仅处理唯一标识 `Id` 令牌请求的属性。
 
 >[!NOTE]
 > SSO `OAuthPrompt` 身份验证支持 `MultiProviderAuthDialog` Microsoft Bot Framework 或 。
@@ -196,7 +196,7 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 >[!NOTE]
 > 如果用户有多个活动终结点，您可能会收到对给定请求的多个响应。 必须使用令牌删除响应。
 
-##### <a name="c-code-to-handle-the-invoke-activity"></a>C#调用活动的代码
+##### <a name="c-code-to-handle-the-invoke-activity"></a>C#代码来处理调用活动
 
 ```csharp
     protected override async Task<InvokeResponse> OnInvokeActivityAsync
@@ -247,7 +247,7 @@ AAD Azure Active Directory (中的单一登录身份验证) 以静默方式刷�
 1. 客户端与触发 OAuth 方案的机器人开始对话。
 2. 机器人将 OAuth 卡发送回客户端。
 3. 客户端在向用户显示 OAuth 卡之前截获该卡片，并检查其是否包含 `TokenExchangeResource` 属性。
-4. 如果该属性存在，客户端会向 `TokenExchangeInvokeRequest` 自动程序发送 。 客户端必须具有用户的可交换令牌，该令牌必须是 Azure AD v2 令牌，并且其受众必须与属性 `TokenExchangeResource.Uri` 相同。 客户端通过以下代码向机器人发送调用活动：
+4. 如果该属性存在，客户端会向 `TokenExchangeInvokeRequest` 自动程序发送 。 客户端必须具有用户的可交换令牌，该令牌必须是 Azure AD v2 令牌，并且其访问群体必须与 `TokenExchangeResource.Uri` 属性相同。 客户端通过以下代码向机器人发送调用活动：
 
     ```json
     {

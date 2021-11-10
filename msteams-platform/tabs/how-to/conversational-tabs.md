@@ -1,21 +1,21 @@
 ---
 title: 创建对话选项卡
 author: surbhigupta
-description: 为频道选项卡创建对话子企业聊天
+description: 了解如何为频道选项卡创建对话子企业聊天，以使用代码示例管理对话
 keywords: Teams 选项卡频道可配置
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 7426ca8d994a9009b05e5a3eece05d4938f07f80
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720370"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889361"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
-对话子项提供了一种允许用户在选项卡中就子用户的对话的方法。例如特定任务、患者和销售机会，而不是讨论整个选项卡（也称为实体）。 传统的频道或可配置的选项卡允许用户就选项卡进行对话，但用户需要更集中的对话。 如果内容太多，无法进行集中讨论，或者内容随着时间的推移而发生更改，使对话与显示的内容无关，则可能出现更集中的对话的要求。 对话子项为动态选项卡提供了更加集中的对话体验。
+对话子项提供了一种允许用户在选项卡中就子用户的对话的方法。例如特定任务、患者和销售机会，而不是讨论整个选项卡（也称为实体）。 传统的频道或可配置的选项卡允许用户就选项卡进行对话，但用户需要更集中的对话。 如果内容太多，无法进行集中讨论，或者内容随着时间的推移而发生更改，使对话与显示的内容无关，则可能会出现更集中的对话的要求。 对话子项为动态选项卡提供了更加集中的对话体验。
 
 对话子项仅在频道中受支持。 它们可用于从个人选项卡或静态选项卡创建或继续已固定到频道的选项卡中的对话。 如果要为用户提供一个位置来查看和访问跨多个渠道发生的对话，静态选项卡非常有用。
 
@@ -37,7 +37,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 * **entityId**：选项卡实例创建时其 ID。 ID 必须引用回同一个选项卡实例。
 * **channelId：** 选项卡实例所在的通道。
    > [!NOTE]
-   > **channelId** 对于频道选项卡是可选的。 但是，如果你想要保持通道和静态选项卡的实现相同，则建议这样做。
+   > **channelId** 对于频道选项卡是可选的。 但是，如果你想要保持通道和静态选项卡上的实现相同，则建议这样做。
 * **title**：在聊天面板中向用户显示的标题。
 
 大部分这些值也可从 `getContext` API 中检索。
@@ -92,9 +92,14 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称 | 说明 | C# |Node.js|
+| 示例名称 | 描述 | C# |Node.js|
 |-------------|-------------|------|----|
-|创建"对话"选项卡| Microsoft Teams创建对话选项卡的选项卡示例应用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|创建"对话"选项卡| Microsoft Teams演示创建对话选项卡的选项卡示例应用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [选项卡边距更改](~/resources/removing-tab-margins.md)
 
 ## <a name="see-also"></a>另请参阅
 
@@ -103,8 +108,3 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 * [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>下一步
-
-> [!div class="nextstepaction"]
-> [选项卡边距更改](~/resources/removing-tab-margins.md)

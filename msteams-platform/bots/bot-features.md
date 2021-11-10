@@ -5,16 +5,16 @@ description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8c05fecc656264b3e7e98839c65bab2c9eda0952
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d6a1ce32fce03ada547cf769ff5a634f9d6f01de
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566342"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888424"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
-你可以创建适用于以下工具Microsoft Teams之一的聊天机器人：
+可以使用以下工具或功能之Microsoft Teams创建适用于以下工具或功能的聊天机器人：
 
 * [Microsoft Bot FrameworkSDK](#bots-with-the-microsoft-bot-framework)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
@@ -27,7 +27,7 @@ ms.locfileid: "60566342"
 
 * 由你托管的可公开访问的 Web 服务。
 * Web 服务的自动程序框架注册。
-* 你的Teams应用包，可将Teams客户端连接到 Web 服务。
+* 你的Teams应用程序包，可将Teams客户端连接到 Web 服务。
 
 > [!TIP]
 > 使用开发人员门户向 Bot Framework 注册 Web 服务并指定应用配置。 有关详细信息，请参阅使用开发人员门户[管理应用Teams。](~/concepts/build-and-test/teams-developer-portal.md)
@@ -35,15 +35,15 @@ ms.locfileid: "60566342"
 Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于创建使用 C#、Java、Python 和 JavaScript 的聊天机器人。 如果你已有基于 Bot Framework 的自动程序，你可以轻松修改它以在 Teams。 使用 C# 或 Node.js 来利用[我们的 SDK。](/microsoftteams/platform/#pivot=sdk-tools) 这些包扩展基本 Bot Builder SDK 类和方法，如下所示：
 
 * 使用专用卡类型，如Office 365卡。
-* 在Teams设置特定于频道的数据。
+* 设置Teams活动的频道数据。
 * 处理邮件扩展请求。
 
 > [!IMPORTANT]
-> 你可以以任何Teams技术开发应用，并直接调用 Bot Framework [REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
+> 可以使用任何 Web Teams技术开发自动程序应用，并直接调用[Bot Framework REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
 
 ## <a name="bots-with-power-virtual-agents"></a>具有自动程序Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户中Power Virtual Agents[聊天](https://powervirtualagents.microsoft.com)机器人后，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户创建聊天Power Virtual Agents[后](https://powervirtualagents.microsoft.com)，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
 
 ## <a name="bots-with-webhooks-and-connectors"></a>具有 Webhook 和连接器的机器人
 
@@ -56,7 +56,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 | 在频道中 | 在群聊中 | 在一对一聊天中 |
 | :-- | :-- | :-- |
 | 大规模覆盖 | 成员更少 | 传统方式 |
-| 简洁的单个交互 | @mention自动程序  | Q&A bots |
+| 简洁的单个交互 | @mention自动程序  | 问答&程序 |
 | @mention自动程序 | 类似于频道 | 告知小人并做笔记的机器人 |
 
 ### <a name="in-a-channel"></a>在频道中
@@ -79,7 +79,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 ### <a name="in-a-one-to-one-chat"></a>在一对一聊天中
 
 一对一聊天是对话机器人与用户交互的传统方式。 一对一对话机器人的一些示例如下：
-* Q&A bots
+* 问答&程序
 * 启动其他系统中工作流的机器人 
 * 告知机器人
 * 在创建一对一聊天机器人之前，请考虑基于对话的界面是否是显示功能的最佳方法。
@@ -122,3 +122,11 @@ BOT：哪一天？
 
 > [!div class="nextstepaction"]
 > [智能机器人活动处理程序](~/bots/bot-basics.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [通话和会议智能机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [智能机器人对话](~/bots/how-to/conversations/conversation-basics.md)
+* [自动程序命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
+* [聊天机器人的身份验证Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
+* [使用机器人的任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)

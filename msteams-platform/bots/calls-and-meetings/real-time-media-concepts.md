@@ -1,27 +1,27 @@
 ---
 title: 实时媒体通话和在线会议与Microsoft Teams
-description: 了解构建可进行实时音频和视频呼叫和联机会议的机器人的关键概念。
+description: 了解构建可进行实时音频和视频呼叫和联机会议的机器人的关键概念。 了解媒体会话、帧速率、音频/视频格式以及开发人员资源参考
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 音频流视频流 音频/视频呼叫会议实时媒体应用程序托管的媒体服务托管的媒体
-ms.openlocfilehash: 5c7fce3e8d584781037b5d1169706c9f197e3a96
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bff216848262412a05de8794bb716eb6a3f4c75a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155966"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889060"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>实时媒体通话和与会议Microsoft Teams
 
 实时媒体平台允许机器人使用实时Microsoft Teams、视频和屏幕共享与通话和会议进行交互。 实时媒体平台是一项高级功能，允许机器人按帧发送和接收语音和视频内容帧。 机器人可以原始访问语音、视频和屏幕共享媒体流。 还有更简单的服务托管媒体机器人，它们依赖于实时媒体平台进行所有媒体处理。 处理媒体本身的机器人称为应用程序托管的媒体机器人。
 
-例如，在 1：1 与机器人的呼叫中，在用户说话时，机器人每秒接收 50 个音频帧。 自动程序接收音频帧，每帧 20 毫秒 (毫秒) 音频。 应用程序托管的媒体机器人可以在接收音频帧时执行实时语音识别。 用户停止说话后无需等待录制。 机器人还可以发送和接收高分辨率视频，包括基于视频的屏幕共享内容。
+例如，在 1：1 与机器人的呼叫中，在用户说话时，机器人每秒接收 50 个音频帧。 自动程序接收音频帧，每帧 20 毫秒 (20 毫秒) 音频。 应用程序托管的媒体机器人可以在接收音频帧时执行实时语音识别。 用户停止说话后无需等待录制。 机器人还可以发送和接收高分辨率视频，包括基于视频的屏幕共享内容。
 
 该平台为机器人提供了一个与套接字类似的简单 API，用于发送和接收媒体。 它处理音频或视频数据包实时编码和解码。 它针对音频使用编码解码器（如一些，而将 G.722 和 H.264 用于视频）。 该平台还处理所有媒体数据包加密或解密以及数据包网络传输。 机器人只关注实际的音频或视频内容。 实时媒体机器人与多个参与者一对一参与通话和会议。
 
 ## <a name="media-session"></a>媒体会话
 
-实时媒体机器人必须声明必须支持哪些形式。 实时媒体机器人在应答传入呼叫或加入会议时必须声明Teams支持。 对于每个受支持的形式，机器人声明它可以发送和接收媒体、仅接收还是仅发送。 例如，设计用于处理 1：1 Teams的机器人需要发送和接收音频。 但是机器人只需要发送视频，因为它不需要接收呼叫者的视频。 机器人与呼叫者或会议之间建立的音频和视频Teams称为媒体会话。
+实时媒体机器人必须声明必须支持哪些形式。 实时媒体机器人在应答传入呼叫或加入会议时必须声明Teams支持。 对于每个受支持的形式，机器人声明它可以发送和接收媒体、仅接收还是仅发送。 例如，设计为处理 1：1 Teams呼叫的机器人需要发送和接收音频。 但是机器人只需要发送视频，因为它不需要接收呼叫者的视频。 机器人与呼叫者或会议之间建立的音频和视频Teams称为媒体会话。
 
 支持两种类型的视频形式，主要基于视频和基于视频的屏幕共享。 主视频用于从用户的摄像头传输视频。 基于视频的屏幕共享允许用户共享屏幕。 该平台允许机器人发送和接收这两种视频类型。
 
@@ -55,13 +55,13 @@ ms.locfileid: "59155966"
 
 ## <a name="video-subscription"></a>视频订阅
 
-在一对一呼叫中，如果机器人能够接收视频，机器人将自动接收呼叫者的视频。 在Teams中，机器人必须向平台指示它想要查看的参与者。 视频订阅是机器人请求接收参与者的主视频或屏幕共享内容。 当会议参与者进行对话时，机器人会修改其所需的视频订阅。 机器人根据基准扬声器集的更新或指示当前哪个参与者是屏幕共享的通知来修改视频订阅。
+在一对一呼叫中，如果机器人能够接收视频，机器人将自动接收呼叫者的视频。 在Teams会议中，机器人必须向平台指示它想要看到哪些参与者。 视频订阅是机器人请求接收参与者的主视频或屏幕共享内容。 当会议参与者进行对话时，机器人会修改其所需的视频订阅。 机器人根据基准扬声器集的更新或指示当前哪个参与者是屏幕共享的通知来修改视频订阅。
 
 下一节提供有关必须安装的内容以及开发应用程序托管的媒体自动程序的要求的详细信息。
 
 ## <a name="developer-resources"></a>开发人员资源
 
-若要开发应用程序托管的媒体自动程序，必须安装[Microsoft.Graph。Calls.Media .NET 库](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)NuGet项目中的Visual Studio包。
+若要开发应用程序托管的媒体自动程序，必须安装[Microsoft.Graph。Calls.Media .NET 库](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)NuGet项目内的Visual Studio包。
 
 应用程序托管的媒体机器人需要 .NET 或 C# Windows Server。 有关详细信息，请参阅 [应用程序托管的媒体机器人的要求和注意事项](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)。
 
@@ -69,3 +69,7 @@ ms.locfileid: "59155966"
 
 > [!div class="nextstepaction"]
 > [注册通话机器人](~/bots/calls-and-meetings/registering-calling-bot.md)
+
+## <a name="see-also"></a>另请参阅
+
+[支持用于机器人的媒体格式](~/resources/media-formats.md)

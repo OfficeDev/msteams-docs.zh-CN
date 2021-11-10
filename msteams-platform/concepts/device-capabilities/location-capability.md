@@ -1,19 +1,19 @@
 ---
 title: 集成位置功能
 author: Rajeshwari-v
-description: 如何使用 JavaScript Teams SDK 利用位置功能
+description: 了解如何使用 JavaScript Teams SDK 利用代码段和示例的位置功能
 keywords: 位置地图功能本机设备权限
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 66cd0c4f1b0d095551db79f7ed928477124e326b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: db86b2bf80bcc0f4f56c9998a573f0a7cbd1e9c3
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719789"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888438"
 ---
-# <a name="integrate-location-capabilities"></a>集成位置功能 
+# <a name="integrate-location-capabilities"></a>集成位置功能
 
 你可以将本机设备的位置功能与你的应用Teams集成。  
 
@@ -21,13 +21,13 @@ ms.locfileid: "60719789"
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>集成位置功能的优点
 
-在 Teams 应用中集成位置功能的主要优点是，它允许 Teams 平台上的 Web 应用开发人员利用 Microsoft Teams JavaScript 客户端 SDK 的位置功能。 
+在 Teams 应用中集成位置功能的主要优点是，它允许 Teams 平台上的 Web 应用开发人员使用 Microsoft Teams JavaScript 客户端 SDK 利用位置功能。 
 
 以下示例显示如何在不同方案中使用位置功能的集成：
 * 在工厂中，主管可以跟踪工作者的出席情况，让他们在工厂附近自家，并通过指定的应用共享它。 位置数据也会与图像一起捕获和发送。
 * 位置功能使服务提供商的维护人员能够与管理层共享手机网络的真实运行状况数据。 管理层可以比较捕获的位置信息与维护人员提交的数据之间的任何不匹配情况。
 
-若要集成位置功能，必须更新应用清单文件并调用 API。 为了进行有效的集成，您必须深入了解用于调用位置[](#code-snippets)API 的代码段。 熟悉 API 响应错误以处理应用[](#error-handling)内的错误Teams很重要。
+若要集成位置功能，必须更新应用清单文件并调用 API。 为了进行有效的集成，您必须深入了解用于调用位置[](#code-snippets)API 的代码段。 熟悉 API 响应错误以处理应用内[的错误](#error-handling)Teams很重要。
 
 > [!NOTE] 
 > 目前Microsoft Teams对位置功能的支持仅适用于移动客户端。
@@ -43,7 +43,7 @@ ms.locfileid: "60719789"
 ```
 
 > [!NOTE]
-> * 启动 **相关 API 时**，将自动显示Teams权限提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。    
+> * 启动 **相关的 API 时**，将自动显示Teams权限提示。 有关详细信息，请参阅请求 [设备权限](native-device-permissions.md)。    
 > * 设备权限在浏览器中不同。 有关详细信息，请参阅 [浏览器设备权限](browser-device-permissions.md)。   
 
 ## <a name="location-apis"></a>位置 API
@@ -105,7 +105,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ### <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | C# | Node.js | 
+|示例名称 | 描述 | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | 应用签入当前位置 | 用户可以签入当前位置并查看所有以前的位置签入。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 

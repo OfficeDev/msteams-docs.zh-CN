@@ -1,24 +1,24 @@
 ---
 title: 使用高级 UI 组件设计应用
 author: heath-hamilton
-description: 了解跨应用程序使用的 UI Teams。
+description: 了解 ui Teams，如痕迹导航、通知栏、阶段视图以及相关用例。
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: d42205ff7d62d1c65956baed4f7841c8fe70b2e5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719845"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889256"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI Microsoft Teams设计应用
 
-以下组件是基本[UI](~/concepts/design/design-teams-app-basic-ui-components.md)组件的组合，可用于常见设计Teams，如导航。
+以下组件是基本[UI](~/concepts/design/design-teams-app-basic-ui-components.md)组件的组合，可用于常见Teams设计情况，如导航。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成应用而设计的组件Teams模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
+基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成 Teams 应用而设计的组件和模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
@@ -42,7 +42,7 @@ ms.locfileid: "60719845"
 
 ## <a name="left-nav"></a>左导航
 
-使用左侧导航键浏览"导航"选项卡Teams页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
+使用左侧导航键浏览"页面"选项卡Teams页面。在下面的示例中，左侧导航位于通道列表和选项卡内容之间。
 
 ### <a name="top-use-cases"></a>热门用例
 

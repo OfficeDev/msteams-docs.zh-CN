@@ -1,20 +1,20 @@
 ---
 title: 使用 UI 模板设计应用
 author: heath-hamilton
-description: 使用通常在整个应用中看到的标准化 UI 组件、布局和模式更快地设计Microsoft Teams。
+description: 使用常用的标准化 UI 组件、布局和模式来更快地设计Microsoft Teams。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155989"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887801"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI Microsoft Teams设计应用
 
-使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 UI Fluent的组件的集合，这些组件适用于常见的 Teams 用例，让你有更多的时间来为用户找到最佳体验。
+使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 ui Fluent的组件的集合，这些组件适用于常见Teams用例，让你有更多的时间来为用户找到最佳体验。
 
 ## <a name="getting-started-with-tools-and-samples"></a>工具和示例入门
 
@@ -22,7 +22,7 @@ ms.locfileid: "59155989"
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-从 Microsoft Teams UI 工具包获取应用设计的 UI 模板，其中还包括有关用法、结构、辅助功能和最佳做法的广泛信息。
+从应用 UI 工具包中为应用设计获取 UI 模板Microsoft Teams，其中还包括有关用法、结构分析、辅助功能和最佳做法的广泛信息。
 
 > [!div class="nextstepaction"]
 > [获取图 (UI) ](https://www.figma.com/community/file/916836509871353159)
@@ -34,7 +34,7 @@ ms.locfileid: "59155989"
 > [!div class="nextstepaction"]
 > [尝试 UI 库 (场) ](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-直接将这些模板和相关组件导入到Teams应用项目中。
+将这些模板和相关组件直接导入到Teams应用项目中。
 
 > [!div class="nextstepaction"]
 > [获取 UI 库 (GitHub) ](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
@@ -66,7 +66,7 @@ ms.locfileid: "59155989"
 
 ## <a name="data-visualization"></a>数据可视化
 
-可以使用不同的卡片大小（ (、双精度和) ）来堆叠和组织同一页面上的数据可视化效果。 卡片缩放以适合列布局并填充空白区域。
+可以使用不同的卡片大小（ (、双精度和) ）来堆叠和组织同一页面上的数据可视化效果。 卡片可缩放以适合列布局并填充空白区域。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -153,7 +153,7 @@ ms.locfileid: "59155989"
 
 ## <a name="sign-in"></a>登录
 
-您可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括 SSO (单一) ，我们建议这样做，以简化身份验证体验。
+您可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括单一登录 (SSO) ，建议这样做以简化身份验证体验。
 
 ### <a name="top-use-case"></a>热门用例
 
@@ -169,7 +169,7 @@ ms.locfileid: "59155989"
 
 ## <a name="settings"></a>设置
 
-设置屏幕是用户可以使用你的应用配置其首选项的地方。  (注意：设置是基本[UI 组件的](~/concepts/design/design-teams-app-basic-ui-components.md)容器 。) 
+设置屏幕是用户可以使用你的应用配置其首选项的地方。  (注意：设置是基本[UI 组件的](~/concepts/design/design-teams-app-basic-ui-components.md)容器) 
 
 ### <a name="top-use-case"></a>热门用例
 
@@ -212,3 +212,9 @@ ms.locfileid: "59155989"
 ### <a name="desktop"></a>桌面
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="示例在桌面上显示向导 UI 模板。" border="false":::
+
+## <a name="see-also"></a>另请参阅
+
+* [使用基本的 UI 组件Fluent应用](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [使用高级 UI Microsoft Teams设计应用](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [设置你的智能机器人邮件格式](~/bots/how-to/format-your-bot-messages.md)

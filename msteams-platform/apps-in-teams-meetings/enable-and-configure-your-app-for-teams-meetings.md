@@ -1,17 +1,17 @@
 ---
-title: 为会议启用和配置Teams应用程序
+title: 为会议启用和配置Teams应用
 author: surbhigupta
-description: 为会议启用和配置Teams应用程序
+description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置诸如会议对话、共享会议阶段、会议侧窗格等功能
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 62423d92537cc6cb2d0f8f409d8e50b492fa00fd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720209"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887711"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
 每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
 
@@ -62,7 +62,7 @@ ms.locfileid: "60720209"
 | **meetingChatTab** | 一组用户之间安排的会议的群聊标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中运行。 |
 | **meetingDetailsTab** | 日历的会议详细信息视图标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中运行。 |
 | **meetingSidePanel** | 通过统一栏打开的会议内面板 (U 条形图) 。 |
-| **meetingStage** | 可以将 中的 `meetingSidePanel` 应用共享到会议阶段。 你不能在移动设备上使用此应用。 |
+| **meetingStage** | 可以将 中的 `meetingSidePanel` 应用共享到会议阶段。 你无法通过移动设备或会议室客户端Teams此应用。 |
 
 为会议启用应用Teams，必须在会议前、会议期间和会议后配置应用。
 
@@ -163,10 +163,11 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 |示例名称 | 说明 | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 该令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会议阶段示例 | 在会议阶段显示选项卡以用于协作的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 
 * [会议内对话设计指南](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
+* [通过 Microsoft Graph 将应用添加到会议](/graph/api/chat-post-installedapps.md)

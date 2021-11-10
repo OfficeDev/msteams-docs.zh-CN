@@ -4,12 +4,12 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439695"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887537"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -24,10 +24,10 @@ ms.locfileid: "59439695"
 在以下情况下，有关用户、团队或公司的上下文可能特别有用：
 
 * 在应用中创建资源或将资源与指定的用户或团队关联。
-* 您从 AAD Azure Active Directory (或其他标识) 启动身份验证流，并且不需要用户再次输入其用户名。 有关详细信息，请参阅"验证[用户身份"选项卡Microsoft Teams用户](~/concepts/authentication/authentication.md)。
+* 您从用户或其他标识Azure Active Directory (AAD) 启动身份验证流，并且不需要用户再次输入其用户名。 有关详细信息，请参阅"验证用户[身份Microsoft Teams选项卡。](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
-> 虽然此用户信息可帮助提供流畅的用户体验，但不得使用它作为标识证明。 例如，攻击者可以在浏览器中加载页面并呈现有害的信息或请求。
+> 虽然此用户信息可帮助提供流畅的用户体验，但不得使用它作为标识证明。  例如，攻击者可以在浏览器中加载页面并呈现有害的信息或请求。
 
 ## <a name="access-context-information"></a>访问上下文信息
 
@@ -42,12 +42,12 @@ ms.locfileid: "59439695"
 
 * {entityId}：首次配置选项卡列表时， [此选项卡中提供的](~/tabs/how-to/create-tab-pages/configuration-page.md)。
 * {subEntityId}：为此选项卡内的特定项生成深层链接时[](~/concepts/build-and-test/deep-links.md)提供的 ID。这必须用于还原到实体中的特定状态;例如，滚动到或激活特定内容部分。
-* {loginHint}：适合用作 AAD 登录提示的值。 这通常是其主租户中当前用户的登录名。
+* {loginHint}：适合用作登录提示的值AAD。 这通常是其主租户中当前用户的登录名。
 * {userPrincipalName}：当前租户中当前用户的用户主体名称。
-* {userObjectId}：当前租户中当前用户的 AAD 对象 ID。
+* {userObjectId}：AAD租户中当前用户的对象 ID。
 * {theme}：当前用户界面 (UI) 主题，如 、 或 `default` `dark` `contrast` 。
-* {groupId}：选项卡Office 365的组 ID。
-* {tid}：当前用户的 AAD 租户 ID。
+* {groupId}：选项卡Office 365组 ID。
+* {tid}：AAD用户的租户 ID。
 * {locale}：格式化为 languageId-countryId 的用户的当前区域设置。 例如，en-us。
 
 > [!NOTE]
@@ -121,8 +121,8 @@ ms.locfileid: "59439695"
 * `teamId`：设置为私人频道的 threadId
 * `teamName`：设置为私人频道的名称
 * `teamSiteUrl`：设置为专用频道的独特SharePoint网站的 URL
-* `teamSitePath`：设置为专用频道的独特、唯SharePoint网站的路径
-* `teamSiteDomain`：设置为专用频道的独特、唯SharePoint网站域的域
+* `teamSitePath`：设置为专用频道的独特SharePoint网站的路径
+* `teamSiteDomain`：设置为专用频道的唯一SharePoint站点域的域
 
 如果页面使用了这些值中的任意值，则必须检查字段以确定页面是否加载到私人频道中并 `channelType` 做出相应的响应。
 
@@ -135,14 +135,15 @@ ms.locfileid: "59439695"
 
 函数 `theme` 中的参数是值为 、 `default` 或 的 `dark` 字符串 `contrast` 。
 
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
+
 ## <a name="see-also"></a>另请参阅
 
 * [选项卡设计指南](../../tabs/design/tabs.md)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>后续步骤
-
-> [!div class="nextstepaction"]
-> [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

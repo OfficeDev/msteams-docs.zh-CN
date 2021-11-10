@@ -1,15 +1,15 @@
 ---
 title: 用户特定视图
-description: 使用通用操作的用户特定视图的示例
+description: 了解使用通用操作和代码示例的用户特定视图
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 10f9b63f59629e592f2dee75d3e91bab97ff9a08
-ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
+ms.openlocfilehash: e6dc1cc87f5a9896933566475d69ce9ad311fbfb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "60223039"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889200"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
@@ -63,7 +63,7 @@ ms.locfileid: "60223039"
 
 **若要发送自适应卡片，请刷新用户特定视图，并调用对自动程序的请求**
 
-1. 当 Megan 创建新事件时，机器人会发送自适应卡片或公用卡片（包含事件详细信息Teams对话中）。
+1. 当 Megan 创建新事件时，自动程序在用户对话中发送包含事件详细信息的自适应卡片Teams卡片。
 2. 现在，此卡片将自动刷新到 Megan 和 Alex 的用户特定视图。 Alex 和 Megan 的用户 MRIs 添加到自适应卡片 JSON 的 `userIds` `refresh` 属性中。 对于对话中的其他用户，该卡片保持不变。
 3. 对于 Megan，自动刷新会触发 `adaptiveCard/action` 对机器人的调用请求。 机器人可以返回事件创建者卡片，并添加 `Edit` 按钮作为对此调用请求的响应。
 4. 同样，对于 Alex，自动刷新将触发 `adaptiveCard/action` 对自动程序的另一个调用请求。 机器人可以返回事件所有者卡片 `Resolve` 按钮作为对此调用请求的响应。

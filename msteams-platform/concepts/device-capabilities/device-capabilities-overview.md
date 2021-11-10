@@ -1,17 +1,17 @@
 ---
 title: 设备功能 - 概述
 author: Rajeshwari-v
-description: 本机设备功能概述。
+description: 本机设备功能概述，例如相机、图像、媒体、麦克风、麦克风、qr 代码等。
 ms.author: surbhigupta
 keywords: 相机图像媒体麦克风麦克风 qr 代码 qrcode 条形码条形码扫描扫描仪位置映射功能本机设备权限
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 9c08b727808f33ad128709ce15ecab2ecc3602b3
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566265"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889137"
 ---
 # <a name="device-capabilities"></a>设备功能
 
@@ -23,7 +23,7 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 
 移动或桌面具有内置的设备，如相机和麦克风，称为功能。 可以通过 JavaScript 客户端 SDK 中提供的专用 API 在移动或桌面上Microsoft Teams[以下设备功能](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)：
 * 媒体功能，例如
-    * 相机
+    * 照相机
     * 麦克风
     * 库
     * QR 或条形码扫描仪
@@ -33,7 +33,7 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 
 ## <a name="request-device-permissions"></a>请求设备权限
 
-使用[JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) Microsoft Teams SDK 中提供的工具请求访问本机设备功能[](native-device-permissions.md)所需的权限。 虽然新式 Web 浏览器中对这些功能的访问是标准操作，但你必须Teams更新应用清单，告知用户有关你使用的功能的信息。 此更新允许你在移动或桌面客户端上运行应用Teams请求权限。
+使用[JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) Microsoft Teams SDK 中提供的工具请求访问本机设备[](native-device-permissions.md)功能所需的权限。 虽然新式 Web 浏览器中对这些功能的访问是标准操作，但你必须Teams更新应用清单来通知用户有关你使用的功能的信息。 此更新允许你在移动或桌面客户端上运行应用Teams请求权限。
  
  ## <a name="integrate-device-capabilities"></a>集成设备功能
 

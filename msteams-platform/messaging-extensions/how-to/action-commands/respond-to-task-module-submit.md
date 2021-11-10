@@ -1,16 +1,16 @@
 ---
 title: 响应任务模块提交操作
 author: surbhigupta
-description: 介绍如何从消息传递扩展操作命令响应任务模块提交操作
+description: 介绍如何通过主动邮件、另一个任务模块、自适应卡片自动程序等使用代码示例从邮件扩展操作命令响应任务模块提交操作。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 92a7080d57b1ea6de3924da53a968d3fc960029a
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: ac74fb4536f5e7b36e40982cf13a7cf4edfa1644
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566384"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889410"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -402,7 +402,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>响应 botMessagePreview 编辑
 
-如果用户在发送前编辑卡片，则 **通过选择"** 编辑"，将收到 `composeExtension/submitAction` 一个调用 `value.botMessagePreviewAction = edit` 。 通过返回你发送的任务模块进行响应，以响应开始交互 `composeExtension/fetchTask` 的初始调用。 这允许用户通过重新输入原始信息来启动该过程。 使用可用信息更新任务模块，以便用户无需从头开始填写所有信息。
+如果用户在发送前编辑卡片，则 **通过选择"** 编辑"，将收到 `composeExtension/submitAction` 一个调用 `value.botMessagePreviewAction = edit` 。 通过返回你发送的任务模块来响应开始交互 `composeExtension/fetchTask` 的初始调用。 这允许用户通过重新输入原始信息来启动该过程。 使用可用信息更新任务模块，以便用户无需从头开始填写所有信息。
 有关响应初始事件的信息 `fetchTask` ，请参阅 [响应初始 `fetchTask` 事件](~/messaging-extensions/how-to/action-commands/create-task-module.md)。
 
 ### <a name="respond-to-botmessagepreview-send"></a>响应 botMessagePreview 发送
@@ -586,7 +586,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 以下部分介绍了 Array 中的 `OnBehalfOf` 实体：
 
-|字段|类型|说明|
+|字段|类型|描述|
 |:---|:---|:---|
 |`itemId`|整数|描述项目的标识。 其值必须为 `0` 。|
 |`mentionType`|String|描述"人"的提及。|
@@ -605,3 +605,6 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 > [!div class="nextstepaction"]
 > [定义搜索命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
+## <a name="see-also"></a>另请参阅
+
+[响应搜索命令](~/messaging-extensions/how-to/search-commands/respond-to-search.md)

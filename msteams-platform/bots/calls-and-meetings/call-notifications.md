@@ -1,24 +1,24 @@
 ---
 title: 来电通知
-description: 有关处理来自传入呼叫的通知的详细技术信息
+description: 了解有关使用代码示例处理来自传入呼叫的通知、重定向和验证呼叫的详细技术信息
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 调用呼叫通知回调区域相关性
 ms.date: 04/02/2019
-ms.openlocfilehash: eb05499b32a0e62b9aa5b073770632c081b8526a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155303"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889158"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 
-在[注册呼叫和会议机器人以使用 Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)时，会提到用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
+在[注册呼叫和会议机器人以使用](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)Microsoft Teams 时，会提到用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
 
 ## <a name="protocol-determination"></a>协议确定
 
-传入通知以旧格式提供，用于与以前的 Skype[协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将呼叫转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式并提供以下响应：
+传入通知以旧格式提供，用于与以前的 Skype[协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将呼叫转换为 Microsoft Graph协议，机器人必须确定通知是否采用旧格式并提供以下响应：
 
 ```http
 HTTP/1.1 204 No Content

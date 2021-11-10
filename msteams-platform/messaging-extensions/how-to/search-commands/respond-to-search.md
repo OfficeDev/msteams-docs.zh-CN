@@ -1,16 +1,16 @@
 ---
 title: 响应搜索命令
 author: surbhigupta
-description: 如何从应用程序应用中的消息扩展响应Microsoft Teams命令。
+description: 了解如何使用代码示例和示例从 Microsoft Teams应用中的消息扩展响应搜索命令
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 23c4e6d2db9396fc03ed2a75ccc09052f1130423
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46c5d1ef47d9c31552efac00baef347baf3c7470
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155261"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889375"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -81,7 +81,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 当用户执行查询时，Microsoft Teams向服务发送同步 HTTP 请求。 此时，代码有 `5` 几秒钟时间提供对请求的 HTTP 响应。 在此期间，你的服务可以执行其他查找，或执行为请求提供服务所需的任何其他业务逻辑。
 
-服务必须使用与用户查询匹配的结果进行响应。 该响应必须指示 的 HTTP 状态代码以及具有以下属性的有效 application 或 `200 OK` JSON 对象：
+服务必须使用与用户查询匹配的结果进行响应。 该响应必须指示 的 HTTP 状态代码以及具有以下属性的有效 `200 OK` 应用程序或 JSON 对象：
 
 |属性名称|用途|
 |---|---|
@@ -341,19 +341,16 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | 说明 | .NET    | Node.js   |   
+| 示例名称           | 描述 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
-
-## <a name="see-also"></a>另请参阅
-
-[向消息传递扩展添加配置](~/get-started/first-message-extension.md)
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [向消息传递扩展添加身份验证](~/messaging-extensions/how-to/add-authentication.md)
 
+## <a name="see-also"></a>另请参阅
 
-
+[向消息传递扩展添加配置](~/get-started/first-message-extension.md)

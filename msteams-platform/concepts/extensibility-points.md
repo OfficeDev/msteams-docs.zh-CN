@@ -1,21 +1,21 @@
 ---
 title: Teams 应用的入口点
 author: heath-hamilton
-description: 介绍用户可以在 Teams 中发现和使用应用的地方。
+description: 介绍应用的入口点，如个人应用体验和共享应用体验中的团队、频道和聊天
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 3d4f3150447603fe8462b3a8166f6bc76de7cc03
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 1bfaed5ec9c2ef1bec9dc3699dbb5914be213a44
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566349"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889077"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams 应用的入口点
 
 the Teams platform provides a flexible set of entry points， such as team， channel， and chat， where people can discover and use your app. 应用程序非常简单，只需在选项卡或多维应用中嵌入现有 Web 内容，用户跨多个上下文进行交互。
-成功应用是本机应用的Teams，因此请仔细选择应用的入口点。
+成功应用是本机应用的Teams，因此请谨慎选择应用的入口点。
 
 ## <a name="shared-app-experiences"></a>共享的应用体验
 
@@ -45,12 +45,12 @@ the Teams platform provides a flexible set of entry points， such as team， ch
 
 * [**选项卡**](~/tabs/what-are-tabs.md) 提供对查看它的用户有意义的全屏嵌入式 Web 体验。
 
-## <a name="see-also"></a>另请参阅
-
-[Teams应用设计指南](../concepts/design/design-teams-app-overview.md) <br>
-[生成首个Microsoft Teams应用](../build-your-first-app/build-first-app-overview.md)
-
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [了解用例](../concepts/design/understand-use-cases.md)
+
+## <a name="see-also"></a>另请参阅
+
+[Teams应用设计指南](../concepts/design/design-teams-app-overview.md) <br>
+[生成首个Microsoft Teams应用](../build-your-first-app/build-first-app-overview.md)
