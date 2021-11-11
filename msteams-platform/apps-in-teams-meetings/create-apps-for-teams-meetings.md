@@ -6,24 +6,24 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: 9f5e1ce756dbe465e90e18e6db178b0386ae6d2b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6838471befd48c439caf9cfbf81589f3bdf75a79
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887697"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912191"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会议中应用的先决条件
 
 借助Teams会议，可以在会议生命周期内扩展应用的功能。 使用会议Teams之前，必须满足以下先决条件：
 
-* 了解如何开发Teams应用。 若要详细了解如何开发应用Teams，请参阅Teams[应用开发](../overview.md)。
+* 了解如何开发Teams应用程序。 若要详细了解如何开发应用Teams，请参阅Teams[应用开发](../overview.md)。
 
 * 更新Teams应用清单，以指示该应用可用于会议。 有关详细信息，请参阅 [应用清单](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest)。
 
 * 使用支持 groupchat 作用域中的可配置选项卡的应用。 有关详细信息，请参阅群[聊范围和](../resources/schema/manifest-schema.md#configurabletabs)[构建组选项卡](../build-your-first-app/build-channel-tab.md)。
 
-* 遵守Teams和会议后方案的常规选项卡设计准则。 有关会议期间的体验，请参阅会议中的选项卡和会议内对话框设计指南。 有关详细信息，请参阅Teams选项卡设计[指南](../tabs/design/tabs.md)、会议中的[选项卡](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)设计指南和[会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
+* 遵守Teams和会议后方案的常规选项卡设计准则。 有关会议期间的体验，请参阅会议中的选项卡和会议内对话框设计指南。 有关详细信息，请参阅Teams[选项卡](../tabs/design/tabs.md)设计指南、会议中的[选项卡](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)设计指南和[会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
 
 * 支持 `groupchat` 范围以在会议前和会议后聊天中启用你的应用。 通过会议前应用体验，你可以查找和添加会议应用，以及执行会议前任务。 使用会议后应用体验，可以查看会议结果，例如投票调查结果或费用
 * 会议 API URL 参数必须具有 `meetingId` 、 `userId` 和 `tenantId` 。 这些参数作为客户端 SDK 和自动程序Teams的一部分提供。 此外，您可以使用选项卡 SSO 身份验证检索用户 ID 和租户 ID [的可靠信息](../tabs/how-to/authentication/auth-aad-sso.md)。
@@ -49,12 +49,12 @@ ms.locfileid: "60887697"
 完成先决条件后，可以使用会议应用 API 引用 、 、 和 ，以便使用 属性访问信息并显示 `GetUserContext` `GetParticipant` `NotificationSignal` `Meeting Details` 相关内容。
 
 > [!NOTE]
-> TeamsJavaScript SDK (_版本_：1.10) 更高版本，SSO 在会议侧面板中运行。
+> TeamsJavaScript SDK (_版本_：1.10) 更高版本，SSO 在会议侧面板中工作。
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [会议应用 API 参考](API-references.md)
+> [为会议启用和配置Teams应用](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>另请参阅
 

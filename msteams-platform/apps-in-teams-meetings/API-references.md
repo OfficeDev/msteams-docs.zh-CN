@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api usercontext 通知信号查询
-ms.openlocfilehash: 29e0e797b3b55dd3fa25071929072957c8d43fd8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1906561e51791db993e652f837e6064df3b570d5
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887704"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912195"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -23,7 +23,7 @@ ms.locfileid: "60887704"
 
 下表提供了 API 列表：
 
-|API|描述|请求|Source|
+|API|Description|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 此 API 使你能够获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 此 API 使机器人能够按会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -54,7 +54,7 @@ API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与
 
 `GetParticipant`API 包括以下查询参数：
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**meetingId**| 字符串 | 是 | 会议标识符通过 Bot Invoke 和 Teams 客户端 SDK 提供。|
 |**participantId**| 字符串 | 是 | 参与者 ID 是用户 ID。 它可在 Tab SSO、Bot Invoke 和 Teams 客户端 SDK 中提供。 建议从选项卡 SSO 获取参与者 ID。 |
@@ -138,7 +138,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 `GetParticipant`API 返回以下响应代码：
 
-|响应代码|描述|
+|响应代码|Description|
 |---|---|
 | **403** | 不会与应用共享获取参与者信息。 如果会议未安装该应用，它将触发最常见的错误响应 403。 如果租户管理员在实时网站迁移期间禁用或阻止应用，将触发 403 错误响应。 |
 | **200** | 成功检索参与者信息。|
@@ -159,7 +159,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 `NotificationSignal`API 包括以下查询参数：
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**conversationId**| 字符串 | 是 | 对话标识符作为 Bot Invoke 的一部分提供。 |
 
@@ -221,7 +221,7 @@ POST /v3/conversations/{conversationId}/activities
 
 `NotificationSignal`API 包括以下响应代码：
 
-|响应代码|说明|
+|响应代码|Description|
 |---|---|
 | **201** | 具有信号的活动已成功发送。 |
 | **401** | 应用使用无效令牌进行响应。 |
@@ -254,7 +254,7 @@ API 通过 Bot Services 提供。
 
 会议详细信息 API 包括以下查询参数：
 
-|值|类型|必需|说明|
+|值|类型|必需|Description|
 |---|---|----|---|
 |**meetingId**| 字符串 | 是 | 会议标识符通过 Bot Invoke 和 Teams 客户端 SDK 提供。 |
 
@@ -462,13 +462,13 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | C# | Node.js | 
+|示例名称 | Description | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
 | 会议详细信息选项卡 | Microsoft Teams会议详细信息选项卡交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|会议事件示例|显示实时会议事件Teams应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+|会议事件示例|显示实时会议事件Teams应用示例|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |会议招聘示例|用于显示招聘方案的会议体验的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |使用 QR 代码安装应用|生成 QR 代码和使用 QR 代码安装应用的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
@@ -476,8 +476,3 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
 * [会议Teams应用程序](teams-apps-in-meetings.md)
-
-## <a name="next-steps"></a>后续步骤
-
-> [!div class="nextstepaction"]
-> [为会议启用和配置Teams应用程序](enable-and-configure-your-app-for-teams-meetings.md)

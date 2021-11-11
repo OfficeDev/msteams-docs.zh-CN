@@ -4,12 +4,12 @@ description: 创建基于操作的消息扩展以允许用户触发外部服务
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams 邮件扩展邮件扩展搜索
-ms.openlocfilehash: 56dcf316eb430b9745856469eaf837ffe7c0bc00
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 76948946e3a194bfdde4518a0e9d9d4dc2428729
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720377"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912225"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>使用消息传递扩展启动操作
 
@@ -106,11 +106,12 @@ ms.locfileid: "60720377"
           "description": "Reassign a todo item",
           "title": "Reassign a todo item",
           "type": "action",
-          "fetchTask": true,
+          "fetchTask": false,
           "parameters": [
             {
               "name": "Name",
               "title": "Title"
+              "inputType": "text"
             }
           ]
         }
@@ -130,7 +131,7 @@ ms.locfileid: "60720377"
 
 ### <a name="initiate-actions-from-messages"></a>从邮件启动操作
 
-除了从撰写邮件区域启动操作之外，您还可以使用邮件扩展从邮件启动操作。 这将允许你将邮件内容发送到自动程序进行处理，并可以选择使用 方法通过 响应回复消息，如响应以 [提交 中所述](#responding-to-submit)。 该响应将作为回复插入，您的用户可以在提交之前编辑该邮件。 你的用户可以从溢出菜单访问消息传递扩展 `...` ，然后选择 `Take action` 如下图所示：
+除了从撰写邮件区域启动操作之外，您还可以使用邮件扩展从邮件启动操作。 这将允许你将邮件内容发送到自动程序进行处理，并可以选择使用 方法回复消息，如响应以 [提交 中所述](#responding-to-submit)。 该响应将作为回复插入，您的用户可以在提交之前编辑该邮件。 你的用户可以从溢出菜单访问消息传递扩展 `...` ，然后选择 `Take action` 如下图所示：
 
 ![从邮件启动操作的示例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -228,7 +229,7 @@ ms.locfileid: "60720377"
 
 可以通过上传应用来测试邮件扩展。 有关详细信息，请参阅在团队 [中上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
 
-若要打开消息扩展，请导航到任何聊天或频道。 在撰写 **框中** 选择" (&#8943;) "按钮，然后选择邮件扩展。 
+若要打开消息扩展，请导航到任何聊天或频道。 在撰写 **框中选择" (&#8943;) "** 按钮，然后选择邮件扩展。 
 
 ## <a name="collecting-input-from-users"></a>收集用户输入
 
@@ -236,7 +237,7 @@ ms.locfileid: "60720377"
 
 ### <a name="static-parameter-list"></a>静态参数列表
 
-在此方法中，只需在清单中定义一个静态参数列表，如"Create 微软待办"命令所示。 若要使用此方法， `fetchTask` 请确保设置为 `false` ，并确保在清单中定义参数。
+在此方法中，只需在清单中定义参数静态列表，如"Create 微软待办"命令所示。 若要使用此方法， `fetchTask` 请确保设置为 `false` ，并确保在清单中定义参数。
 
 当用户选择具有静态参数的命令时，Teams将在任务模块中生成一个包含清单中定义的参数的窗体。 点击提交时 `composeExtension/submitAction` ，会向自动程序发送 。 有关预期响应集详细信息，请参阅 [响应以提交](#responding-to-submit)。
 
@@ -312,7 +313,7 @@ ms.locfileid: "60720377"
 
 如果你的应用包含对话机器人，请确保它在加载任务模块之前安装在对话中。 在需要获取任务模块的其他上下文的情况下，这非常有用。 例如，您可能需要获取名单以填充人员选取器控件或团队中的频道列表。
 
-为便于此流，当消息扩展首先收到调用检查以查看当前上下文中是否 `composeExtension/fetchTask` 安装了自动程序时。 您可以通过尝试获取名单呼叫获得此要求。 例如，如果未安装自动程序，则返回自适应卡片以及请求用户安装自动程序的操作。 用户需要有权在位置安装应用。 如果无法安装，邮件会提示与管理员联系。
+为便于此流，当消息扩展首先收到调用检查以查看当前上下文中是否 `composeExtension/fetchTask` 安装了自动程序时。 可以通过尝试获取名单呼叫获取此情况。 例如，如果未安装自动程序，则返回自适应卡片以及请求用户安装自动程序的操作。 用户需要有权在位置安装应用。 如果无法安装，邮件会提示与管理员联系。
 
 下面是一个响应示例：
 

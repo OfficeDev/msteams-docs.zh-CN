@@ -3,12 +3,12 @@ title: 自定义一起模式场景
 description: 使用自定义一起模式场景
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 051924aa8a8f02c6e9a075639014e4fc3290d8c0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ad33262e5e836badcaf3135138770a241f51f9c6
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887628"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912239"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
@@ -26,7 +26,7 @@ ms.locfileid: "60887628"
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="仅创建场景应用" border="false":::
 
-仅场景应用仍然是应用中Microsoft Teams。 Scene studio 在后台处理应用包创建。 单个应用包中的多个场景显示为简单列表用户显示的内容。
+仅场景应用仍然是应用中Microsoft Teams。 Scene studio 在后台处理应用包创建。 单个应用包中的多个场景显示为简单列表一个场景。
 
 > [!NOTE]
 > 用户无法从移动设备启动"共同模式"。 但是，当用户通过移动设备加入会议并且从桌面打开"共同模式"后，已打开视频的移动用户将显示在桌面上的"共同模式"中。 
@@ -40,7 +40,7 @@ ms.locfileid: "60887628"
 * 了解 [应用旁加载 的概念](../concepts/deploy-and-publish/apps-upload.md)。
 * 确保管理员已授予对自定义Upload [**的权限，**](../concepts/deploy-and-publish/apps-upload.md)并分别选择所有筛选器作为应用设置和会议策略的一部分。
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
 请考虑以下场景生成体验做法：
 
@@ -52,7 +52,7 @@ ms.locfileid: "60887628"
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>使用 Scene studio 生成场景
 
-Microsoft 有一个 Scene studio，允许你生成场景。 在场景编辑器 - 开发人员[门户中Teams可用](https://dev.teams.microsoft.com/scenes)。 本文档引用开发人员门户中的 scene studio Microsoft Teams。 在 App Studio 场景设计器中，界面和功能都相同。
+Microsoft 有一个 Scene studio，允许你生成场景。 在场景编辑器 - 开发人员[门户中Teams可用](https://dev.teams.microsoft.com/scenes)。 本文档引用了开发人员门户中的 scene studio Microsoft Teams。 在 App Studio 场景设计器中，界面和功能都相同。
 
 Scene studio 上下文中的场景是一个包含以下元素的项目：
 
@@ -72,7 +72,7 @@ Scene studio 上下文中的场景是一个包含以下元素的项目：
 
 1. 转到场景[编辑器 - Teams开发人员门户](https://dev.teams.microsoft.com/scenes)。
 
-    或者，若要打开 Scene studio，你可以转到开发人员门户Teams[主页：](https://dev.teams.microsoft.com/home)
+    或者，若要打开 Scene studio，你可以转到开发人员门户Teams[主页](https://dev.teams.microsoft.com/home)：
     * 选择 **"为会议创建自定义场景"。**
     * 从 **左侧** 部分选择"工具"，然后从"工具"**部分****选择"场景** Studio"。
 
@@ -88,7 +88,7 @@ Scene studio 上下文中的场景是一个包含以下元素的项目：
     ![将图像添加到环境中](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * 你可以下载包含[SampleScene.zipSampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)[文件。](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip)
+    > * 你可以[下载SampleScene.zip和](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)[SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip)图像的文件。
 
 1. 选择已添加的图像。
 
@@ -108,10 +108,10 @@ Scene studio 上下文中的场景是一个包含以下元素的项目：
 
     ![分配专色](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. 选择 **"保存****"，** 然后选择"Teams"以快速测试场景中的Microsoft Teams。
+1. 选择 **"保存**"，然后选择 **"Teams"** 以快速测试场景中的Microsoft Teams。
 
     * 选择 **"Teams"** 将自动创建一Microsoft Teams应用程序，可在开发人员门户的"应用"Teams查看该应用。 
-    * 选择 **"视图中Teams** 自动创建在场景后面为 appmanifest.json 的应用包。 你可以从菜单  **转到应用** 并访问自动创建的应用包。
+    * 选择 **场景中的Teams** 自动创建在场景后面为 appmanifest.json 的应用包。 你可以从菜单  **转到应用** 并访问自动创建的应用包。
     * 若要删除你创建的场景，请选择顶 **栏上的** "删除场景"。
 
 1. In **View in Teams，** select **Preview in Teams**.
@@ -123,9 +123,9 @@ Scene studio 上下文中的场景是一个包含以下元素的项目：
 
     然后，可以在自定义"共同模式"场景库中查看场景。
 
-（可选）可以从"保存 **"** 下拉菜单 **中选择** "共享"。 你可以创建一个可共享的链接来分发你的场景，供其他人使用。 用户可以打开链接以安装场景并开始使用它。
+（可选）可以从"保存 **"** 下拉菜单 **中选择** "共享"。 你可以创建可共享的链接来分发你的场景，供其他人使用。 用户可以打开链接以安装场景并开始使用它。
 
-预览后，场景作为应用交付，Teams应用提交步骤进行发布。 此步骤需要应用包。 对于已设计的场景，应用包不同于场景包。 自动创建的应用包位于开发人员中心的应用Teams部分。
+预览后，场景作为应用交付，Teams应用提交步骤完成。 此步骤需要应用包。 对于已设计的场景，应用包不同于场景包。 自动创建的应用包位于开发人员中心的应用Teams部分。
 
 （可选）通过从"保存" **下拉菜单中选择"** 导出"来 **检索场景** 包。 下载 **.zip** 文件（即场景包）。 场景包包括 scene.json 和用于生成场景的 PNG 资源。 查看场景包以合并其他更改：
 
@@ -135,7 +135,7 @@ Scene studio 上下文中的场景是一个包含以下元素的项目：
 
 ## <a name="sample-scenejson"></a>示例 scene.json
 
-Scene.json 以及图像指示座位的确切位置。 场景由位图图像、子画面和矩形组成，用于放入参与者视频。 这些子画面和参与者框在世界坐标系中定义。 X 轴指向右侧，而 Y 轴指向向下。
+Scene.json 以及图像指示座位的确切位置。 场景包含用于放入参与者视频的位图图像、子画面和矩形。 这些子画面和参与者框在世界坐标系中定义。 X 轴指向右侧，而 Y 轴指向向下。
 
 自定义一起模式场景支持放大当前参与者。 此功能对于大型场景中的小会议非常有用。 子画面是一种静态位图图像，位于世界。 子画面的 Z 值决定子画面的位置。 呈现从 Z 值最低的子画面开始，因此 Z 值越高，表示它离相机更近。 每个参与者都有自己的视频源，该源进行分段，以便仅呈现前台。
 
@@ -242,6 +242,6 @@ Scene.json 以及图像指示座位的确切位置。 场景由位图图像、�
 
 ## <a name="see-also"></a>另请参阅
 
-[会议Teams应用程序](teams-apps-in-meetings.md) 
-[通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md) 
-[实时媒体通话和与会议Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)
+* [会议Teams应用程序](teams-apps-in-meetings.md)
+* [通话和会议机器人 ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [实时媒体通话和与会议Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)
