@@ -1,16 +1,17 @@
 ---
 title: 桌面、Web 和移动设备的设计选项卡
-description: 了解如何为桌面、网络和移动设备设计 Teams 选项卡，并获得 Microsoft Teams UI Kit。
+description: 了解如何为桌面、网络和移动设备设计 Teams 选项卡，并获得 Microsoft Teams UI Kit。 了解选项卡功能和外观、生成用户身份验证、选项卡通知以及选项卡中的深层链接。
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 99588b35e5de0a4d6c06e5d1353af312429081cc
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: UI 工具包管理选项卡设置单一登录 sso 深度链接基于角色的视图线程讨论
+ms.openlocfilehash: 42f5a76c0499b3f50d90608d1f08e701caa13984
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475627"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887920"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>为 Microsoft Teams 设计选项卡
 
@@ -62,9 +63,9 @@ ms.locfileid: "59475627"
 |3|**iframe**: 为应用的内容提供响应的空间 (例如，选项卡设置或身份验证)。|
 |4|**关于链接**: 打开一个对话框，其中显示有关应用的详细信息，例如完整说明、应用所需的权限，以及指向隐私策略和服务条款的链接。|
 |5|**关闭按钮**: 关闭对话框。|
-|6|**通知团队成员选项**: 对话框询问用户是否要创建一个帖子让其他人知道他们添加了选项卡。|
-|7|**后退按钮**: 根据对话框打开的位置转到上一步。|
-|8|**保存按钮**: 完成选项卡设置。|
+|6 |**通知团队成员选项**: 对话框询问用户是否要创建一个帖子让其他人知道他们添加了选项卡。|
+|7 |**后退按钮**: 根据对话框打开的位置转到上一步。|
+|8 |**保存按钮**: 完成选项卡设置。|
 
 ### <a name="tab-authentication-with-single-sign-on"></a>使用单一登录的选项卡身份验证
 
@@ -282,3 +283,7 @@ ms.locfileid: "59475627"
 
    :::column-end:::
 :::row-end:::
+
+## <a name="see-also"></a>另请参阅
+
+[选项卡边距更改](~/resources/removing-tab-margins.md)

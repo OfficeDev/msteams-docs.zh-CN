@@ -4,12 +4,12 @@ description: 了解如何设计 Microsoft Teams 自适应卡并获取 Microsoft 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bf0119f8cab7eeaf15745b27b6117063b108f8f8
-ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
+ms.openlocfilehash: b016df98d57b9a3f5fe03e6cf26b31ad2d7b8db9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60249791"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887962"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡
 
@@ -679,3 +679,11 @@ ms.locfileid: "60249791"
 #### <a name="do-be-concise"></a>建议：做到简洁
 
 将多个卡片发送到对话很容易，但一旦卡片滚动出视图，就会变得没那么有用。 尝试限制自己只传达必要内容。 在用户对自己认为是“干扰”的内容，容忍度更低的频道中尤其应注意这一点。
+
+## <a name="see-also"></a>另请参阅
+
+* [卡片和任务模块](~/task-modules-and-cards/cards-and-task-modules.md)
+* [Teams 机器人中支持的卡片和任务模块](~/task-modules-and-cards/what-are-task-modules.md)
+* [使用自适应卡的通用操作](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [响应任务模块提交操作](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [用户特定视图](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)
