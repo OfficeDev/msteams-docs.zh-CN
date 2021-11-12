@@ -18,7 +18,7 @@ highlightedContent:
       url: /microsoftteams/platform/whats-new
     - title: "新开发Teams？ \U0001F680从这里开始！"
       itemType: get-started
-      url: /microsoftteams/platform/overview
+      url: /microsoftteams/platform/get-started/get-started-overview
     - title: 规划应用
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
@@ -34,9 +34,9 @@ highlightedContent:
     - title: 将应用发布到应用商店Teams应用商店
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-    - title: 教程和代码示例
+    - title: 代码示例
       itemType: sample
-      url: /microsoftteams/platform/get-started/code-samples
+      url: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 conceptualContent:
   title: 指南和资源
   items:
@@ -87,7 +87,7 @@ conceptualContent:
           text: 用户身份验证和 SSO
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
-          text: 使用 Microsoft Power Platform Teams应用、机器人和流生成低代码
+          text: 使用 Microsoft Power Platform 构建Teams、聊天机器人和流
         - url: 'https://dev.teams.microsoft.com/home'
           itemType: reference
           text: Teams 开发人员门户
@@ -99,7 +99,7 @@ conceptualContent:
           text: 生成应用Teams方案
         - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
           itemType: reference
-          text: 适用于应用Teams方案的最佳方案
+          text: 应用方案Teams最佳做法
     - title: 集成
       links:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
@@ -172,6 +172,6 @@ tools:
     - title: 适用于自动程序和消息传递扩展的.NET Bot Framework SDK
       imageSrc: ./assets/icons/logo_net.png
       url: 'https://github.com/Microsoft/botbuilder-dotnet/'
-    - title: 适用于 Microsoft Teams 的 Yeoman 生成器
+    - title: 适用于 Microsoft Teams 的 Yeoman Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: 'https://github.com/OfficeDev/generator-teams'

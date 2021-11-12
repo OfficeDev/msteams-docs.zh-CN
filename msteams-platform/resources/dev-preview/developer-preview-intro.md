@@ -4,19 +4,19 @@ description: 介绍公共服务开发者预览版中的Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 预览开发人员功能
-ms.openlocfilehash: 756d30b0cbeb47be2b355bc9fe126e3bc39b3806
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9337a0fbc89b02783db9253cc2975a68658b4268
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888501"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949584"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>公共开发人员预览版Microsoft Teams
 
 >[!NOTE]
 >预览版中包含的功能可能不完整，在公开发布之前可能会发生更改。 它们仅供测试和探索使用。 它们不应在生产应用程序中使用。
 
-开发者预览版是一个针对开发人员的公共计划，提供对开发人员中未提供的功能Microsoft Teams。 这允许你浏览和测试即将推出的功能，以潜在地包含在Microsoft Teams应用中。 我们还欢迎 [提供有关开发人员](~/feedback.md) 预览版中任何功能的反馈。 开发人员预览Microsoft Teams客户端启用，因此无需担心影响整个组织。
+开发者预览版是一个针对开发人员的公共计划，可提供对开发人员中未Microsoft Teams。 这允许你浏览和测试即将推出的功能，以潜在地包含在Microsoft Teams应用中。 我们还欢迎 [提供有关开发人员](~/feedback.md) 预览版中任何功能的反馈。 开发人员预览Microsoft Teams客户端启用，因此无需担心影响整个组织。
 
 ## <a name="developer-preview-app-manifest"></a>开发人员预览应用清单
 
@@ -35,7 +35,7 @@ ms.locfileid: "60888501"
 若要在桌面或 Web 客户端上启用公共开发人员预览，需要执行以下操作：
 
 1. 在租户的管理控制台中启用应用上传，如下 [所述](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
-1. 单击你的配置文件 (右上角或左下角的 Teams 显示) 菜单Teams菜单。
+1. 单击你的配置文件 (右上方或左下角Teams) 显示Teams菜单。
 1. 选择"关于→开发人员预览"。
 1. 选择 **切换到开发人员预览**。
 
@@ -50,7 +50,7 @@ ms.locfileid: "60888501"
 
 ## <a name="disable-developer-preview"></a>禁用开发人员预览
 
-使用"关于开发人员→"下的同一菜单项，然后单击它将其关闭。
+使用"关于开发人员预览→"下的同一菜单项，然后单击它将其关闭。
 
 ## <a name="see-also"></a>另请参阅
 

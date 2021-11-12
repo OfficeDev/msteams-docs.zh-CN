@@ -5,12 +5,12 @@ description: 了解 webhook 和连接器如何将 Web 服务连接到 Teams 客�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6530462d3b0fe23ae6703dd059bba59d72f321b8
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 6fd3b24f5c33fb31e96b7fd69eb72e9d77e36096
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949052"
+ms.locfileid: "60949563"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook 和连接器
 
@@ -52,4 +52,3 @@ Office 365连接器允许你为传入 Webhook 创建自定义配置页面，将�
 * [创建传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [创建 Office 365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [创建和发送邮件](~/webhooks-and-connectors/how-to/connectors-using.md)
-

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams 清单架构本地化
 ms.date: 05/20/2019
-ms.openlocfilehash: 46a17e488d9c8c5598eab3ff53a9322a80f606ca
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4b26c1d67a26a27e4c3c1738d508d81d67e74763
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887878"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949591"
 ---
 # <a name="localize-json-schema-reference"></a>本地化 JSON 架构参考
 
@@ -40,9 +40,9 @@ ms.locfileid: "60887878"
 
 该架构定义以下属性：
 
-|属性|类型|最大长度|描述|
+|属性|类型|最大长度|说明|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|不适用|the https:// URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|不适用|引用 https:// JSON 架构的 URL。|
 |`name.short`|String|30|将应用清单中的相应字符串替换为此处提供的值。|
 |`name.full`|字符串|100|将应用清单中的相应字符串替换为此处提供的值。|
 |`description.short`|String|80|将应用清单中的相应字符串替换为此处提供的值。|
@@ -60,4 +60,4 @@ ms.locfileid: "60887878"
 
 ## <a name="see-also"></a>另请参阅
 
-> [本地化应用](~/concepts/build-and-test/apps-localization.md)
+[本地化应用](~/concepts/build-and-test/apps-localization.md)

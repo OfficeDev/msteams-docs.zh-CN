@@ -4,18 +4,18 @@ description: 介绍选项卡中的身份验证流、OAuth AAD，并提供代码�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 身份验证流选项卡
-ms.openlocfilehash: 0b58e0182714921745fa911cc747aa1c314d3df2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2d054ef841bf4f05be4e662d77b999c654670f45
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888445"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949647"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teams选项卡的身份验证流
 
 > [!NOTE]
 > 若要在移动客户端上对选项卡进行身份验证，需要确保使用的是至少 1.4.1 版本的 Microsoft Teams JavaScript SDK。  
-> TeamsSDK 为身份验证流启动单独的窗口。 将 `SameSite` 属性设置为 **Lax**。 Teams版 Chrome 或 Safari 的桌面客户端或较旧版本不支持 `SameSite` =None。
+> Teams SDK 为身份验证流启动单独的窗口。 将 `SameSite` 属性设置为 **Lax**。 Teams版桌面客户端或较旧版本的 Chrome 或 Safari 不支持 `SameSite` =None。
 
 OAuth 2.0 是一个开放标准，用于身份验证和授权，Azure Active Directory (AAD) 和许多其他标识提供程序。 对 OAuth 2.0 有基本的了解是在 Teams 中进行身份验证的先决条件。 有关详细信息，请参阅 [OAuth 2 简化](https://aaronparecki.com/oauth-2-simplified/) ，比正式规范 [更易于遵循](https://oauth.net/2/)。 选项卡和聊天机器人的身份验证流不同，因为选项卡类似于网站，因此可以直接使用 OAuth 2.0。 机器人执行一些不同操作，但核心概念是相同的。
 
@@ -27,7 +27,7 @@ OAuth 2.0 是一个开放标准，用于身份验证和授权，Azure Active Dir
 ![选项卡身份验证序列图](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. 用户与选项卡配置或内容页上的内容交互，通常为" **登录** "或" **登录"** 按钮。
-2. 选项卡将构造其身份验证起始页的 URL。 （可选）它使用 URL 占位符的信息或Teams `microsoftTeams.getContext()` 客户端 SDK 方法，以简化用户的身份验证体验。 例如，在使用 AAD进行身份验证时，如果参数设置为用户的电子邮件地址，则如果用户最近已登录，则 `login_hint` 无需登录。 这是因为AAD使用用户的缓存凭据。 弹出窗口短暂显示，然后消失。
+2. 选项卡将构造其身份验证起始页的 URL。 （可选）它使用 URL 占位符的信息或Teams `microsoftTeams.getContext()` 客户端 SDK 方法，以简化用户的身份验证体验。 例如，在使用 AAD进行身份验证时，如果参数设置为用户的电子邮件地址，则如果用户最近已登录，则无需 `login_hint` 登录。 这是因为AAD使用用户的缓存凭据。 弹出窗口短暂显示，然后消失。
 3. 然后选项卡调用 `microsoftTeams.authentication.authenticate()` 方法，并注册 `successCallback` 和 `failureCallback` 函数。
 4. Teams弹出窗口中的 iframe 中打开起始页。 起始页将生成随机数据，保存该数据供将来验证，并重定向到标识提供程序的终结点， `state` `/authorize` `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` 例如Azure AD。 将 `<tenant id>` 替换为你自己的租户 ID，即 context.tid。
 与应用程序中的Teams身份验证流类似，起始页必须位于其列表中的域上，并且必须与登录后重定向页位于同一 `validDomains` 域中。
@@ -43,7 +43,7 @@ OAuth 2.0 是一个开放标准，用于身份验证和授权，Azure Active Dir
 
 ## <a name="treat-tab-context-as-hints"></a>将选项卡上下文视为提示
 
-尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证。 即使您将信息作为 URL 参数获取到选项卡内容 URL，或者通过调用 Microsoft Teams SDK 中的 函数，也可以 `microsoftTeams.getContext()` 对用户进行身份验证。 恶意参与者可以使用自己的参数调用您的选项卡内容 URL。 主角还可以调用模拟 web 页面Microsoft Teams在 iframe 中加载选项卡内容 URL，并返回自己的 `getContext()` 数据到 函数。 你必须将选项卡上下文中的标识相关信息视为提示并进行验证，然后才能使用。 请参阅从弹出式页面导航到 [授权页中的注释](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page)。
+尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证。 即使您将信息作为 URL 参数获取至您的选项卡内容 URL，或者通过调用 Microsoft Teams SDK 中的 函数， `microsoftTeams.getContext()` 也可以对用户进行身份验证。 恶意参与者可以使用自己的参数调用您的选项卡内容 URL。 主角还可以调用模拟 web 页面Microsoft Teams在 iframe 中加载选项卡内容 URL，并返回自己的 `getContext()` 数据到 函数。 你必须将选项卡上下文中的标识相关信息视为提示并进行验证，然后才能使用。 请参阅从弹出式页面导航到 [授权页中的注释](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page)。
 
 ## <a name="code-sample"></a>代码示例
 
@@ -53,7 +53,7 @@ OAuth 2.0 是一个开放标准，用于身份验证和授权，Azure Active Dir
 |-----------------|-----------------|-------------|------------|
 | Teams选项卡身份验证 | 使用证书的选项卡的AAD。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
-## <a name="more-details"></a>更多详细信息
+## <a name="see-also"></a>另请参阅
 
 有关使用选项卡身份验证的详细AAD，请参阅：
 

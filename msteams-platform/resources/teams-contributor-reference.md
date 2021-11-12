@@ -5,16 +5,16 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d9b696af2fe493c24de54afd8587f8aea70584d1
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d6a984f4e0816cd3a2312f82f669b8299467948b
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889242"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949640"
 ---
 # <a name="contribute-to-teams-documentation"></a>参与 Teams 文档
 
-Teams文档是 **Microsoft Docs 技术文档** 库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在更改后具有相同的 URL **docs.microsoft.com。** 例如， `/docs.microsoft.com/microsoftteams/...` 是文档集Teams的开头。 Teams文章以 Markdown 语法编写，并托管在GitHub。
+Teams文档是 **Microsoft Docs 技术** 文档库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在添加后具有相同的 URL **docs.microsoft.com。** 例如， `/docs.microsoft.com/microsoftteams/...` 是文档集Teams的开头。 Teams文章以 Markdown 语法编写，并托管在GitHub。
 
 ## <a name="set-up-your-workspace"></a>设置工作区
 
@@ -29,7 +29,7 @@ Teams文档是 **Microsoft Docs 技术文档** 库的一部分。 内容分为�
 >
 > * 安装VS Code：
 
-   1. 选择侧 **活动** 栏上的"扩展"图标或使用 **"视图 => Extensions"命令** 或 Ctrl+Shift+X，搜索 **"Microsoft Docs Authoring Pack"。**
+   1. 选择侧 **活动** 栏上的扩展图标或使用 View = **> Extensions** 命令或 Ctrl+Shift+X，搜索 Microsoft **Docs Authoring Pack。**
    1. 选择“**安装**”。
    1. 安装后 **，"安装"** 将更改到 **"管理齿轮** "按钮。
 
@@ -59,7 +59,7 @@ Teams文档是 **Microsoft Docs 技术文档** 库的一部分。 内容分为�
 > 若要引用属于以下平台 **文档** 集Teams文章：<br>
 > &emsp;&#x2714; 使用不带前导正斜杠的相对路径。<br>
 > &emsp;&#x2714;包括 Markdown 文件扩展名。<br>
->例如 **：父目录/目录/路径到** article.md —>[生成适用于Microsoft Teams](../concepts/building-an-app.md) <br><br>
+>例如 **：父目录/目录/路径到** article.md —>[为用户生成Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > 若要引用一篇 Microsoft Docs **库文章，** 该文章不是 Teams文档集的一部分：<br>
 > &emsp;&#x2714; 使用以正斜杠开头的相对路径。<br>
 > &emsp;&#x2714;不包括文件扩展名。 <br> 例如 **：/docset/address-to-file-location** ->使用 [Microsoft Graph API 处理Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
