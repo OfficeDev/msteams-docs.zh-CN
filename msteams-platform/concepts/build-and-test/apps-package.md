@@ -3,12 +3,12 @@ title: 打包应用
 description: 了解如何打包应用Microsoft Teams、上传和应用商店发布。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 44b8f21361c39bd723ff375b385569125b65ea27
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1879bcab13ff9ba355bcebdf68e4c8c061f153a1
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889305"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949073"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>创建Microsoft Teams应用包
 
@@ -51,7 +51,7 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，以及自
 
 :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams大纲图标设计指南。" border="false":::
 
-### <a name="best-practices"></a>最佳做法
+### <a name="best-practices"></a>最佳实践
 
 :::row:::
    :::column span="":::
@@ -78,7 +78,7 @@ Teams自动种图标，以在多个方案中显示圆角的正方形，以及自
 
 ### <a name="examples"></a>示例
 
-下面将说明应用图标在不同的Teams和上下文中的显示方式。
+下面是应用图标在不同功能和上下文中Teams的方式。
 
 #### <a name="personal-app"></a>个人应用
 

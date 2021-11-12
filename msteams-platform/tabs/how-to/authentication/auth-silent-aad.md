@@ -4,12 +4,12 @@ description: 描述选项卡的无提示Azure Active Directory、单一登录和
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 身份验证 SSO 无提示AAD选项卡
-ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e5e8de1878aaec29c8ae1cd8dc1350a110d38b5e
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888025"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949045"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
@@ -20,7 +20,7 @@ Azure Active Directory (AAD) 中的无提示身份验证通过静默刷新身份
 
 如果要使代码完全在客户端运行，可以使用 JavaScript AAD身份验证库[](/azure/active-directory/develop/active-directory-authentication-libraries)以静默方式获取AAD令牌。 如果用户最近登录过，他们绝不会看到弹出对话框。
 
-尽管 ADAL.js库已针对 AngularJS 应用程序进行了优化，但它也适用于纯 JavaScript 单页应用程序。
+即使 ADAL.js库已针对 AngularJS 应用程序进行了优化，它也适用于纯 JavaScript 单页应用程序。
 
 > [!NOTE]
 > 目前，无提示身份验证仅适用于选项卡。 从自动程序登录时，它不起作用。
@@ -33,11 +33,11 @@ Azure Active Directory (AAD) 中的无提示身份验证通过静默刷新身份
 
 本文中的代码来自Teams身份验证示例节点的 Teams[示例应用](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
 
-使用 AAD 启动无提示且简单的身份验证可配置[选项卡，](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp)然后按照说明在本地计算机上运行示例。
+[使用 AAD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp)启动无提示且简单的身份验证可配置选项卡，然后按照说明在本地计算机上运行示例。
 
 ### <a name="include-and-configure-adal"></a>包括和配置 ADAL
 
-将 ADAL.js 库包括在选项卡页中，然后使用客户端 ID 和重定向 URL 配置 ADAL：
+将ADAL.js库包括在选项卡页中，然后使用客户端 ID 和重定向 URL 配置 ADAL：
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -107,7 +107,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ADAL.js登录回调AAD调用来 `AuthenticationContext.handleWindowCallback(hash)` 分析来自客户端的结果。
 
-检查用户是否有效，并调用 `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 将状态报告给主选项卡内容页面。
+检查用户是否有效，并调用 `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 将状态报告给主选项卡内容页。
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {

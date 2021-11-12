@@ -1,35 +1,35 @@
 ---
 title: 选择用于测试和调试应用的设置
-description: 介绍用于在本地和云托管Microsoft Teams测试和调试应用程序的选项。
+description: 介绍用于在本地和云托管Microsoft Teams测试和调试应用的选项。
 keywords: 团队运行调试应用本地云托管主机
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b6cc4bcebcfe5d859ba0a9c6c935287ee8944d06
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2c28090d82737d5231ed68a2fd3ef6896d701022
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889069"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949017"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>选择用于测试和调试应用Microsoft Teams设置
 
 Microsoft Teams应用包含一个或多个功能，并且运行甚至托管它们的方式是不同的。 对于调试，请使用以下方法之一：
 
-* **纯本地**：对于自动程序，你可以测试在自动程序Emulator。 对于其他内容，可以在浏览器中本地运行，并通过 地址内容 `http://localhost` 。
-* **本地托管在 Teams**：这包括在隧道软件中本地运行应用，并创建要上传到 Teams。 [](~/concepts/build-and-test/apps-package.md) [](~/concepts/deploy-and-publish/apps-upload.md) 这让你可以轻松地在客户端中运行和调试Teams应用程序。
-* **云托管在 Teams** 中：这真正模拟了对 Teams 应用的生产级别支持。 它涉及将解决方案上载到您所选择的可从外部访问的服务器或云提供商，并创建要[](~/concepts/build-and-test/apps-package.md)上传到 Teams。 [](~/concepts/deploy-and-publish/apps-upload.md)
+* **纯本地**：对于自动程序，可以在自动程序管理中测试Emulator。 对于其他内容，可以在浏览器中本地运行，并通过 地址内容 `http://localhost` 。
+* **本地托管在 Teams**：这包括在隧道软件中本地运行应用，并创建要上传到 [](~/concepts/build-and-test/apps-package.md)Teams。 [](~/concepts/deploy-and-publish/apps-upload.md) 这让你可以轻松地在客户端中运行和调试Teams应用。
+* **云托管在 Teams** 中：这真正模拟了对 Teams 应用的生产级别支持。 它涉及将解决方案上载到您所选择的可从外部访问的服务器或云提供商，以及创建要[](~/concepts/build-and-test/apps-package.md)上传到 Teams。 [](~/concepts/deploy-and-publish/apps-upload.md)
 
 从你自己的计算机运行体验，以完全在本地或本地Teams测试。 通过执行此操作，可以在集成开发环境中编译和运行，并充分利用技术（如断点和步骤调试）。
 
 > [!NOTE]
 > 对于生产规模调试和测试，我们建议您遵循自己的公司准则，以确保能够通过自己的流程支持测试、暂存和部署。
 
-使用多个清单和程序包保持生产和开发服务之间的分隔。 例如，你可以选择注册单独的开发和生产机器人，并创建相应的程序包以在测试环境中上载它们。 我们还建议你在提交应用以在我们的应用商店中发布或分发给客户之前上载和测试你的生产包。
+使用多个清单和程序包保持生产和开发服务之间的分隔。 例如，你可以选择注册单独的开发和生产机器人，并创建相应的程序包以在测试环境中上载它们。 我们还建议你在提交应用以在我们的应用商店中发布或向客户分发之前上载和测试你的生产包。
 
 ## <a name="purely-local"></a>纯本地
 
 > [!NOTE]
-> 在本地运行自动程序不会授予你访问Teams或特定于Teams自动程序功能（如名单呼叫和其他特定于频道的功能）的访问权限。 此外，Bot 框架中的自动程序框架还允许某些Emulator在自动程序中运行时Microsoft Teams。
+> 在本地运行自动程序不会授予你访问Teams或特定于Teams自动程序功能（如名单呼叫和其他特定于频道的功能）的访问权限。 此外，Bot Emulator中的自动程序框架允许某些功能在自动程序Microsoft Teams。
 
 自动程序可以在自动程序Emulator。 这使你能够测试机器人的一些核心逻辑、查看消息的粗略布局和执行简单测试。 步骤如下：
 

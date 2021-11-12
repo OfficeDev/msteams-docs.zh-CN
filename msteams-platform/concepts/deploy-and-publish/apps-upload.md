@@ -5,14 +5,14 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 02ea6d9caf4acc43bcd9a361113baf7ce9f8464a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e14e521941d253a3f259cf93f36bff4d620d55f2
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888186"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949059"
 ---
-# <a name="upload-your-app-in-microsoft-teams"></a>Upload应用Microsoft Teams
+# <a name="upload-your-app-in-microsoft-teams"></a>Upload应用中Microsoft Teams
 
 你可以旁加载Microsoft Teams应用，而无需发布到你的组织或Teams应用商店。 在下列情况下，这是有意义的：
 
@@ -49,7 +49,7 @@ ms.locfileid: "60888186"
 
 ## <a name="access-your-app"></a>访问应用
 
-Teams提供了几种打开应用的方法。 有关详细信息，请参阅访问[Teams 中的应用程序](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)。
+Teams提供了多种打开应用的方法。 有关详细信息，请参阅访问[Teams 中的应用](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)。
 
 ## <a name="update-your-app"></a>更新应用
 
@@ -57,10 +57,10 @@ Teams提供了几种打开应用的方法。 有关详细信息，请参阅访�
 
 ## <a name="remove-your-app"></a>删除应用
 
-若要删除你的应用，请右键单击应用中Teams **并选择卸载。**
+若要删除你的应用，请右键单击应用中Teams **并选择卸载**。
 
 > [!NOTE]
-> 你无法完全删除个人自动程序活动。 如果删除应用并再次添加它，则与机器人的新通信将附加到上一次与该应用的对话中。
+> 你无法完全删除个人自动程序活动。 如果删除应用并再次添加它，则与机器人的新通信将附加到其上一次对话中。
 
 ## <a name="next-step"></a>后续步骤
 

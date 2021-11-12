@@ -4,21 +4,21 @@ description: 介绍Teams中的身份验证以及如何在选项卡中使用它
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 身份验证选项卡AAD
-ms.openlocfilehash: a15d3c78d471bbcc510da019558faa45e3b76241
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1c3c5a69d7b42589a104755968a6d6949efbcca2
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889347"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949038"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>在"用户"选项卡中Microsoft Teams用户
 
 > [!Note]
-> 若要在移动客户端上对选项卡进行身份验证，需要确保使用的是 Teams JavaScript SDK 的版本 1.4.1 或更高版本。
+> 若要在移动客户端上对选项卡进行身份验证，需要确保使用的是 Teams Sdk 版本 1.4.1 或更高版本。
 
-你可能想要在 Teams 应用中使用许多服务，并且这些服务中的大多数都需要身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 和 Teams。 Teams使用 Microsoft Graph 将用户配置文件信息存储在 Azure Active Directory (Azure AD) 中Graph本文将重点介绍使用 Azure AD 访问此信息的身份验证。
+你可能想要在 Teams 应用中使用许多服务，这些服务中的大多数服务都需要进行身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 和 Teams。 Teams Microsoft Azure Active Directory (Azure AD) 中存储用户配置文件信息Graph本文将重点介绍使用 Azure AD 获取此信息访问权限的身份验证。
 
-OAuth 2.0 是一种开放标准，供 Azure AD和许多其他服务提供商使用。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中处理身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流，目的是最终从 Azure AD 和 Microsoft Graph 中读取用户配置文件信息。
+OAuth 2.0 是一个开放标准，Azure AD服务提供商使用的身份验证。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中处理身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流，目的是最终从 Azure AD 和 Microsoft Graph 中读取用户配置文件信息。
 
 本文中的代码来自 Node Teams 中的Microsoft Teams[身份验证 (示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)) 。 它包含一个静态选项卡，用于请求 Microsoft Graph访问令牌，并显示当前用户从 Azure AD。
 
@@ -28,7 +28,7 @@ OAuth 2.0 是一种开放标准，供 Azure AD和许多其他服务提供商使�
 
 ## <a name="configuring-identity-providers"></a>配置标识提供程序
 
-有关[将](~/concepts/authentication/configure-identity-provider.md)OAuth 2.0 回调重定向 (URL 配置为标识提供程序时) 配置 OAuth 2.0 Azure Active Directory URL 的详细步骤，请参阅主题。
+有关[将](~/concepts/authentication/configure-identity-provider.md)OAuth 2.0 回调重定向 URL (用作标识提供程序) 配置 Azure Active Directory 的详细信息，请参阅主题 Configure identity providers。
 
 ## <a name="initiate-authentication-flow"></a>启动身份验证流
 
@@ -62,7 +62,7 @@ microsoftTeams.authentication.authenticate({
 
 ## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>从弹出窗口导航到授权页面
 
-显示弹出窗口时 () `/tab-auth/simple-start` 运行以下代码。 此页面的主要目标是重定向到标识提供程序，以便用户可以登录。 此重定向可以在服务器端使用 HTTP 302 进行，但在这种情况下，使用 调用 在客户端上完成 `window.location.assign()` 。 这还 `microsoftTeams.getContext()` 允许用于检索提示信息，该信息可以传递到Azure AD。
+显示弹出窗口时 `/tab-auth/simple-start` () 运行以下代码。 此页面的主要目标是重定向到标识提供程序，以便用户可以登录。 此重定向可以在服务器端使用 HTTP 302 进行，但在这种情况下，使用 调用 在客户端上完成 `window.location.assign()` 。 这还 `microsoftTeams.getContext()` 允许用于检索提示信息，该信息可以传递到Azure AD。
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -93,14 +93,14 @@ microsoftTeams.getContext(function (context) {
 
 ### <a name="notes"></a>注释
 
-* 请参阅 [获取用户上下文信息](~/tabs/how-to/access-teams-context.md) ，帮助构建身份验证请求和 URL。 例如，您可以使用用户的登录名作为登录Azure AD，这意味着用户可能需要键入更少的 `login_hint` 内容。 请记住，不应直接使用此上下文作为标识证明，因为攻击者可能会在恶意浏览器中加载你的页面，并为用户提供其需要的任何信息。
-* 尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证，无论是作为选项卡内容 URL 的 URL 参数获取还是通过调用 Microsoft Teams 客户端 SDK 中的 函数。 `microsoftTeams.getContext()` 恶意参与者可能会使用自己的参数调用您的选项卡内容 URL，模拟 Microsoft Teams 的网页可以在 iframe 中加载您的选项卡内容 URL，并自行将数据返回到 `getContext()` 函数。 你应该将选项卡上下文中的标识相关信息视为提示，并验证这些信息，然后再使用。
+* 请参阅 [获取用户上下文信息](~/tabs/how-to/access-teams-context.md) ，帮助构建身份验证请求和 URL。 例如，可以使用用户的登录名作为登录Azure AD，这意味着用户可能需要键入更少的 `login_hint` 内容。 请记住，不应直接使用此上下文作为标识证明，因为攻击者可能会在恶意浏览器中加载你的页面，并为用户提供其需要的任何信息。
+* 尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证，无论是作为选项卡内容 URL 的 URL 参数获取还是通过调用 Microsoft Teams 客户端 SDK 中的 函数。 `microsoftTeams.getContext()` 恶意参与者可能会使用自己的参数调用您的选项卡内容 URL，模拟 Microsoft Teams 的网页可以在 iframe 中加载您的选项卡内容 URL，并返回其自己的数据 `getContext()` 到 函数。 你应该将选项卡上下文中的标识相关信息视为提示，并验证这些信息，然后再使用。
 * `state`参数用于确认调用回调 URI 的服务是调用的服务。 如果回调中的参数与在调用期间发送的参数不匹配，则返回调用不会得到验证，应该 `state` 终止。
 * 不需要在应用的 manifest.json 文件中将标识提供程序的域包括在 `validDomains` 列表中。
 
 ## <a name="the-callback-page"></a>回调页面
 
-在上一部分中，你调用了 Azure AD 授权服务，并传入了用户Azure AD，以便用户能够拥有其自己的单一授权体验。 你的应用无法控制此体验中发生的情况。 它只知道当您调用您Azure AD的回调页面时返回 `/tab-auth/simple-end` () 。
+在上一部分中，你调用了 Azure AD 授权服务，并传入了用户Azure AD，以便用户能够拥有其自己的单一授权体验。 你的应用无法控制此体验中发生的情况。 它只知道当您调用您Azure AD的回调页面时返回的内容 `/tab-auth/simple-end` () 。
 
 在此页中，你需要根据用户返回的信息确定是成功还是失败Azure AD调用 `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 。 如果登录成功，你将有权访问服务资源。
 
@@ -134,7 +134,7 @@ if (hashParams["error"]) {
 }
 ````
 
-此代码分析在使用帮助程序函数时Azure AD `window.location.hash` 接收的键值 `getHashParameters()` 对。 如果找到 ， 且 值与在身份验证流开始时提供的 相同，它将通过调用 将访问令牌返回到 选项卡;否则，它将报告 `access_token` `state` `notifySuccess()` 错误 `notifyFailure()` 。
+此代码分析在使用 helper 函数时Azure AD接收的键值 `window.location.hash` `getHashParameters()` 对。 如果找到 ， 且 值与在身份验证流开始时提供的 相同，它将通过调用 将访问令牌返回到 选项卡;否则，它将报告 `access_token` `state` `notifySuccess()` 错误 `notifyFailure()` 。
 
 ### <a name="notes"></a>注释
 

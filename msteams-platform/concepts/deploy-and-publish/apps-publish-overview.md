@@ -1,17 +1,17 @@
 ---
 title: 概述 - 分发应用
-description: 介绍发布应用、Microsoft Teams应用和发布应用GCC。
+description: 介绍用于发布应用程序Microsoft Teams上传应用和发布GCC。
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: 部署发布应用上传 gcc
-ms.openlocfilehash: 0436388365c2d7fc355c3f8cb40a9f05283124b8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6a4cb297c7f78ef09796adb3793ee1848236fdb6
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889186"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949108"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>分发Microsoft Teams应用
 
@@ -34,10 +34,10 @@ ms.locfileid: "60889186"
 
 ### <a name="government-community-cloud-gcc-organizations"></a>政府社区云 (GCC) 组织
 
-在GCC Teams环境中，默认情况下会启用合规的 Microsoft 应用。 但是，在发布应用之前，请确保应用的所有终结点都GCC组织的要求。
+在GCC Teams环境中，默认情况下会启用合规的 Microsoft 应用。 但是，在发布应用之前，请确保应用的所有终结点都符合GCC组织的要求。
 
 > [!IMPORTANT]
->如果你的应用包含自动程序或消息传递扩展，则必须在 Azure 中设置自动程序与 Microsoft Teams 之间的通道时选择"Teams政府"选项。 有关详细信息，请参阅 [将机器人连接到频道](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)。
+>如果你的应用包含自动程序或消息传递扩展，则必须在 Azure 中设置Microsoft Teams程序与用户之间的频道时，选择"Teams政府"选项。 有关详细信息，请参阅 [将机器人连接到频道](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)。
 
 ## <a name="publish-your-app-to-the-teams-store"></a>将应用发布到应用商店Teams应用商店
 
@@ -52,4 +52,4 @@ ms.locfileid: "60889186"
 
 ## <a name="see-also"></a>另请参阅
 
-* [Microsoft 365 应用合规计划](/microsoft-365-app-certification/overview)
+[Microsoft 365 应用合规性](/microsoft-365-app-certification/overview)
