@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: 集成Teams注意事项
-ms.openlocfilehash: cf60c1c30697fd503dcc935f35f32e9281a89cdd
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: c60a51775459e47116ac0cc33086c21ce26b5fe3
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912253"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948570"
 ---
 # <a name="considerations-for-teams-integration"></a>集成Teams注意事项 
 
@@ -23,7 +23,7 @@ ms.locfileid: "60912253"
 * **SharePoint：SharePoint** 中显示的页面Teams。
 
 你可以映射并按照适用于集成方案的适当准则执行。
-本文档概述了Teams、文件和数据存储的共享点要求、API 要求、身份验证以及应用与 Teams 的深层链接。
+本文档概述了Teams功能、文件和数据存储的共享点要求、API 要求、身份验证以及应用与 Teams 的深层Teams。
  
 ## <a name="get-to-know-teams-platform-capabilities"></a>了解Teams功能
 
@@ -48,7 +48,7 @@ ms.locfileid: "60912253"
 
 将现有应用程序的所有功能集成到Teams通常会导致强制的或不自然的用户体验，尤其是在较大的应用中。 从影响最大的功能开始，以及那些与项目更自然地Teams。 你可以允许用户启动主应用并访问其完整功能集。
 
-**将应用与应用集成的先决条件Teams** 以下是将应用与应用集成Teams。 
+**将应用与应用集成的先决条件Teams** 以下为将应用与应用集成Teams。 
 
 1. [将应用的用例映射到Teams功能](../concepts/design/map-use-cases.md)。
 1. [确定应用的入口点](../concepts/extensibility-points.md)。 它是用于个人用途、协作还是同时用于两者？
@@ -59,7 +59,7 @@ ms.locfileid: "60912253"
 
 若要将现有[SharePoint页](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites)作为"Teams"选项卡集成，必须考虑以下事项：
 
-* 它必须是新式 *SharePoint* 在线页面。
+* 它必须是新式 *SharePoint* 页面。
 * 仅支持个人选项卡。 无法将页面作为通道选项卡进行集成。
 
 或者，您也可以使用 Teams[生成一个SharePoint 框架。](/sharepoint/dev/spfx/integrate-with-teams-introduction)
@@ -74,7 +74,7 @@ ms.locfileid: "60912253"
 
 ***集成方案**：独立应用、协作应用*
 
-与应用集成时，你必须使应用的现有 API 和数据结构支持Teams。 若要扩展支持，必须使用有关 Teams 的上下文信息来扩充 API 和数据结构，以用于标识[](../concepts/authentication/configure-identity-provider.md)映射、深层[](../concepts/build-and-test/deep-links.md)链接支持以及合并[Microsoft](/graph/teams-concept-overview)Graph。
+与应用集成时，你必须使应用的现有 API 和数据结构支持Teams。 若要扩展支持，必须使用有关标识映射、深层链接支持和合并 Microsoft Teams 的上下文信息来扩充[](../concepts/authentication/configure-identity-provider.md)API[和Graph。](/graph/teams-concept-overview) [](../concepts/build-and-test/deep-links.md)
 
 了解有关获取选项卡或自动程序[Teams上下文](../tabs/how-to/access-teams-context.md)[。](../bots/how-to/get-teams-context.md)
 
@@ -82,22 +82,22 @@ ms.locfileid: "60912253"
 
 ***集成方案**：独立应用、协作应用SharePoint*
 
-Azure Active Directory (AD) 是用户标识Teams。 如果你的应用使用不同的标识提供程序，你必须执行标识映射练习或与Azure AD。
+Azure Active Directory (AD) 是用户标识Teams。 如果你的应用使用不同的标识提供程序，则必须执行标识映射练习或将其与Azure AD。
 
 Teams具有单一登录 (SSO) 机制Azure AD适用于第三方应用。 它还提供使用 OAuth 和开放 ID 身份验证等标准（称为 OIDC）将身份验证流连接其他标识提供程序。
 
 > [!IMPORTANT]
 > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要启用第三方应用，GCC[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
-对于SharePoint，如果你希望 SSO 适用于另一个应用，则只能使用 SSO，并且不能添加另一个 Azure AD ID，因为 ID 是 SharePoint应用。
+对于SharePoint，如果你希望 SSO 适用于另一个应用，则只能使用 SSO，并且不能添加另一个 Azure AD ID，因为 ID SharePoint应用。
 
 了解有关身份验证[在 Teams 中Teams。](../concepts/authentication/authentication.md)
 
-## <a name="follow-teams-design-guidelines"></a>遵循Teams设计准则
+## <a name="follow-teams-design-guidelines"></a>遵循Teams设计指南
 
 ***集成方案**：独立应用、协作应用*
 
-确保遵循[Teams准则](../concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。 无法将现有应用内容迁移到"Teams"选项卡。有关应用设计详细信息[，请参阅](https://fluentsite.z22.web.core.windows.net/)Fluent Design System。
+确保遵循[Teams准则](../concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。 无法将现有应用内容迁移到"Teams选项卡。有关应用设计详细信息[，请参阅](https://fluentsite.z22.web.core.windows.net/)Fluent Design System。
 
 ## <a name="maximize-deep-linking"></a>最大化深层链接
 
@@ -109,7 +109,7 @@ Teams具有单一登录 (SSO) 机制Azure AD适用于第三方应用。 它还�
 
 ***集成方案**：独立应用、协作应用SharePoint*
 
-在多[线程](../bots/what-are-bots.md)Teams应用中使用自动程序，因为它提供比[webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)更大的灵活性。
+在 web[应用中](../bots/what-are-bots.md)Teams自动程序进行多线程对话，因为它提供比[webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)更大的灵活性。
 
 自动程序还允许你向单个 **用户** 或频道发送主动消息。 主动邮件是由外部事件触发的未经提示的消息，而不是发送给自动程序的消息。 例如，自动程序在安装或新用户加入频道时发送欢迎消息。
 
@@ -122,7 +122,7 @@ Teams具有单一登录 (SSO) 机制Azure AD适用于第三方应用。 它还�
 
 ***集成方案：** 独立应用、协作应用SharePoint页面*
 
-创建团队时，还会SharePoint[网站](/microsoftteams/sharepoint-onedrive-interact)集以支持该团队的文件和数据存储。 如果应用与文件交互，则必须利用此功能。 使用网站集将原始数据存储在SharePoint和Excel。
+创建团队时，还会SharePoint[网站](/microsoftteams/sharepoint-onedrive-interact)集以支持该团队的文件和数据存储。 如果应用与文件交互，则必须利用此功能。 使用网站集将原始数据存储在SharePoint列表中Excel。
 
 ## <a name="see-also"></a>另请参阅
 

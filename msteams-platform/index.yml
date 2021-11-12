@@ -59,7 +59,7 @@ conceptualContent:
           text: 使用任务模块收集输入和收集信息
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: 连接 Web 服务通过 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
+          text: 连接 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
     - title: 功能
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs
@@ -74,7 +74,7 @@ conceptualContent:
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
           text: 会议Teams应用程序
-        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+        - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: 卡片和任务模块
         - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
@@ -99,7 +99,7 @@ conceptualContent:
           text: 生成应用Teams方案
         - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
           itemType: reference
-          text: 应用方案Teams最佳做法
+          text: 适用于应用Teams方案的最佳方案
     - title: 集成
       links:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
@@ -107,7 +107,7 @@ conceptualContent:
           text: 集成聊天Power Virtual Agents聊天机器人
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
-          text: 为您的网站集成"Teams"按钮
+          text: 为网站集成"Teams"按钮
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
           text: 将Teams选项卡与SharePoint
@@ -172,6 +172,6 @@ tools:
     - title: 适用于自动程序和消息传递扩展的.NET Bot Framework SDK
       imageSrc: ./assets/icons/logo_net.png
       url: 'https://github.com/Microsoft/botbuilder-dotnet/'
-    - title: 适用于 Microsoft Teams 的 Yeoman Microsoft Teams
+    - title: 适用于 Microsoft Teams 的 Yeoman 生成器
       imageSrc: ./assets/icons/Yeoman.png
       url: 'https://github.com/OfficeDev/generator-teams'

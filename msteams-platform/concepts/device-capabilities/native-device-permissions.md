@@ -4,20 +4,20 @@ keywords: teams 应用功能权限 设备本机扫描 qr 条形码图像音频�
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能，例如扫描 qr、条形码、图像、音频、视频功能
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 185552c213d6313ea6c8b50af72a0220d9abe7fc
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 04518d8620ce95d5d3ca72c86684ff0208b1333f
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889116"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948430"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 
 可以使用本机设备Teams（如相机、麦克风和位置）丰富你的应用。 本文档指导你了解如何请求用户同意和访问本机设备权限。
 
 > [!NOTE]
-> * 若要将媒体功能集成到Microsoft Teams移动应用中，请参阅[集成媒体功能](mobile-camera-image-permissions.md)。
-> * 若要将 QR 或条形码扫描仪功能集成到 Microsoft Teams 移动应用中，请参阅在应用中集成 QR 或条形码[扫描仪Teams。](qr-barcode-scanner-capability.md)
+> * 若要在移动应用中集成Microsoft Teams功能，请参阅集成[媒体功能](mobile-camera-image-permissions.md)。
+> * 若要将 QR 或条形码扫描仪功能集成到 Microsoft Teams 移动应用中，请参阅在应用中集成[QR 或条形码扫描仪Teams。](qr-barcode-scanner-capability.md)
 > * 若要在移动应用中集成位置Microsoft Teams，请参阅[集成位置功能](location-capability.md)。
 
 ## <a name="native-device-permissions"></a>本机设备权限
@@ -37,9 +37,9 @@ ms.locfileid: "60889116"
 
 ## <a name="access-device-permissions"></a>访问设备权限
 
-JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)提供了你的 Teams 移动应用访问用户设备权限和构建更丰富的体验所需的工具。 [](#manage-permissions)
+JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)提供了您的 Teams 移动应用访问用户设备权限和构建更丰富的体验所需的工具。 [](#manage-permissions)
 
-虽然新式 Web 浏览器中对这些功能的访问是一种标准操作，但Teams更新应用清单来向用户通知你使用的功能。 此更新允许你在桌面客户端上运行应用时Teams权限。
+虽然新式 Web 浏览器中对这些功能的访问是标准操作，但Teams更新应用清单来通知用户有关这些功能的信息。 此更新允许你在桌面客户端上运行应用时请求Teams权限。
 
 > [!NOTE]
 > 目前Microsoft Teams媒体功能和 QR 条形码扫描仪功能的支持仅适用于移动客户端。
@@ -51,7 +51,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
 1. 打开Teams。
-1. 转到 **设置**  >  **应用权限"。**
+1. 转到 **设置**  >  **应用程序权限"。**
 1. 选择要选择其设置的应用。
 1. 选择所需的设置。
 
@@ -84,12 +84,12 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 每个属性都允许您提示用户请求其同意：
 
-| 属性      | 描述   |
+| 属性      | 说明   |
 | --- | --- |
 | media         | 使用相机、麦克风、扬声器和访问媒体库的权限。 |
 | 地理位置   | 返回用户位置的权限。      |
 | 通知 | 发送用户通知的权限。      |
-| midi          | 从数字音乐 (MIDI) 和接收音乐数字接口的权限。   |
+| midi          | 从数字音乐 (MIDI) 和接收音乐音乐数字接口的权限。   |
 | openExternal  | 在外部应用程序中打开链接的权限。  |
 
 ## <a name="check-permissions-from-your-app"></a>检查应用的权限
@@ -114,9 +114,9 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## <a name="use-teams-apis-to-get-device-permissions"></a>使用Teams API 获取设备权限
+## <a name="use-teams-apis-to-get-device-permissions"></a>使用 Teams API 获取设备权限
 
-利用相应的 HTML5 或 Teams API，显示获取访问设备权限同意的提示。
+利用适当的 HTML5 或 Teams API，显示获取访问设备权限同意的提示。
 
 > [!IMPORTANT]
 > * 对 `camera` 、 `gallery` 和 `microphone` 的支持通过 [**selectMedia API 启用**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 将 [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) 用于单个映像捕获。
@@ -185,7 +185,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="permission-behavior-across-login-sessions"></a>跨登录会话的权限行为
 
-将存储每个登录会话的设备权限。 这意味着，如果你登录到另一个 Teams 实例（例如，在另一台计算机中）时，之前会话中的设备权限将不可用。 因此，必须重新同意新会话的设备权限。 这也意味着，如果你注销 Teams 或切换租户Teams，你的设备权限将从以前的登录会话中删除。  
+将存储每个登录会话的设备权限。 这意味着，如果你登录到另一个 Teams（例如，在另一台计算机中）时，之前会话中的设备权限将不可用。 因此，必须重新同意新会话的设备权限。 这也意味着，如果你注销 Teams 或切换租户Teams，你的设备权限将从以前的登录会话中删除。  
 
 > [!NOTE]
 > 当你同意本机设备权限时，它仅对当前的登录 _会话_ 有效。
@@ -196,13 +196,12 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 |---------------|--------------|--------|
 |设备权限 | 使用Microsoft Teams选项卡示例应用演示设备权限 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## <a name="next-steps"></a>后续步骤
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
 > [将媒体功能集成到 Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [将 QR 或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
+## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [在 Teams 中集成位置Teams](location-capability.md)
+* [将 QR 或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
+* [在 Teams 中集成位置Teams](location-capability.md)

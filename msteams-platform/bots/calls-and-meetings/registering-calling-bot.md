@@ -4,18 +4,18 @@ description: 了解如何为用户注册新的音频/视频呼叫Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: 144e623ea21da51b8a06bf20f50a60345dda081a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d1cf0049c37f7f586abf19f9e9d0290c74e230ac
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889102"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948619"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>为会议注册呼叫和会议Microsoft Teams
 
-参与音频或视频呼叫和联机会议的机器人是Microsoft Teams聊天机器人，具有以下用于注册机器人的额外功能：
+参与音频或视频呼叫和联机会议的机器人是Microsoft Teams自动程序，具有以下用于注册机器人的额外功能：
 
-* 有一个新版本的 Teams 应用清单，其中新增了两个设置 `supportsCalling` 和 `supportsVideo` 。 这些设置包含在开发人员[预览版本的](../../resources/dev-preview/developer-preview-intro.md)应用程序清单Teams中。
+* 新版应用清单Teams两个附加设置 和 `supportsCalling` `supportsVideo` 。 这些设置包含在开发人员[预览版本的](../../resources/dev-preview/developer-preview-intro.md)应用清单Teams中。
 * [必须为Graph](./registering-calling-bot.md#add-graph-permissions)的 Microsoft 应用 ID 配置 Microsoft 应用权限。
 * 呼叫Graph联机会议 API 权限需要租户管理员同意。
 
@@ -24,7 +24,7 @@ ms.locfileid: "60889102"
 呼叫和联机会议自动程序在 manifest.json 中具有以下两个其他设置，这些设置为 Teams 中的机器人启用音频或Teams。
 
 * `bots[0].supportsCalling`. 如果存在并设置为 `true` ，Teams自动程序可以参与通话和联机会议。
-* `bots[0].supportsVideo`. 如果存在并设置为 `true` ，Teams自动程序支持视频。
+* `bots[0].supportsVideo`. 如果存在 并设置为 `true` ，Teams自动程序支持视频。
 
 如果希望 IDE 正确验证通话和会议机器人的 manifest.json 架构是否包含这些值，可以按如下方式更改 `$schema` 属性：
 
@@ -42,7 +42,7 @@ ms.locfileid: "60889102"
 
 1. 使用此链接可创建新的自动程序 `https://dev.botframework.com/bots/new` 。 或者，如果你选择 Bot  Framework 门户中的"创建自动程序"按钮，你将在 Microsoft Azure 创建自动程序，你必须拥有 Azure 帐户。
 1. 添加Teams通道。
-1. 选择"**通话** 频道"页面上Teams"选项卡。 选择 **"启用呼叫**"，然后更新 Webhook (，以) 接收传入通知的 HTTPS URL 调用 **Webhook，** 例如 `https://contoso.com/teamsapp/api/calling` 。 有关详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels)。
+1. 选择"**通话** 频道"页面上Teams选项卡。 选择 **"启用呼叫**"，然后更新 Webhook (，以) 接收传入通知的 HTTPS URL 调用 **Webhook，** 例如 `https://contoso.com/teamsapp/api/calling` 。 有关详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels)。
 
     ![配置Teams频道信息](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
@@ -56,7 +56,7 @@ ms.locfileid: "60889102"
 
 下表提供了用于调用的应用程序权限列表：
 
-|权限    |显示字符串   |描述 |需要管理员同意 |
+|权限    |显示字符串   |说明 |需要管理员同意 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |从应用预览启动传出 1：1 呼叫。 |允许应用在没有登录用户的情况下，向单个用户发起播出通话并将通话转接到组织目录中的用户。|是|
 | Calls.InitiateGroupCall.All |从应用预览启动传出组呼叫。 |允许应用在没有登录用户的情况下，向多个用户发起播出通话并向组织中的会议添加参与者。|是|
@@ -65,20 +65,20 @@ ms.locfileid: "60889102"
 | Calls.AccessMedia.All |以应用预览模式访问通话中的媒体流。 |允许应用在没有登录用户的情况下，直接访问通话中的媒体数据流。|是|
 
 > [!IMPORTANT]
-> 不能使用媒体访问 API 来记录或以其他方式保留来自调用或会议（您的应用程序从该媒体内容记录或录制中访问或派生数据）中的媒体内容。 必须先调用[ `updateRecordingStatus` API](/graph/api/call-updaterecordingstatus)以指示录制已开始，然后从该 API 收到成功回复。 如果应用程序开始录制任何会议或呼叫，则必须在调用 API 之前结束录制， `updateRecordingStatus` 以指示录制已结束。
+> 不能使用媒体访问 API 记录或以其他方式保留来自调用或会议的媒体内容，您的应用程序访问或派生来自该媒体内容记录或录制的数据。 必须先调用[ `updateRecordingStatus` API](/graph/api/call-updaterecordingstatus)以指示录制已开始，然后从该 API 收到成功回复。 如果应用程序开始录制任何会议或呼叫，则必须在调用 API 之前结束录制， `updateRecordingStatus` 以指示录制已结束。
 
 ### <a name="application-permissions-for-online-meetings"></a>联机会议的应用程序权限
 
 下表提供了联机会议的应用程序权限列表：
 
-|权限    |显示字符串   |描述 |需要管理员同意 |
+|权限    |显示字符串   |说明 |需要管理员同意 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | OnlineMeetings.Read.All |从应用预览中读取联机会议详细信息|允许应用在没有登录用户的情况下读取组织的联机会议详细信息。|是|
 | OnlineMeetings.ReadWrite.All |代表用户从应用预览中读取和创建联机会议|允许应用在没有登录用户的情况下代表用户在你的组织中创建联机会议。|是|
 
 ### <a name="assign-permissions"></a>分配权限
 
-如果你想要使用 Azure Active Directory (AAD) V1 终结点，则必须使用[Azure](https://aka.ms/aadapplist)门户提前配置[自动程序的应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
+如果你想要使用 Azure Active Directory (AAD) V1 终结点，则必须使用[Azure](https://aka.ms/aadapplist)门户提前为自动程序[配置应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
 
 ### <a name="get-tenant-administrator-consent"></a>获取租户管理员同意
 

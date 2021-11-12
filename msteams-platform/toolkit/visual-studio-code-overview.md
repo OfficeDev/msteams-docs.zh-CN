@@ -5,16 +5,16 @@ keywords: teams visual studio code toolkit
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8eeaadf28b9bdb46c91a803a66b4855d2a5e848c
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889319"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948437"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>使用 Teams Toolkit 和 Visual Studio Code
 
-Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置"方法帮助开发人员创建和部署具有集成标识的 Teams 应用、对云存储的访问权限、Microsoft Graph 的数据，以及 Azure 和 M365 中的其他服务。  
+适用于 Visual Studio Code 的 Teams Toolkit 通过针对开发人员体验的"零配置"方法帮助开发人员创建和部署具有集成标识的 Teams 应用、对云存储的访问权限、Microsoft Graph 的数据以及 Azure 和 M365 中的其他服务。  
 
 还可以将工具包与 Visual Studio一 (CLI `teamsfx`) 。
 
@@ -27,7 +27,7 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
 您还可以在 Teams Toolkit Marketplace 上Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
-以下工具由 Visual Studio Code在需要时安装。 如果已安装，则改为使用已安装的版本。 如果使用 Linux (WSL) ，则必须先安装这些工具，然后才能使用：
+以下工具由 Visual Studio Code在需要时安装。 如果已安装，则改为使用已安装的版本。 如果使用 Linux (WSL) ，则必须安装这些工具，然后才能使用：
 
 - [Azure 函数核心工具](/azure/azure-functions/functions-run-local)
 
@@ -39,9 +39,9 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
 - [ngrok](https://ngrok.com/download)
 
-    某些Teams应用功能 (对话机器人、消息传递扩展和传入 webhook) 需要入站连接。  你需要通过隧道公开开发Teams进行开发。 仅包含选项卡的应用不需要隧道。  此包安装在项目目录中， (npm `devDependencies`) 。
+    一Teams应用功能 (对话机器人、消息传递扩展和传入 webhook) 需要入站连接。  你需要公开开发系统，以Teams隧道进行开发。 仅包含选项卡的应用不需要隧道。  此包安装在项目目录中， (npm `devDependencies`) 。
 
-## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>使用 Teams Toolkit for Visual Studio Code
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>使用Teams Toolkit Visual Studio Code
 
 - [设置新项目](#set-up-a-new-teams-project)
 - [配置应用程序](#configure-your-app)
@@ -50,7 +50,7 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
 ## <a name="set-up-a-new-teams-project"></a>设置新的Teams项目
 
-用户可以Teams Toolkit M365 React环境中托管的 Azure 或 SPFx Web 部件中托管的 SharePoint 应用。 若要创建一React Azure 上托管的新应用：
+用户可以Teams Toolkit M365 React环境中托管的 Azure 或 SPFx Web 部件中托管的 SharePoint 应用。 若要创建一React托管在 Azure 上的新应用：
 
 1. 打开 Visual Studio Code。
 1. 通过选择边栏中的 Teams 图标，打开 Teams 工具包:
@@ -73,7 +73,7 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="显示如何选择新应用的托管的屏幕截图。":::
 
-1. （可选）在"云 **资源"** 步骤中，选择应用程序使用的云资源。 可以选择 CRUD (创建、读取、更新和删除) 表SQL API 的访问权限：
+1. （可选）在"云 **资源"** 步骤中，选择应用程序使用的云资源。 可以选择 CRUD (、读取、更新和删除) 表SQL API 的访问权限：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="显示如何为新应用添加云资源的屏幕截图。":::
 
@@ -85,7 +85,7 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
 1. 为应用输入合适的名称，如 `helloworld`。 应用的名称只能包含字母数字字符。  按 **Enter** 以继续。
 
-应用程序Teams数秒钟内创建。 基架应用包含用于处理单一登录Azure Active Directory访问 Microsoft Graph。  如果你选择了 Azure 资源，则这些资源的代码也可用。
+你的应用Teams数秒钟内创建。 基架应用包含用于处理单一登录Azure Active Directory访问 Microsoft Graph。  如果你选择了 Azure 资源，则这些资源的代码也可用。
 
 有关创建和发布SPFx的演练，请参阅 SPFx[教程](../get-started/first-app-spfx.md)。
 
@@ -103,10 +103,10 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
       > - 要 [显示在](../resources/schema/manifest-schema.md#icons) 公共或组织应用程序目录中的应用的颜色图标。
       > - 显示在[活动](../resources/schema/manifest-schema.md#icons)栏上的Teams图标。
 
-清单和图标在上载到项目之前存储在项目的 `.fx` 文件夹中Teams。 安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。
+清单和图标先存储在项目的文件夹中，然后上传到 `.fx` Teams。 安装应用后，Teams客户端将分析清单文件以确定所需信息，如应用名称和服务所在的 URL。
 
-1. 若要配置你的应用，请导航到 Teams Toolkit **中的**"Visual Studio Code"。
-1. 在 **"清单编辑器**"部分 **Project** 清单编辑器"。
+1. 若要配置你的应用，请导航到Teams Toolkit **中的**"Visual Studio Code"。
+1. 在 **"清单编辑器**"部分 **Project** 编辑器"。
 
 编辑"应用详细信息"页中的字段将更新 manifest.json 文件的内容，该文件最终作为应用包的一部分交付。
 
@@ -122,14 +122,14 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="显示如何安装 SSL 证书以便 Teams 从 localhost 加载应用程序提示的屏幕截图。":::
 
-1. Web 浏览器开始运行应用程序。 如果系统提示打开 Microsoft Teams，请选择"取消"以留在浏览器中。 系统可能也会提示你在其他Teams切换到应用程序。 发生这种情况时，选择 Web 应用。
+1. Web 浏览器开始运行应用程序。 如果系统提示打开 Microsoft Teams，请选择"取消"以留在浏览器中。 系统也可能提示你在其他时间切换到Teams应用程序。 发生这种情况时，选择 Web 应用。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="显示启动后如何选择 Teams 的 Web 版本的屏幕截图":::
 
 1. 系统可能会提示你登录。 如果是这样，则使用你的 M365 帐户登录。
 1. 系统提示将应用安装到 Teams 时，按 **添加**。
 
-后端和前端都挂钩到 Visual Studio Code调试器。  这允许你在代码中的任意位置设置断点并检查状态。  您还可以使用浏览器内的任何前端 (工具，React开发人员) 工具。  有关在脚本中调试Visual Studio Code，请参阅[文档](https://code.visualstudio.com/Docs/editor/debugging)。
+后端和前端都挂钩到 Visual Studio Code调试器。  这允许你在代码中的任意位置设置断点并检查状态。  您还可以使用浏览器内的任何前端 (，React开发人员) 工具。  有关在脚本中调试Visual Studio Code，请参阅[文档](https://code.visualstudio.com/Docs/editor/debugging)。
 
 ## <a name="publish-your-app-to-teams"></a>将应用发布到 Teams
 
@@ -147,5 +147,5 @@ Teams Toolkit for Visual Studio Code 通过针对开发人员体验的"零配置
 
 ## <a name="see-also"></a>另请参阅
 
-* [使用 Teams Toolkit 和 Visual Studio](~/toolkit/visual-studio-overview.md)
+* [使用应用和Teams Toolkit生成Visual Studio](~/toolkit/visual-studio-overview.md)
 * [使用 JavaScript 客户端 SDK 生成选项卡Microsoft Teams托管体验](~/tabs/how-to/using-teams-client-sdk.md)

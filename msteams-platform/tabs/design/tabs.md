@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: UI 工具包管理选项卡设置单一登录 sso 深度链接基于角色的视图线程讨论
-ms.openlocfilehash: 42f5a76c0499b3f50d90608d1f08e701caa13984
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c2c081a1cb0ca96cce7cc55a9e39facc9cd691db
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887920"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948584"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>为 Microsoft Teams 设计选项卡
 

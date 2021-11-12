@@ -1,21 +1,21 @@
 ---
 title: 应用开发基础概述
 author: heath-hamilton
-description: 介绍应用平台开发Teams概念，如应用功能和入口点、了解用例以及将其映射到应用功能以及规划应用。
+description: 介绍开发平台Teams（如应用功能和入口点）的基础概念，了解用例，以及将它们映射到应用功能以及规划应用。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: 入口点可扩展性用例设备功能
-ms.openlocfilehash: 63a11c949a56bf024632efc7cad5ef38ce918c2b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: fcb5da4fd7feac225b67341d6fe22187dd30a713
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889270"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948423"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams应用开发基础
 
-Microsoft Teams应用基础为创建自定义应用提供Teams方向。 你可以识别规划应用所需的Teams框架。 本文档可帮助你了解用户-应用通信，并找出你需要使用的应用图面类型或你的应用在进程中可能需要的 API。 获得一些灵感，以在集成应用体验时融入交互性Teams。
+Microsoft Teams应用基础为创建自定义应用提供Teams方向。 你可以识别规划应用所需的Teams框架。 本文档可帮助你了解用户-应用通信，并找出你需要使用的应用图面类型或你的应用在进程中可能需要的 API。 获得一些灵感，以在集成应用体验时融入互动Teams。
 
 ## <a name="capabilities-and-entry-points"></a>功能和入口点
 
@@ -23,7 +23,7 @@ Microsoft Teams应用基础为创建自定义应用提供Teams方向。 你可�
 
 ## <a name="understand-your-use-cases"></a>了解用例
 
-你可以识别用户问题并确定用户面临的一些常见问题的解答。 可以通过查找Teams组合来构建你的应用，以满足用户的需求。 [了解用例](../concepts/design/understand-use-cases.md) 以了解最终用户如何与你的应用交互。 了解如何了解用户及其问题。 回答的一些常见问题如下所示：
+你可以识别用户问题并确定用户面临的一些常见问题的解答。 可以通过查找Teams满足用户需求的正确组合来构建你的应用。 [了解用例](../concepts/design/understand-use-cases.md) 以了解最终用户如何与你的应用交互。 了解如何了解用户及其问题。 回答的一些常见问题如下所示：
 
 * 是否需要身份验证？
 * 你的应用要解决什么问题？
@@ -48,5 +48,5 @@ Microsoft Teams平台持续增强开发人员功能，以与内置第一方体�
 
 ## <a name="see-also"></a>另请参阅
 
-* [将 Web 应用与 Teams](../samples/integrating-web-apps.md)
+* [集成Teams注意事项](../samples/integrating-web-apps.md)
 * [生成首个Microsoft Teams应用](../build-your-first-app/build-first-app-overview.md)

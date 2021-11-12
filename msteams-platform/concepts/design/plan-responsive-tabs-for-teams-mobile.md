@@ -5,12 +5,12 @@ description: 规划在移动设备上创建应用Teams指南
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 60aab6b9c81dbc28fbbfe0d9a985b42c22ddee47
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566146"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948395"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>规划 Teams 移动版的响应式选项卡
 
@@ -22,11 +22,11 @@ ms.locfileid: "60566146"
 
 * 考虑应用跨设备Teams功能。 例如，如果你在桌面上有一个性能良好的应用，你可以浏览在移动设备上生成类似的应用。 最初，移动版上转换整个桌面体验可能比较困难。 你可以从基本但常见的方案开始。 收集更多见解和用户反馈后添加特性和功能。
 
-* 确保面向移动版上的相应用户人物。 例如，如果你正在构建一个向最终用户提供服务，并且还为开发人员和高级经理提供数据访问权限的应用，那么当你开始在 Teams 移动版上构建应用时，最终用户可以更多使用该应用。 你可以适应桌面应用上的所有角色，但是，建议从具有更大基础和可能的早期采用者角色开始，实现较小的屏幕体验。 根据该示例，最终用户是相应的用户角色。 可以逐步添加功能以支持移动设备上的其他用户Teams角色。 
+* 确保面向移动版上的相应用户人物。 例如，如果你正在构建一个向最终用户提供服务，并且还为开发人员和高级经理提供数据访问权限的应用，那么当你开始在 Teams 移动版上生成应用时，最终用户可以更多地使用该应用。 你可以适应桌面应用上的所有角色，但是，建议从具有更大基础和可能的早期采用者角色开始，实现较小的屏幕体验。 根据该示例，最终用户是相应的用户角色。 可以逐步添加功能以支持移动设备上的其他用户Teams角色。 
 
 ## <a name="understand-different-stages-to-build-apps"></a>了解构建应用的不同阶段
 
-确定应用范围后，可以了解以下三个阶段，在移动版上规划任何应用Teams增强用户体验：
+确定应用范围后，可以了解以下三个阶段来规划 Teams 移动版上的任何应用并增强用户体验：
 
 1. **消耗**
 
@@ -41,11 +41,11 @@ ms.locfileid: "60566146"
    提供在移动设备上参与的完整应用体验。 当用户使用你的应用时，在移动设备上提供完整的沉浸式体验（与桌面体验一样或优于桌面体验）。 若要为用户提供良好的体验，请使所有用例在移动设备上快速响应。
 
 > [!TIP]
-> 若要获取有关设计指南的信息，请参阅适用于应用[Teams过程](design-teams-app-process.md)。
+> 若要获取有关设计指南的信息，请参阅适用于应用[的设计Teams过程](design-teams-app-process.md)。
 
 ## <a name="use-cases"></a>用例
 
-让我们看一下以下用例，了解如何为移动版规划不同类型的Teams应用：
+让我们看一下以下用例，了解如何为移动设备规划Teams应用：
 
 <br>
 
@@ -185,4 +185,4 @@ ms.locfileid: "60566146"
 * [设计选项卡](../../tabs/design/tabs.md)
 * [设计机器人](../../bots/design/bots.md)
 * [设计任务模块](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [验证准则](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [应用商店验证指南](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

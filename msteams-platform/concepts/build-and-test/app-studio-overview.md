@@ -4,12 +4,12 @@ description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应�
 keywords: 应用室团队入门
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: adbd6bf8c2c2ec0dae8444d222fc3f3b26279e8f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 92f24fbb7d4a41a192178ead1e2cb40dd7446b25
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888564"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948633"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams
 
@@ -76,7 +76,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
   你还必须提供选项卡期望从其加载或链接到的任何其他域。
 
-* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认在个人应用体验中 (用户在团队或频道应用的上下文之外使用你的应用时) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
+* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认在个人应用体验中显示 (用户在团队或频道应用的上下文之外使用你的应用时) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
 
 ##### <a name="bots"></a>机器人
 
@@ -121,14 +121,14 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 卡片是包含短信息或相关信息的容器。 Microsoft Teams 支持卡片，卡片可以有多个属性和附件。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。 
 
-为了简化此过程且减少出错，可以使用"卡片编辑器"选项卡使用窗体生成主卡或缩略图卡片，并验证和测试生成的卡片 (就像用户通过自动程序) 一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
+为了简化此过程且减少出错，可以使用"卡片编辑器"选项卡使用窗体生成主卡或缩略图卡，并验证和测试生成的卡片 (就像用户通过自动程序看到) 一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
 
 如果已有要验证的卡片，可在 Teams 中将该卡的 JSON 粘贴到 *"添加卡信息"下的 JSON 选项卡中* 然后将其发送给自己以查看聊天中的外观。
 
 ### <a name="react-control-library"></a>反应控件库
 
 >[!Note]
-> 以后React弃用此控件库。 请考虑使用[Fluent UI react 控件作为](https://microsoft.github.io/fluent-ui-react/)之前其他 Stardust UI。
+> 以后React弃用此控件库。 请考虑使用[Fluent UI react 控件作为](https://microsoft.github.io/fluent-ui-react/)替代的之前 Stardust UI。
 
 创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为更轻松地创建一致的 UI，App Studio 提供了几种符合 Teams 设计原则的 UI 控件类别。
 

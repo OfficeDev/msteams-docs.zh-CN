@@ -5,16 +5,16 @@ description: 了解如何设计Microsoft Teams应用。 资源包括Microsoft Te
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 59af1528941b06d6a951ee8dd38e663c1b492624
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888137"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948563"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>设计Microsoft Teams应用
 
-:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="介绍设计指南Microsoft Teams概念图像。":::
+:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="概念性图像，Microsoft Teams设计准则。":::
 
 无论你是使用低代码工具的设计人员、产品经理、开发人员还是制造商，这些指南都可以帮助你快速做出正确的设计决策，Microsoft Teams应用。
 
@@ -22,7 +22,7 @@ ms.locfileid: "60888137"
 
 设计Teams应用与设计传统的 Web 应用类似，但有些不同。 有效的设计突出显示了应用的独特属性，同时自然地适应Teams和上下文。
 
-这些指南和资源可以帮助您实现此平衡。 你将了解在设计 Teams 应用时 (，如选项卡应用中的多级导航) 。
+这些指南和资源可以帮助您实现此平衡。 你将了解在设计 Teams 应用模型时 (该做什么，例如选项卡应用中的多级) 。
 
 ## <a name="teams-app-design-principles"></a>Teams应用设计原则
 
@@ -67,14 +67,14 @@ Teams应用通过用户之间的协调与共享活动促进协作。
 
 ### <a name="native-or-distinct"></a>本机或不同
 
-该应用使用本机Teams设计组件或你自己的组件。 配色方案、控件等不会混合使用。
+应用使用本机Teams设计组件或你自己的组件。 配色方案、控件等不会混合使用。
 
    :::column-end:::
    :::column span="":::
 
 ### <a name="useful"></a>有用
 
-该应用基于用户需要在应用中Teams。
+该应用基于用户需要在应用中执行Teams。
 
    :::column-end:::
 :::row-end:::
@@ -119,7 +119,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ## <a name="app-capabilities"></a>应用功能
 
-了解用户如何添加、使用和管理Teams应用，以充分利用设计中每个功能。
+了解用户如何添加、使用和管理Teams应用程序，以充分利用设计中每个功能。
 
 * [个人应用](../../concepts/design/personal-apps.md)
 * [选项卡](../../tabs/design/tabs.md)
@@ -129,7 +129,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ## <a name="ui-templates"></a>UI 模板
 
-使用常见用例和工作流的模板快速创建[Teams高保真设计](design-teams-app-ui-templates.md)。
+使用常见用例和工作流的模板快速Teams[高保真设计](design-teams-app-ui-templates.md)。
 
 ## <a name="basic-ui-components"></a>基本 UI 组件
 
@@ -146,7 +146,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 > [!div class="nextstepaction"]
 > [获取图 (UI) ](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft TeamsUI 库
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI 库
 
 在浏览器中查看和测试Teams UI 模板和相关组件。
 
@@ -169,7 +169,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 若要了解更多信息，请尝试以下资源之一：
 
-### <a name="fluent-ui-documentation"></a>FluentUI 文档
+### <a name="fluent-ui-documentation"></a>Fluent UI 文档
 
 获取用于生成用户体验的基本 Fluent UI 组件的代码示例Teams详细信息。
 

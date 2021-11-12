@@ -5,12 +5,12 @@ description: 了解如何使用代码示例和示例向消息传递扩展添加�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2d8bcb6896d1a97e6350b397e725afad2e8961a9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 808ff41c848864bfd86d12fe0dc236e249fa3157
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889403"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948626"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>向邮件扩展添加身份验证
 
@@ -35,10 +35,10 @@ ms.locfileid: "60889403"
 如果服务需要用户身份验证，则用户必须先登录，然后才能使用消息传递扩展。 身份验证步骤类似于自动程序或选项卡的步骤。顺序如下所示：
 
 1. 用户发出查询或默认查询将自动发送到您的服务。
-1. 你的服务通过检查用户 ID 来检查用户Teams身份验证。
+1. 服务通过检查用户 ID 来检查用户Teams身份验证。
 1. 如果用户未经过身份验证，请发送回包含建议操作（包括身份验证 `auth` `openUrl` URL）的响应。
 1. 客户端Microsoft Teams给定身份验证 URL 启动托管网页的对话框。
-1. 用户登录后，应关闭窗口并将身份验证代码发送到 Teams客户端。
+1. 用户登录后，应关闭窗口，并将身份验证代码发送到 Teams客户端。
 1. 然后Teams客户端向服务重新提供查询，其中包括步骤 5 中传递的身份验证代码。
 
 服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码匹配。 这可确保恶意用户不会尝试欺骗或破坏登录流。 这实际上"关闭循环"以完成安全身份验证序列。
@@ -71,15 +71,15 @@ ms.locfileid: "60889403"
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流程
 
-登录体验必须响应迅速且适合弹出窗口。 它应与[JavaScript Microsoft Teams SDK](/javascript/api/overview/msteams-client)集成，它使用消息传递。
+登录体验必须响应迅速且适合弹出窗口。 它应与使用消息传递[Microsoft Teams JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 集成。
 
-与其他嵌入体验一样，Microsoft Teams内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
+与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流程
 
 当登录请求完成并重定向回你的页面时，它必须执行以下步骤：
 
-1. 生成一个安全代码，一个随机数字。 您必须在服务上缓存此代码，以及通过登录流（如 OAuth 2.0 令牌）获取的凭据。
+1. 生成一个安全代码，一个随机数字。 您必须在服务上缓存此代码，以及通过登录流获取的凭据，如 OAuth 2.0 令牌。
 1. 调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。
 
 此时，窗口关闭，控件将传递给Teams客户端。 客户端现在重新提供原始用户查询以及 属性中的安全 `state` 代码。 代码可以使用安全代码查找之前存储的凭据以完成身份验证序列，然后完成用户请求。

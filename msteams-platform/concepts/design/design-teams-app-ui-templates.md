@@ -1,20 +1,20 @@
 ---
 title: 使用 UI 模板设计应用
 author: heath-hamilton
-description: 使用常用的标准化 UI 组件、布局和模式来更快地设计Microsoft Teams。
+description: 使用标准化 UI 组件、布局和通常在整个应用中常见的模式更快地设计Microsoft Teams。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887801"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948444"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI Microsoft Teams设计应用
 
-使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 ui Fluent的组件的集合，这些组件适用于常见Teams用例，让你有更多的时间来为用户找到最佳体验。
+使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 UI Fluent的组件的集合，这些组件适用于常见的 Teams 用例，让你有更多的时间来为用户找到最佳体验。
 
 ## <a name="getting-started-with-tools-and-samples"></a>工具和示例入门
 
@@ -22,19 +22,19 @@ ms.locfileid: "60887801"
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-从应用 UI 工具包中为应用设计获取 UI 模板Microsoft Teams，其中还包括有关用法、结构分析、辅助功能和最佳做法的广泛信息。
+从应用 UI 工具包获取应用设计的 UI Microsoft Teams，其中还包括有关用法、结构、辅助功能和最佳做法的广泛信息。
 
 > [!div class="nextstepaction"]
 > [获取图 (UI) ](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft TeamsUI 库
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI 库
 
 在浏览器中查看和测试Teams UI 模板和相关组件。
 
 > [!div class="nextstepaction"]
 > [尝试 UI 库 (场) ](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-将这些模板和相关组件直接导入到Teams应用项目中。
+直接将这些模板和相关组件导入到Teams应用项目中。
 
 > [!div class="nextstepaction"]
 > [获取 UI 库 (GitHub) ](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
@@ -66,7 +66,7 @@ ms.locfileid: "60887801"
 
 ## <a name="data-visualization"></a>数据可视化
 
-可以使用不同的卡片大小（ (、双精度和) ）来堆叠和组织同一页面上的数据可视化效果。 卡片可缩放以适合列布局并填充空白区域。
+可以使用不同的卡片大小 (、双精度和完全) ，以在同一页面上堆叠和组织数据可视化效果。 卡片缩放以适合列布局并填充空白区域。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -153,7 +153,7 @@ ms.locfileid: "60887801"
 
 ## <a name="sign-in"></a>登录
 
-您可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括单一登录 (SSO) ，建议这样做以简化身份验证体验。
+你可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括 SSO (单一) ，我们建议这样做以简化身份验证体验。
 
 ### <a name="top-use-case"></a>热门用例
 
@@ -169,7 +169,7 @@ ms.locfileid: "60887801"
 
 ## <a name="settings"></a>设置
 
-设置屏幕是用户可以使用你的应用配置其首选项的地方。  (注意：设置是基本[UI 组件的](~/concepts/design/design-teams-app-basic-ui-components.md)容器) 
+设置屏幕是用户可以使用你的应用配置其首选项的地方。  (注意：设置是基本[UI 组件的](~/concepts/design/design-teams-app-basic-ui-components.md)容器 。) 
 
 ### <a name="top-use-case"></a>热门用例
 

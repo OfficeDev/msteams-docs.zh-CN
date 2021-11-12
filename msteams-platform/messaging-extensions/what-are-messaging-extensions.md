@@ -1,20 +1,20 @@
 ---
-title: 消息传递扩展
+title: 消息扩展
 author: surbhigupta
-description: 邮件扩展在Microsoft Teams概述
+description: 邮件扩展在 Microsoft Teams 概述
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 1ef83dd8dc87b54f7ec02e110565b9ecb0a14667
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1448cb334521b6937ab87514c35e2b628a3e8106
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889368"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948556"
 ---
-# <a name="messaging-extensions"></a>消息传递扩展
+# <a name="messaging-extensions"></a>消息扩展
 
-邮件扩展允许用户通过客户端中的按钮和表单与 web Microsoft Teams交互。 他们可以从撰写邮件区域、命令框或直接从邮件搜索或启动外部系统中的操作。 你可以以格式丰富的卡片的形式将交互结果发回Microsoft Teams客户端。 本文档概述了邮件扩展、在不同方案中执行的任务、邮件扩展的工作、操作和搜索命令以及链接取消点击。
+邮件扩展允许用户通过客户端中的按钮和表单与 web Microsoft Teams交互。 他们可以从撰写邮件区域、命令框或直接从邮件搜索或启动外部系统中的操作。 你可以以格式丰富的卡片的形式将交互结果发送回 Microsoft Teams 客户端。 本文档概述了邮件扩展、在不同方案中执行的任务、邮件扩展的工作、操作和搜索命令以及链接取消点击。
 
 下图显示了调用邮件扩展的位置：
 
@@ -38,7 +38,7 @@ ms.locfileid: "60889368"
 > [!NOTE]
 > 虽然可以手动创建 Web 服务，但使用 [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) 处理协议。
 
-在应用程序应用Microsoft Teams中，使用最多十个不同的命令定义单个消息传递扩展。 每个命令都定义一种类型，如操作或搜索以及客户端中调用它的位置。 调用位置为撰写邮件区域、命令栏和邮件。 在调用时，Web 服务会收到一条包含 JSON 有效负载的 HTTPS 消息，其中包括所有相关信息。 使用 JSON 有效负载进行响应，Teams客户端知道要启用的下一次交互。 
+在 Microsoft Teams 应用的应用清单中，使用最多十个不同的命令定义单个消息传递扩展。 每个命令都定义一种类型，如操作或搜索以及客户端中调用它的位置。 调用位置包括撰写邮件区域、命令栏和邮件。 在调用时，Web 服务会收到一条包含 JSON 有效负载的 HTTPS 消息，其中包括所有相关信息。 使用 JSON 有效负载进行响应，Teams客户端知道要启用的下一次交互。 
 
 ## <a name="types-of-messaging-extension-commands"></a>邮件扩展命令的类型
 
@@ -46,9 +46,9 @@ ms.locfileid: "60889368"
 
 ### <a name="action-commands"></a>操作命令
 
-操作命令用于向用户显示用于收集或显示信息的模式弹出窗口。 当用户提交表单时，Web 服务会通过直接将邮件插入对话或将邮件插入撰写邮件区域来做出响应。 之后，用户可以提交邮件。 可以将多个表单链接在一起，以使用更复杂的工作流。
+操作命令用于向用户显示用于收集或显示信息的模式弹出窗口。 当用户提交表单时，Web 服务会通过直接将邮件插入对话或将邮件插入撰写邮件区域来做出响应。 之后，用户可以提交邮件。 您可以将多个表单链接在一起，以使用更复杂的工作流。
 
-操作命令从撰写邮件区域、命令框或邮件中触发。 从邮件调用命令时，发送到自动程序的初始 JSON 有效负载包括从其中调用它的整个消息。 下图显示了邮件扩展操作命令任务模块 ![ ：邮件扩展操作命令任务模块](~/assets/images/task-module.png)
+操作命令从撰写邮件区域、命令框或邮件中触发。 从邮件调用命令时，发送到自动程序的初始 JSON 有效负载包括从其中调用命令的整个消息。 下图显示了邮件扩展操作命令任务模块 ![ ：邮件扩展操作命令任务模块](~/assets/images/task-module.png)
 
 ### <a name="search-commands"></a>搜索命令
 
@@ -64,7 +64,7 @@ ms.locfileid: "60889368"
 
 ## <a name="link-unfurling"></a>链接展开
 
-在撰写邮件区域中粘贴 URL 时，将调用 Web 服务。 此功能称为链接取消点击。 当包含特定域的 URL 粘贴到撰写邮件区域中时，可以订阅接收调用。 Web 服务可以将 URL"取消展开"为详细卡片，提供比标准网站预览卡更多的信息。 您可以添加按钮以允许用户立即采取措施，而无需离开 Microsoft Teams 客户端。
+在撰写邮件区域中粘贴 URL 时，将调用 Web 服务。 此功能称为链接取消点击。 当包含特定域的 URL 粘贴到撰写邮件区域中时，可以订阅接收调用。 Web 服务可以将 URL"取消展开"为详细卡片，提供比标准网站预览卡更多的信息。 可以添加按钮以允许用户立即采取措施，而无需离开 Microsoft Teams 客户端。
 将链接粘贴到邮件扩展中时，以下图像显示链接展开功能：
  
 ![取消链接](../assets/images/messaging-extension/unfurl-link.png)
@@ -83,9 +83,7 @@ ms.locfileid: "60889368"
 > [!div class="nextstepaction"]
 > [定义操作消息传递扩展命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
-> [!div class="nextstepaction"]
-> [定义搜索邮件扩展命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-
 ## <a name="see-also"></a>另请参阅
 
+* [定义搜索邮件扩展命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [创建邮件扩展](../build-your-first-app/build-messaging-extension.md)

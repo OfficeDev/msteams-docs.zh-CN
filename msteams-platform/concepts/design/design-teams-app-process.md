@@ -1,16 +1,16 @@
 ---
 title: 应用设计过程
 author: heath-hamilton
-description: 了解如何使用 Microsoft 工具和资源设计有效的应用以及何时Microsoft Teams概念。
+description: 了解如何使用 Microsoft 工具和资源设计有效的应用，以及Microsoft Teams概念。
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 1b9d425f57cf1fa49aac41b4d21a0bf4befb3407
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 95af942973b25a085662eb303077dff6cba815e5
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889095"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948598"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>应用程序的设计Microsoft Teams过程
 
@@ -37,7 +37,7 @@ Microsoft 提供了工具，可更轻松地设计Teams应用。 我们强烈建�
 
 ### <a name="get-the-microsoft-teams-ui-kit"></a>获取 Microsoft Teams UI 工具包
 
-Microsoft Teams UI 工具包可以帮助你在最短时间内Teams开发有效的应用。 UI 工具包包含这些与应用设计相关的文档Teams，包括大量示例和变体。
+the Microsoft Teams UI Kit can help you develop an effective Teams app in the short amount of time. UI 工具包包含你在这些与应用设计相关的文档Teams，包括大量示例和变体。
 
 UI 工具包还具有预建的模板和组件，你可以根据需要复制和修改这些模板和组件，以便你可以花费更多时间来设计最佳用户体验，而不是担心按钮的外观。
 
@@ -70,7 +70,7 @@ UI 工具包预先构建了设计，可展示用户通常如何添加、设置�
 
 ## <a name="design-your-ux-flow"></a>设计用户体验流
 
-拥有基本应用设计后，你可以根据需要修改和优化它，Teams UI 模板和基本组件。
+一旦拥有基本应用设计，你可以根据需要修改和优化它，Teams UI 模板和基本组件。
 
 ### <a name="design-with-ui-templates"></a>使用 UI 模板进行设计
 
@@ -78,7 +78,7 @@ UI 模板是复杂的高保真设计，适用于Teams用例和工作流。 我�
 
 1. 在 UI 工具包的左侧导航中，转到 **"UI 模板"。**
 1. 复制对应用设计有意义的模板。<br />
-   例如，如果要设计个人应用，可能需要使用仪表板模板。
+   例如，如果你正在设计个人应用，你可能想要使用仪表板模板。
 
 ### <a name="design-with-basic-ui-components"></a>使用基本 UI 组件进行设计
 
@@ -93,7 +93,7 @@ UI 模板是复杂的高保真设计，适用于Teams用例和工作流。 我�
 
 ### <a name="build-with-ui-templates"></a>使用 UI 模板生成
 
-如果在设计中使用了 UI 模板，可以使用 Microsoft Teams UI 库实现这些模板 (一个基于 React UI Fluent的组件) 。
+如果在设计中使用了 UI 模板，可以使用 Microsoft Teams UI 库实现这些模板 (一个 React 组件库，Fluent UI) 。
 
 目前，并非 UI 工具包中列出的所有模板在库中都可用。
 
@@ -102,9 +102,9 @@ UI 模板是复杂的高保真设计，适用于Teams用例和工作流。 我�
 
 ### <a name="build-with-basic-ui-components"></a>使用基本 UI 组件生成
 
-与设计阶段不同，如果 UI 模板缺少你需要的内容，或者你只想从头开始构建应用，你可以在你的应用项目中使用这些 Fluent UI 组件。 
+与设计阶段不同，如果 UI 模板缺少Fluent，或者你只想从头开始构建应用，你可以在你的应用项目中使用这些 UI 组件。 
 
- (注意：如果你注意到缺少某些内容或对模板有一些想法，请考虑为 Teams UI 库存储库做贡献。) 
+ (注意：如果你注意到缺少某些内容或对模板有所了解，请考虑为 Teams UI 库存储库做贡献。) 
 
 > [!div class="nextstepaction"]
 > [获取 UI (Fluent库) ](https://fluentsite.z22.web.core.windows.net/)
