@@ -104,6 +104,8 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: 团队 JavaScript 客户端 SDK
       href: tabs/how-to/using-teams-client-sdk.md
+    - name: 团队 JavaScript 客户端 SDK v2 预览版
+      href: m365-apps/using-teams-client-sdk-preview.md
     - name: 适用于机器人和消息扩展（GitHub）的 Node.js Bot Framework
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: 适用于机器人和消息扩展（GitHub）的 .NET Bot Framework
@@ -368,6 +370,16 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
     - name: 代码示例
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
+- name: 跨 Microsoft 365 扩展应用
+  items:
+    - name: 概述
+      href: m365-apps/overview.md
+    - name: 先决条件
+      href: m365-apps/prerequisites.md
+    - name: 为 Office 和 Outlook 启用 Teams 个人选项卡
+      href: m365-apps/extend-m365-teams-personal-tab.md
+    - name: 为 Outlook 启用 Teams 消息传递扩展
+      href: m365-apps/extend-m365-teams-message-extension.md
 - name: 测试应用
   items:
     - name: 概述
@@ -480,8 +492,6 @@
           href: resources/schema/localization-schema.md
     - name: SameSite cookie 属性
       href: resources/samesite-cookie-update.md
-    - name: 应用商店提交的常见失败情况
-      href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: 参与 Teams 文档
       href: resources/teams-contributor-reference.md
 - name: 支持和反馈

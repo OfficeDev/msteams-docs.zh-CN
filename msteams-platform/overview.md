@@ -6,25 +6,25 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 878b6fd22373edb8f9cbbf28c15c8d5dd10ee3e0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: adf95bb9eca4f6cd5ac07385212b1fd388a47079
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888032"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960234"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
 
 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
 
-应用是扩展Teams以满足你的需求。 为现有应用创建全新的Teams或集成现有应用。
+应用是扩展应用Teams以满足你的需求。 为应用创建全新的Teams或集成现有应用。
 
 > [!div class="nextstepaction"]
 > [从这里开始](get-started/get-started-overview.md)
 
 ## <a name="what-are-teams-apps"></a>什么是Teams应用？
 
-Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应用使用简单的 (发送) ，而其他应用则复杂 (患者记录) 。 规划应用时，请记住Teams协作中心。 最佳应用Teams帮助用户表达自己，并更好地协同工作。
+Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应用使用简单的 (发送) ，而其他应用则复杂 (患者记录) 。 规划应用时，请记住Teams协作中心。 应用的最佳Teams有助于用户表达自己，并更好地协同工作。
 
 ### <a name="personal-apps"></a>个人应用
 
@@ -37,7 +37,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="个人应用在客户端中的外观的概念Teams表示。" border="false":::
+:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="在概念上表示个人应用在 Teams 客户端中的外观。" border="false":::
 
    :::column-end:::
 
@@ -65,7 +65,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 :::row:::
    :::column span="1":::
 
-**将字词转换为操作**：对话通常导致需要执行某些操作 (生成订单、查看代码、检查票证状态等) 。 机器人[可以在](bots/what-are-bots.md)内部启动这些类型的Teams。
+**将字词转换为操作**：对话通常导致需要执行某些操作 (生成订单、查看代码、检查票证状态等) 。 自动[程序](bots/what-are-bots.md)可以在系统内部启动这些类型的Teams。
 
    :::column-end:::
 
@@ -89,7 +89,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="在概念上表示邮件扩展在 Teams 中的外观。" border="false":::
+:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="邮件扩展在客户端中的外观的概念Teams表示。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -100,13 +100,13 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column span="1":::
 
-**为会议创建应用**：有一些选项用于将你的应用合并到Teams [体验](apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
+**创建会议应用**：有几个选项用于将应用合并到通话Teams [体验](apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
 
    :::column-end:::
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="在概念上表示会议扩展在 Teams 中的外观。" border="false":::
+:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="在概念上表示会议扩展在 Teams 客户端中的外观。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -123,7 +123,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column span="":::
 
-:::image type="content" source="assets/images/overview-connectors.png" alt-text="连接器在客户端中的外观的概念Teams表示。" border="false":::
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="在概念上表示连接器在 Teams 客户端中的外观。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -166,7 +166,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
 ## <a name="integrate-with-teams"></a>与Teams整合
 
-将用户喜欢的现有 Web 应用、服务或系统的功能与 web 应用的协作功能Teams。
+将用户喜欢的现有 Web 应用、服务或系统的功能与 Teams。
 
 > [!div class="nextstepaction"]
 > [集成现有应用](samples/integrating-web-apps.md)
@@ -182,7 +182,7 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
 ## <a name="a-little-code-goes-a-long-way"></a>一个小代码会大有作为
 
-你无需成为专家程序员来构建出色的Teams应用。 请尝试多个低代码解决方案之一。
+你无需成为专家程序员，就无需构建出色的Teams应用。 请尝试多个低代码解决方案之一。
 
 > [!div class="nextstepaction"]
 > [创建低代码应用](samples/teams-low-code-solutions.md)
@@ -208,6 +208,13 @@ Teams应用是功能[的组合](concepts/capabilities-overview.md)。 某些应�
 
    :::column-end:::
 :::row-end:::
+
+## <a name="test-your-app-running-across-microsoft-365"></a>测试跨平台运行Microsoft 365
+
+可以使用 JavaScript 客户端 SDK v2 Teams预览预览在Microsoft 365高使用率Microsoft Teams运行的应用。
+
+> [!div class="nextstepaction"]
+> [扩展应用](m365-apps/overview.md)
 
 ## <a name="see-also"></a>另请参阅
 

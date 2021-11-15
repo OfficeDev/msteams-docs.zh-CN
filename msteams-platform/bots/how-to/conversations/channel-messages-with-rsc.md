@@ -4,37 +4,38 @@ author: surbhigupta12
 description: 接收具有 RSC 权限的所有频道消息
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ea247d7718b76f1e48bbb2c9839606dcb5cbab51
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6c509475a94d7f161dd6fb26c46ecb669c4059a1
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155267"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960227"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>使用 RSC 接收所有频道消息
 
-> [!NOTE]
-> 此功能目前仅适用于公共 [开发人员预览](../../../resources/dev-preview/developer-preview-intro.md) 版。
+RSC (权限) （最初为 Teams Graph API 开发）的特定资源许可扩展到自动程序方案。
 
-RSC (权限) （最初针对 Teams Graph API 开发）的特定资源许可现在扩展到机器人方案。
+使用 RSC，你现在可以请求团队所有者同意自动程序在团队中跨标准频道接收用户消息，而无需@mentioned。 此功能通过指定已启用 RSC 的应用清单中的权限Teams `ChannelMessage.Read.Group` 启用。 配置完成后，团队所有者可以在应用安装过程中授予同意。
 
-目前，自动程序仅在收到用户频道消息时才能收到@mentioned。 使用 RSC，你现在可以请求团队所有者同意自动程序在团队中跨标准频道接收用户消息，而无需@mentioned。 此功能通过指定已启用 RSC 的应用清单中的权限Teams `ChannelMessage.Read.Group` 启用。 配置完成后，团队所有者可以在应用安装过程中授予同意。
-
-有关为应用启用 RSC 的信息，请参阅 Teams 中的[资源特定许可](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest)。
+有关为应用启用 RSC 的信息，请参阅 Teams[中特定于资源Teams。](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest)
 
 ## <a name="enable-bots-to-receive-all-channel-messages"></a>使机器人能够接收所有频道消息
 
 `ChannelMessage.Read.Group`RSC 权限扩展到机器人。 征得用户同意后，此权限允许图形应用程序获取对话中的所有消息，并允许聊天机器人接收所有频道消息，而无需@mentioned。
 
+> [!NOTE]
+> * 需要访问所有Teams数据的服务必须使用同样提供对频道和聊天中存档数据的访问权限的 Graph API。
+> * 机器人必须使用相应的 RSC 权限来为团队中的用户构建和增强极具吸引力的体验，否则他们 `ChannelMessage.Read.Group` 将不会通过应用商店批准。 应用说明必须包括机器人如何使用它读取的数据。
+> * `ChannelMessage.Read.Group`自动程序可能不会将 RSC 权限用作提取大量客户数据的方法。 
+
 ## <a name="update-app-manifest"></a>更新应用清单
 
-若要使机器人接收所有频道消息，必须在应用清单Teams属性中指定的权限配置 `ChannelMessage.Read.Group` `webApplicationInfo` RSC。
-
+若要使机器人接收所有频道消息，必须在应用清单中配置 RSC Teams属性中 `ChannelMessage.Read.Group` 指定 `webApplicationInfo` 的权限。
 ![更新应用清单](~/bots/how-to/conversations/Media/appmanifest.png)
 
 以下是对象 `webApplicationInfo` 的示例：
 
-* **id**：你的Azure Active Directory (AAD) 应用 ID。 它可以与自动程序 ID 相同。
+* **id**：Azure Active Directory (AAD) 应用 ID。 它可以与自动程序 ID 相同。
 * **resource**：任何字符串。 此字段在 RSC 中没有任何操作，但必须添加且具有值以避免错误响应。
 * **applicationPermissions：** 必须指定应用的 RSC `ChannelMessage.Read.Group` 权限。 有关详细信息，请参阅特定于 [资源的权限](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)。
 
@@ -50,7 +51,7 @@ RSC (权限) （最初针对 Teams Graph API 开发）的特定资源许可现�
   }
 ```
 
-## <a name="sideload-in-a-team-to-test"></a>在团队中旁加载以进行测试
+## <a name="sideload-in-a-team"></a>团队中的旁加载
 
 若要在团队中旁加载以进行测试，是否收到具有 RSC 的团队中所有频道消息，而不@mentioned：
 
@@ -91,4 +92,4 @@ RSC (权限) （最初针对 Teams Graph API 开发）的特定资源许可现�
 * [智能机器人对话](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
 * [特定于资源的同意](/microsoftteams/resource-specific-consent)
 * [测试特定于资源的同意](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
-* [Upload自定义Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [Upload自定义应用Teams](~/concepts/deploy-and-publish/apps-upload.md)
