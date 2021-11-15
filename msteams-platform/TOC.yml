@@ -442,7 +442,7 @@
   items:
     - name: 概述
       href: samples/integrate-web-apps-overview.md
-    - name: Web 应用
+    - name: Teams 集成注意事项
       href: samples/integrating-web-apps.md
     - name: Power Platform 应用
       items:
