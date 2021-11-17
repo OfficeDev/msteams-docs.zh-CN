@@ -4,19 +4,19 @@ author: surbhigupta
 description: 了解会议生命周期、在桌面和移动环境中构建用户在整个会议生命周期中的会议体验、参与者角色和用户类型。 此外，了解如何在会议生命周期中集成机器人和消息传递扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 920c0ee23ffeb2ea7943579254a115bf2d82fea3
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 083db357450c2ad715f1e4a0e9580a6c5cbd97a9
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887725"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041704"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
 Teams统一会议应用基于以下概念：
 
 * 会议生命周期具有不同的阶段：会议前、会议内和会议后。  
-* 会议有三种不同的参与者角色：组织者、演示者和与会者。 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
+* 会议有三个不同的参与者角色：组织者、演示者和与会者。 有关详细信息，请参阅[会议Teams角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
 * 会议有 [各种](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) 用户类型：租户内用户、 [来宾](/microsoftteams/guest-access)用户、 [联盟](/microsoftteams/manage-external-access)用户和匿名用户。
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
@@ -32,11 +32,11 @@ Teams统一会议应用基于以下概念：
 通过选项卡，团队成员可以访问会议内特定空间中的服务和内容。 该团队直接与选项卡协作，并展开有关选项卡中可用的工具和数据的对话。 在Teams中，可以通过选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>，然后选择要安装的应用。
 
 > [!IMPORTANT]
-> 如果已将选项卡与会议集成，则应用必须遵循Teams SSO (单一) [身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
+> 如果已将选项卡与会议集成，则应用必须遵循Teams [SSO](../tabs/how-to/authentication/auth-aad-sso.md) (的) 单一登录流程。
 
 > [!NOTE]
 > * 专用计划会议仅支持应用。
-> * 在 Web 客户端Teams会议扩展选项卡应用的添加Teams选项。
+> * 在 Web 客户端Teams会议扩展选项卡应用添加Teams选项。
 
 #### <a name="pre-meeting-app-experience"></a>会议前应用体验
 
@@ -71,14 +71,14 @@ Teams统一会议应用基于以下概念：
 
 借助会议内应用体验，可以使用应用和会议内对话框在会议期间与参与者互动。 会议应用程序作为会议中的选项卡托管在会议窗口的工具栏上。使用"会议内"对话框为会议参与者展示可操作内容。 有关详细信息，请参阅[为会议创建Teams应用](create-apps-for-teams-meetings.md)。
 
-对于移动版，会议应用可从会议>省略号 &#x25CF;&#x25CF;&#x25CF; 提供。 选择 **"** 应用"以查看会议提供的所有应用。
+对于移动版，会议应用可从会议>省略 &#x25CF;&#x25CF;&#x25CF; 提供。 选择 **"** 应用"以查看会议提供的所有应用。
 
 **在会议期间使用选项卡**
 
 1. 转到Teams。
 1. 在日历中，选择要使用选项卡的会议。
 1. 进入会议后，从聊天窗口的工具栏中选择所需的应用。
-    应用在侧面板或Teams对话框中的"会议"对话框中的"会议"中可见。
+    应用在侧面板Teams会议对话框中的会议对话框中可见。
 1. 在"会议内"对话框中，输入你的回复作为反馈。
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
@@ -87,7 +87,7 @@ Teams统一会议应用基于以下概念：
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-进入会议并添加桌面或 Web 中的应用后，该应用在移动Teams应用程序部分 **下** 可见。 选择 **"** 应用"以显示应用列表。 用户可以启动任何应用作为应用的会议侧面板。
+进入会议并添加桌面或 Web 中的应用后，该应用在移动Teams应用程序部分 **下可见**。 选择 **"** 应用"以显示应用列表。 用户可以启动任何应用作为应用的会议侧面板。
 
 将显示"会议内"对话框，可在其中输入作为反馈的响应。
 
@@ -115,11 +115,13 @@ Teams统一会议应用基于以下概念：
 
 ---
 
-下表介绍了应用程序在获得批准和未获得批准时的行为：
+下表介绍了应用在验证和未验证时的行为：
 
-|应用功能 | 应用已批准 | 应用未获得批准 |
+|应用功能 | 验证应用 | 应用未验证 |
 |---|---|---|
 | 会议可扩展性 | 该应用将显示在会议中。 | 该应用不会在移动客户端的会议中显示。 |
+
+有关详细信息，请参阅 [应用商店验证指南](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 
 #### <a name="post-meeting-app-experience"></a>会议后应用体验
 
@@ -142,7 +144,7 @@ Teams统一会议应用基于以下概念：
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>将机器人集成到会议生命周期
 
-在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请从生成自动程序[开始](../build-your-first-app/build-bot.md)，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
+在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请从[生成自动程序开始](../build-your-first-app/build-bot.md)，然后继续[为会议创建Teams应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>将消息传递扩展集成到会议生命周期
 
@@ -156,7 +158,7 @@ Teams统一会议应用基于以下概念：
 
 默认参与者设置由组织的 IT 管理员确定。 以下是会议中的参与者角色：
 
-* **组织者**：组织者安排会议、设置会议选项、分配会议角色和启动会议。 拥有Microsoft 365和Teams的用户只能是组织者，并且只能控制与会者权限。 会议组织者可以更改特定会议的设置。 组织者可以在"会议选项" **网页上进行** 这些更改。
+* **组织者**：组织者安排会议、设置会议选项、分配会议角色和启动会议。 拥有用户Microsoft 365许可证Teams只能是组织者，并且只能控制与会者权限。 会议组织者可以更改特定会议的设置。 组织者可以在"会议选项" **网页上进行** 这些更改。
 * **演示** 者：演示者与排除的组织者具有相同的功能。 演示者无法从会话中删除组织者或修改会话的会议选项。 默认情况下，加入会议的参与者具有演示者角色。
 * **与会者**：与会者是受邀参加会议的用户。 但与会者无权担任演示者。 与会者可以与其他会议成员交互，但不能管理任何会议设置或共享内容。
 
@@ -184,7 +186,7 @@ Teams统一会议应用基于以下概念：
     > 你的Teams用户可以在主持与其他组织的会议或聊天时添加应用。 当用户加入由其他组织托管的会议或聊天时，用户可以使用由外部用户共享的应用。 托管用户组织的数据策略以及该用户组织共享的第三方应用的数据共享做法将生效。
 
     > [!IMPORTANT]
-    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开适用于用户的第三方GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
 * **匿名**：匿名用户没有AAD身份，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会显示在会议中。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
 

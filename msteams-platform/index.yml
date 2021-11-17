@@ -4,7 +4,7 @@ summary: 获取文档、示例代码、教程等，以帮助你生成自定义Mi
 brand: teams
 metadata:
   title: Microsoft Teams平台开发人员文档
-  description: 开发人员Microsoft Teams开发人员平台使开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地做出决策、通过减少上下文切换来提供焦点，并围绕现有内容和工作流创建协作。
+  description: 开发人员Microsoft Teams开发人员平台使开发人员可以轻松集成自己的应用和服务，以提高工作效率、更快地做出决策、通过减少上下文切换提供焦点，并围绕现有内容和工作流创建协作。
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -28,10 +28,10 @@ highlightedContent:
     - title: 生成应用程序
       itemType: how-to-guide
       url: /microsoftteams/platform/overview#start-building
-    - title: 使用 Microsoft Graph 增强Graph
+    - title: 使用 Microsoft Graph 增强你的应用
       itemType: how-to-guide
       url: /graph/teams-concept-overview
-    - title: 将应用发布到应用商店Teams应用商店
+    - title: 将应用发布到Teams应用商店
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: 代码示例
@@ -60,6 +60,9 @@ conceptualContent:
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
           text: 连接 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
+        - url: /microsoftteams/platform/m365-apps/overview
+          itemType: overview
+          text: 跨Teams扩展 Microsoft 365
     - title: 功能
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs
@@ -87,7 +90,7 @@ conceptualContent:
           text: 用户身份验证和 SSO
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
-          text: 使用 Microsoft Power Platform 构建Teams、聊天机器人和流
+          text: 使用 Microsoft Power Platform Teams应用、机器人和流构建低代码
         - url: 'https://dev.teams.microsoft.com/home'
           itemType: reference
           text: Teams 开发人员门户
@@ -172,6 +175,6 @@ tools:
     - title: 适用于自动程序和消息传递扩展的.NET Bot Framework SDK
       imageSrc: ./assets/icons/logo_net.png
       url: 'https://github.com/Microsoft/botbuilder-dotnet/'
-    - title: 适用于 Microsoft Teams 的 Yeoman Microsoft Teams
+    - title: 适用于 Microsoft Teams 的 Yeoman 生成器
       imageSrc: ./assets/icons/Yeoman.png
       url: 'https://github.com/OfficeDev/generator-teams'
