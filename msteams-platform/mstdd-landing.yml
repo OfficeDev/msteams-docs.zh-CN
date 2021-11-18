@@ -3,15 +3,15 @@ title: Microsoft Teams开发人员文档
 summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
-  description: 生成适用于应用程序的应用程序Teams
+  description: 为用户生成应用Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 9d08880e0cb4d1788d0a88f5f3b38cc71bdfc396
-  ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+  ms.openlocfilehash: 0d60a1c4611511d56938a3d4bd7e2d6bdce2f033
+  ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
   ms.translationtype: MT
   ms.contentlocale: zh-CN
   ms.lasthandoff: 11/17/2021
-  ms.locfileid: "61051187"
+  ms.locfileid: "61061949"
 landingContent:
 - title: 探索最新
   linkLists:
@@ -19,7 +19,9 @@ landingContent:
     links:
     - text: '个人选项卡和消息传递扩展在 Outlook 和 Office (Preview) '
       url: ~/m365-apps/overview.md
-    - text: '使机器人能够使用 RSC 支持的资源特定同意接收 (所有) '
+    - text: 自适应卡片中的 Typeahead 搜索
+      url: ~/task-modules-and-cards/cards/dynamic-search.md
+    - text: '使机器人能够使用 RSC 特定资源许可接收所有 (消息) '
       url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
     - text: 通过可交易Teams SaaS 产品来盈利你的应用
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
@@ -51,11 +53,11 @@ landingContent:
       url: sbs-gs-javascript.yml
     - text: 使用 Blazor 生成应用
       url: sbs-gs-blazor.yml
-    - text: 使用应用生成SPFx
+    - text: 使用应用程序生成SPFx
       url: sbs-gs-spfx.yml
     - text: 使用 C# .NET 生成应用
       url: sbs-gs-csharp.yml
-    - text: 使用应用程序生成Node.js
+    - text: 使用应用生成Node.js
       url: sbs-gs-nodejs.yml
 - title: 生成适用于Teams
   linkLists:
