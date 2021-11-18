@@ -300,6 +300,8 @@
           href: task-modules-and-cards/cards/cards-format.md
         - name: 卡片操作
           href: task-modules-and-cards/cards/cards-actions.md
+        - name: 自适应卡片中的键入头搜索
+          href: task-modules-and-cards/cards/dynamic-search.md
         - name: 自适应卡的通用操作
           items:
             - name: 概述
