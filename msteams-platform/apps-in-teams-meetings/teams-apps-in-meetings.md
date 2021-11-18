@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: c6a872f9e43f5394a3d10ef5bf3ab8f2650ca9b4
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0ae8a3b5f080258e870e4b21c91071de6aac4fd5
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887690"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075449"
 ---
 # <a name="apps-for-teams-meetings"></a>会议Teams应用程序
 
@@ -23,15 +23,13 @@ ms.locfileid: "60887690"
 * 启动会议内可操作对话框。
 * 创建会议后调查。
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
-
 下图展示了会议应用程序扩展性功能：
 
 ![会议应用可扩展性](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 本文概述了会议应用的可扩展性、API 引用、为会议启用和配置应用，以及会议中的自定义一Teams。
 
-使用会议可扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，可在其中集成选项卡、聊天机器人和消息传递扩展。 您可以确定各种参与者角色和用户类型、获取会议事件并生成会议对话。
+使用会议可扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，可在其中集成选项卡、聊天机器人和消息传递扩展。 您可以确定各种参与者角色和用户类型、获取会议事件以及生成会议对话。
 
 若要自定义Teams会议应用，请通过更新应用清单Teams会议应用，并针对会议方案配置应用。
 

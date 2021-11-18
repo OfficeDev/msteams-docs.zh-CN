@@ -14,8 +14,6 @@
       href: get-started/get-started-overview.md
     - name: 使用 JavaScript 生成第一个应用
       href: sbs-gs-javascript.yml
-    - name: 使用 Blazor 生成第一个应用
-      href: sbs-gs-blazor.yml
     - name: 使用 SPFx 生成第一个应用
       href: sbs-gs-spfx.yml
     - name: 使用 C# 或 .NET 生成第一个应用

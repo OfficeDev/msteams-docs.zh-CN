@@ -1,17 +1,17 @@
 ### YamlMime:Landing
 title: Microsoft Teams开发人员文档
-summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
+summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入用户越来越集中、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
-  description: 为用户生成应用Teams
+  description: 介绍生成适用于Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 0d60a1c4611511d56938a3d4bd7e2d6bdce2f033
-  ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+  ms.openlocfilehash: 30e47cc11a2799442aa8f7639000f13690046d21
+  ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/17/2021
-  ms.locfileid: "61061949"
+  ms.lasthandoff: 11/18/2021
+  ms.locfileid: "61075574"
 landingContent:
 - title: 探索最新
   linkLists:
@@ -19,9 +19,9 @@ landingContent:
     links:
     - text: '个人选项卡和消息传递扩展在 Outlook 和 Office (Preview) '
       url: ~/m365-apps/overview.md
-    - text: 自适应卡片中的 Typeahead 搜索
+    - text: 自适应卡片中的键入头搜索
       url: ~/task-modules-and-cards/cards/dynamic-search.md
-    - text: '使机器人能够使用 RSC 特定资源许可接收所有 (消息) '
+    - text: '使机器人能够使用 RSC (特定资源同意接收) '
       url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
     - text: 通过可交易Teams SaaS 产品来盈利你的应用
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
@@ -41,7 +41,7 @@ landingContent:
       url: ~/sbs-send-proactive.yml
     - text: 向自动程序添加身份验证的分步指南
       url: ~/sbs-bots-with-sso.yml
-- title: 开始行动
+- title: 入门
   linkLists:
   - linkListType: get-started
     links:
@@ -51,9 +51,7 @@ landingContent:
     links:
     - text: 使用 JavaScript 生成应用
       url: sbs-gs-javascript.yml
-    - text: 使用 Blazor 生成应用
-      url: sbs-gs-blazor.yml
-    - text: 使用应用程序生成SPFx
+    - text: 使用应用生成SPFx
       url: sbs-gs-spfx.yml
     - text: 使用 C# .NET 生成应用
       url: sbs-gs-csharp.yml
@@ -93,6 +91,14 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: 应用部件清单
       url: ../msteams-platform/resources/schema/manifest-schema.md
+- title: Teams应用方案
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 生成应用Teams方案
+      url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
+    - text: 应用方案Teams最佳做法
+      url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 - title: 发布和分发
   linkLists:
   - linkListType: concept

@@ -6,12 +6,12 @@ keywords: teams 选项卡组频道可配置
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 72fd6e291d282787ad406e2677c2e3ef58a4fe47
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 42d022bb5083e97996da74d033866a1eb92ecc7a
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948605"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075421"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -27,11 +27,11 @@ Teams选项卡必须遵循以下先决条件：
     > [!NOTE]
     > Chrome 80 计划于 2020 年初发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 建议您设置 Cookie 的预定用途，而不是依赖默认浏览器行为。 有关详细信息，请参阅 [SameSite cookie 属性](../../resources/samesite-cookie-update.md)。
 
-* 浏览器遵守同源策略限制。 它会阻止网页向与所提供网页不同的域提出请求。 但是，您可以将配置或内容页重定向到另一个域或子域。 当加载或与选项卡通信时，跨域导航逻辑必须允许Teams客户端针对应用清单中的静态列表 `validDomains` 验证源。
+* 浏览器遵守同源策略限制。 它会阻止网页向与所提供网页不同的域提出请求。 但是，您可以将配置或内容页重定向到另一个域或子域。 当加载或与选项卡通信时，跨域导航逻辑必须允许Teams客户端针对应用清单中的静态 `validDomains` 列表验证源。
 
 * 您必须基于客户端的主题、Teams设计及意图设置选项卡的样式。 通常，当选项卡专为满足特定需求而构建，并且侧重于一小组任务或与选项卡的通道位置相关的数据子集时，选项卡运行效果最佳。
 
-* 在内容页中，添加对使用脚本标记[Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)的引用。 加载页面后，调用 `microsoftTeams.initialize()` ，否则不显示页面。
+* 在内容页中，添加对使用Microsoft Teams[标记的 JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 的引用。 加载页面后，调用 `microsoftTeams.initialize()` ，否则不显示页面。
 
 * 若要在移动客户端上进行身份验证，必须将 Teams JavaScript SDK 升级到至少版本 1.4.1。
 
@@ -52,6 +52,5 @@ Teams选项卡必须遵循以下先决条件：
 
 * [Teams选项卡](~/tabs/what-are-tabs.md)
 * [使用 JavaScript 生成第一个应用](../../get-started/first-app-react.md)
-* [使用 Blazor 生成第一个应用](../../get-started/first-app-blazor.md)
 * [使用 SPFx 生成第一个应用](../../get-started/first-app-spfx.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)

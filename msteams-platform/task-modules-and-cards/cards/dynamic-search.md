@@ -5,17 +5,14 @@ description: 介绍自适应卡片中具有 Input.ChoiceSet 控件的类型标�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: ef77d35bc92726ac0d9d0264585a32249dbeb75b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61062062"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075581"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>自适应卡片中的 Typeahead 搜索  
-
-> [!NOTE]
-> 目前，此功能仅适用于公共 [开发人员预览](~/resources/dev-preview/developer-preview-intro.md) 版。
+# <a name="typeahead-search-in-adaptive-cards"></a>自适应卡片中的 Typeahead 搜索
 
 自适应卡片中的 Typeahead 搜索功能在组件上提供了增强的搜索 `input.choiceset` 体验。 它提供在搜索字段中输入文本的选项列表。 你可以将 typeahead 搜索与自适应卡片合并以搜索和选择数据。
 
@@ -81,14 +78,14 @@ John 是一名在 Xbox 零售商店工作的应用商店员工。 应用商店�
 
 以下属性是架构中新增的用于启用 [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) typeahead 搜索的属性：
 
-| 属性| 类型 | 必需 | 说明 |
+| 属性| 类型 | 必需 | Description |
 |-----------|------|----------|-------------|
 | style | 精简版 <br/> Expanded <br/> Filtered | 否 | 将筛选的样式添加到静态类型前支持的验证列表中。|
 | choices.data | Data.Query | 否 | 通过从后端获取一组远程选项，在用户键入时启用动态类型前。 |
 
 ### <a name="dataquery-definition"></a>Data.Query 定义
 
-| 属性| 类型 | 必需 | 说明 |
+| 属性| 类型 | 必需 | Description |
 |-----------|------|----------|-------------|
 | 类型 | Data.Query | 是 | 指定它是 Data.Query 对象。|
 | dataset | 字符串 | 是 | 指定动态提取的数据类型。 |
@@ -301,3 +298,6 @@ John 是一名在 Xbox 零售商店工作的应用商店员工。 应用商店�
 ```
 
 ## <a name="see-also"></a>另请参阅
+
+* [自适应卡的通用操作](Universal-actions-for-adaptive-cards/Overview.md)
+* [任务模块](../what-are-task-modules.md)

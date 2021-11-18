@@ -4,12 +4,12 @@ description: 介绍卡以及如何在机器人、连接器和消息传递扩展�
 ms.localizationpriority: medium
 keywords: 连接器机器人卡片消息传递
 ms.topic: overview
-ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 0a33cab35db2873df9ee8b93b4a0cbd2f616ace0
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061956"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075442"
 ---
 # <a name="cards"></a>卡片
 
@@ -26,7 +26,7 @@ ms.locfileid: "61061956"
 - 缩略图卡片
 - 卡片集合
 
-可以使用 Markdown 或 HTML 向卡片添加格式文本格式，具体取决于卡片类型。 聊天机器人和邮件扩展使用的卡片Microsoft Teams、添加和响应这些卡片操作、 `openUrl` `messageBack` 和 `imBack` `invoke` `signin` 。
+可以使用 Markdown 或 HTML 向卡片添加格式文本格式，具体取决于卡片类型。 聊天机器人和邮件扩展中使用的卡片Microsoft Teams、添加和响应这些卡片操作、 `openUrl` `messageBack` 和 `imBack` `invoke` `signin` 。
 
 Teams三个不同位置使用卡片：
 
@@ -50,17 +50,15 @@ Teams三个不同位置使用卡片：
 
 ## <a name="types-of-cards"></a>卡片类型
 
-所有卡片由Teams在[卡片类型中列出](~/task-modules-and-cards/cards/cards-reference.md)。 本参考还介绍了自动程序框架卡和自动程序中Teams。
+所有卡片由Teams在[卡片类型中列出](~/task-modules-and-cards/cards/cards-reference.md)。 本参考还介绍了自动程序框架中的自动程序框架卡和Teams。
 
 ## <a name="adaptive-cards"></a>自适应卡
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
-
-[自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)是 Microsoft 产品中一种新的跨产品规范，适用于机器人、Cortana、Outlook和Windows。 对于新开发，推荐使用Teams类型。 有关自适应卡片团队的常规信息，请参阅 [自适应卡片概述](/adaptive-cards)。 你可在使用现有 Hero 卡片、卡片和缩略图卡Office 365任何位置使用自适应卡片。
+[自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)是 Microsoft 产品中一种新的跨产品规范，适用于机器人、Cortana、Outlook和Windows。 对于新的卡片开发，推荐使用Teams类型。 有关自适应卡片团队的常规信息，请参阅 [自适应卡片概述](/adaptive-cards)。 你可在使用现有 Hero 卡片、卡片和缩略图卡Office 365任何位置使用自适应卡片。
 
 除了自适应卡片，Teams支持两种其他类型的卡片：
 
-* 连接器卡：用作连接器Office 365的一部分。
+* 连接器卡：用作连接Office 365的一部分。
 * 简单卡片：从 Bot Framework 使用，例如缩略图和 Hero 卡片。
 
 ### <a name="type-ahead-search-in-adaptive-cards"></a>在自适应卡片中键入提前搜索  
@@ -68,8 +66,6 @@ Teams三个不同位置使用卡片：
 键入作为自适应卡片中的输入控件添加的提前 [搜索，从](~/task-modules-and-cards/cards/dynamic-search.md) 动态加载的数据集实现动态搜索体验。 它还允许用户在具有有限数量的选择的列表内执行提前键入静态搜索。 移动和桌面客户端支持提前键入动态搜索体验。 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>自适应卡片和传入 Webhook
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
 
 > [!NOTE]
 > * 完全支持所有本机自适应卡片架构元素（除外 `Action.Submit` ）。
