@@ -1,27 +1,29 @@
 ### YamlMime:Landing
 title: Microsoft Teams开发人员文档
-summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入用户越来越集中、学习和工作的地方。
+summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
-  description: 介绍生成适用于Teams
+  description: 生成适用于应用程序的应用程序Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 30e47cc11a2799442aa8f7639000f13690046d21
-  ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+  ms.openlocfilehash: 6b0bfc48abee1941bc9b24d5ccc256c27d5940d6
+  ms.sourcegitcommit: d44fdbac204bd2ec24f9156aab74712c536e9c7b
   ms.translationtype: MT
   ms.contentlocale: zh-CN
   ms.lasthandoff: 11/18/2021
-  ms.locfileid: "61075574"
+  ms.locfileid: "61078737"
 landingContent:
 - title: 探索最新
   linkLists:
   - linkListType: concept
     links:
+    - text: Microsoft Teams 商店验证指南
+      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: '个人选项卡和消息传递扩展在 Outlook 和 Office (Preview) '
       url: ~/m365-apps/overview.md
     - text: 自适应卡片中的键入头搜索
       url: ~/task-modules-and-cards/cards/dynamic-search.md
-    - text: '使机器人能够使用 RSC (特定资源同意接收) '
+    - text: '使机器人能够使用 RSC 用户特定的资源 (所有频道) '
       url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
     - text: 通过可交易Teams SaaS 产品来盈利你的应用
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
@@ -97,7 +99,7 @@ landingContent:
     links:
     - text: 生成应用Teams方案
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
-    - text: 应用方案Teams最佳做法
+    - text: 适用于应用Teams方案的最佳方案
       url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 - title: 发布和分发
   linkLists:
@@ -105,7 +107,7 @@ landingContent:
     links:
     - text: 分发
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
-    - text: 发布到 Teams Store
+    - text: 发布到 Teams 应用商店
       url: ~/concepts/deploy-and-publish/appsource/publish.md
     - text: 应用商店验证指南
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md

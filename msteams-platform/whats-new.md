@@ -3,13 +3,13 @@ title: 最近更新
 description: 介绍开发工具中所有新的开发人员Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: teams 新增功能
-ms.openlocfilehash: f980c31389408e51ddc44337db1c5b8a93f1ff1c
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+keywords: teams 新增的最新更新和功能
+ms.openlocfilehash: ba1dab69442ec7693462456fd26bb58b9223df6c
+ms.sourcegitcommit: d44fdbac204bd2ec24f9156aab74712c536e9c7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061977"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61078744"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>开发人员的新增Microsoft Teams
 
@@ -22,6 +22,7 @@ ms.locfileid: "61061977"
 
 | 日期 | 更新 | 在此处查找  |
 | --- | --- | --- |
+| 11/17/2021| 更新Microsoft Teams应用商店验证准则|[应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| 桌面用户和移动用户的静态和动态类型类型搜索。| • 生成卡片和任务模块>自适应卡片> [Typeahead 搜索生成卡片](task-modules-and-cards/cards/dynamic-search.md) </br> • 生成卡片和任务模块>生成>卡片>自适应卡片中的提前键入  [搜索概述](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • 生成卡片和任务模块>卡片> [任务模块概述](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | 个人选项卡和消息传递扩展在 Outlook 和 Office (Preview)  | [跨Teams扩展 Microsoft 365](~/m365-apps/overview.md) |
 | 11/13/2021| 自动程序可以使用 RSC (特定同意接收所有) 。 | • 使用[RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) >聊天机器人>聊天机器人对话中的>聊天机器人对话 </br> • 构建自动程序>聊天机器人> [聊天机器人对话](~/bots/how-to/conversations/conversation-basics.md) </br> • 构建自动程序>频道> [组对话聊天机器人对话](~/bots/how-to/conversations/channel-and-group-conversations.md) |
@@ -38,9 +39,10 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **日期** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-| 11/17/2021| 桌面用户和移动用户的静态和动态类型类型搜索。| • 生成卡片和任务模块>自适应卡片> [Typeahead 搜索生成卡片](task-modules-and-cards/cards/dynamic-search.md) </br> • 生成卡片和任务模块>生成>卡片>自适应卡片中的提前键入  [搜索概述](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • 生成卡片和任务模块>卡片> [任务模块概述](task-modules-and-cards/cards-and-task-modules.md)|
-| 11/13/2021| 自动程序可以使用 RSC (特定同意接收所有) 。 | • 使用[RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) >聊天机器人>聊天机器人对话中的>聊天机器人对话 </br> • 使用自动程序>聊天机器人> [聊天机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 构建自动程序>频道> [组对话聊天机器人对话](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|10/28/2021 | 通过可Teams SaaS 产品来盈利你的应用。| 将应用>发布到 Teams 应用商店>将 SaaS 产品与[Teams一起](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+|11/17/2021| 更新Microsoft Teams应用商店验证准则|[应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
+|11/17/2021| 桌面用户和移动用户的静态和动态类型类型搜索。| • 生成卡片和任务模块>自适应卡片> [Typeahead 搜索生成卡片](task-modules-and-cards/cards/dynamic-search.md) </br> • 生成卡片和任务模块>生成>卡片>自适应卡片中的提前键入  [搜索概述](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • 生成卡片和任务模块>卡片> [任务模块概述](task-modules-and-cards/cards-and-task-modules.md)|
+|11/13/2021| 自动程序可以使用 RSC (特定同意接收所有) 。 | • 使用[RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) >聊天机器人>聊天机器人对话中的>聊天机器人对话 </br> • 使用自动程序>聊天机器人> [聊天机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 构建自动程序>频道> [组对话聊天机器人对话](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|10/28/2021| 通过可Teams SaaS 产品来盈利你的应用。| 将应用>发布到 Teams 应用商店>将 SaaS 产品与[Teams一起](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| 更新了开发人员Microsoft Teams入门模块，该模块包含分步指南中的新结构和过程。| 入门>[你的第一个 Teams 应用入门](get-started/get-started-overview.md) |
 |10/21/2021| 为选项卡 `registerOnFocused` 或个人应用添加 API。 | 生成选项卡>创建个人选项卡> [ `registerOnFocused` 添加选项卡或个人应用的 API](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| 会议阶段现已在 GA 中提供。 | 生成用于Teams会议>[启用和配置会议Teams应用](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
@@ -59,26 +61,26 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 |08/04/2021|选项卡将不再具有围绕其体验的边距。| 生成选项卡> [删除选项卡边距](resources/removing-tab-margins.md) |
 |07/08/2021|Teams增加了对会议中应用的支持。 | 构建用于会议Teams应用程序>[扩展性的应用](apps-in-teams-meetings/meeting-app-extensibility.md) |
 |06/28/2021|集成人员选取器功能。 | 与集成Teams >[人员选取器功能集成](concepts/device-capabilities/people-picker-capability.md) |  
-|06/25/2021| 引入了发送主动邮件的分步指南。 | 构建自动>聊天机器人>自动程序>发送主动邮件的分 [步指南](sbs-send-proactive.yml) |
+|06/25/2021| 引入了发送主动邮件的分步指南。 | 构建自动>聊天机器人>自动程序>主动消息和发送主动邮件的分 [步指南](sbs-send-proactive.yml) |
 |06/09/2021| 自适应卡片中具有 属性的图像的阶段 `allowExpand` 视图。| 生成卡片和任务模块>自适应卡片> [图像阶段视图生成卡片](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
-|05/31/2021| 对话选项卡。 | 生成选项卡> [开始和继续有关选项卡中内容的对话](~/tabs/how-to/conversational-tabs.md) |
+|05/31/2021| 对话选项卡。 | 生成选项卡> [开始并继续有关选项卡中内容的对话](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| 更新Teams移动模式的应用设计指南。 | 设计应用>[设计Teams应用](~/concepts/design/design-teams-app-overview.md) |
-|05/13/2021| 添加了有关 mConnect 和 Skooler 的信息。| 与 Teams > LmS >[进行集成，以及进行组织学习管理系统](resources/moodle-overview.md)|
+|05/13/2021| 添加了有关 mConnect 和 Skooler 的信息。| 与 Teams > Le LMS >[进行集成](resources/moodle-overview.md)|
 |05/10/2021| 应用清单 v1.10 已发布。 | 应用清单> [清单架构](resources/schema/manifest-schema.md) |
 |05/10/2021| 新的应用自定义功能。 | 设计应用> [组织自定义应用](concepts/design/enable-app-customization.md) |
 |05/07/2021| 聊天中的音频和视频呼叫的深层链接。 | 与深度Teams >[集成](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
-|04/30/2021|有关如何将应用发布到应用商店的新Teams指南。 | • 发布到 Teams 应用商店>[将应用发布到](concepts/deploy-and-publish/appsource/publish.md)Teams 应用商店</br> • 发布到 Teams 应用商店[> Teams验证准则](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
+|04/30/2021|有关如何将应用发布到应用商店Teams指南。 | • 发布到Teams应用商店>[将应用发布到应用商店Teams应用商店](concepts/deploy-and-publish/appsource/publish.md)</br> • 发布到 Teams 应用商店> Teams[验证准则](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | 对自适应卡片 v1.4 的通用操作的支持。 | 生成卡片和任务模块>自适应卡片>自适应卡片的通用操作> [自适应卡片的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/29/2021 | 用户特定视图。 | 生成卡片和任务模块>生成>用户特定视图的自适应卡片> [通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
-|04/29/2021 | 顺序工作流。 | 构建卡片和任务>构建>自适应卡片和顺序工作流> [通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
-|04/29/2021 | 最新卡片。 | 生成卡片和任务模块>生成>自适应卡片的通用操作> [最新的卡片](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
-|04/08/2021| 应用自定义功能。| • 设计应用> [设计团队应用概述](concepts/design/enable-app-customization.md)</br> • 开发人员门户中的> [和 SDK](concepts/build-and-test/teams-developer-portal.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
-|03/18/2021| 注意：更新到 Bot Framework SDK 版本 4.10 或以上版本，因为我们已开始弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 和 的过程。 | 为团队> [聊天成员的聊天机器人 API 更改生成聊天机器人](resources/team-chat-member-api-changes.md) |
+|04/29/2021 | 顺序工作流。 | 为自适应卡片和顺序工作流>生成>生成卡片和> [模块](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
+|04/29/2021 | 最新卡片。 | 生成卡片和任务模块>生成>自适应卡片和最新卡片> [通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
+|04/08/2021| 应用自定义功能。| • 设计应用> [设计团队应用概述](concepts/design/enable-app-customization.md)</br> • 开发人员门户> [和 SDK](concepts/build-and-test/teams-developer-portal.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
+|03/18/2021| 注意：更新到 Bot Framework SDK 版本 4.10 或以上版本，因为我们已开始弃用 `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 和 的过程。 | 为团队> [聊天成员生成聊天机器人 API 更改](resources/team-chat-member-api-changes.md) |
 |03/05/2021|默认安装范围和组功能。| 分配应用> [默认安装范围和组功能](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|对个人应用选项卡重新排序。 | 生成选项卡> [个人应用中的聊天选项卡重新排序](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs) |
 |03/04/2021|自适应卡片中的信息屏蔽。| 生成卡片和任务模块>自适应卡片> [信息屏蔽](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|02/19/2021|添加了位置功能。 <br/> 位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能以及 QR 或条形码扫描仪功能文件中。| • 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> • 应用基础>设备功能> [请求设备权限](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>集成媒体> [的设备功能](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • 集成[QR](concepts/device-capabilities/qr-barcode-scanner-capability.md) >条形码扫描仪功能的应用基础>设备功能 </br> • 应用基础>集成位置> [设备功能](concepts/device-capabilities/location-capability.md) |
-|02/18/2021|添加了 QR 或条形码扫描仪功能。 <br/> QR 或条形码扫描仪功能信息已添加到设备功能概述、本机设备权限和集成媒体功能文件中。| • 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> • 应用基础>设备功能> [请求设备权限](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>集成媒体> [的设备功能](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • 集成[QR](concepts/device-capabilities/qr-barcode-scanner-capability.md) >条形码扫描仪功能的应用基础>设备功能 |
+|02/19/2021|添加了位置功能。 <br/> 位置功能信息将添加到设备功能概述、本机设备权限、集成媒体功能以及 QR 或条形码扫描仪功能文件中。| • 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> • 应用基础>请求> [权限的设备功能](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>集成媒体> [的设备功能](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • 集成 QR >条形码扫描仪功能> [应用基础和设备功能](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • 应用基础>集成位置> [的设备功能](concepts/device-capabilities/location-capability.md) |
+|02/18/2021|添加了 QR 或条形码扫描仪功能。 <br/> QR 或条形码扫描仪功能信息已添加到设备功能概述、本机设备权限和集成媒体功能文件中。| • 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> • 应用基础>请求> [权限的设备功能](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>集成媒体> [的设备功能](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • 集成 QR >条形码扫描仪功能> [应用基础和设备功能](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
 |02/09/2021|添加了设备功能概述。 <br/> 麦克风功能信息将添加到本机设备权限中，并集成媒体功能文件。|• 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> 应用基础> • 请求> [权限的设备功能](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>集成媒体> [的设备功能](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 
 <br>
@@ -96,12 +98,12 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 | **日期** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-|11/30/2020|标识平台与选项卡Teams Toolkit Visual Studio Code集成。|[使用选项卡的身份验证Teams Toolkit Visual Studio Code单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
+|11/30/2020|标识平台与选项卡Teams Toolkit和Visual Studio Code集成。|[使用选项卡的身份验证Teams Toolkit Visual Studio Code单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams更新到版本 1.8 的应用清单。|[参考：Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams自动程序设计指南。|[机器人设计指南](bots/design/bots.md)|
 |09/30/2020|现在支持在移动设备上向机器人发送和接收文件。|[通过自动程序发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|开发入门的新Teams信息。|[生成首个Teams应用概述](build-your-first-app/build-first-app-overview.md)|
-|09/18/2020|支持会议Teams应用 (发布预览) 。|[在会议Teams应用和应用](apps-in-teams-meetings/create-apps-for-teams-meetings.md)[Teams应用](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|09/18/2020|支持会议内应用Teams发布 (预览) 。|[在会议Teams应用和应用](apps-in-teams-meetings/create-apps-for-teams-meetings.md)[Teams应用](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|使用 Microsoft Teams 导入Graph。|[使用 Microsoft Graph 将第三方平台消息导入 Teams](graph-api/import-messages/import-external-messages-to-teams.md)
 |08/12/2020 |已移动到 GA 的传入 Webhook 中的自适应卡片支持。|[使用传入 webhook 发送自适应卡](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|使用 Teams 开始构建Visual Studio Toolkit。|[使用 Microsoft Teams Toolkit 和 Visual Studio Code](toolkit/visual-studio-overview.md) |
@@ -161,15 +163,15 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | **日期** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | 群聊中的选项卡现在在 Teams 的Teams。 作为此工作的一部分，为清楚起见，选项卡部分已进行了重新修改。| [可配置的选项卡](~/concepts/tabs/tabs-configurable.md) |
-| 11/11/2018 | Node JS 和 .NET/C# 入门已更新为使用 Teams 中的 App Studio，并且已添加一个新部分，以在 Azure 中托管基于 Node Teams 应用。 | [开始使用 Microsoft Teams 平台使用 C#/.NET](~/get-started/get-started-dotnet-app-studio.md)和 App Studio，开始在 Microsoft Teams 平台上使用 Node JS 和[App Studio，](~/get-started/get-started-nodejs-app-studio.md)在 Azure 中托管节点 Teams[应用](~/get-started/get-started-nodejs-in-azure.md)|
+| 11/11/2018 | Node JS 和 .NET/C# 入门已更新为使用 Teams 中的 App Studio，并且已添加一个新部分，在 Azure 中托管基于 Node Teams 应用。 | [开始使用 Microsoft Teams 平台使用 C#/.NET](~/get-started/get-started-dotnet-app-studio.md)和 App Studio，开始在 Microsoft Teams 平台上使用[Node JS 和 App Studio，](~/get-started/get-started-nodejs-app-studio.md)在 Azure 中托管节点 Teams[应用](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | 现在，您可以创建指向用户之间的私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
-| 11/08/2018 | SharePoint 框架 1.7 版附带了一项新功能，Microsoft Teams选项卡作为 SharePoint 框架 Web 部件。 | [选项卡SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | 任务 **模块功能** 已发布。 任务模块允许你从自动程序和选项卡在 Teams 应用程序中创建模式弹出体验。 在弹出窗口中，可以运行自己的自定义 HTML/JavaScript 代码、显示基于小部件（如 YouTube 或 Microsoft Stream 视频）或 `<iframe>` 显示自适应 [卡片](/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)， [选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)，  [机器人中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
-| 10/05/2018 | 卡片的格式设置信息已在桌面、iOS 和 Android 客户端中进行了更新和测试，Teams。 | [卡片](~/concepts/cards/cards.md)[、卡片格式](~/concepts/cards/cards-format.md) |
-| 09/24/2018 | 适用于 Microsoft Graph 的呼叫和联机会议 API 已发布到 beta 版本，Teams应用现在可以通过多种使用语音和视频的方式与用户进行交互。 | [通话和联机会议](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人、[实时媒体](~/concepts/calls-and-meetings/real-time-media-concepts.md)概念、注册呼叫[](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人、[调试和](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)本地测试、应用程序托管的[媒体](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)、[处理传入呼叫通知](~/concepts/calls-and-meetings/call-notifications.md) |
+| 11/08/2018 | SharePoint 框架 1.7 版附带了一项新功能，Microsoft Teams选项卡作为 SharePoint 框架 Web 部件。 | [选项卡在SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
+| 11/05/2018 | 任务 **模块功能** 已发布。 任务模块允许你从自动程序和选项卡在 Teams应用程序中创建模式弹出体验。 在弹出窗口中，可以运行自己的自定义 HTML/JavaScript 代码、显示基于小部件（如 YouTube 或 Microsoft Stream 视频）或 `<iframe>` 显示自适应 [卡片](/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)， [选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)，  [机器人中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
+| 10/05/2018 | 卡片的格式设置信息已在桌面、iOS 和 Android 客户端中更新和测试，Teams。 | [卡片](~/concepts/cards/cards.md)[、卡片格式](~/concepts/cards/cards-format.md) |
+| 09/24/2018 | 适用于 Microsoft Graph 的呼叫和联机会议 API 已发布到 beta 版本，Teams现在可以使用语音和视频以丰富的方式与用户进行交互。 | [通话和联机会议](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人、[实时媒体](~/concepts/calls-and-meetings/real-time-media-concepts.md)概念、注册呼叫[](~/concepts/calls-and-meetings/registering-calling-bot.md)机器人、[调试和](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)本地测试、应用程序托管的[媒体](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)、[处理传入呼叫通知](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | 选项卡配置页面现在高度明显高。 | [选项卡设计](tabs/design/tabs.md) |
 | 08/15/2018 | 自适应卡片现在受 Teams。|[用户中的自适应卡片Teams](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
-| 08/10/2018 | 对 DevTools 的客户端支持。| [适用于桌面客户端Microsoft Teams开发人员工具](~/resources/dev-preview/developer-preview-tools.md)|
+| 08/10/2018 | 对 DevTools 的客户端支持。| [适用于桌面客户端Microsoft Teams DevTools](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | 邮件扩展现在支持多个命令。 | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | 连接器现在支持内联配置。 为了清楚起见，连接器文档也进行了修订和扩展。| [连接器](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | 自动程序现在可以发送和接收文件。 | [通过自动程序发送和接收文件](~/bots/how-to/bots-filesv4.md)|
@@ -179,8 +181,8 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | 06/07/2018 | 已添加Microsoft Teams租户应用程序目录的信息。 | [发布Microsoft Teams应用](~/publishing/apps-publish.md)|
 | 05/29/2018 | 自适应卡片在 Teams。 | [用户中的自适应卡片Teams](task-modules-and-cards/cards/cards-reference.md) |
 | 04/17/2018 | replyToID 已添加到 和 card `Invoke` 操作 `MessageBack` 的有效负载中。 如果需要更新卡片操作所来自的邮件，这尤其有用。 | [卡片操作](~/concepts/cards/cards-actions.md)|
-| 04/12/2018 | 添加了本主题以跟踪对Teams接口和此文档集的更改。 | [新增功能](~/whats-new.md)|
-| 04/10/2018 | 更改了身份验证 URL，以在路径中统一使用租户 ID。 | [选项卡身份验证、选项卡](~/concepts/authentication/auth-flow-tab.md)[AAD身份验证的身份验证流](~/concepts/authentication/auth-tab-AAD.md)|
+| 04/12/2018 | 添加了本主题以跟踪对Teams接口和本文档集的更改。 | [新增功能](~/whats-new.md)|
+| 04/10/2018 | 更改了身份验证 URL，以在路径中统一使用租户 ID。 | [选项卡身份验证、选项卡](~/concepts/authentication/auth-flow-tab.md)AAD[身份验证的身份验证流](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | 添加了有关使用命令框的设计准则。 |[命令框](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | 使用机器人为应用发送通知。 |[仅限通知的机器人](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | 主动邮件的扩展文档。 |[开始对话](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
@@ -201,10 +203,10 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 | **日期** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
 | 11/15/2021 | 个人选项卡和消息传递扩展在 Outlook 和 Office | [跨Teams扩展 Microsoft 365](~/m365-apps/overview.md) |
-|10/28/2021|自动程序可以使用 RSC (特定同意接收所有) 。| • 使用[RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) >聊天机器人>聊天机器人对话>聊天机器人对话 </br> • 构建自动程序>聊天机器人> [聊天机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 构建自动程序>聊天机器人> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • 应用清单>开发人员预览> [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md) |
+|10/28/2021|自动程序可以使用 RSC (特定同意接收所有) 。| • 使用[RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) >聊天机器人>聊天机器人对话>聊天机器人对话 </br> • 构建自动程序>聊天机器人> [聊天机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 构建自动程序>聊天机器人> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • 应用清单>公共开发人员预览> [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|浏览器的设备权限。| 应用基础>浏览器> [设备权限的设备功能](concepts/device-capabilities/browser-device-permissions.md) |
 |06/21/2021|使用自动程序卸载个人应用的行为。| 生成自动>聊天机器人对话>自动程序卸载 [个人应用中的行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| 聊天的特定于资源的同意。| • 利用Teams与 Microsoft Graph >[特定资源的同意使用数据](graph-api/rsc/resource-specific-consent.md) </br> • 测试你的应用> Microsoft Graph >测试应用中特定于资源的[同意Teams](graph-api/rsc/test-resource-specific-consent.md)|
+|06/16/2021| 聊天的特定于资源的同意。| • 利用Teams与 Microsoft Graph >[特定资源的同意使用数据](graph-api/rsc/resource-specific-consent.md) </br> • 测试你的应用> Microsoft Graph > 测试应用中特定于资源的[同意Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 有关详细信息，请参阅[公共开发人员预览版Teams。](~/resources/dev-preview/developer-preview-intro.md)
 
@@ -214,7 +216,7 @@ Microsoft Teams所有应用开发人员可用的平台功能。
 
 ## <a name="submit-your-feedback"></a>提交反馈
 
-我们鼓励Teams开发人员提问、提交 Bug、提交功能请求并做出贡献。 可以通过任何可用渠道 [提交反馈](feedback.md)。
+我们鼓励Teams开发人员提问、提交 Bug、提交功能请求和做出贡献。 可以通过任何可用渠道 [提交反馈](feedback.md)。
 
 ## <a name="get-latest-updates"></a>获取最新更新
 
@@ -223,7 +225,7 @@ You can get the latest Teams platform updates by configuring to the [RSS feed](h
 ### <a name="to-configure-rss-feed"></a>配置 RSS 源
 
 1. 打开 Microsoft Teams。
-1. Select **Teams** from the left pane.
+1. 从 **Teams** 窗格中选择"设置"。
 1. 选择团队中的频道。
 1. 选择省略号 &#x25CF;&#x25CF;&#x25CF; ，然后从下拉列表 **中选择连接器。**
 1. 在出现的 **"** 连接器 **"** 对话框中搜索 RSS。
