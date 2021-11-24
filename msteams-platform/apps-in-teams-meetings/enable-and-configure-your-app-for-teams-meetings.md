@@ -1,17 +1,17 @@
 ---
-title: 为会议启用和配置Teams应用
+title: 为会议启用和配置Teams应用程序
 author: surbhigupta
-description: 为会议和其他Teams方案启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
+description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置诸如会议对话、共享会议阶段、会议侧窗格等功能
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 17add35ef0b2d2cbb3ce2e6658d11d6d58dd8d2d
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: cea1c22bc33e8dcbcc66200c6c1ae73d525ddc19
+ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912218"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "61156598"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
 每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议应用程序。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
 
@@ -55,7 +55,7 @@ ms.locfileid: "60912218"
 
 属性确定当用户在会议调用应用时必须显示哪些内容，具体取决于用户 `context` 调用该应用的地方。 选项卡 `context` 和 `scopes` 属性使你可以确定应用必须显示在哪里。 或 作用域 `team` 中的 `groupchat` 选项卡可以具有多个上下文。 以下是可以使用所有或部分 `context` 值的属性的值：
 
-|值|Description|
+|值|说明|
 |---|---|
 | **channelTab** | 团队频道标题中的选项卡。 |
 | **privateChatTab** | 一组用户之间的群聊标题中的选项卡，不在团队或会议上下文中。 |
@@ -68,7 +68,7 @@ ms.locfileid: "60912218"
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>为会议方案配置应用
 
-Teams会议为组织提供协作体验。 针对不同的会议方案配置应用，并增强会议体验。 现在，您可以确定可以在以下会议方案中采取哪些操作：
+Teams会议可为组织提供协作体验。 针对不同的会议方案配置应用，并增强会议体验。 现在，您可以确定可以在以下会议方案中采取哪些操作：
 
 * [会议前](#before-a-meeting)
 * [会议期间](#during-a-meeting)
@@ -89,7 +89,7 @@ Teams会议为组织提供协作体验。 针对不同的会议方案配置应�
 
 **将消息传递扩展添加到会议**
 
-1. 选择位于聊天 &#x25CF;&#x25CF;&#x25CF; 撰写消息区域中的省略号。
+1. 选择位于 &#x25CF;&#x25CF;&#x25CF; 撰写消息区域中的省略号。
 1. 选择要添加的应用并按照所需步骤操作。 应用作为消息传递扩展进行安装。
 
 **将机器人添加到会议**
@@ -161,10 +161,14 @@ Teams会议为组织提供协作体验。 针对不同的会议方案配置应�
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | Description | C# | Node.js |
+|示例名称 | 说明 | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
 | 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会议阶段示例 | 在会议阶段显示选项卡以用于协作的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+
+## <a name="step-by-step-guide"></a>分步指南
+
+按照[分步指南在](../sbs-meeting-token-generator.yml)会议结束后生成会议Teams令牌。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -175,4 +179,3 @@ Teams会议为组织提供协作体验。 针对不同的会议方案配置应�
 
 * [会议内对话设计指南](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
-* [通过 Microsoft Graph 将应用添加到会议](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http)
