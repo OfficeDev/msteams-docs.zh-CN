@@ -1,20 +1,20 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 了解如何取消链接、打开"阶段视图"，以及使用"Microsoft Teams固定选项卡。 了解阶段视图，以及使用代码示例和示例使用自适应卡片调用它。
+description: 了解如何取消链接、打开"阶段视图"，然后使用"应用"固定Microsoft Teams选项卡。 了解阶段视图，以及使用代码示例和示例使用自适应卡片调用它。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: dab2b08c7393bc44ecda59f18160f0b113733f74
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887565"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178258"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
-阶段视图是 UI) 组件中的 (用户界面，允许你呈现在 Teams 中全屏打开并固定为选项卡的内容。
+阶段视图是 UI (组件) 用户界面，允许你呈现在 Teams 中全屏打开并固定为选项卡的内容。
  
 ## <a name="stage-view"></a>阶段视图
 
@@ -43,9 +43,9 @@ ms.locfileid: "60887565"
 
 下图显示从自适应卡片打开的阶段：
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt="Open a stage from Adaptive Card" width="700"/>
+[![从自适应卡片打开阶段](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="700"/>
+[![打开一个阶段](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox) 
 
 ### <a name="example"></a>示例
 
@@ -86,7 +86,7 @@ ms.locfileid: "60887565"
 * 机器人使用代码 `200` 进行响应。
 
 > [!NOTE]
-> 在Teams客户端上，调用通过 Teams 应用商店分发的应用的阶段[视图](/platform/concepts/deploy-and-publish/apps-publish-overview.md)，并且没有 moblie 优化体验，这将打开设备的默认 Web 浏览器。 浏览器打开在 对象的 参数 `websiteUrl` 中指定的 `TabInfo` URL。
+> 在Teams客户端上，调用通过 Teams 应用商店分发[的应用](/platform/concepts/deploy-and-publish/apps-publish-overview.md)的阶段视图，并且没有 moblie 优化体验，这将打开设备的默认 Web 浏览器。 浏览器打开在 对象的 参数 `websiteUrl` 中指定的 `TabInfo` URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
@@ -123,12 +123,12 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## <a name="tab-information-property"></a>选项卡信息属性
 
-| 属性名称 | 类型 | 字符数 | 描述 |
+| 属性名称 | 类型 | 字符数 | 说明 |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
 | `name` | String | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
 | `contentUrl` | String | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
-| `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
+| `websiteUrl?` | String | 2048 | 此属性是 https:// 在浏览器中查看时要指向的 URL。 这是必填字段。|
 | `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
 
 ## <a name="code-sample"></a>代码示例

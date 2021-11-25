@@ -1,16 +1,16 @@
 ---
 title: 链接展开
 author: surbhigupta
-description: 了解如何使用应用清单或手动使用代码示例和示例在 Microsoft Teams 应用中添加与消息传递扩展取消链接。
+description: 了解如何使用应用清单或手动使用代码示例和示例在 Microsoft Teams 应用中添加与消息传递扩展一起展开的链接。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 98926d386d55250d72815a918c3f180c4a8421de
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889396"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178291"
 ---
 # <a name="link-unfurling"></a>链接展开
 
@@ -22,7 +22,7 @@ ms.locfileid: "60889396"
 > * 目前，移动客户端不支持链接取消展开。
 > * 链接取消点击结果缓存 30 分钟。
 
-邮件Azure DevOps扩展使用链接取消链接查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户粘贴了邮件扩展已解析为Azure DevOps中工作项的 URL：
+邮件Azure DevOps扩展使用链接展开查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户粘贴了邮件扩展已解析为Azure DevOps中工作项的 URL：
 
 ![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -40,6 +40,7 @@ ms.locfileid: "60889396"
 1. 在 **"消息扩展** "页上，在"邮件处理程序"部分添加 **要查找的** 域。 下图说明了此过程：
 
     ![App Studio 中的邮件处理程序部分](~/assets/images/link-unfurling.png)
+
     
 ### <a name="add-link-unfurling-manually"></a>手动添加链接取消链接
 
@@ -76,10 +77,10 @@ ms.locfileid: "60889396"
 
 * [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-可以使用自适应卡片或连接器Office 365预览属性在结果列表中显示该卡片的预览。 如果结果已是 Hero 或 Thumbnail 卡片，则不需要预览属性。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不显示任何内容。
+有关详细信息，请参阅操作 [类型调用](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)。
 
 ### <a name="example"></a>示例
 

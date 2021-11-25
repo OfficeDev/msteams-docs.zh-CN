@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 清单架构
-ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912204"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178242"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
@@ -354,7 +354,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 指定有关贵公司的信息。 对于提交到应用商店Teams，这些值必须与应用商店一览中的信息匹配。 有关详细信息，请参阅应用商店Teams[指南](~/concepts/deploy-and-publish/appsource/publish.md)。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`name`|32 个字符|✔|开发人员显示名称的指南。|
 |`websiteUrl`|2048 个字符|✔|the https:// URL to the developer's website. 此链接必须将用户指向你的公司或特定于产品的登陆页面。|
@@ -368,12 +368,12 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 应用体验的名称，在应用体验中向Teams显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 和 `short` `full` 的值必须不同。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`short`|30 个字符|✔|应用的显示名称。|
 |`full`|100 个字符||应用的完整名称，在完整应用名称超过 30 个字符时使用。|
 
-## <a name="description"></a>description
+## <a name="description"></a>说明
 
 **必需**—object
 
@@ -381,7 +381,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 确保你的描述描述你的体验，并帮助潜在客户了解你的体验。 如果需要使用外部帐户，则必须在完整说明中记下。 和 `short` `full` 的值必须不同。 简短说明不能在详细说明中重复，并且不得包含任何其他应用名称。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`short`|80 个字符|✔|应用体验的简短说明，在空间有限时使用。|
 |`full`|4000 个字符|✔|应用的完整说明。|
@@ -398,7 +398,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 允许指定默认语言并提供指向更多语言文件的指针。 有关详细信息，请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`defaultLanguageTag`||✔|此顶级清单文件中字符串的语言标记。|
 
@@ -406,7 +406,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 指定更多语言翻译的对象数组。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`languageTag`||✔|提供的文件中字符串的语言标记。|
 |`file`||✔|包含已翻译字符串的 .json 文件的相对文件路径。|
@@ -415,9 +415,9 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **必需**—object
 
-在应用内使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。 有关详细信息， [请参阅图标](../../concepts/build-and-test/apps-package.md#app-icons)。
+应用中使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。 有关详细信息， [请参阅图标](../../concepts/build-and-test/apps-package.md#app-icons)。
 
-|名称| 最大大小 | 必需 | Description|
+|名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
 |`outline`|32 x 32 像素|✔|指向透明 32x32 PNG 大纲图标的相对文件路径。|
 |`color`|192 x 192 像素|✔|完整颜色 192x192 PNG 图标的相对文件路径。|
@@ -438,7 +438,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 个字符|✔|配置选项卡 https:// 使用的 URL。|
+|`configurationUrl`|string|2048 个字符|✔|配置 https:// 时将使用的 URL。|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
 |`canUpdateConfiguration`|boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值 **：true**。|
 |`context` |枚举数组|6 ||支持选项卡的范围 `contextItem` [集](../../tabs/how-to/access-teams-context.md)。 默认值 **：[channelTab、privateChatTab、meetingChatTab、meetingDetailsTab]**。|
@@ -456,10 +456,10 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|string|64 个字符|✔|选项卡显示的实体的唯一标识符。|
-|`name`|string|128 个字符|✔|在显示名称界面中选项卡的显示内容。|
-|`contentUrl`|string||✔|指向 https:// UI 以在页面画布中显示的实体 UI 的Teams URL。|
-|`websiteUrl`|string|||用户 https:// 在浏览器中查看时要指向的 URL。|
-|`searchUrl`|string|||要 https:// 搜索查询的 URL 的 URL。|
+|`name`|string|128 个字符|✔|the 显示名称 of the tab in the channel interface.|
+|`contentUrl`|string||✔|指向要 https:// 画布中的实体 UI 的Teams URL。|
+|`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
+|`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
 |`context` | 枚举数组| 2|| 支持选项卡的范围 `contextItem` 集。|
 
@@ -489,7 +489,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含两个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
-|名称| 类型| 最大大小 | 必需 | Description|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`items.scopes`|枚举数组|3|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
 |`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例， (字符串，128) 。|
@@ -499,7 +499,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |title|string|12 |✔|自动程序命令名称。|
-|description|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
+|说明|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
 
 ## <a name="connectors"></a>连接器
 
@@ -512,7 +512,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置 https:// 时将使用的 URL。|
-|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是仅针对单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
+|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是仅针对单个用户或单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
 |`connectorId`|string|64 个字符|✔|连接器的唯一标识符，该标识符与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -524,7 +524,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 > [!NOTE]
 > 2017 年 11 月，功能名称从"撰写扩展"更改为"邮件扩展"，但清单名称保持不变，以便现有扩展继续工作。
 
-该项目是一个数组 (类型的所有元素) 一个元素。 `object` 只有提供邮件扩展的解决方案才需要此块。
+该项目是一个数组， (类型的所有元素) 一个元素 `object` 。 只有提供邮件扩展的解决方案才需要此块。
 
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -537,7 +537,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-邮件扩展必须声明一个或多个最多包含 10 个命令的命令。 每个命令都Microsoft Teams UI 入口点的潜在交互。
+邮件扩展必须声明一个或多个最多包含 10 个命令的命令。 每个命令Microsoft Teams作为从基于 UI 的入口点进行的潜在交互。
 
 每个命令项都是具有以下结构的对象：
 
@@ -559,7 +559,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`parameters.name`|string|64 个字符|✔|显示在客户端中的参数的名称。 参数名称包含在用户请求中。|
 |`parameters.title`|string|32 个字符|✔|参数的用户友好标题。|
 |`parameters.description`|string|128 个字符||描述此参数用途的用户友好字符串。|
-|`parameters.value`|string|512 个字符||参数的初始值。|
+|`parameters.value`|string|512 个字符||参数的初始值。 当前不支持值|
 |`parameters.inputType`|string|128 个字符||定义在任务模块上显示的控件的类型 `fetchTask: true` 。 之一 `text, textarea, number, date, time, toggle, choiceset` 。|
 |`parameters.choices`|对象数组|10 个项目||的选项 `choiceset` 。 仅在 为 `parameter.inputType` `choiceset` 时使用 。|
 |`parameters.choices.title`|string|128 个字符|✔|选项的标题。|
@@ -596,7 +596,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **请勿** 在应用中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不得在 `validDomains[]` accounts.google.com。
 
-Teams需要其自己的 url SharePoint应用程序，其有效域列表中包括"{teamsitedomain}"。
+Teams需要其自己的SharePoint URL 正常运行的应用，其有效域列表中包括"{teamsitedomain}"。
 
 > [!IMPORTANT]
 > 不要直接添加或通过通配符添加超出您控制的域。 例如， `yourapp.onmicrosoft.com` 是有效的，但 `*.onmicrosoft.com` 是 无效。
@@ -639,7 +639,7 @@ Teams需要其自己的 url SharePoint应用程序，其有效域列表中包括
 
 定义应用用于发布用户活动源的属性。
 
-|名称| 类型| 最大大小 | 必需 | Description|
+|名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`activityTypes`|对象数组|128 项| | 提供你的应用可以发布给用户活动源的活动类型。|
 
@@ -747,7 +747,7 @@ Teams需要其自己的 url SharePoint应用程序，其有效域列表中包括
 
 **可选**—boolean
  
-当 `defaultBlockUntilAdminAction` 属性设置为 **true** 时，应用默认向用户隐藏，直到管理员允许它。 如果设置为 **true，** 则应用将隐藏所有租户和最终用户。 租户管理员可以在管理中心内Teams应用，并采取措施以允许或阻止该应用。 默认值为 **false**。 有关默认应用块的信息，请参阅隐藏[Teams应用，直到管理员批准](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
+当 `defaultBlockUntilAdminAction` 属性设置为 **true** 时，应用默认向用户隐藏，直到管理员允许它。 如果设置为 **true，** 则应用将隐藏所有租户和最终用户。 租户管理员可以在管理中心内查看Teams，并采取措施以允许或阻止该应用。 默认值为 **false**。 有关默认应用块详细信息，请参阅隐藏[Teams应用，直到管理员批准](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 

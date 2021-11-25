@@ -1,17 +1,17 @@
 ---
 title: 创建传入 Webhook
 author: laujan
-description: 介绍如何将传入 Webhook 添加到 Teams 应用，以及将外部请求Teams传入 Webhook
+description: 介绍如何将传入 Webhook Teams应用程序，以及将外部请求Teams传入 Webhook
 keywords: teams 选项卡传出 Webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c0d0ad53f95a009b9b5629b1ec7b74a1a9886b92
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7ce63a8456eaa0b15bd03999dd06c202ee689113
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888312"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178298"
 ---
 # <a name="create-incoming-webhook"></a>创建传入 Webhook
 
@@ -25,17 +25,17 @@ ms.locfileid: "60888312"
 
 下表提供了传入 Webhook 的功能和说明：
 
-| 功能 | 描述 |
+| 功能 | 说明 |
 | ------- | ----------- |
 |使用传入 Webhook 的自适应卡片|自适应卡片可以通过传入 Webhook 发送。 有关详细信息，请参阅使用 [传入 Webhook 发送自适应卡片](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook)。|
 |可操作邮件支持|可操作邮件卡在所有邮件组中Office 365，包括Teams。 如果通过卡片发送邮件，则必须使用可操作邮件卡片格式。 有关详细信息，请参阅旧版可[操作邮件卡参考](/outlook/actionable-messages/message-card-reference)[和邮件卡的场](https://messagecardplayground.azurewebsites.net)。|
-|独立 HTTPS 消息支持|卡片清晰且一致地提供信息。 任何可以发送 HTTPS POST 请求的工具或框架都可以通过传入 Webhook Teams消息。|
+|独立 HTTPS 消息支持|卡片清晰且一致地提供信息。 任何可以发送 HTTPS POST 请求的工具或框架都可以通过传入 Webhook Teams邮件。|
 |Markdown 支持|可操作邮件卡中所有文本字段都支持基本 Markdown。 请勿在卡片中使用 HTML 标记。 HTML 会遭忽略并被视为纯文本。|
 |作用域配置|传入 Webhook 在通道级别进行范围设置和配置。|
 |安全资源定义|邮件的格式设置为 JSON 有效负载。 此声明性消息结构可防止插入恶意代码。|
 
 > [!NOTE]
-> * Teams聊天机器人、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片，这是一个开放的跨卡平台框架。 目前[，Teams](../../webhooks-and-connectors/how-to/connectors-creating.md)连接器不支持自适应卡片。 但是，可以创建一个将自适应卡片[](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)张贴到 Teams 流。
+> * Teams聊天机器人、消息传递扩展、传入 Webhook 和 Bot Framework 支持自适应卡片。 自适应卡片是一个开放的跨卡平台框架，可用于所有平台，如 Windows、Android、iOS 等。 目前[，Teams](../../webhooks-and-connectors/how-to/connectors-creating.md)连接器不支持自适应卡片。 但是，可以创建一个将自适应卡片[](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)张贴到 Teams 流。
 > * 有关卡片和 Webhook 的信息，请参阅[自适应卡片和传入 Webhook。](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
 
 ## <a name="create-incoming-webhook"></a>创建传入 Webhook
@@ -89,7 +89,7 @@ webhook 在 Teams 中可用。
 
     ![最终删除](~/assets/images/finalremove.png)
 
-    Webhook 已从 webhook Teams中删除。
+    Webhook 已从 Teams中删除。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -5,12 +5,12 @@ description: 介绍如何通过主动邮件、另一个任务模块、自适应�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fba79695458374e80cfe604377fd7d7c5e05a2ff
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948409"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178283"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -21,12 +21,12 @@ ms.locfileid: "60948409"
 
 有以下选项可以响应：
 
-* 无响应：使用提交操作在外部系统中触发进程，并且不会向用户提供任何对长时间运行的过程有用的反馈，并选择备用提供反馈。 例如，可以使用主动消息 [提供反馈](~/bots/how-to/conversations/send-proactive-messages.md)。
+* 无响应：使用提交操作在外部系统中触发进程，不向用户提供任何反馈。 它对于长时间运行的过程和提供反馈非常有用。 例如，可以使用主动消息 [提供反馈](~/bots/how-to/conversations/send-proactive-messages.md)。
 * [另一个](#respond-with-another-task-module)任务模块 ：作为多步骤交互的一部分，可以使用其他任务模块进行响应。
 * [卡片](#respond-with-a-card-inserted-into-the-compose-message-area)响应：可以使用用户可与之交互或插入邮件的卡片进行响应。
 * [自动程序中的自适应卡片](#bot-response-with-adaptive-card)：将自适应卡片直接插入对话中。
 * [请求用户进行身份验证](~/messaging-extensions/how-to/add-authentication.md)。
-* [请求用户提供其他配置]~/get-started/first-message-extension.md) 。
+* [请求用户提供其他配置](~/get-started/first-message-extension.md)。
 
 对于身份验证或配置，在用户完成此过程后，原始调用将重新发至 Web 服务。 下表根据消息扩展的调用位置显示哪些类型的响应 `commandContext` 可用： 
 
