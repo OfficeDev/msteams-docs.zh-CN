@@ -1,17 +1,17 @@
 ---
-title: 为会议启用和配置Teams应用程序
+title: 为会议启用和配置Teams应用
 author: surbhigupta
-description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置诸如会议对话、共享会议阶段、会议侧窗格等功能
+description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: cea1c22bc33e8dcbcc66200c6c1ae73d525ddc19
-ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
+ms.openlocfilehash: e9411306b1d3016008cfcf3699c8b154506418a7
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61156598"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216075"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
 每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议应用程序。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
 
@@ -129,13 +129,22 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 #### <a name="shared-meeting-stage"></a>共享会议阶段
 
-共享会议阶段允许会议参与者实时与应用内容进行交互和协作。
+> [!NOTE]
+> 目前，此功能仅适用于公共 [开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版。
 
-必需的上下文 `meetingStage` 位于应用程序清单中。 先决条件是具有 上下文 `meetingSidePanel` ，并且它在 中 **启用"共享** `meetingSidePanel` "。
+共享会议阶段允许会议参与者实时与应用内容进行交互和协作。 可以通过以下方式将应用共享到协作会议阶段：
 
-![在会议体验期间共享到阶段](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+* [在客户端中共享整个应用](#share-entire-app-to-stage)以使用"共享到Teams"按钮。
+* [共享应用的特定部分，以使用](#share-specific-parts-of-the-app-to-stage)Teams SDK 中的 API 进行阶段。
 
-若要启用共享会议阶段，请配置应用清单，如下所示：
+##### <a name="share-entire-app-to-stage"></a>将整个应用共享到阶段
+
+参与者可以使用应用侧面板中的"共享到阶段"按钮将整个应用共享到协作会议阶段。
+
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+若要共享要阶段的整个应用，必须在应用清单中将 和 `meetingStage` `meetingSidePanel` 配置为帧上下文。 例如：
 
 ```json
 "configurableTabs": [
@@ -153,7 +162,16 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
   ]
 ```
 
-了解如何设计 [共享会议阶段体验](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
+有关详细信息，请参阅 [应用清单](../resources/schema/manifest-schema-dev-preview.md#configurabletabs)。
+
+##### <a name="share-specific-parts-of-the-app-to-stage"></a>将应用的特定部分共享到阶段
+
+参与者可以使用共享来阶段 API，将应用的特定部分共享到协作会议阶段。 API 在客户端 SDK Teams可用，并且从应用端面板调用。
+
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+若要共享要阶段的应用的特定部分，必须在客户端 SDK 库中调用Teams API。 有关详细信息，请参阅 [API 参考](API-references.md)。
 
 ### <a name="after-a-meeting"></a>会议后
 
@@ -163,7 +181,7 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 |示例名称 | 说明 | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 该令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会议阶段示例 | 在会议阶段显示选项卡以用于协作的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## <a name="step-by-step-guide"></a>分步指南
@@ -179,3 +197,5 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 * [会议内对话设计指南](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
+* [共享会议阶段体验设计指南](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [通过 Microsoft 应用商店将应用添加到Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)

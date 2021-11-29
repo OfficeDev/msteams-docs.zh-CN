@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: 自适应卡片个人应用身份验证数据流
-ms.openlocfilehash: ba8a28a25665370420b05de64d8302d8ef160687
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887558"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216095"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -155,7 +155,7 @@ ms.locfileid: "60887558"
                 },
                 {
                     "card": adaptiveCard2,
-                }
+                },
                 {
                     "card": adaptiveCard3
                 }  
@@ -228,7 +228,7 @@ ms.locfileid: "60887558"
 
 任务模块还使用自适应卡片 `task/fetch` 调用和 `task/submit` 请求和响应。 有关详细信息，请参阅使用[自动程序中Microsoft Teams模块](../../task-modules-and-cards/task-modules/task-modules-bots.md)。
 
-引入自适应卡片选项卡后，机器人响应请求方式会 `task/submit` 发生变化。 如果你使用的是自适应卡片选项卡，机器人会使用标准选项卡继续响应响应调用请求，并 `task/submit` 关闭任务模块。  通过呈现选项卡继续响应正文中提供的新卡片列表，可更新"自适应卡片 **"** 选项卡。
+引入自适应卡片选项卡后，机器人响应请求方式会 `task/submit` 发生变化。 如果你使用的是自适应卡片选项卡，机器人会使用标准选项卡继续响应来响应调用请求，并 `task/submit` 关闭任务模块。 通过呈现选项卡继续响应正文中提供的新卡片列表，可更新"自适应卡片 **"** 选项卡。
 
 ### <a name="invoke-taskfetch"></a>Invoke `task/fetch`
 

@@ -5,20 +5,20 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams o365 连接器
-ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 49f14862870fae216de1a6d810eacd4b23c81540
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887390"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216193"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
-您可以创建可操作邮件并通过传入 Webhook 或 Office 365 连接器发送。
+您可以创建可操作邮件，并通过传入 Webhook 或 Office 365 连接器发送。
 
 ## <a name="create-actionable-messages"></a>创建可操作邮件
 
-可操作邮件包含卡片上的三个可见按钮。 每个按钮通过使用操作在邮件的 属性中定义，每个按钮都有一个输入类型、一个 `potentialAction` `ActionCard` 文本字段、一个日期选取器或一个多选项列表。 每个 `ActionCard` 都有一个关联的操作，例如 `HttpPOST` 。
+可操作邮件包括卡片上的六个可见按钮。 每个按钮通过使用操作在邮件的 属性中定义，每个按钮都有一个输入类型、一个 `potentialAction` `ActionCard` 文本字段、一个日期选取器或一个多选项列表。 每个 `ActionCard` 都有一个关联的操作，例如 `HttpPOST` 。
 
 连接器卡支持以下操作：
 
@@ -47,7 +47,7 @@ ms.locfileid: "60887390"
 > * 在 Microsoft Teams 中指定 `style` 属性的 `compact` 与在 Microsoft Outlook 中指定 `style` 属性的 `normal` 相同。
 > * 对于 HttpPOST 操作，请求中包括承载令牌。 此令牌包括已执行该操作的 Office 365 用户的 Azure AD 标识。
 
-## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>通过传入 Webhook 或连接器Office 365消息
+## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>通过传入 Webhook 或 Office 365 连接器发送邮件
 
 若要通过传入 Webhook 或 Office 365 连接器发送消息，请将 JSON 有效负载张贴到 webhook URL。 此有效负载必须以连接器Office 365[的形式。](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 
@@ -287,3 +287,4 @@ try
 * [创建传出 Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [自动程序Teams速率限制](~/bots/how-to/rate-limit.md)
 * [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Microsoft Teams 中的格式卡](~/task-modules-and-cards/cards/cards-format.md)

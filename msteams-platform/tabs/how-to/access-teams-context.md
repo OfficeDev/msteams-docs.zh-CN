@@ -4,12 +4,12 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887537"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216102"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -24,7 +24,9 @@ ms.locfileid: "60887537"
 在以下情况下，有关用户、团队或公司的上下文可能特别有用：
 
 * 在应用中创建资源或将资源与指定的用户或团队关联。
-* 您从用户或其他标识Azure Active Directory (AAD) 启动身份验证流，并且不需要用户再次输入其用户名。 有关详细信息，请参阅"验证用户[身份Microsoft Teams选项卡。](~/concepts/authentication/authentication.md)
+* 您从某个Azure Active Directory (AAD) 或其他标识提供程序启动身份验证流，并且不需要用户再次输入其用户名。 
+
+有关详细信息，请参阅在客户端[中对用户Microsoft Teams。](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
 > 虽然此用户信息可帮助提供流畅的用户体验，但不得使用它作为标识证明。  例如，攻击者可以在浏览器中加载页面并呈现有害的信息或请求。
@@ -45,10 +47,10 @@ ms.locfileid: "60887537"
 * {loginHint}：适合用作登录提示的值AAD。 这通常是其主租户中当前用户的登录名。
 * {userPrincipalName}：当前租户中当前用户的用户主体名称。
 * {userObjectId}：AAD租户中当前用户的对象 ID。
-* {theme}：当前用户界面 (UI) 主题，如 、 或 `default` `dark` `contrast` 。
+* {theme}：当前用户界面 (UI) 主题，如 、 `default` `dark` 或 `contrast` 。
 * {groupId}：选项卡Office 365组 ID。
 * {tid}：AAD用户的租户 ID。
-* {locale}：格式化为 languageId-countryId 的用户的当前区域设置。 例如，en-us。
+* {locale}：设置为 languageId-countryId 的用户的当前区域设置 (en-us) 。
 
 > [!NOTE]
 > 上一 `{upn}` 占位符现已弃用。 出于向后兼容性，它目前是 `{loginHint}`的同义词。
@@ -57,7 +59,7 @@ ms.locfileid: "60887537"
 
 * 其用户名为 **user@example.com**。
 * 他们的公司租户 ID 是 **e2653c-etc。**
-* 他们是 id 为 **00209384-etc** Office 365组的成员。
+* 他们是 id 为 **00209384 Office 365组的成员。**
 * 用户已设置其Teams主题为 **深色**。
 
 在配置选项卡时，Teams调用以下 URL：
@@ -106,7 +108,8 @@ ms.locfileid: "60887537"
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
 
@@ -115,14 +118,16 @@ ms.locfileid: "60887537"
 > [!Note]
 > 专用频道目前为私人开发人员预览版。
 
-当你的内容页面加载到私人频道中时，你通过调用收到的数据会混淆以保护 `getContext` 通道的隐私。 当内容页位于私人频道中时，将更改以下字段：
+当你的内容页面加载到私人频道中时，你通过调用收到的数据会混淆以保护 `getContext` 通道的隐私。 
+
+当内容页位于私人频道中时，将更改以下字段：
 
 * `groupId`：未为私人频道定义
 * `teamId`：设置为私人频道的 threadId
 * `teamName`：设置为私人频道的名称
 * `teamSiteUrl`：设置为专用频道的独特SharePoint网站的 URL
 * `teamSitePath`：设置为专用频道的独特SharePoint网站的路径
-* `teamSiteDomain`：设置为专用频道的唯一SharePoint站点域的域
+* `teamSiteDomain`：设置为专用频道独特、唯SharePoint网站域的域
 
 如果页面使用了这些值中的任意值，则必须检查字段以确定页面是否加载到私人频道中并 `channelType` 做出相应的响应。
 

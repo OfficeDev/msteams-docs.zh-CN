@@ -1,22 +1,24 @@
 ### YamlMime:Landing
 title: Microsoft Teams开发人员文档
-summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
+summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入用户越来越集中、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
   description: 生成适用于应用程序的应用程序Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 6b0bfc48abee1941bc9b24d5ccc256c27d5940d6
-  ms.sourcegitcommit: d44fdbac204bd2ec24f9156aab74712c536e9c7b
+  ms.openlocfilehash: 39b4f4de53d5cae2e01e5e6217fa3e05361e347c
+  ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/18/2021
-  ms.locfileid: "61078737"
+  ms.lasthandoff: 11/29/2021
+  ms.locfileid: "61216172"
 landingContent:
 - title: 探索最新
   linkLists:
   - linkListType: concept
     links:
+    - text: 共享会议阶段的交互模式
+      url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
     - text: Microsoft Teams 商店验证指南
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: '个人选项卡和消息传递扩展在 Outlook 和 Office (Preview) '
@@ -99,7 +101,7 @@ landingContent:
     links:
     - text: 生成应用Teams方案
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
-    - text: 适用于应用Teams方案的最佳方案
+    - text: 应用方案Teams最佳做法
       url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 - title: 发布和分发
   linkLists:

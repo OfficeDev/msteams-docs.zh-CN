@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 调用呼叫通知回调区域相关性
 ms.date: 04/02/2019
-ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889158"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216088"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 
@@ -18,7 +18,7 @@ ms.locfileid: "60889158"
 
 ## <a name="protocol-determination"></a>协议确定
 
-传入通知以旧格式提供，用于与以前的 Skype[协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将呼叫转换为 Microsoft Graph协议，机器人必须确定通知是否采用旧格式并提供以下响应：
+传入通知以旧格式提供，以与以前的 Skype[协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将呼叫转换为 Microsoft Graph协议，机器人必须确定通知是否采用旧格式并提供以下响应：
 
 ```http
 HTTP/1.1 204 No Content
@@ -39,7 +39,8 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-使机器人能够使用应答 API 应答 [传入](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) 呼叫。 可以指定 以处理 `callbackUri` 此特定调用。 这适用于特定分区处理呼叫且您希望在 中嵌入此信息以路由到正确实例的有状态 `callbackUri` 实例。
+使机器人能够使用应答 API 应答 [传入](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) 呼叫。 可以指定 以处理 `callbackUri` 此特定调用。 这适用于特定分区处理呼叫且您希望在 中嵌入此信息以路由到正确实例的有状态 `callbackUri` 实例。
+
 
 下一节将提供有关通过检查张贴到 Webhook 的令牌对回调进行身份验证的详细信息。
 

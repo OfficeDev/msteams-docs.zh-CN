@@ -4,16 +4,16 @@ description: 介绍如何在使用桌面客户端和调试Microsoft Teams访问 
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: devtools 调试移动部件版式桌面客户端开发人员工具选项卡
-ms.openlocfilehash: 6844648df311bd9ae326e74919cc64e871e54b05
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: b9bc3f5afa43684b260f8618b5450e94c91e95f1
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887418"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216201"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>适用于 Microsoft Teams 选项卡的 DevTools
 
-当 Teams浏览器中运行时，可以轻松访问浏览器的 DevTools： F12 on Windows 或 Command-Option-I on MacOS。 DevTools 使你可以访问：
+在Teams运行时，可以轻松访问浏览器的 DevTools：Windows 上的 F12 或 MacOS 上的 Command-Option-I。 DevTools 使你可以访问：
 
 1. 查看控制台日志。
 1. 在运行时查看或修改 HTML、CSS 和网络请求。
@@ -24,7 +24,7 @@ ms.locfileid: "60887418"
 
 ## <a name="access-devtools-on-the-desktop"></a>访问桌面上的 DevTools
 
-虽然 Web 版本和桌面版本的 Teams几乎相同，但身份验证存在一些差异。 有时，了解所发生事件的唯一方法就是使用 DevTools。 若要在桌面客户端使用 DevTools，你必须：
+尽管 Web 版本和桌面版本的 Teams几乎相同，但身份验证存在一些差异。 有时，了解所发生事件的唯一方法就是使用 DevTools。 若要在桌面客户端使用 DevTools，你必须：
 
 1. 确保你已启用 [开发人员预览](~/resources/dev-preview/developer-preview-intro.md)版。
 1. 打开一个选项卡，以便你有一些要检查的 DevTools。
@@ -35,11 +35,11 @@ ms.locfileid: "60887418"
 
 以下示例显示 DevTools 打开并检查选项卡配置对话框：
 
-   ![Tab 和 DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
+   [![Tab 和 DevTools](~/assets/images/dev-preview/tab-and-devtools.png)](~/assets/images/dev-preview/tab-and-devtools.png#lightbox)
 
 ## <a name="access-devtools-from-an-android-device"></a>从 Android 设备访问 DevTools
 
-还可以从 Android 客户端Teams DevTools。 若要启用 DevTools，你必须：
+还可以从 Android 客户端启用 Teams工具。 若要启用 DevTools，你必须：
 
 1. 启用 [开发人员预览](~/resources/dev-preview/developer-preview-intro.md)版。
 1. 连接设备连接到台式计算机，并设置 Android 设备进行[远程调试](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)。

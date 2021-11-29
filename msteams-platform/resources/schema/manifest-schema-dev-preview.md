@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: teams 清单架构开发者预览版
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a5543ce8c8e5f7d232704caa5cdb4eb8a507264a
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.openlocfilehash: 2e88f6716621443be09eddb4f458e1e5f3f61d6d
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960220"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216186"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：公共开发人员预览清单架构Microsoft Teams
 
 若要了解如何启用开发人员预览，请参阅公共[开发人员预览Microsoft Teams。](~/resources/dev-preview/developer-preview-intro.md)
 
 > [!NOTE]
-> 如果你不使用开发人员预览功能（包括在 Teams 和[Outlook](../../m365-apps/overview.md)和 Office 中运行 Teams 个人选项卡和消息传递扩展，请改为将应用清单用于[GA](~/resources/schema/manifest-schema.md)功能。
+> 如果你不使用开发人员预览功能，包括在 Outlook 和[Office](../../m365-apps/overview.md)中运行 Teams 个人选项卡和消息传递扩展，请改为将应用清单用于[GA](~/resources/schema/manifest-schema.md)功能。
 
 Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 清单必须符合 托管在 的架构 [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
 
@@ -63,8 +63,19 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
   "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
+      "scopes": [
+        "team",
+        "groupchat"
+      ],
       "canUpdateConfiguration": true,
-      "scopes": [ "team", "groupchat" ]
+      "context":[
+        "channelTab",
+        "privateChatTab",
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel",
+        "meetingStage"
+      ]
     }
   ],
   "staticTabs": [
@@ -242,7 +253,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 
 **必填** &ndash; 字符串
 
-此清单使用的清单架构版本。 仅在 `m365DevPreview` 预览在 Teams[和 Office 中运行的应用Outlook。](../../m365-apps/overview.md) 否则， `devPreview` 请用于所有其他Teams预览功能。
+此清单使用的清单架构版本。 仅在 `m365DevPreview` 预览在 Teams[和 Office 中运行](../../m365-apps/overview.md)的应用Outlook。 否则， `devPreview` 请用于所有其他Teams预览功能。
 
 ## <a name="version"></a>version
 
@@ -258,7 +269,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 
 **必填** &ndash; Microsoft 应用 ID
 
-此应用的唯一 Microsoft 生成的标识符。 如果你已经通过 Microsoft Bot Framework 注册了自动程序，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，你应该已经拥有 ID，并且应在此处输入它。 否则，应在"我的应用程序" (Microsoft 应用程序注册门户 [) 生成](https://apps.dev.microsoft.com) 一个新 ID，在此处输入它，然后在添加自动程序时重复使用 [它](~/bots/how-to/create-a-bot-for-teams.md)。
+此应用的唯一 Microsoft 生成的标识符。 如果你已经通过 Microsoft Bot Framework 注册了自动程序，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，你应该已经拥有 ID，并且应在此处输入它。 否则，应在"我的应用程序" (Microsoft 应用程序注册门户 [) 生成](https://apps.dev.microsoft.com) 一个新 ID，在此处输入，然后在添加自动程序时重复使用 [它](~/bots/how-to/create-a-bot-for-teams.md)。
 
 ## <a name="packagename"></a>packageName
 
@@ -327,7 +338,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 
 **Required**
 
-应用中使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。
+在应用程序内使用的Teams图标。 图标文件必须作为上传程序包的一部分包含在内。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -352,9 +363,10 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 个字符|✔|配置选项卡 https:// 使用的 URL。|
-|`canUpdateConfiguration`|布尔|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
+|`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
+|`canUpdateConfiguration`|布尔值|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值： `true`|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
+|`context` |枚举数组|6 ||支持选项卡的范围 `contextItem` [集](../../tabs/how-to/access-teams-context.md)。 默认值 `channelTab` `privateChatTab` `meetingChatTab` ：、、、、 `meetingDetailsTab` `meetingSidePanel` 和 `meetingStage` 。|
 |`sharePointPreviewImage`|String|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义选项卡在页面SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
@@ -372,9 +384,9 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
-|`name`|String|128 个字符|✔|在显示名称界面中选项卡的列数。|
-|`contentUrl`|String|2048 个字符|✔|指向要 https:// 画布中的实体 UI 的 Teams URL。|
-|`contentBotId`|   | | | 自动Microsoft Teams门户中为自动程序指定的应用 ID。 |
+|`name`|String|128 个字符|✔|频道显示名称选项卡的显示内容。|
+|`contentUrl`|String|2048 个字符|✔|指向 https:// 画布中显示的实体 UI 的Teams URL。|
+|`contentBotId`|   | | | 在Microsoft Teams框架门户中为自动程序指定的应用 ID。 |
 |`websiteUrl`|String|2048 个字符||用户 https:// 在浏览器中查看时指向的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
 
@@ -384,7 +396,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 
 定义自动程序解决方案以及默认命令属性等可选信息。
 
-对象是一个数组 (最多只有 1 个元素当前每个应用仅允许一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
+对象是一个 (，当前每个应用最多只能有一个自动程序) 类型的所有元素 &mdash; `object` 。 只有提供自动程序体验的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -396,7 +408,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含 2 个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的命令 `object` 列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
+自动程序可以推荐给用户的命令的可选列表。 对象是一个 (，最多包含 2 个元素) 所有类型元素;您必须为自动程序支持的每个范围定义单独的 `object` 命令列表。 有关详细信息，请参阅自动 [程序菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -415,7 +427,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置 https:// 时将使用的 URL。|
 |`connectorId`|字符串|64 个字符|✔|连接器的唯一标识符，该标识符与连接器开发人员仪表板中的 ID [相匹配](https://aka.ms/connectorsdashboard)。|
-|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是仅针对单个用户 `team` `personal` () 。 目前，仅 `team` 支持范围。|
+|`scopes`|枚举数组|1|✔|指定连接器是提供在 中频道上下文中的体验，还是提供仅针对单个用户的体验 `team` `personal` () 。 目前，仅 `team` 支持范围。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -431,7 +443,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|自动程序支持消息传递扩展的唯一 Microsoft 应用 ID，在 Bot Framework 中注册。 这可能与整个应用 [ID 相同](#id)。|
-|`canUpdateConfiguration`|布尔|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
+|`canUpdateConfiguration`|布尔值|||一个值，指示用户是否可以更新邮件扩展的配置。 默认值为 `false`。|
 |`commands`|对象数组|10 |✔|邮件扩展支持的命令数组|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -446,9 +458,9 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 |`type`|字符串|64 个字符||命令的类型。 或 `query` `action` 之一。 默认值： `query`|
 |`title`|String|32 个字符|✔|用户友好命令名称。|
 |`description`|String|128 个字符||向用户显示以指示此命令用途的说明。|
-|`initialRun`|布尔|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
+|`initialRun`|布尔值|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
 |`context`|Array of Strings|3||定义可以从何处调用消息传递扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose", "commandBox"]`|
-|`fetchTask`|布尔|||一个布尔值，指示它应动态提取任务模块。|
+|`fetchTask`|Boolean|||一个布尔值，指示它应动态提取任务模块。|
 |`taskInfo`|Object|||指定在使用消息传递扩展命令时要预加载的任务模块。|
 |`taskInfo.title`|String|64||初始对话框标题。|
 |`taskInfo.width`|String|||对话框宽度 - 以像素为单位的一个数字或默认布局，例如"large"、"medium"或"small"。|

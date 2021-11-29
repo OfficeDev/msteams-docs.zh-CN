@@ -6,16 +6,16 @@ keywords: teams 选项卡组频道可配置
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6e182c305950188e316c290e2c3d3fd5732adcf4
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888018"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216214"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
-配置页是一种特殊类型 [的内容页](content-page.md)。 用户使用配置页面配置 Microsoft Teams应用的一些方面，并使用该配置作为以下内容的一部分：
+配置页是一种特殊类型 [的内容页](content-page.md)。 用户使用配置页面配置 Microsoft Teams应用的一些方面，并作为以下配置的一部分使用该配置：
 
 * 频道或群聊选项卡：从用户收集信息，并设置要 `contentUrl` 显示的内容页的 。
 * 消息传递 [扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
@@ -108,6 +108,7 @@ ms.locfileid: "60888018"
 
 >[!NOTE]
 >
+>* 在超时前，你有 30 (完成保存操作，) 注册OnSaveHandler 对象。 超时后，将显示一条常规错误消息。
 >* 如果使用 注册保存处理程序 `microsoftTeams.settings.registerOnSaveHandler()` ，回调必须调用 或 `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` 以指示配置的结果。
 >* 如果未注册保存处理程序，则当用户选择"保存"时 `saveEvent.notifySuccess()` 会自动 **进行调用**。
 
@@ -178,13 +179,13 @@ document.write(getId());
 
 ## <a name="context-and-authentication"></a>上下文和身份验证
 
-在允许用户配置你的应用之前进行身份验证。 否则，您的内容可能包含具有其身份验证协议的源。 有关详细信息，请参阅在"用户["选项卡中Microsoft Teams用户](~/tabs/how-to/authentication/auth-flow-tab.md)。使用上下文信息构建身份验证请求和授权页面 URL。 确保 选项卡页中使用的所有域都列在 `manifest.json` 和 `validDomains` 数组中。
+在允许用户配置你的应用之前进行身份验证。 否则，您的内容可能包含具有其身份验证协议的源。 有关详细信息，请参阅在"身份验证["选项卡中Microsoft Teams用户](~/tabs/how-to/authentication/auth-flow-tab.md)。使用上下文信息构建身份验证请求和授权页面 URL。 确保 选项卡页中使用的所有域都列在 `manifest.json` 和 `validDomains` 数组中。
 
 ## <a name="modify-or-remove-a-tab"></a>修改或删除选项卡
 
 将清单的 属性设置为 ，以便用户能够修改、重新配置或 `canUpdateConfiguration` `true` 重命名频道或组选项卡。此外，通过包括应用中的删除选项页和在配置中设置属性的值，指示删除选项卡时内容 `removeUrl`  `setSettings()` 会发生什么情况。 用户可以卸载个人选项卡，但不能修改它们。 有关详细信息，请参阅 [为选项卡创建删除页面](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
-`setSettings()`Microsoft Teams删除页面的配置：
+Microsoft Teams `setSettings()` 页面的配置：
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -198,7 +199,7 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>移动客户端
 
-如果您选择让频道或组选项卡显示在移动客户端Teams，则配置 `setSettings()` 必须具有 的值 `websiteUrl` 。 有关详细信息，请参阅 [移动选项卡指南](~/tabs/design/tabs-mobile.md)。
+如果选择让频道或组选项卡显示在移动客户端Teams，则配置 `setSettings()` 必须具有 的值 `websiteUrl` 。 有关详细信息，请参阅 [移动选项卡指南](~/tabs/design/tabs-mobile.md)。
 
 ## <a name="next-step"></a>后续步骤
 
