@@ -1,23 +1,30 @@
 ### YamlMime:Landing
 title: Microsoft Teams开发人员文档
-summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入用户越来越集中、学习和工作的地方。
+summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
   description: 生成适用于应用程序的应用程序Teams
-  ms.date: 11/10/2021
+  ms.service: service
+  ms.subservice: subservice
   ms.topic: landing-page
-  ms.openlocfilehash: 39b4f4de53d5cae2e01e5e6217fa3e05361e347c
-  ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+  ms.collection: collection
+  author: surbhigupta12
+  ms.author: msauthor
+  ms.date: 11/10/2021
+  ms.openlocfilehash: 219966cbb2398239c7875620be55e79f3f9800e7
+  ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/29/2021
-  ms.locfileid: "61216172"
+  ms.lasthandoff: 11/30/2021
+  ms.locfileid: "61227826"
 landingContent:
 - title: 探索最新
   linkLists:
   - linkListType: concept
     links:
-    - text: 共享会议阶段的交互模式
+    - text: 'Teams Toolkit预览Visual Studio Code (预览) '
+      url: ~/toolkit/teams-toolkit-fundamentals.md
+    - text: '共享会议阶段交互模式 (预览) '
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
     - text: Microsoft Teams 商店验证指南
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
@@ -45,6 +52,8 @@ landingContent:
       url: ~/sbs-send-proactive.yml
     - text: 向自动程序添加身份验证的分步指南
       url: ~/sbs-bots-with-sso.yml
+    - text: 生成会议令牌的分步指南
+      url: ~/sbs-meeting-token-generator.yml
 - title: 入门
   linkLists:
   - linkListType: get-started
@@ -59,7 +68,7 @@ landingContent:
       url: sbs-gs-spfx.yml
     - text: 使用 C# .NET 生成应用
       url: sbs-gs-csharp.yml
-    - text: 使用应用生成Node.js
+    - text: 使用应用程序生成Node.js
       url: sbs-gs-nodejs.yml
 - title: 生成适用于Teams
   linkLists:
