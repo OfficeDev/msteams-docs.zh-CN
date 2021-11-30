@@ -91,7 +91,37 @@
 - name: 工具和 SDK
   items:
     - name: Visual Studio Code 的Teams工具包
-      href: toolkit/visual-studio-code-overview.md
+      items:
+        - name: Teams 工具包基础知识
+          href: toolkit/teams-toolkit-fundamentals.md
+        - name: 新建项目
+          href: toolkit/create-new-project.md
+        - name: 准备帐户以生成 Teams 应用
+          href: toolkit/accounts.md
+        - name: 预配云资源
+          href: toolkit/provision.md
+        - name: 将 Teams 应用部署到云
+          href: toolkit/deploy.md
+        - name: 使用 Teams 工具包发布 Teams 应用
+          href: toolkit/publish.md
+        - name: 向 Teams 应用添加功能
+          href: toolkit/add-capability.md
+        - name: 将云资源添加到 Teams 应用
+          href: toolkit/add-resource.md
+        - name: 自定义 Teams 应用清单
+          href: toolkit/TeamsFx-manifest-customization.md
+        - name: 预览 Teams 应用清单
+          href: toolkit/TeamsFx-manifest-preview.md
+        - name: 管理多个环境
+          href: toolkit/TeamsFx-multi-env.md
+        - name: 在 Teams 工具包上与其他开发人员协作
+          href: toolkit/TeamsFx-collaboration.md
+        - name: 使用 CI/CD 工作流
+          href: toolkit/use-CICD-template.md
+        - name: Teams 工具包 CLI
+          href: toolkit/TeamsFx-CLI.md
+        - name: TeamsFx SDK
+          href: toolkit/TeamsFx-SDK.md
     - name: Visual Studio 的Teams工具包
       href: toolkit/visual-studio-overview.md
     - name: Teams 中的 Yeoman 生成器 (GitHub)
