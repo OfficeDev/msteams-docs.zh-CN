@@ -3,7 +3,7 @@ title: Microsoft Teams开发人员文档
 summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
-  description: 生成适用于应用程序的应用程序Teams
+  description: 为应用程序生成应用Teams
   ms.service: service
   ms.subservice: subservice
   ms.topic: landing-page
@@ -11,17 +11,19 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 219966cbb2398239c7875620be55e79f3f9800e7
-  ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+  ms.openlocfilehash: f7b9281097adfb5fc86722f4cba584b7d37285c7
+  ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/30/2021
-  ms.locfileid: "61227826"
+  ms.lasthandoff: 12/01/2021
+  ms.locfileid: "61246697"
 landingContent:
 - title: 探索最新
   linkLists:
   - linkListType: concept
     links:
+    - text: 引入了新应用商店图标
+      url: ~/concepts/design/personal-apps.md
     - text: 'Teams Toolkit预览Visual Studio Code (预览) '
       url: ~/toolkit/teams-toolkit-fundamentals.md
     - text: '共享会议阶段交互模式 (预览) '
@@ -68,7 +70,7 @@ landingContent:
       url: sbs-gs-spfx.yml
     - text: 使用 C# .NET 生成应用
       url: sbs-gs-csharp.yml
-    - text: 使用应用程序生成Node.js
+    - text: 使用应用生成Node.js
       url: sbs-gs-nodejs.yml
 - title: 生成适用于Teams
   linkLists:
@@ -118,7 +120,7 @@ landingContent:
     links:
     - text: 分发
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
-    - text: 发布到 Teams 应用商店
+    - text: 发布到 Teams Store
       url: ~/concepts/deploy-and-publish/appsource/publish.md
     - text: 应用商店验证指南
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
