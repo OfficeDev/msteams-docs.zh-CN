@@ -6,12 +6,12 @@ keywords: teams 选项卡组频道可配置删除删除
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 094e12667fc17db9cc02c0cdf50eaa935dc7ced9
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889235"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323294"
 ---
 # <a name="create-a-removal-page"></a>创建删除页面
 
@@ -23,11 +23,11 @@ ms.locfileid: "60889235"
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值为 `true`。 |
+|`canUpdateConfiguration`|Boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值为“`true`”。 |
 
 将选项卡上载到频道或群聊时，Teams为选项卡添加右键单击下拉菜单。可用选项由设置 `canUpdateConfiguration` 决定。 下表提供了设置详细信息：
 
-| `canUpdateConfiguration`| true   | false | 说明 |
+| `canUpdateConfiguration`| True   | false | 说明 |
 | ----------------------- | :----: | ----- | ----------- |
 |     设置            |   √    |       |页面 `configurationUrl` 在 IFrame 中重新加载，允许用户重新配置选项卡。 |
 |     重命名              |   √    |   √   | 用户可以更改选项卡名称，因为它显示在选项卡栏中。          |
@@ -79,7 +79,6 @@ ms.locfileid: "60889235"
     }
   </script>
 </body>
-
 ```
 
 当用户从选项卡的下拉菜单中选择"删除"时，Teams将配置页中分配的可选页面 `removeUrl` 加载至 IFrame 中。  向用户显示一个使用 函数加载的按钮，该按钮调用并启用删除页面 IFrame 底部显示的 `onClick()` `microsoftTeams.settings.setValidityState(true)` "删除"按钮。 
@@ -87,9 +86,9 @@ ms.locfileid: "60889235"
 执行删除处理程序后， `removeEvent.notifySuccess()` 或 `removeEvent.notifyFailure()` 通知Teams删除结果。
 
 >[!NOTE]
-> * 为了确保授权用户对选项卡的控制不会受到约束，Teams成功和失败时删除选项卡。
-> * Teams五秒钟后启用 **"** 删除"按钮，即使选项卡尚未调用 `setValidityState()` 。
-> * 当用户选择 **"删除"** 时，Teams 30 秒后删除选项卡，而不管操作是否已完成。
+> * 为了确保授权用户对选项卡的控制不会受到约束，Teams成功和失败情况下删除选项卡。
+> * 调用事件 `registerOnRemoveHandler` 处理程序后，你有 15 秒时间对 方法做出响应。 默认情况下，Teams，即使您不调用，在 5 秒后也启用"删除"按钮 `setValidityState(true)` 。 
+> * 当用户选择删除 **时**，Teams 30 秒后删除选项卡，无论操作是否已完成。
 
 ## <a name="next-step"></a>后续步骤
 
