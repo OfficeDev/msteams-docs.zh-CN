@@ -28,10 +28,10 @@ highlightedContent:
     - title: 生成应用程序
       itemType: how-to-guide
       url: /microsoftteams/platform/overview#start-building
-    - title: 使用 Microsoft Graph 增强你的应用
+    - title: 使用 Microsoft Graph 增强Graph
       itemType: how-to-guide
       url: /graph/teams-concept-overview
-    - title: 将应用发布到Teams应用商店
+    - title: 将应用发布到应用商店Teams应用商店
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: 代码示例
@@ -59,7 +59,7 @@ conceptualContent:
           text: 使用任务模块收集输入和收集信息
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: 连接 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
+          text: 连接 Web 服务通过 Webhook 和 Office 365 连接器将 Web 服务Office 365团队
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: 跨Teams扩展 Microsoft 365
@@ -85,6 +85,9 @@ conceptualContent:
           text: Webhook 和连接器
     - title: 浏览
       links:
+        - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
+          itemType: concept
+          text: 通过可交易Teams SaaS 产品来盈利你的应用
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: 用户身份验证和 SSO
@@ -175,6 +178,6 @@ tools:
     - title: 适用于自动程序和消息传递扩展的.NET Bot Framework SDK
       imageSrc: ./assets/icons/logo_net.png
       url: 'https://github.com/Microsoft/botbuilder-dotnet/'
-    - title: 适用于 Microsoft Teams 的 Yeoman 生成器
+    - title: 适用于 Microsoft Teams 的 Yeoman Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: 'https://github.com/OfficeDev/generator-teams'

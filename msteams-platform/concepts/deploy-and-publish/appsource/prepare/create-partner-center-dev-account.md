@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889417"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391671"
 ---
 # <a name="create-a-partner-center-developer-account"></a>创建合作伙伴中心开发人员帐户
 
@@ -128,16 +128,6 @@ ms.locfileid: "60889417"
 * 电子邮件验证链接的有效期只有七天。
 * 可以通过访问合作伙伴配置文件页面并选择"重新发送验证电子邮件"链接，请求重新 **发送电子邮件** 。
 * 为确保收到电子邮件，安全列表 microsoft.com 安全域并检查垃圾邮件文件夹。
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>如何进一步支持我的帐户相关问题？</b></summary>
-
-有关 [信息，请参阅合作伙伴中心对商业市场计划](/azure/marketplace/partner-center-portal/support) 的支持。
 
 <br>
 

@@ -1,20 +1,20 @@
 ---
 title: 清单架构参考
-description: 介绍列表的清单Microsoft Teams
+description: 描述列表的清单Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 清单架构
-ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 7847aa123687605a94cb2c83819b1ef8b67f8b65
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178242"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61392370"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams
 
-Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) 。 早期版本 1.0、1.1,..., 和 1.11 也受 URL ("v1.x") 。
+Teams清单介绍了应用如何集成到Microsoft Teams产品。 清单必须符合 托管在 的架构 [`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) 。 早期版本 1.0、1.1,..., 和 1.11 也受 URL ("v1.x") 支持。
 有关在每个版本中所做的更改详细信息，请参阅 [清单更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
 
 以下架构示例显示了所有扩展性选项：
@@ -337,7 +337,7 @@ Teams清单介绍了应用如何集成到 Microsoft Teams 产品。 清单必须
 
 如果应用程序对权限的请求更改，将提示用户升级并重新与应用进行升级。
 
-此版本字符串必须遵循 [Semver](http://semver.org/) 标准 (MAJOR。MINOR。PATCH) 。
+此版本字符串必须遵循 [semver](http://semver.org/) 标准 (MAJOR。MINOR。PATCH) 。
 
 ## <a name="id"></a>id
 
@@ -373,7 +373,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`short`|30 个字符|✔|应用的显示名称。|
 |`full`|100 个字符||应用的完整名称，在完整应用名称超过 30 个字符时使用。|
 
-## <a name="description"></a>说明
+## <a name="description"></a>description
 
 **必需**—object
 
@@ -438,9 +438,9 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 个字符|✔|配置 https:// 时将使用的 URL。|
+|`configurationUrl`|string|2048 个字符|✔|配置选项卡 https:// 使用的 URL。|
 |`scopes`|枚举数组|1|✔|目前，可配置的选项卡仅支持 `team` 和 `groupchat` 作用域。 |
-|`canUpdateConfiguration`|boolean|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值 **：true**。|
+|`canUpdateConfiguration`|布尔|||一个值，指示用户创建后是否可以更新选项卡配置的实例。 默认值 **：true**。|
 |`context` |枚举数组|6 ||支持选项卡的范围 `contextItem` [集](../../tabs/how-to/access-teams-context.md)。 默认值 **：[channelTab、privateChatTab、meetingChatTab、meetingDetailsTab]**。|
 |`sharePointPreviewImage`|string|2048||选项卡预览图像的相对文件路径，用于SharePoint。 大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义选项卡如何可用于SharePoint。 选项为 `sharePointFullPage` 和 `sharePointWebPart` |
@@ -458,7 +458,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`entityId`|string|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|string|128 个字符|✔|the 显示名称 of the tab in the channel interface.|
 |`contentUrl`|string||✔|指向要 https:// 画布中的实体 UI 的Teams URL。|
-|`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
+|`websiteUrl`|string|||用户 https:// 在浏览器中查看时指向的 URL。|
 |`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持范围，这意味着只能将作用域预配 `personal` 为个人体验的一部分。|
 |`context` | 枚举数组| 2|| 支持选项卡的范围 `contextItem` 集。|
@@ -499,7 +499,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |title|string|12 |✔|自动程序命令名称。|
-|说明|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
+|description|string|128 个字符|✔|简单文本说明或命令语法及其参数的示例。|
 
 ## <a name="connectors"></a>连接器
 
@@ -537,7 +537,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-邮件扩展必须声明一个或多个最多包含 10 个命令的命令。 每个命令Microsoft Teams作为从基于 UI 的入口点进行的潜在交互。
+邮件扩展必须声明一个或多个最多包含 10 个命令的命令。 每个命令都Microsoft Teams UI 入口点的潜在交互。
 
 每个命令项都是具有以下结构的对象：
 
@@ -548,7 +548,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`type`|string|64 个字符||命令的类型。 或 `query` `action` 之一。 默认值 **：query**。|
 |`description`|string|128 个字符||向用户显示以指示此命令用途的说明。|
 |`initialRun`|boolean|||布尔值指示命令最初是否运行，没有参数。 默认为 **false**。|
-|`context`|字符串数组|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为 `["compose","commandBox"]`。|
+|`context`|字符串数组|3||定义可以从何处调用邮件扩展。 、 `compose` 、 的任意 `commandBox` 组合 `message` 。 默认值为“`["compose","commandBox"]`”。|
 |`fetchTask`|boolean|||一个布尔值，指示它是否必须动态提取任务模块。 默认为 **false**。|
 |`taskInfo`|object|||指定在使用消息传递扩展命令时要预加载的任务模块。|
 |`taskInfo.title`|string|64 个字符||初始对话框标题。|
@@ -565,7 +565,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 |`parameters.choices.title`|string|128 个字符|✔|选项的标题。|
 |`parameters.choices.value`|string|512 个字符|✔|选项的值。|
 
-## <a name="permissions"></a>permissions
+## <a name="permissions"></a>权限
 
 **可选**— 字符串数组
 
@@ -596,7 +596,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果你的自动程序�
 
 **请勿** 在应用中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不得在 `validDomains[]` accounts.google.com。
 
-Teams需要其自己的SharePoint URL 正常运行的应用，其有效域列表中包括"{teamsitedomain}"。
+Teams需要自己的 url SharePoint的应用程序，其有效域列表中包括"{teamsitedomain}"。
 
 > [!IMPORTANT]
 > 不要直接添加或通过通配符添加超出您控制的域。 例如， `yourapp.onmicrosoft.com` 是有效的，但 `*.onmicrosoft.com` 是 无效。
@@ -607,7 +607,7 @@ Teams需要其自己的SharePoint URL 正常运行的应用，其有效域列表
 
 **可选**—object
 
-提供Azure Active Directory (AAD) 应用 ID 和 Microsoft Graph信息，以帮助用户无缝登录你的应用。 如果你的应用已注册AAD，则必须提供应用 ID。 管理员可以在管理中心内轻松查看权限Teams同意。
+提供Azure Active Directory (AAD) 应用 ID 和 Microsoft Graph信息，以帮助用户无缝登录你的应用。 如果你的应用已注册AAD，则必须提供应用 ID。 管理员可以在管理中心内轻松查看权限Teams许可。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -747,7 +747,7 @@ Teams需要其自己的SharePoint URL 正常运行的应用，其有效域列表
 
 **可选**—boolean
  
-当 `defaultBlockUntilAdminAction` 属性设置为 **true** 时，应用默认向用户隐藏，直到管理员允许它。 如果设置为 **true，** 则应用将隐藏所有租户和最终用户。 租户管理员可以在管理中心内查看Teams，并采取措施以允许或阻止该应用。 默认值为 **false**。 有关默认应用块详细信息，请参阅隐藏[Teams应用，直到管理员批准](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
+当 `defaultBlockUntilAdminAction` 属性设置为 **true** 时，应用默认向用户隐藏，直到管理员允许它。 如果设置为 **true，** 则应用将隐藏所有租户和最终用户。 租户管理员可以在管理中心内Teams应用，并采取措施以允许或阻止该应用。 默认值为 **false**。 有关默认应用块的信息，请参阅在管理员批准[Teams隐藏应用](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
@@ -755,7 +755,7 @@ Teams需要其自己的SharePoint URL 正常运行的应用，其有效域列表
 
 **最大大小** - 128 个字符
 
-属性依赖于 `defaultBlockUntilAdminAction` 。 当 属性设置为 true 时，提供指向信息页的 HTTPS URL，以便管理员在允许应用（默认情况下被阻止）之前 `defaultBlockUntilAdminAction`  `publisherDocsUrl` 获取指南。
+是一个指向信息页的 HTTPS URL，供管理员在允许应用之前获取指南， `publisherDocsUrl` 此应用默认被阻止。 它还可用于提供有关对租户管理员有用的应用的任何说明或信息。
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
