@@ -1,23 +1,23 @@
 ---
-title: 为会议启用和配置Teams应用
+title: 为会议启用和配置Teams应用程序
 author: surbhigupta
 description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 21cbe3c038644ec3d28e4fbd68e91d0b0212eca0
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391664"
+ms.locfileid: "61392489"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
 每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议应用程序。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
-若要为应用启用Teams会议，请更新应用清单，并使用上下文属性确定应用必须显示在何处。
+若要为应用启用Teams会议，请更新应用清单并使用上下文属性确定应用必须出现在何处。
 
 ### <a name="update-your-app-manifest"></a>更新应用清单
 
@@ -142,7 +142,7 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 ## <a name="step-by-step-guides"></a>分步指南
 
 * 按照 [分步指南在](../sbs-meeting-token-generator.yml)会议 **结束后生成** 会议Teams令牌。
-* 按照 [分步指南在](../sbs-meetings-sidepanel.yml)会议生成 **meetingSidePanel** Teams会议。
+* 按照 [分步指南在](../sbs-meetings-sidepanel.yml)会议 **结束后** 生成Teams窗格。
 * 按照[分步指南在会议](../sbs-meetings-stage-view.yml)结束后生成Teams视图。
 
 ## <a name="next-step"></a>后续步骤
