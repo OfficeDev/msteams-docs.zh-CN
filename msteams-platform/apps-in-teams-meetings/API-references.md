@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api usercontext 通知信号查询
-ms.openlocfilehash: 251f8bbd65bf8ba563f09302b16bf7285a5c4267
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 3ec6539e8a4970a00650c1bc35d72ea656a0eb38
+ms.sourcegitcommit: 0ae40fdf74b43834160821956b754cab94a60bb7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216067"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "61558706"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -23,33 +23,22 @@ ms.locfileid: "61216067"
 
 下表提供了 API 列表：
 
-|API|说明|请求|Source|
+|API|说明|请求|源|
 |---|---|----|---|
 |**GetUserContext**| 使您可以获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 使机器人能够按会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | 使你可以提供使用用户-机器人聊天的现有对话通知 API 传递的会议信号。 它允许您根据显示会议内对话框的用户操作发出信号。 |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**会议详细信息** | 使您可以获取静态会议元数据。 |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
-|**shareAppContentToStage**| 使你可以从会议的应用侧面板将应用的特定部分共享到会议阶段。 |_**microsoftTeams.meeting.shareAppContentToStage ( (err， result) => {} ， appContentUrl)**_|Microsoft Teams客户端 SDK|
-|**getAppContentStageSharingState**| 使您可以在会议阶段获取有关应用共享状态的信息。 |_**microsoftTeams.meeting.getAppContentStageSharingState ( (err， result) ) => {}**_|Microsoft Teams客户端 SDK|
-|**getAppContentStageSharingCapabilities**| 使您可以获取应用程序的功能以共享到会议阶段。 |_**microsoftTeams.meeting.getAppContentStageSharingCapabilities ( (err， result) ) => {}**_|Microsoft Teams客户端 SDK|
-
-下表提供了适用于 API 的 Bot Framework SDK 方法：
-
-|API|Bot Framework SDK 方法|
-|---|---|
-|**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
-|**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
-|**会议详细信息** | `TeamsMeetingInfo (string id = default);` |
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
-若要标识和检索选项卡内容的上下文信息，请参阅获取[Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)选项卡的上下文。在会议上下文中运行时，选项卡使用 ，并添加 `meetingId` 响应负载。
+若要标识和检索选项卡内容的上下文信息，请参阅获取[Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)选项卡的上下文。由选项卡在会议上下文中运行时使用，并添加 `meetingId` 用于响应负载。
 
 ## <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
 > * 不要缓存参与者角色，因为会议组织者可以随时更改角色。
-> * Teams当前不支持超过 350 个参与者的大型通讯组列表或名单大小 `GetParticipant` ，API。
+> * Teams当前不支持超过 350 个参与者的大型通讯组列表或名单大小， `GetParticipant`API。
 
 API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 API 包括查询参数、示例和响应代码。
 
@@ -241,6 +230,9 @@ API 通过 Bot Services 提供。
 
 ### <a name="prerequisite"></a>先决条件
 
+> [!NOTE] 
+> 检查你的应用是否满足会议中应用的先决条件中列出的Teams[先决条件](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
+
 若要使用会议详细信息 API，必须获取 RSC 权限。 使用以下示例配置应用清单 `webApplicationInfo` 的属性：
 
 ```json
@@ -252,7 +244,6 @@ API 通过 Bot Services 提供。
     ]
 }
  ```
- 
 ### <a name="query-parameter"></a>查询参数
 
 会议详细信息 API 包括以下查询参数：
@@ -309,186 +300,6 @@ GET /v1/meetings/{meetingId}
     }
 } 
 ```
-
-## <a name="shareappcontenttostage-api"></a>shareAppContentToStage API
-
-`shareAppContentToStage`API 使你能够将应用的特定部分共享到会议阶段。 API 通过 Teams SDK 提供。
-
-### <a name="prerequisite"></a>先决条件
-
-若要使用 `shareAppContentToStage` API，必须获取 RSC 权限。 在应用程序清单中，在 `authorization` 字段中配置 属性 `name` `type` 和 和 `resourceSpecific` 。 例如：
-
-```json
-"authorization": {
-    "permission": { 
-    "resourceSpecific": [
-      { 
-      "name": "MeetingStage.Write.Chat",
-      "type": "Delegated"
-      }
-    ]
-   }
-}
- ```
-
-### <a name="query-parameter"></a>查询参数
-
-`shareAppContentToStage`API 包括以下参数：
-
-|值|类型|必需|说明|
-|---|---|----|---|
-|**callback**| 字符串 | 是 | Callback 包含两个参数，即 error 和 result。 如果 *出现错误* ，该错误可以包含 *SdkError* 类型的错误，或者共享成功时为 null。 *结果* 可以包含 true 值（如果共享成功）或 null（如果共享失败）。|
-|**appContentURL**| 字符串 | 是 | 将共享到该阶段的 URL。|
-
-### <a name="example"></a>示例
-
-以下代码提供了 API `shareAppContentToStage` 示例：
-
-# <a name="c"></a>[C#](#tab/dotnet)
-
-不可用
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-```typescript
-
-const appContentUrl = "https://www.bing.com/";
-
-microsoftTeams.meeting.shareAppContentToStage ((err, result) => {
-if(result) {
-  this.setState({ isAppSharing: true });
- }
-if(err) {
-  this.setState({ sharingError: err, isAppSharing: false })
- }
-}, appContentUrl); 
-
-```
-
-# <a name="json"></a>[JSON](#tab/json)
-
-不可用
-
----
-
-### <a name="response-codes"></a>响应代码
-
-`shareAppContentToStage`API 返回以下响应代码：
-
-|响应代码|说明|
-|---|---|
-| **500** | 内部错误。 |
-| **501** | API 在当前上下文中不受支持。|
-| **1000** | 应用没有允许共享阶段的适当权限。|
-
-## <a name="getappcontentstagesharingstate-api"></a>getAppContentStageSharingState API
-
-`getAppContentStageSharingState`API 使你能够获取有关会议阶段的应用共享的信息。
-
-### <a name="query-parameter"></a>查询参数
-
-`getAppContentStageSharingState`API 包括以下参数：
-
-|值|类型|必需|说明|
-|---|---|----|---|
-|**callback**| 字符串 | 是 | Callback 包含两个参数，即 error 和 result。 如果 *出现错误* ，该错误可以包含 *SdkError* 类型的错误，或者共享成功时为 null。 结果 *可以包含* 指示检索成功的对象，也可以包含 `AppContentStageSharingState` null（表示检索失败）。|
-
-### <a name="example"></a>示例
-
-以下代码提供了 API `getAppContentStageSharingState` 示例：
-
-# <a name="c"></a>[C#](#tab/dotnet)
-
-不可用
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-```microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
-  if(result.isAppSharing) {
-    this.setState({ isGameSessionOver: false });
-   }
-  });
-``` 
-
-# <a name="json"></a>[JSON](#tab/json)
-
-不可用
-
----
-
-API 的 JSON 响应 `getAppContentStageSharingState` 正文为：
-
-```json
-{
-   "isAppSharing":true
-  }
-  
-```
-
-
-### <a name="response-codes"></a>响应代码
-
-`getAppContentStageSharingState`API 返回以下响应代码：
-
-|响应代码|说明|
-|---|---|
-| **500** | 内部错误。 |
-| **501** | API 在当前上下文中不受支持。|
-| **1000** | 应用没有允许共享阶段的适当权限。|
-
-## <a name="getappcontentstagesharingcapabilities-api"></a>getAppContentStageSharingCapabilities API
-
-`getAppContentStageSharingCapabilities`API 使你能够获取应用的功能，以共享到会议阶段。
-
-### <a name="query-parameter"></a>查询参数
-
-`getAppContentStageSharingCapabilities`包括以下参数：
-
-|值|类型|必需|说明|
-|---|---|----|---|
-|**callback**| 字符串 | 是 | Callback 包含两个参数，即 error 和 result。 如果 *出现错误* ，该错误可以包含 *SdkError* 类型的错误，或者共享成功时为 null。 结果可以包含指示检索成功的对象，也可以包含 `AppContentStageSharingState` null（表示检索失败）。|
-
-### <a name="example"></a>示例
-
-以下代码提供了 API `getAppContentStageSharingCapabilities` 示例：
-
-# <a name="c"></a>[C#](#tab/dotnet)
-
-不可用
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-```microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
-  if(result.doesAppHaveSharePermission) {
-    this.setState({ isAppAllowedToShare: true });
-   }
-  });
-``` 
-
-# <a name="json"></a>[JSON](#tab/json)
-
-不可用
-
----
-
-API 的 JSON 响应 `getAppContentStageSharingCapabilities` 正文为：
-
-```json
-{
-   "doesAppHaveSharePermission":true
-  }
-  
-```
-
-### <a name="response-codes"></a>响应代码
-
-`getAppContentStageSharingCapabilities`API 返回以下响应代码：
-
-|响应代码|说明|
-|---|---|
-| **500** | 内部错误。 |
-| **1000** | 应用无权允许共享到阶段。|
-
 ## <a name="real-time-teams-meeting-events"></a>实时Teams会议事件
 
 用户可以接收实时会议事件。 只要任何应用与会议关联，就会与机器人共享实际会议开始时间和结束时间。
@@ -496,6 +307,9 @@ API 的 JSON 响应 `getAppContentStageSharingCapabilities` 正文为：
 会议的实际开始时间和结束时间与计划的开始时间和结束时间不同。 会议详细信息 API 提供计划的开始时间和结束时间。 该事件提供实际的开始时间和结束时间。
 
 ### <a name="prerequisite"></a>先决条件
+
+> [!NOTE] 
+> 检查你的应用是否满足会议中应用的先决条件中列出的Teams[先决条件](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
 
 应用清单必须具有 `webApplicationInfo` 属性，以接收会议开始和结束事件。 使用以下示例配置清单：
 
@@ -649,8 +463,8 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会议详细信息选项卡 | Microsoft Teams会议详细信息选项卡交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|会议事件示例|显示实时会议事件Teams应用示例|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+| 会议详细信息选项卡 | Microsoft Teams会议扩展性示例，用于与会议中的"详细信息"选项卡进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+|会议事件示例|显示实时会议事件Teams应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |会议招聘示例|用于显示招聘方案的会议体验的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |使用 QR 代码安装应用|生成 QR 代码和使用 QR 代码安装应用的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
@@ -663,4 +477,4 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [为会议启用和配置Teams应用程序](enable-and-configure-your-app-for-teams-meetings.md)
+> [为会议启用和配置Teams应用](enable-and-configure-your-app-for-teams-meetings.md)
