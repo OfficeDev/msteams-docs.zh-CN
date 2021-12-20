@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: teams 自动程序消息
 ms.date: 05/20/2019
-ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 49b05e48a82208776beaa0b62b1b44f8fec0652f
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155876"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569516"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与自动程序Microsoft Teams对话
 
@@ -24,7 +24,7 @@ ms.locfileid: "59155876"
 
 自动程序的行为稍有不同，具体取决于它涉及的对话类型：
 
-* [频道和群聊](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) 对话中的聊天机器人要求用户@mention自动程序在频道中调用它。
+* [频道和群聊](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) 对话中的聊天机器人要求用户@mention聊天机器人在频道中调用它。
 * [单个用户对话中的](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) 自动程序不需要@mention - 用户只需键入。
 
 为了使机器人能够处理特定范围，应在清单中列为支持该范围。 范围在清单参考中进行了进一步 [的定义和讨论](~/resources/schema/manifest-schema.md)。
@@ -41,17 +41,17 @@ ms.locfileid: "59155876"
 
 每条消息是类型 `messageType: message` 的一个 `Activity` 对象。 当用户发送消息时，Teams 会将消息发布给你的机器人。具体地说，它会发送一个 JSON 对象给你的机器人的消息传递端点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-机器人还支持事件样式的消息。 有关详细信息，请参阅处理[聊天机器人Microsoft Teams。](~/resources/bot-v3/bots-notifications.md) 语音当前不受支持。
+机器人还支持事件样式的消息。 有关详细信息，请参阅处理[Microsoft Teams 中的自动程序事件](~/resources/bot-v3/bots-notifications.md)。 语音当前不受支持。
 
 消息在所有范围内大部分是相同的，但在 UI 中访问自动程序的方式和你需要了解的场景差异存在差异。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理，使机器人能够Teams和其他渠道进行通信。 Bot Builder SDK 提供轻松访问此 API、管理对话流和状态的其他功能，以及合并认知服务（如自然语言处理和 NLP (）) 。
+基本对话通过 Bot Framework 连接器（一个 REST API）进行处理，使机器人能够Teams和其他频道进行通信。 Bot Builder SDK 提供轻松访问此 API、管理对话流和状态的其他功能，以及合并认知服务（如自然语言处理和 NLP (）) 。
 
 ## <a name="message-content"></a>邮件内容
 
-机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。 你可以指定自动程序可以在自动程序Microsoft Teams设置页中处理的内容类型。
+机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。 可以在自动程序设置页的"Microsoft Teams设置"中指定自动程序可以处理的内容类型。
 
-| 格式 | 从用户到机器人  | 从自动程序到用户 |  注意 |
+| 格式 | 从用户到机器人  | 从自动程序到用户 |  备注 |
 | --- | :---: | :---: | --- |
 | 格式文本  | ✔ | ✔ |  |
 | 图片 | ✔ | ✔ | PNG、JPEG 或 GIF 格式的最大大小为 1024×1024 和 1 MB;不支持动态 GIF。 |
@@ -59,7 +59,7 @@ ms.locfileid: "59155876"
 | 表情符号 | ✖ | ✔ | Teams UTF-16 支持表情符号，例如 U+1F600 表示表情符号。 |
 |
 
-有关自动程序框架支持的自动程序交互类型（团队中的机器人基于这些机器人）的信息，请参阅适用于[.NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true)的 Bot Builder [](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) SDK 和适用于 Node.js的 Bot [Builder SDK](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)文档中有关对话流和相关概念的 Bot Framework 文档。
+有关自动程序框架支持的机器人交互类型（团队中的机器人基于这些机器人）类型的信息，请参阅适用于[.NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true)的 Bot Builder [](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) SDK 和适用于 Node.js的 Bot [Builder SDK](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)文档中有关对话流和相关概念的 Bot Framework 文档。
 
 ## <a name="message-formatting"></a>消息格式
 
@@ -85,14 +85,14 @@ ms.locfileid: "59155876"
 
 根据声明的范围，自动程序可以在以下上下文中接收消息：
 
-* **个人聊天** 用户只需在聊天历史记录中选择已添加的聊天机器人，或在新聊天的&quot;目标：&quot;框中键入其名称或应用 ID，即可与机器人在私人对话中进行交互。
+* **个人聊天** 用户只需在聊天历史记录中选择已添加的聊天机器人，或在新聊天的"目标："框中键入其名称或应用 ID，即可与机器人在私人对话中进行交互。
 * **频道** 可以将机器人 ("@_botname_") 如果已添加到团队，可以在频道中提及它。 请注意，频道中对自动程序的其他回复需要提及机器人。 它将不会在未提及的回复中回复。
 
 对于传入消息，机器人会收到类型 为 [的 Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) 对象 `messageType: message` 。 虽然对象可以包含其他类型的信息（如发送到机器人的频道更新），但类型 `Activity` 表示机器人[](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` 和用户之间的通信。
 
 自动程序会收到包含用户消息的有效负载，以及有关用户的其他信息、消息源和Teams `Text` 信息。 注意：
 
-* `timestamp` 使用协调世界时 UTC 格式 (邮件) 。
+* `timestamp` 使用协调世界时 utc 格式的邮件 (时间) 。
 * `localTimestamp` 发件人时区的邮件日期和时间。
 * `channelId` 始终为"msteams"。 这是指自动程序框架频道，而不是团队频道。
 * `from.id` 自动程序的用户的唯一加密 ID;如果应用需要存储用户数据，则适合用作密钥。 它对于自动程序来说是唯一的，不能以任何有意义的方式直接在自动程序实例外部使用来标识该用户。
@@ -154,15 +154,13 @@ ms.locfileid: "59155876"
 > [!NOTE]
 > 入站邮件的文本字段有时包含提及。 请务必正确检查并去除这些复选框。 有关详细信息，请参阅 [提及](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions)。
 
-## <a name="teams-channel-data"></a>Teams频道数据
+## <a name="teams-channel-data"></a>Teams通道数据
 
 `channelData`对象包含Teams特定的信息，并且是团队和频道 ID 的权威性来源。 应缓存这些 ID，并用作本地存储的密钥。
 
-`channelData`对象不包含在个人对话中的邮件中，因为邮件发生在任何频道之外。
-
 发送给自动程序的活动中的典型 channelData 对象包含以下信息：
 
-* `eventType`Teams事件类型;仅在通道修改[事件的情况下传递](~/resources/bot-v3/bots-notifications.md#channel-updates)。
+* `eventType`Teams事件类型;仅在通道修改事件[的情况下传递](~/resources/bot-v3/bots-notifications.md#channel-updates)。
 * `tenant.id`Azure Active Directory租户 ID;在所有上下文中传递。
 * `team` 仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id` 频道的 GUID。
@@ -173,7 +171,7 @@ ms.locfileid: "59155876"
 * `channelData.teamsTeamId` 已弃用。 此属性仅包含用于向后兼容。
 * `channelData.teamsChannelId` 已弃用。 此属性仅包含用于向后兼容。
 
-### <a name="example-channeldata-object-channelcreated-event"></a>channelData 对象示例 (channelCreated 事件) 
+### <a name="example-channeldata-object-channelcreated-event"></a>channelCreated 事件 (channelCreated 事件示例) 
 
 ```json
 "channelData": {
@@ -193,7 +191,7 @@ ms.locfileid: "59155876"
 
 ### <a name="net-example"></a>.NET 示例
 
-[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)包提供了一个专用对象，该对象公开用于访问特定Teams `TeamsChannelData` 的属性。
+[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)包提供了一个专用对象，该对象公开用于访问Teams `TeamsChannelData` 特定信息的属性。
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();
@@ -275,7 +273,7 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 ## <a name="starting-a-conversation-proactive-messaging"></a>启动对话 (主动消息传递) 
 
-你可以创建与用户的个人对话，或在频道中为团队机器人启动一个新的回复链。 这使你可以向用户发送消息，而无需让他们首先与机器人联系。 有关详细信息，请参阅下列主题：
+你可以创建与用户的个人对话，或在频道中为团队机器人启动新的回复链。 这使你可以向用户发送消息，而无需让他们首先与机器人联系。 有关详细信息，请参阅下列主题：
 
 有关 [自动程序启动的对话](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) 的更多常规信息，请参阅自动程序主动消息传递。
 

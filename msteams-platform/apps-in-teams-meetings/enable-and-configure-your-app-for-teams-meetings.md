@@ -1,15 +1,15 @@
 ---
 title: 为会议启用和配置Teams应用程序
 author: surbhigupta
-description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
+description: 为会议和其他会议Teams启用和配置应用、更新应用清单、配置诸如会议对话、共享会议阶段、会议侧窗格等功能
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392489"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569418"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
@@ -17,7 +17,7 @@ ms.locfileid: "61392489"
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
-若要为应用启用Teams会议，请更新应用清单并使用上下文属性确定应用必须出现在何处。
+若要为应用启用Teams会议，请更新应用清单，并使用上下文属性确定应用必须出现在何处。
 
 ### <a name="update-your-app-manifest"></a>更新应用清单
 
@@ -61,7 +61,7 @@ ms.locfileid: "61392489"
 | **privateChatTab** | 一组用户之间的群聊标题中的选项卡，不在团队或会议上下文中。 |
 | **meetingChatTab** | 一组用户之间安排的会议的群聊标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中工作。 |
 | **meetingDetailsTab** | 日历的会议详细信息视图标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中工作。 |
-| **meetingSidePanel** | 通过统一栏打开的会议内面板 (U 条形图) 。 |
+| **meetingSidePanel** | 通过统一栏和 U 条形图 (打开的会议内) 。 |
 | **meetingStage** | 可以将 中的 `meetingSidePanel` 应用共享到会议阶段。 你无法通过移动设备或会议室客户端Teams此应用。 |
 
 为会议启用应用Teams，必须在会议前、会议期间和会议后配置应用。
@@ -135,15 +135,16 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 |示例名称 | 说明 | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 该令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会议阶段示例 | 在会议阶段显示选项卡以用于协作的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 |会议侧面板 | 显示如何在会议侧面板中添加议程的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>分步指南
 
-* 按照 [分步指南在](../sbs-meeting-token-generator.yml)会议 **结束后生成** 会议Teams令牌。
-* 按照 [分步指南在](../sbs-meetings-sidepanel.yml)会议 **结束后** 生成Teams窗格。
-* 按照[分步指南在会议](../sbs-meetings-stage-view.yml)结束后生成Teams视图。
+* 按照[分步指南在会议](../sbs-meeting-token-generator.yml)结束后生成会议Teams令牌。
+* 按照[分步指南在](../sbs-meetings-sidepanel.yml)会议结束后生成Teams窗格。
+* 按照[分步指南在](../sbs-meetings-stage-view.yml)会议结束后生成Teams视图。
+* 按照[分步指南在你的](../sbs-meeting-content-bubble.yml)会议生成会议内容Teams气泡。
 
 ## <a name="next-step"></a>后续步骤
 
