@@ -1,16 +1,16 @@
 ---
 title: 响应搜索命令
 author: surbhigupta
-description: 了解如何使用代码示例和示例从 Microsoft Teams应用中的消息扩展响应搜索命令
+description: 了解如何使用代码示例和示例从 Microsoft Teams 应用中的消息扩展响应搜索命令
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: b31bdc167c033785edc971b96b2ebfc44c265995
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178277"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573412"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -98,7 +98,7 @@ Teams支持以下卡片类型：
 
 * [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 若要更好地了解卡片并概览卡片，请参阅 [什么是卡片](~/task-modules-and-cards/what-are-cards.md)。
@@ -115,10 +115,9 @@ Teams支持以下卡片类型：
 
 对于 Hero 或 Thumbnail 卡片，预览卡片不支持其他操作（如按钮和点击）的调用操作除外。
 
-若要发送自适应卡片或 Ofiice 365 连接器卡，必须包含预览。 属性 `preview` 必须是 Hero 或 Thumbnail 卡片。 如果不在对象中指定预览属性 `attachment` ，则不生成预览。
+若要发送自适应卡片或Office 365连接器卡，必须包含预览。 属性 `preview` 必须是 Hero 或 Thumbnail 卡片。 如果不在对象中指定预览属性 `attachment` ，则不生成预览。
 
-对于 Hero 和 Thumbnail 卡片，无需指定预览属性，默认情况下会生成预览。 以下示例在邮件扩展中粘贴链接时显示链接展开功能：  
-![链接取消点击](~/assets/images/messaging-extension/link-unfurl.gif)
+对于 Hero 和 Thumbnail 卡片，无需指定预览属性，默认情况下会生成预览。
 
 ### <a name="response-example"></a>响应示例
 
