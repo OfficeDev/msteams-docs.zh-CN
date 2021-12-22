@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 命令菜单撰写邮件对话@mention
-ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 739d2c32bb07ef63c6e886c0172d24a7fbc17ff6
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888235"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591790"
 ---
 # <a name="bot-command-menus"></a>自动程序命令菜单
 
@@ -163,14 +163,14 @@ ms.locfileid: "60888235"
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>处理自动程序代码中的菜单命令
 
-组或频道中的机器人仅在消息中提到时 `@botname` 进行响应。 自动程序在组或频道范围中收到的每封邮件在返回的消息文本中包含其名称。 在处理返回的命令之前，邮件分析必须处理自动程序使用其名称接收的消息。
+组或频道中的机器人仅在消息中提到时 `@botname` 进行响应。 自动程序在组或频道范围中收到的每条消息在消息文本中包含其名称。 在处理返回的命令之前，邮件分析必须处理自动程序使用其名称接收的消息。
 
 > [!NOTE]
 > 若要在代码中处理命令，它们作为常规消息发送到自动程序。 必须像处理用户发送的其他任何邮件一样处理邮件。 代码中的命令在文本框中插入预配置的文本。 然后，用户必须像发送任何其他邮件一样发送该文本。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-可以使用邮件文本的静态方法分析邮件文本的 **\@ "** 提及"部分Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
+可以使用与邮件文本一起提供的静态方法分析邮件文本的 **\@ "** 提及"Microsoft Bot Framework。 它是名为 的 `Activity` 类的一个方法 `RemoveRecipientMention` 。
 
 用于C#"提及"部分的代码如下所示： **\@**
 

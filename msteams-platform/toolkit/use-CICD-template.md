@@ -1,22 +1,21 @@
 ---
-title: CI 或 CD 支持Teams应用程序开发人员
+title: 针对应用程序开发人员的 CI Teams CD 支持
 author: MuyangAmigo
 description: 分时模板
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ff5b77b7891d36e63f2fd3260ae114cbf536384d
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: acd12a96365bf97bd419045c415e71efd3a118e2
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227965"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591776"
 ---
 # <a name="ci-or-cd-support-for-teams-application-developers"></a>为应用程序开发人员Teams CI 或 CD 支持
 
 TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档提供了一些工具和预先准备的模板，可让你开始使用最常见的开发平台（包括 GitHub、Azure Devops 和 Jenkins）设置 CI 或 CD 管道。
-
 
 |工具和模板|说明|
 |---|---|
@@ -25,9 +24,9 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 |[jenkins-ci-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) 和 [jenkins-cd-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|用于应用应用的 Jenkins CI 或 CD Teams模板。|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) 和 [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| 用于自动化的脚本模板GitHub。 |
 
-## <a name="ci-or-cd-workflow-templates-in-github"></a>解决方案中的 CI 或 CD 工作流GitHub
+## <a name="ci-or-cd-workflow-templates-in-github"></a>解决方案中的 CI 或 CD GitHub
 
-**若要包括 CI 或 CD 工作流以自动Teams应用程序开发过程，请GitHub：**
+**若要包含 CI 或 CD 工作流，Teams应用程序开发过程自动化** GitHub：
 
 1. 在 下创建文件夹 `.github/workflows`
 1. 将模板文件 (其中一个或两个模板) ：
@@ -48,18 +47,18 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 自定义 CD 工作流的以下步骤：
 
 1. 默认情况下，当向分支提交新内容时，将触发 CD `main` 工作流。
-1. 按GitHub[创建](https://docs.github.com/en/actions/reference/encrypted-secrets)存储库密码以保留 Azure 或Microsoft 365登录凭据。 下表列出了需要在应用程序上创建的所有GitHub，有关详细用法，请参阅 GitHub Actions [README.md](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
+1. 按GitHub[创建](https://docs.github.com/en/actions/reference/encrypted-secrets)存储库密码以保留 Azure 或Microsoft 365登录凭据。 下表列出了需要在 GitHub 上创建的所有密码，有关详细用法，请参阅 GitHub Actions [README.md](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
 1. 如有必要，请更改生成脚本。
 1. 如果没有测试，请删除测试脚本。
 
 > [!Note]
-> 预配步骤不包含在 CD 模板中，因为它通常只执行一次。 你可以执行预配 在 Teams Toolkit TeamsFx CLI 中，或者使用单独工作流。 请记住，在预配 (设置结果将保存在文件夹) 中，将 的文件内容保存到 GitHub 存储库密码中，并命名供将来 `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` [](https://docs.github.com/en/actions/reference/encrypted-secrets) `USERDATA_CONTENT` 使用。
+> 预配步骤不包含在 CD 模板中，因为它通常只执行一次。 你可以执行预配 在 Teams Toolkit TeamsFx CLI 中，或者使用单独的工作流。 请记住，在预配 (设置结果将保存在文件夹) 中，将 文件内容保存到 GitHub 存储库密码中，并命名供将来 `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` [](https://docs.github.com/en/actions/reference/encrypted-secrets) `USERDATA_CONTENT` 使用。
 
 ### <a name="environment-variables"></a>环境变量
 
-在环境中创建环境变量GitHub：
+在下列环境中创建环境变量GitHub：
 
-1. 在"新建 **设置** 中，**导航到"** 环境"部分，然后选择"**新建环境"。**
+1. 在"项目 **设置，导航到****"环境"** 部分，然后选择"**新建环境"。**
 1. 输入环境的名称。 模板中提供的默认环境名称是 `test_environment` 。 选择 **"配置环境** "继续。
 1. 下一页，选择" **添加** 密码"为下表中列出的每个项目添加密码。
 
@@ -69,10 +68,12 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 |AZURE_ACCOUNT_PASSWORD|Azure 帐户的密码。|
 |AZURE_SUBSCRIPTION_ID|确定将在其中预配资源的订阅。|
 |AZURE_TENANT_ID|标识订阅所在的租户。|
-|Microsoft 365_ACCOUNT_NAME|用于创建Microsoft 365发布应用的应用程序Teams帐户。|
+|Microsoft 365_ACCOUNT_NAME|用于创建Microsoft 365发布应用程序的应用程序Teams帐户。|
 |Microsoft 365_ACCOUNT_PASSWORD|帐户Microsoft 365密码。|
 |Microsoft 365_TENANT_ID|标识将在其中创建Teams/发布的租户。 此值是可选的，除非你拥有多租户帐户并且想要使用另一个租户。 阅读更多[有关如何查找租户Microsoft 365 ID。](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
-> 注意：请参阅配置[Microsoft 365/Azure](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret)凭据，以确保已针对工作流中使用的凭据禁用多重身份验证和安全默认值。
+
+> [!NOTE]
+> 请参阅配置[Microsoft 365/Azure](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret)凭据，以确保已针对工作流中使用的凭据禁用多重身份验证和安全默认值。
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>设置 CI 或 CD Pipelines与Azure DevOps
 
@@ -83,8 +84,8 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 
 ### <a name="set-up-ci-pipeline"></a>设置 CI 管道
 
-1. 将[CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)添加到Azure DevOps存储库，然后执行必要的自定义，正如从脚本文件中的评论推断的。
-1. 按照[步骤创建 CI Azure DevOps管道](/azure/devops/pipelines/create-first-pipeline)。
+1. 将[CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)添加到Azure DevOps存储库，然后执行必要的自定义，正如您可能从脚本文件中的评论推断的。
+1. 按照[步骤为 CI Azure DevOps管道](/azure/devops/pipelines/create-first-pipeline)。
 下面是常见 CI 管道脚本的方案：
 
 ```yml
@@ -146,7 +147,6 @@ steps:
   env:
     AZURE_ACCOUNT_NAME: $(AZURE_ACCOUNT_NAME)
     AZURE_ACCOUNT_PASSWORD: $(AZURE_ACCOUNT_PASSWORD)
-    AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
     AZURE_TENANT_ID: $(AZURE_TENANT_ID)
     Microsoft 365_ACCOUNT_NAME: $(Microsoft 365_ACCOUNT_NAME)
     Microsoft 365_ACCOUNT_PASSWORD: $(Microsoft 365_ACCOUNT_PASSWORD)
@@ -163,11 +163,11 @@ steps:
 1. 确保有一个 npm 测试脚本，该脚本返回零以成功，并且/或更改测试命令。
 
 > [!Note]
-> 预配步骤不包含在 CD 模板中，因为它通常只执行一次。 你可以执行预配 在 Teams Toolkit TeamsFx CLI 中，或者使用单独工作流。 请记住在预配后提交 (设置结果将存储到文件夹) 并上传到Azure DevOps `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` [文件](/azure/devops/pipelines/library/secure-files)供将来使用。
+> 预配步骤不包含在 CD 模板中，因为它通常只执行一次。 可以在 TeamsFx CLI Teams Toolkit内执行预配，或者使用单独工作流。 请记住在预配后提交 (设置结果将存储到文件夹) 并上传到 Azure DevOps 安全文件中供 `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` 将来使用。 [](/azure/devops/pipelines/library/secure-files)
 
 ### <a name="environment-variables-for-azure-devops"></a>环境变量Azure DevOps
 
-在下列步骤中创建管道Azure DevOps：
+在管道中创建管道变量Azure DevOps：
 
 1. 在"管道编辑"页中，选择 **右** 上方的"变量"，然后选择"**新建变量"。**
 1. 输入变量的名称/值对。
@@ -180,11 +180,12 @@ steps:
 |AZURE_ACCOUNT_PASSWORD|Azure 帐户的密码。|
 |AZURE_SUBSCRIPTION_ID|确定将在其中预配资源的订阅。|
 |AZURE_TENANT_ID|标识订阅所在的租户。|
-|Microsoft 365_ACCOUNT_NAME|用于创建Microsoft 365发布应用程序的应用程序Teams帐户。|
+|Microsoft 365_ACCOUNT_NAME|用于创建Microsoft 365发布应用的应用程序Teams帐户。|
 |Microsoft 365_ACCOUNT_PASSWORD|帐户Microsoft 365密码。|
 |Microsoft 365_TENANT_ID|标识将在其中创建Teams/发布的租户。 此值是可选的，除非你拥有多租户帐户并且想要使用另一个租户。 阅读更多[有关如何查找租户Microsoft 365 ID。](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-> !注意 请参阅配置[Microsoft 365/Azure](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret)凭据，以确保已针对工作流中使用的凭据禁用多重身份验证和安全默认值。
+> [!NOTE]
+> 预配步骤不包含在 CD 模板中，因为它通常只执行一次。 可以在 TeamsFx CLI Teams Toolkit内执行预配，或者使用单独工作流。 请记住，在预配 (预配结果将保存在文件夹) 中，将 的文件内容保存到 `.fx` Jenkins 凭据中供 `.fx/states/{YOUR_ENV_NAME}.userdata` 将来使用。
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Jenkins 中的 CI 或 CD 管道模板
 
@@ -219,7 +220,7 @@ steps:
 1. 如果没有测试，请删除测试脚本。
 
 > [!Note]
- 预配步骤不包含在 CD 模板中，因为它通常只执行一次。 你可以执行预配 在 Teams Toolkit、TeamsFx CLI 中，或者使用单独工作流。 请记住在预配后提交 (设置结果将保存在文件夹) ，将 的文件内容保存到 Jenkins 凭据中供 `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` 将来使用。
+ 预配步骤不包含在 CD 模板中，因为它通常只执行一次。 可以在 TeamsFx CLI Teams Toolkit内执行预配，或者使用单独的工作流。 请记住，在预配 (预配结果将保存在文件夹) 中，将 的文件内容保存到 `.fx` Jenkins 凭据中供 `.fx/states/{YOUR_ENV_NAME}.userdata` 将来使用。
 
 ### <a name="environment-variables-for-jenkins"></a>Jenkins 的环境变量
 
@@ -250,8 +251,21 @@ steps:
 
 确保在环境变量中安全设置 Azure 和 M365 凭据。 例如，如果你使用 GitHub 作为源代码存储库，可以使用[Github 密码](https://docs.github.com/en/actions/reference/encrypted-secrets)安全地存储环境变量。
 
+## <a name="publish-teams-app-using-teams-developer-portal"></a>使用Teams门户发布Teams应用
+
+如果存在与应用清单Teams相关的任何更改，可能需要再次发布Teams应用以更新清单。
+
+若要手动Teams应用，你可以利用[开发人员门户进行Teams。](https://dev.teams.microsoft.com/home)
+
+**发布应用**
+
+1. 使用[相应帐户Teams](https://dev.teams.microsoft.com)开发人员门户进行登录。
+2. 通过选择 以 zip 导入你的应用包 `App -> Import app -> Replace` 。
+3. 在应用列表中选择目标应用，你将转到概述页面。
+4. 通过选择发布应用 `Publish -> Publish to your org`
+
 ### <a name="see-also"></a>另请参阅
 
 * [快速入门GitHub操作](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
-* [创建首个 Azure DevOps 管道](/azure/devops/pipelines/create-first-pipeline)
+* [创建第一个Azure DevOps管道](/azure/devops/pipelines/create-first-pipeline)
 * [创建首个 Jenkins 管道](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
