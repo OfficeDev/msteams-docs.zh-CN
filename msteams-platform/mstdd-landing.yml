@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft Teams开发人员文档
-summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入用户越来越集中、学习和工作的地方。
+summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
-  description: 生成适用于 Teams 的应用程序的Teams
+  description: 生成适用于应用程序的应用程序Teams
   ms.service: service
   ms.subservice: subservice
   ms.topic: landing-page
@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: ad54e998cf2097686ad41ba4db9fe44f44219ff2
-  ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+  ms.openlocfilehash: 34d96608af3a7f42063f4a1bf8d1c713b5f42266
+  ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/20/2021
-  ms.locfileid: "61569488"
+  ms.lasthandoff: 12/23/2021
+  ms.locfileid: "61598939"
 landingContent:
 - title: 探索最新
   linkLists:
@@ -54,6 +54,8 @@ landingContent:
       url: tabs/how-to/authentication/auth-aad-sso.md
   - linkListType: tutorial
     links:
+    - text: 带自适应卡片的选项卡的分步指南
+      url: ~/sbs-tab-with-adaptive-cards.yml
     - text: 主动邮件的分步指南
       url: ~/sbs-send-proactive.yml
     - text: 向自动程序添加身份验证的分步指南
@@ -78,11 +80,11 @@ landingContent:
     links:
     - text: 使用 JavaScript 生成应用
       url: sbs-gs-javascript.yml
-    - text: 使用应用生成SPFx
+    - text: 使用应用程序生成SPFx
       url: sbs-gs-spfx.yml
     - text: 使用 C# .NET 生成应用
       url: sbs-gs-csharp.yml
-    - text: 使用应用程序生成Node.js
+    - text: 使用应用生成Node.js
       url: sbs-gs-nodejs.yml
 - title: 生成适用于Teams
   linkLists:
@@ -132,7 +134,7 @@ landingContent:
     links:
     - text: 分发
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
-    - text: 发布到 Teams Store
+    - text: 发布到 Teams 应用商店
       url: ~/concepts/deploy-and-publish/appsource/publish.md
     - text: 应用商店验证指南
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
