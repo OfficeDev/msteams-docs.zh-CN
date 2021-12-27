@@ -4,12 +4,12 @@ keywords: teams 应用功能权限
 description: 安全地返回对 Web 客户端中应用的设备权限支持
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: df0b45af341d936496b3b4cd4314f47f62f2bd3d
-ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
+ms.openlocfilehash: a7517a5d393495ae64a43f08f7201f45a994c770
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61348347"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608382"
 ---
 # <a name="device-permissions-for-the-browser"></a>浏览器的设备权限
 
@@ -20,7 +20,7 @@ ms.locfileid: "61348347"
 Teams需要设备权限（如相机或麦克风访问）的应用现在要求用户在 Web 浏览器中按应用级别手动授予权限。 以前，浏览器已处理如何授予访问权限，但现在这些权限在Microsoft Teams。 这对设计应用程序以及是否需要在浏览器中具有这些权限有一些影响。
 
 ## <a name="enable-apps-device-permissions"></a>启用应用的设备权限
-如果你Teams应用程序在应用程序清单中声明它需要设备权限[](native-device-permissions.md#specify-permissions)，则将显示"应用权限"选项供用户启用应用的设备权限。 " **应用程序权限"** 选项具有以下功能： 
+如果你Teams在应用程序清单中声明它需要设备权限，[](native-device-permissions.md#specify-permissions)则将显示"应用权限"选项，以便用户启用应用的设备权限。 " **应用程序权限"** 选项具有以下功能： 
 
 * **个人应用和任务模块对话框**： **页面** 右上角提供"应用权限"选项。
 <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
@@ -32,7 +32,7 @@ Teams需要设备权限（如相机或麦克风访问）的应用现在要求用
 用户需要在浏览器中启用这些权限，这些权限才能生效。 在用户更改浏览器中应用的设备权限后，系统会提示他们在浏览器中重新加载Teams。
 
 > [!IMPORTANT]
-> 必须让用户知道在何处启用这些应用程序Microsoft Teams。 
+> 你必须让用户知道在何处启用这些应用程序权限Microsoft Teams。 
 
 ## <a name="recommendation"></a>建议
 Teams浏览器中需要设备权限的应用必须向用户显示有关在浏览器中查找和启用这些权限Teams说明。 根据应用程序运行的上下文，你需要确保你的说明将用户指向访问这些权限的正确位置，因为它们对于个人应用、任务模块对话框、聊天中的选项卡以及频道或会议有所不同。
@@ -46,6 +46,9 @@ Teams浏览器中需要设备权限的应用必须向用户显示有关在浏览
 |----------------|-----------------|--------------|
 | 浏览器的 Tab 设备权限 | 示例代码演示如何显示浏览器的设备权限。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
+## <a name="step-by-step-guide"></a>分步指南
+
+按照[分步指南在页面](../../sbs-tab-device-permissions.yml)设置中授予选项卡设备Microsoft Teams。
 
 ## <a name="see-also"></a>另请参阅
 

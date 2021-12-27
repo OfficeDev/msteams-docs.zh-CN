@@ -237,9 +237,6 @@
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: 主动邮件
           href: bots/how-to/conversations/send-proactive-messages.md
-          items:
-            - name: 分步指南
-              href: sbs-send-proactive.yml
         - name: 设置你的智能机器人邮件格式
           href: bots/how-to/format-your-bot-messages.md
         - name: 更新和删除机器人消息
@@ -376,8 +373,6 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: 使用 SSO 身份验证
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-        - name: 使用 SSO 的机器人的分步指南
-          href: sbs-bots-with-sso.yml
     - name: 消息扩展
       items:
         - name: 向邮件扩展添加身份验证

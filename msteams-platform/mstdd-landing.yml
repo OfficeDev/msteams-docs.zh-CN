@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 34d96608af3a7f42063f4a1bf8d1c713b5f42266
-  ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
+  ms.openlocfilehash: 4151f03b3e2772860e5d7df4c6fd673e3cc6289e
+  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/23/2021
-  ms.locfileid: "61598939"
+  ms.lasthandoff: 12/27/2021
+  ms.locfileid: "61608452"
 landingContent:
 - title: 探索最新
   linkLists:
@@ -52,8 +52,12 @@ landingContent:
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - text: 对选项卡使用 SSO 身份验证
       url: tabs/how-to/authentication/auth-aad-sso.md
+    - text: 浏览器的设备权限
+      url: concepts/device-capabilities/browser-device-permissions.md
   - linkListType: tutorial
     links:
+    - text: 选项卡设备权限的分步指南
+      url: ~/sbs-tab-device-permissions.yml
     - text: 带自适应卡片的选项卡的分步指南
       url: ~/sbs-tab-with-adaptive-cards.yml
     - text: 主动邮件的分步指南
