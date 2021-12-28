@@ -4,28 +4,28 @@ description: 开发人员文档入门Microsoft Teams概述
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams开发人员示例
-ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
+ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569495"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "61619800"
 ---
 # <a name="get-started"></a>开始行动
 
-欢迎使用 Get started for building and deploying customized apps for Microsoft Teams！
+欢迎使用开始构建和部署自定义应用Microsoft Teams！
 
-演练构建基本、实际 Teams 应用的步骤。 入门还介绍了常用工具、基本概念以及更高级的功能。
+演练构建基本的实际 Teams 应用的步骤。 入门还介绍了常用工具、基本概念以及更高级的功能。
 
 以下是您将了解的一些概念：
 
-- 快速启动并运行Microsoft Teams Toolkit (扩展Visual Studio Code应用程序) 。
+- 快速启动并运行 Microsoft Teams Toolkit (扩展Visual Studio Code) 。
 - 获取有关 Toolkit SDK 的体验。
 - 配置和生成不同类型的 Teams 应用。
 
 让我们快速浏览一下可以选择的生成环境选项，以及构建和部署应用Teams路线图。
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="显示生成和部署应用程序的基本Teams示意图":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="显示生成和部署应用程序的基本步骤的Teams示意图":::
 
 ## <a name="app-capabilities-and-development-tools"></a>应用功能和开发工具
 
@@ -47,10 +47,10 @@ ms.locfileid: "61569495"
 
 ## <a name="build-your-first-teams-app"></a>生成首个Teams应用
 
-现在，让我们生成你的第一个Teams应用。 但首先，选择语言 (框架) 并准备开发环境。
+现在，让我们生成你的第一个Teams应用。 但首先，选择语言 (框架) 准备开发环境。
 
 > [!div class="nextstepaction"]
-> [使用 Teams JavaScript 生成React](../sbs-gs-javascript.yml)
+> [使用 Teams JavaScript 生成 React](../sbs-gs-javascript.yml)
 
 > [!div class="nextstepaction"]
 > [使用Teams生成SPFx](../sbs-gs-spfx.yml)
@@ -63,4 +63,5 @@ ms.locfileid: "61569495"
 
 ## <a name="see-also"></a>另请参阅
 
-[Microsoft Teams示例](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Microsoft Teams示例](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git 和 GitHub 资源](/contribute/additional-resources)

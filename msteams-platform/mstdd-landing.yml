@@ -3,7 +3,7 @@ title: Microsoft Teams开发人员文档
 summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams应用将关键信息、常用工具和受信任流程引入人们越来越集中、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
-  description: 生成适用于应用程序的应用程序Teams
+  description: 生成适用于 Teams 的应用程序的Teams
   ms.service: service
   ms.subservice: subservice
   ms.topic: landing-page
@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: 4151f03b3e2772860e5d7df4c6fd673e3cc6289e
-  ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+  ms.openlocfilehash: 6c4f9fcdc64a470eaeed96b2575e00b5c2439c76
+  ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 12/27/2021
-  ms.locfileid: "61608452"
+  ms.lasthandoff: 12/28/2021
+  ms.locfileid: "61619793"
 landingContent:
 - title: 探索最新
   linkLists:
@@ -80,6 +80,8 @@ landingContent:
     links:
     - text: 开始构建应用
       url: ../msteams-platform/get-started/get-started-overview.md
+    - text: 开始GitHub
+      url: /contribute/additional-resources
   - linkListType: tutorial
     links:
     - text: 使用 JavaScript 生成应用
