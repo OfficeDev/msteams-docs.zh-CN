@@ -5,12 +5,12 @@ description: 了解如何使用代码示例和示例向消息传递扩展添加�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 83c7ce4f7897014345fd071b28273ade5907a917
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949094"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768445"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>向邮件扩展添加身份验证
 
@@ -35,7 +35,7 @@ ms.locfileid: "60949094"
 如果服务需要用户身份验证，则用户必须先登录，然后才能使用消息传递扩展。 身份验证步骤类似于自动程序或选项卡的步骤。顺序如下所示：
 
 1. 用户发出查询或默认查询将自动发送到您的服务。
-1. 服务通过检查用户 ID 来检查用户Teams身份验证。
+1. 你的服务通过检查用户 ID 来检查用户Teams身份验证。
 1. 如果用户未经过身份验证，请发送回包含建议操作（包括身份验证 `auth` `openUrl` URL）的响应。
 1. 客户端Microsoft Teams给定身份验证 URL 启动托管网页的对话框。
 1. 用户登录后，应关闭窗口，并将身份验证代码发送到 Teams客户端。
@@ -67,13 +67,14 @@ ms.locfileid: "60949094"
 ```
 
 > [!NOTE]
-> 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
+> * 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
+> * 可以通过包括宽度和高度的查询字符串参数定义身份验证弹出窗口的大小 `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` 。
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流程
 
 登录体验必须响应迅速且适合弹出窗口。 它应与使用消息传递[Microsoft Teams JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 集成。
 
-与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
+与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流程
 
