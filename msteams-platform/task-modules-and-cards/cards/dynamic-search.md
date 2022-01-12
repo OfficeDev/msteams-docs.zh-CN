@@ -5,12 +5,12 @@ description: 介绍自适应卡片中具有 Input.ChoiceSet 控件的类型标�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
+ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075581"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "61722180"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>自适应卡片中的 Typeahead 搜索
 
@@ -78,24 +78,24 @@ John 是一名在 Xbox 零售商店工作的应用商店员工。 应用商店�
 
 以下属性是架构中新增的用于启用 [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) typeahead 搜索的属性：
 
-| 属性| 类型 | 必需 | Description |
+| 属性| 类型 | 必需 | 说明 |
 |-----------|------|----------|-------------|
-| style | 精简版 <br/> Expanded <br/> Filtered | 否 | 将筛选的样式添加到静态类型前支持的验证列表中。|
-| choices.data | Data.Query | 否 | 通过从后端获取一组远程选项，在用户键入时启用动态类型前。 |
+| style | 精简版 <br/> Expanded <br/> Filtered | 不支持 | 将筛选的样式添加到静态类型前支持的验证列表中。|
+| choices.data | Data.Query | 不支持 | 通过从后端获取一组远程选项，在用户键入时启用动态类型前。 |
 
 ### <a name="dataquery-definition"></a>Data.Query 定义
 
-| 属性| 类型 | 必需 | Description |
+| 属性| 类型 | 必需 | 说明 |
 |-----------|------|----------|-------------|
 | 类型 | Data.Query | 是 | 指定它是 Data.Query 对象。|
 | dataset | 字符串 | 是 | 指定动态提取的数据类型。 |
 | value | 字符串 | 否 | 使用用户提供给 的输入填充对机器人的调用请求 `ChoiceSet` 。 |
-| count | 数字 | 否 | 填充对机器人的调用请求，以指定必须返回的元素数。 如果用户要发送不同的金额，机器人将忽略它。 | 
-| skip | 数字 | 否 | 填充对机器人的调用请求，以指示用户希望对列表进行分页并向前移动。 |
+| count | 数字 | 不支持 | 填充对机器人的调用请求，以指定必须返回的元素数。 如果用户要发送不同的金额，机器人将忽略它。 | 
+| skip | 数字 | 不支持 | 填充对机器人的调用请求，以指示用户希望对列表进行分页并向前移动。 |
 
 ### <a name="example"></a>示例
 
-示例有效负载包含静态和动态 typeahead 搜索，其中包含&多选选项，如下所示：
+包含静态和动态 typeahead 搜索的示例有效负载&选择选项，如下所示：
 
 ```json
 {
@@ -296,6 +296,124 @@ John 是一名在 Xbox 零售商店工作的应用商店员工。 应用商店�
   "version": "1.2"
 }
 ```
+
+## <a name="code-snippets-for-invoke-request-and-response"></a>用于调用请求和响应的代码段
+
+### <a name="invoke-request"></a>调用请求
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "fluentui",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "npm"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles",
+    // …. other fields
+}
+```
+
+### <a name="response"></a>响应
+
+#### <a name="c"></a>[C#](#tab/csharp)
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "application/search")
+    {
+    var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+    var searchResponseData = new
+    {
+        type = "application/vnd.microsoft.search.searchResponse",
+        value = new
+        {
+        results = packages
+        }
+    };
+    var jsonString = JsonConvert.SerializeObject(searchResponseData);
+    JObject jsonData = JObject.Parse(jsonString);
+    return new InvokeResponse()
+    {
+        Status = 200,
+        Body = jsonData
+    };
+    }
+
+    return null;
+}
+```
+
+#### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+ 
+```nodejs
+  async onInvokeActivity(context) {
+    if (context._activity.name == 'application/search') {
+      // let searchQuery = context._activity.value.queryText;  // This can be used to filter the results
+      var successResult = {
+        status: 200,
+        body: {
+          "type": "application/vnd.microsoft.search.searchResponse",
+          "value": {
+            "results": [
+              {
+                "value": "FluentAssertions",
+                "title": "A very extensive set of extension methods"
+              },
+              {
+                "value": "FluentUI",
+                "title": "Fluent UI Library"
+              }
+            ]
+          }
+        }
+      }
+
+      return successResult;
+
+    }
+  }
+```
+
+####  <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "status": 200,
+    "body" : {
+        "type": "application/vnd.microsoft.search.searchResponse",
+        "value": {
+           "results": [
+                {
+                    "value": "FluentAssertions",
+                    "title": "A very extensive set of extension methods."
+                },
+                {
+                    "value": "FluentUI",
+                    "title": "Fluent UI Library"
+                }
+            ]
+        }
+    }
+}
+```
+
+---
+
+## <a name="code-sample"></a>代码示例
+
+|示例名称 | 说明 | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| 在自适应卡片上键入提前搜索控件 | 该示例显示了自适应卡片中静态和动态类型前搜索控件的功能。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 
