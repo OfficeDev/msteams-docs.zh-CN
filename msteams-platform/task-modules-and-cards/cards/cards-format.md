@@ -5,12 +5,12 @@ keywords: teams 自动程序卡格式
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: e157828f4070e13b4ef73fb02fef8d1cebdb34fa
+ms.sourcegitcommit: 241b17ee149aa096b787d12afa8bcbd16513b0e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569530"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61934010"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
@@ -20,9 +20,9 @@ ms.locfileid: "61569530"
 
 卡片仅支持文本属性中的格式设置，不支持标题或副标题属性中的格式设置。 可以使用 XML 或 HTML 格式的子集或 Markdown 指定格式，具体取决于卡片类型。 对于自适应卡片的当前和未来开发，建议使用 Markdown 格式。
 
-卡片类型之间的格式支持不同。 桌面版和移动版客户端以及桌面Microsoft Teams的卡片呈现Teams略有不同。
+卡片类型之间的格式支持不同。 桌面版和移动版客户端以及桌面Microsoft Teams和桌面Teams的卡片呈现可能略有不同。
 
-你可以将内联图像与任意卡片Teams内。 图像的格式可以设置为 、 或 文件，并且不能超过 `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。 不支持动态 GIF。 有关详细信息，请参阅 [卡片类型](./cards-reference.md#inline-card-images)。
+你可以将内联图像与任意卡片Teams内。 图像的格式可以设置为 、 或 文件，并且不得超过 `.png` `.jpg` `.gif` 1024 像素× 1024 像素或 1 MB。 不支持动态 GIF。 有关详细信息，请参阅 [卡片类型](./cards-reference.md#inline-card-images)。
 
 可以使用 Markdown 设置自适应卡片和Office 365连接器卡的格式，其中包括某些受支持的样式。
 
@@ -31,11 +31,11 @@ ms.locfileid: "61569530"
 以下卡片类型支持 Markdown 格式Teams：
 
 * 自适应卡片：自适应卡片字段以及 和 中都支持 `Textblock` `Fact.Title` `Fact.Value` Markdown。 自适应卡片不支持 HTML。
-* Office 365连接器卡：文本字段的 Office 365 连接器卡中支持 Markdown 和有限的 HTML。
+* Office 365连接器卡：文本字段中的 Office 365 连接器卡中支持 Markdown 和有限的 HTML。
 
 你可以将新行用于自适应卡片，或者对列表中新行使用转 `\r` `\n` 义序列。 适用于自适应卡片的桌面版和移动版Teams不同。 Web、桌面和移动客户端支持基于卡片的提及。 可以使用信息屏蔽属性来屏蔽特定信息，如自适应卡片输入元素内用户的密码或 `Input.Text` 敏感信息。 可以使用 对象扩展自适应卡片 `width` 的宽度。 可以在自适应卡片中启用 typeahead 支持，在用户键入输入时筛选输入选项集。 可以使用 属性 `msteams` 添加选择性地在阶段视图中显示图像的能力。
 
-对于自适应卡片和连接器卡，桌面版和移动版Teams不同。 在此部分中，你可以浏览自适应卡片和连接器卡的 Markdown 格式示例。
+适用于自适应卡片和连接器卡的桌面和移动版本的Teams不同。 在此部分中，你可以浏览自适应卡片和连接器卡的 Markdown 格式示例。
 
 # <a name="markdown-format-for-adaptive-cards"></a>[自适应卡片的 Markdown 格式](#tab/adaptive-md)
 
@@ -63,7 +63,7 @@ ms.locfileid: "61569530"
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>自适应卡片的移动和桌面差异
 
-在桌面上，自适应卡片 Markdown 格式显示如下图所示，在 Web 浏览器和 Teams 应用程序中：
+在桌面上，自适应卡片 Markdown 格式显示如下图中所示，在 Web 浏览器和 Teams 客户端应用程序中：
 
 ![桌面客户端中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -118,7 +118,7 @@ ms.locfileid: "61569530"
 
 ### <a name="mention-support-within-adaptive-cards"></a>自适应卡片中的提及支持 
 
-可以在自动@mentions消息扩展响应的自适应卡片正文中添加邮件。 若要在@mentions，请遵循与频道和群聊对话中基于消息的提及相同的通知逻辑和 [呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
+你可以为@mentions和消息传递扩展响应在自适应卡片正文中添加邮件。 若要在@mentions，请遵循与频道和群聊对话中基于消息的提及相同的通知逻辑和 [呈现](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
 
 聊天机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包括提及。
 
@@ -178,7 +178,7 @@ Teams平台除了现有提及 ID 外，AAD还允许使用其 AAD 对象 ID 和�
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>使用自适应卡片的机器人中的用户提及 
 
-除了现有 ID 外，机器人还支持AAD对象 ID 和 UPN 的用户提及。 在短信、自适应卡片正文和消息传递扩展响应的机器人中提供对两个新 ID 的支持。 机器人支持会话和方案中的提及 `invoke` 设备。 用户在与 ID 一起@mentioned活动源通知。 
+除了现有 ID 外，机器人还支持AAD对象 ID 和 UPN 进行用户提及。 在短信、自适应卡片正文和消息传递扩展响应的机器人中提供对两个新 ID 的支持。 机器人支持会话和方案中的提及 `invoke` 设备。 用户与 ID 一起@mentioned活动源通知。 
 
 > [!NOTE]
 > 对于自动程序中的自适应卡片，用户无需提及架构更新和 UI/UX 更改。
@@ -230,9 +230,8 @@ Teams平台除了现有提及 ID 外，AAD还允许使用其 AAD 对象 ID 和�
 传入 Webhook 开始支持自适应卡片中的用户提及，AAD对象 ID 和 UPN。
 
 > [!NOTE]    
-> * 在传入 Webhook 的架构中启用用户提及，以支持AAD ID 和 UPN。 
-> * 对于使用用户对象 ID 和 UPN 进行用户提及AAD UI/UX 更改。      
-> * 传入 Webhook 的活动源通知以及用户提及的通知将在将来的版本中提供。
+> * 在架构中为传入 Webhook 启用用户提及功能，以支持AAD ID 和 UPN。 
+> * 对于使用对象 ID 和 UPN 的用户AAD UI/UX 更改。      
 
 ##### <a name="example"></a>示例 
 
@@ -444,7 +443,7 @@ Teams平台除了现有提及 ID 外，AAD还允许使用其 AAD 对象 ID 和�
 
 使用 Markdown for iOS 的连接器卡包括以下问题：
 
-* iOS 客户端用于Teams连接器卡中呈现 Markdown 或 HTML 内嵌图像。
+* iOS 客户端用于Teams连接器卡中呈现 Markdown 或 HTML 内联图像。
 * Blockquotes 呈现为缩进，但不带灰色背景。
 
 在 Android 上，连接器卡的 Markdown 格式显示如下图所示：
@@ -509,9 +508,9 @@ Teams平台除了现有提及 ID 外，AAD还允许使用其 AAD 对象 ID 和�
 * Office 365连接器卡：连接器卡支持有限的 Markdown 和 HTML Office 365格式。
 * Hero 和 thumbnail cards：简单卡片支持 HTML 标记，例如 hero 和 thumbnail 卡片。
 
-对于连接器卡和简单卡片，桌面版和移动版Teams Office 365不同。 在此部分中，您可以浏览连接器卡和简单卡片的 HTML 格式示例。
+对于连接器卡和简单卡，桌面版和移动版Teams Office 365不同。 在此部分中，您可以浏览连接器卡和简单卡片的 HTML 格式示例。
 
-# <a name="html-format-for-office-365-connector-cards"></a>[连接器卡Office 365 HTML 格式](#tab/connector-html)
+# <a name="html-format-for-office-365-connector-cards"></a>[连接器卡的 HTML Office 365](#tab/connector-html)
 
 连接器卡支持有限的 Markdown 和 HTML 格式。
 
@@ -640,7 +639,7 @@ Teams平台除了现有提及 ID 外，AAD还允许使用其 AAD 对象 ID 和�
 
 ### <a name="format-example-for-simple-cards"></a>简单卡片的格式示例
 
-上一部分中的图像是使用 app **Studio** Teams创建的，其中，hero 卡片的文本属性设置为以下字符串：
+上一部分中的图像是使用 app **Studio** Teams创建的，其中 hero 卡片的文本属性设置为以下字符串：
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
