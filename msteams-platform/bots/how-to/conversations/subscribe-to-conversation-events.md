@@ -1,17 +1,17 @@
 ---
 title: 对话事件
 author: WashingtonKayaker
-description: 如何使用代码示例处理来自自动程序的对话Microsoft Teams、频道事件更新、团队成员事件和消息反应事件。
+description: 如何使用代码示例处理来自自动程序Microsoft Teams对话事件、频道事件更新、团队成员事件和消息反应事件。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 事件机器人频道消息反应对话
-ms.openlocfilehash: bc99091e3eac4a35514cbab4327082223edffa40
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6c77e6b7675a45c27a8af42811b520b4942d7428
+ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888277"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "62014554"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -29,7 +29,7 @@ ms.locfileid: "60888277"
 可以使用对话更新事件提供更好的通知和更有效的自动程序操作。
 
 > [!IMPORTANT]
-> * 你随时都可以添加新事件，并且机器人开始接收它们。
+> * 你随时都可以添加新事件，并且你的机器人开始接收它们。
 > * 必须将机器人设计为接收意外事件。
 > * 如果你使用的是 Bot Framework SDK，则自动自动响应你选择不处理 `200 - OK` 的任何事件。
 
@@ -148,7 +148,7 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>已重命名频道
 
-只要频道在安装了自动程序的团队中重命名，频道重命名事件就会发送到机器人。
+只要频道在安装自动程序的团队中重命名，频道重命名事件就会发送到机器人。
 
 以下代码显示了通道重命名事件的示例：
 
@@ -1322,7 +1322,17 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-不可用
+```typescript
+async onInstallationUpdateActivity(context: TurnContext) {
+        var activity = context.activity.action;
+        if(activity == "Add") {
+            await context.sendActivity(MessageFactory.text("Added"));
+        }
+        else {
+            await context.sendActivity(MessageFactory.text("Uninstalled"));
+        }
+    }
+```
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1381,7 +1391,13 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="python"></a>[Python](#tab/python)
 
-不可用
+```python
+async def on_installation_update(self, turn_context: TurnContext):
+   if turn_context.activity.action == "add":   
+       await turn_context.send_activity(MessageFactory.text("Added"))
+   else:
+       await turn_context.send_activity(MessageFactory.text("Uninstalled"))
+```
 
 ---
 
@@ -1390,22 +1406,22 @@ turnContext, CancellationToken cancellationToken) {
 > [!NOTE]
 > 使用自动程序的个人应用的卸载行为当前仅适用于公共开发人员 [预览版](../../../resources/dev-preview/developer-preview-intro.md)。
 
-卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有组聊天和 groupChat 作用域的个人Teams聊天机器人的帖子卸载行为已保持一致。 卸载应用后，你无法发送或接收邮件。
+卸载应用时，也会卸载自动程序。 当用户向你的应用发送邮件时，他们会收到 403 响应代码。 自动程序会收到由机器人发布的新消息的 403 响应代码。 现在，具有组聊天和 groupChat 作用域的个人Teams聊天机器人的卸载后行为已保持一致。 卸载应用后，你无法发送或接收邮件。
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
 
-使用这些安装和卸载事件时，在某些情况下，自动程序会为从用户接收意外事件Teams。 在下列情况下会出现此情况：
+使用这些安装和卸载事件时，在某些情况下，自动程序会提供从客户端接收意外事件的Teams。 在下列情况下会出现此情况：
 
-* 无需使用 SDK Microsoft Bot Framework自动程序，因此机器人在收到意外事件时出现异常。
-* 使用 Microsoft Bot Framework SDK 生成自动程序，并选择通过替代基本事件句柄来更改默认事件行为。
+* 无需使用 Microsoft Bot Framework SDK 即可生成自动程序，因此机器人在收到意外事件时出现异常。
+* 使用 Microsoft Bot Framework SDK 生成自动程序，并选择通过覆盖基本事件句柄来更改默认事件行为。
 
 了解以后可以随时添加新事件，并且机器人开始接收它们，了解这一点很重要。 因此，您必须针对接收意外事件的可能性进行设计。 如果你使用的是 Bot Framework SDK，则自动程序会自动响应 200 – 确定你未选择处理的任何事件。
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | 对话机器人 | 机器人对话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
