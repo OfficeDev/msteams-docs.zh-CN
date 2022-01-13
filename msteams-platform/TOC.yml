@@ -108,15 +108,15 @@
           href: toolkit/add-capability.md
         - name: 将云资源添加到 Teams 应用
           href: toolkit/add-resource.md
-        - name: 自定义 Teams 应用清单
+        - name: 自定义 Teams 应用部件清单
           href: toolkit/TeamsFx-manifest-customization.md
-        - name: 预览 Teams 应用清单
+        - name: 预览 Teams 应用部件清单
           href: toolkit/TeamsFx-manifest-preview.md
         - name: 管理多个环境
           href: toolkit/TeamsFx-multi-env.md
         - name: 在 Teams 工具包上与其他开发人员协作
           href: toolkit/TeamsFx-collaboration.md
-        - name: 使用 CI/CD 工作流
+        - name: CI/CD 指南
           href: toolkit/use-CICD-template.md
         - name: Teams 工具包 CLI
           href: toolkit/TeamsFx-CLI.md
