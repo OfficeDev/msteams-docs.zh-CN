@@ -1,16 +1,16 @@
 ---
 title: 定义消息传递扩展搜索命令
 author: surbhigupta
-description: 了解应用的邮件扩展搜索Microsoft Teams，通过应用清单创建搜索命令，并手动使用代码示例和示例。
+description: 了解适用于应用的邮件扩展搜索Microsoft Teams，通过应用清单创建搜索命令，并手动使用代码示例和示例。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4cfbb57176f5c1bdcac5e120e23284b6bd705df3
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889382"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059073"
 ---
 # <a name="define-messaging-extension-search-commands"></a>定义消息传递扩展搜索命令
 
@@ -64,7 +64,7 @@ ms.locfileid: "60889382"
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. 添加命令 **ID** 和 **标题**。
-1. 选择必须调用搜索命令的位置。 选择 **邮件** 当前不会更改搜索命令的行为。 下图显示了搜索命令调用位置：
+1. 选择必须调用搜索命令的位置。 下图显示了搜索命令调用位置：
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
@@ -83,7 +83,7 @@ ms.locfileid: "60889382"
 |`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
 | `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
-您必须添加搜索参数的详细信息，该参数定义在 Teams 客户端中可见的文本。
+您必须添加搜索参数的详细信息，该参数定义您的用户在 Teams 客户端中可见的文本。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
@@ -125,7 +125,7 @@ ms.locfileid: "60889382"
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | 说明 | .NET    | Node.js   |   
+| 示例名称           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
 |Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
