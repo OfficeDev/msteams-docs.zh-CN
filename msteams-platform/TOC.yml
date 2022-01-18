@@ -325,7 +325,9 @@
           href: task-modules-and-cards/cards/cards-format.md
         - name: 卡片操作
           href: task-modules-and-cards/cards/cards-actions.md
-        - name: 自适应卡片中的键入头搜索
+        - name: 自适应卡片中的人员选取器
+          href: task-modules-and-cards/cards/people-picker.md
+        - name: 在自适应卡片中键入提前搜索
           href: task-modules-and-cards/cards/dynamic-search.md
         - name: 自适应卡的通用操作
           items:

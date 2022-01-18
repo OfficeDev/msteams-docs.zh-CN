@@ -1,15 +1,16 @@
 ---
 title: Microsoft Teams JavaScript 客户端 SDK v2 预览版
-description: 了解 JavaScript Microsoft Teams SDK v2 预览版中即将发生的变化
+description: 了解 JavaScript 客户端 SDK v2 预览版Microsoft Teams更改
 ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
-ms.openlocfilehash: 646bebc22a31f01ea98cb367b8c8292b07c2e8f3
-ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
+ms.localizationpriority: medium
+ms.openlocfilehash: 7a8b5ed919cac07b1d0710a1f23c0ade0cca2ffb
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391337"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059819"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams JavaScript 客户端 SDK v2 预览版
 
@@ -21,18 +22,18 @@ TeamsJS SDK v2 预览版有两项重大更改，代码将需要考虑这些更�
 
  - [**API 现已组织到 *功能 中*。**](#apis-organized-into-capabilities) 你可以将功能视为提供类似功能的 API 的逻辑分组，如 、 `authentication` `calendar` 和 `mail` `monetization` `meeting` `sharing` 。
 
- 可以使用 Teams Toolkit[的 Visual Studio Code](https://aka.ms/teams-toolkit)来简化 Teams 应用的更新过程，如下一节中所述。
+ 可以使用 Teams Toolkit[扩展](https://aka.ms/teams-toolkit)Visual Studio Code简化 Teams 应用的更新过程，如下一节中所述。
 
 > [!NOTE]
 > 启用现有 Teams 应用在 Outlook 和 Office需要：
 > 1. 依赖 或 `@microsoft/teams-js@2.0.0-beta.1` 更高版本，
 > 2. 根据本文档中所述的所需更改修改现有应用程序代码。
 >
->  如果你引用 (现有) 应用的 Teams 或更高版本，则如果你的代码调用已更改的 API，你将看到弃用 `@microsoft/teams-js@2.0.0-beta.1` 警告。 提供了 API 转换层 (映射当前 SDK 以预览 SDK API 调用) ，以使现有 Teams 应用在 Teams 中继续工作，直到它们能够更新代码以使用 TeamsJS SDK v2 预览版。 使用本文中概述的更改更新代码后，你的个人选项卡也将在 Outlook 和 Office 中运行。
+>  如果你引用 (现有) 应用的 Teams 或更高版本，则如果你的代码调用已更改的 API，你将看到弃用 `@microsoft/teams-js@2.0.0-beta.1` 警告。 提供了 API 转换层 (映射当前 SDK 以预览 SDK API 调用) ，以使现有 Teams 应用在 Teams 中继续工作，直到它们能够更新代码以使用 TeamsJS SDK v2 预览版。 使用本文中概述的更改更新代码后，你的个人选项卡也将在 Outlook 中Office。
 
 ## <a name="updating-to-the-teams-client-sdk-v2-preview"></a>更新到 Teams 客户端 SDK v2 预览版
 
-将你的 Teams 应用更新为使用 TeamsJS SDK v2 预览的最简单方法是使用 Teams Toolkit[扩展](https://aka.ms/teams-toolkit)Visual Studio Code。 本部分将介绍执行这些步骤的步骤。 如果你想要手动更新代码，请参阅转换为承诺的回调和组织[](#callbacks-converted-to-promises)为功能的[API](#apis-organized-into-capabilities)部分，了解有关所需 API 更改的更多详细信息。
+将你的 Teams 应用更新为使用 TeamsJS SDK v2 Preview 的最简单方法是使用 Teams Toolkit[扩展](https://aka.ms/teams-toolkit)Visual Studio Code。 本部分将介绍执行这些步骤的步骤。 如果你想要手动更新代码，请参阅转换为承诺的回调和组织[](#callbacks-converted-to-promises)为功能的[API](#apis-organized-into-capabilities)部分，了解有关所需 API 更改的更多详细信息。
 
 ### <a name="1-install-the-latest-teams-toolkit-vs-code-extension"></a>1. 安装最新的 Teams Toolkit VS Code 扩展
 
@@ -41,14 +42,14 @@ TeamsJS SDK v2 预览版有两项重大更改，代码将需要考虑这些更�
 1. 更新清单架构的命令
 1. 用于更新 SDK 引用和调用网站的命令
 
-下面是在其他应用程序中运行个人选项卡Teams所需的两个关键Microsoft 365：""
+下面是在其他应用程序中运行个人选项卡应用Teams两个关键Microsoft 365：""
 
 ### <a name="2-updating-the-manifest"></a>2. 更新清单
 
 # <a name="teams-toolkit"></a>[Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. 打开命令 *调色板*： `Ctrl+Shift+P`
-1. 运行 **Teams：Teams清单以支持** Outlook 和 Office 应用命令，然后选择应用清单文件。 将就地进行更改。
+1. 运行 **Teams：Teams清单以支持** Outlook 和 Office 应用命令并选择应用清单文件。 将就地进行更改。
 
 # <a name="manual-steps"></a>[手动步骤](#tab/manifest-manual)
 
@@ -62,7 +63,7 @@ TeamsJS SDK v2 预览版有两项重大更改，代码将需要考虑这些更�
 ```
 ---
 
-如果你使用Teams Toolkit创建个人应用，则还可以使用它来验证对清单文件所做的更改并识别任何错误。 打开命令调色板并找到"Teams：验证清单文件"，或从 Teams Toolkit (的"部署"菜单中选择选项，查找 Teams 左侧 `Ctrl+Shift+P` 的 Visual Studio Code) 。 
+如果你使用Teams Toolkit创建个人应用，则还可以使用它来验证对清单文件所做的更改并识别任何错误。 打开命令调色板并找到"Teams：验证清单文件"，或者从 Teams Toolkit (的"部署"菜单中选择选项，查找 Teams 图标位于 Visual Studio Code) 左侧 `Ctrl+Shift+P` 。 
 
 :::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit&quot;部署&quot;菜单下的&quot;验证清单文件&quot;选项":::
 
@@ -94,7 +95,7 @@ Teams接收回调参数的 API 已更新为返回 JavaScript [Promise](https://d
 app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, core.executeDeepLink, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, media.captureImage, media.getMedia, media.selectMedia, media.viewImages, media.scanBarCode, meeting.getAppContentStageSharingCapabilities, meeting.getAuthenticationTokenForAnonymousUser, meeting.getIncomingClientAudioState, meeting.getLiveStreamState, meeting.getMeetingDetails, meeting.requestStartLiveStreaming, meeting.requestStopLiveStreaming, meeting.shareAppContentToStage, meeting.stopSharingAppContentToStage, meeting.toggleIncomingClientAudio, meeting.getAppContentStageSharingState, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.config.setConfig, pages.config.getConfig, people.selectPeople, ChildAppWindow.postMessage, ParentAppWindow.postMessage
 ```
 
-你需要更新代码调用其中任何 API 以使用 Promises 的方式。 例如，如果你的代码调用一个Teams API，如下所示：
+你需要更新代码调用其中任何 API 以使用 Promises 的方式。 例如，如果你的代码调用 Teams API，如下所示：
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -175,12 +176,12 @@ async function example() {
 
 你可以在运行时通过调用给定功能上的 函数来检查主机是否支持 (`isSupported()` 命名空间) 。 如果受 `true` 支持，它将返回，如果不支持， `false` 并且你可以根据需要调整应用行为。 这允许你的应用在支持它的主机中打开 UI 和功能，同时继续为不支持它的主机运行。
 
-在 Context interface () 上，运行你的应用的主机名称将公开为 *hostName* 属性，可通过调用 在运行时 `app.Context.app.host.name` 查询 `getContext` 。 它还作为 URL 占位符 `{hostName}` [值 提供](../tabs/how-to/access-teams-context.md#get-context-by-inserting-url-placeholder-values)。 最佳做法是谨慎使用 *hostName* 机制：
+在 Context 接口 () 上，运行你的应用的主机名称作为 *hostName* 属性公开，可通过调用 在运行时 `app.Context.app.host.name` 查询 `getContext` 。 它还作为 URL 占位符 `{hostName}` [值 提供](../tabs/how-to/access-teams-context.md#get-context-by-inserting-url-placeholder-values)。 最佳做法是谨慎使用 *hostName* 机制：
 
-* **请勿根据** *hostName* 属性值假定主机中的某些功能可用或不可用。 相反，请检查功能支持 `isSupported` () 。
-* **请勿使用** *hostName 对* API 调用进行网关调用。 相反，请检查功能支持 `isSupported` () 。
-* **使用** *hostName* 根据应用程序运行的主机来区分其主题。 例如，在 Microsoft Teams 中运行时，可以使用紫色作为主要主题色Teams，Outlook在 Outlook 中运行时使用蓝色。
-* **使用** *hostName* 根据用户运行的主机来区分向用户显示的消息。 例如 *，在* Office 中运行时，Office web 版在 Teams 中管理任务Microsoft Teams。 
+* **请勿根据** *hostName* 属性值假定主机中的某些功能可用或不可用。 相反，检查功能支持 `isSupported` () 。
+* **请勿使用** *hostName 对* API 调用进行网关调用。 相反，检查功能支持 `isSupported` () 。
+* **使用** *hostName* 根据应用程序运行的主机来区分其主题。 例如，在 Microsoft Teams 中运行时，可以使用紫色作为主要主题色Teams，在Outlook中运行时Outlook蓝色Outlook。
+* **使用** *hostName* 根据用户运行的主机来区分向用户显示的消息。 例如，显示"在 Office 中运行时在 Office web 版 中管理任务Teams在Microsoft Teams 中运行时。
 
 ### <a name="namespaces"></a>命名空间
 
@@ -218,7 +219,7 @@ TeamsJS SDK v2 Preview 通过命名空间将 API *组织到* 功能中。 一些
 
 #### <a name="pages-namespace"></a>*pages* 命名空间
 
-命名空间包括在各种客户端中运行和导航网页Microsoft 365，包括Teams、Office和 `pages` Outlook。 它还包括多个子功能，作为子命名空间实现。
+命名空间包括用于在各种客户端（包括 Microsoft 365、Teams、Office 和 Outlook）中运行和导航 `pages` 网页Outlook。 它还包括多个子功能，作为子命名空间实现。
 
 | 原始命名空间 `global (window)` | 新命名空间 `pages` |
 | - | - |
@@ -305,7 +306,7 @@ TeamsJS *任务* 命名空间已重命名为 *对话框*，并且以下 API 已�
 
 ### <a name="updates-to-the-context-interface"></a>对 *Context 接口* 的更新
 
-该接口已移动到命名空间并进行了更新，以对类似的属性进行分组，以在 Outlook 和 Office 中运行时获得更好的可伸缩性 `Context` `app` ，Teams。
+该接口已移动到命名空间并进行了更新，以对类似的属性进行分组，以提供更好的可伸缩性，因为它在 Outlook 和 Office 中运行 `Context` `app` ，Teams。
 
 添加了一 `app.Context.app.host.name` 个新属性，使个人选项卡能够根据主机应用程序区分用户体验。
 
@@ -314,7 +315,7 @@ TeamsJS *任务* 命名空间已重命名为 *对话框*，并且以下 API 已�
 | 接口中的原始 `Context` 名称 | 中的新位置 `app.Context` |
 | - | - |
 | `appIconPosition` | `app.Context.app.iconPositionVertical` |
-| `appLaunchId`| *不在客户端TEAMS SDK v2 预览版中* |
+| `appLaunchId`| *不在 Teams 客户端 SDK v2 预览版中* |
 | `appSessionId` | `app.Context.app.sessionId`|
 | `channelId`| `app.Context.channel.id` |
 | `channelName`| `app.Context.channel.displayName`|
@@ -363,7 +364,7 @@ TeamsJS *任务* 命名空间已重命名为 *对话框*，并且以下 API 已�
 
 还可以了解有关 [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md) 更改日志和 [TeamsJS SDK v2 预览 API](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)参考中的更改的详细信息。
 
-当你准备好测试在 Teams 和 Outlook 中Office，请参阅：
+当你准备好测试在 Teams 和 Office 中运行的 Outlook 应用时，请参阅：
 
 > [!div class="nextstepaction"]
 > [跨Teams扩展你的Microsoft 365](overview.md)

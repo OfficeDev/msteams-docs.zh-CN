@@ -4,18 +4,18 @@ description: 了解如何为用户注册新的音频/视频呼叫Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: d1cf0049c37f7f586abf19f9e9d0290c74e230ac
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
+ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948619"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "62062507"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>为会议注册呼叫和会议Microsoft Teams
 
-参与音频或视频呼叫和联机会议的机器人是Microsoft Teams自动程序，具有以下用于注册机器人的额外功能：
+参与音频或视频呼叫和联机会议的机器人是一个Microsoft Teams聊天机器人，具有以下用于注册机器人的额外功能：
 
-* 新版应用清单Teams两个附加设置 和 `supportsCalling` `supportsVideo` 。 这些设置包含在开发人员[预览版本的](../../resources/dev-preview/developer-preview-intro.md)应用清单Teams中。
+* 新版应用清单Teams两个附加设置和 `supportsCalling` `supportsVideo` 。 这些设置包含在列表的[清单架构中Microsoft Teams。](../../resources/schema/manifest-schema.md)
 * [必须为Graph](./registering-calling-bot.md#add-graph-permissions)的 Microsoft 应用 ID 配置 Microsoft 应用权限。
 * 呼叫Graph联机会议 API 权限需要租户管理员同意。
 
@@ -23,13 +23,13 @@ ms.locfileid: "60948619"
 
 呼叫和联机会议自动程序在 manifest.json 中具有以下两个其他设置，这些设置为 Teams 中的机器人启用音频或Teams。
 
-* `bots[0].supportsCalling`. 如果存在并设置为 `true` ，Teams自动程序可以参与通话和联机会议。
-* `bots[0].supportsVideo`. 如果存在 并设置为 `true` ，Teams自动程序支持视频。
+* `bots[0].supportsCalling`. 如果存在并设置为 `true` ，Teams自动程序可以参加通话和联机会议。
+* `bots[0].supportsVideo`. 如果存在并设置为 `true` ，Teams自动程序支持视频。
 
 如果希望 IDE 正确验证通话和会议机器人的 manifest.json 架构是否包含这些值，可以按如下方式更改 `$schema` 属性：
 
 ```json
-"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
 ```
 
 下一部分使你能够创建新的机器人或将呼叫功能添加到现有机器人。
@@ -42,7 +42,7 @@ ms.locfileid: "60948619"
 
 1. 使用此链接可创建新的自动程序 `https://dev.botframework.com/bots/new` 。 或者，如果你选择 Bot  Framework 门户中的"创建自动程序"按钮，你将在 Microsoft Azure 创建自动程序，你必须拥有 Azure 帐户。
 1. 添加Teams通道。
-1. 选择"**通话** 频道"页面上Teams选项卡。 选择 **"启用呼叫**"，然后更新 Webhook (，以) 接收传入通知的 HTTPS URL 调用 **Webhook，** 例如 `https://contoso.com/teamsapp/api/calling` 。 有关详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels)。
+1. 选择"**通话频道**"页面上Teams"选项卡。 选择 **"启用呼叫**"，然后更新 **Webhook (，** 以) 接收传入通知的 HTTPS URL 调用 Webhook，例如 `https://contoso.com/teamsapp/api/calling` 。 有关详细信息，请参阅 [配置频道](/bot-framework/portal-configure-channels)。
 
     ![配置Teams频道信息](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
@@ -78,7 +78,7 @@ ms.locfileid: "60948619"
 
 ### <a name="assign-permissions"></a>分配权限
 
-如果你想要使用 Azure Active Directory (AAD) V1 终结点，则必须使用[Azure](https://aka.ms/aadapplist)门户提前为自动程序[配置应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
+如果你想要使用 Azure Active Directory (AAD) V1 终结点，则必须使用[Azure](https://aka.ms/aadapplist)门户提前配置[自动程序的应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
 
 ### <a name="get-tenant-administrator-consent"></a>获取租户管理员同意
 

@@ -4,15 +4,15 @@ description: 了解如何通过订阅计划Microsoft Teams应用盈利。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal
-ms.openlocfilehash: 711f40ad24a0d714f4555ceb134009d6810b947f
-ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
+ms.localizationpriority: medium
+ms.openlocfilehash: b358b7bbdd780851eedb78ca2151bc062d402f99
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61348354"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059614"
 ---
-# <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>将 SaaS 产品与Microsoft Teams一起
+# <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>将 SaaS 产品/服务与Microsoft Teams一起
 
 :::row:::
    :::column span="3":::
@@ -31,7 +31,7 @@ ms.locfileid: "61348354"
 
 1.  [针对 SaaS 产品配置你的应用](#configure-your-app-for-the-saas-offer)。
 
-1.  [将你的应用发布到Teams应用商店](#publish-your-app)。
+1.  [将应用发布到Teams应用商店](#publish-your-app)。
 
    :::column-end:::
    :::column span="1":::
@@ -45,11 +45,11 @@ ms.locfileid: "61348354"
 
 有关全面指导， [请参阅如何为 Microsoft 商业市场规划 SaaS 产品](/azure/marketplace/plan-saas-offer)。
 
-在规划如何利用Teams盈利时，需要考虑以下一些操作：
+在规划如何利用 Teams 盈利时，需要考虑以下一些操作：
 
 * 确定订阅模型。 可交易 SaaS 产品可以包含多个订阅计划。 可供任何人使用的公共订阅计划最为常见，但你可能还希望仅面向具有交易的特定客户。 有关详细信息，请参阅 [Microsoft 商业市场中的专用产品/服务](/azure/marketplace/private-offers)。
 * 阅读 SaaS 优惠的"通过 [*Microsoft*](/azure/marketplace/plan-saas-offer#listing-options)销售"一览选项，如果你希望用户直接通过应用商店购买应用的订阅计划，Teams此选项。
-* 了解如何[Azure Active Directory (Azure AD) SSO](/azure/marketplace/azure-ad-saas) (单一) 客户购买和管理订阅。  (Azure AD SaaS 产品/服务Teams应用需要 SSO。) 
+* 了解[Azure Active Directory (Azure AD) SSO](/azure/marketplace/azure-ad-saas) (单一) 如何帮助客户购买和管理订阅。  (Azure AD SaaS 产品/服务Teams应用需要 SSO。) 
 * 了解你负责管理和支付支持客户使用 SaaS 产品所需的基础结构。
 * 规划移动。 为了避免违反第三方应用商店策略，你的应用不能包括允许用户在移动设备上购买订阅计划的链接。 但是，你仍然可以指示你的应用是否具有需要订阅计划的功能。 有关详细信息，请参阅相关的商业 [市场认证策略](/legal/marketplace/certification-policies#114048-mobile-experience)。
 
@@ -68,7 +68,7 @@ ms.locfileid: "61348354"
 ### <a name="best-practices-for-implementing-subscription-management"></a>实现订阅管理的最佳方案
 
 * 借助可交易 saaS Teams应用， (订阅计划) 许可证应分配给单个用户，而不是组或整个组织。
-* 为用户分配订阅计划后，请通过自动程序或Teams通知用户。 在消息传递中，包括有关如何将应用添加到Teams入门的信息。
+* 为用户分配订阅计划后，请通过自动程序或Teams通知他们。 在消息传递中，包括有关如何将应用添加到Teams入门的信息。
 * 支持多个管理员的想法。 换句话说，同一组织中的多个用户可以购买和管理自己的订阅。
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>构建订阅管理的登录页面 
@@ -79,9 +79,9 @@ ms.locfileid: "61348354"
 
 ### <a name="best-practices-for-landing-pages"></a>登录页面的最佳实践
 
-为要盈利的应用生成登录Teams，请考虑以下方法。 请参阅最终用户购买体验中的 [登录页面示例](#end-user-purchasing-experience)。
+为要盈利的应用生成登录Teams请考虑以下方法。 请参阅最终用户购买体验中的 [登录页面示例](#end-user-purchasing-experience)。
 
-* 用户必须能够使用用于购买订阅的相同凭据Azure AD登录页面。 有关详细信息，请参阅Azure AD[市场中的可交易 SaaS 产品/服务](/azure/marketplace/azure-ad-saas)。
+* 用户必须能够使用用于购买订阅Azure AD登录页面。 有关详细信息，请参阅Azure AD市场中的可交易[SaaS 产品/服务](/azure/marketplace/azure-ad-saas)。
 * 允许用户在你的登录页面上执行以下操作。 不要忘记考虑适合用户的角色和权限 (例如，你可能希望仅允许订阅管理员搜索以下) ：
   * 使用电子邮件或另一种标识形式搜索其组织中的用户。
   * 查看他们可以在列表中为其分配许可证的用户。
@@ -123,7 +123,7 @@ ms.locfileid: "61348354"
 > [!IMPORTANT]
 > 你必须在 AppSource 中测试可交易 SaaS 产品。 目前，在应用完成应用商店验证Teams无法测试端到端事务。
 
-从Teams，这些测试必须验证许可证和分配的数量是否与用户Teams中心中的许可证和分配匹配：
+从Teams的角度来看，这些测试必须验证许可证和分配的数量是否与用户Teams中心内内容匹配：
 
 * 在登录页面上激活和配置他们的订阅计划。
 * 向自己或他人分配、删除或重新分配许可证。
@@ -153,7 +153,7 @@ ms.locfileid: "61348354"
 
 ## <a name="publish-your-app"></a>发布应用程序
 
-你已创建 SaaS 产品并链接到 Teams 应用，现在应该将应用发布到 Teams 应用商店。 有关完整说明，请参阅[将应用发布到Teams应用商店](~/concepts/deploy-and-publish/appsource/publish.md)。
+你已创建 SaaS 产品/服务，并Teams你的应用，现在应该将应用发布到 Teams 应用商店。 有关完整说明，请参阅[将应用发布到Teams应用商店](~/concepts/deploy-and-publish/appsource/publish.md)。
 
 > [!IMPORTANT]
 > 即使你的应用已列在应用商店Teams，你仍然必须再次完成应用商店验证过程，以包含你的 SaaS 产品。
@@ -164,7 +164,7 @@ ms.locfileid: "61348354"
 
 以下示例显示用户如何购买名为 *Recloud* 的虚拟Teams订阅计划。
 
-1. 在 Teams 应用商店中，查找并选择 *"Recloud"* 应用。
+1. 在 Teams 应用商店中，查找并选择 *"重新云"* 应用。
 
 1. 在应用详细信息对话框中，选择 **购买订阅**。
 
