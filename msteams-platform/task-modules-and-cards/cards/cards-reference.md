@@ -4,12 +4,12 @@ description: 介绍 Teams 中机器人可用的所有卡片和卡片操作
 ms.localizationpriority: high
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 81d38b4b068b647b55e130e320d4edb67d332cd4
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 741bd83b6888527e8e89b5be51dd408bb802fad3
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059712"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081133"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -283,7 +283,7 @@ Bot Framework 参考:
 
 下表提供了支持主图卡的功能:
 
-| Teams 中的机器人 | 消息传递扩展  | 连接器 | 机器人框架 |
+| Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -350,7 +350,7 @@ Teams 已添加列表卡片，以提供超出列表集合可提供的功能。 �
 
 下表提供了支持列表卡的功能:
 
-| Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
+| Teams 中的机器人 | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -643,7 +643,7 @@ Bot Framework 参考:
 
 下表提供了支持缩略卡的功能:
 
-| Teams 中的机器人 | 消息传递扩展  | 连接器 | 机器人框架 |
+| Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -920,7 +920,7 @@ Bot Framework 参考:
 
 下表提供了支持列表集合的功能:
 
-| Teams 中的机器人 | 消息传递扩展  | 连接器 | 机器人框架 |
+| Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -953,3 +953,4 @@ Bot Framework 参考:
 * [格式卡](~/task-modules-and-cards/cards/cards-format.md)
 * [最新卡片](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [使用自适应卡的通用操作](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

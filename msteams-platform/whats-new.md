@@ -3,13 +3,13 @@ title: 最近更新
 description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员功能
 ms.topic: reference
 ms.localizationpriority: high
-keywords: teams 新增的最新更新和功能
-ms.openlocfilehash: af25a14d8caa230f0462f1c4194a1e60f27b8bda
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+keywords: 团队最新更新或开发人员预览版和功能
+ms.openlocfilehash: 531f520c479ec48ed734021550609a237705d37e
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062500"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080958"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,9 +22,9 @@ ms.locfileid: "62062500"
 
 | Date | 更新 | 在此处查找  |
 | --- | --- | --- |
+|01/19/2022| 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| 自适应卡片中的人员选取器 (适用于移动和 GA 桌面版开发人员预览)  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
-|
 
 ## <a name="ga-features"></a>GA 功能
 
@@ -38,8 +38,13 @@ ms.locfileid: "62062500"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|01/19/2022| 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| 适用于桌面的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 
+<br>
+
+</details>
+  
 <br>
 
 <details>
@@ -48,42 +53,42 @@ ms.locfileid: "62062500"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-|12/24/2021| 引入了授予 Tab 设备权限的分步指南。 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |
+|12/24/2021| 引入了授予 Tab 设备权限的分步指南 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |
 |12/23/2021| 引入了使用自适应卡片创建选项卡的分步指南。| 添加身份验证>选项卡>使用 SSO 身份验证> [分步指南创建具有自适应卡片的选项卡](sbs-tab-with-adaptive-cards.yml) |
 |12/21/2021 | 更新了 Teams Toolkit 3.0.0 的 JavaScript、C# 和 Node.js 模块入门。 | • 开始>[使用 JavaScript 生成第一个应用](sbs-gs-javascript.yml) <br> • 入门>使用[ C# 或 .NET 生成第一个应用](sbs-gs-csharp.yml) <br> • 入门>[使用 Node.js 生成第一个应用](sbs-gs-nodejs.yml) |
-|12/20/2021| 引入了使用单一登录 （SSO） 的选项卡和消息传递扩展的分步指南。 | 添加身份验证>选项卡>使用 SSO 身份验证>[选项卡和邮件传递扩展的 SSO 分步指南](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
-|12/20/2021| 引入了创建会议内容气泡的分步指南。 | 生成 Teams 会议应用>为会议启用和配置应用> [创建会议内容气泡的分步指南](sbs-meeting-content-bubble.yml) |
+|12/20/2021| 引入了使用单一登录的选项卡和消息传递扩展的分步指南 （SSO） | 添加身份验证>选项卡>使用 SSO 身份验证>[选项卡和邮件传递扩展的 SSO 分步指南](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
+|12/20/2021| 引入了创建会议内容气泡的分步指南 | 生成 Teams 会议应用>为会议启用和配置应用> [创建会议内容气泡的分步指南](sbs-meeting-content-bubble.yml) |
 |12/09/2021| 引入了会议阶段视图的分步指南。 | 生成会议 Teams 应用>为会议启用和配置应用>[创建会议阶段视图的分步指南](sbs-meetings-stage-view.yml)|
-|12/13/2021 | 引入了链接到 SaaS 产品的应用指南。 | 发布应用>发布到 Teams 应用商店>查看应用商店验证指南>[链接到 SaaS 产品/服务的应用指南](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
-|12/09/2021| 引入了创建会议侧窗格的分步指南。 | 生成用于 Teams 会议的应用>启用和配置会议应用>[在 Teams 中创建会议侧窗格的分步指南](sbs-meetings-sidepanel.yml)|
-|12/01/2021 | 引入了新的应用商店图标。 | • 设计应用>应用功能>[为 Microsoft Teams 设计个人应用](concepts/design/personal-apps.md)</br> • 设计应用> UI 组件>[使用高级 UI 组件设计 Microsoft Teams 应用](concepts/design/design-teams-app-advanced-ui-components.md) |
-|11/24/2021| 引入了生成会议令牌的分步指南。 | 生成用于 Teams 会议>启用和配置会议应用>[在 Teams 中创建会议令牌的分步指南](sbs-meeting-token-generator.yml)|
+|12/13/2021 | 针对链接到 SaaS 产品/服务的应用引入了指南 | 发布应用>发布到 Teams 应用商店>查看应用商店验证指南>[链接到 SaaS 产品/服务的应用指南](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+|12/09/2021| 引入了创建会议侧窗格的分步指南 | 生成用于 Teams 会议的应用>启用和配置会议应用>[在 Teams 中创建会议侧窗格的分步指南](sbs-meetings-sidepanel.yml)|
+|12/01/2021 | 引入了新应用商店图标 | • 设计应用>应用功能>[为 Microsoft Teams 设计个人应用](concepts/design/personal-apps.md)</br> • 设计应用> UI 组件>[使用高级 UI 组件设计 Microsoft Teams 应用](concepts/design/design-teams-app-advanced-ui-components.md) |
+|11/24/2021| 引入了生成会议令牌的分步指南 | 生成用于 Teams 会议>启用和配置会议应用>[在 Teams 中创建会议令牌的分步指南](sbs-meeting-token-generator.yml)|
 |11/17/2021| 更新 Microsoft Teams 应用商店验证指南|[应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
-|11/17/2021| 桌面和移动用户的静态和动态提前输入搜索。| • 生成卡片和任务模块>生成卡片> [自适应卡片内的提前输入搜索](task-modules-and-cards/cards/dynamic-search.md) </br> • 生成卡片和任务模块>生成卡片>概述>[自适应卡片内的提前输入搜索](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • 生成卡片和任务模块>概述>[卡片和任务模块概述](task-modules-and-cards/cards-and-task-modules.md)|
-|11/13/2021| 启用机器人以使用资源特定许可（RSC） 接收所有通道消息。 | • 生成机器人>机器人对话>机器人对话消息>[使用 RSC 接收所有通道消息](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • 生成机器人>机器人对话> [机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 生成机器人>机器人对话> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|10/28/2021| 使用可交易的 SaaS 产品/服务使 Teams 应用盈利。| 发布应用>发布到 Teams 应用商店>[在 Teams 应用程序中包含 SaaS 产品/服务](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
-|10/25/2021| 通过分步指南中的新结构和过程更新了 Microsoft Teams 开发人员文档的入门模块。| 入门>[你的第一个 Teams 应用入门](get-started/get-started-overview.md) |
-|10/21/2021| 为选项卡或个人应用添加`registerOnFocused` API。 | 生成选项卡>创建个人选项卡> [为选项卡或个人应用添加`registerOnFocused` API](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
+|11/17/2021| 桌面和移动用户的静态和动态键入式搜索 | • 生成卡片和任务模块>生成卡片> [自适应卡片内的提前输入搜索](task-modules-and-cards/cards/dynamic-search.md) </br> • 生成卡片和任务模块>生成卡片>概述>[自适应卡片内的提前输入搜索](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • 生成卡片和任务模块>概述>[卡片和任务模块概述](task-modules-and-cards/cards-and-task-modules.md)|
+|11/13/2021| 可以启用机器人以使用特定于资源的许可 （RSC） 接收所有通道消息 | • 生成机器人>机器人对话>机器人对话消息>[使用 RSC 接收所有通道消息](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • 生成机器人>机器人对话> [机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 生成机器人>机器人对话> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|10/28/2021| 使用可交易的 SaaS 产品/服务使 Teams 应用盈利 | 发布应用>发布到 Teams 应用商店>[在 Teams 应用程序中包含 SaaS 产品/服务](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+|10/25/2021| 通过分步指南中的新结构和过程更新了 Microsoft Teams 开发人员文档的入门模块 | 入门>[你的第一个 Teams 应用入门](get-started/get-started-overview.md) |
+|10/21/2021| 为选项卡或个人应用添加 `registerOnFocused` API | 生成选项卡>创建个人选项卡> [为选项卡或个人应用添加`registerOnFocused` API](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| 会议阶段现已在 GA 中提供。 | 生成用于 Teams 会议的应用>[启用和配置 Teams 会议应用](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|10/20/2021| 会议详细信息 API 和实时 Teams 会议事件。 | 生成用于 Teams 会议的应用>[创 建Teams 会议应用](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|10/20/2021| 会议详细信息 API 和实时 Teams 会议事件 | 生成用于 Teams 会议的应用>[创 建Teams 会议应用](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |10/18/2021| 选项卡链接展开和阶段视图。 | 生成选项卡>[选项卡链接展开和阶段视图](tabs/tabs-link-unfurling.md) |
-|10/08/2021| 设计自适应卡片的新最佳做法。 | 设计应用> UI 组件>[为 Teams 应用设计自适应卡片](task-modules-and-cards/cards/design-effective-cards.md) |
+|10/08/2021| 设计自适应卡片的新最佳做法 | 设计应用> UI 组件>[为 Teams 应用设计自适应卡片](task-modules-and-cards/cards/design-effective-cards.md) |
 |10/05/2021| 隐藏 Teams 应用，直到管理员允许取消隐藏应用。| 设计应用> [隐藏 Teams 应用，直到管理员批准](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
 |10/05/2021| 规划适用于 Teams 移动的应用。 | 应用基础知识>[规划 Teams 移动的响应式选项卡](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
-|10/04/2021| 引入了用于管理 Teams 应用的新 Teams 开发人员门户。| 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
-|09/21/2021|对于机器人和传入 Webhook，Teams 在用户提及中支持 AAD 对象 ID 和 UPN。| • 生成卡片和任务模块>生成卡片>[用户提及的 AAD 对象 ID 和 UPN](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • 生成卡片和任务模块>生成卡片> [卡片- 概述](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
-|08/16/2021| 支持在自适应卡片上进行输入验证（适用于所有功能的 v1.3）和通用操作（适用于机器人发送卡的 v1.4）。 | • 自适应卡>创作卡> [输入验证](/adaptive-cards/authoring-cards/input-validation)</br> • 生成卡片和任务模块>生成卡>自适应卡的通用操作>[适用于自适应卡片 v1.4 的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|08/30/2021| “自定义一起模式”场景功能将参与者合并到单个虚拟场景中，并将其视频流放置在预先确定的席位中。| 为 Teams 会议生成应用> [“自定义在一起模式”场景](~/apps-in-teams-meetings/teams-together-mode.md) |
+|10/04/2021| 引入了用于管理 Teams 应用的新 Teams 开发人员门户 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
+|09/21/2021|对于机器人和传入 Webhook，Teams 在用户提及中支持 AAD 对象 ID 和 UPN | • 生成卡片和任务模块>生成卡片>[用户提及的 AAD 对象 ID 和 UPN](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • 生成卡片和任务模块>生成卡片> [卡片- 概述](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|08/16/2021| 支持在自适应卡片上进行输入验证（适用于所有功能的 v1.3）和通用操作（适用于机器人发送卡的 v1.4） | • 自适应卡>创作卡> [输入验证](/adaptive-cards/authoring-cards/input-validation)</br> • 生成卡片和任务模块>生成卡>自适应卡的通用操作>[适用于自适应卡片 v1.4 的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|08/30/2021| "自定义在一起模式"场景功能将参与者合并到单个虚拟场景中，并将其视频流置于预先确定的席位中 | 为 Teams 会议生成应用> [“自定义在一起模式”场景](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| 引入了创建具有单一登录 （SSO） 的 Teams 机器人的分步指南。| 添加身份验证>机器人> [使用 SSO 创建 Teams 机器人的分步指南](sbs-bots-with-sso.yml) |
 |08/19/2021| 将机器人安装到对话线程时，收到安装更新事件。| 生成机器人>机器人对话> [安装更新事件](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
-|08/12/2021|具有自适应卡片的生成选项卡。| 生成选项卡> [具有自适应卡片生成选项卡](tabs/how-to/build-adaptive-card-tabs.md) |
-|08/04/2021|选项卡将不再具有围绕其体验的边距。| 生成选项卡> [删除选项卡边距](resources/removing-tab-margins.md) |
-|07/08/2021|Teams 移动版增加了对会议中应用的支持。 | 为 Teams 会议生成应用>[会议应用扩展性](apps-in-teams-meetings/meeting-app-extensibility.md) |
+|08/12/2021|具有自适应卡片的生成选项卡| 生成选项卡> [具有自适应卡片生成选项卡](tabs/how-to/build-adaptive-card-tabs.md) |
+|08/04/2021|选项卡的体验周围将不再有边距 | 生成选项卡> [删除选项卡边距](resources/removing-tab-margins.md) |
+|07/08/2021|Teams 移动版在会议中添加对应用的支持 | 为 Teams 会议生成应用>[会议应用扩展性](apps-in-teams-meetings/meeting-app-extensibility.md) |
 |06/28/2021|集成人员选取器功能。 | 与 Teams 集成>[与人员选取器功能集成](concepts/device-capabilities/people-picker-capability.md) |  
-|06/25/2021| 引入了发送主动邮件的分步指南。 | 生成机器人>机器人对话>主动消息>[发送主动消息的分步指南](sbs-send-proactive.yml) |
+|06/25/2021| 引入了发送主动消息的分步指南 | 生成机器人>机器人对话>主动消息>[发送主动消息的分步指南](sbs-send-proactive.yml) |
 |06/09/2021| 自适应卡片中具有 `allowExpand` 属性的图像的阶段视图。| 生成卡片和任务模块>自适应卡片>[自适应卡片内的图像阶段视图](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
 |05/31/2021| 对话选项卡。 | 生成选项卡> [开始和继续有关选项卡中内容的对话](~/tabs/how-to/conversational-tabs.md) |
-|05/24/2021| 更新 Teams 移动模式的应用设计指南。 | 设计应用>[设计 Teams 应用](~/concepts/design/design-teams-app-overview.md) |
+|05/24/2021| 使用移动模式更新了 Teams 应用设计准则 | 设计应用>[设计 Teams 应用](~/concepts/design/design-teams-app-overview.md) |
 |05/13/2021| 添加了有关 mConnect 和 Skooler 的信息。| 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
 |05/10/2021| 应用清单 v1.10 已发布。 | 应用清单> [清单架构](resources/schema/manifest-schema.md) |
 |05/10/2021| 新的应用自定义功能。 | 设计应用> [启用组织以自定义应用](concepts/design/enable-app-customization.md) |
