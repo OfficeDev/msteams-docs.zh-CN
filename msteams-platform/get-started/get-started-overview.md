@@ -1,67 +1,67 @@
 ---
 title: 入门 - 概述
-description: 开发人员文档入门Microsoft Teams概述
-ms.localizationpriority: medium
+description: Microsoft Teams 开发工具入门概述文档
+ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams开发人员示例
-ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
-ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
-ms.translationtype: MT
+keywords: Microsoft Teams 开发工具示例
+ms.openlocfilehash: be53bc97ecc5df84ab4358927f4332764068d1c4
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/28/2021
-ms.locfileid: "61619800"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059642"
 ---
-# <a name="get-started"></a>开始行动
+# <a name="get-started"></a>入门
 
-欢迎使用开始构建和部署自定义应用Microsoft Teams！
+欢迎访问“入门”，了解如何为 Microsoft Teams 构建和部署自定义应用！
 
-演练构建基本的实际 Teams 应用的步骤。 入门还介绍了常用工具、基本概念以及更高级的功能。
+演练构建基本、实际 Teams 应用的步骤。 “入门”还介绍了常用工具、基本概念以及更高级的功能。
 
-以下是您将了解的一些概念：
+下面概述了你将学习的内容：
 
-- 快速启动并运行 Microsoft Teams Toolkit (扩展Visual Studio Code) 。
-- 获取有关 Toolkit SDK 的体验。
-- 配置和生成不同类型的 Teams 应用。
+- 快速启动并运行 Microsoft Teams 工具包（Visual Studio Code 的扩展程序）。
+- 体验工具包和 SDK。
+- 配置和构建不同类型的 Teams 应用。
 
-让我们快速浏览一下可以选择的生成环境选项，以及构建和部署应用Teams路线图。
+让我们快速浏览一下可供选择的构建环境选项，以及构建和部署 Teams 应用的路线图。
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="显示生成和部署应用程序的基本步骤的Teams示意图":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="显示构建和部署 Teams 应用的基本步骤的插图":::
 
 ## <a name="app-capabilities-and-development-tools"></a>应用功能和开发工具
 
-根据应用需要的功能，选择相应的开发工具集。
+根据你希望应用具备的功能，选择适当的开发工具集。
 
 | 应用功能 | 用户交互 | 推荐的工具 | SDK | 技术堆栈/语言 |
 |--------|-------------|--------|--------|--------|
-| 选项卡 | 全屏嵌入式 Web 体验。 | VS Code使用Teams Toolkit或[TeamsFx CLI（](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)如果你更喜欢使用 CLI） | [适用于核心](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)库的 TeamsFx [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) Teams UI 功能的客户端 SDK | Web 技术通常包括 HTML、CSS 和 JavaScript (。React) 。 |
-| 机器人 | 与成员对话的聊天机器人。 | VS Code扩展Teams Toolkit [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和 [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java 和 Python。 |
-| 消息传递扩展 | 用于将外部内容插入对话或对邮件采取措施的快捷方式。 | VS Code扩展Teams Toolkit [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和 [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java 和 Python。 |
+| 选项卡 | 全屏嵌入式 Web 体验。 | 带有 Teams 工具包扩展的 VS Code，或 [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)（如果你更喜欢使用 CLI） | 用于核心库的 [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和用于 UI 功能的 [Teams 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) | Web 技术一般为 HTML、CSS 和 JavaScript（包括 React）。 |
+| 机器人 | 与成员交谈的聊天机器人。 | 带有 Teams 工具包扩展的 VS Code，或 [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和 [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java 和 Python。 |
+| 消息传递扩展 | 用于将外部内容插入对话或对邮件采取措施的快捷方式。 | 带有 Teams 工具包扩展的 VS Code，或 [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和 [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java 和 Python。 |
 
 *不限于使用这些特定堆栈！*
 
-如果你已熟悉 Yeoman 工作流，你可能更喜欢使用 [YoTeams Yeoman 生成器](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) 生成应用。
+如果你已经熟悉 Yeoman 工作流程，则可能更愿意使用 [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) 来构建应用。
 
 > [!NOTE]
-> 如果你一直使用 App Studio，我们建议你尝试开发人员门户来配置、分发和管理你的Teams应用。
+> 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。
 
 
-## <a name="build-your-first-teams-app"></a>生成首个Teams应用
+## <a name="build-your-first-teams-app"></a>构建首个 Teams 应用
 
-现在，让我们生成你的第一个Teams应用。 但首先，选择语言 (框架) 准备开发环境。
-
-> [!div class="nextstepaction"]
-> [使用 Teams JavaScript 生成 React](../sbs-gs-javascript.yml)
+现在，让我们来构建你的首个 Teams 应用。 但首先，请选择语言（框架）并准备开发环境。
 
 > [!div class="nextstepaction"]
-> [使用Teams生成SPFx](../sbs-gs-spfx.yml)
+> [通过 JavaScript 使用 React 构建 Teams 应用](../sbs-gs-javascript.yml)
 
 > [!div class="nextstepaction"]
-> [使用 Teams 或 .NET C#应用](../sbs-gs-csharp.yml)
+> [使用 SPFx 构建 Teams 应用](../sbs-gs-spfx.yml)
 
 > [!div class="nextstepaction"]
-> [使用Teams生成Node.js](../sbs-gs-nodejs.yml)
+> [使用 C# 或 .NET 构建 Teams 应用](../sbs-gs-csharp.yml)
+
+> [!div class="nextstepaction"]
+> [使用 Node.js 构建 Teams 应用](../sbs-gs-nodejs.yml)
 
 ## <a name="see-also"></a>另请参阅
 
-* [Microsoft Teams示例](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Microsoft Teams 示例](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
 * [Git 和 GitHub 资源](/contribute/additional-resources)
