@@ -1,57 +1,57 @@
 ---
-title: 开发者预览版
-description: 介绍公共服务开发者预览版中的Microsoft Teams
+title: 开发人员预览版
+description: 介绍 Microsoft Teams 公共开发人员预览版中的功能
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: teams 预览开发人员功能
-ms.openlocfilehash: 9337a0fbc89b02783db9253cc2975a68658b4268
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams 预览开发人员功能
+ms.openlocfilehash: ee367daaf1570e75a5da7518cc2b0e27704741c4
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949584"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059791"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>公共开发人员预览版Microsoft Teams
+# <a name="public-developer-preview-for-microsoft-teams"></a>适用于 Microsoft Teams 的公共开发人员预览版
 
 >[!NOTE]
->预览版中包含的功能可能不完整，在公开发布之前可能会发生更改。 它们仅供测试和探索使用。 它们不应在生产应用程序中使用。
+>预览版中包含的功能可能不完整，并且在公开发布之前可能会发生更改。 它们仅用于测试和探索目的。 不应在生产应用程序中使用它们。
 
-开发者预览版是一个针对开发人员的公共计划，可提供对开发人员中未Microsoft Teams。 这允许你浏览和测试即将推出的功能，以潜在地包含在Microsoft Teams应用中。 我们还欢迎 [提供有关开发人员](~/feedback.md) 预览版中任何功能的反馈。 开发人员预览Microsoft Teams客户端启用，因此无需担心影响整个组织。
+开发人员预览版是面向开发人员的公共计划，可提供对 Microsoft Teams 中未发布功能的早期访问权限。 这使你能够探索和测试即将推出的功能，以便可能包含在 Microsoft Teams 应用中。 欢迎你对开发者预览版中的任何功能提供 [反馈](~/feedback.md)。 每个 Microsoft Teams 客户端都已启用开发者预览版，因此你不必担心会影响整个组织。
 
-## <a name="developer-preview-app-manifest"></a>开发人员预览应用清单
+## <a name="developer-preview-app-manifest"></a>开发人员预览版应用清单
 
-开发人员预览版中启用的许多功能都需要更改应用清单 JSON 文件。 为此，你需要使用开发人员预览清单 [架构](~/resources/schema/manifest-schema-dev-preview.md)。 如果使用此架构，你将不能使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md) 进行这些更改，也不能使用它上载应用进行测试。 若要上传应用，你需要单击应用栏上的 `More apps` 图标，然后选择 `Upload a custom app link` 。 使用此方法，你只能上传应用包的压缩版本。
+开发人员预览版中启用的许多功能都需要更改应用清单 JSON 文件。 为此，需要使用 [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md)。 如果使用此架构，将无法使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md) 进行这些更改，也无法使用它上传应用进行测试。 若要上传应用，需要点击应用栏上的 `More apps` 图标，然后选择 `Upload a custom app link`。 使用此方法，只能上传应用包的压缩版本。
 
-你可能会发现使用 App Studio 创建应用包的非开发人员预览部分非常有用，然后导出该包并手动编辑文件以添加想要使用的 `manifest.json` 开发人员预览功能。 将开发人员预览功能添加到文件后，将无法将程序包重新导入 `manifest.json` App Studio。
+你可能会发现使用 App Studio 创建应用包的非开发人员预览部分，然后导出该包并手动编辑 `manifest.json` 文件来添加要使用的开发人员预览功能是很有用的。 将开发人员预览功能添加到 `manifest.json` 文件后，将无法再将改你包重新导入 App Studio。
 
-## <a name="enable-developer-preview"></a>启用开发人员预览
+## <a name="enable-developer-preview"></a>启用开发人员预览版
 
-基于每个客户端启用开发人员预览，但启用开发人员预览的选项在组织级别控制。 若要启用为个人启用开发人员预览的选项，必须确保他们能够上传自定义应用。 有关 [其他信息，](~/concepts/build-and-test/prepare-your-o365-tenant.md) 请参阅设置租户。
+开发人员预览按客户端基础启用，但开启开发人员预览的选项是在组织层面控制的。 若要启用为个人开启开发人员预览的选项，必须确保他们能够上传自定义应用。 有关其他信息，请参阅 [设置租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
-使用包含开发人员预览功能的应用可能会导致未启用开发人员预览的客户端发生意外行为。 如果未看到开发人员预览条目，最可能的原因是您的组织未配置应用上载。
+使用包含开发人员预览功能的应用可能会导致未启用开发人员预览的客户端出现意外行为。 如果看不到开发人员预览的条目，最可能的原因是你的组织未配置应用上传。
 
 ### <a name="on-a-desktop-or-web-client"></a>在桌面或 Web 客户端上
 
-若要在桌面或 Web 客户端上启用公共开发人员预览，需要执行以下操作：
+若要在桌面或 Web 客户端上启用公共开发者预览版，你需要按以下执行:
 
-1. 在租户的管理控制台中启用应用上传，如下 [所述](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
-1. 单击你的配置文件 (右上方或左下角Teams) 显示Teams菜单。
-1. 选择"关于→开发人员预览"。
-1. 选择 **切换到开发人员预览**。
+1. 如 [这里](~/concepts/build-and-test/prepare-your-o365-tenant.md) 所述，在租户的管理控制台中启用上传应用程序。
+1. 单击你的个人资料 (在 Teams 界面的右上角或左下角) 以显示 Teams 菜单。
+1. 选择“关于”→“开发人员预览版”。
+1. 选择“**切换到开发人员预览版**”。
 
 ### <a name="on-a-mobile-client"></a>在移动客户端上
 
-若要在移动客户端上启用公共开发人员预览版，需要执行以下操作：
+若要在移动客户端上启用公共开发人员预览，需要执行以下操作:
 
-1. 在租户的管理控制台中启用应用上传，如下 [所述](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
-1. 打开左上方的汉堡包菜单，然后选择 **"设置"。**
-1. 选择 **"关于"。**
-1. 单击"开发人员预览"切换。
+1. 如 [这里](~/concepts/build-and-test/prepare-your-o365-tenant.md) 所述，在租户的管理控制台中启用上传应用程序。
+1. 打开左上角的汉堡菜单，然后选择 **设置**。
+1. 选择“**关于**”。
+1. 单击“开发人员预览”切换开关。
 
 ## <a name="disable-developer-preview"></a>禁用开发人员预览
 
-使用"关于开发人员预览→"下的同一菜单项，然后单击它将其关闭。
+使用“关于”→“开发人员预览”下的相同菜单项，并点击它以将其关闭。
 
 ## <a name="see-also"></a>另请参阅
 
-[测试和调试Microsoft Teams应用](~/concepts/build-and-test/debug.md)
+[测试和调试 Microsoft Teams 应用](~/concepts/build-and-test/debug.md)
