@@ -3,7 +3,7 @@ title: Microsoft Teams开发人员文档
 summary: 欢迎使用开发人员Microsoft Teams概述。 Microsoft Teams 应用将关键信息、常用工具和受信任的流程引入人们不断收集、学习和工作的地方。
 metadata:
   title: Microsoft Teams开发人员文档
-  description: 为用户生成应用Teams
+  description: 生成适用于应用程序的应用程序Teams
   ms.service: service
   ms.subservice: subservice
   ms.topic: landing-page
@@ -12,17 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea705be66fdf5521fc68cedeb89eeb6d97319c32
-  ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+  ms.openlocfilehash: de250e7f4e744b293abce91998fa7b65ab22c215
+  ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 01/18/2022
-  ms.locfileid: "62062487"
+  ms.lasthandoff: 01/19/2022
+  ms.locfileid: "62081042"
 landingContent:
 - title: 探索最新
   linkLists:
   - linkListType: concept
     links:
+    - text: 自适应卡片表单完成反馈
+      url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
     - text: 自适应卡片中的人员选取器
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: 'Teams Toolkit预览Visual Studio Code (预览) '
@@ -95,7 +97,7 @@ landingContent:
       url: sbs-gs-spfx.yml
     - text: 使用 C# .NET 生成应用
       url: sbs-gs-csharp.yml
-    - text: 使用应用生成Node.js
+    - text: 使用应用程序生成Node.js
       url: sbs-gs-nodejs.yml
 - title: 生成适用于Teams
   linkLists:

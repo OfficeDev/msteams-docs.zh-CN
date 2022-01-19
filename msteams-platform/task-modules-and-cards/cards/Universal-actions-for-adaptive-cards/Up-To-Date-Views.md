@@ -5,23 +5,23 @@ author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 审批基本卡拒绝自适应
-ms.openlocfilehash: 2e7feb96ecefd0e6253c0f3a86e3863e0ae7a53b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0fce06ee940a172c02b00c3ae417f6b31090f5e0
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887404"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081147"
 ---
 # <a name="up-to-date-cards"></a>最新卡片
 
-现在可以在自适应卡片上为用户提供最新信息。 包括刷新和邮件编辑组合在Teams。 当服务发生变化时，将用户特定视图动态更新到其最新状态。 例如，对于项目管理或票证卡，更新注释和任务状态。 对于审批，最新状态会反映出来，同时还提供不同的信息和操作。
+现在可以在自适应卡片上为用户提供最新信息。 将刷新和邮件编辑组合在Teams。 当服务发生变化时，将用户特定视图动态更新到其最新状态。 例如，对于项目管理或票证卡，更新注释和任务状态。 对于审批，最新状态会反映出来，同时还提供不同的信息和操作。
 
 例如，用户可以在资源审批对话中Teams请求。 Alex 创建审批请求并将其分配给 Megan 和 Nestor。 以下是创建审批请求的两个部分：
 
 * 可以使用自适应卡片的 属性应用用户 `refresh` 特定视图。
 使用用户特定视图一个可以向一组用户显示具有"批准"或"拒绝"按钮的卡片，并且向其他用户显示没有这些按钮的卡片。
 
-* 若要使卡片状态始终更新，Teams邮件编辑机制。 例如，对于每次审批，自动程序可以触发对所有用户的邮件编辑。 此自动程序消息编辑会触发所有自动刷新用户的调用请求，自动程序可以使用更新的用户特定 `adaptiveCard/action` 卡片对此进行响应。
+* 若要使卡片状态始终更新，Teams可以使用邮件编辑机制。 例如，对于每次审批，自动程序可以触发对所有用户的邮件编辑。 此自动程序消息编辑会触发所有自动刷新用户的调用请求，自动程序可以使用更新的用户特定 `adaptiveCard/action` 卡片对此进行响应。
 
 有关详细信息，请参阅 [如何执行自动程序消息编辑](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)。
 
@@ -114,7 +114,7 @@ ms.locfileid: "60887404"
 下面是根据审批请求向用户显示的两个角色：
 
 * 审批基本卡：向不是审批者列表一部分的用户显示，并且请求尚未获得批准或拒绝，以及自适应卡片 JSON 属性中列表的一 `userIds` `refresh` 部分。
-* 具有" **批准"** 或 **"** 拒绝"按钮的审批卡片：向作为审批者列表的一部分的用户和自适应卡片 JSON 的 属性中的列表 `userIds` `refresh` 显示。
+* 包含" **批准"** 或 **"** 拒绝"按钮的审批卡：向作为审批者列表的一部分的用户和自适应卡片 JSON 的 属性中的列表 `userIds` `refresh` 显示。
 
 **发送资产审批请求**
 
@@ -130,7 +130,7 @@ ms.locfileid: "60887404"
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="最新用户特定视图":::
 
-7. 现在，Megan 选择" **批准** "按钮，该按钮由 支持 `Action.Execute` 。 机器人获取一 `adaptiveCard/action` 个调用请求，它可以返回自适应卡片作为响应。
+7. 现在，Megan 选择" **批准"** 按钮，该按钮由 支持 `Action.Execute` 。 机器人获取一 `adaptiveCard/action` 个调用请求，它可以返回自适应卡片作为响应。
 8. 机器人使用更新的卡片触发邮件编辑，其中显示 Nestor 和 Megan 已批准了请求。
 9. 自动程序消息编辑不会触发任何自动刷新。 还将从步骤 7 和 8 中此自适应卡片 JSON 的 属性中的列表中删除 Megan `userIds` 的用户 MRI。 `refresh`
 
@@ -138,7 +138,7 @@ ms.locfileid: "60887404"
 
 ## <a name="adaptive-card-sent-as-response-of-adaptivecardaction-and-message-edit"></a>作为 响应和 发送的自适应 `adaptiveCard/action` 卡片 `message edit`
 
-以下代码提供了作为响应和步骤 4 和 5 发送的自适应卡片 `adaptiveCard/action` `message edit` 示例：
+以下代码提供了作为响应和步骤 4 和 5 发送的自适应卡片 `adaptiveCard/action` `message edit` 的示例：
 
 ```JSON
 {
@@ -270,3 +270,4 @@ ms.locfileid: "60887404"
 
 * [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
 * [用户特定视图](User-Specific-Views.md)
+* [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

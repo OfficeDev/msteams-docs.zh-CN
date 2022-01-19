@@ -3,16 +3,16 @@ title: 使用自适应卡的通用操作
 description: 了解如何使用自适应卡片的通用操作，包括适用于自适应卡片的通用操作架构、刷新模型以及使用代码示例的向后兼容性。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 6a7160e1aa2dff6500335dc6b8557fcd94e836d8
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768606"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080951"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>使用自适应卡的通用操作
 
-自适应卡片的通用操作提供了一种实现基于自适应卡片的方案的方法，适用于Teams和Outlook。 本文档涵盖下列主题：
+自适应卡片的通用操作提供了一种为用户和用户实现基于自适应卡片Teams Outlook。 本文档涵盖下列主题：
 
 * [用于自适应卡片的通用操作架构](#schema-for-universal-actions-for-adaptive-cards)
 * [刷新模型](#refresh-model)
@@ -44,7 +44,7 @@ ms.locfileid: "61768606"
 
 | 客户端 | 行为 |
 | :-- | :-- |
-| Teams | 你的卡片停止工作。 卡不会刷新， `Action.Execute` 并且不会呈现，具体取决于客户端Teams版本。 若要确保应用程序的最大Teams，请通过 回退 `Action.Execute` `Action.Submit` 属性中的 定义 。 |
+| Teams | 你的卡片停止工作。 卡片不会刷新， `Action.Execute` 并且不会呈现，具体取决于 Teams 客户端的版本。 若要确保应用程序的最大Teams，请通过 回退 `Action.Execute` `Action.Submit` 属性中的 定义 。 |
 
 若要详细了解如何支持旧客户端，请参阅 [向后兼容性](#backward-compatibility)。
 
@@ -70,7 +70,7 @@ ms.locfileid: "61768606"
 
 * 如果在卡片的刷新部分中指定了 list 属性，则不会自动 `userIds` `userIds: []` 刷新该卡片。 相反，" **刷新** 卡片"选项显示在 Web 或桌面的三点菜单和移动版长按上下文菜单中（即 Android 或 iOS）中，以手动刷新卡片。
 
-* 添加 UserIds 属性的原因是，Teams频道可以包含大量成员。 如果所有成员同时查看频道，则无条件自动刷新会导致许多并发呼叫机器人。 必须始终包含 属性，以确定哪些用户必须自动刷新，最多 `userIds` *60 (60*) MRIs 。
+* 添加 UserIds 属性是因为Teams频道可以包含大量成员。 如果所有成员同时查看频道，则无条件自动刷新会导致许多并发呼叫机器人。 必须始终包含 属性，以确定哪些用户必须自动刷新，最多 `userIds` *60 (60*) MRIs 。
 
 * 您可以提取Teams成员的用户 MRIs。 若要详细了解如何在自适应卡片的刷新部分添加 userIds 列表，请参阅 [提取名单或用户配置文件](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
 
@@ -120,7 +120,8 @@ When `Action.Execute` is executed in the client， a new type of Invoke activity
 
 ## <a name="see-also"></a>另请参阅
 
-* [自适应卡片中的Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [用户中的自适应卡片Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [顺序工作流](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [最新卡片](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

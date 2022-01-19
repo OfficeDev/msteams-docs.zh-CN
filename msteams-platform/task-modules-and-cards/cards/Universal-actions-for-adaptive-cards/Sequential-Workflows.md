@@ -4,12 +4,12 @@ description: 了解将通用操作与代码示例一同用于自适应卡片的�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: e80f3d41e4dcbd281654c8070862fd5df9b0c128
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889109"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081049"
 ---
 # <a name="sequential-workflows"></a>顺序工作流
 
@@ -78,7 +78,7 @@ ms.locfileid: "60889109"
 `Action.Execute`调用自动程序可以返回自适应卡片作为响应，这将替换 Teams。
 以下示例提供机器人在确认食物或食物选择或订单时返回内容：
 
-* 在从卡片 1 选择食物时，自动程序可以返回一张卡片，用于选择卡 2。
+* 在从卡片 1 选择食物时，机器人可以返回一张卡，用于选择卡 2。
 * 在从卡片 2 选择时，自动程序可以返回一个订单确认卡，即卡片 3。
 * 在从卡 3 确认订单后，自动程序可以返回已确认订单的卡片，即卡片 4。
 
@@ -136,3 +136,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 * [用户中的自适应卡片Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
+* [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

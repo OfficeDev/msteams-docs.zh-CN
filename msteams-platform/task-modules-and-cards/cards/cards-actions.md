@@ -4,21 +4,21 @@ description: 描述自动Microsoft Teams中的卡片操作以及如何在机器�
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: teams 机器人卡片操作
-ms.openlocfilehash: 3509ab49f8e2031176743a9330ee3b6757b70277
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9add163801cee511ccc636ab3abbb95c35b26590
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889326"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081056"
 ---
 # <a name="card-actions"></a>卡片操作
 
 聊天机器人和邮件扩展中使用的Teams支持以下活动 [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) 类型：
 
 > [!NOTE]
-> 当 `CardAction` 与连接器一Office 365 `potentialActions` 连接器卡时，操作会有所不同。
+> 操作 `CardAction` 不同于从 `potentialActions` 连接器Office 365连接器卡的操作。
 
-| 类型 | Action |
+| 类型 | 操作 |
 | --- | --- |
 | `openUrl` | 在默认浏览器中打开 URL。 |
 | `messageBack` | 从选择按钮或点击卡片的用户向机器人发送消息和有效负载。 向聊天流发送单独的消息。 |
@@ -29,7 +29,7 @@ ms.locfileid: "60889326"
 > [!NOTE]
 >* Teams不支持 `CardAction` 上表中未列出的类型。
 >* Teams不支持 `potentialActions` 属性。
->* 卡片操作不同于 Bot [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Framework 或 Azure Bot 服务中的建议操作。 建议的操作在操作中不受Microsoft Teams。 如果希望按钮显示在自动程序消息Teams，请使用卡片。
+>* 卡片操作不同于 Bot [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Framework 或 Azure Bot 服务中的建议操作。 建议的操作在项目Microsoft Teams。 如果希望按钮显示在自动程序消息Teams，请使用卡片。
 >* 如果使用卡片操作作为邮件扩展的一部分，则这些操作在将卡片提交到频道之前不起作用。 当卡片位于撰写消息框中时，操作不起作用。
 
 ## <a name="action-type-openurl"></a>操作类型 openUrl
@@ -41,7 +41,7 @@ ms.locfileid: "60889326"
 
 使用 `openUrl` ，可以创建具有以下属性的操作：
 
-| 属性 | 描述 |
+| 属性 | 说明 |
 | --- | --- |
 | `title` | 显示为按钮标签。 |
 | `value` | 此字段必须包含格式正确的完整 URL。 |
@@ -60,7 +60,7 @@ ms.locfileid: "60889326"
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个操作 `openUrl` 类型示例C#：
+以下代码显示了一个 `openUrl` 操作类型示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -121,7 +121,7 @@ CardFactory.actions([
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个操作 `messageBack` 类型示例C#：
+以下代码显示了一个 `messageBack` 操作类型示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -231,7 +231,7 @@ CardFactory.actions([
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个操作 `imBack` 类型示例C#：
+以下代码显示了一个 `imBack` 操作类型示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -291,7 +291,7 @@ CardFactory.actions([
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个操作 `invoke` 类型示例C#：
+以下代码显示了一个 `invoke` 操作类型示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -304,7 +304,7 @@ var button = new CardAction()
 
 # <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-以下代码显示了一个 `invoke` 操作类型示例Node.js：
+以下代码显示了一个操作 `invoke` 类型示例Node.js：
 
 ```javascript
 CardFactory.actions([
@@ -375,7 +375,7 @@ CardFactory.actions([
 
 `signin` 操作类型启动 OAuth 流，该流允许机器人与安全服务连接。 有关详细信息，请参阅自动 [程序中的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
 
-Teams还支持[仅由](#adaptive-cards-actions)自适应卡片使用的自适应卡片操作。
+Teams还支持[仅](#adaptive-cards-actions)由自适应卡片使用的自适应卡片操作。
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -438,7 +438,7 @@ CardFactory.actions([
 > [!NOTE]
 > 如果需要，可以在对象中包括其他 `data` 隐藏属性。
 
-| 属性 | 描述 |
+| 属性 | 说明 |
 | --- | --- |
 | `type` | 设置为 `messageBack` 。 |
 | `displayText` | 可选。 操作执行时由聊天流中的用户使用。 此文本不会发送到自动程序。 |
@@ -567,3 +567,4 @@ CardFactory.actions([
 * [使用机器人的任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [机器人中的自适应卡片](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [自适应卡的通用操作](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)
+* [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

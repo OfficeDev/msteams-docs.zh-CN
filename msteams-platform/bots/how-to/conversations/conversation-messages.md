@@ -5,24 +5,24 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059777"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081100"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
 对话中每条消息都是一 `Activity` 个类型 为 的对象 `messageType: message` 。 当用户发送消息时，Teams将邮件发送到自动程序。 Teams JSON 对象发送到机器人的消息终结点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与用户Teams通信。 Bot Builder SDK 提供以下功能：
+基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与Teams通信。 Bot Builder SDK 提供以下功能：
 
 * 轻松访问 Bot Framework 连接器。
 * 用于管理对话流和状态的其他功能。
 * 合并认知服务的简单方法，如自然语言处理 (NLP) 。
 
-自动程序使用 Teams 接收来自用户的消息，并且它会向用户发送一 `Text` 个或多个邮件响应。
+自动程序使用 Teams接收来自用户的消息，并且它会向用户发送一 `Text` 个或多个消息响应。
 
 ## <a name="receive-a-message"></a>接收消息
 
@@ -191,11 +191,11 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动被拆分为单独的Microsoft Teams活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。 建议发送单独的活动，而不是根据邮件拆分。
+> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动被拆分为单独的Microsoft Teams，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除[](~/bots/how-to/update-and-delete-bot-messages.md)邮件。 建议发送单独的活动，而不是根据邮件拆分。
 
 在用户和机器人之间发送的消息包含邮件中的内部通道数据。 此数据允许机器人在此频道上正常通信。 Bot Builder SDK 允许你修改消息结构。
 
-## <a name="teams-channel-data"></a>Teams频道数据
+## <a name="teams-channel-data"></a>Teams通道数据
 
 `channelData`对象包含Teams特定的信息，是团队和频道的一个明确来源。 （可选）你可以缓存这些 ID 并用作本地存储的密钥。 `TeamsActivityHandler`SDK 中的 从 对象提取重要信息 `channelData` ，使其易于访问。 但是，您始终可以从对象访问 `turnContext` 原始数据。
 
@@ -342,7 +342,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="adaptive-cards"></a>自适应卡
 
-自适应卡片可以在机器人中创作，并可在多个应用（如 Teams、你的网站等）中显示。 有关详细信息，请参阅自适应 [卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+自适应卡片可以在机器人中创作，并可在多个应用（如 Teams、你的网站等）中显示。 有关详细信息，请参阅 [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 
 以下代码显示发送简单自适应卡片的示例：
 
@@ -370,13 +370,31 @@ async def on_message_activity(self, turn_context: TurnContext):
 }
 ```
 
-若要了解有关机器人中的卡和卡的更多信息，请参阅 [卡片文档](~/task-modules-and-cards/what-are-cards.md)。
+### <a name="form-completion-feedback"></a>表单完成反馈
+
+向自动程序发送响应时，表单完成消息将显示在自适应卡片中。 消息可以是两种类型，错误或成功：
+
+* **错误**：当发送给自动程序的响应不成功时，出现错误 **，将出现"重试"** 消息。
+
+    ![错误消息](~/assets/images/Cards/error-message.png)
+
+* **成功**：当发送给自动程序的响应成功时， **将显示你的响应已发送到应用** 消息。
+
+    ![成功消息](~/assets/images/Cards/success.PNG)
+
+您可以选择" **关闭"** 或"切换聊天"来消除该消息。    
+
+**移动响应**：
+
+错误消息显示在自适应卡片的底部。
+
+有关自动程序中的卡和卡详细信息，请参阅 [卡片文档](~/task-modules-and-cards/what-are-cards.md)。
 
 ## <a name="status-code-responses"></a>状态代码响应
 
 以下是状态代码及其错误代码和消息值：
 
-| 状态代码 | 错误代码和消息值 | Description |
+| 状态代码 | 错误代码和消息值 | 说明 |
 |----------------|-----------------|-----------------|
 | 403 | **代码**： `ConversationBlockedByUser` <br/> **消息**：用户阻止了与机器人的对话。 | 用户通过审核设置在一对一聊天或频道中阻止机器人。 |
 | 403 | **代码**： `BotNotInConversationRoster` <br/> **消息**：机器人不是对话名单中的一部分。 | 机器人不是对话的一部分。 |
@@ -389,7 +407,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | Description | .NETCore | Node.js | Python |
+|示例名称 | 说明 | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams 对话自动程序 | 消息和对话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

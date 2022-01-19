@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: 自适应卡片个人应用身份验证数据流
-ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: f2b6c78293a2bc6f25e3989f6eba4c4e2833aaee
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216095"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080965"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -27,7 +27,7 @@ ms.locfileid: "61216095"
 
 自适应卡片选项卡是一种在卡片中生成选项卡的Teams。 你可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。使用自适应卡片呈现前端时，后端由机器人提供电源。 机器人负责接受请求，以及使用呈现的自适应卡片进行相应响应。
 
-可以使用现成的用户界面构建选项卡， (UI) 桌面、Web 和移动设备上的本机构建基块。 本文帮助你了解对应用清单进行更改所需的更改。 本文还介绍了调用活动如何请求和发送带自适应卡片的选项卡信息，及其对任务模块工作流的影响。
+可以使用现成的用户界面和 (UI) 桌面、Web 和移动设备上的) 构建基块来生成选项卡。 本文帮助你了解对应用清单进行更改所需的更改。 本文还介绍了调用活动如何请求和发送带自适应卡片的选项卡信息，及其对任务模块工作流的影响。
 
 下图显示了桌面和移动版中具有自适应卡片的生成选项卡：
 
@@ -432,12 +432,13 @@ ms.locfileid: "61216095"
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
+> [选项卡链接取消展开和阶段视图](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>另请参阅
 
-* [自适应卡片](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [自适应卡](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
 * [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
+* [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
