@@ -4,25 +4,25 @@ keywords: teams 应用功能权限 设备本机扫描 qr 条形码图像音频�
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能，例如扫描 qr、条形码、图像、音频、视频功能
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 24556765866eb271e30e9d1c7294c38352c78092
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: e6ee04f47c87df8be7a424993a4f0c916b5a69f3
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041725"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185454"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 
 可以使用本机设备Teams（如相机、麦克风和位置）丰富你的应用。 本文档指导你了解如何请求用户同意和访问本机设备权限。
 
 > [!NOTE]
-> * 若要将媒体功能集成到Microsoft Teams移动应用中，请参阅[集成媒体功能](mobile-camera-image-permissions.md)。
+> * 若要在移动应用中集成Microsoft Teams功能，请参阅[集成媒体功能](mobile-camera-image-permissions.md)。
 > * 若要将 QR 或条形码扫描仪功能集成到 Microsoft Teams 移动应用中，请参阅在应用中集成[QR 或条形码扫描仪Teams。](qr-barcode-scanner-capability.md)
 > * 若要在移动应用中集成位置Microsoft Teams，请参阅[集成位置功能](location-capability.md)。
 
 ## <a name="native-device-permissions"></a>本机设备权限
 
-必须请求设备权限才能访问本机设备功能。 设备权限对于所有应用构造（如选项卡、任务模块或消息传递扩展）的运行方式类似。 用户必须转到"权限"页Teams设置才能管理设备权限。
+必须请求设备权限才能访问本机设备功能。 设备权限对于所有应用构造（如选项卡、任务模块或消息传递扩展）的运行方式类似。 用户必须转到"权限"页，Teams设置才能管理设备权限。
 通过访问设备功能，你可以构建更丰富的体验，Teams平台，例如：
 
 * 捕获和查看图像。
@@ -32,12 +32,12 @@ ms.locfileid: "61041725"
 * 使用用户的位置信息显示相关信息。
 
 > [!NOTE]
-> * 目前，Teams不支持多窗口应用、选项卡和会议侧面板的设备权限。    
+> * 目前Teams不支持多窗口应用、选项卡和会议侧面板的设备权限。    
 > * 设备权限在浏览器中不同。 有关详细信息，请参阅 [浏览器设备权限](browser-device-permissions.md)。
 
 ## <a name="access-device-permissions"></a>访问设备权限
 
-JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)提供了您的 Teams 移动应用访问用户设备权限和构建更丰富的体验所需的工具。 [](#manage-permissions)
+Microsoft Teams [JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)客户端 SDK 提供了您的 Teams 移动应用访问用户设备权限和构建更丰富的体验所需的工具[](#manage-permissions)。
 
 虽然新式 Web 浏览器中对这些功能的访问是标准操作，但你必须Teams更新应用清单来向用户通知你使用的功能。 此更新允许你在桌面客户端上运行应用时请求Teams权限。
 
@@ -51,7 +51,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
 1. 打开Teams。
-1. 转到 **"设置**  >  **应用程序权限"。**
+1. 转到 **设置**  >  **应用权限"。**
 1. 选择要选择其设置的应用。
 1. 选择所需的设置。
 
@@ -96,7 +96,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 添加到 `devicePermissions` 应用程序清单后，使用 **HTML5** 权限 API 检查权限，而不出现提示：
 
-``` Javascript
+``` JavaScript
 // Different query options:
 navigator.permissions.query({ name: 'camera' });
 navigator.permissions.query({ name: 'microphone' });
@@ -116,61 +116,107 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="use-teams-apis-to-get-device-permissions"></a>使用Teams API 获取设备权限
 
-利用相应的 HTML5 或 Teams API，显示获取访问设备权限同意的提示。
+利用适当的 HTML5 或 Teams API，显示获取访问设备权限同意的提示。
 
 > [!IMPORTANT]
 > * 对 `camera` 、 `gallery` 和 `microphone` 的支持通过 [**selectMedia API 启用**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 将 [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) 用于单个映像捕获。
-> * 通过 `location` [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)启用对 的支持。 你必须将此功能用于位置，因为 HTML5 地理位置 API 当前在桌面客户端上Teams `getLocation API` 完全受支持。
+> * 通过 `location` [**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)启用对 的支持。 你必须将此功能用于位置，因为 HTML5 地理位置 API 当前在桌面客户端上 `getLocation API` Teams受到完全支持。
 
 例如：
  * 若要提示用户访问其位置，你必须调用 `getCurrentPosition()` ：
 
-    ```Javascript
+    ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
  * 若要提示用户访问桌面或 Web 上的相机，必须调用 `getUserMedia()` ：
 
-    ```Javascript
+    ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
  * 若要在移动设备上捕获图像，Teams调用 时请求获取权限 `captureImage()` ：
 
-    ```Javascript
-    microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
-      /* ... */
-    });
+    ```JavaScript
+            function captureImage() {
+            microsoftTeams.media.captureImage((error, files) => {
+                // If there's any error, an alert shows the error message/code
+                if (error) {
+                    if (error.message) {
+                        alert(" ErrorCode: " + error.errorCode + error.message);
+                    } else {
+                        alert(" ErrorCode: " + error.errorCode);
+                    }
+                } else if (files) {
+                    image = files[0].content;
+                    // Adding this image string in src attr of image tag will display the image on web page.
+                    let imageString = "data:" + item.mimeType + ";base64," + image;
+                }
+            });
+        } 
     ```
 
  * 当你调用 时，通知将提示用户 `requestPermission()` ：
 
-    ```Javascript
+    ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
-* 若要使用相机或访问照片库，Teams时，移动会询问权限 `selectMedia()` ：
+* 若要使用相机或访问照片库，Teams时移动会询问权限 `selectMedia()` ：
 
     ```JavaScript
-    microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-      /* ... */
-    );
-    ```
+     function selectMedia() {
+     microsoftTeams.media.selectMedia(mediaInput, (error, attachments) => {
+         // If there's any error, an alert shows the error message/code
+         if (error) {
+             if (error.message) {
+                 alert(" ErrorCode: " + error.errorCode + error.message);
+             } else {
+                 alert(" ErrorCode: " + error.errorCode);
+             }
+         } else if (attachments) {
+             // creating image array which contains image string for all attached images. 
+             const imageArray = attachments.map((item, index) => {
+                 return ("data:" + item.mimeType + ";base64," + item.preview)
+             })
+         }
+     });
+    } 
+  ```
 
 * 若要使用麦克风，Teams时，移动设备会询问权限 `selectMedia()` ：
 
-    ```JavaScript 
-    microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-      /* ... */
-    });
+    ```JavaScript
+     function selectMedia() {
+     microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+         // If there's any error, an alert shows the error message/code
+         if (error) {
+             if (error.message) {
+                 alert(" ErrorCode: " + error.errorCode + error.message);
+             } else {
+                 alert(" ErrorCode: " + error.errorCode);
+             }
+         }
+
+         if (attachments) {
+             // taking the first attachment  
+             let audioResult = attachments[0];
+
+             // setting audio string which can be used in Video tag
+             let audioData = "data:" + audioResult.mimeType + ";base64," + audioResult.preview
+         }
+     });
+     }
     ```
 
 * 若要提示用户在地图界面上共享位置，Teams调用 时请求权限 `getLocation()` ：
 
     ```JavaScript 
-    microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-      /* ... *
-    /});
+     function getLocation() {
+     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+         let currentLocation = JSON.stringify(location);
+     });
+     } 
     ```
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
@@ -185,7 +231,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="permission-behavior-across-login-sessions"></a>跨登录会话的权限行为
 
-将存储每个登录会话的设备权限。 这意味着，如果你登录到另一个 Teams（例如，在另一台计算机中）时，之前会话中的设备权限将不可用。 因此，必须重新同意新会话的设备权限。 这也意味着，如果你注销 Teams 或切换租户Teams，你的设备权限将从以前的登录会话中删除。  
+将存储每个登录会话的设备权限。 这意味着，如果你登录到另一个 Teams（例如，在另一台计算机中）时，之前会话中的设备权限将不可用。 因此，必须重新同意新会话的设备权限。 它还意味着，如果你注销 Teams 或 Teams 租户，你的设备权限将从以前的登录会话中删除。  
 
 > [!NOTE]
 > 当你同意本机设备权限时，它仅对当前的登录 _会话_ 有效。
@@ -201,4 +247,4 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 * [浏览器的设备权限](browser-device-permissions.md)
 * [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
 * [将 QR 或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
-* [在 Teams 中集成位置Teams](location-capability.md)
+* [将位置功能集成到 Teams](location-capability.md)

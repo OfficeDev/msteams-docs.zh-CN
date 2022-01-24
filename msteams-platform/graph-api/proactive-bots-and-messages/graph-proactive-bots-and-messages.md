@@ -6,18 +6,18 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: d65be003bd6fe245e8a6ca80ca8823a2e935ff43
-ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
+ms.openlocfilehash: 4fb4ff67ac9ffc156cac87a5d12240f2999a2163
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "62043222"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185423"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
 
 ## <a name="proactive-messaging-in-teams"></a>邮件中的主动Teams
 
-主动消息由机器人启动，以开始与用户的对话。 它们用于多种用途，包括发送欢迎消息、开展调查或投票以及广播组织范围内的通知。 邮件中的Teams消息 **可以临时对话** 或基于 **对话** 的对话传递：
+主动消息由机器人启动，以开始与用户的对话。 它们用于多种用途，包括发送欢迎消息、开展调查或投票以及广播组织范围内的通知。 邮件中的Teams消息 **可以临时对话** 或基于对话 **的对话传递：**
 
 |消息类型 | 说明 |
 |----------------|-------------- |
@@ -46,19 +46,19 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 >
 > * 自动程序需要应用程序权限，而不是用户委派权限，因为安装适用于其他人。
 >
-> * 租户AAD必须[显式授予对应用程序的权限](/graph/security-authorization#grant-permissions-to-an-application)。 向应用程序授予权限后，租户的所有成员AAD获取已授予的权限。
+> * 租户AAD必须[显式授予对应用程序的权限](/graph/security-authorization#grant-permissions-to-an-application)。 向应用程序授予权限后，AAD的所有成员都获得已授予的权限。
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>启用主动应用安装和消息传递
 
 > [!IMPORTANT]
 > Microsoft Graph只能安装发布到组织的应用商店或应用商店Teams应用。
 
-### <a name="create-and-publish-your-proactive-messaging-bot-for-teams"></a>为用户创建和发布主动消息Teams
+### <a name="create-and-publish-your-proactive-messaging-bot-for-teams"></a>创建并发布主动邮件自动程序Teams
 
-若要开始，你需要一个自动程序[Teams](../../bots/how-to/create-a-bot-for-teams.md)组织应用商店或应用商店[](../../concepts/bots/bot-conversations/bots-conv-proactive.md)中的主动邮件Teams[功能](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store)。 [](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org)
+若要开始，你需要一个自动[](../../bots/how-to/create-a-bot-for-teams.md)程序Teams组织应用商店或应用商店中的[](../../concepts/bots/bot-conversations/bots-conv-proactive.md)主动邮件Teams[功能](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store)。 [](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org)
 
 > [!TIP]
-> 生产就绪型 [*公司Communicator*](../..//samples/app-templates.md#company-communicator)应用模板允许广播消息，是构建主动式机器人应用程序的良好开始。
+> 生产就绪型 [*公司Communicator*](../..//samples/app-templates.md#company-communicator)模板允许广播消息，是构建主动式机器人应用程序的良好开始。
 
 ### <a name="get-the-teamsappid-for-your-app"></a>获取 `teamsAppId` 应用的
 
@@ -66,7 +66,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 * 从组织的应用程序目录中：
 
-    **Microsoft Graph页面参考**[：teamsApp 资源类型](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
+    **Microsoft Graph 页面参考**[：teamsApp 资源类型](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
 
     **HTTP GET** 请求：
 
@@ -74,7 +74,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
     GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    请求必须返回对象 `teamsApp` `id` ，即应用的目录生成的应用程序 ID。 这不同于你在应用清单中Teams ID：
+    请求必须返回对象 `teamsApp` `id` ，即应用的目录生成的应用程序 ID。 这不同于在应用清单中Teams ID：
 
     ```json
     {
@@ -92,7 +92,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 * 如果你的应用已在个人范围内为用户上载或旁加载：
 
-    **Microsoft Graph页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+    **Microsoft Graph页参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
     **HTTP GET** 请求：
 
@@ -117,7 +117,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 您可以确定当前是否已为邮件收件人安装自动程序，如下所示：
 
-**Microsoft Graph页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+**Microsoft Graph页参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 请求：
 
@@ -187,16 +187,61 @@ Content-Type: application/json
 
 自动程序 [可以在为用户或](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) 团队添加自动程序并接收所有用户信息后发送主动消息。
 
+## <a name="code-snippets"></a>代码段
+
+以下代码提供了发送主动邮件的示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+   int msgSentCount = 0;
+
+   // Send notification to all the members
+   foreach (var conversationReference in _conversationReferences.Values)
+   {
+       await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
+       msgSentCount++;
+   }
+
+   return msgSentCount;
+}
+
+private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
+{
+   await turnContext.SendActivityAsync("Proactive hello.");
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+server.get('/api/notify', async (req, res) => {
+    for (const conversationReference of Object.values(conversationReferences)) {
+        await adapter.continueConversationAsync(process.env.MicrosoftAppId, conversationReference, async context => {
+            await context.sendActivity('proactive hello');
+        });
+    }
+
+    res.setHeader('Content-Type', 'text/html');
+    res.writeHead(200);
+    res.write('<html><body><h1>Proactive messages have been sent.</h1></body></html>');
+    res.end();
+});
+```
+---
+
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **描述** | **.NET** | **Node.js** |
+| **示例名称** | **说明** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
 | 主动安装应用并发送主动通知 | 此示例演示如何通过调用 Microsoft Graph API 为用户使用主动安装应用并发送主动通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 
 ## <a name="additional-code-samples"></a>其他代码示例
 >
 > [!div class="nextstepaction"]
-> [**Teams主动邮件代码示例**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+> [**Teams 主动消息传递代码示例**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 
 ## <a name="see-also"></a>另请参阅
 

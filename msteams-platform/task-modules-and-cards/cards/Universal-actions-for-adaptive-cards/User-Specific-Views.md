@@ -4,12 +4,12 @@ description: 了解使用通用操作和代码示例的用户特定视图
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c110c8b1d1adf7140334d08073f2ef7780fbc5
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 645dd43039986f98560798899ac494b9f93c2a49
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081063"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185433"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
@@ -63,14 +63,14 @@ ms.locfileid: "62081063"
 
 **若要发送自适应卡片，请刷新用户特定视图，并调用对自动程序的请求**
 
-1. 当 Megan 创建新事件时，机器人会发送自适应卡片或公用卡片（包含事件详细信息）Teams对话。
+1. 当 Megan 创建新事件时，机器人会发送自适应卡片或公用卡片（包含事件详细信息Teams对话中）。
 2. 现在，此卡片将自动刷新到 Megan 和 Alex 的用户特定视图。 Alex 和 Megan 的用户 MRIs 添加到自适应卡片 JSON 的 `userIds` `refresh` 属性中。 对于对话中的其他用户，该卡片保持不变。
 3. 对于 Megan，自动刷新会触发 `adaptiveCard/action` 对机器人的调用请求。 机器人可以返回事件创建者卡片，并添加 `Edit` 按钮作为对此调用请求的响应。
 4. 同样，对于 Alex，自动刷新将触发 `adaptiveCard/action` 对自动程序的另一个调用请求。 机器人可以返回事件所有者卡片 `Resolve` 按钮作为对此调用请求的响应。
 
 ## <a name="invoke-request-sent-from-teams-client-to-the-bot"></a>调用从 Teams 客户端发送到自动程序的请求
 
-以下代码提供了从 Alex 和 Megan 的 Teams 客户端发送到机器人的调用请求示例：
+以下代码提供了从 Alex 和 Megan 的 Teams 客户端发送到机器人的调用请求的示例：
 
 ```JSON
 { 
@@ -181,7 +181,9 @@ ms.locfileid: "62081063"
 
 以下代码提供了用于返回自适应卡片的调用响应示例：
 
-```C#
+### <a name="c"></a>[C#](#tab/C)
+
+```csharp
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
@@ -193,6 +195,26 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
+### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+var card = "<adaptive card json>";
+ 
+const cardRes = {
+        statusCode: 200,
+        type: 'application/vnd.microsoft.card.adaptive',
+        value: card
+    };
+    const res = {
+        status: 200,
+        body: cardRes
+    };
+    return res;
+
+```
+
+---
+
 设计用户特定视图时请记住的卡片设计指南：
 
 * 您可以通过在 部分中指定特定卡片，为发送到聊天或频道的特定卡片创建最多 **60** `userIds` 个用户特定 `refresh` 视图。
@@ -203,7 +225,7 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | .NETCore | Node.js |
+|示例名称 | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新的自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 

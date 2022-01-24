@@ -5,12 +5,12 @@ description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3c39ed5c39a92967ebf8b90760bd28e7bb6366f3
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fda6092165fa55accbf5348b9850ac94396c05b5
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948381"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185420"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -27,23 +27,23 @@ ms.locfileid: "60948381"
 
 * 由你托管的可公开访问的 Web 服务。
 * Web 服务的自动程序框架注册。
-* 你的Teams应用程序包，可将Teams客户端连接到 Web 服务。
+* 你的Teams应用包，可将Teams客户端连接到 Web 服务。
 
 > [!TIP]
 > 使用开发人员门户向 Bot Framework 注册 Web 服务并指定应用配置。 有关详细信息，请参阅使用开发人员门户[管理应用Teams。](~/concepts/build-and-test/teams-developer-portal.md)
 
-Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于创建使用 C#、Java、Python 和 JavaScript 的聊天机器人。 如果你已有基于 Bot Framework 的自动程序，你可以轻松修改它以在Teams。 使用 C# 或 Node.js 来利用[我们的 SDK。](/microsoftteams/platform/#pivot=sdk-tools) 这些包扩展基本 Bot Builder SDK 类和方法，如下所示：
+Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于创建使用 C#、Java、Python 和 JavaScript 的聊天机器人。 如果你已有基于 Bot Framework 的自动程序，你可以轻松修改它以在 Teams。 使用 C# 或 Node.js 来利用[我们的 SDK。](/microsoftteams/platform/#pivot=sdk-tools) 这些包扩展基本 Bot Builder SDK 类和方法，如下所示：
 
 * 使用专用卡类型，如Office 365卡。
 * 在Teams设置特定于频道的数据。
 * 处理邮件扩展请求。
 
 > [!IMPORTANT]
-> 可以使用任何 web Teams技术开发自动程序应用，并直接调用[Bot Framework REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
+> 可以使用任何 Web Teams技术开发自动程序应用，并直接调用[Bot Framework REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
 
 ## <a name="bots-with-power-virtual-agents"></a>具有自动程序Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户创建聊天Power Virtual Agents[后](https://powervirtualagents.microsoft.com)，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门详细信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户创建聊天Power Virtual Agents[后](https://powervirtualagents.microsoft.com)，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
 
 ## <a name="bots-with-webhooks-and-connectors"></a>具有 Webhook 和连接器的机器人
 
@@ -112,9 +112,82 @@ BOT：哪一天？
 
 自动程序的缺点之一是很难维护具有未应答响应的大型检索知识库。 自动程序最适合于短而快速交互，而不是通过长列表来寻找答案。
 
+## <a name="code-snippets"></a>代码段
+
+以下代码提供了频道团队范围的自动程序活动示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+    };
+
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
+
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+}
+
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+this.onMessage(async (turnContext, next) => {
+    const mention = {
+        mentioned: turnContext.activity.from,
+        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+    } as Mention;
+
+    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
+    replyActivity.entities = [mention];
+
+    await turnContext.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+
+```
+
+---
+
+以下代码提供了一对一聊天的自动程序活动示例：
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+// Handle message activity
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    turnContext.Activity.RemoveRecipientMention();
+    var text = turnContext.Activity.Text.Trim().ToLower();
+        await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+this.onMessage(async (context, next) => {
+    await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+    await next();
+});
+```
+
+---
+
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | .NETCore | Node.js |
+|示例名称 | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Teams 对话自动程序 | 消息和对话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
@@ -125,7 +198,7 @@ BOT：哪一天？
 
 ## <a name="see-also"></a>另请参阅
 
-* [通话和会议智能机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [智能机器人对话](~/bots/how-to/conversations/conversation-basics.md)
 * [自动程序命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
 * [聊天机器人的身份验证Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
