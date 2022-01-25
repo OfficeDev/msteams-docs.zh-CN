@@ -4,12 +4,12 @@ author: surbhigupta
 description: 为会议和其他会议Teams启用和配置应用、更新应用清单、配置诸如会议对话、共享会议阶段、会议侧窗格等功能
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 88c964d520a09f0acaa82933436653e0c434f22f
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569418"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212024"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
@@ -61,7 +61,7 @@ ms.locfileid: "61569418"
 | **privateChatTab** | 一组用户之间的群聊标题中的选项卡，不在团队或会议上下文中。 |
 | **meetingChatTab** | 一组用户之间安排的会议的群聊标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中工作。 |
 | **meetingDetailsTab** | 日历的会议详细信息视图标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中工作。 |
-| **meetingSidePanel** | 通过统一栏和 U 条形图 (打开的会议内) 。 |
+| **meetingSidePanel** | 通过统一栏打开的会议内面板 (U 条形图) 。 |
 | **meetingStage** | 可以将 中的 `meetingSidePanel` 应用共享到会议阶段。 你无法通过移动设备或会议室客户端Teams此应用。 |
 
 为会议启用应用Teams，必须在会议前、会议期间和会议后配置应用。
@@ -125,7 +125,7 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 > [!NOTE]
 > * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
-> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的请求元数据 `from` ，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 `from.aadObjectId` ID，Azure Active Directory ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会议后
 
@@ -133,18 +133,18 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | C# | Node.js |
+|示例名称 | Description | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 该令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会议阶段示例 | 在会议阶段显示选项卡以用于协作的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 |会议侧面板 | 显示如何在会议侧面板中添加议程的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>分步指南
 
-* 按照[分步指南在会议](../sbs-meeting-token-generator.yml)结束后生成会议Teams令牌。
+* 按照[分步指南在](../sbs-meeting-token-generator.yml)会议结束后生成会议Teams令牌。
 * 按照[分步指南在](../sbs-meetings-sidepanel.yml)会议结束后生成Teams窗格。
 * 按照[分步指南在](../sbs-meetings-stage-view.yml)会议结束后生成Teams视图。
-* 按照[分步指南在你的](../sbs-meeting-content-bubble.yml)会议生成会议内容Teams气泡。
+* 按照[分步指南在](../sbs-meeting-content-bubble.yml)会议结束后生成会议Teams气泡。
 
 ## <a name="next-step"></a>后续步骤
 

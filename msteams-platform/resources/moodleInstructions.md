@@ -1,26 +1,26 @@
 ---
 title: 安装 Moodle LMS
 description: 如何安装和配置适用于 Windows 的一Microsoft Teams
-keywords: Teams一流应用集成插件
+keywords: Teams的一系列应用集成插件
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: f87264adc75e504feddc10f470f739747fb3d96b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7460a4f6e1a15df30ebc9b1c50f43b561908c7d4
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888130"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212382"
 ---
 # <a name="install-moodle-lms"></a>安装 Moodle LMS
 
 本文将学习如何安装一个将安装为 LmS 的一部分。
 
 > [!NOTE]
-> 为了帮助 IT 管理员轻松设置一Teams和集成，针对以下Microsoft 365更新 Open-source Microsoft 365 Plugins：
+> 为了帮助 IT 管理员轻松设置一系列 Teams 和集成，Microsoft 365更新 Open-source Microsoft 365 Plugins：
 >
-> * 使用 Azure Active Directory (Azure AD) 自动[注册 Your ](https://azure.microsoft.com/services/active-directory/)Moodle 服务器。
+> * 使用 Azure Active Directory 自动[注册 Your](https://azure.microsoft.com/services/active-directory/)Moodle 服务器。
 >
 > * 只需单击一下即可将你的 Your Assistant bot 部署到 Azure。
 >
@@ -28,7 +28,7 @@ ms.locfileid: "60888130"
 >
 > * 自动将"一页"选项卡和"将一个将一位"的"将一位"助手自动安装到每个同步的团队中。
 >
-> 若要详细了解此集成提供的功能，请参阅 Microsoft Teams[和一列](https://education.microsoft.com/resource/3dffb3a8)。
+> 若要详细了解此集成提供的功能，请参阅 Microsoft Teams[和一起](https://education.microsoft.com/resource/3dffb3a8)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -42,24 +42,24 @@ ms.locfileid: "60888130"
 
 ## <a name="1-install-the-microsoft-365-moodle-plugins"></a>1. 安装 Microsoft 365 Plugins
 
-企业中的Microsoft Teams由开放源代码Microsoft 365[一个插件集。](https://github.com/Microsoft/o365-moodle)
+企业中的 Microsoft Teams 集成由开放源代码Microsoft 365[一个插件集提供。](https://github.com/Microsoft/o365-moodle)
 
 ### <a name="requisite-applications-and-plugins"></a>必需的应用程序和插件
 
-请确保先安装和下载以下内容，然后再继续安装 Microsoft 365 Pluginle 插件：
+请确保先安装并下载以下内容，然后再继续安装 Microsoft 365 Pluginle 插件：
 
 1. 确保安装 [Stablele 的当前稳定版本](https://download.moodle.org/releases/latest/)。
 
-1. 下载和保存一个将 连接[和](https://moodle.org/plugins/auth_oidc)Microsoft 365[集成](https://moodle.org/plugins/local_o365)插件保存到本地计算机。
+1. 下载和保存将 连接[和](https://moodle.org/plugins/auth_oidc)Microsoft 365[集成](https://moodle.org/plugins/local_o365)插件保存到本地计算机。
 
     > [!NOTE]
-    > 安装 OpenID 连接和Microsoft 365集成插件是集成Teams的要求。
+    > 安装 OpenID 连接和Microsoft 365集成插件是集成Teams要求。
     >
     > 此外，[强烈建议Microsoft 365 Teams](https://moodle.org/plugins/theme_boost_o365teams)主题插件。
 
-### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365中式插件
+### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365的一些插件
 
-1. 以管理员角色登录到你的将服务器，然后从左侧导航面板设置[网站](https://docs.moodle.org/22/en/Settings_block)管理"块中选择"网站管理"。
+1. 以管理员角色登录到 Your Moodle server，然后从左侧导航面板设置[网站](https://docs.moodle.org/22/en/Settings_block)管理"块中选择"网站管理"。
 
 1. 选择 **"插件"** 选项卡，然后选择"**安装插件"。**
 
@@ -71,11 +71,11 @@ ms.locfileid: "60888130"
 
     > [!IMPORTANT]
     >
-    > * 在Microsoft 365返回到这组页面时，在单独的浏览器选项卡中打开 Your Microsoft 365 Plugins configuration page。  
+    > * 在Microsoft 365返回到这组页面时，在单独的浏览器选项卡中保持打开您的"Your Microsoft 365 Pluginle 插件配置"页面。  
     >
     > * 如果你没有现有的一个一流网站，请转到 Azure 存储库上的 [设置](https://github.com/azure/moodle) ，并快速部署一个一个一流实例并根据需要自定义它。
 
-## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory-azure-ad"></a>2. 配置应用程序插件Microsoft 365连接Azure Active Directory (Azure AD) 
+## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory"></a>2. 配置应用程序插件Microsoft 365应用程序Azure Active Directory
 
 您必须配置应用程序插件Microsoft 365应用程序Azure AD。
 
@@ -84,15 +84,15 @@ ms.locfileid: "60888130"
 使用 PowerShell 脚本将一个 Azure AD 注册为应用程序中。 Powershell 脚本设置以下内容：
 
 * 适用于 Azure AD 租户的新 Microsoft 365 应用程序，由 Microsoft 365 Plugins 使用。
-* 适用于你的 Microsoft 365 租户的应用，为预配的应用设置所需的回复 URL 和权限，并返回 `AppID` 和 `Key` 。
+* 你的租户Microsoft 365，为预配的应用设置所需的回复 URL 和权限，并返回 `AppID` 和 `Key` 。
 
-使用生成的 和 在 Microsoft 365 Plugins 设置页中，使用 Azure AD `AppID` `Key` 配置你的一个与 Your Your Moodle 服务器Azure AD。
+使用生成的 和 在 Microsoft 365 `AppID` `Key` Plugins 设置页中，使用 Azure AD 配置你的将你的一个Azure AD。
 
 > [!IMPORTANT]
 >
 > * PowerShell 脚本没有使用最新的配置项进行更新，因此，你必须按照在一个 [3.8.0.4 和 3.9.1](https://docs.moodle.org/39/en/Office365#3.8.0.4_and_3.9.1_release) 以及 [3.8.0.5 和 3.9.2](https://docs.moodle.org/39/en/Office365#3.8.0.5_and_3.9.2_release) 发行版页面中概述的步骤手动完成配置。
 >
-> * 有关手动注册你的一个将你的一个将你的一个设置实例注册到应用程序上的信息，请参阅将 [你的一个将你的一个开发实例注册为一个应用程序](https://docs.moodle.org/34/en/Office365#Register_your_Moodle_instance_as_an_Application)。
+> * 有关手动注册你的一个将你的一个将你的一个设置实例注册到应用程序上的信息，请参阅将 [你的一个将你的一个设置注册为一个应用程序](https://docs.moodle.org/34/en/Office365#Register_your_Moodle_instance_as_an_Application)。
 
 ### <a name="the-moodle-tab-for-microsoft-teams-information-flow"></a>用于信息流的"Microsoft Teams选项卡
 
@@ -125,19 +125,19 @@ ms.locfileid: "60888130"
     1. 输入 `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` 。
     1. 输入 `./Moodle-AzureAD-Script.ps1` 。
     1. 在弹出窗口中Microsoft 365你的管理员帐户。
-    1. 输入应用程序的名称，Azure AD，例如，一个，一个，一个 Pluginle 或一个 Pluginle 插件。
+    1. 输入应用程序的名称，Azure AD，例如，将一个 Pluginle 或一个 Pluginle 插件。
     1. 输入 Your Your Moodle 服务器的 URL。
-    1. 复制 **脚本 `AppID` ()****的应用程序 `Key`** ID 和应用程序 () 并保存它们。
+    1. 复制脚本 **生成的 `AppID` ()****和应用程序密钥 () `Key`** 并保存它们。
 
-1. 接下来，你必须将 和 添加到 `AppID` `Key` Microsoft 365 Plugins。 返回到插件管理页面，网站管理>插件> Microsoft 365集成。
+1. 接下来，你必须将 `AppID` 和 `Key` 添加到 Microsoft 365 Plugins。 返回到插件管理页面，网站管理>插件> Microsoft 365集成。
 
 1. 在"**设置**"选项卡上，添加 和之前复制的 ， `AppID` `Key` 然后选择"保存 **更改"。** 刷新页面后，可以看到新部分选择 **连接方法**。
 
 1. 在"**选择连接方法**"中，选中标记为"默认"的复选框，然后再次选择"**保存更改**"。
 
 1. 页面刷新后，你可以看到另一个新部分管理员同意& **其他信息**。
-    1. 选择 **"提供管理员同意**"链接，Microsoft 365全局管理员凭据，然后 **接受** 以授予权限。
-    1. 在"Azure AD **租户"** 字段旁边，选择"检测 **"** 按钮。
+    1. 选择 **"提供管理员同意**"链接，输入Microsoft 365全局管理员凭据，**然后选择"接受**"以授予权限。
+    1. 在"Azure AD **租户**"字段旁边，选择"检测 **"** 按钮。
     1. 在"OneDrive for Business **URL"旁边**，选择"**检测"** 按钮。
     1. 填充字段后，再次选择 **"保存更改"** 按钮。
 
@@ -155,11 +155,11 @@ ms.locfileid: "60888130"
 
         ✔在"在"在"中为用户创建Azure AD。
 
-        ✔中为用户更新在一Azure AD 中Azure AD。
+        ✔为用户更新在 Azure AD 中所有帐户。
 
-    1. 在"**用户创建限制**"部分，可以设置筛选器以限制Azure AD用户同步到用户数。
-    1. "**用户字段映射"** 部分允许您自定义到Azure AD的用户配置文件字段映射。
-    1. 在 **"Teams同步**"部分，可以选择自动创建现有一些或全部的 Teams 的组，例如 Teams。
+    1. 在"**用户创建限制**"部分，可以设置筛选器来限制Azure AD用户同步到用户数。
+    1. "**用户字段映射**"部分允许您自定义Azure AD到一个"用户个人资料"字段映射。
+    1. 在 **"Teams同步**"部分，可以选择自动创建组，例如某些或所有现有一些（或全部）的 Teams。
 
 13. 若要验证 [cron](https://docs.moodle.org/310/en/Cron)作业并首次运行时手动运行它们，请选择"将用户与作业同步"部分中的"计划任务管理 **Azure AD链接。** 这会将您带至 **"计划任务"** 页。
 
@@ -168,30 +168,30 @@ ms.locfileid: "60888130"
 
     > [!NOTE]
     >
-    > 将按照任务 [计划](https://docs.moodle.org/310/en/Cron) 运行一个将运行一个完成库。 默认计划为每天一次。 但是，cron 必须更频繁地运行，以保持所有内容同步。
+    > 将按照任务 [计划](https://docs.moodle.org/310/en/Cron) 运行一个将执行一个将执行该任务。 默认计划为每天一次。 但是，cron 必须更频繁地运行，以保持所有内容同步。
 
-1. 返回到"插件管理"页"网站管理>**插件> Microsoft 365集成**"，然后选择 **"Teams 设置页**。
+1. 返回到"插件管理"页"网站管理>**插件> Microsoft 365集成"，** 然后选择"Teams 设置 **页。**
 
 1. 在 **"Teams 设置"** 页上，配置所需的设置以启用Teams集成。
 
     1. 若要启用 **OpenID 连接，** 请选择"管理身份验证"链接，并选择 **OpenId** 连接（如果显示为灰色）上的目视图标。
     1. 若要启用帧嵌入，请选择 **"HTTP 安全** "链接，然后选中"允许嵌入帧 **"旁边的复选框**。
-    1. 若要启用 Web 服务，从而启用一些"开发工具"API 功能，请选择"高级功能"链接，然后确保选中"启用 Web 服务"**旁边的** 复选框。 
+    1. 若要启用 Web 服务，从而启用一个"开发工具"API 功能，请选择"高级功能"链接，然后确保选中"启用 Web 服务"**旁边的** 复选框。 
     1. 若要为外部服务启用Microsoft 365，请选择"**外部服务**"链接，然后：  
 
-        ✔**在****"Webservices"行的"Microsoft 365编辑"。**
+        ✔**在****"Webservices"Microsoft 365选择"编辑**"。
 
         ✔ 选中"已启用"旁边的 **复选框，然后选择**" **保存更改"**
 
     1. 编辑经过身份验证的用户权限，以允许他们创建 Web 服务令牌。
 
-        ✔选择 **编辑角色经过身份验证的用户** 链接。
+        ✔选择 **"编辑角色经过身份验证的用户"** 链接。
 
         ✔向下滚动并找到创建 **Web** 服务令牌功能，然后选中" **允许"** 复选框。
 
 ## <a name="3-deploy-the-moodle-assistant-bot-to-azure"></a>3. 将用户助理机器人部署到 Azure
 
-适用于教师和学生的免费一Microsoft Teams聊天机器人可帮助教师和学生回答有关其课程、作业、成绩和其他信息的问题。 机器人还会向用户内的学生和教师发送一Teams。 自动程序是由 Microsoft 维护的开放源代码项目，可在 GitHub[上获得](https://github.com/microsoft/Moodle-Teams-Bot)。
+适用于教育的免费一Microsoft Teams自动程序可帮助教师和学生回答有关其课程、作业、成绩和其他在一起的问题。 机器人还会向用户内的学生和教师发送一Teams。 自动程序是由 Microsoft 维护的开放源代码项目，可用于[GitHub。](https://github.com/microsoft/Moodle-Teams-Bot)
 
 > [!NOTE]
 >
@@ -207,13 +207,13 @@ ms.locfileid: "60888130"
 
 **注册自动程序**
 
-1. 转到"插件管理"页，然后选择"**插件"。** 在 **Microsoft 365集成"** 下 **，选择**"Teams 设置"选项卡。
+1. 转到"插件管理"页，然后选择"**插件"。** 在 **Microsoft 365集成"** 下，选择 **"Teams 设置"** 选项卡。
 
 1. 选择 **"Microsoft 应用程序注册门户** "链接，然后使用 Microsoft ID 登录。
 
 1. 输入你的应用的名称，例如，一个在一起， **然后选择创建按钮** 。
 
-1. 复制应用程序 **ID 并将其** 粘贴到"团队管理"页上的"自动程序应用程序 **ID"设置** 字段中。 
+1. 复制"**应用程序 ID"并将其** 粘贴到"团队管理"页上的"自动程序应用程序 **ID"设置** 字段中。 
 
 1. 选择" **生成新密码"** 按钮。 复制生成的密码，并将其粘贴到"团队密码"页上的"自动程序应用程序 **设置** 字段中。
 
@@ -222,11 +222,11 @@ ms.locfileid: "60888130"
 生成应用程序 ID 和密码后，将机器人部署到 Azure：
 
 > [!div class="checklist"]
-> * 选择 **"部署到 Azure"，** 然后使用必要的信息（如"自动程序应用程序 ID"、"自动程序应用程序密码"和"Teams 设置密码 **）填写** 表单。 Azure 信息位于"设置 **"** 页面上。 
+> * 选择 **"部署到 Azure"，** 然后使用必要的信息（如"自动程序应用程序 ID"、"自动程序应用程序密码"和"自动程序密码"）填写表单，Teams 设置 **密码。** Azure 信息位于"设置 **"** 页面上。 
 > * 完成表单后，选中复选框以同意条款和条件。
 > * 选择 **购买**。 所有 Azure 资源都部署到免费层。
 
-在资源部署到 Azure 后，必须使用消息终结点Microsoft 365一个设置一个一个的一个（一个）"一个"（一个）"一个"（一个"一个"消息终结点）。 你必须从 Azure 中的机器人获取终结点：
+在资源部署到 Azure 后，必须使用消息终结点Microsoft 365一个设置一个与一个用户一起部署一个（一个）的一个（一个）一个（一个）"一个"（一个消息终结点）。 你必须从 Azure 中的机器人获取终结点：
 
 1. 登录 [Azure 门户](https://portal.azure.com)。
 
@@ -236,19 +236,19 @@ ms.locfileid: "60888130"
 
 1. 从" **概述"部分** 复制 **消息终结点** 。
 
-1. 在"一页"中 **，设置** 你的"Team Microsoft 365"页面。
+1. 在将"Team **设置"** 页面打开"一Microsoft 365 Plugins"。
 
 1. 在 **自动程序终结点** 字段中粘贴你刚刚复制的 URL，然后将单词 *消息* 更改为 *webhook*。 URL 必须如下所示： `https://botname.azurewebsites.net/api/webhook`
 
 1. 选择“保存更改”。
 
-1. 保存更改后，返回到"团队设置"选项卡，选择"下载清单文件"按钮，将应用清单包保存到计算机以进一步使用。
+1. 保存更改后，返回到"团队设置选项卡，选择"下载清单文件"按钮，将应用清单包保存到计算机以进一步使用。
 
 ## <a name="4-deploy-your-microsoft-teams-app"></a>4. 部署Microsoft Teams应用程序
 
 在将机器人部署到 Azure 并配置为与你的 Talkle 服务器通信后，你必须部署你的 Microsoft Teams 应用。 为此，你必须加载从上一步中从 Microsoft 365 Plugins Team 设置 页面下载的应用清单文件。
 
-在安装应用之前，必须确保启用外部应用和上传应用。 有关详细信息，请参阅[准备租户Microsoft 365租户](../concepts/build-and-test/prepare-your-o365-tenant.md)。 
+在安装应用之前，必须确保启用外部应用和上传应用。 有关详细信息，请参阅[准备你的Microsoft 365租户](../concepts/build-and-test/prepare-your-o365-tenant.md)。 
 
 **部署应用** 
 
@@ -263,11 +263,11 @@ ms.locfileid: "60888130"
 
 4. 选择 `manifest.zip` 之前下载的程序包，然后选择保存。  如果尚未下载应用清单包，可以从在将插件配置页的 **"team 设置"** 选项卡中下载。
 
-现在，你已安装应用，你可以将选项卡添加到你有权访问的任何频道。 为此，请导航到频道，选择 **加 (➕) 符号** ，然后从列表中选择你的应用。 按照提示完成向频道添加 Your Moodle 课程选项卡。
+现在，你已安装应用，你可以将选项卡添加到你有权访问的任何频道。 为此，请导航到通道，选择 **加 (➕) 符号** ，然后从列表中选择你的应用。 按照提示完成向频道添加 Your Moodle 课程选项卡。
 
 ## <a name="5-allow-automatic-creation-of-moodle-tabs-in-microsoft-teams"></a>5. 允许自动在 Microsoft Teams
 
-尽管在课程同步中手动创建"Microsoft Teams"选项卡，但你可以决定在通过课程同步创建团队时自动创建它们。 为此，你必须在一个位于在一起配置Microsoft Teams应用的 ID。
+尽管在课程同步中手动创建"Microsoft Teams"选项卡，但你可以决定在通过课程同步创建团队时自动创建它们。 为此，你必须在一个位于位于Microsoft Teams中配置已上传应用 ID。
 
 **允许自动创建 Tabsle 选项卡**
 
@@ -275,15 +275,15 @@ ms.locfileid: "60888130"
 
 1. 从导航栏的左下角区域选择"应用"图标。
 
-1. 找到上传的 **一** >选择 **选项** 图标>选择 **复制链接**。
+1. 找到已上传 **的一>** 选择 **选项** 图标>选择 **复制链接**。
 
 1. 在文本编辑器中，粘贴复制的内容。 它必须包含 URL，如 ht&#8203;tps://teams.microsoft.com/l/app/00112233-4455-6677-8899-aabbccddeeff。 复制 URL 的最后一部分，例如 ，这是应用Microsoft Teams `00112233-4455-6677-8899-aabbccddeeff` ID。
 
-1. 在"在一个Teams中，从你的 **"Microsoft 365** Plugins 配置"页面打开"一个Microsoft 365一个"完成"应用选项卡。
+1. 在"一页"**中，Teams"设置** 插件配置"Microsoft 365"一个"完成"应用选项卡。
 
-1. 将应用 ID 粘贴到 Microsoft Teams 应用 ID 字段中，并保存更改。
+1. 将应用 ID 粘贴Microsoft Teams"应用 ID"字段中，并保存更改。
 
-同步一个一个一流课程后，Microsoft Teams会自动在团队中安装一个"一流"应用，在 Teams 的"常规"频道中创建一个"设置"选项卡，并对其进行配置以包含用于同步其的一流课程的"一页"。 现在，你可以直接从你的 Microsoft Teams 开始使用你的一些Microsoft Teams。
+同步一个一流课程后，Microsoft Teams 会自动在团队中安装一个一流应用，在 Teams 的常规频道中创建一个"一页"，并配置该选项卡以包含用于同步其的一流课程的"一页"。 你现在可以直接从学校开始使用你的Microsoft Teams。
 
 > [!NOTE]
 > 若要与我们共享任何功能请求或反馈，请访问我们的用户 [语音页面](https://microsoftteams.uservoice.com/forums/916759-moodle)。

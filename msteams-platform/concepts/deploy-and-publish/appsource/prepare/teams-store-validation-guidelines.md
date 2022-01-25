@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 23b3f67f5f949080dc9389e82dc459a33fbf029a
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: HT
+ms.openlocfilehash: b4fc1d7b0e0ce1e32b82e0a82d490491f92ca387
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768278"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212122"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -271,7 +271,7 @@ Teams 应用清单定义应用的配置。
 
 * 清单必须符合公开发布的清单架构。 有关详细信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。 请勿使用清单的预览版本提交应用。
 * 如果应用包括机器人或消息传递扩展，则应用清单中的详细信息必须与机器人框架元数据保持一致，包括机器人名称、徽标、隐私策略链接和服务条款链接。
-* 如果应用使用 Azure Active Directory (Azure AD) 进行身份验证，请在清单中包含Azure AD应用程序 (客户端) ID。有关更多信息，请参阅[清单引用](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* 如果你的应用使用 Azure Active Directory 进行身份验证，Azure AD包含 (客户端) ID。 更多相关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ### <a name="app-icons"></a>应用图标
 
@@ -1423,7 +1423,7 @@ Teams 应用清单定义应用的配置。
 
 Microsoft 365 应用合规性计划 旨在帮助企业通过评估应用程序的安全和合规性信息来评估和管理风险。 如果要向 Teams 商店发布一个应用程序，则必须完成该程序的以下几层: 
 
-  * **发布者验证**: 可帮助管理员和终端用户了解到应用开发人员与 Microsoft 标识平台集成的真实性。 完成后，Azure Active Directory (Azure AD) 许可对话框和其他屏幕上会显示蓝色的“**已验证**”徽章。 有关详细信息，请参阅 [将你的应用标记为经过发布者验证](/azure/active-directory/develop/mark-app-as-publisher-verified)。  
+  * **发布者验证**: 可帮助管理员和终端用户了解到应用开发人员与 Microsoft 标识平台集成的真实性。 完成后，许可对话框 **和其他屏幕上** 将显示蓝色Azure Active Directory锁屏提醒。 有关详细信息，请参阅 [将你的应用标记为经过发布者验证](/azure/active-directory/develop/mark-app-as-publisher-verified)。  
 
 :::row::: 
     :::column span="":::

@@ -1,23 +1,23 @@
 ---
 title: 对话事件
 author: WashingtonKayaker
-description: 如何使用代码示例处理来自自动程序Microsoft Teams对话事件、频道事件更新、团队成员事件和消息反应事件。
+description: 如何使用代码示例处理来自自动程序的对话Microsoft Teams、频道事件更新、团队成员事件和消息反应事件。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 事件机器人频道消息反应对话
-ms.openlocfilehash: 6c77e6b7675a45c27a8af42811b520b4942d7428
-ms.sourcegitcommit: a6c39106ccc002d02a65e11627659e0c48981d8a
+ms.openlocfilehash: 4cb48c73b139ece4d16f935b611701def35e89b7
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "62014554"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212543"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-为用户生成对话机器人Microsoft Teams，可以使用对话事件。 Teams在自动程序处于活动状态的范围中发生的对话事件，向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
+为用户生成对话机器人Microsoft Teams，可以使用对话事件。 Teams在自动程序处于活动状态的范围中发生的对话事件向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
 
 * 将机器人添加到团队时触发欢迎消息。
 * 在添加或删除新的团队成员时触发欢迎消息。
@@ -49,7 +49,7 @@ ms.locfileid: "62014554"
 | 已重命名频道     | channelRenamed    | OnTeamsChannelRenamedAsync | [频道被重命名](#channel-renamed)。 | 团队 |
 | 已删除频道     | channelDeleted    | OnTeamsChannelDeletedAsync | [频道被删除](#channel-deleted)。 | 团队 |
 | 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [频道已还原](#channel-deleted)。 | 团队 |
-| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 全部 |
+| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 所有 |
 | 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [将删除成员](#team-members-removed)。 | groupChat and team |
 | 已重命名团队        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队重命名为](#team-renamed)。       | 团队 |
 | 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队已删除](#team-deleted)。       | 团队 |
@@ -1062,7 +1062,7 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 全部   |
+| messageReaction | reactionsAdded   | [向自动程序消息添加了反应](#reactions-added-to-bot-message)。           | 所有   |
 | messageReaction | 将removed | [从自动程序消息中删除了反应](#reactions-removed-from-bot-message)。 | 全部 |
 
 ### <a name="reactions-added-to-bot-message"></a>添加到自动程序消息的反应
@@ -1346,7 +1346,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
   "serviceUrl": "https://smba.trafficmanager.net/amer/", 
   "from": { 
     "id": "sample id", 
-    "aadObjectId": "sample AAD Object ID" 
+    "aadObjectId": "sample Azure AD Object ID" 
   },
   "conversation": { 
     "isGroup": true, 
@@ -1412,16 +1412,16 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
 
-使用这些安装和卸载事件时，在某些情况下，自动程序会提供从客户端接收意外事件的Teams。 在下列情况下会出现此情况：
+使用这些安装和卸载事件时，在某些实例中，机器人在从用户接收意外事件时Teams。 在下列情况下会出现此情况：
 
-* 无需使用 Microsoft Bot Framework SDK 即可生成自动程序，因此机器人在收到意外事件时出现异常。
+* 无需使用 SDK Microsoft Bot Framework自动程序，因此机器人在收到意外事件时出现异常。
 * 使用 Microsoft Bot Framework SDK 生成自动程序，并选择通过覆盖基本事件句柄来更改默认事件行为。
 
 了解以后可以随时添加新事件，并且机器人开始接收它们，了解这一点很重要。 因此，您必须针对接收意外事件的可能性进行设计。 如果你使用的是 Bot Framework SDK，则自动程序会自动响应 200 – 确定你未选择处理的任何事件。
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **描述** | **.NET** | **Node.js** | **Python** |
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
 | 对话机器人 | 机器人对话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

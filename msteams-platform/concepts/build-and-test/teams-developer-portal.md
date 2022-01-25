@@ -5,16 +5,16 @@ keywords: 开发人员门户团队入门
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888550"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212536"
 ---
-# <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>使用开发人员门户管理应用Microsoft Teams
+# <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>使用 Microsoft Teams 开发人员门户管理应用
 
-开发人员<a href="https://dev.teams.microsoft.com" target="_blank">门户Teams</a>是配置、分发和管理你的 Microsoft Teams 应用的主要工具。 通过开发人员门户，你可以与应用上的同事协作、设置运行时环境等。
+开发人员<a href="https://dev.teams.microsoft.com" target="_blank">门户Teams</a>是配置、分发和管理应用程序的主要Microsoft Teams工具。 通过开发人员门户，你可以与应用上的同事协作、设置运行时环境等。
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="显示开发人员门户主页的屏幕截图Teams。":::
 
@@ -53,7 +53,7 @@ ms.locfileid: "60888550"
 
 一Teams应用是 Web 应用。 像所有 Web 应用一样，其源代码通常在 IDE 或代码编辑器中开发，并托管在云中的 (Azure) 。
 
-若要在应用程序中安装和呈现Teams，必须包括一组可识别Teams配置。 这通常通过创建应用清单（一个包含显示应用内容所需的Teams元数据的 JSON 文件）完成。 开发人员门户将此过程抽象化，并包括新功能和工具，以帮助你取得更多成功。
+若要在应用程序中安装和呈现Teams，必须包括一组可识别Teams配置。 这通常通过创建应用清单（包含显示应用内容Teams元数据的 JSON 文件）完成。 开发人员门户将此过程抽象化，并包括新功能和工具，以帮助你取得更多成功。
 
 ## <a name="test-your-app-directly-in-teams"></a>直接在应用中测试Teams
 
@@ -64,7 +64,7 @@ ms.locfileid: "60888550"
 
 ## <a name="distribute-your-app"></a>分发应用
 
-从开发人员门户中 **，使用"** 分发"按钮下载应用包、发布到组织或发布到 Teams 应用商店。
+从开发人员门户中，使用"分发"按钮下载应用包、发布到组织或发布到 Teams 应用商店。
 
 有关详细信息，请参阅分发[你的Teams应用](~/concepts/deploy-and-publish/apps-publish-overview.md)。
 
@@ -81,12 +81,12 @@ ms.locfileid: "60888550"
 
 ## <a name="use-tools-to-create-app-features"></a>使用工具创建应用功能
 
-开发人员门户还包括可帮助你构建应用程序的关键功能Teams工具。 其中一些工具包括：
+开发人员门户还包括可帮助你构建应用应用Teams功能的工具。 其中一些工具包括：
 
 * **Scene studio：** 为 [会议设计自定义](~/apps-in-teams-meetings/teams-together-mode.md)一Teams场景。
 * **自适应卡片编辑器**：创建和预览要包括在应用的自适应卡片。
-* **Microsoft 标识平台管理**：使用 Azure Active Directory (Azure AD) 注册应用，以帮助用户登录并提供 API 访问权限。
+* **Microsoft 标识平台管理**：使用 Azure Active Directory 注册应用，以帮助用户登录并提供 API 访问权限。
 
 ## <a name="see-also"></a>另请参阅
 
-[将 SaaS 产品/服务与Microsoft Teams一起](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[将 SaaS 产品/服务Microsoft Teams应用](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

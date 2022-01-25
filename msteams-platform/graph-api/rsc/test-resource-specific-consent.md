@@ -5,26 +5,26 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: teams 授权 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: fc926e307c2e3ee5d1336c09e264930abe20d9d0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: teams 授权 OAuth SSO Azure AD rsc Postman Graph
+ms.openlocfilehash: fe3819b0da9783a6cf3aacac08a6045337e27600
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887718"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212480"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在应用程序内测试特定于资源的许可Teams
 
 > [!NOTE]
 > 聊天范围的特定于资源的同意仅适用于 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md) 版。
 
-资源特定的同意 (RSC) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点管理组织中特定的资源（团队或聊天）。 有关详细信息，请参阅资源[特定的同意 (RSC) — Microsoft Teams Graph API。](resource-specific-consent.md)
+特定于资源的同意 (RSC) 是一种 Microsoft Teams 和 Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 有关详细信息，请参阅[RSC](resource-specific-consent.md) (资源特定的) — Microsoft Teams Graph API。
 
 > [!NOTE]
 > 若要测试 RSC 权限，Teams清单文件必须包含填充了以下字段的 **webApplicationInfo** 密钥：
 >
-> - **id**：Azure AD应用 ID，请参阅在应用 [门户中Azure AD应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
-> - **resource**：任何字符串，请参阅更新应用Teams [中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
+> - **id：Azure AD** 应用 ID，请参阅在应用 [门户中Azure AD应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。
+> - **resource**：任何字符串，请参阅更新你的Teams [清单中的注释](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **应用程序权限**：应用的 RSC 权限，请参阅 [特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。
 
 ## <a name="example-for-a-team"></a>团队示例
@@ -81,7 +81,7 @@ ms.locfileid: "60887718"
 >[!NOTE]
 >如果应用旨在支持在团队和聊天范围内安装，可以在 下的同一清单中指定团队和聊天权限 `applicationPermissions` 。
 
->如果应用旨在访问呼叫/媒体 API，则 应该AAD `webApplicationInfo.Id` [Azure Bot](/graph/cloud-communications-get-started#register-a-bot)服务的应用 ID。
+>如果应用旨在访问呼叫/媒体 API，则 应该Azure AD `webApplicationInfo.Id` [Azure Bot](/graph/cloud-communications-get-started#register-a-bot)服务的应用 ID。
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>使用 Postman 应用测试向团队添加的 RSC 权限
 
@@ -92,7 +92,7 @@ ms.locfileid: "60887718"
 * `token_scope`：获取令牌需要 范围。 将值设置为 https://graph.microsoft.com/.default 。
 * `teamGroupId`：可以从客户端获取团队组 id，Teams如下所示：
 
-    1. 在Teams客户端 **中，Teams** 左侧导航栏中选择"导航栏"。
+    1. 在Teams客户端中，Teams **左侧导航** 栏中选择"导航栏"。
     2. 从下拉菜单中选择安装应用的团队。
     3. 选择" **更多选项"** 图标 (&#8943;) 。
     4. 选择 **获取团队链接**。 
@@ -105,10 +105,10 @@ ms.locfileid: "60887718"
 * `azureADAppId`：应用的应用Azure AD ID。
 * `azureADAppSecret`：Azure AD应用密码。
 * `token_scope`：获取令牌需要 范围。 将值设置为 https://graph.microsoft.com/.default 。
-* `tenantId`：租户的名称AAD对象 ID。
+* `tenantId`：租户的名称Azure AD对象 ID。
 * `chatId`：可以从 Web 客户端获取聊天Teams *ID，* 如下所示：
 
-    1. 在 web Teams客户端中 **，从最** 左侧导航栏中选择"聊天"。
+    1. 在 Teams客户端中 **，从最** 左侧导航栏中选择"聊天"。
     2. 从下拉菜单中选择应用安装位置的聊天。
     3. 复制 Web URL，然后从字符串中保存聊天线程 ID。
 ![来自 Web URL 的聊天线程 ID。](../../assets/images/chat-thread-id.png)

@@ -5,14 +5,14 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
+ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246083"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212410"
 ---
-# <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布Microsoft Teams应用程序
+# <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
 在应用商店中Microsoft Teams应用后，开始考虑如何继续维护应用并增加下载量和使用量。
 
@@ -23,7 +23,7 @@ ms.locfileid: "61246083"
 > 
 > 以前，通过选择应用磁贴上的省略号来复制链接。 通过更新Teams应用商店体验，你将从应用的详细信息选项卡访问相同的内容。 此更新将于 2022 年 3 月 1 (通用) 发布。
 
-你可以向应用提交更改 (如新功能，甚至是合作伙伴) 元数据。 这些更改需要新的审阅过程。
+你可以向应用提交更改 (如合作伙伴中心中的新功能) 元数据。 这些更改需要新的审阅过程。
 
 发布更新时，请确保以下各项：
 
@@ -44,7 +44,7 @@ ms.locfileid: "61246083"
 * 添加个人选项卡。
 * 添加频道和组选项卡。
 * 添加连接器。
-* 修改与应用注册Azure Active Directory (Azure AD) 配置。 有关更多信息，请参阅[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* 修改与应用注册Azure Active Directory配置。 有关更多信息，请参阅[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ## <a name="fix-issues-with-your-published-app"></a>修复已发布应用的问题
 
@@ -58,7 +58,7 @@ Microsoft 对应用商店中列出的应用运行每日Teams测试。 如果发�
 
 ## <a name="complete-microsoft-365-certification"></a>完成Microsoft 365认证
 
-[Microsoft 365](/microsoft-365-app-certification/docs/certification)认证可保证当在 Office 应用 生态系统中安装第三方 Office 应用 或外接程序时，数据和隐私Microsoft 365受保护。 认证确认你的应用与 Microsoft 技术兼容，符合云应用安全最佳做法，并且受 Microsoft 支持。
+[Microsoft 365](/microsoft-365-app-certification/docs/certification)认证可保证当在 Microsoft 365 生态系统中安装第三方 Office 应用 或外接程序时，数据和隐私受到充分保护Microsoft 365保护。 认证确认你的应用与 Microsoft 技术兼容，符合云应用安全最佳做法，并且受 Microsoft 支持。
 
 ## <a name="see-also"></a>另请参阅
 

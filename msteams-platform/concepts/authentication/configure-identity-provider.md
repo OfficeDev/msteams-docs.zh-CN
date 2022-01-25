@@ -3,13 +3,13 @@ title: 配置 OAuth 2.0 标识提供程序
 description: 介绍如何配置标识提供程序，并重点关注Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 身份验证AAD oauth 标识提供程序
-ms.openlocfilehash: cae2cc3d2feba8c17ad895864fd1b5995095f71b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: teams 身份验证Azure AD oauth 标识提供程序
+ms.openlocfilehash: 0e0b1e21bf3c2e877ddef790677ba2f4c227339e
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887432"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212333"
 ---
 # <a name="configure-identity-providers"></a>配置标识提供程序
 
@@ -21,11 +21,11 @@ ms.locfileid: "60887432"
 
 2. 选择应用以查看其属性，或选择"新建注册"按钮。 查找 **应用的重定向 URI** 部分。
 
-3. 从 **下拉菜单** 中选择"Web"。 将 URL 更新到身份验证终结点。 对于 TypeScript/Node.js 和 C# 上的示例GitHub，重定向 URL 将类似于以下内容：
+3. 从 **下拉菜单** 中选择"Web"。 将 URL 更新到身份验证终结点。 对于 TypeScript/Node.js 和 C# 应用程序GitHub，重定向 URL 将类似于以下内容：
 
     重定向 URL： `https://<hostname>/bot-auth/simple-start`
 
-将 替换为实际主机，该主机可能是专用托管站点，如 Azure、Glitch 或开发计算机上 `<hostname>` localhost 的 ngrok 隧道（如 `abcd1234.ngrok.io` ）。 如果你尚未完成或托管应用 (或上面提到的) 示例应用，你可能没有此信息，但当该信息已知时，你始终可以返回到此页面。
+将 替换为实际主机，该主机可能是专用托管站点，如 Azure、Glitch 或开发计算机上 `<hostname>` localhost 的 ngrok 隧道（如 `abcd1234.ngrok.io` ）。 如果你尚未完成或托管你的应用 (或上面提到的) 示例应用，你可能没有此信息，但当该信息已知时，你始终可以返回到此页面。
 
 ## <a name="other-authentication-providers"></a>其他身份验证提供程序
 

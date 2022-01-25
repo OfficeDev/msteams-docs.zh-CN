@@ -5,24 +5,25 @@ description: 了解如何使用代码示例为邮件扩展启用 SSO 支持。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3da2c19debd3275266b4f96ce62bdfb0c85c353b
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: de0f08cf73c5ba353398693b95c94d45be2eb727
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178249"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212550"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>邮件扩展的单一登录支持
  
-SSO (单一) 支持现在可用于邮件扩展和链接取消点击。 默认情况下，为邮件扩展启用单一登录将刷新身份验证令牌，这将最大程度地减少需要输入 Microsoft Teams 登录凭据Microsoft Teams。
+SSO (单一) 支持现在可用于邮件扩展和链接展开。 默认情况下为邮件扩展启用单一登录将刷新身份验证令牌，这将最大程度地减少需要输入邮件的登录凭据Microsoft Teams。
 
 本文档将指导您在必要时如何启用 SSO 和存储身份验证令牌。
 
 ## <a name="prerequisites"></a>先决条件
 
 为邮件扩展和链接展开启用 SSO 的先决条件如下所示：
+
 * 必须具有 [Azure](https://azure.microsoft.com/free/) 帐户。
-* 你必须通过 AAD 门户配置你的应用，Teams通过 AAD 门户注册应用时定义的更新自动程序AAD[清单](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)。
+* 你必须通过应用门户配置Azure AD，并更新Teams在通过应用门户注册应用时定义的自动程序Azure AD[清单](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal)。
 
 > [!NOTE]
 > 有关创建 Azure 帐户和更新应用清单的信息，请参阅单一登录 [ (SSO) 自动程序支持](../../bots/how-to/authentication/auth-aad-sso-bots.md)。

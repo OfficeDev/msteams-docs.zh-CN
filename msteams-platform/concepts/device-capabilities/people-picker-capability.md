@@ -6,12 +6,12 @@ keywords: 人员选取器控件
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 5f686b247397c89a5a1ab8fe80ac9e97017ea051
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0c4bac7a92042d339f35c4b3eeb2c7302e5f0e1a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155831"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212578"
 ---
 # <a name="integrate-people-picker"></a>集成人员选取器  
 
@@ -29,7 +29,7 @@ ms.locfileid: "59155831"
 你必须调用 `selectPeople` API 以将人员选取器控件集成到Teams应用中。 为了进行有效的集成，你必须了解 [用于](#code-snippet) 调用 API 的代码段。 熟悉 API 响应错误以处理 [Web](#error-handling) 应用中的错误非常重要。
 
 > [!NOTE] 
-> 目前Microsoft Teams对人员选取器的支持仅适用于移动客户端。
+> 目前，Microsoft Teams对人员选取器的支持仅适用于移动客户端。
 
 ## <a name="selectpeople-api"></a>`selectPeople` API 
 
@@ -44,10 +44,10 @@ API 说明如下：
 
 |配置参数|类型|说明| 默认值|
 |-----|------|--------------|------|
-|`title`| String| 它是可选参数。 它设置人员选取器控件的标题。 | 选择人员|
-|`setSelected`|String| 它是可选参数。 必须传递要预先选择的人的 AAD ID。 此参数在启动人员选取器控件时预选人员。 在单选的情况下，仅预填充第一个有效用户，忽略其余用户。 |NULL| 
-|`openOrgWideSearchInChatOrChannel`|Boolean | 它是可选参数。 设置为 true 时，它将在组织范围内启动人员选取器，即使该应用已添加到聊天或频道也是如此。 |False|
-|`singleSelect`|布尔值|它是可选参数。 设置为 true 时，它会启动人员选取器，将选择限制为仅一个用户。 |False|
+|`title`| 字符串| 它是可选参数。 它设置人员选取器控件的标题。 | 选择人员|
+|`setSelected`|字符串| 它是可选参数。 您必须传递Azure AD的一组用户 ID。 此参数在启动人员选取器控件时预选人员。 在单选的情况下，只会预填充第一个有效用户，忽略其余用户。 |NULL| 
+|`openOrgWideSearchInChatOrChannel`|布尔值 | 它是可选参数。 设置为 true 时，它将在组织范围内启动人员选取器，即使该应用已添加到聊天或频道也是如此。 |错误|
+|`singleSelect`|布尔值|它是可选参数。 设置为 true 时，它会启动人员选取器，将选择限制为仅一个用户。 |错误|
 
 下图描述了示例 Web 应用中人员选取器的体验：
 
@@ -92,6 +92,6 @@ API 说明如下：
 
 ## <a name="see-also"></a>另请参阅
 
-* [集成媒体中的媒体Teams](mobile-camera-image-permissions.md)
+* [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
 * [将 QR 代码或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
-* [在 Teams 中集成位置Teams](location-capability.md)
+* [将位置功能集成到 Teams](location-capability.md)

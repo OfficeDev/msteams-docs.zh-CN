@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams 导入消息 api 图形 Microsoft 迁移迁移帖子
-ms.openlocfilehash: a34a6efe98e14d5c28126275ed2378a24d34efa0
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d20212bf5f5766e71b1be7a4476518510b8de80b
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291707"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212522"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
@@ -42,7 +42,7 @@ ms.locfileid: "60291707"
 ### <a name="set-up-your-office-365-tenant"></a>设置 Office 365 租户
 
 * 确保导入Office 365租户存在。 有关为租户设置Office 365租户Teams，请参阅[准备Office 365租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。
-* 确保团队成员在Azure Active Directory (AAD) 。 有关详细信息，请参阅[向用户添加AAD。](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+* 确保团队成员在Azure Active Directory。 有关详细信息，请参阅[向用户添加Azure AD。](/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
 ## <a name="step-1-create-a-team"></a>步骤 1：创建团队
 
@@ -107,7 +107,7 @@ Content-Location: /teams/{team-id}
 |-|-|-|-|-|-|
 |`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建和管理资源以迁移到Microsoft Teams。|**仅应用程序**|**是**|`POST /teams`|
 
-#### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态创建) 
+#### <a name="request-create-a-channel-in-migration-state"></a>请求 (以迁移状态创建) 
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
@@ -309,7 +309,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/complete
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="request-end-team-migration-mode"></a>请求 (团队迁移模式) 
+#### <a name="request-end-team-migration-mode"></a>请求 (结束团队迁移模式) 
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
@@ -325,9 +325,9 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>步骤 5：添加团队成员
 
-可以使用以下 UI 将成员添加到[](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)团队Teams Microsoft Graph[添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)API：
+可以使用以下 UI 将成员添加到团队[Teams](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) Microsoft Graph[添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)API：
 
-#### <a name="request-add-member"></a>请求 (添加成员) 
+#### <a name="request-add-member"></a>请求 (成员) 
 
 ```http
 POST https://graph.microsoft.com/beta/teams/{team-id}/members
@@ -353,7 +353,7 @@ HTTP/1.1 204 No Content
 
 * 提出 `completeMigration` 请求后，无法将进一步的消息导入团队。
 
-* 在请求返回成功响应后，只能将团队成员 `completeMigration` 添加到新团队。
+* 请求返回成功响应后，只能将团队成员 `completeMigration` 添加到新团队。
 
 * 限制：邮件按每个通道 5 RPS 导入。
 

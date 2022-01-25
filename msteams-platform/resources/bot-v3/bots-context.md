@@ -1,16 +1,16 @@
 ---
 title: 获取自动程序Microsoft Teams上下文
-description: 介绍如何在聊天机器人中获取Microsoft Teams
+description: 介绍如何在 Microsoft Teams
 keywords: teams 机器人上下文
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 5c9dac9712f6bdc9a62262614ceaf90fd100e19e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 4d737564a77cdccc693a8fa3889476a1cf015be2
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155872"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212038"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>获取自动程序Microsoft Teams上下文
 
@@ -22,11 +22,11 @@ ms.locfileid: "59155872"
 >
 > * Microsoft Teams聊天机器人 SDK 的扩展，可以最好地访问特定于自动程序 API。
 > * 对于 C# 或 .NET，请下载[Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet 程序包。
-> * For Node.js development， the Bot Builder for Teams functionality is incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6.
+> * 对于Node.js，Bot Builder for Teams功能已合并到[Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 中。
 
 ## <a name="fetch-the-team-roster"></a>提取团队名单
 
-机器人可以查询团队成员及其基本个人资料的列表。 基本配置文件包括Teams ID 和 Azure Active Directory (AAD) ，如名称和对象 ID。 可以使用此信息来关联用户标识。 例如，检查通过 AAD 凭据登录选项卡的用户是否为团队成员。
+机器人可以查询团队成员及其基本个人资料的列表。 基本配置文件包括Teams ID 和Azure Active Directory，如名称和对象 ID。 可以使用此信息来关联用户标识。 例如，检查用户是否通过登录选项卡Azure AD凭据是团队成员。
 
 ### <a name="rest-api-example"></a>REST API 示例
 
@@ -165,7 +165,7 @@ Response body
 
 #### <a name="net-example"></a>.NET 示例
 
-下面的示例使用来自自动 `FetchChannelList` 程序生成器[SDK for .NET Teams扩展的调用](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)：
+以下示例使用来自适用于 `FetchChannelList` [.NET 的 bot Builder SDK Teams扩展的调用](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)：
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -196,7 +196,7 @@ connector.fetchChannelList(
 可以在自动程序的活动内获取 clientInfo。 clientInfo 包含以下属性：
 
 * Locale
-* 国家/地区
+* Country
 * 平台
 * Timezone
 

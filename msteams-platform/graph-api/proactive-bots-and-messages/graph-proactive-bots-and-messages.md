@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: 4fb4ff67ac9ffc156cac87a5d12240f2999a2163
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 6802c7aed4664969d32b7b183a2dbe6729939493
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185423"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212403"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
 
@@ -39,14 +39,14 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 若要使用这些权限，必须将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到具有以下值的应用清单：
 
-* **id**：Azure Active Directory (AAD) 应用 ID。
+* **id**：Azure Active Directory应用 ID。
 * **resource：** 应用的资源 URL。
 
 > [!NOTE]
 >
 > * 自动程序需要应用程序权限，而不是用户委派权限，因为安装适用于其他人。
 >
-> * 租户AAD必须[显式授予对应用程序的权限](/graph/security-authorization#grant-permissions-to-an-application)。 向应用程序授予权限后，AAD的所有成员都获得已授予的权限。
+> * 租户Azure AD必须[显式授予对应用程序的权限](/graph/security-authorization#grant-permissions-to-an-application)。 向应用程序授予权限后，Azure AD租户的所有成员都获得已授予的权限。
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>启用主动应用安装和消息传递
 

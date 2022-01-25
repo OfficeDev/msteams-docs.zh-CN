@@ -4,12 +4,12 @@ author: surbhigupta12
 description: 接收具有 RSC 权限的所有频道消息
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: abe6bc821c9e4ffe05b1cf35480f9c559401014e
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: e499b414a91f815bfe84172a8559f3b7cfd6d839
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185440"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212452"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>使用 RSC 接收所有频道消息
 
@@ -35,7 +35,7 @@ RSC (权限) （最初针对 Teams Graph API 开发）的特定资源许可扩�
 
 以下是对象 `webApplicationInfo` 的示例：
 
-* **id**：Azure Active Directory (AAD) 应用 ID。 它可以与自动程序 ID 相同。
+* **id**：Azure Active Directory应用 ID。 它可以与自动程序 ID 相同。
 * **resource**：任何字符串。 此字段在 RSC 中没有任何操作，但必须添加且具有值以避免错误响应。
 * **applicationPermissions：** 必须指定应用的 RSC `ChannelMessage.Read.Group` 权限。 有关详细信息，请参阅特定于 [资源的权限](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)。
 
