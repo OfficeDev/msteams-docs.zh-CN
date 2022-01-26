@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api usercontext 通知信号查询
-ms.openlocfilehash: 3ec6539e8a4970a00650c1bc35d72ea656a0eb38
-ms.sourcegitcommit: 0ae40fdf74b43834160821956b754cab94a60bb7
+ms.openlocfilehash: 74d1082d1f3bbfeb3b2b1a96c321832799315b55
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "61558706"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214327"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -32,7 +32,7 @@ ms.locfileid: "61558706"
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
-若要标识和检索选项卡内容的上下文信息，请参阅获取[Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)选项卡的上下文。由选项卡在会议上下文中运行时使用，并添加 `meetingId` 用于响应负载。
+若要标识和检索选项卡内容的上下文信息，请参阅获取[Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)选项卡的上下文。在会议上下文中运行时，选项卡使用 ，并添加 `meetingId` 响应负载。
 
 ## <a name="getparticipant-api"></a>GetParticipant API
 
@@ -50,7 +50,7 @@ API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与
 |---|---|----|---|
 |**meetingId**| 字符串 | 是 | 会议标识符通过 Bot Invoke 和 Teams 客户端 SDK 提供。|
 |**participantId**| 字符串 | 是 | 参与者 ID 是用户 ID。 它可在 Tab SSO、Bot Invoke 和 Teams 客户端 SDK 中提供。 建议从选项卡 SSO 获取参与者 ID。 |
-|**tenantId**| 字符串 | 是 | 租户用户需要租户 ID。 它可在 Tab SSO、Bot Invoke 和 Teams 客户端 SDK 中提供。 建议从选项卡 SSO 获取租户 ID。 | 
+|**tenantId**| 字符串 | 是 | 租户用户需要租户 ID。 它可在 Tab SSO、Bot Invoke 和 Teams 客户端 SDK 中提供。 建议从选项卡 SSO 获取租户 ID。 |
 
 ### <a name="example"></a>示例
 
@@ -300,6 +300,63 @@ GET /v1/meetings/{meetingId}
     }
 } 
 ```
+
+## <a name="cart-api"></a>购物车 API
+
+购物车 API 公开了一个 POST 终结点Microsoft Teams购物车标题、人为的隐藏式标题。 当最终用户启用标题时，发送到此终结点的文本Microsoft Teams向会议中的最终用户显示。
+
+### <a name="cart-url"></a>购物车 URL
+
+可以从会议选项页获取 POST 终结点的购物车 **URL，Microsoft Teams** 会议。 有关详细信息，请参阅会议[中的购物车Microsoft Teams标题](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 无需修改购物车 URL 即可使用购物车标题。
+
+#### <a name="query-parameter"></a>查询参数
+
+购物车 URL 包括以下查询参数：
+
+|值|类型|必需|说明|
+|---|---|----|----|
+|**meetingId**| 字符串 | 是 |会议标识符通过 Bot Invoke 和 Teams 客户端 SDK 提供。 <br/>例如， meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241 -47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**token**| 字符串 | 是 |授权令牌。<br/> 例如，token=04751eac |
+
+#### <a name="example"></a>示例
+
+```http
+https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d&token=gjs44ra
+```
+
+### <a name="method"></a>方法
+
+|资源|方法|说明|
+|----|----|----|
+|/cartcaption|POST|处理会议的标题（已启动）|
+
+> [!NOTE]
+> 确保所有请求的内容类型都是使用 UTF-8 编码的纯文本。 请求正文仅包含标题。
+
+#### <a name="example"></a>示例
+
+```http
+POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1
+Host: api.captions.office.microsoft.com
+Content-Type: text/plain
+Content-Length: 22
+Hello I’m Cortana, welcome to my meeting. 
+```
+
+> [!Note]  
+> 每个 POST 请求都会生成一个新标题行。 为了确保最终用户有足够的时间阅读内容，将每个 POST 请求正文限制为 80-120 个字符。
+
+### <a name="error-codes"></a>错误代码
+
+购物车 API 包括以下错误代码：
+
+|错误代码|说明|
+|---|---|
+| **400** | 请求错误。 响应正文包含详细信息。 例如，并非所有必需的参数都呈现。|
+| **401** | 未经授权。 令牌错误或过期。 如果收到此错误，请生成一个新的购物车 URL，Teams。 |
+| **404** | 未找到或未启动会议。 如果收到此错误，请确保启动会议并选择"开始"标题。 在会议启用字幕后，可以开始在会议中放入字幕。|
+| **500** |内部服务器错误。 有关详细信息，请联系 [支持人员或提供反馈](../feedback.md)。|
+
 ## <a name="real-time-teams-meeting-events"></a>实时Teams会议事件
 
 用户可以接收实时会议事件。 只要任何应用与会议关联，就会与机器人共享实际会议开始时间和结束时间。
@@ -458,13 +515,13 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | C# | Node.js | 
+|示例名称 | Description | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会议详细信息选项卡 | Microsoft Teams会议扩展性示例，用于与会议中的"详细信息"选项卡进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|会议事件示例|显示实时会议事件Teams应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+| 会议详细信息选项卡 | Microsoft Teams会议详细信息选项卡交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+|会议事件示例|显示实时会议事件Teams应用示例|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |会议招聘示例|用于显示招聘方案的会议体验的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |使用 QR 代码安装应用|生成 QR 代码和使用 QR 代码安装应用的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
@@ -472,9 +529,9 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 ## <a name="see-also"></a>另请参阅
 
 * [Teams选项卡的身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
-* [会议Teams应用程序](teams-apps-in-meetings.md)
+* [Teams 会议应用](teams-apps-in-meetings.md)
 
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [为会议启用和配置Teams应用](enable-and-configure-your-app-for-teams-meetings.md)
+> [为会议启用和配置Teams应用程序](enable-and-configure-your-app-for-teams-meetings.md)
