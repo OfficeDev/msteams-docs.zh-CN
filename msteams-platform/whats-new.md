@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 531f520c479ec48ed734021550609a237705d37e
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 88287c26ce2531b2eb76bca2b5352fbfccd4a3e8
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080958"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214340"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "62080958"
 
 | Date | 更新 | 在此处查找  |
 | --- | --- | --- |
+|2022/01/25| 购物车 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#cart-api)|
 |01/19/2022| 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| 自适应卡片中的人员选取器 (适用于移动和 GA 桌面版开发人员预览)  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
@@ -38,6 +39,7 @@ ms.locfileid: "62080958"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|2022/01/25| 购物车 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#cart-api)|
 |01/19/2022| 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| 适用于桌面的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 
@@ -76,7 +78,7 @@ ms.locfileid: "62080958"
 |10/05/2021| 隐藏 Teams 应用，直到管理员允许取消隐藏应用。| 设计应用> [隐藏 Teams 应用，直到管理员批准](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
 |10/05/2021| 规划适用于 Teams 移动的应用。 | 应用基础知识>[规划 Teams 移动的响应式选项卡](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |10/04/2021| 引入了用于管理 Teams 应用的新 Teams 开发人员门户 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
-|09/21/2021|对于机器人和传入 Webhook，Teams 在用户提及中支持 AAD 对象 ID 和 UPN | • 生成卡片和任务模块>生成卡片>[用户提及的 AAD 对象 ID 和 UPN](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • 生成卡片和任务模块>生成卡片> [卡片- 概述](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|09/21/2021|对于机器人和传入 Webhook，Teams 在用户提及中支持 Azure AD 对象 ID 和 UPN | • 生成卡片和任务模块>生成卡片>[用户提及的 Azure AD 对象 ID 和 UPN](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • 生成卡片和任务模块>生成卡片> [卡片- 概述](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
 |08/16/2021| 支持在自适应卡片上进行输入验证（适用于所有功能的 v1.3）和通用操作（适用于机器人发送卡的 v1.4） | • 自适应卡>创作卡> [输入验证](/adaptive-cards/authoring-cards/input-validation)</br> • 生成卡片和任务模块>生成卡>自适应卡的通用操作>[适用于自适应卡片 v1.4 的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/30/2021| "自定义在一起模式"场景功能将参与者合并到单个虚拟场景中，并将其视频流置于预先确定的席位中 | 为 Teams 会议生成应用> [“自定义在一起模式”场景](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| 引入了创建具有单一登录 （SSO） 的 Teams 机器人的分步指南。| 添加身份验证>机器人> [使用 SSO 创建 Teams 机器人的分步指南](sbs-bots-with-sso.yml) |
@@ -206,7 +208,7 @@ ms.locfileid: "62080958"
 | 05/29/2018 | Teams 现在支持自适应卡片。 | [在 Teams 中自适应卡操作](task-modules-and-cards/cards/cards-reference.md) |
 | 04/17/2018 | replyToID 已添加到 `Invoke` 和 `MessageBack` 卡操作的有效负载中。 如果需要更新卡片邮件发出操作，这尤其有用。 | [卡片操作](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | 添加了本主题以跟踪对 Teams 编程界面和此文档集的更改。 | [新增功能](~/whats-new.md)|
-| 04/10/2018 | 更改了身份验证 URL，以在路径中统一使用租户 ID。 | [选项卡身份验证流](~/concepts/authentication/auth-flow-tab.md)、[AAD 选项卡身份验证](~/concepts/authentication/auth-tab-AAD.md)|
+| 04/10/2018 | 更改了身份验证 URL，以在路径中统一使用租户 ID。 | [选项卡身份验证流](~/concepts/authentication/auth-flow-tab.md)、[Azure AD 选项卡身份验证](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | 添加了有关使用命令框的设计准则。 |[命令框](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | 使用机器人为应用发送通知。 |[仅限通知的机器人](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | 主动邮件传送的扩展文档。 |[开始对话](./concepts/bots/bot-conversations/bots-conv-proactive.md)|

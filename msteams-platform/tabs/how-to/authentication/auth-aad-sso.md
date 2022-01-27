@@ -3,13 +3,13 @@ title: 为选项卡提供单一登录支持
 description: 描述单一登录 (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: Teams 身份验证 SSO AAD 单一登录 API
-ms.openlocfilehash: aa602e554589f904687db882076a0c1183aa886f
-ms.sourcegitcommit: 05cce11f412af64f85afc7ebbfa485c307f2d95e
+keywords: Teams 身份验证 SSO Azure AD 单一登录 API
+ms.openlocfilehash: fd11f1febf1fb919a201a56156c36dfe1ee4d7d8
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62064058"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212354"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>对选项卡的单一登录 (SSO) 支持
 
@@ -40,8 +40,8 @@ ms.locfileid: "62064058"
 
 1. 在选项卡中，对 `getAuthToken()` 进行 JavaScript 调用。 `getAuthToken()` 让 Teams 获取选项卡应用程序的访问令牌。
 2. 如果当前用户是第一次使用选项卡应用程序，则在需要同意时会提示你同意。 或者，有一个请求提示来处理升级身份验证，例如双因素身份验证。
-3. Teams 从当前用户的 Azure Active Directory (AAD) 终结点请求选项卡访问令牌。
-4. AAD 将选项卡访问令牌发送到 Teams 应用程序。
+3. Teams 从当前用户的 Azure Active Directory 终结点请求选项卡访问令牌。
+4. Azure AD 将选项卡访问令牌发送到 Teams 应用程序。
 5. Teams 将选项卡访问令牌作为 `getAuthToken()` 调用返回的结果对象的一部分发送到选项卡。
 6. 使用 JavaScript 在选项卡应用程序中分析令牌，以提取所需的信息，例如用户的电子邮件地址。
 
@@ -54,19 +54,19 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
 
 此部分介绍了创建启用 SSO 的 Teams 选项卡所需完成的任务。 这些任务与语言和框架无关。
 
-### <a name="1-create-your-aad-application"></a>1. 创建 AAD 应用程序
+### <a name="1-create-your-azure-ad-application"></a>1. 创建 Azure AD 应用程序
 
 > [!NOTE]
 > 必须知道一些重要的限制：
 >
 > * 仅支持用户级图形 API 权限，即电子邮件、配置文件、offline_access、OpenId。 如果必须有权访问其他 Graph 范围，例如 `User.Read` 或 `Mail.Read`，请参阅[使用 Graph 权限获取访问令牌](#get-an-access-token-with-graph-permissions)。
-> * 应用程序的域名与为 AAD 应用程序注册的域名相同，这一点很重要。
+> * 应用程序的域名与为 Azure AD 应用程序注册的域名相同，这一点很重要。
 > * 目前不支持每个应用有多个域。
 > * 对于新应用程序，用户必须将 `accessTokenAcceptedVersion` 设置为 `2`。
 
-**通过 AAD 门户注册应用**
+**通过 Azure AD 门户注册应用**
 
-1. 在 [AAD 应用注册](https://go.microsoft.com/fwlink/?linkid=2083908)门户中注册新应用程序。
+1. 在 [Azure AD 应用注册](https://go.microsoft.com/fwlink/?linkid=2083908)门户中注册新应用程序。
 1. 选择“**新注册**”。 将显示 **注册应用程序** 页。
 1. 在“**注册应用**”页面中，指定以下值：
     1. 输入应用的 **名称**。
@@ -116,9 +116,9 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
 
 > [!NOTE]
 >
-> * ¹如果 AAD 应用在你在 Teams 中发出身份验证请求的同一租户中注册，则无法要求用户同意，并且会立即获得访问令牌。 仅当 AAD 应用在其他租户中注册时，用户才同意这些权限。
-> * ²如果未将自定义域添加到 AAD，则会收到一个错误，指出主机名不能基于已拥有的域。 若要将自定义域添加到 AAD 并注册它，请按照[将自定义域名添加到 AAD](/azure/active-directory/fundamentals/add-custom-domain) 的过程，然后重复步骤 5。 如果未在 Office 365 租赁中使用管理员凭据登录，也可能会收到此错误。
-> * 如果未在返回的访问令牌中收到用户主体名称 (UPN)，则可以在 AAD 中将其添加为[可选声明](/azure/active-directory/develop/active-directory-optional-claims)。
+> * ¹如果 Azure AD 应用在你在 Teams 中发出身份验证请求的同一租户中注册，则无法要求用户同意，并且会立即获得访问令牌。 仅当 Azure AD 应用在其他租户中注册时，用户才同意这些权限。
+> * ²如果未将自定义域添加到 Azure AD，则会收到一个错误，指出主机名不能基于已拥有的域。 若要将自定义域添加到 Azure AD 并注册它，请按照[将自定义域名添加到 Azure AD](/azure/active-directory/fundamentals/add-custom-domain) 的过程，然后重复步骤 5。 如果未在 Office 365 租赁中使用管理员凭据登录，也可能会收到此错误。
+> * 如果未在返回的访问令牌中收到用户主体名称 (UPN)，则可以在 Azure AD 中将其添加为[可选声明](/azure/active-directory/develop/active-directory-optional-claims)。
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. 更新 Teams 应用程序清单
 
@@ -139,7 +139,7 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
 
 > [!NOTE]
 >
->* AAD 应用的资源通常是其站点 URL 和 appID 的根（例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`）。 此值还用于确保请求来自同一域。 确保选项卡上的 `contentURL` 使用与资源属性相同的域。
+>* Azure AD 应用的资源通常是其站点 URL 和 appID 的根（例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`）。 此值还用于确保请求来自同一域。 确保选项卡上的 `contentURL` 使用与资源属性相同的域。
 >* 必须使用清单版本 1.5 或更高版本来实现 `webApplicationInfo` 字段。
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. 从客户端代码获取访问令牌
@@ -156,11 +156,73 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 调用 `getAuthToken` 并且用户级权限需要用户同意时，会向用户显示一个对话框以授予同意。
 
-在成功回调中收到访问令牌后，解码访问令牌以查看该令牌的声明。 （可选）手动将访问令牌复制并粘贴到工具中，例如 [jwt.ms](https://jwt.ms/)。 如果未在返回的访问令牌中收到 UPN，请将其添加为 AAD 中的[可选声明](/azure/active-directory/develop/active-directory-optional-claims)。 有关详细信息，请参阅[访问令牌](/azure/active-directory/develop/access-tokens)。
+在成功回调中收到访问令牌后，解码访问令牌以查看该令牌的声明。 （可选）手动将访问令牌复制并粘贴到工具中，例如 [jwt.ms](https://jwt.ms/)。 如果未在返回的访问令牌中收到 UPN，请将其添加为 Azure AD 中的[可选声明](/azure/active-directory/develop/active-directory-optional-claims)。 有关详细信息，请参阅[访问令牌](/azure/active-directory/develop/access-tokens)。
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
+
+## <a name="code-snippets"></a>代码段
+
+以下代码提供了使用 MSAL 库提取访问令牌的代理流示例：
+
+### <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
+                                                .WithClientSecret(<"Client secret">)
+                                                .WithAuthority($"https://login.microsoftonline.com/<"Tenant id">")
+                                                .Build();
+ 
+            try
+            {
+                var idToken = <"Client side token">;
+                UserAssertion assert = new UserAssertion(idToken);
+                List<string> scopes = new List<string>();
+                scopes.Add("https://graph.microsoft.com/User.Read");
+                var responseToken = await app.AcquireTokenOnBehalfOf(scopes, assert).ExecuteAsync();
+                return responseToken.AccessToken.ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+```
+
+### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+// Exchange cliend side token with server token
+  app.post('/getProfileOnBehalfOf', function(req, res) {
+        var tid = < "Tenand id" >
+    var token = < "Client side token" >
+    var scopes = ["https://graph.microsoft.com/User.Read"];
+
+        // Creating MSAL client
+        const msalClient = new msal.ConfidentialClientApplication({
+            auth: {
+                clientId: < "Client ID" >,
+                clientSecret: < "Client Secret" >
+      }
+        });
+
+        var oboPromise = new Promise((resolve, reject) => {
+            msalClient.acquireTokenOnBehalfOf({
+                authority: `https://login.microsoftonline.com/${tid}`,
+                oboAssertion: token,
+                scopes: scopes,
+                skipCache: true
+            }).then(result => {
+                console.log("Token is: " + result.accessToken);
+            }).catch(error => {
+                reject({ "error": error.errorCode });
+            });
+        });
+```
+---
 
 ## <a name="code-sample"></a>代码示例
 
@@ -172,9 +234,9 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ### <a name="get-an-access-token-with-graph-permissions"></a>获取具有 Graph 权限的访问令牌
 
-我们当前的 SSO 实现仅授予用户级权限的许可，这些权限不可用于进行 Graph 调用。 若要获取进行 Graph 调用所需的权限（范围），SSO 解决方案必须实现自定义 Web 服务，以交换从 Teams JavaScript SDK 收到的令牌，以获取包含所需作用域的令牌。 这是使用 AAD 的 [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow) 实现的。
+我们当前的 SSO 实现仅授予用户级权限的许可，这些权限不可用于进行 Graph 调用。 若要获取进行 Graph 调用所需的权限（范围），SSO 解决方案必须实现自定义 Web 服务，以交换从 Teams JavaScript SDK 收到的令牌，以获取包含所需作用域的令牌。 这是使用 Azure AD [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow) 实现的。
 
-#### <a name="tenant-admin-consent"></a>租户管理员同意
+### <a name="tenant-admin-consent"></a>租户管理员同意
 
 以租户管理员身份代表组织同意的一种简单方法是引用 `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`。
 
@@ -184,21 +246,21 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 **使用身份验证 API 请求其他许可**
 
-1. 使用 `getAuthToken()` 取回的令牌必须通过 AAD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) 在服务器端交换，以获取对其他图形 API 的访问权限。 请确保为此交换使用 v2 Graph 终结点。
-2. 如果交换失败，AAD 将返回无效的授权异常。 通常有两条错误消息之一，`invalid_grant` 或 `interaction_required`。
-3. 交换失败时，必须请求同意。 显示要求用户授予其他同意的一些用户界面 (UI)。 此 UI 必须包含一个按钮，该按钮使用我们的 [AAD 身份验证 API](~/concepts/authentication/auth-silent-aad.md) 触发 AAD 同意对话框。
-4. 请求 AAD 的更多同意时，必须在给 AAD 发送的 [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) 中包含 `prompt=consent`，否则 AAD 不会要求其他范围。
+1. 使用 `getAuthToken()` 取回的令牌必须通过 Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) 在服务器端交换，以获取对其他图形 API 的访问权限。 请确保为此交换使用 v2 Graph 终结点。
+2. 如果交换失败，Azure AD 将返回无效的授权异常。 通常有两条错误消息之一，`invalid_grant` 或 `interaction_required`。
+3. 交换失败时，必须请求同意。 显示要求用户授予其他同意的一些用户界面 (UI)。 此 UI 必须包含一个按钮，该按钮使用我们的 [Azure AD 身份验证 API](~/concepts/authentication/auth-silent-aad.md) 触发 Azure AD 同意对话框。
+4. 请求 Azure AD 的更多同意时，必须在给 Azure AD 发送的 [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) 中包含 `prompt=consent`，否则 Azure AD 不会要求其他范围。
     * 而不用 `?scope={scopes}`
     * 使用此 `?prompt=consent&scope={scopes}`
     * 确保 `{scopes}` 包括你提示用户的所有范围，例如 Mail.Read 或 User.Read。
 5. 用户授予更多权限后，请重试 on-behalf-of-flow 以获取对这些其他 API 的访问权限。
 
-### <a name="non-aad-authentication"></a>非 AAD 身份验证
+### <a name="non-azure-ad-authentication"></a>非 Azure AD 身份验证
 
-上述身份验证解决方案仅适用于支持 AAD 作为标识提供者的应用和服务。 想要使用基于非 AAD 的服务进行身份验证的应用必须继续使用基于弹出窗口的 [web 身份验证流](~/concepts/authentication.md)。
+上述身份验证解决方案仅适用于支持 Azure AD 作为标识提供者的应用和服务。 想要使用基于非 Azure AD 的服务进行身份验证的应用必须继续使用基于弹出窗口的 [web 身份验证流](~/concepts/authentication.md)。
 
 > [!NOTE]
-> AAD B2C 租户中的客户拥有的应用支持 SSO。
+> Azure AD B2C 租户中的客户拥有的应用支持 SSO。
 
 ## <a name="step-by-step-guides"></a>分步指南
 
