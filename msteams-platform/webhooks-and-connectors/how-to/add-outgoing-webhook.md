@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Teams 选项卡, 传出 Webhook, 可操作邮件, 验证 Webhook
-ms.openlocfilehash: 0c41abe8078e05fa6e52a8c5379f91a21601eac3
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 816a09a85af0e47f1dea5da6a4c02608c986573e
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059747"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281761"
 ---
 # <a name="create-outgoing-webhook"></a>创建传出 Webhook
 
@@ -25,7 +25,7 @@ ms.locfileid: "62059747"
 | ------- | ----------- |
 | 作用域配置| Webhook 的作用域在团队级别。 每个强制设置过程都会添加一个传出 Webhook。 |
 | 重新激活消息传递| 用户必须为 Webhook 使用 @提及功能才能接收消息。 目前，用户只能在公共频道中向传出 Webhook 发送消息，而不能在个人或私有作用域内发送消息。 |
-|标准 HTTP 消息交换|响应将出现在与原始请求消息相同的链中，并且可以包括任何 Bot Framwork 消息内容（例如富文本、图像、卡片和表情符号）。 尽管传出 Webhook 可以使用卡片，但它们不能使用除 `openURL` 以外的任何卡片操作。|
+|标准 HTTP 消息交换|响应与原始请求消息显示在同一链中，并且可以包含任何 Bot Framework 消息内容。 例如，格式文本、图像、卡片和表情符号。 尽管传出 Webhook 可以使用卡片，但它们不能使用除 `openURL` 以外的任何卡片操作。|
 | Teams API 方法支持|传出 Webhook 会将 HTTP POST 发送到 Web 服务并获取响应。 它们无法访问任何其他 API，例如检索团队中的花名册或频道列表。|
 
 ## <a name="create-outgoing-webhooks"></a>创建传出 Webhook
@@ -61,7 +61,7 @@ ms.locfileid: "62059747"
 
     ![创建传出 Webhook](~/assets/images/outgoingwebhook.png)
 
-此时将显示“[基于哈希的消息身份验证代码 (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301)”对话框。 它是一个安全令牌，用于验证 Teams 与指定的外部服务之间的调用。
+此时将显示“[基于哈希的消息身份验证代码 (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301)”对话框。 它是一个安全令牌，用于验证 Teams 与指定的外部服务之间的调用。 HMAC 安全令牌不会过期，并且对于每个配置都是唯一的。
 
 >[!NOTE]
 > 仅当 URL 有效并且服务器和客户端身份验证令牌相同时，团队的用户才可以使用传出 Webhook。 例如，HMAC 握手。
@@ -69,7 +69,7 @@ ms.locfileid: "62059747"
 以下方案提供了添加传出 Webhook 的详细信息：
 
 * 方案：将 Teams 频道数据库服务器上的更改状态通知推送到你的应用。
-* 示例：你有一个业务线应用，它可以跟踪所有 CRUD 操作，例如创建、读取、更新和删除。 Office 365 租户中的 Teams 频道 HR 用户可对员工记录执行这些操作。
+* 示例: 你有一个业务线应用，它可以跟踪所有 CRUD (创建、读取、更新和删除) 操作。 Office 365 租户中的 Teams 频道 HR 用户可对员工记录执行这些操作。
 
 # <a name="url-json-payload"></a>[URL JSON 有效负载](#tab/urljsonpayload)
 **在应用服务器上创建 URL 以接受并处理具有 JSON 有效负载的 POST 请求**

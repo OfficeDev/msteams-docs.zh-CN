@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fa67f6b1261619565cb62d5e1333367904089244
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 47ff6d557a76c457dee9d7d976df6f8316d40b89
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059607"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281754"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>在 Microsoft Teams 中上传应用
 
@@ -38,6 +38,9 @@ ms.locfileid: "62059607"
 1. 选择应用包 .zip 文件。 显示安装对话框。
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="显示 Teams 应用安装对话框示例的屏幕截图。":::
 1. 将应用添加到 Teams。
+
+> [!NOTE]
+> 通过将机器人添加到 Microsoft Teams，无法获取 Microsoft Teams 区域设置，因为机器人活动不是由用户操作启动的 (例如发送消息)，因此 `turnContext.Activity.GetLocale();` 返回 null 值。
 
 ## <a name="troubleshoot-upload-issues"></a>上传问题疑难解答
 
