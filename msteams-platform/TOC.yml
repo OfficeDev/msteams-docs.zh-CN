@@ -92,7 +92,7 @@
   items:
     - name: Visual Studio Code 的Teams工具包
       items:
-        - name: Teams 工具包基础知识
+        - name: Teams 工具包概述
           href: toolkit/teams-toolkit-fundamentals.md
         - name: 新建项目
           href: toolkit/create-new-project.md
@@ -465,6 +465,10 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: 维护已发布的应用程序
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+    - name: 将你的应用货币化
+      items:
+        - name: 概述
+          href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
         - name: 在应用中包含 SaaS 产品/服务
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
 - name: 应用部件清单
