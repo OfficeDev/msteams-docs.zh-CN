@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: a723a0d0d72f032b08addd1df68aa5c2f688d184
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 88fd025229a90ac6e3888763f643829950912633
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059691"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212017"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -607,11 +607,11 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选**— 对象
 
-提供Azure Active Directory （AAD） 应用 ID 和Microsoft Graph信息，以帮助用户无缝登录到应用。 如果应用已在 AAD 中注册，则必须提供应用 ID。 管理员可以在 Teams 管理中心轻松查看权限并授予同意。
+提供 Azure Active Directory 应用 ID 和 Microsoft Graph 信息，以帮助用户无缝登录到应用。 如果应用已在 Azure AD 中注册，则必须提供应用 ID。 管理员可以在 Teams 管理中心轻松查看权限并授予同意。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`id`|string|36 个字符|✔|应用的 AAD 应用程序 ID。 此 ID 必须是 GUID。|
+|`id`|string|36 个字符|✔|应用的 Azure AD 应用程序 ID。 此 ID 必须是 GUID。|
 |`resource`|string|2048 个字符|✔|用于获取 SSO 的身份验证令牌的应用的资源 URL。 </br> **注意：** 如果未使用 SSO，请确保在此字段中向应用清单输入虚拟字符串值，例如， https://notapplicable 以避免错误响应。 |
 |`applicationPermissions`|array of strings|128 个字符||指定粒度[资源特定许可](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)。|
 

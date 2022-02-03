@@ -5,12 +5,12 @@ keywords: 团队机器人卡格式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: d660d58b00624b4d91ce4241829b204c66ba95df
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 1d1ecf16c07744a895db931516c943d068c91d51
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059600"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212375"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
@@ -165,20 +165,20 @@ ms.locfileid: "62059600"
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>在用户提及中的 AAD 对象 ID 和 UPN 
+### <a name="azure-ad-object-id-and-upn-in-user-mention"></a>在用户提及中的 Azure AD 对象 ID 和 UPN 
 
-除了现有的提及 ID 外，Teams 平台还允许使用其 AAD 对象 ID 和用户原则名称 (UPN) 提及用户。 带有自适应卡的机器人和带有传入 Webhook 的连接器支持两个用户提及的 ID。 
+除了现有的提及 ID 外，Teams 平台还允许使用其 Azure AD 对象 ID 和用户原则名称 (UPN) 提及用户。 带有自适应卡的机器人和带有传入 Webhook 的连接器支持两个用户提及的 ID。 
 
 下表描述了新支持的用户提及 ID:
 
 |ID  | 支持功能 |   说明 | 示例 |
 |----------|--------|---------------|---------|
-| AAD 对象 ID | 机器人，连接器 |  AAD 用户的对象 ID |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | 机器人，连接器 | AAD 用户的 UPN | john.smith@microsoft.com |
+| Azure AD 对象 ID | 机器人，连接器 |  Azure AD 用户的对象 ID |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | 机器人，连接器 | Azure AD 用户的 UPN | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>使用自适应卡片在机器人中提及用户 
 
-除现有 ID 外，机器人还支持使用 AAD 对象 ID 和 UPN 提及用户。 对于短信、自适应卡片正文和消息传递扩展响应，机器人中提供了对两个新 ID 的支持。 机器人支持对话和 `invoke` 方案中的提及 ID。 使用 ID @提及时，用户将获取活动源通知。 
+除现有 ID 外，机器人还支持使用 Azure AD 对象 ID 和 UPN 提及用户。 对于短信、自适应卡片正文和消息传递扩展响应，机器人中提供了对两个新 ID 的支持。 机器人支持对话和 `invoke` 方案中的提及 ID。 使用 ID @提及时，用户将获取活动源通知。 
 
 > [!NOTE]
 > 在机器人中使用自适应卡片的用户提及不需要架构更新和 UI/UX 更改。
@@ -195,7 +195,7 @@ ms.locfileid: "62059600"
   "body": [
     {
       "type": "TextBlock",
-      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+      "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
     }
   ],
   "msteams": {
@@ -210,7 +210,7 @@ ms.locfileid: "62059600"
       },
       {
         "type": "mention",
-        "text": "<at>Adele AAD</at>",
+        "text": "<at>Adele Azure AD</at>",
         "mentioned": {
           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
           "name": "Adele Vance"
@@ -227,11 +227,11 @@ ms.locfileid: "62059600"
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>使用自适应卡片的传入 Webhook 中的用户提及 
 
-传入 Webhook 开始支持使用 AAD 对象 ID 和 UPN 在自适应卡片中提及用户。
+传入 Webhook 开始支持使用 Azure AD 对象 ID 和 UPN 在自适应卡片中提及用户。
 
 > [!NOTE]    
-> * 在传入 Webhook 的架构中启用用户提及，以支持 AAD 对象 ID 和 UPN。 
-> * 对于具有 AAD 对象 ID 和 UPN 的用户提及不需要进行 UI/UX 更改。      
+> * 在传入 Webhook 的架构中启用用户提及，以支持 Azure AD 对象 ID 和 UPN。 
+> * 对于具有 Azure AD 对象 ID 和 UPN 的用户提及不需要进行 UI/UX 更改。      
 
 ##### <a name="example"></a>示例 
 
@@ -254,7 +254,7 @@ ms.locfileid: "62059600"
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
                 }
             ],
             "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -271,7 +271,7 @@ ms.locfileid: "62059600"
                       },
                       {
                         "type": "mention",
-                        "text": "<at>Adele AAD</at>",
+                        "text": "<at>Adele Azure AD</at>",
                         "mentioned": {
                           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
                           "name": "Adele Vance"

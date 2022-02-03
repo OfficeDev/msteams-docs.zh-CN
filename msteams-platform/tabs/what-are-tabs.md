@@ -5,12 +5,12 @@ description: Teams 平台上的自定义选项卡概述
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: e87c167495700a44084fb4984696ad2df9b7c099
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 97803e89c225c45aee82c6969c8168dec7bf5cac
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059593"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212501"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>构建 Microsoft Teams 选项卡
 
@@ -43,7 +43,7 @@ Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选�
 选项卡功能如下所示：
 
 * 如果向同样具有机器人的应用添加了选项卡，则机器人也会添加到团队中。
-* 了解当前用户的 Azure Active Directory (AAD) ID。
+* 了解当前用户的 Azure Active Directory ID。
 * 用户的区域设置感知，以指示 `en-us` 的语言。
 * 单一登录 (SSO) 功能（如果支持）。
 * 能够使用机器人或应用通知深入链接到选项卡或服务中的子实体，例如单个工作项。
