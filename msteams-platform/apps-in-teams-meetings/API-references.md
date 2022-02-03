@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api usercontext 通知信号查询
-ms.openlocfilehash: 74d1082d1f3bbfeb3b2b1a96c321832799315b55
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
+ms.openlocfilehash: dd46dc2622915055e46e07ae34d48c690d6d8d8e
+ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214327"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62323146"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -23,28 +23,29 @@ ms.locfileid: "62214327"
 
 下表提供了 API 列表：
 
-|API|说明|请求|源|
+|API|说明|请求|Source|
 |---|---|----|---|
 |**GetUserContext**| 使您可以获取上下文信息，以在"开始"选项卡中Teams内容。 |_**microsoftTeams.getContext ( ( ) => { /*...*/ } )**_|Microsoft Teams客户端 SDK|
 |**GetParticipant**| 使机器人能够按会议 ID 和参与者 ID 获取参与者信息。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}？tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | 使你可以提供使用用户-机器人聊天的现有对话通知 API 传递的会议信号。 它允许您根据显示会议内对话框的用户操作发出信号。 |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**会议详细信息** | 使您可以获取静态会议元数据。 |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**CART**|使您可以发布会议的标题（已启动）。|**POST /cartcaption？meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1**|Microsoft Teams客户端 SDK|
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
-若要标识和检索选项卡内容的上下文信息，请参阅获取[Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)选项卡的上下文。在会议上下文中运行时，选项卡使用 ，并添加 `meetingId` 响应负载。
+若要标识和检索选项卡内容的上下文信息，请参阅[获取 Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)`meetingId` 选项卡的上下文。选项卡在会议上下文中运行时使用，并添加用于响应负载。
 
 ## <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
 > * 不要缓存参与者角色，因为会议组织者可以随时更改角色。
-> * Teams当前不支持超过 350 个参与者的大型通讯组列表或名单大小， `GetParticipant`API。
+> * Teams当前不支持超过 350 个参与者的大型通讯组列表或名单大小，`GetParticipant`API。
 
 API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与者信息。 API 包括查询参数、示例和响应代码。
 
 ### <a name="query-parameters"></a>查询参数
 
-`GetParticipant`API 包括以下查询参数：
+API `GetParticipant` 包括以下查询参数：
 
 |值|类型|必需|说明|
 |---|---|----|---|
@@ -54,7 +55,7 @@ API `GetParticipant` 允许机器人通过会议 ID 和参与者 ID 获取参与
 
 ### <a name="example"></a>示例
 
-`GetParticipant`API 包括以下示例：
+API `GetParticipant` 包括以下示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -100,7 +101,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-API 的 JSON 响应 `GetParticipant` 正文为：
+API 的 JSON 响应正文 `GetParticipant` 为：
 
 ```json
 {
@@ -128,7 +129,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 ### <a name="response-codes"></a>响应代码
 
-`GetParticipant`API 返回以下响应代码：
+API `GetParticipant` 返回以下响应代码：
 
 |响应代码|说明|
 |---|---|
@@ -139,7 +140,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 ## <a name="notificationsignal-api"></a>NotificationSignal API
 
-会议中的所有用户都接收通过 API 发送 `NotificationSignal` 的通知。
+会议中的所有用户都接收通过 API 发送的通知 `NotificationSignal` 。
 
 > [!NOTE]
 > * 调用会议内对话框时，内容将显示为聊天消息。
@@ -149,7 +150,7 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 ### <a name="query-parameter"></a>查询参数
 
-`NotificationSignal`API 包括以下查询参数：
+API `NotificationSignal` 包括以下查询参数：
 
 |值|类型|必需|说明|
 |---|---|----|---|
@@ -157,14 +158,14 @@ API 的 JSON 响应 `GetParticipant` 正文为：
 
 ### <a name="examples"></a>示例
 
-`Bot ID`在清单中声明，机器人将接收结果对象。
+在 `Bot ID` 清单中声明，机器人将接收结果对象。
 
 > [!NOTE]
-> * `completionBotId`在请求 `externalResourceUrl` 的有效负载示例中，的 参数是可选的。 `Bot ID` 在清单中声明，机器人将接收结果对象。
-> * `externalResourceUrl`宽度和高度参数必须以像素为单位。 若要确保尺寸在允许的限制内，请参阅 [设计指南](design/designing-apps-in-meetings.md)。
-> * URL 是在会议对话框中作为 `<iframe>` 加载的页面。 域必须在你的应用清单 `validDomains` 的应用数组中。
+> * 在 `completionBotId` 请求 `externalResourceUrl` 的有效负载示例中，的 参数是可选的。 `Bot ID` 在清单中声明，机器人将接收结果对象。
+> * 宽度 `externalResourceUrl` 和高度参数必须以像素为单位。 若要确保尺寸在允许的限制内，请参阅 [设计指南](design/designing-apps-in-meetings.md)。
+> * URL 是在会议对话框中作为 `<iframe>` 加载的页面。 域必须在你的应用清单的应用 `validDomains` 数组中。
 
-`NotificationSignal`API 包括以下示例：
+API `NotificationSignal` 包括以下示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -211,7 +212,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ### <a name="response-codes"></a>响应代码
 
-`NotificationSignal`API 包括以下响应代码：
+API `NotificationSignal` 包括以下响应代码：
 
 |响应代码|说明|
 |---|---|
@@ -231,9 +232,9 @@ API 通过 Bot Services 提供。
 ### <a name="prerequisite"></a>先决条件
 
 > [!NOTE] 
-> 检查你的应用是否满足会议中应用的先决条件中列出的Teams[先决条件](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
+> 检查你的应用是否满足会议中的应用先决条件中列出的Teams[先决条件](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
 
-若要使用会议详细信息 API，必须获取 RSC 权限。 使用以下示例配置应用清单 `webApplicationInfo` 的属性：
+若要使用会议详细信息 API，必须获取 RSC 权限。 使用以下示例配置应用清单的属性 `webApplicationInfo` ：
 
 ```json
 "webApplicationInfo": {
@@ -303,7 +304,7 @@ GET /v1/meetings/{meetingId}
 
 ## <a name="cart-api"></a>购物车 API
 
-购物车 API 公开了一个 POST 终结点Microsoft Teams购物车标题、人为的隐藏式标题。 当最终用户启用标题时，发送到此终结点的文本Microsoft Teams向会议中的最终用户显示。
+通信访问实时翻译 (CART) API 公开了一个 POST 终结点Microsoft Teams购物车标题、人工类型的隐藏式字幕。 发送到此终结点的文本内容在启用了标题Microsoft Teams向会议中的最终用户显示。
 
 ### <a name="cart-url"></a>购物车 URL
 
@@ -366,9 +367,9 @@ Hello I’m Cortana, welcome to my meeting.
 ### <a name="prerequisite"></a>先决条件
 
 > [!NOTE] 
-> 检查你的应用是否满足会议中应用的先决条件中列出的Teams[先决条件](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
+> 检查你的应用是否满足会议中的应用先决条件中列出的Teams[先决条件](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
 
-应用清单必须具有 `webApplicationInfo` 属性，以接收会议开始和结束事件。 使用以下示例配置清单：
+应用清单必须具有 属性 `webApplicationInfo` ，以接收会议开始和结束事件。 使用以下示例配置清单：
 
 ```json
 "webApplicationInfo": {
@@ -488,14 +489,14 @@ Hello I’m Cortana, welcome to my meeting.
 
 机器人通过处理程序接收 `OnEventActivityAsync` 事件。
 
-为了反初始化 json 有效负载，引入了一个模型对象，用于获取会议元数据。 会议元数据位于事件 `value` 有效负载中的 属性中。 将 `MeetingStartEndEventvalue` 创建模型对象，其成员变量对应于事件有效负载 `value` 中的 属性下的键。
+为了反初始化 json 有效负载，引入了一个模型对象，用于获取会议元数据。 会议元数据位于事件有效 `value` 负载中的 属性中。 将 `MeetingStartEndEventvalue` 创建模型对象，其成员变量对应于 `value` 事件有效负载中的 属性下的键。
      
 > [!NOTE]      
-> * 从 获取会议 `turnContext.ChannelData` ID。    
+> * 从 获取会议 `turnContext.ChannelData`ID。    
 > * 不要将对话 ID 用作会议 ID。     
-> * 请勿使用会议事件有效负载中的会议 `turncontext.activity.value` ID。 
+> * 请勿使用会议事件有效负载中的会议 ID `turncontext.activity.value`。 
       
-以下代码演示如何从会议开始/结束事件捕获会议元数据，即 、 和 `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` ：
+以下代码演示如何从`MeetingType``EndTime``Title``Id``JoinUrl``StartTime`会议开始/结束事件捕获会议元数据，即 、 和 ：
 
 会议开始事件
 ```csharp
@@ -520,8 +521,8 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会议详细信息选项卡 | Microsoft Teams会议详细信息选项卡交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|会议事件示例|显示实时会议事件Teams应用示例|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+| 会议详细信息选项卡 | Microsoft Teams会议扩展性示例，用于与会议中的"详细信息"选项卡进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+|会议事件示例|显示实时会议事件Teams应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |会议招聘示例|用于显示招聘方案的会议体验的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |使用 QR 代码安装应用|生成 QR 代码和使用 QR 代码安装应用的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
