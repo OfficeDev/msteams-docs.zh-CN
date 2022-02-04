@@ -5,13 +5,8 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 455809e64a934384d28e00bdf721ae8c66cb7d19
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62363414"
 ---
+
 # <a name="in-app-purchases"></a>应用内购买
 
 Microsoft Teams API，可用于实现应用内购买，以从免费升级到付费Teams应用。 应用内购买允许你直接从应用内将用户从免费计划转换为付费计划。
@@ -106,6 +101,10 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="订阅的登陆页面。" border="true":::
 
+## <a name="next-step"></a>后续步骤
+
+> [!div class="nextstepaction"]
+> [针对盈利应用的测试预览](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## <a name="see-also"></a>另请参阅
 

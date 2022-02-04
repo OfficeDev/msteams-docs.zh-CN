@@ -3,19 +3,20 @@ title: 打包应用
 description: 了解如何打包 Microsoft Teams 应用以进行测试、上传和存储发布。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 002da681a464770a31fa6963e96fdff54701b35f
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059677"
 ---
+
 # <a name="create-a-microsoft-teams-app-package"></a>创建 Microsoft Teams 应用包
 
 需要应用包，但你计划分发 Microsoft Teams 应用。 有效的包是包含以下内容的 ZIP 文件：
 
 * **应用清单**：描述应用的配置方式，包括其功能、所需资源和其他重要属性。
 * **应用图标**：每个包都需要应用的颜色和轮廓图标。
+
+## <a name="teams-doesnt-host-your-app"></a>Teams 不托管你的应用
+
+当用户在 Teams 中安装你的应用时，他们安装的应用包仅包含配置文件 (也称为应用清单) 以及应用的图标。 应用的逻辑和数据存储托管在其他地方，如开发期间的本地主机和 Azure Web 服务。 Teams 通过 HTTPS 访问这些资源。
+
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="显示 Teams 应用的应用托管插图" border="true":::
 
 ## <a name="app-manifest"></a>应用部件清单
 

@@ -4,13 +4,8 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 88287c26ce2531b2eb76bca2b5352fbfccd4a3e8
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214340"
 ---
+
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
 发现正式版 （GA） 和开发人员预览版中的 Microsoft Teams 平台功能。
@@ -22,7 +17,11 @@ ms.locfileid: "62214340"
 
 | Date | 更新 | 在此处查找  |
 | --- | --- | --- |
-|2022/01/25| 购物车 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#cart-api)|
+|02/03/2022| 引入了应用清单版本 1.12 |  • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
+|02/03/2022 |共享会议阶段的交互模式|• 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
+|02/03/2022| 盈利应用的测试预览（开发人员预览版）| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|02/03/2022| 应用内购买流，用于应用盈利（开发人员预览版） | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|2022/01/25| 发送实时字幕 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| 自适应卡片中的人员选取器 (适用于移动和 GA 桌面版开发人员预览)  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
@@ -39,7 +38,8 @@ ms.locfileid: "62214340"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-|2022/01/25| 购物车 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#cart-api)|
+|02/02/2022| 引入了应用清单版本 1.12 | 应用清单> [应用程序清单架构](resources/schema/manifest-schema.md) |
+|2022/01/25| 发送实时字幕 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |01/17/2022| 适用于桌面的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 
@@ -72,7 +72,7 @@ ms.locfileid: "62214340"
 |10/25/2021| 通过分步指南中的新结构和过程更新了 Microsoft Teams 开发人员文档的入门模块 | 入门>[你的第一个 Teams 应用入门](get-started/get-started-overview.md) |
 |10/21/2021| 为选项卡或个人应用添加 `registerOnFocused` API | 生成选项卡>创建个人选项卡> [为选项卡或个人应用添加`registerOnFocused` API](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| 会议阶段现已在 GA 中提供。 | 生成用于 Teams 会议的应用>[启用和配置 Teams 会议应用](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|10/20/2021| 会议详细信息 API 和实时 Teams 会议事件 | 生成用于 Teams 会议的应用>[创 建Teams 会议应用](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|10/20/2021| 会议详细信息 API 和实时 Teams 会议事件。 | 为 Teams 会议生成应用 > [获取会议详细信息 API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |10/18/2021| 选项卡链接展开和阶段视图。 | 生成选项卡>[选项卡链接展开和阶段视图](tabs/tabs-link-unfurling.md) |
 |10/08/2021| 设计自适应卡片的新最佳做法 | 设计应用> UI 组件>[为 Teams 应用设计自适应卡片](task-modules-and-cards/cards/design-effective-cards.md) |
 |10/05/2021| 隐藏 Teams 应用，直到管理员允许取消隐藏应用。| 设计应用> [隐藏 Teams 应用，直到管理员批准](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
@@ -228,6 +228,10 @@ ms.locfileid: "62214340"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+|02/02/2022| 引入了应用清单版本 1.12 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
+|02/03/2022 |共享会议阶段的交互模式|• 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
+|02/03/2022| 针对盈利应用的测试预览| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|02/03/2022| 应用内购买流，用于盈利应用 | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |01/17/2022| 适用于移动的自适应卡片中的人员选取器  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| 引入了授予 Tab 设备权限的分步指南。 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |

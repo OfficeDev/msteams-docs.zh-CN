@@ -6,13 +6,8 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api 用户上下文通知信号查询
-ms.openlocfilehash: 2335233db1c973ed134968c7192a32d4bf9b5a34
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362723"
 ---
+
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
 会议扩展性提供了用于增强会议体验的 API。 你可以借助列出的 API 执行以下操作：
@@ -28,12 +23,12 @@ ms.locfileid: "62362723"
 |[**获取用户上下文**](#get-user-context-api)| 获取上下文信息以在"列表"选项卡中Teams内容。| MSTC SDK|
 |[**获取参与者**](#get-participant-api)| 按会议 ID 和参与者 ID 提取参与者信息。 |MSBF SDK|
 |[**发送通知信号**](#send-notification-signal-api)| 使用现有的用户-机器人聊天对话通知 API 提供会议信号，并允许通知显示会议内对话框的用户操作。 |MSBF SDK|
-|[**获取会议详细信息**](#get-meeting-details-api)| 获取会议静态元数据。 |Bot SDK |
+|[**获取会议详细信息**](#get-meeting-details-api)| 获取会议静态元数据。 |MSBF SDK |
 |[**发送实时字幕**](#send-real-time-captions-api)| 向正在进行的会议发送实时字幕。 |MSTC SDK|
 |[**将应用内容共享到阶段**](#share-app-content-to-stage-api)| 从会议的应用侧面板将应用的特定部分共享到会议阶段。 |MSTC SDK|
 |[**获取应用内容阶段共享状态**](#get-app-content-stage-sharing-state-api)| 获取有关会议阶段的应用共享状态的信息。 |MSTC SDK|
 |[**获取应用内容阶段共享功能**](#get-app-content-stage-sharing-capabilities-api)| 获取应用共享到会议阶段的功能。 |MSTC SDK|
-|[**获取实时Teams会议事件**](#get-real-time-teams-meeting-events-api)|获取实时会议事件，如实际开始时间和结束时间。| Bot SDK|
+|[**获取实时Teams会议事件**](#get-real-time-teams-meeting-events-api)|获取实时会议事件，如实际开始时间和结束时间。| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>获取用户上下文 API
 
@@ -367,7 +362,7 @@ GET /v1/meetings/{meetingId}
 
 ## <a name="send-real-time-captions-api"></a>发送实时字幕 API
 
-发送实时标题 API 公开了一个 POST 终结点，Microsoft Teams通信访问实时翻译 (CART) 标题、人工类型的隐藏式字幕。 发送到此终结点的文本内容在启用了标题Microsoft Teams向会议中的最终用户显示。
+发送实时标题 API 公开了一个 POST 终结点，Microsoft Teams通信访问实时翻译 (CART) 标题、人工类型的隐藏式字幕。 当最终用户启用标题时，发送到此终结点的文本Microsoft Teams向会议中的最终用户显示。
 
 ### <a name="cart-url"></a>购物车 URL
 
