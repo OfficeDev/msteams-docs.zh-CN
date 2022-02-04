@@ -6,29 +6,29 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: UI 组件 fluent kit 痕迹导航按钮卡旋转式下拉列表标记选取器透视表切换工具提示
-ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 40a0c789275d98ab5bfbe74a61aa04a0e2daee32
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887495"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362961"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本 Microsoft Teams UI 组件设计Fluent应用
 
 可以使用以下基本 Teams UI 组件从头开始构建Fluent应用。 这些组件设计尽可能平面，可跨不同的用例、主题和屏幕大小工作。
 
-此页面上的插图显示组件在默认Teams (浅色) 和深色主题中的外观。
+此页面上的插图显示组件在默认Teams、浅色 () 外观。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI，Microsoft Teams</a>UI 工具包包括专为生成应用而设计的组件Teams模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
+基于 <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>，Microsoft Teams UI 工具包包括专为生成 Teams 应用而设计的组件和模式。 在 UI 工具包中，你可以将此处列出的组件直接获取并插入设计中，并查看如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
 > [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="alert"></a>通知
 
-:::image type="content" source="../../assets/images/components/alert.png" alt-text="示例显示警报 UI 组件。" border="false":::
+:::image type="content" source="../../assets/images/components/alert-button.png" alt-text="示例显示警报 UI 组件。" border="false":::
 
 ## <a name="button"></a>按钮
 
@@ -70,7 +70,7 @@ ms.locfileid: "60887495"
 
 :::image type="content" source="../../assets/images/components/group-list.png" alt-text="示例显示组列表 UI 组件。" border="false":::
 
-## <a name="hyperlink"></a>超链接
+## <a name="hyperlink"></a>Hyperlink
 
 :::image type="content" source="../../assets/images/components/hyperlink.png" alt-text="示例显示超链接 UI 组件。" border="false":::
 
@@ -134,7 +134,7 @@ ms.locfileid: "60887495"
 
 ## <a name="other-resources"></a>其他资源
 
-获取此处列出的某些组件的代码示例和实现详细信息，以及 Microsoft Teams UI 工具包。
+获取此处和 Microsoft Teams UI 工具包中列出的某些组件的代码示例和实现详细信息。
 
 > [!div class="nextstepaction"]
 > [尝试 UI (Fluent组件) ](https://fluentsite.z22.web.core.windows.net/)

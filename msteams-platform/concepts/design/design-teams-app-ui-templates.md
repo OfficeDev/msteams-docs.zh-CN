@@ -1,20 +1,20 @@
 ---
 title: 使用 UI 模板设计应用
 author: heath-hamilton
-description: 使用标准化 UI 组件、布局和通常在整个应用中常见的模式更快地设计Microsoft Teams。
+description: 使用通常在整个应用中看到的标准化 UI 组件、布局和模式更快地设计Microsoft Teams。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948444"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362940"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI Microsoft Teams设计应用
 
-使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 UI Fluent的组件的集合，这些组件适用于常见的 Teams 用例，让你有更多的时间来为用户找到最佳体验。
+使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 UI Fluent的组件的集合，这些组件适用于常见Teams用例，让你有更多的时间来为用户找到最佳体验。
 
 ## <a name="getting-started-with-tools-and-samples"></a>工具和示例入门
 
@@ -22,7 +22,7 @@ ms.locfileid: "60948444"
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-从应用 UI 工具包获取应用设计的 UI Microsoft Teams，其中还包括有关用法、结构、辅助功能和最佳做法的广泛信息。
+从应用 UI 工具包中为应用设计获取 UI 模板Microsoft Teams，其中还包括有关用法、结构、辅助功能和最佳做法的广泛信息。
 
 > [!div class="nextstepaction"]
 > [获取图 (UI) ](https://www.figma.com/community/file/916836509871353159)
@@ -34,7 +34,7 @@ ms.locfileid: "60948444"
 > [!div class="nextstepaction"]
 > [尝试 UI 库 (场) ](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-直接将这些模板和相关组件导入到Teams应用项目中。
+将这些模板和相关组件直接导入到Teams应用项目中。
 
 > [!div class="nextstepaction"]
 > [获取 UI 库 (GitHub) ](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
@@ -46,9 +46,23 @@ ms.locfileid: "60948444"
 > [!div class="nextstepaction"]
 > [获取示例应用 (GitHub) ](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
+## <a name="calendar"></a>日历
+
+在Teams中，用户可以在日历中为自己或组查看、计划和管理即将开始和过去的事件。
+
+### <a name="top-use-cases"></a>热门用例
+
+* 安排会议和事件
+* 获取即将召开的会议和活动的提醒
+* 查看计划
+
+### <a name="desktop"></a>桌面
+
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="示例显示桌面上的日历 UI 模板。" border="false":::
+
 ## <a name="dashboard"></a>仪表板
 
-仪表板在中心位置显示不同类型的内容， (Teams应用或选项卡) 。 用户至少应该能够自定义他们在仪表板上看到部分内容。
+仪表板在中心位置显示不同类型的内容 (例如Teams应用或选项卡) 。 用户至少应该能够自定义他们在仪表板上看到部分内容。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -66,7 +80,7 @@ ms.locfileid: "60948444"
 
 ## <a name="data-visualization"></a>数据可视化
 
-可以使用不同的卡片大小 (、双精度和完全) ，以在同一页面上堆叠和组织数据可视化效果。 卡片缩放以适合列布局并填充空白区域。
+可以使用不同的卡片大小 (、双精度和) ，以在同一页面上堆叠和组织数据可视化效果。 卡片缩放以适合列布局并填充空白区域。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -153,7 +167,7 @@ ms.locfileid: "60948444"
 
 ## <a name="sign-in"></a>登录
 
-你可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括 SSO (单一) ，我们建议这样做以简化身份验证体验。
+您可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括 SSO (单一) ，我们建议这样做，以简化身份验证体验。
 
 ### <a name="top-use-case"></a>热门用例
 
@@ -169,7 +183,7 @@ ms.locfileid: "60948444"
 
 ## <a name="settings"></a>设置
 
-设置屏幕是用户可以使用你的应用配置其首选项的地方。  (注意：设置是基本[UI 组件的](~/concepts/design/design-teams-app-basic-ui-components.md)容器 。) 
+设置屏幕是用户可以使用你的应用配置其首选项的地方。  (注意：设置是基本 [UI 组件的](~/concepts/design/design-teams-app-basic-ui-components.md)容器。) 
 
 ### <a name="top-use-case"></a>热门用例
 

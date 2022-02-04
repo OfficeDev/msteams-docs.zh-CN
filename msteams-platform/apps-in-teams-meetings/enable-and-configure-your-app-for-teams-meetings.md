@@ -4,12 +4,12 @@ author: surbhigupta
 description: 为会议和其他Teams方案启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: e0bf9f06d9a72f711e45291cd5f212ef1b2718c3
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: cc1e3abc2801e750cc838a73459e707ed1913271
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323174"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362765"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
@@ -17,7 +17,7 @@ ms.locfileid: "62323174"
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
-若要为应用启用Teams会议，请更新应用清单并使用上下文属性确定应用必须出现在何处。
+若要为应用启用Teams会议，请更新应用清单，并使用上下文属性确定应用必须显示在何处。
 
 ### <a name="update-your-app-manifest"></a>更新应用清单
 
@@ -119,13 +119,59 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 #### <a name="in-meeting-dialog-box"></a>"会议内"对话框
 
-会议内对话框用于在会议期间与参与者互动，并收集会议期间的信息或反馈。 [`NotificationSignal`](API-references.md#notificationsignal-api)使用 API 触发气泡通知。 作为通知请求有效负载的一部分，请包含要显示内容的托管 URL。
+会议内对话框用于在会议期间与参与者互动，并收集会议期间的信息或反馈。 使用 [SendNotificationSignal API](API-references.md#send-notification-signal-api) 触发气泡通知。 作为通知请求有效负载的一部分，请包含要显示内容的托管 URL。
 
 会议内对话框不得使用任务模块。 会议聊天中不调用任务模块。 外部资源 URL 用于在会议中显示内容气泡。 可以使用 方法 `submitTask` 在会议聊天中提交数据。
 
 > [!NOTE]
-> * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-tasks-submittask&preserve-view=true)。
-> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID`from.aadObjectId`，Azure Active Directory ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+> * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。 
+> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Azure Active Directory (AAD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+
+#### <a name="shared-meeting-stage"></a>共享会议阶段
+
+> [!NOTE]
+> 目前，此功能仅适用于公共 [开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版。
+
+共享会议阶段允许会议参与者实时与应用内容进行交互和协作。 可以通过以下方式将应用共享到协作会议阶段：
+
+* [在客户端中共享整个](#share-entire-app-to-stage)应用以使用共享到Teams阶段。
+* [共享应用的特定部分，以](#share-specific-parts-of-the-app-to-stage)使用 Teams SDK 中的 API 进行阶段。
+
+##### <a name="share-entire-app-to-stage"></a>将整个应用共享到阶段
+
+参与者可以使用应用侧面板中的"共享到阶段"按钮将整个应用共享到协作会议阶段。
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+若要共享要阶段的整个应用，必须在应用清单`meetingStage``meetingSidePanel`中将 和 配置为帧上下文。 例如：
+
+```json
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
+
+有关详细信息，请参阅 [应用清单](../resources/schema/manifest-schema-dev-preview.md#configurabletabs)。 
+
+##### <a name="share-specific-parts-of-the-app-to-stage"></a>将应用的特定部分共享到阶段
+
+参与者可以使用共享来阶段 API，将应用的特定部分共享到协作会议阶段。 API 在客户端 SDK Teams可用，并且从应用端面板调用。
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+若要共享要阶段的应用的特定部分，必须在客户端 SDK 库中调用Teams API。 有关详细信息，请参阅 [API 参考](API-references.md)。
+
+如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Azure Active Directory ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会议后
 
