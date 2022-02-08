@@ -5,12 +5,12 @@ keywords: teams 邮件扩展邮件扩展搜索
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: a8e4a80835dade53c129e9efe1b21cd6715104ce
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ecaa841e6f8870b7e7c9284535082c4ec08112f2
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156013"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443984"
 ---
 # <a name="search-with-messaging-extensions"></a>使用邮件扩展进行搜索
 
@@ -26,7 +26,7 @@ ms.locfileid: "59156013"
 
 ### <a name="search-type-message-extensions"></a>搜索类型邮件扩展
 
-对于基于搜索的邮件扩展，将 `type` 参数设置为 `query` 。 下面是一个使用单个搜索命令的清单示例。 单个邮件扩展最多可以有 10 个不同的命令与之关联。 这可包括多个搜索和多个基于操作的命令。
+对于基于搜索的邮件扩展，将 参数 `type` 设置为 `query`。 下面是一个使用单个搜索命令的清单示例。 单个邮件扩展最多可以有 10 个不同的命令与之关联。 这可包括多个搜索和多个基于操作的命令。
 
 #### <a name="complete-app-manifest-example"></a>完整的应用清单示例
 
@@ -89,55 +89,55 @@ ms.locfileid: "59156013"
 
 可以通过上传应用来测试邮件扩展。
 
-若要打开消息扩展，请导航到任何聊天或频道。 在撰写 **框中** 选择" (&#8943;) "按钮，然后选择邮件扩展。 
+若要打开消息扩展，请导航到任何聊天或频道。 在撰写 **框中** 选择" (&#8943;****) "按钮，然后选择邮件扩展。
 
 ## <a name="add-event-handlers"></a>添加事件处理程序
 
-大多数工作都涉及 事件，该事件处理邮件扩展 `onQuery` 窗口中的所有交互。
+大多数工作都涉及 `onQuery` 事件，该事件处理邮件扩展窗口中的所有交互。
 
-如果在清单中设置为 ，则为邮件设置启用"联系人"菜单项，并且 `canUpdateConfiguration` `true` 还必须处理 和 `onQuerySettingsUrl` `onSettingsUpdate` 。
+如果在清单中`canUpdateConfiguration``true`设置为 ，则为邮件设置启用"联系人"菜单项，并且还必须处理 和 `onQuerySettingsUrl` `onSettingsUpdate`。
 
 ### <a name="handle-onquery-events"></a>处理 onQuery 事件
 
-邮件扩展在邮件扩展窗口中发生任何事件或发送到该窗口时 `onQuery` 接收事件。
+邮件扩展在邮件扩展 `onQuery` 窗口中发生任何事件或发送到该窗口时接收事件。
 
-如果邮件扩展使用配置页，则 处理程序应首先检查任何存储的配置信息;如果未配置邮件扩展，则返回响应，并返回指向配置页面 `onQuery` `config` 的链接。 请注意，来自配置页面的响应也由 处理 `onQuery` 。 唯一的例外是由 的处理程序调用配置页时; `onQuerySettingsUrl` 请参阅以下部分：
+`onQuery` `config`如果邮件扩展使用配置页，则 处理程序应首先检查任何存储的配置信息;如果未配置邮件扩展，则返回响应，并返回指向配置页面的链接。 请注意，来自配置页面的响应也由 处理 `onQuery`。 唯一的例外是由 `onQuerySettingsUrl`的处理程序调用配置页时;请参阅以下部分：
 
 如果邮件扩展需要身份验证，请检查用户状态信息;如果用户未登录，请按照本主题稍后的身份验证 [部分中](#authentication) 的说明进行操作。
 
-接下来，检查是否已设置;如果是，则采取相应的操作，例如提供说明 `initialRun` 或响应列表。
+接下来，检查是否已 `initialRun` 设置;如果是，则采取相应的操作，例如提供说明或响应列表。
 
-其余处理程序将提示用户输入信息，显示预览卡片列表，并返回 `onQuery` 用户选择的卡片。
+其余处理程序将 `onQuery` 提示用户输入信息，显示预览卡片列表，并返回用户选择的卡片。
 
 ### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>处理 onQuerySettingsUrl 和 onSettingsUpdate 事件
 
-和 `onQuerySettingsUrl` `onSettingsUpdate` 事件协同工作以启用设置菜单项。 
+和 `onQuerySettingsUrl` 事件协同工作以 **启用设置菜单项**。`onSettingsUpdate`
 
-![菜单项的位置设置屏幕截图](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![菜单项位置的设置屏幕截图](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
-的处理程序返回配置页的 URL;配置页关闭后，您的 `onQuerySettingsUrl` 处理程序接受 `onSettingsUpdate` 并保存返回的状态。 这是一个无法 `onQuery` *从* 配置页面接收响应的情况。
+的处理程序 `onQuerySettingsUrl` 返回配置页的 URL;配置页关闭后，您的处理程序 `onSettingsUpdate` 接受并保存返回的状态。 这是一个无法`onQuery`*从* 配置页面接收响应的情况。
 
 ## <a name="receive-and-respond-to-queries"></a>接收和响应查询
 
-对消息扩展的每次请求都通过发布至回调 `Activity` URL 的对象完成。 请求包含有关用户命令的信息，如 ID 和参数值。 请求还会提供有关调用扩展的上下文的元数据，包括用户和租户 ID，以及聊天 ID 或频道和团队 ID。
+对消息扩展的每次请求都通过 `Activity` 发布至回调 URL 的对象完成。 请求包含有关用户命令的信息，如 ID 和参数值。 请求还会提供有关调用扩展的上下文的元数据，包括用户和租户 ID，以及聊天 ID 或频道和团队 ID。
 
 ### <a name="receive-user-requests"></a>接收用户请求
 
-当用户执行查询时，Microsoft Teams向服务发送标准 Bot Framework `Activity` 对象。 服务应执行其逻辑，该逻辑已设置为 并设置为支持 `Activity` `type` `invoke` `name` `composeExtension` 的类型，如下表所示。
+当用户执行查询时，Microsoft Teams向服务发送标准 Bot Framework `Activity` 对象。 服务应执行其逻辑，`Activity` `name` `type` `invoke` `composeExtension`该逻辑已设置为 并设置为支持的类型，如下表所示。
 
 除了标准自动程序活动属性之外，有效负载还包含以下请求元数据：
 
 |属性名称|用途|
 |---|---|
-|`type`| 请求类型;必须为 `invoke` 。 |
+|`type`| 请求类型; `invoke`必须为 。 |
 |`name`| 向服务发出的命令类型。 目前支持以下类型： <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
-|`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
-|`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果在 (通道中提出请求，频道 ID 将) 。 |
+|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) 发送请求的用户的对象 ID。 |
+|`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) 租户 ID。 |
+|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
-|`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>`country`该字段包含用户的检测位置。<br>`platform`字段描述消息客户端平台。 <br>有关其他信息，请参阅 *非* [IRI 实体类型 — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
+|`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>该字段 `country` 包含用户的检测位置。<br>字段 `platform` 描述消息客户端平台。 <br>有关其他信息，请参阅 *非* [IRI 实体类型 — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
 
 请求参数本身位于 value 对象中，其中包括以下属性：
 
@@ -195,11 +195,11 @@ ms.locfileid: "59156013"
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>从插入撰写消息框的链接接收请求
 
-作为一 (或除了) 外部服务外，您还可以使用插入到撰写消息框中的 URL 查询您的服务并返回一张卡片。 在下面的屏幕截图中，用户已粘贴到邮件扩展已解析为Azure DevOps中工作项的 URL。
+作为一 (或除了) 外部服务外，您还可以使用插入到撰写消息框中的 URL 查询您的服务并返回卡片。 在下面的屏幕截图中，用户已粘贴到邮件扩展已解析为Azure DevOps中工作项的 URL。
 
 ![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-若要使邮件扩展能够与链接进行交互，你首先需要将数组添加到应用清单， `messageHandlers` 如以下示例所示：
+若要使邮件扩展 `messageHandlers` 能够与链接进行交互，你首先需要将数组添加到应用清单，如以下示例所示：
 
 ```json
 "composeExtensions": [
@@ -237,42 +237,42 @@ ms.locfileid: "59156013"
 
 当用户执行查询时，Microsoft Teams向服务发送同步 HTTP 请求。 此时，您的代码有 5 秒时间提供对请求的 HTTP 响应。 在此期间，你的服务可以执行其他查找，或执行为请求提供服务所需的任何其他业务逻辑。
 
-服务应响应与用户查询匹配的结果。 响应必须指示 的 HTTP 状态代码和具有以下正文的有效 `200 OK` application/json 对象：
+服务应响应与用户查询匹配的结果。 响应必须指示 的 HTTP 状态 `200 OK` 代码和具有以下正文的有效 application/json 对象：
 
 |属性名称|用途|
 |---|---|
 |`composeExtension`|顶级响应信封。|
 |`composeExtension.type`|响应类型。 支持以下类型： <br>`result`：显示搜索结果列表 <br>`auth`：要求用户进行身份验证 <br>`config`：要求用户设置邮件扩展 <br>`message`: 显示纯文本邮件 |
-|`composeExtension.attachmentLayout`|指定附件的布局。 用于 类型 `result` 的响应。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象列表 <br>`grid`：缩略图图像的网格 |
-|`composeExtension.attachments`|有效 attachment 对象的数组。 用于 类型 `result` 的响应。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
-|`composeExtension.suggestedActions`|建议的操作。 用于 或 类型的 `auth` 响应 `config` 。 |
-|`composeExtension.text`|要显示的消息。 用于 类型 `message` 的响应。 |
+|`composeExtension.attachmentLayout`|指定附件的布局。 用于 类型 的响应 `result`。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象列表 <br>`grid`：缩略图图像的网格 |
+|`composeExtension.attachments`|有效 attachment 对象的数组。 用于 类型 的响应 `result`。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.suggestedActions`|建议的操作。 用于 或 类型的 `auth` 响应 `config`。 |
+|`composeExtension.text`|要显示的消息。 用于 类型 的响应 `message`。 |
 
 #### <a name="response-card-types-and-previews"></a>响应卡类型和预览
 
 我们支持以下附件类型：
 
-* [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [缩略图卡](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [主图卡](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 有关详细信息，请参阅有关概述 [的](~/task-modules-and-cards/what-are-cards.md) 卡片。
 
 若要了解如何使用缩略图和 Hero 卡片类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-有关连接器卡的其他Office 365，请参阅使用[Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+有关连接器卡的其他Office 365，请参阅使用 [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
 结果列表显示在项目 UI 中Microsoft Teams每个项目的预览。 预览以以下两种方式之一生成：
 
-* 在 `preview` 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
-* 从附件的基本 `title` 、 `text` 和 `image` 属性中提取。 只有在属性未设置且这些属性可用 `preview` 时，才使用这些属性。
+* `preview`在 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
+* 从附件的基本 `title`、 `text`和 `image` 属性中提取。 只有在属性未设置 `preview` 且这些属性可用时，才使用这些属性。
 
-只需设置自适应或Office 365预览属性，就可以在结果列表中显示自适应或连接器卡片的预览;如果结果已是 hero 或 thumbnail 卡片，则不需要这样做。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不会显示任何内容。
+只需设置自适应或 Office 365 连接器卡片的预览属性，就可以在结果列表中显示该卡片的预览;如果结果已是 hero 卡或缩略图卡，则这不是必需的。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不会显示任何内容。
 
 #### <a name="response-example"></a>响应示例
 
-此示例显示包含两个结果的响应，混合了不同的卡片格式：Office 365 Connector 和 Adaptive。 虽然你可能想要在响应中坚持使用一个卡片格式，但它显示了集合中每个元素的 属性如何显式定义以 hero 或 thumbnail 格式的预览 `preview` `attachments` ，如上所述。
+此示例显示了一个包含两个结果的响应，混合了不同的卡片格式：Office 365 Connector 和 Adaptive。 虽然你可能想要在`preview``attachments`响应中坚持使用一个卡片格式，但它显示了集合中每个元素的 属性如何显式定义以 hero 或 thumbnail 格式的预览，如上所述。
 
 ```json
 {
@@ -406,9 +406,9 @@ ms.locfileid: "59156013"
 
 ### <a name="default-query"></a>默认查询
 
-如果在清单中设置为 ，则Microsoft Teams用户首次打开邮件扩展时，将发送"默认 `initialRun` `true` "查询。 你的服务可以使用一组预填充的结果来响应此查询。 这可用于显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息。
+如果在清单中`initialRun``true`设置为 ，则Microsoft Teams用户首次打开邮件扩展时，将发送"默认"查询。 你的服务可以使用一组预填充的结果来响应此查询。 这可用于显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息。
 
-默认查询的结构与任何常规用户查询相同，字符串值为 的参数除外 `initialRun` `true` 。
+默认查询的结构与任何常规用户`initialRun``true`查询相同，字符串值为 的参数除外。
 
 #### <a name="request-example-for-a-default-query"></a>默认查询的请求示例
 
@@ -435,7 +435,7 @@ ms.locfileid: "59156013"
 
 ## <a name="identify-the-user"></a>标识用户
 
-每个对服务的请求都包括执行请求的用户的模糊 ID，以及用户的 显示名称 和 Azure Active Directory 对象 ID。
+每个对服务的请求都包括执行请求的用户的模糊 ID，以及用户的 显示名称 和 Microsoft Azure Active Directory (Azure AD) 对象 ID。
 
 ```json
 "from": {
@@ -445,7 +445,7 @@ ms.locfileid: "59156013"
 },
 ```
 
-`id`和 `aadObjectId` 值保证为经过身份验证的用户Teams的值。 它们可用作在服务中查找凭据或任何缓存状态的密钥。 此外，每个请求都包含Azure Active Directory租户 ID，可用于标识用户的组织。 如果适用，请求还包含源自请求的团队和频道的 ID。
+和 `id` `aadObjectId` 值保证为经过身份验证的用户Teams的值。 它们可用作在服务中查找凭据或任何缓存状态的密钥。 此外，每个请求都包含Microsoft Azure Active Directory (Azure AD) 租户 ID，可用于标识用户的组织。 如果适用，请求还包含请求源自的团队和频道的 ID。
 
 ## <a name="authentication"></a>身份验证
 
@@ -455,7 +455,7 @@ ms.locfileid: "59156013"
 
 1. 用户发出查询，或者默认查询将自动发送到您的服务。
 2. 服务通过检查用户 ID 来检查用户是否首先Teams身份验证。
-3. 如果用户尚未进行身份验证，请发送回包含建议操作（包括身份验证 `auth` `openUrl` URL）的响应。
+3. 如果用户尚未进行身份验证，`auth``openUrl`请发送回包含建议操作（包括身份验证 URL）的响应。
 4. 客户端Microsoft Teams给定身份验证 URL 启动承载网页的弹出窗口。
 5. 用户登录后，应关闭窗口，并将"身份验证代码"Teams客户端。
 6. 然后Teams客户端向服务重新提供查询，其中包括步骤 5 中传递的身份验证代码。
@@ -464,7 +464,7 @@ ms.locfileid: "59156013"
 
 ### <a name="respond-with-a-sign-in-action"></a>使用登录操作响应
 
-若要提示未经身份验证的用户登录，请通过包含身份验证 URL 的类型的建议操作 `openUrl` 进行响应。
+若要提示未经身份验证 `openUrl` 的用户登录，请通过包含身份验证 URL 的类型的建议操作进行响应。
 
 #### <a name="response-example-for-a-sign-in-action"></a>登录操作的响应示例
 
@@ -486,13 +486,13 @@ ms.locfileid: "59156013"
 ```
 
 > [!NOTE]
-> 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
+> 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅 [清单架构中的 validDomains](~/resources/schema/manifest-schema.md#validdomains) 。
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流程
 
-你的登录体验应响应迅速且适合弹出窗口。 它应与使用消息Microsoft Teams [JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)集成。
+你的登录体验应响应迅速且适合弹出窗口。 它应与 [JavaScript Microsoft Teams SDK](/javascript/api/overview/msteams-client) 集成，它使用消息传递。
 
-与其他嵌入体验一样，Microsoft Teams内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口，然后可以将它传递到 OAuth 登录 URL。
+与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()`。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口，然后可以将它传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流程
 
@@ -556,7 +556,7 @@ ms.locfileid: "59156013"
 
 ### <a name="net"></a>.NET
 
-若要使用适用于 .NET 的 Bot Builder SDK 接收和处理查询，可以检查传入活动上的操作类型，然后使用 NuGet 程序包 `invoke` [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)中的帮助程序方法确定它是否是消息传递扩展活动。
+若要使用适用于 .NET `invoke` 的 Bot Builder SDK 接收和处理查询，可以检查传入活动上的操作类型，然后使用 NuGet 程序包 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 中的帮助程序方法确定它是否是消息传递扩展活动。
 
 #### <a name="example-code-in-net"></a>.NET 中的示例代码
 
@@ -602,7 +602,7 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-#### <a name="example-code-in-nodejs"></a>示例代码Node.js
+#### <a name="example-code-in-nodejs"></a>示例代码中Node.js
 
 ```javascript
 require('dotenv').config();
