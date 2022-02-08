@@ -6,18 +6,13 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9a39b84c3cfa94c410df5774d4a177535e1cfdd6
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212347"
 ---
+
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>使用Teams协作处理Teams Toolkit
 
-多个开发人员可以一起为同一个 TeamsFx 项目调试、预配和部署，但需要手动设置 Teams 应用和 Azure AD App.Teams Toolkit 的合适权限，以允许开发人员和项目所有者邀请其他开发人员或协作者加入 TeamsFx 项目来调试、预配和部署相同内容 TeamsFx 项目。
+多个开发人员可以一起为同一个 TeamsFx 项目调试、预配和部署，但需要手动设置 Teams 应用和 Azure AD App 的合适权限。Teams Toolkit 支持协作功能，以允许开发人员和项目所有者邀请其他开发人员或协作者加入 TeamsFx 项目来调试、预配和部署相同的内容 TeamsFx 项目。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 * 帐户先决条件
 
@@ -29,7 +24,7 @@ ms.locfileid: "62212347"
 * [安装Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)版本 v3.0.0+。
 
 > [!TIP]
-> 确保你有一个Teams VS 代码打开的应用项目。
+> 确保已使用Teams打开一个应用Microsoft Visual Studio项目。
 
 ## <a name="collaborate-with-other-developers"></a>与其他开发人员协作
 
@@ -40,17 +35,17 @@ ms.locfileid: "62212347"
 > [!NOTE]
 > 在添加环境的协作者之前，项目所有者需要 [先预配](provision.md) 项目。
 
-* 在 **"** 环境"部分Teams Toolkit，选择 **协作者**。 它显示选项添加 **M365 Teams App (** with AAD App) Owners 和 List **M365 Teams App (with AAD App) Owners，** 如下图所示：
+* 在 **"** 环境"部分Teams Toolkit，选择 **协作者**。 它显示选项添加Microsoft 365 Teams **应用 (应用** Microsoft Azure Active Directory (Azure AD) 所有者) 列表Microsoft 365 Teams **应用 (Azure AD应用)** 所有者"，如下图所示：
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="协作者":::
 
-* 选择 **"将 M365 Teams App (与** AAD 应用) 所有者一起添加"，并添加其他 M365 帐户电子邮件地址作为协作者。 要添加的帐户必须与远程调试的项目所有者位于同一租户上，如图所示：
+* 选择 **"Microsoft 365 Teams应用 (所有者Azure AD** 应用) 应用"，Microsoft 365协作者添加其他帐户电子邮件地址。 要添加的帐户必须与远程调试的项目所有者位于同一租户上，如图所示：
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加环境":::
 
-* 若要在当前环境中查看协作者，请选择列表 **M365 Teams App (with AAD App) Owners，** 然后在输出通道中列出协作者，如下图所示：
+* 若要在当前环境中查看协作者，请选择"列出 **Microsoft 365 Teams App (with Azure AD App) 所有者**"，然后在输出通道中列出协作者，如下图所示：
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="列表":::
 
 * 将项目推送到GitHub。
 
@@ -60,10 +55,10 @@ ms.locfileid: "62212347"
 ### <a name="as-project-collaborator"></a>作为项目协作者
 
 * 从项目复制GitHub。
-* 登录到 M365 帐户。
+* 登录到Microsoft 365帐户。
 * 登录到 Azure 帐户，该帐户对此项目中使用的所有 Azure 资源具有参与者权限。
 * 若要预览Teams应用，请远程部署项目。
-* 启动远程，预览 Teams应用。
+* 启动远程，预览 Teams 应用。
 
 有关详细信息，请参阅在远程[环境中生成并Teams应用程序](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch)。
 
@@ -77,13 +72,13 @@ ms.locfileid: "62212347"
   1. 转到开发人员Teams，然后按名称或Teams ID 选择你的应用。
   2. 从 **左侧面板** 中选择"所有者"。
   3. 选择并删除协作者。
-  4. 转到 ["Azure Active Directory"，](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)**从左侧** 面板中选择"应用注册"，然后找到Azure AD应用。
+  4. 转到 [Azure Active Directory，](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)从左侧 **面板** 中选择应用注册，然后找到Azure AD应用。
   5. 从 **应用管理** 页的左侧Azure AD选择所有者。
   6. 选择并删除协作者。
 
 > [!NOTE]
-> * 添加到项目的协作者不会收到任何通知。 Project需要通知协作者脱机。
-> * Azure 门户上的 Azure 订阅管理员必须手动设置与 Azure 相关的权限。 Azure 帐户必须具有订阅的参与者角色，以便开发人员可以协同工作来预配和部署 TeamsFx 项目。
+> * 添加到项目的协作者不会收到任何通知。 Project需要脱机通知协作者。
+> * Azure 订阅管理员必须在 Azure 订阅门户上手动设置与 Azure Microsoft Azure权限。 Azure 帐户必须具有订阅的参与者角色，以便开发人员可以协同工作来预配和部署 TeamsFx 项目。
 
 ## <a name="see-also"></a>另请参阅
 

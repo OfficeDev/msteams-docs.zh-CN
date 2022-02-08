@@ -25,13 +25,13 @@ ms.date: 11/29/2021
 
  可以从示例库 **创建新项目**。 选择所需的示例以创建应用。 以下步骤指导你根据示例创建应用：
 
- 1. 从 **Teams Toolkit** 打开Visual Studio Code。
+ 1. 从 **Teams Toolkit** 打开Microsoft Visual Studio代码。
  1. 选择 **树视图中** 的"开发"部分。
  1. 选择 **"查看示例"**。 示例库如下图所示：
    
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view samples.png" alt-text="示例":::
 
-你可以浏览和下载示例，并在本地或远程运行应用，以在 Teams 中预览。 按照每个示例的说明操作，或浏览示例的源代码，GitHub视图以访问示例的开放源代码存储库。
+你可以浏览和下载示例，并在本地或远程运行应用，以在 web Teams预览。 按照每个示例的说明操作，或浏览示例的源代码，GitHub视图以访问示例的开放源代码存储库。
 
 ## <a name="see-also"></a>另请参阅
 

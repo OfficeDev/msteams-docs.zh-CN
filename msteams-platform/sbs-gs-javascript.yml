@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: 使用 JavaScript 生成首个应用
+title: 使用 JavaScript 生成第一个应用
 metadata:
   title: 使用 JavaScript 的 Hello World
   description: 本教程介绍如何使用 JavaScript 生成 Hello World 应用。
@@ -10,37 +10,1062 @@ metadata:
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: 返回到入门概述
   ms.custom: mvc
-  ms.localizationpriority: none
-  ms.openlocfilehash: e6b437170764e09f9e7e220aeceb2fec26f2f61b
-  ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
-  ms.translationtype: MT
-  ms.contentlocale: zh-CN
-  ms.lasthandoff: 11/03/2021
-  ms.locfileid: "60721118"
+  ms.localizationpriority: high
 items:
-- durationInMinutes: 1
-  content: "开始Microsoft Teams你的第一个应用开始Teams开发。 你将创建三个Teams应用：选项卡应用、自动程序应用和消息扩展应用。 \n\n每个应用都有一个功能，该功能附带自己的 UI 和 UX：\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png\" alt-text=\"显示此应用程序的图表具有三个功能。\" border=\"false\":::\n\n在本教程中，你将了解：\n\n- 如何使用项目设置Teams Toolkit。\n- 如何构建三个应用，每个应用具有不同的功能：选项卡、机器人和消息扩展。\n- 应用的结构：\n    - 使用 JavaScript 的选项卡部分React。\n    - 其余功能及Node.js。\n- 如何部署应用\n"
-- title: 先决条件
-  durationInMinutes: 1
-  content: "\n以下是生成和部署应用所需的工具列表。\n\n\n| &nbsp; | 安装 | 对于使用... |\n| --- | --- | --- |\n| **Required** | &nbsp; | &nbsp; |\n| &nbsp; | [Node.js](https://nodejs.org/en/download/) | 后端 JavaScript 运行时环境。 使用最新的 v14 LTS 版本。|\n| &nbsp; | [Microsoft Edge (](https://www.microsoft.com/edge)推荐) [Google Chrome](https://www.google.com/chrome/) | 具有开发人员工具的浏览器。 |\n| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript、TypeScript 或 SharePoint 框架 (SPFx) 生成环境。 使用版本 1.55 或更高版本。 |\n| **可选** | &nbsp; | &nbsp; |\n| &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure 工具，用于访问已存储数据或在 Azure 中为 Teams应用部署基于云的后端。 |\n| &nbsp; | [React Chrome 开发人员工具](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)或[React Edge 开发人员工具](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | 开放源代码 JavaScript 库的浏览器 DevTools React。 |\n| &nbsp; | [Microsoft Graph 浏览器](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph资源管理器，一种基于浏览器的工具，允许你从 Microsoft 运行查询Graph数据。 |\n| &nbsp; | [Teams 开发人员门户](https://dev.teams.microsoft.com/) | 基于 Web 的门户，用于配置、管理和分发你的 Teams 应用，包括你的组织或 Teams 商店。 |\n| &nbsp; | **Visual Studio Code扩展** | &nbsp; |\n| &nbsp; | [Azure 函数核心工具](/azure/azure-functions/functions-run-local) | 在本地调试运行期间本地后端组件。 它包括在 Azure 中运行服务的身份验证帮助程序。 它使用 npm (安装在项目目录 `devDependencies`) 。 |\n| &nbsp; | [.NET SDK](/dotnet/core/install/) | 用于本地调试和 Azure Functions 应用部署的自定义绑定。 如果尚未全局安装 .NET 3.1 (或更高版本) SDK，可以安装可移植版本。 |\n| &nbsp; | [ngrok](https://ngrok.com/download) | Teams应用功能 (对话机器人和消息) 需要入站连接。 隧道将开发系统连接到Teams。 仅包含选项卡的应用不需要它。 此包安装在项目目录中， (npm `devDependencies`) 。 |\n\n\n> [!TIP]\n> 如果你使用 Microsoft Graph数据，你应该了解 Microsoft Graph Explorer 并添加书签。 此基于浏览器的工具允许你在应用Graph查询 Microsoft 帐户。\n\n\n## <a name=\"prepare-development-environment\"></a>准备开发环境\n\n安装所需工具后，设置开发环境。\n\n\n### <a name=\"install-the-teams-toolkit\"></a>安装Teams Toolkit\n\n该Teams Toolkit使用工具为应用预配和部署云资源、发布到 Teams 商店等，帮助简化开发过程。 \n\n你可以将工具包与 Visual Studio Code 或 CLI (命令行接口) ，称为 `TeamsFx` 。\n\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vscode)\n\n1. 打开Visual Studio Code并选择\"扩展\"视图 ( **Ctrl+Shift+X**  /  **⌘⇧-X\"** 或\"查看 > **Extensions**) \"。\n1. 在搜索框中，输入 **\"Teams Toolkit\"。**\n1. 选择 **\"** 安装\"旁边的Teams Toolkit。\n\n    :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscode.png\" alt-text=\"插图显示Teams Toolkit安装。\" border=\"false\":::\n\n    the Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.\n\n    :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png\" alt-text=\"插图显示Teams Toolkit边栏中Visual Studio Code图标。\" border=\"false\":::\n\n您还可以在 Teams Toolkit Marketplace 上Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。\n\n# <a name=\"command-line\"></a>[命令行](#tab/cli)\n\n若要安装 TeamsFx CLI，请使用 `npm` 程序包管理器：\n\n``` bash\nnpm install -g @microsoft/teamsfx-cli\n```\n\n根据您的配置，您可能需要使用 安装 `sudo` CLI：\n\n``` bash\nsudo npm install -g --unsafe-perm @microsoft/teamsfx-cli\n```\n\n此情况在 Linux 和 macOS 系统上更为常见。\n\n确保将 npm 全局缓存添加到 PATH。 此步骤通常作为安装程序的一Node.js完成。  \n\n可以将 CLI 与 命令 `teamsfx` 一同使用。 通过运行 验证命令是否正常工作 `teamsfx -h` 。\n\n> [!CAUTION]\n> 必须先为 PowerShell 启用\"远程签名\"执行策略，然后才能在 PowerShell 终端中运行 TeamsFx。\n\n---\n\n## <a name=\"set-up-your-teams-development-tenant\"></a>设置开发Teams租户\n\n租户 **就像** 租户中的空间或组织的容器，Teams聊天、共享文件和运行会议。 此空间也是你旁加载和测试应用的地方。 让我们验证你是否已准备好使用租户进行开发。\n\n### <a name=\"enable-sideloading-option\"></a>启用旁加载选项\n\n创建应用后，必须在不分配应用的情况下Teams加载应用。 此过程称为旁加载。 登录到你的 Microsoft 365 帐户以查看此选项。\n  \n你已拥有租户，是否具有管理员访问权限？ 让我们看一下你是否确实要这样做！\n\n验证你能否在应用中旁加载Teams：\n\n1. 在 Teams客户端中，选择\"**应用商店图标**\"。\n1. 选择 **\"管理应用\"。**\n1. 查找用于自定义 **Upload的选项**。 如果看到 选项，则启用旁加载应用。\n\n    :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png\" alt-text=\"插图显示用于上传自定义应用的选项Teams。\":::\n\n    > [!NOTE]\n    > 如果无法选择上传自定义应用，请与管理员Teams联系。\n\n### <a name=\"create-a-free-teams-developer-tenant-optional\"></a>创建一个Teams开发人员租户 (可选) \n\n如果你没有开发者帐户Teams，可以免费获取它。 加入Microsoft 365开发人员计划！\n\n1. 转到开发人员[Microsoft 365计划](https://developer.microsoft.com/microsoft-365/dev-program)。\n1. 选择 **立即加入** 并按照屏幕上的说明进行操作。\n1. 在欢迎屏幕中，选择 **\"设置 E5 订阅\"。**\n1. 设置管理员帐户。 完成后，将显示以下屏幕。\n\n    :::image type=\"content\" source=\"~/assets/images/build-your-first-app/dev-program-subscription.png\" alt-text=\"注册开发人员计划后看到Microsoft 365的示例。\":::\n\n1. 使用刚Teams的管理员帐户登录登录。 验证你已Upload **自定义应用** 选项Teams。\n\n## <a name=\"get-a-free-azure-account\"></a>获取免费的 Azure 帐户\n\n如果你想要在 Azure 中托管应用或访问资源，则必须拥有 Azure 订阅。 [在开始之前创建](https://azure.microsoft.com/free/) 一个免费帐户。\n\n现在，你已获得所有工具并设置帐户。 接下来，让我们设置开发环境并开始构建！\n"
-- title: 为选项卡应用创建项目工作区
-  durationInMinutes: 1
-  content: "\n通过Microsoft Teams第一个应用开始开发应用。 此应用程序使用 Tab 功能。\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png\" alt-text=\"显示此应用程序的图表具有三个功能。选项卡突出显示。\" border=\"false\":::\n\n在此页中，你将了解：\n1. [如何使用新选项卡项目设置Teams Toolkit](#create-your-tab-project-workspace)\n1. [关于应用的目录结构](#take-a-tour-of-the-source-code)\n\n## <a name=\"create-your-tab-project-workspace\"></a>创建选项卡项目工作区\n\n如果先决条件已就位，让我们开始吧！\n\n> [!NOTE]\n> 显示Visual Studio Code UI 来自 Mac。 它可能会有所不同，具体取决于你的操作系统、Toolkit版本和环境。\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vsc)\n\n1. 打开 Visual Studio 代码。\n1. 选择Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: 边栏中的Visual Studio Code图标。\n\n1. 选择 **创建新的 Teams 应用**。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png\" alt-text=\"Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。\" border=\"false\":::\n\n1. 选择 **\"新建Teams应用**\"以使用\"新建Teams Toolkit\"。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png\" alt-text=\"&quot;创建新项目&quot;的向导启动\" border=\"false\":::\n\n1. 确保 **已选择** 基于 Tab UI 的应用作为你想要在应用中构建的功能。 选择“**确定**”。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png\" alt-text=\"选择应用功能\" border=\"false\":::\n\n1. 选择 **Azure** 作为前端托管类型。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-hosting.png\" alt-text=\"选择托管类型\" border=\"false\":::\n\n    如果你希望将应用托管在 SharePoint 上，可以在SharePoint 框架 (SPFx) 中选择\"设置\"。\n\n1. 选择 **\"确定** \"继续。 本教程不需要其他云资源。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-cloud-resources.png\" alt-text=\"云资源\" border=\"false\":::\n\n1. 选择 **JavaScript** 作为编程语言。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png\" alt-text=\"显示如何选择编程语言的屏幕截图。\" border=\"false\":::\n\n1. 为应用选择工作区文件夹。 Teams Toolkit在此工作区中为项目创建应用的目录结构。\n\n1. 输入 `helloworld` 作为应用程序名称。 确保只使用字母数字字符。 选择 **Enter** 继续。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-name.png\" alt-text=\"显示在何处输入应用名称的屏幕截图。\" border=\"false\":::\n\n    应用程序Teams几秒后创建。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/app-created.png\" alt-text=\"显示已创建应用的屏幕截图。\" border=\"false\":::\n\n    <details>\n    <summary>快速回顾一下创建Teams应用。</summary>\n    观看此简短回顾，Teams应用。\n\n    ![创建Teams应用 ](~/assets/videos/javascript-tab-app.gif) </details>\n\n# <a name=\"command-line\"></a>[命令行](#tab/cli)\n\n使用 `teamsfx` CLI 创建你的第一个项目。 从要创建项目文件夹的文件夹开始。\n\n``` bash\nteamsfx new\n```\n\n可以使用 CLI 创建新的应用Teams应用。 CLI 将引导你完成一系列问题。 每个问题都包括一条有关回答它的说明。\n\n例如，使用箭头键选择一个选项。 做出选择后，选择 **Enter** 进行确认。\n\n1. 选择 **创建新的 Teams 应用**。\n1. 选择 **Tab** 功能。\n1. 选择 **Azure** 前端托管。\n1. 不要选择任何云资源。\n1. 选择 **JavaScript** 作为编程语言。\n1. 按 **Enter** 选择默认工作区文件夹。\n1. 输入 `helloworld` 作为应用的名称。 应用的名称必须只有字母数字字符。\n\n  回答所有问题后，将创建项目。\n\n---\n\n## <a name=\"take-a-tour-of-the-source-code\"></a>浏览源代码\n\nTeams Toolkit提供用于生成应用的所有组件。 创建项目后，可以查看项目资源管理器区域中的项目文件夹和Visual Studio Code。\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/hw-folder-structure.png\" alt-text=\"Project中具有 Tab 功能的应用搭建Visual Studio Code。\":::\n\n尽管你可以自由地选择任何 UI 框架 (或者不使用任何) ，但此示例模板代码提供了一个包含React基架。\n\n在此目录结构的其他项中，Toolkit维护：\n\n- `.fx`：此文件夹中应用的状态。\n- `appPackage`：文件夹中的应用 `appPackage` 图标。 图标为 `color.png` `outline.png` 和 。\n- `manifest.source.json`：发布到开发人员门户的应用程序清单，Teams中 `manifest.source.json` 。\n- `settings.json`：在 项目创建期间选择的应用设置 `settings.json` 。\n- 文件夹中 Tab 功能 `Tabs` 的代码。 此文件夹中的一些重要文件是：\n\n  - `tabs/src/index.jsx` 是前端应用的入口点，其中主应用程序组件 `App` 呈现为 `ReactDOM.render()`。\n  - `tabs/src/components/App.jsx` 处理应用中的 URL 路由。 它调用[Microsoft Teams JavaScript 客户端 SDK，](../msteams-platform/tabs/how-to/using-teams-client-sdk.md)以在应用和开发人员之间Teams。\n  - `tabs/src/components/Tab.jsx` 包含用于实现应用 UI 的代码。\n  - `tabs/src/components/TabConfig.jsx` 包含用于实施配置应用的 UI 的代码。\n  - 此文件夹还保留运行时所需的选项卡的代码。 其中一些是隐私声明、使用条款和配置选项卡。\n\n添加云功能时，Teams Toolkit向项目添加必要的文件夹。 该 `api` 文件夹将保留你编写的任何 Azure 函数的代码。\n"
-- title: 生成并运行你的第一个选项卡应用
-  durationInMinutes: 1
-  content: "\n使用选项卡设置项目工作区Teams Toolkit，生成选项卡项目。 你需要登录到你的帐户Microsoft 365帐户。\n\n## <a name=\"sign-in-to-your-microsoft-365-account\"></a>登录到你的 Microsoft 365 帐户\n\n使用 Microsoft 365 帐户登录Teams。 如果你使用的是开发人员计划Microsoft 365，注册时设置的管理员帐户就是你的Microsoft 365帐户。\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/viscode)\n\n1. 打开 Visual Studio 代码。\n1. 选择边Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: 图标。  \n1. 选择 **\"登录 M365\"。**\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/account-signin.png\" alt-text=\"显示登录到 azure 和 azure Microsoft 365的屏幕截图。\" border=\"false\":::\n\n    将打开默认 Web 浏览器，以允许登录帐户。\n\n1. 使用凭据Microsoft 365帐户。\n1. 当系统提示时关闭浏览器并返回到Visual Studio Code。\n1. 返回到Teams Toolkit中的Visual Studio Code。\n\n    边栏的 **\"** 帐户\"部分显示你的Microsoft 365帐户名称。\n\n    现在，你已准备好生成应用并在本地运行它了！\n\n# <a name=\"command-line\"></a>[命令行](#tab/cline)\n\n1. 登录以Microsoft 365 TeamsFx CLI：\n\n    ``` bash\n    teamsfx account login m365\n    ```\n\n    将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。\n\n2. 使用 TeamsFx CLI 登录 Azure：\n\n    ``` bash\n    teamsfx account login azure\n    ```\n\n    将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。\n\n    帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。\n\n    现在已配置开发环境，你可以创建、生成和部署你的第一个Teams应用程序。\n\n---\n\n## <a name=\"build-and-run-your-app-locally-in-visual-studio-code\"></a>在 Visual Studio Code 本地生成和运行应用\n\n若要在本地构建和运行应用，请执行：\n\n1. 从Visual Studio Code，选择 **F5** 以在调试模式下运行应用程序。\n\n    <!-- markdownlint-disable MD033 -->\n\n    <details>\n    <summary>在本地调试器中运行应用时，了解会发生什么情况。</summary>\n\n    如果想知道，按 **F5** 键时，将Teams Toolkit：\n\n    - 向应用注册Azure Active Directory。 此应用具有加载应用的位置和后端资源的权限。\n    - *在应用程序中* 旁加载Teams。\n    - 使用 Azure 函数核心工具 启动在本地运行 [的应用后端](/azure/azure-functions/functions-run-local?#start)。\n    - 在本地托管应用前端。\n    - 使用命令Microsoft Teams启动 Web 浏览器中的 Teams，以从 旁加载应用 `https://localhost:3000/tab` 。 此 URL 在应用的清单中注册。\n    - 生成应用清单，存在于 Teams 开发人员门户中。 Teams 使用应用清单告诉已连接客户端从何处加载应用。\n\n    </details>\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png\" alt-text=\"显示按下 F5 键时屏幕截图。\":::\n\n    > 首次运行应用时，将下载所有依赖项，并生成应用。  生成完成后将打开浏览器窗口。 此过程可能需要 3-5 分钟才能完成。\n\n    必要时Toolkit提示您安装本地证书。 此证书允许 Teams 从 `https://localhost`。\n\n1. 如果 **显示** 以下对话框，请选择\"是\"：\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png\" alt-text=\"Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.\":::\n\n    或选择 **\"继续**\"，具体取决于你的操作系统：\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png\" alt-text=\"Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.\":::\n\n    Teams Web 客户端将在浏览器窗口中打开。\n\n1. 如果系统提示，Microsoft 365帐户登录。\n\n1. 当 **系统** 提示将应用旁加载到本地计算机上Teams选择添加。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/launch-web-browser-add.png\" alt-text=\"将应用添加到Teams\":::\n\n1. 选择 Web 应用版本（如果系统要求你切换到桌面Teams版本。 在 Web 客户端Teams应用。 您可以在标准 Web 开发环境中查看 HTML、CSS 和 JavaScript 代码。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/launch-web-browser-and-pick-webapp.png\" alt-text=\"显示启动后如何选择 Teams 的 Web 版本的屏幕截图\":::\n\n1. 恭喜！你的第一个应用正在 Teams！\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/launch-web-browser-congratulations.png\" alt-text=\"已完成应用的屏幕截图\":::\n\n    你可以执行正常的调试活动，例如设置断点，就像执行任何其他 Web 应用程序一样。 该应用支持热重新加载。 如果更改了项目内的任何文件，将重新加载页面。\n\n  <!-- markdownlint-disable MD033 -->\n\n  <details>\n  <summary>了解如何解决应用不在本地运行的问题。</summary>\n\n  若要在 Teams 中成功运行你的应用，请确保在你的 Teams 帐户中启用旁加载。 可以在先决条件部分了解有关旁加载的更多内容。\n\n  </details>\n\n  你了解如何使用Toolkit设置选项卡应用并在本地运行它。 接下来，了解如何使用聊天聊天机器人生成Toolkit！\n"
-- title: 为自动程序应用创建项目工作区
-  durationInMinutes: 1
-  content: "\n你已生成选项卡应用。 现在，让我们创建你的第一个自动程序应用。\n\n聊天机器人功能Teams聊天机器人或对话机器人。 可使用它运行简单的自动化任务，如提供客户服务。 机器人与 Web 服务对话，并帮助你使用其产品/服务。 你可以获取天气预报、预订或使用对话机器人提供的其他服务。\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png\" alt-text=\"显示此应用程序的图表具有三个功能。自动程序突出显示。\" border=\"false\":::\n\n由于你已准备创建这些应用，因此你可以设置一个新的Teams创建自动程序应用的项目。\n\n在本教程中，你将了解：\n\n1. [如何使用自动程序设置新的自动程序Teams Toolkit。](#create-your-bot-project-workspace)\n1. [关于应用项目的目录结构。](#take-a-tour-of-the-source-code)\n\n> [!IMPORTANT]\n> 目前，自动程序政府社区云 (GCC) DOD GCC-High和国防部 (提供) 。\n\n## <a name=\"create-your-bot-project-workspace\"></a>创建自动程序项目工作区\n\n如果先决条件已就位，让我们开始吧！\n\n> [!NOTE]\n> 显示Visual Studio Code UI 来自 Mac。 它可能会有所不同，具体取决于你的操作系统、Toolkit版本和环境。\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vscode)\n\n1. 打开 Visual Studio 代码。\n1. 选择Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: 边栏中的Visual Studio Code图标。\n\n1. 选择 **创建新的 Teams 应用**。 UI 的外观可能会有所不同，具体取决于你的操作系统。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png\" alt-text=\"Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。\" border=\"false\":::\n\n1. 选择 **\"新建Teams应用**\"以使用\"新建Teams Toolkit\"。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png\" alt-text=\"&quot;创建新项目&quot;的向导启动\" border=\"false\":::\n\n1. 选择 **\"自动** 程序\"，取消选择 **\"选项卡**\"，然后选择\"确定 **\"。**\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities.png\" alt-text=\"显示如何向新应用添加功能的屏幕截图。\" border=\"false\":::\n\n1. 在\"编程语言\"**部分选择\"JavaScript\"。** \n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png\" alt-text=\"显示如何选择编程语言的屏幕截图。\" border=\"false\":::\n\n1. 选择工作区文件夹。 Teams Toolkit在应用项目的工作区文件夹中创建文件夹。\n\n1. 为应用输入合适的名称，如 `hellobot`。 确保应用名称为字母数字。 选择 **Enter** 继续。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name.png\" alt-text=\"显示在何处输入应用名称的屏幕截图。\" border=\"false\":::\n\n    你的Teams自动程序功能的应用在几秒后创建。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/app-created-bot.png\" alt-text=\"显示已创建应用的屏幕截图。\" border=\"false\":::\n\n\n<details>\n<summary>快速回顾一下创建Teams应用。</summary>\n观看此简短回顾，Teams应用。\n\n![创建Teams应用](~/assets/videos/javascript-bot-app.gif)\n</details>\n\n# <a name=\"command-line\"></a>[命令行](#tab/cli)\n\n使用 `teamsfx` CLI 创建你的第一个项目。  从要创建项目文件夹的文件夹开始。\n\n``` bash\nteamsfx new\n```\n\n可以使用 CLI 创建新的应用Teams应用。 CLI 将引导你完成一系列问题。 每个问题都包括一条有关回答它的说明。\n\n例如，使用箭头键选择一个选项。 做出选择后，选择 **Enter** 进行确认。\n\n1. 选择 **创建新的 Teams 应用**。\n1. 选择 **自动程序** ，然后取消选择 **选项卡**。\n1. 选择 **JavaScript** 作为编程语言。\n1. 选择 **Enter** 以选择默认工作区文件夹。\n1. 为应用输入合适的名称，如 `HelloBot`。  应用的名称只能包含字母数字字符。\n\n回答所有问题后，将创建项目。\n\n---\n\n## <a name=\"take-a-tour-of-the-source-code\"></a>浏览源代码\n\n基架搭建完成后，在浏览器的资源管理器区域中查看项目Visual Studio Code。\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-code-tree.png\" alt-text=\"Project自动程序搭建的文件Visual Studio Code。\" border=\"false\":::\n\n在此目录结构的其他项中，Toolkit维护：\n- `bot`：自动程序代码存储在 `bot` 目录中。\n- `bot/teamsBot.js`是自动程序的主要入口点。\n\n> [!Tip]\n> 在将第一个机器人集成到 Teams 中之前，请熟悉 Teams 以外的机器人。\n"
-- title: 生成并运行你的第一个自动程序应用
-  durationInMinutes: 1
-  content: "\n使用自动程序设置项目工作区Teams Toolkit，生成自动程序项目。 确保你已登录到你的Microsoft 365帐户。\n\n## <a name=\"sign-in-to-your-microsoft-365-account\"></a>登录到你的 Microsoft 365 帐户\n\n使用此帐户登录Teams。 如果你使用的是开发人员计划Microsoft 365，注册时设置的管理员帐户就是你的Microsoft 365帐户。\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/viscode)\n\n1. 打开 Visual Studio 代码。\n1. 选择边Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: 图标。  \n1. 选择 **\"登录 M365\"。**\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/account-signin.png\" alt-text=\"显示登录到 azure 和 azure Microsoft 365的屏幕截图。\" border=\"false\":::\n\n    将打开默认 Web 浏览器，以允许登录帐户。\n\n1. 使用凭据Microsoft 365帐户。\n1. 当系统提示时关闭浏览器并返回到Visual Studio Code。\n1. 返回到Teams Toolkit中的Visual Studio Code。\n\n    边栏的 **\"** 帐户\"部分显示你的Microsoft 365帐户名称。\n\n    现在，你已准备好生成应用并在本地运行它了！\n\n# <a name=\"command-line\"></a>[命令行](#tab/cline)\n\n1. 登录以Microsoft 365 TeamsFx CLI：\n\n    ``` bash\n    teamsfx account login m365\n    ```\n\n    将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。\n\n2. 使用 TeamsFx CLI 登录 Azure：\n\n    ``` bash\n    teamsfx account login azure\n    ```\n\n    将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。\n\n    帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。\n\n    现在已配置开发环境，你可以创建、生成和部署你的第一个Teams应用。\n\n---\n\n## <a name=\"build-and-run-your-first-bot-app-locally\"></a>在本地生成并运行你的第一个自动程序应用\n\n若要在本地环境中生成和运行应用，请执行以下操作：\n\n1. 选择 **F5** Visual Studio Code以在调试模式下运行应用。\n\n    <!-- markdownlint-disable MD033 -->\n\n    <details>\n    <summary>在本地调试器中运行应用时，了解会发生什么情况。</summary>\n\n    如果你想知道，按 **F5** 键时，将Teams Toolkit：\n\n    - 向应用注册Azure Active Directory。 此应用具有加载应用的位置和后端资源的权限。\n    - *在应用程序中* 旁加载Teams。\n    - 使用 Azure 函数核心工具 启动在本地运行 [的应用后端](/azure/azure-functions/functions-run-local?#start)。\n    - 在本地托管应用前端。\n    - 使用Microsoft Teams在 Web 浏览器中启动应用，以Teams从 旁加载应用 `https://localhost:3000/tab` 。 此 URL 在应用的清单中注册。\n    - 生成应用清单，存在于 Teams 开发人员门户中。 Teams 使用应用清单告诉已连接客户端从何处加载应用。\n\n    </details>\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png\" alt-text=\"显示按下 F5 键时屏幕截图。\":::\n\n    > 首次运行应用时，将下载所有依赖项，并生成应用。 编译完成后，将自动打开浏览器窗口。 此过程可能需要 3-5 分钟才能完成。\n\n    Web 浏览器开始运行该应用。\n\n1. 如果系统提示，Microsoft 365帐户登录。\n\n    > 系统可能会要求你打开Teams桌面，选择 **\"取消**\"以保留在浏览器中。\n\n1. 当 **系统** 提示将应用旁加载到本地计算机上Teams选择添加。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/install-bot.png\" alt-text=\"Screenshot showing the bot is added on Teams client.\":::\n\n    现在自动程序已成功在 Teams！ 加载应用后，将打开与机器人的聊天会话。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/run-bot.png\" alt-text=\"Screenshot showing the bot is running on Teams client.\":::\n\n    你可以键入 `welcome` 以显示简介卡片，并键入 `learn` 以转到自适应卡片和自动程序命令文档。\n\n    你可以像任何其他 Web 应用程序一样执行正常的调试活动，例如设置断点。 打开 `bot/teamsBot.js` 文件并找到 `onMessage()` 方法。 在任何案例上设置断点。 然后键入一些文本。\n\n  <!-- markdownlint-disable MD033 -->\n  <details>\n  <summary>了解如何解决应用不在本地运行的问题。</summary>\n\n  若要在 Teams 中成功运行你的应用，请确保在你的 Teams 帐户中启用了旁加载。 可以在先决条件部分了解有关旁加载的更多内容。\n\n  > [!IMPORTANT]\n  > 目前，旁加载应用在 政府社区云 (GCC) 、GCC-High 和 DOD 中可用。\n\n  > [!TIP]\n  > 使用应用验证工具 旁加载应用前 [检查问题](https://dev.teams.microsoft.com/appvalidation.html)。 此工具包含在工具包中。 修复错误以旁加载应用。\n  </details> \n"
-- title: 为邮件扩展应用程序创建项目工作区
-  durationInMinutes: 1
-  content: "\n你已生成自动程序应用。 现在，让我们创建你的第一个邮件扩展应用。\n\n邮件扩展功能允许你与 Web 服务交互。 使用客户端中的撰写区域、命令框或Teams搜索和启动外部系统的操作。\n\n  :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png\" alt-text=\"显示此应用程序的图表具有三个功能。突出显示&quot;邮件扩展&quot;。\" border=\"false\":::\n\n有两种类型的 Teams **消息扩展**：\n\n- [搜索命令](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md)：可以搜索外部系统。 然后，可以将其结果以卡片的形式插入到邮件中。\n- [操作命令](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md)：你可以向用户显示用于收集或显示信息的模式弹出窗口。 然后，你可以处理其交互并将信息发送回Teams。\n\n让我们使用搜索命令 创建邮件扩展 *应用*。 使用它搜索外部数据，并将结果插入到客户端Teams消息。\n\n由于你已准备创建这些应用，因此你可以设置一个新的Teams项目来创建邮件扩展应用。\n\n> [!NOTE]\n> 消息扩展依赖于自动程序，在用户和你的代码之间提供对话框。\n\n\n在本教程中，你将了解：\n\n1. [如何使用邮件扩展设置新的邮件扩展Teams Toolkit。](#create-your-message-extension-project-workspace)\n1. [关于应用项目的目录结构。](#take-a-tour-of-the-source-code)\n\n## <a name=\"create-your-message-extension-project-workspace\"></a>创建邮件扩展项目工作区\n\n如果先决条件已就位，让我们开始吧！\n\n> [!NOTE]\n> 显示Visual Studio Code UI 来自 Mac。 它可能会有所不同，具体取决于你的操作系统、Toolkit版本和环境。\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vsc)\n\n1. 打开 Visual Studio 代码。\n1. 选择Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: 边栏中的Visual Studio Code图标。\n\n1. Select **Create New Project** from the left-side of the Toolkit.\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png\" alt-text=\"Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。\" border=\"false\":::\n\n1. 选择 **\"新建Project\"** 以使用\"新建\"Teams Toolkit。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png\" alt-text=\"&quot;创建新项目&quot;的向导启动\" border=\"false\":::\n\n1. 选择 **\"邮件扩展**\"，取消选择 **\"选项卡**\"，然后选择\"确定 **\"。**\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-msgext.png\" alt-text=\"显示如何向新应用添加功能的屏幕截图。\" border=\"false\":::\n\n1. 选择 **JavaScript** 作为编程语言。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png\" alt-text=\"显示如何选择编程语言的屏幕截图。\" border=\"false\":::\n\n1. 选择工作区文件夹。 在项目的工作区文件夹中创建一个文件夹。\n\n1. 为应用输入一个合适的名称。 确保应用名称为字母数字。 选择 **Enter** 继续。\n\n    Teams Toolkit几秒后创建应用。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created.png\" alt-text=\"显示已创建应用的屏幕截图。\" border=\"false\":::\n\n  <details>\n  <summary>快速回顾一下创建Teams应用。</summary>\n  观看此简短回顾，Teams应用。\n\n  ![创建Teams应用](~/assets/videos/javascript-msg-ext-app.gif)\n  </details>\n\n# <a name=\"command-line\"></a>[命令行](#tab/cli)\n\n使用 `teamsfx` CLI 创建你的第一个项目。  从要创建项目文件夹的文件夹开始。\n\n``` bash\nteamsfx new\n```\n\n可以使用 CLI 创建新的应用Teams应用。 CLI 将引导你完成一系列问题。 每个问题都包括一条有关回答它的说明。\n\n例如，使用箭头键选择一个选项。 做出选择后，选择 **Enter** 进行确认。\n\n\n1. 选择 **创建新的 Teams 应用**。\n1. 选择\"**邮件扩展\"，** 然后取消选择 **\"选项卡\"。**\n1. 选择 **JavaScript** 作为编程语言。\n1. 选择 **Enter** 以选择默认工作区文件夹。\n1. 为应用输入合适的名称，如 `HelloMsgExtn`。  应用的名称只能包含字母数字字符。\n\n  在回答所有问题后，将创建项目。\n\n---\n\n## <a name=\"take-a-tour-of-the-source-code\"></a>浏览源代码\n\n消息扩展使用 Bot Framework。 可使用它通过对话与服务交互。 基架搭建完成后，在浏览器的资源管理器区域中查看项目Visual Studio Code。\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/code-tree.png\" alt-text=\"自动程序项目的文件布局\" border=\"false\":::\n\n- `bot`：自动程序代码存储在 `bot` 目录中。\n- `bot/messageExtensionBot.js` 是邮件扩展的主入口点。\n\n> [!Tip]\n> 在将机器人集成到 Teams 之前，请熟悉自动程序Teams。\n"
-- title: 生成并运行你的第一个邮件扩展应用
-  durationInMinutes: 1
-  content: "\n使用选项卡设置项目工作区Teams Toolkit，生成选项卡项目。 你将需要登录到你的Microsoft 365帐户。\n\n## <a name=\"sign-in-to-your-microsoft-365-account\"></a>登录到你的 Microsoft 365 帐户\n\n使用此帐户登录Teams。 如果你使用的是开发人员计划Microsoft 365，注册时设置的管理员帐户就是你的Microsoft 365帐户。\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vcode)\n\n1. 打开 Visual Studio 代码。\n1. 选择边Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: 图标。  \n1. 选择 **\"登录 M365\"。**\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/account-signin.png\" alt-text=\"显示登录到 azure 和 azure Microsoft 365的屏幕截图。\" border=\"false\":::\n\n    将打开默认 Web 浏览器，以允许登录帐户。\n\n1. 登录到你的 Microsoft 365 帐户。\n1. 当系统提示时关闭浏览器并返回到Visual Studio Code。\n1. 返回到Teams Toolkit中的Visual Studio Code。\n\n    边栏的 **\"** 帐户\"部分显示你的Microsoft 365帐户名称。\n\n    现在，你已准备好生成应用并在本地运行它了！\n\n# <a name=\"command-line\"></a>[命令行](#tab/cline)\n\n1. 登录以Microsoft 365 TeamsFx CLI：\n\n    ``` bash\n    teamsfx account login m365\n    ```\n\n    将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。\n\n2. 使用 TeamsFx CLI 登录 Azure：\n\n    ``` bash\n    teamsfx account login azure\n    ```\n\n    将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。\n\n    帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。\n\n    现在已配置开发环境，你可以创建、生成和部署你的第一个Teams应用程序。\n\n---\n\n## <a name=\"build-and-run-your-app-locally-in-visual-studio-code\"></a>在 Visual Studio Code 本地生成和运行应用\n\n若要在本地构建和运行应用，请执行：\n\n1. 在 **\"Visual Studio Code F5\"** 以在调试模式下运行应用程序。\n    <!-- markdownlint-disable MD033 -->\n    <details>\n    <summary>在本地调试器中运行应用时，了解会发生什么情况。</summary>\n\n    选择 **F5 时**，Teams Toolkit：\n\n    1. 向应用程序注册Azure Active Directory。\n    1. 将应用程序注册为\"旁加载\"Microsoft Teams。\n    1. 使用 Azure 函数核心工具 启动本地 [运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。\n    1. 启动 ngrok 隧道Teams应用进行通信。\n    1. 使用Microsoft Teams启动命令以指示Teams旁加载应用程序。\n\n    </details>\n\n    > 首次运行应用时，将下载所有依赖项，并生成应用。 生成完成后将打开浏览器窗口。 这可能需要 3-5 分钟才能完成。\n\n      Teams Web 浏览器中打开。\n    1. 如果 **系统** 提示你打开浏览器，请选择\"取消\"以保留在Microsoft Teams。\n    1. 如果系统提示，Microsoft 365帐户登录。\n    1. 选择 **\"** 添加\"将应用添加到你的帐户。\n\n        :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/launch-web-browser-add.png\" alt-text=\"显示已添加应用的确认的屏幕截图\" border=\"false\":::\n\n        应用将添加到Teams，并加载。\n\n    <!-- markdownlint-disable MD033 -->\n    <details>\n    <summary>了解如何解决应用不在本地运行的问题。</summary>\n\n    若要在应用中运行Teams，你必须拥有一个Microsoft 365应用程序旁加载的一个开发帐户。 可以在先决条件部分了解有关旁加载的更多内容。\n\n### <a name=\"try-your-message-extension\"></a>尝试邮件扩展 \n\n在客户端Teams以下步骤启用刚添加的邮件扩展功能：\n\n1. 从撰写区域中的三个点启动消息扩展。\n1. 转到\"**聊天\"****或Teams频道** 并启用消息撰写区域。\n1. 从撰写区域底部的三个点启动消息扩展。\n1. 选择已安装的邮件扩展应用。       \n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png\" alt-text=\"显示如何打开示例邮件扩展应用的屏幕截图\" border=\"false\":::\n\n    此示例应用允许你从软件注册表中搜索开源 npm 包。\n\n1. 让我们在搜索框中输入一个搜索字符串，例如\"cli\"。 您将获得匹配项的列表：\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png\" alt-text=\"显示如何使用示例应用的屏幕截图\" border=\"false\":::\n\n1. 从搜索结果中选择一个。 它将显示在撰写区域中，以便你可以将结果发送到频道。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png\" alt-text=\"显示搜索结果的屏幕截图\" border=\"false\":::\n\n    现在，你已了解如何构建和运行基本邮件扩展！\n"
-- title: 部署你的第一Teams应用
-  durationInMinutes: 1
-  content: "\n你已学习了使用选项卡、自动程序Teams扩展功能创建、生成和运行应用。 最后一步是在 Azure 上部署应用。\n\n让我们在 Azure 上部署第一个使用 Tab 功能的应用，Teams Toolkit。\n\n## <a name=\"sign-in-to-your-azure-account\"></a>登录到 Azure 帐户\n\n使用此帐户访问 Azure 门户并预配新的云资源以支持你的应用。\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/viscode)\n\n1. 打开 Visual Studio 代码。\n1. 打开创建选项卡应用的项目文件夹。\n1. 选择边Teams Toolkit :::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\"::: 图标。  \n1. 选择 **\"登录到 Azure\"。**\n\n    > [!TIP]\n    > 如果已安装 Azure 帐户扩展并使用相同的帐户，可以跳过此步骤。 请使用与其他扩展中相同的帐户。\n\n    将打开默认 Web 浏览器，以允许登录帐户。\n1. 使用凭据登录 Azure 帐户。\n1. 当系统提示时关闭浏览器并返回到Visual Studio Code。\n\n    边栏的 **\"** 帐户\"部分分别显示这两个帐户。 它还列出了可供你使用 Azure 订阅的数量。 确保至少有一个可用的 Azure 订阅可用。 如果没有，请注销并使用其他帐户。\n\n    现在，你已准备好将应用部署到 Azure！\n\n    恭喜！你已创建三种类型的Teams应用！ \n    现在，让我们继续，了解如何使用 Teams Toolkit 将其中一个应用部署到 Azure。\n\n# <a name=\"command-line\"></a>[命令行](#tab/cline)\n\n1. 登录以Microsoft 365 TeamsFx CLI：\n\n    ``` bash\n    teamsfx account login m365\n    ```\n\n    将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。\n\n2. 使用 TeamsFx CLI 登录 Azure：\n\n    ``` bash\n    teamsfx account login azure\n    ```\n\n    将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。\n\n    帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。\n\n    恭喜！你已创建三种类型的Teams应用！ \n    现在，让我们继续，了解如何使用 Teams Toolkit 将其中一个应用部署到 Azure。\n\n---\n\n  [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]\n\n  <!-- markdownlint-disable MD033 -->\n  <details>\n  <summary>了解将应用部署到 Azure 时会发生的情况</summary>\n\n  部署之前，应用程序已在本地运行:\n\n  * 后端使用 **Azure Functions Core Tools** 运行。\n  * 应用程序 HTTP 终结点 (Microsoft Teams 在此加载应用程序) 在本地运行。\n\n  部署是一个两步过程。 在活动的 Azure 订阅上预配资源，然后将应用程序的后端和前端代码部署或上载到 Azure。\n\n  * 后端（如果已配置）使用各种 Azure 服务，包括 Azure 应用服务和 Azure 存储。\n  * 将前端应用程序部署到配置用于静态 Web 托管的 Azure 存储帐户。\n\n  </details>"
+  - durationInMinutes: 1
+    content: |
+      开始Microsoft Teams你的第一个应用开始Teams开发。 你将创建三个Teams应用：选项卡应用、机器人应用和消息传递扩展应用。 
+
+      每个应用都有一个功能，该功能附带自己的 UI 和 UX：
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="显示此应用程序的图表具有三个功能。" border="false":::
+
+      > [!NOTE]
+      > 在本教程中，你将首先创建选项卡应用，然后创建机器人应用，然后创建消息传递扩展应用。 但是，你可以选择首先构建具有任何功能的应用，而不要妨碍其他应用的功能。
+
+      在本教程中，你将了解：
+
+      - 如何使用项目设置Teams Toolkit。
+      - 如何构建三个应用，每个应用具有不同的功能：选项卡、机器人和消息传递扩展。
+      - 应用的结构：
+          - 使用 JavaScript 的选项卡部分React。
+          - 其余功能及Node.js。
+      - 如何部署应用
+  - title: 必备条件
+    durationInMinutes: 1
+    content: |
+
+      以下是生成和部署应用所需的工具列表。
+
+      | &nbsp; | 安装 | 对于使用... |
+      | --- | --- | --- |
+      | **Required** | &nbsp; | &nbsp; |
+      | &nbsp; | [Teams 工具包](#install-the-teams-toolkit) |  一Microsoft Visual Studio代码扩展，为应用创建项目基架。 使用最新版本。 |
+      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams通过聊天、会议、通话等应用与协作的每个人进行协作- 全部在一个地方进行。|
+      | &nbsp; | [Node.js](https://nodejs.org/en/download/) | 后端 JavaScript 运行时环境。 使用最新的 v14 LTS 版本。|
+      | &nbsp; | [Microsoft Edge (](https://www.microsoft.com/edge)推荐) [Google Chrome](https://www.google.com/chrome/) | 具有开发人员工具的浏览器。 |
+      | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript、TypeScript 或 SharePoint 框架 (SPFx) 生成环境。 使用版本 1.55 或更高版本。 |
+      | **可选** | &nbsp; | &nbsp; |
+      | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure 工具，用于访问已存储数据或在 Azure 中为应用Teams基于云的后端。 |
+      | &nbsp; | [React Chrome 开发人员工具](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)或[React开发人员工具 for Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | 开放源代码 JavaScript 库的浏览器 DevTools React扩展。 |
+      | &nbsp; | [Microsoft Graph 浏览器](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph资源管理器，一种基于浏览器的工具，可用于从 Microsoft 运行查询Graph数据。 |
+      | &nbsp; | [Teams 开发人员门户](https://dev.teams.microsoft.com/) | 基于 Web 的门户，用于配置、管理和分发Teams应用，包括组织或应用商店Teams应用。 |
+
+
+      > [!TIP]
+      > 如果你使用 Microsoft Graph数据，你应该了解 Microsoft Graph Explorer 并添加书签。 此基于浏览器的工具允许你在应用Graph查询 Microsoft 帐户。
+
+
+      ## <a name="prepare-development-environment"></a>准备开发环境
+
+      安装所需工具后，设置开发环境。
+
+
+      ### <a name="install-the-teams-toolkit"></a>安装Teams Toolkit
+
+      该Teams Toolkit使用工具为应用预配和部署云资源、发布到 Teams 应用商店等，帮助简化开发过程。 
+       
+      你可以将工具包与 Visual Studio Code 或 CLI (命令行接口) ，称为 `TeamsFx`。
+
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
+
+      1. 打开Visual Studio Code并选择"扩展"视图 ( **Ctrl+Shift+X** / **⌘⇧-X**"或"查看 > **Extensions**) "。
+      1. 在搜索框中，输入"**Teams Toolkit"**。
+      1. 选择 **"** 安装"旁边的Teams Toolkit。
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscode.png" alt-text="插图显示Teams Toolkit安装。" border="false":::
+
+       the Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="插图显示Teams Toolkit边栏中Visual Studio Code图标。" border="false":::
+
+      您还可以在 Teams Toolkit 商店Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
+
+      # <a name="command-line"></a>[命令行](#tab/cli)
+
+      若要安装 TeamsFx CLI，请使用程序包 `npm` 管理器：
+
+      ``` bash
+      npm install -g @microsoft/teamsfx-cli
+      ```
+
+      根据您的配置，您可能需要使用 安装 `sudo` CLI：
+
+      ``` bash
+      sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+      ```
+
+      此情况在 Linux 和 macOS 系统上更为常见。
+
+      确保将 npm 全局缓存添加到 PATH。 此步骤通常作为安装程序的一Node.js完成。  
+
+      可以将 CLI 与 命令一 `teamsfx` 同使用。 通过运行 验证命令是否正常工作 `teamsfx -h`。
+
+      > [!CAUTION]
+      > 必须先为 PowerShell 启用"远程签名"执行策略，然后才能在 PowerShell 终端中运行 TeamsFx。
+
+      ---
+
+      ## <a name="set-up-your-teams-development-tenant"></a>设置开发Teams租户
+
+      **租户就像** 租户中的空间或组织的容器，Teams聊天、共享文件和运行会议。 此空间也是旁加载和测试应用的地方。 让我们验证你是否已准备好使用租户进行开发。
+
+      ### <a name="check-for-sideloading-option"></a>检查旁加载选项
+
+      创建应用后，必须在不分配应用的情况下Teams加载应用。 此过程称为旁加载。 登录到你的 Microsoft 365 帐户以查看此选项。
+         
+      你已拥有租户，是否具有管理员访问权限？ 让我们看一下你是否确实要这样做！
+
+      验证你能否在应用中旁加载Teams：
+
+       1. 在 Teams 客户端中，选择 **"应用商店"** 图标。
+       1. 选择 **"管理应用"**。
+       1. 选择 **"发布应用"**。
+       1. 查找用于自定义 **Upload的选项**。 如果看到 选项，则启用旁加载应用。
+
+           :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="插图显示用于上传自定义应用的选项Teams。":::
+
+           > [!NOTE]
+           > 如果无法选择上传自定义应用，请与管理员Teams联系。
+
+      ### <a name="create-a-free-teams-developer-tenant-optional"></a>创建一个Teams开发人员租户 (可选) 
+
+      如果你没有开发者帐户Teams，可以免费获取它。 加入 Microsoft 365开发人员计划！
+
+      1. 转到开发人员[Microsoft 365计划](https://developer.microsoft.com/microsoft-365/dev-program)。
+      1. 选择 **立即加入** 并按照屏幕上的说明进行操作。
+      1. 在欢迎屏幕中，选择 **"设置 E5 订阅"**。
+      1. 设置管理员帐户。 完成后，将显示以下屏幕。
+
+          :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="注册开发人员计划后看到Microsoft 365的示例。":::
+
+      1. 使用刚Teams的管理员帐户登录登录。 验证你已Upload **自定义应用** 选项Teams。
+
+      ## <a name="get-a-free-azure-account"></a>获取免费的 Azure 帐户
+
+      如果你想要在 Azure 中托管应用或访问资源，则必须拥有 Azure 订阅。 [在开始之前创建](https://azure.microsoft.com/free/) 一个免费帐户。
+
+      现在，你已获得所有工具并设置你的帐户。 接下来，让我们设置开发环境并开始构建！ 选择你想要首先执行的应用。
+  - title: 为选项卡应用创建项目工作区
+    durationInMinutes: 1
+    content: |
+
+      通过Microsoft Teams一个应用开始开发应用。 此应用程序使用 Tab 功能。
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="显示此应用程序的图表具有三个功能。选项卡突出显示。" border="false":::
+
+      在此页中，你将了解：
+      1. [如何使用新选项卡项目设置Teams Toolkit](#create-your-tab-project-workspace)
+      1. [关于应用的目录结构](#take-a-tour-of-the-tab-app-source-code)
+
+      ## <a name="create-your-tab-project-workspace"></a>创建选项卡项目工作区
+
+      如果先决条件已就位，让我们开始吧！
+
+      > [!NOTE]
+      > 显示Visual Studio Code UI 来自 Mac。 它可能会有所不同，具体取决于你的操作系统、Teams Toolkit版本和环境。
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vsc)
+
+      1. 打开 Visual Studio 代码。
+      1. 选择Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::边栏中的Visual Studio Code图标。
+
+      1. 选择 **创建新的 Teams 应用**。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。" border="false":::
+
+      1. 选择 **"新建Teams应用**"以使用"新建Teams Toolkit"。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="向导开始创建新项目" border="false":::
+
+      1. 确保 **已选择"** 选项卡"作为你想要在应用中构建的功能。 选择“确定”。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="选择应用功能" border="false":::
+
+      1. 选择 **JavaScript** 作为编程语言。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="显示如何选择编程语言的屏幕截图。" border="false":::
+
+      1. 输入 `helloworld` 作为应用程序名称。 确保只使用字母数字字符。 选择 **Enter** 继续。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab.png" alt-text="显示在何处输入应用名称的屏幕截图。" border="false":::
+
+          The Teams tab app is created in a few seconds.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/app-created.png" alt-text="显示已创建应用的屏幕截图。" border="false":::
+
+          创建应用后，Teams Toolkit显示一条消息，指示创建项目工作区的位置。 此文件夹是在设置中指定的Visual Studio Code位置。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="位置消息":::
+
+          邮件提供两个选项：
+          
+          - **更改位置**
+          - **本地调试**
+          
+          对于本教程，你无需使用这些选项。
+
+          > [!NOTE]
+          > 如果选择更改工作区的位置，则只会对在重新加载项目后创建的项目Visual Studio Code。 现有项目的位置没有变化。
+
+          <details>
+          <summary>快速回顾一下创建 Teams 应用。</summary>
+          观看此简短回顾，Teams应用。
+
+          ![创建Teams应用](~/assets/videos/javascript-tab-app.gif) </details>
+
+      # <a name="command-line"></a>[命令行](#tab/cli)
+
+      使用 `teamsfx` CLI 创建你的第一个项目。 从要创建项目文件夹的文件夹开始。
+
+      ``` bash
+      teamsfx new
+      ```
+
+      可以使用 CLI 创建新的应用Teams应用。 CLI 将引导你完成一系列问题。 每个问题都包括一条有关回答它的说明。
+
+      例如，使用箭头键选择一个选项。 做出选择后，选择 **Enter** 进行确认。
+
+      1. 选择 **创建新的 Teams 应用**。
+      1. 选择 **Tab** 功能。
+      1. 选择 **Azure** 前端托管。
+      1. 不要选择任何云资源。
+      1. 选择 **JavaScript** 作为编程语言。
+      1. 按 **Enter** 选择默认工作区文件夹。
+      1. 输入 `helloworld` 作为应用的名称。 应用的名称必须只有字母数字字符。
+
+        回答所有问题后，将创建项目。
+
+      ---
+
+      ## <a name="take-a-tour-of-the-tab-app-source-code"></a>浏览选项卡应用源代码
+
+      Teams Toolkit提供用于生成应用的所有组件。 创建项目后，可以查看项目资源管理器区域中的项目文件夹和Visual Studio Code。
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/hw-folder-structure-tab.png" alt-text="Project中具有 Tab 功能的应用搭建Visual Studio Code。":::
+
+      尽管你可以自由地选择任何 UI 框架 (或者不使用任何) ，但此示例模板代码提供了一个包含React基架。
+
+      在此目录结构的其他项中，Toolkit维护：
+
+      | 文件夹名 | 目录 |
+      | --- | --- |
+      | `.fx/configs` | 用户可以为应用自定义的Teams文件。 |
+      | - `.fx/configs/config.<envName>.json` | 每个环境的配置文件。 |
+      | - `.fx/configs/azure.parameters.<envName>.json` | 每个环境的 Azure BICEP 设置的参数文件。 |
+      | - `.fx/configs/projectSettings.json` | 适用于所有环境的全局项目设置。 |
+      | - `.fx/configs/localSettings.json` | 用于本地调试的配置文件。 |
+      | - `.fx/states` | 设置由应用程序生成的Teams Toolkit。  该工具包在您为应用预配资源后创建此文件夹。 |
+      | - `.fx/states/state.<envName>.json` | 预配每个环境的输出文件。 |
+      | - `.fx/states/<env>.userdata` | 每个环境的预配输出的敏感用户数据。 |
+      | `tabs` | 运行时所需的 Tab 功能的代码，例如隐私声明、使用条款和配置选项卡。 |
+      | - `tabs/src/index.jsx` | 前端应用的入口点，其中呈现主应用组件 `ReactDOM.render()` |
+      | - `tabs/src/components/App.jsx` | 处理应用中的 URL 路由的代码。 它调用了 [JavaScript 客户端 SDK](../msteams-platform/tabs/how-to/using-teams-client-sdk.md) 应用和团队之间建立通信。 |
+      | - `tabs/src/components/Tab.jsx` | 用于实现应用 UI 的代码。 |
+      | - `tabs/src/components/TabConfig.jsx` | 用于实现配置应用的 UI 的代码。 |
+      | `templates/appPackage` | 应用清单模板文件以及应用图标：color.pngoutline.png。 |
+      | - `templates/appPackage/manifest.local.template.json` | 用于在本地环境中运行应用的应用清单  |
+      | - `templates/appPackage/manifest.remote.template.json` | 在远程环境（如 Azure 网站）中运行应用的应用清单 |
+      | `templates/azure` | BICEP 模板文件 |
+      |
+
+      添加云功能时，Teams Toolkit向项目添加必要的文件夹。 该 `api` 文件夹将保留你编写的任何 Azure 函数的代码。
+  - title: 生成并运行你的第一个选项卡应用
+    durationInMinutes: 1
+    content: |
+
+      使用选项卡设置项目工作区Teams Toolkit，生成选项卡项目。 你需要登录到你的帐户Microsoft 365帐户。
+
+      ## <a name="sign-in-to-your-microsoft-365-account"></a>登录到你的 Microsoft 365 帐户
+
+      使用 Microsoft 365 帐户登录Teams。 如果你使用的是开发人员计划Microsoft 365，你在注册时设置的管理员帐户就是你的Microsoft 365帐户。
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/viscode)
+
+      1. 打开 Visual Studio 代码。
+      1. 选择边Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::图标。
+      1. 选择 **"登录 M365"**。
+
+          将打开默认 Web 浏览器，以允许登录帐户。
+
+      1. 使用凭据Microsoft 365帐户。
+      1. 当系统提示时关闭浏览器并返回到Visual Studio Code。
+      1. 返回到Teams Toolkit中的Visual Studio Code。
+
+          边栏的 **"** 帐户"部分显示Microsoft 365帐户名称。 Teams Toolkit帐户 **启用了旁** 加载，则显示旁加载Microsoft 365启用。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="显示登录到 azure 和 azure Microsoft 365的屏幕截图。" border="false":::
+
+          现在，你已准备好生成应用，并在本地环境中运行它！
+
+      # <a name="command-line"></a>[命令行](#tab/cline)
+
+      1. 登录以Microsoft 365 TeamsFx CLI：
+
+          ``` bash
+          teamsfx account login m365
+          ```
+
+          将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。
+
+      2. 使用 TeamsFx CLI 登录 Azure：
+
+          ``` bash
+          teamsfx account login azure
+          ```
+
+          将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。
+
+          帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。
+
+          现在已配置开发环境，你可以创建、生成和部署你的第一个Teams应用程序。
+
+      ---
+
+      ## <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>在 Visual Studio Code 本地生成和运行应用
+
+      若要在本地构建和运行应用，请执行：
+
+      1. 从Visual Studio Code，选择 **F5** 以在调试模式下运行应用程序。
+
+          <!-- markdownlint-disable MD033 -->
+
+          <details>
+          <summary>在本地调试器中运行应用时，了解会发生什么情况。</summary>
+
+          如果想知道，按 **F5** 键时，Teams Toolkit：
+
+          - 向应用注册Azure Active Directory。 此应用具有加载应用的位置和后端资源的权限。
+          - *在应用程序中* 旁加载Teams。
+          - 使用 Azure 函数核心工具启动本地运行的应用 [后端](/azure/azure-functions/functions-run-local?#start)。
+          - 在本地托管应用前端。
+          - 使用Microsoft Teams在 Web 浏览器中启动应用，以Teams从 旁加载应用`https://localhost:3000/tab`。 此 URL 在应用的清单中注册。
+          - 生成应用清单，存在于 Teams 开发人员门户中。 Teams 使用应用清单告诉已连接客户端从何处加载应用。
+
+          </details>
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="显示按下 F5 键时屏幕截图。":::
+
+          > [!NOTE]
+          > 首次运行应用时，将下载所有依赖项，并生成应用。 生成完成后将打开浏览器窗口。 此过程可能需要 3-5 分钟才能完成。
+
+          如果需要，工具包会提示你安装本地证书。 此证书允许 Teams 从 `https://localhost`。
+
+      1. 如果 **显示** 以下对话框，请选择"是"：
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+
+          或者， **根据您的** 操作系统选择"继续"：
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
+
+          Teams Web 客户端将在浏览器窗口中打开。
+
+      1. 如果系统提示，Microsoft 365帐户登录。
+
+      1. 当 **系统** 提示将应用旁加载到本地计算机上Teams选择添加。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="将应用添加到Teams":::
+
+      1. 恭喜！你的第一个应用正在 Teams！
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-debug.png" alt-text="已完成应用的屏幕截图":::
+
+      1. 浏览页面以查看用户详细信息。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-local-authorize.png" alt-text="选项卡上的用户信息部分屏幕截图":::
+          
+      1. 选择 **"** 授权"，让应用使用 Microsoft Graph 检索用户详细信息。
+
+          应用程序请求授予显示用户详细信息的权限。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-graph-permission.png" alt-text="授权应用访问用户详细信息的屏幕截图":::
+
+      1. 选择 **"接受** "，让应用访问用户详细信息。
+
+          你的照片和详细信息将显示在个人选项卡中。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-user-info.png" alt-text="选项卡上的用户信息的屏幕截图":::
+
+          你可以执行正常的调试活动，例如设置断点，就像任何其他 Web 应用程序一样。 该应用支持热重新加载。 如果更改了项目内的任何文件，将重新加载页面。
+
+        <!-- markdownlint-disable MD033 -->
+
+        <details>
+        <summary>了解如何解决应用不在本地运行的问题。</summary>
+
+        若要在 Teams 中成功运行应用，请确保在你的 Teams 帐户中启用了旁加载。 可以在先决条件部分了解有关旁加载的更多内容。
+
+        </details>
+
+        你了解如何使用Toolkit设置选项卡应用并在本地运行它。 接下来，让我们了解如何使用聊天聊天机器人生成Toolkit！
+  - title: 为自动程序应用创建项目工作区
+    durationInMinutes: 1
+    content: |
+
+      你已生成选项卡应用。 现在，让我们创建你的第一个自动程序应用。
+
+      聊天机器人功能Teams聊天机器人或对话机器人。 可使用它运行简单的自动化任务，如提供客户服务。 机器人与 Web 服务对话，并帮助你使用其产品/服务。 你可以获取天气预报、预订或使用对话机器人提供的其他服务。
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="显示此应用程序的图表具有三个功能。自动程序突出显示。" border="false":::
+
+      由于你已准备创建这些应用，因此你可以设置一个新的Teams创建自动程序应用的项目。
+
+      在本教程中，你将了解：
+
+      1. [如何使用自动程序设置新的自动程序Teams Toolkit。](#create-your-bot-project-workspace)
+      1. [关于应用项目的目录结构。](#take-a-tour-of-the-bot-app-source-code)
+
+      > [!IMPORTANT]
+      > 目前，自动程序在 政府社区云 (GCC) 中可用，GCC-High DOD (中不可用) 。
+
+      ## <a name="create-your-bot-project-workspace"></a>创建自动程序项目工作区
+
+      如果先决条件已就位，让我们开始吧！
+
+      > [!NOTE]
+      > 显示Visual Studio Code UI 来自 Mac。 它可能因操作系统、Teams Toolkit版本和环境而不同。
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
+
+      1. 打开 Visual Studio 代码。
+      1. 选择Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::边栏中的Visual Studio Code图标。
+
+      1. 选择 **创建新的 Teams 应用**。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。" border="false":::
+
+      1. 选择 **"新建Teams应用**"以使用"新建Teams Toolkit"。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="&quot;创建新项目&quot;的向导启动" border="false":::
+
+      1. 选择 **"自动** 程序"，取消选择 **"选项卡**"，然后选择"确定 **"**。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="显示如何向新应用添加功能的屏幕截图。" border="false":::
+
+      1. 在 **"编程语言** " **部分选择"JavaScript** "。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language-bot.png" alt-text="显示如何选择编程语言的屏幕截图。" border="false":::
+
+      1. 为应用输入合适的名称，如 `hellobot`。 确保应用名称为字母数字。 选择 **Enter** 继续。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name-bot.png" alt-text="显示在何处输入应用名称的屏幕截图。" border="false":::
+
+          你的Teams自动程序功能的应用在几秒后创建。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="显示已创建应用的屏幕截图。" border="false":::
+
+          创建应用后，Teams Toolkit将显示一条消息，指示创建项目工作区的位置。 此文件夹是在设置中指定的Visual Studio Code位置。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="位置消息":::
+
+          邮件提供两个选项：
+          
+          - **更改位置**
+          - **本地调试**
+          
+          对于本教程，你无需使用这些选项。
+
+          > [!NOTE]
+          > 如果选择更改工作区的位置，则只会对在重新加载项目后创建的项目Visual Studio Code。 现有项目的位置没有变化。
+
+      <details>
+      <summary>快速回顾一下创建 Teams 应用。</summary>
+      观看此简短回顾，Teams应用。
+
+      ![创建Teams应用](~/assets/videos/javascript-bot-app.gif)
+      </details>
+
+      # <a name="command-line"></a>[命令行](#tab/cli)
+
+      使用 `teamsfx` CLI 创建你的第一个项目。  从要创建项目文件夹的文件夹开始。
+
+      ``` bash
+      teamsfx new
+      ```
+
+      可以使用 CLI 创建新的应用Teams应用。 CLI 将引导你完成一系列问题。 每个问题都包括一条有关回答它的说明。
+
+      例如，使用箭头键选择一个选项。 做出选择后，选择 **Enter** 进行确认。
+
+      1. 选择 **创建新的 Teams 应用**。
+      1. 选择 **"自动** 程序"，然后取消选择 **"选项卡"**。
+      1. 选择 **JavaScript** 作为编程语言。
+      1. 选择 **Enter** 以选择默认工作区文件夹。
+      1. 为应用输入合适的名称，如 `HelloBot`。  应用的名称只能包含字母数字字符。
+
+      回答所有问题后，将创建项目。
+
+      ---
+
+      ## <a name="take-a-tour-of-the-bot-app-source-code"></a>浏览自动程序应用源代码
+
+      基架搭建完成后，在浏览器的资源管理器区域中查看项目Visual Studio Code。
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hw-folder-structure-bot.png" alt-text="Project中为自动程序搭建Visual Studio Code。" border="false":::
+
+      | 文件夹名 | 目录 |
+      | --- | --- |
+      | `.fx/configs` | 用户可以为应用自定义的Teams文件。 |
+      | `.fx/configs/config.<envName>.json` | 每个环境的配置文件。 |
+      | `.fx/configs/azure.parameters.<envName>.json` | 每个环境的 Azure BICEP 设置的参数文件。 |
+      | `.fx/configs/projectSettings.json` | 适用于所有环境的全局项目设置。 |
+      | `.fx/configs/localSettings.json` | 用于本地调试的配置文件。 |
+      | `.fx/states` | 设置由应用程序生成的Toolkit。  该工具包在您为应用预配资源后创建此文件夹。 |
+      | `.fx/states/state.<envName>.json` | 预配每个环境的输出文件。 |
+      | `.fx/states/<env>.userdata` | 每个环境的预配输出的敏感用户数据。 |
+      | `bot` |  运行时所需的 Bot 功能的代码。 |
+      | `bot/teamsBot.js` | 自动程序应用的主要入口点。 |
+      | `templates/appPackage` | 应用清单模板文件以及应用图标、color.pngoutline.png。 |
+      | `templates/appPackage/manifest.local.template.json` | 用于在本地环境中运行应用的应用清单  |
+      | `templates/appPackage/manifest.remote.template.json` | 在远程环境（如 Azure 站点）中运行应用的应用清单 |
+      | `templates/azure` | BICEP 模板文件 |
+
+      > [!Tip]
+      > 在将第一个机器人集成到 Teams 中之前，请熟悉 Teams 以外的机器人。
+  - title: 生成并运行你的第一个自动程序应用
+    durationInMinutes: 1
+    content: |
+
+      使用自动程序设置项目工作区Teams Toolkit，生成自动程序项目。 确保你已登录到你的Microsoft 365帐户。
+
+      ## <a name="sign-in-to-your-microsoft-365-account"></a>登录到你的 Microsoft 365 帐户
+
+      使用此帐户登录Teams。 如果你使用的是开发人员计划Microsoft 365，你在注册时设置的管理员帐户就是你的Microsoft 365帐户。
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/viscode)
+
+      1. 打开 Visual Studio 代码。
+      1. 选择边Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::图标。  
+      1. 选择 **"登录 M365"**。
+
+          将打开默认 Web 浏览器，以允许登录帐户。
+
+      1. 使用凭据Microsoft 365帐户。
+      1. 当系统提示时关闭浏览器并返回到Visual Studio Code。
+      1. 返回到Teams Toolkit中的Visual Studio Code。
+
+          使用此帐户登录Teams。 如果你使用的是开发人员计划Microsoft 365，你在注册时设置的管理员帐户就是你的Microsoft 365帐户。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="显示登录到 azure 和 azure Microsoft 365的屏幕截图。" border="false":::
+
+          现在，你已准备好生成应用并在本地运行它了！
+
+      # <a name="command-line"></a>[命令行](#tab/cline)
+
+      1. 登录以Microsoft 365 TeamsFx CLI：
+
+          ``` bash
+          teamsfx account login m365
+          ```
+
+          将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。
+
+      2. 使用 TeamsFx CLI 登录 Azure：
+
+          ``` bash
+          teamsfx account login azure
+          ```
+
+          将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。
+
+          帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。
+
+          现在配置了开发环境，你可以创建、生成和部署你的第一个Teams应用程序。
+
+      ---
+
+      ## <a name="build-and-run-your-first-bot-app-locally"></a>在本地生成并运行你的第一个自动程序应用
+
+      若要在本地环境中生成和运行应用，请执行以下操作：
+
+      1. 选择 **F5** Visual Studio Code以在调试模式下运行应用。
+
+          <!-- markdownlint-disable MD033 -->
+
+          <details>
+          <summary>在本地调试器中运行应用时，了解会发生什么情况。</summary>
+
+          如果想知道，按 **F5** 键时，Teams Toolkit：
+
+          - 向应用注册Azure Active Directory。 此应用具有加载应用的位置和后端资源的权限。
+          - *在应用中* 旁加载Teams。
+          - 使用 Azure 函数核心工具启动本地运行的应用 [后端](/azure/azure-functions/functions-run-local?#start)。
+          - 在本地托管应用前端。
+          - 使用Microsoft Teams在 Web 浏览器中启动应用，以Teams从 旁加载应用`https://localhost:3000/tab`。 此 URL 在应用的清单中注册。
+          - 生成应用清单，存在于 Teams 开发人员门户中。 Teams 使用应用清单告诉已连接客户端从何处加载应用。
+
+          </details>
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="显示何时按 F5 键进行调试的屏幕截图。":::
+
+          > 首次运行应用时，将下载所有依赖项，并生成应用。 编译完成后，将自动打开浏览器窗口。 此过程可能需要 3-5 分钟才能完成。
+
+          Web 浏览器开始运行该应用。
+
+      1. 如果系统提示，Microsoft 365帐户登录。
+
+      1. 当 **系统** 提示将应用旁加载到本地计算机上Teams选择添加。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
+
+          现在自动程序已成功在 Teams！ 加载应用后，将打开与机器人的聊天会话。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot showing the bot is running on Teams client.":::
+
+          可以键入 以显示 `welcome` 简介卡片，并键入 `learn` 以转到自适应卡片和自动程序命令文档。
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot showing the learn card in the bot on Teams client.":::       
+
+          你可以像任何其他 Web 应用程序一样执行正常的调试活动，例如设置断点。 打开 `bot/teamsBot.js` 文件并找到 `onMessage()` 方法。 在任何案例上设置断点。 然后，键入一些文本。
+
+        <!-- markdownlint-disable MD033 -->
+        <details>
+        <summary>了解如何解决应用不在本地运行的问题。</summary>
+
+        若要在 Teams 中成功运行你的应用，请确保在你的 Teams 帐户中启用了旁加载。 可以在先决条件部分了解有关旁加载的更多内容。
+
+        > [!IMPORTANT]
+        > 目前，旁加载应用在 政府社区云 (GCC) 、GCC-High 和 DOD 中可用。
+
+        > [!TIP]
+        > 使用应用验证工具旁加载应用前 [检查问题](https://dev.teams.microsoft.com/appvalidation.html)。 此工具包含在工具包中。 修复错误以旁加载应用。
+        </details> 
+  - title: 为邮件扩展应用创建项目工作区
+    durationInMinutes: 1
+    content: |
+
+      你已生成自动程序应用。 现在，让我们创建你的第一个消息传递扩展应用。
+
+      Messaging Extension 功能允许你与 Web 服务交互。 使用客户端中的撰写区域、命令框或消息Teams在外部系统中搜索和启动操作。
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="显示此应用程序的图表具有三个功能。邮件扩展突出显示。" border="false":::
+
+      有两种类型的 Teams **消息扩展**：
+
+      - [搜索命令](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md)：可以搜索外部系统。 然后，可以将其结果以卡片的形式插入到邮件中。
+      - [操作](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md)命令：你可以向用户显示用于收集或显示信息的模式弹出窗口。 然后，你可以处理其交互并将信息发送回Teams。
+
+      让我们使用搜索命令创建一个消息传递扩展 *应用*。 使用它搜索外部数据，并将结果插入到客户端中的Teams中。
+
+      由于你已准备创建这些应用，因此你可以设置一个新的Teams项目来创建邮件扩展应用。
+
+      > [!NOTE]
+      > 消息扩展依赖于自动程序，在用户和你的代码之间提供对话框。
+
+
+      在本教程中，你将了解：
+
+      1. [如何使用新邮件扩展项目设置Teams Toolkit。](#create-your-messaging-extension-project-workspace)
+      1. [关于应用项目的目录结构。](#take-a-tour-of-the-messaging-extension-app-source-code)
+
+      ## <a name="create-your-messaging-extension-project-workspace"></a>创建邮件扩展项目工作区
+
+      如果先决条件已就位，让我们开始吧！
+
+      > [!NOTE]
+      > 显示Visual Studio Code UI 来自 Mac。 它可能会有所不同，具体取决于你的操作系统、Toolkit版本和环境。
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vsc)
+
+      1. 打开 Visual Studio 代码。
+      1. 选择Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::边栏中的Visual Studio Code图标。
+
+      1. Select **Create New Project** from the left-side of the Toolkit.
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。" border="false":::
+
+      1. 选择 **"新建Project**"以使用"新建"Teams Toolkit。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="&quot;创建新项目&quot;的向导启动" border="false":::
+
+      1. 选择 **"消息扩展**"，取消选择 **"选项卡**"，然后选择"确定 **"**。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex.png" alt-text="显示如何向新应用添加功能的屏幕截图。" border="false":::
+
+      1. 选择 **JavaScript** 作为编程语言。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-language-mex.png" alt-text="显示如何选择编程语言的屏幕截图。" border="false":::
+
+      1. 为应用输入一个合适的名称。 确保应用名称为字母数字。 选择 **Enter** 继续。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-name-mex.png" alt-text="显示如何输入应用名称的屏幕截图。" border="false":::
+
+          Teams Toolkit几秒后创建应用。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png" alt-text="显示已创建应用的屏幕截图。" border="false":::
+
+          创建应用后，Teams Toolkit将显示一条消息，指示创建项目工作区的位置。 这是在设置中指定的Visual Studio Code位置。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/location-change.png" alt-text="位置消息":::
+
+          邮件提供两个选项：
+          
+          - **更改位置**
+          - **本地调试**
+          
+          对于本教程，你无需使用这些选项。
+
+          > [!NOTE]
+          > 如果选择更改工作区的位置，则只会对在重新加载项目后创建的项目Visual Studio Code。 现有项目的位置没有变化。
+
+        <details>
+        <summary>快速回顾一下创建 Teams 应用。</summary>
+        观看此简短回顾，Teams应用。
+
+        ![创建Teams应用](~/assets/videos/javascript-msg-ext-app.gif)
+        </details>
+
+      # <a name="command-line"></a>[命令行](#tab/cli)
+
+      使用 `teamsfx` CLI 创建你的第一个项目。 从要创建项目文件夹的文件夹开始。
+
+      ``` bash
+      teamsfx new
+      ```
+
+      可以使用 CLI 创建新的应用Teams应用。 CLI 将引导你完成一系列问题。 每个问题都包括一条有关回答它的说明。
+
+      例如，使用箭头键选择一个选项。 做出选择后，选择 **Enter** 进行确认。
+
+
+      1. 选择 **创建新的 Teams 应用**。
+      1. 选择 **"邮件扩展** "，然后取消选择 **"选项卡"**。
+      1. 选择 **JavaScript** 作为编程语言。
+      1. 选择 **Enter** 以选择默认工作区文件夹。
+      1. 为应用输入合适的名称，如 `HelloMsgExtn`。  应用的名称只能包含字母数字字符。
+
+        在回答所有问题后，将创建项目。
+
+      ---
+
+      ## <a name="take-a-tour-of-the-messaging-extension-app-source-code"></a>浏览邮件扩展应用源代码
+
+      消息传递扩展使用 Bot Framework。 可使用它通过对话与服务交互。 基架搭建完成后，在浏览器的资源管理器区域中查看项目Visual Studio Code。
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/hw-folder-structure-mex.png" alt-text="自动程序项目的文件布局" border="false":::
+
+      | 文件夹名 | 目录 |
+      | --- | --- |
+      | `.fx/configs` | 用户可以为应用自定义的Teams文件。 |
+      | `.fx/configs/config.<envName>.json` | 每个环境的配置文件。 |
+      | `.fx/configs/azure.parameters.<envName>.json` | 每个环境的 Azure BICEP 设置的参数文件。 |
+      | `.fx/configs/projectSettings.json` | 适用于所有环境的全局项目设置。 |
+      | `.fx/configs/localSettings.json` | 用于本地调试的配置文件。 |
+      | `.fx/states` | 设置由应用程序生成的Toolkit。  该工具包在您为应用预配资源后创建此文件夹。 |
+      | `.fx/states/state.<envName>.json` | 预配每个环境的输出文件。 |
+      | `.fx/states/<env>.userdata` | 每个环境的预配输出的敏感用户数据。 |
+      | `bot` |  运行时所需的自动程序代码。 |
+      | `bot/messageExtensionBot.js` | 邮件扩展应用的主入口点。 |
+      | `templates/appPackage` | 应用清单模板文件以及应用图标、color.pngoutline.png。 |
+      | `templates/appPackage/manifest.local.template.json` | 用于在本地环境中运行应用的应用清单  |
+      | `templates/appPackage/manifest.remote.template.json` | 在远程环境（如 Azure 站点）中运行应用的应用清单 |
+      | `templates/azure` | BICEP 模板文件 |
+
+      > [!Tip]
+      > 在将应用集成到 Teams 之前，请熟悉自动程序以及 Teams。
+  - title: 生成并运行你的第一个消息传递扩展应用
+    durationInMinutes: 1
+    content: |
+
+      使用选项卡设置项目工作区Teams Toolkit，生成选项卡项目。 你需要登录到你的帐户Microsoft 365帐户。
+
+      ## <a name="sign-in-to-your-microsoft-365-account"></a>登录到你的 Microsoft 365 帐户
+
+      使用此帐户登录Teams。 如果你使用的是开发人员计划Microsoft 365，注册时设置的管理员帐户就是你的Microsoft 365帐户。
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vcode)
+
+      1. 打开 Visual Studio 代码。
+      1. 选择边Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::图标。  
+      1. 选择 **"登录 M365"**。
+
+          将打开默认 Web 浏览器，以允许登录帐户。
+
+      1. 登录到你的 Microsoft 365 帐户。
+      1. 当系统提示时关闭浏览器并返回到Visual Studio Code。
+      1. 返回到Teams Toolkit中的Visual Studio Code。
+
+          边栏的 **"** 帐户"部分显示Microsoft 365帐户名称。 如果Teams Toolkit **帐户启用了** 旁加载，则显示旁加载Microsoft 365启用。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="显示登录到 azure 和 azure Microsoft 365的屏幕截图。" border="false":::
+
+          现在，你已准备好生成应用并在本地运行它了！
+
+      # <a name="command-line"></a>[命令行](#tab/cline)
+
+      1. 登录以Microsoft 365 TeamsFx CLI：
+
+          ``` bash
+          teamsfx account login m365
+          ```
+
+          将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。
+
+      2. 使用 TeamsFx CLI 登录 Azure：
+
+          ``` bash
+          teamsfx account login azure
+          ```
+
+          将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。
+
+          帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。
+
+          现在配置了开发环境，你可以创建、生成和部署你的第一个Teams应用程序。
+
+      ---
+
+      ## <a name="build-and-run-your-app-in-the-local-environment"></a>在本地环境中生成并运行应用
+
+      消息传递扩展允许你与 Web 服务交互。 它利用机器人的消息功能和安全通信。 消息扩展应用将添加到注册为自动程序的 Web 服务。 
+
+      ### <a name="build-and-run-your-app-locally"></a>在本地生成并运行应用
+
+      1. 选择 **F5** Visual Studio Code以在调试模式下运行应用程序。
+          <!-- markdownlint-disable MD033 -->
+          <details>
+          <summary>在本地调试器中运行应用时，了解会发生什么情况。</summary>
+
+          选择 **F5 时**，Teams Toolkit：
+
+          1. 向应用程序注册Azure Active Directory。
+          1. 将应用程序注册为"旁加载"Teams。
+          1. 使用 Azure 函数核心工具启动本地 [运行的应用程序后端](/azure/azure-functions/functions-run-local?#start)。
+          1. 启动 ngrok 隧道Teams应用进行通信。
+          1. 首先Microsoft Teams命令指示Teams旁加载应用程序。
+
+          </details>
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="显示按 F5 键进行调试的屏幕截图。":::
+
+          > [!NOTE]
+          > 首次运行应用时，将下载所有依赖项，并生成应用。 生成完成后将打开浏览器窗口。 此过程可能需要 3-5 分钟才能完成。
+
+          Teams Web 浏览器中打开。
+          
+      1. 如果系统提示，Microsoft 365帐户登录。
+      1. 选择 **"** 添加"将应用添加到你的帐户。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png" alt-text="Screenshot shows message to add the app" border="false":::
+
+          工具包将显示一条消息，指示应用已添加到Teams。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later" border="true":::
+
+          - 如果你选择 **"获得它**"，你可以稍后从旁加载的应用列表中试用该应用。
+          - 如果选择"试用 **"，** Teams加载你的应用。
+
+      1. 选择 **"试用"**。
+
+          消息扩展应用在聊天机器人应用中加载。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="显示应用程序中旁加载应用的Teams" border="false":::
+
+          由于消息传递扩展应用依赖机器人来启用用户和 Web 服务之间的通信，因此你的应用将加载至聊天机器人的聊天功能。
+
+          - 如果你在创建邮件扩展应用之前创建了自动程序应用，你可以看到该应用已加载到你创建的同一自动程序应用中。 以前的聊天消息是可见的。
+          - 如果首先创建了消息传递扩展，你的应用将加载到在 Teams 上打开的任何聊天中。
+
+      ### <a name="test-your-app"></a>测试应用
+
+      首次加载应用时，邮件扩展应用将打开供你测试。 此示例应用允许你从软件注册表中搜索开源 npm 包。
+
+      #### <a name="to-run-a-search-query"></a>运行搜索查询
+
+      1. 让我们在搜索框中输入一个搜索字符串，例如"cli"。 您将获得匹配项的列表：
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="显示如何使用应用进行搜索的屏幕截图" border="true":::
+
+      1. 从搜索结果中选择一个。 它将显示在撰写区域中，以便你可以将结果发送到频道。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="显示搜索结果的屏幕截图" border="false":::
+
+      1. 选择" **发送"** 说明。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="显示聊天时发送的搜索结果的屏幕截图" border="false":::
+
+          现在，你已了解如何构建和运行基本的消息传递扩展应用！         
+
+      ## <a name="optional-scenarios"></a>可选方案
+
+      你已测试基本邮件扩展应用的搜索功能。 现在，你可以试用此应用的一些其他功能。 这些是此应用中的可选方案。
+      <br>
+      <br>
+      <details>
+      <summary>创建卡片</summary>
+
+      1. 选择 **"创建卡片"**。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="显示如何创建卡片的屏幕截图" border="false":::
+
+      1. 按如下所示输入卡详细信息，然后选择"提交 **"**。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="显示如何添加卡片详细信息的屏幕截图" border="true":::
+
+          你的卡片详细信息显示在撰写区域中。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="显示如何添加卡片详细信息的屏幕截图" border="true":::
+
+      1. 从撰写 **区域** 选择发送图标。
+
+          应用在聊天机器人上发送卡片。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="显示已发送卡片的屏幕截图" border="false":::
+      </details>
+      <br>
+      <details>
+      <summary>从撰写区域打开应用</summary>
+
+      选择下列打开应用的方法之一。
+
+      **使用 `@mention`：**
+
+      1. 在 `@your-app-name` 应用的命令区域中输入。
+          
+          应用程序将打开搜索框，你可以使用它运行查询。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="显示如何@mention扩展应用的屏幕截图" border="false":::
+
+      1. 输入搜索字符串，然后从搜索结果中选择一个。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="显示如何使用消息传递扩展应用运行搜索的屏幕截图" border="false":::
+
+          它在命令区域中显示为卡片。
+
+      1. 复制卡片以将其粘贴到撰写区域。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="在卡片中显示搜索结果的屏幕截图" border="false":::
+          
+      1. 使用撰写区域发送卡片。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="显示聊天中的搜索结果的屏幕截图" border="false":::
+
+      **使用三点图标：**
+
+      1. 从撰写区域底部的三个点启动消息传递扩展。
+      1. 选择邮件扩展应用。       
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="显示如何打开示例邮件扩展应用的屏幕截图" border="false":::
+
+          邮件扩展应用加载用于运行搜索和创建自适应卡片的选项。
+      </details>
+      <br>
+      <details>
+      <summary>从旁加载的应用运行应用</summary>
+
+      你可以从旁加载Teams打开旁加载应用。 
+
+      1. Select the **Store** icon from the Teams sidebar.
+      1. 选择" **管理应用"**。
+
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="显示旁加载应用的屏幕截图" border="false":::
+
+      1. 选择应用的三个点图标，然后选择" **查看详细信息"**。 还可以复制指向应用的链接，并使用它打开应用。
+      1. 选择 **"** 打开"加载应用，然后选择" **试用"**。 
+          
+          应用在 Teams 中加载。
+      </details>
+      <br>
+      <br>
+      <!-- markdownlint-disable MD033 -->
+      <details>
+      <summary>了解如何解决应用不在本地运行的问题。</summary>
+
+      若要在应用中运行Teams，你必须拥有一个Microsoft 365允许应用旁加载的一个开发帐户。 可以在先决条件部分了解有关旁加载的更多内容。
+      </details>
+  - title: 部署你的第一Teams应用
+    durationInMinutes: 1
+    content: |
+
+      你已学习了使用选项卡、自动程序Teams扩展功能创建、生成和运行应用。 最后一步是在 Azure 上部署应用。
+
+      让我们在 Azure 上部署第一个使用 Tab 功能的应用，Teams Toolkit。
+
+      ## <a name="sign-in-to-your-azure-account"></a>登录到 Azure 帐户
+
+      使用此帐户访问 Microsoft Azure 门户并预配新的云资源以支持你的应用。
+
+      # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/viscode)
+
+      1. 打开 Visual Studio 代码。
+      1. 打开创建选项卡应用的项目文件夹。
+      1. 选择边Teams Toolkit:::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::图标。  
+      1. 选择 **"登录到 Azure"**。
+
+          > [!TIP]
+          > 如果已安装 Azure 帐户扩展并使用相同的帐户，可以跳过此步骤。 请使用与其他扩展中相同的帐户。
+
+          将打开默认 Web 浏览器，以允许登录帐户。
+      1. 使用凭据登录 Azure 帐户。
+      1. 当系统提示时关闭浏览器并返回到Visual Studio Code。
+
+          边栏的 **"** 帐户"部分分别显示这两个帐户。 它还列出了可供你使用 Azure 订阅的数量。 确保至少有一个可用的 Azure 订阅可用。 如果没有，请注销并使用其他帐户。
+
+          现在，你已准备好将应用部署到 Azure！
+
+          恭喜！你已创建三种类型的Teams应用！ 
+          现在，让我们继续，了解如何使用 Teams Toolkit 将其中一个应用部署到 Azure。
+
+      # <a name="command-line"></a>[命令行](#tab/cline)
+
+      1. 登录以Microsoft 365 TeamsFx CLI：
+
+          ``` bash
+          teamsfx account login m365
+          ```
+
+          将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。
+
+      2. 使用 TeamsFx CLI 登录 Azure：
+
+          ``` bash
+          teamsfx account login azure
+          ```
+
+          将打开默认 Web 浏览器，以允许登录帐户。 使用凭据登录 Azure 帐户。 系统提示时关闭浏览器。
+
+          帐户登录名在 Visual Studio Code TeamsFx CLI 之间共享。
+
+          恭喜！你已创建三种类型的Teams应用！ 
+          现在，让我们继续，了解如何使用 Teams Toolkit 将其中一个应用部署到 Azure。
+
+      ---
+
+        [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
+
+        <!-- markdownlint-disable MD033 -->
+        <details>
+        <summary>了解将应用部署到 Azure 时会发生的情况</summary>
+
+        部署之前，应用程序已在本地运行:
+
+        * 后端使用 **Azure Functions Core Tools** 运行。
+        * 应用程序 HTTP 终结点 (Microsoft Teams 在此加载应用程序) 在本地运行。
+
+        部署是一个两步过程。 在活动的 Azure 订阅上预配资源，然后将应用程序的后端和前端代码部署或上载到 Azure。
+
+        * 后端（如果已配置）使用各种 Azure 服务，包括 Azure 应用服务和 Azure 存储。
+        * 将前端应用程序部署到配置用于静态 Web 托管的 Azure 存储帐户。
+
+        </details>
+  - title: 恭喜！
+    durationInMinutes: 1
+    content: |
+
+      你已完成操作！
+
+      你已创建三个应用，每个应用具有不同的功能：选项卡应用、机器人应用和消息传递扩展应用。
+
+      现在，你已经了解了如何创建基本应用，可以继续创建更复杂的应用。 首先，请尝试向现有应用添加功能。
+
+      若要向现有应用添加功能：
+
+      1. Select **Add capability** from the **Development** section of the Teams Toolkit sidebar.
+
+      1. 选择要添加到应用的功能。
+
+      就是这么简单。 Teams Toolkit将新功能基架添加到应用的目录结构中。 按照过程生成和部署应用，你的应用将具有多个功能。 
+
+      你已完成使用 JavaScript 生成应用的教程。

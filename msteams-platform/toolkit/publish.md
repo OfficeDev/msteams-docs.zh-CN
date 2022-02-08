@@ -1,98 +1,90 @@
 ---
-title: 使用Teams发布Teams Toolkit
+title: 使用 Teams 工具包发布 Teams 应用
 author: zyxiaoyuer
 description: 发布Teams应用
 ms.author: yanjiang
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3060a3b36f63c30a6068887ab3112cfe49d16ae5
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227986"
 ---
-# <a name="publish-teams-apps-using-teams-toolkit"></a>使用Teams发布Teams Toolkit
 
-创建应用后，你可以将应用分发到不同的作用域，例如个人、团队、组织或任何人。 分布取决于多个因素，包括需求、业务和技术要求以及应用的目标。 分发到不同范围可能需要不同的审阅过程。 一般来说，范围越大，应用需要针对安全性和合规性问题进行审阅就越充分。
+
+# <a name="publish-teams-apps-using-teams-toolkit"></a>使用 Teams 工具包发布 Teams 应用
+
+创建应用后，你可以将应用分发到不同的作用域，例如个人、团队、组织或任何人。 分布取决于多个因素，包括需求、业务和技术要求以及应用的目标。 分发到不同范围可能需要不同的审阅过程。 通常，范围越大，应用需要经过的针对安全性和合规性问题审查的就更多。
 
 ## <a name="prerequisite"></a>先决条件
 
 * [安装Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)版本 v3.0.0+。
 
 > [!TIP]
-> 你应该已经有一个Teams应用程序项目。
+> 确保你已Teams VS 代码中的应用项目。
 
-## <a name="publish-to-individual-scope-sideloading-permission"></a>发布到单个作用域 (旁加载权限) 
+## <a name="publish-to-individual-scope-or-sideload-permission"></a>发布到单个范围或旁加载权限
 
-用户可以通过将应用包Teams文件直接上载到团队.zip或个人上下文中，将自定义应用添加到应用包。 通过上传应用包（也称为旁加载）添加自定义应用，允许你在开发应用时测试应用，然后再如以下方案所述广泛分发应用：
+用户可以将自定义应用Teams *.zip文件直接上载到团队或个人上下文中，以向应用添加自定义应用。 通过上传应用包添加自定义应用称为旁加载，允许你在应用准备好广泛分发之前，在开发期间测试应用，如以下方案所述：
 
-* 你自己或与其他开发人员一起在本地测试和调试应用。
-* 只为你自己生成了一个应用。 例如，自动化工作流。
-* 你为一小组用户（如工作组）生成了一个应用。
+* 在本地测试和调试应用。
+* 自己生成应用，例如自动化工作流。
+* 为一小组用户（如工作组）生成应用。
 
-它还允许你生成供内部使用的应用，并与你的团队共享它，而无需将该应用提交到 Teams 应用商店中的 Teams 应用程序目录。
+你可以构建一个仅供内部使用的应用，并与你的团队共享它，而无需Teams应用程序目录中的 Teams 应用程序目录。
 
-* 将应用生成到 *.zip 应用包文件
+**生成应用以.zip *应用包文件**
 
-    可以通过从树视图的部署面板中选择来生成应用 `Zip Teams metadata package` Teams Toolkit。 你可能需要先 `Provision in the cloud` 运行。 生成的应用包将位于 中 `{your project folder}/build/appPackage/appPackage.{env}.zip` ，如下图所示：
+可以通过从树视图的部署中选择来`Zip Teams metadata package`生成应用Teams Toolkit。 需要先 `Provision in the cloud` 运行。 生成的应用包将位于 中 `{your project folder}/build/appPackage/appPackage.{env}.zip`。
 
- ![上传自定义应用](./images/sideload-check.png)
+执行以下步骤以上传应用包：
+
+1. 在 Teams 客户端 **中，选择** 左侧栏中的"应用"。
+2. 选择 **"管理应用"**。
+3. 选择 **"发布应用"**
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="发布":::
+
+4. 选择 **Upload应用：**
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/uplo.png" alt-text="upload":::
 
 ## <a name="publish-to-your-organization"></a>发布到组织 
 
-当应用准备好在生产中使用时，开发人员可以使用 Teams 应用提交 API（从 Graph API（集成开发环境 (IDE) 如随 Teams 工具包安装的 Visual Studio Code）提交应用。 You can either select **Publish to Teams** from DEPLOYMENT panel in TreeView of Teams Toolkit， or trigger **Teams： Publish to Teams** from command palette. 然后选择 **"为组织安装"，** 如下图所示：
+当应用可供生产使用时，可以使用 Teams 应用提交 API（从 Graph API（集成开发环境 (IDE) 如 Teams 工具包安装的 Microsoft Visual Studio 代码）提交应用。 You can either select **Publish to Teams** from **DEPLOYMENT** in TreeView of Teams Toolkit， or trigger **Teams： Publish to Teams** from command palette. 然后选择 **"为组织安装"**：
 
 ![为组织安装](./images/installforyourorganization.png)
 
-执行此操作可使应用在管理中心的"管理应用"Microsoft Teams，你和管理员可在其中查看和批准它。
+该应用在管理中心内管理 **Microsoft Teams**，你和管理员可在其中查看和批准它。
 
-作为管理员，Microsoft Teams中心中的"管理应用"[](https://admin.teams.microsoft.com/policies/manage-apps)页面是查看和管理组织Teams应用的地方。 你可以在此处查看应用的组织级别状态和属性、批准新的自定义应用或将其上载到组织的应用商店、在组织级别阻止或允许应用、将应用添加到团队、购买第三方应用的服务、查看应用请求的权限、向应用授予管理员同意以及管理组织范围内的应用设置。
+作为管理员，**在** Microsoft Teams 管理中心中 [](https://admin.teams.microsoft.com/policies/manage-apps)管理应用是查看和管理组织Teams应用的地方。 可以查看应用程序的组织级别状态和属性、批准新的自定义应用或将其上载到组织的应用商店、在组织级别阻止或允许应用、将应用添加到团队、购买第三方应用的服务、查看应用请求的权限、向应用授予管理员同意以及管理 [组织](https://admin.teams.microsoft.com/policies/manage-apps)范围的应用设置。
 
-[](https://admin.teams.microsoft.com/policies/manage-apps) Teams 管理中心 Teams toolkit for Visual Studio Code 中的"管理应用"页面基于 Teams 应用提交 API 构建，它允许你在 Teams 上自动执行自定义应用的提交到审批流程。
+Teams基于 Teams 应用提交 API 构建的 Visual Studio Code 工具包，它允许你自动执行 Teams 上的自定义应用的提交到审批过程。
 
 > [!NOTE]
-> 请记住，这尚未将应用发布到组织的应用商店。 此步骤将应用提交到Microsoft Teams管理中心，你可以在这里批准它以发布到组织的应用商店。
+> 该应用尚未发布到组织的应用商店。 此步骤将应用提交到Microsoft Teams管理中心，你可以在这里批准它以发布到组织的应用商店。
 
-## <a name="admin-approval-for-submitted-teams-apps"></a>提交的应用管理员Teams审批
+## <a name="admin-approval-for-teams-apps"></a>管理员对应用Teams审批
 
-然后，Teams 租户的管理员可以转到左侧导航中 Microsoft Teams 管理中心 (中的"管理应用"页面，转到"Teams 应用">"管理应用) "，查看组织的所有 Teams 应用。 页面顶部的"待审批"小组件使你可以了解何时提交自定义应用进行审批。
-在表中，新提交的应用会自动显示"已提交"和"已阻止状态"的发布状态。 你可以按降序对"发布状态"列进行排序以快速找到应用：
+然后，Teams租户的管理员可以转到 Microsoft Teams 管理中心中的"管理应用"，在左侧导航栏中，转到Teams应用>管理应用。 可以查看组织的所有Teams应用程序。 在页面顶部的"待审批"小部件中，你可以了解何时提交自定义应用进行审批。
+在表中，新提交的应用自动发布已提交和已阻止应用的状态。 你可以按降序对发布状态列进行排序以查找应用：
 
- ![提交的团队应用的管理员审批](./images/admin-approval-for-teams-app.png)
+ :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="审批":::
 
-选择应用名称以转到应用详细信息页面。 On the About tab， you can view details about the app， including description， status， submitter， and app ID：
+选择应用名称以转到应用详细信息页面。 On the About tab， you can view details about the app， including description， status， and app ID：
 
- ![有关管理员批准的已提交团队应用的详细信息](./images/about-submitted-app.png)
+ :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app-1.png" alt-text="已提交应用":::
 
-准备好将应用提供给用户后，请按照步骤发布应用：
+执行以下步骤以发布应用：
 
-1. 在管理中心左侧导航Microsoft Teams，转到Teams应用>管理应用"。
-2. 选择要转到应用详细信息页面的应用名称，然后在"发布状态"框中选择"发布"。
-发布应用后，"发布状态"将更改为"已发布"，"状态"将自动更改为"允许"。
+1. 在管理中心左侧导航Microsoft Teams，转到Teams管理>**应用"**
+2. 选择要转到应用详细信息页面的应用名称，然后在状态框中选择"发布 **"**。
+发布应用后，发布状态将更改为已发布，状态将自动更改为允许。
 
-## <a name="publish-to-microsoft-store"></a>发布到Microsoft Store
+## <a name="publish-to-microsoft-store"></a>发布到 Microsoft Store
 
-你可以将应用直接分发到 Microsoft Teams 内的应用商店，并覆盖全球数百万用户。 如果你的应用也在应用商店中特别推荐，你可以立即联系潜在客户。
-发布到应用商店的应用Teams Microsoft AppSource 自动列出，Microsoft AppSource 是应用和解决方案Microsoft 365官方市场。
-了解发布过程 当你感觉你的应用已做好生产准备时，你可以开始在应用商店中列出Teams过程。
+你可以将应用直接分发到 Microsoft Teams 内的应用商店，并覆盖全球数百万用户。 如果你的应用也在应用商店中特别推荐，你可以立即联系潜在客户。 发布到应用商店的应用Teams Microsoft AppSource 自动列出，Microsoft AppSource 是应用和解决方案Microsoft 365官方市场。
 
->[!Tip]
-> 严格遵循提交前步骤可能会增加 Microsoft 批准你的应用进行发布的可能性。
-
-![提交前步骤](./images/pre-submission-steps.png)
-
-* 查看Teams应用商店验证准则，确保你的应用符合Teams应用商店标准。
-* 创建合作伙伴中心开发人员帐户。
-* 准备应用商店提交，其中包括运行自动测试、编译测试备注、创建应用商店一览，以及其他有助于加快审阅过程的重要任务。
-* 通过合作伙伴中心提交应用。
-* 直接与 Microsoft 合作以解决问题并重新提交应用 (以解决问题并重新提交应用) 。
+有关详细信息，请参阅[发布到 microsoft Teams Store]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
 
 ## <a name="see-also"></a>另请参阅
 
-> [!div class="nextstepaction"]
-> [管理多个环境](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [与其他开发人员协作处理Teams项目](TeamsFx-collaboration.md)
+* [管理多个环境](TeamsFx-multi-env.md)
+* [与其他开发人员协作处理Teams项目](TeamsFx-collaboration.md)

@@ -1,24 +1,19 @@
 ---
-title: 在应用程序内启用特定于资源Teams
+title: 在"管理"中启用特定于资源Teams
 description: 介绍资源特定的Teams以及如何利用它。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 授权 OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 25b8a8b4ab04f2ff3a574a1e6c4422b38aaa977d
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362751"
 ---
+
 # <a name="resource-specific-consent"></a>资源特定许可
 
 > [!NOTE]
 > 聊天范围的特定于资源的同意仅适用于 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md) 版。
 
-资源特定的同意 (RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 RSC 权限模型使团队所有者和聊天所有者可以分别授予应用程序访问和修改团队数据和聊天数据的许可。 
+特定于资源的同意 (RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 RSC 权限模型使团队所有者和聊天所有者可以分别授予应用程序访问和修改团队数据和聊天数据的许可。 
 
 **注意：** 如果聊天具有与之关联的会议或呼叫，则相关的 RSC 权限也适用于这些资源。
 
@@ -71,7 +66,7 @@ ms.locfileid: "62362751"
 有关详细信息，请参阅 [聊天资源特定的许可权限](/graph/permissions-reference#chat-resource-specific-consent-permissions)。
 
 > [!NOTE]
-> 特定于资源的权限仅适用于安装在 Teams 客户端上的Teams应用，并且当前不是 Azure Active Directory (AAD) 门户的一部分。
+> 特定于资源的权限仅适用于安装在 Teams 客户端Teams应用，并且当前不是 Azure Active Directory (AAD) 门户的一部分。
 
 ## <a name="enable-rsc-in-your-application"></a>在应用程序中启用 RSC
 
@@ -81,8 +76,8 @@ ms.locfileid: "62362751"
 1. [使用应用门户Microsoft 标识平台应用Azure AD应用](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。
 1. [在应用程序门户中查看Azure AD权限](#review-your-application-permissions-in-the-azure-ad-portal)。
 1. [从标识平台获取访问令牌](#obtain-an-access-token-from-the-microsoft-identity-platform)。
-1. [更新你的Teams清单](#update-your-teams-app-manifest)。
-1. [直接在应用中安装Teams](#sideload-your-app-in-teams)。
+1. [更新应用Teams清单](#update-your-teams-app-manifest)。
+1. [直接在 Teams 中安装应用](#sideload-your-app-in-teams)。
 1. [检查应用是否添加了 RSC 权限](#check-your-app-for-added-rsc-permissions)。
     1. [检查你的应用在团队中是否添加了 RSC 权限](#check-your-app-for-added-rsc-permissions-in-a-team)。
     1. [检查你的应用在聊天中是否添加了 RSC 权限](#check-your-app-for-added-rsc-permissions-in-a-chat)。
@@ -91,9 +86,9 @@ ms.locfileid: "62362751"
 
 ### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>为团队中的 RSC 配置组所有者同意设置
 
-可以直接在 Azure 门户 [中启用](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) 或禁用组所有者同意：
+可以直接在门户中启用或[禁用](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal)Microsoft Azure许可：
 
-1. 以全局管理员 [或](https://portal.azure.com) 公司管理员登录 Azure [门户](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
+1. 以全局管理员[Microsoft Azure](https://portal.azure.com)公司[管理员登录到企业门户](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
 1. 选择 **Azure Active Directory** >  **Enterprise应用程序** > **""用户同意** 设置"和"权限 > [**"**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)。
 1. 使用标记为组所有者同意的控件启用、禁用或限制用户 **同意访问数据的应用**。 默认值为 **"允许所有组所有者获得组所有者同意"**。 对于使用 RSC 安装应用的团队所有者，必须为该用户启用组所有者同意。
 
@@ -103,9 +98,9 @@ ms.locfileid: "62362751"
 
 ### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>在聊天中为 RSC 配置用户同意设置
 
-可以直接在 Azure 门户 [中启用](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) 或禁用用户同意：
+可以直接在门户[中启用](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal)或禁用Microsoft Azure同意：
 
-1. 以全局管理员 [或](https://portal.azure.com) 公司管理员登录 Azure [门户](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
+1. 以全局管理员[Microsoft Azure](https://portal.azure.com)公司[管理员登录到企业门户](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
 1. 选择 **Azure Active Directory** >  **Enterprise应用程序** > **""用户同意** 设置"和"权限 > [**"**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)。
 1. 使用标记为"应用程序的用户同意"的控件启用 **、禁用或限制用户同意**。 默认值为 **"允许用户同意应用"**。 若要聊天成员使用 RSC 安装应用，必须为该用户启用用户同意。
 
@@ -166,7 +161,7 @@ RSC 权限在应用清单 JSON 文件中声明。
 
 |名称| 类型 | 说明|
 |---|---|---|
-|`authorization`|Object|应用程序正常运行所需的权限列表。 有关详细信息，请参阅 [清单中 link- 授权的占位符]
+|`authorization`|Object|应用运行所需的权限列表。 有关详细信息，请参阅 [清单中 link- 授权的占位符]
 
 团队中的 RSC 示例
 
@@ -424,7 +419,7 @@ RSC 权限在应用清单 JSON 文件中声明。
     ![来自 Web URL 的聊天线程 ID](../../assets/images/chat-thread-id.png)
 
 1. 登录到"Graph **资源管理器"**。
-1. 对以下 **终结点进行 GET** 调用： `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`。 响应`clientAppId`中的字段将映射到`webApplicationInfo.id`应用程序清单Teams中指定。
+1. 对以下 **终结点进行 GET** 调用： `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`。 响应`clientAppId`中的字段将映射到`webApplicationInfo.id`应用程序清单Teams中指定的。
 
     ![Graph对聊天 RSC 权限的 GET 调用的浏览器响应](../../assets/images/chat-graph-permissions.png)
 
@@ -439,4 +434,4 @@ RSC 权限在应用清单 JSON 文件中声明。
 ## <a name="see-also"></a>另请参阅
  
 * [在应用程序内测试特定于资源的许可Teams](test-resource-specific-consent.md)
-* [管理员许可Microsoft Teams资源特定许可](/MicrosoftTeams/resource-specific-consent)
+* [管理员许可Microsoft Teams中特定于资源的同意](/MicrosoftTeams/resource-specific-consent)

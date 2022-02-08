@@ -5,20 +5,15 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: 测试应用开发人员计划团队
 ms.date: 11/01/2019
-ms.openlocfilehash: 92079eb8184e0d7618d87de97058f667bf85deda
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212557"
 ---
+
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>将测试数据添加到Microsoft 365租户
 
 可以使用开发人员订阅Microsoft Teams示例数据测试Microsoft 365应用。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
-1. [如果你没有Microsoft 365](/office/developer-program/office-365-developer-program)租户，请加入开发人员计划。
+1. [如果您没有Microsoft 365](/office/developer-program/office-365-developer-program)租户，则加入开发人员计划。
 2. [设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
 3. [将示例数据包与开发人员Microsoft 365一起安装 Users 内容包](/office/developer-program/install-sample-packs)。
 4. [安装 Teams PowerShell 模块](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。
@@ -29,7 +24,7 @@ ms.locfileid: "62212557"
 
 ## <a name="allow-users-to-upload-apps"></a>允许用户上载应用
 
-默认情况下，只有全局管理员Teams服务管理员才能 (租户) 旁加载应用。 还可以允许用户上载自定义应用供自己使用或上载到团队进行测试。 有关详细信息，请参阅管理自定义[应用策略和](/microsoftteams/teams-custom-app-policies-and-settings)Teams。
+默认情况下，只有全局管理员Teams服务管理员才能 (租户) 应用的旁加载。 还可以允许用户上载自定义应用供自己使用或上载到团队进行测试。 有关详细信息，请参阅管理自定义[应用策略](/microsoftteams/teams-custom-app-policies-and-settings)和 Teams。
 
 ## <a name="create-teams-and-channels-for-testing"></a>创建用于测试的团队和频道
 
@@ -164,7 +159,7 @@ ms.locfileid: "62212557"
 
         try {
 
-            # 1. Login with the global administrator account for your O365 Developer Program tenant. This script uses these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 
@@ -242,9 +237,9 @@ ms.locfileid: "62212557"
 4. 当系统提示你提供凭据时，输入首次注册开发人员订阅时收到的全局管理员凭据。
 
     > [!Note]
-    > 不要关闭 PowerShell 会话，因为脚本需要几分钟时间才能执行。 如果已根据默认内容包中创建的内容修改了订阅中的用户，则某些用户可能不会添加到Teams。 当脚本执行时，它将显示成功或失败的操作。
+    > 不要关闭 PowerShell 会话，因为脚本需要几分钟时间才能执行。 如果您修改了订阅中的用户，但从默认内容包中创建的内容进行了修改，则某些用户可能不会添加到Teams。 当脚本执行时，它将显示成功或失败的操作。
 
-5. 脚本执行完毕后，可以使用其中一个用户帐户Teams登录客户端并查看新创建的团队。
+5. 脚本执行完毕后，可以使用用户帐户之一登录到 Teams 客户端并查看新创建的团队。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,27 +1,22 @@
 ---
 title: 参与 Teams 文档
-description: 创建和发布文档Teams的步骤
+description: 创建和发布文档Teams步骤
 author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d6a984f4e0816cd3a2312f82f669b8299467948b
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949640"
 ---
+
 # <a name="contribute-to-teams-documentation"></a>参与 Teams 文档
 
-Teams文档是 **Microsoft Docs 技术** 文档库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在添加后具有相同的 URL **docs.microsoft.com。** 例如， `/docs.microsoft.com/microsoftteams/...` 是文档集Teams的开头。 Teams文章以 Markdown 语法编写，并托管在GitHub。
+Teams文档是 **Microsoft Docs 技术** 文档库的一部分。 内容分为多个组，称为文档集，每个组表示作为单个实体管理的一组相关文档。 同一文档集内的文章在更改后具有相同的 URL **docs.microsoft.com**。 例如， `/docs.microsoft.com/microsoftteams/...` 是文档集Teams的开头。 Teams文章以 Markdown 语法编写，并托管在GitHub。
 
 ## <a name="set-up-your-workspace"></a>设置工作区
 
 > [!div class="checklist"]
 >
 > * 安装 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)。
-> * 安装[Visual Studio Code (VS Code) 。](https://code.visualstudio.com/)
+> * 安装[Microsoft Visual Studio代码](https://code.visualstudio.com/) (VS Code) 。
 > * 直接从[应用商店安装](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack)文档创作VS Code包。
 <br>&emsp;&emsp; 或
 
@@ -29,9 +24,9 @@ Teams文档是 **Microsoft Docs 技术** 文档库的一部分。 内容分为�
 >
 > * 安装VS Code：
 
-   1. 选择侧 **活动** 栏上的扩展图标或使用 View = **> Extensions** 命令或 Ctrl+Shift+X，搜索 Microsoft **Docs Authoring Pack。**
+   1. 选择侧 **活动** 栏上的"扩展"图标或使用 **"视图 => 扩展"** 命令或 Ctrl+Shift+X，然后搜索 **Microsoft Docs 创作包**。
    1. 选择“**安装**”。
-   1. 安装后 **，"安装"** 将更改到 **"管理齿轮** "按钮。
+   1. 安装后， **"安装"** 将更改到 **"管理齿轮** "按钮。
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>查看 Microsoft Docs Contributors 指南
 
@@ -53,17 +48,17 @@ Teams文档是 **Microsoft Docs 技术** 文档库的一部分。 内容分为�
 
 在使用相对路径并创建指向其他文档集的链接时，在文档中为超链接设置有效的文件路径非常重要。 只有在文件路径正确或GitHub，你的生成才成功。
  
-有关超链接和文件路径详细信息，请参阅 [文档中的链接](/contribute/how-to-write-links)。
+有关超链接和文件路径详细信息，请参阅 [文档中的使用链接](/contribute/how-to-write-links)。
 
 > [!IMPORTANT]
-> 若要引用属于以下平台 **文档** 集Teams文章：<br>
+> 若要引用属于新平台 **文档** 集Teams文章：<br>
 > &emsp;&#x2714; 使用不带前导正斜杠的相对路径。<br>
 > &emsp;&#x2714;包括 Markdown 文件扩展名。<br>
->例如 **：父目录/目录/路径到** article.md —>[为用户生成Microsoft Teams](../concepts/building-an-app.md) <br><br>
-> 若要引用一篇 Microsoft Docs **库文章，** 该文章不是 Teams文档集的一部分：<br>
+>例如 **：父目录/目录/路径到** article.md —>[生成适用于Microsoft Teams](../concepts/building-an-app.md) <br><br>
+> 若要引用一篇 Microsoft Docs 库文章 **，** 该文章不是 Teams文档集的一部分：<br>
 > &emsp;&#x2714; 使用以正斜杠开头的相对路径。<br>
-> &emsp;&#x2714;不包括文件扩展名。 <br> 例如 **：/docset/address-to-file-location** ->使用 [Microsoft Graph API 处理Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
-> 若要引用 Microsoft Docs 库外部的页面（如 GitHub，请使用完整 `https` 文件路径。<br>
+> &emsp;&#x2714;不包括文件扩展名。 <br> 例如：**/docset/address-to-file-location** —> [Microsoft Graph API 处理Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
+> 若要引用 Microsoft Docs 库外部的页面（如 GitHub，请使用完整文件`https`路径。<br>
 
 ## <a name="code-samples-and-snippets"></a>代码示例和代码段
 
@@ -79,6 +74,6 @@ Teams文档是 **Microsoft Docs 技术** 文档库的一部分。 内容分为�
 * [Microsoft Docs](/)
 * [参与者指南](/contribute)
 * [文档样式和语音快速入门](/contribute/style-quick-start)
-* [剪切边缘：源代码可读使用技巧](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
+* [边缘：源代码可读性提示](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams文档](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)

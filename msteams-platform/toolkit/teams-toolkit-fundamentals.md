@@ -13,7 +13,9 @@ ms.date: 11/29/2021
 > [!NOTE]
 > 目前，此功能仅适用于公共 **开发人员预览** 版。
 
-Teams Toolkit允许你立即创建、调试和部署 Teams 应用Visual Studio Code。 使用工具包进行应用开发具有以下优点：
+
+Teams Toolkit for Microsoft Visual Studio Code 可帮助你使用零配置方法创建和部署具有集成标识的 Teams 应用、对云存储的访问权限、Microsoft Graph 的数据以及 Azure 和 Microsoft 365 中的其他服务。 对于Teams应用开发，Teams Toolkit for Visual Studio，可以使用 [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) 工具，该工具由 `teamsfx`Toolkit 组成。
+Teams Toolkit允许你立即创建、调试和部署Teams应用Visual Studio Code。 使用工具包进行应用开发具有以下优点：
 
 - 集成标识
 - 访问云存储
@@ -22,21 +24,22 @@ Teams Toolkit允许你立即创建、调试和部署 Teams 应用Visual Studio C
 
 Teams Toolkit将生成应用所需的全部工具Teams一个地方。
 
-对于Teams应用开发，Teams Toolkit Visual Studio Code，可以使用 [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) 工具，该工具包含`teamsfx`Toolkit。
+对于Teams应用开发，Teams Toolkit Visual Studio Code，可以使用 [CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) 工具，该工具由 `teamsfx`Toolkit 。
 
 ## <a name="user-journey-of-teams-toolkit"></a>用户旅程Teams Toolkit
 
-Teams Toolkit自动执行手动工作，并提供与 Teams Azure 资源的很好的集成。 下图显示了Teams Toolkit旅程：
+Teams Toolkit自动执行手动工作，并提供与 Teams 和 Azure 资源的很好的集成。 下图显示了Teams Toolkit旅程：
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Teams Toolkit用户旅程" border="true":::
 
 此旅程的主要里程碑是：
 
-1. 首先创建新项目或尝试一个Teams应用。
+1. 首先创建新项目或尝试一个Teams应用程序。
 1. 根据需要添加功能或编辑清单文件。
-1. 使用 Microsoft 365 帐户构建和调试Teams应用。
+1. 使用 Microsoft 365 帐户生成和调试Teams应用。
 1. 使用 Azure 帐户预配应用并部署到云。
 1. 将应用发布到Teams。
+
 
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>安装Teams Toolkit Visual Studio Code
 
@@ -54,7 +57,7 @@ Teams Toolkit自动执行手动工作，并提供与 Teams Azure 资源的很好
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install.png" alt-text="install toolkit":::
 
 > [!TIP]
-> 可以从应用商店Teams Toolkit Visual Studio Code[应用程序](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
+> 可以从应用商店Teams Toolkit Visual Studio Code[应用商店](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
 ## <a name="take-a-tour-of-teams-toolkit"></a>浏览Teams Toolkit
 
@@ -62,7 +65,8 @@ Teams Toolkit自动执行手动工作，并提供与 Teams Azure 资源的很好
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="微型函数":::
 
-可以选择"**快速入门**"浏览Teams Toolkit，也可以选择"新建 Teams **应用**"以创建一Teams项目。 在边栏中创建或打开Toolkit，可以查看所有现有Visual Studio Code列表。
+
+可以选择"**快速入门**"浏览Teams Toolkit，也可以选择"新建 Teams **应用**"以创建一Teams项目。 如果你在 Visual Studio Code 中打开了 Teams Toolkit v2.+ 创建的 Teams 项目，你将看到 Teams Toolkit UI 具有所有功能，如下图所示：可以选择"快速入门"浏览Teams Toolkit ，或 **选择"新建Teams应用"** 以创建一Teams项目。 在边栏中创建或打开Toolkit，可以查看所有现有功能Visual Studio Code列表。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="函数":::
 
@@ -70,7 +74,7 @@ Teams Toolkit自动执行手动工作，并提供与 Teams Azure 资源的很好
 
 ## <a name="accounts"></a>帐户
 
-若要开发Teams应用，至少需要一Microsoft 365一个有效的订阅的帐户。 如果你想要在 Azure 上托管后端资源，还需要 Azure 帐户。 Teams Toolkit Azure 资源的登录、预配和部署集成体验。 可以在 [开始之前创建免费的 Azure](https://azure.microsoft.com/free/) 帐户。
+若要开发Teams应用程序，至少需要一Microsoft 365一个有效的订阅的帐户。 如果你想要在 Azure 上托管后端资源，还需要 Azure 帐户。 Teams Toolkit Azure 资源的登录、预配和部署集成体验。 可以在 [开始之前创建免费的 Azure](https://azure.microsoft.com/free/) 帐户。
 
 ## <a name="environment"></a>环境
 
@@ -86,7 +90,7 @@ Teams Toolkit可帮助你创建和自定义Teams应用程序项目，使Teams开
 
 ### <a name="create-a-new-teams-app"></a>创建新的 Teams 应用
 
-通过使用"新建项目"或"从Teams创建"Teams Toolkit，它可帮助你首先Teams应用程序开发 **。**
+通过使用"新建项目"或"从Teams创建"Teams Toolkit，它可帮助你使用 Teams 项目开始进行应用 **开发**。
 
 ### <a name="add-capabilities"></a>添加功能
 
@@ -130,7 +134,7 @@ Teams Toolkit可帮助你创建和自定义Teams应用程序项目，使Teams开
 
 ## <a name="help-and-feedback"></a>帮助和反馈
 
-在此部分中，您可以找到所需的文档和资源。 可以选择"**报告产品GitHub** 中的问题Teams Toolkit产品 **专家快速** 获取支持。 在创建新问题之前浏览该问题，或访问 [StackOverflow 标记 `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) 提交反馈。
+在此部分中，您可以找到所需的文档和资源。 可以选择"报告 **产品GitHub** 问题Teams Toolkit产品 **专家快速** 获取支持。 在创建新问题之前浏览该问题，或访问 [StackOverflow 标记 `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) 提交反馈。
 
 让我们了解一下Teams Toolkit功能。
 
@@ -150,15 +154,15 @@ Teams Toolkit可帮助你创建和自定义Teams应用程序项目，使Teams开
 | &nbsp; | 编辑清单文件 | 编辑Teams客户端的应用Teams集成。 |
 | **部署** | &nbsp; | &nbsp; |
 | &nbsp; | 在云中预配 | 为应用程序分配 Azure 资源。 Teams Toolkit Azure 资源管理器集成。 |
-| &nbsp; | Zip Teams元数据包 | 创建可上载到开发人员门户或开发人员Teams应用包。 它包含应用清单和应用图标。  |
+| &nbsp; | Zip Teams元数据包 | 创建可上载到开发人员门户或开发人员门户Teams包。 它包含应用清单和应用图标。  |
 | &nbsp; | 部署到云 | 将源代码部署到 Azure。 |
 | &nbsp; | 发布到Teams | 发布开发的应用并将其分发到范围，例如个人、团队、频道或组织。 |
-| &nbsp; | Teams 开发人员门户 | 使用开发人员门户配置和管理Teams应用。 |
+| &nbsp; | Teams 开发人员门户 | 使用开发人员门户配置和管理Teams应用程序。 |
 | &nbsp; | CI/CD 指南 | 在构建应用程序的同时自动化Teams工作流。 |
 | **帮助和反馈** | &nbsp; | &nbsp; |
 | &nbsp; | 快速入门 | 查看Teams Toolkit中的"快速启动"Visual Studio Code。  |
 | &nbsp; | 文档 | 选择访问开发人员Microsoft Teams文档。 |
-| &nbsp; | 报告有关GitHub | 选择以访问GitHub页并引发任何问题。 |
+| &nbsp; | 报告GitHub | 选择以访问GitHub页并引发任何问题。 |
 |
 
 > [!TIP]
