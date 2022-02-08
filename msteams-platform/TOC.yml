@@ -471,10 +471,10 @@
           href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
         - name: 在应用中包含 SaaS 产品/服务
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-        - name: 针对盈利应用的测试预览
-          href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
         - name: 应用内购买
           href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+        - name: 针对盈利应用的测试预览
+          href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: 应用部件清单
   items:
     - name: 应用程序清单架构

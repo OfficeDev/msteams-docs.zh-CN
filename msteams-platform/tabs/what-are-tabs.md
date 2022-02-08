@@ -5,12 +5,12 @@ description: Teams 平台上的自定义选项卡概述
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 97803e89c225c45aee82c6969c8168dec7bf5cac
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 3e339853729fc97623fba78d94be23b0562d4dbb
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212501"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435179"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>构建 Microsoft Teams 选项卡
 
@@ -79,7 +79,7 @@ Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选�
 可以有多个频道或组选项卡，每个应用最多可以有 16 个个人选项卡。
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>可用于生成选项卡的工具
-* [Visual Studio Code 的Teams工具包](../toolkit/visual-studio-code-overview.md)
+* [适用于 Microsoft Visual Studio Code 的 Teams 工具包](../toolkit/visual-studio-code-overview.md)
 * [Visual Studio 的Teams工具包](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>后续步骤

@@ -4,12 +4,12 @@ description: 描述单一登录 (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 身份验证 SSO Azure AD 单一登录 API
-ms.openlocfilehash: fd11f1febf1fb919a201a56156c36dfe1ee4d7d8
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 065b8a75348e026a7e4bc2514438c70dbef479d7
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212354"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435158"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>对选项卡的单一登录 (SSO) 支持
 
@@ -29,7 +29,7 @@ ms.locfileid: "62212354"
 > [!NOTE]
 > **快速入门**  
 >
-> Tab SSO 入门的最简单路径是使用用于 Visual Studio Code 的 Teams 工具包。 有关详细信息，请参阅 [SSO 配合 Teams 工具包和适用于选项卡的 Visual Studio Code](../../../toolkit/visual-studio-code-tab-sso.md)
+> 选项卡 SSO 入门的最简单路径是使用用于 Microsoft Visual Studio Code 的 Teams 工具包。 有关详细信息，请参阅 [SSO 配合 Teams 工具包和适用于选项卡的 Visual Studio Code](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## <a name="how-sso-works-at-runtime"></a>运行时 SSO 的工作方式
 
