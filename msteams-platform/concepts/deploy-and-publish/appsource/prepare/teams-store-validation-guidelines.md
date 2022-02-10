@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: b4fc1d7b0e0ce1e32b82e0a82d490491f92ca387
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: dd8a3f31cd7c8e98a913c9a86ce2d705a7ba0279
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212122"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518231"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -231,7 +231,7 @@ ms.locfileid: "62212122"
 
 * Microsoft Windows
 * macOS
-* Microsoft Edge
+* MicrosoftEdge&nbsp;
 * Google Chrome
 * iOS
 * Android
@@ -271,7 +271,7 @@ Teams 应用清单定义应用的配置。
 
 * 清单必须符合公开发布的清单架构。 有关详细信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。 请勿使用清单的预览版本提交应用。
 * 如果应用包括机器人或消息传递扩展，则应用清单中的详细信息必须与机器人框架元数据保持一致，包括机器人名称、徽标、隐私策略链接和服务条款链接。
-* 如果你的应用使用 Azure Active Directory 进行身份验证，Azure AD包含 (客户端) ID。 更多相关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* 如果你的应用使用 Azure Active Directory 进行身份验证，Microsoft Azure Active Directory (Azure AD) 清单 (应用程序) ID。 更多相关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ### <a name="app-icons"></a>应用图标
 

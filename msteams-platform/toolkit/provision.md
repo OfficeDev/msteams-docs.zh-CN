@@ -6,23 +6,23 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d6365cf7e513a1fbf8b5e4f443fdcf2c805f3b10
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 6a922c98dc158105abf1225a6f292c95d063428d
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212368"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517958"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>使用Teams Toolkit预配云资源
 
-TeamsFx 与 Azure Microsoft 365云集成，这允许你使用单个命令将应用程序放置到 Azure 中。 TeamsFx 与 Azure 资源管理器集成，使你能够预配 Azure 资源，应用程序需要这些资源进行代码方法。  
+TeamsFx 与 Azure 和 Microsoft 365 集成，这允许你使用单个命令将应用程序放置到 Azure 中。 TeamsFx 与 Azure 资源管理器集成，使你能够预配 Azure 资源，应用程序需要这些资源进行代码方法。  
 
 ## <a name="prerequisites"></a>先决条件
 
 * 帐户先决条件 若要预配云资源，你必须具有以下帐户：
 
     * Microsoft 365有效订阅的帐户
-    * Azure 有效订阅 有关详细信息，请参阅如何准备帐户[以生成Teams应用](accounts.md)。
+    * 具有有效订阅的 Azure 有关详细信息，请参阅如何准备帐户[以生成Teams应用](accounts.md)。
 
 * [安装Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)版本 v3.0.0+。
 
@@ -39,11 +39,11 @@ TeamsFx 与 Azure Microsoft 365云集成，这允许你使用单个命令将应�
 
 当你在 Teams Toolkit 或 TeamsFx CLI 中触发预配命令时，你可以获取以下资源：
 
-* Azure AD租户下Microsoft 365应用程序
+* Microsoft Azure Active Directory (Azure AD) 租户下Microsoft 365应用程序
 * Teams租户的 Microsoft 365 平台下注册Teams应用
 * 所选 Azure 订阅下的 Azure 资源
 
-创建新项目时，可以使用所有 Azure 资源。 the ARM template defines all the Azure resources and helps to create required Azure resources during provision. 向 [现有项目添加新功能](./add-resource.md) 资源时，更新ARM模板反映了最新更改。
+创建新项目时，可以使用所有 Azure 资源。 the ARM template defines all the Azure resources and helps to create required Azure resources during provision. 向 [现有项目添加新功能资源](./add-resource.md) 时，更新ARM模板反映了最新更改。
 
 > [!NOTE]
 > Azure 服务会在你的订阅中产生成本，有关成本估计的详细信息，请参阅 [定价计算器](https://azure.microsoft.com/pricing/calculator/)。
@@ -57,7 +57,7 @@ TeamsFx 与 Azure Microsoft 365云集成，这允许你使用单个命令将应�
 | 用于简单身份验证的 Web 应用 | 托管简单身份验证服务器，以访问单页应用程序中的其他服务 | 添加用户分配的标识以访问其他 Azure 资源 |
 | 用户分配的标识 | 对 Azure 服务到服务请求进行身份验证 | 跨不同功能和资源共享 |
 
-### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>自动程序或Teams扩展应用程序的资源创建
+### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>为自动程序Teams邮件扩展应用程序创建资源
 
 |资源|用途| 说明 |
 |----------|--------------------------------|-----|
@@ -71,7 +71,7 @@ TeamsFx 与 Azure Microsoft 365云集成，这允许你使用单个命令将应�
 |资源|用途| 说明|
 |----------|--------------------------------|-----|
 | 函数应用的应用服务计划 | 托管函数应用 |不适用 |
-| 函数应用 | 托管 Azure 函数 API | 添加用户分配的标识以访问其他 Azure 资源。 <br /> 添加跨源资源 (CORS) 规则以允许来自选项卡应用的请求 <br /> 添加仅允许来自你的应用程序请求的Teams设置。 <br /> 添加 [TeamsFx SDK 所需的应用设置](https://www.npmjs.com/package/@microsoft/teamsfx) |
+| 函数应用 | 托管 Azure 函数 API | 添加用户分配的标识以访问其他 Azure 资源。 <br /> 添加跨源资源 (CORS) 规则以允许来自选项卡应用的请求 <br /> 添加仅允许来自你的应用请求的Teams设置。 <br /> 添加 [TeamsFx SDK 所需的应用设置](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | 函数应用的 Azure 存储 | 创建函数应用所必需 |不适用|
 | 用户分配的标识 | 对 Azure 服务到服务请求进行身份验证 | 跨不同功能和资源共享 |
 
@@ -87,7 +87,7 @@ TeamsFx 与 Azure Microsoft 365云集成，这允许你使用单个命令将应�
 
 |资源|用途|
 |----------|--------------------------------|
-| 用于 API 管理服务的 Azure Active Directory 应用程序 | 允许由 API 管理服务管理的 Microsoft Power Platform 访问 API |
+| Microsoft Azure Active Directory (Azure AD) API 管理服务的应用程序 | 允许由 API 管理服务管理的 Microsoft Power Platform 访问 API |
 | API 管理服务 | 管理函数应用中托管的 API |
 | API 管理产品 | 对 API 进行分组，定义使用条款和运行时策略 |
 | API 管理 OAuth 服务器 | 允许 Microsoft Power Platform 访问函数应用中托管的 API |
@@ -97,17 +97,17 @@ TeamsFx 与 Azure Microsoft 365云集成，这允许你使用单个命令将应�
 
 |资源|此资源的用途|
 |----------|--------------------------------|
-| Azure 密钥保管库服务 | 管理 (Azure 服务Azure AD应用程序客户端) 密码等 |
+| Azure 密钥保管库服务 | 管理 (密码，例如Microsoft Azure Active Directory (Azure AD) Azure 服务) 应用客户端密码 |
 | 用户分配的身份 | 对 Azure 服务到服务请求进行身份验证 |
 
 ## <a name="customize-resource-provision"></a>自定义资源预配
 
-Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资源以及配置方式。 该工具使用ARM模板定义 Azure 资源。 the ARM template is a set of bicep files that defines the infrastructure and configuration for your project. 可以通过修改自定义模板来自定义 azure ARM。 有关详细信息，请参阅 [bicep 文档](/azure/azure-resource-manager/bicep.md)。 
+Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 资源以及配置方式。 该工具使用ARM模板定义 Azure 资源。 the ARM template is a set of bicep files that defines the infrastructure and configuration for your project. 可以通过修改自定义模板来自定义 azure ARM。 有关详细信息，请参阅 [bicep 文档](/azure/azure-resource-manager/bicep.md)。 
 
-使用 ARM涉及更改以下文件、参数和模板集：
+使用ARM涉及更改以下文件、参数和模板集：
 
-* ARM位于文件夹中 () 参数文件 `azure.parameters.{your_env_name}.json` `.fx/configs` ，以将参数传递到模板。
-* ARM位于 的模板文件 `templates/azure` ，此文件夹包含以下文件：
+* ARM位于文件夹中 (`azure.parameters.{your_env_name}.json` `.fx/configs`) 参数文件，以将参数传递到模板。
+* ARM位于 的模板文件， `templates/azure`此文件夹包含以下文件：
 
 | 文件 | 函数 | 允许自定义 |
 | --- | --- | --- |
@@ -118,7 +118,7 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 | teamsfx/xxx.bicep | 将 TeamsFx 所需配置添加到使用的每个 Azure 资源 `config.bicep`| 否 |
 
 > [!NOTE]
-> 向项目添加资源或功能时，将重新生成， `teamsfx/xxx.bicep` 不能自定义相同。 若要修改 bicep 文件，可以使用 Git 跟踪对文件所做的更改，这有助于你在添加资源或功能时不会 `teamsfx/xxx.bicep` 丢失更改。
+> 向项目添加资源或功能 `teamsfx/xxx.bicep` 时，将重新生成，不能自定义相同。 若要修改 bicep 文件，可以使用 Git `teamsfx/xxx.bicep` 跟踪对文件所做的更改，这有助于你在添加资源或功能时不会丢失更改。
 
 ### <a name="customize-arm-parameters-and-templates"></a>自定义ARM参数和模板
 
@@ -150,8 +150,8 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 | botWebAppName | ${resourceBaseName}bot | 机器人 Web 应用的名称 | 2-60 个字母数字和连字符 <br /> 不能以连字符开始或结束 |
 | botWebAppSKU | F1 | 自动程序应用服务计划的 SKU | 不适用 |
 | userAssignedIdentityName | ${resourceBaseName} | 用户分配标识的名称 | 3-128 字母数字、连字符和下划线 <br /> 以字母或数字开头 |
-| sqlServerName | ${resourceBaseName} | Azure SQL服务器的名称 | 1-63 个小写字母、数字和连字符 <br /> 无法以连字符开始或结束 |
-| sqlDatabaseName | ${resourceBaseName} | Azure SQL数据库的名称 | 1-128 个字符，不能用于 <>*%&：？ \/ 或控制字符 <br /> 不能以时间段或空格结尾 |
+| sqlServerName | ${resourceBaseName} | Azure SQL 服务器的名称 | 1-63 个小写字母、数字和连字符 <br /> 无法以连字符开始或结束 |
+| sqlDatabaseName | ${resourceBaseName} | Azure 数据库SQL名称 | 1-128 个字符，不能用于 <>*%&：\/？ 或控制字符 <br /> 不能以时间段或空格结尾 |
 | sqlDatabaseSku | 基本 | Azure SQL 数据库的 SKU | 不适用  |
 | apimServiceName | ${resourceBaseName} | APIM 服务的名称 | 1-50 个字母数字和连字符 <br /> 从字母开始，以字母数字结尾 |
 | apimServiceSku | 消耗 | APIM 服务的 SKU | [可用的 SKUS](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch) |
@@ -159,7 +159,7 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 | apimOauthServerName | ${resourceBaseName} | APIM OAuth 服务器的名称 | 1-80 个字母数字和连字符 <br /> 从字母开始，以字母数字结尾 |
 | keyVaultSkuName | standard | Azure 密钥保管库服务的 SKU 名称| |
 
-同时，以下参数可用于预配期间填充的值。 这些占位符的目的是确保我们可以在新环境中创建新的资源。 实际值从 解析 `.fx/states/state.{env}.json` 。
+同时，以下参数可用于预配期间填充的值。 这些占位符的目的是确保我们可以在新环境中创建新的资源。 实际值从 解析。`.fx/states/state.{env}.json`
 
 ##### <a name="azure-ad-application-related-parameters"></a>Azure AD应用程序相关的参数
 
@@ -168,10 +168,10 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 | Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | 预配期间Azure AD创建的应用客户端 ID | [自定义值](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | 预配期间Azure AD创建的应用客户端密码 | [自定义值](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | 应用的应用应用租户Azure AD ID | [自定义值](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | 应用的应用程序的 OAuth 颁发机构Azure AD主机 | [自定义值](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | 应用的应用程序的 OAuth 颁发机构Azure AD应用程序 | [自定义值](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | 自动程序Azure AD预配期间创建的应用客户端 ID | [自定义值](#use-an-existing-azure-ad-app-for-your-bot) |
 | botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | 自动程序Azure AD预配期间创建的应用客户端密码 | [自定义值](#use-an-existing-azure-ad-app-for-your-bot) |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM 在Azure AD创建的应用程序客户端 ID | 删除占位符并填写实际值 |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM Azure AD预配期间创建的应用客户端 ID | 删除占位符并填写实际值 |
 | apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM Azure AD预配期间创建的应用客户端密码 | 删除占位符并填写实际值 |
 
 ##### <a name="azure-resource-related-parameters"></a>Azure 资源相关参数
@@ -185,9 +185,9 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 
 #### <a name="referencing-environment-variables-in-parameter-files"></a>在参数文件中引用环境变量
 
-如果您不想硬编码参数文件（例如，当值是机密时）中的值。 参数文件支持引用环境变量中的值。 可以使用工具 `{{$env.YOUR_ENV_VARIABLE_NAME}}` 的参数值中的语法从当前环境变量进行解析。
+如果您不想硬编码参数文件（例如，当值是机密时）中的值。 参数文件支持引用环境变量中的值。 可以使用工具的参数 `{{$env.YOUR_ENV_VARIABLE_NAME}}` 值中的语法从当前环境变量进行解析。
 
-下面的示例从环境变量中 `mySelfHostedDbConnectionString` 读取参数的值 `DB_CONNECTION_STRING` ：
+下面的示例从环境变量中 `mySelfHostedDbConnectionString` 读取参数的值 `DB_CONNECTION_STRING`：
 
 ```json
 ...
@@ -197,7 +197,7 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 
 #### <a name="customize-arm-template-files"></a>自定义ARM模板文件
 
-如果预定义模板不符合应用程序要求，可以自定义文件夹ARM模板 `templates/azure` 。 例如，你可以自定义ARM模板，为你的应用创建一些额外的 Azure 资源。 您需要具有 bicep 语言的基本知识，该语言用于创作ARM模板。 可以从 bicep 文档 开始使用[bicep。](/azure/azure-resource-manager/bicep/?branch)
+如果预定义模板不符合应用程序要求，可以自定义文件夹ARM模板 `templates/azure` 。 例如，你可以自定义ARM模板，为你的应用创建一些额外的 Azure 资源。 您需要具有 bicep 语言的基本知识，该语言用于创作ARM模板。 你可以从 bicep 文档[开始。](/azure/azure-resource-manager/bicep/?branch)
 
 > [!NOTE]
 > 所有ARM共享模板。 如果预配 [行为因](/azure/azure-resource-manager/bicep/conditional-resource-deployment?branch) 环境而异，可以使用条件部署。
@@ -212,9 +212,9 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 
 您可以自定义以下方案：
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>为应用Azure AD现有 Teams 应用
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>为自动程序Azure AD现有应用
 
-你可以将以下配置代码段添加到文件，以使用Azure AD为你的应用创建 `.fx/configs/config.{env}.json` 的应用程序Teams应用。 若要创建Azure AD应用，请参阅 <https://aka.ms/teamsfx-existing-aad-doc> 。
+你可以将以下配置`.fx/configs/config.{env}.json`代码段添加到文件，以使用Microsoft Azure Active Directory (Azure AD) 为你的应用创建Teams应用。 若要创建Microsoft Azure Active Directory (Azure AD) 应用，请参阅 <https://aka.ms/teamsfx-existing-aad-doc>。
 
 ```json
 "auth": {
@@ -228,11 +228,11 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 添加代码段后，将你的密码添加到相关环境变量，以便该工具可以在预配期间解析实际密码。
 
 > [!NOTE]
-> 确保不要在多个环境中共享Azure AD应用程序。 如果你没有更新 Azure AD 应用的权限，你可以收到一条警告，说明如何手动更新 Azure AD 应用。 按照说明在预配后更新Azure AD应用。
+> 确保不要在多个环境中共享Microsoft Azure Active Directory (Azure AD) 应用程序。 如果你无权更新 Microsoft Azure Active Directory (Azure AD) 应用，你可以收到一条警告，说明如何手动更新Microsoft Azure Active Directory (Azure AD) 应用。 按照说明在预配后更新Microsoft Azure Active Directory (Azure AD) 应用。
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>为自动程序Azure AD现有应用
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>为应用Azure AD现有 Teams 应用
 
-你可以将以下配置代码段添加到 `.fx/configs/config.{env}.json` 文件，以使用Azure AD自动程序创建的应用：
+你可以将以下配置`.fx/configs/config.{env}.json`代码段添加到文件，以使用Microsoft Azure Active Directory (Azure AD) 自动程序创建的应用：
 
 ```json
 "bot": {
@@ -245,7 +245,7 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 
 #### <a name="skip-adding-user-for-sql-database"></a>跳过为数据库SQL用户
 
-如果工具尝试向数据库添加用户时权限错误SQL，可以将以下配置代码段添加到文件以跳过添加SQL `.fx/configs/config.{env}.json` 数据库用户：
+如果工具尝试向数据库中添加用户时权限`.fx/configs/config.{env}.json`错误SQL，可以将以下配置代码段添加到文件以跳过向数据库SQL添加操作：
 
 ```json
 "skipAddingSqlUser": true
@@ -261,7 +261,7 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 以下步骤如下：
 
 1. 为 `.fx/configs/azure.parameters.{env}.json` 当前环境打开。
-2. 向 参数 的值 `functionAppName` 添加新属性 `provisionParameters` 。
+2. 向 参数 的值 `functionAppName` 添加新属性 `provisionParameters`。
 3. 输入 `contosoteamsappapi` 作为 `functionAppName`
 4. 下面的代码片段显示了最终的参数文件：
 
@@ -302,7 +302,7 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
     }
     `````````
 
-4. 使用 中的 Azure 存储连接字符串更新 Azure 函数应用设置 `templates/azure/provision/function.bicep` 。 将以下代码段 `functionApp` 添加到资源的 `appSettings` 数组：
+4. 使用 中的 Azure 存储连接字符串更新 Azure 函数应用设置 `templates/azure/provision/function.bicep`。 将以下代码段添加到 `functionApp` 资源的 `appSettings` 数组：
 
     ``````````````````bicep
     {
@@ -321,7 +321,7 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 
 <summary><b>如何排除故障？</b></summary>
 
-如果在错误通知Teams Toolkit时Visual Studio Code错误，获取帮助选择错误通知上的"选项"以导航到相关文档。 如果你使用的是 TeamsFx CLI，错误消息末尾会显示指向帮助文档的超链接。还可以直接查看 [预配帮助](https://aka.ms/teamsfx-arm-help) 文档。
+如果在错误通知Teams Toolkit出错Visual Studio Code，获取帮助选择错误通知上的"选项"以导航到相关文档。 如果你使用的是 TeamsFx CLI，错误消息末尾会显示指向帮助文档的超链接。还可以直接查看 [预配帮助](https://aka.ms/teamsfx-arm-help) 文档。
 
 <br>
 
@@ -353,7 +353,7 @@ Teams Toolkit使用基础结构作为代码方法来定义要预配的 Azure 资
 
 <summary><b>如何预配基于 sharepoint 的应用程序？</b></summary>
 
-你可以按照[基于SharePoint应用的预配操作](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)。
+你可以按照[基于SharePoint预配操作](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)。
 
 > [!NOTE]
 > 目前，Teams sharepoint 框架和 Teams Toolkit 构建的应用程序没有与 Azure 的直接集成，文档内容不适用于基于 SPFx 的应用。

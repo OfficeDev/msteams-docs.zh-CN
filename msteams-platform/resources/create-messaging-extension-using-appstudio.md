@@ -5,6 +5,12 @@ description: 了解如何使用 App Studio Microsoft Teams邮件扩展。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
+ms.openlocfilehash: c9820cb3378553b48ea9109956bfcbf9b61ffe23
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518154"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>使用 App Studio 创建消息传递
 
@@ -36,7 +42,7 @@ ms.author: anclear
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>使用 Bot Framework 注册你的 Web 服务
 
-邮件扩展利用 Bot Framework 的消息架构和安全通信协议;如果还没有，则需要在 Bot Framework 上注册 Web 服务。 Microsoft 应用 ID (我们将它引用为 Teams 内的自动程序 ID，以便从你可能正在处理) 的其他应用 ID 中标识它，在 Bot Framework 中注册的邮件终结点将用于邮件扩展以接收和响应请求。 如果你使用的是现有注册，请确保启用Microsoft Teams[通道](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)。
+邮件扩展利用 Bot Framework 的消息架构和安全通信协议;如果还没有，则需要在 Bot Framework 上注册 Web 服务。 Microsoft 应用 ID (我们将它引用为 Teams 内的自动程序 ID，以便从你可能正在处理) 的其他应用 ID 中标识它，在 Bot Framework 中注册的消息终结点将在你的消息扩展中用于接收和响应请求。 如果你使用的是现有注册，请确保启用Microsoft Teams[通道](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)。
 
 
 如果你遵循其中一个快速入门或从其中一个可用示例开始，将指导你完成注册 Web 服务。 如果要手动注册服务，有三个选项可进行注册。 如果选择注册而不使用 Azure 订阅，将无法利用 Bot Framework 提供的简化 OAuth 身份验证流。 创建后，你将能够将注册迁移到 Azure。
@@ -54,15 +60,15 @@ ms.author: anclear
 你可以从 Microsoft Teams 客户端内使用 App Studio 应用，以帮助创建应用清单。
 
 1. 在 Teams 客户端中，从左侧导航栏上的“**…**”溢出菜单中打开 App Studio。 如果尚未安装，则可以通过搜索来这样做。
-2. 在清单 **编辑器** 选项卡上 **，** 选择创建新应用 (或者如果你要向现有应用添加消息传递扩展，你可以将应用包导入) 
+2. 在清单 **编辑器** 选项卡上 **，** 选择创建新应用 (或者如果你要向现有应用添加消息传递扩展，你可以将应用包) 
 3. 添加应用详细信息（有关每个字段的完整说明，请参阅[清单架构定义](~/resources/schema/manifest-schema.md)）。
 4. 在" **消息扩展"** 选项卡上，单击" **设置"** 按钮。
-5. 你可以创建新的 Web 服务 (自动程序) 供邮件扩展使用，或者如果你已注册一个，请在此处选择/添加它。
+5. 你可以创建新的 Web 服务 (自动) 供邮件扩展使用，或者如果你已注册一个选择/添加它。
 6. 如有必要，请更新自动程序终结点地址以指向你的自动程序。 它应该类似于 `https://someplace.com/api/messages`。
 7. "**命令****"部分中的**"添加"按钮将指导你向邮件扩展添加命令。 有关添加 [命令详细信息](#learn-more) 的链接，请参阅了解详细信息部分。 请记住，您可以为邮件扩展定义最多 10 个命令。
 8. " **消息处理程序"** 部分允许您添加邮件将触发的域。 有关详细信息 [，请参阅链接](~/messaging-extensions/how-to/link-unfurling.md) 取消链接。
 
-从"完成 **=**> 测试和分发"选项卡中，你可以下载应用包 (其中包含应用清单以及应用图标) 安装程序包。
+从"完成 **=**> 测试和分发"选项卡中，你可以下载应用包 (其中包含你的应用清单以及应用图标) 或安装程序包。
 
 ### <a name="create-your-app-manifest-manually"></a>手动创建应用清单
 
@@ -225,7 +231,7 @@ ms.author: anclear
 ## <a name="messaging-extensions-in-teams-meetings"></a>会议中的消息传递Teams扩展
 
 > [!NOTE]
-> 如果会议或群聊在名单中有联盟用户，Teams禁止所有用户（包括组织者）访问消息传递扩展。
+> 如果会议或群聊在名单中有联盟用户，Teams禁止包括组织者在内的所有用户访问消息传递扩展。
 
 会议开始后，Teams可以在实时呼叫期间直接与消息扩展进行交互。 生成会议内消息传递扩展时，请考虑以下事项：
 

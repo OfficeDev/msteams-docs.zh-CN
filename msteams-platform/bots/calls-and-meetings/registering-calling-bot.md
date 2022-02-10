@@ -1,27 +1,27 @@
 ---
 title: 注册 Microsoft Teams 的通话和会议机器人
-description: 了解如何为用户注册新的音频/视频呼叫Microsoft Teams、创建新的机器人或添加呼叫功能以及添加图形权限。
+description: 了解如何为用户注册新的音频/视频Microsoft Teams、创建新的机器人或添加呼叫功能，以及添加图形权限。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: 8bb685d8d7ba470b7a9e76da084b7b165f83c23c
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 33163314f5d1d37b79562532ec2f15b6002d90ce
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443923"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518287"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>注册 Microsoft Teams 的通话和会议机器人
 
-参与音频或视频呼叫和联机会议的机器人是Microsoft Teams自动程序，具有以下用于注册机器人的额外功能：
+参与音频或视频通话和联机会议的机器人是Microsoft Teams自动程序，具有以下用于注册机器人的额外功能：
 
-* 新版应用清单Teams另外两个设置 `supportsCalling` `supportsVideo`和 。 这些设置包含在列表的[清单架构中Microsoft Teams](../../resources/schema/manifest-schema.md)。
+* 新版应用清单Teams两个附加设置 `supportsCalling` `supportsVideo`和 。 这些设置包含在清单架构[中，Microsoft Teams](../../resources/schema/manifest-schema.md)。
 * [必须为Graph](./registering-calling-bot.md#add-graph-permissions)的 Microsoft 应用 ID 配置 Microsoft 应用权限。
 * 呼叫Graph联机会议 API 权限需要租户管理员同意。
 
 ## <a name="new-manifest-settings"></a>新清单设置
 
-呼叫和联机会议自动程序在 manifest.json 中具有以下两个其他设置，这些设置为 Teams 中的机器人启用音频或Teams。
+呼叫和联机会议机器人在 manifest.json 中具有以下两个其他设置，这些设置为 Teams 中的机器人启用音频或Teams。
 
 * `bots[0].supportsCalling`. 如果存在并设置为 ，Teams`true`自动程序可以参与通话和联机会议。
 * `bots[0].supportsVideo`. 如果存在并设置为 `true`，Teams自动程序支持视频。
@@ -40,9 +40,9 @@ ms.locfileid: "62443923"
 
 **为用户创建新的自动程序Teams**
 
-1. 使用此链接可创建新的自动程序 `https://dev.botframework.com/bots/new`。 或者，如果你选择 Bot Framework 门户中的"创建自动程序"按钮，你将在Microsoft Azure创建自动程序，你必须拥有 Azure 帐户。
+1. 使用此链接可创建新的自动程序 `https://dev.botframework.com/bots/new`。 或者，如果你选择 Bot Framework 门户中的"创建自动程序"按钮，你将在 Microsoft Azure 创建自动程序，你必须拥有 Azure 帐户。
 1. 添加Teams通道。
-1. 选择"**通话** 频道"页面上Teams"选项卡。 选择 **"启用** 呼叫"，然后更新 Webhook (以) 接收传入通知的 HTTPS URL 调用 **Webhook** ，例如 `https://contoso.com/teamsapp/api/calling`。 有关详细信息，请参阅 [配置通道](/bot-framework/portal-configure-channels)。
+1. 选择"**通话** 频道"页面上Teams"选项卡。 选择 **"启用** 呼叫"，然后更新 **Webhook (** ，以便) 接收传入通知的 HTTPS URL 调用 Webhook，例如 `https://contoso.com/teamsapp/api/calling`。 有关详细信息，请参阅 [配置通道](/bot-framework/portal-configure-channels)。
 
     ![配置Teams频道信息](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
@@ -50,7 +50,7 @@ ms.locfileid: "62443923"
 
 ## <a name="add-graph-permissions"></a>添加Graph权限
 
-应用程序Graph粒度权限来控制应用对资源的访问权限。 你可以决定应用请求Graph哪些权限。 调用GRAPH API 支持应用程序权限，这些权限由在没有登录用户的情况下运行的应用使用。 租户管理员必须同意应用程序权限。
+应用程序Graph粒度权限来控制应用对资源的访问权限。 你可以决定应用请求Graph的权限。 调用GRAPH API 支持应用程序权限，这些权限由在没有登录用户的情况下运行的应用使用。 租户管理员必须同意应用程序权限。
 
 ### <a name="application-permissions-for-calls"></a>调用的应用程序权限
 
@@ -78,13 +78,13 @@ ms.locfileid: "62443923"
 
 ### <a name="assign-permissions"></a>分配权限
 
-如果你想要使用 Azure Active Directory V1 终结点，则必须使用 Microsoft Azure 门户提前配置自动程序[](https://aka.ms/aadapplist)[的应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
+如果你想要使用 Microsoft Azure Active Directory (Azure AD) V1 终结点，则必须使用 [Microsoft Azure](https://aka.ms/aadapplist) 门户提前配置[自动程序的应用程序权限](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
 
 ### <a name="get-tenant-administrator-consent"></a>获取租户管理员同意
 
-对于使用 Azure AD V1 终结点的应用，当应用安装在其组织中时，租户管理员可以使用 [Microsoft Azure](https://portal.azure.com) 门户同意应用程序权限。 或者，可以在应用中提供注册体验，管理员可通过此体验同意你配置的权限。 管理员同意由管理员记录Azure AD，你的应用无需再次请求同意即可请求令牌。
+对于使用 Microsoft Azure Active Directory (Azure AD) V1 终结点的应用，当应用安装在其组织中时，租户管理员可以使用 [Microsoft Azure](https://portal.azure.com) 门户同意应用程序权限。 或者，可以在应用中提供注册体验，管理员可通过此体验同意你配置的权限。 管理员同意由管理员记录Microsoft Azure Active Directory (Azure AD) ，应用无需再次请求同意即可请求令牌。
 
-你可以依赖管理员在应用程序门户授予Microsoft Azure[权限](https://portal.azure.com)。 更好的选择是使用 V2 终结点为管理员Azure AD体验`/adminconsent`。 有关详细信息，请参阅 [有关构造管理员同意 URL 的说明](/graph/uth-v2-service#3-get-administrator-consent)。
+你可以依赖管理员在应用程序门户授予Microsoft Azure[权限](https://portal.azure.com)。 更好的选择是使用 V2 终结点为管理员Microsoft Azure Active Directory (Azure AD) 体验`/adminconsent`。 有关详细信息，请参阅 [有关构造管理员同意 URL 的说明](/graph/uth-v2-service#3-get-administrator-consent)。
 
 > [!NOTE]
 > 若要构建租户管理员同意 URL，需要应用注册门户中配置的重定向 URI 或回复 URL。[](https://apps.dev.microsoft.com/) 若要为自动程序添加回复 URL，请访问自动程序注册，选择"**高级** > 选项 **""添加应用程序清单"**。 将重定向 URL 添加到集合 `replyUrls` 。

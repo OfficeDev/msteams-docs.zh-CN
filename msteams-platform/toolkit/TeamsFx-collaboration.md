@@ -6,13 +6,18 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: af96227df93bb2c236607791e3870b1882d2da5f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518371"
 ---
-
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>使用Teams协作处理Teams Toolkit
 
-多个开发人员可以一起为同一个 TeamsFx 项目调试、预配和部署，但需要手动设置 Teams 应用和 Azure AD App 的合适权限。Teams Toolkit 支持协作功能，以允许开发人员和项目所有者邀请其他开发人员或协作者加入 TeamsFx 项目来调试、预配和部署相同的内容 TeamsFx 项目。
+多个开发人员可以一起为同一个 TeamsFx 项目调试、预配和部署，但需要手动设置 Teams App 和 Microsoft Azure Active Directory (Azure AD) App.Teams Toolkit 支持协作功能，以允许开发人员和项目所有者邀请其他开发人员或协作者加入 TeamsFx 项目，以调试、预配和部署同一个 TeamsFx 项目。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * 帐户先决条件
 
@@ -39,11 +44,11 @@ ms.date: 11/29/2021
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="协作者":::
 
-* 选择 **"Microsoft 365 Teams应用 (所有者Azure AD** 应用) 应用"，Microsoft 365协作者添加其他帐户电子邮件地址。 要添加的帐户必须与远程调试的项目所有者位于同一租户上，如图所示：
+* 选择 **"Microsoft 365 Teams应用 (所有者Microsoft Azure Active Directory (Azure AD)** 应用) ，Microsoft 365协作者添加其他帐户电子邮件地址。 要添加的帐户必须与远程调试的项目所有者位于同一租户上，如图所示：
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加环境":::
 
-* 若要在当前环境中查看协作者，请选择"列出 **Microsoft 365 Teams App (with Azure AD App) 所有者**"，然后在输出通道中列出协作者，如下图所示：
+* 若要在当前环境中查看协作者，请选择"列出 **Microsoft 365 Teams App (with Microsoft Azure Active Directory (Azure AD) App) Owners**"，然后在输出通道中列出协作者，如下图所示：
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="列表":::
 
@@ -72,13 +77,13 @@ ms.date: 11/29/2021
   1. 转到开发人员Teams，然后按名称或Teams ID 选择你的应用。
   2. 从 **左侧面板** 中选择"所有者"。
   3. 选择并删除协作者。
-  4. 转到 [Azure Active Directory，](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)从左侧 **面板** 中选择应用注册，然后找到Azure AD应用。
-  5. 从 **应用管理** 页的左侧Azure AD选择所有者。
+  4. 转到"[Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)"**，从左侧** 面板中选择"应用注册"，然后找到Microsoft Azure Active Directory (Azure AD) 应用。
+  5. 从 **应用管理** 页的左侧Microsoft Azure Active Directory (Azure AD) 选择所有者。
   6. 选择并删除协作者。
 
 > [!NOTE]
 > * 添加到项目的协作者不会收到任何通知。 Project需要脱机通知协作者。
-> * Azure 订阅管理员必须在 Azure 订阅门户上手动设置与 Azure Microsoft Azure权限。 Azure 帐户必须具有订阅的参与者角色，以便开发人员可以协同工作来预配和部署 TeamsFx 项目。
+> * Azure 订阅管理员必须在 Azure 门户上手动设置与 Azure Microsoft Azure权限。 Azure 帐户必须具有订阅的参与者角色，以便开发人员可以协同工作来预配和部署 TeamsFx 项目。
 
 ## <a name="see-also"></a>另请参阅
 

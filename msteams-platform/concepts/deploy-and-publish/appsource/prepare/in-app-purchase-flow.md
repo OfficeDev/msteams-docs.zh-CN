@@ -5,8 +5,13 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
+ms.openlocfilehash: 90b1bf713e898a0f61c540e76ee5dde77603e70b
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518238"
 ---
-
 # <a name="in-app-purchases"></a>应用内购买
 
 Microsoft Teams API，可用于实现应用内购买，以从免费升级到付费Teams应用。 应用内购买允许你直接从应用内将用户从免费计划转换为付费计划。
@@ -30,7 +35,7 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
 
 ### <a name="update-manifest"></a>更新清单
 
-若要启用应用内购买体验，请Teams RSC 权限更新你的 Teams app **manifest.json** 文件。 它允许你的应用用户升级到应用的付费版本并开始使用新功能。 应用清单的更新如下所示：
+若要启用应用内购买体验，请Teams RSC 权限更新应用清单 **.json** 文件。 它允许你的应用用户升级到应用的付费版本并开始使用新功能。 应用清单的更新如下所示：
 
 ```json
 
@@ -38,10 +43,11 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
     "permissions": {
         "resourceSpecific": [
             {
-             "name": "InAppPurchase.Allow.User",
-             "type": "Delegated"
+                "name": "InAppPurchase.Allow.User",
+                "type": "Delegated"
             }
         ]
+    }
 }
 ```
 
@@ -78,7 +84,7 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
 
 ## <a name="end-user-in-app-purchasing-experience"></a>最终用户应用内购买体验
 
-以下示例显示用户为名为 *Contoso Tasks* for Teams 虚拟应用程序购买订阅Teams：
+以下示例显示用户为名为 *Contoso Tasks* for Teams虚拟应用程序购买订阅Teams：
 
 1. 在 Teams **应用商店中**，查找并选择该应用。
 

@@ -6,16 +6,20 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 302cac17ae6905899e43a8768882f61f0a2b9056
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518322"
 ---
-
-
 # <a name="prepare-accounts-to-build-teams-apps"></a>准备帐户以生成Teams应用程序
 
-若要开发Teams应用程序，至少需要一Microsoft 365有效订阅的帐户。 如果你想要在 Azure 上托管后端资源，则需要 Azure 帐户。 如果你的现有应用程序托管在其他云提供商上，并且你想要将现有应用程序集成到其他平台，则 Azure 帐户Teams可选。
+若要开发Teams应用程序，至少需要一Microsoft 365有效订阅的帐户。 如果你想要在 Azure 上托管后端资源，则需要 Azure 帐户。 如果你的现有应用程序托管在其他云提供商上，并且你想要将现有应用程序集成到其他平台，则 Azure 帐户Teams帐户。
 
 ## <a name="microsoft-365-account"></a>Microsoft 365帐户
 
-如果你没有具有具有有效订阅Microsoft 365帐户，则可以通过加入开发人员计划Microsoft 365[帐户](https://developer.microsoft.com/microsoft-365/dev-program)。 开发人员Microsoft 365计划包括一Microsoft 365 E5开发人员订阅，可用于创建自己的沙盒和独立于生产环境开发解决方案。
+如果你没有具有有效订阅Microsoft 365帐户，则可以通过加入开发人员计划来创建Microsoft 365[帐户](https://developer.microsoft.com/microsoft-365/dev-program)。 开发人员Microsoft 365计划包括一Microsoft 365 E5开发人员订阅，可用于创建自己的沙盒和独立于您的生产环境开发解决方案。
 
 ## <a name="azure-account"></a>Azure 帐户
 
@@ -23,7 +27,7 @@ ms.date: 11/29/2021
 
 ## <a name="join-microsoft-365-developer-program"></a>加入Microsoft 365开发人员计划 
 
-如果你没有帐户，则必须Microsoft 365开发人员计划订阅Microsoft 365[注册](https://developer.microsoft.com/microsoft-365/dev-program)。 订阅将免费 90 天，并持续续订，只要将订阅用于开发活动。 如果你有一个 Visual Studio Enterprise 或 Professional 订阅，则这两个计划均Microsoft 365[开发人员订阅](https://aka.ms/MyVisualStudioBenefits)。 只要你的订阅处于活动状态，Visual Studio就处于活动状态。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](https://developer.microsoft.com/microsoft-365/dev-program)。
+如果你没有帐户，则必须Microsoft 365注册开发人员计划Microsoft 365[订阅](https://developer.microsoft.com/microsoft-365/dev-program)。 订阅将免费 90 天，并持续续订，只要将订阅用于开发活动。 如果你有一个 Visual Studio Enterprise 或 Professional 订阅，则这两个计划均Microsoft 365[开发人员订阅](https://aka.ms/MyVisualStudioBenefits)。 只要你的订阅处于活动状态，Visual Studio处于活动状态。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](https://developer.microsoft.com/microsoft-365/dev-program)。
 
 1. 转到开发人员[Microsoft 365计划](https://developer.microsoft.com/microsoft-365/dev-program)。
 2. 选择 **"立即加入"**。
@@ -38,11 +42,11 @@ ms.date: 11/29/2021
 
 - **Microsoft 个人使用帐户** 
 
-  提供对面向消费者的所有 Microsoft 产品和云服务（如 Outlook、Messenger、OneDrive、MSN、Xbox Live 或 Microsoft 365） 的访问权限。 注册一个 Outlook.com 邮箱将自动创建一个 Microsoft 帐户。 创建 Microsoft 帐户后，可以用于访问消费者相关的 Microsoft 云服务或 Azure。
+  提供对面向消费者的所有 Microsoft 产品和云服务的访问，如 Outlook、Messenger、OneDrive、MSN、Xbox Live 或 Microsoft 365。 注册一个 Outlook.com 邮箱将自动创建一个 Microsoft 帐户。 创建 Microsoft 帐户后，可以用于访问消费者相关的 Microsoft 云服务或 Azure。
 
 - **业务工作帐户**
 
-  提供对所有小型、中型和企业业务级别 Microsoft 云服务（如 Azure、Microsoft Intune 或 Microsoft 365）的访问权限。 作为组织注册此类服务时，会在 Azure Active Directory 中自动预配一个基于云的目录，来表示你的组织。
+  提供对所有小型、中型和企业业务级别 Microsoft 云服务（如 Azure、Microsoft Intune 或 Microsoft 365）的访问权限。 当你作为组织注册其中一项服务时，基于云的目录将自动在Microsoft Azure Active Directory (Azure AD) 预配，以代表你的组织。
 
 - **Visual Studio ID**
 
@@ -92,11 +96,11 @@ ms.date: 11/29/2021
 > [!NOTE]
 > 可能需要 **24 小时才能显示****Teams选项。** 可以将[自定义应用上传到Teams环境中](/microsoftteams/upload-custom-apps)进行测试和验证。
 
-3. 导航到 Teams **appsSetup** >  **PoliciesGlobal** > 。
+3. 导航到 **Teams** **appsSetup** >  **PoliciesGlobal** > 。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="set ies":::
 
-4. 将Upload应用切换至 **打开** 位置。
+4. 将Upload应用切换到 **"打开"** 位置。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="切换":::
 
@@ -105,9 +109,9 @@ ms.date: 11/29/2021
 > [!Note]
 > 旁加载可能需要 24 小时才能处于活动状态。 在此期间，可以使用租户 **的上传功能** 测试应用。 若要上传.zip包文件，请参阅上传 [自定义应用](/microsoftteams/teams-app-setup-policies)。
 
-有关详细信息，请参阅管理应用中[的自定义应用策略和](/microsoftteams/teams-custom-app-policies-and-settings)Teams和管理应用中的应用设置[Teams](/microsoftteams/teams-app-setup-policies)。
+有关详细信息，请参阅管理应用中[的自定义应用策略和Teams](/microsoftteams/teams-custom-app-policies-and-settings)和管理[应用中的应用设置Teams](/microsoftteams/teams-app-setup-policies)。
 
 ## <a name="see-also"></a>另请参阅
 
-* [新建项目Teams项目](create-new-project.md)
+* [新建Teams项目](create-new-project.md)
 * [预配云资源](provision.md)

@@ -6,8 +6,13 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518112"
 ---
-
 # <a name="cicd-guide"></a>CI/CD 指南
 
 TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档提供了一些工具和模板，可让你开始使用 GitHub、Azure Devops 和 Jenkins 设置 CI 或 CD 管道。
@@ -21,7 +26,7 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 
 ## <a name="ci-or-cd-workflow-templates-in-github"></a>解决方案中的 CI 或 CD 工作流GitHub
 
-**若要包含 CI 或 CD 工作流以自动Teams应用程序开发过程，请** GitHub：
+**若要包括 CI 或 CD 工作流以自动Teams应用程序开发过程，请GitHub**：
 
 1. 在 下创建文件夹 `.github/workflows`
 1. 复制以下模板文件之一：
@@ -86,7 +91,7 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 
 ### <a name="set-up-ci-pipeline"></a>设置 CI 管道
 
-1. 将 [CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)Azure DevOps存储库，然后执行必要的自定义，正如你可以根据脚本文件中的评论推断的。
+1. 将 [CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)Azure DevOps存储库，然后执行必要的自定义，如从脚本文件中注释推断的。
 1. 按照[步骤创建 CI Azure DevOps管道](/azure/devops/pipelines/create-first-pipeline)。
 下面是常见 CI 管道脚本的方案：
 
@@ -117,7 +122,7 @@ steps:
 
 ### <a name="set-up-cd-pipeline"></a>设置 CD 管道
 
-1. 将 [CD 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)添加到Azure DevOps存储库，然后执行必要的自定义，正如您可能从脚本文件中的评论推断的。
+1. 将 [CD 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)添加到Azure DevOps库，然后执行必要的自定义，正如您根据脚本文件中的评论推断的。
 1. 为 CD Azure DevOps管道。 有关详细信息，请参阅创建 [第一个管道](/azure/devops/pipelines/create-first-pipeline)。 管道的定义可以引用 CI 管道的以下示例定义。
 1. 通过定义变量添加必要的 [变量](/azure/devops/pipelines/process/variables)，并在必要时将它们作为机密。
 
@@ -239,9 +244,9 @@ steps:
 若要在 CI/CD 内预配和部署面向 Azure 的资源，必须创建 Azure 服务主体以使用。
 
 执行以下步骤以创建 Azure 服务主体：
-1. 在单个Azure AD注册应用程序。
-2. 将角色分配给Azure AD应用程序以访问 Azure 订阅`Contributor`，建议使用角色。 
-3. 创建新的应用程序Azure AD密码。
+1. 在单个Microsoft Azure Active Directory (Azure AD) 注册应用程序。
+2. 将角色分配给Microsoft Azure Active Directory (Azure AD) 应用程序以访问 Azure 订阅`Contributor`，建议使用角色。 
+3. 创建新的应用程序Microsoft Azure Active Directory (Azure AD) 密码。
 
 > [!TIP]
 > 保存租户 ID、应用程序 id (AZURE_SERVICE_PRINCIPAL_NAME) 和密码 (AZURE_SERVICE_PRINCIPAL_PASSWORD) 供将来使用。
@@ -252,12 +257,12 @@ steps:
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>使用Teams门户发布Teams应用
-如果存在与应用清单Teams相关的任何更改，你可能希望再次发布Teams应用以更新清单。
+如果有与应用清单Teams相关的任何更改，你可能希望再次发布Teams应用以更新清单。
 
-若要Teams应用，可以利用[开发人员门户进行Teams](https://dev.teams.microsoft.com/home)。
+若要手动Teams应用，你可以利用[开发人员门户进行Teams](https://dev.teams.microsoft.com/home)。
 
 执行以下步骤以发布应用：
-1. 使用相应的[帐户登录到开发人员](https://dev.teams.microsoft.com)Teams进行登录。
+1. 使用相应的[帐户登录到开发人员Teams](https://dev.teams.microsoft.com)登录开发人员门户。
 2. 通过选择 以 zip 导入你的应用包 `App -> Import app -> Replace`。
 3. 在应用列表中选择目标应用。
 4. 通过选择发布应用 `Publish -> Publish to your org`

@@ -6,21 +6,21 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: 集成Teams注意事项
-ms.openlocfilehash: 7de3e91a0971bc540536a25265e6e6871a5da92c
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 0e80a051bb3964b3ade44e1f2c60fe4bf2242138
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212445"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518469"
 ---
 # <a name="considerations-for-teams-integration"></a>集成Teams注意事项 
 
-通过将 Web 应用与 Teams 正确集成，你可以使 Web 应用与 Teams 的社交和协作功能Teams。
+通过将 Web 应用与 Teams集成，你可以使 Web 应用适合其社交和协作Teams。
   
-你可以与应用程序集成的不同Teams如下所示：
+你可以与应用程序集成的不同应用Teams如下所示：
 * **独立应用**：独立应用是单页应用或大型复杂应用。 用户可以在应用程序内使用它的某些Teams。
 * **协作应用**：已针对组织本身固有的社交和协作功能Teams。
-* **SharePoint：SharePoint** 中显示的页面Teams。
+* **SharePoint**：SharePoint中显示的页面Teams。
 
 你可以映射并按照适用于集成方案的适当准则执行。
 本文档概述了Teams、文件和数据存储的共享点要求、API 要求、身份验证以及应用与 Teams 的深层链接。
@@ -55,14 +55,14 @@ ms.locfileid: "62212445"
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>了解SharePoint要求和选项
 
-***集成方案**： SharePoint*
+***集成方案**：SharePoint*
 
 若要将现有[SharePoint页](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites)作为"Teams"选项卡集成，必须考虑以下事项：
 
-* 它必须是新式 *SharePoint* 在线页面。
+* 它必须是新式 *SharePoint* 页面。
 * 仅支持个人选项卡。 无法将页面作为通道选项卡进行集成。
 
-或者，您也可以使用 Teams[生成一个SharePoint 框架。](/sharepoint/dev/spfx/integrate-with-teams-introduction)
+或者，可以使用 Teams [生成一个SharePoint 框架](/sharepoint/dev/spfx/integrate-with-teams-introduction)。
 
 ## <a name="aim-towards-multi-tenancy"></a>旨在实现多租户
 
@@ -74,53 +74,53 @@ ms.locfileid: "62212445"
 
 ***集成方案**：独立应用、协作应用*
 
-与应用集成时，应用的 API 和数据结构必须支持Teams。 若要扩展支持，必须使用有关标识映射、深层链接支持和合并 Microsoft Teams 的上下文信息来扩充[](../concepts/authentication/configure-identity-provider.md)API[和Graph。](/graph/teams-concept-overview) [](../concepts/build-and-test/deep-links.md)
+与应用集成时，应用的 API 和数据结构必须支持Teams。 若要扩展支持，必须使用有关 Teams 的上下文信息来扩充 API 和数据结构，以用于标识映射、深层链接支持和[](../concepts/authentication/configure-identity-provider.md)合并 [Microsoft](/graph/teams-concept-overview) Graph[](../concepts/build-and-test/deep-links.md)。
 
-请参阅如何获取选项卡或自动程序[Teams上下文。](../tabs/how-to/access-teams-context.md) [](../bots/how-to/get-teams-context.md)
+了解如何获取选项卡或自动程序Teams[上下文](../bots/how-to/get-teams-context.md)。 [](../tabs/how-to/access-teams-context.md)
 
 ## <a name="understand-authentication-options"></a>了解身份验证选项
 
 ***集成方案**：独立应用、协作应用SharePoint*
 
-Azure Active Directory是用户标识Teams。 如果你的应用使用不同的标识提供程序，你必须执行标识映射练习或与Azure AD。
+Azure Active Directory是用户标识Teams。 如果你的应用使用不同的标识提供程序，你必须执行标识映射练习或将其与Microsoft Azure Active Directory (Azure AD) 。
 
-Teams具有单一登录 (SSO) 机制Azure AD第三方应用的登录机制。 它还提供使用 OAuth 和开放 ID 身份验证等标准（称为 OIDC）将身份验证流连接其他标识提供程序。
+Teams具有单一登录 (SSO) 机制Microsoft Azure Active Directory (Azure AD) 适用于第三方应用。 它还提供使用 OAuth 和开放 ID 身份验证等标准（称为 OIDC）将身份验证流连接其他标识提供程序。
 
 > [!IMPORTANT]
-> 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开适用于用户的第三方GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+> 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用，GCC[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
-对于SharePoint，如果你希望 SSO 适用于另一个应用，则只能使用 SSO，并且不能添加另一个 Azure AD ID，因为 ID 是 SharePoint 应用。
+对于SharePoint，如果你希望 SSO 适用于另一个应用，则只能使用 SSO，并且不能添加另一个 Microsoft Azure Active Directory (Azure AD) ID，因为 ID 是 SharePoint应用。
 
-了解有关身份验证[在 Teams 中Teams。](../concepts/authentication/authentication.md)
+详细了解 Teams 中的[身份验证](../concepts/authentication/authentication.md)。
 
-## <a name="follow-teams-design-guidelines"></a>遵循Teams设计准则
+## <a name="follow-teams-design-guidelines"></a>遵循Teams设计指南
 
 ***集成方案**：独立应用、协作应用*
 
-确保遵循[Teams准则](../concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。 无法将现有应用内容迁移到"Teams选项卡。有关应用设计详细信息[，请参阅](https://fluentsite.z22.web.core.windows.net/)Fluent Design System。
+确保遵循[Teams指南](../concepts/design/understand-use-cases.md)，使应用成为本机应用Teams。 无法将现有应用内容迁移到"Teams选项卡。有关应用设计详细信息[，请参阅Fluent Design System](https://fluentsite.z22.web.core.windows.net/)。
 
 ## <a name="maximize-deep-linking"></a>最大化深层链接
 
 ***集成方案**：独立应用、协作应用SharePoint*
 
-你可以创建 Teams 中的信息和功能的链接。 使用[深层链接](../concepts/build-and-test/deep-links.md)将你的应用与Teams，因为它们将应用的多个部分关联在一起，获得更Teams体验。
+你可以创建 Teams 中的信息和功能的链接。 使用[深层链接](../concepts/build-and-test/deep-links.md)将你的应用与Teams，因为它们将应用的多个部分关联在一起，获得更本机的Teams体验。
 
 ## <a name="be-smart-when-messaging-users"></a>在消息传递用户时要智能
 
 ***集成方案**：独立应用、协作应用SharePoint*
 
-在多[线程](../bots/what-are-bots.md)Teams应用中使用自动程序，因为它提供比[webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)更大的灵活性。
+在 [web 应用中](../bots/what-are-bots.md)Teams自动程序进行多线程对话，因为它提供比 [webhook 更大的灵活性](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
 自动程序还允许你向单个 **用户** 或频道发送主动消息。 主动邮件是由外部事件触发的未经提示的消息，而不是发送给自动程序的消息。 例如，自动程序在安装或新用户加入频道时发送欢迎消息。
 
-发送主动邮件Teams特定标识符。 您可以通过提取[名单或用户配置文件](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)数据、订阅对话事件，或者使用[](../bots/how-to/conversations/subscribe-to-conversation-events.md)Microsoft Graph 来[捕获信息](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams)。
+发送主动邮件Teams特定标识符。 您可以通过提取[名单或用户配置文件](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)数据、订阅对话事件，或者使用 [Microsoft](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams) Graph。 [](../bots/how-to/conversations/subscribe-to-conversation-events.md)
 
-不要向具有过多邮件的用户发送垃圾邮件。 如果Teams支持此功能，则用户可以为你的应用配置通知设置。
-下面是一条通知邮件的示例： **不要向我** 发送不提示的邮件。
+不要向具有过多邮件的用户发送垃圾邮件。 如果 Teams支持此功能，则用户可以为你的应用配置通知设置。
+下面是通知邮件的一个示例 **：不向我发送不提示的邮件**。
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>将SharePoint用于文件和数据存储
 
-***集成方案：** 独立应用、协作应用SharePoint页面*
+***集成方案：** 独立应用、协作应用、SharePoint页面*
 
 创建团队时，还会SharePoint[网站](/microsoftteams/sharepoint-onedrive-interact)集以支持该团队的文件和数据存储。 如果应用与文件交互，则必须利用此功能。 使用网站集将原始数据存储在SharePoint和Microsoft Excel。
 

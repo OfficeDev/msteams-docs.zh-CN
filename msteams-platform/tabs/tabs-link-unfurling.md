@@ -1,16 +1,16 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 了解如何取消链接、打开"阶段视图"，以及使用"Microsoft Teams固定选项卡。 了解阶段视图，以及使用代码示例和示例使用自适应卡片调用它。
+description: 了解如何取消链接、打开"阶段视图"，然后使用"应用"固定Microsoft Teams选项卡。 了解阶段视图，以及使用代码示例和示例使用自适应卡片调用它。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 48c7ae69b10702d58be933b5619fd6bdeb8cecf3
-ms.sourcegitcommit: 3332ca6f61d2d60ddb20140f6d163905ea177157
+ms.openlocfilehash: 3119e444c8dd2b654f26b2fad5638f7c831619ac
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/10/2022
-ms.locfileid: "62516517"
+ms.locfileid: "62518252"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -86,7 +86,7 @@ ms.locfileid: "62516517"
 * 机器人使用代码进行 `200` 响应。
 
 > [!NOTE]
-> 在Teams客户端上，调用通过 Teams 应用商店分发的应用的阶段[视图](/platform/concepts/deploy-and-publish/apps-publish-overview.md)，并且没有 moblie 优化体验将打开设备的默认 Web 浏览器。 浏览器打开在 对象的 参数中 `websiteUrl` 指定的 `TabInfo` URL。
+> 在Teams客户端上，调用通过 [Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) 应用商店分发的应用的阶段视图，并且没有 moblie 优化体验，这将打开设备的默认 Web 浏览器。 浏览器打开在 对象的 参数中 `websiteUrl` 指定的 `TabInfo` URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
@@ -104,26 +104,26 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl"："contentUr
 
 以下是调用阶段视图的深层链接示例：
 
-**示例 1**
+**示例 1：具有 threadId 的 URL**
 
-未编码
+未编码的 URL：
  
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl"："https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx"，"websiteUrl："https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx"，"name"："Contoso"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl"："https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191"，"websiteUrl"："https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true"，"title"："Quotes：Miscellaneous"，"threadId"："19：9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+
+编码的 URL：
+
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
+
+
+**示例 2：没有 threadId 的 URL**
+
+未编码的 URL：
+
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl"："https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191"，"websiteUrl"："https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true"，"title"："Quotes：Miscellaneous"}
 
 已编码
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22websiteUrl%0A%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
-
-
-**示例 2**
-
-未编码
-
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl"："https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx"，"websiteUrl"："https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx"，"name"："Contoso"}
-
-已编码
-
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
 
 
 > [!NOTE]

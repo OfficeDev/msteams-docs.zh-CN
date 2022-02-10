@@ -1,12 +1,17 @@
 ---
 title: 创建频道或组选项卡
 author: laujan
-description: 使用 Yeoman 生成器创建适用于 Microsoft Teams 频道和组选项卡的快速入门指南，包括使用代码示例查看源代码。
+description: 使用 Yeoman 生成器创建适用于 Microsoft Teams 的频道和组选项卡的快速入门指南，包括使用代码示例查看源代码。
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
+ms.openlocfilehash: a9759c33187a6eedeacd9820594615eaaa94a8c8
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518259"
 ---
-
 # <a name="create-a-channel-or-group-tab"></a>创建频道或组选项卡
 
 ## <a name="create-a-custom-channel-or-group-tab"></a>创建自定义频道或组选项卡
@@ -15,10 +20,10 @@ ms.author: lajanuar
 
 # <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
-### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>使用自定义频道和组选项卡Node.js Yeoman 生成器
+### <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator"></a>使用自定义通道和 Yeoman 生成器Node.js和组选项卡
 
 > [!NOTE]
-> 本文遵循在 Microsoft OfficeDev GitHub存储库中构建你的第一个 Microsoft Teams [应用程序](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki 中概述的步骤。
+> 本文遵循 Microsoft OfficeDev GitHub存储库中的生成你的第一个Microsoft Teams[应用程序](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki 中概述的步骤。
 
 可以使用 [Yeoman](https://github.com/OfficeDev/generator-teams/) 生成器创建自定义频道或Teams选项卡。
 
@@ -26,10 +31,10 @@ ms.author: lajanuar
 
 您必须了解以下先决条件：
 
-- 你必须拥有一个Office 365租户和一个已启用"允许上载自定义 **应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- 你必须拥有一个Office 365租户和一个已启用"允许上传 **自定义应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
-    > 如果你当前没有Office 365帐户，可以通过开发人员计划注册Office 365订阅。 只要将订阅用于正在进行的开发，订阅就保持活动状态。 请参阅[欢迎使用 Office 365 开发人员计划](/office/developer-program/microsoft-365-developer-program)。
+    > 如果当前没有Office 365帐户，可以通过开发人员计划注册Office 365订阅。 只要将订阅用于正在进行的开发，订阅就保持活动状态。 请参阅[欢迎使用 Office 365 开发人员计划](/office/developer-program/microsoft-365-developer-program)。
 
 此外，此项目要求在开发环境中安装以下内容：
 
@@ -77,7 +82,7 @@ ms.author: lajanuar
 
     这是你的应用包名称，将在应用清单和说明中使用。 输入标题或按 **Enter** 接受默认名称。
 
-    **你的 (公司) 名称？ (最多 32 个字符)**
+    **贵公司 () 名称？ (最多 32 个字符)**
 
     你的公司名称将在应用清单中使用。 输入公司名称或按 **Enter** 接受默认名称。
 
@@ -113,7 +118,7 @@ ms.author: lajanuar
 
     选择 **不包括** 此项目的测试框架。 默认值为 yes;输入 **n**。
 
-    **是否将 Azure 应用程序Insights遥测？ (y/N)**
+    **是否希望将 Azure 应用程序Insights遥测？ (y/N)**
 
     选择 **不包括** [Azure 应用程序Insights](/azure/azure-monitor/app/app-insights-overview)。 默认值为"否";输入 **n**。
 
@@ -129,9 +134,9 @@ ms.author: lajanuar
 
     可以选择团队或群聊。
 
-    **是否需对选项卡提供 Azure AD 单一登录支持？**
+    **是否需要Microsoft Azure Active Directory (Azure AD) 选项卡提供单一登录支持？**
 
-    选择 **"** 不Azure AD选项卡的"单一登录"支持。默认值为"是"，输入 **n**。
+    选择 **"** 不要Microsoft Azure Active Directory (Azure AD) 选项卡的"单一登录"支持。默认值为"是"，输入 **n**。
 
     **是否希望此选项卡在 SharePoint Online 中可用？ (Y/n)**
 
@@ -223,7 +228,7 @@ gulp ngrok-serve
 
 1. 转到Microsoft Teams。 如果使用基于 [Web 的版本，](https://teams.microsoft.com) 可以使用浏览器的开发人员工具检查前端 [代码](~/tabs/how-to/developer-tools.md)。
 1. 在左窗格中的团队中，选择 &#x25CF;&#x25CF;&#x25CF; 测试选项卡的团队旁边的省略号，然后选择" **管理团队"**。
-1. 在主窗格中，从选项卡栏中选择"应用"，然后选择Upload位于页面右下角的自定义应用。
+1. 在主窗格中，从选项卡栏中选择"应用"，Upload位于页面右下角的自定义应用。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择应用包 zip 文件夹，然后选择"打开 **"**。
 
     ![添加的"频道"选项卡](../../assets/images/tab-images/channeltabadded.png)
@@ -245,10 +250,10 @@ gulp ngrok-serve
 
 您必须了解以下先决条件：
 
-- 你必须拥有一个Office 365租户和一个已启用"允许上载自定义 **应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- 你必须拥有一个Office 365租户和一个已启用"允许上传 **自定义应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
-    > 如果当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册免费[订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
+    > 如果当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册[免费订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
 
 - 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio **，请选择**![](~/assets/images/tab-images/storeApp.png)应用左下角的Teams应用，然后搜索 **App Studio**。 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
 
@@ -270,7 +275,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 **生成并运行选项卡项目**
 
-1. 获得源代码后，转到"打开Visual Studio并选择"**打开项目或解决方案"**。
+1. 获得源代码后，转到"Visual Studio并选择"**打开项目或解决方案"**。
 1. 转到选项卡应用程序目录并打开 **ChannelGroupTab.sln**。
 1. 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。
 1. 在浏览器中，转到以下 URL 并验证应用程序是否加载正确：
@@ -283,7 +288,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是使用在安装程序 ASP.NET Core"高级 **- 配置 HTTPS**"复选框的 2.2 Web 应用程序空模板创建的。 MVC 服务由依赖关系注入框架的方法注册 `ConfigureServices()` 。 此外，空模板默认情况下 `Configure()` 不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下代码的方法中：
+此项目从一个 ASP.NET Core 2.2 Web 应用程序空模板创建，在设置时选中了"高级 **- 为 HTTPS** 配置"复选框。 MVC 服务由依赖关系注入框架的方法注册 `ConfigureServices()` 。 此外，空模板默认情况下 `Configure()` 不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下代码的方法中：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -363,7 +368,7 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-若要在页面中显示选项卡Teams，必须包含 **Microsoft Teams JavaScript 客户端 SDK**`microsoftTeams.initialize()`，并包括加载页面后对 的调用。 这是选项卡和客户端Teams的方式：
+若要使选项卡显示在 Teams中，必须包含 **Microsoft Teams JavaScript 客户端 SDK**`microsoftTeams.initialize()`，并包括加载页面后对 的调用。 这是选项卡和客户端Teams的方式：
 
 转到" **共享"** 文件夹，打开 **_Layout.cshtml**，然后向 标记中添加 `<head>` 以下内容：
 
@@ -425,7 +430,7 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 1. 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正常运行。
 
 > [!TIP]
-> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成本文中提供的步骤。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在应用程序中重新启动时，它会侦听并恢复Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须使用新 URL 更新应用程序。
+> 你需要让应用程序在 Visual Studio 和 ngrok 中运行才能完成本文中提供的步骤。 如果需要停止运行应用程序，Visual Studio运行应用程序，请 **保持 ngrok 运行**。 当应用程序在应用程序中重新启动时，它会侦听应用程序请求并Visual Studio。 如果必须重新启动 ngrok 服务，它将返回一个新 URL，并且您必须使用新 URL 更新应用程序。
 
 ### <a name="upload-your-tab-for-teams"></a>Upload选项卡进行Teams
 
@@ -503,14 +508,14 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 
 ### <a name="create-a-custom-channel-or-group-tab-with-aspnet-core-mvc"></a>使用 MVC 创建自定义频道或 ASP.NET Core选项卡
 
-可以使用自定义频道或组选项卡，C#和 ASP.Net 核心 MVC。 [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) 还用于完成应用清单，并部署选项卡以Teams。
+可以使用核心 MVC 中的自定义频道C#ASP.Net 组选项卡。 [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) 还用于完成应用清单，并部署选项卡以Teams。
 
 ### <a name="prerequisites-for-custom-channel-or-group-tab"></a>自定义频道或组选项卡的先决条件
 
-- 你必须拥有一个Microsoft 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- 你必须拥有一个Microsoft 365租户和一个启用了允许上传 **自定义应用的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
-    > 如果当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册免费[订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
+    > 如果当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册[免费订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
 
 - 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio **，请选择**![](~/assets/images/tab-images/storeApp.png)应用左下角的Teams应用，然后搜索 **App Studio**。 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
 
@@ -532,7 +537,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 **生成并运行选项卡项目**
 
-1. 获得源代码后，转到"打开Visual Studio并选择"打开 **项目或解决方案"**。
+1. 获得源代码后，转到"Visual Studio并选择"**打开项目或解决方案"**。
 1. 转到选项卡应用程序目录并打开 **ChannelGroupTabMVC.sln**。
 1. 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。
 1. 在浏览器中，导航到以下 URL 并验证应用程序是否加载正确：
@@ -545,7 +550,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是使用在安装程序 ASP.NET Core"高级 **- 配置 HTTPS**"复选框的 2.2 Web 应用程序空模板创建的。 MVC 服务由依赖关系注入框架的方法注册 `ConfigureServices()` 。 此外，空模板默认情况下 `Configure()` 不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下代码的方法中：
+此项目从一个 ASP.NET Core 2.2 Web 应用程序空模板创建，在设置时选中了"高级 **- 为 HTTPS** 配置"复选框。 MVC 服务由依赖关系注入框架的方法注册 `ConfigureServices()` 。 此外，空模板默认情况下 `Configure()` 不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下代码的方法中：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -603,9 +608,9 @@ public void Configure(IApplicationBuilder app)
 
 这些是 MVC 中 ASP.NET Core视图：
 
-* 主页：ASP.NET Core将名为 **Index** 的文件视为网站的默认页面或主页。 当浏览器 URL 指向网站的根目录时， **Index.cshtml** 将显示为应用程序的主页。
+* 主页：ASP.NET Core将名为 **Index** 的文件视为网站的默认或主页。 当浏览器 URL 指向网站的根目录时， **Index.cshtml** 将显示为应用程序的主页。
 
-* Shared： the partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. 它还将引用Teams库。
+* Shared：部分视图标记 **_Layout.cshtml** 包含应用程序的整体页面结构和共享的可视元素。 它还将引用Teams库。
 
 #### <a name="controllers"></a>控制器
 
