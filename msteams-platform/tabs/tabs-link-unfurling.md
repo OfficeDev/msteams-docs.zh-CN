@@ -1,16 +1,16 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 了解如何取消链接、打开"阶段视图"，然后使用"应用"固定Microsoft Teams选项卡。 了解阶段视图，以及使用代码示例和示例使用自适应卡片调用它。
+description: 了解如何取消链接、打开"阶段视图"，以及使用"Microsoft Teams固定选项卡。 了解阶段视图，以及使用代码示例和示例使用自适应卡片调用它。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 48c7ae69b10702d58be933b5619fd6bdeb8cecf3
+ms.sourcegitcommit: 3332ca6f61d2d60ddb20140f6d163905ea177157
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178258"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62516517"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -39,7 +39,7 @@ ms.locfileid: "61178258"
 
 ## <a name="invoke-stage-view-from-adaptive-card"></a>从自适应卡片调用阶段视图
 
-当用户在桌面客户端上Teams URL 时，将调用自动程序并返回自适应卡片，并可选择在[](../task-modules-and-cards/cards/cards-actions.md)阶段中打开 URL。 启动阶段并提供了 后，你可以 `tabInfo` 添加将阶段固定为选项卡的能力。  
+当用户在桌面客户端上Teams URL 时，将调用自动程序并返回自适应卡片，并可选择在阶段[](../task-modules-and-cards/cards/cards-actions.md)中打开 URL。 启动阶段并提供了 `tabInfo` 后，你可以添加将阶段固定为选项卡的能力。  
 
 下图显示从自适应卡片打开的阶段：
 
@@ -72,35 +72,31 @@ ms.locfileid: "61178258"
 } 
 ```
 
-请求 `invoke` 类型必须为 `composeExtension/queryLink` 。
+请求 `invoke` 类型必须为 `composeExtension/queryLink`。
 
 > [!NOTE]
 > * `invoke` 工作流类似于当前 `appLinking` 工作流。 
-> * 为了保持一致性，建议将 名称 `Action.Submit` 为 `View` 。
+> * 为了保持一致性，建议将 名称为 `Action.Submit` `View`。
 > * `websiteUrl` 是对象中传递的必需 `TabInfo` 属性。
 
 以下是调用阶段视图的过程：
 
-* 当用户选择"查看 **"时**，机器人会收到 `invoke` 一个请求。 请求类型为 `composeExtension/queryLink` 。
-* `invoke` 来自自动程序的响应包含包含类型为的 `tab/tabInfoAction` 自适应卡片。
-* 机器人使用代码 `200` 进行响应。
+* 当用户选择"查看 **"** 时，机器人会收到一个 `invoke` 请求。 请求类型为 `composeExtension/queryLink`。
+* `invoke` 来自自动程序的响应包含包含类型为的自适应 `tab/tabInfoAction` 卡片。
+* 机器人使用代码进行 `200` 响应。
 
 > [!NOTE]
-> 在Teams客户端上，调用通过 Teams 应用商店分发[的应用](/platform/concepts/deploy-and-publish/apps-publish-overview.md)的阶段视图，并且没有 moblie 优化体验，这将打开设备的默认 Web 浏览器。 浏览器打开在 对象的 参数 `websiteUrl` 中指定的 `TabInfo` URL。
+> 在Teams客户端上，调用通过 Teams 应用商店分发的应用的阶段[视图](/platform/concepts/deploy-and-publish/apps-publish-overview.md)，并且没有 moblie 优化体验将打开设备的默认 Web 浏览器。 浏览器打开在 对象的 参数中 `websiteUrl` 指定的 `TabInfo` URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
-若要通过选项卡中的深层链接调用阶段视图，必须在 API 中包装深层链接 `microsoftTeams.executeDeeplink(url)` URL。 深度链接也可通过卡片 `OpenURL` 中的操作传递。
-
-下图显示了通过深层链接调用的阶段视图：
-
-<img src="~/assets/images/tab-images/invoke-stage-view-through-deep-link.png" alt="Invoke a Stage View through a deep link" width="400"/>
+若要通过选项卡中的深层链接调用阶段视图，必须在 API `microsoftTeams.executeDeeplink(url)` 中包装深层链接 URL。 深度链接也可通过卡片 `OpenURL` 中的操作传递。
 
 ### <a name="syntax"></a>语法
 
 以下是 deeplink 语法： 
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" ： \" "[contentUrl]" \" ， \" websiteUrl ： \" \" "[websiteUrl]" \" ， name ： \" \" \" Contoso \" }
+https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl"："contentUrl"，"websiteUrl"："websiteUrl"，"name"："Contoso"}
  
 ### <a name="examples"></a>示例
 
@@ -110,13 +106,28 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" ： \" "[
 
 **示例 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl"："https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx"，"websiteUrl"："https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx"，"name"："Contoso"}
+未编码
+ 
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl"："https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx"，"websiteUrl："https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx"，"name"："Contoso"}
+
+已编码
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22websiteUrl%0A%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 **示例 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl"："https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx"，"websiteUrl"："https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx"，"name"："Contoso"}
+未编码
+
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl"："https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx"，"websiteUrl"："https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx"，"name"："Contoso"}
+
+已编码
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 > [!NOTE]
+> 粘贴 URL 之前，必须编码所有深度链接。 我们不支持未编码的 URL。
 > * 在 `name` 深层链接中是可选的。 如果未包含，则应用名称将替换它。
 > * 深度链接也可通过操作 `OpenURL` 传递。
 > * 当你从特定上下文启动阶段时，请确保你的应用在该上下文中工作。 例如，如果你的阶段视图从个人应用启动，则必须确保你的应用具有个人作用域。
@@ -126,14 +137,14 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | 属性名称 | 类型 | 字符数 | 说明 |
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | 此属性是选项卡显示的实体的唯一标识符。 这是必填字段。|
-| `name` | String | 128 | 此属性是显示名称界面中选项卡的控件。 这是一个可选字段。|
-| `contentUrl` | String | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
-| `websiteUrl?` | String | 2048 | 此属性是 https:// 在浏览器中查看时要指向的 URL。 这是必填字段。|
-| `removeUrl?` | String | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
+| `name` | 字符串 | 128 | 此属性是显示名称界面中选项卡的键值。 这是一个可选字段。|
+| `contentUrl` | 字符串 | 2048 | 此属性是指向要 https:// 画布中的实体 UI 的 Teams URL。 这是必填字段。|
+| `websiteUrl?` | String | 2048 | 如果用户选择在 https:// 查看，则此属性是指向的 URL。 这是必填字段。|
+| `removeUrl?` | 字符串 | 2048 | 此属性是 https:// 选项卡时要显示的 UI 的 URL。这是一个可选字段。|
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称 | 说明 | C# |Node.js|
+| 示例名称 | Description | C# |Node.js|
 |-------------|-------------|------|----|
 |阶段视图中的选项卡 |Microsoft Teams阶段视图中演示选项卡的选项卡示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     
