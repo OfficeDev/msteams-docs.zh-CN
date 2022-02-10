@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI 工具包模板会议响应行为共享会议阶段
-ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
-ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61051194"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62523793"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计会议Microsoft Teams扩展
 
@@ -26,11 +26,11 @@ ms.locfileid: "61051194"
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展
 
-用户可以在会议之前和会议期间添加会议扩展名。 他们还可以直接从应用商店为特定会议Teams应用。
+用户可以在会议之前和会议期间添加会议扩展名。 他们还可以直接从应用商店添加特定会议Teams应用。
 
 ### <a name="add-before-a-meeting"></a>在会议前添加
 
-在会议详细信息中，用户可以选择"添加选项卡 **+"** 以打开应用飞出控件并查找针对会议优化的应用。
+在会议详细信息中，用户可以选择"添加选项卡 **+** "以打开应用飞出控件并查找针对会议优化的应用。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="示例演示如何在会议之前添加会议扩展名。" border="false":::
 
@@ -38,13 +38,13 @@ ms.locfileid: "61051194"
 
 #### <a name="mobile"></a>移动设备
 
-例如，在桌面 (添加应用后) ，用户可以通过选择"更多"在会议中 **访问该应用** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
+例如，在桌面 (添加应用后，) 选择"更多"，即可在会议中访问 **该应用**:::image type="icon" source="../../assets/icons/teams-client-more.png":::。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="示例演示如何在移动会议期间添加会议扩展。" border="false":::
 
 #### <a name="desktop"></a>桌面
 
-在会议中，**用户可以选择"** 更多 :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **添加应用**"，然后选择他们需要的应用。
+在会议中， **用户可以选择"** 更多 :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **添加应用** "，然后选择他们需要的应用。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="示例演示如何在会议期间添加会议扩展名。" border="false":::
 
@@ -101,11 +101,11 @@ ms.locfileid: "61051194"
 
 |计数器|说明|
 |----------|-----------|
-|1|**选择的应用 (图标**) ：16 像素透明应用徽标。|
+|1|**选择的应用 (图标)**：16 像素透明应用徽标。|
 |2|**应用名称**|
 |3|**标头**：包括你的应用名称。|
 |4|**关闭按钮**：关闭选项卡。始终使用右上方的关闭图标，而不是页脚中的操作。|
-|5|**通知栏**：错误警报显示在标题正下方，将 iframe 内容向下推送 20 像素。|
+|5|**通知栏**：错误警报显示在标题正下方，将其余 iframe 内容向下推送 20 像素。|
 |6 |**iframe**: 显示应用内容。|
 
 ### <a name="spacing"></a>Spacing
@@ -136,7 +136,7 @@ ms.locfileid: "61051194"
 
 ### <a name="use-cases"></a>用例
 
-会议内对话框由用户触发， (例如会议组织者) 可能希望参与者：
+会议内对话框由用户用户触发 (例如会议组织者) 可能希望参与者：
 
 * 提供简短反馈
 * 参加简短调查或投票
@@ -178,22 +178,26 @@ ms.locfileid: "61051194"
 
 根据不同的方案，会议内对话框的大小可能会有所不同。 请确保保持填充和组件大小。
 
-* **Width：** 可以指定对话框的 iframe 的宽度（在支持的大小范围内的任何位置）。
+* **Width**：可以在支持的大小范围内的任何位置指定对话框的 iframe 的宽度。
 * **高度**：可以在支持的大小范围内的任何位置指定对话框的 iframe 的高度。 如果应用内容超出最大高度，还可以允许用户垂直滚动。
 
-若要实现，使用 键指定宽度和 [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) 高度。
-
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="示例显示会议内对话框。宽度：最小为 280 像素 (248 像素的 iframe) 。最大为 460 像素 (428 像素的 iframe) 。高度：300 像素 (iframe) 。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="示例显示会议内对话框。宽度：最小为 280 像素 (248 像素的 iframe) 。最大为 460 像素 (428 像素 iframe) 。高度：300 像素 (iframe) 。" border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>使用共享会议阶段
 
-共享会议阶段可帮助会议参与者实时与应用内容进行交互和协作。 例如，用户可以将会议集中在编辑文档、使用白板进行集体讨论或查看仪表板上。
+你可以允许用户在会议阶段共享或与部分或所有应用内容交互。 下面是会议期间用户如何使用此功能的示例：
 
-共享到会议阶段的应用占用的空间与共享屏幕相同。 该阶段将针对所有会议参与者进行重定向。
+* 编辑文档
+* 白板
+* 查看仪表板
+* 观看视频
+* 玩游戏
+
+共享到会议阶段的应用占用的空间与共享屏幕相同。 该阶段也以相同方式重定向所有会议参与者。
 
 > [!NOTE]
-> 从桌面共享时，会议中的所有用户都可以看到该应用。 目前，移动用户无法将应用内容共享到会议阶段。
- 
+> 目前，移动用户无法将应用内容共享到会议阶段。 但是，他们可以看到从桌面共享的内容。
+
 ### <a name="use-cases"></a>用例
 
 共享会议阶段与协作和参与有关。 下面是帮助您入门的一些示例方案。
@@ -201,12 +205,14 @@ ms.locfileid: "61051194"
 :::row:::
    :::column span="1":::
 
-**编辑和查看**：深入了解仪表板和与会议中的每个人进行规划。
+**编辑和审阅**：深入了解仪表板和与会议中的每个人进行规划。
 
    :::column-end:::
    :::column span="3":::
 
 :::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="示例显示共享会议阶段正在审阅的仪表板。" border="false":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="示例显示共享会议阶段正在审阅的仪表板组件。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -237,17 +243,29 @@ ms.locfileid: "61051194"
    :::column-end:::
 :::row-end:::
 
-### <a name="anatomy-shared-meeting-stage"></a>结构：共享会议阶段
+### <a name="anatomy-share-all-app-content-to-a-meeting"></a>结构：将所有应用内容共享到会议
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="图像显示共享会议阶段的设计结构。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="图像显示共享所有应用内容共享时共享会议阶段的设计结构。" border="false":::
 
 |计数器|说明|
 |----------|-----------|
 |1|**应用图标**：突出显示的图标表示应用的"会议中"选项卡已打开。|
-|2|**共享到会议阶段按钮**：将应用共享到会议阶段的入口点。 显示是否将应用配置为使用共享会议阶段。|
-|3|**iframe**: 显示应用内容。|
-|4|**"停止共享"** 按钮：停止将应用共享到会议阶段。 仅显示启动共享的参与者。|
-|5|**演示者属性**：显示共享应用的参与者的姓名。|
+|2|**共享到会议按钮**：将应用共享到会议入口点。 显示是否将应用配置为使用共享会议阶段。|
+|3|**演示者属性**：显示共享应用的参与者的姓名。|
+|4|**iframe**: 显示应用内容。|
+|5|**"停止** 共享"按钮：停止将应用共享到会议阶段。 仅显示启动共享的参与者。|
+
+### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>结构：将特定应用内容共享到会议
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="图像显示仅共享特定应用内容时共享会议阶段的设计结构。" border="false":::
+
+|计数器|说明|
+|----------|-----------|
+|1|**应用图标**：突出显示的图标表示应用的"会议中"选项卡已打开。|
+|2|**共享到会议按钮**：将应用共享到会议入口点。 为了获得一致的体验，请始终使用标准Teams共享图标。 **"共享到** 会议"是推荐的默认文本，但您也可以针对用例自定义它。 例如， **一起** 玩游戏，观看游戏应用，或一 **起观看视频** 应用。 无论使用哪种方式，都明确该操作将创建与会议中的每个人共享的交互式体验。|
+|3|**演示者属性**：显示共享应用的参与者的姓名。|
+|4|**iframe**: 显示应用内容。|
+|5|**"停止** 共享"按钮：停止将应用共享到会议阶段。 仅显示启动共享的参与者。|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>响应行为：共享会议阶段
 
@@ -274,7 +292,7 @@ ms.locfileid: "61051194"
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示会议后选项卡。" border="false":::
 
-## <a name="best-practices"></a>最佳实践
+## <a name="best-practices"></a>最佳做法
 
 使用上述建议打造优质应用体验。
 
@@ -313,7 +331,7 @@ ms.locfileid: "61051194"
 
 #### <a name="dont-include-competing-surfaces"></a>不要：包括竞争面
 
-你的应用应仅要求用户一次专注于单个图面，无论它是在阶段进行协作还是响应会议内对话框。  (注意：当你的应用处于阶段时，你无法保留由其他应用触发的)  
+你的应用应仅要求用户一次专注于单个图面，无论它是在阶段进行协作还是响应会议内对话框。  (注意：当应用处于阶段时，无法保留由其他应用触发的)  
 
    :::column-end:::
 :::row-end:::
@@ -401,7 +419,7 @@ ms.locfileid: "61051194"
 
 #### <a name="dont-scroll-horizontally"></a>请勿：水平滚动
 
-在包括会议环境或会议环境在内的环境中，水平滚动Teams (预期) 。
+在包括会议环境或会议Teams (，水平滚动并不是预期) 。
 
    :::column-end:::
 :::row-end:::
@@ -438,7 +456,7 @@ ms.locfileid: "61051194"
 
 #### <a name="do-focus-on-dark-theme"></a>应做：专注于深色主题
 
-Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪音，以便用户可以专注于讨论和共享内容。 请记住特定类型的应用 (如白板和文档编辑) 不需要深色画布。
+Teams会议针对深色主题进行了优化，以帮助减少视觉和认知干扰，以便用户可以专注于讨论和共享内容。 请记住特定类型的应用 (如白板和文档编辑) 不需要深色画布。
 
    :::column-end:::
    :::column span="":::
@@ -449,7 +467,7 @@ Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪
 
 #### <a name="dont-use-unfamiliar-colors"></a>请勿：使用不熟悉的颜色
 
-与会议环境发生冲突的颜色可能会分散注意力，对会议环境Teams。 了解颜色渐变[Teams，](https://developer.microsoft.com/fluentui#/styles/web/colors/products)包括呼叫主题中性色。
+与会议环境发生冲突的颜色可能会分散注意力，对会议环境Teams。 了解颜色渐变[Teams](https://developer.microsoft.com/fluentui#/styles/web/colors/products)，包括呼叫主题中性色。
 
    :::column-end:::
 :::row-end:::
@@ -479,11 +497,11 @@ Teams会议针对深色主题进行了优化，以帮助减少视觉和认知噪
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="显示会议选项卡 (模块或) 模块的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="显示会议选项卡 (模式或) 模块的示例。" border="false":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>警告：避免会议内选项卡中的模式
 
-模式 (也称为任务模块) 在已经较窄的"会议"选项卡中，可能会封装和遮盖内容。
+模式 (也称为任务模块) 在已经较窄的会议内选项卡中可能会封装和遮盖内容。
 
    :::column-end:::
 :::row-end:::

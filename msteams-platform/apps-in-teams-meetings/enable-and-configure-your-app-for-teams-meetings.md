@@ -1,19 +1,19 @@
 ---
 title: 为会议启用和配置Teams应用
 author: surbhigupta
-description: 为会议和其他会议Teams启用和配置应用、更新应用清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
+description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 45c12a52758bc86f2ab05112a69a8342ade9a5af
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518035"
+ms.locfileid: "62523778"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
-每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
+每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议应用程序。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
@@ -129,13 +129,10 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 #### <a name="shared-meeting-stage"></a>共享会议阶段
 
-> [!NOTE]
-> 目前，此功能仅适用于公共 [开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版。
-
 共享会议阶段允许会议参与者实时与应用内容进行交互和协作。 可以通过以下方式将应用共享到协作会议阶段：
 
 * [在客户端中共享整个应用](#share-entire-app-to-stage)以使用共享到Teams阶段。
-* [共享应用的特定部分，以使用](#share-specific-parts-of-the-app-to-stage) Teams SDK 中的 API 进行阶段。
+* [使用应用程序客户端 SDK](#share-specific-parts-of-the-app-to-stage) 中的 API 共享应用的特定Teams阶段。
 
 ##### <a name="share-entire-app-to-stage"></a>将整个应用共享到阶段
 
@@ -169,9 +166,9 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
-若要将应用的特定部分共享到阶段，必须在客户端 SDK 库中调用Teams API。 有关详细信息，请参阅 [API 参考](API-references.md)。
+若要共享要阶段的应用的特定部分，必须在客户端 SDK 库中调用Teams API。 有关详细信息，请参阅 [API 参考](API-references.md)。
 
-如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Microsoft Azure Active Directory (Azure AD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID`from.aadObjectId`，Microsoft Azure Active Directory (Azure AD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会议后
 
@@ -187,8 +184,8 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 ## <a name="step-by-step-guides"></a>分步指南
 
-* 按照[分步指南在会议](../sbs-meeting-token-generator.yml)结束后生成会议Teams令牌。
-* 按照[分步指南在](../sbs-meetings-sidepanel.yml)会议结束后生成Teams窗格。
+* 按照[分步指南在](../sbs-meeting-token-generator.yml)会议结束后生成会议Teams令牌。
+* 按照[分步指南在你的](../sbs-meetings-sidepanel.yml)会议生成会议侧Teams窗格。
 * 按照[分步指南在](../sbs-meetings-stage-view.yml)会议结束后生成Teams视图。
 * 按照[分步指南在](../sbs-meeting-content-bubble.yml)会议结束后生成会议Teams气泡。
 
