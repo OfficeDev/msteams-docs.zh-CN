@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: a33e704b8c66d460b6946b60947601bac9fb9269
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 4c4a145db5ce66a13d4f605419c5a402eef2c3b7
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443970"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62523785"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,10 +22,10 @@ ms.locfileid: "62443970"
 
 | Date | 更新 | 在此处查找  |
 | --- | --- | --- |
+|2022 年 2 月 11 日| 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| 引入了创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
 |02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 |02/03/2022| 引入了应用清单版本 1.12 | • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022| 共享会议阶段的交互模式| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
 |02/03/2022| 盈利应用的测试预览（开发人员预览版）| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| 应用内购买流，用于应用盈利（开发人员预览版） | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |2022/01/25| 发送实时字幕 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
@@ -45,6 +45,7 @@ ms.locfileid: "62443970"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|2022 年 2 月 11 日| 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| 引入了创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
 |02/02/2022| 引入了应用清单版本 1.12 | 应用清单> [应用程序清单架构](resources/schema/manifest-schema.md) |
 |2022/01/25| 发送实时字幕 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
@@ -238,7 +239,6 @@ ms.locfileid: "62443970"
 | -------- | --------- | ------------------ |
 |02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 |02/02/2022| 引入了应用清单版本 1.12 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022 |共享会议阶段的交互模式| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
 |02/03/2022| 针对盈利应用的测试预览| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| 应用内购买流，用于盈利应用 | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |01/17/2022| 适用于移动的自适应卡片中的人员选取器  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
