@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 团队深层链接深层链接
-ms.openlocfilehash: 63aa2849360d709e261c88472090caaf066f98c1
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059303"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518245"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -140,7 +140,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 查询参数为：
 
-* `users`：表示聊天参与者的用户 ID 的逗号分隔列表。 执行操作的用户始终作为参与者被包括在内。 目前，“用户 ID”字段支持 Azure AD UserPrincipalName，例如仅电子邮件地址。
+* `users`：表示聊天参与者的用户 ID 的逗号分隔列表。 执行操作的用户始终作为参与者被包括在内。 目前，“用户 ID”字段支持 Microsoft Azure Active Directory (Azure AD) UserPrincipalName，例如仅支持电子邮件地址。
 * `topicName`：与 3 个及以上用户聊天时聊天显示名称的可选字段。 如果未指定此字段，则聊天的显示名称基于参与者的姓名。
 * `message`：要在聊天处于草稿状态时插入当前用户撰写框的消息文本的可选字段。
 
@@ -226,7 +226,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 查询参数为：
 
-* `attendees`：表示会议与会者的用户 ID 的可选逗号分隔列表。 执行操作的用户是会议组织者。 用户 ID 字段当前仅支持 Azure AD UserPrincipalName，通常是电子邮件地址。
+* `attendees`：表示会议与会者的用户 ID 的可选逗号分隔列表。 执行操作的用户是会议组织者。 用户 ID 字段当前仅支持 Microsoft Azure Active Directory (Azure AD) UserPrincipalName，通常是电子邮件地址。
 * `startTime`：事件的可选开始时间。 这应采用 [long ISO 8601 格式](https://en.wikipedia.org/wiki/ISO_8601)，例如 *2018-03-12T23:55:25+02:00*。
 * `endTime`：事件的可选结束时间，也采用 ISO 8601 格式。
 * `subject`：会议主题的可选字段。
@@ -259,7 +259,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 | 对 VoIP 和 PSTN 用户进行音频和视频通话 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 下面是查询参数：
-* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Azure AD UserPrincipalName（通常为电子邮件地址），或者在 PSTN 调用时，它支持 pstn mri 4:&lt;phonenumber&gt;。
+* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Microsoft Azure Active Directory (Azure AD) UserPrincipalName（通常为电子邮件地址），或者在 PSTN 调用时，它支持 pstn mri 4:&lt;phonenumber&gt;。
 * `withVideo`：这是一个可选参数，可用于进行视频通话。 设置此参数将仅打开调用方的相机。 呼叫接收方可以选择通过 Teams 呼叫通知窗口通过音频或音频和视频呼叫进行应答。 
 * `Source`：这是一个可选参数，用于通知深层链接的源。
 

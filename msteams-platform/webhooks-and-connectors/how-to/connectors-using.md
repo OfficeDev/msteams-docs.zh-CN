@@ -5,12 +5,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams Office365 连接器
-ms.openlocfilehash: 478bf9805c5f045e1f8c43ff7647dd418f6bd8af
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 816dfd4327f0ee3076431e2fdc0e855b40f729c3
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435864"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517965"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -45,7 +45,7 @@ ms.locfileid: "62435864"
 
 > [!NOTE]
 > * 在 Microsoft Teams 中指定 `style` 属性的 `compact` 与在 Microsoft Outlook 中指定 `style` 属性的 `normal` 相同。
-> * 对于 HttpPOST 操作，请求中包括承载令牌。 此令牌包括已执行该操作的 Office 365 用户的 Azure AD 标识。
+> * 对于 HttpPOST 操作，请求中包括承载令牌。 此令牌包括执行此操作的 Office 365 用户的 Microsoft Azure Active Directory (Azure AD) 标识。
 
 ## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>通过传入 Webhook 或 Office 365 连接器发送消息
 

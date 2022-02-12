@@ -5,12 +5,12 @@ keywords: 团队机器人卡格式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 1c55862ca94bb0091cadf6df835b0271cdb74094
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 965f74bd2756fc4a2beb9c65ebf8da577f12dc89
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443943"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518350"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
@@ -173,16 +173,16 @@ ms.locfileid: "62443943"
 }
 ```
 
-### <a name="azure-ad-object-id-and-upn-in-user-mention"></a>在用户提及中的 Azure AD 对象 ID 和 UPN 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory (Azure AD) 用户提及中的对象 ID 和 UPN 
 
-除了现有的提及 ID 外，Teams 平台还允许使用其 Azure AD 对象 ID 和用户原则名称 (UPN) 提及用户。 带有自适应卡的机器人和带有传入 Webhook 的连接器支持两个用户提及的 ID。 
+除了现有的提及 ID 外，Teams 平台还允许使用其 Microsoft Azure Active Directory (Azure AD) 对象 ID 和用户原则名称 (UPN) 提及用户。 带有自适应卡的机器人和带有传入 Webhook 的连接器支持两个用户提及的 ID。 
 
 下表描述了新支持的用户提及 ID:
 
 |ID  | 支持功能 |   说明 | 示例 |
 |----------|--------|---------------|---------|
-| Azure AD 对象 ID | 机器人，连接器 |  Azure AD 用户的对象 ID |    49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | 机器人，连接器 | Azure AD 用户的 UPN | john.smith@microsoft.com |
+| Microsoft Azure Active Directory (Azure AD) 对象 ID | 机器人，连接器 |  Microsoft Azure Active Directory (Azure AD) 用户的对象 ID |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | 机器人，连接器 | Microsoft Azure Active Directory (Azure AD) 用户的 UPN | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>使用自适应卡片在机器人中提及用户 
 
@@ -235,11 +235,11 @@ ms.locfileid: "62443943"
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>使用自适应卡片的传入 Webhook 中的用户提及 
 
-传入 Webhook 开始支持使用 Azure AD 对象 ID 和 UPN 在自适应卡片中提及用户。
+传入 Webhook 开始支持用户在自适应卡片中使用Microsoft Azure Active Directory (Azure AD) 对象 ID 和 UPN 进行提及。
 
 > [!NOTE]    
-> * 在传入 Webhook 的架构中启用用户提及，以支持 Azure AD 对象 ID 和 UPN。 
-> * 对于具有 Azure AD 对象 ID 和 UPN 的用户提及不需要进行 UI/UX 更改。      
+> * 在传入 Webhook 的架构中启用用户提及，以支持Microsoft Azure Active Directory (Azure AD) 对象 ID 和 UPN。 
+> * 对于具有 Microsoft Azure Active Directory (Azure AD) 对象 ID 和 UPN 的用户提及，不需要进行 UI/UX 更改。      
 
 ##### <a name="example"></a>示例 
 
