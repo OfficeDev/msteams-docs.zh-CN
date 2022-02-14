@@ -1,16 +1,16 @@
 ---
 title: 通过自动程序发送和接收文件
-description: 了解如何通过自动程序发送和接收文件、Graph所有 Teams 范围的 Graph API、使用代码示例和示例的 Teams bot API。
+description: 了解如何通过自动程序发送和接收文件、Graph所有 Teams 范围的 Teams API、使用代码示例和示例的 Teams bot API。
 keywords: teams 自动程序文件发送接收
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a65db945c5d32586c648bb2aeec9d1ad7b08112f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ec77aeff3771efd648b77215ca2eb53a4bcad8e9
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889172"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801353"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>通过自动程序发送和接收文件
 
@@ -24,37 +24,37 @@ ms.locfileid: "60889172"
   * `channel`
   * `groupchat`
 
-* [**使用Teams程序 API：**](#use-the-teams-bot-apis)这些仅支持上下文中 `personal` 的文件。
+* [**使用Teams程序 API：**](#use-the-teams-bot-apis)这些仅支持上下文中`personal`的文件。
 
 ## <a name="use-the-graph-apis"></a>使用Graph API
 
-使用 SharePoint 和 SharePoint 的 Graph OneDrive API 发布包含卡片附件[的邮件](/onedrive/developer/rest-api/)。 若要使用Graph API，请通过标准 OAuth 2.0 授权流获取对以下任一项的访问权限：
+使用 Graph API 发布包含引用现有 SharePoint 文件的卡片附件OneDrive [SharePoint](/onedrive/developer/rest-api/)。 若要使用Graph API，请通过标准 OAuth 2.0 授权流获取对以下任一项的访问权限：
 
-* 用户的文件OneDrive `personal` 文件夹 `groupchat` 。
-* 团队频道中的 `channel` 文件。
+* 用户的文件和OneDrive文件夹`personal``groupchat`。
+* 团队频道中的文件。`channel`
 
-GraphAPI 在所有作用域Teams工作。 有关详细信息，请参阅 [发送聊天消息文件附件](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true)。
+Graph API 在所有作用域Teams工作。 有关详细信息，请参阅 [发送聊天消息文件附件](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true)。
 
-或者，可以使用自动程序 API 向自动程序Teams文件。
+或者，可以使用自动程序 API 将文件发送到自动程序Teams接收文件。
 
 ## <a name="use-the-teams-bot-apis"></a>使用Teams程序 API
 
 > [!NOTE]
-> Teams程序 API 仅在上下文中 `personal` 工作。 它们在 或 上下文中 `channel` `groupchat` 不起作用。
+> Teams自动程序 API 仅在上下文中`personal`工作。 它们在 或 上下文中`channel``groupchat`不起作用。
 
-通过使用Teams API，机器人可以直接在上下文中与用户一起发送和接收文件，也称为 `personal` 个人聊天。 实现涉及文件内容编辑的费用报告、图像识别、文件存档和电子签名等功能。 通常，Teams共享的文件显示为卡片并允许丰富的应用内查看。
+通过使用Teams API`personal`，机器人可以直接在上下文中与用户一起发送和接收文件，也称为个人聊天。 实现涉及文件内容编辑的费用报告、图像识别、文件存档和电子签名等功能。 通常，Teams共享的文件显示为卡片并允许丰富的应用内查看。
 
 以下各节介绍如何以直接用户交互方式发送文件内容，如发送消息。 此 API 作为自动程序平台的一Teams提供。
 
 ### <a name="configure-the-bot-to-support-files"></a>配置自动程序以支持文件
 
-若要在自动程序中发送和接收文件，请将清单中的 属性 `supportsFiles` 设置为 `true` 。 此属性在清单引用 [的自动程序](~/resources/schema/manifest-schema.md#bots) 部分中介绍。
+若要在自动程序中发送和接收文件，请将 `supportsFiles` 清单中的 属性设置为 `true`。 此属性在清单引用 [的自动程序](~/resources/schema/manifest-schema.md#bots) 部分中介绍。
 
-定义如下所示： `"supportsFiles": true` 。 如果自动程序未启用 `supportsFiles` ，本部分中列出的功能将不起作用。
+定义如下所示： `"supportsFiles": true`。 如果自动程序未启用 `supportsFiles`，本部分中列出的功能将不起作用。
 
 ### <a name="receive-files-in-personal-chat"></a>接收个人聊天中的文件
 
-当用户向自动程序发送文件时，文件首先上传到用户的 OneDrive存储。 然后，机器人会收到一条消息活动，通知用户有关用户上载的信息。 活动包含文件元数据，例如其名称和内容 URL。 用户可以直接从此 URL 读取，以提取其二进制内容。
+当用户向自动程序发送文件时，文件首先上传到用户OneDrive存储。 然后，机器人会收到一条消息活动，通知用户有关用户上载的信息。 活动包含文件元数据，例如其名称和内容 URL。 用户可以直接从此 URL 读取，以提取其二进制内容。
 
 #### <a name="message-activity-with-file-attachment-example"></a>包含文件附件的邮件活动示例
 
@@ -80,9 +80,9 @@ GraphAPI 在所有作用域Teams工作。 有关详细信息，请参阅 [发送
 
 | 属性 | 用途 |
 | --- | --- |
-| `downloadUrl` | OneDrive用于提取文件内容的 URL。 用户可以直接从此 `HTTP GET` URL 发出 。 |
+| `downloadUrl` | OneDrive提取文件内容的 URL。 用户可以直接从此 `HTTP GET` URL 发出 。 |
 | `uniqueId` | 唯一文件 ID。 这是OneDrive项 ID，以防用户向自动程序发送文件。 |
-| `fileType` | 文件类型，如.pdf或.docx。 |
+| `fileType` | 文件类型，例如.pdf或.docx。 |
 
 最佳做法是，通过向用户发送回一条消息来确认文件上载。
 
@@ -90,9 +90,9 @@ GraphAPI 在所有作用域Teams工作。 有关详细信息，请参阅 [发送
 
 **将文件上载到用户**
 
-1. 向请求写入文件权限的用户发送邮件。 此邮件必须 `FileConsentCard` 包含包含要上载的文件名称的附件。
+1. 向请求写入文件权限的用户发送邮件。 此邮件必须包含 `FileConsentCard` 包含要上载的文件名称的附件。
 2. 如果用户接受文件下载，机器人将收到包含位置 URL 的调用活动。
-3. 若要传输文件，机器人将直接执行 `HTTP POST` 到提供的位置 URL。
+3. 若要传输文件，机器人将直接执行到 `HTTP POST` 提供的位置 URL。
 4. （可选）如果不希望用户接受同一文件的进一步上载，请删除原始同意卡。
 
 #### <a name="message-requesting-permission-to-upload"></a>请求上传权限的邮件
@@ -133,7 +133,7 @@ GraphAPI 在所有作用域Teams工作。 有关详细信息，请参阅 [发送
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>当用户接受文件时调用活动
 
-如果用户接受文件，则调用活动将发送给机器人。 它包含自动OneDrive for Business可以发出 以传输文件内容的占位符 `PUT` URL。 有关上载到 OneDrive URL 的信息，请参阅[将字节上载到上载会话](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)。
+如果用户接受文件，则调用活动将发送给机器人。 它包含自动OneDrive for Business可以发出 以`PUT`传输文件内容的占位符 URL。 有关上载到 url OneDrive的信息，请参阅[将字节上载到上载会话](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)。
 
 以下代码显示了机器人收到的调用活动的简洁版本示例：
 
@@ -173,7 +173,7 @@ GraphAPI 在所有作用域Teams工作。 有关详细信息，请参阅 [发送
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>通知用户已上传文件
 
-将文件上载到用户的 OneDrive，向用户发送确认消息。 邮件必须包含用户可以选择的以下附件，以在邮件中预览或打开OneDrive `FileCard` 或本地下载：
+将文件上载到用户的 OneDrive，向用户发送确认消息。 邮件必须包含用户可以选择的以下`FileCard`附件，以在邮件中预览或打开OneDrive或本地下载：
 
 ```json
 {
@@ -194,7 +194,7 @@ GraphAPI 在所有作用域Teams工作。 有关详细信息，请参阅 [发送
 | 属性 | 用途 |
 | --- | --- |
 | `uniqueId` | OneDrive或SharePoint驱动器项 ID。 |
-| `fileType` | 文件类型，如.pdf或.docx。 |
+| `fileType` | 文件类型，例如.pdf或.docx。 |
 
 ### <a name="fetch-inline-images-from-message"></a>从邮件提取内嵌图像
 
@@ -319,11 +319,15 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 ## <a name="code-sample"></a>代码示例
 
-以下代码示例演示了如何获取文件同意，以及如何从自动程序Teams文件：
+以下代码示例演示如何获取文件同意，以及如何将文件上载Teams自动程序：
 
 |**示例名称** | **说明** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | File upload | 演示如何获取文件同意，以及如何从自动程序Teams文件。 此外，如何接收发送到自动程序的文件。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+
+## <a name="step-by-step-guide"></a>分步指南
+
+按照[分步指南将](../../sbs-file-handling-in-bot.yml)文件上传到自动Teams上传文件。
 
 ## <a name="next-step"></a>后续步骤
 

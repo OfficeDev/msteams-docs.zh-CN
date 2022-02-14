@@ -1,0 +1,55 @@
+### YamlMime:Tutorial
+title: Teams文件上传自动程序
+metadata:
+  title: Teams文件Upload自动程序
+  description: 在本教程中，你将了解如何从自动程序Teams文件，以及如何接收以附件形式发送给自动程序的文件。
+  audience: Developer
+  level: Beginner
+  ms.date: 28/12/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: bots/how-to/bots-filesv4.md
+  nextTutorialTitle: 通过自动程序阅读更多 On 发送和接收文件
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: 9906e3e445e73f1e53ebe713e46cffcf342965a2
+  ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+  ms.translationtype: MT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 02/14/2022
+  ms.locfileid: "62801432"
+items:
+- durationInMinutes: 1
+  content: "自动程序是使用 Bot Framework 创建的。 它显示如何将文件上传到自动Teams，以及如何接收以附件形式发送给自动程序的文件。 它还演示如何提取在邮件中发送的内嵌图像。\n \n此分步指南可帮助你将文件从自动程序上载到Microsoft Teams。 你将看到以下输出：\n\n:::image type=\"content\" source=\"assets/images/teams-file-upload-bot/output-sbs.png\" alt-text=\"sbs 输出\" lightbox=\"assets/images/teams-file-upload-bot/output-sbs.png\":::\n"
+- title: 先决条件
+  durationInMinutes: 1
+  content: >
+    若要设置开发环境，请安装以下工具：
+
+
+    * Microsoft Teams帐户Teams帐户。
+
+    * [.NET Core SDK 版本 3.1](https://dotnet.microsoft.com/download)。
+
+    * [ngrok](https://ngrok.com/) 或等效隧道解决方案。
+
+    * Visual Studio 2019 或更高版本。
+- title: 在 Azure 门户创建自动程序注册
+  durationInMinutes: 5
+  content: "若要对自动程序进行身份验证，可以在 Azure Bot 服务中设置自动程序。 当你在 Azure 中开发和托管自动程序服务时，向 Azure 自动程序服务注册它。 执行以下步骤：\n\n1. 配置并运行Teams自动程序应用。\n1. 创建 Azure Bot 资源。\n1. 创建客户端密码。\n1. 添加Microsoft Teams频道。\n1. 添加消息终结点。\n\n**若要配置并运行Teams文件自动程序应用：**\n\n1. 打开命令提示符，在 克隆存储库 https://github.com/Microsoft/botbuilder-samples.git。 记下克隆存储库的路径。\n\n1. 在Visual Studio：\n\n    * 打开 Visual Studio。\n    * 选择 **\"文件** > **Project** > **/解决方案\"**。\n    * Access `botbuilder-samples\\samples\\csharp_dotnetcore\\56.teams-file-upload` 文件夹。\n    * 打开 `Teamsfileupload.csproj`文件。\n\n1. 打开 ngrok 终端，然后使用此命令启动 ngrok 隧道 `ngrok http -host-header=rewrite 3978`。\n\n**创建 Azure Bot 资源：**\n\n1. 访问 [Azure 门户](https://portal.azure.com/)。\n1. 选择“**创建资源**”。\n1. 在搜索框中，输入 **Azure 自动程序** ，然后选择 Enter 键。\n1. 选择 **\"Azure 自动程序\"**。\n\n     ![创建 Azure 自动程序卡](~/assets/images/teams-file-upload-bot/azure-new.png)\n\n1. 选择“**创建**”。\n1. 在自动程序句柄中输入所需的 **自动程序句柄名称**。\n1. 从 **\"订阅** \"下拉列表中，选择订阅。\n1. 从\" **资源组** \"下拉列表中，选择资源组。\n    \n    若要创建新资源，请选择\"新建\"，输入资源名称，选择\"确定\"，然后从\"新建资源 **组** 位置\"下拉列表中选择所需位置。\n\n    > [!NOTE]\n    > 在\"Microsoft 应用 ID\"部分 **，已选择\"创建新的 Microsoft 应用 ID** \"。 可以选择\"使用 **现有应用注册\"，** 输入 **\"现有应用 ID**\"，然后输入 **\"现有应用密码\"**。\n\n1. 然后“**审阅 + 创建**”。\n\n     ![查看和创建](~/assets/images/teams-file-upload-bot/reg-azure-1.png)\n\n1. 如果验证通过，请选择\"创建 **\"**。 设置自动程序服务需要一些时间。\n\n1. 选择“**转到资源**”。 自动程序和相关资源在资源组中列出。\n\n   现在，已创建 Azure 自动程序。\n\n     ![已创建 Azure 自动程序资源](~/assets/images/teams-file-upload-bot/resource-group.png)\n\n**创建客户端密码：**\n\n1. 在 **\"设置**\"中，选择\"**配置\"**。 将 **Microsoft 应用 ID** (客户端 ID) 供将来参考。\n1. 在 **\"Microsoft 应用 ID\"旁边，选择**\"管理 **\"**。\n\n     ![Microsoft 应用 ID](~/assets/images/teams-file-upload-bot/manage-sec.png)\n\n1. 在\" **客户端密码\"** 部分，选择 **\"新建客户端密码\"**。 将显示 **\"添加客户端密码\"** 窗口。  \n\n1. 输入 **\"说明** \"，然后选择\" **添加\"**。\n\n     ![客户端密码](~/assets/images/teams-file-upload-bot/add-client-secret.png)\n\n1. 在\" **值** \"列中，选择 **\"复制到剪贴板** \"并保存客户端密码 ID 的值，供将来参考。\n\n     ![客户端密码的值](~/assets/images/teams-file-upload-bot/copy-value.png)\n   \n**若要添加Microsoft Teams通道：**\n\n1. 转到 **\"主页\"**。\n\n     ![主页](~/assets/images/teams-file-upload-bot/home-png.png)\n\n1. 从\"最近使用的资源 **\"部分打开自动** 程序。\n1. 选择 **左窗格中** 的\"频道\"，**然后选择\"Microsoft Teams** \n\n      ![从Teams打开频道](~/assets/images/teams-file-upload-bot/chanels-teams.png)  \n\n      ![选择Teams](~/assets/images/teams-file-upload-bot/configure-microsoft-teams.png)  \n\n1. 选择“**保存**”。\n1. 选中复选框以接受服务条款，然后选择\"同意 **\"**。</br>\n\n      ![服务条款](~/assets/images/teams-file-upload-bot/terms-service.png)\n\n**添加消息终结点：**\n\n1. In **设置** for the Azure bot that you created， select **Configuration**.\n1. 转到 ngrok。\n1. 将 HTTPS URL (https 复制到 io) 。\n\n    ![ngrok HTTPS URL](~/assets/images/teams-file-upload-bot/ngrok-url.png)\n\n1. 在 **消息终结点中**，使用 ngrok 和 URL 末尾的 HTTPS URL 添加 **/api/messages**。\n\n     ![消息处理结束点](~/assets/images/teams-file-upload-bot/messaging-endpoint.png)\n\n1. 选择“**应用**”。\n\n   你已成功在 Azure Bot 服务中设置自动程序，现在需要设置自动程序服务连接。\n"
+- title: 设置自动程序服务连接
+  durationInMinutes: 5
+  content: "对于使用户可以登录和访问机器人的自动程序服务，请为自动程序配置 SSO。\n若要设置自动程序服务连接，请执行下列操作：\n\n1. 将重定向 URI 添加到 Azure 自动程序资源。\n1. 公开 API 终结点。\n1. 授权客户端应用程序。\n1. 为下游调用添加任何必要的 API 权限。\n1. 启用隐式授予。\n1. 更新清单。\n1. 设置自动程序服务连接。\n\n**若要将重定向 URI 添加到 Azure 自动程序资源：**\n\n1. 选择 **与** **Microsoft 应用 ID 相邻的\"管理\"选项**。\n\n     ![管理自动程序](~/assets/images/teams-file-upload-bot/manage-sec.png)\n\n1. 从 **自动** 程序资源的左窗格中选择身份验证。\n1. 在 **\"平台配置\"** 中， **选择\"添加平台\"**。\n1. 选择“Web”\n1. 输入 **重定向 URI** 作为，`https://token.botframework.com/.auth/web/redirect`**然后选择配置。**\n\n    ![配置 Web 重定向 URL](~/assets/images/teams-file-upload-bot/authentication.png)\n\n    重定向 URI 将添加到 Azure 自动程序资源。\n\n    ![显示 Web 重定向 URL](~/assets/images/bots/redirectURIadded.png)\n    \n**若要公开 API 终结点：**\n\n1. 从 **左窗格中选择\"公开 API** \"。\n1. 为 **\"应用程序** ID URI\"选择\"设置\"。\n1. 使用 **所示的应用程序 ID URL**，而不是`api://``https://`在 **ngrok URL** 中追加，并添加在应用程序 ID URL 的开头。\n\n    ![App ID URI](~/assets/images/teams-file-upload-bot/expose-api.png)\n\n1. 选择“**保存**”。\n1. 选择“**添加作用域**”。\n1. 在 **\"范围名称\"中**，输入 `access_as_user`。\n1. In **Who can consent？**， switch to **Admins and users**.\n1. 在框中输入以下值：\n\n    | 字段 | 值 |\n    | ----- | ----- |\n    | 管理员同意显示名称 | Teams访问用户配置文件 |\n    | 管理员同意说明 | 允许Teams当前用户调用应用的 Web API。 |\n    | 用户同意显示名称 | Teams可以访问你的用户配置文件并代表你提出请求 |\n    | 用户同意说明 | 启用Teams，以使用你拥有的权限调用此应用的 API。 |\n\n1. 将 **\"状态****\"设置为\"已启用**\"（如果尚未设置）。\n\n    ![添加范围](~/assets/images/teams-file-upload-bot/expo.png)\n\n1. 选择“**添加作用域**”。 范围名称自动匹配应用程序 ID URI，并 `/access_as_user` 添加到末尾。\n\n**授权客户端应用程序：**\n\n例如，将以下 ID 添加为 **授权** 客户端应用程序，选中\"授权范围\"复选框，然后选择\"**添加应用程序\"**。      \n* `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams移动或桌面应用程序)             \n* `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams Web 应用程序) </br>\n\n    ![添加客户端应用程序](~/assets/images/teams-file-upload-bot/client-application.png)      \n\n**为下游调用添加任何必要的 API 权限：**\n\n1. 从 **左窗格中选择 API** 权限。\n1. 选择“**添加权限**”。 **将显示请求 API 权限** 窗口。\n1. 选择 **Microsoft API**。 然后选择 **\"Microsoft Graph**\"，然后选择 **\"委派权限\"**。\n1. 将应用 **所需的** 任何用户委派权限添加到下游 API，例如 User.Read。</br>\n\n     ![API 权限](~/assets/images/teams-file-upload-bot/delegated-permission-1.png)\n\n**启用隐式授予：**\n\n1. 从 **左窗格中** 选择\"身份验证\"。\n1. 选中 **\"访问令牌****和 ID 令牌\"** 复选框。\n\n     ![身份验证令牌](~/assets/images/teams-file-upload-bot/access-tokens.png)\n\n1. 选择“**保存**”。\n\n**更新清单**\n\n1. 从 **左窗格中** 选择清单。\n1. 将配置项设置为 **\"accessTokenAcceptedVersion\"：2**。 如果未设置，请将其值更改为\"2\"，然后选择\"保存 **\"**。\n    \n    > [!NOTE]\n    > 如果你已在应用中测试Teams，请注销此应用并注销Teams。 若要查看此更改，请再次登录。\n\n    ![更新清单](~/assets/images/teams-file-upload-bot/access-version-manifest-2.png)\n\n**设置自动程序服务连接：**\n\n1. 打开 **自动程序** 主页，**然后从左** 窗格中选择 **设置配置\"**。\n1. 选择 **\"添加 OAuth 连接设置**\"。\n1. 在 **\"新建连接设置**\"中，提供以下详细信息：\n\n    | 字段 | 值或描述 |\n    | ----- | ----- |\n    | 名称 | 提供新连接设置的名称。 可以在自动程序服务代码的设置中使用该名称。 |\n    | 服务提供程序 | 选择 **\"Azure Active Directory V2\"**。 |\n    | 客户端 ID | 提供 **Microsoft 应用 ID**。 |\n    | 客户端密码 | 提供 **客户端** 密码 ID 的值。 |\n    | 令牌Exchange URL | 在公开 **API 终结点时** ，使用之前获取的应用程序 ID URL。 |\n    | 租户 ID | 提供 **租户 ID**。 |\n    | Scopes | 提供 **User.Read** 并添加所有必需的 **Scopes** ，同时指定对下游 API 的权限。 |\n\n    :::image type=\"content\" source=\"./assets/images/teams-file-upload-bot/oauth-settings.png\" alt-text=\"自动程序服务连接\":::\n\n1. 选择“**保存**”。\n"
+- title: 测试应用
+  durationInMinutes: 2
+  content: "测试应用最全面的方式是创建应用包并将其上传到Teams。 此方法是在所有范围内测试应用可用的完整功能的唯一方法。 可以通过上传文件配置Teams运行应用程序`manifest.zip`。\n\n若要执行Teams自动程序，请上传`manifest.zip`Teams。 执行以下步骤：\n\n1. 在文件 **资源管理器中**，转到 **botbuilder-samplessamples** >  >  **csharp_dotnetcore** >  **56.teams-file-uploadappsettings** > 。\n\n1. 打开应用中的 appsettings Visual Studio Code并`appsettings.json`更新自动程序的配置文件，以使用 `MicrosoftAppId (Bot Id)`、 `MicrosoftAppPassword(Value of the client secret ID)`、 `MicrosoftAppType`和 `MicrosoftAppTenantID`。\n\n   ![应用设置](~/assets/images/teams-file-upload-bot/app-settings.png)\n\n1. 在\"文件`manifest.json`\"中Visual Studio Code。\n\n1. 在 文件中 `manifest.json` ，找到 `YOUR-MICROSOFT-APP-ID` 它并将其替换为应用 ID。注册自动程序时，将创建应用 ID。 保存文件。\n\n   ![清单 json](~/assets/images/teams-file-upload-bot/manifest-json.png)\n\n1. Zip up the contents of the `TeamsAppManifest' folder to create a `manifest.zip` archive. Open the manifest file in Visual Studio Code and replace with your MicrosoftAppID (depending on the scenario the Microsoft App Id may occur multiple times in the `manifest.json' file.) \n\n1. Upload在`manifest.zip`Teams (视图中单击\"Upload自定义应用\") \n\n1. 若要上传 `manifest.zip`，请选择 **应用商店** > **管理应用** > **Upload自定义应用并** 打开 `manifest.zip`。\n\n1. 选择 **\"** 添加\"将聊天机器人添加到聊天中。\n\n1. 向自动程序发送消息之前，请转到文件资源管理器，导航 **到** >  **botbuilder-samplessamples** >  >  csharp_dotnetcore **56.teams-file-upload**\n\n1. 在`TeamsFileUpload.csproj`文件Visual Studio Code，并确保你正在\"Teams文件上传\"\n\n    ![可视代码](~/assets/images/teams-file-upload-bot/visual-studio-teams-file-upload-bot.png)\n\n1. 在相应的文件夹中运行Visual Studio自动`F5`程序，`dotnet run`使用 或\n\n1. 向自动 `Hi` 程序发送消息并等待几秒钟，以使用卡片进行响应。\n"
+- title: 与聊天机器人交互Teams
+  durationInMinutes: 2
+  content: "> [!NOTE]\n>  在个人范围内安装自动程序后，用户将进入与机器人的一个聊天对话中。\n\n本指南演示如何以各种方式与机器人通信。 以下是演示自动程序活动的步骤：\n\n1. 向自动程序发送消息。 它以卡片响应，以授予上传文件的权限。\n   \n     ![prompt1](~/assets/images/teams-file-upload-bot/sbs-1.png)\n\n1. 选择 **\"允许\"**。 文件 `teams-logo.png` 将上载到文件目录，该目录可供下载。\n\n     ![邮件提示](~/assets/images/teams-file-upload-bot/sbs-2.png)\n\n1. 将文件作为文件附件发送到自动程序Teams。 它以消息 进行响应 `Received and Saved`。 可以从\"文件\" **选项卡查看附件** 。\n\n     ![文件提示](~/assets/images/teams-file-upload-bot/sbs-3.png)\n\n1. 以附件形式发送图像。 它以消息 进行响应 `Received and saved`。 您可以在聊天窗口和\"文件\"选项卡上 **查看** 图像。\n   \n     ![图像提示](~/assets/images/teams-file-upload-bot/sbs-4.png)\n"
+- title: 完成挑战
+  durationInMinutes: 1
+  content: >
+    你提供类似这样的内容了吗？
+
+
+    :::image type="content" source="assets/images/teams-file-upload-bot/output-sbs.png" alt-text="本指南的预期输出，可确认你可以将文件从自动程序上载到Teams。" lightbox="assets/images/teams-file-upload-bot/output-sbs.png":::
+- content: 你已完成本教程。 现在，你可以将文件从自动程序上传到Microsoft Teams。

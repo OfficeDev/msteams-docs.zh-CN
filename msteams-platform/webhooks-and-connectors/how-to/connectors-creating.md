@@ -6,6 +6,12 @@ keywords: teams Office365 连接器
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
+ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801381"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -15,10 +21,12 @@ ms.date: 06/16/2021
 
 你可以创建程序包[，](~/concepts/build-and-test/apps-package.md)[并发布连接器](~/concepts/deploy-and-publish/apps-publish.md)作为 AppSource 提交的一部分。 你可以将注册的连接器作为应用包的一Teams分发。 有关应用入口点Teams，请参阅[功能](~/concepts/extensibility-points.md)。 还可以直接向用户提供程序包，以在 Teams。
 
-若要分发连接器，必须通过连接器开发人员仪表板 [进行注册](https://aka.ms/connectorsdashboard)。 注册连接器时，假定它适用于Office 365应用程序的所有产品，包括 Outlook 和 Teams。 如果不是这种情况，并且必须创建仅在 Microsoft Teams 工作的连接器，请联系：Microsoft Teams[应用提交电子邮件](mailto:teamsubm@microsoft.com)。
+若要分发连接器，请在连接器开发人员仪表板 [中注册它](https://aka.ms/connectorsdashboard)。
+
+若要使连接器仅在应用商店Microsoft Teams，请按照将应用发布到应用商店中的提交Microsoft Teams[说明](~/concepts/deploy-and-publish/appsource/publish.md)操作。 否则，注册的连接器适用于Office 365应用程序的所有产品，包括 Outlook 和 Teams。
 
 > [!IMPORTANT]
-> 连接器在连接器开发人员 **仪表板中选择"** 保存"后注册。 若要在 AppSource 中发布连接器，请按照将应用发布到 [AppSource Microsoft Teams中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果不想在 AppSource 中发布应用，请将其直接分发到组织。 为 [组织发布连接器后](#publish-connectors-for-the-organization)，无需在连接器仪表板上执行任何进一步的操作。
+> 连接器在连接器开发人员 **仪表板中选择"** 保存"后注册。 如果你想要在 AppSource 中发布连接器，请按照将应用发布到 [AppSource Microsoft Teams中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果不想在 AppSource 中发布应用，请将其直接分发到组织。 为 [组织发布连接器后](#publish-connectors-for-the-organization)，无需在连接器仪表板上执行任何进一步的操作。
 
 ### <a name="integrate-the-configuration-experience"></a>集成配置体验
 
@@ -199,9 +207,9 @@ ms.date: 06/16/2021
 
 ## <a name="enable-or-disable-connectors-in-teams"></a>启用或禁用 Teams
 
-PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验证，称为 MFA，用于连接到 Exchange 中所有相关的 PowerShell Microsoft 365。 管理员可以使用 Exchange Online PowerShell 禁用整个租户或特定组邮箱的连接器，从而影响该租户或邮箱中的所有用户。 无法对部分（而非其他）禁用。 此外，默认情况下，连接器对 政府社区云（称为 GCC 租户）禁用。
+PowerShell V2 模块Exchange Online新式验证，并适用于多重身份验证，称为 MFA，用于连接到 Exchange 中所有与 PowerShell 相关的Microsoft 365。 管理员可以使用 Exchange Online PowerShell 禁用整个租户或特定组邮箱的连接器，从而影响该租户或邮箱中的所有用户。 无法对部分（而非其他）禁用。 此外，默认情况下，连接器对政府社区云租户GCC禁用。
 
-租户级别设置会覆盖组级别设置。 例如，如果管理员为组启用连接器，并禁用租户上的连接器，则禁用该组的连接器。 若要在 Teams 中启用连接器，Exchange Online带或不带 MFA 的新式验证连接到 [PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)。
+租户级别设置会覆盖组级别设置。 例如，如果管理员为组启用连接器，并禁用租户上的连接器，则禁用该组的连接器。 若要在 Teams 中启用连接器，Exchange Online带或不带 MFA 的新式身份验证连接到 [PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)。
 
 ### <a name="commands-to-enable-or-disable-connectors"></a>用于启用或禁用连接器的命令
 
@@ -218,14 +226,14 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
 
 ## <a name="test-your-connector"></a>测试连接器
 
-若要测试连接器，请通过任何其他应用将其上载到团队。 可以使用两个图标.zip连接器开发人员仪表板中的清单文件创建一个程序包，该清单文件已按照将连接器包括在清单中中的指示 [进行了修改](#include-the-connector-in-your-manifest)。
+若要测试连接器，请通过任何其他应用将其上载到团队。 可以使用两个.zip和连接器开发人员仪表板中的清单文件创建一个程序包，该清单文件已按照将连接器包括在清单中中的指示 [进行了修改](#include-the-connector-in-your-manifest)。
 
 上传应用后，从任何渠道打开连接器列表。 滚动到底部，在"已上载"部分 **查看** 你的应用：
 
 !["连接器"对话框中已上载节的屏幕截图](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
-> 流完全在托管体验Microsoft Teams内发生。
+> 流完全在托管Microsoft Teams内发生。
 
 若要验证操作 `HttpPOST` 是否正常工作， [请将邮件发送到连接器](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
@@ -247,7 +255,7 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
 > [!IMPORTANT]
 > 目前，自定义连接器在 DOD 政府社区云 (GCC) 、GCC-High 和国防部 (不可用) 。
 
-该连接器位于团队的"更多 &#9679;&#9679;&#9679; > **选项** > **ConnectorsAllConnectors** >  > "部分中。 可以通过滚动到此部分或搜索连接器应用来导航。 若要配置或修改连接器，请选择"配置 **"**。
+该连接器位于该团队 &#9679;&#9679;&#9679; > "更多 **选项** > **ConnectorsAllConnectors** >  > "部分。 可以通过滚动到此部分或搜索连接器应用来导航。 若要配置或修改连接器，请选择"配置 **"**。
 
 ## <a name="distribute-webhook-and-connector"></a>分发 Webhook 和连接器
 
