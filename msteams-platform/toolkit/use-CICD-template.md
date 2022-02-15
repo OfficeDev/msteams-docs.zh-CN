@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 1ae613332f7a07ae0d0ae9ed65b75429db64b429
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518112"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821575"
 ---
 # <a name="cicd-guide"></a>CI/CD 指南
 
@@ -47,7 +47,7 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 执行以下步骤以自定义 CD 工作流：
 
 1. 默认情况下，当向分支 `main` 提交新内容时，将触发 CD 工作流。
-1. 按GitHub[创建](https://docs.github.com/en/actions/reference/encrypted-secrets)存储库密码，以保留 Azure 服务主体Microsoft 365帐户登录凭据。 有关详细信息，请参阅操作[GitHub操作](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
+1. 按GitHub[创建](https://docs.github.com/en/actions/reference/encrypted-secrets)存储库密码以保留 Azure 服务主体Microsoft 365帐户登录凭据。 有关详细信息，请参阅操作[GitHub操作](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
 1. 如有必要，请更改生成脚本。
 1. 根据需要删除测试脚本。
 
@@ -91,7 +91,7 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 
 ### <a name="set-up-ci-pipeline"></a>设置 CI 管道
 
-1. 将 [CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)Azure DevOps存储库，然后执行必要的自定义，如从脚本文件中注释推断的。
+1. 将 [CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)添加到Azure DevOps存储库，并进行必要的自定义，如从脚本文件中的评论推断的。
 1. 按照[步骤创建 CI Azure DevOps管道](/azure/devops/pipelines/create-first-pipeline)。
 下面是常见 CI 管道脚本的方案：
 
@@ -122,7 +122,7 @@ steps:
 
 ### <a name="set-up-cd-pipeline"></a>设置 CD 管道
 
-1. 将 [CD 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)添加到Azure DevOps库，然后执行必要的自定义，正如您根据脚本文件中的评论推断的。
+1. 将 [CD 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)添加到 Azure DevOps 存储库，然后执行必要的自定义，正如您根据脚本文件中的评论推断的。
 1. 为 CD Azure DevOps管道。 有关详细信息，请参阅创建 [第一个管道](/azure/devops/pipelines/create-first-pipeline)。 管道的定义可以引用 CI 管道的以下示例定义。
 1. 通过定义变量添加必要的 [变量](/azure/devops/pipelines/process/variables)，并在必要时将它们作为机密。
 
@@ -237,7 +237,7 @@ steps:
 > * 若要启用 `@microsoft/teamsfx-cli` 在 CI 模式下运行，请通过 `CI_ENABLED` 打开 `export CI_ENABLED=true`。 在 CI 模式下， `@microsoft/teamsfx-cli` 适用于 CI 或 CD。
 > * 若要启用 `@microsoft/teamsfx-cli` 在非交互模式下运行，请通过命令设置全局配置： `teamsfx config set -g interactive false`。 在非交互模式中， `@microsoft/teamsfx-cli` 不会以交互方式提出输入问题。
 
-确保在环境变量中安全设置 Azure 和 Microsoft365 凭据。 例如，如果你使用 GitHub 作为源代码存储库。 有关详细信息，请参阅 [Github 密码](https://docs.github.com/en/actions/reference/encrypted-secrets)。
+确保在环境变量中安全设置 Azure 和 Microsoft365 凭据。 例如，如果你将 GitHub用作源代码存储库。 有关详细信息，请参阅 [Github 密码](https://docs.github.com/en/actions/reference/encrypted-secrets)。
 
 ## <a name="create-azure-service-principals"></a>创建 Azure 服务主体
 
@@ -245,8 +245,8 @@ steps:
 
 执行以下步骤以创建 Azure 服务主体：
 1. 在单个Microsoft Azure Active Directory (Azure AD) 注册应用程序。
-2. 将角色分配给Microsoft Azure Active Directory (Azure AD) 应用程序以访问 Azure 订阅`Contributor`，建议使用角色。 
-3. 创建新的应用程序Microsoft Azure Active Directory (Azure AD) 密码。
+2. 将角色分配给Azure AD应用程序以访问 Azure 订阅`Contributor`，建议使用角色。 
+3. 创建新的应用程序Azure AD密码。
 
 > [!TIP]
 > 保存租户 ID、应用程序 id (AZURE_SERVICE_PRINCIPAL_NAME) 和密码 (AZURE_SERVICE_PRINCIPAL_PASSWORD) 供将来使用。
@@ -262,7 +262,7 @@ steps:
 若要手动Teams应用，你可以利用[开发人员门户进行Teams](https://dev.teams.microsoft.com/home)。
 
 执行以下步骤以发布应用：
-1. 使用相应的[帐户登录到开发人员Teams](https://dev.teams.microsoft.com)登录开发人员门户。
+1. 使用相应的[帐户登录到开发人员Teams](https://dev.teams.microsoft.com)进行登录。
 2. 通过选择 以 zip 导入你的应用包 `App -> Import app -> Replace`。
 3. 在应用列表中选择目标应用。
 4. 通过选择发布应用 `Publish -> Publish to your org`
@@ -270,6 +270,6 @@ steps:
 ### <a name="see-also"></a>另请参阅
 
 * [快速入门GitHub操作](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
-* [创建首个 Azure DevOps 管道](/azure/devops/pipelines/create-first-pipeline)
+* [创建第一个Azure DevOps管道](/azure/devops/pipelines/create-first-pipeline)
 * [创建首个 Jenkins 管道](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [使用 Microsoft Teams 开发人员门户管理应用](/concepts/build-and-test/teams-developer-portal)

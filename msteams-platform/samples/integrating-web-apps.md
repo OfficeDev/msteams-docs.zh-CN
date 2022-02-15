@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: 集成Teams注意事项
-ms.openlocfilehash: 0e80a051bb3964b3ade44e1f2c60fe4bf2242138
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: a67124f5556ed8b197b981ac150a652dc8d25ec1
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518469"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821344"
 ---
 # <a name="considerations-for-teams-integration"></a>集成Teams注意事项 
 
@@ -23,7 +23,7 @@ ms.locfileid: "62518469"
 * **SharePoint**：SharePoint中显示的页面Teams。
 
 你可以映射并按照适用于集成方案的适当准则执行。
-本文档概述了Teams、文件和数据存储的共享点要求、API 要求、身份验证以及应用与 Teams 的深层链接。
+本文档概述了Teams功能、文件和数据存储的共享点要求、API 要求、身份验证以及应用与 Teams 的深层Teams。
 
 ## <a name="get-to-know-teams-platform-capabilities"></a>了解Teams功能
 
@@ -59,10 +59,10 @@ ms.locfileid: "62518469"
 
 若要将现有[SharePoint页](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites)作为"Teams"选项卡集成，必须考虑以下事项：
 
-* 它必须是新式 *SharePoint* 页面。
+* 它必须是新式 *联机* SharePoint页面。
 * 仅支持个人选项卡。 无法将页面作为通道选项卡进行集成。
 
-或者，可以使用 Teams [生成一个SharePoint 框架](/sharepoint/dev/spfx/integrate-with-teams-introduction)。
+或者，您也可以使用 Teams [生成一个SharePoint 框架](/sharepoint/dev/spfx/integrate-with-teams-introduction)。
 
 ## <a name="aim-towards-multi-tenancy"></a>旨在实现多租户
 
@@ -82,14 +82,14 @@ ms.locfileid: "62518469"
 
 ***集成方案**：独立应用、协作应用SharePoint*
 
-Azure Active Directory是用户标识Teams。 如果你的应用使用不同的标识提供程序，你必须执行标识映射练习或将其与Microsoft Azure Active Directory (Azure AD) 。
+Azure Active Directory是标识提供程序Teams。 如果你的应用使用不同的标识提供程序，你必须执行标识映射练习或与Microsoft Azure Active Directory (Azure AD) 。
 
-Teams具有单一登录 (SSO) 机制Microsoft Azure Active Directory (Azure AD) 适用于第三方应用。 它还提供使用 OAuth 和开放 ID 身份验证等标准（称为 OIDC）将身份验证流连接其他标识提供程序。
+Teams具有单一登录 (SSO) 机制Azure AD适用于第三方应用。 它还提供使用 OAuth 和开放 ID 身份验证等标准（称为 OIDC）将身份验证流连接其他标识提供程序。
 
 > [!IMPORTANT]
 > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用，GCC[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
-对于SharePoint，如果你希望 SSO 适用于另一个应用，则只能使用 SSO，并且不能添加另一个 Microsoft Azure Active Directory (Azure AD) ID，因为 ID 是 SharePoint应用。
+对于SharePoint，如果你希望 SSO 适用于另一个应用，则只能使用 SSO，并且不能添加另一个 Azure AD ID，因为 ID 是SharePoint ID。
 
 详细了解 Teams 中的[身份验证](../concepts/authentication/authentication.md)。
 
@@ -103,19 +103,19 @@ Teams具有单一登录 (SSO) 机制Microsoft Azure Active Directory (Azure AD) 
 
 ***集成方案**：独立应用、协作应用SharePoint*
 
-你可以创建 Teams 中的信息和功能的链接。 使用[深层链接](../concepts/build-and-test/deep-links.md)将你的应用与Teams，因为它们将应用的多个部分关联在一起，获得更本机的Teams体验。
+你可以创建 Teams 中的信息和功能的链接。 使用[深层链接](../concepts/build-and-test/deep-links.md)将你的应用与Teams，因为它们将应用的多个部分关联在一起，获得更Teams体验。
 
 ## <a name="be-smart-when-messaging-users"></a>在消息传递用户时要智能
 
 ***集成方案**：独立应用、协作应用SharePoint*
 
-在 [web 应用中](../bots/what-are-bots.md)Teams自动程序进行多线程对话，因为它提供比 [webhook 更大的灵活性](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
+在 web [应用中](../bots/what-are-bots.md)Teams自动程序进行多线程对话，因为它提供比 [webhook 更大的灵活性](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
 自动程序还允许你向单个 **用户** 或频道发送主动消息。 主动邮件是由外部事件触发的未经提示的消息，而不是发送给自动程序的消息。 例如，自动程序在安装或新用户加入频道时发送欢迎消息。
 
 发送主动邮件Teams特定标识符。 您可以通过提取[名单或用户配置文件](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)数据、订阅对话事件，或者使用 [Microsoft](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams) Graph。 [](../bots/how-to/conversations/subscribe-to-conversation-events.md)
 
-不要向具有过多邮件的用户发送垃圾邮件。 如果 Teams支持此功能，则用户可以为你的应用配置通知设置。
+不要向具有过多邮件的用户发送垃圾邮件。 如果Teams支持此功能，用户可以为你的应用配置通知设置。
 下面是通知邮件的一个示例 **：不向我发送不提示的邮件**。
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>将SharePoint用于文件和数据存储

@@ -6,17 +6,17 @@ keywords: 自适应卡片人员选取器
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518301"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821631"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>自适应卡片中的人员选取器
 
 >[!NOTE]
-> 目前，自适应卡片中的人员选取器仅在移动版[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)开发人员预览版中提供， (GA) 桌面版。
+> 目前，自适应卡片中的人员选取器仅在移动版[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)开发人员预览版中提供，并公开 (GA) 桌面版。
 
 人员选取器可帮助用户在自适应卡片中搜索和选择用户。 你可以将人员选取器作为输入控件添加到自适应卡片，它适用于聊天、频道、任务模块和选项卡。 人员选取器支持以下功能：        
 
@@ -42,13 +42,13 @@ Web 和桌面客户端支持自适应卡片中的人员选取器。 在 Web 上�
 
 ### <a name="reassignment-scenario-example"></a>重新分配方案示例
 
-用户 A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。 
+User A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。 
 
 **重新分配任何任务**
 
 1. 选择 **"** 重新分配"，其中人员选取器字段预填充了名称，以将任务重新分配给预期用户。
 1. 删除不正确的用户名。 
-1. 根据图像方案选择目标用户、用户 B (Mona) 和任务C (Robin) 用户。 
+1. 根据图像方案、用户 B (Mona) 和任务的用户 C (Robin) 选择目标用户。 
 1. 选择“**分配**”。 分配后，信息将发送给自动程序。 
    机器人更新自适应卡片并通知目标用户。 
  
@@ -65,13 +65,13 @@ Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 您
 
 ### <a name="reassignment-scenario-example"></a>重新分配方案示例
 
-用户 A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。 
+User A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。 
 
 **重新分配任何任务**
 
 1. 选择 **"** 重新分配"，其中人员选取器字段预填充了名称，以将任务重新分配给预期用户。
 1. 删除不正确的用户名。
-1. 根据图像方案选择目标用户、用户 B (Mona) 和任务C (Robin) 用户。
+1. 根据图像方案、用户 B (Mona) 和任务的用户 C (Robin) 选择目标用户。
 1. 选择“完成”。
 1. 选择“**分配**”。 分配后，信息将发送给自动程序。 
    机器人更新自适应卡片并通知目标用户。 
@@ -101,7 +101,7 @@ Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 您
 
 |属性 |类型 |必需 |说明 |
 |----|----|----|----|
-|**choices.data** |**Data.Query** |否 |通过从指定的数据集提取结果，为不同的用户类型启用动态自动完成。 |
+|**choices.data** |**Data.Query** |不支持 |通过从指定的数据集提取结果，为不同的用户类型启用动态自动完成。 |
 
 #### <a name="dataquery"></a>Data.Query
 
@@ -161,7 +161,7 @@ Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 您
 ### <a name="data-submission"></a>数据提交
 
 可以使用 或 `Action.Submit` 将 `Action.Execute` 所选数据提交到自动程序。 在`invoke`自动程序上收到的负载是静态Microsoft Azure Active Directory (Azure AD) 提供的有效负载列表。
-在人员选取器中，在控件中选择 `Microsoft Azure Active Directory (Azure AD) ID` 用户时，用户的 是发送回的值。 `Microsoft Azure Active Directory (Azure AD) ID`是字符串，唯一标识目录中的用户。
+在人员选取器中，在控件中选择 `Azure AD ID` 用户时，用户的 是发送回的值。 `Azure AD ID`是字符串，唯一标识目录中的用户。
 
 提交给自动程序的值的格式取决于属性的值 `isMultiSelect` ：
 
@@ -177,8 +177,8 @@ Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 您
 在创建和发送自适应卡片时，人员选取器支持在控件中预选用户。 `Input.ChoiceSet``value`支持用于预选用户的属性。 此属性的格式 `value` 与数据提交中提交的值格式 [相同](#data-submission)。  
 以下列表提供预选用户的信息：
 
-* 对于控件中的单个用户，将 `Microsoft Azure Active Directory (Azure AD) ID` 该用户指定为 `value`。 
-* 对于多个用户，例如 `isMultiSelect` ，指定 `true`以逗号分隔的 `Microsoft Azure Active Directory (Azure AD) ID`s 字符串。  
+* 对于控件中的单个用户，将 `Azure AD ID` 该用户指定为 `value`。 
+* 对于多个用户，例如 `isMultiSelect` ，指定 `true`以逗号分隔的 `Azure AD ID`s 字符串。  
 
 以下示例介绍单个用户的预选：
 

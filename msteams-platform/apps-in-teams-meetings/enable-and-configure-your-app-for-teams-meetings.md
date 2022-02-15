@@ -1,23 +1,23 @@
 ---
-title: 为会议启用和配置Teams应用
+title: 为会议启用和配置Teams应用程序
 author: surbhigupta
 description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523778"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821589"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
 
 每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议应用程序。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
-若要为应用启用Teams会议，请更新应用清单并使用上下文属性确定应用必须显示在何处。
+若要为应用启用Teams会议，请更新应用清单并使用上下文属性确定应用必须出现在何处。
 
 ### <a name="update-your-app-manifest"></a>更新应用清单
 
@@ -127,12 +127,12 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 > * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。 
 > * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Microsoft Azure Active Directory (Azure AD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
-#### <a name="shared-meeting-stage"></a>共享会议阶段
+#### <a name="shared-meeting-stage"></a>共享会议演示区域
 
 共享会议阶段允许会议参与者实时与应用内容进行交互和协作。 可以通过以下方式将应用共享到协作会议阶段：
 
-* [在客户端中共享整个应用](#share-entire-app-to-stage)以使用共享到Teams阶段。
-* [使用应用程序客户端 SDK](#share-specific-parts-of-the-app-to-stage) 中的 API 共享应用的特定Teams阶段。
+* [在客户端中共享整个应用](#share-entire-app-to-stage)以使用"共享到Teams"按钮。
+* [共享应用的特定部分，以](#share-specific-parts-of-the-app-to-stage)使用 Teams SDK 中的 API 进行阶段。
 
 ##### <a name="share-entire-app-to-stage"></a>将整个应用共享到阶段
 
@@ -168,7 +168,7 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 若要共享要阶段的应用的特定部分，必须在客户端 SDK 库中调用Teams API。 有关详细信息，请参阅 [API 参考](API-references.md)。
 
-如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID`from.aadObjectId`，Microsoft Azure Active Directory (Azure AD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Azure AD ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会议后
 
@@ -178,16 +178,16 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 |示例名称 | Description | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 该令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会议应用程序 | 演示如何使用会议令牌生成器应用请求令牌。 令牌按顺序生成，以便每个参与者都有机会参与会议。 令牌在 scrum 会议和 Q&A 会话等情况下很有用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会议阶段示例 | 在会议阶段显示选项卡以用于协作的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 |会议侧面板 | 显示如何在会议侧面板中添加议程的示例应用 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>分步指南
 
 * 按照[分步指南在](../sbs-meeting-token-generator.yml)会议结束后生成会议Teams令牌。
-* 按照[分步指南在你的](../sbs-meetings-sidepanel.yml)会议生成会议侧Teams窗格。
+* 按照[分步指南在](../sbs-meetings-sidepanel.yml)会议结束后生成Teams窗格。
 * 按照[分步指南在](../sbs-meetings-stage-view.yml)会议结束后生成Teams视图。
-* 按照[分步指南在](../sbs-meeting-content-bubble.yml)会议结束后生成会议Teams气泡。
+* 按照[分步指南在](../sbs-meeting-content-bubble.yml)会议生成会议内容Teams气泡。
 
 ## <a name="next-step"></a>后续步骤
 

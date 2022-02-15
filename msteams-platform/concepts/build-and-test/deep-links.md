@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 团队深层链接深层链接
-ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518245"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821386"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -226,7 +226,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 查询参数为：
 
-* `attendees`：表示会议与会者的用户 ID 的可选逗号分隔列表。 执行操作的用户是会议组织者。 用户 ID 字段当前仅支持 Microsoft Azure Active Directory (Azure AD) UserPrincipalName，通常是电子邮件地址。
+* `attendees`：表示会议与会者的用户 ID 的可选逗号分隔列表。 执行操作的用户是会议组织者。 用户 ID 字段当前仅支持 Azure AD UserPrincipalName，通常是电子邮件地址。
 * `startTime`：事件的可选开始时间。 这应采用 [long ISO 8601 格式](https://en.wikipedia.org/wiki/ISO_8601)，例如 *2018-03-12T23:55:25+02:00*。
 * `endTime`：事件的可选结束时间，也采用 ISO 8601 格式。
 * `subject`：会议主题的可选字段。
@@ -246,9 +246,6 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 > [!NOTE]
 > 此深层链接不能用于调用会议。
 
-> [!NOTE]
-> 目前，Teams 移动设备不支持深层链接呼叫。
-
 ### <a name="generate-a-deep-link-to-a-call"></a>生成呼叫的深层链接
 
 | 深度链接 | 格式 | 示例 |
@@ -259,7 +256,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 | 对 VoIP 和 PSTN 用户进行音频和视频通话 | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 下面是查询参数：
-* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Microsoft Azure Active Directory (Azure AD) UserPrincipalName（通常为电子邮件地址），或者在 PSTN 调用时，它支持 pstn mri 4:&lt;phonenumber&gt;。
+* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Azure AD UserPrincipalName（通常为电子邮件地址），或者在 PSTN 调用时，它支持 pstn mri 4:&lt;phonenumber&gt;。
 * `withVideo`：这是一个可选参数，可用于进行视频通话。 设置此参数将仅打开调用方的相机。 呼叫接收方可以选择通过 Teams 呼叫通知窗口通过音频或音频和视频呼叫进行应答。 
 * `Source`：这是一个可选参数，用于通知深层链接的源。
 

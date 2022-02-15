@@ -3,19 +3,19 @@ title: 配置 OAuth 2.0 标识提供程序
 description: '介绍如何配置标识提供程序，并重点关注Microsoft Azure Active Directory (Azure AD) '
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 身份验证Microsoft Azure Active Directory (Azure AD) oauth 标识提供程序
-ms.openlocfilehash: 93622275a8bfc9007af751d8b9f6304a73450ec7
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+keywords: teams 身份验证Azure AD oauth 标识提供程序
+ms.openlocfilehash: b35f28f2cb306a6dfc3ae3151616925da1525069
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517972"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821351"
 ---
 # <a name="configure-identity-providers"></a>配置标识提供程序
 
-## <a name="configuring-an-application-to-use-microsoft-azure-active-directory-azure-ad-as-an-identity-provider"></a>将应用程序配置为将Microsoft Azure Active Directory (Azure AD) 用作标识提供程序
+## <a name="configuring-an-application-to-use-azure-ad-as-an-identity-provider"></a>将应用程序配置为将Azure AD用作标识提供程序
 
-支持 OAuth 2.0 的身份提供程序不会对来自未知应用程序的请求进行身份验证;应用程序必须提前注册。 若要使用 Microsoft Azure Active Directory (Azure AD) ，请按照以下步骤操作：
+支持 OAuth 2.0 的身份提供程序不会对来自未知应用程序的请求进行身份验证;应用程序必须提前注册。 若要使用 Azure AD，请按照以下步骤操作：
 
 1. 打开 [应用程序注册门户](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)。
 

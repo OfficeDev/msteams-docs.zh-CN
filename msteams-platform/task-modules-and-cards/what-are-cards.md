@@ -4,12 +4,12 @@ description: 介绍卡片及其在机器人、连接器和消息传递扩展中�
 ms.localizationpriority: high
 keywords: 连接器机器人卡片消息传递
 ms.topic: overview
-ms.openlocfilehash: 3cbe26e9c84996242a22e8d0325914e7bde87f8c
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517979"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821582"
 ---
 # <a name="cards"></a>卡片
 
@@ -79,7 +79,7 @@ Teams 使用的所有卡都列在[类型卡中](~/task-modules-and-cards/cards/c
 
 ## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>在用户提及中支持 Azure AD 对象 ID 和 UPN 
 
-具有自适应卡片机器人支持用户提及 ID，例如 Microsoft Azure Active Directory (Azure AD) 对象 ID 和用户主体名称 (UPN)，以及现有 ID。 传入 Webhook 开始支持使用 Microsoft Azure Active Directory (Azure AD) 对象 ID 和 UPN 的自适应卡片中的用户提及。
+具有自适应卡片机器人支持用户提及 ID，例如 Microsoft Azure Active Directory (Azure AD) 对象 ID 和用户主体名称 (UPN)，以及现有 ID。 传入 Webhook 开始支持使用 AAD 对象 ID 和 UPN 在自适应卡片中提及用户。
 
 ## <a name="next-step"></a>后续步骤
 
