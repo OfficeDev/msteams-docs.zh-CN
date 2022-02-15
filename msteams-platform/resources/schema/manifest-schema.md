@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7513b79ee25e4de3e7c2ffecf8f2fd91a23f170b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518357"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821659"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -628,7 +628,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`id`|string|36 个字符|✔|应用的 Microsoft Azure Active Directory (Azure AD) 应用程序 ID。 此 ID 必须是 GUID。|
+|`id`|string|36 个字符|✔|应用的 Azure AD 应用程序 ID。 此 ID 必须是 GUID。|
 |`resource`|string|2048 个字符|✔|用于获取 SSO 的身份验证令牌的应用的资源 URL。 </br> **注意：** 如果未使用 SSO，请确保在此字段中向应用清单输入虚拟字符串值，例如， https://notapplicable 以避免错误响应。 |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
