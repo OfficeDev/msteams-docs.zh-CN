@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api 用户上下文通知信号查询
-ms.openlocfilehash: 681929c85d23f83ffa6742afdae2860ac8dfc356
-ms.sourcegitcommit: f5c2090fdd5b55d21ecd9c395423fa277e18d74a
+ms.openlocfilehash: 3dd234e99068c2d7014a04f378a131b5d325a2c8
+ms.sourcegitcommit: 58f1c3e6a4fab0778ff035e0bbddcee267a0e8e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62470786"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62857235"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -21,11 +21,11 @@ ms.locfileid: "62470786"
 * 使用 API 让应用了解会议。
 * 选择所需的 API 以改进会议体验。
 
-下表提供了跨 MICROSOFT TEAMS 客户端客户端 (MSTC) 和 MSBF Microsoft Bot Framework (可用的 API) 列表：
+下表提供了跨 MICROSOFT TEAMS Client (MSTC) 和 MSBF Microsoft Bot Framework (可用的 API) 列表：
 
 |方法| 说明| 源|
 |---|---|----|
-|[**获取用户上下文**](#get-user-context-api)| 获取上下文信息，以在"列表"选项卡Teams内容。| MSTC SDK|
+|[**获取用户上下文**](#get-user-context-api)| 获取上下文信息以在"列表"选项卡中Teams内容。| MSTC SDK|
 |[**获取参与者**](#get-participant-api)| 按会议 ID 和参与者 ID 提取参与者信息。 |MSBF SDK|
 |[**发送通知信号**](#send-notification-signal-api)| 使用现有的用户-机器人聊天对话通知 API 提供会议信号，并允许通知显示会议内对话框的用户操作。 |MSBF SDK|
 |[**获取会议详细信息**](#get-meeting-details-api)| 获取会议静态元数据。 |MSBF SDK |
@@ -216,9 +216,6 @@ POST /v3/conversations/{conversationId}/activities
 
 ## <a name="get-meeting-details-api"></a>获取会议详细信息 API
 
-> [!NOTE]
-> 目前，此功能仅在公共开发人员 [预览版中](../resources/dev-preview/developer-preview-intro.md) 可用。
-
 会议详细信息 API 使你的应用能够获取会议静态元数据。 元数据提供不动态更改的数据点。 API 通过 Bot Services 提供。 目前，私人计划会议或定期会议以及频道计划会议或定期会议均支持分别具有不同的 RSC 权限的 API。
 
 ### <a name="prerequisite"></a>先决条件
@@ -367,11 +364,11 @@ GET /v1/meetings/{meetingId}
 
 ## <a name="send-real-time-captions-api"></a>发送实时字幕 API
 
-发送实时标题 API 公开了一个 POST 终结点Microsoft Teams通信访问实时翻译 (CART) 标题、人工类型的隐藏式字幕。 当最终用户启用标题时，发送到此终结点的文本内容Microsoft Teams会议中的最终用户。
+发送实时标题 API 公开了一个 POST 终结点，用于 Microsoft Teams 通信访问实时翻译 (CART) 标题、人工类型的隐藏式字幕。 发送到此终结点的文本内容在启用了标题Microsoft Teams向会议中的最终用户显示。
 
 ### <a name="cart-url"></a>购物车 URL
 
-可以从会议选项页获取 POST 终结点的购物车 **URL，Microsoft Teams** 会议。 有关详细信息，请参阅会议[中的购物车Microsoft Teams标题](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 无需修改购物车 URL 即可使用购物车标题。
+可以从会议选项页获取 POST 终结点的购物车 **URL Microsoft Teams会议**。 有关详细信息，请参阅会议[中的购物车Microsoft Teams标题](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 无需修改购物车 URL 即可使用购物车标题。
 
 #### <a name="query-parameter"></a>查询参数
 
@@ -390,7 +387,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>方法
 
-|资源|方法|说明|
+|Resource|方法|说明|
 |----|----|----|
 |/cartcaption|POST|处理会议的标题（已启动）|
 
@@ -748,8 +745,8 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | 会议可扩展性 | Microsoft Teams令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会议内容气泡机器人 | Microsoft Teams会议扩展性示例，用于与会议内容气泡机器人进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams与会议中的侧面板交互的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会议详细信息选项卡 | Microsoft Teams会议扩展性示例，用于与会议中的"详细信息"选项卡进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-|会议事件示例|显示实时会议事件Teams应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
+| 会议详细信息选项卡 | Microsoft Teams会议扩展性示例，用于与会议详细信息选项卡进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+|会议事件示例|显示实时会议事件Teams应用示例|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |会议招聘示例|用于显示招聘方案的会议体验的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |使用 QR 代码安装应用|生成 QR 代码和使用 QR 代码安装应用的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
@@ -761,4 +758,4 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [为会议启用和配置Teams应用](enable-and-configure-your-app-for-teams-meetings.md)
+> [为会议启用和配置Teams应用程序](enable-and-configure-your-app-for-teams-meetings.md)
