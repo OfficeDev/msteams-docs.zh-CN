@@ -6,12 +6,12 @@ keywords: 自适应卡片人员选取器
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4fda2916c6eaeb3cc0878911c21eb20e276844f3
+ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821631"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855891"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>自适应卡片中的人员选取器
 
@@ -42,13 +42,13 @@ Web 和桌面客户端支持自适应卡片中的人员选取器。 在 Web 上�
 
 ### <a name="reassignment-scenario-example"></a>重新分配方案示例
 
-User A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。 
+用户 A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。 
 
 **重新分配任何任务**
 
 1. 选择 **"** 重新分配"，其中人员选取器字段预填充了名称，以将任务重新分配给预期用户。
 1. 删除不正确的用户名。 
-1. 根据图像方案、用户 B (Mona) 和任务的用户 C (Robin) 选择目标用户。 
+1. 根据图像方案选择目标用户、用户 B (Mona) 和任务C (Robin) 用户。 
 1. 选择“**分配**”。 分配后，信息将发送给自动程序。 
    机器人更新自适应卡片并通知目标用户。 
  
@@ -65,13 +65,13 @@ Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 您
 
 ### <a name="reassignment-scenario-example"></a>重新分配方案示例
 
-User A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。 
+用户 A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。 
 
 **重新分配任何任务**
 
 1. 选择 **"** 重新分配"，其中人员选取器字段预填充了名称，以将任务重新分配给预期用户。
 1. 删除不正确的用户名。
-1. 根据图像方案、用户 B (Mona) 和任务的用户 C (Robin) 选择目标用户。
+1. 根据图像方案选择目标用户、用户 B (Mona) 和任务C (Robin) 用户。
 1. 选择“完成”。
 1. 选择“**分配**”。 分配后，信息将发送给自动程序。 
    机器人更新自适应卡片并通知目标用户。 
@@ -101,7 +101,7 @@ User A (Robert) 收到频道中任务的票证，并意识到被分派人不正�
 
 |属性 |类型 |必需 |说明 |
 |----|----|----|----|
-|**choices.data** |**Data.Query** |不支持 |通过从指定的数据集提取结果，为不同的用户类型启用动态自动完成。 |
+|**choices.data** |**Data.Query** |否 |通过从指定的数据集提取结果，为不同的用户类型启用动态自动完成。 |
 
 #### <a name="dataquery"></a>Data.Query
 
@@ -306,6 +306,13 @@ User A (Robert) 收到频道中任务的票证，并意识到被分派人不正�
 
 
 您可以实现人员选取器，以在不同方案中高效地管理任务。  
+
+## <a name="code-sample"></a>代码示例
+
+| 示例名称           | Description | C#    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|自适应卡片中的人员选取器控件| 此示例演示如何在自适应卡片中使用人员选取器控件。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) | 
+
 
 ## <a name="see-also"></a>另请参阅
 
