@@ -1,26 +1,26 @@
 ---
-title: 使用身份验证的选项卡Azure Active Directory
+title: 使用证书的选项卡Azure Active Directory
 description: 介绍Teams中的身份验证以及如何在选项卡中使用它
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: 'teams 身份验证选项卡Microsoft Azure Active Directory (Azure AD) '
-ms.openlocfilehash: 2ceca46148c79b07dd417e84b0736f69ee520b8b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 980df5b94f83a26c22c8594b72518f7d094c5307
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821715"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897933"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>在"用户"选项卡中Microsoft Teams用户
 
 > [!Note]
 > 若要在移动客户端上对选项卡进行身份验证，需要确保使用的是 Teams Sdk 的版本 1.4.1 或更高版本。
 
-你可能想要在 Teams 应用中使用许多服务，并且这些服务中的大多数都需要身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 和 Teams。 Teams使用 Microsoft Graph 将用户配置文件信息存储在 Azure AD 中Graph本文将重点介绍使用 Azure AD 获取此信息的访问权限的身份验证。
+你可能想要在 Teams 应用中使用许多服务，其中大多数服务都需要进行身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 和 Teams。 Teams Microsoft Azure AD中存储用户配置文件信息Graph本文将重点介绍使用 Azure AD 访问此信息的身份验证。
 
-OAuth 2.0 是一种开放标准，供 Azure AD和许多其他服务提供商使用。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中处理身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流，目的是最终从 Azure AD 和 Microsoft Graph 中读取用户配置文件信息。
+OAuth 2.0 是一种开放标准，Azure AD服务提供商使用的身份验证。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中处理身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流，目的是最终从 Azure AD 和 Microsoft Graph 中读取用户配置文件信息。
 
-本文中的代码来自 Node Teams 中的 Teams [选项卡Microsoft Teams身份验证 (示例) ](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。 它包含一个静态选项卡，用于请求 Microsoft Graph访问令牌，并显示来自 Microsoft Azure AD 的当前用户的基本Azure AD。
+本文中的代码来自 Node Teams 中的Microsoft Teams[身份验证 (示例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)) 。 它包含一个静态选项卡，用于请求 Microsoft Graph访问令牌，并显示来自 Microsoft Azure AD 的当前用户的基本Azure AD。
 
 有关选项卡身份验证流的一般概述，请参阅选项卡中的 [身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)。
 
@@ -52,7 +52,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>注释
 
 * 您传递到的 URL `microsoftTeams.authentication.authenticate()` 是身份验证流的起始页。 此示例中为 `/tab-auth/simple-start`。 这应该与在应用程序注册门户Azure AD[的内容匹配](https://apps.dev.microsoft.com)。
 
@@ -91,7 +91,7 @@ microsoftTeams.getContext(function (context) {
 
 用户完成授权后，用户将被重定向到你在 上为你的应用指定的回调页面 `/tab-auth/simple-end`。
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>注释
 
 * 请参阅 [获取用户上下文信息](~/tabs/how-to/access-teams-context.md) ，帮助构建身份验证请求和 URL。 例如，可以使用用户的登录`login_hint`名作为登录Azure AD，这意味着用户可能需要键入更少的内容。 请记住，不应直接使用此上下文作为标识证明，因为攻击者可能会在恶意浏览器中加载你的页面，并为用户提供其需要的任何信息。
 * 尽管选项卡上下文提供了有关用户的有用信息，但请勿使用此信息对用户进行身份验证，无论是作为选项卡内容 URL `microsoftTeams.getContext()` 的 URL 参数获取还是通过调用 Microsoft Teams 客户端 SDK 中的 函数。 恶意参与者可能会使用自己的参数调用您的选项卡内容 URL，模拟 Microsoft Teams 的网页可以在 iframe `getContext()` 中加载您的选项卡内容 URL，并返回其自己的数据到 函数。 你应该将选项卡上下文中的标识相关信息视为提示，并验证这些信息，然后再使用。
@@ -100,7 +100,7 @@ microsoftTeams.getContext(function (context) {
 
 ## <a name="the-callback-page"></a>回调页面
 
-在上一部分中，你调用了 Azure AD 授权服务，并传入了用户Azure AD，以便用户能够拥有其自己的单一授权体验。 你的应用无法控制此体验中发生的情况。 它只知道当您调用您Azure AD的回调页面`/tab-auth/simple-end`时返回 () 。
+在上一部分中，你调用了 Azure AD 授权服务，并传入了用户Azure AD，以便用户拥有其自己的单一授权体验。 你的应用无法控制此体验中发生的情况。 它只知道当Azure AD您提供的回调页面`/tab-auth/simple-end`时返回 () 。
 
 在此页中，你需要根据用户返回的信息确定是成功还是失败Azure AD调用 或 `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()`。 如果登录成功，你将有权访问服务资源。
 
@@ -134,9 +134,9 @@ if (hashParams["error"]) {
 }
 ````
 
-此代码分析在使用帮助程序函数时Azure AD接收的键`window.location.hash``getHashParameters()`值对。 如果找到 `access_token`， `state` `notifySuccess()`且 值与在身份验证流开始时提供的 相同，它将通过调用 将访问令牌返回到 选项卡;否则，它将报告 错误 `notifyFailure()`。
+此代码分析在使用帮助程序函数时从Azure AD键值`window.location.hash``getHashParameters()`对。 如果找到 `access_token`， `state` `notifySuccess()`且 值与在身份验证流开始时提供的 相同，它将通过调用 将访问令牌返回到 选项卡;否则，它将报告 错误 `notifyFailure()`。
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>注释
 
 `NotifyFailure()` 具有以下预定义失败原因：
 
@@ -151,13 +151,13 @@ if (hashParams["error"]) {
 > Chrome 80 计划于 2020 年初发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 建议设置 Cookie 的预定用途，而不是依赖默认浏览器行为。 *请参阅* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md)。
 
 >[!NOTE]
->若要为免费和来宾Microsoft Teams获取正确的令牌，应用使用特定于租户的终结点 非常重要`https://login.microsoftonline.com/**{tenantId}**`。 你可以从自动程序消息或选项卡上下文获取 tenantId。 如果应用使用 `https://login.microsoftonline.com/common`，用户将获取不正确的令牌，并登录到"主页"租户，而不是当前已登录的租户。
+>若要为免费和来宾Microsoft Teams获取正确的令牌，应用使用租户特定的终结点 非常重要`https://login.microsoftonline.com/**{tenantId}**`。 你可以从自动程序消息或选项卡上下文获取 tenantId。 如果应用使用 `https://login.microsoftonline.com/common`，用户将获取不正确的令牌，并登录到"主页"租户，而不是当前已登录的租户。
 
-有关 Single Sign-On (SSO) 请参阅文章静 [默身份验证](~/tabs/how-to/authentication/auth-silent-AAD.md)。
+有关单一身份验证Sign-On (SSO) 请参阅文章静 [默身份验证](~/tabs/how-to/authentication/auth-silent-AAD.md)。
 
 ## <a name="code-sample"></a>代码示例
 
-显示使用选项卡身份验证过程的示例Azure AD：
+显示使用以下方法的选项卡身份验证过程Azure AD：
 
 | **示例名称** | **说明** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
@@ -165,7 +165,7 @@ if (hashParams["error"]) {
 
 ## <a name="see-also"></a>另请参阅
 
-* [规划用户身份验证](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [规划用户身份验证](../../../concepts/design/understand-use-cases.md)
 * [为 Microsoft Teams 设计选项卡](~/tabs/design/tabs.md)
 * [无提示的身份验证](~/tabs/how-to/authentication/auth-silent-aad.md)
 * [向邮件扩展添加身份验证](~/messaging-extensions/how-to/add-authentication.md)
