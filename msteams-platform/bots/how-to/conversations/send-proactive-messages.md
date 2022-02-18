@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: 发送消息, 获取用户 ID、频道 ID、对话 ID
-ms.openlocfilehash: fc08e9413925f04a0f6e1a01ed7feb6fccd5e8d2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
+ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059770"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62896325"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -104,9 +104,6 @@ ms.locfileid: "62059770"
 * 用户接下来可以做什么：用户可以根据消息内容执行所需的操作。
 
 ## <a name="proactively-install-your-app-using-graph"></a>使用 Graph 主动安装应用
-
-> [!Note]
-> 目前，使用 Graph 主动安装应用处于 beta 阶段。
 
 主动向以前未安装或未与应用交互的用户发送消息。 例如，你希望使用[公司通信器](~/samples/app-templates.md#company-communicator)向整个组织发送消息。 在这种情况下，可以使用 Graph API 主动为用户安装应用。 缓存应用在安装时收到的 `conversationUpdate` 事件中的必要值。
 
@@ -259,9 +256,6 @@ POST /v3/conversations
 ```
 
 ---
-
-> [!NOTE]
-> 目前，机器人无法通过机器人 API 或 Graph 创建群聊。 `createConversation` 仅适用于一对一聊天。
 
 ## <a name="code-sample"></a>代码示例
 
