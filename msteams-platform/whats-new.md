@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 0aa3c25b07100ba71fbf462ced4ffc9d68ee7397
-ms.sourcegitcommit: 9657cc2e25a554af96e7578c0abc7f868b65ca8c
+ms.openlocfilehash: a6cdb2cf19895b7a7179ec100a66066e948076d1
+ms.sourcegitcommit: 40aade608ee21f5d7d813bd145bef5736dc647f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/17/2022
-ms.locfileid: "62878113"
+ms.locfileid: "62881635"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "62878113"
 
 | Date | 更新 | 在此处查找  |
 | --- | --- | --- |
+|02/17/2022| 提交应用后会发生什么？| 分发应用>发布到 Teams 应用商店>[概述](concepts/deploy-and-publish/appsource/publish.md)|
 |02/15/2022| 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人>发送和接收文件>[如何将文件从机器人上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
 |2022 年 2 月 11 日| 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| 引入创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
