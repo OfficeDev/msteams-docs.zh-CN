@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 团队深层链接深层链接
-ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 624bc47887950e98e49aa834f0a040e7ee234045
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821386"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897912"
 ---
 # <a name="create-deep-links"></a>创建深层链接 
 
@@ -80,16 +80,32 @@ ms.locfileid: "62821386"
 | `entityId`&emsp; | 选项卡中项的 ID，在[配置选项卡](~/tabs/how-to/create-tab-pages/configuration-page.md)时提供。|Tasklist123|
 | `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 如果客户端不支持呈现选项卡，则使用回退 URL 的可选字段。 | `https://tasklist.example.com/123` 或 `https://tasklist.example.com/list123/task456` |
 | `entityLabel` 或 `subEntityLabel`&emsp; | 选项卡中项的标签，显示深层链接时要使用。 | 任务列表 123 或 任务 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 包含以下字段的 JSON 对象：</br></br> * 选项卡中项的 ID。 </br></br> * 选项卡[上下文](~/tabs/how-to/access-teams-context.md)中可用的 Microsoft Teams 频道 ID。 | 
-| `subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
-| `channelId`&emsp; | 选项卡[上下文](~/tabs/how-to/access-teams-context.md)中提供的 Microsoft Teams 频道 ID。 此属性仅在 **团队** 范围内的可配置选项卡中可用。 它在静态选项卡中不可用，静态选项卡的作用域为 **个人**。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
+| `context.channelId`&emsp; | 选项卡 [上下文](~/tabs/how-to/access-teams-context.md) 中提供的 Microsoft Teams 频道 ID。 此属性仅在 **团队** 范围内的可配置选项卡中可用。 它在静态选项卡中不可用，静态选项卡的作用域为 **个人**。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `chatId`&emsp; | 可从选项卡 [上下文](~/tabs/how-to/access-teams-context.md) 中获得的用于群组和会议聊天的 ChatId。 | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
+| `contextType`&emsp; |  聊天是唯一受支持的会议上下文类型 | 聊天 |
 
-示例：
+**示例**：
 
-* 链接到可配置选项卡本身：`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* 链接到可配置选项卡中的任务项：`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* 链接到静态选项卡本身：`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* 在静态选项卡中链接到任务项：`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* 链接到静态 (个人) 选项卡本身:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+
+* 链接到静态 (个人) 选项卡内的任务项目:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+
+* 链接到可配置选项卡本身：
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* 链接到可配置选项卡中的任务项：
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+    
+* 链接到添加到会议或群组聊天的选项卡应用: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > 确保所有查询参数都正确编码了 URI。 必须使用最后一个示例遵循前面的示例：
