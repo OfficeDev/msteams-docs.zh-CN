@@ -2,11 +2,19 @@
   href: mstdd-landing.yml
 - name: 新变化？
   href: whats-new.md
+- name: 术语表
+  href: get-started/glossary.md
 - name: 概述
   expanded: false
   items:
-    - name: 构建 Microsoft Teams 应用
+    - name: 适合的 Teams 应用
       href: overview.md
+    - name: 从创意到 Teams 应用
+      href: overview-story.md
+    - name: 探索 Teams 平台功能
+      href: overview-explore.md
+    - name: Teams 解决方案
+      href: overview-solution.md
 - name: 入门
   expanded: false
   items:
@@ -22,34 +30,18 @@
       href: sbs-gs-nodejs.yml
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
-- name: 应用程序基础知识
+- name: 计划应用
   items:
     - name: 概述
       href: concepts/app-fundamentals-overview.md
-    - name: 团队应用程序功能
-      href: concepts/capabilities-overview.md
-    - name: 团队应用程序入口点
-      href: concepts/extensibility-points.md
     - name: 了解用例
       href: concepts/design/understand-use-cases.md
-    - name: 将用例映射到 Teams 应用功能
+    - name: 将用例与 Teams 功能相结合
       href: concepts/design/map-use-cases.md
+    - name: Teams 应用规划清单
+      href: concepts/design/planning-checklist.md
     - name: 规划 Teams 移动版的响应式选项卡
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-    - name: 设备功能
-      items:
-        - name: 概述
-          href: concepts/device-capabilities/device-capabilities-overview.md
-        - name: 请求设备权限
-          href: concepts/device-capabilities/native-device-permissions.md
-        - name: 浏览器的设备权限
-          href: concepts/device-capabilities/browser-device-permissions.md
-        - name: 集成媒体功能
-          href: concepts/device-capabilities/mobile-camera-image-permissions.md
-        - name: 集成 QR 或条码扫描仪功能
-          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-        - name: 集成位置功能
-          href: concepts/device-capabilities/location-capability.md
 - name: 设计应用
   items:
     - name: 概述
@@ -381,6 +373,20 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: 为邮件扩展启用 SSO
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
+- name: 集成设备功能
+  items:
+    - name: 概述
+      href: concepts/device-capabilities/device-capabilities-overview.md
+    - name: 请求设备权限
+      href: concepts/device-capabilities/native-device-permissions.md
+    - name: 浏览器的设备权限
+      href: concepts/device-capabilities/browser-device-permissions.md
+    - name: 集成媒体功能
+      href: concepts/device-capabilities/mobile-camera-image-permissions.md
+    - name: 集成 QR 或条码扫描仪功能
+      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    - name: 集成位置功能
+      href: concepts/device-capabilities/location-capability.md
 - name: 利用 Microsoft Graph 及 Teams 数据
   items:
     - name: 概述

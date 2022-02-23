@@ -1,81 +1,165 @@
 ---
 title: 了解应用功能
 author: heath-hamilton
-description: 应用程序Teams，如选项卡、聊天机器人、消息传递扩展以及 Webhook 和连接器的说明。
+description: 描述 Teams 应用功能，例如选项卡、机器人、消息传递扩展以及 Webhook 和连接器; 应用范围，例如个人应用和共享应用
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
-keywords: 选项卡聊天机器人消息扩展 Webhooks 连接器 gcc
-ms.openlocfilehash: 9b60556fce448eeecb1f3b96460ea53c8abd5be5
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
-ms.translationtype: MT
+keywords: 选项卡机器人消息传递扩展 Webhook 连接器
+ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246076"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897968"
 ---
-# <a name="understand-microsoft-teams-app-capabilities"></a>了解Microsoft Teams应用功能
+# <a name="understand-microsoft-teams-app-features"></a>了解 Microsoft Teams 应用功能
 
-扩展性或入口点是应用向用户自我清单的不同方式。 例如，用户可以与画布选项卡上的应用交互以执行活动，或者可能会选择使用对话机器人执行相同的操作。 各种用于构建应用Teams允许你增加其使用范围。
+可通过多种方式扩展 Teams，因此每个应用都是唯一的。 Teams 应用可以以不同的方式向用户说明自身。 Teams 应用功能包括:
 
-有多种方法可以扩展Teams，因此每个应用都是唯一的。 一些应用程序只有一个功能，如 webhook，而其他功能则具有多个功能来为用户提供各种选项。 例如，你的应用可以在中心位置（即选项卡）中显示数据，并通过对话界面（即自动程序）显示相同的 **信息**。
+- 应用功能
+- 应用程序范围
+
+例如，用户可以在画布选项卡上与应用进行交互以执行活动，也可以选择使用对话机器人执行相同的操作。 仅能有一个功能 (如 Webhook) 而其他则具有多个功能，可为用户提供各种选项。
+
+这些功能可以存在于不同的范围内。 例如，应用可以在中央共享位置 (即选项卡) 中显示数据，并通过个人对话界面 (即机器人) 显示相同的信息。
 
 ## <a name="app-capabilities"></a>应用功能
 
-你的Teams应用具有以下一项或全部核心功能：
+若要扩展应用，必须了解协作空间中的所有核心功能和工作切入点。 可以尝试使用扩展点来构建应用。 重要的应用项目组件可帮助你正确配置应用页面。
 
-* [选项卡](../tabs/what-are-tabs.md)
-* [消息扩展](../messaging-extensions/what-are-messaging-extensions.md)
-* [机器人](../bots/what-are-bots.md)
-* [Webhook 和连接器](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+你的 Teams 应用具有以下一个或全部核心功能:
 
-你的应用还可以利用高级功能，如适用于 Graph[的 Microsoft Teams。](/graph/teams-concept-overview)
+:::row:::
+   :::column span="":::
+### <a name="personal-apps"></a>个人应用
 
-下图展示了哪些功能将为你提供你需要的应用功能：
+[个人应用](../concepts/design/personal-apps.md) 是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
 
-:::image type="content" source="../assets/images/capabilities-overview.png" alt-text="&quot;心图&quot;说明了Teams功能是什么。":::
+   :::column-end:::
 
-## <a name="always-consider-your-user"></a>始终考虑你的用户
+   :::column span="":::
 
-在熟悉应用开发Teams，了解它的核心基础。 您了解到存在多个生成特定功能的方法。 在这种情况下，请考虑如何为用户提供更本机的体验。
-例如，可以在作为应用程序中的选项卡构建的表单中收集用户输入。 您还可以使用任务模块完成此操作，而无需切换视图和中断用户的工作流。 选择与用户的常规工作流的偏差最小扩展点很重要。
+:::image type="content" source="../assets/images/overview-personal-apps-2021.png" alt-text="Teams 客户端中个人应用的外观的概念表示形式。" border="false":::
 
-## <a name="government-community-cloud-gcc"></a>政府社区云 (GCC)
+   :::column-end:::
 
-政府社区云是一个以政府为中心的商业环境副本。 国防部 (DOD) 和联邦承包商必须满足严格的网络安全和合规性要求。 为此，GCC-High满足 DOD 和联邦承包商的需求。 GCC-High是 DOD 云的副本，但存在于其自己的自主环境中。 DOD 云仅为国防部生成。
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="tabs"></a>选项卡
+
+在 [选项卡](../tabs/what-are-tabs.md) 中显示基于 Web 的内容，用户可以在其中一起讨论和处理它。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-channel-chat-apps-2021.png" alt-text="Teams 客户端中选项卡外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="bots"></a>机器人
+
+对话通常会导致需要执行某些操作 (生成订单、查看我的代码、检查票证状态等)。 [机器人](../bots/what-are-bots.md)可以直接在 Teams 中启动这些类型的工作流。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-bots-2021.png" alt-text="在 Teams 客户端中机器人外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="messaging-extensions"></a>消息传递扩展
+
+使用 [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)，可以在对话中快速共享外部信息。 还可以对消息执行操作，例如基于频道帖子的内容创建帮助票证。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-messaging-extensions-2021.png" alt-text="消息传递扩展在 Teams 客户端中的外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="meeting-extensions"></a>会议扩展
+
+有一些 [将应用纳入 Teams 通话体验](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) 的选项。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-meeting-extensions-2021.png" alt-text="Teams 客户端中会议扩展的外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="webhooks-and-connectors"></a>Webhook 和连接器
+
+[传入 Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) 是一种将通知从其他应用自动发送到 Teams 频道的简单方法。 使用 [传出 webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)，向 Web 服务发送@mention消息。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../assets/images/overview-connectors.png" alt-text="连接器在 Teams 客户端中的外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
+
+[Microsoft Graph API for Teams](/graph/teams-concept-overview) 提供有关团队、频道、用户和消息的信息的访问权限，这些信息可帮助你为应用创建或增强功能 (如丰富通知)。
+
+   :::column-end:::
 
 > [!NOTE]
-> Teams发展了：
+> Teams 应用商店已演变:
 > 
-> 以前，LOB 应用通过选择磁贴上的省略号进行更新。 通过更新Teams应用商店体验，你现在可以通过登录到管理中心来更新 LOB [Teams应用](https://admin.teams.microsoft.com)。
+> 以前，LOB 应用是通过选择磁贴上的省略号来更新的。 借助更新的 Teams 应用商店体验，现在可以通过登录到 [Teams 管理中心](https://admin.teams.microsoft.com) 来更新 LOB 应用。
 
-下表包括 Teams、GCC-High 和 DOD GCC和可用性：
+:::image type="content" source="../assets/images/overview-graph.png" alt-text="适用于 Teams 的 Microsoft Graph API 的概念表示形式。" border="false":::
 
-| 功能   | GCC | GCC-High | DOD |
-|-------------|---------|
-| Teams开发的应用一样，拥有的应用 | ✔️应用是否已启用GCC。 | ✔️应用是否已启用，GCC-高。 | ✔️ DOD，则启用应用。 |
-| Microsoft 应用 | ✔️ Microsoft 应用符合GCC | ✔️符合应用的 Microsoft GCC-High | ✔️符合 DOD 的 Microsoft 应用 |
-| 3p 或第三方应用 | ✔️第三方应用可用。 默认情况下禁用，租户管理员自行决定是否启用它。 | ❌ | ❌ |
-| 机器人 | ✔️ | ❌ | ❌ |
-| 自定义或 Lob 选项卡应用 |  ✔️ | ✔️ | ✔️ |
-| 旁加载应用 | ✔️ | ❌ | ❌ |
-| 自定义或 Lob 机器人 | ✔️ | ❌ | ❌ |
-| 自定义消息传递扩展 | ❌ | ❌ | ❌ |
-| 自定义连接器 | ❌ | ❌ | ❌ |
+   :::column-end:::
+:::row-end:::
 
-以下列表可帮助标识这些功能GCC、GCC-High 和 DOD 的可用性：
+## <a name="choose-the-correct-scope-for-your-app"></a>为应用选择正确的范围
 
-* 有关第三方应用，请参阅 [Web 应用](../samples/integrating-web-apps.md) 和 [会议应用程序扩展性](../apps-in-teams-meetings/meeting-app-extensibility.md)。
-* 对于机器人，请参阅为[Teams](../get-started/first-app-bot.md)生成你的第一个对话机器人、设计[Teams](../bots/design/bots.md)自动程序、将机器人添加到[Microsoft Teams 应用](../resources/bot-v3/bots-overview.md)和 Teams。 [](../bots/what-are-bots.md)
-* 有关旁加载应用，请参阅启用[Teams自定义](../concepts/design/enable-app-customization.md)应用、分配[Microsoft Teams 应用](../concepts/deploy-and-publish/apps-publish-overview.md)，Upload[应用在](../concepts/deploy-and-publish/apps-upload.md)Teams 中。
-* 有关自定义连接器，请参阅[create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md)。
+可从以下选项中选择应用范围:
 
-## <a name="next-step"></a>后续步骤
-
-> [!div class="nextstepaction"]
-> [团队应用程序入口点](../concepts/extensibility-points.md)
+- 个人应用体验: 个人应用是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
+- 共享应用体验: 团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间中的每个人使用。 协作空间通常侧重于应用交互的工作流或解锁新的社交交互。
 
 ## <a name="see-also"></a>另请参阅
 
-* [生成适用于Teams](../overview.md)
-* [生成首个Microsoft Teams应用](../build-your-first-app/build-first-app-overview.md)
+* [生成适用于 Teams 的应用](../overview.md)
+* [构建第一个 Microsoft Teams 应用](../build-your-first-app/build-first-app-overview.md)
