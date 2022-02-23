@@ -1,81 +1,184 @@
 ---
-title: 了解应用的用例
+title: 了解应用的用例和 Teams 功能
 author: heath-hamilton
-description: 规划应用、了解用户及其需求、了解应用可以解决的用户问题、规划用户身份验证及其载入体验
+description: 规划应用、了解用户及其需求、了解应用将解决的用户问题、规划用户身份验证及其载入体验
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 93ab668a4ac317228186508eb721f1900add0de8
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948387"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62898152"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
-Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../concepts/extensibility-points.md)元素。
+在 Teams 的协作社交框架中，你可以使用 Teams 应用解决各种用户需求。 例如，在实现有效协作方面弥补差距的应用非常合适。
+
+应用用户及其应用要求是确定你将要进行的所有应用选择的基本准则。 构建应用设计、选择功能、确定生成和测试环境以及应用分发遵循用户对应用的要求。
+
+如果要通过应用满足用户要求，首先需要了解这些要求。
+
+- **了解你的用户**:
+  - 识别用户问题并确定用户遇到的一些常见问题的解决方案。
+  - 通过查找 Teams 功能的正确组合来建立 Teams 应用，以满足用户的需求。
+  - 了解用例，了解最终用户如何与应用进行交互。
+
+- **了解问题**: 解决应用必须解决的核心问题。
+
+- **请考虑集成**: 标识应用所需的应用和服务，例如身份验证、Microsoft Graph 或 Web 应用。
+
+## <a name="microsoft-teams-app-features"></a>Microsoft Teams 应用功能
+
+可通过多种方式扩展 Teams，因此每个应用都是唯一的。 Teams 应用功能计划:
+
+- [应用功能](#app-capabilities)
+- [应用程序范围](#app-scope)
+
+### <a name="app-capabilities"></a>应用功能
+
+功能是可在应用中生成的核心功能。 它们也称为入口点或扩展点，因为它们启用了集成和交互。
+
+你的 Teams 应用具有以下一个或全部核心功能:
+
+:::row:::
+   :::column span="":::
+
+#### <a name="personal-apps"></a>个人应用
+
+[个人应用](../../concepts/design/personal-apps.md) 是一个专用空间或机器人，可帮助用户专注于自己的任务或查看相关活动。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Teams 客户端中个人应用的外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### <a name="tabs"></a>选项卡
+
+在 [选项卡](../../tabs/what-are-tabs.md) 中显示基于 Web 的内容，用户可以在其中一起讨论和处理它。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Teams 客户端中选项卡外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### <a name="bots"></a>机器人
+
+对话通常会导致需要执行某些操作 (生成订单、查看代码、检查票证状态等)。 [机器人](../../bots/what-are-bots.md)可以直接在 Teams 中启动这些类型的工作流。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="在 Teams 客户端中机器人外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="messaging-extensions"></a>消息传递扩展
+
+使用 [消息传递扩展](../../messaging-extensions/what-are-messaging-extensions.md)，可以搜索和共享外部信息。 还可以对消息执行操作，例如基于频道帖子的内容创建帮助票证。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="消息传递扩展在 Teams 客户端中的外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="meeting-extensions"></a>会议扩展
+
+有一些 [将应用纳入 Teams 通话体验](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md) 的选项。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Teams 客户端中会议扩展的外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="webhooks-and-connectors"></a>Webhook 和连接器
+
+[传入 Webhook](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) 是一种将通知从其他应用自动发送到 Teams 频道的简单方法。 使用 [传出 webhook](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)，可以向 Web 服务发送 @提及消息。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="连接器在 Teams 客户端中的外观的概念表示形式。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
+
+[Microsoft Graph API for Teams](/graph/teams-concept-overview) 提供有关团队、频道、用户和消息的信息的访问权限，这些信息可帮助你为应用创建或增强功能。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="适用于 Teams 的 Microsoft Graph API 的概念表示形式。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
 > [!NOTE]
-> 在开始构建用例之前，你必须深入了解Teams功能，以及使用这些功能的 Teams功能。
+> Teams 应用商店已演变:
+> 
+> 以前，LOB 应用是通过选择磁贴上的省略号来更新的。 借助更新的 Teams 应用商店体验，现在可以通过登录到 [Teams 管理中心](https://admin.teams.microsoft.com) 来更新 LOB 应用。
 
-与用户交互的每个方法都有其优点和缺点。 构建出色的Teams应用就是找到满足用户需求所需的正确组合。 如果要满足这些需求，首先需要了解这些需求。
+### <a name="app-scope"></a>应用程序范围
 
-## <a name="understand-the-problem"></a>了解问题
+应用可以具有以下范围之一:
 
-每个应用都有一个核心问题或需要解决的问题。 在开始生成应用之前，你需要阐明该问题是什么。 它的核心Teams是一个协作平台，因此在实现有效协作方面架起桥梁的应用非常适合。 它还是一个社交平台，本机跨平台，位于 Office 365 的核心，并提供个人画布，供你创建应用。 在此社交平台中，可以通过一款应用满足各种Teams需求。 如果了解要尝试解决的问题，就可以解决各种各样的问题。 在开始生成应用之前，请提出相关问题，例如：
+- **个人应用体验**: 个人应用是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
+- **共享应用体验**: 团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间中的每个人使用。 协作空间通常侧重于应用交互的工作流或解锁新的社交交互。
 
-* 用户当前使用的状态系统的优缺点是什么？
-* 要解决的用户所面临的问题是什么？
-* 用户在当前执行此过程的方式中喜欢和喜欢哪些功能？
+应用可以存在于不同的范围内。 例如：
 
-## <a name="understand-your-user"></a>了解用户
+- 应用可以在中央共享位置 (即选项卡) 中显示数据。
+- 它还可以通过个人对话界面 (即机器人) 显示相同的信息。
 
-了解用户是谁，并可以确定正确的分发模型。 它可以帮助你确定用户如何使用Teams。 提出相关问题，例如：
-
-* 用户主要是移动客户端上的一线工作人员吗？
-* 你是否希望许多来宾用户需要访问你的应用？
-* 他们使用团队和频道还是主要使用群聊？
-* 主要用户的技术有多复杂？
-* 是否需要全面的载入体验或一些指针？
-
-有时答案是，我们希望为任何地方的所有Teams *解决此问题。* 如果是这种情况，请花些时间了解发布到 [AppSource 需要哪些时间](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)。
-
-## <a name="understand-the-limitations-of-the-app"></a>了解应用程序的限制
-
-了解数据辅助功能应用和数据驻留要求的限制将有助于你设计更好的应用。 这一点很重要，因为了解谁拥有 API 的数据和可用性会影响解决方案体系结构。 同样，请提出相关问题，例如：
-
-* 当前应用的后端集成面临的难题是什么？
-* Who拥有后端数据？ 内部或第三方。
-* 是否有影响应用正常运行的防火墙？
-* 是否有 API 可以访问运行应用所需的数据？ 
-
-## <a name="provide-authentication"></a>提供身份验证
-
-您必须提前确定您是否需要保护要公开的服务以及处于什么级别。 请记住，Teams应用程序中公开的 Web 服务通过 Internet 公开提供。 因此，如果你需要保护他们，立即开始思考它。 如果需要一个解决方案，要求您为租户外的用户提供来宾访问，则需要设置访问限制和权限来保护机密信息。 需要考虑来宾用户访问的限制，需要设计应用。 因此，请提问，例如： 
-
-* 用户将基于其角色访问不同的数据视图吗？
-* 是否涉及 PII？
-* 交互还会基于用户角色吗？
-* 外部用户将访问该应用吗？
-
-## <a name="decide-what-goes-in-teams"></a>确定要Teams
-
-无论是构建新的解决方案还是将现有解决方案引入Teams，决定整个应用是否将位于 Teams 客户端中非常重要。 检查仅引入部分体验是否有意义。 通过选项卡、消息传递扩展、任务模块、自适应卡片和对话机器人的组合，你可以完全在 Teams。
-请记住您的用户是谁以及您尝试解决的问题。 他们已有一个系统来解决大多数问题，或者你只需将功能的一个子集扩展到Teams？ 通常，如果要引入解决方案的一部分，则必须专注于共享、协作、启动和监视工作流。
-
-## <a name="plan-the-onboarding-experience"></a>规划用户体验
-
-应用的载入体验可能是成功还是失败。 对于应用的每个功能以及可以安装该功能的每个上下文，你必须制定一个计划，了解如何进行自我介绍。 在一对一聊天中安装对话机器人时，在一对一聊天中安装聊天机器人时，其介绍方式有所不同。 当用户首次在频道中配置选项卡时会发生什么情况？ 如果你使用消息传递扩展共享卡片，向"了解更多"页面添加一个小链接以帮助向用户介绍你的应用还可以执行哪些操作是否有意义？
-
-了解用户是谁有助于打造正确的体验。 你是否希望大多数用户已经拥有你的应用所针对的一些上下文，或者已经在另一个上下文中使用了你的服务？ 他们之前是否没有任何知识进入你的应用？ 请牢记关键用户的载入体验。
-
-请记住，用户可以以多种方式发现你的应用。 他们可能是安装应用的用户，或者当另一个用户使用它来共享内容时，可能会将其引入你的应用。 如果你希望更多用户使用你的应用，则必须寻找向每个人介绍自己的方法。
-
-最重要的是，请记住没有人喜欢垃圾邮件。 使用个人和频道消息进行爆炸是快速取消安装的良好方法！
-
-## <a name="plan-for-the-future"></a>规划未来
-
-确定用户希望在当前解决方案中具有的新功能。 如果你有要添加到应用的新功能的路线图，则设计和体系结构将受到影响。
+用户可以在画布选项卡上与应用进行交互以执行活动，也可以选择使用对话机器人执行相同的操作。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -84,4 +187,4 @@ Microsoft Teams平台提供了应用可以利用的各种入口点和[UI](../../
 
 ## <a name="see-also"></a>另请参阅
 
-[设备功能](~/concepts/device-capabilities/device-capabilities-overview.md)
+[集成设备功能](~/concepts/device-capabilities/device-capabilities-overview.md)
