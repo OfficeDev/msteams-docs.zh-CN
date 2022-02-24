@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fd7d2075d79e5c54e9257b71f8bf351fe3cd6823
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: 205b95e84d834d1171227d967257e72bc6dee16b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896318"
+ms.locfileid: "62898061"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -95,7 +95,7 @@ ms.locfileid: "62896318"
 
      1. 使用 Teams [开发人员门户](https://dev.teams.microsoft.com/home) 验证应用包，以确定并修复全部应用包错误。
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="存储验证":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="开发人员门户中的 Teams 商店应用验证" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
  
      1. 在提交应用之前，自行全面测试你的应用，以确保它符合应用商店策略。 在 Teams 中旁加载应用，并测试应用的端到端用户流。 确保功能按预期工作，链接不会中断，用户体验不会受阻，并且会明确突出显示任何限制。
 
@@ -130,6 +130,6 @@ ms.locfileid: "62896318"
 * [发布到 Microsoft 365 应用商店](/office/dev/store/)
 * [上传 Teams 应用](~/concepts/deploy-and-publish/apps-upload.md)
 * [将 Teams 应用发布到组织](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-* [为用户规划载入体验](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [为用户规划载入体验](../../design/planning-checklist.md#plan-beyond-app-building)
 * [在移动设备上分发选项卡应用](../../../tabs/design/tabs-mobile.md#distribution)
 * [针对盈利应用的测试预览](prepare/Test-preview-for-monetized-apps.md)
