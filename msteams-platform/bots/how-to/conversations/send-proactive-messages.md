@@ -5,28 +5,29 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: 发送消息, 获取用户 ID、频道 ID、对话 ID
-ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: e62f5715017deac6919de6b0b70f83ff626fd64b
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896325"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355732"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-主动消息是由机器人发送的、不响应用户请求的任何消息。 这可能包括各种消息，例如：
+主动消息是由机器人发送的、不响应用户请求的任何消息。可以包含多种消息，例如:
 
 * 欢迎消息
 * Notifications
 * 计划的消息
 
-若要让机器人向用户、群聊或团队发送主动消息，它必须具有发送消息的权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。 如果需要，你可以在团队中[使用 Microsoft Graph 主动安装应用](#proactively-install-your-app-using-graph)，或使用[应用策略](/microsoftteams/teams-custom-app-policies-and-settings)将应用推送给租户中的团队和用户。 对于用户，必须为你的用户安装应用，或者该用户必须是安装应用的团队的成员。
+若要让机器人向用户、群聊或团队发送主动消息，它必须具有发送消息的权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。
+如果需要，你可以在团队中[使用 Microsoft Graph 主动安装应用](#proactively-install-your-app-using-graph)，或使用[应用策略](/microsoftteams/teams-custom-app-policies-and-settings)将应用推送给租户中的团队和用户。 对于用户，必须为你的用户安装应用，或者该用户必须是安装应用的团队的成员。
 
 发送主动消息与发送常规消息不同。 没有用于回复的活动 `turnContext`。 在发送消息之前，你必须先创建对话。 例如，频道中的新一对一聊天或新对话线程。 你不能在具有主动消息传递的团队中创建新的群聊或新频道。
 
-**发送主动消息**
+若要发送主动邮件，请按照以下步骤操作:
 
 1. [获取用户 ID、团队 ID 或频道 ID](#get-the-user-id-team-id-or-channel-id) (如果需要)。
 1. [创建对话](#create-the-conversation)(如果需要)。
