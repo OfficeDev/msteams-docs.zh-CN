@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: 选项卡机器人消息传递扩展 Webhook 连接器
-ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897968"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355543"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>了解 Microsoft Teams 应用功能
 
@@ -23,7 +23,7 @@ ms.locfileid: "62897968"
 
 例如，用户可以在画布选项卡上与应用进行交互以执行活动，也可以选择使用对话机器人执行相同的操作。 仅能有一个功能 (如 Webhook) 而其他则具有多个功能，可为用户提供各种选项。
 
-这些功能可以存在于不同的范围内。 例如，应用可以在中央共享位置 (即选项卡) 中显示数据，并通过个人对话界面 (即机器人) 显示相同的信息。
+这些功能可以存在于不同作用域。例如，应用可以在中央共享位置 (即选项卡) 中显示数据，并通过个人对话界面 (即机器人) 显示相同的信息。
 
 ## <a name="app-capabilities"></a>应用功能
 
@@ -142,15 +142,15 @@ ms.locfileid: "62897968"
 
    :::column-end:::
 
-> [!NOTE]
-> Teams 应用商店已演变:
-> 
-> 以前，LOB 应用是通过选择磁贴上的省略号来更新的。 借助更新的 Teams 应用商店体验，现在可以通过登录到 [Teams 管理中心](https://admin.teams.microsoft.com) 来更新 LOB 应用。
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-graph.png" alt-text="适用于 Teams 的 Microsoft Graph API 的概念表示形式。" border="false":::
 
    :::column-end:::
 :::row-end:::
+
+> [!NOTE]
+> Teams 应用商店更新了: 以前，LOB 应用是通过选择磁贴上的省略号来更新的。 借助更新的 Teams 应用商店体验，现在可以通过登录到 [Teams 管理中心](https://admin.teams.microsoft.com) 来更新 LOB 应用。
 
 ## <a name="choose-the-correct-scope-for-your-app"></a>为应用选择正确的范围
 

@@ -1,16 +1,16 @@
 ---
-title: 概述 - Teams 应用商店发布过程
+title: 概述–将应用发布到 Microsoft Teams 商店
 description: 介绍将应用提交到合作伙伴中心并将其发布到 Microsoft Teams 应用商店（和 AppSource）的过程。
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 205b95e84d834d1171227d967257e72bc6dee16b
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 777892c0e1437b3e8022cf2929b160e3602fe035
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898061"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355746"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -51,33 +51,39 @@ ms.locfileid: "62898061"
 
 * **深层功能和体验测试**
 
-  验证程序会全面审查你的应用，以确保符合 [Microsoft 商业市场认证策略](/legal/marketplace/certification-policies)，重点关注深层功能和用户体验测试、可用性检查和元数据检查。 跨桌面、Web 和移动客户端执行应用验证。
+  验证程序会全面审查你的应用，以确保符合 [Microsoft 商业市场认证策略](/legal/marketplace/certification-policies)，重点关注深层功能和用户体验测试、可用性检查和元数据检查。应用验证可跨桌面、Web、移动客户端完成。
 
 * **通过引导式服务发布应用**
 
   如果应用未发现任何问题，将批准应用并发布到 Teams 应用商店。 如果出现问题，你将收到来自合作伙伴中心的自动验证报告，其中包含故障详细信息。 为了帮助你将应用成功发布到 Teams 应用商店，并指导你完成此过程，验证团队将通过我们的引导式服务[teamsubm@microsoft.com](mailto:teamsubm@microsoft.com)向你发送一封个性化的电子邮件，其中包括以下信息：
 
-   * 所有问题的摘要
+  * 所有问题的摘要
 
-   * 策略链接和分类失败或问题的详细信息： 
+  * 策略链接和分类失败或问题的详细信息： 
 
-     * 强制修复：必须在应用批准之前修复这些问题。
+    * 强制修复：必须在应用批准之前修复这些问题。
 
-     * 建议修复：可以在应用审批后修复这些问题，因为这是改善应用体验的建议。
+    * 建议修复：可以在应用审批后修复这些问题，因为这是改善应用体验的建议。
 
-     * 阻止程序：这些问题会阻止验证团队进一步测试你的应用功能，必须解决此问题才能继续验证。
+    * 阻止程序：这些问题会阻止验证团队进一步测试你的应用功能，必须解决此问题才能继续验证。
 
-     * 查询：可以共享这些查询，获取与应用相关的特定问题答案。
+    * 查询：可以共享这些查询，获取与应用相关的特定问题答案。
 
-   * 通过书面说明或视频格式重新创建问题的步骤。
+  * 通过书面说明或视频格式重新创建问题的步骤。
 
-   * 修复报告问题的建议与，其中包含指导文件的链接。
- 
+  * 修复报告问题的建议与，其中包含指导文件的链接。
+
   查看问题列表后，修复所有报告的问题并通过电子邮件共享更新的应用包，以便验证团队重新全面验证你的应用。 如果有任何与报告问题相关的查询，请联系 [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com)的验证团队。
 
   如果应用中发现剩余问题或回归问题，验证团队将与你共享更新的验证报告。 如果你的应用有阻止程序，则在解决阻止程序后验证应用时，可能会出现新问题报告。 有时，验证团队还会关注部署修复程序后，应用中的回归问题。 需要一些重新提交以关闭包含 Bug 应用的所有问题，并批准将其发布到 Teams 应用商店。
 
   关闭所有报告的问题，在合作伙伴中心进行最终提交后，验证团队将批准并发布你的应用。 允许应用程序在 Teams 商店中至少有一个工作日可用。
+
+* **分析应用使用情况**
+
+  批准并发布应用后，可以在合作伙伴中心中的 [Teams 应用使用情况报告](/office/dev/store/teams-apps-usage)中跟踪应用使用情况。 指标包括每月、每日、每周活动用户，以及可跟踪改动率和使用频率的保留期和强度图表。
+
+  新发布的应用的数据大约需要一周时间才会显示在报表中。
 
 ## <a name="tips-for-rapid-approval-to-publish-your-app"></a>快速批准发布应用的提示
 
@@ -96,7 +102,7 @@ ms.locfileid: "62898061"
      1. 使用 Teams [开发人员门户](https://dev.teams.microsoft.com/home) 验证应用包，以确定并修复全部应用包错误。
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="开发人员门户中的 Teams 商店应用验证" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
- 
+
      1. 在提交应用之前，自行全面测试你的应用，以确保它符合应用商店策略。 在 Teams 中旁加载应用，并测试应用的端到端用户流。 确保功能按预期工作，链接不会中断，用户体验不会受阻，并且会明确突出显示任何限制。
 
      1. 跨桌面、Web 和移动客户端测试应用。 确保应用在不同外形类型中具有响应能力。
@@ -111,9 +117,9 @@ ms.locfileid: "62898061"
 
       1. 详细说明应用功能和受支持方案的测试说明。
 
-      1. 如果应用需要其他配置来访问应用功能，请设置说明。 或者，如果应用需要复杂的配置，还可以提供 [预配的演示租户](/office/developer-program/microsoft-365-developer-program-get-started) 管理员访问权限，以便验证程序可以跳过配置步骤。
+      1. 如果应用需要其他配置来访问应用功能，请设置说明。或者，如果应用需要复杂的配置，还可以提供具有管理员访问权限的[预配的演示租户](/office/developer-program/microsoft-365-developer-program-get-started)，以便验证程序可以跳过配置步骤。
 
-      1. 链接到应用的演示视频录制关键用户流。 强烈推荐。
+      1. 关于应用的密钥用户流的演示视频的链接。强烈建议这样做。
 
 * **应用提交后**
 
@@ -123,7 +129,7 @@ ms.locfileid: "62898061"
 
   * 在共享应用包进行下一步测试之前，请确保已[解决引导式服务[teamsubm@microsoft.com](mailto:teamsubm@microsoft.com)向你报告的所有问题](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues)。 这有助于减少验证应用所需的迭代次数，从而缩短批准应用所花时间。
   
-  * 避免在验证过程中更改应用功能。 这可能会导致发现新问题，并增加批准应用所花的时间。
+  * 避免在验证过程中更改应用功能。这可能会导致发现新问题，并增加批准应用所需的时间。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -133,3 +139,4 @@ ms.locfileid: "62898061"
 * [为用户规划载入体验](../../design/planning-checklist.md#plan-beyond-app-building)
 * [在移动设备上分发选项卡应用](../../../tabs/design/tabs-mobile.md#distribution)
 * [针对盈利应用的测试预览](prepare/Test-preview-for-monetized-apps.md)
+* [Microsoft Teams 应用商店排名参数](post-publish/teams-store-ranking-parameters.md)
