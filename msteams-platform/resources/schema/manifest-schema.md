@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: 7513b79ee25e4de3e7c2ffecf8f2fd91a23f170b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 18c42cf4a8ea6350214c2e459f0dcde1a1d8f66c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821659"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356418"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -394,7 +394,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果机器人是通过Mi
 
 **必需**— 对象
 
-向用户描述应用。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
+向用户描述应用。对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
 确保说明描述你的体验，并帮助潜在客户了解你的体验。 如果需要使用外部帐户，则必须在完整说明中进行说明。 `short`和`full`的值必须不同。 简短说明不能在长说明中重复，也不能包含任何其他应用名称。
 
@@ -407,13 +407,13 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果机器人是通过Mi
 
 **可选**— 字符串
 
-反向域表示法中应用的唯一标识符;例如，com.example.myapp。 最大长度：64 个字符。
+反向域表示法中应用的唯一标识符；例如，com.example.myapp。最大长度：64 个字符。
 
 ## <a name="localizationinfo"></a>localizationInfo
 
 **可选**— 对象
 
-允许默认语言的规范，并提供指向更多语言文件的指针。 有关详细信息，请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
+允许默认语言的规范，并提供指向更多语言文件的指针。有关详细信息，请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
 
 |名称| 最大大小 | 必需 | Description|
 |---|---|---|---|
@@ -457,10 +457,10 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置选项卡时要使用的 https:// URL。|
 |`scopes`|枚举数组|1|✔|目前，可配置选项卡仅支持 `team` 和 `groupchat` 范围。 |
-|`canUpdateConfiguration`|boolean|||一个值，该值指示创建后用户是否可以更新选项卡配置的实例。 默认值： **true**。|
+|`canUpdateConfiguration`|Boolean|||一个值，该值指示创建后用户是否可以更新选项卡配置的实例。默认值：**true**。|
 |`context` |枚举数组|6 ||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值：**[channelTab， privateChatTab， meetingChatTab， meetingDetailsTab]**。|
-|`sharePointPreviewImage`|string|2048||用于 SharePoint 的选项卡预览图像的相对文件路径。 大小 1024x768。 |
-|`supportedSharePointHosts`|枚举数组|1||定义如何在 SharePoint 中提供选项卡。 选项 `sharePointFullPage` 和 `sharePointWebPart` |
+|`sharePointPreviewImage`|string|2048||用于 SharePoint 的选项卡预览图像的相对文件路径。大小 1024x768。 |
+|`supportedSharePointHosts`|枚举数组|1||定义如何在 SharePoint 中提供选项卡。选项 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -481,8 +481,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`context` | 枚举数组| 2|| 支持选项卡的 `contextItem` 范围集。|
 
 > [!NOTE]
->  searchUrl 功能不适用于第三方开发人员。
-> 如果选项卡需要上下文相关信息来显示相关内容或启动身份验证流，请参阅[ Microsoft Teams 选项卡的"获取上下文](../../tabs/how-to/access-teams-context.md)。
+>  searchUrl 功能不适用于第三方开发人员。如果选项卡需要上下文相关信息来显示相关内容或启动身份验证流，请参阅 [获取 Microsoft Teams 选项卡的上下文](../../tabs/how-to/access-teams-context.md)。
 
 ## <a name="bots"></a>机器人
 
@@ -495,12 +494,12 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|string|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 ID 可以与整体[应用 ID](#id)相同。|
-|`scopes`|枚举数组|3|✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
-|`needsChannelSelector`|boolean|||描述机器人是否使用用户提示将机器人添加到特定通道。 默认值：**`false`**|
-|`isNotificationOnly`|boolean|||指示自动程序是否为单向、仅通知的自动程序，而不是对话自动程序。 默认值：**`false`**|
-|`supportsFiles`|boolean|||指示自动程序是否支持在个人聊天中上传/下载文件。 默认值：**`false`**|
-|`supportsCalling`|boolean|||一个值，该值指示机器人支持音频调用的位置。 **IMPORTANT**： 此属性当前为实验性属性。 实验性属性可能无法完成，并且在完全可用之前可能会进行更改。  该属性仅用于测试和探索目的，不得在生产应用程序中使用。 默认值：**`false`**|
-|`supportsVideo`|boolean|||一个值，该值指示机器人支持视频通话的位置。 **IMPORTANT**： 此属性当前为实验性属性。 实验性属性可能无法完成，并且在完全可用之前可能会进行更改。  该属性仅用于测试和探索目的，不得在生产应用程序中使用。 默认值：**`false`**|
+|`scopes`|枚举数组|3|✔|指定机器人是在 `team`、群组聊天（`groupchat`）的频道上下文中提供体验还是单独限于单个用户的体验（`personal`）。这些选项不是独占的。|
+|`needsChannelSelector`|Boolean|||描述机器人是否使用用户提示将机器人添加到特定通道。默认值：**`false`**|
+|`isNotificationOnly`|Boolean|||指示机器人是否为单向、仅通知机器人，而不是聊天机器人。默认值：**`false`**|
+|`supportsFiles`|Boolean|||指示机器人是否支持在个人聊天中上传/下载文件的功能。默认值：**`false`**|
+|`supportsCalling`|Boolean|||一个值，该值指示机器人支持音频调用的位置。 **IMPORTANT**： 此属性当前为实验性属性。 实验性属性可能无法完成，并且在完全可用之前可能会进行更改。  该属性仅用于测试和探索目的，不得在生产应用程序中使用。 默认值：**`false`**|
+|`supportsVideo`|Boolean|||一个值，该值指示机器人支持视频通话的位置。 **IMPORTANT**： 此属性当前为实验性属性。 实验性属性可能无法完成，并且在完全可用之前可能会进行更改。  该属性仅用于测试和探索目的，不得在生产应用程序中使用。 默认值：**`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -508,7 +507,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 |名称| 类型| 最大大小 | 必需 | Description|
 |---|---|---|---|---|
-|`items.scopes`|枚举数组|3|✔|指定命令列表有效的作用域。 选项包括 `team`、`personal` 和 `groupchat`。|
+|`items.scopes`|枚举数组|3|✔|指定命令列表有效的范围。选项为 `team`、 `personal`和 `groupchat`。|
 |`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例（字符串，128）。|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.commands
@@ -529,7 +528,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 个字符|✔|配置连接器时要使用的 https:// URL。|
-|`scopes`|枚举数组|1|✔|指定连接器是在 `team`的频道上下文中提供体验，还是仅限单个用户的体验（`personal`）。 目前，仅支持 `team` 范围。|
+|`scopes`|枚举数组|1|✔|指定连接器是在 `team` 中频道的上下文中提供体验，还是单独限于单个用户的体验（`personal`）。目前，仅支持 `team` 范围。|
 |`connectorId`|string|64 个字符|✔|连接器的唯一标识符，与[Connectors 开发人员仪表板](https://aka.ms/connectorsdashboard)中的 ID 匹配。|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -547,9 +546,9 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |---|---|---|---|---|
 |`botId`|string|64|✔|支持消息传递扩展的机器人的唯一 Microsoft 应用 ID，已向Bot Framework注册。 ID 可以与整体应用 ID 相同。|
 |`commands`|对象数组|10 |✔|消息传递扩展支持的命令数组。|
-|`canUpdateConfiguration`|boolean|||一个值，该值指示用户是否可以更新消息传递扩展插件的配置。 默认值：**False**。|
+|`canUpdateConfiguration`|Boolean|||一个值，该值指示用户是否可以更新消息传递扩展插件的配置。默认值：**false**。|
 |`messageHandlers`|对象数组|5||允许在满足特定条件时调用应用的处理程序列表。|
-|`messageHandlers.type`|string|||消息处理程序的类型。 必须是 `"link"`。|
+|`messageHandlers.type`|string|||消息处理程序的类型。必须 `"link"`。|
 |`messageHandlers.value.domains`|字符串数组|||链接消息处理程序可以注册的域数组。|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -564,20 +563,20 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`title`|string|32 个字符|✔|用户友好的命令名称。|
 |`type`|string|64 个字符||命令的类型。 `query`或`action`之一。 默认值： **查询**。|
 |`description`|string|128 个字符||向用户显示以指示此命令用途的说明。|
-|`initialRun`|boolean|||布尔值指示命令最初是否在没有参数时运行。 默认为 **false**。|
+|`initialRun`|Boolean|||布尔值指示命令最初是否在没有参数时运行。默认值为 **false**。|
 |`context`|字符串数组|3||定义可以从何处调用消息扩展插件。 `compose`、`commandBox`、`message`的任何组合。 默认值为“`["compose","commandBox"]`”。|
-|`fetchTask`|boolean|||一个布尔值，指示它是否必须动态提取任务模块。 默认为 **false**。|
+|`fetchTask`|Boolean|||一个布尔值，指示它是否必须动态提取任务模块。默认值为 **false**。|
 |`taskInfo`|object|||指定使用消息传递扩展命令时要预加载的任务模块。|
 |`taskInfo.title`|string|64 个字符||初始对话框标题。|
 |`taskInfo.width`|string|||对话框宽度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
 |`taskInfo.height`|string|||对话框高度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
 |`taskInfo.url`|string|||初始 Web 视图 URL。|
 |`parameters`|对象数组|5 个项目|✔|命令采用的参数列表。 最小值：1;最大值： 5。|
-|`parameters.name`|string|64 个字符|✔|在客户端中显示的参数的名称。 参数名称包含在用户请求中。|
+|`parameters.name`|string|64 个字符|✔|在客户端中显示的参数的名称。参数名称包含在用户请求中。|
 |`parameters.title`|string|32 个字符|✔|参数的用户友好标题。|
 |`parameters.description`|string|128 个字符||描述此参数用途的用户友好字符串。|
 |`parameters.value`|string|512 个字符||参数的初始值。 当前不支持该值|
-|`parameters.inputType`|string|128 个字符||定义任务模块上显示的控件类型。 `fetchTask: true` `text, textarea, number, date, time, toggle, choiceset`之一。|
+|`parameters.inputType`|string|128 个字符||定义任务模块上为`fetchTask: true` 显示的控件类型。 `text, textarea, number, date, time, toggle, choiceset` 之一。|
 |`parameters.choices`|对象数组|10 项||`choiceset`的选择选项。 仅当`parameter.inputType``choiceset`时使用。|
 |`parameters.choices.title`|string|128 个字符|✔|选择的标题。|
 |`parameters.choices.value`|string|512 个字符|✔|选项的值。|
@@ -586,18 +585,18 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **Optional**—字符串数组
 
-`string`数组，指定应用请求的权限，让最终用户了解扩展的执行方式。 以下选项是非独占的：
+`string`数组，指定应用请求的权限，让最终用户了解扩展的执行方式。以下选项是非独占的：
 
 * `identity`&emsp;需要用户标识信息。
 * `messageTeamMembers`&emsp;请求向团队成员发送直接消息的权限。
 
-在应用更新期间更改这些权限会导致用户在运行更新的应用后重复同意过程。 有关详细信息，请参阅[更新应用](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)。
+在应用更新期间更改这些权限会导致用户在运行更新的应用后重复同意过程。有关详细信息，请参阅 [更新应用](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)。
 
 ## <a name="devicepermissions"></a>devicePermissions
 
 **Optional**—字符串数组
 
-在应用请求访问的用户设备上提供本机功能。 选项有：
+在应用请求访问的用户设备上提供本机功能。选项包括：
 
 * `geolocation`
 * `media`
@@ -635,7 +634,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选**— 布尔值
 
-指示是否在加载应用或选项卡时显示加载指示器。 默认为 **false**。
+指示是否在加载应用或选项卡时显示加载指示器。默认值为 **false**。
 >[!NOTE]
 >如果在应用清单中选择`showLoadingIndicator` 为 true，若要正确加载页面，请修改选项卡和任务模块的内容页，如 [显示本机加载指示器](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) 文档中所述。
 
@@ -644,7 +643,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
  **可选**— 布尔值
 
-指示使用或不使用选项卡标题栏呈现个人应用的位置。 默认为 **false**。
+指示使用或不使用选项卡标题栏呈现个人应用的位置。默认值为 **false**。
 
 > [!NOTE]
 > `isFullScreen` 仅适用于发布到组织的应用。
@@ -664,7 +663,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`type`|string|32 个字符|✔|通知类型。 *请参阅下文*。|
-|`description`|string|128 个字符|✔|通知的简要说明。 *请参阅下文*。|
+|`description`|string|128 个字符|✔|通知的简要说明。 *请参阅下面的*。|
 |`templateText`|string|128 个字符|✔|例如："{actor} 为你创建了任务 {taskId}"|
 
 ```json
@@ -727,16 +726,16 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选** - object
 
-选择组安装范围后，它将在用户安装应用时定义默认功能。 选项有：
+选择组安装范围后，它将在用户安装应用时定义默认功能。选项包括：
 * `team`
 * `groupchat`
 * `meetings`
  
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`team`|string|||当选择的安装范围为 `team` 时，此字段指定可用的默认功能。 选项： `tab`、 `bot`或 `connector`。|
-|`groupchat`|string|||当选择的安装范围为 `groupchat` 时，此字段指定可用的默认功能。 选项： `tab`、 `bot`或 `connector`。|
-|`meetings`|string|||当选择的安装范围为 `meetings` 时，此字段指定可用的默认功能。 选项： `tab`、 `bot`或 `connector`。|
+|`team`|string|||当所选安装范围 `team` 时，此字段指定可用的默认功能。选项：`tab`、 `bot`或 `connector`。|
+|`groupchat`|string|||当所选安装范围 `groupchat` 时，此字段指定可用的默认功能。选项：`tab`、 `bot`或 `connector`。|
+|`meetings`|string|||当所选安装范围 `meetings` 时，此字段指定可用的默认功能。选项：`tab`、 `bot`或 `connector`。|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -781,13 +780,13 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 |名称| 类型|最大大小|必需|说明|
 |---|---|---|---|---|
-|`offerId`| string | 2048 个字符 | ✔ | 包含你的产品/服务 ID Publisher产品/服务 ID 的唯一标识符，可在合作伙伴[中心找到](https://partner.microsoft.com/dashboard)。 必须将字符串格式为 `publisherId.offerId`。|
+|`offerId`| string | 2048 个字符 | ✔ | 包含发布者 ID 和产品/服务 ID 的唯一标识符，可在 [合作伙伴中心](https://partner.microsoft.com/dashboard)中找到。必须将字符串格式设置为 `publisherId.offerId`。|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
 **可选** - object
 
-指定会议扩展定义。 有关详细信息，请参阅 [Teams 中的自定义“同框场景模式”场景](../../apps-in-teams-meetings/teams-together-mode.md)。
+指定会议扩展定义。有关详细信息，请参阅 [Teams 中的自定义“同框场景模式”场景](../../apps-in-teams-meetings/teams-together-mode.md)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -824,7 +823,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 |名称| 类型|最大大小|必需 |说明|
 |---|---|---|---|---|
-|`type`|string||✔| 特定于资源的权限类型。 选项: `Application` 和 `Delegated`。|
+|`type`|string||✔| 特定于资源的权限类型。选项：`Application` 和 `Delegated`。|
 |`name`|string|128 个字符|✔|特定于资源的权限名称。 <br> 更多相关信息，请参阅 [应用程序权限](../../graph-api/rsc/resource-specific-consent.md) 和 [委派权限](#delegated-permissions)。|
 
 ### <a name="delegated-permissions"></a>委派权限

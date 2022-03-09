@@ -359,6 +359,8 @@
           href: tabs/how-to/authentication/auth-silent-aad.md
         - name: 使用 SSO 身份验证
           href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: 使用外部 OAuth 提供程序
+          href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: 机器人
       items:
         - name: 机器人中的身份验证流
@@ -471,6 +473,8 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: 维护已发布的应用程序
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+        - name: Microsoft Teams 应用商店排名参数
+          href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
     - name: 将你的应用货币化
       items:
         - name: 概述
