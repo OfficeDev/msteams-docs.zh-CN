@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356075"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398811"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -39,7 +39,6 @@ ms.locfileid: "63356075"
 |02/03/2022| 引入了应用清单版本 1.12 | • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 盈利应用的测试预览（开发人员预览版）| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| 应用内购买流，用于应用盈利（开发人员预览版） | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
-
 
 ## <a name="ga-features"></a>GA 功能
 
@@ -71,7 +70,7 @@ ms.locfileid: "63356075"
 | 01/17/2022 | 适用于桌面的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
- 
+
 <br>
 
 <details>
@@ -79,7 +78,6 @@ ms.locfileid: "63356075"
 <br>
 浏览此处列出的以前 GA 版本的更新。
 <br><br>
-
 
 <details>
 <summary><b>2021</b></summary>
@@ -253,7 +251,7 @@ ms.locfileid: "63356075"
 |02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 |02/02/2022| 引入了应用清单版本 1.12 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 针对盈利应用的测试预览| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| 应用内购买流，用于盈利应用 | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
+|02/03/2022| 应用内购买流，用于盈利应用 | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |01/17/2022| 适用于移动的自适应卡片中的人员选取器  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
 |12/24/2021| 引入了授予 Tab 设备权限的分步指南 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |

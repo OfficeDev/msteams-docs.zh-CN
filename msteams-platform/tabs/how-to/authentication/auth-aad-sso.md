@@ -4,12 +4,12 @@ description: 描述单一登录 (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 身份验证 SSO Microsoft Azure Active Directory (Azure AD) 单一登录 API
-ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356103"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398888"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>对选项卡的单一登录 (SSO) 支持
 
@@ -24,9 +24,7 @@ ms.locfileid: "63356103"
 >
 > ✔Teams JavaScript SDK（_版本_: 1.10 及更高版本）使 SSO 在会议侧面板中得以使用。
 >
-> 为获得 Teams 的最佳体验，请使用最新版本的 iOS 和 Android。
-
-> [!NOTE]
+> 为获得 Teams 的最佳体验，请使用最新版本的 iOS 和 Android。[!NOTE]
 > **快速入门**  
 >
 > 选项卡 SSO 入门的最简单路径是使用用于 Microsoft Visual Studio Code 的 Teams 工具包。 有关详细信息，请参阅 [SSO 配合 Teams 工具包和适用于选项卡的 Visual Studio Code](../../../toolkit/visual-studio-code-tab-sso.md)
@@ -142,9 +140,9 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
 * **WebApplicationInfo** 是下列元素的父元素：
 
 > [!div class="checklist"]
+>
 > * **id** - 应用程序的客户端 ID。 它是在向 Azure AD 注册应用程序时获取的应用程序 ID。
 >* **resource** - 应用程序的域和子域。 这是在步骤 6 中创建 `scope` 时注册的相同 URI（包括 `api://` 协议）。 不得在资源中包含 `access_as_user` 路径。 此 URI 的域部分必须与 Teams 应用程序清单的 URL 中使用的域（包括任何子域）匹配。
-
 > [!NOTE]
 >
 >* Azure AD 应用的资源通常是其站点 URL 和 appID 的根（例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`）。 此值还用于确保请求来自同一域。 确保选项卡上的 `contentURL` 使用与资源属性相同的域。
@@ -233,6 +231,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
             });
         });
 ```
+
 ---
 
 ## <a name="code-sample"></a>代码示例
