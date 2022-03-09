@@ -4,15 +4,15 @@ description: 如何将任务模块与自动程序Microsoft Teams，包括 Bot Fr
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: 任务模块团队机器人深层链接自适应卡片
-ms.openlocfilehash: 39df7f3845cc11e6e15da03c72b0c792a795af35
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 932bcaf858d0788a773b417647a92d2f52e9e45b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355718"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399049"
 ---
 # <a name="use-task-modules-from-bots"></a>使用机器人的任务模块
- 
+
 可以使用自适应卡片和自动程序框架Microsoft Teams、缩略图和自动程序连接器上的按钮从自动程序调用任务Office 365模块。 任务模块通常是比多个对话步骤更好的用户体验。 跟踪自动程序状态并允许用户中断或取消序列。
 
 有两种调用任务模块的方法：

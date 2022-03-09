@@ -6,9 +6,14 @@ keywords: teams 选项卡组频道可配置
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
+ms.openlocfilehash: eeb83f6bdd335c4d536f18915cff8b04a85761a5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399189"
 ---
-
-# <a name="prerequisites"></a>必备条件
+# <a name="prerequisites"></a>先决条件
 
 Teams选项卡必须遵循以下先决条件：
 
@@ -22,20 +27,21 @@ Teams选项卡必须遵循以下先决条件：
     > [!NOTE]
     > Chrome 80 计划于 2020 年初发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 建议您设置 Cookie 的预定用途，而不是依赖默认浏览器行为。 有关详细信息，请参阅 [SameSite cookie 属性](../../resources/samesite-cookie-update.md)。
 
-* 浏览器遵守同源策略限制。 它会阻止网页向与所提供网页不同的域提出请求。 但是，您可以将配置或内容页重定向到另一个域或子域。 当加载或与选项卡通信时`validDomains`，跨域导航逻辑必须允许 Teams 客户端针对应用清单中的静态列表验证源。
+* 浏览器遵守同源策略限制。 它会阻止网页向与所提供网页不同的域提出请求。 但是，您可以将配置或内容页重定向到另一个域或子域。 当加载或与选项卡通信时`validDomains`，跨域导航逻辑Teams客户端根据应用清单中的静态列表验证源。
 
 * 您必须基于客户端的主题、Teams设计及意图设置选项卡的样式。 通常，当选项卡专为满足特定需求而构建，并且侧重于一小组任务或与选项卡的通道位置相关的数据子集时，选项卡运行效果最佳。
 
-* 在内容页中，添加对使用脚本标记[Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 的引用。 加载页面后，调用 `microsoftTeams.initialize()`，否则不显示页面。
+* 在内容页中，添加对使用Microsoft Teams[标记的 JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 的引用。 加载页面后，调用 `microsoftTeams.initialize()`，否则不显示页面。
 
 * 若要在移动客户端上进行身份验证，必须将 Teams JavaScript SDK 升级到至少版本 1.4.1。
 
-* 如果您选择让频道或组选项卡显示在Teams客户端上`setSettings()``websiteUrl`，则配置必须具有 属性的值。
+* 如果您选择让频道或组选项卡显示在Teams客户端上，`setSettings()``websiteUrl`则配置必须具有 属性的值。
 
 * MS Teams 选项卡不支持加载使用自签名证书的 Intranet 网站。
 
 ## <a name="tools-you-can-use-to-build-tabs"></a>可用于生成选项卡的工具
-* [Teams Toolkit代码Microsoft Visual Studio](../../toolkit/visual-studio-code-overview.md)
+
+* [适用于 Microsoft Visual Studio Code 的 Teams 工具包](../../toolkit/visual-studio-code-overview.md)
 * [Visual Studio 的Teams工具包](../../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>后续步骤

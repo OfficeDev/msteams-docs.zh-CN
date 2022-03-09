@@ -4,27 +4,27 @@ description: 介绍卡片及其在机器人、连接器和消息传递扩展中�
 ms.localizationpriority: high
 keywords: 连接器机器人卡片消息传递
 ms.topic: overview
-ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821582"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398650"
 ---
 # <a name="cards"></a>卡片
 
 卡片是装载简短信息或相关信息的用户界面 (UI) 容器。 卡片可以有多个属性和附件，可以包含按钮，可触发 [卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。 使用卡片，可以将信息组织到组中，让用户有机会与信息的特定部分进行交互。
 
 Teams 机器人支持以下类型的卡片：
- 
-- 自适应卡片
-- 主图卡片
-- 列表卡
-- Office 365 连接器卡
-- 收据卡
-- 登录卡
-- 缩略图卡片
-- 卡片集合
+
+* 自适应卡片
+* 主图卡片
+* 列表卡
+* Office 365 连接器卡
+* 收据卡
+* 登录卡
+* 缩略图卡片
+* 卡片集合
 
 可以使用 Markdown 或 HTML 向卡片添加格式文本格式，具体取决于卡片类型。 Microsoft Teams 中机器人和消息传递扩展使用的卡片，添加和响应这些卡片操作， `openUrl`、 `messageBack`、 `imBack`、 `invoke`和 `signin`。
 
@@ -63,21 +63,22 @@ Teams 使用的所有卡都列在[类型卡中](~/task-modules-and-cards/cards/c
 
 ### <a name="people-picker-in-adaptive-cards"></a>自适应卡片中的人员选取器
 
-[人员选取器](cards/people-picker.md#people-picker-in-adaptive-cards) 添加为自适应卡片中的输入控件，可以搜索和选择人员。 可以在聊天、频道、任务模块和选项卡中使用。 移动和桌面客户端支持人员选取器，提供了内联键入体验。 
+[人员选取器](cards/people-picker.md#people-picker-in-adaptive-cards) 添加为自适应卡片中的输入控件，可以搜索和选择人员。 可以在聊天、频道、任务模块和选项卡中使用。 移动和桌面客户端支持人员选取器，提供了内联键入体验。
 
 ### <a name="type-ahead-search-in-adaptive-cards"></a>在自适应卡片中键入提前搜索  
 
-在自适应卡片中添加为输入控件的提前键入搜索，以便从动态加载的数据集中实现 [动态搜索](~/task-modules-and-cards/cards/dynamic-search.md) 体验。 它还允许用户在具有有限数量的选择的列表内执行提前键入静态搜索。 移动和桌面客户端支持提前键入动态搜索体验。 
+在自适应卡片中添加为输入控件的提前键入搜索，以便从动态加载的数据集中实现 [动态搜索](~/task-modules-and-cards/cards/dynamic-search.md) 体验。 它还允许用户在具有有限数量的选择的列表内执行提前键入静态搜索。 移动和桌面客户端支持提前键入动态搜索体验。
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>自适应卡片和传入 Webhook
 
 > [!NOTE]
+>
 > * 完全支持所有本机自适应卡片架构元素（`Action.Submit`除外）。
 > * 受支持的操作包括 [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、[**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)和 [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
 
 借助传入 Webhook 自适应卡片，可以使用自适应卡片的丰富灵活功能。 它使用 Teams 中的传入 Webhook 从其 Web 服务发送数据。
 
-## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>在用户提及中支持 Azure AD 对象 ID 和 UPN 
+## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>在用户提及中支持 Azure AD 对象 ID 和 UPN
 
 具有自适应卡片机器人支持用户提及 ID，例如 Microsoft Azure Active Directory (Azure AD) 对象 ID 和用户主体名称 (UPN)，以及现有 ID。 传入 Webhook 开始支持使用 AAD 对象 ID 和 UPN 在自适应卡片中提及用户。
 

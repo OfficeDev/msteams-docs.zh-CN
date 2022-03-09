@@ -5,12 +5,12 @@ keywords: 开发人员门户团队入门
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355711"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399322"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>使用 Microsoft Teams 开发人员门户管理应用
 
@@ -18,7 +18,7 @@ ms.locfileid: "63355711"
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="显示开发人员门户主页的屏幕截图Teams。":::
 
-> [!NOTE] 
+> [!NOTE]
 > 目前，开发人员门户不适用于 政府社区云 (GCC) 、GCC-High 或国防部 (DOD) 租户。
 
 ## <a name="register-an-app"></a>注册应用
@@ -35,18 +35,18 @@ ms.locfileid: "63355711"
 
 你可以配置环境和全局变量，以帮助将应用从本地运行时转换到生产环境。 全局变量在所有环境中使用。
 
-**设置环境**
+若要设置环境：
 
 1. 在开发人员门户中，选择你正在处理的应用。
 2. 转到" **环境"** 页，然后选择 **"+ 添加环境"**。
 3. 选择 **" + 添加变量** "，为环境创建配置变量。
 
-**使用变量**
+若要使用变量：
 
 使用变量名称而不是硬编码值来设置应用配置。
 
 1. 在 `{{` 开发人员门户的任何字段中输入。 将显示一个下拉列表，包含为所选环境创建的所有变量以及全局变量。  
-1. 在下载应用包 (例如，准备好发布到 Teams 应用商店) 时，请选择想要使用的环境。 应用配置根据环境自动更新。 
+1. 在下载应用包 (例如，准备好发布到 Teams 应用商店) 时，请选择想要使用的环境。 应用配置根据环境自动更新。
 
 ## <a name="identify-app-owners"></a>确定应用所有者
 

@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: 提交应用商店分发验证应用包指南本地化
-ms.openlocfilehash: 579744dc8081eb8ca3e967cce1b4d696350d0a56
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: da0daf5daf927dcaf4346171fe78c3db6e874259
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356425"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398944"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
@@ -24,7 +24,7 @@ ms.locfileid: "63356425"
 当你的应用可能在测试环境中运行时，你应该检查你的应用包，以避免在提交过程中出现问题。
 
 > [!NOTE]
->  App Studio 即将被弃用。 使用新的开发人员门户配置Teams分配[和管理应用](https://dev.teams.microsoft.com/)
+> App Studio 即将被弃用。 使用新的开发人员门户配置Teams分配[和管理应用](https://dev.teams.microsoft.com/)
 
 应用Microsoft Teams工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
@@ -36,6 +36,7 @@ ms.locfileid: "63356425"
 ## <a name="compile-testing-instructions"></a>编译测试说明
 
 提供说明和资源来帮助审阅者测试你的应用，包括：
+
 * 测试帐户
 * 凭据
 * 许可证密钥

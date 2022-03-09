@@ -5,12 +5,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams Office365 连接器
-ms.openlocfilehash: 816dfd4327f0ee3076431e2fdc0e855b40f729c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517965"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355634"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -22,15 +22,15 @@ ms.locfileid: "62517965"
 
 连接器卡支持以下操作:
 
-- `ActionCard`: 显示一个或多个输入类型和关联的操作。
-- `HttpPOST`: 向 URL 发送 POST 请求。
-- `OpenUri`: 在单独的浏览器或应用程序中打开 URI，根据操作系统，可选择性地针对不同的 URI。
+* `ActionCard`: 显示一个或多个输入类型和关联的操作。
+* `HttpPOST`: 向 URL 发送 POST 请求。
+* `OpenUri`: 在单独的浏览器或应用程序中打开 URI，根据操作系统，可选择性地针对不同的 URI。
 
 `ActionCard` 操作支持三种输入类型：
 
-- `TextInput`: 具有可选长度限制的单行或多行文本字段。
-- `DateInput`: 具有可选时间选择器的日期选择器。
-- `MultichoiceInput`: 提供单项选择或多重选择的选项枚举列表。
+* `TextInput`: 具有可选长度限制的单行或多行文本字段。
+* `DateInput`: 具有可选时间选择器的日期选择器。
+* `MultichoiceInput`: 提供单项选择或多重选择的选项枚举列表。
 
 `MultichoiceInput` 支持控制列表最初是否完全展开的 `style` 属性。 `style`: 的默认值取决于 `isMultiSelect` 的值，如下所示:
 
@@ -39,7 +39,7 @@ ms.locfileid: "62517965"
 | `false` 或未指定 | `compact` |
 | `true` | `expanded` |
 
-若要以紧凑样式显示多选列表，必须同时指定 `"isMultiSelect": true` 和 `"style": true`。
+若要以紧凑样式显示多选列表，请指定 `"isMultiSelect": true` 和 `"style": true`。
 
 有关连接器卡操作的详细信息，请参阅 [操作](/outlook/actionable-messages/card-reference#actions)。
 
@@ -149,9 +149,9 @@ ms.locfileid: "62517965"
 
 # <a name="curl"></a>[cURL](#tab/cURL)
 
-**使用 cURL 在 Webhook 中发布消息**
+若要使用 cURL 在 Webhook 中发布消息，请按照以下步骤进行:
 
-1. 使用以下命令安装 cURL: https://curl.haxx.se/。
+1. 从 [cURL 网站](https://curl.haxx.se/) 安装 cURL。
 
 1. 在命令行中输入以下 cURL 命令：
 
@@ -174,7 +174,7 @@ ms.locfileid: "62517965"
 
  先决条件: 安装 PowerShell 并熟悉其基本用法。
 
-**使用 PowerShell 将消息发布到 Webhook**
+若要使用 PowerShell 将消息发布到 Webhook，请按照以下步骤进行:
 
 1. 在 PowerShell 提示符中，输入以下命令：
 
@@ -198,7 +198,7 @@ ms.locfileid: "62517965"
 > * 完全支持所有本机自适应卡片架构元素 (`Action.Submit`除外)。
 > * 受支持的操作有 [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)，以及 [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
 
-**使用传入 webhook 以发送自适应卡**
+若要使用传入 webhook 以发送自适应卡，请按照以下步骤进行:
 
 1. 在 Teams 中 [设置自定义 webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)。
 1. 使用以下代码创建自适应卡的 JSON 文件:
@@ -257,7 +257,7 @@ ms.locfileid: "62517965"
 | 7200 | 150  |
 | 86400  | 1800  |
 
-[具有指数补偿的重试逻辑](/azure/architecture/patterns/retry) 将减轻速率限制，以应对请求在一秒内超出限制的情况。 请按照 [最佳做法](../../bots/how-to/rate-limit.md) 避免达到速率限制。
+[具有指数补偿的重试逻辑](/azure/architecture/patterns/retry) 将减轻速率限制，以应对请求在一秒内超出限制的情况。请遵循 [最佳做法](../../bots/how-to/rate-limit.md) 以避免达到效率限制。
 
 > [!NOTE]
 > [具有指数补偿的重试逻辑](/azure/architecture/patterns/retry) 将减轻速率限制，以应对请求在一秒内超出限制的情况。 请参阅 [HTTP 429 响应](../../bots/how-to/rate-limit.md#handle-http-429-responses)以避免达到速率限制。

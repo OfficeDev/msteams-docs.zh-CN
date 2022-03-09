@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 公共开发人员预览版中的功能
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: Teams 预览开发人员功能
-ms.openlocfilehash: ee367daaf1570e75a5da7518cc2b0e27704741c4
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: b953d26f517382b06d9d06d7aeac89e83137023b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059791"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398692"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>适用于 Microsoft Teams 的公共开发人员预览版
 

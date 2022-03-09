@@ -4,12 +4,12 @@ description: Microsoft Teams 开发工具入门概述文档
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发工具示例
-ms.openlocfilehash: e67ab472f28dc44dc23f892b36ddc78ff602d28d
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 32f6e94e7c1773812fbdca26106dbd319cc45262
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435836"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399000"
 ---
 # <a name="get-started"></a>入门
 
@@ -44,20 +44,16 @@ ms.locfileid: "62435836"
 > [!NOTE]
 > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。
 
-
 ## <a name="build-your-first-teams-app"></a>构建首个 Teams 应用
 
 现在，让我们来构建你的首个 Teams 应用。 但首先，请选择语言（框架）并准备开发环境。
 
 > [!div class="nextstepaction"]
 > [通过 JavaScript 使用 React 构建 Teams 应用](../sbs-gs-javascript.yml)
-
 > [!div class="nextstepaction"]
 > [使用 SPFx 构建 Teams 应用](../sbs-gs-spfx.yml)
-
 > [!div class="nextstepaction"]
 > [使用 C# 或 .NET 构建 Teams 应用](../sbs-gs-csharp.yml)
-
 > [!div class="nextstepaction"]
 > [使用 Node.js 构建 Teams 应用](../sbs-gs-nodejs.yml)
 

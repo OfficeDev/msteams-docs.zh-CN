@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Teams 选项卡, 传出 Webhook, 可操作邮件, 验证 Webhook
-ms.openlocfilehash: 2b77118e76bfde8c0fac7c74fce4dab1d78c7dd5
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: c849fd10c19a7af198147cb39fa90c2fdd5052a8
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356292"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399105"
 ---
 # <a name="create-outgoing-webhook"></a>创建传出 Webhook
 
@@ -124,6 +124,7 @@ ms.locfileid: "63356292"
 ---
 
 > [!NOTE]
+>
 > * 你可以使用传出 Webhook 将自适应卡片、主图卡片和短信作为附件发送。
 > * 卡片支持设置格式。有关详细信息，请参阅[使用 Markdown 设置卡片格式](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown)。
 
@@ -198,30 +199,30 @@ var responseMsg = JSON.stringify({
 
 ```json
 {
-    "type": "message",
-    "attachments": [
-        {
-            "contentType": "application/vnd.microsoft.card.adaptive",
-            "content": {
-                "type": "AdaptiveCard",
-                "version": "1.4",
-                "body": [
-                    {
-                        "type": "TextBlock",
-                        "text": "Request sent by: Megan"
-                    },
-                    {
-                        "type": "Image",
-                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
-                    },
-                    {
-                        "type": "TextBlock",
-                        "text": "Sample image for Adaptive Card.."
-                    }
-                ]
-            }
-        }
+ "type": "message",
+ "attachments": [
+  {
+   "contentType": "application/vnd.microsoft.card.adaptive",
+   "content": {
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Request sent by: Megan"
+     },
+     {
+      "type": "Image",
+      "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Sample image for Adaptive Card.."
+     }
     ]
+   }
+  }
+ ]
 }
 ```
 
@@ -232,7 +233,6 @@ var responseMsg = JSON.stringify({
 |**示例名称** | **说明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | 传出 webhook | 创建将在 Microsoft Teams 中使用的自定义机器人的示例。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
-
 
 ## <a name="step-by-step-guide"></a>分步指南
 

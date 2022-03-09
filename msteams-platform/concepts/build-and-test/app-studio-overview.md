@@ -4,17 +4,17 @@ description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应�
 keywords: 应用室团队入门
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 92f24fbb7d4a41a192178ead1e2cb40dd7446b25
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: d03fae40ee0d003f3556e40c52ad876bb8949b5b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948633"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399175"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams
 
 > [!TIP]
-> **试用开发人员门户**：App Studio 已发展。 使用新的开发人员门户 配置、Teams和管理你的[应用程序](https://dev.teams.microsoft.com/)。
+> **试用开发人员门户**：App Studio 已发展。 使用新的开发人员门户配置Teams、分发和管理[应用](https://dev.teams.microsoft.com/)。
 
 无论你为企业开发自定义应用还是为世界各地的团队开发 SaaS 应用程序，App Studio 都可以轻松创建或集成你自己的 Microsoft Teams 应用，其方式包括简化应用程序的清单和包的创建，并提供卡片编辑器和响应控制库等有用工具。
 
@@ -27,7 +27,7 @@ ms.locfileid: "60948633"
 
 ## <a name="installing-app-studio"></a>安装 App Studio
 
-App Studio 是一款可在 Teams 商店找到的 Teams 应用。 按照此链接直接下载[App Studio。](https://aka.ms/InstallTeamsAppStudio) 还可以在应用商店中查找该应用。
+App Studio 是一款可在 Teams 商店找到的 Teams 应用。 按照此链接直接下载 [App Studio](https://aka.ms/InstallTeamsAppStudio)。 还可以在应用商店中查找该应用。
 
 在应用商店中，搜索 App Studio。
 
@@ -66,7 +66,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 清单编辑器的功能部分介绍定义应用的功能并列出其中每个功能的详细信息。
 
 > [!NOTE]
-> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅自定义[应用程序中Microsoft Teams。](/MicrosoftTeams/customize-apps)
+> 最佳做法是，你必须提供自定义指南，以便应用用户和客户在自定义应用时遵循这些准则。 有关详细信息，请参阅自定义 [Microsoft Teams](/MicrosoftTeams/customize-apps)。
 
 ##### <a name="tabs"></a>选项卡
 
@@ -76,7 +76,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
   你还必须提供选项卡期望从其加载或链接到的任何其他域。
 
-* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认在个人应用体验中显示 (用户在团队或频道应用的上下文之外使用你的应用时) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
+* **个人选项卡。** 此部分允许你定义一组选项卡，这些选项卡默认在个人应用体验 (体验中，用户在团队或频道应用的上下文之外使用你的应用) 。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡预期从其中加载或链接到的其他任何域。
 
 ##### <a name="bots"></a>机器人
 
@@ -115,20 +115,21 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 定义完应用程序后，"测试并分发"部分可导出应用定义为压缩文件，然后可将其共享并上传到 Teams 客户端进行测试。 单击"导出"以 *appname.zip* 下载默认下载目录中的 zip 文件。
 
 ##### <a name="publish-your-app-to-teams"></a>将应用发布到 Teams
+
 在项目主页上，你可以将应用上载到团队、将应用提交到公司自定义应用商店供你组织的用户使用，或将应用提交到所有 Teams 用户的应用源。 IT 管理员将审阅这些提交。 可返回" *发布* 页面，检查提交状态，并了解应用是否已获 IT 管理员批准或拒绝。这也是提交应用更新或取消当前任何活动提交的地方。
 
 ### <a name="card-editor"></a>卡片编辑器
 
-卡片是包含短信息或相关信息的容器。 Microsoft Teams 支持卡片，卡片可以有多个属性和附件。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。 
+卡片是包含短信息或相关信息的容器。 Microsoft Teams 支持卡片，卡片可以有多个属性和附件。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。
 
-为了简化此过程且减少出错，可以使用"卡片编辑器"选项卡使用窗体生成主卡或缩略图卡，并验证和测试生成的卡片 (就像用户通过自动程序看到) 一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
+为了简化此过程且减少出错，可以使用"卡片编辑器"选项卡使用窗体生成主卡或缩略图卡，并验证和测试生成的卡片 (就像用户通过自动程序查看) 一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
 
 如果已有要验证的卡片，可在 Teams 中将该卡的 JSON 粘贴到 *"添加卡信息"下的 JSON 选项卡中* 然后将其发送给自己以查看聊天中的外观。
 
 ### <a name="react-control-library"></a>反应控件库
 
 >[!Note]
-> 以后React弃用此控件库。 请考虑使用[Fluent UI react 控件作为](https://microsoft.github.io/fluent-ui-react/)替代的之前 Stardust UI。
+> 以后React弃用此控件库。 请考虑使用 [Fluent UI react 控件作为](https://microsoft.github.io/fluent-ui-react/)之前其他 Stardust UI。
 
 创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为更轻松地创建一致的 UI，App Studio 提供了几种符合 Teams 设计原则的 UI 控件类别。
 
@@ -151,4 +152,4 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 ## <a name="see-also"></a>另请参阅
 
-[使用开发人员门户管理应用Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
+[使用 Microsoft Teams 开发人员门户管理应用](~/concepts/build-and-test/teams-developer-portal.md)

@@ -5,12 +5,12 @@ description: 使用 Yeoman 生成器创建适用于 Microsoft Teams 的频道和
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 0a5a72a7889dba040295f1d17858f701ff762099
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b576e2515df65dba06686740508c07a645fb5bd7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355844"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399336"
 ---
 # <a name="create-a-channel-or-group-tab"></a>创建频道或组选项卡
 
@@ -31,24 +31,24 @@ ms.locfileid: "63355844"
 
 您必须了解以下先决条件：
 
-- 你必须拥有一个Office 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+* 你必须拥有一个Office 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
     > 如果当前没有 Office 365 帐户，可以通过开发人员计划注册Office 365订阅。 只要将订阅用于正在进行的开发，订阅就保持活动状态。 请参阅[欢迎使用 Office 365 开发人员计划](/office/developer-program/microsoft-365-developer-program)。
 
 此外，此项目要求在开发环境中安装以下内容：
 
-- 任何文本编辑器或 IDE。 你可以免费安装和[Microsoft Visual Studio代码](https://code.visualstudio.com/download)。
+* 任何文本编辑器或 IDE。 你可以免费安装和[Microsoft Visual Studio代码](https://code.visualstudio.com/download)。
 
-- [Node.js/npm](https://nodejs.org/en/)。 使用最新的 LTS 版本。 Node 程序包管理器 (npm) 在系统中安装 Node.js。
+* [Node.js/npm](https://nodejs.org/en/)。 使用最新的 LTS 版本。 Node 程序包管理器 (npm) 在系统中安装 Node.js。
 
-- 在成功安装 Node.js，在命令提示符中输入以下内容来安装 [Yeoman](https://yeoman.io/) 和 [gulp-cli](https://www.npmjs.com/package/gulp-cli) 程序包：
+* 在成功安装 Node.js，在命令提示符中输入以下内容来安装 [Yeoman](https://yeoman.io/) 和 [gulp-cli](https://www.npmjs.com/package/gulp-cli) 程序包：
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- 在命令Microsoft Teams输入以下内容，安装应用生成器：
+* 在命令Microsoft Teams输入以下内容，安装应用生成器：
 
     ```bash
     npm install generator-teams --global
@@ -173,9 +173,9 @@ ms.locfileid: "63355844"
 
 你必须有一个应用包来测试应用中的Teams。 它是包含以下所需文件的 zip 文件夹：
 
-- 全 **色图标** ，大小为 192 x 192 像素。
-- 一 **个** 32 x 32 像素的透明边框图标。
-- **一个 manifest.json** 文件，用于指定应用的属性。
+* 全 **色图标** ，大小为 192 x 192 像素。
+* 一 **个** 32 x 32 像素的透明边框图标。
+* **一个 manifest.json** 文件，用于指定应用的属性。
 
 程序包通过 gulp 任务创建，该任务验证 manifest.json 文件，并生成 **./package 目录中的 zip 文件夹**。 在命令提示符中，输入以下命令：
 
@@ -253,15 +253,15 @@ gulp ngrok-serve
 - 你必须拥有一个Office 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
-    > 如果当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册[免费订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
+    > 如果当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册[免费订阅](https://developer.microsoft.com/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
 
-- 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio **，请选择**![](~/assets/images/tab-images/storeApp.png)应用左下角的Teams应用，然后搜索 **App Studio**。 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
+* 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio **，请选择**![](~/assets/images/tab-images/storeApp.png)应用左下角的Teams应用，然后搜索 **App Studio**。 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
 
 此外，此项目要求在开发环境中安装以下内容：
 
-- 当前版本的 IDE Visual Studio **.NET CORE 跨平台开发** 工作负载。 如果尚未安装Visual Studio，可以免费下载和安装[Microsoft Visual Studio Community版本。](https://visualstudio.microsoft.com/downloads)
+* 当前版本的 IDE Visual Studio **.NET CORE 跨平台开发** 工作负载。 如果尚未安装Visual Studio，可以免费下载和安装[Microsoft Visual Studio Community版本。](https://visualstudio.microsoft.com/downloads)
 
-- [ngrok](https://ngrok.com) 反向代理工具。 使用 ngrok 创建到本地运行的 Web 服务器的公开可用的 HTTPS 终结点的隧道。 你可以 [下载 ngrok](https://ngrok.com/download)。
+* [ngrok](https://ngrok.com) 反向代理工具。 使用 ngrok 创建到本地运行的 Web 服务器的公开可用的 HTTPS 终结点的隧道。 你可以 [下载 ngrok](https://ngrok.com/download)。
 
 ### <a name="get-the-source-code"></a>获取源代码
 
@@ -280,15 +280,15 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 1. 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。
 1. 在浏览器中，转到以下 URL 并验证应用程序是否加载正确：
 
-    - `http://localhost:44355`
-    - `http://localhost:44355/privacy`
-    - `http://localhost:44355/tou`
+    * `http://localhost:44355`
+    * `http://localhost:44355/privacy`
+    * `http://localhost:44355/tou`
 
 ### <a name="review-the-source-code"></a>查看源代码
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是使用在安装程序 ASP.NET Core"高级 **- 配置 HTTPS**"复选框的 2.2 Web 应用程序空模板创建的。 MVC 服务由依赖关系注入框架的方法注册 `ConfigureServices()` 。 此外，空模板默认情况下 `Configure()` 不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下代码的方法中：
+此项目从一个 2.2 ASP.NET Core Web 应用程序空模板创建，在设置时选中了"高级 *** 配置 HTTPS**"复选框。 MVC 服务由依赖关系注入框架的方法注册 `ConfigureServices()` 。 此外，空模板默认情况下 `Configure()` 不支持为静态内容提供服务，因此，将静态文件中间件添加到 以下代码的方法中：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -318,9 +318,9 @@ ASP.NET Core将名为 **Index** 的文件视为网站的默认页面或主页。
 
 此文件夹包含以下所需的应用包文件：
 
-- 全 **色图标** ，大小为 192 x 192 像素。
-- 一 **个** 32 x 32 像素的透明边框图标。
-- **一个 manifest.json** 文件，用于指定应用的属性。
+* 全 **色图标** ，大小为 192 x 192 像素。
+* 一 **个** 32 x 32 像素的透明边框图标。
+* **一个 manifest.json** 文件，用于指定应用的属性。
 
 这些文件需要在应用包中压缩，以用于将选项卡上传到Teams。 当用户选择添加或更新`configurationUrl`选项卡时，Microsoft Teams清单中指定的内容，将其嵌入 IFrame 中，并将其呈现在选项卡中。
 
@@ -352,15 +352,15 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 
 若要测试您的选项卡，请使用 [ngrok](https://ngrok.com/docs)。 当 ngrok 正在您的计算机上运行时，您的服务器的 Web 终结点可用。 在 ngrok 的免费版本中，如果您关闭 ngrok，则下次启动 URL 时 URL 会有所不同。
 
-- 在项目目录根目录的命令提示符下，运行以下命令：
+* 在项目目录根目录的命令提示符下，运行以下命令：
 
     ```bash
     ngrok http https://localhost:44355 -host-header="localhost:44355"
     ```
 
-- Ngrok 侦听来自 Internet 的请求，当应用程序在端口 44355 上运行时，它会将它们路由到您的应用程序。 它应类似于 `https://y8rCgT2b.ngrok.io/` **y8rCgT2b** 替换为 ngrok 字母数字 HTTPS URL。
+* Ngrok 侦听来自 Internet 的请求，当应用程序在端口 44355 上运行时，它会将它们路由到您的应用程序。 它应类似于 `https://y8rCgT2b.ngrok.io/` **y8rCgT2b** 替换为 ngrok 字母数字 HTTPS URL。
 
-- 确保使命令提示符保持运行 ngrok，并记下 URL。
+* 确保使命令提示符保持运行 ngrok，并记下 URL。
 
 ### <a name="update-your-application"></a>更新应用程序
 
@@ -512,18 +512,18 @@ Microsoft Teams是一种基于云的产品，要求使用 HTTPS 终结点从云�
 
 ### <a name="prerequisites-for-custom-channel-or-group-tab"></a>自定义频道或组选项卡的先决条件
 
-- 你必须拥有一个Microsoft 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+* 你必须拥有一个Microsoft 365租户和一个已启用"允许上载 **自定义应用"的团队**。 有关详细信息，请参阅[准备租户Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
-    > 如果当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册[免费订阅](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
+    > 如果当前没有Microsoft 365帐户，可以通过 Microsoft 开发人员计划注册[免费订阅](https://developer.microsoft.com/microsoft-365/dev-program)。 只要将订阅用于正在进行的开发，订阅就保持活动状态。
 
-- 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio **，请选择**![](~/assets/images/tab-images/storeApp.png)应用左下角的Teams应用，然后搜索 **App Studio**。 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
+* 使用 App Studio 将应用程序导入Teams。 若要安装 App Studio **，请选择**![](~/assets/images/tab-images/storeApp.png)应用左下角的Teams应用，然后搜索 **App Studio**。 找到磁贴后，选择它 **，然后选择弹出** 对话框中的"添加"以安装它。
 
 此外，此项目要求在开发环境中安装以下内容：
 
-- 当前版本的 IDE Visual Studio **.NET CORE 跨平台开发** 工作负载。 如果尚未安装Visual Studio，可以免费下载和安装[Microsoft Visual Studio Community版本。](https://visualstudio.microsoft.com/downloads)
+* 当前版本的 IDE Visual Studio **.NET CORE 跨平台开发** 工作负载。 如果尚未安装Visual Studio，可以免费下载和安装[Microsoft Visual Studio Community版本。](https://visualstudio.microsoft.com/downloads)
 
-- [ngrok](https://ngrok.com) 反向代理工具。 使用 ngrok 创建到本地运行的 Web 服务器的公开可用的 HTTPS 终结点的隧道。 你可以 [下载 ngrok](https://ngrok.com/download)。
+* [ngrok](https://ngrok.com) 反向代理工具。 使用 ngrok 创建到本地运行的 Web 服务器的公开可用的 HTTPS 终结点的隧道。 你可以 [下载 ngrok](https://ngrok.com/download)。
 
 ### <a name="get-the-source-code"></a>获取源代码
 
@@ -542,9 +542,9 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 1. 若要生成并运行应用程序，请按 **F5** 或从"调试 **"** 菜单中选择"开始 **调试** "。
 1. 在浏览器中，导航到以下 URL 并验证应用程序是否加载正确：
 
-    - `http://localhost:44360`
-    - `http://localhost:44360/privacy`
-    - `http://localhost:44360/tou`
+    * `http://localhost:44360`
+    * `http://localhost:44360/privacy`
+    * `http://localhost:44360/tou`
 
 ### <a name="review-the-source-code"></a>查看源代码
 
@@ -572,9 +572,9 @@ public void Configure(IApplicationBuilder app)
 
 此文件夹包含以下所需的应用包文件：
 
-- 全 **色图标** ，大小为 192 x 192 像素。
-- 一 **个** 32 x 32 像素的透明边框图标。
-- **一个 manifest.json** 文件，用于指定应用的属性。
+* 全 **色图标** ，大小为 192 x 192 像素。
+* 一 **个** 32 x 32 像素的透明边框图标。
+* **一个 manifest.json** 文件，用于指定应用的属性。
 
 这些文件需要在应用包中压缩，以用于将选项卡上传到Teams。
 

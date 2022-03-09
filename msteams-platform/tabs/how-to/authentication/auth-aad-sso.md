@@ -4,12 +4,12 @@ description: 描述单一登录 (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 身份验证 SSO Microsoft Azure Active Directory (Azure AD) 单一登录 API
-ms.openlocfilehash: edd7e08167c0efb93b7a578de12b7e1873aa193f
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821722"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356103"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>对选项卡的单一登录 (SSO) 支持
 
@@ -21,8 +21,8 @@ ms.locfileid: "62821722"
 > ✔适用于 Android 的 Teams（1416/1.0.0.2020073101 及更高版本）
 >
 > ✔适用于 iOS 团队（_版本_: 2.0.18 及更高版本）  
-> 
-> ✔Teams JavaScript SDK（_版本_: 1.10 及更高版本）使 SSO 在会议侧面板中得以使用。 
+>
+> ✔Teams JavaScript SDK（_版本_: 1.10 及更高版本）使 SSO 在会议侧面板中得以使用。
 >
 > 为获得 Teams 的最佳体验，请使用最新版本的 iOS 和 Android。
 
@@ -30,6 +30,14 @@ ms.locfileid: "62821722"
 > **快速入门**  
 >
 > 选项卡 SSO 入门的最简单路径是使用用于 Microsoft Visual Studio Code 的 Teams 工具包。 有关详细信息，请参阅 [SSO 配合 Teams 工具包和适用于选项卡的 Visual Studio Code](../../../toolkit/visual-studio-code-tab-sso.md)
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused.
+* Don't add note for a list of items.
+* Don't add numbers to headings.
+* Don't copy-paste superscript characters as is. Use HTML entities. See https://sitefarm.ucdavis.edu/training/all/using-wysiwyg/special-characters for the values.
+* Same for the check marks added in the content in the note above. The content should not be in a note anyway.
+--->
 
 ## <a name="how-sso-works-at-runtime"></a>运行时 SSO 的工作方式
 
@@ -52,7 +60,7 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
 
 ## <a name="develop-an-sso-microsoft-teams-tab"></a>开发 SSO Microsoft Teams 选项卡
 
-此部分介绍了创建启用 SSO 的 Teams 选项卡所需完成的任务。 这些任务与语言和框架无关。
+本部分介绍创建使用 SSO 的 Teams 选项卡所涉及的任务。这些任务与语言和框架无关。
 
 ### <a name="1-create-your-azure-ad-application"></a>1. 创建 Azure AD 应用程序
 
@@ -64,13 +72,13 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
 > * 目前不支持每个应用有多个域。
 > * 对于新应用程序，用户必须将 `accessTokenAcceptedVersion` 设置为 `2`。
 
-**通过 Azure AD 门户注册应用**
+若要通过 Azure AD 门户注册应用，请执行以下步骤：
 
 1. 在 [Azure AD 应用注册](https://go.microsoft.com/fwlink/?linkid=2083908)门户中注册新应用程序。
 1. 选择“**新注册**”。 将显示 **注册应用程序** 页。
 1. 在“**注册应用**”页面中，指定以下值：
     1. 输入应用的 **名称**。
-    2. 选择 **支持的帐户类型**，选择单租户或多租户帐户类型。 ¹
+    2. 选择 **支持的帐户类型**，选择单租户或多租户帐户类型。¹
     * 保留“重定向 URI”为空。
     3. 选择“注册”。
 1. 在概述页上，复制并保存 **应用程序（客户端）ID**。 之后在更新 Teams 应用程序清单时，必须知道它。
@@ -80,7 +88,7 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
     > 如果要使用机器人和选项卡生成应用，请输入应用程序 ID URI 作为 `api://fully-qualified-domain-name.com/botid-{YourBotId}`。
 
 1. 选择“**设置**”链接以生成应用 ID URI，格式为 `api://{AppID}`。 插入具有正斜杠的完全限定的域名 "/" 追加到末尾，介于双正斜杠和 GUID 之间。 整个 ID 的格式必须为 `api://fully-qualified-domain-name.com/{AppID}`。 ² 例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`。 完全限定的域名是在其中提供应用的人类可读域名。 如果使用的是隧道服务（如 ngrok），则必须在 ngrok 子域发生更改时更新此值。
-1. 选择“**添加作用域**”。 在打开的面板中，输入 **access_as_user** 作为 **作用域名称**。
+1. 选择“**添加作用域**”。在打开的面板中，输入 **access_as_user** 作为“**作用域名称**”。
 1. 在 **谁可以同意？** 框中，输入 **管理员和用户**。
 1. 在框中输入详细信息，以便使用适用于 `access_as_user` 作用域的值来配置管理员和用户同意提示：
     * **管理员同意标题:** Teams 可以访问用户的配置文件。
@@ -88,7 +96,7 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
     * **用户同意标题**：Teams 可以访问你的个人资料并代表你发出请求。
     * **用户同意说明**：Teams 可以使用与用户相同的权限调用此应用的 API。
 1. 确保将“状态”设置为“已启用”。
-1. 选择 **添加作用域** 保存详细信息。 显示在文本字段正下方的“**作用域名称**”的域部分应自动与上一步骤中设置的“**应用 ID** URI”匹配，并将 `/access_as_user` 附加到末尾 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`。
+1. 选择“**添加作用域**”以保存详细信息。显示在文本字段正下方的“**作用域名称**”的域部分应自动与上一步骤中设置的“**应用 ID URI**”匹配，并将 `/access_as_user` 附加到末尾 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`。
 1. 在“**授权客户端应用程序**”部分中，确定要授权给应用的 Web 应用程序的应用程序。 选择 **添加客户端应用程序**。 输入以下每个客户端 ID，然后选择在上一步中创建的授权范围：
     * 对于 Teams 移动或桌面应用程序，`1fec8e78-bce4-4aaf-ab1b-5451cc387264`。
     * 对于 Teams Web 应用程序，`5e3ce6c0-2b1f-4285-8d4b-75ee78787346`。
@@ -112,7 +120,7 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
     > [!NOTE]
     > 选项卡 SSO 不需要隐式授权。
 
-恭喜！ 你已完成应用注册先决条件，可以继续使用 Tab SSO 应用。
+恭喜！你已完成应用注册先决条件，可以继续使用 Tab SSO 应用。
 
 > [!NOTE]
 >
@@ -143,6 +151,9 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
 >* 必须使用清单版本 1.5 或更高版本来实现 `webApplicationInfo` 字段。
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. 从客户端代码获取访问令牌
+
+> [!NOTE]
+> 若要避免 `Teams SDK Error: resourceDisabled` 等错误，请确保在 Azure AD 应用注册和 Teams 应用中正确配置应用程序 ID URI。
 
 使用以下身份验证 API：
 
@@ -244,7 +255,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 获取 Graph 范围的另一种方法是使用现有的[基于 web 的 Azure AD 身份验证方法](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page)呈现同意对话框。 此方法涉及弹出 Azure AD 同意对话框。
 
-**使用身份验证 API 请求其他许可**
+若要使用身份验证 API 请求其他同意，请执行以下步骤：
 
 1. 使用 `getAuthToken()` 取回的令牌必须通过 Azure AD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) 在服务器端交换，以获取对其他图形 API 的访问权限。 请确保为此交换使用 v2 Graph 终结点。
 2. 如果交换失败，Azure AD 将返回无效的授权异常。 通常有两条错误消息之一，`invalid_grant` 或 `interaction_required`。
@@ -268,4 +279,5 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 * 按照[分步指南](../../../sbs-tab-with-adaptive-cards.yml)创建具有自适应卡的选项卡。
 
 ## <a name="see-also"></a>另请参阅
+
 [Teams Bot 与单一登录](../../../sbs-bots-with-sso.yml)

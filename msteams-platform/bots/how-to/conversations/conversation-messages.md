@@ -5,24 +5,24 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: c13482e886cc4e2207faa84ff01bbb60e93661a5
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2078e63dfbc95071cec3ba620643bd9a8fddf723
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517993"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399350"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
-对话中每条消息都是一个 `Activity` 类型 为 的对象 `messageType: message`。 当用户发送消息时，Teams将邮件发送到自动程序。 Teams向机器人的消息终结点发送 JSON 对象。 自动程序将检查消息以确定其类型并相应地做出响应。
+对话中每条消息都是一个 `Activity` 类型 为 的对象 `messageType: message`。 当用户发送消息时，Teams将邮件发送到自动程序。 Teams JSON 对象发送到机器人的消息终结点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与用户Teams通信。 Bot Builder SDK 提供以下功能：
+基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与Teams通信。 Bot Builder SDK 提供以下功能：
 
 * 轻松访问 Bot Framework 连接器。
 * 用于管理对话流和状态的其他功能。
-* 合并认知服务的简单方法，例如自然语言处理 (NLP) 。
+* 合并认知服务的简单方法，如自然语言处理 (NLP) 。
 
-自动程序使用 Teams `Text` 接收来自用户的消息，并且它会向用户发送一个或多个邮件响应。
+自动程序使用 Teams `Text` 接收来自用户的消息，并且它会向用户发送一个或多个消息响应。
 
 ## <a name="receive-a-message"></a>接收消息
 
@@ -191,7 +191,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动按以下方式拆分为Microsoft Teams活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除邮件。[](~/bots/how-to/update-and-delete-bot-messages.md) 建议发送单独的活动，而不是根据邮件拆分。
+> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动被拆分为单独的Microsoft Teams活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除邮件。[](~/bots/how-to/update-and-delete-bot-messages.md) 建议发送单独的活动，而不是根据邮件拆分。
 
 在用户和机器人之间发送的消息包含邮件中的内部通道数据。 此数据允许机器人在此频道上正常通信。 Bot Builder SDK 允许你修改消息结构。
 
@@ -203,7 +203,7 @@ async def on_members_added_activity(
 
 发送给 `channelData` 自动程序的活动中的典型对象包含以下信息：
 
-* `eventType`：Teams通道修改事件时传递的事件[类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
+* `eventType`：Teams通道修改事件时传递[的事件类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
 * `tenant.id`：Microsoft Azure Active Directory (Azure AD) 上下文中传递的租户 ID。
 * `team`：仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id`：通道的 GUID。
@@ -214,7 +214,7 @@ async def on_members_added_activity(
 * `channelData.teamsTeamId`：已弃用。 此属性仅包含用于向后兼容。
 * `channelData.teamsChannelId`：已弃用。 此属性仅包含用于向后兼容。
 
-### <a name="example-channeldata-object-channelcreated-event"></a>channelCreated 事件 (channelCreated 事件示例) 
+### <a name="example-channeldata-object-channelcreated-event"></a>channelCreated 事件 (channelCreated 事件) 
 
 以下代码显示了 channelData 对象的示例：
 
@@ -238,12 +238,12 @@ async def on_members_added_activity(
 
 从自动程序接收或发送到自动程序的邮件可以包括不同类型的邮件内容。
 
-| 格式    | 从用户到机器人 | 从自动程序到用户 | 注释                                                                                   |
+| 格式    | 从用户到机器人 | 从自动程序到用户 | 备注                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
 | 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。 不支持动态 GIF。  |
 | 卡片     | ✖                | ✔                | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
-| 表情符号    | ✔                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 用于表情符号。 |
+| 表情符号    | ✔                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 表示表情符号。 |
 
 ## <a name="notifications-to-your-message"></a>邮件通知
 
@@ -382,7 +382,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
     ![成功消息](~/assets/images/Cards/success.PNG)
 
-您可以选择" **关闭"** 或"切换聊天"来消除该消息。    
+您可以选择" **关闭"** 或"切换聊天"来消除该消息。
 
 **移动响应**：
 

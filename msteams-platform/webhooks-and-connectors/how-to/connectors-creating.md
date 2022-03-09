@@ -6,12 +6,12 @@ keywords: teams Office365 连接器
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 9914f721e155f01a05813441587d0d1ea71e09ae
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356096"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399196"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -37,12 +37,13 @@ ms.locfileid: "63356096"
 1. 用户选择" **保存"**，这将在代码中触发回调。
 
     > [!NOTE]
+    >
     > * 代码可以通过检索 webhook 设置处理保存事件。 代码存储 Webhook 以稍后发布事件。
     > * 配置体验在 Teams 内内加载。
 
 可以重用现有 Web 配置体验，或创建一个单独的版本以专门托管在 Teams。 您的代码必须包含 Microsoft Teams Sdk。 这样，代码可以访问 API 来执行常见操作，如获取当前用户、频道或团队上下文以及启动身份验证流程。
 
-**集成配置体验**
+集成配置体验：
 
 1. 通过调用`microsoftTeams.initialize()`初始化 SDK。
 1. 调用 `microsoftTeams.settings.setValidityState(true)` 以启用 **Save**。
@@ -143,9 +144,9 @@ ms.locfileid: "63356096"
 
 您的代码必须处理返回以编辑现有连接器配置的用户。 为此，在初始 `microsoftTeams.settings.setSettings()` 配置期间调用以下参数：
 
-- `entityId` 是表示用户已配置和您的服务理解的自定义 ID。
-- `configName` 是配置代码可以检索的名称。
-- `contentUrl` 是用户编辑现有连接器配置时加载的自定义 URL。
+* `entityId` 是表示用户已配置和您的服务理解的自定义 ID。
+* `configName` 是配置代码可以检索的名称。
+* `contentUrl` 是用户编辑现有连接器配置时加载的自定义 URL。
 
 此调用作为保存事件处理程序的一部分进行。 然后，在 `contentUrl` 加载 时，代码必须调用 `getSettings()` 以预填充配置用户界面中任何设置或表单。
 
@@ -218,7 +219,7 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
 * 若要禁用租户的连接器 `Set-OrganizationConfig -ConnectorsEnabled:$false`：。
 * 若要禁用租户的可操作邮件 `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`：。
 * 若要为连接器启用Teams，请运行以下命令：
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
@@ -243,7 +244,7 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
 
 上载应用包以在团队中配置和使用连接器后，从组织的应用程序目录中安装连接器。
 
-**设置连接器**
+设置连接器：
 
 1. 从 **左侧** 导航栏中选择"应用"。
 1. 在" **应用"** 部分，选择 **"连接器"**。
@@ -269,8 +270,8 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
 
 |**示例名称** | **说明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| 连接器    | 示例Office 365将通知生成到Teams连接器。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| 通用连接器示例 |通用连接器的示例代码，易于为支持 Webhook 的任何系统进行自定义。|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| 连接器 | 示例Office 365将通知生成到Teams连接器。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| 通用连接器示例 |通用连接器的示例代码，易于为支持 Webhook 的任何系统进行自定义。| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 

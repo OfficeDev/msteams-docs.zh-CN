@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 777892c0e1437b3e8022cf2929b160e3602fe035
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: d367824e633e129129a5c4de8900d8f1e3a19013
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355746"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398930"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -27,13 +27,13 @@ ms.locfileid: "63355746"
 
 :::row:::
    :::column span="":::
-      
+
    :::column-end:::
    :::column span="3":::
       :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Teams 应用商店发布过程" lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
    :::column-end:::
    :::column span="":::
-      
+
    :::column-end:::
 :::row-end:::
 
@@ -59,7 +59,7 @@ ms.locfileid: "63355746"
 
   * 所有问题的摘要
 
-  * 策略链接和分类失败或问题的详细信息： 
+  * 策略链接和分类失败或问题的详细信息：
 
     * 强制修复：必须在应用批准之前修复这些问题。
 

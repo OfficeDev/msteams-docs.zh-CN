@@ -5,16 +5,17 @@ keywords: 团队机器人卡格式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0c374904c122cfd9c35680763b3fccd30fea6bbb
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356439"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398734"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
 下面是向卡片添加富格式的两种方法:
+
 * [Markdown](#format-cards-with-markdown)
 * [HTML](#format-cards-with-html)
 
@@ -124,13 +125,14 @@ ms.locfileid: "63356439"
 
 :::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="带表情符号的自适应卡片" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
-### <a name="mention-support-within-adaptive-cards"></a>自适应卡片内提及的支持 
+### <a name="mention-support-within-adaptive-cards"></a>自适应卡片内提及的支持
 
 可以在自适应卡主体中为机器人和消息传递扩展响应添加@提及。 若要在卡片中添加@提及，请遵循[在频道和群组聊天对话中提及](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) 基于消息的相同通知逻辑和呈现。
 
 机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包含提及。
 
 > [!NOTE]
+>
 > * Teams 平台上的自适应卡片目前不支持 [媒体元素](https://adaptivecards.io/explorer/Media.html)。
 > * 机器人消息不支持频道和团队提及。
 
@@ -173,29 +175,29 @@ ms.locfileid: "63356439"
 }
 ```
 
-### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory (Azure AD) 用户提及中的对象 ID 和 UPN 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory (Azure AD) 用户提及中的对象 ID 和 UPN
 
-除了现有的提及 ID 外，Teams 平台还允许使用其 Azure AD 对象 ID 和用户原则名称 (UPN) 提及用户。 带有自适应卡的机器人和带有传入 Webhook 的连接器支持两个用户提及的 ID。 
+除了现有的提及 ID 外，Teams 平台还允许使用其 Azure AD 对象 ID 和用户原则名称 (UPN) 提及用户。 带有自适应卡的机器人和带有传入 Webhook 的连接器支持两个用户提及的 ID。
 
 下表描述了新支持的用户提及 ID:
 
-|ID  | 支持功能 |   说明 | 示例 |
+|ID  | 支持功能 | 说明 | 示例 |
 |----------|--------|---------------|---------|
-| Azure AD 对象 ID | 机器人，连接器 |  Azure AD 用户的对象 ID |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| Azure AD 对象 ID | 机器人，连接器 |  Azure AD 用户的对象 ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | 机器人，连接器 | Azure AD 用户的 UPN | john.smith@microsoft.com |
 
-#### <a name="user-mention-in-bots-with-adaptive-cards"></a>使用自适应卡片在机器人中提及用户 
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>使用自适应卡片在机器人中提及用户
 
-除现有 ID 外，机器人还支持使用 Azure AD 对象 ID 和 UPN 提及用户。 对于短信、自适应卡片正文和消息传递扩展响应，机器人中提供了对两个新 ID 的支持。 机器人支持对话和 `invoke` 方案中的提及 ID。 使用 ID @提及时，用户将获取活动源通知。 
+除现有 ID 外，机器人还支持使用 Azure AD 对象 ID 和 UPN 提及用户。 对于短信、自适应卡片正文和消息传递扩展响应，机器人中提供了对两个新 ID 的支持。 机器人支持对话和 `invoke` 方案中的提及 ID。 使用 ID @提及时，用户将获取活动源通知。
 
 > [!NOTE]
 > 在机器人中使用自适应卡片的用户提及不需要架构更新和 UI/UX 更改。
 
-##### <a name="example"></a>示例 
+##### <a name="example"></a>示例
 
 使用自适应卡在机器人中提到的用户示例如下:
 
-```json 
+```json
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.0",
@@ -233,15 +235,16 @@ ms.locfileid: "63356439"
 
 ![使用自适应卡片在机器人中提及用户](~/assets/images/authentication/user-mention-in-bot.png)
 
-#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>使用自适应卡片的传入 Webhook 中的用户提及 
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>使用自适应卡片的传入 Webhook 中的用户提及
 
 传入 Webhook 开始支持使用 Azure AD 对象 ID 和 UPN 在自适应卡片中提及用户。
 
-> [!NOTE]    
-> * 在传入 Webhook 的架构中启用用户提及，以支持 Azure AD 对象 ID 和 UPN。 
-> * 对于具有 Azure AD 对象 ID 和 UPN 的用户提及不需要进行 UI/UX 更改。      
+> [!NOTE]
+>
+> * 在传入 Webhook 的架构中启用用户提及，以支持 Azure AD 对象 ID 和 UPN。
+> * 对于具有 Azure AD 对象 ID 和 UPN 的用户提及不需要进行 UI/UX 更改。
 
-##### <a name="example"></a>示例 
+##### <a name="example"></a>示例
 
 传入 Webhook 中的用户提及示例如下所示:
 
@@ -417,6 +420,7 @@ ms.locfileid: "63356439"
 在阶段视图中，用户可以放大和缩小图像。 你可以在自适应卡片中选择必须具有此功能的图像。
 
 > [!NOTE]
+>
 > * 放大和缩小功能仅适用于自适应卡片中图像类型的图像元素。
 > * 对于 Teams 移动应用，自适应卡片中图像的阶段视图功能是默认可用的。 用户只需点击图像即可在阶段视图中查看自适应卡片图像，而不考虑是否存在 `allowExpand` 属性。
 
@@ -427,7 +431,7 @@ ms.locfileid: "63356439"
 | 样式 | 示例 | Markdown |
 | --- | --- | --- |
 | 粗体 | **text** | `**text**` |
-| 斜体 | *text* | `*text*` |
+| 斜体 | _text_ | `*text*` |
 | 标头 (级别 1&ndash;3) | **Text** | `### Text`|
 | 删除线 | ~~text~~ | `~~text~~` |
 | 未排序列表 | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
@@ -525,7 +529,7 @@ ms.locfileid: "63356439"
 | 样式 | 示例 | HTML |
 | --- | --- | --- |
 | 粗体 | **text** | `<strong>text</strong>` |
-| 斜体 | *text* | `<em>text</em>` |
+| 斜体 | _text_ | `<em>text</em>` |
 | 标头 (级别 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | 删除线 | ~~text~~ | `<strike>text</strike>` |
 | 未排序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
@@ -615,7 +619,7 @@ ms.locfileid: "63356439"
 | 样式 | 示例 | HTML |
 | --- | --- | --- |
 | 粗体 | **text** | `<strong>text</strong>` |
-| 斜体 | *text* | `<em>text</em>` |
+| 斜体 | _text_ | `<em>text</em>` |
 | 标头 (级别 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | 删除线 | ~~text~~ | `<strike>text</strike>` |
 | 未排序列表 | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: 18c42cf4a8ea6350214c2e459f0dcde1a1d8f66c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356418"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399098"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -481,7 +481,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`context` | 枚举数组| 2|| 支持选项卡的 `contextItem` 范围集。|
 
 > [!NOTE]
->  searchUrl 功能不适用于第三方开发人员。如果选项卡需要上下文相关信息来显示相关内容或启动身份验证流，请参阅 [获取 Microsoft Teams 选项卡的上下文](../../tabs/how-to/access-teams-context.md)。
+> searchUrl 功能不适用于第三方开发人员。如果选项卡需要上下文相关信息来显示相关内容或启动身份验证流，请参阅 [获取 Microsoft Teams 选项卡的上下文](../../tabs/how-to/access-teams-context.md)。
 
 ## <a name="bots"></a>机器人
 
@@ -638,7 +638,6 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 >[!NOTE]
 >如果在应用清单中选择`showLoadingIndicator` 为 true，若要正确加载页面，请修改选项卡和任务模块的内容页，如 [显示本机加载指示器](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) 文档中所述。
 
-
 ## <a name="isfullscreen"></a>isFullScreen
 
  **可选**— 布尔值
@@ -717,6 +716,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 **可选** - 字符串
 
 指定默认情况下为此应用定义的安装范围。 定义的范围将是当用户尝试添加应用时按钮上显示的选项。 选项有：
+
 * `personal`
 * `team`
 * `groupchat`
@@ -727,10 +727,11 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 **可选** - object
 
 选择组安装范围后，它将在用户安装应用时定义默认功能。选项包括：
+
 * `team`
 * `groupchat`
 * `meetings`
- 
+
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`team`|string|||当所选安装范围 `team` 时，此字段指定可用的默认功能。选项：`tab`、 `bot`或 `connector`。|
@@ -761,7 +762,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
 **可选**— 布尔值
- 
+
 当 `defaultBlockUntilAdminAction` 属性设置为 **true** 时，应用默认向用户隐藏，直到管理员允许它。 如果设置为 **true，** 则应用将隐藏所有租户和最终用户。 租户管理员可以在管理中心内Teams应用，并采取措施以允许或阻止该应用。 默认值为 **false**。 有关默认应用块详细信息，请参阅隐藏[Teams应用，直到管理员批准](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl

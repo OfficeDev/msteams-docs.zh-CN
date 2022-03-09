@@ -4,12 +4,12 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b4e693e127b06469a1f31a486fa8db9cc7ab4ba5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356264"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398804"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -24,7 +24,7 @@ ms.locfileid: "63356264"
 在以下情况下，有关用户、团队或公司的上下文可能特别有用：
 
 * 在应用中创建资源或将资源与指定的用户或团队关联。
-* 您从用户或其他Microsoft Azure Active Directory (Azure AD) 启动身份验证流，并且不需要用户再次输入其用户名。 
+* 您从用户或其他Microsoft Azure Active Directory (Azure AD) 启动身份验证流，并且不需要用户再次输入其用户名。
 
 有关详细信息，请参阅验证[用户Microsoft Teams](~/concepts/authentication/authentication.md)。
 
@@ -115,7 +115,7 @@ ms.locfileid: "63356264"
 
 ## <a name="retrieve-context-in-private-channels"></a>检索私人频道中的上下文
 
-当你的内容页面加载到私人频道中 `getContext` 时，你通过调用收到的数据会混淆以保护通道的隐私。 
+当你的内容页面加载到私人频道中 `getContext` 时，你通过调用收到的数据会混淆以保护通道的隐私。
 
 当内容页位于私人频道中时，将更改以下字段：
 
@@ -133,7 +133,7 @@ ms.locfileid: "63356264"
 > [!NOTE]
 > 目前，Microsoft Teams 连接频道仅在开发人员[预览版](../../resources/dev-preview/developer-preview-intro.md)中。
 
-在共享频道中加载内容Microsoft Teams 连接，`getContext`由于共享频道中用户的唯一名单，从呼叫接收的数据会发生变化。 
+在共享频道中加载内容Microsoft Teams 连接，`getContext`由于共享频道中用户的唯一名单，从呼叫接收的数据会发生变化。
 
 当内容页位于共享通道中时，将更改以下字段：
 

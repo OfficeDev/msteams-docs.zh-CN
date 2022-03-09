@@ -4,12 +4,12 @@ author: surbhigupta
 description: 了解会议生命周期、在桌面和移动环境中构建用户在整个会议生命周期中的会议体验、参与者角色和用户类型。 此外，了解如何在会议生命周期中集成机器人和消息传递扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355581"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398846"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -33,6 +33,7 @@ Teams统一会议应用基于以下概念：
 > 如果已将选项卡与会议集成，则应用必须遵循Teams SSO (单一) [身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 > [!NOTE]
+>
 > * 专用计划会议仅支持应用。
 > * 在 Web 客户端Teams会议扩展选项卡应用的添加Teams选项。
 
@@ -40,7 +41,7 @@ Teams统一会议应用基于以下概念：
 
 通过会议前应用体验，你可以查找和添加会议应用。 你还可以执行会议前任务，例如发起投票以调查会议参与者。
 
-**向现有会议添加选项卡**
+若要向现有会议添加选项卡：
 
 1. 在日历中，选择要添加选项卡的会议。
 1. 选择" **详细信息"** 选项卡并选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. 将显示选项卡库。
@@ -50,6 +51,7 @@ Teams统一会议应用基于以下概念：
 1. 在选项卡库中，选择要添加的应用并按照所需步骤操作。 应用作为选项卡安装。
 
    > [!NOTE]
+   >
    > * 您还可以使用"会议聊天"选项卡向现有会议 **添加** 选项卡。
    > * 如果投票或调查超过 10 个，则选项卡布局必须组织在一个状态。
 
@@ -71,7 +73,7 @@ Teams统一会议应用基于以下概念：
 
 对于移动版，会议应用可从会议>省略号 &#x25CF;&#x25CF;&#x25CF; 提供。 选择 **"** 应用"以查看会议提供的所有应用。
 
-**在会议期间使用选项卡**
+在会议期间使用选项卡：
 
 1. 转到Teams。
 1. 在日历中，选择要使用选项卡的会议。
@@ -97,6 +99,7 @@ Teams统一会议应用基于以下概念：
 ---
 
 > [!NOTE]
+>
 > * 应用可以利用 Teams 客户端 SDK 来访问 `meetingId`、 `userMri`和 `frameContext` ，并适当地呈现体验。
 > * 如果成功呈现会议内对话框，则它会发送成功下载结果的通知。
 > * 应用清单指定希望应用显示的位置。 可通过在清单中指定上下文字段来完成此操作。 它还属于共享会议阶段体验的一部分，但需遵循指定的 [设计准则](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md)。

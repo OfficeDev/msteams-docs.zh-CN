@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams 导入消息 api 图形 Microsoft 迁移迁移帖子
-ms.openlocfilehash: d20212bf5f5766e71b1be7a4476518510b8de80b
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 559dcc1c6ab19032854ca5a431268bed0ea2540f
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212522"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398636"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
@@ -26,7 +26,7 @@ ms.locfileid: "62212522"
 
 1. [创建具有返回时间戳](#step-1-create-a-team)的团队。
 1. [创建具有返回时间戳的频道](#step-2-create-a-channel)。
-1. [导入外部的反时日期消息](#step-3-import-messages)。
+1. [导入外部实时日期消息](#step-3-import-messages)。
 1. [完成团队和频道迁移过程](#step-4-complete-migration-mode)。
 1. [添加团队成员](#step-five-add-team-members)。
 
@@ -42,16 +42,16 @@ ms.locfileid: "62212522"
 ### <a name="set-up-your-office-365-tenant"></a>设置 Office 365 租户
 
 * 确保导入Office 365租户存在。 有关为租户设置Office 365租户Teams，请参阅[准备Office 365租户](../../concepts/build-and-test/prepare-your-o365-tenant.md)。
-* 确保团队成员在Azure Active Directory。 有关详细信息，请参阅[向用户添加Azure AD。](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+* 确保团队成员在Azure Active Directory。 有关详细信息，请参阅[向用户添加Azure AD](/azure/active-directory/fundamentals/add-users-azure-active-directory)。
 
 ## <a name="step-1-create-a-team"></a>步骤 1：创建团队
 
 由于要迁移现有数据，因此在迁移过程中保留原始邮件时间戳并阻止邮件活动对于在 Teams 中重新创建用户的现有邮件流Teams。 实现此目的：：
 
-> [使用 team 资源](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) 属性创建具有返回时间戳的新 `createdDateTime` 团队。 将新团队放在 中，这是一种特殊状态，可限制用户在迁移过程完成之前 `migration mode` 参与团队中的大多数活动。 在 POST 请求中包括具有 值的 instance 属性，以明确标识正在创建 `teamCreationMode` `migration` 用于迁移的新团队。  
+> [使用 team 资源](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) 属性创建具有返回时间戳的新 `createdDateTime` 团队。 将新团队放在 `migration mode`中，这是一种特殊状态，可限制用户在迁移过程完成之前参与团队中的大多数活动。 `teamCreationMode`在 POST 请求`migration`中包括具有 值的 instance 属性，以明确标识正在创建用于迁移的新团队。  
 
 > [!NOTE]
-> `createdDateTime`将仅为已迁移的团队或频道的实例填充该字段。
+> 将 `createdDateTime` 仅为已迁移的团队或频道的实例填充该字段。
 
 <!-- markdownlint-disable MD001 -->
 
@@ -92,14 +92,14 @@ Content-Location: /teams/{team-id}
 
 您可以在以下情况下收到错误消息：
 
-* 为 `createdDateTime` 将来设置 If。
+* 为将来设置 If `createdDateTime` 。
 * 如果 `createdDateTime` 已正确指定，但 `teamCreationMode` 实例属性缺失或设置为无效值。
 
 ## <a name="step-2-create-a-channel"></a>步骤 2：创建频道
 
 为导入的消息创建频道与创建团队方案类似：
 
-> [使用 channel 资源](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) 属性创建具有返回时间戳的新 `createdDateTime` 频道。 将新频道放在 中，这是一种特殊状态，可限制用户在迁移过程完成之前参与频道内的 `migration mode` 大多数聊天活动。 在 POST 请求中包括具有 值的 instance 属性，以明确标识正在创建 `channelCreationMode` `migration` 用于迁移的新团队。  
+> [使用 channel 资源](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) 属性创建具有返回时间戳的新 `createdDateTime` 频道。 将新频道放在 `migration mode`中，这是一种特殊状态，可限制用户在迁移过程完成之前参与频道内的大多数聊天活动。 `channelCreationMode`在 POST 请求`migration`中包括具有 值的 instance 属性，以明确标识正在创建用于迁移的新团队。  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permission"></a>权限
 
@@ -107,7 +107,7 @@ Content-Location: /teams/{team-id}
 |-|-|-|-|-|-|
 |`Teamwork.Migrate.All`|管理迁移到 Microsoft Teams|创建和管理资源以迁移到Microsoft Teams。|**仅应用程序**|**是**|`POST /teams`|
 
-#### <a name="request-create-a-channel-in-migration-state"></a>请求 (以迁移状态创建) 
+#### <a name="request-create-a-channel-in-migration-state"></a>请求 (在迁移状态创建) 
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
@@ -146,19 +146,21 @@ HTTP/1.1 202 Accepted
 ```http
 400 Bad Request
 ```
+
 您可以在以下情况下收到错误消息：
 
-* 为 `createdDateTime` 将来设置 If。
+* 为将来设置 If `createdDateTime` 。
 * 如果 `createdDateTime` 已正确指定，但 `channelCreationMode` 实例属性缺失或设置为无效值。
 
 ## <a name="step-3-import-messages"></a>步骤 3：导入邮件
 
-创建团队和频道后，可以使用 请求正文中的 和 键开始发送返回 `createdDateTime` `from` 时间消息。
+创建团队和频道`createdDateTime``from`后，可以使用 请求正文中的 和 键开始发送返回时间消息。
 
 > [!NOTE]
+>
 > * 不支持使用早于 `createdDateTime` 邮件线程导入 `createdDateTime` 的邮件。
 > * `createdDateTime` 对于同一线程中的消息，必须是唯一的。
-> * `createdDateTime` 支持具有毫秒精度的时间戳。 例如，如果传入请求邮件的值设置为 `createdDateTime` *2020-09-16T05：50：31.0025302Z，* 那么在接收邮件时，它将转换为 *2020-09-16T05：50：31.002Z。*
+> * `createdDateTime` 支持具有毫秒精度的时间戳。 `createdDateTime`例如，如果传入请求邮件的值设置为 *2020-09-16T05：50：31.0025302Z*，那么在接收邮件时，它将转换为 *2020-09-16T05：50：31.002Z*。
 
 #### <a name="request-post-message-that-is-text-only"></a>请求 (纯文本的 POST) 
 
@@ -232,7 +234,8 @@ HTTP/1.1 200 OK
 #### <a name="request-post-a-message-with-inline-image"></a>请求 (内联图像消息 POST) 
 
 > [!NOTE]
-> * 此方案中没有特殊权限范围，因为请求是 的一部分 `chatMessage` 。
+>
+> * 此方案中没有特殊权限范围，因为请求是 的一部分 `chatMessage`。
 > * 此处适用于 `chatMessage` 的范围。
 
 ```http
@@ -294,7 +297,7 @@ HTTP/1.1 200 OK
 
 ## <a name="step-4-complete-migration-mode"></a>步骤 4：完成迁移模式
 
-完成邮件迁移过程后，团队和频道均会使用 方法退出迁移  `completeMigration` 模式。 此步骤将打开工作组和频道资源，供工作组成员常规使用。 操作绑定到 `team` 实例。 在团队完成之前，必须在迁移模式下完成所有频道。
+完成邮件迁移过程后，团队和频道均会使用 方法退出迁移  `completeMigration` 模式。 此步骤将打开工作组和频道资源，供工作组成员常规使用。 操作绑定到实例 `team` 。 在团队完成之前，必须在迁移模式下完成所有频道。
 
 #### <a name="request-end-channel-migration-mode"></a>请求 (通道迁移模式) 
 
@@ -309,7 +312,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/complete
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="request-end-team-migration-mode"></a>请求 (结束团队迁移模式) 
+#### <a name="request-end-team-migration-mode"></a>请求 (团队迁移模式) 
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
@@ -321,11 +324,11 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-对 不在 `team` 中的 或 `channel` 调用的操作 `migrationMode` 。
+对 不在 `team` 中的 或 `channel` 调用的操作 `migrationMode`。
 
 ## <a name="step-five-add-team-members"></a>步骤 5：添加团队成员
 
-可以使用以下 UI 将成员添加到团队[Teams](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) Microsoft Graph[添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)API：
+可以使用以下 UI 将成员添加到团队[Teams](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) Microsoft Graph[添加成员](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API：
 
 #### <a name="request-add-member"></a>请求 (成员) 
 
@@ -351,9 +354,9 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* 提出 `completeMigration` 请求后，无法将进一步的消息导入团队。
+* `completeMigration`提出请求后，无法将进一步的消息导入团队。
 
-* 请求返回成功响应后，只能将团队成员 `completeMigration` 添加到新团队。
+* 请求返回成功响应后 `completeMigration` ，只能将团队成员添加到新团队。
 
 * 限制：邮件按每个通道 5 RPS 导入。
 
@@ -379,7 +382,6 @@ HTTP/1.1 204 No Content
 ||表情符号|
 ||报价单|
 ||跨渠道发布|
-
 
 ## <a name="see-also"></a>另请参阅
 

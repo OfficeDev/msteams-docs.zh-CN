@@ -4,12 +4,12 @@ description: 了解自动程序支持的卡片类型Teams，例如自适应卡�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ac5d7605b73d9aeb41bd41cca919e59fa47afff9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 516ca3a0fbfc1e1fb386632eb06c1c3a60918485
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062514"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399042"
 ---
 # <a name="cards-and-task-modules"></a>卡片和任务模块
 
@@ -20,7 +20,7 @@ ms.locfileid: "62062514"
 自动程序支持以下类型的卡Teams：
 
 * 自适应卡片
-* Hero card
+* 主图卡片
 * 列表卡
 * Office 365 连接器卡
 * 收据卡
@@ -33,11 +33,12 @@ ms.locfileid: "62062514"
 [自适应卡片中的自适应卡片](cards/people-picker.md) 中的人员选取器可帮助搜索、选择、重新分配和预选聊天或频道中的用户。
 
 你可以添加和响应卡片操作，
+
 * 打开 URL
 * 向自动程序发送消息和有效负载
 * 启动 OAuth 流
 
-可以使用自适应卡片 [中的](~/task-modules-and-cards/cards/dynamic-search.md) 类型前控件在大型数据集内提供动态搜索体验，在有限数量的选择内执行类型前静态搜索。 可以在频道或个人选项卡、聊天机器人或深层链接中调用任务模块。 通过将任务模块添加到用户的选项卡，可以改善用户对需要数据输入的任何工作流的体验。可以使用自适应卡片和自动程序Teams上的按钮从自动程序调用任务模块。
+可以使用自适应卡片 [中的](~/task-modules-and-cards/cards/dynamic-search.md) 类型前控件在大型数据集内提供动态搜索体验，在有限数量的选择内执行类型前静态搜索。 可以在频道或个人选项卡、聊天机器人或深层链接中调用任务模块。 通过将任务模块添加到用户的选项卡，可以改善用户对需要数据输入的任何工作流的体验。可以使用自适应卡片和自动Teams上的按钮从自动程序调用任务模块。
 
 ## <a name="see-also"></a>另请参阅
 

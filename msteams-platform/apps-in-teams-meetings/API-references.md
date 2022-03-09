@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api 用户上下文通知信号查询
-ms.openlocfilehash: 2ed9f1682ff3de9022d3de3f93bbfc07933e7b4c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 3f77e0c1c24ad624fae268d4ca0621f7217ab24a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355788"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398867"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -42,6 +42,7 @@ ms.locfileid: "63355788"
 ## <a name="get-participant-api"></a>获取参与者 API
 
 > [!NOTE]
+>
 > * 不要缓存参与者角色，因为会议组织者可以随时更改角色。
 > * 目前， `GetParticipant` 只有参与者少于 350 名的通讯组列表或名单才支持 API。
 
@@ -141,11 +142,12 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 会议中的所有用户都接收通过会议内通知有效负载发送的通知。 会议通知负载触发会议内通知，并允许您提供使用用户-机器人聊天的现有对话通知 API 传递的会议信号。 你可以根据用户操作发送会议内通知。 有效负载通过 Bot Services 提供。
 
 > [!NOTE]
+>
 > * 调用会议内通知时，内容将显示为聊天消息。
 > * 目前，不支持发送目标通知和支持 webapp。
 > * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。 
 > * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Microsoft Azure Active Directory (Azure AD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
-
+>
 ### <a name="query-parameter"></a>查询参数
 
 下表包含查询参数：
@@ -159,6 +161,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 在 `Bot ID` 清单中声明，机器人将接收结果对象。
 
 > [!NOTE]
+>
 > * 在 `completionBotId` 请求 `externalResourceUrl` 的有效负载示例中，的 参数是可选的。
 > * 宽度 `externalResourceUrl` 和高度参数必须以像素为单位。 有关详细信息，请参阅 [设计指南](design/designing-apps-in-meetings.md)。
 > * URL 是页面，加载时与在 `<iframe>` 会议通知中一样。 域必须在你的应用清单中的 `validDomains` 应用数组中。
@@ -308,7 +311,7 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 > 机器人可以通过向清单添加 `ChannelMeeting.ReadBasic.Group` RSC 权限，自动接收所有频道中创建的所有会议的会议开始或结束事件。
- 
+
 ### <a name="query-parameter"></a>查询参数
 
 下表列出了查询参数：
@@ -495,7 +498,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 API 的 JSON 响应 `getAppContentStageSharingState` 正文为：
 
@@ -535,7 +538,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 API 的 JSON 响应正文 `getAppContentStageSharingCapabilities` 为：
 
@@ -614,6 +617,7 @@ API 的 JSON 响应正文 `getAppContentStageSharingCapabilities` 为：
 机器人通过处理程序接收 `OnEventActivityAsync` 事件。 为了反初始化 JSON 有效负载，引入了一个模型对象，用于获取会议元数据。 会议元数据位于事件有效 `value` 负载中的 属性中。 将 `MeetingStartEndEventvalue` 创建模型对象，其成员变量对应于 `value` 事件有效负载中的 属性下的键。
 
 > [!NOTE]
+>
 > * 从 获取会议 `turnContext.ChannelData`ID。
 > * 不要将对话 ID 用作会议 ID。
 > * 请勿使用会议事件有效负载中的会议 ID `turncontext.activity.value`。
@@ -621,6 +625,7 @@ API 的 JSON 响应正文 `getAppContentStageSharingCapabilities` 为：
 以下代码演示如何从`MeetingType``EndTime``Title``Id``JoinUrl``StartTime`会议开始/结束事件捕获会议元数据，即 、 和 ：
 
 会议开始事件
+
 ```csharp
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -629,6 +634,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 会议结束事件
+
 ```csharp
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {

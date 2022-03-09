@@ -1,24 +1,24 @@
 ---
-title: 启用资源特定许可Teams
+title: 在"管理"中启用特定于资源Teams
 description: 介绍资源特定的Teams以及如何利用它。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 授权 OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 613416c7363de8a9351e56f5cdb2a6a339b74392
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 071ad1a7f7c8263bafdfb0d2521676d0e6992d8e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821687"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399280"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 
 > [!NOTE]
 > 聊天范围的特定于资源的同意仅适用于 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md) 版。
 
-特定于资源 (RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，使你的应用可以使用 API 终结点来管理组织内的特定资源（团队或聊天）。 RSC 权限模型使团队所有者和聊天所有者可以分别授予应用程序访问和修改团队数据和聊天数据的许可。 
+特定于资源的同意 (RSC) 是一种 Microsoft Teams 和 Microsoft Graph API 集成，使你的应用可以使用 API 终结点来管理组织中特定的资源（团队或聊天）。 RSC 权限模型使团队所有者和聊天所有者可以分别授予应用程序访问和修改团队数据和聊天数据的许可。
 
 **注意：** 如果聊天具有与之关联的会议或呼叫，则相关的 RSC 权限也适用于这些资源。
 
@@ -94,7 +94,7 @@ ms.locfileid: "62821687"
 可以直接在应用门户[中启用](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal)或禁用Microsoft Azure许可：
 
 1. 以全局管理员 [或](https://portal.azure.com) 公司管理员登录 Azure [门户](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
-1. 选择 **Azure Active Directory** >  **Enterprise应用程序** > **""用户同意设置"和"权限** > [**"**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)。
+1. 选择 **Azure Active Directory** >  **Enterprise应用程序** > **""用户同意** 设置"和"权限 > [**"**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)。
 1. 使用标记为组所有者同意的控件启用、禁用或限制用户 **同意访问数据的应用**。 默认值为 **"允许所有组所有者获得组所有者同意"**。 对于使用 RSC 安装应用的团队所有者，必须为该用户启用组所有者同意。
 
     ![Azure RSC 团队配置](../../assets/images/azure-rsc-team-configuration.png)
@@ -118,7 +118,7 @@ ms.locfileid: "62821687"
 Azure AD门户提供了一个中央平台，用于注册和配置应用。 必须在应用门户中注册Azure AD与标识平台集成，并调用 Microsoft Graph API。 有关详细信息，请参阅 [向标识平台注册应用程序](/graph/auth-register-app-v2)。
 
 > [!WARNING]
-> 一Azure AD应用 ID 不能跨多个应用Teams共享。 一个应用和一个应用Teams 1：1 Azure AD映射。 尝试安装多个与Teams ID 关联的应用Azure AD安装或运行时失败。
+> 一Azure AD应用 ID 不能跨多个应用Teams共享。 应用和应用之间必须有 1：1 Teams映射Azure AD映射。 尝试安装多个与Teams ID 关联的应用Azure AD安装或运行时失败。
 
 ## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>在应用程序门户中查看Azure AD权限
 
@@ -126,23 +126,23 @@ Azure AD门户提供了一个中央平台，用于注册和配置应用。 必�
 1. 从 **左窗格中选择"API** 权限"，然后浏览应用的 **"已配置权限"** 列表。 如果你的应用仅进行 RSC Graph API 调用，请删除该页面上的所有权限。 如果你的应用还进行非 RSC 调用，请保留所需的权限。
 
 > [!IMPORTANT]
-> Azure AD门户不能用于请求 RSC 权限。 RSC 权限当前专用于 Teams 客户端中安装的 Teams 应用程序，这些权限在 Teams 应用清单 (JSON) 文件中声明。
+> 无法Azure AD请求 RSC 权限。 RSC 权限当前专用于安装在 Teams 客户端中的 Teams 应用程序，这些应用程序在 Teams 应用程序清单 (JSON) 文件中声明。
 
 ## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>从应用程序获取访问Microsoft 标识平台
 
-若要Graph API 调用，必须从标识平台获取应用的访问令牌。 在你的应用可以从标识平台获取令牌之前，必须在 Azure AD 门户中注册。 访问令牌包含你的应用的相关信息，还有它就可通过 Microsoft Graph 访问的资源和 API 所具备的权限。
+若要Graph API 调用，必须从标识平台获取应用的访问令牌。 应用必须先在标识门户中注册，然后才能从标识平台Azure AD令牌。 访问令牌包含你的应用的相关信息，还有它就可通过 Microsoft Graph 访问的资源和 API 所具备的权限。
 
-必须在注册过程中具有以下Azure AD从标识平台检索访问令牌：
+必须在注册过程中具有以下Azure AD，以从标识平台检索访问令牌：
 
-- **应用注册** 门户分配的应用程序 ID。 如果你的应用支持单一登录 (SSO) 你必须对应用和 SSO 使用相同的应用程序 ID。
-- 客户端 **密码/密码** 或作为证书的公钥或私钥 **对**。 这不是本机应用的必需项。
-- **应用的重定向 URI** 或回复 URL，用于接收来自Azure AD。
+* **应用注册** 门户分配的应用程序 ID。 如果你的应用支持单一登录 (SSO) 则必须对应用和 SSO 使用相同的应用程序 ID。
+* 客户端 **密码/密码** 或作为证书的公钥或私钥 **对**。 这不是本机应用的必需项。
+* **应用的重定向 URI** 或回复 URL，用于接收来自Azure AD。
 
 有关详细信息，请参阅[代表用户获取访问权限和](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true)[在没有用户的情况下获取访问权限](/graph/auth-v2-service)。
 
 ## <a name="update-your-teams-app-manifest"></a>更新Teams应用程序清单
 
-RSC 权限在应用清单 JSON 文件中声明。 
+RSC 权限在应用清单 JSON 文件中声明。
 
 > [!IMPORTANT]
 > 非 RSC 权限存储在 Azure 门户中。 不要将它们添加到应用清单。
@@ -157,14 +157,14 @@ RSC 权限在应用清单 JSON 文件中声明。
 
 将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到具有以下值的应用清单：
 
-|姓名| 类型 | 说明|
+|名称| 类型 | 说明|
 |---|---|---|
 |`id` |String |你的Azure AD ID。 有关详细信息，请参阅在[应用门户中Azure AD应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
 |`resource`|String| 此字段在 RSC 中没有任何操作，但必须添加该字段，并且必须具有值以避免错误响应;任何字符串将执行。|
 
 指定应用程序所需的权限。
 
-|姓名| 类型 | 说明|
+|名称| 类型 | 说明|
 |---|---|---|
 |`authorization`|Object|应用运行所需的权限列表。 有关详细信息，请参阅 [清单中 link- 授权的占位符]
 
@@ -312,7 +312,7 @@ RSC 权限在应用清单 JSON 文件中声明。
 
 > [!NOTE]
 > 如果应用旨在支持在团队和聊天范围内安装，可以在 下的同一清单中指定团队和聊天权限 `authorization`。
-    
+
 <br>
 
 </details>
@@ -325,7 +325,7 @@ RSC 权限在应用清单 JSON 文件中声明。
 
 将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到具有以下值的应用清单：
 
-|姓名| 类型 | 说明|
+|名称| 类型 | 说明|
 |---|---|---|
 |`id` |String |你的Azure AD ID。 有关详细信息，请参阅在[应用门户中Azure AD应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
 |`resource`|String| 此字段在 RSC 中没有任何操作，但必须添加该字段，并且必须具有值以避免错误响应;任何字符串将执行。|
@@ -383,14 +383,14 @@ RSC 权限在应用清单 JSON 文件中声明。
 
 > [!NOTE]
 > 如果应用旨在支持在团队和聊天范围内安装，可以在 下的同一清单中指定团队和聊天权限 `applicationPermissions`。
-    
+
 <br>
 
 </details>
 
 ## <a name="sideload-your-app-in-teams"></a>在 Teams 中旁加载应用
 
-如果你Teams管理员允许自定义应用上传，你可以将应用直接旁加载[](~/concepts/deploy-and-publish/apps-upload.md)到特定团队或聊天。
+如果你的Teams管理员允许自定义应用上传，你可以将应用直接旁[](~/concepts/deploy-and-publish/apps-upload.md)加载到特定团队或聊天。
 
 ## <a name="check-your-app-for-added-rsc-permissions"></a>检查应用是否添加了 RSC 权限
 
@@ -402,29 +402,29 @@ RSC 权限在应用清单 JSON 文件中声明。
 ### <a name="check-your-app-for-added-rsc-permissions-in-a-team"></a>检查你的应用在团队中是否添加了 RSC 权限
 
 1. 从组获取 **团队的 groupId** Teams。
-1. In Teams， select **Teams** from the leftmost pane.
+1. 在Teams **中，Teams** 最左边的窗格中选择"下一个"。
 1. 选择要安装应用的团队。
 1. 选择该团队 &#x25CF;&#x25CF;&#x25CF; 省略号。
 1. 从 **团队下拉菜单中选择** 获取团队链接。
 1. 复制并保存"获取团队链接"弹出对话框中的 **groupId** 值。
-1. 登录到"Graph **资源管理器"**。
-1. 对此终结点 **进行 GET** 调用： `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants`。 响应`clientAppId`中的字段将映射到`webApplicationInfo.id`在应用程序清单Teams中指定。
+1. 登录到"**Graph资源管理器"**。
+1. 对此终结点 **进行 GET** 调用： `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants`。 响应`clientAppId`中的字段将映射到应用程序`webApplicationInfo.id`清单Teams中指定的。
 
-    ![Graph对获取团队 RSC 权限的 GET 调用的浏览器响应](../../assets/images/team-graph-permissions.png)
+    ![Graph对团队 RSC 权限的 GET 调用的浏览器响应](../../assets/images/team-graph-permissions.png)
 
 若要详细了解如何获取特定团队中安装的应用的详细信息，请参阅获取指定团队中安装的应用 [的名称和其他详细信息](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps)。
 
 ### <a name="check-your-app-for-added-rsc-permissions-in-a-chat"></a>检查你的应用在聊天中是否添加了 RSC 权限
 
-1. 从 Web 客户端获取Teams *ID*。
-1. 在 Teams客户端中 **，从最** 左侧的窗格中选择"聊天"。
+1. 从 Web 客户端获取 *Teams ID。*
+1. 在 Teams 客户端中 **，从最** 左侧的窗格中选择"聊天"。
 1. 从下拉菜单中选择应用安装位置的聊天。
 1. 复制 Web URL，然后从字符串中保存聊天线程 ID。
 
     ![来自 Web URL 的聊天线程 ID](../../assets/images/chat-thread-id.png)
 
-1. 登录到"Graph **资源管理器"**。
-1. 对以下 **终结点进行 GET** 调用： `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`。 响应`clientAppId`中的字段将映射到`webApplicationInfo.id`在应用程序清单Teams中指定。
+1. 登录到"**Graph资源管理器"**。
+1. 对以下 **终结点进行 GET** 调用： `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`。 响应`clientAppId`中的字段将映射到应用程序`webApplicationInfo.id`清单Teams中指定的。
 
     ![Graph对聊天 RSC 权限的 GET 调用的浏览器响应](../../assets/images/chat-graph-permissions.png)
 
@@ -437,6 +437,6 @@ RSC 权限在应用清单 JSON 文件中声明。
 | Resource-Specific RSC (同意)  | 使用 RSC 调用Graph API。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## <a name="see-also"></a>另请参阅
- 
+
 * [在应用程序内测试特定于资源的许可Teams](test-resource-specific-consent.md)
 * [管理员许可Microsoft Teams资源特定许可](/MicrosoftTeams/resource-specific-consent)

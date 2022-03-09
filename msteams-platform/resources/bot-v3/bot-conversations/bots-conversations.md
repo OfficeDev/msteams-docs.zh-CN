@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: teams 自动程序消息
 ms.date: 05/20/2019
-ms.openlocfilehash: ce3d3d1dd39707d08c720e75c67ec61b606f676a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0f77606b0fcc73e2bb68fc08e964662fdcba4df7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518497"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399217"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与自动程序Microsoft Teams对话
 
@@ -41,17 +41,17 @@ ms.locfileid: "62518497"
 
 每条消息是类型 `messageType: message` 的一个 `Activity` 对象。 当用户发送消息时，Teams 会将消息发布给你的机器人。具体地说，它会发送一个 JSON 对象给你的机器人的消息传递端点。 自动程序将检查消息以确定其类型并相应地做出响应。
 
-机器人还支持事件样式的消息。 有关详细信息，请参阅处理聊天[机器人Microsoft Teams](~/resources/bot-v3/bots-notifications.md)。 语音当前不受支持。
+机器人还支持事件样式的消息。 有关详细信息，请参阅处理[聊天机器人Microsoft Teams](~/resources/bot-v3/bots-notifications.md)。 语音当前不受支持。
 
 消息在所有范围内大部分是相同的，但在 UI 中访问自动程序的方式和你需要了解的场景差异存在差异。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理，使机器人能够Teams和其他渠道进行通信。 Bot Builder SDK 提供轻松访问此 API、管理对话流和状态的其他功能，以及合并认知服务（如自然语言处理和 NLP (）) 。
+基本对话通过 Bot Framework 连接器进行处理，该连接器是一个 REST API，使机器人能够Teams和其他频道进行通信。 Bot Builder SDK 提供了轻松访问此 API、管理对话流和状态的其他功能，以及合并认知服务（如自然语言处理 (NLP) ） 的简单方法。
 
 ## <a name="message-content"></a>邮件内容
 
 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。 你可以指定自动程序可以在自动程序Microsoft Teams设置页中处理的内容类型。
 
-| 格式 | 从用户到机器人  | 从自动程序到用户 |  注释 |
+| 格式 | 从用户到机器人  | 从自动程序到用户 |  备注 |
 | --- | :---: | :---: | --- |
 | 格式文本  | ✔ | ✔ |  |
 | 图片 | ✔ | ✔ | PNG、JPEG 或 GIF 格式的最大大小为 1024×1024 和 1 MB;不支持动态 GIF。 |
@@ -59,7 +59,7 @@ ms.locfileid: "62518497"
 | 表情符号 | ✖ | ✔ | Teams UTF-16 支持表情符号，例如 U+1F600 表示表情符号。 |
 |
 
-有关自动程序框架支持的机器人交互类型（团队中的机器人基于这些机器人）的信息，请参阅适用于 [.NET 的 Bot Builder SDK](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) 和适用于 Node.js的 [](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) Bot [Builder SDK ](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)文档中有关对话流和相关概念的 Bot Framework 文档。
+有关自动程序框架支持的自动程序交互类型（团队中的机器人基于这些机器人）的信息，请参阅适用于 [.NET 的 Bot Builder SDK](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) 和适用于 Node.js[](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) 的 Bot [Builder SDK ](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)文档中有关对话流和相关概念的 Bot Framework 文档。
 
 ## <a name="message-formatting"></a>消息格式
 
@@ -74,7 +74,7 @@ ms.locfileid: "62518497"
 
 图片通过向邮件添加附件来发送。 有关附件的信息，请参阅 [Bot Framework 文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)。
 
-图片可以是最多 1024×1024 和 1 MB PNG、 JPEG 或 GIF 格式;不支持动态 GIF。
+图片最多为 1024×1024 和 1 MB（PNG、JPEG 或 GIF 格式）;不支持动态 GIF。
 
 建议您使用 XML 指定每个图像的高度和宽度。 如果使用 Markdown，图像大小默认为 256×256。 例如：
 
@@ -86,13 +86,13 @@ ms.locfileid: "62518497"
 根据声明的范围，自动程序可以在以下上下文中接收消息：
 
 * **个人聊天** 用户只需在聊天历史记录中选择已添加的聊天机器人，或在新聊天的"目标："框中键入其名称或应用 ID，即可与机器人在私人对话中进行交互。
-* **频道** 如果自动程序已 (团队，) 在频道中提及它。 请注意，频道中对自动程序的其他回复需要提及机器人。 它将不会在未提及的回复中回复。
+* **频道** 如果自动程序已 (团队，) "@*botname*"在频道中提及它。 请注意，频道中对自动程序的其他回复需要提及机器人。 它将不会在未提及的回复中回复。
 
 对于传入消息，机器人会收到 [类型 为 的 Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) 对象 `messageType: message`。 `Activity`虽然对象可以包含其他类型的[](~/resources/bot-v3/bots-notifications.md#channel-updates)`message`信息（如发送到机器人的频道更新），但类型表示机器人和用户之间的通信。
 
 自动程序将收到包含用户`Text`消息的有效负载，以及有关用户的其他信息、消息源和Teams信息。 注意：
 
-* `timestamp` 使用协调世界时 utc 格式的邮件 (时间) 。
+* `timestamp` 协调世界时 UTC 格式的邮件 (时间) 。
 * `localTimestamp` 发件人时区的邮件日期和时间。
 * `channelId` 始终为"msteams"。 这是指自动程序框架频道，而不是团队频道。
 * `from.id` 自动程序的用户的唯一加密 ID;如果应用需要存储用户数据，则适合用作密钥。 它对于自动程序来说是唯一的，不能以任何有意义的方式直接在自动程序实例外部使用来标识该用户。
@@ -160,7 +160,7 @@ ms.locfileid: "62518497"
 
 发送给自动程序的活动中的典型 channelData 对象包含以下信息：
 
-* `eventType`Teams事件类型;仅在通道修改事件[时传递](~/resources/bot-v3/bots-notifications.md#channel-updates)。
+* `eventType`Teams事件类型;仅在通道修改事件[的情况下传递](~/resources/bot-v3/bots-notifications.md#channel-updates)。
 * `tenant.id`Microsoft Azure Active Directory (Azure AD) 租户 ID;在所有上下文中传递。
 * `team` 仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id` 频道的 GUID。
@@ -171,7 +171,7 @@ ms.locfileid: "62518497"
 * `channelData.teamsTeamId` 已弃用。 此属性仅包含用于向后兼容。
 * `channelData.teamsChannelId` 已弃用。 此属性仅包含用于向后兼容。
 
-### <a name="example-channeldata-object-channelcreated-event"></a>channelCreated 事件 (channelCreated 事件示例) 
+### <a name="example-channeldata-object-channelcreated-event"></a>channelCreated 事件 (channelCreated 事件) 
 
 ```json
 "channelData": {

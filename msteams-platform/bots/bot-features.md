@@ -5,16 +5,16 @@ description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: fda6092165fa55accbf5348b9850ac94396c05b5
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: 9aef0786d643c80879700ed6c2d4b05ce7c2e09a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185420"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398657"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
-你可以创建适用于以下工具Microsoft Teams之一的聊天机器人：
+可以使用以下工具或功能之Microsoft Teams创建适用于以下工具或功能的聊天机器人：
 
 * [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
@@ -27,27 +27,27 @@ ms.locfileid: "62185420"
 
 * 由你托管的可公开访问的 Web 服务。
 * Web 服务的自动程序框架注册。
-* 你的Teams应用包，可将Teams客户端连接到 Web 服务。
+* 你的Teams应用程序包，可将Teams客户端连接到 Web 服务。
 
 > [!TIP]
-> 使用开发人员门户向 Bot Framework 注册 Web 服务并指定应用配置。 有关详细信息，请参阅使用开发人员门户[管理应用Teams。](~/concepts/build-and-test/teams-developer-portal.md)
+> 使用开发人员门户向 Bot Framework 注册 Web 服务并指定应用配置。 有关详细信息，请参阅使用开发人员门户[管理应用Teams](~/concepts/build-and-test/teams-developer-portal.md)。
 
-Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于创建使用 C#、Java、Python 和 JavaScript 的聊天机器人。 如果你已有基于 Bot Framework 的自动程序，你可以轻松修改它以在 Teams。 使用 C# 或 Node.js 来利用[我们的 SDK。](/microsoftteams/platform/#pivot=sdk-tools) 这些包扩展基本 Bot Builder SDK 类和方法，如下所示：
+Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于创建使用 C#、Java、Python 和 JavaScript 的聊天机器人。 如果你已有基于 Bot Framework 的自动程序，你可以轻松修改它以在 Teams。 使用 C# 或 Node.js 来利用 [我们的 SDK](/microsoftteams/platform/#pivot=sdk-tools)。 这些包扩展基本 Bot Builder SDK 类和方法，如下所示：
 
 * 使用专用卡类型，如Office 365卡。
 * 在Teams设置特定于频道的数据。
 * 处理邮件扩展请求。
 
 > [!IMPORTANT]
-> 可以使用任何 Web Teams技术开发自动程序应用，并直接调用[Bot Framework REST API。](/bot-framework/rest-api/bot-framework-rest-overview) 但是，你必须在所有情况下执行令牌处理。
+> 你可以以任何Teams技术开发应用，并直接调用 [Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview)。 但是，你必须在所有情况下执行令牌处理。
 
 ## <a name="bots-with-power-virtual-agents"></a>具有自动程序Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在聊天门户创建聊天Power Virtual Agents[后](https://powervirtualagents.microsoft.com)，你可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams 集成。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在 Power Virtual Agents 门户[创建聊天](https://powervirtualagents.microsoft.com)机器人后，可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
 
 ## <a name="bots-with-webhooks-and-connectors"></a>具有 Webhook 和连接器的机器人
 
-Webhook 和连接器将机器人连接到 Web 服务。 使用 webhook 和连接器，可以创建简单的机器人进行基本交互，例如创建工作流或其他简单命令。 它们仅在创建它们的团队中可用，并且适用于特定于公司工作流的简单流程。 有关详细信息，请参阅什么是 [Webhook 和连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
+Webhook 和连接器将机器人连接到 Web 服务。 使用 webhook 和连接器，可以创建简单的机器人进行基本交互，例如创建工作流或其他简单命令。 它们仅在创建它们的团队中可用，并且适用于特定于公司工作流的简单流程。 有关详细信息，请参阅 [什么是 Webhook 和连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
 ## <a name="advantages-of-bots"></a>自动程序的优点
 
@@ -61,7 +61,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="in-a-channel"></a>在频道中
 
-频道包含多个人员之间的线程对话，甚至最多包含两千个。 这可能会导致自动程序大规模访问，但个人交互必须简洁。 传统的多向交互不起作用。 相反，必须查找使用交互式卡片或任务模块，或将对话移动到一对一对话以收集大量信息。 自动程序仅有权访问其为 的邮件 `@mentioned` 。 您可以使用 Microsoft 权限和组织级别权限从Graph检索其他邮件。
+频道包含多个人员之间的线程对话，甚至最多包含两千个。 这可能会导致自动程序大规模访问，但个人交互必须简洁。 传统的多向交互不起作用。 相反，必须查找使用交互式卡片或任务模块，或将对话移动到一对一对话以收集大量信息。 自动程序仅有权访问其为 的邮件 `@mentioned`。 您可以使用 Microsoft 权限和组织级别权限从Graph检索其他邮件。
 
 在下列情况下，自动程序在频道中效果更好：
 
@@ -72,15 +72,16 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="in-a-group-chat"></a>在群聊中
 
-群聊是在三个及以上人员之间进行的非按线索组织的对话。 其中的成员一般比频道中的少且更短暂。 与频道类似，自动程序仅有权访问直接位于其中 `@mentioned` 的消息。
+群聊是在三个及以上人员之间进行的非按线索组织的对话。 其中的成员一般比频道中的少且更短暂。 与频道类似，自动程序仅有权访问直接位于其中的消息 `@mentioned` 。
 
 在机器人在频道中更好地工作的情况下，也更好地在群聊中工作。
 
 ### <a name="in-a-one-to-one-chat"></a>在一对一聊天中
 
 一对一聊天是对话机器人与用户交互的传统方式。 一对一对话机器人的一些示例如下：
+
 * Q&A bots
-* 启动其他系统中工作流的机器人 
+* 启动其他系统中工作流的机器人
 * 告知机器人
 * 在创建一对一聊天机器人之前，请考虑基于对话的界面是否是显示功能的最佳方法。
 
@@ -90,7 +91,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>在聊天中拥有多轮体验
 
-一个广泛的对话框要求开发人员保持状态。 若要退出此状态，用户必须退出 **或选择取消**。 此外，该过程很繁琐。 例如，请参阅以下对话方案：
+一个广泛的对话框要求开发人员保持状态。 若要退出此状态，用户必须退出或选择"取消 **"**。 此外，该过程很繁琐。 例如，请参阅以下对话方案：
 
 用户：安排与 Megan 的会议。
 
@@ -170,7 +171,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 {
     turnContext.Activity.RemoveRecipientMention();
     var text = turnContext.Activity.Text.Trim().ToLower();
-        await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+  await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
 }
 ```
 
@@ -198,7 +199,7 @@ this.onMessage(async (context, next) => {
 
 ## <a name="see-also"></a>另请参阅
 
-* [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [通话和会议智能机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [智能机器人对话](~/bots/how-to/conversations/conversation-basics.md)
 * [自动程序命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
 * [聊天机器人的身份验证Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)

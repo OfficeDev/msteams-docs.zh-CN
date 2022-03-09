@@ -4,24 +4,33 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: a6cdb2cf19895b7a7179ec100a66066e948076d1
-ms.sourcegitcommit: 40aade608ee21f5d7d813bd145bef5736dc647f1
+ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "62881635"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356075"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
 发现正式版 （GA） 和开发人员预览版中的 Microsoft Teams 平台功能。
 
 > [!IMPORTANT]
-> 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
+> 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
 
 ## <a name="latest-updates-bullhorn-icon"></a>最新更新 ![扩音器图标](~/assets/images/bullhorn.png)
 
-| Date | 更新 | 在此处查找  |
+| Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
+|2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
+|2022/02/24| 引入了生成基于操作的消息传递扩展的分步指南 | 生成消息传递扩展 > 操作命令 > 定义操作命令 > [生成基于操作的消息传递扩展](sbs-meetingextension-action.yml)|
+|2022/02/24| 引入了生成基于搜索的消息传递扩展的分步指南 | 生成消息传递扩展 > 搜索命令 > 定义搜索命令 > [生成基于搜索的消息传递扩展](sbs-messagingextension-searchcommand.yml)|
+|2022/02/24| 引入了创建传出 Webhook 的分步指南 | 生成 Webhook 和连接器 > 创建传出 Webhook > [创建传出 Webhook](sbs-outgoing-webhooks.yml)|
+| 2022/02/23 |Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 2022/02/18 | 为 Microsoft Teams 开发人员文档引入了广泛的术语表，可帮助你快速找到有关术语的定义 | [术语表](~/get-started/glossary.md) |
+| 2022/02/18 | 更新了概述模块，用于将 Teams 应用映射到组织目标、用户情景和探索 Teams 应用功能 | [概述 > 适合的 Teams 应用](overview.md) |
+| 2022/02/18 | 更新了应用基础知识模块以规划应用，以包括将用例映射到 Teams 功能和应用规划清单 | [规划应用 > 概述](~/concepts/app-fundamentals-overview.md) |
 |02/17/2022| 提交应用后会发生什么？| 分发应用>发布到 Teams 应用商店>[概述](concepts/deploy-and-publish/appsource/publish.md)|
 |02/15/2022| 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人>发送和接收文件>[如何将文件从机器人上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
 |2022 年 2 月 11 日| 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
@@ -29,11 +38,8 @@ ms.locfileid: "62881635"
 |02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 |02/03/2022| 引入了应用清单版本 1.12 | • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 盈利应用的测试预览（开发人员预览版）| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| 应用内购买流，用于应用盈利（开发人员预览版） | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-|2022/01/25| 发送实时字幕 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
-|01/19/2022| 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
-|01/17/2022| 自适应卡片中的人员选取器 (适用于移动和 GA 桌面版开发人员预览)  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
-|01/10/2022| Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
+|02/03/2022| 应用内购买流，用于应用盈利（开发人员预览版） | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
+
 
 ## <a name="ga-features"></a>GA 功能
 
@@ -42,27 +48,40 @@ ms.locfileid: "62881635"
 <br>
 
 <details>
-
 <summary><b>2022</b></summary>
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-|02/15/2022| 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人>发送和接收文件>[如何将文件从机器人上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
-|2022 年 2 月 11 日| 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
-|02/08/2022| 引入创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
-|02/02/2022| 引入了应用清单版本 1.12 | 应用清单> [应用程序清单架构](resources/schema/manifest-schema.md) |
-|2022/01/25| 发送实时字幕 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
-|01/19/2022| 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
-|01/17/2022| 适用于桌面的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
-
-<br>
+|2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
+| 2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
+| 2022/02/24| 引入了生成基于操作的消息传递扩展的分步指南 | 生成消息传递扩展 > 操作命令 > 定义操作命令 > [生成基于操作的消息传递扩展](sbs-meetingextension-action.yml)|
+| 2022/02/24| 引入了生成基于搜索的消息传递扩展的分步指南 | 生成消息传递扩展 > 搜索命令 > 定义搜索命令 > [生成基于搜索的消息传递扩展](sbs-messagingextension-searchcommand.yml)|
+| 2022/02/24| 引入了创建传出 Webhook 的分步指南 | 生成 Webhook 和连接器 > 创建传出 Webhook > [创建传出 Webhook](sbs-outgoing-webhooks.yml)|
+| 2022/02/23 |Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 2022/02/18 | 为 Microsoft Teams 开发人员文档引入了广泛的术语表，可帮助你快速找到有关术语的定义 | [术语表](~/get-started/glossary.md) |
+| 2022/02/18 | 更新了概述模块，用于将 Teams 应用映射到组织目标、用户情景和探索 Teams 应用功能 | [概述 > 适合的 Teams 应用](overview.md) |
+| 2022/02/18 | 更新了应用基础知识模块以规划应用，以包括将用例映射到 Teams 功能和应用规划清单 | [规划应用 > 概述](~/concepts/app-fundamentals-overview.md) |
+| 02/17/2022 | 提交应用后会发生什么？| 分发应用>发布到 Teams 应用商店>[概述](concepts/deploy-and-publish/appsource/publish.md) |
+| 02/15/2022 | 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人>发送和接收文件>[如何将文件从机器人上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
+| 2022 年 2 月 11 日 | 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
+| 02/08/2022 | 引入创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
+| 02/02/2022 | 引入了应用清单版本 1.12 | 应用清单> [应用程序清单架构](resources/schema/manifest-schema.md) |
+| 2022/01/25 | 发送实时字幕 API | 生成 Teams 会议应用 > 会议应用 API 参考 > [会议应用 API 引用](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
+| 01/19/2022 | 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
+| 01/17/2022 | 适用于桌面的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
-  
+ 
 <br>
 
 <details>
+<summary><b>较旧的更新</b></summary>
+<br>
+浏览此处列出的以前 GA 版本的更新。
+<br><br>
 
+
+<details>
 <summary><b>2021</b></summary>
 
 | **Date** | **更新** | **在此处查找** |
@@ -128,10 +147,6 @@ ms.locfileid: "62881635"
 <br>
 
 <details>
-<summary><b>较旧的更新</b></summary>
-
-<details>
-  
 <summary><b>2020</b></summary>
 
 | **Date** | **更新** | **在此处查找** |
@@ -170,7 +185,7 @@ ms.locfileid: "62881635"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-| 12/26/2019 | 发送到机器人的有效负载中的 `replyToId` 参数不再加密，因此可以使用此值构造到这些消息的深层链接。 消息有效负载包括参数中的加密值 `legacy.replyToId`。  |
+| 12/26/2019 | 发送到机器人的有效负载中的 `replyToId` 参数不再加密，因此可以使用此值构造这些消息的深层链接。消息有效负载包括参数 `legacy.replyToId` 中的加密值。  |
 | 11/05/2019 | 使用 Teams JavaScript SDK 的单一登录。 | [单一登录](tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | 已更新对话机器人和消息传递扩展文档，以反映 4.6 Bot Framework SDK。 有关 v3 SDK 的文档，请参阅"资源"部分。 | 所有机器人和消息传递扩展文档 |
 | 10/31/2019 | 新的文档结构和主要文章重构。 请通过创建 GitHub 问题来报告任何死链接或 404。 | 全部都一样！ |
@@ -187,15 +202,12 @@ ms.locfileid: "62881635"
 | 04/23/2019 | 基于操作的消息扩展现已可用。 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | 创建到私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | 在选项卡上下文中显示 SKU 和 licenceType 信息。 | [选项卡上下文](~/concepts/tabs/tabs-context.md) |
-
-<br>
-
+|
 </details>
 
 <br>
 
 <details>
-
 <summary><b>2018</b></summary>
 
 | **Date** | **更新** | **在此处查找** |
@@ -228,9 +240,7 @@ ms.locfileid: "62881635"
 | 03/03/2018 | 添加了 Teams App Studio 的文档。 |[使用 Teams App Studio 快速开发应用](~/get-started/get-started-app-studio.md)，[使用 App Studio 中的控件库](~/get-started/app-studio-component-library.md)|
 | 02/27/2018 | 添加了示例代码以演示 AsTeamsChannelAccounts () 方法。 |[获取机器人的背景资料](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | 添加了有关开始使用 C# 的主题。 |[开始在 Microsoft Teams 平台上使用 C#/.NET ](./get-started/get-started-dotnet-app-studio.md)|
-
-<br>
-
+|
 </details>
 </details>
 
@@ -257,7 +267,7 @@ ms.locfileid: "62881635"
 
 ## <a name="teams-app-template-catalog"></a>Teams 应用程序模板目录
 
-除了新功能之外，我们还提供[生产就绪 Teams 模板](samples/app-templates.md)，你可以立即部署这些模板或对其进行修改以满足你的需求。 新添加的模板用星号表示。
+除了新功能外，我们还提供[生产就绪的 Teams 应用模板](samples/app-templates.md)，你可以立即部署或根据需要进行修改。新添加的模板以星型 ☆表示。
 
 ## <a name="submit-your-feedback"></a>提交反馈
 

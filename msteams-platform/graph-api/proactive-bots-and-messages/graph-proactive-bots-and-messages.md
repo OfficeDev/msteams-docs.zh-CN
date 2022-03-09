@@ -1,23 +1,23 @@
 ---
 title: 使用 Microsoft Graph授权主动自动程序安装和邮件Teams
-description: 介绍邮件中的主动Teams以及如何实现它。 了解如何使用代码示例启用主动应用安装和消息传递。
+description: 介绍企业中的主动Teams以及如何实现它。 了解如何使用代码示例启用主动应用安装和消息传递。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装Graph
-ms.openlocfilehash: 6802c7aed4664969d32b7b183a2dbe6729939493
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 11fb1188cc88c983b1ee958b1df264346af22693
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212403"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398699"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
 
 ## <a name="proactive-messaging-in-teams"></a>邮件中的主动Teams
 
-主动消息由机器人启动，以开始与用户的对话。 它们用于多种用途，包括发送欢迎消息、开展调查或投票以及广播组织范围内的通知。 邮件中的Teams消息 **可以临时对话** 或基于对话 **的对话传递：**
+主动消息由机器人启动，以开始与用户的对话。 它们用于多种用途，包括发送欢迎消息、开展调查或投票以及广播组织范围内的通知。 邮件中的Teams消息 **可以临时对话** 或基于 **对话** 的对话传递：
 
 |消息类型 | 说明 |
 |----------------|-------------- |
@@ -30,7 +30,7 @@ ms.locfileid: "62212403"
 
 ## <a name="permissions"></a>权限
 
-Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true)资源类型权限可帮助你管理 Microsoft Teams 平台内所有 (个人) 或团队 () 范围的应用的安装生命周期：
+Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) 资源类型权限可帮助你管理 Microsoft Teams 平台内所有 (个人) 或团队 () 范围的应用的安装生命周期：
 
 |应用权限 | 说明|
 |------------------|---------------------|
@@ -40,7 +40,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 若要使用这些权限，必须将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到具有以下值的应用清单：
 
 * **id**：Azure Active Directory应用 ID。
-* **resource：** 应用的资源 URL。
+* **resource**：应用的资源 URL。
 
 > [!NOTE]
 >
@@ -53,20 +53,20 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 > [!IMPORTANT]
 > Microsoft Graph只能安装发布到组织的应用商店或应用商店Teams应用。
 
-### <a name="create-and-publish-your-proactive-messaging-bot-for-teams"></a>创建并发布主动邮件自动程序Teams
+### <a name="create-and-publish-your-proactive-messaging-bot-for-teams"></a>为用户创建和发布主动消息Teams
 
-若要开始，你需要一个自动[](../../bots/how-to/create-a-bot-for-teams.md)程序Teams组织应用商店或应用商店中的[](../../concepts/bots/bot-conversations/bots-conv-proactive.md)主动邮件Teams[功能](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store)。 [](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org)
+若要开始，你需要一个自动[](../../bots/how-to/create-a-bot-for-teams.md)程序Teams组织应用商店或应用商店中的[](../../concepts/bots/bot-conversations/bots-conv-proactive.md)主动邮件Teams[功能](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store)。[](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org)
 
 > [!TIP]
-> 生产就绪型 [*公司Communicator*](../..//samples/app-templates.md#company-communicator)模板允许广播消息，是构建主动式机器人应用程序的良好开始。
+> 生产就绪型 [*公司Communicator*](../..//samples/app-templates.md#company-communicator)应用模板允许广播消息，是构建主动式机器人应用程序的良好开始。
 
-### <a name="get-the-teamsappid-for-your-app"></a>获取 `teamsAppId` 应用的
+### <a name="get-the-teamsappid-for-your-app"></a>`teamsAppId`获取应用的
 
-可以通过以下 `teamsAppId` 方法检索 ：
+可以通过以下方法 `teamsAppId` 检索 ：
 
 * 从组织的应用程序目录中：
 
-    **Microsoft Graph 页面参考**[：teamsApp 资源类型](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
+    **Microsoft Graph 页面参考：**[teamsApp 资源类型](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
 
     **HTTP GET** 请求：
 
@@ -74,7 +74,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
     GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    请求必须返回对象 `teamsApp` `id` ，即应用的目录生成的应用程序 ID。 这不同于在应用清单中Teams ID：
+    请求必须返回对象 `teamsApp` `id`，即应用的目录生成的应用程序 ID。 这不同于你在应用清单中Teams ID：
 
     ```json
     {
@@ -92,7 +92,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 * 如果你的应用已在个人范围内为用户上载或旁加载：
 
-    **Microsoft Graph页参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+    **Microsoft Graph页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
     **HTTP GET** 请求：
 
@@ -117,7 +117,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 您可以确定当前是否已为邮件收件人安装自动程序，如下所示：
 
-**Microsoft Graph页参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+**Microsoft Graph页面参考：**[列出为用户安装的应用](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 请求：
 
@@ -151,11 +151,11 @@ Content-Type: application/json
 
 ### <a name="retrieve-the-conversation-chatid"></a>检索对话 `chatId`
 
-为用户安装应用时，机器人将收到一个事件通知，其中包含发送主动消息 `conversationUpdate` [](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)的必要信息。
+为用户安装应用`conversationUpdate`时，机器人将收到一个事件通知，其中包含发送主动消息的必要信息。[](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)
 
 **Microsoft Graph页面参考：**[获取聊天](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
-1. 必须具有应用的 `{teamsAppInstallationId}` 。 如果没有，请使用以下内容：
+1. 必须具有应用的 `{teamsAppInstallationId}`。 如果没有，请使用以下内容：
 
     **HTTP GET** 请求：
 
@@ -163,9 +163,9 @@ Content-Type: application/json
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
     ```
 
-    响应 **的 id** 属性为 `teamsAppInstallationId` 。
+    响应 **的 id** 属性为 `teamsAppInstallationId`。
 
-1. 提出以下请求以提取 `chatId` ：
+1. 提出以下请求以提取 `chatId`：
 
     **HTTP GET** 请求 (权限 — `TeamsAppInstallation.ReadWriteSelfForUser.All`) ：  
 
@@ -173,7 +173,7 @@ Content-Type: application/json
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
     ```
 
-    响应 **的 id** 属性为 `chatId` 。
+    响应 **的 id** 属性为 `chatId`。
 
     还可以检索具有以下 `chatId` 请求的 ，但需要更广泛的 `Chat.Read.All` 权限：
 
@@ -230,6 +230,7 @@ server.get('/api/notify', async (req, res) => {
     res.end();
 });
 ```
+
 ---
 
 ## <a name="code-sample"></a>代码示例

@@ -7,19 +7,19 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: 选项卡机器人消息传递扩展 Webhook 连接器
-ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 7200e785bc7c857aa65cf8b228720fe8e1d40a66
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355543"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398951"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>了解 Microsoft Teams 应用功能
 
 可通过多种方式扩展 Teams，因此每个应用都是唯一的。 Teams 应用可以以不同的方式向用户说明自身。 Teams 应用功能包括:
 
-- 应用功能
-- 应用程序范围
+* 应用功能
+* 应用程序范围
 
 例如，用户可以在画布选项卡上与应用进行交互以执行活动，也可以选择使用对话机器人执行相同的操作。 仅能有一个功能 (如 Webhook) 而其他则具有多个功能，可为用户提供各种选项。
 
@@ -33,6 +33,7 @@ ms.locfileid: "63355543"
 
 :::row:::
    :::column span="":::
+
 ### <a name="personal-apps"></a>个人应用
 
 [个人应用](../concepts/design/personal-apps.md) 是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
@@ -156,8 +157,8 @@ ms.locfileid: "63355543"
 
 可从以下选项中选择应用范围:
 
-- 个人应用体验: 个人应用是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
-- 共享应用体验: 团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间中的每个人使用。 协作空间通常侧重于应用交互的工作流或解锁新的社交交互。
+* 个人应用体验: 个人应用是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
+* 共享应用体验: 团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间中的每个人使用。 协作空间通常侧重于应用交互的工作流或解锁新的社交交互。
 
 ## <a name="see-also"></a>另请参阅
 

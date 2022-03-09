@@ -4,19 +4,19 @@ description: 描述自动Microsoft Teams中的卡片操作以及如何在机器�
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: teams 机器人卡片操作
-ms.openlocfilehash: 9add163801cee511ccc636ab3abbb95c35b26590
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 756ff357947980ecf4a0c7c88c375c427e016d61
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081056"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398601"
 ---
 # <a name="card-actions"></a>卡片操作
 
-聊天机器人和邮件扩展中使用的Teams支持以下活动 [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) 类型：
+聊天机器人和邮件扩展中使用的Teams支持以下活动[`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)类型：
 
 > [!NOTE]
-> 操作 `CardAction` 不同于从 `potentialActions` 连接器Office 365连接器卡的操作。
+> 当`CardAction`与连接器一Office 365`potentialActions`连接器卡时，操作会有所不同。
 
 | 类型 | 操作 |
 | --- | --- |
@@ -27,9 +27,10 @@ ms.locfileid: "62081056"
 | `signin` | 启动 OAuth 流，允许机器人与安全服务连接。 |
 
 > [!NOTE]
->* Teams不支持 `CardAction` 上表中未列出的类型。
+>
+>* Teams不支持上`CardAction`表中未列出的类型。
 >* Teams不支持 `potentialActions` 属性。
->* 卡片操作不同于 Bot [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Framework 或 Azure Bot 服务中的建议操作。 建议的操作在项目Microsoft Teams。 如果希望按钮显示在自动程序消息Teams，请使用卡片。
+>* 卡片操作不同于 Bot Framework [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) 或 Azure Bot 服务中的建议操作。 建议的操作在项目Microsoft Teams。 如果希望按钮显示在自动程序消息Teams，请使用卡片。
 >* 如果使用卡片操作作为邮件扩展的一部分，则这些操作在将卡片提交到频道之前不起作用。 当卡片位于撰写消息框中时，操作不起作用。
 
 ## <a name="action-type-openurl"></a>操作类型 openUrl
@@ -39,7 +40,7 @@ ms.locfileid: "62081056"
 > [!NOTE]
 > 自动程序不会收到有关已选择哪个按钮的任何通知。
 
-使用 `openUrl` ，可以创建具有以下属性的操作：
+使用 `openUrl`，可以创建具有以下属性的操作：
 
 | 属性 | 说明 |
 | --- | --- |
@@ -48,7 +49,7 @@ ms.locfileid: "62081056"
 
 # <a name="json"></a>[JSON](#tab/json)
 
-以下代码显示了 `openUrl` JSON 中的操作类型示例：
+以下代码显示了 JSON 中的 `openUrl` 操作类型示例：
 
 ```json
 {
@@ -60,7 +61,7 @@ ms.locfileid: "62081056"
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `openUrl` 操作类型示例C#：
+以下代码显示了一个操作类型 `openUrl` 示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -73,7 +74,7 @@ var button = new CardAction()
 
 # <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-以下代码显示了 `openUrl` JavaScript 中的操作类型示例：
+以下代码显示了 JavaScript `openUrl` 中的操作类型示例：
 
 ```javascript
 CardFactory.actions([
@@ -88,7 +89,7 @@ CardFactory.actions([
 
 ## <a name="action-type-messageback"></a>操作类型 messageBack
 
-使用 `messageBack` ，可以创建具有以下属性的完全自定义操作：
+使用 `messageBack`，可以创建具有以下属性的完全自定义操作：
 
 | 属性 | 说明 |
 | --- | --- |
@@ -97,11 +98,11 @@ CardFactory.actions([
 | `value` | 操作执行时发送到自动程序。 你可以对操作（如唯一标识符或 JSON 对象）的上下文进行编码。 |
 | `text` | 操作执行时发送到自动程序。 使用此属性可简化机器人开发。 代码可以检查单个顶级属性以调度自动程序逻辑。 |
 
-灵活性意味着代码无法直接使用 在历史记录中留下可见的 `messageBack` 用户消息 `displayText` 。
+灵活性意味着 `messageBack` 代码无法直接使用 在历史记录中留下可见的用户消息 `displayText`。
 
 # <a name="json"></a>[JSON](#tab/json)
 
-以下代码显示了 `messageBack` JSON 中的操作类型示例：
+以下代码显示了 JSON 中的 `messageBack` 操作类型示例：
 
 ```json
 {
@@ -121,7 +122,7 @@ CardFactory.actions([
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `messageBack` 操作类型示例C#：
+以下代码显示了一个操作类型 `messageBack` 示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -136,7 +137,7 @@ var button = new CardAction()
 
 # <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-以下代码显示了 `messageBack` JavaScript 中的操作类型示例：
+以下代码显示了 JavaScript `messageBack` 中的操作类型示例：
 
 ```javascript
 CardFactory.actions([
@@ -205,9 +206,9 @@ CardFactory.actions([
 
 ## <a name="action-type-imback"></a>操作类型 imBack
 
-该操作会触发向自动程序发送的返回消息，就像用户在普通聊天消息中 `imBack` 键入一样。 你的用户和频道中的所有其他用户可以看到按钮响应。
+该操作 `imBack` 会触发向自动程序发送的返回消息，就像用户在普通聊天消息中键入一样。 你的用户和频道中的所有其他用户可以看到按钮响应。
 
-使用 `imBack` ，可以创建具有以下属性的操作：
+使用 `imBack`，可以创建具有以下属性的操作：
 
 | 属性 | 说明 |
 | --- | --- |
@@ -219,7 +220,7 @@ CardFactory.actions([
 
 # <a name="json"></a>[JSON](#tab/json)
 
-以下代码显示了 `imBack` JSON 中的操作类型示例：
+以下代码显示了 JSON 中的 `imBack` 操作类型示例：
 
 ```json
 {
@@ -231,7 +232,7 @@ CardFactory.actions([
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `imBack` 操作类型示例C#：
+以下代码显示了一个操作类型 `imBack` 示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -244,7 +245,7 @@ var button = new CardAction()
 
 # <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-以下代码显示了 `imBack` JavaScript 中的操作类型示例：
+以下代码显示了 JavaScript `imBack` 中的操作类型示例：
 
 ```javascript
 CardFactory.actions([
@@ -259,11 +260,11 @@ CardFactory.actions([
 
 ## <a name="action-type-invoke"></a>操作类型调用
 
-`invoke`操作用于调用任务[模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
+操作 `invoke` 用于调用任务 [模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
 
-操作 `invoke` 包含三个属性： `type` 、 `title` 和 `value` 。
+操作 `invoke` 包含三个属性： `type`、 `title`和 `value`。
 
-使用 `invoke` ，可以创建具有以下属性的操作：
+使用 `invoke`，可以创建具有以下属性的操作：
 
 | 属性 | 说明 |
 | --- | --- |
@@ -272,7 +273,7 @@ CardFactory.actions([
 
 # <a name="json"></a>[JSON](#tab/json)
 
-以下代码显示了 `invoke` JSON 中的操作类型示例：
+以下代码显示了 JSON 中的 `invoke` 操作类型示例：
 
 ```json
 {
@@ -287,11 +288,11 @@ CardFactory.actions([
 当用户选择该按钮时，机器人会收到 `value` 包含其他一些信息的对象。
 
 > [!NOTE]
-> 活动类型不是 。 `invoke` `message` `activity.Type == "invoke"`
+> 活动类型不是 `invoke` `message` `activity.Type == "invoke"`。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `invoke` 操作类型示例C#：
+以下代码显示了一个操作类型 `invoke` 示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -321,7 +322,7 @@ CardFactory.actions([
 
 ### <a name="example-of-incoming-invoke-message"></a>传入调用消息的示例
 
-顶级属性包含卡片 `replyToId` 操作所来自的邮件的 ID。 如果要更新邮件，请使用它。
+顶级属性 `replyToId` 包含卡片操作所来自的邮件的 ID。 如果要更新邮件，请使用它。
 
 以下代码显示了传入调用消息的示例：
 
@@ -375,11 +376,11 @@ CardFactory.actions([
 
 `signin` 操作类型启动 OAuth 流，该流允许机器人与安全服务连接。 有关详细信息，请参阅自动 [程序中的身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
 
-Teams还支持[仅](#adaptive-cards-actions)由自适应卡片使用的自适应卡片操作。
+Teams还支持仅[由](#adaptive-cards-actions)自适应卡片使用的自适应卡片操作。
 
 # <a name="json"></a>[JSON](#tab/json)
 
-以下代码显示了 `signin` JSON 中的操作类型示例：
+以下代码显示了 JSON 中的 `signin` 操作类型示例：
 
 ```json
 {
@@ -391,7 +392,7 @@ Teams还支持[仅](#adaptive-cards-actions)由自适应卡片使用的自适应
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-以下代码显示了一个 `signin` 操作类型示例C#：
+以下代码显示了一个操作类型 `signin` 示例C#：
 
 ```csharp
 var button = new CardAction()
@@ -404,7 +405,7 @@ var button = new CardAction()
 
 # <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
-以下代码显示了 `signin` JavaScript 中的操作类型示例：
+以下代码显示了 JavaScript `signin` 中的操作类型示例：
 
 ```javascript
 CardFactory.actions([
@@ -426,21 +427,21 @@ CardFactory.actions([
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-还可以修改自适应卡片有效负载，以支持使用 对象中的 属性执行现有 `Action.Submit` Bot Framework `msteams` `data` 操作 `Action.Submit` 。 下一部分详细介绍了如何将现有 Bot Framework 操作与自适应卡片一同使用。
+还可以修改自适应卡片 `Action.Submit` 有效负载，以支持使用 对象中的 属性执行现有 Bot Framework `msteams` `data` 操作 `Action.Submit`。 下一部分详细介绍了如何将现有 Bot Framework 操作与自适应卡片一同使用。
 
 > [!NOTE]
 > 使用 `msteams` Bot Framework 操作向数据添加操作不能用于自适应卡片任务模块。
 
 ### <a name="adaptive-cards-with-messageback-action"></a>使用 messageBack 操作自适应卡片
 
-若要在 `messageBack` 自适应卡片中包括操作，请包含 对象中的以下 `msteams` 详细信息：
+若要在自适应 `messageBack` 卡片中包括操作，请包含 对象中的以下 `msteams` 详细信息：
 
 > [!NOTE]
 > 如果需要，可以在对象中包括其他 `data` 隐藏属性。
 
 | 属性 | 说明 |
 | --- | --- |
-| `type` | 设置为 `messageBack` 。 |
+| `type` | `messageBack`设置为 。 |
 | `displayText` | 可选。 操作执行时由聊天流中的用户使用。 此文本不会发送到自动程序。 |
 | `value` | 操作执行时发送到自动程序。 你可以对操作（如唯一标识符或 JSON 对象）的上下文进行编码。 |
 | `text` | 操作执行时发送到自动程序。 使用此属性可简化机器人开发。 代码可以检查单个顶级属性以调度自动程序逻辑。 |
@@ -464,14 +465,14 @@ CardFactory.actions([
 
 ### <a name="adaptive-cards-with-imback-action"></a>使用 imBack 操作自适应卡片
 
-若要在 `imBack` 自适应卡片中包括操作，请包含对象中的以下 `msteams` 详细信息：
+若要在自适应 `imBack` 卡片中包括操作，请包含对象中的以下 `msteams` 详细信息：
 
 > [!NOTE]
 > 如果需要，可以在对象中包括其他 `data` 隐藏属性。
 
 | 属性 | 说明 |
 | --- | --- |
-| `type` | 设置为 `imBack` 。 |
+| `type` | `imBack`设置为 。 |
 | `value` | 需要在聊天中回显的字符串。 |
 
 以下代码显示了操作自适应卡片 `imBack` 的示例：
@@ -491,14 +492,14 @@ CardFactory.actions([
 
 ### <a name="adaptive-cards-with-signin-action"></a>带登录操作自适应卡片
 
-若要在 `signin` 自适应卡片中包括操作，请包含 对象中的以下 `msteams` 详细信息：
+若要在自适应 `signin` 卡片中包括操作，请包含 对象中的以下 `msteams` 详细信息：
 
 > [!NOTE]
 > 如果需要，可以在对象中包括其他 `data` 隐藏属性。
 
 | 属性 | 说明 |
 | --- | --- |
-| `type` | 设置为 `signin` 。 |
+| `type` | `signin`设置为 。 |
 | `value` | 设置为要重定向到的 URL。  |
 
 以下代码显示了操作自适应卡片 `signin` 的示例：
@@ -518,14 +519,14 @@ CardFactory.actions([
 
 ### <a name="adaptive-cards-with-invoke-action"></a>具有调用操作自适应卡片
 
-若要在 `invoke` 自适应卡片中包括操作，请包含对象中的以下 `msteams` 详细信息：
+若要在自适应 `invoke` 卡片中包括操作，请包含对象中的以下 `msteams` 详细信息：
 
 > [!NOTE]
 > 如果需要，可以在对象中包括其他 `data` 隐藏属性。
 
 | 属性 | 说明 |
 | --- | --- |
-| `type` | 设置为 `task/fetch` 。 |
+| `type` | `task/fetch`设置为 。 |
 | `data` | 设置值。  |
 
 以下代码显示了操作自适应卡片 `invoke` 的示例：
@@ -556,6 +557,7 @@ CardFactory.actions([
   }
 }
 ```
+
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]

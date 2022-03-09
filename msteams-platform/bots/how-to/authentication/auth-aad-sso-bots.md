@@ -4,12 +4,12 @@ description: 介绍如何获取用户令牌。 目前，机器人开发人员可
 keywords: 令牌， 用户令牌， 自动程序 SSO 支持， 权限， Microsoft Graph， Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 16e57a6ffc95aa9814016d56b66721ec44b07308
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: a51b96cdb5d2b37f826f533dae58bed117b71700
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355900"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399364"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>单一登录 (SSO) 自动程序支持
 
@@ -33,7 +33,6 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
    > * 一个用户一次可以有多个活动终结点。
    > * 机器人令牌接收自每个活动用户终结点。
    > * 应用必须安装在个人作用域内才能支持 SSO。
-
 
 1. 如果当前用户第一次使用自动程序应用程序，则用户将显示请求提示以执行以下操作之一：
     * 请在必要时提供同意。
@@ -85,6 +84,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
    > 若要稍后更新应用清单， (**应用程序) ID** 值。
 
    > [!IMPORTANT]
+   >
    > * 如果要构建独立自动程序，请输入应用程序 ID URI 作为 `api://botid-{YourBotId}`。 此处 *YourBotId* 是Azure AD应用程序 ID。
    > * 如果要使用机器人和选项卡生成应用，请输入应用程序 ID URI 作为 `api://fully-qualified-domain-name.com/botid-{YourBotId}`。
 
@@ -112,7 +112,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
 
 1. 确保状态设置为"已启用 **"**。
 
-    ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
+    ![状态](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
 
 1. 选择 **添加作用域** 保存详细信息。 显示的作用域名称的域 **部分** 必须自动匹配上一步中设置的应用程序 **ID** URI `/access_as_user` ，并追加到末尾 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`。
 
@@ -146,9 +146,9 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
 1. 以下步骤将帮助您启用隐式授予：
     * 从 **左窗格中** 选择"身份验证"。
     * 选中 **"访问令牌** 和 **ID 令牌"** 复选框。
-    
+
     ![授予流](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
-    
+
     * 选择 **"保存** "保存更改。
 
 1. 添加必要的 **API 权限**。
@@ -164,11 +164,10 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
 
     ![更新清单](~/assets/images/bots/update-manifest.png)
 
-
    >[!NOTE]
    > 如果你已在应用中测试自动程序Teams，则必须从此应用注销，然后从 Teams。 然后再次登录以查看此更改。
 
-1. 选择“**保存**”。
+1. 选择“保存”。
 
 #### <a name="update-the-azure-portal-with-the-oauth-connection"></a>使用 OAuth 连接更新 Azure 门户
 
@@ -195,9 +194,9 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
     * 对于 **令牌Exchange URL**，请使用更新自动程序Teams [应用程序](#update-your-teams-application-manifest-for-your-bot)清单中定义的作用域值，例如， `api://botid-<your-app-id>/`。 令牌Exchange URL 向 SDK 指示Azure AD为 SSO 配置此令牌应用程序。
     * 在租户 **ID 中，** 输入 *common*。
     * 添加 **为应用程序** 指定下游 API 的权限时配置Azure AD范围。 提供客户端 ID 和客户端密码后，令牌存储将令牌交换为具有定义权限的图形令牌。
-    * 选择“**保存**”。
+    * 选择“保存”。
     * 选择“**应用**”。
-   
+
     ![连接设置](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### <a name="update-your-teams-application-manifest-for-your-bot"></a>更新Teams自动程序的应用程序清单
@@ -211,6 +210,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
             "resource": "api://botid-00000000-0000-0000-0000-000000000000"
         }
 ```
+
 如果应用程序包含自动程序和选项卡，则使用以下代码将新属性添加到Teams清单：
 
 ```json
@@ -356,7 +356,6 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
 
 6. `TokenExchangeInvokeResponse`如果 具有 `status` `200`的 ，则客户端不会显示 OAuth 卡。 查看 [正常流图像](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)。 对于任何其他 `status` 或如果未 `TokenExchangeInvokeResponse` 收到 ，则客户端会向用户显示 OAuth 卡。 请参阅 [回退流图像](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)。 如果存在任何错误或未满足的依赖项（如用户同意），此活动可确保 SSO 流恢复为正常的 OAuthCard 流。
 
-
 ### <a name="update-the-auth-sample"></a>更新身份验证示例
 
 打开[Teams身份验证示例](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)，然后完成以下步骤以更新它：
@@ -379,7 +378,8 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以静
 4. Zip the manifest with the profile images and install it in Teams.
 
 ## <a name="code-sample"></a>代码示例
-|**示例名称** | **说明** |**.NET** | 
+
+|**示例名称** | **说明** |**.NET** |
 |----------------|-----------------|--------------|
 |自动程序框架 SDK | 使用自动程序框架 SDK 的示例。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
 
