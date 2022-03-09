@@ -4,12 +4,12 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821729"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356264"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -47,10 +47,10 @@ ms.locfileid: "62821729"
 * {loginHint}：适合用作登录提示的值Azure AD。 这通常是其主租户中当前用户的登录名。
 * {userPrincipalName}：当前租户中当前用户的用户主体名称。
 * {userObjectId}：Azure AD租户中当前用户的对象 ID。
-* {theme}：当前用户界面 (UI) 主题，如 `default``dark`、 或 `contrast`。
+* {theme}：当前用户界面 (UI) 主题，`default``dark`如 、 或 `contrast`。
 * {groupId}：选项卡Office 365组 ID。
 * {tid}：当前用户的 Azure AD 租户 ID。
-* {locale}：用户当前区域设置，其格式为 en-us (languageId-countryId) 。
+* {locale}：设置为 languageId-countryId 的用户的当前区域设置 (en-us) 。
 
 > [!NOTE]
 > 上一 `{upn}` 占位符现已弃用。 出于向后兼容性，它目前是 `{loginHint}`的同义词。
@@ -115,9 +115,6 @@ ms.locfileid: "62821729"
 
 ## <a name="retrieve-context-in-private-channels"></a>检索私人频道中的上下文
 
-> [!Note]
-> 专用频道目前为私人开发人员预览版。
-
 当你的内容页面加载到私人频道中 `getContext` 时，你通过调用收到的数据会混淆以保护通道的隐私。 
 
 当内容页位于私人频道中时，将更改以下字段：
@@ -125,14 +122,34 @@ ms.locfileid: "62821729"
 * `groupId`：未为私人频道定义
 * `teamId`：设置为私人频道的 threadId
 * `teamName`：设置为私人频道的名称
-* `teamSiteUrl`：设置为专用频道的独特SharePoint网站的 URL
+* `teamSiteUrl`：设置为专用频道的唯一SharePoint网站 URL
 * `teamSitePath`：设置为专用频道的独特SharePoint网站的路径
-* `teamSiteDomain`：设置为专用频道的唯一SharePoint网站域的域
+* `teamSiteDomain`：设置为专用频道的独特、唯SharePoint网站域的域
 
-如果页面使用了这些值 `channelType` 中的任意值，则必须检查字段以确定页面是否加载到私人频道中并做出相应的响应。
+如果页面使用了这些值 `channelType` 中的任意值，则 field `Private` 的值必须确定页面是否加载到私人频道中，并可以做出相应的响应。
 
-> [!Note]
-> `teamSiteUrl` 还适用于标准频道。
+## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>检索共享Microsoft Teams 连接中的上下文
+
+> [!NOTE]
+> 目前，Microsoft Teams 连接频道仅在开发人员[预览版](../../resources/dev-preview/developer-preview-intro.md)中。
+
+在共享频道中加载内容Microsoft Teams 连接，`getContext`由于共享频道中用户的唯一名单，从呼叫接收的数据会发生变化。 
+
+当内容页位于共享通道中时，将更改以下字段：
+
+* `groupId`：未为共享频道定义。
+* `teamId`：设置为团队 `threadId` 的 ，频道为当前用户共享。 如果用户有权访问多个团队 `teamId` ，则 设置为托管共享频道 (创建) 团队。
+* `teamName`：设置为团队的名称，为当前用户共享频道。 如果用户有权访问多个团队 `teamName` ，则 设置为托管共享频道 (创建) 团队。
+* `teamSiteUrl`：设置为共享频道的唯一SharePoint网站 URL。
+* `teamSitePath`：设置为共享频道的唯一SharePoint网站的路径。
+* `teamSiteDomain`：设置为共享通道的唯一SharePoint网站域的域。
+
+除了这些字段更改之外，还有两个新字段可用于共享频道：
+
+* `hostTeamGroupId`：设置为与 `groupId` 托管团队或创建共享频道的团队关联的 。 属性可以使 Microsoft Graph API 调用检索共享通道的成员身份。
+* `hostTeamTenantId`：设置为与 `tenantId` 托管团队或创建共享频道的团队关联的 。 属性可以与在 字段中找到的当前用户的租户 ID `tid` `getContext` 交叉引用，以确定用户是托管团队租户的内部用户还是外部用户。
+
+如果页面使用了这些值 `channelType` 中的任意值，则 field `Shared` 的值必须确定页面是否加载到共享通道中，并可以做出相应的响应。
 
 ## <a name="handle-theme-change"></a>处理主题更改
 

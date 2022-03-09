@@ -3,18 +3,18 @@ title: 自适应卡片的通用操作概述
 description: 适用于自适应卡片的通用操作快速概述，例如特定于用户的视图、顺序工作流支持以及桌面和移动环境等
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: c294e235074bd6a2c9ae148c20e355a9c86325c5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8ec546b0345c1fd26caf0b3016a788e14b623ae2
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889354"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356160"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
 自适应卡片的通用操作从开发人员反馈中发展，尽管自适应卡片的布局和呈现是通用的，但操作处理不是。 即使开发人员希望将同一张卡片发送到不同位置，他们必须处理不同的操作。
 
-自适应卡片的通用操作将机器人作为处理操作的通用后端引入，并引入了新的操作类型，它适用于应用，Teams `Action.Execute` 和Outlook。
+自适应卡片的通用操作将`Action.Execute`机器人作为处理操作的通用后端引入，并引入了新的操作类型，它适用于应用，Teams和Outlook。
 
 本文档可帮助你了解如何使用通用操作模型增强跨平台和应用程序与自适应卡片交互的用户体验。
 
@@ -34,30 +34,30 @@ ms.locfileid: "60889354"
 
 在自适应卡片的通用操作之前，不同的主机提供不同的操作模型，如下所示：
 
-* Teams或自动程序 `Action.Submit` 使用 ，这是一种将实际通信模型延迟到基础通道的方法。
-* Outlook与自适应卡片有效负载中显式指定的后端 `Action.Http` 服务通信。
+* Teams或自动`Action.Submit`程序使用 ，这是一种将实际通信模型延迟到基础通道的方法。
+* Outlook与`Action.Http`自适应卡片有效负载中显式指定的后端服务通信。
 
 下图显示了当前不一致的操作模型：
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="不一致的操作模型":::
 
-借助自适应卡片的通用操作，可用于 `Action.Execute` 跨不同平台的操作处理。 `Action.Execute`适用于中心，包括Teams Outlook。 此外，自适应卡片还可以作为触发的调用 `Action.Execute` 请求的响应返回。
+借助自适应卡片的通用操作，可用于 `Action.Execute` 跨不同平台的操作处理。 `Action.Execute`适用于中心，包括Teams Outlook。 此外，自适应卡片还可以作为触发的调用请求 `Action.Execute` 的响应返回。
 
 下图显示了新的通用操作模型：
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="自适应卡片的新通用操作":::
 
-现在，你可以向两者发送相同的Teams和Outlook，然后使用基础自动程序将它们保持同步。 在此内部版本下，在任一平台上执行的任何操作都反映给另一个平台， (自适应卡片通用操作) 模型。
+现在，你可以向这两者发送相同的Teams和Outlook，然后使用基础自动程序保持它们相互同步。 通过此内部版本，在任一平台上执行的任何操作都反映给另一个平台， (自适应卡片的通用操作) 模型。
 
 下图描述了适用于用户和用户的通用自适应卡片Teams Outlook：
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="移动同一卡片Teams和Outlook":::
+:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="移动同一张Teams和Outlook":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="与 Teams 和 Outlook":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="要与Teams Outlook":::
 
 * * *
 
@@ -79,11 +79,11 @@ ms.locfileid: "60889354"
 
 * * *
 
-有关详细信息，请参阅用户 [特定视图的示例](User-Specific-Views.md)。
+有关详细信息，请参阅用户 [特定视图示例](User-Specific-Views.md)。
 
 ### <a name="sequential-workflow-support"></a>顺序工作流支持
 
-借助顺序工作流支持，用户可以执行一系列工作流，而无需单独发送不同的卡片。 这是通过返回自适应卡片以响应操作 `Action.Execute` 而实现。 此外，聊天或频道中的任意用户都可以通过其工作流进行，而无需修改聊天中其他用户的卡片。
+借助顺序工作流支持，用户可以执行一系列工作流，而无需单独发送不同的卡片。 这是通过返回 `Action.Execute` 自适应卡片以响应操作而实现。 此外，聊天或频道中的任意用户都可以通过其工作流进行，而无需修改聊天中其他用户的卡片。
 
 下图演示了一个食物订购机器人示例： <br/>
 
@@ -101,13 +101,13 @@ ms.locfileid: "60889354"
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="最新用户特定视图":::
 
-有关详细信息，请参阅 [最新视图的示例](Up-To-Date-Views.md)。
+有关详细信息，请参阅 [最新视图示例](Up-To-Date-Views.md)。
 
 现在，你可以了解如何使用新的通用操作模型转换自适应卡片，以提供独特且增强的用户体验。
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>自适应卡片和新的通用操作模型
 
-自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。 有关详细信息，请参阅自适应 [卡片](http://adaptivecards.io/)。 自适应卡片的新通用操作支持跨平台和应用程序常见处理自适应卡片操作。 有关详细信息，请参阅通用 [操作模型](/adaptive-cards/authoring-cards/universal-action-model)。
+自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。 有关详细信息，请参阅 [自适应卡片](http://adaptivecards.io/)。 自适应卡片的新通用操作支持跨平台和应用程序常见处理自适应卡片操作。 有关详细信息，请参阅通用 [操作模型](/adaptive-cards/authoring-cards/universal-action-model)。
 
 可以通过使用快速入门指南更新方案 [并利用通用](Work-with-universal-actions-for-adaptive-cards.md) 操作开始。
 

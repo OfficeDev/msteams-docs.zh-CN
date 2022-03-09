@@ -5,12 +5,12 @@ description: 了解应用的邮件扩展搜索Microsoft Teams，通过应用清�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 9ff1d6c51320db07e0363dff9f72bd513acc6199
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281747"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356355"
 ---
 # <a name="define-messaging-extension-search-commands"></a>定义消息传递扩展搜索命令
 
@@ -79,19 +79,19 @@ ms.locfileid: "62281747"
 | `id` | 此属性是分配给搜索命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
 | `title` | 此属性是命令名称。 此值显示在用户界面用户界面 (UI) 。 | 是 | 1.0 |
 | `description` | 此属性是一个帮助文本，用于指示此命令执行哪些操作。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 此属性必须为 。`query` | 否 | 1.4 |
-|`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
-| `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
+| `type` | 此属性必须为 。`query` | 不支持 | 1.4 |
+|`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 不支持 | 1.0 |
+| `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 不支持 | 1.5 |
 
-您必须添加搜索参数的详细信息，该参数定义您的用户在 Teams 客户端中可见的文本。
+您必须添加搜索参数的详细信息，该参数定义在 Teams 客户端中对用户可见的文本。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-| `parameters` | 此属性定义命令的参数静态列表。 | 否 | 1.0 |
+| `parameters` | 此属性定义命令的参数静态列表。 | 不支持 | 1.0 |
 | `parameter.name` | 此属性描述参数的名称。 这将在用户请求中发送到你的服务。 | 是 | 1.0 |
 | `parameter.description` | 此属性描述参数的用途或必须提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
-| `parameter.inputType` | 此属性设置为所需输入的类型。 可能的值包括 、`textarea``text`、、`date``number`、`time`、`toggle`。 默认值设置为 `text`。 | 否 | 1.4 |
+| `parameter.inputType` | 此属性设置为所需输入的类型。 可能的值包括 、`textarea``text`、、`date``number`、`time`、`toggle`。 默认值设置为 `text`。 | 不支持 | 1.4 |
 
 #### <a name="example"></a>示例
 
@@ -128,6 +128,10 @@ ms.locfileid: "62281747"
 | 示例名称           | 说明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+
+## <a name="step-by-step-guide"></a>分步指南
+
+按照 [分步指南构建](../../../sbs-messagingextension-searchcommand.yml) 基于搜索的邮件扩展。
 
 ## <a name="next-step"></a>后续步骤
 

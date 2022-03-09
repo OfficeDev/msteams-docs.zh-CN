@@ -1,23 +1,23 @@
 ---
-title: 为会议启用和配置Teams应用程序
+title: 为会议启用和配置Teams应用
 author: surbhigupta
 description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821589"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355796"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用程序
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
-每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议应用程序。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
+每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
-若要为应用启用Teams会议，请更新应用清单并使用上下文属性确定应用必须出现在何处。
+若要为应用启用Teams会议，请更新应用清单，并使用上下文属性确定应用必须显示在何处。
 
 ### <a name="update-your-app-manifest"></a>更新应用清单
 
@@ -61,7 +61,7 @@ ms.locfileid: "62821589"
 | **privateChatTab** | 一组用户之间的群聊标题中的选项卡，不在团队或会议上下文中。 |
 | **meetingChatTab** | 一组用户之间安排的会议的群聊标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中工作。 |
 | **meetingDetailsTab** | 日历的会议详细信息视图标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动版中工作。 |
-| **meetingSidePanel** | 通过统一栏打开的会议内面板 (U 条形图) 。 |
+| **meetingSidePanel** | 通过统一栏和 U 条形图 (打开的会议内) 。 |
 | **meetingStage** | 可以将 中的 `meetingSidePanel` 应用共享到会议阶段。 不能在移动设备或 Teams 会议室客户端上使用此应用。 |
 
 为会议启用应用Teams，必须在会议前、会议期间和会议后配置应用。
@@ -104,7 +104,7 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 
 ### <a name="during-a-meeting"></a>会议期间
 
-在会议期间，可以使用 或 `meetingSidePanel` 会议内对话框为应用构建独特的体验。
+在会议期间，可以使用 或 `meetingSidePanel` 会议内通知为应用构建独特体验。
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
@@ -117,15 +117,13 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 > [!NOTE]
 > 使用版本 1.7.0 或更高版本[的 Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，因为它之前的版本不支持侧面板。
 
-#### <a name="in-meeting-dialog-box"></a>"会议内"对话框
+#### <a name="in-meeting-notification"></a>会议内通知
 
-会议内对话框用于在会议期间与参与者互动，并收集会议期间的信息或反馈。 使用 [SendNotificationSignal API](API-references.md#send-notification-signal-api) 触发气泡通知。 作为通知请求有效负载的一部分，请包含要显示内容的托管 URL。
+会议内通知用于在会议期间与与会者联系，并收集会议期间的信息或反馈。 使用 [会议内通知有效负载](API-references.md#send-an-in-meeting-notification) 触发会议内通知。 作为通知请求有效负载的一部分，请包含要显示内容的托管 URL。
 
-会议内对话框不得使用任务模块。 会议聊天中不调用任务模块。 外部资源 URL 用于在会议中显示内容气泡。 可以使用 方法 `submitTask` 在会议聊天中提交数据。
+会议内通知不得使用任务模块。 会议聊天中不调用任务模块。 外部资源 URL 用于显示会议通知。 可以使用 方法 `submitTask` 在会议聊天中提交数据。
 
-> [!NOTE]
-> * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。 
-> * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Microsoft Azure Active Directory (Azure AD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="示例演示如何使用会议内对话框。" border="true":::
 
 #### <a name="shared-meeting-stage"></a>共享会议演示区域
 

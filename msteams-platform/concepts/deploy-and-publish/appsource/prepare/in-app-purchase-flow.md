@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 90b1bf713e898a0f61c540e76ee5dde77603e70b
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 059322af212641988560853caf3d5a495e36f674
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518238"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356467"
 ---
 # <a name="in-app-purchases"></a>应用内购买
 
@@ -84,28 +84,27 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
 
 ## <a name="end-user-in-app-purchasing-experience"></a>最终用户应用内购买体验
 
-以下示例显示用户为名为 *Contoso Tasks* for Teams虚拟应用程序购买订阅Teams：
+以下示例显示用户为名为 *Contoso Tasks* for Teams 虚拟应用程序购买订阅Teams：
 
 1. 在 Teams **应用商店中**，查找并选择该应用。
 
-1. 在应用详细信息对话框中，选择 **"购买订阅"或** " **为我添加"**。 
+1. 在应用详细信息对话框中，选择 **"购买订阅"或** " **为我添加"**。
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="购买所选应用的订阅。" border="true":::
 
-    
 1. **"为我添加** "提供应用的免费试用版，稍后 **将其** 升级到付费版本。
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="升级到所选应用的订阅。" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="升级到所选应用的订阅。" lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
 
 1. 在" **选择订阅计划** "对话框中，选择该计划并选择"签出 **"**。
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="选择适当的订阅计划。" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="选择适当的订阅计划。" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
 
 1. 完成交易，然后选择"现在 **配置** "以设置订阅。
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="设置订阅。" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="设置订阅。" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="订阅的登陆页面。" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="订阅的登陆页面。" lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
 
 ## <a name="next-step"></a>后续步骤
 
@@ -114,5 +113,5 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
 
 ## <a name="see-also"></a>另请参阅
 
-* [将 SaaS 产品/服务与Microsoft Teams一起](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [将 SaaS 产品与Microsoft Teams一起](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 * [创建 SaaS 服务 (软件) 服务](include-saas-offer.md#create-your-saas-offer)

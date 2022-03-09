@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: 自动程序上下文名单用户配置文件通道列表
-ms.openlocfilehash: c356ea8e498f68ba1aec5c438840a366818070d0
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 0b7bba5e642d5cedc7a4c07c441a52fc9298d0f2
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821617"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355550"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>获取Teams程序的特定上下文
 
@@ -59,7 +59,7 @@ export class MyBot extends TeamsActivityHandler {
             var members = [];
 
             do {
-                var pagedMembers = await TeamsInfo.getPagedMembers(context, 100, continuationToken);
+                var pagedMembers = await TeamsInfo.getPagedMembers(turnContext, 100, continuationToken);
                 continuationToken = pagedMembers.continuationToken;
                 members.push(...pagedMembers.members);
             }
@@ -152,10 +152,11 @@ export class MyBot extends TeamsActivityHandler {
         super();
 
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
-        const member = await TeamsInfo.getMember(context, encodeURI('someone@somecompany.com'));
+        this.onMessage(async (turnContext, next) => {
+            const member = await TeamsInfo.getMember(turnContext, encodeURI('someone@somecompany.com'));
 
-        // By calling next() you ensure that the next BotHandler is run.
-        await next();
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
         });
     }
 }
@@ -208,7 +209,7 @@ Response body
 
 * * *
 
-获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用适用于 Microsoft Teams 或 `TeamsInfo.GetMemberDetailsAsync` TypeScript C#自动程序 `TeamsInfo.getTeamDetails` API。
+获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用适用于 Microsoft Teams 或 `TeamsInfo.GetMemberDetailsAsync` TypeScript C#自动`TeamsInfo.getTeamDetails`程序 API。
 
 ## <a name="get-teams-details"></a>获取团队的详细信息
 

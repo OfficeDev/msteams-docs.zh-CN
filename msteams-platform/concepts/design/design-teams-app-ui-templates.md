@@ -1,20 +1,20 @@
 ---
 title: 使用 UI 模板设计应用
 author: heath-hamilton
-description: 使用通常在整个应用中看到的标准化 UI 组件、布局和模式更快地设计Microsoft Teams。
+description: 使用标准化 UI 组件、布局和通常在整个应用中常见的模式更快地设计Microsoft Teams。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: f77517774237cce49976990a790987972d79118d
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362940"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356432"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI Microsoft Teams设计应用
 
-使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 UI Fluent的组件的集合，这些组件适用于常见Teams用例，让你有更多的时间来为用户找到最佳体验。
+使用 UI Microsoft Teams更快地设计应用。 模板是一组基于 UI Fluent的组件的集合，这些组件适用于常见的 Teams 用例，让你有更多的时间来为用户找到最佳体验。
 
 ## <a name="getting-started-with-tools-and-samples"></a>工具和示例入门
 
@@ -22,7 +22,7 @@ ms.locfileid: "62362940"
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-从应用 UI 工具包中为应用设计获取 UI 模板Microsoft Teams，其中还包括有关用法、结构、辅助功能和最佳做法的广泛信息。
+从应用 UI 工具包中为应用设计获取 UI 模板Microsoft Teams，其中还包括有关用法、结构分析、辅助功能和最佳做法的广泛信息。
 
 > [!div class="nextstepaction"]
 > [获取图 (UI) ](https://www.figma.com/community/file/916836509871353159)
@@ -48,7 +48,7 @@ ms.locfileid: "62362940"
 
 ## <a name="calendar"></a>日历
 
-在Teams中，用户可以在日历中为自己或组查看、计划和管理即将开始和过去的事件。
+在Teams中，日历是用户为自己或组查看、计划和管理近期和过去活动的地方。
 
 ### <a name="top-use-cases"></a>热门用例
 
@@ -146,7 +146,7 @@ ms.locfileid: "62362940"
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="示例在桌面上显示表单 UI 模板。" border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="示例在桌面上显示表单 UI 模板。" border="false":::
 
 ## <a name="list"></a>列表
 
@@ -167,7 +167,7 @@ ms.locfileid: "62362940"
 
 ## <a name="sign-in"></a>登录
 
-您可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括 SSO (单一) ，我们建议这样做，以简化身份验证体验。
+你可以为不同的上下文和标识提供程序设计Teams登录流。 以下示例包括单一登录 (SSO) ，我们建议这样做以简化身份验证体验。
 
 ### <a name="top-use-case"></a>热门用例
 
@@ -215,7 +215,7 @@ ms.locfileid: "62362940"
 
 ### <a name="top-use-cases"></a>热门用例
 
-* 安装
+* 设置
 * 载入
 * 首次运行体验
 

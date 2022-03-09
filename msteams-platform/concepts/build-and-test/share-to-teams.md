@@ -1,15 +1,15 @@
 ---
 title: 创建“共享到 Teams”按钮
-description: 了解如何使用代码示例Teams网站预览中添加"共享到"嵌入按钮
+description: 了解如何使用代码示例Teams网站预览中添加"共享到嵌入式"按钮
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: 共享Teams共享到Teams
-ms.openlocfilehash: a2c94ad690864b6af89005af4f96866f1ebda0b6
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+keywords: 共享Teams到共享Teams
+ms.openlocfilehash: 05e64033d16d4b94c6ac2f9f230c296218f75517
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518490"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355872"
 ---
 # <a name="create-share-to-teams-button"></a>创建“共享到 Teams”按钮
 
@@ -23,7 +23,7 @@ ms.locfileid: "62518490"
 
 !["共享到Teams"弹出窗口](~/assets/images/share-to-teams-popup.png)
 
-## <a name="embed-a-share-to-teams-button"></a>嵌入"共享到Teams"按钮
+## <a name="embed-a-share-to-teams-button"></a>嵌入"共享到Teams按钮
 
 1. 在网页上 `launcher.js` 添加脚本。
 
@@ -53,7 +53,7 @@ ms.locfileid: "62518490"
       data-icon-px-size="64">
     </div>
     ```
-1. 如果共享链接需要用户身份验证，并且要共享的链接中的 URL 预览在 Teams 中无法很好地呈现，则可以通过添加 设置为 的属性来禁用 URL `data-preview` 预览`false`。
+1. 如果共享链接需要用户身份验证，并且要共享的链接中的 URL 预览在 Teams 中无法很好地呈现，则可以通过添加设置为 的属性来禁用 URL `data-preview` 预览`false`。
 
     ```html
     <div
@@ -94,12 +94,12 @@ ms.locfileid: "62518490"
 
 | 属性 | HTML 属性 | 类型 | 默认值 | 说明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | 字符串 | 不适用 | 要共享的内容的 href。 |
-| preview | `data-preview` | boolean (字符串类型)  | `true` | 是否显示要共享的内容的预览。 |
+| href | `data-href` | string | 无 | 要共享的内容的 href。 |
+| preview | `data-preview` | 布尔 (字符串类型)  | `true` | 是否显示要共享的内容的预览。 |
 | iconPxSize | `data-icon-px-size` | number (作为字符串)  | `32` | 要呈现的"共享到Teams按钮的大小（以像素为单位）。 |
-| msgText | `data-msg-text` | 字符串 | 不适用 | 要插入到邮件撰写框中的链接之前的默认文本。 最大字符数为 200。 |
-| assignInstr | `data-assign-instr` | 字符串 | 不适用 | 要插入到工作分配"说明"字段中的默认文本。 最大字符数为 200。 |
-| assignTitle | `data-assign-title` | string | 不适用 | 要插入到工作分配"标题"字段中的默认文本。 最大字符数为 50。 |
+| msgText | `data-msg-text` | string | 无 | 要插入到邮件撰写框中的链接之前的默认文本。 最大字符数为 200。 |
+| assignInstr | `data-assign-instr` | string | 无 | 要插入到工作分配"说明"字段中的默认文本。 最大字符数为 200。 |
+| assignTitle | `data-assign-title` | string | 无 | 要插入到工作分配"标题"字段中的默认文本。 最大字符数为 50。 |
 
 ### <a name="methods"></a>Methods
 

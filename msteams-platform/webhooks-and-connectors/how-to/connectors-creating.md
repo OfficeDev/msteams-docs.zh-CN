@@ -1,17 +1,17 @@
 ---
 title: 创建 Office 365 连接器
 author: laujan
-description: 介绍如何开始使用 Office 365 中的连接器Microsoft Teams
+description: 介绍如何在 Microsoft Teams 中开始使用 Office 365 连接器
 keywords: teams Office365 连接器
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
-ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "62801381"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356096"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -26,7 +26,7 @@ ms.locfileid: "62801381"
 若要使连接器仅在应用商店Microsoft Teams，请按照将应用发布到应用商店中的提交Microsoft Teams[说明](~/concepts/deploy-and-publish/appsource/publish.md)操作。 否则，注册的连接器适用于Office 365应用程序的所有产品，包括 Outlook 和 Teams。
 
 > [!IMPORTANT]
-> 连接器在连接器开发人员 **仪表板中选择"** 保存"后注册。 如果你想要在 AppSource 中发布连接器，请按照将应用发布到 [AppSource Microsoft Teams中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果不想在 AppSource 中发布应用，请将其直接分发到组织。 为 [组织发布连接器后](#publish-connectors-for-the-organization)，无需在连接器仪表板上执行任何进一步的操作。
+> 连接器在连接器开发人员 **仪表板中选择"** 保存"后注册。 若要在 AppSource 中发布连接器，请按照将应用发布到 [AppSource Microsoft Teams中的说明操作](~/concepts/deploy-and-publish/apps-publish.md)。 如果不想在 AppSource 中发布应用，请将其直接分发到组织。 为 [组织发布连接器后](#publish-connectors-for-the-organization)，无需在连接器仪表板上执行任何进一步的操作。
 
 ### <a name="integrate-the-configuration-experience"></a>集成配置体验
 
@@ -137,7 +137,7 @@ ms.locfileid: "62801381"
 | `contentUrl` | 配置页面的 URL，由代码在调用 时设置 `setSettings()`。 |
 | `webhookUrl` | 为连接器创建的 webhook URL。 使用 POST 结构化 JSON 的 webhook URL 将卡片发送到频道。 仅在 `webhookUrl` 应用程序成功返回数据时返回 。 |
 | `appType` | 返回的值可以是 、或`mail``groups``teams`分别对应于邮件Office 365组Office 365组Microsoft Teams组。 |
-| `userObjectId` | 与启动连接器Office 365的用户对应的唯一 ID。 它必须是安全的。 此值可用于将用户关联到 Office 365，该用户已在你的服务中设置配置。 |
+| `userObjectId` | 与启动连接器Office 365的用户对应的唯一 ID。 它必须是安全的。 此值可用于关联服务中Office 365，该用户已在你的服务中设置配置。 |
 
 #### <a name="handle-edits"></a>处理编辑
 
@@ -207,9 +207,9 @@ ms.locfileid: "62801381"
 
 ## <a name="enable-or-disable-connectors-in-teams"></a>启用或禁用 Teams
 
-PowerShell V2 模块Exchange Online新式验证，并适用于多重身份验证，称为 MFA，用于连接到 Exchange 中所有与 PowerShell 相关的Microsoft 365。 管理员可以使用 Exchange Online PowerShell 禁用整个租户或特定组邮箱的连接器，从而影响该租户或邮箱中的所有用户。 无法对部分（而非其他）禁用。 此外，默认情况下，连接器对政府社区云租户GCC禁用。
+PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验证，称为 MFA，用于连接到 Microsoft 365 中所有Exchange相关的 PowerShell 环境。 管理员可以使用 Exchange Online PowerShell 禁用整个租户或特定组邮箱的连接器，从而影响该租户或邮箱中的所有用户。 无法对部分（而非其他）禁用。 此外，默认情况下，连接器将针对 政府社区云（称为 GCC 租户）禁用。
 
-租户级别设置会覆盖组级别设置。 例如，如果管理员为组启用连接器，并禁用租户上的连接器，则禁用该组的连接器。 若要在 Teams 中启用连接器，Exchange Online带或不带 MFA 的新式身份验证连接到 [PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)。
+租户级别设置会覆盖组级别设置。 例如，如果管理员为组启用连接器，并禁用租户上的连接器，则禁用该组的连接器。 若要在 Teams 中启用连接器，Exchange Online带或不带 MFA 的新式验证连接到 [PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)。
 
 ### <a name="commands-to-enable-or-disable-connectors"></a>用于启用或禁用连接器的命令
 
@@ -226,7 +226,7 @@ PowerShell V2 模块Exchange Online新式验证，并适用于多重身份验证
 
 ## <a name="test-your-connector"></a>测试连接器
 
-若要测试连接器，请通过任何其他应用将其上载到团队。 可以使用两个.zip和连接器开发人员仪表板中的清单文件创建一个程序包，该清单文件已按照将连接器包括在清单中中的指示 [进行了修改](#include-the-connector-in-your-manifest)。
+若要测试连接器，请通过任何其他应用将其上载到团队。 可以使用两个图标.zip连接器开发人员仪表板中的清单文件创建一个程序包，该清单文件已按照将连接器包括在清单中中的指示 [进行了修改](#include-the-connector-in-your-manifest)。
 
 上传应用后，从任何渠道打开连接器列表。 滚动到底部，在"已上载"部分 **查看** 你的应用：
 
@@ -253,13 +253,13 @@ PowerShell V2 模块Exchange Online新式验证，并适用于多重身份验证
 1. 从 **对话框窗口** 右下角的下拉菜单中选择"设置连接器"。
 
 > [!IMPORTANT]
-> 目前，自定义连接器在 DOD 政府社区云 (GCC) 、GCC-High 和国防部 (不可用) 。
+> 目前，自定义连接器在 doD 政府社区云 (GCC) 、GCC-High 和国防部 (不可用) 。
 
-该连接器位于该团队 &#9679;&#9679;&#9679; > "更多 **选项** > **ConnectorsAllConnectors** >  > "部分。 可以通过滚动到此部分或搜索连接器应用来导航。 若要配置或修改连接器，请选择"配置 **"**。
+该连接器位于该团队 &#9679;&#9679;&#9679; > "更多 **选项** > **ConnectorsAllConnectors** >  > "部分中。 可以通过滚动到此部分或搜索连接器应用来导航。 若要配置或修改连接器，请选择"配置 **"**。
 
 ## <a name="distribute-webhook-and-connector"></a>分发 Webhook 和连接器
 
-1. [直接为团队设置传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-incoming-webhook) 。
+1. [直接为团队设置传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) 。
 1. 添加配置[页，](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience)[在连接器中](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization)发布Office 365 Webhook。
 1. 将连接器打包并发布为 [AppSource 提交的一](~/concepts/deploy-and-publish/office-store-guidance.md) 部分。
 
@@ -269,7 +269,7 @@ PowerShell V2 模块Exchange Online新式验证，并适用于多重身份验证
 
 |**示例名称** | **说明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| 连接器    | 示例Office 365向频道生成通知Teams连接器。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| 连接器    | 示例Office 365将通知生成到Teams连接器。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 通用连接器示例 |通用连接器的示例代码，易于为支持 Webhook 的任何系统进行自定义。|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>另请参阅

@@ -1,29 +1,35 @@
 ---
 title: 维护和支持已发布的应用
-description: 在应用商店和 AppSource 上列出应用商店后Teams的想法。
+description: 在应用商店和 AppSource 上列出应用商店后Teams考虑的问题。
 ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518560"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356012"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
 在应用商店中Microsoft Teams应用后，开始考虑如何继续维护应用并增加下载量和使用量。
 
+## <a name="analyze-app-usage"></a>分析应用使用情况
+
+可以在合作伙伴中心的"应用使用情况Teams[跟踪](/office/dev/store/teams-apps-usage)你的应用使用情况。 指标包括每月、每日和每周活动用户，以及保留和强度图表，可让你跟踪改动和使用频率。
+
+新发布的应用的数据需要大约一周时间显示在报告中。
+
 ## <a name="publish-updates-to-your-app"></a>将更新发布到应用
 
 > [!NOTE]
-> Teams发展了：
+> Teams 应用商店已演变:
 > 
-> 以前，通过选择应用磁贴上的省略号来复制链接。 通过更新Teams应用商店体验，你将从应用的详细信息选项卡访问相同的内容。 此更新将于 2022 年 3 月 1 (通用) 通用版本发布。
+> 以前，通过选择应用磁贴上的省略号来复制链接。 通过更新Teams应用商店体验，你将从应用的详细信息选项卡访问相同的内容。 此更新将于 2022 年 3 (年 3) 通用版本发布。
 
-你可以向应用提交更改 (例如新功能，甚至是合作伙伴中心) 元数据。 这些更改需要新的审阅过程。
+你可以向应用提交更改 (如新功能，甚至是合作伙伴中心) 元数据。 这些更改需要新的审阅过程。
 
 发布更新时，请确保以下各项：
 
@@ -44,7 +50,7 @@ ms.locfileid: "62518560"
 * 添加个人选项卡。
 * 添加频道和组选项卡。
 * 添加连接器。
-* 修改与应用注册Microsoft Azure Active Directory (Azure AD) 相关的配置。 有关更多信息，请参阅[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* 修改与应用注册Microsoft Azure Active Directory (Azure AD) 配置。 有关更多信息，请参阅[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ## <a name="fix-issues-with-your-published-app"></a>修复已发布应用的问题
 
@@ -52,13 +58,13 @@ Microsoft 对应用商店中列出的应用运行每日Teams测试。 如果发�
 
 ## <a name="promote-your-app-on-another-site"></a>在另一个网站上推广你的应用
 
-当你的应用在应用商店Teams时，你可以创建一个链接来启动Teams并显示用于安装应用的对话框。 例如，可以在产品的营销页面上包含此链接和下载按钮。
+当你的应用在应用商店Teams时，你可以创建一个链接来启动Teams并显示一个对话框来安装你的应用。 例如，可以在产品的营销页面上包含此链接和下载按钮。
 
 使用应用 ID 附加的以下 URL 创建链接： `https://teams.microsoft.com/l/app/<your-app-id>`。
 
 ## <a name="complete-microsoft-365-certification"></a>完成Microsoft 365认证
 
-[Microsoft 365](/microsoft-365-app-certification/docs/certification)认证可保证在 Microsoft 365 生态系统中安装第三方 Office 应用 或外接程序时，数据和隐私受到充分保护Microsoft 365保护。 认证确认你的应用与 Microsoft 技术兼容，符合云应用安全最佳做法，并且受 Microsoft 支持。
+[Microsoft 365](/microsoft-365-app-certification/docs/certification)认证可保证在 Microsoft 365 生态系统中安装第三方 Office 应用 或外接程序时，数据和隐私受到充分Microsoft 365保护。 认证确认你的应用与 Microsoft 技术兼容，符合云应用安全最佳做法，并且受 Microsoft 支持。
 
 ## <a name="see-also"></a>另请参阅
 

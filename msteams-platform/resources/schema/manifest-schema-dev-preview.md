@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: teams 清单架构开发者预览版
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: bf2bcb1d7c72dc1fbd02de6ecab9ec0848c604c4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518546"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356257"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：公共开发人员预览清单架构Microsoft Teams
 
-若要了解如何启用开发人员预览，请参阅[公共开发人员预览Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)。
+若要了解如何启用开发人员预览，请参阅公共[开发人员预览Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)。
 
 > [!NOTE]
-> 如果你不使用开发人员预览功能，包括在 Outlook 和 Office 中运行 [Teams 个人](../../m365-apps/overview.md)选项卡和消息传递扩展，请改为使用 [GA](~/resources/schema/manifest-schema.md) 功能的应用清单。
+> 如果不使用开发人员预览功能（包括在 Outlook 和 Office 中运行 [Teams 个人](../../m365-apps/overview.md)选项卡和消息传递扩展，请改为使用 [GA](~/resources/schema/manifest-schema.md) 功能的应用清单。
 
 Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 清单必须符合托管在 [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json)的架构。
 
@@ -300,7 +300,7 @@ Microsoft Teams清单介绍了应用如何集成到 Microsoft Teams 平台。 �
 
 **必填** &ndash; Microsoft 应用 ID
 
-此应用的唯一 Microsoft 生成的标识符。 如果你已经通过 Microsoft Bot Framework 注册了自动程序，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，你应该已经拥有 ID，并且应在此处输入它。 否则，应在"我的应用程序" (Microsoft 应用程序注册门户) 一个新 ID，在此处[](https://apps.dev.microsoft.com)输入它，然后在添加自动程序时重复使用[它](~/bots/how-to/create-a-bot-for-teams.md)。
+此应用的唯一 Microsoft 生成的标识符。 如果你已经通过 Microsoft Bot Framework 注册了自动程序，或者你的选项卡的 Web 应用已经使用 Microsoft 登录，你应该已经拥有 ID，并且应在此处输入它。 否则，应在"我的应用程序" (Microsoft 应用程序注册门户) 一个新 ID，[](https://apps.dev.microsoft.com)在此处输入它，然后在添加自动程序时重复使用[它](~/bots/how-to/create-a-bot-for-teams.md)。
 
 ## <a name="packagename"></a>packageName
 
@@ -395,7 +395,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 个字符|✔|配置选项卡时要使用的 https:// URL。|
-|`canUpdateConfiguration`|布尔|||一个值，该值指示创建后用户是否可以更新选项卡配置的实例。 默认值： `true`|
+|`canUpdateConfiguration`|Boolean|||一个值，该值指示创建后用户是否可以更新选项卡配置的实例。 默认值：`true`|
 |`scopes`|枚举数组|1|✔|目前，可配置选项卡仅支持 `team` 和 `groupchat` 范围。 |
 |`context` |枚举数组|6 ||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值： `channelTab`、 `privateChatTab`、 `meetingChatTab`、 `meetingDetailsTab`、 `meetingSidePanel`和 `meetingStage`。|
 |`sharePointPreviewImage`|String|2048||用于 SharePoint 的选项卡预览图像的相对文件路径。 大小 1024x768。 |
@@ -409,7 +409,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 通过指定 而不是 `contentBotId` `contentUrl` 在 **staticTabs** 块中呈现带自适应卡片的选项卡。
 
-对象是一个数组 (类型的所有元素) 最多包含 16 个元素 `object`。 只有提供静态选项卡解决方案的解决方案才需要此块。
+对象是一个数组， (类型的所有元素) 最多包含 16 个元素 `object`。 只有提供静态选项卡解决方案的解决方案才需要此块。
 
 
 |名称| 类型| 最大大小 | 必需 | 说明|
@@ -417,7 +417,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|字符串|128 个字符|✔|通道接口中选项卡的显示名称。|
 |`contentUrl`|String|2048 个字符|✔|指向要在 Teams 画布中显示的实体 UI 的 https:// URL。|
-|`contentBotId`|   | | | 在Microsoft Teams框架门户中为机器人指定的应用 ID。 |
+|`contentBotId`|   | | | 自动Microsoft Teams门户中为自动程序指定的应用 ID。 |
 |`websiteUrl`|字符串|2048 个字符||用户 https:// 在浏览器中查看时指向的 URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持 `personal` 范围，这意味着只能将其预配为个人体验的一部分。|
 
@@ -432,7 +432,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|字符串|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这可能与整个应用 [ID 相同](#id)。|
-|`needsChannelSelector`|布尔值|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 默认值： `false`|
+|`needsChannelSelector`|布尔值|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 默认值：`false`|
 |`isNotificationOnly`|布尔值|||指示自动程序是否为单向、仅通知的自动程序，而不是对话自动程序。 默认值：`false`|
 |`supportsFiles`|布尔值|||指示自动程序是否支持在个人聊天中上传/下载文件。 默认值：`false`|
 |`scopes`|枚举数组|3|✔|指定自动程序是在 `team` 内的频道上下文中提供体验、在群组聊天 (`groupchat`) 中提供体验，还是仅在单个用户 (`personal`) 范围内提供体验。 这些选项不具排他性。|
@@ -452,7 +452,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 `connectors`块定义应用的 Office 365 连接器。
 
-对象是一个数组， (类型的所有元素 `object`) 1 个元素。 只有提供连接器的解决方案才需要此块。
+对象是一个数组， (类型的所有元素) 1 个元素 `object`。 只有提供连接器的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -469,12 +469,12 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 > [!NOTE]
 > 已从"撰写扩展"更改了该功能的名称到"消息传递扩展>在 2017 年 11 月，但清单名称保持不变，以便现有扩展继续运行。
 
-对象是一个数组， (类型的所有元素 `object`) 1 个元素。 只有提供消息传递扩展的解决方案才需要此块。
+对象是一个数组， (类型的所有元素) 1 个元素 `object`。 只有提供消息传递扩展的解决方案才需要此块。
 
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|支持消息传递扩展的机器人的唯一 Microsoft 应用 ID，已向Bot Framework注册。 这可能与整个应用 [ID 相同](#id)。|
-|`canUpdateConfiguration`|布尔|||一个值，该值指示用户是否可以更新消息传递扩展插件的配置。 默认值为 `false`。|
+|`canUpdateConfiguration`|Boolean|||一个值，该值指示用户是否可以更新消息传递扩展插件的配置。 默认值为 `false`。|
 |`commands`|对象数组|10 |✔|邮件扩展支持的命令数组|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -486,10 +486,10 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|字符串|64 个字符|✔|命令的 ID。|
-|`type`|字符串|64 个字符||命令的类型。 `query`或`action`之一。 默认值： `query`|
+|`type`|字符串|64 个字符||命令的类型。 `query`或`action`之一。 默认值：`query`|
 |`title`|字符串|32 个字符|✔|用户友好的命令名称。|
 |`description`|字符串|128 个字符||向用户显示以指示此命令用途的说明。|
-|`initialRun`|布尔|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值： `false`|
+|`initialRun`|Boolean|||一个布尔值，指示命令最初是否应该没有参数运行。 默认值：`false`|
 |`context`|Array of Strings|3||定义可以从何处调用消息传递扩展。 `compose`、 、 的任意`commandBox`组合`message`。 默认值为 `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||一个布尔值，指示它应动态提取任务模块。|
 |`taskInfo`|Object|||指定在使用消息传递扩展命令时要预加载的任务模块。|
@@ -538,7 +538,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 应用预期从其中加载任何内容的有效域的列表。 域列表可以包含通配符，例如 `*.example.com`。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com`。 如果你的选项卡配置或内容 UI 需要导航到除用于选项卡配置的其他任何其他域，则必须在此处指定该域。
 
-但是 **，** 不需要在应用中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不应在 accounts.google.com。`validDomains[]`
+但是 **，** 不需要在应用中包含要支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不应将 accounts.google.com 包括在 中 `validDomains[]`。
 
 > [!IMPORTANT]
 > 不要直接或通过通配符添加超出你控制的域。 例如， `yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。
@@ -549,11 +549,11 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选**
 
-指定你的Microsoft Azure Active Directory (Azure AD) ID 和Graph信息，以帮助用户无缝登录到你的 Auzre AD 应用。
+指定你的Microsoft Azure Active Directory (Azure AD) ID 和Graph信息，以帮助用户无缝登录到 Auzre AD 应用。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`id`|String|36 个字符|✔|Microsoft Azure Active Directory (Azure AD) 应用程序 ID。 此 ID 必须是 GUID。|
+|`id`|String|36 个字符|✔|应用的 Microsoft Azure Active Directory (Azure AD) 应用程序 ID。 此 ID 必须是 GUID。|
 |`resource`|String|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。|
 |`applicationPermissions`|数组|最多 100 个项目|✔|应用程序的资源权限。|
 

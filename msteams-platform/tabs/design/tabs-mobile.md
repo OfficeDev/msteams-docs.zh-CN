@@ -4,31 +4,31 @@ description: 了解如何在移动电话上Microsoft Teams选项卡、其身份�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 应用移动选项卡通道组身份验证分发
-ms.openlocfilehash: d2b1190ee5bb7122557aa64fb18065f542291f3a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: eb0bc5b0415f1879619cc704a77501406bcea397
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888431"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356369"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
 
-生成包含选项卡Microsoft Teams应用时，必须测试选项卡在 Android 和 iOS 客户端上Microsoft Teams运行。 本文概述了必须考虑的一些关键方案。
+生成包含选项卡的 Microsoft Teams 应用时，必须测试选项卡在 Android 和 iOS 客户端上Microsoft Teams运行。 本文概述了必须考虑的一些关键方案。
 
-如果您选择让频道或组选项卡显示在Teams客户端上，则配置必须具有 `setSettings()` `websiteUrl` 属性的值。 为了确保最佳的用户体验，在创建选项卡时，必须遵循本文中针对移动选项卡的指南。
+如果您选择让频道或组选项卡显示在Teams客户端上[`setSettings()`](/javascript/api/@microsoft/teams-js/microsoftteams.settings?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-settings-setsettings&preserve-view=true)`websiteUrl`，则配置必须具有 属性的值。 为了确保最佳的用户体验，在创建选项卡时，必须遵循本文中针对移动选项卡的指南。
 
 通过[应用商店Teams的应用程序](~/concepts/deploy-and-publish/appsource/publish.md)具有针对移动客户端的单独审批流程。 此类应用的默认行为如下所示：
 
 | **应用功能** | **应用获得批准时的行为** | **应用未获得批准时的行为** |
 | --- | --- | --- |
 | **个人选项卡** | 应用显示在移动客户端的底部栏中。 选项卡在 Teams 中打开。 | 应用不显示在移动客户端的底部栏中。 |
-| **频道和组选项卡** | 选项卡使用 在 Teams 客户端中打开 `contentUrl` 。 | 该选项卡使用 在 Teams 客户端外部的浏览器中打开 `websiteUrl` 。 |
+| **频道和组选项卡** | 选项卡使用 在 Teams 客户端中打开`contentUrl`。 | 选项卡使用 在 Teams 外部的浏览器中打开`websiteUrl`。 |
 
 > [!NOTE]
-> * 提交到[AppSource](https://appsource.microsoft.com)以在 Teams应用会自动评估移动响应能力。 对于任何查询，请通过联系 teamsubm@microsoft.com。
+> * 提交到 [AppSource](https://appsource.microsoft.com) 以在 Teams应用会自动评估移动响应能力。 对于任何查询，请通过联系 teamsubm@microsoft.com。
 > * 对于未通过 AppSource 分发的所有应用，默认情况下，选项卡在 Teams 客户端的应用内 Webview 中打开，并且不需要单独的审批流程。
 > * 应用的默认行为仅在通过应用商店分发时Teams适用。 默认情况下，所有选项卡在客户端中Teams打开。
-> * 若要开始对应用进行移动友好评估，请通过 teamsubm@microsoft.com 与应用详细信息联系。
+> * 若要开始评估移动应用，请通过应用 teamsubm@microsoft.com 联系。
 
 ## <a name="authentication"></a>身份验证
 
@@ -40,7 +40,7 @@ ms.locfileid: "60888431"
 
 ## <a name="testing-on-mobile-clients"></a>在移动客户端上测试
 
-必须验证选项卡在各种大小和质量的移动设备上是否正常工作。 对于 Android 设备，可以在选项卡运行时使用 [DevTools](~/tabs/how-to/developer-tools.md) 调试选项卡。 建议在高性能和低性能设备（包括平板电脑）上进行测试。
+您必须验证选项卡在各种大小和质量的移动设备上是否正常工作。 对于 Android 设备，可以在选项卡运行时使用 [DevTools](~/tabs/how-to/developer-tools.md) 调试选项卡。 建议在高性能和低性能设备（包括平板电脑）上进行测试。
 
 ## <a name="distribution"></a>分发
 
@@ -48,12 +48,12 @@ ms.locfileid: "60888431"
 
 ### <a name="apps-on-teams-store-approved-for-mobile"></a>经批准Teams移动的应用商店上的应用
 
-下表介绍了当应用在应用商店中列出并批准Teams时选项卡可用性和行为：
+下表介绍了当应用在应用商店中列出并批准Teams时选项卡的可用性和行为：
 
 |功能   |移动可用性？   |移动行为|
 |----------|-----------|------------|
-|频道 <br /> 和组选项卡|是|选项卡使用Teams在移动客户端中 `contentUrl` 打开。|
-|个人应用|是|"个人应用"选项卡中的每个选项卡都使用Teams配置在移动客户端 `contentUrl` 中打开。|
+|频道 <br /> 和组选项卡|是|选项卡使用Teams在移动客户端中`contentUrl`打开。|
+|个人应用|是|"个人应用"选项卡中的每个选项卡使用各自的Teams在移动客户端中`contentUrl`打开。|
 
 ### <a name="apps-on-teams-store-not-approved-for-mobile"></a>未批准Teams移动的应用商店上的应用
 
@@ -61,7 +61,7 @@ ms.locfileid: "60888431"
 
 | 功能 | 移动可用性？ | 移动行为 |
 |----------|-----------|------------|
-|"频道和组"选项卡|是|选项卡将在设备的默认浏览器中打开，而不是Teams应用的配置（还必须包含在源代码的 函数中）中的移动 `websiteUrl` `setSettings()` [客户端](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace)。 但是，用户可以在移动Teams中查看选项卡，方法为选择应用旁边的"更多"并选择"打开"，这将触发应用的 `contentUrl` 配置。|
+|"频道和组"选项卡|是|选项卡将在设备`websiteUrl`的默认浏览器中打开，而不是Teams应用的配置打开，这还必须包含在源代码的 `setSettings()` [函数中](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace)。 但是，用户可以在移动Teams中查看选项卡，方法为选择应用旁边的"更多"并选择"打开"，这将触发应用的配置`contentUrl`。|
 |个人应用|不支持|不适用|
 
 ### <a name="apps-not-on-teams-store"></a>不在应用商店Teams应用

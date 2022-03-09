@@ -5,18 +5,18 @@ description: 包含应用清单示例的邮件扩展操作命令概述
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1c533dacca3b50fb96311ad95a9828e9978ba5f9
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: fe3cb2296eabd38f94f0e2978e7232ea5f70acc3
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281908"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355886"
 ---
 # <a name="define-messaging-extension-action-commands"></a>定义消息传递扩展操作命令
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-操作命令允许你向用户显示名为任务模块的模式弹出窗口Teams。 任务模块收集或显示信息、处理交互并将信息发送回Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
+操作命令允许你向用户显示名为任务模块的模式弹出框Teams。 任务模块收集或显示信息、处理交互并将信息发送回Teams。 本文档指导您如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 app studio 创建操作命令或手动创建它。 
 
 在创建操作命令之前，必须确定以下因素：
 
@@ -78,7 +78,7 @@ ms.locfileid: "62281908"
 可以使用 App **Studio 或开发人员** 门户创建 **操作命令**。
 
 > [!NOTE]
-> App Studio 即将被弃用。 使用新的开发人员门户配置Teams分配和管理[应用](https://dev.teams.microsoft.com/)。
+> App Studio 即将被弃用。 使用新的开发人员门户配置Teams、分发和管理[应用](https://dev.teams.microsoft.com/)。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
@@ -103,7 +103,7 @@ ms.locfileid: "62281908"
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. 选择 **"允许用户在外部服务内触发** Teams"。 下图显示了操作命令选择：
+1. 选择 **"允许用户在外部服务内触发Teams"**。 下图显示了操作命令选择：
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
@@ -141,7 +141,7 @@ ms.locfileid: "62281908"
 |---|---|---|---|
 | `id` | 此属性是分配给此命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
 | `title` | 此属性是命令名称。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 此属性必须为 `action`。 | 否 | 1.4 |
+| `type` | 此属性必须为 `action`。 | 不支持 | 1.4 |
 | `fetchTask` | 对于任务模块 `true` 的自适应卡片或嵌入式 Web`false` 视图，以及参数的静态列表或加载 Web 视图时，此属性设置为 `taskInfo`。 | 否 | 1.4 |
 | `context` | 此属性是一个可选的值数组，用于定义从何处调用消息传递扩展。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
@@ -149,20 +149,20 @@ ms.locfileid: "62281908"
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-| `parameters` | 此属性描述命令的参数静态列表。 仅在 为 时 `fetchTask` 使用 `false`。 | 否 | 1.0 |
+| `parameters` | 此属性描述命令的参数静态列表。 仅在 为 时 `fetchTask` 使用 `false`。 | 不支持 | 1.0 |
 | `parameter.name` | 此属性描述参数的名称。 这将在用户请求中发送到你的服务。 | 是 | 1.0 |
 | `parameter.description` | 此属性描述参数的用途或应提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
-| `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 、`textarea`、`text`、`number``date`、`time`、。 `toggle` 默认值设置为 `text`。 | 否 | 1.4 |
+| `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 、`textarea`、`text`、`number``date`、`time`、。 `toggle` 默认值设置为 `text`。 | 不支持 | 1.4 |
 
 如果你使用的是嵌入式 Web 视图 `taskInfo` ，可以选择添加 对象来获取 Web 视图，而无需直接调用机器人。 如果选择此选项，则其行为类似于使用静态参数列表的行为。 因此，与机器人的第一次 [交互是响应任务模块提交操作](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 如果使用对象， `taskInfo` 则必须将 参数 `fetchTask` 设置为 `false`。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 否 | 1.4 |
+|`taskInfo`|指定在使用消息传递扩展命令时要预加载的任务模块。 | 不支持 | 1.4 |
 |`taskInfo.title`|初始任务模块标题。 |否 | 1.4 |
-|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 `large``medium`、 或 `small`）。 |否 | 1.4 |
-|`taskInfo.height`|任务模块高度，以像素为单位或 `large`默认布局（如 、 `medium`或 `small`）。|否 | 1.4 |
+|`taskInfo.width`|任务模块宽度，以像素为单位的一个数字或默认布局（如 `large``medium`、 或 `small`）。 |不支持 | 1.4 |
+|`taskInfo.height`|任务模块高度，以像素为单位或 `large`默认布局（如 、 `medium`或 `small`）。|不支持 | 1.4 |
 |`taskInfo.url`|初始 Web 视图 URL。|否 | 1.4 | 
 
 #### <a name="app-manifest-example"></a>应用清单示例
@@ -223,6 +223,11 @@ ms.locfileid: "62281908"
 |:---------------------|:--------------|:---------|:--------|
 |Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
+
+## <a name="step-by-step-guide"></a>分步指南
+
+按照[分步指南构建](../../../sbs-meetingextension-action.yml)基于Teams操作的邮件扩展。
+
 ## <a name="next-step"></a>后续步骤
 
 如果你使用的是自适应卡片或没有对象的嵌入 Web `taskInfo` 视图，下一步是：
@@ -234,3 +239,4 @@ ms.locfileid: "62281908"
 
 > [!div class="nextstepaction"]
 > [响应任务模块提交](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+

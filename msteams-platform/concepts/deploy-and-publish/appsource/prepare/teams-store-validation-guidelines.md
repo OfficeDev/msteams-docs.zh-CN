@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: dd8a3f31cd7c8e98a913c9a86ce2d705a7ba0279
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2aa433731d71f672182339bca82f851a61ec5895
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518231"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356061"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -19,7 +19,7 @@ ms.locfileid: "62518231"
 > [!NOTE]
 > * 某些准则可能不适用于你的应用。 例如，如果应用不包含机器人，则可以忽略与机器人相关的准则。
 > * 我们已将这些准则交叉引用到 Microsoft 商业认证策略，并添加了注意事项，其中包含验证过程中遇到的通过或失败情况的示例。
-> * 某些准则标记为 *强制修复*。 如果你的应用提交不符合这些强制性准则，你将收到来自我们的失败报告，其中包含缓解措施。 只有在修复了问题后，应用提交才会通过 Microsoft Teams 应用商店验证。 
+> * 某些准则标记为 *强制修复*。 如果你的应用提交不符合这些强制性准则，你将收到来自我们的失败报告，其中包含缓解措施。 仅在你修复了Microsoft Teams后，你的应用提交才能通过应用商店验证。 
 > * 其他准则标记为 *建议修复*。 为了获得理想的用户体验，我们建议你解决这些问题，但是，如果你选择不解决这些问题，也不会阻止你的应用提交在 Teams 应用商店上发布。 
 
 
@@ -103,7 +103,7 @@ ms.locfileid: "62518231"
   * 需要租户管理员完成一次性设置的应用必须强调对租户管理员配置应用的依赖性 (否则其他租户用户不能安装和使用应用)。  
   依赖性必须在应用清单、AppSource 长描述、所有首次运行体验接触点 (机器人欢迎消息、选项卡设置或配置页面)、被视为机器人响应、撰写扩展或静态选项卡内容中的必要部分的帮助文本中强调。
   
-* **内容共享体验**: 需要通过外部服务进行身份验证以便在 Teams 频道中共享内容的应用，必须在帮助文档 (或类似资源) 中清楚地说明用户如何断开连接或取消共享内容 (如果外部服务支持此功能)。 这并不意味着取消分享内容的能力必须存在于 Teams 应用中。
+* **内容共享体验**: 需要通过外部服务进行身份验证以便在 Teams 频道中共享内容的应用，必须在帮助文档 (或类似资源) 中清楚地说明用户如何断开连接或取消共享内容 (如果外部服务支持此功能)。 这并不意味着取消共享内容的能力必须存在于你的 Teams 应用中。
 
 ## <a name="security"></a>安全性
 > [!NOTE]  
@@ -191,7 +191,7 @@ ms.locfileid: "62518231"
 > [!NOTE]
 > 本部分与 [Microsoft 商业市场策略号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains)，并提供了有关在 `validDomains` 清单属性中使用受限域的开发人员指南。
 
-不得在应用的域配置中包含组织控制之外的域 (包括通配符) 和隧道服务。 以下的例外情况包括:
+不要在组织的控制范围外包括域 (包括) 域配置中的通配符和隧道服务。 以下的例外情况包括:
 
   * 如果应用使用 Azure 机器人服务的 OAuthCard，则必须将 `token.botframework.com` 作为有效的域包含在内，否则 **登录** 按钮将无法工作。
   * 如果应用依赖于 SharePoint，则可以使用 `{teamSiteDomain}` 上下文属性将关联的根 SharePoint 站点作为有效域包含。
@@ -271,7 +271,7 @@ Teams 应用清单定义应用的配置。
 
 * 清单必须符合公开发布的清单架构。 有关详细信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。 请勿使用清单的预览版本提交应用。
 * 如果应用包括机器人或消息传递扩展，则应用清单中的详细信息必须与机器人框架元数据保持一致，包括机器人名称、徽标、隐私策略链接和服务条款链接。
-* 如果你的应用使用 Azure Active Directory 进行身份验证，Microsoft Azure Active Directory (Azure AD) 清单 (应用程序) ID。 更多相关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* 如果你的应用使用 Azure Active Directory 进行身份验证，则Microsoft Azure Active Directory (Azure AD) 包含 (客户端) ID。 更多相关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ### <a name="app-icons"></a>应用图标
 
@@ -279,7 +279,7 @@ Teams 应用清单定义应用的配置。
 
 图标是用户在浏览 Teams 应用商店时看到的主要元素之一。 图标必须传达应用的品牌和用途，同时遵循以下要求：
 
-* 应用包必须包含两个 PNG 版本的应用图标: 彩色图标和大纲图标。
+* 你的应用包必须包含两.png版本的应用图标：颜色图标和大纲图标。
 * 图标的颜色版本必须为 192x192 像素。 图标符号可以是任何颜色，但必须位于纯色或完全透明的方形背景上。
 * 以下情况中将显示图标的轮廓版本：
   * 你的应用正在使用并 **托管** 在 Teams 左侧应用栏上。
@@ -1367,7 +1367,7 @@ Teams 应用清单定义应用的配置。
 * 不得使用任务模块。
 * 必须与会议阶段的中心对齐。
 
-:::row::: 
+:::row:::
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1375,13 +1375,12 @@ Teams 应用清单定义应用的配置。
    :::column-end:::
    :::column span="":::
    :::column-end:::
-:::row-end::: 
-     
+:::row-end:::
 
 * 在用户选择按钮或执行某个操作后必须关闭。
 
-* **同框场景模式**：确保考虑以下场景生成体验最佳做法： 
-  * 所有图像都采用 PNG 格式。
+* **同框场景模式**：确保考虑以下场景生成体验最佳做法：
+  * 所有图像都采用.png格式。
   * 所有图像组合在一起的最终程序包的分辨率不得超过 1920x1080。 分辨率为偶数。 要成功显示场景，需要此分辨率。
   * 最大场景大小为 10 MB。
   * 每个图像的最大大小为 5 MB。 场景是多个图像的集合。 限制是针对每个单独图像。

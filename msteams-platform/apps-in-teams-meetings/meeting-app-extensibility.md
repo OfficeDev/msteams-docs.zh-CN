@@ -4,12 +4,12 @@ author: surbhigupta
 description: 了解会议生命周期、在桌面和移动环境中构建用户在整个会议生命周期中的会议体验、参与者角色和用户类型。 此外，了解如何在会议生命周期中集成机器人和消息传递扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ae4fbbd7f970752d936cd19944a6083da41a163e
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821603"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355581"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -30,11 +30,11 @@ Teams统一会议应用基于以下概念：
 选项卡允许团队成员访问会议中特定空间内的服务和内容。 团队直接使用选项卡，并就选项卡中可用的工具和数据进行对话。 在Teams中，可以通过选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>，然后选择要安装的应用。
 
 > [!IMPORTANT]
-> 如果已将选项卡与会议集成，则应用必须遵循选项卡的 Teams 单一登录 ([SSO) 身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
+> 如果已将选项卡与会议集成，则应用必须遵循Teams SSO (单一) [身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 > [!NOTE]
 > * 专用计划会议仅支持应用。
-> * 在 Web 客户端Teams会议扩展选项卡应用添加Teams选项。
+> * 在 Web 客户端Teams会议扩展选项卡应用的添加Teams选项。
 
 #### <a name="pre-meeting-app-experience"></a>会议前应用体验
 
@@ -61,7 +61,7 @@ Teams统一会议应用基于以下概念：
 
 将选项卡添加到移动设备上的现有会议后，可以在会议详细信息的"更多部分"下看到会议前体验中的相同应用。
 
-<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
 ---
 
@@ -105,7 +105,7 @@ Teams统一会议应用基于以下概念：
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-![会议侧面板](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![会议侧面板](../assets/images/in-meeting-dialog.png)
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
@@ -142,11 +142,11 @@ Teams统一会议应用基于以下概念：
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>将机器人集成到会议生命周期
 
-在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请首先[构建自动](../build-your-first-app/build-bot.md)程序，然后继续创建用于会议Teams[应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
+在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请首先[构建自动](../build-your-first-app/build-bot.md)程序，然后继续[创建用于](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)会议Teams应用。
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>将消息传递扩展集成到会议生命周期
 
-若要实现消息传递扩展，请从[构建](../messaging-extensions/how-to/create-messaging-extension.md)消息传递扩展开始，然后继续为会议[创建Teams应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
+若要实现消息传递扩展，请首先构建[](../messaging-extensions/how-to/create-messaging-extension.md)消息传递扩展，然后继续创建用于会议Teams[应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
 通过Teams会议应用，你可以根据会议中的参与者角色设计应用。
 
@@ -177,14 +177,14 @@ Teams统一会议应用基于以下概念：
 以下列表详细介绍了各种用户类型及其辅助功能和性能：
 
 * **租户内**：租户内用户属于组织，拥有租户Microsoft Azure Active Directory (Azure AD) 凭据。 他们是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
-* **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的成员Azure AD具有与本机Teams相同的功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾Teams](/microsoftteams/guest-access)。
-* **联盟或** 外部：联盟用户是Teams组织中受邀加入会议的外部用户。 联盟用户具有联盟伙伴的有效凭据，并且由联盟Teams。 他们无法访问你的团队或组织的其他共享资源。 对于外部用户来说，来宾访问是访问团队和频道的更好选择。 有关详细信息，请参阅管理 [Teams 中的外部Teams](/microsoftteams/manage-external-access)。
+* **来宾**：来宾是受邀访问组织租户中的Teams或其他资源的另一个组织的参与者。 来宾将添加到组织的Azure AD，并且具有Teams团队成员的相同功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅 Teams 中的[来宾Teams](/microsoftteams/guest-access)。
+* **联盟用户或** 外部用户：联盟用户是Teams组织中受邀加入会议的外部用户。 联盟用户具有联盟伙伴的有效凭据，并且由联盟Teams。 他们无法访问你的团队或组织的其他共享资源。 对于外部用户来说，来宾访问是访问团队和频道的更好选择。 有关详细信息，请参阅管理 [Teams 中的外部访问](/microsoftteams/manage-external-access)。
 
     > [!NOTE]
     > 你的Teams用户可以在主持与其他组织的会议或聊天时添加应用。 当用户加入由其他组织托管的会议或聊天时，用户可以使用由外部用户共享的应用。 托管用户组织的数据策略以及该用户组织共享的第三方应用的数据共享做法将生效。
 
     > [!IMPORTANT]
-    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用，GCC[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+    > 目前，第三方应用在 政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD) 。 默认情况下，对于第三方应用，GCC。 若要打开第三方应用GCC，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
 
 * **匿名**：匿名用户没有Azure AD身份，并且未与租户联盟。 匿名参与者与外部用户类似，但其身份不会显示在会议中。 匿名用户无法访问会议窗口中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
 

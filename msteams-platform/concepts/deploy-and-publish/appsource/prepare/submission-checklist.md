@@ -6,16 +6,16 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: 提交应用商店分发验证应用包指南本地化
-ms.openlocfilehash: 4da374d9ced3231437aef278c7c90c68fc0c19de
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 579744dc8081eb8ca3e967cce1b4d696350d0a56
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949066"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356425"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备Microsoft Teams应用商店提交
 
-你已设计、构建和测试Microsoft Teams应用。 现在，你已准备好列出它，以便用户可以发现并开始使用你的应用。
+你已设计、生成和测试Microsoft Teams应用。 现在，你已准备好列出它，以便用户可以发现并开始使用你的应用。
 
 在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource)之前，请确保你已完成以下操作。
 
@@ -24,11 +24,11 @@ ms.locfileid: "60949066"
 当你的应用可能在测试环境中运行时，你应该检查你的应用包，以避免在提交过程中出现问题。
 
 > [!NOTE]
->  App Studio 即将被弃用。 使用新的开发人员门户配置、Teams[和管理应用](https://dev.teams.microsoft.com/)
+>  App Studio 即将被弃用。 使用新的开发人员门户配置Teams分配[和管理应用](https://dev.teams.microsoft.com/)
 
 应用Microsoft Teams工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
-1. 转到应用[Microsoft Teams工具](https://dev.teams.microsoft.com/appvalidation.html)。  (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) 
+1. 转到"[Microsoft Teams验证工具"](https://dev.teams.microsoft.com/appvalidation.html)。  (注意：该工具在 [App Studio](../../../build-and-test/app-studio-overview.md).) 
 1. Upload应用包运行自动测试。
 1. 转到" **初步检查表** "并查看难以自动化的测试用例。
 1. [通常修复配置或](~/resources/schema/manifest-schema.md) 应用的问题。 如果自动测试为您提供错误，或者您未满足检查表中的所有条件，将会出现这些问题。
@@ -60,7 +60,7 @@ ms.locfileid: "60949066"
 
 ### <a name="tenant-configurations"></a>租户配置
 
-如果必须配置Teams租户才能使用应用，请包含这些说明以及管理员和非管理员帐户进行验证。
+如果必须将 Teams租户配置为使用你的应用，请包含这些说明以及管理员和非管理员帐户进行验证。
 
 ### <a name="video-optional"></a>视频 (可选) 
 
@@ -74,7 +74,7 @@ ms.locfileid: "60949066"
 
 ### <a name="specify-a-short-name"></a>指定短名称
 
-特别是，你的应用 (名称的短) 在用户如何在应用商店[](~/resources/schema/manifest-schema.md#name)中发现它方面起到重要作用。
+特别是，你的应用 (，它的短) 在用户如何在应用商店[](~/resources/schema/manifest-schema.md#name)中发现它方面起到重要作用。
 
 :::row:::
 
@@ -106,7 +106,7 @@ ms.locfileid: "60949066"
 
 :::row-end:::
 
-请确保简短说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)。
+请确保您的简短说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)。
 
 #### <a name="long-description"></a>较长说明
 
@@ -128,7 +128,7 @@ ms.locfileid: "60949066"
 
 :::row-end:::
 
-请确保你的详细说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description)。
+确保你的详细说明符合应用商店 [验证准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description)。
 
 ### <a name="adhere-to-icon-design-guidelines"></a>遵守图标设计指南
 
@@ -153,8 +153,8 @@ ms.locfileid: "60949066"
 请记住以下有关屏幕截图的最佳实践：
 
 * 每个列表最多可以有五个屏幕截图。
-* 支持的文件类型包括 PNG、JPEG 和 GIF。
-* 尺寸应为 1366x768 像素。
+* 支持的文件类型包括.png、.jpeg 和 gif 图像格式。
+* 尺寸应为 1366 x 768 像素。
 * 最大尺寸为 1，024 KB。
 
 有关最佳做法，请参阅以下资源：
@@ -182,7 +182,7 @@ ms.locfileid: "60949066"
 
 ### <a name="select-a-category-for-your-app"></a>为应用选择类别
 
-在提交过程中，将要求你对应用进行分类。 下表将Teams应用商店类别映射到合作伙伴中心[中列出的类别](https://aka.ms/PartnerCenterHomePage)。
+在提交过程中，将要求你对应用进行分类。 下表将应用商店Teams映射到合作伙伴中心中列出的[类别](https://aka.ms/PartnerCenterHomePage)。
 
 | Teams类别       | 合作伙伴中心类别  |
 |:---------------------|:---------------|
@@ -208,7 +208,7 @@ ms.locfileid: "60949066"
 [Publisher应用商店](/microsoft-365-app-certification/docs/attestation)中列出的应用Teams证明也是必需的。 此过程包括完成对应用的安全性、数据处理和合规性做法的自我评估。 此过程可帮助潜在客户做出有关使用你的应用的明智决定。
 
 > [!NOTE]
-> 如果你要提交新应用，你无法正式完成Publisher证明，除非你的应用在应用商店Teams列出。 如果要更新列出的应用，请Publisher验证，然后再提交最新版本的应用进行验证。
+> 如果你要提交新应用，你无法正式完成Publisher证明，除非你的应用在应用商店Teams列出。 如果你要更新列出的应用，Publisher提交最新版本的应用进行验证之前完成"证明"。
 
 ## <a name="next-step"></a>后续步骤
 
