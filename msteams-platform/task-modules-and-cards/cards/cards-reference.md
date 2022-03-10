@@ -4,12 +4,12 @@ description: 介绍 Teams 中机器人可用的所有卡片和卡片操作
 ms.localizationpriority: high
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 741bd83b6888527e8e89b5be51dd408bb802fad3
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081133"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399378"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -19,7 +19,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>创建主图卡、缩略图卡或自适应卡片
 
-**若要从 App Studio 创建主图卡、缩略图卡或自适应卡片**
+要从 App Studio 创建主图卡、缩略图卡或自适应卡片，请：
 
 1. 从 Teams 转到 **App Studio**。
 1. 选择 **Card 编辑器**。
@@ -85,7 +85,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 图像的大小会增加或减小，以保持覆盖图像区域的纵横比。 然后从中心裁剪图像，以实现卡的适当纵横比。
 
-图像必须最多为 1024x1024，并且采用 PNG、JPEG 或 GIF 格式。 不支持动态 GIF。
+图像必须最多为 1024x1024，并采用 PNG、JPEG 或 GIF 格式。不支持动态 GIF。
 
 下表提供内联卡图像的属性:
 
@@ -95,7 +95,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 | alt | String | 可访问的图像说明。 |
 
 > [!NOTE]
-> 如果卡片包含在最终映像之前重定向的图像 URL，则不支持在映像 URL 中重定向。 这发生在公有云上共享的图像。
+> 如果卡片包含在最终图像之前重定向的图像 URL，则不支持图像 URL 中的重定向。在公有云上共享的映像会出现这种情况。
 
 ### <a name="buttons"></a>按钮
 
@@ -111,7 +111,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 ## <a name="adaptive-card"></a>自适应卡片
 
-自适应卡片是一种可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。 有关详细信息，请参阅 [自适应卡片](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07)。
+自适应卡片是一种可自定义的卡片，可以包含文本、语音、图像、按钮和输入字段的任意组合。要了解详细信息，请参阅 [自适应卡片](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07)。
 
 ### <a name="support-for-adaptive-cards"></a>支持自适应卡片
 
@@ -122,6 +122,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
+>
 > * Teams 平台支持 v1.4 或更早版本的自适应卡片功能，适用于机器人发送的卡片和基于操作的消息传递扩展。
 > * Teams 平台支持 v1.3 或更早版本的自适应卡片功能，以实现其他功能，例如用户发送的卡片 (基于搜索的消息传递扩展和链接展开)、选项卡和任务模块。
 > * Teams 平台上的自适应卡片不支持积极或破坏性的操作样式。
@@ -283,7 +284,7 @@ Bot Framework 参考:
 
 下表提供了支持主图卡的功能:
 
-| Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
+| Teams 中的机器人 | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -297,7 +298,7 @@ Bot Framework 参考:
 | 副标题 | 格式文本  | 卡片的副标题。 最多两行。|
 | text | 格式文本  | 文本显示在副标题下。 有关格式设置选项，请参阅 [卡格式](~/task-modules-and-cards/cards/cards-format.md)。 |
 | 图像 | 图像数组 | 显示在卡片顶部的图像。 纵横比为 16:9。 |
-| 按钮 | 操作对象数组 | 适用于当前卡片的操作集。 最大值为 6。 |
+| 按钮 | 操作对象数组 | 适用于当前卡片的操作集。最大值为 6。 |
 | 点击 | Action 对象 | 当用户点击卡片本身时激活。 |
 
 ### <a name="example-of-a-hero-card"></a>主图卡的示例
@@ -362,7 +363,7 @@ Teams 已添加列表卡片，以提供超出列表集合可提供的功能。 �
 | --- | --- | --- |
 | title | 格式文本  | 卡片的标题。 最多 2 行。|
 | items | 列表项的数组 | 适用于卡片的项集。|
-| 按钮 | 操作对象数组 | 适用于当前卡片的操作集。 最大值为 6。 |
+| 按钮 | 操作对象数组 | 适用于当前卡片的操作集。最大值为 6。 |
 
 ### <a name="example-of-a-list-card"></a>列表卡的示例
 
@@ -447,7 +448,7 @@ Teams 已添加列表卡片，以提供超出列表集合可提供的功能。 �
 
 Office 365 连接器卡在 Microsoft Teams 中正常工作，包括[`ActionCard`操作](/outlook/actionable-messages/card-reference#actioncard-action)。
 
-从连接器使用连接器卡和在机器人中使用连接器卡之间的重要区别是处理卡操作。 下表列出了差异:
+从连接器使用连接器卡和在机器人中使用连接器卡之间的重要区别在于卡片操作的处理。下表列出了区别：
 
 | Connector | Bot |
 | --- | --- |
@@ -643,7 +644,7 @@ Bot Framework 参考:
 
 下表提供了支持缩略卡的功能:
 
-| Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
+| Teams 中的机器人 | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -659,7 +660,7 @@ Bot Framework 参考:
 | 副标题 | 格式文本  | 卡片的副标题。 最多 2 行。|
 | text | 格式文本  | 文本显示在副标题下。 有关格式设置选项，请参阅 [卡格式](~/task-modules-and-cards/cards/cards-format.md)。 |
 | 图像 | 图像数组 | 显示在卡片顶部的图像。 纵横比 1:1 正方形。 |
-| 按钮 | 操作对象数组 | 适用于当前卡片的操作集。 最大值为 6。 |
+| 按钮 | 操作对象数组 | 适用于当前卡片的操作集。最大值为 6。 |
 | 点击 | Action 对象 | 当用户点击卡片本身时激活。 |
 
 ### <a name="example-of-a-thumbnail-card"></a>缩略图卡示例
@@ -920,7 +921,7 @@ Bot Framework 参考:
 
 下表提供了支持列表集合的功能:
 
-| Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
+| Teams 中的机器人 | 消息传递扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 

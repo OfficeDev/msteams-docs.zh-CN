@@ -4,12 +4,12 @@ description: 了解如何设计 Microsoft Teams 自适应卡并获取 Microsoft 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 86b5bdea89f49f6e98ce84920e3fbe1cdb4f378e
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948640"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398622"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡
 
@@ -188,15 +188,15 @@ ms.locfileid: "60948640"
 使用 [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) 将卡片内容格式化为表格或网格。 有几种设置列宽格式的选项。 这些指南可帮助你了解何时使用每个指南。
 
 * `"width": "auto"`：`ColumnSet` 中每个列的大小，适合包含到该列中的任何应用内容。
-   * **请**：当你有不同宽度的内容并且不需要优先考虑特定列时使用。
-   * **请**：对于每个 `TextBlock`，设置 `"wrap": true`，因为默认情况下文本不换行。
-   * **请勿**：对每个列容器设置 `"width": "auto"`。 例如，如果你有一个并排的输入和按钮，则该按钮可能会在某些屏幕上被切断。 相反，为带有按钮和其他其他必须始终完全可见的内容的列设置为 `auto`。
+  * **请**：当你有不同宽度的内容并且不需要优先考虑特定列时使用。
+  * **请**：对于每个 `TextBlock`，设置 `"wrap": true`，因为默认情况下文本不换行。
+  * **请勿**：对每个列容器设置 `"width": "auto"`。 例如，如果你有一个并排的输入和按钮，则该按钮可能会在某些屏幕上被切断。 相反，为带有按钮和其他其他必须始终完全可见的内容的列设置为 `auto`。
 * `"width": "stretch"`：根据可用的 `ColumnSet` 宽度调整列大小。 当多个列使用 `"stretch"` 值时，它们平均共享可用宽度。
-   * **请**：如果所有其他列都有静态宽度，请与一列一同使用。 例如，在一列中有宽 50 像素的缩略图。
-* `"width": "<number>"`：使用可用的 `ColumnSet` 宽度的比例调整列大小。 例如，如果使用 `"width": "1"`、`"width": "4"` 和 `"width": "5"` 设置三列，则各列将占可用宽度的 10%、40% 和 50%。
+  * **请**：如果所有其他列都有静态宽度，请与一列一同使用。 例如，在一列中有宽 50 像素的缩略图。
+* `"width": "<number>"`：使用可用 `ColumnSet` 宽度按比例重设列的大小。例如，如果使用 `"width": "1"`、`"width": "4"` 和 `"width": "5"` 设置三列，则这些列将分别占用可用宽度的 10%、40% 和 50%。
 * `"width": "<number>px"`：将列大小调整为特定的像素宽度。 此方法在创建表时很有用。
-   * **请**：在显示的内容的宽度不需要更改时使用（例如，数字和百分比）。
-   * **请勿**：意外超过卡片可以显示的宽度。 请记住，可用屏幕宽度取决于设备。 Teams 移动版也不支持像 Teams 桌面版那样的水平滚动。
+  * **请**：在显示的内容的宽度不需要更改时使用（例如，数字和百分比）。
+  * **请勿**：意外超过卡片可以显示的宽度。 请记住，可用屏幕宽度取决于设备。 Teams 移动版也不支持像 Teams 桌面版那样的水平滚动。
 
 #### <a name="example-knowing-when-to-stretch-columns"></a>示例：了解何时拉伸列
 
@@ -647,9 +647,9 @@ ms.locfileid: "60948640"
 * **请**：如果你需要控制图像的确切大小，请使用 `width` 和 `height` 属性。
 * **请勿**：在图像中包含填充。 这通常会引入不需要的间距和布局问题。
 * 关于背景色：
-   * **请**：使用透明背景，使图像适应任何 Teams 主题。 
-   * **请勿**：包含固定的背景色，除非用户必须看到特定颜色。
-   * **请勿**：将背景色添加到 `TextBlock`，损害可读性。 例如，如果你的背景为深色，则使用较浅的文本颜色，反之亦然。
+  * **请**：使用透明背景，使图像适应任何 Teams 主题。
+  * **请勿**：包含固定的背景色，除非用户必须看到特定颜色。
+  * **请勿**：将背景色添加到 `TextBlock`，损害可读性。 例如，如果你的背景为深色，则使用较浅的文本颜色，反之亦然。
 
 ### <a name="actions"></a>操作
 
