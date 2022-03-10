@@ -6,218 +6,80 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 1a7957c8ea6d889ffe5ab7e40c8a5bb1377b6ca5
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 14f74a89122d3622f6abfecaff80bdab6f63a71a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059621"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398748"
 ---
-# <a name="build-apps-for-microsoft-teams"></a>构建 Microsoft Teams 应用
+# <a name="teams-app-that-fits"></a>适合的 Teams 应用
 
-Microsoft Teams 应用将关键信息、常用工具和受信任的流程引入人们不断收集、学习和工作的地方。
+Microsoft Teams 提供由 Microsoft 或外部服务提供的应用集合。 Teams 应用可以是选项卡、机器人或消息传递扩展，也可以是这三者的任意组合。 这些应用扩展了 Teams 协作体验的价值。
 
-应用是扩展 Teams 以满足需求的一种方法。 为 Teams 创建全新的内容，或集成现有应用。
+应用可以是个人应用，也可以是共享应用。 个人应用可实现一对一通信，而共享应用则允许多个用户共享应用空间以进行协作。
+
+## <a name="driving-organizational-goals"></a>推动组织目标
+
+协作和通信是组织的关键所在。 简洁的通信、与所需服务的集成以及随开即用辅助功能是组织越来越多地选择依赖性应用的原因。
+
+组织使用它来与其客户联系、提供服务并共享信息。 但这还不是全部! 应用是人们协同工作的会议场所。 合适的应用有助于构建一个适合外部和内部业务需求的有凝聚力的环境。
+
+我们用可帮助满足业务需求的一些方面。
+
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="为什么要生成 Teams 应用?" border="false":::
+
+| **开发选项** | **商机** |
+| --- | --- |
+| - 桌面应用 <br> - Web 应用 <br> - 移动应用 | - 增加用户参与度 <br> - 使应用可在 Teams 应用商店中发现 |
+| **客户权益** | **内部工作流** |
+| - 随开即用辅助功能 <br> - 保护客户数据 <br> - 易于通信 | - 自动执行重复性任务 <br> - 使用机器人简化任务， <br> &nbsp;&nbsp;如问答和服务台 |
+
+你可以通过扩展 Teams 功能来构建具有 Teams 开发人员平台的应用，以满足你的需求。 为 Teams 创建全新的内容，或集成现有应用。
+
+## <a name="build-apps-with-microsoft-teams-platform"></a>使用 Microsoft Teams 平台生成应用
+
+Microsoft Teams 应用通过将关键信息、常用工具和受信任的流程引入人们日益收集、学习和工作的位置，帮助协作工作区提高工作效率。 应用是扩展团队平台功能以满足需求的方式。 创建全新的应用或集成现有应用，并利用 Microsoft Teams 平台的优势满足特定业务需求。
+
+构建应用的好处包括满足从组织目标到提高内部工作效率。
+
+下面是 Teams 最适合你的应用需求的原因:
+
+- **沟通和协作**
+
+    大多数成功的 Teams 应用都涉及从另一个系统拉取信息、对其进行对话，并让用户采取行动。Teams 允许你直接在 Teams 客户端中执行所有这些任务。甚至可以根据外部系统中的事件或操作将信息推送到目标受众。
+
+- **社交交互**
+
+    Teams 是一个社交平台; 定制的以社交为中心的应用程序鼓励团队将公司文化延伸到协作空间中。 使用应用发送投票，让用户彼此共享反馈，从而实现连接和通信。
+
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="用于构建团队文化的 Teams 应用" border="false":::
+
+- **常见业务流程**
+
+    创建和共享销售呼叫报告、跟踪项目时间线、保留常用资源、提交技术支持请求等任务是重复的任务。它们适用于有效的 Teams 应用。
+
+    除了自动执行重复性工作流之外，还可以使用应用来帮助解决通信问题。 聊天机器人可以轻松替代给 IT 或人力资源部门的电子邮件和电话。
+
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams 应用供内部使用" border="false":::
+
+- **Teams 应用商店优势**
+
+    在 Teams 应用商店上推送应用以提高应用的可用性，你可以将其作为营销机会。 如果你正在运行一家初创公司，Teams 平台有助于提高产品的知名度。 Teams 应用商店市场可以成为一个很好的平台，供大量受众发现你的应用。
+
+- **Surface 现有应用**
+
+    如果已经有现有的 Web 应用程序、SharePoint 站点 (或 SPFx 扩展)、PowerApp 或其他基于 Web 的应用程序，那么在 Teams 中启用其中的一部分或全部可能是有意义的。 扩展现有应用并将交互式功能移植到 Teams 中，有助于提高应用的用户群和用户参与度。
+
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint 网站移植为 Teams 选项卡" border="false":::
+
+- **包含选项卡和机器人的个人应用**
+
+    一对一对话机器人是 Microsoft Teams 中更开放的功能之一。 对话仅在机器人和用户之间进行。 你可以灵活地包括任务模块来简化复杂的信息集。
+
+    例如，如果你的应用是具有多个协作者的设计工具，则通知所有用户的共享机器人有助于构建用户参与度。
+
+## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [从这里开始](get-started/get-started-overview.md)
-
-## <a name="what-are-teams-apps"></a>什么是 Teams 应用？
-
-Teams 应用是[功能](concepts/capabilities-overview.md)的组合。 某些应用很简单（发送通知），而另一些应用则很复杂（管理患者记录）。 规划应用时，请记住 Teams 是一个协作中心。 最佳 Teams 应用可帮助人们表达自己，更好地协同工作。
-
-### <a name="personal-apps"></a>个人应用
-
-:::row:::
-   :::column span="1":::
-
-**帮助人们关注**：[个人应用](concepts/design/personal-apps.md)是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
-
-   :::column-end:::
-
-   :::column span="3":::
-
-:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="Teams 客户端中个人应用的外观的概念表示形式。" border="false":::
-
-   :::column-end:::
-
-:::row-end:::
-
-### <a name="tabs"></a>选项卡
-
-:::row:::
-   :::column span="1":::
-
-**更方便地进行排序**：在 [tab](tabs/what-are-tabs.md)中显示基于 Web 的内容，用户可以在其中一起讨论和处理它。
-
-   :::column-end:::
-
-   :::column span="3":::
-
-:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="Teams 客户端中选项卡外观的概念表示形式。" border="false":::
-
-   :::column-end:::
-
-:::row-end:::
-
-### <a name="bots"></a>机器人
-
-:::row:::
-   :::column span="1":::
-
-**将字词转换为操作**： 对话通常会导致需要执行某些操作（生成订单、查看我的代码、检查票证状态等）。 [机器人](bots/what-are-bots.md)可以直接在 Teams 中启动这些类型的工作流。
-
-   :::column-end:::
-
-   :::column span="3":::
-
-:::image type="content" source="assets/images/overview-bots-2021.png" alt-text="在 Teams 客户端中机器人外观的概念表示形式。" border="false":::
-
-   :::column-end:::
-
-:::row-end:::
-
-### <a name="messaging-extensions"></a>消息传递扩展
-
-:::row:::
-
-   :::column span="1":::
-
-**可更轻松地进行多任务**：使用 [分页扩展](messaging-extensions/what-are-messaging-extensions.md)，可以在对话中快速共享外部信息。 还可以对消息执行操作，例如基于频道帖子的内容创建帮助票证。
-
-   :::column-end:::
-
-   :::column span="3":::
-
-:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="消息传递扩展在 Teams 客户端中的外观的概念表示形式。" border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-### <a name="meeting-extensions"></a>会议扩展
-
-:::row:::
-
-   :::column span="1":::
-
-**为会议创建应用**： [将应用纳入 Teams 通话体验](apps-in-teams-meetings/design/designing-apps-in-meetings.md)有一些选项。
-
-   :::column-end:::
-
-   :::column span="3":::
-
-:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="Teams 客户端中会议扩展的外观的概念表示形式。" border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-### <a name="webhooks-and-connectors"></a>Webhook 和连接器
-
-:::row:::
-
-   :::column span="":::
-
-**与外部应用通信**： [传入 Webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) 是一种将通知从其他应用自动发送到 Teams 频道的简单方法。 使用 [传出 webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)，向 Web 服务发送@mention消息。
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="assets/images/overview-connectors.png" alt-text="连接器在 Teams 客户端中的外观的概念表示形式。" border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
-
-:::row:::
-
-   :::column span="":::
-
-**利用 Teams 数据**：[Microsoft Graph API for Teams](/graph/teams-concept-overview) 提供有关团队、频道、用户和消息的信息的访问权限，这些信息可帮助你为应用创建或增强功能（如丰富通知）。
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="assets/images/overview-graph.png" alt-text="适用于 Teams 的 Microsoft Graph API 的概念表示形式。" border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
-## <a name="start-building"></a>开始生成
-
-通过设置环境并创建简单的应用，快速熟悉 Teams 的构建。
-
-> [!div class="nextstepaction"]
-> [构建首个应用](get-started/get-started-overview.md)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
-## <a name="integrate-with-teams"></a>与Teams整合
-
-将用户喜欢的现有 Web 应用、服务或系统的功能与 Teams 的协作功能混合在一起。
-
-> [!div class="nextstepaction"]
-> [创建现有应用](samples/integrating-web-apps.md)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
-## <a name="a-little-code-goes-a-long-way"></a>一些代码会大有用处
-
-无需成为专家程序员即可构建出色的 Teams 应用。 试用几个低代码解决方案之一。
-
-> [!div class="nextstepaction"]
-> [创建低代码应用](samples/teams-low-code-solutions.md)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
-## <a name="get-ideas-for-your-app"></a>获取应用的创意
-
-正在寻找应用开发灵感？ 通过高保真概念模拟浏览我们的实际方案和行业解决方案列表，了解 Teams 应用可帮助用户的各种方式。
-
-> [!div class="nextstepaction"]
-> [查看应用方案](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-## <a name="test-your-app-running-across-microsoft-365"></a>测试跨Microsoft 365运行的应用
-
-可以使用 Microsoft Teams JavaScript 客户端 SDK v2 预览版预览以其他高使用率Microsoft 365体验运行的 Teams 应用。
-
-> [!div class="nextstepaction"]
-> [扩展应用](m365-apps/overview.md)
-
-## <a name="see-also"></a>另请参阅
-
-* [应用程序基础知识](~/concepts/app-fundamentals-overview.md)
-* [指定 Teams 应用](~/concepts/design/design-teams-app-process.md)
-* [将用例映射到 Teams 应用功能](~/concepts/design/map-use-cases.md)
+> [从创意到 Teams 应用](overview-story.md)
