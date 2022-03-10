@@ -3,8 +3,13 @@ title: 打包应用
 description: 了解如何打包 Microsoft Teams 应用以进行测试、上传和存储发布。
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356068"
 ---
-
 # <a name="create-a-microsoft-teams-app-package"></a>创建 Microsoft Teams 应用包
 
 需要应用包，但你计划分发 Microsoft Teams 应用。 有效的包是包含以下内容的 ZIP 文件：
@@ -20,13 +25,13 @@ ms.topic: conceptual
 
 ## <a name="app-manifest"></a>应用部件清单
 
-应用清单文件必须位于包的顶层，其名称 `manifest.json`。 
+应用清单文件必须位于包的顶层，其名称 `manifest.json`。
 
 发布到 Teams 应用商店时，请确保清单引用最新的 [架构](~/resources/schema/manifest-schema.md)。
 
 ## <a name="app-icons"></a>应用图标
 
-应用包必须包含应用图标的两个 PNG 版本：颜色和大纲版本。
+应用包必须包含应用图标的两个 .png 版本：颜色和大纲版本。
 
 > [!Note]
 > 如果应用具有机器人或消息传递扩展，则图标也会包含在机器人服务注册Microsoft Azure中。

@@ -3,19 +3,19 @@ title: 自定义同框场景模式
 description: 使用自定义"协同模式"场景
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 0f2f57cb36ba7caed7acaffa3bcfc1e2e57c59c2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059663"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356082"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
 Microsoft Teams 中的"自定义在一起"模式场景提供沉浸式且极具吸引力的会议环境，并执行以下操作：
 
-* 将人们汇集在一起，鼓励他们打开视频。 
-* 将参与者以数字方式合并到单个虚拟场景中。 
+* 将人们汇集在一起，鼓励他们打开视频。
+* 将参与者以数字方式合并到单个虚拟场景中。
 * 将参与者的视频流置于由场景创建者设计和修复的预先确定的席位中。
 
 在自定义"协同模式"场景中，场景是一个项目。 场景由场景开发人员使用 Microsoft Scene Studio 创建。 在场景设置中，参与者具有包含视频流的席位。 这些视频将呈现在这些座位中。 建议使用仅场景应用，因为此类应用的体验是明确的。
@@ -27,7 +27,7 @@ Microsoft Teams 中的"自定义在一起"模式场景提供沉浸式且极具�
 仅场景应用仍然是 Microsoft Teams 中的应用。 Scene Studio 在后台处理应用包创建。 单个应用包中的多个场景显示为用户的平面列表。
 
 > [!NOTE]
-> 用户无法从移动设备启动"协同模式"。 但是，在用户通过移动设备加入会议并从桌面打开"在一起模式"后，打开视频的移动用户将显示在桌面上的"在一起模式"中。 
+> 用户无法从移动端启动同框场景模式。但是，在用户通过移动设备加入会议并从桌面打开“同框场景模式”后，打开视频的移动用户将显示在桌面上的“同框场景模式”中。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -54,7 +54,7 @@ Microsoft 有一个场景工作室，可用于生成场景。 它在 [场景编�
 
 Scene Studio 上下文中的场景是包含以下元素的项目：
 
-* 为会议组织者和会议演示者保留的席位。 演示者不引用主动共享的用户。 它引用 [会议角色](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
+* 为会议组织者和会议演示者保留的席位。 演示者不引用主动共享的用户。 它引用 [会议角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
 
 * 具有可调整宽度和高度的每个参与者的席位和图像。 图像仅支持 PNG 格式。
 
@@ -66,7 +66,7 @@ Scene Studio 上下文中的场景是包含以下元素的项目：
 
 ![场景工作室](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-**使用 Scene Studio** 生成场景
+若要使用 Scene Studio 生成场景，请执行以下步骤：
 
 1. 转到 [场景编辑器 - Teams 开发人员门户](https://dev.teams.microsoft.com/scenes)。
 
@@ -86,7 +86,7 @@ Scene Studio 上下文中的场景是包含以下元素的项目：
     ![将图像添加到环境中](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * 可以下载 [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) ，并 [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) 包含图像的文件。
+    >可以下载 [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) ，并 [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) 包含图像的文件。
 
 1. 选择已添加的映像。
 
@@ -212,7 +212,7 @@ Scene.json 与图像一起指示席位的确切位置。 场景由位图图像�
 
 获取有关用户如何在自定义"协同模式"场景中参与场景的详细信息。
 
-**若要选择场景并激活自定义"同一模式"场景**
+若要选择场景并激活自定义“同框场景模式”场景，请按照这些步骤操作：
 
 1. 创建新的测试会议。
 
@@ -230,7 +230,7 @@ Scene.json 与图像一起指示席位的确切位置。 场景由位图图像�
     >[!NOTE]
     > 在任何时候，只有一个场景用于会议。 如果演示者或组织者更改了场景，则会对所有场景进行更改。 切换到或退出自定义的"同一模式"场景取决于单个参与者，但在自定义"同一模式"场景中，所有参与者都具有相同的场景。
 
-1. 选择“**应用**”。 Teams 为用户安装应用并应用场景。
+1. 选择“**应用**”。Teams 为用户安装应用并应用场景。
 
 ## <a name="open-a-custom-together-mode-scenes-scene-package"></a>打开自定义"一起"模式场景包
 
@@ -241,5 +241,5 @@ Scene.json 与图像一起指示席位的确切位置。 场景由位图图像�
 ## <a name="see-also"></a>另请参阅
 
 * [Teams 会议应用](teams-apps-in-meetings.md)
-* [通话和会议机器人 ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [使用 Microsoft Teams实时媒体通话和会议](~/bots/calls-and-meetings/real-time-media-concepts.md)

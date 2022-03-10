@@ -5,12 +5,12 @@ description: 了解如何设计 Teams 应用的任务模块并获取 Microsoft T
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 1cf22c8ff94e5d1a6132bd382395067d3623b4bf
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 460e9b4d51949ccc5e1a4cafb48c30eba60b4262
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475634"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355964"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计任务模块
 
@@ -32,12 +32,12 @@ ms.locfileid: "59475634"
 * **选项卡**: 任务模块可以从选项卡内的任意链接启动。情在希望用户专注于互动的情况下使用。
 * **机器人**: 任务模块可以从机器人消息中的链接启动。
 * **自适应卡**: 当用户选择按钮时，可以从自适应卡 (使用消息传递扩展或机器人发送) 启动任务模块。
-* **信息传递扩展(操作命令)**: 信息传递扩展允许对信息内容采取特定操作。 选择操作将打开任务模块。
-* **信息传递扩展(撰写框上下文)**: 在撰写框中，可以设计消息传递扩展来打开任务模块，而不是典型的浮出控件。 保留任务模块以进行复杂的交互，例如完成表单。
+* **消息扩展（操作命令）**：消息扩展允许你对消息内容执行特定操作。选择操作将打开任务模块。
+* **消息扩展（撰写框上下文）**：在撰写框中，可以设计消息扩展来打开任务模块，而不是典型的浮出控件。保留任务模块以进行复杂的交互，例如完成表单。
 
 ## <a name="anatomy"></a>解剖
 
-任务模块为托管应用体验提供了灵活的图面。 它们是使用 iframe(桌面)或 Webview(移动设备)生成的，因此可以使用我们的 UI 模板(推荐)或从头开始设计任务模块。
+任务模块为托管应用体验提供了灵活的图面。它们是使用 iframe（桌面）或 Web 视图（移动设备）生成的，因此你可以使用我们的 UI 模板（推荐）或从头开始设计任务模块。
 
 它们也可以使用[自适应卡片](../../task-modules-and-cards/cards/design-effective-cards.md)框架生成，这可以是更简单、更快地促进常见的方案(如表单)。
 
@@ -64,11 +64,11 @@ ms.locfileid: "59475634"
 |3|**标题**: 让标题清晰简洁。 描述希望用户完成的任务。
 |4|**关闭按钮**: 关闭任务模块。 不应应用内容中未保存的更改。|
 |5|**iframe**: 托管应用内容的响应空间。|
-|6|**操作(可选)**: 与应用内容相关的按钮。|
+|6 |**操作(可选)**: 与应用内容相关的按钮。|
 
 ## <a name="designing-with-ui-templates"></a>使用 UI 模板进行设计
 
-请考虑在任务模块中的使用常见布局模板。 每个组件都由较小的组件组成，可创建一个精致的响应式设计，该设计可以现成地使用或根据方案或品牌外观进行自定义。
+请考虑对任务模块中的常见布局使用模板。每个组件都由较小的组件组成，可创建一个精致的响应式设计，该设计可以现成地使用或针对你的方案或品牌外观进行自定义。
 
 * [列表](../../concepts/design/design-teams-app-ui-templates.md#list): 列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目执行操作。
 * [表单](../../concepts/design/design-teams-app-ui-templates.md#form): 表单是用于收集、验证和提交用户输入的结构化方式。
@@ -98,7 +98,7 @@ ms.locfileid: "59475634"
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="任务模块中的示例表单。" border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="任务模块中的示例表单。" border="false":::
 
 ### <a name="sign-in"></a>登录
 
@@ -243,7 +243,7 @@ ms.locfileid: "59475634"
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>请勿执行: 将错误信息放在对话框中
 
-请勿在任务模块顶部的对话框中弹出错误信息。 这会造成混乱的用户体验。
+不要在任务模块顶部的对话框中弹出错误消息。这会造成令人困惑的用户体验。
 
    :::column-end:::
 :::row-end:::
