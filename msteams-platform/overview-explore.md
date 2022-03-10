@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 96728036f330eb2181f9818411e218e1ec3c2016
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: a201994bc71e0131bb03d33215d800e13d3428de
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898174"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398965"
 ---
 # <a name="explore-teams-platform-features"></a>浏览 Teams 平台功能
 
@@ -23,7 +23,7 @@ ms.locfileid: "62898174"
 
 | 功能 | 说明 | 适用于 |
 | --- | --- | --- |
-|选项卡 | 选项卡是 Teams 中嵌入的与 Microsoft Teams 相关的网页。 可以将它们添加为团队、群组聊天或个人用户的个人应用内部频道的一部分。 | 个人选项卡、频道或组选项卡、阶段视图和链接展开。 |
+|选项卡 | 选项卡是 Microsoft Teams 中嵌入的与 Teams 相关的网页。可以将它们添加为团队、群组聊天或个人用户的个人应用内频道的一部分。 | 个人选项卡、频道或组选项卡、阶段视图和链接展开。 |
 | 机器人 | 机器人也称为聊天机器人或对话机器人。 它是一个可运行用户完成的简单且重复的自动化任务的应用。 机器人交互可以是快速问答，也可以是提供服务访问权限的复杂对话。 | 客户服务、天气信息、预订晚餐、或提供旅游信息。 |
 | 消息传递扩展 | 消息传递扩展允许用户与 Web 服务 Teams 客户端进行交互。 在外部系统中搜索或启动操作。 可以将交互结果作为丰富地格式化卡片发送到 Teams 客户端。 | 保留资源并允许通道知道保留的时间段。 搜索工作项，并将其作为自适应卡片与组共享。 在跟踪系统中根据 Teams 消息创建 bug，将该 bug 分配给用户，并向会话线程发送包含该 bug 详细信息的卡片。 |
 |会议扩展 | 你可以创建应用来提高会议效率。 | 要求用户在通话期间完成调查，或发送不会中断会议流程的快速提醒。 |
@@ -32,7 +32,6 @@ ms.locfileid: "62898174"
 | Microsoft Graph | Microsoft Graph 是 Microsoft 365 中数据和智能的网关，可以合并到任何类型的 Teams 应用中。 | 创建、管理、查找和存档大量团队，并通过用户和频道填充这些团队。 |
 | 自适应卡片 | 卡片帮助将信息组织到组中，让用户有机会与信息的特定部分进行交互。 | 使用文本和图像进行共享; 使用输入窗体收集信息。 |
 | 任务模块 | 任务模块允许你在 Teams 应用程序中创建模式弹出体验。 | 运行自己的自定义 HTML 或 JavaScript 代码。 显示基于 <`iframe`> 的小组件，例如 YouTube 或 Microsoft Stream 视频。 |
-|
 
 ## <a name="dive-deeper"></a>深入了解
 
