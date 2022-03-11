@@ -5,12 +5,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams Office365 连接器
-ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355634"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398874"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -44,6 +44,7 @@ ms.locfileid: "63355634"
 有关连接器卡操作的详细信息，请参阅 [操作](/outlook/actionable-messages/card-reference#actions)。
 
 > [!NOTE]
+>
 > * 在 Microsoft Teams 中指定 `style` 属性的 `compact` 与在 Microsoft Outlook 中指定 `style` 属性的 `normal` 相同。
 > * 对于 HttpPOST 操作，请求中包括承载令牌。 此令牌包括执行此操作的 Office 365 用户的 Microsoft Azure Active Directory (Azure AD) 标识。
 
@@ -187,14 +188,15 @@ ms.locfileid: "63355634"
 
 1. 检查与 Webhook URL 相关联的 Microsoft Teams 频道。 你应查看发布到频道的新卡片。 在使用连接器测试或发布应用之前，必须执行以下操作:
 
-    - [包括两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
-    - 将清单的 `icons` 部分修改为图标的文件名而不是 URL。
+    * [包括两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
+    * 将清单的 `icons` 部分修改为图标的文件名而不是 URL。
 
 ---
 
 ## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>使用传入 webhook 发送自适应卡
 
 > [!NOTE]
+>
 > * 完全支持所有本机自适应卡片架构元素 (`Action.Submit`除外)。
 > * 受支持的操作有 [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)，以及 [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
 
