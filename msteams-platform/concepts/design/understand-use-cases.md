@@ -5,12 +5,12 @@ description: 规划应用、了解用户及其需求、了解应用将解决的�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 117ad5a99662194fef0707ff355d129e4b487cfe
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898152"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399056"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
@@ -31,7 +31,7 @@ ms.locfileid: "62898152"
 
 ## <a name="microsoft-teams-app-features"></a>Microsoft Teams 应用功能
 
-可通过多种方式扩展 Teams，因此每个应用都是唯一的。 Teams 应用功能计划:
+有多种扩展 Teams 的方法，因此每个应用都是唯一的。Teams 应用功能提供了：
 
 - [应用功能](#app-capabilities)
 - [应用程序范围](#app-scope)
@@ -163,7 +163,7 @@ ms.locfileid: "62898152"
 
 > [!NOTE]
 > Teams 应用商店已演变:
-> 
+>
 > 以前，LOB 应用是通过选择磁贴上的省略号来更新的。 借助更新的 Teams 应用商店体验，现在可以通过登录到 [Teams 管理中心](https://admin.teams.microsoft.com) 来更新 LOB 应用。
 
 ### <a name="app-scope"></a>应用程序范围
@@ -173,7 +173,7 @@ ms.locfileid: "62898152"
 - **个人应用体验**: 个人应用是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
 - **共享应用体验**: 团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间中的每个人使用。 协作空间通常侧重于应用交互的工作流或解锁新的社交交互。
 
-应用可以存在于不同的范围内。 例如：
+应用可以存在于不同的范围内。例如：
 
 - 应用可以在中央共享位置 (即选项卡) 中显示数据。
 - 它还可以通过个人对话界面 (即机器人) 显示相同的信息。
