@@ -5,15 +5,21 @@ keywords: teams visual studio code toolkit tabs sso graph authentication Azure i
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
+ms.openlocfilehash: c971cd99be0e283050561db2a0f1b89c9e20c9cf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452541"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>使用选项卡的 Teams 工具包和 Visual Studio Code 单一登录身份验证
 
 > [!IMPORTANT]
-> **本文档引用旧版本Teams Toolkit**
+> **本文档引用旧版本的 Teams Toolkit**
 >
 > 有关当前信息，请阅读 [先决条件，](../get-started/prerequisites.md) 并按照其中一个较新的教程操作。
 
-利用Microsoft Teams Toolkit，你可以为选项卡应用直接 (SSO) 单一登录Visual Studio Code。 该工具包将指导你完成此过程，并提供你所需的一切，包括在 Microsoft 标识平台 门户中预配Microsoft Azure注册。
+利用Microsoft Teams Toolkit，你可以直接在 (内为选项卡) 创建单一登录Visual Studio Code SSO Visual Studio Code。 该工具包将指导你完成此过程，并提供你所需的一切，包括Microsoft 标识平台在 Microsoft Azure 注册。
 
 ## <a name="get-started--create-a-project"></a>入门 — 创建项目
 
@@ -39,8 +45,8 @@ ms.author: lajanuar
 
 1. 从 **文件夹选择** `api-server` npm 安装。 然后 **npm 启动**。
 1. 从 **文件夹选择** `.src` npm 安装。 然后 **npm 启动**。
-1. 如果你使用的是像 [ngrok](https://ngrok.com/) 这样的隧道服务，请运行它并确保 URL 与你在项目创建向导中输入的内容相匹配。 如果没有，则需要在 Azure 中创建的应用注册中更新 _API URI_ 和重定向 URL。
-1. 导航到"活动"窗口左侧的活动Visual Studio Code栏。
+1. 如果你使用的是像 [ngrok](https://ngrok.com/) 这样的隧道服务，请运行它并确保 URL 与你在项目创建向导中输入的内容相匹配。 如果没有，则需要在 Azure 中创建的应用注册中更新 *API URI* 和重定向 URL。
+1. 导航到"活动栏"窗口左侧Visual Studio Code栏。
 1. 选择" **运行** "图标以显示 **"运行和调试"** 视图。
 1. 您还可以使用键盘快捷方式 **Ctrl+Shift+D**。
 

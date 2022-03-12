@@ -4,12 +4,12 @@ description: 了解使用通用操作和代码示例的用户特定视图
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 284fda042d5862929004f7809aea9080d0c5d3fd
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 472620da2bcd15f34b111afe170eb74e31e64492
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356362"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453108"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
@@ -64,7 +64,7 @@ ms.locfileid: "63356362"
 }
 ```
 
-**若要发送自适应卡片，请刷新用户特定视图，并调用对自动程序的请求**
+若要发送自适应卡片，请刷新用户特定视图，并调用对机器人的请求：
 
 1. 当 Megan 创建新事件时，机器人会发送自适应卡片或公用卡片（包含事件详细信息）Teams对话。
 2. 现在，此卡片将自动刷新到 Megan 和 Alex 的用户特定视图。 Alex 和 Megan 的用户 MRIs `userIds` `refresh` 添加到自适应卡片 JSON 的 属性中。 对于对话中的其他用户，该卡片保持不变。
@@ -216,7 +216,7 @@ const cardRes = {
 
 ```
 
----
+***
 
 设计用户特定视图时请记住的卡片设计指南：
 

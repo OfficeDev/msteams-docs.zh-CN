@@ -5,12 +5,12 @@ description: 了解如何在 Power Virtual Agents 平台中集成聊天Teams聊�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: e0b32f50f300b5a7b10b31b8bdef64ec91a50633
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: a95b3fe3b9191facc2554262444bc4b558c372ed
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398825"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453836"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>添加 Power Virtual Agent 聊天机器人
 
@@ -23,7 +23,8 @@ Power Virtual Agents可以创建功能强大的聊天机器人，这些聊天机
 无需数据工作者或开发人员，即可轻松创建这些机器人。
 
 > [!NOTE]
-> 通过将聊天机器人添加到Microsoft Teams，一些数据（如聊天机器人内容和用户聊天内容）会与用户Microsoft Teams。 这意味着你的数据流超出组织的合规性 [以及地理或区域边界](/power-virtual-agents/data-location)。 <br/>
+> * 通过将聊天机器人添加到Microsoft Teams，一些数据（如聊天机器人内容和用户聊天内容）会与用户Microsoft Teams。 这意味着你的数据流超出组织的合规性 [以及地理或区域边界](/power-virtual-agents/data-location)。 <br/>
+> * 不得使用 Microsoft Power Platform 创建要发布到应用商店Teams应用。 Microsoft Power Platform 应用只能发布到组织的应用商店。
 
 ## <a name="make-your-chatbot-available-in-teams-through-the-power-virtual-agents-portal"></a>通过 Power Virtual Agents 门户Teams聊天Power Virtual Agents程序
 

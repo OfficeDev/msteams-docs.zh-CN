@@ -6,16 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: 自适应卡片个人应用身份验证数据流
-ms.openlocfilehash: 5ecd8ec7820adf07efbd588d0220c2849a11df0d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 2747dbe089ee847e7f5465d3a19fa58dbf945be5
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355859"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453262"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
 > [!IMPORTANT]
+>
 > * 带自适应卡片的选项卡当前仅作为个人应用受支持。
 
 使用传统方法开发选项卡时，您可能会遇到这些问题：
@@ -107,6 +108,7 @@ ms.locfileid: "63355859"
 自适应卡片选项卡和自动程序之间的通信通过活动 `invoke` 完成。 每个 `invoke` 活动都有一个对应的 **名称**。 使用每个活动的名称来区分每个请求。 `tab/fetch` 和 `tab/submit` 是本节中介绍的活动。
 
 > [!NOTE]
+>
 > * 机器人需要向服务 URL 发送 [所有响应](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 服务 URL 作为传入有效负载的一部分 `activity` 接收。
 > * 调用负载大小已增加到 80kb。
 
@@ -235,6 +237,7 @@ ms.locfileid: "63355859"
 以下代码提供了请求和 `task/fetch` 响应的示例：
 
 **`task/fetch` request**
+
 ```json
 // task/fetch POST request: agents/{botId}/invoke
 {
@@ -432,7 +435,7 @@ ms.locfileid: "63355859"
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
+> [选项卡链接取消展开和阶段视图](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>另请参阅
 

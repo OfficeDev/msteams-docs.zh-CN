@@ -5,25 +5,25 @@ description: 了解如何使用代码示例和示例从 Microsoft Teams 应用�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: b31bdc167c033785edc971b96b2ebfc44c265995
-ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
+ms.openlocfilehash: 42b36e5d7056368463797d1297c0674b33b6b5a0
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2021
-ms.locfileid: "61573412"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453822"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-在用户提交搜索命令后，Web 服务会收到一条调用消息，其中包含包含 `composeExtension/query` `value` 搜索参数的对象。 此调用通过以下条件触发：
+在用户提交搜索命令后，Web `composeExtension/query` `value` 服务会收到一条调用消息，其中包含包含搜索参数的对象。 此调用通过以下条件触发：
 
 * 在搜索框中输入字符时。
-* `initialRun` 在应用清单中设置为 true，一旦调用搜索命令，就会收到调用消息。 有关详细信息，请参阅默认 [查询](#default-query)。
+* `initialRun` 在应用清单中设置为 true，一旦调用搜索命令，就会收到调用消息。 有关详细信息，请参阅 [默认查询](#default-query)。
 
 本文档指导您如何以卡片和预览形式响应用户请求，以及用户Microsoft Teams默认查询的条件。
 
-请求参数位于请求中的 对象中 `value` ，其中包括以下属性：
+请求参数位于请求中的 `value` 对象中，其中包括以下属性：
 
 | 属性名称 | 用途 |
 |---|---|
@@ -81,37 +81,36 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 当用户执行查询时，Microsoft Teams向服务发送同步 HTTP 请求。 此时，代码有 `5` 几秒钟时间提供对请求的 HTTP 响应。 在此期间，你的服务可以执行其他查找，或执行为请求提供服务所需的任何其他业务逻辑。
 
-服务必须使用与用户查询匹配的结果进行响应。 该响应必须指示 的 HTTP 状态代码以及具有以下属性的有效 application 或 `200 OK` JSON 对象：
+服务必须使用与用户查询匹配的结果进行响应。 该响应必须指示 的 HTTP 状态 `200 OK` 代码以及具有以下属性的有效 application 或 JSON 对象：
 
 |属性名称|用途|
 |---|---|
 |`composeExtension`|顶级响应信封。|
 |`composeExtension.type`|响应类型。 支持以下类型： <br>`result`：显示搜索结果列表 <br>`auth`：要求用户进行身份验证 <br>`config`：要求用户设置消息扩展 <br>`message`：显示纯文本消息 |
-|`composeExtension.attachmentLayout`|指定附件的布局。 用于 类型 `result` 的响应。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象列表 <br>`grid`：缩略图图像的网格 |
-|`composeExtension.attachments`|有效 attachment 对象的数组。 用于 类型 `result` 的响应。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
-|`composeExtension.suggestedActions`|建议的操作。 用于 或 类型的 `auth` 响应 `config` 。 |
-|`composeExtension.text`|要显示的消息。 用于 类型 `message` 的响应。 |
+|`composeExtension.attachmentLayout`|指定附件的布局。 用于 类型 的响应 `result`。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象列表 <br>`grid`：缩略图图像的网格 |
+|`composeExtension.attachments`|有效 attachment 对象的数组。 用于 类型 的响应 `result`。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.suggestedActions`|建议的操作。 用于 或 类型的 `auth` 响应 `config`。 |
+|`composeExtension.text`|要显示的消息。 用于 类型 的响应 `message`。 |
 
 ### <a name="response-card-types-and-previews"></a>响应卡类型和预览
 
 Teams支持以下卡片类型：
 
-* [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [缩略图卡](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [主图卡](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [自适应卡](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-若要更好地了解卡片并概览卡片，请参阅 [什么是卡片](~/task-modules-and-cards/what-are-cards.md)。
+若要更好地了解卡片并概览卡片，请参阅 [卡片是什么](~/task-modules-and-cards/what-are-cards.md)。
 
 若要了解如何使用缩略图和 Hero 卡片类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-有关连接器卡的其他Office 365，请参阅使用[Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
-
+有关连接器卡的其他Office 365，请参阅使用 [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
 结果列表显示在项目 UI 中Microsoft Teams每个项目的预览。 预览以以下两种方式之一生成：
 
-* 在 `preview` 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
-* 从对象 `title` 的基本 、 `text` 和 `image` 属性 `attachment` 中提取。 只有在未指定属性时 `preview` ，才使用基本属性。
+* `preview`在 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
+* 从对象的基本 `title`、 和 `text``image` 属性中提取`attachment`。 只有在未指定属性时 `preview` ，才使用基本属性。
 
 对于 Hero 或 Thumbnail 卡片，预览卡片不支持其他操作（如按钮和点击）的调用操作除外。
 
@@ -388,9 +387,9 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="default-query"></a>默认查询
 
-如果在清单中设置为 ，则Microsoft Teams用户首次打开邮件扩展时，将发送 `initialRun` `true` 默认查询。  你的服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息时，这非常有用。
+如果在清单中`initialRun``true`设置为 ，Microsoft Teams **用户首次打开** 邮件扩展时，将发送默认查询。 你的服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或其他不依赖于用户输入的信息时，这非常有用。
 
-默认查询的结构与任何常规用户查询相同，字段设置为 并设置为 `name` `initialRun` `value` `true` ，如以下对象所示：
+默认查询的结构与任何常规用户 `name` `initialRun` `value` `true` 查询相同，字段设置为 并设置为 ，如以下对象所示：
 
 ```json
 {
@@ -415,9 +414,9 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | 说明 | .NET    | Node.js   |   
+| 示例名称           | 说明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 |Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>后续步骤

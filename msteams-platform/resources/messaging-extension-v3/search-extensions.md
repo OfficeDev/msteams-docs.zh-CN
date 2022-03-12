@@ -5,12 +5,12 @@ keywords: teams 邮件扩展邮件扩展搜索
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: ecaa841e6f8870b7e7c9284535082c4ec08112f2
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: dca01a22d4479d1f7c59689c5321483371c4aff2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443984"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453710"
 ---
 # <a name="search-with-messaging-extensions"></a>使用邮件扩展进行搜索
 
@@ -24,11 +24,11 @@ ms.locfileid: "62443984"
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="search-type-message-extensions"></a>搜索类型邮件扩展
+## <a name="search-type-message-extensions"></a>搜索类型邮件扩展
 
 对于基于搜索的邮件扩展，将 参数 `type` 设置为 `query`。 下面是一个使用单个搜索命令的清单示例。 单个邮件扩展最多可以有 10 个不同的命令与之关联。 这可包括多个搜索和多个基于操作的命令。
 
-#### <a name="complete-app-manifest-example"></a>完整的应用清单示例
+### <a name="complete-app-manifest-example"></a>完整的应用清单示例
 
 ```json
 {
@@ -85,19 +85,19 @@ ms.locfileid: "62443984"
 }
 ```
 
-### <a name="test-via-uploading"></a>通过上传进行测试
+## <a name="test-via-uploading"></a>通过上传进行测试
 
 可以通过上传应用来测试邮件扩展。
 
-若要打开消息扩展，请导航到任何聊天或频道。 在撰写 **框中** 选择" (&#8943;****) "按钮，然后选择邮件扩展。
+若要打开消息扩展，请导航到任何聊天或频道。 在撰写 **框中** 选择" (&#8943;) **** "按钮，然后选择邮件扩展。
 
 ## <a name="add-event-handlers"></a>添加事件处理程序
 
 大多数工作都涉及 `onQuery` 事件，该事件处理邮件扩展窗口中的所有交互。
 
-如果在清单中`canUpdateConfiguration``true`设置为 ，则为邮件设置启用"联系人"菜单项，并且还必须处理 和 `onQuerySettingsUrl` `onSettingsUpdate`。
+如果在清单`canUpdateConfiguration`  `true`中设置为 ，则为邮件设置启用"联系人"菜单项，并且还必须处理 和 。`onQuerySettingsUrl` `onSettingsUpdate`
 
-### <a name="handle-onquery-events"></a>处理 onQuery 事件
+## <a name="handle-onquery-events"></a>处理 onQuery 事件
 
 邮件扩展在邮件扩展 `onQuery` 窗口中发生任何事件或发送到该窗口时接收事件。
 
@@ -109,11 +109,11 @@ ms.locfileid: "62443984"
 
 其余处理程序将 `onQuery` 提示用户输入信息，显示预览卡片列表，并返回用户选择的卡片。
 
-### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>处理 onQuerySettingsUrl 和 onSettingsUpdate 事件
+## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>处理 onQuerySettingsUrl 和 onSettingsUpdate 事件
 
 和 `onQuerySettingsUrl` 事件协同工作以 **启用设置菜单项**。`onSettingsUpdate`
 
-![菜单项位置的设置屏幕截图](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![菜单项的位置设置屏幕截图](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
 的处理程序 `onQuerySettingsUrl` 返回配置页的 URL;配置页关闭后，您的处理程序 `onSettingsUpdate` 接受并保存返回的状态。 这是一个无法`onQuery`*从* 配置页面接收响应的情况。
 
@@ -135,7 +135,7 @@ ms.locfileid: "62443984"
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) 发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) 租户 ID。 |
-|`channelData.channel.id`| 如果 (通道请求，频道 ID 将) 。 |
+|`channelData.channel.id`| 如果在 (通道中提出请求，通道 ID 将) 。 |
 |`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
 |`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>该字段 `country` 包含用户的检测位置。<br>字段 `platform` 描述消息客户端平台。 <br>有关其他信息，请参阅 *非* [IRI 实体类型 — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
 
@@ -195,7 +195,7 @@ ms.locfileid: "62443984"
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>从插入撰写消息框的链接接收请求
 
-作为一 (或除了) 外部服务外，您还可以使用插入到撰写消息框中的 URL 查询您的服务并返回卡片。 在下面的屏幕截图中，用户已粘贴到邮件扩展已解析为Azure DevOps中工作项的 URL。
+作为一 (或除了) 外部服务外，您还可以使用插入到撰写消息框中的 URL 查询您的服务并返回卡片。 在下面的屏幕截图中，用户粘贴了邮件扩展已解析为Azure DevOps中工作项的 URL。
 
 ![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -268,11 +268,11 @@ ms.locfileid: "62443984"
 * `preview`在 对象内使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或 Thumbnail 卡片。
 * 从附件的基本 `title`、 `text`和 `image` 属性中提取。 只有在属性未设置 `preview` 且这些属性可用时，才使用这些属性。
 
-只需设置自适应或 Office 365 连接器卡片的预览属性，就可以在结果列表中显示该卡片的预览;如果结果已是 hero 卡或缩略图卡，则这不是必需的。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不会显示任何内容。
+只需设置其预览属性，就可以在结果列表中显示自适应或 Office 365 Connector 卡的预览;如果结果已是 hero 或 thumbnail 卡片，则这不是必需的。 如果使用预览附件，它必须是 Hero 或 Thumbnail 卡片。 如果未指定任何预览属性，则卡片预览将失败，并且不会显示任何内容。
 
 #### <a name="response-example"></a>响应示例
 
-此示例显示了一个包含两个结果的响应，混合了不同的卡片格式：Office 365 Connector 和 Adaptive。 虽然你可能想要在`preview``attachments`响应中坚持使用一个卡片格式，但它显示了集合中每个元素的 属性如何显式定义以 hero 或 thumbnail 格式的预览，如上所述。
+此示例显示了包含两个结果的响应，混合了不同的卡片格式：Office 365 Connector 和 Adaptive。 虽然你可能想要在`preview``attachments`响应中坚持使用一个卡片格式，但它显示了集合中每个元素的 属性如何显式定义以 hero 或 thumbnail 格式的预览，如上所述。
 
 ```json
 {
@@ -492,7 +492,7 @@ ms.locfileid: "62443984"
 
 你的登录体验应响应迅速且适合弹出窗口。 它应与 [JavaScript Microsoft Teams SDK](/javascript/api/overview/msteams-client) 集成，它使用消息传递。
 
-与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()`。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口，然后可以将它传递到 OAuth 登录 URL。
+与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()`。 如果你的代码执行 OAuth 流，你可以将Teams ID 传递到你的窗口中，然后可以将它传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流程
 
@@ -556,7 +556,7 @@ ms.locfileid: "62443984"
 
 ### <a name="net"></a>.NET
 
-若要使用适用于 .NET `invoke` 的 Bot Builder SDK 接收和处理查询，可以检查传入活动上的操作类型，然后使用 NuGet 程序包 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 中的帮助程序方法确定它是否是消息传递扩展活动。
+若要使用适用于 .NET `invoke` 的 Bot Builder SDK 接收和处理查询，可以检查传入活动的操作类型，然后使用 NuGet 程序包 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 中的帮助程序方法确定它是否是消息传递扩展活动。
 
 #### <a name="example-code-in-net"></a>.NET 中的示例代码
 

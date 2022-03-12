@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: Power Platform Power Apps 人员选取器深层链接虚拟代理助理共享到Teams
-ms.openlocfilehash: 0b19e5ae5a8427a77df0f4ec5fd3ea85a9abd682
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 274525b61ae95021cde41095e4bb37133e05b3e8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355956"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453689"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
@@ -40,6 +40,9 @@ ms.locfileid: "63355956"
 ## <a name="microsoft-power-platform"></a>Microsoft Power 平台
 
 Microsoft Power 平台将四种强大的 Microsoft 技术（如 Power BI、Power Apps、Power Automate 和 Power Virtual Agents）组合在一个功能强大的应用程序平台中。 这些技术使您可以在统一集成的环境中生成解决方案、自动处理、分析数据以及创建虚拟代理。
+
+>[!NOTE]
+>不得使用 Microsoft Power Platform 创建要发布到应用商店Teams应用。 Microsoft Power Platform 应用只能发布到组织的应用商店。
 
 ### <a name="power-apps"></a>Power Apps
 

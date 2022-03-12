@@ -5,12 +5,12 @@ description: 了解应用的邮件扩展搜索Microsoft Teams，通过应用清�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ba8fdf2426fbedb88d7df11cee1957deaba9b721
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356355"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452968"
 ---
 # <a name="define-messaging-extension-search-commands"></a>定义消息传递扩展搜索命令
 
@@ -42,12 +42,12 @@ ms.locfileid: "63356355"
 
 创建搜索命令的先决条件是，必须已创建邮件扩展。 若要了解如何创建邮件扩展，请参阅 [创建邮件扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
-**创建搜索命令**
+创建搜索命令：
 
 1. 从 **客户端打开 App Studio** Microsoft Teams，然后选择"**清单编辑器"** 选项卡。
-1.  如果你已在 **App Studio** 中创建应用包，请从列表中选择。 如果尚未创建应用包，请导入现有应用包。
+1. 如果你已在 **App Studio** 中创建应用包，请从列表中选择。 如果尚未创建应用包，请导入现有应用包。
 1. 导入应用包后，选择" **功能"下的** "消息 **扩展"**。 你获得一个弹出窗口来设置邮件扩展。
-1. 选择 **窗口中** 的"设置"，将消息传递扩展包括在你的应用体验中。 下图显示了邮件扩展设置页面： 
+1. 选择 **窗口中** 的"设置"，将消息传递扩展包括在你的应用体验中。 下图显示了邮件扩展设置页面：
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -55,7 +55,7 @@ ms.locfileid: "63356355"
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. **选择"** 邮件扩展 **"** 页的"命令"部分中的"添加"，以包含决定邮件扩展行为的命令。   
+1. **选择"** 邮件扩展 **"** 页的"命令"部分中的"添加"，以包含决定邮件扩展行为的命令。
 下图显示了邮件扩展的命令添加：
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -79,19 +79,19 @@ ms.locfileid: "63356355"
 | `id` | 此属性是分配给搜索命令的唯一 ID。 用户请求包括此 ID。 | 是 | 1.0 |
 | `title` | 此属性是命令名称。 此值显示在用户界面用户界面 (UI) 。 | 是 | 1.0 |
 | `description` | 此属性是一个帮助文本，用于指示此命令执行哪些操作。 此值显示在 UI 中。 | 是 | 1.0 |
-| `type` | 此属性必须为 。`query` | 不支持 | 1.4 |
-|`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 不支持 | 1.0 |
-| `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 不支持 | 1.5 |
+| `type` | 此属性必须为 。`query` | 否 | 1.4 |
+|`initialRun` | 如果此属性设置为 **true**，则指示用户一旦在 UI 中选择此命令，就应执行此命令。 | 否 | 1.0 |
+| `context` | 此属性是一个可选的值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
 您必须添加搜索参数的详细信息，该参数定义在 Teams 客户端中对用户可见的文本。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-| `parameters` | 此属性定义命令的参数静态列表。 | 不支持 | 1.0 |
+| `parameters` | 此属性定义命令的参数静态列表。 | 否 | 1.0 |
 | `parameter.name` | 此属性描述参数的名称。 这将在用户请求中发送到你的服务。 | 是 | 1.0 |
 | `parameter.description` | 此属性描述参数的用途或必须提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
-| `parameter.inputType` | 此属性设置为所需输入的类型。 可能的值包括 、`textarea``text`、、`date``number`、`time`、`toggle`。 默认值设置为 `text`。 | 不支持 | 1.4 |
+| `parameter.inputType` | 此属性设置为所需输入的类型。 可能的值包括 、`textarea``text`、、`date``number`、`time`、`toggle`。 默认值设置为 `text`。 | 否 | 1.4 |
 
 #### <a name="example"></a>示例
 
@@ -121,6 +121,7 @@ ms.locfileid: "63356355"
 ...
 }
 ```
+
 有关完整的应用清单，请参阅 [应用清单架构](~/resources/schema/manifest-schema.md)。
 
 ## <a name="code-sample"></a>代码示例
@@ -137,4 +138,3 @@ ms.locfileid: "63356355"
 
 > [!div class="nextstepaction"]
 > [响应搜索命令](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。
-

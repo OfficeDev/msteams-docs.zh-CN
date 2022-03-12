@@ -6,12 +6,12 @@ keywords: 机器人框架 apis 团队成员名单
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 7adcd3ee4619ca9b54af719da79e44d71dc166d3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: d37f748e646ecd8a91edc43cecf69bf5de64750c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518364"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453276"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams自动程序 API 更改以提取团队或聊天成员
 
@@ -26,7 +26,7 @@ ms.locfileid: "62518364"
 * 对于大型团队，性能较差且超时的可能性较大：自 2017 年初发布以来，最大Teams已显著增加。 作为 `GetMembersAsync` 或 `getMembers` 返回整个成员列表，对于大型团队，API 调用需要很长时间来返回，并且调用通常要过长，必须重试。
 * 获取单个用户的配置文件详细信息非常困难：若要获取单个用户的配置文件信息，您必须检索整个成员列表，然后搜索您想要的成员列表。 Bot Framework SDK 中提供了一个帮助程序函数，使其更简单，但效率并不高。
 
-随着组织范围的团队的引入，需要更好地使这些 API 与Office 365一致。 大型团队中使用的机器人能够检索类似于 `User.ReadBasic.All` Microsoft Graph基本个人资料信息。 租户管理员可大量控制可以在租户中使用的应用和机器人，但这些设置不同于 Microsoft Graph。
+随着组织范围的团队的引入，需要更好地使这些 API 与Office 365一致。 大型团队中使用的机器人能够检索基本个人资料信息，类似于 `User.ReadBasic.All` Microsoft Graph权限。 租户管理员可大量控制可以在租户中使用的应用和机器人，但这些设置不同于 Microsoft Graph。
 
 以下代码提供了由自动程序 API 返回Teams JSON 表示形式：
 
@@ -35,7 +35,7 @@ ms.locfileid: "62518364"
     "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
     "name": "Anon1 (Guest)",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-    "userRole": "anonymous"
+ "userRole": "anonymous"
 }, {
     "id": "29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
     "objectId": "76b0b09f-d410-48fd-993e-84da521a597b",
@@ -44,7 +44,7 @@ ms.locfileid: "62518364"
     "email": "johnp@fabrikam.com",
     "userPrincipalName": "johnp@fabrikam.com",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-    "userRole": "user"
+ "userRole": "user"
 }, {
     "id": "29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
     "objectId": "6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
@@ -53,7 +53,7 @@ ms.locfileid: "62518364"
     "email": "Rick.Stevens@fabrikam.com",
     "userPrincipalName": "rstevens@fabrikam.com",
     "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
-    "userRole": "user"
+ "userRole": "user"
 }]
 ```
 
@@ -72,4 +72,4 @@ ms.locfileid: "62518364"
     > `objectId` 更改为匹配 `aadObjectId` Bot Framework 消息 `Activity` 的对象中调用的对象。 新 API 适用于 4.8 版或更高版本的 Bot Framework SDK。 它还在 Teams SDK 扩展 Bot Framework 3.x 中提供。 同时，您可以使用 [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) 终结点。
 
 * `TeamsInfo.GetMembersAsync` 中C# `TeamsInfo.getMembers` TypeScript 或 Node.js已正式弃用。 新 API 可用后，必须更新机器人以使用它。 这也适用于这些 [API 使用的基础 REST API](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json)。
-* 到 2022 年底，聊天机器人无法主动 `userPrincipalName` 检索聊天 `email` 或团队成员的 或 属性。 机器人必须使用Graph进行检索。 `email`从 `userPrincipalName` 2022 年后期开始，不会`GetConversationPagedMembers`从新 API 返回 和 属性。 自动程序必须Graph访问令牌来检索信息。 机器人必须更轻松地获取访问令牌，并简化和简化最终用户同意过程。
+* 到 2022 年底，聊天机器人无法主动 `userPrincipalName` 检索聊天 `email` 或团队成员的 或 属性。 机器人必须使用Graph来检索它们。 `email`从 `userPrincipalName` 2022 年后期开始，不会`GetConversationPagedMembers`从新 API 返回 和 属性。 自动程序必须Graph访问令牌来检索信息。 机器人必须更轻松地获取访问令牌，并简化和简化最终用户同意过程。

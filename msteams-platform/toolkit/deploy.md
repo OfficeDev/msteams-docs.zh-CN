@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0eeda4842ad3f0443d46b5075b1520b0042130ec
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 9c15d145fb4f37073342edc9bb8d07f2fe0b53e6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768376"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452548"
 ---
 # <a name="deploy-to-the-cloud"></a>部署到云
 
@@ -26,12 +26,14 @@ Teams Toolkit帮助你将应用程序中的前端和后端代码部署或上载�
 * [安装Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)版本 v3.0.0+。
 
 > [!NOTE]
+>
 > * 确保你已Teams VS 代码打开的应用项目。
 > * 在将项目代码部署到云之前， [预配云资源](provision.md)。
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>使用Teams部署 Teams Toolkit
 
-入门指南可帮助你使用 Teams Toolkit。 可以使用以下方法部署Teams应用：
+入门指南可帮助你使用 Teams Toolkit。 可以使用以下方法部署Teams应用程序：
+
 * [将应用部署到 Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [将应用部署到SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 

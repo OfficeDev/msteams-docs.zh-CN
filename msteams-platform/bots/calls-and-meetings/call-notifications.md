@@ -5,20 +5,20 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 调用呼叫通知回调区域相关性
 ms.date: 04/02/2019
-ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216088"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453052"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 
-在[注册呼叫和会议机器人以使用](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)Microsoft Teams 时，会提到用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
+在[注册呼叫和会议机器人以使用Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)时，会提到用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
 
 ## <a name="protocol-determination"></a>协议确定
 
-传入通知以旧格式提供，以与以前的 Skype[协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 为了将呼叫转换为 Microsoft Graph协议，机器人必须确定通知是否采用旧格式并提供以下响应：
+传入通知以旧格式提供，以与以前的 Skype [协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 若要将呼叫转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式并提供以下响应：
 
 ```http
 HTTP/1.1 204 No Content
@@ -39,8 +39,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-使机器人能够使用应答 API 应答 [传入](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) 呼叫。 可以指定 以处理 `callbackUri` 此特定调用。 这适用于特定分区处理呼叫且您希望在 中嵌入此信息以路由到正确实例的有状态 `callbackUri` 实例。
-
+使机器人能够使用应答 API 应答 [传入](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) 呼叫。 可以指定 以处理 `callbackUri` 此特定调用。 这适用于特定 `callbackUri` 分区处理呼叫且您希望在 中嵌入此信息以路由到正确实例的有状态实例。
 
 下一节将提供有关通过检查张贴到 Webhook 的令牌对回调进行身份验证的详细信息。
 
@@ -69,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-OAuth 令牌具有以下值，由 Skype：
+OAuth 令牌具有以下值，并且由 Skype：
 
 ```json
 {
@@ -86,11 +85,11 @@ OAuth 令牌具有以下值，由 Skype：
 
 * `aud` 其中 audience 为为应用程序指定的应用 ID URI。
 * `tid` 是租户的租户 id Contoso.com。
-* `iss` 是令牌颁发者 `https://api.botframework.com` 。
+* `iss`是令牌颁发者。 `https://api.botframework.com`
 
 对于代码处理，webhook 必须验证令牌，确保令牌尚未过期，并检查它是否已由发布的 OpenID 配置签名。 在接受回调请求之前，还必须检查 aud 是否与应用 ID 匹配。
 
-有关详细信息，请参阅验证 [入站请求](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
+有关详细信息，请参阅 [验证入站请求](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
 
 ## <a name="next-step"></a>后续步骤
 

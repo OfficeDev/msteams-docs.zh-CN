@@ -6,32 +6,32 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 45f5d58708b3ec7e452d864c6dfb6fcc79b4a48d
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 022baf126d8c809bc4f3acb5bcc0496d688a399c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323181"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453661"
 ---
 # <a name="teamsfx-library"></a>TeamsFx 库
 
-Microsoft Teams Framework (TeamsFx) 是一个库，它封装了常见功能和集成模式 (如 Microsoft Identity) 。 你可以为零配置Microsoft Teams应用。
+Microsoft Teams Framework (TeamsFx) 是封装通用功能和集成模式的库 (如 Microsoft Identity) 。 你可以为零配置Microsoft Teams应用程序。
 
 以下是 TeamsFx 的主要功能列表：
 
-- **TeamsFx 协作**：让开发人员和项目所有者邀请其他协作者加入 TeamsFx 项目。 你可以协作调试和部署 TeamsFx 项目。
+* **TeamsFx 协作**：让开发人员和项目所有者邀请其他协作者加入 TeamsFx 项目。 你可以协作调试和部署 TeamsFx 项目。
 
-- **TeamsFx CLI**：它可Teams应用程序开发。 它还支持 CI/CD 方案，可在其中将 CLI 集成到脚本中实现自动化。
+* **TeamsFx CLI**：它可Teams应用程序开发。 它还支持 CI/CD 方案，可在其中将 CLI 集成到脚本中实现自动化。
 
-- **TeamsFx SDK**：TeamsFx 软件开发工具包 (SDK) 是主要的 TeamsFx 代码库，它封装了为开发人员定制的客户端和服务器端代码Teams身份验证。
-
+* **TeamsFx SDK**：TeamsFx 软件开发工具包 (SDK) 是主要的 TeamsFx 代码库，它封装了为开发人员定制的客户端和服务器端代码Teams身份验证。
 
 ## <a name="teamsfx-command-line-interface"></a>TeamsFx 命令行界面
 
 TeamsFx CLI 是基于文本的命令行接口，可加速Teams开发。 它旨在提供以键盘为中心的体验，同时构建Teams应用程序。 它还支持 CI/CD 方案，可在其中将 CLI 集成到脚本中实现自动化。
 
-有关更多信息，请参阅：
-* [源代码](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) 
+有关详细信息，请参阅：
+
+* [源代码](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [包 (NPM) ](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
 ## <a name="get-started"></a>入门
@@ -54,7 +54,7 @@ TeamsFx CLI 是基于文本的命令行接口，可加速Teams开发。 它旨�
 | `teamsfx resource`  | 管理当前应用程序中的资源。|
 | `teamsfx provision` | 在当前应用程序中预配云资源。|
 | `teamsfx deploy` | 部署当前应用程序。  |
-| `teamsfx package` | 将你的应用Teams包中以用于发布。|
+| `teamsfx package` | 将你的Teams生成到要发布包中。|
 | `teamsfx validate` | 验证当前应用程序。|
 | `teamsfx publish` | 将应用发布到Teams。|
 | `teamsfx preview` | 预览当前应用程序。 |
@@ -63,7 +63,7 @@ TeamsFx CLI 是基于文本的命令行接口，可加速Teams开发。 它旨�
 
 ## `teamsfx new`
 
-默认情况下，转到`teamsfx new`交互式模式，并指导你完成创建新应用程序Teams过程。 您也可以将标志设置为 ，以使用非交互 `--interactive` 模式 `false`。
+默认情况下，将`teamsfx new`进入交互式模式，并指导你完成创建新应用程序Teams过程。 您也可以将标志设置为 ，以使用非交互 `--interactive` 模式 `false`。
 
 | `teamsFx new` 命令 | 说明 |
 |:----------------  |:-------------|
@@ -74,7 +74,7 @@ TeamsFx CLI 是基于文本的命令行接口，可加速Teams开发。 它旨�
 
 | 参数 | 要求 | 说明 |
 |:---------------- |:-------------|:-------------|
-|`--app-name` | 是| 应用程序Teams的名称。|
+|`--app-name` | 是| 应用程序的名称Teams应用程序。|
 |`--interactive`| 否 | 以交互方式选择选项。 选项为 和 `true` `false` ，默认值为 `true`。|
 |`--capabilities`| 否| Choose Teams application capabilities， the multiple options are `tab`， `bot`， and `messaging-extension` `tab-spfx`. 默认值为 `tab`。|
 |`--programming-language`| 否| 项目的编程语言。 选项为 `javascript` 或 `typescript` ，默认值为 `javascript`。|
@@ -175,7 +175,7 @@ teamsfx env add staging --env dev
 |`--function-name`| 是 | 提供函数名称。 默认值为 `getuserprofile`。 |
 
 > [!NOTE]
-> 函数名称被验证为SQL需要从服务器工作负载访问。 如果项目不包含 ，请 `Azure Functions`创建一个。
+> 函数名称被验证为SQL需要从服务器工作负荷访问。 如果项目不包含 ，请 `Azure Functions`创建一个。
 
 ### <a name="parameters-for-teamsfx-resource-add-azure-apim"></a>参数 `teamsfx resource add azure-apim`
 
@@ -253,7 +253,7 @@ teamsfx env add staging --env dev
 |`--folder`| 否 | Project根目录。 默认值为 `./`。 |
 |`--browser`| 否 | 要打开 Web Teams的浏览器。 选项为 ，`chrome``edge`如`default`系统默认浏览器，值为 `default`。 |
 |`--browser-arg`| 否 | 要传递到浏览器的参数需要 --browser，可以多次使用，例如，--browser-args="--guest" |
-|`--sharepoint-site`| 否 | SharePoint网站 URL，例如SPFx`{your-tenant-name}.sharepoint.com`项目远程预览。 |
+|`--sharepoint-site`| 否 | SharePoint网站 URL，例如`{your-tenant-name}.sharepoint.com`SPFx项目远程预览。 |
 
 ### <a name="scenarios-for-teamsfx-preview"></a>应用场景 `teamsfx preview`
 
@@ -261,9 +261,9 @@ teamsfx env add staging --env dev
 
 依赖项：
 
-- Node.js
-- .NET SDK
-- Azure 函数核心工具
+* Node.js
+* .NET SDK
+* Azure 函数核心工具
 
 ```bash
 teamsfx preview --local
@@ -310,8 +310,9 @@ teamsfx config set telemetry off
 #### <a name="disable-environment-checker"></a>禁用环境检查器
 
 有三种配置可以打开或关闭Node.js、.NET SDK 和 Azure Functions 核心工具验证，并且默认情况下启用所有这些配置。 如果不需要依赖关系验证并且想要自行安装依赖项，可以将配置设置为"关闭"。 查看以下指南：
+
 * [Node.js安装指南](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
-* [.NET SDK 安装指南](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk) 
+* [.NET SDK 安装指南](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
 * [Azure Functions 核心工具安装指南](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-functions-core-tools)。
 
 若要禁用 .NET SDK 验证，可以使用以下命令：
@@ -352,7 +353,7 @@ TeamsFx CLI 提供 `teamsFx permission` 协作方案的命令。
 
 | `teamsFx permission` command | 说明 |
 |:------------------------------|-------------|
-| `teamsfx permission grant --env --email` | 为协作者的用户帐户Microsoft 365指定环境的项目授予权限。 |
+| `teamsfx permission grant --env --email` | 为协作者的Microsoft 365指定环境的项目授予权限。 |
 | `teamsfx permission status` | 显示项目的权限状态 |
 
 ### <a name="parameters-for-teamsfx-permission-grant"></a>参数 `teamsfx permission grant`
@@ -375,17 +376,17 @@ TeamsFx CLI 提供 `teamsFx permission` 协作方案的命令。
 
 #### <a name="grant-permission"></a>授予权限
 
-Project创建者和`teamsfx permission grant`协作者可以使用命令将新的协作者添加到项目中：
+Project创建者和协作者可以使用`teamsfx permission grant`命令将新的协作者添加到项目中：
 
 ```bash
 teamsfx permission grant --env dev --email user-email@user-tenant.com
 ```
 
-收到所需权限后，项目创建者和协作者可以通过 GitHub 与新协作者共享项目，并且新协作者可以拥有对 Microsoft 365 帐户的所有权限。
+收到所需权限后，项目创建者和协作者可以通过 GitHub 与新协作者共享项目，并且新协作者可以拥有 Microsoft 365 帐户的所有权限。
 
 #### <a name="show-permission-status"></a>显示权限状态
 
-Project创建者和`teamsfx permission status`协作者可以使用命令查看他的Microsoft 365特定 env 的帐户权限：
+Project创建者和`teamsfx permission status`协作者可以使用命令查看其Microsoft 365特定 env 的帐户权限：
 
 ```bash
 teamsfx permission status --env dev
@@ -403,26 +404,26 @@ teamsfx permission status --env dev --list-all-collaborators
 
 作为项目创建者：
 
-- 若要创建新的 TeamsFx 选项卡或自动程序项目，然后选择 Azure 作为主机类型：
+* 若要创建新的 TeamsFx 选项卡或自动程序项目，然后选择 Azure 作为主机类型：
 
   ```bash
   teamsfx new --interactive false --app-name newapp --host-type azure
   ```
 
-- 若要登录到 Microsoft 365 帐户和 Azure 帐户：
+* 若要登录到 Microsoft 365 帐户和 Azure 帐户：
 
   ```bash
   teamsfx account login azure
   teamsfx account login Microsoft 365
   ```
 
-- 设置项目：
+* 设置项目：
 
   ```bash
   teamsfx provision
   ```
 
-- 查看协作者：
+* 查看协作者：
 
   ```bash
   teamsfx permission status --env dev --list-all-collaborators
@@ -430,7 +431,7 @@ teamsfx permission status --env dev --list-all-collaborators
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1":::
 
-- 添加另一个帐户作为协作者。 确保添加的帐户位于同一租户下：
+* 添加另一个帐户作为协作者。 确保添加的帐户位于同一租户下：
 
   ```bash
   teamsfx permission grant --env dev --email user-email@user-tenant.com
@@ -438,36 +439,36 @@ teamsfx permission status --env dev --list-all-collaborators
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
 
-- 将项目推送到GitHub
+* 将项目推送到GitHub
 
 作为协作Project者：
 
-- 从项目复制GitHub。
-- 登录到Microsoft 365帐户。 确保添加相同的Microsoft 365帐户：
+* 从项目复制GitHub。
+* 登录到Microsoft 365帐户。 确保添加相同的Microsoft 365帐户：
 
   ```bash
   teamsfx account login Microsoft 365
   ```
 
-- 使用所有 Azure 资源的参与者权限登录到 Azure 帐户。
+* 使用所有 Azure 资源的参与者权限登录到 Azure 帐户。
 
   ```bash
   teamsfx account login azure
   ```
 
-- 检查权限状态。 你应该会发现自己拥有项目的所有者权限：
+* 检查权限状态。 你应该会发现自己拥有项目的所有者权限：
 
   ```bash
   teamsfx permission status --env dev
   ```
+
   ![权限状态](./images/permission-status.png)
 
-- 更新选项卡代码，将项目部署到远程。
-- 启动远程，项目应该可以正常工作。
+* 更新选项卡代码，将项目部署到远程。
+* 启动远程，项目应该可以正常工作。
 
 ## <a name="see-also"></a>另请参阅
 
 * [适用于 TypeScript 或 JavaScript 的 TeamsFx SDK](TeamsFx-SDK.md)
 * [在环境中管理Teams Toolkit](TeamsFx-multi-env.md)
 * [使用Teams协作处理Teams Toolkit](TeamsFx-collaboration.md)
- 

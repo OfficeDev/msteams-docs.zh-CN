@@ -1,16 +1,16 @@
 ---
 title: 获取自动程序Microsoft Teams上下文
-description: 介绍如何在 Microsoft Teams
+description: 介绍如何获取自动程序在Microsoft Teams
 keywords: teams 机器人上下文
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 94d94f3f4c9c522a0fbccb448ba371e96da6c070
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: c4f2df1168b5e429b1d5a1107cd07264e10243bc
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443991"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453143"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>获取自动程序Microsoft Teams上下文
 
@@ -21,7 +21,7 @@ ms.locfileid: "62443991"
 > [!NOTE]
 >
 > * Microsoft Teams聊天机器人 API 的最佳访问方式是通过 Bot Builder SDK 的扩展。
-> * 对于 C# 或 .NET，请下载 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet 程序包。
+> * 对于 C# 或 .NET，请下载 [Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 程序包。
 > * For Node.js development， the Bot Builder for Teams functionality is incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6.
 
 ## <a name="fetch-the-team-roster"></a>提取团队名单
@@ -173,7 +173,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js示例
 
-下面的示例使用自动程序`fetchChannelList`生成器 SDK Teams[扩展](https://www.npmjs.com/package/botbuilder-teams)中的调用Node.js：
+下面的示例使用自动`fetchChannelList`程序生成器 SDK Teams[扩展](https://www.npmjs.com/package/botbuilder-teams)中的调用Node.js：
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
@@ -196,7 +196,7 @@ connector.fetchChannelList(
 可以在自动程序的活动内获取 clientInfo。 clientInfo 包含以下属性：
 
 * Locale
-* Country
+* 国家/地区
 * 平台
 * Timezone
 

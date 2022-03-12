@@ -5,47 +5,46 @@ description: 了解如何使用应用清单或手动使用代码示例和示例�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 98926d386d55250d72815a918c3f180c4a8421de
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 1ecab904f21d84cfa329e1c390d51ebade6a8e05
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178291"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453864"
 ---
 # <a name="link-unfurling"></a>链接展开
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-本文档指导你如何使用 App studio 和手动将链接取消点击添加到应用清单。 通过链接取消链接，当特定域的 URL 粘贴到撰写邮件区域中时，你的应用可以注册以接收 `invoke` 活动。 包含粘贴到撰写邮件区域中的完整 URL，您可以使用用户可取消展开的卡片进行响应，从而 `invoke` 提供其他信息或操作。 这类似于 URL 用作搜索词的搜索命令。
+本文档指导你如何使用 App studio 和手动将链接取消点击添加到应用清单。 通过链接取消链接，当 `invoke` 特定域的 URL 粘贴到撰写邮件区域中时，你的应用可以注册以接收活动。 包含 `invoke` 粘贴到撰写邮件区域中的完整 URL，您可以使用用户可取消展开的卡片进行响应，从而提供其他信息或操作。 这类似于 URL 用作搜索词的搜索命令。
 
 > [!NOTE]
+>
 > * 目前，移动客户端不支持链接取消展开。
 > * 链接取消点击结果缓存 30 分钟。
 
-邮件Azure DevOps扩展使用链接展开查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户粘贴了邮件扩展已解析为Azure DevOps中工作项的 URL：
+邮件Azure DevOps扩展使用链接取消链接查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户已粘贴邮件扩展已解析为Azure DevOps中工作项的 URL：
 
 ![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>向应用清单添加链接取消链接
 
-若要向应用清单添加链接取消链接，请向应用清单 JSON 的 部分 `messageHandlers` `composeExtensions` 添加新数组。 可以在 App Studio 的帮助下或手动添加数组。 域列表可以包含通配符，例如 `*.example.com` 。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com` 。
+若要向应用清单添加链接取消链接，`messageHandlers``composeExtensions`请向应用清单 JSON 的 部分添加新数组。 可以在 App Studio 的帮助下或手动添加数组。 域列表可以包含通配符，例如 `*.example.com`。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com`。
 
 > [!NOTE]
-> 不要直接添加或通过通配符添加不在控件中的域。 例如， `yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。 此外，还禁止顶级域。 例如 `*.com` ，、 `*.org` 。
+> 不要直接添加或通过通配符添加不在控件中的域。 例如， `yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。 此外，还禁止顶级域。 例如，、 `*.com``*.org`。
 
 ### <a name="add-link-unfurling-using-app-studio"></a>使用 App Studio 添加链接取消链接
 
-1. 从 **客户端** 打开 App Studio Microsoft Teams，然后选择"**清单编辑器"** 选项卡。
+1. 从 **客户端打开 App Studio** Microsoft Teams，然后选择"**清单编辑器"** 选项卡。
 1. 加载应用清单。
 1. 在 **"消息扩展** "页上，在"邮件处理程序"部分添加 **要查找的** 域。 下图说明了此过程：
 
     ![App Studio 中的邮件处理程序部分](~/assets/images/link-unfurling.png)
 
-    
 ### <a name="add-link-unfurling-manually"></a>手动添加链接取消链接
 
-若要使邮件扩展能够与链接进行交互，首先必须将 `messageHandlers` 数组添加到应用清单。 以下示例说明如何手动添加链接取消链接： 
-
+若要使邮件扩展能够与链接进行交互，首先必须将 `messageHandlers` 数组添加到应用清单。 以下示例说明如何手动添加链接取消链接：
 
 ```json
 ...
@@ -69,18 +68,18 @@ ms.locfileid: "61178291"
 
 有关完整的清单示例，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a>处理 `composeExtension/queryLink` 调用
+## <a name="handle-the-composeextensionquerylink-invoke"></a>`composeExtension/queryLink`处理调用
 
 将域添加到应用程序清单后，必须更新 Web 服务代码以处理调用请求。 使用收到的 URL 搜索服务并创建卡片响应。 如果使用多张卡片进行响应，则仅使用第一个卡片响应。
 
 支持以下卡片类型：
 
-* [缩略图卡片](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [缩略图卡](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [主图卡](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [自适应卡](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-有关详细信息，请参阅操作 [类型调用](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)。
+有关详细信息，请参阅 [操作类型调用](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)。
 
 ### <a name="example"></a>示例
 
@@ -129,7 +128,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-下面是发送到 `invoke` 自动程序的示例：
+下面是发送到自动 `invoke` 程序的示例：
 
 ```json
 {
@@ -180,7 +179,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="see-also"></a>另请参阅 
+## <a name="see-also"></a>另请参阅
 
 * [卡片](~/task-modules-and-cards/what-are-cards.md)
-* [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
+* [选项卡链接取消展开和阶段视图](~/tabs/tabs-link-unfurling.md)

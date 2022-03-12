@@ -4,12 +4,12 @@ description: 下面将了解如何更新基于搜索Teams邮件扩展以在 Outl
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 743181b11d595aabdd9d7972674e843b598826af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356005"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453514"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>跨Teams扩展邮件Microsoft 365
 
@@ -21,6 +21,7 @@ ms.locfileid: "63356005"
 更新基于搜索的 Teams 邮件扩展以运行Outlook包括以下步骤：
 
 > [!div class="checklist"]
+>
 > * 更新应用清单
 > * 为自动Outlook添加频道
 > * 在应用中旁加载更新Teams
@@ -31,10 +32,10 @@ ms.locfileid: "63356005"
 
 若要完成本教程，你需要：
 
- - 开发人员Microsoft 365沙盒租户
- - 你的沙盒租户已注册 *Office 365定向版本*
- - 测试环境，Office beta 渠道安装Microsoft 365 应用版 *应用*
- - Microsoft Visual Studio（可选）Teams Toolkit (预览)  (代码) 
+* 开发人员Microsoft 365沙盒租户
+* 你的沙盒租户已注册 *Office 365定向版本*
+* 测试环境，Office beta 渠道安装Microsoft 365 应用版 *应用*
+* Microsoft Visual Studio（可选）Teams Toolkit (预览)  (代码) 
 
 > [!div class="nextstepaction"]
 > [安装先决条件](prerequisites.md)
@@ -68,6 +69,7 @@ ms.locfileid: "63356005"
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 如果使用 Teams Toolkit创建邮件扩展应用，可以使用它验证对清单文件所做的更改并识别任何错误。 打开命令调色板并`Ctrl+Shift+P`找到"Teams **：** 验证清单文件"，或者从 Teams Toolkit (的"部署"菜单中选择选项，查找 Teams 左侧的 Visual Studio Code) 。
@@ -181,11 +183,11 @@ Outlook测试Office或生产租户中，可以通过以下三种方式之一将 
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams管理中心
 
-作为Teams管理员，你可以从 上传并预安装组织租户的应用包https://admin.teams.microsoft.com/。 有关详细信息[，Upload管理中心Microsoft Teams自定义](/MicrosoftTeams/upload-custom-apps)应用。
+作为Teams管理员，你可以从管理员中心上传并预安装组织租户[Teams包](https://admin.teams.microsoft.com/)。有关详细信息[Upload管理中心Microsoft Teams自定义](/MicrosoftTeams/upload-custom-apps)应用。
 
 #### <a name="microsoft-admin-center"></a>Microsoft 管理中心
 
-作为全局管理员，你可以从 上传并预安装应用包 https://admin.microsoft.com/。 有关详细信息[，请参阅Microsoft 365 应用版应用门户中的测试](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)并部署合作伙伴部署应用。
+作为全局管理员，你可以从 Microsoft 管理员上传并预安装[应用包](https://admin.microsoft.com/)。有关详细信息[，请参阅Microsoft 365 应用版应用门户中的测试](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)并部署合作伙伴部署解决方案。
 
 ### <a name="multitenant-distribution"></a>多租户分布
 

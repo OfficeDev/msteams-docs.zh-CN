@@ -5,19 +5,19 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 发布应用商店 Office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: ec734017a807f744a4b44d7d3594638a5ec72b32
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 13325d323ec1d4d87f6cd5ff64c4a6c71552e01c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355522"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452695"
 ---
 # <a name="localize-your-app"></a>本地化应用
 
 请考虑以下因素来本地化你的Microsoft Teams应用：
 
 1. [本地化 AppSource 一览](#localize-your-appsource-listing)。
-1. [本地化应用清单中的字符串](#localize-strings-in-your-app-manifest)。 
+1. [本地化应用清单中的字符串](#localize-strings-in-your-app-manifest)。
 1. [处理来自用户的本地化文本提交](#handle-localized-text-submissions-from-your-users)。
 
 ## <a name="localize-your-appsource-listing"></a>本地化 AppSource 一览
@@ -44,7 +44,7 @@ ms.locfileid: "63355522"
 
 ## <a name="localize-strings-in-your-app-manifest"></a>本地化应用清单中的字符串
 
-你必须使用Microsoft Teams架构和`v1.5`更高版本来本地化你的应用。 为此，可以将 `$schema` manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `1.5` 文件中的属性设置为或更高，并更新属性到 (，在这种情况下) 。 
+你必须使用Microsoft Teams架构和`v1.5`更高版本来本地化你的应用。 为此，可以将 `$schema` manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `1.5` 文件中的属性设置为或更高，并更新属性到 (，在这种情况下) 。
 
 必须使用应用程序 `localizationInfo` 支持的默认语言添加 属性。 如果用户的客户端设置与任何其他语言不匹配，则默认语言将用作最终回退语言。
 
@@ -57,14 +57,14 @@ ms.locfileid: "63355522"
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "localizationInfo": {
-        "defaultLanguageTag": "en",
-        "additionalLanguages": [
-            {
-                "languageTag": "es-mx",
-                "file": "es-mx.json"
-            }
-        ]
-    }
+  "defaultLanguageTag": "en",
+  "additionalLanguages": [
+   {
+    "languageTag": "es-mx",
+    "file": "es-mx.json"
+   }
+  ]
+ }
   ...
 }
 ```
@@ -83,7 +83,6 @@ ms.locfileid: "63355522"
 }
 ```
 
-
 可以在清单中提供其他 .json 文件以及面向用户的字符串的翻译。 这些文件必须遵循本地化文件 [JSON 架构](../../resources/schema/localization-schema.md) ，并且必须添加到 `localizationInfo` 清单的 属性中。 每个文件与语言标记相关，Teams客户端使用该标记来选择适当的字符串。 语言标记采用 的形式 `<language>-<region>` ，但可以省略 `<region>` 部分，以面向支持所需语言的所有区域。
 
 Teams客户端按以下顺序应用字符串：默认语言字符串 -> 用户的语言仅字符串 -> 用户的语言 + 用户的区域字符串。
@@ -93,14 +92,14 @@ Teams客户端按以下顺序应用字符串：默认语言字符串 -> 用户�
 1. 客户端Teams"fr"字符串，然后用"en"字符串覆盖它们。
 1. 使用"en-gb"字符串覆盖"en"字符串。
 
-如果用户的语言设置为"en-ca"，则根据语言选择进行以下更改： 
+如果用户的语言设置为"en-ca"，则根据语言选择进行以下更改：
 
 1. 客户端Teams"fr"字符串，然后用"en"字符串覆盖它们。
 1. 由于未提供"en-ca"本地化，因此使用"en"本地化。
 
 如果用户的语言设置为"es-es"，则客户端Teams"fr"字符串。 由于Teams"es"或"es-es"翻译，因此客户端不会用任何语言文件替代字符串。
 
-因此，您必须在清单中提供顶级的仅语言翻译。 例如，"en"而不是"en-us"。 您必须仅为需要这些替代的少数字符串提供区域级别替代。 
+因此，您必须在清单中提供顶级的仅语言翻译。 例如，"en"而不是"en-us"。 您必须仅为需要这些替代的少数字符串提供区域级别替代。
 
 ### <a name="example-manifestjson-change"></a>manifest.json 更改示例
 

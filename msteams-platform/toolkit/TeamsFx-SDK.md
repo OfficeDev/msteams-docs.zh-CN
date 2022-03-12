@@ -6,31 +6,37 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 1e78827d4105eefb112bef40d059804a94050f2d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453619"
 ---
-
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>适用于 TypeScript 或 JavaScript 的 TeamsFx SDK
 
 TeamsFx 旨在减少实现云资源的标识和访问任务，实现零配置的单行语句。
 
 使用库可：
 
-- 以类似方式访问客户端和服务器环境中的核心功能。
-- 以简化的方式编写用户身份验证代码。
+* 以类似方式访问客户端和服务器环境中的核心功能。
+* 以简化的方式编写用户身份验证代码。
 
-## <a name="get-started"></a>入门
+## <a name="get-started"></a>开始行动
 
-TeamsFx SDK 使用 TeamsFx 工具包或 CLI 在基架项目中预配置。
+TeamsFx SDK 是使用 TeamsFx 工具包或 CLI 在基架项目中预配置的。
 有关详细信息，请参阅Teams[应用项目](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)。
 
 ### <a name="prerequisites"></a>先决条件
 
-- Node.js版本 `10.x.x` 或更高版本。
-- 如果项目已安装相关`botbuilder`[包作为](https://github.com/Microsoft/botbuilder-js#packages)依赖项，请确保它们的版本相同且版本为 `>= 4.9.3`。  ([问题 - 所有 BOTBUILDER 程序包](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548) 的版本应) 
+* Node.js版本 `10.x.x` 或更高版本。
+* 如果项目已安装相关`botbuilder`[包作为](https://github.com/Microsoft/botbuilder-js#packages)依赖项，请确保它们的版本相同且版本为 `>= 4.9.3`。  ([问题 - 所有 BOTBUILDER](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548) 程序包的版本应) 
 
 有关详细信息，请参阅：
-* [源代码](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-* [包 (NPM) ](https://www.npmjs.com/package/@microsoft/teamsfx) 
-* [API 参考文档](https://aka.ms/teamsfx-sdk-help) 
+
+* [源代码](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
+* [包 (NPM) ](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [API 参考文档](https://aka.ms/teamsfx-sdk-help)
 * [示例](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>`@microsoft/teamsfx`安装程序包
@@ -45,7 +51,7 @@ npm install @microsoft/teamsfx
 
 若要创建 Graph 客户端对象以访问 Microsoft Graph API，将需要凭据进行身份验证。 SDK 提供了几个凭据类，可供选择以满足各种要求。 您需要先加载配置，然后再使用任何凭据。
 
-- 在浏览器环境中，需要显式传递配置参数。 基架项目React提供了使用的环境变量。
+* 在浏览器环境中，需要显式传递配置参数。 基架项目React提供了使用的环境变量。
 
 ```ts
 loadConfiguration({
@@ -56,7 +62,7 @@ loadConfiguration({
 });
 ```
 
-- 在 NodeJS 环境（如 Azure Function）中，只需调用 `loadConfiguration`。 默认情况下，它将从环境变量加载。
+* 在 NodeJS 环境（如 Azure Function）中，只需调用 `loadConfiguration`。 默认情况下，它将从环境变量加载。
 
 ```ts
 loadConfiguration();
@@ -77,12 +83,13 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+
 > [!NOTE]
 > 可以在浏览器应用程序中使用此凭据类，例如Teams Tab 应用。
 
 #### <a name="using-microsoft-365-tenant-credential"></a>使用Microsoft 365租户凭据
 
-Microsoft 365租户凭据不需要与应用Teams交互。 你可以将 Microsoft Graph为应用程序。
+Microsoft 365租户凭据无需与应用Teams交互。 你可以将 Microsoft Graph应用程序。
 
 使用以下代码段：
 

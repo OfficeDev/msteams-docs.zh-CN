@@ -2,12 +2,12 @@
 title: 设置开发环境以跨Teams扩展Microsoft 365
 description: 下面是跨应用程序扩展 Teams 应用的先决条件Microsoft 365
 ms.date: 02/11/2022
-ms.openlocfilehash: eec44e149e81b420c507b0580896d2c5a4a99cc2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1f9b893c185d7cbae249ccc77de2a52cbdcb409a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355998"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452737"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>设置开发环境以跨Teams扩展Microsoft 365
 
@@ -19,6 +19,7 @@ ms.locfileid: "63355998"
 设置开发环境：
 
 > [!div class="checklist"]
+>
 > * [获取Microsoft 365开发人员 (沙) 租户并启用旁加载](#prepare-a-developer-tenant-for-testing)
 > * [在目标Microsoft 365中Office 365 *租户*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [配置帐户以访问预览版本的 Outlook 和 Office](#install-office-apps-in-your-test-environment)
@@ -48,7 +49,7 @@ ms.locfileid: "63355998"
     1. **选定用户的目标发布**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 管理中心已选择定向发布选项的&quot;发布首选项&quot;菜单":::
-    
+
 1. 选择“**保存**”。
 
 有关发布选项Office 365，请参阅帮助中的设置 [标准](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release)或Microsoft 365 管理中心 *选项*。
@@ -71,7 +72,7 @@ ms.locfileid: "63355998"
 1. 打开 **文件** > **Office Account** >  **关于Outlook**。  
    如果内部版本号为 **14416** 或更高版本，并且频道为 *Beta 渠道*，则Microsoft 365 beta 渠道版本。
 1. 在右上角，打开"即将 **推出"** 切换。
-    
+
     :::image type="content" source="images/outlook-coming-soon.png" alt-text="Outlook 中的&quot;即将推出&quot;切换Outlook":::
 
 > [!NOTE]
@@ -108,5 +109,5 @@ ms.locfileid: "63355998"
 
 ## <a name="next-steps"></a>后续步骤
 
-- [为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)
-- [为 Outlook 启用 Teams 消息传递扩展](extend-m365-teams-message-extension.md)
+* [为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)
+* [为 Outlook 启用 Teams 消息传递扩展](extend-m365-teams-message-extension.md)

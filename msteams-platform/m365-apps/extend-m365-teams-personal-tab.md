@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: e914793fcd0d7bbaa2442f282224c4ca94d99a85
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356301"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453717"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨Teams扩展个人选项卡Microsoft 365
 
@@ -22,14 +22,16 @@ ms.locfileid: "63356301"
 更新个人应用以在 Outlook Office 主页中运行涉及以下步骤：
 
 > [!div class="checklist"]
+>
 > * 更新应用清单
-> * 更新 TeamsJS SDK 引用 
+> * 更新 TeamsJS SDK 引用
 > * 修改内容安全策略标头
 > * 更新 SSO Microsoft Azure Active Directory (Azure AD) 单一登录 (应用) 
 
 测试应用需要以下步骤：
 
 > [!div class="checklist"]
+>
 > * 在定向Microsoft 365中注册 *Office 365租户*
 > * 配置帐户以访问预览版本的 Outlook 和 Office 应用
 > * 将更新后的应用旁加载到Teams
@@ -56,7 +58,6 @@ ms.locfileid: "63356301"
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List sample (Works in Teams， Outlook and Office) in Teams Toolkit":::
 
-
 ## <a name="update-the-app-manifest"></a>更新应用清单
 
 你需要使用开发人员预览[](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `Microsoft 365 DevPreview` Teams清单架构和清单版本来使 Teams 个人选项卡在 Office 和 Outlook 中运行。
@@ -78,6 +79,7 @@ ms.locfileid: "63356301"
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 如果你使用Teams Toolkit创建个人应用，则还可以使用它验证对清单文件所做的更改并识别任何错误。 打开命令调色板并`Ctrl+Shift+P`找到"Teams **：** 验证清单文件"，或者从 Teams Toolkit (的"部署"菜单中选择选项，查找 Teams 左侧的 Visual Studio Code) 。
@@ -96,6 +98,7 @@ ms.locfileid: "63356301"
 完成后，该实用工具会`package.json`使用 TeamsJS SDK 预览版 (`@microsoft/teams-js@2.0.0-beta.1` 或更高版本) 更新`*.js/.ts``*.jsx/.tsx`你的文件，并且你的 和 文件将更新为：
 
 > [!div class="checklist"]
+>
 > * `package.json` 对 TeamsJS SDK 预览版的引用
 > * 导入 TeamsJS SDK 预览版语句
 > * 对 TeamsJS SDK [预览版的函数](using-teams-client-sdk-preview.md#apis-organized-into-capabilities)、枚举和接口调用
@@ -117,7 +120,7 @@ ms.locfileid: "63356301"
 |Microsoft 365主机| 帧-上级权限|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Office | `*.office.com` |
+| 办公室 | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>更新Azure AD SSO 的应用注册
@@ -126,7 +129,7 @@ Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式与 Of
 
 1. 使用沙[Microsoft Azure](https://portal.azure.com)帐户登录门户。
 1. 打开应用 **注册** 边栏选项卡。
-1. 选择个人选项卡应用程序的名称以打开其应用注册。 
+1. 选择个人选项卡应用程序的名称以打开其应用注册。
 1. 选择 **"管理 ("***下的"公开* API) "。
 
 :::image type="content" source="images/azure-app-registration-clients.png" alt-text="从 Azure 门户上的 *应用注册* 边栏选项卡授权客户端 ID":::
@@ -179,7 +182,7 @@ Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式与 Of
 
 1. 启动Outlook租户帐户登录。
 1. 单击边栏上的 (**)** 省略号..."。 旁加载的应用标题将显示在已安装的应用中。
-1.  单击应用图标以在应用中启动Outlook。
+1. 单击应用图标以在应用中启动Outlook。
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="单击桌面客户端的 (栏上的&quot;更多应用) 选项的省略号，Outlook查看已安装的个人选项卡":::
 
@@ -187,13 +190,13 @@ Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式与 Of
 
 若要在应用中查看Outlook 网页版：
 
-1. 导航到 https://outlook.office.com ，然后使用你的开发人员租户帐户登录。
+1. 导航到 [Outlook 网页版](https://outlook.office.com)，然后使用你的开发人员租户帐户登录。
 1. 单击边栏上的 (**)** 省略号..."。 旁加载的应用标题将显示在已安装的应用中。
 1. 单击应用图标以启动和预览在 Outlook 网页版 中运行的应用。
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="单击屏幕侧栏 (&quot;更多应用&quot;) 选项的省略号 outlook.com 查看已安装的个人选项卡":::
 
-### <a name="office"></a>Office
+### <a name="office"></a>办公室
 
 若要查看你的应用在桌面Office Windows运行：
 
@@ -227,11 +230,11 @@ Outlook测试Office或生产租户中，可以通过以下三种方式之一将 
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams管理中心
 
-作为Teams管理员，你可以从 上传并预安装组织租户的应用包https://admin.teams.microsoft.com/。 有关详细信息[，Upload管理中心Microsoft Teams自定义](/MicrosoftTeams/upload-custom-apps)应用。
+作为Teams管理员，你可以从管理员中心上传并预安装组织租户[Teams包](https://admin.teams.microsoft.com/)。有关详细信息[Upload管理中心Microsoft Teams自定义](/MicrosoftTeams/upload-custom-apps)应用。
 
 #### <a name="microsoft-admin-center"></a>Microsoft 管理中心
 
-作为全局管理员，你可以从 上传并预安装应用包 https://admin.microsoft.com/。 有关详细信息[，请参阅Microsoft 365 应用版应用门户中的测试](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)并部署合作伙伴部署应用。
+作为全局管理员，你可以从 Microsoft 管理员上传并预安装[应用包](https://admin.microsoft.com/)。有关详细信息[，请参阅Microsoft 365 应用版应用门户中的测试](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)并部署合作伙伴部署解决方案。
 
 ### <a name="multitenant-distribution"></a>多租户分布
 

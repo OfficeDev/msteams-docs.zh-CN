@@ -5,12 +5,12 @@ description: 确定应用的用例如何在 Teams 体验、应用功能和功能
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a14a906cf0f3e0ea5cc2c9671b6c972f59329542
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398902"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452828"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>将用例映射到 Teams 应用功能
 
@@ -18,9 +18,9 @@ ms.locfileid: "63398902"
 
 可以根据以下情况映射用例:
 
-- 在外部系统中共享和协作处理项目。
-- 启动工作流并向用户发送通知。
-- 使用社交平台、对话机器人和组合多个功能。
+* 在外部系统中共享和协作处理项目。
+* 启动工作流并向用户发送通知。
+* 使用社交平台、对话机器人和组合多个功能。
 
 ## <a name="common-use-cases-mapped-to-teams-capabilities"></a>映射到 Teams 功能的常见用例
 
@@ -92,10 +92,10 @@ Microsoft Teams 平台提供各种功能。 每项功能都是一种与用户交
 
 例如：
 
-- 使用 **选项卡** 功能显示任务模块、请求设备权限、显示<`iframe`>内容或使用深层链接。
-- 使用 **消息传递扩展** 功能发送卡片、展开链接或对消息执行操作。
+* 使用 **选项卡** 功能显示任务模块、请求设备权限、显示<`iframe`>内容或使用深层链接。
+* 使用 **消息传递扩展** 功能发送卡片、展开链接或对消息执行操作。
 
 ## <a name="see-also"></a>另请参阅
 
-- [计划清单](../design/planning-checklist.md)
-- [构建第一个 Microsoft Teams 应用](../../get-started/get-started-overview.md)
+* [计划清单](../design/planning-checklist.md)
+* [构建第一个 Microsoft Teams 应用](../../get-started/get-started-overview.md)

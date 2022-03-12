@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams连接器 kronos
 ms.author: lajanuar
-ms.openlocfilehash: 21ea28e3b5d53226a2ab50ac22db31fef561596a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 84e16f26dbe8597089e601e0d7eadca12a4a4446
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355739"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453101"
 ---
 # <a name="production-ready-shifts-connectors"></a>生产准备就绪的排班连接器  
 
@@ -36,7 +36,7 @@ Teams Shifts 员工 (WFM) 连接器是生产就绪型、开放源代码和社区
 
 * **无缝集成：** WFM 解决方案与 Teams Shifts 之间的集成允许一线工作人员使用 Teams Shifts 应用查看或管理其日程安排和班次时间，并使用 Teams 中提供的所有其他丰富协作功能，而无需将上下文切换到其他应用。  
 
-**在"打开"视图中打开Teams**
+打开工作台中的Teams：
 
 以下图像Teams班次视图：
 

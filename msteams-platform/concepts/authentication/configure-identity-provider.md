@@ -4,12 +4,12 @@ description: '介绍如何配置标识提供程序，并重点关注Microsoft Az
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 身份验证Azure AD oauth 标识提供程序
-ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ee99bf10f517eb928be0231a1188d2d5db74709d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356411"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452716"
 ---
 # <a name="configure-identity-providers"></a>配置标识提供程序
 
@@ -35,7 +35,7 @@ ms.locfileid: "63356411"
 
 * **选项卡中的外部 OAuth 提供程序：** 有关详细信息，请参阅使用 [外部 OAuth 提供程序](../../tabs/how-to/authentication/auth-oauth-provider.md)
 
-## <a name="see-also"></a>另请参阅 
+## <a name="see-also"></a>另请参阅
 
 * [在自动程序Microsoft Teams用户](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
 * [对选项卡的单一登录 (SSO) 支持](../../tabs/how-to/authentication/auth-aad-sso.md)

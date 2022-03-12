@@ -1,20 +1,20 @@
 ---
 title: 在本地测试和调试机器人
 author: surbhigupta
-description: 了解如何在 Teams 环境中通过旁加载、使用自动程序仿真器在 Teams 外部和直接与机器人交谈来在本地使用 IDE 测试和调试机器人。
+description: 了解如何在 Teams 环境中通过旁加载、在 Teams 外部使用 Bot 仿真器，以及直接与机器人交谈，在本地使用 IDE 测试和调试机器人。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d9ddbb3aa4f93b8981fbba03d879a77f4175e81e
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: db4b9143dfbaa8dbbb3a5aa965836d151ad8cd46
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608459"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453367"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
 
-测试自动程序时，需要考虑希望自动程序运行的上下文，以及可能添加到自动程序（需要特定于 Microsoft Teams）的任何功能。 确保你选择用于测试机器人的方法与它的功能一致。
+测试自动程序时，需要考虑希望自动程序运行的上下文，以及可能添加到自动程序（需要特定于 Microsoft Teams 的数据）的任何功能。 确保你选择用于测试机器人的方法与它的功能一致。
 
 ## <a name="test-by-uploading-to-teams"></a>通过上传到网站进行测试Teams
 
@@ -27,11 +27,11 @@ ms.locfileid: "61608459"
 
 > [!NOTE]
 > 若要更改清单并重新上传应用，请删除自动 [程序，然后再](#delete-a-bot-from-teams) 上传已更改的应用包。
-> 若要测试自动程序，请启用 Teams。 请参阅 [启用旁加载](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
+> 若要测试自动程序，请启用自动程序中的旁Teams。 请参阅 [启用旁加载](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
 
 ## <a name="debug-your-bot-locally"></a>在本地调试机器人
 
-如果你在开发期间在本地托管机器人，则需要使用 [类似 ngrok](https://ngrok.com/) 的隧道服务来测试机器人。 下载并安装 ngrok 后，添加到您的路径，然后运行 `ngrok` 以下命令以启动隧道服务：
+如果你在开发期间在本地托管机器人，则需要使用 [类似 ngrok](https://ngrok.com/) 的隧道服务来测试机器人。 下载并安装 ngrok 后，添加到 `ngrok` 您的路径，然后运行以下命令以启动隧道服务：
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -42,15 +42,15 @@ ngrok http <port> -host-header=localhost:<port>
 > [!NOTE]
 > 如果关闭命令窗口并重新启动，将生成一个新 URL，并且你需要更新自动程序终结点地址才能使用它。
 
-## <a name="test-your-bot-without-uploading-to-teams"></a>在不上载到自动程序的情况下测试Teams
+## <a name="test-your-bot-without-uploading-to-teams"></a>测试自动程序，而无需上传到Teams
 
-有时，可能需要测试自动程序，而无需将其安装为 Teams。 我们提供两种测试自动程序的方法。 在不将其安装为应用的情况下测试自动程序对于确保自动程序可用并做出响应非常有用，但它不允许测试可能添加到自动程序的全部 Microsoft Teams 功能。 如果你需要完全测试自动程序，请参阅 [通过上传 进行测试](#test-by-uploading-to-teams)。
+有时，可能需要测试自动程序，而无需将其安装为 Teams。 我们提供两种测试自动程序的方法。 在未将其安装为应用的情况下测试机器人对于确保自动程序可用并做出响应非常有用，但是，它不允许你测试可能已添加到自动程序的全部 Microsoft Teams 功能。 如果你需要完全测试自动程序，请参阅 [通过上传进行测试](#test-by-uploading-to-teams)。
 
 ### <a name="use-the-bot-emulator"></a>使用自动程序Emulator
 
-the Bot Framework Emulator is a desktop application that permits bot developers to test and debug their bots local or remotely. 仿真器可帮助你与机器人聊天并检查机器人发送和接收的消息。 这可用于验证自动程序是否可用并做出响应。 但是，仿真器不允许测试已添加到自动程序的任何 Teams 特定功能，来自自动程序的响应也不能准确地直观地表示它们在 Teams 中的呈现方式。 如果你需要测试其中任一内容，最好上传 [自动程序](#test-by-uploading-to-teams)。
+此Bot Framework Emulator是一个桌面应用程序，允许机器人开发人员在本地或远程测试和调试其机器人。 仿真器可帮助你与机器人聊天并检查机器人发送和接收的消息。 这可用于验证自动程序是否可用并做出响应。 但是，仿真器不允许你测试已添加到自动程序的任何 Teams 特定功能，来自自动程序的响应也不能准确地直观地表示它们在 Teams 中的呈现方式。 如果你需要测试其中任一内容，最好上传 [自动程序](#test-by-uploading-to-teams)。
 
-有关详细信息，请参阅上[的完整说明Bot Framework Emulator。](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true)
+有关详细信息，请参阅有关[Bot Framework Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true)。
 
 ### <a name="talk-to-your-bot-directly-by-id"></a>直接通过 ID 与机器人交谈
 
@@ -59,30 +59,30 @@ the Bot Framework Emulator is a desktop application that permits bot developers 
 
 您还可以使用自动程序 ID 启动对话。 通过这些方法之一添加自动程序后，将无法在频道对话中解决它，并且你无法利用其他 Microsoft Teams 应用功能，如选项卡或消息传递扩展。 可以通过以下方法之一启动对话：
 
-* 在机器人 [的"](https://dev.botframework.com/bots)自动程序仪表板"页上的"频道 **"** 下，选择"添加到 **Microsoft Teams"。** Microsoft Teams聊天机器人启动个人聊天。
+* 在机器人 [的"](https://dev.botframework.com/bots)自动程序仪表板"页上的"频道"下 **，选择"****添加到Microsoft Teams**"。 Microsoft Teams聊天机器人启动个人聊天。
 
 * 直接在应用中引用自动程序Microsoft Teams：
-   1. 在 [自动程序"](https://dev.botframework.com/bots)自动程序仪表板"页上的"详细信息 **"** 下，复制自动程序 Microsoft **应用 ID。**
+   1. 在 [自动程序"](https://dev.botframework.com/bots) 自动程序仪表板"页上的"详细信息 **"** 下，复制自动程序 Microsoft **应用 ID** 。
   
       ![获取机器人的 AppID](~/assets/images/bots_appid_botframework.png)
   
-   2. 打开Microsoft Teams，在"聊天 **"** 窗格中，选择"**添加聊天"** 图标。 在 **"To："** 中，粘贴机器人的 Microsoft 应用 ID。
+   2. 打开Microsoft Teams，在"聊天 **"** 窗格中，选择"**添加聊天"** 图标。 在 **"To：**"中，粘贴机器人的 Microsoft 应用 ID。
   
       ![上传机器人](~/assets/images/bots_uploading.png)
 
       应用 ID 必须解析为自动程序名称。
 
    3. 选择自动程序并发送消息以启动对话。
-      或者，你可以将机器人的应用 ID 粘贴到搜索框左上方的搜索框中Microsoft Teams。 在搜索结果页面中，导航到"人员" **选项卡以查看** 自动程序并开始与它聊天。
+      或者，你可以将机器人的应用 ID 粘贴到搜索框左上方的搜索框中Microsoft Teams。 在搜索结果页面中，导航到"人员 **"选项卡以查看** 自动程序并开始与它聊天。
 
 > [!Note]
-> 若要Microsoft Teams自动程序的应用 ID，请启用[应用的旁加载](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。      
+> 若要Microsoft Teams自动程序的应用 ID，请启用[应用的旁加载](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
 
-在将机器人添加到团队时，自动程序将接收事件，而对象 `conversationUpdate` 中未包含团队 `channelData` 信息。
+在将机器人添加到 `conversationUpdate` 团队时，自动程序将接收事件，而对象中未包含团队 `channelData` 信息。
 
 ## <a name="block-a-bot-in-personal-chat"></a>在个人聊天中阻止聊天机器人
 
-用户可以选择阻止机器人发送个人聊天消息。 他们可通过右键单击聊天频道中的机器人并选择"阻止机器人对话" **来切换此模式**。 这意味着，自动程序将继续发送消息，但是，用户不会收到这些消息。
+用户可以选择阻止机器人发送个人聊天消息。 他们可通过右键单击聊天频道中的机器人并选择"阻止机器人对话" **来切换此功能**。 这意味着，自动程序将继续发送消息，但是，用户不会收到这些消息。
 
 ![阻止机器人](~/assets/images/bots/botdisable.png)
 
@@ -90,13 +90,13 @@ the Bot Framework Emulator is a desktop application that permits bot developers 
 
 用户可以通过在团队视图中选择机器人列表上的"回收站"图标来删除机器人。 这仅从该团队的使用中删除自动程序，单个用户仍可在个人上下文中交互。 用户无法禁用或删除个人上下文中的聊天机器人。
 
-## <a name="disable-a-bot-in-teams"></a>禁用聊天机器人Teams
+## <a name="disable-a-bot-in-teams"></a>禁用自动程序Teams
 
 若要阻止机器人接收消息，**请转到自动程序** 仪表板并编辑Microsoft Teams通道。 清除"**启用Microsoft Teams** 选项。 这将阻止用户与机器人交互，但是，它仍然可发现，并且用户仍将能够将其添加到Teams。
 
 ## <a name="delete-a-bot-from-teams"></a>从用户中删除Teams
 
-若要从自动程序完全删除Teams，**请转到自动程序** 仪表板并编辑Microsoft Teams通道。 选择底部的 **"删除** "按钮。 这将阻止用户发现、添加机器人并与其交互。 这不会将机器人从其他用户的 Teams 实例中删除，但是，它同时会停止为它们运行。
+若要从自动程序完全Teams，**请转到自动程序** 仪表板并编辑Microsoft Teams通道。 选择底部的 **"删除** "按钮。 这将阻止用户发现、添加机器人并与其交互。 这不会将机器人从其他用户的 Teams实例中删除，但会停止为它们运行。
 
 ## <a name="see-also"></a>另请参阅
 

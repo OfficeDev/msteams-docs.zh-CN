@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: cfbfc1cb1796bcdcf1946c87756e3fa2285eff69
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356012"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453577"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
@@ -18,15 +18,15 @@ ms.locfileid: "63356012"
 
 ## <a name="analyze-app-usage"></a>分析应用使用情况
 
-可以在合作伙伴中心的"应用使用情况Teams[跟踪](/office/dev/store/teams-apps-usage)你的应用使用情况。 指标包括每月、每日和每周活动用户，以及保留和强度图表，可让你跟踪改动和使用频率。
+可以在合作伙伴中心的"应用使用情况Teams[跟踪](/office/dev/store/teams-apps-usage)你的应用使用情况。 指标包括每月、每日、每周活动用户，以及可跟踪改动率和使用频率的保留期和强度图表。
 
-新发布的应用的数据需要大约一周时间显示在报告中。
+新发布的应用的数据大约需要一周时间才会显示在报表中。
 
 ## <a name="publish-updates-to-your-app"></a>将更新发布到应用
 
 > [!NOTE]
 > Teams 应用商店已演变:
-> 
+>
 > 以前，通过选择应用磁贴上的省略号来复制链接。 通过更新Teams应用商店体验，你将从应用的详细信息选项卡访问相同的内容。 此更新将于 2022 年 3 (年 3) 通用版本发布。
 
 你可以向应用提交更改 (如新功能，甚至是合作伙伴中心) 元数据。 这些更改需要新的审阅过程。

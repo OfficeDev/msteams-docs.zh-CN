@@ -4,18 +4,18 @@ description: 了解将通用操作与代码示例一同用于自适应卡片的�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: ce715749d1b9fb5e1cff6457eebd3cac9674c58c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081049"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453248"
 ---
 # <a name="sequential-workflows"></a>顺序工作流
 
 自适应卡片现在支持在用户操作上更新的顺序工作流。 使用顺序工作流，自适应卡片针对用户操作进行更新，用户可以在一系列需要用户输入的卡片中前进。 `Action.Execute` 支持顺序工作流，这允许机器人开发人员返回自适应卡片以响应用户操作。
 
-例如，假设自助餐厅想要为团队或频道下订单。 通过用户对各种商品（如食物和食物）的选择，可以 `Action.Execute` 按顺序进行记录。 用户还可以根据自动程序开发人员定义的逻辑来回浏览卡片。 <br/>
+例如，假设自助餐厅想要为团队或频道下订单。 通过 `Action.Execute` 用户对各种商品（如食物和食物）的选择，可以按顺序进行记录。 用户还可以根据自动程序开发人员定义的逻辑来回浏览卡片。 <br/>
 
 下图显示了顺序工作流：
 
@@ -26,7 +26,7 @@ ms.locfileid: "62081049"
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="适应机器人状态":::
 
 > [!NOTE]
-> 若要跨设备同步用户的进度，请使用自适应卡片 `refresh` JSON 中的 属性。
+> 若要跨设备同步用户的进度，请使用自适应 `refresh` 卡片 JSON 中的 属性。
 
 ## <a name="sequential-workflow-for-adaptive-cards"></a>自适应卡片的顺序工作流
 
@@ -75,7 +75,7 @@ ms.locfileid: "62081049"
 }
 ```
 
-`Action.Execute`调用自动程序可以返回自适应卡片作为响应，这将替换 Teams。
+`Action.Execute`调用机器人可以返回自适应卡片作为响应，这将替换现有Teams。
 以下示例提供机器人在确认食物或食物选择或订单时返回内容：
 
 * 在从卡片 1 选择食物时，机器人可以返回一张卡，用于选择卡 2。
@@ -125,15 +125,14 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## <a name="code-samples"></a>代码示例
 
-|示例名称 | 说明 | .NETCore | Node.js |
+|示例名称 | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Teams机器人 | 创建使用自适应卡片接受食物订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
 | 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新的自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
-
 ## <a name="see-also"></a>另请参阅
 
-* [用户中的自适应卡片Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [自适应卡片在Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
 * [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

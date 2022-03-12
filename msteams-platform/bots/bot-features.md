@@ -5,12 +5,12 @@ description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 9aef0786d643c80879700ed6c2d4b05ce7c2e09a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398657"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453885"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -44,6 +44,9 @@ Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于�
 ## <a name="bots-with-power-virtual-agents"></a>具有自动程序Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)是在 Microsoft Power 平台和 Bot Framework 上构建的聊天机器人服务。 Power Virtual Agent 开发过程使用引导式无代码和图形界面方法，使团队成员能够轻松创建和维护智能虚拟代理。 在 Power Virtual Agents 门户[创建聊天](https://powervirtualagents.microsoft.com)机器人后，可以轻松地[将其与](how-to/add-power-virtual-agents-bot-to-teams.md)Teams。 有关入门信息，请参阅Power Virtual Agents[文档](/power-virtual-agents)。
+
+>[!NOTE]
+>不得使用 Microsoft Power Platform 创建要发布到应用商店Teams应用。 Microsoft Power Platform 应用只能发布到组织的应用商店。
 
 ## <a name="bots-with-webhooks-and-connectors"></a>具有 Webhook 和连接器的机器人
 
@@ -199,7 +202,7 @@ this.onMessage(async (context, next) => {
 
 ## <a name="see-also"></a>另请参阅
 
-* [通话和会议智能机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [智能机器人对话](~/bots/how-to/conversations/conversation-basics.md)
 * [自动程序命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
 * [聊天机器人的身份验证Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)

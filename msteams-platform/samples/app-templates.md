@@ -6,12 +6,12 @@ keywords: Microsoft Teams模板示例演示
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e5821894793ae99ae559ebedba068331a48b1aed
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 961ad0ff22a528dc1267023d4f4ff288ba7202ca
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398741"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453136"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -111,7 +111,8 @@ Icebreaker是一[Microsoft Teams](../bots/what-are-bots.md)聊天机器人，通
 应用模板代码示例是一组适用于Microsoft Teams功能的示例应用。
 
 > [!NOTE]
-> Microsoft 不会主动管理源代码。 完整的源代码是开源的，您可以浏览、分叉和修改源代码以满足您的特定要求。
+> * Microsoft 不会主动管理源代码。 完整的源代码是开源的，您可以浏览、分叉和修改源代码以满足您的特定要求。
+> * 不得使用 Microsoft Power Platform 创建要发布到应用商店Teams应用。 Microsoft Power Platform 应用只能发布到组织的应用商店。
 
 下表介绍了应用程序模板代码示例：  
 

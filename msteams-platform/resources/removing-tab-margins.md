@@ -6,22 +6,22 @@ keywords: 删除边距填充的选项卡
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7260c0baf6a33b69988d07cb6d0aef7f90b6c62f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888074"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452835"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
 本文档介绍如何在应用中删除所有选项卡Microsoft Teams增强应用生成体验。 这是 2021 年 Microsoft Teams中引入的增强功能。
-可以通过删除所有选项卡周围的边距Teams看起来更本地的应用。 具有已删除边距的选项卡与Microsoft Teams [UI 工具包设计一致](~/tabs/design/tabs.md)。 大多数应用都体验无边距的增强外观。
+可以通过删除所有选项卡周围的边距Teams看起来更原始的应用。 具有已删除边距的选项卡与Microsoft Teams [UI 工具包设计一致](~/tabs/design/tabs.md)。 大多数应用都体验无边距的增强外观。
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="选项卡上没有边距" border="false":::
 
 > [!NOTE]
-> 此功能不适用于移动客户端，因为移动客户端中查看的选项卡没有边距。 
+> 此功能不适用于移动客户端，因为移动客户端中查看的选项卡没有边距。
 
 ## <a name="guidelines"></a>准则
 
@@ -31,7 +31,7 @@ ms.locfileid: "60888074"
 
 **应用部件版式（如标题栏或任务栏）是否适合触摸我们设计的边缘？**
 
-是的，这没有问题，Teams这种设计。 它帮助应用感觉本机。
+是的，这没有问题，Teams此类设计。 它帮助应用感觉本机。
 
 **对于文本、徽标和图像等应用内容，触摸设计的左右边缘是否正常？**
 
@@ -44,8 +44,9 @@ ms.locfileid: "60888074"
 * 底部：0px
 
 > [!IMPORTANT]
+>
 > * 删除所有选项卡的边距：个人选项卡、 (组) 聊天选项卡、会议选项卡和频道选项卡。
-> * 制表位删除更改适用于所有选项卡。 无法选择加入或选择退出更改。 
+> * 制表位删除更改适用于所有选项卡。 无法选择加入或选择退出更改。
 > * 选项卡边距的变化可能会影响依赖标签的选项卡Microsoft Teams UI 周围的边距。
 
 ## <a name="see-also"></a>另请参阅

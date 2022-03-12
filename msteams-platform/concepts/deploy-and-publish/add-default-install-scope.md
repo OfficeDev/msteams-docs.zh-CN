@@ -4,16 +4,16 @@ description: 介绍如何为共享范围指定应用的默认安装选项和默�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: ad59f6645e0d302e973647f9ff63b2898362f6ee
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: a6857e549c688bd7078aeaceae4b9f5a885ae2c3
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889088"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453206"
 ---
-# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>配置应用的默认安装Microsoft Teams选项
+# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>为应用配置默认安装Microsoft Teams选项
 
-应用通常支持 Teams 中的多个方案，但你在设计时可能记住了特定的范围和功能。 例如，如果你的应用主要用于团队或频道，你可以确保用户在应用商店中看到的首个安装选项是添加到 **团队**。
+应用通常支持 Teams 中的多个方案，但你在设计时可能记住了特定的范围和功能。 例如，如果你的应用主要用于团队或频道使用，你可以确保用户在应用商店中看到的首个安装选项是添加到 **团队**。
 
 :::row:::
    :::column span="2":::
@@ -31,17 +31,17 @@ ms.locfileid: "60889088"
 
 为应用配置默认安装范围。 一次只能设置一个范围。
 
-**在应用清单中配置默认安装作用域**
+若要在应用清单中配置默认安装作用域，请运行以下代码：
 
 1. 打开应用清单并添加 `defaultInstallScope` 属性。
-2. 将默认安装范围值设置为 、 `personal` `team` `groupchat` 或 `meetings` 。
+2. 将默认安装范围值设置为 、 `personal`、 `team`、 `groupchat`或 `meetings`。
 
     ```json
     "defaultInstallScope": "meetings",
     ```
 
 > [!NOTE]
-> 有关详细信息，请参阅应用 [清单架构](~/resources/schema/manifest-schema.md)。
+> 有关详细信息，请参阅 [应用清单架构](~/resources/schema/manifest-schema.md)。
 
 ## <a name="configure-the-default-capability-for-shared-scopes"></a>配置共享范围的默认功能
 
@@ -50,14 +50,14 @@ ms.locfileid: "60889088"
 > [!NOTE]
 > `defaultGroupCapability` 提供将添加到团队、群聊或会议的默认功能。 选择选项卡、机器人或连接器作为应用的默认功能，但必须确保你在应用定义中提供了所选功能。
 
-**在应用清单中配置详细信息**
+在应用清单中配置详细信息：
 
 1. 打开应用清单，并添加 `defaultGroupCapability` 属性。
-2. 设置 、 `team` `groupchat` 或 的值 `meetings` 。
-3. 对于选定的组功能，可用的组功能是、 、 `bot` `tab` 或 `connector` 。 
+2. 设置 、 `team`或 `groupchat`的值 `meetings`。
+3. 对于选定的组功能，可用的组功能是、 `bot`、 `tab`或 `connector`。
 
     > [!NOTE]
-    > 只能为选定的组功能选择一个默认功能 、 `bot` `tab` 或 `connector` 。
+    > 只能为选定的组功能选择一个默认`bot``tab`功能 、 或 `connector` 。
 
     ```json
     "defaultGroupCapability": {
@@ -68,7 +68,7 @@ ms.locfileid: "60889088"
     ```
 
 > [!NOTE]
-> 有关详细信息，请参阅应用 [清单架构](~/resources/schema/manifest-schema.md)。
+> 有关详细信息，请参阅 [应用清单架构](~/resources/schema/manifest-schema.md)。
 
 ## <a name="next-step"></a>后续步骤
 

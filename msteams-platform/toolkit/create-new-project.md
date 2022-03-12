@@ -6,20 +6,25 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: bac67621e14d12b61b04eac3ec24c90cb3057a79
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452555"
 ---
-
 # <a name="create-new-teams-project-using-teams-toolkit"></a>使用Teams新建项目Teams Toolkit
 
-若要使用 Teams新建Teams Toolkit，请选择"新建Teams **应用** 项目"或"从 **示例开始"**。
+若要使用 Teams新建Teams Toolkit，请选择"新建Teams应用项目"**或**"从 **示例开始"**。
 
 ## <a name="create-new-project"></a>新建项目
 
-以下指南可帮助你使用Teams新建一个Teams Toolkit：
+以下指南可帮助你使用Teams创建一个新的Teams Toolkit：
 
-- [创建新的"Teams选项卡" (React) ](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
-- [创建新的自动Teams程序应用](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
-- [创建新的邮件扩展应用](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
-- [创建新的"Teams选项卡" (SharePoint 框架) ](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+* [创建新的"Teams选项卡" (React) ](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
+* [创建新的自动Teams程序应用](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+* [创建新的邮件扩展应用](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
+* [创建新的"Teams选项卡" (SharePoint 框架) ](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
 
 ## <a name="create-from-samples"></a>从示例创建
 
@@ -28,10 +33,10 @@ ms.date: 11/29/2021
  1. 从 **Teams Toolkit** 打开Microsoft Visual Studio代码。
  1. 选择 **树视图中** 的"开发"部分。
  1. 选择 **"查看示例"**。 示例库如下图所示：
-   
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view samples.png" alt-text="示例":::
 
-你可以浏览和下载示例，并在本地或远程运行应用，以在 web Teams预览。 按照每个示例的说明操作，或浏览示例的源代码，GitHub视图以访问示例的开放源代码存储库。
+你可以浏览和下载示例，并在本地或远程运行应用，以在 Teams 中预览。 按照每个示例的说明操作，或浏览示例的源代码，GitHub视图访问示例的开放源代码存储库。
 
 ## <a name="see-also"></a>另请参阅
 

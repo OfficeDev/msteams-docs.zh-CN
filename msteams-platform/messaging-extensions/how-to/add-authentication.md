@@ -5,12 +5,12 @@ description: 了解如何使用代码示例和示例向消息传递扩展添加�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 932f62a086cc87d0d1662a4f27d1b6bdd199b8af
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768445"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452940"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>向邮件扩展添加身份验证
 
@@ -28,7 +28,7 @@ ms.locfileid: "61768445"
 },
 ```
 
-和 `id` `aadObjectId` 值保证经过身份验证的用户Teams。 它们用作在服务中查找凭据或任何缓存状态的密钥。 此外，每个请求Azure Active Directory租户 ID，用于标识用户的组织。 如果适用，请求还包含发起请求的团队 ID 和频道 ID。
+`aadObjectId`和 `id` 值保证经过身份验证的用户Teams。 它们用作在服务中查找凭据或任何缓存状态的密钥。 此外，每个请求Azure Active Directory租户 ID，用于标识用户的组织。 如果适用，请求还包含发起请求的团队 ID 和频道 ID。
 
 ## <a name="authentication"></a>身份验证
 
@@ -36,16 +36,16 @@ ms.locfileid: "61768445"
 
 1. 用户发出查询或默认查询将自动发送到您的服务。
 1. 你的服务通过检查用户 ID 来检查用户Teams身份验证。
-1. 如果用户未经过身份验证，请发送回包含建议操作（包括身份验证 `auth` `openUrl` URL）的响应。
+1. 如果用户未经过身份验证，`auth``openUrl`请发送回包含建议操作（包括身份验证 URL）的响应。
 1. 客户端Microsoft Teams给定身份验证 URL 启动托管网页的对话框。
-1. 用户登录后，应关闭窗口，并将身份验证代码发送到 Teams客户端。
+1. 用户登录后，应关闭窗口，并将身份验证代码发送到 Teams 客户端。
 1. 然后Teams客户端向服务重新提供查询，其中包括步骤 5 中传递的身份验证代码。
 
 服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码匹配。 这可确保恶意用户不会尝试欺骗或破坏登录流。 这实际上"关闭循环"以完成安全身份验证序列。
 
 ### <a name="respond-with-a-sign-in-action"></a>通过登录操作响应
 
-若要提示未经身份验证的用户登录，请通过包含身份验证 URL 的类型的建议操作 `openUrl` 进行响应。
+若要提示未经身份验证 `openUrl` 的用户登录，请通过包含身份验证 URL 的类型的建议操作进行响应。
 
 #### <a name="response-example-for-a-sign-in-action"></a>登录操作的响应示例
 
@@ -67,14 +67,15 @@ ms.locfileid: "61768445"
 ```
 
 > [!NOTE]
-> * 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅[清单架构中的 validDomains。](~/resources/schema/manifest-schema.md#validdomains)
-> * 可以通过包括宽度和高度的查询字符串参数定义身份验证弹出窗口的大小 `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` 。
+>
+> * 若要在弹出窗口中托管登录Teams，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅 [清单架构中的 validDomains](~/resources/schema/manifest-schema.md#validdomains) 。
+> * 可以通过包括宽度和高度的查询字符串参数定义身份验证弹出窗口的大小 `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",`。
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流程
 
-登录体验必须响应迅速且适合弹出窗口。 它应与使用消息传递[Microsoft Teams JavaScript](/javascript/api/overview/msteams-client)客户端 SDK 集成。
+登录体验必须响应迅速且适合弹出窗口。 它应与 [JavaScript Microsoft Teams SDK](/javascript/api/overview/msteams-client) 集成，它使用消息传递。
 
-与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()` 。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
+与在 Microsoft Teams 内运行的其他嵌入体验一样，窗口内的代码需要先调用 `microsoftTeams.initialize()`。 如果你的代码执行 OAuth 流，你可以将Teams用户 ID 传递到你的窗口中，然后将它传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流程
 
@@ -135,9 +136,10 @@ ms.locfileid: "61768445"
 ```
 
 ## <a name="code-sample"></a>代码示例
+
 |**示例名称** | **说明** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|邮件扩展 - 身份验证和配置 | 具有配置页面、接受搜索请求和在用户登录后返回结果的消息扩展。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|邮件扩展 - 身份验证和配置 | 具有配置页面、接受搜索请求和在用户登录后返回结果的消息扩展。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
 
 ## <a name="see-also"></a>另请参阅
 

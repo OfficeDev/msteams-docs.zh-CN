@@ -1,18 +1,18 @@
 ---
-title: 自适应卡片中的 Typeahead 搜索
+title: 在自适应卡片中键入提前搜索
 author: Rajeshwari-v
 description: 介绍自适应卡片中具有 Input.ChoiceSet 控件的类型标题搜索
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
-ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
+ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2022
-ms.locfileid: "61722180"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453829"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>自适应卡片中的 Typeahead 搜索
+# <a name="typeahead-search-in-adaptive-cards"></a>在自适应卡片中键入提前搜索
 
 自适应卡片中的 Typeahead 搜索功能在组件上提供了增强的搜索 `input.choiceset` 体验。 它提供在搜索字段中输入文本的选项列表。 你可以将 typeahead 搜索与自适应卡片合并以搜索和选择数据。
 
@@ -51,7 +51,7 @@ John 是一名在 Xbox 零售商店工作的应用商店员工。 应用商店�
 **在自适应卡片中使用 typeahead 搜索**
 
 1. 用户 A 打开应用商店自动程序。
-1. 用户 A 向自动程序发送一条有关 **新客户请求的命令**。 机器人使用具有组件的自适应卡片 `Input.ChoiceSet` 进行响应。
+1. 用户 A 向机器人发送命令，以请求 **新客户请求**。 机器人使用具有组件的自适应卡片进行 `Input.ChoiceSet` 响应。
 1. 用户 A 使用 typeahead 搜索，并基于客户的选择选择信息。
 
 下图展示了 typeahead 搜索的移动体验：
@@ -72,16 +72,16 @@ John 是一名在 Xbox 零售商店工作的应用商店员工。 应用商店�
 * 复选框，例如多个选择。
 
 > [!NOTE]
-> `Input.ChoiceSet`控件基于样式和 `isMultiSelect` 属性。
+> 控件 `Input.ChoiceSet` 基于样式和 `isMultiSelect` 属性。
 
 ### <a name="schema-properties"></a>架构属性
 
-以下属性是架构中新增的用于启用 [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) typeahead 搜索的属性：
+以下属性是架构中新增 [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) 的用于启用 typeahead 搜索的属性：
 
 | 属性| 类型 | 必需 | 说明 |
 |-----------|------|----------|-------------|
-| style | 精简版 <br/> Expanded <br/> Filtered | 不支持 | 将筛选的样式添加到静态类型前支持的验证列表中。|
-| choices.data | Data.Query | 不支持 | 通过从后端获取一组远程选项，在用户键入时启用动态类型前。 |
+| style | 精简版 <br/> Expanded <br/> Filtered | 否 | 将筛选的样式添加到静态类型前支持的验证列表中。|
+| choices.data | Data.Query | 否 | 通过从后端获取一组远程选项，在用户键入时启用动态类型前。 |
 
 ### <a name="dataquery-definition"></a>Data.Query 定义
 
@@ -89,13 +89,13 @@ John 是一名在 Xbox 零售商店工作的应用商店员工。 应用商店�
 |-----------|------|----------|-------------|
 | 类型 | Data.Query | 是 | 指定它是 Data.Query 对象。|
 | dataset | 字符串 | 是 | 指定动态提取的数据类型。 |
-| value | 字符串 | 否 | 使用用户提供给 的输入填充对机器人的调用请求 `ChoiceSet` 。 |
-| count | 数字 | 不支持 | 填充对机器人的调用请求，以指定必须返回的元素数。 如果用户要发送不同的金额，机器人将忽略它。 | 
-| skip | 数字 | 不支持 | 填充对机器人的调用请求，以指示用户希望对列表进行分页并向前移动。 |
+| value | 字符串 | 否 | 使用用户提供给 的输入填充对机器人的调用请求 `ChoiceSet`。 |
+| count | 数字 | 否 | 填充对机器人的调用请求，以指定必须返回的元素数。 如果用户要发送不同的金额，机器人将忽略它。 |
+| skip | 数字 | 否 | 填充对机器人的调用请求，以指示用户希望对列表进行分页并向前移动。 |
 
 ### <a name="example"></a>示例
 
-包含静态和动态 typeahead 搜索的示例有效负载&选择选项，如下所示：
+示例有效负载包含静态和动态 typeahead 搜索，其中包含&多选选项，如下所示：
 
 ```json
 {
@@ -328,25 +328,25 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 {
     if (turnContext.Activity.Name == "application/search")
     {
-    var packages = new[] {
-            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
-            new { title = "Fluent UI Library", value = "FluentUI" }};
+ var packages = new[] {
+   new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+   new { title = "Fluent UI Library", value = "FluentUI" }};
 
-    var searchResponseData = new
-    {
-        type = "application/vnd.microsoft.search.searchResponse",
-        value = new
-        {
-        results = packages
-        }
-    };
-    var jsonString = JsonConvert.SerializeObject(searchResponseData);
-    JObject jsonData = JObject.Parse(jsonString);
-    return new InvokeResponse()
-    {
-        Status = 200,
-        Body = jsonData
-    };
+ var searchResponseData = new
+ {
+     type = "application/vnd.microsoft.search.searchResponse",
+     value = new
+     {
+  results = packages
+     }
+ };
+ var jsonString = JsonConvert.SerializeObject(searchResponseData);
+ JObject jsonData = JObject.Parse(jsonString);
+ return new InvokeResponse()
+ {
+     Status = 200,
+     Body = jsonData
+ };
     }
 
     return null;
@@ -354,7 +354,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ```
 
 #### <a name="nodejs"></a>[Node.js](#tab/nodejs)
- 
+
 ```nodejs
   async onInvokeActivity(context) {
     if (context._activity.name == 'application/search') {
@@ -384,7 +384,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
   }
 ```
 
-####  <a name="json"></a>[JSON](#tab/json)
+#### <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -411,9 +411,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | 说明 | C# | Node.js |
+|**示例名称** | **说明** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| 在自适应卡片上键入提前搜索控件 | 该示例显示了自适应卡片中静态和动态类型前搜索控件的功能。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| 自适应卡片上的 Typeahead 搜索控件 | 该示例显示了自适应卡片中的静态和动态类型搜索控件的功能。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 

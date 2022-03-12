@@ -12,17 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: e9094868f72fa96df8d0301932b7032192eb2652
-  ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+  ms.openlocfilehash: a6366181f81942d12a63fb5be6b0bb505e85ff73
+  ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/08/2022
-  ms.locfileid: "63356110"
+  ms.lasthandoff: 03/12/2022
+  ms.locfileid: "63453290"
 landingContent:
 - title: 探索最新
   linkLists:
   - linkListType: concept
     links:
+    - text: 将 LmS 和 Microsoft 365插件
+      url: ~/resources/moodle-overview.md
     - text: 自适应卡片溢出菜单
       url: ~/task-modules-and-cards/cards/cards-format.md
     - text: 术语表
@@ -33,8 +35,6 @@ landingContent:
       url: ~/concepts/app-fundamentals-overview.md
     - text: 应用清单架构版本 1.12
       url: ~/resources/schema/manifest-schema.md
-    - text: 共享会议阶段的交互模式
-      url: ~/apps-in-teams-meetings/API-references.md
     - text: 针对盈利应用的测试预览
       url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     - text: 应用内购买流，用于盈利应用
@@ -55,7 +55,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: 浏览适用于应用程序的低代码Teams
       url: ~/samples/teams-low-code-solutions.md
-- title: 入门
+- title: 开始行动
   linkLists:
   - linkListType: get-started
     links:
@@ -87,7 +87,7 @@ landingContent:
       url: https://github.com/OfficeDev/Microsoft-Teams-Samples
   - linkListType: whats-new
     links:
-    - text: 最近更新
+    - text: 新增功能
       url: ../msteams-platform/whats-new.md
 - title: 生成应用功能
   linkLists:

@@ -4,17 +4,16 @@ description: Microsoft Teams 开发人员文档术语表
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发人员定义
-ms.openlocfilehash: af5d713076419c016b65983e4876f52803d8d1fe
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398705"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452744"
 ---
 # <a name="glossary"></a>术语表
 
 Teams 开发人员文档中使用的常用术语和定义。
-
 
 ## <a name="a"></a>A
 

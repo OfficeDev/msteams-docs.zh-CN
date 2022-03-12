@@ -1,17 +1,17 @@
 ---
 title: SameSite cookie 属性
 author: laujan
-description: 了解 Cookie 类型，包括 SameSite Cookie、其属性、Teams 选项卡、任务模块和消息传递扩展中的含义，以及 cookie 在 Teams
+description: 了解 Cookie 的类型，包括 SameSite cookie、其属性、Teams 选项卡、任务模块和消息传递扩展中的含义，以及 cookie 在 Teams
 keywords: cookie 属性 samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 3c587056821eff3c24358a1dfbf6ecc63351a3c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 8a1d8cff46612091749ba6801f42c79a3d997c97
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518476"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452583"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite cookie 属性
 
@@ -40,10 +40,10 @@ Google Chrome 版本 51 引入了 `SetCookie SameSite` 规范作为可选属性�
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite Cookie 属性：2020 版本
 
 Chrome 80 于 2020 年 2 月发布，引入了新的 Cookie 值，并默认实施 Cookie 策略。 将三个值传递到更新的 SameSite 属性： **Strict**、 **Lax** 或 **None**。 如果未指定，则 Cookie SameSite 属性默认采用 `SameSite=Lax` 值。
- 
+
 SameSite Cookie 属性如下所示：
 
-|设置 | 强制 | 值 |属性规范 |
+|Setting | 强制 | 值 |属性规范 |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie 仅在第一 **方上下文中和** HTTP GET 请求中自动发送。 SameSite Cookie 在跨站点子请求（例如，对加载图像或 iframe 的调用）上被预扣。 当用户从外部网站导航到 URL 时发送，例如，通过以下链接发送。| **默认** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |浏览器仅发送第一方上下文请求的 Cookie。 这些是来自设置 Cookie 的网站的请求。 如果请求的 URL 与当前位置的 URL 不同，则不发送任何用 属性标记 `Strict` 的 Cookie。| 可选 |`Set-Cookie: key=value; SameSite=Strict`|
@@ -60,7 +60,7 @@ SameSite Cookie 属性如下所示：
 
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>选项卡、任务模块和消息传递扩展
 
-* Teams选项卡用于`<iframes>`嵌入在顶级或第一方上下文中查看的内容。
+* Teams选项卡`<iframes>`用于嵌入在顶级或第一方上下文中查看的内容。
 * 任务模块允许你在 Teams 应用程序中创建模式弹出体验。 与选项卡类似，模式窗口在当前页面内打开。
 * 消息扩展允许您将扩充的内容插入到来自外部资源的聊天消息中。
 
@@ -81,6 +81,7 @@ SameSite Cookie 属性如下所示：
 Android WebView 是允许 Android 应用显示 Web 内容的 Chrome 系统组件。 虽然新限制是默认限制，但从 Chrome 80 开始，不会立即在 WebView 上强制执行这些限制。 将来将应用这些策略。 为了做好准备，Android 允许本机应用直接通过 [CookieManager API 设置 Cookie](https://developer.android.com/reference/android/webkit/CookieManager)。
 
 > [!NOTE]
+>
 > * 必须在适当时将第一方 Cookie 声明为 `SameSite=Lax` 或 `SameSite=Strict`。
 > * 必须将第三方 Cookie 声明为 `SameSite=None; Secure`。
 

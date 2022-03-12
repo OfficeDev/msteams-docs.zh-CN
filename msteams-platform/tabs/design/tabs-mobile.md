@@ -4,12 +4,12 @@ description: 了解如何在移动电话上Microsoft Teams选项卡、其身份�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 应用移动选项卡通道组身份验证分发
-ms.openlocfilehash: eb0bc5b0415f1879619cc704a77501406bcea397
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 520cad9d295b4f63ca437db5f69abc3ba9464faa
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356369"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452590"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
 
@@ -25,6 +25,7 @@ ms.locfileid: "63356369"
 | **频道和组选项卡** | 选项卡使用 在 Teams 客户端中打开`contentUrl`。 | 选项卡使用 在 Teams 外部的浏览器中打开`websiteUrl`。 |
 
 > [!NOTE]
+>
 > * 提交到 [AppSource](https://appsource.microsoft.com) 以在 Teams应用会自动评估移动响应能力。 对于任何查询，请通过联系 teamsubm@microsoft.com。
 > * 对于未通过 AppSource 分发的所有应用，默认情况下，选项卡在 Teams 客户端的应用内 Webview 中打开，并且不需要单独的审批流程。
 > * 应用的默认行为仅在通过应用商店分发时Teams适用。 默认情况下，所有选项卡在客户端中Teams打开。

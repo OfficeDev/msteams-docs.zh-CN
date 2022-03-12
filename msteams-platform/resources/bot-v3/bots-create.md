@@ -5,49 +5,51 @@ ms.topic: how-to
 keywords: 团队机器人创建
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 6c95055b6e053c4319810acb8923ea3f3178f3b9
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 6898f6bf30c41cd5e373db323a0e5ce742129aa8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821407"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453150"
 ---
 # <a name="create-a-bot"></a>创建机器人
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-使用 Microsoft Bot Framework 创建的所有聊天机器人均已配置并准备好在 Microsoft Teams。
+使用 Microsoft Bot Framework 创建的所有聊天机器人都经过配置，并已准备好在 Microsoft Teams。
 
 有关详细信息，请参阅 [Bot Framework 文档，](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true) 了解机器人的一般信息。
 
 ## <a name="create-a-bot-for-microsoft-teams"></a>为 Microsoft Teams 创建自动程序
 
-**Teams App Studio** 是一个可帮助创建自动程序的工具，以及引用机器人的应用包。 它还包含 React 控件库和卡的可配置示例。 有关详细信息，请参阅 App [Studio Teams入门](~/concepts/build-and-test/app-studio-overview.md)。 下面的步骤假定你正在手动配置自动程序，而不是在 **App Studio Teams程序**：
+**Teams App Studio** 是一个可帮助创建自动程序的工具，以及引用机器人的应用包。 它还包含 React 控件库和卡的可配置示例。 有关详细信息，请参阅 App [Studio Teams入门](~/concepts/build-and-test/app-studio-overview.md)。 下面的步骤假定你正在手动配置机器人，而不是在 **App Studio Teams程序**：
 
-1. 使用此链接创建机器人： https://dev.botframework.com/bots/new。 **创建自动程序后，请确保从特色频道列表中将 Microsoft Teams 添加为频道。** 如果你已经创建应用程序包/清单，请随意重复使用你生成的任何 Microsoft 应用 ID。
+1. 使用 Bot [Framework 创建自动程序](https://dev.botframework.com/bots/new)。 **创建自动程序后，请确保从特色频道列表中将 Microsoft Teams 添加为频道。** 如果你已经创建应用程序包/清单，请随意重复使用你生成的任何 Microsoft 应用 ID。
 
    ![Bot Framework 注册页面](~/assets/images/bots/bfregister.png)
 
 > [!NOTE]
-> 如果你不希望在 Azure 中创建自动程序， **则必须** 使用此链接创建新自动程序： https://dev.botframework.com/bots/new。 如果你改为单击 **在 Bot** Framework 门户创建自动程序，你将 [改为](#bots-and-microsoft-azure)在自动程序Microsoft Azure。
+> 如果不想在 Azure 中创建自动程序，则必须使用此链接创建新的自动程序：[Bot Framework](https://dev.botframework.com/bots/new)。 如果改为单击 **Bot** Framework 门户中的"创建自动程序"，你将改为 [Microsoft Azure聊天机器人](#bots-and-microsoft-azure)。
 
 2. 使用 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet程序包、[Bot Framework SDK](https://github.com/microsoft/botframework-sdk) 或 [Bot Connector API 生成自动程序](/bot-framework/rest-api/bot-framework-rest-connector-api-reference)。
 
 3. 使用自动程序测试[Bot Framework Emulator](/bot-framework/debug-bots-emulator)。
 
-4. 将机器人部署到云服务，[例如Microsoft Azure。](https://azure.microsoft.com/) 或者，在本地运行你的应用，并使用隧道服务（如 [ngrok](https://ngrok.com) ）为自动 https:// 公开一个 https:// 终结点，例如 `https://45az0eb1.ngrok.io/api/messages`。
+4. 将机器人部署到云服务，[例如Microsoft Azure。](https://azure.microsoft.com/) 或者，在本地运行你的应用并使用隧道服务（如 [ngrok](https://ngrok.com) ）为自动 https:// 公开 https:// 终结点，例如 `https://45az0eb1.ngrok.io/api/messages`。
 
 > [!NOTE]
+>
 > ## <a name="bots-and-microsoft-azure"></a>机器人和Microsoft Azure
+>
 > 截至 2017 年 12 月，Bot Framework 门户已针对在 Microsoft Azure 中注册自动程序进行了优化。 以下是几个注意事项：
 >
 > * 在 Azure 中注册的自动程序的 Microsoft Teams 频道是免费的。 通过自动Teams发送的消息不会计入自动程序使用的已用邮件。
-> * 虽然无需使用 Azure 即可创建新的 [Bot Framework](https://dev.botframework.com/bots/new) 自动程序，但必须使用该 URL (，该 URL https://dev.botframework.com/bots/new)不再在 Bot Framework 门户中公开。
-> * 在 [Bot Framework](https://dev.botframework.com/bots) 中编辑自动程序列表中的现有自动程序的属性（如其"消息终结点"）时，首次开发自动程序时很常见，尤其是在使用 [ngrok](https://ngrok.com) 时，你将看到"迁移状态"列和一个蓝色"迁移"按钮，该按钮将进入 Microsoft Azure 门户。 不要单击"迁移"按钮，除非你希望这样做;相反，单击自动程序的名称，你可以编辑其属性：</br>
+> * 虽然无需使用 Azure 即可创建新的 [Bot Framework](https://dev.botframework.com/bots/new) 自动程序，但必须使用新建的 [Bot Framework](https://dev.botframework.com/bots/new) 自动程序，它不再在 Bot Framework 门户中公开。
+> * 在 [Bot Framework](https://dev.botframework.com/bots) 中编辑自动程序列表中的现有自动程序的属性（如其"消息终结点"）时，首次开发自动程序时很常见，尤其是在使用 [ngrok](https://ngrok.com) 时，你将看到"迁移状态"列和将进入 Microsoft Azure 门户的蓝色"迁移"按钮。 不要单击"迁移"按钮，除非你希望这样做;相反，单击自动程序的名称，你可以编辑其属性：</br>
    ![编辑自动程序属性](~/assets/images/bots/bf-migrate-bot-to-azure.png)
-> * 如果使用自动程序Microsoft Azure自动程序，则无需托管在Microsoft Azure。
+> * 如果使用 Microsoft Azure 注册自动程序，则无需在 Microsoft Azure 上托管自动程序代码。
 > * 如果使用 Azure 门户注册自动程序，则必须拥有Microsoft Azure帐户。 你可以[免费创建一个](https://azure.microsoft.com/free/)。 若要创建信用卡时验证身份，必须提供信用卡，但不会收费;始终可以自由地创建自动程序并使用Microsoft Teams。
-> * 现在，你可以直接使用 App Studio 在应用中注册/更新应用和Microsoft Teams。 你只需使用 Azure 门户添加或配置其他 Bot Framework 频道，如 Direct Line、Web Chat、Skype 和 Facebook Messenger。
+> * 现在，你可以直接在应用中使用 App Studio 注册/更新应用和Microsoft Teams。 你只需使用 Azure 门户添加或配置其他 Bot Framework 频道，如 Direct Line、Web Chat、Skype 和 Facebook Messenger。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,16 +1,21 @@
 ---
-title: TeamsFX 中有多个Teams Toolkit
+title: TeamsFX Teams Toolkit
 author: MuyangAmigo
 description: 关于 TeamsFX 多环境
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
+ms.openlocfilehash: 27172617db35126fb086d8691486e86c2946f0bd
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453584"
 ---
-
 # <a name="manage-multiple-environments-in-teams-toolkit"></a>在环境中管理Teams Toolkit
 
- Teams Toolkit提供了一种简单方法，用于创建和管理多个环境、预配项目以及将项目部署到 Teams App 的目标环境。
+ Teams Toolkit提供了一种简单方法，用于创建和管理多个环境、预配项目以及将项目部署到 Teams 应用。
 
  对于多个环境，可以执行下列操作：
 
@@ -29,42 +34,42 @@ ms.date: 11/29/2021
 
 创建新项目后，默认情况下Teams Toolkit创建：
 
-- 一 `local` 个表示本地计算机环境配置的环境。
-- 一 `dev` 个表示远程或云环境配置的环境。
+* 一 `local` 个表示本地计算机环境配置的环境。
+* 一 `dev` 个表示远程或云环境配置的环境。
 
 > [!NOTE]
 > 每个项目只能有一个环境 `local` ，但有多个远程环境。
 
-若要添加另一个远程环境，请选择Teams栏中的"新建环境"图标，选择"环境"部分下的"创建新环境"，如下图所示：
+若要添加另一个远程环境，请选择边栏中的"Teams"图标，选择"环境"部分下的"创建新环境"，如下图所示：
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="创建":::
 
 > [!NOTE]
 > 如果您具有多个现有环境，则需要选择一个现有环境来创建相同的环境。 该命令将所选现有环境`config.<newEnv>.json``azure.parameters.<newEnv>.json`的文件内容和文件内容复制到要创建的新环境中。
 
-## <a name="select-target-environment"></a>选择目标环境 
+## <a name="select-target-environment"></a>选择目标环境
 
 您可以选择所有与环境相关的操作的目标环境。 当你具有多个远程环境时，工具包会提示并请求目标环境，如下图所示：
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加 env":::
 
-## <a name="project-folder-structure"></a>Project文件夹结构 
+## <a name="project-folder-structure"></a>Project文件夹结构
 
-创建项目后，可以查看项目资源管理器区域中的项目文件夹和Visual Studio Code。 除了自定义代码之外，某些Teams Toolkit还用于维护应用配置、状态和模板。 以下列表提供了文件并概述了它们与多个环境的关系。
+创建项目后，可以查看项目资源管理器区域中的项目文件夹和Visual Studio Code。 除了自定义代码之外，某些文件Teams Toolkit用于维护应用配置、状态和模板。 以下列表提供了文件并概述了它们与多个环境的关系。
 
-- `.fx/configs`：配置用户可为应用自定义Teams文件。
-  - `config.<envName>.json`：每个环境的配置文件。
-  - `azure.parameters.<envName>.json`：Azure bicep 预配的按环境参数文件。
-  - `projectSettings.json`：全局项目设置，适用于所有环境。
-  - `localSettings.json`：本地调试配置文件。
-- `.fx/states`：设置由组生成Toolkit。
-  - `state.<envName>.json`：按环境设置输出文件。
-  - `<env>.userdata`：预配输出的针对每个环境的敏感用户数据。
-- `templates`
-  - `appPackage`：应用清单模板文件。
-  - `azure`：Bicep 模板文件。
+* `.fx/configs`：配置用户可为应用自定义Teams文件。
+  * `config.<envName>.json`：每个环境的配置文件。
+  * `azure.parameters.<envName>.json`：Azure bicep 预配的按环境参数文件。
+  * `projectSettings.json`：全局项目设置，适用于所有环境。
+  * `localSettings.json`：本地调试配置文件。
+* `.fx/states`：设置由组生成Toolkit。
+  * `state.<envName>.json`：按环境设置输出文件。
+  * `<env>.userdata`：预配输出的针对每个环境的敏感用户数据。
+* `templates`
+  * `appPackage`：应用清单模板文件。
+  * `azure`：Bicep 模板文件。
 
-## <a name="customize-the-provision"></a>自定义预配 
+## <a name="customize-the-provision"></a>自定义预配
 
 Teams Toolkit可以更改配置文件和模板文件，以自定义每个环境中的资源设置。
 
@@ -73,10 +78,10 @@ Teams Toolkit可以更改配置文件和模板文件，以自定义每个环境�
 | 应用场景 | 位置| 说明 |
 | --- | --- | --- |
 | 自定义 Azure 资源 | <ul> <li>下的 Bicep 文件 `templates/azure`。</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [自定义ARM参数和模板](provision.md#customize-arm-parameters-and-templates)。 |
-| 为应用Azure AD现有 Teams 应用 | <ul> <li>`auth``.fx/config.<envName>.json`部分。</li> </ul> |  [为 Azure AD 应用使用现有 Teams 应用](provision.md#use-an-existing-azure-ad-app-for-your-teams-app)。 |
-| 重用现有Azure AD自动程序应用 | <ul> <li>`bot``.fx/config.<envName>.json`部分。</li> </ul> | [为自动程序Azure AD现有应用](provision.md#use-an-existing-azure-ad-app-for-your-bot)。 |
+| 为应用Azure AD现有Teams应用程序 | <ul> <li>`auth``.fx/config.<envName>.json`部分。</li> </ul> |  [为应用Azure AD现有 Teams 应用](provision.md#use-an-existing-azure-ad-app-for-your-teams-app)。 |
+| 重用现有Azure AD自动程序应用 | <ul> <li>`bot``.fx/config.<envName>.json`部分。</li> </ul> | [为自动Azure AD现有应用](provision.md#use-an-existing-azure-ad-app-for-your-bot)。 |
 | 预配用户时跳过添加SQL | <ul> <li>`skipAddingSqlUser`属性。`.fx/config.<envName>.json`</li> </ul> | [跳过为数据库SQL用户](provision.md#skip-adding-user-for-sql-database)。 |
-| 自定义应用清单 | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest``.fx/config.<envName>.json`部分。</li>  </ul> | [在Teams中自定义应用Teams Toolkit](TeamsFx-manifest-customization.md)。 |
+| 自定义应用清单 | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest``.fx/config.<envName>.json`部分。</li>  </ul> | [自定义Teams应用程序清单Teams Toolkit](TeamsFx-manifest-customization.md)。 |
 
 ## <a name="scenarios"></a>应用场景
 
@@ -86,8 +91,8 @@ Teams Toolkit可以更改配置文件和模板文件，以自定义每个环境�
 
 执行以下步骤进行自定义：
 
-- 1. 打开配置文件 `.fx/configs/config.dev.json`。
-- 2. 将 manifest 属性 *> appName > short 更新* 为 `myapp(dev)`
+* 1. 打开配置文件 `.fx/configs/config.dev.json`。
+* 2. 将 manifest 属性 *更新为 > appName > short*`myapp(dev)`
 
   更新 `.fx/configs/config.dev.json` 如下所示：
 
@@ -105,22 +110,22 @@ Teams Toolkit可以更改配置文件和模板文件，以自定义每个环境�
   }
   ```
 
-- 3. 创建新环境，如果 `staging` 不存在，则命名它。
-- 4. 打开配置文件 `.fx/configs/config.staging.json`。
-- 5. 更新同一属性 `myapp(staging)`。
-- 6. 在 和 环境中运行 `dev` 预配 `staging` 命令以更新远程环境中的应用名称。 若要使用命令运行预配Teams Toolkit，请参阅[预配](provision.md#provision-using-teams-toolkit)。
+* 3. 创建新环境，如果 `staging` 不存在，则命名它。
+* 4. 打开配置文件 `.fx/configs/config.staging.json`。
+* 5. 更新同一属性 `myapp(staging)`。
+* 6. 在 和 环境中运行 `dev` 预配 `staging` 命令以更新远程环境中的应用名称。 若要使用命令运行预配Teams Toolkit，请参阅 [provision](provision.md#provision-using-teams-toolkit)。
 
-### <a name="scenario-2-customize-teams-app-description-for-different-environment"></a>方案 2：为Teams自定义应用说明
+### <a name="scenario-2-customize-teams-app-description-for-different-environment"></a>方案 2：Teams环境自定义应用说明
 
 在此方案中，你将了解如何为不同的环境Teams不同的应用说明：
 
-- 对于默认环境， `dev`说明将为 `my app description for dev`;
-- 对于暂存环境 `staging`，描述将为 `my app description for staging`;
+* 对于默认环境， `dev`说明将为 `my app description for dev`;
+* 对于暂存环境 `staging`，描述将为 `my app description for staging`;
 
 执行以下步骤进行自定义：
 
-- 1. 打开配置文件 `.fx/configs/config.dev.json`。
-- 2. 将清单的新 *属性> description > short* with value `my app description for dev`。
+* 1. 打开配置文件 `.fx/configs/config.dev.json`。
+* 2. 将清单的新 *属性> description > short* with value `my app description for dev`。
 
   更新 `.fx/configs/config.dev.json` 如下所示：
 
@@ -139,11 +144,11 @@ Teams Toolkit可以更改配置文件和模板文件，以自定义每个环境�
   }
   ```
 
-- 3. 创建一个新环境，如果 `staging` 不存在，则命名它。
-- 4. 打开配置文件 `.fx/configs/config.staging.json`。
-- 5. 将同一属性添加到 `my app description for staging`。
-- 6. 打开Teams应用程序清单模板。`templates/appPackage/manifest.remote.template.json`
-- 7. 更新 属性以 `description > short` 使用 **在** 配置文件时定义的变量和 mustache 语法 `{{config.manifest.description.short}}`。
+* 3. 创建一个新环境，如果 `staging` 不存在，则命名它。
+* 4. 打开配置文件 `.fx/configs/config.staging.json`。
+* 5. 将同一属性添加到 `my app description for staging`。
+* 6. 打开Teams应用程序清单模板。`templates/appPackage/manifest.remote.template.json`
+* 7. 更新 属性以 `description > short` 使用 **在** 配置文件时定义的变量和 mustache 语法 `{{config.manifest.description.short}}`。
   
   更新 `manifest.remote.template.json` 如下所示：
 
@@ -160,16 +165,17 @@ Teams Toolkit可以更改配置文件和模板文件，以自定义每个环境�
     ...
   }
   ```
-- 8. 针对 和环境运行 `dev` 预配 `staging` 命令以更新远程环境中的应用名称。 若要使用命令运行预配Teams Toolkit，请参阅[预配](provision.md#provision-using-teams-toolkit)。
 
-### <a name="scenario-3-customize-teams-app-description-for-all-environments"></a>方案 3：自定义Teams环境的应用说明
+* 8. 针对 和环境运行 `dev` 预配 `staging` 命令以更新远程环境中的应用名称。 若要使用命令运行预配Teams Toolkit，请参阅 [provision](provision.md#provision-using-teams-toolkit)。
+
+### <a name="scenario-3-customize-teams-app-description-for-all-environments"></a>方案 3：Teams所有环境自定义应用说明
 
 在此方案中，你将了解如何针对所有环境Teams应用`my app description`的说明。
 
 由于Teams所有环境共享应用程序清单模板，因此我们可以针对目标更新它的说明值：
 
-- 1. 打开Teams应用程序清单模板。`templates/appPackage/manifest.remote.template.json`
-- 2. 使用硬编码`description > short`**字符串 更新 属性**`my app description`。
+* 1. 打开Teams应用程序清单模板。`templates/appPackage/manifest.remote.template.json`
+* 2. 使用硬编码`description > short`**字符串 更新 属性**`my app description`。
   
   更新 `manifest.remote.template.json` 如下所示：
 
@@ -186,7 +192,7 @@ Teams Toolkit可以更改配置文件和模板文件，以自定义每个环境�
     ...
   }
 
-- 3. Run provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+* 3. Run provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
 ### Scenario 4: customize Azure resources for different environment
 

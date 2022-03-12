@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ac2a79014ed0dfedf9942f30ab67c759642ee850
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356173"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453409"
 ---
 # <a name="cicd-guide"></a>CI/CD 指南
 
@@ -234,6 +234,7 @@ steps:
 脚本基于跨平台 TeamsFx 命令行工具 [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli)。 可以随文档一 `npm install -g @microsoft/teamsfx-cli` 起安装脚本 [，然后](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) 按照文档自定义脚本。
 
 > [!NOTE]
+>
 > * 若要启用 `@microsoft/teamsfx-cli` 在 CI 模式下运行，请通过 `CI_ENABLED` 打开 `export CI_ENABLED=true`。 在 CI 模式下， `@microsoft/teamsfx-cli` 适用于 CI 或 CD。
 > * 若要启用 `@microsoft/teamsfx-cli` 在非交互模式下运行，请通过命令设置全局配置： `teamsfx config set -g interactive false`。 在非交互模式中， `@microsoft/teamsfx-cli` 不提示输入。
 

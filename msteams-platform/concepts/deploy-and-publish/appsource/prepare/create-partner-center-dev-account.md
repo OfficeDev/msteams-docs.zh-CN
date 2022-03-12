@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: 1d4fc957eb8511e9da2b3ebacd3a6b025e048e78
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391671"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453549"
 ---
 # <a name="create-a-partner-center-developer-account"></a>创建合作伙伴中心开发人员帐户
 
@@ -28,8 +28,8 @@ ms.locfileid: "61391671"
 
 可以通过以下方法之一创建合作伙伴中心帐户：
 
-* 如果你是合作伙伴中心的新用户，并且没有 Microsoft 网络帐户，则使用合作伙伴 [中心注册页面 创建帐户](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)。
-* 如果你已在 Microsoft 合作伙伴网络中注册，则使用现有 Microsoft 合作伙伴中心注册直接从合作伙伴 [中心创建帐户](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
+* 如果你是合作伙伴中心的新用户，并且没有 Microsoft 网络帐户，则使用合作伙伴中心注册 [页面创建一个帐户](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)。
+* 如果你已在 Microsoft 合作伙伴网络中注册，则使用现有 Microsoft 合作伙伴中心注册直接从合作伙伴中心 [创建帐户](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
 
 <br>
 
@@ -95,7 +95,7 @@ ms.locfileid: "61391671"
 
 <summary><b>为什么在尝试提交我的应用时会看到"此帐户不符合发布条件"消息？</b></summary>
 
-由于帐户验证状态为"挂起 ["，因此收到](/partner-center/verification-responses) 此错误消息。 在合作伙伴中心仪表板中检查 [状态](https://partner.microsoft.com/dashboard)。 选择 **"设置** 齿轮"图标，然后选择">**帐户>帐户设置"。**
+由于帐户验证状态为"挂起" [，因此收到](/partner-center/verification-responses) 此错误消息。 在合作伙伴中心仪表板中检查 [状态](https://partner.microsoft.com/dashboard)。 选择"**设置** 齿轮"图标，然后选择">**帐户>帐户设置"**。
 
 ![合作伙伴中心验证状态](~/assets/images/partner-center-verification-status.png)
 
@@ -107,11 +107,11 @@ ms.locfileid: "61391671"
 
 <summary><b>合作伙伴中心帐户验证过程中经过哪些验证？</b></summary>
 
-有三个验证领域：**电子邮件所有权****、雇佣** 关系 **和业务**。 有关详细信息，请参阅 [验证了哪些项目以及如何响应](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
+有三个验证领域：**电子邮件所有权****、雇佣** 关系 **和业务**。 有关详细信息，请参阅 [验证了哪些信息以及如何响应](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
 
 如果你是主要联系人、全局管理员或帐户管理员，可以在配置文件页面上监视验证状态和跟踪进度。
 
-验证过程完成后，配置文件页上的注册状态会从 *"挂起*"更改到"*已授权"。* 然后，主要联系人将在几天内收到来自 Microsoft 的电子邮件。
+验证过程完成后，配置文件页上的注册状态 *会从"* 挂起"更改为"已 *授权"*。 然后，主要联系人将在几天内收到来自 Microsoft 的电子邮件。
 
 <br>
 
@@ -121,13 +121,13 @@ ms.locfileid: "61391671"
 
 <summary><b>我的帐户验证状态未超出电子邮件所有权。如何继续？</b></summary>
 
-在 **电子邮件所有权验证** 过程中，会向主要联系人发送验证电子邮件。 检查主要联系人收件箱中是否收到电子邮件maccount@microsoft.com 主题行"需要操作：使用 **Microsoft** 验证电子邮件帐户并完成电子邮件验证过程"。 验证电子邮件将发送到合作伙伴中心帐户设置中列出的地址。
+在 **电子邮件所有权验证** 过程中，会向主要联系人发送验证电子邮件。 检查主要联系人收件箱中是否收到电子邮件 maccount@microsoft.com  主题行"需要操作：使用 **Microsoft** 验证电子邮件帐户并完成电子邮件验证过程"。 验证电子邮件将发送到合作伙伴中心帐户设置中列出的地址。
 
 请记住有关电子邮件验证过程的以下事项：
 
 * 电子邮件验证链接的有效期只有七天。
 * 可以通过访问合作伙伴配置文件页面并选择"重新发送验证电子邮件"链接，请求重新 **发送电子邮件** 。
-* 为确保收到电子邮件，安全列表 microsoft.com 安全域并检查垃圾邮件文件夹。
+* 为了确保您收到电子邮件，安全列表 **microsoft.com** 安全域并检查垃圾邮件文件夹。
 
 <br>
 
@@ -140,10 +140,10 @@ ms.locfileid: "61391671"
 请尝试执行以下操作：
 
 * 检查垃圾邮件或垃圾邮件文件夹。
-* 清除浏览器缓存，转到合作伙伴中心帐户仪表板，然后选择 **重新发送验证电子邮件**。
+* 清除浏览器缓存，转到你的合作伙伴中心帐户仪表板，然后选择 **重新发送验证电子邮件**。
 * 尝试从其他 **浏览器访问"重新发送** 验证电子邮件"链接。
 * 与 IT 部门合作，确保您的电子邮件服务器不会阻止验证电子邮件。
-* 调整服务器的垃圾邮件筛选器，以允许或安全列出来自 maccount@microsoft.com **。**
+* 调整服务器的垃圾邮件筛选器，以允许或安全列出来自 **maccount@microsoft.com。**
 
 <br>
 
@@ -183,13 +183,13 @@ ms.locfileid: "61391671"
 
 <summary><b>我创建了一个支持票证，但在七个工作日后未收到更新。在哪里可以获取帮助？</b></summary>
 
-向用户 <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> 以下详细信息：
+将电子邮件发送到 <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> 详细信息：
 
-* **主题行**：合作伙伴中心帐户问题 *的应用名称*。
+* **主题行**：应用名称的合作伙伴 *中心帐户问题*。
 * **电子邮件正文**：
-    * 支持票证编号。
-    * 卖家 ID。
-    * 如果可能，问题 (屏幕截图) 。
+  * 支持票证编号。
+  * 卖家 ID。
+  * 如果可能，问题 (屏幕截图) 。
 
 <br>
 
@@ -201,7 +201,7 @@ ms.locfileid: "61391671"
 
 以下资源还可以提供帮助：
 
-* [Microsoft 365应用提交常见问题解答](/office/dev/store/appsource-submission-faq)。
+* [Microsoft 365提交常见问题解答](/office/dev/store/appsource-submission-faq)。
 * [商业市场文档](/azure/marketplace/)。
 
 <br>
