@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398811"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453437"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "63398811"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|03/10/2022| 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
 |2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
 |2022/02/24| 引入了生成基于操作的消息传递扩展的分步指南 | 生成消息传递扩展 > 操作命令 > 定义操作命令 > [生成基于操作的消息传递扩展](sbs-meetingextension-action.yml)|
@@ -51,6 +52,7 @@ ms.locfileid: "63398811"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|03/10/2022 | 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|  
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
 | 2022/02/24| 引入了生成基于操作的消息传递扩展的分步指南 | 生成消息传递扩展 > 操作命令 > 定义操作命令 > [生成基于操作的消息传递扩展](sbs-meetingextension-action.yml)|

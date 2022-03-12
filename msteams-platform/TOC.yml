@@ -501,14 +501,14 @@
       href: samples/integrate-web-apps-overview.md
     - name: Teams 集成注意事项
       href: samples/integrating-web-apps.md
+    - name: 创建虚拟助手
+      href: samples/virtual-assistant.md
     - name: Power Platform 应用
       items:
         - name: 概述
           href: samples/teams-low-code-solutions.md
         - name: 添加 Power Virtual Agent 聊天机器人
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: 创建虚拟助手
-          href: samples/virtual-assistant.md
     - name: Microsoft Teams 的应用模板
       href: samples/app-templates.md
     - name: 生产准备就绪的排班连接器
@@ -517,8 +517,12 @@
       items:
         - name: 概述
           href: resources/moodle-overview.md
-        - name: 安装 Moodle LMS
-          href: resources/moodleInstructions.md
+        - name: Microsoft 365 插件
+          href: resources/m365-plugins/m365-plugins-overview.md
+        - name: Moodle 合作伙伴应用
+          href: resources/partner-apps-for-moodle.md
+        - name: Moodle 常见问题解答
+          href: resources/faqs.md
     - name: 创建“共享到 Teams”按钮
       href: concepts/build-and-test/share-to-teams.md
     - name: 向 SharePoint 添加Teams选项卡
