@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399098"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453766"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -825,13 +825,17 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型|最大大小|必需 |说明|
 |---|---|---|---|---|
 |`type`|string||✔| 特定于资源的权限类型。选项：`Application` 和 `Delegated`。|
-|`name`|string|128 个字符|✔|特定于资源的权限名称。 <br> 更多相关信息，请参阅 [应用程序权限](../../graph-api/rsc/resource-specific-consent.md) 和 [委派权限](#delegated-permissions)。|
+|`name`|string|128 个字符|✔|特定于资源的权限名称。 有关详细信息，请参阅[资源对应的应用程序权限](#resource-specific-application-permissions)和[资源对应的委派权限](#resource-specific-delegated-permissions)|
 
-### <a name="delegated-permissions"></a>委派权限
+#### <a name="resource-specific-application-permissions"></a>资源对应的应用程序权限
+
+应用程序权限允许应用在用户未登录的情况下访问数据。 有关应用程序权限的信息，请参阅 [MS Graph 和 MS BotSDK 的资源相应的许可](../../graph-api/rsc/resource-specific-consent.md)。
+
+#### <a name="resource-specific-delegated-permissions"></a>资源对应的委派权限
 
 委派的权限允许应用代表已登录用户访问数据。
 
-* **团队的特定资源权限**
+* **团队的资源对应的委派权限**
 
     |**名称**|**说明**|
     |---|---|
@@ -839,7 +843,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
     |`InAppPurchase.Allow.Group`| 允许应用代表已登录用户向此团队中的用户显示市场产品/服务并在应用中完成购买。|
     |`ChannelMeetingStage.Write.Group`| 允许应用代表已登录用户在与此团队关联的频道会议中显示会议阶段的内容。|
 
-* **聊天或会议的特定资源权限**
+* **聊天或会议的资源对应的委派权限**
 
     |**名称**|**说明**|
     |---|---|
@@ -848,7 +852,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
     |`OnlineMeetingParticipant.Read.Chat`|允许应用代表已登录用户读取与此聊天关联的会议的参与者信息，包括姓名、角色、ID、加入和离开时间。|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|允许应用代表登录用户为与此聊天关联的会议中的参与者切换传入音频。|
 
-* **用户的特定资源权限**
+* **用户的资源对应的委派权限**
 
     |**名称**|**说明**|
     |---|---|
