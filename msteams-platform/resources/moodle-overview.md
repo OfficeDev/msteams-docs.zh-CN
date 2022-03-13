@@ -1,62 +1,58 @@
 ---
-title: 可学习管理系统
-description: 一览将 LmS 与 Teams
+title: Moodle 学习管理系统
+description: Moodle LMS 与 Teams 集成概述
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
-author: KirtiPereira
-keywords: 将 LMS mConnect 深度链接
-ms.openlocfilehash: beaac8d139b164b26f791b46a089a44cd8a4681d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
-ms.translationtype: MT
+keywords: moodle LMS mConnect 深层链接
+ms.openlocfilehash: 3a999846b9df72298e35eed9edaf9bd96df30edf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888452"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453121"
 ---
-# <a name="moodle-learning-management-system"></a>可学习管理系统
+# <a name="moodle-learning-management-system"></a>Moodle 学习管理系统
 
-一个全球最大的开放源代码学习管理系统。 
+ Moodle 是最大的开源学习管理系统(LMS)之一，提供由安全隐私服务支持的独特远程学习体验。 Moodle LMS 与 Microsoft Teams 集成以提供以下服务:
 
-此应用通过有价值的功能帮助教师创建和组织他们的课程，其中包括：
-* 强大的测验工具 
-* 已评分讨论
-* 供学生使用内容的各种作业类型  
- 
-与 Microsoft Teams 集成。 Teams是实时协作、团队合作和工作效率的中心。 与多达 300 Office 365数百个应用、聊天和实时会议功能的无缝集成。 Teams使教职员工和学生无论在哪里，都能够更高效地协作。 
- 
-Microsoft 365在向教职员工和学生提供全面体验后，可开发开发插件补充了一个与一起播放的"开发工具"。 通过Microsoft 365一个功能插件，网站管理员可以将用户与：
+* 音频或视频通话
+* 与学生聊天
+* 课程和活动管理
+* 徽章和奖励
+* 分析见解
 
-* Office 365和将
-* 自动执行用户匹配
-* 将课程同步到Microsoft Teams和文件存储库
-* 连接 OneNote作业
-* 嵌入Office文档
- 
-Microsoft Teams应用（如 Skooler 的 mConnect）和由 Microsoft 365 Plugins 开发的应用，将一起将一Teams。
+<!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
+This content is modified as per the requirement.-->
 
-教职员工和学生可以在实时通信和协作中利用用户的独特功能。
+ <!--The following image demonstrates Moodle LMS:
+  Query on this image about what is meant by section
 
-## <a name="mconnect-app-by-skooler"></a>Skooler 的 mConnect 应用
+:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart" border="true":::-->
 
-Skooler 的 mConnect 应用允许你轻松通过 Teams虚拟学习。
+## <a name="moodle-lms-accessibility"></a>Moodle LMS 辅助功能
 
-### <a name="why-mconnect-and-teams"></a>为什么使用 mConnect 和 Teams
+Moodle LMS 可帮助用户访问以下应用:
 
-观看以下视频，了解 mConnect 和 Teams如何更好地协同工作：
+* **Microsoft 365 插件**: Microsoft 365 插件旨在确保 Moodle 站点与 Microsoft Teams 之间的集成。 这些插件可以独立或合作使用，从而满足不同的用户要求。 有关详细信息，请参阅 [Microsoft 365 插件](m365-plugins/m365-plugins-overview.md)。
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
+* **Moodle 的合作伙伴应用**: Microsoft Store 中提供 Moodle 和 Teams 的所有合作伙伴应用集。 有关详细信息，请参阅 [Moodle 的合作伙伴应用](partner-apps-for-moodle.md)。
 
-从 mConnect 内部，课程参与者在 Microsoft Teams 提供实时协作和通信内访问完整的一流课程体验。
+## <a name="user-requirement-scenarios"></a>用户要求方案
 
-### <a name="get-started-with-mconnect-and-teams"></a>mConnect 和 Teams
+以下方案介绍了将 Microsoft 云服务与 Moodle 课程结合使用可加速释放学习潜力:
 
-观看以下视频，了解如何开始使用 mConnect 和 Teams：
+* **推动混合远程会议**: Teams 会议和扩展性服务允许教职员工对学生进行面对面和远程演示。 对于学生，必须有权访问远程会议的共享视图、应用和投票。 后续任务提供多语言听录和音频或视频课程录制。 Teams 和 Moodle 协同工作，以共享包、活动和任务。
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/KOVpQ2s7iA8]
+* **个性化会议面板**: 使用 Teams Graph API 终结点创建独特的协作式学习体验。 对于其他计划或项目，用户可以和所有新成员面谈，并使用自定义投票对结果进行分类。 有设施可直接在 Teams 中共享测验，同时将更新异步推送到 Moodle 站点。
 
-有关详细信息，请参阅[skooler 的 mConnect。](https://skooler.com/mconnect/how-to/)
+* **自动化设施**: 要在新学生加入时为机构设置自动化设施，用户可以添加 Moodle 课程，向学生发送包含相关链接的自适应卡片，并推荐主要的阅读课程教材。 每次安排课程会议时，Moodle 的 Teams 自定义连接器可帮助创建 Moodle 日历事件。
 
-## <a name="microsoft-365-moodle-plugins"></a>Microsoft 365Pluginle 插件
+* **生成平民开发者应用**: 为学校开发新的自定义应用，这易于创建且有助于优化学习。 该应用还为学生和教职员工提供了易于使用的事务性活动。
 
-适用于课程的Teams插件使计划、交付和协作处理课程内容变得简单。 安装插件，以无缝地将用户学习管理系统引入Teams。 有关详细信息，请参阅安装一个[LmS。](moodleInstructions.md)
+<!-- For more information, see [Microsoft education](https://www.microsoft.com/education).-->
+## <a name="see-also"></a>另请参阅
 
+* [Microsoft 36 5插件](m365-plugins/m365-plugins-overview.md)
+* [Moodle 的合作伙伴应用](partner-apps-for-moodle.md)
+* [Moodle FAQ](faqs.md)

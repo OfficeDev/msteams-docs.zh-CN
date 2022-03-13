@@ -5,19 +5,19 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: e3a22378819d8fb1e865e2122b7977bcbabbbb74
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356278"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453327"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>在 Microsoft Teams 中上传应用
 
-无需发布到组织或 Teams 应用商店即可旁加载 Microsoft Teams 应用。这在以下方案中是有意义的：
+在以下情况下，无需发布到组织或 Teams 应用商店即可旁加载 Microsoft Teams 应用：
 
 * 你希望自己或与其他开发人员一起在本地测试和调试应用。
-* 你仅为自己构建了一个应用。 例如，自动执行工作流。
+* 你为自己构建了一个应用来自动执行工作流。
 * 你为一小部分用户 (例如你的工作组) 构建了一个应用。
 
 > [!IMPORTANT]
@@ -25,30 +25,33 @@ ms.locfileid: "63356278"
 
 ## <a name="prerequisites"></a>先决条件
 
-* 创建 [应用包](~/concepts/build-and-test/apps-package.md)，[验证](https://dev.teams.microsoft.com/appvalidation.html) 是否存在错误。
+* 请确保创建[应用包](~/concepts/build-and-test/apps-package.md)，并[验证其](https://dev.teams.microsoft.com/appvalidation.html)是否存在错误。
 * 在 Teams 中 [启用自定义应用上传](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
-* 请确保应用正在运行并可通过 HTTP 进行访问。
+* 确保应用正在运行并可使用 HTTPs 进行访问。
 
 ## <a name="upload-your-app"></a>上传应用
 
 可以将应用旁加载到团队、聊天、会议或个人使用，具体取决于应用范围的配置方式。
 
 1. 使用你的 [Microsoft 365开发帐户](~/build-your-first-app/build-and-run.md#prerequisites) 登录到 Teams 客户端。
-1. 选择 **应用**，然后选择 **上传自定义应用**。
-1. 选择应用包 .zip 文件。 显示安装对话框。
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="显示 Teams 应用安装对话框示例的屏幕截图。":::
-1. 将应用添加到 Teams。
+1. 选择“**应用**”，然后选择“**管理应用**”。
+1. 选择“**上传自定义应用**”。
+1. 选择应用包 .zip 文件，将显示以下屏幕：
 
-> [!NOTE]
-> `onInstallationUpdateActivityAsync()`方法用于获取 Microsoft Teams 区域设置，同时将机器人添加到Microsoft Teams。
+    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="显示 Teams 应用安装对话框示例的屏幕截图。":::
 
-## <a name="troubleshoot-upload-issues"></a>上传问题疑难解答
+1. 选择“**添加**”将应用添加到 Teams。
 
-如果应用无法旁加载，请执行以下操作，直到问题解决:
+    > [!NOTE]
+    > `onInstallationUpdateActivityAsync()`方法用于获取 Microsoft Teams 区域设置，同时将机器人添加到Microsoft Teams。
 
-1. 返回 [创建应用包](../../concepts/build-and-test/apps-package.md) 的说明。
-1. 再次 [验证应用包](https://dev.teams.microsoft.com/appvalidation.html)。
-1. 请确保应用清单与最新的 [架构](../../resources/schema/manifest-schema.md) 匹配。
+## <a name="troubleshooting"></a>疑难解答
+
+如果应用无法旁加载或上传遇到问题，请检查以下选项：
+
+1. 确保已按照[创建应用包](../../concepts/build-and-test/apps-package.md)的所有说明进行操作。
+1. [验证应用包](https://dev.teams.microsoft.com/appvalidation.html)。
+1. 确保应用清单与最新的 [架构](../../resources/schema/manifest-schema.md)匹配。
 
 ## <a name="access-your-app"></a>访问你的应用
 
