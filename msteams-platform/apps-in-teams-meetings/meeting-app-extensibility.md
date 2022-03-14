@@ -4,12 +4,12 @@ author: surbhigupta
 description: 了解会议生命周期、在桌面和移动环境中构建用户在整个会议生命周期中的会议体验、参与者角色和用户类型。 此外，了解如何在会议生命周期中集成机器人和消息传递扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398846"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466476"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -46,7 +46,7 @@ Teams统一会议应用基于以下概念：
 1. 在日历中，选择要添加选项卡的会议。
 1. 选择" **详细信息"** 选项卡并选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. 将显示选项卡库。
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="会议前应用体验":::
 
 1. 在选项卡库中，选择要添加的应用并按照所需步骤操作。 应用作为选项卡安装。
 
@@ -57,7 +57,7 @@ Teams统一会议应用基于以下概念：
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-![会议前选项卡视图](../assets/images/apps-in-meetings/PreMeetingTab.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="会议期间的选项卡":::
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
@@ -69,7 +69,7 @@ Teams统一会议应用基于以下概念：
 
 #### <a name="in-meeting-app-experience"></a>会议内应用体验
 
-借助会议内应用体验，可以在会议期间通过使用应用和会议中的对话框来吸引与会者。 会议应用作为会议内选项卡托管在会议窗口的工具栏上。使用会议内对话框为会议参与者展示可操作的内容。 有关详细信息，请参阅[为会议创建Teams应用](create-apps-for-teams-meetings.md)。
+借助会议内应用体验，可以在会议期间通过使用应用和会议中的对话框来吸引与会者。 会议应用作为会议内选项卡托管在会议窗口的工具栏上。使用会议内对话框为会议参与者展示可操作的内容。 有关详细信息，请参阅[为会议启用和配置Teams应用](enable-and-configure-your-app-for-teams-meetings.md)。
 
 对于移动版，会议应用可从会议>省略号 &#x25CF;&#x25CF;&#x25CF; 提供。 选择 **"** 应用"以查看会议提供的所有应用。
 
@@ -82,8 +82,6 @@ Teams统一会议应用基于以下概念：
 1. 在"会议内"对话框中，输入你的回复作为反馈。
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
-
-![对话框视图](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
@@ -132,11 +130,11 @@ Teams统一会议应用基于以下概念：
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-![会议后视图](../assets/images/apps-in-meetings/PostMeeting.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="包含结果的 Contoso 选项卡":::
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="会议后应用体验":::
 
 ---
 
@@ -155,7 +153,7 @@ Teams统一会议应用基于以下概念：
 
 ## <a name="participant-roles-in-a-meeting"></a>会议中的参与者角色
 
-![会议参与者](../assets/images/apps-in-meetings/participant-roles.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="会议中的参与者角色":::
 
 默认参与者设置由组织的 IT 管理员确定。 以下是会议中的参与者角色：
 
@@ -207,7 +205,7 @@ Teams统一会议应用基于以下概念：
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [Teams 会议中应用的先决条件和 API 参考](create-apps-for-teams-meetings.md)
+> [为会议启用和配置Teams应用](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>另请参阅
 

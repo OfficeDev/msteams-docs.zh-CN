@@ -4,12 +4,12 @@ description: Microsoft Teams 开发人员文档术语表
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发人员定义
-ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc29c40cfa79f267e2fde866974badc97d1900b7
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452744"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466560"
 ---
 # <a name="glossary"></a>术语表
 
@@ -124,8 +124,8 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [会议阶段](../sbs-meetings-stage-view.yml) | 会议扩展应用的一项功能。 它是在会议期间所有参与者都可访问的共享空间。 可帮助参与者实时与应用内容进行交互和协作。 <br>**另请参阅**：[阶段视图](#s) |
 | [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md) | 消息传递扩展是插入应用内容或对消息执行操作的快捷方式。无需离开会话即可使用消息传递扩展。<br>**另请参阅**：[搜索命令](#s)；[操作命令](#a) |
 | [会议扩展](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | 旨在用于在会议生命周期内提高工作效率的应用，例如白板、仪表板等。 |
-| [Microsoft 365 账户](../toolkit/accounts.md#microsoft-365-account) | Microsoft 365 帐户包含 25 个仅用于开发用途的用户许可证，包括管理员。 |
-| [Microsoft 365 开发人员计划](../toolkit/accounts.md#join-microsoft-365-developer-program) | Microsoft 365 开发人员计划可帮助你构建扩展 Microsoft 365 的应用。 |
+| [Microsoft 365 账户](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 帐户包含 25 个仅用于开发用途的用户许可证，包括管理员。 |
+| [Microsoft 365 开发人员计划](../toolkit/accounts.md)| Microsoft 365 开发人员计划可帮助你构建扩展 Microsoft 365 的应用。 |
 | [Microsoft Graph 浏览器](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | 通往 Microsoft 365 中数据和智能的网关。它提供了一个统一的可编程性模型，可用于访问 Microsoft 365、Windows 10 和企业移动性 + 安全性中的数据。 |
 | [Microsoft Teams](../overview.md) | Microsoft Teams 是一种组协作软件，可用于帮助团队开展远程协作。 |
 | [Microsoft Teams 平台](../concepts/app-fundamentals-overview.md) | 借助 Microsoft Teams 开发人员平台，开发人员可以轻松地将自己的应用和服务与 Teams 集成。 |

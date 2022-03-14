@@ -4,16 +4,28 @@ author: surbhigupta
 description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0211cb1458b13a0727fce9915d1a50d227ed1a53
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398860"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464357"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
 每个团队都有不同的通信和协作任务方式。 若要完成这些不同的任务，请Teams会议应用自定义会议。 为会议Teams应用，并在其应用清单内将应用配置为在会议范围内可用。
+
+## <a name="prerequisites"></a>先决条件
+
+借助Teams会议，可以在会议生命周期内扩展应用的功能。 使用会议Teams之前，必须满足以下先决条件：
+
+* 了解如何开发Teams应用。 若要详细了解如何开发应用Teams，请参阅Teams[应用开发](../overview.md)。
+
+* 使用支持 groupchat 作用域中的可配置选项卡的应用。 有关详细信息，请参阅群[聊范围和](../resources/schema/manifest-schema.md#configurabletabs)[构建组选项卡](../build-your-first-app/build-channel-tab.md)。
+
+* 遵守[Teams和](../tabs/design/tabs.md)会议后方案的常规选项卡设计准则。 有关会议期间的体验，请参阅会议 [中的](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) 选项卡设计指南和 [会议中的对话框设计指南](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
+
+* 若要实时更新应用，应用必须基于会议中的活动活动是最新的。 这些事件可以位于会议中的对话框内以及整个会议生命周期的其他阶段。 有关会议中的对话框，请参阅 `completionBotId` 会议 [内通知有效负载中的参数](API-references.md#send-an-in-meeting-notification)。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>为应用启用Teams会议
 
@@ -54,7 +66,11 @@ ms.locfileid: "63398860"
 
 ### <a name="context-property"></a>Context 属性
 
-属性 `context` 确定当用户在会议调用应用时必须显示哪些内容，具体取决于用户调用该应用的地方。 `context`选项卡和`scopes`属性使你可以确定应用必须显示在哪里。 或 作用域 `team` 中的 `groupchat` 选项卡可以具有多个上下文。 以下是可以使用所有 `context` 或部分值的属性的值：
+属性 `context` 确定当用户在会议调用应用时必须显示哪些内容，具体取决于用户调用该应用的地方。 `context`选项卡和`scopes`属性使你可以确定应用必须显示在哪里。 或 作用域 `team` 中的 `groupchat` 选项卡可以具有多个上下文。
+
+`groupchat`支持范围以在会议前和会议后聊天中启用你的应用。 通过会议前应用体验，你可以查找和添加会议应用，以及执行会议前任务。 通过会议后应用体验，可以查看会议结果，如投票调查结果或费用。
+
+ 以下是可以使用所有 `context` 或部分值的属性的值：
 
 |值|说明|
 |---|---|

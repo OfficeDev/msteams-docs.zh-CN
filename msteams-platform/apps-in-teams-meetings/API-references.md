@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams 应用会议用户参与者角色 api 用户上下文通知信号查询
-ms.openlocfilehash: 3f77e0c1c24ad624fae268d4ca0621f7217ab24a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 150a0bec1d8566392914ffeaf4990de21e3ec7de
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398867"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464250"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -20,6 +20,9 @@ ms.locfileid: "63398867"
 * 在会议生命周期内生成应用或集成现有应用。
 * 使用 API 让应用了解会议。
 * 选择所需的 API 以改进会议体验。
+
+> [!NOTE]
+> 使用 Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*版本*：1.10 及更高版本) SSO 在会议侧面板中工作。
 
 下表提供了跨 MICROSOFT TEAMS Client (MSTC) Microsoft Bot Framework (SDK) API 的列表：
 
@@ -41,6 +44,8 @@ ms.locfileid: "63398867"
 
 ## <a name="get-participant-api"></a>获取参与者 API
 
+API `GetParticipant` 必须具有自动程序注册和 ID，以生成身份验证令牌。 有关详细信息，请参阅自动 [程序注册和 ID](../build-your-first-app/build-bot.md)。
+
 > [!NOTE]
 >
 > * 不要缓存参与者角色，因为会议组织者可以随时更改角色。
@@ -49,7 +54,9 @@ ms.locfileid: "63398867"
 ### <a name="query-parameters"></a>查询参数
 
 > [!TIP]
-> 从选项卡 SSO 获取参与者 ID 和租户 ID。
+> 从选项卡 SSO 身份验证获取参与者 ID 和 [租户 ID](../tabs/how-to/authentication/auth-aad-sso.md)。
+
+API `Meeting` 必须具有 `meetingId`、 `participantId`和 `tenantId` 作为 URL 参数。 这些参数作为客户端 SDK 和自动程序Teams的一部分提供。
 
 下表包含查询参数：
 
@@ -100,8 +107,6 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
----
-
 ```json
 {
    "user":{
@@ -126,6 +131,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 }
 ```
 
+---
+
 ### <a name="response-codes"></a>响应代码
 
 下表提供了响应代码：
@@ -145,9 +152,9 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 >
 > * 调用会议内通知时，内容将显示为聊天消息。
 > * 目前，不支持发送目标通知和支持 webapp。
-> * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。 
+> * 您必须调用 [submitTask () ](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 函数，以在用户执行 Web 视图中的操作后自动消除。 这是应用提交的要求。 有关详细信息，请参阅Teams [SDK 任务模块](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 > * 如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Microsoft Azure Active Directory (Azure AD) ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
->
+
 ### <a name="query-parameter"></a>查询参数
 
 下表包含查询参数：
@@ -191,6 +198,9 @@ await context.sendActivity(replyActivity);
 
 ```http
 POST /v3/conversations/{conversationId}/activities
+```
+
+```json
 
 {
     "type": "message",
@@ -222,6 +232,8 @@ POST /v3/conversations/{conversationId}/activities
 ## <a name="get-meeting-details-api"></a>获取会议详细信息 API
 
 会议详细信息 API 使你的应用能够获取会议静态元数据。 元数据提供不动态更改的数据点。 API 通过 Bot Services 提供。 目前，私人计划会议或定期会议以及频道计划会议或定期会议均支持分别具有不同的 RSC 权限的 API。
+
+API `Meeting Details` 必须具有自动程序注册和自动程序 ID。 它需要 Bot SDK 才能获取 `TurnContext`。 若要使用会议详细信息 API，必须基于任何会议的范围（如私人会议或频道会议）获取不同的 RSC 权限。
 
 ### <a name="prerequisite"></a>先决条件
 
@@ -339,8 +351,6 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 GET /v1/meetings/{meetingId}
 ```
 
----
-
 会议详细信息 API 的 JSON 响应正文如下所示：
 
 ```json
@@ -366,6 +376,8 @@ GET /v1/meetings/{meetingId}
     }
 } 
 ```
+
+---
 
 ## <a name="send-real-time-captions-api"></a>发送实时字幕 API
 
@@ -429,20 +441,21 @@ API `shareAppContentToStage` 使你能够将应用的特定部分共享到会议
 
 ### <a name="prerequisite"></a>先决条件
 
-若要使用 `shareAppContentToStage` API，必须获取 RSC 权限。 在应用程序清单中，在 `authorization` 字段中配置 `name` `type` 属性和 和 `resourceSpecific` 。 例如：
+*  若要使用 `shareAppContentToStage` API，必须获取 RSC 权限。 在应用程序清单中，在 `authorization` 字段中配置 `name` `type` 属性和 和 `resourceSpecific` 。 例如：
 
-```json
-"authorization": {
-    "permissions": { 
-    "resourceSpecific": [
-      { 
-      "name": "MeetingStage.Write.Chat",
-      "type": "Delegated"
-      }
-    ]
-   }
-}
- ```
+    ```json
+    "authorization": {
+        "permissions": { 
+        "resourceSpecific": [
+        { 
+        "name": "MeetingStage.Write.Chat",
+        "type": "Delegated"
+        }
+        ]
+    }
+    }
+    ```
+*  `appContentUrl``validDomains` manifest.json 内的数组必须允许，否则 API 将返回 501。
 
 ### <a name="query-parameter"></a>查询参数
 
@@ -560,6 +573,8 @@ API 的 JSON 响应正文 `getAppContentStageSharingCapabilities` 为：
 ## <a name="get-real-time-teams-meeting-events-api"></a>获取实时会议Teams API
 
 用户可以接收实时会议事件。 只要任何应用与会议关联，就会与机器人共享实际会议开始时间和结束时间。 会议的实际开始时间和结束时间不同于计划的开始时间和结束时间。 会议详细信息 API 提供计划的开始时间和结束时间。 该事件提供实际的开始时间和结束时间。
+
+你必须熟悉通过 `TurnContext` Bot SDK 提供的对象。 中的 `Activity` 对象 `TurnContext` 包含具有实际开始时间和结束时间的有效负载。 实时会议事件需要来自会议平台的已注册Teams ID。 机器人可以通过在清单中添加 来自动接收会议开始或 `ChannelMeeting.ReadBasic.Group` 结束事件。
 
 ### <a name="prerequisite"></a>先决条件
 

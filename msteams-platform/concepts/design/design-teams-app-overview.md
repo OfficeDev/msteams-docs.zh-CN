@@ -5,12 +5,12 @@ description: 了解如何设计Microsoft Teams应用。 资源包括Microsoft Te
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 7a7a6d380341c94f4ed2eef92bf4407ac1a7681f
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948563"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466526"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>设计Microsoft Teams应用
 
@@ -22,7 +22,7 @@ ms.locfileid: "60948563"
 
 设计Teams应用与设计传统的 Web 应用类似，但有些不同。 有效的设计突出显示了应用的独特属性，同时自然地适应Teams和上下文。
 
-这些指南和资源可以帮助您实现此平衡。 你将了解在设计 Teams 应用模型时 (该做什么，例如选项卡应用中的多级) 。
+这些指南和资源可以帮助您实现此平衡。 你将了解在设计应用模型时要Teams应避免 (如选项卡应用中的多级) 。
 
 ## <a name="teams-app-design-principles"></a>Teams应用设计原则
 
@@ -33,7 +33,7 @@ Teams应用可帮助用户共同实现更多目标。 使用这些原则来指�
 
 ### <a name="collaborative"></a>协作
 
-Teams应用通过用户之间的协调与共享活动促进协作。
+Teams应用通过用户间的协调共享活动促进协作。
 
    :::column-end:::
    :::column span="":::
@@ -119,7 +119,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ## <a name="app-capabilities"></a>应用功能
 
-了解用户如何添加、使用和管理Teams应用程序，以充分利用设计中每个功能。
+了解用户如何添加、使用和管理Teams应用，以充分利用设计中每个功能。
 
 * [个人应用](../../concepts/design/personal-apps.md)
 * [选项卡](../../tabs/design/tabs.md)
@@ -129,11 +129,11 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ## <a name="ui-templates"></a>UI 模板
 
-使用常见用例和工作流的模板快速Teams[高保真设计](design-teams-app-ui-templates.md)。
+使用常见用例和工作流的模板快速创建Teams[高保真设计](design-teams-app-ui-templates.md)。
 
 ## <a name="basic-ui-components"></a>基本 UI 组件
 
-根据Fluent UI，这些是你可以从头开始创建Teams体验[](design-teams-app-basic-ui-components.md)的核心元素。
+根据Fluent UI，这些是你可以从头开始创建Teams体验的核心[](design-teams-app-basic-ui-components.md)元素。
 
 ## <a name="tools-and-samples"></a>工具和示例
 
@@ -185,7 +185,7 @@ UI 易于理解、外观和声调舒适，并且使用户工作效率更高。
 
 ## <a name="see-also"></a>另请参阅
 
-* [Teams 会议中应用的先决条件和 API 参考](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [为会议启用和配置Teams应用](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [设计 Microsoft Teams 自动程序](~/bots/design/bots.md)
 * [创建虚拟助手](~/samples/virtual-assistant.md)
 * [为 Microsoft Teams 应用设计任务模块](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
