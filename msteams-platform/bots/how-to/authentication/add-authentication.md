@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: 资源组自动程序注册 Azure 模拟器自动程序清单
-ms.openlocfilehash: 0151cc8fd756ee7ed7dbaecaef5739690f7f9302
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399371"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63493023"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -141,15 +141,16 @@ Azure Bot 资源注册将你的 Web 服务注册为自动程序框架，该框�
     ![自动程序主页](~/assets/images/adaptive-cards/bot-home-page.png)
 
 1. 打开"最近使用的资源"部分 **列出的自动** 程序。
-1. 选择 **左窗格中** 的"频道"，**然后选择"频道** Teams <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    ![频道Teams](~/assets/images/adaptive-cards/channel-teams.png)
+1. 选择 **左窗格中** 的"频道"，然后选择"Microsoft Teams **"**:::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::。
+
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="频道Teams":::
 
 1. 选中复选框以接受服务条款，然后选择"同意 **"**。</br>
 
     ![选择服务条款](~/assets/images/adaptive-cards/select-terms-of-service.png)
 
-1. 选择“保存”。
+1. 选择 **保存**。
 
     ![选择Teams](~/assets/images/adaptive-cards/select-teams.png)
 
@@ -218,7 +219,7 @@ Azure Bot 资源注册将你的 Web 服务注册为自动程序框架，该框�
 
     ![teams 自动程序应用程序身份验证连接字符串 adv1 视图](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. 选择“保存”。
+1. 选择 **保存**。
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v2"></a>Microsoft Azure Active Directory (Azure AD) V2
 
@@ -242,7 +243,7 @@ Azure Bot 资源注册将你的 Web 服务注册为自动程序框架，该框�
 
     1. 对于 **"作用域**"，输入此应用程序所需的图形权限的空格分隔列表，例如：User.Read User.ReadBasic.All Mail.Read
 
-1. 选择“保存”。
+1. 选择 **保存**。
 
 ### <a name="test-the-connection"></a>测试连接
 

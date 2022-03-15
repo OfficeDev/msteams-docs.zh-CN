@@ -6,12 +6,12 @@ keywords: teams Office365 连接器
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 9914f721e155f01a05813441587d0d1ea71e09ae
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: bc3a2ff1dc039c04e7ba809b6b63dcdcb62a4e66
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399196"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63492979"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -238,6 +238,8 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
 
 若要验证操作 `HttpPOST` 是否正常工作， [请将邮件发送到连接器](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
+按照[分步指南在](../../sbs-teams-connectors.yml)连接器中创建和测试Microsoft Teams。
+
 ## <a name="publish-connectors-for-the-organization"></a>发布组织的连接器
 
 如果希望连接器仅对贵组织的用户可用，可以将自定义连接器应用程序上载到 [组织的应用程序目录](~/concepts/deploy-and-publish/apps-publish.md)。
@@ -272,6 +274,10 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
 |----------------|------------------|--------|----------------|
 | 连接器 | 示例Office 365将通知生成到Teams连接器。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 通用连接器示例 |通用连接器的示例代码，易于为支持 Webhook 的任何系统进行自定义。| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+
+## <a name="step-by-step-guide"></a>分步指南
+
+按照[分步指南在](../../sbs-teams-connectors.yml) Teams 中构建和测试连接器。
 
 ## <a name="see-also"></a>另请参阅
 
