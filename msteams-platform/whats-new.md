@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 4aa1bd8555d2ebd017a3a09a1c736d566e40ed81
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 9ad67a1ecfe9947ed0dc665827dd4e127e3a4e69
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453437"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63492986"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "63453437"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南。 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022| 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
 |2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
@@ -38,8 +39,6 @@ ms.locfileid: "63453437"
 |02/08/2022| 引入创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
 |02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 |02/03/2022| 引入了应用清单版本 1.12 | • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022| 盈利应用的测试预览（开发人员预览版）| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| 应用内购买流，用于应用盈利（开发人员预览版） | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
 
 ## <a name="ga-features"></a>GA 功能
 
@@ -52,6 +51,7 @@ ms.locfileid: "63453437"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南。 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022 | 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|  
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
@@ -156,7 +156,7 @@ ms.locfileid: "63453437"
 |11/10/2020|Teams 机器人设计准则 |[机器人设计指南](bots/design/bots.md)|
 |09/30/2020|现在支持在移动设备上向机器人发送和接收文件 |[通过机器人发送和接收文件](resources/bot-v3/bots-files.md)|
 |09/22/2020|Teams 开发入门的新信息 |[生成首个 Teams 应用概述](build-your-first-app/build-first-app-overview.md)|
-|09/18/2020|支持会议内 Teams 应用 (发布预览版) |[在 Teams 会议中为 Teams 会议](apps-in-teams-meetings/create-apps-for-teams-meetings.md) 和 [应用创建应用](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|09/18/2020|支持会议内 Teams 应用 (发布预览版) |[Teams 会议中的应用](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|使用 Microsoft Graph 导入 Teams 消息 |[使用 Microsoft Graph 将第三方平台消息导入 Teams](graph-api/import-messages/import-external-messages-to-teams.md)
 |08/12/2020 |自适应卡片传入 Webhook 中的支持已移至 GA |[使用传入 webhook 发送自适应卡](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|开始使用 Visual Studio 工具包构建 Teams 应用 |[使用 Microsoft Teams 工具包和Visual Studio Code 生成应用](toolkit/visual-studio-overview.md) |

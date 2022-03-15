@@ -86,7 +86,7 @@
       items:
         - name: Teams 工具包概述
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: 新建项目
+        - name: 创建新的 Teams 应用
           href: toolkit/create-new-project.md
         - name: 准备帐户以生成 Teams 应用
           href: toolkit/accounts.md
@@ -283,8 +283,6 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: 统一会议应用
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Teams 会议中应用的先决条件
-      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: 为会议启用和配置应用
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: 会议应用 API 参考
