@@ -42,6 +42,8 @@
       href: concepts/design/planning-checklist.md
     - name: 规划 Teams 移动版的响应式选项卡
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+    - name: 规划将你的应用货币化
+      href: concepts/design/plan-to-monetize.md
 - name: 设计应用
   items:
     - name: 概述
@@ -86,7 +88,7 @@
       items:
         - name: Teams 工具包概述
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: 创建新的 Teams 应用
+        - name: 新建 Teams 应用
           href: toolkit/create-new-project.md
         - name: 准备帐户以生成 Teams 应用
           href: toolkit/accounts.md
@@ -473,16 +475,16 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Microsoft Teams 应用商店排名参数
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
-    - name: 将你的应用货币化
-      items:
-        - name: 概述
-          href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-        - name: 在应用中包含 SaaS 产品/服务
-          href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-        - name: 应用内购买
-          href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-        - name: 针对盈利应用的测试预览
-          href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+- name: 将你的应用货币化
+  items:
+    - name: 概述
+      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+    - name: 在应用中包含 SaaS 产品/服务
+      href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    - name: 应用内购买
+      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    - name: 针对盈利应用的测试预览
+      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: 应用部件清单
   items:
     - name: 应用程序清单架构

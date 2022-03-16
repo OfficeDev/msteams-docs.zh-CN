@@ -1,41 +1,41 @@
 ---
-title: 应用内购买流，用于盈利应用
+title: 用于应用盈利的应用内购买流
 description: 了解在 Teams 应用中实现应用内购买和试用功能所需的基本任务和概念。
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
-localization_priority: Normal
-ms.openlocfilehash: 059322af212641988560853caf3d5a495e36f674
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356467"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501982"
 ---
 # <a name="in-app-purchases"></a>应用内购买
 
-Microsoft Teams API，可用于实现应用内购买，以从免费升级到付费Teams应用。 应用内购买允许你直接从应用内将用户从免费计划转换为付费计划。
+Microsoft Teams 提供可用于实现应用内购买的 API，以从免费升级到付费 Teams 应用。 通过应用内购买，可以直接从应用内将用户从免费计划转换为付费计划。
 
 > [!NOTE]
-> 当前仅在开发人员预览Teams应用的应用内 [**购买**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro)。
+> Teams 应用的应用内购买目前仅在 [**开发人员预览版**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) 中提供。
 
 ## <a name="implement-in-app-purchases"></a>实现应用内购买
 
-若要向应用用户提供应用内购买体验，请确保以下各项：
+如果要向应用的用户提供应用内购买体验，请确保满足以下要求：
 
-* 应用基于客户端 [SDK Teams构建](https://github.com/OfficeDev/microsoft-teams-library-js)。
+* 应用是基于 [Teams 客户端 SDK 库](https://github.com/OfficeDev/microsoft-teams-library-js) 构建的。
 
-* 应用通过可交易 [SaaS 产品/服务启用](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)。
+* 应用是使用可交易的 [SaaS 产品/服务](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) 启用的。
 
-* 使用 [RSC 权限启用应用](#update-manifest)。
+* 应用是通过 [RSC 权限](#update-manifest) 启用的。
 
-* 使用 API 调用 [`openPurchaseExperience` 应用](#purchase-experience-api)。
+* 应用是通过 [`openPurchaseExperience`API](#purchase-experience-api) 调用的。
 
-可通过更新 **manifest.json** 文件或从开发人员门户的权限部分启用显示应用内购买产品/服务来启用应用内 **购买体验**。
+可以通过更新 **manifest.json** 文件或通过从 **开发人员门户** 的 **权限** 部分启用 **显示应用内购买产品/服务** 来启用应用内购买体验。
 
 ### <a name="update-manifest"></a>更新清单
 
-若要启用应用内购买体验，请Teams RSC 权限更新应用清单 **.json** 文件。 它允许你的应用用户升级到应用的付费版本并开始使用新功能。 应用清单的更新如下所示：
+要启用应用内购买体验，请通过添加 RSC 权限来更新 Teams 应用 **manifest.json** 文件。 通过此操作，应用的用户可以升级到应用的付费版本并开始使用新功能。 应用清单的更新如下所示：
 
 ```json
 
@@ -53,9 +53,9 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
 
 ### <a name="purchase-experience-api"></a>购买体验 API
 
-若要触发应用内购买，请从 `openPurchaseExperience` Web 应用调用 API。
+如果要触发应用的应用内购买，请从 Web 应用调用 `openPurchaseExperience` API。
 
-下面是从应用调用 API 的示例：
+以下是从应用调用 API 的示例：
 
 ```json
 <body> 
@@ -84,23 +84,23 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
 
 ## <a name="end-user-in-app-purchasing-experience"></a>最终用户应用内购买体验
 
-以下示例显示用户为名为 *Contoso Tasks* for Teams 虚拟应用程序购买订阅Teams：
+以下示例向用户展示了如何购买名为 *Contoso Tasks for Teams* 的虚构 Teams 应用订阅计划：
 
-1. 在 Teams **应用商店中**，查找并选择该应用。
+1. 在 Teams **应用商店** 中，找到并选择该应用。
 
-1. 在应用详细信息对话框中，选择 **"购买订阅"或** " **为我添加"**。
+1. 在应用详细信息对话框中，选择“**购买订阅**”或“**为我添加**”。
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="购买所选应用的订阅。" border="true":::
 
-1. **"为我添加** "提供应用的免费试用版，稍后 **将其** 升级到付费版本。
+1. “**为我添加**”提供应用的免费试用版，稍后可以将其“**升级**”为付费版本。
 
     :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="升级到所选应用的订阅。" lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
 
-1. 在" **选择订阅计划** "对话框中，选择该计划并选择"签出 **"**。
+1. 在“**选择订阅计划**”对话框中，选择计划，然后选择“**结账**”。
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="选择适当的订阅计划。" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="选择相应的订阅计划。" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
 
-1. 完成交易，然后选择"现在 **配置** "以设置订阅。
+1. 完成交易并选择“**立即配置**”以设置订阅。
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="设置订阅。" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
 
@@ -113,5 +113,5 @@ Microsoft Teams API，可用于实现应用内购买，以从免费升级到付�
 
 ## <a name="see-also"></a>另请参阅
 
-* [将 SaaS 产品与Microsoft Teams一起](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
-* [创建 SaaS 服务 (软件) 服务](include-saas-offer.md#create-your-saas-offer)
+* [Microsoft Teams 应用随附 SaaS 产品/服务](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [创建软件即服务 (SaaS) 产品/服务](include-saas-offer.md#create-your-saas-offer)
