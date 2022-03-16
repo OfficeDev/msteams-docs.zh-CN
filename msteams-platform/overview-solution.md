@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: bb05bc85c4b070870a88d8c71cb80e4d7ef4390c
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: d93e27c7180938a7329eec94ff54a9988b851430
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398720"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501961"
 ---
 # <a name="the-teams-solution"></a>Teams 解决方案
 
@@ -74,7 +74,7 @@ Teams 应用为用户带去协作工作区的优势。
 1. 通过 Microsoft Graph 添加更多 Teams 功能和 M365 数据来扩展功能。
 1. 使用示例用户数据在开发人员租户上测试应用。
 1. 将应用部署到 Azure。
-1. 使用开发人员门户管理应用，并将应用发布到应用商店。
+1. 使用开发人员门户管理应用，并将应用发布到应用商店。 通过 SaaS 产品/服务、应用内购买等选项实现应用盈利。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -161,6 +161,18 @@ Teams 应用为用户带去协作工作区的优势。
 
         > [!div class="nextstepaction"]
         > [分发应用](~/concepts/deploy-and-publish/apps-publish-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **将你的应用货币化**
+    :::column-end:::
+    :::column span="2":::
+        Teams 应用商店提供应用盈利选项，例如 SaaS 产品/服务和应用内购买。 选择适合你的 Teams 应用的最佳盈利选项。
+
+        > [!div class="nextstepaction"]
+        > [将你的应用货币化](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
     :::column-end:::
 :::row-end:::
 
