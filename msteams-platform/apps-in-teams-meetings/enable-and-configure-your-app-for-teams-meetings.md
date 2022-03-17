@@ -4,12 +4,12 @@ author: surbhigupta
 description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 0211cb1458b13a0727fce9915d1a50d227ed1a53
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: eaa3e17c2045383307949f031d20723f3d420510
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464357"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558836"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
@@ -183,8 +183,6 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 若要共享要阶段的应用的特定部分，必须在客户端 SDK 库中调用Teams API。 有关详细信息，请参阅 [API 参考](API-references.md)。
-
-如果希望你的应用支持匿名用户，初始调用请求有效负载必须依赖于 `from.id` 对象中的 `from` 请求元数据，而不是 `from.aadObjectId` 请求元数据。 `from.id`是用户 ID，`from.aadObjectId`Azure AD ID。 有关详细信息，请参阅在 [选项卡中使用任务模块](../task-modules-and-cards/task-modules/task-modules-tabs.md) 以及 [创建和发送任务模块](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会议后
 

@@ -1,20 +1,20 @@
 ---
-title: 创建合作伙伴中心开发人员帐户
-description: 用于创建将应用发布到应用商店的合作伙伴中心开发人员帐户的Microsoft Teams常见问题。
+title: 创建合作伙伴中心开发者帐户
+description: 常见问题解答：创建合作伙伴中心开发者帐户，以便将应用发布到 Microsoft Teams 商店。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.localizationpriority: none
-ms.openlocfilehash: 1d4fc957eb8511e9da2b3ebacd3a6b025e048e78
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 6e348cc0db5c9b197b985b144105924c2c40669a
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453549"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501912"
 ---
-# <a name="create-a-partner-center-developer-account"></a>创建合作伙伴中心开发人员帐户
+# <a name="create-a-partner-center-developer-account"></a>创建合作伙伴中心开发者帐户
 
-若要将应用发布到 Microsoft Teams 应用商店，你必须[设置合作伙伴中心开发人员帐户](/office/dev/store/open-a-developer-account)。 根据你的方案，你或许可以使用现有帐户。
+若要将应用发布到 Microsoft Teams 商店，你必须[开设合作伙伴中心开发者帐户](/office/dev/store/open-a-developer-account)。 根据你的具体情形，你或许可以使用现有帐户。
 
 ## <a name="faq"></a>常见问题
 
@@ -28,8 +28,8 @@ ms.locfileid: "63453549"
 
 可以通过以下方法之一创建合作伙伴中心帐户：
 
-* 如果你是合作伙伴中心的新用户，并且没有 Microsoft 网络帐户，则使用合作伙伴中心注册 [页面创建一个帐户](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)。
-* 如果你已在 Microsoft 合作伙伴网络中注册，则使用现有 Microsoft 合作伙伴中心注册直接从合作伙伴中心 [创建帐户](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
+* 如果你不熟悉合作伙伴中心且没有 Microsoft 网络帐户，请[使用合作伙伴中心的注册页面创建一个帐户](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)。
+* 如果你已在 Microsoft 合作伙伴网络中注册，则可以[直接使用现有的 Microsoft 合作伙伴中心注册信息在合作伙伴中心创建帐户](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
 
 <br>
 
@@ -37,14 +37,14 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>如果我在合作伙伴中心中找不到我的帐户，如何？</b></summary>
+<summary><b>如果在合作伙伴中心内找不到自己的帐户，该怎么办？</b></summary>
 
-打开合作伙伴 [中心支持票证](https://partner.microsoft.com/support/v2/?stage=1) 并选择以下选项：
+开启一个[合作伙伴中心支持票证](https://partner.microsoft.com/support/v2/?stage=1)，并选择以下选项：
 
 | 菜单 | 选项 |
 | -------   | -------  |
 |类别| 商业市场|
-| 主题 | 一般市场帮助和帮助问题 |
+| 主题 | 常规市场帮助和操作方法问题 |
 | 子标题| Office 加载项 |
 
 <br>
@@ -53,19 +53,9 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>在哪里可以获取对合作伙伴中心帐户问题的支持？</b></summary>
+<summary><b>在哪里可以获取有关合作伙伴中心帐户问题的支持？</b></summary>
 
-访问 [发布者支持页面](https://aka.ms/marketplacepublishersupport) 以搜索你的问题。 如果指南没有帮助，请创建合作伙伴 [中心支持票证](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>如何在合作伙伴中心Office我的应用商店帐户？</b></summary>
-
-有关 [信息，请参阅通过合作伙伴中心](/office/dev/store/manage-account-settings-and-profile) 管理你的帐户。
+请访问[发布者支持页面](https://aka.ms/marketplacepublishersupport)，以搜索你的问题。 如果相应指南无法提供帮助，请创建[合作伙伴中心支持票证](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
 
 <br>
 
@@ -73,19 +63,9 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>我的电话号码没有区号，那么如何将其添加到我的配置文件中？</b></summary>
+<summary><b>如何在合作伙伴中心内管理我的 Office 应用商店帐户？</b></summary>
 
-电话号码由三部分组成：国家/地区代码、区号和电话号码。 如果您的电话号码不包含区号，请保留第二个框为空并填写第三个框。
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>如何在合作伙伴中心管理我的帐户设置和合作伙伴配置文件？</b></summary>
-
-有关 [信息，请参阅管理帐户设置](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) 和配置文件信息。
+请参阅[通过合作伙伴中心管理你的帐户](/office/dev/store/manage-account-settings-and-profile)，了解相关信息。
 
 <br>
 
@@ -93,9 +73,29 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>为什么在尝试提交我的应用时会看到"此帐户不符合发布条件"消息？</b></summary>
+<summary><b>我的电话号码没有区号，那么如何才能将其添加到我的个人资料中？</b></summary>
 
-由于帐户验证状态为"挂起" [，因此收到](/partner-center/verification-responses) 此错误消息。 在合作伙伴中心仪表板中检查 [状态](https://partner.microsoft.com/dashboard)。 选择"**设置** 齿轮"图标，然后选择">**帐户>帐户设置"**。
+电话号码由三部分组成：国家/地区代码、区号和电话号码。 如果您的电话号码不包含区号，请将第二个框留空并填写第三个框。
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>如何在合作伙伴中心内管理我的帐户设置和合作伙伴个人资料？</b></summary>
+
+请参阅[管理帐户设置和个人资料信息](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info)，了解相关信息。
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>我为什么会在尝试提交我的应用时看到“此帐户不符合发布条件”消息？</b></summary>
+
+你收到此错误消息是因为[帐户的验证状态](/partner-center/verification-responses)为待验证。 请在合作伙伴中心的[仪表板](https://partner.microsoft.com/dashboard)中检查帐户状态。 选择“**设置**”齿轮图标，然后依次选择 **“开发者设置”>“帐户”>“帐户设置”**。
 
 ![合作伙伴中心验证状态](~/assets/images/partner-center-verification-status.png)
 
@@ -105,13 +105,13 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>合作伙伴中心帐户验证过程中经过哪些验证？</b></summary>
+<summary><b>合作伙伴中心的帐户验证过程会验证哪些内容？</b></summary>
 
-有三个验证领域：**电子邮件所有权****、雇佣** 关系 **和业务**。 有关详细信息，请参阅 [验证了哪些信息以及如何响应](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
+有三个验证领域：**电子邮件所有权**、**雇佣关系** 和 **企业** 验证。 有关详细信息，请参阅[验证的内容和相应方式](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
 
-如果你是主要联系人、全局管理员或帐户管理员，可以在配置文件页面上监视验证状态和跟踪进度。
+如果你是主要联系人、全局管理员或帐户管理员，可以在个人资料页面上监视验证状态并跟踪进度。
 
-验证过程完成后，配置文件页上的注册状态 *会从"* 挂起"更改为"已 *授权"*。 然后，主要联系人将在几天内收到来自 Microsoft 的电子邮件。
+验证过程完成后，个人资料页面上的注册状态会从“*待验证*”更改为“*已授权*”。 然后，主要联系人会在几个工作日内收到来自 Microsoft 的电子邮件。
 
 <br>
 
@@ -119,15 +119,15 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>我的帐户验证状态未超出电子邮件所有权。如何继续？</b></summary>
+<summary><b>我的帐户验证状态未能涵盖电子邮件所有权。该如何继续？</b></summary>
 
-在 **电子邮件所有权验证** 过程中，会向主要联系人发送验证电子邮件。 检查主要联系人收件箱中是否收到电子邮件 maccount@microsoft.com  主题行"需要操作：使用 **Microsoft** 验证电子邮件帐户并完成电子邮件验证过程"。 验证电子邮件将发送到合作伙伴中心帐户设置中列出的地址。
+在 **电子邮件所有权** 验证过程中，系统会向主要联系人发送验证电子邮件。 检查主要联系人的收件箱中是否有来自 **maccount@microsoft.com** 且主题行为“**所需操作：验证你的 Microsoft 电子邮件帐户**”的电子邮件，并完成电子邮件验证过程。 验证电子邮件将发送到合作伙伴中心帐户设置上列出的地址。
 
-请记住有关电子邮件验证过程的以下事项：
+请注意有关电子邮件验证过程的以下事项：
 
 * 电子邮件验证链接的有效期只有七天。
-* 可以通过访问合作伙伴配置文件页面并选择"重新发送验证电子邮件"链接，请求重新 **发送电子邮件** 。
-* 为了确保您收到电子邮件，安全列表 **microsoft.com** 安全域并检查垃圾邮件文件夹。
+* 可以请求重新发送该电子邮件，操作方法为：访问合作伙伴个人资料页面并选择“**重新发送验证电子邮件**”链接。
+* 为了确保收到该电子邮件，请在安全列表中将 **microsoft.com** 列为安全域并检查垃圾邮件文件夹。
 
 <br>
 
@@ -135,15 +135,15 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>我检查了邮件文件夹，尚未收到验证电子邮件。接下来我该怎么办？</b></summary>
+<summary><b>我检查了邮件文件夹，但未收到验证电子邮件。接下来我该怎么办？</b></summary>
 
 请尝试执行以下操作：
 
-* 检查垃圾邮件或垃圾邮件文件夹。
-* 清除浏览器缓存，转到你的合作伙伴中心帐户仪表板，然后选择 **重新发送验证电子邮件**。
-* 尝试从其他 **浏览器访问"重新发送** 验证电子邮件"链接。
-* 与 IT 部门合作，确保您的电子邮件服务器不会阻止验证电子邮件。
-* 调整服务器的垃圾邮件筛选器，以允许或安全列出来自 **maccount@microsoft.com。**
+* 检查垃圾邮件文件夹。
+* 清除浏览器缓存，转到你的合作伙伴中心帐户仪表板，然后选择“**重新发送验证电子邮件**”。
+* 尝试从其他浏览器访问“**重新发送验证电子邮件**”链接。
+* 与 IT 部门合作，确保电子邮件服务器不会阻止验证电子邮件。
+* 调整服务器的垃圾邮件筛选器，以允许来自 **maccount@microsoft.com** 的所有邮件或将其置于安全列表中。
 
 <br>
 
@@ -151,19 +151,9 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>雇佣验证过程通常需要多久？</b></summary>
+<summary><b>雇佣关系验证过程通常需要多长时间？</b></summary>
 
-如果所有提交的详细信息都正确，则雇佣验证过程需要大约两个小时才能完成。
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>业务验证过程通常需要多久？</b></summary>
-
-如果提交所有所需的文档，则业务验证需要一到两个工作日才能完成。
+如果提交的所有详细信息都正确无误，则完成雇佣关系验证过程需要大约两个小时。
 
 <br>
 
@@ -171,9 +161,9 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>如果我联系支持团队，我的票证是否将被加速？</b></summary>
+<summary><b>企业验证过程通常需要多长时间？</b></summary>
 
-支持票证在一周内解决。 检查发送到你在创建支持票证时提供的电子邮件的更新。
+如果提交了需要的所有文档，则完成企业验证需要一到两个工作日的时间。
 
 <br>
 
@@ -181,15 +171,25 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>我创建了一个支持票证，但在七个工作日后未收到更新。在哪里可以获取帮助？</b></summary>
+<summary><b>如果我联系支持团队，我的票证能否获得加急处理？</b></summary>
 
-将电子邮件发送到 <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> 详细信息：
+支持票证将在一周内获得解决。 请适时检查你在创建支持票证时提供的电子邮件地址，看看是否有更新。
 
-* **主题行**：应用名称的合作伙伴 *中心帐户问题*。
+<br>
+
+</details>
+
+<details>
+
+<summary><b>我创建了一个支持票证，但未在七个工作日内收到更新。我在哪里可以获取帮助？</b></summary>
+
+请向 <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> 发送一封电子邮件，提供以下详细信息：
+
+* **主题行**：有关 *应用名称* 的合作伙伴中心帐户问题。
 * **电子邮件正文**：
   * 支持票证编号。
   * 卖家 ID。
-  * 如果可能，问题 (屏幕截图) 。
+  * 问题的屏幕截图（如果可能）。
 
 <br>
 
@@ -197,11 +197,11 @@ ms.locfileid: "63453549"
 
 <details>
 
-<summary><b>在哪里可以转到合作伙伴中心帮助？</b></summary>
+<summary><b>我还可以在何处寻求合作伙伴中心帮助？</b></summary>
 
-以下资源还可以提供帮助：
+以下资源也可以提供帮助：
 
-* [Microsoft 365提交常见问题解答](/office/dev/store/appsource-submission-faq)。
+* [Microsoft 365 应用提交常见问题解答](/office/dev/store/appsource-submission-faq)。
 * [商业市场文档](/azure/marketplace/)。
 
 <br>

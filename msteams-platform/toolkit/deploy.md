@@ -1,17 +1,17 @@
 ---
 title: 部署到云
 author: MuyangAmigo
-description: 部署到云
+description: 将应用部署到云、Azure 或 SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9c15d145fb4f37073342edc9bb8d07f2fe0b53e6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452548"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558815"
 ---
 # <a name="deploy-to-the-cloud"></a>部署到云
 
@@ -55,4 +55,4 @@ Teams Toolkit帮助你将应用程序中的前端和后端代码部署或上载�
 * [添加更多Teams应用功能](add-capability.md)
 * [使用 CI/CD 管道部署项目代码](use-CICD-template.md)
 * [管理多个环境](TeamsFx-multi-env.md)
-* [与其他开发人员协作处理Teams项目](TeamsFx-collaboration.md)
+* [在 Teams 项目中与其他开发人员协作](TeamsFx-collaboration.md)

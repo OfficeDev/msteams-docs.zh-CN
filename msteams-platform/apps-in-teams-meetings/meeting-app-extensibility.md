@@ -4,12 +4,12 @@ author: surbhigupta
 description: 了解会议生命周期、在桌面和移动环境中构建用户在整个会议生命周期中的会议体验、参与者角色和用户类型。 此外，了解如何在会议生命周期中集成机器人和消息传递扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: cfcd21d17bffcb1ec8eb172fe7e296a7a8fd6e69
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466476"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558843"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -24,6 +24,9 @@ Teams统一会议应用基于以下概念：
 ## <a name="meeting-lifecycle"></a>会议生命周期
 
 会议生命周期包括会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和消息传递扩展。
+
+> [!NOTE]
+> Web 客户端支持会议扩展，如机器人、卡、邮件扩展和邮件操作。 但是，选项卡、内容气泡和共享到阶段的托管体验目前并不完全受支持。
 
 ### <a name="integrate-tabs-into-the-meeting-lifecycle"></a>将选项卡集成到会议生命周期
 
@@ -114,7 +117,7 @@ Teams统一会议应用基于以下概念：
 
 ---
 
-下表介绍了应用在验证和未验证时的行为：
+下表介绍了应用在经过验证和未验证时的行为：
 
 |应用功能 | 验证应用 | 应用未验证 |
 |---|---|---|
@@ -143,7 +146,7 @@ Teams统一会议应用基于以下概念：
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>将机器人集成到会议生命周期
 
-在群聊范围内启用的聊天机器人开始在会议中运行。 若要实现机器人，请首先[构建自动](../build-your-first-app/build-bot.md)程序，然后继续[创建用于](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)会议Teams应用。
+在群聊范围中启用的聊天机器人开始在会议中运行。 若要实现机器人，请首先[构建自动](../build-your-first-app/build-bot.md)程序，然后继续[创建用于](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)会议Teams应用。
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>将消息传递扩展集成到会议生命周期
 
@@ -158,8 +161,14 @@ Teams统一会议应用基于以下概念：
 默认参与者设置由组织的 IT 管理员确定。 以下是会议中的参与者角色：
 
 * **组织者**：组织者安排会议、设置会议选项、分配会议角色和启动会议。 拥有Microsoft 365和Teams的用户只能是组织者，并且只能控制与会者权限。 会议组织者可以更改特定会议的设置。 组织者可以在"会议选项" **网页上进行** 这些更改。
+
 * **演示** 者：演示者具有组织者的相同功能，但排除在一起。 演示者无法从会话中删除组织者或修改会话的会议选项。 默认情况下，加入会议的参与者具有演示者角色。
-* **与会者**：与会者是受邀参加会议的用户。 但与会者无权担任演示者。 与会者可以与其他会议成员交互，但不能管理任何会议设置或共享内容。
+
+* **与会者**：与会者是受邀参加会议的用户。 与会者在会议期间的功能有限，例如：
+  * 他们可以与其他会议成员交互，但不能管理任何会议设置或共享内容。  
+  * 他们可以在会议阶段查看选项卡应用或与之交互，而无需安装该应用或没有任何应用权利。
+  * 他们无法在没有应用权利的情况下在侧面板中查看应用或与之交互。
+  * 他们无权担任演示者。
 
 > [!NOTE]
 > 只有组织者或演示者才能添加、删除或卸载应用。
