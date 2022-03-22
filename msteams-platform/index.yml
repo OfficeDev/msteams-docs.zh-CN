@@ -19,7 +19,7 @@ highlightedContent:
     - title: "新开发Teams？ \U0001F680从这里开始！"
       itemType: get-started
       url: /microsoftteams/platform/get-started/get-started-overview
-    - title: 规划应用
+    - title: 计划应用
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
     - title: 设计应用
@@ -31,7 +31,7 @@ highlightedContent:
     - title: 使用 Microsoft Graph 增强Graph
       itemType: how-to-guide
       url: /graph/teams-concept-overview
-    - title: 将应用发布到应用商店Teams应用商店
+    - title: 将应用发布到 Teams 应用商店
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: 代码示例
@@ -59,10 +59,10 @@ conceptualContent:
           text: 使用任务模块收集输入和收集信息
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: 连接 Web 服务通过 Webhook 和 Office 365 连接器将 Web 服务Office 365团队
+          text: 连接 Web 服务通过 Webhook 和 Office 365 连接器将 Web 服务连接到频道和团队
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
-          text: 跨Teams扩展 Microsoft 365
+          text: 跨 Microsoft 365 扩展 Teams 应用
     - title: 功能
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs
@@ -76,7 +76,7 @@ conceptualContent:
           text: 消息传递扩展
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
-          text: 会议Teams应用程序
+          text: Teams 会议应用
         - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: 卡片和任务模块
@@ -87,13 +87,13 @@ conceptualContent:
       links:
         - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
           itemType: concept
-          text: 通过可交易Teams SaaS 产品来盈利你的应用
+          text: 使用可交易的 SaaS 产品/服务使 Teams 应用盈利
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: 用户身份验证和 SSO
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
-          text: 使用 Microsoft Power Platform Teams应用、机器人和流构建低代码
+          text: 使用 Microsoft Power Platform Teams应用、机器人和流生成低代码
         - url: 'https://dev.teams.microsoft.com/home'
           itemType: reference
           text: Teams 开发人员门户
@@ -103,7 +103,7 @@ conceptualContent:
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
           text: 生成应用Teams方案
-        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+        - url: 'https://developer.microsoft.com/microsoft-teams/app-development-resources'
           itemType: reference
           text: 应用方案Teams最佳做法
     - title: 集成
@@ -113,7 +113,7 @@ conceptualContent:
           text: 集成聊天Power Virtual Agents聊天机器人
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
-          text: 为网站集成"Teams"按钮
+          text: 为网站集成Teams"共享到网站"按钮
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
           text: 将Teams选项卡与SharePoint
@@ -134,7 +134,7 @@ conceptualContent:
         - url: 'https://aka.ms/microsoftteamscommunitycall'
           itemType: overview
           text: Microsoft Teams社区通话
-        - url: 'https://docs.microsoft.com/en-us/teamblog/'
+        - url: 'https://docs.microsoft.com/teamblog/'
           itemType: whats-new
           text: 公告
         - url: /microsoftteams/platform/feedback
@@ -151,7 +151,7 @@ conceptualContent:
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: IT 专业人员
-        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+        - url: 'https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b'
           itemType: concept
           text: 最终用户
 tools:

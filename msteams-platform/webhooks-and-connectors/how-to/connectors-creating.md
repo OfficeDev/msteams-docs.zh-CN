@@ -6,12 +6,12 @@ keywords: teams Office365 连接器
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: bc3a2ff1dc039c04e7ba809b6b63dcdcb62a4e66
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: 42288d757a12c6e31de612f19a5556a283cf3e98
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492979"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674934"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -223,7 +223,7 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-有关 PowerShell 模块交换功能详细信息，请参阅 [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)。 若要启用或禁用Outlook连接器，[请将应用连接到 Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)。
+有关 PowerShell 模块交换功能详细信息，请参阅 [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)。 若要启用或禁用Outlook连接器，[请将应用连接到 Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab)。
 
 ## <a name="test-your-connector"></a>测试连接器
 
@@ -262,8 +262,8 @@ PowerShell V2 模块Exchange Online新式验证，并且适用于多重身份验
 
 ## <a name="distribute-webhook-and-connector"></a>分发 Webhook 和连接器
 
-1. [直接为团队设置传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) 。
-1. 添加配置[页，](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience)[在连接器中](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization)发布Office 365 Webhook。
+1. [直接为团队设置传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) 。
+1. 添加配置[页，](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)[在连接器中](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization)发布Office 365 Webhook。
 1. 将连接器打包并发布为 [AppSource 提交的一](~/concepts/deploy-and-publish/office-store-guidance.md) 部分。
 
 ## <a name="code-sample"></a>代码示例

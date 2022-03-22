@@ -4,12 +4,12 @@ description: Microsoft Teams 开发人员文档术语表
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发人员定义
-ms.openlocfilehash: dc29c40cfa79f267e2fde866974badc97d1900b7
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: bbfb59d2dec2f72bb94aae1b241554ebc5de3211
+ms.sourcegitcommit: 2863b7537f414517c0fe751f135b39978eb749bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466560"
+ms.lasthandoff: 03/18/2022
+ms.locfileid: "63625996"
 ---
 # <a name="glossary"></a>术语表
 
@@ -188,6 +188,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [Teams 工具包](../toolkit/teams-toolkit-fundamentals.md) | 借助 Microsoft Teams 工具包，可以直接在 Visual Studio Code 环境中创建自定义 Teams 应用程序。  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx 是基于文本的命令行接口，可加速 Teams 应用程序开发。也称为 TeamsFx CLI。|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK 是使用 TeamsFx 工具包或 CLI 在基架项目中预配置的。 |
+| [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK 使你能够在 Teams 中创建托管体验。 [最新版本](~/m365-apps/using-teams-client-sdk-preview.md)中的功能可扩展 Teams 应用以在 Outlook 和 Office 中运行。 |
 | [Teams 移动](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams 作为移动应用提供。 |
 | [Teams 应用商店](../concepts/deploy-and-publish/appsource/publish.md) | 一个应用商店登陆页面，可在一个位置向用户提供应用。 应用按使用情况、行业等进行分类。 应用必须遵循应用商店验证准则并获得批准，然后才能通过 Teams 应用商店向用户提供。  <br>**另请参阅**：[应用商店验证准则](#s) |
 | [Teams 工作台](../sbs-gs-spfx.yml) | Visual Studio Code 中的工作台，用于使用 SPFx 和 Teams 工具包创建的 Teams 应用的编译。 <br>**另请参阅**：[工作台](#w)；[本地工作台](#l) |

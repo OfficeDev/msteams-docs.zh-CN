@@ -6,18 +6,18 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: adf168daf1e85370324f114e8dc74b509d9fd9c2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453570"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674990"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>使用Teams Toolkit预配云资源
 
 TeamsFx 与 Azure 和 Microsoft 365 集成，这允许你使用单个命令将应用程序放置到 Azure 中。 TeamsFx 与 Azure 资源管理器集成，使你能够预配 Azure 资源，应用程序需要这些资源进行代码方法。  
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
 
 * 帐户先决条件 若要预配云资源，你必须具有以下帐户：
 
@@ -33,7 +33,7 @@ TeamsFx 与 Azure 和 Microsoft 365 集成，这允许你使用单个命令将�
 
 预配通过单个命令在 Teams Toolkit Visual Studio Code TeamsFx CLI 中执行，如下所示：
 
-[预配基于 Azure 的应用](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
+[预配基于 Azure 的应用](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 
 ## <a name="resource-creation"></a>资源创建
 
@@ -137,14 +137,14 @@ Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 
 | simpleAuthWebAppName | ${resourceBaseName}simpleAuth | 简单身份验证 Web 应用的名称 | 2-60 个字母数字和连字符 <br /> 不能以连字符开始或结束 |
 | simpleAuthSku | F1 | 简单身份验证应用服务计划的 SKU | 不适用 |
 | frontendHostingStorageName | ${resourceBaseName}选项卡 | 前端托管存储帐户的名称 | 3-24 个小写字母和数字 |
-| frontendHostingStorageSku | Standard_LRS | 前端托管存储帐户的 SKU |[可用的 SKUS](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch)|
+| frontendHostingStorageSku | Standard_LRS | 前端托管存储帐户的 SKU |[可用的 SKUS](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep)|
 | functionServerfarmsName | ${resourceBaseName}api | 函数应用服务计划的名称 | 1-40 个字母数字和连字符 |
 | functionServerfarmsSku | Y1 | 函数应用服务计划的 SKU | 不适用|
 | functionAppName | ${resourceBaseName}api | 函数应用的名称 | 2-60 个字母数字和连字符 <br /> 不能以连字符开始或结束 |
 | functionStorageName | ${resourceBaseName}api | 函数应用的存储帐户的名称 | 3-24 个小写字母和数字 |
-| functionStorageSku | Standard_LRS | 函数应用存储帐户的 SKU | [可用的 SKUS](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch=pr-en-us-4713) |
+| functionStorageSku | Standard_LRS | 函数应用存储帐户的 SKU | [可用的 SKUS](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep) |
 | botServiceName | ${resourceBaseName} | Azure 自动程序服务的名称 | 2-64 个字母数字、下划线、句点和连字符 <br /> 从字母数字开始 |
-| botServiceSku | F0 | Azure 自动程序服务的 SKU | [可用的 SKUS](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep&branch) |
+| botServiceSku | F0 | Azure 自动程序服务的 SKU | [可用的 SKUS](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep) |
 | botDisplayName | ${resourceBaseName} | 自动程序显示名称 | 1-42 个字符 |
 | botServerfarmsName | ${resourceBaseName}bot | 机器人的应用服务计划的名称 | 1-40 个字母数字和连字符 |
 | botWebAppName | ${resourceBaseName}bot | 机器人 Web 应用的名称 | 2-60 个字母数字和连字符 <br /> 不能以连字符开始或结束 |
@@ -154,7 +154,7 @@ Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 
 | sqlDatabaseName | ${resourceBaseName} | Azure SQL数据库的名称 | 1-128 个字符，不能用于 <>*%&：\/？ 或控制字符 <br /> 不能以时间段或空格结尾 |
 | sqlDatabaseSku | 基本 | Azure SQL 数据库的 SKU | 不适用  |
 | apimServiceName | ${resourceBaseName} | APIM 服务的名称 | 1-50 个字母数字和连字符 <br /> 从字母开始，以字母数字结尾 |
-| apimServiceSku | 消耗 | APIM 服务的 SKU | [可用的 SKUS](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch) |
+| apimServiceSku | 消耗 | APIM 服务的 SKU | [可用的 SKUS](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | APIM 产品的名称 | 1-80 个字母数字和连字符 <br /> 从字母开始，以字母数字结尾 |
 | apimOauthServerName | ${resourceBaseName} | APIM OAuth 服务器的名称 | 1-80 个字母数字和连字符 <br /> 从字母开始，以字母数字结尾 |
 | keyVaultSkuName | standard | Azure 密钥保管库服务的 SKU 名称| |
@@ -197,10 +197,10 @@ Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 
 
 #### <a name="customize-arm-template-files"></a>自定义ARM模板文件
 
-如果预定义模板不符合应用程序要求，可以自定义文件夹ARM模板 `templates/azure` 。 例如，你可以自定义ARM模板，为你的应用创建一些额外的 Azure 资源。 你需要具有 bicep 语言的基本知识，该语言用于创作ARM模板。 你可以从 bicep 文档[开始。](/azure/azure-resource-manager/bicep/?branch)
+如果预定义模板不符合应用程序要求，可以自定义文件夹ARM模板 `templates/azure` 。 例如，你可以自定义ARM模板，为你的应用创建一些额外的 Azure 资源。 你需要具有 bicep 语言的基本知识，该语言用于创作ARM模板。 你可以从 bicep 文档[开始。](/azure/azure-resource-manager/bicep/)
 
 > [!NOTE]
-> 该ARM模板由所有环境共享。 如果预配 [行为因](/azure/azure-resource-manager/bicep/conditional-resource-deployment?branch) 环境而异，可以使用条件部署。
+> 该ARM模板由所有环境共享。 如果预配 [行为因](/azure/azure-resource-manager/bicep/conditional-resource-deployment) 环境而异，可以使用条件部署。
 
 若要确保 TeamsFx 工具正常工作，请确保自定义ARM模板，这满足以下要求。 如果使用其他工具进行进一步开发，可以忽略这些要求。
 
@@ -353,7 +353,7 @@ Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 
 
 <summary><b>如何预配基于 sharepoint 的应用程序？</b></summary>
 
-你可以遵循[基于SharePoint应用的预配](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)。
+你可以遵循[基于SharePoint应用的预配](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4)。
 
 > [!NOTE]
 > 目前，Teams sharepoint 框架和 Teams Toolkit 构建的应用程序没有与 Azure 的直接集成，文档内容不适用于基于 SPFx 的应用。
@@ -366,4 +366,4 @@ Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 
 
 * [将 Teams 应用部署到云](deploy.md)
 * [管理多个环境](TeamsFx-multi-env.md)
-* [与其他开发人员协作处理Teams项目](TeamsFx-collaboration.md)
+* [在 Teams 项目中与其他开发人员协作](TeamsFx-collaboration.md)

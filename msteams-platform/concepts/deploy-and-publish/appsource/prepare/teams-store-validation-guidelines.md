@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 8999f6005775c4719de3f1e91ae26fa43ce7cb27
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501926"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674976"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -425,7 +425,8 @@ Teams 应用清单定义应用的配置。
 ## <a name="apps-linked-to-saas-offer"></a>链接到 SaaS 产品/服务的应用
 
 * ISV 必须支持相同租户中的多个用户 (订阅者) 管理自己的订阅，并将许可证分配给租户中的用户。
-* 产品/服务必须满足链接到 SaaS 产品/服务的 Teams 应用的所有[技术要求](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759)。
+*
+ 产品/服务必须满足链接到 SaaS 产品/服务的 Teams 应用的所有[技术要求](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer)。
 * 链接到 SaaS 产品/服务的 Teams 应用必须满足[1000 服务型软件 (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas) 中定义的所有要求。
 * 清单文件中提到的 `subscriptionOffer` 详细信息必须正确。 在应用清单中，使用值 `publisherId.offerId` 添加或更新节点 `subscriptionOffer`。 例如，如果你的发布者 ID 是 `contoso1234`，并且你的产品/服务 ID 是 `offer01`，你在应用清单中指定的值必须是 `contoso1234.offer01`。
 * 链接到 SaaS 产品/服务的 Teams 应用必须在 AppSource 中已推出，并且不接受预览产品/服务通过应用商店批准。
@@ -452,8 +453,8 @@ Teams 应用清单定义应用的配置。
 ### <a name="usability-and-functionality"></a>可用性和功能  
 
 * 成功购买和分配许可证后，必须提供以下内容：
-  * 用户订阅计划功能的访问权限。
-  * 用户订阅计划的价值增加和显著优势。
+* 用户订阅计划功能的访问权限。
+* 用户订阅计划的价值增加和显著优势。
 * 从 Teams 应用中，提供指向 SaaS 应用程序主页的链接，以便订阅者将来管理许可证。
 
 ### <a name="configure-and-test-saas-application"></a>配置和测试 SaaS 应用程序

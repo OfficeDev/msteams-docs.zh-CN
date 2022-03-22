@@ -4,12 +4,12 @@ keywords: teams 应用功能权限 设备本机扫描 qr 条形码图像音频�
 description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能，例如扫描 qr、条形码、图像、音频、视频功能
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9d06cebaac7c3e0ff5938cd3c21dda306c8b1e45
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3cb15e82101be7df9f90c94928fa91ae570c14d5
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398713"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674962"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>请求应用的设备Microsoft Teams权限
 
@@ -33,7 +33,6 @@ ms.locfileid: "63398713"
 * 使用用户的位置信息显示相关信息。
 
 > [!NOTE]
->
 > * 目前Teams不支持多窗口应用、选项卡和会议侧面板的设备权限。
 > * 设备权限在浏览器中不同。 有关详细信息，请参阅 [浏览器设备权限](browser-device-permissions.md)。
 

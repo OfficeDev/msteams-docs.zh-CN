@@ -4,12 +4,12 @@ description: 介绍 Teams 中机器人可用的所有卡片和卡片操作
 ms.localizationpriority: high
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399378"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558824"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -130,7 +130,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 ### <a name="example-of-adaptive-card"></a>自适应卡片示例
 
-![自适应卡片示例](~/assets/images/cards/adaptivecard.png)
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="自适应卡片示例" border="true":::
 
 以下代码演示自适应卡片的示例:
 
@@ -273,6 +273,8 @@ Bot Framework 参考:
 
 * [自适应卡片节点](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [自适应卡 C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+
+要详细了解自适应卡片，请参阅 [自适应卡片](/adaptive-cards/)。
 
 现在可以使用主图卡，这是一种多用途卡，用于直观地突出显示潜在的用户选择。
 

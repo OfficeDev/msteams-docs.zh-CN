@@ -4,12 +4,12 @@ description: 了解如何使用代码示例调用和消除任务模块、任务�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d25847b0be86822f15c9443c28907031b98fea
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 84cca74d6e81dce9bbcd7637b5d0b6537524d831
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399329"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674724"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>调用和关闭任务模块
 
@@ -208,7 +208,7 @@ YouTube 提供在网页上嵌入视频的能力。 使用简单的存根网页�
 
 对于基于 HTML 或 JavaScript 的任务模块，必须确保应用的任务模块可以与键盘一同使用。 屏幕阅读器程序还取决于使用键盘进行导航的能力。 这包括以下两项：
 
-* 使用 [HTML 标记中的 tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) 属性控制可以聚焦的元素。 另外，使用 tabindex 属性确定它通常使用 <kbd>Tab</kbd> 键和 <kbd>Shift-Tab</kbd> 键参与顺序键盘导航的地方。
+* 使用 [HTML 标记中的 tabindex](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) 属性控制可以聚焦的元素。 另外，使用 tabindex 属性确定它通常使用 <kbd>Tab</kbd> 键和 <kbd>Shift-Tab</kbd> 键参与顺序键盘导航的地方。
 * 在 <kbd>JavaScript</kbd> 中为任务模块处理 Esc 键。 以下代码提供了如何处理 <kbd>Esc</kbd> 键的示例：
 
     ```javascript
