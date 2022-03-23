@@ -4,12 +4,12 @@ description: 了解你的 Microsoft Teams 应用如何使用语音和视频与�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼叫音频视频 IVR 语音联机会议实时媒体流机器人
-ms.openlocfilehash: a0172bff6487da25ff7d482a24fa797f97b049b6
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 2339431e6643d9ecf986b7a327f5fb7ee764fa00
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398671"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727630"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
 
@@ -31,13 +31,13 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
 以下核心概念、术语和约定指导你使用呼叫和联机会议机器人：
 
-* 音频或视频呼叫
+* 音频或视频通话
 * 呼叫类型
 * 信号
 * 呼叫和联机会议
 * 实时媒体
 
-### <a name="audio-or-video-calls"></a>音频或视频呼叫
+### <a name="audio-or-video-calls"></a>音频或视频通话
 
 呼叫Teams可以是纯音频或音频和视频。 使用术语呼叫代替音频或视频呼叫。
 
@@ -93,7 +93,6 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 | **示例名称** | **说明** | **Graph** |
 |---------------|----------|--------|
 | Graph通信 | Graph与 Microsoft 的通信平台进行交互。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
-| 通话和会议机器人 | 示例应用将启动机器人如何创建呼叫、加入会议以及转接呼叫。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="next-step"></a>后续步骤
 

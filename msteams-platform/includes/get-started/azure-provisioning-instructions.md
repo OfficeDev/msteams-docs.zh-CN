@@ -5,12 +5,12 @@
 > <details>
 > <summary>预配和部署之间有什么区别？</summary>
 >
-> **预配步骤** 在 Azure 和 Microsoft 365 中为应用创建资源， (HTML、CSS、JavaScript 等) 代码复制到资源。 **部署** 步骤将应用的代码复制到预配步骤中创建的资源。 通常无需预配新资源即可多次部署。 由于设置步骤可能需要一些时间才能完成，因此该步骤与部署步骤是分开的。
+> 预配 **步骤** 在 Azure 和 Microsoft 365 中为你的应用创建资源， (HTML、CSS、JavaScript 等 ) 代码复制到资源。 **部署** 步骤将应用的代码复制到预配步骤中创建的资源。 通常无需预配新资源即可多次部署。 由于设置步骤可能需要一些时间才能完成，因此该步骤与部署步骤是分开的。
 </details>
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-选择Teams Toolkit:::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::边栏中的Visual Studio Code图标。
+在 Visual Studio Code 边栏中选择 Teams 工具包 :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: 图标。
 
 1. 选择 **"在云中预配"**。
 
@@ -74,13 +74,14 @@
 
 设置和部署步骤完成后：
 
-1. 打开调试面板 (**Ctrl+Shift+D** / **⌘⇧-D**"或"查看>**从**) 运行Visual Studio Code。
-1. 从 **启动 ()** 选择"启动远程部署边缘部署"。
+1. 打开调试面板 (**Ctrl+Shift+D** / **⌘⇧-D****"或**"查看>从) 运行Visual Studio Code。
+1. 从 **启动 ()** "选择"启动远程部署边缘部署"。
 1. 选择"播放"按钮以从 Azure 启动应用。
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="显示远程启动应用的屏幕截图。" border="false":::
 
 1. 选择“**添加**”。
+
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="显示要安装的应用的屏幕截图。" border="false":::
 
    你的应用在 Azure 网站上加载。

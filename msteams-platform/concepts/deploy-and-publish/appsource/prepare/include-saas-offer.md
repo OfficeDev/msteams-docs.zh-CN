@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 6828350ab09dede3022bb9cad61756eccc9988f0
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 392d69b76c3bba7a4f8e7543731ef436af714c7c
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501996"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727337"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>将 SaaS 产品/服务包括在 Microsoft Teams 应用中
 
@@ -52,6 +52,7 @@ ms.locfileid: "63501996"
 * 了解 [Azure Active Directory 单一登录 (SSO)](/azure/marketplace/azure-ad-saas) 如何帮助客户购买和管理订阅。 （具有 SaaS 产品/服务的 Teams 应用需要 Microsoft Azure Active Directory (Azure AD) SSO。）
 * 了解你负责管理支持客户使用 SaaS 产品/服务所需的基础结构并负责支付费用。
 * 规划移动设备。 为了避免违反第三方应用商店策略，你的应用不能包含允许用户在移动设备上购买订阅计划的链接。 但你仍然可以指示应用是否具有需要订阅计划的功能。 有关详细信息，请参阅相关的 [商业市场认证策略](/legal/marketplace/certification-policies#114048-mobile-experience)。
+* Teams 目前不支持统一费率定价模型。 但是，可以在合作伙伴中心中创建统一费率可交易产品/服务。 有关详细信息，请参阅[销售统一费率可交易产品/服务的最新做法](#best-practices-for-selling-a-flat-rate-transactable-offer)。
 
 ## <a name="integrate-with-the-saas-fulfillment-apis"></a>与 SaaS 履行 API 集成
 
@@ -69,7 +70,7 @@ ms.locfileid: "63501996"
 
 * 对于 Teams 应用的可交易 SaaS 产品/服务，应将订阅计划（许可证）分配给单个用户，而不是组或整个组织。
 * 为用户分配订阅计划时，请通过 Teams 机器人或电子邮件通知他们。 在消息传递中，包括有关如何将应用添加到 Teams 并开始使用的信息。
-* 支持多个管理员的想法。 换句话说，同一组织中的多个用户可以购买和管理自己的订阅。
+* 支持多个管理员的想法。换句话说，同一组织中的多个用户可以购买和管理自己的订阅。
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>生成用于订阅管理的登陆页面
 
@@ -82,7 +83,7 @@ ms.locfileid: "63501996"
 在为要实现盈利的 Teams 应用生成登陆页时，请考虑采用以下方法。 请参阅 [最终用户购买体验](#end-user-purchasing-experience) 中的示例登陆页。
 
 * 用户必须能够凭借用于购买订阅的相同 Azure AD 凭据登录到登陆页。 有关详细信息，请参阅 [商业市场中的 Azure AD 和可交易 SaaS 产品/服务](/azure/marketplace/azure-ad-saas)。
-* 允许用户在登陆页上执行以下操作。 不要忘记考虑适合用户的角色和权限的内容（例如，你可能希望只允许订阅管理员搜索用户）：
+* 允许用户在登陆页面上执行以下操作。不要忘记考虑适合用户的角色和权限的内容（例如，你可能只允许订阅管理员搜索用户）：
   * 使用电子邮件或其他形式的标识在其组织中搜索用户。
   * 查看他们可以在列表中向其分配许可证的用户。
   * 同时向一个或多个用户分配许可证。
@@ -112,7 +113,7 @@ ms.locfileid: "63501996"
 
     * 在“**Microsoft 365 集成**”下，将 AppSource 链接添加到应用列表。 此步骤可确保除 Teams 之外，用户还可以在 AppSource 中购买订阅计划。
 
-1. 存储发布者和产品/服务 ID。 （稍后需要它们才能将产品/服务链接到“开发人员门户”中的应用。）
+1. 存储发布者并提供 ID。（稍后需要它们才能将产品/服务链接到开发人员门户中的应用。）
 
 1. 将产品/服务发布到商业市场。
 
@@ -121,7 +122,7 @@ ms.locfileid: "63501996"
 我们强烈建议在发布 SaaS 产品/服务之前对端到端购买体验进行验证。 为此，可以创建一个单独的产品/服务来进行测试。 有关完整信息，请参阅 [测试产品/服务概述](/azure/marketplace/plan-saas-offer#test-offer)、[创建测试产品/服务](/azure/marketplace/create-saas-dev-test-offer) 和 [预览产品/服务](/azure/marketplace/test-publish-saas-offer)。
 
 > [!IMPORTANT]
-> 在应用完成应用商店验证之前，可以在 Teams 中测试端到端事务。 有关详细信息，请参阅 [适用于盈利应用的测试预览](Test-preview-for-monetized-apps.md)。
+> 在应用完成应用商店验证之前，可以在 Teams 中测试端到端事务。 有关详细信息，请参阅[适用于盈利应用的测试预览](Test-preview-for-monetized-apps.md)。
 
 从 Teams 的角度来看，在用户执行以下操作时，这些测试必须验证许可证和分配的数量是否与 Teams 管理中心中的内容匹配：
 
@@ -202,6 +203,24 @@ ms.locfileid: "63501996"
 1. 取消链接产品/服务后，执行以下操作以更新应用商店一览：
    1. 选择“**分发”>“发布到 Teams 应用商店**”。
    1. 选择“**打开合作伙伴中心**”以开始重新发布不带产品/服务的应用的过程。
+
+## <a name="best-practices-for-selling-a-flat-rate-transactable-offer"></a>销售统一费率可交易产品/服务的最佳做法
+
+1. 创建[统一费率可交易 SaaS 产品/服务](/azure/marketplace/plan-saas-offer)并[发布到 AppSource](/azure/marketplace/test-publish-saas-offer)。
+
+1. 将 [SaaS 产品/服务链接到合作伙伴中心中的 Teams 应用](/azure/marketplace/create-new-saas-offer)。
+
+    > [!CAUTION]
+    > 不要将产品/服务 ID 和发布者 ID 添加到应用清单。 应用不会通过 Teams 应用商店提交过程。
+
+1. 在 Teams 应用中生成一条应用内消息，指出需要订阅，并在 AppSource 中提供 SaaS 产品/服务的超链接，以提升你的统一费率套餐。
+
+   > [!NOTE]
+   > 确保任何市场链接不会显示在移动设备和平板电脑设备上，以遵守[第三方应用商店策略](/legal/marketplace/certification-policies)。
+
+1. 提交应用进行验证。
+
+1. 在 Teams 市场支持统一费率定价后，请使用产品/服务 ID 和发布者 ID 更新应用清单，并重新提交应用进行验证。
 
 ## <a name="see-also"></a>另请参阅
 

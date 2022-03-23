@@ -4,12 +4,12 @@ description: 下面将了解如何更新基于搜索Teams邮件扩展以在 Outl
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d2369d5a07652055a9474be586470f906ed3de5b
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453514"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727522"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>跨Teams扩展邮件Microsoft 365
 
@@ -152,8 +152,10 @@ Azure Active Directory 邮件扩展的 (SSO) 单一登录的工作方式与[在 
 若要预览在应用商店中运行Outlook 网页版：
 
 1. 登录以 [outlook.com](https://www.outlook.com) 测试租户的凭据登录。
-1. 单击" **新建邮件"**。
+1. 选择 **"新建邮件"**。
 1. 打开 **合成窗口** 底部的"更多应用"弹出菜单。
+
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="单击邮件组合窗口底部的&quot;更多应用&quot;菜单以使用邮件扩展名":::
 
 将列出你的邮件扩展。 你可以从该调用中调用它，并使用它，就像在邮件中撰写消息Teams。
 

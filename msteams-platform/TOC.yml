@@ -20,6 +20,8 @@
   items:
     - name: 入门概述
       href: get-started/get-started-overview.md
+    - name: 使用 Blazor 生成第一个应用
+      href: sbs-gs-blazorapp.yml
     - name: 使用 JavaScript 生成第一个应用
       href: sbs-gs-javascript.yml
     - name: 使用 SPFx 生成第一个应用
@@ -90,6 +92,10 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: 新建 Teams 应用
           href: toolkit/create-new-project.md
+        - name: 在本地调试 Teams 应用
+          href: toolkit/debug-local.md
+        - name: 调试后台进程
+          href: toolkit/debug-background-process.md
         - name: 准备帐户以生成 Teams 应用
           href: toolkit/accounts.md
         - name: 预配云资源

@@ -4,12 +4,12 @@ author: surbhigupta
 description: 为会议和其他会议Teams启用和配置应用、更新应用程序清单、配置功能（例如，会议对话、共享会议阶段、会议侧窗格等）
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: eaa3e17c2045383307949f031d20723f3d420510
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 576ee5dc7d34ae49b6b166a43bd59e8251d519a2
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558836"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727300"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>为会议启用和配置Teams应用
 
@@ -183,6 +183,10 @@ Teams会议可为组织提供协作体验。 针对不同的会议方案配置�
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 若要共享要阶段的应用的特定部分，必须在客户端 SDK 库中调用Teams API。 有关详细信息，请参阅 [API 参考](API-references.md)。
+
+> [!NOTE]
+> * 若要共享要阶段的应用的特定部分，Teams清单版本 1.12 或更高版本。
+> * 仅桌面客户端支持将应用的特定部分共享Teams阶段。
 
 ### <a name="after-a-meeting"></a>会议后
 

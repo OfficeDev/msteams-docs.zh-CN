@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 895660e49e468583d7443799dd0c55d7950619e0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1936e6a660d77855e53257f40925cf54b05de0de
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355509"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727287"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 应用
 
@@ -39,6 +39,8 @@ ms.locfileid: "63355509"
 借助此预览版，可以将基于搜索的 Teams 邮件扩展扩展到 Outlook 网页版 和 Windows 桌面，使客户可以通过 Outlook 的撰写邮件区域以及 Microsoft Teams 客户端搜索和共享结果。
 
 旁加载至Teams后，邮件扩展显示为"撰写"邮件区域中已安装Outlook之一。
+
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="在客户端和 Outlook 中Teams":::
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -12,19 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: be18ebf8a7fcbffd20f6a0d1edfc633829cb9be4
-  ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+  ms.openlocfilehash: f0b94a66f15ed6fe7b5bf479a6e2e613e7bf7d49
+  ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63674801"
+  ms.lasthandoff: 03/22/2022
+  ms.locfileid: "63727897"
 landingContent:
 - title: 探索最新
   linkLists:
   - linkListType: concept
     links:
-    - text: 将 LmS 和 Microsoft 365插件
-      url: ~/resources/moodle-overview.md
+    - text: 调试Teams应用
+      url: ~/toolkit/debug-local.md
     - text: 自适应卡片溢出菜单
       url: ~/task-modules-and-cards/cards/cards-format.md
     - text: 术语表
@@ -53,6 +53,8 @@ landingContent:
       url: /contribute/additional-resources
   - linkListType: tutorial
     links:
+    - text: 使用 Blazor 生成第一个应用
+      url: sbs-gs-blazorapp.yml
     - text: 使用 JavaScript 生成应用
       url: sbs-gs-javascript.yml
     - text: 使用应用程序生成SPFx

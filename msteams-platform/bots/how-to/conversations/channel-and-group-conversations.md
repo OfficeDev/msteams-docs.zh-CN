@@ -5,18 +5,18 @@ description: 如何发送、接收和处理频道或群聊中机器人的消息�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ab856bb7d07e23d9dc6d6fed318313262779b79f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6c3d476ec51c75431d4a39e35b7307771b919d26
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889312"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727497"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-bot"></a>与机器人的频道和群组聊天对话
+# <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-若要在Microsoft Teams聊天中安装聊天机器人，请向 `teams` 自动程序添加 或 `groupchat` 作用域。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
+若要在团队Microsoft Teams聊天中安装聊天机器人，请向`teams`自动程序添加 或 `groupchat` 作用域。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
 
 组或频道中的机器人仅在被提及时接收@botname。 他们不会收到发送到对话的其他任何消息。 必须直接 @mentioned 机器人。 当提到团队或频道时，或者当有人未经回复而回复来自你的机器人的消息时，机器人不会收到@mentioning消息。
 
@@ -24,10 +24,12 @@ ms.locfileid: "60889312"
 > 此功能目前仅适用于公共 [开发人员预览](../../../resources/dev-preview/developer-preview-intro.md) 版。
 >
 > 通过使用 RSC (资源) ，机器人可以接收团队中安装它的所有频道消息，而无需@mentioned。 有关详细信息，请参阅使用 [RSC 接收所有频道消息](channel-messages-with-rsc.md)。
+>
+> 目前不支持将消息或自适应卡片发布到私人频道。
 
 ## <a name="design-guidelines"></a>设计准则
 
-与个人聊天不同，在群聊和频道中，机器人必须提供快速简介。 必须遵循这些以及更多自动程序设计指南。 若要详细了解如何在聊天中设计聊天机器人Teams，请参阅如何在频道和聊天中设计[机器人对话](~/bots/design/bots.md)。
+与个人聊天不同，在群聊和频道中，机器人必须提供快速简介。 必须遵循这些以及更多自动程序设计指南。 若要详细了解如何在聊天中设计聊天机器人Teams，请参阅如何在频道和聊天中设计机器人[对话](~/bots/design/bots.md)。
 
 现在，你可以创建新的对话线程并轻松管理频道中的不同对话。
 
@@ -35,19 +37,19 @@ ms.locfileid: "60889312"
 
 在团队中安装自动程序时，必须创建新的对话线程，而不是回复现有对话线程。 有时很难区分两个对话。 如果会话是按线索组织的，则更易于组织和管理频道中的不同对话。 这是一种 [主动消息形式](~/bots/how-to/conversations/send-proactive-messages.md)。
 
-接下来，可以使用 对象检索提及 `entities` 内容，然后使用 对象向邮件添加 `Mention` 提及。
+接下来，可以使用 对象检索 `entities` 提及内容，然后使用 对象向邮件添加 `Mention` 提及。
 
 ## <a name="work-with-mentions"></a>使用提及
 
-从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中包含其名称的自动程序。 机器人还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
+从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中包含其名称的自动程序。 自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
 
 还必须从自动程序@mentions内容中去除此限制。
 
 ### <a name="retrieve-mentions"></a>检索提及
 
-在有效负载中的 对象中返回提及，同时包含用户的唯一 ID 和 `entities` 提及用户的名称。 邮件文本还包括提及，例如 `<at>@John Smith<at>` 。 但是，不要依赖邮件中的文本来检索有关用户的任何信息。 发送邮件的人可以更改它。 因此，请使用 `entities` 对象。
+在有效负载中的 `entities` 对象中返回提及，同时包含用户的唯一 ID 和提及用户的名称。 邮件文本还包括提及，例如 `<at>@John Smith<at>`。 但是，不要依赖邮件中的文本来检索有关用户的任何信息。 发送邮件的人可以更改它。 因此，请使用 `entities` 对象。
 
-可以通过调用 Bot Builder SDK 中的 函数来检索邮件中提及的所有内容，该 `GetMentions` 函数将返回对象 `Mention` 数组。
+可以通过调用 Bot Builder `GetMentions` SDK 中的 函数来检索邮件中提及的所有内容，该函数将返回对象 `Mention` 数组。
 
 以下代码显示检索提及的示例：
 
@@ -146,9 +148,9 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 机器人可以在发布至频道的消息中提及其他用户。
 
-`Mention`对象具有两个必须具有以下设置的属性：
+对象 `Mention` 具有两个必须具有以下设置的属性：
 
-* 在 *@username* 文本中包括邮件。
+* 在 *@username* 文本中包括文本。
 * 在 entities 集合中包括 mention 对象。
 
 Bot Framework SDK 提供了用于创建提及项的帮助程序方法和对象。
@@ -194,7 +196,7 @@ this.onMessage(async (turnContext, next) => {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-`text`数组中对象中的 `entities` 字段必须与邮件字段的一部分 `text` 匹配。 如果没有，则忽略提及。
+数组 `text` 中对象中的字段 `entities` 必须与邮件字段的一部分 `text` 匹配。 如果没有，则忽略提及。
 
 ```json
 {
@@ -257,7 +259,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message-on-installation"></a>安装时发送邮件
 
-首次将机器人添加到组或团队时，必须发送一条介绍消息。 该消息必须提供自动程序功能及其使用方法的简要说明。 必须使用 `conversationUpdate` `teamMemberAdded` eventType 订阅事件。  当添加任何新的团队成员时，将发送该事件。 检查添加的新增成员是否就是机器人。 有关详细信息，请参阅 [向新团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。
+首次将机器人添加到组或团队时，必须发送一条介绍消息。 该消息必须提供自动程序功能及其使用方法的简要说明。 `conversationUpdate`必须使用 eventType 订阅`teamMemberAdded`事件。  当添加任何新的团队成员时，将发送该事件。 检查添加的新增成员是否就是机器人。 有关详细信息，请参阅 [向新团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。
 
 添加自动程序时，向每个团队成员发送个人消息。 为此，请获取团队名单，并给每个用户发送一条直接消息。
 
