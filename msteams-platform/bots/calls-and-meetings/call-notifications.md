@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 调用呼叫通知回调区域相关性
 ms.date: 04/02/2019
-ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d7939bd7fa613636d225e6f5437434c394a8c0bd
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453052"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63783993"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 
@@ -95,3 +95,8 @@ OAuth 令牌具有以下值，并且由 Skype：
 
 > [!div class="nextstepaction"]
 > [应用程序托管的媒体机器人的要求和注意事项](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+
+## <a name="see-also"></a>另请参阅
+
+* [设置自动助理](/microsoftteams/create-a-phone-system-auto-attendant)
+* [在 Android 和 Microsoft Teams 会议室 视频电话设备上Teams自动应答](/microsoftteams/set-up-auto-answer-on-teams-android)

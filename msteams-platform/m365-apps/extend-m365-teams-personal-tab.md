@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5370c9b5f273936c8afdd6c95e4e524dda3857ce
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453717"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765944"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨Teams扩展个人选项卡Microsoft 365
 
@@ -136,15 +136,14 @@ Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式与 Of
 
 在" **授权客户端应用程序"** 部分，确保添加以下所有 `Client Id` 值：
 
-|Microsoft 365客户端应用程序 | 客户端 ID |
+|Microsoft 365 客户端应用程序 | 客户端 ID |
 |--|--|
-|Teams桌面、移动 |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+|Teams 桌面、移动设备 |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
 |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4345a7b9-9a63-4910-a426-35363201d503|
 |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Office桌面  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+|Office 桌面版  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
 |Outlook 桌面版 | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
+|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-app-in-teams"></a>在 Teams 中旁加载应用

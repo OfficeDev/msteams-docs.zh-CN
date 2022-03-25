@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: 入口点扩展性用例设备功能
-ms.openlocfilehash: 02a41631931f24fa23e2ddaaadaf2a94c63c5b23
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399168"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766035"
 ---
 # <a name="plan-your-app-with-teams-features"></a>使用 Teams 功能规划应用
 
@@ -78,7 +78,7 @@ Teams 即平台在应用开发的每个阶段为你提供工具包、库、应�
 |-------------|---------|---|---|
 | Teams 拥有的应用（与在内部开发的应用中一样） | ✔️ 如果应用具有 GCC，则会启用该应用。 | ✔️ 如果应用具有 GCC-High，则会启用该应用。 | ✔️ 如果应用具有 DOD，则会启用该应用。 |
 | Microsoft 应用 | ✔️ 符合 GCC 的 Microsoft 应用 | ✔️ 符合 GCC-High 的 Microsoft 应用 | ✔️ 符合 DOD 的 Microsoft 应用 |
-| 第三方应用 | ✔️ 第三方应用可用。默认情况下禁用，租户管理员自行决定是否启用它。 | ❌ | ❌ |
+| 3P 或第三方应用 | ✔️ 第三方应用可用。默认情况下禁用，租户管理员自行决定是否启用它。 | ❌ | ❌ |
 | 机器人 | ✔️ | ❌ | ❌ |
 | 自定义或 Lob 选项卡应用 |  ✔️ | ✔️ | ✔️ |
 | 旁加载应用 | ✔️ | ❌ | ❌ |

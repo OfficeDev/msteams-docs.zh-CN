@@ -5,12 +5,12 @@ description: 规划应用、了解用户及其需求、了解应用将解决的�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 117ad5a99662194fef0707ff355d129e4b487cfe
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 95ed5ed7af2eaf8c5b542a9a510484b5ec964b3e
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399056"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766119"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
@@ -150,7 +150,7 @@ ms.locfileid: "63399056"
 
 #### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
 
-[Microsoft Graph API for Teams](/graph/teams-concept-overview) 提供有关团队、频道、用户和消息的信息的访问权限，这些信息可帮助你为应用创建或增强功能。
+[Microsoft Graph API for Teams](/graph/teams-concept-overview) 提供有关团队、频道、用户和消息的信息的访问权限，这些信息将帮助你为应用创建或增强功能。
 
    :::column-end:::
 

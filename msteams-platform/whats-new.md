@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 5ac1def2d45938d8bc162b4d6ed4fddb9f547e86
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: cccd5865c93a41c858d12b8e4e268f4169e672e7
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466533"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727279"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,9 @@ ms.locfileid: "63466533"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|03/22/2022| 更新了适用于 Teams 的 Blazor 应用入门 |  • 开始>[使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
+|03/22/2022| 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
+|2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南。 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022| 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
 |2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
@@ -50,6 +53,9 @@ ms.locfileid: "63466533"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|03/22/2022| 更新了适用于 Teams 的 Blazor 应用入门|  • 开始>[使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
+|03/22/2022| 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
+|2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南。 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022 | 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|  
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|

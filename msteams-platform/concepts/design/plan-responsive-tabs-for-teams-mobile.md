@@ -5,16 +5,16 @@ description: 规划在移动设备上创建应用Teams指南
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: ad9fb6500aa74cf4de43ed837a60aeeff0485dc2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4a32f5e0045def6571f347ebd1bbf8b56f4e082b
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453521"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766126"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>规划 Teams 移动版的响应式选项卡
 
- Teams平台提供了在移动和桌面上生成应用的机会。 你的应用用户可以首选桌面或移动设备，也可以同时选择两者。 用户可以在桌面上准备数据，但使用移动设备使用和共享更多数据。 构建任何应用的关键是了解并满足用户的需求。 有一些功能（如机器人、消息传递扩展和连接器）在桌面和移动设备上无缝工作。 但是，生成选项卡和任务模块需要规划在移动设备上托管 web Teams体验。 在移动设备上规划响应式网页的文档Teams指南。
+ Teams平台提供了在移动和桌面上生成应用的机会。 你的应用用户可以首选桌面或移动设备，也可以同时选择两者。 用户可以在桌面上准备数据，但使用移动设备使用和共享更多数据。 构建任何应用的关键是了解并满足用户的需求。 有一些功能（如机器人、消息传递扩展和连接器）在桌面和移动设备上无缝工作。 但是，生成选项卡和任务模块需要规划在移动设备上托管 web Teams体验。 本文指导在移动设备上规划响应Teams网页。
 
 ## <a name="identify-apps-scope"></a>确定应用范围
 

@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 022baf126d8c809bc4f3acb5bcc0496d688a399c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4751bcdee0addc21c7aaa165cf29d78a895d723d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453661"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766147"
 ---
 # <a name="teamsfx-library"></a>TeamsFx 库
 
@@ -29,7 +29,7 @@ Microsoft Teams Framework (TeamsFx) 是封装通用功能和集成模式的库 (
 
 TeamsFx CLI 是基于文本的命令行接口，可加速Teams开发。 它旨在提供以键盘为中心的体验，同时构建Teams应用程序。 它还支持 CI/CD 方案，可在其中将 CLI 集成到脚本中实现自动化。
 
-有关详细信息，请参阅：
+有关更多信息，请参阅：
 
 * [源代码](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [包 (NPM) ](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
@@ -437,7 +437,7 @@ teamsfx permission status --env dev --list-all-collaborators
   teamsfx permission grant --env dev --email user-email@user-tenant.com
   ```
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="权限":::
 
 * 将项目推送到GitHub
 
@@ -470,5 +470,6 @@ teamsfx permission status --env dev --list-all-collaborators
 ## <a name="see-also"></a>另请参阅
 
 * [适用于 TypeScript 或 JavaScript 的 TeamsFx SDK](TeamsFx-SDK.md)
-* [在环境中管理Teams Toolkit](TeamsFx-multi-env.md)
+* [在 Teams 工具包中管理多个环境](TeamsFx-multi-env.md)
 * [使用Teams协作处理Teams Toolkit](TeamsFx-collaboration.md)
+* [Teams 工具包概述](teams-toolkit-fundamentals.md)

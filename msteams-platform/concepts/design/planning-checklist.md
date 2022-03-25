@@ -5,12 +5,12 @@ description: 规划应用时需要考虑的问题、了解用户及其需求、�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 5fdce83ed954c3751f34d7680b4400092c7531a3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399315"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765930"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams 应用规划清单
 
@@ -91,7 +91,7 @@ ms.locfileid: "63399315"
 | --- | --- |
 | 1 | 出于隐私或其他原因，是否需要与应用进行一对一交互? 例如，检查剩余余额或其他私有信息。 |
 | 2 | 可能没有任何共同 Teams 的用户之间是否会进行协作? 例如，查找公司中即将发生的组织范围活动。 |
-| 3 | 是否存在需要在整个 Teams 应用体验中向用户发送任何个性化通知或消息? |
+| 3 | 是否存在需要在整个 Teams 应用体验中向用户发送的任何个性化通知或消息？ |
 
 </details>
 <br>
@@ -100,9 +100,9 @@ ms.locfileid: "63399315"
 
 | # | 考虑… |
 | --- | --- |
-| 1 | 应用在选项卡或机器人中提供的信息是否与团队中的大多数成员相关且有用? 例如，Scrum 应用。 |
+| 1 | 应用在选项卡或机器人中提供的信息是否与团队中的大多数成员相关且有用？例如 Scrum 应用。 |
 | 2 | 应用的上下文能否根据其添加到的团队而改变? 例如，Planner 的任务在不同的团队中是不同的。 |
-| 3 | 角色中需要协作的所有成员是否都属于单个团队? 例如，处理票证的代理。 |
+| 3 | 角色中需要协作的所有成员是否都属于单个团队？例如，处理票证的代理。 |
 
 </details>
 <br>

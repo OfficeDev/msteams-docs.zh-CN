@@ -5,12 +5,12 @@ description: 确定应用的用例如何在 Teams 体验、应用功能和功能
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452828"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765937"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>将用例映射到 Teams 应用功能
 

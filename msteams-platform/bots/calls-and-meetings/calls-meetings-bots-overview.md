@@ -4,12 +4,12 @@ description: 了解你的 Microsoft Teams 应用如何使用语音和视频与�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼叫音频视频 IVR 语音联机会议实时媒体流机器人
-ms.openlocfilehash: 2339431e6643d9ecf986b7a327f5fb7ee764fa00
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 19f101a35120e068dbdcf06fe12e5bf030f44822
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727630"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63784000"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
 
@@ -108,3 +108,5 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 * [如何在计算机上开发通话和联机会议机器人](./debugging-local-testing-calling-meeting-bots.md)
 * [应用程序托管的媒体机器人的要求和注意事项](./requirements-considerations-application-hosted-media-bots.md)
 * [有关处理传入呼叫通知的技术信息](./call-notifications.md)
+* [设置自动助理](/microsoftteams/create-a-phone-system-auto-attendant)
+* [在 Android 和 Microsoft Teams 会议室 视频电话设备上Teams自动应答](/microsoftteams/set-up-auto-answer-on-teams-android)
