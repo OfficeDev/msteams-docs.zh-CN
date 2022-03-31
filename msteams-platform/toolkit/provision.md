@@ -1,23 +1,23 @@
 ---
-title: 使用Teams Toolkit预配云资源
+title: 使用 Teams 工具包预配云资源
 author: MuyangAmigo
 description: 预配云资源
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 0528654b2867552af802fb95e3a6e47ca3228414
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674990"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590645"
 ---
-# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>使用Teams Toolkit预配云资源
+# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>使用 Teams 工具包预配云资源
 
-TeamsFx 与 Azure 和 Microsoft 365 集成，这允许你使用单个命令将应用程序放置到 Azure 中。 TeamsFx 与 Azure 资源管理器集成，使你能够预配 Azure 资源，应用程序需要这些资源进行代码方法。  
+TeamsFx 与 Azure 和 Microsoft 365 集成，这允许你使用单个命令将应用程序放置到 Azure 中。 TeamsFx 与 Azure 资源管理器集成，使你能够预配 Azure 资源，应用程序需要采用代码方法。  
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 * 帐户先决条件 若要预配云资源，你必须具有以下帐户：
 
@@ -50,7 +50,7 @@ TeamsFx 与 Azure 和 Microsoft 365 集成，这允许你使用单个命令将�
 
 ### <a name="resource-creation-for-teams-tab-application"></a>为 Teams Tab 应用程序创建资源
 
-|资源|用途|说明 |
+|Resource|用途|说明 |
 |----------|--------------------------------|-----|
 | Azure 存储 | 托管选项卡应用 | 启用静态 Web 应用功能以承载选项卡应用 |
 | 简单身份验证的应用服务计划 | 托管简单身份验证的 Web 应用 |不适用 |
@@ -59,33 +59,33 @@ TeamsFx 与 Azure 和 Microsoft 365 集成，这允许你使用单个命令将�
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>为自动程序Teams邮件扩展应用程序创建资源
 
-|资源|用途| 说明 |
+|Resource|用途| 说明 |
 |----------|--------------------------------|-----|
 | Azure 自动程序服务 | 使用自动程序框架将应用注册为自动程序 | 将机器人连接到Teams |
 | 自动程序的应用服务计划 | 托管自动程序 Web 应用 |不适用 |
 | 适用于机器人的 Web 应用 | 托管机器人应用 | 添加用户分配的标识以访问其他 Azure 资源。 <br /> 添加 [TeamsFx SDK 所需的应用设置](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | 用户分配的标识 | 对 Azure 服务到服务请求进行身份验证 | 跨不同功能和资源共享 |
 
-### <a name="resource-creation-for-azure-functions-in-the-project"></a>项目中 Azure 函数的资源创建
+### <a name="resource-creation-for-azure-functions-in-the-project"></a>为项目中Azure Functions资源创建
 
-|资源|用途| 说明|
+|Resource|用途| 说明|
 |----------|--------------------------------|-----|
 | 函数应用的应用服务计划 | 托管函数应用 |不适用 |
 | 函数应用 | 托管 Azure 函数 API | 添加用户分配的标识以访问其他 Azure 资源。 <br /> 将跨源资源共享 (CORS) 规则以允许来自选项卡应用的请求 <br /> 添加仅允许来自你的应用程序请求的Teams设置。 <br /> 添加 [TeamsFx SDK 所需的应用设置](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | 函数应用的 Azure 存储 | 创建函数应用所必需 |不适用|
 | 用户分配的标识 | 对 Azure 服务到服务请求进行身份验证 | 跨不同功能和资源共享 |
 
-### <a name="resource-creation-for-azure-sql-in-the-project"></a>在项目中为 Azure SQL创建资源
+### <a name="resource-creation-for-azure-sql-in-the-project"></a>为项目中Azure SQL资源创建
 
-|资源|用途 | 说明 |
+|Resource|用途 | 说明 |
 |----------|--------------------------------|-----|
-| Azure SQL 服务器 | 托管 Azure SQL数据库实例 | 允许所有 Azure 服务访问服务器 |
+| Azure SQL服务器 | 托管Azure SQL数据库实例 | 允许所有 Azure 服务访问服务器 |
 | Azure SQL 数据库 | 存储应用数据 | 授予用户分配的对数据库的标识、读取或写入权限 |
 | 用户分配的标识 | 对 Azure 服务到服务请求进行身份验证 | 跨不同功能和资源共享 |
 
-### <a name="resource-creation-for-azure-api-management-in-the-project"></a>项目中 Azure API 管理的资源创建
+### <a name="resource-creation-for-azure-api-management-in-the-project"></a>在项目中为 Azure API 管理创建资源
 
-|资源|用途|
+|Resource|用途|
 |----------|--------------------------------|
 | Azure AD API 管理服务的应用程序 | 允许由 API 管理服务管理的 Microsoft Power Platform 访问 API |
 | API 管理服务 | 管理函数应用中托管的 API |
@@ -93,16 +93,16 @@ TeamsFx 与 Azure 和 Microsoft 365 集成，这允许你使用单个命令将�
 | API 管理 OAuth 服务器 | 允许 Microsoft Power Platform 访问函数应用中托管的 API |
 | 用户分配的标识 | 对 Azure 服务到服务请求进行身份验证 |
 
-### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>在项目中包括 Azure Key Vault 时创建的资源
+### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>在项目中包括 Azure 密钥保管库创建的资源
 
 |资源|此资源的用途|
 |----------|--------------------------------|
-| Azure 密钥保管库服务 | 管理 (密码，例如Azure AD Azure 服务) 应用程序客户端密码 |
+| Azure 密钥保管库 服务 | 管理 (密码，例如Azure AD Azure 服务) 应用程序客户端密码 |
 | 用户分配的身份 | 对 Azure 服务到服务请求进行身份验证 |
 
 ## <a name="customize-resource-provision"></a>自定义资源预配
 
-Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 资源以及配置方式。 该工具使用ARM模板定义 Azure 资源。 the ARM template is a set of bicep files that defines the infrastructure and configuration for your project. 可以通过修改自定义模板来自定义 azure ARM。 有关详细信息，请参阅 [bicep 文档](/azure/azure-resource-manager/bicep.md)。
+Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 资源以及配置方式。 该工具使用ARM模板定义 Azure 资源。 the ARM template is a set of bicep files that defines the infrastructure and configuration for your project. 可以通过修改自定义模板来自定义 azure ARM。 有关详细信息，请参阅 [bicep 文档](/azure/azure-resource-manager/bicep)。
 
 使用 ARM涉及更改以下文件、参数和模板集：
 
@@ -148,16 +148,16 @@ Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 
 | botDisplayName | ${resourceBaseName} | 自动程序显示名称 | 1-42 个字符 |
 | botServerfarmsName | ${resourceBaseName}bot | 机器人的应用服务计划的名称 | 1-40 个字母数字和连字符 |
 | botWebAppName | ${resourceBaseName}bot | 机器人 Web 应用的名称 | 2-60 个字母数字和连字符 <br /> 不能以连字符开始或结束 |
-| botWebAppSKU | F1 | 自动程序应用服务计划的 SKU | 不适用 |
+| botWebAppSKU | F1 | 自动程序App 服务 SKU | 不适用 |
 | userAssignedIdentityName | ${resourceBaseName} | 用户分配标识的名称 | 3-128 字母数字、连字符和下划线 <br /> 以字母或数字开头 |
-| sqlServerName | ${resourceBaseName} | Azure SQL 服务器的名称 | 1-63 个小写字母、数字和连字符 <br /> 无法以连字符开始或结束 |
-| sqlDatabaseName | ${resourceBaseName} | Azure SQL数据库的名称 | 1-128 个字符，不能用于 <>*%&：\/？ 或控制字符 <br /> 不能以时间段或空格结尾 |
-| sqlDatabaseSku | 基本 | Azure SQL 数据库的 SKU | 不适用  |
+| sqlServerName | ${resourceBaseName} | 服务器Azure SQL的名称 | 1-63 个小写字母、数字和连字符 <br /> 无法以连字符开始或结束 |
+| sqlDatabaseName | ${resourceBaseName} | 数据库Azure SQL的名称 | 1-128 个字符，不能用于 <>*%&：\/？ 或控制字符 <br /> 不能以时间段或空格结尾 |
+| sqlDatabaseSku | 基本 | 数据库的 SKU Azure SQL数据库 | 不适用  |
 | apimServiceName | ${resourceBaseName} | APIM 服务的名称 | 1-50 个字母数字和连字符 <br /> 从字母开始，以字母数字结尾 |
 | apimServiceSku | 消耗 | APIM 服务的 SKU | [可用的 SKUS](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | APIM 产品的名称 | 1-80 个字母数字和连字符 <br /> 从字母开始，以字母数字结尾 |
 | apimOauthServerName | ${resourceBaseName} | APIM OAuth 服务器的名称 | 1-80 个字母数字和连字符 <br /> 从字母开始，以字母数字结尾 |
-| keyVaultSkuName | standard | Azure 密钥保管库服务的 SKU 名称| |
+| keyVaultSkuName | standard | Azure 密钥保管库 服务的 SKU 名称| |
 
 同时，以下参数可用于预配期间填充的值。 这些占位符的目的是确保我们可以在新环境中创建新的资源。 实际值从 解析。`.fx/states/state.{env}.json`
 
@@ -178,8 +178,8 @@ Teams Toolkit使用基础结构作为代码方法，以定义要预配的 Azure 
 
 | 参数名称 | 默认值位置持有者 | 位置持有者的含义 | 如何自定义 |
 | --- | --- | --- | --- |
-| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Server预配期间提供的管理员帐户 | 删除占位符并填写实际值 |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server预配期间提供的管理员密码 | 删除占位符并填写实际值 |
+| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL预配期间提供的 Azure SQL Server 管理员帐户 | 删除占位符并填写实际值 |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL预配期间提供的 Azure SQL 服务器管理员密码 | 删除占位符并填写实际值 |
 | apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | APIM 的发布者电子邮件，默认值是 Azure 帐户 | 删除占位符并填写实际值 |
 | apimPublisherName | {{state.fx-resource-apim.publisherName}} | APIM 的发布者名称，默认值是 Azure 帐户 | 删除占位符并填写实际值 |
 

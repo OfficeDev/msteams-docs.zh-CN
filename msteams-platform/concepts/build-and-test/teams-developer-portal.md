@@ -5,12 +5,12 @@ keywords: 开发人员门户团队入门
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 03fd1f75363f303a33a8349f88e13e3444316fc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511232"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464780"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>使用 Microsoft Teams 开发人员门户管理应用
 
@@ -19,9 +19,7 @@ ms.locfileid: "64511232"
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="显示开发人员门户主页的屏幕截图Teams。":::
 
 > [!NOTE]
->
-> * 目前，开发人员门户不适用于 政府社区云 (GCC) 、GCC-High 或国防部 (DOD) 租户。
-> * 但是，可以使用常规租户在开发人员门户中生成应用、下载应用，并使用 [Microsoft](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) Graph应用上传到国家云。 有关详细信息，请参阅国家 [云部署](/graph/deployments)。
+> 目前，开发人员门户不适用于 政府社区云 (GCC) 、GCC-High 或国防部 (DOD) 租户。
 
 ## <a name="register-an-app"></a>注册应用
 

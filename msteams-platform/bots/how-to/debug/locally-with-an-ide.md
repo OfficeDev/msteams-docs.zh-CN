@@ -5,12 +5,12 @@ description: 了解如何在 Teams 环境中通过旁加载、在 Teams 外部�
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: db4b9143dfbaa8dbbb3a5aa965836d151ad8cd46
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0085d38ef2dafc4708772222fb9b173a12afedd7
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453367"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590701"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
 
@@ -27,7 +27,7 @@ ms.locfileid: "63453367"
 
 > [!NOTE]
 > 若要更改清单并重新上传应用，请删除自动 [程序，然后再](#delete-a-bot-from-teams) 上传已更改的应用包。
-> 若要测试自动程序，请启用自动程序中的旁Teams。 请参阅 [启用旁加载](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
+> 若要测试自动程序，请启用自动程序中的旁Teams。 请参阅 [启用旁加载](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
 
 ## <a name="debug-your-bot-locally"></a>在本地调试机器人
 

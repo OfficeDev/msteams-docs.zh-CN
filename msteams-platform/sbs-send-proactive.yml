@@ -2,7 +2,7 @@
 title: 发送主动邮件
 metadata:
   title: 发送主动邮件
-  description: 在此方案中，你将了解如何发送主动邮件
+  description: 在此模块中，了解如何发送主动消息，如欢迎消息、计划消息和来自自动程序的通知
   audience: Developer
   level: Beginner
   ms.date: 06/23/2021
@@ -11,16 +11,16 @@ metadata:
   nextTutorialTitle: 阅读有关主动消息的更多内容
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 0a89892df09816785a3848db442c1573ba9f04f8
-  ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+  ms.openlocfilehash: 9738be897a0f520c137424eb8f5d062c41396f13
+  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63674843"
+  ms.lasthandoff: 03/31/2022
+  ms.locfileid: "64571220"
 items:
 - durationInMinutes: 1
   content: "主动消息是自动程序发送的任何不响应用户请求的消息。 这可能包括各种消息，例如：\n - 欢迎消息\n - Notifications\n - 计划的消息\n \n此分步指南可帮助你从自动程序发送主动邮件。 你将看到以下输出：\n\n* 聊天中的主动 Hello 消息        \n![主动聊天 hello](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* 作为自适应卡片的主动 Hello 消息    \n![自适应卡片中的主动 hello](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
-- title: 必备条件
+- title: 先决条件
   durationInMinutes: 2
   content: "确保安装以下内容：    \n\n* [Visual Studio 2019 年 10 月](https://visualstudio.microsoft.com/downloads/)。\n* [ASP.NET 和 Web 开发，](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.301-windows-x64-installer)或 [.NET Core](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer) 跨平台开发工作负载。\n* [ngrok](https://ngrok.com/download)：一个跨平台应用程序，使你能够尽可能向 Internet 公开本地开发服务器。\n* [获取开发人员Teams免费订阅](https://developer.microsoft.com/microsoft-365/dev-program)。\n"
 - title: 设置本地环境

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8999f6005775c4719de3f1e91ae26fa43ce7cb27
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674976"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511248"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -25,15 +25,13 @@ ms.locfileid: "63674976"
 
 ## <a name="value-proposition"></a>价值主张
 
-> [!NOTE]  
-> 本部分符合 [Microsoft 商业认证策略编号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements)，并为 Microsoft Teams 应用的开发人员提供有关其产品/服务价值主张的其他准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略编号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements)，并为 Microsoft Teams 应用的开发人员提供有关其产品/服务价值主张的其他准则。
 
 ### <a name="app-name"></a>应用名称
 
 [*强制修复*]
 
-> [!NOTE]  
-> 本部分符合 Microsoft [商业认证策略编号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name)，并为 Microsoft Teams 应用的开发人员提供有关命名其应用的其他准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 Microsoft [商业认证策略编号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name)，并为开发人员提供有关命名其应用的其他准则。
 
 应用程序的名称对用户如何在商店中发现它起着关键作用。 使用以下准则命名应用：
 
@@ -63,8 +61,7 @@ ms.locfileid: "63674976"
 
 [*强制修复*]
 
-> [!NOTE]  
-> 本部分符合 Microsoft 商业认证策略号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value) 和 [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content)，并为开发人员提供了有关构建适合工作场所的应用的其他准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 Microsoft 商业认证策略号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value) 和 [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content)，并为开发人员提供了有关构建适合工作场所的应用的其他准则。
 
 应用内容必须适用于一般工作场所使用，并遵循商业市场认证策略中列出的所有限制。 禁止与宗教、政治、赌博和长时间娱乐相关的内容。
 
@@ -74,8 +71,7 @@ ms.locfileid: "63674976"
 
 [*强制修复*]
 
-> [!NOTE]  
-> 本部分符合 [Microsoft 商业认证策略号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services)。
 
 应用必须专注于 Teams 体验，并且应用内容或应用元数据中不应包括其他类似的基于聊天的协作平台或服务的名称、图标或图像，除非应用提供特定的互操作性。
 
@@ -87,14 +83,13 @@ ms.locfileid: "63674976"
 
 [*强制修复*]
 
-> [!NOTE]  
-> 本部分符合 [Microsoft 商业认证策略 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services)，并为开发人员提供额有关使用外部服务为其应用进行身份验证的准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services)，并为开发人员提供关使用外部服务为其应用进行身份验证的其他准则。
 
 若要详细了解如何实施应用身份验证，请参阅 [Teams 中的身份验证](~/concepts/authentication/authentication.md)。
 
 #### <a name="authenticating-with-external-services"></a>与外部服务进行身份验证
 
- 如果你的应用使用外部服务对用户进行身份验证，请遵循以下准则：
+如果你的应用使用外部服务对用户进行身份验证，请遵循以下准则：
 
 * **登录、注销和注册体验**:
   * 依赖于外部帐户或服务的应用必须提供清晰且简单的登录、注销和注册体验。
@@ -108,15 +103,14 @@ ms.locfileid: "63674976"
 
 ## <a name="security"></a>安全性
 
-> [!NOTE]  
-> 本部分符合 [Microsoft 商业认证策略号 1140.3](/legal/marketplace/certification-policies#11403-security)。
+
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略号 1140.3](/legal/marketplace/certification-policies#11403-security)。
 
 ### <a name="financial-information"></a>财务信息
 
 [*强制修复*]
 
-> [!NOTE]  
-> 本部分符合 [Microsoft 商业认证策略号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions)，并提供了有关在 Teams 界面中传输财务信息的准则，并通知了开发人员其 Teams 应用的移动 (Android 和 iOS) 版本的受限付款方案。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions)，并提供了有关在 Teams 界面中传输财务信息的准则，并通知了开发人员其 Teams 应用的移动 (Android 和 iOS) 版本的受限付款方案。
 
 应用不得要求用户在 Teams 界面中付款，并通过机器人界面将财务信息传输给用户。  
 
@@ -166,8 +160,7 @@ ms.locfileid: "63674976"
 
 [*强制修复*]
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension)。
 
 对于使用 Microsoft Azure 机器人服务的应用 (如机器人和消息传递扩展)， 则必须遵循 Microsoft [在线服务条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46) 中定义的所有要求。
 
@@ -187,8 +180,7 @@ ms.locfileid: "63674976"
 
 [*强制修复*]
 
-> [!NOTE]
-> 本部分与 [Microsoft 商业市场策略号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains)，并提供了有关在 `validDomains` 清单属性中使用受限域的开发人员指南。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains)，并提供了有关在 `validDomains` 清单属性中使用受限域的开发人员准则。
 
 不要在应用的域配置中包含组织控制之外的域（包括通配符）和隧道服务。以下的例外情况包括:
 
@@ -209,8 +201,7 @@ ms.locfileid: "63674976"
 
 ## <a name="general-functionality-and-performance"></a>常规功能和性能
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略号 1140.4](/legal/marketplace/certification-policies#11404-functionality)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4](/legal/marketplace/certification-policies#11404-functionality)。
 
 ### <a name="launching-external-functionality"></a>正在启动外部功能
 
@@ -466,8 +457,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="tabs"></a>选项卡
 
-> [!NOTE]  
-> 本部分符合 [Microsoft 商业市场策略号 1140.4.2](/legal/marketplace/certification-policies#114042-tabs)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.2](/legal/marketplace/certification-policies#114042-tabs)。
 如果你的应用包含选项卡，请确保它遵守这些准则。
 > [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 设计指南](~/tabs/design/tabs.md)。
@@ -838,8 +828,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="bots"></a>机器人
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略号 1140.4.3](/legal/marketplace/certification-policies#114043-bots)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.3](/legal/marketplace/certification-policies#114043-bots)。
 
 如果你的应用包含机器人，请确保它遵守这些准则。
 
@@ -1074,8 +1063,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="messaging-extensions"></a>消息传递扩展
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions)。
 
 如果你的应用包括消息传递扩展，请确保它遵循这些准则。
 
@@ -1217,8 +1205,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="task-modules"></a>任务模块
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules)。
 
 任务模块必须包含图标及其关联的应用的短名称。 任务模块不得嵌入整个应用，而只能显示完成特定操作所需的组件。 [*强制修复*]
 
@@ -1249,8 +1236,8 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="meeting-extensions"></a>会议扩展
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions)。[!TIP]
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions)。
+> [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 会议扩展设计准则](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
 
 对会议扩展使用以下准则：
@@ -1351,8 +1338,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="notifications"></a>通知
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis)。
 
 如果你的应用使用[Microsoft Graph 提供的活动信息提要 API](/graph/teams-send-activityfeednotifications)，请确保它遵守以下准则。
 
@@ -1380,8 +1366,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="microsoft-365-app-compliance-program"></a>Microsoft 365 应用合规性
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation)。
 
 Microsoft 365 应用合规性计划 旨在帮助企业通过评估应用程序的安全和合规性信息来评估和管理风险。 如果要向 Teams 商店发布一个应用程序，则必须完成该程序的以下几层:
 
@@ -1399,13 +1384,11 @@ Microsoft 365 应用合规性计划 旨在帮助企业通过评估应用程序�
 
 * **发布者证明**: 共享常规、数据处理以及安全性和合规性信息的过程，以帮助潜在客户在使用应用时做出明智的决定。
 
-> [!NOTE]
-> 如果之前未列出所提交的应用，则在应用进入 Teams 商店之前，无法正式完成发布者证明。 如果正在更新列出的应用，请在提交最新版本的应用之前完成发布者证明。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::如果提交之前未列出的应用，则在应用进入 Teams 商店之前，无法正式完成发布者证明。 如果正在更新列出的应用，请在提交最新版本的应用之前完成发布者证明。
 
 ## <a name="advertising"></a>广告
 
-> [!NOTE]
-> 本部分符合 [Microsoft 商业市场策略编号1140.7](/legal/marketplace/certification-policies#11407-advertising)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略编号1140.7](/legal/marketplace/certification-policies#11407-advertising)。
 
 应用不得显示广告，包括动态广告、横幅广告和消息内广告。
 

@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Teams 集成注意事项
-ms.openlocfilehash: a21bb050008af935ee370d3e65d95a63a7090fb0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: f545acf25cc6b54a92dc8c7556b348394379abc5
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356250"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590736"
 ---
 # <a name="considerations-for-teams-integration"></a>Teams 集成注意事项
 
@@ -39,7 +39,7 @@ ms.locfileid: "63356250"
 |操作快捷方式和扩展  |[消息扩展](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[机器人](../bots/what-are-bots.md) |
 |频道通知  |[机器人](../bots/what-are-bots.md)<br/>[传入 Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 连接器](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|邮件外部服务  |[机器人](../bots/what-are-bots.md)<br/>[传出 Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|邮件外部服务  |[机器人](../bots/what-are-bots.md)<br/>[传出 webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Modals  |[任务模块](../task-modules-and-cards/what-are-task-modules.md)  |
 |内容丰富的卡片  |[自适应卡](../task-modules-and-cards/what-are-cards.md)  |
 
@@ -58,7 +58,7 @@ ms.locfileid: "63356250"
 
 ***集成方案**：SharePoint*
 
-若要将现有[SharePoint页](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites)作为"Teams"选项卡集成，必须考虑以下事项：
+若要将现有[SharePoint页](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model)作为"Teams"选项卡集成，必须考虑以下事项：
 
 * 它必须是新式 *SharePoint* 页面。
 * 仅支持个人选项卡。 无法将页面作为通道选项卡进行集成。

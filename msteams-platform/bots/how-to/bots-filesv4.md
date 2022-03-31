@@ -1,16 +1,16 @@
 ---
 title: 通过自动程序发送和接收文件
-description: 了解如何通过自动程序发送和接收文件、将 Graph API 用于所有 Teams 范围、使用 Teams bot API 以及代码示例。
+description: 了解如何使用适用于个人、渠道和群聊范围的 Graph API 通过机器人发送和接收文件。 使用Teams v4 Bot Framework SDK 的代码示例使用自动程序 API。
 keywords: teams 自动程序文件发送接收
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0a7b98cb3e9070dc0b5c9df998c7457fabd3538e
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 787de4c774ae1b4cde71f74ed578668ca99a8f95
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452842"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590722"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>通过自动程序发送和接收文件
 

@@ -4,18 +4,14 @@ keywords: teams 应用功能权限
 description: 安全地返回对 Web 客户端中应用的设备权限支持
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 2b1d00a6bd0059df042dacedb043d89c73a972f9
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 02a3602f17923506cba6aa6e83548595aac60852
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453003"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571472"
 ---
 # <a name="device-permissions-for-the-browser"></a>浏览器的设备权限
-
-> [!NOTE]
-> 有关如何在浏览器中处理设备权限的最新更新当前仅适用于公共开发人员 [预览](../../resources/dev-preview/developer-preview-intro.md) 版。
-> 此更新将于 2022 年 2 (GA) 正式发布，2022 年 2 月底完成推出。
 
 Teams需要设备权限（如相机或麦克风访问）的应用现在要求用户在 Web 浏览器中按应用级别手动授予权限。 以前，浏览器已处理如何授予访问权限，但现在这些权限在Microsoft Teams。 这对设计应用程序以及是否需要在浏览器中具有这些权限有一些影响。
 

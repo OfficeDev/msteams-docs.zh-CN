@@ -4,12 +4,12 @@ description: 了解如何为用户注册新的音频/视频呼叫Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼叫机器人音频/视频音频视频媒体
-ms.openlocfilehash: d449ac242cde4432348f9fa5108206df55daee1c
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 1a90e430ba0c5bc4ae1ab246baa85a5d33507a43
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727563"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590764"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>注册 Microsoft Teams 的通话和会议机器人
 
@@ -84,7 +84,7 @@ ms.locfileid: "63727563"
 
 对于使用 Azure AD V1 终结点的应用，当应用安装在其组织中时，租户管理员可以使用 [Microsoft Azure](https://portal.azure.com) 门户同意应用程序权限。 或者，可以在应用中提供注册体验，管理员可通过此体验同意你配置的权限。 管理员同意由管理员记录Azure AD，应用无需再次请求同意即可请求令牌。
 
-你可以依赖管理员在应用程序门户中授予Microsoft Azure[权限](https://portal.azure.com)。 更好的选择是使用 V2 `/adminconsent` 终结点为管理员提供Azure AD体验。 有关详细信息，请参阅 [有关构造管理员同意 URL 的说明](/graph/uth-v2-service#3-get-administrator-consent)。
+你可以依赖管理员在应用程序门户中授予Microsoft Azure[权限](https://portal.azure.com)。 更好的选择是使用 V2 `/adminconsent` 终结点为管理员提供Azure AD体验。 有关详细信息，请参阅 [有关构造管理员同意 URL 的说明](/graph/auth-v2-service#3-get-administrator-consent)。
 
 > [!NOTE]
 > 若要构建租户管理员同意 URL，需要应用注册门户中配置的重定向 URI 或回复 URL。[](https://apps.dev.microsoft.com/) 若要为自动程序添加回复 URL，请访问自动程序注册，选择"**高级** > 选项 **""添加应用程序清单"**。 将重定向 URL 添加到集合 `replyUrls` 。
@@ -111,3 +111,4 @@ ms.locfileid: "63727563"
 
 * [来电通知](~/bots/calls-and-meetings/call-notifications.md)
 * [在本地电脑上开发通话和联机会议机器人](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [查看应用权限并授予管理员同意](/MicrosoftTeams/app-permissions-admin-center)

@@ -1,15 +1,15 @@
 ---
 title: 统一会议应用
 author: surbhigupta
-description: 了解会议生命周期、在桌面和移动环境中构建用户在整个会议生命周期中的会议体验、参与者角色和用户类型。 此外，了解如何在会议生命周期中集成机器人和消息传递扩展。
+description: 了解Teams和移动环境中会议生命周期和用户的会议体验、参与者和用户角色和类型、在会议生命周期中集成机器人和消息传递扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: cfcd21d17bffcb1ec8eb172fe7e296a7a8fd6e69
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 16a969c7f863bf1f4c01f6f81b9ddfb848eaaf22
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558843"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571129"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 

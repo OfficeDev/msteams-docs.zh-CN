@@ -4,12 +4,12 @@ description: Microsoft Teams 开发工具入门概述文档
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发工具示例
-ms.openlocfilehash: 4dc9c77cacea5af84164bbb6e7c56a50461a0b0d
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: e30aae82c4251b9d32556032a7f4165ffc6ab4b1
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765874"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571423"
 ---
 # <a name="get-started"></a>入门
 
@@ -49,7 +49,7 @@ ms.locfileid: "63765874"
 现在，让我们来构建你的首个 Teams 应用。 但首先，请选择语言（框架）并准备开发环境。
 
 > [!div class="nextstepaction"]
-> [使用 Blazor 构建 Teams 应用](../sbs-gs-blazorapp.yml)
+> [使用 Blazor 构建 Teams 应用](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]
 > [通过 JavaScript 使用 React 构建 Teams 应用](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]

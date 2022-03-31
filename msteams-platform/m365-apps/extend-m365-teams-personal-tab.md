@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 376d12b1fce2352ebfd92312c3154806b9bda5e2
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464815"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590757"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨Teams扩展个人选项卡Microsoft 365
 
@@ -54,7 +54,7 @@ ms.locfileid: "64464815"
 
 如果你有现有的个人选项卡应用，请制作生产项目的副本或分支以在应用清单中测试并更新应用 ID，以使用与生产应用 ID (不同的新标识符) 。
 
-如果您想使用示例代码完成本教程，请按照 [Todo 列表](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend)示例入门中的设置步骤，使用 Teams Toolkit for Visual Studio Code 扩展构建个人选项卡应用程序。 或者，你可以从为 [TeamsJS SDK v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) 预览版更新的同一个"Todo 列表示例"开始，然后继续在其他体验中预览[Microsoft 365选项卡](#preview-your-personal-tab-in-other-microsoft-365-experiences)。 更新后的示例也可在 Teams Toolkit extension： *DevelopmentView* >  **samplesTodo List (Works in Teams， Outlook and Office)**。 > 
+如果您想使用示例代码完成本教程，请按照 [入门 with Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) 中的设置步骤，使用 Teams Toolkit for Visual Studio Code 扩展构建个人选项卡应用程序。 或者，你可以从为 [TeamsJS SDK v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) 预览版更新的同一个"Todo 列表示例"开始，然后继续在其他体验中预览[Microsoft 365选项卡](#preview-your-personal-tab-in-other-microsoft-365-experiences)。 更新后的示例也可在 Teams Toolkit extension： *DevelopmentView* >  **samplesTodo List (Works in Teams， Outlook and Office)**。 > 
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List sample (Works in Teams， Outlook and Office) in Teams Toolkit":::
 
@@ -125,14 +125,14 @@ ms.locfileid: "64464815"
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>更新Azure AD SSO 的应用注册
 
-Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式与 Office 和 Outlook 在 [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) 中的工作方式相同，但是，你需要将多个客户端应用程序标识符添加到租户的应用注册门户中选项卡应用的 Azure AD 应用注册中。
+Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式在 Office 和 Outlook 中的工作方式与 [在 Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) 中相同，但是你需要将多个客户端应用程序标识符添加到租户的 应用注册 中选项卡应用的 Azure AD 应用注册 *中应用注册* 门户。
 
 1. 使用沙[Microsoft Azure](https://portal.azure.com)帐户登录门户。
-1. 打开应用 **注册** 边栏选项卡。
+1. 打开"**应用注册** 边栏选项卡。
 1. 选择个人选项卡应用程序的名称以打开其应用注册。
 1. 选择 **"管理 ("***下的"公开* API) "。
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="从 Azure 门户上的 *应用注册* 边栏选项卡授权客户端 ID":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="在客户端上授权 *应用注册* 边栏选项卡中的Azure 门户":::
 
 在" **授权客户端应用程序"** 部分，确保添加以下所有 `Client Id` 值：
 
@@ -173,9 +173,9 @@ Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式与 Of
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>在其他体验中预览Microsoft 365选项卡
 
-当你升级你的Teams个人选项卡并旁加载它Teams，它还将在桌面Outlook Web 客户端和 Office web 版 (office.com) 中运行。 下面将了解如何从这些体验中预览Microsoft 365体验。
+升级 Teams 个人选项卡并旁加载 Teams 时，它将在 Windows 上的 Outlook、Web、Office、Windows 和 web (office.com) 上运行。 下面将了解如何从这些体验中预览Microsoft 365体验。
 
-### <a name="outlook"></a>Outlook
+### <a name="outlook-on-windows"></a>Windows 版 Outlook
 
 若要查看你的应用在桌面Outlook Windows运行：
 
@@ -195,7 +195,7 @@ Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式与 Of
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="单击屏幕侧栏 (&quot;更多应用&quot;) 选项的省略号 outlook.com 查看已安装的个人选项卡":::
 
-### <a name="office"></a>Office
+### <a name="office-on-windows"></a>Windows 版 Office
 
 若要查看你的应用在桌面Office Windows运行：
 

@@ -5,12 +5,12 @@ description: 了解如何使用 App Studio Microsoft Teams邮件扩展。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: cf4d2efae2c5628ad32beadbc61174ea2bb037a8
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0dc7e8798301e57cc55814938e3311173ad82ce3
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452905"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590680"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>使用 App Studio 创建消息传递
 
@@ -42,7 +42,7 @@ ms.locfileid: "63452905"
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>使用 Bot Framework 注册你的 Web 服务
 
-邮件扩展利用 Bot Framework 的消息架构和安全通信协议;如果还没有，则需要在 Bot Framework 上注册 Web 服务。 Microsoft 应用 ID (我们将它引用为 Teams 内的自动程序 ID，以便从你可能正在处理) 的其他应用 ID 中标识它，在 Bot Framework 中注册的消息终结点将在你的消息扩展中用于接收和响应请求。 如果你使用的是现有注册，请确保启用Microsoft Teams[通道](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)。
+邮件扩展利用 Bot Framework 的消息架构和安全通信协议;如果还没有，则需要在 Bot Framework 上注册 Web 服务。 Microsoft 应用 ID (我们将它引用为 Teams 内的自动程序 ID，以便从你可能正在处理) 的其他应用 ID 中标识它，在 Bot Framework 中注册的消息终结点将在你的消息扩展中用于接收和响应请求。 如果你使用的是现有注册，请确保启用Microsoft Teams[通道](/azure/bot-service/bot-service-manage-channels?preserve-view=true&view=azure-bot-service-4.0)。
 
 如果你遵循其中一个快速入门或从其中一个可用示例开始，将指导你完成注册 Web 服务。 如果要手动注册服务，有三个选项可进行注册。 如果选择注册而不使用 Azure 订阅，将无法利用 Bot Framework 提供的简化 OAuth 身份验证流。 创建后，你将能够将注册迁移到 Azure。
 

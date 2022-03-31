@@ -21,7 +21,7 @@
     - name: 入门概述
       href: get-started/get-started-overview.md
     - name: 使用 Blazor 生成第一个应用
-      href: sbs-gs-blazorapp.yml
+      href: sbs-gs-blazorupdate.yml
     - name: 使用 JavaScript 生成第一个应用
       href: sbs-gs-javascript.yml
     - name: 使用 SPFx 生成第一个应用
@@ -139,7 +139,7 @@
     - name: 适用于机器人和消息扩展（GitHub）的 .NET Bot Framework
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Microsoft Graph SDK
-      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
+      href: /graph/sdks/sdks-overview
     - name: 旧版SDK
       items:
         - name: 机器人SDK（v3）
@@ -398,11 +398,11 @@
 - name: 利用 Microsoft Graph 及 Teams 数据
   items:
     - name: 概述
-      href: 'https://docs.microsoft.com/graph/teams-concept-overview'
+      href: /graph/teams-concept-overview
     - name: Microsoft Graph 工具包
-      href: 'https://docs.microsoft.com/graph/toolkit/overview'
+      href: /graph/toolkit/overview
     - name: 入门
-      href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
+      href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
     - name: 资源特定许可
       href: graph-api/rsc/resource-specific-consent.md
     - name: 使用 Graph API 发送邮件的应用主动安装
