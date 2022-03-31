@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 活动处理程序框架自动程序卡许可通道事件
-ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 59c03c339187010867d9fd380d4ac9798e3aa20c
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398643"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464773"
 ---
 # <a name="bot-activity-handlers"></a>智能机器人活动处理程序
 
@@ -184,13 +184,15 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 #### <a name="core-bot-framework-handlers"></a>核心 Bot Framework 处理程序
 
 >[!NOTE]
-> 除了添加 **和****删除** 的成员的活动之外，本节中介绍的所有活动处理程序将继续像处理非自动程序一样Teams工作。
+>
+>* 除了添加 **和****删除** 的成员的活动之外，本节中介绍的所有活动处理程序将继续像处理非自动程序一样Teams工作。
+>* `onInstallationUpdateActivityAsync()`方法用于在将机器人Teams区域设置时获取Teams。
 
 活动处理程序在团队的上下文中有所不同，其中将新成员添加到团队，而不是消息线程。
 
 中定义的处理程序列表 `ActivityHandler` 包括：
 
-| 事件 | Handler | 说明 |
+| Event | Handler | 说明 |
 | :-- | :-- | :-- |
 | 接收的任何活动类型 | `OnTurnAsync` | 此方法根据收到的活动类型调用其他处理程序之一。 |
 | 收到的邮件活动 | `OnMessageActivityAsync` | 可以重写此方法以处理活动 `Message` 。 |
@@ -206,7 +208,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 扩展 `TeamsActivityHandler` 核心 Bot Framework 处理程序部分中的处理程序列表，以包括以下内容：
 
-| 事件 | Handler | 说明 |
+| Event | Handler | 说明 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | 可以重写此方法以处理要Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -243,7 +245,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 中定义的处理程序列表 `ActivityHandler` 包括：
 
-| 事件 | Handler | 说明 |
+| Event | Handler | 说明 |
 | :-- | :-- | :-- |
 | 接收的任何活动类型 | `onTurn` | 此方法根据收到的活动类型调用其他处理程序之一。 |
 | 收到的邮件活动 | `onMessage` | 此方法有助于处理活动 `Message` 。 |
@@ -258,7 +260,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 扩展 `TeamsActivityHandler` 核心 Bot Framework 处理程序部分中的处理程序列表，以包括以下内容：
 
-| 事件 | Handler | 说明 |
+| Event | Handler | 说明 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | 可以重写此方法以处理要Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -295,7 +297,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 中定义的处理程序列表 `ActivityHandler` 包括：
 
-| 事件 | Handler | 说明 |
+| Event | Handler | 说明 |
 | :-- | :-- | :-- |
 | 接收的任何活动类型 | `on_turn` | 此方法根据收到的活动类型调用其他处理程序之一。 |
 | 收到的邮件活动 | `on_message_activity` | 可以重写此方法以处理活动 `Message` 。 |
@@ -311,7 +313,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 扩展 `TeamsActivityHandler` 核心 Bot Framework 处理程序部分中的处理程序列表，以包括以下内容：
 
-| 事件 | Handler | 说明 |
+| Event | Handler | 说明 |
 | :-- | :-- | :-- |
 | channelCreated | `on_teams_channel_created` | 可以重写此方法以处理正在Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[中创建的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `on_teams_channel_deleted` | 可以重写此方法以处理要Teams的通道。 有关详细信息，请参阅对话[更新事件](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[中删除的频道](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|

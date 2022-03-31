@@ -5,12 +5,12 @@ description: Microsoft Teams 中的机器人概述。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a795ae8c75774f5f3814e5b664314c0f32f30bcb
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 7d6996f023b6e9f706edd99429dd1575394a43f1
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323195"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498222"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
@@ -37,13 +37,13 @@ ms.locfileid: "62323195"
 
 机器人是具有对话界面的应用。 可以使用文本、交互式卡片和语音与机器人交互。 机器人在频道或群组聊天对话和一对一对话中的行为不同。 会话通过 Bot Framework 连接器进行处理。 请参阅[对话基础知识](~/bots/how-to/conversations/conversation-basics.md)。
 
-机器人需要上下文信息（例如用户配置文件详细信息）来访问相关内容并增强机器人体验。 请参阅[获取 Teams 上下文](~/bots/how-to/get-teams-context.md)。
+机器人需要上下文信息（例如用户配置文件详细信息）来访问相关内容并增强机器人体验。请参阅[获取 Teams 上下文](~/bots/how-to/get-teams-context.md)。
 
 可以使用 Graph API 或 Teams 机器人 API 通过机器人发送和接收文件。 请参阅[通过机器人发送和接收文件](~/bots/how-to/bots-filesv4.md)。
 
 速率限制用于优化用于 Teams 应用程序的机器人。 为了保护 Microsoft Teams 及其用户，机器人 API 为传入请求提供速率限制。 请参阅[通过团队中的速率限制来优化你的智能机器人](~/bots/how-to/rate-limit.md)。
 
-通过 Microsoft Graph 用于通话和联机会议的 API，Microsoft Teams 应用现在可以使用语音和视频与用户进行交互。 请参阅[通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。
+通过用于通话和联机会议的 Microsoft Graph API，Microsoft Teams 应用现在可以使用语音和视频与用户进行交互。请参阅[通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。
 
 可以使用 Teams 机器人 API 获取聊天或团队成员的信息。 请参阅[Teams 机器人 API 在提取团队或聊天成员方面的更改](~/resources/team-chat-member-api-changes.md)。
 
@@ -64,6 +64,7 @@ ms.locfileid: "62323195"
 ## <a name="see-also"></a>另请参阅
 
 * [创建适合 Teams 的机器人](~/bots/how-to/create-a-bot-for-teams.md)
+* [Microsoft Teams 机器人的工作原理](/azure/bot-service/bot-builder-basics-teams)
 * [注册 Microsoft Teams 的通话和会议机器人](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [向 Teams 机器人添加身份验证](~/bots/how-to/authentication/add-authentication.md)
 * [智能机器人活动处理程序](~/bots/bot-basics.md)

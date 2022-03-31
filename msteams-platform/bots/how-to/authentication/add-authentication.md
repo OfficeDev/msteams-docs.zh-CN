@@ -5,13 +5,13 @@ description: 如何使用自动程序将 OAuth 身份验证Microsoft Teams自动
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: 资源组自动程序注册 Azure 模拟器自动程序清单
-ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+keywords: 资源组自动程序注册 Azure 模拟器自动程序清单部署
+ms.openlocfilehash: f0dafb52774c43a511076134d2b39b91de0743a7
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63493023"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464822"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -150,7 +150,7 @@ Azure Bot 资源注册将你的 Web 服务注册为自动程序框架，该框�
 
     ![选择服务条款](~/assets/images/adaptive-cards/select-terms-of-service.png)
 
-1. 选择 **保存**。
+1. 选择“保存”。
 
     ![选择Teams](~/assets/images/adaptive-cards/select-teams.png)
 
@@ -219,7 +219,7 @@ Azure Bot 资源注册将你的 Web 服务注册为自动程序框架，该框�
 
     ![teams 自动程序应用程序身份验证连接字符串 adv1 视图](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. 选择 **保存**。
+1. 选择“保存”。
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v2"></a>Microsoft Azure Active Directory (Azure AD) V2
 
@@ -243,7 +243,7 @@ Azure Bot 资源注册将你的 Web 服务注册为自动程序框架，该框�
 
     1. 对于 **"作用域**"，输入此应用程序所需的图形权限的空格分隔列表，例如：User.Read User.ReadBasic.All Mail.Read
 
-1. 选择 **保存**。
+1. 选择“保存”。
 
 ### <a name="test-the-connection"></a>测试连接
 
@@ -358,7 +358,7 @@ Azure Bot 资源注册将你的 Web 服务注册为自动程序框架，该框�
 1. 选中"使用 **版本 1.0 身份验证令牌"复选框**。
 1. 输入 **ngrok 工具的本地** 路径。 *请参阅* Bot Framework Emulator/ngrok 隧道集成 [Wiki](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok))。 有关详细信息，请参阅 [ngrok](https://ngrok.com/)。
 1. 在启动应用程序时按 **"运行 ngrok"Emulator复选框**。
-1. 选择" **保存"** 按钮。
+1. 选择“**保存**”按钮。
 
 当机器人显示登录卡并且用户选择登录按钮时，Emulator会打开一个页面，用户可使用该页面通过身份验证提供程序登录。
 一旦用户这样做，提供程序将生成用户令牌并将其发送给机器人。 之后，机器人可以代表用户操作。

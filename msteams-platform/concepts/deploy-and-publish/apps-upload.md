@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 1db2f2933f2da47310468c5374b1b6a27b7fffbc
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 4a866738f2fb52f5b6c66909648c145ad0e96767
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63675004"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464794"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>在 Microsoft Teams 中上传应用
 
@@ -41,9 +41,6 @@ ms.locfileid: "63675004"
     :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="显示 Teams 应用安装对话框示例的屏幕截图。":::
 
 1. 选择“**添加**”将应用添加到 Teams。
-
-    > [!NOTE]
-    > `onInstallationUpdateActivityAsync()`方法用于获取 Microsoft Teams 区域设置，同时将机器人添加到Microsoft Teams。
 
 ## <a name="troubleshooting"></a>疑难解答
 

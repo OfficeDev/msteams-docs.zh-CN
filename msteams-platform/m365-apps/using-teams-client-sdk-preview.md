@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e78746c226c8fa9e34f37e405f992f1bd7d2fd1
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 7aef6fff7e8d68e76f1a9233d3650d3833275bde
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399259"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464787"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams JavaScript 客户端 SDK v2 预览版
 
@@ -365,7 +365,7 @@ TeamsJS *任务* 命名空间已重命名为 *对话框*，并且以下 API 已�
 
 ## <a name="next-steps"></a>后续步骤
 
-还可以了解有关 [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md) 更改日志和 [TeamsJS SDK v2 预览 API](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true) 参考中的更改的详细信息。
+还可以了解有关 [TeamsJS SDK v2 Preview](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/packages/teams-js/CHANGELOG.md) 更改日志和 [TeamsJS SDK v2 预览 API](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true) 参考中的更改的详细信息。
 
 当你准备好测试在 Teams 和 Outlook 中运行的 Office，请参阅：
 

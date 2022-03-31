@@ -5,12 +5,12 @@ keywords: 开发人员门户团队入门
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399322"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511232"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>使用 Microsoft Teams 开发人员门户管理应用
 
@@ -19,7 +19,9 @@ ms.locfileid: "63399322"
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="显示开发人员门户主页的屏幕截图Teams。":::
 
 > [!NOTE]
-> 目前，开发人员门户不适用于 政府社区云 (GCC) 、GCC-High 或国防部 (DOD) 租户。
+>
+> * 目前，开发人员门户不适用于 政府社区云 (GCC) 、GCC-High 或国防部 (DOD) 租户。
+> * 但是，可以使用常规租户在开发人员门户中生成应用、下载应用，并使用 [Microsoft](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) Graph应用上传到国家云。 有关详细信息，请参阅国家 [云部署](/graph/deployments)。
 
 ## <a name="register-an-app"></a>注册应用
 
@@ -71,17 +73,6 @@ ms.locfileid: "63399322"
 
 有关详细信息，请参阅分发[你的Teams应用](~/concepts/deploy-and-publish/apps-publish-overview.md)。
 
-## <a name="analyze-your-apps-usage"></a>分析应用的使用情况
-
-在 **"概述** "页上，你可以看到应用的活动用户总数。 这些指标可用于通过开发人员门户发布到 Teams 商店或组织的应用程序目录的应用，并且范围为应用程序 ID。
-
-| 跃点数 | 定义 |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *每月 R30* | 默认使用率指标。 它显示了在 UTC 时间滚动 30 天窗口内使用你的应用的唯一活动用户数。 |
-| *每天* | 显示以 UTC 格式在给定日期使用应用的唯一活动用户数。 |
-
-显示过去七天、30 天和 60 天的每月使用情况和每日使用情况。 您应在 24-48 小时内看到给定一天的使用情况。 新应用的使用情况最多可能需要 3-5 天才能显示。
-
 ## <a name="use-tools-to-create-app-features"></a>使用工具创建应用功能
 
 开发人员门户还包括可帮助你构建应用或应用Teams功能的工具。 其中一些工具包括：
@@ -92,4 +83,4 @@ ms.locfileid: "63399322"
 
 ## <a name="see-also"></a>另请参阅
 
-[将 SaaS 产品与Microsoft Teams一起](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Microsoft Teams 应用随附 SaaS 产品/服务](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

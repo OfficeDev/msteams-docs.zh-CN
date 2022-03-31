@@ -1,16 +1,16 @@
 ---
 title: 了解应用的用例和 Teams 功能
 author: heath-hamilton
-description: 规划应用、了解用户及其需求、了解应用将解决的用户问题、规划用户身份验证及其载入体验
+description: 本文介绍 Microsoft Teams 应用功能、规划 Teams 应用、了解应用用户及其需求、了解 Teams 应用将解决的用户问题、规划用户身份验证及其载入体验。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 95ed5ed7af2eaf8c5b542a9a510484b5ec964b3e
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766119"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498229"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 

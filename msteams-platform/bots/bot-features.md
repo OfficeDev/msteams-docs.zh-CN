@@ -5,12 +5,12 @@ description: 用于构建自动程序的工具和 SDK Microsoft Teams概述。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 1818ebfa102ce55d8243c16f460fa688fc67fdc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453885"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464766"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -50,7 +50,7 @@ Bot [Framework](https://dev.botframework.com/) 是一个丰富的 SDK，用于�
 
 ## <a name="bots-with-webhooks-and-connectors"></a>具有 Webhook 和连接器的机器人
 
-Webhook 和连接器将机器人连接到 Web 服务。 使用 webhook 和连接器，可以创建简单的机器人进行基本交互，例如创建工作流或其他简单命令。 它们仅在创建它们的团队中可用，并且适用于特定于公司工作流的简单流程。 有关详细信息，请参阅 [什么是 Webhook 和连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
+Webhook 和连接器将机器人连接到 Web 服务。 使用 webhook 和连接器，可以创建用于基本交互的自动程序，例如创建工作流或其他简单命令。 它们仅在创建它们的团队中可用，并且适用于特定于公司工作流的简单流程。 有关详细信息，请参阅 [什么是 Webhook 和连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
 ## <a name="advantages-of-bots"></a>自动程序的优点
 
@@ -194,6 +194,7 @@ this.onMessage(async (context, next) => {
 |示例名称 | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Teams 对话自动程序 | 消息和对话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| 机器人示例 | 自动程序示例集 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) | |
 
 ## <a name="next-step"></a>后续步骤
 

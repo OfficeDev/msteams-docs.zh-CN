@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 5370c9b5f273936c8afdd6c95e4e524dda3857ce
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765944"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464815"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨Teams扩展个人选项卡Microsoft 365
 
@@ -120,8 +120,8 @@ ms.locfileid: "63765944"
 |Microsoft 365主机| 帧-上级权限|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| 办公室 | `*.office.com` |
-| Outlook | `outlook.office.com`, `outlook.office365.com` |
+| Office | `*.office.com` |
+| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>更新Azure AD SSO 的应用注册
 
@@ -195,7 +195,7 @@ Azure Active Directory个人选项卡的 (SSO) 单一登录的工作方式与 Of
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="单击屏幕侧栏 (&quot;更多应用&quot;) 选项的省略号 outlook.com 查看已安装的个人选项卡":::
 
-### <a name="office"></a>办公室
+### <a name="office"></a>Office
 
 若要查看你的应用在桌面Office Windows运行：
 
@@ -223,7 +223,7 @@ Outlook和Office个人选项卡为预览版，不支持用于生产用途。 下
 
 Outlook测试Office或生产租户中，可以通过以下三种方式之一将 (和启用) 的个人选项卡分发给预览受众：
 
-#### <a name="teams-client"></a>Teams客户端
+#### <a name="teams-client"></a>Teams 客户端
 
 从" *应用"* 菜单中， *选择"管理应用* > **""将应用提交到组织"**。这需要 IT 管理员批准。
 
