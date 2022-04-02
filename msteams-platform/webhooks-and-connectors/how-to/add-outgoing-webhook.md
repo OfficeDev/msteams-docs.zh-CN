@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Teams 选项卡, 传出 Webhook, 可操作邮件, 验证 Webhook
-ms.openlocfilehash: c849fd10c19a7af198147cb39fa90c2fdd5052a8
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8450f9411e2fa5b1e0af624f48882016951f24a7
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399105"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590687"
 ---
 # <a name="create-outgoing-webhook"></a>创建传出 Webhook
 
@@ -127,6 +127,7 @@ ms.locfileid: "63399105"
 >
 > * 你可以使用传出 Webhook 将自适应卡片、主图卡片和短信作为附件发送。
 > * 卡片支持设置格式。有关详细信息，请参阅[使用 Markdown 设置卡片格式](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown)。
+> * 传出 Webhook 中的自适应卡片仅支持 `openURL` 卡片操作。
 
 以下代码是自适应卡片答复的示例：
 

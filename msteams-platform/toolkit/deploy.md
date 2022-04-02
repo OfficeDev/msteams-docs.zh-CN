@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558815"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614528"
 ---
 # <a name="deploy-to-the-cloud"></a>部署到云
 
@@ -52,6 +52,7 @@ Teams Toolkit帮助你将应用程序中的前端和后端代码部署或上载�
 ## <a name="see-also"></a>另请参阅
 
 * [添加更多云资源](add-resource.md)
+* [创建和部署 Azure 云服务](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [添加更多Teams应用功能](add-capability.md)
 * [使用 CI/CD 管道部署项目代码](use-CICD-template.md)
 * [管理多个环境](TeamsFx-multi-env.md)

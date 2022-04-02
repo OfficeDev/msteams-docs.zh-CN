@@ -1,62 +1,75 @@
 ---
 title: 集成人员选取器
-author: Rajeshwari-v
-description: 如何使用 JavaScript Teams SDK 集成人员选取器控件
+description: 如何使用 Teams JavaScript 客户端 SDK 集成人员选取器控件
 keywords: 人员选取器控件
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: b12cda18e8144c64e7b533af63f8a49283fff593
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: cd7039693b146abb53e938ba020077a48c343bda
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452996"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571453"
 ---
-# <a name="integrate-people-picker"></a>集成人员选取器  
+# <a name="integrate-people-picker"></a>集成人员选取器
 
-人员选取器是一个控件，用于搜索和选择人员。 这是一项可在企业平台Teams功能。 你可以将Teams人员选取器输入控件与 Web 应用集成。 您可以在单选或多选和配置之间选择，例如限制聊天、频道或整个组织的搜索。
+“人员选取器”是 Teams 中的输入控件，允许用户搜索和选择人员。 你可以在 Web 应用中集成终端用户可以执行不同功能的“人员选取器”输入控件，例如在聊天、频道或 Teams 内的整个组织中搜索和选择人员。 “人员选取器”控件可用于所有 Teams 客户端，例如 Web、桌面和移动设备。
 
-可以使用 [JavaScript Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)`selectPeople`，它提供 API 将人员选取器集成到 Web 应用中。
+可以使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，它提供 `selectPeople` API 以在 Web 应用中集成“人员选取器”输入控件。
 
-## <a name="advantages-of-integrating-the-native-people-picker"></a>集成本机人员选取器的优点
+## <a name="advantages-of-using-people-picker"></a>使用“人员选取器”的优点
 
-* 人员选取器控件适用于Teams图面，如任务模块、聊天、频道、会议选项卡和个人应用。
-* 此控件允许你在聊天、频道或整个组织中搜索和选择用户。
-* 人员选取器可帮助处理涉及任务分配、标记和通知用户的方案。
-* 可以在 Web 应用中使用此现成的控件。 它可显著节省自己构建此类控件的工作和时间。
+* 在所有 Teams 功能上运行，例如任务模块、聊天、频道、会议选项卡和个人应用。
+* 允许用户在 Teams 中搜索和选择聊天、频道或整个组织中的人员。
+* 在涉及任务分配、标记和通知用户的方案中提供帮助。
+* 与建立任何类似的控制相比，节省了大量时间和精力。
 
-你必须调用 API 以`selectPeople`将人员选取器控件集成到Teams应用中。 为了进行有效的集成，你必须了解 [用于](#code-snippet) 调用 API 的代码段。
-熟悉 API 响应错误以处理 [Web](#error-handling) 应用中的错误非常重要。
-
-> [!NOTE]
-> 目前，Microsoft Teams对人员选取器的支持仅适用于移动客户端。
+若要在 Teams 应用中集成“人员选取器”输入控件，请使用 [`selectPeople`](#selectpeople-api) API。 若要集成和调用 API，则必须充分了解随附的 [代码片段](#code-snippet)。 还需要熟悉 [API 响应错误](#error-handling)。
 
 ## <a name="selectpeople-api"></a>`selectPeople` API
 
-`selectPeople`API 使你能够将Teams添加到 `People Picker input control` Web 应用中。  
-API 说明如下：
+`selectPeople` API 使你能够将 Teams 人员选取器输入控制添加到 Web 应用中，还可帮助你执行以下操作:
 
-| API      | 说明  |
-| --- | --- |
-|**selectPeople**|启动人员选取器，并允许用户从列表中搜索和选择一个或多个人员。<br/><br/>此 API 将所选用户的 ID、名称和电子邮件地址返回到调用 Web 应用。<br/><br/>对于个人应用，控件将在整个组织中进行搜索。 如果将应用添加到聊天或频道，则根据方案配置搜索上下文。 搜索仅限于该聊天、频道的成员，或在整个组织中可用。|
+* 允许用户搜索并从列表中选择一个或多个人员。
+* 将所选用户的 ID、名称和电子邮件地址返回到 Web 应用。
 
-API `selectPeople` 附带以下输入配置：
+对于个人应用，控件会在 Teams 中搜索整个组织的名称或电子邮件 ID。 如果将应用添加到聊天或频道中，则根据方案配置搜索上下文。 搜索受限于该聊天或频道的成员。
+
+`selectPeople` API 附带以下输入配置:
 
 |配置参数|类型|说明| 默认值|
 |-----|------|--------------|------|
-|`title`| 字符串| 它是可选参数。 它设置人员选取器控件的标题。 | 选择人员|
-|`setSelected`|字符串| 它是可选参数。 你必须传递Microsoft Azure Active Directory (Azure AD) 预选的一组人员。 此参数在启动人员选取器控件时预选人员。 在单选的情况下，只会预填充第一个有效用户，忽略其余用户。 |NULL|
-|`openOrgWideSearchInChatOrChannel`|布尔值 | 它是可选参数。 设置为 true 时，它将在组织范围内启动人员选取器，即使该应用已添加到聊天或频道也是如此。 |False|
-|`singleSelect`|布尔值|它是可选参数。 设置为 true 时，它会启动人员选取器，将选择限制为仅一个用户。 |False|
+|`title`|String| 它是一个可选参数，用于设置人员选取器控件的标题。|`selectPeople`|
+|`setSelected`|String| 它是一个可选参数。 必须传递要预选人员的 Microsoft Azure Active Directory (Azure AD) ID。 此参数在启动人员选取器输入控件时预先选择人员。 在单一选择的情况下，仅预先填充第一个有效用户，而忽略其余用户。|**Null**|
+|`openOrgWideSearchInChatOrChannel`|Boolean| 它是一个可选参数，如果设置为 TRUE，则即使应用已添加到聊天或频道中，它也会在组织范围内启动“人员选取器”。|**False**|
+|`singleSelect`|布尔|它是一个可选参数，如果设置为 TRUE，则它将启动“人员选取器“并将所选内容限制为仅一个用户。|**False**|
 
-下图描述了示例 Web 应用中人员选取器的体验：
+下图显示了在移动设备和桌面版上的“人员选取器”体验:
 
-![人员选取器 Web 应用体验](../../assets/images/tabs/people-picker-control-capability.png)
+# <a name="mobile"></a>[移动设备](#tab/Samplemobileapp)
 
-### <a name="code-snippet"></a>代码段
+“人员选取器”输入控件允许用户使用以下步骤搜索和添加人员:
 
-**呼叫 `selectPeople` 用于** 从列表中选择人的 API：
+1. 键入所需人员的姓名。 列表中显示名称建议。
+1. 从列表中选择所需人员的姓名。 
+
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="选取器选取器移动" border="true":::
+
+# <a name="desktop"></a>[桌面设备](#tab/Sampledesktop)
+
+Web 或桌面上的“人员选取器”控件在 Web 应用顶部的模式窗口中启动，若要添加人员，请使用以下步骤:
+
+1. 键入所需人员的姓名。 列表中显示名称建议。
+1. 从列表中选择所需人员的姓名。 
+
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="按名称桌面人员选取器" border="true":::
+
+---
+
+## <a name="code-snippet"></a>代码片段
+
+以下代码片段显示列表中 `selectPeople` API 人员的使用:
 
 ```javascript
  microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
@@ -81,18 +94,18 @@ API `selectPeople` 附带以下输入配置：
 
 ## <a name="error-handling"></a>错误处理
 
-必须确保在 Web 应用中正确处理错误。 下表列出了错误代码以及生成错误的条件：
+下表列出了错误代码及其说明:
 
-|错误代码 |  错误名称     | 条件|
-| --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API 在当前平台上不受支持。|
-| **500** | INTERNAL_ERROR | 启动人员选取器时遇到内部错误。|
-| **4000** | INVALID_ARGUMENTS | 使用错误或不足的强制参数调用 API。|
-| **8000** | USER_ABORT |用户已取消操作。|
-| **9000** | OLD_PLATFORM | 用户位于不存在 API 实现的旧平台版本上。  升级内部版本可解决此问题。|
+|错误代码 |  错误名称     | 说明|
+| --------- | --------------- | --------- |
+| **100** | NOT_SUPPORTED_ON_PLATFORM | 当前平台不支持 API。|
+| **500** | INTERNAL_ERROR | 启动人员选取器时遇到的内部错误。|
+| **4000** | INVALID_ARGUMENTS | 调用 API 时的强制性参数错误或不足。|
+| **8000** | USER_ABORT |用户取消了该操作。|
+| **9000** | OLD_PLATFORM | 用户位于无法实现 API 的旧平台内部版本上。 升级到最新版本的内部版本以解决此问题。|
 
 ## <a name="see-also"></a>另请参阅
 
-* [将媒体功能集成到Teams](mobile-camera-image-permissions.md)
-* [将 QR 代码或条形码扫描仪功能集成到 Teams](qr-barcode-scanner-capability.md)
-* [在 Teams 中集成位置Teams](location-capability.md)
+* [在 Teams 中集成媒体功能](mobile-camera-image-permissions.md)
+* [在 Teams 中集成 QR 代码或条形码扫描程序功能](qr-barcode-scanner-capability.md)
+* [在 Teams 中集成位置功能](location-capability.md)

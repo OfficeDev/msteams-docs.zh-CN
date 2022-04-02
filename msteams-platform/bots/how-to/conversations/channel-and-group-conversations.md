@@ -5,12 +5,12 @@ description: 如何发送、接收和处理频道或群聊中机器人的消息�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6c3d476ec51c75431d4a39e35b7307771b919d26
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 737aba65007f3e5ed359bc67a49c3fb3e7cc5479
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727497"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612627"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 
@@ -271,6 +271,10 @@ async def _mention_activity(self, turn_context: TurnContext):
 * 将团队成员添加到组或频道。
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## <a name="step-by-step-guide"></a>分步指南
+
+按照[分步指南操作，](../../../sbs-teams-conversation-bot.yml)创建Teams聊天机器人。
 
 ## <a name="next-step"></a>后续步骤
 

@@ -4,12 +4,12 @@ description: 介绍 Teams 中机器人可用的所有卡片和卡片操作
 ms.localizationpriority: high
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 2eab0ee575efb1abf0aed025243d3e4d891b60fd
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558824"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571493"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -268,6 +268,20 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 ```
 
 #### <a name="additional-information-on-adaptive-cards"></a>有关自适应卡片的其他信息
+
+可以使用美元符号（$）和大括号在自适应卡片中传递动态值。 有关详细信息，请参阅“[自适应卡片模版化](/adaptive-cards/templating/)”。
+
+示例：
+
+```json
+{ 
+ "type": "TextBlock",
+ "text": "${titleText}",
+ "size": "default",
+ "weight": "bolder"
+}
+
+```
 
 Bot Framework 参考:
 

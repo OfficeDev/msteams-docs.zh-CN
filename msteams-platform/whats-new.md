@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 4c48e2e5ca7ac9dcaaf73189cc724f5c86385ee0
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 334d397ac2bc0e5c08c0b1df5bf6309d5f0a57ee
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765951"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571486"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,27 +22,16 @@ ms.locfileid: "63765951"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|03/30/2022| 使用选项卡和机器人更新了 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
+|03/30/2022|浏览器的设备权限 | 集成设备功能> [浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md) |
+|03/29/2022 | 集成人员选取器 | 与 Teams 集成>[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)|
 |2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|
-|2022 年 3 月 22 日| 更新了适用于 Teams 的 Blazor 应用入门 |  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
+|2022 年 3 月 22 日| 更新了适用于 Teams 的 Blazor 应用入门 |  • 开始>[使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
+|03/22/2022| 更新了适用于 Teams 的 Blazor 应用入门 |  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
 |2022 年 3 月 22 日| 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
 |2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022| 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
-|2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
-|2022/02/24| 引入了生成基于操作的消息传递扩展的分步指南 | 生成消息传递扩展 > 操作命令 > 定义操作命令 > [生成基于操作的消息传递扩展](sbs-meetingextension-action.yml)|
-|2022/02/24| 引入了生成基于搜索的消息传递扩展的分步指南 | 生成消息传递扩展 > 搜索命令 > 定义搜索命令 > [生成基于搜索的消息传递扩展](sbs-messagingextension-searchcommand.yml)|
-|2022/02/24| 引入了创建传出 Webhook 的分步指南 | 生成 Webhook 和连接器 > 创建传出 Webhook > [创建传出 Webhook](sbs-outgoing-webhooks.yml)|
-| 2022/02/23 |Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
-| 2022/02/18 | 为 Microsoft Teams 开发人员文档引入了广泛的术语表，可帮助你快速找到有关术语的定义 | [术语表](~/get-started/glossary.md) |
-| 2022/02/18 | 更新了概述模块，用于将 Teams 应用映射到组织目标、用户情景和探索 Teams 应用功能 | [概述 > 适合的 Teams 应用](overview.md) |
-| 2022/02/18 | 更新了应用基础知识模块以规划应用，以包括将用例映射到 Teams 功能和应用规划清单 | [规划应用 > 概述](~/concepts/app-fundamentals-overview.md) |
-|02/17/2022| 提交应用后会发生什么？| 分发应用>发布到 Teams 应用商店>[概述](concepts/deploy-and-publish/appsource/publish.md)|
-|02/15/2022| 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人>发送和接收文件>[如何将文件从机器人上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
-|2022 年 2 月 11 日| 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
-|02/08/2022| 引入创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
-|02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
-|02/03/2022| 引入了应用清单版本 1.12 | • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
-
 
 ## <a name="ga-features"></a>GA 功能
 
@@ -55,8 +44,12 @@ ms.locfileid: "63765951"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-|2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|
-|2022 年 3 月 22 日| 更新了适用于 Teams 的 Blazor 应用入门|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
+|03/30/2022| 使用选项卡和机器人更新了 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
+|03/30/2022|浏览器的设备权限 | 集成设备功能> [浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md) |
+|03/29/2022 |集成人员选取器 | 与 Teams 集成>[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)
+|2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|  
+|2022 年 3 月 22 日| 更新了适用于 Teams 的 Blazor 应用入门|  • 开始>[使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
+|03/22/2022| 更新了适用于 Teams 的 Blazor 应用入门|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
 |2022 年 3 月 22 日| 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
 |2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022 | 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|  
@@ -266,7 +259,6 @@ ms.locfileid: "63765951"
 |12/24/2021| 引入了授予 Tab 设备权限的分步指南 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |
 |11/15/2021| 个人选项卡和可在 Outlook 和 Office 运行的消息传递扩展 | [跨 Microsoft 365 扩展 Teams 应用](~/m365-apps/overview.md) |
 |10/28/2021|可以启用机器人以使用特定于资源的许可 （RSC） 接收所有通道消息 | • 生成机器人>机器人对话>机器人对话消息>[使用 RSC 接收所有消息](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • 生成机器人>机器人对话> [机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 生成机器人>机器人对话> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • 应用清单>公共开发人员预览> [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md) |
-|10/19/2021|浏览器的设备权限 | 应用基础>设备功能> [浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md) |
 |06/21/2021|使用机器人卸载个人应用的行为 | 生成机器人>机器人对话>[使用机器人在个个人应用程序中卸载行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| 聊天的特定资源许可 | • 利用 Microsoft Graph 的 Teams 数据>[特定资源许可](graph-api/rsc/resource-specific-consent.md) </br> • 测试你的应用> Microsoft Graph >[测试 Teams 中资源特定许可权限](graph-api/rsc/test-resource-specific-consent.md)|
 

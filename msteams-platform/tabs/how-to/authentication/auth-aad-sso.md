@@ -4,12 +4,12 @@ description: 描述单一登录 (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 身份验证 SSO Microsoft Azure Active Directory (Azure AD) 单一登录 API
-ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464808"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571318"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>对选项卡的单一登录 (SSO) 支持
 
@@ -83,7 +83,10 @@ SSO API 还适用于嵌入 Web 内容的[任务模块](../../../task-modules-and
 1. 在“**管理**”下，选择“**公开 API**”。
 
     > [!NOTE]
-    > 如果要使用机器人和选项卡生成应用，请输入应用程序 ID URI 作为 `api://fully-qualified-domain-name.com/botid-{YourBotId}`。
+    >
+    > * 如果要使用机器人和选项卡生成应用，请输入应用程序 ID URI 作为 `api://fully-qualified-domain-name.com/botid-{YourBotId}`。
+    >
+    > * 域名请使用小写字母，不要使用大写字母。 例如，若要创建应用服务或 Web 应用，请输入基本资源名称作为 `demoapplication`，然后 URL 将为 `https://demoapplication.azurewebsites.net`。 但是，如果使用基本资源名称作为 `DemoApplication`，则 URL 将为 `https://DemoApplication.azurewebsites.net`，这支持桌面、Web 和 iOS，但在 android 中不受支持。
 
 1. 选择“**设置**”链接以生成应用 ID URI，格式为 `api://{AppID}`。 插入具有正斜杠的完全限定的域名 "/" 追加到末尾，介于双正斜杠和 GUID 之间。 整个 ID 的格式必须为 `api://fully-qualified-domain-name.com/{AppID}`。 ² 例如 `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`。 完全限定的域名是在其中提供应用的人类可读域名。 如果使用的是隧道服务（如 ngrok），则必须在 ngrok 子域发生更改时更新此值。
 1. 选择“**添加作用域**”。在打开的面板中，输入 **access_as_user** 作为“**作用域名称**”。

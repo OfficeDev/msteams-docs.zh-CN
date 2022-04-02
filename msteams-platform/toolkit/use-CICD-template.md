@@ -1,17 +1,17 @@
 ---
-title: CI 或 CD 支持Teams应用程序开发人员
+title: 了解如何在应用程序开发人员的 GitHub、Azure Devops 和 Jenkins Teams CI 或 CD 管道模板
 author: MuyangAmigo
 description: 分时模板
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5fa12248969f589282ecf8fd80c4d908ff42e8d8
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453409"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614535"
 ---
 # <a name="cicd-guide"></a>CI/CD 指南
 
@@ -47,7 +47,7 @@ TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档
 执行以下步骤以自定义 CD 工作流：
 
 1. 默认情况下，当向分支 `main` 提交新内容时，将触发 CD 工作流。
-1. 按GitHub[创建](https://docs.github.com/en/actions/reference/encrypted-secrets)存储库密码，以保留 Azure 服务主体Microsoft 365帐户登录凭据。 有关详细信息，请参阅操作[GitHub操作](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
+1. 按GitHub[创建](https://docs.github.com/en/actions/reference/encrypted-secrets)存储库密码，以保留 Azure 服务主体Microsoft 365帐户登录凭据。 有关详细信息，[请参阅GitHub Actions。](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)
 1. 如有必要，请更改生成脚本。
 1. 根据需要删除测试脚本。
 
@@ -224,7 +224,7 @@ steps:
 |`M365_ACCOUNT_PASSWORD`|帐户Microsoft 365密码。|
 |`M365_TENANT_ID`|标识创建或发布 Teams 应用的租户。 值是可选的，除非你拥有多租户帐户并且想要使用另一个租户。 阅读更多[有关如何查找租户Microsoft 365 ID。](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
 
-## <a name="get-started-guide-for-other-platforms"></a>适用于其他平台的入门指南
+## <a name="get-started-guide-for-other-platforms"></a>开始平台指南
 
 你可以按照列出的预定义示例 Bash 脚本在其他平台上构建和自定义 CI 或 CD 管道：
 
@@ -274,7 +274,7 @@ steps:
 
 ### <a name="see-also"></a>另请参阅
 
-* [快速入门GitHub操作](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
+* [快速入门GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [创建首个 Azure DevOps 管道](/azure/devops/pipelines/create-first-pipeline)
 * [创建首个 Jenkins 管道](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [使用 Microsoft Teams 开发人员门户管理应用](/concepts/build-and-test/teams-developer-portal)

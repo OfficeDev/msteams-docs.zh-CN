@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC 程序包 appmanifest 会话域权限存储
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 43302047a3c5712a17e2bc506eca2eeb350db825
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571346"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614542"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -23,8 +23,6 @@ ms.locfileid: "64571346"
 ::: zone pivot="node-java-script"
 
 ## <a name="create-a-personal-tab-with-nodejs"></a>创建具有"个人"选项卡Node.js
-
-使用"个人"选项卡创建Node.js
 
 1. 在命令提示符下，在安装以下命令后输入以下命令，以安装 [Yeoman](https://yeoman.io/) 和 [gulp-cli](https://www.npmjs.com/package/gulp-cli) Node.js：
 
@@ -178,8 +176,8 @@ ms.locfileid: "64571346"
     {
         "entityId": "personalTab",
         "name": "Personal Tab ",
-        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{HOSTNAME}}",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
         "scopes": ["personal"]
     }
     ```
@@ -279,8 +277,6 @@ gulp ngrok-serve
 ::: zone pivot="razor-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core"></a>创建具有"个人"选项卡 ASP.NET Core
-
-You can create a custom personal tab using C# and ASP.NET Core 用户页面. 使用"个人"选项卡创建 ASP.NET Core
 
 1. 在命令提示符下，为选项卡项目创建新目录。
 
@@ -417,7 +413,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **"应用功能**"中，选择"个人应用"，然后输入"名称"，然后 **使用 更新内容 URL**`https://<yourngrokurl>/personalTab`。 将"网站 URL"字段留空。
 
-1. 选择“保存”。
+1. 选择“**保存**”。
 
 1. 在"域"部分，选项卡中的域必须包含不带 HTTPS 前缀的 ngrok URL `<yourngrokurl>.ngrok.io`。
 
@@ -444,8 +440,6 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core-mvc"></a>使用 MVC 创建 ASP.NET Core选项卡
-
-可以使用自定义个人选项卡和 MVC C#ASP.NET Core选项卡。 使用 MVC 创建 ASP.NET Core选项卡
 
 1. 在命令提示符下，为选项卡项目创建新目录。
 
@@ -594,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **"应用功能**"中，选择"个人应用"，然后输入"名称"，然后 **使用 更新内容 URL**`https://<yourngrokurl>/personalTab`。 将"网站 URL"字段留空。
 
-1. 选择“保存”。
+1. 选择“**保存**”。
 
 1. 在"域"部分，选项卡中的"域"必须包含不带 HTTPS 前缀的 ngrok URL `<yourngrokurl>.ngrok.io`。
 

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4a866738f2fb52f5b6c66909648c145ad0e96767
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: a9ac73d3c3e41c5c57892273e788855a16642457
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464794"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571103"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>在 Microsoft Teams 中上传应用
 
@@ -33,14 +33,16 @@ ms.locfileid: "64464794"
 
 可以将应用旁加载到团队、聊天、会议或个人使用，具体取决于应用范围的配置方式。
 
-1. 使用你的 [Microsoft 365开发帐户](~/build-your-first-app/build-and-run.md#prerequisites) 登录到 Teams 客户端。
+1. 使用你的 [Microsoft 365开发帐户](https://developer.microsoft.com/en-us/microsoft-365/dev-program) 登录到 Teams 客户端。
 1. 选择“**应用**”，然后选择“**管理应用**”。
 1. 选择“**上传自定义应用**”。
-1. 选择应用包 .zip 文件，将显示以下屏幕：
+1. 选择应用包 .zip 文件。
+2. 根据要求将应用添加到 Teams:</br>
 
-    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="显示 Teams 应用安装对话框示例的屏幕截图。":::
+   a. 选择 **添加** 以添加个人应用。</br>
+   b. 使用下拉菜单将应用添加到团队或聊天中。
 
-1. 选择“**添加**”将应用添加到 Teams。
+![创建 Teams 应用](~/assets/videos/app-teams.gif)
 
 ## <a name="troubleshooting"></a>疑难解答
 
@@ -63,7 +65,9 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 若要删除应用，请右键单击 Teams 中的应用图标，然后选择 **卸载**。
 
 > [!NOTE]
-> 不能完全删除个人机器人活动。如果删除并再次添加该应用，则与机器人的新通信将追加到与该应用的上一个对话中。
+>
+> * 不能完全删除个人机器人活动。如果删除并再次添加该应用，则与机器人的新通信将追加到与该应用的上一个对话中。
+> * 目前，无法将自定义应用迁移到 Teams 应用商店。 若要将应用列到 Teams 应用商店中，请参阅 [将应用发布到 Microsoft Teams 应用商店](appsource/publish.md)。
 
 ## <a name="next-step"></a>后续步骤
 
