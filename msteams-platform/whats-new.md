@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 334d397ac2bc0e5c08c0b1df5bf6309d5f0a57ee
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 66d09bc650c7e20b1dd8c4edf7060bf71c52fff1
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571486"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612655"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,9 +22,10 @@ ms.locfileid: "64571486"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
-|03/30/2022| 使用选项卡和机器人更新了 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
-|03/30/2022|浏览器的设备权限 | 集成设备功能> [浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md) |
-|03/29/2022 | 集成人员选取器 | 与 Teams 集成>[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)|
+|2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
+|2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
+|2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
+|2022 年 3 月 29 日 | 集成人员选取器 | “与 Teams 集成”>“[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)”|
 |2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|
 |2022 年 3 月 22 日| 更新了适用于 Teams 的 Blazor 应用入门 |  • 开始>[使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
 |03/22/2022| 更新了适用于 Teams 的 Blazor 应用入门 |  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
@@ -44,9 +45,10 @@ ms.locfileid: "64571486"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-|03/30/2022| 使用选项卡和机器人更新了 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
-|03/30/2022|浏览器的设备权限 | 集成设备功能> [浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md) |
-|03/29/2022 |集成人员选取器 | 与 Teams 集成>[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)
+|2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
+|2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
+|2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
+|2022 年 3 月 29 日 |集成人员选取器 | “与 Teams 集成”>“[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)”
 |2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|  
 |2022 年 3 月 22 日| 更新了适用于 Teams 的 Blazor 应用入门|  • 开始>[使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
 |03/22/2022| 更新了适用于 Teams 的 Blazor 应用入门|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
