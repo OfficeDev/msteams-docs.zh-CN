@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 7d74a49ff85986b27ec30eeffbc15ca836a6a94b
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: 31da2a8ee267ef42e6c0abd4e3bd695cf69d2f01
+ms.sourcegitcommit: 3d6aa10d2f58a63c6a4281a30e8771469dba0d0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590662"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64636139"
 ---
 # <a name="channel-or-group-tab"></a>"频道"或"组"选项卡
 
@@ -171,7 +171,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="默认选项卡" border="true":::
 
-1. 若要查看选项卡配置页面，请转到 `https://localhost:3007/<yourDefaultAppNameTab>/config.html`。 如下所示：
+1. 若要查看选项卡配置页面，请转到 `http://localhost:3007/<yourDefaultAppNameTab>/config.html`。 如下所示：
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="选项卡配置页" border="true":::
 
@@ -198,7 +198,7 @@ gulp ngrok-serve
     
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="&quot;已上载的频道&quot;选项卡" border="true":::
 
-1. 选择 **弹出窗口** 中的"添加"。 您的选项卡将上载到Teams。
+1. 在 **对话框中** 选择"添加"。 您的选项卡将上载到Teams。
     
     > [!NOTE]
     > If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. 再次压缩文件夹并将其上载到Teams。
@@ -210,11 +210,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. 返回到团队，选择要➕添加选项卡的频道，从选项卡栏中选择，然后从列表中选择您的选项卡。
 1. 按照添加选项卡的说明操作。频道或组选项卡有一个自定义配置对话框。
 1. 选择 **"** 保存"，您的选项卡将添加到频道的选项卡栏中。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="已上载&quot;频道&quot;选项卡" border="true":::
+    
+    现在，你已成功创建并添加了频道或组选项卡Teams。
 
 ::: zone-end
 
@@ -245,7 +246,7 @@ gulp ngrok-serve
 
 1. 转到 Microsoft-Teams-Samplessamplestab-channel-group >  >  > **或 csharp** 文件夹，然后打开 **channelGroupTab.sln**。
 
-1. In Visual Studio， press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. 在浏览器中，转到以下 URL：
+1. In Visual Studio， select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. 在浏览器中，转到以下 URL：
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -328,7 +329,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-application"></a>更新应用程序
 
-1. 转到 **PagesShared**  >  文件夹并打开 **_Layout.cshtml**，然后向 <head> tags 节：
+1. 打开Visual Studio 解决方案资源管理器并转到 **PagesShared**  >  文件夹，然后打开 **_Layout.cshtml**，然后向 <head> tags 节：
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -338,9 +339,9 @@ ngrok http 3978 --host-header=localhost
     > [!IMPORTANT]
     > 不要复制并粘贴 `<script src="...">` 此页中的 URL，因为它们不表示最新版本。 若要获取最新版本的 SDK，请始终转到 [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js)。
     
-1. 在 标记顶部 `script` ，插入对 的调用 `microsoftTeams.initialize();`。
+1. 在 标记中插入 `microsoftTeams.initialize();` 对 的 `script` 调用。
 
-1. 转到" **页面"** 文件夹并打开 **Tab.cshtml**
+1. In Visual Studio 解决方案资源管理器 go to the **Pages** folder and open **Tab.cshtml**
 
     在 **Tab.cshtml** 中，应用程序向用户显示两个选项按钮，用于显示带红色或灰色图标的选项卡。 分别选择 **"选择灰色**  **"或**"`saveGray()``saveRed()``settings.setValidityState(true)`选择红色"按钮触发器或 ，设置 并启用配置页上的"保存"按钮。 此代码Teams您已完成配置要求，并且可以继续安装。 设置 的参数 `settings.setSettings` 。 最后， `saveEvent.notifySuccess()` 调用 以指示已成功解析内容 URL。
 
@@ -379,7 +380,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="build-and-run-your-application"></a>生成并运行应用程序
 
-1. In Visual Studio， press **F5** or choose **Start Debugging** from the **Debug** menu.
+1. In Visual Studio， select **F5** or choose **Start Debugging** from the **Debug** menu.
 
 1. 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正常运行。
 
@@ -390,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 转到Microsoft Teams。 如果使用基于 [Web 的版本，](https://teams.microsoft.com)可以使用浏览器的开发人员工具检查前端 [代码](~/tabs/how-to/developer-tools.md)。
 
-1. 导航到开发人员 **门户中的** Teams。
+1. 转到开发人员 [**门户**](https://dev.teams.microsoft.com/home)。
 
 1. 打开 **"应用** "，然后选择 **"导入应用"**。
 
@@ -410,25 +411,21 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **"应用 URL"** 中，将隐私策略 `https://<yourngrokurl>/privacy` 更新为 ，将使用条款更新为 `https://<yourngrokurl>/tou` 并保存。
 
-1. 在 **"应用功能**"中，选择"个人应用"，然后输入"名称"，然后 **使用 更新内容 URL**`https://<yourngrokurl>/personalTab`。 将"网站 URL"字段留空。 
+1. 在 **应用功能中**，选择组和频道应用。 使用 更新 **配置 URL** 并选择 `https://<yourngrokurl>/tab` 选项卡"范围 **"**。
 
-1. 选择“保存”。
+1. 选择 **“保存”**。
 
 1. 在"域"部分，选项卡中的域必须包含不带 HTTPS 前缀的 ngrok URL `<yourngrokurl>.ngrok.io`。
 
 ### <a name="preview-your-app-in-teams"></a>在应用中预览Teams
 
-1. 从 **开发人员门户Teams** 中选择"预览"。 开发人员门户会通知你你的应用已成功旁加载。
+1. 从 **开发人员Teams** 中选择"预览"，开发人员门户将通知你已成功旁加载你的应用。 **外接程序中的**"添加"页面将显示Teams。
 
-1. 选择 **"管理应用"**。 你的应用在旁加载的应用中列出。
-
-1. 使用搜索查找应用，选择" &#x25CF;&#x25CF;&#x25CF;"。
-
-1. 选择" **查看详细信息"** 选项。 将显示应用的应用详细信息窗口。
-
-1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="App details dropdownAdd" border="true":::&nbsp; >  **to team** to load the tab in a team. 您的选项卡现已在 Teams 中提供。
+1. 选择 **"添加到团队** "以设置团队中的选项卡。 配置选项卡并选择"保存 **"**。 您的选项卡现已在 Teams 中提供。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="频道选项卡 ASPNET 已上载" border="true":::
+    
+    现在，你已成功创建并添加了频道或组选项卡Teams。
 
 ::: zone-end
 
@@ -459,7 +456,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 转到 Microsoft-Teams-Samplessamplestab-channel-groupmvc-csharp  >  >  >  文件夹，然后打开 **ChannelGroupTabMVC.sln**。
 
-1. In Visual Studio， press **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. 在浏览器中，转到以下 URL：
+1. In Visual Studio， select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. 在浏览器中，转到以下 URL：
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -550,7 +547,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-application"></a>更新应用程序
 
-1. 转到 **ViewsShared**  >  文件夹并打开 **_Layout.cshtml**，然后向 <head> tags 节：
+1. 打开Visual Studio 解决方案资源管理器并转到 **ViewsShared**  >  文件夹并打开 **_Layout.cshtml**，然后向 <head> tags 节：
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -560,9 +557,9 @@ ngrok http 3978 --host-header=localhost
     > [!IMPORTANT]
     > 不要复制并粘贴 `<script src="...">` 此页中的 URL，因为它们不表示最新版本。 若要获取最新版本的 SDK，请始终转到 [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js)。
     
-1. 在 标记顶部 `script` ，插入对 的调用 `microsoftTeams.initialize();`。
+1. 在 标记中插入 `microsoftTeams.initialize();` 对 的 `script` 调用。
 
-1. 转到 **Tab 文件夹并** 打开 **Tab.cshtml**
+1. In Visual Studio 解决方案资源管理器 go to the **Tab** folder and open **Tab.cshtml**
 
     在 **Tab.cshtml** 中，应用程序向用户显示两个选项按钮，用于显示带红色或灰色图标的选项卡。 分别选择 **"选择灰色**  **"或**"`saveGray()``saveRed()``settings.setValidityState(true)`选择红色"按钮触发器或 ，设置 并启用配置页上的"保存"按钮。 此代码Teams您已完成配置要求，并且可以继续安装。 设置 的参数 `settings.setSettings` 。 最后， `saveEvent.notifySuccess()` 调用 以指示已成功解析内容 URL。 
 
@@ -601,7 +598,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="build-and-run-your-application"></a>生成并运行应用程序
 
-1. In Visual Studio， press **F5** or choose **Start Debugging** from the **Debug** menu.
+1. In Visual Studio， select **F5** or choose **Start Debugging** from the **Debug** menu.
 
 1. 通过打开浏览器，然后通过命令提示符窗口中提供的 ngrok HTTPS URL 进入内容页面，验证 **ngrok** 是否正常运行。
 
@@ -612,7 +609,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 转到Microsoft Teams。 如果使用基于 [Web 的版本，](https://teams.microsoft.com)可以使用浏览器的开发人员工具检查前端 [代码](~/tabs/how-to/developer-tools.md)。
 
-1. 转到 **Teams 中的** 开发人员门户。
+1. 转到开发人员 [**门户**](https://dev.teams.microsoft.com/home)。
 
 1. 打开 **"应用** "，然后选择 **"导入应用"**。
 
@@ -632,25 +629,21 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **"应用 URL"** 中，将隐私策略 `https://<yourngrokurl>/privacy` 更新为 ，将使用条款更新为 `https://<yourngrokurl>/tou` 并保存。
 
-1. 在 **"应用功能**"中，选择"个人应用"，然后输入"名称"，然后 **使用 更新内容 URL**`https://<yourngrokurl>/personalTab`。 将"网站 URL"字段留空。
+1. 在 **应用功能中**，选择组和频道应用。 使用 更新 **配置 URL** 并选择 `https://<yourngrokurl>/tab` 选项卡"范围 **"**。
 
-1. 选择“保存”。
+1. 选择 **“保存”**。
 
 1. 在"域"部分，选项卡中的域必须包含不带 HTTPS 前缀的 ngrok URL `<yourngrokurl>.ngrok.io`。
 
 ### <a name="preview-your-app-in-teams"></a>在应用中预览Teams
 
-1. 从 **开发人员门户Teams** 中选择"预览"。 开发人员门户会通知你你的应用已成功旁加载。
+1. 从 **开发人员Teams** 中选择"预览"，开发人员门户将通知你已成功旁加载你的应用。 **外接程序中的**"添加"页面将显示Teams。
 
-1. 选择 **"管理应用"**。 你的应用在旁加载的应用中列出。
-
-1. 使用搜索查找应用，选择" &#x25CF;&#x25CF;&#x25CF;"。
-
-1. 选择" **查看详细信息"** 选项。 将显示应用的应用详细信息窗口。
-
-1. Select &nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="Channel tab ASPNET uploadedAdd" border="true":::&nbsp; >  **to team** to load the tab on Teams. 您的选项卡现已在 Teams 中提供。
+1. 选择 **"添加到团队** "以设置团队中的选项卡。 配置选项卡并选择"保存 **"**。 您的选项卡现已在 Teams 中提供。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="频道选项卡 ASPNET MVC 已上载" border="true":::
+    
+    现在，你已成功创建并添加了频道或组选项卡Teams。
 
 ::: zone-end
 

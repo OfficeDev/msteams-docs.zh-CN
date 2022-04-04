@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC 程序包 appmanifest 会话域权限存储
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.openlocfilehash: d19ecc04aa14561d443a65d4ea896c210fdf4d94
+ms.sourcegitcommit: 3d6aa10d2f58a63c6a4281a30e8771469dba0d0b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614542"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64636162"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="添加个人选项卡" border="true":::
 
-1. 选择 **弹出窗口** 中的"添加"。 您的选项卡将上载到Teams。
+1. 在 **对话框中** 选择"添加"。 您的选项卡将上载到Teams。
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="已上载&quot;个人&quot;选项卡" border="true":::
 
@@ -370,14 +370,14 @@ In Visual Studio 解决方案资源管理器， right-click on the project and s
 
 ### <a name="update-and-run-your-application"></a>更新并运行应用程序
 
-1. 转到 **PagesShared**  >  文件夹并打开 **_Layout.cshtml**，然后向标记部分添加`<head>`以下内容：
+1. 打开Visual Studio 解决方案资源管理器并转到 **PagesShared**  >  文件夹，然后打开 **_Layout.cshtml**`<head>`，然后向标记部分添加以下内容：
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. 打开 **"页面"文件夹中的 PersonalTab.cshtml**，然后`microsoftTeams.initialize()`添加标记`<script>`并保存。
+1. In Visual Studio 解决方案资源管理器 open **PersonalTab.cshtml** from **Pages** folder and add `microsoftTeams.initialize()` in the `<script>` tags and save.
 
 1. In Visual Studio， select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>使用开发人员门户更新应用包
 
-1. 转到 **Teams 中的** 开发人员门户。
+1. 转到开发人员 [**门户**](https://dev.teams.microsoft.com/home)。
 
 1. 打开 **"应用** "，然后选择 **"导入应用"**。
 
@@ -411,23 +411,17 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **"应用 URL"** 中，将隐私策略 `https://<yourngrokurl>/privacy` 更新为 ，将使用条款更新为 `https://<yourngrokurl>/tou` 并保存。
 
-1. 在 **"应用功能**"中，选择"个人应用"，然后输入"名称"，然后 **使用 更新内容 URL**`https://<yourngrokurl>/personalTab`。 将"网站 URL"字段留空。
+1. 在 **"应用功能**"中，选择"**个人** > 应用""创建 **你的第一个** 个人应用"选项卡，然后输入"名称"，然后 **使用 更新内容 URL**`https://<yourngrokurl>/personalTab`。 将"网站 URL"字段留空 **，然后从** 下拉列表中选择"上下文为 personalTab"和"添加 **"**。
 
-1. 选择“**保存**”。
+1. 选择 **“保存”**。
 
 1. 在"域"部分，选项卡中的域必须包含不带 HTTPS 前缀的 ngrok URL `<yourngrokurl>.ngrok.io`。
 
 ### <a name="preview-your-app-in-teams"></a>在应用中预览Teams
 
-1. 从 **开发人员门户Teams** 中选择"预览"。 开发人员门户会通知你你的应用已成功旁加载。
+1. 从 **开发人员Teams** 中选择"预览"，开发人员门户将通知你已成功旁加载你的应用。 **外接程序中的**"添加"页面将显示Teams。
 
-1. 选择 **"管理应用"**。 你的应用在旁加载的应用中列出。
-
-1. 使用搜索查找你的应用，选择其行中的三个点。
-
-1. 选择" **视图"** 选项。 **将显示应用的**"添加"页面。
-
-1. 选择 **"添加**"以加载选项卡Teams。 您的选项卡现已在 Teams 中提供。
+1. 选择 **"添加**"以加载 Teams。 您的选项卡现已在 Teams 中提供。
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="默认选项卡" border="true":::
 
@@ -545,14 +539,14 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="update-and-run-your-application"></a>更新并运行应用程序
 
-1. 转到 **ViewsShared**  >  文件夹并打开 **_Layout.cshtml**，然后向标记部分添加`<head>`以下内容：
+1. 打开Visual Studio 解决方案资源管理器转到 **ViewsShared**  >  文件夹，打开 **_Layout.cshtml**`<head>`，然后向标记部分添加以下内容：
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. 从 **ViewsPersonalTab** 文件夹中打开 **PersonalTab.cshtml** > ，并添加`microsoftTeams.initialize()`在`<script>`标记内并保存。
+1. In Visual Studio 解决方案资源管理器 open **PersonalTab.cshtml** from **ViewsPersonalTab**  >  folder and add `microsoftTeams.initialize()` inside the `<script>` tags and save.
 
 1. In Visual Studio， select **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
@@ -566,7 +560,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>使用开发人员门户更新应用包
 
-1. 转到 **Teams 中的** 开发人员门户。
+1. 转到开发人员 [**门户**](https://dev.teams.microsoft.com/home)。
 
 1. 打开 **"应用** "，然后选择 **"导入应用"**。
 
@@ -586,21 +580,15 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **"应用 URL"** 中，将隐私策略 `https://<yourngrokurl>/privacy` 更新为 ，将使用条款更新为 `https://<yourngrokurl>/tou` 并保存。
 
-1. 在 **"应用功能**"中，选择"个人应用"，然后输入"名称"，然后 **使用 更新内容 URL**`https://<yourngrokurl>/personalTab`。 将"网站 URL"字段留空。
+1. 在 **"应用功能**"中，选择"**个人** > 应用""创建 **你的第一个** 个人应用"选项卡，然后输入"名称"，然后 **使用 更新内容 URL**`https://<yourngrokurl>/personalTab`。 将"网站 URL"字段留空 **，然后从** 下拉列表中选择"上下文为 personalTab"和"添加 **"**。
 
-1. 选择“**保存**”。
+1. 选择 **“保存”**。
 
 1. 在"域"部分，选项卡中的"域"必须包含不带 HTTPS 前缀的 ngrok URL `<yourngrokurl>.ngrok.io`。
 
 ### <a name="preview-your-app-in-teams"></a>在应用中预览Teams
 
-1. 从 **开发人员门户Teams** 中选择"预览"。 开发人员门户会通知你你的应用已成功旁加载。
-
-1. 选择 **"管理应用"**。 你的应用在旁加载的应用中列出。
-
-1. 使用搜索查找你的应用，选择其行中的三个点。
-
-1. 选择 **"查看"** 选项。 **将显示应用的**"添加"页面。
+1. 从 **开发人员Teams** 中选择"预览"，开发人员门户将通知你已成功旁加载你的应用。 **外接程序中的**"添加"页面将显示Teams。
 
 1. 选择 **"添加**"以加载选项卡Teams。 您的选项卡现已在 Teams 中提供。
 
