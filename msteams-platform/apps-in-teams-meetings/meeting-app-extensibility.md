@@ -4,13 +4,8 @@ author: surbhigupta
 description: 了解Teams和移动环境中会议生命周期和用户的会议体验、参与者和用户角色和类型、在会议生命周期中集成机器人和消息传递扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 16a969c7f863bf1f4c01f6f81b9ddfb848eaaf22
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571129"
 ---
+
 # <a name="unified-meetings-apps"></a>统一会议应用
 
 Teams统一会议应用基于以下概念：
@@ -85,6 +80,9 @@ Teams统一会议应用基于以下概念：
 1. 在"会议内"对话框中，输入你的回复作为反馈。
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
+
+:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="桌面视图":::
+
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
