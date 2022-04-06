@@ -529,8 +529,14 @@
           href: resources/partner-apps-for-moodle.md
         - name: Moodle 常见问题解答
           href: resources/faqs.md
-    - name: 创建“共享到 Teams”按钮
-      href: concepts/build-and-test/share-to-teams.md
+    - name: 共享到 Teams
+      items:
+        - name: 概述
+          href: concepts/build-and-test/share-to-teams-overview.md
+        - name: 从 Web 应用共享到 Teams
+          href: concepts/build-and-test/share-to-teams-from-web-apps.md
+        - name: 从个人应用或选项卡共享到 Teams
+          href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
     - name: 向 SharePoint 添加Teams选项卡
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: 创建深层链接

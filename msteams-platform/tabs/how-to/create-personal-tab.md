@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC 包 appmanifest 对话域权限存储
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b0da768a74ab6925f95ce89e38cecdaa96e084e6
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
+ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685644"
+ms.locfileid: "64686681"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -252,12 +252,8 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Upload应用程序以Teams
 
-1. 转到Microsoft Teams，然后选择 **"应用商店**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams应用商店":::。
-1. 选择 **"管理应用"**
-1. 选择 **"发布应用****"并Upload自定义应用**。
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="Upload自定义应用" border="true":::
-
+1. 转到Microsoft Teams，然后选择 **"应用**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams应用商店":::。
+1. 选择 **"管理应用****"并Upload自定义应用**。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择 zip 文件夹，然后选择 **"打开**"。
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="添加个人选项卡" border="true":::
