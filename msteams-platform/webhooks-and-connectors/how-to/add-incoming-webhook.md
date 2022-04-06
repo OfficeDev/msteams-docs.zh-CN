@@ -6,12 +6,12 @@ keywords: Teams 选项卡传出 Webhook
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c2705778251f44bde945efde7bfa8b519b88c8f3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: HT
+ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
+ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399112"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64685623"
 ---
 # <a name="create-an-incoming-webhook"></a>创建传入 Webhook
 
@@ -95,5 +95,5 @@ Webhook 在 Teams 频道中可用。
 * [创建传出 Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [创建 Office 365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [创建和发送邮件](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [创建“共享到 Teams”按钮](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [从 Web 应用共享到Teams](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [集成 web 应用](~/samples/integrate-web-apps-overview.md)

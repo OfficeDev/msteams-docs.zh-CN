@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 66d09bc650c7e20b1dd8c4edf7060bf71c52fff1
-ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
-ms.translationtype: HT
+ms.openlocfilehash: 809aae76471b4b21821151f03d293b9c519a0f58
+ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64612655"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64685532"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "64612655"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|04/06/2022| 从个人应用或选项卡共享到Teams (开发人员预览)  | 与Teams >共享集成以从[个人应用或选项卡Teams >共享到Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
 |2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
 |2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
@@ -33,6 +34,22 @@ ms.locfileid: "64612655"
 |2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022| 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
+|2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
+|2022/02/24| 引入了生成基于操作的消息传递扩展的分步指南 | 生成消息传递扩展 > 操作命令 > 定义操作命令 > [生成基于操作的消息传递扩展](sbs-meetingextension-action.yml)|
+|2022/02/24| 引入了生成基于搜索的消息传递扩展的分步指南 | 生成消息传递扩展 > 搜索命令 > 定义搜索命令 > [生成基于搜索的消息传递扩展](sbs-messagingextension-searchcommand.yml)|
+|2022/02/24| 引入了创建传出 Webhook 的分步指南 | 生成 Webhook 和连接器 > 创建传出 Webhook > [创建传出 Webhook](sbs-outgoing-webhooks.yml)|
+| 2022/02/23 |Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+|2022 年 2 月 9 日| 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人 >发送和接收文件 > [如何从机器人将文件上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
+| 2022/02/18 | 为 Microsoft Teams 开发人员文档引入了广泛的术语表，可帮助你快速找到有关术语的定义 | [术语表](~/get-started/glossary.md) |
+| 2022/02/18 | 更新了概述模块，用于将 Teams 应用映射到组织目标、用户情景和探索 Teams 应用功能 | [概述 > 适合的 Teams 应用](overview.md) |
+| 2022/02/18 | 更新了应用基础知识模块以规划应用，以包括将用例映射到 Teams 功能和应用规划清单 | [规划应用 > 概述](~/concepts/app-fundamentals-overview.md) |
+|02/17/2022| 提交应用后会发生什么？| 分发应用>发布到 Teams 应用商店>[概述](concepts/deploy-and-publish/appsource/publish.md)|
+|02/15/2022| 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人>发送和接收文件>[如何将文件从机器人上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
+|2022 年 2 月 11 日| 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 为 Teams 会议生成应用 > [会议应用 API 参考](apps-in-teams-meetings/API-references.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
+|02/08/2022| 引入创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
+|02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
+|02/03/2022| 引入了应用清单版本 1.12 | • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
+
 
 ## <a name="ga-features"></a>GA 功能
 
@@ -252,6 +269,7 @@ ms.locfileid: "64612655"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+|04/06/2022| 从个人应用或选项卡共享到Teams | 与Teams >共享集成以从[个人应用或选项卡Teams >共享到Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 |02/02/2022| 引入了应用清单版本 1.12 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 针对盈利应用的测试预览| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
