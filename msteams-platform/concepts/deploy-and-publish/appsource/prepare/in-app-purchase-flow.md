@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501982"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736881"
 ---
 # <a name="in-app-purchases"></a>应用内购买
 
@@ -31,11 +31,11 @@ Microsoft Teams 提供可用于实现应用内购买的 API，以从免费升级
 
 * 应用是通过 [`openPurchaseExperience`API](#purchase-experience-api) 调用的。
 
-可以通过更新 **manifest.json** 文件或通过从 **开发人员门户** 的 **权限** 部分启用 **显示应用内购买产品/服务** 来启用应用内购买体验。
+可以通过更新 `manifest.json` 文件或通过从 **开发人员门户** 的 **权限** 部分启用 **显示应用内购买产品/服务** 来启用应用内购买体验。
 
 ### <a name="update-manifest"></a>更新清单
 
-要启用应用内购买体验，请通过添加 RSC 权限来更新 Teams 应用 **manifest.json** 文件。 通过此操作，应用的用户可以升级到应用的付费版本并开始使用新功能。 应用清单的更新如下所示：
+要启用应用内购买体验，请通过添加 RSC 权限来更新 Teams 应用 `manifest.json` 文件。 通过此操作，应用的用户可以升级到应用的付费版本并开始使用新功能。 应用清单的更新如下所示：
 
 ```json
 

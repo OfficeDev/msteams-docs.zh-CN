@@ -1,42 +1,42 @@
 ---
-title: 在 App Studio 中使用 Node.js部署你的第一个应用
-description: 了解如何在 App Studio Microsoft Teams Node.js应用
+title: 在 App Studio 中使用Node.js部署第一个应用
+description: 了解如何在 App Studio 中使用Node.js部署Microsoft Teams应用
 keywords: app studio node.js入门
 ms.custom: scenarios:getting-started; languages:ASP,Node.js
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: ee3cfdf63b8e2495a50161312c9233a0a9472185
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 7f423cfd33fdca9d40f2adfe32b59ace26d39adc
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452975"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737224"
 ---
-# <a name="update-nodejs-app-package-in-app-studio"></a>在 app Studio Node.js更新应用包
+# <a name="update-nodejs-app-package-in-app-studio"></a>更新 App Studio 中的Node.js应用包
 
 > [!TIP]
-> **试用开发人员门户**：App Studio 已发展。 使用新的开发人员门户配置Teams、分发和管理[应用](https://dev.teams.microsoft.com/)。
+> **试用开发人员门户**：App Studio 已演变。 使用新的[开发人员门户](https://dev.teams.microsoft.com/)配置、分发和管理Teams应用。
 
-App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应用程序的创建和注册过程。
+App Studio 是一个Teams应用，你可以从Teams存储区安装。 它简化了应用的创建和注册。
 
 完成以下步骤以更新应用包：
 
-1. 若要在 Teams 安装 App Studio，请选择左侧栏底部的"应用"图标，然后搜索 **App Studio**：
+1. 若要在 Teams 中安装 App Studio，请选择左侧栏底部的 **“应用**”图标，然后搜索 **App Studio**：
 
     <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
-1. 选择 **App Studio** 磁贴，然后选择"安装 **"**。 安装了 App Studio：
+1. 选择 **App Studio** 磁贴并选择 **“安装**”。 已安装 App Studio：
 
     <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-1. 若要为应用创建应用包Teams，请选择 **App Studio** 中的"清单 **编辑器**"选项卡：
+1. 若要为Teams应用创建应用包，请在 **App Studio** 中选择 **“清单编辑器**”选项卡：
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    该示例附带自己的清单，旨在生成项目时生成应用包。 在Node.js， `gulp` 这是通过键入项目的根目录中的命令行完成。
+    该示例随附其自己的清单，设计用于在生成项目时生成应用包。 Node.js，这是通过在项目的根目录中的命令行中键 `gulp` 入来完成的。
 
-    可以通过在项目的根目录中 `gulp` Node.js命令行，在应用程序上生成应用包。
+    可以通过在项目的根目录中的命令行键 `gulp` 入，在Node.js上生成应用包。
 
     ```bash
     $ gulp
@@ -50,13 +50,13 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
     [13:39:27] Finished 'default' after 62 μs
     ```
 
-    生成的应用包的名称 **helloworldapp.zip。** 如果当前使用的工具中的位置不明确，可以搜索此文件。
+    生成的应用包的名称是 `helloworldapp.zip`。 如果所用工具中的位置不明确，则可以搜索此文件。
 
-1. 现在要修改此应用包，请选择 **"在清单编辑器中** 导入现有 **应用"**：
+1. 现在，若要修改此应用包，请在 **清单编辑器** 中选择“**导入现有应用**”：
 
     <img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
 
-1. 为新 **导入的应用** 选择 Hello World 磁贴：
+1. 为新导入的应用选择 **Hello World** 磁贴：
 
     <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
@@ -64,127 +64,127 @@ App Studio 是Teams应用商店中安装的应用Teams应用。 它简化了应�
 
     <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-    在清单编辑器的左侧有一个步骤列表。 右侧有一个属性列表，需要针对每个步骤进行填充。 当你开始使用示例应用时，大部分信息已经完成。 接下来的步骤将使您能够更新 Hello World 应用的属性。
+    清单编辑器的左侧有一个步骤列表。 右侧有一个属性列表，每个步骤都需要填写这些属性。 开始使用示例应用时，大部分信息已完成。 接下来的步骤可更新Hello World应用的属性。
 
 ## <a name="app-details"></a>应用详细信息
 
-选择 **"详细信息"下的** "应用 **详细信息"**。 选择" **生成** "按钮以创建新的应用 ID。
+在 **“详细信息**”下选择 **“应用详细信息**”。 选择 **“生成** ”按钮以创建新的应用 ID。
 
-新的应用 ID 类似于 `2322041b-72bf-459d-b107-f4f335bc35bd`。
+你的新应用 ID 类似于 `2322041b-72bf-459d-b107-f4f335bc35bd`。
 
-在右侧窗格中查看应用详细信息，包括 **开发人员信息和****品牌** 打造详细信息。 如果你要编写要分发的新应用，这些详细信息非常重要。
+在右侧窗格中查看应用详细信息，包括 **开发人员信息** 和 **品牌** 打造详细信息。 如果要编写用于分发的新应用，这些详细信息非常重要。
 
 ## <a name="tabs"></a>选项卡
 
-向应用添加选项卡Teams非常简单。 示例应用已支持多个选项卡，你可以启用它们。
+将选项卡添加到Teams应用非常简单。 示例应用已支持多个选项卡，可以启用它们。
 
-### <a name="team-tab"></a>"团队"选项卡
+### <a name="team-tab"></a>“团队”选项卡
 
-你的应用只能有一个"团队"选项卡：
+你的应用只能有一个“团队”选项卡：
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-本示例中，"团队"选项卡是显示配置页面的地方。 Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. 将 URL 更改为 `https://yourteamsapp.ngrok.io/configure` 必须 `yourteamsapp.ngrok.io` 替换为托管应用时所使用的 URL。
+在此示例中，“团队”选项卡是显示配置页的位置。 选择 **Tab 配置 URL** 的 **...** 符号，然后从下拉菜单中选择 **“编辑**”。 将 URL 更改为 `https://yourteamsapp.ngrok.io/configure` 托管应用时必须替换为使用的 URL 的位置 `yourteamsapp.ngrok.io` 。
 
 ### <a name="personal-tabs"></a>个人选项卡
 
-你的应用可具有最多 16 个选项卡，包括"团队"选项卡。
+你的应用最多可以有 16 个选项卡，包括“团队”选项卡。
 
-个人选项卡不同于"团队"选项卡。Hello **选项卡** 已列在具有占位符值 的个人选项卡列表中 `com.contoso.helloworld.hellotab`。 Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. 将显示以下对话框：
+个人选项卡与“团队”选项卡不同。 **Hello Tab** 已在具有占位符值 `com.contoso.helloworld.hellotab`的个人选项卡列表中列出。 选择 **Tab 配置 URL** 的 **...** 符号，然后从下拉菜单中选择 **“编辑**”。 将显示以下对话框：
 
 <img  width="450px" alt="Adding a personal tab dialog" src="~/assets/images/get-started/PersonalTab.png"/>
 
-使用你的应用 URL 更新以下框：
+使用应用 URL 更新以下框：
 
-* 将" **内容 URL"** 框更改为 `https://yourteamsapp.ngrok.io/hello`
-* 将" **网站 URL"** 框更改为 `https://yourteamsapp.ngrok.io/hello`
+* 将 **“内容 URL** ”框更改为 `https://yourteamsapp.ngrok.io/hello`
+* 将 **网站 URL** 框更改为 `https://yourteamsapp.ngrok.io/hello`
 
-将 `yourteamsapp.ngrok.io` 替换为托管应用时所使用的 URL。
+替换 `yourteamsapp.ngrok.io` 为托管应用时使用的 URL。
 
 #### <a name="bots"></a>机器人
 
-将聊天机器人功能添加到你的应用很简单。 Hello **World** 示例应用已具有自动程序作为示例的一部分，但你必须向 Microsoft 注册它：
+将机器人功能添加到应用很容易。 **Hello World** 示例应用已将机器人作为示例的一部分，但必须将其注册到 Microsoft：
 
 <img  width="450px" alt="Adding a bot" src="~/assets/images/get-started/Bots.png"/>
 
-从示例导入的机器人没有关联的应用 ID。 必须创建新的自动程序，以便 App Studio 可以创建新的应用 ID，然后向 Microsoft 注册它。
+从示例导入的机器人没有关联的应用 ID。 必须创建新的机器人，以便 App Studio 可以创建新的应用 ID 并将其注册到 Microsoft。
 
 > [!NOTE]
-> App Studio 为自动程序创建的应用 ID 与为应用创建的应用 ID 不同。 应用的每个自动程序都需要自己的应用 ID。
+> App Studio 为机器人创建的应用 ID 不同于为应用创建的应用 ID。 应用中的每个机器人都需要自己的应用 ID。
 
-完成以下步骤以设置自动程序：
+完成以下步骤以设置机器人：
 
-1. 选择 **"** 自动程序"列表中导入的机器人旁边的"删除"。 现在，没有要展示的机器人。
-1. 选择 **"** 设置" **以显示"设置自动程序** "对话框。
+1. 选择机器人列表中导入的机器人旁边的 **“删除** ”。 现在没有机器人可显示。
+1. 选择 **“设置** ”以显示 **“设置机器人** ”对话框。
 
     <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-1. 添加自动程序名称 **Contoso 自动** 程序，并选中范围下的所有三个 **复选框**。
-1. 选择 **"保存** "退出对话框。 App Studio 向 Microsoft 注册你的自动程序，在机器人列表中显示你的新机器人。
-1. 现在，在记事本中打开一个文本文件，然后将新的自动程序 ID 复制并粘贴到该文件中。
-1. 单击 **"生成新密码**"，并记下你记录自动程序应用 ID 的同一文本文件中的密码。
-1. 将 **Bot 终结点地址更新** 为 `https://yourteamsapp.ngrok.io/api/messages`，将 替换为 `yourteamsapp.ngrok.io` 托管应用时所使用的 URL。
-1. 现在保存你的文本文件，因为你必须将文件中的信息添加到托管的应用，以允许与机器人进行安全通信。
+1. 添加机器人名称 **Contoso 机器人** ，然后选择 **“作用域**”下的所有三个复选框。
+1. 选择 **“保存** ”以退出对话框。 App Studio 将机器人注册到 Microsoft，并在机器人列表中显示新机器人。
+1. 现在，在记事本中打开一个文本文件，并将新的机器人 ID 复制并粘贴到其中。
+1. 单击 **“生成新密码**”，并记下记下机器人应用 ID 的同一文本文件中的密码。
+1. 将 **机器人终结点地址** 更新为 `https://yourteamsapp.ngrok.io/api/messages`托管应用时使用的 URL，并替换 `yourteamsapp.ngrok.io` 为该 URL。
+1. 现在保存文本文件，因为必须将文件中的信息添加到托管应用，以便与机器人进行安全通信。
 
 #### <a name="messaging-extensions"></a>消息传递扩展
 
-消息扩展允许用户从你的服务请求信息并发布该信息。 信息以卡片的形式张贴到频道对话中。 邮件扩展显示在撰写框的底部。
+消息传递扩展允许用户从服务中请求信息并发布该信息。 信息以卡的形式发布到频道对话中。 消息传递扩展显示在撰写框的底部。
 
-完成以下步骤以设置邮件扩展：
+完成以下步骤以设置消息传递扩展：
 
-1. 在 **App** Studio **左侧窗格中的** "功能"下选择"邮件扩展"以配置邮件扩展：
+1. 在 App Studio 左侧窗格的“**功能**”下选择 **消息传递扩展**，以配置消息传递扩展：
 
     <img  width="450px" alt="Adding a messaging extension" src="~/assets/images/get-started/Messagingextensions.png"/>
 
-    邮件扩展示例在"邮件扩展"**窗格中列出。**
+    “消息传递扩展插件”窗格中列出 **了** 示例消息传递扩展。
 
-1. 选择 **"** 删除"删除邮件扩展，选择"设置 **"**，然后按照用于机器人的相同 [步骤操作](#bots)。 将显示 **"消息传递扩展** "对话框。
-1. 选择" **使用现有自动程序** "选项卡和 **"从我现有的自动程序之一中选择"**。
-1. 从下拉菜单中选择你创建的自动程序。 添加自动 **程序名称，** 然后选择 **保存** 以关闭对话框。
-1. 在" **命令"部分** 下，选择" **添加"**。 若要添加基于搜索的命令，请选择"允许用户查询服务信息并将其 **插入邮件"** 选项。
-1. 在" **新建"** 命令对话框中，输入以下值：
+1. 选择 **“删除** ”以删除消息传递扩展，选择 **“设置**”，然后 [按照机器人使用的](#bots)相同步骤操作。 将显示 **“消息传递扩展** ”对话框。
+1. 选择“ **使用现有机器人** ”选项卡， **然后从现有机器人之一中选择**。
+1. 从下拉菜单中选择创建的机器人。 添加 **机器人名称** ，然后选择 **“保存** ”以关闭对话框。
+1. 在 **“命令** ”部分下，选择 **“添加**”。 若要添加基于搜索的命令，请选择 **“允许用户查询服务信息”并将其插入消息** 选项。
+1. 在 **“新建命令** ”对话框中，输入以下值：
 
-    在 **"新建"命令下**：
+    在 **“新建”命令** 下：
 
     * **命令 ID**：输入随机文本
     * **标题**：输入随机标题
-    * **说明**：输入随机描述
+    * **说明**：输入随机说明
 
-    在 **"参数"下**：
+    在 **参数** 下：
 
     * **名称**：输入参数名称
     * **标题**：输入卡片标题
     * **说明**：输入卡片说明
 
-1. 输入信息后，选择" **保存** "关闭对话框。
+1. 输入信息后，选择 **“保存** ”以关闭对话框。
 
-#### <a name="register-your-app-in-teams"></a>在应用商店中注册Teams
+#### <a name="register-your-app-in-teams"></a>在Teams中注册应用
 
-输入应用的详细信息后，完成以下步骤以在应用中注册Teams：
+输入应用的详细信息后，请完成以下步骤，在Teams中注册应用：
 
-1. 使用 **测试和分发** App Studio 在 Teams 中安装应用。
-1. 使用自动程序的应用 ID 和密码更新托管的应用程序。 对于示例应用，请对机器人和消息扩展使用相同的应用 ID 和密码。
-1. 在 App Studio **的左侧**  窗格中 **，选择"** 测试和分发"下的"完成"：
+1. 使用 App Studio 的 **测试和分发** 在 Teams 中安装应用。
+1. 使用机器人的应用 ID 和密码更新托管应用程序。 对于示例应用，对机器人和消息传递扩展使用相同的应用 ID 和密码。
+1. 在 App Studio 的左侧窗格中选择 **“测试”并分发**  到 **“完成”** 下：
 
     <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
-1. 若要将应用上传到Teams，请选择 **"测试和分发**"下的"**安装"按钮**：
+1. 若要将应用上传到Teams，请选择“**测试和分发**”下的 **“安装**”按钮：
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
 
     > [!NOTE]
-    > 如果无法旁加载应用，请验证是否已启用 [自定义应用上传](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option)。
+    > 如果无法旁加载应用，请验证是否 [已启用自定义应用上传](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option)。
 
-1. 选择 **"添加到** 团队 **"部分中的"搜索"** 框，然后选择一个团队以添加示例应用。 你可以设置一个特殊团队进行测试。
-1. 选择 **对话框** 底部的"安装"按钮。
+1. 选择 **“添加到团队**”部分中的 **“搜索**”框，然后选择要添加示例应用的团队。 可以设置一个特别团队进行测试。
+1. 选择对话框底部的 **“安装** ”按钮。
 
-    你的应用现已在 Teams 中提供。 但是，在用应用 ID 和密码更新托管应用程序环境之前，机器人和消息扩展将不起作用。
+    你的应用现在在Teams中可用。 但是，在使用应用 ID 和密码更新托管应用程序环境之前，机器人和消息传递扩展将不起作用。
 
     <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>更新托管应用的凭据
 
-示例应用需要将以下环境变量设置为之前记下的值：
+示例应用要求将以下环境变量设置为之前记下的值：
 
 ```
 MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
@@ -192,9 +192,9 @@ MICROSOFT_APP_PASSWORD=<YOUR BOT'S PASSWORD>
 WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 ```
 
-环境变量是环境的一部分。 只有应用的代码可以访问它们。 它们不会向任何第三方公开。
+环境变量是环境的一部分。 只有应用的代码才能访问它们。 它们不会向任何第三方公开。
 
-如果使用 ngrok 运行应用，则需要设置本地环境变量。 可以使用Visual Studio Code添加启动[配置](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)：
+如果使用 ngrok 运行应用，则需要设置本地环境变量。 可以使用Visual Studio Code添加[启动配置](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)：
 
 ```json
 {
@@ -216,51 +216,51 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 其中：
 
-* 自动程序的授权凭据如下所示：
-  * MICROSOFT_APP_ID is ID
-  * MICROSOFT_APP_PASSWORD密码
-* NODE_DEBUG调试控制台中的自动程序Visual Studio Code发生了什么
-* NODE_CONFIG_DIR指向存储库 (`src` 根目录，当应用在本地运行时，它将在) 文件夹中查找根目录。
+* 机器人的授权凭据如下所示：
+  * MICROSOFT_APP_ID为 ID
+  * MICROSOFT_APP_PASSWORD是密码
+* NODE_DEBUG Visual Studio Code调试控制台中显示机器人中发生的情况
+* NODE_CONFIG_DIR指向存储库根目录 (默认情况下，当应用在本地运行时，它会在文件夹) 中 `src` 查找根目录。
 
 > [!Note]
-> 如果你尚未从本教程的前面部分停止 npm`npm stop`，则需要运行 ，以便Visual Studio Code正确拾取启动配置变量。
+> 如果在本教程的前面部分未停止 npm，则需要运行`npm stop`，以便Visual Studio Code正确地提取启动配置变量。
 
 <a name="ConfigureTheAppTab"></a>
 
-## <a name="test-the-app-capabilities-in-teams"></a>在应用中测试Teams
+## <a name="test-the-app-capabilities-in-teams"></a>在Teams中测试应用功能
 
-将应用安装到 Teams，需要将其配置为显示内容。
+将应用安装到Teams后，需要将其配置为显示内容。
 
-### <a name="test-your-tab-in-teams"></a>在选项卡中测试Teams
+### <a name="test-your-tab-in-teams"></a>在Teams中测试选项卡
 
-1. 转到频道中的Teams，然后选择"**+**"按钮以添加新选项卡。
-1. 然后，可以从" `Hello World` 添加 **选项卡"列表中选择** 。
-1. 在配置对话框中，选择要在通道中显示的选项卡。 然后，选择" **保存"**。
+1. 转到Teams中的频道，然后选择 **“+”** 按钮以添加新选项卡。
+1. 然后，可以从 **“添加选项卡**”列表中进行选择`Hello World`。
+1. 在配置对话框中，选择要在通道中显示的选项卡。 然后，选择 **“保存**”。
 
-You can see the `Hello World` tab loaded with the tab you chose：
+可以看到加载了 `Hello World` 所选选项卡的选项卡：
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
-### <a name="test-your-bot-in-teams"></a>在设备中测试Teams
+### <a name="test-your-bot-in-teams"></a>在Teams中测试机器人
 
-现在，你可以与自动程序在 Teams。 选择你注册应用的团队中的 `@your-bot-name`频道，然后键入 ，然后键入消息。 此类邮件 **称为提及\@。** 发送到自动程序的任何消息都将作为回复发送回：
+现在可以在Teams中与机器人交互。 在注册应用的团队中选择一个频道，然后键入 `@your-bot-name`，然后键入邮件。 这种类型的消息称为 **\@提及**。 发送到机器人的任何消息都将作为答复发送回你：
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 
 <a name="ComposeRichMessages"></a>
 
-### <a name="test-your-messaging-extension"></a>测试邮件扩展
+### <a name="test-your-messaging-extension"></a>测试消息传递扩展
 
-若要测试邮件扩展，请执行：
+若要测试消息传递扩展插件，请执行以下操作：
 
-1. 选择对话视图中输入框下方的三个点。 将显示包含" **Hello World"应用的** 菜单。
-1. 选择菜单。 将显示一组随机文本。 可以选择其中一个随机文本，该文本将插入到对话中。
+1. 选择对话视图中输入框下方的三个点。 将显示“**Hello World”应用的** 菜单。
+1. 选择菜单。 将显示一组随机文本。 可以选择其中一个随机文本，并将其插入到对话中。
 
     <img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />
 
     <img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result1.png" />
 
-1. 选择随机文本之一。 格式化的卡片显示为随自己的邮件一起发送，包含在底部：
+1. 选择其中一个随机文本。 格式化卡片似乎已准备好发送，底部包含你自己的消息：
 
     <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 

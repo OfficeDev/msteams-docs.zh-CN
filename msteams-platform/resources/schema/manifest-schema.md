@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: 3117195b697061b4199ac629f73d8ffd2d93cd6a
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: 0c2dccd3533ff5115fe28a09dee2304a56287413
+ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590743"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64706149"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -809,7 +809,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 **可选** - 对象
 
 > [!NOTE]
-> 如果将 `manifestVersion` 属性设置为 **1.12**，则授权属性与旧版本的清单不兼容。 清单版本 1.12 支持授权。
+> 如果将 `manifestVersion` 属性设置为 1.12，则授权属性与旧版本（版本 1.11 或更低版本）的清单不兼容。 清单版本 1.12 支持授权。
 
 指定并合并应用的授权相关信息。
 

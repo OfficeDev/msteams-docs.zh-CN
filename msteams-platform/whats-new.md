@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 809aae76471b4b21821151f03d293b9c519a0f58
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.openlocfilehash: e977349c2a1b9685fff58ea555d1e86984246100
+ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685532"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64706156"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,14 +22,12 @@ ms.locfileid: "64685532"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
-|04/06/2022| 从个人应用或选项卡共享到Teams (开发人员预览)  | 与Teams >共享集成以从[个人应用或选项卡Teams >共享到Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+|04/06/2022| 从个人应用或选项卡共享到 Teams（开发者预览版） | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
 |2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
 |2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
 |2022 年 3 月 29 日 | 集成人员选取器 | “与 Teams 集成”>“[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)”|
 |2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|
-|2022 年 3 月 22 日| 更新了适用于 Teams 的 Blazor 应用入门 |  • 开始>[使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
-|03/22/2022| 更新了适用于 Teams 的 Blazor 应用入门 |  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
 |2022 年 3 月 22 日| 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
 |2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022| 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
@@ -67,8 +65,6 @@ ms.locfileid: "64685532"
 |2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
 |2022 年 3 月 29 日 |集成人员选取器 | “与 Teams 集成”>“[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)”
 |2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|  
-|2022 年 3 月 22 日| 更新了适用于 Teams 的 Blazor 应用入门|  • 开始>[使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
-|03/22/2022| 更新了适用于 Teams 的 Blazor 应用入门|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorapp.yml)|
 |2022 年 3 月 22 日| 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
 |2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022 | 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|  
@@ -269,7 +265,7 @@ ms.locfileid: "64685532"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-|04/06/2022| 从个人应用或选项卡共享到Teams | 与Teams >共享集成以从[个人应用或选项卡Teams >共享到Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+|04/06/2022| 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 |02/02/2022| 引入了应用清单版本 1.12 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 针对盈利应用的测试预览| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|

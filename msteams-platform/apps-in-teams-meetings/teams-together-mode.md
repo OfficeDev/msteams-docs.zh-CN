@@ -3,12 +3,12 @@ title: 自定义同框场景模式
 description: 使用自定义"协同模式"场景
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356082"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736874"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
@@ -125,7 +125,7 @@ Scene Studio 上下文中的场景是包含以下元素的项目：
 
 预览后，场景将按照应用提交步骤作为应用发送到 Teams。 此步骤需要应用包。 对于设计的场景，应用包与场景包不同。 自动创建的应用包位于 Teams 开发人员中心的" **应用** "部分。
 
-（可选）通过从 **"保存**"下拉菜单中选择"**导出**"来检索场景包。 下载 **.zip** 文件（即场景包）。 场景包包括 scene.json 和用于生成场景的 PNG 资产。 查看场景包以合并其他更改：
+（可选）通过从 **"保存**"下拉菜单中选择"**导出**"来检索场景包。 下载 .zip 文件（即场景包）。 场景包包括 scene.json 和用于生成场景的 PNG 资产。 查看场景包以合并其他更改：
 
 ![导出场景](../assets/images/apps-in-meetings/build-a-scene.png)
 

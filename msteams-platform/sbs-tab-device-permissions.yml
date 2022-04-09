@@ -2,7 +2,7 @@
 title: Tab 设备权限
 metadata:
   title: Tab 设备权限
-  description: 在本教程中，你将了解如何为选项卡设备授予Microsoft Teams权限。
+  description: 本教程介绍如何为Microsoft Teams应用授予选项卡设备权限。
   audience: Developer
   level: Beginner
   ms.date: 12/24/2021
@@ -11,34 +11,34 @@ metadata:
   nextTutorialTitle: 详细了解浏览器的设备权限
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 745da67854dbe1916f3cafe6dc5eb8753e0eb3d2
-  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+  ms.openlocfilehash: 8bf835a3f97dca980bc01324434f7b8d62ac51a8
+  ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/31/2022
-  ms.locfileid: "64571017"
+  ms.lasthandoff: 04/09/2022
+  ms.locfileid: "64737055"
 items:
 - durationInMinutes: 1
   content: >
-    Teams需要设备权限（如位置、相机或麦克风访问）的应用现在要求用户在 Web 浏览器中按应用级别手动授予权限。 以前，浏览器已处理如何授予访问权限，但现在这些权限在Microsoft Teams。
+    Teams需要设备权限（例如位置、相机或麦克风访问）的应用现在要求用户在 Web 浏览器中手动授予每个应用级别的权限。 以前，浏览器处理了如何授予访问权限，但现在这些权限在Microsoft Teams中处理。
 
 
-    此分步指南可帮助你执行选项卡设备权限Microsoft Teams。 你将看到以下输出：
+    本分步指南可帮助你在Microsoft Teams处执行选项卡设备权限。 你将看到以下输出：
 
       ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
 - title: 先决条件
   durationInMinutes: 1
-  content: "确保安装以下工具并设置开发环境：  \n\n* 安装 [ngrok](https://ngrok.com/) 或等效隧道解决方案。\n* 安装 [Node.js](https://nodejs.org/en/)。\n* Visual Studio Code或最新版本。\n* [Microsoft 365开发者帐户](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)或Teams具有安装应用的适当权限的帐户。\n"
-- title: 配置并运行选项卡设备权限应用Teams
+  content: "确保安装以下工具并设置开发环境：  \n\n* 安装 [ngrok](https://ngrok.com/) 或等效隧道解决方案。\n* 安装 [Node.js](https://nodejs.org/en/)。\n* Visual Studio Code或最新版本。\n* [Microsoft 365开发人员帐户](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)或具有安装应用适当权限的Teams帐户的访问权限。\n"
+- title: 在Teams上配置并运行 Tab 设备权限应用
   durationInMinutes: 1
-  content: "测试应用最全面的方式是创建应用包并将其上传到Teams。 此方法是在所有范围内测试应用可用的完整功能的唯一方法。 \n\n若要通过上载 Teams文件配置并运行 manifest.zip 应用程序，请执行下列操作：\n\n1. 配置并运行选项卡设备权限应用。\n2. 开始隧道服务，获取 https 终结点。\n3. 通过上载选项卡设备权限中的 manifest.zip 文件来Teams。\n\n**配置并运行选项卡设备权限应用：**\n\n1. 打开 **命令提示符** 并克隆存储库 **git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git**。 确保记下 **克隆** 存储库的路径。\n2. 在\"**文件资源管理器**\"文件夹中，转到 **\"Microsoft-Teams-Samples >示例> nodejs >选项卡设备** 权限\"并复制文件夹位置。\n3. 在命令 **提示符中**，输入 **\" (js 文件夹位置** \") 并运行此命令。\n4. 在命令提示符中运行 **以下命令**：\n\n   ```command-prompt\n    npm install\n    ```\n5. 使用下列命令在 **命令提示符** 中运行应用程序：\n\n   ```command-prompt\n   npm start\n   ```\n6. 您可以在浏览器中看到以下输出：\n\n   ![react](~/assets/images/tab-device-permission/sbs-react.PNG)\n\n**开始隧道服务以获取 https 终结点：**\n\n1. 转到 **Microsoft-Teams-Samples > nodejs > tab-device-permissions >示例**。\n2. 打开 **ngrok** 终端，并运行以下命令启动 ngrok 隧道 (您需要 https 终结点来更新清单文件) ：\n\n   ```ngrok\n   ngrok http 3000 --host-header=localhost\n   ```  \n    \n**若要运行选项卡设备权限，请manifest.zip以下Teams：**\n\n1. 在文件资源管理器中，转到 **\"Microsoft-Teams-Samples > 示例 > tab-device-permissions > nodejs > appPackage**\"文件夹。\n2. 在 **visual studio code 中打开 manifest.json** 文件。\n3. 在 **manifest.json** 文件中，查找<<BASE_URI_DOMAIN>>**** 并将其替换为 ngrok 中的 https 终结点（不包括所有位置中的\"https://\"部分）。\n\n   ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)\n\n4. Zip the files in the **appPackage/folder** as manifest.zip.\n5. 使用Teams ID 在浏览器上打开\"登录\"。\n6. 若要上传 **manifest.zip**，请选择应用 **> Upload自定义应用，然后** **打开manifest.zip**。\n7. 选择 **选项卡设备权限** 应用。\n8. 选择 **\"添加** \"以添加选项卡设备权限应用。\n\n    ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)\n\n9. 打开 **选项卡设备权限** ，然后选择 **设备权限选项卡** 以查看以下输出：\n\n    ![desktopteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)\n\n10. 打开Teams查看以下输出：\n\n    ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)\n\n11. 打开桌面Teams。\n12. 若要上传 **manifest.zip**，请选择应用 **> Upload自定义应用，然后** **打开manifest.zip**。\n13. 选择 **\"** 添加\"以添加选项卡设备权限应用，你将看到以下输出：  \n\n    ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)\n"
+  content: "测试应用的最全面方法是创建应用包并将其上传到Teams。 此方法是测试应用在所有范围内可用的完整功能的唯一方法。 \n\n若要通过上传manifest.zip文件来配置和运行Teams应用，请执行以下操作：\n\n1. 配置并运行 Tab 设备权限应用。\n2. 开始隧道服务以获取 https 终结点。\n3. 通过在Teams中上传manifest.zip文件来运行选项卡设备权限。\n\n**若要配置并运行 Tab 设备权限应用，**\n\n1. 打开 **命令提示符** 并克隆存储库 **git 克隆 https://github.com/OfficeDev/Microsoft-Teams-Samples.git**。 请确保记下要克隆存储库的 **路径** 。\n2. 在 **文件资源管理器** 中，转到 **Microsoft-Teams-Samples >示例> tab-device-permissions > nodejs** 文件夹并复制文件夹位置。\n3. 在 **命令提示符** 中， **输入 cd 位置 (节点 js 文件夹位置)** 并运行此命令。\n4. 在 **命令提示符** 下运行以下命令：\n\n   ```command-prompt\n    npm install\n    ```\n5. 使用以下命令在 **命令提示符** 下运行应用程序：\n\n   ```command-prompt\n   npm start\n   ```\n6. 可以在浏览器中看到以下输出：\n\n   ![反应](~/assets/images/tab-device-permission/sbs-react.PNG)\n\n**开始隧道服务以获取 https 终结点：**\n\n1. 转到 **Microsoft-Teams-Samples >示例> tab-device-permissions > nodejs**。\n2. 打开 **ngrok** 终端并使用以下命令启动 ngrok 隧道 (需要 https 终结点来更新清单文件) ：\n\n   ```ngrok\n   ngrok http 3000 --host-header=localhost\n   ```  \n    \n**若要通过在Teams中上传manifest.zip文件来运行选项卡设备权限：**\n\n1. 在 **文件资源管理器** 中，转到 **microsoft-Teams-Samples >示例> tab-device-permissions > nodejs > appPackage** 文件夹。\n2. 在 `manifest.json` Visual Studio 代码中打开该文件。\n3. 在文件中 `manifest.json` ，查找 **<<BASE_URI_DOMAIN>>** 并将其替换为 ngrok 中的 https 终结点，不包括所有位置中的“https://”部分。\n\n   ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)\n\n4. 将 **appPackage/folder** 中的文件压缩为manifest.zip。\n5. 使用租户 ID 在浏览器上打开Teams。\n6. 若要上传`manifest.zip`，**请选择应用> Upload自定义应用** 并打开`manifest.zip`。\n7. 选择 **“选项卡设备权限** ”应用。\n8. 选择 **“添加** ”以添加选项卡设备权限应用。\n\n    ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)\n\n9. 打开 **Tab 设备权限** 并选择 **“设备权限”选项卡** 以查看以下输出：\n\n    ![desktopteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)\n\n10. 打开移动Teams以查看以下输出：\n\n    ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)\n\n11. 打开桌面Teams。\n12. 若要上传`manifest.zip`，**请选择应用> Upload自定义应用** 并打开`manifest.zip`。\n13. 选择 **“添加** ”以添加选项卡设备权限应用，你将看到以下输出：  \n\n    ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)\n"
 - title: 测试应用
   durationInMinutes: 1
-  content: "若要确保选项卡设备权限应用允许用户授予权限，必须在将应用成功上载到 Teams 后测试该应用。\n\n # <a name=\"desktop\"></a>[桌面设备](#tab/Desktop)\n\n  若要在桌面上测试应用，请选择\" **应用** 权限\"图标并获取以下提示以接受权限请求：\n\n   ![desktoppermissionteams](~/assets/images\\tab-device-permission\\desktop-teams-permission.png)\n\n  # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  若要在浏览器中测试应用，请选择\" **获取位置** \"以查看以下输出：\n\n   ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)\n\n # <a name=\"mobile\"></a>[移动设备](#tab/Mobile)\n\n  若要在移动设备上测试应用，请选择相应的按钮以测试方案，并获取以下提示以接受权限请求：\n\n   ![mobileappteams](~/assets/images/tab-device-permission/prompt-mobile-app.png)\n\n--- \n"
-- title: 完成挑战
+  content: "若要确保 Tab 设备权限应用允许用户授予权限，必须在成功将应用上传到Teams后测试该应用。\n\n # <a name=\"desktop\"></a>[桌面设备](#tab/Desktop)\n\n  若要在桌面上测试应用，请选择 **“应用权限** ”图标并获取以下接受权限请求的提示：\n\n   ![desktoppermissionteams](~/assets/images\\tab-device-permission\\desktop-teams-permission.png)\n\n  # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  若要在浏览器中测试应用，请选择 **“获取位置** ”以查看以下输出：\n\n   ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)\n\n # <a name=\"mobile\"></a>[移动设备](#tab/Mobile)\n\n  若要在移动设备上测试应用，请选择相应的按钮来测试方案，并获取以下接受权限请求的提示：\n\n   ![mobileappteams](~/assets/images/tab-device-permission/prompt-mobile-app.png)\n\n--- \n"
+- title: 完成质询
   durationInMinutes: 1
   content: >
-    你提供类似这样的内容了吗？
+    你想出了这样的事吗？
 
       ![tabdeviceimage](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
-- content: 你已完成本教程，现在可以在应用上授予选项卡Microsoft Teams权限。
+- content: 你已完成本教程，现在可以在Microsoft Teams应用中授予 Tab 设备权限。
