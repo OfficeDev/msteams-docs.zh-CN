@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: 会议令牌生成器
+title: 生成会议令牌
 metadata:
-  title: 会议令牌生成器
+  title: 生成会议令牌
   description: 本教程介绍如何为Teams设置会议令牌生成器。
   audience: Developer
   level: Beginner
@@ -11,135 +11,134 @@ metadata:
   nextTutorialTitle: 详细了解如何为会议启用和配置应用
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: f7e8c7d5213e2dd69c19695887efcbc7c5a75c80
-  ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+  ms.openlocfilehash: 4d21a56dcdd849971acdfbda443ede6be6a00ad6
+  ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/09/2022
-  ms.locfileid: "64737199"
+  ms.lasthandoff: 04/12/2022
+  ms.locfileid: "64794629"
 items:
 - durationInMinutes: 1
   content: >
-    通过允许会议参与者请求令牌，会议令牌生成器应用有助于增强Teams中的会议体验。 应用按顺序生成令牌，以便每个参与者都有机会在会议中进行交互。 例如，应用在 Q&A 会话和会议（如 Scrum 会议）中很有用。
+    通过允许会议参与者请求令牌并生成令牌，会议令牌应用有助于增强Teams中的会议体验。 应用按顺序生成令牌，以便每个参与者都有在会议中进行交互的平等机会。 例如，应用在 Q&A 会话和会议（如 Scrum 会议）中很有用。
 
 
     > [!NOTE]
 
-    > 会议令牌生成器应用的会议内选项卡仅在 **Teams桌面客户端** 中可用。
+    > 会议令牌生成器应用的会议内选项卡仅适用于Teams桌面客户端。
 
 
     **会议令牌生成器的主要功能**
 
 
-    * 显示正在会议中服务的当前令牌。
+    * 显示会议中使用的当前令牌
 
-    * 显示按令牌号排序的用户列表。
+    * 显示基于令牌编号排序的用户列表
 
-    * 在请求时为用户生成令牌。
+    * 在请求时为用户生成令牌
 
-    * 显示当前用户的令牌编号。
+    * 显示当前用户的令牌编号
 
-    * 允许组织者跳过当前会议令牌。
+    * 允许组织者跳过当前会议令牌
 
 
     **用户交互的不同方式**
 
 
-    * 令牌：用户的请求令牌。
+    * 令牌：用户的请求令牌
 
-    * 完成：确认为用户生成令牌。
+    * 完成：确认为用户生成令牌
 
-    * 跳过：跳过当前用户并移动到下一个排队获取令牌的人员。
+    * 跳过：跳过当前用户并移动到下一个排队获取令牌的人员
 
-       > [!NOTE]
-       > 跳过仅适用于会议组织者。
+      > [!NOTE]
+      > 跳过仅适用于会议组织者。
 
-    本分步指南可帮助你生成会议令牌以扩展Teams中的会议。 你将看到以下输出：
+    本分步指南可帮助你生成会议令牌，让所有参与者在会议中进行交互。 你将看到以下输出：
 
-       ![令牌](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="最终输出" border="true":::
 - title: 先决条件
   durationInMinutes: 1
-  content: "确保安装以下工具并设置开发环境：  \n\n* [.NET Core SDK](https://dotnet.microsoft.com/download) 版本 3.1\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)\n* [nodejs](https://nodejs.org/en/download/) LTS 版本 10.21.0 或更高版本\n* [ngrok](https://ngrok.com/download) 最新版本 (仅用于开发人员箱测试) 或任何等效的隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n\n* [获取免费Teams开发人员租户](https://developer.microsoft.com/microsoft-365/dev-program)\n\n确保具备以下技术的工作知识：\n\n* [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET 核心](/aspnet/core/?view=aspnetcore-3.1)版本 3.1\n* [React.JS](https://reactjs.org/tutorial/tutorial.html) 版本 16 或更高版本\n"
+  content: "安装以下工具并设置开发环境： \n\n * [使用](https://teams.microsoft.com/)有效帐户Microsoft Teams \n * [获取免费Teams开发人员租户](https://developer.microsoft.com/microsoft-365/dev-program)\n * [最新版本的 .NET Core SDK](https://dotnet.microsoft.com/download)\n * [最新版本的Visual Studio](https://visualstudio.microsoft.com/downloads/)\n * [nodejs 的最新版本](https://nodejs.org/en/download/)\n * [最新版本的 ngrok](https://ngrok.com/download) 或任何等效的隧道解决方案\n \n   > [!NOTE]\n   > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n \n 你必须具备以下技术的工作知识：\n\n * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n * [ECMAScript6](http://es6-features.org/#Constants)\n * [最新版本的 ASP.NET 核心](/aspnet/core/?view=aspnetcore-3.1)\n * [最新版本的React.JS](https://reactjs.org/tutorial/tutorial.html) \n \n"
 - title: 设置本地环境
   durationInMinutes: 1
-  content: "将存储库克隆`Microsoft-Teams-Samples`到本地GitHub：  \n\n 1. 打开[Microsoft Teams示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n 1. 选择 **“代码**”。\n 1. 在下拉菜单中，选择 **“打开并GitHub桌面**”。\n\n    ![克隆存储库](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)\n\n 1. 选择 **“克隆**”。 \n"
-- title: 在Azure AD门户中创建和注册机器人
+  content: "1. 打开[Microsoft Teams示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n1. 选择 **“代码**”。\n1. 在下拉菜单中，选择 **“打开并GitHub桌面**”。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-bot-builder-samples.png\" alt-text=\"Bot\" border=\"true\":::\n\n1. 选择 **“克隆**”。 \n"
+- title: 创建和注册机器人
   durationInMinutes: 5
-  content: "若要在Azure Active Directory中创建和注册机器人，请使用 ngrok 创建隧道并添加消息传送终结点，请执行以下步骤：\n\n* 创建 Azure 机器人资源以将机器人注册到 Azure 机器人服务。\n* 创建支持机器人 SSO 身份验证的客户端机密。\n* 添加Microsoft Teams通道以将机器人部署到Teams通道。\n* 使用 ngrok 创建到 Web 服务器终结点的隧道。\n* 将消息传送终结点添加到创建的 ngrok 隧道。\n\n**创建 Azure 机器人资源**\n\n1. 转到[Microsoft Azure门户](https://portal.azure.com/)。\n1. 选择“**创建资源**”。\n1. 在搜索框中，输入 **Azure 机器人**。\n1. 选择 **Enter**。\n1. 选择 **Azure 机器人**。\n\n     ![创建 Azure 机器人卡](~/assets/images/bots/createazurebot.png)\n\n1. 选择“**创建**”。\n1. 在 **机器人句柄** 中输入所需的机器人句柄名称。\n1. 从下拉列表中选择 **订阅** 。\n1. 从 **“资源组** ”下拉列表中，选择现有的资源组。 还可以创建新的资源组 (选择 **“新建** >输入资源名称>选择 **”确定** “) 。\n\n1. 从 **“新建资源组”位置** 下拉列表中选择所需的位置。\n\n    ![创建资源 Azure 机器人](~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png)\n\n1. 在 **“Microsoft 应用 ID”** 部分中，默认选择 **“新建 Microsoft 应用 ID** ”。 \n\n   可以选择 **“使用现有应用注册** ”并输入 **现有应用 ID** 和 **现有应用密码**，也可以选择 **“创建新的 Microsoft 应用 ID**”。\n\n   > [!NOTE]\n   > 不能创建具有相同 **Microsoft 应用 ID** 的多个机器人。\n\n1. 然后“**审阅 + 创建**”。\n\n    ![创建 Microsoft 应用 ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)\n\n1. 如果验证通过，请选择 **“创建**”。\n\n    预配机器人服务需要一些时间。\n\n1. 选择“**转到资源**”。 \n\n    ![部署应用](~/assets/images/meeting-token-generator/meeting-token-generator-botdeployment.png)\n\n    Azure 机器人已创建。\n\n    ![创建的 Azure 机器人资源](~/assets/images/meeting-token-generator/meeting-token-generator-bot-page.png)\n\n**创建客户端机密**\n\n  如果已创建新的 **Microsoft 应用 ID**，请执行以下步骤：\n\n1. 在左侧面板中，选择 **“配置**”。 \n\n   > [!TIP]\n   > 保存 **Microsoft 应用 ID** 或 **客户端 ID** 以供将来参考。\n\n1. 在 **机器人类型** 下选择 **多租户**。\n\n    ![机器人类型](~/assets/images/meeting-token-generator/bot-type.png)\n\n1. 在 **Microsoft 应用 ID** 旁边，选择 **“管理**”。\n\n    ![Microsoft 应用 ID](~/assets/images/meeting-token-generator/meeting-token-generator-config.png)\n\n1. 在 **“客户端机密** ”部分中，选择 **“新建客户端机密**”。 \n\n    ![新客户端机密](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)\n\n   将显示 **“添加客户端机密** ”窗口。  \n\n1. 输入 **说明**。\n\n1. 选择“**添加**”。\n\n    ![将客户端机密添加到应用](~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png)\n\n1. 在 **“值** ”列中，选择 **“复制到剪贴板**”。\n\n     ![客户端机密的值](~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png)\n   \n   > [!TIP]\n   > 保存 **客户端机密** 值或应用密码以供将来参考。\n\n**添加Microsoft Teams通道**\n\n1. 选择“主页”。\n\n    ![主页](~/assets/images/meeting-token-generator/meeting-token-generator-gotohome.png)\n\n1. 从 **最近的资源** 中选择机器人。\n\n1. 在左窗格中选择 **“通道** ”。 \n\n1. 选择 **Microsoft Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.\n\n1. 选中该复选框以接受 **服务条款**。\n\n1. 选择 **“同意**”。\n\n      ![服务条款](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)\n\n1. 选择“保存”。\n\n      ![选择Teams](~/assets/images/meeting-token-generator/config-teams.png)   \n\n**为本地 Web 服务器创建隧道**\n\n使用 ngrok 创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n ```bash\n ngrok http -host-header=localhost 3978\n ```\n\n> [!NOTE]\n> 创建 ngrok 隧道时，请使用 `localhost 5000` 而不是 `3978` 选择 **命令行** 来运行应用。\n\n> [!TIP]\n> 如果遇到 **ERR_NGROK_4018**，请按照命令提示符中提供的步骤注册 ngrok 并进行身份验证。 然后运行该 `ngrok http -host-header=localhost 3978` 命令。\n\n\n**添加消息传送终结点**\n\n1. 从 ngrok 将 HTTPS URL (https 复制到 io) 。\n\n    ![ngrok HTTPS URL](~/assets/images/meeting-token-generator/meeting-token-generator-ngrok.png)\n\n    > [!NOTE]\n    > ngrok 中的 HTTPS URL 是完全限定的域名。\n    > 这是 `WebAppDomain` 一个完全限定的域名，不包括 `https://` 在其中。\n\n1. 在 **创建的** Azure 机器人的设置中，选择 **“配置**”。\n\n1. 在 **消息传送终结点** 中，使用 ngrok 提供的 HTTPS URL，并在 URL 末尾添加 **/api/messages**。\n\n    ![消息传送终结点](~/assets/images/meeting-token-generator/meeting-token-generator-messaging-endpoint.png)\n\n1. 选择“**应用**”。\n\n    已在 Azure 机器人服务中成功设置机器人。\n"
-- title: 更新选项卡 SSO 的Azure AD应用注册
+  content: "以下步骤可帮助你在Azure 门户中创建和注册机器人。\n\n * 创建 Azure 机器人资源以将机器人注册到 Azure 机器人服务\n * 创建客户端机密以启用机器人的 SSO 身份验证\n * 添加Teams通道以部署机器人\n * 使用 ngrok 创建到 Web 服务器终结点的隧道\n * 将消息传送终结点添加到创建的 ngrok 隧道\n\n **创建 Azure 机器人资源**\n\n 1. 转到“[Azure 门户](https://portal.azure.com/)”。\n 1. 选择“**创建资源**”。\n 1. 在搜索框中，输入 **Azure 机器人**。\n 1. 选择 **Enter**。\n 1. 选择 **Azure 机器人**。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-azure-home-bot.png\" alt-text=\"家庭机器人\" border=\"true\":::\n\n 1. 选择“**创建**”。\n 1. 在 **机器人句柄** 中输入所需的机器人句柄名称。\n 1. 从下拉列表中选择 **订阅** 。\n 1. 从下拉列表中选择 **资源组** 。\n \n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-create-azure-bot.png\" alt-text=\"new aruze\" border=\"true\":::\n\n    还可以创建新的资源组 (选择 **“新建** >输入资源名称>选择 **”确定** “) 。\n\n 1. 如果已创建新的资源组，请从 **“新建资源组”位置** 下拉列表中选择所需的位置。\n     \n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-south-india.png\" alt-text=\"印度\" border=\"true\":::\n\n 1. 在 **“Microsoft 应用 ID”** 部分中，默认选择 **“新建 Microsoft 应用 ID** ”。 \n \n    可以选择 **“使用现有应用注册** ”并输入 **现有应用 ID** 和 **现有应用密码**，也可以选择 **“创建新的 Microsoft 应用 ID**”。\n\n    > [!NOTE]\n    > 不能创建具有相同 **Microsoft 应用 ID** 的多个机器人。\n\n 1. 选择 **“类型应用** ”作为 **多租户**。\n 1. 然后“**审阅 + 创建**”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-multitenant.png\" alt-text=\"多租户\" border=\"true\":::\n\n 1. 如果验证通过，请选择 **“创建**”。\n\n     预配机器人服务需要一些时间。\n\n 1. 选择“**转到资源**”。 \n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-meeting-token-generator-bot-deployment.png\" alt-text=\"Bot\" border=\"true\":::\n\n     Azure 机器人已创建。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-bot-page.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n **创建客户端机密**\n\n   如果已创建新的 **Microsoft 应用 ID**，请执行以下步骤：\n\n 1. 在左侧面板中，选择 **“配置**”。 \n\n    > [!TIP]\n    > 保存 **Microsoft 应用 ID** 或 **客户端 ID** 以供将来参考。\n\n 1. 在 **Microsoft 应用 ID** 旁边，选择 **“管理**”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-microsoft-app-id.png\" alt-text=\"microsoft 应用 ID\" border=\"true\":::\n\n 1. 在 **“客户端机密** ”部分中，选择 **“新建客户端机密**”。 \n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-client-secret.png\" alt-text=\"秘密\" border=\"true\":::\n    \n    将显示 **“添加客户端机密** ”窗口。  \n\n 1. 输入 **说明**。\n \n 1. 选择“**添加**”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-add-client secret.png\" alt-text=\"client\" border=\"true\":::\n\n 1. 在 **“值** ”列中，选择 **“复制到剪贴板**”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png\" alt-text=\"机器人主页\" border=\"true\":::\n    \n    > [!TIP]\n    > 保存 **客户端机密** 值或应用密码以供将来参考。\n\n **添加Microsoft Teams通道**\n\n 1. 选择“主页”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-home-page.png\" alt-text=\"网页\" border=\"true\":::\n\n 1. 从 **最近的资源** 中选择机器人。\n\n 1. 在左窗格中选择 **“通道** ”。 \n\n 1. 选择 **Microsoft Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.\n\n 1. 选中该复选框以接受 **服务条款**。\n \n 1. 选择 **“同意**”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-agree.png\" alt-text=\" 同意\" border=\"true\":::\n\n 1. 选择“**应用**”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-messages.png\" alt-text=\"messages\" border=\"true\":::   \n \n **为本地 Web 服务器创建隧道**\n\n 使用 ngrok 创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n   ```bash\n   ngrok http -host-header=localhost 3978\n   ```\n\n   > [!NOTE]\n   > 创建 ngrok 隧道时，请使用 `localhost 5000` 而不是 `3978` 选择 **命令行** 来运行应用。\n \n   > [!TIP]\n   > 如果遇到 **ERR_NGROK_4018**，请按照 **命令提示** 符中提供的步骤注册 ngrok 并进行身份验证。 然后运行该 `ngrok http -host-header=localhost 3978` 命令。\n\n\n **添加消息传送终结点**\n\n 1. 从 ngrok 复制 HTTPS URL。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-ngrok-page.png\" alt-text=\"ngrok\" border=\"true\":::\n\n     > [!NOTE]\n     > ngrok 中的 HTTPS URL 是完全限定的域名。\n     > 这是 `WebAppDomain` 一个完全限定的域名，不包括 `https://` 在其中。\n\n 1. 在 **创建的** Azure 机器人的设置中，选择 **“配置**”。\n\n 1. 在 **消息传送终结点** 中，使用 ngrok 提供的 HTTPS URL，并在 URL 末尾添加 **/api/messages**。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-messaging-endpoint.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n 1. 选择“**应用**”。\n\n     已在 Azure 机器人服务中成功设置机器人。\n"
+- title: 更新选项卡 SSO 的 Azure 应用注册
   durationInMinutes: 1
-  content: "**通过 Azure AD 门户注册应用**  \n\n1. 转到“[Azure 门户](https://portal.azure.com/)”。\n\n1. 选择“Azure Active Directory”。\n\n1. 在左侧导航面板中，选择 **“应用注册**”。\n\n1. 选择机器人。\n\n   ![应用注册](~/assets/images/meeting-token-generator/meeting-token-generator-appregister.png)\n\n1. 在“**管理**”下，选择“**公开 API**”。\n\n1. 选择 **“设置**”。\n\n   ![公开 API](~/assets/images/meeting-token-generator/meeting-token-generator-exposeanapi.png)\n\n1. 设置应用程序 **ID URI** 的形式 `api://{AppID}`。\n\n   ![设置链接](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)\n\n1. 在两者`WebAppDomain`之间`api://``/{AppID}`插入值。</br>\n    `api://ae57****.ngrok.io/{AppID}`</br>\n    \n   下图显示了域名：\n    \n    ![App ID URI](~/assets/images/meeting-token-generator/meeting-token-generator-appIDuri.png)\n\n    > [!NOTE]\n    > 如果使用的是隧道服务（如 ngrok），请确保在 ngrok 子域发生更改时更新该值。\n    > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`，新的 ngrok 子域名称在哪里 `f631****.ngrok.io` 。\n\n1. 选择“**添加作用域**”。 \n\n1. 在显示的面板中，输入 `access_as_user` 为 **范围名称**。\n\n1. 设置 **Who是否可以同意？** `Admins and users`\n\n1. 若要配置具有相应作用域值 `access_as_user` 的管理员和用户同意提示，请在字段中提供以下信息：</br>\n\n     * 输入 `Teams can access the user’s profile` 为 **管理员同意显示名称**。\n\n     * 输入 `Allows Teams to call the app’s web APIs as the current user` 为 **管理员同意说明**。\n\n     * 输入 `Teams can access the user profile and make requests on the user’s behalf` 为 **用户同意显示名称**。\n\n     * 输入 `Enable Teams to call this app’s APIs with the same rights as the user` 为 **用户同意说明**。\n\n   下图显示了字段和值：\n\n    ![添加范围](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)\n\n1. 确保将“状态”设置为“已启用”。\n\n1. 选择 **“添加范围** ”以保存。\n\n    ![添加范围](~/assets/images/meeting-token-generator/meeting-token-generator-addscope2.png)\n\n    > [!NOTE]\n    > **范围名称** 应与应用程序 **ID** URI 匹配，`/access_as_user`并追加在末尾。</br>\n       `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`\n\n    ![Scopes](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) \n\n1. 在“**授权客户端应用程序**”部分中，确定要授权给应用的 Web 应用程序的应用程序。 \n\n1. 选择 **添加客户端应用程序**。 \n\n    ![添加客户端应用](~/assets/images/meeting-token-generator/meeting-token-generator-selectclientapp.png) \n\n1. 输入 **客户端 ID**：`1fec8e78-bce4-4aaf-ab1b-5451cc387264`适用于Teams移动或桌面应用程序。 \n\n    ![添加客户端应用程序 1](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp1.png) \n\n   可以输入 **客户端 ID**：`5e3ce6c0-2b1f-4285-8d4b-75ee78787346`用于Teams Web 应用程序。\n\n    ![添加客户端应用程序 2](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp2.png) \n\n1. 选择 **“已授权”范围**。\n\n    ![添加客户端应用程序 2](~/assets/images/meeting-token-generator/meeting-token-generator-authorizedscope1.png) \n\n   下图显示客户端 ID：\n\n     ![客户端应用程序](~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png) \n\n1. 在左侧面板中，选择 **API 权限**。 \n\n   > [!NOTE]\n   > 仅当Azure AD应用在其他租户中注册时，用户才需要同意这些权限。\n\n1. 选择“**添加权限**”。\n\n     ![添加权限](~/assets/add-permission.png)\n\n1. 选择 **Microsoft Graph**。\n\n1. 选择“**委托的权限**”。\n\n    默认情况下， **已选择 User.Read** 。\n\n     ![用户](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)\n\n1. 添加以下权限：</br>\n     * **email**\n     * **offline_access**\n     * **OpenId**\n     * **个人资料**\n\n1. 选择 **添加权限**。\n\n     ![其他权限](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)\n\n1. 在左侧面板中，选择 **“身份验证** ”以设置重定向 URI。 \n\n   > [!NOTE]\n   > 如果未向应用授予 IT 管理员许可，则用户必须在第一次使用应用时提供同意。\n           \n     1. 选择 **添加平台**。\n     1. 选择“Web”\n\n        ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)\n\n     1. 通过追加到完全限定的域名，输入应用的 `auth-end` 重定向 URI：</br> \n       `https://ae57****.ngrok.io/auth-end`. </br>\n\n     1. 通过选择以下复选框启用 **隐式授予和混合流** ：\n         * **ID 令牌**\n         * **访问令牌**\n\n     1. 选择“**配置**”。\n\n        ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)\n"
+  content: "1. 转到“[Azure 门户](https://portal.azure.com/)”。\n\n1. 选择“Azure Active Directory”。\n\n1. 在左侧导航面板中，选择 **应用注册**。\n\n1. 选择机器人。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-app-register.png\" alt-text=\"注册\" border=\"true\":::\n\n1. 在“**管理**”下，选择“**公开 API**”。\n\n1. 选择 **“设置**”。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-bot-set.png\" alt-text=\"set\" border=\"true\":::\n\n1. 设置应用程序 **ID URI** 的形式 `api://your ngrok/botid-{your AppID}`。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n   下图显示了域名：\n    \n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-appIDuri.png\" alt-text=\"机器人主页\" border=\"true\":::\n  \n   > [!NOTE]\n   > 如果使用的是隧道服务（如 ngrok），请确保在 ngrok 子域发生更改时更新该值。\n   > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`，新的 ngrok 子域名称在哪里 `f631****.ngrok.io` 。\n\n1. 选择“**添加作用域**”。 \n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/selectscope.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 在显示的面板中，输入 `access_as_user` 为 **范围名称**。\n\n1. 设置 **Who是否可以同意？** `Admins and users`\n\n1. 若要配置具有相应作用域值 `access_as_user` 的管理员和用户同意提示，请在字段中提供以下信息：</br>\n\n     * 输入 `Teams can access the user’s profile` 为 **管理员同意显示名称**\n\n     * 输入 `Allows Teams to call the app’s web APIs as the current user` 为 **管理员同意说明**\n\n     * 输入 `Teams can access the user profile and make requests on the user’s behalf` 为 **用户同意显示名称**\n\n     * 输入 `Enable Teams to call this app’s APIs with the same rights as the user` 为 **用户同意说明**\n\n   下图显示了字段和值：\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png\" alt-text=\"机器人主页\" border=\"true\":::\n1. 确保将“状态”设置为“已启用”。\n\n1. 选择 **“添加范围** ”以保存。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-enabled.png\" alt-text=\"enabled\" border=\"true\":::\n\n    > [!NOTE]\n    > **范围名称** 应与应用程序 **ID** URI 匹配，`/access_as_user`并追加在末尾。</br>\n       `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 在“**授权客户端应用程序**”部分中，确定要授权给应用的 Web 应用程序的应用程序。 \n\n1. 选择 **添加客户端应用程序**。 \n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-selectclientapp.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 输入 **客户端 ID**：`1fec8e78-bce4-4aaf-ab1b-5451cc387264`适用于Teams移动或桌面应用程序。 \n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp1.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n   可以输入 **客户端 ID**：`5e3ce6c0-2b1f-4285-8d4b-75ee78787346`用于Teams Web 应用程序。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-addclientapp2.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 选择 **“已授权”范围**。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-authorizedscope.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n   下图显示客户端 ID：\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 在左侧面板中，选择 **API 权限**。 \n\n   > [!NOTE]\n   > 仅当Azure AD应用在其他租户中注册时，用户才需要同意这些权限。\n\n1. 选择“**添加权限**”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/addpermission.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 选择 **Microsoft Graph**。\n\n1. 选择“**委托的权限**”。\n\n1. 添加以下权限：</br>\n     * **email**\n     * **offline_access**\n     * **Openid**\n     * **个人资料**\n     * **User.Read**\n\n1. 选择 **添加权限**。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 在左侧面板中，选择 **“身份验证** ”以设置重定向 URI。 \n\n   > [!NOTE]\n   > 如果未向应用授予 IT 管理员许可，则用户必须在第一次使用应用时提供同意。 </br>\n           \n    \n     1. 选择 **添加平台**。\n     1. 选择“Web”\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n     1. 通过追加到完全限定的域名，输入应用的 `auth-end` 重定向 URI：</br> \n       `https://your ngrok/auth-end`. </br>\n\n     1. 通过选择以下复选框启用 **隐式授予和混合流** ：\n         * **ID 令牌**\n         * **访问令牌**\n\n     1. 选择“**配置**”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-configure-web.png\" alt-text=\"机器人主页\" border=\"true\":::\n"
 - title: 设置应用设置
   durationInMinutes: 1
-  content: "1. 导航到克隆存储库中的 **appsettings.json** 。\n\n    ![应用设置位置](~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png)\n\n1. 在 **Visual Studio Code** 中打开 **appsettings.json**，并更新以下信息：  \n\n     * 设置 `\"MicrosoftAppId\"` 为机器人的 **Microsoft 应用 ID**。\n     * 设置 `\"MicrosoftAppPassword\"` 为机器人的客户端机密 ID 值。\n     * 设置 `\"AzureAd\".\"TenantId\"` 为使用应用的租户的租户 ID。\n\n         > [!NOTE]\n         > 此示例仅在当前租户中工作。\n\n     * 设置 `\"AzureAd\".\"ApplicationId\"` 为机器人的 **Microsoft 应用 ID**。\n     * 设置 `\"ContentBubbleUrl\"` 为内容气泡 iframe URL `(https://[WebAppDomain]/contentBubble.html)`。\n\n         > [!NOTE]\n         > `WebAppDomain` 是 ngrok 域，因此内容气泡 URL 类似于 `https://ae57****.ngrok.io/contentBubble.html`。\n\n    ![应用设置](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)\n"
+  content: "1. 导航到克隆存储库中的 **appsettings.json** 。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 在 **Visual Studio Code** 中打开 **appsettings.json**，并更新以下信息：  \n\n     * 设置 `\"MicrosoftAppId\"` 为机器人的 **Microsoft 应用 ID**\n     * 设置 `\"MicrosoftAppPassword\"` 为机器人的客户端机密 ID 值\n     * 设置 `\"AzureAd\".\"TenantId\"` 为使用应用的租户的租户 ID\n\n    > [!NOTE]\n    > 此示例仅在当前租户中工作。\n\n     * 设置 `\"AzureAd\".\"ApplicationId\"` 为机器人的 **Microsoft 应用 ID**\n     * 设置 `\"ContentBubbleUrl\"` 为内容气泡 iframe URL `(https://[WebAppDomain]/contentBubble.html)`\n\n    > [!NOTE]\n    > `WebAppDomain` 是 ngrok 域，因此内容气泡 URL 类似于 `https://ae57****.ngrok.io/contentBubble.html`。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs app setting Latest.png\" alt-text=\"机器人主页\" border=\"true\":::\n"
 - title: 设置清单文件
   durationInMinutes: 1
   content: >
     1. 在克隆的存储库中导航到 `manifest.json` 。
 
-        ![清单文件位置](~/assets/images/meeting-token-generator/meeting-token-generator-manifestlocation.png)
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest.png" alt-text="清单" border="true":::
 
     1. 在 **Visual Studio Code** 中打开`manifest.json`并进行以下更改：
 
-         * 设置为 `manifestVersion` `1.11`.
-
-           > [!NOTE]
-           > 提供最新版本。
-
-         * 设置为 `$schema` `https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`.
-         * 设置为 `resource` `api://[WebAppDomainName]/[MicrosoftAppId]`.
-         * 替换 `[companyName]` 为 `Contoso`.
+         * 设置 `manifestVersion` 为最新版本
+         * 设置为`$schema``https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`
+         * 设置为`resource``api://[WebAppDomainName]/[MicrosoftAppId]`
+         * 替换 `[companyName]` 为 `Contoso`
          * 将以下部分替换为完全限定的域名：
-           * `[websiteUrl]`
-           * `[privacyUrl]`
-           * `[termsOfUseUrl]`
+           * `websiteUrl`
+           * `privacyUrl`
+           * `termsOfUseUrl`
 
 
-           ![清单映像 1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-1.png)
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 1 latest new.png" alt-text="机器人主页" border="true":::
 
-         * 将所有出现的 `[WebAppDomainName]` 域名替换为 ngrok 域名。
-         * 将所有事件 `[MicrosoftAppId]` 替换为机器人的 **Microsoft 应用 ID**。
+         * 将所有匹配项 `WebAppDomainName` 替换为 ngrok 域名
+         * 将所有事件 `MicrosoftAppId` 替换为机器人的 **Microsoft 应用 ID**
 
-           ![清单映像 2](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-2.png)
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 2 Latest.png" alt-text="机器人主页" border="true":::
 - title: 使用 npm 安装生成客户端应用
   durationInMinutes: 1
   content: >
-    **使用 npm 安装生成客户端应用以生成可分发文件夹**
-
-
     1. 导航到克隆存储库中的 **“应用** ”文件夹。
 
     1. 复制 **应用** 文件夹路径。
 
-    1. 打开新的命令提示符窗口，将当前目录更改为复制的 **应用** 路径。
+    1. 打开新的 **命令提示符** 窗口，将当前目录更改为复制的 **应用** 路径。
 
-       ![应用文件夹路径](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-prompt-new1.png" alt-text="机器人主页" border="true":::
 
-    1. 运行 `npm install` 以下载包和依赖项。
+    1. 在 **命令提示符** 中运行以下命令以下载包和依赖项。
 
-    1. 运行 `npm run build` 以生成应用。
+       ```Command-Prompt
+       npm install
+       ```
+    1. 在 **命令提示符** 下运行以下命令以启动应用。
 
-       ![生成应用](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
+       ```Command-Prompt
+       npm start
+       ```
+       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png" alt-text="机器人主页" border="true":::
 
        此过程在复制资产的 **App** 文件夹中生成可分发文件夹或 **/dist** 文件夹。 服务器从该位置提供静态文件。
 
-       ![可分发文件夹](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
+       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png" alt-text="机器人主页" border="true":::
 - title: 生成并运行服务
   durationInMinutes: 1
-  content: "**使用 Visual Studio 2019 或命令行生成和运行服务**\n\n# <a name=\"visual-studio-2019\"></a>[Visual Studio 2019](#tab/vs2019)\n\n   1. **2019 Visual Studio启动**。\n   1. 导航到 **FileOpen** >  >  **Project/解决方案**。\n\n      ![打开文件](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)\n\n   1. 从 **csharp** 文件夹 **中选择 TokenApp.csproj** 文件。\n\n      ![令牌文件](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)\n\n   1. 按 **F5** 运行项目。\n\n   1. 如果出现以下对话框，请选择“**是**”：\n\n      ![信任证书](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)\n\n      随即打开一个网页，消息 **“应用已准备就绪！**”。\n\n      ![应用准备就绪](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) \n\n    \n# <a name=\"command-line\"></a>[命令行](#tab/cli)\n\n在命令提示符窗口中导航到 **csharp** 文件夹，并输入以下命令：\n\n```bash\ndotnet run\n```\n\n![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)\n  \n"
+  content: "**使用最新Visual Studio或命令行生成和运行服务**\n\n# <a name=\"visual-studio\"></a>[Visual Studio](#tab/vs)\n\n   1. 启动最新版本的Visual Studio。\n   1. 导航到 **FileOpen** >  >  **Project/解决方案**。\n       \n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png\" alt-text=\"vsopen\" border=\"true\":::\n\n   1. 从 **csharp** 文件夹 **中选择 TokenApp.csproj** 文件。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n   1. 按 **F5** 运行项目。\n \n   1. 如果出现以下对话框，请选择“**是**”：\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n      随即打开一个网页，消息 **“应用已准备就绪！**”。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n# <a name=\"command-line\"></a>[命令行](#tab/cli)\n\n在命令提示符窗口中导航到 **csharp** 文件夹，并输入以下命令：\n\n```bash\n dotnet run\n```\n:::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png\" alt-text=\"dotnet\" border=\"true\":::\n"
 - title: 启用开发人员预览版
   durationInMinutes: 1
-  content: "**在桌面Teams客户端中启用开发人员预览**\n\n1. 在租户的管理控制台中启用应用上传。\n   1. 请使用管理员帐户登录到“[Microsoft 365 管理中心](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)”。\n   1. 在左侧面板中，选择 **“全部显示**”。\n   1. 选择 **Teams**。\n\n      ![管理中心菜单](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png)\n\n   1. 在左侧面板中，选择 **Teams应用**。\n   \n   1. 选择 **“设置策略**”。\n\n      ![设置策略](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) \n\n   1. 选择 **“全局**”。\n\n      ![切换打开](~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideloadimage.png)\n\n   1. 将 **Upload自定义应用** 切换到 **On** 位置。\n\n      ![切换打开](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)\n\n   1. 选择“保存”。 \n   \n      测试租户可以允许自定义应用旁加载。\n\n      > [!NOTE]\n      > 旁加载需要一些时间才能变为活动状态。\n\n1. 转到 **Microsoft Teams**。\n\n1. 从Teams界面的右上角选择`...`。\n\n1. 选择“**关于**”。 \n\n1. 选择 **开发人员预览** 版。\n\n    ![开发者预览版](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)\n\n1. 选择 **“切换到开发人员预览** 版”。\n\n    ![切换到开发人员预览版](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)\n"
-- title: 将会议令牌应用添加到Teams
+  content: "1. 在租户的管理控制台中启用应用上传。\n   1. 请使用管理员帐户登录到“[Microsoft 365 管理中心](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)”。\n   1. 在左侧面板中，选择 **“全部显示**”。\n   1. 选择 **Teams**。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n   1. 在左侧面板中，选择 **Teams应用**。\n   \n   1. 选择 **“设置策略**”。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png\" alt-text=\"设置\" border=\"true\"::: \n\n   1. 选择 **“全局**”。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideload.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n   1. 将 **Upload自定义应用** 切换到 **On** 位置。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n   1. 选择“**保存**”。 \n   \n      测试租户可以允许自定义应用旁加载。\n\n      > [!NOTE]\n      > 旁加载需要一些时间才能变为活动状态。\n\n1. 转到 **Microsoft Teams**。\n\n1. 从Teams界面的右上角选择`...`。\n\n1. 选择“**关于**”。 \n\n1. 选择 **开发人员预览** 版。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-dev-preview.png\" alt-text=\"开发人员预览版\" border=\"true\":::\n\n1. 选择 **“切换到开发人员预览** 版”。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-developer-preview.png\" alt-text=\"开发人员预览版\" border=\"true\":::\n"
+- title: 将会议令牌添加到Teams
   durationInMinutes: 1
-  content: "**创建Teams会议并添加会议令牌应用**\n\n1. 在克隆的存储库中，导航到 **csharp >资源>清单**。\n\n1. 使用 **清单** 文件夹中存在的以下文件创建.zip： \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   ![Zip 文件](~/assets/images/meeting-token-generator/meeting-token-generator-zipfile.png) \n\n1. 创建一个与几个演示者和与会者的会议。\n\n1. 创建会议后，转到会议详细信息页，然后选择 **“添加****应用**”。\n\n   ![添加应用](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) \n\n1. 在打开的弹出窗口中，选择 **“管理应用**”。\n\n   ![管理应用](~/assets/meeting-token-generator-manageapps.png)\n\n1. 选择“**上传自定义应用**”。 \n\n   ![Upload自定义应用](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)\n\n1. 选择 **“打开** ”以上传在 **清单** 文件夹中创建的.zip文件。\n\n   ![选择 zip 文件](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)\n\n1. 选择“**添加**”。\n\n   ![添加应用](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)\n\n   “ **管理应用** ”部分显示应用程序列表。\n\n   ![管理应用中的应用](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)\n\n1. 转到Teams会议。\n\n1. 选择“**添加应用**”。 \n\n   在应用选择页中，应用显示为 **会议令牌应用**。\n\n   ![Teams中的应用图标](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)\n\n1. 选择 **会议令牌应用**。\n\n1. 选择“保存”。\n\n   ![欢迎应用](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)\n\n   该应用在会议聊天中可见。 \n\n1. 开始会议。 \n\n   图标在会议控件栏中可见。\n\n    ![会议中的令牌](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)\n\n > [!NOTE] \n > 处理自己的项目时，请确保使用持久存储机制来存储租户的令牌信息和服务 URL。\n"
+  content: "1. 在克隆的存储库中，导航到 **csharp >资源>清单**。\n\n1. 使用 **清单** 文件夹中存在的以下文件创建.zip： \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-cshrap-manifest.png\" alt-text=\"csharp\" border=\"true\"::: \n\n1. 创建一个与几个演示者和与会者的会议。\n\n1. 创建会议后，转到会议详细信息页，然后选择 **“添加****应用**”。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png\" alt-text=\"添加应用\" border=\"true\"::: \n\n1. 在弹出窗口中，选择 **“管理应用**”。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-find-app.png\" alt-text=\"查找应用\" border=\"true\":::\n\n1. 选择“**上传自定义应用**”。 \n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 选择 **“打开** ”以上传在 **清单** 文件夹中创建的.zip文件。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 单击 **“添加**”。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n   “ **管理应用** ”部分显示应用程序列表。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png\" alt-text=\"机器人主页\" border=\"true\":::\n\n1. 转到Teams会议。\n\n1. 选择“**添加应用**”。 \n\n   在应用选择页中，应用显示为 **会议令牌应用**。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png\" alt-text=\"appicon\" border=\"true\":::\n\n1. 选择 **会议令牌应用**。\n\n1. 选择“**保存**”。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png\" alt-text=\"欢迎\" border=\"true\":::\n\n   该应用在会议聊天中可见。 \n\n1. 开始会议。 \n\n   图标在会议控件栏中可见。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png\" alt-text=\"token in\" border=\"true\":::\n\n    > [!NOTE] \n    > 处理自己的项目时，请确保使用持久存储机制来存储租户的令牌信息和服务 URL。\n"
 - title: 完成质询
   durationInMinutes: 1
   content: >
     你想出了这样的事吗？
 
 
-    ![令牌](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
+    :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png" alt-text="令牌编号" border="true":::
 - content: >-
     你已完成本教程以开始使用会议令牌生成器应用。
 
@@ -147,4 +146,4 @@ items:
     了解应用程序在实时方案中的外观：
 
 
-    ![实时](~/assets/images/meeting-token-generator/meeting-token-generator-realtimescenario.png)
+    :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-realtime.png" alt-text="实时" border="true":::
