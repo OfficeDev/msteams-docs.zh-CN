@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511248"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826990"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -1029,7 +1029,7 @@ Teams 应用清单定义应用的配置。
 
 ### <a name="notification-only-bots"></a>仅通知机器人
 
-由仅通知机器人组成的应用通过基于核心应用或后端中的特定触发器或事件触发用户通知，从而为用户提供价值。 例如，添加了新的销售线索或潜在客户，供销售团队跟进。
+由仅通知机器人组成的应用通过基于核心应用或后端中的特定触发器或事件触发用户通知，从而为用户提供价值。 例如，添加了新的销售线索或潜在客户，供销售团队跟进。 高质量通知仅机器人会在某些事件完成（如工作流完成或警报）上定期通知用户。
 
 如果符合以下情况，则 Teams 中的通知将提供价值：
 
