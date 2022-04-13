@@ -4,12 +4,12 @@ description: 描述使用外部 OAuth 提供程序的身份验证
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 使用外部 OAuth 提供程序进行团队身份验证
-ms.openlocfilehash: df9a9e36ecd203cd2b6c482af00b60ddfb145114
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: dc47163b58bcf2ce39820b0ba9db4e6cb05774ef
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464257"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826962"
 ---
 # <a name="use-external-oauth-providers"></a>使用外部 OAuth 提供程序
 
@@ -114,7 +114,7 @@ function authenticate(authenticateParameters?: AuthenticateParameters)
          return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}')
       }
       else {
-      // continue redirecting to a web-page that will call notifySuccsss() – usually this method is used in Teams-Web
+      // continue redirecting to a web-page that will call notifySuccess() – usually this method is used in Teams-Web
       …
       ```
 
