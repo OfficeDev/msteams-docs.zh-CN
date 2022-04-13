@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d367824e633e129129a5c4de8900d8f1e3a19013
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
+ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398930"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64793795"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -51,7 +51,7 @@ ms.locfileid: "63398930"
 
 * **深层功能和体验测试**
 
-  验证程序会全面审查你的应用，以确保符合 [Microsoft 商业市场认证策略](/legal/marketplace/certification-policies)，重点关注深层功能和用户体验测试、可用性检查和元数据检查。应用验证可跨桌面、Web、移动客户端完成。
+  验证程序会全面审查你的应用，以确保符合 [Microsoft 商业市场认证策略](/legal/marketplace/certification-policies)，重点关注深层功能和用户体验测试、可用性检查和元数据检查。应用验证可跨桌面、Web、移动客户端完成。我们努力在你提交后的 24 小时内为你提供详细的测试报告。
 
 * **通过引导式服务发布应用**
 
