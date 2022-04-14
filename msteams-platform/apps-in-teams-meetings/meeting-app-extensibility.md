@@ -4,12 +4,12 @@ author: surbhigupta
 description: 了解Teams会议生命周期以及用户在桌面和移动环境中的会议体验、参与者和用户角色和类型、在会议生命周期中集成机器人和消息传递扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4a99759d5d165f79cff374622abbfe805bb3b208
-ms.sourcegitcommit: 1d9531cf751b72ed1784da6409cfc89d5f53950e
+ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64827188"
+ms.locfileid: "64838468"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 

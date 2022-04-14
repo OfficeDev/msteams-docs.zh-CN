@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: e977349c2a1b9685fff58ea555d1e86984246100
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: a3138a2fe02ecf8b061edab82e6954195512208d
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706156"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838470"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -116,7 +116,6 @@ ms.locfileid: "64706156"
 |11/13/2021| 可以启用机器人以使用特定于资源的许可 （RSC） 接收所有通道消息 | • 生成机器人>机器人对话>机器人对话消息>[使用 RSC 接收所有通道消息](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • 生成机器人>机器人对话> [机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 生成机器人>机器人对话> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |10/28/2021| 使用可交易的 SaaS 产品/服务使 Teams 应用盈利 | 发布应用>发布到 Teams 应用商店>[在 Teams 应用程序中包含 SaaS 产品/服务](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| 通过分步指南中的新结构和过程更新了 Microsoft Teams 开发人员文档的入门模块 | 入门>[你的第一个 Teams 应用入门](get-started/get-started-overview.md) |
-|10/21/2021| 为选项卡或个人应用添加 `registerOnFocused` API | 生成选项卡>创建个人选项卡> [为选项卡或个人应用添加`registerOnFocused` API](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |10/20/2021| 会议演示区域现已在 GA 中提供 | 生成用于 Teams 会议的应用>[启用和配置 Teams 会议应用](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
 |10/20/2021| 会议详细信息 API 和实时 Teams 会议事件 | 为 Teams 会议生成应用 > [获取会议详细信息 API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |10/18/2021| 选项卡链接展开和演示区域视图 | 生成选项卡>[选项卡链接展开和阶段视图](tabs/tabs-link-unfurling.md) |

@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC 包 appmanifest 对话域权限存储
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: fda21b5bf9908529a9a20820867551202b761362
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737217"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838480"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
-个人选项卡和个人范围的机器人一样，是个人应用的一部分，只作用于一个用户。 可以将它们固定到左窗格以方便访问。 还可以为个人选项卡 [重新排序](#reorder-static-personal-tabs) 和添加 [`registerOnFocused` API](#add-registeronfocused-api-for-tabs-or-personal-apps) 。
+个人选项卡和个人范围的机器人一样，是个人应用的一部分，只作用于一个用户。 可以将它们固定到左窗格以方便访问。 还可以 [重新排序](#reorder-static-personal-tabs) 个人选项卡。
 
 确保拥有生成个人选项卡的所有 [先决条件](~/tabs/how-to/tab-requirements.md) 。
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
    现在，你已成功创建并在Teams中添加了个人选项卡。
   
-   在Teams中包含个人选项卡时，还可以[重新排序](#reorder-static-personal-tabs)并添加[`registerOnFocused`个人选项卡的 API](#add-registeronfocused-api-for-tabs-or-personal-apps)。
+   在Teams中包含个人选项卡时，还可以[重新排序](#reorder-static-personal-tabs)个人选项卡。
 
 ::: zone-end
 
@@ -401,7 +401,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **应用功能** 中，选择 **“个人应用** > **创建你的第一个个人应用”选项卡**，然后输入“名称”，并更新`https://<yourngrokurl>/personalTab`**内容 URL**。 将“网站 URL”字段留空，然后从下拉列表和 **“添加**”中选择 **“上下文**”作为 personalTab。
 
-1. 选择“保存”。
+1. 选择“**保存**”。
 
 1. 在“域”部分中，选项卡中的域必须包含没有 HTTPS 前缀 `<yourngrokurl>.ngrok.io`的 ngrok URL。
 
@@ -415,7 +415,7 @@ ngrok http 3978 --host-header=localhost
 
    现在，你已成功创建并在Teams中添加了个人选项卡。
   
-   在Teams中包含个人选项卡时，还可以[重新排序](#reorder-static-personal-tabs)并添加[`registerOnFocused`个人选项卡的 API](#add-registeronfocused-api-for-tabs-or-personal-apps)。
+   在Teams中包含个人选项卡时，还可以[重新排序](#reorder-static-personal-tabs)个人选项卡。
 
 ::: zone-end
 
@@ -570,7 +570,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **应用功能** 中，选择 **“个人应用** > **创建你的第一个个人应用”选项卡**，然后输入“名称”，并更新`https://<yourngrokurl>/personalTab`**内容 URL**。 将“网站 URL”字段留空，然后从下拉列表和 **“添加**”中选择 **“上下文**”作为 personalTab。
 
-1. 选择“保存”。
+1. 选择“**保存**”。
 
 1. 在“域”部分中，选项卡中的域必须包含没有 HTTPS 前缀 `<yourngrokurl>.ngrok.io`的 ngrok URL。
 
@@ -584,7 +584,7 @@ ngrok http 3978 --host-header=localhost
   
    现在，你已成功创建并在Teams中添加了个人选项卡。
 
-   在Teams中包含个人选项卡时，还可以[重新排序](#reorder-static-personal-tabs)并添加[`registerOnFocused`个人选项卡的 API](#add-registeronfocused-api-for-tabs-or-personal-apps)。
+   在Teams中包含个人选项卡时，还可以[重新排序](#reorder-static-personal-tabs)个人选项卡。
 
 ::: zone-end
 
@@ -611,75 +611,6 @@ ngrok http 3978 --host-header=localhost
 }
 
 ```
-
-## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>为选项卡或个人应用添加 `registerOnFocused` API
-
-通过 `registerOnFocused` SDK API，可以在Teams上使用键盘。 在 Ctrl、Shift 和 F6 密钥的帮助下，可以返回到个人应用，并保持对选项卡或个人应用的关注。 例如，可以离开个人应用来搜索某些内容，然后返回到个人应用，或者使用 Ctrl+F6 在必需的位置进行浏览。
-
-当焦点必须返回到选项卡或个人应用时，以下代码提供了 SDK 上的 `registerFocusEnterHandler` 处理程序定义示例：
-
-``` C#
-
-export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
-void {
-  HandlersPrivate.focusEnterHandler = handler;
-  handler && sendMessageToParent('registerHandler', ['focusEnter']);
-}
-function handleFocusEnter(navigateForward: boolean): void
- {
-  if (HandlersPrivate.focusEnterHandler)
-   {
-    HandlersPrivate.focusEnterHandler(navigateForward);
-  }
-}
-
-```
-
-使用关键字 `focusEnter`触发处理程序后，使用调用函数调用处理程序 `registerFocusEnterHandler` ，该函 `focusEnterHandler` 数采用调用 `navigateForward`的参数。 `navigateForward`值确定事件的类型。 `focusEnterHandler`仅由 Ctrl+F6 而不是选项卡键调用。
-用于在Teams内移动事件的键如下所示：
-
-* 转发事件：Ctrl+F6 密钥
-* 向后事件：Ctrl+Shift+F6 键
-
-``` C#
-
-case 'focusEnter':     
-this.registerFocusEnterHandler((navigateForward: boolean = true) => {
-this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
-// Set focus on iframe or webview
-if (this.frame && this.frame.sourceElem) {
-  this.frame.sourceElem.focus();
-}
-return true;
-});
-}
-
-// callback function to be passed to the handler
-private focusEnterHandler: (navigateForward: boolean) => boolean;
-
-// function that gets invoked after handler is registered.
-private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
-this.focusEnterHandler = focusEnterHandler;
-this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
-}
-
-```
-
-### <a name="personal-app"></a>个人应用
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="示例显示用于添加 registerOnFocussed API 的选项" border="true":::
-
-#### <a name="personal-app-forward-event"></a>个人应用：转发事件
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="示例显示用于添加 registerOnFocussed API 前移的选项" border="true":::
-
-#### <a name="personal-app-backward-event"></a>个人应用：向后事件
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="示例显示用于添加 registerOnFocussed API 向后移动的选项" border="true":::
-
-### <a name="tab"></a>选项卡
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="示例显示用于为选项卡添加 registerOnFocussed API 的选项" border="true":::
 
 ## <a name="next-step"></a>后续步骤
 
