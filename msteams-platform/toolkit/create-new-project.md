@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 55596671f6799145e5bd3de0d9ee4fb1b9ad4942
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: 8723e88e7b4ccf297edace9276af06a160e76f87
+ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498215"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64910548"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>使用 Teams 工具包创建新的 Teams 应用
 
@@ -44,7 +44,7 @@ ms.locfileid: "64498215"
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>使用 Teams 工具包的分步指南
 
-* [使用 Blazor 构建 Teams 应用](../sbs-gs-blazorapp.yml)
+* [使用 Blazor 构建 Teams 应用](../sbs-gs-blazorupdate.yml)
 * [通过 JavaScript 使用 React 构建 Teams 应用](../sbs-gs-javascript.yml)
 * [使用 SPFx 构建 Teams 应用](../sbs-gs-spfx.yml)
 * [使用 C# 或 .NET 构建 Teams 应用](../sbs-gs-csharp.yml)

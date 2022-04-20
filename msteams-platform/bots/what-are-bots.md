@@ -5,12 +5,12 @@ description: Microsoft Teams 中的机器人概述。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 7d6996f023b6e9f706edd99429dd1575394a43f1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: fbf7f7b1f4e863ec7612a404b5576baf40035d21
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498222"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952301"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
@@ -55,7 +55,7 @@ ms.locfileid: "64498222"
 > [!div class="nextstepaction"]
 > [智能机器人和 SDK](~/bots/bot-features.md)
 
-## <a name="code-sample"></a>代码示例
+## <a name="code-samples"></a>代码示例
 
 |示例名称 | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
