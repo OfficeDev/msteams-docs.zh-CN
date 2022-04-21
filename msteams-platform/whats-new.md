@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: a3138a2fe02ecf8b061edab82e6954195512208d
-ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
+ms.openlocfilehash: 936d5eff50453801527425cbd4a61f6928fb1d30
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64838470"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952385"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "64838470"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| 从个人应用或选项卡共享到 Teams（开发者预览版） | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
 |2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
@@ -60,6 +61,7 @@ ms.locfileid: "64838470"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
 |2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
 |2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
 |2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
