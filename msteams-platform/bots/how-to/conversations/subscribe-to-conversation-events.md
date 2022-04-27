@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 事件机器人通道消息反应对话
-ms.openlocfilehash: 2c3a41c84eec620aa0cc87fbd473a913d14f6ef4
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 26180e39bd26768b2e09311a370e5bd78c44c673
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826969"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073727"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -50,7 +50,7 @@ ms.locfileid: "64826969"
 | 已重命名频道     | channelRenamed    | OnTeamsChannelRenamedAsync | [通道已重命名](#channel-renamed)。 | 团队 |
 | 已删除频道     | channelDeleted    | OnTeamsChannelDeletedAsync | [通道将被删除](#channel-deleted)。 | 团队 |
 | 已还原通道    | channelRestored    | OnTeamsChannelRestoredAsync | [已还原通道](#channel-deleted)。 | 团队 |
-| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 全部 |
+| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 所有 |
 | 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [已删除成员](#team-members-removed)。 | groupChat 和团队 |
 | 已重命名团队        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队已重命名](#team-renamed)。       | 团队 |
 | 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队将被删除](#team-deleted)。       | 团队 |
@@ -1062,8 +1062,8 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload 对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [添加到机器人消息中的反应](#reactions-added-to-bot-message)。           | 全部   |
-| messageReaction | reactionsRemoved | [从机器人消息中删除的反应](#reactions-removed-from-bot-message)。 | 全部 |
+| messageReaction | reactionsAdded   | [添加到机器人消息中的反应](#reactions-added-to-bot-message)。           | 所有   |
+| messageReaction | reactionsRemoved | [从机器人消息中删除的反应](#reactions-removed-from-bot-message)。 | 所有 |
 
 ### <a name="reactions-added-to-bot-message"></a>添加到机器人消息中的反应
 
@@ -1403,10 +1403,8 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>使用机器人卸载个人应用的行为
 
-> [!NOTE]
-> 具有机器人的个人应用的卸载行为目前仅在 [公共开发人员预览](../../../resources/dev-preview/developer-preview-intro.md)版中可用。
-
 卸载应用时，也会卸载机器人。 当用户向应用发送消息时，他们将收到 403 响应代码。 机器人收到机器人发布的新消息的 403 响应代码。 在具有Teams和 groupChat 作用域的个人范围内，机器人的卸载后行为现在已对齐。 卸载应用后，无法发送或接收消息。
+
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 

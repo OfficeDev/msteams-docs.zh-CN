@@ -1,54 +1,54 @@
 ---
 title: 任务模块
 author: surbhigupta
-description: 添加模式弹出窗口体验，以收集或向用户显示来自你的应用Microsoft Teams信息
+description: 添加模式弹出体验，从Microsoft Teams应用收集或显示用户信息
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 0b726712ccbf954238c5102afa81d8ed412217fe
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c262de1bab6a29331350166160a4b51503e4b8aa
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888298"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073547"
 ---
 # <a name="task-modules"></a>任务模块
 
-任务模块允许您在任务应用程序中创建模式弹出Teams体验。 在弹出窗口中，您可以：
+任务模块允许你在 Teams 应用程序中创建模式弹出体验。 在弹出窗口中，可以：
 
-* 运行你自己的自定义 HTML 或 JavaScript 代码。
-* 显示 `<iframe>` 基于小部件（如 YouTube 或 Microsoft Stream 视频）。
+* 运行自己的自定义 HTML 或 JavaScript 代码。
+* `<iframe>`显示基于 YouTube 或Microsoft Stream视频等小组件。
 * 显示 [自适应卡片](/adaptive-cards/)。
 
-任务模块可用于启动和完成任务或显示丰富的信息，例如视频或 POWER Business Intelligence (BI) 仪表板。 与选项卡或基于对话的机器人体验相比，用户启动和完成任务通常更自然。
+任务模块可用于启动和完成任务或显示丰富的信息，例如视频或 Power Business Intelligence (BI) 仪表板。 与选项卡或基于聊天的机器人体验相比，启动和完成任务的用户通常更自然地使用弹出式体验。
 
-任务模块基于选项卡Microsoft Teams构建。 它们实质上是弹出窗口中的一个选项卡。 它们使用相同的 SDK，因此如果你已生成了一个选项卡，则你已经熟悉如何创建任务模块。
+任务模块以Microsoft Teams选项卡为基础构建。 它们本质上是弹出窗口内的选项卡。 它们使用相同的 SDK，因此，如果已生成选项卡，则你已熟悉如何创建任务模块。
 
 可通过 3 种方式调用任务模块：
 
-* 频道或个人选项卡：使用 Microsoft Teams 选项卡 SDK，可以从选项卡上的按钮、链接或菜单调用任务模块。有关详细信息，请参阅在[选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
-* 自动程序：使用从自动程序 [发送](~/task-modules-and-cards/cards/cards-reference.md) 的卡上的按钮。 当你不要求频道中的每个人查看你使用机器人执行什么操作时，这非常有用。 例如，当用户在频道中回复投票时，查看所创建的轮询记录将没有用。 有关详细信息，请参阅[使用自动程序中Teams模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
-* 在Teams链接之外：还可以创建 URL 以从任何位置调用任务模块。 有关详细信息，请参阅任务 [模块深度链接语法](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)。
+* 频道或个人选项卡：使用Microsoft Teams选项卡 SDK，可以从选项卡上的按钮、链接或菜单调用任务模块。有关详细信息，请参阅[选项卡中的使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
+* 机器人：在从机器人发送的 [卡](~/task-modules-and-cards/cards/cards-reference.md) 片上使用按钮。 当你不需要频道中的每个人查看你正在对机器人执行的操作时，这非常有用。 例如，让用户在频道中响应投票时，查看正在创建的轮询的记录是没用的。 有关详细信息，请参阅[Teams机器人使用任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
+* 在深层链接Teams之外：还可以创建 URL 从任意位置调用任务模块。 有关详细信息，请参阅 [任务模块深度链接语法](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)。
 
 ## <a name="components-of-a-task-module"></a>任务模块的组件
 
-下面是从自动程序调用任务模块时的外观：
+下面是从机器人调用任务模块时的外观：
 
-![任务模块示例](~/assets/images/task-module/task-module-example.png)
+:::image type="content" source="../assets/images/task-module/task-module-example.png" alt-text="任务模块示例":::
 
 任务模块包括以下内容，如上图所示：
 
-1. 应用的[ `color` 图标](~/resources/schema/manifest-schema.md#icons)。
-2. 应用[ `short` 的名称](~/resources/schema/manifest-schema.md#name)。
-3. 任务模块的标题在 `title` [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)对象的 属性中指定。
-4. 任务模块的关闭或取消按钮。 如果用户选择此按钮，你的应用将收到 `err` 事件。 有关详细信息，请参阅 [用于提交任务模块结果的示例](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module)。
+1. 应用的 [`color` 图标](~/resources/schema/manifest-schema.md#icons)。
+2. 应用的 [`short` 名称](~/resources/schema/manifest-schema.md#name)。
+3. [在 TaskInfo 对象](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)的属性中`title`指定的任务模块的标题。
+4. 任务模块的关闭或取消按钮。 如果用户选择此按钮，应用将收到一个 `err` 事件。 有关详细信息，请参阅 [提交任务模块结果的示例](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module)。
 
     > [!NOTE]
-    > 当前无法从自动程序 `err` 调用任务模块时检测事件。
+    > 当前无法 `err` 检测从机器人调用任务模块时的事件。
 
-5. 如果正在使用 TaskInfo 对象的 属性加载自己的网页，则蓝色矩形是显示 `url` [网页的位置](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)。 有关详细信息，请参阅任务 [模块大小调整](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing)。
-6. 如果你使用 TaskInfo 对象的 属性显示自适应卡片 `card` [，](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) 则添加填充。 有关详细信息，请参阅 HTML [的任务模块 CSS 或 JavaScript 任务模块](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)。
-7. 选择注册 后，自适应卡片 **按钮呈现**。 使用你自己的页面时，创建你自己的按钮。
+5. 如果要使用 `url` [TaskInfo 对象](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)的属性加载自己的网页，则会显示蓝色矩形。 有关详细信息，请参阅 [任务模块大小](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing)调整。
+6. 如果使用 `card` [TaskInfo 对象](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) 的属性显示自适应卡片，则会为你添加填充。 有关详细信息，请参阅 [HTML 或 JavaScript 任务模块的任务模块 CSS](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)。
+7. 选择 **“注册**”后，自适应卡片按钮呈现。 使用自己的页面时，请创建自己的按钮。
 
 ## <a name="next-step"></a>后续步骤
 

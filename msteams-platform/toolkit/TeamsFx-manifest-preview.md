@@ -1,37 +1,32 @@
 ---
-title: 在Teams中预览应用Teams Toolkit
+title: Teams Toolkit中的预览Teams应用清单
 author: zyxiaoyuer
 description: 预览 Teams 应用清单
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: aa80636a4fdb3c27d66bc08f9d308a009e183570
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 57dc719f872d502beded14c30a09d72c27ee74c3
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453241"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073278"
 ---
-# <a name="preview-teams-app-manifest-in-teams-toolkit"></a>在Teams预览应用Teams Toolkit
+# <a name="preview-app-manifest-in-toolkit"></a>Toolkit中的预览应用清单
 
-搭建基架后，以下是文件夹下可用的清单模板 `templates/appPackage` 文件：
-
-* `manifest.local.template.json` - 本地调试团队应用。
-* `manifest.remote.template.json` - 在所有远程环境之间共享。
-
-模板文件由占位符组成，并且来自 Teams Toolkit的实际值在 和 下的文件中`.fx/configs`解析`.fx/states`。
+在基架之后，清单模板文件 `manifest.template.json` 在文件夹下 `templates/appPackage` 可用。 包含占位符的模板文件和实际值通过Teams Toolkit来自不同环境下`.fx/configs`的文件解`.fx/states`析。
 
 ## <a name="prerequisite"></a>先决条件
 
-* [安装Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)版本 v3.0.0+。
+* 安装[最新版本的Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
 > [!TIP]
-> 确保你已Teams代码打开Visual Studio项目。
+> 确保已在Visual Studio代码中打开Teams应用项目。
 
 ## <a name="preview-manifest"></a>预览清单
 
-若要预览包含真实内容的清单，Teams Toolkit文件夹下生成预览清单`build/appPackage`文件：
+若要使用实际内容预览清单，Teams Toolkit在文件夹下`build/appPackage`生成预览清单文件：
 
 ```text
 └───build
@@ -44,57 +39,62 @@ ms.locfileid: "63453241"
 
 ### <a name="preview-local-manifest-file"></a>预览本地清单文件
 
-若要预览本地团队应用的清单文件，你需要按 **F5** 运行本地调试。 它生成默认本地设置，然后应用包和预览清单生成在 **build/appPackage** 文件夹下。
+若要预览本地 Teams 应用的清单文件，可以按 **F5** 运行本地调试。 它会为你生成默认的本地设置，然后在文件夹下 `build/appPackage` 生成应用包和预览清单。
 
-您还可以按照以下步骤预览本地清单：
+还可以按照以下步骤预览本地清单：
 
-1. 在  **manifest.local.template.json** 文件的代码中选择预览。
-2. 选择  **manifest.local.template.json 文件的菜单栏上的"预览清单** 文件"。
-3. 选择 **树Teams压缩元数据包**，**然后选择本地。**
-预览本地显示如下图所示：
+1. 在文件的代码管理`manifest.template.json`器中选择 **“预览**”，然后选择 **本地**
+2. 在文件的菜单栏`manifest.template.json`上选择 **预览清单文件**
+3. 在 Treeview **中选择 Zip Teams 元数据包**，然后选择 **本地**
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="预览":::
+本地预览显示，如下图所示：
 
-### <a name="preview-manifest-in-remote-environment"></a>远程环境中预览清单
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="预览":::
 
-若要预览远程团队应用的清单文件，请在 Teams Toolkit  扩展树视图的开发面板中选择"在云中预配"，或从命令调色板触发Teams **：** 在云中预配。 它生成远程团队应用的配置，并生成 build **/appPackage 文件夹下的程序包和预览** 清单。
+### <a name="preview-manifest-in-remote-environment"></a>远程环境中的预览清单
 
-还可以按照以下步骤在远程环境中预览清单：
+若要预览远程团队应用的清单文件，请在Teams Toolkit扩展 Treeview 的 **开发** 面板中选择“预 **配**”，或触发Teams：从命令面板 **在云中预配**。 它为远程团队应用生成配置，并在文件夹下 `build/appPackage` 生成包和预览清单。
 
-1. 在  **manifest.remote.template.json** 文件的代码中选择预览。
-2. 选择  **manifest.remote.template.json 文件的菜单栏上的"预览清单** 文件"。
-3. 选择 **树Teams压缩元数据** 包。
-4. 选择你的环境。
+还可以按照以下步骤预览远程环境中的清单：
 
-如果存在多个环境，则需要选择想要预览的环境，如图所示：
+1. 在文件的代码管理器`manifest.template.json`中选择 **“预览**”
+2. 在文件的菜单栏`manifest.template.json`上选择 **预览清单文件**
+3. 在 Treeview **中选择 Zip Teams 元数据包**
+4. 选择环境
+
+如果有多个环境，则需要选择要预览的环境，如下图所示：
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加 env":::
 
-## <a name="sync-local-changes-to-dev-portal"></a>将本地更改同步到开发人员门户
+## <a name="sync-local-changes-to-developer-portal"></a>将本地更改同步到开发人员门户
 
-预览清单文件后，你可以按照以下步骤将本地更改同步到开发人员门户：
+预览清单文件后，可以按照以下步骤将本地更改同步到开发人员门户：
 
-1. 选择 **"更新Teams** 左上角的"更新""更新平台"`manifest.{env}.json`
-2. 选择 **Teams：将清单更新Teams菜单** 栏上的"更新到平台"`manifest.{env}.json`
+1. 选择 **“更新”到** 左上角的Teams平台`manifest.{env}.json`
+2. 选择 **Teams：将清单更新到** 菜单栏上的Teams平台`manifest.{env}.json`
 
- 还可以从命令 **Teams触发Teams更新清单以更新** 平台
+ 还可以触发Teams：从命令面板 **将清单更新到Teams平台**：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="树视图":::
 
 > [!NOTE]
-> 从编辑器代码lens或 **标题触发**，将当前清单文件更新为Teams清单文件。 从命令调色板触发需要选择目标环境。
+> 从编辑器代码管理器或 **游戏** 触发器将当前清单文件更新到Teams平台。 命令面板中的触发器需要选择目标环境
 
-如果清单文件由于配置文件更改或模板更改而过期，请确保确认以下操作：
+  
+
+如果清单文件因配置文件更改或模板更改而过时，请选择以下任一操作：
+
+* **仅预览**：根据当前配置覆盖本地清单文件
+* **预览和更新**：本地清单文件根据当前配置被覆盖，并已更新到Teams平台
+* **取消**：未执行任何操作
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-* **仅预览**：根据当前配置将覆盖本地清单文件
-* **预览和更新**：本地清单文件将根据当前配置进行覆盖，并更新到Teams平台
-* **取消**：不执行任何操作
+
 
 > [!NOTE]
-> 更改将更新到开发人员门户。 如果你在开发人员门户中拥有一些手动更新，它将被覆盖。
+> 更改会在开发人员门户中更新。 开发门户中的任何手动更新都被覆盖。
 
 ## <a name="see-also"></a>另请参阅
 
-[在Teams中自定义应用Teams Toolkit](TeamsFx-manifest-customization.md)
+[在Teams Toolkit中自定义Teams应用清单](TeamsFx-manifest-customization.md)

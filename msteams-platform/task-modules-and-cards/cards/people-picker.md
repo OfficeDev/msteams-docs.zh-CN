@@ -2,100 +2,100 @@
 title: 自适应卡片中的人员选取器
 description: 介绍如何在自适应卡片中使用人员选取器控件
 localization_priority: Normal
-keywords: 自适应卡片人员选取器
+keywords: 自适应卡人选取器
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 715ed7460b248323a1187ac1f41054f301e37cd0
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 8a78be74d8142600ccc08093744491a19900e60b
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453080"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073420"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>自适应卡片中的人员选取器
 
 >[!NOTE]
-> 目前，自适应卡片中的人员选取器仅在移动版[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)开发人员预览版中提供，并公开 (GA) 桌面版。
+> 目前，自适应卡片中的人员选取器在 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) 版中仅适用于适用于桌面版的移动版和正式版 (正式版) 。
 
-人员选取器可帮助用户在自适应卡片中搜索和选择用户。 你可以将人员选取器作为输入控件添加到自适应卡片，它适用于聊天、频道、任务模块和选项卡。 人员选取器支持以下功能：
+人员选取器可帮助用户在自适应卡片中搜索和选择用户。 可以将人员选取器添加为自适应卡片的输入控件，该卡可跨聊天、频道、任务模块和选项卡工作。 人员选取器支持以下功能：
 
-* 搜索一个或多个用户。
-* 选择一个或多个用户。
-* 重新分配到单个或多个用户。
-* 预填充所选用户的名称。
+* 搜索单个或多个用户。
+* 选择单个或多个用户。
+* 重新分配给单个或多个用户。
+* 预先填充所选用户的名称。
 
-## <a name="popular-scenarios"></a>热门方案
+## <a name="popular-scenarios"></a>常用方案
 
-下表为自适应卡片中的人员选取器提供了热门方案以及相应的操作：
+下表提供了自适应卡片中人员选取器的热门方案以及相应的操作：
 
 |应用场景|操作|
 |----------|-------------------------|
-|基于审批的方案| 根据要求请求、分配审批并将其重新分配给目标用户。|
-|事件管理| 跟踪事件并通知、分配和重新分配给预期用户以立即采取措施。|
-|项目管理| 向特定用户分配票证或 Bug。|
-|用户查找| 搜索整个组织的用户。|
+|基于审批的方案| 根据要求向预期用户请求、分配和重新分配审批。|
+|事件管理| 跟踪事件并通知、分配和重新分配给预期用户以立即执行操作。|
+|项目管理| 向特定用户分配票证或 bug。|
+|用户查找| 在整个组织中搜索用户。|
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-Web 和桌面客户端支持自适应卡片中的人员选取器。 在 Web 上搜索时，人员选取器涉及内联键入体验。
+Web 和桌面客户端支持自适应卡片中的人员选取器。 在 Web 上搜索时，“人员选取器”涉及内联键入体验。
 
 ### <a name="reassignment-scenario-example"></a>重新分配方案示例
 
-User A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。
+用户 A (Robert) 在频道中收到任务的票证，并意识到分配者不正确。 用户 A 重新分配将信息发送回机器人的任务。
 
-若要重新分配任何任务：
+若要重新分配任何任务，请执行以下操作：
 
-1. 选择 **"** 重新分配"，其中人员选取器字段预填充了名称，以将任务重新分配给预期用户。
+1. 选择 **“重新分配** 人员选取器”字段预填充名称的位置，以便将任务重新分配给预期用户。
 1. 删除不正确的用户名。
-1. 根据图像方案选择目标用户、用户 B (Mona) 和C (Robin) 任务。
-1. 选择“**分配**”。 分配后，信息将发送给自动程序。
-   机器人更新自适应卡片并通知目标用户。
+1. 根据映像方案选择预期用户、用户 B (Mona) 和用户 C (Robin) 。
+1. 选择“**分配**”。 分配后，信息将发送到机器人。
+   机器人更新自适应卡片并通知预期用户。
 
 下图显示了重新分配方案：
 
-![桌面上的"人员选取器"](../../assets/images/cards/desktoppp.gif)
+![桌面上的人员选取器](../../assets/images/cards/desktoppp.gif)
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
 > [!NOTE]
-> 目前，此功能仅适用于公共 [开发人员预览](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) 版。
+> 目前，此功能仅在 [公共开发人员预览版](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) 中可用。
 
-Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 您可以在移动版中使用人员选取器来搜索和选择用户，以增强用户体验。 搜索体验类似于移动版中任何其他用户选择体验。
+Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 可以使用移动设备中的人员选取器来搜索和选择用户，以增强用户体验。 搜索体验类似于移动版中的任何其他用户选择体验。
 
 ### <a name="reassignment-scenario-example"></a>重新分配方案示例
 
-User A (Robert) 收到频道中任务的票证，并意识到被分派人不正确。 用户 A 重新分配将信息发送回机器人的任务。
+用户 A (Robert) 在频道中收到任务的票证，并意识到分配者不正确。 用户 A 重新分配将信息发送回机器人的任务。
 
-若要重新分配任何任务：
+若要重新分配任何任务，请执行以下操作：
 
-1. 选择 **"** 重新分配"，其中人员选取器字段预填充了名称，以将任务重新分配给预期用户。
+1. 选择 **“重新分配** 人员选取器”字段预填充名称的位置，以便将任务重新分配给预期用户。
 1. 删除不正确的用户名。
-1. 根据图像方案选择目标用户、用户 B (Mona) 和C (Robin) 任务。
+1. 根据映像方案选择预期用户、用户 B (Mona) 和用户 C (Robin) 。
 1. 选择“**完成**”。
-1. 选择“**分配**”。 分配后，信息将发送给自动程序。
-   机器人更新自适应卡片并通知目标用户。
+1. 选择“**分配**”。 分配后，信息将发送到机器人。
+   机器人更新自适应卡片并通知预期用户。
 
 下图显示了重新分配方案：
 
-![移动版人员选取器](../../assets/images/cards/mobilepp.gif)
+![移动版上的人员选取器](../../assets/images/cards/mobilepp.gif)
 
 ---
 
 ## <a name="implement-people-picker"></a>实现人员选取器
 
-人员选取器作为 [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) 控件的扩展实现。 输入控件包括以下选择：
+人员选取器作为 [Input.ChoiceSet 控件](https://adaptivecards.io/explorer/Input.ChoiceSet.html) 的扩展实现。 输入控件包括以下选择：
 
-* 下拉列表，例如展开的选定内容。
+* 下拉列表，例如展开的选择。
 * 单选按钮，例如单个选择。
 * 复选框，例如多个选择。  
 
 > [!NOTE]
-> 控件 `Input.ChoiceSet` 基于 和 `style` `isMultiSelect` 属性。  
+> 控件 `Input.ChoiceSet` 基于属性 `style` 和 `isMultiSelect` 属性。  
 
 ### <a name="update-schema"></a>更新架构
 
-以下属性是架构中新增 `Input.ChoiceSet` 的，用于启用卡片上的人员选取器体验：  
+以下属性是架构的 `Input.ChoiceSet` 补充，用于在卡片上启用人员选取器体验：  
 
 #### <a name="inputchoiceset-control"></a>Input.ChoiceSet 控件
 
@@ -107,16 +107,16 @@ User A (Robert) 收到频道中任务的票证，并意识到被分派人不正�
 
 |属性 |类型 |必需 |说明|
 |--|--|--|--|
-|**dataset** |字符串 |是 |必须动态提取的数据类型。|
+|**数据** |字符串 |是 |必须动态提取的数据类型。|
 
-#### <a name="dataset"></a>dataset
+#### <a name="dataset"></a>数据
 
-下表提供了预定义 **的值作为人员** 选取器数据集：
+下表为人员选取器提供预定义的值作为 **数据集** ：
 
-|dataset|搜索范围
+|数据|搜索范围
 |--|--|
-|**graph.microsoft.com/users** |搜索整个组织的所有成员。|
-|**graph.microsoft.com/users?scope=currentContext** |在当前对话的成员中搜索，例如发送特定卡片的聊天或频道。|
+|**graph.microsoft.com/users** |搜索整个组织中的所有成员。|
+|**graph.microsoft.com/users?scope=currentContext** |在当前对话的成员中进行搜索，例如聊天或发送特定卡片的频道。|
 
 ### <a name="example"></a>示例
 
@@ -154,33 +154,33 @@ User A (Robert) 收到频道中任务的票证，并意识到被分派人不正�
 }
 ```  
 
-下图说明了自适应卡片和组织搜索中的人员选取器：
+下图演示了使用组织搜索的自适应卡片中的人员选取器：
 
-![人员选取器组织搜索](../../assets/images/cards/peoplepicker-org-search.png)
+:::image type="content" source="../../assets/images/Cards/peoplepicker-org-search.png" alt-text="人员选取器组织搜索":::
 
-若要在对话成员列表中启用搜索，请使用数据集表中定义的 [相应](#dataset) 数据集。 `isMultiSelect` 属性用于启用控件中多个用户的选择。 默认情况下，此设置设置为 false，并且此设置仅允许您选择单个用户。
+若要在聊天成员列表中启用搜索，请使用数据集表中定义的相应 [数据集](#dataset) 。 `isMultiSelect` 属性用于启用在控件中选择多个用户。 默认情况下，该设置设置为 false，此设置允许仅选择单个用户。
 
 ### <a name="data-submission"></a>数据提交
 
-可以使用 或 `Action.Submit` 将 `Action.Execute` 所选数据提交到自动程序。 在`invoke`自动程序上收到的负载是静态Microsoft Azure Active Directory (Azure AD) 提供的有效负载或 ID 的列表。
-在人员选取器中，在控件中选择 `Azure AD ID` 用户时，用户的 是发送回的值。 `Azure AD ID`是字符串，唯一标识目录中的用户。
+可以使用 `Action.Submit` 或 `Action.Execute` 将所选数据提交到机器人。 机器人上收到的`invoke`有效负载是静态列表中提供的Microsoft Azure Active Directory (Azure AD) ID 或 ID 列表。
+在人员选取器中，当在控件中选择用户时， `Azure AD ID` 用户的值是发回的值。 它是 `Azure AD ID` 一个字符串，唯一标识目录中的用户。
 
-提交给自动程序的值的格式取决于属性的值 `isMultiSelect` ：
+提交给机器人的值的格式取决于属性的 `isMultiSelect` 值：
 
-|的值 `isMultiSelect`|格式|
+|值 `isMultiSelect`|格式|
 |--|--|
 |false _(单选)_|<selected_Azure_AD_ID>|
 |true _(多选)_|<selected_Azure_AD_ID_1>，<selected_Azure_AD_ID_2>，<selected_Azure_AD_ID_3>|  
 
-`Azure AD ID`使用 ，人员选取器会预选相应的用户。
+使用“ `Azure AD ID`人员选取器”预选相应的用户。
 
 ## <a name="preselection-of-user"></a>用户预选
 
-在创建和发送自适应卡片时，人员选取器支持在控件中预选用户。 `Input.ChoiceSet``value`支持用于预选用户的属性。 此属性的格式 `value` 与数据提交中提交的值格式 [相同](#data-submission)。  
+人员选取器支持在创建和发送自适应卡片时预选控件中的用户。 `Input.ChoiceSet``value`支持用于预选用户的属性。 此 `value` 属性的格式与 [数据提交](#data-submission)中提交的值格式相同。  
 以下列表提供预选用户的信息：
 
-* 对于控件中的单个用户，将 `Azure AD ID` 该用户指定为 `value`。
-* 对于多个用户，例如 `isMultiSelect` ，指定 `true`以逗号分隔的 `Azure AD ID`s 字符串。  
+* 对于控件中的单个用户，请将 `Azure AD ID` 用户指定为 `value`该用户。
+* 对于多个用户（例如`isMultiSelect``true`，指定逗号分隔的 `Azure AD ID`s 字符串）。  
 
 以下示例介绍单个用户的预选：
 
@@ -251,15 +251,15 @@ User A (Robert) 收到频道中任务的票证，并意识到被分派人不正�
 }
 ```
 
-## <a name="static-choices"></a>静态选择
+## <a name="static-choices"></a>静态选项
 
-静态选择支持必须将自定义配置文件插入预定义数据集的方案。 `Input.ChoiceSet` 支持在 `choices` json 中静态指定。 静态选项用于创建用户可以从中选择的选项。
+静态选项支持必须将自定义配置文件插入预定义数据集的方案。 `Input.ChoiceSet` 支持在 json 中静态指定 `choices` 。 静态选项用于创建用户可从中选择的选项。
 
 > [!NOTE]
-> 静态 `choices` 与动态数据集一同使用。
+> 静态 `choices` 与动态数据集一起使用。
 
-选项包括 和 `title` `value`。 与人员选取器一`title``value`起使用时，这些选项将转换为以 作为名称和 作为标识符的用户配置文件。 当搜索查询与给定 匹配时，这些自定义配置文件也是搜索结果的一部分 `title`。
-以下示例介绍静态选择：
+选择包括 `title` 和 `value`。 与人员选取器一起使用时，这些选项将转换为具有 `title` 名称和标识符的 `value` 用户配置文件。 当搜索查询与给定的 `title`配置文件匹配时，这些自定义配置文件也是搜索结果的一部分。
+以下示例描述静态选项：
 
 ```json
 {
@@ -302,11 +302,11 @@ User A (Robert) 收到频道中任务的票证，并意识到被分派人不正�
 }
 ```
 
-下图使用组织搜索中的静态选项演示自适应卡片中的人员选取器：
+下图演示了自适应卡片中具有组织搜索中静态选项的人员选取器：
 
-![人员选取器静态选择](../../assets/images/cards/peoplepicker-static-choice.png)
+:::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="people-picker-static-choice":::
 
-您可以实现人员选取器，以在不同方案中高效地管理任务。  
+可在不同的方案中实现人员选取器，以便高效地管理任务。  
 
 ## <a name="code-sample"></a>代码示例
 

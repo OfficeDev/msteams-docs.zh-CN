@@ -5,19 +5,16 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736881"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073298"
 ---
 # <a name="in-app-purchases"></a>应用内购买
 
 Microsoft Teams 提供可用于实现应用内购买的 API，以从免费升级到付费 Teams 应用。 通过应用内购买，可以直接从应用内将用户从免费计划转换为付费计划。
-
-> [!NOTE]
-> Teams 应用的应用内购买目前仅在 [**开发人员预览版**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) 中提供。
 
 ## <a name="implement-in-app-purchases"></a>实现应用内购买
 

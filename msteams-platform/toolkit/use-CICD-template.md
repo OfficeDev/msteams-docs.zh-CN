@@ -1,280 +1,246 @@
 ---
-title: 了解如何在应用程序开发人员的 GitHub、Azure Devops 和 Jenkins Teams CI 或 CD 管道模板
+title: 了解如何在应用程序开发人员GitHub、Azure DevOps和 Teams Jenkins 中使用 CI/CD 管道模板
 author: MuyangAmigo
-description: 分时模板
+description: CI/CD 模板
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: 5fa12248969f589282ecf8fd80c4d908ff42e8d8
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.date: 04/20/2022
+ms.openlocfilehash: 66560b1f228c32b0faf6569ff0ae536a81dc33c0
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614535"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073291"
 ---
-# <a name="cicd-guide"></a>CI/CD 指南
+# <a name="set-up-cicd-pipelines"></a>设置 CI/CD 管道
 
-TeamsFx 有助于在构建应用程序的同时自动Teams工作流。 本文档提供了一些工具和模板，可让你开始使用 GitHub、Azure Devops 和 Jenkins 设置 CI 或 CD 管道。
+TeamsFx 有助于在生成Teams应用程序时自动执行开发工作流。 以下是可用于设置 CI/CD 管道、创建工作流模板以及使用 GitHub、Azure DevOps、Jenkins 和其他平台自定义 CI/CD 工作流的工具和模板。 若要预配和部署资源，可以使用Teams开发人员门户创建 Azure 服务主体并发布Teams应用。 若要手动发布Teams应用，可以利用[开发人员门户进行Teams](https://dev.teams.microsoft.com/home)。
 
-|工具和模板|说明|
+
+|工具和模板 | 说明 |
 |---|---|
-|[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub TeamsFx CLI 的"操作"。|
-|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) 和 [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHub应用的 CI 或 CD Teams模板。 |
-|[jenkins-ci-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) 和 [jenkins-cd-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|用于应用应用的 Jenkins CI 或 CD Teams模板。|
-|[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) 和 [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| 用于自动化的脚本模板GitHub。 |
+|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub与 TeamsFx CLI 集成的操作。|
+|[Visual Studio Code中的Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code扩展，可帮助你开发Teams应用以及适用于 GitHub、Azure DevOps 和 Jenkins 的自动化工作流。 |
+|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | 命令行工具，可帮助你开发Teams应用以及适用于 GitHub、Azure DevOps 和 Jenkins 的自动化工作流。|
+|[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) 和 [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| 用于在 GitHub、Azure DevOps 或 Jenkins 之外实现自动化的脚本模板。 |
 
-## <a name="ci-or-cd-workflow-templates-in-github"></a>解决方案中的 CI 或 CD 工作流GitHub
 
-**若要包括 CI 或 CD 工作流以自动Teams应用程序开发过程，请GitHub**：
+## <a name="set-up-pipelines"></a>设置管道
 
-1. 在 下创建文件夹 `.github/workflows`
-1. 复制以下模板文件之一：
-    * [github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) （用于 CI 工作流）。
-    * [用于 CD 工作流的 github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml) 。
-1. 自定义适合您的方案的工作流。
+可以使用以下平台设置管道：
+
+1. [使用GitHub设置管道](#set-up-pipelines-with-github)
+1. [使用Azure DevOps设置管道](#set-up-pipelines-with-azure-devops)
+1. [使用 Jenkins 设置管道](#set-up-pipelines-with-jenkins)
+1. [为其他平台设置管道](#set-up-pipelines-for-other-platforms)
+
+
+### <a name="set-up-pipelines-with-github"></a>使用GitHub设置管道
+
+若要设置包含 CI/CD GitHub的管道：
+
+1. 创建工作流模板。
+
+   * Visual Studio Code
+   * TeamsFx CLI
+
+1. 自定义 CI/CD 工作流。
+
+
+## <a name="create-workflow-templates-with-github"></a>使用GitHub创建工作流模板
+
+**使用Visual Studio Code中的Teams Toolkit创建工作流模板**
+
+1. 使用Teams Toolkit创建新的Teams应用项目。
+1. 在 **Visual Studio Code** 活动栏中选择Teams Toolkit图标。
+1. 选择 **“添加 CI/CD 工作流**”。
+1. 从命令提示符中选择环境。
+1. 选择 **GitHub** 作为 CI/CD 提供程序。
+1. 从以下选项中选择至少一个模板：CI、CD、预配或发布到Teams。
+1. 打开模板并自定义适合方案的工作流。
+1. 按照以下`.github/workflows`自述文件在GitHub中设置工作流。
+
+**使用 TeamsFx CLI 创建工作流模板**
+
+1. 输入`cd`Teams应用项目目录。
+2. 输入 `teamsfx add cicd` 命令以启动交互式命令过程。
+3. 从命令提示符中选择环境。
+4. 选择 **GitHub** 作为 CI/CD 提供程序。
+5. 从以下选项中选择至少一个模板：CI、CD、预配或发布到Teams。
+7. 打开模板并自定义适合方案的工作流。
+8. 按照以下`.github/workflows`自述文件在GitHub中设置工作流。
+
+> [!NOTE]
+> 如果需要添加其他工作流模板，可以按照同一过程在 Visual Studio Code 或 TeamsFx CLI 中创建工作流模板。
+
+### <a name="customize-cicd-workflow"></a>自定义 CI/CD 工作流
+
+可以更改或删除测试脚本以自定义 CI/CD 工作流：
+
+1. 默认情况下，当向分支提交 `main` 新提交时，会触发 CD 工作流。
+1. 如果需要，请更改生成脚本。
+1. 根据需要删除测试脚本。
+
+### <a name="set-up-pipelines-with-azure-devops"></a>使用Azure DevOps设置管道
+
+若要使用 CI/CD 的Azure DevOps设置管道：
+
+1. 创建工作流模板。
+
+   * Visual Studio Code
+   * TeamsFx CLI
+
+1. 自定义 CI/CD 工作流。
+
+
+## <a name="create-workflow-templates-with-azure-devops"></a>使用Azure DevOps创建工作流模板
+
+**使用Visual Studio Code中的Teams Toolkit创建工作流模板**
+
+1. 使用Teams Toolkit创建新的Teams应用项目。
+2. 在 **Visual Studio Code** 活动栏中选择Teams Toolkit图标。
+3. 选择 **“添加 CI/CD 工作流**”。
+4. 从命令提示符中选择环境。
+5. 选择 **Azure DevOps** 作为 CI/CD 提供程序。
+6. 从以下选项中选择至少一个模板：CI、CD、预配和发布到Teams。
+7. 打开模板并自定义适合方案的工作流。
+8. 按照以下`.azure/pipelines`自述文件在Azure DevOps中设置工作流。
+
+**使用 TeamsFx CLI 创建工作流模板**
+
+1. 输入`cd`Teams应用项目目录。
+2. 输入 `teamsfx add cicd` 命令以启动交互式命令过程。
+3. 从命令提示符中选择环境。
+4. 选择 **Azure DevOps** 作为 CI/CD 提供程序。
+5. 从以下选项中选择至少一个模板：CI、CD、预配或发布到Teams。
+7. 打开模板并自定义适合方案的工作流。
+8. 按照以下`.azure/pipelines`自述文件在Azure DevOps中设置工作流。
+
+> [!NOTE]
+> 如果需要添加其他工作流模板，可以按照同一过程在 Visual Studio Code 或 TeamsFx CLI 中创建工作流模板。
 
 ### <a name="customize-ci-workflow"></a>自定义 CI 工作流
 
-执行以下步骤来调整项目的工作流：
+下面是可以对脚本或工作流定义所做的更改：
 
-1. 更改 CI 流。
-1. 使用 npm 生成脚本，或自定义在自动化代码中生成项目的方式。
-1. 使用 npm 测试脚本（成功返回零）并更改测试命令。
+1. 使用 npm 生成脚本或自定义在自动化代码中生成的方式。
+1. 使用 npm 测试脚本，该脚本返回零以获得成功，并更改测试命令。
 
 ### <a name="customize-cd-workflow"></a>自定义 CD 工作流
 
-执行以下步骤以自定义 CD 工作流：
+下面是可以对脚本或工作流定义所做的更改：
 
-1. 默认情况下，当向分支 `main` 提交新内容时，将触发 CD 工作流。
-1. 按GitHub[创建](https://docs.github.com/en/actions/reference/encrypted-secrets)存储库密码，以保留 Azure 服务主体Microsoft 365帐户登录凭据。 有关详细信息，[请参阅GitHub Actions。](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)
-1. 如有必要，请更改生成脚本。
-1. 根据需要删除测试脚本。
+1. 确保拥有 npm 生成脚本或自定义在自动化代码中生成的方式。
+1. 确保你有一个 npm 测试脚本，该脚本返回零以获得成功或更改测试命令。
+
+### <a name="set-up-pipelines-with-jenkins"></a>使用 Jenkins 设置管道
+
+若要使用 Jenkins 为 CI/CD 设置管道，请执行以下操作：
+
+1. 创建工作流模板。
+
+   * Visual Studio Code
+   * TeamsFx CLI
+
+1. 自定义 CI/CD 工作流。
+
+## <a name="create-workflow-templates-with-jenkins"></a>使用 Jenkins 创建工作流模板
+
+**使用Visual Studio Code中的Teams Toolkit创建工作流模板**
+
+1. 使用Teams Toolkit创建新的Teams应用项目。
+2. 在 **Visual Studio Code** 边栏中选择Teams Toolkit图标。
+3. 选择 **“添加 CI/CD 工作流**”。
+4. 从命令提示符中选择环境。
+5. 选择 **Jenkins** 作为 CI/CD 提供程序。
+6. 从以下选项中选择至少一个模板：CI、CD、预配或发布到Teams。
+7. 打开模板并自定义适合方案的工作流。
+8. 按照以下 `.jenkins/pipelines` 自述文件设置 Jenkins 的工作流。
+
+**使用 TeamsFx CLI 创建工作流模板**
+
+1. 输入`cd`Teams应用项目目录。
+2. 输入 `teamsfx add cicd` 命令以启动交互式命令过程。
+3. 从命令提示符中选择环境。
+4. 选择 **Jenkins** 作为 CI/CD 提供程序。
+5. 从以下选项中选择至少一个模板：CI、CD、预配或发布到Teams。
+7. 打开模板并自定义适合方案的工作流。
+8. 按照以下 `.jenkins/pipelines` 自述文件设置 Jenkins 的工作流。
 
 > [!NOTE]
-> 预配步骤不包含在 CD 模板中，因为它通常只执行一次。 可以在 TeamsFx CLI 中Teams Toolkit预配，或者使用单独的工作流。 确保在预配后提交。 设置结果将存放于文件夹中 `.fx` 。
+> 如果需要添加其他工作流模板，可以按照同一过程在 Visual Studio Code 或 TeamsFx CLI 中创建工作流模板。
 
-### <a name="github-secrets"></a>Github 密码
+### <a name="customize-ci-workflow"></a>自定义 CI 工作流
 
-下表列出了在环境中创建环境所需的GitHub：
+以下是可以对项目所做的一些更改：
 
-1. 选择“**设置**”。
-1. 转到" **环境"** 部分。
-1. 选择 **"新建环境"**。
-1. 输入环境的名称。 模板中提供的默认环境名称是 `test_environment`。
-1. 选择 **"配置环境"**。
-1. 选择 **"添加密码"**。
+1. 更改 CI 流的触发方式。 默认值是在将新更改推送到 **开发** 分支时使用 **pollSCM** 的触发器。
+1. 确保拥有 npm 生成脚本或自定义在自动化代码中生成的方式。
+1. 确保你有一个 npm 测试脚本，该脚本返回零以获得成功或更改测试命令。
 
-下表列出了创建环境所需的所有密钥：
 
-|名称|说明|
-|---|---|
-|`AZURE_SERVICE_PRINCIPAL_NAME`|用于预配资源的 Azure 的服务主体名称。|
-|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Azure 服务主体的密码。|
-|`AZURE_SUBSCRIPTION_ID`|确定将在其中预配资源的订阅。|
-|`AZURE_TENANT_ID`|标识订阅所在的租户。|
-|`M365_ACCOUNT_NAME`|创建Microsoft 365发布应用的 Teams 帐户。|
-|`M365_ACCOUNT_PASSWORD`|帐户Microsoft 365密码。|
-|`M365_TENANT_ID`|标识将在其中创建Teams/发布的租户。 此值是可选的，除非你拥有多租户帐户并且想要使用另一个租户。 有关详细信息，请参阅[如何查找租户Microsoft 365 ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
+### <a name="customize-cd-workflow"></a>自定义 CD 工作流
 
-> [!NOTE]
-> 目前，Azure 的服务主体用于 CI/CD 工作流。 有关详细信息，请参阅 [创建 Azure 服务原则](#create-azure-service-principals)。
+执行以下步骤自定义 CD 管道：
 
-## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>使用管道设置 CI 或 CD Azure DevOps
-
-可以在脚本中设置自动Azure DevOps，并引用脚本。
-
-执行以下步骤以开始使用：
-
-* [CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)
-* [CD 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)
-
-### <a name="set-up-ci-pipeline"></a>设置 CI 管道
-
-1. 将 [CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)Azure DevOps存储库，然后执行必要的自定义，如从脚本文件中的评论推断的。
-1. 按照[步骤创建 CI Azure DevOps管道](/azure/devops/pipelines/create-first-pipeline)。
-下面是常见 CI 管道脚本的方案：
-
-```yml
-trigger:
-- dev 
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '14.17.0'
-    checkLatest: true
-  
-- task: Bash@3
-  inputs:
-    filePath: './others-script-ci-template.sh'
-```
-
-以下是您可以对脚本或工作流定义所做的更改：
-
-1. 更改 CI 流。 我们默认为将新提交推送到分支 `dev` 时。
-1. 更改如何安装节点和 npm 的方式。
-1. 使用 npm 生成脚本，或自定义在自动化代码中生成的方式。
-1. 使用 npm 测试脚本（成功返回零）并更改测试命令。
-
-### <a name="set-up-cd-pipeline"></a>设置 CD 管道
-
-1. 将 [CD 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)Azure DevOps库，然后执行必要的自定义，如从脚本文件中注释推断的。
-1. 创建 CD Azure DevOps管道。 有关详细信息，请参阅创建 [第一个管道](/azure/devops/pipelines/create-first-pipeline)。 管道的定义可以引用 CI 管道的以下示例定义。
-1. 通过定义变量添加必要的 [变量](/azure/devops/pipelines/process/variables)，并在必要时将它们作为机密。
-
-```yml
-trigger:
-- main 
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '14.17.0'
-    checkLatest: true
-  
-- task: Bash@3
-  env:
-    SP_NAME: $(AZURE_SERVICE_PRINCIPAL_NAME)
-    SP_PASSWORD: $(AZURE_SERVICE_PRINCIPAL_PASSWORD)
-    TENANT_ID: $(AZURE_TENANT_ID)
-    AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
-    M365_ACCOUNT_NAME: $(M365_ACCOUNT_NAME)
-    M365_ACCOUNT_PASSWORD: $(M365_ACCOUNT_PASSWORD)
-  inputs:
-    filePath: './others-script-cd-template.sh'
-```
-
-以下是您可以对脚本或工作流定义所做的更改：
-
-1. 如何触发 CD 流。 默认情况下，当向主分支进行新提交时 **，将发生** 此情况。
-1. 更改如何安装节点和 npm 的方式。
-1. 默认情况下，更改环境名称的 **暂存**。
-1. 确保你拥有 npm 生成脚本，或自定义在自动化代码中生成的方式。
-1. 确保有一个 npm 测试脚本，该脚本返回零以成功，并且/或更改测试命令。
-
-### <a name="pipeline-variables-for-azure-devops"></a>用于管道的管道Azure DevOps
-
-执行以下步骤以在 Azure DevOps：
-
-1. 在"管道编辑"页中，选择 **"变量"** ，然后选择" **新建变量"**。
-1. 输入变量的名称或值对。
-1. 如有必要，请切换 **"将此值保密** "复选框。
-1. 选择 **"** 确定"以创建变量。
-
-|名称|说明|
-|---|---|
-|`AZURE_SERVICE_PRINCIPAL_NAME`|用于预配资源的 Azure 的服务主体名称。|
-|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Azure 服务主体的密码。|
-|`AZURE_SUBSCRIPTION_ID`|标识预配资源的订阅。|
-|`AZURE_TENANT_ID`|标识订阅所在的租户。|
-|`M365_ACCOUNT_NAME`|用于创建Microsoft 365发布应用程序的应用程序Teams帐户。|
-|`M365_ACCOUNT_PASSWORD`|帐户Microsoft 365密码。|
-|`M365_TENANT_ID`|标识创建或发布 Teams 应用的租户。 此值是可选的，除非你拥有多租户帐户并且想要使用另一个租户。 阅读更多[有关如何查找租户Microsoft 365 ID。](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
-
-## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Jenkins 中的 CI 或 CD 管道模板
-
-若要将这些模板添加到存储库，需要 [jenkins-ci-template 的版本。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) 和  [jenkins-cd-template。要按分支位于存储库中的 Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) 。
-
-此外，你需要在 Jenkins 中创建 CI 或 CD 管道，这些管道指向相应的 `Jenkinsfile` 特定管道。
-
-按照以下步骤检查如何将 Jenkins 连接到不同的 SCM 平台：
-
-1. [Jenkins 和 GitHub](https://www.jenkins.io/solutions/github/)
-2. [Jenkins 和 Azure DevOps](https://www.dragonspears.com/blog/ci-cd-with-jenkins-and-azure-devops-services)
-3. [具有 GitLab 的 Jenkins](https://docs.gitlab.com/ee/integration/jenkins.html)
-4. [具有 Bitbucket 的 Jenkins](https://medium.com/ampersand-academy/integrate-bitbucket-jenkins-c6e51103d0fe)
-
-### <a name="customize-ci-pipeline"></a>自定义 CI 管道
-
-下面是您可以为调整项目而进行一些更改：
-
-1. 将模板文件重命名为 **Jenkinsfile**，并将其放在目标分支（例如， **开发** 分支）下。
-1. 更改 CI 流的触发。 我们默认在将新更改推送到开发人员分支时使用 **pollSCM** **的** 触发器。
-1. 确保你拥有 npm 生成脚本，或自定义在自动化代码中生成的方式。
-1. 确保有一个 npm 测试脚本，该脚本返回零以成功，并且/或更改测试命令。
-
-### <a name="customize-cd-pipeline"></a>自定义 CD 管道
-
-执行以下步骤以自定义 CD 管道：
-
-1. 将模板文件重命名为 `Jenkinsfile`，并将其放在目标分支（例如，分支 `main` ）中。
-1. 更改 CD 流。 我们默认使用将新 `pollSCM` 更改推送到分支时的 `main` 触发器。
-1. 创建 Jenkins [管道凭据](https://www.jenkins.io/doc/book/using/using-credentials/)以保留 Azure 服务主体Microsoft 365帐户登录凭据。
+1. 更改 CD 流。 默认值是使用将新更改推送到`main`分支时的触发器`pollSCM`。
 1. 如有必要，请更改生成脚本。
 1. 如果没有测试，请删除测试脚本。
 
-### <a name="credentials-for-jenkins"></a>Jenkins 的凭据
 
-按照 [using-credentials](https://www.jenkins.io/doc/book/using/using-credentials/) 在 Jenkins 上创建凭据。
+### <a name="set-up-pipelines-for-other-platforms"></a>为其他平台设置管道
 
-|名称|说明|
-|---|---|
-|`AZURE_SERVICE_PRINCIPAL_NAME`|用于预配资源的 Azure 的服务主体名称。|
-|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Azure 服务主体的密码。|
-|`AZURE_SUBSCRIPTION_ID`|确定将在其中预配资源的订阅。|
-|`AZURE_TENANT_ID`|标识订阅所在的租户。|
-|`M365_ACCOUNT_NAME`|用于创建Microsoft 365发布应用程序的应用程序Teams帐户。|
-|`M365_ACCOUNT_PASSWORD`|帐户Microsoft 365密码。|
-|`M365_TENANT_ID`|标识创建或发布 Teams 应用的租户。 值是可选的，除非你拥有多租户帐户并且想要使用另一个租户。 阅读更多[有关如何查找租户Microsoft 365 ID。](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)|
-
-## <a name="get-started-guide-for-other-platforms"></a>开始平台指南
-
-你可以按照列出的预定义示例 Bash 脚本在其他平台上构建和自定义 CI 或 CD 管道：
+可以按照预定义的列出示例 bash 脚本在其他平台上生成和自定义 CI/CD 管道：
 
 * [CI 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)
 * [CD 脚本](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)
 
-脚本基于跨平台 TeamsFx 命令行工具 [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli)。 可以随文档一 `npm install -g @microsoft/teamsfx-cli` 起安装脚本 [，然后](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) 按照文档自定义脚本。
+这些脚本基于跨平台 TeamsFx 命令行工具 [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli)。 可以随文档一起 `npm install -g @microsoft/teamsfx-cli` 安装，并按照文 [档](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) 自定义脚本。
 
 > [!NOTE]
 >
-> * 若要启用 `@microsoft/teamsfx-cli` 在 CI 模式下运行，请通过 `CI_ENABLED` 打开 `export CI_ENABLED=true`。 在 CI 模式下， `@microsoft/teamsfx-cli` 适用于 CI 或 CD。
-> * 若要启用 `@microsoft/teamsfx-cli` 在非交互模式下运行，请通过命令设置全局配置： `teamsfx config set -g interactive false`。 在非交互模式中， `@microsoft/teamsfx-cli` 不提示输入。
+> * 若要在 CI 模式下启 `@microsoft/teamsfx-cli` 用运行，请启 `CI_ENABLED` 用 `export CI_ENABLED=true`。 在 CI 模式下， `@microsoft/teamsfx-cli` CI/CD 很友好。
+> * 若要在非交互模式下启`@microsoft/teamsfx-cli`用运行，请使用命令设置全局配置： `teamsfx config set -g interactive false` 在非交互模式下， `@microsoft/teamsfx-cli` 不提示输入。
 
-确保安全地在Microsoft 365变量中设置 Azure 和凭据。 例如，如果你使用 GitHub 作为源代码存储库。 有关详细信息，请参阅 [Github 密码](https://docs.github.com/en/actions/reference/encrypted-secrets)。
+确保安全地在环境变量中设置 Azure 和Microsoft 365凭据。 例如，如果使用GitHub作为源代码存储库，请参阅 [Github 机密](https://docs.github.com/en/actions/reference/encrypted-secrets)。
 
-## <a name="create-azure-service-principals"></a>创建 Azure 服务主体
 
-若要在 CI/CD 内预配和部署面向 Azure 的资源，必须创建 Azure 服务主体以使用。
+## <a name="provision-and-deploy-resources"></a>预配和部署资源
 
-执行以下步骤以创建 Azure 服务主体：
+若要在 CI/CD 中预配和部署面向 Azure 的资源，必须创建供使用的 Azure 服务主体。
 
-1. 在单个Microsoft Azure Active Directory (Azure AD) 注册应用程序。
-2. 将角色分配给Azure AD应用程序以访问 Azure 订阅`Contributor`，建议使用角色。
-3. 创建新的应用程序Azure AD密码。
+执行以下步骤来创建 Azure 服务主体：
+
+1. 在单个租户中注册Microsoft Azure Active Directory (Azure AD) 应用程序。
+2. 将角色分配给Azure AD应用程序以访问 Azure 订阅。 建议使用该 `Contributor` 角色。
+3. 创建新的Azure AD应用程序机密。
 
 > [!TIP]
-> 保存租户 ID、应用程序 id (AZURE_SERVICE_PRINCIPAL_NAME) 和密码 (AZURE_SERVICE_PRINCIPAL_PASSWORD) 供将来使用。
+> 保存租户 ID、应用程序 ID (AZURE_SERVICE_PRINCIPAL_NAME) 和机密 (AZURE_SERVICE_PRINCIPAL_PASSWORD) 供将来使用。
 
-有关详细信息，请参阅 [Azure 服务主体指南](/azure/active-directory/develop/howto-create-service-principal-portal)。 以下是创建服务主体的三种方法：
+有关详细信息，请参阅 [Azure 服务主体指南](/azure/active-directory/develop/howto-create-service-principal-portal)。 下面是创建服务主体的三种方法：
 
 * [Microsoft Azure门户](/azure/active-directory/develop/howto-create-service-principal-portal)
 * [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
-## <a name="publish-teams-app-using-teams-developer-portal"></a>使用Teams门户发布Teams应用
+## <a name="publish-teams-app-using-teams-developer-portal"></a>使用Teams开发人员门户发布Teams应用
 
-如果有与应用清单Teams相关的任何更改，你可能希望再次发布Teams应用以更新清单。
+如果有任何与Teams应用的清单文件相关的更改，则可以更新清单并再次发布Teams应用。
 
-若要手动Teams应用，你可以利用[开发人员门户进行Teams](https://dev.teams.microsoft.com/home)。
+若要手动发布Teams应用，可以利用[开发人员门户进行Teams](https://dev.teams.microsoft.com/home)。
 
-执行以下步骤以发布应用：
+执行以下步骤发布应用：
 
-1. 使用相应的[帐户登录到开发人员Teams](https://dev.teams.microsoft.com)进行登录。
-2. 通过选择 以 zip 导入你的应用包 `App -> Import app -> Replace`。
+1. 使用相应的帐户登录到[开发人员门户以Teams](https://dev.teams.microsoft.com)。
+2. 通过选择 `App -> Import app -> Replace`zip 导入应用包。
 3. 在应用列表中选择目标应用。
-4. 通过选择发布应用 `Publish -> Publish to your org`
+4. 通过选择 `Publish -> Publish to your org`发布应用。
 
 ### <a name="see-also"></a>另请参阅
 
-* [快速入门GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
-* [创建首个 Azure DevOps 管道](/azure/devops/pipelines/create-first-pipeline)
-* [创建首个 Jenkins 管道](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
+* [GitHub Actions快速入门](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
+* [创建第一个Azure DevOps管道](/azure/devops/pipelines/create-first-pipeline)
+* [创建第一个 Jenkins 管道](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [使用 Microsoft Teams 开发人员门户管理应用](/concepts/build-and-test/teams-developer-portal)

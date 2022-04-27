@@ -1,113 +1,115 @@
 ---
-title: 向应用添加Teams功能
+title: 向Teams应用添加功能
 author: MuyangAmigo
-description: 描述添加Teams Toolkit
+description: 介绍添加Teams Toolkit功能
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 246a871c26b0194d74e7d1fc8a3cb8be64d55fe6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 9d2e3d559bd9d561e3afae8b0db9544ab2ad86cc
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453234"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073529"
 ---
-# <a name="add-capabilities-to-your-teams-apps"></a>向应用添加Teams功能
+# <a name="add-capabilities-to-your-teams-apps"></a>将功能添加到 Teams 应用
 
-可以使用一种Teams应用功能创建新的 Teams 应用。 在应用开发过程中，Teams Toolkit向应用添加Teams功能。 下表列出了Teams应用程序功能：
+在应用开发过程中，可以创建具有Teams应用功能的新Teams应用。 下表列出了Teams应用功能：
 
 |**功能**|**说明**|
 |--------|-------------|
-| 选项卡 |  选项卡是指向应用程序清单中声明的域的简单 HTML 标记。 你可以将选项卡添加为单个用户的团队、群聊或个人应用中频道的一部分。|
-| 机器人 |  机器人通过文本、交互式卡片和任务模块帮助与 Web 服务交互。|
-| 消息传递扩展 | 邮件扩展通过客户端中的按钮和表单帮助与 web Microsoft Teams交互。|
+| 选项卡 |  选项卡是指向应用清单中声明的域的简单 HTML 标记。 可以添加选项卡作为团队内部频道的一部分，为单个用户添加群组聊天或个人应用|
+| 机器人 |  机器人帮助通过文本、交互式卡片和任务模块与 Web 服务交互|
+| 消息传递扩展 | 消息传递扩展有助于通过Microsoft Teams客户端中的按钮和表单与 Web 服务交互|
 
 ## <a name="prerequisite"></a>先决条件
 
-[安装Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)版本 v3.0.0+。
+* 安装 [最新版本的 Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
 > [!TIP]
-> 确保你已Teams VS 代码打开的应用项目。
-
-## <a name="add-capabilities-using-teams-toolkit"></a>使用 Teams Toolkit
-
-> [!IMPORTANT]
-> 在将功能成功添加到应用后，需要针对每个环境Teams预配。
-
-1. 打开 **Microsoft Visual Studio代码**。
-1. Select **Teams Toolkit** from left panel.
-1. 选择 **"添加功能"**：
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
-
-   还可以打开命令调色板并输入以下Teams **：添加功能**：
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="备用功能":::
-
-1. 从弹出窗口中，选择要包括在项目中的功能：
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
-
-1. 选择“**确定**”。
-
-所选功能成功添加到项目中。 该Teams Toolkit为新添加的功能生成源代码。
-
-## <a name="add-capabilities-using-teamsfx-cli-in-command-window"></a>在命令窗口中使用 TeamsFx CLI 添加功能
-
-1. 将目录更改为 **项目目录**。
-1. 执行以下命令，向项目添加不同的功能：
-
-   |功能与方案| 命令|
-   |-----------------------|----------|
-   |添加选项卡|`teamsfx capability add tab`|
-   |添加自动程序|`teamsfx capability add bot`|
-   |添加消息传递扩展|`teamsfx capability add messaging-extension`|
-
-## <a name="supported-capabilities-matrix"></a>支持的功能矩阵
-
-除了你的应用已有Teams功能外，你可以选择向你的 Teams 应用添加不同的功能。 下表提供了不同的应用Teams功能：
-
-|现有功能|可以添加其他支持的功能|
-|--------------------|--------------------|
-|带选项卡SPFx|无|
-|使用 Azure 的选项卡|机器人和消息传递扩展|
-|Bot|选项卡|
-|消息传递扩展|选项卡和自动程序|
-|选项卡和自动程序|选项卡和邮件扩展|
-|选项卡和消息传递扩展|选项卡和自动程序|
-|选项卡、机器人和消息传递扩展|选项卡|
-|选项卡 |机器人和邮件扩展|
-
-## <a name="add-capabilities"></a>添加功能
-
-添加机器人和消息传递扩展后，项目中的更改如下所示：
-
-* 自动程序模板代码将添加到具有路径 的子文件夹 `yourProjectFolder/bot`。 这包括 hello **world bot** 应用程序模板到项目中。
-* `launch.json``.vscode`文件夹`task.json`下的 和 将更新，其中包含Visual Studio Code脚本，并且当你要在本地调试应用程序时执行。
-* `manifest.remote.template.json`更新`manifest.local.template.json`文件夹下的 `templates/appPackage` 和 文件，其中包括清单文件中表示应用程序在 Teams 平台的信息。 相关更改如下所示：
-  * 自动程序 ID。
-  * 自动程序的范围。
-  * Hello world 自动程序应用程序可以响应的命令。
-* 将更新 `templates/azure/teamsfx` 下的文件，并 `templates/azure/provision/xxx`重新生成 .bicep 文件。
-* 下的文件 `.fx/config` 将重新生成，这可确保使用新添加功能正确的配置设置项目。
-
-添加选项卡后，项目中的更改如下所示：
-
-* 前端选项卡模板代码将添加到具有 path `yourProjectFolder/tab`的子文件夹，其中包含 **hello world** 选项卡应用程序模板到项目中。
-* `launch.json``.vscode`文件夹`task.json`下的 和 将更新，其中包含Visual Studio Code脚本，并且当你要在本地调试应用程序时执行。
-* `manifest.remote.template.json`更新`manifest.local.template.json`文件夹下的 `templates/appPackage` 和 文件，其中包括清单文件中与选项卡有关的信息，该清单文件表示 Teams 平台中的应用程序，更改如下所示：
-  * 可配置选项卡和静态选项卡。
-  * 选项卡的范围。
-* 将更新 `templates/azure/teamsfx` 下的文件，并 `templates/azure/provision/xxx`重新生成 .bicep 文件。
-* 下的文件 `.fx/config` 将重新生成，这可确保使用新添加功能正确的配置设置项目。
+> 确保已在 VS 代码中打开Teams应用项目。
 
 ## <a name="limitations"></a>限制
 
-在添加更多功能时对 TeamsFx 的限制如下所示：
+添加更多功能时对 TeamsFx 的限制如下所示：
 
-* 可以添加最多 16 个实例的选项卡。
-* 你可以为每个实例添加一个机器人和消息扩展。
+* 最多可以添加 16 个实例的选项卡
+* 可以为每个实例添加一个实例的机器人和消息传递扩展
+## <a name="add-capabilities"></a>添加功能
+
+> [!Note]
+> 成功将功能添加到Teams应用后，需要为每个环境执行预配。
+* 可以在Visual Studio Code中使用Teams Toolkit添加功能
+    1. 打开 **Microsoft Visual Studio代码**
+    1. 从左侧面板中选择 **Teams Toolkit**
+    1. 选择 **“添加功能”**
+
+        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
+
+*   还可以打开命令面板并输入Teams：添加功能：
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="备用功能":::
+
+
+    1. 在弹出窗口中，选择要包含在项目中的功能：
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
+
+    2. 选择 **“确定”**
+
+所选功能已成功添加到项目中。 Teams Toolkit为新添加的功能生成源代码
+
+## <a name="add-capabilities-using-teamsfx-cli-in-command-window"></a>在命令窗口中使用 TeamsFx CLI 添加功能
+
+1. 将目录更改为 **项目目录**
+1. 执行以下命令，向项目添加不同的功能：
+
+   |功能和方案| 命令|
+   |-----------------------|----------|
+   |添加选项卡|`teamsfx capability add tab`|
+   |添加机器人|`teamsfx capability add bot`|
+   |添加消息传递扩展插件|`teamsfx capability add messaging-extension`|
+
+## <a name="supported-capabilities"></a>支持的功能
+
+除了Teams应用已有的功能外，还可以选择向Teams应用添加不同的功能。 下表提供了不同的Teams应用功能：
+
+|现有功能|其他支持的功能|
+|--------------------|--------------------|
+|带有SPFx的选项卡|无|
+|带有 Azure 的选项卡|机器人和消息传递扩展|
+|Bot|选项卡|
+|消息传递扩展|选项卡和机器人|
+|选项卡和机器人|选项卡和消息扩展|
+|选项卡和消息传递扩展插件|选项卡和机器人|
+|选项卡、机器人和消息传递扩展|选项卡|
+|选项卡 |机器人和消息扩展|
+
+## <a name="add-bot-tab-and-messaging-extension"></a>添加机器人、选项卡和消息传递扩展
+
+添加机器人和消息传递扩展后，项目中的更改如下所示：
+
+* 机器人模板代码将添加到包含路径 `yourProjectFolder/bot`的子文件夹中。 这包括项目中的 **hello world** 机器人应用程序模板
+* `launch.json`文件夹和`task.json`文件夹下`.vscode`更新，其中包括Visual Studio Code必需的脚本，并在要在本地调试应用程序时执行
+* `manifest.template.json`文件夹下`templates/appPackage`的文件已更新，其中包括清单文件中表示Teams平台中的应用程序的机器人相关信息。 相关更改如下所示：
+  * 机器人的 ID
+  * 机器人的范围
+  * hello world 机器人应用程序可以响应的命令
+* 将更新下面 `templates/azure/teamsfx` 的文件，并 `templates/azure/provision/xxx`重新生成 .bicep 文件
+* 下面的文件 `.fx/config` 已重新生成，这可确保使用新添加的功能的正确配置来设置项目
+
+添加选项卡后，项目中的更改如下所示：
+
+* 前端选项卡模板代码将添加到包含路径 `yourProjectFolder/tab`的子文件夹中，其中包括项目中的 **hello world** 选项卡应用程序模板
+* `launch.json`文件夹和`task.json`文件夹下`.vscode`更新，其中包括Visual Studio Code必需的脚本，并在要在本地调试应用程序时执行
+* `manifest.template.json`文件夹下`templates/appPackage`的文件已更新，其中包括清单文件中代表Teams平台中的应用程序的选项卡相关信息。 更改包括：
+  * 可配置和静态选项卡
+  * 选项卡的范围
+* 将更新下面 `templates/azure/teamsfx` 的文件，并 `templates/azure/provision/xxx`重新生成 .bicep 文件
+* 下面的文件 `.fx/config` 已重新生成，这可确保使用新添加的功能的正确配置来设置项目
+
+
 
 ## <a name="see-also"></a>另请参阅
 

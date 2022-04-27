@@ -1,31 +1,31 @@
 ---
-title: 通话和联机会议机器人
-description: 了解你的 Microsoft Teams 应用如何使用语音和视频与用户交互（使用 Microsoft Graph API 进行通话和联机会议）并了解实时媒体流
+title: 呼叫和联机会议机器人
+description: 了解Microsoft Teams应用如何使用 Microsoft Graph API 进行呼叫和联机会议的语音和视频与用户交互，并了解实时媒体流
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: 呼叫音频视频 IVR 语音联机会议实时媒体流机器人
-ms.openlocfilehash: 19f101a35120e068dbdcf06fe12e5bf030f44822
-ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
+keywords: 调用音频视频 IVR 语音联机会议实时媒体流机器人
+ms.openlocfilehash: e17d0c18bfb3f751a11e43780dba9f0f85441a96
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63784000"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073821"
 ---
-# <a name="calls-and-online-meetings-bots"></a>通话和联机会议机器人
+# <a name="calls-and-online-meetings-bots"></a>呼叫和联机会议机器人
 
-机器人可以使用实时Teams、视频和屏幕共享与呼叫和会议进行交互。 借助 [Microsoft Graph API 进行](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)呼叫和联机会议，Teams应用现在可以使用语音和视频与用户交互，以增强体验。 这些 API 允许你添加以下新功能：
+机器人可以使用实时语音、视频和屏幕共享与Teams呼叫和会议交互。 使用 [Microsoft Graph API 进行通话和联机会议](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)，Teams应用现在可以使用语音和视频与用户进行交互，以增强体验。 使用这些 API 可以添加以下新功能：
 
-* IVR (互动语音) 。
+* IVR)  (交互式语音响应。
 * 呼叫控制。
-* 访问实时音频和视频流，包括桌面应用共享。
+* 访问实时音频和视频流，包括桌面和应用共享。
 
-若要在 Graph应用中使用这些 Teams API，请创建一个自动程序并指定一些其他信息和权限。
+若要在Teams应用中使用这些Graph API，请创建一个机器人并指定一些其他信息和权限。
 
-此外，实时媒体平台使机器人能够Teams实时语音、视频和屏幕共享与通话和会议进行交互。 参与音频或视频呼叫和联机会议的机器人是一种Microsoft Teams聊天机器人，具有用于注册机器人的一些额外功能。
+此外，通过实时媒体平台，机器人可以使用实时语音、视频和屏幕共享与Teams呼叫和会议进行交互。 参与音频或视频通话和联机会议的机器人是常规Microsoft Teams机器人，几乎没有额外的功能用于注册机器人。
 
-The Teams app manifest with two additional settings `supportsCalling` and `supportsVideo`， Graph permissions for your bot's Microsoft App ID， and tenant admin consent enable you to register the bot. 为聊天机器人注册Teams时，会提到 Webhook URL，它是对自动程序的所有传入呼叫的 webhook 终结点。 应用程序托管的媒体机器人需要 Microsoft。Graph。Communications.Calls.Media .NET 库，用于访问音频和视频媒体流，机器人必须部署在 Azure 中的 Windows Server 计算机或 Windows Server 来宾操作系统 (OS) 上。 自动程序Teams音频和视频内容仅支持一组特定的媒体格式。
+Teams应用清单具有两个附加设置`supportsCalling``supportsVideo`，以及机器人的 Microsoft 应用 ID 的Graph权限以及租户管理员同意，可以注册机器人。 在为Teams注册呼叫和会议机器人时，会提到 Webhook URL，它是所有传入机器人的调用的 Webhook 终结点。 应用程序托管的媒体机器人需要 Microsoft。Graph。Communications.Calls.Media .NET 库用于访问音频和视频媒体流，并且机器人必须部署在 Windows 服务器计算机上，或者Windows服务器来宾操作系统 (Azure 中的 OS) 。 Teams上的机器人仅支持音频和视频内容的特定媒体格式集。
 
-现在，您必须了解一些核心概念、术语和约定。
+现在，必须了解一些核心概念、术语和约定。
 
 ## <a name="terminologies"></a>术语
 
@@ -39,60 +39,60 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
 ### <a name="audio-or-video-calls"></a>音频或视频通话
 
-呼叫Teams可以是纯音频或音频和视频。 使用术语呼叫代替音频或视频呼叫。
+Teams中的呼叫可以是纯音频或音频和视频。 使用术语调用，而不是音频或视频呼叫。
 
 ### <a name="call-types"></a>呼叫类型
 
-呼叫可以是人员与机器人之间的对等呼叫，或者是机器人与组通话中的两个或多个人员之间的多方呼叫。
+呼叫是人员与机器人之间的对等呼叫，或是机器人与组呼叫中的两个或更多人之间的多方。
 
-![调用类型](~/assets/images/calls-and-meetings/call-types.png)
+![呼叫类型](~/assets/images/calls-and-meetings/call-types.png)
 
-以下是调用所需的不同呼叫类型和权限：
+下面是调用所需的不同调用类型和权限：
 
-* 用户可以使用机器人发起对等呼叫或邀请机器人加入现有的多方呼叫。 在用户界面中尚未启用多方Teams。
+* 用户可以与机器人启动对等呼叫，或邀请机器人加入现有的多方呼叫。 尚未在Teams用户界面中启用多方调用。
 
     > [!NOTE]
-    > 用户向自动程序发起的呼叫当前在移动Microsoft Teams不受支持。
+    > Microsoft Teams移动平台目前不支持用户发起的对机器人的调用。
 
-* Graph自动程序发起对等呼叫不需要权限。 机器人需要其他权限才能参与多方呼叫，或者机器人需要其他权限来发起与用户的对等呼叫。
-* 呼叫可以对等启动，并最终成为多方呼叫。 如果你的机器人拥有适当的权限，则机器人可以通过邀请其他人来发起多方呼叫。 如果你的机器人无权参与组呼叫，并且某参与者向该呼叫添加了另一个参与者，则你的机器人会从呼叫中被删除。
+* 用户无需Graph权限即可启动与机器人的对等调用。 机器人需要其他权限才能参与多方调用，或者机器人需要其他权限才能与用户启动对等呼叫。
+* 呼叫可以以对等方式开始，并最终成为多方调用。 机器人可以通过邀请他人来启动多方调用，前提是机器人具有适当的权限。 如果你的机器人没有参与组呼叫的权限，并且如果参与者将另一个参与者添加到呼叫中，则机器人将从呼叫中删除。
 
 ### <a name="signals"></a>信号
 
-有两种类型的信号：传入呼叫和呼叫内。 以下是信号的不同功能：
+有两种类型的信号，即传入呼叫和呼叫中。 以下是信号的不同功能：
 
-* 若要接收传入呼叫，请在自动程序设置中输入终结点。 启动传入呼叫时，此终结点将收到通知。 可以应答呼叫、拒绝呼叫或将其重定向到其他人。
+* 若要接收传入呼叫，请在机器人设置中输入终结点。 启动传入调用时，此终结点将收到通知。 可以接听呼叫、拒绝呼叫或将其重定向到其他人。
 
     ![呼叫处理](~/assets/images/calls-and-meetings/call-handling.png)
 
-* 当机器人正在通话中时，有一些 API 用于将机器人静音和取消静音，以及启动或停止与其他参与者共享视频或桌面内容。
+* 当机器人处于呼叫状态时，有用于静音和解构机器人以及开始或停止与其他参与者共享视频或桌面内容的 API。
 * 机器人还可以访问参与者列表、邀请新参与者并将其静音。
 
 ### <a name="calls-and-online-meetings"></a>呼叫和联机会议
 
-从Teams的角度来看，有两种类型的联机会议，即临时会议和计划会议。 从机器人的角度来看，这两个联机会议是相同的。 对于机器人，联机会议是一组参与者之间的多方呼叫，包括会议坐标。 会议坐标是会议元数据，包括与`botId``startTime` `chatId` `joinUrl`会议关联的 、或 `endTime`等。
+从Teams用户的角度来看，有两种类型的联机会议，即席会议和计划会议。 从机器人的角度来看，这两个在线会议都是相同的。 对于机器人，联机会议是一组参与者之间的多方调用，包括会议坐标。 会议坐标是会议的元数据，包括`botId`与会议 `startTime` `joinUrl`关联的、或`endTime``chatId`等。
 
 ### <a name="real-time-media"></a>实时媒体
 
-当机器人参与呼叫或联机会议时，它必须处理音频和视频流。 当用户在通话中通话、在摄像头上显示自己或在会议中演示屏幕时，机器人会显示为音频和视频流。 如果机器人想要说出一些简单内容，请按 **0** 以在 IVR (交互语音响应中联系接线员，) 播放 。WAV 文件。 这统称为媒体或实时媒体。
+当机器人参与通话或联机会议时，它必须处理音频和视频流。 当用户在通话中交谈、在网络摄像头上显示自己或在会议中显示屏幕时，向机器人显示为音频和视频流。 如果机器人想说一些简单的话， **按 0 以在** IVR) 方案 (交互式语音响应中访问操作员，则需要播放一个。WAV 文件。 这统称为媒体或实时媒体。
 
-实时媒体是指必须实时处理媒体（而不是播放以前录制的音频或视频）的方案。 处理媒体流（尤其是实时媒体流）非常复杂。 Microsoft 已创建实时媒体平台来处理这些方案，并尽可能卸载传统繁重的媒体处理工作。 当机器人应答传入呼叫或加入新呼叫或现有呼叫时，需要告诉实时媒体平台如何处理媒体。 如果要构建 IVR 应用程序，可以将昂贵的音频处理卸载到 Microsoft。 或者，如果你的机器人需要直接访问媒体流，则也支持该方案。 有两种类型的媒体处理：
+实时媒体是指必须实时处理媒体，而不是播放以前录制的音频或视频的情况。 处理媒体流（尤其是实时媒体流）极其复杂。 Microsoft 创建了实时媒体平台来处理这些方案，并尽可能卸载尽可能多的传统重载实时媒体处理。 当机器人接听传入呼叫或加入新的或现有的呼叫时，它需要告诉实时媒体平台如何处理媒体。 如果要生成 IVR 应用程序，可以将昂贵的音频处理卸载到 Microsoft。 或者，如果机器人需要直接访问媒体流，则也支持此方案。 媒体处理有两种类型：
 
-* **服务托管的媒体**：机器人专注于管理应用程序工作流，例如将呼叫路由和将音频处理卸载到 Microsoft 实时媒体平台。 借助服务托管的媒体，有几种实现和托管机器人的选项。 服务托管的媒体机器人可以作为无状态服务进行实施，因为它不在本地处理媒体。 服务托管的媒体机器人可以使用以下 API：
+* **服务托管媒体**：机器人专注于管理应用程序工作流，例如路由呼叫和将音频处理卸载到 Microsoft 实时媒体平台。 使用服务托管媒体，可以使用多个选项来实现和托管机器人。 服务托管的媒体机器人可以作为无状态服务进行实施，因为它不在本地处理媒体。 服务托管媒体机器人可以使用以下 API：
 
   * `PlayPrompt` 用于播放音频剪辑。
   * `Record` 用于录制音频剪辑。
   * `SubscribeToTone` 用于订阅双音多频 (DTMF) 音。
 
-    例如，知道用户何时按 **0** 到达接线员。
+    例如，知道用户何时按下 **0** 来访问操作员。
 
-* **应用程序托管的媒体**：若要使机器人直接访问媒体，它需要特定的Graph权限。 在机器人拥有权限后，实时媒体[](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)库和Graph [SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) 可帮助你生成丰富的实时媒体和通话机器人。 必须在 Windows 环境中托管应用程序托管的机器人。 有关详细信息，请参阅 [应用程序托管的媒体机器人](./requirements-considerations-application-hosted-media-bots.md)。
+* **应用程序托管媒体**：机器人要直接访问媒体，需要特定的Graph权限。 机器人拥有权限后，[实时媒体库](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)和[调用 SDK 的Graph](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder)可帮助你构建丰富的实时媒体和调用机器人。 必须在 Windows 环境中托管应用程序托管的机器人。 有关详细信息，请参阅 [应用程序托管的媒体机器人](./requirements-considerations-application-hosted-media-bots.md)。
 
 ## <a name="code-sample"></a>代码示例
 
 | **示例名称** | **说明** | **Graph** |
 |---------------|----------|--------|
-| Graph通信 | Graph与 Microsoft 的通信平台进行交互。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Graph通信 | Graph与 Microsoft 通信平台交互的通信。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
 ## <a name="next-step"></a>后续步骤
 
@@ -101,12 +101,13 @@ The Teams app manifest with two additional settings `supportsCalling` and `suppo
 
 ## <a name="see-also"></a>另请参阅
 
-* [Graph API 参考](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [图形 API参考](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
 * [示例应用](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
 * [注册支持通话和联机会议的机器人](./registering-calling-bot.md)
-* [Graph聊天机器人的联机会议权限](./registering-calling-bot.md#add-graph-permissions)
-* [如何在计算机上开发通话和联机会议机器人](./debugging-local-testing-calling-meeting-bots.md)
-* [应用程序托管的媒体机器人的要求和注意事项](./requirements-considerations-application-hosted-media-bots.md)
+* [Graph呼叫和联机会议机器人的权限](./registering-calling-bot.md#add-graph-permissions)
+* [如何在计算机上开发呼叫和联机会议机器人](./debugging-local-testing-calling-meeting-bots.md)
+* [应用程序托管媒体机器人的要求和注意事项](./requirements-considerations-application-hosted-media-bots.md)
 * [有关处理传入呼叫通知的技术信息](./call-notifications.md)
 * [设置自动助理](/microsoftteams/create-a-phone-system-auto-attendant)
-* [在 Android 和 Microsoft Teams 会议室 视频电话设备上Teams自动应答](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [在 Android 和视频电话设备上为 Teams Microsoft Teams 会议室设置自动应答](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Teams记录策略](/MicrosoftTeams/teams-recording-policy)
