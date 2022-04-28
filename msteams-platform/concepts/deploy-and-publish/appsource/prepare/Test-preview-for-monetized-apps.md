@@ -6,17 +6,14 @@ ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
 keywords: teams 应用 SaaS 产品/服务预览版产品/服务测试预览版盈利 saas
-ms.openlocfilehash: a9427ba61d1432485e1630eb42f72106c0e842ca
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501954"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073814"
 ---
 # <a name="test-preview-for-monetized-apps"></a>针对盈利应用的测试预览
-
-> [!NOTE]
-> 当前仅在 [**开发人员预览版**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro) 中提供针对盈利应用的测试预览版。
 
 你可以创建软件即服务 (SaaS) 产品/服务，并在 Teams 中测试盈利应用的端到端购买体验。 作为 Teams 应用的预览版受众添加的用户可以在发布之前查看你的 SaaS 产品/服务。
 
@@ -37,13 +34,13 @@ ms.locfileid: "63501954"
       :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="预览版产品/服务" border="true" :::
 
     > [!NOTE]
-    > 与公共产品/服务 ID 不同，可以通过 *-preview* 后缀来识别预览版产品/服务 ID。 例如，**publisherId.offerId-preview**。
+    > 与公共产品/服务 ID 不同，可以使用 *-preview* 后缀来识别预览产品/服务 ID。例如，**publisherId.offerId-preview**。
 
 ## <a name="configure-your-app-with-the-preview-offer-id"></a>使用预览版产品/服务 ID 配置应用
 
 开始之前，请使用带 **预览版受众** 的开发人员账户登录到 **开发人员门户**，以便用户在 Teams 应用商店中查看订阅计划。
 
-生成预览版产品/服务 ID 后，将产品/服务 ID 链接到 Teams 应用。 要链接产品/服务 ID，请执行以下操作：
+生成预览版产品/服务 ID 后，将产品/服务 ID 链接到 Teams 应用。要链接产品/服务 ID，请执行以下操作：
 
 1. 转到 [开发人员门户](https://dev.teams.microsoft.com/) 并使用开发人员凭据登录。
 1. 从左窗格中选择“**应用**”。

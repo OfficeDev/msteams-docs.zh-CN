@@ -64,7 +64,7 @@
           href: tabs/design/tabs.md
         - name: 机器人
           href: bots/design/bots.md
-        - name: 消息传递扩展
+        - name: 消息扩展
           href: messaging-extensions/design/messaging-extension-design.md
         - name: 会议扩展
           href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
@@ -134,9 +134,9 @@
       href: tabs/how-to/using-teams-client-sdk.md
     - name: 团队 JavaScript 客户端 SDK v2 预览版
       href: m365-apps/using-teams-client-sdk-preview.md
-    - name: 适用于机器人和消息扩展（GitHub）的 Node.js Bot Framework
+    - name: 适用于机器人和消息扩展的 Node.js 机器人框架 (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
-    - name: 适用于机器人和消息扩展（GitHub）的 .NET Bot Framework
+    - name: 适用于机器人和消息扩展的 .NET 机器人框架 (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Microsoft Graph SDK
       href: /graph/sdks/sdks-overview
@@ -176,9 +176,9 @@
               href: resources/bot-v3/bots-text-formats.md
             - name: 测试机器人
               href: resources/bot-v3/bots-test.md
-        - name: 消息扩展 SDK（v3）
+        - name: 消息扩展 SDK (v3)
           items:
-            - name: 消息扩展 SDK（v3）
+            - name: 消息扩展 SDK (v3)
               href: resources/messaging-extension-v3/messaging-extensions-overview.md
             - name: 搜索扩展
               href: resources/messaging-extension-v3/search-extensions.md
@@ -377,9 +377,9 @@
           href: bots/how-to/authentication/auth-aad-sso-bots.md
     - name: 消息扩展
       items:
-        - name: 向邮件扩展添加身份验证
+        - name: 为消息扩展添加身份验证
           href: messaging-extensions/how-to/add-authentication.md
-        - name: 为邮件扩展启用 SSO
+        - name: 为消息扩展启用 SSO
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: 集成设备功能
   items:
@@ -419,7 +419,7 @@
       href: m365-apps/prerequisites.md
     - name: 为 Office 和 Outlook 启用 Teams 个人选项卡
       href: m365-apps/extend-m365-teams-personal-tab.md
-    - name: 为 Outlook 启用 Teams 消息传递扩展
+    - name: 为 Outlook 启用 Teams 消息扩展
       href: m365-apps/extend-m365-teams-message-extension.md
 - name: 测试应用
   items:
