@@ -4,13 +4,13 @@ author: surbhigupta
 description: 了解Microsoft Teams应用的消息扩展搜索命令，通过应用清单创建搜索命令，并手动使用代码示例和示例。
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: f7933b1ef7de40ac889e0ae6d8063f6b21991cc7
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: 9615b1ab599f567815df5f68155a8ab2abb292ca
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104299"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111624"
 ---
 # <a name="define-message-extension-search-commands"></a>定义消息扩展搜索命令
 
@@ -88,7 +88,7 @@ ms.locfileid: "65104299"
 | 属性名称 | 用途 | 是必需的吗？ | 最低清单版本 |
 |---|---|---|---|
 | `parameters` | 此属性定义命令的参数静态列表。 | 否 | 1.0 |
-| `parameter.name` | 此属性描述参数的名称。 这会在用户请求中发送到服务。 | 可访问 | 1.0 |
+| `parameter.name` | 此属性描述参数的名称。 这会在用户请求中发送到服务。 | 是 | 1.0 |
 | `parameter.description` | 此属性描述参数的用途或必须提供的值的示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
 | `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括`text`， `textarea`， `number`， `date`， `time`。 `toggle` 默认设置为 `text`. | 否 | 1.4 |

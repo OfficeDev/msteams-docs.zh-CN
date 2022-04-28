@@ -5,12 +5,12 @@ description: 确定应用的用例如何在 Teams 体验、应用功能和功能
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 9fdf2c56bab0a822d0c3769d6d7e9fdb6aa3a929
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765937"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103325"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>将用例映射到 Teams 应用功能
 
@@ -36,8 +36,8 @@ ms.locfileid: "63765937"
 
 | **如果你想要...** | **试用...** |
 | --- | --- |
-| 搜索外部系统，并将结果共享为交互式卡片。 | 使用搜索命令的消息传递扩展 |
-| 收集信息以插入数据存储或运行高级搜索。 | 使用操作命令的消息传递扩展 |
+| 搜索外部系统，并将结果共享为交互式卡片。 | 使用搜索命令的消息扩展 |
+| 收集信息以插入数据存储或运行高级搜索。 | 使用操作命令的消息扩展 |
 | 创建嵌入式 Web 体验以查看、处理和共享数据。 | 选项卡 |
 | 推送数据并从 Teams 客户端发送数据。 | 连接器和 Webhook|
 | 可从需要它们的任何位置收集或显示信息的交互式模式窗体。 | 任务模块 |
@@ -51,8 +51,8 @@ ms.locfileid: "63765937"
 
 | **如果你想要...** | **试用...** |
 | --- | --- |
-| 触发消息，使用户能够快速将邮件内容发送到 Web 服务。 | 消息传递扩展操作命令 |
-| 在启动工作流之前，打开来自选项卡、机器人或消息传递扩展的消息以收集信息。 | 任务模块 |
+| 触发消息，使用户能够快速将邮件内容发送到 Web 服务。 | 消息扩展操作命令 |
+| 在启动工作流之前，打开来自选项卡、机器人或消息扩展的消息以收集信息。 | 任务模块 |
 | 通过文本和富卡与用户交互。 | 对话机器人 |
 | 在无需生成完整会话机器人时，这适合进行简单的来回交互。 |  传出 webhook |
 
@@ -93,7 +93,7 @@ Microsoft Teams 平台提供各种功能。 每项功能都是一种与用户交
 例如：
 
 * 使用 **选项卡** 功能显示任务模块、请求设备权限、显示<`iframe`>内容或使用深层链接。
-* 使用 **消息传递扩展** 功能发送卡片、展开链接或对消息执行操作。
+* 使用 **消息扩展** 功能发送卡片、展开链接或对消息执行操作。
 
 ## <a name="see-also"></a>另请参阅
 

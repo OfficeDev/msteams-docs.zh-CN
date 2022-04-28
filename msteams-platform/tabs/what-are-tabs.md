@@ -5,12 +5,12 @@ description: Teams 平台上的自定义选项卡概述
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: b39d6b29704e7894e747c02323dda7d96bc6985a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727914"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103290"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>构建 Microsoft Teams 选项卡
 
@@ -31,7 +31,7 @@ ms.locfileid: "63727914"
 
 Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选项卡。 [个人选项卡](~/tabs/how-to/create-personal-tab.md) 和个人范围的机器人一样，是个人应用的一部分，并且只作用于单个用户。 可以将它们固定到左侧导航栏以方便访问。 [通道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)将内容传递到频道和群组聊天，是围绕基于 Web 的专用内容创建协作空间的好方法。
 
-你可以[创建内容页面](~/tabs/how-to/create-tab-pages/content-page.md)，将其作为个人选项卡、频道或组选项卡或任务模块的一部分。 可以[创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)，使用户能够配置 Microsoft Teams 应用，并使用它来配置频道或群组聊天选项卡、消息传递扩展或 Office 365 连接器。 你可以允许用户在安装后重新配置选项卡，并为应用程序[创建选项卡删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。 生成包含选项卡的 Teams 应用时，必须在 Android 和 iOS Teams 客户端上测试[选项卡函数](~/tabs/design/tabs-mobile.md)。 选项卡必须通过基本信息、区域设置、主题信息，以及标识选项卡中的内容的 `entityId` 或 `subEntityId` 来[获取上下文](~/tabs/how-to/access-teams-context.md)。
+你可以[创建内容页面](~/tabs/how-to/create-tab-pages/content-page.md)，将其作为个人选项卡、频道或组选项卡或任务模块的一部分。 可以 [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)，以支持用户能够配置 Microsoft Teams 应用，并使用它来配置频道或群组聊天选项卡、消息传递扩展或 Office 365 连接器。 你可以允许用户在安装后重新配置选项卡，并为应用程序[创建选项卡删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。 生成包含选项卡的 Teams 应用时，必须在 Android 和 iOS Teams 客户端上测试[选项卡函数](~/tabs/design/tabs-mobile.md)。 选项卡必须通过基本信息、区域设置、主题信息，以及标识选项卡中的内容的 `entityId` 或 `subEntityId` 来[获取上下文](~/tabs/how-to/access-teams-context.md)。
 
 你可以使用自适应卡片生成选项卡，并通过消除对机器人和选项卡的其他后端的需求来集中所有 Teams 应用功能。 [演示区域视图](~/tabs/tabs-link-unfurling.md) 是一个新的 UI 组件，可用于呈现在 Teams 中全屏打开的内容，并将其固定为选项卡。现有的 [link unfurling](~/tabs/tabs-link-unfurling.md) 服务已更新，以便使用自适应卡片和聊天服务将 URL 转换为选项卡。 可以使用对话子实体[创建对话选项卡](~/tabs/how-to/conversational-tabs.md)，这些子实体允许用户在选项卡中就子实体（如特定任务、患者、销售机会）进行对话，而不是讨论整个选项卡。可以更改[选项卡边距](~/resources/removing-tab-margins.md)以增强开发人员在生成应用时的体验。 可以拖动选项卡并将其放置在所需的位置，以交换个人应用和频道或群组聊天中的选项卡位置。
 
@@ -55,7 +55,7 @@ Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选�
 **Scenario：** 在 Teams 中引入现有的基于 Web 的资源。 \
 **Example：** 在 Teams 应用中创建一个向用户显示信息性公司网站的个人选项卡。
 
-**Scenario：** 向 Teams 机器人或消息传递扩展添加支持页面。 \
+**方案：** 向 Teams 机器人或消息扩展添加支持页面。 \
 **Example：** 创建为用户提供“**关于**”和“**帮助**”的网页内容的个人选项卡。
 
 **Scenario：** 为协作对话和协作提供对用户定期交互的项目的访问权限。 \

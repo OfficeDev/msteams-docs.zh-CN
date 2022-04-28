@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: a201994bc71e0131bb03d33215d800e13d3428de
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: df8a19d907c2b9ca420ed49d143ff7b145e3f7ca
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398965"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104425"
 ---
 # <a name="explore-teams-platform-features"></a>浏览 Teams 平台功能
 
@@ -25,7 +25,7 @@ ms.locfileid: "63398965"
 | --- | --- | --- |
 |选项卡 | 选项卡是 Microsoft Teams 中嵌入的与 Teams 相关的网页。可以将它们添加为团队、群组聊天或个人用户的个人应用内频道的一部分。 | 个人选项卡、频道或组选项卡、阶段视图和链接展开。 |
 | 机器人 | 机器人也称为聊天机器人或对话机器人。 它是一个可运行用户完成的简单且重复的自动化任务的应用。 机器人交互可以是快速问答，也可以是提供服务访问权限的复杂对话。 | 客户服务、天气信息、预订晚餐、或提供旅游信息。 |
-| 消息传递扩展 | 消息传递扩展允许用户与 Web 服务 Teams 客户端进行交互。 在外部系统中搜索或启动操作。 可以将交互结果作为丰富地格式化卡片发送到 Teams 客户端。 | 保留资源并允许通道知道保留的时间段。 搜索工作项，并将其作为自适应卡片与组共享。 在跟踪系统中根据 Teams 消息创建 bug，将该 bug 分配给用户，并向会话线程发送包含该 bug 详细信息的卡片。 |
+| 邮件扩展 | 邮件扩展允许用户与 Web 服务 Teams 客户端进行交互。 在外部系统中搜索或启动操作。 可以将交互结果作为丰富地格式化卡片发送到 Teams 客户端。 | 保留资源并允许通道知道保留的时间段。 搜索工作项，并将其作为自适应卡片与组共享。 在跟踪系统中根据 Teams 消息创建 bug，将该 bug 分配给用户，并向会话线程发送包含该 bug 详细信息的卡片。 |
 |会议扩展 | 你可以创建应用来提高会议效率。 | 要求用户在通话期间完成调查，或发送不会中断会议流程的快速提醒。 |
 | 个人应用 | 个人应用是一个专用空间 (选项卡) 或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。 | OneNote 是一个个人应用，可在 Teams 中提供专用工作区。 Planner 跨越你或你的团队作为频道选项卡添加的板提供所有任务的鸟瞰图。 |
 | Webhook 和连接器 | 与外部应用通信，并从其他应用发送或接收通知和消息。 | 订阅以接收来自 Web 服务的通知和消息。 |

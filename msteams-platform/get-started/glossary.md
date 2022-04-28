@@ -4,12 +4,12 @@ description: Microsoft Teams 开发人员文档术语表
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发人员定义
-ms.openlocfilehash: bbfb59d2dec2f72bb94aae1b241554ebc5de3211
-ms.sourcegitcommit: 2863b7537f414517c0fe751f135b39978eb749bf
+ms.openlocfilehash: 1f97cd46ae8096830b2f46c80f4ffc13212eebd8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2022
-ms.locfileid: "63625996"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103991"
 ---
 # <a name="glossary"></a>术语表
 
@@ -19,8 +19,8 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [操作命令](../messaging-extensions/how-to/action-commands/define-action-command.md) | 一种使用弹出窗口收集或显示信息的消息传递扩展应用。 <br>**另请参阅**：[消息传递扩展](#m)；[搜索命令](#s) |
-| [自适应卡](../task-modules-and-cards/what-are-cards.md) | 由机器人或消息传递扩展添加到对话的可操作内容片段。 将文本、图形和按钮与这些卡片配合使用，以进行丰富的通信。 |
+| [操作命令](../messaging-extensions/how-to/action-commands/define-action-command.md) | 一种使用弹出窗口收集或显示信息的邮件扩展应用。 <br>**另请参阅**：[邮件扩展](#m)；[搜索命令](#s) |
+| [自适应卡](../task-modules-and-cards/what-are-cards.md) | 由自动程序或邮件扩展添加到对话的可操作内容片段。 将文本、图形和按钮与这些卡片配合使用，以进行丰富的通信。 |
 | [匿名用户](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Teams 会议中没有 Azure AD 标识且未与租户联合的参与者类型。他们就像会议中的外部用户。<br>**另请参阅**：[联合用户](#f) |
 | [应用程序目录](../toolkit/publish.md) | 存储 SharePoint 和 Office 应用以供组织内部使用的网站。 <br>**另请参阅**：[SPFx](#s) |
 | [应用部件清单](../resources/schema/manifest-schema.md) | Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 清单必须符合 [清单架构](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)。 |
@@ -49,14 +49,14 @@ Teams 开发人员文档中使用的常用术语和定义。
 | Term | 定义 |
 | --- | --- |
 | [调用机器人](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | 参与音频或视频通话和联机会议的机器人。 <br> **另请参阅**：[聊天机器人](#c)；[会议机器人](#m) |
-| [功能](../toolkit/add-capability.md) | 可在应用中构建，以便与应用用户进行交互的 Teams 功能。 应用功能用于扩展 Teams 以满足应用需求。 应用可能具有一个或多个核心功能，例如选项卡、机器人和消息传递扩展。 <br>**另请参阅**：[设备功能](#d)；[媒体功能](#m) |
+| [功能](../toolkit/add-capability.md) | 可在应用中构建，以便与应用用户进行交互的 Teams 功能。 应用功能用于扩展 Teams 以满足应用需求。 应用可能具有一个或多个核心功能，例如选项卡、机器人和邮件扩展。 <br>**另请参阅**：[设备功能](#d)；[媒体功能](#m) |
 | [聊天机器人](../bots/how-to/conversations/conversation-basics.md) | 机器人也称为聊天机器人或对话机器人。 它是一个应用，可由客户服务或支持人员等用户运行简单且重复的任务。 <br> **另请参阅**：[对话机器人](#c) |
 | 频道 | 团队共享消息、工具和文件的单个位置。 可以使用频道进行团队合作和沟通。 <br>**另请参阅**：[对话](#c) |
 | [客户端密码](../bots/how-to/authentication/add-authentication.md) | 客户端机密/密码或作为证书的公钥或私钥对。 本机应用不需要它。 <br> **另请参阅**：[机器人](#b) |
 | [云资源](../toolkit/add-resource.md) | 通过 Internet 在云上提供的服务，Teams 应用可以使用该服务。 它可以是存储帐户、Web 应用、数据库等。 |
 | [协作与应用](../concepts/extensibility-points.md) | 具有可供用户在协作工作区中与其他用户一起工作的功能的应用。 <br> **另请参阅**：[独立应用](#s) |
-| [撰写扩展](../resources/schema/manifest-schema.md#composeextensions) | 应用清单（`composeExtensions`）中引用消息传递扩展功能的属性。 该属性用于当扩展需要进行身份验证或配置以继续时。 <br>**另请参阅**：[应用清单](#a)；[消息传递扩展](#m) |
-| [命令框](../resources/schema/manifest-schema.md) | 应用清单中的一种上下文类型（`commandBox`），可以将其配置为从 Teams 命令框中调用消息传递扩展。 |
+| [撰写扩展](../resources/schema/manifest-schema.md#composeextensions) | 应用清单 (`composeExtensions`) 中引用邮件扩展功能的属性。 该属性用于当扩展需要进行身份验证或配置以继续时。 <br>**另请参阅**：[应用清单](#a)；[邮件扩展](#m) |
+| [命令框](../resources/schema/manifest-schema.md) | 应用清单中的一种上下文类型 (`commandBox`)，可以将其配置为从 Teams 命令框中调用邮件扩展。 |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | 使用连接器，用户可以订阅以接收来自 Web 服务的通知和消息。 连接器公开服务的 HTTPS 终结点，以便将消息发布到 Teams 频道，通常采用卡片形式。 <br> **另请参阅**：[Webhook](#w) |
 | 对话 | Microsoft Teams 应用（选项卡或机器人）与一个或多个用户之间发送的一系列消息。 对话可以有三个范围：频道、个人聊天和群组聊天。 <br>**另请参阅**：[一对一聊天](#o)；[群组聊天](#g)；[频道](#c) |
 | [对话机器人](../bots/how-to/conversations/conversation-messages.md) |  它允许用户使用文本、交互式卡片和任务模块与 Web 服务进行交互。 <br>**另请参阅** [聊天机器人](#c) |
@@ -108,7 +108,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [链接展开](../messaging-extensions/how-to/link-unfurling.md) | 一项和消息传递扩展和会议配合使用的功能，可用于展开粘贴到撰写消息区域的链接。 链接展开以在自适应卡片或会议阶段视图中显示有关链接的其他信息。 |
+| [链接展开](../messaging-extensions/how-to/link-unfurling.md) | 一项和消息扩展和会议配合使用的功能，可用于展开粘贴到撰写消息区域的链接。 链接展开以在自适应卡片或会议阶段视图中显示有关链接的其他信息。 |
 | [本地环境](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Teams 工具包创建的默认开发环境。  <br>**另请参阅**：[环境](#e)；[开发环境](#d) |
 | [本地工作台](../sbs-gs-spfx.yml) | 在使用 SPFx 创建的 Visual Studio Code 中运行和调试 Teams 应用的默认选项。 <br>**另请参阅**：[工作台](#w)；[Teams 工作台](#t) |
 | [位置功能](../concepts/device-capabilities/location-capability.md) | 可与应用集成的设备功能，用于了解应用用户的地理位置，以增强协作体验。此功能目前仅适用于 Teams 移动客户端。<br>**另请参阅**：[功能](#c)；[媒体功能](#m)；[设备功能](#d)；[Teams Mobile](#t) |
@@ -120,9 +120,9 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [媒体功能](../concepts/device-capabilities/mobile-camera-image-permissions.md) | 可以与 Teams 应用集成的本机设备功能（如相机和麦克风）。 <br>**另请参阅**：[功能](#c)；[设备功能](#d) |
 | [会议机器人](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | 使用实时语音、视频和屏幕共享与 Teams 通话和会议进行交互的机器人。 <br>**另请参阅**：[通话机器人](#c)；[聊天机器人](#c) |
-| [会议生命周期](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | 它涵盖会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和消息传递扩展。 <br>**另请参阅**：[会议内体验](#i) |
+| [会议生命周期](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | 它涵盖会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和邮件扩展。 <br>**另请参阅**：[会议内体验](#i) |
 | [会议阶段](../sbs-meetings-stage-view.yml) | 会议扩展应用的一项功能。 它是在会议期间所有参与者都可访问的共享空间。 可帮助参与者实时与应用内容进行交互和协作。 <br>**另请参阅**：[阶段视图](#s) |
-| [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md) | 消息传递扩展是插入应用内容或对消息执行操作的快捷方式。无需离开会话即可使用消息传递扩展。<br>**另请参阅**：[搜索命令](#s)；[操作命令](#a) |
+| [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md) | 邮件扩展是插入应用内容或对消息执行操作的快捷方式。无需离开对话即可使用邮件扩展。<br>**另请参阅**：[搜索命令](#s)；[操作命令](#a) |
 | [会议扩展](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | 旨在用于在会议生命周期内提高工作效率的应用，例如白板、仪表板等。 |
 | [Microsoft 365 账户](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 帐户包含 25 个仅用于开发用途的用户许可证，包括管理员。 |
 | [Microsoft 365 开发人员计划](../toolkit/accounts.md)| Microsoft 365 开发人员计划可帮助你构建扩展 Microsoft 365 的应用。 |
@@ -138,7 +138,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [Office 365 连接器](../webhooks-and-connectors/how-to/connectors-creating.md) | 使用此连接器，可以为传入 Webhook 创建自定义配置页，并将其打包为 Teams 应用的一部分。 你可以主要使用 Office 365 连接器卡片发送邮件，并且能够向其添加一组有限的卡片操作。 |
 | [传出 Webhook](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | 传出 Webhook 充当机器人并使用 @提及功能在频道中搜索消息。 它向外部 Web 服务发送通知并以丰富的消息（包括卡片和图像）进行响应。 <br>**另请参阅**：[Webhook](#w)；[传入 Webhook](#i) |
-| [Outlook 通道](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | Teams 消息传递扩展应用的一项功能，允许用户从 Microsoft Outlook 与其进行交互。 |
+| [Outlook 通道](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | Teams 邮件扩展应用的一项功能，允许用户从 Microsoft Outlook 与其进行交互。 |
 | [一对一聊天](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | Teams 个人机器人应用与单个用户之间的聊天类型。 <br>**另请参阅**：[群组聊天](#g)；[聊天机器人](#c) |
 
 ## <a name="p"></a>P
@@ -163,7 +163,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md) | 一种消息传递扩展应用，允许用户搜索外部系统，并使用卡片将搜索结果包含到邮件中。 <br>**另请参阅**：[消息传递扩展](#m)；[操作命令](#a) |
+| [搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md) | 一种邮件扩展应用，允许用户搜索外部系统，并使用卡片将搜索结果包含到邮件中。 <br>**另请参阅**：[邮件扩展](#m)；[操作命令](#a) |
 | [顺序工作流](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | 允许机器人根据用户响应与用户进行对话的工作流。 |
 | [共享应用](../concepts/extensibility-points.md#shared-app-experiences) | 存在于团队、频道或聊天中的应用，用户可以在其中进行协作和交互。 <br>**另请参阅：** 个人应用 |
 | [SharePoint 网站集](../sbs-gs-spfx.yml) | SharePoint 应用的集合网站。在 SharePoint 网站上部署基于 SPFx 的应用之前，需要拥有此网站的管理员帐户。<br>**另请参阅**：SPFx |
@@ -184,7 +184,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [选项卡聊天](../tabs/how-to/conversational-tabs.md) | 一种选项卡类型，允许用户在动态选项卡中获得重点对话体验。 |
 | [任务模块](../task-modules-and-cards/what-are-task-modules.md) | Teams 应用的一项功能，用于创建用于完成任务、显示视频或仪表板的模式弹出窗口。 |
 | [线程讨论](../tabs/design/tabs.md#thread-discussion) | 在频道上发布的对话或用户之间的聊天。 <br>**另请参阅**：[对话](#c)；[频道](#c) |
-| [Teams](../overview.md) | Microsoft Teams 是组织提供的终极消息传递应用。它是一个用于实时协作和通信、会议、文件和应用共享的工作区。 |
+| [Teams](../overview.md) | Microsoft Teams 是组织提供的终极消息应用。它是用于实时协作和通信、会议、文件和应用共享的工作区。 |
 | [Teams 工具包](../toolkit/teams-toolkit-fundamentals.md) | 借助 Microsoft Teams 工具包，可以直接在 Visual Studio Code 环境中创建自定义 Teams 应用程序。  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx 是基于文本的命令行接口，可加速 Teams 应用程序开发。也称为 TeamsFx CLI。|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK 是使用 TeamsFx 工具包或 CLI 在基架项目中预配置的。 |

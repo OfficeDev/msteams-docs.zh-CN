@@ -3,13 +3,13 @@ title: 统一会议应用
 author: surbhigupta
 description: 了解Teams会议生命周期以及用户在桌面和移动环境中的会议体验、参与者和用户角色和类型、在会议生命周期中集成机器人和消息扩展。
 ms.topic: conceptual
-ms.localizationpriority: none
-ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: 97f1254fc71dce93aa7e30b8ef1901f9fd93b6f0
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103332"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111344"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -23,7 +23,7 @@ Teams统一会议应用基于以下概念：
 
 ## <a name="meeting-lifecycle"></a>会议生命周期
 
-会议生命周期包括会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和消息扩展。
+会议生命周期包括会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和邮件扩展。
 
 > [!NOTE]
 > Web 客户端支持会议扩展，例如机器人、卡片、消息扩展和消息操作。 但是，当前不完全支持托管体验，例如选项卡、内容气泡和共享到阶段。
@@ -225,5 +225,5 @@ Teams统一会议应用基于以下概念：
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
-* [消息扩展](../messaging-extensions/what-are-messaging-extensions.md)
+* [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

@@ -1,31 +1,31 @@
 ---
 title: 创建对话选项卡
 author: surbhigupta
-description: 了解如何为频道选项卡创建对话子企业聊天，以使用代码示例管理对话
-keywords: Teams 选项卡频道可配置
+description: 了解如何为频道选项卡创建对话子级聊天，以使用代码示例管理对话
+keywords: teams 选项卡通道可配置
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: none
-ms.openlocfilehash: ac58448ec390d0e954c0737d5b0700d0d91b04b1
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.localizationpriority: medium
+ms.openlocfilehash: ddf14d9d7dabe5b20cc21181783dc5c33f29eff9
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452597"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111652"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
-对话子项提供了一种允许用户在选项卡中就次功能展开对话的方法。例如特定任务、患者和销售机会，而不是讨论整个选项卡（也称为实体）。 传统的频道或可配置的选项卡允许用户就选项卡进行对话，但用户需要更集中的对话。 如果内容太多，无法进行集中讨论，或者内容随着时间的推移而发生更改，使对话与显示的内容无关，则可能会出现更集中的对话的要求。 对话子项为动态选项卡提供了更加集中的对话体验。
+对话子实体提供了一种方法，允许用户在选项卡中进行有关子实体的对话。例如特定的任务、患者和销售机会，而不是讨论整个选项卡（也称为实体）。 传统的频道或可配置选项卡允许用户进行有关选项卡的对话，但用户需要更集中的对话。 如果内容过多而无法进行集中讨论，或者由于内容随时间推移而更改，使对话与所显示的内容无关，则可能会产生对更集中对话的要求。 会话子实体为动态选项卡提供更集中的会话体验。
 
-对话子项仅在频道中受支持。 它们可用于从个人选项卡或静态选项卡创建或继续已固定到频道的选项卡中的对话。 如果要为用户提供一个位置来查看和访问跨多个渠道发生的对话，静态选项卡非常有用。
+对话子实体仅在通道中受支持。 可以从个人或静态选项卡使用它们在已固定到频道的选项卡中创建或继续对话。 如果要为用户提供一个位置来查看和访问跨多个通道发生的对话，静态选项卡非常有用。
 
 ## <a name="prerequisites"></a>先决条件
 
-若要支持对话子项，您的选项卡 Web 应用程序必须能够在后端数据库中存储子连接↔对话之间的映射。 `conversationId`提供了 ，但您必须存储它，`conversationId`Teams以便用户继续对话。
+若要支持会话子实体，Tab Web 应用程序必须能够在后端数据库中的子实体↔对话之间存储映射。 提供`conversationId`此功能，但必须将其存储`conversationId`并将其返回到Teams，以便用户继续对话。
 
-## <a name="start-a-new-conversation"></a>启动新对话
+## <a name="start-a-new-conversation"></a>开始新对话
 
-若要启动新对话，请使用 `openConversation()` 函数。 启动和继续对话都由此方法处理。 从用户的角度来看，根据要执行哪些操作，函数输入会发生变化，这将在屏幕右侧打开对话面板，以启动对话或继续对话。
+若要启动新对话，请使用该 `openConversation()` 函数。 启动和继续会话均由此方法处理。 对函数的输入根据要执行的操作而更改，从用户的角度来看，这会打开屏幕右侧的对话面板，以启动对话或继续聊天。
 
 ``` javascript
 microsoftTeams.conversations.openConversation(openConversationRequest);
@@ -33,14 +33,14 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 **openConversation** 采用以下输入在频道中启动对话：
 
-* **subEntityId**：特定子项的 ID。 例如，task-123。
-* **entityId**：选项卡实例创建时其 ID。 ID 必须引用回同一个选项卡实例。
+* **subEntityId**：特定子实体的 ID。 例如，task-123。
+* **entityId**：创建选项卡实例时的 ID。 返回到同一个选项卡实例时，ID 非常重要。
 * **channelId**：选项卡实例所在的通道。
    > [!NOTE]
-   > **channelId** 对于频道选项卡是可选的。 但是，如果你想要保持通道和静态选项卡上的实现相同，则建议这样做。
+   > **channelId** 是频道选项卡的可选选项。 但是，如果要在通道和静态选项卡之间保持相同的实现，则建议执行此操作。
 * **title**：在聊天面板中向用户显示的标题。
 
-大部分这些值也可从 API 中 `getContext` 检索。
+这些值中的大部分也可以从 API 中 `getContext` 检索。
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});
@@ -48,9 +48,9 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 下图显示了对话面板：
 
-![对话子实体 - 开始对话](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+![对话子实体 - 启动对话](~/assets/images/tabs/conversational-subentities/start-conversation.png)
 
-如果用户启动对话，则侦听该事件的回调以检索和保存 **conversationId 很重要**：
+如果用户启动对话，请务必侦听该事件的回调以检索并保存 **conversationId**：
 
 ```javascript
 microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
@@ -58,31 +58,31 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 };
 ```
 
-对象 `conversationResponse` 包含与已启动的对话有关的信息。 建议您保存此响应对象的所有属性，供以后使用。
+该 `conversationResponse` 对象包含与已启动的对话相关的信息。 建议保存此响应对象的所有属性供以后使用。
 
 ## <a name="continue-a-conversation"></a>继续对话
 
-开始对话后，后续调用`openConversation()`需要，同时提供与开始新对话中相同的输入，但还包括 [](#start-a-new-conversation)**conversationId**。 将在视图中为具有相应对话的用户打开对话面板。 用户可以实时查看新邮件或传入邮件。
+会话启动后，需要后续调用 `openConversation()` ，同时提供与 [开始新会话](#start-a-new-conversation)时相同的输入，但也包括 **conversationId**。 会话面板将打开，供查看相应对话的用户使用。 用户可以实时查看新消息或传入消息。
 
-下图显示了包含相应对话的对话面板：
+下图显示了具有相应对话的对话面板：
 
 ![对话子实体 - 继续对话](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
 
 ## <a name="enhance-a-conversation"></a>增强对话
 
-选项卡必须包含指向 [你的子项的深层链接，这一点很重要](~/concepts/build-and-test/deep-links.md)。 例如，用户从频道对话中选择 Tab 键深度链接。 预期行为是接收深层链接，打开该子级，然后打开该子级的对话面板。
+选项卡包含 [到子实体的深层链接](~/concepts/build-and-test/deep-links.md)非常重要。 例如，用户从频道对话中选择选项卡小鸡的深层链接。 预期行为是接收深层链接，打开该子实体，然后打开该子实体的对话面板。
 
-若要支持"个人"或"静态"选项卡中的对话子项，则不必在实现中更改任何内容。 我们仅支持从已固定的频道选项卡开始或继续对话。 通过支持静态选项卡，您可以为用户提供一个位置，以便与您的所有子项进行交互。 在静态选项卡`subEntityId``entityId``channelId`中打开对话视图时，保存 、 和 选项卡最初在频道中创建时，必须拥有正确的属性。
+若要从个人或静态选项卡支持对话子实体，无需更改实现中的任何内容。 我们仅支持从已固定的频道选项卡开始或继续对话。 支持静态选项卡可为用户提供单个位置，以便与所有子实体进行交互。 在静态选项卡中打开对话视图时，`entityId``channelId`务必保存`subEntityId`选项卡，并在最初在通道中创建选项卡时具有正确的属性。
 
 ## <a name="close-a-conversation"></a>关闭对话
 
-可以通过调用 函数手动关闭对话 `closeConversation()` 视图。
+可以通过调用 `closeConversation()` 函数手动关闭对话视图。
 
 ```javascript
 microsoftTeams.conversations.closeConversation();
 ```
 
-还可以在对话视图被用户关闭时侦听事件。
+当用户关闭对话视图时，还可以侦听事件。
 
 ```javascript
 microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
@@ -94,7 +94,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | 示例名称 | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|创建"对话"选项卡| Microsoft Teams创建对话选项卡的选项卡示例应用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|“创建对话”选项卡| Microsoft Teams选项卡示例应用，用于演示“创建对话”选项卡。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>后续步骤
 
@@ -105,6 +105,6 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 * [Teams选项卡](~/tabs/what-are-tabs.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
-* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [创建通道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 * [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)

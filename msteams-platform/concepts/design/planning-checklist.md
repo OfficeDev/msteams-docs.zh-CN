@@ -5,12 +5,12 @@ description: 规划应用时需要考虑的问题、了解用户及其需求、�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765930"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104306"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams 应用规划清单
 
@@ -78,7 +78,7 @@ ms.locfileid: "63765930"
 | # | 考虑… |
 | --- | --- |
 | 1 | 当用户首次在频道中配置选项卡时会发生什么情况? |
-| 2 | 如果使用消息传递扩展共享卡片，是否有必要向了解详细信息页面添加一个小链接，以帮助向用户介绍你的应用还可以执行哪些操作? |
+| 2 | 如果使用消息扩展共享卡片，是否有必要向了解详细信息页面添加一个小链接，以帮助向用户介绍你的应用还可以执行哪些操作？ |
 | 3 | 你是否希望大多数人已经对你的应用有了一些了解，或者已经在其他情况下使用过你的服务? |
 | 4 | 他们是否在事先不知情的情况下进入你的应用? |
 

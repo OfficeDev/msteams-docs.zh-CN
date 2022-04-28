@@ -1,39 +1,39 @@
 ---
 title: Teams 会议应用
 author: surbhigupta
-description: 基于参与者和用户角色的Teams会议中的应用概述
+description: 基于参与者和用户角色的 Teams 会议中的应用概述
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: medium
-keywords: teams 应用会议用户参与者角色 api
-ms.openlocfilehash: cdccc6eafdfad25b813ca08419981aec1a9ce18a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: teams 应用会议用户参与者角色 API
+ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103297"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111302"
 ---
 # <a name="apps-for-teams-meetings"></a>Teams 会议应用
 
 会议可实现协作、合作、明智的沟通和共享反馈。 会议应用可以为会议生命周期的每个阶段提供用户体验。 会议生命周期包括会议前、会议内和会议后应用体验，具体取决于与会者的状态。
 
-用户可以在会议期间使用日历中的选项卡库访问应用，例如：
+用户可以使用日历中的选项卡库在会议期间访问应用，例如：
 
-* 预上演看板。
+* 预暂存看板。
 * 启动会议内可操作对话框。
-* 创建会后调查。
+* 创建会议后调查。
 
-下图介绍了会议应用扩展性功能：
+下图提供了会议应用扩展性功能的概念：
 
 ![会议应用可扩展性](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
-本文概述了会议应用的扩展性、API 引用、为会议启用和配置应用，以及Teams中的自定义“一起模式”场景。
+本文概述了 Teams 中的会议应用扩展性、API 参考、为会议启用和配置应用以及自定义“在一起”模式场景。
 
-通过使用会议扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，可在其中集成选项卡、机器人和消息扩展。 可以识别各种参与者角色和用户类型、获取会议事件并生成会议内对话框。
+通过使用会议扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，你可以在其中集成选项卡、机器人和消息扩展。 可以识别各种参与者角色和用户类型、获取会议事件并生成会议内对话框。
 
-若要使用会议应用自定义Teams，请通过更新应用清单并为会议方案配置应用，为Teams会议启用应用。
+若要使用会议应用自定义 Teams，请通过更新应用清单并配置用于会议方案的应用来为 Teams 会议启用应用。
 
-新的自定义“一起模式”场景功能使用户能够在一个位置与其团队进行协作。
+新的自定义“协同模式”场景功能使用户能够在一个位置与其团队进行协作。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -42,8 +42,8 @@ ms.locfileid: "65103297"
 
 ## <a name="see-also"></a>另请参阅
 
-* [设计Microsoft Teams会议扩展](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [设计 Microsoft Teams 会议扩展](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [会议应用 API 参考 - Teams](~/apps-in-teams-meetings/api-references.md)
-* [自定义“一起”模式场景](~/apps-in-teams-meetings/teams-together-mode.md)
-* [为Teams会议启用和配置应用](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [自定义全体模式场景](~/apps-in-teams-meetings/teams-together-mode.md)
+* [为 Teams 会议启用和配置应用](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [会议生命周期](meeting-app-extensibility.md#meeting-lifecycle)

@@ -4,13 +4,13 @@ author: surbhigupta
 description: 了解如何使用代码示例和示例从Microsoft Teams应用中的消息扩展响应搜索命令
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: f02db887a83965eeaac9e905fd20b34f79b34a68
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104502"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111932"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 

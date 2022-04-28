@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 62bf3eb9534f0f113c0c1ec4877859ebd22e9bce
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501940"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104530"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
@@ -29,13 +29,13 @@ ms.locfileid: "63501940"
 >
 > 以前，可通过在应用磁贴上选择省略号来复制链接。 借助更新的 Teams 应用商店体验，你将从应用的详细信息选项卡访问同一内容。 此更新将于 2022 年 3 月 1 日正式发布 (GA)。
 
-可以在合作伙伴中心中将更改提交到应用（例如新增功能，甚至元数据）。 这些更改需要新的评审过程。
+可以在合作伙伴中心中将更改提交到应用（例如新增功能，甚至元数据）。这些更改需要新的评审过程。
 
 发布更新时，请确保满足以下要求：
 
 * 请勿更改应用 ID。
 * 递增应用的版本号。
-* 在合作伙伴中心中，不要选择“**添加新应用**”来执行更新。 请改为转到应用的页面。
+* 在合作伙伴中心中，不要选择“**添加新应用**”来执行更新。请改为转到应用的页面。
 
 ### <a name="app-updates-requiring-user-consent"></a>需要用户同意的应用更新
 
@@ -46,11 +46,11 @@ ms.locfileid: "63501940"
 * 更改机器人 ID。
 * 修改机器人的单向通知配置。
 * 修改机器人对上传和下载文件的支持。
-* 添加或删除消息传递扩展。
+* 添加或删除邮件扩展。
 * 添加个人选项卡。
 * 添加频道和群组选项卡。
 * 添加连接器。
-* 修改与 Microsoft Azure Active Directory (Azure AD) 应用注册相关的配置。 有关更多信息，请参阅[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* 修改与 Microsoft Azure Active Directory (Azure AD) 应用注册相关的配置。有关详细信息，请参阅 [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ## <a name="fix-issues-with-your-published-app"></a>修复已发布应用的问题
 

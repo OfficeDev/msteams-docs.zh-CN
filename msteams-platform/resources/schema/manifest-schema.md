@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: 0c2dccd3533ff5115fe28a09dee2304a56287413
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706149"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104005"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -535,25 +535,25 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选**— 数组
 
-定义应用的消息传递扩展。
+定义应用的消息扩展。
 
 > [!NOTE]
-> 已从"撰写扩展"更改了该功能的名称到"消息传递扩展>在 2017 年 11 月，但清单名称保持不变，以便现有扩展继续运行。
+> 2017 年 11 月，该功能的名称已从“撰写扩展”更改为“消息扩展”，但清单名称保持不变，以便现有扩展可以继续运行。
 
-该项是一个数组（最大值为一个元素），其中所有元素的类型。 `object` 只有提供消息传递扩展的解决方案才需要此块。
+该项是一个数组（最大值为一个元素），其中所有元素的类型。 `object` 只有提供消息扩展的解决方案才需要此块。
 
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`botId`|string|64|✔|支持消息传递扩展的机器人的唯一 Microsoft 应用 ID，已向Bot Framework注册。 ID 可以与整体应用 ID 相同。|
-|`commands`|对象数组|10 |✔|消息传递扩展支持的命令数组。|
-|`canUpdateConfiguration`|Boolean|||一个值，该值指示用户是否可以更新消息传递扩展插件的配置。默认值：**false**。|
+|`botId`|string|64|✔|支持消息扩展的机器人的唯一 Microsoft 应用 ID，已向机器人框架注册。 ID 可以与整体应用 ID 相同。|
+|`commands`|对象数组|10 |✔|消息扩展支持的命令数组。|
+|`canUpdateConfiguration`|Boolean|||指示用户是否可以更新消息扩展插件的配置的一个值。默认值：**false**。|
 |`messageHandlers`|对象数组|5||允许在满足特定条件时调用应用的处理程序列表。|
 |`messageHandlers.type`|string|||消息处理程序的类型。必须 `"link"`。|
 |`messageHandlers.value.domains`|字符串数组|||链接消息处理程序可以注册的域数组。|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-消息传递扩展插件必须声明一个或多个最多包含 10 个命令的命令。 每个命令都显示在 Microsoft Teams 中，作为来自基于 UI 的入口点的潜在交互。
+消息扩展必须声明一个或多个命令，最多为 10 个命令。 每个命令都显示在 Microsoft Teams 中，作为来自基于 UI 的入口点的潜在交互。
 
 每个命令项都是具有以下结构的对象：
 
@@ -566,7 +566,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`initialRun`|Boolean|||布尔值指示命令最初是否在没有参数时运行。默认值为 **false**。|
 |`context`|字符串数组|3||定义可以从何处调用消息扩展插件。 `compose`、`commandBox`、`message`的任何组合。 默认值为“`["compose","commandBox"]`”。|
 |`fetchTask`|Boolean|||一个布尔值，指示它是否必须动态提取任务模块。默认值为 **false**。|
-|`taskInfo`|object|||指定使用消息传递扩展命令时要预加载的任务模块。|
+|`taskInfo`|object|||指定使用消息扩展命令时要预加载的任务模块。|
 |`taskInfo.title`|string|64 个字符||初始对话框标题。|
 |`taskInfo.width`|string|||对话框宽度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
 |`taskInfo.height`|string|||对话框高度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
@@ -809,7 +809,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 **可选** - 对象
 
 > [!NOTE]
-> 如果将 `manifestVersion` 属性设置为 1.12，则授权属性与旧版本（版本 1.11 或更低版本）的清单不兼容。 清单版本 1.12 支持授权。
+> 如果将 `manifestVersion` 属性设置为 1.12，则授权属性与清单的旧版本（版本 1.11 或更早版本）不兼容。清单版本 1.12 支持授权。
 
 指定并合并应用的授权相关信息。
 

@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: ba9588517e7b0657eef7da265844e20d8b2fbd76
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073088"
+ms.locfileid: "65104047"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,21 +22,21 @@ ms.locfileid: "65073088"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
-|2022/04/20 |  设置 CI/CD 管道 | 工具和 SDK > 用于 Visual Studio Code 的 Teams 工具包 > [设置 CI/CD 管道](toolkit/use-CICD-template.md)|
+|2022/04/20 |  设置 CI/CD 管道 | 工具和 SDK >用于 Visual Studio Code 的 Teams 工具包>[设置 CI/CD 管道](toolkit/use-CICD-template.md)|
 |2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| 从个人应用或选项卡共享到 Teams（开发者预览版） | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
 |2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
 |2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
 |2022 年 3 月 29 日 | 集成人员选取器 | “与 Teams 集成”>“[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)”|
-|2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|
+|2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 生成邮件扩展>添加链接展开功能>[在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|
 |2022 年 3 月 22 日| 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
 |2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022| 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
 |2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
-|2022/02/24| 引入了生成基于操作的消息传递扩展的分步指南 | 生成消息传递扩展 > 操作命令 > 定义操作命令 > [生成基于操作的消息传递扩展](sbs-meetingextension-action.yml)|
-|2022/02/24| 引入了生成基于搜索的消息传递扩展的分步指南 | 生成消息传递扩展 > 搜索命令 > 定义搜索命令 > [生成基于搜索的消息传递扩展](sbs-messagingextension-searchcommand.yml)|
+|2022/02/24| 引入了生成基于操作的邮件扩展的分步指南 | 生成邮件扩展>操作命令>定义操作命令>[生成基于操作的邮件扩展](sbs-meetingextension-action.yml)|
+|2022/02/24| 引入了生成基于搜索的邮件扩展的分步指南 | 生成邮件扩展>搜索命令>定义搜索命令>[生成基于搜索的邮件扩展](sbs-messagingextension-searchcommand.yml)|
 |2022/02/24| 引入了创建传出 Webhook 的分步指南 | 生成 Webhook 和连接器 > 创建传出 Webhook > [创建传出 Webhook](sbs-outgoing-webhooks.yml)|
 | 2022/02/23 |Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 |2022 年 2 月 9 日| 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人 >发送和接收文件 > [如何从机器人将文件上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
@@ -65,20 +65,20 @@ ms.locfileid: "65073088"
 |2022/04/26|使用机器人卸载个人应用的行为 | 生成机器人>机器人对话>[使用机器人在个个人应用程序中卸载行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |2022/04/22| 针对盈利应用的测试预览 | 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 |2022/04/22| 应用内购买流，用于盈利应用 | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-|2022/04/20 |  设置 CI/CD 管道 | 工具和 SDK > 用于 Visual Studio Code 的 Teams 工具包 > [设置 CI/CD 管道](toolkit/use-CICD-template.md)|
+|2022/04/20 |  设置 CI/CD 管道 | 工具和 SDK >用于 Visual Studio Code 的 Teams 工具包>[设置 CI/CD 管道](toolkit/use-CICD-template.md)|
 |2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
 |2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
 |2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
 |2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
 |2022 年 3 月 29 日 |集成人员选取器 | “与 Teams 集成”>“[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)”
-|2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 建立信息传递扩展 > 添加链接展开功能 > [在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|  
+|2022 年 3 月 23 日| 介绍了在 Teams 中使用机器人展开链接的分步指南 | 生成邮件扩展>添加链接展开功能>[在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|  
 |2022 年 3 月 22 日| 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
 |2022 年 3 月 14 日| 介绍了在 Microsoft Teams 中生成和测试连接器的分步指南 | 生成 Webhook 和连接器 > 创建 Office 365 连接器 > [生成 Teams 连接器](sbs-teams-connectors.yml)|
 |03/10/2022 | 添加了有关 Moodle LMS 和 Microsoft 365 插件的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|  
 |2022/03/03 | 如何使用外部 OAuth 提供程序添加身份验证| 添加身份验证 > 选项卡 > [使用外部 OAuth 提供程序](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 2022/02/25| 引入了在 Teams 中调用任务模块的分步指南| 生成卡片和任务模块 > 生成任务模块 > 使用机器人中的任务模块 > [从 Teams 中调用任务模块](sbs-botbuilder-taskmodule.yml)|
-| 2022/02/24| 引入了生成基于操作的消息传递扩展的分步指南 | 生成消息传递扩展 > 操作命令 > 定义操作命令 > [生成基于操作的消息传递扩展](sbs-meetingextension-action.yml)|
-| 2022/02/24| 引入了生成基于搜索的消息传递扩展的分步指南 | 生成消息传递扩展 > 搜索命令 > 定义搜索命令 > [生成基于搜索的消息传递扩展](sbs-messagingextension-searchcommand.yml)|
+| 2022/02/24| 引入了生成基于操作的邮件扩展的分步指南 | 生成邮件扩展>操作命令>定义操作命令>[生成基于操作的邮件扩展](sbs-meetingextension-action.yml)|
+| 2022/02/24| 引入了生成基于搜索的邮件扩展的分步指南 | 生成邮件扩展>搜索命令>定义搜索命令>[生成基于搜索的邮件扩展](sbs-messagingextension-searchcommand.yml)|
 | 2022/02/24| 引入了创建传出 Webhook 的分步指南 | 生成 Webhook 和连接器 > 创建传出 Webhook > [创建传出 Webhook](sbs-outgoing-webhooks.yml)|
 | 2022/02/23 |Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 2022/02/18 | 为 Microsoft Teams 开发人员文档引入了广泛的术语表，可帮助你快速找到有关术语的定义 | [术语表](~/get-started/glossary.md) |
@@ -111,7 +111,7 @@ ms.locfileid: "65073088"
 |12/24/2021| 引入了授予 Tab 设备权限的分步指南 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |
 |12/23/2021| 引入使用自适应卡片创建选项卡的分步指南。| 添加身份验证>选项卡>使用 SSO 身份验证> [分步指南创建具有自适应卡片的选项卡](sbs-tab-with-adaptive-cards.yml) |
 |12/21/2021 | 已更新 Teams 工具包 3.0.0 的 JavaScript、C# 和 Node.js 模块入门。 | • 开始>[使用 JavaScript 生成第一个应用](sbs-gs-javascript.yml) <br> • 入门>使用[ C# 或 .NET 生成第一个应用](sbs-gs-csharp.yml) <br> • 入门>[使用 Node.js 生成第一个应用](sbs-gs-nodejs.yml) |
-|12/20/2021| 引入了使用单一登录的选项卡和消息传递扩展的分步指南 （SSO） | 添加身份验证>选项卡>使用 SSO 身份验证>[选项卡和邮件传递扩展的 SSO 分步指南](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
+|12/20/2021| 引入了使用单一登录 (SSO) 的选项卡和邮件扩展的分步指南 | 添加身份验证>选项卡>使用 SSO 身份验证>[选项卡和邮件扩展的 SSO 分步指南](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
 |12/20/2021| 引入了创建会议内容气泡的分步指南 | 生成 Teams 会议应用>为会议启用和配置应用> [创建会议内容气泡的分步指南](sbs-meeting-content-bubble.yml) |
 |12/09/2021| 引入了会议演示区域视图的分步指南 | 生成会议 Teams 应用>为会议启用和配置应用>[创建会议阶段视图的分步指南](sbs-meetings-stage-view.yml)|
 |12/13/2021 | 针对链接到 SaaS 产品/服务的应用引入了指南 | 发布应用>发布到 Teams 应用商店>查看应用商店验证指南>[链接到 SaaS 产品/服务的应用指南](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
@@ -208,9 +208,9 @@ ms.locfileid: "65073088"
 | -------- | --------- | ------------------ |
 | 12/26/2019 | 发送到机器人的有效负载中的 `replyToId` 参数不再加密，因此可以使用此值构造这些消息的深层链接。消息有效负载包括参数 `legacy.replyToId` 中的加密值。  |
 | 11/05/2019 | 使用 Teams JavaScript SDK 的单一登录。 | [单一登录](tabs/how-to/authentication/auth-aad-sso.md) |
-| 10/31/2019 | 已更新对话机器人和消息传递扩展文档，以反映 4.6 Bot Framework SDK。 有关 v3 SDK 的文档，请参阅"资源"部分。 | 所有机器人和消息传递扩展文档 |
+| 10/31/2019 | 已更新对话机器人和邮件扩展文档，以反映 4.6 Bot Framework SDK。 有关 v3 SDK 的文档，请参阅"资源"部分。 | 所有机器人和邮件扩展文档 |
 | 10/31/2019 | 新的文档结构和主要文章重构。 请通过创建 GitHub 问题来报告任何死链接或 404。 | 全部都一样！ |
-| 09/13/2019 | 请求机器人是从基于操作的消息传递扩展安装的。 | [使用消息传递扩展启动操作](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
+| 09/13/2019 | 请求机器人是从基于操作的邮件扩展安装的。 | [使用邮件扩展启动操作](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 08/28/2019 | 支持选项卡和连接器中的私人频道。 | [获取选项卡的上下文](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
 | 06/20/2019 | 将外部网站（从外部网站）共享到 Teams 频道。 | [共享到 Teams](~/share-to-teams.md) |
 | 05/25/2019 | 使用来自任务模块的机器人消息进行响应。 | [使用来自任务模块的机器人消息进行响应。](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
@@ -220,7 +220,7 @@ ms.locfileid: "65073088"
 | 05/20/2019 | 链接取消 (自定义 URL 预览) 。 | [链接展开](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | 适用于应用商店应用的应用程序认证计划。 | [应用程序认证](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | 应用模板现已可用 | [应用模板](~/samples/app-templates.md) |
-| 04/23/2019 | 基于操作的消息扩展现已可用。 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
+| 04/23/2019 | 基于操作的邮件扩展现已可用。 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | 创建到私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | 在选项卡上下文中显示 SKU 和 licenceType 信息。 | [选项卡上下文](~/concepts/tabs/tabs-context.md) |
 |
@@ -276,7 +276,8 @@ ms.locfileid: "65073088"
 |02/02/2022| 引入了应用清单版本 1.12 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
 |01/17/2022| 适用于移动的自适应卡片中的人员选取器  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
-|11/15/2021| 个人选项卡和可在 Outlook 和 Office 运行的消息传递扩展 | [跨 Microsoft 365 扩展 Teams 应用](~/m365-apps/overview.md) |
+|12/24/2021| 引入了授予 Tab 设备权限的分步指南 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |
+|11/15/2021| 个人选项卡和可在 Outlook 和 Office 运行的邮件扩展 | [跨 Microsoft 365 扩展 Teams 应用](~/m365-apps/overview.md) |
 |10/28/2021|可以启用机器人以使用特定于资源的许可 （RSC） 接收所有通道消息 | • 生成机器人>机器人对话>机器人对话消息>[使用 RSC 接收所有消息](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • 生成机器人>机器人对话> [机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 生成机器人>机器人对话> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • 应用清单>公共开发人员预览> [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md) |
 |06/16/2021| 聊天的特定资源许可 | • 利用 Microsoft Graph 的 Teams 数据>[特定资源许可](graph-api/rsc/resource-specific-consent.md) </br> • 测试你的应用> Microsoft Graph >[测试 Teams 中资源特定许可权限](graph-api/rsc/test-resource-specific-consent.md)|
 

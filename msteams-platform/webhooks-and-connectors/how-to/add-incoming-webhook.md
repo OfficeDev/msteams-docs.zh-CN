@@ -6,19 +6,19 @@ keywords: Teams 选项卡传出 Webhook
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685623"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104019"
 ---
 # <a name="create-an-incoming-webhook"></a>创建传入 Webhook
 
 传入 Webhook 允许外部应用程序在 Microsoft Teams 频道中共享内容。 Webhook 用作跟踪和通知的工具。 Webhook 提供唯一的 URL，用于发送 JSON 有效负载，其中包含卡格式的消息。 卡片是包含与单个主题相关的内容和操作的用户界面容器。 可以在以下功能中使用卡片：
 
 * 机器人
-* 消息传递扩展
+* 消息扩展
 * 连接器
 
 ## <a name="key-features-of-an-incoming-webhook"></a>传入 Webhook 的主要功能
@@ -39,7 +39,7 @@ ms.locfileid: "64685623"
 
 > [!NOTE]
 >
-> * Teams 机器人、消息传递扩展、传入 Webhook、Bot Framework 支持自适应卡片。 自适应卡片是可在所有平台（如 Windows、Android、iOS 等）中使用的开放式跨卡平台框架。 目前，[Teams 连接器](../../webhooks-and-connectors/how-to/connectors-creating.md)不支持自适应卡片。 但是，可以创建一个将自适应卡片发布到 Teams 频道的[流](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)。
+> * Teams 机器人、消息扩展、传入 Webhook 和机器人框架支持自适应卡片。 自适应卡片是可在所有平台（如 Windows、Android、iOS 等）中使用的开放式跨卡平台框架。 目前，[Teams 连接器](../../webhooks-and-connectors/how-to/connectors-creating.md)不支持自适应卡片。 但是，可以创建一个将自适应卡片发布到 Teams 频道的[流](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)。
 > * 有关卡片和 Webhook 的详细信息，请参阅[自适应卡片和传入 Webhook](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)。
 
 ## <a name="create-an-incoming-webhook"></a>创建传入 Webhook
@@ -95,5 +95,5 @@ Webhook 在 Teams 频道中可用。
 * [创建传出 Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [创建 Office 365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [创建和发送邮件](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [从 Web 应用共享到Teams](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [从 Web 应用共享到 Teams](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [集成 web 应用](~/samples/integrate-web-apps-overview.md)

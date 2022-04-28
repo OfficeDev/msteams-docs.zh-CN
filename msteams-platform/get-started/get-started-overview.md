@@ -4,12 +4,12 @@ description: Microsoft Teams 开发工具入门概述文档
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发工具示例
-ms.openlocfilehash: 779bd362924e30743981043a5d856986eb3faadb
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 12fea3fcbdceddfba4c0f60db2ed64b20f801284
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952294"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104355"
 ---
 # <a name="get-started"></a>入门
 
@@ -35,7 +35,7 @@ ms.locfileid: "64952294"
 |--------|-------------|--------|--------|--------|
 | 选项卡 | 全屏嵌入式 Web 体验。 | 带有 Teams 工具包扩展的 Microsoft Visual Studio Code，或 [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)（如果你更喜欢使用 CLI） | 用于核心库的 [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和用于 UI 功能的 [Teams 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) | Web 技术一般为 HTML、CSS 和 JavaScript（包括 React）。 |
 | 机器人 | 与成员交谈的聊天机器人。 | 带有 Teams 工具包扩展的 Visual Studio Code，或 [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和 [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java 和 Python。 |
-| 消息传递扩展 | 用于将外部内容插入对话或对邮件采取措施的快捷方式。 | 带有 Teams 工具包扩展的 Visual Studio Code，或 [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和 [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java 和 Python。 |
+| 消息扩展 | 用于将外部内容插入对话或对邮件采取措施的快捷方式。 | 带有 Teams 工具包扩展的 Visual Studio Code，或 [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) 和 [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java 和 Python。 |
 
 *不限于使用这些特定堆栈！*
 

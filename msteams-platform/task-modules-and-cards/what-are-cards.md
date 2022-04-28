@@ -1,15 +1,15 @@
 ---
 title: 卡片
-description: 介绍卡片及其在机器人、连接器和消息传递扩展中的使用方式
+description: 介绍卡片及其在机器人、连接器和消息扩展中的使用方式
 ms.localizationpriority: high
 keywords: 连接器机器人卡片消息传递
 ms.topic: overview
-ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398650"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104453"
 ---
 # <a name="cards"></a>卡片
 
@@ -26,13 +26,13 @@ Teams 机器人支持以下类型的卡片：
 * 缩略图卡片
 * 卡片集合
 
-可以使用 Markdown 或 HTML 向卡片添加格式文本格式，具体取决于卡片类型。 Microsoft Teams 中机器人和消息传递扩展使用的卡片，添加和响应这些卡片操作， `openUrl`、 `messageBack`、 `imBack`、 `invoke`和 `signin`。
+可以使用 Markdown 或 HTML 向卡片添加格式文本格式，具体取决于卡片类型。 Microsoft Teams 中机器人和消息扩展使用的卡片，添加和响应这些卡片操作、`openUrl`、`messageBack`、`imBack`、`invoke` 和 `signin`。
 
 Teams 在三个不同的位置使用卡片：
 
 * 连接器
 * 机器人
-* 消息传递扩展
+* 消息扩展
 
 ## <a name="cards-in-connectors"></a>连接器中的卡
 
@@ -44,9 +44,9 @@ Microsoft Bot Framework 通过添加一组预定义卡来扩展卡规范，机�
 
 Teams 中的机器人可以使用简单卡片、连接器卡或自适应卡片。 [类型卡](~/task-modules-and-cards/cards/cards-reference.md) 提供有关卡的信息，由 Teams 中的机器人支持。
 
-## <a name="cards-in-messaging-extensions"></a>邮件扩展中的卡片
+## <a name="cards-in-message-extensions"></a>消息扩展中的卡片
 
-[邮件扩展还可以](~/messaging-extensions/what-are-messaging-extensions.md)返回卡片。 邮件扩展可以使用简单卡片、连接器卡或自适应卡片。 这些卡片位于 [类型卡中](~/task-modules-and-cards/cards/cards-reference.md)。
+[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md) 还可以返回卡片。 消息扩展可以使用简单卡片、连接器卡或自适应卡片。 这些卡片位于 [类型卡中](~/task-modules-and-cards/cards/cards-reference.md)。
 
 ## <a name="types-of-cards"></a>卡片类型
 

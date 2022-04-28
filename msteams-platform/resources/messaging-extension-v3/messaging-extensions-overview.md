@@ -3,13 +3,13 @@ title: 开发消息扩展
 description: 介绍如何在Microsoft Teams中开始使用消息扩展
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: teams 消息扩展消息扩展
-ms.openlocfilehash: b1d219bbb8e79a99836ad20b35442e10ec537c4a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+keywords: teams 消息传递扩展插件消息传送扩展
+ms.openlocfilehash: 8d44ea8ffe3c265a5c65ae2e842fe4f55f950e58
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104329"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111918"
 ---
 # <a name="develop-message-extensions-for-microsoft-teams"></a>为Microsoft Teams开发消息扩展
 

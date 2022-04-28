@@ -4,12 +4,12 @@ description: 描述单一登录 (SSO)
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 身份验证 SSO Microsoft Azure Active Directory (Azure AD) 单一登录 API
-ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: d9391489c8bafafa24ba52528f5d0b8440319a55
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571318"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104418"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>对选项卡的单一登录 (SSO) 支持
 
@@ -277,7 +277,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ## <a name="step-by-step-guides"></a>分步指南
 
-* 按照[分步指南](../../../sbs-tabs-and-messaging-extensions-with-sso.yml)对选项卡和消息传递扩展进行身份验证。
+* 按照[分步指南](../../../sbs-tabs-and-messaging-extensions-with-sso.yml)对选项卡和邮件扩展进行身份验证。
 * 按照[分步指南](../../../sbs-tab-with-adaptive-cards.yml)创建具有自适应卡的选项卡。
 
 ## <a name="see-also"></a>另请参阅

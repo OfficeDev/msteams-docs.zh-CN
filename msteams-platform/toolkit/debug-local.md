@@ -5,16 +5,16 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 6fd32b35a28ae0d9b1592f82a824622000c04161
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073671"
+ms.locfileid: "65104439"
 ---
 # <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
 
-Teams 工具包有助于本地调试和预览 Teams 应用。 调试是检查、检测和更正问题或错误，以确保程序正常运行的过程。 Visual Studio Code 可以调试选项卡、自动程序、消息传递扩展和 Azure 函数。 Teams 工具包支持以下调试功能：
+Teams 工具包有助于本地调试和预览 Teams 应用。 调试是检查、检测和更正问题或错误，以确保程序正常运行的过程。 Visual Studio Code 可以调试选项卡、自动程序、邮件扩展和 Azure 函数。 Teams 工具包支持以下调试功能：
 
 * [开始调试](#start-debugging)
 * [多目标调试](#multi-target-debugging)
@@ -37,23 +37,23 @@ Teams 工具包有助于本地调试和预览 Teams 应用。 调试是检查、
 
 #### <a name="multi-target-debugging"></a>多目标调试
 
-Teams 工具包利用多目标调试功能同时调试选项卡、机器人、消息传递扩展和Azure 函数。
+Teams 工具包利用多目标调试功能同时调试选项卡、自动程序、邮件扩展和 Azure 函数。
 
 #### <a name="toggle-breakpoints"></a>切换断点
 
-可以在选项卡、自动程序、消息传递扩展和 Azure 函数的源代码上切换断点。 在 Web 浏览器中与 Teams 应用交互时，将执行断点。 下图显示了切换断点：
+可以在选项卡、自动程序、邮件扩展和 Azure 函数的源代码上切换断点。 在 Web 浏览器中与 Teams 应用交互时，将执行断点。 下图显示了切换断点：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="切换断点":::
 
 #### <a name="hot-reload"></a>热重新加载
 
-调试 Teams 应用时，可以同时更新和保存选项卡、机器人、消息传递扩展、Azure Functions 的源代码。应用将重新加载，调试器将重新附加到编程语言。
+调试 Teams 应用时，可以同时更新和保存选项卡、自动程序、邮件扩展和 Azure 函数的源代码。 应用将重新加载，调试器将重新连接到编程语言。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="源代码的热重新加载":::
 
 #### <a name="stop-debugging"></a>停止调试
 
-完成本地调试后，可以选择“**停止**”或从浮动调试工具栏“**断开**”，以停止所有调试会话并终止任务。以下图片显示了停止调试操作：
+完成本地调试后，可以选择“**停止**”或从浮动调试工具栏“**断开连接**”，以停止所有调试会话并终止任务。下图显示了停止调试操作：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="停止调试":::
 
@@ -72,7 +72,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器选项" border="false":::
 
-1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用
+1. 选择“**开始调试 (F5)**”或“**运行**”，以在调试模式下运行 Teams 应用
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="开始调试" border="false":::
 
@@ -106,7 +106,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器列表" border="false":::
 
-1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用
+1. 选择“**开始调试 (F5)**”或“**运行**”，以在调试模式下运行 Teams 应用
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="调试应用" border="false":::
 
@@ -117,7 +117,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
    > [!TIP]
    > 可以选择“**阅读更多**”，以了解Microsoft 365 开发人员计划。 打开默认 Web 浏览器，使用凭据登录到 Microsoft 365 帐户。
 
-4. 选择“**安装**”，以安装本地主机的开发证书
+4. 选择“**安装**”以安装本地主机的开发证书
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="证书" border="true":::
 
@@ -139,7 +139,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
 
 a. [启动应用服务](#starts-app-services) </br>
 b. [启动调试程序](#launches-debuggers)   </br>
-      c. [旁加载 Teams 应用](#sideloads-the-teams-app)
+      c.[旁加载 Teams 应用](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>启动应用服务
 
@@ -148,10 +148,10 @@ b. [启动调试程序](#launches-debuggers)   </br>
 |  组件 |  任务名称  | Folder |
 | --- | --- | --- |
 |  Tab |  **启动前端** |  选项卡 |
-|  自动程序或消息传递扩展 |  **启动自动程序** |  自动程序 |
+|  自动程序或邮件扩展 |  **启动自动程序** |  自动程序 |
 |  Azure Functions |  **启动后端** |  API |
 
-下图显示了运行选项卡、自动程序或消息传递扩展和 Azure 函数时，Visual Studio Code 上的“**输出****终端**”选项卡上的任务名称。
+下图显示了运行选项卡、自动程序或邮件扩展和 Azure 函数时，Visual Studio Code 上的“**输出****终端**”选项卡上的任务名称。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="启动应用服务":::
 
@@ -166,15 +166,15 @@ b. [启动调试程序](#launches-debuggers)   </br>
 |  组件 |  调试配置名称  | 调试配置类型 |
 | --- | --- | --- |
 |  Tab |  **连接到前端 (Edge)** 或  **连接到前端 (Chrome)**  |  pwa-msedge 或 pwa-chrome  |
-|  自动程序或消息传递扩展 |   **连接到自动程序** |  pwa 节点 |
+|  自动程序或邮件扩展 |   **连接到自动程序** |  pwa 节点 |
 | Azure Functions |   **连接到后端** |  pwa 节点 |
 
 下表列出了具有自动程序应用（不含选项卡应用）项目的调试配置名称和类型：
 
 |  组件 |  调试配置名称  | 调试配置类型  |
 | --- | --- | --- |
-|  自动程序或消息传递扩展  | **启动自动程序 (Edge)** 或 **启动自动程序 (Chrome)**  |   pwa-msedge 或 pwa-chrome  |
-|  自动程序或消息传递扩展  |   **连接到自动程序** |  pwa 节点  |
+|  自动程序或邮件扩展  | **启动自动程序 (Edge)** 或 **启动自动程序 (Chrome)**  |   pwa-msedge 或 pwa-chrome  |
+|  自动程序或邮件扩展  |   **连接到自动程序** |  pwa 节点  |
 |  Azure Functions |  **连接到后端** |  pwa 节点 |
 
 #### <a name="sideloads-the-teams-app"></a>旁加载 Teams 应用
@@ -236,19 +236,19 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 
 1. 对于选项卡，请在 `tabs/package.json` 中更新 `dev:teamsfx` 脚本
 
-1. 对于自动程序或消息传递扩展，请在 `bot/package.json` 中更新 `dev:teamsfx` 脚本
+1. 对于自动程序或邮件扩展，请在 `bot/package.json` 中更新 `dev:teamsfx` 脚本
 
 1. 对于 Azure 函数，请在 `api/package.json` 中更新 `dev:teamsfx` 脚本，并为 TypeScript 更新 `watch:teamsfx` 脚本
 
    > [!NOTE]
-   > 目前，不支持自定义选项卡、自动程序、消息传递扩展应用和 Azure 函数端口。
+   > 当前不支持自定义选项卡、自动程序、邮件扩展应用和 Azure 函数端口。
 
 </details>
 
 <details>
 <summary><b>添加环境变量</b></summary>
 
-你可以将环境变量添加到选项卡、自动程序、消息传递扩展和 Azure 函数的 `.env.teamsfx.local`  文件。 Teams 工具包加载添加的环境变量，以在本地调试期间启动服务。
+你可以将环境变量添加到选项卡、自动程序、邮件扩展和 Azure 函数的 `.env.teamsfx.local` 文件。 Teams 工具包加载添加的环境变量，以在本地调试期间启动服务。
 
  > [!NOTE]
  > 确保在添加新环境变量后启动新的本地调试，因为环境变量不支持热重新加载。
@@ -259,7 +259,7 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 <summary><b>调试部分组件</b></summary>
 
 
-Teams 工具包利用 Visual Studio Code 多目标调试功能，对选项卡、自动程序、消息传递扩展和 Azure 函数同时调试。 可以更新 `.vscode/launch.json` 和 `.vscode/tasks.json` 来调试部分组件。 如果只想在 Azure 函数项目中调试选项卡和自动程序，请使用以下步骤：
+Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选项卡、自动程序、邮件扩展和 Azure 函数。 可以更新 `.vscode/launch.json` 和 `.vscode/tasks.json` 来调试部分组件。 如果只想在 Azure 函数项目中调试选项卡和自动程序，请使用以下步骤：
 
 1. 注释 **连接到自动程序**，**从 `.vscode/launch.json` 中的调试组件连接到后端**
 

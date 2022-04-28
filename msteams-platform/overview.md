@@ -6,22 +6,22 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 14f74a89122d3622f6abfecaff80bdab6f63a71a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 47d9f7af804f8d060dbb03b5d20eb672582899f1
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398748"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104495"
 ---
 # <a name="teams-app-that-fits"></a>适合的 Teams 应用
 
-Microsoft Teams 提供由 Microsoft 或外部服务提供的应用集合。 Teams 应用可以是选项卡、机器人或消息传递扩展，也可以是这三者的任意组合。 这些应用扩展了 Teams 协作体验的价值。
+Microsoft Teams 提供由 Microsoft 或外部服务提供的应用集合。 Teams 应用可以是选项卡、机器人或消息扩展，也可以是这三者的任意组合。 这些应用扩展了 Teams 协作体验的价值。
 
-应用可以是个人应用，也可以是共享应用。 个人应用可实现一对一通信，而共享应用则允许多个用户共享应用空间以进行协作。
+应用可以是个人或共享应用。个人应用可实现一对一通信，而共享应用则允许多个用户共享应用空间以进行协作。
 
 ## <a name="driving-organizational-goals"></a>推动组织目标
 
-协作和通信是组织的关键所在。 简洁的通信、与所需服务的集成以及随开即用辅助功能是组织越来越多地选择依赖性应用的原因。
+协作和通信是组织的关键所在。简洁的通信、与所需服务的集成以及即时辅助功能是组织越来越多地选择依赖应用的原因。
 
 组织使用它来与其客户联系、提供服务并共享信息。 但这还不是全部! 应用是人们协同工作的会议场所。 合适的应用有助于构建一个适合外部和内部业务需求的有凝聚力的环境。
 
