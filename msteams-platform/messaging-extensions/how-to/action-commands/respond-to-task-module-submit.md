@@ -1,48 +1,48 @@
 ---
 title: 响应任务模块提交操作
 author: surbhigupta
-description: 介绍如何通过主动邮件、另一个任务模块、自适应卡片自动程序等使用代码示例从邮件扩展操作命令响应任务模块提交操作。
+description: 介绍如何使用“代码”示例，通过“主动消息”、“另一个任务模块”、“自适应卡片机器人”等消息扩展操作命令响应任务模块提交操作。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8b837c20a04ab3a9ba55efeb31547e990d74d44a
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4cd42fec6209b79a43ba6cc7489d5ac9afea3759
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452709"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104474"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-本文档将指导你应用如何响应操作命令，如用户的任务模块提交操作。
-在用户提交任务模块后，Web `composeExtension/submitAction` 服务会收到一条调用消息，该消息包含命令 ID 和参数值。 你的应用有五秒钟时间要响应调用，否则用户会收到一条错误消息"无法访问该应用"，要调用的任何答复都由 Teams 客户端忽略。
+本文档指导你了解应用如何响应操作命令，例如用户的任务模块提交操作。
+用户提交任务模块后，Web 服务将收到具有 `composeExtension/submitAction` 命令 ID 和参数值的调用消息。 应用有五秒钟的时间响应调用，否则用户将收到无法 **访问应用** 的错误消息，Teams客户端将忽略任何要调用的答复。
 
-有以下选项可以响应：
+你可以使用以下选项来响应：
 
-* 无响应：使用提交操作在外部系统中触发进程，不向用户提供任何反馈。 它对于长时间运行的过程和提供反馈非常有用。 例如，可以使用主动消息 [提供反馈](~/bots/how-to/conversations/send-proactive-messages.md)。
-* [另一个](#respond-with-another-task-module)任务模块：作为多步骤交互的一部分，可以使用其他任务模块进行响应。
-* [卡片](#respond-with-a-card-inserted-into-the-compose-message-area)响应：可以使用用户可与之交互或插入邮件的卡片进行响应。
-* [自动程序中的自适应卡片](#bot-response-with-adaptive-card)：将自适应卡片直接插入对话中。
+* 无响应：使用提交操作在外部系统中触发进程，不向用户提供任何反馈。 它对于长时间运行的进程以及交替提供反馈非常有用。 例如，可以使用 [主动消息](~/bots/how-to/conversations/send-proactive-messages.md)提供反馈。
+* [另一个任务模块](#respond-with-another-task-module)：可以使用附加的任务模块作为多步骤交互的一部分进行响应。
+* [卡片响应](#respond-with-a-card-inserted-into-the-compose-message-area)：可以使用用户可以与之交互或插入到消息中的卡片进行响应。
+* [来自机器人的自适应卡片](#bot-response-with-adaptive-card)：将自适应卡片直接插入会话中。
 * [请求用户进行身份验证](~/messaging-extensions/how-to/add-authentication.md)。
 * [请求用户提供其他配置](~/get-started/first-message-extension.md)。
 
-对于身份验证或配置，在用户完成此过程后，原始调用将重新发至 Web 服务。 下表根据消息扩展的 `commandContext` 调用位置显示哪些类型的响应可用：
+对于身份验证或配置，用户完成此过程后，原始调用会对 Web 服务表示不满。 下表显示根据消息扩展插件的调用位置 `commandContext` 可用的响应类型：
 
-|响应类型 | 撰写 | 命令栏 | 消息 |
+|响应类型 | 撰写 | 命令栏 | 邮件 |
 |--------------|:-------------:|:-------------:|:---------:|
 |卡片响应 | ✔ | ✔ | ✔ |
 |另一个任务模块 | ✔ | ✔ | ✔ |
-|带自适应卡片的自动程序 | ✔ | x | ✔ |
+|带自适应卡片的机器人 | ✔ | x | ✔ |
 | 无响应 | ✔ | ✔ | ✔ |
 
 > [!NOTE]
 >
-> * 当你通过 ME 卡 **选择 Action.Submit** 时，它会发送名称为 **composeExtension** 的调用活动，其中值等于常规有效负载。
-> * 选择" **Action.Submit** through conversation"时，将收到名称为 **onCardButtonClicked** 的邮件活动，其中值等于常规有效负载。
+> * 通过 ME 卡选择 **Action.Submit** 时，它会发送名称 **composeExtension** 的调用活动，其中值等于通常的有效负载。
+> * 选择 **Action.Submit** （通过对话提交）时，会收到名为 **onCardButtonClicked** 的消息活动，其中值等于通常的有效负载。
 
-如果应用包含对话机器人，则安装对话中的机器人，然后加载任务模块。 自动程序可用于获取任务模块的其他上下文。 若要安装对话机器人，请参阅 [请求安装对话机器人](create-task-module.md#request-to-install-your-conversational-bot)。
+如果应用包含会话机器人，请在会话中安装机器人，然后加载任务模块。 机器人可用于获取任务模块的其他上下文。 若要安装聊天机器人，请参阅 [请求安装聊天机器人](create-task-module.md#request-to-install-your-conversational-bot)。
 
 ## <a name="the-submitaction-invoke-event"></a>submitAction 调用事件
 
@@ -72,7 +72,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是您收到的 JSON 对象的示例。 参数 `commandContext` 指示从何处触发邮件扩展。 对象 `data` 包含作为参数的表单上的字段以及用户提交的值。 JSON 对象突出显示最相关的字段。
+这是收到的 JSON 对象的示例。 该 `commandContext` 参数指示从何处触发消息扩展。 该 `data` 对象包含窗体上的字段作为参数，以及用户提交的值。 JSON 对象突出显示最相关的字段。
 
 ```json
 {
@@ -100,9 +100,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>在撰写邮件区域中插入卡片进行响应
+## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>使用插入撰写消息区域的卡片进行响应
 
-响应请求的最常见 `composeExtension/submitAction` 方法为将卡片插入撰写邮件区域。 用户将卡片提交到对话。 有关使用卡片的信息，请参阅 [卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
+响应 `composeExtension/submitAction` 请求的最常见方式是将卡片插入撰写消息区域。 用户将卡片提交到会话。 有关使用卡片的详细信息，请参阅 [卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -191,42 +191,42 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-with-another-task-module"></a>使用另一个任务模块响应
+## <a name="respond-with-another-task-module"></a>使用另一个任务模块进行响应
 
-您可以选择使用附加任务 `submitAction` 模块来响应事件。 当你需要：
+可以选择使用附加的任务模块来 `submitAction` 响应事件。 当需要时，这非常有用：
 
 * 收集大量信息。
 * 根据用户输入动态更改信息集合。
-* 验证用户提交的信息，如果出现错误，则重新发送包含错误消息的表单。
+* 验证用户提交的信息，并在出现错误时使用错误消息重新发送表单。
 
-响应方法与响应 [初始事件的方法 `fetchTask` 相同](~/messaging-extensions/how-to/action-commands/create-task-module.md)。 如果你使用的是 Bot Framework SDK，这两个提交操作具有相同的事件触发器。 为此，您必须添加确定正确响应的逻辑。
+响应方法与 [响应初始 `fetchTask` 事件](~/messaging-extensions/how-to/action-commands/create-task-module.md)相同。 如果使用 Bot Framework SDK，则两个提交操作都使用相同的事件触发器。 若要使此工作正常工作，必须添加用于确定正确响应的逻辑。
 
-## <a name="bot-response-with-adaptive-card"></a>使用自适应卡片的自动程序响应
+## <a name="bot-response-with-adaptive-card"></a>使用自适应卡片的机器人响应
 
 > [!NOTE]
-> 使用自适应卡片 `bot` 获取机器人响应的先决条件是，必须将对象添加到应用清单，并定义自动程序所需的作用域。 使用与自动程序的邮件扩展相同的 ID。
+> 使用自适应卡获取机器人响应的先决条件是，必须将对象添加 `bot` 到应用清单，并定义机器人所需的范围。 使用与机器人的消息扩展相同的 ID。
 
-您还可以通过自动程序 `submitAction` 将带自适应卡片的消息插入频道来响应 。 用户可以在提交邮件之前预览邮件。 当你在创建自适应卡片响应之前从用户收集信息，或者当你在某人与之交互后更新卡片时，这非常有用。
+还可以通过使用机器人将带有自适应卡片的消息插入通道来响应 `submitAction` 。 用户可以在提交邮件之前预览消息。 在创建自适应卡片响应之前或在有人与卡片交互后更新卡片时，从用户收集信息时，这非常有用。
 
-以下方案显示应用 Polly 如何配置轮询，而不在频道对话中包括配置步骤：
+以下方案演示应用 Polly 如何配置轮询，而不包含频道对话中的配置步骤：
 
-配置轮询：
+若要配置轮询，请执行以下操作：
 
 1. 用户选择消息扩展以调用任务模块。
 1. 用户使用任务模块配置轮询。
-1. 提交任务模块后，应用使用提供的信息将轮询生成为自适应卡片 `botMessagePreview` ，并将其作为响应发送给客户端。
-1. 然后，用户可以预览自适应卡片消息，然后机器人将其插入频道。 如果应用不是频道成员，请选择添加 `Send` 它。
+1. 提交任务模块后，应用使用提供的信息将轮询生成为自适应卡片，并将其作为 `botMessagePreview` 响应发送给客户端。
+1. 然后，用户可以在机器人将其插入通道之前预览自适应卡片消息。 如果应用不是通道的成员，请选择 `Send` 添加它。
 
     > [!NOTE]
     >
-    > * 用户还可以选择邮件 `Edit` ，以将其返回到原始任务模块。
-    > * 与自适应卡片的交互在发送邮件之前会更改消息。
+    > * 用户还可以选择 `Edit` 该消息，该消息会将其返回到原始任务模块。
+    > * 与自适应卡片的交互会在发送消息之前更改消息。
     >
-1. 用户选择自动程序 `Send` 后，将消息发送到频道。
+1. 用户选择 `Send` 机器人后，将消息发布到频道。
 
 ## <a name="respond-to-initial-submit-action"></a>响应初始提交操作
 
-任务模块必须使用自动 `composeExtension/submitAction` 程序发送到频道的卡片预览来响应初始消息。 用户可以在发送前验证卡片，如果尚未安装自动程序，请尝试在对话中安装机器人。
+任务模块必须使用机器人发送到通道的卡片预览来响应初始 `composeExtension/submitAction` 消息。 用户可以在发送之前验证卡片，如果尚未安装机器人，则尝试在会话中安装机器人。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -312,7 +312,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 > [!NOTE]
 >
-> * 必须 `activityPreview` 包含仅包含 `message` 一个自适应卡片附件的活动。 该值 `<< Card Payload >>` 是你想要发送的卡片的占位符。
+> * 该 `activityPreview` 活动必须仅包含一个 `message` 自适应卡片附件的活动。 该 `<< Card Payload >>` 值是要发送的卡片的占位符。
 
 ```json
 {
@@ -335,7 +335,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="the-botmessagepreview-send-and-edit-events"></a>botMessagePreview 发送和编辑事件
 
-消息扩展必须响应两种新调用`composeExtension/submitAction`类型，其中 和 `value.botMessagePreviewAction = "send"``value.botMessagePreviewAction = "edit"`。
+消息扩展插件必须响应两种新类型的 `composeExtension/submitAction` 调用，其中 `value.botMessagePreviewAction = "send"`和 `value.botMessagePreviewAction = "edit"`。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -406,12 +406,12 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>响应 botMessagePreview 编辑
 
-如果用户在发送前编辑卡片，则 **通过选择"** 编辑"，将收到一个 `composeExtension/submitAction` 调用 `value.botMessagePreviewAction = edit`。 通过返回你发送的任务模块 `composeExtension/fetchTask` 来响应开始交互的初始调用。 这允许用户通过重新输入原始信息来启动该过程。 使用可用信息更新任务模块，以便用户无需从头开始填写所有信息。
-有关响应初始事件的信息 `fetchTask` ，请参阅 [响应初始 `fetchTask` 事件](~/messaging-extensions/how-to/action-commands/create-task-module.md)。
+如果用户在发送前编辑卡片，则通过选择 **“编辑**”，你将收到一个 `composeExtension/submitAction` 调用 `value.botMessagePreviewAction = edit`。 响应方法是返回发送的任务模块，以响应开始交互的初始 `composeExtension/fetchTask` 调用。 这允许用户通过重新输入原始信息来启动进程。 使用可用信息更新任务模块，使用户无需从头开始填写所有信息。
+有关响应初始 `fetchTask` 事件的详细信息，请参阅 [对初始 `fetchTask` 事件的响应](~/messaging-extensions/how-to/action-commands/create-task-module.md)。
 
 ### <a name="respond-to-botmessagepreview-send"></a>响应 botMessagePreview 发送
 
-在用户选择"发送 **"后**，您将收到一个 `composeExtension/submitAction` 调用 `value.botMessagePreviewAction = send`。 Web 服务必须创建一条带自适应卡片的主动消息并将其发送到对话，并回复调用。
+用户选择 **“发送**”后，将收到一个 `composeExtension/submitAction` 调用 `value.botMessagePreviewAction = send`。 Web 服务必须使用自适应卡片创建主动消息并将其发送到会话，并回复调用。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -509,7 +509,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-您收到类似于 `composeExtension/submitAction` 以下的新邮件：
+你会收到类似于以下内容的新 `composeExtension/submitAction` 消息：
 
 ```json
 {
@@ -542,15 +542,15 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="user-attribution-for-bots-messages"></a>自动程序消息的用户属性
+### <a name="user-attribution-for-bots-messages"></a>机器人消息的用户归属
 
-在机器人代表用户发送邮件的情况下，将消息归为该用户有助于参与，并展示更自然的交互流。 此功能允许你将来自自动程序的邮件属性属性给代表其发送该邮件的用户。
+在机器人代表用户发送消息的情况下，将消息归于该用户有助于参与并展示更自然的交互流。 使用此功能，可以将来自机器人的消息属性为代表其发送消息的用户。
 
-在下图的左侧是无用户属性的自动程序发送的卡片消息，右侧是机器人发送的具有用户属性的卡片。
+在下图中，左侧是机器人在没有用户归因的情况下发送的卡片消息，右侧是机器人通过用户归属发送的卡片。
 
-![用户属性自动程序](../../../assets/images/messaging-extension/user-attribution-bots.png)
+![用户归属机器人](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
-若要在团队中使用用户属性，必须在`OnBehalfOf`发送到团队的有效负载中添加 mention `ChannelData` `Activity` Teams。
+若要在团队中使用用户归因，必须在发送到`ChannelData`Teams的有效负载中`Activity`添加`OnBehalfOf`提及实体。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
 
@@ -586,23 +586,23 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-#### <a name="details-of--onbehalfof-entity-schema"></a>`OnBehalfOf`实体架构的详细信息
+#### <a name="details-of--onbehalfof-entity-schema"></a>实体架构的  `OnBehalfOf` 详细信息
 
-以下部分介绍了 Array 中的实体 `OnBehalfOf` ：
+以下部分是数组中实体的 `OnBehalfOf` 说明：
 
 |字段|类型|说明|
 |:---|:---|:---|
-|`itemId`|整数|描述项目的标识。 其值必须为 `0`。|
-|`mentionType`|字符串|描述"人"的提及。|
-|`mri`|字符串|邮件资源 (MRI) 代表其发送邮件的人的 MRI 标识符。 邮件发件人名称将显示为" 到\<user\> \<bot name\>"。|
-|`displayName`|字符串|人员的姓名。 在名称解析不可用时用作回退。|
+|`itemId`|整数|描述项的标识。 它的值必须是 `0`。|
+|`mentionType`|字符串|描述对“人员”的提及。|
+|`mri`|String|消息资源标识符 (代表其发送消息的人员的 MRI) 。 消息发件人名称将显示为“\<user\> 通过 \<bot name\>”。|
+|`displayName`|String|人员的姓名。 在名称解析不可用的情况下用作回退。|
   
 ## <a name="code-sample"></a>代码示例
 
 | 示例名称           | 说明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams消息扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams消息扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>后续步骤
 

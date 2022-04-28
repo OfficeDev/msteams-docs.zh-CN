@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826990"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103970"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -162,7 +162,7 @@ ms.locfileid: "64826990"
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension)。
 
-对于使用 Microsoft Azure 机器人服务的应用 (如机器人和消息传递扩展)， 则必须遵循 Microsoft [在线服务条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46) 中定义的所有要求。
+对于使用 Microsoft Azure 机器人服务的应用（如机器人和消息扩展），必须遵循 Microsoft [在线服务条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)中定义的所有要求。
 
 机器人必须始终请求上传文件的权限并显示确认消息。
 
@@ -236,7 +236,7 @@ Teams 应用必须在合理的时间范围内响应，或显示正在加载或�
 
 * 选项卡必须在两秒钟内响应，或显示正在加载的消息或警告。
 * 机器人必须在两秒内响应用户命令或显示键入指示器。
-* 消息传递扩展必须在两秒钟内响应用户命令。
+* 消息扩展必须在两秒钟内响应用户命令。
 * 通知必须在用户操作后两秒钟内显示。
 
 ## <a name="app-package-and-store-listing"></a>应用包和应用商店列表
@@ -261,7 +261,7 @@ Teams 应用必须在合理的时间范围内响应，或显示正在加载或�
 Teams 应用清单定义应用的配置。
 
 * 清单必须符合公开发布的清单架构。 有关详细信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。 请勿使用清单的预览版本提交应用。
-* 如果应用包括机器人或消息传递扩展，则应用清单中的详细信息必须与机器人框架元数据保持一致，包括机器人名称、徽标、隐私策略链接和服务条款链接。
+* 如果应用包括机器人或消息扩展，则应用清单中的详细信息必须与机器人框架元数据保持一致，包括机器人名称、徽标、隐私策略链接和服务条款链接。
 * 如果应用使用 Azure Active Directory 进行身份验证，请在清单中包括 Microsoft Azure Active Directory (Azure AD) 应用程序（客户端）ID。 更多相关信息，请参阅 [清单参考](~/resources/schema/manifest-schema.md#webapplicationinfo)。
 
 ### <a name="app-icons"></a>应用图标
@@ -274,7 +274,7 @@ Teams 应用清单定义应用的配置。
 * 图标的颜色版本必须为 192x192 像素。 图标符号可以是任何颜色，但必须位于纯色或完全透明的方形背景上。
 * 以下情况中将显示图标的轮廓版本：
   * 你的应用正在使用并 **托管** 在 Teams 左侧应用栏上。
-  * 当用户固定你的应用的消息传递扩展时。
+  * 当用户固定应用的消息扩展时。
 
 * 轮廓版本必须为 32x32 像素，并且可以是白色（背景透明）或透明（白色背景）。 图标不得在符号周围有任何额外填充。
 
@@ -789,7 +789,7 @@ Teams 应用清单定义应用的配置。
 * 如果你的应用功能需要更改设置，请包含一个 **设置** 选项卡。 [*建议修复*]
 * 选项卡必须遵循 Teams 交互设计，例如页内导航、对话框位置和使用、信息层次结构等。有关详细信息，请参阅 [Microsoft Teams Fluent UI 工具包](~/concepts/design/design-teams-app-basic-ui-components.md)
 
-* iframe 中的选项卡内容不得包含模拟 Teams 核心功能的功能。 例如，机器人、消息传递扩展、呼叫、会议等。
+* iframe 中的选项卡内容不得包含模拟 Teams 核心功能的功能。 例如，机器人、消息扩展、呼叫、会议等。
 
 * 对于频道的所有成员，可配置选项卡的登录页面中的内容必须上下文相同。
 
@@ -1061,18 +1061,18 @@ Teams 应用清单定义应用的配置。
 > [!TIP]
 > 预览信息并在发布卡片中提供基本的内联用户操作，以便用户无需导航到 Teams 外部进行所有操作 (不考虑复杂性)。
 
-## <a name="messaging-extensions"></a>消息传递扩展
+## <a name="message-extensions"></a>消息扩展
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions)。
 
-如果你的应用包括消息传递扩展，请确保它遵循这些准则。
+如果应用包含消息扩展，请确保它遵守这些准则。
 
 > [!TIP]
-> 有关创建高质量应用体验的详细信息，请参阅 [Teams 消息传递扩展设计准则](~/messaging-extensions/design/messaging-extension-design.md)。
+> 有关创建高质量应用体验的详细信息，请参阅 [Teams 消息扩展设计准则](~/messaging-extensions/design/messaging-extension-design.md)。
 
 ### <a name="action-commands"></a>操作命令
 
-基于操作的消息传递扩展必须执行以下操作：
+基于操作的消息扩展必须执行以下操作：
 
 * 允许用户在未完成中间步骤（如登录）的情况下对消息触发操作。
 
@@ -1142,11 +1142,11 @@ Teams 应用清单定义应用的配置。
 
 ### <a name="preview-links-link-unfurling"></a>预览链接 (链接展开)
 
-消息传递扩展必须预览在 Teams 撰写框中识别的链接。 不要添加不受控制的域 (无论是绝对 URL 或通配符)。 例如，`yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。 也禁止使用顶级域。 例如，`*.com` 或 `*.org`。 [*强制修复*]
+消息扩展必须预览在 Teams 撰写框中识别的链接。 不要添加不受控制的域 (无论是绝对 URL 或通配符)。 例如，`yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。 也禁止使用顶级域。 例如，`*.com` 或 `*.org`。 [*强制修复*]
 
 ### <a name="search-commands"></a>搜索命令
 
-* 基于搜索的消息传递扩展必须提供可帮助用户进行有效搜索的文本。 [*强制修复*]
+* 基于搜索的消息扩展必须提供可帮助用户进行有效搜索的文本。 [*强制修复*]
 
 :::row:::
     :::column span="":::
@@ -1170,13 +1170,13 @@ Teams 应用清单定义应用的配置。
    :::column-end:::
 :::row-end:::
 
-### <a name="search-based-messaging-extension-only-apps"></a>仅基于搜索的消息传递扩展应用
+### <a name="search-based-message-extension-only-apps"></a>仅基于搜索的消息扩展应用
 
 [*强制修复*]
 
-由基于搜索的消息传递扩展组成的应用通过共享允许上下文对话而无需上下文切换的卡片为用户提供价值。
+由基于搜索的消息扩展组成的应用通过共享允许上下文对话而无需上下文切换的卡片为用户提供价值。
 
-若要通过仅基于搜索的消息传递扩展应用的验证，需要将以下内容作为基准，以确保用户体验不受影响。 如果满足以下情况，通过消息传递扩展共享的卡片将在 Teams 中提供价值：
+若要通过仅基于搜索的消息传递扩展应用的验证，需要将以下内容作为基准，以确保用户体验不受影响。 如果满足以下情况，通过消息扩展共享的卡片将在 Teams 中提供价值：
 
 1. 已发布卡片提供了足够详细的信息，无需用户进一步操作。
 1. 已发布卡片为用户提供了足够的预览信息，以便进行操作或决定在 Teams 外部打开的链接中进一步查看详细信息。
@@ -1279,7 +1279,7 @@ Teams 应用清单定义应用的配置。
    :::column-end:::
 :::row-end:::
 
-* 消息传递扩展在会议期间的功能必须与在会议外部执行的相同。
+* 消息扩展在会议期间的功能必须与在会议外部执行的相同。
 
 ### <a name="in-meeting-tabs"></a>会议内选项卡
 

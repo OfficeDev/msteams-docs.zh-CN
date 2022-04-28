@@ -4,18 +4,18 @@ description: 了解如何设计 Microsoft Teams 自适应卡并获取 Microsoft 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398622"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103900"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡
 
 自适应卡片包含卡片元素的自由格式正文和一系列可选操作。 自适应卡片是可操作的内容片段，可通过机器人或消息传递扩展添加到对话。 这些卡片使用文本、图形和按钮为受众提供丰富的通信体验。
 
-自适应卡框架用于许多 Microsoft 产品，包括 Microsoft Teams。 可以通过机器人或消息传递扩展向用户发送消息内的卡片。 用户还可以在卡片上执行操作（如果存在）。
+自适应卡框架用于许多 Microsoft 产品，包括 Microsoft Teams。 可通过机器人或消息传递扩展向用户发送消息内的卡片。 用户还可以在卡片上执行操作（如果存在）。
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="自适应卡概述示例。" border="false":::
 

@@ -5,12 +5,12 @@ description: Microsoft Teams 中的机器人概述。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: fbf7f7b1f4e863ec7612a404b5576baf40035d21
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 53d016c6e01c73a6fbe5f59ed4a3239077e8b12e
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952301"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102411"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
@@ -21,11 +21,11 @@ ms.locfileid: "64952301"
 
 会话机器人允许用户通过文本、交互卡和任务模块与 web 服务进行交互。
 
-![使用文本调用机器人](~/assets/images/invokebotwithtext.png)
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="使用文本的 Web 服务"lightbox="../assets/images/invokebotwithtext.png":::
 
-![使用卡片调用机器人](~/assets/images/invokebotwithcard.png)
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="使用交互卡的 Web 服务"lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="使用任务模块的 Web 服务"lightbox="../assets/images/task-module-example.png"border="true":::
 
 对话机器人非常灵活。 机器人可以处理涉及人工智能和自然语言处理的一些基本命令或复杂任务。 机器人可以是较大应用程序的一部分，也可以是独立的。
 

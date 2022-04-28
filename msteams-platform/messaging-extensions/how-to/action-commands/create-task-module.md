@@ -1,46 +1,46 @@
 ---
 title: 创建并发送任务模块
 author: surbhigupta
-description: 了解如何使用代码示例和示例处理初始调用操作，以及如何使用操作消息扩展命令中的任务模块进行响应。
+description: 了解如何使用代码示例和示例处理初始调用操作，并使用操作消息扩展命令中的任务模块进行响应。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 30ef2cdbe5bde14120a0ba8b17040c26a5de2a45
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: bea8358edfa11dd278bdbc8ea052c61612d6db71
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453479"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104467"
 ---
 # <a name="create-and-send-the-task-module"></a>创建并发送任务模块
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-可以使用自适应卡片或嵌入式 Web 视图创建任务模块。 若要创建任务模块，必须执行称为初始调用请求的过程。 本文档涵盖初始调用请求、从一对一聊天调用任务模块时的有效负载活动属性、群聊、频道 (新帖子) 、频道 (回复线程) 和命令框。
+可以使用自适应卡片或嵌入式 Web 视图创建任务模块。 若要创建任务模块，必须执行称为初始调用请求的过程。 本文档介绍从 1：1 聊天调用任务模块时的初始调用请求、有效负载活动属性、群聊、频道 (新帖子) 、频道 (回复线程) 以及命令框。
 > [!NOTE]
-> 如果没有使用应用清单中定义的参数填充任务模块，则必须为具有自适应卡片或嵌入式 Web 视图的用户创建任务模块。
+> 如果未使用应用清单中定义的参数填充任务模块，则必须使用自适应卡片或嵌入式 Web 视图为用户创建任务模块。
 
 ## <a name="the-initial-invoke-request"></a>初始调用请求
 
-在初始`Activity``composeExtension/fetchTask``task`调用请求过程中，你的服务接收一个类型 为 的对象，并且你必须使用包含自适应卡片或嵌入 Web 视图的 URL 的对象进行响应。 与标准自动程序活动属性一起，初始调用有效负载包含以下请求元数据：
+在初始调用请求的过程中，服务接收一个 `Activity` 类型的 `composeExtension/fetchTask`对象，并且必须使用 `task` 包含自适应卡片或嵌入 Web 视图 URL 的对象进行响应。 除了标准机器人活动属性，初始调用有效负载还包含以下请求元数据：
 
 |属性名称|用途|
 |---|---|
-|`type`| 请求的类型。 它必须是 `invoke`。 |
-|`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask`。 |
+|`type`| 请求类型。 它必须是 `invoke`。 |
+|`name`| 颁发给服务的命令类型。 它必须是 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果在 (通道中提出请求，通道 ID 将) 。 |
-|`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
-|`value.commandId` | 包含已调用的命令的 ID。 |
+|`channelData.channel.id`| 如果请求是在通道) 中发出，则通道 ID (。 |
+|`channelData.team.id`| 如果请求是在频道) 中发出，团队 ID (。 |
+|`value.commandId` | 包含调用的命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须是 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，对嵌入式 Web 视图格式非常有用。 它必须是 、 `default``contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。 它必须是 `default`， `contrast` 或 `dark`. |
 
 ### <a name="example"></a>示例
 
-初始调用请求的代码如下例所示：
+以下示例提供了初始调用请求的代码：
 
 ```json
 {
@@ -70,27 +70,27 @@ ms.locfileid: "63453479"
   "name": "composeExtension/fetchTask"
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>从一对一聊天调用任务模块时的有效负载活动属性
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>从 1：1 聊天调用任务模块时的有效负载活动属性
 
-从一对一聊天调用任务模块时的有效负载活动属性列出如下：
+从 1：1 聊天调用任务模块时的有效负载活动属性如下所示：
 
 |属性名称|用途|
 |---|---|
-|`type`| 请求的类型。 它必须是 `invoke`。 |
-|`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask`。 |
+|`type`| 请求类型。 它必须是 `invoke`。 |
+|`name`| 颁发给服务的命令类型。 它必须是 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.source.name`| 调用任务模块的源名称。 |
-|`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
-|`value.commandId` | 包含已调用的命令的 ID。 |
+|`channelData.source.name`| 从中调用任务模块的源名称。 |
+|`ChannelData.legacy. replyToId`| 获取或设置此消息作为答复的消息的 ID。 |
+|`value.commandId` | 包含调用的命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须是 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，对嵌入式 Web 视图格式非常有用。 它必须是 、 `default``contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。 它必须是 `default`， `contrast` 或 `dark`. |
 
 ### <a name="example"></a>示例
 
-以下示例提供从一对一聊天调用任务模块时的有效负载活动属性：
+以下示例提供了从 1：1 聊天调用任务模块时的有效负载活动属性：
 
 ```json
 {
@@ -121,27 +121,27 @@ ms.locfileid: "63453479"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>从群聊中调用任务模块时的有效负载活动属性
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>从组聊天调用任务模块时的有效负载活动属性
 
-从群聊中调用任务模块时的有效负载活动属性列出如下：
+从组聊天调用任务模块时的有效负载活动属性如下所示：
 
 |属性名称|用途|
 |---|---|
-|`type`| 请求的类型。 它必须是 `invoke`。 |
-|`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask`。 |
+|`type`| 请求类型。 它必须是 `invoke`。 |
+|`name`| 颁发给服务的命令类型。 它必须是 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.source.name`| 调用任务模块的源名称。 |
-|`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
-|`value.commandId` | 包含已调用的命令的 ID。 |
+|`channelData.source.name`| 从中调用任务模块的源名称。 |
+|`ChannelData.legacy. replyToId`| 获取或设置此消息作为答复的消息的 ID。 |
+|`value.commandId` | 包含调用的命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须是 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，对嵌入式 Web 视图格式非常有用。 它必须是 、 `default``contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。 它必须是 `default`， `contrast` 或 `dark`. |
 
 ### <a name="example"></a>示例
 
-以下示例中提供从群聊调用任务模块时的有效负载活动属性：
+以下示例中提供了从群聊调用任务模块时的有效负载活动属性：
 
 ```json
 {
@@ -178,9 +178,9 @@ ms.locfileid: "63453479"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-meeting-chat"></a>从会议聊天中调用任务模块时的有效负载活动属性
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-meeting-chat"></a>从会议聊天调用任务模块时的有效负载活动属性
 
-以下示例中提供从会议聊天调用任务模块时的有效负载活动属性：
+以下示例中提供了从会议聊天调用任务模块时的有效负载活动属性：
 
 ```json
 {
@@ -220,29 +220,29 @@ ms.locfileid: "63453479"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>从频道调用任务模块时的有效负载活动属性 (发布) 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>从通道调用任务模块时，有效负载活动属性 (新的发布) 
 
-从频道调用任务模块时的有效负载活动属性 (发布) 如下所示：
+从通道调用任务模块时，有效负载活动属性 (新发布) 按如下所示列出：
 
 |属性名称|用途|
 |---|---|
-|`type`| 请求的类型。 它必须是 `invoke`。 |
-|`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask`。 |
+|`type`| 请求类型。 它必须是 `invoke`。 |
+|`name`| 颁发给服务的命令类型。 它必须是 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果在 (通道中提出请求，通道 ID 将) 。 |
-|`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
-|`channelData.source.name`| 调用任务模块的源名称。 |
-|`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
-|`value.commandId` | 包含已调用的命令的 ID。 |
+|`channelData.channel.id`| 如果请求是在通道) 中发出，则通道 ID (。 |
+|`channelData.team.id`| 如果请求是在频道) 中发出，团队 ID (。 |
+|`channelData.source.name`| 从中调用任务模块的源名称。 |
+|`ChannelData.legacy. replyToId`| 获取或设置此消息作为答复的消息的 ID。 |
+|`value.commandId` | 包含调用的命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须是 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，对嵌入式 Web 视图格式非常有用。 它必须是 、 `default``contrast`或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。 它必须是 `default`， `contrast`或 `dark`. |
 
 ### <a name="example"></a>示例
 
-从频道调用任务模块时的有效负载活动属性 (以下示例) 新文章：
+从通道调用任务模块时，有效负载活动属性 (以下示例中提供了新的后) ：
 
 ```json
 {
@@ -286,29 +286,29 @@ ms.locfileid: "63453479"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a>从频道调用任务模块时的有效负载活动属性 (线程) 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a>从通道调用任务模块时，有效负载活动属性 (回复线程) 
 
-从频道调用任务模块时的有效负载活动属性 (主题) 如下所示：
+从通道调用任务模块时，有效负载活动属性 (回复线程) ，如下所示：
 
 |属性名称|用途|
 |---|---|
-|`type`| 请求的类型。 它必须是 `invoke`。 |
-|`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask`。 |
+|`type`| 请求类型。 它必须是 `invoke`。 |
+|`name`| 颁发给服务的命令类型。 它必须是 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.channel.id`| 如果在 (通道中提出请求，通道 ID 将) 。 |
-|`channelData.team.id`| 如果 (频道中提出请求，团队 ID 将) 。 |
-|`channelData.source.name`| 调用任务模块的源名称。 |
-|`ChannelData.legacy. replyToId`| 获取或设置邮件的回复 ID。 |
-|`value.commandId` | 包含已调用的命令的 ID。 |
+|`channelData.channel.id`| 如果请求是在通道) 中发出，则通道 ID (。 |
+|`channelData.team.id`| 如果请求是在频道) 中发出，团队 ID (。 |
+|`channelData.source.name`| 从中调用任务模块的源名称。 |
+|`ChannelData.legacy. replyToId`| 获取或设置此消息作为答复的消息的 ID。 |
+|`value.commandId` | 包含调用的命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须是 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，对嵌入式 Web 视图格式非常有用。 它必须是 、 `default``contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。 它必须是 `default`， `contrast` 或 `dark`. |
 
 ### <a name="example"></a>示例
 
-从频道调用任务模块时的有效负载活动属性 (对线程) 如以下示例所示：
+从通道调用任务模块时，有效负载活动属性 (在以下示例中给出对线程) 的答复：
 
 ```json
 {
@@ -397,24 +397,24 @@ ms.locfileid: "63453479"
 
 ## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a>从命令框调用任务模块时的有效负载活动属性
 
-从命令框调用任务模块时的有效负载活动属性列出如下：
+从命令框调用任务模块时的有效负载活动属性如下所示：
 
 |属性名称|用途|
 |---|---|
-|`type`| 请求的类型。 它必须是 `invoke`。 |
-|`name`| 向服务发出的命令类型。 它必须是 `composeExtension/fetchTask`。 |
+|`type`| 请求类型。 它必须是 `invoke`。 |
+|`name`| 颁发给服务的命令类型。 它必须是 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户的 ID。 |
 |`from.name`| 发送请求的用户的名称。 |
 |`from.aadObjectId`| Azure Active Directory发送请求的用户的对象 ID。 |
 |`channelData.tenant.id`| Azure Active Directory 租户 ID。 |
-|`channelData.source.name`| 调用任务模块的源名称。 |
-|`value.commandId` | 包含已调用的命令的 ID。 |
+|`channelData.source.name`| 从中调用任务模块的源名称。 |
+|`value.commandId` | 包含调用的命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须是 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，对嵌入式 Web 视图格式非常有用。 它必须是 、 `default``contrast`或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。 它必须是 `default`， `contrast`或 `dark`. |
 
 ### <a name="example"></a>示例
 
-下面的示例提供从命令框调用任务模块时的有效负载活动属性：
+以下示例中提供了从命令框调用任务模块时的有效负载活动属性：
 
 ```json
 {
@@ -459,7 +459,7 @@ ms.locfileid: "63453479"
 
 ### <a name="example"></a>示例
 
-以下代码部分是请求的一 `fetchTask` 个示例：
+下面的代码部分是请求的 `fetchTask` 示例：
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -541,10 +541,10 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="initial-invoke-request-from-a-message"></a>来自邮件的初始调用请求
+## <a name="initial-invoke-request-from-a-message"></a>来自消息的初始调用请求
 
-从邮件调用 `value` 自动程序时，初始调用请求中的对象必须包含从其中调用消息扩展的消息的详细信息。 `mentions`和 `reactions` 数组是可选的，如果原始邮件中没有任何反应或提及，则它们不存在。
-以下部分是 对象 `value` 的示例：
+从消息调用机器人时， `value` 初始调用请求中的对象必须包含从中调用消息扩展的消息的详细信息。 这些 `reactions` 和 `mentions` 数组是可选的，如果原始消息中没有反应或提及，则它们不存在。
+以下部分是对象的 `value` 示例：
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -644,35 +644,35 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-to-the-fetchtask"></a>响应 fetchTask
 
-使用包含具有`task``taskInfo`自适应卡片或 Web URL 的对象或简单的字符串消息的对象响应调用请求。
+使用包含`taskInfo`自适应卡片或 Web URL 的对象或简单字符串消息的对象响应调用请求`task`。
 
 |属性名称|用途|
 |---|---|
-|`type`| 可以是显示 `continue` 窗体，也可以 `message` 用于简单的弹出式窗体。 |
-|`value`| `taskInfo`窗体的对象或邮件`string`的 。 |
+|`type`| 可以是 `continue` 呈现窗体，也可以 `message` 是用于简单的弹出窗口。 |
+|`value`| 窗体 `taskInfo` 的对象或 `string` 消息的对象。 |
 
 taskInfo 对象的架构为：
 
 |属性名称|用途|
 |---|---|
 |`title`| 任务模块的标题。|
-|`height`| 它必须是整数值 (以像素为单位) ，或 `small`、 `medium`、 `large`。|
-|`width`| 它必须是整数值 (以像素为单位) ，或 `small`、 `medium`、 `large`。|
-|`card`| 定义表单的自适应卡片 (使用一个) 。
-|`url`| 在任务模块内作为嵌入 Web 视图打开的 URL。|
-|`fallbackUrl`| 如果客户端不支持任务模块功能，此 URL 在浏览器选项卡中打开。 |
+|`height`| 它必须是一个整数 (像素) ，或者`small`， `medium``large`|
+|`width`| 它必须是一个整数 (像素) ，或者`small`， `medium``large`|
+|`card`| 定义窗体的自适应卡片 (（如果使用一个) ）。
+|`url`| 要在任务模块内作为嵌入式 Web 视图打开的 URL。|
+|`fallbackUrl`| 如果客户端不支持任务模块功能，则会在浏览器选项卡中打开此 URL。 |
 
 ### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a>使用自适应卡片响应 fetchTask
 
-使用自适应卡片时，必须使用`task``value`对象响应包含自适应卡片的对象。
+使用自适应卡片时，必须使用 `task` 包含自适应卡片的 `value` 对象进行响应。
 
 #### <a name="example"></a>示例
 
-以下代码部分是使用自适应 `fetchTask` 卡片响应的示例：
+以下代码部分是使用 `fetchTask` 自适应卡片进行响应的示例：
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-此示例使用 [Bot Framework SDK NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) NuGet包。
+除了 Bot Framework SDK 之外，此示例还使用 [AdaptiveCards NuGet包](https://www.nuget.org/packages/AdaptiveCards)。
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -822,7 +822,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="create-a-task-module-with-an-embedded-web-view"></a>使用嵌入式 Web 视图创建任务模块
 
-使用嵌入的 Web 视图时`task``value`，必须使用对象（该对象包含要加载的 Web 表单的 URL）进行响应。 要加载的任何 URL 的域必须包含在 `validDomains` 应用清单的数组中。 有关生成嵌入式 Web 视图详细信息，请参阅 [任务模块文档](~/task-modules-and-cards/what-are-task-modules.md)。
+使用嵌入式 Web 视图时，必须使用 `task` 对象进行响应， `value` 该对象包含要加载的 Web 窗体的 URL。 要加载的任何 URL 的域必须包含在 `validDomains` 应用清单的数组中。 有关生成嵌入式 Web 视图的详细信息，请参阅 [任务模块文档](~/task-modules-and-cards/what-are-task-modules.md)。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -896,15 +896,15 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="request-to-install-your-conversational-bot"></a>请求安装对话机器人
+### <a name="request-to-install-your-conversational-bot"></a>请求安装聊天机器人
 
-如果应用包含对话机器人，则安装对话中的机器人，然后加载任务模块。 自动程序可用于获取任务模块的其他上下文。 此方案的一个示例是提取名单以填充人员选取器控件或团队中的频道列表。
+如果应用包含会话机器人，请在会话中安装机器人，然后加载任务模块。 机器人可用于获取任务模块的其他上下文。 此方案的一个示例是提取名册以填充人员选取器控件或团队中的频道列表。
 
-当消息扩展收到 `composeExtension/fetchTask` 调用时，请检查自动程序是否安装在当前上下文中以便于流。 例如，使用获取名单呼叫检查流程。 如果未安装自动程序，则返回自适应卡片以及请求用户安装自动程序的操作。 用户必须有权将应用安装到该位置进行检查。 如果应用安装不成功，用户将收到一条消息，联系管理员。
+当消息扩展收到 `composeExtension/fetchTask` 调用时，请检查机器人是否安装在当前上下文中，以方便流。 例如，使用获取名册调用检查流。 如果未安装机器人，请返回自适应卡片，其中包含请求用户安装机器人的操作。 用户必须有权在该位置安装应用以进行检查。 如果应用安装不成功，用户将收到一条消息来联系管理员。
 
 #### <a name="example"></a>示例
 
-以下代码部分是响应的一个示例：
+下面的代码部分是响应的示例：
 
 ```json
 {
@@ -930,11 +930,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-安装对话机器人后，它会收到另一条使用 和 `name = composeExtension/submitAction`的调用消息 `value.data.msteams.justInTimeInstall = true`。
+安装会话机器人后，它会收到另一条调用`name = composeExtension/submitAction`消息，`value.data.msteams.justInTimeInstall = true`
 
 #### <a name="example"></a>示例
 
-以下代码部分是调用的任务响应示例：
+下面的代码部分是任务响应调用的示例：
 
 ```json
 {
@@ -958,11 +958,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-对调用的任务响应必须类似于已安装的机器人。
+对调用的任务响应必须类似于已安装机器人的任务响应。
 
 #### <a name="example"></a>示例
 
-以下代码部分是一个使用自适应卡片实时安装应用的示例：
+下面的代码部分是使用自适应卡片实时安装应用的示例：
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -985,8 +985,8 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | 示例名称           | 说明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams邮件扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams邮件扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams消息扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams消息扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>后续步骤
 

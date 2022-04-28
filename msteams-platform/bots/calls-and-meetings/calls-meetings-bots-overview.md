@@ -4,12 +4,12 @@ description: 了解Microsoft Teams应用如何使用 Microsoft Graph API 进行�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 调用音频视频 IVR 语音联机会议实时媒体流机器人
-ms.openlocfilehash: e17d0c18bfb3f751a11e43780dba9f0f85441a96
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7b9dbe81304e2556b8b8b868f1f9e29f8bba284
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073821"
+ms.locfileid: "65102495"
 ---
 # <a name="calls-and-online-meetings-bots"></a>呼叫和联机会议机器人
 
@@ -45,7 +45,7 @@ Teams中的呼叫可以是纯音频或音频和视频。 使用术语调用，�
 
 呼叫是人员与机器人之间的对等呼叫，或是机器人与组呼叫中的两个或更多人之间的多方。
 
-![呼叫类型](~/assets/images/calls-and-meetings/call-types.png)
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="呼叫类型"border="true":::
 
 下面是调用所需的不同调用类型和权限：
 
@@ -63,7 +63,7 @@ Teams中的呼叫可以是纯音频或音频和视频。 使用术语调用，�
 
 * 若要接收传入呼叫，请在机器人设置中输入终结点。 启动传入调用时，此终结点将收到通知。 可以接听呼叫、拒绝呼叫或将其重定向到其他人。
 
-    ![呼叫处理](~/assets/images/calls-and-meetings/call-handling.png)
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="呼叫处理"border="true":::
 
 * 当机器人处于呼叫状态时，有用于静音和解构机器人以及开始或停止与其他参与者共享视频或桌面内容的 API。
 * 机器人还可以访问参与者列表、邀请新参与者并将其静音。

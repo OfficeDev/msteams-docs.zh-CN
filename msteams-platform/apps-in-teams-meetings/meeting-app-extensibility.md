@@ -1,15 +1,15 @@
 ---
 title: 统一会议应用
 author: surbhigupta
-description: 了解Teams会议生命周期以及用户在桌面和移动环境中的会议体验、参与者和用户角色和类型、在会议生命周期中集成机器人和消息传递扩展。
+description: 了解Teams会议生命周期以及用户在桌面和移动环境中的会议体验、参与者和用户角色和类型、在会议生命周期中集成机器人和消息扩展。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
-ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
+ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64838468"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103332"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -19,11 +19,11 @@ Teams统一会议应用基于以下概念：
 * 会议中有三个不同的参与者角色: 组织者、演示者和与会者。 有关详细信息，请参阅[Teams会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
 * 会议中有各种 [用户类型](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) ：租户内、 [来宾](/microsoftteams/guest-access)、 [联合](/microsoftteams/manage-external-access)用户和匿名用户。
 
-本文介绍有关会议生命周期以及如何集成选项卡、机器人和消息传递扩展的信息。 它标识不同的参与者角色和用户类型。
+本文介绍有关会议生命周期以及如何集成选项卡、机器人和消息扩展的信息。 它标识不同的参与者角色和用户类型。
 
 ## <a name="meeting-lifecycle"></a>会议生命周期
 
-会议生命周期包括会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和消息传递扩展。
+会议生命周期包括会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和消息扩展。
 
 > [!NOTE]
 > Web 客户端支持会议扩展，例如机器人、卡片、消息扩展和消息操作。 但是，当前不完全支持托管体验，例如选项卡、内容气泡和共享到阶段。
@@ -152,9 +152,9 @@ Teams统一会议应用基于以下概念：
 
 在群组聊天范围内启用的机器人开始在会议中运行。 若要实现机器人，请先[生成机器人](../build-your-first-app/build-bot.md)，然后继续[为Teams会议创建应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
-### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>将消息传递扩展插件集成到会议生命周期
+### <a name="integrate-message-extensions-into-the-meeting-lifecycle"></a>将消息扩展插件集成到会议生命周期
 
-若要实现消息传递扩展，请先[生成消息传递扩展，](../messaging-extensions/how-to/create-messaging-extension.md)然后继续[为Teams会议创建应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
+若要实现消息扩展，请从[生成消息扩展](../messaging-extensions/how-to/create-messaging-extension.md)开始，然后继续[为Teams会议创建应用](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
 通过Teams统一会议应用，可以根据会议中的参与者角色来设计应用。
 
@@ -210,7 +210,7 @@ Teams统一会议应用基于以下概念：
 
 下表提供了用户类型，并列出了每个用户可以访问的功能：
 
-| 用户类型 | 选项卡 | 机器人 | 消息传递扩展 | 自适应卡 | 任务模块 | 会议内的对话框 | 会议阶段 |
+| 用户类型 | 选项卡 | 机器人 | 消息扩展 | 自适应卡 | 任务模块 | 会议内的对话框 | 会议阶段 |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 匿名用户 | 不可用 | 不可用 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 不可用 | 不可用 |
 | 来宾，租户Azure AD的一部分 | 允许交互。 不允许创建、更新和删除。 | 不可用 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 可用 | 只能在会议舞台上启动、查看和与应用交互Teams桌面客户端 |
@@ -225,5 +225,5 @@ Teams统一会议应用基于以下概念：
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
-* [消息传递扩展](../messaging-extensions/what-are-messaging-extensions.md)
+* [消息扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

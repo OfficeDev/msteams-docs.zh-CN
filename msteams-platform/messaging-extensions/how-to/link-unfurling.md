@@ -1,50 +1,50 @@
 ---
 title: 链接展开
 author: surbhigupta
-description: 了解如何使用应用清单或手动使用代码示例和示例在 Microsoft Teams 应用中添加与消息传递扩展一起展开的链接。
+description: 了解如何使用应用清单或手动使用代码示例和示例，在Microsoft Teams应用中添加与消息扩展展开的链接。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 006f1194fc15d633f442802891a1f5f28151f81e
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 2dee02545a522b202e9cc695f7099848269e8944
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766154"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104404"
 ---
 # <a name="link-unfurling"></a>链接展开
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-本文档指导你如何使用 App studio 和手动将链接取消点击添加到应用清单。 通过链接取消链接，当 `invoke` 特定域的 URL 粘贴到撰写邮件区域中时，你的应用可以注册以接收活动。 包含 `invoke` 粘贴到撰写邮件区域中的完整 URL，您可以使用用户可取消展开的卡片进行响应，从而提供其他信息或操作。 这类似于 URL 用作搜索词的搜索命令。
+本文档介绍如何使用 App Studio 和手动向应用清单添加链接。 通过链接展开，应用可以在将具有特定域的 URL 粘贴到撰写消息区域时注册以接收 `invoke` 活动。 包含 `invoke` 粘贴到撰写消息区域的完整 URL，你可以使用用户可以展开的卡片进行响应，从而提供其他信息或操作。 这类似于搜索命令，其中 URL 充当搜索词。
 
 > [!NOTE]
 >
-> * 目前，移动客户端不支持链接取消展开。
-> * 链接取消点击结果缓存 30 分钟。
+> * 目前，移动客户端不支持链接展开。
+> * 链接展开结果缓存 30 分钟。
 
-邮件Azure DevOps扩展使用链接取消链接查找粘贴到指向工作项的撰写邮件区域中的 URL。 在下图中，用户已粘贴邮件扩展已解析为Azure DevOps中工作项的 URL：
+Azure DevOps消息扩展使用链接展开来查找粘贴到指向工作项的撰写消息区域中的 URL。 在下图中，用户粘贴了Azure DevOps中工作项的 URL，消息扩展已解析为卡片：
 
-![链接取消链接示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![链接展开示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-## <a name="add-link-unfurling-to-your-app-manifest"></a>向应用清单添加链接取消链接
+## <a name="add-link-unfurling-to-your-app-manifest"></a>将链接展开添加到应用清单
 
-若要向应用清单添加链接取消链接，`messageHandlers``composeExtensions`请向应用清单 JSON 的 部分添加新数组。 可以在 App Studio 的帮助下或手动添加数组。 域列表可以包含通配符，例如 `*.example.com`。 这完全匹配域的一个段;如果需要匹配，请使用 `a.b.example.com` `*.*.example.com`。
+若要将链接展开添加到应用清单，请将新 `messageHandlers` 数组添加到 `composeExtensions` 应用清单 JSON 部分。 可以借助 App Studio 或手动添加数组。 例如 `*.example.com`，域列表可以包括通配符。 这完全匹配域的一个段;如果需要匹配 `a.b.example.com` ，请使用 `*.*.example.com`。
 
 > [!NOTE]
-> 不要直接添加或通过通配符添加不在控件中的域。 例如， `yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。 此外，还禁止顶级域。 例如，、 `*.com``*.org`。
+> 不要直接或通过通配符添加不在你控制中的域。 例如， `yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。 此外，禁止使用顶级域。 例如， `*.com`. `*.org`
 
-### <a name="add-link-unfurling-using-app-studio"></a>使用 App Studio 添加链接取消链接
+### <a name="add-link-unfurling-using-app-studio"></a>使用 App Studio 添加链接展开
 
-1. 从 **客户端打开 App Studio** Microsoft Teams，然后选择"**清单编辑器"** 选项卡。
+1. 从Microsoft Teams客户端打开 **App Studio**，然后选择 **“清单编辑器**”选项卡。
 1. 加载应用清单。
-1. 在 **"消息扩展** "页上，在"邮件处理程序"部分添加 **要查找的** 域。 下图说明了此过程：
+1. 在 **“消息扩展** ”页上，添加要在 **“消息处理程序** ”部分中查找的域。 下图说明了此过程：
 
-    ![App Studio 中的邮件处理程序部分](~/assets/images/link-unfurling.png)
+    ![App Studio 中的消息处理程序部分](~/assets/images/link-unfurling.png)
 
-### <a name="add-link-unfurling-manually"></a>手动添加链接取消链接
+### <a name="add-link-unfurling-manually"></a>手动添加链接展开
 
-若要使邮件扩展能够与链接进行交互，首先必须将 `messageHandlers` 数组添加到应用清单。 以下示例说明如何手动添加链接取消链接：
+若要使消息扩展能够与链接交互，首先必须将数 `messageHandlers` 组添加到应用清单。 以下示例说明如何手动添加链接展开：
 
 ```json
 ...
@@ -66,11 +66,11 @@ ms.locfileid: "63766154"
 ...
 ```
 
-有关完整的清单示例，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。
+有关完整清单示例，请参阅 [清单参考](~/resources/schema/manifest-schema.md)。
 
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>`composeExtension/queryLink`处理调用
 
-将域添加到应用程序清单后，必须更新 Web 服务代码以处理调用请求。 使用收到的 URL 搜索服务并创建卡片响应。 如果使用多张卡片进行响应，则仅使用第一个卡片响应。
+将域添加到应用清单后，必须更新 Web 服务代码以处理调用请求。 使用收到的 URL 搜索服务并创建卡片响应。 如果使用多个卡片进行响应，则仅使用第一个卡片响应。
 
 支持以下卡片类型：
 
@@ -128,7 +128,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-下面是发送到自动 `invoke` 程序的示例：
+下面是发送到机器人的 `invoke` 示例：
 
 ```json
 {
@@ -140,7 +140,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-下面是一个响应示例：
+下面是响应的示例：
 
 ```json
 {
@@ -181,7 +181,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 ## <a name="step-by-step-guide"></a>分步指南
 
-按照[分步指南使用自动程序](../../sbs-botbuilder-linkunfurling.yml)取消Teams链接。
+按照[分步指南](../../sbs-botbuilder-linkunfurling.yml)操作，使用机器人在Teams中展开链接。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,29 +1,29 @@
 ---
-title: 自适应卡片的通用操作概述
-description: 适用于自适应卡片的通用操作快速概述，例如特定于用户的视图、顺序工作流支持以及桌面和移动环境等
+title: 自适应卡的通用操作概述
+description: 自适应卡片通用操作的快速概述，例如特定于用户的视图、顺序工作流支持，以及桌面和移动环境的更多功能
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ec546b0345c1fd26caf0b3016a788e14b623ae2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: dc3a61b323e462f90937d8b6c432d624c29e0125
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356160"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103409"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
-自适应卡片的通用操作从开发人员反馈中发展，尽管自适应卡片的布局和呈现是通用的，但操作处理不是。 即使开发人员希望将同一张卡片发送到不同位置，他们必须处理不同的操作。
+自适应卡片的通用操作是从开发人员反馈演变而来的，尽管自适应卡片的布局和呈现是通用的，但操作处理并非如此。 即使开发人员想要将同一张卡片发送到不同的地方，他们也必须以不同的方式处理操作。
 
-自适应卡片的通用操作将`Action.Execute`机器人作为处理操作的通用后端引入，并引入了新的操作类型，它适用于应用，Teams和Outlook。
+自适应卡的通用操作将机器人作为处理操作的常见后端，并引入了一种新的操作类型，`Action.Execute`它适用于应用，例如Teams和Outlook。
 
-本文档可帮助你了解如何使用通用操作模型增强跨平台和应用程序与自适应卡片交互的用户体验。
+本文档可帮助你了解如何使用通用操作模型来增强用户跨平台和应用程序与自适应卡片交互的体验。
 
 > [!NOTE]
-> 仅对自动程序发送的自适应卡片 v1.4 的通用操作的支持可用。 即将推出对通过撰写框和链接取消点击卡片发送的卡片的支持。
+> 支持自适应卡 v1.4 的通用操作仅适用于机器人发送的卡。 即将推出对通过撰写框发送的卡片和链接展开卡片的支持。
 
-## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>使用自适应卡片的通用操作增强用户体验
+## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>使用适用于自适应卡片的通用操作增强用户体验
 
-自适应卡片的通用操作通过启用以下方案来增强用户体验：
+自适应卡的通用操作通过启用以下方案来增强用户体验：
 
 * [通用操作](#universal-actions)
 * [用户特定视图](#user-specific-views)
@@ -32,84 +32,84 @@ ms.locfileid: "63356160"
 
 ### <a name="universal-actions"></a>通用操作
 
-在自适应卡片的通用操作之前，不同的主机提供不同的操作模型，如下所示：
+在自适应卡的通用操作之前，不同的主机提供了不同的操作模型，如下所示：
 
-* Teams或自动`Action.Submit`程序使用 ，这是一种将实际通信模型延迟到基础通道的方法。
-* Outlook与`Action.Http`自适应卡片有效负载中显式指定的后端服务通信。
+* 使用Teams或机器人`Action.Submit`，这是一种将实际通信模型延迟到基础通道的方法。
+* Outlook用于`Action.Http`与自适应卡有效负载中显式指定的后端服务通信。
 
 下图显示了当前不一致的操作模型：
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="不一致的操作模型":::
 
-借助自适应卡片的通用操作，可用于 `Action.Execute` 跨不同平台的操作处理。 `Action.Execute`适用于中心，包括Teams Outlook。 此外，自适应卡片还可以作为触发的调用请求 `Action.Execute` 的响应返回。
+使用适用于自适应卡片的通用操作，可以用于 `Action.Execute` 跨不同平台的操作处理。 `Action.Execute`跨中心工作，包括Teams和Outlook。 此外，自适应卡片可以作为触发的调用请求的 `Action.Execute` 响应返回。
 
 下图显示了新的通用操作模型：
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="自适应卡片的新通用操作":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="自适应卡的新通用操作":::
 
-现在，你可以向这两者发送相同的Teams和Outlook，然后使用基础自动程序保持它们相互同步。 通过此内部版本，在任一平台上执行的任何操作都反映给另一个平台， (自适应卡片的通用操作) 模型。
+现在，可以将相同的卡片发送到两者，Teams和Outlook，并使用基础机器人使它们彼此保持同步。 在任一平台上执行的任何操作都会通过此生成反映到另一个平台，部署 (自适应卡片通用操作) 模型 *的任何位置* 。
 
-下图描述了适用于用户和用户的通用自适应卡片Teams Outlook：
+下图描绘了Teams和Outlook的自适应卡的通用操作：
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="移动同一张Teams和Outlook":::
+:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="移动同一张卡片以Teams和Outlook":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="要与Teams Outlook":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="要Teams和Outlook的同一张卡片" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
 
 * * *
 
 ### <a name="user-specific-views"></a>用户特定视图
 
-现在，聊天Teams频道中的每个用户都会在自适应卡片上看到完全相同的视图和按钮操作。 但是，在某些情况下，要求某些用户采取不同的行动，并有权访问同一聊天或频道中的不同信息。
+如今，Teams聊天或频道中的每个用户都会在自适应卡片上看到完全相同的视图和按钮操作。 但是，在某些情况下，某些用户需要以不同的方式行事，并有权访问同一聊天或频道中的不同信息。
 
-例如，如果您在聊天或频道中发送事件报告卡，则只有分配了事件的用户才能看到"解决 **"** 按钮。 另一方面，事件创建者必须看到"编辑"按钮，并且所有其他用户只能查看事件的详细信息。 这是由 属性启用的用户特定视图 `refresh` 所实现。
+例如，如果在聊天或频道中发送事件报告卡，则只有分配了事件的用户才能看到“ **解决** ”按钮。 另一方面，事件创建者必须看到 **“编辑”** 按钮，所有其他用户必须只能查看事件的详细信息。 属性启用 `refresh` 的用户特定视图可以实现此操作。
 
-下图显示了一个票证消息传递扩展 (ME) ，其中聊天中的不同用户根据要求显示了不同的操作：
+下图显示了一个票证消息扩展 (ME) 的示例，其中聊天中的不同用户根据要求显示不同的操作：
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="移动用户特定视图":::
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="移动用户特定视图" lightbox="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="用户特定视图":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="用户特定视图" lightbox="../../../assets/images/adaptive-cards/universal-bots-incident-management.png":::
 
 * * *
 
-有关详细信息，请参阅用户 [特定视图示例](User-Specific-Views.md)。
+有关详细信息，请参阅 [用户特定视图的示例](User-Specific-Views.md)。
 
 ### <a name="sequential-workflow-support"></a>顺序工作流支持
 
-借助顺序工作流支持，用户可以执行一系列工作流，而无需单独发送不同的卡片。 这是通过返回 `Action.Execute` 自适应卡片以响应操作而实现。 此外，聊天或频道中的任意用户都可以通过其工作流进行，而无需修改聊天中其他用户的卡片。
+使用顺序工作流支持，用户可以通过一系列工作流进行进度，而无需单独发送不同的卡片。 这可以通过 `Action.Execute` 返回自适应卡片来响应操作来实现。 此外，聊天或频道中的任何用户都可以通过其工作流进行进度，而无需修改聊天中其他用户的卡片。
 
-下图演示了一个食物订购机器人示例： <br/>
+下图演示了食品订购机器人示例： <br/>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-下图显示了聊天或频道中不同用户的不同状态：
+下图显示了聊天或频道中不同用户的各种状态：
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="适应机器人状态":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="餐饮机器人状态" lightbox="../../../assets/images/adaptive-cards/universal-bots-catering-bot.png":::
 
-有关详细信息，请参阅顺序 [工作流的示例](Sequential-Workflows.md)。
+有关详细信息，请参阅 [顺序工作流示例](Sequential-Workflows.md)。
 
 ### <a name="up-to-date-views"></a>最新视图
 
-你可以创建自动更新的自适应卡片。 例如，它可以是由用户发送的审批请求。 审批后，该卡片必须自动显示有关请求审批时间和批准请求者的详细信息。 刷新模型使您能够提供此类最新视图。 下图显示了多步骤审批流以及如何显示不同用户的视图。
+可以创建自动更新的自适应卡片。 例如，它可以是用户发送的审批请求。 批准后，该卡必须自动显示有关请求审批时间和批准请求的人员的详细信息。 刷新模型使你能够提供此类最新视图。 下图显示了多步骤审批流以及如何显示不同用户的视图。
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="最新用户特定视图":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="最新的用户特定视图" lightbox="../../../assets/images/adaptive-cards/universal-bots-up-to-date-views.png":::
 
-有关详细信息，请参阅 [最新视图示例](Up-To-Date-Views.md)。
+有关详细信息，请参阅 [最新视图的示例](Up-To-Date-Views.md)。
 
 现在，你可以了解如何使用新的通用操作模型转换自适应卡片，以提供独特且增强的用户体验。
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>自适应卡片和新的通用操作模型
 
-自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。 有关详细信息，请参阅 [自适应卡片](http://adaptivecards.io/)。 自适应卡片的新通用操作支持跨平台和应用程序常见处理自适应卡片操作。 有关详细信息，请参阅通用 [操作模型](/adaptive-cards/authoring-cards/universal-action-model)。
+自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。 有关详细信息，请参阅 [自适应卡片](http://adaptivecards.io/)。 新的自适应卡通用操作可跨平台和应用程序常见处理自适应卡片操作。 有关详细信息，请参阅 [通用操作模型](/adaptive-cards/authoring-cards/universal-action-model)。
 
-可以通过使用快速入门指南更新方案 [并利用通用](Work-with-universal-actions-for-adaptive-cards.md) 操作开始。
+可以使用 [快速入门指南](Work-with-universal-actions-for-adaptive-cards.md) 更新方案并利用通用操作来开始操作。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -118,7 +118,7 @@ ms.locfileid: "63356160"
 
 ## <a name="see-also"></a>另请参阅
 
-* [什么是自动程序](~/bots/what-are-bots.md)
+* [什么是机器人](~/bots/what-are-bots.md)
 * [自适应卡概述](~/task-modules-and-cards/what-are-cards.md)
 * [自适应卡片 @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [自适应卡片 @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)

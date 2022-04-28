@@ -1,54 +1,54 @@
 ---
 title: 生成自适应卡片选项卡
 author: KirtiPereira
-description: 了解如何使用带代码示例的自适应卡片生成选项卡，包括调用活动、了解任务模块工作流和身份验证。
+description: 了解如何使用自适应卡片和代码示例生成选项卡，包括调用活动、了解任务模块工作流和身份验证。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-keywords: 自适应卡片个人应用身份验证数据流
-ms.openlocfilehash: 2747dbe089ee847e7f5465d3a19fa58dbf945be5
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+keywords: 自适应卡个人应用身份验证数据流
+ms.openlocfilehash: 95507373671f9044bec788e981f66931b4588705
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453262"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104523"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
 > [!IMPORTANT]
 >
-> * 带自适应卡片的选项卡当前仅作为个人应用受支持。
+> * 自适应卡片的选项卡目前仅作为个人应用受支持。
 
-使用传统方法开发选项卡时，您可能会遇到这些问题：
+使用传统方法开发选项卡时，可能会遇到以下问题：
 
 * HTML 和 CSS 注意事项
-* 加载时间较慢
+* 加载时间缓慢
 * iFrame 约束
 * 服务器维护和成本
 
-自适应卡片选项卡是一种在卡片中生成选项卡的Teams。 你可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。使用自适应卡片呈现前端时，后端由机器人提供电源。 机器人负责接受请求，以及使用呈现的自适应卡片进行相应响应。
+自适应卡片选项卡是一种在Teams中生成选项卡的新方法。 你可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。前端使用自适应卡片呈现，但后端由机器人提供支持。 机器人负责接受请求，并使用呈现的自适应卡片做出适当的响应。
 
-可以使用现成的用户界面构建选项卡， (UI) 桌面、Web 和移动设备上的本机构建基块。 本文帮助你了解对应用清单进行更改所需的更改。 本文还介绍了调用活动如何请求和发送带自适应卡片的选项卡信息，及其对任务模块工作流的影响。
+可以使用现成的用户界面生成选项卡 (UI) 桌面、Web 和移动设备上的原生构建基块。 本文可帮助你了解对应用清单所做的更改。 本文还介绍了调用活动请求和使用自适应卡在选项卡中发送信息的方式及其对任务模块工作流的影响。
 
-下图显示了桌面和移动版中具有自适应卡片的生成选项卡：
+下图显示了桌面和移动版中带有自适应卡片的生成选项卡：
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="选项卡中呈现的自适应卡片示例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="在选项卡中呈现的自适应卡片示例。" border="false":::
 
 ## <a name="prerequisites"></a>先决条件
 
-在开始使用自适应卡片生成选项卡之前，你必须：
+在开始使用自适应卡片生成选项卡之前，必须：
 
-* 熟悉自动[程序开发、](../../bots/what-are-bots.md)[自适应卡片](https://adaptivecards.io/)和 Teams 中[](../../task-modules-and-cards/task-modules/task-modules-bots.md)的任务模块。
-* 使机器人在 Teams中运行，以用于你的开发。
+* 熟悉Teams中的[机器人开发](../../bots/what-are-bots.md)、[自适应卡](https://adaptivecards.io/)片和[任务模块](../../task-modules-and-cards/task-modules/task-modules-bots.md)。
+* 让机器人在Teams中运行以进行开发。
 
 ## <a name="changes-to-app-manifest"></a>对应用清单的更改
 
-呈现选项卡的个人应用必须在其应用 `staticTabs` 清单中包括数组。 在定义中提供 属性时 `contentBotId` ，将呈现自适应卡片 `staticTab` 选项卡。 静态选项卡定义必须包含 `contentBotId`，指定自适应卡片选项卡或 `contentUrl`，指定典型的托管 Web 内容选项卡体验。
+呈现选项卡的个人应用必须在其应用清单中包含一个 `staticTabs` 数组。 在定义中`staticTab`提供属性时，`contentBotId`会呈现自适应卡片选项卡。 静态选项卡定义必须包含一个 `contentBotId`、指定自适应卡片选项卡或一个 `contentUrl`指定典型托管 Web 内容选项卡体验的选项卡。
 
 > [!NOTE]
-> 属性 `contentBotId` 当前在清单版本 1.9 或更高版本中可用。
+> 该 `contentBotId` 属性当前在清单版本 1.9 或更高版本中可用。
 
-为 属性 `contentBotId` 提供 `botId` "自适应卡片"选项卡必须通信的 。 为 `entityId` "自适应卡片 `tabContext` "选项卡配置的在每个调用请求的参数中发送，可用于区分由同一自动程序提供电源的自适应卡片选项卡。 有关其他静态选项卡定义字段的信息，请参阅 [清单架构](../../resources/schema/manifest-schema.md#statictabs)。
+向属性`contentBotId``botId`提供自适应卡片选项卡必须与之通信的属性。 `entityId`为自适应卡片选项卡配置的选项卡在每个调用请求的参数中`tabContext`发送，可用于区分由同一机器人提供支持的自适应卡片选项卡。 有关其他静态选项卡定义字段的详细信息，请参阅 [清单架构](../../resources/schema/manifest-schema.md#statictabs)。
 
 下面是自适应卡片选项卡清单示例：
 
@@ -105,24 +105,24 @@ ms.locfileid: "63453262"
 
 ## <a name="invoke-activities"></a>调用活动
 
-自适应卡片选项卡和自动程序之间的通信通过活动 `invoke` 完成。 每个 `invoke` 活动都有一个对应的 **名称**。 使用每个活动的名称来区分每个请求。 `tab/fetch` 和 `tab/submit` 是本节中介绍的活动。
+自适应卡片选项卡和机器人之间的通信是通过活动完成的 `invoke` 。 每个 `invoke` 活动都有一个相应的 **名称**。 使用每个活动的名称来区分每个请求。 `tab/fetch` 并且 `tab/submit` 是本部分中介绍的活动。
 
 > [!NOTE]
 >
-> * 机器人需要向服务 URL 发送 [所有响应](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 服务 URL 作为传入有效负载的一部分 `activity` 接收。
-> * 调用负载大小已增加到 80kb。
+> * 机器人需要将所有响应发送到 [服务 URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 服务 URL 作为传入 `activity` 有效负载的一部分接收。
+> * 调用有效负载大小已增加到 80kb。
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>提取自适应卡片以呈现到选项卡
 
-`tab/fetch` 是机器人在用户打开自适应卡片选项卡时收到的第一个调用请求。当机器人收到请求时，它会发送一 **个选项卡继续** 响应或一个选项卡 **身份验证** 响应。
-**继续响应** 包括 **卡片数组，** 该数组按数组顺序垂直呈现到选项卡。
+`tab/fetch` 是用户打开自适应卡片选项卡时机器人收到的第一个调用请求。当机器人收到请求时，它会发送选项卡 **继续** 响应或选项卡 **身份验证** 响应。
+**继续** 响应包括 **一个卡片** 数组，该数组按数组的顺序垂直呈现到选项卡。
 
 > [!NOTE]
-> 有关身份验证响应 **详细信息，** 请参阅 [身份验证](#authentication)。
+> 有关 **身份验证响应的详细** 信息，请参阅 [身份验证](#authentication)。
 
-以下代码提供了请求和 `tab/fetch` 响应的示例：
+以下代码提供请求和响应示 `tab/fetch` 例：
 
-**`tab/fetch` request**
+**`tab/fetch` 请求**
 
 ```json
 // tab/fetch POST request: agents/{botId}/invoke
@@ -170,16 +170,16 @@ ms.locfileid: "63453262"
 
 ### <a name="handle-submits-from-adaptive-card"></a>处理自适应卡片中的提交
 
-在选项卡中呈现自适应卡片后，它可以响应用户交互。 此响应由调用请求 `tab/submit` 处理。
+在选项卡中呈现自适应卡片后，它可以响应用户交互。 此响应由 `tab/submit` 调用请求处理。
 
-当用户在"自适应卡片`tab/submit``Action.Submit`"选项卡上选择按钮时，会通过自适应卡片的功能将请求触发到具有相应数据的机器人。 自适应卡片数据通过请求的 data 属性 `tab/submit` 提供。 您收到以下请求响应之一：
+当用户在“自适应卡片”选项卡上选择按钮时， `tab/submit` 请求将通过自适应卡片的功能触发 `Action.Submit` 到具有相应数据的机器人。 自适应卡片数据可通过请求的数据属性 `tab/submit` 获得。 你将收到以下请求的响应之一：
 
-* 无正文的 `200` HTTP 状态代码响应。 空 200 响应会导致客户端不执行任何操作。
-* 标准选项卡`200`**继续响应**，如 [提取自适应卡片中介绍。](#fetch-adaptive-card-to-render-to-a-tab) 选项卡 **继续** 响应会触发客户端使用继续响应的卡片数组中提供的自适应卡片更新呈现的自适应 **卡片** 选项卡。
+* 没有正文的 HTTP 状态代码 `200` 响应。 空的 200 响应不会导致客户端执行任何操作。
+* 标准 `200` 选项卡 **继续** 响应，如 [提取自适应卡](#fetch-adaptive-card-to-render-to-a-tab)中所述。 选项卡 **继续** 响应会触发客户端使用 **继续** 响应的卡片数组中提供的自适应卡片更新呈现的自适应卡片选项卡。
 
-以下代码提供了请求和 `tab/submit` 响应的示例：
+以下代码提供请求和响应示 `tab/submit` 例：
 
-**`tab/submit` request**
+**`tab/submit` 请求**
 
 ```json
 // tab/submit POST request: agents/{botId}/invoke:
@@ -228,15 +228,15 @@ ms.locfileid: "63453262"
 
 ## <a name="understand-task-module-workflow"></a>了解任务模块工作流
 
-任务模块还使用自适应卡片调用 `task/fetch` 和 `task/submit` 请求和响应。 有关详细信息，请参阅在自动[程序Microsoft Teams模块](../../task-modules-and-cards/task-modules/task-modules-bots.md)。
+任务模块还使用自适应卡片来调用 `task/fetch` 、 `task/submit` 请求和响应。 有关详细信息，请参阅[Microsoft Teams机器人中使用任务模块](../../task-modules-and-cards/task-modules/task-modules-bots.md)。
 
-引入自适应卡片选项卡后，机器人响应请求方式会发生变化 `task/submit` 。 如果你使用的是自适应卡片选项卡`task/submit`，机器人会使用标准选项卡继续响应来响应调用请求，并关闭任务模块。 通过呈现选项卡继续响应正文中提供的新卡片列表，可更新"自适应卡片 **"** 选项卡。
+随着自适应卡片选项卡的引入，机器人响应 `task/submit` 请求的方式发生了更改。 如果使用的是自适应卡片选项卡，机器人会使用标准选项卡 **继续** 响应来`task/submit`响应调用请求，并关闭任务模块。 通过呈现选项卡中提供的新卡列表 **继续** 响应正文，更新自适应卡片选项卡。
 
-### <a name="invoke-taskfetch"></a>Invoke `task/fetch`
+### <a name="invoke-taskfetch"></a>调用 `task/fetch`
 
-以下代码提供了请求和 `task/fetch` 响应的示例：
+以下代码提供请求和响应示 `task/fetch` 例：
 
-**`task/fetch` request**
+**`task/fetch` 请求**
 
 ```json
 // task/fetch POST request: agents/{botId}/invoke
@@ -281,11 +281,11 @@ ms.locfileid: "63453262"
 }
 ```
 
-### <a name="invoke-tasksubmit"></a>Invoke `task/submit`
+### <a name="invoke-tasksubmit"></a>调用 `task/submit`
 
-以下代码提供了请求和 `task/submit` 响应的示例：
+以下代码提供请求和响应示 `task/submit` 例：
 
-**`task/submit` request**
+**`task/submit` 请求**
 
 ```json
 // task/submit POST request: agent/{botId}/invoke:
@@ -336,31 +336,31 @@ ms.locfileid: "63453262"
 
 ## <a name="authentication"></a>身份验证
 
-在之前的部分中，你已看到大多数开发范例都可以从任务模块请求和响应扩展到选项卡请求和响应中。 处理身份验证时，自适应卡片选项卡的工作流遵循邮件扩展的身份验证模式。 有关详细信息，请参阅 [添加身份验证](../../messaging-extensions/how-to/add-authentication.md)。
+在前面的部分中，你已看到大部分开发范例可以从任务模块请求和响应扩展到选项卡请求和响应。 处理身份验证时，自适应卡片选项卡的工作流遵循消息扩展的身份验证模式。 有关详细信息，请参阅 [添加身份验证](../../messaging-extensions/how-to/add-authentication.md)。
 
-`tab/fetch` 请求可以有继续 **响应** 或 **身份验证** 响应。 `tab/fetch`当触发请求并收到选项卡 **身份验证** 响应时，登录页将显示给用户。
+`tab/fetch` 请求可以具有 **继续** 或 **身份验证** 响应。 `tab/fetch`触发请求并接收选项卡 **身份验证** 响应时，登录页会显示给用户。
 
-**通过调用获取身份验证 `tab/fetch` 代码**
+**通过 `tab/fetch` 调用获取身份验证代码**
 
-1. 打开你的应用。 将显示登录页。
+1. 打开应用。 将显示登录页。
 
     > [!NOTE]
-    > 应用徽标通过应用清单 `icon` 中定义的 属性提供。 在选项卡身份验证响应`title`正文中返回的属性中定义徽标后显示的标题。
+    > 应用徽标是通过 `icon` 应用清单中定义的属性提供的。 在选项卡 **身份验证** 响应正文中返回的`title`属性中定义徽标后显示的标题。
 
-1. 选择“**登录**”。 您将重定向到身份验证响应正文 `value` 的 属性中提供的 **身份验证** URL。
+1. 选择“**登录**”。 重定向到 **身份** 验证响应正文的`value`属性中提供的身份验证 URL。
 1. 将出现一个弹出窗口。 此弹出窗口使用身份验证 URL 托管网页。
-1. 登录后，关闭窗口。 身份验证 **代码** 将发送到 Teams 客户端。
-1. 然后Teams`tab/fetch`客户端重新向服务提出请求，其中包括托管网页提供的身份验证代码。
+1. 登录后，关闭窗口。 **身份验证代码** 将发送到Teams客户端。
+1. 然后，Teams客户端将请求重新发布`tab/fetch`到服务，其中包括托管网页提供的身份验证代码。
 
 ### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` 身份验证数据流
 
-下图概述了身份验证数据流如何用于调用 `tab/fetch` 。
+下图概述了身份验证数据流如何用于 `tab/fetch` 调用。
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="自适应卡片选项卡身份验证流的示例。" border="false":::
 
 **`tab/fetch` 身份验证响应**
 
-以下代码提供了身份验证 `tab/fetch` 响应的示例：
+以下代码提供了身份验证响应的 `tab/fetch` 示例：
 
 ```json
 // tab/auth POST response (openURL)
@@ -382,7 +382,7 @@ ms.locfileid: "63453262"
 
 ### <a name="example"></a>示例
 
-以下代码显示了重新发送的请求示例：
+以下代码显示重新发出的请求示例：
 
 ```json
 {
@@ -430,18 +430,18 @@ ms.locfileid: "63453262"
 
 |**示例名称** | **说明** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| 在"自适应卡片"选项卡Teams自适应卡片 | Microsoft Teams选项卡示例代码，它演示如何在 Teams 中显示自适应卡片。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| 在“Teams”选项卡中显示自适应卡片 | Microsoft Teams选项卡示例代码，演示如何在Teams中显示自适应卡片。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [选项卡链接取消展开和阶段视图](~/tabs/tabs-link-unfurling.md)
+> [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>另请参阅
 
 * [自适应卡](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teams选项卡](~/tabs/what-are-tabs.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
-* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [创建通道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 * [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

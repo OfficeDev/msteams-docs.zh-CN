@@ -1,34 +1,34 @@
 ---
 title: 智能机器人对话中的邮件
-description: 介绍与自动程序进行Microsoft Teams的方法。 使用代码Teams了解频道数据、消息通知、图片消息、自适应卡片。
+description: 介绍如何与Microsoft Teams机器人进行对话。 了解Teams通道数据、消息通知、图片消息、使用代码示例的自适应卡片。
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 2078e63dfbc95071cec3ba620643bd9a8fddf723
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: d31f528b17c671074f3009c435cfff7bad728a09
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399350"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102110"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
-对话中每条消息都是一个 `Activity` 类型 为 的对象 `messageType: message`。 当用户发送消息时，Teams将邮件发送到自动程序。 Teams JSON 对象发送到机器人的消息终结点。 自动程序将检查消息以确定其类型并相应地做出响应。
+对话中的每个消息都是类型的`Activity``messageType: message`对象。 当用户发送消息时，Teams将消息发布到机器人。 Teams将 JSON 对象发送到机器人的消息传送终结点。 机器人检查消息以确定其类型并做出相应响应。
 
-基本对话通过 Bot Framework 连接器（一个 REST API）进行处理。 此 API 使机器人能够与Teams通信。 Bot Builder SDK 提供以下功能：
+基本对话通过 Bot Framework 连接器（单个 REST API）进行处理。 此 API 使机器人能够与Teams和其他通道通信。 Bot Builder SDK 提供以下功能：
 
 * 轻松访问 Bot Framework 连接器。
-* 用于管理对话流和状态的其他功能。
-* 合并认知服务的简单方法，如自然语言处理 (NLP) 。
+* 用于管理会话流和状态的其他功能。
+* 合并认知服务的简单方法，例如自然语言处理 (NLP) 。
 
-自动程序使用 Teams `Text` 接收来自用户的消息，并且它会向用户发送一个或多个消息响应。
+机器人使用`Text`该属性从Teams接收消息，并向用户发送单个或多个消息响应。
 
 ## <a name="receive-a-message"></a>接收消息
 
 若要接收短信，请使用 `Activity` 对象的 `Text` 属性。 在机器人的活动处理程序中，使用圈上下文对象的 `Activity` 来读取单一消息请求。
 
-以下代码显示了一个接收邮件的示例：
+以下代码演示接收消息的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -119,9 +119,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="send-a-message"></a>发送消息
 
-若要发送短信，请指定你想要作为活动发送的字符串。 在机器人的活动处理程序中，使用 turn context 对象的方法 `SendActivityAsync` 发送单个消息响应。 使用 对象的 方法 `SendActivitiesAsync` 一次发送多个响应。
+若要发送短信，请指定你想要作为活动发送的字符串。 在机器人的活动处理程序中，使用 turn 上下文对象 `SendActivityAsync` 的方法发送单个消息响应。 使用对象 `SendActivitiesAsync` 的方法一次发送多个响应。
 
-以下代码显示向对话中添加用户时发送邮件的示例：
+以下代码演示在将用户添加到对话时发送消息的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -191,32 +191,32 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> 在同一活动有效负载中发送短信和附件时，将发生邮件拆分。 此活动被拆分为单独的Microsoft Teams活动，一个仅包含一条短信，另一个包含附件。 拆分活动时，您不会收到响应消息 ID，该 ID 用于主动更新或删除邮件。[](~/bots/how-to/update-and-delete-bot-messages.md) 建议发送单独的活动，而不是根据邮件拆分。
+> 在同一活动有效负载中发送短信和附件时，将发生消息拆分。 通过Microsoft Teams将此活动拆分为单独的活动，其中一个活动仅包含一条短信，另一个活动包含附件。 由于活动是拆分的，因此不会收到响应中的消息 ID，该 ID 用于主动 [更新或删除](~/bots/how-to/update-and-delete-bot-messages.md) 消息。 建议发送单独的活动，而不是根据消息拆分。
 
-在用户和机器人之间发送的消息包含邮件中的内部通道数据。 此数据允许机器人在此频道上正常通信。 Bot Builder SDK 允许你修改消息结构。
+用户和机器人之间发送的消息包括消息中的内部通道数据。 此数据允许机器人在该通道上正确通信。 Bot Builder SDK 允许修改消息结构。
 
 ## <a name="teams-channel-data"></a>Teams通道数据
 
-对象`channelData`包含Teams特定的信息，是团队和频道的一个明确来源。 （可选）你可以缓存这些 ID 并用作本地存储的密钥。 SDK `TeamsActivityHandler` 中的 从 对象提取重要信息 `channelData` ，使其易于访问。 但是，您始终可以从对象访问 `turnContext` 原始数据。
+该`channelData`对象包含Teams特定的信息，是团队和频道 ID 的明确源。 （可选）可以缓存这些 ID 并使用这些 ID 作为本地存储的密钥。 `TeamsActivityHandler` SDK 中的用户从`channelData`对象中提取重要信息，使其易于访问。 但是，始终可以从 `turnContext` 对象访问原始数据。
 
-对象 `channelData` 不包含在个人对话中的邮件中，因为邮件在频道外发生。
+该 `channelData` 对象不包括在个人对话中的消息中，因为这些内容发生在频道外部。
 
-发送给 `channelData` 自动程序的活动中的典型对象包含以下信息：
+发送到机器人的活动中的典型 `channelData` 对象包含以下信息：
 
-* `eventType`：Teams通道修改事件时传递[的事件类型](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
-* `tenant.id`：Microsoft Azure Active Directory (Azure AD) 上下文中传递的租户 ID。
+* `eventType`：Teams事件类型，仅在[通道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
+* `tenant.id`：在所有上下文中传递Microsoft Azure Active Directory (Azure AD) 租户 ID。
 * `team`：仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id`：通道的 GUID。
-  * `name`：仅在团队重命名事件的情况下传递 [的团队名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
-* `channel`：仅在频道上下文中传递，当提到自动程序时或在团队中为频道中的事件传递，其中添加了自动程序。
+  * `name`：仅在 [团队重命名事件中](~/bots/how-to/conversations/subscribe-to-conversation-events.md)传递的团队名称。
+* `channel`：仅在频道上下文中传递、提及机器人时，或在添加了机器人的团队中的频道中传递事件。
   * `id`：通道的 GUID。
-  * `name`：仅在通道修改事件的情况下传递 [的通道名称](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
-* `channelData.teamsTeamId`：已弃用。 此属性仅包含用于向后兼容。
-* `channelData.teamsChannelId`：已弃用。 此属性仅包含用于向后兼容。
+  * `name`：通道名称仅在 [通道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
+* `channelData.teamsTeamId`：已弃用。 此属性仅包含用于向后兼容性。
+* `channelData.teamsChannelId`：已弃用。 此属性仅包含用于向后兼容性。
 
-### <a name="example-channeldata-object-channelcreated-event"></a>channelCreated 事件 (channelCreated 事件) 
+### <a name="example-channeldata-object-channelcreated-event"></a>channelData 对象 (channelCreated 事件) 示例
 
-以下代码显示了 channelData 对象的示例：
+以下代码演示 channelData 对象的示例：
 
 ```json
 "channelData": {
@@ -236,23 +236,23 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>邮件内容
 
-从自动程序接收或发送到自动程序的邮件可以包括不同类型的邮件内容。
+从机器人接收或发送到机器人的消息可以包含不同类型的消息内容。
 
-| 格式    | 从用户到机器人 | 从自动程序到用户 | 备注                                                                                   |
+| 格式    | 从用户到机器人 | 从机器人到用户 | 笔记                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向自动程序发送格式文本和图片。                                                                                        |
-| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式×最大为 1024×1024 和 1 MB。 不支持动态 GIF。  |
-| 卡片     | ✖                | ✔                | 有关支持的[Teams，](~/task-modules-and-cards/cards/cards-reference.md)请参阅卡片参考。 |
-| 表情符号    | ✔                | ✔                | Teams UTF-16 支持表情符号，例如 U+1F600 表示表情符号。 |
+| 格式文本  | ✔                | ✔                | 机器人可以发送丰富的文本、图片和卡片。 用户可以向机器人发送丰富的文本和图片。                                                                                        |
+| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式的最大 1024×1024 和 1 MB。 不支持动态 GIF。  |
+| 卡片     | ✖                | ✔                | 请参阅[支持的卡Teams卡参考](~/task-modules-and-cards/cards/cards-reference.md)。 |
+| 表情符号    | ✔                | ✔                | Teams目前通过 UTF-16 支持表情符号，例如 U+1F600，用于笑脸。 |
 
-## <a name="notifications-to-your-message"></a>邮件通知
+## <a name="notifications-to-your-message"></a>消息通知
 
-您还可以使用 属性向邮件添加 `Notification.Alert` 通知。 通知会提醒用户有关新任务、提及和评论。 这些警报与用户正在处理或必须通过向活动源中插入通知来查看内容相关。 对于从自动程序消息触发的通知，将 `TeamsChannelData` objects `Notification.Alert` 属性设置为 *true*。 是否引发通知取决于单个用户Teams设置，你无法替代这些设置。 通知类型可以是横幅，也可以同时为横幅和电子邮件。
+还可以使用该 `Notification.Alert` 属性向邮件添加通知。 通知会提醒用户有关新任务、提及和注释的信息。 这些警报与用户正在处理的内容或必须通过在活动源中插入通知来查看的内容相关。 若要从机器人消息触发通知，请将 `TeamsChannelData` 对象 `Notification.Alert` 属性设置为 *true*。 是否引发通知取决于单个用户的Teams设置，不能重写这些设置。 通知类型是横幅，或者是横幅和电子邮件。
 
 > [!NOTE]
-> " **摘要"** 字段将来自用户的任何文本显示为源中的通知消息。
+> “ **摘要** ”字段将用户的任何文本显示为源中的通知消息。
 
-以下代码显示向邮件添加通知的示例：
+以下代码演示向消息添加通知的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -325,26 +325,26 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-若要增强邮件功能，可以将图片作为邮件附件进行添加。
+若要增强邮件，可以将图片作为该邮件的附件包含在一起。
 
 ## <a name="picture-messages"></a>图片消息
 
-图片通过向邮件添加附件来发送。 有关附件详细信息，请参阅 [Bot Framework 文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。
+图片是通过将附件添加到邮件来发送的。 有关附件的详细信息，请参阅 [Bot Framework 文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。
 
-图片可以是最多 1024×1024 和 1 MB PNG、 JPEG 或 GIF 格式。 不支持动态 GIF。
+图片最多可以是 1024×1024 和 1 MB PNG、JPEG 或 GIF 格式。 不支持动态 GIF。
 
-使用 XML 指定每个图像的高度和宽度。 在 markdown 中，图像大小默认为 256×256。 例如：
+使用 XML 指定每个图像的高度和宽度。 在 markdown 中，映像大小默认为 256×256。 例如：
 
-* 使用： `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`。
-* 请勿使用： `![Duck on a rock](http://aka.ms/Fo983c)`。
+* 使用： `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* 请勿使用： `![Duck on a rock](http://aka.ms/Fo983c)`.
 
-对话机器人可以包含可简化业务工作流的自适应卡片。 自适应卡片提供丰富的可自定义文本、语音、图像、按钮和输入字段。
+会话机器人可以包含可简化业务工作流的自适应卡片。 自适应卡片提供丰富的可自定义文本、语音、图像、按钮和输入字段。
 
 ## <a name="adaptive-cards"></a>自适应卡
 
-自适应卡片可以在机器人中创作，并可在多个应用（如Teams、网站等）中显示。 有关详细信息，请参阅 [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+自适应卡片可以在机器人中创作，并显示在多个应用中，例如Teams、网站等。 有关详细信息，请参阅 [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 
-以下代码显示发送简单自适应卡片的示例：
+以下代码演示了发送简单自适应卡片的示例：
 
 ```json
 {
@@ -372,53 +372,53 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ### <a name="form-completion-feedback"></a>表单完成反馈
 
-向自动程序发送响应时，表单完成消息将显示在自适应卡片中。 消息可以是两种类型，错误或成功：
+向机器人发送响应时，窗体完成消息将显示在自适应卡片中。 消息可以是两种类型，错误或成功：
 
-* **错误**：当发送给自动程序的响应不成功时，出现错误 **，将出现"重试"** 消息。
+* **错误**：当发送到机器人的响应不成功时， **出现错误，将显示“重试** ”消息。
 
-    ![错误消息](~/assets/images/Cards/error-message.png)
+     :::image type="content" source="../../../assets/images/Cards/error-message.png" alt-text="错误消息"border="true":::
 
-* **成功**：当发送给自动程序的响应成功时， **将显示你的响应已发送到应用** 消息。
+* **成功**：当发送到机器人的响应成功时， **将显示发送到应用消息的响应** 。
 
-    ![成功消息](~/assets/images/Cards/success.PNG)
+:::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="成功消息"border="true":::
 
-您可以选择" **关闭"** 或"切换聊天"来消除该消息。
+可以选择 **关闭** 或切换聊天以关闭消息。
 
-**移动响应**：
+**移动设备上的响应**：
 
 错误消息显示在自适应卡片的底部。
 
-有关自动程序中的卡和卡详细信息，请参阅 [卡片文档](~/task-modules-and-cards/what-are-cards.md)。
+有关机器人中的卡片和卡片的详细信息，请参阅 [卡片文档](~/task-modules-and-cards/what-are-cards.md)。
 
 ## <a name="status-code-responses"></a>状态代码响应
 
-以下是状态代码及其错误代码和消息值：
+下面是状态代码及其错误代码和消息值：
 
 | 状态代码 | 错误代码和消息值 | 说明 |
 |----------------|-----------------|-----------------|
-| 403 | **代码**： `ConversationBlockedByUser` <br/> **消息**：用户阻止了与机器人的对话。 | 用户通过审核设置在一对一聊天或频道中阻止机器人。 |
-| 403 | **代码**： `BotNotInConversationRoster` <br/> **消息**：机器人不是对话名单中的一部分。 | 机器人不是对话的一部分。 |
-| 403 | **代码**： `BotDisabledByAdmin` <br/> **消息**：租户管理员已禁用此机器人。 | 租户阻止了机器人。 |
-| 401 | **代码**： `BotNotRegistered` <br/> **消息**：未找到此自动程序注册。 | 未找到此自动程序注册。 |
-| 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一对话上的多个并发操作，某一依赖项的前提条件失败。 |
-| 404 | **代码**： `ConversationNotFound` <br/> **消息**：未找到对话。 | 未找到对话。 |
-| 413 | **代码**： `MessageSizeTooBig` <br/> **邮件**：邮件大小过大。 | 传入请求的大小太大。 |
-| 429 | **代码**： `Throttled` <br/> **消息**：请求过多。 还返回在之后重试时间。 | 机器人发送的请求过多。 有关详细信息，请参阅速率 [限制](~/bots/how-to/rate-limit.md)。 |
+| 403 | **代码**： `ConversationBlockedByUser` <br/> **消息**：用户阻止了与机器人的对话。 | 用户通过审查设置在 1：1 聊天或频道中阻止了机器人。 |
+| 403 | **代码**： `BotNotInConversationRoster` <br/> **消息**：机器人不是聊天名单的一部分。 | 机器人不是对话的一部分。 |
+| 403 | **代码**： `BotDisabledByAdmin` <br/> **消息**：租户管理员禁用了此机器人。 | 租户阻止了机器人。 |
+| 401 | **代码**： `BotNotRegistered` <br/> **消息**：未为此机器人找到注册。 | 找不到此机器人的注册。 |
+| 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一会话上的多个并发操作，我们的某个依赖项的先决条件失败。 |
+| 404 | **代码**： `ConversationNotFound` <br/> **消息**：找不到对话。 | 未找到对话。 |
+| 413 | **代码**： `MessageSizeTooBig` <br/> **消息**：消息大小太大。 | 传入请求的大小太大。 |
+| 429 | **代码**： `Throttled` <br/> **消息**：请求过多。 另请返回重试时间。 | 机器人发送的请求过多。 有关详细信息，请参阅 [速率限制](~/bots/how-to/rate-limit.md)。 |
 
 ## <a name="code-sample"></a>代码示例
 
 |示例名称 | Description | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Teams 对话自动程序 | 消息和对话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams 对话自动程序 | 消息传送和会话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [自动程序命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
+> [机器人命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
 
 ## <a name="see-also"></a>另请参阅
 
 * [发送主动邮件](~/bots/how-to/conversations/send-proactive-messages.md)
 * [订阅对话事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* [通过自动程序发送和接收文件](~/bots/how-to/bots-filesv4.md)
-* [将租户 ID 和对话 ID 发送到机器人的请求标头](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [通过机器人发送和接收文件](~/bots/how-to/bots-filesv4.md)
+* [将租户 ID 和会话 ID 发送到机器人的请求标头](~/bots/how-to/conversations/request-headers-of-the-bot.md)

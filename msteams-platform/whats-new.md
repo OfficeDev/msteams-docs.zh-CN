@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 936d5eff50453801527425cbd4a61f6928fb1d30
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: ba9588517e7b0657eef7da265844e20d8b2fbd76
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952385"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073088"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "64952385"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|2022/04/20 |  设置 CI/CD 管道 | 工具和 SDK > 用于 Visual Studio Code 的 Teams 工具包 > [设置 CI/CD 管道](toolkit/use-CICD-template.md)|
 |2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| 从个人应用或选项卡共享到 Teams（开发者预览版） | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
@@ -61,6 +62,10 @@ ms.locfileid: "64952385"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|2022/04/26|使用机器人卸载个人应用的行为 | 生成机器人>机器人对话>[使用机器人在个个人应用程序中卸载行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|2022/04/22| 针对盈利应用的测试预览 | 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
+|2022/04/22| 应用内购买流，用于盈利应用 | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|2022/04/20 |  设置 CI/CD 管道 | 工具和 SDK > 用于 Visual Studio Code 的 Teams 工具包 > [设置 CI/CD 管道](toolkit/use-CICD-template.md)|
 |2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
 |2022 年 4 月 1 日| 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
 |2022 年 3 月 30 日| 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
@@ -269,14 +274,10 @@ ms.locfileid: "64952385"
 |04/06/2022| 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 |02/02/2022| 引入了应用清单版本 1.12 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022| 针对盈利应用的测试预览| 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| 应用内购买流，用于盈利应用 | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |01/17/2022| 适用于移动的自适应卡片中的人员选取器  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 |01/10/2022 | Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
-|12/24/2021| 引入了授予 Tab 设备权限的分步指南 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |
 |11/15/2021| 个人选项卡和可在 Outlook 和 Office 运行的消息传递扩展 | [跨 Microsoft 365 扩展 Teams 应用](~/m365-apps/overview.md) |
 |10/28/2021|可以启用机器人以使用特定于资源的许可 （RSC） 接收所有通道消息 | • 生成机器人>机器人对话>机器人对话消息>[使用 RSC 接收所有消息](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • 生成机器人>机器人对话> [机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 生成机器人>机器人对话> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • 应用清单>公共开发人员预览> [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md) |
-|06/21/2021|使用机器人卸载个人应用的行为 | 生成机器人>机器人对话>[使用机器人在个个人应用程序中卸载行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| 聊天的特定资源许可 | • 利用 Microsoft Graph 的 Teams 数据>[特定资源许可](graph-api/rsc/resource-specific-consent.md) </br> • 测试你的应用> Microsoft Graph >[测试 Teams 中资源特定许可权限](graph-api/rsc/test-resource-specific-consent.md)|
 
 有关详细信息，请参阅[ Teams 公共开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)。

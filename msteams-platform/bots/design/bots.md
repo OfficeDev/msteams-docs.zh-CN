@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475823"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104383"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
@@ -36,7 +36,7 @@ ms.locfileid: "59475823"
 
 用户可以使用@mention访问在桌面上添加的机器人。
 
-:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="示例演示如何使用 @mention  在群组聊天中访问移动机器人" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="示例演示如何使用 @mention.</a 在群组聊天中访问移动机器人>
 
 ### <a name="desktop"></a>桌面
 
@@ -92,7 +92,7 @@ ms.locfileid: "59475823"
 
 ### <a name="tours"></a>导览
 
-可在包含欢迎消息的教程以及自动程序响应类似"帮助"命令时包括教程。 教程是介绍机器人功能最有效的方法。 如果适用，它们还非常适合描述应用的其他功能。 例如，包括消息传递扩展的屏幕截图。
+可在包含欢迎消息的教程以及自动程序响应类似"帮助"命令时包括教程。 教程是介绍机器人功能最有效的方法。 如果适用，它们还非常适合描述应用的其他功能。 例如，包括消息扩展的屏幕截图。
 
 > [!IMPORTANT]
 > 无需登录即可访问教程。
@@ -159,8 +159,8 @@ ms.locfileid: "59475823"
 |3|**自定义选项卡**：打开与应用相关的其他内容。|
 |4|**关于选项卡**：显示有关应用的基本信息。|
 |5|**聊天气泡**：自动对话使用 Teams 消息框架。|
-|6|**自适应卡片**：如果机器人的响应包括自适应卡片，则该卡将占据聊天气泡的全半角。|
-|7|**命令菜单**：显示自动程序的标准命令（由你定义）。|
+|6 |**自适应卡片**：如果机器人的响应包括自适应卡片，则该卡将占据聊天气泡的全半角。|
+|7 |**命令菜单**：显示自动程序的标准命令（由你定义）。|
 
 ### <a name="command-menu"></a>命令菜单
 
@@ -279,7 +279,7 @@ ms.locfileid: "59475823"
 
 ## <a name="manage-a-bot"></a>管理自动程序
 
-用户应能够更改自动程序的设置。 可通过自动程序命令提供此功能，但将 [任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) （如下例所示）中所有设置通常更高效。
+用户应能够更改自动程序的设置。可通过自动程序命令提供此功能，但将所有设置包含在[任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)中通常更有效（如下例所示）。
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="示例显示一个任务模块，用于配置机器人的设置。" border="false":::
 

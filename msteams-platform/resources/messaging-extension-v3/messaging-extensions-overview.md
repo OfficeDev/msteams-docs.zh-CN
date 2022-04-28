@@ -1,37 +1,37 @@
 ---
-title: 开发消息传递扩展
-description: 介绍如何开始使用邮件扩展Microsoft Teams
+title: 开发消息扩展
+description: 介绍如何在Microsoft Teams中开始使用消息扩展
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: teams 消息传递扩展消息传递扩展
-ms.openlocfilehash: ea07ae8c7a7a16f5187adfe6dbe5f52d8bf47056
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: teams 消息扩展消息扩展
+ms.openlocfilehash: b1d219bbb8e79a99836ad20b35442e10ec537c4a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155751"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104329"
 ---
-# <a name="develop-messaging-extensions-for-microsoft-teams"></a>为用户开发消息传递Microsoft Teams
+# <a name="develop-message-extensions-for-microsoft-teams"></a>为Microsoft Teams开发消息扩展
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-消息传递扩展是一种功能强大的方法，用户可从多个用户Microsoft Teams。 通过此功能，用户可以在服务中查询或发布信息，然后以卡片形式将该信息发布至消息中。
+消息扩展是用户从Microsoft Teams参与应用的强大方式。 借助此功能，用户可以查询或发布服务中的信息，并将该信息以卡的形式直接发布到邮件中。
 
-![邮件扩展卡示例](~/assets/images/compose-extensions/ceexample.png)
+![消息扩展卡的示例](~/assets/images/compose-extensions/ceexample.png)
 
-邮件扩展沿撰写框的底部显示。 一些内置，如表情符号、Giphy 和贴纸。 选择 **"更多选项**" (&#8943;) 查看其他消息传递扩展，包括从应用库添加或自己上传的邮件扩展。
+消息扩展显示在撰写框的底部。 其中一些是内置的，如表情符号、Giphy 和贴纸。 选择 **“更多选项** ” (**&#8943;**) 按钮查看其他消息扩展，包括从应用库添加或自行上传的消息扩展。
 
-如何使用消息传递扩展？ 下面提供了一些可能性：
+如何使用消息扩展？ 下面是一些可能性：
 
-* 工作项和 Bug
+* 工作项和 bug
 * 客户支持票证
-* 使用情况图表和报告
+* 使用情况图表和报表
 * 图像和媒体内容
-* 销售机会和潜在客户
+* 销售机会和潜在顾客
 
-## <a name="types-of-messaging-extensions"></a>消息扩展类型
+## <a name="types-of-message-extensions"></a>消息扩展的类型
 
-目前，你主要可以创建两种邮件Teams扩展。 以下主题将指导你完成创建它们的过程：
+目前主要可以为Teams创建两种类型的消息扩展。 以下主题将指导你完成创建过程：
 
-* [基于搜索的消息扩展](~/resources/messaging-extension-v3/search-extensions.md)：在服务中查询信息并将其插入到邮件中。 示例：查找工作项
-* [基于操作的消息扩展](~/resources/messaging-extension-v3/create-extensions.md)：从用户收集信息并张贴到第三方服务。 示例：创建工作项
+* [基于搜索的消息扩展插件](~/resources/messaging-extension-v3/search-extensions.md)：查询服务中的信息并将其插入消息中。 示例：查找工作项
+* [基于操作的消息扩展插件](~/resources/messaging-extension-v3/create-extensions.md)：从用户收集信息并发布到第三方服务。 示例：创建工作项

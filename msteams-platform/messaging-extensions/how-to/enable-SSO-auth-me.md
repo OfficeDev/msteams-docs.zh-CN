@@ -1,49 +1,49 @@
 ---
-title: 对邮件扩展的 SSO 支持
+title: 对消息扩展的 SSO 支持
 author: KirtiPereira
-description: 了解如何使用代码示例为邮件扩展启用 SSO 支持。
+description: 了解如何使用代码示例为消息扩展启用 SSO 支持。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3543d86d15755642a1617e07514db95a6a812313
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4ee49b349d287325bb029aa155a61219a8656e22
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453465"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104390"
 ---
-# <a name="single-sign-on-support-for-messaging-extensions"></a>邮件扩展的单一登录支持
+# <a name="single-sign-on-support-for-message-extensions"></a>对消息扩展的单一登录支持
 
-SSO (单一) 支持现在可用于消息传递扩展和链接展开。 默认情况下为邮件扩展启用单一登录将刷新身份验证令牌，这将最大程度地减少需要输入 Microsoft Teams 登录凭据Microsoft Teams。
+单一登录 (SSO) 支持现在可用于消息扩展和链接展开。 默认情况下，为消息扩展启用单一登录会刷新身份验证令牌，从而最大程度地减少输入Microsoft Teams登录凭据所需的次数。
 
-本文档将指导您在必要时如何启用 SSO 和存储身份验证令牌。
+本文档介绍如何在必要时启用 SSO 并存储身份验证令牌。
 
 ## <a name="prerequisites"></a>先决条件
 
-为邮件扩展和链接展开启用 SSO 的先决条件如下所示：
+为消息扩展和链接展开启用 SSO 的先决条件如下：
 
 * 必须具有 [Azure](https://azure.microsoft.com/free/) 帐户。
-* 你必须通过 Azure AD 门户配置应用，Teams自动程序的应用程序清单，就像通过 Azure AD 门户注册应用一[样](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal)。
+* 必须通过Azure AD门户配置应用，并通过Azure AD门户更新Teams应用程序清单中定义[的](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal)机器人。
 
 > [!NOTE]
-> 有关创建 Azure 帐户和更新应用清单的信息，请参阅单一登录 [ (SSO) 自动程序支持](../../bots/how-to/authentication/auth-aad-sso-bots.md)。
+> 有关创建 Azure 帐户和更新应用清单的详细信息，请参阅 [对机器人的单一登录 (SSO) 支持](../../bots/how-to/authentication/auth-aad-sso-bots.md)。
 
-## <a name="enable-sso-for-messaging-extensions-and-link-unfurling"></a>为消息传递扩展和链接取消展开启用 SSO
+## <a name="enable-sso-for-message-extensions-and-link-unfurling"></a>为消息扩展和链接展开启用 SSO
 
-完成先决条件后，您可以为消息传递扩展和链接取消点击启用 SSO。
+完成先决条件后，可以为消息扩展和链接展开启用 SSO。
 
 若要启用 SSO，
 
-1. 在 Microsoft Azure 门户中更新自动程序 [OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) 连接详细信息。
-2. 下载 [邮件扩展示例并按照](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) 向导提供的设置说明操作。
+1. 在 Microsoft Azure 门户中更新机器人 [OAuth 连接](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection)详细信息。
+2. 下载 [消息扩展示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) ，并按照向导提供的设置说明操作。
    > [!NOTE]
-   > 设置邮件扩展时，请使用自动程序 OAuth 连接。
-3. 在 [TeamsMessagingExtensionsSearchAuthConfigBot.cs](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) 文件中，在 和 / `OnTeamsAppBasedLinkQueryAsync`或 中将值从 *auth* 更新为 *silentAuth*`OnTeamsMessagingExtensionQueryAsync`。  
+   > 设置消息扩展时，请使用机器人 OAuth 连接。
+3. 在 [TeamsMessagingExtensionsSearchAuthConfigBot.cs](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) 文件中`OnTeamsMessagingExtensionQueryAsync`，在和/或`OnTeamsAppBasedLinkQueryAsync`中将值从 *身份验证* 更新为 *silentAuth*。  
 
     > [!NOTE]
-    > 我们不支持其他处理程序 SSO `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` ，TeamsMessagingExtensionsSearchAuthConfigBot.cs 文件除外。
+    > 我们不支持其他处理程序 SSO，但 TeamsMessagingExtensionsSearchAuthConfigBot.cs 文件除外`OnTeamsMessagingExtensionQueryAsync``OnTeamsAppBasedLinkQueryAsync`。
 
-4. 在有效负载或 `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` `OnTeamsAppBasedLinkQueryAsync`中的 处理程序中接收令牌，具体取决于你要为以下项启用 SSO 的方案：
+4. 在有效负载中或在处理程序中`turnContext.Activity.Value``OnTeamsAppBasedLinkQueryAsync`接收令牌`OnTeamsMessagingExtensionQueryAsync`，具体取决于为以下情况启用 SSO 的方案：
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
@@ -55,7 +55,7 @@ SSO (单一) 支持现在可用于消息传递扩展和链接展开。 默认情
     
      ```
   
-    如果使用的是 OAuth 连接，请向 TeamsMessagingExtensionsSearchAuthConfigBot.cs 文件添加以下代码，以更新令牌或在存储中添加令牌：
+    如果使用 OAuth 连接，请将以下代码添加到 TeamsMessagingExtensionsSearchAuthConfigBot.cs 文件以更新或添加存储中的令牌：
 
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -119,6 +119,6 @@ SSO (单一) 支持现在可用于消息传递扩展和链接展开。 默认情
 
 ## <a name="see-also"></a>另请参阅
 
-* [向邮件扩展添加身份验证](add-authentication.md)
-* [将 SSO 用于聊天机器人](../../bots/how-to/authentication/auth-aad-sso-bots.md)
+* [向消息扩展添加身份验证](add-authentication.md)
+* [对机器人使用 SSO](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [链接展开](link-unfurling.md)

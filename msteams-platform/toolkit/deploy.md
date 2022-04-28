@@ -1,25 +1,25 @@
 ---
 title: 部署到云
 author: MuyangAmigo
-description: 将应用部署到云、Azure 或 SharePoint
+description: 将应用部署到云、Azure 或SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.openlocfilehash: 1d0ade9abed4be212abfb96068626172c4f0f03e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614528"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104145"
 ---
 # <a name="deploy-to-the-cloud"></a>部署到云
 
-Teams Toolkit帮助你将应用程序中的前端和后端代码部署或上载到 Azure 中预配的云资源。
+Teams Toolkit可帮助你将应用程序中的前端和后端代码部署或上传到 Azure 中预配的云资源。
 
-* 选项卡（如前端应用程序）部署到 Azure 存储，并针对静态 Web 托管或 sharepoint 网站进行配置。
-* 后端 API 将部署到 Azure 函数。
-* 自动程序或消息传递扩展将部署到 Azure 应用服务。
+* 选项卡（例如前端应用程序）部署到 Azure 存储，并配置为静态 Web 托管或 sharepoint 站点。
+* 后端 API 部署到 Azure 函数。
+* 机器人或消息扩展部署到 Azure 应用服务。
 
 ## <a name="prerequisite"></a>先决条件
 
@@ -27,27 +27,27 @@ Teams Toolkit帮助你将应用程序中的前端和后端代码部署或上载�
 
 > [!NOTE]
 >
-> * 确保你已Teams VS 代码打开的应用项目。
-> * 在将项目代码部署到云之前， [预配云资源](provision.md)。
+> * 确保已在 VS 代码中打开Teams应用项目。
+> * 在将项目代码部署到云之前， [请预配云资源](provision.md)。
 
-## <a name="deploy-teams-apps-using-teams-toolkit"></a>使用Teams部署 Teams Toolkit
+## <a name="deploy-teams-apps-using-teams-toolkit"></a>使用Teams Toolkit部署Teams应用
 
-入门指南可帮助你使用 Teams Toolkit。 可以使用以下方法部署Teams应用程序：
+入门指南可帮助你使用Teams Toolkit进行部署。 可以使用以下命令部署Teams应用：
 
 * [将应用部署到 Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [将应用部署到SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## <a name="details-on-teams-app-workload"></a>有关应用Teams的详细信息
+## <a name="details-on-teams-app-workload"></a>有关Teams应用工作负荷的详细信息
 
 | Teams应用工作负载 | 源代码 | 生成项目| 目标资源 |
 |-------------|----------|---------------|---------------|
-|带选项卡React </br> 前端工作负载| `yourProjectFolder/tabs`| `tabs/build` |Azure 存储 |
-|带选项卡SharePoint </br> 前端工作负载 | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint应用程序目录 |
+|带有React的选项卡 </br> 前端工作负荷| `yourProjectFolder/tabs`| `tabs/build` |Azure 存储 |
+|带有SharePoint的选项卡 </br> 前端工作负荷 | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint应用目录 |
 |Azure 函数上的 API </br> 后端工作负载 | `yourProjectFolder/api`| 不适用 |Azure 函数 |
-|机器人和消息传递扩展 </br> 后端工作负载 | `yourProjectFolder/bot` | 不适用 | Azure 应用服务 |
+|机器人和消息扩展 </br> 后端工作负载 | `yourProjectFolder/bot` | 不适用 | Azure 应用服务 |
 
 > [!NOTE]
-> 当你在项目中包括 Azure API 管理资源并触发部署时。 你可以将 Azure 函数中的 API 发布到 Azure API 管理服务。
+> 在项目中包括 Azure API 管理资源并触发部署时。 可以在 Azure 函数中将 API 发布到 Azure API 管理服务。
 
 ## <a name="see-also"></a>另请参阅
 

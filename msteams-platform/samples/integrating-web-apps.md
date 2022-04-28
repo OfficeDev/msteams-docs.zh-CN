@@ -5,15 +5,15 @@ ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Teams 集成注意事项
-ms.openlocfilehash: eb278d078c7b195ff5d2d2a2f980ffc9db74f748
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+title: Teams集成的注意事项
+ms.openlocfilehash: bbd5b046d7b1afca5cc3fa5c8afb21a3698f43eb
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685595"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104348"
 ---
-# <a name="considerations-for-teams-integration"></a>Teams 集成注意事项
+# <a name="considerations-for-teams-integration"></a>Teams集成的注意事项
 
 通过将 Web 应用与Teams正确集成，可以使 Web 应用适合Teams的社交和协作功能。
   
@@ -129,6 +129,6 @@ Teams具有单一登录 (SSO) 机制，其中包含第三方应用的Azure AD。
 
 * [集成 web 应用](~/samples/integrate-web-apps-overview.md)
 * [用于Microsoft Teams的低代码和无代码解决方案](~/samples/teams-low-code-solutions.md)
-* [从 Web 应用共享到Teams](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [从 Web 应用共享到 Teams](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [SameSite Cookie 属性](~/resources/samesite-cookie-update.md)
 * [集成Power Virtual Agents聊天机器人](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

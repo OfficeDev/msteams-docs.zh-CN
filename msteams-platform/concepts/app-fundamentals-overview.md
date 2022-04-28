@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: 入口点扩展性用例设备功能
-ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766035"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104026"
 ---
 # <a name="plan-your-app-with-teams-features"></a>使用 Teams 功能规划应用
 
@@ -56,7 +56,7 @@ Teams 即平台在应用开发的每个阶段为你提供工具包、库、应�
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams 解决方案的感知表示形式。" border="true":::
 
-    应用在 Teams 上显示为选项卡、机器人、消息传递扩展、连接器、Webhook 或多功能应用。 这些功能在后端由 Azure、Microsoft Graph、SharePoint、Power 应用提供支持，可帮助自动执行任务和流程。
+    应用在 Teams 上显示为选项卡、自动程序、消息扩展、连接器、Webhook 或多功能应用。 这些功能在后端由 Azure、Microsoft Graph、SharePoint、Power 应用提供支持，可帮助自动执行任务和流程。
 
     这些功能的组合帮助你将应用解决方案变为现实。
 
@@ -67,10 +67,9 @@ Teams 即平台在应用开发的每个阶段为你提供工具包、库、应�
 * 将应用与 Teams 和其他应用（如 Microsoft 365、Microsoft Graph 等）集成。
 * 使用开发人员门户配置、管理、部署应用。
 
-<details>
-<summary><b>了解政府社区云 (GCC)</b></summary>
+#### <a name="government-community-cloud"></a>政府社区云
 
-政府社区云是以政府为中心的商业环境副本。 美国国防部 (DOD) 和联邦承包商必须满足严格的网络安全和合规性要求。 为此，已创建 GCC-High 以满足 DOD 和联邦承包商的需求。 GCC-High 是 DOD 云的副本，但存在于其自己的主权环境中。 DOD 云仅针对国防部构建。
+政府社区云 (GCC) 是以政府为中心的商业环境副本。 美国国防部 (DOD) 和联邦承包商必须满足严格的网络安全和合规性要求。 为此，已创建 GCC-High 以满足 DOD 和联邦承包商的需求。 GCC-High 是 DOD 云的副本，但存在于其自己的主权环境中。 DOD 云仅针对国防部构建。
 
 下表包括 GCC、GCC-High、DOD 的 Teams 功能和可用性：
 

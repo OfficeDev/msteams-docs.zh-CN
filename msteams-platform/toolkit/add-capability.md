@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d2e3d559bd9d561e3afae8b0db9544ab2ad86cc
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073529"
+ms.locfileid: "65103269"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>将功能添加到 Teams 应用
 
@@ -21,7 +21,7 @@ ms.locfileid: "65073529"
 |--------|-------------|
 | 选项卡 |  选项卡是指向应用清单中声明的域的简单 HTML 标记。 可以添加选项卡作为团队内部频道的一部分，为单个用户添加群组聊天或个人应用|
 | 机器人 |  机器人帮助通过文本、交互式卡片和任务模块与 Web 服务交互|
-| 消息传递扩展 | 消息传递扩展有助于通过Microsoft Teams客户端中的按钮和表单与 Web 服务交互|
+| 消息扩展 | 消息扩展有助于通过Microsoft Teams客户端中的按钮和表单与 Web 服务交互|
 
 ## <a name="prerequisite"></a>先决条件
 
@@ -35,7 +35,8 @@ ms.locfileid: "65073529"
 添加更多功能时对 TeamsFx 的限制如下所示：
 
 * 最多可以添加 16 个实例的选项卡
-* 可以为每个实例添加一个实例的机器人和消息传递扩展
+* 可以为每个实例添加一个实例的机器人和消息扩展
+
 ## <a name="add-capabilities"></a>添加功能
 
 > [!Note]
@@ -69,7 +70,7 @@ ms.locfileid: "65073529"
    |-----------------------|----------|
    |添加选项卡|`teamsfx capability add tab`|
    |添加机器人|`teamsfx capability add bot`|
-   |添加消息传递扩展插件|`teamsfx capability add messaging-extension`|
+   |添加消息扩展插件|`teamsfx capability add messaging-extension`|
 
 ## <a name="supported-capabilities"></a>支持的功能
 
@@ -78,17 +79,17 @@ ms.locfileid: "65073529"
 |现有功能|其他支持的功能|
 |--------------------|--------------------|
 |带有SPFx的选项卡|无|
-|带有 Azure 的选项卡|机器人和消息传递扩展|
+|带有 Azure 的选项卡|机器人和消息扩展|
 |Bot|选项卡|
-|消息传递扩展|选项卡和机器人|
+|消息扩展|选项卡和机器人|
 |选项卡和机器人|选项卡和消息扩展|
-|选项卡和消息传递扩展插件|选项卡和机器人|
-|选项卡、机器人和消息传递扩展|选项卡|
+|选项卡和消息扩展|选项卡和机器人|
+|选项卡、机器人和消息扩展|选项卡|
 |选项卡 |机器人和消息扩展|
 
-## <a name="add-bot-tab-and-messaging-extension"></a>添加机器人、选项卡和消息传递扩展
+## <a name="add-bot-tab-and-message-extension"></a>添加机器人、选项卡和消息扩展
 
-添加机器人和消息传递扩展后，项目中的更改如下所示：
+添加机器人和消息扩展后，项目中的更改如下所示：
 
 * 机器人模板代码将添加到包含路径 `yourProjectFolder/bot`的子文件夹中。 这包括项目中的 **hello world** 机器人应用程序模板
 * `launch.json`文件夹和`task.json`文件夹下`.vscode`更新，其中包括Visual Studio Code必需的脚本，并在要在本地调试应用程序时执行
@@ -108,7 +109,6 @@ ms.locfileid: "65073529"
   * 选项卡的范围
 * 将更新下面 `templates/azure/teamsfx` 的文件，并 `templates/azure/provision/xxx`重新生成 .bicep 文件
 * 下面的文件 `.fx/config` 已重新生成，这可确保使用新添加的功能的正确配置来设置项目
-
 
 
 ## <a name="see-also"></a>另请参阅

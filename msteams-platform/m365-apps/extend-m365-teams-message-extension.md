@@ -1,67 +1,67 @@
 ---
-title: 跨Teams扩展邮件Microsoft 365
-description: 下面将了解如何更新基于搜索Teams邮件扩展以在 Outlook
+title: 跨Microsoft 365扩展Teams消息扩展
+description: 下面介绍如何更新基于搜索的Teams消息扩展以在Outlook中运行
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: d2369d5a07652055a9474be586470f906ed3de5b
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 3bab70d85d071763ffbbae7cb1dae11534d0e812
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727522"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104537"
 ---
-# <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>跨Teams扩展邮件Microsoft 365
+# <a name="extend-a-teams-message-extension-across-microsoft-365"></a>跨Microsoft 365扩展Teams消息扩展
 
 > [!NOTE]
-> *目前Teams开发人员预览版* Microsoft 365跨应用程序扩展邮件 [扩展](../resources/dev-preview/developer-preview-intro.md)。 预览版中包含的功能可能不完整，并且在公开发布之前可能会发生更改。 它们仅用于测试和探索目的。 不应在生产应用程序中使用它们。
+> *跨Microsoft 365扩展Teams消息扩展* 目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。 预览版中包含的功能可能不完整，并且在公开发布之前可能会发生更改。 它们仅用于测试和探索目的。 不应在生产应用程序中使用它们。
 
-基于搜索[的邮件扩展](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)允许用户搜索外部系统并通过客户端的撰写邮件区域共享Microsoft Teams结果。 通过跨 [Microsoft 365 (预览) 扩展 Teams ](overview.md)应用，你现在可以将基于搜索的 Teams 消息传递扩展引入 Outlook，Windows 桌面和 Web 体验。
+基于搜索[的消息扩展](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)允许用户搜索外部系统，并通过Microsoft Teams客户端的撰写消息区域共享结果。 通过[将Teams应用扩展到Microsoft 365 (预览版) ](overview.md)，现在可以将基于搜索的Teams消息扩展Outlook Windows桌面和 Web 体验。
 
-更新基于搜索的 Teams 邮件扩展以运行Outlook包括以下步骤：
+更新基于搜索的Teams消息扩展以运行Outlook的过程涉及以下步骤：
 
 > [!div class="checklist"]
 >
 > * 更新应用清单
-> * 为自动Outlook添加频道
-> * 在应用中旁加载更新Teams
+> * 为机器人添加Outlook通道
+> * 在 Teams 中旁加载更新后的应用
 
-本指南的其余部分将指导你完成这些步骤，并展示如何在桌面和 Web Outlook预览Windows扩展。
+本指南的其余部分将指导你完成这些步骤，并演示如何在Windows桌面和 Web 的Outlook中预览消息扩展。
 
 ## <a name="prerequisites"></a>先决条件
 
-若要完成本教程，你需要：
+若要完成本教程，需要：
 
-* 开发人员Microsoft 365沙盒租户
-* 你的沙盒租户已注册 *Office 365定向版本*
-* 测试环境，Office beta 渠道安装Microsoft 365 应用版 *应用*
-* Microsoft Visual Studio（可选）Teams Toolkit (预览)  (代码) 
+* Microsoft 365开发人员计划沙盒租户
+* 在 *Office 365目标版本* 中注册的沙盒租户
+* 从 Microsoft 365 应用版 *beta 通道* 安装Office应用的测试环境
+* Microsoft Visual Studio包含Teams Toolkit (预览) 扩展的代码 (可选) 
 
 > [!div class="nextstepaction"]
 > [安装先决条件](prerequisites.md)
 
-## <a name="prepare-your-messaging-extension-for-the-upgrade"></a>准备邮件扩展以用于升级
+## <a name="prepare-your-message-extension-for-the-upgrade"></a>为升级准备消息扩展
 
-如果你有现有的消息传递扩展，请创建生产项目的副本或分支以在应用清单中测试并更新应用 ID，以使用与生产应用 ID (不同的新标识符) 。
+如果有现有消息扩展名，请创建生产项目的副本或分支，以便在应用清单中测试和更新应用 ID，以使用与生产应用 ID) 不同的新标识符 (。
 
-若要使用示例代码完成本教程，请按照 [Teams 邮件](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)扩展搜索示例中的设置步骤快速生成基于Microsoft Teams的邮件扩展。 或者，你可以从为 [TeamsJS SDK v2 预览](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365)Teams更新的相同邮件扩展搜索示例开始，然后继续预览 Outlook 中的消息[扩展](#preview-your-messaging-extension-in-outlook)。 更新后的示例也可在以下扩展Teams Toolkit *：DevelopmentView* >  *samplesNPM* >  **Search Connector。**
+如果要使用示例代码完成本教程，请按照[Teams消息扩展搜索示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)中的设置步骤快速生成基于搜索的Microsoft Teams消息扩展。 或者，可以从[针对 TeamsJS SDK v2 预览版更新的相同Teams消息扩展搜索示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365)开始，然后[在Outlook中继续预览邮件扩展](#preview-your-message-extension-in-outlook)。 更新后的示例也可在Teams Toolkit扩展中使用：*DevelopmentView* >  *samplesNPM* >  **搜索连接器**。
 
-:::image type="content" source="images/toolkit-search-sample.png" alt-text="NPM Search Connector 示例Teams Toolkit":::
+:::image type="content" source="images/toolkit-search-sample.png" alt-text="Teams Toolkit中的 NPM 搜索连接器示例":::
 
 ## <a name="update-the-app-manifest"></a>更新应用清单
 
-你需要使用开发人员预览[](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview)`m365DevPreview`清单Teams和清单版本，以使你的 Teams 邮件扩展在 Outlook 中运行。
+需要使用[Teams开发人员预览清单](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview)架构和`m365DevPreview`清单版本，使Teams消息扩展在Outlook中运行。
 
-有两个选项用于更新应用清单：
+你有两个用于更新应用清单的选项：
 
 # <a name="teams-toolkit"></a>[Teams 工具包](#tab/manifest-teams-toolkit)
 
-1. 打开命令 *调色板*： `Ctrl+Shift+P`
-1. 运行 命令 `Teams: Upgrade Teams manifest to support Outlook and Office apps` 并选择应用清单文件。 将就地进行更改。
+1. 打开 *命令面板*： `Ctrl+Shift+P`
+1. 运行该 `Teams: Upgrade Teams manifest to support Outlook and Office apps` 命令并选择应用清单文件。 将就地进行更改。
 
 # <a name="manual-steps"></a>[手动步骤](#tab/manifest-manual)
 
-打开Teams应用清单，然后使用`$schema``manifestVersion`下列值更新 和 ：
+打开Teams应用清单并使用以下值更新和`manifestVersion`更新`$schema`：
 
 ```json
 {
@@ -72,125 +72,125 @@ ms.locfileid: "63727522"
 
 ---
 
-如果使用 Teams Toolkit创建邮件扩展应用，可以使用它验证对清单文件所做的更改并识别任何错误。 打开命令调色板并`Ctrl+Shift+P`找到"Teams **：** 验证清单文件"，或者从 Teams Toolkit (的"部署"菜单中选择选项，查找 Teams 左侧的 Visual Studio Code) 。
+如果使用Teams Toolkit创建邮件扩展应用，则可以使用它来验证清单文件的更改并识别任何错误。 打开命令面板`Ctrl+Shift+P`并找到 **Teams：验证清单文件** 或从Teams Toolkit (的“部署”菜单中选择该选项，Teams查找Visual Studio Code) 左侧的Teams图标。
 
-:::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit&quot;部署&quot;菜单下的&quot;验证清单文件&quot;选项":::
+:::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit“部署”菜单下的“验证清单文件”选项":::
 
-## <a name="add-an-outlook-channel-for-your-bot"></a>为自动Outlook添加频道
+## <a name="add-an-outlook-channel-for-your-bot"></a>为机器人添加Outlook通道
 
-在Microsoft Teams中，消息传递扩展由您托管的 Web 服务和定义 Web 服务的托管位置的应用程序清单组成。 Web 服务利用 [Bot Framework SDK](/azure/bot-service/bot-service-overview) 消息传递架构，并通过为自动程序注册的 Teams安全通信协议。
+在Microsoft Teams中，消息扩展包含托管的 Web 服务和应用清单，用于定义 Web 服务的托管位置。 Web 服务通过为机器人注册的Teams通道利用 [Bot Framework SDK](/azure/bot-service/bot-service-overview) 消息传送架构和安全通信协议。
 
-用户需要向自动程序Outlook消息扩展Outlook通道：
+若要让用户从Outlook与消息扩展进行交互，需要向机器人添加Outlook通道：
 
-1. 从[Microsoft Azure门户](https://portal.azure.com) (或[自动程序框架](https://dev.botframework.com)门户（如果你之前已注册) ）导航到自动程序资源。
+1. 从[Microsoft Azure门户](https://portal.azure.com) (或 [Bot Framework 门户](https://dev.botframework.com)（如果之前在) 注册）导航到机器人资源。
 
-1. 从 *设置*，选择 **"频道"**。
+1. 从 *设置* 中，选择 **“通道**”。
 
-1. 单击"**Outlook**"，选择"**邮件扩展**"选项卡，然后单击"保存 **"**。
+1. 单击 **Outlook**，选择 **“消息扩展”** 选项卡，然后单击 **“保存**”。
 
-    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="从 Azure Outlook频道窗格中为自动程序添加&quot;消息扩展&quot;频道":::
+    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="从 Azure 机器人通道窗格为机器人添加Outlook“消息扩展”通道":::
 
-1. 确认你的Outlook频道已与Microsoft Teams频道 **窗格中的频道** 一起列出：
+1. 确认Outlook通道与机器人 **通道窗格** 中的Microsoft Teams一起列出：
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="列出频道和频道的 Azure Microsoft Teams Outlook 窗格":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="列出Microsoft Teams和Outlook通道的 Azure 机器人通道窗格":::
 
-## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>更新Microsoft Azure Active Directory (Azure AD) SSO 的应用注册
+## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>更新 SSO 的Microsoft Azure Active Directory (Azure AD) 应用注册
 
 > [!NOTE]
-> 如果使用的是邮件扩展Teams示例，可以跳过此步骤[](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)，因为此方案不涉及Azure Active Directory (AAD) 单Sign-On身份验证。
+> 如果使用[Teams消息扩展搜索示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)，则可以跳过此步骤，因为此方案不涉及Azure Active Directory (AAD) 单Sign-On身份验证。
 
-Azure Active Directory 邮件扩展的 (SSO) 单一登录的工作方式与[在 Outlook](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots) 中相同，但在 Teams 中，你需要向租户的应用注册门户中的自动程序 Azure AD 应用注册添加多个客户端应用程序标识符。
+Azure Active Directory消息扩展 (SSO) 的单一登录在Outlook中的工作方式与在 [Teams中](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)的工作方式相同，但需要将多个客户端应用程序标识符添加到租户应用注册门户中机器人的 *Azure AD* 应用注册。
 
-1. 使用沙盒 [租户](https://portal.azure.com) 帐户登录 Azure 门户。
+1. 使用沙盒租户帐户登录[Azure 门户](https://portal.azure.com)。
 1. 打开 **应用注册**。
 1. 选择应用程序的名称以打开其应用注册。
-1. 选择 **"管理 ("***下的"公开* API) "。
+1. 选择“*管理*) ”下的 **“公开 API** (”。
 
-在" **授权客户端应用程序"** 部分，确保列出了以下所有 `Client Id` 值：
+在 **“授权客户端应用程序** ”部分中，确保列出了以下 `Client Id` 所有值：
 
-|Microsoft 365客户端应用程序 | 客户端 ID |
+|Microsoft 365 客户端应用程序 | 客户端 ID |
 |--|--|
 |Teams桌面和移动设备 |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
 |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
 |Outlook 桌面版 | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-0000000000000 |
+|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
-## <a name="sideload-your-updated-messaging-extension-in-teams"></a>在客户端中旁加载更新的邮件Teams
+## <a name="sideload-your-updated-message-extension-in-teams"></a>在 Teams 中旁加载更新的消息扩展
 
-最后一步是将更新的邮件扩展旁加载 ([程序包) ](/microsoftteams/platform/concepts/build-and-test/apps-package)包Microsoft Teams。 完成后，邮件扩展将出现在从撰写邮件 *区域安装的"* 应用"中。
+最后一步是在Microsoft Teams中旁加载更新的消息扩展 ([应用包](/microsoftteams/platform/concepts/build-and-test/apps-package)) 。 完成后，消息扩展将从撰写消息区域显示在已安装的 *“应用* ”中。
 
-1. 将应用程序Teams打包[ (清单和应用](/microsoftteams/platform/resources/schema/manifest-schema#icons)图标) zip 文件中。 如果使用了Teams Toolkit创建应用，可以使用以下命令的"部署"菜单中的 **Zip Teams 元数据** 包选项轻松Teams Toolkit：
+1. 将Teams应用程序 (清单和应用[图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)打包) 在 zip 文件中。 如果使用Teams Toolkit创建应用，则可以在Teams Toolkit的 *“部署*”菜单中使用 **Zip Teams 元数据包** 选项轻松执行此操作：
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Teams扩展中的&quot;Zip Teams元数据包&quot;Teams Toolkit&quot;Visual Studio Code":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Teams Toolkit扩展中的“Zip Teams 元数据包”选项Visual Studio Code":::
 
-1. 使用沙盒租户帐户登录 Teams，然后通过按用户配置文件单击省略号 (**...**) 菜单并打开"关于"来检查"开发人员预览"选项是否处于打开状态，以验证你是否位于公共 开发者预览版 上。 
+1. 使用沙盒租户帐户登录到Teams *，并单* 击省略号 () **...**  
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="从Teams省略号菜单中，打开&quot;关于&quot;，并确认&quot;开发者预览版&quot;选项已选中":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="从Teams省略号菜单中，打开“关于”并验证是否选中了“开发人员预览”选项":::
 
-1. 打开"*应用"* 窗格，Upload **自定义应用，** Upload **或我的团队。**
+1. 打开 *“应用*”窗格，**单击Upload自定义应用**，然后 **为我或我的团队Upload**。
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="&quot;Upload&quot;窗格中的&quot;Teams自定义应用&quot;按钮":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams“应用”窗格中的“Upload自定义应用”按钮":::
 
-1. 选择你的应用包，*然后单击打开。*
+1. 选择应用包，然后单击 *“打开*”。
 
-通过旁加载Teams，你的消息传递扩展将在 Outlook 网页版。
+通过Teams旁加载后，消息扩展将在Outlook 网页版中提供。
 
-## <a name="preview-your-messaging-extension-in-outlook"></a>在邮件中预览邮件Outlook
+## <a name="preview-your-message-extension-in-outlook"></a>在Outlook中预览邮件扩展
 
-现在可以在桌面和 Web 上的 Outlook 中测试Windows扩展。 虽然更新的邮件扩展将继续在 Teams 中运行，并且具有对邮件扩展的完整功能[](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)支持，但在此启用了 Outlook 的体验的早期预览中，请注意以下限制：
+现在可以测试在桌面和 Web 上Windows Outlook中运行的消息扩展。 虽然更新的消息扩展将继续在具有[消息扩展](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)功能完全支持的Teams中运行，但此已启用Outlook体验的早期预览中存在一些需要注意的限制：
 
-* 邮件撰写Outlook邮件[撰写上下文。](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) 即使你的邮件Teams `commandBox`  `compose` 包括在其清单中的上下文，当前预览仅限于邮件组合 () 选项。 不支持从全局搜索Outlook *调用* 消息传递扩展。
-* [基于操作的邮件扩展](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS)命令在客户端中不受Outlook。 如果你的应用同时具有基于搜索和基于操作的命令，它将Outlook但操作菜单将不可用。
-* 不支持在电子邮件 [中插入](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) 5 张以上自适应卡片;不支持自适应卡片 v1.4 及更高版本。
-* [插入](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json)的卡片`messageBack`不支持 、 `imBack``invoke``signin` 、 和 类型的卡片操作。 支持仅限于 `openURL`：单击时，用户将被重定向到新选项卡中的指定 URL。
+* Outlook中的消息扩展仅限于邮件 [*撰写* 上下文](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions)。 即使Teams邮件扩展名包含`commandBox`在其清单中作为 *上下文*，当前预览版也仅限于邮件组合 () `compose` 选项。 不支持从全局Outlook *搜索* 框调用消息扩展。
+* Outlook不支持[基于操作的消息扩展](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS)命令。 如果应用同时具有搜索和基于操作的命令，它将在Outlook中显示，但操作菜单将不可用。
+* 不支持在电子邮件中插入五个以上的 [自适应卡](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) 片;不支持自适应卡 v1.4 及更高版本。
+* 插入的卡片的类型`messageBack``imBack`、`invoke`类型和`signin`不支持的卡[片操作](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json)。 支持限制为 `openURL`：单击时，用户将重定向到新选项卡中的指定 URL。
 
-在测试邮件扩展时，可以通过 [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) 对象的 [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) (源自 Teams 与 Outlook) 自动程序请求的源位置。 当用户执行查询时，你的服务会收到标准 Bot Framework `Activity` 对象。 Activity 对象中的属性之一是 `channelId``msteams` ，它的值将为 或 `outlook`，具体取决于自动程序请求的发起位置。 有关详细信息，请参阅基于  [搜索的邮件扩展 SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions)。
+测试消息扩展时，可以标识源 (源自Teams，而不是由 [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) 对象的 [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) Outlook) 机器人请求。 当用户执行查询时，服务将收到标准 Bot Framework `Activity` 对象。 Activity 对象中的一个属性是`channelId`，该属性的值或值`msteams``outlook`取决于机器人请求的来源。 有关详细信息，请参阅  [基于搜索的消息扩展 SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions)。
 
 ### <a name="outlook-on-the-web"></a>Outlook 网页版
 
-若要预览在应用商店中运行Outlook 网页版：
+若要预览在 Outlook 网页版 中运行的应用，
 
-1. 登录以 [outlook.com](https://www.outlook.com) 测试租户的凭据登录。
-1. 选择 **"新建邮件"**。
-1. 打开 **合成窗口** 底部的"更多应用"弹出菜单。
+1. 使用测试租户的凭据登录到 [outlook.com](https://www.outlook.com) 。
+1. 选择 **“新建消息**”。
+1. 在组合窗口底部打开 **“更多应用** ”浮出菜单。
 
-:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="单击邮件组合窗口底部的&quot;更多应用&quot;菜单以使用邮件扩展名":::
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="单击邮件撰写窗口底部的“更多应用”菜单以使用邮件扩展插件":::
 
-将列出你的邮件扩展。 你可以从该调用中调用它，并使用它，就像在邮件中撰写消息Teams。
+邮件扩展将列出。 你可以从那里调用它，并像在Teams中撰写消息时一样使用它。
 
 ### <a name="outlook"></a>Outlook
 
 > [!IMPORTANT]
-> 请参阅 [Microsoft Teams - Microsoft 365 开发人员](https://devblogs.microsoft.com/microsoft365dev/)博客上的最新更新，以检查测试租户Outlook Windows 桌面Teams支持是否可用。
+> 请参阅Microsoft Teams的最新更新 [- Microsoft 365开发人员博客](https://devblogs.microsoft.com/microsoft365dev/)，检查Windows桌面支持Teams个人应用Outlook是否可供测试租户使用。
 
-若要预览在桌面桌面Outlook Windows应用：
+若要在Windows桌面上预览Outlook中运行的应用：
 
-1. 启动Outlook租户的凭据登录。 1. 单击" **新建电子邮件"**。
-1. 打开 **顶部功能区** 上的"更多应用"弹出菜单。
+1. 启动Outlook使用测试租户的凭据登录。 1. 单击 **“新建电子邮件**”。
+1. 打开顶部功能区上的 **“更多应用** ”浮出菜单。
 
-将列出你的邮件扩展。 你可以从该调用中调用它，并使用它，就像在邮件中撰写消息Teams。
+邮件扩展将列出。 你可以从那里调用它，并像在Teams中撰写消息时一样使用它。
 
 ## <a name="next-steps"></a>后续步骤
 
-Outlook启用Teams邮件扩展是预览版，不支持用于生产用途。 下面将了解如何分配启用Outlook邮件扩展，以预览访问群体以进行测试。
+启用Outlook Teams消息扩展处于预览状态，不支持生产用途。 下面介绍如何将已启用Outlook的消息扩展分发给预览访问群体以进行测试。
 
 ### <a name="single-tenant-distribution"></a>单租户分布
 
-Outlook测试Office或生产租户中，可以通过以下三种方式之一将 (和启用) 的个人选项卡分发给预览受众：
+Outlook和启用Office的个人选项卡可以通过以下三种方式之一跨测试 (或生产) 租户分发给预览版受众：
 
-#### <a name="teams-client"></a>Teams客户端
+#### <a name="teams-client"></a>Teams 客户端
 
-从" *应用"* 菜单中， *选择"管理应用* > **""将应用提交到组织"**。这需要 IT 管理员批准。
+在 *“应用* ”菜单中，选择 *“管理应用* > **”，将应用提交到组织**。这需要 IT 管理员的批准。
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams管理中心
 
-作为Teams管理员，你可以从管理员中心上传并预安装组织租户[Teams包](https://admin.teams.microsoft.com/)。有关详细信息[Upload管理中心Microsoft Teams自定义](/MicrosoftTeams/upload-custom-apps)应用。
+作为Teams管理员，可以从[Teams管理员](https://admin.teams.microsoft.com/)上传并预安装组织的租户的应用包。有关详细信息，请参阅[Microsoft Teams管理中心Upload自定义应用](/MicrosoftTeams/upload-custom-apps)。
 
 #### <a name="microsoft-admin-center"></a>Microsoft 管理中心
 
-作为全局管理员，你可以从 Microsoft 管理员上传并预安装[应用包](https://admin.microsoft.com/)。有关详细信息[，请参阅Microsoft 365 应用版应用门户中的测试](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)并部署合作伙伴部署解决方案。
+作为全局管理员，可以从 [Microsoft 管理员](https://admin.microsoft.com/)上传并预安装应用包。有关详细信息，请参阅[集成应用门户中合作伙伴的测试和部署Microsoft 365 应用版](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)。
 
 ### <a name="multitenant-distribution"></a>多租户分布
 
-在此早期开发人员预览期间，尚不支持分发到 Microsoft AppSource Outlook支持Teams扩展。
+在启用了Outlook Teams消息扩展的早期开发人员预览期间，尚不支持分发到 Microsoft AppSource。

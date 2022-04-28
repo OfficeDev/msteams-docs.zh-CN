@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 25a851f0dcc956139551a46b713dc2e7df3f626d
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63731603"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073671"
 ---
 # <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
 
@@ -47,13 +47,13 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
 
 #### <a name="hot-reload"></a>热重新加载
 
-调试 Teams 应用时，可以同时更新和保存选项卡、自动程序、消息传递扩展和Azure 函数的源代码。 应用将重新加载，调试器将重新连接到编程语言。
+调试 Teams 应用时，可以同时更新和保存选项卡、机器人、消息传递扩展、Azure Functions 的源代码。应用将重新加载，调试器将重新附加到编程语言。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="源代码的热重新加载":::
 
 #### <a name="stop-debugging"></a>停止调试
 
-完成本地调试后，可以选择“**停止**”或从浮动调试工具栏“**断开**”，以停止所有调试会话并终止任务。 下图显示了停止调试操作：
+完成本地调试后，可以选择“**停止**”或从浮动调试工具栏“**断开**”，以停止所有调试会话并终止任务。以下图片显示了停止调试操作：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="停止调试":::
 
@@ -68,15 +68,15 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
 <details>
 <summary><b>Windows</b></summary>
 
-1. 在活动栏的“**运行和调试**”中，选择“**调试 Edge**”或“**调试 Chrome**”。
+1. 在活动栏的“**运行和调试**”中，选择“**调试 Edge**”或“**调试 Chrome**”
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器选项" border="false":::
 
-1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用。
+1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="开始调试" border="false":::
 
-3. 选择“**登录**”到 Microsoft 365 帐户。
+3. 选择“**登录**”到 Microsoft 365 帐户
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="登录" border="true":::
 
@@ -84,7 +84,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
    > [!TIP]
    > 可以选择“**阅读更多**”，以了解Microsoft 365 开发人员计划。 打开默认 Web 浏览器，使用凭据登录到 Microsoft 365 帐户。
 
-4. 选择“**安装**”，以安装本地主机的开发证书。
+4. 选择“**安装**”，以安装本地主机的开发证书
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="证书" border="true":::
 
@@ -102,22 +102,22 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
 <details>
 <summary><b>macOS</b></summary>
 
-1. 在活动栏的“**运行和调试**”中，选择“**调试 Edge**”或“**调试 Chrome**”。
+1. 在活动栏的“**运行和调试**”中，选择“**调试 Edge**”或“**调试 Chrome**”
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器列表" border="false":::
 
-1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用。
+1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="调试应用" border="false":::
 
-3. 选择“**登录**”到 Microsoft 365 帐户。
+3. 选择“**登录**”到 Microsoft 365 帐户
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="登录到 Microsoft 365 帐户" border="true":::
 
    > [!TIP]
    > 可以选择“**阅读更多**”，以了解Microsoft 365 开发人员计划。 打开默认 Web 浏览器，使用凭据登录到 Microsoft 365 帐户。
 
-4. 选择“**安装**”，以安装本地主机的开发证书。
+4. 选择“**安装**”，以安装本地主机的开发证书
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="证书" border="true":::
 
@@ -133,13 +133,13 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
 </details>
 
 
-#### <a name="2-debug-your-app"></a>2. 调试应用 
+#### <a name="2-debug-your-app"></a>2. 调试应用
 
 初始设置过程完成后，Teams 工具包将启动以下进程：
 
-  a. [启动应用服务](#starts-app-services) </br>
-  b. [启动调试程序](#launches-debuggers)   </br>
-  c. [旁加载 Teams 应用程序](#sideloads-the-teams-app)
+a. [启动应用服务](#starts-app-services) </br>
+b. [启动调试程序](#launches-debuggers)   </br>
+      c. [旁加载 Teams 应用](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>启动应用服务
 
@@ -149,7 +149,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、机器人、�
 | --- | --- | --- |
 |  Tab |  **启动前端** |  选项卡 |
 |  自动程序或消息传递扩展 |  **启动自动程序** |  自动程序 |
-|  Azure Functions |  **启动后端** |  api |
+|  Azure Functions |  **启动后端** |  API |
 
 下图显示了运行选项卡、自动程序或消息传递扩展和 Azure 函数时，Visual Studio Code 上的“**输出****终端**”选项卡上的任务名称。
 
@@ -194,9 +194,18 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 <details>
 <summary><b>使用自动程序终结点</b></summary>
 
-1. 在 Visual Studio Code 设置中，清除 **确保 Ngrok 已安装并启动(ngrok)**。
+1. 在 Visual Studio Code 设置中，清除 **确保 Ngrok 已安装并启动 (ngrok)**
 
-1. 将 `.fx/configs/localSettings.json` 中的 botDomain 和 botEndpoint 配置到域和终结点。
+1. 将 `.fx/configs/config.local.json` 中的 siteEndpoint 配置设置为终结点
+
+```json
+{
+    "bot": {
+        "siteEndpoint": "https://your-bot-tunneling-url"
+    }
+}
+
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="自定义自动程序终结点":::
 
@@ -205,9 +214,18 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 <details>
 <summary><b>使用开发证书</b></summary>
 
-1. 在 Visual Studio Code 设置中，清除 **确保开发证书受信任(devCert)**。
+1. 在 Visual Studio Code 设置中，清除 **确保开发证书受信任 (devCert)**
 
-1. 将 `.fx/configs/localSettings.json` 中的 sslCertFile 和 sslKeyFile 配置到证书文件路径和密钥文件路径。
+1. 将 `.fx/configs/config.local.json` 中的 `sslCertFile` 和 `sslKeyFile` 配置设置为证书文件路径和密钥文件路径
+
+```json
+{
+    "frontend": {
+        "sslCertFile": "",
+        "sslKeyFile": ""
+    }
+}
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="自定义证书":::
 
@@ -216,11 +234,11 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 <details>
 <summary><b>使用启动脚本以启动应用服务</b></summary>
 
-1. 对于选项卡，请在 `tabs/package.json`中更新 `dev:teamsfx` 脚本。
+1. 对于选项卡，请在 `tabs/package.json` 中更新 `dev:teamsfx` 脚本
 
-1. 对于自动程序或消息传递扩展，请在 `bot/package.json`中更新 `dev:teamsfx` 脚本。
+1. 对于自动程序或消息传递扩展，请在 `bot/package.json` 中更新 `dev:teamsfx` 脚本
 
-1. 对于 Azure 函数，请在 `api/package.json` 中更新 `dev:teamsfx` 脚本，并为 TypeScript 更新 `watch:teamsfx` 脚本。
+1. 对于 Azure 函数，请在 `api/package.json` 中更新 `dev:teamsfx` 脚本，并为 TypeScript 更新 `watch:teamsfx` 脚本
 
    > [!NOTE]
    > 目前，不支持自定义选项卡、自动程序、消息传递扩展应用和 Azure 函数端口。

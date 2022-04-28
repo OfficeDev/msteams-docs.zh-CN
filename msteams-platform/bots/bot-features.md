@@ -5,12 +5,12 @@ description: 用于生成Microsoft Teams机器人的工具和 SDK 概述。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a50f93e718dcff35d810f0f8748c97095b49b138
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 52f933aaddd5a02319ae1c0a35e9a4a26b617b57
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073744"
+ms.locfileid: "65104320"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -36,7 +36,7 @@ Teams机器人包括以下内容：
 
 * 使用专用卡片类型，例如Office 365连接器卡。
 * 设置活动Teams特定的通道数据。
-* 处理消息传递扩展请求。
+* 处理消息扩展请求。
 
 > [!IMPORTANT]
 > 可以在任何 Web 编程技术中开发Teams应用，并直接调用 [Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview)。 但是，必须在所有情况下执行令牌处理。

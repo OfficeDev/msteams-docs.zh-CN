@@ -6,12 +6,12 @@ author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: 部署发布应用上传 gcc
-ms.openlocfilehash: f691edee8f4e3aab34aa616f9bbf0ed451874070
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 5db182f9276865fc98d277f642f7e58fd4a52df5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073067"
+ms.locfileid: "65104432"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>分发Microsoft Teams应用
 
@@ -45,7 +45,7 @@ ms.locfileid: "65073067"
 在GCC Teams环境中，默认情况下会启用合规的 Microsoft 应用。 但是，在发布应用之前，请确保所有应用的终结点都符合GCC组织的要求。 有关详细信息，请参阅[政府社区云](../app-fundamentals-overview.md#government-community-cloud)。
 
 > [!IMPORTANT]
->如果应用包括机器人或消息传递扩展，则在 Azure 中在机器人和Teams之间设置通道时，必须选择 **“政府** Microsoft Teams”选项。 有关详细信息，请参阅 [将机器人连接到通道](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)。
+>如果应用包括机器人或消息扩展，则在 Azure 中设置机器人与Teams之间的通道时，必须选择 **“政府** Microsoft Teams”选项。 有关详细信息，请参阅 [将机器人连接到通道](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)。
 
 ## <a name="publish-your-app-to-the-teams-store"></a>将应用发布到Teams存储
 
