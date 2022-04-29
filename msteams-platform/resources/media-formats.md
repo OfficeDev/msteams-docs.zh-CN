@@ -1,19 +1,19 @@
 ---
 title: 支持用于机器人的媒体格式
-description: Microsoft Teams上的自动程序仅支持音频和视频内容的以下媒体格式。
+description: Microsoft Teams 上的机器人仅支持以下媒体格式的音频和视频内容。
 ms.topic: reference
-ms.localizationpriority: medium
-keywords: teams 机器人媒体格式
-ms.openlocfilehash: da134568cb714580ad4f67b993d5ee467db39710
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams 机器人媒体格式
+ms.openlocfilehash: a6de2ab9ef6c27716276ab530516599d6df05331
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155909"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111925"
 ---
 # <a name="supported-media-formats-for-bots"></a>支持用于机器人的媒体格式
 
-Microsoft Teams上的自动程序仅支持音频和视频内容的以下媒体格式：
+Microsoft Teams 上的机器人仅支持以下媒体格式的音频和视频内容:
 
 | 格式 | 更多信息 |
 | --- | --- |
@@ -31,4 +31,4 @@ Microsoft Teams上的自动程序仅支持音频和视频内容的以下媒体�
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [对用于Teams团队或聊天成员的聊天机器人 API 的更改](~/resources/team-chat-member-api-changes.md)
+> [Teams 机器人 API 在提取团队或聊天成员方面的更改](~/resources/team-chat-member-api-changes.md)。

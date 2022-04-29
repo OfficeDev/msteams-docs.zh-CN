@@ -4,12 +4,12 @@ description: Microsoft Teams 开发人员文档术语表
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发人员定义
-ms.openlocfilehash: 1f97cd46ae8096830b2f46c80f4ffc13212eebd8
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f5b5461949367adc8ce101866556abf657259312
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103991"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135722"
 ---
 # <a name="glossary"></a>术语表
 
@@ -27,7 +27,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [应用包](../concepts/build-and-test/apps-package.md) | Teams 应用包是一个 zip 文件，其中包含应用清单文件、颜色图标和大纲图标。 |
 | [应用权限](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Teams 应用中用于启用设备权限的选项。 仅当应用的清单文件声明应用需要设备权限时，此选项才可用。 <br> **另请参阅**：设备权限 |
 | [应用程序范围](../concepts/design/app-structure.md) | Teams 中用户可以使用你的应用的区域。 应用可以有一个或多个范围，包括个人、频道、聊天和会议。 Teams 应用可以跨范围存在。 |
-| [应用程序 Studio](../concepts/build-and-test/app-studio-overview.md) | 用于开始创建或集成自己的 Microsoft Teams 应用的应用。 现在，它已演变为开发人员门户。 <br> **另请参阅**：[开发人员门户](#d) |
+| [应用程序 Studio](../concepts/build-and-test/app-studio-overview.md) | 用于开始创建或集成自己的 Microsoft Teams 应用的应用。 现在，它已演变为开发人员门户。 <br> >如果你一直在使用 App Studio，我们建议你尝试开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日之前弃用 <br> **另请参阅**：[开发人员门户](#d) |
 | 应用托盘 | 位于 Teams 移动应用底部栏上的应用程序托盘。 它收集已打开但当前未使用或处于活动状态的所有应用。 <br>**另请参阅**：[Teams 移动](#t) |
 | [Azure 资源](../toolkit/provision.md) | 通过 Azure 提供的服务，Teams 应用可将其用于 Azure 部署。 它可以是存储帐户、Web 应用、数据库等。 |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft 基于云的标识和访问管理服务。 可帮助经过身份验证的用户访问内部和外部 Azure 资源。 |

@@ -1,17 +1,17 @@
 ---
-title: 在团队中测试特定于资源Teams
-description: 了解如何在将 Postman 与示例 JSON 文件一Teams中测试团队的资源特定许可。
-ms.localizationpriority: medium
+title: 在 Teams 中测试用于团队的资源特定许可
+description: 了解如何使用带示例 JSON 文件的 Postman 在 Teams 中测试团队的资源特定许可。
+ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: how-to
-keywords: teams 授权 OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: ab742dd9e472beec8e607c036639322fc916e1ac
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+keywords: Teams 授权 OAuth SSO Azure AD rsc Postman Graph
+ms.openlocfilehash: a069740411d43274f87c68a2ceadd46dfb7aa080
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452681"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111736"
 ---
 # <a name="test-team-rsc-postman-collection-json"></a>测试团队 RSC Postman 集合 JSON
 
