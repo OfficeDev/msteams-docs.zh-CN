@@ -1,19 +1,19 @@
 ---
-title: 测试用户对聊天中的聊天的特定于资源Teams
-description: 了解如何使用 Postman 和示例 JSON 文件在 Teams中测试聊天的资源特定许可。
-ms.localizationpriority: medium
+title: 在 Teams 中测试用于聊天的资源特定许可
+description: 了解如何使用带示例 JSON 文件的 Postman 测试用于 Teams 中聊天的资源特定许可。
+ms.localizationpriority: high
 author: jecha
 ms.author: jecha
 ms.topic: how-to
-keywords: teams 授权 OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: 1f387dc7514fd8a9c1b9bbcb5363542cdbed4ab0
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+keywords: Teams 授权 OAuth SSO Azure AD rsc Postman Graph
+ms.openlocfilehash: 7419316efbebf4f59c81432f7cd37db7a4a29e4a
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453871"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111176"
 ---
-# <a name="test-chat-rsc-postman-collection-for-json"></a>测试聊天 RSC Postman 集合的 JSON
+# <a name="test-chat-rsc-postman-collection-for-json"></a>测试 JSON 的聊天 RSC Postman 集合
 
 ```json
 {
