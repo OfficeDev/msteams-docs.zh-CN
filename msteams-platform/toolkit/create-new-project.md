@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 8723e88e7b4ccf297edace9276af06a160e76f87
-ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+ms.openlocfilehash: b28d68faf6d124faaa2b800accea568775acaa32
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64910548"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104152"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>使用 Teams 工具包创建新的 Teams 应用
 
@@ -25,7 +25,7 @@ ms.locfileid: "64910548"
 1. 打开 Visual Studio Code。
 1. 在 Visual Studio Code 边栏中选择 Teams 工具包 :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: 图标。
 1. 选择 **创建新的 Teams 应用**。
-1. 使用 SharePoint 框架 (SPFx) 在可用功能选项卡、机器人、消息传递扩展或选项卡中进行选择。 
+1. 使用 SharePoint 框架 (SPFx) 在可用功能选项卡、自动程序、消息扩展或选项卡中进行选择。 
 1. 选择至少一个选项以开始创建 Teams 应用。
 
 ### <a name="create-a-new-teams-app-using-view-samples"></a>使用视图示例创建新的 Teams 应用

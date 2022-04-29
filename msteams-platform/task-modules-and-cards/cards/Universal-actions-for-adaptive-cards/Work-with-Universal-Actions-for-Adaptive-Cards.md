@@ -1,80 +1,80 @@
 ---
 title: 使用自适应卡的通用操作
-description: 了解如何使用自适应卡片的通用操作，包括适用于自适应卡片的通用操作架构、刷新模型以及使用代码示例的向后兼容性。
+description: 了解如何使用自适应卡的通用操作，包括自适应卡的通用操作架构、刷新模型和使用代码示例的向后兼容性。
 ms.topic: conceptual
-ms.localizationpriority: medium
-ms.openlocfilehash: c0893f5aaa9e454ab8a4091ce5b08c132c110746
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 768458b1bd7cad77288d1e8e0be5b231fd331891
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452576"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110272"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>使用自适应卡的通用操作
 
-自适应卡片的通用操作提供了一种为用户和用户实现基于自适应卡片Teams Outlook。 本文档涵盖下列主题：
+自适应卡的通用操作提供了一种为 Teams 和 Outlook 实施基于自适应卡的方案的方法。 本文档涵盖以下主题：
 
-* [用于自适应卡片的通用操作架构](#schema-for-universal-actions-for-adaptive-cards)
+* [用于自适应卡的通用操作的架构](#schema-for-universal-actions-for-adaptive-cards)
 * [刷新模型](#refresh-model)
 * [`adaptiveCard/action` 调用活动](#adaptivecardaction-invoke-activity)
 * [向后兼容性](#backward-compatibility)
 
-## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>将通用操作用于自适应卡片的快速入门指南Teams
+## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>有关在 Teams 中使用自适应卡的通用操作的快速入门指南
 
-1. 将 的所有 实例`Action.Submit`替换为 ，`Action.Execute`以更新现有Teams。
-2. 如果你想要使用 `refresh` 自动刷新模型或你的方案需要特定于用户的视图，则向自适应卡片中添加子句。
+1. 将 `Action.Submit` 的所有实例替换为 `Action.Execute` 以更新 Teams 上的现有方案。
+2. 如果要使用自动刷新模型或方案需要用户特定视图，请向自适应卡添加 `refresh` 子句。
 
     >[!NOTE]
-    > `userIds`指定要标识哪些用户获得自动更新的属性。
+    > 指定 `userIds` 属性以确定哪些用户获得自动更新。
 
-3. 处理 `adaptiveCard/action` 机器人中的调用请求。
-4. 使用调用请求的上下文通过为用户创建的卡片进行响应。
+3. 处理机器人中的 `adaptiveCard/action` 调用请求。
+4. 使用调用请求的上下文来响应为用户创建的卡片。
 
     > [!NOTE]
-    > 只要机器人处理 后返回新 `Action.Execute`卡，响应就必须符合响应格式。
+    > 每当机器人因处理 `Action.Execute` 而返回新卡片时，响应必须符合响应格式。
 
-## <a name="schema-for-universal-actions-for-adaptive-cards"></a>自适应卡片的通用操作架构
+## <a name="schema-for-universal-actions-for-adaptive-cards"></a>自适应卡的通用操作架构
 
-自适应卡片的通用操作在自适应卡片架构版本 1.4 中引入。 若要有效地使用自适应卡片， `version` 必须将自适应卡片的 属性设置为 1.4。
+自适应卡架构版本 1.4 中引入了自适应卡的通用操作。 若要有效地使用自适应卡，自适应卡的 `version` 属性必须设置为 1.4。
 
 > [!NOTE]
-> `version`将该属性设置为 1.4 会使自适应卡片与平台或应用程序（如 Outlook 和 Teams）的较旧客户端不兼容，因为它们不支持自适应卡片的通用操作。
+> 将 `version` 属性设置为 1.4 会使自适应卡与平台或应用程序的较旧客户端（例如 Outlook 和 Teams）不兼容，因为它们不支持自适应卡的通用操作。
 
-如果将卡版本设置为小于 1.4，并使用 属性 和 或 两 `refresh` `Action.Execute`者之一，将发生以下情况：
+如果将卡片版本设置为小于 1.4 并使用属性 `refresh` 和/或 `Action.Execute`，则会发生以下情况：
 
-| 客户端 | 行为 |
+| Client | 行为 |
 | :-- | :-- |
-| Teams | 你的卡片停止工作。 卡片不会刷新，`Action.Execute`并且不会呈现，具体取决于 Teams 版本。 若要确保应用程序的最大Teams，请`Action.Execute`通过 `Action.Submit` 回退属性中的 定义 。 |
+| Teams | 卡片停止工作。 卡片不会刷新，`Action.Execute` 也不会呈现，具体取决于Teams 客户端的版本。 为确保在 Teams 中实现最大兼容性，请在 fallback 属性中使用 `Action.Submit` 定义 `Action.Execute`。 |
 
-若要详细了解如何支持旧客户端，请参阅 [向后兼容性](#backward-compatibility)。
+有关如何支持旧客户端的详细信息，请参阅[向后兼容性](#backward-compatibility)。
 
 ### <a name="actionexecute"></a>Action.Execute
 
-创作自适应卡片时，请将 和 `Action.Submit` `Action.Http` 替换为 `Action.Execute`。 的 `Action.Execute` 架构类似于 `Action.Submit`。
+创作自适应卡片时，请将 `Action.Submit` 和 `Action.Http` 替换为 `Action.Execute`。 `Action.Execute` 的架构与 `Action.Submit` 类似。
 
 有关详细信息，请参阅 [Action.Execute 架构和属性](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
 
-现在，可以使用刷新模型允许自适应卡片自动更新。
+现在，可以使用刷新模型允许自适应卡自动更新。
 
 ## <a name="refresh-model"></a>刷新模型
 
-若要自动刷新自适应卡片，请定义其 `refresh` 属性，用于嵌入 `Action.Execute` 类型和数组的操作 `userIds` 。
+若要自动刷新自适应卡，请定义其 `refresh` 属性，该属性会嵌入类型为 `Action.Execute` 的操作和 `userIds` 数组。
 
-有关详细信息，请参阅 [刷新架构和属性](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism)。
+有关详细信息，请参阅[刷新架构和属性](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism)。
 
 ## <a name="user-ids-in-refresh"></a>刷新中的用户 ID
 
-以下是刷新中的 UserIds 的功能：
+以下是刷新中 UserIds 的功能：
 
-* UserIds 是用户 MRIs 的数组，它是 `refresh` 自适应卡片中属性的一部分。
+* UserIds 是一组用户 MRI，它是自适应卡中 `refresh` 属性的一部分。
 
-* `userIds`如果在卡片的刷新`userIds: []`部分中指定了 list 属性，则不会自动刷新该卡片。 相反，" **刷新** 卡片"选项显示在 Web 或桌面的三点菜单和移动版长按上下文菜单中（即 Android 或 iOS）中，以手动刷新卡片。
+* 如果 `userIds` 列表属性在卡片的刷新部分指定为 `userIds: []`，则卡片不会自动刷新。 相反，将在 Web 或桌面的三点菜单以及移动设备（即 Android 或 iOS）的长按上下文菜单中向用户显示“**刷新卡片**”选项以手动刷新卡片。
 
-* 添加 UserIds 属性的原因是，Teams频道可以包含大量成员。 如果所有成员同时查看频道，则无条件自动刷新会导致许多并发呼叫机器人。 必须 `userIds` 始终包括 属性，以确定哪些用户必须自动刷新，最多 *60 分钟 (60) MRIs*。
+* 添加 UserIds 属性是因为 Teams 中的频道可以包含大量成员。 如果所有成员同时查看频道，则无条件的自动刷新会导致对机器人进行多次并发调用。 必须始终包含 `userIds` 属性，以确定哪些用户必须获得自动刷新，最多 *60 （六十）个用户 MRI*。
 
-* 您可以提取Teams成员的用户 MRIs。 若要详细了解如何在自适应卡片刷新部分添加 userIds 列表，请参阅 [提取名单或用户配置文件](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
+* 可以提取 Teams 对话成员的用户 MRI。 有关如何在自适应卡的刷新部分中添加 userIds 列表的详细信息，请参阅[提取名单或用户个人资料](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
 
- 可以使用以下示例获取频道、群聊或一对一聊天的用户 MRI：
+ 可以使用以下示例获取频道、群聊或 1:1 聊天的用户 MRI：
 
  1. 使用 TurnContext  
 
@@ -84,43 +84,43 @@ ms.locfileid: "63452576"
   
      `var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);var userMRI = member.Id;`
 
-* 示例Teams MRI 是`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
+* 示例 Teams 用户 MRI 为 `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
 > [!NOTE]
-> 该属性`userIds`在属性Outlook，`refresh`并且始终自动激活。 由于用户在不同时间查看Outlook，因此在卡片中不存在缩放问题。
+> 在 Outlook 中忽略 `userIds` 属性，并且始终自动激活 `refresh` 属性。 Outlook 中没有缩放问题，因为用户在不同时间查看卡片。
 
-下一步是使用调用 `adaptiveCard/action` 活动了解在执行后必须提出 `Action.Execute` 哪些请求。
+下一步是使用 `adaptiveCard/action` 调用活动来了解执行 `Action.Execute` 后必须发出的请求。
 
 ## <a name="adaptivecardaction-invoke-activity"></a>`adaptiveCard/action` 调用活动
 
-When `Action.Execute` is executed in the client， a new type of Invoke activity `adaptiveCard/action` is made to your bot.
+在客户端中执行 `Action.Execute` 时，会对机器人进行新类型的调用活动 `adaptiveCard/action`。
 
-有关详细信息，请参阅典型调用 [活动的请求格式和 `adaptiveCard/action` 属性](/adaptive-cards/authoring-cards/universal-action-model#request-format)。
+有关详细信息，请参阅[典型 `adaptiveCard/action` 调用活动的请求格式和属性](/adaptive-cards/authoring-cards/universal-action-model#request-format)。
 
-有关详细信息，请参阅 [具有受支持响应类型的典型 `adaptiveCard/action` 调用活动的响应格式和属性](/adaptive-cards/authoring-cards/universal-action-model#response-format)。
+有关详细信息，请参阅[典型 `adaptiveCard/action` 调用活动的响应格式和属性以及支持的响应类型](/adaptive-cards/authoring-cards/universal-action-model#response-format)。
 
-接下来，你可以跨不同平台将向后兼容性应用到较旧的客户端，并兼容自适应卡片。
+接下来，可以跨不同平台向旧客户端应用向后兼容性，并使自适应卡兼容。
 
 ## <a name="backward-compatibility"></a>向后兼容性
 
-自适应卡片的通用操作允许你设置属性，以便向后兼容早期版本的 Outlook 和 Teams。
+利用自适应卡的通用操作，可以设置属性来实现与较旧版本的 Outlook 和 Teams 向后兼容。
 
 ### <a name="teams"></a>Teams
 
-若要确保自适应卡片与旧版卡片的向后Teams，`fallback`必须包含 属性，并设置其值`Action.Submit`。 此外，自动程序代码必须同时处理 和 `Action.Execute` `Action.Submit`。
+若要确保自适应卡与旧版 Teams 向后兼容，必须包括 `fallback` 属性并将其值设置为 `Action.Submit`。 此外，机器人代码必须同时处理 `Action.Execute` 和 `Action.Submit`。
 
-有关详细信息，请参阅[上向后兼容性Teams](/adaptive-cards/authoring-cards/universal-action-model#teams)。
+有关详细信息，请参阅 [Teams 上的向后兼容性](/adaptive-cards/authoring-cards/universal-action-model#teams)。
 
 ## <a name="code-samples"></a>代码示例
 
 |示例名称 | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams机器人 | 创建使用自适应卡片接受食物订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
-| 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新的自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Teams 餐饮机器人 | 使用自适应卡片创建接受食品订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
+| 顺序工作流自适应卡片 | 演示如何在机器人中实施顺序工作流、用户特定视图和最新自适应卡。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 
-* [自适应卡片在Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [Teams 中的自适应卡片操作](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [顺序工作流](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [最新卡片](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)

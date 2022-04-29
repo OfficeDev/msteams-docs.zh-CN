@@ -4,12 +4,12 @@ description: 介绍深层链接以及如何在应用中使用它们
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 团队深层链接深层链接
-ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399308"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103921"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -63,7 +63,7 @@ ms.locfileid: "63399308"
 > * 个人选项卡具有 `personal` 作用域，而通道和组选项卡使用 `team` 或 `group` 作用域。 这两种选项卡类型的语法略有不同，因为只有可配置的选项卡具有与其上下文对象关联的 `channel` 属性。 有关选项卡范围的详细信息，请参阅[应用程序清单](~/resources/schema/manifest-schema.md)参考。
 > * 仅当使用 v0.4 或更高版本库配置了选项卡并且具有实体 ID 时，深层链接才能正常工作。 没有实体 ID 的选项卡的深层链接仍会导航到选项卡，但无法向选项卡提供子实体 ID。
 
-对可以在机器人、连接器或消息传递扩展卡中使用的深层链接使用以下格式：
+对可在自动程序、连接器或消息扩展卡中使用的深层链接使用以下格式：
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
@@ -158,7 +158,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>生成聊天的深层链接
 
-将此格式用于可以在机器人、连接器或消息传递扩展卡中使用的深层链接：
+将此格式用于可以在机器人、连接器或消息扩展卡中使用的深层链接：
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -174,25 +174,25 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>在通道中生成文件的深层链接
 
-可以在机器人、连接器或消息传递扩展卡中使用以下深层链接格式：
+机器人、连接器或消息扩展卡片中使用以下深层链接格式：
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 查询参数为：
 
-* `fileId`：Sharepoint Online 中的唯一文件 ID，也称为 `sourcedoc`。 例如，`1FA202A5-3762-4F10-B550-C04F81F6ACBD`。
+* `fileId`：Sharepoint Online 中的唯一文件 ID，也称为 `sourcedoc`。例如，`1FA202A5-3762-4F10-B550-C04F81F6ACBD`。
 * `tenantId`：租户 ID，如 `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`。
 * `fileType`：支持的文件类型，如 .docx、.pptx、.xlsx 和 .pdf
 * `objectUrl`：文件的对象 URL。 格式为 `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`。 例如，`https://microsoft.sharepoint.com/teams/(filepath)`。
 * `baseUrl`：文件的基本 URL。 格式为 `https://{tenantName}.sharepoint.com/sites/{TeamName}`。 例如，`https://microsoft.sharepoint.com/teams`。
 * `serviceName`：服务名称、应用 ID。例如，`teams`。
 * `threadId`：threadId 是存储文件的团队的团队 ID。 它是可选的，不能为存储在用户 OneDrive 文件夹中的文件设置。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype。
-* `groupId`：文件的组 ID。 例如 `ae063b79-5315-4ddb-ba70-27328ba6c31e`。
+* `groupId`：文件的组 ID。例如 `ae063b79-5315-4ddb-ba70-27328ba6c31e`。
 
 > [!NOTE]
 > 可以在通道的 URL 中看到 `threadId` 和 `groupId`。  
 
-机器人、连接器或消息传递扩展卡中使用以下深层链接格式： 
+机器人、连接器或消息扩展卡片中使用以下深层链接格式：
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
@@ -221,7 +221,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint 框架选项卡的深层链接
 
-可以在机器人、连接器或消息传递扩展卡中使用以下深层链接格式：`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+可以在机器人、连接器或消息扩展卡片中使用以下深层链接格式：`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > 当机器人发送包含深层链接的 TextBlock 消息时，当用户选择链接时，将打开新的浏览器选项卡。 这发生在 Linux 上运行的 Chrome 和 Microsoft Teams 桌面应用中。
@@ -246,7 +246,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>生成计划对话框的深层链接
 
-将以下格式用于可以在机器人、连接器或消息传递扩展卡中使用的深层链接：`https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+将以下格式用于可以在机器人、连接器或消息扩展卡片中使用的深层链接：`https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 例如：`https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -286,7 +286,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
   
 下面是查询参数：
 
-* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Azure AD UserPrincipalName（通常为电子邮件地址），或者在 PSTN 调用时，它支持 pstn mri 4:&lt;phonenumber&gt;。
+* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。当前，用户 ID 字段支持 Azure AD UserPrincipalName（通常为电子邮件地址），或在 PSTN 调用时，支持 pstn mri 4:&lt;phonenumber&gt;。
 * `withVideo`：这是一个可选参数，可用于进行视频通话。 设置此参数将仅打开调用方的相机。 呼叫接收方可以选择通过 Teams 呼叫通知窗口通过音频或音频和视频呼叫进行应答。
 * `Source`：这是一个可选参数，用于通知深层链接的源。
 

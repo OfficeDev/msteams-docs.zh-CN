@@ -5,12 +5,12 @@ description: 本文介绍 Microsoft Teams 应用功能、规划 Teams 应用、�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498229"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104376"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
@@ -97,15 +97,15 @@ ms.locfileid: "64498229"
 
    :::column span="":::
 
-#### <a name="messaging-extensions"></a>消息传递扩展
+#### <a name="message-extensions"></a>消息扩展
 
-使用 [消息传递扩展](../../messaging-extensions/what-are-messaging-extensions.md)，可以搜索和共享外部信息。 还可以对消息执行操作，例如基于频道帖子的内容创建帮助票证。
+使用[消息扩展](../../messaging-extensions/what-are-messaging-extensions.md)，可以搜索和共享外部信息。 还可以对消息执行操作，例如基于频道帖子的内容创建帮助票证。
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="消息传递扩展在 Teams 客户端中的外观的概念表示形式。" border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="消息扩展在 Teams 客户端中的外观的概念表示形式。" border="false":::
 
    :::column-end:::
 :::row-end:::

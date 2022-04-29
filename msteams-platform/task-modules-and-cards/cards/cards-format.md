@@ -5,12 +5,12 @@ keywords: 团队机器人卡格式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: f48cecf9938710c40634c48299e3213e0475984a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727265"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103949"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
@@ -66,15 +66,15 @@ ms.locfileid: "63727265"
 
 在桌面上，自适应卡片 Markdown 格式显示在 Web 浏览器和 Teams 客户端应用程序中，如下图所示:
 
-![桌面客户端中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="自适应 Markdown 桌面客户端":::
 
 在 IOS 上，自适应卡片 Markdown 格式显示如下图所示:
 
-![IOS 中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="IOS 中的自适应卡片 Markdown 格式":::
 
 在 Android 上，自适应卡片 Markdown 格式显示如下图所示:
 
-![Android 中的自适应卡片 Markdown 格式](../../assets/images/cards/Adaptive-markdown-Android.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Android 中的自适应卡片 Markdown 格式":::
 
 有关详细信息，请参阅 [自适应卡片中的文本功能](/adaptive-cards/create/textfeatures)。
 
@@ -123,13 +123,13 @@ ms.locfileid: "63727265"
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
-:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="带表情符号的自适应卡片" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="带表情符号的自适应卡片":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>自适应卡片内提及的支持
 
-可以在自适应卡主体中为机器人和消息传递扩展响应添加@提及。 若要在卡片中添加@提及，请遵循[在频道和群组聊天对话中提及](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) 基于消息的相同通知逻辑和呈现。
+可在自适应卡片主体中为自动程序和消息扩展响应添加 @提及。 若要在卡片中添加@提及，请遵循[在频道和群组聊天对话中提及](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) 基于消息的相同通知逻辑和呈现。
 
-机器人和消息传递扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包含提及。
+自动程序和消息扩展可以在 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 和 [FactSet](https://adaptivecards.io/explorer/FactSet.html) 元素的卡片内容中包含提及。
 
 > [!NOTE]
 >
@@ -188,7 +188,7 @@ ms.locfileid: "63727265"
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>使用自适应卡片在机器人中提及用户
 
-除现有 ID 外，机器人还支持使用 Azure AD 对象 ID 和 UPN 提及用户。 对于短信、自适应卡片正文和消息传递扩展响应，机器人中提供了对两个新 ID 的支持。 机器人支持对话和 `invoke` 方案中的提及 ID。 使用 ID @提及时，用户将获取活动源通知。
+除现有 ID 外，机器人还支持使用 Azure AD 对象 ID 和 UPN 提及用户。 短信、自适应卡片正文和消息扩展响应的自动程序中提供了对两个新 ID 的支持。 机器人支持对话和 `invoke` 方案中的提及 ID。 使用 ID @提及时，用户将获取活动源通知。
 
 > [!NOTE]
 > 在机器人中使用自适应卡片的用户提及不需要架构更新和 UI/UX 更改。
@@ -233,7 +233,7 @@ ms.locfileid: "63727265"
 
 下图演示了在机器人中使用自适应卡片的用户提及:
 
-![使用自适应卡片在机器人中提及用户](~/assets/images/authentication/user-mention-in-bot.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="使用自适应卡片在机器人中提及用户":::
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>使用自适应卡片的传入 Webhook 中的用户提及
 
@@ -297,7 +297,7 @@ ms.locfileid: "63727265"
 
 下图说明了在传入 Webhook 中的用户提及:
 
-![传入 Webhook 中的用户提及](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="传入 Webhook 中的用户提及":::
 
 ### <a name="information-masking-in-adaptive-cards"></a>自适应卡片中的信息屏蔽
 
@@ -322,7 +322,7 @@ ms.locfileid: "63727265"
 
 下图是自适应卡片中屏蔽信息的示例:
 
-![屏蔽信息图像](../../assets/images/cards/masking-information-view.png)
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="屏蔽信息视图":::
 
 ### <a name="full-width-adaptive-card"></a>全宽自适应卡片
 
@@ -359,11 +359,11 @@ ms.locfileid: "63727265"
 
 下图显示了全宽自适应卡片:
 
-![全宽自适应卡片视图](../../assets/images/cards/full-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="全宽自适应卡片视图":::
 
 下图显示了未将 `width` 属性设置为 **完全** 时自适应卡片的默认视图:
 
-![小宽自适应卡片视图](../../assets/images/cards/small-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="小宽自适应卡片视图":::
 
 ### <a name="typeahead-support"></a>键盘缓冲支持
 
@@ -411,11 +411,11 @@ ms.locfileid: "63727265"
 
 当用户将鼠标悬停在图像上时，展开图标将显示在右上角，如下图所示:
 
-![具有可展开图像的自适应卡片](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="具有可展开图像的自适应卡片":::
 
 当用户选择展开图标时，图像将显示在阶段视图中，如下图所示:
 
-![图像扩大到阶段视图](../../assets/images/cards/adaptivecard-expand-image.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="图像扩大到阶段视图":::
 
 在阶段视图中，用户可以放大和缩小图像。 你可以在自适应卡片中选择必须具有此功能的图像。
 
@@ -447,11 +447,11 @@ ms.locfileid: "63727265"
 
 在桌面上，连接器卡片的 Markdown 格式显示如下图所示:
 
-![桌面客户端中连接器卡片的 Markdown 格式](../../assets/images/cards/connector-desktop-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="连接器卡片的 Markdown 格式":::
 
 在 IOS 上，连接器卡片的 Markdown 格式显示如下图所示:
 
-![IOS 客户端中连接器卡片的 Markdown 格式](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="IOS 客户端中连接器卡片的 Markdown 格式":::
 
 使用 Markdown for iOS 的连接器卡包括以下问题:
 
@@ -460,7 +460,7 @@ ms.locfileid: "63727265"
 
 在 Android 上，连接器卡片的 Markdown 格式显示如下图所示:
 
-![Android 客户端中连接器卡片的 Markdown 格式](../../assets/images/cards/connector-android-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Android 客户端中连接器卡片的 Markdown 格式":::
 
 ### <a name="format-example-for-markdown-connector-cards"></a>Markdown 连接器卡的格式示例
 
@@ -545,11 +545,11 @@ ms.locfileid: "63727265"
 
 在桌面上，连接器卡片的 HTML 格式显示如下图所示:
 
-![桌面客户端中连接器卡片的 HTML 格式](../../assets/images/cards/Connector-desktop-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="桌面客户端中连接器卡片的 HTML 格式":::
 
 在 iOS 上，HTML 格式如下图所示:
 
-![iOS 客户端中连接器卡的 HTML 格式设置](../../assets/images/cards/connector-iphone-html-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="iOS 客户端中连接器卡的 HTML 格式设置":::
 
 使用 HTML for iOS 的连接器卡包括以下问题:
 
@@ -558,7 +558,7 @@ ms.locfileid: "63727265"
 
 在 Android 上，HTML 格式如下图所示:
 
-![Android 客户端中连接器卡片的 HTML 格式](../../assets/images/cards/connector-android-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Android 客户端中连接器卡片的 HTML 格式":::
 
 ### <a name="format-sample-for-html-connector-cards"></a>HTML 连接器卡的格式示例
 
@@ -635,17 +635,17 @@ ms.locfileid: "63727265"
 
 在桌面上，HTML 格式如下图所示:
 
-![桌面客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="桌面客户端中的 HTML 格式":::
 
 在 iOS 上，HTML 格式如下图所示:
 
-![iOS 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="iOS 客户端中的 HTML 格式":::
 
 字符格式 (如粗体和斜体) 不会在 iOS 上呈现。
 
 在 Android 上，HTML 格式如下图所示:
 
-![Android 客户端中的 HTML 格式](../../assets/images/cards/card-formatting-xml-android-60.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Android 客户端中的 HTML 格式":::
 
 字符格式，如粗体和斜体在 Android 上正确显示。
 

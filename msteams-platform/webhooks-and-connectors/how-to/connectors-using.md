@@ -5,12 +5,12 @@ description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams Office365 连接器
-ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398874"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104075"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -52,7 +52,7 @@ ms.locfileid: "63398874"
 
 若要通过传入 Webhook 或 Office 365 连接器发送消息，请将 JSON 有效负载发布到 Webhook URL。 此有效负载必须采用 [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card) 的形式。
 
-还可使用此 JSON 创建包含丰富输入内容 (如文本输入、多重选择或选择日期和时间) 的卡。 生成卡并将其发布到 Webhook URL 的代码可以在任何托管服务上运行。 这些卡片被定义为可操作邮件的一部分，在 Teams 机器人和邮件扩展中使用的 [卡片](~/task-modules-and-cards/what-are-cards.md) 受支持。
+还可使用此 JSON 创建包含丰富输入内容 (如文本输入、多重选择或选择日期和时间) 的卡。 生成卡并将其发布到 Webhook URL 的代码可以在任何托管服务上运行。 这些卡片被定义为可操作邮件的一部分，在 Teams 机器人和消息扩展中使用的[卡片](~/task-modules-and-cards/what-are-cards.md)也受支持。
 
 ### <a name="example-of-connector-message"></a>连接器消息示例
 
@@ -262,7 +262,7 @@ ms.locfileid: "63398874"
 [具有指数补偿的重试逻辑](/azure/architecture/patterns/retry) 将减轻速率限制，以应对请求在一秒内超出限制的情况。请遵循 [最佳做法](../../bots/how-to/rate-limit.md) 以避免达到效率限制。
 
 > [!NOTE]
-> [具有指数补偿的重试逻辑](/azure/architecture/patterns/retry) 将减轻速率限制，以应对请求在一秒内超出限制的情况。 请参阅 [HTTP 429 响应](../../bots/how-to/rate-limit.md#handle-http-429-responses)以避免达到速率限制。
+> [具有指数补偿的重试逻辑](/azure/architecture/patterns/retry)将减轻速率限制，以应对请求在一秒内超出限制的情况。请参阅 [HTTP 429 响应](../../bots/how-to/rate-limit.md#handle-http-429-responses)以避免达到速率限制。
 
 ```csharp
 // Please note that response body needs to be extracted and read 

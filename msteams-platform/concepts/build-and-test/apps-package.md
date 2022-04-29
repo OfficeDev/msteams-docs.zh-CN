@@ -3,12 +3,12 @@ title: 打包应用
 description: 了解如何打包 Microsoft Teams 应用以进行测试、上传和存储发布。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ec583ff0998baef7162156c8c5c5c07fde176321
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356068"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104089"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>创建 Microsoft Teams 应用包
 
@@ -34,7 +34,7 @@ ms.locfileid: "63356068"
 应用包必须包含应用图标的两个 .png 版本：颜色和大纲版本。
 
 > [!Note]
-> 如果应用具有机器人或消息传递扩展，则图标也会包含在机器人服务注册Microsoft Azure中。
+> 如果应用具有自动程序或消息扩展，则图标也会包含在 Microsoft Azure 机器人服务注册中。
 
 若要使应用通过 Teams 应用商店评审，这些图标必须满足以下大小要求。
 
@@ -51,7 +51,7 @@ Teams 会自动裁剪图标，以在多个方案中显示圆角的正方形，�
 大纲图标显示在两种方案中：
 
 * 你的应用正在使用并托管在 Teams 左侧应用栏上。
-* 当用户固定你的应用的消息传递扩展时。
+* 当用户固定应用的消息扩展时。
 
 图标必须为 32x32 像素。 它可以是白色，背景透明或透明，背景为白色（不允许使用其他颜色）。 大纲图标不应在符号周围有任何额外的填充。
 
@@ -94,7 +94,7 @@ Teams 会自动裁剪图标，以在多个方案中显示圆角的正方形，�
 
 :::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="显示应用图标在通道内机器人上的外观的示例。" border="false":::
 
-#### <a name="messaging-extension"></a>消息传递扩展
+#### <a name="message-extension"></a>消息扩展
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<文本>" border="false":::
 

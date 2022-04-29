@@ -1,58 +1,62 @@
 ---
-title: 自定义Teams应用
+title: 自定义 Teams 应用
 author: heath-hamilton
-description: 了解Teams如何为组织自定义你的应用。
-ms.localizationpriority: medium
+description: 了解 Teams 管理员如何为其组织自定义应用。
+ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: overview
-keywords: 主题色品牌隐藏应用审批
-ms.openlocfilehash: 1487a1a44991143b93b87bf47bdb93180d97cb8c
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+keywords: 主题色, 品牌, 隐藏应用, 审批
+ms.openlocfilehash: 4728e6f34680d51983558d1ad96c47ffe3650234
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948612"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111197"
 ---
-# <a name="customize-your-teams-app"></a>自定义Teams应用
+# <a name="customize-your-teams-app"></a>自定义 Teams 应用
 
-## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>启用Microsoft Teams自定义应用
+## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>允许自定义你的 Microsoft Team 应用
 
-你可以允许客户在管理中心内自定义Microsoft Teams应用的Teams方面。 只有发布到应用商店的应用才支持Teams此功能。 无法自定义为组织发布的旁加载应用。
+你可以允许客户在 Teams 管理中心自定义 Microsoft Teams 应用的某些方面。 此功能仅支持发布到 Teams 应用商店的应用。 无法自定义旁加载的应用和为组织发布的应用。
 
 此功能的一些可能示例包括：
 
-* 更改应用主题色以匹配组织品牌。
-* 将应用程序名称从 *Contoso* 更新到 *Contoso 代理*，这是组织中的用户将看到的名称。  (注意：向聊天或频道添加连接器的用户仍将看到原始应用名称 *Contoso*.) 
+* 更改应用的主题色以匹配组织品牌形象。
+* 将应用名称从 *Contoso* 更新为 *Contoso Agent*，这是组织中用户将看到的名称。 （注意：将连接器添加到聊天或频道的用户仍会看到原始应用名称，即 *Contoso*。）
 
-可以在开发人员门户中启用此功能[Teams。](https://dev.teams.microsoft.com/home) 这将配置 `configurableProperties` ，此配置在 1.10 之前的版本Teams清单。
+你可以在 [Teams 开发人员门户](https://dev.teams.microsoft.com/home)中启用此功能。 这会配置 `configurableProperties`，这在 Teams 应用清单 1.10 之前的版本中不可用。
 
 ### <a name="test-your-app"></a>测试应用
 
-在开发期间，你无法测试此功能。 旁加载或发布到组织的应用程序目录时，不支持应用自定义。
+开发过程中无法测试此功能。 旁加载或发布到组织应用目录时，不支持自定义应用。
 
 ### <a name="user-considerations"></a>用户注意事项
 
-为特别需要 (应用的Teams管理员) 提供指南。 有关详细信息，请参阅自定义[Teams。](/MicrosoftTeams/customize-apps)
+为想要自定义应用的客户（特别是 Teams 管理员）提供指南。 有关详细信息，请参阅[在 Teams 中自定义应用](/MicrosoftTeams/customize-apps)。
 
-## <a name="hide-teams-app-until-admin-approves"></a>在Teams批准前隐藏应用
+## <a name="hide-teams-app-until-admin-approves"></a>隐藏 Teams 应用，直到管理员批准
 
-为了Teams应用体验，默认情况下，你可以向用户隐藏应用，直到管理员允许取消隐藏该应用。 例如，Contoso 电子产品创建了一个适用于 Teams。 为了能够正常运行应用，Contoso 电子产品希望客户先设置应用的特定属性。 默认情况下，应用处于隐藏状态，并且仅在管理员允许后才能供用户使用。
+为了增强 Teams 应用体验，默认情况下可以对用户隐藏应用，直到管理员允许取消隐藏应用。 例如，Contoso Electronics 为 Teams 创建了一个技术支持应用。 为了使该应用能够正常运行，Contoso Electronics 希望客户先设置应用的特定属性。 默认情况下，该应用处于隐藏状态，并且仅在管理员允许后才可供用户使用。
 
-若要隐藏应用，在应用清单文件中，将 `defaultBlockUntilAdminAction` 属性设置为 `true` 。 当属性设置为 时，在管理Teams管理>中，"被发布者阻止"将显示在 `true` 应用的"状态 **"中**： 
+> [!NOTE]
+> Teams 应用商店已演变:
+> 
+> 以前，LOB 应用是通过选择磁贴上的省略号来更新的。 借助更新的 Teams 应用商店体验，现在可以通过登录到 [Teams 管理中心](https://admin.teams.microsoft.com) 来更新 LOB 应用。
 
-![管理由发布者阻止的应用](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+若要隐藏应用，请在应用清单文件中将 `defaultBlockUntilAdminAction` 属性设置为 `true`。 当属性设置为 `true` 时，在 Teams 管理中心>“**管理应用**”中，“**已被发布者阻止**”会显示在应用的“**状态**”中：
 
-管理员收到一个请求，要求用户先采取措施，然后用户才能访问该应用。 在 **"管理应用**"下，管理员可以选择"允许"以允许具有"被发布者阻止 **"状态** 的应用：
+![管理已被发布者阻止的应用](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+
+在用户能够访问应用之前，管理员会收到采取操作的请求。 在“**管理应用**”下，管理员可以选择“**允许**”以允许具有“**已被发布者阻止**”状态的应用：
 
 ![管理应用](../../assets/images/apps-in-meetings/manageapp.png)
 
-如果默认情况下，你不希望隐藏应用，可以将 属性 `defaultBlockUntilAdminAction` 更新为 `false` 。 当应用的新版本获得批准时，默认情况下，只要管理员未执行任何显式操作，就会允许应用。
+如果默认情况下不希望应用被隐藏，则可以将 `defaultBlockUntilAdminAction` 属性更新为 `false`。 当新版本的应用获得批准时，默认情况下，只要管理员未采取任何显式操作，就会允许该应用。
 
 > [!NOTE]
-> `defaultBlockUntilAdminAction` LOB 应用不支持 。 如果你使用此属性上载 LOB 应用，则应用不会被阻止。
+> LOB 应用不支持 `defaultBlockUntilAdminAction`。 如果使用此属性上传 LOB 应用，则不会阻止该应用。
 
 ## <a name="see-also"></a>另请参阅
 
 * [应用程序清单架构](/microsoftteams/platform/resources/schema/manifest-schema)
-* [在管理中心Teams应用](/MicrosoftTeams/customize-apps)
-
+* [在 Teams 管理中心自定义应用](/MicrosoftTeams/customize-apps)

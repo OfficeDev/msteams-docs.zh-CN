@@ -1,39 +1,39 @@
 ---
-title: 将测试数据添加到Microsoft 365租户
-description: 设置开发人员Office 365计划订阅，以使用代码段成功测试 Microsoft Teams 应用
+title: 将测试数据添加到 Microsoft 365 测试租户
+description: 设置 Office 365 开发人员计划订阅，以便使用代码片段成功测试 Microsoft Teams 应用
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: 测试应用开发人员计划团队
+ms.localizationpriority: high
+keywords: 测试应用, 开发人员计划, Teams
 ms.date: 11/01/2019
-ms.openlocfilehash: 907b6e7b6734a16afa1335cf5198d2d88cad645b
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: eca2c87b92e6dfdcce869ac1fd207b2149055070
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452702"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111967"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>将测试数据添加到Microsoft 365租户
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>将测试数据添加到 Microsoft 365 测试租户
 
-可以使用开发人员订阅Microsoft Teams示例数据测试Microsoft 365应用。
+可以使用 Microsoft 365 开发人员订阅的示例数据来测试 Microsoft Teams 应用。
 
 ## <a name="prerequisites"></a>先决条件
 
-1. [如果你没有Microsoft 365](/office/developer-program/office-365-developer-program)租户，请加入开发人员计划。
-2. [设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
-3. [将示例数据包与开发人员Microsoft 365一起安装 Users 内容包](/office/developer-program/install-sample-packs)。
+1. 如果没有测试租户，请[加入 Microsoft 365 开发人员计划](/office/developer-program/office-365-developer-program)。
+2. [设置 Microsoft 365 开发人员订阅](/office/developer-program/office-365-developer-program-get-started)。
+3. [将示例数据包与 Microsoft 365 开发人员订阅结合使用，以安装用户内容包](/office/developer-program/install-sample-packs)。
 4. [安装 Teams PowerShell 模块](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。
 5. [安装 Azure AD PowerShell 模块](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)。
 
 > [!NOTE]
 > 必须在租户中具有全局管理员权限才能运行脚本。
 
-## <a name="allow-users-to-upload-apps"></a>允许用户上载应用
+## <a name="allow-users-to-upload-apps"></a>允许用户上传应用
 
-默认情况下，只有全局管理员或Teams管理员才能在租户 () 旁加载应用。 还可以允许用户上载自定义应用供自己使用或上载到团队进行测试。 有关详细信息，请参阅管理应用中[的自定义](/microsoftteams/teams-custom-app-policies-and-settings)应用策略Teams。
+默认情况下，只有全局管理员或 Teams 服务管理员才能在租户中上传（旁加载）应用。 你还可以允许用户上传自定义应用以供其使用，或上传到团队进行测试。 有关详细信息，请参阅[在 Teams 中管理自定义应用策略和设置](/microsoftteams/teams-custom-app-policies-and-settings)。
 
 ## <a name="create-teams-and-channels-for-testing"></a>创建用于测试的团队和频道
 
-1. 将以下代码段另存 **为**.xml并记下文件路径。 此 XML 定义团队的结构和与其成员一起创建的频道：
+1. 将以下代码片段另存为 **.xml** 文件，并记下文件路径。 此 XML 定义与其成员一起创建的团队和频道的结构：
 
     ```xml
     <?xml version="1.0"?>
@@ -147,7 +147,7 @@ ms.locfileid: "63452702"
     </Teams>
     ```
 
-2. 将以下代码段另存为 PowerShell 脚本 (.ps1) 并记下保存位置。 此脚本执行创建团队和频道的步骤，并添加成员：
+2. 将以下代码片段另存为 PowerShell 脚本 (.ps1) 并记下保存位置。 此脚本执行用于创建团队和频道并向其中添加成员的步骤：
 
     ```powershell
     Param(
@@ -238,13 +238,13 @@ ms.locfileid: "63452702"
     }
     ```
 
-3. 在管理员Windows PowerShell打开一个会话会话，然后运行刚保存的脚本。
-4. 当系统提示你提供凭据时，输入首次注册开发人员订阅时收到的全局管理员凭据。
+3. 在管理员模式下打开 Windows PowerShell 会话，并运行刚才保存的脚本。
+4. 当系统提示你提供凭据时，请输入首次注册开发人员订阅时收到的全局管理员凭据。
 
     > [!Note]
-    > 不要关闭 PowerShell 会话，因为脚本需要几分钟时间才能执行。 如果已根据默认内容包中创建的内容修改了订阅中的用户，则某些用户可能不会添加到Teams。 当脚本执行时，它将显示成功或失败的操作。
+    > 请勿关闭 PowerShell 会话，因为脚本需要几分钟来执行。 如果已根据默认内容包中创建的内容修改订阅中的用户，则某些用户可能不会添加到 Teams。 当脚本执行时，它将显示成功或失败的操作。
 
-5. 脚本执行完毕后，可以使用用户帐户之一登录到 Teams 客户端并查看新创建的团队。
+5. 脚本完成执行后，你可以使用其中一个用户帐户登录到 Teams 客户端，并查看新创建的团队。
 
 ## <a name="see-also"></a>另请参阅
 

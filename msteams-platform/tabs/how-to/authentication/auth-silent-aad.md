@@ -1,46 +1,46 @@
 ---
 title: 无提示的身份验证
-description: 描述选项卡的无提示Azure AD、单一登录和登录
+description: 介绍无提示身份验证、单一登录和 Azure AD 选项卡
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: teams 身份验证 SSO 无提示Azure AD选项卡
-ms.openlocfilehash: e59b7ff30a0659b670796c56b97eda437f907739
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams 身份验证 SSO 无提示 Azure AD 选项卡
+ms.openlocfilehash: 699582414a4699a69519e41232e4354d8125337b
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821568"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111645"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
 > [!IMPORTANT]
-> Microsoft 对 Active Directory Authentication Library (ADAL) 的支持和开发（包括安全修补程序）将于 **2022 年 6 月 30 日结束**。 更新应用程序以使用 MICROSOFT 身份验证库 (MSAL) 继续获得支持。 请参阅 [将应用程序迁移到 MSAL (Microsoft 身份验证) ](/azure/active-directory/develop/msal-migration)。
+> Microsoft 对 Active Directory 身份验证库 (ADAL) 的支持和开发，包括安全修补程序，将于 **2022 年 6 月 30日** 结束。 更新应用程序以使用 Microsoft 身份验证库 (MSAL) 继续接受支持。 请参阅[将应用程序迁移到 Microsoft 身份验证库 (MSAL)](/azure/active-directory/develop/msal-migration)。
 
 > [!NOTE]
-> 若要在移动客户端上对选项卡进行身份验证，请确保Teams JavaScript SDK 版本 1.4.1 或更高版本。
+> 要使身份验证适用于移动客户端上的选项卡，请确保使用的是 Teams JavaScript SDK 版本 1.4.1 或更高版本。
 
-Azure AD中的无提示身份验证通过静默刷新身份验证令牌来最大程度地减少用户输入凭据次数。 有关真正的单一登录支持，请参阅 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)。
+Azure AD 中的无提示身份验证通过无提示刷新身份验证令牌，最大限度地减少了用户需要输入凭据的次数。 有关真正的单一登录支持，请参阅 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)。
 
-若要使代码客户端保持运行，请使用 JavaScript [](/azure/active-directory/develop/active-directory-authentication-libraries) Azure AD身份验证库以静默方式Microsoft Azure Active Directory (Azure AD) 访问令牌。 如果用户最近登录过，则他们不会看到弹出对话框。
+若要保留代码客户端，请使用适用于 JavaScript 的 [Azure AD 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries)以无提示方式获取 Microsoft Azure Active Directory (Azure AD) 访问令牌。 如果用户最近已登录，则看不到弹出对话框。
 
-虽然 Active Directory 身份验证库针对 AngularJS 应用程序进行了优化，但它也可与 SPA (JavaScript 单页) 。
+虽然 Active Directory 身份验证库针对 AngularJS 应用程序进行了优化，它也适用于 JavaScript 单页应用程序 (SPA)。
 
 > [!NOTE]
-> 目前，无提示身份验证仅适用于选项卡。 从自动程序登录时，它不起作用。
+> 目前，无提示身份验证仅适用于选项卡。 从机器人登录时，它不起作用。
 
 ## <a name="how-silent-authentication-works"></a>无提示身份验证的工作原理
 
-Active Directory 身份验证库为 OAuth 2.0 隐式授权流创建隐藏的 iframe。 但库指定 ，Azure AD`prompt=none`不显示登录页。 如果用户需要登录或授予对应用程序的访问权限，可能需要用户交互。 如果需要用户交互，Azure AD库向应用报告的错误。 如有必要，你的应用现在可以显示登录选项。
+Active Directory 身份验证库为 OAuth 2.0 隐式授权流程创建隐藏的 iframe。 但库会指定 `prompt=none`，因此 Azure AD 不会显示登录页面。 如果用户需要登录或授予对应用程序的访问权限，则可能需要用户交互。 如果需要用户交互，Azure AD 会返回一个错误，由库报告给应用程序。 如有必要，应用现在可以显示登录选项。
 
 ## <a name="how-to-do-silent-authentication"></a>如何执行无提示身份验证
 
-本文中的代码来自Teams身份验证示例节点Teams[示例应用](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
+本文中的代码来自 Teams 示例应用，即 [Teams 身份验证示例节点](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
 
-[使用 Azure AD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) 启动无提示且简单的身份验证可配置选项卡，然后按照说明在本地计算机上运行示例。
+[使用 Azure AD 启动无提示和简单身份验证可配置选项卡](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp)，并按照说明在本地计算机上运行示例。
 
-### <a name="include-and-configure-active-directory-authentication-library"></a>包括和配置 Active Directory 身份验证库
+### <a name="include-and-configure-active-directory-authentication-library"></a>添加和配置 Active Directory 身份验证库
 
-在选项卡页中包括 Active Directory 身份验证库，然后使用客户端 ID 和重定向 URL 配置库：
+在选项卡页中添加 Active Directory 身份验证库，并使用客户端 ID 和重定向 URL 配置库：
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -56,9 +56,9 @@ Active Directory 身份验证库为 OAuth 2.0 隐式授权流创建隐藏的 ifr
 </script>
 ```
 
-### <a name="get-the-user-context"></a>获取用户上下文
+### <a name="get-the-user-context"></a>获取当前上下文的用户
 
-在选项卡的内容页中，调用 `microsoftTeams.getContext()` 获取当前用户的登录提示。 该提示在调用`loginHint`应用时用作 Azure AD。
+在选项卡的内容页中，调用 `microsoftTeams.getContext()` 以获取当前用户的登录提示。 该提示在调用 Azure AD 时用作 `loginHint`。
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -73,9 +73,9 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>身份验证
 
-如果 Active Directory 身份验证库具有为用户缓存的未用令牌，请使用令牌。 或者，调用以 `acquireToken(resource, callback)` 静默方式接收令牌。 库使用请求的令牌调用回调函数，如果身份验证失败，则生成错误。
+如果 Active Directory 身份验证库为用户缓存了未过期的令牌，请使用该令牌。 或者，调用 `acquireToken(resource, callback)` 以无提示方式接收令牌。 库使用请求的令牌调用回调函数，或者在身份验证失败时生成错误。
 
-如果您在回调函数中收到错误，则显示并使用显式登录选项。
+如果回调函数中出现错误，请显示并使用显式登录选项。
 
 ```javascript
 let authContext = new AuthenticationContext(config); // from Active Directory Authentication Library
@@ -108,9 +108,9 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>处理返回值
 
-Active Directory 身份验证库通过Azure AD回调页调用来`AuthenticationContext.handleWindowCallback(hash)`分析用户的结果。
+Active Directory 身份验证库通过在登录回调页中调用 `AuthenticationContext.handleWindowCallback(hash)` 来分析 Azure AD 的结果。
 
-检查用户是否有效，并调用 `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 将状态报告给主选项卡内容页。
+检查是否有有效的用户，并调用 `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 向主选项卡内容页面报告状态。
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
@@ -127,10 +127,10 @@ if (authContext.isCallback(window.location.hash)) {
 
 ### <a name="handle-the-sign-out-flow"></a>处理注销流程
 
-使用以下代码处理身份验证中的注销Azure AD流：
+使用以下代码处理 Azure AD 身份验证中的注销流程：
 
 > [!NOTE]
-> 从选项卡或自动Teams注销时，将清除当前会话。
+> 从 Teams 选项卡或机器人注销时，将清除当前会话。
 
 ```javascript
 function logout() {
@@ -141,5 +141,5 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 
 ## <a name="see-also"></a>另请参阅
 
-* [配置标识提供程序以使用Azure AD](../../../concepts/authentication/configure-identity-provider.md)
-* [了解 MSAL (Microsoft 身份验证库) ](/azure/active-directory/develop/msal-overview)
+* [配置标识提供程序使用 Azure AD](../../../concepts/authentication/configure-identity-provider.md)
+* [了解 Microsoft 身份验证库 (MSAL)](/azure/active-directory/develop/msal-overview)
