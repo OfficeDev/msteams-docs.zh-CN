@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
+ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104047"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65132707"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "65104047"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|04/28/2022| 应用验证失败的常见原因 | 将应用>发布到 Teams 应用商店> [应用验证失败的常见原因](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |2022/04/20 |  设置 CI/CD 管道 | 工具和 SDK >用于 Visual Studio Code 的 Teams 工具包>[设置 CI/CD 管道](toolkit/use-CICD-template.md)|
 |2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| 从个人应用或选项卡共享到 Teams（开发者预览版） | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |

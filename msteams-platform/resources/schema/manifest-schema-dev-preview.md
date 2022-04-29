@@ -1,25 +1,25 @@
 ---
 title: 公共开发人员预览清单架构参考
-description: Microsoft Teams支持的所有组件的示例清单文件和说明
+description: Microsoft Teams 支持的所有组件的示例清单文件和说明
 ms.topic: reference
-keywords: teams 清单架构开发人员预览版
-ms.localizationpriority: medium
+keywords: Teams 清单架构开发人员预览
+ms.localizationpriority: high
 ms.date: 11/15/2021
-ms.openlocfilehash: e388dc955acbe3ba0c116f2a5d5f610d3cbdc3c3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104061"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110328"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams的公共开发人员预览清单架构
+# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的公共开发人员预览清单架构
 
-有关如何启用开发人员预览的信息，请参阅[公共开发人员预览Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)。
+有关如何启用开发人员预览的信息，请参阅 [Microsoft Teams 的公共开发人员预览](~/resources/dev-preview/developer-preview-intro.md)。
 
 > [!NOTE]
-> 如果不使用开发人员预览功能，包括[在Outlook和Office中运行Teams个人选项卡和消息扩展](../../m365-apps/overview.md)，请改用 [GA 功能的应用清单](~/resources/schema/manifest-schema.md)。
+> 如果不使用开发人员预览功能（包括运行 [Outlook 和 Office 中的 Teams 个人选项卡和消息扩展](../../m365-apps/overview.md)），请改用 [正式发布功能的应用清单](~/resources/schema/manifest-schema.md)。
 
-Microsoft Teams清单介绍应用如何集成到Microsoft Teams平台。 清单必须符合托管在 [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json)的架构。
+Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 清单必须符合托管在 [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json)的架构。
 
 ## <a name="sample-full-manifest"></a>示例完整清单
 
@@ -276,57 +276,57 @@ Microsoft Teams清单介绍应用如何集成到Microsoft Teams平台。 清单�
 
 ## <a name="schema"></a>$schema
 
-*可选，但建议* &ndash; 字符串
+*可选，但建议采用* &ndash; 字符串
 
-`https://`引用清单的 JSON 架构的 URL。
+引用清单的 JSON 架构的 `https://` URL。
 
 ## <a name="manifestversion"></a>manifestVersion
 
-**必填** &ndash; 字符串
+**必需** &ndash; 字符串
 
-此清单使用的清单架构的版本。 仅当预览[在Office和Outlook中运行的Teams应用时](../../m365-apps/overview.md)才使用`m365DevPreview`。 否则，用于`devPreview`所有其他Teams预览功能。
+此清单使用的清单架构版本。 仅当预览 [在 Office 和 Outlook 中运行的Teams 应用](../../m365-apps/overview.md) 时，才使用 `m365DevPreview`。 否则，请使用 `devPreview` 获取所有其他 Teams 预览功能。
 
 ## <a name="version"></a>version
 
-**必填** &ndash; 字符串
+**必需** &ndash; 字符串
 
-特定应用的版本。 如果更新清单中某些内容，则版本也必须递增。 这样一来，在安装新的清单时，它将覆盖现有的版本，用户将获得新的功能。 如果将此应用提交到应用商店，则必须重新提交并重新验证新清单。 然后，此应用的用户将在批准后的几个小时内自动获取新更新的清单。
+特定应用的版本。如果更新清单中的某些内容，版本也必须随之递增。因此在安装新清单时，它将覆盖现有清单，并且用户将获得新功能。如果已将此应用提交至应用商店，则必须重新提交新清单并重新验证。然后，此应用的用户将在该清单获得批准后几小时内自动获得新的更新的清单。
 
-如果应用请求的权限更改，系统会提示用户升级并重新同意应用。
+如果应用请求的权限发生了更改，则系统将提示用户对加载项进行升级和重新许可。
 
 此版本字符串必须遵循[semver](http://semver.org/)标准 (MAJOR.MINOR.PATCH)。
 
 ## <a name="id"></a>id
 
-**必填** &ndash; Microsoft 应用 ID
+**必需** &ndash; Microsoft 应用 ID
 
-此应用的唯一 Microsoft 生成的标识符。 如果已通过Microsoft Bot Framework注册了机器人，或者选项卡的 Web 应用已使用 Microsoft 登录，则应该已有一个 ID，并且应该在此处输入它。 否则，应在 Microsoft 应用程序注册门户 ([“我的应用程序](https://apps.dev.microsoft.com) ”) 生成新 ID，在此处输入该 ID，然后在 [添加机器人](~/bots/how-to/create-a-bot-for-teams.md)时重用它。
+此应用的唯一 Microsoft 生成的标识符。 如果已通过 Microsoft Bot Framework 注册了机器人，或者选项卡的 Web 应用已使用 Microsoft 登录，则应已有一个 ID，并应在此处输入它。 否则，应在 Microsoft 应用程序注册门户（[我的应用程序](https://apps.dev.microsoft.com)）上生成新 ID，在此处输入该 ID，然后在 [添加机器人](~/bots/how-to/create-a-bot-for-teams.md) 时重用它。
 
 ## <a name="packagename"></a>packageName
 
-**必填** &ndash; 字符串
+**必需** &ndash; 字符串
 
-反向域表示法中此应用的唯一标识符;例如，com.example.myapp。
+采用反向域表示法的此应用的唯一标识符；例如，com.example.myapp。
 
 ## <a name="developer"></a>developer
 
-必填：
+必需：
 
-指定有关公司的信息。 对于提交到 AppSource (以前Office应用商店) 的应用，这些值必须与 AppSource 条目中的信息匹配。
+指定有关公司的信息。 对于已提交到 AppSource（原 Office Store）的应用，这些值必须与 AppSource 条目中的信息匹配。
 
 |名称| 最大大小 | 必需 | Description|
 |---|---|---|---|
 |`name`|32 个字符|✔|开发人员的显示名称。|
-|`websiteUrl`|2048 个字符|✔|开发人员网站的 https:// URL。 此链接应将用户转到公司或特定于产品的登陆页面。|
+|`websiteUrl`|2048 个字符|✔|开发人员网站的 https:// URL。 此链接应将用户转到公司或产品特定的登陆页面。|
 |`privacyUrl`|2048 个字符|✔|开发人员隐私策略的 https:// URL。|
 |`termsOfUseUrl`|2048 个字符|✔|开发人员使用条款的 https:// URL。|
 |`mpnId`|10 个字符|✔|**可选** 标识生成应用的合作伙伴组织的Microsoft 合作伙伴网络 ID。|
 
 ## <a name="localizationinfo"></a>localizationInfo
 
-选：
+可选：
 
-允许默认语言的规范，以及指向其他语言文件的指针。 请参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
+允许指定默认语言以及指向其他语言文件的指针。 参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -343,9 +343,9 @@ Microsoft Teams清单介绍应用如何集成到Microsoft Teams平台。 清单�
 
 ## <a name="name"></a>name
 
-必填：
+必需：
 
-应用体验的名称，在 Teams 体验中向用户显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 其值 `short` 和 `full` 应不相同。
+应用体验的名称，在 Teams 体验中向用户显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 `short` 和 `full` 的值不应相同。
 
 |名称| 最大大小 | 必需 | Description|
 |---|---|---|---|
@@ -354,11 +354,11 @@ Microsoft Teams清单介绍应用如何集成到Microsoft Teams平台。 清单�
 
 ## <a name="description"></a>说明
 
-必填：
+必需：
 
 向用户描述应用。对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
-确保你的说明准确地描述你的体验，并提供信息来帮助潜在客户了解你的体验的作用。 如果需要使用外部帐户，还应在完整说明中注意。 其值 `short` 和 `full` 应不相同。  不能在长描述中重复简短说明，也不得包含任何其他应用名称。
+确保描述可以准确描述你的体验，并提供信息来帮助潜在客户了解你的体验。 如果需要使用外部帐户，则应在完整说明中进行备注。 `short` 和 `full` 的值不应相同。  简短说明不能在长说明中重复，也不能包含任何其他应用名称。
 
 |名称| 最大大小 | 必需 | Description|
 |---|---|---|---|
@@ -367,7 +367,7 @@ Microsoft Teams清单介绍应用如何集成到Microsoft Teams平台。 清单�
 
 ## <a name="icons"></a>图标
 
-必填：
+必需：
 
 Teams 应用中使用的图标。 图标文件必须作为上传包的一部分包含在内。
 
@@ -378,80 +378,80 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ## <a name="accentcolor"></a>accentColor
 
-**必填** &ndash; 字符串
+**必需** &ndash; 字符串
 
-要与大纲图标结合使用的颜色和背景。
+要与大纲图标结合使用并作为其背景的颜色。
 
 该值必须是以"#"开头的有效 HTML 颜色代码，例如 `#4464ee`。
 
 ## <a name="configurabletabs"></a>configurableTabs
 
-选：
+可选：
 
-当应用体验具有团队频道选项卡体验时使用，该体验需要在添加之前进行额外配置。 可配置选项卡仅在团队范围内受支持，目前每个应用仅支持一个选项卡。
+当应用体验具有团队频道选项卡体验时使用，该体验需要在添加之前进行额外配置。 可配置选项卡仅在团队范围内受支持，并且目前每个应用仅支持一个选项卡。
 
-对象是一个数组，其中包含类型的所有元素 `object`。 此块仅适用于提供可配置通道选项卡解决方案的解决方案。
+对象是一个数组，其中包含类型的所有元素 `object`。 只有提供可配置频道选项卡解决方案的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|字符串|2048 个字符|✔|配置选项卡时要使用的 https:// URL。|
-|`canUpdateConfiguration`|Boolean|||一个值，该值指示创建后用户是否可以更新选项卡配置的实例。 默认： `true`|
+|`canUpdateConfiguration`|Boolean|||指示创建后用户是否可以更新选项卡配置的实例的值。默认值：`true`|
 |`scopes`|枚举数组|1|✔|目前，可配置选项卡仅支持 `team` 和 `groupchat` 范围。 |
-|`context` |枚举数组|6 ||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值：`channelTab`、`privateChatTab`、`meetingChatTab`、`meetingDetailsTab`和 `meetingStage``meetingSidePanel`.|
-|`sharePointPreviewImage`|字符串|2048||用于 SharePoint 的选项卡预览图像的相对文件路径。大小 1024x768。 |
-|`supportedSharePointHosts`|枚举数组|1||定义如何在SharePoint中提供选项卡。 选项 `sharePointFullPage` 和 `sharePointWebPart` |
+|`context` |枚举数组|6 ||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值：`channelTab`、`privateChatTab`、`meetingChatTab`、`meetingDetailsTab`、`meetingSidePanel` 和 `meetingStage`。|
+|`sharePointPreviewImage`|String|2048||用于 SharePoint 的选项卡预览图像的相对文件路径。大小 1024x768。 |
+|`supportedSharePointHosts`|枚举数组|1||定义如何在 SharePoint 中提供选项卡。选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
-选：
+可选：
 
 定义默认情况下可以"固定"的一组选项卡，而无需用户手动添加它们。 在 `personal` 范围内声明的静态选项卡始终固定到应用的个人体验。 当前不支持在 `team` 作用域中声明的静态选项卡。
 
-通过指定而不是`contentUrl`在 **staticTabs** 块中指定`contentBotId`来呈现带有自适应卡片的选项卡。
+通过在 **staticTabs** 块指定 `contentBotId` 而不是 `contentUrl` 来呈现具有自适应卡片的选项卡。
 
-该对象是一个数组 (最大 16 个元素) 该类型的 `object`所有元素。 只有提供静态选项卡解决方案的解决方案才需要此块。
+对象是一个所有元素均为类型 `object` 的数组（最多 16 个元素）。 只有提供静态选项卡解决方案的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`entityId`|字符串|64 个字符|✔|选项卡显示的实体的唯一标识符。|
 |`name`|字符串|128 个字符|✔|通道接口中选项卡的显示名称。|
 |`contentUrl`|字符串|2048 个字符|✔|指向要在 Teams 画布中显示的实体 UI 的 https:// URL。|
-|`contentBotId`|   | | | 在 Bot Framework 门户中为机器人指定的Microsoft Teams应用 ID。 |
-|`websiteUrl`|字符串|2048 个字符||如果用户选择在浏览器中查看，则要指向的 https:// URL。|
+|`contentBotId`|   | | | 在 Bot Framework 门户中为机器人指定的 Microsoft Teams 应用 ID。 |
+|`websiteUrl`|String|2048 个字符||用户选择在浏览器中查看时要指向的 http:// URL。|
 |`scopes`|枚举数组|1|✔|目前，静态选项卡仅支持 `personal` 范围，这意味着只能将其预配为个人体验的一部分。|
 
 ## <a name="bots"></a>机器人
 
-选：
+可选：
 
 定义机器人解决方案以及可选信息（如默认命令属性）。
 
-该对象是一个数组 (每个应用最多只允许一个具有该类型`object`所有元素的机器人) 一个元素&mdash;。 只有提供机器人体验的解决方案才需要此块。
+对象是一个数组（目前每个应用仅允许一个机器人&mdash;最多 1 个元素），其所有元素类型均为 `object`。 只有提供机器人体验的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`botId`|字符串|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这很可能与整个 [应用 ID](#id) 相同。|
-|`needsChannelSelector`|布尔值|||描述自动程序是否利用用户提示将自动程序添加到特定频道。 默认值：`false`|
+|`botId`|字符串|64 个字符|✔|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这可能与整个 [应用 ID](#id) 相同。|
+|`needsChannelSelector`|Boolean|||描述机器人是否利用用户提示将该机器人添加到特定频道。默认值：`false`|
 |`isNotificationOnly`|Boolean|||指示机器人是否为单向、仅通知机器人，而不是聊天机器人。默认值：`false`|
 |`supportsFiles`|Boolean|||指示机器人是否支持在个人聊天中上传/下载文件的功能。默认值：`false`|
 |`scopes`|枚举数组|3|✔|指定机器人是在 `team`、群组聊天（`groupchat`）的频道上下文中提供体验还是单独限于单个用户的体验（`personal`）。这些选项不是独占的。|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-机器人可以向用户推荐的命令的可选列表。 该对象是一个数组 (最多 2 个元素) 所有类型的 `object`元素;必须为机器人支持的每个范围定义一个单独的命令列表。 有关详细信息，请参阅 [机器人菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
+机器人可以向用户推荐的命令的可选列表。 对象是一个数组（最多 2 个元素），其所有元素类型均为 `object`；必须为机器人支持的每个范围定义一个单独的命令列表。 有关详细信息，请参阅 [机器人菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`items.scopes`|枚举数组|3|✔|指定命令列表有效的范围。选项为 `team`、 `personal`和 `groupchat`。|
-|`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：机器人命令名称 (字符串，32) 。<br>`description`：命令语法及其参数的简单说明或示例（字符串，128）。|
+|`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例（字符串，128）。|
 
 ## <a name="connectors"></a>连接器
 
-选：
+可选：
 
 `connectors`块定义应用的 Office 365 连接器。
 
-该对象是一个数组 (最大 1 个元素) 类型的所有元素 `object`。 只有提供连接器的解决方案才需要此块。
+对象是一个数组（最多 1 个元素），其所有元素类型均为 `object`。 只有提供连接器的解决方案才需要此块。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -461,58 +461,58 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ## <a name="composeextensions"></a>composeExtensions
 
-选：
+可选：
 
 定义应用的消息扩展。
 
 > [!NOTE]
-> 2017 年 11 月，该功能的名称从“撰写扩展名”更改为“消息扩展名”，但清单名称保持不变，以便现有扩展继续运行。
+> 2017 年 11 月，该功能的名称已从“撰写扩展”更改为“消息扩展”，但清单名称保持不变，以便现有扩展可以继续运行。
 
-该对象是一个数组 (最大 1 个元素) 类型的所有元素 `object`。 只有提供消息扩展的解决方案才需要此块。
+对象是一个数组（最多 1 个元素），其所有元素类型均为 `object`。 只有提供消息扩展的解决方案才需要此块。
 
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`botId`|字符串|64|✔|支持消息扩展的机器人的唯一 Microsoft 应用 ID，如在 Bot Framework 中注册的那样。 这很可能与整个 [应用 ID](#id) 相同。|
-|`canUpdateConfiguration`|Boolean|||一个值，该值指示用户是否可以更新消息扩展的配置。 默认值为 `false`。|
-|`commands`|对象数组|10 |✔|消息扩展支持的命令数组|
+|`botId`|字符串|64|✔|支持消息扩展的机器人的唯一 Microsoft 应用 ID，已向机器人框架注册。 这可能与整个 [应用 ID](#id) 相同。|
+|`canUpdateConfiguration`|Boolean|||指示用户是否可以更新消息扩展插件的配置的一个值。默认值为 `false`。|
+|`commands`|对象数组|10|✔|消息扩展支持的命令数组|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-消息扩展名应声明一个或多个命令。 每个命令都显示在 Microsoft Teams 中，作为来自基于 UI 的入口点的潜在交互。 最多有 10 个命令。
+消息扩展应声明一个或多个命令。 每个命令都显示在 Microsoft Teams 中，作为来自基于 UI 的入口点的潜在交互。 最多有 10 个命令。
 
 每个命令项都是具有以下结构的对象：
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|字符串|64 个字符|✔|命令的 ID。|
-|`type`|字符串|64 个字符||命令的类型。 `query`或`action`之一。 默认： `query`|
+|`type`|字符串|64 个字符||命令的类型。 `query`或`action`之一。 默认值：`query`|
 |`title`|字符串|32 个字符|✔|用户友好的命令名称。|
-|`description`|String|128 个字符||向用户显示以指示此命令用途的说明。|
-|`initialRun`|Boolean|||一个布尔值，该值指示命令最初是否应在没有参数时运行。 默认： `false`|
-|`context`|Array of Strings|3||定义可以从何处调用消息扩展插件。 任何组合， `compose``commandBox`， . `message` 默认值为 `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||一个布尔值，指示它是否应动态提取任务模块。|
+|`description`|字符串|128 个字符||向用户显示以指示此命令用途的说明。|
+|`initialRun`|Boolean|||指示命令最初是否应在没有参数时运行的布尔值。 默认值：`false`|
+|`context`|Array of Strings|3||定义可以从何处调用消息扩展插件。 `compose`、`commandBox`、`message` 的任何组合。 默认值为 `["compose", "commandBox"]`|
+|`fetchTask`|Boolean|||指示它是否应动态提取任务模块的布尔值。|
 |`taskInfo`|Object|||指定使用消息扩展命令时要预加载的任务模块。|
-|`taskInfo.title`|字符串|64||初始对话框标题。|
-|`taskInfo.width`|String|||对话框宽度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
+|`taskInfo.title`|String|64||初始对话框标题。|
+|`taskInfo.width`|字符串|||对话框宽度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
 |`taskInfo.height`|String|||对话框高度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
 |`taskInfo.url`|String|||初始 Web 视图 URL。|
-|`messageHandlers`|对象数组|5||允许在满足特定条件时调用应用的处理程序列表。 域也必须列在其中 `validDomains`。|
-|`messageHandlers.type`|String|||消息处理程序的类型。必须 `"link"`。|
+|`messageHandlers`|对象数组|5||允许在满足特定条件时调用应用的处理程序列表。域还必须在 `validDomains` 中列出。|
+|`messageHandlers.type`|字符串|||消息处理程序的类型。必须 `"link"`。|
 |`messageHandlers.value.domains`|Array of Strings|||链接消息处理程序可以注册的域数组。|
-|`parameters`|对象数组|5|✔|命令采用的参数列表。 最小值：1;最大值：5|
-|`parameter.name`|字符串|64 个字符|✔|在客户端中显示的参数的名称。 这包含在用户请求中。|
+|`parameters`|对象数组|5|✔|命令采用的参数列表。 最小值：1；最大值：5。|
+|`parameter.name`|字符串|64 个字符|✔|在客户端中显示时参数的名称。此名称包含在用户请求中。|
 |`parameter.title`|字符串|32 个字符|✔|参数的用户友好标题。|
 |`parameter.description`|String|128 个字符||描述此参数用途的用户友好字符串。|
-|`parameter.inputType`|String|128 个字符||定义任务模块 `fetchTask: true`上显示的控件类型。 其中一`text`个， `textarea`， `date``number`， ， `time`， `toggle`. `choiceset`|
-|`parameter.choices`|对象数组|10 ||的选项 `choiceset`。 仅当使用`choiceset`时`parameter.inputType`才使用 。|
-|`parameter.choices.title`|字符串|128||选择的标题。|
-|`parameter.choices.value`|字符串|512||选项的值。|
+|`parameter.inputType`|String|128 个字符||定义在 `fetchTask: true` 的任务模块上显示的控件类型。 `text`、`textarea`、`number`、`date`、`time`、`toggle`、`choiceset` 其中之一。|
+|`parameter.choices`|对象数组|10||`choiceset` 的选择选项。 仅当 `parameter.inputType` 为 `choiceset` 时使用。|
+|`parameter.choices.title`|String|128||选择的标题。|
+|`parameter.choices.value`|String|512||选项的值。|
 
 ## <a name="permissions"></a>permissions
 
-选：
+可选：
 
-一个数组， `string` 指定应用请求的权限，让最终用户知道扩展将如何执行。 以下选项是非独占的：
+指定应用请求权限的 `string` 的数组，可以让最终用户了解扩展的执行方式。以下选项是非独占的：
 
 * `identity`&emsp;需要用户标识信息。
 * `messageTeamMembers`&emsp;请求向团队成员发送直接消息的权限。
@@ -521,9 +521,9 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ## <a name="devicepermissions"></a>devicePermissions
 
-**选** 字符串数组
+**可选** 字符串数组
 
-指定应用可以请求访问的用户设备上的本机功能。 选项有：
+在应用可以请求访问的用户设备上指定本机功能。选项包括：
 
 * `geolocation`
 * `media`
@@ -533,28 +533,28 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ## <a name="validdomains"></a>validDomains
 
-**可选**，除非 **需要** ，其中已注明
+**可选**，除非备注为 **必需**。
 
-应用需要从中加载任何内容的有效域的列表。 例如 `*.example.com`，域列表可以包括通配符。 这完全匹配域的一个段;如果需要匹配 `a.b.example.com` ，请使用 `*.*.example.com`。 如果选项卡配置或内容 UI 需要导航到除选项卡配置之外的任何其他域，则必须在此处指定该域。
+应用需要从中加载任何内容的有效域的列表。 域列表可以包含通配符，例如 `*.example.com`。 这与域的一个区段完全匹配；如果需要匹配 `a.b.example.com`，则使用 `*.*.example.com`。 如果选项卡配置或内容 UI 需要导航到除用于选项卡配置的域之外的任何其他域，则必须在此处指定该域。
 
-但是， **不需要** 在应用中包含要支持的标识提供者的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不应在 `validDomains[]`其中包含 accounts.google.com。
+但是，**没有** 必要在应用中包含你要支持的标识提供者的域。 例如，要使用 Google ID 进行身份验证，需要重定向到 accounts.google.com，但不应在 `validDomains[]` 中包含 accounts.google.com。
 
 > [!IMPORTANT]
-> 请勿直接或通过通配符添加超出控制范围的域。 例如， `yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。
+> 不要直接或通过通配符添加超出控制范围的域。 例如，`yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。
 
 对象是一个数组，其中包含类型的所有元素 `string`。
 
 ## <a name="webapplicationinfo"></a>webApplicationInfo
 
-选：
+可选：
 
-指定Microsoft Azure Active Directory (Azure AD) 应用 ID 和Graph信息，以帮助用户无缝登录到 Auzre AD 应用。
+指定 Microsoft Azure Active Directory (Azure AD) 应用 ID 和 Graph 信息，以帮助用户无缝登录到 Auzre AD 应用。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|字符串|36 个字符|✔|应用的 Microsoft Azure Active Directory (Azure AD) 应用程序 ID。 此 ID 必须是 GUID。|
-|`resource`|字符串|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。|
-|`applicationPermissions`|Array|最大 100 个项目|✔|应用程序的资源权限。|
+|`resource`|String|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。|
+|`applicationPermissions`|Array|最多 100 项|✔|应用程序的资源权限。|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -572,7 +572,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 * `longDescription`：应用的详细说明。
 * `smallImageUrl`：应用的大纲图标。
 * `largeImageUrl`：应用的颜色图标。
-* `accentColor`：要与大纲图标结合使用的颜色和背景。
+* `accentColor`：要与大纲图标结合使用并作为其背景的颜色。
 * `developerUrl`：开发人员网站的 HTTPS URL。
 * `privacyUrl`：开发人员隐私策略的 HTTPS URL。
 * `termsOfUseUrl`：开发人员使用条款的 HTTPS URL。

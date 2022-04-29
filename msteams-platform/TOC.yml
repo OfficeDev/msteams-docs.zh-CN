@@ -481,6 +481,8 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Microsoft Teams 应用商店排名参数
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+        - name: 应用验证失败的常见原因
+          href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 - name: 将你的应用货币化
   items:
     - name: 概述
