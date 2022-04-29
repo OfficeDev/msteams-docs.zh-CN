@@ -1,35 +1,35 @@
 ---
 title: 仅限通知的机器人
-description: 描述什么是仅通知聊天机器人Microsoft Teams
-keywords: teams 自动程序通知
+description: 描述 Microsoft Teams 中仅限通知的机器人
+keywords: Teams 机器人通知
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.date: 01/29/2020
-ms.openlocfilehash: d3ee5343ea159950859237f2a488557d9063eb6e
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: MT
+ms.openlocfilehash: 1ee009fb76a52bcebdd3fe24c7a672f1ed455b42
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355725"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111477"
 ---
-# <a name="notification-only-bots-in-microsoft-teams"></a>仅通知聊天机器人Microsoft Teams
+# <a name="notification-only-bots-in-microsoft-teams"></a>Microsoft Teams 中仅限通知的机器人
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-如果你的自动程序的唯一用途是向 `isNotificationOnly` 用户发送通知，并且不是对话的，可以在应用清单中启用字段。 这将生成以下更改：
+如果机器人的唯一用途是向用户传递通知，而不是对话，则可以在应用部件清单中启用 `isNotificationOnly` 字段。 这会产生以下变化：
 
-* 用户无法向仅通知机器人发送消息。
-* 用户无法@mention自动程序。
+* 用户无法向仅限通知的机器人发送消息。
+* 用户无法 @提及机器人。
 
 > [!NOTE]
-> 仅机器人应用将在两种情况下均在个人应用托盘中显示： `isNotificationOnly: true` 或 `isNotificationOnly: false`。
+> 在以下两种情况下，仅限机器人的应用会显示在个人应用托盘中：`isNotificationOnly: true` 或 `isNotificationOnly: false`。
 
 ## <a name="app-manifest"></a>应用部件清单
 
-若要启用此功能，请设置为 `isNotificationOnly` `true`。
+若要启用此功能，请将 `isNotificationOnly` 设置为 `true`。
 
 > [!NOTE]
-> 的值为 `isNotificationOnly` Boolean，而不是字符串。
+> `isNotificationOnly` 的值是布尔值，而不是字符串。
 
 ```json
 {
@@ -50,4 +50,4 @@ ms.locfileid: "63355725"
 
 ## <a name="best-practices-and-limitations"></a>最佳做法和限制
 
-* 仅通知机器人使用主动消息与用户通信。 有关详细信息，请参阅 [自动程序主动消息传递](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
+* 仅限通知的机器人使用主动消息传送与用户通信。 有关详细信息，请参阅[机器人的主动消息传送](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
