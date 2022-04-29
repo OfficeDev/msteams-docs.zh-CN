@@ -1,74 +1,74 @@
 ---
 title: 生产准备就绪的排班连接器
-description: 了解使用适用于 Teams 的员工管理班次连接器（如 Kronos 到 Teams Shifts 连接器和 JDA 到 Teams Shifts 连接器）的好处
+description: 了解使用 Teams 劳动力管理排班连接器的优势，例如 Kronos 到 Teams 排班连接器和 JDA 到 Teams 排班连接器
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-ms.localizationpriority: medium
-keywords: Microsoft Teams连接器 kronos
+ms.localizationpriority: high
+keywords: Microsoft Teams 连接器, Kronos
 ms.author: lajanuar
-ms.openlocfilehash: 84e16f26dbe8597089e601e0d7eadca12a4a4446
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 3a294d20bc2032df7ef5dfa225922e9dccabf1df
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453101"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111764"
 ---
 # <a name="production-ready-shifts-connectors"></a>生产准备就绪的排班连接器  
 
-Teams Shifts 员工 (WFM) 连接器是生产就绪型、开放源代码和社区驱动的集成，对一线工作人员非常有用。 它们通过排班为一线员工的数字转换提供了无缝体验Teams流程。
+Teams 排班劳动力管理 (WFM) 连接器是生产就绪、开源和社区驱动的集成，对一线员工非常有用。 它们通过 Teams 排班应用为一线员工的数字化转型提供无缝体验和快速流程。
 
-每个连接器都提供有关部署和集成到组织的详细指导。 完整的源代码可在GitHub库中提供。 您可以详细浏览或分叉，并自定义以满足您的特定需求。
+每个连接器都为组织的部署和集成提供了详细指导。 GitHub 存储库中提供了完整源代码。 你可以探索细节或分支，并根据特定需求进行自定义。
 
-本文档概述了 Teams Shifts WFM 连接器、Kronos 到 Teams Shifts 连接器和 JDA 到 Teams Shifts 连接器的主要优势。
+本文档概述了 Teams 排班 WFM 连接器、Kronos 到 Teams 排班连接器和 JDA 到 Teams 排班连接器的主要优势。
 
-## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Shifts WFM Teams的主要好处
+## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Teams 排班 WFM 连接器的主要优势
 
-下面是 Shifts WFM Teams的主要好处：
+以下是 Teams 排班 WFM 连接器的主要优势：
 
-* **即插即用体验：** 所有 Shifts WFM 连接器都ARM Azure 部署脚本，这些脚本允许你在 Microsoft Azure 中托管Microsoft Azure。 部署应用不需要编码。
+* **即插即用体验：** 所有排班 WFM 连接器都包含 ARM Azure 部署脚本，这些脚本允许你在 Microsoft Azure 中托管所有必要的服务。 无需编码即可部署应用。
 
-* **生产就绪代码：** 所有 Shifts 连接器都符合建议的安全性和基础结构最佳做法，并检查所有社区提交的更改以确保持续一致性。
+* **生产就绪代码：** 所有排班连接器都遵循建议的安全性和基础结构最佳做法，并且会审核社区提交的所有更改以确保持续符合要求。
 
-* **可自定义和可扩展：** 尽管所有 Shifts WFM 连接器都已准备好部署以立即使用，但整个代码库和部署脚本随时可用。 你可以轻松自定义或扩展它们，以满足你的独特需求。
+* **可自定义且可扩展：** 所有排班 WFM 连接器都已准备好部署以供立即使用，而整个代码库和部署脚本则随时可用。 可以轻松自定义或扩展它们以满足你独特的需求。
 
-* **详细的文档&支持：** 所有 Shifts WFM 连接器都附带了有关解决方案体系结构、部署和配置步骤的端到端文档。 连接器存储库受到监视，以便可以通过存储库的"问题跟踪器"报告遇到GitHub问题或困难。
+* **详细文档和支持：** 所有排班 WFM 连接器都附带解决方案体系结构、部署和配置步骤的端到端文档。 将监视连接器存储库，以便你能够通过存储库的 GitHub 问题跟踪器来报告遇到的任何问题、挑战或困难。
 
-* **无缝集成：** WFM 解决方案与 Teams Shifts 之间的集成允许一线工作人员使用 Teams Shifts 应用查看或管理其日程安排和班次时间，并使用 Teams 中提供的所有其他丰富协作功能，而无需将上下文切换到其他应用。  
+* **无缝集成：** 通过 WFM 解决方案与 Teams 排班之间的集成，一线工作人员能够使用 Teams 排班应用查看或管理其日程安排和轮班时间，并直接从其移动设备或桌面使用 Teams 中提供的所有其他丰富的协作功能，而无需将上下文切换到另一个应用。  
 
-打开工作台中的Teams：
+在 Teams 中打开班次视图：
 
-以下图像Teams班次视图：
+下图显示了 Teams 中的班次视图：
 
-![在工作台中打开Teams](../assets/images/teams-open-shifts-view.png)
+![在 Teams 中打开班次](../assets/images/teams-open-shifts-view.png)
 
-## <a name="kronos-to-teams-shifts-connector"></a>Kronos 到 Teams Shifts 连接器
+## <a name="kronos-to-teams-shifts-connector"></a>Kronos 到 Teams 排班连接器
 
-使用开放源代码，可以将 Kronos 员工中心版本 8.1 及以上版本与 Teams 班次（如桌面或移动 Teams 应用）集成，以用于以下一线员工和经理方案：
+使用开放源代码，你可以将 Kronos Workforce Central 版本 8.1 及更高版本与 Teams 排班（例如桌面或移动版 Teams 应用）集成，以便用于以下一线员工和经理场景：
 
 * 查看日程安排。
 
-* 发布和请求打开的班次。
+* 发布并请求未分配班次。
 
-* 交换班次。
+* 调班。
 
-* 请求请假。
+* 请求休假。
 
-* 提供班次。
+* 代班。
 
-有关部署 Kronos 到 Teams Shifts 连接器[GitHub。](https://aka.ms/KronosShiftsConnector)
+有关部署 Kronos 到 Teams 排班连接器的详细信息，请参阅[在 GitHub 上获取](https://aka.ms/KronosShiftsConnector)。
 
-## <a name="jda-to-teams-shifts-connector"></a>JDA 到 Teams Shifts 连接器
+## <a name="jda-to-teams-shifts-connector"></a>JDA 到 Teams 排班连接器
 
-借助开放源代码，你可以将 JDA（如 BlueYonder 版本 17.2 及以上）与 Teams Shift（如桌面或移动 Teams 应用）集成，用于以下一线工作人员和经理方案：
+使用开放源代码，你可以将 JDA（例如 BlueYonder 版本 17.2 及更高版本）与 Teams 排班（例如桌面或移动版 Teams 应用）集成，以便用于以下一线员工和经理场景：
 
-* 在 JDA 中发布班次和计划组，并查看Teams。
+* 在 JDA 中发布班次和日程安排组，并在 Teams 中查看它们。
 
-* 启用丰富的计划方案，包括请求转换交换和请假。
+* 启用丰富的日程安排方案，包括请求调班和休假。
 
-* 使用适用于班次的 [Microsoft Graph API 设置用户可用性](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true)。
+* 使用[用于排班的 Microsoft Graph API](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true) 设置用户可用性。
 
-有关贡献和建议的信息，请参阅获取[GitHub](https://aka.ms/JDAShiftsConnector)。
+有关参与和建议的详细信息，请参阅[在 GitHub 上获取](https://aka.ms/JDAShiftsConnector)。
 
 ## <a name="see-also"></a>另请参阅
 
