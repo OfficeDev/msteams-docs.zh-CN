@@ -1,68 +1,68 @@
 ---
 title: 对话事件
 author: WashingtonKayaker
-description: 如何使用代码示例处理来自Microsoft Teams机器人、频道事件更新、团队成员事件和消息反应事件的对话事件。
+description: 如何使用代码示例处理来自 Microsoft Teams 机器人、频道事件更新、团队成员事件和消息回应事件的对话事件。
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-keywords: 事件机器人通道消息反应对话
-ms.openlocfilehash: c089843d82ff7c722dd8c867b5866405ee4dae40
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
-ms.translationtype: MT
+keywords: 事件, 机器人, 频道消息, 回应, 对话
+ms.openlocfilehash: 6d086ef2896a6fd19a128bcf4f1c8b363a21c5b3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102269"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111540"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-为Microsoft Teams构建会话机器人时，可以处理聊天事件。 Teams向机器人发送在机器人处于活动状态的范围内发生的聊天事件的通知。 可以在代码中捕获这些事件并执行以下操作：
+为 Microsoft Teams 构建会话机器人时，你可以处理对话事件。 对于发生在机器人活动范围内的对话事件，Teams 会向机器人发送通知。 可以在代码中捕获这些事件，并执行以下操作：
 
 * 将机器人添加到团队时触发欢迎消息。
 * 添加或删除新团队成员时触发欢迎消息。
-* 创建、重命名或删除通道时触发通知。
-* 当用户喜欢机器人消息时触发通知。
+* 创建、重命名或删除频道时触发通知。
+* 当用户为机器人消息点赞时触发通知。
 
 ## <a name="conversation-update-events"></a>对话更新事件
 
-可以使用聊天更新事件来提供更好的通知和更有效的机器人操作。
+可以使用对话更新事件来提供更好的通知和更有效的机器人操作。
 
 > [!IMPORTANT]
 >
-> * 你可以随时添加新事件，机器人开始接收这些事件。
+> * 你可以随时添加新事件，机器人将开始接收这些事件。
 > * 必须设计机器人才能接收意外事件。
-> * 如果使用的是 Bot Framework SDK，机器人会自动响应 `200 - OK` 你选择不处理的任何事件。
+> * 如果你使用的是 Bot Framework SDK，则机器人会自动对你选择不处理的任何事件响应 `200 - OK`。
 
-机器人在以下任一 `conversationUpdate` 情况下接收事件：
+在以下任一情况下，机器人都会收到 `conversationUpdate` 事件：
 
 * 将机器人添加到会话时。
-* 会话中添加或删除其他成员。
-* 对话元数据已更改。
+* 在会话中添加或删除了其他成员。
+* 对话元数据已发生更改。
 
-当机器人收到关于其所属团队的成员身份更新信息时，`conversationUpdate` 事件就会发送到机器人。 当首次为个人对话添加更新时，它也会收到更新。
+当机器人收到关于其所属团队的成员身份更新信息时，`conversationUpdate` 事件就会发送到机器人。 在首次为个人对话添加机器人时，机器人也会收到更新。
 
-下表显示了包含更多详细信息的Teams对话更新事件的列表：
+下表显示了包含更多详细信息的 Teams 对话更新事件的列表：
 
-| 已执行的操作        | EventType         | 调用的方法              | 说明                | 范围 |
+| 采取的操作        | EventType         | 调用的方法              | 说明                | 范围 |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| 已创建通道     | channelCreated    | OnTeamsChannelCreatedAsync | [将创建一个通道](#channel-created)。 | 团队 |
-| 已重命名频道     | channelRenamed    | OnTeamsChannelRenamedAsync | [通道已重命名](#channel-renamed)。 | 团队 |
-| 已删除频道     | channelDeleted    | OnTeamsChannelDeletedAsync | [通道将被删除](#channel-deleted)。 | 团队 |
-| 已还原通道    | channelRestored    | OnTeamsChannelRestoredAsync | [已还原通道](#channel-deleted)。 | 团队 |
-| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [添加成员](#team-members-added)。 | 全部 |
-| 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [已删除成员](#team-members-removed)。 | groupChat 和团队 |
-| 已重命名团队        | teamRenamed       | OnTeamsTeamRenamedAsync    | [团队已重命名](#team-renamed)。       | 团队 |
-| 团队已删除        | teamDeleted       | OnTeamsTeamDeletedAsync    | [团队将被删除](#team-deleted)。       | 团队 |
+| 已创建频道     | channelCreated    | OnTeamsChannelCreatedAsync | [已创建频道](#channel-created)。 | 团队 |
+| 已重命名频道     | channelRenamed    | OnTeamsChannelRenamedAsync | [已重命名频道](#channel-renamed)。 | 团队 |
+| 已删除频道     | channelDeleted    | OnTeamsChannelDeletedAsync | [已删除频道](#channel-deleted)。 | 团队 |
+| 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [已还原频道](#channel-deleted)。 | 团队 |
+| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [已添加成员](#team-members-added)。 | 全部 |
+| 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [已删除成员](#team-members-removed)。 | 群组聊天和团队 |
+| 已重命名团队        | teamRenamed       | OnTeamsTeamRenamedAsync    | [已重命名团队](#team-renamed)。       | 团队 |
+| 已删除团队        | teamDeleted       | OnTeamsTeamDeletedAsync    | [已删除团队](#team-deleted)。       | 团队 |
 | 已存档团队        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)。       | 团队 |
-| 未存档团队        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队是无政府状态的](#team-unarchived)。       | 团队 |
+| 未存档团队        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [团队未存档](#team-unarchived)。       | 团队 |
 | 已还原团队        | teamRestored      | OnTeamsTeamRestoredAsync    | [已还原团队](#team-restored)       | 团队 |
 
-### <a name="channel-created"></a>已创建通道
+### <a name="channel-created"></a>已创建频道
 
-每当在安装了机器人的团队中创建新通道时，通道创建的事件就会发送到机器人。
+例如，每当在已安装机器人的团队中创建新频道时，都会将频道创建事件发送到机器人。
 
-以下代码显示通道创建事件的示例：
+以下代码显示频道创建事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -149,9 +149,9 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>已重命名频道
 
-每当在安装了机器人的团队中重命名通道时，通道重命名事件就会发送到机器人。
+例如，每当在已安装机器人的团队中重命名频道时，都会将频道重命名事件发送到机器人。
 
-以下代码显示通道重命名事件的示例：
+以下代码显示频道重命名事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -231,9 +231,9 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>已删除频道
 
-每当在安装了机器人的团队中删除通道时，通道删除事件就会发送到机器人。
+例如，每当在已安装机器人的团队中删除频道时，都会将频道删除事件发送到机器人。
 
-以下代码显示通道删除事件的示例：
+以下代码显示频道删除事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -313,11 +313,11 @@ async def on_teams_channel_deleted(
 
 ---
 
-### <a name="channel-restored"></a>已还原通道
+### <a name="channel-restored"></a>已还原频道
 
-只要在已安装机器人的团队中还原以前删除的通道，通道还原事件就会发送到机器人。
+每当在已安装机器人的团队中还原以前删除的频道时，都会将频道还原事件发送到机器人。
 
-以下代码演示通道还原事件的示例：
+以下代码显示频道还原事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -402,11 +402,11 @@ async def on_teams_channel_restored(
 
 ---
 
-### <a name="team-members-added"></a>添加了团队成员
+### <a name="team-members-added"></a>已添加团队成员
 
-第 `teamMemberAdded` 一次将事件添加到会话时，会将事件发送到机器人。 每次将新用户添加到安装机器人的团队或组聊天中时，都会将事件发送到机器人。 ID 的用户信息对于机器人是唯一的，可以缓存以供服务将来使用，例如向特定用户发送消息。
+当首次添加到对话时，`teamMemberAdded` 事件将发送到机器人。 每次将新用户添加到已安装机器人的团队或群组聊天时，都会将事件发送到机器人。 用户信息（即 ID）对于机器人是唯一的，并且可以缓存以供服务将来使用，例如向特定用户发送消息。
 
-以下代码演示了团队成员添加事件的示例：
+以下代码显示团队成员添加事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -455,7 +455,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是机器人在将机器人添加到团队时收到的消息。
+这是机器人在添加到团队时收到的消息。
 
 ```json
 {
@@ -494,7 +494,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-这是机器人在将机器人添加到一对一聊天时收到的消息。
+这是机器人在添加到一对一聊天时收到的消息。
 
 ```json
 {
@@ -548,10 +548,10 @@ async def on_teams_members_added(
 
 ### <a name="team-members-removed"></a>已删除团队成员
 
-`teamMemberRemoved`如果从团队中删除事件，则会将事件发送到机器人。 每次从机器人所属的团队中删除任何用户时，都会将事件发送到机器人。 若要确定删除的新成员是机器人本身还是用户，请检查 `Activity` 该 `turnContext`成员的对象。  `Id`如果对象的字段与对象的`MembersRemoved``Recipient`字段相同`Id`，则删除的成员是机器人，否则为用户。 机器人的 `Id` 一般是 `28:<MicrosoftAppId>`。
+如果从团队中删除，则 `teamMemberRemoved` 事件会发送到机器人。 每次从机器人所属的团队中删除任何用户时，都会将事件发送到机器人。 若要确定删除的新成员是机器人本身还是用户，请检查 `turnContext` 的 `Activity` 对象。  如果 `MembersRemoved` 对象的 `Id` 字段与 `Recipient` 对象的 `Id` 字段相同，则删除的成员是机器人，否则为用户。 机器人的 `Id` 通常为 `28:<MicrosoftAppId>`。
 
 > [!NOTE]
-> 当用户从租户中永久删除时， `membersRemoved conversationUpdate` 将触发事件。
+> 从租户中永久删除用户时，将触发 `membersRemoved conversationUpdate` 事件。
 
 以下代码显示团队成员删除事件的示例：
 
@@ -602,7 +602,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-`channelData`以下有效负载示例中的对象基于将成员添加到团队而不是组聊天，或启动新的一对一对话：
+以下有效负载示例中的 `channelData` 对象基于将成员添加到团队而不是群组聊天，或发起新的一对一对话：
 
 ```json
 {
@@ -660,9 +660,9 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>已重命名团队
 
-重命名团队时会通知机器人。 它接收`conversationUpdate`对象中`channelData`包含`eventType.teamRenamed`的事件。
+重命名团队时通知机器人。 它在 `channelData` 对象中接收类型为 `eventType.teamRenamed` 的 `conversationUpdate` 事件。
 
-以下代码演示了团队重命名事件的示例：
+以下代码显示团队重命名事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -738,9 +738,9 @@ async def on_teams_team_renamed(
 
 ---
 
-### <a name="team-deleted"></a>团队已删除
+### <a name="team-deleted"></a>已删除团队
 
-删除团队时会通知机器人。 它接收`conversationUpdate`对象中`channelData`包含`eventType.teamDeleted`的事件。
+删除团队时通知机器人。 它在 `channelData` 对象中接收类型为 `eventType.teamDeleted` 的 `conversationUpdate` 事件。
 
 以下代码显示团队删除事件的示例：
 
@@ -816,9 +816,9 @@ async def on_teams_team_deleted(
 
 ### <a name="team-restored"></a>已还原团队
 
-当团队在删除后还原时，机器人会收到通知。 它接收`conversationUpdate`对象中`channelData`包含`eventType.teamrestored`的事件。
+当团队在删除后还原时，机器人会收到通知。 它在 `channelData` 对象中接收类型为 `eventType.teamrestored` 的 `conversationUpdate` 事件。
 
-以下代码演示团队还原事件的示例：
+以下代码显示团队还原事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -896,9 +896,9 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>已存档团队
 
-安装和存档团队时，机器人会收到通知。 它接收`conversationUpdate`对象中`channelData`包含`eventType.teamarchived`的事件。
+安装和存档团队时，机器人会收到通知。 它在 `channelData` 对象中接收类型为 `eventType.teamarchived` 的 `conversationUpdate` 事件。
 
-以下代码演示团队存档事件的示例：
+以下代码显示团队存档事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -976,9 +976,9 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>未存档团队
 
-安装和取消存档团队时，机器人会收到通知。 它接收`conversationUpdate`对象中`channelData`包含`eventType.teamUnarchived`的事件。
+安装和取消存档团队时，机器人会收到通知。 它在 `channelData` 对象中接收类型为 `eventType.teamUnarchived` 的 `conversationUpdate` 事件。
 
-以下代码演示团队无政府事件的示例：
+以下代码显示团队取消存档事件的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1054,20 +1054,20 @@ async def on_teams_team_unarchived(
 
 ---
 
-现在，你已处理对话更新事件，可以了解针对消息的不同反应发生的消息反应事件。
+现在，你已处理对话更新事件，可以了解针对消息的不同回应而发生的消息回应事件。
 
-## <a name="message-reaction-events"></a>消息反应事件
+## <a name="message-reaction-events"></a>消息回应事件
 
-`messageReaction`当用户添加或删除对机器人发送的消息的反应时，将发送该事件。 包含 `replyToId` 消息的 ID， `Type` 并且是文本格式的反应类型。 反应类型包括愤怒、心、笑、喜欢、悲伤和惊讶。 此事件不包含原始消息的内容。 如果处理对消息的反应对机器人很重要，则在发送消息时必须存储这些消息。 下表提供了有关事件类型和有效负载对象的详细信息：
+当用户添加或删除对机器人发送的消息的回应时，将发送 `messageReaction` 事件。 `replyToId` 包含消息的 ID，`Type` 是文本格式的回应类型。 回应类型包括生气、爱心、大笑、喜欢、悲伤和惊讶。 此事件不包含原始消息的内容。 如果对于机器人而言处理对消息的回应很重要，则在发送消息时必须存储这些消息。 下表提供了有关事件类型和有效负载对象的详细信息：
 
-| EventType       | Payload 对象   | 说明                                                             | 范围 |
+| EventType       | 有效负载对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [添加到机器人消息中的反应](#reactions-added-to-bot-message)。           | 所有   |
-| messageReaction | reactionsRemoved | [从机器人消息中删除的反应](#reactions-removed-from-bot-message)。 | 全部 |
+| messageReaction | reactionsAdded   | [添加到机器人消息的回应](#reactions-added-to-bot-message)。           | 所有   |
+| messageReaction | reactionsRemoved | [从机器人消息中删除的回应](#reactions-removed-from-bot-message)。 | 全部 |
 
-### <a name="reactions-added-to-bot-message"></a>添加到机器人消息中的反应
+### <a name="reactions-added-to-bot-message"></a>添加到机器人消息的回应
 
-以下代码演示了对机器人消息的反应示例：
+以下代码显示对机器人消息的回应示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1176,9 +1176,9 @@ async def on_reactions_added(
 
 ---
 
-### <a name="reactions-removed-from-bot-message"></a>从机器人消息中删除的反应
+### <a name="reactions-removed-from-bot-message"></a>从机器人消息中删除的回应
 
-以下代码演示从机器人消息中删除的反应示例：
+以下代码显示从机器人消息中删除的回应示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1287,14 +1287,14 @@ async def on_reactions_removed(
 
 ## <a name="installation-update-event"></a>安装更新事件
 
-将机器人安装到会话线程时，机器人会收到 `installationUpdate` 事件。 从线程中卸载机器人也会触发事件。 安装机器人时，事件中的 **操作** 字段设置为 *添加*，卸载机器人时， **操作** 字段设置为 *删除*。
+将机器人安装到对话线程时，机器人会收到 `installationUpdate` 事件。 从线程中卸载机器人也会触发该事件。 安装机器人时，事件中的“**操作**”字段将设置为“*添加*”；卸载机器人时，“**操作**”字段将设置为“*删除*”。
 
 > [!NOTE]
-> 升级应用程序，然后添加或删除机器人时，该操作还会触发 `installationUpdate` 事件。 如果添加机器人， **则操作** 字段设置为 *“添加升级* ”;如果删除机器人，则会将该操作字段设置为 *“删除升级* ”。
+> 升级应用程序，然后添加或删除机器人时，该操作还会触发 `installationUpdate` 事件。 如果添加机器人，则“**操作**”字段将设置为“*添加-升级*”；如果删除机器人，则“操作”字段将设置为“*删除-升级*”。
 
 ### <a name="install-update-event"></a>安装更新事件
 
-使用该 `installationUpdate` 事件在安装时从机器人发送介绍性消息。 此事件可帮助你满足隐私和数据保留要求。 还可以在卸载机器人时清理和删除用户或线程数据。
+使用该 `installationUpdate` 事件在安装时从机器人发送介绍性消息。 此事件可帮助你满足隐私和数据保留要求。 你还可以在卸载机器人时清理和删除用户或线程数据。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1310,7 +1310,7 @@ else
 } return; }
 ```
 
-还可以使用专用处理程序 *来添加* 或 *删除* 方案，作为捕获事件的替代方法。
+作为捕获事件的替代方法，你还可以将专用处理程序用于 *添加* 或 *删除* 场景。
 
 ```csharp
 protected override async Task
@@ -1403,27 +1403,24 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>使用机器人卸载个人应用的行为
 
-> [!NOTE]
-> 具有机器人的个人应用的卸载行为目前仅在 [公共开发人员预览](../../../resources/dev-preview/developer-preview-intro.md)版中可用。
-
-卸载应用时，也会卸载机器人。 当用户向应用发送消息时，他们将收到 403 响应代码。 机器人收到机器人发布的新消息的 403 响应代码。 在具有Teams和 groupChat 作用域的个人范围内，机器人的卸载后行为现在已对齐。 卸载应用后，无法发送或接收消息。
+卸载应用时，也会卸载机器人。 当用户向应用发送消息时，他们将收到 403 响应代码。 对于由机器人发布的新消息，机器人将收到 403 响应代码。 现在，个人范围内机器人的卸载后行为与团队和群组聊天范围内的行为相一致。 卸载应用后，无法发送或接收消息。
 
 :::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="卸载响应代码"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
 
-使用这些安装和卸载事件时，在某些情况下，机器人在从Teams接收意外事件时会发出异常。 这种情况在以下情况下发生：
+使用这些安装和卸载事件时，在某些情况下，机器人在从 Teams 收到意外事件时会出现异常。 这会在以下情况下发生：
 
-* 无需Microsoft Bot Framework SDK 即可生成机器人，因此机器人在接收意外事件时会出现异常。
-* 使用 Microsoft Bot Framework SDK 生成机器人，并选择通过重写基本事件句柄来更改默认事件行为。
+* 你没有使用 Microsoft Bot Framework SDK 来构建机器人，因此机器人在收到意外事件时会出现异常。
+* 你使用 Microsoft Bot Framework SDK 来构建机器人，并选择通过覆盖基本事件句柄来更改默认事件行为。
 
-请务必知道，将来随时可以添加新事件，机器人会开始接收这些事件。 因此，必须针对接收意外事件的可能性进行设计。 如果使用的是 Bot Framework SDK，则机器人会自动响应 200 – 对未选择处理的任何事件都确定。
+请务必知道，将来可能会随时添加新事件，并且机器人将开始接收这些事件。 因此，必须针对接收意外事件的可能性进行设计。 如果你使用的是 Bot Framework SDK，则机器人会自动对你选择不处理的任何事件响应“200 - 正常”。
 
 ## <a name="code-sample"></a>代码示例
 
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| 对话机器人 | 机器人会话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| 对话机器人 | 机器人对话事件的示例代码。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>后续步骤
 

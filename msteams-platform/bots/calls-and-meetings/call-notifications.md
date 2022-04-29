@@ -1,55 +1,55 @@
 ---
 title: 来电通知
-description: 了解有关使用代码示例处理来自传入呼叫的通知、重定向和验证呼叫的详细技术信息
+description: 了解有关使用代码示例处理来电通知、重定向和验证呼叫的详细技术信息
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: 调用呼叫通知回调区域相关性
+ms.localizationpriority: high
+keywords: 呼叫, 呼叫通知, 回拨, 区域相关性
 ms.date: 04/02/2019
-ms.openlocfilehash: d7939bd7fa613636d225e6f5437434c394a8c0bd
-ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
-ms.translationtype: MT
+ms.openlocfilehash: a3d8a861d28813782b6b0dfd24807ed106780c85
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63783993"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111547"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 
-在[注册呼叫和会议机器人以使用Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)时，会提到用于呼叫 URL 的 Webhook。 此 URL 是自动程序的所有传入呼叫的 webhook 终结点。
+在[为 Microsoft Teams 注册呼叫和会议机器人](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)时，系统会提到用于调用 URL 的 Webhook。 此 URL 是对机器人的所有传入呼叫的 Webhook 终结点。
 
 ## <a name="protocol-determination"></a>协议确定
 
-传入通知以旧格式提供，以与以前的 Skype [协议兼容](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 若要将呼叫转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式并提供以下响应：
+传入通知以旧格式提供，以便与以前的 [Skype 协议](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)兼容。 为了将呼叫转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式，并提供以下响应：
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-自动程序将再次接收通知，但这次在 Microsoft Graph协议。
+机器人会再次收到通知，但这次是采用 Microsoft Graph 协议的格式。
 
-在实时媒体平台的未来版本中，你可以配置应用程序支持的协议，以避免接收旧格式的初始回调。
+在将来发布的实时媒体平台中，你可以配置应用程序支持的协议，以避免以旧格式接收初始回拨。
 
-下一节提供有关针对区域相关性重定向到部署的传入呼叫通知的详细信息。
+下一节提供有关针对部署的区域相关性重定向来电通知的详细信息。
 
-## <a name="redirects-for-region-affinity"></a>区域相关性重定向
+## <a name="redirects-for-region-affinity"></a>针对区域相关性的重定向
 
-从托管呼叫的数据中心调用 webhook。 呼叫从任何数据中心开始，不会考虑区域关系。 通知将发送到你的部署，具体取决于 GeoDNS 分辨率。 如果应用程序通过检查初始通知有效负载或其他方式确定需要在不同的部署中运行，则应用程序将提供以下响应：
+可从托管呼叫的数据中心调用 Webhook。 调用将从任何数据中心开始，而不考虑区域相关性。 通知将发送到部署，具体取决于 GeoDNS 解析。 如果应用程序通过检查初始通知负载或其他方式确定它需要在其他部署中运行，则该应用程序会提供以下响应：
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-使机器人能够使用应答 API 应答 [传入](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) 呼叫。 可以指定 以处理 `callbackUri` 此特定调用。 这适用于特定 `callbackUri` 分区处理呼叫且您希望在 中嵌入此信息以路由到正确实例的有状态实例。
+允许机器人使用[应答](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) API 接听来电。 可以指定 `callbackUri` 处理此特定呼叫。 这对于有状态实例非常有用，在这些实例中，你的呼叫由特定分区处理，并且你希望将此信息嵌入到 `callbackUri` 中，以便路由到正确的实例。
 
-下一节将提供有关通过检查张贴到 Webhook 的令牌对回调进行身份验证的详细信息。
+下一节提供有关通过检查发布到 Webhook 的令牌对回拨进行身份验证的详细信息。
 
-## <a name="authenticate-the-callback"></a>对回调进行身份验证
+## <a name="authenticate-the-callback"></a>对回拨进行身份验证
 
-自动程序必须检查张贴到 Webhook 的令牌以验证请求。 每次 API 发送到 webhook 时，HTTP POST 消息都会在授权标头中包含一个 OAuth 令牌作为一个 bearer 令牌，访问群体作为应用程序的应用程序 ID。
+机器人必须检查发布到 Webhook 的令牌才能验证请求。 每当 API 发布到 Webhook 时，HTTP POST 消息都会在身份验证标头中包含一个 OAuth 令牌作为持有者令牌，并将受众作为应用程序的应用 ID。
 
-您的应用程序在接受回调请求之前必须验证此令牌。
+你的应用程序必须先验证此令牌，然后才能接受回拨请求。
 
-以下示例代码用于对回调进行身份验证：
+以下示例代码用于对回拨进行身份验证：
 
 ```http
 POST https://bot.contoso.com/api/calls
@@ -68,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-OAuth 令牌具有以下值，并且由 Skype：
+OAuth 令牌具有以下值，并由 Skype 签名：
 
 ```json
 {
@@ -81,15 +81,15 @@ OAuth 令牌具有以下值，并且由 Skype：
 }
 ```
 
-发布的 OpenID <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> 配置可用于验证令牌。 每个 OAuth 令牌值使用如下：
+在 <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> 上发布的 OpenID 配置可用于验证令牌。 每个 OAuth 令牌值均按以下方式使用：
 
-* `aud` 其中 audience 为为应用程序指定的应用 ID URI。
-* `tid` 是租户的租户 id Contoso.com。
-* `iss`是令牌颁发者。 `https://api.botframework.com`
+* `aud`，其中受众是为应用程序指定的应用 ID URI。
+* `tid` 是 Contoso.com 的租户 ID。
+* `iss` 是令牌颁发者，即 `https://api.botframework.com`
 
-对于代码处理，webhook 必须验证令牌，确保令牌尚未过期，并检查它是否已由发布的 OpenID 配置签名。 在接受回调请求之前，还必须检查 aud 是否与应用 ID 匹配。
+对于代码处理，Webhook 必须验证令牌，确保它尚未过期，并检查它是否已由发布的 OpenID 配置进行签名。 在接受回拨请求之前，你还必须检查 aud 是否与应用 ID 匹配。
 
-有关详细信息，请参阅 [验证入站请求](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
+有关详细信息，请参阅[验证入站请求](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -99,4 +99,4 @@ OAuth 令牌具有以下值，并且由 Skype：
 ## <a name="see-also"></a>另请参阅
 
 * [设置自动助理](/microsoftteams/create-a-phone-system-auto-attendant)
-* [在 Android 和 Microsoft Teams 会议室 视频电话设备上Teams自动应答](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [在 Android 和 Teams 视频电话设备上为 Microsoft Teams 会议室设置自动应答](/microsoftteams/set-up-auto-answer-on-teams-android)
