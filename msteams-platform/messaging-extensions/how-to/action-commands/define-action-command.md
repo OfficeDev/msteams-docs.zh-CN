@@ -5,12 +5,12 @@ description: 消息传递扩展操作命令及应用清单示例概述
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ef9f1c45ec3b2d1df4bf5449885263034f19fde7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9a39b01f7ccbf45e33be89aef4411e1d2fba8108
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111680"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135743"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -48,13 +48,13 @@ ms.locfileid: "65111680"
 
 下图显示了调用操作命令的位置：
 
-![操作命令调用位置](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="操作命令调用位置":::
 
 ## <a name="select-how-to-create-your-task-module"></a>选择如何创建任务模块
 
 除了选择命令调用位置外，还必须选择如何在任务模块中为用户填充表单。 可以使用以下三个选项来创建在任务模块内呈现的表单：
 
-* **参数的静态列表**：这是最简单的方法。 可以在应用清单中定义 Teams 客户端呈现的参数列表，但在这种情况下无法控制格式。
+* **参数的静态列表**：这是最简单的方法。可以在应用清单中定义 Teams 客户端呈现的参数列表，但在这种情况下无法控制格式。
 * **自适应卡片**：可以选择使用自适应卡片，它可以更好地控制 UI，但仍会限制可用控件和格式设置选项。
 * **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以完全控制 UI 和控件。
 
@@ -68,7 +68,7 @@ ms.locfileid: "65111680"
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>将操作命令添加到应用清单
 
-若要将操作命令添加到应用清单，必须将新的 `composeExtension` 对象添加到应用清单 JSON 的顶层。 可以使用以下方法之一来执行此操作：
+若要将操作命令添加到应用清单，必须将新的 `composeExtension` 对象添加到应用清单 JSON 的顶层。可以使用以下方法之一来执行此操作：
 
 * [使用 App Studio 创建操作命令](#create-an-action-command-using-app-studio)
 * [手动创建操作命令](#create-an-action-command-manually)
@@ -78,7 +78,7 @@ ms.locfileid: "65111680"
 可以使用 **App Studio** 或 **开发人员门户** 创建操作命令。
 
 > [!NOTE]
-> App Studio 即将弃用。 使用新的[开发人员门户](https://dev.teams.microsoft.com/)配置、分发和管理 Teams 应用。
+ > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 6 月 30 日弃用。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
@@ -92,43 +92,46 @@ ms.locfileid: "65111680"
 1. 导入应用包后，选择“**功能**”下的“**消息扩展**”。 将显示一个弹出窗口来设置消息扩展。
 1. 在窗口中选择“**设置**”，以在应用体验中包含消息扩展。 下图显示了消息扩展设置窗口：
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="消息传递扩展设置":::
 
 1. 若要创建消息扩展，需要 Microsoft 注册的机器人。 可以使用现有机器人，也可以创建新的机器人。 选择“**创建新的机器人**”选项，为新机器人命名，然后选择“**创建**”。 下图显示了如何为消息扩展创建机器人：
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="为消息传递扩展创建机器人":::
 
-1. 在消息扩展页面的 **“命令”部分** 中选择“**添加**”，以包含决定消息扩展行为的命令。
-下图显示了如何为消息扩展添加命令：
+1. 若要使用现有机器人，请选择“**使用现有机器人**”，然后选择“**从现有机器人之一选择**”，以从下拉列表中选择现有机器人，提供“**机器人名称**”，如果已创建机器人 ID，请选择“**保存**”或选择“**连接到不同的机器人 ID**”，提供“**机器人名称**”并选择“**保存**”。
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="将现有机器人用于消息传递扩展":::
+
+1. 在消息扩展页面的“**命令部分**”中选择“**添加**”，以包含决定消息扩展行为的命令。下图显示了如何为消息扩展添加命令：
+
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="包含命令":::
 
 1. 选择“**允许用户在 Teams 内触发外部服务中的操作**”。 下图显示了操作命令选择：
 
-    <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="操作命令选择":::
 
 1. 若要使用一组静态参数来创建任务模块，请选择“**为命令定义一组静态参数**”。
 
     下图显示了操作命令静态参数选择：
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="操作命令静态参数选择":::
 
     下图显示了静态参数设置示例：
 
-   <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="操作命令静态参数设置":::
 
     下图显示了静态参数测试示例：
 
-   <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="操作命令静态参数测试":::
 
 1. 若要使用动态参数，请选择“**从机器人提取一组动态参数**”。 下图显示了操作命令参数选择：
 
-    <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="操作命令动态参数选择":::
 
 1. 添加 **命令 ID** 和 **标题**。
 1. 选择要从中调用操作命令的位置。 下图显示了操作命令调用位置：
 
-    <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="操作命令调用位置":::
 
 1. 选择“保存”。
 1. 若要添加更多参数，请选择“**参数**”部分中的“**添加**”按钮。
@@ -149,9 +152,9 @@ ms.locfileid: "65111680"
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-| `parameters` | 此属性描述命令的静态参数列表。 仅当 `fetchTask` 为 `false` 时使用。 | 否 | 1.0 |
+| `parameters` | 此属性描述了命令的静态参数列表。仅当 `fetchTask` 为 `false` 时使用。 | 否 | 1.0 |
 | `parameter.name` | 此属性描述参数的名称。 这会在用户请求中发送到服务。 | 是 | 1.0 |
-| `parameter.description` | 此属性描述参数的用途或应提供的值示例。 此值显示在 UI 中。 | 是 | 1.0 |
+| `parameter.description` | 此属性描述了参数的用途或应提供的值示例。此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
 | `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 `text`、`textarea`、`number`、`date`、`time`、`toggle`。 默认值设置为 `text`。 | 否 | 1.4 |
 

@@ -5,12 +5,12 @@ description: 了解如何使用代码示例向消息传递扩展添加身份验�
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1aa64241c85617bec9a116ab3ff9357b93bd2c44
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111603"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135708"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>为消息扩展添加身份验证
 
@@ -68,8 +68,8 @@ ms.locfileid: "65111603"
 
 > [!NOTE]
 >
-> * 若要在 Teams 弹出窗口中托管登录体验，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅清单架构中的 [validDomains](~/resources/schema/manifest-schema.md#validdomains)。
-> * 可以通过包含宽度和高度的查询字符串参数 `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` 来定义身份验证弹出窗口的大小。
+> * 若要在 Teams 弹出窗口中托管登录体验，URL 的域部分必须位于应用的有效域列表中。有关详细信息，请参阅清单架构中的 [validDomains](~/resources/schema/manifest-schema.md#validdomains)。
+> * 可以通过包含宽度和高度的查询字符串参数 `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"` 来定义身份验证弹出窗口的大小。
 
 ### <a name="start-the-sign-in-flow"></a>启动登录流
 
@@ -81,7 +81,7 @@ ms.locfileid: "65111603"
 
 当登录请求完成并重定向回页面后，必须执行以下步骤：
 
-1. 生成安全代码（一个随机数）。 必须在服务上缓存此代码，以及通过登录流获取的凭据，例如 OAuth 2.0 令牌。
+1. 生成安全代码（一个随机数）。必须在服务上缓存此代码，以及通过登录流获取的凭据，例如 OAuth 2.0 令牌。
 1. 调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。
 
 此时，窗口会关闭，并且控件将传递给 Teams 客户端。 客户端现在会重新发出原始用户查询，以及属性中 `state` 的安全代码。 你的代码可以使用安全代码来查找之前存储的凭据以完成身份验证序列，然后完成用户请求。
