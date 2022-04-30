@@ -1,31 +1,36 @@
 ---
 title: 与机器人的一对一对话
-description: 介绍与自动程序进行一对一对话的端到端Microsoft Teams
-keywords: teams 方案 1on1 1to1 对话机器人
-ms.localizationpriority: medium
+description: 介绍在 Microsoft Teams 中与机器人进行一对一对话的端到端方案
+keywords: Teams 方案 1on1 1to1 对话机器人
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: 2fd76b8bc5fa4cd260b70e15b92bef2dec2de683
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.openlocfilehash: d38285c212416d81a2108524946f0f9732a8dae9
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59155287"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111939"
 ---
-# <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>与自动 (进行个人) 一对一Microsoft Teams对话
+# <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>与 Microsoft Teams 机器人进行个人（一对一）对话
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams允许用户与基于系统构建的机器人进行直接[Microsoft Bot Framework。](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true) 用户可以在发现应用库中找到自动程序，并将其添加到个人Teams体验。 团队所有者和具有适当权限的用户还可以将聊天机器人添加为团队成员。 有关详细信息，请参阅在团队频道 [中交互](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)) ，这样不仅可在该团队的频道中使用它们，还可用于所有这些用户的个人聊天。
+Microsoft Teams 允许用户与基于 [Microsoft Bot Framework](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true) 构建的机器人进行直接对话。 用户可以在“发现应用”库中查找机器人，并将其添加到 Teams 体验以进行个人对话。 具有相应权限的团队所有者和用户还可以将机器人添加为团队成员。 有关详细信息，请参阅 [团队频道中的交互](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)，这不仅使他们在该团队的频道中可用，而且还可用于个人聊天用户。
 
-个人聊天与频道中的聊天不同，即用户无需@mention聊天机器人。 如果在个人、群聊或频道等多个上下文中使用机器人，则需要检测机器人是否位于群聊或频道中，并处理消息的方式稍微有些不同。 有关详细信息，请参阅 [在团队频道或群聊中交互](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
+个人聊天不同于频道中的聊天，因为用户无需 @提及机器人。 如果在多个上下文中使用机器人，如以下范围中：
+* 个人
+* 群组聊天
+* 频道
+
+你需要检测机器人是否位于群组聊天或频道中，并且处理消息的方式稍有不同。 有关详细信息，请参阅 [在团队频道或群组聊天中交互](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
 
 ## <a name="designing-a-great-personal-bot"></a>设计出色的个人机器人
 
-这是一个Microsoft Teams机器人，可帮助用户获取所需的信息，所有这些信息均在 Teams 体验上下文中。 与机器人的私人对话是机器人及其用户之间的私人交换;它们是在个人上下文中提供特定于用户且与该用户相关的信息的一种好方法。 个人聊天中的聊天机器人真正是服务和个人之间的对话，其中群聊或频道中的机器人将一切广播给一组人。
+Microsoft Teams 中出色的机器人可帮助用户获取所需信息，所有这些都位于 Teams 体验的上下文中。 与机器人的个人对话是机器人与其用户之间的私人交流；这是一种在个人上下文中提供用户特定信息和与该用户相关信息的好方法。 个人聊天中的机器人是服务与个人之间的对话框，其中群组聊天或频道中的机器人会将所有内容广播给一组人。
 
-根据你要创建的体验，机器人可能需要在多个范围工作 - 个人、群聊和团队。 支持多个作用域的工作非常少。 Teams自动程序在所有范围内都运行，但应确保自动程序有意义，并提供你选择支持的任何作用域 (用户) 价值。
+根据要创建的体验，机器人可能需要在多个范围（个人、群组聊天和团队）中工作。 支持多个范围的工作是最少的。 Teams 并不期望机器人可在所有范围中发挥作用，但应确保机器人有意义，并在你选择支持的任何范围内提供用户价值。
 
 ## <a name="best-practice-welcome-messages-in-personal-conversations"></a>最佳做法：个人对话中的欢迎消息
 
-第一 [次](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) 聊天时，自动程序应主动向个人聊天发送欢迎消息 (并且仅在用户首次) 自动程序发起个人聊天。 此建议不适用于频道中的首次联系人。
+在用户首次（并且仅限首次）发起与机器人的个人聊天时，机器人应向个人聊天 [主动发送](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) 欢迎消息。 此建议不适用于在频道中进行首次联系的情况。
