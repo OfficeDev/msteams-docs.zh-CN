@@ -6,12 +6,12 @@ keywords: teams Office365 连接器
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 9381fb9a55b6a48126e8c157040745d56708e9f8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 1ec406d633eb2db0d3564984d5451d58d41b4c14
+ms.sourcegitcommit: 38c435e806bb7c2c30efd10e8264c5c06a43fad3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111610"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65136966"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -62,7 +62,7 @@ ms.locfileid: "65111610"
 
 此事件使服务有机会执行任何清理操作。
 
-以下代码提供了一个示例 HTML，用于在没有客户服务和支持的情况下创建连接器配置页：
+以下代码提供了一个示例 HTML，可用于在没有客户服务和支持的情况下创建连接器配置页：
 
 ```html
 <h2>Send notifications when tasks are:</h2>
@@ -206,28 +206,9 @@ ms.locfileid: "65111610"
 }
 ```
 
-## <a name="enable-or-disable-connectors-in-teams"></a>在 Teams 中启用或禁用连接器
-
-The Exchange Online PowerShell V2 模块使用新式身份验证并使用多重身份验证（称为 MFA）连接到 Microsoft 365 中所有与 Exchange 相关 PowerShell 环境。 管理员可以使用 Exchange Online PowerShell 禁用整个租户或特定组邮箱的连接器，从而影响该租户或邮箱中的所有用户。 无法对某些用户（而不是其他人）禁用。 此外，默认情况下，政府社区云（称为 GCC 租户）禁用连接器。
-
-租户级别设置将替代组级别设置。 例如，如果管理员为组启用连接器并对租户禁用连接器，则会禁用该组的连接器。 要在 Teams 中启用连接器，请使用新式身份验证（无论是否使用 MFA）[连接到 Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)。
-
-### <a name="commands-to-enable-or-disable-connectors"></a>用于启用或禁用连接器的命令
-
-在 Exchange Online PowerShell 中运行以下命令：
-
-* 要禁用租户的连接器：`Set-OrganizationConfig -ConnectorsEnabled:$false`。
-* 要禁用租户的可操作消息：`Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`。
-* 要为 Teams 启用连接器，请运行以下命令：
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
-  * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
-  * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
-
-有关 PowerShell 模块交换的详细信息，请参阅 [Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)。 要启用或禁用 Outlook 连接器，[将应用连接到 Outlook 中的组](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab)。
-
 ## <a name="test-your-connector"></a>测试连接器
 
-要测试连接器，请使用任何其他应用将其上传到团队中。 可以使用两个图标文件和连接器开发人员仪表板中的清单文件来创建 .zip 包，并按照[在清单中包含连接器](#include-the-connector-in-your-manifest)中的说明进行修改。
+若要测试连接器，请使用任何其他应用将其上传到团队中。 可以使用两个图标文件和连接器开发人员仪表板中的清单文件来创建 .zip 包，并按照[在清单中包含连接器](#include-the-connector-in-your-manifest)中的说明进行修改。
 
 上传应用后，从任意频道打开连接器列表。 滚动到底部，查看“**上传**”部分中的应用：
 
@@ -239,26 +220,6 @@ The Exchange Online PowerShell V2 模块使用新式身份验证并使用多重�
 要验证操作 `HttpPOST` 是否正常工作，[将消息发送到连接器](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
 按照[分步指南](../../sbs-teams-connectors.yml)在 Microsoft Teams 中创建和测试连接器。
-
-## <a name="publish-connectors-for-the-organization"></a>为组织发布连接器
-
-如果希望连接器仅对组织中的用户可用，可以将自定义连接器应用上传到[组织的应用目录](~/concepts/deploy-and-publish/apps-publish.md)。
-
-上传应用包以在团队中配置和使用连接器后，从组织的应用目录安装连接器。
-
-要设置连接器，请执行以下操作：
-
-1. 从左侧导航栏中选择“**应用**”。
-1. 在“**应用**”部分中，选择“**连接器**”。
-1. 选择要添加的连接器。 将显示一个弹出对话框窗口。
-1. 在下拉菜单中，选择“**添加到团队**”。
-1. 在搜索框中，键入团队或频道名称。
-1. 从对话框窗口右下角的下拉菜单中选择“**设置连接器**”。
-
-> [!IMPORTANT]
-> 目前，自定义选项卡在政府社区云 (GCC)、GCC-High 和国防部 (DOD) 中不可用。
-
-连接器在该团队的“&#9679;&#9679;&#9679; > **更多选项** > **连接器** > **全部** > **团队的连接器**”部分中提供。 可以通过滚动到此部分或搜索连接器应用进行导航。 要配置或修改连接器，请选择“**配置**”。
 
 ## <a name="distribute-webhook-and-connector"></a>分发 Webhook 和连接器
 
@@ -284,3 +245,5 @@ The Exchange Online PowerShell V2 模块使用新式身份验证并使用多重�
 * [创建和发送邮件](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [创建传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [创建 Office 365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [管理员如何启用或禁用连接器](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
+* [管理员如何在组织内发布自定义连接器](/MicrosoftTeams/office-365-custom-connectors)
