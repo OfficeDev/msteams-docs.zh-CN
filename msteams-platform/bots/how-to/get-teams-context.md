@@ -1,27 +1,27 @@
 ---
-title: 获取Teams程序的特定上下文
+title: 获取机器人的 Teams 特定上下文
 author: surbhigupta
-description: 如何获取机器人的 Microsoft 团队的特定上下文，包括对话名单、单个成员或团队的详细信息、频道列表、代码示例。
+description: 如何获取机器人的 Microsoft Team 特定上下文，包括对话名单、单个成员或团队的详细信息、频道列表、代码示例。
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-keywords: 自动程序上下文名单用户配置文件通道列表
-ms.openlocfilehash: ee931be0d84dadf518ee35625c6339c7880eb4d2
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+keywords: 机器人, 上下文, 名单, 用户个人资料, 频道列表
+ms.openlocfilehash: acbf33a235fdaa4e4e8929eaec3801bbccb7ccd3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398594"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111820"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>获取Teams程序的特定上下文
+# <a name="get-teams-specific-context-for-your-bot"></a>获取机器人的 Teams 特定上下文
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-机器人可以访问有关安装团队或聊天的其他上下文数据。 此信息可用于丰富自动程序的功能并提供更加个性化的体验。
+机器人可以访问有关安装它的团队或聊天的其他上下文数据。 此信息可用于丰富机器人的功能并提供更个性化的体验。
 
-## <a name="fetch-the-roster-or-user-profile"></a>获取名单或用户配置文件
+## <a name="fetch-the-roster-or-user-profile"></a>提取名单或用户个人资料
 
-机器人可以查询成员列表及其基本用户配置文件，包括Teams ID 和Microsoft Azure Active Directory (Azure AD) ，如名称和 objectId。 可以使用此信息来关联用户标识。 例如，要检查用户是否通过凭据登录选项卡Azure AD是团队的成员。 对于获取对话成员，最小或最大页面大小取决于实现。 小于 50、被视为 50 且大于 500 的页面大小限定为 500。 即使你使用非分页版本，它在大型团队中也不可靠，并且不得使用。 有关详细信息，请参阅[对自动Teams API 的更改，以提取团队或聊天成员](~/resources/team-chat-member-api-changes.md)。
+机器人可以查询成员列表及其基本用户个人资料，包括 Teams 用户 ID 和Microsoft Azure Active Directory (Azure AD) 信息，例如名称和 objectId。 可以使用此信息来关联用户标识。 例如，若要检查通过 Azure AD 凭据登录到选项卡的用户是否是团队的成员。 对于获取对话成员，最小或最大页面大小取决于实现。 小于 50 的页面大小被视为 50，大于 500 的页面大小上限为 500。 即使使用非分页版本，它在大型团队中也不可靠，不得使用。 有关详细信息，请参阅 [Teams 机器人 API 在提取团队或聊天成员方面的更改](~/resources/team-chat-member-api-changes.md)。
 
 以下示例代码使用分页终结点提取名单：
 
@@ -83,7 +83,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`，将 的值用作 `serviceUrl` 终结点。 的值稳定 `serviceUrl` ，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl`。 响应有效负载还指示用户是常规用户还是匿名用户。
+可以使用 `serviceUrl` 的值作为终结点，直接在 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` 上发出 GET 请求。 `serviceUrl` 的值稳定，但可能会更改。 当新消息到达时，机器人必须验证其存储的 `serviceUrl` 值。 响应有效负载还指示用户是常规用户还是匿名用户。
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -124,11 +124,11 @@ Response body
 
 * * *
 
-获取名单或用户配置文件后，可以获取单个成员的详细信息。 目前，若要检索聊天或团队的一个或多个成员的信息，请使用 Microsoft Teams 自动`TeamsInfo.GetMembersAsync``TeamsInfo.getMembers`程序 API C# TypeScript API。
+提取名单或用户个人资料后，可以获取单个成员的详细信息。 目前，若要检索聊天或团队的一个或多个成员的信息，请使用 Microsoft Teams 机器人 API `TeamsInfo.GetMembersAsync`（对于 C#）或 `TeamsInfo.getMembers`（对于 TypeScript API）。
 
 ## <a name="get-single-member-details"></a>获取单个成员详细信息
 
-您还可以使用特定用户的用户 ID、UPN 或 Teams对象 ID 来检索Azure AD的详细信息。
+你还可以使用其 Teams 用户 ID、UPN 或 Azure AD 对象 ID 检索特定用户的详细信息。
 
 以下示例代码用于获取单个成员详细信息：
 
@@ -173,7 +173,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/conversations/{conversationId}/members/{userId}`，将 的值用作 `serviceUrl` 终结点。 的值稳定 `serviceUrl` ，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl`。 这可用于常规用户和匿名用户。
+可以使用 `serviceUrl` 的值作为终结点，直接在 `/v3/conversations/{conversationId}/members/{userId}` 上发出 GET 请求。 `serviceUrl` 的值稳定，但可能会更改。 当新消息到达时，机器人必须验证其存储的 `serviceUrl` 值。 这可用于常规用户和匿名用户。
 
 下面是常规用户的响应示例：
 
@@ -209,11 +209,11 @@ Response body
 
 * * *
 
-获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用适用于 Microsoft Teams 或 `TeamsInfo.GetMemberDetailsAsync` TypeScript C#自动`TeamsInfo.getTeamDetails`程序 API。
+获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用 Microsoft Teams 机器人 API `TeamsInfo.GetMemberDetailsAsync`（对于 C#）或 `TeamsInfo.getTeamDetails`（对于 TypeScript）。
 
 ## <a name="get-teams-details"></a>获取团队的详细信息
 
-在团队中安装后，机器人可以查询有关该团队的元数据，包括Azure AD ID。
+在团队中安装时，机器人可以查询有关该团队的元数据，包括 Azure AD 群组 ID。
 
 以下示例代码用于获取团队的详细信息：
 
@@ -269,7 +269,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}`，将 的值用作 `serviceUrl` 终结点。 的值稳定 `serviceUrl` ，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl`。
+可以使用 `serviceUrl` 的值作为终结点，直接在 `/v3/teams/{teamId}` 上发出 GET 请求。 `serviceUrl` 的值稳定，但可能会更改。 当新消息到达时，机器人必须验证其存储的 `serviceUrl` 值。
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -284,7 +284,7 @@ Response body
 
 * * *
 
-获取团队的详细信息后，可以获取团队中的频道列表。 目前，若要检索团队中频道列表的信息，请使用 Microsoft Teams 自动`TeamsInfo.GetTeamChannelsAsync``TeamsInfo.getTeamChannels`程序 API C# TypeScript API。
+获取团队的详细信息后，可以获取团队中的频道列表。 目前，若要检索团队中频道列表的信息，请使用 Microsoft Teams 机器人 API `TeamsInfo.GetTeamChannelsAsync`（对于 C#）或 `TeamsInfo.getTeamChannels`（对于 TypeScript API）。
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>获取团队中的频道列表
 
@@ -292,7 +292,7 @@ Response body
 
 > [!NOTE]
 >
-> * 返回默认"常规"频道的名称，以 `null` 允许本地化。
+> * 默认常规频道的名称作为 `null` 返回，以允许本地化。
 > * 常规频道的频道 ID 始终与团队 ID 匹配。
 
 以下示例代码用于获取团队中的频道列表：
@@ -344,7 +344,7 @@ async def _show_channels(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-你可以直接在 上发出 GET 请求 `/v3/teams/{teamId}/conversations`，将 的值用作 `serviceUrl` 终结点。 的值稳定 `serviceUrl` ，但可以更改。 当新消息到达时，机器人必须验证其存储的值 `serviceUrl`。
+可以使用 `serviceUrl` 的值作为终结点，直接在 `/v3/teams/{teamId}/conversations` 上发出 GET 请求。 `serviceUrl` 的值稳定，但可能会更改。 当新消息到达时，机器人必须验证其存储的 `serviceUrl` 值。
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -374,4 +374,4 @@ Response body
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [通过自动程序发送和接收文件](~/bots/how-to/bots-filesv4.md)
+> [通过机器人发送和接收文件](~/bots/how-to/bots-filesv4.md)

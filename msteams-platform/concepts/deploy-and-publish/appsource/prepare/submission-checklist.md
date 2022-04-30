@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: 提交应用商店分发验证应用包指南本地化
-ms.openlocfilehash: 4d3116a305ee1b5d353310bdc047c282822af173
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501989"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135750"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备 Microsoft Teams 应用商店提交
 
@@ -24,14 +24,14 @@ ms.locfileid: "63501989"
 虽然应用可能在测试环境中工作，但应检查应用包以避免在提交过程中遇到问题。
 
 > [!NOTE]
-> App Studio 即将弃用。 使用新的 [开发人员门户](https://dev.teams.microsoft.com/) 配置、分发和管理 Teams 应用
+ > 如果你一直在使用 App Studio，我们建议你尝试开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日之前弃用。
 
 Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具将根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
 1. 转到“[Microsoft Teams 应用验证工具](https://dev.teams.microsoft.com/appvalidation.html)”。 （注意：该工具也可在 [App Studio](../../../build-and-test/app-studio-overview.md) 中使用。）
 1. 上传应用包以运行自动测试。
 1. 转到“**初步清单**”并查看难以自动执行的测试用例。
-1. [修复配置问题](~/resources/schema/manifest-schema.md) 或应用一般问题。 如果自动测试提示错误或未满足清单中的所有条件，则会出现这些问题。
+1. [修复配置问题](~/resources/schema/manifest-schema.md)或应用一般问题。如果自动测试提示错误或未满足清单中的所有条件，则会出现这些问题。
 
 ## <a name="compile-testing-instructions"></a>编译测试说明
 
@@ -95,7 +95,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 
 #### <a name="short-description"></a>简短说明
 
-应用的简洁摘要，应为原创作品、具有吸引力且针对目标受众。 将简短说明保留为一句话。
+应用的简洁摘要，应为原创作品、具有吸引力且针对目标受众。将简短说明保留为一句话。
 
 :::row:::
 
@@ -165,7 +165,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 
 ### <a name="create-a-video"></a>创建视频
 
-一览中的视频可能是传达为什么应使用你的应用的最有效方法。 应在视频中解决以下问题：
+一览中的视频可能是传达为什么应使用你的应用的最有效方法。应在视频中解决以下问题：
 
 * 应用适合谁使用？
 * 应用可以解决哪些问题？
@@ -177,7 +177,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 #### <a name="best-practices-for-videos"></a>视频最佳做法
 
 * 将视频长度保持在 60-90 秒之间。
-* 关注视频质量。 在应用一览中，用户将在看到屏幕截图之前先看到你的视频。
+* 以质量为目标。在应用一览中，用户将在看到屏幕截图之前先看到你的视频。
 * 以叙述形式传达产品的价值。
 * 演示产品的工作方式。
 

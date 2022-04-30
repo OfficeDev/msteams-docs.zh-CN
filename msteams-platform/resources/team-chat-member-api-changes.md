@@ -1,34 +1,34 @@
 ---
 title: 为团队和聊天成更改机器人 API
 author: ojasvichoudhary
-description: 介绍即将对用于检索团队成员和聊天成员的机器人 API 进行的更改和正在进行的更改
-keywords: 机器人框架 api 团队成员名单
-ms.localizationpriority: medium
+description: 介绍用于检索团队和聊天成员的机器人 API 即将进行的更改和正在进行的更改
+keywords: 机器人, 框架, API, 团队成员名单
+ms.localizationpriority: high
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: dfa85832fe8225b58e4566ba889c23d2696807e4
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
-ms.translationtype: MT
+ms.openlocfilehash: cd7e31ed969197d30e939e7f9f2cdfb175fc0f1f
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737210"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111904"
 ---
-# <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams机器人 API 更改以提取团队成员或聊天成员
+# <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams 机器人 API 在提取团队或聊天成员方面的更改
 
 >[!NOTE]
-> 已启动 API 的`TeamsInfo.getMembers``TeamsInfo.GetMembersAsync`弃用过程。 最初，他们受到严重限制，每分钟有 5 个请求，每个团队最多返回 1 万名成员。 这将导致整个名单没有返回，因为团队规模增加。
-> 必须更新到 Bot Framework SDK 版本 4.10 或更高版本，并切换到分页 API 终结点或 `TeamsInfo.GetMemberAsync` 单个用户 API。 即使未直接使用这些 API，这也适用于机器人，因为较早的 SDK 会在 [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) 事件期间调用这些 API。 若要查看即将进行的更改的列表，请参阅 [API 更改](team-chat-member-api-changes.md#api-changes)。
+> `TeamsInfo.getMembers` 和 `TeamsInfo.GetMembersAsync` API 的弃用过程已启动。 最初，它们被严格限制为每分钟 5 个请求，并且每个团队最多返回 1 万个成员。 这导致随着团队规模的增加，不会返回完整的名单。
+> 必须更新到 Bot Framework SDK 版本 4.10 或更高版本，并切换到分页 API 终结点或 `TeamsInfo.GetMemberAsync` 单用户 API。 即使未直接使用这些 API，这也适用于你的机器人，因为旧版 SDK 在 [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) 事件期间会调用这些 API。 若要查看即将进行的更改的列表，请参阅 [API 更改](team-chat-member-api-changes.md#api-changes)。
 
-目前，如果要检索聊天或团队的一个或多个成员的信息，可以将[Microsoft Teams机器人 API](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) `TeamsInfo.GetMembersAsync` 用于 C# 或 `TeamsInfo.getMembers` TypeScript 或 Node.js API。 有关详细信息，请参阅 [提取名册或用户配置文件](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)。
+目前，如果要检索聊天或团队的一个或多个成员的信息，可以使用 [Microsoft Teams 机器人 API](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) `TeamsInfo.GetMembersAsync`（对于 C#）或 `TeamsInfo.getMembers`（对于 TypeScript 或 Node.js API）。 有关详细信息，请参阅[提取名单或用户个人资料](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)。
 
-这些 API 存在以下缺点：
+这些 API 有以下缺点：
 
-* 对于大型团队来说，性能不佳，超时的可能性更大：自 2017 年初发布Teams以来，最大团队规模已大幅增加。 作为 `GetMembersAsync` 或 `getMembers` 返回整个成员列表，API 调用需要很长时间才能返回大型团队，并且调用超时很常见，必须重试。
-* 获取单个用户的配置文件详细信息是很困难的：若要获取单个用户的个人资料信息，必须检索整个成员列表，然后搜索所需的列表。 Bot Framework SDK 中有一个帮助程序函数，可使其更简单，但效率不高。
+* 对于大型团队，性能较差且超时的可能性更大：自 2017 年初发布 Teams 以来，最大团队规模已大幅增加。 由于 `GetMembersAsync` 或 `getMembers` 返回整个成员列表，因此对于大型团队，需要很长时间才能返回 API 调用，并且调用超时很常见，必须重试。
+* 获取单个用户的个人资料详细信息很困难：若要获取单个用户的个人资料信息，必须检索整个成员列表，然后搜索所需的用户。 Bot Framework SDK 中有一个帮助程序函数可使其更简单，但效率不高。
 
-随着组织范围团队的引入，需要将这些 API 与Office 365隐私控制更好地保持一致。 大型团队中使用的机器人能够检索类似于 `User.ReadBasic.All` Microsoft Graph 权限的基本配置文件信息。 租户管理员可以非常控制哪些应用和机器人可以在其租户中使用，但这些设置不同于 Microsoft Graph。
+随着组织范围团队的引入，需要将这些 API 与 Office 365 隐私控制更好地保持一致。 大型团队中使用的机器人能够检索类似于 `User.ReadBasic.All` Microsoft Graph 权限的基本个人资料信息。 租户管理员可以很好地控制哪些应用和机器人可在其租户中使用，但这些设置不同于 Microsoft Graph。
 
-以下代码提供机器人 API Teams返回的示例 JSON 表示形式：
+以下代码提供 Teams 机器人 API 返回的内容的示例 JSON 表示形式：
 
 ```json
 [{
@@ -61,15 +61,15 @@ ms.locfileid: "64737210"
 
 下面是即将进行的 API 更改：
 
-* 创建 [`TeamsInfo.GetPagedMembersAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) 了一个新的 API，用于检索聊天或团队成员的个人资料信息。 此 API 现在可用于 Bot Framework 版本 4.8 或更高版本的 SDK。 若要在所有其他版本中进行开发，请使用该 [`GetConversationPagedMembers`](/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) 方法。
+* 将创建新 API [`TeamsInfo.GetPagedMembersAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)，用于检索聊天或团队成员的个人资料信息。 此 API 现在适用于 Bot Framework 版本 4.8 或更高版本的 SDK。 若要在所有其他版本中进行开发，请使用 [`GetConversationPagedMembers`](/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) 方法。
 
     > [!NOTE]
-    > 在 v3 或 v4 中，最佳操作是升级到分别为 3.30.2 或 4.8 或更高版本的最新点版本。
+    > 在 v3 或 v4 中，最佳操作是升级到最新版，分别为 3.30.2 或 4.8 或更高版本。
 
-* 将创建 [`TeamsInfo.GetMemberAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) 一个新的 API，用于检索单个用户的配置文件信息。 它采用团队或聊天的 ID 以及 [UPN](/windows/win32/ad/naming-properties#userprincipalname)（`userPrincipalName`Microsoft Azure Active Directory (Azure AD) 对象 ID `objectId`或Teams用户 ID `id` 作为参数，并返回该用户的个人资料信息。
+* 将创建新 API [`TeamsInfo.GetMemberAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details)，用于检索单个用户的个人资料信息。 它使用团队或聊天的 ID 和 [UPN](/windows/win32/ad/naming-properties#userprincipalname)（即 `userPrincipalName`）、Microsoft Azure Active Directory (Azure AD) 对象 ID `objectId` 或 Teams 用户 ID `id` 作为参数，并返回该用户的个人资料信息。
 
     > [!NOTE]
-    > `objectId` 更改为 `aadObjectId` 匹配 Bot Framework 消息的对象中 `Activity` 调用的内容。 新的 API 适用于 Bot Framework SDK 版本 4.8 或更高版本。 它还可在 Teams SDK 扩展 Bot Framework 3.x 中使用。 同时，可以使用 [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) 终结点。
+    > `objectId` 更改为 `aadObjectId` 以匹配 Bot Framework 消息的 `Activity` 对象中调用的内容。 新 API 适用于版本 4.8 或更高版本的 Bot Framework SDK。 它还可在 Teams SDK 扩展 Bot Framework 3.x 中使用。 同时，可以使用 [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) 终结点。
 
-* `TeamsInfo.GetMembersAsync` 在 C# 和 `TeamsInfo.getMembers` TypeScript 或 Node.js 中正式弃用。 新 API 可用后，必须更新机器人才能使用它。 这也适用于 [这些 API 使用的基础 REST API](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json)。
-* 到 2022 年底，机器人无法主动检索 `userPrincipalName` 聊天或团队成员的属性 `email` 。 机器人必须使用Graph API 来检索所需的即时形式。 新 `GetConversationPagedMembers` API 无法从 2022 年末开始返回 `userPrincipalName` 和 `email` 属性。 机器人必须将图形 API与访问令牌配合使用才能检索信息。 
+* C# 中的 `TeamsInfo.GetMembersAsync` 和 TypeScript 或 Node.js 中的 `TeamsInfo.getMembers` 已正式弃用。 新 API 可用后，必须更新机器人才能使用它。 这也适用于[这些 API 使用的基础 REST API](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json)。
+* 到 2022 年底，机器人无法主动检索聊天或团队成员的 `userPrincipalName` 或 `email` 属性。 机器人必须使用 Graph API 来检索所需信息。 从 2022 年末开始，新 `GetConversationPagedMembers` API 无法返回 `userPrincipalName` 和 `email` 属性。 机器人必须将 Graph API 与访问令牌配合使用才能检索信息。 

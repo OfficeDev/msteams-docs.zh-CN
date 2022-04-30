@@ -1,66 +1,66 @@
 ---
 title: 准备 Microsoft 365 租户
-description: 如何开始使用 Teams Microsoft 365
+description: 如何在 Microsoft 365 中开始使用 Teams
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: 配置Microsoft 365租户Teams上传
-ms.openlocfilehash: 9543ef4fcd3065def2f25aa8180c157a55b1d2ba
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: 配置 Microsoft 365 租户 Teams 上传
+ms.openlocfilehash: 9e9972a41b6b210b99e7a5ac16fc3665132c3757
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399126"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111393"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 
-Microsoft 365订阅者可以使用以下Microsoft Teams之一为用户开发应用：
+Microsoft 365 订阅者可以使用以下计划之一为 Microsoft Teams 开发应用：
 
 * 基本
-* Standard
-* Enterprise E1、E3 和 E5
-* 开发者
+* 标准
+* 企业版 E1、E3 和 E5
+* 开发人员版
 * 教育版、教育增强版和教育版 E5
 
 > [!NOTE]
 >
-> * 有关订阅Microsoft 365，请参阅[计划](https://products.office.com/business/compare-more-office-365-for-business-plans)。
-> * Teams停用之前订阅 E4 的客户也[可用](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)。
+> * 有关 Microsoft 365 订阅的详细信息，请参阅[计划](https://products.office.com/business/compare-more-office-365-for-business-plans)。
+> * Teams 在 E4 计划[停用](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)之前也对其订阅客户可用。
 
 ## <a name="create-your-development-environment"></a>创建开发环境
 
-如果你没有帐户，Microsoft 365注册开发人员计划Microsoft 365[订阅](https://developer.microsoft.com/microsoft-365/dev-program)。 订阅将免费 90 天，并持续续订，只要将订阅用于开发活动。 如果你有一个 Visual Studio Enterprise 或 Professional 订阅，则这两个计划均Microsoft 365[开发人员订阅](https://aka.ms/MyVisualStudioBenefits)。 只要你的订阅处于活动状态，Visual Studio就处于活动状态。 有关详细信息，请参阅[设置开发人员Microsoft 365订阅](/office/developer-program/office-365-developer-program-get-started)。
+如果没有 Microsoft 365 账户，则必须注册 [ Microsoft 365 开发人员计划 ](https://developer.microsoft.com/microsoft-365/dev-program) 订阅。 订阅可以免费使用 90 天，并且只要将订阅用于开发活动，就可以继续续订。 如果你有 Visual Studio Enterprise 或 Professional 订阅，则这两个计划都包含免费 Microsoft 365 [开发人员订阅](https://aka.ms/MyVisualStudioBenefits)。 只要你的 Visual Studio 订阅处于活动状态，它就处于活动状态。 有关详细信息，请参阅[设置 Microsoft 365 开发人员订阅](/office/developer-program/office-365-developer-program-get-started)。
 
-## <a name="enable-teams-for-your-organization"></a>为Teams启用启用
+## <a name="enable-teams-for-your-organization"></a>为组织启用 Teams
 
-为Teams启用启用，有关详细信息，请参阅[为Teams启用应用程序。](/microsoftteams/enable-features-office-365)
+为组织启用 Teams，有关详细信息，请参阅[为组织启用 Teams](/microsoftteams/enable-features-office-365)。
 
-## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>启用自定义Teams应用并启用自定义应用上传
+## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>启用自定义 Teams 应用并启用自定义应用上传
 
-若要为开发人员租户启用自定义应用上传或旁加载：
+若要为开发人员租户启用自定义应用上传或旁加载，请执行以下操作：
 
-1. 登录以[Microsoft 365 管理中心](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)管理员凭据登录。
+1. 请使用管理员帐户登录到“[Microsoft 365 管理中心](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)”。
 
-2. 选择 **"全部显示Teams** > "。
+2. 选择 **显示全部** > **Teams**。
 
     ![管理中心菜单](~/assets/images/prepare-test-tenant/admin-center.png)
 
     > [!Note]
-    > 可能需要 24 小时才能显示 **Teams选项。** 可以将[自定义应用上传到Teams环境中](/microsoftteams/upload-custom-apps#validate)进行测试和验证。
+    > 可能至多 24 小时后 **Teams** 选项才会出现。 在此期间可以[将自定义应用上传到 Teams 环境](/microsoftteams/upload-custom-apps#validate)进行测试和验证。
 
-3. 导航到 **Teams** **appsSetup** >  **PoliciesGlobal** > 。
+3. 导航到“**Teams 应用**” > “**设置策略**” > “**全局**”。
 
    ![打开旁加载视图](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
-4. 将 **Upload应用切换到****"打开"** 位置。
+4. 将“**上传自定义应用**”切换到“**开**”位置。
 
 5. 选择“保存”。 测试租户可以允许自定义应用旁加载。
 
     > [!Note]
-    > 旁加载可能需要 24 小时才能处于活动状态。 临时，可以使用 **upload for \<your tenant>** 测试应用。 若要上传.zip包文件，请参阅上传 [自定义应用](/microsoftteams/upload-custom-apps#upload)。
+    > 旁加载最长可能需要 24 小时才能生效。 在此期间，可以使用“**上传\<your tenant>**”来测试应用。 若要上传应用的 .zip 包文件，请参阅“[上传自定义应用](/microsoftteams/upload-custom-apps#upload)”。
 
-    ![Upload应用视图](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
+    ![上传应用视图](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-有关这些设置如何交互的完整信息，请参阅管理 Teams [](/microsoftteams/teams-custom-app-policies-and-settings) 中的自定义应用策略和设置，以及管理 [Teams。](/microsoftteams/teams-app-setup-policies)
+有关这些设置如何交互的完整信息，请参阅[管理 Teams 中的自定义应用策略和设置](/microsoftteams/teams-custom-app-policies-and-settings)，以及[管理 Teams 中的应用设置策略](/microsoftteams/teams-app-setup-policies)。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -69,4 +69,4 @@ Microsoft 365订阅者可以使用以下Microsoft Teams之一为用户开发应�
 
 ## <a name="see-also"></a>另请参阅
 
-[将测试数据添加到Microsoft 365租户](~/concepts/build-and-test/test-data.md)
+[将测试数据添加到 Microsoft 365 测试租户](~/concepts/build-and-test/test-data.md)

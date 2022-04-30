@@ -1,55 +1,55 @@
 ---
-title: 与机器人的频道和群组对话
+title: 使用机器人进行频道和群组对话
 author: surbhigupta
-description: 如何发送、接收和处理频道或群聊中机器人的消息。 了解设计指南、使用代码示例创建@mentions线程
+description: 如何在频道或群组聊天中发送、接收和处理机器人的消息。 了解设计准则, 创建对话线程, 使用 @提及, 使用代码示例
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 737aba65007f3e5ed359bc67a49c3fb3e7cc5479
-ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
-ms.translationtype: MT
+ms.openlocfilehash: 2262e52e15bbd5598a0e0dad89bb38a6f0078eac
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64612627"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111554"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-若要在团队Microsoft Teams聊天中安装聊天机器人，请向`teams`自动程序添加 或 `groupchat` 作用域。 此操作允许对话的所有成员与你的机器人互动。 安装自动程序后，它有权访问有关对话的元数据，如对话成员列表。 此外，当在团队中安装它时，机器人可以访问有关该团队的详细信息和频道的完整列表。
+若要在团队或群组聊天中安装 Microsoft Teams 机器人，请为机器人添加 `teams` 或 `groupchat` 范围。 此操作允许对话的所有成员与你的机器人互动。 安装机器人后，它有权访问有关对话的元数据，例如对话成员列表。 此外，在团队中安装它时，机器人有权访问有关该团队的详细信息和频道的完整列表。
 
-组或频道中的机器人仅在被提及时接收@botname。 他们不会收到发送到对话的其他任何消息。 必须直接 @mentioned 机器人。 当提到团队或频道时，或者当有人未经回复而回复来自你的机器人的消息时，机器人不会收到@mentioning消息。
+群组或频道中的机器人仅在提及 @botname 时才会收到消息。 它们不会收到发送到对话的任何其他消息。 必须直接 @mentioned 机器人。 当提及团队或频道时，或者当有人回复来自你的机器人的消息而没有 @提及它时，机器人不会收到消息。
 
 > [!NOTE]
-> 此功能目前仅适用于公共 [开发人员预览](../../../resources/dev-preview/developer-preview-intro.md) 版。
+> 此功能目前仅适用于[公共开发人员预览版](../../../resources/dev-preview/developer-preview-intro.md)。
 >
-> 通过使用 RSC (资源) ，机器人可以接收团队中安装它的所有频道消息，而无需@mentioned。 有关详细信息，请参阅使用 [RSC 接收所有频道消息](channel-messages-with-rsc.md)。
+> 使用资源特定许可 (RSC)，机器人可在未被 @提及的情况下接收团队中安装的所有频道消息。 有关详细信息，请参阅[使用 RSC 接收所有频道消息](channel-messages-with-rsc.md)。
 >
-> 目前不支持将消息或自适应卡片发布到私人频道。
+> 目前不支持将消息或自适应卡片发布到专用频道。
 
 ## <a name="design-guidelines"></a>设计准则
 
-与个人聊天不同，在群聊和频道中，机器人必须提供快速简介。 必须遵循这些以及更多自动程序设计指南。 若要详细了解如何在聊天中设计聊天机器人Teams，请参阅如何在频道和聊天中设计机器人[对话](~/bots/design/bots.md)。
+与个人聊天不同，在群组聊天和频道中，机器人必须提供快速简介。 必须遵循这些和更多机器人设计准则。 有关如何在 Teams 中设计机器人的详细信息，请参阅[如何在频道和聊天中设计机器人对话](~/bots/design/bots.md)。
 
-现在，你可以创建新的对话线程并轻松管理频道中的不同对话。
+现在，可以创建新的对话线程，并轻松管理频道中的不同对话。
 
 ## <a name="create-new-conversation-threads"></a>创建新的对话线程
 
-在团队中安装自动程序时，必须创建新的对话线程，而不是回复现有对话线程。 有时很难区分两个对话。 如果会话是按线索组织的，则更易于组织和管理频道中的不同对话。 这是一种 [主动消息形式](~/bots/how-to/conversations/send-proactive-messages.md)。
+在团队中安装机器人时，必须创建新的对话线程，而不是回复现有对话线程。 有时，很难区分两个对话。 如果对话是线程式的，则更容易组织和管理频道中的不同对话。 这是[主动消息传送](~/bots/how-to/conversations/send-proactive-messages.md)的一种形式。
 
-接下来，可以使用 对象检索 `entities` 提及内容，然后使用 对象向邮件添加 `Mention` 提及。
+接下来，可以使用 `entities` 对象检索提及，并使用 `Mention` 对象向消息添加提及。
 
-## <a name="work-with-mentions"></a>使用提及
+## <a name="work-with-mentions"></a>处理提及
 
-从组或频道向自动程序发送的每条消息都包含一个@mention消息文本中包含其名称的自动程序。 自动程序还可以检索邮件中提及的其他用户，并将提及添加到它发送的任何邮件中。
+从群组或频道发送给机器人的每一条消息都会在消息文本中包含 @提及和名称。 机器人还可以检索消息中提及的其他用户，并在它发送的任何消息中添加提及。
 
-还必须从自动程序@mentions内容中去除此限制。
+你还必须从机器人收到的消息内容中删除 @提及。
 
 ### <a name="retrieve-mentions"></a>检索提及
 
-在有效负载中的 `entities` 对象中返回提及，同时包含用户的唯一 ID 和提及用户的名称。 邮件文本还包括提及，例如 `<at>@John Smith<at>`。 但是，不要依赖邮件中的文本来检索有关用户的任何信息。 发送邮件的人可以更改它。 因此，请使用 `entities` 对象。
+提及在有效负载的 `entities` 对象中返回，并包含用户的唯一 ID 和提及的用户名。 消息文本还将包括如 `<at>@John Smith<at>` 的提及。 但是，不要依赖消息中的文本来检索有关用户的任何信息。 发送消息的人员可能会对其进行更改。 因此，请使用 `entities` 对象。
 
-可以通过调用 Bot Builder `GetMentions` SDK 中的 函数来检索邮件中提及的所有内容，该函数将返回对象 `Mention` 数组。
+可以通过调用 Bot Builder SDK 中的 `GetMentions` 函数来检索消息中的所有提及，该函数将返回一组 `Mention` 对象。
 
 以下代码显示检索提及的示例：
 
@@ -144,18 +144,18 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 * * *
 
-### <a name="add-mentions-to-your-messages"></a>向邮件添加提及
+### <a name="add-mentions-to-your-messages"></a>向消息添加提及
 
-机器人可以在发布至频道的消息中提及其他用户。
+机器人可以在发布到频道的消息中提及其他用户。
 
-对象 `Mention` 具有两个必须具有以下设置的属性：
+`Mention` 对象具有必须使用以下方法设置的两个属性：
 
-* 在 *@username* 文本中包括文本。
-* 在 entities 集合中包括 mention 对象。
+* 在消息文本中包含 *@username*。
+* 在实体集合中包含提及对象。
 
-Bot Framework SDK 提供了用于创建提及项的帮助程序方法和对象。
+Bot Framework SDK 提供帮助程序方法和对象来创建提及。
 
-以下代码显示向邮件添加提及的示例：
+以下代码显示向消息添加提及的示例：
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -196,7 +196,7 @@ this.onMessage(async (turnContext, next) => {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-数组 `text` 中对象中的字段 `entities` 必须与邮件字段的一部分 `text` 匹配。 如果没有，则忽略提及。
+`entities` 数组对象中的 `text` 字段必须与消息 `text` 字段的一部分匹配。 如果不匹配，则会忽略提及。
 
 ```json
 {
@@ -255,26 +255,26 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 * * *
 
-现在，可以在首次安装自动程序或将其添加到组或团队时发送简介消息。
+现在，可以在首次安装机器人或将其添加到群组或团队时发送简介消息。
 
-## <a name="send-a-message-on-installation"></a>安装时发送邮件
+## <a name="send-a-message-on-installation"></a>在安装时发送消息
 
-首次将机器人添加到组或团队时，必须发送一条介绍消息。 该消息必须提供自动程序功能及其使用方法的简要说明。 `conversationUpdate`必须使用 eventType 订阅`teamMemberAdded`事件。  当添加任何新的团队成员时，将发送该事件。 检查添加的新增成员是否就是机器人。 有关详细信息，请参阅 [向新团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。
+首次将机器人添加到群组或团队时，必须发送简介消息。 该消息必须简要说明机器人的功能以及如何使用它们。 必须订阅具有 `teamMemberAdded` eventType 的 `conversationUpdate` 事件。  添加任何新团队成员时，将发送该事件。 检查添加的新成员是否为机器人。 有关详细信息，请参阅[向新团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。
 
-添加自动程序时，向每个团队成员发送个人消息。 为此，请获取团队名单，并给每个用户发送一条直接消息。
+添加机器人时，将向每个团队成员发送个人消息。 为此，请获取团队名单，并向每个用户发送直接消息。
 
-在下列情况下不要发送邮件：
+在以下情况下，请勿发送消息：
 
-* 例如，团队规模较大，成员超过 100 人。 机器人可能会被视为垃圾邮件，添加它的人可能会收到投诉。 你必须向看到欢迎消息的每个人清楚地传达机器人的价值主张。
-* 你的机器人首先在组或频道中提及，而不是先添加到团队。
-* 重命名组或频道。
-* 将团队成员添加到组或频道。
+* 例如，团队为超过 100 个成员的大型团队。 机器人可能被视为垃圾邮件，添加机器人的人员可能会收到投诉。 你必须清楚地向所有看到欢迎消息的成员传达机器人的价值主张。
+* 首先在群组或频道中提及机器人，而不是先将其添加到团队。
+* 群组或频道已重命名。
+* 团队成员将添加到群组或频道。
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
 ## <a name="step-by-step-guide"></a>分步指南
 
-按照[分步指南操作，](../../../sbs-teams-conversation-bot.yml)创建Teams聊天机器人。
+按照[分步指南](../../../sbs-teams-conversation-bot.yml)操作，以创建 Teams 对话机器人。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -283,4 +283,4 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="see-also"></a>另请参阅
 
-[获取Teams上下文](~/bots/how-to/get-teams-context.md)
+[获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
