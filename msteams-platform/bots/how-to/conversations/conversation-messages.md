@@ -5,16 +5,16 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: d31f528b17c671074f3009c435cfff7bad728a09
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102110"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191178"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
-对话中的每个消息都是类型的`Activity``messageType: message`对象。 当用户发送消息时，Teams将消息发布到机器人。 Teams将 JSON 对象发送到机器人的消息传送终结点。 机器人检查消息以确定其类型并做出相应响应。
+对话中的每个消息都是类型的`Activity``messageType: message`对象。 当用户发送消息时，Teams将消息发布到机器人。 Teams将 JSON 对象发送到机器人的消息传送终结点。 机器人会检查消息来确定其类型并作出相应响应。
 
 基本对话通过 Bot Framework 连接器（单个 REST API）进行处理。 此 API 使机器人能够与Teams和其他通道通信。 Bot Builder SDK 提供以下功能：
 
@@ -195,26 +195,26 @@ async def on_members_added_activity(
 
 用户和机器人之间发送的消息包括消息中的内部通道数据。 此数据允许机器人在该通道上正确通信。 Bot Builder SDK 允许修改消息结构。
 
-## <a name="teams-channel-data"></a>Teams通道数据
+## <a name="teams-channel-data"></a>Teams 频道数据
 
 该`channelData`对象包含Teams特定的信息，是团队和频道 ID 的明确源。 （可选）可以缓存这些 ID 并使用这些 ID 作为本地存储的密钥。 `TeamsActivityHandler` SDK 中的用户从`channelData`对象中提取重要信息，使其易于访问。 但是，始终可以从 `turnContext` 对象访问原始数据。
 
-该 `channelData` 对象不包括在个人对话中的消息中，因为这些内容发生在频道外部。
+该 `channelData` 对象不包含在个人对话中的消息中，因为这些内容发生在频道外部。
 
 发送到机器人的活动中的典型 `channelData` 对象包含以下信息：
 
 * `eventType`：Teams事件类型，仅在[通道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
-* `tenant.id`：在所有上下文中传递Microsoft Azure Active Directory (Azure AD) 租户 ID。
+* `tenant.id`：Microsoft Azure Active Directory (在所有上下文中传递的 Azure AD) 租户 ID。
 * `team`：仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id`：通道的 GUID。
-  * `name`：仅在 [团队重命名事件中](~/bots/how-to/conversations/subscribe-to-conversation-events.md)传递的团队名称。
+  * `name`：仅在 [团队重命名事件中](subscribe-to-conversation-events.md#team-renamed)传递的团队名称。
 * `channel`：仅在频道上下文中传递、提及机器人时，或在添加了机器人的团队中的频道中传递事件。
   * `id`：通道的 GUID。
   * `name`：通道名称仅在 [通道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
 * `channelData.teamsTeamId`：已弃用。 此属性仅包含用于向后兼容性。
 * `channelData.teamsChannelId`：已弃用。 此属性仅包含用于向后兼容性。
 
-### <a name="example-channeldata-object-channelcreated-event"></a>channelData 对象 (channelCreated 事件) 示例
+### <a name="example-channeldata-object-channelcreated-event"></a>示例 channelData 对象（channelCreated 事件）
 
 以下代码演示 channelData 对象的示例：
 
@@ -238,10 +238,10 @@ async def on_members_added_activity(
 
 从机器人接收或发送到机器人的消息可以包含不同类型的消息内容。
 
-| 格式    | 从用户到机器人 | 从机器人到用户 | 笔记                                                                                   |
+| 格式    | 从用户到机器人 | 从机器人到用户 | 注释                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| 格式文本  | ✔                | ✔                | 机器人可以发送丰富的文本、图片和卡片。 用户可以向机器人发送丰富的文本和图片。                                                                                        |
-| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式的最大 1024×1024 和 1 MB。 不支持动态 GIF。  |
+| 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向机器人发送格式文本和图片。                                                                                        |
+| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式的最大 1024×1024 MB 和 1 MB。 不支持动画 GIF。  |
 | 卡片     | ✖                | ✔                | 请参阅[支持的卡Teams卡参考](~/task-modules-and-cards/cards/cards-reference.md)。 |
 | 表情符号    | ✔                | ✔                | Teams目前通过 UTF-16 支持表情符号，例如 U+1F600，用于笑脸。 |
 
@@ -329,9 +329,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="picture-messages"></a>图片消息
 
-图片是通过将附件添加到邮件来发送的。 有关附件的详细信息，请参阅 [Bot Framework 文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。
+图片是通过将附件添加到消息来发送的。 有关附件的详细信息，请参阅 [向消息添加媒体附件](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。
 
-图片最多可以是 1024×1024 和 1 MB PNG、JPEG 或 GIF 格式。 不支持动态 GIF。
+图片最多可以是 1024× 1024 MB，PNG、JPEG 或 GIF 格式最多可以是 1 MB。 不支持动画 GIF。
 
 使用 XML 指定每个图像的高度和宽度。 在 markdown 中，映像大小默认为 256×256。 例如：
 
@@ -401,7 +401,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 | 403 | **代码**： `BotDisabledByAdmin` <br/> **消息**：租户管理员禁用了此机器人。 | 租户阻止了机器人。 |
 | 401 | **代码**： `BotNotRegistered` <br/> **消息**：未为此机器人找到注册。 | 找不到此机器人的注册。 |
 | 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一会话上的多个并发操作，我们的某个依赖项的先决条件失败。 |
-| 404 | **代码**： `ConversationNotFound` <br/> **消息**：找不到对话。 | 未找到对话。 |
+| 404 | **代码**： `ConversationNotFound` <br/> **消息**：找不到对话。 | 找不到对话。 |
 | 413 | **代码**： `MessageSizeTooBig` <br/> **消息**：消息大小太大。 | 传入请求的大小太大。 |
 | 429 | **代码**： `Throttled` <br/> **消息**：请求过多。 另请返回重试时间。 | 机器人发送的请求过多。 有关详细信息，请参阅 [速率限制](~/bots/how-to/rate-limit.md)。 |
 
@@ -409,7 +409,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 |示例名称 | Description | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Teams 对话自动程序 | 消息传送和会话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams 对话自动程序 | 消息传递和对话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>后续步骤
 
@@ -421,4 +421,4 @@ async def on_message_activity(self, turn_context: TurnContext):
 * [发送主动邮件](~/bots/how-to/conversations/send-proactive-messages.md)
 * [订阅对话事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [通过机器人发送和接收文件](~/bots/how-to/bots-filesv4.md)
-* [将租户 ID 和会话 ID 发送到机器人的请求标头](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [将租户 ID 和对话 ID 发送到机器人的请求标头](~/bots/how-to/conversations/request-headers-of-the-bot.md)

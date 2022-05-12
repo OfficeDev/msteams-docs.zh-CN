@@ -2,14 +2,14 @@
 title: “共享到 Teams”概述
 description: 介绍如何创建“共享到团队”按钮
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: mediumss
 keywords: “共享到 Teams”概述
-ms.openlocfilehash: fb32399139f67bfef52bca085d21df52194a93f8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 1bc840c5b85042ef109d544a3b94cd55f6eae2ad
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111715"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297126"
 ---
 # <a name="share-to-teams"></a>共享到 Teams
 

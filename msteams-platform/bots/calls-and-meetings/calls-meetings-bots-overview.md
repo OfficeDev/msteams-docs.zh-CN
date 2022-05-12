@@ -2,14 +2,14 @@
 title: 呼叫和联机会议机器人
 description: 了解 Microsoft Teams 应用如何使用语音和视频与用户交互、如何将 Microsoft Graph API 用于呼叫和联机会议，并了解实时媒体流
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: 通话呼叫音频视频 IVR 语音联机会议实时媒体流机器人
-ms.openlocfilehash: 1e719a60c1b14b6651c852ad0eae791e96fa8cc6
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 98dd4e329abec3e1b84ae9230d299a2e9d50fd8b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135680"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297168"
 ---
 # <a name="calls-and-online-meetings-bots"></a>呼叫和联机会议机器人
 

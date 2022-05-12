@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: b28d68faf6d124faaa2b800accea568775acaa32
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: e287d6251af6d44b78010449dce751b938f390bd
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104152"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191262"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>使用 Teams 工具包创建新的 Teams 应用
 
@@ -53,6 +53,6 @@ ms.locfileid: "65104152"
 
 * [预配云资源](provision.md)
 * [将 Teams 应用部署到云](deploy.md)
-* [发布 Teams 应用](TeamsFx-collaboration.md)
+* [发布 Teams 应用](../concepts/deploy-and-publish/appsource/publish.md)
 * [管理多个环境](TeamsFx-multi-env.md)
 * [在 Teams 项目中与其他开发人员协作](TeamsFx-collaboration.md)

@@ -5,12 +5,12 @@ description: Microsoft Teams 中的机器人概述。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 53d016c6e01c73a6fbe5f59ed4a3239077e8b12e
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: d37b35e46156777022a5b19a7ccf6de1ab2e0fb9
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102411"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191248"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
@@ -63,7 +63,7 @@ ms.locfileid: "65102411"
 
 ## <a name="see-also"></a>另请参阅
 
-* [创建适合 Teams 的机器人](~/bots/how-to/create-a-bot-for-teams.md)
+* [创建适合 Teams 的机器人](../resources/bot-v3/bots-create.md)
 * [Microsoft Teams 机器人的工作原理](/azure/bot-service/bot-builder-basics-teams)
 * [注册 Microsoft Teams 的通话和会议机器人](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [向 Teams 机器人添加身份验证](~/bots/how-to/authentication/add-authentication.md)
