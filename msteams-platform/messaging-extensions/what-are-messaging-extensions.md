@@ -2,23 +2,25 @@
 title: 消息扩展
 author: surbhigupta
 description: Microsoft Teams 平台上的消息传递扩展概述
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c8814d7bd3b67ad88859eb381f1d7116fe1a5c43
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110384"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297140"
 ---
 # <a name="message-extensions"></a>消息扩展
 
-消息扩展允许用户通过 Microsoft Teams 客户端中的按钮和表单与你的 Web 服务进行交互。 他们可以从撰写消息区域、命令框或直接从消息的外部系统中搜索或启动操作。 然后，可以将该交互的结果发送回 Microsoft Teams 客户端，该交互通常采用格式丰富的卡片形式。 本文档概述了消息扩展、在不同方案下执行的任务、处理消息扩展、操作和搜索命令以及链接展开。
+消息扩展允许用户通过 Microsoft Teams 客户端中的按钮和表单与你的 Web 服务进行交互。 他们可以从撰写消息区域、命令框或直接从消息的外部系统中搜索或启动操作。 然后，可以将该交互的结果发送回 Microsoft Teams 客户端，该交互通常采用格式丰富的卡片形式。
+
+本文档概述了消息扩展、在不同方案下执行的任务、处理消息扩展、操作和搜索命令以及链接展开。
 
 下图显示了从中调用消息扩展的位置：
 
-![消息扩展调用位置](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="消息扩展调用位置":::
 
 > [!NOTE]
 > 撰写框中不再支持@mentioning消息扩展。
@@ -48,16 +50,18 @@ ms.locfileid: "65110384"
 
 通过操作命令，可以使用模式弹出窗口来收集或显示信息。 当用户提交表单时，Web 服务可以通过直接在对话中插入消息来响应，或者将消息插入到撰写消息区域以允许用户提交消息。 之后，用户可以提交消息。 可以将多个表单链接在一起，以实现更复杂的工作流。
 
-可在撰写消息区域、命令框或消息中触发操作命令。 从消息调用命令时，发送到机器人的初始 JSON 有效负载包括从中调用的整个消息。 下图显示消息扩展操作命令任务模块： ![消息扩展操作命令任务模块](~/assets/images/task-module.png)
+可在撰写消息区域、命令框或消息中触发操作命令。 从消息调用命令时，发送到机器人的初始 JSON 有效负载包括从中调用的整个消息。 下图显示了消息扩展操作命令任务模块:
+
+:::image type="content" source="~/assets/images/task-module.png" alt-text="消息扩展操作命令任务模块":::
 
 ### <a name="search-commands"></a>搜索命令
 
-搜索命令让你的用户可以使用外部系统搜索信息（通过搜索框进行手动搜索或通过粘贴前往监控域的链接到撰写消息区域 ），然后将搜索结果插入到消息中。 在最基础的搜索命令流程中，初始调用消息将包含用户提交的搜索字符串。 你将以一个卡片列表和卡片预览回复。 Teams 客户端为用户呈现卡片预览列表。 当用户从列表中选择一张卡片时，全尺寸的卡片会被插入到消息撰写区域。
+搜索命令允许用户通过搜索框手动搜索外部系统中的信息，或通过将受监视域的链接粘贴到撰写消息区域并将搜索结果插入消息中。 在最基础的搜索命令流程中，初始调用消息将包含用户提交的搜索字符串。 你将以一个卡片列表和卡片预览回复。 Teams 客户端为用户呈现卡片预览列表。 当用户从列表中选择一张卡片时，全尺寸的卡片会被插入到消息撰写区域。
 
 卡片从撰写消息区域或命令框触发，而不是从消息触发。 无法从消息触发它们。
 下图显示了消息扩展搜索命令任务模块：
 
-![消息扩展搜索命令](~/assets/images/search-extension.png)
+:::image type="content" source="~/assets/images/search-extension.png" alt-text="消息扩展搜索命令":::
 
 > [!NOTE]
 > 有关卡片的详细信息，请参阅 [什么是卡片](../task-modules-and-cards/what-are-cards.md)。
@@ -67,7 +71,7 @@ ms.locfileid: "65110384"
 粘贴在撰写消息区域中的 URL 时，将调用 Web 服务。 此功能称为链接展开。 当粘贴某一域的 URL 到撰写消息区域，可以订阅以接收调用。 Web 服务可以将 URL“展开”到详细卡片中，提供的信息比标准网站预览卡还多。 可以添加按钮，让用户在不离开Microsoft Teams 客户端的情况下立即采取行动。
 在消息扩展插件中粘贴链接时，以下图像显示链接展开功能：
 
-![展开链接](../assets/images/messaging-extension/unfurl-link.png)
+:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="展开链接":::
 
 ![链接展开](../assets/images/messaging-extension/link-unfurl.gif)
 

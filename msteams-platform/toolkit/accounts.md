@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464300"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191192"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>准备帐户以生成 Teams 应用
 
@@ -28,7 +28,7 @@ ms.locfileid: "63464300"
 
 ### <a name="microsoft-365-developer-program"></a>Microsoft 365 开发人员计划
 
-若要获取免费的 Teams 开发人员帐户，请加入 Microsoft 365 开发人员计划并执行以下步骤：
+若要获取免费的 Teams 开发人员帐户，请加入 Microsoft 365 开发人员计划并执行以下步骤:
 
 1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。
 2. 选择“**立即加入**”。
@@ -61,12 +61,12 @@ ms.locfileid: "63464300"
 
 **Visual Studio ID**
 
-若要托管与应用程序相关的资源或访问 Azure 中的资源，可以在开始之前[创建免费帐户](https://azure.microsoft.com/free/)。 或者，可以选择使用另一个云提供程序托管后端资源，或者选择在自己的服务器上进行（如果这些资源可从公共域中使用）。
+若要托管与应用程序相关的资源或访问 Azure 中的资源，可以在开始之前[创建免费帐户](https://azure.microsoft.com/free/)。 或者，可以选择使用另一个云提供程序托管后端资源，或者选择在自己的服务器上进行 (如果这些资源可从公共域中使用)。
 
 ## <a name="teams-custom-app-upload-or-sideload-permission"></a>Teams 自定义应用上传或旁加载权限
 
 > [!IMPORTANT]
-> 创建应用后，必须在 Teams 中加载应用，而无需分发它。 此过程称为“**旁加载**”。
+> 创建应用后，必须在 Teams 中加载应用，但无需分发它。此过程称为 **旁加载**。
 
    可以使用 Visual Studio Code 或 Teams 客户端验证是否启用了旁加载权限。
 
@@ -91,7 +91,7 @@ ms.locfileid: "63464300"
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="上传自定义应用" border="true":::
 
-        如果无法查看选项“**上传自定义应用**”，则表明你没有旁加载所需的权限。
+        如果无法查看上传自定义应用的选项，**那么则表明你没有进行旁加载所需的权限。
         * 对于租户管理员，请在 Teams 管理中心为租户或组织启用旁加载设置。
         * 如果你不是租户管理员，则需要联系租户管理员以启用旁加载。
 
@@ -131,5 +131,5 @@ ms.locfileid: "63464300"
 * [使用 Teams 工具包创建新的 Teams 应用](create-new-project.md)
 * [预配云资源](provision.md)
 * [将 Teams 应用部署到云](deploy.md)
-* [发布 Teams 应用](TeamsFx-collaboration.md)
+* [发布 Teams 应用](../concepts/deploy-and-publish/appsource/publish.md)
 * [管理多个环境](TeamsFx-multi-env.md)

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d095bc5536742ad1e0b6d3e9053c6a18e5f1c0f3
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952322"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191199"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>在 Microsoft Teams 中上传应用
 
@@ -59,7 +59,7 @@ ms.locfileid: "64952322"
 
 ## <a name="manage-your-apps"></a>管理应用
 
-借助管理应用，用户可利用其提供的专用位置在 Teams 客户端上管理、更新和删除其应用、权限和订阅。 用户可以从“**管理应用**”中安装应用。
+通过管理应用，用户可以在 Teams 客户端上专门管理、更新和删除其应用、权限和订阅。用户可以从 **管理应用** 中安装应用。
 
 ### <a name="access-your-app"></a>访问你的应用
 
@@ -81,7 +81,7 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 
 如果进行代码更改 (这些更改已实时反映在 Teams 中)，则无需再次旁加载应用。 但是，如果更改了任何应用配置，则必须重新安装。
 
-如果应用有可用更新，则启用“**更新可用**”选项。 如果要更新，请按照以下步骤操作：
+如果应用有可用的更新，则会启用 **更新可用** 选项。若要更新，请按照以下步骤操作:
 
 1. 选择“**更新可用**”以查看更新。
 
@@ -115,7 +115,7 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [使用 Teams 应用](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b)
+>[创建适用于 Teams 会议的应用](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 ## <a name="see-also"></a>另请参阅
 
