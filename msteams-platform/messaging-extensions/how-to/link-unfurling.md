@@ -2,15 +2,15 @@
 title: 链接展开
 author: surbhigupta
 description: 了解如何使用应用清单在 Microsoft Teams 应用中添加带消息传递扩展的链接展开，或使用代码示例和示例手动添加。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b172320f6f116026fe5ea4b45c9c74da6ff82f07
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111246"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297182"
 ---
 # <a name="link-unfurling"></a>链接展开
 
@@ -25,7 +25,7 @@ ms.locfileid: "65111246"
 
 Azure DevOps 消息扩展使用链接展开查找粘贴到撰写消息区域(指向工作项)的 URL。 在下图中，用户已在 Azure DevOps 中粘贴工作项的 URL，消息扩展已将其解析为卡片:
 
-![链接展开示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="链接展开示例":::
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>将链接展开添加到应用清单
 
@@ -38,9 +38,9 @@ Azure DevOps 消息扩展使用链接展开查找粘贴到撰写消息区域(指
 
 1. 从 Microsoft Teams 客户端打开 “**App Studio**”，并选择“**清单编辑器**”选项卡。
 1. 加载应用清单。
-1. 在“**消息扩展**”页面上，添加要在“**消息处理程序**”节中查找的域。 下图说明了此流程:
+1. 在“**消息扩展**”页面上，添加要在“**消息处理程序**”部分中查找的域。下图说明了此过程：
 
-    ![App Studio 中的消息处理程序节](~/assets/images/link-unfurling.png)
+    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="App Studio 中的“消息处理程序”部分":::
 
 ### <a name="add-link-unfurling-manually"></a>手动添加链接展开
 

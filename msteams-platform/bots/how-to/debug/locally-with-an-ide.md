@@ -3,14 +3,14 @@ title: 在本地测试和调试机器人
 author: surbhigupta
 description: 了解如何使用 Teams 环境中的 IDE 通过旁加载、在 Teams 外部使用机器人仿真器以及直接与机器人交谈来在本地测试和调试机器人。
 ms.topic: overview
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4584cc7489c931f5f02ddbb1f5dd6be529924644
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: da6e04e4df8824f4dc13d63e0aa4cd5bb6afb48a
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111834"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297224"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
 
@@ -44,11 +44,11 @@ ngrok http <port> -host-header=localhost:<port>
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>在不上传到 Teams 的情况下测试机器人
 
-有时，可能需要测试机器人，而无需将其作为应用安装到 Teams 中。 我们提供了两种测试机器人的方法。 在不将其作为应用安装的情况下测试机器人有助于确保机器人可用并做出响应，但不允许测试可能已添加到机器人的所有 Microsoft Teams 功能。 如果需要全面测试机器人，请参阅[通过上传进行测试](#test-by-uploading-to-teams)。
+有时需要测试机器人，而无需将其作为应用安装到 Teams 中。 我们提供了两种测试机器人的方法。 在不将其作为应用安装的情况下测试机器人有助于确保机器人可用并做出响应，但不允许测试可能已添加到机器人的所有 Microsoft Teams 功能。 若要全面测试机器人，请参阅[通过上传进行测试](#test-by-uploading-to-teams)。
 
 ### <a name="use-the-bot-emulator"></a>使用机器人仿真器
 
-Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员在本地或远程测试和调试其机器人。 该仿真器可帮助你与机器人聊天并检查机器人发送和接收的消息。 这有助于验证你的机器人是否可用并做出响应。 但是，该仿真器不允许你测试已添加到机器人的任何特定于 Teams 的功能，机器人的响应也无法准确直观地表现它们在 Teams 中的呈现方式。 如果你需要测试其中任何一项，最好[上传机器人](#test-by-uploading-to-teams)。
+Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员在本地或远程测试和调试其机器人。 该仿真器可帮助你与机器人聊天并检查机器人发送和接收的消息。 这对于验证机器人是否可用并做出响应非常有用。 但是，该仿真器不允许你测试已添加到机器人的任何特定于 Teams 的功能，机器人的响应也无法准确直观地表现它们在 Teams 中的呈现方式。 如果需要测试其中任一项，则最好[上传机器人](#test-by-uploading-to-teams)。
 
 有关详细信息，请参阅[有关 Bot Framework Emulator 的完整说明](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true)。
 
@@ -57,12 +57,12 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 > [!Important]
 > 通过 ID 与机器人交谈仅用于基本测试目的。 添加到机器人的任何特定于 Teams 的功能都无法正常工作。
 
-你还可以使用机器人 ID 发起与机器人的对话。 通过其中一种方法添加机器人后，它将无法在频道对话中寻址，你也无法利用其他 Microsoft Teams 应用功能，例如选项卡或消息扩展。 可以通过以下方式之一发起对话：
+可以使用机器人 ID 发起与机器人的对话。 通过其中一种方法添加机器人后，它将无法在频道对话中寻址，你也无法利用其他 Microsoft Teams 应用功能，例如选项卡或消息扩展。 可以通过以下方式之一发起对话：
 
 * 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**频道**”下，选择“**添加到 Microsoft Teams**”。 Microsoft Teams 将启动与机器人的个人聊天。
 
 * 直接从 Microsoft Teams 中引用机器人的应用 ID：
-   1. 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**详细信息**”下，复制机器人的 **Microsoft 应用 ID**。
+   1. 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**详细信息**”下，复制机器人的“**Microsoft 应用 ID**”。
   
       ![获取机器人的应用 ID](~/assets/images/bots_appid_botframework.png)
   
@@ -73,7 +73,7 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
       应用 ID 必须解析为机器人名称。
 
    3. 选择机器人并发送消息以发起对话。
-      或者，可以将机器人的应用 ID 粘贴到 Microsoft Teams 左上角的搜索框中。 在搜索结果页中，导航到“**人员**”选项卡以查看机器人并开始与机器人聊天。
+      或者，可以将机器人的应用 ID 粘贴到 Microsoft Teams 左上角的搜索框中。 在搜索结果页中，转到“**人员**”选项卡以查看机器人并开始与机器人聊天。
 
 > [!Note]
 > 若要让 Microsoft Teams 引用机器人的应用 ID，请启用“[应用旁加载](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)”。
@@ -92,11 +92,11 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 
 ## <a name="disable-a-bot-in-teams"></a>在 Teams 中禁用机器人
 
-若要阻止机器人接收消息，请转到“**机器人仪表板**”并编辑 Microsoft Teams 频道。 清除“**在 Microsoft Teams 上启用**”选项。 这会阻止用户与机器人交互，但它仍是可发现的，并且用户仍可以将其添加到 Teams。
+若要阻止机器人接收消息，请转到“**机器人仪表板**”并编辑 Teams 频道。 清除”**在 Microsoft Teams 上启用**”选项。 这会阻止用户与机器人交互，但它仍是可发现的，并且用户仍可以将其添加到 Teams。
 
 ## <a name="delete-a-bot-from-teams"></a>从 Teams 中删除机器人
 
-若要从 Teams 中完全删除机器人，请转到“**机器人仪表板**”并编辑 Microsoft Teams 频道。 选择底部的“**删除**”按钮。 这会阻止用户发现、添加机器人和与机器人交互。 这不会从其他用户的 Teams 实例中删除机器人，但是，它会停止为用户运行。
+若要从 Teams 中完全删除机器人，请转到“**机器人仪表板**”并编辑 Teams 频道。 选择底部的“**删除**”按钮。 这会阻止用户发现、添加机器人和与机器人交互。 这不会从其他用户的 Teams 实例中删除机器人，但是，它会停止为用户运行。
 
 ## <a name="see-also"></a>另请参阅
 
