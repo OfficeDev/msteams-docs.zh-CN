@@ -4,12 +4,12 @@ description: 介绍卡片及其在机器人、连接器和消息扩展中的使�
 ms.localizationpriority: high
 keywords: 连接器机器人卡片消息传递
 ms.topic: overview
-ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 23ac23928a1fa1a31e41bd5b553612bf02c23728
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104453"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191255"
 ---
 # <a name="cards"></a>卡片
 
@@ -36,7 +36,7 @@ Teams 在三个不同的位置使用卡片：
 
 ## <a name="cards-in-connectors"></a>连接器中的卡
 
-卡片最初定义为 Outlook 和 Office 365 的一部分，现在用作 Office 365 连接器的一部分。 与许多 Office 365 应用程序一样，Teams 支持连接器。 有关详细信息，请参阅[适用于 Teams 的 Office 365 连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。 可以在 [ 可操作邮件卡参考 ](/outlook/actionable-messages/card-reference) 中找到连接器中的卡片规范。
+卡片最初定义为 Outlook 和 Office 365 的一部分，现在用作 Office 365 连接器的一部分。 与许多 Office 365 应用程序一样，Teams 支持连接器。 有关详细信息，请参阅[创建 Office 365 连接器](../webhooks-and-connectors/how-to/connectors-creating.md)。 可以在 [ 可操作邮件卡参考 ](/outlook/actionable-messages/card-reference) 中找到连接器中的卡片规范。
 
 ## <a name="cards-in-bots"></a>机器人中的卡片
 

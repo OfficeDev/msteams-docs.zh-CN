@@ -3,15 +3,15 @@ title: 对话事件
 author: WashingtonKayaker
 description: 如何使用代码示例处理来自 Microsoft Teams 机器人、频道事件更新、团队成员事件和消息回应事件的对话事件。
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: 事件, 机器人, 频道消息, 回应, 对话
-ms.openlocfilehash: 6d086ef2896a6fd19a128bcf4f1c8b363a21c5b3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: a168231b48e493402f0190f36e65cf2918ca7e83
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111540"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297154"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -1409,7 +1409,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
 
-使用这些安装和卸载事件时，在某些情况下，机器人在从 Teams 收到意外事件时会出现异常。 这会在以下情况下发生：
+使用这些安装和卸载事件时，在某些情况下，机器人在从 Teams 收到意外事件时会出现异常。这会在以下情况下发生：
 
 * 你没有使用 Microsoft Bot Framework SDK 来构建机器人，因此机器人在收到意外事件时会出现异常。
 * 你使用 Microsoft Bot Framework SDK 来构建机器人，并选择通过覆盖基本事件句柄来更改默认事件行为。

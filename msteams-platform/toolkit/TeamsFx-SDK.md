@@ -3,19 +3,19 @@ title: TeamsFx SDK
 author: MuyangAmigo
 description: 关于 TeamsFx SDK
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d54c3d962ecc9d1fd703bd4126d71564f8358794
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: aad897e7b4028363bcfa0f21a75b6da01fc57ec6
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111218"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297175"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
-TeamsFx 利用 Teams SSO 并将云资源向下访问到零配置的单行语句，从而帮助减少开发人员任务。 TeamsFx SDK 旨在用于浏览器和 Node.js 环境，常见场景包括:
+TeamsFx 使用 Teams SSO 并将云资源向下访问到零配置的单行语句，从而帮助减少开发人员任务。 TeamsFx SDK 旨在用于浏览器和 Node.js 环境，常见场景包括:
 
 * Teams 选项卡应用程序
 * Azure Function
@@ -55,7 +55,7 @@ npm install @microsoft/teamsfx
 
 ### <a name="create-microsoftgraphclient-service"></a>创建 `MicrosoftGraphClient` 服务
 
-要创建图形客户端对象并访问 Microsoft Graph API，需要凭据才可进行身份验证。 SDK 提供 API 以为开发人员进行配置。
+要创建图形客户端对象并访问 Microsoft Graph API，需要凭据才可进行身份验证。此 SDK 可为开发人员提供用于配置的 API。
 
 <br>
 
@@ -105,7 +105,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="teamsfx-class"></a>TeamsFx 类
 
-默认情况下，TeamsFx 类实例从环境变量访问所有 TeamsFx 设置。 还可以设置自定义配置值以替换默认值。 请查看 [替换配置](#override-configuration)，从而了解详细信息。 创建 TeamsFx 实例时，还需要指定标识类型。 存在以下两种标识类型：
+默认情况下，TeamsFx 类实例从环境变量访问所有 TeamsFx 设置。 还可以设置自定义配置值以替换默认值。 请查看 [替换配置](#override-configuration) 以了解详细信息。 创建 TeamsFx 实例时，还需要指定标识类型。 存在以下两种标识类型：
 
 * 用户标识
 * 应用程序标识
@@ -134,7 +134,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="credential"></a>Credential
 
-初始化 TeamsFx 时，必须选择标识类型。 在初始化 TeamsFx 时指定标识类型后，SDK 会使用不同类型的凭据类表示标识，并通过相应的身份验证流获取访问令牌。
+初始化 TeamsFx 时必须选择标识类型。在初始化 TeamsFx 时指定标识类型后，SDK 会使用不同类型的凭据类来表示标识，并通过相应的身份验证流获取访问令牌。
 
 有三个凭据类可以简化身份验证。 [凭据文件夹](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential)。 凭据类可实现 `TokenCredential` 接口，该接口广泛用于 Azure 库 API，旨在为特定作用域提供访问令牌。 其他 API 依赖于凭据调用 `TeamsFx:getCredential()` 来获取 `TokenCredential` 实例。
 
@@ -159,13 +159,13 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 机器人相关类存储在 [机器人文件夹](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot) 下。
 
-`TeamsBotSsoPrompt` 与机器人框架很好地集成。 开发机器人应用程序并想要利用机器人 SSO 时，它会简化身份验证流程。
+`TeamsBotSsoPrompt` 与机器人框架很好地集成。开发机器人应用程序并想要利用机器人 SSO 时，它简化了身份验证过程。
 
 所需配置: `initiateLoginEndpoint`、`tenantId`、`clientId`和 `applicationIdUri`。
 
 ### <a name="supported-functions"></a>受支持的函数
 
-TeamsFx SDK 提供多个函数，可用于简化第三方库的配置。 它们位于 [核心文件夹](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) 下。
+TeamsFx SDK 提供了多个函数，可用于简化第三方库的配置。它们位于[核心文件夹](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core)下。
 
 *  Microsoft Graph 服务: `createMicrosoftGraphClient` 和 `MsGraphAuthProvider` 有助于创建经过身份验证的 Graph 实例。
 *  SQL: `getTediousConnectionConfig` 返回繁琐的连接配置。
