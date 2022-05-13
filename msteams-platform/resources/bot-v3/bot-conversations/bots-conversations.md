@@ -2,15 +2,15 @@
 title: 使用机器人发送和接收消息
 description: 介绍如何在 Microsoft Teams 中使用机器人发送和接收消息
 ms.topic: overview
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams 机器人消息
 ms.date: 05/20/2019
-ms.openlocfilehash: dd43c31147c43c06b4f96c709fb0e5af5cd6bb41
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 0d4665d098e0e14fa3de5f2667c7e970b545b284
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111596"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296971"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与 Microsoft Teams 机器人进行对话
 
@@ -25,13 +25,13 @@ ms.locfileid: "65111596"
 取决于机器人所处的对话种类，它们的行为可能略微不同：
 
 * [频道和群聊对话中的机器人](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)要求用户@提及机器人来在频道中调用它。
-* [单个用户对话中的机器人](~/resources/bot-v3/bot-conversations/bots-conv-personal.md)不需要@提及 - 用户只需键入即可。
+* [单个用户对话中的机器人](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) 不需要@提及 - 用户只需键入即可。
 
-为了让机器人在特定范围内工作，它应该在清单中列为支持该范围。 [清单参考](~/resources/schema/manifest-schema.md)中进一步定义和讨论了范围。
+为了使机器人在特定搜索范围中工作，它应在清单中列为支持该搜索范围。在 [清单参考](~/resources/schema/manifest-schema.md) 中进一步定义和讨论搜索范围。
 
 ## <a name="proactive-messages"></a>主动邮件
 
-机器人可以参与对话或启动对话。 大多数通信是对另一条消息的响应。 如果机器人启动会话，则称为“*主动消息*”。 示例包括：
+机器人可以参与对话或启动对话。 大多数通信是对另一条消息的响应。 如果机器人启动会话，则称为 *主动消息*。 示例包括：
 
 * 欢迎消息
 * 事件通知
@@ -43,7 +43,7 @@ ms.locfileid: "65111596"
 
 机器人还支持事件样式消息。 有关详细信息，请参阅[处理 Microsoft Teams 中的机器人事件](~/resources/bot-v3/bots-notifications.md)。 当前不支持语音。
 
-消息在所有范围内大部分都是相同的，但是在 UI 中访问机器人的方式以及你需要了解的幕后差异方面有些区别。
+消息在所有范围内都是相同的，但是在 UI 中访问机器人的方式以及需要了解的幕后差异方面有些区别。
 
 基本对话通过 Bot Framework Connector 进行处理，它是单个 REST API，使机器人能够与 Teams 和其他频道通信。 Bot Builder SDK 提供对此 API 的轻松访问、管理对话流和状态的附加功能，以及整合认知服务（如自然语言处理 (NLP)）的简单方法。
 
@@ -54,7 +54,7 @@ ms.locfileid: "65111596"
 | 格式 | 从用户到机器人  | 从机器人到用户 |  注释 |
 | --- | :---: | :---: | --- |
 | 格式文本  | ✔ | ✔ |  |
-| 图片 | ✔ | ✔ | 最大为 1024×1024 和 1 MB，且采用 PNG、JPEG 或 GIF 格式；不支持动画 GIF。 |
+| 图片 | ✔ | ✔ | 最大为 1024×1024 MB 以及 1 MB 的 PNG、JPEG 或 GIF 格式; 不支持动画 GIF。 |
 | 卡片 | ✖ | ✔ | 有关支持的卡片，请参阅 [Teams 卡片参考](~/task-modules-and-cards/cards/cards-reference.md)。 |
 | 表情符号 | ✖ | ✔ | Teams 目前支持通过 UTF-16 进行表情符号处理，例如 U+1F600 代表露齿笑。 |
 |
@@ -74,7 +74,7 @@ ms.locfileid: "65111596"
 
 图片是通过将附件添加到消息来发送的。 可以在 [Bot Framework 文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)中找到有关附件的详细信息。
 
-图片最大为 1024×1024 和 1 MB，且采用 PNG、JPEG 或 GIF 格式；不支持动画 GIF。
+图片最多可以为 1024×1024 MB 以及 1 MB 的 PNG、JPEG 或 GIF 格式; 不支持动画 GIF。
 
 建议使用 XML 指定每个图像的高度和宽度。 如果使用 Markdown，则图像大小默认为 256×256。 例如：
 
@@ -85,17 +85,17 @@ ms.locfileid: "65111596"
 
 根据声明的范围，机器人可以在以下上下文中接收消息：
 
-* **个人聊天** 用户只需在聊天历史记录中选择添加的机器人，或在新聊天的“收件人：”框中键入其名称或应用 ID，即可与机器人进行私人对话。
+* **个人聊天** 用户可以在聊天历史记录中选择添加的机器人，或在新聊天的“收件人:”框中键入其名称或应用 ID，即可与机器人进行私人对话。
 * **频道** 如果已将机器人添加到团队，则可以在频道中提及机器人（“@*botname*”）。 请注意，对频道中机器人的其他回复需要提及机器人。 它不会对未提及它的回复作出响应。
 
-对于传入消息，机器人会收到类型为 `messageType: message` 的[活动](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true)对象。 虽然 `Activity` 对象可以包含其他类型的信息，例如发送给机器人的[频道更新](~/resources/bot-v3/bots-notifications.md#channel-updates)，但 `message` 类型表示机器人和用户之间的通信。
+对于传入消息，机器人会收到类型 `messageType: message` 的 [活动](../../../bots/how-to/conversations/conversation-messages.md) 对象。尽管 `Activity` 对象可以包含其他类型的信息 (如发送到机器人的 [通道更新](~/resources/bot-v3/bots-notifications.md#channel-updates))，但 `message` 类型代表了机器人和用户之间的通信。
 
-机器人会收到包含用户消息 `Text` 的有效负载以及有关用户的其他信息、消息源和 Teams 信息。 请注意：
+机器人会收到包含用户消息 `Text` 的有效负载以及有关用户的其他信息、消息源和 Teams 信息。注意:
 
 * `timestamp` 以协调世界时 (UTC) 显示的消息日期和时间。
 * `localTimestamp` 以发件人时区显示的消息日期和时间。
-* `channelId` 始终为“msteams”。 这指的是 Bot Framework 频道，而不是 Teams 频道。
-* `from.id` 机器人用户的唯一和加密 ID；如果应用需要存储用户数据，则适合作为密钥。 它对于机器人是唯一的，不能以任何有意义的方式直接在机器人实例外部用于标识该用户。
+* `channelId` 始终为“msteams”。这指的是机器人框架频道，而不是团队频道。
+* `from.id` 机器人用户的唯一和加密 ID；如果应用需要存储用户数据，则适合作为密钥。 这对于机器人是唯一的，不能以任何有意义的方式直接在机器人实例外部用于标识该用户。
 * `channelData.tenant.id` 用户的租户 ID。
 
 > [!NOTE]
@@ -168,8 +168,8 @@ ms.locfileid: "65111596"
 * `channel` 仅在提及机器人时在频道上下文中传递，或者对在已添加机器人的 Teams 频道的事件传递。
   * `id` 频道的 GUID。
   * `name` 频道名称；仅对[频道修改事件](~/resources/bot-v3/bots-notifications.md#channel-updates)传递。
-* `channelData.teamsTeamId` 已弃用。 包含此属性只是为了向后兼容。
-* `channelData.teamsChannelId` 已弃用。 包含此属性只是为了向后兼容。
+* `channelData.teamsTeamId` 已弃用。仅为向后兼容性而包含此属性。
+* `channelData.teamsChannelId` 已弃用。仅为向后兼容性而包含此属性。
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>示例 channelData 对象（channelCreated 事件）
 
@@ -212,7 +212,7 @@ string tenantId = channelData.Tenant.Id;
 
 机器人可以在发送消息后以内联方式动态更新消息，而不是将消息设置为数据的静态快照。 可以针对轮询更新、按下按钮后修改可用操作或任何其他异步状态更改等方案使用动态消息更新。
 
-新消息在类型上不需要与原始消息匹配。 例如，如果原始消息包含附件，则新消息可以是简单的文本消息。
+新消息在类型上不需要与原始消息匹配。 例如，如果原始消息包含附件，则新消息可以是文本消息。
 
 > [!NOTE]
 > 只能更新在单附件消息和轮播布局中发送的内容。 不支持将更新发布到列表布局中包含多个附件的消息。
@@ -273,13 +273,13 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 ## <a name="starting-a-conversation-proactive-messaging"></a>启动对话（主动消息传递）
 
-可以与用户创建个人对话，或在团队机器人的频道中启动新的回复链。 这样便可以向一个或多个用户发送消息，而无需让用户先与机器人联系。 有关详细信息，请参阅下列主题：
+可以与用户创建个人对话，或在团队机器人的频道中启动新的回复链。 这让你可以向用户发送信息，而无需要用户首先主动与你的机器人联系。 有关详细信息，请参阅以下文章：
 
 有关机器人启动的对话的更多常规信息，请参阅[机器人的主动消息传递](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
 
 ## <a name="deleting-messages"></a>删除消息
 
-可以使用 [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted) 中的连接器 [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete) 方法删除消息。
+可以使用 [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted) 中的连接器 [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html) 方法删除消息。
 
 ```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {
