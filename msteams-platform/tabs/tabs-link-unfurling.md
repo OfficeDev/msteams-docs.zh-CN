@@ -4,13 +4,13 @@ author: Rajeshwari-v
 description: 了解如何展开链接、打开阶段视图并使用 Microsoft Teams 应用固定选项卡。 了解阶段视图以及如何使用代码示例和样本通过自适应卡片调用它。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: high
-ms.openlocfilehash: 0f1d5db388e937fc382a045d40cc47a1350c033b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.localizationpriority: medium
+ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110293"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296957"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -22,7 +22,7 @@ ms.locfileid: "65110293"
 
 ## <a name="advantage-of-stage-view"></a>阶段视图的优点
 
-阶段视图有助于提供在 Teams 中查看内容的更无缝体验。 用户可以在不离开上下文的情况下打开和查看应用提供的内容，并且他们可以将内容固定到聊天或频道，以便将来快速访问，从而提高用户与应用的互动。
+阶段视图有助于提供在 Teams 中查看内容的更无缝体验。用户可以在不离开上下文的情况下打开和查看应用提供的内容，并且他们可以将内容固定到聊天或频道，以便将来快速访问，从而提高用户与应用的互动。
 
 ## <a name="stage-view-vs-task-module"></a>阶段视图与任务模块
 
@@ -82,12 +82,12 @@ ms.locfileid: "65110293"
 
 下面是调用阶段视图的过程：
 
-* 当用户选择“**视图**”时，机器人将收到 `invoke` 请求。 请求类型为 `composeExtension/queryLink`。
+* 当用户选择 **视图** 时，机器人会收到 `invoke` 请求。请求类型为 `composeExtension/queryLink`。
 * 来自机器人的 `invoke` 响应包含类型为 `tab/tabInfoAction` 的自适应卡片。
 * 机器人使用 `200` 代码进行响应。
 
 > [!NOTE]
-> 在 Teams 移动客户端上，如果为通过 [Teams 应用商店](/platform/concepts/deploy-and-publish/apps-publish-overview.md)分发的应用调用阶段视图并且没有针对移动设备优化的体验，则会打开设备的默认 Web 浏览器。 浏览器将打开 `TabInfo` 对象的 `websiteUrl` 参数中指定的 URL。
+> 在 Teams 移动客户端上，如果为通过 [Teams 应用商店](/platform/concepts/deploy-and-publish/apps-publish-overview.md) 分发的应用调用阶段视图并且没有针对移动设备优化的体验，则会打开设备的默认 Web 浏览器。浏览器打开 `TabInfo` 对象 `websiteUrl` 参数中指定的 URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
@@ -138,8 +138,8 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | 字符串 | 64 | 此属性是选项卡所显示实体的唯一标识符。 这是必填字段。|
 | `name` | String | 128 | 此属性是频道界面中选项卡的显示名称。 这是一个可选字段。|
-| `contentUrl` | String | 2048 | 此属性是指向要在 Teams 画布中显示的实体 UI 的 https:// URL。 这是必填字段。|
-| `websiteUrl?` | 字符串 | 2048 | 此属性是当用户选择在浏览器中查看时要指向的 https:// URL。 这是必填字段。|
+| `contentUrl` | String | 2048 | 此属性是指向要在 Teams 画布中显示的实体 UI 的 https:// URL。这是必填字段。|
+| `websiteUrl?` | 字符串 | 2048 | 此属性是当用户选择在浏览器中查看时要指向的 https:// URL。这是必填字段。|
 | `removeUrl?` | String | 2048 | 此属性是指向用户删除选项卡时要显示的 UI 的 https:// URL。这是一个可选字段。|
 
 ## <a name="code-sample"></a>代码示例

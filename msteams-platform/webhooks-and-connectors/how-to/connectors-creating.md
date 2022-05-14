@@ -3,19 +3,19 @@ title: 创建 Office 365 连接器
 author: laujan
 description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器入门
 keywords: teams Office365 连接器
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 1ec406d633eb2db0d3564984d5451d58d41b4c14
-ms.sourcegitcommit: 38c435e806bb7c2c30efd10e8264c5c06a43fad3
+ms.openlocfilehash: 8091edf34ff53930afea03cd2c4833bf6a000158
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65136966"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297147"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
-使用 Microsoft Teams 应用，可以在 Teams 中添加现有 Office 365 连接器或生成新的连接器。 有关详细信息，请参阅[生成自己的连接器](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)。
+使用 Microsoft Teams 应用，可以在 Teams 中添加现有 Office 365 连接器或生成新的连接器。更多相关信息，请参阅 [生成自己的连接器](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)。
 
 ## <a name="add-a-connector-to-teams-app"></a>将连接器添加到 Teams 应用
 
@@ -26,7 +26,7 @@ ms.locfileid: "65136966"
 要使连接器仅在 Microsoft Teams 中工作，请按照[将应用发布到 Microsoft Teams 商店](~/concepts/deploy-and-publish/appsource/publish.md)文章的说明提交连接器。 否则，注册的连接器适用于支持应用程序的所有 Office 365 产品，包括 Outlook 和 Teams。
 
 > [!IMPORTANT]
-> 在连接器开发人员仪表板中选择“**保存**”后，会注册连接器。 如果要在 AppSource 中发布连接器，请按照[将 Microsoft Teams 应用发布到 AppSource](~/concepts/deploy-and-publish/apps-publish.md) 中的说明操作。 如果不想在 AppSource 中发布应用，请将其直接分发给组织。 在[为组织发布连接器](#publish-connectors-for-the-organization)以后，无需在连接器仪表板上执行进一步操作。
+> 在连接器开发人员仪表板中选择“**保存**”后，会注册连接器。 如果要在 AppSource 中发布连接器，请按照[将 Microsoft Teams 应用发布到 AppSource](~/concepts/deploy-and-publish/apps-publish.md) 中的说明操作。 如果不想在 AppSource 中发布应用，请将其直接分发给组织。 在为组织发布连接器以后，无需在连接器仪表板上执行进一步操作。
 
 ### <a name="integrate-the-configuration-experience"></a>集成配置体验
 
@@ -52,7 +52,7 @@ ms.locfileid: "65136966"
     > 必须调用 `microsoftTeams.settings.setValidityState(true)` 作为对用户选择或字段更新的响应。
 
 1. 注册 `microsoftTeams.settings.registerOnSaveHandler()` 事件处理程序，当用户选择“**保存**”时调用。
-1. 调用 `microsoftTeams.settings.setSettings()` 以保存连接器设置。 如果用户尝试更新连接器的现有配置，则配置对话框中也会显示已保存的设置。
+1. 调用 `microsoftTeams.settings.setSettings()` 以保存连接器设置。如果用户尝试更新连接器的现有配置，则配置对话框中也会显示已保存的设置。
 1. 调用 `microsoftTeams.settings.getSettings()` 以提取 Webhook 属性，包括 URL。
 
     > [!NOTE]
@@ -208,7 +208,7 @@ ms.locfileid: "65136966"
 
 ## <a name="test-your-connector"></a>测试连接器
 
-若要测试连接器，请使用任何其他应用将其上传到团队中。 可以使用两个图标文件和连接器开发人员仪表板中的清单文件来创建 .zip 包，并按照[在清单中包含连接器](#include-the-connector-in-your-manifest)中的说明进行修改。
+若要测试连接器，请使用任何其他应用将其上传到团队中。可以使用两个图标文件和连接器开发人员仪表板中的清单文件来创建 .zip 包，并按照 [在清单中包含连接器](#include-the-connector-in-your-manifest) 中的说明进行修改。
 
 上传应用后，从任意频道打开连接器列表。 滚动到底部，查看“**上传**”部分中的应用：
 
@@ -224,7 +224,7 @@ ms.locfileid: "65136966"
 ## <a name="distribute-webhook-and-connector"></a>分发 Webhook 和连接器
 
 1. 直接为团队[设置传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook)。
-1. 添加[配置页](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)并在 Office 365 连接器中[发布传入 Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization)。
+1. 添加[配置页](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)并在 Office 365 连接器中发布传入 Webhook。
 1. 在 [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) 提交过程中打包并发布连接器。
 
 ## <a name="code-sample"></a>代码示例

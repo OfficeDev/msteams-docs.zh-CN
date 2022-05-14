@@ -3,15 +3,15 @@ title: 了解如何在面向 Teams 应用程序开发人员的 GitHub、Azure De
 author: MuyangAmigo
 description: CI/CD 模板
 ms.author: ruhe
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: 2242f5820495cc3004b7fcbf9c65bce94e7220d1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 7f2e3c10fe7658ba7138aef8ddbc1028d5dcaca4
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111561"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297133"
 ---
 # <a name="set-up-cicd-pipelines"></a>设置 CI/CD 管道
 
@@ -175,7 +175,7 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 
 以下是可以对项目所做的一些更改：
 
-1. 更改 CI 流的触发方式。 默认情况下，当将新更改推送到 **dev** 分支时，使用 **pollSCM** 的触发器。
+1. 更改 CI 流的触发方式。默认情况下，当将新更改推送到 **dev** 分支时，使用 **pollSCM** 的触发器。
 1. 确保拥有 npm 生成脚本或自定义在自动化代码中生成的方式。
 1. 确保有一个 npm 测试脚本，此脚本返回零以获得成功或更改测试命令。
 
@@ -184,7 +184,7 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 
 执行以下步骤自定义 CD 管道：
 
-1. 更改 CD 流。 默认情况下，是在将新更改推送到 `main` 分支时使用 `pollSCM` 的触发器。
+1. 更改 CD 流。默认情况下，是在将新更改推送到 `main` 分支时使用 `pollSCM` 的触发器。
 1. 根据需要更改生成脚本。
 1. 如果没有测试，请删除测试脚本。
 
@@ -213,7 +213,7 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 执行以下步骤来创建 Azure 服务主体：
 
 1. 在单个租户中注册 Microsoft Azure Active Directory (Azure AD) 应用程序。
-2. 将角色分配给 Azure AD 应用程序以访问 Azure 订阅。 建议使用 `Contributor` 角色。
+2. 将角色分配给 Azure AD 应用程序以访问 Azure 订阅。建议使用 `Contributor` 角色。
 3. 创建新的 Azure AD 应用程序密钥。
 
 > [!TIP]
@@ -243,4 +243,4 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 * [GitHub Actions 快速入门](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [创建第一个 Azure DevOps 管道](/azure/devops/pipelines/create-first-pipeline)
 * [创建第一个 Jenkins 管道](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
-* [使用 Microsoft Teams 开发人员门户管理应用](/concepts/build-and-test/teams-developer-portal)
+* [使用 Microsoft Teams 开发人员门户管理应用](../concepts/build-and-test/teams-developer-portal.md)

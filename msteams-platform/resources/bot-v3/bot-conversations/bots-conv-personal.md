@@ -2,15 +2,15 @@
 title: 与机器人的一对一对话
 description: 介绍在 Microsoft Teams 中与机器人进行一对一对话的端到端方案
 keywords: Teams 方案 1on1 1to1 对话机器人
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: d38285c212416d81a2108524946f0f9732a8dae9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: eb08b542c707d9f520912cd04ca5b1b2b740d81c
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111939"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297189"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>与 Microsoft Teams 机器人进行个人（一对一）对话
 
@@ -33,4 +33,4 @@ Microsoft Teams 中出色的机器人可帮助用户获取所需信息，所有�
 
 ## <a name="best-practice-welcome-messages-in-personal-conversations"></a>最佳做法：个人对话中的欢迎消息
 
-在用户首次（并且仅限首次）发起与机器人的个人聊天时，机器人应向个人聊天 [主动发送](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) 欢迎消息。 此建议不适用于在频道中进行首次联系的情况。
+在用户首次（并且仅限首次）发起与机器人的个人聊天时，机器人应向个人聊天 [主动发送](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) 欢迎消息。此建议不适用于频道中的首次联系人。

@@ -2,15 +2,15 @@
 title: 应用设计过程
 author: heath-hamilton
 description: 大致了解如何以及何时可以使用 Microsoft 工具和资源设计出有效的 Microsoft Teams 应用。
-ms.localizationpriority: high
+ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: b59c2c09240478899ff66e6554719f0f46bc791c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111267"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297217"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Microsoft Teams 应用的设计过程
 
@@ -20,7 +20,7 @@ ms.locfileid: "65111267"
 
 ## <a name="plan-your-app"></a>计划应用
 
-设计高质量的 Teams 应用需要了解你希望应用执行的操作以及你认为用户会如何使用它。 但是，在开始设计之前，请回答以下问题：
+设计高质量的 Teams 应用需要你了解希望应用执行的操作以及你认为人们使用它的方式。但是，在开始设计之前，请回答以下问题：
 
 * 你的用户是谁？
 * 他们有什么问题？
@@ -113,7 +113,7 @@ UI 模板是复杂的高保真设计，适用于常见的 Teams 用例和工作�
 
 无论是刚开始使用应用还是已经接近生产就绪的应用，建议定期查看以下资源：
 
-* **Microsoft Teams 应用商店验证准则**：提供所有 Teams 应用应努力制定的标准，而不仅仅是应用商店中列出的应用。 有关详细信息，请参阅 [ 指南 ](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
+* **Microsoft Teams 应用商店验证准则**：提供所有 Teams 应用应努力制定的标准，而不仅仅是应用商店中列出的应用。有关详细信息，请参阅 [准则](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 * **设计最佳做法**：这些文档和 UI 工具包提供了设计高质量应用的最佳做法。 例如，请参阅 [ 设计机器人的最佳做法 ](~/bots/design/bots.md#best-practices)。
 
 ## <a name="see-also"></a>另请参阅

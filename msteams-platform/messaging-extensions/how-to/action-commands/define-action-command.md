@@ -2,15 +2,15 @@
 title: 定义消息扩展操作命令
 author: surbhigupta
 description: 消息传递扩展操作命令及应用清单示例概述
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 9a39b01f7ccbf45e33be89aef4411e1d2fba8108
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135743"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297210"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -78,7 +78,7 @@ ms.locfileid: "65135743"
 可以使用 **App Studio** 或 **开发人员门户** 创建操作命令。
 
 > [!NOTE]
- > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 6 月 30 日弃用。
+ > 如果你一直在使用 App Studio，我们建议你尝试开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发、管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日之前弃用。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 

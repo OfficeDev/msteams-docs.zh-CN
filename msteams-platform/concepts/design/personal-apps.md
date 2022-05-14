@@ -1,21 +1,21 @@
 ---
 title: 设计个人应用
-description: 了解如何设计 Teams 个人应用并获取 Microsoft Teams UI 工具包、创建组件，例如仪表板、窗体、移动版和桌面版任务板体验。 了解开发个人应用的最佳做法。
+description: 了解如何设计 Teams 个人应用并获取 Microsoft Teams UI 工具包、创建组件，例如仪表板、窗体、移动版和桌面版任务板体验。了解开发个人应用的最佳做法。
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: UI Kit 个人应用 Webview 导航 机器人选项卡 iframe 仪表板 表单模板
-ms.openlocfilehash: 51087d0f055130e822d837d9e78eda5b1b28966a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111813"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297231"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为 Microsoft Teams 设计个人应用
 
-个人应用可以是机器人、专用工作区或两者。 有时，它的功能类似于创建或查看内容的地方，有时，当应用程序配置为多个频道中的选项卡时，它为用户提供了他们所有内容的鸟瞰图。
+个人应用可以是机器人、专用工作区或两者兼顾。有时，它的功能类似于创建或查看内容的地方，有时，当应用程序配置为多个频道中的选项卡时，它为用户提供了他们所有内容的鸟瞰图。
 
 为指导应用设计，以下信息描述并说明用户可以如何在 Teams 中添加、使用和管理个人应用。
 
@@ -36,7 +36,7 @@ ms.locfileid: "65111813"
 
 使用专用工作区，用户可以在中心位置查看对他们有意义的应用内容，无需离开 Teams。
 
-（实现说明：专用工作区基于 [*个人选项卡*](../../build-your-first-app/build-personal-tab.md)功能。）
+（实现说明：专用工作区基于 [*个人选项卡*](../../tabs/how-to/create-personal-tab.md)功能。）
 
 ### <a name="anatomy-personal-app-private-workspace"></a>剖析: 个人应用（专用工作区）
 
@@ -89,7 +89,7 @@ ms.locfileid: "65111813"
 
 ## <a name="use-a-personal-app-bot"></a>使用个人应用 （机器人）
 
-个人应用可以包括用于一对一对话的机器人和私人通知（例如，当同事在美工板上发布评论时）。 用户在指定的选项卡中与机器人交互。
+个人应用包括用于一对一对话的机器人和私人通知（例如，当同事在美工板上发布评论时）。用户可在你指定的选项卡中与机器人交互。
 
 ### <a name="anatomy-personal-app-bot"></a>剖析：个人应用（机器人）
 

@@ -3,15 +3,15 @@ title: 为机器人创建命令菜单
 author: surbhigupta
 description: 通过代码示例了解如何为 Microsoft Teams 机器人创建命令菜单。
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
 keywords: 命令菜单 撰写消息对话 @提及
-ms.openlocfilehash: 37d4c5f451efe9fe2caf137a89d12cdbbdb178d1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111841"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296964"
 ---
 # <a name="bot-command-menus"></a>机器人命令菜单
 
@@ -41,15 +41,17 @@ ms.locfileid: "65111841"
 
 1. 打开 Teams，然后从左窗格中选择“**应用**”。 在“**应用**”页中，搜索 **App Studio**，然后选择“**打开**”。
    > [!NOTE]
-   > 如果没有 **App Studio**，可以下载它。 有关详细信息，请参阅[安装 App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)。
+   > 如果没有 **APP Studio**，可以下载它。 有关详细信息，请参阅[安装 App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)。
 
-    :::image type="content" source="/media/AppStudio.png" alt-text="安装 App Studio"lightbox="media/AppStudio.png"border="true":::
+  > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
 
-2. 在 **App Studio** 中，选择“**清单编辑器**”选项卡。如果没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅[更新应用包](~/get-started/deploy-csharp-app-studio.md)。
+  :::image type="content" source="/media/AppStudio.png" alt-text="安装 App Studio"lightbox="media/AppStudio.png"border="true":::
+
+2. 在 **App Studio** 中，选择 **清单编辑器** 选项卡。如果没有现有应用包，可以创建或导入现有应用。更多相关信息，请参阅 [更新应用包](~/get-started/deploy-csharp-app-studio.md)。
 
 3. 在 **清单编辑器** 的左窗格和“**功能**”部分中，选择“**机器人**”。
 
-4. 在 **清单编辑器** 的右窗格和“**命令**”部分中，选择“**添加**”。 将出现“**新建命令**”屏幕。
+4. 在 **清单编辑器** 的右窗格和 **命令** 部分中，选择 **添加**。出现 **新命令** 屏幕。
 
     :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="选择应用包"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
 
@@ -63,7 +65,7 @@ ms.locfileid: "65111841"
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑 Manifest.json 为机器人创建命令菜单
 
-创建命令菜单的另一种方法是在开发机器人源代码时直接在清单文件中创建。 若要使用此方法，请遵循以下几点：
+创建命令菜单的另一种方法是在开发机器人源代码时直接在清单文件中创建。若要使用此方法，请遵循以下几点:
 
 * 每个菜单最多支持 10 个命令。
 * 创建一个在所有范围内生效的单个命令菜单。
@@ -190,7 +192,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-可以使用 Bot Framework 提供的一个静态方法分析消息文本的 **@提及** 部分。 该方法是 `TurnContext` 类方法，名为 `remove_recipient_mention`。
+可以使用“聊天机器人框架”提供的一个静态方法分析消息文本的 **@提及** 部分。它是名为 `remove_recipient_mention` 的 `TurnContext` 类方法。
 
 用于分析消息文本的“**\@提及**”部分的 Python 代码如下所示：
 
@@ -207,7 +209,7 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 下面是命令菜单最佳做法：
 
 * 保持简单：机器人菜单旨在呈现机器人的关键功能。
-* 保持简短：菜单选项不能冗长，不能是复杂的自然语言语句。 它们必须是简单的命令。
+* 保持简短: 菜单选项不能冗长，不能是复杂的自然语言语句。它们必须是简单的命令。
 * 始终可调用：无论机器人所在的聊天或对话的状态如何，机器人菜单操作或命令必须始终可用。
 
 > [!NOTE]

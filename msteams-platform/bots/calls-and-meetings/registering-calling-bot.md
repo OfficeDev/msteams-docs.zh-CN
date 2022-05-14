@@ -2,14 +2,14 @@
 title: 注册 Microsoft Teams 的通话和会议机器人
 description: 了解如何为 Microsoft Teams 注册新的音频/视频通话机器人、创建新机器人或添加通话功能以及添加图形权限。
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: 通话机器人音频/视频音频视频媒体
-ms.openlocfilehash: 53c12b3d65ad909088e18081ed4b38a77919844b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 71ab66ab6c5f53405897447b8d531ed0ce6dac99
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111414"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297161"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>注册 Microsoft Teams 的通话和会议机器人
 
@@ -23,8 +23,8 @@ ms.locfileid: "65111414"
 
 通话和联机会议机器人在 manifest.json 中具有以下两个附加设置，用于在 Teams 中为机器人启用音频或视频。
 
-* `bots[0].supportsCalling`. 如果存在且设置为 `true`，则 Teams 允许机器人参与通话和联机会议。
-* `bots[0].supportsVideo`. 如果存在且设置为 `true`，则 Teams 知道机器人支持视频。
+* `bots[0].supportsCalling`。如果存在且设置为 `true`，则 Teams 允许机器人参与通话和联机会议。
+* `bots[0].supportsVideo`。如果存在且设置为 `true`，则 Teams 知道机器人支持视频。
 
 如果希望 IDE 针对这些值正确验证通话和会议机器人的 manifest.json 架构，则可以更改 `$schema` 属性，如下所示：
 
@@ -40,7 +40,7 @@ ms.locfileid: "65111414"
 
 若要为 Teams 创建新机器人，请执行以下操作：
 
-1. 使用此链接创建新的机器人 `https://dev.botframework.com/bots/new`。 或者，如果在 Bot Framework 门户中选择“**创建机器人**”按钮，则在 Microsoft Azure 中创建机器人，必须为其创建 Azure 帐户。
+1. 使用此链接创建新机器人，`https://dev.botframework.com/bots/new`。或者，如果在 Bot Framework 门户中选择“**创建机器人**”按钮，则在 Microsoft Azure 中创建机器人，必须为其创建 Azure 帐户。
 1. 添加 Teams 频道。
 1. 选择 Teams 频道页面上的“**通话**”选项卡。 选择“**启用通话**”，然后使用接收传入通知的 HTTPS URL 更新 **Webhook（用于通话）**，例如 `https://contoso.com/teamsapp/api/calling`。 有关详细信息，请参阅[配置频道](/bot-framework/portal-configure-channels)。
 
@@ -78,7 +78,7 @@ Graph 提供精细的权限来控制应用对资源的访问权限。 你可以�
 
 ### <a name="assign-permissions"></a>分配权限
 
-如果想要使用 [Microsoft Azure Active Directory (Azure AD) V1 端点](/azure/active-directory/develop/azure-ad-endpoint-comparison)，则必须使用 [Microsoft Azure 门户](https://aka.ms/aadapplist)提前配置机器人的应用程序权限。
+如果想要使用 [Microsoft Azure Active Directory (Azure AD) V1 端点](/azure/active-directory/develop/azure-ad-endpoint-comparison)，则必须使用 [Microsoft Azure 门户](https://portal.azure.com)提前配置机器人的应用程序权限。
 
 ### <a name="get-tenant-administrator-consent"></a>获取租户管理员同意
 
