@@ -2,14 +2,14 @@
 title: 从 Web 应用共享到 Teams
 description: 使用代码示例，了解如何通过网站预览将“共享到 Teams”嵌入式按钮添加到网站上。
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: 共享 Teams 共享到 Teams
-ms.openlocfilehash: 1f6a32c150fce323df19f452895184a4233c57fc
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111729"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439298"
 ---
 # <a name="share-to-teams-from-web-apps"></a>从 Web 应用共享到 Teams
 
@@ -64,6 +64,17 @@ ms.locfileid: "65111729"
       data-preview="false">
     </div>
     ```
+
+1. 若要在撰写框中显示所选消息，可在属性中 `data-msg-text` 定义文本。
+
+     ```html
+     <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-msg-text="<default-message-to-be-populated-in-compose-box>"
+      data-preview="false">
+      </div>
+     ```
 
 1. 如果页面动态呈现内容，可使用 `shareToMicrosoftTeams.renderButtons()` 方法来强制 **Share** 在管道中的适当位置呈现。
 
