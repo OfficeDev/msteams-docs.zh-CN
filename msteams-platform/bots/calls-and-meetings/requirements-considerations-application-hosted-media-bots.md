@@ -2,19 +2,19 @@
 title: 应用程序托管的媒体机器人的要求和注意事项
 description: 了解与使用代码示例和样本为 Microsoft Teams 创建应用程序托管的媒体机器人相关的重要要求和注意事项，以及可扩展性和性能。
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: 应用程序托管的媒体 Windows 服务器 Azure VM
 ms.date: 11/16/2018
-ms.openlocfilehash: 35ad133d898b53538f51c2ae4c699cd19368f9af
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 109d5bd29112b7c233fadd921b141f2287246498
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111981"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296978"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 
-应用程序托管的媒体机器人需要 [`Microsoft.Graph.Communications.Calls.Media` .NET 库](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)来访问音频和视频媒体流。 机器人必须部署在 Azure 中的 Windows 服务器本地计算机或 Windows 服务器来宾操作系统 (OS) 上。
+应用程序托管的媒体机器人需要 [`Microsoft.Graph.Communications.Calls.Media` .NET 库](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) 才能访问音频和视频媒体流。机器人必须部署在 Windows Server 本地计算机或 Azure 中的 Windows Server 来宾操作系统 (OS) 上。
 
 > [!NOTE]
 >
@@ -25,7 +25,7 @@ ms.locfileid: "65111981"
 
 应用程序托管的媒体机器人需要满足以下条件：
 
-* 机器人必须在 C# 和标准的 .NET Framework 中开发并部署在 Microsoft Azure 中。 不能使用 C++ 或 Node.js API 访问实时媒体，应用程序托管的媒体机器人不支持 .NET Core。
+* 机器人必须在 C# 和标准的 .NET Framework 中开发并部署在 Microsoft Azure 中。 不能使用 C++ 或 Node.js API 访问实时媒体，应用程序托管的媒体机器人不支持 .NET 核心。
 
 * 机器人可以托管在以下 Azure 服务环境之一中：
   * 云服务。
@@ -55,7 +55,7 @@ ms.locfileid: "65111981"
   * 对于 Azure 云服务，这需要实例输入端点。 有关详细信息，请参阅[为 Azure 中的角色实例启用通信](/azure/cloud-services/cloud-services-enable-communication-role-instances)。
   * 对于 VM 规模集，必须在负载均衡器上配置 NAT 规则。 有关详细信息，请参阅 [Azure 中的虚拟网络和虚拟机](/azure/virtual-machines/windows/network-overview)。
 
-* Bot Framework Emulator 不支持应用程序托管的媒体机器人。
+* “机器人框架模拟器”不支持应用程序托管的媒体机器人。
 
 下一部分提供有关应用程序托管媒体机器人的可扩展性和性能注意事项的详细信息。
 
@@ -84,7 +84,7 @@ ms.locfileid: "65111981"
 ## <a name="see-also"></a>另请参阅
 
 * [Graph 调用 SDK 文档](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-* 与消息传递机器人相比，机器人需要更多的计算和网络带宽容量，并且会产生明显提高的运营成本。 实时媒体机器人开发人员必须仔细测量机器人的可伸缩性，并确保机器人不会接受比它所能管理的更多的同时调用。 如果使用原始 RGB24 或 NV12 视频格式，启用视频的机器人的每个 CPU 内核只能维持一两个并发媒体会话。
+* 与消息传递机器人相比，机器人需要更多的计算和网络带宽容量，并且会产生明显提高的运营成本。 实时媒体机器人开发人员必须仔细衡量机器人的可扩展性，并确保机器人不会接受比它所能管理的更多的同时呼叫。 如果使用原始 RGB24 或 NV12 视频格式，启用视频的机器人的每个 CPU 内核只能维持一两个并发媒体会话。
 * 实时媒体平台当前不会利用 VM 上可用的任何图形处理单元 (GPU) 来卸载 H.264 视频编码或解码。 相反，视频编码和解码在软件的 CPU 中完成。 如果 GPU 可用，机器人会利用它进行自己的图形呈现，例如，如果机器人使用 3D 图形引擎。
 * 托管实时媒体机器人的 VM 实例必须至少有 2 个 CPU 内核。 对于 Azure，建议使用 Dv2 系列虚拟机。 对于其他 Azure VM 类型，具有 4 个虚拟 CPU (vCPU) 的系统是所需的最低配置。 有关 Azure VM 类型的详细信息，请参阅 [Azure 文档](/azure/virtual-machines/windows/sizes-general)。
 

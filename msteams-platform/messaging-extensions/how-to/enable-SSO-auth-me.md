@@ -2,19 +2,19 @@
 title: 对消息扩展的 SSO 支持
 author: KirtiPereira
 description: 了解如何使用代码示例为消息传递扩展启用 SSO 支持。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 148e8c59acc520e7771ac23c38b4b17c43d4d74d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111253"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296943"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>对消息扩展的单一登录支持
 
-单一登录 (SSO) 支持现在可用于消息扩展和链接展开。 默认情况下，为消息扩展启用单一登录会刷新身份验证令牌，从而最大程度地减少需要输入 Microsoft Teams 登录凭据的次数。
+单一登录 (SSO) 支持现在可用于消息扩展和链接展开。默认情况下，为消息扩展启用单一登录会刷新身份验证令牌，从而最大程度地减少输入 Microsoft Teams 登录凭据所需的次数。
 
 本文档介绍如何在必要时启用 SSO 并存储身份验证令牌。
 
