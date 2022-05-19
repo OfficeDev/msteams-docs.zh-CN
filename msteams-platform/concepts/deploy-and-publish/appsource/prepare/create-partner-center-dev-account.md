@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 6e348cc0db5c9b197b985b144105924c2c40669a
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 7d5e6d4d345f94e893a494c6dea2e719aece9da6
+ms.sourcegitcommit: ef582a5ac33e815854d58f2f1faeb06aa2d761ae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501912"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65443899"
 ---
 # <a name="create-a-partner-center-developer-account"></a>创建合作伙伴中心开发者帐户
 
@@ -207,6 +207,18 @@ ms.locfileid: "63501912"
 <br>
 
 </details>
+
+## <a name="update-apple-developer-id-on-partner-center"></a>在合作伙伴中心更新 Apple 开发人员 ID
+
+若要使用户能够在 Teams iOS 平台上安装你的应用，必须在 Microsoft 合作伙伴中心更新 Apple 开发人员 ID。 若要更新 Apple 开发人员 ID，请执行以下步骤：
+
+1. 使用全局管理员凭据登录到 [Microsoft 合作伙伴中心](https://partner.microsoft.com/dashboard/home)。
+1. 从页面右上角选择设置图标。
+1. 转到左窗格的“**组织配置文件**”下的“**法律信息**”部分。
+1. 选择“**开发人员**”选项卡。
+1. 键入 Apple 开发人员 ID。
+1. 转到产品/服务页面并重新发布你的 Teams 应用。
+   你的 Apple 开发人员 ID 现已在 Microsoft 合作伙伴中心更新。
 
 ## <a name="next-step"></a>后续步骤
 

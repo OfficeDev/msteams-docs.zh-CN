@@ -2,18 +2,18 @@
 title: 选择用于测试和调试应用的设置
 description: 介绍在本地和云托管环境中测试和调试 Microsoft Teams 应用的选项。
 keywords: Teams 运行调试应用本地云托管主机
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e87032cbe9b116aa0ddbe816169c2763301edd07
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135757"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296992"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>选择用于测试和调试 Microsoft Teams 应用的设置
 
-Microsoft Teams 应用包含一个或多个功能，并且运行甚至托管它们的方法都不同。 对于调试，请使用以下方法之一：
+Microsoft Teams 应用包含一个或多个功能，而运行甚至托管它们的方法都不同。对于调试，请使用以下方法之一：
 
 * **纯本地**：对于机器人，可以在机器人仿真器中测试体验。 对于其他内容，可在浏览器中本地运行，并通过 `http://localhost` 处理内容。
 * **在 Teams 中进行本地托管**：这涉及在隧道软件中本地运行应用并 [创建包](~/concepts/build-and-test/apps-package.md)以 [上传](~/concepts/deploy-and-publish/apps-upload.md)到 Teams。 这允许你在 Teams 客户端中轻松运行和调试应用。
@@ -67,11 +67,11 @@ Microsoft Teams 是一款完全基于云的产品，它要求可通过 HTTPS 终
 可以使用任何可外部寻址的服务来托管开发和生产代码及其 HTTPS 终结点。 功能可能并没有驻留在同一服务中。 我们需要从 `manifest.json` 文件的 [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) 对象中列出的 Microsoft Teams 应用访问所有域。
 
 > [!NOTE]
-> 若要确保环境安全，请明确说明所引用的确切域和子域，并且这些域必须由你控制。 例如，不建议使用 `*.azurewebsites.net`，但建议使用 `contoso.azurewebsites.net`。
+> 若要确保环境安全，请明确说明所引用的确切域和子域，并且这些域必须由你控制。例如，不建议使用 `*.azurewebsites.net`，但建议使用 `contoso.azurewebsites.net`。
 
 ## <a name="load-and-run-your-experience"></a>加载和运行体验
 
-若要在 Microsoft Teams 中加载和运行体验，需要创建包并将其上传到 Teams。 有关详细信息，请参阅：
+若要在 Microsoft Teams 中加载和运行体验，需要创建包并将其上传到 Teams。有关详细信息，请参阅：
 
 * [为 Microsoft Teams 应用创建包](~/concepts/build-and-test/apps-package.md)。
 * [在 Microsoft Teams 中上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
