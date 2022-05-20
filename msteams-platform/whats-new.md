@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
+ms.openlocfilehash: a65a63ef7fafe8ab63e5c865349ff2da6c8869fa
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132707"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602283"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,6 +22,7 @@ ms.locfileid: "65132707"
 
 | Date | 更新 | 在此处查找 |
 | --- | --- | --- |
+|2022/05/19|GCC 和 GCCH 的机器人和邮件扩展| • 生成机器人 > [概述](bots/what-are-bots.md) </br> • 生成邮件扩展 > [概述](messaging-extensions/what-are-messaging-extensions.md) |
 |04/28/2022| 应用验证失败的常见原因 | 将应用>发布到 Teams 应用商店> [应用验证失败的常见原因](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
 |2022/04/20 |  设置 CI/CD 管道 | 工具和 SDK >用于 Visual Studio Code 的 Teams 工具包>[设置 CI/CD 管道](toolkit/use-CICD-template.md)|
 |2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
@@ -63,6 +64,7 @@ ms.locfileid: "65132707"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+|2022/05/19|GCC 和 GCCH 的机器人和邮件扩展| • 生成机器人 > [概述](bots/what-are-bots.md) </br> • 生成邮件扩展 > [概述](messaging-extensions/what-are-messaging-extensions.md) |
 |2022/04/26|使用机器人卸载个人应用的行为 | 生成机器人>机器人对话>[使用机器人在个个人应用程序中卸载行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |2022/04/22| 针对盈利应用的测试预览 | 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 |2022/04/22| 应用内购买流，用于盈利应用 | 使应用盈利 > [应用内购买](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)

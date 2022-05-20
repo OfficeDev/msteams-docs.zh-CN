@@ -5,12 +5,12 @@ description: Teams 平台上的自定义选项卡概述
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103290"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602276"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>构建 Microsoft Teams 选项卡
 
@@ -18,6 +18,8 @@ ms.locfileid: "65103290"
 
 > [!IMPORTANT]
 > 目前，自定义选项卡在政府社区云 (GCC)、GCC-High 和国防部 (DOD) 中可用。
+>
+> 建议通过 [npm 包](https://www.npmjs.com/package/@microsoft/teams-js) 使用 Teams 客户端 SDK，并将其与你的应用捆绑在一起，因为当前 Teams 客户端 SDK 在政府云 CDN 中不可用。
 
 下图显示了个人选项卡：
 

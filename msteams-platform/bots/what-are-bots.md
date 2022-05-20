@@ -5,19 +5,21 @@ description: Microsoft Teams 中的机器人概述。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: d37b35e46156777022a5b19a7ccf6de1ab2e0fb9
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191248"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602290"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
 机器人也称为聊天机器人或对话机器人。 它是一个应用，可由客户服务或支持人员等用户运行简单且重复的任务。 机器人的日常使用包括提供天气信息、预订餐食或提供旅行信息。 与机器人的交互可以是快速问答或复杂的对话。
 
 > [!IMPORTANT]
-> 目前，机器人在政府社区云 (GCC) 中可用，在 GCC-High 和国防部 (DOD) 中不可用。
+> 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。
+> 
+> Microsoft Teams 中的机器人应用程序可通过 [Azure 机器人服务](/azure/bot-service/channel-connect-teams)在 GCC-High 中使用。
 
 会话机器人允许用户通过文本、交互卡和任务模块与 web 服务进行交互。
 

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: 发送消息, 获取用户 ID、频道 ID、对话 ID
-ms.openlocfilehash: ec41ec08af9c7e3b7280995f8abc66b3a5a7baa0
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: fd3ed48022239aaa84e00c8b3b59701970d9a0af
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590715"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602269"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -21,6 +21,13 @@ ms.locfileid: "64590715"
 * 欢迎消息
 * Notifications
 * 计划的消息
+
+> [!IMPORTANT]
+> 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。
+>
+> 对于主动消息，机器人应将以下终结点用于政府云环境：
+>    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`。
+>    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
 
 若要让机器人向用户、群聊或团队发送主动消息，它必须具有发送消息的权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。
 如果需要，你可以在团队中[使用 Microsoft Graph 主动安装应用](#proactively-install-your-app-using-graph)，或使用[应用策略](/microsoftteams/teams-custom-app-policies-and-settings)将应用推送给租户中的团队和用户。 对于用户，必须为你的用户安装应用，或者该用户必须是安装应用的团队的成员。

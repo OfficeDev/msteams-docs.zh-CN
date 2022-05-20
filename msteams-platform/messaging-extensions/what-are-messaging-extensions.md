@@ -5,16 +5,19 @@ description: Microsoft Teams 平台上的消息传递扩展概述
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297140"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602255"
 ---
 # <a name="message-extensions"></a>消息扩展
 
 消息扩展允许用户通过 Microsoft Teams 客户端中的按钮和表单与你的 Web 服务进行交互。 他们可以从撰写消息区域、命令框或直接从消息的外部系统中搜索或启动操作。 然后，可以将该交互的结果发送回 Microsoft Teams 客户端，该交互通常采用格式丰富的卡片形式。
+
+> [!IMPORTANT]
+> 消息扩展在政府社区云 (GCC) 和GCC-High环境中可用，但在国防部 (DoD) 环境中不可用。
 
 本文档概述了消息扩展、在不同方案下执行的任务、处理消息扩展、操作和搜索命令以及链接展开。
 

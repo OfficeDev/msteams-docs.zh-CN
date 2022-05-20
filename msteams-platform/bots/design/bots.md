@@ -5,19 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 67f67535994bde9871cdaa7be8081e05ccbf1a1d
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104383"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602297"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
 自动程序是执行一组特定任务的对话应用。 根据 Microsoft <a href="https://dev.botframework.com/" target="_blank">框架</a>，自动程序会与用户进行通信、回复其问题，并主动通知他们更改和其他事件。 这是一个很好的方法。
 
 > [!IMPORTANT]
-> 机器人在 政府社区云 （GCC） 环境中可用，但不适用于GCC High和国防部 （DoD） 环境。
+> 机器人在 政府社区云（GCC）和 GCC High 环境中可用，但在国防部（DoD）环境中不可用。
 
 为指导应用设计，以下信息描述并说明用户可以如何在 Teams 中添加、使用和管理机器人。
 

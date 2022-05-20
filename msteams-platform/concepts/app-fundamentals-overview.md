@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: 入口点扩展性用例设备功能
-ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: ffcefbdfc5696f91872fcf828f9e40e58e224a6b
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104026"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602248"
 ---
 # <a name="plan-your-app-with-teams-features"></a>使用 Teams 功能规划应用
 
@@ -71,6 +71,14 @@ Teams 即平台在应用开发的每个阶段为你提供工具包、库、应�
 
 政府社区云 (GCC) 是以政府为中心的商业环境副本。 美国国防部 (DOD) 和联邦承包商必须满足严格的网络安全和合规性要求。 为此，已创建 GCC-High 以满足 DOD 和联邦承包商的需求。 GCC-High 是 DOD 云的副本，但存在于其自己的主权环境中。 DOD 云仅针对国防部构建。
 
+政府云的终结点为：
+
+| 租户 | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
+|Teams 客户端|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
+|Teams 管理员 |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
+|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
+
 下表包括 GCC、GCC-High、DOD 的 Teams 功能和可用性：
 
 | 功能   | GCC | GCC-High | DOD |
@@ -78,12 +86,13 @@ Teams 即平台在应用开发的每个阶段为你提供工具包、库、应�
 | Teams 拥有的应用（与在内部开发的应用中一样） | ✔️ 如果应用具有 GCC，则会启用该应用。 | ✔️ 如果应用具有 GCC-High，则会启用该应用。 | ✔️ 如果应用具有 DOD，则会启用该应用。 |
 | Microsoft 应用 | ✔️ 符合 GCC 的 Microsoft 应用 | ✔️ 符合 GCC-High 的 Microsoft 应用 | ✔️ 符合 DOD 的 Microsoft 应用 |
 | 3P 或第三方应用 | ✔️ 第三方应用可用。默认情况下禁用，租户管理员自行决定是否启用它。 | ❌ | ❌ |
-| 机器人 | ✔️ | ❌ | ❌ |
-| 自定义或 Lob 选项卡应用 |  ✔️ | ✔️ | ✔️ |
+| 自定义或 Lob 选项卡应用 |  ✔️ | ✔️(****Compliance UI**_) | ✔️(_ ***Compliance UI***) |
+| 自定义或 Lob 机器人 | ✔️ | ✔️(****Compliance UI***) | ❌ |
+| 自定义消息扩展 | ✔️ | ✔️ | ❌ |
 | 旁加载应用 | ✔️ | ❌ | ❌ |
-| 自定义或 Lob 机器人 | ✔️ | ❌ | ❌ |
-| 自定义消息扩展 | ❌ | ❌ | ❌ |
 | 自定义连接器 | ❌ | ❌ | ❌ |
+
+****合规性 UI***：通过启用第三方通信，客户接受通过第三方而不是 Microsoft 处理此类通信。 客户全权负责降低与第三方机器人在其服务中连接的风险。 Microsoft 不认可客户允许与其服务连接的第三方的安全性，也不提供任何担保、明示或暗示。 启用机器人将基于你选择利用的机器人将系统边界扩展到此租户之外。 你有责任确保这符合你的合规性要求，包括 FedRAMP、DFARS、ITAR 等。你有责任评估连接到的任何终结点和 URL 的风险和符合性。
 
 以下列表有助于确定对于不同功能的 GCC、GCC-High、DOD 的可用性：
 

@@ -3,14 +3,14 @@ title: 将机器人添加到 Microsoft Teams 应用
 description: 介绍如何开始在 Microsoft Teams 中开发机器人
 ms.topic: conceptual
 keywords: Teams 机器人开发
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: a9a3ad2e4e60b43e6730c06b8bd8d2cee824b3fc
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cbf8b1c14b080d890dd4c65390671632e2602f81
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111701"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602262"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>将机器人添加到 Microsoft Teams 应用
 
@@ -19,7 +19,7 @@ ms.locfileid: "65111701"
 构建和连接智能机器人，通过聊天自然地与 Microsoft Teams 用户互动。 或者提供一个基于命令的简单机器人，用作更广泛的 Teams 应用体验的“命令行”界面。 可以创建仅限通知的机器人，此机器人可以在频道或直接消息中将与用户相关的信息直接推送到他们。 甚至可以引入现有的基于 Bot Framework 的机器人，并添加 Teams 特定的支持，让你的体验更加出色。
 
 > [!IMPORTANT]
-> 目前，机器人在政府社区云 (GCC) 中可用，但在 GCC-High 和国防部 (DOD) 中不可用。
+> 目前，机器人在政府社区云 (GCC) 和GCC-High中可用，但在国防部 (DOD) 中不可用。
 
 ![帮助用户的机器人示例](~/assets/images/bot_example.png)
 
