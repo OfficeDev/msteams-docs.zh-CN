@@ -4,15 +4,15 @@ description: 了解使用 Teams 劳动力管理排班连接器的优势，例如
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Microsoft Teams 连接器, Kronos
 ms.author: lajanuar
-ms.openlocfilehash: 3a294d20bc2032df7ef5dfa225922e9dccabf1df
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
+ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111764"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65604262"
 ---
 # <a name="production-ready-shifts-connectors"></a>生产准备就绪的排班连接器  
 
@@ -41,34 +41,6 @@ Teams 排班劳动力管理 (WFM) 连接器是生产就绪、开源和社区驱�
 下图显示了 Teams 中的班次视图：
 
 ![在 Teams 中打开班次](../assets/images/teams-open-shifts-view.png)
-
-## <a name="kronos-to-teams-shifts-connector"></a>Kronos 到 Teams 排班连接器
-
-使用开放源代码，你可以将 Kronos Workforce Central 版本 8.1 及更高版本与 Teams 排班（例如桌面或移动版 Teams 应用）集成，以便用于以下一线员工和经理场景：
-
-* 查看日程安排。
-
-* 发布并请求未分配班次。
-
-* 调班。
-
-* 请求休假。
-
-* 代班。
-
-有关部署 Kronos 到 Teams 排班连接器的详细信息，请参阅[在 GitHub 上获取](https://aka.ms/KronosShiftsConnector)。
-
-## <a name="jda-to-teams-shifts-connector"></a>JDA 到 Teams 排班连接器
-
-使用开放源代码，你可以将 JDA（例如 BlueYonder 版本 17.2 及更高版本）与 Teams 排班（例如桌面或移动版 Teams 应用）集成，以便用于以下一线员工和经理场景：
-
-* 在 JDA 中发布班次和日程安排组，并在 Teams 中查看它们。
-
-* 启用丰富的日程安排方案，包括请求调班和休假。
-
-* 使用[用于排班的 Microsoft Graph API](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true) 设置用户可用性。
-
-有关参与和建议的详细信息，请参阅[在 GitHub 上获取](https://aka.ms/JDAShiftsConnector)。
 
 ## <a name="see-also"></a>另请参阅
 
