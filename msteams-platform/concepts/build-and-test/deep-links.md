@@ -1,15 +1,14 @@
 ---
 title: 创建深层链接
-description: 介绍深层链接以及如何在应用中使用它们
+description: 了解如何描述 Teams 深层链接以及如何在应用中使用它们。
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: 团队深层链接深层链接
-ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 750fc8f6153cf64fa585e3d74d73afba483aafb0
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103921"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611452"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -79,19 +78,19 @@ ms.locfileid: "65103921"
 * Example values and some URLs should be in backticks and not emphasized.
 * Codeblock are missing language.
 * Check for markdownlint errors.
-* Table with just a row is not really needed. Provide the content without tabulating it.
+* Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
 
 查询参数为：
 
 | 参数名称 | 说明 | 示例 |
 |:------------|:--------------|:---------------------|
-| `appId`&emsp; | 清单中的 ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `appId`&emsp; | Teams 管理中心的 ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | 选项卡中项的 ID，在[配置选项卡](~/tabs/how-to/create-tab-pages/configuration-page.md)时提供。|Tasklist123|
 | `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 在客户端不支持呈现选项卡时要是用的具有回退 URL 的可选字段。 | `https://tasklist.example.com/123` 或 `https://tasklist.example.com/list123/task456` |
 | `entityLabel` 或 `subEntityLabel`&emsp; | 选项卡中项的标签，显示深层链接时要使用。 | 任务列表 123 或 任务 456 |
 | `context.subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
-| `context.channelId`&emsp; | 选项卡 [上下文](~/tabs/how-to/access-teams-context.md) 中提供的 Microsoft Teams 频道 ID。 此属性仅在 **团队** 范围内的可配置选项卡中可用。 它在静态选项卡中不可用，静态选项卡的作用域为 **个人**。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.channelId`&emsp; | 选项卡 [上下文](~/tabs/how-to/access-teams-context.md) 中提供的 Microsoft Teams 频道 ID。 此属性仅在 **团队** 范围内的可配置选项卡中可用。 它在具有 **个人** 范围的静态选项卡中不可用。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | 可从选项卡 [上下文](~/tabs/how-to/access-teams-context.md) 中获得的用于群组和会议聊天的 ChatId。 | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  聊天是唯一受支持的会议上下文类型 | 聊天 |
 
@@ -167,10 +166,30 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 查询参数为：
 
 * `users`：表示聊天参与者的用户 ID 的逗号分隔列表。 执行操作的用户始终作为参与者被包括在内。 目前，“用户 ID”字段支持 Microsoft Azure Active Directory (Azure AD) UserPrincipalName，例如仅支持电子邮件地址。
-* `topicName`：与 3 个及以上用户聊天时聊天显示名称的可选字段。 如果未指定此字段，则聊天的显示名称基于参与者的姓名。
+* `topicName`：与三个或更多用户聊天时，聊天显示名称的可选字段。 如果未指定此字段，则聊天的显示名称基于参与者的姓名。
 * `message`：要在聊天处于草稿状态时插入当前用户撰写框的消息文本的可选字段。
 
 若要将此深层链接与机器人配合使用，请在卡的按钮中将此项指定为 URL 目标，或通过 `openUrl` 操作类型点击操作。
+
+## <a name="generate-deep-links-to-channel-conversation"></a>生成指向频道对话的深层链接
+
+使用此深层链接格式导航到频道线程中的特定对话：
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+例如：`https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+查询参数为：
+
+* `channelId`：会话的频道 ID。 例如 `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`。
+* `tenantId`：租户 ID，如 `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`。
+* `groupId`：文件的组 ID。例如 `3606f714-ec2e-41b3-9ad1-6afb331bd35d`。
+* `parentMessageId`：会话的父消息 ID。
+* `teamName`：团队名称。
+* `channelName`：团队频道的名称。
+
+> [!NOTE]
+> 可以在通道的 URL 中看到 `channelId` 和 `groupId`。
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>在通道中生成文件的深层链接
 
@@ -196,7 +215,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
-以下示例格式显示了文件的深层链接：
+以下示例格式说明了指向文件的深层链接：
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 

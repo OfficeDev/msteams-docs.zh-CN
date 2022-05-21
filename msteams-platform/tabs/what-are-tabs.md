@@ -5,12 +5,12 @@ description: Teams 平台上的自定义选项卡概述
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602276"
+ms.locfileid: "65611448"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>构建 Microsoft Teams 选项卡
 
@@ -75,6 +75,9 @@ Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选�
 自定义选项卡在应用包的应用清单中声明。 对于要作为选项卡包含在应用中的每个网页，可以定义一个 URL 和一个范围。 此外，还可以将 [Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 添加到页面，并在页面加载后调用 `microsoftTeams.initialize()`。 Teams 显示你的页面并提供对 Teams 特定信息的访问权限，例如 Teams 客户端正在运行深色主题。
 
 无论是选择在频道或组或个人范围内公开选项卡，都必须在选项卡中显示 <iframe\>HTML [内容页面](~/tabs/how-to/create-tab-pages/content-page.md)。对于个人选项卡，内容 URL 由 `staticTabs` 数组中的 `contentUrl` 属性直接在 Teams 应用清单中设置。你的选项卡内容与所有用户都一样。
+
+> [!Note]
+> Teams 应用无法识别子 iframe。 因此，如果选项卡应用中存在 iframe，则不会加载它。
 
 对于频道或组选项卡，还可以创建其他配置页。 此页允许配置内容页 URL，通常通过使用 URL 查询字符串参数加载该上下文的相应内容。 这是因为频道或组选项卡可以添加到多个团队或群组聊天。 每次后续安装时，用户都可以配置选项卡，以便根据需要定制体验。 当用户添加或配置选项卡时，URL 与 Teams 用户界面 (UI) 中显示的选项卡相关联。 配置选项卡只是向该 URL 添加其他参数。 例如，添加 Azure Boards 选项卡时，可选择配置页加载选项卡的哪个板。 配置页 URL 由应用清单中的 `configurableTabs` 数组中的 `configurationUrl` 属性指定。
 
