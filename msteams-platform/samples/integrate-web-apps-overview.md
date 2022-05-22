@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 keywords: Power Platform, Power Apps, 人员选取器, 深层链接, 虚拟代理助理, 共享到 Teams
-ms.openlocfilehash: cb818d660705b3526e6cbe8e4b16172fc4a5cd4b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: c700755051eebbdb827a0fb9aba0ea51d31dbcf8
+ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111456"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65604269"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
@@ -60,10 +60,6 @@ Power Virtual Agent 是一种无代码引导式图形界面解决方案。 它�
 
 可以使用应用模板创建自定义的应用以满足组织需求。 这些是适用于 Microsoft Teams 的生产就绪型应用，它们由社区驱动、开源且可在 GitHub 上获取。 每个模板都包含有关为组织部署和安装应用的详细说明。 它提供了一个现成的应用程序，可以立即安装并开始使用。
 
-## <a name="teams-shifts-work-force-management-connectors"></a>Teams 排班劳动力管理连接器
-
-Teams 排班劳动力管理连接器是生产就绪、开源和社区驱动的集成。 它们通过 Teams 排班应用为一线员工的数字化转型提供无缝体验和快速流程。
-
 ## <a name="install-moodle-lms"></a>安装 Moodle LMS
 
 Moodle 是一种常用的 Learning Management System (LMS)。 它现在已与 Microsoft Teams 集成。 此集成可帮助教师围绕 Moodle 课程进行协作，提出有关成绩和作业的问题，并直接在 Teams 中随时关注通知。
@@ -82,7 +78,7 @@ Moodle 是一种常用的 Learning Management System (LMS)。 它现在已与 Mi
 
 ## <a name="integrate-device-capabilities"></a>集成设备功能
 
-Microsoft Teams Platform 不断增强开发人员功能，与内置的第一方体验保持一致。 增强的 Teams 平台允许合作伙伴使用 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 访问和集成本机设备功能，例如相机、QR 或条形码扫描程序、照片库、麦克风和位置。
+Microsoft Teams 平台不断增强开发人员功能，与内置的第一方体验保持一致。增强的 Teams 平台允许合作伙伴使用 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 访问和集成原生设备功能，例如相机、QR 或条形码扫描仪、照片库、麦克风、位置。
 
 ## <a name="integrate-people-picker"></a>集成人员选取器
 
