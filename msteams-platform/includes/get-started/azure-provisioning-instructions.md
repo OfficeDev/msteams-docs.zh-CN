@@ -1,12 +1,14 @@
 ## <a name="deploy-your-app-to-azure"></a>将应用部署到 Azure。
 
 部署包括两个步骤。  首先，创建必要的云资源 (也称为预配) 。 然后，应用的代码将复制到创建的云资源中。 在本教程中，你将部署选项卡应用。
-
-> <details>
-> <summary>预配和部署有什么区别？</summary>
->
-> “**预配**”步骤在 Azure 中创建资源，并为应用Microsoft 365，但不会将 HTML、CSS、JavaScript 等代码 () 复制到资源。 “ **部署** ”步骤将应用的代码复制到预配步骤中创建的资源。 在不预配新资源的情况下多次部署是很常见的。 由于预配步骤可能需要一些时间才能完成，因此它与部署步骤是分开的。
+<br> 
+<br>
+<details>
+<summary>预配和部署有什么区别？</summary>
+<br>
+“<b>预配</b>”步骤在 Azure 中创建资源，并为应用Microsoft 365，但不会将 HTML、CSS、JavaScript 等代码 () 复制到资源。 “ <b>部署</b> ”步骤将应用的代码复制到预配步骤中创建的资源。 在不预配新资源的情况下多次部署是很常见的。 由于预配步骤可能需要一些时间才能完成，因此它与部署步骤是分开的。
 </details>
+<br>
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -31,7 +33,7 @@
 
    预配过程在 Azure 云中创建资源。 这可能需要一些时间。 可以通过查看右下角的对话来监视进度。 几分钟后，你会看到以下通知：
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="显示预配完成对话框的屏幕截图。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="显示预配完成对话框的屏幕截图。" border="false":::
 
     如果需要，可以查看预配的资源。 在本教程中，无需查看资源。
 
@@ -45,6 +47,7 @@
 
    与预配一样，部署需要一些时间。 可以通过查看右下角的对话来监视过程。 几分钟后，你将看到完成通知。
 
+现在，可以使用相同的过程将机器人和消息扩展应用部署到 Azure。
 
 # <a name="command-line"></a>[命令行](#tab/cli)
 
@@ -81,10 +84,21 @@
 
 1. 选择“**添加**”。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="显示正在安装的应用的屏幕截图。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="显示正在安装的应用的屏幕截图。" border="false":::
+
+   该工具包显示一条消息，指示应用已添加到Teams。
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="屏幕截图显示立即或更高版本尝试应用的消息" border="true":::
+ 
+    - 如果选择 **“获取”**，可以稍后从旁加载应用列表中试用该应用。
+    - 如果选择 **“试用**”，Teams加载应用。
 
    你的应用在 Azure 网站上加载。
+   
+1. 选择 **“试用**”。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="显示正在安装的应用的屏幕截图。" border="false":::
+   消息扩展应用在聊天机器人应用中加载。
 
-    恭喜！ 选项卡应用现在从 Azure 远程运行！
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="显示在Teams中旁加载的应用的屏幕截图" border="false":::
+
+
