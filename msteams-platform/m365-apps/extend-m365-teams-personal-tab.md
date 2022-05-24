@@ -1,25 +1,22 @@
 ---
 title: 跨 Microsoft 365 扩展 Teams 个人选项卡应用
 description: 跨 Microsoft 365 扩展 Teams 个人选项卡应用
-ms.date: 02/11/2022
+ms.date: 05/24/2022
 ms.topic: tutorial
-ms.custom: Microsoft 365 apps
-ms.localizationpriority: high
-ms.openlocfilehash: 873a6fa6207d122581e18cef0ae922ffca87762f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.custom: m365apps
+ms.localizationpriority: medium
+ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111519"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653803"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
-> [!NOTE]
-> *跨 Microsoft 365 扩展 Teams 个人选项卡* 目前仅在 [ 公共开发人员预览](../resources/dev-preview/developer-preview-intro.md) 版中可用。 预览版中包含的功能可能不完整，并且在公开发布之前可能会发生更改。 它们仅用于测试和探索目的。 不应在生产应用程序中使用它们。
-
 个人选项卡提供了增强 Microsoft Teams 体验的好方法。 使用个人选项卡，可以在 Teams 中提供用户对其应用程序的访问权限，无需用户离开体验或再次登录。 使用此预览版，个人选项卡可以在其他 Microsoft 365 应用程序中亮起。 本教程演示了使用现有 Teams 个人选项卡、并将其更新用于在桌面和网页版 Outlook 以及 Office 网页版 (office.com) 体验中运行的过程。
 
-更新个人应用以在 Outlook 和 Office 主页中运行涉及以下步骤：
+将个人应用更新为在Outlook和Office中运行涉及以下步骤：
 
 > [!div class="checklist"]
 >
@@ -27,16 +24,9 @@ ms.locfileid: "65111519"
 > * 更新 TeamsJS SDK 引用
 > * 修改内容安全策略标题
 > * 更新 Microsoft Azure Active Directory (Azure AD) 单一登录应用注册 (SSO)
-
-测试应用需要执行以下步骤：
-
-> [!div class="checklist"]
->
-> * 在 *Office 365 目标版本* 中注册 Microsoft 365 租户
-> * 配置帐户配置，以访问 Outlook 和 Office 应用的预览版本
 > * 在 Teams 中旁加载更新后的应用
 
-完成这些步骤后，Outlook 和 Office 应用的预览版本中应显示应用。
+本指南的其余部分将指导你完成这些步骤，并演示如何在其他Microsoft 365应用程序中预览个人选项卡。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -52,22 +42,37 @@ ms.locfileid: "65111519"
 
 ## <a name="prepare-your-personal-tab-for-the-upgrade"></a>准备好个人选项卡进行升级
 
-如果已有个人选项卡应用，请创建生产项目的副本或分支以进行测试，并在应用清单中更新应用 ID，以使用新标识符（不同于生产应用 ID）。
+如果你有一个现有的个人选项卡应用，请创建生产项目的副本或分支，用于测试和更新应用清单中的应用 ID，以使用与生产应用 ID 不同的新标识符 (用于测试) 。
 
-若要使用示例代码完成本教程，请按照 [ 待办事项列表示例入门 ](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) 中的设置步骤，使用用于 Visual Studio Code 的 Teams 工具包扩展构建个人选项卡应用。 或者，可以从为 [ TeamsJS SDK v2 预览版 ](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) 更新的同一待办事项列表示例开始，然后继续 [ 在其他 Microsoft 365 体验中预览个人选项卡 ](#preview-your-personal-tab-in-other-microsoft-365-experiences)。 更新后的示例也可以在 Teams 工具包扩展中使用：“*开发*” > “*查看示例*” > “**待办事项列表（在 Teams、Outlook 和 Office 中工作）**。
+如果要使用示例代码完成本教程，请按照 [Todo 列表示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend)中的设置步骤，使用Visual Studio Code的Teams Toolkit扩展生成个人选项卡应用，然后返回到本文以将其更新为Microsoft 365。
 
-:::image type="content" source="images/toolkit-todo-sample.png" alt-text=" Teams 工具包中的待办事项列表示例（Teams、Outlook 和 Office 中的工作）":::
+或者，可以使用以下快速入门部分中已启用的基本单Sign-On *hello world* 应用Microsoft 365，然后跳到 [Teams中旁加载应用](#sideload-your-app-in-teams)。
+
+### <a name="quickstart"></a>快速入门
+
+若要从已启用在Outlook和Office中运行[的个人选项卡](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)开始，请对Visual Studio Code使用Teams Toolkit扩展。
+
+1. 从Visual Studio Code，打开命令面板 () `Ctrl+Shift+P` ，键入`Teams: Create a new Teams app`。
+1. 选择 **启用了 SSO 的个人选项卡**。
+
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text=" Teams 工具包中的待办事项列表示例（Teams、Outlook 和 Office 中的工作）":::
+
+1. 为工作区文件夹选择本地计算机上的位置。
+1. 打开命令面板 () `Ctrl+Shift+P` 并键入`Teams: Provision in the cloud`，在 Azure 帐户中创建所需的应用资源 (App 服务计划、存储帐户、函数应用、托管标识) 。
+1. 打开命令面板 (`Ctrl+Shift+P`) 并键入 `Teams: Deploy to the cloud` ，将示例代码部署到 Azure 中预配的资源并启动应用。
+
+从此处，你可以跳到[Teams中旁加载应用](#sideload-your-app-in-teams)，并在Outlook和Office中预览应用。  (应用清单和 TeamsJS API 调用已更新为 Microsoft 365.) 
 
 ## <a name="update-the-app-manifest"></a>更新应用清单
 
-需要使用 [ Teams 开发人员预览清单 ](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) 架构和 `Microsoft 365 DevPreview` 清单版本，使 Teams 个人选项卡能够在 Office 和 Outlook 中运行。
+需要使用[Teams开发人员清单](../resources/schema/manifest-schema.md)架构版本`1.13`，使Teams个人选项卡能够在Outlook和Office中运行。
 
-可以使用 Teams 工具包更新应用清单，也可以手动应用更改：
+可通过两个选项更新应用清单：
 
 # <a name="teams-toolkit"></a>[Teams 工具包](#tab/manifest-teams-toolkit)
 
-1. 打开 *命令面板*：`Ctrl+Shift+P`
-1. 运行该 `Teams: Upgrade Teams manifest to support Outlook and Office apps` 命令并选择应用清单文件。 将进行更改。
+1. 打开命令面板： `Ctrl+Shift+P`.
+1. 运行该 `Teams: Upgrade Teams manifest` 命令并选择应用清单文件。 将进行更改。
 
 # <a name="manual-steps"></a>[ 手动步骤 ](#tab/manifest-manual)
 
@@ -75,47 +80,41 @@ ms.locfileid: "65111519"
 
 ```json
 {
-    "$schema" : "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
-    "manifestVersion" : "m365DevPreview"
+    "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion" : "1.13"
 }
 ```
 
 ---
 
-如果使用 Teams 工具包创建了个人应用，则还可以使用它来验证清单文件的更改并识别任何错误。 打开命令面板 `Ctrl+Shift+P` 并找到“**Teams：验证清单文件**”，或者从 Teams 工具包的“部署”菜单中选择选项（查找 Visual Studio Code 左侧的 Teams 图标）。
-
-:::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text=" Teams 工具包“部署”菜单下的“验证清单文件”选项":::
+如果使用 Teams 工具包创建了个人应用，则还可以使用它来验证清单文件的更改并识别任何错误。 打开命令面板 () `Ctrl+Shift+P` 并找到 **Teams：验证清单文件**。
 
 ## <a name="update-sdk-references"></a>更新 SDK 引用
 
-若要在 Outlook 和 Office 中运行，应用将需要依赖于 npm 包`@microsoft/teams-js@2.0.0-beta.1`（或更高的 *beta* 版本）。 虽然 Outlook 和 Office 支持低版本 `@microsoft/teams-js` 的代码，但是会记录弃用警告，并且 Outlook 和 Office 最终将会停止对低版本的 `@microsoft/teams-js` 支持。
+若要在Outlook和Office中运行，应用需要引用npm包`@microsoft/teams-js@2.0.0` (或更高) 。 虽然Outlook和Office支持具有下层版本的代码，但将记录弃用警告，并且Outlook和Office中对 TeamsJS 的下层版本的支持最终将停止。
 
-可以使用 Teams 工具包帮助自动执行一些代码更改，以采用下一版本 `@microsoft/teams-js`，但如果要手动执行这些步骤，请参阅 [ Microsoft Teams JavaScript 客户端 SDK 预览版 ](using-teams-client-sdk-preview.md)，了解详细信息。
+可以使用Teams Toolkit来帮助识别和自动化从 1.x TeamsJS 版本升级到 TeamsJS 版本 2.0.0 所需的代码更改。 或者，可以手动执行相同的步骤;有关详细信息，请参阅 [Microsoft Teams JavaScript 客户端 SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)。
 
-1. 打开 *命令面板*：`Ctrl+Shift+P`
-1. 运行命令 `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`。
+1. 打开 *命令面板*： `Ctrl+Shift+P`.
+1. 运行命令 `Teams: Upgrade Teams JS SDK and code references`。
 
-完成后，实用工具将使用 TeamsJS SDK 预览版（`@microsoft/teams-js@2.0.0-beta.1` 或更高版本）依赖项更新 `package.json` 文件，`*.js/.ts` 和 `*.jsx/.tsx` 文件将更新为：
+完成后， *package.json* 文件将引用 `@microsoft/teams-js@2.0.0` (或更高) ，并且你的 `*.js/.ts` 和 `*.jsx/.tsx` 文件将使用以下内容进行更新：
 
 > [!div class="checklist"]
->
-> * `package.json` 对 TeamsJS SDK 预览版的引用
-> * TeamsJS SDK 预览版的导入语句
-> * 对 TeamsJS SDK 预览版的 [ 函数、枚举和接口调用 ](using-teams-client-sdk-preview.md#apis-organized-into-capabilities)
-> * `TODO` 注释提醒，查看可能受 [ 上下文 ](using-teams-client-sdk-preview.md#updates-to-the-context-interface) 接口更改影响的区域
-> * `TODO` 注释提醒，确保 [ 从回调样式函数转换为 promise 函数 ](using-teams-client-sdk-preview.md#callbacks-converted-to-promises) 在该工具找到的每个调用站点上运行良好
+> * teams-js@2.0.0 的导入语句
+> * teams-js@2.0.0 的函数[、枚举和接口调](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)用
+> * `TODO` 注释提醒标记可能受 [上下文](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) 接口更改影响的区域
+> * `TODO`用于[将回调函数转换为 promise](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises) 的注释提醒
 
 > [!IMPORTANT]
 > 升级工具不支持 *.html* 文件中的代码，需要手动更改。
 
-> [!NOTE]
-> 若要手动更新代码，请参阅 [ Microsoft Teams JavaScript 客户端 SDK 预览版 ](using-teams-client-sdk-preview.md)，了解所需的更改。
 
 ## <a name="configure-content-security-policy-headers"></a>配置内容安全策略标题
 
-[ 正如在 Microsoft Teams 中一样 ](/microsoftteams/platform/tabs/what-are-tabs)，选项卡应用程序托管在Office 和 Outlook 网页版客户端的（[ iframe 元素 ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)）中。
+与Microsoft Teams一样，选项卡应用程序托管在Office和Outlook Web 客户端的 [iframe 元素](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)中。
 
-如果应用使用 [ 内容安全策略 ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) 标题，请确保在 CSP 标题中允许以下所有的 [ 框架上级元素 ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)：
+如果应用使用[内容安全](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)策略 (云解决方案提供商) 标头，请确保在云解决方案提供商标头中允许以下所有[帧上级](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)：
 
 |Microsoft 365 主机| 框架上级元素权限|
 |--|--|
@@ -125,7 +124,7 @@ ms.locfileid: "65111519"
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>更新 SSO 的 Azure AD 应用注册
 
-个人选项卡的 Azure Active Directory 单一登录 (SSO) 在 Outlook [ 中的工作方式与在 Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) 中的工作方式相同，但是需要在租户的 *应用注册* 门户中，将多个客户端应用程序标识符添加到选项卡应用的 Azure AD 应用注册。
+[Azure Active Directory (AD) 单一登录 (个人选项卡的 SSO) ](../tabs/how-to/authentication/auth-aad-sso.md)在Office和Outlook中的工作方式与在Teams中的工作方式相同。 但是，需要将多个客户端应用程序标识符添加到租户 *应用注册* 门户中 Tab 应用的 Azure AD 应用注册。
 
 1. 使用沙盒租户帐户登录到 [Microsoft Azure 门户 ](https://portal.azure.com)。
 1. 打开 **应用注册** 边栏选项卡。
@@ -148,40 +147,42 @@ ms.locfileid: "65111519"
 
 ## <a name="sideload-your-app-in-teams"></a>在 Teams 中旁加载应用
 
-最后一步是在 Microsoft Teams 中旁加载更新的个人选项卡（[ 应用包 ](/microsoftteams/platform/concepts/build-and-test/apps-package)）。 完成后，除了在 Teams 中，应用还可以在 Office 和 Outlook 中运行。
+在Office和Outlook中运行应用的最后一步是在Microsoft Teams中旁加载更新的个人选项卡[应用包](..//concepts/build-and-test/apps-package.md)。
 
-1. 将 Teams 应用程序（清单和应用 [ 图标 ](/microsoftteams/platform/resources/schema/manifest-schema#icons)）打包为一个 zip 文件。 如果使用 Teams 工具包创建了应用，则可以在 Teams 工具包的“*部署*”菜单或 Visual Studio Code 的命令面板 `Ctrl+Shift+P` 中使用 **压缩 Teams 元数据包** 选项轻松执行此操作：
+1. 将Teams应用程序 ([清单](../resources/schema/manifest-schema.md)和[应用图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)打包) zip 文件中。 如果使用 Teams 工具包创建应用，则可以使用 Teams 工具包的 *“部署”* 菜单中的“**压缩 Teams 元数据包**”选项轻松完成此操作：
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="适用于 Visual Studio Code 的 Teams 工具包扩展中的“压缩 Teams 元数据包”选项":::
 
-1. 使用沙盒租户帐户登录 Teams，并确保处于公共开发人员预览版。 可以通过单击用户配置文件的省略号 (**...**) 菜单并打开“**关于**”，检查 *开发人员预览* 选项是否处于已开启状态，以此来验证是否在使用 Teams 客户端预览版。
+1. 使用沙盒租户帐户登录Teams，并切换到 *开发人员预览* 模式。 按用户配置文件选择省略号 (**...**) 菜单，然后选择：关于开发 **人员预览**>。
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text=" 从 Teams 省略号菜单中打开“关于”，并验证是否选中了“开发人员预览版”选项 ":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="从Teams省略号菜单中，打开“关于”，然后选择“开发人员预览”选项":::
 
-1. 打开“*应用*”窗格，单击“**上传自定义应用**”和“**为我或我的团队上传**”。
+1. 选择 *“应用* ”以打开“ **管理应用** ”窗格。 然后选择 **“发布应用**”。
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text=" Teams“应用”窗格中的“上传自定义应用”按钮 ":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="打开“管理应用”窗格，然后选择“发布应用”":::
 
-1. 选择应用包，然后单击“*打开*”。
+1. 选择 **Upload自定义应用** 选项，然后选择应用包。
 
-通过 Teams 进行旁加载后，个人选项卡将可以在 Outlook 和 Office 中使用。 请务必使用与在 Teams 中旁加载应用时相同的凭据登录。
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams中的“Upload自定义应用”选项":::
 
-可以固定应用以进行快速访问，也可以在省略号 (**...**) 中找到应用左侧边栏中最近应用程序中的浮出控件。
+旁加载到Teams后，个人选项卡将在Outlook和Office中提供。 请务必使用用于登录Teams来旁加载应用的相同凭据登录。
 
-> [!NOTE]
-> 将应用固定在 Teams 中不会将其固定为 Office.com 或 Outlook 中的应用。
+可以固定应用以进行快速访问，也可以在省略号 (**...**) 中找到应用左侧边栏中最近应用程序中的浮出控件。 将应用固定Teams不会将其固定为Office或Outlook中的应用。
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>在其他 Microsoft 365 体验中预览个人选项卡
 
-升级 Teams 个人选项卡并将其旁加载到 Teams 中时，它可以在Windows 和网页版本的 Outlook、Windows 和网页版本的 Office (office.com) 中运行。 下面介绍如何从 Microsoft 365 体验中预览它。
+下面介绍如何预览在Office和Outlook、Web 和Windows桌面客户端中运行的应用。
+
+> [!NOTE]
+> 从Teams卸载应用也会将其从Outlook和Office的 **“更多应用**”目录中删除。 如果使用的是上面提供的Teams Toolkit示例应用
 
 ### <a name="outlook-on-windows"></a>Windows 版 Outlook
 
 若要在 Windows 桌面上查看在 Outlook 中运行的应用：
 
 1. 启动 Outlook 并使用开发租户帐户登录。
-1. 单击侧边栏上的省略号 (**...**)。 旁加载的应用标题将显示在已安装的应用中。
-1. 单击应用图标，在 Outlook 中启动应用。
+1. 在侧栏上，选择  **“更多应用**”。 旁加载的应用标题将显示在已安装的应用中。
+1. 选择应用图标以在Outlook中启动应用。
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text=" 单击 Outlook 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
 
@@ -190,8 +191,8 @@ ms.locfileid: "65111519"
 若要查看 Outlook 网页版中的应用，请执行以下操作：
 
 1. 导航到 [ Outlook 网页版 ](https://outlook.office.com) 并使用开发租户帐户登录。
-1. 单击侧边栏上的省略号 (**...**)。 旁加载的应用标题将显示在已安装的应用中。
-1. 单击应用图标，启动并预览在Outlook 网页版中运行的应用。
+1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题将显示在已安装的应用中。
+1. 选择应用图标以启动和预览在Outlook 网页版中运行的应用。
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text=" 单击 outlook.com 侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
 
@@ -200,8 +201,8 @@ ms.locfileid: "65111519"
 若要在 Windows 桌面上查看在 Office 中运行的应用，请执行以下操作：
 
 1. 启动 Office 并使用开发租户帐户登录。
-1. 单击侧边栏上的省略号 (**...**)。 旁加载的应用标题将显示在已安装的应用中。
-1. 单击应用图标，在 Office 中启动应用。
+1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题将显示在已安装的应用中。
+1. 选择应用图标以在Office中启动应用。
 
 :::image type="content" source="images/office-desktop-more-apps.png" alt-text=" 单击 Office 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
 
@@ -210,31 +211,46 @@ ms.locfileid: "65111519"
 若要预览在 Office 网页版中运行的应用，请执行以下操作：
 
 1. 使用测试租户凭据登录到 office.com。
-1. 单击侧边栏上的省略号 (**...**)。 旁加载的应用标题将显示在已安装的应用中。
-1. 单击应用图标，在 Office 网页版中启动应用。
+1. 选择侧栏上的 **“应用** ”图标。 旁加载的应用标题将显示在已安装的应用中。
+1. 选择应用图标以在Office web 版中启动应用。
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text=" 单击 office.com 侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
+:::image type="content" source="images/office-web-more-apps.png" alt-text="单击 office.com 侧栏上的“更多应用”选项，查看已安装的个人选项卡":::
+
+## <a name="troubleshooting"></a>疑难解答
+
+目前，Outlook和Office客户端支持一部分Teams应用程序类型和功能。 此支持将随时间推移而扩展。 
+
+请参阅[Microsoft 365支持](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)来检查主机对各种 TeamsJS 功能的支持。
+
+有关Microsoft 365主机和平台对Teams应用的支持的总体摘要，请[参阅跨Microsoft 365扩展Teams应用](overview.md)。
+
+可以通过调用该功能上的函数 (命名空间) ，并根据需要调整应用行为，在运行时 `isSupported()` 检查给定功能的主机支持。 这样，应用就可以在支持它的主机中点亮 UI 和功能，并在不支持的主机上提供正常回退体验。 有关详细信息，请参阅 [“区分应用体验](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience)”。
+
+使用[Microsoft Teams开发人员社区渠道](/microsoftteams/platform/feedback)报告问题并提供反馈。
+
+### <a name="debugging"></a>调试
+
+从Teams Toolkit，除了Teams，还可以调试 (`F5`) 在Office和Outlook中运行的选项卡应用程序。
+
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="从Teams、Outlook和Office调试目标中选择Teams Toolkit":::
+
+首次运行本地调试以Office或Outlook时，系统会提示你登录到Microsoft 365租户帐户并安装自签名测试证书。 系统还会提示你手动安装Teams。 选择 **“安装Teams** 打开浏览器窗口并手动安装应用。 然后单击“**继续**”，在Office/Outlook中继续调试应用。
+
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+
+在 [Microsoft Teams Framework (TeamsFx ](https://github.com/OfficeDev/TeamsFx/issues)) 中提供反馈并报告Teams Toolkit调试体验的任何问题。
 
 ## <a name="next-steps"></a>后续步骤
 
-启用 Outlook 和 Office 的个人选项卡处于预览状态，不支持生产使用。 下面介绍如何将个人选项卡应用分发给预览版受众以进行测试。
+发布应用以在Teams、Outlook和Office中发现：
 
-### <a name="single-tenant-distribution"></a>单租户分发
+> [!div class="nextstepaction"]
+> [发布适用于Outlook和Office的Teams应用](publish.md)
 
-启用 Outlook 和 Office 的个人选项卡可以通过以下三种方式之一跨测试（或生产）租户分发给预览版受众：
+## <a name="code-sample"></a>代码示例
 
-#### <a name="teams-client"></a>Teams 客户端
-
-在“*应用*”菜单中，选择“*管理应用*” > “**将应用提交到组织**”。这需要 IT 管理员的批准。
-
-#### <a name="microsoft-teams-admin-center"></a>Microsoft Teams 管理中心
-
-作为 Teams 管理员，可以从 [ Teams 管理中心 ](https://admin.teams.microsoft.com/) 为组织的租户上传和预安装应用包。有关详细信息，请参阅 [ 在 Microsoft Teams 管理中心上传自定义应用 ](/MicrosoftTeams/upload-custom-apps)。
-
-#### <a name="microsoft-admin-center"></a>Microsoft 管理中心
-
-作为全局管理员，可以从 [ Microsoft 管理中心 ](https://admin.microsoft.com/) 上传和预安装应用包。有关详细信息，请参阅 [ 合作伙伴在集成应用门户中测试和部署 Microsoft 365 应用 ](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)。
-
-### <a name="multitenant-distribution"></a>多租户分布
-
-在启用了 Outlook 和 Office 的 Teams 个人选项卡的早期开发人员预览版中，尚不支持分发到 Microsoft AppSource。
+| **示例名称** | **说明** | **Node.js** |
+|---------------|--------------|--------|
+| 待办事项列表 | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 仅适用于Teams (使用此示例应用来尝试本教程) 中所述的升级过程。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
+| 待办事项列表 (Microsoft 365)  | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 在Teams、Outlook、Office中工作。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
+| 图像编辑器 (Microsoft 365)  | 使用 Microsoft 图形 API 创建、编辑、打开和保存映像。 在Teams、Outlook、Office中工作。 | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |

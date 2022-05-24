@@ -11,18 +11,18 @@ metadata:
   author: akjo
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: 6d1f1d89882fe0e2d19113aacd604d5e3cbc1c99
-  ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+  ms.openlocfilehash: f9f08d5a9fd8d2175c8934166ca11f5f8d2c6f4f
+  ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65103998"
+  ms.lasthandoff: 05/24/2022
+  ms.locfileid: "65653292"
 highlightedContent:
   items:
-  - title: 新变化？
+  - title: Microsoft Build 2022
     itemType: whats-new
     url: /microsoftteams/platform/whats-new
-  - title: "新Teams开发？ \U0001F680从此处开始！"
+  - title: "新Teams开发？ \U0001F680\"开始\"菜单此处！"
     itemType: get-started
     url: /microsoftteams/platform/get-started/get-started-overview
   - title: 计划应用
@@ -37,7 +37,7 @@ highlightedContent:
   - title: 使用 Microsoft Graph 增强应用
     itemType: how-to-guide
     url: /graph/teams-concept-overview
-  - title: 将应用发布到Teams存储
+  - title: 将应用发布到 Teams 应用商店
     itemType: deploy
     url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
   - title: 代码示例

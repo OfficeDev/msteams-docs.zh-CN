@@ -3,15 +3,15 @@ title: Teams 工具包中的 TeamsFX 多环境
 author: MuyangAmigo
 description: 关于 TeamsFX 多环境
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: b9719add5036ae533ce6d7c395ab95a5905bcbb8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111862"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653278"
 ---
 # <a name="manage-multiple-environments"></a>管理多个环境
 
@@ -82,7 +82,7 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
 | 为 Teams 应用重复使用现有的 Azure AD 应用 | <ul> <li>`.fx/config.<envName>.json` 中的 `auth` 部分</li> </ul> |  [为 Teams 应用使用现有的 Azure AD 应用](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | 为机器人重复使用现有的 Azure AD 应用 | <ul> <li>`.fx/config.<envName>.json` 中的 `bot` 部分</li> </ul> | [为机器人使用现有的 Azure AD 应用](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | 在预配 SQL 时跳过添加用户 | <ul> <li>`.fx/config.<envName>.json` 中的 `skipAddingSqlUser` 属性</li> </ul> | [跳过为 SQL 数据库添加用户](provision.md#skip-adding-user-for-sql-database) |
-| 自定义应用清单 | <ul> <li>`templates/manifest.template.json`</li> <li>`.fx/config.<envName>.json` 中的 `manifest` 部分</li>  </ul> | [在 Teams 工具包中自定义 Teams 应用清单](TeamsFx-manifest-customization.md) |
+| 自定义应用清单 | <ul> <li>`templates/manifest.template.json`</li> <li>`.fx/config.<envName>.json` 中的 `manifest` 部分</li>  </ul> | [工具包中的预览应用清单](TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## <a name="scenarios"></a>应用场景
 
