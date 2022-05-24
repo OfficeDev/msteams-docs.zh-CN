@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 4067b86bc3a8de0ed891e84ceef68f5f95741479
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655226"
+ms.locfileid: "65656773"
 ---
 # <a name="azure-ad-manifest"></a>Azure AD 清单
 
@@ -29,9 +29,9 @@ Teams Toolkit现在在Teams应用程序开发生命周期内，使用清单文�
 
 2. 直接更新模板或 [从另一个文件引用值](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template)。 可在此处看到多个自定义方案：
   
-* [添加应用程序权限](#customize-requiredresourceaccess)
-* [预授权客户端应用程序](#customize-preauthorizedapplications)
-* [更新身份验证响应的重定向 URL](#customize-redirect-urls)
+   * [添加应用程序权限](#customize-requiredresourceaccess)
+   * [预授权客户端应用程序](#customize-preauthorizedapplications)
+   * [更新身份验证响应的重定向 URL](#customize-redirect-urls)
 
 3. [为本地环境部署 Azure AD 应用程序更改](#deploy-azure-ad-application-changes-for-local-environment)。
   
@@ -223,8 +223,8 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 2. 转到[Azure 门户](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)并登录到Microsoft 365帐户。
   
-> [!NOTE]
-> 确保Teams应用程序和 M365 帐户的登录凭据相同。
+   > [!NOTE]
+   > 确保Teams应用程序和 M365 帐户的登录凭据相同。
 
 3. 打开 [应用注册页](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)，使用之前复制的客户端 ID 搜索 Azure AD 应用程序。
   
@@ -313,5 +313,4 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 ## <a name="see-also"></a>另请参阅
 
-* [在工具包中自定义应用清单](TeamsFx-manifest-customization.md)
-* [工具包中的预览应用清单](TeamsFx-manifest-preview.md)
+* [在Toolkit中预览和自定义应用清单](TeamsFx-preview-and-customize-app-manifest.md)

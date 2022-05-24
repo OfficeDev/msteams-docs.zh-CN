@@ -6,14 +6,14 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: db676795e394856f6e787086cae654efad79172a
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 73177f96172e4fd60b7225c2463efb6a057f36c4
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655050"
+ms.locfileid: "65656843"
 ---
-# <a name="add-single-sign-on-experience"></a>添加单一登录体验
+# <a name="add-single-sign-on-to-teams-app"></a>将单一登录添加到Teams应用
 
 Microsoft Teams为应用程序提供单一登录函数，以获取登录Teams用户令牌以访问 Microsoft Graph 和其他 API。 Teams Toolkit通过抽象一些简单的 API 背后的一些 Azure AD 流和集成来促进交互。 这样就可以轻松地将单一登录 (SSO) 功能添加到Teams应用程序。
 
@@ -282,22 +282,22 @@ export async function showUserImage(context, ssoToken, param) {
 
    * 使用以下行进行新的命令注册，如下所示`addCommand``teamsSsoBot`：
 
-   ```bash
+     ```bash
 
-   this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
+     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
 
-   ```
+     ```
 
    * 在上述行后添加以下行以注册新命令 `photo` 并挂接上面添加的方法 `showUserImage` ：
 
-   ```bash
+     ```bash
 
-   // As shown here, you can add your own parameter into the `showUserImage` method
-   // You can also use regular expression for the command here
-   const scope = ["User.Read"];
-   this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
+     // As shown here, you can add your own parameter into the `showUserImage` method
+     // You can also use regular expression for the command here
+     const scope = ["User.Read"];
+     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
 
-   ```
+     ```
 
 3. 在Teams应用清单中注册命令。 在机器人中`command``commandLists`打开`templates/appPackage/manifest.template.json`并添加以下行：
 
@@ -336,12 +336,12 @@ Teams选项卡和机器人具有类似的 SSO 支持流，有关详细信息，�
 
 ### <a name="simplified-sso-with-teamsfx"></a>使用 TeamsFx 简化的 SSO
 
-TeamsFx 使用 Teams SSO 并将云资源向下访问到零配置的单行语句，从而帮助减少开发人员任务。
+TeamsFx 通过使用 SSO 并将云资源访问到零配置的单行语句来帮助减少开发人员任务。
 
 使用 TeamsFx SDK，可以使用凭据以简化的方式编写用户身份验证代码：
 
 1. 浏览器环境中的用户标识：`TeamsUserCredential`表示Teams当前用户的标识。
-2. Node.js环境中的用户标识：`OnBehalfOfUserCredentail`使用代理流和Teams SSO 令牌。
+2. Node.js环境中的用户标识： `OnBehalfOfUserCredentail` 使用代理流和 SSO 令牌。
 3. Node.js环境中的应用程序标识： `AppCredential` 表示应用程序标识。
 
 有关 TeamsFx SDK 的详细信息，请参阅：

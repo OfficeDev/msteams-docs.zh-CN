@@ -6,87 +6,95 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7778a5747ae6b5118d5ebeac857e2a9944cff62b
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0ebea1fb05e3583c90c41596da98a25d89f9b4c
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654537"
+ms.locfileid: "65656759"
 ---
-# <a name="add-capabilities-to-your-teams-apps"></a>将功能添加到 Teams 应用
+# <a name="add-capabilities-to-teams-apps"></a>向Teams应用添加功能
 
-在应用开发过程中，可以创建具有Teams应用功能的新Teams应用。 下表列出了Teams应用功能：
+在Teams Toolkit中添加功能可帮助你向现有Teams应用添加其他功能。下表列出了Teams应用功能：
 
 |**功能**|**说明**|
 |--------|-------------|
-| 选项卡 |  选项卡是指向应用清单中声明的域的简单 HTML 标记。 可以添加选项卡作为团队内部频道的一部分，为单个用户添加群组聊天或个人应用|
-| 机器人 |  机器人帮助通过文本、交互式卡片和任务模块与 Web 服务交互|
-| 消息扩展 | 消息扩展有助于通过Microsoft Teams客户端中的按钮和表单与 Web 服务交互|
+| 选项卡 |  选项卡是引用应用清单中声明的域的简单 HTML 标记。 可以将选项卡添加为团队内部频道的一部分，为单个用户添加群组聊天或个人应用。|
+| 机器人 |  机器人有助于通过文本、交互式卡片和任务模块与 Web 服务交互。|
+| 消息扩展 | 消息扩展有助于通过Microsoft Teams客户端中的按钮和表单与 Web 服务交互。|
 
-## <a name="prerequisite"></a>先决条件
+## <a name="advantages"></a>优点
 
-* 安装 [最新版本的 Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
+以下列表提供了在 TeamsFx 中添加更多功能的优点：
 
-> [!TIP]
-> 确保已在 Visual Studio Code 中打开 Teams 应用项目。
+* 提供便利
+* 使用Teams Toolkit自动添加源代码，向应用添加更多函数
 
 ## <a name="limitations"></a>限制
 
-添加更多功能时对 TeamsFx 的限制如下所示：
+以下列表提供了在 TeamsFx 中添加更多功能的限制：
 
 * 最多可以添加 16 个实例的选项卡
 * 可以为每个实例添加一个实例的机器人和消息扩展
 
 ## <a name="add-capabilities"></a>添加功能
 
-> [!Note]
-> 成功将功能添加到Teams应用后，需要为每个环境执行预配。
-* 可以在Visual Studio Code中使用Teams Toolkit添加功能
+**可以通过以下方法添加功能：**
 
-    1. 打开 **Microsoft Visual Studio代码**
-    1. 从左侧面板中选择 **Teams Toolkit**
-    1. 选择 **“添加功能”**
+* 若要在Visual Studio Code中使用Teams Toolkit来添加功能
+* 使用命令面板添加功能
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
+  > [!Note]
+  > 在Teams应用中成功添加功能后，需要为每个环境进行预配。
 
-*   还可以打开命令面板并输入Teams：添加功能：
+* **若要在Visual Studio Code中使用Teams Toolkit来添加功能：**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="备用功能":::
+   1. 打开 **Visual Studio Code**。
+   1. 从左侧面板中选择 **Teams Toolkit**。
+   1. 选择 **“开发**”下 **的“添加功能**”。
 
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="更新了一个" border="true":::
 
-    1. 在弹出窗口中，选择要包含在项目中的功能：
+* **若要使用命令面板添加功能：**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
+   1. 打开 **命令面板**。
+   1. 输入 **Teams：添加功能**。
+   1. 按 Enter 键。
 
-    2. 选择 **“确定”**
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="团队功能" border="true":::
 
-所选功能已成功添加到项目中。 Teams Toolkit为新添加的功能生成源代码
+   1. 在弹出窗口中，选择要在项目中添加的功能。
 
-## <a name="add-capabilities-using-teamsfx-cli-in-command-window"></a>在命令窗口中使用 TeamsFx CLI 添加功能
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="通知" border="true":::
 
-1. 将目录更改为 **项目目录**
-1. 执行以下命令，向项目添加不同的功能：
+## <a name="add-capabilities-using-teamsfx-cli"></a>使用 TeamsFx CLI 添加功能
 
-   |功能和方案| 命令|
-   |-----------------------|----------|
-   |添加选项卡|`teamsfx capability add tab`|
-   |添加机器人|`teamsfx capability add bot`|
-   |添加消息扩展插件|`teamsfx capability add messaging-extension`|
+* 将目录更改为 **项目目录**
+* 下表列出了功能和所需的命令：
 
-## <a name="supported-capabilities"></a>支持的功能
+  |功能和方案| 命令|
+  |-----------------------|----------|
+  |添加通知机器人 |`teamsfx add notification `|
+  |添加命令机器人 |`teamsfx add command-and-response `|
+  |添加已启用 sso 的选项卡 |`teamsfx add sso-tab`|
+  |添加选项卡 |`teamsfx add tab`|
+  |添加机器人 |`teamsfx add bot`|
+  |添加消息扩展插件 |`teamsfx add message extension`|
 
-除了Teams应用已有的功能外，还可以选择向Teams应用添加不同的功能。 下表提供了不同的Teams应用功能：
+## <a name="available-capabilities-to-add-for-different-teams-project"></a>用于为不同Teams项目添加的可用功能
+
+可以选择基于在Teams应用中创建的项目添加不同的功能。
+下表列出了要在项目中添加的可用功能：
 
 |现有功能|其他支持的功能|
 |--------------------|--------------------|
-|带有SPFx的选项卡|无|
-|带有 Azure 的选项卡|机器人和消息扩展|
-|Bot|选项卡|
-|消息扩展|选项卡和机器人|
-|选项卡和机器人|选项卡和消息扩展|
-|选项卡和消息扩展|选项卡和机器人|
-|选项卡、机器人和消息扩展|选项卡|
-|选项卡 |机器人和消息扩展|
+|SPFx选项卡 |无|
+|启用了 SSO 的选项卡 |已启用 SSO 的选项卡、通知机器人、命令机器人、机器人、消息扩展|
+|通知机器人 |已启用 SSO 的选项卡、选项卡|
+|命令机器人 |已启用 SSO 的选项卡、选项卡|
+|Tab |Tab、通知机器人、命令机器人、机器人、消息扩展|
+|Bot |消息扩展，启用了 SSO 的选项卡，选项卡|
+|消息扩展 |机器人，已启用 SSO 的选项卡，选项卡 |
 
 ## <a name="add-bot-tab-and-message-extension"></a>添加机器人、选项卡和消息扩展
 
@@ -115,7 +123,7 @@ ms.locfileid: "65654537"
 
 * 按照[分步](../sbs-gs-commandbot.yml)指南在Microsoft Teams中生成命令机器人
 
-* 按照[分步指南](../sbs-gs-notificationbot.yml)在Microsoft Teams中生成通知机器人。
+* 按照[分步](../sbs-gs-notificationbot.yml)指南在Microsoft Teams中生成通知机器人。
 
 ## <a name="see-also"></a>另请参阅
 

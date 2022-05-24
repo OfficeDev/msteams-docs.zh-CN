@@ -87,4 +87,4 @@
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="显示正在安装的应用的屏幕截图。" border="false":::
 
-    恭喜！ 机器人应用现在从 Azure 远程运行！
+    恭喜！ 选项卡应用现在从 Azure 远程运行！

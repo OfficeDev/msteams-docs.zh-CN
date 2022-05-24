@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 27e46454658bdc95e5baf5e7453fd50b1b92f03f
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: f3b96b60447596eae8c1cdf37f4b38f6653c444b
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654808"
+ms.locfileid: "65656647"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>将云资源添加到 Teams 应用
 
@@ -67,8 +67,8 @@ TeamsFx 有助于预配应用程序托管的云资源。 可以选择性地添�
   |---------------|----------|
   | Azure 函数|`teamsfx add azure-function`|
   | Azure SQL 数据库|`teamsfx add azure-sql`|
-  | Azure API 管理|`teamsfx resource add azure-apim`|
-  | Azure Key Vault|`teamsfx resource add azure-keyvault`|
+  | Azure API 管理|`teamsfx add azure-apim`|
+  | Azure Key Vault|`teamsfx add azure-keyvault`|
 
 ## <a name="types-of-cloud-resources"></a>云资源的类型
 

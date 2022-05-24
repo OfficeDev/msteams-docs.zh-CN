@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654553"
+ms.locfileid: "65656171"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -91,7 +91,7 @@ ms.locfileid: "65654553"
 
 ## <a name="update-sdk-references"></a>更新 SDK 引用
 
-若要在Outlook和Office中运行，应用需要引用npm包`@microsoft/teams-js@2.0.0` (或更高) 。 虽然Outlook和Office支持具有下层版本的代码，但将记录弃用警告，并且Outlook和Office中对 TeamsJS 的下层版本的支持最终将停止。
+若要在Outlook和Office中运行，应用需要引用npm包`@microsoft/teams-js@2.0.0` (或更高) 。 虽然Outlook和Office支持具有下层版本的代码，但会记录弃用警告，并且Outlook和Office中对 TeamsJS 的下层版本的支持最终将停止。
 
 可以使用Teams Toolkit来帮助识别和自动化从 1.x TeamsJS 版本升级到 TeamsJS 版本 2.0.0 所需的代码更改。 或者，可以手动执行相同的步骤;有关详细信息，请参阅 [Microsoft Teams JavaScript 客户端 SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)。
 
@@ -108,7 +108,6 @@ ms.locfileid: "65654553"
 
 > [!IMPORTANT]
 > 升级工具不支持 *.html* 文件中的代码，需要手动更改。
-
 
 ## <a name="configure-content-security-policy-headers"></a>配置内容安全策略标题
 
@@ -135,15 +134,15 @@ ms.locfileid: "65654553"
 
 1. 在”**授权客户端应用程序**“部分中，确保添加了以下 `Client Id` 所有值：
 
-|Microsoft 365 客户端应用程序 | 客户端 ID |
-|--|--|
-|Teams 桌面、移动设备 |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Office 桌面版  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-|Outlook 桌面版 | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    |Microsoft 365 客户端应用程序 | 客户端 ID |
+    |--|--|
+    |Teams 桌面、移动设备 |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+    |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+    |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
+    |Office 桌面版  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Outlook 桌面版 | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-app-in-teams"></a>在 Teams 中旁加载应用
 
@@ -165,23 +164,23 @@ ms.locfileid: "65654553"
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams中的“Upload自定义应用”选项":::
 
-旁加载到Teams后，个人选项卡将在Outlook和Office中提供。 请务必使用用于登录Teams来旁加载应用的相同凭据登录。
+旁加载到Teams后，个人选项卡在Outlook和Office中可用。 请务必使用用于登录Teams来旁加载应用的相同凭据登录。
 
-可以固定应用以进行快速访问，也可以在省略号 (**...**) 中找到应用左侧边栏中最近应用程序中的浮出控件。 将应用固定Teams不会将其固定为Office或Outlook中的应用。
+可以固定应用以进行快速访问，也可以在省略号 (**...**) 中找到应用左侧边栏中最近应用程序中的浮出控件。 将应用固定在Teams不会将其固定为Office或Outlook中的应用。
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>在其他 Microsoft 365 体验中预览个人选项卡
 
 下面介绍如何预览在Office和Outlook、Web 和Windows桌面客户端中运行的应用。
 
 > [!NOTE]
-> 从Teams卸载应用也会将其从Outlook和Office的 **“更多应用**”目录中删除。 如果使用的是上面提供的Teams Toolkit示例应用
+> 从Teams卸载应用还会将其从Outlook和Office的 **“更多应用**”目录中删除。 如果使用的是上面提供的Teams Toolkit示例应用。
 
 ### <a name="outlook-on-windows"></a>Windows 版 Outlook
 
 若要在 Windows 桌面上查看在 Outlook 中运行的应用：
 
 1. 启动 Outlook 并使用开发租户帐户登录。
-1. 在侧栏上，选择  **“更多应用**”。 旁加载的应用标题将显示在已安装的应用中。
+1. 在侧栏上，选择  **“更多应用**”。 旁加载的应用标题显示在已安装的应用中。
 1. 选择应用图标以在Outlook中启动应用。
 
     :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text=" 单击 Outlook 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
@@ -191,7 +190,7 @@ ms.locfileid: "65654553"
 若要查看 Outlook 网页版中的应用，请执行以下操作：
 
 1. 导航到 [ Outlook 网页版 ](https://outlook.office.com) 并使用开发租户帐户登录。
-1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题将显示在已安装的应用中。
+1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题显示在已安装的应用中。
 1. 选择应用图标以启动和预览在Outlook 网页版中运行的应用。
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text=" 单击 outlook.com 侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
@@ -201,7 +200,7 @@ ms.locfileid: "65654553"
 若要在 Windows 桌面上查看在 Office 中运行的应用，请执行以下操作：
 
 1. 启动 Office 并使用开发租户帐户登录。
-1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题将显示在已安装的应用中。
+1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题显示在已安装的应用中。
 1. 选择应用图标以在Office中启动应用。
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text=" 单击 Office 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
@@ -210,15 +209,15 @@ ms.locfileid: "65654553"
 
 若要预览在 Office 网页版中运行的应用，请执行以下操作：
 
-1. 使用测试租户凭据登录到 office.com。
-1. 选择侧栏上的 **“应用** ”图标。 旁加载的应用标题将显示在已安装的应用中。
+1. 使用测试租户凭据登录 **到 office.com** 。
+1. 选择侧栏上的 **“应用** ”图标。 旁加载的应用标题显示在已安装的应用中。
 1. 选择应用图标以在Office web 版中启动应用。
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="单击 office.com 侧栏上的“更多应用”选项，查看已安装的个人选项卡":::
 
 ## <a name="troubleshooting"></a>疑难解答
 
-目前，Outlook和Office客户端支持一部分Teams应用程序类型和功能。 此支持将随时间推移而扩展。 
+目前，Outlook和Office客户端支持一部分Teams应用程序类型和功能。 此支持随时间推移而扩展。
 
 请参阅[Microsoft 365支持](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)来检查主机对各种 TeamsJS 功能的支持。
 
@@ -240,7 +239,7 @@ ms.locfileid: "65654553"
 
 在 [Microsoft Teams Framework (TeamsFx ](https://github.com/OfficeDev/TeamsFx/issues)) 中提供反馈并报告Teams Toolkit调试体验的任何问题。
 
-## <a name="next-steps"></a>后续步骤
+## <a name="next-step"></a>后续步骤
 
 发布应用以在Teams、Outlook和Office中发现：
 
