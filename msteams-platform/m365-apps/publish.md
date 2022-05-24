@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 66b5adb6162222da155318aeb818fd681a664816
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653699"
+ms.locfileid: "65656075"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>发布Teams应用以Microsoft 365
 
@@ -26,7 +26,7 @@ Outlook启用的消息扩展插件可以通过多种方式分发到测试和生�
 
 ### <a name="teams-client"></a>Teams 客户端
 
-在 *“应用* ”菜单中，选择 *“管理应用* > *”，将应用* > **提交到组织**。这需要 IT 管理员的批准。
+在 *“应用* ”菜单中，选择 *“管理应用* > *发布应用* > **将应用提交到组织**”。这需要 IT 管理员的批准。
 
 ### <a name="teams-developer-portal"></a>Teams开发人员门户
 
@@ -42,7 +42,7 @@ Outlook启用的消息扩展插件可以通过多种方式分发到测试和生�
 
 ## <a name="multitenant-distribution"></a>多租户分布
 
-[Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft 商业市场) 为Outlook和Office启用的Teams应用的提交过程与传统Teams应用相同;唯一的区别是需要在应用包中使用Teams应用清单[版本 1.13](../tabs/how-to/using-teams-client-sdk.md)，这为Teams 跨Microsoft 365运行的应用。
+为Outlook和Office启用的Teams应用的 [Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft 商业市场) 提交过程与传统的Teams应用相同。 唯一的区别是，你需要在应用包中使用Teams应用清单[版本 1.13](../tabs/how-to/using-teams-client-sdk.md)，这引入了对跨Microsoft 365运行的Teams应用的支持。
 
 > [!TIP]
 > 使用Teams开发人员门户[验证应用包](https://dev.teams.microsoft.com/validation)，以便在通过 [Microsoft 合作伙伴网络](https://partner.microsoft.com/)) 提交到Teams存储 (之前解决任何错误或警告。

@@ -3,15 +3,15 @@ title: 先决条件
 author: surbhigupta
 description: Microsoft Teams 中的每个选项卡都必须遵守这些要求。
 keywords: Teams 选项卡组频道可配置
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ac02c7c78fca1ddf4c64e2718cdaf840b0ae59b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110279"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654898"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -44,7 +44,7 @@ ms.locfileid: "65110279"
 | &nbsp; | 安装 | 用于使用... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | 后端 JavaScript 运行时环境。 使用最新的 v14 LTS 版本。|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | 后端 JavaScript 运行时环境。 使用最新的 v16 LTS 版本。|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge)（推荐）或 [Google Chrome](https://www.google.com/chrome/) | 包含开发人员工具的浏览器。 |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript、TypeScript 或 SharePoint 框架 (SPFx) 生成环境。 |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)、**ASP.NET 和 web 开发** 或 **.NET Core 跨平台开发** 工作负载 | .NET。 你可以安装 2019 Visual Studio 的免费社区版。 |

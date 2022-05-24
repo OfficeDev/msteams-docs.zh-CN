@@ -3,20 +3,18 @@ title: Teams 工具包概述
 author: zyxiaoyuer
 description: Teams 工具包概述、Teams 工具包安装和工具包功能概览
 ms.author: zhany
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: de249f060581c2d8e1f90408c8431fe451125ef2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.date: 05/17/2022
+ms.openlocfilehash: 36436b5cc2cf7edec784ab653b12d8cf44172b8b
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111421"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654600"
 ---
 # <a name="teams-toolkit-overview"></a>Teams 工具包概述
 
-> [!NOTE]
-> 目前，此功能仅适用于 **公共开发人员预览版**。
 
 适用于 Microsoft Visual Studio Code 的 Teams 工具包可帮助创建和部署具有集成标识、云存储访问、来自 Microsoft Graph 的数据以及采用零配置方法的其他 Azure 和 Microsoft 365 服务的 Teams 应用。 对于 Teams 应用开发，类似于适用于 Visual Studio 的 Teams 工具包，可以使用 [CLI 工具](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)，其中包括工具包 `teamsfx`。
 Teams 工具包允许直接从 Visual Studio Code 创建、调试和部署 Teams 应用。 使用工具包进行应用开发具有以下优点：
@@ -27,8 +25,6 @@ Teams 工具包允许直接从 Visual Studio Code 创建、调试和部署 Teams
 * 采用零配置方法的 Azure 和 Microsoft 365 服务
 
 Teams 工具包将构建 Teams 应用所需的所有工具集中在一处。
-
-对于 Teams 应用开发，类似于适用于 Visual Studio Code 的 Teams 工具包，可以使用 [CLI 工具](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)，其中包括工具包 `teamsfx`。
 
 ## <a name="user-journey-of-teams-toolkit"></a>Teams 工具包的用户旅程
 
@@ -47,17 +43,17 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>安装适用于 Visual Studio Code 的 Teams 工具包
 
 1. 打开 **Visual Studio Code**。
-1. 选择“扩展”视图（**Ctrl+Shift+X** / **⌘⇧-X** 或“**视图”>“扩展”）**：
+1. 选择“扩展”视图 (**Ctrl+Shift+X** / ⌘⇧ **-X** 或 **视图>扩展)**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="安装":::
 
-1. 在搜索框中输入 **Teams 工具包**：
+1. 在搜索框中输入 **Teams Toolkit**。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-2.png" alt-text="工具包":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="工具包":::
 
-1. 选择“**安装**”：
+1. 选择“**安装**”。
   
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install.png" alt-text="安装工具包":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="安装工具包 4.0.0":::
 
 > [!TIP]
 > 可以从 [Visual Studio Code 商城](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)安装 Teams 工具包。
@@ -66,17 +62,17 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 
 安装工具包后，将看到 Teams 工具包 UI，如下图所示：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="迷你功能":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="迷你功能":::
 
-可以选择“**快速入门**”来浏览 Teams 工具包，或选择“**创建新的 Teams 应用**”来创建一个 Teams 项目。 如果在 Visual Studio Code 中打开了由 Teams Toolkit v2.+ 创建的 Teams 项目，则将看到具有所有功能的 Teams 工具包 UI，如下图所示：可以选择“**快速入门**”来浏览 Teams 工具包，或选择“**创建新的 Teams 应用**”来创建一个 Teams 项目。 在 Visual Studio Code 边栏中创建或打开现有项目时，可以查看所有工具包功能的列表。
+可以选择 **入门** 来浏览Teams Toolkit，或选择 **“新建Teams应用**”以创建一个Teams项目。 如果Visual Studio Code Teams Toolkit创建了Teams项目，则会看到具有所有功能的Teams Toolkit UI，如下图所示：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="函数":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="teams 工具包的屏幕截图":::
 
-让我们来了解本文档中介绍的主题：
+让我们来看看本文档中介绍的主题。
 
 ## <a name="accounts"></a>帐户
 
-若要开发 Teams 应用，至少需要一个具有有效订阅的 Microsoft 365 帐户。 如果要在 Azure 上托管后端资源，还需要 Azure 帐户。 Teams 工具包支持用于登录、预配和部署 Azure 资源的集成体验。 可以在开始之前[创建免费的 Azure 帐户](https://azure.microsoft.com/free/)。
+若要开发 Teams 应用，至少需要一个具有有效订阅的 Microsoft 365 帐户。 如果要在 Azure 上托管后端资源，还需要 Azure 帐户。 Teams Toolkit支持用于登录、预配和部署 Azure 资源的集成体验。 可以在开始之前[创建免费的 Azure 帐户](https://azure.microsoft.com/free/)。
 
 ## <a name="environment"></a>环境
 
@@ -86,21 +82,19 @@ Teams 工具包可帮助创建和管理多个环境、预配项目并将其部�
 
 它允许开发人员和项目所有者邀请其他协作者加入 TeamsFx 项目，以调试、预配和部署相同的 TeamsFx 项目。
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamsfx.png" alt-text="Teamsfx 项目":::
+
 ## <a name="development"></a>开发
 
 Teams 工具包可帮助创建和自定义 Teams 应用项目，使 Teams 应用开发更简单。
 
 ### <a name="create-a-new-teams-app"></a>新建 Teams 应用
 
-它可帮助你使用 Teams 工具包创建新的 Teams 项目（方法是使用“**创建新项目**”或“**从示例创建**”）来开始开发 Teams 应用。
+它通过使用Teams Toolkit创建新项目或 **从示例**"开始"菜单创建新的Teams **项目**，帮助你从Teams应用开发入门。
 
-### <a name="add-capabilities"></a>添加功能
+### <a name="add-features"></a>添加功能
 
-它有助于在开发过程中向 Teams 应用添加其他必需的 Teams 功能。
-
-### <a name="add-cloud-resources"></a>添加云资源
-
-它可帮助你根据开发需求选择性地添加云资源。
+它可帮助你以增量方式添加其他Teams功能，如 **Tab** 或 **Bot**，或者选择性地添加 Azure 资源（如 **Azure SQL 数据库** 或 **Azure 密钥保管库**，以满足当前Teams应用的开发需求。 还可以为Teams应用添加 **单一登录** 或 **CI/CD 工作流**。 
 
 ### <a name="edit-manifest-file"></a>编辑清单文件
 
@@ -121,10 +115,6 @@ Teams 工具包可帮助创建和自定义 Teams 应用项目，使 Teams 应用
 ### <a name="publish-to-teams"></a>发布到 Teams
 
 创建应用后，可以将应用分发到不同的范围，例如个人、团队、组织或任何人。 发布到 Teams 有助于发布开发的应用。
-
-### <a name="cicd-guide"></a>CI/CD 指南
-
-它有助于在构建 Teams 应用程序时自动执行开发工作流。 CI/CD 指南提供了用于在设置 CI 或 CD 管道时开始使用的工具和模板。
 
 #### <a name="teamsfx-cli"></a>TeamsFx CLI
 
@@ -151,8 +141,7 @@ Teams 工具包可帮助创建和自定义 Teams 应用项目，使 Teams 应用
 | **开发** | &nbsp; | &nbsp; |
 | &nbsp; | 新建 Teams 应用 | 使用工具包向导为应用开发准备项目基架。 |
 | &nbsp; | 查看示例 | 选择 Teams 工具包的 12 个示例应用中的任何一个。 该工具包会从 GitHub 下载应用代码，你可以构建示例应用。 |
-| &nbsp; | 添加功能 | 在开发过程中向 Teams 应用添加其他必需的 Teams 功能。 |
-| &nbsp; | 添加云资源 | 添加适合应用的可选云资源。 |
+| &nbsp; | 添加功能 | - 在开发过程中将其他所需的Teams功能添加到Teams应用。 </br> - 添加适合应用的可选云资源。 |
 | &nbsp; | 编辑清单文件 | 编辑 Teams 应用与 Teams 客户端的集成。 |
 | **部署** | &nbsp; | &nbsp; |
 | &nbsp; | 在云中预配 | 为应用程序分配 Azure 资源。 Teams 工具包与 Azure 资源管理器集成。 |
@@ -160,12 +149,12 @@ Teams 工具包可帮助创建和自定义 Teams 应用项目，使 Teams 应用
 | &nbsp; | 部署到云 | 将源代码部署到 Azure。 |
 | &nbsp; | 发布到 Teams | 发布开发的应用并将其分发到范围，例如个人、团队、频道或组织。 |
 | &nbsp; | Teams 开发人员门户 | 使用开发人员门户配置和管理 Teams 应用。 |
-| &nbsp; | CI/CD 指南 | 构建 Teams 应用程序时自动执行开发工作流。 |
 | **帮助和反馈** | &nbsp; | &nbsp; |
-| &nbsp; | 快速入门 | 在 Visual Studio Code 中查看 Teams 工具包快速入门帮助。  |
+| &nbsp; | 快速启动 | 在Visual Studio Code中查看Teams Toolkit快速入门帮助。  |
+| &nbsp; | 教程 | 选择此选项可访问不同的教程。 |
 | &nbsp; | 文档 | 选择此选项可访问 Microsoft Teams 开发人员文档。 |
 | &nbsp; | 在 GitHub 上报告问题 | 选择此选项可访问 GitHub 页面并提出任何问题。 |
-|
+
 
 > [!TIP]
 > 请在创建新问题之前先浏览现有问题，或访问 [StackOverflow 标记 `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) 提交反馈。

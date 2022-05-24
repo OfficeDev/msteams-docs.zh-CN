@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 7778a5747ae6b5118d5ebeac857e2a9944cff62b
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103269"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654537"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>将功能添加到 Teams 应用
 
@@ -28,7 +28,7 @@ ms.locfileid: "65103269"
 * 安装 [最新版本的 Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
 > [!TIP]
-> 确保已在 VS 代码中打开Teams应用项目。
+> 确保已在 Visual Studio Code 中打开 Teams 应用项目。
 
 ## <a name="limitations"></a>限制
 
@@ -42,6 +42,7 @@ ms.locfileid: "65103269"
 > [!Note]
 > 成功将功能添加到Teams应用后，需要为每个环境执行预配。
 * 可以在Visual Studio Code中使用Teams Toolkit添加功能
+
     1. 打开 **Microsoft Visual Studio代码**
     1. 从左侧面板中选择 **Teams Toolkit**
     1. 选择 **“添加功能”**
@@ -110,6 +111,11 @@ ms.locfileid: "65103269"
 * 将更新下面 `templates/azure/teamsfx` 的文件，并 `templates/azure/provision/xxx`重新生成 .bicep 文件
 * 下面的文件 `.fx/config` 已重新生成，这可确保使用新添加的功能的正确配置来设置项目
 
+## <a name="step-by-step-guide"></a>分步指南
+
+* 按照[分步](../sbs-gs-commandbot.yml)指南在Microsoft Teams中生成命令机器人
+
+* 按照[分步指南](../sbs-gs-notificationbot.yml)在Microsoft Teams中生成通知机器人。
 
 ## <a name="see-also"></a>另请参阅
 

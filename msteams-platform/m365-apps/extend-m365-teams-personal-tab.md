@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653803"
+ms.locfileid: "65654553"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -131,9 +131,9 @@ ms.locfileid: "65653803"
 1. 选择个人选项卡应用程序的名称以打开其应用注册。
 1. 在“*管理*”下选择“**公开 API**”。
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text=" 从 Azure 门户上的 *应用注册* 边栏选项卡授权客户端 ID ":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text=" 从 Azure 门户上的 *应用注册* 边栏选项卡授权客户端 ID ":::
 
-在”**授权客户端应用程序**“部分中，确保添加了以下 `Client Id` 所有值：
+1. 在”**授权客户端应用程序**“部分中，确保添加了以下 `Client Id` 所有值：
 
 |Microsoft 365 客户端应用程序 | 客户端 ID |
 |--|--|
@@ -184,7 +184,7 @@ ms.locfileid: "65653803"
 1. 在侧栏上，选择  **“更多应用**”。 旁加载的应用标题将显示在已安装的应用中。
 1. 选择应用图标以在Outlook中启动应用。
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text=" 单击 Outlook 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text=" 单击 Outlook 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
 
 ### <a name="outlook-on-the-web"></a>Outlook 网页版
 
@@ -194,7 +194,7 @@ ms.locfileid: "65653803"
 1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题将显示在已安装的应用中。
 1. 选择应用图标以启动和预览在Outlook 网页版中运行的应用。
 
-:::image type="content" source="images/outlook-web-more-apps.png" alt-text=" 单击 outlook.com 侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text=" 单击 outlook.com 侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
 
 ### <a name="office-on-windows"></a>Windows 版 Office
 
@@ -204,7 +204,7 @@ ms.locfileid: "65653803"
 1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题将显示在已安装的应用中。
 1. 选择应用图标以在Office中启动应用。
 
-:::image type="content" source="images/office-desktop-more-apps.png" alt-text=" 单击 Office 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text=" 单击 Office 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
 
 ### <a name="office-on-the-web"></a>Office 网页版
 
@@ -214,7 +214,7 @@ ms.locfileid: "65653803"
 1. 选择侧栏上的 **“应用** ”图标。 旁加载的应用标题将显示在已安装的应用中。
 1. 选择应用图标以在Office web 版中启动应用。
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="单击 office.com 侧栏上的“更多应用”选项，查看已安装的个人选项卡":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="单击 office.com 侧栏上的“更多应用”选项，查看已安装的个人选项卡":::
 
 ## <a name="troubleshooting"></a>疑难解答
 
@@ -236,7 +236,7 @@ ms.locfileid: "65653803"
 
 首次运行本地调试以Office或Outlook时，系统会提示你登录到Microsoft 365租户帐户并安装自签名测试证书。 系统还会提示你手动安装Teams。 选择 **“安装Teams** 打开浏览器窗口并手动安装应用。 然后单击“**继续**”，在Office/Outlook中继续调试应用。
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Teams安装Toolkit对话框":::
 
 在 [Microsoft Teams Framework (TeamsFx ](https://github.com/OfficeDev/TeamsFx/issues)) 中提供反馈并报告Teams Toolkit调试体验的任何问题。
 
