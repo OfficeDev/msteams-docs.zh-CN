@@ -1,18 +1,18 @@
 ---
-title: 发布Teams应用以Microsoft 365
+title: 发布适用于 Microsoft 365 的 Teams 应用
 description: 使已启用Microsoft 365的Teams应用在Teams、Outlook和Office中可供用户发现
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 78a2d0354028426f4de98759a501e66530cf1166
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656075"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668058"
 ---
-# <a name="publish-teams-apps-for-microsoft-365"></a>发布Teams应用以Microsoft 365
+# <a name="publish-teams-apps-for-microsoft-365"></a>发布适用于 Microsoft 365 的 Teams 应用
 
 Microsoft Teams中支持启用Microsoft 365 Teams应用进行生产使用。 可以将这些应用分发给预览使用目标 *版本* 的 outlook.com 和 office.com 的受众，以及用于Windows桌面的 *Beta 频道* Outlook版本。 已启用Microsoft 365 Teams应用的分发选项和流程与传统Teams应用相同。
 
@@ -26,7 +26,7 @@ Outlook启用的消息扩展插件可以通过多种方式分发到测试和生�
 
 ### <a name="teams-client"></a>Teams 客户端
 
-在 *“应用* ”菜单中，选择 *“管理应用* > *发布应用* > **将应用提交到组织**”。这需要 IT 管理员的批准。
+在 **“应用** ”菜单中，选择 **“管理应用** > **发布应用** > **将应用提交到组织**”。这需要 IT 管理员的批准。
 
 ### <a name="teams-developer-portal"></a>Teams开发人员门户
 

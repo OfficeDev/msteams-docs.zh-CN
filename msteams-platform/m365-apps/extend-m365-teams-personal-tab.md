@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656171"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668135"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -148,15 +148,15 @@ ms.locfileid: "65656171"
 
 在Office和Outlook中运行应用的最后一步是在Microsoft Teams中旁加载更新的个人选项卡[应用包](..//concepts/build-and-test/apps-package.md)。
 
-1. 将Teams应用程序 ([清单](../resources/schema/manifest-schema.md)和[应用图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)打包) zip 文件中。 如果使用 Teams 工具包创建应用，则可以使用 Teams 工具包的 *“部署”* 菜单中的“**压缩 Teams 元数据包**”选项轻松完成此操作：
+1. 将Teams应用程序 ([清单](../resources/schema/manifest-schema.md)和[应用图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)打包) zip 文件中。 如果使用Teams Toolkit创建应用，则可以在Teams Toolkit的 **“部署**”菜单中使用 **Zip Teams 元数据包** 选项轻松完成此操作。
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="适用于 Visual Studio Code 的 Teams 工具包扩展中的“压缩 Teams 元数据包”选项":::
 
-1. 使用沙盒租户帐户登录Teams，并切换到 *开发人员预览* 模式。 按用户配置文件选择省略号 (**...**) 菜单，然后选择：关于开发 **人员预览**>。
+1. 使用沙盒租户帐户登录Teams，并切换到 *开发人员预览* 模式。 按用户配置文件选择省略号 (**...**) 菜单，然后选择“ **关于** > **开发人员预览**”。
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="从Teams省略号菜单中，打开“关于”，然后选择“开发人员预览”选项":::
 
-1. 选择 *“应用* ”以打开“ **管理应用** ”窗格。 然后选择 **“发布应用**”。
+1. 选择 **“应用** ”以打开“ **管理应用** ”窗格。 然后选择 **“发布应用**”。
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="打开“管理应用”窗格，然后选择“发布应用”":::
 

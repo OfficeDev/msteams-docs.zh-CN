@@ -3,14 +3,14 @@ title: 公共开发人员预览清单架构参考
 description: Microsoft Teams 支持的所有组件的示例清单文件和说明
 ms.topic: reference
 keywords: Teams 清单架构开发人员预览
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110328"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668128"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的公共开发人员预览清单架构
 
@@ -284,7 +284,7 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
 
 **必需** &ndash; 字符串
 
-此清单使用的清单架构版本。 仅当预览 [在 Office 和 Outlook 中运行的Teams 应用](../../m365-apps/overview.md) 时，才使用 `m365DevPreview`。 否则，请使用 `devPreview` 获取所有其他 Teams 预览功能。
+此清单使用的清单架构版本。
 
 ## <a name="version"></a>version
 
@@ -443,7 +443,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`items.scopes`|枚举数组|3|✔|指定命令列表有效的范围。选项为 `team`、 `personal`和 `groupchat`。|
-|`items.commands`|对象数组|10 |✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例（字符串，128）。|
+|`items.commands`|对象数组|10|✔|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例（字符串，128）。|
 
 ## <a name="connectors"></a>连接器
 
@@ -555,6 +555,97 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`id`|字符串|36 个字符|✔|应用的 Microsoft Azure Active Directory (Azure AD) 应用程序 ID。 此 ID 必须是 GUID。|
 |`resource`|String|2048 个字符|✔|用于获取 SSO 身份验证令牌的应用的资源 URL。|
 |`applicationPermissions`|Array|最多 100 项|✔|应用程序的资源权限。|
+
+## <a name="graphconnector"></a>graphConnector
+
+**可选**— 对象
+
+指定应用的Graph连接器配置。 如果存在，则还必须指定 [webApplicationInfo.id](#webapplicationinfo) 。
+
+|名称| 类型| 最大大小 | 必需 | 说明|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 个字符|✔|应发送应用程序的Graph连接器通知的 URL。|
+
+## <a name="showloadingindicator"></a>showLoadingIndicator
+
+**可选**— 布尔值
+
+指示是否在加载应用或选项卡时显示加载指示器。 默认为 **false**。
+> [!NOTE]
+> 如果在应用清单中选择`showLoadingIndicator` 为 true，若要正确加载页面，请修改选项卡和任务模块的内容页，如 [显示本机加载指示器](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) 文档中所述。
+
+## <a name="isfullscreen"></a>isFullScreen
+
+ **可选**— 布尔值
+
+指示使用或不使用选项卡标题栏呈现个人应用的位置。默认值为 **false**。
+
+> [!NOTE]
+> `isFullScreen` 仅适用于发布到组织的应用。
+
+## <a name="activities"></a>activities
+
+**可选**— 对象
+
+定义应用用于发布用户活动源的属性。
+
+|名称| 类型| 最大大小 | 必需 | Description|
+|---|---|---|---|---|
+|`activityTypes`|对象数组|128 个项目| | 提供应用可以发布到用户活动源的活动类型。|
+
+### <a name="activitiesactivitytypes"></a>activities.activityTypes
+
+|名称| 类型| 最大大小 | 必需 | 说明|
+|---|---|---|---|---|
+|`type`|string|32 个字符|✔|通知类型。 *请参阅下文*。|
+|`description`|string|128 个字符|✔|通知的简要说明。 *请参阅下面的*。|
+|`templateText`|string|128 个字符|✔|例如："{actor} 为你创建了任务 {taskId}"|
+
+```json
+{
+   "activities":{
+      "activityTypes":[
+         {
+            "type":"taskCreated",
+            "description":"Task Created Activity",
+            "templateText":"{actor} created task {taskId} for you"
+         },
+         {
+            "type":"teamMention",
+            "description":"Team Mention Activity",
+            "templateText":"{actor} mentioned team"
+         },
+         {
+            "type":"channelMention",
+            "description":"Channel Mention Activity",
+            "templateText":"{actor} mentioned channel"
+         },
+         {
+            "type":"userMention",
+            "description":"Personal Mention Activity",
+            "templateText":"{actor} mentioned user"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"creatorTaskCreated",
+            "description":"Created Task Created",
+            "templateText":"The Creator created task {taskId} for you"
+         }
+      ]
+   }
+}
+```
+
+***
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -688,6 +779,15 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
     |**名称**|**说明**|
     |---|---|
     |`InAppPurchase.Allow.User`|允许应用代表已登录用户显示用户市场产品/服务并完成用户在应用内的购买。|
+
+* **Teams实时共享的资源特定权限**
+
+   |名称| 说明 |
+   | ----- | ----- |
+   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
+   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
+   |`MeetingStage.Write.Chat`|<!--- need info --->|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>另请参阅
 

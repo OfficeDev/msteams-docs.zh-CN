@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac7b82d4a0c984f1db94c770be28d0bcda71c8e6
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 9cc0d88d5f992aa596509a6206a26baa413bdcf1
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656089"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668142"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 应用
 
@@ -69,7 +69,7 @@ Teams应用平台继续发展并全面扩展到Microsoft 365生态系统。 以�
 
 发布为已启用Microsoft 365 Teams应用后，除了Teams应用商店之外，你的应用将从Outlook和Office 应用存储中发现为可安装的应用。 在Outlook和Office中运行时，应用使用在Teams中授予的相同权限。 Teams管理员可以管理对组织中用户[跨Microsoft 365 Teams应用的访问权限](/MicrosoftTeams/manage-third-party-teams-apps)。
 
-有关详细信息，请参阅[发布Teams应用Microsoft 365](publish.md)
+有关详细信息，请参阅[发布Microsoft 365 Teams应用](publish.md)。
 
 ## <a name="next-step"></a>后续步骤
 

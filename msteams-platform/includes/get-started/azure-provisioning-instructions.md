@@ -82,23 +82,13 @@
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="显示远程启动应用的屏幕截图。" border="false":::
 
-1. 选择“**添加**”。
+1. 当系统提示将应用旁加载到本地计算机上的Teams时，选择 **“添加**”。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="显示正在安装的应用的屏幕截图。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-bot-debug.png" alt-text="显示正在Teams客户端上添加机器人的屏幕截图。":::
 
-   该工具包显示一条消息，指示应用已添加到Teams。
+   可以键入 `welcome` 以显示简介卡片，然后键 `learn` 入以转到自适应卡片和机器人命令文档。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="屏幕截图显示立即或更高版本尝试应用的消息" border="true":::
- 
-    - 如果选择 **“获取”**，可以稍后从旁加载应用列表中试用该应用。
-    - 如果选择 **“试用**”，Teams加载应用。
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="显示Teams客户端上的机器人中的学习卡片的屏幕截图。":::       
 
-   你的应用在 Azure 网站上加载。
-   
-1. 选择 **“试用**”。
-
-   消息扩展应用在聊天机器人应用中加载。
-
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="显示在Teams中旁加载的应用的屏幕截图" border="false":::
 
 

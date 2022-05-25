@@ -4,14 +4,14 @@ author: surbhigupta
 description: 通过示例和代码示例识别会议应用程序 API 参考
 ms.topic: conceptual
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams 应用会议用户参与者角色 API 用户上下文通知信号查询
-ms.openlocfilehash: 4f04d94d5fd9d1b38f7569db658fac10ccaa2650
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 75dc6dde65b24fd05931021544fafe3af956d88d
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111351"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65667981"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -777,6 +777,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * [选项卡的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Teams 会议应用](teams-apps-in-meetings.md)
+* [Live Share SDK](teams-live-share-overview.md)
 
 ## <a name="next-steps"></a>后续步骤
 
