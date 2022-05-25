@@ -6,15 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/17/2022
-ms.openlocfilehash: 12ac74f64c4be69ff9b73ca2de1ee7c91917b259
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 1b65fedbc34cb00771dde279a19ab1d6b4d8b16a
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656857"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673011"
 ---
 # <a name="teams-toolkit-overview"></a>Teams 工具包概述
-
 
 适用于 Microsoft Visual Studio Code 的 Teams 工具包可帮助创建和部署具有集成标识、云存储访问、来自 Microsoft Graph 的数据以及采用零配置方法的其他 Azure 和 Microsoft 365 服务的 Teams 应用。 对于 Teams 应用开发，类似于适用于 Visual Studio 的 Teams 工具包，可以使用 [CLI 工具](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)，其中包括工具包 `teamsfx`。
 Teams 工具包允许直接从 Visual Studio Code 创建、调试和部署 Teams 应用。 使用工具包进行应用开发具有以下优点：

@@ -2,16 +2,16 @@
 title: 创建频道或组选项卡
 author: laujan
 description: 使用适用于 Microsoft Teams 的 Yeoman Generator 创建频道和组选项卡的快速入门指南，包括查看包含代码示例的源代码。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 1e2092e06fa79691a7cd633d5ff56572a7fe73ad
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd50547e1b6d504d20d57ac1c23e741c6e043cf0
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111337"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672948"
 ---
 # <a name="channel-or-group-tab"></a>频道或组选项卡
 

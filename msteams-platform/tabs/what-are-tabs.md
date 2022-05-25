@@ -5,12 +5,12 @@ description: Teams 平台上的自定义选项卡概述
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611448"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672969"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>构建 Microsoft Teams 选项卡
 
@@ -20,6 +20,8 @@ ms.locfileid: "65611448"
 > 目前，自定义选项卡在政府社区云 (GCC)、GCC-High 和国防部 (DOD) 中可用。
 >
 > 建议通过 [npm 包](https://www.npmjs.com/package/@microsoft/teams-js) 使用 Teams 客户端 SDK，并将其与你的应用捆绑在一起，因为当前 Teams 客户端 SDK 在政府云 CDN 中不可用。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 下图显示了个人选项卡：
 
@@ -33,7 +35,7 @@ ms.locfileid: "65611448"
 
 Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选项卡。 [个人选项卡](~/tabs/how-to/create-personal-tab.md) 和个人范围的机器人一样，是个人应用的一部分，并且只作用于单个用户。 可以将它们固定到左侧导航栏以方便访问。 [通道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)将内容传递到频道和群组聊天，是围绕基于 Web 的专用内容创建协作空间的好方法。
 
-你可以[创建内容页面](~/tabs/how-to/create-tab-pages/content-page.md)，将其作为个人选项卡、频道或组选项卡或任务模块的一部分。 可以 [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)，以支持用户能够配置 Microsoft Teams 应用，并使用它来配置频道或群组聊天选项卡、消息传递扩展或 Office 365 连接器。 你可以允许用户在安装后重新配置选项卡，并为应用程序[创建选项卡删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。 生成包含选项卡的 Teams 应用时，必须在 Android 和 iOS Teams 客户端上测试[选项卡函数](~/tabs/design/tabs-mobile.md)。 选项卡必须通过基本信息、区域设置、主题信息，以及标识选项卡中的内容的 `entityId` 或 `subEntityId` 来[获取上下文](~/tabs/how-to/access-teams-context.md)。
+你可以[创建内容页面](~/tabs/how-to/create-tab-pages/content-page.md)，将其作为个人选项卡、频道或组选项卡或任务模块的一部分。 可以 [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)，以支持用户能够配置 Microsoft Teams 应用，并使用它来配置频道或群组聊天选项卡、消息传递扩展或 Office 365 连接器。 你可以允许用户在安装后重新配置选项卡，并为应用程序[创建选项卡删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。 生成包含选项卡的 Teams 应用时，必须在 Android 和 iOS Teams 客户端上测试[选项卡函数](~/tabs/design/tabs-mobile.md)。 选项卡必须通过基本信息、区域设置、主题信息，以及标识选项卡中的内容的 `app.Context.page.id` 或 `app.Context.page.subPageId` 来[获取上下文](~/tabs/how-to/access-teams-context.md)。
 
 你可以使用自适应卡片生成选项卡，并通过消除对机器人和选项卡的其他后端的需求来集中所有 Teams 应用功能。 [演示区域视图](~/tabs/tabs-link-unfurling.md) 是一个新的 UI 组件，可用于呈现在 Teams 中全屏打开的内容，并将其固定为选项卡。现有的 [link unfurling](~/tabs/tabs-link-unfurling.md) 服务已更新，以便使用自适应卡片和聊天服务将 URL 转换为选项卡。 可以使用对话子实体[创建对话选项卡](~/tabs/how-to/conversational-tabs.md)，这些子实体允许用户在选项卡中就子实体（如特定任务、患者、销售机会）进行对话，而不是讨论整个选项卡。可以更改[选项卡边距](~/resources/removing-tab-margins.md)以增强开发人员在生成应用时的体验。 可以拖动选项卡并将其放置在所需的位置，以交换个人应用和频道或群组聊天中的选项卡位置。
 
@@ -72,7 +74,7 @@ Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选�
 
 ### <a name="declare-custom-tab-in-app-manifest"></a>在应用清单中声明自定义选项卡
 
-自定义选项卡在应用包的应用清单中声明。 对于要作为选项卡包含在应用中的每个网页，可以定义一个 URL 和一个范围。 此外，还可以将 [Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 添加到页面，并在页面加载后调用 `microsoftTeams.initialize()`。 Teams 显示你的页面并提供对 Teams 特定信息的访问权限，例如 Teams 客户端正在运行深色主题。
+自定义选项卡在应用包的应用清单中声明。 对于要作为选项卡包含在应用中的每个网页，可以定义一个 URL 和一个范围。 此外，还可以将 [Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 添加到页面，并在页面加载后调用 `app.initialize()`。 Teams 显示你的页面并提供对 Teams 特定信息的访问权限，例如 Teams 客户端正在运行深色主题。
 
 无论是选择在频道或组或个人范围内公开选项卡，都必须在选项卡中显示 <iframe\>HTML [内容页面](~/tabs/how-to/create-tab-pages/content-page.md)。对于个人选项卡，内容 URL 由 `staticTabs` 数组中的 `contentUrl` 属性直接在 Teams 应用清单中设置。你的选项卡内容与所有用户都一样。
 

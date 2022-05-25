@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: e287d6251af6d44b78010449dce751b938f390bd
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 5da4a0ada6e116a22957a6f1f1b1f2f281501e2a
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191262"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654466"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>使用 Teams 工具包创建新的 Teams 应用
 
@@ -25,8 +25,19 @@ ms.locfileid: "65191262"
 1. 打开 Visual Studio Code。
 1. 在 Visual Studio Code 边栏中选择 Teams 工具包 :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: 图标。
 1. 选择 **创建新的 Teams 应用**。
-1. 使用 SharePoint 框架 (SPFx) 在可用功能选项卡、自动程序、消息扩展或选项卡中进行选择。 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams 工具包边栏":::
+
+1. 可以选择“**创建新的 Teams 应用**”或“**从示例开始**”。
+   
+   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="创建应用":::
+   
+1. 如果选择“**创建新的 Teams 应用**”，则下图将显示来自三个类别的模板：基于方案的 Teams 应用、基本 Teams 应用和跨 Microsoft 365 的扩展 Teams 应用： 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Teams 应用的功能":::
+
 1. 选择至少一个选项以开始创建 Teams 应用。
+
 
 ### <a name="create-a-new-teams-app-using-view-samples"></a>使用视图示例创建新的 Teams 应用
 
@@ -34,13 +45,20 @@ ms.locfileid: "65191262"
 
  1. 从 Microsoft Visual Studio Code 打开 **Teams Toolkit**。
  1. 在 Treeview 中选择“**开发**”部分。
- 1. 选择“**查看示例**”。示例库如下图所示：
+ 1. 选择 **查看示例**。 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="查看示例":::
 
-你可以浏览和下载示例，并在本地或远程运行应用以在 Teams Web 客户端中预览。 按照每个示例的说明操作，或在 `TeamsFx Samples repository` 中选择“**在 GitHub 上查看**”以打开示例，浏览源代码。
+    示例库如下图所示：
+   
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="示例库":::
 
-有关详细信息，请参阅[创建新的 Teams Tab 应用 (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)。
+  可以浏览如下所示的示例库：
+
+  1. 选择一个示例以浏览详细信息。
+  1. 在每个示例的信息页中选择“**创建**”以下载它。 
+  1. 通过按照下载示例后自动打开的说明进行操作，在本地或远程运行应用以在 Teams Web 客户端中预览。
+  1. 如果不希望下载示例，则可以选择“**在 GitHub 上查看**”，以在 GitHub 示例存储库中打开示例并浏览源代码。
 
 ## <a name="step-by-step-guides-using-teams-toolkit"></a>使用 Teams 工具包的分步指南
 
@@ -48,6 +66,8 @@ ms.locfileid: "65191262"
 * [通过 JavaScript 使用 React 构建 Teams 应用](../sbs-gs-javascript.yml)
 * [使用 SPFx 构建 Teams 应用](../sbs-gs-spfx.yml)
 * [使用 C# 或 .NET 构建 Teams 应用](../sbs-gs-csharp.yml)
+* 向 Teams 发送通知 
+* 生成命令机器人
 
 ## <a name="see-also"></a>另请参阅
 

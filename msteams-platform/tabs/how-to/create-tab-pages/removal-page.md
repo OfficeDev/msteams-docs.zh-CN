@@ -3,19 +3,21 @@ title: 创建选项卡删除页
 author: surbhigupta
 description: 如何创建选项卡删除页
 keywords: Teams, 选项卡, 群组, 频道, 可配置, 移除, 删除
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 17268b8afc010eedf1d8916cbcdc38a66d1f6e85
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: fe0445099958af7cd9eccc831fe22fa2e94cbcc5
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111582"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672934"
 ---
 # <a name="create-a-removal-page"></a>创建删除页面
 
 可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams 使用户能够重命名或删除频道或群组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验为用户提供了删除后选项以删除或存档内容。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>使选项卡可在安装后重新配置
 
@@ -35,11 +37,11 @@ ms.locfileid: "65111582"
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>为应用程序创建选项卡删除页
 
-可选删除页是你托管的 HTML 页面，在删除选项卡时显示。 删除页 URL 由配置页中的 `setSettings()` 方法指定。 与应用中的所有页面一样，删除页必须符合 [Teams 选项卡先决条件](../../../tabs/how-to/tab-requirements.md)。
+可选删除页是你托管的 HTML 页面，在删除选项卡时显示。 删除页 URL 由 `setConfig()` 方法指定， (配置页中以前 `setSettings()`) 。 与应用中的所有页面一样，删除页必须符合 [Teams 选项卡先决条件](../../../tabs/how-to/tab-requirements.md)。
 
 ### <a name="register-a-remove-handler"></a>注册删除处理程序
 
-（可选）在删除页逻辑中，当用户删除现有选项卡配置时，可以调用 `registerOnRemoveHandler((RemoveEvent) => {}` 事件处理程序。 当用户尝试删除内容时，该方法将采用 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) 接口，并在处理程序中执行代码。 该方法用于执行清理操作，例如删除支持选项卡内容的基础资源。 一次只能注册一个删除处理程序。
+（可选）在删除页逻辑中，当用户删除现有选项卡配置时，可以调用 `registerOnRemoveHandler((RemoveEvent) => {}` 事件处理程序。 当用户尝试删除内容时，该方法将采用 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) 接口，并在处理程序中执行代码。 该方法用于执行清理操作，例如删除支持选项卡内容的基础资源。 一次只能注册一个删除处理程序。
 
 `RemoveEvent` 接口用两种方法描述对象：
 
@@ -47,19 +49,45 @@ ms.locfileid: "65111582"
 
 * `notifyFailure(string)` 函数是可选的。 它指示基础资源删除失败，无法删除其内容。 可选字符串参数指定失败的原因。 如果提供，则会向用户显示此字符串；否则会显示一般性错误。
 
-#### <a name="use-the-getsettings-function"></a>使用 `getSettings()` 函数
+#### <a name="use-the-getconfig-function"></a>使用 `getConfig()` 函数
 
-可以使用 `getSettings()` 分配要删除的选项卡内容。 `getSettings((Settings) =>{})` 函数采用 [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)，并提供可检索的有效设置属性值。
+可以使用 `getConfig()` 以前 `getSettings()`)  (分配要删除的选项卡内容。 该 `getConfig()` 函数返回一个使用 Config 对象解析的承诺，并提供可检索的有效设置属性值。
 
 #### <a name="use-the-getcontext-function"></a>使用 `getContext()` 函数
 
-可以使用 `getContext()` 获取运行帧的当前上下文。 `getContext((Context) =>{})` 函数采用 [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)。 该函数提供有效的 `Context` 属性值，可以在删除页逻辑中使用这些值来确定要在删除页中显示的内容。
+可以使用 `getContext()` 获取运行帧的当前上下文。 该 `getContext()` 函数返回将使用 Context 对象解析的承诺。 Context 对象提供有效的 `Context` 属性值，你可以在删除页逻辑中使用这些值来确定要在删除页中显示的内容。
 
 #### <a name="include-authentication"></a>包括身份验证
 
 在允许用户删除选项卡内容之前，需要进行身份验证。 上下文信息可用于帮助构造身份验证请求和授权页面 URL。 请参阅[选项卡的 Microsoft Teams 身份验证流程](~/tabs/how-to/authentication/auth-flow-tab.md)。 确保选项卡页面中使用的所有域都列在 `manifest.json``validDomains` 数组中。
 
 下面是一个示例选项卡删除代码块：
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<body>
+  <button onclick="onClick()">Delete this tab and all underlying data?</button>
+  <script>
+    app.initialize();
+    pages.config.registerOnRemoveHandler((removeEvent) => {
+      // Here you can designate the tab content to be removed and/or archived.
+        const configPromise = pages.getConfig();
+        configPromise.
+            then((configuration) => {
+                configuration.contentUrl = "...";
+                removeEvent.notifySuccess()}).
+            catch((error) => {removeEvent.notifyFailure("failure message")});
+    });
+
+    const onClick() => {
+        pages.config.setValidityState(true);
+    }
+  </script>
+</body>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <body>
@@ -81,7 +109,9 @@ ms.locfileid: "65111582"
 </body>
 ```
 
-当用户从选项卡的下拉菜单中选择“**删除**”时，Teams 会将 **配置页** 中分配的可选 `removeUrl` 页面加载到 IFrame 中。 向用户显示一个加载了 `onClick()` 函数的按钮，它将调用 `microsoftTeams.settings.setValidityState(true)` 并启用删除页 IFrame 底部显示的“**删除**”按钮。
+***
+
+当用户从选项卡的下拉菜单中选择“**删除**”时，Teams 会将 **配置页** 中分配的可选 `removeUrl` 页面加载到 IFrame 中。 向用户显示一个加载了 `onClick()` 函数的按钮，它将调用 `pages.config.setValidityState(true)` 并启用删除页 IFrame 底部显示的“**删除**”按钮。
 
 执行删除处理程序后，`removeEvent.notifySuccess()` 或 `removeEvent.notifyFailure()` 将通知 Teams 内容删除结果。
 

@@ -6,12 +6,12 @@ keywords: Teams 选项卡组频道可配置
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 92b03146200af978f3fa5d6dc2c5e6ad27a12200
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654898"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672927"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -31,13 +31,15 @@ ms.locfileid: "65654898"
 
 * 根据 Teams 客户端的主题、设计和意向设置选项卡样式。 在构建选项卡以满足特定需求并专注于一小组任务或与选项卡频道位置相关的数据子集时，选项卡效果最佳。
 
-* 在内容页中，使用脚本标记添加对 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 的引用。 加载页面后，调用 `microsoftTeams.initialize()`，否则页面不会显示。
+* 在内容页中，使用脚本标记添加对 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 的引用。 加载页面后，调用 `app.initialize()`，否则不会显示页面。
 
 * 要在移动客户端上使用身份验证，必须升级到 Teams JavaScript SDK 1.4.1 及更高版本。
 
-* 如果选择让频道或组选项卡显示在 Teams 移动客户端上，则 `setSettings()` 配置必须具有 `websiteUrl` 属性的值。
+* 如果选择让频道或组选项卡显示在 Teams 移动客户端上，则 `setConfig()` 配置必须具有 `websiteUrl` 属性的值。
 
-* Microsoft Teams 选项卡不支持加载使用自签名证书的 Intranet 网站。
+* Microsoft Teams选项卡不支持加载使用自签名证书的 Intranet 网站。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tools-to-build-tabs"></a>用于生成选项卡的工具
 

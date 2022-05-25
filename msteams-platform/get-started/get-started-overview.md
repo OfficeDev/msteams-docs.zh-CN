@@ -4,12 +4,12 @@ description: Microsoft Teams 开发工具入门概述文档
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发工具示例
-ms.openlocfilehash: 11989fe16da36e9fc68840782f63078fc39731c6
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135764"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654772"
 ---
 # <a name="get-started"></a>入门
 
@@ -58,6 +58,11 @@ ms.locfileid: "65135764"
 > [使用 C# 或 .NET 构建 Teams 应用](../sbs-gs-csharp.yml)
 > [!div class="nextstepaction"]
 > [使用 Node.js 构建 Teams 应用](../sbs-gs-nodejs.yml)
+> [!div class="nextstepaction"]
+> [使用 JavaScript 生成通知机器人](../sbs-gs-notificationbot.yml)
+> [!div class="nextstepaction"]
+> [使用 JavaScript 生成命令机器人](../sbs-gs-commandbot.yml)
+> [!div class="nextstepaction"]
 
 ## <a name="see-also"></a>另请参阅
 

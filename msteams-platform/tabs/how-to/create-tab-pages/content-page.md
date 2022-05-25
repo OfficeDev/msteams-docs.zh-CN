@@ -3,15 +3,15 @@ title: 创建内容页
 author: surbhigupta
 description: 如何创建内容页
 keywords: Teams, 选项卡, 群组, 频道, 可配置, 静态
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 68ce03e9b1ef303bd66043baed39baf954fb1d0f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111428"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673025"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>为选项卡创建内容页
 
@@ -23,6 +23,8 @@ ms.locfileid: "65111428"
 
 本文专门介绍如何将内容页用作选项卡；但是，无论内容页如何呈现给用户，此处的大部分指南都适用。
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## <a name="tab-content-and-design-guidelines"></a>选项卡内容和设计指南
 
 选项卡的总体目标是提供对具有实际价值和明显用途的有意义且具有吸引力的内容的访问。 必须专注于使选项卡设计简洁、导航直观且内容身临其境。
@@ -31,9 +33,31 @@ ms.locfileid: "65111428"
 
 ## <a name="integrate-your-code-with-teams"></a>将代码与 Teams 集成
 
-若要在 Teams 中显示页面，必须包含 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，并在页面加载后包含对 `microsoftTeams.initialize()` 的调用。
+若要在 Teams 中显示页面，必须包含 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，并在页面加载后包含对 `app.initialize()` 的调用。
 
 以下代码提供了页面和 Teams 客户端如何通信的示例：
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+...
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+...
+</head>
+
+<body>
+...
+    <script>
+    app.initialize();
+    </script>
+...
+</body>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!DOCTYPE html>
@@ -52,6 +76,8 @@ ms.locfileid: "65111428"
 ...
 </body>
 ```
+
+***
 
 ## <a name="access-additional-content"></a>访问其他内容
 
@@ -89,10 +115,10 @@ ms.locfileid: "65111428"
 若要显示加载指示器，请执行以下操作：
 
 1. 将 `"showLoadingIndicator": true` 添加到清单。
-1. 调用 `microsoftTeams.initialize();`。
-1. 作为 **必需** 步骤，调用 `microsoftTeams.appInitialization.notifySuccess()` 以通知 Teams 应用已成功加载。 然后，Teams 将隐藏加载指示器（如果适用）。 如果未在 30 秒内调用 `notifySuccess`，则假定应用超时，并显示具有重试选项的错误屏幕。
-1. **（可选）** 如果已准备好打印到屏幕，并且希望延迟加载应用程序的其余内容，则可以通过调用 `microsoftTeams.appInitialization.notifyAppLoaded();` 来手动隐藏加载指示器。
-1. 如果应用程序加载失败，则可以调用 `microsoftTeams.appInitialization.notifyFailure(reason);` 来让 Teams 知道出错。 将向用户显示错误屏幕。 以下代码提供了应用程序失败原因的示例：
+1. 调用 `app.initialize();`。
+1. 作为 **必需** 步骤，调用 `app.notifySuccess()` 以通知 Teams 应用已成功加载。 然后，Teams隐藏加载指示器（如果适用）。 如果`notifySuccess`未在 30 秒内调用，Teams假定应用超时，并显示带有重试选项的错误屏幕。
+1. **（可选）** 如果已准备好打印到屏幕，并希望延迟加载应用程序的其余内容，则可以通过调用 `app.notifyAppLoaded();`手动隐藏加载指示器。
+1. 如果应用程序未加载，可以调用`app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});`让Teams了解故障，并（可选）提供故障消息。 将向用户显示错误屏幕。 以下代码显示枚举，该枚举定义了可以指示应用程序无法加载的可能原因：
 
     ```typescript
     /* List of failure reasons */
