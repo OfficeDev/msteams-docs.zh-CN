@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: a3259c46927547b98700f76f704c6c5cb222a74d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104012"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65656157"
 ---
 # <a name="debug-background-process"></a>调试后台进程
 
@@ -33,21 +33,21 @@ Teams 工具包在调试过程中检查以下先决条件：
 
   |项目类型|Node.js LTS 版本|
   |----------|--------------------------------|
-  |不带 Azure Functions 的选项卡 | 10, 12, **14（推荐）**, 16 |
-  |带 Azure Functions 的选项卡 | 10, 12, **14（推荐）**|
-  |Bot |  10, 12, **14（推荐）**, 16|
-  |消息扩展 | 10, 12, **14（推荐）**, 16 |
+  |Tab | 14、16（推荐） |
+  |SPFx 选项卡 | 12、14（推荐）|
+  |Bot |  14、16（推荐）|
+  |消息扩展 | 14、16（推荐） |
 
    
 * 具有有效凭据的 Microsoft 365 帐户，如果尚未登录，Teams 工具包会提示你登录到 Microsoft 365 帐户
 
 * 为开发人员租户启用自定义应用上传或旁加载，否则本地调试将终止
 
-* Ngrok 二进制版本 2.3 适用于自动程序和消息扩展，如果未安装 Ngrok 或版本不符合要求，则 Teams 工具包将在 `~/.fx/bin/ngrok` 中安装 Ngrok NPM 包 `ngrok@4.2.2`。 Ngrok 二进制文件由 Ngrok NPM 包在 `/.fx/bin/ngrok/node modules/ngrok/bin` 中管理
+* Ngrok 二进制版本 2.3 适用于机器人和邮件扩展，如果未安装 Ngrok 或版本不符合要求，则 Teams 工具包将在 `~/.fx/bin/ngrok` 中安装 Ngrok NPM 包 `ngrok@4.2.2`。Ngrok 二进制文件由 `/.fx/bin/ngrok/node modules/ngrok/bin` 中的 Ngrok NPM 包管理
 
-* Azure Functions Core Tools 版本 3，如果未安装 Azure Functions Core Tools 或版本不符合要求，则 Teams 工具包将安装适用于 **Windows** 的 Azure Functions Core Tools NPM 包和适用于 `~/.fx/bin/func` 中的 **macOs** 的 azure-functions-core-tools@3。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止
+* Azure Functions Core Tools 版本 4，如果未安装 Azure Functions Core Tools 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/func` 中安装适用于 **Windows** 和 **macOs** 的 Azure Functions Core Tools NPM 包azure-functions-core-tools@3。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止
 
-* 适用于 Azure Functions 的 .NET Core SDK 版本，如果未安装 .NET Core SDK 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/dotnet` 中安装适用于 Windows 和 MacOS 的 .NET Core SDK。 对于 Linux，本地调试终止
+* 适用于 Azure Functions 的 .NET Core SDK 版本，如果未安装 .NET Core SDK 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/dotnet` 中安装适用于 Windows 和 MacOS 的 .NET Core SDK。对于 Linux，本地调试终止
 
   下表列出了 .NET Core 版本：
 
