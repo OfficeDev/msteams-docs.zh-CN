@@ -3,15 +3,15 @@ title: 将 Teams 选项卡添加到 SharePoint
 author: surbhigupta
 description: 了解如何使用代码示例将现有 Teams 选项卡作为 SharePoint 框架 Web 部件部署到 SharePoint。
 keywords: Teams, 选项卡, Sharepoint 框架, 开发
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c11356750f78a015c8d404f519f45476f947b80a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 54fd6858a115662e24944a692458bb3d4e8034a0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111687"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757309"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>将 Teams 选项卡添加到 SharePoint
 
@@ -72,9 +72,9 @@ ms.locfileid: "65111687"
 
 ## <a name="introduction"></a>简介
 
-此处使用的选项卡已托管在 Azure 上，可专注于所需的集成工作。
+此处使用的选项卡已托管在 Azure 上，用于专注于所需的集成工作。
 
-所使用的示例应用是人才管理应用程序。 它管理团队中空缺职位候选人的招聘过程。 请构建示例 Teams 应用并将其加载到 Teams 中。 请勿创建真正的人才管理应用程序。
+所使用的示例应用是人才管理应用程序。 它管理团队中空缺职位候选人的招聘过程。 请构建示例 Teams 应用并将其加载到 Teams 中。 不要创建真正的人才管理应用程序。
 
 ### <a name="benefits-of-this-approach"></a>此方法的好处
 
@@ -95,7 +95,7 @@ ms.locfileid: "65111687"
 
     ![上传自定义应用](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-1. 要上传的文件位于“**下载**”文件夹中。 它称为 TalentMgmt-Azure.zip。 下图显示了相应的屏幕：
+1. 要上传的文件位于“**下载**”文件夹中。 它称为TalentMgmt-Azure.zip。 下图显示了相应的屏幕：
 
     ![Azure 中的 TalentMgmt](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
@@ -118,7 +118,7 @@ ms.locfileid: "65111687"
 
 1. 可以看到 SharePoint 页面创作体验。 将页面命名为“**我的 Teams 选项卡**”。
 
-1. 选择 `+` 按钮打开 Web 部件工具箱，然后选择名为“**Contoso HR**”的 Teams 选项卡。 Web 部件按字母顺序排序。 如果是长列表，则可以使用搜索栏来查找。 这会在画布中创建包含 Teams 选项卡的 Web 部件。下图显示了选项卡视图：
+1. 选择 `+` 按钮打开 Web 部件工具箱，然后选择名为“**Contoso HR**”的 Teams 选项卡。 Web 部件按字母顺序排序。 如果是长列表，则可以使用搜索栏来查找它。 这会在画布中创建包含 Teams 选项卡的 Web 部件。下图显示了选项卡视图：
 
    ![选项卡视图](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 

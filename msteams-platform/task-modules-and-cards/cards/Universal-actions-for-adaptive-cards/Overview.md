@@ -3,12 +3,12 @@ title: 自适应卡的通用操作概述
 description: 自适应卡片通用操作的快速概述，例如特定于用户的视图、顺序工作流支持，以及桌面和移动环境的更多功能
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: dc3a61b323e462f90937d8b6c432d624c29e0125
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103409"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756469"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 

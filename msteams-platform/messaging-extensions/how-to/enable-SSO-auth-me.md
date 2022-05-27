@@ -5,12 +5,12 @@ description: 了解如何使用代码示例为消息传递扩展启用 SSO 支�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 490d44631fbd291e6c8686d94222b41ddd68de86
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296943"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757421"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>对消息扩展的单一登录支持
 
@@ -43,7 +43,7 @@ ms.locfileid: "65296943"
     > [!NOTE]
     > 我们不支持其他处理程序 SSO，但 TeamsMessagingExtensionsSearchAuthConfigBot.cs 中的 `OnTeamsMessagingExtensionQueryAsync` 和 `OnTeamsAppBasedLinkQueryAsync` 文件除外。
 
-4. 在 `turnContext.Activity.Value` 有效负载或 `OnTeamsAppBasedLinkQueryAsync` 的 `OnTeamsMessagingExtensionQueryAsync` 处理程序中接收令牌，具体取决于启用 SSO 的应用场景：
+4. 在有效负载中或在处理程序中`turnContext.Activity.Value``OnTeamsAppBasedLinkQueryAsync`接收令牌`OnTeamsMessagingExtensionQueryAsync`，具体取决于要为以下情况启用 SSO 的方案：
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);

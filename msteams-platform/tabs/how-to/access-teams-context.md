@@ -4,12 +4,12 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 319aea79c38466969f84e1e00d44b127a77ef92f
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672915"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755942"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -109,6 +109,9 @@ ms.locfileid: "65672915"
 * `hostTeamTenantId`：设置为 `tenantId` 与托管团队或创建共享频道的团队关联。 可以使用当前用户的租户 ID `tid` `getContext` 交叉引用该属性，以便确定该用户是托管团队租户的内部还是外部。
 
 如果页面使用这些值中的任何一个，则字段的 `channelType` 值必须 `Shared` 确定页面是否已加载到共享通道中，并且可以做出适当的响应。
+
+> [!NOTE]
+> 每次用户重启或重新加载Teams桌面或 Web 客户端时，都会创建一个新的 sessionID，由Teams会话跟踪，而当用户退出Teams应用并在Teams平台中重新加载它时，会创建一个新的应用会话ID，由应用会话跟踪。
 
 ## <a name="handle-theme-change"></a>处理主题更改
 

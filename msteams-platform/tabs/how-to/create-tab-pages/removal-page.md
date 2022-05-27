@@ -6,12 +6,12 @@ keywords: Teams, 选项卡, 群组, 频道, 可配置, 移除, 删除
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fe0445099958af7cd9eccc831fe22fa2e94cbcc5
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 0d8d466a2dd2504b74f72b342345576b6f823a89
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672934"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757463"
 ---
 # <a name="create-a-removal-page"></a>创建删除页面
 
@@ -21,7 +21,7 @@ ms.locfileid: "65672934"
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>使选项卡可在安装后重新配置
 
-`manifest.json` 定义选项卡的特性和功能。 选项卡实例 `canUpdateConfiguration` 属性采用布尔值来指示用户是否可以在创建选项卡后修改或重新配置选项卡。 下表提供了属性详细信息：
+`manifest.json` 定义选项卡的特性和功能。 Tab 实例 `canUpdateConfiguration` 属性采用一个布尔值，该值指示用户在创建选项卡后是否可以修改或重新配置该选项卡。 下表提供了属性详细信息：
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -33,7 +33,7 @@ ms.locfileid: "65672934"
 | ----------------------- | :----: | ----- | ----------- |
 |     设置            |   √    |       |在 IFrame 中重新加载 `configurationUrl` 页面，允许用户重新配置选项卡。 |
 |     重命名              |   √    |   √   | 用户可以更改选项卡名称，因为它显示在选项卡栏中。          |
-|     删除              |   √    |   √   |  如果 **配置页** 中包含 `removeURL` 属性和值，则 **删除页** 将加载到 IFrame 中并呈现给用户。 如果不包括删除页，则会向用户显示确认对话框。          |
+|     删除              |   √    |   √   |  如果 **配置页** 中包含 `removeURL` 属性和值，则 **删除页** 将加载到 IFrame 中并呈现给用户。 如果未包含删除页，则会向用户显示确认对话框。          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>为应用程序创建选项卡删除页
 
@@ -47,7 +47,7 @@ ms.locfileid: "65672934"
 
 * `notifySuccess()` 函数是必需的。 它指示基础资源删除成功，并且可以删除其内容。
 
-* `notifyFailure(string)` 函数是可选的。 它指示基础资源删除失败，无法删除其内容。 可选字符串参数指定失败的原因。 如果提供，则会向用户显示此字符串；否则会显示一般性错误。
+* `notifyFailure(string)` 函数是可选的。 它指示删除基础资源失败，无法删除其内容。 可选字符串参数指定失败的原因。 如果提供，则会向用户显示此字符串；否则会显示一般性错误。
 
 #### <a name="use-the-getconfig-function"></a>使用 `getConfig()` 函数
 

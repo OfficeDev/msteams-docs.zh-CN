@@ -5,12 +5,12 @@ description: 用于构建 Microsoft Teams 机器人的工具和 SDK 概述。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 05cb93fef74d22931591b3bb077afbb785d168ad
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 6e4384bc4594dd3751afca781bd2121ad8aeb210
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602235"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756861"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -58,7 +58,7 @@ Webhook 和连接器将机器人连接到 Web 服务。 使用 Webhook 和连接
 Azure 机器人服务和 Bot Framework 提供用于生成、测试、部署和管理智能机器人的工具，所有这些工具都位于一个位置。 还可以在 Azure 机器人服务中创建机器人。
 
 > [!IMPORTANT]
-> Microsoft Teams中的机器人应用程序可通过 [Azure 机器人服务](/azure/bot-service/channel-connect-teams)在GCC-High中使用。
+> Microsoft Teams 中的机器人应用程序可通过 [Azure 机器人服务](/azure/bot-service/channel-connect-teams)在 GCC-High 中使用。
 
 > [!NOTE]
 > * GCCH 中的机器人仅支持清单版本 v1.10。
@@ -164,7 +164,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="in-a-channel"></a>在频道中
 
-频道包含多个人员之间的线程对话，甚至最多可达到两千人。 这可能会让机器人拥有广阔的范围，但是个人交互需要简洁。 传统的多轮交互不起作用。 可以尝试使用交互卡片或任务模块，或者如果要收集很多信息的话，也可以将对话转移到一对一模式。 机器人仅有权访问被 `@mentioned` 的消息。 可以使用 Microsoft Graph 和组织级别权限从对话中检索额外的消息。
+频道包含多个人员之间的线程对话，甚至最多可达到两千人。 这可能会让机器人拥有广阔的范围，但是个人交互需要简洁。 传统的多轮次交互不起作用。 可以尝试使用交互卡片或任务模块，或者如果要收集很多信息的话，也可以将对话转移到一对一模式。 机器人仅有权访问其 `@mentioned`所在的消息。 可以使用 Microsoft Graph 和组织级别权限从对话中检索额外的消息。
 
 在以下情况下，机器人在频道中效果更好：
 
@@ -175,7 +175,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="in-a-group-chat"></a>在群组聊天中
 
-群聊是在三个及以上人员之间进行的非按线索组织的对话。 其中的成员一般比频道中的少且更短暂。 与频道类似的是，机器人仅有权访问被 `@mentioned` 的消息。
+群聊是在三个及以上人员之间进行的非按线索组织的对话。 其中的成员一般比频道中的少且更短暂。 与通道类似，机器人仅有权访问直接访问的消息 `@mentioned` 。
 
 如果机器人在频道中工作良好，那么在群聊中也会更好。
 
@@ -190,11 +190,11 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ## <a name="disadvantages-of-bots"></a>机器人的缺点
 
-机器人与用户之间的广泛对话是一种完成任务的缓慢而复杂的方法。 支持过多命令（尤其是范围广泛的命令）的机器人不会成功或被用户积极查看。
+机器人与用户之间的广泛对话是一种完成任务的缓慢而复杂的方法。 支持过多命令（尤其是各种命令）的机器人不会成功或被用户积极查看。
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>在聊天中具有多轮体验
 
-广泛的对话需要开发人员保持状态。 要退出此状态，用户必须超时或选择 **取消**。 此外，这个过程也很繁琐。 例如，请查看以下对话方案：
+广泛的对话需要开发人员保持状态。 若要退出此状态，用户必须超时或选择 **“取消**”。 此外，这个过程也很繁琐。 例如，请查看以下对话方案：
 
 用户：安排与 Megan 的会议。
 
@@ -214,7 +214,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="maintain-a-large-knowledge-base"></a>维护大型知识库
 
-机器人的缺点之一是很难使用未分级的响应来维护大型检索知识库。 机器人最适合进行简短、快速的交互，而不适合在寻找答案的长列表之间切换。
+机器人的缺点之一是很难使用未分段的响应来维护大型检索知识库。 机器人最适合进行简短、快速的交互，而不适合在寻找答案的长列表之间切换。
 
 ## <a name="code-snippets"></a>代码段
 

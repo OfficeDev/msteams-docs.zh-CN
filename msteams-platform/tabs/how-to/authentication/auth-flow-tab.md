@@ -2,14 +2,14 @@
 title: 选项卡中的身份验证流
 description: 介绍选项卡中的身份验证流、Azure AD 提供的 OAuth，并提供代码示例
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams 身份验证流选项卡
-ms.openlocfilehash: 2589489598f51393f2a429f8701e9101cf80b273
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a40a09b025949b36491534a4e8bdda9f523b24df
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111449"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756490"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>选项卡的 Microsoft Teams 身份验证流
 
@@ -27,7 +27,7 @@ OAuth 2.0 是 Microsoft Azure Active Directory (Azure AD) 和许多其他身份�
 ![选项卡身份验证序列图](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. 用户与选项卡配置或内容页面上的内容交互，通常使用“**登入**”或“**登录**”按钮。
-2. 该选项卡可构造其身份验证起始页的 URL。 或者，它使用 URL 占位符或调用 `microsoftTeams.getContext()` Teams 客户端 SDK 方法的信息来简化用户的身份验证体验。 例如，在使用 Azure AD 进行身份验证时，如果将 `login_hint` 参数设置为用户的电子邮件地址，那么如果用户最近登录过，就可能不需要登录。 这是因为 Azure AD 使用用户的已缓存凭据。 弹出窗口会短暂显示，然后消失。
+2. 该选项卡可构造其身份验证起始页的 URL。 或者，它使用 URL 占位符或调用 `microsoftTeams.getContext()` Teams 客户端 SDK 方法的信息来简化用户的身份验证体验。 例如，使用 Azure AD 进行身份验证时，如果 `login_hint` 参数设置为用户的电子邮件地址，则用户无需登录（如果他们最近这样做）。 这是因为 Azure AD 使用用户的已缓存凭据。 弹出窗口会短暂显示，然后消失。
 3. 然后选项卡调用 `microsoftTeams.authentication.authenticate()` 方法，并注册 `successCallback` 和 `failureCallback` 函数。
 4. Teams 将在弹出窗口中的 iframe 打开起始页。 起始页生成随机 `state` 数据，将其保存以供将来验证，并重定向到身份提供程序的 `/authorize` 端点，例如 Azure AD 的 `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize`。 将 `<tenant id>` 替换为自己的租户 ID（即 context.tid）。
 与 Teams 中的其他应用授权流类似，起始页必须在其 `validDomains` 列表中的域上，并且与签到后的重定向页面在同一个域上。

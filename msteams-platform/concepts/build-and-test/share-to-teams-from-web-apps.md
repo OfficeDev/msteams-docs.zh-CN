@@ -4,12 +4,12 @@ description: 使用代码示例，了解如何通过网站预览将“共享到 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 共享 Teams 共享到 Teams
-ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439298"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757057"
 ---
 # <a name="share-to-teams-from-web-apps"></a>从 Web 应用共享到 Teams
 
@@ -55,7 +55,7 @@ ms.locfileid: "65439298"
     </div>
     ```
 
-1. 如果共享链接需要用户身份验证，并且要共享的链接中的 URL 预览在 Teams 中呈现效果不佳，可添加设置为 `false` 的 `data-preview` 属性来禁用 URL 预览。
+1. 如果共享链接需要用户身份验证，并且链接中的 URL 预览无法在Teams中很好地呈现，则可以通过将属性集添加`data-preview`到`false`该属性来禁用 URL 预览。
 
     ```html
     <div
@@ -85,7 +85,7 @@ ms.locfileid: "65439298"
 若要显示预览：
 
 * 必须包含 **缩略图**，或同时包含 **标题** 和 **说明**。 为获得最佳结果，请包括全部三项。
-* 共享的 URL 不需要身份验证。 如果需要身份验证，可共享它，但没有创建预览。
+* 共享 URL 不需要身份验证。 如果需要身份验证，可以共享，但未创建预览版。
 
 下表概述了必要的标记：
 
@@ -99,7 +99,7 @@ ms.locfileid: "65439298"
 
 ## <a name="share-to-teams-for-education"></a>“共享到 Teams”教育版
 
-对于使用“共享到 Teams”按钮的教师，还有一个附加选项：`Create an Assignment`。 通过它，可基于共享链接在所选团队中快速创建分配。 下图显示了“共享到 Teams”教育版：
+对于使用“共享”Teams按钮的教师，还有一个额外的选项`Create an Assignment`可用于根据共享链接在所选团队中快速创建作业。 下图显示了“共享到 Teams”教育版：
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="“共享到 Teams”弹出窗口教育版":::
 

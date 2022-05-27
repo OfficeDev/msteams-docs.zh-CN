@@ -2,19 +2,19 @@
 title: 在本地调试呼叫和会议机器人
 description: 了解如何使用 ngrok 在本地电脑上开发呼叫和联机会议机器人。
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: 本地开发 ngrok 隧道
 ms.date: 11/18/2018
-ms.openlocfilehash: 7e5f9de7177c847352b0e2768b52553455989443
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 7f85243e0a5d94711cd303ff542decd3bbc7847a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111995"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757113"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>在本地电脑上开发呼叫和联机会议机器人
 
-在[运行和调试应用](../../concepts/build-and-test/debug.md)中，我们介绍了如何使用 [ngrok](https://ngrok.com) 在本地计算机和 Internet 之间创建隧道。 在本主题中，了解如何使用 ngrok 和本地电脑开发支持呼叫和联机会议的机器人。
+在 [运行和调试应用](../../concepts/build-and-test/debug.md)时，我们将介绍如何使用 [ngrok](https://ngrok.com) 在本地计算机和 Internet 之间创建隧道。 在本主题中，了解如何使用 ngrok 和本地电脑开发支持呼叫和联机会议的机器人。
 
 消息传递机器人使用 HTTP，但呼叫和联机会议机器人使用较低级别的 TCP。 除了 HTTP 隧道，Ngrok 还支持 TCP 隧道。
 
@@ -46,7 +46,7 @@ tunnels:
 
 应用程序托管的媒体使用证书和 TCP 隧道。 需要执行以下步骤：
 
-1. Ngrok 的公共 TCP 端点具有固定 URL。 它们是 `0.tcp.ngrok.io`、`1.tcp.ngrok.io` 等等。 必须具有指向这些 URL 的服务的 DNS CNAME 条目。 例如，假设 `0.bot.contoso.com` 指向 `0.tcp.ngrok.io`、`1.bot.contoso.com` 指向 `1.tcp.ngrok.io` 等。
+1. Ngrok 的公共 TCP 端点具有固定 URL。 他们是 `0.tcp.ngrok.io`， `1.tcp.ngrok.io`等等。 必须具有指向这些 URL 的服务的 DNS CNAME 条目。 例如，假设 `0.bot.contoso.com` 指向 `0.tcp.ngrok.io`、`1.bot.contoso.com` 指向 `1.tcp.ngrok.io` 等。
 2. URL 需要 SSL 证书。 若要简化操作，请使用颁发给通配符域的 SSL 证书。 在此示例中为 `*.bot.contoso.com`。 此 SSL 证书由媒体 SDK 验证，因此它必须与机器人的公共 URL 相匹配。 记下指纹并将其安装在计算机证书中。
 3. 现在，设置 TCP 隧道以将流量转发到 localhost。 将以下行写入 ngrok.yml：
 
@@ -62,7 +62,7 @@ tunnels:
 
   `ngrok.exe start -all -config <Path to your ngrok.yml>`
 
-这会启动 ngrok 并定义提供 localhost 隧道的公共 URL。 下面是一个输出示例：
+这会启动 ngrok 并定义公共 URL，这些 URL 为 localhost 提供隧道。 下面是一个输出示例：
 
 ```cmd
 Forwarding  http://signal.ngrok.io -> localhost:12345
@@ -119,5 +119,5 @@ var mediaPlatform = new MediaPlatformSettings
 ## <a name="caveats"></a>警告
 
 * Ngrok 免费帐户 **不** 提供端到端加密。 HTTPS 数据以 ngrok URL 结尾，数据从 ngrok 未加密流到 `localhost`。 如果需要端到端加密，请考虑使用付费 ngrok 帐户。 有关设置安全端到端隧道的步骤，请参阅 [TLS 隧道](https://ngrok.com/docs#tls)。
-* 由于机器人回调 URL 是动态的，传入调用方案要求你经常更新 ngrok 端点。 解决此问题的一种方法是使用付费 ngrok 帐户，它提供可将机器人和平台指向到的固定子域。
+* 由于机器人回调 URL 是动态的，传入调用方案要求你经常更新 ngrok 端点。 解决此问题的一种方法是使用付费 ngrok 帐户，该帐户提供可将机器人和平台指向的固定子域。
 * Ngrok 隧道也可与 [Azure Service Fabric](/azure/service-fabric/service-fabric-overview) 一起使用。 有关如何执行此操作的示例，请参阅 [HueBot 示例应用](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot)。

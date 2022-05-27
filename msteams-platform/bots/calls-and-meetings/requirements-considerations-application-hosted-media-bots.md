@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 应用程序托管的媒体 Windows 服务器 Azure VM
 ms.date: 11/16/2018
-ms.openlocfilehash: 109d5bd29112b7c233fadd921b141f2287246498
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 987bb26ba7ad91f11228f7072d3e268ebd87dc5a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296978"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756609"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 
@@ -34,11 +34,11 @@ ms.locfileid: "65296978"
   
 * 无法将机器人部署为 Azure Web 应用。
 
-* 机器人必须在最新版本的 `Microsoft.Graph.Communications.Calls.Media` .NET 库上运行。 机器人必须使用最新版本的 [NuGet 工具包](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)，或不超过三个月的版本。 库的较旧版本已弃用，几个月后将无法工作。 使 `Microsoft.Graph.Communications.Calls.Media` 库保持最新状态可确保机器人与 Microsoft Teams 之间的最佳互操作性。
+* 机器人必须在最新版本的 `Microsoft.Graph.Communications.Calls.Media` .NET 库上运行。 机器人必须使用最新版本的 [NuGet 工具包](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)，或不超过三个月的版本。 库的较旧版本已弃用，几个月后将不起作用。 使 `Microsoft.Graph.Communications.Calls.Media` 库保持最新状态可确保机器人与 Microsoft Teams 之间的最佳互操作性。
 
 下一部分提供有关实时媒体调用所在位置的详细信息。
 
-## <a name="real-time-media-calls-stay-where-they-are-created"></a>实时媒体调用保留在创建位置
+## <a name="real-time-media-calls-stay-where-theyre-created"></a>实时媒体呼叫保留创建位置
 
 实时媒体调用保留在创建它们的计算机上。 实时媒体调用固定到已接受或启动调用的虚拟机 (VM) 实例。 来自 Microsoft Teams 调用或会议的媒体流向该 VM 实例，机器人发送回 Microsoft Teams 的媒体也必须来自该 VM。 如果 VM 停止时有任何实时媒体调用正在进行，这些调用会立即终止。 如果机器人事先知道挂起的 VM 关闭，则可以结束调用。
 
@@ -63,7 +63,7 @@ ms.locfileid: "65296978"
 
 应用程序托管的媒体机器人需要考虑以下可扩展性和性能注意事项：
 
-* 与消息传递机器人相比，应用程序托管的媒体机器人需要更多的计算和网络（带宽）容量，并且可能会产生明显提高的运营成本。 实时媒体机器人开发人员必须仔细衡量机器人的可扩展性，并确保机器人不会接受比它所能管理的更多的同时呼叫。 启用视频的机器人的每个 CPU 内核只能维持一两个并发媒体会话（如果使用“原始”RGB24 或 NV12 视频格式）。
+* 与消息传送机器人相比，应用程序托管媒体机器人需要更多的计算和网络 (带宽) 容量，并且可能会产生更高的运营成本。 实时媒体机器人开发人员必须仔细衡量机器人的可扩展性，并确保机器人不会接受比它所能管理的更多的同时呼叫。 启用视频的机器人的每个 CPU 内核只能维持一两个并发媒体会话（如果使用“原始”RGB24 或 NV12 视频格式）。
 * 实时媒体平台当前不会利用 VM 上可用的任何图形处理单元 (GPU) 来卸载 H.264 视频编码/解码。 相反，视频编码和解码在软件的 CPU 中完成。 如果 GPU 可用，机器人可能会利用它进行自己的图形呈现，例如，如果机器人使用 3D 图形引擎。
 * 托管实时媒体机器人的 VM 实例必须至少有 2 个 CPU 内核。 对于 Azure，建议使用 Dv2 系列虚拟机。 对于其他 Azure VM 类型，具有四个虚拟 CPU (vCPU) 的系统是所需的最小配置。 有关 Azure VM 类型的详细信息，请参阅 [Azure 文档](/azure/virtual-machines/windows/sizes-general)。
 
@@ -73,8 +73,8 @@ ms.locfileid: "65296978"
 
 | **示例名称** | **说明** | **Graph** |
 |------------|-------------|-----------|
-| 本地媒体示例 | 演示不同本地媒体应用场景的示例。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| 远程媒体示例 | 演示不同远程媒体应用场景的示例。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| 本地媒体示例 | 演示不同本地媒体方案的示例。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| 远程媒体示例 | 演示不同远程媒体方案的示例。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="next-step"></a>后续步骤
 
@@ -84,7 +84,7 @@ ms.locfileid: "65296978"
 ## <a name="see-also"></a>另请参阅
 
 * [Graph 调用 SDK 文档](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-* 与消息传递机器人相比，机器人需要更多的计算和网络带宽容量，并且会产生明显提高的运营成本。 实时媒体机器人开发人员必须仔细衡量机器人的可扩展性，并确保机器人不会接受比它所能管理的更多的同时呼叫。 如果使用原始 RGB24 或 NV12 视频格式，启用视频的机器人的每个 CPU 内核只能维持一两个并发媒体会话。
+* 与消息传送机器人相比，机器人需要更多的计算和网络带宽容量，并产生更高的运营成本。 实时媒体机器人开发人员必须仔细衡量机器人的可扩展性，并确保机器人不会接受比它所能管理的更多的同时呼叫。 如果使用原始 RGB24 或 NV12 视频格式，启用视频的机器人的每个 CPU 内核只能维持一两个并发媒体会话。
 * 实时媒体平台当前不会利用 VM 上可用的任何图形处理单元 (GPU) 来卸载 H.264 视频编码或解码。 相反，视频编码和解码在软件的 CPU 中完成。 如果 GPU 可用，机器人会利用它进行自己的图形呈现，例如，如果机器人使用 3D 图形引擎。
 * 托管实时媒体机器人的 VM 实例必须至少有 2 个 CPU 内核。 对于 Azure，建议使用 Dv2 系列虚拟机。 对于其他 Azure VM 类型，具有 4 个虚拟 CPU (vCPU) 的系统是所需的最低配置。 有关 Azure VM 类型的详细信息，请参阅 [Azure 文档](/azure/virtual-machines/windows/sizes-general)。
 

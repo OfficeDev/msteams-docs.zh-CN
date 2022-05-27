@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: f0dc772043eca4fc624fbd04261ddbc921c91fc4
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668135"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755949"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -52,14 +52,14 @@ ms.locfileid: "65668135"
 
 若要从已启用在Outlook和Office中运行[的个人选项卡](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)开始，请对Visual Studio Code使用Teams Toolkit扩展。
 
-1. 从Visual Studio Code，打开命令面板 () `Ctrl+Shift+P` ，键入`Teams: Create a new Teams app`。
+1. 从 Visual Studio Code 打开命令面板 (`Ctrl+Shift+P`)，键入 `Teams: Create a new Teams app`。
 1. 选择 **启用了 SSO 的个人选项卡**。
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text=" Teams 工具包中的待办事项列表示例（Teams、Outlook 和 Office 中的工作）":::
 
-1. 为工作区文件夹选择本地计算机上的位置。
+1. 在本地计算机上为工作区文件夹选择一个位置。
 1. 打开命令面板 () `Ctrl+Shift+P` 并键入`Teams: Provision in the cloud`，在 Azure 帐户中创建所需的应用资源 (App 服务计划、存储帐户、函数应用、托管标识) 。
-1. 打开命令面板 (`Ctrl+Shift+P`) 并键入 `Teams: Deploy to the cloud` ，将示例代码部署到 Azure 中预配的资源并启动应用。
+1. 打开命令面板（`Ctrl+Shift+P`）并键入 `Teams: Deploy to the cloud`，将示例代码部署到 Azure 中预配的资源并启动应用。
 
 从此处，你可以跳到[Teams中旁加载应用](#sideload-your-app-in-teams)，并在Outlook和Office中预览应用。  (应用清单和 TeamsJS API 调用已更新为 Microsoft 365.) 
 
@@ -71,7 +71,7 @@ ms.locfileid: "65668135"
 
 # <a name="teams-toolkit"></a>[Teams 工具包](#tab/manifest-teams-toolkit)
 
-1. 打开命令面板： `Ctrl+Shift+P`.
+1. 打开命令面板：`Ctrl+Shift+P`。
 1. 运行该 `Teams: Upgrade Teams manifest` 命令并选择应用清单文件。 将进行更改。
 
 # <a name="manual-steps"></a>[ 手动步骤 ](#tab/manifest-manual)
@@ -104,7 +104,7 @@ ms.locfileid: "65668135"
 > * teams-js@2.0.0 的导入语句
 > * teams-js@2.0.0 的函数[、枚举和接口调](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)用
 > * `TODO` 注释提醒标记可能受 [上下文](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) 接口更改影响的区域
-> * `TODO`用于[将回调函数转换为 promise](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises) 的注释提醒
+> * `TODO` 注释提醒，[将回调函数转换为 promise](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
 > 升级工具不支持 *.html* 文件中的代码，需要手动更改。
@@ -148,21 +148,21 @@ ms.locfileid: "65668135"
 
 在Office和Outlook中运行应用的最后一步是在Microsoft Teams中旁加载更新的个人选项卡[应用包](..//concepts/build-and-test/apps-package.md)。
 
-1. 将Teams应用程序 ([清单](../resources/schema/manifest-schema.md)和[应用图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)打包) zip 文件中。 如果使用Teams Toolkit创建应用，则可以在Teams Toolkit的 **“部署**”菜单中使用 **Zip Teams 元数据包** 选项轻松完成此操作。
+1. 将Teams应用程序 ([清单](../resources/schema/manifest-schema.md)和[应用图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)打包) zip 文件中。 如果使用 Teams 工具包创建应用，则可以使用 Teams 工具包的“**部署**”菜单中的“**压缩 Teams 元数据包**”选项轻松完成此操作。
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="适用于 Visual Studio Code 的 Teams 工具包扩展中的“压缩 Teams 元数据包”选项":::
 
-1. 使用沙盒租户帐户登录Teams，并切换到 *开发人员预览* 模式。 按用户配置文件选择省略号 (**...**) 菜单，然后选择“ **关于** > **开发人员预览**”。
+1. 使用沙盒租户帐户登录 Teams，并切换到“*开发者预览版*”模式。 选择用户个人资料旁边的省略号 (**...**) 菜单，然后依次选择：“**关于**” > “**开发者预览版**”。
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="从Teams省略号菜单中，打开“关于”，然后选择“开发人员预览”选项":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="从 Teams 省略号菜单中，打开“关于”，然后选择“开发者预览版”选项":::
 
-1. 选择 **“应用** ”以打开“ **管理应用** ”窗格。 然后选择 **“发布应用**”。
+1. 选择“**应用**”以打开“**管理你的应用**”窗格。 然后选择“**发布应用**”。
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="打开“管理应用”窗格，然后选择“发布应用”":::
 
 1. 选择 **Upload自定义应用** 选项，然后选择应用包。
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams中的“Upload自定义应用”选项":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams 中的“上传自定义应用”选项":::
 
 旁加载到Teams后，个人选项卡在Outlook和Office中可用。 请务必使用用于登录Teams来旁加载应用的相同凭据登录。
 
@@ -225,7 +225,7 @@ ms.locfileid: "65668135"
 
 可以通过调用该功能上的函数 (命名空间) ，并根据需要调整应用行为，在运行时 `isSupported()` 检查给定功能的主机支持。 这样，应用就可以在支持它的主机中点亮 UI 和功能，并在不支持的主机上提供正常回退体验。 有关详细信息，请参阅 [“区分应用体验](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience)”。
 
-使用[Microsoft Teams开发人员社区渠道](/microsoftteams/platform/feedback)报告问题并提供反馈。
+使用 [Microsoft Teams 开发人员社区频道](/microsoftteams/platform/feedback)报告问题并提供反馈。
 
 ### <a name="debugging"></a>调试
 
@@ -239,13 +239,6 @@ ms.locfileid: "65668135"
 
 在 [Microsoft Teams Framework (TeamsFx ](https://github.com/OfficeDev/TeamsFx/issues)) 中提供反馈并报告Teams Toolkit调试体验的任何问题。
 
-## <a name="next-step"></a>后续步骤
-
-发布应用以在Teams、Outlook和Office中发现：
-
-> [!div class="nextstepaction"]
-> [发布适用于Outlook和Office的Teams应用](publish.md)
-
 ## <a name="code-sample"></a>代码示例
 
 | **示例名称** | **说明** | **Node.js** |
@@ -253,3 +246,10 @@ ms.locfileid: "65668135"
 | 待办事项列表 | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 仅适用于Teams (使用此示例应用来尝试本教程) 中所述的升级过程。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | 待办事项列表 (Microsoft 365)  | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 在Teams、Outlook、Office中工作。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | 图像编辑器 (Microsoft 365)  | 使用 Microsoft 图形 API 创建、编辑、打开和保存映像。 在Teams、Outlook、Office中工作。 | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+
+## <a name="next-step"></a>后续步骤
+
+发布应用以便在 Teams、Outlook 和 Office 中可以发现：
+
+> [!div class="nextstepaction"]
+> [发布适用于 Outlook 和 Office 的 Teams 应用](publish.md)

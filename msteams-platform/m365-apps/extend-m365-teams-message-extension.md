@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: f9c4b342a0be797a1ac20f9f195ae969b51a0187
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656143"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668072"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>在整个 Microsoft 365 中扩展 Teams 邮件扩展
 
@@ -42,15 +42,15 @@ ms.locfileid: "65656143"
 
 如果在生产中已有邮件扩展，请创建项目的副本或分支进行测试，并在应用清单中更新应用 ID 以使用新标识符（不同于生产应用 ID，用于测试）。
 
-若要使用示例代码完成有关更新现有 Teams 应用的完整教程，请按照 [Teams 邮件扩展搜索示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)中的设置步骤快速构建基于 Microsoft Teams 搜索的邮件扩展。
+要使用示例代码完成有关更新现有 Teams 应用的完整教程，请按照 [Teams 邮件扩展搜索示例](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)中的设置步骤快速构建基于 Microsoft Teams 搜索的邮件扩展。
 
 或者，可以在以下部分使用支持 Outlook 的现成应用，并跳过本教程的 [*更新应用清单*](#update-the-app-manifest)部分。
 
 ### <a name="quickstart"></a>快速入门
 
-若要从已能够在 Outlook 中运行的[示例邮件扩展](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365)开始，请使用适用于 Visual Studio Code 的 Teams 工具包扩展。
+要从已能够在 Outlook 中运行的[示例邮件扩展](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365)开始，请使用适用于 Visual Studio Code 的 Teams 工具包扩展。
 
-1. 从 Visual Studio Code，打开命令面板 (`Ctrl+Shift+P`)，键入 `Teams: Create a new Teams app`。
+1. 从 Visual Studio Code 打开命令面板 (`Ctrl+Shift+P`)，键入 `Teams: Create a new Teams app`。
 1. 选择“**新建 Teams 应用**”选项。
 1. 选择“**基于搜索的邮件扩展**”以使用最新的 Teams 应用清单（版本 `1.13`）下载 Teams 邮件扩展的示例代码。
 
@@ -61,8 +61,8 @@ ms.locfileid: "65656143"
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Teams 工具包示例库中的 NPM 搜索连接器示例":::
 
 1. 在本地计算机上为工作区文件夹选择一个位置。
-1. 打开命令面板 (`Ctrl+Shift+P`) 并键入 `Teams: Provision in the cloud`，以在 Azure 帐户中创建所需的应用资源（Azure 应用服务、应用服务计划、Azure 机器人和托管标识）。
-1. 打开命令面板 (`Ctrl+Shift+P`) 并键入 `Teams: Deploy to the cloud`，将示例代码部署到 Azure 中预配的资源并启动应用。
+1. 打开命令面板（`Ctrl+Shift+P`）并键入 `Teams: Provision in the cloud`，以在 Azure 帐户中创建所需的应用资源（Azure 应用服务、应用服务计划、Azure 机器人和托管标识）。
+1. 打开命令面板（`Ctrl+Shift+P`）并键入 `Teams: Deploy to the cloud`，将示例代码部署到 Azure 中预配的资源并启动应用。
 
 在这里，你可以跳转到[为机器人添加 Outlook 频道](#add-an-outlook-channel-for-your-bot)，以完成使 Teams 邮件扩展能够在 Outlook 中正常工作的最后一步。 （应用清单已引用正确的版本，因此无需更新。）
 
@@ -90,7 +90,7 @@ ms.locfileid: "65656143"
 
 ---
 
-如果使用 Teams 工具包创建了邮件扩展应用，则可以使用它来验证清单文件的更改并识别任何错误。请打开命令面板 `Ctrl+Shift+P` 并找到“**Teams：验证清单文件**”。
+如果使用 Teams 工具包创建了邮件扩展应用，则可以使用它来验证清单文件的更改并识别任何错误。 打开命令面板 `Ctrl+Shift+P` 并找到“**Teams：验证清单文件**”。
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>为机器人添加 Outlook 通道
 
@@ -106,7 +106,7 @@ ms.locfileid: "65656143"
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="从“Azure 机器人通道”窗格为机器人添加 Outlook“邮件扩展”通道":::
 
-1. 确认 Outlook 通道随 Microsoft Teams 一起列在机器人的“**通道**”窗格中：
+1. 确认你的 Outlook 频道与 Microsoft Teams 一起列在机器人的“**频道**”窗格中。
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="“Azure 机器人通道”窗格，其中列出了 Microsoft Teams 和 Outlook 通道":::
 
@@ -115,7 +115,7 @@ ms.locfileid: "65656143"
 > [!NOTE]
 > 如果使用本教程中提供的[示例应用](#quickstart)，则可以跳过此步骤，因为该方案不涉及 Azure Active Directory (AAD) 单一登录身份验证。
 
-邮件扩展的 Azure Active Directory (AD) 单一登录 (SSO) 在 Outlook [中的工作方式与在 Teams 中的工作方式相同](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)。但是，你需要在租户的 *应用注册* 门户中，将多个客户端应用程序标识符添加到机器人的 Azure AD 应用注册。
+邮件扩展的 Azure Active Directory (AD) 单一登录 (SSO) 在 Outlook 中的工作方式[与在 Teams 中的工作方式](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)相同。 但是，你需要在租户的“*应用注册*”门户中，将多个客户端应用程序标识符添加到机器人的 Azure AD 应用注册。
 
 1. 使用沙盒租户帐户登录 [Azure 门户](https://portal.azure.com)。
 1. 打开“**应用注册**”。
@@ -123,27 +123,27 @@ ms.locfileid: "65656143"
 1. 在 *“管理”* 下选择“**公开 API**”。
 1. 在“**授权客户端应用程序**”部分中，确保列出了以下所有 `Client Id` 值：
 
-|Microsoft 365 客户端应用程序 | 客户端 ID |
-|--|--|
-|Teams 桌面和移动版 |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Outlook 桌面版 | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+   |Microsoft 365 客户端应用程序 | 客户端 ID |
+   |--|--|
+   |Teams 桌面和移动版 |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+   |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+   |Outlook 桌面版 | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+   |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+   |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>在 Teams 中旁加载更新后的邮件扩展
 
 最后一步是在 Microsoft Teams 中旁加载更新后的邮件扩展（[应用包](/microsoftteams/platform/concepts/build-and-test/apps-package)）。 完成后，邮件扩展将显示在已安装 *应用* 的撰写邮件区域中。
 
-1. 将 Teams 应用程序（清单和应用 [图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)）打包为一个 zip 文件。如果使用 Teams 工具包创建应用，则可以使用 Teams 工具包的“*部署*”菜单中的“**压缩 Teams 元数据包**”选项轻松完成此操作：
+1. 将 Teams 应用（清单和应用[图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)）打包为一个 zip 文件。 如果使用 Teams 工具包创建应用，则可以使用 Teams 工具包的“*部署*”菜单中的“**压缩 Teams 元数据包**”选项轻松完成此操作。
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="适用于 Visual Studio Code 的 Teams 工具包扩展中的“压缩 Teams 元数据包”选项":::
 
-1. 使用沙盒租户帐户登录 Teams，并切换到“*开发者预览版*”模式。 按用户个人资料选择省略号 (**...**) 菜单，然后依次选择“关于”>“**开发者预览版**”。
+1. 使用沙盒租户帐户登录 Teams，并切换到“*开发者预览版*”模式。 选择用户个人资料旁边的省略号 (**...**) 菜单，然后依次选择：“**关于**” > “**开发者预览版**”。
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="从 Teams 省略号菜单中，打开“关于”，然后选择“开发人员预览版”选项":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="从 Teams 省略号菜单中，打开“关于”，然后选择“开发者预览版”选项":::
 
-1. 选择“*应用*”以打开“**管理你的应用**”窗格。 然后选择“**发布应用**”。
+1. 选择“**应用**”以打开“**管理你的应用**”窗格。 然后选择“**发布应用**”。
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="打开“管理应用”窗格，然后选择“发布应用”":::
 
@@ -167,7 +167,7 @@ ms.locfileid: "65656143"
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="单击邮件撰写窗口底部的“更多应用”菜单以使用邮件扩展":::
 
-你的邮件扩展已列出。可以从那里调用它，并像在 Teams 中撰写邮件时一样使用它。
+你的邮件扩展已列出。 可以从其中调用它，并像在 Teams 中撰写邮件时一样使用它。
 
 ### <a name="outlook"></a>Outlook
 
@@ -204,7 +204,7 @@ ms.locfileid: "65656143"
 
 ## <a name="next-step"></a>后续步骤
 
-发布应用以可在 Teams、Outlook 和 Office 中被发现：
+发布应用以便在 Teams、Outlook 和 Office 中可以发现：
 
 > [!div class="nextstepaction"]
 > [发布适用于 Outlook 和 Office 的 Teams 应用](publish.md)

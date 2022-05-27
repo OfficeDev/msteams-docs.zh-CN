@@ -4,12 +4,12 @@ description: 了解如何在个人应用或选项卡上嵌入Teams中添加“�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 共享 Teams 共享到 Teams
-ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439361"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757260"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>从个人应用或选项卡共享到 Teams
 

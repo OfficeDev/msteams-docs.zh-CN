@@ -1,17 +1,16 @@
 ---
 title: 会议应用 API 参考
 author: surbhigupta
-description: 通过示例和代码示例识别会议应用程序 API 参考
+description: 使用示例和代码示例标识会议应用 API 引用，Teams应用会议用户参与者角色 api 用户上下文通知信号查询。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: Teams 应用会议用户参与者角色 API 用户上下文通知信号查询
-ms.openlocfilehash: 75dc6dde65b24fd05931021544fafe3af956d88d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65667981"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755830"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -28,15 +27,15 @@ ms.locfileid: "65667981"
 
 |方法| 说明| 源|
 |---|---|----|
-|[**获取用户上下文**](#get-user-context-api)| 获取上下文信息，以便在 Teams 选项卡中显示相关内容。| MSTC SDK|
-|[**获取参与者**](#get-participant-api)| 通过会议 ID 和参与者 ID 提取参与者信息。 |MSBF SDK|
-|[**发送会议内通知**](#send-an-in-meeting-notification)| 使用用户机器人聊天的现有对话通知 API 提供会议信号，并允许通知显示会议内通知的用户操作。 |MSBF SDK|
-|[**获取会议详细信息**](#get-meeting-details-api)| 获取会议的静态元数据。 |MSBF SDK |
-|[**发送实时字幕**](#send-real-time-captions-api)| 将实时字幕发送到正在进行的会议。 |MSTC SDK|
-|[**将应用内容共享到演示区域**](#share-app-content-to-stage-api)| 从会议中的应用侧面板将应用的特定部分共享到会议演示区域。 |MSTC SDK|
-|[**获取应用内容演示区域共享状态**](#get-app-content-stage-sharing-state-api)| 获取会议演示区域应用共享状态的信息。 |MSTC SDK|
-|[**获取应用内容演示区域共享功能**](#get-app-content-stage-sharing-capabilities-api)| 获取应用共享到会议演示区域的功能。 |MSTC SDK|
-|[**获取实时 Teams 会议事件**](#get-real-time-teams-meeting-events-api)|获取实时会议事件，例如实际开始时间和结束时间。| MSBF SDK|
+|[**获取用户上下文**](#get-user-context-api)| 获取上下文信息，以便在 Teams 选项卡中显示相关内容。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**获取参与者**](#get-participant-api)| 通过会议 ID 和参与者 ID 提取参与者信息。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
+|[**发送会议内通知**](#send-an-in-meeting-notification)| 使用用户机器人聊天的现有对话通知 API 提供会议信号，并允许通知显示会议内通知的用户操作。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**获取会议详细信息**](#get-meeting-details-api)| 获取会议的静态元数据。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**发送实时字幕**](#send-real-time-captions-api)| 将实时字幕发送到正在进行的会议。 | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**将应用内容共享到演示区域**](#share-app-content-to-stage-api)| 从会议中的应用侧面板将应用的特定部分共享到会议演示区域。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+|[**获取应用内容演示区域共享状态**](#get-app-content-stage-sharing-state-api)| 获取会议演示区域应用共享状态的信息。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
+|[**获取应用内容演示区域共享功能**](#get-app-content-stage-sharing-capabilities-api)| 获取应用共享到会议演示区域的功能。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**获取实时 Teams 会议事件**](#get-real-time-teams-meeting-events-api)|获取实时会议事件，例如实际开始时间和结束时间。| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>获取用户上下文 API
 
@@ -133,6 +132,22 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
+| 属性名称 | 用途 |
+|---|---|
+| **user.id** | 用户的 ID。 |
+| **user.aadObjectId** | Azure Active Directory用户的对象 ID。 |
+| **user.name** | 用户名。 |
+| **user.givenName** | 用户的名字。|
+| **user.surname** | 用户的姓氏。 |
+| **user.email** | 用户的邮件 ID。 |
+| **user.userPrincipalName** | 用户的 UPN。 |
+| **user.tenantId** | Azure Active Directory 租户 ID。 |
+| **user.userRole** | 用户的角色，即“admin”或“user”。 |
+| **meeting.role** | 参与者在会议中的角色。 即“组织者”或“演示者”或“与会者”。 |
+| **meeting.inMeeting** | 指示参与者是否在会议中的值。 |
+| **conversation.id** | 会议聊天 ID。 |
+| **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
+
 ### <a name="response-codes"></a>响应代码
 
 下表列出了响应代码：
@@ -217,6 +232,15 @@ POST /v3/conversations/{conversationId}/activities
 ```
 
 ---
+
+| 属性名称 | 用途 |
+|---|---|
+| **type** | 活动的类型。 |
+| **text** | 消息的文本内容。 |
+| **summary** | 消息的摘要文本。 |
+| **channelData.notification.alertInMeeting** | 指示在会议中是否向用户显示通知的布尔值。 |
+| **channelData.notification.externalResourceUrl** | 通知的外部资源 URL 的值。|
+| **replyToId** | 线程的父消息或根消息的 ID。 |
 
 ### <a name="response-codes"></a>响应代码
 
@@ -378,6 +402,28 @@ GET /v1/meetings/{meetingId}
 ```
 
 ---
+
+| 属性名称 | 用途 |
+|---|---|
+| **details.id** | 会议 ID，编码为 BASE64 字符串。 |
+| **details.msGraphResourceId** | MsGraphResourceId，专门用于 MS 图形 API调用。 |
+| **details.scheduledStartTime** | 会议的预定开始时间（以 UTC 为中心）。 |
+| **details.scheduledEndTime** | 会议的预定结束时间，以 UTC 表示。 |
+| **details.joinUrl** | 用于加入会议的 URL。 |
+| **details.title** | 会议标题。 |
+| **details.type** | 会议的类型 - 例如 Adhoc、Broadcast、MeetNow、Recurring、Scheduled、Unknown。 |
+| **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
+| **conversation.conversationType** | 会话类型。 |
+| **conversation.id** | 会议聊天 ID。 |
+| **organizer.id** | 组织者的用户 ID。 |
+| **organizer.aadObjectId** | 组织者的Azure Active Directory对象 ID。 |
+| **organizer.tenantId** | 组织者的Azure Active Directory租户 ID。 |
+
+在定期会议类型中，
+
+**startDate**：指定开始应用模式的日期。 startDate 的值必须对应于事件资源上 start 属性的日期值。 请注意，如果日期不符合模式，第一次会议可能不会在此日期发生。
+
+**endDate**：指定停止应用模式的日期。 请注意，如果日期不符合模式，最后一次会议可能不会在此日期发生。
 
 ## <a name="send-real-time-captions-api"></a>发送实时字幕 API
 
@@ -760,6 +806,35 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
     "locale": "en-US" 
 }
 ```
+
+| 属性名称 | 用途 |
+|---|---|
+| **名称** | 用户名。|
+| **type** | 活动类型。 |
+| **timestamp** | 以 ISO-8601 格式表示的邮件的本地日期和时间。 |
+| **id** | 活动的 ID。 |
+| **channelId** | 将此活动与通道关联。 |
+| **serviceUrl** | 应在其中发送对此活动的响应的服务 URL。 |
+| **from.id** | 发送请求的用户 ID。 |
+| **from.aadObjectId** | 发送请求的用户的 Azure Active Directory 对象 ID。 |
+| **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
+| **conversation.tenantId** | Azure Active Directory会话或会议的租户 ID。 |
+| **conversation.id** | 会议聊天 ID。 |
+| **recipient.id** | 接收请求的用户的 ID。 |
+| **recipient.name** | 接收请求的用户的名称。 |
+| **entities.locale** | 包含有关区域设置的元数据的实体。 |
+| **entities.country** | 包含有关国家/地区的元数据的实体。 |
+| **entities.type** | 包含有关客户端的元数据的实体。 |
+| **channelData.tenant.id** | Azure Active Directory 租户 ID。 |
+| **channelData.source** | 触发或调用事件的源名称。 |
+| **channelData.meeting.id** | 与会议关联的默认 ID。 |
+| **价值。MeetingType** | 会议的类型。 |
+| **价值。标题** | 会议的主题。 |
+| **价值。Id** | 与会议关联的默认 ID。 |
+| **价值。JoinUrl** | 会议的加入 URL。 |
+| **价值。StartTime** | 会议开始时间（UTC）。 |
+| **价值。EndTime** | UTC 中的会议结束时间。 |
+| **locale**| 客户端设置的消息的区域设置。 |
 
 ## <a name="code-sample"></a>代码示例
 

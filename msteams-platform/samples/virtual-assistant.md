@@ -1,15 +1,15 @@
 ---
 title: 创建虚拟助手
 description: 了解如何使用代码示例和代码片段为 Microsoft Teams 创建虚拟助手机器人，这些代码段具有自适应卡片等功能；处理中断、任务模块请求、协作应用作用域和附加消息；使用技能表；支持多种语言、声明验证、LUIS 集成和模式。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams 虚拟助手机器人
-ms.openlocfilehash: 1d968c7fb05d80313d664d9290654911d8dc7638
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 7079087f9ed6195bb2e44e21c92288ad86df7e18
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111463"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757631"
 ---
 # <a name="create-virtual-assistant"></a>创建虚拟助手
 
@@ -35,14 +35,14 @@ ms.locfileid: "65111463"
 
 ## <a name="create-a-teams-focused-virtual-assistant"></a>创建以 Teams 为中心的虚拟助理
 
-Microsoft 发布了用于构建虚拟助手和技能的[ Microsoft Visual Studio 模板](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)。 借助 Visual Studio 模板，可以创建一个虚拟助理，此虚拟助理由基于文本的体验提供支持，支持包含操作的有限富卡。 我们增强了 Visual Studio 基础模板，包括 Microsoft Teams 平台功能和强大的 Teams 应用体验。 一些功能包括支持丰富的自适应卡片、任务模块、团队或群组聊天以及消息扩展。 有关将虚拟助理扩展到 Microsoft Teams 的详细信息，请参阅[教程：将虚拟助理扩展到 Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)。
+Microsoft 发布了用于构建虚拟助手和技能的[ Microsoft Visual Studio 模板](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)。 借助 Visual Studio 模板，可以创建一个虚拟助理，此虚拟助理由基于文本的体验提供支持，支持包含操作的有限富卡。 我们增强了Visual Studio基础模板，包括Microsoft Teams平台功能和强大的Teams应用体验。 一些功能包括支持丰富的自适应卡片、任务模块、团队或群组聊天以及消息扩展。 有关将虚拟助理扩展到 Microsoft Teams 的详细信息，请参阅[教程：将虚拟助理扩展到 Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)。
 下图显示了虚拟助理解决方案的高级关系图：
 
 ![虚拟助理解决方案的高级关系图](../assets/images/bots/virtual-assistant/high-level-diagram.png)
 
 ### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>将自适应卡片添加到虚拟助理
 
-如果要正确调度请求，虚拟助理必须标识正确的 LUIS 模型和与之关联的相应技能。 但是，调度机制不能用于卡操作活动，因为与技能关联的 LUIS 模型针对卡操作文本进行训练。 卡片操作文本是固定的预定义关键字，不会由用户注释。
+如果要正确调度请求，虚拟助理必须标识正确的 LUIS 模型和与之关联的相应技能。 但是，调度机制不能用于卡片操作活动，因为与技能关联的 LUIS 模型针对卡片操作文本进行了训练。 卡片操作文本是固定的预定义关键字，不会由用户注释。
 
 通过在卡片操作有效负载中嵌入技能信息来解决此缺点。 每个技能都应将 `skillId` 嵌入到卡片操作的 `value` 字段中。 必须确保每个卡片操作活动都包含相关技能信息，虚拟助理可以利用此信息进行调度。
 
@@ -131,7 +131,7 @@ Microsoft 发布了用于构建虚拟助手和技能的[ Microsoft Visual Studio
 
 如果要将任务模块功能添加到虚拟助理，虚拟助理活动处理程序中还包含两个附加方法：`OnTeamsTaskModuleFetchAsync`和 `OnTeamsTaskModuleSubmitAsync`。 这些方法侦听来自虚拟助理的任务模块相关的活动，识别与请求关联的技能，并将请求转发给标识的技能。
 
-请求转发通过 [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true)、`PostActivityAsync` 方法完成。 它返回已分析并转换为 `TaskModuleResponse` 的响应 `InvokeResponse`。
+请求转发通过 [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true)、`PostActivityAsync` 方法完成。 它返回响应，作为 `InvokeResponse`，这是分析和转换为 `TaskModuleResponse` 。
 
 ```csharp
     public static TaskModuleResponse GetTaskModuleRespose(this InvokeResponse invokeResponse)
@@ -171,9 +171,9 @@ Microsoft 发布了用于构建虚拟助手和技能的[ Microsoft Visual Studio
 ```
 
 对于卡片操作调度和任务模块响应，也遵循类似方法。 任务模块提取和提交操作数据已更新，以包含`skillId`。
-活动扩展方法 `GetSkillId` 从有效负载中提取 `skillId` ，有效负载提供有关需要调用的技能的详细信息。
+活动扩展方法 `GetSkillId` 从有效负载中提取 `skillId` ，该有效负载提供有关需要调用的技能的详细信息。
 
-以下部分提供了适用于 `OnTeamsTaskModuleFetchAsync` 和 `OnTeamsTaskModuleSubmitAsync` 方法的代码片段：
+以下部分提供了代码 `OnTeamsTaskModuleFetchAsync` 片段和 `OnTeamsTaskModuleSubmitAsync` 方法：
 
 ```csharp
     // Invoked when a "task/fetch" event is received to invoke task module.
@@ -225,9 +225,9 @@ Microsoft 发布了用于构建虚拟助手和技能的[ Microsoft Visual Studio
 
 ### <a name="handle-collaborative-app-scopes"></a>处理协作应用作用域
 
-Teams 应用可以存在于多个作用域内，包括一对一聊天、群组聊天和频道。 核心虚拟助理模板专为一对一聊天而设计。 作为载入体验的一部分，虚拟助理提示用户输入名称并保持用户状态。 由于载入体验不适用于群聊或频道作用域，因此被删除。
+Teams 应用可以存在于多个作用域内，包括一对一聊天、群组聊天和频道。 核心虚拟助理模板专为一对一聊天而设计。 作为载入体验的一部分，虚拟助理提示用户输入名称并保持用户状态。 由于载入体验不适用于群聊或频道范围，因此已被删除。
 
-技能应处理多个作用域活动，例如一对一聊天、群聊和频道对话。 如果这些作用域中的任何一个不受支持，技能必须使用适当的消息进行响应。
+技能应处理多个作用域活动，例如一对一聊天、群聊和频道对话。 如果这些范围中的任何一个不受支持，技能必须使用适当的消息进行响应。
 
 以下处理功能已添加到虚拟助手核心：
 
@@ -340,7 +340,7 @@ Teams 应用可以存在于多个作用域内，包括一对一聊天、群组�
 
 ![具有“预订会议室”技能的虚拟助理](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
-以下是引入的增量更改，以将其转换为附加到虚拟助手的技能。 遵循类似的准则将任何现有的 v4 机器人转换为技能。
+以下是为将其转换为附加到虚拟助理的技能而引入的增量更改。 遵循类似的准则将任何现有的 v4 机器人转换为技能。
 
 ### <a name="skill-manifest"></a>技能清单
 
@@ -509,7 +509,7 @@ bf luis:convert --in <pathToLUIS.json> --out <pathToLuFile>
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to luisFolder>" --languages "en-us, your_language_culture" --cs
 ```
 
-虚拟助理使用 `SetLocaleMiddleware` 标识当前区域设置并调用相应的调度模型。 Bot Framework 活动具有此中间件使用的区域设置字段。 也可以对技能使用相同的功能。 预订会议室机器人不使用此中间件，而是从 Bot Framework 活动的 [clientInfo entity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo) 获取区域设置。
+虚拟助理使用 `SetLocaleMiddleware` 标识当前区域设置并调用相应的调度模型。 机器人框架活动具有此中间件使用的区域设置字段。 也可以对技能使用相同的功能。 书房机器人不使用此中间件，而是从 Bot Framework 活动的 [clientInfo 实体](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)获取区域设置。
 
 ### <a name="claim-validation"></a>声明验证
 
@@ -529,14 +529,14 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 ### <a name="limitation-of-card-refresh"></a>卡刷新限制
 
-尚不支持通过虚拟助理更新活动，例如卡片刷新（[github问题](https://github.com/microsoft/botbuilder-dotnet/issues/3686)）。 因此，我们已将所有卡刷新调用 `UpdateActivityAsync` 替换为发布新卡调用 `SendActivityAsync`。
+更新活动（如卡片刷新）尚不支持通过虚拟助理 ([github 问题](https://github.com/microsoft/botbuilder-dotnet/issues/3686)) 。 因此，我们已将所有卡刷新呼叫 `UpdateActivityAsync` 替换为发布新卡呼叫 `SendActivityAsync`。
 
 ### <a name="card-actions-and-task-module-flows"></a>卡片操作和任务模块流
 
 如果要将卡片操作或任务模块活动转发到关联技能，此技能必须嵌入 `skillId`。
 `Book-a-room` 机器人卡操作，任务模块提取和提交操作有效负载将修改为包含 `skillId` 作为参数。
 
-有关详细信息，请参阅本文档中的[此](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant)部分。
+有关详细信息，请参阅本文档中的 [此](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) 部分。
 
 ### <a name="handle-activities-from-group-chat-or-channel-scope"></a>处理群组聊天或频道作用域的活动
 
@@ -561,11 +561,11 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 ## <a name="limitations-of-virtual-assistant"></a>虚拟助理限制
 
-* **EndOfConversation**： 技能在完成对话时必须发送 `endOfConversation` 活动。 根据活动，虚拟助理以该特定技能结束上下文，并返回到虚拟助理的根上下文中。 对于预订会议室机器人，没有明确的对话结束状态。 因此，我们没有从 `Book-a-room` 机器人发送 `endOfConversation`，用户想要返回根上下文时，他们可以通过 `start over` 命令来执行此操作。  
+* **EndOfConversation**： 技能在完成对话时必须发送 `endOfConversation` 活动。 根据活动，虚拟助理以该特定技能结束上下文，并返回到虚拟助理的根上下文中。 对于 Book-a-room 机器人，没有结束聊天的明确状态。 因此，我们尚未从`Book-a-room`机器人发送`endOfConversation`，当用户想要返回到根上下文时，他们可以通过`start over`命令执行此操作。  
 * **卡刷新**：尚不支持通过虚拟助理刷新卡片。  
 * **消息扩展**：
   * 目前，虚拟助理最多可以支持 10 个用于消息扩展的命令。
-  * 消息扩展的配置范围不限于单个命令，适用于整个扩展本身。 这会通过虚拟助理限制每个技能的配置。
+  * 消息扩展的配置范围不限于单个命令，而适用于整个扩展本身。 这会通过虚拟助理限制每个技能的配置。
   * 消息扩展命令 ID 的最大长度为 [64 字符](../resources/schema/manifest-schema.md#composeextensions) ，37 个字符用于嵌入技能信息。 因此，命令 ID 的更新约束限制为 27 个字符。
 
 还可以利用 [Bot Framework Solutions 存储库](https://github.com/microsoft/botframework-components/tree/main/skills/csharp)中的现有技能，或从头开始创建新技能。 稍后的教程可在[此处](https://microsoft.github.io/botframework-solutions/overview/skills/)找到。 请参阅有关虚拟助理和技能体系结构的[文档](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。

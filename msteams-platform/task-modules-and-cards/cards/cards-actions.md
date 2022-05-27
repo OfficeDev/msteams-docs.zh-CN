@@ -1,15 +1,15 @@
 ---
 title: 在机器人中添加卡片操作
 description: 介绍 Microsoft Teams 中的卡片操作以及如何在机器人中使用它们
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: Teams, 机器人卡片操作
-ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111575"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756483"
 ---
 # <a name="card-actions"></a>卡片操作
 
@@ -98,7 +98,7 @@ CardFactory.actions([
 | `value` | 执行操作时发送到机器人。 可以对操作的上下文进行编码，例如唯一标识符或 JSON 对象。 |
 | `text` | 执行操作时发送到机器人。 使用此属性可简化机器人开发。 代码可以检查单个顶级属性以调度机器人逻辑。 |
 
-`messageBack` 的灵活性意味着，如果只是不使用 `displayText`，那么代码无法在历史记录中留下可见的用户消息。
+代码无法通过不使用`displayText`而在历史记录中保留可见用户消息的灵活性`messageBack`。
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -427,7 +427,7 @@ CardFactory.actions([
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-你还可以修改自适应卡片 `Action.Submit` 有效负载，以支持在 `Action.Submit` 的 `data` 对象中使用 `msteams` 属性的现有 Bot Framework 操作。 下一节提供有关如何将现有 Bot Framework 操作与自适应卡片结合使用的详细信息。
+你还可以修改自适应卡片 `Action.Submit` 有效负载，以支持在 `Action.Submit` 的 `data` 对象中使用 `msteams` 属性的现有 Bot Framework 操作。 下一部分提供有关如何将现有 Bot Framework 操作与自适应卡片配合使用的详细信息。
 
 > [!NOTE]
 > 使用 Bot Framework 操作将 `msteams` 添加到数据不适用于自适应卡片任务模块。

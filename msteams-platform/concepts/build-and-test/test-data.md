@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: 测试应用, 开发人员计划, Teams
 ms.date: 11/01/2019
-ms.openlocfilehash: 5c8848196f5c5493c49f3446f788181f4123120d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 6694c925e49d38fa15f908e58202907c7d479fa0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296985"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757022"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>将测试数据添加到 Microsoft 365 测试租户
 
@@ -18,7 +18,7 @@ ms.locfileid: "65296985"
 
 ## <a name="prerequisites"></a>先决条件
 
-1. 如果没有测试租户，请[加入 Microsoft 365 开发人员计划](/office/developer-program/office-365-developer-program)。
+1. 如果没有测试租户，请[加入Microsoft 365](/office/developer-program/office-365-developer-program)开发人员计划。
 2. [设置 Microsoft 365 开发人员订阅](/office/developer-program/office-365-developer-program-get-started)。
 3. [将示例数据包与 Microsoft 365 开发人员订阅结合使用，以安装用户内容包](/office/developer-program/install-sample-packs)。
 4. [安装 Teams PowerShell 模块](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。
@@ -147,7 +147,7 @@ ms.locfileid: "65296985"
     </Teams>
     ```
 
-2. 将以下代码片段另存为 PowerShell 脚本 (.ps1) 并记下保存位置。 此脚本执行用于创建团队和频道并向其中添加成员的步骤：
+2. 将以下代码片段另存为 PowerShell 脚本 (.ps1) 并记下保存到的位置。 此脚本执行用于创建团队和频道并向其中添加成员的步骤：
 
     ```powershell
     Param(
@@ -238,8 +238,8 @@ ms.locfileid: "65296985"
     }
     ```
 
-3. 在管理员模式下打开 Windows PowerShell 会话，并运行刚才保存的脚本。
-4. 当系统提示你提供凭据时，请输入首次注册开发人员订阅时收到的全局管理员凭据。
+3. 在管理员模式下打开Windows PowerShell会话，并运行保存的脚本。
+4. 当系统提示你提供凭据时，输入首次注册开发人员订阅时收到的全局管理员凭据。
 
     > [!Note]
     > 请勿关闭 PowerShell 会话，因为脚本需要几分钟来执行。 如果已根据默认内容包中创建的内容修改订阅中的用户，则某些用户可能不会添加到 Teams。 当脚本执行时，它将显示成功或失败的操作。

@@ -3,15 +3,15 @@ title: 集成 QR 或条码扫描仪功能
 author: Rajeshwari-v
 description: 如何使用 Teams JavaScript 客户端 SDK 利用 QR 或条形码扫描程序功能
 keywords: 相机, 媒体, QR 码, qrcode, 条形码, 条形码扫描程序, 扫描功能, 本机设备权限
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 32d707202a28789a720dd83905b462451533ff55
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 1a8b89754ddf4f04fb2cc6f5890d8ce4c3f25dab
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111785"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757715"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>集成 QR 或条码扫描仪功能
 
@@ -27,7 +27,7 @@ ms.locfileid: "65111785"
 * 使用此功能，用户只需在扫描程序 UI 中心的框架内对齐 QR 或条形码，代码就会自动扫描。 存储的数据将与调用 Web 应用共享。 这可避免手动输入冗长的产品代码或其他相关信息带来的不便和人为错误。
 
 若要集成 QR 或条形码扫描程序功能，必须更新应用清单文件并调用 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API。 若要有效集成，必须充分了解用于调用 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API 的[代码片段](#code-snippet)，以便使用本机 QR 或条形码扫描程序功能。 API 会为不受支持的条形码标准提供错误。
-请务必熟悉 [API 响应错误](#error-handling)，以处理 Teams 应用中的错误。
+请务必熟悉 [API 响应错误](#error-handling)，以处理Teams应用中的错误。
 
 > [!NOTE]
 > 目前，Microsoft Teams 对 QR 或条形码扫描程序功能的支持仅适用于移动客户端。
@@ -81,11 +81,11 @@ ms.locfileid: "65111785"
 | **100** | NOT_SUPPORTED_ON_PLATFORM | 当前平台不支持 API。|
 | **500** | INTERNAL_ERROR | 执行所需的操作时遇到内部错误。|
 | **1000** | PERMISSION_DENIED |权限被用户拒绝。|
-| **3000** | NO_HW_SUPPORT | 底层硬件不支持该功能。|
+| **3000** | NO_HW_SUPPORT | 基础硬件不支持此功能。|
 | **4000** | INVALID_ARGUMENTS | 一个或多个参数无效。|
 | **8000** | USER_ABORT |用户中止了该操作。|
 | **8001** | OPERATION_TIMED_OUT | 无法在给定的时间间隔内检测到条形码。|
-| **9000** | OLD_PLATFORM | 平台代码已过时，且未实施此 API。|
+| **9000** | OLD_PLATFORM | 平台代码已过时，不实现此 API。|
 
 ## <a name="code-snippet"></a>代码片段
 

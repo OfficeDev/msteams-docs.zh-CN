@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 392d69b76c3bba7a4f8e7543731ef436af714c7c
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: aa2aacb781909720bdb6a0bc27d593f9c73d11b0
+ms.sourcegitcommit: a4b3b2fb265142155508f9b396609da1280df35d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727337"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65696457"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>将 SaaS 产品/服务包括在 Microsoft Teams 应用中
 
@@ -122,7 +122,7 @@ ms.locfileid: "63727337"
 我们强烈建议在发布 SaaS 产品/服务之前对端到端购买体验进行验证。 为此，可以创建一个单独的产品/服务来进行测试。 有关完整信息，请参阅 [测试产品/服务概述](/azure/marketplace/plan-saas-offer#test-offer)、[创建测试产品/服务](/azure/marketplace/create-saas-dev-test-offer) 和 [预览产品/服务](/azure/marketplace/test-publish-saas-offer)。
 
 > [!IMPORTANT]
-> 在应用完成应用商店验证之前，可以在 Teams 中测试端到端事务。 有关详细信息，请参阅[适用于盈利应用的测试预览](Test-preview-for-monetized-apps.md)。
+> 可以使用 [测试盈利应用的预览版](Test-preview-for-monetized-apps.md) 在 Teams 中测试端到端事务。 对于实时产品/服务，必须完成应用商店验证过程。
 
 从 Teams 的角度来看，在用户执行以下操作时，这些测试必须验证许可证和分配的数量是否与 Teams 管理中心中的内容匹配：
 

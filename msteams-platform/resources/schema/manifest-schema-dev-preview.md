@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Teams 清单架构开发人员预览
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668128"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757491"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的公共开发人员预览清单架构
 
@@ -290,7 +290,7 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
 
 **必需** &ndash; 字符串
 
-特定应用的版本。如果更新清单中的某些内容，版本也必须随之递增。因此在安装新清单时，它将覆盖现有清单，并且用户将获得新功能。如果已将此应用提交至应用商店，则必须重新提交新清单并重新验证。然后，此应用的用户将在该清单获得批准后几小时内自动获得新的更新的清单。
+特定应用的版本。 如果更新清单中某些内容，则版本也必须递增。 这样一来，在安装新的清单时，它将覆盖现有的版本，用户将获得新的功能。 如果将此应用提交到应用商店，则必须重新提交并重新验证新清单。 然后，此应用的用户将在批准后的几个小时内自动获取新更新的清单。
 
 如果应用请求的权限发生了更改，则系统将提示用户对加载项进行升级和重新许可。
 
@@ -300,7 +300,7 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
 
 **必需** &ndash; Microsoft 应用 ID
 
-此应用的唯一 Microsoft 生成的标识符。 如果已通过 Microsoft Bot Framework 注册了机器人，或者选项卡的 Web 应用已使用 Microsoft 登录，则应已有一个 ID，并应在此处输入它。 否则，应在 Microsoft 应用程序注册门户（[我的应用程序](https://apps.dev.microsoft.com)）上生成新 ID，在此处输入该 ID，然后在 [添加机器人](~/bots/how-to/create-a-bot-for-teams.md) 时重用它。
+此应用的唯一 Microsoft 生成的标识符。 如果已通过Microsoft Bot Framework注册了机器人，或者选项卡的 Web 应用已使用 Microsoft 登录，则应该已有一个 ID，并且必须在此处输入。 否则，必须在 Microsoft 应用程序注册门户 ([“我的应用程序](https://apps.dev.microsoft.com) ”) 生成新 ID，在此处输入该 ID，然后在 [添加机器人](~/bots/how-to/create-a-bot-for-teams.md)时重用它。
 
 ## <a name="packagename"></a>packageName
 
@@ -326,7 +326,7 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
 
 可选：
 
-允许指定默认语言以及指向其他语言文件的指针。 参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
+允许默认语言的规范，以及指向其他语言文件的指针。 参阅 [本地化](~/concepts/build-and-test/apps-localization.md)。
 
 |名称| 最大大小 | 必需 | 说明|
 |---|---|---|---|
@@ -345,7 +345,7 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
 
 必需：
 
-应用体验的名称，在 Teams 体验中向用户显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 `short` 和 `full` 的值不应相同。
+应用体验的名称，在 Teams 体验中向用户显示。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。 `short`值和`full`应该不一样。
 
 |名称| 最大大小 | 必需 | Description|
 |---|---|---|---|
@@ -358,7 +358,7 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
 
 向用户描述应用。对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
-确保描述可以准确描述你的体验，并提供信息来帮助潜在客户了解你的体验。 如果需要使用外部帐户，则应在完整说明中进行备注。 `short` 和 `full` 的值不应相同。  简短说明不能在长说明中重复，也不能包含任何其他应用名称。
+确保描述可以准确描述你的体验，并提供信息来帮助潜在客户了解你的体验。 如果需要使用外部帐户，则应在完整说明中进行备注。 `short`值和`full`应该不一样。  简短说明不能在长说明中重复，也不能包含任何其他应用名称。
 
 |名称| 最大大小 | 必需 | Description|
 |---|---|---|---|
@@ -380,7 +380,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **必需** &ndash; 字符串
 
-要与大纲图标结合使用并作为其背景的颜色。
+用于大纲图标的颜色和背景。
 
 该值必须是以"#"开头的有效 HTML 颜色代码，例如 `#4464ee`。
 
@@ -388,7 +388,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 可选：
 
-当应用体验具有团队频道选项卡体验时使用，该体验需要在添加之前进行额外配置。 可配置选项卡仅在团队范围内受支持，并且目前每个应用仅支持一个选项卡。
+当应用体验具有团队频道选项卡体验时使用，该体验需要在添加之前进行额外的配置。 可配置选项卡仅在团队范围内受支持，并且目前每个应用仅支持一个选项卡。
 
 对象是一个数组，其中包含类型的所有元素 `object`。 只有提供可配置频道选项卡解决方案的解决方案才需要此块。
 
@@ -512,7 +512,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 可选：
 
-指定应用请求权限的 `string` 的数组，可以让最终用户了解扩展的执行方式。以下选项是非独占的：
+一个数组 `string`，指定应用请求的权限，让最终用户知道扩展将如何执行。 以下选项是非独占的：
 
 * `identity`&emsp;需要用户标识信息。
 * `messageTeamMembers`&emsp;请求向团队成员发送直接消息的权限。
@@ -537,7 +537,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 应用需要从中加载任何内容的有效域的列表。 域列表可以包含通配符，例如 `*.example.com`。 这与域的一个区段完全匹配；如果需要匹配 `a.b.example.com`，则使用 `*.*.example.com`。 如果选项卡配置或内容 UI 需要导航到除用于选项卡配置的域之外的任何其他域，则必须在此处指定该域。
 
-但是，**没有** 必要在应用中包含你要支持的标识提供者的域。 例如，要使用 Google ID 进行身份验证，需要重定向到 accounts.google.com，但不应在 `validDomains[]` 中包含 accounts.google.com。
+但是，**没有** 必要在应用中包含你要支持的标识提供者的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不应在 `validDomains[]`其中包含 accounts.google.com。
 
 > [!IMPORTANT]
 > 不要直接或通过通配符添加超出控制范围的域。 例如，`yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。
@@ -548,7 +548,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 可选：
 
-指定 Microsoft Azure Active Directory (Azure AD) 应用 ID 和 Graph 信息，以帮助用户无缝登录到 Auzre AD 应用。
+指定Microsoft Azure Active Directory (Azure AD) 应用 ID 和Graph信息，以帮助用户无缝登录到 Azure AD 应用。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -560,11 +560,11 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选**— 对象
 
-指定应用的Graph连接器配置。 如果存在，则还必须指定 [webApplicationInfo.id](#webapplicationinfo) 。
+指定应用的 Graph 连接器配置。 如果存在，则还必须指定 [webApplicationInfo.id](#webapplicationinfo)。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 个字符|✔|应发送应用程序的Graph连接器通知的 URL。|
+|`notificationUrl`|string|2048 个字符|✔|应在其中发送应用程序的 Graph 连接器通知的 URL。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
@@ -663,7 +663,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 * `longDescription`：应用的详细说明。
 * `smallImageUrl`：应用的大纲图标。
 * `largeImageUrl`：应用的颜色图标。
-* `accentColor`：要与大纲图标结合使用并作为其背景的颜色。
+* `accentColor`：用于大纲图标的颜色和背景。
 * `developerUrl`：开发人员网站的 HTTPS URL。
 * `privacyUrl`：开发人员隐私策略的 HTTPS URL。
 * `termsOfUseUrl`：开发人员使用条款的 HTTPS URL。
@@ -728,7 +728,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ## <a name="authorization"></a>授权
 
-**可选** - 对象
+**可选** - object
 
 指定并合并应用的授权相关信息。
 

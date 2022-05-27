@@ -2,20 +2,22 @@
 title: 清单架构参考
 description: 介绍 Microsoft Teams 的清单架构
 ms.topic: reference
-ms.author: lajanuar
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104005"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672906"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
-Teams 清单介绍应用如何集成到 Microsoft Teams 产品中。 清单必须符合托管在 [`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json)的架构。 还支持以前的版本 1.0、1.1,..., 和 1.12 (在 URL 中使用"v1.x")。
+Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 应用清单必须符合托管在 [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) 的架构。 支持每个以前的版本 1.0、1.1...1.12 和当前 1.13 版本（请参阅下面的备注）（在 URL 中使用“v1.x”）。
 有关每个版本中所做的更改的详细信息，请参阅[管理更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
+
+> [!Important]
+> Microsoft Teams 应用清单架构的版本 `1.13` 启用了对 [将 Teams 应用扩展到 Outlook 和 Office](../../m365-apps/overview.md) 的支持。 对于仅限 Teams 的应用，请使用版本 `1.12`（或更早版本）。 否则，1.12 和 1.13 架构相同。 请参阅 [Teams JavaScript 客户端 SDK](../../m365-apps/overview.md) 概述以获取进一步指导。
 
 以下架构示例显示所有扩展性选项：
 
@@ -23,8 +25,8 @@ Teams 清单介绍应用如何集成到 Microsoft Teams 产品中。 清单必�
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.12",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.13",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -344,7 +346,7 @@ Teams 清单介绍应用如何集成到 Microsoft Teams 产品中。 清单必�
 
 **必需**— 字符串
 
-此清单使用的清单架构的版本。
+此清单使用的清单架构版本。 使用 `1.13` 在 Outlook 和 Office 中启用 Teams 应用支持；对仅限 Teams 的应用使用 `1.12`（或更早版本）。
 
 ## <a name="version"></a>version
 
@@ -630,6 +632,16 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`id`|string|36 个字符|✔|应用的 Azure AD 应用程序 ID。 此 ID 必须是 GUID。|
 |`resource`|string|2048 个字符|✔|用于获取 SSO 的身份验证令牌的应用的资源 URL。 </br> **注意：** 如果未使用 SSO，请确保在此字段中向应用清单输入虚拟字符串值，例如， https://notapplicable 以避免错误响应。 |
 
+## <a name="graphconnector"></a>graphConnector
+
+**可选**— 对象
+
+指定应用的 Graph 连接器配置。 如果存在，则还必须指定 [webApplicationInfo.id](#webapplicationinfo)。
+
+|名称| 类型| 最大大小 | 必需 | 说明|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 个字符|✔|应在其中发送应用程序的 Graph 连接器通知的 URL。|
+
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
 **可选**— 布尔值
@@ -642,7 +654,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
  **可选**— 布尔值
 
-指示使用或不使用选项卡标题栏呈现个人应用的位置。默认值为 **false**。
+指示是否在没有选项卡标题栏（表示全屏模式）的情况下呈现个人应用。 默认为 **false**。
 
 > [!NOTE]
 > `isFullScreen` 仅适用于发布到组织的应用。

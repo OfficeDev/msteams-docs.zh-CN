@@ -1,19 +1,19 @@
 ---
 title: 适用于 Microsoft Teams 选项卡的 DevTools
 description: 介绍如何在使用 Microsoft Teams 桌面客户端和调试时访问 DevTools
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Devtools 调试移动 Chrome 桌面客户端开发人员工具选项卡
-ms.openlocfilehash: 4e7ea8ee51d5dd77345c0c7392775aa29050a9a5
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: c4601711948df798bda6b7d4940b5436c66f8c97
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111442"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757477"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>适用于 Microsoft Teams 选项卡的 DevTools
 
-当 Teams 在浏览器中运行时，可以轻松访问浏览器的 DevTools：在 Windows 中按 F12 或在 MacOS 中按 Command-Option-I。 DevTools 允许你访问：
+当Teams在浏览器中运行时，可以轻松访问浏览器的 DevTools：Windows 上的 F12 或 MacOS 上的 Command-Option-I。 DevTools 允许你访问：
 
 1. 查看控制台日志。
 1. 在运行时查看或修改 HTML、CSS 和网络请求。

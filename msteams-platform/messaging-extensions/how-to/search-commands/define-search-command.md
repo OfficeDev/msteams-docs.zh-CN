@@ -5,12 +5,12 @@ description: 了解Microsoft Teams应用的消息扩展搜索命令，通过应�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 9615b1ab599f567815df5f68155a8ab2abb292ca
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 987d690beca81574244ae6fbf9e6614ee097ebcb
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111624"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756616"
 ---
 # <a name="define-message-extension-search-commands"></a>定义消息扩展搜索命令
 
@@ -32,7 +32,7 @@ ms.locfileid: "65111624"
 
 下图显示了搜索命令的调用位置：
 
-![search 命令调用位置](~/assets/images/messaging-extension/search-command-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="搜索命令调用位置":::
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>将搜索命令添加到应用清单
 
@@ -40,33 +40,38 @@ ms.locfileid: "65111624"
 
 ### <a name="create-a-search-command-using-app-studio"></a>使用 App Studio 创建搜索命令
 
-创建搜索命令的先决条件是必须已创建消息扩展名。 有关如何创建消息扩展的信息，请参阅[创建消息扩展。](~/messaging-extensions/how-to/create-messaging-extension.md)
+创建搜索命令的先决条件是必须已创建消息扩展名。 有关如何创建消息扩展的信息，请参阅[创建消息扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
 若要创建搜索命令，请执行以下操作：
 
-1. 从Microsoft Teams客户端打开 **App Studio**，然后选择 **“清单编辑器**”选项卡。
+1. 从 Microsoft Teams 客户端打开 “**App Studio**”，并选择“**清单编辑器**”选项卡。
 1. 如果已在 **App Studio** 中创建应用包，请从列表中选择。 如果尚未创建应用包，请导入现有包。
-1. 导入应用包后，选择“**功能**”下 **的消息扩展**。 你将获得一个弹出窗口来设置消息扩展。
-1. 选择“在窗口中 **设置** ”以在应用体验中包含消息扩展。 下图显示消息扩展设置页：
+1. 导入应用包后，选择“**功能**”下 **的消息扩展**。 将显示一个弹出窗口来设置消息扩展。
+1. 在窗口中选择“**设置**”，以在应用体验中包含消息扩展。 下图显示消息扩展设置页：
 
-    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="消息传递扩展设置":::
 
-1. 若要创建消息扩展，需要 Microsoft 注册的机器人。 可以使用现有机器人或创建新机器人。 选择 **“新建机器人** ”选项，为新机器人命名，然后选择 **“创建**”。 下图显示了为消息扩展创建机器人：
+1. 若要创建消息扩展，需要 Microsoft 注册的机器人。 可以使用现有机器人，也可以创建新的机器人。 选择“**创建新的机器人**”选项，为新机器人命名，然后选择“**创建**”。 下图显示了如何为消息扩展创建机器人：
 
-    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="为消息传递扩展创建机器人":::
 
-1. 选择“在消息扩展页的 **命令”部分** 中 **添加**“以包含决定消息扩展行为的命令。
-下图显示消息扩展的命令添加：
+1. 若要使用现有机器人，请选择“**使用现有机器人**”，然后选择“**从现有机器人之一选择**”，以从下拉列表中选择现有机器人，提供“**机器人名称**”，如果已创建机器人 ID，请选择“**保存**”或选择“**连接到不同的机器人 ID**”，提供“**机器人名称**”并选择“**保存**”。
 
-   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="将现有机器人用于消息传递扩展":::
+
+1. 选择“在消息扩展页的 **命令”部分** 中 **添加**“以包含命令，这些命令决定消息扩展的行为。
+下图显示了如何为消息扩展添加命令：
+
+    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="包含命令":::
+
 1. 选择 **“允许用户查询服务信息并将其插入到邮件中**”。 下图显示了搜索命令参数选择：
 
-    <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="搜索命令参数选择":::
 
 1. 添加 **命令 ID** 和 **标题**。
 1. 选择必须从中调用搜索命令的位置。 下图显示了搜索命令调用位置：
 
-    <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
+    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="搜索命令调用位置选择":::
 
 1. 添加搜索参数并选择 **“保存**”。
 
@@ -85,7 +90,7 @@ ms.locfileid: "65111624"
 
 必须添加搜索参数的详细信息，该参数定义用户在Teams客户端中可见的文本。
 
-| 属性名称 | 用途 | 是必需的吗？ | 最低清单版本 |
+| 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
 | `parameters` | 此属性定义命令的参数静态列表。 | 否 | 1.0 |
 | `parameter.name` | 此属性描述参数的名称。 这会在用户请求中发送到服务。 | 是 | 1.0 |
@@ -128,7 +133,7 @@ ms.locfileid: "65111624"
 
 | 示例名称           | 说明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams消息扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams 消息扩展搜索   |  介绍如何定义搜索命令和响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="step-by-step-guide"></a>分步指南
 

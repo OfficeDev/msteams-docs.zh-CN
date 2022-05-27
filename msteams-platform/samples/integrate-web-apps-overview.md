@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 keywords: Power Platform, Power Apps, 人员选取器, 深层链接, 虚拟代理助理, 共享到 Teams
-ms.openlocfilehash: c700755051eebbdb827a0fb9aba0ea51d31dbcf8
-ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.openlocfilehash: dc31644fca25aeca12b7e5f3095ebae53a3c02ac
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65604269"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757666"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 

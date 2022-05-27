@@ -5,20 +5,20 @@ description: 了解如何展开链接、打开阶段视图并使用 Microsoft Te
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296957"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756735"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
-阶段视图是一个新的用户界面 (UI) 组件，可用于呈现在 Teams 中全屏打开并固定为选项卡的内容。
+阶段视图是 UI) 组件 (新的用户界面。 它允许呈现在Teams中全屏打开并固定为选项卡的内容。
 
 ## <a name="stage-view"></a>阶段视图
 
-阶段视图是一个全屏 UI 组件，可以调用它来显示 Web 内容。 现有链接展开服务已更新，以便使用它通过自适应卡片和聊天服务将 URL 转换为选项卡。 当用户在聊天或频道中发送 URL 时，URL 将展开为自适应卡片。 用户可以在卡片中选择“**视图**”，并直接从阶段视图中将内容固定为选项卡。
+阶段视图是一个全屏 UI 组件，可以调用它来显示 Web 内容。 现有链接展开服务已更新，以便使用自适应卡片和聊天服务将 URL 转换为选项卡。 当用户在聊天或频道中发送 URL 时，URL 将展开为自适应卡片。 用户可以在卡片中选择“**视图**”，并直接从阶段视图中将内容固定为选项卡。
 
 ## <a name="advantage-of-stage-view"></a>阶段视图的优点
 
@@ -109,7 +109,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
 
 未编码的 URL：
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={“contentUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191”，“websiteUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true”，“title”：“Quotes： Miscellaneous”，“threadId”：“19：9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2”}
 
 已编码的 URL：
 
@@ -119,7 +119,7 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 
 未编码的 URL：
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={“contentUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191”，“websiteUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true”，“title”：“Quotes： Miscellaneous”}
 
 已编码
 

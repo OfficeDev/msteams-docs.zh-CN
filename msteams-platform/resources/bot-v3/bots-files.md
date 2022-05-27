@@ -3,14 +3,14 @@ title: 从机器人收发文件
 description: 了解如何使用个人、频道和群组聊天作用域的 Graph API 通过机器人收发文件。 通过基于 v3 Bot Framework SDK 的代码示例使用 Teams 机器人 API。
 keywords: teams 机器人文件发送接收
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: b12e8e79e7d8d5180803004b4e0f238446a8fc98
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110356"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755900"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>通过机器人发送和接收文件
 
@@ -89,7 +89,7 @@ ms.locfileid: "65110356"
 
 此桌面消息包含请求上传文件用户权限的简单附件对象:
 
-![请求上传文件用户权限的同意卡的屏幕截图](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="请求上传文件用户权限的同意卡的屏幕截图" border="true":::
 
 此移动消息包含请求上传文件用户权限的附件对象:
 

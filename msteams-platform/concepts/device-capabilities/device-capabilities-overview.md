@@ -1,17 +1,16 @@
 ---
 title: 设备功能 - 概述
 author: Rajeshwari-v
-description: 概述本地设备功能，例如相机、图像、媒体、麦克风、QR 码等。
+description: 了解如何将本机设备功能（如相机、图像、媒体、麦克风、QR 代码等）与Microsoft Teams应用集成。
 ms.author: surbhigupta
-keywords: 相机 图像 媒体 麦克风 QR 码 条形码 扫描 扫描程序 位置 地图 功能 原生设备权限
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 854580fc8825ab007d97b1a3e5feb65af883c9a3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111750"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757029"
 ---
 # <a name="device-capabilities"></a>设备功能
 

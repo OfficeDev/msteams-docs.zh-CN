@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: 了解如何使用代码示例利用 Teams JavaScript 客户端 SDK 启用媒体功能
 keywords: 相机图像麦克风功能本机设备权限媒体 API
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c9b31bf6fe97446bfbccdd1861612ec938733f88
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a65f39d3796bc0dacaa80f6badba7a011716edbf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111260"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756756"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能
 
@@ -24,11 +24,11 @@ ms.locfileid: "65111260"
 
 若要进行有效的集成，必须充分了解用于调用相应 API 的[代码片段](#code-snippets)，以便使用本机媒体功能。
 
-请务必熟悉 [API 响应错误](#error-handling)，以处理 Teams 应用中的错误。
+请务必熟悉 [API 响应错误](#error-handling)，以处理Teams应用中的错误。
 
 > [!NOTE]
 >
-> * 目前，Microsoft Teams 对媒体功能的支持仅适用于移动客户端。
+> * 目前，媒体功能Microsoft Teams支持仅适用于移动客户端。
 > * 目前，Teams 不支持多窗口应用、选项卡和会议侧面板的设备权限。
 > * 在浏览器中，设备权限不同。 有关详细信息，请参阅[浏览器设备权限](browser-device-permissions.md)。
 
@@ -59,7 +59,7 @@ ms.locfileid: "65111260"
   
 > [!IMPORTANT]
 >
-> * 可以从多个 Teams 表面（例如任务模块、选项卡和个人应用）调用 `selectMedia`、`getMedia`、`viewImages` API。 有关详细信息，请参阅 [Teams 应用的入口点](../extensibility-points.md)。
+> * 可以从多个 Teams 表面（例如任务模块、选项卡和个人应用）调用 `selectMedia`、`getMedia`、`viewImages` API。 有关详细信息，请参阅[Teams应用的入口点](../extensibility-points.md)。
 > * `selectMedia` API 已扩展为支持麦克风和音频属性。
 
 必须使用以下一组 API 来启用设备的媒体功能：
@@ -86,13 +86,13 @@ ms.locfileid: "65111260"
 |错误代码 |  错误名称     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | 当前平台不支持 API。|
-| **404** | FILE_NOT_FOUND | 未在给定位置找到指定的文件。|
+| **404** | FILE_NOT_FOUND | 指定的文件在给定位置中找不到。|
 | **500** | INTERNAL_ERROR | 执行所需的操作时遇到内部错误。|
 | **1000** | PERMISSION_DENIED |权限被用户拒绝。|
-| **3000** | NO_HW_SUPPORT | 底层硬件不支持该功能。|
+| **3000** | NO_HW_SUPPORT | 基础硬件不支持此功能。|
 | **4000**| INVALID_ARGUMENTS | 一个或多个参数无效。|
 |  **8000** | USER_ABORT |用户中止了该操作。|
-| **9000**| OLD_PLATFORM | 平台代码已过时，且未实施此 API。|
+| **9000**| OLD_PLATFORM | 平台代码已过时，不实现此 API。|
 | **10000**| SIZE_EXCEEDED |  返回值太大，已超出平台大小限制。|
 
 ## <a name="code-snippets"></a>代码段

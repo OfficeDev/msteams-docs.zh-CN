@@ -34,6 +34,10 @@
       href: sbs-gs-csharp.yml
     - name: 使用 Node.js 生成第一个应用
       href: sbs-gs-nodejs.yml
+    - name: 使用 JavaScript 生成通知机器人
+      href: sbs-gs-notificationbot.yml
+    - name: 使用 JavaScript 生成命令机器人
+      href: sbs-gs-commandbot.yml
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: 计划应用
@@ -301,6 +305,24 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: 会议应用 API 参考
       href: apps-in-teams-meetings/API-references.md
+    - name: 通过 Live Share 增强协作
+      items:
+        - name: 概述
+          href: apps-in-teams-meetings/teams-live-share-overview.md
+        - name: 入门
+          items:
+            - name: 快速启动
+              href: apps-in-teams-meetings/teams-live-share-quick-start.md
+            - name: Dice Roller 教程
+              href: apps-in-teams-meetings/teams-live-share-tutorial.md
+        - name: 核心功能
+          href: apps-in-teams-meetings/teams-live-share-capabilities.md
+        - name: 媒体功能
+          href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+        - name: Agile Poker 教程
+          href: sbs-teams-live-share.yml
+        - name: Live Share SDK 常见问题解答
+          href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: 在 Teams 中自定义同框场景模式
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: 构建Webhook 和连接器

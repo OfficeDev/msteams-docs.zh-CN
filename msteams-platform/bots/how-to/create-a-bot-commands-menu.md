@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 命令菜单 撰写消息对话 @提及
-ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: b81959b23363142cd463788950116b4f805f95ae
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296964"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757694"
 ---
 # <a name="bot-command-menus"></a>机器人命令菜单
 
@@ -42,8 +42,9 @@ ms.locfileid: "65296964"
 1. 打开 Teams，然后从左窗格中选择“**应用**”。 在“**应用**”页中，搜索 **App Studio**，然后选择“**打开**”。
    > [!NOTE]
    > 如果没有 **APP Studio**，可以下载它。 有关详细信息，请参阅[安装 App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)。
-
-  > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
+  
+   > [!WARNING]
+   > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
 
   :::image type="content" source="/media/AppStudio.png" alt-text="安装 App Studio"lightbox="media/AppStudio.png"border="true":::
 

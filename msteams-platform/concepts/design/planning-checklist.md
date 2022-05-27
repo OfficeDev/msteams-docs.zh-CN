@@ -5,12 +5,12 @@ description: 规划应用时需要考虑的问题、了解用户及其需求、�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: b0d9450f3d729131b28dbf744843eeeda1b91c22
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104306"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756749"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams 应用规划清单
 

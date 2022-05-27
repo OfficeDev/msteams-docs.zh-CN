@@ -3,22 +3,22 @@ title: 使用机器人进行频道和群组对话
 author: surbhigupta
 description: 如何在频道或群组聊天中发送、接收和处理机器人的消息。 了解设计准则, 创建对话线程, 使用 @提及, 使用代码示例
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 2262e52e15bbd5598a0e0dad89bb38a6f0078eac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111554"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757176"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-若要在团队或群组聊天中安装 Microsoft Teams 机器人，请为机器人添加 `teams` 或 `groupchat` 范围。 此操作允许对话的所有成员与你的机器人互动。 安装机器人后，它有权访问有关对话的元数据，例如对话成员列表。 此外，在团队中安装它时，机器人有权访问有关该团队的详细信息和频道的完整列表。
+若要在团队或群组聊天中安装 Microsoft Teams 机器人，请为机器人添加 `teams` 或 `groupchat` 范围。 此操作允许对话的所有成员与你的机器人互动。 安装机器人后，它有权访问有关对话的元数据，例如对话成员列表。 此外，在团队中安装时，机器人有权访问有关该团队的详细信息和频道的完整列表。
 
-群组或频道中的机器人仅在提及 @botname 时才会收到消息。 它们不会收到发送到对话的任何其他消息。 必须直接 @mentioned 机器人。 当提及团队或频道时，或者当有人回复来自你的机器人的消息而没有 @提及它时，机器人不会收到消息。
+组或频道中的机器人仅在@botname被提及时才会收到消息。 他们不会收到发送到对话的任何其他消息。 必须直接 @mentioned 机器人。 当提到团队或频道时，或者当有人回复来自机器人的消息而没有@mentioning消息时，机器人不会收到消息。
 
 > [!NOTE]
 > 此功能目前仅适用于[公共开发人员预览版](../../../resources/dev-preview/developer-preview-intro.md)。
@@ -35,7 +35,7 @@ ms.locfileid: "65111554"
 
 ## <a name="create-new-conversation-threads"></a>创建新的对话线程
 
-在团队中安装机器人时，必须创建新的对话线程，而不是回复现有对话线程。 有时，很难区分两个对话。 如果对话是线程式的，则更容易组织和管理频道中的不同对话。 这是[主动消息传送](~/bots/how-to/conversations/send-proactive-messages.md)的一种形式。
+在团队中安装机器人时，必须创建新的对话线程，而不是回复现有对话线程。 有时很难区分两个对话。 如果对话是线程式的，则更容易组织和管理频道中的不同对话。 这是[主动消息传送](~/bots/how-to/conversations/send-proactive-messages.md)的一种形式。
 
 接下来，可以使用 `entities` 对象检索提及，并使用 `Mention` 对象向消息添加提及。
 
@@ -47,7 +47,7 @@ ms.locfileid: "65111554"
 
 ### <a name="retrieve-mentions"></a>检索提及
 
-提及在有效负载的 `entities` 对象中返回，并包含用户的唯一 ID 和提及的用户名。 消息文本还将包括如 `<at>@John Smith<at>` 的提及。 但是，不要依赖消息中的文本来检索有关用户的任何信息。 发送消息的人员可能会对其进行更改。 因此，请使用 `entities` 对象。
+提及在有效负载的 `entities` 对象中返回，并包含用户的唯一 ID 和提及的用户名。 消息文本还将包括如 `<at>@John Smith<at>` 的提及。 但是，不要依赖消息中的文本来检索有关用户的任何信息。 发送消息的人员可以对其进行更改。 因此，请使用 `entities` 对象。
 
 可以通过调用 Bot Builder SDK 中的 `GetMentions` 函数来检索消息中的所有提及，该函数将返回一组 `Mention` 对象。
 
@@ -196,7 +196,7 @@ this.onMessage(async (turnContext, next) => {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-`entities` 数组对象中的 `text` 字段必须与消息 `text` 字段的一部分匹配。 如果不匹配，则会忽略提及。
+`entities` 数组对象中的 `text` 字段必须与消息 `text` 字段的一部分匹配。 如果没有，则忽略提及。
 
 ```json
 {

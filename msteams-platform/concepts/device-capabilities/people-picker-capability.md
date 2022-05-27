@@ -5,12 +5,12 @@ keywords: 人员选取器控件
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: cd7039693b146abb53e938ba020077a48c343bda
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: a2e2a21f0485e0df87f8963defbe54ed540e455a
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571453"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755893"
 ---
 # <a name="integrate-people-picker"></a>集成人员选取器
 
@@ -72,7 +72,7 @@ Web 或桌面上的“人员选取器”控件在 Web 应用顶部的模式窗�
 以下代码片段显示列表中 `selectPeople` API 人员的使用:
 
 ```javascript
- microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
+microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
  {
     if (error) 
     {
@@ -89,7 +89,7 @@ Web 或桌面上的“人员选取器”控件在 Web 应用顶部的模式窗�
      {
             output(" People length: " + people.length + " " + JSON.stringify(people));
       }
-  });
+  },{ setSelected: ["aad id"], openOrgWideSearchInChatOrChannel: true, singleSelect: false});
 ```
 
 ## <a name="error-handling"></a>错误处理

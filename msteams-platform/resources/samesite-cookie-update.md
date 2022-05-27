@@ -4,14 +4,14 @@ author: laujan
 description: 了解 Cookie 类型(包括 SameSite Cookie)、它们的属性、它们在 Teams 选项卡、任务模块和消息扩展中的含义，以及它们在 Teams 中的身份验证
 keywords: cookie 属性 samesite
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 7bf6d5a986a2111ba624534aa13b0aaa2866120c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f93ee29198400a0cabd4512d9abb4de80cebb9da
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110335"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756987"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite cookie 属性
 
@@ -23,9 +23,9 @@ Cookie 类型及其相应的范围如下所示:
 
 |Cookie|范围|
 | ------ | ------ |
-|第一方 Cookie|第一方 Cookie 由用户访问的网站创建。 它用于保存购物车物品，登录凭据等数据。 例如，身份验证 Cookie 和其他分析。|
+|第一方 Cookie|第一方 Cookie 由用户访问的网站创建。 它用于保存数据，如购物车物品，登录凭据。 例如，身份验证 Cookie 和其他分析。|
 |第二方 Cookie|第二方 Cookie 在技术上与第一方 Cookie 相同。 不同的是，通过数据合作关系协议与第二方共享数据。 例如，[Microsoft Teams 分析与报告](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)。 |
-|第三方 Cookie|第三方 Cookie 由用户显式访问的域以外的域安装，主要用于跟踪。 例如，**赞** 按钮、广告服务和实时聊天。|
+|第三方 Cookie|第三方 Cookie 由用户显式访问的域以外的域安装，用于跟踪。 例如，**赞** 按钮、广告服务和实时聊天。|
 
 ## <a name="cookies-and-http-requests"></a>Cookie 和 HTTP 请求
 
@@ -47,7 +47,7 @@ SameSite Cookie 属性如下所示:
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie 仅在 **第一方** 上下文中随 HTTP GET 请求自动发送。 跨站点子请求(例如调用加载图像或 iframe)上会保留 SameSite Cookie。 当用户从外部站点导航到 URL (例如，通过跟随链接)时，会发送这些 Cookie。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **严格** |浏览器仅发送第一方上下文请求的 Cookie。 这些请求源自设置 Cookie 的站点。 如果请求源自当前位置的 URL 之外的 URL，则不会发送标记为 `Strict` 属性的 Cookie。| 可选 |`Set-Cookie: key=value; SameSite=Strict`|
-| **无** | Cookie 在第一方上下文和跨源请求中发送；但是，值必须显式设置为 **`None`** 且所有浏览器请求 **必须遵循 HTTPS 协议** 并包含需要加密连接的 **`Secure`** 属性。 不符合该要求的 Cookie 会 **被拒绝**。 <br/>**需同时具有这两个属性**。 如果在无 **`Secure`** 的情况下指定 **`None`**，或未使用 HTTPS 协议，则会拒绝第三方 Cookie。| 可选，但如果设置，则需要 HTTPS 协议。 |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **无** | Cookie 在第一方上下文和跨源请求中发送;但是，必须显式设置 **`None`** 该值，并且所有浏览器请求 **都必须遵循 HTTPS 协议** 并包含 **`Secure`** 需要加密连接的属性。 不符合该要求的 Cookie 将被 **拒绝**。 <br/>**需同时具有这两个属性**。 如果  **`None`** 未指定 **`Secure`**  或未使用 HTTPS 协议，则拒绝第三方 Cookie。| 可选，但如果设置，则需要 HTTPS 协议。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teams 含义与调整
 
@@ -74,11 +74,11 @@ SameSite Cookie 属性如下所示:
 * 配置页面、任务模块和消息扩展。
 * 具有任务模块的对话机器人。
 
-根据更新的 SameSite 限制，如果链接派生自外部站点，则浏览器不会向已经过身份验证的网站添加 Cookie。 必须确保身份验证 Cookie 标记为跨站点使用 `SameSite=None; Secure` 或确保有回退。
+根据更新后的 SameSite 限制，如果链接派生自外部网站，浏览器不会将 Cookie 添加到已经过身份验证的网站。 必须确保身份验证 Cookie 标记为跨站点使用 `SameSite=None; Secure` 或确保有回退。
 
 ## <a name="android-system-webview"></a>Android System WebView
 
-Android WebView 为 Chrome 系统组件，允许 Android 应用显示 Web 内容。 虽然新限制为默认设置，但从 Chrome 80 开始，不会立即在 WebView 上强制执行。 将在未来应用新限制。 为了做好准备，Android 允许本机应用直接通过 [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager) 设置 Cookie。
+Android WebView 为 Chrome 系统组件，允许 Android 应用显示 Web 内容。 虽然新限制是默认的，但从 Chrome 80 开始，不会立即在 WebView 上强制实施这些限制。 将来将应用它们。 为了做好准备，Android 允许本机应用直接通过 [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager) 设置 Cookie。
 
 > [!NOTE]
 >

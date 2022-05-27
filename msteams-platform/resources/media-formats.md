@@ -1,19 +1,19 @@
 ---
 title: 支持用于机器人的媒体格式
-description: Microsoft Teams 上的机器人仅支持以下媒体格式的音频和视频内容。
+description: Microsoft Teams上的机器人仅支持以下音频和视频内容的媒体格式。
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams 机器人媒体格式
-ms.openlocfilehash: a6de2ab9ef6c27716276ab530516599d6df05331
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cf8939b6fd8e2a3d759488b45c4171dbc27f36bf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111925"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757337"
 ---
 # <a name="supported-media-formats-for-bots"></a>支持用于机器人的媒体格式
 
-Microsoft Teams 上的机器人仅支持以下媒体格式的音频和视频内容:
+Microsoft Teams上的机器人仅支持以下音频和视频内容的媒体格式：
 
 | 格式 | 更多信息 |
 | --- | --- |

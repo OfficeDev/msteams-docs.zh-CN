@@ -3,21 +3,21 @@ author: heath-hamilton
 description: 将现有 Web 应用与 Microsoft Teams 集成的最佳做法或注意事项
 ms.author: surbhigupta
 ms.date: 08/26/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Teams 集成注意事项
-ms.openlocfilehash: 2e1d749a34d0dec2a38e84e57aa6147c791264c1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111659"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757638"
 ---
 # <a name="considerations-for-teams-integration"></a>Teams 集成注意事项
 
 通过将 Web 应用与 Teams 正确集成，可以使 Web 应用适合 Teams 的社交和协作功能。
   
-可以与 Teams 集成的不同应用类型如下所示：
+可与Teams集成的不同类型的应用如下所示：
 
 * **独立应用**：独立应用是单页应用或复杂的大型应用。 用户可以在 Teams 中使用它的某些方面。
 * **协作应用**：为 Teams 固有的社交和协作功能构建的现成应用。
@@ -30,7 +30,7 @@ ms.locfileid: "65111659"
 
 ***集成方案**：独立应用、协作应用、SharePoint*
 
-Teams 应用必须包含必需和预期的协作功能。 若要处理应用集成，请务必熟悉 Teams 开发术语。
+Teams 应用必须包含必需和预期的协作功能。 若要处理应用集成，请务必熟悉Teams开发术语。
 
 |常见应用功能   |Teams 平台功能   |
 |----------|-----------|
@@ -90,7 +90,7 @@ Teams 具有面向第三方应用的 Azure AD 单一登录 (SSO) 机制。 它�
 > [!IMPORTANT]
 > 目前，第三方应用在政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD)。 GCC 默认关闭第三方应用。 若要为 GCC 启用第三方应用，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)和[管理应用](/microsoftteams/manage-apps)。
 
-对于 SharePoint 页面，如果希望 SSO 适用于其他应用，则只能使用 SSO，并且无法添加其他 Azure AD ID，因为 ID 是 SharePoint 应用。
+对于SharePoint页，如果希望 SSO 适用于另一个应用，则只能使用 SSO，并且无法添加其他 Azure AD ID，因为 ID 是SharePoint应用。
 
 详细了解 [Teams 中的身份验证](../concepts/authentication/authentication.md)。
 
@@ -98,7 +98,7 @@ Teams 具有面向第三方应用的 Azure AD 单一登录 (SSO) 机制。 它�
 
 ***集成方案**：独立应用、协作应用*
 
-请确保遵循 [Teams 设计准则](../concepts/design/understand-use-cases.md)，以便应用原生支持 Teams。 无法将现有应用内容迁移到 Teams 选项卡。有关应用设计的详细信息，请参阅[ Fluent Design System](https://fluentsite.z22.web.core.windows.net/)。
+请确保遵循 [Teams 设计准则](../concepts/design/understand-use-cases.md)，以便应用原生支持 Teams。 无法将现有应用内容迁移到Teams选项卡。有关应用设计的详细信息，请[参阅Fluent Design System](https://fluentsite.z22.web.core.windows.net/)。
 
 ## <a name="maximize-deep-linking"></a>最大程度地运用深层链接
 
@@ -112,11 +112,11 @@ Teams 具有面向第三方应用的 Azure AD 单一登录 (SSO) 机制。 它�
 
 在 Teams 应用中使用[机器人](../bots/what-are-bots.md)进行多线程会话，因为这比 [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) 更具灵活性。
 
-机器人还允许向单个用户或频道发送 **主动消息**。 主动消息是由外部事件（而非发送给机器人的消息）触发的无提示消息。 例如，机器人在安装后或新用户加入频道时发送欢迎消息。
+机器人还允许向单个用户或频道发送 **主动消息**。 主动消息是由外部事件（而非发送给机器人的消息）触发的无提示消息。 例如，机器人在安装或新用户加入通道时发送欢迎消息。
 
 发送主动消息需要特定于 Teams 的标识符。 可以通过[提取名单或用户配置数据](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)、[订阅聊天事件](../bots/how-to/conversations/subscribe-to-conversation-events.md)或使用 [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams) 来获取该信息。
 
-不要向用户发送过多消息。 如果 Teams 功能支持，用户可以为应用配置通知设置。
+不要向消息过多的用户发送垃圾邮件。 如果 Teams 功能支持，用户可以为应用配置通知设置。
 通知消息示例如下：**请勿向我发送无提示消息**。
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>使用 SharePoint 进行文件和数据存储

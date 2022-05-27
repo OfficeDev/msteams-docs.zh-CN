@@ -1,15 +1,14 @@
 ---
 title: 为 Microsoft Teams 应用请求设备权限
-keywords: teams 应用功能权限设备本机扫描 qr 条形码图像音频视频
-description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能，例如扫描 qr、条形码、图像、音频和视频功能
-ms.localizationpriority: high
+description: 了解如何更新应用清单并请求访问涉及用户同意、位置、QR 代码和条形码、图像、音频和视频功能的本机功能
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: cccf527c3abf3a1674b2d1350dd15633ba35c7a8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 624a079d7c72f77fac4109d11cde13974359884f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111960"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757603"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用请求设备权限
 
@@ -126,13 +125,13 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 例如：
 
-* 要提示用户访问其位置，必须调用 `getCurrentPosition()`：
+* 若要提示用户访问其位置，必须调用 `getCurrentPosition()`：
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* 要提示用户访问桌面或网络上的摄像头，必须调用 `getUserMedia()`：
+* 若要提示用户在桌面或 Web 上访问其相机，必须调用 `getUserMedia()`：
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
@@ -234,7 +233,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="permission-behavior-across-login-sessions"></a>跨登录会话的权限行为
 
-为每个登录会话存储设备权限。 这表示如果登录到 Teams 的另一个实例 (例如，在另一台计算机上)，先前会话中的设备权限将不可用。 因此，必须重新同意新会话的设备权限。 这也表示如果退出登录 Teams 或在 Teams 中切换租户，设备权限将从先前登录会话中删除。  
+为每个登录会话存储设备权限。 这意味着，如果登录到另一Teams实例，例如在另一台计算机上，则以前的会话中的设备权限不可用。 因此，必须重新同意新会话的设备权限。 这也表示如果退出登录 Teams 或在 Teams 中切换租户，设备权限将从先前登录会话中删除。  
 
 > [!NOTE]
 > 同意本机设备权限时，它仅对 _当前_ 登录会话有效。

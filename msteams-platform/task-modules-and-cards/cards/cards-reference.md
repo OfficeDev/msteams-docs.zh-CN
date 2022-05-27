@@ -4,12 +4,12 @@ description: 介绍 Teams 中机器人可用的所有卡片和卡片操作
 ms.localizationpriority: high
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104138"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757197"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -85,7 +85,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 图像的大小会增加或减小，以保持覆盖图像区域的纵横比。 然后从中心裁剪图像，以实现卡的适当纵横比。
 
-图像必须最多为 1024x1024，并采用 PNG、JPEG 或 GIF 格式。不支持动态 GIF。
+图像必须最多为 1024x1024，并且采用 PNG、JPEG 或 GIF 格式。 不支持动态 GIF。
 
 下表提供内联卡图像的属性:
 
@@ -486,7 +486,7 @@ Office 365 连接器卡在 Microsoft Teams 中正常工作，包括[`ActionCard`
 | `avatar` | 默认情况下， 将将 `activityImage`裁剪为圆圈。 |
 | `article` | `activityImage` 显示为矩形并保留其纵横比。 |
 
-有关连接器卡属性的所有其他详细信息，请参阅 [可操作信息卡参考](/outlook/actionable-messages/card-reference)。 Teams 当前不支持的唯一连接器卡属性如下所示:
+有关连接器卡属性的所有其他详细信息，请参阅 [可操作信息卡参考](/outlook/actionable-messages/card-reference)。 Teams 当前不支持的唯一连接器卡属性如下所示：
 
 * `heroImage`
 * `hideOriginalBody`
@@ -561,7 +561,7 @@ Office 365 连接器卡在 Microsoft Teams 中正常工作，包括[`ActionCard`
 
 ## <a name="receipt-card"></a>收据卡
 
-Teams 支持收据卡。 它是使机器人能够向用户提供收据的卡片。 它通常包含收据上要包含的项目列表，例如税务和总信息。
+Teams 支持收据卡，它使机器人能够向用户提供收据。 它通常包含收据上要包含的项目列表，例如税务和总信息。
 
 ### <a name="support-for-receipt-cards"></a>支持收据卡
 

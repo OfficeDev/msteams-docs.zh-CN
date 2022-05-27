@@ -6,30 +6,30 @@ keywords: Teams, 选项卡, 群组, 频道, 可配置, 静态
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 8de792faafeaa526a1abffe042394daeeb60cb3d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673025"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757470"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>为选项卡创建内容页
 
-内容页是在 Teams 客户端中呈现的网页。 这些是以下内容的一部分：
+内容页是在Teams客户端中呈现的网页，这是以下内容的一部分：
 
 * 个人范围的自定义选项卡：在这种情况下，内容页是用户遇到的第一页。
 * 频道或群组自定义选项卡：在用户固定并在适当的上下文中配置选项卡后，显示内容页。
 * [任务模块](~/task-modules-and-cards/what-are-task-modules.md)：可以创建内容页并将其作为 Web 视图嵌入到任务模块中。 页面呈现在模式弹出窗口内。
 
-本文专门介绍如何将内容页用作选项卡；但是，无论内容页如何呈现给用户，此处的大部分指南都适用。
+本文特定于使用内容页作为选项卡;但是，无论内容页面如何呈现给用户，此处的大部分指南都适用。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tab-content-and-design-guidelines"></a>选项卡内容和设计指南
 
-选项卡的总体目标是提供对具有实际价值和明显用途的有意义且具有吸引力的内容的访问。 必须专注于使选项卡设计简洁、导航直观且内容身临其境。
+选项卡的总体目标是提供对具有实际价值和明显用途的有意义且引人入胜的内容的访问权限。 
 
-有关详细信息，请参阅[选项卡设计指南](~/tabs/design/tabs.md)和 [Microsoft Teams 存储验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
+你需要专注于使选项卡设计干净、导航直观且内容沉浸式。有关详细信息，请参阅[选项卡设计指南](~/tabs/design/tabs.md)和[Microsoft Teams存储验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 
 ## <a name="integrate-your-code-with-teams"></a>将代码与 Teams 集成
 
@@ -89,11 +89,11 @@ ms.locfileid: "65673025"
 
 ### <a name="deep-links"></a>深度链接
 
-可以在 Teams 中创建实体的深层链接。 这些用于创建导航到选项卡中的内容和信息的链接。有关详细信息，请参阅[创建指向 Teams 中的内容和功能的深层链接](~/concepts/build-and-test/deep-links.md)。
+可以在 Teams 中创建实体的深层链接。 它们用于创建导航到选项卡中的内容和信息的链接。有关详细信息，请参阅[在Teams中创建指向内容和功能的深层链接](~/concepts/build-and-test/deep-links.md)。
 
 ### <a name="task-modules"></a>任务模块
 
-任务模块是一种模式弹出体验，可从选项卡触发。在内容页中，可以使用任务模块显示表单，以便收集其他信息、在列表中显示项目的详细信息，或向用户显示其他信息。 任务模块本身可以是附加内容页，也可以完全使用自适应卡片创建。 有关详细信息，请参阅[在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
+任务模块是一种模式弹出体验，你可以从选项卡触发。在内容页中，使用任务模块显示窗体以收集其他信息、在列表中显示项的详细信息，或向用户提供其他信息。 任务模块本身可以是附加内容页，也可以完全使用自适应卡片创建。 有关详细信息，请参阅[在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
 
 ### <a name="valid-domains"></a>有效域
 

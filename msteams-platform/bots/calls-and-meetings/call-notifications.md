@@ -2,15 +2,15 @@
 title: 来电通知
 description: 了解有关使用代码示例处理来电通知、重定向和验证呼叫的详细技术信息
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: 呼叫, 呼叫通知, 回拨, 区域相关性
 ms.date: 04/02/2019
-ms.openlocfilehash: a3d8a861d28813782b6b0dfd24807ed106780c85
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e2844649764284f74e242967106adbfdc8edf8cf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111547"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757141"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 
@@ -18,7 +18,7 @@ ms.locfileid: "65111547"
 
 ## <a name="protocol-determination"></a>协议确定
 
-传入通知以旧格式提供，以便与以前的 [Skype 协议](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)兼容。 为了将呼叫转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式，并提供以下响应：
+传入通知以旧格式提供，以便与以前的 [Skype 协议](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)兼容。 为了将调用转换为 Microsoft Graph 协议，机器人必须确定通知是否采用旧格式，并提供以下响应：
 
 ```http
 HTTP/1.1 204 No Content
@@ -32,7 +32,7 @@ HTTP/1.1 204 No Content
 
 ## <a name="redirects-for-region-affinity"></a>针对区域相关性的重定向
 
-可从托管呼叫的数据中心调用 Webhook。 调用将从任何数据中心开始，而不考虑区域相关性。 通知将发送到部署，具体取决于 GeoDNS 解析。 如果应用程序通过检查初始通知负载或其他方式确定它需要在其他部署中运行，则该应用程序会提供以下响应：
+可从托管呼叫的数据中心调用 Webhook。 调用从任何数据中心开始，不考虑区域相关性。 通知将发送到部署，具体取决于 GeoDNS 解析。 如果应用程序通过检查初始通知负载或其他方式确定它需要在其他部署中运行，则该应用程序会提供以下响应：
 
 ```http
 HTTP/1.1 302 Found
@@ -87,7 +87,7 @@ OAuth 令牌具有以下值，并由 Skype 签名：
 * `tid` 是 Contoso.com 的租户 ID。
 * `iss` 是令牌颁发者，即 `https://api.botframework.com`
 
-对于代码处理，Webhook 必须验证令牌，确保它尚未过期，并检查它是否已由发布的 OpenID 配置进行签名。 在接受回拨请求之前，你还必须检查 aud 是否与应用 ID 匹配。
+对于代码处理，Webhook 必须验证令牌，确保令牌尚未过期，并检查它是否已由已发布的 OpenID 配置进行签名。 在接受回拨请求之前，你还必须检查 aud 是否与应用 ID 匹配。
 
 有关详细信息，请参阅[验证入站请求](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
 

@@ -4,12 +4,12 @@ description: 合作伙伴应用简介
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 7ff5d15b0fcc3ef10b89470e98e3fd1d15af03d9
-ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
+ms.openlocfilehash: ecb3d7a8a36a67a6d18315d5af3180a65f1602f3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64910527"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757001"
 ---
 # <a name="partner-apps-for-moodle"></a>Moodle 合作伙伴应用
 
@@ -26,7 +26,11 @@ Microsoft Store 为 Moodle 提供所有经过认证的合作伙伴应用，这�
 
 ## <a name="mconnect"></a>mConnect
 
-mConnect 应用将 Moodle 课程和活动集成到 Teams 中，增强用户学习体验。 Skooler 是受信任的 Microsoft Gold 教育合作伙伴，他开发了 mConnect 应用并提供必要的支持。 mConnect 允许 Moodle 管理员自动设置 Teams for Moodle 课程，并为 Moodle 中的每门课程提供所有功能。
+mConnect 应用将 Moodle 课程和活动集成到 Teams 中，增强用户学习体验。 
+
+Skooler 是受信任的 Microsoft Gold 教育合作伙伴，他开发了 mConnect 应用并提供必要的支持。 
+
+mConnect 允许 Moodle 管理员自动设置 Teams for Moodle 课程，并为 Moodle 中的每门课程提供所有功能。
 
 >[!NOTE]
 >此应用在 Microsoft Store 中适用于具有 Skooler 的预先存在的帐户的用户，并且需要管理员访问权限才能直接从 Moodle 站点进行配置。

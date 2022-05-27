@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: ebb6f7e66f09c3ebbc3834577f924f5a34bb8583
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 94f02ce31a9af3acb78fc6fef6f071df02bfd565
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653855"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755858"
 ---
 # <a name="edit-teams-app-manifest"></a>编辑Teams应用清单
 
@@ -51,7 +51,7 @@ ms.locfileid: "65653855"
 
 **在远程环境中预览清单文件**
 
-* 在开发 **Teams Toolkit扩展** 中选择 **云中的“预配**”或 
+* 在开发 **Teams Toolkit扩展** 中选择 **云中的“预配**”或
 * 触发Teams：从命令面板 **在云中预配**。
  
 它生成远程Teams应用的配置，并在文件夹下`build/appPackage`生成包和预览清单。
@@ -72,25 +72,25 @@ ms.locfileid: "65653855"
 
 预览清单文件后，可以通过以下方式将本地更改同步到开发人员门户：
 
-1. 部署Teams应用清单
+1. 部署Teams应用清单。
 
    可以通过以下任一方式部署Teams应用清单：
 
-   * 转到`manifest.template.json`文件，右键单击以从上下文菜单中进行选择`Deploy Teams app manifest`
+   * 转到 `manifest.template.json` 文件，然后右键单击以从上下文菜单中进行选择 `Deploy Teams app manifest` 。
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="部署清单":::
 
-   * 来自命令面板的触发器`Teams: Deploy Teams app manifest`
+   * 来自命令面板的触发器 `Teams: Deploy Teams app manifest` 。
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="从命令面板部署":::
 
-2. 更新到Teams平台
+2. 更新到Teams平台。
 
    可以通过以下任一方式更新到Teams平台：
 
-   * 在左上角选择 **“更新到Teams平台**”`manifest.{env}.json`
+   * 在左上角`manifest.{env}.json`选择 **“更新到Teams平台**”。
 
-   * 触发 **器Teams：将清单更新到** 菜单栏上的Teams平台`manifest.{env}.json`
+   * 触发 **Teams：将清单更新到** 菜单栏`manifest.{env}.json`上的Teams平台。
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="更新到团队":::
 
@@ -114,12 +114,11 @@ ms.locfileid: "65653855"
 
 如果清单文件由于配置文件更改或模板更改而过时，请选择以下任一操作：
 
-* **仅预览**：根据当前配置覆盖本地清单文件
-* **预览和更新**：根据当前配置覆盖本地清单文件，并更新到 Teams 平台
-* **取消**：不执行任何操作
+* **仅预览**：根据当前配置覆盖本地清单文件。
+* **预览和更新**：本地清单文件根据当前配置覆盖，并已更新到Teams平台。
+* **取消**：不执行任何操作。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
-
 
 ## <a name="customize-teams-app-manifest"></a>自定义 Teams 应用部件清单
 
@@ -177,8 +176,8 @@ In `manifest.template.json`, you can navigate to codelens to preview the values 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
 
-> [!NOTE] 
-> Provision the environment or execute local debug to generate values for placeholders. 
+> [!NOTE]
+> Provision the environment or execute local debug to generate values for placeholders.
 
 You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
@@ -187,7 +186,6 @@ You can navigate to state file or configuration file by selecting the codelens, 
 To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you haven't provisioned the environment or executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
-
 
 ## See also
 

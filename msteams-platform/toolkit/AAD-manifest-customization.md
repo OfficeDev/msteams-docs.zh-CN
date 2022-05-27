@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656773"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755935"
 ---
 # <a name="azure-ad-manifest"></a>Azure AD 清单
 
@@ -260,31 +260,31 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
     Teams Toolkit在本地开发 (（称为 F5) ）期间执行以下功能：
 
-    * 读取文件 `state.local.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams Toolkit重新使用现有的 Azure AD 应用程序，否则需要使用`aad.template.json`该文件创建新应用程序
+    * 读取文件 `state.local.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams Toolkit重新使用现有的 Azure AD 应用程序，否则需要使用该`aad.template.json`文件创建新应用程序。
 
     * 最初忽略清单文件中需要其他上下文 (的某些属性，例如，在创建包含清单文件的新 Azure AD 应用程序期间需要本地调试终结点) 的 replyUrls 属性。
 
-    * 本地开发环境成功启动后，Azure AD 应用程序的标识符Uris、replyUrls 和其他在创建阶段不可用的属性会相应地更新
+    * 本地开发环境成功启动后，Azure AD 应用程序的标识符Uris、replyUrls 和其他在创建阶段不可用的属性会相应地更新。
 
-    * 在下一次本地调试会话期间，将加载对 Azure AD 应用程序所做的更改。 可以看到 [Azure AD 应用程序更改](https://github.com/OfficeDev/TeamsFx/wiki/) 以手动应用更改 Azure AD 应用程序更改
+    * 在下一次本地调试会话期间，将加载对 Azure AD 应用程序所做的更改。 可以看到 [Azure AD 应用程序更改](https://github.com/OfficeDev/TeamsFx/wiki/) 以手动应用更改 Azure AD 应用程序更改。
 
 4. **预配云资源**
 
       将应用程序移到云时，需要预配云资源并部署应用程序。 在本地开发等阶段，Teams Toolkit将：
 
-      * 读取文件 `state.{env}.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams Toolkit重新使用现有的 Azure AD 应用程序，否则需要使用`aad.template.json`该文件创建新应用程序
+      * 读取文件 `state.{env}.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams Toolkit重新使用现有的 Azure AD 应用程序，否则需要使用该`aad.template.json`文件创建新应用程序。
 
-      * 最初忽略清单文件中需要其他上下文 (的某些属性，例如，在创建包含清单文件的新 Azure AD 应用程序期间，replyUrls 属性需要前端或机器人终结点) 
+      * 最初忽略清单文件中需要其他上下文 (的某些属性，例如 replyUrls 属性需要在创建包含清单文件的新 Azure AD 应用程序期间) 前端或机器人终结点。
 
-      * 其他资源预配完成后，Azure AD 应用程序的 identifierUris 和 replyUrls 会相应地更新到正确的终结点
+      * 其他资源预配完成后，Azure AD 应用程序的标识符Uris 和 replyUrls 会相应地更新到正确的终结点。
 
 5. **生成应用程序**
 
-    * 部署到云命令会将应用程序部署到预配的资源。 它不包括部署你所做的 Azure AD 应用程序更改
+    * 部署到云命令会将应用程序部署到预配的资源。 它不包括部署你所做的 Azure AD 应用程序更改。
 
-    * 可以看到， [为远程环境部署 Azure AD 应用程序更改](#deploy-azure-ad-application-changes-for-remote-environment) ，以便为远程环境部署 Azure AD 应用程序更改
+    * 可以看到， [为远程环境部署 Azure AD 应用程序更改](#deploy-azure-ad-application-changes-for-remote-environment) ，以便为远程环境部署 Azure AD 应用程序更改。
 
-    * Teams Toolkit根据 Azure AD 清单模板文件更新 Azure AD 应用程序
+    * Teams Toolkit根据 Azure AD 清单模板文件更新 Azure AD 应用程序。
 
 ## <a name="limitations"></a>限制
 
@@ -306,10 +306,10 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 2. 目前 `requiredResourceAccess` ，属性只能对 `Microsoft Graph` 和 `Office 365 SharePoint Online` API 使用用户可读资源应用程序名称或权限名称字符串。 对于其他 API，需要改用 UUID。 可以按照以下步骤从Azure 门户检索 ID：
 
-    * 在 Azure 门户 上注册新的 Azure AD [应用程序](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
-    * 从 Azure AD 应用程序页中选择`API permissions`
-    * 选择 `add a permission` 以添加所需的权限
-    * 从属性中`requiredResourceAccess`选择`Manifest`可以找到 API 的 ID 和权限
+    * 在[Azure 门户](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)上注册新的 Azure AD 应用程序。
+    * 从 Azure AD 应用程序页中选择 `API permissions` 。
+    * 选择此选项 `add a permission` 可添加所需的权限。
+    * 从属性中`requiredResourceAccess`选择`Manifest`可以找到 API 和权限的 ID。
 
 ## <a name="see-also"></a>另请参阅
 

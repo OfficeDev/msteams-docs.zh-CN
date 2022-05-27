@@ -2,14 +2,14 @@
 title: 对应用用户进行身份验证
 description: 介绍 Teams 中的身份验证以及如何在应用中使用它
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams 身份验证 OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: f5aecf2791d03795229d3b37c5fc8784de992326
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 53f258769140a2b40bb59a1232250f74ec693bee
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111400"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757155"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>在 Microsoft Teams 中对用户进行身份验证
 
@@ -25,7 +25,7 @@ Teams 中包含两种两种不同的应用身份验证流程。 在嵌入在选�
 对[选项卡](~/tabs/what-are-tabs.md)使用基于 Web 的身份验证流程，并选择将其与[对话机器人](~/bots/what-are-bots.md)或[消息传递扩展](~/messaging-extensions/what-are-messaging-extensions.md)一起使用。 在 Web 内容页面中使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 来启用身份验证。 启用身份验证后，将内容页面嵌入到选项卡、配置页面或任务模块中。 有关基于 Web 的身份验证流程的详细信息，请参阅：
 
 * [向 Teams 机器人添加身份验证](~/bots/how-to/authentication/add-authentication.md)介绍如何将基于 Web 的身份验证流程与聊天机器人配合使用。
-* [选项卡中的身份验证流程](~/tabs/how-to/authentication/auth-flow-tab.md)介绍选项卡身份验证如何 Teams 中工作。 它介绍了选项卡中使用的典型基于 Web 的身份验证流程。
+* [选项卡中的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)描述选项卡身份验证在Teams中的工作原理，其中显示了用于选项卡的典型基于 Web 的身份验证流。
 * [选项卡中的 Azure AD 身份验证](~/tabs/how-to/authentication/auth-tab-AAD.md)介绍如何从Teams 应用的选项卡内连接到 Azure AD。
 * [无提示身份验证 Azure AD](~/tabs/how-to/authentication/auth-silent-AAD.md)介绍如何使用Azure AD 减少应用中的登录或同意提示。
 * [.Net 或 C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) 或者 [JavaScript 或 Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) 提供了基于 Web 的身份验证示例。
@@ -36,7 +36,7 @@ Azure Bot Framework OAuth Prompt 使你可以更轻松地对使用对话机器�
 
 有关使用 OAuthPrompt 的详细信息，请参阅：
 
-* [机器人身份验证流程概述](~/bots/how-to/authentication/auth-flow-bot.md)介绍身份验证在 Teams 应用中的机器人内的工作原理。 它介绍了用于 Teams Web、桌面应用和移动应用上的机器人的非基于 Web 的身份验证。
+* [机器人身份验证流概述](~/bots/how-to/authentication/auth-flow-bot.md)介绍了身份验证在Teams应用中的机器人中的工作原理，其中显示了用于Teams Web、桌面应用和移动应用上的机器人的基于 Web 的身份验证流。
 * [机器人身份验证](~/bots/how-to/authentication/add-authentication.md)介绍如何将 OAuth 身份验证添加到 Teams 机器人。
 
 ## <a name="code-sample"></a>代码示例
@@ -46,7 +46,7 @@ Azure Bot Framework OAuth Prompt 使你可以更轻松地对使用对话机器�
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | 机器人身份验证 | 此示例演示如何开始在 Microsoft Teams 机器人中进行身份验证。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| 选项卡、机器人和消息扩展 (ME) SSO | 此示例演示用于选项卡、机器人和 ME 的 SSO - 搜索、操作、linkunfurl。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
+| 选项卡、机器人和消息扩展 (ME) SSO | 此示例显示用于 Tab、Bot 和 ME 的 SSO - 搜索、操作、链接展开。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
 
 ## <a name="configure-the-identity-provider"></a>配置标识提供程序
 
@@ -56,7 +56,7 @@ Azure Bot Framework OAuth Prompt 使你可以更轻松地对使用对话机器�
 
 ## <a name="third-party-cookies-on-ios"></a>iOS 上的第三方 Cookie
 
-iOS 14 更新后，Apple 默认阻止所有应用的[第三方 Cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) 访问。 因此，利用第三方 Cookie 在其频道或聊天选项卡和人脉应用中进行身份验证的应用将无法在 Teams iOS 客户端上完成其身份验证工作流程。 若要符合隐私和安全要求，必须转为使用基于令牌的系统，或在用户身份验证工作流程中使用第一方 Cookie。
+iOS 14 更新后，Apple 默认阻止所有应用的[第三方 Cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) 访问。 因此，利用第三方 Cookie 在其频道或聊天选项卡和个人应用中进行身份验证的应用将无法在Teams iOS客户端上完成其身份验证工作流。 若要符合隐私和安全要求，必须转为使用基于令牌的系统，或在用户身份验证工作流程中使用第一方 Cookie。
 
 ## <a name="see-also"></a>另请参阅
 

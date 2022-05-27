@@ -1,17 +1,17 @@
 ---
 title: 使用 Microsoft Graph 在 Teams 中授权主动机器人安装和消息传递
 description: 介绍 Teams 中的主动消息传递及其实现方式。 了解如何使用代码示例启用主动应用安装和消息传递。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams 主动消息聊天安装 Graph
-ms.openlocfilehash: 7915d958cf73b916921a6346b4eca1f8ce0280e7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 7a133b91aabe920b109b644331bc6526cd950858
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111512"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757701"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
 
@@ -26,7 +26,7 @@ ms.locfileid: "65111512"
 
 ## <a name="proactive-app-installation-in-teams"></a>Teams 中的主动应用安装
 
-在机器人可以主动向用户发送消息之前，必须将其安装为个人应用，或安装在用户所属的团队中。 有时，需要主动向尚未安装或之前与应用交互的用户发送消息。 例如，需要向组织中的每个人发送重要信息。 对于此类情况，可以使用 Microsoft Graph API 主动为用户安装机器人。
+在机器人可以主动向用户发送消息之前，必须将其安装为个人应用，或安装在用户所属的团队中。 有时，需要主动向尚未安装或以前与应用交互的用户发送消息。 例如，如果需要向组织中的每个人发送重要信息，则可以使用 Microsoft 图形 API 为用户主动安装机器人。
 
 ## <a name="permissions"></a>权限
 
@@ -127,7 +127,7 @@ GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$exp
 
 请求返回:
 
-* 空数组(如果未安装应用)。
+* 如果未安装应用，则为空数组。
 * 具有单一 [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-v1.0&preserve-view=true) 对象的数组(如果已安装应用)。
 
 ### <a name="install-your-app"></a>安装应用
@@ -155,7 +155,7 @@ Content-Type: application/json
 
 **Microsoft Graph 页面参考:** [获取聊天](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
-1. 必须具有应用的 `{teamsAppInstallationId}`。 如果没有，请使用以下内容:
+1. 必须具有应用的 `{teamsAppInstallationId}`。 如果没有，请使用以下命令：
 
     **HTTP GET** 请求:
 
@@ -167,7 +167,7 @@ Content-Type: application/json
 
 1. 发出以下请求以提取 `chatId`:
 
-    **HTTP GET** 请求(权限 — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
+    **HTTP GET** 请求 (权限 -`TeamsAppInstallation.ReadWriteSelfForUser.All`) ：  
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
@@ -177,7 +177,7 @@ Content-Type: application/json
 
     还可以使用以下请求检索 `chatId`，但需要更广泛的 `Chat.Read.All` 权限:
 
-    **HTTP GET** 请求(权限 — `Chat.Read.All`):
+    **HTTP GET** 请求 (权限 -`Chat.Read.All`) ：
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')

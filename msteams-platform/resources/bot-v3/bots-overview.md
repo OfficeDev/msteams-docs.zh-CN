@@ -5,12 +5,12 @@ ms.topic: conceptual
 keywords: Teams 机器人开发
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: cbf8b1c14b080d890dd4c65390671632e2602f81
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: f592ae06efc2c416e70530fe2c46cbfbfc03140b
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602262"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755851"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>将机器人添加到 Microsoft Teams 应用
 
@@ -21,7 +21,7 @@ ms.locfileid: "65602262"
 > [!IMPORTANT]
 > 目前，机器人在政府社区云 (GCC) 和GCC-High中可用，但在国防部 (DOD) 中不可用。
 
-![帮助用户的机器人示例](~/assets/images/bot_example.png)
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="帮助用户的机器人示例" border="true":::
 
 ## <a name="what-you-need-to-know-bots"></a>需要了解的内容：机器人
 

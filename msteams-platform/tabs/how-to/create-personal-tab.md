@@ -7,18 +7,20 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC 包应用清单对话域权限存储
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6acb5e0adf24dca7538b6ceaca470b9b6c3126f2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111239"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673018"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
 个人选项卡和个人范围的机器人一样，是个人应用的一部分，只作用于一个用户。 可以将它们固定到左侧窗格以方便访问。 还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
-确保具备构建个人选项卡的所有 [ 先决条件 ](~/tabs/how-to/tab-requirements.md)。
+确保具备构建个人选项卡的所有“[先决条件](~/tabs/how-to/tab-requirements.md)”。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -64,61 +66,61 @@ ms.locfileid: "65111239"
 
     * **解决方案名称是什么？**
 
-      解决方案名称为项目名称。 可以通过选择“**确认**”接受建议的名称。
+      解决方案名称是项目名称。 可以通过选择“**Enter**”接受建议的名称。
 
     * **要将文件存放在哪里?**
 
-      当前在项目目录中。 选择 **确认**。
+      当前位于项目目录中。 选择“**Enter**”。
 
-    * **Microsoft Teams 应用项目的标题？**
+    * **Microsoft Teams 应用项目的标题是什么?**
 
-      标题为应用包名称，在应用清单和说明中使用。 输入标题或选择“**确认**”接受默认名称。
+      标题是应用包名称，在应用清单和说明中使用。 输入标题或选择“**Enter**”以接受默认名称。
 
-    * **您的（公司）名称（最多 32 个字符）**
+    * **你的 (公司) 名称是什么? (最多 32 个字符)**
 
-      您的公司名称将在应用清单中使用。 输入公司名称或选择“**确认**”接受默认名称。
+      你的公司名称将用于应用清单。 输入公司名称或选择“**Enter**”以接受默认名称。
 
     * **要使用哪个清单版本?**
 
-      选择默认基架。
+      选择默认架构。
 
-    * **快速基架？ (Y/n)**
+    * **快速基架? (Y/n)**
 
-      默认值为 yes；输入 **n** 以输入 Microsoft Partner ID。
+      默认值为 yes;输入“**n**”以输入 Microsoft 合作伙伴 ID。
 
-    * **如果有Microsoft Partner ID，请输入：（留空跳过）**
+    * **如果有 Microsoft 合作伙伴 ID，请输入: (留空跳过)**
 
-      此字段不是必填的，只有当您已经是 [Microsoft Partner Network](https://partner.microsoft.com) 的一员时方才使用。
+      此字段不是必需的，仅当你已是 [Microsoft 合作伙伴网络](https://partner.microsoft.com)的一部分时才必须使用。
 
-    * **要向项目添加哪些内容？**
+    * **要向项目添加哪些内容?**
 
-      选择 **( &ast; ) A 选项卡**。
+      选择 **( &ast; ) 选项卡**。
 
-    * **要托管此解决方案的 URL?**
+    * **要托管此解决方案的 URL 是什么?**
 
-      默认情况下，生成器建议使用 Azure Web Sites URL。 仅在本地测试应用，因此不需要有效的 URL。
+      默认情况下，生成器建议使用 Azure 网站 URL。 仅在本地测试应用，因此不需要有效的 URL。
 
     * **加载应用/选项卡时，是否希望显示加载指示器?**
 
-      当应用或选项卡加载时，选择 **不要** 包含加载指示器。 默认值为“否”，输入 **n**。
+      加载应用或选项卡时，选择“**NOT**”以包含加载指示器。 默认值为“否”，输入“**n**”。
 
     * **是否希望在无选项卡标题栏的情况下呈现个人应用?**
 
-      选择 **不要** 包含在无选项卡标题栏的情况下呈现的个人应用。 默认值为否，输入 **n**。
+      选择“**NOT**”以包含没有选项卡标题栏的情况下要呈现的个人应用。 默认值为否，输入“**n**”。
 
-    * **是否希望包含测试框架和初始测试?（是/否）**
+    * **是否希望包含测试框架和初始测试? (y/N)**
 
-      选择 **不要** 包含此项目的测试框架。 默认值为“否”，输入 **n**。
+      选择“**NOT**”以包含此项目的测试框架。 默认值为“否”，输入“**n**”。
 
-    * **是否包括 ESLint 支持？（是/否）**
+    * **是否要包括 ESLint 支持? (y/N)**
 
-      选择不包含 ESLint 支持。 默认值为“否”，输入 **n**。
+      选择不包含 ESLint 支持。 默认值为“否”，输入“**n**”。
 
-    * **是否希望将 Azure 应用程序见解用于遥测?（是/否）**
+    * **是否希望将 Azure 应用程序见解用于遥测? (y/N)**
 
-      选择 **不要** 包含 [ Azure 应用程序见解](/azure/azure-monitor/app/app-insights-overview)。 默认值为否；输入 **n**。
+      选择“**NOT**”以包含 [Azure 应用程序见解](/azure/azure-monitor/app/app-insights-overview)。 默认值为否;输入“**n**”。
 
-    * **默认选项卡名称（最多 16 个字符）？**
+    * **默认选项卡名称是什么 (最多 16 个字符)?**
 
       为选项卡命名。此选项卡名称在整个项目中用作文件或 URL 路径组件。
 
@@ -207,7 +209,7 @@ ms.locfileid: "65111239"
 
 ### <a name="create-your-app-package"></a>创建应用包
 
-必须有一个应用包才能在 Teams 中构建和运行应用程序。 应用包是通过验证 `manifest.json` 文件并在 `./package` 目录中生成压缩文件夹的 gulp 任务创建的。 在命令提示符处，使用命令 `gulp manifest`。
+必须有一个应用包才能在 Teams 中生成和运行应用程序。 应用包是通过验证 `manifest.json` 文件并在 `./package` 目录中生成压缩文件夹的 gulp 任务创建的。 在命令提示符处，使用命令 `gulp manifest`。
 
 ### <a name="build-and-run-your-application"></a>构建并运行应用程序
 
@@ -221,13 +223,13 @@ gulp build
 
 #### <a name="run-your-application"></a>运行应用程序
 
-1. 在命令提示符处输入以下命令启动本地 Web 服务器：
+1. 在命令提示符中输入以下命令以启动本地 Web 服务器：
 
     ```cmd
     gulp serve
     ```
 
-1. 在浏览器中输入 `http://localhost:3007/<yourDefaultAppNameTab>/` 以查看应用程序的主页。
+1. 在浏览器中输入 `http://localhost:3007/<yourDefaultAppNameTab>/` 以查看应用程序主页。
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text=" 默认选项卡 " border="true":::
 
@@ -248,7 +250,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>将应用程序上传到 Teams
 
-1. 转到 Microsoft Teams，然后选择“**应用**”&nbsp;“:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams 存储":::”。
+1. 转到 Microsoft Teams，然后选择“**应用**”&nbsp;“:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams 应用商店":::”。
 1. 选择“**管理应用**”和“**上传自定义应用**”。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择压缩文件夹，然后选择“**打开**”。
 
@@ -260,7 +262,7 @@ gulp ngrok-serve
 
 1. 在 Teams 的左窗格中，选择省略号 &#x25CF;&#x25CF;&#x25CF；然后选择上传的应用以查看个人选项卡。
 
-   现在，已成功创建并在 Teams 中添加了个人选项卡。
+   现在，你已成功在 Teams 中创建并添加个人选项卡。
   
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -300,11 +302,11 @@ gulp ngrok-serve
     * <http://localhost:3978/tou>
 
 <details>
-<summary><b> 查看源代码 </b></summary>
+<summary><b>查看源代码</b></summary>
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是从 ASP.NET Core 3.1 Web 应用程序空模板创建的，安装时选中了“**高级 - 配置 HTTPS**”复选框。 MVC 服务通过依赖注入框架 `ConfigureServices()` 的方法注册。 此外，默认情况下，空模板不支持提供静态内容，因此使用以下代码将静态文件中间件添加到 `Configure()` 方法：
+此项目是从 ASP.NET Core 3.1 Web 应用程序空模板创建的，在设置时选中了“**高级 - 配置 HTTPS**”复选框。 MVC 服务通过依赖注入框架 `ConfigureServices()` 的方法注册。 此外，默认情况下，空模板不支持提供静态内容，因此使用以下代码将静态文件中间件添加到 `Configure()` 方法：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -324,7 +326,7 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="indexcshtml"></a>Index.cshtml
 
-ASP.NET Core将名为“**索引**”的文件视为网站的默认或主页。 当浏览器 URL 指向站点的根目录时， **Index.cshtml** 将显示为应用程序的主页。
+ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。 当浏览器 URL 指向站点的根目录时， **Index.cshtml** 将显示为应用程序的主页。
 
 #### <a name="appmanifest-folder"></a>AppManifest 文件夹
 
@@ -366,10 +368,10 @@ ASP.NET Core将名为“**索引**”的文件视为网站的默认或主页。 
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. 在 Visual Studio 解决方案资源管理器打开“**页面**”文件夹中的 **PersonalTab.cshtml**，在 `<script>` 标记中添加 `microsoftTeams.initialize()` 并保存。
+1. 在 Visual Studio 解决方案资源管理器打开“**页面**”文件夹中的 **PersonalTab.cshtml**，在 `<script>` 标记中添加 `app.initialize()` 并保存。
 
 1. 在 Visual Studio 中，选择 **F5** 或从应用程序的“**调试**”菜单中选择“**开始调试**”。
 
@@ -391,11 +393,11 @@ ngrok http 3978 --host-header=localhost
 
 1. 在“开发人员门户”中选择 `tab.zip` 并将其打开。
 
-1. 在“**基本信息**”部分创建并填充默认 “**应用 ID**”。
+1. 在“**基本信息**”部分创建并填充默认 **应用 ID**。
 
 1. 在“**说明**”中添加应用的短说明和长说明。
 
-1. 在“**开发人员信息**”中，添加所需的详细信息，在 **网站（必须是有效的 HTTPS URL）** 提供 ngrok HTTPS URL。
+1. 在“**开发人员信息**”中，添加所需详细信息，并在 **网站 (必须是有效的 HTTPS URL)** 中提供 ngrok HTTPS URL。
 
 1. 在“**应用 URL**”中，将隐私策略更新为 `https://<yourngrokurl>/privacy` 和使用条款 `https://<yourngrokurl>/tou` 并保存。
 
@@ -403,17 +405,17 @@ ngrok http 3978 --host-header=localhost
 
 1. 选择“保存”。
 
-1. 在“域”部分中，选项卡中的域必须包含没有 HTTPS 前缀 `<yourngrokurl>.ngrok.io`的 ngrok URL。
+1. 在“域”部分中，选项卡中的域必须包含没有 HTTPS 前缀 `<yourngrokurl>.ngrok.io` 的 ngrok URL。
 
 ### <a name="preview-your-app-in-teams"></a>在 Teams 中预览应用
 
-1. 从“开发人员门户”工具栏中选择“**在 Teams 中预览**”，“开发人员门户”会通知应用已成功侧载。 应用的“**添加**”页将显示在 Teams 中。
+1. 在开发人员门户工具栏中选择“**在 Teams 中预览**”，开发人员门户会通知你应用已成功旁加载。 应用的“**添加**”页将显示在 Teams 中。
 
 1. 选择“**添加**”以加载 Teams 中的选项卡。 选项卡此时在 Teams 中可用。
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text=" 默认选项卡 " border="true":::
 
-   现在，已成功创建并在 Teams 中添加了个人选项卡。
+   现在，你已成功在 Teams 中创建并添加个人选项卡。
   
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -453,11 +455,11 @@ ngrok http 3978 --host-header=localhost
     * <http://localhost:3978/tou>
 
 <details>
-<summary><b> 查看源代码 </b></summary>
+<summary><b>查看源代码</b></summary>
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是从 ASP.NET Core 3.1 Web 应用程序空模板创建的，安装时选中了“**高级 - 配置 HTTPS**”复选框。 MVC 服务通过依赖注入框架 `ConfigureServices()` 的方法注册。 此外，默认情况下，空模板不支持提供静态内容，因此使用以下代码将静态文件中间件添加到 `Configure()` 方法：
+此项目是从 ASP.NET Core 3.1 Web 应用程序空模板创建的，在设置时选中了“**高级 - 配置 HTTPS**”复选框。 MVC 服务通过依赖注入框架 `ConfigureServices()` 的方法注册。 此外，默认情况下，空模板不支持提供静态内容，因此使用以下代码将静态文件中间件添加到 `Configure()` 方法：
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -479,7 +481,7 @@ public void Configure(IApplicationBuilder app)
 
 此文件夹包含以下必需的应用包文件：
 
-* **一个全色图标**，尺寸为 192 x 192 像素。
+* 一个 **全色图标**，尺寸为 192 x 192 像素。
 * 一个 **透明轮廓图标**，尺寸为 32 x 32 像素。
 * 一个 `manifest.json` 指定应用属性的文件。
 
@@ -531,10 +533,10 @@ public void Configure(IApplicationBuilder app)
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. 在 Visual Studio 解决方案资源管理器中，从“**视图** > **PersonalTab**”文件夹打开 **PersonalTab.cshtml**，在 `<script>` 标记中添加 `microsoftTeams.initialize()` 并保存。
+1. 在 Visual Studio 解决方案资源管理器中，从“**视图** > **PersonalTab**”文件夹打开 **PersonalTab.cshtml**，在 `<script>` 标记中添加 `app.initialize()` 并保存。
 
 1. 在 Visual Studio 中，选择 **F5** 或从应用程序的“**调试**”菜单中选择“**开始调试**”。
 
@@ -550,21 +552,21 @@ ngrok http 3978 --host-header=localhost
 
 1. 转到“[**开发人员门户**](https://dev.teams.microsoft.com/home)”。
 
-1. 打开“**应用**”并选择“**导入引用**”。
+1. 打开“**应用**”并选择“**导入应用**”。
 
-1. 应用包的名称为 **tab.zip**。 它可在以下路径中使用：
+1. 应用包的名称是 **tab.zip**。 它可在以下路径中使用：
 
     ```
     /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. 选择 **tab.zip** 并在“开发人员门户”中打开它。
+1. 选择 **tab.zip** 并在开发人员门户中将其打开。
 
-1. 在“**基本信息**”部分创建并填充默认 “**应用 ID**”。
+1. 在“**基本信息**”部分创建并填充默认 **应用 ID**。
 
 1. 在“**说明**”中添加应用的短说明和长说明。
 
-1. 在“**开发人员信息**”中，添加所需的详细信息，在 **网站（必须是有效的 HTTPS URL）** 提供 ngrok HTTPS URL。
+1. 在“**开发人员信息**”中，添加所需详细信息，并在 **网站 (必须是有效的 HTTPS URL)** 中提供 ngrok HTTPS URL。
 
 1. 在“**应用 URL**”中，将隐私策略更新为 `https://<yourngrokurl>/privacy` 和使用条款 `https://<yourngrokurl>/tou` 并保存。
 
@@ -576,13 +578,13 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>在 Teams 中预览应用
 
-1. 从“开发人员门户”工具栏中选择“**在 Teams 中预览**”，“开发人员门户”会通知应用已成功侧载。 应用的“**添加**”页将显示在 Teams 中。
+1. 在开发人员门户工具栏中选择“**在 Teams 中预览**”，开发人员门户会通知你应用已成功旁加载。 应用的“**添加**”页将显示在 Teams 中。
 
 1. 选择“**添加**”以加载 Teams 上的选项卡。 选项卡此时在 Teams 中可用。
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="个人选项卡" border="true":::
   
-   现在，已成功创建并在 Teams 中添加了个人选项卡。
+   现在，你已成功在 Teams 中创建并添加个人选项卡。
 
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -619,7 +621,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="see-also"></a>另请参阅
 
-* [ Teams 选项卡 ](~/tabs/what-are-tabs.md)
+* [Teams 选项卡](~/tabs/what-are-tabs.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 * [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)

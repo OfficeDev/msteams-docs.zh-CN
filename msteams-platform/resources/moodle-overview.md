@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
 keywords: moodle LMS mConnect 深层链接
-ms.openlocfilehash: 3a999846b9df72298e35eed9edaf9bd96df30edf
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453121"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757344"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle 学习管理系统
 
@@ -42,7 +42,7 @@ Moodle LMS 可帮助用户访问以下应用:
 
 以下方案介绍了将 Microsoft 云服务与 Moodle 课程结合使用可加速释放学习潜力:
 
-* **推动混合远程会议**: Teams 会议和扩展性服务允许教职员工对学生进行面对面和远程演示。 对于学生，必须有权访问远程会议的共享视图、应用和投票。 后续任务提供多语言听录和音频或视频课程录制。 Teams 和 Moodle 协同工作，以共享包、活动和任务。
+* **推动混合远程会议**：Teams 会议和扩展性服务允许教职员工对学生进行面对面和远程演示。 对于学生，必须有权访问远程会议的共享视图、应用和投票。 后续任务提供多语言听录和音频或视频课程录制。 Teams 和 Moodle 协同工作，以共享包、活动和任务。
 
 * **个性化会议面板**: 使用 Teams Graph API 终结点创建独特的协作式学习体验。 对于其他计划或项目，用户可以和所有新成员面谈，并使用自定义投票对结果进行分类。 有设施可直接在 Teams 中共享测验，同时将更新异步推送到 Moodle 站点。
 

@@ -6,12 +6,12 @@ description: Microsoft Teams JavaScript 客户端 SDK 概述，它可帮助你�
 ms.localizationpriority: high
 keywords: teams 选项卡, 组频道, 可配置静态 SDK, JavaScript, 个人版 m365
 ms.topic: conceptual
-ms.openlocfilehash: 2a1c827913759d49ba721251d4a6f5382d8eb3a4
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653285"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757617"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验
 
@@ -20,7 +20,7 @@ Microsoft Teams JavaScript 客户端 SDK 可帮助你在 Teams、Office 和 Outl
 * [选项卡](../../tabs/what-are-tabs.md)
 * [对话（任务模块）](../../task-modules-and-cards/what-are-task-modules.md)
 
-从版本 `2.0.0` 开始，除了 Microsoft Teams 之外，还重构了现有的 Teams 客户端 SDK（`@microsoft/teams-js` 或简称 `TeamsJS`），以使 [Teams 应用能够在 Outlook 和 Office 中运行](/m365-apps/overview.md)。 从功能角度来看，最新版本的 TeamsJS 支持所有现有的 (v.1.x.x) Teams 应用功能，同时添加在 Outlook 和 Office 中托管 Teams 应用的可选功能。
+从版本 `2.0.0` 开始，除了 Microsoft Teams 之外，还重构了现有的 Teams 客户端 SDK（`@microsoft/teams-js` 或简称 `TeamsJS`），以使 [Teams 应用能够在 Outlook 和 Office 中运行](/microsoftteams/platform/m365-apps/overview)。 从功能角度来看，最新版本的 TeamsJS 支持所有现有的 (v.1.x.x) Teams 应用功能，同时添加在 Outlook 和 Office 中托管 Teams 应用的可选功能。
 
 下面是各种应用方案的当前版本控制指南：
 

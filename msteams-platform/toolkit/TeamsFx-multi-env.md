@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 72d980849d48498dddedb87db35ae15ca69e4cda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653278"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756931"
 ---
 # <a name="manage-multiple-environments"></a>管理多个环境
 
@@ -45,9 +45,9 @@ ms.locfileid: "65653278"
 1. 在边栏中选择 **Teams** 图标
 2. 在“环境”部分下选择“**+Teams: 创建新环境**”，如下图所示：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="创建":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="创建":::
 
-如果有多个环境，则需要选择一个现有环境来创建相同的环境。 该命令会将 `config.<newEnv>.json` 和 `azure.parameters.<newEnv>.json` 的文件内容从所选的现有环境复制到所创建的新环境。
+   如果有多个环境，则需要选择一个现有环境来创建相同的环境。 该命令会将 `config.<newEnv>.json` 和 `azure.parameters.<newEnv>.json` 的文件内容从所选的现有环境复制到所创建的新环境。
 
 ## <a name="select-target-environment"></a>选择目标环境
 
@@ -204,18 +204,21 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
     },
     ...
   }
- ```
-3. 针对 **所有** 环境运行预配命令，以更新远程环境中的应用名称。 若要使用 Teams 工具包运行预配命令，请参阅[预配](provision.md#provision-using-teams-toolkit)
+
+  ```
+
+3. 针对 **所有** 环境运行预配命令，以更新远程环境中的应用名称。 若要使用Teams Toolkit运行预配命令，请参阅[预配](provision.md#provision-using-teams-toolkit)。
+
 <br></details>
 <br>
+
 <details>
 <br><summary><b>方案 4：为不同的环境自定义 Azure 资源</b></summary>
 通过编辑与 fx/configs/azure.parameters.{env}.json 对应的环境，可以为每个环境自定义 Azure 资源，例如指定 Azure 函数名称。 文件。
 
-有关 Bicep 模板和参数文件的详细信息，请参阅[预配云资源](provision.md)
-</details> <br
-
-
+有关 Bicep 模板和参数文件的详细信息，请参阅 [预配云资源](provision.md)
+</details>
+</br>
 
 ## <a name="see-also"></a>另请参阅
 

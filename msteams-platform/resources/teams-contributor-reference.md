@@ -3,14 +3,14 @@ title: 参与 Teams 文档
 description: 创建和发布 Teams 文档的步骤
 author: surbhigupta
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 480b8bc1692672023171f3b6e67e0ee526cbe509
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 047a3c84b99fd832cde0531a9a9197c880f294e6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111897"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757680"
 ---
 # <a name="contribute-to-teams-documentation"></a>参与 Teams 文档
 
@@ -22,9 +22,8 @@ Teams 文档是 **Microsoft Docs** 技术文档库的一部分。 内容分为�
 >
 > * 安装 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)。
 > * 安装 [Microsoft Visual Studio代码](https://code.visualstudio.com/) （VS Code）。
-> * 直接从 VS Code 市场安装 [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack)。
-<br>&emsp;&emsp;或
-> [!div class="checklist"]
+> * 直接从 VS Code 市场安装 [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack)。<br>&emsp;&emsp;或
+[!div class="checklist"]
 >
 > * 在VS Code内安装：
 
@@ -40,7 +39,7 @@ Teams 文档是 **Microsoft Docs** 技术文档库的一部分。 内容分为�
 
 * **[Microsoft 写作风格指南](/style-guide/welcome)**：Microsoft 写作风格指南是一种全面的技术写作资源，反映了 Microsoft 的现代语音和风格方法。 若要轻松参考，请将此联机指南添加到浏览器的 **收藏夹** 菜单。
 
-* **[编写开发人员内容](/style-guide/developer-content/)**：Teams 特定内容面向对编程概念和流程有基本了解的开发人员受众。 务必以引人注目的方式提供清晰、技术上准确的信息，同时保持 Microsoft 的音调和风格。
+* **[编写开发人员内容](/style-guide/developer-content/)**：Teams 特定内容面向对编程概念和流程有基本了解的开发人员受众。 在保持 Microsoft 的语气和风格的同时，必须以令人信服的方式提供清晰、技术上准确的信息，这一点很重要。
 
 * **[编写分步说明](/style-guide/procedures-instructions/writing-step-by-step-instructions)**：应用和交互式体验是开发人员了解 Microsoft 产品和技术的好方法。 以渐进式格式呈现复杂或简单的过程是自然的，并且用户友好。
 
@@ -60,8 +59,7 @@ Teams 文档是 **Microsoft Docs** 技术文档库的一部分。 内容分为�
 > &emsp;&#x2714; 包括 Markdown 文件扩展名。<br>
 >例如：**父目录/目录/路径到 article.md** —> [为 Microsoft Teams 生成应用](../concepts/building-an-app.md) <br><br>
 > 若要引用 **不属于 Teams 平台文档集** Microsoft Docs库文章：<br>
-> &emsp;&#x2714; 使用以正斜杠开头的相对路径。<br>
-> &emsp;&#x2714; 不要包括文件扩展名。 <br>
+> &emsp;&#x2714; 使用以正斜杠开头的相对路径。<br>&emsp;&#x2714; 不要包括文件扩展名。<br>
 > 例如：**/docset/address-to-file-location** —> [使用 Microsoft Graph API 与 Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > 若要引用Microsoft Docs库之外的页面（如 GitHub），请使用完整的 `https` 文件路径。<br>
 

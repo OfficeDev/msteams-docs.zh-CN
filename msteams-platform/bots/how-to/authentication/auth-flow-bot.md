@@ -2,18 +2,18 @@
 title: 机器人的 Microsoft Teams 身份验证流程
 description: 使用代码示例介绍机器人中的 Microsoft Teams 身份验证流程。
 keywords: Teams, 身份验证流程, 机器人
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: f18d5a03ed62b55d162c7e10ba1546e4051f3744
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 3e677c746b4cc548b4f8977dbaf61666c3fa85ce
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111848"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756868"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Microsoft Teams 中的机器人身份验证流程
 
-OAuth 2.0 是 Azure Active Directory 和许多其他标识提供者用于身份验证和授权的开放标准。 基本了解 OAuth 2.0 是在 Teams 中使用身份验证的先决条件；[下面是一个很好的概述](https://aaronparecki.com/oauth-2-simplified/)，它比[正式规范](https://oauth.net/2/)更易于遵循。 选项卡和机器人的身份验证流程略有不同：选项卡与网站非常相似，因此它们可以直接使用 OAuth 2.0，而机器人不是这样，必须以不同的方式执行一些操作，但核心概念是相同的。
+OAuth 2.0 是 Azure Active Directory 和许多其他标识提供者用于身份验证和授权的开放标准。 基本了解 OAuth 2.0 是在 Teams 中使用身份验证的先决条件；[下面是一个很好的概述](https://aaronparecki.com/oauth-2-simplified/)，它比[正式规范](https://oauth.net/2/)更易于遵循。 选项卡和机器人的身份验证流略有不同 - 选项卡类似于网站，因此可以直接使用 OAuth 2.0，而机器人不是，必须以不同的方式执行一些操作，但核心概念是相同的。
 
 有关使用 Node.js 和 [OAuth 2.0 授权代码授权类型](https://oauth.net/2/grant-types/authorization-code/)演示机器人身份验证流程的示例，请参阅 GitHub 存储库 [Microsoft Teams 身份验证示例](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs)。
 

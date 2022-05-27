@@ -4,12 +4,12 @@ description: 介绍在本地和云托管环境中测试和调试 Microsoft Teams
 keywords: Teams 运行调试应用本地云托管主机
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296992"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757008"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>选择用于测试和调试 Microsoft Teams 应用的设置
 
@@ -56,15 +56,17 @@ Microsoft Teams 是一款完全基于云的产品，它要求可通过 HTTPS 终
 
 若要根据所使用的功能在项目中使用 ngrok，必须替换代码、配置和 manifest.json 文件中的所有 URL 引用才能使用此 URL 终结点。
 
-对于在 Microsoft Bot Framework 中注册的机器人，请更新机器人的消息传递终结点以使用此新的 ngrok 终结点。 例如，`https://2d1224fb.ngrok.io/api/messages`。 可以通过在 Bot Framework 门户的“测试聊天”窗口中测试机器人响应来验证 ngrok 是否正常工作。 与仿真器一样，此测试也不允许访问特定于 Teams 的功能。
+对于在 Microsoft Bot Framework 中注册的机器人，请更新机器人的消息传递终结点以使用此新的 ngrok 终结点。 例如，`https://2d1224fb.ngrok.io/api/messages`。 可以通过在 Bot Framework 门户的“测试聊天”窗口中测试机器人响应来验证 ngrok 是否正常工作。 同样，与模拟器一样，此测试不允许访问特定于Teams功能。
 
 > [!NOTE]
 > * 若要更新机器人的消息传递终结点，必须使用 Bot Framework。 在 [Bot Framework 的机器人列表](https://dev.botframework.com/bots)中选择机器人。 无需将机器人迁移到 Microsoft Azure。 还可通过 [App Studio](~/concepts/build-and-test/app-studio-overview.md) 更新消息传递终结点。
+
+> [!WARNING]
 > * 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
 
 ## <a name="cloud-hosted"></a>云托管
 
-可以使用任何可外部寻址的服务来托管开发和生产代码及其 HTTPS 终结点。 功能可能并没有驻留在同一服务中。 我们需要从 `manifest.json` 文件的 [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) 对象中列出的 Microsoft Teams 应用访问所有域。
+可以使用任何可外部寻址的服务来托管开发和生产代码及其 HTTPS 终结点。 不期望你的功能驻留在同一服务上。 我们需要从 `manifest.json` 文件的 [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) 对象中列出的 Microsoft Teams 应用访问所有域。
 
 > [!NOTE]
 > 若要确保环境安全，请明确说明所引用的确切域和子域，并且这些域必须由你控制。例如，不建议使用 `*.azurewebsites.net`，但建议使用 `contoso.azurewebsites.net`。

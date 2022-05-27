@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 5929b98d055d8a4b180df55f4298f12a617040c9
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: c1eacf5b023b5bb4bfc9ec243ed8beebcb0a5220
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191199"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756786"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>在 Microsoft Teams 中上传应用
 
@@ -47,7 +47,7 @@ ms.locfileid: "65191199"
 
    a. 选择 **添加** 以添加个人应用。</br> b. 使用下拉菜单将应用添加到团队或聊天中。
 
-    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="创建 Teams 应用" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="应用说明" border="true":::
 
 ## <a name="troubleshoot"></a>排除故障
 
@@ -81,7 +81,7 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 
 如果进行代码更改 (这些更改已实时反映在 Teams 中)，则无需再次旁加载应用。 但是，如果更改了任何应用配置，则必须重新安装。
 
-如果应用有可用的更新，则会启用 **更新可用** 选项。若要更新，请按照以下步骤操作:
+如果应用有可用更新，则启用“**更新可用**”选项。 如果要更新，请按照以下步骤操作：
 
 1. 选择“**更新可用**”以查看更新。
 

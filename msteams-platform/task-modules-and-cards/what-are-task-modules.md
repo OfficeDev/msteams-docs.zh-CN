@@ -5,12 +5,12 @@ description: 添加模式弹出体验，从Microsoft Teams应用收集或显示�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c262de1bab6a29331350166160a4b51503e4b8aa
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7d7778aa4d38dbc879255c449b93590d04f00e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073547"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756595"
 ---
 # <a name="task-modules"></a>任务模块
 
@@ -27,7 +27,7 @@ ms.locfileid: "65073547"
 可通过 3 种方式调用任务模块：
 
 * 频道或个人选项卡：使用Microsoft Teams选项卡 SDK，可以从选项卡上的按钮、链接或菜单调用任务模块。有关详细信息，请参阅[选项卡中的使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
-* 机器人：在从机器人发送的 [卡](~/task-modules-and-cards/cards/cards-reference.md) 片上使用按钮。 当你不需要频道中的每个人查看你正在对机器人执行的操作时，这非常有用。 例如，让用户在频道中响应投票时，查看正在创建的轮询的记录是没用的。 有关详细信息，请参阅[Teams机器人使用任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
+* 机器人：在从机器人发送的 [卡](~/task-modules-and-cards/cards/cards-reference.md) 片上使用按钮。 当你不需要频道中的每个人查看你正在对机器人执行的操作时，这非常有用。 例如，让用户在频道中响应投票时，查看正在创建的轮询记录并不有用。 有关详细信息，请参阅[Teams机器人使用任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
 * 在深层链接Teams之外：还可以创建 URL 从任意位置调用任务模块。 有关详细信息，请参阅 [任务模块深度链接语法](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)。
 
 ## <a name="components-of-a-task-module"></a>任务模块的组件
@@ -46,7 +46,7 @@ ms.locfileid: "65073547"
     > [!NOTE]
     > 当前无法 `err` 检测从机器人调用任务模块时的事件。
 
-5. 如果要使用 `url` [TaskInfo 对象](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)的属性加载自己的网页，则会显示蓝色矩形。 有关详细信息，请参阅 [任务模块大小](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing)调整。
+5. 如果要使用 `url` [TaskInfo 对象](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)的属性加载自己的网页，则会显示蓝色矩形。 有关详细信息，请参阅[任务模块大小调整](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing)。
 6. 如果使用 `card` [TaskInfo 对象](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) 的属性显示自适应卡片，则会为你添加填充。 有关详细信息，请参阅 [HTML 或 JavaScript 任务模块的任务模块 CSS](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)。
 7. 选择 **“注册**”后，自适应卡片按钮呈现。 使用自己的页面时，请创建自己的按钮。
 

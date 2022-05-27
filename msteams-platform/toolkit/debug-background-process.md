@@ -6,24 +6,24 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 48c3716258477bf7b8dc1086a75aa7a495ff5026
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656157"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756882"
 ---
 # <a name="debug-background-process"></a>调试后台进程
 
 本地调试工作流涉及 `.vscode/launch.json` 和 `.vscode/tasks.json` 文件，以在 VS Code 中配置调试器，然后，VS Code 会启动调试器，Microsoft Edge 或 Chrome 调试器会启动新的浏览器实例，如下所示：
 
-1. `launch.json` 文件在 VS Code 中配置调试器
+1. `launch.json` 文件在 VS Code 中配置调试器。
 
-2. VS Code 会在 `.vscode/tasks.json` 文件中运行复合 **preLaunchTask**、**预调试检查和启动全部**
+2. VS Code 会在 `.vscode/tasks.json` 文件中运行复合 **preLaunchTask**、**预调试检查和启动全部**。
 
-3. 然后，VS Code 会启动复合配置中指定的调试器，例如 **连接到自动程序**、**连接到后端**、**连接到前端** 和 **启动自动程序**
+3. 然后，VS Code 会启动复合配置中指定的调试器，例如 **连接到自动程序**、**连接到后端**、**连接到前端** 和 **启动自动程序**。
 
-4.  Microsoft Edge 或 Chrome 调试器会启动新的浏览器实例，并打开网页以加载 Teams 客户端
+4. Microsoft Edge 或 Chrome 调试器会启动新的浏览器实例，并打开网页以加载 Teams 客户端。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -38,16 +38,15 @@ Teams 工具包在调试过程中检查以下先决条件：
   |Bot |  14、16（推荐）|
   |消息扩展 | 14、16（推荐） |
 
-   
-* 具有有效凭据的 Microsoft 365 帐户，如果尚未登录，Teams 工具包会提示你登录到 Microsoft 365 帐户
+* 具有有效凭据的 Microsoft 365 帐户，如果尚未登录，Teams 工具包会提示你登录到 Microsoft 365 帐户。
 
-* 为开发人员租户启用自定义应用上传或旁加载，否则本地调试将终止
+* 为开发人员租户启用自定义应用上传或旁加载，否则本地调试将终止。
 
-* Ngrok 二进制版本 2.3 适用于机器人和邮件扩展，如果未安装 Ngrok 或版本不符合要求，则 Teams 工具包将在 `~/.fx/bin/ngrok` 中安装 Ngrok NPM 包 `ngrok@4.2.2`。Ngrok 二进制文件由 `/.fx/bin/ngrok/node modules/ngrok/bin` 中的 Ngrok NPM 包管理
+* Ngrok 二进制版本 2.3 适用于自动程序和消息扩展，如果未安装 Ngrok 或版本不符合要求，则 Teams 工具包将在 `~/.fx/bin/ngrok` 中安装 Ngrok NPM 包 `ngrok@4.2.2`。 Ngrok 二进制文件由 Ngrok NPM 包在 `/.fx/bin/ngrok/node modules/ngrok/bin` 中管理。
 
-* Azure Functions Core Tools 版本 4，如果未安装 Azure Functions Core Tools 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/func` 中安装适用于 **Windows** 和 **macOs** 的 Azure Functions Core Tools NPM 包azure-functions-core-tools@3。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止
+* Azure Functions Core Tools 版本 4，如果未安装 Azure Functions Core Tools 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/func` 中安装适用于 **Windows** 和 **MacOs** 的 Azure Functions Core Tools NPM 包azure-functions-core-tools@3。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止。
 
-* 适用于 Azure Functions 的 .NET Core SDK 版本，如果未安装 .NET Core SDK 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/dotnet` 中安装适用于 Windows 和 MacOS 的 .NET Core SDK。对于 Linux，本地调试终止
+* 适用于 Azure Functions 的 .NET Core SDK 版本，如果未安装 .NET Core SDK 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/dotnet` 中安装适用于 Windows 和 MacOS 的 .NET Core SDK。 对于 Linux，本地调试终止。
 
   下表列出了 .NET Core 版本：
 
@@ -56,15 +55,15 @@ Teams 工具包在调试过程中检查以下先决条件：
   |Windows、macO (x64) 和 Linux | **3.1（推荐）**, 5.0, 6.0 |
   |macOs (arm64) |6.0 |
 
-* 开发证书，如果未在 Windows 或 macOS 中的选项卡安装 localhost 的开发证书，则 Teams 工具包将提示你安装它。
+* 开发证书，如果未在 Windows 或 MacOS 中的选项卡安装 localhost 的开发证书，则 Teams 工具包将提示你安装它。
 
-* Azure Functions 在 `api/extensions.csproj` 中定义绑定扩展，如果未安装 Azure Functions 绑定扩展，则 Teams 工具包将安装 Azure Functions 绑定扩展
+* Azure Functions 在 `api/extensions.csproj` 中定义绑定扩展，如果未安装 Azure Functions 绑定扩展，则 Teams 工具包将安装 Azure Functions 绑定扩展。
 
-* NPM 包，适用于选项卡应用、自动程序应用、消息扩展应用和 Azure Functions 的应用程序。 如果未安装 NPM，则 Teams 工具包将安装所有 NPM 包
+* NPM 包，适用于选项卡应用、自动程序应用、消息扩展应用和 Azure Functions 的应用程序。 如果未安装 NPM，则 Teams 工具包将安装所有 NPM 包。
 
-* 自动程序和消息扩展，Teams 工具包将启动 Ngrok，为自动程序和消息扩展创建 HTTP 隧道
+* 自动程序和消息扩展，Teams 工具包将启动 Ngrok，为自动程序和消息扩展创建 HTTP 隧道。
 
-* 端口可用，如果选项卡、自动程序、消息扩展和 Azure Functions 端口不可用，则本地调试将终止
+* 端口可用，如果选项卡、自动程序、消息扩展和 Azure Functions 端口不可用，则本地调试将终止。
 
   下表列出了可用于组件的端口：
 
@@ -75,7 +74,6 @@ Teams 工具包在调试过程中检查以下先决条件：
   | 自动程序或消息扩展的节点检查器 | 9239 |
   | Azure Functions | 7071 |
   | 用于 Azure Functions 的节点检查器 | 9229 |
-
 
 <!-- The following table lists the limitations if the required software is unavailable for debugging:
 
@@ -103,10 +101,8 @@ Use the following .NET Core versions:
 |Windows, macOs (x64), Linux | **3.1 (recommended)**, 5.0, 6.0 |
 |macOs (arm64) |6.0 |
 
-
 > [!NOTE]
-> If the development certificate for localhost isn't installed for tab in Windows or macOS, the Teams toolkit prompts you to install it.</br> -->
-
+> If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams toolkit prompts you to install it.</br> -->
 
 选择 **开始调试 (F5)** 时，Teams 工具包输出通道会在检查先决条件后显示进度和结果。
 
@@ -116,28 +112,27 @@ Use the following .NET Core versions:
 
 在设置过程中，Teams 工具包为 Teams 应用准备了以下注册和配置：
 
-1. [注册和配置 Azure AD 应用程序](#registers-and-configures-azure-ad-application)：Teams 工具包会注册并配置 Azure AD 应用程序
+1. [注册和配置Azure AD应用程序](#registers-and-configures-azure-ad-application)：Teams 工具包会注册并配置 Azure AD 应用程序。
 
-1. [注册和配置自动程序](#registers-and-configures-bot)：Teams 工具包将为选项卡或消息扩展应用注册并配置自动程序
+1. [注册和配置自动程序](#registers-and-configures-bot)：Teams 工具包将为选项卡或消息扩展应用注册并配置自动程序。
 
-1. [注册和配置 Teams 应用](#registers-and-configures-teams-app)：Teams 工具包会注册并配置 Teams 应用
+1. [注册和配置 Teams 应用](#registers-and-configures-teams-app)：Teams 工具包会注册和配置 Teams 应用。
 
 ### <a name="registers-and-configures-azure-ad-application"></a>注册和配置 Azure AD 应用程序
 
-1. 注册 Azure AD 应用程序
+1. 注册 Azure AD 应用程序。
 
-1. 创建客户端密码
+1. 创建客户端密码。
 
-1. 公开 API
+1. 公开 API。
 
-    a. 配置应用程序 ID URI。 对于选项卡，`api://localhost/{appId}`。 对于自动程序或消息扩展，`api://botid-{botid}`
+    a. 配置应用程序 ID URI。 对于选项卡，`api://localhost/{appId}`。 对于自动程序或消息扩展 `api://botid-{botid}`。
 
-    b. 添加名为 `access_as_user` 的作用域。 为 **管理员和用户** 启用它
+    b. 添加名为 `access_as_user` 的作用域。 为 **管理员和用户** 启用它。
 
+4. 配置 API 权限。 将 Microsoft Graph 权限添加到 **User.Read**。
 
-4. 配置 API 权限。将 Microsoft Graph 权限添加到 **User.Read**
-
-    下表列出了身份验证的配置，如下所示：
+    下表列出了身份验证的配置：
     
       | 项目类型 | Web 的重定向 URI | 单页应用程序的重定向 URI |
       | --- | --- | --- |
@@ -157,19 +152,19 @@ Use the following .NET Core versions:
       | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
     
-### <a name="registers-and-configures-bot"></a>注册和配置自动程序 
+### <a name="registers-and-configures-bot"></a>注册和配置自动程序
 
 对于选项卡应用或消息扩展应用：
 
-1. 注册 Azure AD 应用程序
+1. 注册 Azure AD 应用程序。
 
-1. 为 Azure AD 应用程序创建客户端密码
+1. 为 Azure AD 应用程序创建客户端密码。
 
-1. 使用 Azure AD 应用程序在 [Microsoft Bot Framework](https://dev.botframework.com/) 中注册自动程序
+1. 使用 Azure AD 应用程序在 [Microsoft Bot Framework](https://dev.botframework.com/)中注册自动程序。
 
-1. 添加 Microsoft Teams 频道
+1. 添加 Microsoft Teams 频道。
 
-1. 将消息传递终结点配置为 `https://{ngrokTunnelId}.ngrok.io/api/messages`
+1. 将消息传送终结点配置为 `https://{ngrokTunnelId}.ngrok.io/api/messages`。
 
 ### <a name="registers-and-configures-teams-app"></a>注册和配置 Teams 应用
 

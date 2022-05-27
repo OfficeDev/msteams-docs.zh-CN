@@ -7,16 +7,16 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams 连接器, Kronos
 ms.author: lajanuar
-ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
-ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.openlocfilehash: 78c76e93040354d37770988f45f1b94d35f6102c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65604262"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757351"
 ---
 # <a name="production-ready-shifts-connectors"></a>生产准备就绪的排班连接器  
 
-Teams 排班劳动力管理 (WFM) 连接器是生产就绪、开源和社区驱动的集成，对一线员工非常有用。 它们通过 Teams 排班应用为一线员工的数字化转型提供无缝体验和快速流程。
+Teams轮班员工管理 (WFM) 连接器是生产就绪、开源和社区驱动的集成，对一线员工非常有用。 它们为具有Teams班次的一线工人的数字化转型提供了无缝的体验和快速过程。
 
 每个连接器都为组织的部署和集成提供了详细指导。 GitHub 存储库中提供了完整源代码。 你可以探索细节或分支，并根据特定需求进行自定义。
 
@@ -34,7 +34,7 @@ Teams 排班劳动力管理 (WFM) 连接器是生产就绪、开源和社区驱�
 
 * **详细文档和支持：** 所有排班 WFM 连接器都附带解决方案体系结构、部署和配置步骤的端到端文档。 将监视连接器存储库，以便你能够通过存储库的 GitHub 问题跟踪器来报告遇到的任何问题、挑战或困难。
 
-* **无缝集成：** 通过 WFM 解决方案与 Teams 排班之间的集成，一线工作人员能够使用 Teams 排班应用查看或管理其日程安排和轮班时间，并直接从其移动设备或桌面使用 Teams 中提供的所有其他丰富的协作功能，而无需将上下文切换到另一个应用。  
+* **无缝集成：** WFM 解决方案与 Teams Shifts 之间的集成使第一线工作人员可以使用 Teams Shifts 应用查看或管理其日程安排和轮班时间，并使用Teams从移动设备或桌面直接提供的所有其他丰富的协作功能，而无需将上下文切换到另一个应用。  
 
 在 Teams 中打开班次视图：
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 事件, 机器人, 频道消息, 回应, 对话
-ms.openlocfilehash: a168231b48e493402f0190f36e65cf2918ca7e83
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: d9722ece0edd835213b7a963368c81ab1121c436
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297154"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757568"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -404,7 +404,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>已添加团队成员
 
-当首次添加到对话时，`teamMemberAdded` 事件将发送到机器人。 每次将新用户添加到已安装机器人的团队或群组聊天时，都会将事件发送到机器人。 用户信息（即 ID）对于机器人是唯一的，并且可以缓存以供服务将来使用，例如向特定用户发送消息。
+首次 `teamMemberAdded` 将事件添加到会话时，会将事件发送到机器人。 每次将新用户添加到已安装机器人的团队或群组聊天时，都会将事件发送到机器人。 用户信息（即 ID）对于机器人是唯一的，并且可以缓存以供服务将来使用，例如向特定用户发送消息。
 
 以下代码显示团队成员添加事件的示例：
 
@@ -548,7 +548,7 @@ async def on_teams_members_added(
 
 ### <a name="team-members-removed"></a>已删除团队成员
 
-如果从团队中删除，则 `teamMemberRemoved` 事件会发送到机器人。 每次从机器人所属的团队中删除任何用户时，都会将事件发送到机器人。 若要确定删除的新成员是机器人本身还是用户，请检查 `turnContext` 的 `Activity` 对象。  如果 `MembersRemoved` 对象的 `Id` 字段与 `Recipient` 对象的 `Id` 字段相同，则删除的成员是机器人，否则为用户。 机器人的 `Id` 通常为 `28:<MicrosoftAppId>`。
+`teamMemberRemoved`如果事件已从团队中删除，则会将其发送到机器人。 每次从机器人所属的团队中删除任何用户时，都会将事件发送到机器人。 若要确定删除的新成员是机器人本身还是用户，请检查 `turnContext` 的 `Activity` 对象。  `Id`如果对象的字段与对象的`MembersRemoved``Recipient`字段相同`Id`，则删除的成员是机器人，否则为用户。 机器人的 `Id` 通常为 `28:<MicrosoftAppId>`。
 
 > [!NOTE]
 > 从租户中永久删除用户时，将触发 `membersRemoved conversationUpdate` 事件。
@@ -1054,11 +1054,11 @@ async def on_teams_team_unarchived(
 
 ---
 
-现在，你已处理对话更新事件，可以了解针对消息的不同回应而发生的消息回应事件。
+现在，你已处理对话更新事件，可以了解针对消息的不同反应发生的消息反应事件。
 
 ## <a name="message-reaction-events"></a>消息回应事件
 
-当用户添加或删除对机器人发送的消息的回应时，将发送 `messageReaction` 事件。 `replyToId` 包含消息的 ID，`Type` 是文本格式的回应类型。 回应类型包括生气、爱心、大笑、喜欢、悲伤和惊讶。 此事件不包含原始消息的内容。 如果对于机器人而言处理对消息的回应很重要，则在发送消息时必须存储这些消息。 下表提供了有关事件类型和有效负载对象的详细信息：
+`messageReaction`当用户添加或删除对机器人发送的消息的反应时，将发送该事件。 `replyToId` 包含消息的 ID，`Type` 是文本格式的回应类型。 回应类型包括生气、爱心、大笑、喜欢、悲伤和惊讶。 此事件不包含原始消息的内容。 如果对于机器人而言处理对消息的回应很重要，则在发送消息时必须存储这些消息。 下表提供了有关事件类型和有效负载对象的详细信息：
 
 | EventType       | 有效负载对象   | 说明                                                             | 范围 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1414,7 +1414,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 * 你没有使用 Microsoft Bot Framework SDK 来构建机器人，因此机器人在收到意外事件时会出现异常。
 * 你使用 Microsoft Bot Framework SDK 来构建机器人，并选择通过覆盖基本事件句柄来更改默认事件行为。
 
-请务必知道，将来可能会随时添加新事件，并且机器人将开始接收这些事件。 因此，必须针对接收意外事件的可能性进行设计。 如果你使用的是 Bot Framework SDK，则机器人会自动对你选择不处理的任何事件响应“200 - 正常”。
+请务必知道将来随时可以添加新事件，并且机器人开始接收这些事件。 因此，必须针对接收意外事件的可能性进行设计。 如果使用的是 Bot Framework SDK，则机器人会自动响应 200 – 对未选择处理的任何事件都确定。
 
 ## <a name="code-sample"></a>代码示例
 

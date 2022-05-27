@@ -5,12 +5,12 @@ description: 消息传递扩展操作命令及应用清单示例概述
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7bdb3a0572ab7723a03768357260f252fbbf626c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297210"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756896"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -54,7 +54,7 @@ ms.locfileid: "65297210"
 
 除了选择命令调用位置外，还必须选择如何在任务模块中为用户填充表单。 可以使用以下三个选项来创建在任务模块内呈现的表单：
 
-* **参数的静态列表**：这是最简单的方法。可以在应用清单中定义 Teams 客户端呈现的参数列表，但在这种情况下无法控制格式。
+* **参数的静态列表**：这是最简单的方法。 可以在应用清单中定义Teams客户端呈现的参数列表，但在这种情况下无法控制格式设置。
 * **自适应卡片**：可以选择使用自适应卡片，它可以更好地控制 UI，但仍会限制可用控件和格式设置选项。
 * **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以完全控制 UI 和控件。
 
@@ -77,7 +77,7 @@ ms.locfileid: "65297210"
 
 可以使用 **App Studio** 或 **开发人员门户** 创建操作命令。
 
-> [!NOTE]
+> [!WARNING]
  > 如果你一直在使用 App Studio，我们建议你尝试开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发、管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日之前弃用。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
@@ -158,7 +158,7 @@ ms.locfileid: "65297210"
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
 | `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 `text`、`textarea`、`number`、`date`、`time`、`toggle`。 默认值设置为 `text`。 | 否 | 1.4 |
 
-如果使用的是嵌入式 Web 视图，可以选择添加 `taskInfo` 对象以提取 Web 视图，而无需直接调用机器人。 如果选择此选项，则行为类似于使用静态参数列表。 在此情况下，与机器人的第一次交互是[响应任务模块提交操作](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 如果使用的是 `taskInfo` 对象，则必须将 `fetchTask` 参数设置为 `false`。
+如果使用的是嵌入式 Web 视图，可以选择添加 `taskInfo` 对象以提取 Web 视图，而无需直接调用机器人。 如果选择此选项，则行为类似于使用静态参数列表。 在此情况下，与机器人的第一次交互是[响应任务模块提交操作](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 如果使用的 `taskInfo` 是对象，则必须将 `fetchTask` 参数设置为 `false`。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
@@ -170,7 +170,7 @@ ms.locfileid: "65297210"
 
 #### <a name="app-manifest-example"></a>应用清单示例
 
-以下部分是定义两个操作命令的 `composeExtensions` 对象示例。 它不是完整的清单示例。 有关完整的应用清单架构，请参阅[应用清单架构](~/resources/schema/manifest-schema.md)：
+以下部分是定义两个操作命令的 `composeExtensions` 对象示例。 这不是完整清单的示例。 有关完整的应用清单架构，请参阅[应用清单架构](~/resources/schema/manifest-schema.md)：
 
 ```json
 ...
@@ -232,12 +232,12 @@ ms.locfileid: "65297210"
 
 ## <a name="next-step"></a>后续步骤
 
-如果在不使用 `taskInfo` 对象的情况下使用自适应卡片或嵌入式 Web 视图，下一步是：
+如果在不使用对象的情况下使用自适应卡片或嵌入式 Web 视图，下一 `taskInfo` 步是：
 
 > [!div class="nextstepaction"]
 > [使用任务模块创建和响应](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-如果将参数或嵌入式 Web 视图与 `taskInfo` 对象配合使用，下一步是：
+如果将参数或嵌入式 Web 视图与对象配合使用，下一 `taskInfo` 步是：
 
 > [!div class="nextstepaction"]
 > [响应任务模块提交](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

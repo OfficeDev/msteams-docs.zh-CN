@@ -2,16 +2,15 @@
 title: 使用 Teams 工具包发布 Teams 应用
 author: zyxiaoyuer
 description: 发布 Teams 应用
-ms.author: yanjiang
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4b997f9bf9dd7c27b497691b34b2e1978ebe1857
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2c3fdd78d833baba6bbd5f21640765577f29430b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111323"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757449"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>使用 Teams 工具包发布 Teams 应用
 
@@ -86,7 +85,7 @@ ms.locfileid: "65111323"
 
 你可以将应用直接分发到 Microsoft Teams 内的应用商店，可以覆盖全球数百万用户。 如果在应用商店你的应用得到特别推荐，则可以立即联系潜在客户。 发布到 Teams 应用商店的应用也会自动在 Microsoft AppSource 上列出，后者是 Microsoft 365 应用和解决方案的官方市场。
 
-有关详细信息，请参阅 [发布到 microsoft Teams 应用商店]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
+有关详细信息，请参阅 (将[应用发布到Microsoft Teams存储](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store)) 。
 
 ## <a name="see-also"></a>另请参阅
 

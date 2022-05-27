@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: cb9985aa1f7b9f3f5eff3308f385afbefffba3b6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191192"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756952"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>准备帐户以生成 Teams 应用
 
@@ -91,7 +91,7 @@ ms.locfileid: "65191192"
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="上传自定义应用" border="true":::
 
-        如果无法查看上传自定义应用的选项，**那么则表明你没有进行旁加载所需的权限。
+        如果无法查看 **上传自定义应用** 的选项，那么则表明你没有进行旁加载所需的权限。
         * 对于租户管理员，请在 Teams 管理中心为租户或组织启用旁加载设置。
         * 如果你不是租户管理员，则需要联系租户管理员以启用旁加载。
 

@@ -5,12 +5,12 @@ ms.topic: how-to
 keywords: 团队机器人创建
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: e531b8058581c6c3e005bb6beb2e16c1b74bfebc
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 92d4593290d1332b86b370a49b20daaf43868a51
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135694"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757386"
 ---
 # <a name="create-a-bot"></a>创建机器人
 
@@ -50,7 +50,9 @@ ms.locfileid: "65135694"
 > * 如果使用Microsoft Azure注册机器人，则无需在 Microsoft Azure 上 *托管* 机器人代码。
 > * 如果使用Azure 门户注册机器人，则必须有一个Microsoft Azure帐户。 你可以[免费创建一个](https://azure.microsoft.com/free/)。 若要在创建信用卡时验证身份，必须提供信用卡，但不会收取费用;始终可以使用Microsoft Teams创建和使用机器人。
 > * 现在可以使用 App Studio 直接在Microsoft Teams中注册/更新应用和机器人信息。 只需使用Azure 门户添加或配置其他 Bot Framework 通道，如 Direct Line、Web 聊天、Skype 和 Facebook Messenger。
->* 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 6 月 30 日前弃用
+
+> [!WARNING]
+>* 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
 
 ## <a name="see-also"></a>另请参阅
 

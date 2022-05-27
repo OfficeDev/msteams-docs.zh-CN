@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 844398ded497911f6c30cf732ab01d40b622f7ad
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104530"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757015"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
@@ -29,7 +29,7 @@ ms.locfileid: "65104530"
 >
 > 以前，可通过在应用磁贴上选择省略号来复制链接。 借助更新的 Teams 应用商店体验，你将从应用的详细信息选项卡访问同一内容。 此更新将于 2022 年 3 月 1 日正式发布 (GA)。
 
-可以在合作伙伴中心中将更改提交到应用（例如新增功能，甚至元数据）。这些更改需要新的评审过程。
+可以在合作伙伴中心中将更改提交到应用（例如新增功能，甚至元数据）。 这些更改需要新的评审过程。
 
 发布更新时，请确保满足以下要求：
 

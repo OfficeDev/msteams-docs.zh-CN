@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 6fd32b35a28ae0d9b1592f82a824622000c04161
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 04c88e840ba1edbeb657428bb76ecea86acf895a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104439"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756630"
 ---
 # <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
 
@@ -102,22 +102,22 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 <details>
 <summary><b>macOS</b></summary>
 
-1. 在活动栏的“**运行和调试**”中，选择“**调试 Edge**”或“**调试 Chrome**”
+1. 在活动栏的“**运行和调试**”中，选择“**调试 Edge**”或“**调试 Chrome**”。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器列表" border="false":::
 
-1. 选择“**开始调试 (F5)**”或“**运行**”，以在调试模式下运行 Teams 应用
+1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="调试应用" border="false":::
 
-3. 选择“**登录**”到 Microsoft 365 帐户
+3. 选择“**登录**”到 Microsoft 365 帐户。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="登录到 Microsoft 365 帐户" border="true":::
 
    > [!TIP]
    > 可以选择“**阅读更多**”，以了解Microsoft 365 开发人员计划。 打开默认 Web 浏览器，使用凭据登录到 Microsoft 365 帐户。
 
-4. 选择“**安装**”以安装本地主机的开发证书
+4. 选择“**安装**”，以安装本地主机的开发证书。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="证书" border="true":::
 
@@ -128,18 +128,16 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac 登录" border="true":::
 
-工具包根据所选内容启动新的 Edge 或 Chrome 浏览器实例，并打开网页以加载 Teams 客户端。 
+工具包根据所选内容启动新的 Edge 或 Chrome 浏览器实例，并打开网页以加载 Teams 客户端。
 
 </details>
-
 
 #### <a name="2-debug-your-app"></a>2. 调试应用
 
 初始设置过程完成后，Teams 工具包将启动以下进程：
 
 a. [启动应用服务](#starts-app-services) </br>
-b. [启动调试程序](#launches-debuggers)   </br>
-      c.[旁加载 Teams 应用](#sideloads-the-teams-app)
+b. [启动调试程序](#launches-debuggers)   </br>c.[旁加载 Teams 应用](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>启动应用服务
 
@@ -194,9 +192,9 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 <details>
 <summary><b>使用自动程序终结点</b></summary>
 
-1. 在 Visual Studio Code 设置中，清除 **确保 Ngrok 已安装并启动 (ngrok)**
+1. 在 Visual Studio Code 设置中，清除 **确保 Ngrok 已安装并启动(ngrok)**。
 
-1. 将 `.fx/configs/config.local.json` 中的 siteEndpoint 配置设置为终结点
+1. 将 `.fx/configs/config.local.json` 中的 siteEndpoint 配置设置为终结点。
 
 ```json
 {
@@ -214,9 +212,9 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 <details>
 <summary><b>使用开发证书</b></summary>
 
-1. 在 Visual Studio Code 设置中，清除 **确保开发证书受信任 (devCert)**
+1. 在 Visual Studio Code 设置中，清除 **确保开发证书受信任(devCert)**。
 
-1. 将 `.fx/configs/config.local.json` 中的 `sslCertFile` 和 `sslKeyFile` 配置设置为证书文件路径和密钥文件路径
+1. 将 `.fx/configs/config.local.json` 中的 `sslCertFile` 和 `sslKeyFile` 配置设置为证书文件路径和密钥文件路径。
 
 ```json
 {
@@ -234,11 +232,11 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 <details>
 <summary><b>使用启动脚本以启动应用服务</b></summary>
 
-1. 对于选项卡，请在 `tabs/package.json` 中更新 `dev:teamsfx` 脚本
+1. 对于选项卡，请在 `tabs/package.json`中更新 `dev:teamsfx` 脚本。
 
-1. 对于自动程序或邮件扩展，请在 `bot/package.json` 中更新 `dev:teamsfx` 脚本
+1. 对于自动程序或邮件扩展，请在 `bot/package.json` 中更新 `dev:teamsfx` 脚本。
 
-1. 对于 Azure 函数，请在 `api/package.json` 中更新 `dev:teamsfx` 脚本，并为 TypeScript 更新 `watch:teamsfx` 脚本
+1. 对于 Azure 函数，请在 `api/package.json` 中更新 `dev:teamsfx` 脚本，并为 TypeScript 更新 `watch:teamsfx` 脚本。
 
    > [!NOTE]
    > 当前不支持自定义选项卡、自动程序、邮件扩展应用和 Azure 函数端口。
@@ -261,7 +259,7 @@ Teams 工具包通过取消选中某些先决条件，自定义调试设置以�
 
 Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选项卡、自动程序、邮件扩展和 Azure 函数。 可以更新 `.vscode/launch.json` 和 `.vscode/tasks.json` 来调试部分组件。 如果只想在 Azure 函数项目中调试选项卡和自动程序，请使用以下步骤：
 
-1. 注释 **连接到自动程序**，**从 `.vscode/launch.json` 中的调试组件连接到后端**
+1. 注释 **连接到自动程序**，**从 `.vscode/launch.json` 中的调试组件连接到后端**。
 
    ```json
    {
@@ -298,7 +296,6 @@ Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选
    ```
 
 </details>
-
 
 ## <a name="next-step"></a>后续步骤
 

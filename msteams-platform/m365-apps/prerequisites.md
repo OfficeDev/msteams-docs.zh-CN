@@ -4,12 +4,12 @@ description: 下面是跨 Microsoft 365 扩展 Teams 应用的先决条件
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: aede01c48f9e5e4ddbfbfebac9a5fa504225ca62
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656178"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668023"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>设置开发环境以跨 Microsoft 365 扩展 Teams 应用
 
@@ -31,9 +31,9 @@ ms.locfileid: "65656178"
 
 还需要为租户启用旁加载：
 
-1. 使用你的测试租户凭据登录 Microsoft 365 管理中心 (https://admin.microsoft.com))，然后从侧面板中选择“**Teams**”以打开 *Microsoft Teams 管理中心*
-1. 选择：Teams 应用 > 管理应用 > **组织范围的应用设置**
-1. 在“**自定义应用**”下，打开选项“*与自定义应用交互*”
+1. 使用你的测试租户凭据登录 Microsoft 365 管理中心（https://admin.microsoft.com)），然后从侧面板中选择“**Teams**”以打开 *Microsoft Teams 管理中心*。
+1. 选择：Teams 应用 >“管理应用”>“**组织范围的应用设置**”。
+1. 在“**自定义应用**”下，打开选项“*与自定义应用交互*”。
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="从 Teams 管理中心为自定义应用启用旁加载":::
 
@@ -77,7 +77,7 @@ ms.locfileid: "65656178"
 
     :::image type="content" source="images/windows-addremove-webview2.png" alt-text="在 Windows 设置的“应用和功能”下搜索“webview”":::
 
-    如果未列出，请将 [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) 安装到测试环境。
+    如果未列出，则将 [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) 安装到测试环境。
 
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>切换到开发人员预览版 Teams
 
@@ -93,11 +93,13 @@ ms.locfileid: "65656178"
 
 或者，可以使用 [Visual Studio Code](https://code.visualstudio.com/) 将 Teams 应用扩展到 Office 和 Outlook。
 
-扩展[适用于 Visual Studio Code 的 Teams 工具包](https://aka.ms/teams-toolkit)（`v2.10.0` 或更高版本）提供有助于修改现有 Teams 代码以与 Outlook 和 Office 兼容的命令。有关详细信息，请参阅[为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)。
+[Visual Studio Code 的 Teams 工具包扩展](https://aka.ms/teams-toolkit)（`v2.10.0` 或更高版本）提供了有助于修改现有 Teams 代码以与 Outlook 和 Office 兼容的命令。 有关详细信息，请参阅[为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)。
 
 ## <a name="next-step"></a>后续步骤
 
 创建或更新 Teams 应用以跨 Microsoft 365 运行：
 
-* [为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)
-* [为 Outlook 启用 Teams 消息扩展](extend-m365-teams-message-extension.md)
+> [!div class="nextstepaction"]
+> [为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)
+> [!div class="nextstepaction"]
+> [为 Outlook 启用 Teams 消息扩展](extend-m365-teams-message-extension.md)

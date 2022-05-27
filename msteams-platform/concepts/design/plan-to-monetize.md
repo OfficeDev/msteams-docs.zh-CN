@@ -4,16 +4,16 @@ description: 了解如何规划以实现 Microsoft Teams 应用盈利。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 2a799f7a796405327c075d6729fba7901d73cdaa
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 9a21304666866da5c08af5ba3df1f0a48297398c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63502004"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756847"
 ---
 # <a name="plan-to-monetize-your-app"></a>规划实现应用盈利
 
-构建 Teams 应用最重要的目标之一是解决用户在协作区域中的问题。 实现此目标的应用适合成为供全球使用的实用工具。 借助 Microsoft Teams 应用商店提供的功能，你将可以通过与用户互动来实现应用盈利并获得客户。
+构建 Teams 应用最重要的目标之一是解决用户在协作区域中的问题。 实现此目标的应用适合成为供全球使用的实用工具。 借助 Microsoft Teams 应用商店提供的功能，你将可以通过与用户互动来实现应用盈利并获得更多客户。
 
 请考虑在 Teams 应用商店上发布应用，为应用提供最佳平台以实现全球可见性。 应用类型、服务性质和目标客户等因素将影响你在最佳盈利选项方面进行的选择。
 

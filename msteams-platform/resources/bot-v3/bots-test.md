@@ -3,14 +3,14 @@ title: 测试和调试机器人
 description: 介绍了如何在 Microsoft Teams 中测试机器人
 keywords: Teams 机器人测试
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 7eae460614f33456748b2546e36c10924f49b25d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111470"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755910"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>测试和调试 Microsoft Teams 机器人
 
@@ -55,11 +55,11 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 2. 直接从 Microsoft Teams 中引用机器人的应用 ID：
    * 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**详细信息**”下，复制机器人的“**Microsoft 应用 ID**”。
   
-     ![获取机器人的 AppID](~/assets/images/bots_appid_botframework.png)
+      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="机器人仪表板":::
   
    * 在 Microsoft Teams 内的“**聊天**”窗格中，选择“**添加聊天**”图标。 对于 **To:**，粘贴机器人的 Microsoft 应用 ID。
   
-     ![上传机器人的 AppID](~/assets/images/bots_uploading.png)
+      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="上传机器人的 AppID"border="true":::
 
      应用 ID 应解析为机器人名称。
 
@@ -72,7 +72,7 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 
 请注意，用户可以选择阻止机器人发送个人聊天消息。 他们可以通过在聊天频道中右键单击机器人并选择 **阻止机器人对话** 来切换此问题。 这意味着机器人将继续发送消息，但用户不会收到这些消息。
 
-![阻止机器人](~/assets/images/bots/botdisable.png)
+  :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="阻止机器人"border="true":::
 
 ## <a name="removing-a-bot-from-a-team"></a>从团队中删除机器人
 

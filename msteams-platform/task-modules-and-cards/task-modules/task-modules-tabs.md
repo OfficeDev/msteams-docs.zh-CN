@@ -1,15 +1,15 @@
 ---
 title: 在 Microsoft Teams 选项卡中使用任务模块
 description: 介绍如何从 Teams 选项卡调用任务模块，并使用 Microsoft Teams 客户端 SDK 提交其结果。 它包括代码示例。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: 任务模块 Teams 选项卡客户端 sdk
-ms.openlocfilehash: eb199842a60832e6eb77575a7438cc9f52db6e09
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 61955a9afd070a17b17210239054819f02d3b484
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111225"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756694"
 ---
 # <a name="use-task-modules-in-tabs"></a>在选项卡中使用任务模块
 
@@ -35,7 +35,7 @@ microsoftTeams.tasks.submitTask(
 
 若要从选项卡调用任务模块，请使用 `microsoftTeams.tasks.startTask()` 传递 [TaskInfo 对象](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) 和可选 `submitHandler` 回调函数。 请考虑下列两种情况：
 
-* 其值 `TaskInfo.url` 设置为 URL。 将显示任务模块窗口，并 `TaskModule.url` 将其加载为其中的窗口 `<iframe>`。 该页上的 JavaScript 调用 `microsoftTeams.initialize()`。 如果页面上有一个 `submitHandler` 函数，并且调用 `microsoftTeams.tasks.startTask()` 时出错，则 `submitHandler` 调用 `err` 时设置为表示相同的错误字符串。 有关详细信息，请参阅 [任务模块调用错误](#task-module-invocation-errors)。
+* 其值 `TaskInfo.url` 设置为 URL。 将显示任务模块窗口，并 `TaskModule.url` 将其加载为其中的窗口 `<iframe>`。 该页上的 JavaScript 调用 `microsoftTeams.initialize()`。 如果页面上有一个 `submitHandler` 函数，并且调用 `microsoftTeams.tasks.startTask()`时出现错误，则 `submitHandler` 调用 `err` 时设置为表示相同的错误字符串。 有关详细信息，请参阅 [任务模块调用错误](#task-module-invocation-errors)。
 * 其 `taskInfo.card` 值 [ 为自适应卡片的 JSON](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment)。 当用户关闭或按下自适应卡片上的按钮时，没有要调用的 JavaScript `submitHandler` 函数。 接收用户输入的内容的唯一方法是将结果传递给机器人。 若要从选项卡使用自适应卡片任务模块，应用必须包含机器人才能从用户获取任何响应。
 
 下一部分提供了调用任务模块的示例。
@@ -70,13 +70,13 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-`submitHandler` 非常简单，它将 `err` 或 `result` 的值回显到控制台。
+简单`submitHandler`，它与控制台或`result`主机的`err`值相呼应。
 
 ## <a name="submit-the-result-of-a-task-module"></a>提交任务模块的结果
 
-该 `submitHandler` 函数驻留在 `TaskInfo.url` 网页中，并与`TaskInfo.url` 一起使用。 如果调用任务模块时出错，则会立即调用`submitHandler` 函数，其中包含一个 `err` 字符串，指示 [发生错误](#task-module-invocation-errors)。 当用户选择任务模块右上角的 X 以关闭`submitHandler` 函数时，还会使用 `err` 字符串调用该函数。
+该 `submitHandler` 函数驻留在 `TaskInfo.url` 网页中，并与`TaskInfo.url` 一起使用。 如果调用任务模块时出错，则会立即调用函数， `submitHandler` 其中包含一个 `err` 字符串，指示 [发生的错误](#task-module-invocation-errors)。 当用户选择任务模块右上角的 X 以关闭`submitHandler` 函数时，还会使用 `err` 字符串调用该函数。
 
-如果没有调用错误，并且用户未选择 X 将其关闭，则用户会在完成后选择一个按钮。 确定任务模块中的 URL 或自适应卡片，下一部分提供有关具体情况的详细信息。
+如果没有调用错误，并且用户未选择 X 将其关闭，则用户会在完成后选择一个按钮。 根据任务模块中的 URL 还是自适应卡片，下一部分提供有关发生情况的详细信息。
 
 ### <a name="html-or-javascript-taskinfourl"></a>HTML 或 JavaScript `TaskInfo.url`
 
@@ -86,7 +86,7 @@ microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 
 ### <a name="adaptive-card-taskinfocard"></a>自适应卡片`TaskInfo.card`
 
-使用某个任务模块调用 `submitHandler` 任务模块，用户选择一个 `Action.Submit` 按钮时，卡片中的值将作为值 `result` 返回。 如果用户选择右上角的 Esc 键或 X，则 返回 `err`。 如果应用除了选项卡外还包含机器人，则只需将机器人的值`completionBotId`包含`appId`在对象中`TaskInfo`。 用户填写的自适应卡片正文会在用户选择`Action.Submit`按钮时使用`task/submit invoke`消息发送到机器人。 收到的对象架构与 [ 收到的任务/提取和任务/提交消息的架构 ](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages) 非常相似。 唯一区别是，JSON 对象的架构是自适应卡片对象，而不是包含自适应卡片对象的对象，[就像使用自适应卡片和机器人一样](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)。
+使用某个任务模块调用 `submitHandler` 任务模块，用户选择一个 `Action.Submit` 按钮时，卡片中的值将作为值 `result` 返回。 如果用户选择右上角的 Esc 键或 X，则 返回 `err`。 如果应用除了选项卡外还包含机器人，则可以将机器人作为对象中的值包含`appId`在内`TaskInfo`。`completionBotId` 用户填写的自适应卡片正文会在用户选择`Action.Submit`按钮时使用`task/submit invoke`消息发送到机器人。 你收到的对象的架构类似于 [为任务/提取和任务/提交消息接收的架构](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)。 唯一区别是，JSON 对象的架构是自适应卡片对象，而不是包含自适应卡片对象的对象，[就像使用自适应卡片和机器人一样](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)。
 
 下一部分提供了提交任务模块结果的示例。
 

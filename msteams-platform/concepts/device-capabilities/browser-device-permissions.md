@@ -2,18 +2,18 @@
 title: 浏览器的设备权限
 keywords: Teams 应用功能权限
 description: 安全地恢复 Web 客户端中应用的设备权限支持
-localization_priority: high
+localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: beb9007593bd1c9a660429d9e92a08e39c1f4710
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111365"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756742"
 ---
 # <a name="device-permissions-for-the-browser"></a>浏览器的设备权限
 
-需要设备权限（如相机或麦克风访问）的 Teams 应用现在要求用户在 Web 浏览器中的每个应用级别手动授予权限。 以前，浏览器处理了如何授予访问权限的问题，但现在这些权限在 Microsoft Teams 中处理。 这会影响应用程序的设计方式，以及它们在浏览器中是否需要这些权限。
+Teams需要设备权限（如相机或麦克风访问）的应用现在要求用户在 Web 浏览器中手动授予每个应用级别的权限。 以前，浏览器处理了如何授予访问权限的问题，但现在这些权限在 Microsoft Teams 中处理。 这会影响应用程序的设计方式，以及它们在浏览器中是否需要这些权限。
 
 ## <a name="enable-apps-device-permissions"></a>启用应用的设备权限
 
@@ -33,7 +33,7 @@ ms.locfileid: "65111365"
 
 ## <a name="recommendation"></a>建议
 
-在浏览器中需要设备权限的 Teams 应用必须向用户显示有关在 Teams UI 中查找和启用这些权限的说明。 根据运行应用程序的上下文，需要确保说明将用户指向访问这些权限的正确位置，因为它们对个人应用、任务模块对话框、聊天中的选项卡以及频道或会议有所不同。
+在浏览器中需要设备权限的Teams应用必须向用户显示有关在Teams UI 中查找和启用这些权限的说明。 根据运行应用程序的上下文，需要确保说明指向用户访问这些权限的正确位置。 个人应用、任务模块对话框、聊天中的选项卡以及频道或会议的权限不同。
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>

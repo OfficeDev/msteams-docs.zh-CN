@@ -2,16 +2,16 @@
 title: 使用 Teams 工具包和 Visual Studio 构建应用
 description: 开始使用 Microsoft Teams 工具包直接在 Visual Studio 中构建出色的自定义应用。 了解如何在 Visual Studio 中配置应用、验证应用，并从 Visual Studio 和开发人员门户发布应用。
 keywords: Teams Visual Studio 工具包
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 751ea9b8a0f4592c5884c4d49450972cef7e6623
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 9dbe606b99ef493a136381667bbd1c1da1f955b0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111309"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756455"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Visual Studio 的Teams工具包
 
@@ -31,7 +31,7 @@ ms.locfileid: "65111309"
 5. 在右侧展开 “**ASP.NET 和 Web 开发**”部分，并在组件的可选列表中选择“**Microsoft Teams 开发工具**”。
 6. 在 Visual Studio 安装程序中选择“**安装**”或者“**修改**”，完成安装过程。
 
-![在安装的 Visual Studio 安装程序中选择 Microsoft Teams 开发工具。](images/teams-development-tools-vs-installer.png)
+   ![在安装的 Visual Studio 安装程序中选择 Microsoft Teams 开发工具。](images/teams-development-tools-vs-installer.png)
 
 ## <a name="get-started-quickly-with-a-new-project"></a>快速开始新项目
 
@@ -49,7 +49,7 @@ Teams 工具包项目模板提供了开始一个 Teams 应用项目需要的所�
 1. 在“**配置新项目**”窗口中，在”**Project 名称**“框中键入或输入”_HelloTeams_“。 然后，选择“**创建**”。
 1. 在“**新建 Teams 应用程序**”窗口中，使用“**选择帐户**”选择器选择或登录到 Microsoft 365 帐户。 然后，选择“**创建**”。
 
-![在 Visual Studio 中新建 Microsoft Teams 应用项目。](images/teams-toolkit-vs-new-project.png)
+   ![在 Visual Studio 中新建 Microsoft Teams 应用项目。](images/teams-toolkit-vs-new-project.png)
 
 Visual Studio 将打开新项目，Teams 工具包将在 Teams 开发人员门户中设置新项目。 项目将被添加到 Teams 组织（链接到在上述步骤中选择的 Microsoft 365 账户，并新建 Azure Active Directory 注册）。 这是在 Teams 中运行应用所必需的。
 

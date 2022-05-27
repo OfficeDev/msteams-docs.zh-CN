@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 5da4a0ada6e116a22957a6f1f1b1f2f281501e2a
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654466"
+ms.locfileid: "65656150"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>使用 Teams 工具包创建新的 Teams 应用
 
@@ -32,7 +32,7 @@ ms.locfileid: "65654466"
    
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="创建应用":::
    
-1. 如果选择“**创建新的 Teams 应用**”，则下图将显示来自三个类别的模板：基于方案的 Teams 应用、基本 Teams 应用和跨 Microsoft 365 的扩展 Teams 应用： 
+1. 如果选择“**新建 Teams 应用**”，则以下图像将显示三个类别的模板：基于方案的 Teams 应用、基本 Teams 应用和 Microsoft 365 中的扩展 Teams 应用： 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Teams 应用的功能":::
 
@@ -53,10 +53,10 @@ ms.locfileid: "65654466"
    
     :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="示例库":::
 
-  可以浏览如下所示的示例库：
+  可按以下方式浏览示例库：
 
   1. 选择一个示例以浏览详细信息。
-  1. 在每个示例的信息页中选择“**创建**”以下载它。 
+  1. 在每个示例的信息页面中选择“**创建**”以下载它。 
   1. 通过按照下载示例后自动打开的说明进行操作，在本地或远程运行应用以在 Teams Web 客户端中预览。
   1. 如果不希望下载示例，则可以选择“**在 GitHub 上查看**”，以在 GitHub 示例存储库中打开示例并浏览源代码。
 
@@ -66,8 +66,8 @@ ms.locfileid: "65654466"
 * [通过 JavaScript 使用 React 构建 Teams 应用](../sbs-gs-javascript.yml)
 * [使用 SPFx 构建 Teams 应用](../sbs-gs-spfx.yml)
 * [使用 C# 或 .NET 构建 Teams 应用](../sbs-gs-csharp.yml)
-* 向 Teams 发送通知 
-* 生成命令机器人
+* [向 Teams 发送通知](../sbs-gs-notificationbot.yml)
+* [生成命令机器人](../sbs-gs-commandbot.yml)
 
 ## <a name="see-also"></a>另请参阅
 

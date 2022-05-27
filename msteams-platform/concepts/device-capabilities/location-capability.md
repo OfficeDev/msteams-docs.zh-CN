@@ -6,12 +6,12 @@ keywords: 位置映射功能, 本机设备权限
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 369e9307a8007d45cc42ae4059b16cdcf9a3cc4c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111183"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757169"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能
 
@@ -29,7 +29,7 @@ ms.locfileid: "65111183"
 * 位置功能使服务提供商的维护人员能够与管理层共享基站的真实运行状况数据。 管理层可以比较捕获的位置信息与维护人员提交的数据之间的任何不匹配。
 
 若要集成位置功能，必须更新应用清单文件并调用 API。 若要进行有效的集成，必须充分了解用于调用位置 API 的[代码片段](#code-snippets)。
-熟悉 [API 响应错误](#error-handling)以处理 Teams 应用中的错误，这一点非常重要。
+请务必熟悉 [API 响应错误](#error-handling)，以处理 Teams 应用中的错误。
 
 > [!NOTE]
 > 目前，Microsoft Teams 对位置功能的支持仅适用于移动客户端。

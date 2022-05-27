@@ -2,14 +2,14 @@
 title: 通过团队中的速率限制来优化你的智能机器人
 description: 使用代码示例，了解如何使用每机器人每线程限制和所有机器人每线程限制来处理速率限制。 此外，了解 Microsoft Teams 中关于速率限制的最佳做法。
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams 机器人速率限制
-ms.openlocfilehash: 09b3f0b79737e3da09b34ebe1931a7209632cca1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111806"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757148"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 
@@ -46,7 +46,7 @@ catch (HttpOperationException ex)
 
 一般情况下，必须采取简单的预防措施以避免收到 `HTTP 429` 响应。 例如，避免向同一个人或频道对话发出多个请求。 而是创建一批 API 请求。
 
-建议将指数退避和随机抖动结合使用来处理 429 响应。 这可确保多个请求不会在重试时引发冲突。
+建议将指数退避和随机抖动结合使用来处理 429 响应。 这可确保多个请求不会在重试时引入冲突。
 
 处理 `HTTP 429` 响应后，可查看关于检测暂时性异常的示例。
 
@@ -120,7 +120,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 ## <a name="per-bot-per-thread-limit"></a>每机器人每线程限制
 
-每机器人每线程限制用于控制一台机器人可在单个会话中生成的流量。 机器人与用户、群组聊天或团队中的频道之间进行 1:1 的对话。 因此，如果应用程序向每位用户发送一条机器人消息，则线程限制不起作用。
+每机器人每线程限制用于控制一台机器人可在单个会话中生成的流量。 机器人与用户、群组聊天或团队中的频道之间进行 1:1 的对话。 因此，如果应用程序向每个用户发送一条机器人消息，则线程限制不会限制。
 
 >[!NOTE]
 >
@@ -140,11 +140,11 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | 创建对话 | 2 | 8  |
 | 创建对话 | 30 | 60 |
 | 创建对话 | 3600 | 1800 |
-| 获取对话成员| 1 | 14  |
+| 获取对话成员| 1 | 14 |
 | 获取对话成员| 2 | 16 |
 | 获取对话成员| 30 | 120 |
 | 获取对话成员| 3600 | 3600 |
-| 获取对话 | 1 | 14  |
+| 获取对话 | 1 | 14 |
 | 获取对话 | 2 | 16 |
 | 获取对话 | 30 | 120 |
 | 获取对话 | 3600 | 3600 |
@@ -156,17 +156,17 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 ## <a name="per-thread-limit-for-all-bots"></a>所有机器人每线程限制
 
-所有机器人每线程限制用于控制所有机器人可在单个会话中生成的流量。 在此处，机器人与用户、群组聊天或团队中的频道之间进行 1:1 的对话。
+所有机器人每线程限制用于控制所有机器人可在单个会话中生成的流量。 此处的聊天是机器人和用户之间的 1：1、群组聊天或团队中的频道。
 
 下表提供了所有机器人每线程的限制：
 
 | 应用场景 | 时间（秒） | 允许的最大操作数 |
 | --- | --- | --- |
-| 发送到对话 | 1 | 14  |
+| 发送到对话 | 1 | 14 |
 | 发送到对话 | 2 | 16 |
-| 创建对话 | 1 | 14  |
+| 创建对话 | 1 | 14 |
 | 创建对话 | 2 | 16 |
-| 创建对话| 1 | 14  |
+| 创建对话| 1 | 14 |
 | 创建对话| 2 | 16 |
 | 获取对话成员| 1 | 28 |
 | 获取对话成员| 2 | 32 |
