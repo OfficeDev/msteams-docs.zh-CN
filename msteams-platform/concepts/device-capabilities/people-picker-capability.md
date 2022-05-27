@@ -5,12 +5,12 @@ keywords: 人员选取器控件
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: a2e2a21f0485e0df87f8963defbe54ed540e455a
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755893"
+ms.locfileid: "65757589"
 ---
 # <a name="integrate-people-picker"></a>集成人员选取器
 
@@ -34,7 +34,7 @@ ms.locfileid: "65755893"
 * 允许用户搜索并从列表中选择一个或多个人员。
 * 将所选用户的 ID、名称和电子邮件地址返回到 Web 应用。
 
-对于个人应用，控件会在 Teams 中搜索整个组织的名称或电子邮件 ID。 如果将应用添加到聊天或频道中，则根据方案配置搜索上下文。 搜索受限于该聊天或频道的成员。
+在个人应用中，控件会在 Teams 中搜索整个组织的名称或电子邮件 ID。 如果将应用添加到聊天或频道中，则根据方案配置搜索上下文。 搜索受限于该聊天或频道的成员。
 
 `selectPeople` API 附带以下输入配置:
 

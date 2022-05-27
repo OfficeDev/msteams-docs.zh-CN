@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 的清单架构
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672906"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755879"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -17,7 +17,7 @@ Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产�
 有关每个版本中所做的更改的详细信息，请参阅[管理更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
 
 > [!Important]
-> Microsoft Teams 应用清单架构的版本 `1.13` 启用了对 [将 Teams 应用扩展到 Outlook 和 Office](../../m365-apps/overview.md) 的支持。 对于仅限 Teams 的应用，请使用版本 `1.12`（或更早版本）。 否则，1.12 和 1.13 架构相同。 请参阅 [Teams JavaScript 客户端 SDK](../../m365-apps/overview.md) 概述以获取进一步指导。
+> Microsoft Teams 应用清单架构的版本 `1.13` 启用了对 [将 Teams 应用扩展到 Outlook 和 Office](../../m365-apps/overview.md) 的支持。 对于仅限 Teams 的应用，请使用版本 `1.12`（或更早版本）。 否则，1.12 和 1.13 架构相同。 请参阅 [Teams JavaScript 客户端 SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) 概述以获取进一步指导。
 
 以下架构示例显示所有扩展性选项：
 

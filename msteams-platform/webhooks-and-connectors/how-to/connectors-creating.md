@@ -6,12 +6,12 @@ keywords: teams Office365 连接器
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 8091edf34ff53930afea03cd2c4833bf6a000158
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 3258e6b08041abbfcd3e0b9a4365d6a31f884e0b
+ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297147"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65759660"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -224,7 +224,9 @@ ms.locfileid: "65297147"
 ## <a name="distribute-webhook-and-connector"></a>分发 Webhook 和连接器
 
 1. 直接为团队[设置传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook)。
+
 1. 添加[配置页](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)并在 Office 365 连接器中发布传入 Webhook。
+
 1. 在 [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) 提交过程中打包并发布连接器。
 
 ## <a name="code-sample"></a>代码示例

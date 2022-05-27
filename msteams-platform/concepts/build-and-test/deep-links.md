@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 了解如何描述 Teams 深层链接以及如何在应用中使用它们。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a57487f64070955b21c8b11bd9995f0f2201b0e2
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672955"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756767"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -57,7 +57,7 @@ Microsoft Teams JavaScript 客户端 SDK (TeamsJS) 简化了导航过程。 对�
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
 ```
 
-需要将字段替换为相应的信息：
+需要将字段替换为适当的信息：
 
 * `subPageId`：要向其进行深层链接的页面内项的唯一标识符。
 * `subPageLabel`：用于显示深层链接的项的标签。
@@ -73,7 +73,7 @@ pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subP
 microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })
 ```
 
-需要将字段替换为相应的信息：
+需要将字段替换为适当的信息：
 
 * `subEntityId`：要向其进行深层链接的选项卡内项的唯一标识符。
 * `subEntityLabel`：用于显示深层链接的项的标签。
@@ -173,7 +173,7 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 
 使用 TeamsJS 的好处之一，尤其是对于可能在其他主机 (Outlook 和 Office) 中运行的 Teams 应用，可以检查主机是否支持你尝试使用的功能。 若要检查主机对功能的支持，可以使用与 API 命名空间关联的 `isSupported()` 函数。 TeamsJS SDK 通过命名空间将 API 组织为功能。 例如，在命名空间 `pages` 中使用 API 之前，可以检查从 `pages.isSupported()` 返回的布尔值，并在应用和应用 UI 的上下文中执行相应操作。  
 
-有关 TeamsJS 中的功能和 API 的其他信息，请参阅 [使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities)。
+有关 TeamsJS 中的功能和 API 的更多信息，请参阅 [使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities)。
 
 ### <a name="navigate-within-your-app"></a>在应用内导航
 
@@ -328,9 +328,9 @@ else { /* handle case where capability isn't supported */ }
 
 查询参数为：
 
-* `channelId`：会话的频道 ID。 例如 `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`。
+* `channelId`：会话的频道 ID。 例如，`19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`。
 * `tenantId`：租户 ID，如 `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`。
-* `groupId`：文件的组 ID。例如 `3606f714-ec2e-41b3-9ad1-6afb331bd35d`。
+* `groupId`：文件的组 ID。 例如，`3606f714-ec2e-41b3-9ad1-6afb331bd35d`。
 * `parentMessageId`：会话的父消息 ID。
 * `teamName`：团队名称。
 * `channelName`：团队频道的名称。
@@ -353,7 +353,7 @@ else { /* handle case where capability isn't supported */ }
 * `baseUrl`：文件的基本 URL。 格式为 `https://{tenantName}.sharepoint.com/sites/{TeamName}`。 例如，`https://microsoft.sharepoint.com/teams`。
 * `serviceName`：服务名称、应用 ID。 例如，`teams`。
 * `threadId`：threadId 是存储文件的团队的团队 ID。 它是可选的，不能为存储在用户 OneDrive 文件夹中的文件设置。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype。
-* `groupId`：文件的组 ID。例如 `ae063b79-5315-4ddb-ba70-27328ba6c31e`。
+* `groupId`：文件的组 ID。 例如，`ae063b79-5315-4ddb-ba70-27328ba6c31e`。
 
 > [!NOTE]
 > 可以在通道的 URL 中看到 `threadId` 和 `groupId`。  
@@ -407,7 +407,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 通过指定通话类型和参与者，可以向单个用户或一组用户调用仅音频或音频视频聊天。 在进行呼叫之前，Teams 客户端会提示确认以进行呼叫。 对于群组调用，可以在同一深层链接调用中调用一组 VoIP 用户和一组 PSTN 用户。
 
-在进行视频通话时，客户端将请求确认并打开呼叫方的通话视频。 呼叫接收方可以选择通过 Teams 呼叫通知窗口通过仅音频或音频和视频进行响应。
+在视频通话时，客户端将请求确认并打开呼叫方的通话视频。 呼叫接收方可以选择通过 Teams 呼叫通知窗口通过仅音频或音频和视频进行响应。
 
 > [!NOTE]
 > 此方法不能用于调用会议。
@@ -438,7 +438,7 @@ else { /* handle case where capability isn't supported */ }
   
 下面是查询参数：
 
-* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。当前，用户 ID 字段支持 Azure AD UserPrincipalName（通常为电子邮件地址），或在 PSTN 调用时，支持 pstn mri 4:&lt;phonenumber&gt;。
+* `users`：表示呼叫参与者的用户 ID 的逗号分隔列表。 目前，用户 ID 字段支持 Azure AD UserPrincipalName（通常为电子邮件地址），或者在 PSTN 通话时，它支持 pstn mri 4:&lt;phonenumber&gt;。
 * `withVideo`：这是一个可选参数，可用于进行视频通话。 设置此参数将仅打开调用方的相机。 呼叫接收方可以选择通过 Teams 呼叫通知窗口通过音频或音频和视频呼叫进行应答。
 * `Source`：这是一个可选参数，用于通知深层链接的源。
 

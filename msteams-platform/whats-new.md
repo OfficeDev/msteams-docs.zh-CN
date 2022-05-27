@@ -4,12 +4,12 @@ description: 介绍 Microsoft Teams 中的所有新的或最新的开发人员�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队最新更新或开发人员预览版和功能
-ms.openlocfilehash: e116cb5bbe9344d4782e4d75b65e0baea5c0339b
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 2150c0dba509a1dc9c46d149538e1951cafcc955
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/25/2022
-ms.locfileid: "65667965"
+ms.locfileid: "65672962"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -17,12 +17,13 @@ ms.locfileid: "65667965"
 
 ## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng-borderfalse"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png" border="false":::
 
-| 日期 | 功能 | 在此处找到它 |
+| Date | 功能 | 在此处找到它 |
 | --- | --- | --- |
-| 2022 年 5 月 24 日| [*开发人员预览*] <br> 通过 Live Share SDK 增强协作 |  为 Teams 会议建立应用程序 > 通过 Live Share 加强协作 > [概述](apps-in-teams-meetings/teams-live-share-overview.md) |
-|2022 年 5 月 24 日| 将已启用 Outlook 和 Office 的应用提交到 Teams 应用商店 | 在 Microsoft 365 中扩展应用 > [概述](m365-apps/overview.md) |
+| 2022 年 5 月 24 日| [*开发者预览版*] <br> 通过 Live Share SDK 增强协作 |  构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
+|2022 年 5 月 24 日| 将已启用 Outlook 和 Office 的应用提交到 Teams 应用商店 | 在 Microsoft 365 中扩展应用>[概述](m365-apps/overview.md) |
 |2022 年 5 月 24 日| TeamsJS 版本 2.0.0 中的应用指南和新增功能| 工具和 SDK > [Teams JavaScript 客户端 SDK](tabs/how-to/using-teams-client-sdk.md)  |
-| 2022 年 5 月 24 日 | 适用于 Visual Studio Code 的 Teams 工具包版本 4.0.0 现已正式发布 | 工具和 SDK > 适用于 Visual Studio Code 的 Teams 工具包 > <br> • [Teams 工具包概述](toolkit/teams-toolkit-fundamentals.md) <br> • [使用 JavaScript 生成命令机器人](toolkit/add-capability.md) <br> • [使用 JavaScript 生成通知机器人](toolkit/add-capability.md) <br> • [预览并自定义 Teams 应用清单](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [连接现有 API](toolkit/add-API-connection.md) <br> • [将功能添加到 Teams 应用](toolkit/add-capability.md) <br> • [添加单一登录体验](toolkit/add-single-sign-on.md) <br> • [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
+| 2022 年 5 月 24 日 | 适用于 Visual Studio Code 的 Teams 工具包版本 4.0.0 现已正式发布 | 工具和 SDK > 适用于 Visual Studio Code 的 Teams 工具包 > <br> • [Teams 工具包概述](toolkit/teams-toolkit-fundamentals.md) <br> • [使用 JavaScript 生成命令机器人](toolkit/add-capability.md) <br> • [使用 JavaScript 生成通知机器人](toolkit/add-capability.md) <br> • [预览并自定义 Teams 应用清单](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [连接到现有 API](toolkit/add-API-connection.md) <br> • [将功能添加到 Teams 应用](toolkit/add-capability.md) <br> • [添加单一登录体验](toolkit/add-single-sign-on.md) <br> • [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
+| 2022 年 5 月 24 日 | 已引入应用清单版本 1.13 | 应用清单> [Microsoft Teams 的清单架构](resources/schema/manifest-schema.md) |
 | 2022 年 5 月 24 日 | GCC 和 GCCH 中的机器人和消息扩展 | • 规划应用 > [概述](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • 生成机器人 > [概述](bots/what-are-bots.md) </br> • 生成邮件扩展 > [概述](messaging-extensions/what-are-messaging-extensions.md) |
 
 <!--
@@ -75,10 +76,11 @@ ms.locfileid: "65667965"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-|2022 年 5 月 24 日| 有关快速批准发布链接到 SaaS 产品/服务的应用的其他提示 | 发布到 Teams 应用商店 > 概述 > [快速批准发布链接到 SaaS 产品/服务的应用的其他提示](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
-|2022 年 5 月 24 日| 将已启用 Outlook 和 Office 的应用提交到 Teams 应用商店 | 在 Microsoft 365 中扩展应用 > [概述](m365-apps/overview.md) |
+|2022 年 5 月 24 日| 快速批准发布链接到 SaaS 产品/服务的应用的其他提示 | 发布到 Teams 应用商店>概述>[快速批准发布链接到 SaaS 产品/服务的应用的其他提示](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
+|2022 年 5 月 24 日| 将已启用 Outlook 和 Office 的应用提交到 Teams 应用商店 | 在 Microsoft 365 中扩展应用>[概述](m365-apps/overview.md) |
 |2022 年 5 月 24 日| TeamsJS 版本 2.0.0 中的应用指南和新增功能| 工具和 SDK > [Teams JavaScript 客户端 SDK](tabs/how-to/using-teams-client-sdk.md)  |
-| 2022 年 5 月 24 日 | 适用于 Visual Studio Code 的 Teams 工具包版本 4.0.0 现已正式发布 | 工具和 SDK > 适用于 Visual Studio Code 的 Teams 工具包 > <br> •  [Teams 工具包概述](toolkit/teams-toolkit-fundamentals.md) <br> • [使用 JavaScript 生成命令机器人](toolkit/add-capability.md) <br> • [使用 JavaScript 生成通知机器人](toolkit/add-capability.md) <br> • [预览并自定义 Teams 应用清单](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [连接现有 API](toolkit/add-API-connection.md) <br> • [将功能添加到 Teams 应用](toolkit/add-capability.md) <br> • [添加单一登录体验](toolkit/add-single-sign-on.md) <br> • [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
+| 2022 年 5 月 24 日 | 适用于 Visual Studio Code 的 Teams 工具包版本 4.0.0 现已正式发布 | 工具和 SDK > 适用于 Visual Studio Code 的 Teams 工具包 > <br> •  [Teams 工具包概述](toolkit/teams-toolkit-fundamentals.md) <br> • [使用 JavaScript 生成命令机器人](toolkit/add-capability.md) <br> • [使用 JavaScript 生成通知机器人](toolkit/add-capability.md) <br> • [预览并自定义 Teams 应用清单](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [连接到现有 API](toolkit/add-API-connection.md) <br> • [将功能添加到 Teams 应用](toolkit/add-capability.md) <br> • [添加单一登录体验](toolkit/add-single-sign-on.md) <br> • [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
+| 2022 年 5 月 24 日 | 已引入应用清单版本 1.13 | 应用清单> [Microsoft Teams 的清单架构](resources/schema/manifest-schema.md) |
 |2022 年 5 月 24 日|GCC 和 GCCH 中的机器人和消息扩展| • 规划应用 > [概述](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • 生成机器人 > [概述](bots/what-are-bots.md) </br> • 生成邮件扩展 > [概述](messaging-extensions/what-are-messaging-extensions.md) |
 |2022/04/26|使用机器人卸载个人应用的行为 | 生成机器人>机器人对话>[使用机器人在个个人应用程序中卸载行为更新](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |2022/04/22| 针对盈利应用的测试预览 | 使应用盈利 > [盈利应用的测试预览](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
@@ -165,7 +167,7 @@ ms.locfileid: "65667965"
 |05/13/2021| 已添加有关 mConnect 和 Skooler 的信息 | 与 Teams 集成> Moodle LMS >[Moodle 学习管理系统](resources/moodle-overview.md)|
 |05/10/2021| 应用清单 v1.10 已发布 | 应用清单> [清单架构](resources/schema/manifest-schema.md) |
 |05/10/2021| 新应用自定义功能 | 设计应用> [启用组织以自定义应用](concepts/design/enable-app-customization.md) |
-|05/07/2021| 聊天中的音频和视频通话的深层链接 | 与 Teams 集成>[深度链接](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|05/07/2021| 聊天中的音频和视频通话的深层链接 | 与 Teams 集成>[深度链接](concepts/build-and-test/deep-links.md#navigate-to-an-audio-or-audio-video-call) |
 |04/30/2021|有关如何将应用发布到 Teams 应用商店的新指南 | • 发布到 Teams 应用商店>[将应用发布到 Teams 应用商店](concepts/deploy-and-publish/appsource/publish.md)</br> • 发布到 Teams 应用商店>[ Teams 应用商店验证指南](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | 对自适应卡片 v1.4 的通用操作的支持 | 生成卡片和任务模块>生成卡片>自适应卡片的通用操作> [自适应卡片的通用操作](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/29/2021 | 用户特定视图 | 生成卡片和任务模块>生成卡片>自适应卡片的通用操作> [用户特别视图](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
@@ -240,7 +242,7 @@ ms.locfileid: "65667965"
 | 05/06/2019 | 适用于应用商店应用的应用程序认证计划。 | [应用程序认证](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | 应用模板现已可用 | [应用模板](~/samples/app-templates.md) |
 | 04/23/2019 | 基于操作的邮件扩展现已可用。 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | 创建到私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 02/18/2019 | 创建到私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 01/23/2019 | 在选项卡上下文中显示 SKU 和 licenceType 信息。 | [选项卡上下文](~/concepts/tabs/tabs-context.md) |
 |
 </details>
@@ -254,7 +256,7 @@ ms.locfileid: "65667965"
 | -------- | --------- | ------------------ |
 | 11/12/2018 | 群聊中的选项卡现已在发布的 Teams 版本中提供。 作为此工作的一部分，为了清楚起见，选项卡部分已重新工作。| [可配置的选项卡](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | Node JS 和 .NET/C# 入门已更新为在 Teams 中使用 App Studio，并且添加了有关在 Azure 中托管基于节点的 Teams 应用的新部分。 | [通过 C#/.NET 和 App Studio 开始使用 Microsoft Teams 平台](~/get-started/get-started-dotnet-app-studio.md)，[通过 Node JS 和 App Studio 开始使用 Microsoft Teams 平台](~/get-started/get-started-nodejs-app-studio.md)，[在 Azure 中托管 Node Teams 应用](~/get-started/get-started-nodejs-in-azure.md)|
-| 11/09/2018 | 现在，可以创建指向用户之间的私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 11/09/2018 | 现在，可以创建指向用户之间的私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 随附了一项新功能，可将 Microsoft Teams 选项卡用作 SharePoint 框架 Web 部件。 | [SharePoint 中的选项卡](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 11/05/2018 | 已发布 **任务模块** 功能。 任务模块允许在 Teams 应用程序中从机器人和选项卡创建模式弹出体验。 在弹出窗口中，你可以运行自己自定义的 HTML/JavaScript 代码，显示基于 `<iframe>`的小组件，如 YouTube 或 Microsoft Stream 视频，或显示[自适应卡片](/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)，[选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)，[机器人中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | 卡片的格式设置信息已在适用于 Teams 的桌面、iOS 和 Android 客户端中进行了更新和测试。 | [卡片](~/concepts/cards/cards.md)、[卡片格式](~/concepts/cards/cards-format.md) |
@@ -290,7 +292,7 @@ ms.locfileid: "65667965"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-|2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 |  为 Teams 会议建立应用程序 > 通过 Live Share 加强协作 > [概述](apps-in-teams-meetings/teams-live-share-overview.md) |
+|2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 |  构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 02/07/2022 | 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 | 02/03/2022 | 引入了应用清单版本 1.12 | • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |

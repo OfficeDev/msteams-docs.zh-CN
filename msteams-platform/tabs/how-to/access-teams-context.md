@@ -4,12 +4,12 @@ description: 介绍如何将用户上下文获取有关选项卡的用户上下�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: Teams 选项卡用户上下文
-ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 0539f1dc3f31a2b068e80b4ff12b93a26e09b766
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755942"
+ms.locfileid: "65757358"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -70,7 +70,53 @@ ms.locfileid: "65755942"
 
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>使用 Microsoft Teams JavaScript 库获取上下文
 
+git-issue-clear-the-full-set-of-values-any-context-object-property-can-take 你也可以通过调用`microsoftTeams.getContext(function(context) { /* ... */ })`使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索上面列出的信息。
+
+以下代码提供了上下文变量的示例：
+
+```json
+{
+    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "teamName": "The name of the current team",
+    "channelId": "The channel ID in the format 19:[id]@thread.skype",
+    "channelName": "The name of the current channel",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
+    "entityId": "The developer-defined unique ID for the entity this content points to",
+    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
+    "groupId": "Guid identifying the current Office 365 Group ID",
+    "theme": "The current UI theme: default | dark | contrast",
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
+    "userLicenseType": "The license type for the current user. Possible values are E1, E3, and E5 enterprise plans",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
+}
+```
+
 还可以通过调`app.getContext()`用函数，使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索上面列出的信息。 有关其他信息，请参阅 [上下文接口](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true)的属性。
+
 
 ## <a name="retrieve-context-in-private-channels"></a>在专用通道中检索上下文
 

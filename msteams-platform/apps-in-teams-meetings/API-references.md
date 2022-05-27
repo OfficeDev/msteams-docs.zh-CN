@@ -5,12 +5,12 @@ description: 使用示例和代码示例标识会议应用 API 引用，Teams应
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755830"
+ms.locfileid: "65756581"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -535,7 +535,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 |---|---|
 | **500** | 内部错误。 |
 | **501** | 当前上下文不支持 API。|
-| **1000** | 应用没有允许共享到演示区域的相应权限。|
+| **1000** | 应用没有允许共享登台的适当权限。|
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>获取应用内容演示区域共享状态 API
 
@@ -575,7 +575,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
 |---|---|
 | **500** | 内部错误。 |
 | **501** | 当前上下文不支持 API。|
-| **1000** | 应用没有允许共享到演示区域的相应权限。|
+| **1000** | 应用没有允许共享登台的适当权限。|
 
 ## <a name="get-app-content-stage-sharing-capabilities-api"></a>获取应用内容演示区域共享功能 API
 
@@ -614,7 +614,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
 |响应代码|说明|
 |---|---|
 | **500** | 内部错误。 |
-| **1000** | 应用没有允许共享到演示区域的权限。|
+| **1000** | 应用没有允许共享登台的权限。|
 
 ## <a name="get-real-time-teams-meeting-events-api"></a>获取实时 Teams 会议事件 API
 
