@@ -4,12 +4,12 @@ description: Microsoft Teams 开发工具入门概述文档
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 开发工具示例
-ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654772"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757708"
 ---
 # <a name="get-started"></a>入门
 
@@ -41,7 +41,7 @@ ms.locfileid: "65654772"
 
 如果你已经熟悉 Yeoman 工作流程，则可能更愿意使用 [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) 来构建应用。
 
-> [!NOTE]
+> [!WARNING]
 > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。<br> App Studio 将于 2022 年 6 月 30 日弃用。
 
 ## <a name="build-your-first-teams-app"></a>构建首个 Teams 应用
@@ -49,7 +49,11 @@ ms.locfileid: "65654772"
 现在，让我们来构建你的首个 Teams 应用。 但首先，请选择语言（框架）并准备开发环境。
 
 > [!div class="nextstepaction"]
-> [通过 JavaScript 使用 React 构建 Teams 应用](../sbs-gs-javascript.yml)
+> [通过 JavaScript 使用 React 构建 Teams 选项卡应用](../sbs-gs-javascript.yml)
+> [!div class="nextstepaction"]
+> [通过 JavaScript 使用 React 构建 Teams 机器人应用](../sbs-gs-bot.yml)
+> [!div class="nextstepaction"]
+> [通过 JavaScript 使用 React 构建 Teams 消息扩展应用](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
 > [使用 Blazor 构建 Teams 应用](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]
