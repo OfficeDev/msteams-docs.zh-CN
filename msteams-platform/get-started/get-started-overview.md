@@ -1,15 +1,14 @@
 ---
 title: 入门 - 概述
-description: Microsoft Teams 开发工具入门概述文档
+description: 借助此学习路径，开始 Microsoft Teams 开发人员文档入门，其中介绍了常用工具、基本概念和高级功能。
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams 开发工具示例
-ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a2dc779e24828ce73f9a93498bdcceecbdfe582b
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757708"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795152"
 ---
 # <a name="get-started"></a>入门
 
