@@ -1,25 +1,31 @@
 ---
-title: 选项卡中的身份验证流
+title: 使用第三方 OAuth 提供程序启用身份验证
 description: 介绍选项卡中的身份验证流、Azure AD 提供的 OAuth，并提供代码示例
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: Teams 身份验证流选项卡
-ms.openlocfilehash: a40a09b025949b36491534a4e8bdda9f523b24df
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: teams 身份验证, 流选项卡, 第三方 OAuth 提供程序
+ms.openlocfilehash: 4ad7a765632a451880d8d8bb5342240478e6f6da
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756490"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887798"
 ---
-# <a name="microsoft-teams-authentication-flow-for-tabs"></a>选项卡的 Microsoft Teams 身份验证流
+# <a name="enable-authentication-using-third-party-oauth-provider"></a>使用第三方 OAuth 提供程序启用身份验证
+
+可以使用第三方 OAuth 标识提供程序 (IdP) 在选项卡应用中启用身份验证。 在此方法中，应用用户标识由 OAuth IdP（例如 Azure AD、Google、Facebook、GitHub 或任何其他提供程序）验证并授予访问权限。 需要配置与 IdP 的信任关系，并且应用用户也应向其注册。
 
 > [!NOTE]
 > 要使身份验证适用于移动客户端上的选项卡，需要确保至少使用 Microsoft Teams JavaScript SDK 版本 1.4.1。  
 > Teams SDK 会为身份验证流启动单独的窗口。 将 `SameSite` 属性设置为 **Lax**。 Teams 桌面客户端或旧版 Chrome 或 Safari 不支持 `SameSite`=None。
 
+## <a name="use-oauth-idp-to-enable-authentication"></a>使用 OAuth IdP 启用身份验证
+
 OAuth 2.0 是 Microsoft Azure Active Directory (Azure AD) 和许多其他身份提供程序用于身份验证和授权的开放标准。 对 OAuth 2.0 的基本理解是在 Teams 选项卡中使用身份验证的先决条件。 有关详细信息，请参阅[简化 OAuth 2](https://aaronparecki.com/oauth-2-simplified/)，这比[正式规范](https://oauth.net/2/)更容易遵循。 选项卡的身份验证流和机器人不同，因为选项卡类似于网站，因此可以直接使用 OAuth 2.0。 机器人以不同方式执行一些操作，但核心概念是相同的。
 
 例如，使用 Node 和“[OAuth 2.0 隐式授权类型](https://oauth.net/2/grant-types/implicit/)”的选项卡和机器人的身份验证流，请参阅[启动选项卡的身份验证流](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow)。
+
+本部分使用 Azure AD 作为第三方 OAuth 提供程序的示例，以便在选项卡应用中启用身份验证。
 
 > [!NOTE]
 > 在向用户显示“**登录**”按钮并调用 `microsoftTeams.authentication.authenticate` API 以对选择按钮做出响应之前，必须等待 SDK 初始化完成。 可以将回调传递给初始化完成时调用的 `microsoftTeams.initialize` API。
@@ -27,7 +33,7 @@ OAuth 2.0 是 Microsoft Azure Active Directory (Azure AD) 和许多其他身份�
 ![选项卡身份验证序列图](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. 用户与选项卡配置或内容页面上的内容交互，通常使用“**登入**”或“**登录**”按钮。
-2. 该选项卡可构造其身份验证起始页的 URL。 或者，它使用 URL 占位符或调用 `microsoftTeams.getContext()` Teams 客户端 SDK 方法的信息来简化用户的身份验证体验。 例如，使用 Azure AD 进行身份验证时，如果 `login_hint` 参数设置为用户的电子邮件地址，则用户无需登录（如果他们最近这样做）。 这是因为 Azure AD 使用用户的已缓存凭据。 弹出窗口会短暂显示，然后消失。
+2. 该选项卡可构造其身份验证起始页的 URL。 或者，它使用 URL 占位符或调用 `microsoftTeams.getContext()` Teams 客户端 SDK 方法的信息来简化用户的身份验证体验。 例如，在使用 Azure AD 进行身份验证时，如果将 `login_hint` 参数设置为用户的电子邮件地址，那么如果用户最近登录过，就可能不需要登录。 这是因为 Azure AD 使用用户的已缓存凭据。 弹出窗口会短暂显示，然后消失。
 3. 然后选项卡调用 `microsoftTeams.authentication.authenticate()` 方法，并注册 `successCallback` 和 `failureCallback` 函数。
 4. Teams 将在弹出窗口中的 iframe 打开起始页。 起始页生成随机 `state` 数据，将其保存以供将来验证，并重定向到身份提供程序的 `/authorize` 端点，例如 Azure AD 的 `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize`。 将 `<tenant id>` 替换为自己的租户 ID（即 context.tid）。
 与 Teams 中的其他应用授权流类似，起始页必须在其 `validDomains` 列表中的域上，并且与签到后的重定向页面在同一个域上。
