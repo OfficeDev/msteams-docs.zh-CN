@@ -1,12 +1,12 @@
 ## <a name="deploy-your-app-to-azure"></a>将应用部署到 Azure。
 
-部署包括两个步骤。  首先，创建必要的云资源 (也称为预配) 。 然后，应用的代码将复制到创建的云资源中。 在本教程中，你将部署选项卡应用。
+部署包括两个步骤。  首先，创建必要的云资源 (也称为预配) 。 然后，应用的代码将复制到创建的云资源中。 在本教程中，你将部署 Tab 应用。
 <br> 
 <br>
 <details>
 <summary>预配和部署有什么区别？</summary>
 <br>
-“<b>预配</b>”步骤在 Azure 中创建资源，并为应用Microsoft 365，但不会将 HTML、CSS、JavaScript 等代码 () 复制到资源。 “ <b>部署</b> ”步骤将应用的代码复制到预配步骤中创建的资源。 在不预配新资源的情况下多次部署是很常见的。 由于预配步骤可能需要一些时间才能完成，因此它与部署步骤是分开的。
+“ <b>预配</b> ”步骤在 Azure 和 Microsoft 365 中为应用创建资源，但不会将 HTML、CSS、JavaScript 等代码 () 复制到资源。 “ <b>部署</b> ”步骤将应用的代码复制到预配步骤中创建的资源。 通常无需预配新资源即可多次部署。 由于预配步骤可能需要一些时间才能完成，因此它与部署步骤是分开的。
 </details>
 <br>
 
@@ -76,9 +76,9 @@
 
 完成预配和部署步骤后：
 
-1. 打开调试面板 (**Ctrl+Shift+D** / ⌘⇧ **-D** 或 **视图>** 从Visual Studio Code运行) 。
+1. 打开调试面板 (**Ctrl+Shift+D** / ⌘⇧ **-D** 或 **视图>** 从 Visual Studio Code 运行) 。
 1. 从启动配置下拉列表中选择 **“启动远程 (Edge)** ”。
-1. 选择 **"开始"菜单调试 (F5)** 从 Azure 启动应用。
+1. 选择 **“开始调试” (F5)** 从 Azure 启动应用。
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="显示远程启动应用的屏幕截图。" border="false":::
 
@@ -86,12 +86,12 @@
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="显示正在安装的应用的屏幕截图。" border="false":::
 
-   该工具包显示一条消息，指示应用已添加到Teams。
+   该工具包显示一条消息，指示应用已添加到 Teams。
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="屏幕截图显示立即或更高版本尝试应用的消息" border="true":::
  
     - 如果选择 **“获取”**，可以稍后从旁加载应用列表中试用该应用。
-    - 如果选择 **“试用**”，Teams加载应用。
+    - 如果选择 **“试用”**，Teams 将加载应用。
 
    你的应用在 Azure 网站上加载。
    
@@ -99,7 +99,7 @@
 
    消息扩展应用在聊天机器人应用中加载。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="显示在Teams中旁加载的应用的屏幕截图" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="显示 Teams 中旁加载的应用的屏幕截图" border="false":::
 
 
 

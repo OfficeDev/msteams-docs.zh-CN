@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的术语
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0762f1f8315d1254e3adb0875655735dcdc0f130
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795138"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887623"
 ---
 # <a name="glossary"></a>术语表
 
@@ -31,7 +31,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [Azure 资源](../toolkit/provision.md) | 通过 Azure 提供的服务，Teams 应用可将其用于 Azure 部署。 它可以是存储帐户、Web 应用、数据库等。 |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft 基于云的标识和访问管理服务。 可帮助经过身份验证的用户访问内部和外部 Azure 资源。 |
 | [身份验证](../concepts/authentication/authentication.md) | 验证用于了解应用使用情况的用户访问权限的过程。 可以使用 Microsoft Graph API 或基于 Web 的身份验证来完成此操作。 <br> **另请参阅**：[标识提供者](#i)；[SSO](#s) |
-| [身份验证流](../concepts/authentication/authentication.md#web-based-authentication-flow) | 在 Teams 中，有两个身份验证流用于对用户进行身份验证以使用应用：基于 Web 的身份验证和 OAuthPrompt 流。 |
+| [身份验证流](../concepts/authentication/authentication.md) | 在 Teams 中，有两个身份验证流用于对用户进行身份验证以使用应用：基于 Web 的身份验证和 OAuthPrompt 流。 |
 
 ## <a name="b"></a>B
 

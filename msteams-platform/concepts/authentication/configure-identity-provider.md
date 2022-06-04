@@ -4,12 +4,12 @@ description: '介绍如何配置标识提供程序，重点介绍 Microsoft Azur
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 身份验证 Azure AD oauth 标识提供程序
-ms.openlocfilehash: 6ab95958c66fcf680cdab54d3307eab5dc66fa57
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6fb17041e9169b4d5e74295cbb62ea97c8befd0f
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757050"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887567"
 ---
 # <a name="configure-identity-providers"></a>配置标识提供程序
 
@@ -38,5 +38,5 @@ ms.locfileid: "65757050"
 ## <a name="see-also"></a>另请参阅
 
 * [在 Microsoft Teams 机器人中对用户进行身份验证](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
-* [对选项卡的单一登录 (SSO) 支持](../../tabs/how-to/authentication/auth-aad-sso.md)
+* [对选项卡的单一登录 (SSO) 支持](../../tabs/how-to/authentication/tab-sso-overview.md)
 * [在 Microsoft Teams 选项卡中对用户进行身份验证](../../tabs/how-to/authentication/auth-tab-aad.md)

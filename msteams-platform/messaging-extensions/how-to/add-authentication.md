@@ -5,12 +5,12 @@ description: 了解如何使用代码示例向消息传递扩展添加身份验�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: dbc49707d3fe2777761f51c46b23efaf7df96491
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297006"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887609"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>为消息扩展添加身份验证
 
@@ -81,7 +81,7 @@ ms.locfileid: "65297006"
 
 当登录请求完成并重定向回页面后，必须执行以下步骤：
 
-1. 生成安全代码（一个随机数）。必须在服务上缓存此代码，以及通过登录流获取的凭据，例如 OAuth 2.0 令牌。
+1. 生成安全代码（一个随机数）。 必须使用通过登录流获取的凭据（例如 OAuth 2.0 令牌）在服务上缓存此代码。
 1. 调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。
 
 此时，窗口会关闭，并且控件将传递给 Teams 客户端。 客户端现在会重新发出原始用户查询，以及属性中 `state` 的安全代码。 你的代码可以使用安全代码来查找之前存储的凭据以完成身份验证序列，然后完成用户请求。

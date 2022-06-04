@@ -1,16 +1,16 @@
 ---
 title: 会议应用 API 参考
 author: surbhigupta
-description: 使用示例和代码示例标识会议应用 API 引用，Teams应用会议用户参与者角色 api 用户上下文通知信号查询。
+description: 使用示例和代码示例标识会议应用 API 引用，Teams 应用会议用户参与者角色 api 用户上下文通知信号查询。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756581"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887574"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -53,7 +53,7 @@ ms.locfileid: "65756581"
 ### <a name="query-parameters"></a>查询参数
 
 > [!TIP]
-> 从 [选项卡 SSO 身份验证](../tabs/how-to/authentication/auth-aad-sso.md)中获取参与者 ID 和租户 ID。
+> 从 [选项卡 SSO 身份验证](../tabs/how-to/authentication/tab-sso-overview.md)中获取参与者 ID 和租户 ID。
 
 `Meeting` API 必须将`meetingId`、`participantId` 和 `tenantId` 作为 URL 参数。 这些参数作为 Teams 客户端 SDK 和机器人活动的一部分提供。
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | 属性名称 | 用途 |
 |---|---|
 | **user.id** | 用户的 ID。 |
-| **user.aadObjectId** | Azure Active Directory用户的对象 ID。 |
+| **user.aadObjectId** | 用户的 Azure Active Directory 对象 ID。 |
 | **user.name** | 用户名。 |
 | **user.givenName** | 用户的名字。|
 | **user.surname** | 用户的姓氏。 |
@@ -406,7 +406,7 @@ GET /v1/meetings/{meetingId}
 | 属性名称 | 用途 |
 |---|---|
 | **details.id** | 会议 ID，编码为 BASE64 字符串。 |
-| **details.msGraphResourceId** | MsGraphResourceId，专门用于 MS 图形 API调用。 |
+| **details.msGraphResourceId** | MsGraphResourceId，专门用于 MS 图形 API 调用。 |
 | **details.scheduledStartTime** | 会议的预定开始时间（以 UTC 为中心）。 |
 | **details.scheduledEndTime** | 会议的预定结束时间，以 UTC 表示。 |
 | **details.joinUrl** | 用于加入会议的 URL。 |
@@ -416,8 +416,8 @@ GET /v1/meetings/{meetingId}
 | **conversation.conversationType** | 会话类型。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **organizer.id** | 组织者的用户 ID。 |
-| **organizer.aadObjectId** | 组织者的Azure Active Directory对象 ID。 |
-| **organizer.tenantId** | 组织者的Azure Active Directory租户 ID。 |
+| **organizer.aadObjectId** | 组织者的 Azure Active Directory 对象 ID。 |
+| **organizer.tenantId** | 组织者的 Azure Active Directory 租户 ID。 |
 
 在定期会议类型中，
 
@@ -487,7 +487,7 @@ Hello I’m Cortana, welcome to my meeting.
 
 ### <a name="prerequisite"></a>先决条件
 
-*  若要使用 `shareAppContentToStage` API，必须获取 RSC 权限。 在应用清单中，配置 `authorization` 属性，以及 `resourceSpecific` 字段中的 `name` 和 `type`。 例如：
+* 若要使用 `shareAppContentToStage` API，必须获取 RSC 权限。 在应用清单中，配置 `authorization` 属性，以及 `resourceSpecific` 字段中的 `name` 和 `type`。 例如：
 
     ```json
     "authorization": {
@@ -501,7 +501,8 @@ Hello I’m Cortana, welcome to my meeting.
     }
     }
     ```
-*  manifest.json 中的 `validDomains` 数组必须允许 `appContentUrl`，否则 API 将返回 501。
+
+* manifest.json 中的 `validDomains` 数组必须允许 `appContentUrl`，否则 API 将返回 501。
 
 ### <a name="query-parameter"></a>查询参数
 
@@ -818,7 +819,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **from.id** | 发送请求的用户 ID。 |
 | **from.aadObjectId** | 发送请求的用户的 Azure Active Directory 对象 ID。 |
 | **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
-| **conversation.tenantId** | Azure Active Directory会话或会议的租户 ID。 |
+| **conversation.tenantId** | 会话或会议的 Azure Active Directory 租户 ID。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **recipient.id** | 接收请求的用户的 ID。 |
 | **recipient.name** | 接收请求的用户的名称。 |
@@ -852,7 +853,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * [选项卡的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Teams 会议应用](teams-apps-in-meetings.md)
-* [Live Share SDK](teams-live-share-overview.md)
+* [实时共享 SDK](teams-live-share-overview.md)
 
 ## <a name="next-steps"></a>后续步骤
 

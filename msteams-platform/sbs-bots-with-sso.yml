@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: Teams Bot 与单一登录
 metadata:
-  title: 使用 SSO Teams机器人
-  description: 本教程介绍如何在机器人中为Teams设置 SSO。
+  title: 使用 SSO 的 Teams 机器人
+  description: 本教程介绍如何在适用于 Teams 的机器人中设置 SSO。
   audience: Developer
   level: Beginner
   ms.date: 08/24/2021
@@ -11,28 +11,28 @@ metadata:
   nextTutorialTitle: 详细了解机器人身份验证
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: c911a81f35a09698ee6294574ea6f7b6f0b63916
-  ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+  ms.openlocfilehash: 1fb468c8b9cc3ce1a8f8d407ea957d579632847c
+  ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/09/2022
-  ms.locfileid: "64736888"
+  ms.lasthandoff: 06/04/2022
+  ms.locfileid: "65887812"
 items:
 - durationInMinutes: 1
-  content: "Teams机器人是运行用户完成的重复自动化任务（例如客户服务）的会话机器人。 用户需要多次使用凭据登录才能执行重复任务。 单一登录 (SSO) 身份验证方法Azure Active Directory以无提示方式刷新身份验证令牌。 这会减少用户输入其登录凭据所需的次数。 \n\n机器人的行为不同，具体取决于它所涉及的对话：\n\n* 频道和群聊对话中的机器人要求用户@mention机器人。\n* 一对一对话中的机器人不要求@提及。 用户发送的所有消息都路由到机器人。\n\n本分步指南可帮助你创建启用了 SSO 身份验证的机器人。 你将看到以下输出：\n\n![已登录到机器人的移动设备](~/assets/images/bots/sbs-desktop-mobile.png)\n"
+  content: "Teams 机器人是运行用户执行的重复自动化任务（如客户服务）的会话机器人。 用户需要多次使用凭据登录才能执行重复任务。 Azure Active Directory 中的单一登录 (SSO) 身份验证方法以无提示方式刷新身份验证令牌，从而减少用户输入登录凭据所需的次数。 \n\n机器人的行为不同，具体取决于它所涉及的对话：\n\n* 频道和群聊对话中的机器人要求用户@mention机器人。\n* 一对一对话中的机器人不要求@提及。 用户发送的所有消息都路由到机器人。\n\n本分步指南可帮助你创建启用了 SSO 身份验证的机器人。 你将看到以下输出：\n\n![已登录到机器人的移动设备](~/assets/images/bots/sbs-desktop-mobile.png)\n"
 - title: 先决条件
   durationInMinutes: 1
-  content: "确保安装以下工具并设置开发环境：  \n\n* 具有配置文件图片的活动Microsoft Teams帐户\n\n  > [!TIP]\n  > 确保Microsoft Teams帐户不是来宾帐户。\n\n* [ngrok](https://ngrok.com/) 或等效隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n\n* Visual Studio 2019 或最新版本\n* [Microsoft 365开发人员帐户](concepts/build-and-test/prepare-your-o365-tenant.md)或具有安装应用适当权限的Teams帐户的访问权限\n"
+  content: "确保安装以下工具并设置开发环境：  \n\n* 具有个人资料图片的 Active Microsoft Teams 帐户\n\n  > [!TIP]\n  > 确保 Microsoft Teams 帐户不是来宾帐户。\n\n* [ngrok](https://ngrok.com/) 或等效隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n\n* Visual Studio 2019 或最新版本\n* [Microsoft 365 开发人员帐户](concepts/build-and-test/prepare-your-o365-tenant.md) 或具有安装应用适当权限的 Teams 帐户的访问权限\n"
 - title: 在 Azure 机器人服务中设置机器人
   durationInMinutes: 5
-  content: "若要使用 SSO 对机器人进行身份验证，可以在 Azure 机器人服务中设置机器人。 在 Azure 中开发并托管机器人时，请将机器人注册到 Azure 机器人服务。 执行以下步骤：\n\n* 使用 ngrok 创建到 Web 服务器终结点的隧道。\n* 创建 Azure 机器人资源以将机器人注册到 Azure 机器人服务。\n* 创建支持机器人 SSO 身份验证的客户端机密。\n* 添加Microsoft Teams通道以将机器人部署到Teams通道。\n* 将消息传送终结点添加到创建的 ngrok 隧道。\n\n使用 ngrok 创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**创建 Azure 机器人资源**\n\n1. 转到[Microsoft Azure门户](https://portal.azure.com/)。\n1. 选择“**创建资源**”。\n1. 在搜索框中，输入 **Azure 机器人** 并选择 Enter 键。\n1. 选择 **Azure 机器人**。\n\n    ![创建 Azure 机器人卡](~/assets/images/bots/createazurebot.png)\n\n1. 选择“**创建**”。\n1. 在 **机器人句柄** 中输入所需的机器人句柄名称。\n1. 从 **“订阅** ”下拉列表中，选择订阅。\n1. 从 **“资源组** ”下拉列表中，选择资源组。\n    \n    若要创建新资源，请选择 **“新建**”、“输入资源名称”、“选择 **确定**”，然后从 **“新建资源组位置** ”下拉列表中选择所需的位置。\n\n    > [!NOTE]\n    > 在 Microsoft 应用 ID 部分中，已选择 **“创建新的 Microsoft 应用 ID** ”。 可以选择 **“使用现有应用注册**”，输入 **现有应用 ID**，然后输入 **现有应用密码**。\n\n1. 然后“**审阅 + 创建**”。\n\n    <img src=\"~/assets/images/bots/Azurebotcreate.png\" alt=\"Create resource Azure bot\" width=\"700\"/>\n\n1. 如果验证通过，请选择 **“创建**”。\n\n    预配机器人服务需要一些时间。\n\n1. 选择“**转到资源**”。 机器人和相关资源在资源组中列出。\n\n    现在已创建 Azure 机器人。\n\n    ![创建的 Azure 机器人资源](~/assets/images/bots/Azurebotresource.png)\n\n**创建客户端机密**\n\n1. 在 **设置** 中，选择 **“配置**”。\n\n   > [!TIP]\n   > 保存 **Microsoft 应用 ID** 或 **客户端 ID** 以供将来参考。\n\n1. 在 **机器人类型** 下选择 **多租户**。\n\n     ![机器人类型](~/assets/images/bots/bot-type.png)\n\n1. 在 **Microsoft 应用 ID** 旁边，选择 **“管理**”。\n\n     ![Microsoft 应用 ID](~/assets/images/bots/MicrosoftAppID.png)\n\n1. 在 **“客户端机密** ”部分中，选择 **“新建客户端机密**”。 将显示 **“添加客户端机密** ”窗口。  \n\n1. 输入 **说明** 并选择 **“添加**”。\n\n    <img src=\"~/assets/images/bots/addclientsecret.png\" alt=\"Add client secret to app\" width=\"500\"/>\n\n1. 在 **“值** ”列中，选择 **“复制到剪贴板** ”，并保存客户端机密 ID 以供将来引用。\n\n     ![客户端机密的值](~/assets/images/bots/valueclientsecret.png)\n   \n**添加Microsoft Teams通道**\n\n1. **回家吧**\n\n    <img src=\"~/assets/images/bots/homepage.png\" alt=\"Home page\" width=\"600\"/>\n\n1. 打开“ **最近资源** ”部分中列出的机器人。\n1. 在左窗格中选择 **“通道**”，然后选择 **Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.    \n      ![从通道打开Teams](~/assets/images/bots/channel-teams.png)    \n      ![选择Teams](~/assets/images/bots/select-teams.png)    \n1. 选择“保存”。\n1. 选中该复选框以接受服务条款，然后选择 **“同意**”。</br>\n      ![服务条款](~/assets/images/bots/select-terms-of-service.png)\n\n**添加消息传送终结点**\n\n1. 在 **创建的** Azure 机器人的设置中，选择 **“配置**”。\n1. 转到 ngrok。\n1. 将 HTTPS URL (https 复制到 io) ，如下图所示：\n\n    ![ngrok HTTPS URL](~/assets/images/bots/ngrokURL.png)\n\n1. 在 **消息传送终结点** 中，使用 ngrok 提供的 HTTPS URL，并在 URL 末尾添加 **/api/messages**。\n\n    <img src=\"~/assets/images/bots/messagingURL.png\" alt=\"Messaging endpoint\" width=\"600\"/>\n\n1. 选择“**应用**”。\n\n    你已在 Azure 机器人服务中成功设置了机器人，现在需要设置机器人服务连接。\n"
+  content: "若要使用 SSO 对机器人进行身份验证，可以在 Azure 机器人服务中设置机器人。 在 Azure 中开发并托管机器人时，请将机器人注册到 Azure 机器人服务。 执行以下步骤：\n\n* 使用 ngrok 创建到 Web 服务器终结点的隧道。\n* 创建 Azure 机器人资源以将机器人注册到 Azure 机器人服务。\n* 创建支持机器人 SSO 身份验证的客户端机密。\n* 添加 Microsoft Teams 通道以将机器人部署到 Teams 频道。\n* 将消息传送终结点添加到创建的 ngrok 隧道。\n\n使用 ngrok 创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**创建 Azure 机器人资源**\n\n1. 转到 [Microsoft Azure 门户](https://portal.azure.com/)。\n1. 选择“**创建资源**”。\n1. 在搜索框中，输入 **Azure 机器人** 并选择 Enter 键。\n1. 选择 **Azure 机器人**。\n\n    ![创建 Azure 机器人卡](~/assets/images/bots/createazurebot.png)\n\n1. 选择“**创建**”。\n1. 在 **机器人句柄** 中输入所需的机器人句柄名称。\n1. 从 **“订阅** ”下拉列表中，选择订阅。\n1. 从 **“资源组** ”下拉列表中，选择资源组。\n    \n    若要创建新资源，请选择 **“新建**”、“输入资源名称”、“选择 **确定**”，然后从 **“新建资源组位置** ”下拉列表中选择所需的位置。\n\n    > [!NOTE]\n    > 在 Microsoft 应用 ID 部分中，已选择 **“创建新的 Microsoft 应用 ID** ”。 可以选择 **“使用现有应用注册**”，输入 **现有应用 ID**，然后输入 **现有应用密码**。\n\n1. 然后“**审阅 + 创建**”。\n\n    <img src=\"~/assets/images/bots/Azurebotcreate.png\" alt=\"Create resource Azure bot\" width=\"700\"/>\n\n1. 如果验证通过，请选择“**创建**”。\n\n    预配机器人服务需要一些时间。\n\n1. 选择“**转到资源**”。 机器人和相关资源在资源组中列出。\n\n    现在已创建 Azure 机器人。\n\n    ![创建的 Azure 机器人资源](~/assets/images/bots/Azurebotresource.png)\n\n**创建客户端机密**\n\n1. 在 **设置** 中，选择“**配置**”。\n\n   > [!TIP]\n   > 保存 **Microsoft 应用 ID** 或 **客户端 ID** 以供将来参考。\n\n1. 在 **机器人类型** 下选择 **多租户**。\n\n     ![机器人类型](~/assets/images/bots/bot-type.png)\n\n1. 在 **Microsoft 应用 ID** 旁边，选择 **“管理**”。\n\n     ![Microsoft 应用 ID](~/assets/images/bots/MicrosoftAppID.png)\n\n1. 在 **“客户端机密** ”部分中，选择 **“新建客户端机密**”。 将显示 **“添加客户端机密** ”窗口。  \n\n1. 输入“**说明**”并选择“**添加**”。\n\n    <img src=\"~/assets/images/bots/addclientsecret.png\" alt=\"Add client secret to app\" width=\"500\"/>\n\n1. 在“**值**”列中，选择“**复制到剪贴板**”并保存客户端机密 ID 以供将来参考。\n\n     ![客户端机密的值](~/assets/images/bots/valueclientsecret.png)\n   \n**添加 Microsoft Teams 频道**\n\n1. 转到“**主页**”。\n\n    <img src=\"~/assets/images/bots/homepage.png\" alt=\"Home page\" width=\"600\"/>\n\n1. 打开“**最近资源**”部分中列出的机器人。\n1. 在左窗格中选择 **“通道**”，然后选择 **“Teams**” <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.    \n      ![从频道打开 Teams](~/assets/images/bots/channel-teams.png)    \n      ![选择 Teams](~/assets/images/bots/select-teams.png)    \n1. 选择 **保存**。\n1. 选中该复选框以接受服务条款，然后选择 “**同意**”。</br>\n      ![服务条款](~/assets/images/bots/select-terms-of-service.png)\n\n**添加消息传送终结点**\n\n1. 在创建的 Azure 机器人 **的“设置”** 中，选择 **“配置**”。\n1. 转到 ngrok。\n1. 将 HTTPS URL (https 复制到 io) ，如下图所示：\n\n    ![ngrok HTTPS URL](~/assets/images/bots/ngrokURL.png)\n\n1. 在 **消息传送终结点** 中，使用 ngrok 提供的 HTTPS URL，并在 URL 末尾添加 **/api/messages**。\n\n    <img src=\"~/assets/images/bots/messagingURL.png\" alt=\"Messaging endpoint\" width=\"600\"/>\n\n1. 选择“**应用**”。\n\n    已在 Azure 机器人服务中成功设置机器人，现在需要设置机器人服务连接。\n"
 - title: 为机器人配置 SSO
   durationInMinutes: 5
-  content: "若要确保机器人服务使用户能够登录和访问机器人，必须为机器人配置 SSO。 为此，请执行以下步骤：\n\n* 将重定向 URI 添加到 Azure 机器人资源。\n* 公开 API 终结点以指定可从中访问资源的位置。\n* 授权客户端应用程序。\n* 为下游调用添加任何必要的 API 权限。\n* 启用隐式授予。\n* 更新清单。\n* 设置机器人服务连接。\n\n**将重定向 URI 添加到 Azure 机器人资源**\n\n1. 在 **Microsoft 应用 ID** 旁边，选择 **“管理**”。</br>\n    ![管理应用 ID](~/assets/images/bots/select-manage.png)\n1. 在机器人资源的左窗格中，选择 **“身份验证**”。\n1. 在 **平台配置中**，选择 **“添加平台**”。\n1. 选择“Web”\n\n1. 输入 **重定向 URI** ， `https://token.botframework.com/.auth/web/redirect` 然后选择 **“配置**”。\n\n    <img src=\"~/assets/images/bots/redirectURI.png\" alt=\"Configure Redirect URI\" width=\"600\"/>\n\n    重定向 URI 将添加到 Azure 机器人资源。\n\n    ![将添加到机器人资源的 URI 重定向](~/assets/images/bots/redirectURIadded.png)\n\n**公开 API 终结点**\n\n1. 在左窗格中，选择 **“公开 API**”。\n1. 为应用程序 ID URI 选择 **“设置** ”。\n1. 使用 URI 开头显示并追加 **api://botid** 的应用程序 ID URI。\n\n    <img src=\"~/assets/images/bots/exposeAPI.png\" alt=\"Expose an API\" width=\"500\"/>\n\n1. 选择“保存”。 保存 **应用程序 ID URI** 以供将来参考。\n1. 选择“**添加作用域**”。\n1. 在 **“作用域名称****”中**，输入access_as_user。\n1. 在 **Who可以同意？**，切换到 **管理员和用户**。\n1. 在框中输入以下值：\n\n    | 字段 | 值 |\n    | ----- | ----- |\n    | 管理员同意显示名称 | Teams可以访问用户的配置文件 |\n    | 管理员同意说明 | 允许Teams将应用的 Web API 调用为当前用户。 |\n    | 用户同意显示名称 | Teams可以访问用户配置文件并代表你发出请求 |\n    | 用户同意说明 | 启用Teams以具有与你相同的权限调用此应用的 API。 |\n\n1. 确保将“状态”设置为“已启用”。\n\n    <img src=\"~/assets/images/bots/addscope.png\" alt=\"Add a scope to app\" width=\"500\"/>\n\n1. 选择“添加作用域”。 范围名称自动匹配应用程序 ID URI， **其中 /access_as_user** 添加到末尾。\n\n    ![公开的 API 和添加的范围](~/assets/images/bots/ExposeAPIandaddscope.png)\n\n**授权客户端应用程序**\n\n将以下 ID 添加为 **授权客户端应用程序** ，并选中 **“授权范围**”复选框：      \n* 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams移动或桌面应用程序)             \n* 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams Web 应用程序) </br>     \n    ![将客户端应用程序添加到应用](~/assets/images/bots/addclientapplication1.png)        \n\n**为下游调用添加任何必要的 API 权限**\n\n1. 从左窗格 **中选择 API** 权限。\n1. 将应用所需的任何用户委托权限添加到下游 API，例如 User.Read。</br>\n    ![API 用户权限](~/assets/images/bots/APIpermissions.png)\n\n**启用隐式授予**\n\n1. 从左窗格中选择 **“身份验证** ”。\n1. 选中 **“访问令牌** ”和 **“ID 令牌** ”复选框。</br>\n    ![应用的身份验证复选框](~/assets/images/bots/authenticationcheckboxes.png)\n1. 选择 **“保存** ”以保存更改。\n\n**更新清单**\n\n1. 从左窗格中选择 **“清单** ”。\n1. 确保配置项设置为 **“accessTokenAcceptedVersion”：2**。 如果没有，请将其值更改为 **2** ，然后选择 **“保存**”。  (如果已在Teams中测试机器人，则必须注销此应用并注销Teams。 然后再次登录以查看此更改) 。</br>\n    ![更新清单](~/assets/images/bots/update-manifest.png)</br>\n\n**设置机器人服务连接**\n\n1. 转到 **Configuration pageAdd** >  **OAuth Connection 设置**。\n1. 选择 **“添加 OAuth 连接”设置**。\n1. 在 **“新建连接设置**”中，输入以下详细信息：\n\n    | 字段 | 值或描述 |\n    | ----- | ----- |\n    | 名称 | 输入新连接设置的名称。 可以在机器人服务代码的设置中使用该名称。 |\n    | 服务提供程序 | 选择 **Azure Active Directory V2**。 |\n    | 客户端 ID | 之前保存为 **Microsoft 应用 ID**。 |\n    | 客户端密码 | 之前保存为客户端机密 ID 的 **值** 。 |\n    | 令牌Exchange URL | 使用之前在公开 API 终结点时获取的应用程序 **ID URL** 。 |\n    | 租户 ID | 输入 **common**。 |\n    | Scopes | 输入 **User.Read** ，并在指定下游 API 权限时添加所需的所有 **范围** 。 |\n\n    <img src=\"~/assets/images/bots/botserviceconnection.png\" alt=\"Bot Service connection\" width=\"300\"/>\n\n1. 选择“保存”。\n1. 选择“**应用**”。\n"
+  content: "若要确保机器人服务允许用户登录和访问机器人，必须为机器人配置 SSO。 为此，请执行以下步骤：\n\n* 将重定向 URI 添加到 Azure 机器人资源。\n* 公开 API 终结点以指定可从中访问资源的位置。\n* 授权客户端应用程序。\n* 为下游调用添加任何必要的 API 权限。\n* 启用隐式授予。\n* 更新清单。\n* 设置机器人服务连接。\n\n**将重定向 URI 添加到 Azure 机器人资源**\n\n1. 在 **Microsoft 应用 ID** 旁边，选择 **“管理**”。</br>\n    ![管理应用 ID](~/assets/images/bots/select-manage.png)\n1. 在机器人资源的左窗格中，选择 **“身份验证**”。\n1. 在“**平台配置**”中，选择“**添加平台**”。\n1. 选择“Web”\n\n1. 输入 **重定向 URI** ， `https://token.botframework.com/.auth/web/redirect` 然后选择 **“配置**”。\n\n    <img src=\"~/assets/images/bots/redirectURI.png\" alt=\"Configure Redirect URI\" width=\"600\"/>\n\n    重定向 URI 将添加到 Azure 机器人资源。\n\n    ![将添加到机器人资源的 URI 重定向](~/assets/images/bots/redirectURIadded.png)\n\n**公开 API 终结点**\n\n1. 在左窗格中，选择 **“公开 API**”。\n1. 为应用程序 ID URI 选择 **“设置** ”。\n1. 使用 URI 开头显示并追加 **api://botid** 的应用程序 ID URI。\n\n    <img src=\"~/assets/images/bots/exposeAPI.png\" alt=\"Expose an API\" width=\"500\"/>\n\n1. 选择 **保存**。 保存 **应用程序 ID URI** 以供将来参考。\n1. 选择“**添加作用域**”。\n1. 在 **“作用域名称****”中**，输入access_as_user。\n1. 在 **“谁可以同意？”** 中，切换到 **管理员和用户**。\n1. 在框中输入以下值：\n\n    | 字段 | 值 |\n    | ----- | ----- |\n    | 管理员同意显示名称 | Teams 可以访问用户的配置文件 |\n    | 管理员同意说明 | 允许 Teams 将应用的 Web API 调用为当前用户。 |\n    | 用户同意显示名称 | Teams 可以访问你的用户配置文件并代表你发出请求 |\n    | 用户同意说明 | 使 Teams 能够使用你拥有的相同权限调用此应用的 API。 |\n\n1. 确保将“状态”设置为“已启用”。\n\n    <img src=\"~/assets/images/bots/addscope.png\" alt=\"Add a scope to app\" width=\"500\"/>\n\n1. 选择“添加作用域”。 范围名称自动匹配应用程序 ID URI， **其中 /access_as_user** 添加到末尾。\n\n    ![公开的 API 和添加的范围](~/assets/images/bots/ExposeAPIandaddscope.png)\n\n**授权客户端应用程序**\n\n将以下 ID 添加为 **授权客户端应用程序** ，并选中 **“授权范围**”复选框：      \n* 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams 移动或桌面应用程序)             \n* 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams Web 应用程序) </br>     \n    ![将客户端应用程序添加到应用](~/assets/images/bots/addclientapplication1.png)        \n\n**为下游调用添加任何必要的 API 权限**\n\n1. 从左窗格中选择“**API 权限**”。\n1. 将应用所需的任何用户委托权限添加到下游 API，例如 User.Read。</br>\n    ![API 用户权限](~/assets/images/bots/APIpermissions.png)\n\n**启用隐式授予**\n\n1. 从左窗格中选择“**身份验证**”。\n1. 选中“**访问令牌**”和“**ID 令牌**”复选框。</br>\n    ![应用的身份验证复选框](~/assets/images/bots/authenticationcheckboxes.png)\n1. 选择“**保存**”以保存更改。\n\n**更新清单**\n\n1. 从左窗格中选择“**清单**”。\n1. 确保配置项设置为 **\"accessTokenAcceptedVersion\": 2**。 如果没有，请将其值更改为 **2** ，然后选择 **“保存**”。  (如果已在 Teams 中测试机器人，则必须注销此应用并注销 Teams。 然后再次登录以查看此更改) 。</br>\n    ![更新清单](~/assets/images/bots/update-manifest.png)</br>\n\n**设置机器人服务连接**\n\n1. 转到 **“配置”页** > **“添加 OAuth 连接设置**”。\n1. 选择“**添加 OAuth 连接设置**”。\n1. 在 **“新建连接设置**”中，输入以下详细信息：\n\n    | 字段 | 值或描述 |\n    | ----- | ----- |\n    | 名称 | 输入新连接设置的名称。 可以在机器人服务代码的设置中使用该名称。 |\n    | 服务提供程序 | 选择 **Azure Active Directory V2**。 |\n    | 客户端 ID | 之前保存为 **Microsoft 应用 ID**。 |\n    | 客户端密码 | 之前保存为客户端机密 ID 的 **值** 。 |\n    | 令牌交换 URL | 使用之前在公开 API 终结点时获取的应用程序 **ID URL** 。 |\n    | 租户 ID | 输入 **common**。 |\n    | Scopes | 输入 **User.Read** ，并在指定下游 API 权限时添加所需的所有 **范围** 。 |\n\n    <img src=\"~/assets/images/bots/botserviceconnection.png\" alt=\"Bot Service connection\" width=\"300\"/>\n\n1. 选择“保存”。\n1. 选择“**应用**”。\n"
 - title: 配置并运行机器人示例
   durationInMinutes: 1
   content: >
-    配置机器人示例以了解如何在Microsoft Teams中对聊天机器人进行身份验证。
+    配置机器人示例以了解如何在 Microsoft Teams 中对聊天机器人进行身份验证。
 
 
     **配置和运行机器人示例**
@@ -40,13 +40,13 @@ items:
 
     1. 打开 Visual Studio。
 
-    1. 在Visual Studio中，选择 **“克隆存储库**”。
+    1. 在 Visual Studio 中，选择 **“克隆存储库**”。
 
     1. 在 **存储库位置**，输入 `https://github.com/OfficeDev/Microsoft-Teams-Samples.git`。 请确保记下要克隆存储库的 **路径** 。
 
-    1. 选择 **FileOpen** >  >  **Project/Solution**。
+    1. 选择 **“文件** > **打开** > **项目/解决方案**”。
 
-    1. 转到 **microsoft-Teams-Samples >示例> bot-conversation-sso-quickstart > csharp_dotnetcore** 文件夹。
+    1. 转到 **bot-conversation-sso-quickstart > csharp_dotnetcore文件夹> Microsoft-Teams-Samples >示** 例。
 
     1. 打开 **BotSSOCSharp.csproj** 文件。
 
@@ -69,8 +69,8 @@ items:
 
         如果 **出现无法找到包** 错误，请执行以下步骤：
 
-        1.  转到 **“工具** > **NuGet 程序包管理器** > **程序包管理器 设置**。
-        1.  在显示的 **“选项**”窗口中，选择 **NuGet 程序包管理器** > **包源**。
+        1.  转到 **“工具** > **NuGet 包管理** > **器包管理器设置**”。
+        1.  在显示的 **“选项”** 窗口中，选择 **NuGet 包管理器** > **包源**。
         1.  选择“**添加**”。
         1.  在 **“名称**”中，输入 `nuget.org` 并在 **“源**”中输入 `https://api.nuget.org/v3/index.json`。
         1.  选择 **“更新** ”和 **“确定**”。
@@ -78,32 +78,32 @@ items:
         <br>
 
         </details>
-- title: 配置并运行Teams应用
+- title: 配置并运行 Teams 应用
   durationInMinutes: 2
   content: >
-    测试机器人的最全面方法是创建应用包并将其上传到Teams。 此方法是测试机器人在所有范围内可用的完整功能的唯一方法。 可以通过上传`manifest.zip`文件来配置和运行Teams应用。
+    测试机器人的最全面方法是创建应用包并将其上传到 Teams。 此方法是测试机器人在所有范围内可用的完整功能的唯一方法。 可以通过上传 `manifest.zip` 文件来配置和运行 Teams 应用。
 
 
-    **通过上传manifest.zip文件来运行Teams应用**
+    **通过上传manifest.zip文件来运行 Teams 应用**
 
 
-    1. 在Visual Studio中`appPackage/`，转到文件夹。
+    1. 在 Visual Studio 中 `appPackage/` ，转到文件夹。
 
     1. 打开 `manifest.json`文件。
 
     1. 在文件中 `manifest.json` ，找到 **{TODO： MicrosoftAppId}，** 并将其替换为 Microsoft 应用 ID。
 
-    1. 在Windows资源管理器中，转到 **microsoft-Teams-Samples >示例> bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** 文件夹。
+    1. 在 Windows 资源管理器中，转到 **microsoft-Teams-Samples >示例> bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** 文件夹。
 
     1. 压缩要创建`manifest.zip`的文件夹的内容`appPackage/`。
 
-    1. 转到Teams。
+    1. 转到 Teams。
 
-    1. 若要上传`manifest.zip`，**请选择“应用商店>管理自定义应用> Upload** 应用并打开`manifest.zip`。
+    1. 若要上传 `manifest.zip`， **请选择“应用商店>管理应用>上传自定义应用** 并打开 `manifest.zip`。
 
     1. 选择 **“添加** ”以将聊天机器人添加到聊天。
 
-        可以通过发送消息与此机器人进行交互。 机器人交换 SSO 令牌，并代表你调用图形 API并返回结果。 除非向 **注销** 发送消息，否则它会使你保持登录状态。
+        可以通过发送消息与此机器人进行交互。 机器人交换 SSO 令牌，并代表你调用图形 API 并返回结果。 除非向 **注销** 发送消息，否则它会使你保持登录状态。
 
     1. 向机器人发送消息。 会话机器人首次请求权限。
 
@@ -122,4 +122,4 @@ items:
 
 
     ![已登录到机器人的移动设备](~/assets/images/bots/sbs-desktop-mobile.png)
-- content: 你已完成本教程，以便在机器人中开始使用 SSO，以便使用 Bot Framework 进行Microsoft Teams。
+- content: 你已完成本教程，以使用 Bot Framework 在 Microsoft Teams 机器人中开始使用 SSO。

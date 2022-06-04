@@ -6,12 +6,12 @@ keywords: Teams, 选项卡, 群组, 频道, 可配置
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5352481d30071edb96dae8bf3ec04f15a6e9c8d7
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672941"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887630"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -245,7 +245,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>使用 `getContext()` 函数检索上下文
 
-该 `app.getContext()` 函数返回一个使用 [上下文接口](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) 对象解析的承诺。
+该 `app.getContext()` 函数返回一个使用 [上下文接口](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) 对象解析的承诺。
 
 以下代码提供了将此函数添加到配置页以检索上下文值的示例：
 
@@ -294,7 +294,7 @@ document.write(getId());
 
 将清单的 `canUpdateConfiguration` 属性设置为 `true`. 它使用户能够修改、重新配置或重命名通道或组选项卡。删除选项卡时，告知用户对内容的影响。 为此，请在应用中包含删除选项页，并在以前`setSettings()`) 配置的 (中设置`removeUrl`属性`setConfig()`的值。 用户可以卸载个人选项卡，但无法修改它们。 有关详细信息，请参阅[为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
-`setConfig()` Microsoft Teams (以前`setSettings()`用于删除页面的) 配置：
+Microsoft Teams `setConfig()` (以前 `setSettings()`) 用于删除页面的配置：
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

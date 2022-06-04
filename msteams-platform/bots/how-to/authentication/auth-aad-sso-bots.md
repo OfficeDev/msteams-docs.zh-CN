@@ -2,14 +2,14 @@
 title: 为机器人提供单一登录支持
 description: 介绍如何获取用户令牌。 目前，机器人开发人员可以使用登录卡片或支持 OAuth 卡片的 Azure 机器人服务。
 keywords: 令牌, 用户令牌, 机器人的 SSO 支持, 权限, Microsoft Graph, Azure AD
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 49fac724cea263dac8e1540b0b40f5e3b8d267d8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111757"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887595"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>机器人的单一登录 (SSO) 支持
 
@@ -56,7 +56,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
 
 ### <a name="register-your-app-through-the-azure-ad-portal"></a>通过 Azure AD 门户注册应用
 
-通过 Azure AD 门户注册应用的步骤类似于[选项卡 SSO 流程](../../../tabs/how-to/authentication/auth-aad-sso.md)。 以下步骤指导你注册应用：
+通过 Azure AD 门户注册应用的步骤类似于[选项卡 SSO 流程](../../../tabs/how-to/authentication/tab-sso-overview.md)。 以下步骤指导你注册应用：
 
 1. 在 [Azure Active Directory – 应用注册](https://go.microsoft.com/fwlink/?linkid=2083908)门户中注册新应用程序。
 
@@ -96,7 +96,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
    >
    > 必须注意以下重要限制：
    >
-   > * 仅支持用户级 Microsoft Graph API 权限，例如电子邮件、配置文件、offline_access 和 OpenId。 如果需要访问其他 Microsoft Graph 作用域，如 `User.Read` 或 `Mail.Read`，请参阅[获取具有 Graph 权限的访问令牌](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)。
+   > * 仅支持用户级 Microsoft Graph API 权限，例如电子邮件、配置文件、offline_access 和 OpenId。 如果需要访问其他 Microsoft Graph 范围，例如`User.Read``Mail.Read`，请参阅[具有 Microsoft Graph 权限和范围的“扩展”选项卡应用](../../../tabs/how-to/authentication/tab-sso-graph-api.md)。
    > * 应用程序的域名必须与为 Azure AD 应用程序注册的域名相同。
    > * 当前不支持每个应用多个域。
    > * 不支持使用 `azurewebsites.net` 域的应用程序，因为它很常见，可能存在安全风险。

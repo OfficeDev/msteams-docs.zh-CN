@@ -2,14 +2,14 @@
 title: 无提示的身份验证
 description: 介绍无提示身份验证、单一登录和 Azure AD 选项卡
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams 身份验证 SSO 无提示 Azure AD 选项卡
-ms.openlocfilehash: 699582414a4699a69519e41232e4354d8125337b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111645"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887791"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
@@ -19,7 +19,7 @@ ms.locfileid: "65111645"
 > [!NOTE]
 > 要使身份验证适用于移动客户端上的选项卡，请确保使用的是 Teams JavaScript SDK 版本 1.4.1 或更高版本。
 
-Azure AD 中的无提示身份验证通过无提示刷新身份验证令牌，最大限度地减少了用户需要输入凭据的次数。 有关真正的单一登录支持，请参阅 [SSO 文档](~/tabs/how-to/authentication/auth-aad-sso.md)。
+Azure AD 中的无提示身份验证通过无提示刷新身份验证令牌，最大限度地减少了用户需要输入凭据的次数。 有关真正的单一登录支持，请参阅 [SSO 文档](~/tabs/how-to/authentication/tab-sso-overview.md)。
 
 若要保留代码客户端，请使用适用于 JavaScript 的 [Azure AD 身份验证库](/azure/active-directory/develop/active-directory-authentication-libraries)以无提示方式获取 Microsoft Azure Active Directory (Azure AD) 访问令牌。 如果用户最近已登录，则看不到弹出对话框。
 

@@ -1,34 +1,48 @@
 ---
-title: 使用 Azure Active Directory 对选项卡进行身份验证
+title: 配置第三方 OAuth 身份验证
 description: 介绍 Teams 中的身份验证以及如何在选项卡中使用它
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams 身份验证选项卡, Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: aa60f3908a13b55add525a561fe3f60afaad6c87
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 1cbd871a3066c5f8dd1cbba0837fdf8e4ab9be8f
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757316"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887777"
 ---
-# <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>在 Microsoft Teams 选项卡中对用户进行身份验证
+# <a name="configure-third-party-oauth-authentication"></a>配置第三方 OAuth 身份验证
 
 > [!Note]
-> 若要在移动客户端上对选项卡进行身份验证，你需要确保使用的是 Teams JavaScript SDK 1.4.1 或更高版本。
+> 若要在移动客户端上使用选项卡的身份验证，请确保使用的是 Teams JavaScript SDK 版本 1.4.1 或更高版本。
 
-你可能希望在 Teams 应用中使用许多服务，其中大多数服务都需要身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 和Teams。 Teams 用户配置文件信息存储在使用 Microsoft Graph 的 Azure AD 中，本文将重点介绍如何使用 Azure AD 进行身份验证以获取对此信息的访问权限。
+你可能希望在 Teams 应用中使用许多服务，其中大多数服务都需要身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 和 Teams。
+Teams 用户配置文件信息存储在使用 Microsoft Graph 的 Azure AD 中，本文将重点介绍如何使用 Azure AD 进行身份验证以获取对此信息的访问权限。
 
-OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证开放标准。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中使用身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流，目标是最终从 Azure AD 和 Microsoft Graph 中读取用户的个人资料信息。
+OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证开放标准。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中使用身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流。 它从 Azure AD 和 Microsoft Graph 读取用户的个人资料信息。
 
-本文中的代码来自Teams示例应用[Microsoft Teams选项卡身份验证示例 (节点) ](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。 它包含一个静态选项卡，用于请求 Microsoft Graph 的访问令牌并显示来自 Azure AD 的当前用户的基本个人资料信息。
+本文中的代码来自 Teams 示例应用，即 [Microsoft Teams 选项卡身份验证示例（节点）](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。 它包含一个静态选项卡，该选项卡请求 Microsoft Graph 的访问令牌，并显示来自 Azure AD 的当前用户的基本配置文件信息。
 
-有关选项卡的身份验证流的一般概述，请参阅[选项卡中的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)。
+有关选项卡的身份验证流概述，请参阅 [选项卡中的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)。
 
-选项卡中的身份验证流与机器人中的身份验证流略有不同。
+选项卡中的身份验证流不同于机器人中的身份验证流。
 
-## <a name="configuring-identity-providers"></a>配置身份提供程序
+## <a name="configure-your-app-to-use-azure-ad-as-an-identity-provider"></a>将应用配置为使用 Azure AD 作为标识提供者
 
-有关在将 Azure AD 用作身份提供程序时配置 OAuth 2.0 回调重定向 URL 的详细步骤，请参阅主题[配置身份提供程序](~/concepts/authentication/configure-identity-provider.md)。
+支持 OAuth 2.0 的标识提供者不会对来自未知应用程序的请求进行身份验证。 必须提前注册应用程序。 若要使用 Azure AD 执行此操作，请执行以下步骤：
+
+1. 打开“[应用程序注册门户](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)”。
+
+2. 选择应用以查看其属性，或选择“新建注册”按钮。 查找应用的 **“重定向 URI”** 部分。
+
+3. 从下拉菜单中选择 **Web** 。 将 URL 更新到身份验证终结点。 对于 GitHub 上的 TypeScript/Node.js 和 C# 示例应用，重定向 URL 将类似于以下内容：
+
+    重定向 URL：`https://<hostname>/bot-auth/simple-start`
+
+替换 `<hostname>` 为实际主机。 此主机可以是专用的托管站点，如 Azure、Glitch 或开发计算机上的 localhost 的 ngrok 隧道，例如 `abcd1234.ngrok.io`。 如果没有此信息，请确保已完成或托管应用 (或示例应用) 。 当你有此信息时，请恢复此过程。
+
+> [!NOTE]
+> 可以选择任何第三方 OAuth 提供程序，例如LinkedIn、Google 等。 为这些提供程序启用身份验证的过程类似于将 Azure AD 用作第三方 OAuth 提供程序。 有关使用任何第三方 OAuth 提供程序的详细信息，请访问特定提供商的网站。
 
 ## <a name="initiate-authentication-flow"></a>启动身份验证流
 
@@ -36,7 +50,7 @@ OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证开放
 
 将按钮添加到配置或内容页，使用户能够在需要时登录。 可在选项卡的[配置](~/tabs/how-to/create-tab-pages/configuration-page.md)页或任何[内容](~/tabs/how-to/create-tab-pages/content-page.md)页上完成此操作。
 
-与大多数标识提供者一样，Azure AD 不允许将其内容放置在 iframe 中。 这意味着需要添加一个弹出页来托管标识提供者。 在以下示例中，此页为 `/tab-auth/simple-start`. 选择按钮时，可使用 Microsoft Teams 客户端 SDK 的 `microsoftTeams.authenticate()` 函数启动此页面。
+与大多数标识提供者一样，Azure AD 不允许将其内容放置在某个标识提供者中 `iframe`。 这意味着需要添加一个弹出页来托管标识提供者。 在以下示例中，此页为 `/tab-auth/simple-start`. `microsoftTeams.authenticate()`选择按钮时，使用 Microsoft Teams 客户端 SDK 的函数启动此页面。
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -58,11 +72,11 @@ microsoftTeams.authentication.authenticate({
 
 * 身份验证流必须从域上的页面开始。 此域还应在清单的 [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) 部分中列出。 如果不这样做，则会导致出现空弹出窗口。
 
-* 如果无法使用 `microsoftTeams.authentication.authenticate()`，则会导致弹出窗口在登录过程结束时无法关闭。
+* 如果无法使用 `microsoftTeams.authentication.authenticate()` ，则会导致弹出窗口在登录过程结束时未关闭。
 
 ## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>从弹出页导航到授权页
 
-显示弹出页 (`/tab-auth/simple-start`) 时，将运行以下代码。 此页面的主要目标是重定向到身份提供程序，以便用户可以登录。 可以使用 HTTP 302 在服务器端执行此重定向，但在本例中，此重定向是在客户端使用调用来 `window.location.assign()`完成的。 这还允许使用 `microsoftTeams.getContext()` 来检索提示信息，这些提示信息可以传递给 Azure AD。
+当弹出页 (`/tab-auth/simple-start`) 显示时，将运行以下代码。 此页面的主要目标是重定向到标识提供者，以便用户可以登录。 可以使用 HTTP 302 在服务器端执行此重定向，但在本例中，此重定向是在客户端使用调用来 `window.location.assign()`完成的。 这还允许使用 `microsoftTeams.getContext()` 来检索提示信息，这些提示信息可以传递给 Azure AD。
 
 ```javascript
 microsoftTeams.getContext(function (context) {
