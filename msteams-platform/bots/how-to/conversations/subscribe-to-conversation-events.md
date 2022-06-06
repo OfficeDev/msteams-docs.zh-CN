@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 事件, 机器人, 频道消息, 回应, 对话
-ms.openlocfilehash: d9722ece0edd835213b7a963368c81ab1121c436
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757568"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906268"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -23,10 +23,11 @@ ms.locfileid: "65757568"
 * 添加或删除新团队成员时触发欢迎消息。
 * 创建、重命名或删除频道时触发通知。
 * 当用户为机器人消息点赞时触发通知。
+* 在安装过程中从用户输入 (选择) 标识机器人的默认通道。
 
 ## <a name="conversation-update-events"></a>对话更新事件
 
-可以使用对话更新事件来提供更好的通知和更有效的机器人操作。
+可以使用聊天更新事件来提供更好的通知和有效的机器人操作。
 
 > [!IMPORTANT]
 >
@@ -50,8 +51,8 @@ ms.locfileid: "65757568"
 | 已重命名频道     | channelRenamed    | OnTeamsChannelRenamedAsync | [已重命名频道](#channel-renamed)。 | 团队 |
 | 已删除频道     | channelDeleted    | OnTeamsChannelDeletedAsync | [已删除频道](#channel-deleted)。 | 团队 |
 | 已还原频道    | channelRestored    | OnTeamsChannelRestoredAsync | [已还原频道](#channel-deleted)。 | 团队 |
-| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [已添加成员](#team-members-added)。 | 全部 |
-| 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [已删除成员](#team-members-removed)。 | 群组聊天和团队 |
+| 已添加成员。   | membersAdded   | OnTeamsMembersAddedAsync   | [已添加成员](#members-added)。 | 全部 |
+| 已删除成员 | membersRemoved | OnTeamsMembersRemovedAsync | [已删除成员](#members-removed)。 | 全部 |
 | 已重命名团队        | teamRenamed       | OnTeamsTeamRenamedAsync    | [已重命名团队](#team-renamed)。       | 团队 |
 | 已删除团队        | teamDeleted       | OnTeamsTeamDeletedAsync    | [已删除团队](#team-deleted)。       | 团队 |
 | 已存档团队        | teamArchived       | OnTeamsTeamArchivedAsync    | [团队已存档](#team-archived)。       | 团队 |
@@ -60,7 +61,7 @@ ms.locfileid: "65757568"
 
 ### <a name="channel-created"></a>已创建频道
 
-例如，每当在已安装机器人的团队中创建新频道时，都会将频道创建事件发送到机器人。
+`channelCreated`每当在安装机器人的团队中创建新通道时，都会将事件发送到机器人。
 
 以下代码显示频道创建事件的示例：
 
@@ -149,7 +150,7 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>已重命名频道
 
-例如，每当在已安装机器人的团队中重命名频道时，都会将频道重命名事件发送到机器人。
+`channelRenamed`每当在安装了机器人的团队中重命名通道时，都会将事件发送到机器人。
 
 以下代码显示频道重命名事件的示例：
 
@@ -231,7 +232,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>已删除频道
 
-例如，每当在已安装机器人的团队中删除频道时，都会将频道删除事件发送到机器人。
+每当在安装机器人的团队中删除通道时，事件 `channelDeleted` 就会发送到机器人。
 
 以下代码显示频道删除事件的示例：
 
@@ -315,7 +316,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>已还原频道
 
-每当在已安装机器人的团队中还原以前删除的频道时，都会将频道还原事件发送到机器人。
+`channelRestored`只要在已安装机器人的团队中还原以前删除的通道，就会将事件发送到机器人。
 
 以下代码显示频道还原事件的示例：
 
@@ -402,9 +403,22 @@ async def on_teams_channel_restored(
 
 ---
 
-### <a name="team-members-added"></a>已添加团队成员
+### <a name="members-added"></a>已添加成员。
 
-首次 `teamMemberAdded` 将事件添加到会话时，会将事件发送到机器人。 每次将新用户添加到已安装机器人的团队或群组聊天时，都会将事件发送到机器人。 用户信息（即 ID）对于机器人是唯一的，并且可以缓存以供服务将来使用，例如向特定用户发送消息。
+在以下方案中，成员添加的事件将发送到机器人：
+
+1. 安装机器人本身并将其添加到会话中时
+
+   > 在团队上下文中，活动的 conversation.id 设置为 `id` 用户在应用安装期间选择的通道，或从 [公共开发人员预览版](../../../resources/dev-preview/developer-preview-intro.md)) 中当前提供的 (安装机器人的通道。
+
+2. 将用户添加到安装机器人的会话中时
+
+   > 事件有效负载中收到的用户 ID 是机器人唯一的，可以缓存以供将来使用，例如直接向用户发送消息。
+
+成员添加的活动 `eventType` 设置为 `teamMemberAdded` 从团队上下文发送事件时。 若要确定添加的新成员是机器人本身还是用户，请检查 `Activity` 该 `turnContext`成员的对象。 `MembersAdded`如果列表包含与对象字段`Recipient`相同的`id`对象`id`，则添加的成员是机器人，否则为用户。 机器人的 `id` 格式设置为 `28:<MicrosoftAppId>`.
+
+> [!TIP]
+> 使用[该`InstallationUpdate`事件](#installation-update-event)确定何时添加或从会话中删除机器人。
 
 以下代码显示团队成员添加事件的示例：
 
@@ -455,46 +469,58 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-这是机器人在添加到团队时收到的消息。
+将机器人添加到团队时机器人收到的消息。
+
+> [!NOTE]
+> 在此有效负载中， `conversation.id` `channelData.settings.selectedChannel.id` 该 ID 将是用户在应用安装期间选择的通道的 ID 或从其中触发安装的位置。
 
 ```json
 {
+    "type": "conversationUpdate",
     "membersAdded": [
         {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
         }
     ],
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:38:35.312Z",
-    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",
+    "timestamp": "2021-12-07T22:34:56.534Z",
+    "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
     },
     "conversation": {
         "isGroup": true,
         "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel"
     },
     "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
     },
     "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
         "eventType": "teamMemberAdded",
         "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
         }
     }
 }
 ```
 
-这是机器人在添加到一对一聊天时收到的消息。
+将机器人添加到一对一聊天时机器人收到的消息。
 
 ```json
 {
@@ -546,9 +572,15 @@ async def on_teams_members_added(
 
 ---
 
-### <a name="team-members-removed"></a>已删除团队成员
+### <a name="members-removed"></a>已删除成员
 
-`teamMemberRemoved`如果事件已从团队中删除，则会将其发送到机器人。 每次从机器人所属的团队中删除任何用户时，都会将事件发送到机器人。 若要确定删除的新成员是机器人本身还是用户，请检查 `turnContext` 的 `Activity` 对象。  `Id`如果对象的字段与对象的`MembersRemoved``Recipient`字段相同`Id`，则删除的成员是机器人，否则为用户。 机器人的 `Id` 通常为 `28:<MicrosoftAppId>`。
+在以下情况下，已删除的成员事件将发送到机器人：
+
+1. 当机器人本身卸载并从会话中删除时。
+2. 从安装机器人的会话中删除用户时。
+
+已删除的成员活动 `eventType` 设置为 `teamMemberRemoved` 从团队上下文发送事件时。 若要确定删除的新成员是机器人本身还是用户，请检查 `turnContext` 的 `Activity` 对象。 `MembersRemoved`如果列表包含与对象字段`Recipient`相同的`id`对象`id`，则添加的成员是机器人，否则为用户。 机器人的 ID 格式设置为 `28:<MicrosoftAppId>`。
+
 
 > [!NOTE]
 > 从租户中永久删除用户时，将触发 `membersRemoved conversationUpdate` 事件。
@@ -740,7 +772,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>已删除团队
 
-删除团队时通知机器人。 它在 `channelData` 对象中接收类型为 `eventType.teamDeleted` 的 `conversationUpdate` 事件。
+删除团队时，机器人会收到通知。 它在 `channelData` 对象中接收类型为 `eventType.teamDeleted` 的 `conversationUpdate` 事件。
 
 以下代码显示团队删除事件的示例：
 
@@ -1296,6 +1328,15 @@ async def on_reactions_removed(
 
 使用该 `installationUpdate` 事件在安装时从机器人发送介绍性消息。 此事件可帮助你满足隐私和数据保留要求。 你还可以在卸载机器人时清理和删除用户或线程数据。
 
+`conversationUpdate`与将机器人添加到团队时发送的事件类似，事件的 conversation.id `installationUpdate` 设置为用户在应用安装期间选择的通道的 ID 或发生安装的通道的 ID。 ID 表示用户打算让机器人操作的通道，并且机器人在发送欢迎消息时必须使用该通道。 对于显式需要常规通道 ID 的情况，可以从 `team.id` 中 `channelData`获取。
+
+在此示例中`conversation.id``conversationUpdate`，活动和`installationUpdate`活动将设置为 Daves 演示团队中响应通道的 ID。
+
+![创建所选通道](~/assets/videos/addteam.gif)
+
+> [!NOTE]
+> 仅在将应用安装到团队中时发送的 *添加* 事件上`installationUpdate`设置所选通道 ID， ([公共开发人员预览](../../../resources/dev-preview/developer-preview-intro.md)版) 中当前可用。
+
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
@@ -1337,56 +1378,58 @@ async onInstallationUpdateActivity(context: TurnContext) {
 # <a name="json"></a>[JSON](#tab/json)
 
 ```json
-{ 
-  "action": "add", 
-  "type": "installationUpdate", 
-  "timestamp": "2020-10-20T22:08:07.869Z", 
-  "id": "f:3033745319439849398", 
-  "channelId": "msteams", 
-  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
-  "from": { 
-    "id": "sample id", 
-    "aadObjectId": "sample Azure AD Object ID" 
-  },
-  "conversation": { 
-    "isGroup": true, 
-    "conversationType": "channel", 
-    "tenantId": "sample tenant ID", 
-    "id": "sample conversation Id@thread.skype" 
-  }, 
-
-  "recipient": { 
-    "id": "sample reciepent bot ID", 
-    "name": "bot name" 
-  }, 
-  "entities": [ 
-    { 
-      "locale": "en", 
-      "platform": "Windows", 
-      "type": "clientInfo" 
-    } 
-  ], 
-  "channelData": { 
-    "settings": { 
-      "selectedChannel": { 
-        "id": "sample channel ID@thread.skype" 
-      } 
-    }, 
-    "channel": { 
-      "id": "sample channel ID" 
-    }, 
-    "team": { 
-      "id": "sample team ID" 
-    }, 
-    "tenant": { 
-      "id": "sample tenant ID" 
-    }, 
-    "source": { 
-      "name": "message" 
-    } 
-  }, 
-  "locale": "en" 
-}
+{
+    {
+    "type": "installationUpdate",
+    "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
+    "timestamp": "2021-11-09T04:47:30.91Z",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "channelId": "msteams",
+    "from": {
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+    },
+    "recipient": {
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
+    },
+    "locale": "en-US",
+    "entities": [
+        {
+            "type": "clientInfo",
+            "locale": "en-US"
+        }
+    ],
+    "conversation": {
+        "isGroup": true,
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel",
+        "conversationType": "channel",
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+    },
+    "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
+        "channel": {
+            "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+        },
+        "team": {
+            "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+        },
+        "tenant": {
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+        },
+        "source": {
+            "name": "message"
+        }
+    },
+    "action": "add"
+    }
 ```
 
 # <a name="python"></a>[Python](#tab/python)
@@ -1409,7 +1452,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>安装和卸载事件的事件处理
 
-使用这些安装和卸载事件时，在某些情况下，机器人在从 Teams 收到意外事件时会出现异常。这会在以下情况下发生：
+使用这些安装和卸载事件时，在某些情况下，机器人在从 Teams 接收意外事件时会出现异常，这种情况在以下情况下发生：
 
 * 你没有使用 Microsoft Bot Framework SDK 来构建机器人，因此机器人在收到意外事件时会出现异常。
 * 你使用 Microsoft Bot Framework SDK 来构建机器人，并选择通过覆盖基本事件句柄来更改默认事件行为。

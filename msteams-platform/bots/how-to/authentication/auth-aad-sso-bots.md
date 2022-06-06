@@ -4,12 +4,12 @@ description: 介绍如何获取用户令牌。 目前，机器人开发人员可
 keywords: 令牌, 用户令牌, 机器人的 SSO 支持, 权限, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887595"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906253"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>机器人的单一登录 (SSO) 支持
 
@@ -385,4 +385,4 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
 
 ## <a name="step-by-step-guide"></a>分步指南
 
-按照[分步指南](../../../sbs-bots-with-sso.yml)进行操作，该指南可帮助你创建启用了 SSO 身份验证的机器人。
+按照 [分步指南](../../../sbs-bots-with-sso.yml)操作，使用 SSO 身份验证生成机器人。
