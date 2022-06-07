@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能
 description: 了解 Microsoft Teams 中这些功能的新开发人员功能和增强功能。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6152181ac53685ad056f9a7e4ae8f11cf5dab0a1
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887763"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906286"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -264,6 +264,7 @@ ms.locfileid: "65887763"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+| 06/06/2022| 更新 Teams 机器人中的聊天和安装事件 |  生成机器人>机器人对话> Teams 机器人中的对话事件> [Teams 机器人中的对话事件](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 |  构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 02/07/2022 | 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
