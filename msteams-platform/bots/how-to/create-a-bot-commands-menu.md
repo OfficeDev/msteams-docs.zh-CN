@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 命令菜单 撰写消息对话 @提及
-ms.openlocfilehash: b81959b23363142cd463788950116b4f805f95ae
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6d61b7566dd0dcb25fae94bf43f2f19bd219e9b0
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757694"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938938"
 ---
 # <a name="bot-command-menus"></a>机器人命令菜单
 
@@ -40,13 +40,11 @@ ms.locfileid: "65757694"
 **使用 App Studio 为机器人创建命令菜单**
 
 1. 打开 Teams，然后从左窗格中选择“**应用**”。 在“**应用**”页中，搜索 **App Studio**，然后选择“**打开**”。
-   > [!NOTE]
-   > 如果没有 **APP Studio**，可以下载它。 有关详细信息，请参阅[安装 App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)。
-  
+    
    > [!WARNING]
    > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
 
-  :::image type="content" source="/media/AppStudio.png" alt-text="安装 App Studio"lightbox="media/AppStudio.png"border="true":::
+   :::image type="content" source="/media/AppStudio.png" alt-text="安装 App Studio"lightbox="media/AppStudio.png"border="true":::
 
 2. 在 **App Studio** 中，选择 **清单编辑器** 选项卡。如果没有现有应用包，可以创建或导入现有应用。更多相关信息，请参阅 [更新应用包](~/get-started/deploy-csharp-app-studio.md)。
 

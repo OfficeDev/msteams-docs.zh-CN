@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 72d980849d48498dddedb87db35ae15ca69e4cda
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 284cc455cdbb7a0c5b859fd4909f0c3a1a99b037
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756931"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938946"
 ---
 # <a name="manage-multiple-environments"></a>管理多个环境
 
@@ -19,16 +19,16 @@ ms.locfileid: "65756931"
 
  可以对多个环境执行以下操作：
 
-1. **生产前测试**：在新式应用开发生命周期中将 Teams 应用发布到生产环境之前，可以设置多个环境，例如开发、测试和暂存
+1. **生产前测试**：可以在现代应用开发生命周期中将 Teams 应用发布到生产环境之前设置多个环境，例如开发、测试和暂存。
 
-2. **管理不同环境中的应用行为**：可以为多个环境设置不同的行为，例如在生产环境中启用遥测，但在开发环境中禁用遥测
+2. **管理不同环境中的应用行为**：可以为多个环境设置不同的行为，例如在生产环境中启用遥测，但在开发环境中禁用遥测。
 
 ## <a name="prerequisite"></a>先决条件
 
 * 安装 [最新版本的 Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
 > [!TIP]
-> 确保已在 Microsoft Visual Studio 代码中打开 Teams 应用项目。
+> 确保已在 Visual Studio 代码中打开 Teams 应用项目。
 
 ## <a name="create-a-new-environment"></a>创建新环境
 
@@ -42,8 +42,8 @@ ms.locfileid: "65756931"
 
 若要 **添加另一个远程环境**，请执行以下操作：
 
-1. 在边栏中选择 **Teams** 图标
-2. 在“环境”部分下选择“**+Teams: 创建新环境**”，如下图所示：
+1. 从左侧导航栏中选择 **Teams** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso 添加边栏"::: 。
+2. 选择 **“+Teams：在”环境****“** 部分下创建新环境，如下图所示：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="创建":::
 
@@ -57,15 +57,15 @@ ms.locfileid: "65756931"
 
 ## <a name="project-folder-structure"></a>项目文件夹结构
 
-创建项目后，可以在 Visual Studio Code 的资源管理器区域中查看项目文件夹和文件。 除了自定义代码之外，Teams 工具包还使用一些文件来维护应用的配置、状态和模板。 以下列表提供了文件，并概述了它们与多个环境的关系。
+创建项目后，可以在 VS Code 的 **资源管理器** 下查看项目文件夹和文件。 除了自定义代码，Teams 工具包还使用一些文件来维护应用的配置、状态和模板。 以下列表提供了文件，并概述了它们与多个环境的关系。
 
 * `.fx/configs`：配置用户可以为 Teams 应用自定义的文件
-  * `config.<envName>.json`：每个环境的配置文件 
-  * `azure.parameters.<envName>.json`：Azure Bicep 预配的每个环境参数文件
+  * `config.<envName>.json`：按环境配置文件
+  * `azure.parameters.<envName>.json`：每个环境的 Azure bicep 预配参数文件
   * `projectSettings.json`：适用于所有环境的全局项目设置
 * `.fx/states`：由工具包生成的预配结果
-  * `state.<envName>.json`：每个环境的预配输出文件
-  * `<env>.userdata`：预配输出的每个环境敏感用户数据
+  * `state.<envName>.json`：按环境预配输出文件
+  * `<env>.userdata`：每个环境预配输出的用户数据
 * `templates`
   * `appPackage`：应用清单模板文件
   * `azure`：Bicep 模板文件
@@ -86,18 +86,18 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
 
 ## <a name="scenarios"></a>应用场景
 
-有四种方案用于自定义不同环境中的资源预配。
+可以看到以下方案，用于自定义不同环境中的资源预配。
 <br>
 
 <br><details>
-<summary><b>方案 1：为不同环境自定义 Teams 应用名称</b></summary>
+<summary><b>方案 1：为不同环境自定义 Teams 应用名称 </b></summary>
 
-可以将 Teams 应用名称设置为 `myapp(dev)`（对于默认环境 `dev`）和 `myapp(staging)`（对于暂存环境 `staging`）。
+可以将 Teams 应用名称 `myapp(dev)` 设置为默认环境 `dev` 和 `myapp(staging)` 过渡环境 `staging`。
 
-执行以下步骤进行自定义：
+请按照以下步骤进行自定义：
 
-1. 打开配置文件 `.fx/configs/config.dev.json`
-2. 将“*清单 > 应用名称 > 简短*”的属性更新为 `myapp(dev)`
+1. 打开配置文件 `.fx/configs/config.dev.json`。
+2. 将 *清单> appName 的属性>简短* 更新为 `myapp(dev)`。
 
   `.fx/configs/config.dev.json` 的更新如下所示：
 
@@ -115,26 +115,25 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
   }
   ```
 
-3. 创建新环境并将其命名为 `staging`（如果不存在）
-4. 打开配置文件 `.fx/configs/config.staging.json`
-5. 更新同一属性 `myapp(staging)`
-6. 在 `dev` 和 `staging` 环境中运行预配命令，以更新远程环境中的应用名称。 若要使用 Teams 工具包运行预配命令，请参阅[预配](provision.md#provision-using-teams-toolkit)
-</details>
-<br>
+3. 创建新环境，并在不存在时将其 `staging` 命名。
+4. 打开配置文件 `.fx/configs/config.staging.json`。
+5. 更新同一属性 `myapp(staging)`。
+6. 在 `dev` 和 `staging` 环境中运行预配命令，以更新远程环境中的应用名称。 若要使用 Teams 工具包运行预配命令，请参阅 [预配](provision.md#provision-using-teams-toolkit)。
 
+</details>
 
 <details>
 <summary><b>方案 2：为不同环境自定义 Teams 应用说明</b></summary>
 
-在此方案中，你将了解如何为不同的环境设置不同的 Teams 应用说明：
+可以为不同的环境设置不同的 Teams 应用说明：
 
 * 对于默认环境 `dev`，说明为 `my app description for dev`
 * 对于暂存环境 `staging`，说明为 `my app description for staging`
 
-执行以下步骤进行自定义：
+请按照以下步骤进行自定义：
 
-1. 打开配置文件 `.fx/configs/config.dev.json`
-2. 添加“*清单 > 说明 > 简短*”的新属性，值为 `my app description for dev`
+1. 打开配置文件 `.fx/configs/config.dev.json`。
+2. 添加 *清单>说明的新属性>用* 值 `my app description for dev`短。
 
   `.fx/configs/config.dev.json` 的更新如下所示：
 
@@ -153,11 +152,11 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
   }
   ```
 
-3. 创建新环境并将其命名为 `staging`（如果不存在）
-4. 打开配置文件 `.fx/configs/config.staging.json`
-5. 将同一属性添加到 `my app description for staging`
-6. 打开 Teams 应用清单模板`templates/appPackage/manifest.template.json`
-7. 更新 `description > short` 的属性，以将配置文件中定义的 **变量** 与 Mustache 语法 `{{config.manifest.description.short}}` 结合使用
+3. 创建新环境，并在不存在时将其 `staging` 命名。
+4. 打开配置文件 `.fx/configs/config.staging.json`。
+5. 将同一属性添加到 `my app description for staging`.
+6. 打开 Teams 应用清单模板 `templates/appPackage/manifest.template.json`。
+7. 更新属性`description > short`以使用在配置具有胡子语法`{{config.manifest.description.short}}`的文件中定义的 **变量**。
   
   `manifest.template.json` 的更新如下所示：
 
@@ -175,20 +174,19 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
   }
   ```
 
-8. 针对 `dev` 和 `staging` 环境运行预配命令，以更新远程环境中的应用名称。 若要使用 Teams 工具包运行预配命令，请参阅[预配](provision.md#provision-using-teams-toolkit)
+8. 针对 `dev` 和 `staging` 环境运行预配命令，以更新远程环境中的应用名称。
 
 </details>
-<br>
 
 <details>
 <summary><b>方案 3：为所有环境自定义 Teams 应用说明</b></summary>
 
-在此方案中，你将了解如何将 Teams 应用的说明设置为 `my app description`（对于所有环境）。
+可以将 Teams 应用 `my app description` 的说明设置为所有环境。
 
 由于 Teams 应用清单模板是在所有环境中共享的，因此我们可以为目标更新其中的说明值：
 
-1. 打开 Teams 应用清单模板`templates/appPackage/manifest.template.json`
-2. 使用 **硬编码字符串** `my app description` 更新属性 `description > short`
+1. 打开 Teams 应用清单模板 `templates/appPackage/manifest.template.json`。
+2. 使用 **硬编码字符串**`my app description`更新属性`description > short`。
   
   `manifest.template.json` 的更新如下所示：
 
@@ -207,14 +205,13 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
 
   ```
 
-3. 针对 **所有** 环境运行预配命令，以更新远程环境中的应用名称。 若要使用Teams Toolkit运行预配命令，请参阅[预配](provision.md#provision-using-teams-toolkit)。
+3. 针对 **所有** 环境运行预配命令，以更新远程环境中的应用名称。
 
-<br></details>
-<br>
+</details>
 
 <details>
 <br><summary><b>方案 4：为不同的环境自定义 Azure 资源</b></summary>
-通过编辑与 fx/configs/azure.parameters.{env}.json 对应的环境，可以为每个环境自定义 Azure 资源，例如指定 Azure 函数名称。 文件。
+可以为每个环境自定义 Azure 资源，例如编辑与 fx/configs/azure.parameters 对应的环境。{env}.json 文件，用于指定 Azure 函数名称。
 
 有关 Bicep 模板和参数文件的详细信息，请参阅 [预配云资源](provision.md)
 </details>
