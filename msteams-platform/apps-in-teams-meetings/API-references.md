@@ -1,16 +1,16 @@
 ---
 title: 会议应用 API 参考
 author: surbhigupta
-description: 使用示例和代码示例标识会议应用 API 引用，Teams 应用会议用户参与者角色 api 用户上下文通知信号查询。
+description: 使用示例和代码示例标识会议应用 API 引用，Teams应用会议用户参与者角色 api 用户上下文通知信号查询。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887574"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032786"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | 属性名称 | 用途 |
 |---|---|
 | **user.id** | 用户的 ID。 |
-| **user.aadObjectId** | 用户的 Azure Active Directory 对象 ID。 |
+| **user.aadObjectId** | Azure Active Directory用户的对象 ID。 |
 | **user.name** | 用户名。 |
 | **user.givenName** | 用户的名字。|
 | **user.surname** | 用户的姓氏。 |
@@ -406,7 +406,7 @@ GET /v1/meetings/{meetingId}
 | 属性名称 | 用途 |
 |---|---|
 | **details.id** | 会议 ID，编码为 BASE64 字符串。 |
-| **details.msGraphResourceId** | MsGraphResourceId，专门用于 MS 图形 API 调用。 |
+| **details.msGraphResourceId** | MsGraphResourceId，专门用于 MS 图形 API调用。 |
 | **details.scheduledStartTime** | 会议的预定开始时间（以 UTC 为中心）。 |
 | **details.scheduledEndTime** | 会议的预定结束时间，以 UTC 表示。 |
 | **details.joinUrl** | 用于加入会议的 URL。 |
@@ -416,8 +416,8 @@ GET /v1/meetings/{meetingId}
 | **conversation.conversationType** | 会话类型。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **organizer.id** | 组织者的用户 ID。 |
-| **organizer.aadObjectId** | 组织者的 Azure Active Directory 对象 ID。 |
-| **organizer.tenantId** | 组织者的 Azure Active Directory 租户 ID。 |
+| **organizer.aadObjectId** | 组织者的Azure Active Directory对象 ID。 |
+| **organizer.tenantId** | 组织者的Azure Active Directory租户 ID。 |
 
 在定期会议类型中，
 
@@ -540,7 +540,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>获取应用内容演示区域共享状态 API
 
-`getAppContentStageSharingState` API 能够帮助获取有关应用在会议演示区域共享的内容信息。
+使用 `getAppContentStageSharingState` API 可以获取有关移动版和桌面版会议阶段应用共享的信息。
 
 ### <a name="query-parameter"></a>查询参数
 
@@ -819,7 +819,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **from.id** | 发送请求的用户 ID。 |
 | **from.aadObjectId** | 发送请求的用户的 Azure Active Directory 对象 ID。 |
 | **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
-| **conversation.tenantId** | 会话或会议的 Azure Active Directory 租户 ID。 |
+| **conversation.tenantId** | Azure Active Directory会话或会议的租户 ID。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **recipient.id** | 接收请求的用户的 ID。 |
 | **recipient.name** | 接收请求的用户的名称。 |

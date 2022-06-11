@@ -1,28 +1,28 @@
 ---
 title: 智能机器人对话中的邮件
-description: 介绍如何与Microsoft Teams机器人进行对话。 了解Teams通道数据、消息通知、图片消息、使用代码示例的自适应卡片。
+description: 介绍如何与Microsoft Teams机器人进行对话。 了解 Teams 频道数据、消息通知、图片消息、使用代码示例的自适应卡片。
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611462"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033013"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
-对话中的每个消息都是类型的`Activity``messageType: message`对象。 当用户发送消息时，Teams将消息发布到机器人。 Teams将 JSON 对象发送到机器人的消息传送终结点。 机器人会检查消息来确定其类型并作出相应响应。
+对话中的每个消息都是类型的`Activity``messageType: message`对象。 当用户发送消息时，Teams 会将消息发布到机器人。 Teams 将 JSON 对象发送到机器人的消息传送终结点。 机器人会检查消息来确定其类型并作出相应响应。
 
-基本对话通过 Bot Framework 连接器（单个 REST API）进行处理。 此 API 使机器人能够与Teams和其他通道通信。 Bot Builder SDK 提供以下功能：
+基本对话通过 Bot Framework 连接器（单个 REST API）进行处理。 此 API 使机器人能够与 Teams 和其他频道进行通信。 Bot Builder SDK 提供以下功能：
 
 * 轻松访问 Bot Framework 连接器。
 * 用于管理会话流和状态的其他功能。
 * 合并认知服务的简单方法，例如自然语言处理 (NLP) 。
 
-机器人使用`Text`该属性从Teams接收消息，并向用户发送单个或多个消息响应。
+机器人使用该 `Text` 属性从 Teams 接收消息，并向用户发送单个或多个消息响应。
 
 有关详细信息，请参阅 [机器人消息的用户归属](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)
 
@@ -199,14 +199,14 @@ async def on_members_added_activity(
 
 ## <a name="teams-channel-data"></a>Teams 频道数据
 
-该`channelData`对象包含Teams特定的信息，是团队和频道 ID 的明确源。 （可选）可以缓存这些 ID 并使用这些 ID 作为本地存储的密钥。 `TeamsActivityHandler` SDK 中的用户从`channelData`对象中提取重要信息，使其易于访问。 但是，始终可以从 `turnContext` 对象访问原始数据。
+该 `channelData` 对象包含 Teams 特定的信息，是团队和频道 ID 的明确源。 （可选）可以缓存这些 ID 并使用这些 ID 作为本地存储的密钥。 `TeamsActivityHandler` SDK 中的用户从`channelData`对象中提取重要信息，使其易于访问。 但是，始终可以从 `turnContext` 对象访问原始数据。
 
 该 `channelData` 对象不包含在个人对话中的消息中，因为这些内容发生在频道外部。
 
 发送到机器人的活动中的典型 `channelData` 对象包含以下信息：
 
-* `eventType`：Teams事件类型，仅在[通道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
-* `tenant.id`：Microsoft Azure Active Directory (在所有上下文中传递的 Azure AD) 租户 ID。
+* `eventType`：Teams 事件类型仅在 [通道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
+* `tenant.id`：Microsoft Azure Active Directory (Azure AD) 所有上下文中传递的租户 ID。
 * `team`：仅在频道上下文中传递，而不是在个人聊天中传递。
   * `id`：通道的 GUID。
   * `name`：仅在 [团队重命名事件中](subscribe-to-conversation-events.md#team-renamed)传递的团队名称。
@@ -243,13 +243,13 @@ async def on_members_added_activity(
 | 格式    | 从用户到机器人 | 从机器人到用户 | 注释                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | 格式文本  | ✔                | ✔                | 机器人可以发送格式文本、图片和卡片。 用户可以向机器人发送格式文本和图片。                                                                                        |
-| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式的最大 1024×1024 MB 和 1 MB。 不支持动画 GIF。  |
-| 卡片     | ✖                | ✔                | 请参阅[支持的卡Teams卡参考](~/task-modules-and-cards/cards/cards-reference.md)。 |
-| 表情符号    | ✔                | ✔                | Teams目前通过 UTF-16 支持表情符号，例如 U+1F600，用于笑脸。 |
+| 图片  | ✔                | ✔                | PNG、JPEG 或 GIF 格式的最大 1024×1024 MB 和 1 MB。 不支持动态 GIF。  |
+| 卡片     | ✖                | ✔                | 请参阅 [支持的卡片的 Teams 卡引用](~/task-modules-and-cards/cards/cards-reference.md) 。 |
+| 表情符号    | ✔                | ✔                | Teams 目前通过 UTF-16 支持表情符号，例如 U+1F600，用于笑脸。 |
 
 ## <a name="notifications-to-your-message"></a>消息通知
 
-还可以使用该 `Notification.Alert` 属性向邮件添加通知。 通知会提醒用户有关新任务、提及和注释的信息。 这些警报与用户正在处理的内容或必须通过在活动源中插入通知来查看的内容相关。 若要从机器人消息触发通知，请将 `TeamsChannelData` 对象 `Notification.Alert` 属性设置为 *true*。 是否引发通知取决于单个用户的Teams设置，不能重写这些设置。 通知类型是横幅，或者是横幅和电子邮件。
+还可以使用该 `Notification.Alert` 属性向邮件添加通知。 通知会提醒用户有关新任务、提及和注释的信息。 这些警报与用户正在处理的内容或必须通过在活动源中插入通知来查看的内容相关。 若要从机器人消息触发通知，请将 `TeamsChannelData` 对象 `Notification.Alert` 属性设置为 *true*。 是否引发通知取决于单个用户的 Teams 设置，不能重写这些设置。 通知类型是横幅，或者是横幅和电子邮件。
 
 > [!NOTE]
 > “ **摘要** ”字段将用户的任何文本显示为源中的通知消息。
@@ -333,7 +333,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 图片是通过将附件添加到消息来发送的。 有关附件的详细信息，请参阅 [向消息添加媒体附件](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。
 
-图片最多可以是 1024× 1024 MB，PNG、JPEG 或 GIF 格式最多可以是 1 MB。 不支持动画 GIF。
+图片最多可以是 1024× 1024 MB，PNG、JPEG 或 GIF 格式最多可以是 1 MB。 不支持动态 GIF。
 
 使用 XML 指定每个图像的高度和宽度。 在 markdown 中，映像大小默认为 256×256。 例如：
 
@@ -344,7 +344,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="adaptive-cards"></a>自适应卡
 
-自适应卡片可以在机器人中创作，并显示在多个应用中，例如Teams、网站等。 有关详细信息，请参阅 [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+自适应卡片可以在机器人中创作，并显示在多个应用（如 Teams、网站等）中。 有关详细信息，请参阅 [自适应卡片](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 
 以下代码演示了发送简单自适应卡片的示例：
 
@@ -382,13 +382,31 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 * **成功**：当发送到机器人的响应成功时， **将显示发送到应用消息的响应** 。
 
-:::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="成功消息"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="成功消息"border="true":::
 
-可以选择 **关闭** 或切换聊天以关闭消息。
+     可以选择 **关闭** 或切换聊天以关闭消息。
 
-**移动设备上的响应**：
-
-错误消息显示在自适应卡片的底部。
+     如果不想显示成功消息，请将属性`hide`设置为`true`属性`msTeams``feedback`。 下面是一个示例：
+    
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+    
 
 有关机器人中的卡片和卡片的详细信息，请参阅 [卡片文档](~/task-modules-and-cards/what-are-cards.md)。
 

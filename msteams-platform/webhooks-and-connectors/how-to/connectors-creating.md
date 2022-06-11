@@ -6,12 +6,12 @@ keywords: teams Office365 连接器
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 3258e6b08041abbfcd3e0b9a4365d6a31f884e0b
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: 2d711821d2b76b4cc2fd93a6d28cd5061129222e
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759660"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032950"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -127,7 +127,7 @@ ms.locfileid: "65759660"
 #### <a name="getsettings-response-properties"></a>`GetSettings` 响应属性
 
 >[!NOTE]
->从选项卡调用此方法时，`getSettings` 调用返回的参数不同于 [js 设置](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)中记录的参数。
+>从选项卡调用此方法时，`getSettings` 调用返回的参数不同于 [js 设置](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings)中记录的参数。
 
 下表提供了参数和 `GetSetting` 响应属性的详细信息：
 

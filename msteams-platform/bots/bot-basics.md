@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 活动处理程序框架机器人卡同意通道事件
-ms.openlocfilehash: 5b03eeaa01231fd070c1e81fc11b9254e10aba91
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757428"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032919"
 ---
 # <a name="bot-activity-handlers"></a>智能机器人活动处理程序
 
@@ -24,6 +24,9 @@ ms.locfileid: "65757428"
 Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序。 它会先路由所有 Teams 活动，然后再允许处理任何非 Teams 特定的活动。
 
 当机器人Teams收到活动时，它会路由到活动处理程序。 所有活动都通过一个称为轮次处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 Teams 机器人派生自 `TeamsActivityHandler` 类，此类派生自 Bot Framework 的 `ActivityHandler` 类。
+
+> [!NOTE]
+> 如果机器人活动需要超过 15 秒才能处理，Teams向机器人终结点发送重试请求。 因此，机器人中会看到重复的请求。
 
 # <a name="c"></a>[C#](#tab/csharp)
 

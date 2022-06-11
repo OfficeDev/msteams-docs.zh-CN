@@ -4,17 +4,17 @@ description: 介绍无提示身份验证、单一登录和 Azure AD 选项卡
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 身份验证 SSO 无提示 Azure AD 选项卡
-ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887791"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033020"
 ---
 # <a name="silent-authentication"></a>无提示的身份验证
 
 > [!IMPORTANT]
-> Microsoft 对 Active Directory 身份验证库 (ADAL) 的支持和开发，包括安全修补程序，将于 **2022 年 6 月 30日** 结束。 更新应用程序以使用 Microsoft 身份验证库 (MSAL) 继续接受支持。 请参阅[将应用程序迁移到 Microsoft 身份验证库 (MSAL)](/azure/active-directory/develop/msal-migration)。
+> Microsoft 对 Active Directory 身份验证库 (ADAL) 的支持和开发，包括安全修补程序，将于 **2022 年 6 月 30日** 结束。 若要继续接收支持，请将应用程序更新为使用 Microsoft 身份验证库 (MSAL) 。请参阅 [将应用程序迁移到 Microsoft 身份验证库 (MSAL) ](/azure/active-directory/develop/msal-migration)。
 
 > [!NOTE]
 > 要使身份验证适用于移动客户端上的选项卡，请确保使用的是 Teams JavaScript SDK 版本 1.4.1 或更高版本。

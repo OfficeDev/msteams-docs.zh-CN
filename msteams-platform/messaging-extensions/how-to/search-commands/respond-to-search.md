@@ -5,12 +5,12 @@ description: 了解如何使用代码示例和示例从Microsoft Teams应用中�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: f02db887a83965eeaac9e905fd20b34f79b34a68
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9e7dbfb6eed724fb56e7ae1e03a2132d7450947a
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111932"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032800"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -86,7 +86,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 |属性名称|用途|
 |---|---|
 |`composeExtension`|顶级响应信封。|
-|`composeExtension.type`|响应类型。 支持以下类型： <br>`result`：显示搜索结果的列表 <br>`auth`：要求用户进行身份验证 <br>`config`：要求用户设置消息扩展插件 <br>`message`：显示纯文本消息 |
+|`composeExtension.type`|响应类型。 支持以下类型： <br>`result`：显示搜索结果的列表 <br>`auth`：提示用户进行身份验证 <br>`config`：提示用户设置消息扩展插件 <br>`message`：显示纯文本消息 |
 |`composeExtension.attachmentLayout`|指定附件的布局。 用于类型 `result`响应。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象列表 <br>`grid`：缩略图图像的网格 |
 |`composeExtension.attachments`|有效附件对象的数组。 用于类型 `result`响应。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|建议的操作。 用于类型或 `config`. `auth` 的响应。 |
@@ -94,7 +94,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ### <a name="response-card-types-and-previews"></a>响应卡类型和预览
 
-Teams支持以下卡类型：
+Teams 支持以下卡片类型：
 
 * [缩略图卡](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [主图卡](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
@@ -416,8 +416,8 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 | 示例名称           | 说明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams消息扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams消息扩展搜索   |  介绍如何定义搜索命令并响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams 消息扩展操作| 介绍如何定义操作命令、创建任务模块和响应任务模块提交操作。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams 消息扩展搜索   |  介绍如何定义搜索命令和响应搜索。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>后续步骤
 

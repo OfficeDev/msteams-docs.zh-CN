@@ -5,12 +5,12 @@ description: 了解如何展开链接、打开阶段视图并使用 Microsoft Te
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2471a375960e47e31c6f35966a9ad2fba7007e99
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756735"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033034"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -87,7 +87,7 @@ ms.locfileid: "65756735"
 * 机器人使用 `200` 代码进行响应。
 
 > [!NOTE]
-> 在 Teams 移动客户端上，如果为通过 [Teams 应用商店](/platform/concepts/deploy-and-publish/apps-publish-overview.md) 分发的应用调用阶段视图并且没有针对移动设备优化的体验，则会打开设备的默认 Web 浏览器。浏览器打开 `TabInfo` 对象 `websiteUrl` 参数中指定的 URL。
+> 在 Teams 移动客户端上，如果为通过 [Teams 应用商店](/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) 分发的应用调用阶段视图并且没有针对移动设备优化的体验，则会打开设备的默认 Web 浏览器。浏览器打开 `TabInfo` 对象 `websiteUrl` 参数中指定的 URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 

@@ -6,12 +6,12 @@ keywords: 位置映射功能, 本机设备权限
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ff2403331d3d51581be4711fb6fb14fcdb809544
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757169"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033048"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能
 
@@ -58,7 +58,7 @@ ms.locfileid: "65757169"
 |[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | 在地图上显示位置。 |
 
 > [!NOTE]
-> `getLocation()` API 附带以下[输入配置](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)、`allowChooseLocation` 和 `showMap`。<br/> 如果 `allowChooseLocation` 的值为 *true*，则用户可以选择所选的任何位置。<br/>  如果该值为 *false*，则用户无法更改其当前位置。<br/> 如果 `showMap` 的值为 *false*，则会提取当前位置而不显示地图。 如果 `allowChooseLocation` 设置为 *true*，则会忽略 `showMap`。
+> `getLocation()` API 附带以下[输入配置](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops)、`allowChooseLocation` 和 `showMap`。<br/> 如果 `allowChooseLocation` 的值为 *true*，则用户可以选择所选的任何位置。<br/>  如果该值为 *false*，则用户无法更改其当前位置。<br/> 如果 `showMap` 的值为 *false*，则会提取当前位置而不显示地图。 如果 `allowChooseLocation` 设置为 *true*，则会忽略 `showMap`。
 
 下图描述了位置功能的 Web 应用体验：
 

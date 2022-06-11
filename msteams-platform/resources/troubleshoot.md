@@ -1,97 +1,98 @@
 ---
-title: 应用疑难解答
-description: 解决生成适用于 Microsoft Teams 的应用时的问题或Microsoft Teams
-keywords: teams 应用开发疑难解答
+title: 排查应用问题
+description: 排查为Microsoft Teams构建应用时出现的问题或错误
+keywords: teams 应用开发故障排除
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: 9688f2023707ca4eb3e7de6b52d3395a4cba47fd36dd29599dc4ead590368b95
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 76a1a4d45757dff36d45c73f1ea5f2791fbe2e02
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708034"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032821"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>对应用Microsoft Teams疑难解答
+# <a name="troubleshoot-your-microsoft-teams-app"></a>排查Microsoft Teams应用问题
 
 ## <a name="troubleshooting-tabs"></a>疑难解答选项卡
 
 ### <a name="accessing-the-devtools"></a>访问 DevTools
 
-可以在 Teams 客户端中打开[DevTools，](~/tabs/how-to/developer-tools.md)获得与在浏览器中按 Windows) 上的 F12 (或 MacOS) 上的 Command-Option-I (类似的体验。
+可以在[Teams客户端中打开 DevTools](~/tabs/how-to/developer-tools.md)，以获得与在浏览器中的 MacOS) 上的 Windows) 或 Command-Option-I (上按 F12 (类似的体验。
 
 ### <a name="blank-tab-screen"></a>空白选项卡屏幕
 
-如果在选项卡视图中看不到内容，可能是：
+如果未在选项卡视图中看到内容，则可能是：
 
-* 内容无法在 中显示 `<iframe>` 。
-* 内容域不在清单 [的 validDomains](~/resources/schema/manifest-schema.md#validdomains) 列表中。
+* 无法在 `<iframe>`其中显示内容。
+* 内容域不在清单中的 [validDomains](~/resources/schema/manifest-schema.md#validdomains) 列表中。
 
-### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>"保存"按钮未在设置对话框中启用
+### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>“设置”对话框上未启用“保存”按钮
 
-请确保在用户输入或选择了设置页面上的所有必需数据后调用以 `microsoftTeams.settings.setValidityState(true)` 启用保存按钮。
+用户在设置页上输入或选择所有必需数据以启用保存按钮后，请务必调用 `microsoftTeams.settings.setValidityState(true)` 。
 
-### <a name="after-selecting-the-save-button-the-tab-settings-cannot-be-saved"></a>选择"保存"按钮后，无法保存选项卡设置
+### <a name="the-tab-settings-cant-be-saved-on-selecting-save"></a>选择“保存”时无法保存选项卡设置
 
-添加选项卡时，如果单击保存按钮，但显示一条指示无法保存设置的错误消息，则问题可能是两类问题之一：
+添加选项卡时，如果选择 **“保存** ”但收到一条指示无法保存设置的错误消息，问题可能是以下两类问题之一：
 
-* 从未收到保存成功消息。 如果保存处理程序是使用 注册 `microsoftTeams.settings.registerOnSaveHandler(handler)` 的，则回调必须调用 `saveEvent.notifySuccess()` 。 如果回调未在 30 秒内调用它或改为调用， `saveEvent.notifyFailure(reason)` 将显示此错误。
+* **保存成功消息从未收到**：如果使用 `microsoftTeams.settings.registerOnSaveHandler(handler)`保存处理程序注册，则必须调用 `saveEvent.notifySuccess()`回调。
 
-* 如果未注册任何保存处理程序，将在用户选择保存按钮时 `saveEvent.notifySuccess()` 立即自动进行调用。
+  * 如果回调未在 30 秒内调用 `saveEvent.notifySuccess()` 或调用 `saveEvent.notifyFailure(reason)` ，则会显示此错误。
+  * 如果未注册保存处理程序，则在 `saveEvent.notifySuccess()` 用户选择 **“保存**”时会自动进行调用。
 
-* 提供的设置无效。 无法保存设置的另一个原因是，如果调用提供的设置对象无效，或者根本不会 `microsoftTeams.setSettings(settings)` 进行调用。 请参阅下一部分设置对象的常见问题。
+* **提供的设置无效**：可能无法保存设置的另一个原因是调 `microsoftTeams.setSettings(settings)` 用提供的设置对象无效，或者根本没有进行调用。 请参阅下一部分：设置对象的常见问题。
 
 ### <a name="common-problems-with-the-settings-object"></a>设置对象的常见问题
 
 * `settings.entityId` 缺少。 此字段属于必填字段。
 * `settings.contentUrl` 缺少。 此字段属于必填字段。
-* `settings.contentUrl` 或可选 `settings.removeUrl` ， 或 `settings.websiteUrl` 提供，但无效。 URL 必须使用 HTTPS，并且还必须是设置页的同一域或在清单列表中 `validDomains` 指定。
+* `settings.contentUrl` 或可选 `settings.removeUrl`，或 `settings.websiteUrl` 提供但无效。 URL 必须使用 HTTPS，并且必须与设置页相同或在清单列表 `validDomains` 中指定。
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>无法对用户进行身份验证或在选项卡中显示身份验证提供程序
 
-除非执行无提示身份验证，否则必须遵循 JavaScript 客户端 SDK Microsoft Teams[身份验证过程](/javascript/api/overview/msteams-client.md)。
+除非执行无提示身份验证，否则必须遵循 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 提供的身份验证过程。
 
 > [!NOTE]
->要求所有身份验证流在域上开始和结束，必须在清单中的 `validDomains` 对象中列出。
+>我们需要在域上启动和结束所有身份验证流，该流必须在清单中的 `validDomains` 对象中列出。
 
-有关身份验证详细信息，请参阅验证 [用户](~/concepts/authentication/authentication.md)。
+有关身份验证的详细信息，请参阅 [对用户进行身份验证](~/concepts/authentication/authentication.md)。
 
-### <a name="static-tabs-not-showing-up"></a>未显示静态选项卡
+### <a name="static-tabs-not-showing-up"></a>静态选项卡未显示
 
-存在一个已知问题，即从个人聊天对话访问应用时，使用新的或更新的静态选项卡更新现有自动程序应用时不会显示该选项卡更改。  To see the change， you should test on a new user or test instance， or access the bot from the Apps flyout.
+存在一个已知问题：使用新的或更新的静态选项卡更新现有机器人应用在从个人聊天聊天访问应用时不会显示该选项卡更改。  若要查看更改，应在新用户或测试实例上进行测试，或从“应用”浮出控件访问机器人。
 
-## <a name="troubleshooting-bots"></a>自动程序疑难解答
+## <a name="troubleshooting-bots"></a>机器人疑难解答
 
-### <a name="cant-add-my-bot"></a>无法添加我的机器人
+### <a name="cant-add-my-bot"></a>无法添加机器人
 
-应用必须由租户管理员Office 365才能由最终用户加载。 请注意，在某些情况下，Office 365租户可能有多个与其关联的 SK，并且对于在任何 SK 中工作的自动程序，必须在所有 SK 中启用它们。 有关详细信息[，请参阅Office 365](~/concepts/build-and-test/prepare-your-o365-tenant.md)租户。
+应用必须由Office 365租户管理员启用，才能由最终用户加载。 在某些情况下，Office 365租户可能具有多个与之关联的 SKU，机器人在任何情况下都可正常工作，必须在所有 SKU 中启用这些 SKU。 有关详细信息，请参阅[准备Office 365租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
 ### <a name="cant-add-bot-as-a-member-of-a-team"></a>无法将机器人添加为团队成员
 
-必须先将聊天机器人上传到团队，然后才能在团队的任何频道中访问它。 有关 [此过程详细信息](~/concepts/deploy-and-publish/apps-upload.md) ，请查看在团队中上载应用。
+机器人必须先上传到团队，然后才能在该团队的任何频道中访问。 有关此过程的详细信息，请参阅 [在团队中上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
 
 ### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>我的机器人不会在频道中收到我的消息
 
-频道中的自动程序仅在显式@mentioned接收消息，即使您回复的是以前的自动程序消息。 在邮件中可能看不到自动程序名称的唯一例外是，如果自动程序由于最初发送的 `imBack` CardAction 而收到操作。
+通道中的机器人仅在显式@mentioned时接收消息，即使你正在回复以前的机器人消息。 在邮件中可能看不到机器人名称的唯一例外是，如果机器人由于最初发送的 CardAction 而收到 `imBack` 操作。
 
-### <a name="my-bot-doesnt-understand-my-commands-when-in-a-channel"></a>在频道中时，我的机器人无法理解我的命令
+### <a name="my-bot-doesnt-understand-my-commands-when-in-a-channel"></a>我的机器人在频道中时不了解我的命令
 
-由于频道中的机器人仅在收到@mentioned时接收消息，因此机器人在频道中接收的所有消息@mention文本字段中。 最佳做法是在传入的文本消息中分离自动程序名称本身，然后再传递到分析逻辑。 查看 [提及](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) ，获取有关如何处理此案例的提示。
+由于通道中的机器人仅在@mentioned时接收消息，因此机器人在通道中收到的所有消息都包括文本字段中@mention的消息。 最佳做法是在传递到分析逻辑之前，将机器人名称本身从所有传入的短信中剥离出来。 查看 [有关](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) 如何处理这种情况的提示。
 
-## <a name="issues-with-packaging-and-uploading"></a>打包和上载问题
+## <a name="issues-with-packaging-and-uploading"></a>打包和上传问题
 
-### <a name="error-while-reading-manifestjson"></a>在打开时manifest.js错误
+### <a name="error-while-reading-manifestjson"></a>读取 manifest.json 时出错
 
-大多数清单错误都提供特定字段缺失或无效的提示。 但是，如果 JSON 文件无法读取为 JSON，则使用这个常规错误消息。
+大多数清单错误将提示缺少或无效的特定字段。 但是，如果无法将 JSON 文件读取为 JSON，则会使用此泛型错误消息。
 
 清单读取错误的常见原因：
 
-* 无效的 JSON。 使用 IDE（如[Visual Studio Code](https://code.visualstudio.com)或[Visual Studio）](https://www.visualstudio.com/vs/)自动验证 JSON 语法。
-* 编码问题。 对 on 文件使用 UTF-8 *manifest.jsUTF-8。* 其他编码（特别是 BOM 编码）可能无法读取。
-* 程序包格式.zip格式。 on *manifest.js* 文件必须位于文件.zip级别。 请注意，默认 Mac 文件压缩可能会将manifest.js放在子目录中，这样将不会在Microsoft Teams。
+* JSON 无效。 使用 IDE，例如[自动](https://code.visualstudio.com)验证 JSON 语法[的Visual Studio Code或Visual Studio](https://www.visualstudio.com/vs/)。
+* 编码问题。 对 *manifest.json* 文件使用 UTF-8。 其他编码（特别是 BOM 编码）可能不可读。
+* 格式不正确的.zip包。 *manifest.json* 文件必须位于.zip文件的顶层。 请注意，默认的 Mac 文件压缩可能会将 *manifest.json* 放置在子目录中，而子目录不会在Microsoft Teams中正确加载。
 
-### <a name="another-extension-with-same-id-exists"></a>存在另一个 ID 相同的扩展
+### <a name="another-extension-with-same-id-exists"></a>存在具有相同 ID 的另一个扩展
 
-如果试图重新上传 ID 相同的更新程序包，请选择选项卡的表格行末尾的"替换"图标，而不是选择"Upload"**按钮**。
+如果尝试再次上传具有相同 ID 的更新包，请选择选项卡表行末尾的 **“替换**”图标，而不是 **“Upload**”按钮。
 
-如果未重新上载更新的程序包，请确保 ID 是唯一的。
+如果不重新上传更新的包，请确保 ID 是唯一的。

@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 命令菜单 撰写消息对话 @提及
-ms.openlocfilehash: 6d61b7566dd0dcb25fae94bf43f2f19bd219e9b0
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 524ecb9ee829292487cc0e6c45604d4c241967c8
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938938"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032959"
 ---
 # <a name="bot-command-menus"></a>机器人命令菜单
 
@@ -21,11 +21,11 @@ ms.locfileid: "65938938"
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-![机器人命令菜单](./conversations/media/bot-menu-sample.png)
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-![移动设备机器人命令菜单](./conversations/media/mobile-bot-menu-sample.png)
+:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
 * * *
 
@@ -40,11 +40,11 @@ ms.locfileid: "65938938"
 **使用 App Studio 为机器人创建命令菜单**
 
 1. 打开 Teams，然后从左窗格中选择“**应用**”。 在“**应用**”页中，搜索 **App Studio**，然后选择“**打开**”。
-    
+
    > [!WARNING]
    > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
 
-   :::image type="content" source="/media/AppStudio.png" alt-text="安装 App Studio"lightbox="media/AppStudio.png"border="true":::
+   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
 2. 在 **App Studio** 中，选择 **清单编辑器** 选项卡。如果没有现有应用包，可以创建或导入现有应用。更多相关信息，请参阅 [更新应用包](~/get-started/deploy-csharp-app-studio.md)。
 
@@ -52,7 +52,7 @@ ms.locfileid: "65938938"
 
 4. 在 **清单编辑器** 的右窗格和 **命令** 部分中，选择 **添加**。出现 **新命令** 屏幕。
 
-    :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="选择应用包"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
+   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="选择应用包" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
 
 5. 输入必然显示为机器人命令菜单的“**命令文本**”。
 
@@ -60,7 +60,7 @@ ms.locfileid: "65938938"
 
 7. 选择各“**范围**”复选框以选择此命令菜单必须显示的位置，然后选择“**保存**”。
 
-:::image type="content" source="/media/AppStudio-NewCommandMenu.png" alt-text="App Studio“新建命令”菜单按钮"lightbox="/media/AppStudio-NewCommandMenu.png"border="true":::
+   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="“App Studio 新建命令”菜单按钮 "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑 Manifest.json 为机器人创建命令菜单
 
