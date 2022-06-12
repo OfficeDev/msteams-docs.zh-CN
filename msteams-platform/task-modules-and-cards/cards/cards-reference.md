@@ -4,12 +4,12 @@ description: 介绍 Teams 中机器人可用的所有卡片和卡片操作
 ms.localizationpriority: high
 keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 33df4c45aa613ec79c4380850043d373f2d5863d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757197"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032986"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -21,13 +21,15 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 要从 App Studio 创建主图卡、缩略图卡或自适应卡片，请：
 
-1. 从 Teams 转到 **App Studio**。
-1. 选择 **Card 编辑器**。
-1. 选择 **创建新卡**。
-1. 选择 **创建** **主卡**、**缩略图卡** 或 **自适应卡片** 其中的一张卡。 显示该卡的元数据详细信息、按钮以及 json、csharp 和 node 代码示例。
+1. 转到 [Teams 开发人员门户](https://dev.teams.microsoft.com/home)。
+1. 选择“**设计和构建自适应卡片**”。
+1. 选择“**新建卡片**”。
+1. 输入卡片名称，然后选择“**保存**”。
+1. 从“**主图卡片**”、“**缩略图卡片**”或“**自适应卡片**”中选择其中一个。
 
-    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="主卡详细信息":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
 
+1. 选择“**保存**”。
 1. 选择 **向我发送此卡片**。 该卡片将作为聊天消息发送给你。
 
 ## <a name="card-examples"></a>卡片示例

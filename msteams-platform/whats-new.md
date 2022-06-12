@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能
 description: 了解 Microsoft Teams 中这些功能的新开发人员功能和增强功能。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906286"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032978"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -47,6 +47,7 @@ ms.locfileid: "65906286"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 06/08/2022 | 成功消息的可选卡片反馈| “生成机器人”>“机器人对话”>“[机器人对话中的消息](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)”|
 | 06/03/2022 | 更新了添加身份验证模块，用于使用新的结构和过程为选项卡应用启用 SSO | 添加身份验证 > 选项卡 > [在选项卡应用中启用单一登录](tabs/how-to/authentication/tab-sso-overview.md) |
 | 2022 年 5 月 24 日 | 快速批准发布链接到 SaaS 产品/服务的应用的其他提示 | 发布到 Teams 应用商店>概述>[快速批准发布链接到 SaaS 产品/服务的应用的其他提示](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 2022 年 5 月 24 日 | 将已启用 Outlook 和 Office 的应用提交到 Teams 应用商店 | 在 Microsoft 365 中扩展应用>[概述](m365-apps/overview.md) |

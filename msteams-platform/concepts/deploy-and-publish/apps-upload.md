@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c1eacf5b023b5bb4bfc9ec243ed8beebcb0a5220
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: df9f38be8202f9b982292847a7cfcc982e72fcb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756786"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032814"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>在 Microsoft Teams 中上传应用
 
@@ -19,6 +19,9 @@ ms.locfileid: "65756786"
 * 你希望自己或与其他开发人员一起在本地测试和调试应用。
 * 你为自己构建了一个应用来自动执行工作流。
 * 你为一小部分用户 (例如你的工作组) 构建了一个应用。
+
+> [!NOTE]
+> 多次旁加载应用会显示消息传递扩展的多个实例。
 
 > [!IMPORTANT]
 > 目前，旁加载应用在政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD)。

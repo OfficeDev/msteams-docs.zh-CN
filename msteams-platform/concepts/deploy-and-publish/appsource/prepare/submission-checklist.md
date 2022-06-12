@@ -6,25 +6,31 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: 提交应用商店分发验证应用包指南本地化
-ms.openlocfilehash: 6ea5ff76cc81f23719e4b4c499f4a2f2594718a2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 81c453a69b0c552c3e2db07edb6fd795d9c068ae
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756777"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033006"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备 Microsoft Teams 应用商店提交
 
 你已设计、生成和测试了 Microsoft Teams 应用。 现在，你已准备好将其列出，以便用户可以发现并开始使用你的应用。
 
-在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource) 之前，请确保已完成以下操作。
+请观看以下视频，以了解有关将应用发布到 Microsoft Teams 应用商店的详细信息：
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+<br>
+
+在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource) 之前，确保已完成以下操作。
 
 ## <a name="validate-your-app-package"></a>验证应用包
 
 虽然应用可能在测试环境中工作，但应检查应用包以避免在提交过程中遇到问题。
 
 > [!WARNING]
-> 如果你一直在使用 App Studio，我们建议你尝试开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日之前弃用。
+> 如果一直在使用 App Studio，我们建议你试用 [开发人员门户](https://dev.teams.microsoft.com/) 来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 6 月 30 日弃用。
 
 Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具将根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
@@ -212,6 +218,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 > 如果要提交新的应用，则在 Teams 应用商店中列出应用之前，无法正式完成发布者证明。 如果正在更新列出的应用，请在提交最新版本应用进行认证之前完成发布者证明。
 
 ## <a name="next-step"></a>后续步骤
+
 > [!div class="nextstepaction"]
 > [提交你的应用](/office/dev/store/add-in-submission-guide)
 

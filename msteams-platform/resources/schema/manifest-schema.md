@@ -4,20 +4,21 @@ description: 介绍 Microsoft Teams 的清单架构
 ms.topic: reference
 ms.localizationpriority: high
 keywords: 团队清单架构
-ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5ec9aa0968ad8d15bf935302480330bca78c1bf1
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887833"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032928"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
 Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 应用清单必须符合托管在 [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) 的架构。 支持每个以前的版本 1.0、1.1...1.12 和当前 1.13 版本（请参阅下面的备注）（在 URL 中使用“v1.x”）。
 有关每个版本中所做的更改的详细信息，请参阅[管理更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
 
-> [!Important]
-> Microsoft Teams 应用清单架构的版本 `1.13` 启用了对 [将 Teams 应用扩展到 Outlook 和 Office](../../m365-apps/overview.md) 的支持。 对于仅限 Teams 的应用，请使用版本 `1.12`（或更早版本）。 否则，1.12 和 1.13 架构相同。 请参阅 [Teams JavaScript 客户端 SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) 概述以获取进一步指导。
+根据不同的应用方案，下表列出了 TeamsJS 版本和应用清单版本：
+
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 以下架构示例显示所有扩展性选项：
 
@@ -593,6 +594,9 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 * `messageTeamMembers`&emsp;请求向团队成员发送直接消息的权限。
 
 在应用更新期间更改这些权限会导致用户在运行更新的应用后重复同意过程。有关详细信息，请参阅 [更新应用](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)。
+
+> [!NOTE]
+> 现已弃用这些权限。
 
 ## <a name="devicepermissions"></a>devicePermissions
 
