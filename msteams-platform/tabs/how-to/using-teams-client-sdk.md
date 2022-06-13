@@ -6,12 +6,12 @@ description: Microsoft Teams JavaScript 客户端 SDK 概述，它可帮助你�
 ms.localizationpriority: high
 keywords: teams 选项卡, 组频道, 可配置静态 SDK, JavaScript, 个人版 m365
 ms.topic: conceptual
-ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757617"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033041"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验
 
@@ -24,13 +24,7 @@ Microsoft Teams JavaScript 客户端 SDK 可帮助你在 Teams、Office 和 Outl
 
 下面是各种应用方案的当前版本控制指南：
 
-|                  |[TeamsJS](/javascript/api/overview/msteams-client) 版本 | [应用清单](../../resources/schema/manifest-schema.md)版本| 后续步骤|
-|------------------|---------|--------|---|
-|**扩展到 Office/Outlook 的 Teams 应用**| TeamsJS v.2.0 或更高版本  | **1.13** 或更高版本 | [扩展 Teams 应用以跨 Microsoft 365 运行](../../m365-apps/extend-m365-teams-personal-tab.md)或[创建新的 Microsoft 365 应用](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**仅限 Teams 的现有应用**| 尽可能更新到 TeamsJS v.2.0（仍支持 v.1.12*）  | 1.12 | [了解 TeamsJS 向后兼容性](#backwards-compatibility)和[更新到 TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200) |
-|**仅限 Teams 的新应用**| TeamsJS v.2.0 或更高版本 | 1.12 | [使用 Teams 工具包创建新的 Teams 应用](../../toolkit/create-new-project.md) |
-
-**最佳做法是尽可能使用最新的 TeamsJS（v.2.0 或更高版本），以便从最新的改进和新功能支持中受益（即使是仅限 Teams 的应用）。TeamsJS v.1.12 将继续受支持，但不会添加新功能或改进。*
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 本文的其余部分将引导你了解 Teams JavaScript 客户端 SDK 的结构和最新更新。
 
@@ -66,14 +60,14 @@ TeamsJS v.2.0 为某些类型的 Teams 应用引入了在 Microsoft 365 生态�
 
 #### <a name="app-permissions"></a>应用权限
 
-在 Teams 外部运行的应用尚不支持要求用户授予 [设备权限](../../concepts/device-capabilities/device-capabilities-overview.md)的应用功能（例如 *位置*）。 在 Outlook 或 Office 中运行时，当前无法在“设置”或应用标头中检查应用权限。 如果在 Office 或 Outlook 中运行的 Teams 应用调用触发设备权限的 TeamsJS（或 HTML5）API，则该 API 将引发错误，并且无法显示要求用户同意的系统对话。
+在 Teams 外部运行的应用尚不支持要求用户授予 [设备权限](../../concepts/device-capabilities/device-capabilities-overview.md)的应用功能（例如 *位置*）。 在 Outlook 或 Office 中运行时，当前无法在“设置”或应用标头中检查应用权限。 如果在 Office 或 Outlook 中运行的 Teams 应用调用触发设备权限的 TeamsJS（或 HTML5）API，则该 API 将生成错误，并且无法显示要求用户同意的系统对话框。
 
 当前的指导是修改代码以捕获故障：
 
 * 在使用某项功能之前检查它的 [isSupported()](#differentiate-your-app-experience)。 `media`、`meeting` 和 `files` 尚不支持 *isSupported* 调用，并且尚不能在 Teams 之外使用。
 * 在调用 TeamsJS 和 HTML5 API 时捕获和处理错误。
 
-当 API 不受支持或引发错误时，请添加逻辑以正常失败或提供解决方法。 例如：
+当 API 不受支持或生成错误时，请添加逻辑以正常失败或提供解决方法。 例如：
 
 * 将用户定向到应用的网站。
 * 指示用户使用 Teams 中的应用完成流。
@@ -231,7 +225,7 @@ async function example() {
 
 *功能* 是提供类似功能的 API 的逻辑分组（通过命名空间）。 你可以将 Microsoft Teams、Outlook 和 Office 视为选项卡应用的主机。 如果主机支持该功能中定义的所有 API，则它支持给定功能。 主机无法部分实现功能。 功能可以基于特性或内容，例如 *身份验证* 或 *对话*。 应用程序类型也有一些功能，例如 *页面* 和其他分组。
 
-从 TeamsJS v.2.0 开始，API 定义为 JavaScript 命名空间中名称与其所需功能匹配的函数。 例如，如果应用在支持 *对话* 功能的主机中运行，则应用可以安全地调用 API，例如 `dialog.open`（以及命名空间中定义的其他对话相关 API）。 如果应用尝试调用该主机中不支持的 API，则 API 将引发异常。 若要验证运行应用的当前主机是否支持给定功能，请调用其命名空间的 [isSupported()](#differentiate-your-app-experience) 函数。
+从 TeamsJS v.2.0 开始，API 定义为 JavaScript 命名空间中名称与其所需功能匹配的函数。 例如，如果应用在支持 *对话* 功能的主机中运行，则应用可以安全地调用 API，例如 `dialog.open`（以及命名空间中定义的其他对话相关 API）。 如果应用尝试调用该主机中不支持的 API，则 API 将生成异常。 若要验证运行应用的当前主机是否支持给定功能，请调用其命名空间的 [isSupported()](#differentiate-your-app-experience) 函数。
 
 #### <a name="differentiate-your-app-experience"></a>区分应用体验
 
