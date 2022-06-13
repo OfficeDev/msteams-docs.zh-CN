@@ -6,12 +6,12 @@ keywords: Teams, 选项卡, 群组, 频道, 可配置
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887630"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048974"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -21,7 +21,7 @@ ms.locfileid: "65887630"
 * [消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
 * [Office 365 连接器](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>配置频道或群组聊天选项卡
 
@@ -171,7 +171,7 @@ ms.locfileid: "65887630"
 * 触发 `pages.config.registerOnSaveHandler()` 事件处理程序。
 * 在应用的配置页上启用“**保存**”。
 
-配置页代码通知 Teams 满足配置要求，并且可以继续安装。 当用户选择“**保存**”时，将根据 `Config` 接口的定义设置 `pages.config.setConfig()` 的参数。 有关详细信息，请参阅 [配置接口](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true)。 调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
+配置页代码通知 Teams 满足配置要求，并且可以继续安装。 当用户选择“**保存**”时，将根据 `Config` 接口的定义设置 `pages.config.setConfig()` 的参数。 有关详细信息，请参阅 [配置接口](/javascript/api/@microsoft/teams-js/pages.config?)。 调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ document.write(getId());
 
 将清单的 `canUpdateConfiguration` 属性设置为 `true`. 它使用户能够修改、重新配置或重命名通道或组选项卡。删除选项卡时，告知用户对内容的影响。 为此，请在应用中包含删除选项页，并在以前`setSettings()`) 配置的 (中设置`removeUrl`属性`setConfig()`的值。 用户可以卸载个人选项卡，但无法修改它们。 有关详细信息，请参阅[为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
-Microsoft Teams `setConfig()` (以前 `setSettings()`) 用于删除页面的配置：
+`setConfig()` Microsoft Teams (以前`setSettings()`用于删除页面的) 配置：
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 命令菜单 撰写消息对话 @提及
-ms.openlocfilehash: 524ecb9ee829292487cc0e6c45604d4c241967c8
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 5b96a9b995806678596cc8cedd45f4bb6e80827c
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032959"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048988"
 ---
 # <a name="bot-command-menus"></a>机器人命令菜单
 
@@ -46,7 +46,7 @@ ms.locfileid: "66032959"
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
-2. 在 **App Studio** 中，选择 **清单编辑器** 选项卡。如果没有现有应用包，可以创建或导入现有应用。更多相关信息，请参阅 [更新应用包](~/get-started/deploy-csharp-app-studio.md)。
+2. 在 **App Studio** 中，选择“**清单编辑器**”选项卡。如果没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [App Studio 中的更新 C# 应用包](../../get-started/deploy-csharp-app-studio.md)
 
 3. 在 **清单编辑器** 的左窗格和“**功能**”部分中，选择“**机器人**”。
 
@@ -61,6 +61,7 @@ ms.locfileid: "66032959"
 7. 选择各“**范围**”复选框以选择此命令菜单必须显示的位置，然后选择“**保存**”。
 
    :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="“App Studio 新建命令”菜单按钮 "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑 Manifest.json 为机器人创建命令菜单
 

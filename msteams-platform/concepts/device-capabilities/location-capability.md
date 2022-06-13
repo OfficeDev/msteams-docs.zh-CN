@@ -6,18 +6,18 @@ keywords: 位置映射功能, 本机设备权限
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: ff2403331d3d51581be4711fb6fb14fcdb809544
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cea6ab31f816f41a191a93620c5b91f0b7ba56a2
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033048"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048995"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能
 
 可以将本机设备的位置功能与 Teams 应用集成。  
 
-可以使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，它为应用访问用户的[本机设备功能](native-device-permissions.md)提供了所需的工具。 使用位置 API（例如 [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) 和 [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true)）来集成应用中的功能。
+可以使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，它为应用访问用户的[本机设备功能](native-device-permissions.md)提供了所需的工具。 使用位置 API（例如 [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) 和 [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?)）来集成应用中的功能。
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>集成位置功能的优势
 
@@ -45,6 +45,7 @@ ms.locfileid: "66033048"
 ```
 
 > [!NOTE]
+>
 > * 启动相关 Teams API 时，将自动显示“**请求权限**”提示。 有关详细信息，请参阅[请求设备权限](native-device-permissions.md)。
 > * 在浏览器中，设备权限有所不同。 有关详细信息，请参阅[浏览器设备权限](browser-device-permissions.md)。
 
@@ -54,8 +55,8 @@ ms.locfileid: "66033048"
 
 | API      | 说明   |
 | --- | --- |
-|[getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | 提供用户的当前设备位置或打开本机位置选取器并返回用户选择的位置。 |
-|[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | 在地图上显示位置。 |
+|[getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) | 提供用户的当前设备位置或打开本机位置选取器并返回用户选择的位置。 |
+|[showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) | 在地图上显示位置。 |
 
 > [!NOTE]
 > `getLocation()` API 附带以下[输入配置](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops)、`allowChooseLocation` 和 `showMap`。<br/> 如果 `allowChooseLocation` 的值为 *true*，则用户可以选择所选的任何位置。<br/>  如果该值为 *false*，则用户无法更改其当前位置。<br/> 如果 `showMap` 的值为 *false*，则会提取当前位置而不显示地图。 如果 `allowChooseLocation` 设置为 *true*，则会忽略 `showMap`。

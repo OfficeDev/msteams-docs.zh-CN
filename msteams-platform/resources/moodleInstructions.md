@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: b5e023041ad732c7580b8b01cd62bc7159a52887
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cbce3d51d902301f6aca422bfe2c8112e50f6b31
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033055"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66049002"
 ---
 # <a name="install-moodle-lms"></a>安装 Moodle LMS
 
@@ -287,7 +287,7 @@ Microsoft Teams中的 Moodle 集成由开放源代码[Microsoft 365 Moodle 插�
 同步 Moodle 课程时，Microsoft Teams自动在团队中安装 Moodle 应用，在 Teams 的“常规”频道中创建一个 Moodle 选项卡，并将其配置为包含从中同步的 Moodle 课程的课程页面。 现在可以直接从Microsoft Teams开始使用 Moodle 课程。
 
 > [!NOTE]
-> 若要与我们共享任何功能请求或反馈，请访问我们的 [“用户语音”页面](https://microsoftteams.uservoice.com/forums/916759-moodle)。
+> 若要与我们共享任何功能请求或反馈，请访问我们的 [“用户语音”页面](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a)。
 
 ## <a name="see-also"></a>另请参阅
 

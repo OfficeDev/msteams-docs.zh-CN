@@ -5,14 +5,14 @@ keywords: teams 应用开发故障排除
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: 76a1a4d45757dff36d45c73f1ea5f2791fbe2e02
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032821"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048960"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>排查Microsoft Teams应用问题
+# <a name="troubleshoot-your-microsoft-teams-app"></a>Microsoft Teams 应用疑难解答
 
 ## <a name="troubleshooting-tabs"></a>疑难解答选项卡
 
@@ -53,7 +53,7 @@ ms.locfileid: "66032821"
 除非执行无提示身份验证，否则必须遵循 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 提供的身份验证过程。
 
 > [!NOTE]
->我们需要在域上启动和结束所有身份验证流，该流必须在清单中的 `validDomains` 对象中列出。
+> 我们需要在域上启动和结束所有身份验证流，该流必须在清单中的 `validDomains` 对象中列出。
 
 有关身份验证的详细信息，请参阅 [对用户进行身份验证](~/concepts/authentication/authentication.md)。
 
@@ -69,7 +69,7 @@ ms.locfileid: "66032821"
 
 ### <a name="cant-add-bot-as-a-member-of-a-team"></a>无法将机器人添加为团队成员
 
-机器人必须先上传到团队，然后才能在该团队的任何频道中访问。 有关此过程的详细信息，请参阅 [在团队中上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
+必须先在团队中上传机器人，然后才能在该团队的任何频道中访问机器人。 有关此过程的详细信息，请参阅 [在团队中上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
 
 ### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>我的机器人不会在频道中收到我的消息
 

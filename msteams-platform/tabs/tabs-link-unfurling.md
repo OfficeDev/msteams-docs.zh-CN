@@ -5,12 +5,12 @@ description: 了解如何展开链接、打开阶段视图并使用 Microsoft Te
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 2471a375960e47e31c6f35966a9ad2fba7007e99
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: d752e55777a07834663f564632bd6a9ff220fdaf
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033034"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048981"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -87,7 +87,7 @@ ms.locfileid: "66033034"
 * 机器人使用 `200` 代码进行响应。
 
 > [!NOTE]
-> 在 Teams 移动客户端上，如果为通过 [Teams 应用商店](/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) 分发的应用调用阶段视图并且没有针对移动设备优化的体验，则会打开设备的默认 Web 浏览器。浏览器打开 `TabInfo` 对象 `websiteUrl` 参数中指定的 URL。
+> 在Teams移动客户端上，调用通过[Microsoft Teams应用分发的应用的](../concepts/deploy-and-publish/apps-publish-overview.md)阶段视图，而没有经过暴民优化的体验，则会打开设备的默认 Web 浏览器。 浏览器将打开 `TabInfo` 对象的 `websiteUrl` 参数中指定的 URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
@@ -97,8 +97,8 @@ ms.locfileid: "66033034"
 
 深层链接语法如下：
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
- 
+<https://teams.microsoft.com/l/stage/{appId}/0?context>={“contentUrl”：“contentUrl”，“websiteUrl”：“websiteUrl”，“name”：“Contoso”}
+
 ### <a name="examples"></a>示例
 
 当用户输入 URL 时，它将展开到自适应卡片中。
@@ -109,21 +109,21 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
 
 未编码的 URL：
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={“contentUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191”，“websiteUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true”，“title”：“Quotes： Miscellaneous”，“threadId”：“19：9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2”}
+<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context>={“contentUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191”，“websiteUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true”，“title”：“Quotes： Miscellaneous”，“threadId”：“19：9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2”}
 
 已编码的 URL：
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
+<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D>
 
 **示例 2：没有 threadId 的 URL**
 
 未编码的 URL：
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={“contentUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191”，“websiteUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true”，“title”：“Quotes： Miscellaneous”}
+<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context>={“contentUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191”，“websiteUrl”：“https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true”，“title”：“Quotes： Miscellaneous”}
 
 已编码
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
+<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>
 
 > [!NOTE]
 > 粘贴 URL 之前，必须先对所有深层链接进行编码。 我们不支持未编码的 URL。
