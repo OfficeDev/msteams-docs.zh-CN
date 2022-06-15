@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能
 description: 了解 Microsoft Teams 中这些功能的新开发人员功能和增强功能。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: ca3cbbac88a0133c5c4973f0a1ad8809f8e4ff73
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032978"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048967"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -24,6 +24,7 @@ ms.locfileid: "66032978"
 | 2022 年 5 月 24 日 | 适用于 Visual Studio Code 的 Teams 工具包版本 4.0.0 现已正式发布 | 工具和 SDK > 适用于 Visual Studio Code 的 Teams 工具包 > <br> • [Teams 工具包概述](toolkit/teams-toolkit-fundamentals.md) <br> • [使用 JavaScript 生成命令机器人](toolkit/add-capability.md) <br> • [使用 JavaScript 生成通知机器人](toolkit/add-capability.md) <br> • [预览并自定义 Teams 应用清单](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [连接到现有 API](toolkit/add-API-connection.md) <br> • [将功能添加到 Teams 应用](toolkit/add-capability.md) <br> • [添加单一登录体验](toolkit/add-single-sign-on.md) <br> • [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 | 2022 年 5 月 24 日 | 已引入应用清单版本 1.13 | 应用清单> [Microsoft Teams 的清单架构](resources/schema/manifest-schema.md) |
 | 2022 年 5 月 24 日 | GCC 和 GCCH 中的机器人和消息扩展 | • 规划应用 > [概述](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • 生成机器人 > [概述](bots/what-are-bots.md) </br> • 生成邮件扩展 > [概述](messaging-extensions/what-are-messaging-extensions.md) |
+
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
@@ -206,7 +207,7 @@ ms.locfileid: "66032978"
 | 10/31/2019 | 新的文档结构和主要文章重构。 请通过创建 GitHub 问题来报告任何死链接或 404。 | 全部都一样！ |
 | 09/13/2019 | 请求机器人是从基于操作的邮件扩展安装的。 | [使用邮件扩展启动操作](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 08/28/2019 | 支持选项卡和连接器中的私人频道。 | [获取选项卡的上下文](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
-| 06/20/2019 | 将外部网站（从外部网站）共享到 Teams 频道。 | [共享到 Teams](~/share-to-teams.md) |
+| 06/20/2019 | 将外部网站（从外部网站）共享到 Teams 频道。 | [共享到 Teams](concepts/build-and-test/share-to-teams-overview.md)。 |
 | 05/25/2019 | 使用来自任务模块的机器人消息进行响应。 | [使用来自任务模块的机器人消息进行响应。](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | 群聊中的机器人。 | [在群组聊天或频道中与机器人交互](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 05/20/2019 | 应用清单本地化。 | [应用本地化](~/publishing/apps-localization.md) |
