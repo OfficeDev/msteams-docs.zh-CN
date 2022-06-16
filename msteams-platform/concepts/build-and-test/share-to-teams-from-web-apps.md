@@ -4,25 +4,36 @@ description: 使用代码示例，了解如何通过网站预览将“共享到 
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 共享 Teams 共享到 Teams
-ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9a2223ebe89575d81db23ca696f88a2f2d519d31
+ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757057"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66118937"
 ---
 # <a name="share-to-teams-from-web-apps"></a>从 Web 应用共享到 Teams
 
-第三方网站可使用启动器脚本将“共享到 Teams”按钮添加到其网页上。 选择后，将在弹出窗口中启动“共享到 Teams”体验。 这使你无需切换上下文，即可将链接直接共享给任何人或任何 Microsoft Teams 频道。 本文章介绍如何为网站创建和嵌入“共享到 Teams”按钮、如何创建网站预览，以及如何扩展“共享到 Teams”教育版”。
+第三方网站可使用启动器脚本将“共享到 Teams”按钮添加到其网页上。 选择“共享以Teams”按钮时，它会在弹出窗口中启动“共享”以Teams体验。 这使你无需切换上下文，即可将链接直接共享给任何人或任何 Microsoft Teams 频道。
+
+下图显示“共享Teams预览体验的弹出窗口：
+
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="共享到Teams弹出窗口" border="true":::
 
 > [!NOTE]
 >
 > * 仅支持桌面版的 Microsoft&nbsp;Edge 和 Google Chrome。
-> * 不支持使用免费增值或来宾帐户。  
+> * 不支持使用免费增值或来宾帐户。
 
-下图显示了“共享到 Teams”弹出窗口体验：
+还可以为通过“共享”共享的链接添加链接，以Teams Web 应用、个人应用或选项卡中托管的按钮。有关详细信息，请参阅[链接展开](~/messaging-extensions/how-to/link-unfurling.md)。
 
-:::image type="content" source="../../assets/images/share-to-teams-popup.png" alt-text="“共享到 Teams”弹出窗口":::
+下图显示通过“共享到Teams”按钮展开体验的链接：
+
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="“共享到Teams”链接展开" border="true":::
+
+> [!NOTE]
+> 将共享展开链接到Teams当前仅在公共开发人员预览版中可用。
+
+本文介绍如何为网站创建和嵌入“共享到Teams”按钮、制作网站预览版，以及如何将“共享”扩展到Teams 教育版。
 
 ## <a name="embed-a-share-to-teams-button"></a>嵌入“共享到 Teams”按钮
 
@@ -43,9 +54,9 @@ ms.locfileid: "65757057"
 
     完成此操作后，Microsoft Teams 图标将添加到你的网站中。 下图显示了“共享到 Teams”图标：
 
-    ![“共享到 Teams”图标](~/assets/icons/share-to-teams-icon.png)
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="“共享到 Teams”图标" border="true":::
 
-1. 或者，如果希望“共享到 Teams”按钮具有不同的图标大小，请使用 `data-icon-px-size` 属性。
+1. 或者，如果希望共享Teams按钮具有不同的图标大小，请使用该`data-icon-px-size`属性。
 
     ```html
     <div
