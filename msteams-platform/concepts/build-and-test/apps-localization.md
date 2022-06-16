@@ -1,16 +1,15 @@
 ---
 title: 本地化应用
-description: 介绍本地化 Microsoft Teams 应用时的注意事项。
+description: 了解本地化 Microsoft Teams应用和本地化应用清单中字符串的注意事项。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams 发布 应用商店 office 发布 AppSource 本地化语言
 ms.date: 05/15/2018
-ms.openlocfilehash: 2975365f56c573b66fda5e5a51106dc8cecf8c0f
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9c8e073f646bbd99f07725bee734e727103f6eb3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757043"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66122892"
 ---
 # <a name="localize-your-app"></a>本地化应用
 

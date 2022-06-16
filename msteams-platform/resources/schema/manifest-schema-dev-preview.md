@@ -1,16 +1,15 @@
 ---
 title: 公共开发人员预览清单架构参考
-description: Microsoft Teams 支持的所有组件的示例清单文件和说明
+description: 了解Microsoft Teams支持的所有组件的示例清单文件和说明。
 ms.topic: reference
-keywords: Teams 清单架构开发人员预览
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757491"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123039"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的公共开发人员预览清单架构
 
@@ -755,9 +754,9 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 #### <a name="resource-specific-delegated-permissions"></a>资源对应的委派权限
 
-委派的权限允许应用代表已登录用户访问数据。 
+委派的权限允许应用代表已登录用户访问数据。
 
-* **团队的资源对应的委派权限** 
+* **团队的资源对应的委派权限**
 
     |**名称**|**说明**|
     |---|---|

@@ -1,22 +1,22 @@
 ---
 title: 测试和调试机器人
-description: 介绍了如何在 Microsoft Teams 中测试机器人
+description: 本文介绍如何在 Microsoft Teams 中测试机器人
 keywords: Teams 机器人测试
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 44fdb90431549b63e45d2ef2131fe6aa6cb44fc0
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755910"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123452"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>测试和调试 Microsoft Teams 机器人
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-测试机器人时，需要考虑希望机器人在何种上下文中运行，以及可能已添加到机器人的任何功能，这些功能需要特定于 Microsoft Teams 的数据。 确保选择用来测试机器人的方法与测试其功能的方法一致。
+测试机器人时，需要考虑希望机器人在何种上下文中运行，以及可能已添加到机器人的任何功能，这些功能需要特定于 Microsoft Teams 的数据。 确保你选择测试机器人的方法与其功能一致。
 
 ## <a name="test-by-uploading-to-teams"></a>通过上传到 Teams 进行测试
 

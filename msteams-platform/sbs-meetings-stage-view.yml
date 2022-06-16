@@ -2,7 +2,7 @@
 title: 在 Teams 中共享会议阶段
 metadata:
   title: 在团队中共享会议阶段
-  description: 本教程介绍如何为Teams设置会议阶段视图。
+  description: 使用此学习模块，了解如何为Teams设置会议阶段视图，以添加协作的状态详细信息。
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 详细了解如何为会议启用和配置应用
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: be729e6090fcab39ec39b93faf9b0d452cbc0d80
-  ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+  ms.openlocfilehash: 41735b81077ede0b1481efbcd6157cc612d7970f
+  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 04/13/2022
-  ms.locfileid: "64820209"
+  ms.lasthandoff: 06/16/2022
+  ms.locfileid: "66123375"
 items:
 - durationInMinutes: 1
   content: "Teams中的共享会议阶段有助于为Teams会议启用和配置应用。 它可帮助用户共享会议阶段，使会议参与者能够添加过去、现在和将来任务的状态详细信息，增强Teams会议体验。\n\n**Teams中共享会议阶段的主要功能**\n\n* 在侧面板中添加状态详细信息\n* 添加协作详细信息 \n\n本分步指南可帮助你在Teams中共享会议阶段，以添加协作的状态详细信息。 你将看到以下输出：\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png\" alt-text=\"会议阶段视图\" border=\"true\":::\n"
@@ -32,15 +32,15 @@ items:
 - title: 设置清单文件
   durationInMinutes: 1
   content: "1. 导航到克隆存储库中node.js文件夹中的 **manifest.json** 。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path1.png\" alt-text=\"manifest.json 的路径\" border=\"true\":::\n\n1. 在Visual Studio中打开 **manifest.json** 并进行以下更改：\n\n     * 替换 `<<App-ID>>` 为机器人的 **Microsoft 应用 ID**\n     * 替换 `<<BASE-URL>>` 为完全限定的 ngrok 域名\n     * 替换 `<<VALID DOMAIN>>` 为完全限定的 ngrok 域名\n     \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png\" alt-text=\"清单文件\" border=\"true\":::   \n"
-- title: 使用 npm 生成和运行客户端应用
+- title: 使用npm生成和运行客户端应用
   durationInMinutes: 1
-  content: "1. 在克隆的存储库中，导航到 **samplesmeetings-stage-viewnodejs** >  > 。\n\n1. 复制 **nodejs** 文件夹路径。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app-manifest1.png\" alt-text=\"文件夹路径\" border=\"true\":::\n\n1. 打开新的 **命令提示符** 窗口，将当前目录更改为复制的 **nodejs** 路径。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs-path.png\" alt-text=\"nodejs 的路径\" border=\"true\":::\n\n1. 在 **命令提示符** 中运行以下命令以下载包和依赖项：\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. 在 **命令提示符** 下运行以下命令以启动应用：\n\n   ```Command-Prompt\n   npm start\n   ```\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png\" alt-text=\"生成和运行\" border=\"true\":::\n   \n"
+  content: "1. 在克隆的存储库中，导航到示 **例** > **会议阶段视图** > **nodejs**。\n\n1. 复制 **nodejs** 文件夹路径。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app-manifest1.png\" alt-text=\"文件夹路径\" border=\"true\":::\n\n1. 打开新的 **命令提示符** 窗口，将当前目录更改为复制的 **nodejs** 路径。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs-path.png\" alt-text=\"nodejs 的路径\" border=\"true\":::\n\n1. 在 **命令提示符** 中运行以下命令以下载包和依赖项：\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. 在 **命令提示符** 下运行以下命令以启动应用：\n\n   ```Command-Prompt\n   npm start\n   ```\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png\" alt-text=\"生成和运行\" border=\"true\":::\n   \n"
 - title: 将会议阶段添加到Teams
   durationInMinutes: 1
   content: "\n1. 在克隆的存储库中，导航到 **>会议阶段视图> nodejs>清单的示例**。\n\n1. 使用 **清单** 文件夹中存在的以下文件创建.zip： \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-file1.png\" alt-text=\"清单\" border=\"true\":::\n\n1. 创建一个Teams会议，其中包含一些演示者和与会者。\n\n1. 创建会议后，转到会议详细信息页，然后选择 **“添加应用**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png\" alt-text=\"添加应用\" border=\"true\":::\n   \n1. 在弹出窗口中，选择 **“管理应用**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/meeting-token-generator-manageapps.png\" alt-text=\"管理应用\" border=\"true\":::\n\n1. 选择“**上传自定义应用**”。 \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/upload-custom-app.png\" alt-text=\"上传文件\" border=\"true\":::\n\n1. 选择 **“打开** ”以上传在 **清单** 文件夹中创建的.zip文件。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app1.png\" alt-text=\"上传应用\" border=\"true\":::\n\n1. 选择“**添加**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/add-an-app-in meeting.png\" alt-text=\"在会议中添加应用\" border=\"true\":::\n\n   “ **管理应用** ”部分显示应用程序列表。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/list-of-apps.png\" alt-text=\"应用程序列表\" border=\"true\":::\n"
 - title: 在 Teams 中与应用交互
   durationInMinutes: 1
-  content: "1. 转到Teams会议。\n\n1. 选择“**添加应用**”。 \n\n   在应用选择页中，应用显示为 **“会议中的应用**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png\" alt-text=\"会议阶段视图中的应用\" border=\"false\":::\n\n1. 选择 **会议中的应用**。\n\n1. 选择“**保存**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png\" alt-text=\"欢迎使用应用\" border=\"false\":::\n\n1. 开始会议。 \n\n   图标在会议控件栏中可见。\n   \n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png\" alt-text=\"会议应用\" border=\"false\":::\n\n1. 若要更新冲刺状态任务，请添加：\n\n   * **分配到**\n   * **说明**\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png\" alt-text=\"在会议中添加状态\" border=\"false\":::\n   \n   侧面板视图中的应用：\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png\" alt-text=\"面板视图\" border=\"false\":::\n"
+  content: "1. 转到Teams会议。\n\n1. 选择“**添加应用**”。 \n\n   在应用选择页中，应用显示为 **“会议中的应用**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png\" alt-text=\"会议阶段视图中的应用\" border=\"false\":::\n\n1. 选择 **会议中的应用**。\n\n1. 选择“保存”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png\" alt-text=\"欢迎使用应用\" border=\"false\":::\n\n1. 开始会议。 \n\n   图标在会议控件栏中可见。\n   \n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png\" alt-text=\"会议应用\" border=\"false\":::\n\n1. 若要更新冲刺状态任务，请添加：\n\n   * **分配到**\n   * **说明**\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png\" alt-text=\"在会议中添加状态\" border=\"false\":::\n   \n   侧面板视图中的应用：\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png\" alt-text=\"面板视图\" border=\"false\":::\n"
 - title: 完成质询
   durationInMinutes: 1
   content: >

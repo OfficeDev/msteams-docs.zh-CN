@@ -2,7 +2,7 @@
 title: 生成传出 Webhook
 metadata:
   title: 生成传出 Webhook
-  description: 本教程介绍如何为 Teams 设置传出 Webhook。
+  description: 使用此学习模块，了解如何为Microsoft Teams设置传出 Webhook 以与外部应用集成。
   audience: Developer
   level: Beginner
   ms.date: 14/01/2022
@@ -11,27 +11,27 @@ metadata:
   nextTutorialTitle: 详细了解传出 Webhook
   ms.custom: mvc
   ms.localizationpriority: High
-  ms.openlocfilehash: 9b0135ce57c9cfa642831883c58171b3f6ee1b79
-  ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+  ms.openlocfilehash: 33ea6225fd534ef873f70980d6c464f95564b285
+  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 06/04/2022
-  ms.locfileid: "65887553"
+  ms.lasthandoff: 06/16/2022
+  ms.locfileid: "66123319"
 items:
 - durationInMinutes: 1
-  content: "Webhook 可帮助 Microsoft Teams 与外部应用集成。 在 Teams 中，传出 Webhook 充当机器人，并使用 **@mention** 在频道中搜索消息。 传出 Webhook 允许用户将消息发送到 Web 服务，而无需执行通过 Microsoft Bot Framework 创建机器人的整个过程。 传出 Webhook 将数据从 Teams 发布到能够接受 JSON 有效负载的任何服务。 \n\n**传出 Webhook 的主要功能**\n\n* 将通知发送到任何外部 Web 服务。\n* 使用丰富的短信（包括卡片和图像）进行响应。 \n* 在公共频道中接收消息，而不是在个人或专用范围内接收消息。\n* 将 HTTP POST 发送到 Web 服务并获取响应。 \n\n > [!NOTE]\n > 传出 Webhook 无法访问任何其他 API，例如检索团队中的名单或频道列表。\n\n本分步指南可帮助你在 Teams 中创建传出 Webhook。 你将看到以下输出：\n\n![准备](~/assets/images/sbs-outgoing-webhooks/output-result1.png)\n"
+  content: "Webhook 可帮助Microsoft Teams与外部应用集成。 在Teams中，传出 Webhook 充当机器人，并使用 **@mention** 在频道中搜索消息。 传出 Webhook 允许用户将消息发送到 Web 服务，而无需执行通过Microsoft Bot Framework创建机器人的整个过程。 传出 Webhook 将数据从Teams帖子到能够接受 JSON 有效负载的任何服务。 \n\n**传出 Webhook 的主要功能**\n\n* 将通知发送到任何外部 Web 服务。\n* 使用丰富的短信（包括卡片和图像）进行响应。 \n* 在公共频道中接收消息，而不是在个人或专用范围内接收消息。\n* 将 HTTP POST 发送到 Web 服务并获取响应。 \n\n > [!NOTE]\n > 传出 Webhook 无法访问任何其他 API，例如检索团队中的名单或频道列表。\n\n本分步指南可帮助你在Teams中创建传出 Webhook。 你将看到以下输出：\n\n![准备](~/assets/images/sbs-outgoing-webhooks/output-result1.png)\n"
 - title: 先决条件
   durationInMinutes: 1
-  content: "确保安装以下工具并设置开发环境：  \n\n* 具有有效帐户[的 Microsoft Teams](https://teams.microsoft.com/)\n* [最新版本的 Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) 最新版本 (仅用于开发人员箱测试) 或任何等效的隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n"
+  content: "确保安装以下工具并设置开发环境：  \n\n* [使用](https://teams.microsoft.com/)有效帐户Microsoft Teams\n* [最新版本的Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) 最新版本 (仅用于开发人员箱测试) 或任何等效的隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n"
 - title: 设置本地环境
   durationInMinutes: 1
-  content: "将存储库克隆 `Microsoft-Teams-Samples` 到本地 GitHub：  \n\n 1. 打开 [Microsoft Teams 示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n 1. 选择 **“代码**”。\n 1. 在下拉菜单中，选择 **“使用 GitHub Desktop 打开**”。\n\n    ![Clone](~/assets/images/sbs-outgoing-webhooks/clone-repository.png)\n\n 1. 选择 **“克隆**”。 \n"
+  content: "将存储库克隆`Microsoft-Teams-Samples`到本地GitHub：  \n\n 1. 打开[Microsoft Teams示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n 1. 选择 **“代码**”。\n 1. 在下拉菜单中，选择 **“打开并GitHub桌面**”。\n\n    ![Clone](~/assets/images/sbs-outgoing-webhooks/clone-repository.png)\n\n 1. 选择 **“克隆**”。 \n"
 - title: 创建传出 Webhook
   durationInMinutes: 5
-  content: "1. 选择所需的团队，然后从 (•••) 下拉菜单中选择“ **管理团队** ”。\n\n   ![管理](~/assets/images/sbs-outgoing-webhooks/manage-team.png)\n\n1. 从导航栏中选择 **“应用”** 选项卡。\n\n   ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)\n\n1. 使用 ngrok 创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n    ```bash\n    ngrok http --host-header=localhost 3978\n    ```\n\n1. 从窗口的右下角选择 **“创建传出 Webhook**”。\n\n   ![外向](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).\n\n1. 输入以下详细信息：\n \n    * **名称**：@mention选项卡中的 Webhook 标题。\n\n    * **回调 URL**：从 ngrok 生成的 URL，该 URL 接受 JSON 有效负载并接收来自 Teams 的 POST 请求。 若要使用 api/Sample 或 api/authenticatedSample，请执行以下操作：\n\n        * 对于 api/sample，复制并粘贴 ngrok URL 并将其追加到 /api/sample。\n\n        * 对于经过身份验证的示例，复制并粘贴 ngrok URL 并将其追加到 /authenticatedSample？id=contoso。\n\n    * **说明**：将在配置文件卡和团队级应用仪表板中显示的详细字符串。\n\n    * **配置文件图片 (可选)**：Webhook 的应用图标。\n\n1. 选择“**创建**”。 传出 Webhook 将添加到当前团队的频道。\n\n    ![创建传出 Webhook](~/assets/images/sbs-outgoing-webhooks/select.png)\n\n1. 将显示一个 `Hash-based Message Authentication Code (HMAC)` 对话框。 可以使用 **AuthProvider.cs** 文件中的安全令牌对 Teams 与任何指定的外部服务之间的调用进行身份验证。 \n\n    > [!NOTE]\n    > 仅当 URL 有效且服务器和客户端身份验证令牌相等时，传出 Webhook 才可供团队的用户使用。 例如，HMAC 握手。\n                \n     ![代码](~/assets/images/sbs-outgoing-webhooks/security-token.png)   \n"
+  content: "1. 选择所需的团队，然后从 (•••) 下拉菜单中选择“ **管理团队** ”。\n\n   ![管理](~/assets/images/sbs-outgoing-webhooks/manage-team.png)\n\n1. 从导航栏中选择 **“应用”** 选项卡。\n\n   ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)\n\n1. 使用 ngrok 创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n    ```bash\n    ngrok http --host-header=localhost 3978\n    ```\n\n1. 从窗口的右下角选择 **“创建传出 Webhook**”。\n\n   ![外向](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).\n\n1. 输入以下详细信息：\n \n    * **名称**：@mention选项卡中的 Webhook 标题。\n\n    * **回调 URL**：从 ngrok 生成的 URL，该 URL 接受 JSON 有效负载并接收来自Teams的 POST 请求。 若要使用 api/Sample 或 api/authenticatedSample，请执行以下操作：\n\n        * 对于 api/sample，复制并粘贴 ngrok URL 并将其追加到 /api/sample。\n\n        * 对于经过身份验证的示例，复制并粘贴 ngrok URL 并将其追加到 /authenticatedSample？id=contoso。\n\n    * **说明**：将在配置文件卡和团队级应用仪表板中显示的详细字符串。\n\n    * **配置文件图片 (可选)**：Webhook 的应用图标。\n\n1. 选择“**创建**”。 传出 Webhook 将添加到当前团队的频道。\n\n    ![创建传出 Webhook](~/assets/images/sbs-outgoing-webhooks/select.png)\n\n1. 将显示一个 `Hash-based Message Authentication Code (HMAC)` 对话框。 可以使用 **AuthProvider.cs** 文件中的安全令牌对Teams与任何指定的外部服务之间的调用进行身份验证。 \n\n    > [!NOTE]\n    > 仅当 URL 有效且服务器和客户端身份验证令牌相等时，传出 Webhook 才可供团队的用户使用。 例如，HMAC 握手。\n                \n     ![代码](~/assets/images/sbs-outgoing-webhooks/security-token.png)   \n"
 - title: 生成并运行服务
   durationInMinutes: 1
-  content: "1. 启动最新版本的 Visual Studio。\n\n1. 导航到 **文件** > **打开** > **项目/解决方案**。\n\n    ![打开文件](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-VSopenfile.png)\n\n1. 从 **csharp** 文件夹中选择 **WebhookSampleBot.sln** 文件。\n\n    ![解决方案文件](~/assets/images//sbs-outgoing-webhooks/open-project.png)\n\n1. 在 **AuthProvider.cs** 文件中将 **“contoso”** 更新为“M365x712764”和 HMAC。  \n\n    ![更新](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)\n\n1. 按 **F5** 运行项目。\n\n1. 如果出现以下对话框，请选择“**是**”：\n\n    ![信任证书](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)\n\n   网页显示本地主机信息。\n\n    ![应用准备就绪](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png)                  \n"
+  content: "1. 启动最新版本的Visual Studio。\n\n1. 导航到 **文件** > **打开** > **Project/解决方案**。\n\n    ![打开文件](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-VSopenfile.png)\n\n1. 从 **csharp** 文件夹中选择 **WebhookSampleBot.sln** 文件。\n\n    ![解决方案文件](~/assets/images//sbs-outgoing-webhooks/open-project.png)\n\n1. 在 **AuthProvider.cs** 文件中将 **“contoso”** 更新为“M365x712764”和 HMAC。  \n\n    ![更新](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)\n\n1. 按 **F5** 运行项目。\n\n1. 如果出现以下对话框，请选择“**是**”：\n\n    ![信任证书](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)\n\n   网页显示本地主机信息。\n\n    ![应用准备就绪](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png)                  \n"
 - title: 在 Teams 中与应用交互
   durationInMinutes: 1
   content: "1. 选择 **“常规** ”以启动新对话。\n\n1. 选择 **“新建对话** ”以开始对话。\n\n1. 输入 **\\@“** 传出 Webhook”的名称，以便在通道中调用它。 \n\n   ![消息](~/assets/images/sbs-outgoing-webhooks/type-mention.png)\n\n1. 选择 **“发送**”。\n\n   > [!NOTE]\n   >  你可以使用传出 Webhook 将自适应卡片、主图卡片和短信作为附件发送。\n\n1. 会议聊天显示新消息。\n\n   ![准备](~/assets/images/sbs-outgoing-webhooks/output-result.png)\n   \n"

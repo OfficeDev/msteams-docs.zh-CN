@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: a41cbac6a0cee3f42a6de2d436c227c858347d4e
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938959"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123974"
 ---
 # <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
 
@@ -177,7 +177,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 <details>
 <summary><b>旁加载 Teams 应用程序</b></summary>
 
-配置“**连接到前端**”或“**启动自动程序**”，启动新的 Edge 或 Chrome 浏览器实例，并打开网页以加载 Teams 客户端。 加载 Teams 客户端后，Teams 会旁加载由Teams 应用，此应用由 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) 启动配置中定义的旁加载 URL 控制。  当 Teams 客户端在 Web 浏览器中加载时，请选择“**添加**”或根据要求从下拉列表中选择一项。
+配置“**连接到前端**”或“**启动自动程序**”，启动新的 Edge 或 Chrome 浏览器实例，并打开网页以加载 Teams 客户端。 加载 Teams 客户端后，Teams 会旁加载由Teams 应用，此应用由 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) 启动配置中定义的旁加载 URL 控制。 当 Teams 客户端在 Web 浏览器中加载时，请选择“**添加**”或根据要求从下拉列表中选择一项。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="本地调试" border="true":::
 

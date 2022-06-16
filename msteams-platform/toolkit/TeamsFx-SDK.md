@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ae533039c8a0af5719dd884628d600ae3be11410
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: ed110f95d8f25ba4595d8b96e08c5e49a0c9225e
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654889"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123764"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -23,8 +23,8 @@ TeamsFx 使用 Teams SSO 并将云资源向下访问到零配置的单行语句�
 
 可以使用 TeamsFx SDK 执行以下操作:
 
-* 访问客户端和服务器环境中的核心功能 
-* 以简化的方式编写用户身份验证代码
+* 访问客户端和服务器环境中的核心功能。
+* 以简化的方式编写用户身份验证代码。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -105,7 +105,9 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="teamsfx-class"></a>TeamsFx 类
 
-默认情况下，TeamsFx 类实例从环境变量访问所有 TeamsFx 设置。 还可以设置自定义配置值以替换默认值。 请查看 [替换配置](#override-configuration) 以了解详细信息。 创建 TeamsFx 实例时，还需要指定标识类型。 存在以下两种标识类型：
+默认情况下，TeamsFx 类实例从环境变量访问所有 TeamsFx 设置。 还可以设置自定义配置值以替换默认值。 请查看 [替换配置](#override-configuration) 以了解详细信息。
+创建 TeamsFx 实例时，还需要指定标识类型。
+存在以下两种标识类型：
 
 * 用户标识
 * 应用程序标识
@@ -141,16 +143,19 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 以下是每个凭据类目标的相应场景。
 
 #### <a name="user-identity-in-browser-environment"></a>浏览器环境中的用户标识
+
 `TeamsUserCredential` 表示 Teams 当前用户的标识。 首次使用此凭据将请求用户同意。 它利用 Teams SSO 和代理流进行令牌交换。 当开发人员在浏览器环境中选择用户标识时，SDK 会使用此凭据。
 
 所需配置: `initiateLoginEndpoint`、`clientId`。
 
 #### <a name="user-identity-in-nodejs-environment"></a>Node.js 环境中的用户标识
+
 `OnBehalfOfUserCredential` 使用代理流，且需要 Teams SSO 令牌。 其旨在用于 Azure Function 或机器人场景。 当开发人员在 Node.js 环境中选择用户标识时，SDK 会使用此凭据。
 
 所需配置: `authorityHost`、`tenantId`、`clientId`、`clientSecret` 或 `certificateContent`。
 
 #### <a name="application-identity-in-nodejs-environment"></a>Node.js 环境中的应用程序标识
+
 `AppCredential` 表示应用程序标识。 当用户不参与(例如时间触发的自动化作业)时，通常会使用该标识。 当开发人员在 Node.js 环境中选择应用标识时，SDK 会使用此凭据。
 
 所需配置: `tenantId`、`clientId`、`clientSecret` 或 `certificateContent`。
@@ -167,10 +172,11 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 TeamsFx SDK 提供了多个函数，可用于简化第三方库的配置。它们位于[核心文件夹](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core)下。
 
-*  Microsoft Graph 服务: `createMicrosoftGraphClient` 和 `MsGraphAuthProvider` 有助于创建经过身份验证的 Graph 实例。
-*  SQL: `getTediousConnectionConfig` 返回繁琐的连接配置。
+* Microsoft Graph 服务: `createMicrosoftGraphClient` 和 `MsGraphAuthProvider` 有助于创建经过身份验证的 Graph 实例。
+* SQL: `getTediousConnectionConfig` 返回繁琐的连接配置。
 
 所需配置:
+
 * `sqlServerEndpoint`、`sqlUsername`、`sqlPassword` (如果要使用用户标识)
 * `sqlServerEndpoint`、`sqlIdentityId` (如果要使用 MSI 标识)
 
@@ -217,7 +223,7 @@ try {
 
 <details>
 <summary><b>在选项卡应用中使用 Graph API</b></summary>
- 
+
 使用 `TeamsFx` 和 `createMicrosoftGraphClient`。
 
 ```ts
@@ -234,7 +240,6 @@ const profile = await graphClient.api("/me").get();
 <summary><b>创建 API 客户端以调用机器人或 Azure 函数中的现有 API</b></summary>
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="创建 api 客户端" border="false":::
-
 
 </details>
 
@@ -259,7 +264,6 @@ const response = await apiClient.get("/api/" + functionName);
 
 <details>
 <summary><b>访问 Azure Function 中的 SQL 数据库</b></summary>
-
 
 使用 `tedious` 库访问 SQL，并利用管理身份验证的 `DefaultTediousConnectionConfiguration`。
 除了 `tedious`，还可以根据 `sqlConnectionConfig.getConfig()` 的结果撰写其他 SQL 库的连接配置。
@@ -398,9 +402,10 @@ setLogFunction((level: LogLevel, message: string) => {
 ```
 
 ## <a name="override-configuration"></a>替换配置
+
 创建 TeamsFx 实例时，可以传递自定义配置，从而替换默认配置，或在缺少环境变量时设置必填字段。
 
-- 如果已使用 VS Code Toolkit 创建选项卡项目，则将从预配置的环境变量使用以下配置值:
+* 如果已使用 VS Code Toolkit 创建选项卡项目，则将从预配置的环境变量使用以下配置值:
   * authorityHost (REACT_APP_AUTHORITY_HOST)
   * tenantId (REACT_APP_TENANT_ID)
   * clientId (REACT_APP_CLIENT_ID)
@@ -409,7 +414,7 @@ setLogFunction((level: LogLevel, message: string) => {
   * apiEndpoint (REACT_APP_FUNC_ENDPOINT)
   * apiName (REACT_APP_FUNC_NAME)
 
-- 如果已使用 VS Code Toolkit 创建 Azure Function / 机器人项目，则将从预配置的环境变量使用以下配置值:
+* 如果已使用 VS Code Toolkit 创建 Azure Function / 机器人项目，则将从预配置的环境变量使用以下配置值:
   * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
   * authorityHost (M365_AUTHORITY_HOST)
   * tenantId (M365_TENANT_ID)
@@ -426,6 +431,7 @@ setLogFunction((level: LogLevel, message: string) => {
 ## <a name="upgrade-latest-sdk-version"></a>升级最新的 SDK 版本
 
 如果使用的是具有 `loadConfiguration()` 的 SDK 版本，则可以按照以下步骤升级到最新的 SDK 版本。
+
 1. 删除 `loadConfiguration()` 并使用 `new TeamsFx(IdentityType.User, { ...customConfig })` 传递自定义设置
 2. 将 `new TeamsUserCredential()` 替换为 `new TeamsFx()`
 3. 将 `new M365TenantCredential()` 替换为 `new TeamsFx(IdentityType.App)`

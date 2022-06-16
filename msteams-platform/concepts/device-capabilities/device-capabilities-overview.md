@@ -5,12 +5,12 @@ description: 了解如何将本机设备功能（如相机、图像、媒体、�
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757029"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123834"
 ---
 # <a name="device-capabilities"></a>设备功能
 
@@ -45,3 +45,9 @@ Microsoft Teams 平台一直在不断增强与内置第一方体验相匹配的�
 * 使用[位置选取器共享位置](location-capability.md)。
 
 此外，还可以集成 Teams 原生[人员选取器控件](people-picker-capability.md)，使用户能够在 Web 应用体验中搜索和选择人员。
+
+## <a name="code-sample"></a>代码示例
+
+| 示例名称           | 说明 | Node.js    |
+|:---------------------|:--------------|:---------|
+|设备权限 | 介绍如何演示Microsoft Teams选项卡示例应用的设备权限。 |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

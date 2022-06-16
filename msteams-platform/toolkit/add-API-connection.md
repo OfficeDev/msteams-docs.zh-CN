@@ -1,19 +1,19 @@
 ---
 title: 连接到现有 API
 author: MuyangAmigo
-description: 描述与现有 API 的连接
+description: 本文介绍工具包如何帮助你启动对现有 API 的示例访问。 它提供不同身份验证类型的列表。
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: b2dd6bfb1bc13b4d2b94ff57e2005b6450f59c23
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 2e00991f42b85e0e053fd94e68298c819a14a730
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656766"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124002"
 ---
-# <a name="add-api-connection-to-teams-app"></a>将 API 连接添加到Teams应用
+# <a name="add-api-connection-to-teams-app"></a>将 API 连接添加到 Teams 应用
 
 Teams Toolkit可帮助你访问用于生成Teams应用程序的现有 API。 这些 API 由组织或第三方开发。
 
@@ -25,9 +25,9 @@ Teams Toolkit可帮助你访问用于生成Teams应用程序的现有 API。 这
 
 使用Teams Toolkit连接到现有 API 时，Teams Toolkit执行以下函数：
 
-* 在或`./api`文件夹下`./bot`生成示例代码
-* 向其添加对包的 `@microsoft/teamsfx` 引用 `package.json`
-* 在配置本地调试的 API 中  `.env.teamsfx.local` 添加应用程序设置
+* 在或`./api`文件夹下`./bot`生成示例代码。
+* 向其添加对包`package.json`的`@microsoft/teamsfx`引用。
+* 在配置本地调试的 API 中  `.env.teamsfx.local` 添加应用程序设置。
 
 ### <a name="connect-to-api-in-visual-studio-code"></a>在 Visual Studio Code 中连接到 API
 
@@ -80,7 +80,7 @@ Teams Toolkit可帮助你访问用于生成Teams应用程序的现有 API。 这
 
    |**身份验证类型**|**示例命令**|
    |-----------------------|------------------|
-   |基本|teamsfx 添加 api-connection basic --endpoint <https://example.com> --component bot --alias example --user-name exampleuser --interactive false|
+   |基本|teamsfx 添加 api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
    |API 密钥|teamsfx 添加 api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
    |Azure AD|teamsfx 添加 api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |证书|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
@@ -121,7 +121,7 @@ Teams Toolkit可帮助你访问用于生成Teams应用程序的现有 API。 这
     生成的 API 客户端是 Axios API 客户端。 使用 Axios 客户端向 API 发出请求。
 
      > [!Note]
-     >[Axios](https://www.npmjs.com/package/axios) 是一个常用的 nodejs 包，可帮助你处理 http (的) 请求。 有关如何发出 http () 请求的详细信息，请参阅 [Axios 示例文档](https://axios-http.com/docs/example) ，了解如何使 http () 。
+     > [Axios](https://www.npmjs.com/package/axios) 是一个常用的 nodejs 包，可帮助你处理 http (的) 请求。 有关如何发出 http () 请求的详细信息，请参阅 [Axios 示例文档](https://axios-http.com/docs/example) ，了解如何使 http () 。
 
 ## <a name="deploy-your-application-to-azure"></a>将应用程序部署到 Azure
 
@@ -160,6 +160,7 @@ class CustomAuthProvider implements AuthProvider {
     };
 }
 ```
+
 </details>
 <details>
 <summary><b>连接 Azure AD 权限的 API</b></summary>
@@ -204,6 +205,7 @@ Azure AD 对某些服务进行身份验证。 以下列表有助于访问这些�
 
         > [!NOTE]
         > 对于应用程序权限，请使用客户端 ID。
+        >
 </details>
 
 ## <a name="see-also"></a>另请参阅

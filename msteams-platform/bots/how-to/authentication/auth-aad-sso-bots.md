@@ -4,12 +4,12 @@ description: 介绍如何获取用户令牌。 目前，机器人开发人员可
 keywords: 令牌, 用户令牌, 机器人的 SSO 支持, 权限, Microsoft Graph, Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: c10fe639417ad71814b060ba70e6a33c4ae4038f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906253"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123466"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>机器人的单一登录 (SSO) 支持
 
@@ -96,7 +96,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
    >
    > 必须注意以下重要限制：
    >
-   > * 仅支持用户级 Microsoft Graph API 权限，例如电子邮件、配置文件、offline_access 和 OpenId。 如果需要访问其他 Microsoft Graph 范围，例如`User.Read``Mail.Read`，请参阅[具有 Microsoft Graph 权限和范围的“扩展”选项卡应用](../../../tabs/how-to/authentication/tab-sso-graph-api.md)。
+   > * 仅支持用户级 Microsoft Graph API 权限，例如电子邮件、配置文件、offline_access 和 OpenId。 如果需要访问其他 Microsoft Graph范围，例如`User.Read``Mail.Read`，请参阅[具有 Microsoft Graph 权限和范围的扩展选项卡应用](../../../tabs/how-to/authentication/tab-sso-graph-api.md)。
    > * 应用程序的域名必须与为 Azure AD 应用程序注册的域名相同。
    > * 当前不支持每个应用多个域。
    > * 不支持使用 `azurewebsites.net` 域的应用程序，因为它很常见，可能存在安全风险。
@@ -379,9 +379,9 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
 
 ## <a name="code-sample"></a>代码示例
 
-|**示例名称** | **说明** |**.NET** |
-|----------------|-----------------|--------------|
-|Bot Framework SDK | Bot Framework SDK 的使用示例。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|**示例名称** | **说明** |**.NET** |**C#** |**Node.js** |
+|----------------|-----------------|--------------|--------------|--------------|
+|Bot Framework SDK | 此示例代码演示如何开始在机器人中进行身份验证以进行Microsoft Teams。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>分步指南
 

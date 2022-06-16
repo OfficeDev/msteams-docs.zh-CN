@@ -1,17 +1,17 @@
 ---
 title: 设计个人应用
-description: 了解如何设计 Teams 个人应用并获取 Microsoft Teams UI 工具包、创建组件，例如仪表板、窗体、移动版和桌面版任务板体验。了解开发个人应用的最佳做法。
+description: 了解如何设计 Teams 个人应用并获取 Microsoft Teams UI 工具包、创建组件，例如仪表板、窗体、移动版和桌面版任务板体验。
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: UI Kit 个人应用 Webview 导航 机器人选项卡 iframe 仪表板 表单模板
-ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fe22f63ec3bf93011f3acebd8f1269496e8444e5
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297231"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123925"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为 Microsoft Teams 设计个人应用
 

@@ -1,16 +1,16 @@
 ---
 title: 为 Microsoft Teams 创建低代码自定义应用
 author: surbhigupta
-description: 了解 Teams 和 Microsoft Power Platform 提供的 Microsoft 低代码和无代码解决方案。 了解 Power Apps、Power Automate、虚拟助理等解决方案。
-ms.localizationpriority: high
+description: 了解 Teams 和 Microsoft Power Platform 提供的 Microsoft 低代码和无代码解决方案。
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 651af8d4eeddc48a8ecfe7488892f851c81ba711
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 04fc4537969d3866e31e9c35e8484326b0ccbb56
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111589"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123172"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为 Microsoft Teams 创建低代码自定义应用
 

@@ -1,17 +1,17 @@
 ---
 author: heath-hamilton
-description: 将现有 Web 应用与 Microsoft Teams 集成的最佳做法或注意事项
+description: 了解将现有 Web 应用与Microsoft Teams集成的最佳做法或注意事项。 它提供有关应用与Teams的 API 要求、身份验证和深度链接的信息。
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Teams 集成注意事项
-ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757638"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123799"
 ---
 # <a name="considerations-for-teams-integration"></a>Teams 集成注意事项
 

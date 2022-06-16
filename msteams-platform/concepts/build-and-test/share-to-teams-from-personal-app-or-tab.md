@@ -1,15 +1,14 @@
 ---
 title: 从个人应用或选项卡共享到 Teams
-description: 了解如何在个人应用或选项卡上嵌入Teams中添加“共享”
+description: 了解如何在个人应用或选项卡、限制和最终用户体验上启用“共享以Teams”按钮。
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: 共享 Teams 共享到 Teams
-ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757260"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123932"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>从个人应用或选项卡共享到 Teams
 

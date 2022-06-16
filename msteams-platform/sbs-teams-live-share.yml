@@ -2,7 +2,7 @@
 title: 使用 Live Share SDK 生成敏捷扑克
 metadata:
   title: 使用 Live Share SDK 生成敏捷扑克
-  description: 本教程介绍如何使用 Live share SDK 创建敏捷扑克示例应用。
+  description: 通过此学习模块，你将了解如何使用 Live share SDK 创建敏捷扑克示例应用。
   audience: Developer
   level: Beginner
   ms.date: 05/17/2022
@@ -11,15 +11,15 @@ metadata:
   nextTutorialTitle: 详细了解Live Share SDK
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: ae046222d78b90dadf1d5d1a168631356d84483c
-  ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+  ms.openlocfilehash: c3c9dbc222089a620757234afbbd6c741da39f6c
+  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 05/27/2022
-  ms.locfileid: "65756567"
+  ms.lasthandoff: 06/16/2022
+  ms.locfileid: "66122920"
 items:
 - durationInMinutes: 1
-  content: "> [!NOTE]\n> Live Share SDK 目前仅在[公共开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中可用。 必须是公共开发人员预览版的一部分，Microsoft Teams才能使用 Live Share SDK。\n\nLive Share SDK 允许你构建协作应用，并发现通过Teams进行协作和连接的更多方法。 你可以生成应用来共享内容，例如观看电影、玩实时游戏等，Teams一对一通话、组呼叫、安排会议和现在开会。\n\n本分步指南可帮助你使用 Live Share SDK 创建敏捷扑克示例应用。 你将看到以下输出：\n\n :::image type=\"content\" source=\"~/assets/videos/agile-poker-gif.gif\" alt-text=\"敏捷扑克 gif\":::\n \n"
+  content: "> [!NOTE]\n> 实时共享 SDK 当前仅在 [公共开发人员预览版](~/resources/dev-preview/developer-preview-intro.md) 中可用。 你必须是 Microsoft Teams 公共开发人员预览版的成员，才能使用实时共享 SDK。\n\nLive Share SDK 允许你构建协作应用，并发现通过Teams进行协作和连接的更多方法。 你可以生成应用来共享内容，例如观看电影、玩实时游戏等，Teams一对一通话、组呼叫、安排会议和现在开会。\n\n本分步指南可帮助你使用 Live Share SDK 创建敏捷扑克示例应用。 你将看到以下输出：\n\n :::image type=\"content\" source=\"~/assets/videos/agile-poker-gif.gif\" alt-text=\"敏捷扑克 gif\":::\n \n"
 - title: 先决条件
   durationInMinutes: 1
   content: "\n确保安装以下工具并设置开发环境：\n\n* [使用](https://www.microsoft.com/microsoft-teams/log-in)有效帐户Microsoft Teams\n* [最新版本的Visual Studio Code](https://code.visualstudio.com/download)\n* [nodejs 的最新版本](https://nodejs.org/en/download/)\n* [最新版本的 ngrok](https://ngrok.com/download) 或等效隧道解决方案\n  \n  > [!NOTE]\n  > 如果是第一次下载 ngrok，请注册并安装 [身份验证](https://ngrok.com/download)。\n"
@@ -28,7 +28,7 @@ items:
   content: "\n1. 转到 [敏捷扑克](https://github.com/microsoft/live-share-sdk/tree/main/samples/22.react-agile-poker) 示例应用。\n\n1. 克隆 Live Share SDK 存储库以测试示例应用：\n   ```\n     git clone https://github.com/microsoft/live-share-sdk.git\n\n   ```\n1. 打开终端窗口。\n\n1. 运行以下命令转到敏捷扑克示例应用文件夹：\n\n    ```\n    cd live-share-sdk\\samples\\22.react-agile-poker\n    ```\n1. 运行以下命令以安装依赖项包：\n\n    ```\n    npm install\n    ```\n    \n1. 运行以下命令以启动客户端和本地服务器：\n\n    ```\n    npm run start\n    ```\n\n   新的浏览器选项卡将打开一个 http://localhost:3000 窗口，并显示敏捷扑克游戏。\n\n   :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-browser.png\" alt-text=\"ngrok 隧道\":::\n\n1. 打开新的 ngrok 终端窗口以创建隧道并在本地部署应用。\n\n1. 运行以下命令以创建隧道。 示例应用使用端口 3000：\n\n    ```\n    ngrok http 3000--host-header=localhost\n    ```\n    将创建 ngrok 隧道。\n    \n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/teams-live-share-ngrok-tunnel.png\" alt-text=\"ngrok 隧道\":::\n"
 - title: 设置清单文件并上传应用
   durationInMinutes: 1
-  content: "需要设置清单文件并将manifest.zip包上传到Teams。\n\n  1. 转到示例应用文件夹中的 **manifest.json** 文件。\n\n  1. 在Visual Studio Code中打开 **manifest.json** 并更新配置 URL。\n    \n     将 `https://<<BASE_URI_DOMAIN>>` 替换为 ngrok 中的 http 终结点。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-configuration-url.png\" alt-text=\"更新配置 URL\":::\n   \n  1. 压缩 **要** 创建 `manifest.zip`的清单文件夹的内容。\n\n     > [!NOTE]\n     > 确保 `manifest.zip` 仅 `manifest.json` 包含源文件、 `color` 图标和 `outline` 图标。\n  \n  ## <a name=\"upload-your-app-to-the-teams-meeting\"></a>将应用Upload到Teams会议\n\n   1. 打开 Teams。\n\n   1. 在 Teams 中从日历安排会议。\n      请确保至少邀请一位与会者参加会议。\n\n   1. 加入会议。\n\n   1. 在会议窗口中，选择 **“+ 应用** > **管理应用**”。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-manage-apps.png\" alt-text=\"管理应用\":::\n\n   1. 选择“**上传自定义应用**”。\n\n   1. `manifest.zip` Upload文件。\n\n   1. 选择 **“添加** ”以将应用添加到会议。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/teams-live-share-add-manifest.png\" alt-text=\"添加清单\":::\n      \n   1. 选择 **+应用** ，然后选择 **敏捷扑克**。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-select-agile-poker.png\" alt-text=\"选择敏捷扑克\":::\n\n   1. 选择“**保存**”。\n   \n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-save-app.png\" alt-text=\"保存敏捷扑克应用\":::\n      \n      敏捷扑克应用将添加到Teams会议侧面板。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-meeting-bar.png\" alt-text=\"添加到团队会议面板\":::\n"
+  content: "需要设置清单文件并将manifest.zip包上传到Teams。\n\n  1. 转到示例应用文件夹中的 **manifest.json** 文件。\n\n  1. 在Visual Studio Code中打开 **manifest.json** 并更新配置 URL。\n    \n     将 `https://<<BASE_URI_DOMAIN>>` 替换为 ngrok 中的 http 终结点。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-configuration-url.png\" alt-text=\"更新配置 URL\":::\n   \n  1. 压缩 **要** 创建 `manifest.zip`的清单文件夹的内容。\n\n     > [!NOTE]\n     > 确保 `manifest.zip` 仅 `manifest.json` 包含源文件、 `color` 图标和 `outline` 图标。\n  \n  ## <a name=\"upload-your-app-to-the-teams-meeting\"></a>将应用Upload到Teams会议\n\n   1. 打开 Teams。\n\n   1. 在 Teams 中从日历安排会议。\n      请确保至少邀请一位与会者参加会议。\n\n   1. 加入会议。\n\n   1. 在会议窗口中，选择 **“+ 应用** > **管理应用**”。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-manage-apps.png\" alt-text=\"管理应用\":::\n\n   1. 选择“**上传自定义应用**”。\n\n   1. `manifest.zip` Upload文件。\n\n   1. 选择 **“添加** ”以将应用添加到会议。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/teams-live-share-add-manifest.png\" alt-text=\"添加清单\":::\n      \n   1. 选择 **+应用** ，然后选择 **敏捷扑克**。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-select-agile-poker.png\" alt-text=\"选择敏捷扑克\":::\n\n   1. 选择“保存”。\n   \n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-save-app.png\" alt-text=\"保存敏捷扑克应用\":::\n      \n      敏捷扑克应用将添加到Teams会议侧面板。\n\n      :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-meeting-bar.png\" alt-text=\"添加到团队会议面板\":::\n"
 - title: 测试应用
   durationInMinutes: 1
   content: "从会议侧面板的 **“用户故事** ”中选择用户情景，然后 **一起选择“计划**”。\n\nTeams开始与会议中的用户进行实时同步。\n\n :::image type=\"content\" source=\"~/assets/images/teams-live-share/agile-poker-side-panel.png\" alt-text=\"开始演示\":::\n\n \n"

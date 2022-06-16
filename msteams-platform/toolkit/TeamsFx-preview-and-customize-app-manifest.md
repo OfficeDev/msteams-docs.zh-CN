@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 94f02ce31a9af3acb78fc6fef6f071df02bfd565
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755858"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123652"
 ---
 # <a name="edit-teams-app-manifest"></a>编辑Teams应用清单
 
@@ -32,7 +32,7 @@ ms.locfileid: "65755858"
 
 * [本地环境中的预览清单文件](#preview-manifest-file-in-local-environment)
 * [远程环境中的预览清单文件](#preview-manifest-file-in-remote-environment)
- 
+
 ### <a name="preview-manifest-file-in-local-environment"></a>本地环境中的预览清单文件
 
 若要在本地环境中预览清单文件，可以按 **F5** 运行本地调试。 它会为你生成默认的本地设置，然后在 `build/appPackage` 文件夹下生成应用包和预览清单。
@@ -53,7 +53,7 @@ ms.locfileid: "65755858"
 
 * 在开发 **Teams Toolkit扩展** 中选择 **云中的“预配**”或
 * 触发Teams：从命令面板 **在云中预配**。
- 
+
 它生成远程Teams应用的配置，并在文件夹下`build/appPackage`生成包和预览清单。
 
 还可以通过以下步骤预览远程环境中的清单文件：
@@ -127,7 +127,6 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 * `manifest.template.json`
 * `templates/appPackage`
 
-
 在本地调试或预配期间，Teams Toolkit从`manifest.template.json`开发人员[门户](https://dev.teams.microsoft.com/apps)中加载清单、`config.{env}.json`从`state.{env}.json`中加载配置，并创建Teams应用。
 
 ## <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json 中支持的占位符
@@ -191,4 +190,4 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md) 
+* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
