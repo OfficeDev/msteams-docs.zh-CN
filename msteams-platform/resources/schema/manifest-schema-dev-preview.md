@@ -4,12 +4,12 @@ description: 了解Microsoft Teams支持的所有组件的示例清单文件和�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1b1aa4e1e7cf1bff8ff37ec89d555bd1758d16db
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123039"
+ms.locfileid: "66130513"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的公共开发人员预览清单架构
 
@@ -793,4 +793,4 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 * [了解Microsoft Teams结构](~/concepts/design/app-structure.md)
 * [启用应用自定义](~/concepts/design/enable-app-customization.md)
 * [本地化应用](~/concepts/build-and-test/apps-localization.md)
-* [集成媒体功能](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [集成媒体功能](~/concepts/device-capabilities/media-capabilities.md)

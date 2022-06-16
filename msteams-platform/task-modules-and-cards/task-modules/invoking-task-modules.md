@@ -4,12 +4,12 @@ description: 了解如何使用代码示例调用和关闭任务模块、任务�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b33d553849376da73b3269ac9a5c0a551d6074d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 04e27e780c1d2686be2ee73909c2d28bfc19fd23
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757302"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130408"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>调用和关闭任务模块
 
@@ -237,6 +237,6 @@ Microsoft Teams 可确保键盘导航从任务模块标题到 HTML 中正常工�
 ## <a name="see-also"></a>另请参阅
 
 * [请求设备权限](~/concepts/device-capabilities/native-device-permissions.md)
-* [集成媒体功能](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [集成媒体功能](~/concepts/device-capabilities/media-capabilities.md)
 * [在 Teams 中集成 QR 或条形码扫描程序功能](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [在 Teams 中集成位置功能](~/concepts/device-capabilities/location-capability.md)

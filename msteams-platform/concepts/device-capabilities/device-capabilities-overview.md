@@ -5,12 +5,12 @@ description: 了解如何将本机设备功能（如相机、图像、媒体、�
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123834"
+ms.locfileid: "66130428"
 ---
 # <a name="device-capabilities"></a>设备功能
 
@@ -37,7 +37,7 @@ Microsoft Teams 平台一直在不断增强与内置第一方体验相匹配的�
 
 ## <a name="integrate-device-capabilities"></a>集成设备功能
 
-获取设备功能的访问权限后，使用 Teams 媒体功能 API 将[媒体功能](mobile-camera-image-permissions.md)与 Teams 平台集成，以增强用户体验。 这些集成功能允许应用：
+获取设备功能的访问权限后，使用 Teams 媒体功能 API 将[媒体功能](media-capabilities.md)与 Teams 平台集成，以增强用户体验。 这些集成功能允许应用：
 
 * 捕获和共享图像。
 * 使用[扫描程序控件](qr-barcode-scanner-capability.md)扫描 QR 码或条形码。

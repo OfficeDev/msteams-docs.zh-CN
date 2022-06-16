@@ -6,12 +6,12 @@ keywords: 位置映射功能, 本机设备权限
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: cea6ab31f816f41a191a93620c5b91f0b7ba56a2
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0a2c7400801decd937243bbbe5dbcea307d13fc0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048995"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130450"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能
 
@@ -114,6 +114,6 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="see-also"></a>另请参阅
 
-* [在 Teams 中集成媒体功能](mobile-camera-image-permissions.md)
+* [集成媒体功能](media-capabilities.md)
 * [在 Teams 中集成 QR 代码或条形码扫描程序功能](qr-barcode-scanner-capability.md)
 * [在 Teams 中集成人员选取器](people-picker-capability.md)

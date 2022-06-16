@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的术语
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 99872eb963c708e4b2a45f01e743ae9845ffa4b0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887623"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130422"
 ---
 # <a name="glossary"></a>术语表
 
@@ -117,7 +117,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [媒体功能](../concepts/device-capabilities/mobile-camera-image-permissions.md) | 可以与 Teams 应用集成的本机设备功能（如相机和麦克风）。 <br>**另请参阅**：[功能](#c)；[设备功能](#d) |
+| [媒体功能](../concepts/device-capabilities/media-capabilities.md) | 可以与 Teams 应用集成的本机设备功能（如相机和麦克风）。 <br>**另请参阅**：[功能](#c)；[设备功能](#d) |
 | [会议机器人](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | 使用实时语音、视频和屏幕共享与 Teams 通话和会议进行交互的机器人。 <br>**另请参阅**：[通话机器人](#c)；[聊天机器人](#c) |
 | [会议生命周期](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | 它涵盖会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和邮件扩展。 <br>**另请参阅**：[会议内体验](#i) |
 | [会议阶段](../sbs-meetings-stage-view.yml) | 会议扩展应用的一项功能。 它是在会议期间所有参与者都可访问的共享空间。 可帮助参与者实时与应用内容进行交互和协作。 <br>**另请参阅**：[阶段视图](#s) |

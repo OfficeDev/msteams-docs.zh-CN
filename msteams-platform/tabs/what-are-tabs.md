@@ -5,12 +5,12 @@ description: Teams 平台上的自定义选项卡概述
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 42d03b988268f9042bd6f6e84d180c8d4b0b2209
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672969"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130415"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>构建 Microsoft Teams 选项卡
 
@@ -99,7 +99,7 @@ Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选�
 
 * [在Microsoft Teams 中自定义选项卡](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [请求设备权限](../concepts/device-capabilities/native-device-permissions.md)
-* [集成媒体功能](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [集成媒体功能](../concepts/device-capabilities/media-capabilities.md)
 * [集成 QR 或条形码扫描程序](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [集成位置功能](../concepts/device-capabilities/location-capability.md)
 * [移动设备上的选项卡](design/tabs-mobile.md#tabs-on-mobile)
