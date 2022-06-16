@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能
 description: 了解 Microsoft Teams 中这些功能的新开发人员功能和增强功能。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ca3cbbac88a0133c5c4973f0a1ad8809f8e4ff73
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 8ca858211f87c9d514d655817b2a7887e70d4bf3
+ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048967"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66118968"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -24,7 +24,6 @@ ms.locfileid: "66048967"
 | 2022 年 5 月 24 日 | 适用于 Visual Studio Code 的 Teams 工具包版本 4.0.0 现已正式发布 | 工具和 SDK > 适用于 Visual Studio Code 的 Teams 工具包 > <br> • [Teams 工具包概述](toolkit/teams-toolkit-fundamentals.md) <br> • [使用 JavaScript 生成命令机器人](toolkit/add-capability.md) <br> • [使用 JavaScript 生成通知机器人](toolkit/add-capability.md) <br> • [预览并自定义 Teams 应用清单](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [连接到现有 API](toolkit/add-API-connection.md) <br> • [将功能添加到 Teams 应用](toolkit/add-capability.md) <br> • [添加单一登录体验](toolkit/add-single-sign-on.md) <br> • [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
 | 2022 年 5 月 24 日 | 已引入应用清单版本 1.13 | 应用清单> [Microsoft Teams 的清单架构](resources/schema/manifest-schema.md) |
 | 2022 年 5 月 24 日 | GCC 和 GCCH 中的机器人和消息扩展 | • 规划应用 > [概述](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • 生成机器人 > [概述](bots/what-are-bots.md) </br> • 生成邮件扩展 > [概述](messaging-extensions/what-are-messaging-extensions.md) |
-
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
@@ -266,6 +265,7 @@ ms.locfileid: "66048967"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+| 06/16/2022 | 将展开共享链接到 Web 应用中的团队| 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| 更新 Teams 机器人中的聊天和安装事件 |  生成机器人>机器人对话> Teams 机器人中的对话事件> [Teams 机器人中的对话事件](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 |  构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
