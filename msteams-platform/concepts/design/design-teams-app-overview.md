@@ -1,16 +1,16 @@
 ---
 title: 设计自定义应用
 author: heath-hamilton
-description: 了解如何设计 Microsoft Teams 应用。 资源包括 Microsoft Teams UI 工具包、最佳做法、示例等。
-ms.localizationpriority: high
+description: 了解如何设计Microsoft Teams应用和资源，包括 Microsoft Teams UI 工具包、最佳做法、示例等。
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 8e417a59e03fbb57905e2a84490888b8f98a5435
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 442d092be36f5d49e68fc997394e8846c4394f8d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111274"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142876"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>设计 Microsoft Teams 应用
 

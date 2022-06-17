@@ -1,16 +1,16 @@
 ---
 title: 应用设计过程
 author: heath-hamilton
-description: 大致了解如何以及何时可以使用 Microsoft 工具和资源设计出有效的 Microsoft Teams 应用。
+description: 了解如何以及何时使用 Microsoft 工具和资源设计有效的Microsoft Teams应用。
 ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 97ff20e0ffc6cc802c2226cc7767873cd3a25416
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297217"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144374"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Microsoft Teams 应用的设计过程
 

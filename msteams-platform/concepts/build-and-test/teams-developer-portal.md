@@ -1,16 +1,15 @@
 ---
 title: 使用开发人员门户管理应用
-description: 了解如何使用 Microsoft Teams 开发人员门户配置、分发和管理你的应用。
-keywords: 开始使用, 开发人员门户, Teams
+description: 在本模块中，了解如何使用开发人员门户为Microsoft Teams配置、分发和管理应用。
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c7ca898cd411028dffa6c8a197c78cd796f823e5
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439311"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142365"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>使用开发人员门户管理Teams应用
 
@@ -27,8 +26,8 @@ ms.locfileid: "65439311"
 
 开发人员门户提供了几种方法来注册 Teams 应用：
 
-* 注册全新的应用
-* 导入现有的应用包
+* 注册全新的应用。
+* 导入现有应用包。
 
 > [!NOTE]
 > 如果使用[适用于 Visual Studio Code 的 Microsoft Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)创建应用，则可以在开发人员门户中管理该应用。
@@ -103,7 +102,7 @@ Teams 应用是一款 Web 应用。 与所有 Web 应用一样，其源代码通
 * 操作系统
 * 领域
 
- :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
+ :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="筛选":::
 
 选择所需的筛选器后，可以浏览以下单个小组件：
 

@@ -1,16 +1,16 @@
 ---
 title: 创建并发送任务模块
 author: surbhigupta
-description: 了解如何使用代码示例和示例处理初始调用操作并使用操作消息传递扩展命令中的任务模块进行响应。
+description: 在本模块中，了解如何处理初始调用操作，以及如何通过操作消息传递扩展命令使用任务模块进行响应
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 207355a797b6a52caad634981208c9314ea38401
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: de592d2d37beb07d493d5a004fa94b6ae815bff6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296999"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143170"
 ---
 # <a name="create-and-send-the-task-module"></a>创建并发送任务模块
 

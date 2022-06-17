@@ -1,16 +1,16 @@
 ---
 title: 在本地测试和调试机器人
 author: surbhigupta
-description: 了解如何使用 Teams 环境中的 IDE 通过旁加载、在 Teams 外部使用机器人仿真器以及直接与机器人交谈来在本地测试和调试机器人。
+description: 了解如何通过旁加载等在Teams环境中使用 IDE 在本地测试和调试机器人
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c0c2124c12e9ab13bf72008e8dda0846f35d768
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 95a52b02c864a65454a8a03fa9917c4a5d99fdb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757596"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142890"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
 

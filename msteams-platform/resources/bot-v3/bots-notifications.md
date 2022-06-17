@@ -1,18 +1,17 @@
 ---
 title: 处理机器人事件
-description: 介绍如何处理 Microsoft Teams 中的机器人事件
-keywords: Teams 机器人事件
+description: 在本模块中，了解如何在机器人中处理Microsoft Teams、Teams成员或机器人添加、已删除团队成员或机器人等事件
 ms.date: 05/20/2019
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 3b077ce433032d98be66eb9113840701c2a74163
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 30ccb4ee8810154e2b36311d15217205de87b413
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111778"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142757"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>处理 Microsoft Teams 中的机器人事件
 
@@ -28,7 +27,7 @@ ms.locfileid: "65111778"
 
 每个机器人事件都作为 `Activity` 对象发送，其中 `messageType` 定义对象中的信息。 有关类型 `message` 的消息，请参阅 [ 发送和接收消息 ](~/resources/bot-v3/bot-conversations/bots-conversations.md)。
 
-Teams 和群组事件（通常从 `conversationUpdate` 类型触发）具有作为 `channelData` 对象的一部分传递的其他 Teams 事件信息，因此事件处理程序必须查询 `channelData` Teams 的有效负载 `eventType` 和其他特定于事件的元数据。
+Teams和组事件（从类型中触发）`conversationUpdate`具有作为对象一`channelData`部分传递的更多Teams事件信息，因此事件处理程序必须查询`channelData`Teams`eventType`和更多特定于事件的元数据的有效负载。
 
 下表列出了机器人可以接收并采取措施的事件。
 
@@ -45,7 +44,7 @@ Teams 和群组事件（通常从 `conversationUpdate` 类型触发）具有作�
 
 ## <a name="team-member-or-bot-addition"></a>添加团队成员或机器人
 
-当机器人收到关于其所属团队的成员身份更新信息时，[`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 事件会发送给机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。 请注意，用户信息 (`Id`) 对于机器人是唯一的，可以缓存以供服务将来使用，例如向特定用户发送消息。
+当机器人收到关于其所属团队的成员身份更新信息时，[`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 事件会发送给机器人。 在首次专门为个人对话添加机器人时，机器人也会收到更新。  () `Id` 的用户信息对于机器人是唯一的，可以缓存以供服务将来使用，例如向特定用户发送消息。
 
 ### <a name="bot-or-user-added-to-a-team"></a>添加到团队的机器人或用户
 
@@ -323,7 +322,7 @@ bot.on('conversationUpdate', (msg) => {
 > [!NOTE]
 > 没有查询所有团队名称的功能，并且没有从其他事件的有效负载中返回团队名称。
 
-当机器人所在的团队已重命名时，机器人会收到通知。 它在 `channelData` 对象中接收具备 `eventType.teamRenamed` 的 `conversationUpdate` 事件。 请注意，没有关于团队创建或删除的通知，因为机器人只作为团队的一部分存在，在它们被添加的范围之外没有可见性。
+当机器人所在的团队已重命名时，机器人会收到通知。 它在 `channelData` 对象中接收具备 `eventType.teamRenamed` 的 `conversationUpdate` 事件。 请注意，没有关于团队创建或删除的通知，因为机器人仅作为团队的一部分存在，并且在添加它们的范围之外没有可见性。
 
 ### <a name="schema-example-team-renamed"></a>架构示例：已重命名团队
 
@@ -450,7 +449,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="reactions"></a>回应
 
-当用户添加或删除其对最初由机器人发送的消息的回应时，将发送 `messageReaction` 事件。 `replyToId` 包含特定消息的 ID。
+`messageReaction`当用户添加或删除其对最初由机器人发送的消息的反应时，将发送该事件。 `replyToId` 包含特定消息的 ID。
 
 ### <a name="schema-example-a-user-likes-a-message"></a>架构示例：用户点赞了某条消息
 

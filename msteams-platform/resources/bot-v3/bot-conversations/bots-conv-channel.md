@@ -1,16 +1,15 @@
 ---
 title: 使用机器人进行频道和群组聊天对话
-description: 介绍在 Microsoft Teams 的频道中使用机器人进行对话的端到端方案
-keywords: Teams, 方案, 频道, 对话, 机器人
-ms.localizationpriority: high
+description: 在本模块中，了解在频道中与机器人进行对话的端到端方案Microsoft Teams
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: a3b508a5caa70ff2ecea24840c24448f3f8622b6
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: ad212108b9cce66e14cab5c850d8ff466d73c467
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111666"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142778"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>带有 Microsoft Teams 机器人的频道和群聊对话
 
@@ -18,21 +17,21 @@ ms.locfileid: "65111666"
 
 Microsoft Teams 允许用户将机器人引入其频道或群组聊天对话。 通过将机器人添加到团队或聊天，对话的所有用户都可以直接在对话中利用机器人功能。 你还可以访问机器人中特定于 Teams 的功能，例如查询团队信息和 @提及用户。
 
-频道和群组聊天中的聊天不同于个人聊天，因为用户需要 @提及机器人。 如果在多个范围（例如个人、群组聊天或频道）中使用机器人，则需要检测机器人消息来自什么范围，并相应地处理它们。
+频道和群聊中的聊天不同于个人聊天，因为用户需要@mention机器人。 如果机器人在多个范围（例如个人聊天、群组聊天或频道）中使用，则需要检测机器人消息来自什么范围，并相应地处理它们。
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>为频道或群组设计出色的机器人
 
-添加到团队的机器人将成为另一个团队成员，并且可以作为对话的一部分 @提及。 事实上，机器人只有在被 @提及时才会收到消息，因此频道上的其他对话不会发送给机器人。
+添加到团队的机器人将成为另一个团队成员，并且可以作为对话的一部分 @提及。 事实上，机器人仅在@mentioned时接收消息，因此通道上的其他对话不会发送到机器人。
 
 群组或频道中的机器人应为所有成员提供相关且适当的信息。 虽然机器人当然可以提供与体验相关的任何信息，但请记住，每个人都能看到与它的对话。 因此，群组或频道中的出色机器人应该为所有用户增加价值，当然不会无意中分享更适合一对一对话的信息。
 
-正如设计的那样，机器人可能在所有范围内都完全相关，而无需额外的工作。 在 Microsoft Teams 中，不期望机器人在所有范围内都能正常工作，但应确保机器人在你选择支持的任何范围内都能提供用户价值。 有关范围的详细信息，请参阅 [Microsoft Teams 中的应用](~/concepts/build-and-test/app-studio-overview.md)。
+机器人可能与现在一样，在所有范围内都完全相关，而无需更多工作。 在Microsoft Teams中，不期望机器人在所有范围内运行，但应确保机器人在选择支持 () 的任何范围内提供用户值。 有关范围的详细信息，请参阅 [Microsoft Teams 中的应用](~/concepts/build-and-test/app-studio-overview.md)。
 
 开发在群组或频道中工作的机器人使用与个人对话相同的许多功能。 有效负载中的其他事件和数据提供 Teams 群组和频道信息。 以下部分介绍了这些差异以及常见功能的主要差异。
 
 ### <a name="creating-messages"></a>创建消息
 
-有关机器人在频道中创建消息的详细信息，请参阅[机器人的主动消息传递](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)，特别是[创建频道对话](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)。
+有关机器人在频道中创建消息的详细信息，请参阅 [机器人的主动消息传送](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)，特别是 [创建频道对话](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)。
 
 ### <a name="receiving-messages"></a>接收消息
 
@@ -54,7 +53,7 @@ Microsoft Teams 允许用户将机器人引入其频道或群组聊天对话。 
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>最佳做法：Teams 中的欢迎消息
 
-首次将机器人添加到群组或团队时，向所有用户发送介绍机器人的欢迎消息通常非常有用。 欢迎消息应提供机器人功能和用户权益的说明。 理想情况下，消息还应包括用户与应用交互的命令。 为此，请确保机器人使用 `channelData` 对象中的 `teamsAddMembers` eventType 响应 `conversationUpdate` 消息。 请确保 `memberAdded` ID 是机器人的应用 ID 本身，因为在将用户添加到团队时会发送相同的事件。 有关更多详细信息，请参阅[团队成员或机器人添加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)。
+首次将机器人添加到组或团队时，向所有用户发送介绍机器人的欢迎消息非常有用。 欢迎消息应提供机器人功能和用户权益的说明。 理想情况下，消息还应包括用户与应用交互的命令。 为此，请确保机器人使用 `channelData` 对象中的 `teamsAddMembers` eventType 响应 `conversationUpdate` 消息。 请确保 `memberAdded` ID 是机器人的应用 ID 本身，因为在将用户添加到团队时会发送相同的事件。 有关详细信息，请参阅 [团队成员或机器人添加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) 。
 
 添加机器人时，可能还需要向团队的每个成员发送个人消息。 为此，可以[提取团队名单](~/resources/bot-v3/bots-context.md#fetch-the-team-roster)并向每个用户发送[直接消息](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
 
@@ -67,7 +66,7 @@ Microsoft Teams 允许用户将机器人引入其频道或群组聊天对话。 
 
 ## <a name="-mentions"></a>@提及
 
-由于群组或频道中的机器人只有当在消息中被提及时才会响应（“@*botname*”），因此群组频道中的机器人收到的每条消息都包含自己的名称，必须确保消息分析功能处理该名称。 此外，机器人可以分析提及的其他用户，并在其消息中提及用户。
+由于组或频道中的机器人仅在消息中 (“@*botname*”) 时才会响应，因此组通道中机器人收到的每条消息都包含其自己的名称，并且必须确保邮件分析处理该名称。 此外，机器人可以分析提及的其他用户，并在其消息中提及用户。
 
 ### <a name="retrieving-mentions"></a>检索提及
 

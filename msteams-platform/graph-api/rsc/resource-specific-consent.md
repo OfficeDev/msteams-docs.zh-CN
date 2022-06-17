@@ -1,17 +1,16 @@
 ---
 title: 在 Teams 中启用资源特定许可
-description: 介绍 Teams 中的资源特定许可以及如何利用它。
-ms.localizationpriority: high
+description: 在本模块中，了解Microsoft Teams中特定于资源的许可以及如何利用它。
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: teams 授权 OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 8a90d1280f94de099543d879028a84d538c588ac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f311723aa6bdb9fc95207169b7ab55434d246509
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111505"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144353"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 
@@ -160,7 +159,7 @@ RSC 权限在应用清单 JSON 文件中声明。
 |名称| 类型 | 说明|
 |---|---|---|
 |`id` |字符串 |你的 Azure AD 应用 ID。 有关详细信息，请参阅[在 Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
-|`resource`|字符串| 此字段在 RSC 中没有操作，但必须添加并包含值以免出现错误响应；任何字符串都可以。|
+|`resource`|String| 此字段在 RSC 中没有操作，但必须添加并包含值以免出现错误响应；任何字符串都可以。|
 
 指定应用所需的权限。
 
@@ -328,8 +327,8 @@ RSC 权限在应用清单 JSON 文件中声明。
 |名称| 类型 | 说明|
 |---|---|---|
 |`id` |字符串 |你的 Azure AD 应用 ID。 有关详细信息，请参阅[在 Azure AD 门户中注册应用](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
-|`resource`|String| 此字段在 RSC 中没有操作，但必须添加并包含值以免出现错误响应；任何字符串都可以。|
-|`applicationPermissions`|字符串数组|应用的 RSC 权限。 有关详细信息，请参阅[资源特定权限](resource-specific-consent.md#resource-specific-permissions)。|
+|`resource`|字符串| 此字段在 RSC 中没有操作，但必须添加并包含值以免出现错误响应；任何字符串都可以。|
+|`applicationPermissions`|字符串数组|应用的 RSC 权限。 有关详细信息，请参阅[特定于资源的权限](resource-specific-consent.md#resource-specific-permissions)。|
 
 团队中的 RSC 示例
 

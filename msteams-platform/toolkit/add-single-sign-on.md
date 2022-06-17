@@ -1,23 +1,23 @@
 ---
 title: 向Teams应用添加单一登录
 author: zyxiaoyuer
-description: 描述添加单一登录Teams Toolkit
+description: 在本模块中，了解如何添加单一登录 (SSO) Teams Toolkit、启用 SSO 支持、更新应用程序以使用 SSO
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: e9b45f1bd95140eae8da851544dfa4ee87646225
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: b1c53da3a7af0676ca29006359971d881a3a8f5b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123445"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144129"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>向 Teams 应用添加单一登录
 
 Microsoft Teams为应用程序提供单一登录函数，以获取登录Teams用户令牌以访问 Microsoft Graph 和其他 API。 Teams Toolkit通过抽象一些简单的 API 背后的一些 Azure AD 流和集成来促进交互。 这样就可以轻松地将单一登录 (SSO) 功能添加到Teams应用程序。
 
-对于在聊天、团队或频道中与用户交互的应用程序，SSO 将显示为自适应卡片，用户可以与该卡进行交互以调用 Azure AD 同意流。
+对于在聊天、团队或频道中与用户交互的应用程序，SSO 清单作为自适应卡片，用户可以与该卡片交互以调用 Azure AD 同意流。
 
 ## <a name="enable-sso-support"></a>启用 SSO 支持
 

@@ -1,17 +1,16 @@
 ---
 title: 自适应卡片中的人员选取器
-description: 介绍如何在自适应卡片中使用人员选取器控件
+description: 在本模块中，了解如何在自适应卡片及其方案中使用人员选取器控件并实现人员选取器。
 localization_priority: Medium
-keywords: 自适应卡人选取器
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3d6305895239ca2b8a0c871e53723979feb3f890
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111631"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144164"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>自适应卡片中的人员选取器
 
@@ -59,9 +58,9 @@ Web 和桌面客户端支持自适应卡片中的人员选取器。 在 Web 上�
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
 > [!NOTE]
-> 目前，此功能仅在 [公共开发人员预览版](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) 中可用。
+> 目前，此功能仅适用于[公共开发人员预览版](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)。
 
-Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 可以使用移动设备中的人员选取器来搜索和选择用户，以增强用户体验。 搜索体验类似于移动版中的任何其他用户选择体验。
+Android和iOS移动客户端支持自适应卡片中的人员选取器。 可以使用移动设备中的人员选取器来搜索和选择用户，以增强用户体验。 搜索体验类似于移动版中的任何其他用户选择体验。
 
 ### <a name="reassignment-scenario-example"></a>重新分配方案示例
 
@@ -72,7 +71,7 @@ Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 可
 1. 选择 **“重新分配** 人员选取器”字段预填充名称的位置，以便将任务重新分配给预期用户。
 1. 删除不正确的用户名。
 1. 根据映像方案选择预期用户、用户 B (Mona) 和用户 C (Robin) 。
-1. 选择“**完成**”。
+1. 选择“完成”。
 1. 选择“**分配**”。 分配后，信息将发送到机器人。
    机器人更新自适应卡片并通知预期用户。
 
@@ -162,7 +161,7 @@ Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 可
 
 ### <a name="data-submission"></a>数据提交
 
-可以使用 `Action.Submit` 或 `Action.Execute` 将所选数据提交到机器人。 机器人上收到的`invoke`有效负载是静态列表中提供的Microsoft Azure Active Directory (Azure AD) ID 或 ID 列表。
+可以使用 `Action.Submit` 或 `Action.Execute` 将所选数据提交到机器人。 机器人`invoke`上收到的有效负载是Microsoft Azure Active Directory (Azure AD) ID 或静态列表中提供的 ID 列表。
 在人员选取器中，当在控件中选择用户时， `Azure AD ID` 用户的值是发回的值。 它是 `Azure AD ID` 一个字符串，唯一标识目录中的用户。
 
 提交给机器人的值的格式取决于属性的 `isMultiSelect` 值：
@@ -310,7 +309,7 @@ Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 可
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | Description | C#    | Node.js   |
+| 示例名称           | 说明 | C#    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |自适应卡片中的人员选取器控件| 此示例演示如何在自适应卡片中使用人员选取器控件。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |
 

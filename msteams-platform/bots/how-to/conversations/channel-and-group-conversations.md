@@ -1,16 +1,16 @@
 ---
 title: 使用机器人进行频道和群组对话
 author: surbhigupta
-description: 如何在频道或群组聊天中发送、接收和处理机器人的消息。 了解设计准则, 创建对话线程, 使用 @提及, 使用代码示例
+description: 了解如何在频道或群聊中发送、接收和处理机器人的消息。 了解设计指南等。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757176"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144409"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 

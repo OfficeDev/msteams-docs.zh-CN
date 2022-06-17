@@ -1,16 +1,16 @@
 ---
 title: 对消息扩展的 SSO 支持
 author: KirtiPereira
-description: 了解如何使用代码示例为消息传递扩展启用 SSO 支持。
+description: 在本模块中，了解如何使用代码示例启用单一登录 (SSO) 对消息传递扩展的支持。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 900723ca77d4178a6a2ded46617ed53d985d83e3
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: a0130f2730289c3e45dfa3aa4585e62bd430a48a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887700"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142848"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>对消息扩展的单一登录支持
 

@@ -1,43 +1,42 @@
 ---
 title: 对话基础知识
-description: 频道、个人聊天和群聊环境中机器人对话简介。
+description: 在本模块中，了解频道中的机器人对话、个人聊天和Teams中的群聊环境。
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: conversations basics messages groupchap group channel
-ms.openlocfilehash: ec8e5b2d632912aac6cc9e1e06e6db3a7f1ed948
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 682555cadaeca5f50a942de98b2dcdd85ce0f6b2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887439"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142918"
 ---
 # <a name="conversation-basics"></a>对话基础知识
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-对话是在自动程序与一个或多个用户Microsoft Teams发送的一系列消息。 下表提供了三种类型的对话，也称为Teams：
+对话是在Microsoft Teams机器人和一个或多个用户之间发送的一系列消息。 下表提供了三种类型的对话，也称为Teams中的范围：
 
-| 对话类型 | 描述 |
+| 对话类型 | 说明 |
 | ------- | ----------- |
-| `channel` | 此对话类型对频道的所有成员可见。 |
-| `personal` | 此对话类型包括机器人和单个用户之间的对话。 |
-| `groupChat` | 此对话类型包括机器人与两个或多个用户之间的聊天。 它还在会议聊天中启用自动程序。 |
+| `channel` | 此对话类型对通道的所有成员可见。 |
+| `personal` | 此对话类型包括机器人与单个用户之间的对话。 |
+| `groupChat` | 此对话类型包括机器人与两个或更多用户之间的聊天。 它还使机器人能够在会议聊天中使用。 |
 
-自动程序的行为方式有所不同，具体取决于它涉及的对话：
+机器人的行为不同，具体取决于它所涉及的对话：
 
 * 在频道和群聊对话中的机器人要求用户@提及机器人来在频道中调用它。
 
-* 一对一对话中的聊天机器人不需要@mention。 用户发送的所有消息将路由到自动程序。
+* 一对一对话中的机器人不需要@mention。 用户发送的所有消息都路由到机器人。
 
 > [!NOTE]
-> 自动程序可以接收团队中所有频道消息，而无需@mentioned RSC 权限 (资源) 许可。 此功能目前仅适用于公共 [开发人员预览](../../../resources/dev-preview/developer-preview-intro.md) 版。 有关详细信息，请参阅使用 [RSC 接收所有频道消息](channel-messages-with-rsc.md)。
+> 可以启用机器人来接收团队中的所有频道消息，而无需使用特定于资源的许可 (RSC) 权限@mentioned。 此功能目前仅适用于[公共开发人员预览版](../../../resources/dev-preview/developer-preview-intro.md)。 有关详细信息，请参阅[使用 RSC 接收所有频道消息](channel-messages-with-rsc.md)。
 
-若要使机器人能够处理特定对话或范围，在应用清单 中添加对此 [范围的支持](~/resources/schema/manifest-schema.md)。
+要使机器人在特定对话或作用域中工作，请在 [应用清单](~/resources/schema/manifest-schema.md)中向该范围添加支持。
 
-自动程序对话中每条消息都是 `Activity` 一个类型 为 的对象 `messageType: message` 。 当用户发送消息时，Teams自动程序处理该邮件。 此外，若要定义自动程序响应的核心命令，可以添加命令菜单以及自动程序命令的下拉列表。 组或频道中的机器人仅在被提及时接收@botname。 Teams在自动程序处于活动状态的范围中发生的对话事件，向机器人发送通知。 可以在代码中捕获这些事件，然后对它们采取措施。
+机器人对话中的每个消息都是类型的`Activity``messageType: message`对象。 当用户发送消息时，Teams将消息发布到机器人，机器人处理消息。 此外，若要定义机器人响应的核心命令，可以添加包含机器人命令下拉列表的命令菜单。 群组或频道中的机器人仅在提及 @botname 时才会收到消息。 对于发生在机器人活动范围内的对话事件，Teams 会向机器人发送通知。 可以在代码中捕获这些事件并对其采取措施。
 
-机器人还可以向用户发送主动消息。 主动消息是自动程序发送的任何不响应用户请求的消息。 你可以设置自动程序消息的格式，以包含包含交互式元素（如按钮、文本、图像、音频、视频等）的丰富卡片。 自动程序可以在发送邮件后动态更新消息，而不是将消息作为数据的静态快照。 也可使用 Bot Framework 的方法删除 `DeleteActivity` 邮件。
+机器人还可以向用户发送主动消息。 主动消息是机器人发送的任何未响应用户请求的消息。 可以设置机器人消息的格式，以包含包含交互式元素的丰富卡片，例如按钮、文本、图像、音频、视频等。 机器人可以在发送消息后动态更新消息，而不是将消息用作数据的静态快照。 也可以使用 Bot Framework 的 `DeleteActivity` 方法删除消息。
 
 ## <a name="next-step"></a>后续步骤
 

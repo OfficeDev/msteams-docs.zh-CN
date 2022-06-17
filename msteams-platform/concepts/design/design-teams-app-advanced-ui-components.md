@@ -5,12 +5,12 @@ description: 了解Teams UI 组件，如痕迹、通知栏、阶段视图以及�
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2b009d4a31181ed1794dafdb8e224b7239bebd81
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123417"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143422"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI 组件设计Microsoft Teams应用
 
@@ -21,7 +21,7 @@ ms.locfileid: "66123417"
 基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>，Microsoft Teams UI 工具包包含专门用于构建Teams应用的组件和模式。 在 UI 工具包中，可以直接将此处列出的组件抓取并插入到设计中，并查看有关如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit (用户)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>痕迹导航栏
 
@@ -104,9 +104,9 @@ ms.locfileid: "66123417"
 
 ### <a name="top-use-cases"></a>最主要用例
 
-* 应用内容的上下文操作
-* 上下文筛选器和查找
-* 导航和痕迹清理
+* 应用内容的上下文操作。
+* 上下文筛选和查找。
+* 导航和痕迹。
 
 ### <a name="mobile"></a>移动设备
 

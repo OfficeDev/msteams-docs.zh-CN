@@ -1,17 +1,17 @@
 ---
 title: TeamsFx 命令行接口
 author: MuyangAmigo
-description: 介绍 TeamsFx 命令行接口
+description: 在本模块中，了解 TeamsFx 库、TeamsFx 命令行接口、支持的命令及其方案
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f26593c409f0b2f7d64093fa90e65afebd27c0ec
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: d269da398280f51a3225414f279a25fcd5d9d7cf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123792"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142071"
 ---
 # <a name="teamsfx-library"></a>TeamsFx 库
 
@@ -130,8 +130,8 @@ TeamsFx CLI 是基于文本的命令行接口，可加速 Teams 应用程序开�
 
 | 命令 | 说明 |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | 登录到所选云服务。 服务选项为 M365 或 Azure。 |
-| `teamsfx account logout <service>`  | 注销所选云服务。 服务选项为 M365 或 Azure。 |
+| `teamsfx account login <service>`  | 登录到所选云服务。 服务选项Microsoft 365或 Azure。 |
+| `teamsfx account logout <service>`  | 注销所选云服务。 服务选项Microsoft 365或 Azure。 |
 | `teamsfx account set --subscription` | 更新帐户设置以设置订阅 ID。 |
 
 ## `teamsfx env`
@@ -378,7 +378,7 @@ TeamsFx CLI 为协作方案提供 `teamsFx permission` 命令。
       teamsfx new --interactive false --app-name newapp --host-type azure
       ```
 
-    * 登录到 Microsoft 36 5帐户和 Azure 帐户：
+    * 登录到Microsoft 365帐户和 Azure 帐户：
 
       ```bash
       teamsfx account login azure
@@ -412,7 +412,7 @@ TeamsFx CLI 为协作方案提供 `teamsFx permission` 命令。
   * 作为项目协作者：
 
     * 从 GitHub 克隆项目。
-    * 登录到 Microsoft 365 帐户。 确保添加相同的 Microsoft 365 帐户：
+    * 登录到Microsoft 365帐户。 确保添加相同的 Microsoft 365 帐户：
 
       ```bash
       teamsfx account login Microsoft 365

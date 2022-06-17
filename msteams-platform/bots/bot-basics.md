@@ -1,17 +1,16 @@
 ---
 title: 智能机器人活动处理程序
 author: surbhigupta
-description: 了解 Teams 中的机器人活动处理程序。
+description: 本文介绍Microsoft Teams中的机器人活动处理程序、框架、Teams活动处理程序和机器人逻辑。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: 活动处理程序框架机器人卡同意通道事件
-ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032919"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143835"
 ---
 # <a name="bot-activity-handlers"></a>智能机器人活动处理程序
 

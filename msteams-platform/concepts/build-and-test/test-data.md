@@ -1,16 +1,15 @@
 ---
 title: 将测试数据添加到 Microsoft 365 测试租户
-description: 设置 Office 365 开发人员计划订阅，以便使用代码片段成功测试 Microsoft Teams 应用
+description: 了解如何设置Office 365开发人员计划订阅，以便使用代码片段成功测试Microsoft Teams应用
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: 测试应用, 开发人员计划, Teams
 ms.date: 11/01/2019
-ms.openlocfilehash: 6694c925e49d38fa15f908e58202907c7d479fa0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 35a61413ab9e9a672971ba6ce45b49f6dc645ab3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757022"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142351"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>将测试数据添加到 Microsoft 365 测试租户
 

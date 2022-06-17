@@ -1,16 +1,15 @@
 ---
 title: 使用消息扩展进行搜索
-description: 介绍如何开发基于搜索的消息扩展插件
-keywords: teams 消息扩展消息扩展搜索
+description: 在本模块中，了解如何开发基于搜索的消息扩展
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: dec73b248f6a71f078eff6a956c7875ef3507227
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: a555091558d66e070f09ec6df8338ac686657019
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032940"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142750"
 ---
 # <a name="search-with-message-extensions"></a>使用消息扩展进行搜索
 
@@ -435,7 +434,7 @@ ms.locfileid: "66032940"
 
 ## <a name="identify-the-user"></a>标识用户
 
-对服务的每个请求都包括执行请求的用户的模糊 ID，以及用户的显示名称和 Microsoft Azure Active Directory (Azure AD) 对象 ID。
+对服务的每个请求都包括执行请求的用户的模糊 ID，以及用户的显示名称和Microsoft Azure Active Directory (Azure AD) 对象 ID。
 
 ```json
 "from": {
@@ -445,7 +444,7 @@ ms.locfileid: "66032940"
 },
 ```
 
-保证 `id` 和 `aadObjectId` 值是经过身份验证的 Teams 用户的值。 它们可以用作密钥来查找凭据或服务中的任何缓存状态。 此外，每个请求都包含 Microsoft Azure Active Directory (Azure AD) 用户的租户 ID，可用于标识用户的组织。 如果适用，请求还包含从中发起请求的团队和通道 ID。
+保证`id`和`aadObjectId`值是经过身份验证的Teams用户的值。 它们可以用作密钥来查找凭据或服务中的任何缓存状态。 此外，每个请求都包含用户的Microsoft Azure Active Directory (Azure AD) 租户 ID，可用于标识用户的组织。 如果适用，请求还包含从中发起请求的团队和通道 ID。
 
 ## <a name="authentication"></a>身份验证
 
@@ -454,11 +453,11 @@ ms.locfileid: "66032940"
 序列如下所示：
 
 1. 用户发出查询，或者默认查询会自动发送到服务。
-2. 服务通过检查 Teams 用户 ID 来检查用户是否已首次进行身份验证。
+2. 服务通过检查Teams用户 ID 来检查用户是否已首次进行身份验证。
 3. 如果用户尚未进行身份验证，请使用建议的`openUrl`操作（包括身份验证 URL）发回`auth`响应。
 4. Microsoft Teams客户端使用给定的身份验证 URL 启动托管网页的弹出窗口。
-5. 用户登录后，应关闭窗口并向 Teams 客户端发送“身份验证代码”。
-6. 然后，Teams 客户端将查询重新颁发到服务，其中包括步骤 5 中传递的身份验证代码。
+5. 用户登录后，应关闭窗口并将“身份验证代码”发送到Teams客户端。
+6. 然后，Teams客户端将查询重新颁发到服务，其中包括在步骤 5 中传递的身份验证代码。
 
 服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码一致。 这可确保恶意用户不会尝试欺骗或破坏登录流。 这可以有效地“关闭循环”以完成安全身份验证序列。
 
@@ -486,13 +485,13 @@ ms.locfileid: "66032940"
 ```
 
 > [!NOTE]
-> 若要在 Teams 弹出窗口中托管登录体验，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅清单架构中的 [validDomains](~/resources/schema/manifest-schema.md#validdomains)。
+> 若要在Teams弹出窗口中托管登录体验，URL 的域部分必须位于应用的有效域列表中。 有关详细信息，请参阅清单架构中的 [validDomains](~/resources/schema/manifest-schema.md#validdomains)。
 
-### <a name="start-the-sign-in-flow"></a>启动登录流
+### <a name="start-the-sign-in-flow"></a>"开始"菜单登录流
 
 登录体验应具有响应能力，并适合在弹出窗口中。 它应与使用消息传递的 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 集成。
 
-与 Microsoft Teams 内运行的其他嵌入式体验一样，窗口内的代码也需要先调用 `microsoftTeams.initialize()`。 如果代码执行 OAuth 流，则可以将 Teams 用户 ID 传递到窗口，然后可以将其传递到 OAuth 登录 URL。
+与 Microsoft Teams 内运行的其他嵌入式体验一样，窗口内的代码也需要先调用 `microsoftTeams.initialize()`。 如果代码执行 OAuth 流，则可以将Teams用户 ID 传递到窗口，然后将其传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流
 
@@ -501,7 +500,7 @@ ms.locfileid: "66032940"
 1. 生成安全代码。  (这可能是一个随机数字。) 需要在服务上缓存此代码，以及通过登录流（例如 OAuth 2.0 令牌）获取的凭据。
 2. 调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。
 
-此时，窗口关闭并控制传递给 Teams 客户端。 客户端现在可以重新发布原始用户查询，以及属性中 `state` 的安全代码。 你的代码可以使用安全代码来查找之前存储的凭据以完成身份验证序列，然后完成用户请求。
+此时，窗口关闭，控件传递给Teams客户端。 客户端现在可以重新发布原始用户查询，以及属性中 `state` 的安全代码。 你的代码可以使用安全代码来查找之前存储的凭据以完成身份验证序列，然后完成用户请求。
 
 #### <a name="reissued-request-example"></a>重新发出的请求示例
 
@@ -556,7 +555,7 @@ ms.locfileid: "66032940"
 
 ### <a name="net"></a>.NET
 
-若要使用 Bot Builder SDK for .NET 接收和处理查询，可以检查 `invoke` 传入活动的操作类型，然后使用 NuGet 包 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 中的帮助程序方法来确定它是否是消息扩展活动。
+若要使用 Bot Builder SDK for .NET 接收和处理查询，可以检查`invoke`传入活动的操作类型，然后使用 NuGet 包 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 中的帮助程序方法来确定它是否是消息扩展活动。
 
 #### <a name="example-code-in-net"></a>.NET 中的示例代码
 

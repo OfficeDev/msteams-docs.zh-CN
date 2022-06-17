@@ -1,17 +1,16 @@
 ---
 title: 设计应用 - 了解应用结构
-description: 了解设计应用时在 Microsoft Teams 中可以自定义的内容和不能自定义的内容。
+description: 在本模块中，了解在设计应用结构时在Microsoft Teams中可以和无法自定义的内容。
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: surbhigupta
-keywords: 线框频道聊天会议消息扩展移动桌面
-ms.openlocfilehash: 5bda408a015c646f993fe2c70efa0b7904b64842
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cbcf44572b0105f9c0af4c7dc8cd0b00b6f5f9b9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111379"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144395"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>了解Microsoft Teams结构
 

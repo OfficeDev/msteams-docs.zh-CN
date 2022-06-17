@@ -1,17 +1,16 @@
 ---
 title: 向 Teams 机器人添加身份验证
 author: surbhigupta
-description: 如何使用 Azure Active Directory 在Microsoft Teams 中向机器人添加 OAuth 身份验证。 了解如何创建、部署和集成已启用身份验证的机器人。
+description: 了解如何使用Azure Active Directory在Teams中向机器人添加 OAuth 身份验证。 了解如何创建、部署和集成已启用身份验证的机器人。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: 资源组机器人注册 Azure 模拟器机器人清单部署
-ms.openlocfilehash: 9594723f671f69a5dc4cb99f0ab48385603e3394
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2a9ebf96f5795b6674646bc50dd856badf59152e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756945"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142561"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -340,7 +339,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 1. 在左侧面板中，选择“**设置**”。
 1. 在“**消息传送终结点**”框中，输入上述获取的 URL，然后输入 `api/messages`。 这是一个示例： `https://botteamsauth.azurewebsites.net/api/messages`。
     > [!NOTE]
-    > 机器人只允许一个消息传送终结点
+    > 机器人只允许一个消息传送终结点。
 1. 选择左上角的“**保存**”按钮。
 
 ## <a name="test-the-bot-using-the-emulator"></a>使用 Emulator 测试机器人
@@ -629,6 +628,15 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 [!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ---
+
+## <a name="code-sample"></a>代码示例
+
+本部分提供机器人身份验证 v3 SDK 示例。
+
+| **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| 机器人身份验证 | 此示例演示如何开始在 Microsoft Teams 机器人中进行身份验证。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| 选项卡、机器人和消息扩展 (ME) SSO | 此示例演示用于选项卡、机器人和 ME 的 SSO - 搜索、操作、linkunfurl。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
 
 ## <a name="see-also"></a>另请参阅
 

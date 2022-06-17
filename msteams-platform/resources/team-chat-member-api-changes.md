@@ -1,17 +1,16 @@
 ---
 title: 为团队和聊天成更改机器人 API
 author: ojasvichoudhary
-description: 介绍用于检索团队和聊天成员的机器人 API 即将进行的更改和正在进行的更改
-keywords: 机器人, 框架, API, 团队成员名单
+description: 在本模块中，了解用于检索团队成员和聊天成员的机器人 API 即将进行的更改和正在进行的更改
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: f41e70352400814ede0d1cf683608b33e7c2ad72
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 5f5bb009abd5a9e0dc8a14d0bea5bdd0f43a71c9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906230"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142323"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teams 机器人 API 在提取团队或聊天成员方面的更改
 
@@ -26,7 +25,7 @@ ms.locfileid: "65906230"
 * 对于大型团队，性能较差且超时的可能性更大：自 2017 年初发布 Teams 以来，最大团队规模已大幅增加。 作为 `GetMembersAsync` 或 `getMembers` 返回整个成员列表，API 调用需要很长时间才能返回大型团队，并且调用超时是很常见的，必须重试。
 * 获取单个用户的个人资料详细信息很困难：若要获取单个用户的个人资料信息，必须检索整个成员列表，然后搜索所需的用户。 Bot Framework SDK 中有一个帮助程序函数，可使其更简单，但效率不高。
 
-随着组织范围团队的引入，需要将这些 API 与 Office 365 隐私控制更好地保持一致。 大型团队中使用的机器人能够检索类似于 `User.ReadBasic.All` Microsoft Graph 权限的基本个人资料信息。 租户管理员可以很好地控制哪些应用和机器人可在其租户中使用，但这些设置不同于 Microsoft Graph。
+随着组织范围团队的引入，需要更好地将这些 API 与Office 365隐私控制保持一致。 大型团队中使用的机器人能够检索类似于 `User.ReadBasic.All` Microsoft Graph 权限的基本个人资料信息。 租户管理员可以很好地控制哪些应用和机器人可在其租户中使用，但这些设置不同于 Microsoft Graph。
 
 以下代码提供 Teams 机器人 API 返回的内容的示例 JSON 表示形式：
 
@@ -72,4 +71,4 @@ ms.locfileid: "65906230"
     > `objectId` 更改为 `aadObjectId` 以匹配 Bot Framework 消息的 `Activity` 对象中调用的内容。 新 API 适用于版本 4.8 或更高版本的 Bot Framework SDK。 它还可在 Teams SDK 扩展 Bot Framework 3.x 中使用。 同时，可以使用 [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) 终结点。
 
 * C# 中的 `TeamsInfo.GetMembersAsync` 和 TypeScript 或 Node.js 中的 `TeamsInfo.getMembers` 已正式弃用。 新 API 可用后，必须更新机器人才能使用它。 这也适用于[这些 API 使用的基础 REST API](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json)。
-* 到 2022 年底，机器人无法主动检索聊天或团队成员的 `userPrincipalName` 或 `email` 属性。 机器人必须使用 Graph API 来检索所需的信息。 从 2022 年末开始，新 `GetConversationPagedMembers` API 无法返回 `userPrincipalName` 和 `email` 属性。 机器人必须将 Graph API 与访问令牌配合使用才能检索信息。 
+* 到 2022 年底，机器人无法主动检索聊天或团队成员的 `userPrincipalName` 或 `email` 属性。 机器人必须使用Graph API 来检索所需的信息。 从 2022 年末开始，新 `GetConversationPagedMembers` API 无法返回 `userPrincipalName` 和 `email` 属性。 机器人必须将 Graph API 与访问令牌配合使用才能检索信息。 

@@ -2,16 +2,15 @@
 title: SameSite cookie 属性
 author: laujan
 description: 了解 Cookie 类型(包括 SameSite Cookie)、它们的属性、它们在 Teams 选项卡、任务模块和消息扩展中的含义，以及它们在 Teams 中的身份验证
-keywords: cookie 属性 samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: f93ee29198400a0cabd4512d9abb4de80cebb9da
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: fee4855c8dd6c8dfdb83bce8b6d4d0c5da348724
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756987"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142729"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite cookie 属性
 

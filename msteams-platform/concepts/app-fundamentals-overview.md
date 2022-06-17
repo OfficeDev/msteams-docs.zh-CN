@@ -5,13 +5,12 @@ description: 介绍规划应用、了解用例、应用功能和其他 Teams 功
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: 入口点扩展性用例设备功能
-ms.openlocfilehash: ffcefbdfc5696f91872fcf828f9e40e58e224a6b
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 469c21c69fc7be450f2e51c26ddb1cf3c67292f4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602248"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142421"
 ---
 # <a name="plan-your-app-with-teams-features"></a>使用 Teams 功能规划应用
 

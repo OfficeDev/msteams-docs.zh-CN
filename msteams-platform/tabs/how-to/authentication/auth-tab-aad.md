@@ -1,27 +1,26 @@
 ---
 title: 配置第三方 OAuth 身份验证
-description: 介绍 Teams 中的身份验证以及如何在选项卡中使用它
+description: 本文介绍Teams身份验证选项卡Microsoft Azure AD、Teams中的身份验证以及如何在选项卡中使用它。
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Teams 身份验证选项卡, Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 1cbd871a3066c5f8dd1cbba0837fdf8e4ab9be8f
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 12146d5651fa0e975dcfdd7f60159700e1f8914e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887777"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142267"
 ---
 # <a name="configure-third-party-oauth-authentication"></a>配置第三方 OAuth 身份验证
 
 > [!Note]
-> 若要在移动客户端上使用选项卡的身份验证，请确保使用的是 Teams JavaScript SDK 版本 1.4.1 或更高版本。
+> 若要使身份验证适用于移动客户端上的选项卡，请确保使用的是版本 1.4.1 或更高版本的 Teams JavaScript SDK。
 
-你可能希望在 Teams 应用中使用许多服务，其中大多数服务都需要身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 和 Teams。
+你可能希望在 Teams 应用中使用许多服务，其中大多数服务都需要身份验证和授权才能访问该服务。 服务包括 Facebook、Twitter 和Teams。
 Teams 用户配置文件信息存储在使用 Microsoft Graph 的 Azure AD 中，本文将重点介绍如何使用 Azure AD 进行身份验证以获取对此信息的访问权限。
 
 OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证开放标准。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中使用身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流。 它从 Azure AD 和 Microsoft Graph 读取用户的个人资料信息。
 
-本文中的代码来自 Teams 示例应用，即 [Microsoft Teams 选项卡身份验证示例（节点）](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。 它包含一个静态选项卡，该选项卡请求 Microsoft Graph 的访问令牌，并显示来自 Azure AD 的当前用户的基本配置文件信息。
+本文中的代码来自 Teams 示例应用，即 [Microsoft Teams 选项卡身份验证示例（节点）](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。 它包含一个静态选项卡，该选项卡请求 Microsoft Graph的访问令牌，并显示当前用户从 Azure AD 获取的基本配置文件信息。
 
 有关选项卡的身份验证流概述，请参阅 [选项卡中的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)。
 
@@ -50,7 +49,7 @@ OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证开放
 
 将按钮添加到配置或内容页，使用户能够在需要时登录。 可在选项卡的[配置](~/tabs/how-to/create-tab-pages/configuration-page.md)页或任何[内容](~/tabs/how-to/create-tab-pages/content-page.md)页上完成此操作。
 
-与大多数标识提供者一样，Azure AD 不允许将其内容放置在某个标识提供者中 `iframe`。 这意味着需要添加一个弹出页来托管标识提供者。 在以下示例中，此页为 `/tab-auth/simple-start`. `microsoftTeams.authenticate()`选择按钮时，使用 Microsoft Teams 客户端 SDK 的函数启动此页面。
+与大多数标识提供者一样，Azure AD 不允许将其内容放置在某个标识提供者中 `iframe`。 这意味着需要添加一个弹出页来托管标识提供者。 在以下示例中，此页为 `/tab-auth/simple-start`. `microsoftTeams.authenticate()`选择按钮时，使用Microsoft Teams客户端 SDK 的函数启动此页面。
 
 ```javascript
 microsoftTeams.authentication.authenticate({

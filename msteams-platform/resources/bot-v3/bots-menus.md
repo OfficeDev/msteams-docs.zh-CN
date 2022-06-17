@@ -1,35 +1,34 @@
 ---
-title: 添加自动程序菜单
-description: 介绍如何为聊天机器人创建Microsoft Teams
-keywords: teams 自动程序菜单创建
+title: 添加机器人菜单
+description: 在本模块中，了解如何在Microsoft Teams中添加机器人菜单，并在Microsoft Teams中为机器人创建菜单
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 6f339f23298c14607eb1d9ca12daa50bcc98775b
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: ed65699b930d3e5334dd7fbb03da18a1482d6e5d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452898"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143380"
 ---
-# <a name="add-a-bot-menu-in-microsoft-teams"></a>在"聊天机器人"菜单中添加Microsoft Teams
+# <a name="add-a-bot-menu-in-microsoft-teams"></a>在Microsoft Teams中添加机器人菜单
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-为了帮助发现和帮助用户了解机器人的功能，你现在可以添加每当用户与机器人交互时都会显示的菜单。 菜单将显示命令文本，并提供帮助文本，如使用示例或命令用途的说明。
+为了帮助发现并帮助用户了解机器人的功能，现在可以在用户与机器人交互时添加显示的菜单。 菜单将显示命令文本，并提供帮助文本，例如使用示例或命令用途说明。
 
-![自动程序菜单的屏幕截图](~/assets/images/bots/bot-menus-bot-menu-sample.png)
+![机器人菜单的屏幕截图](~/assets/images/bots/bot-menus-bot-menu-sample.png)
 
-当用户选择菜单项时，命令字符串将插入到文本框中，帮助用户完成自动程序消息。
+当用户选择菜单项时，命令字符串将插入文本框，以帮助用户完成机器人消息。
 
-## <a name="bot-menu-support-on-teams-mobile-app"></a>移动应用上的自动Teams支持
+## <a name="bot-menu-support-on-teams-mobile-app"></a>Teams移动应用上的机器人菜单支持
 
 > [!NOTE]
-> 自动程序菜单不显示在移动设备上。
+> 机器人菜单不会显示在移动设备上。
 
 ## <a name="app-manifest"></a>应用部件清单
 
-若要创建自动程序菜单，请向 [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) 应用清单的自动程序部分下添加新对象。 你可以为自动程序支持的每个`personal`范围声明单独的菜单，每个 (、 `groupChat``team` 或) 菜单最多支持 10 个命令。
+若要创建机器人菜单，请将新 [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) 对象添加到机器人部分下的应用清单。 可以为机器人支持 (`personal`的每个范围声明具有单独命令的单个菜单， `groupChat`或者 `team`) 每个菜单最多支持 10 个命令。
 
 ### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>清单摘录 - 两个作用域的单个菜单
 
@@ -75,7 +74,7 @@ ms.locfileid: "63452898"
 }
 ```
 
-### <a name="manifest-excerpt---separate-menu-per-scope"></a>清单摘录 - 每个作用域的单独菜单
+### <a name="manifest-excerpt---separate-menu-per-scope"></a>清单摘录 - 每个范围的单独菜单
 
 ```json
 {
@@ -117,8 +116,8 @@ ms.locfileid: "63452898"
 }
 ```
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
-* 保持简单：自动程序菜单旨在显示自动程序的关键功能。
-* 保持简短：菜单选项不应是超长且复杂的自然语言语句-它们应该是简单的命令。
-* 始终可用：自动程序菜单操作/命令应始终可进行通话，无论机器人位于对话或对话的状态如何。
+* 保持简单：机器人菜单旨在呈现机器人的关键功能。
+* 保持简短：菜单选项不应是非常长和复杂的自然语言语句 - 它们应该是简单的命令。
+* 始终可用：机器人菜单操作/命令应始终可调用，而不考虑聊天状态或机器人所在的对话框。

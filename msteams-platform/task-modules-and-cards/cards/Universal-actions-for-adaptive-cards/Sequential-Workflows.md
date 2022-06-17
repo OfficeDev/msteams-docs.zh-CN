@@ -1,15 +1,15 @@
 ---
 title: 顺序工作流
-description: 了解使用通用操作和代码示例的自适应卡的顺序工作流
+description: 在本模块中，了解使用通用操作和代码示例的自适应卡的顺序工作流
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 32200fc7a4df12567ba4000aad34e5a229dbc466
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 40743ccd67386aae72685536ede1ae50d5aea907
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073779"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143310"
 ---
 # <a name="sequential-workflows"></a>顺序工作流
 
@@ -127,12 +127,12 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 |示例名称 | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams餐饮机器人 | 使用自适应卡片创建接受食品订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
-| 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Teams 餐饮机器人 | 使用自适应卡片创建接受食品订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
+| 顺序工作流自适应卡片 | 演示如何在机器人中实施顺序工作流、用户特定视图和最新自适应卡。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 
-* [Teams中的自适应卡片操作](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [Teams 中的自适应卡片操作](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [机器人的工作方式](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [使用自适应卡的通用操作](Work-with-universal-actions-for-adaptive-cards.md)
 * [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

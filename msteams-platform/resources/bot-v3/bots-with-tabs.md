@@ -1,16 +1,15 @@
 ---
 title: 将机器人与选项卡组合在一起
-description: 本文介绍如何一起使用选项卡和机器人。
-keywords: teams 机器人选项卡开发
+description: 本文介绍如何结合使用选项卡和机器人、构造指向机器人消息中选项卡的深层链接，以及团队机器人选项卡开发
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 03/15/2018
-ms.openlocfilehash: 9ec2c37417d6c16edf4ead521dea91655ba11165
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: f8199b65fded8c43af45cb303a400652e5516db2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123729"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142092"
 ---
 # <a name="combine-bots-with-tabs"></a>将机器人与选项卡组合在一起
 
@@ -31,7 +30,7 @@ ms.locfileid: "66123729"
 
 你希望使用选项卡显示的内容多于卡片内的内容，或提供使用选项卡画布完成复杂表单填充任务的方法。 例如，当用户单击机器人中的卡时，请考虑导航到选项卡。 若要实现此目的，需要对机器人的消息进行编码，以包含 [深度链接](~/concepts/build-and-test/deep-links.md) URL，无论是通过标记还是作为 openUrl 操作的目标。
 
-深层链接依赖于 entityId，这是映射到系统中唯一实体的不透明值。 创建选项卡时，最好在后端存储一些简单状态，例如，在后端标记，指示已在通道中创建选项卡。 当机器人构造消息时，它可以将与该选项卡关联的 entityId 作为目标。
+深层链接依赖于 entityId，这是映射到系统中唯一实体的不透明值。 创建选项卡时，最好存储一些简单的状态。 例如，后端上指示已在通道中创建选项卡的标志。 当机器人构造消息时，它可以将与该选项卡关联的 entityId 作为目标。
 
 > [!NOTE]
 > 在个人聊天中，由于选项卡是“静态”且随应用一起安装，因此你始终可以假设它们的存在，从而相应地构造深层链接。

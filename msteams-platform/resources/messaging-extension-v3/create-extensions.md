@@ -1,17 +1,16 @@
 ---
-title: 使用消息扩展启动操作
-description: 创建基于操作的消息扩展，以允许用户触发外部服务
+title: 使用邮件扩展启动操作
+description: 在本模块中，了解如何创建基于操作的消息扩展，以允许用户触发外部服务
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: teams 消息扩展消息扩展搜索
-ms.openlocfilehash: a29d1a5b49845d930ac4efbdd3967bd6b4446891
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104364"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143674"
 ---
-# <a name="initiate-actions-with-message-extensions"></a>使用消息扩展启动操作
+# <a name="initiate-actions-with-message-extensions"></a>使用邮件扩展启动操作
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
@@ -309,7 +308,7 @@ ms.locfileid: "65104364"
 }
 ```
 
-### <a name="request-to-install-your-conversational-bot"></a>请求安装聊天机器人
+### <a name="request-to-install-your-conversational-bot"></a>请求安装对话机器人
 
 如果应用包含会话机器人，请确保在加载任务模块之前将其安装在会话中。 在需要获取任务模块的其他上下文的情况下，这很有用。 例如，可能需要提取名册以填充人员选取器控件或团队中的频道列表。
 
@@ -442,7 +441,7 @@ ms.locfileid: "65104364"
 1. 提交配置任务模块后，应用使用任务模块中提供的信息来制作自适应卡片，并将其作为 `botMessagePreview` 响应发送给客户端。
 1. 然后，用户可以在机器人将其插入通道之前预览自适应卡片消息。 如果机器人不是通道的成员，单击 `Send` 将添加机器人。
 1. 与自适应卡片交互会在发送消息之前更改消息。
-1. 用户选择 `Send` 后，机器人会将消息发布到通道。
+1. 用户选择`Send`后，机器人会将消息帖子到通道。
 
 若要启用此流，任务模块应响应，如下面的示例所示，该示例将向用户显示预览消息。
 

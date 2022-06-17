@@ -1,16 +1,16 @@
 ---
 title: 任务模块
 author: surbhigupta
-description: 添加模式弹出体验，从Microsoft Teams应用收集或显示用户信息
+description: 在本模块中，了解如何添加模式弹出体验，以便从Microsoft Teams应用收集或显示用户信息
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a7d7778aa4d38dbc879255c449b93590d04f00e2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f5bed6e92200d19fc99f8f91d632dd04d61a1722
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756595"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143597"
 ---
 # <a name="task-modules"></a>任务模块
 

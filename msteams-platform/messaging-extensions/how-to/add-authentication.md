@@ -1,16 +1,16 @@
 ---
 title: 为消息扩展添加身份验证
 author: surbhigupta
-description: 了解如何使用代码示例向消息传递扩展添加身份验证
+description: 在本模块中，了解如何使用代码示例和示例将身份验证添加到消息传递扩展
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dbc49707d3fe2777761f51c46b23efaf7df96491
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: cca9aef8e08b9d997497e1531db928d8e29d7eac
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887609"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143541"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>为消息扩展添加身份验证
 

@@ -1,17 +1,17 @@
 ---
 title: 使用 Teams Toolkit 协作处理 TeamsFx Project
 author: yanjiang
-description: 使用 Teams Toolkit 协作处理 TeamsFx Project
+description: 本文介绍如何使用Teams Toolkit与其他开发人员协作处理 TeamsFx Project。
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 099820252fd83a2d916e8d61f3b83b63291695e9
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0f81990603b3e0275a057c489d7fac44ee0127cc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124016"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142057"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>使用 Teams 工具包协作处理 Teams 项目
 

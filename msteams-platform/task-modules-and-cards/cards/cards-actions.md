@@ -1,15 +1,14 @@
 ---
 title: 在机器人中添加卡片操作
-description: 介绍 Microsoft Teams 中的卡片操作以及如何在机器人中使用它们
+description: 在本模块中，了解Microsoft Teams中的卡片操作、操作类型以及如何在机器人中使用它们
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: Teams, 机器人卡片操作
-ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e06cb41645480423727924127501b6ea3f85f953
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756483"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144171"
 ---
 # <a name="card-actions"></a>卡片操作
 

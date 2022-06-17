@@ -1,16 +1,16 @@
 ---
 title: 会议应用 API 参考
 author: surbhigupta
-description: 使用示例和代码示例标识会议应用 API 引用，Teams应用会议用户参与者角色 api 用户上下文通知信号查询。
+description: 了解如何使用示例和代码示例标识会议应用 API 引用，Teams应用会议用户角色 api 用户上下文通知信号查询。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 380f470c51933e4be90d008261ab75eafc566f2c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032786"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142946"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 

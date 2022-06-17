@@ -1,15 +1,14 @@
 ---
 title: 机器人的主动消息传递
-description: 了解如何在 Microsoft Teams 中对机器人使用主动消息传递
+description: 在本模块中，了解如何对机器人使用主动消息传送，以及在Microsoft Teams中主动消息传送的最佳做法
 ms.topic: conceptual
-ms.localizationpriority: high
-keywords: Teams, 方案, 主动消息传递, 对话机器人
-ms.openlocfilehash: 12c6f9ad79d7e28f31e3985930557339e75ccbbf
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ee193cd7dfcfec20f501483eabc3a485cff0caab
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111484"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143128"
 ---
 # <a name="proactive-messaging-for-bots"></a>机器人的主动消息传递
 
@@ -17,11 +16,10 @@ ms.locfileid: "65111484"
 
 主动消息是由机器人发送以启动对话的消息。 希望机器人开始对话的原因可能有很多，其中包括:
 
-* 个人机器人对话的欢迎消息
-* 投票回复
-* 外部事件通知
-
-发送消息来启动新对话线程不同于发送消息来响应现有对话：机器人启动新对话时，没有要将消息发布到的预先存在的对话。 若要发送主动消息，需要：
+* 欢迎用于个人机器人对话的消息。
+* 轮询响应。
+* 外部事件通知。
+发送消息以启动新会话线程不同于发送消息来响应现有对话：当机器人启动新会话时，没有预先存在的会话帖子消息。 若要发送主动消息，需要：
 
 1. [决定要说的内容](#best-practices-for-proactive-messaging)
 1. [获取用户的唯一 ID 和租户 ID](#obtain-necessary-user-information)
@@ -71,7 +69,7 @@ ms.locfileid: "65111484"
 
 只能安装组织应用目录或 Teams 应用商店中的应用。
 
-有关完整详细信息，请参阅 Graph 文档中的[为用户安装应用](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)。 [.NET 中也有一个示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
+有关完整详细信息，请参阅 Graph 文档中的[为用户安装应用](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)。 .NET 中还有一个 [示例](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
 
 ## <a name="examples"></a>示例
 

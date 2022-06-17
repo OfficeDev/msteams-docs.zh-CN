@@ -1,16 +1,16 @@
 ---
 title: 消息扩展
 author: surbhigupta
-description: Microsoft Teams 平台上的消息传递扩展概述
+description: 在本模块中，了解消息传递扩展和在Microsoft Teams平台上使用消息扩展的方案
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 5a63c1a36217f4c0aa237e38537be2e094acdea3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602255"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144318"
 ---
 # <a name="message-extensions"></a>消息扩展
 

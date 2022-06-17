@@ -1,22 +1,22 @@
 ---
 title: 统一会议应用
 author: surbhigupta
-description: 了解Teams会议生命周期以及用户在桌面和移动环境中的会议体验、参与者和用户角色和类型、在会议生命周期中集成机器人和消息扩展。
+description: 了解在会议生命周期中Teams会议生命周期和用户会议体验、用户类型、集成机器人和消息扩展。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 97f1254fc71dce93aa7e30b8ef1901f9fd93b6f0
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: caea4d49526c01de497f72a1878f9520d6e22348
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111344"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142575"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
 Teams统一会议应用基于以下概念：
 
 * 会议生命周期具有不同的阶段: 会议前、会议内和会议后。  
-* 会议中有三个不同的参与者角色: 组织者、演示者和与会者。 有关详细信息，请参阅[Teams会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
+* 会议中有三个不同的参与者角色: 组织者、演示者和与会者。 有关详细信息，请参阅 [Teams 会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。  
 * 会议中有各种 [用户类型](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) ：租户内、 [来宾](/microsoftteams/guest-access)、 [联合](/microsoftteams/manage-external-access)用户和匿名用户。
 
 本文介绍有关会议生命周期以及如何集成选项卡、机器人和消息扩展的信息。 它标识不同的参与者角色和用户类型。
@@ -33,7 +33,7 @@ Teams统一会议应用基于以下概念：
 选项卡允许团队成员访问会议中特定空间内的服务和内容。 团队直接使用选项卡，并就选项卡中可用的工具和数据进行对话。 在Teams会议中，可以通过选择添加选项卡 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>，然后选择要安装的应用。
 
 > [!IMPORTANT]
-> 如果已将选项卡与会议集成，则应用必须遵循选项[卡Teams单一登录 (SSO) 身份验证流](../tabs/how-to/authentication/auth-aad-sso.md)。
+> 如果已将选项卡与会议集成，则应用必须遵循选项[卡Teams单一登录 (SSO) 身份验证流](../tabs/how-to/authentication/tab-sso-overview.md)。
 
 > [!NOTE]
 >
@@ -47,11 +47,11 @@ Teams统一会议应用基于以下概念：
 若要将选项卡添加到现有会议，请执行以下操作：
 
 1. 在日历中，选择要向其添加选项卡的会议。
-1. 选择“ **详细信息”** 选项卡并选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. 将显示选项卡库。
+1. 选择“**详细信息**”选项卡并选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. 将显示选项卡库。
 
     :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="会议前应用体验":::
 
-1. 在选项卡库中，选择要添加的应用，并根据需要执行步骤。 应用作为选项卡安装。
+1. 在选项卡库中，选择要添加的应用，并根据需要执行步骤。 安装应用选项卡。
 
    > [!NOTE]
    >
@@ -87,7 +87,6 @@ Teams统一会议应用基于以下概念：
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 :::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="桌面视图":::
-
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
@@ -131,7 +130,7 @@ Teams统一会议应用基于以下概念：
 
 #### <a name="post-meeting-app-experience"></a>会后应用体验
 
-使用会后应用体验，可以查看会议结果，例如轮询调查结果或反馈。 选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> 若要添加选项卡，请获取会议笔记，并查看组织者和与会者必须对其采取行动的结果。
+借帖子会议应用体验，可以查看会议结果，例如轮询调查结果或反馈。 选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> 若要添加选项卡，请获取会议笔记，并查看组织者和与会者必须对其采取行动的结果。
 
 下图显示了 **Contoso** 选项卡，其中包含投票结果和与会者收到的反馈：
 
@@ -178,7 +177,7 @@ Teams统一会议应用基于以下概念：
 > [!NOTE]
 > 只有组织者或演示者才能添加、删除或卸载应用。
 
-有关详细信息，请参阅[Teams会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
+有关详细信息，请参阅 [Teams 会议中的角色](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
 
 根据会议中的参与者角色设计应用后，可以识别会议的每个用户类型，并选择他们可以访问的内容。
 
@@ -191,17 +190,17 @@ Teams统一会议应用基于以下概念：
 
 以下列表详细介绍了各种用户类型及其辅助功能和性能：
 
-* **租户内**：租户内用户属于组织，并且具有租户的Microsoft Azure Active Directory (Azure AD) 凭据。 他们是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
-* **来宾：来宾** 是受邀访问组织租户中Teams或其他资源的另一组织的参与者。 来宾将添加到组织的Azure AD，并具有与本机团队成员相同的Teams功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅[Teams中的来宾访问权限](/microsoftteams/guest-access)。
+* **租户内**：租户内用户属于组织，在租户的 Azure AD) Microsoft Azure Active Directory (中具有凭据。 他们是全职、现场或远程员工。 租户内用户可以是组织者、演示者或与会者。
+* **来宾：来宾** 是受邀访问组织租户中Teams或其他资源的另一组织的参与者。 来宾将添加到组织的 Azure AD，并具有与本机团队成员相同的Teams功能。 他们有权访问团队聊天、会议和文件。 来宾可以是组织者、演示者或与会者。 有关详细信息，请参阅[Teams中的来宾访问权限](/microsoftteams/guest-access)。
 * **联合用户或外部** 用户是另一个组织中受邀加入会议的外部Teams用户。 联合用户具有与联合合作伙伴的有效凭据，并经Teams授权。 他们无权访问你的团队或组织中的其他共享资源。 来宾访问是外部用户有权访问团队和频道的更好选择。 有关详细信息，请参阅[Teams中管理外部访问权限](/microsoftteams/manage-external-access)。
 
     > [!NOTE]
     > Teams用户在托管会议或与其他组织聊天时可以添加应用。 当用户加入其他组织托管的会议或聊天时，用户可以使用外部用户共享的应用。 托管用户组织的数据策略以及该用户组织共享的第三方应用的数据共享做法将生效。
 
     > [!IMPORTANT]
-    > 目前，第三方应用在政府社区云 (GCC) 中可用，但不适用于GCC-High和国防部 (国防部) 。 默认情况下，第三方应用将关闭GCC。 若要为GCC启用第三方应用，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)[和管理应用](/microsoftteams/manage-apps)。
+    > 目前，第三方应用在政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD)。 GCC 默认关闭第三方应用。 若要为 GCC 启用第三方应用，请参阅[管理应用权限策略](/microsoftteams/teams-app-permission-policies)和[管理应用](/microsoftteams/manage-apps)。
 
-* **匿名**：匿名用户没有Azure AD标识，也不与租户联合。 匿名参与者与外部用户类似，但他们的身份不会显示在会议中。 匿名用户无法访问会议窗口和会议阶段中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
+* **匿名**：匿名用户没有 Azure AD 标识，也不与租户联合。 匿名参与者与外部用户类似，但他们的身份不会显示在会议中。 匿名用户无法访问会议窗口和会议阶段中的应用。 匿名用户不能是组织者，但可以是演示者或与会者。
 
     > [!NOTE]
     > 匿名用户继承全局默认用户级应用权限策略。 有关详细信息，请参阅 [“管理应用](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)”。
@@ -213,13 +212,13 @@ Teams统一会议应用基于以下概念：
 | 用户类型 | 选项卡 | 机器人 | 消息扩展 | 自适应卡 | 任务模块 | 会议内的对话框 | 会议阶段 |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 匿名用户 | 不可用 | 不可用 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 不可用 | 不可用 |
-| 来宾，租户Azure AD的一部分 | 允许交互。 不允许创建、更新和删除。 | 不可用 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 可用 | 只能在会议舞台上启动、查看和与应用交互Teams桌面客户端 |
+| 来宾，租户 Azure AD 的一部分 | 允许交互。 不允许创建、更新和删除。 | 不可用 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 可用 | 只能在会议舞台上启动、查看和与应用交互Teams桌面客户端 |
 | 联合用户，有关详细信息，请参阅 [非标准用户](/microsoftteams/non-standard-users)。 | 允许交互。 不允许创建、更新和删除。 | 允许交互。 不允许获取、更新和删除。 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 不可用 | 只能在Teams桌面客户端上启动、查看和与会议舞台上的应用交互。 |
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [为Teams会议启用和配置应用](enable-and-configure-your-app-for-teams-meetings.md)
+> [为 Teams 会议启用和配置应用](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>另请参阅
 

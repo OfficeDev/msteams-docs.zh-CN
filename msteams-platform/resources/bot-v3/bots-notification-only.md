@@ -1,25 +1,24 @@
 ---
 title: 仅限通知的机器人
-description: 描述 Microsoft Teams 中仅限通知的机器人
-keywords: Teams 机器人通知
+description: 在本模块中，了解Microsoft Teams、应用清单及其最佳做法和限制中的仅限通知的机器人
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 01/29/2020
-ms.openlocfilehash: 1ee009fb76a52bcebdd3fe24c7a672f1ed455b42
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 547ef73cfd036efe566afe15e4f50701a275c2cd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111477"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144297"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>Microsoft Teams 中仅限通知的机器人
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-如果机器人的唯一用途是向用户传递通知，而不是对话，则可以在应用部件清单中启用 `isNotificationOnly` 字段。 这会产生以下变化：
+如果机器人的唯一用途是向用户传递通知，而不是聊天，则可以在应用清单中启用该 `isNotificationOnly` 字段。 这会产生以下变化：
 
-* 用户无法向仅限通知的机器人发送消息。
-* 用户无法 @提及机器人。
+* 用户无法向仅通知机器人发送消息。
+* 用户无法@mention机器人。
 
 > [!NOTE]
 > 在以下两种情况下，仅限机器人的应用会显示在个人应用托盘中：`isNotificationOnly: true` 或 `isNotificationOnly: false`。

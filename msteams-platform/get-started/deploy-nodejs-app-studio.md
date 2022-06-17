@@ -6,17 +6,17 @@ ms.custom: scenarios:getting-started; languages:ASP,Node.js
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 7f423cfd33fdca9d40f2adfe32b59ace26d39adc
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: 15b5837fb8155d8b34b2c337a550ecbaaae9d86a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737224"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142519"
 ---
 # <a name="update-nodejs-app-package-in-app-studio"></a>更新 App Studio 中的Node.js应用包
 
 > [!TIP]
-> **试用开发人员门户**：App Studio 已演变。 使用新的[开发人员门户](https://dev.teams.microsoft.com/)配置、分发和管理Teams应用。
+> **试用开发人员门户**：App Studio 已演变。 使用新的[开发人员门户](https://dev.teams.microsoft.com/)配置、分发和管理 Teams 应用。
 
 App Studio 是一个Teams应用，你可以从Teams存储区安装。 它简化了应用的创建和注册。
 
@@ -126,9 +126,9 @@ App Studio 是一个Teams应用，你可以从Teams存储区安装。 它简化�
 1. 将 **机器人终结点地址** 更新为 `https://yourteamsapp.ngrok.io/api/messages`托管应用时使用的 URL，并替换 `yourteamsapp.ngrok.io` 为该 URL。
 1. 现在保存文本文件，因为必须将文件中的信息添加到托管应用，以便与机器人进行安全通信。
 
-#### <a name="messaging-extensions"></a>消息传递扩展
+#### <a name="messaging-extensions"></a>消息扩展
 
-消息传递扩展允许用户从服务中请求信息并发布该信息。 信息以卡的形式发布到频道对话中。 消息传递扩展显示在撰写框的底部。
+消息传递扩展允许用户从服务中请求信息，并帖子该信息。 信息以卡的形式发布到频道对话中。 消息传递扩展显示在撰写框的底部。
 
 完成以下步骤以设置消息传递扩展：
 
@@ -217,13 +217,13 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 其中：
 
 * 机器人的授权凭据如下所示：
-  * MICROSOFT_APP_ID为 ID
-  * MICROSOFT_APP_PASSWORD是密码
+  * MICROSOFT_APP_ID为 ID。
+  * MICROSOFT_APP_PASSWORD是密码。
 * NODE_DEBUG Visual Studio Code调试控制台中显示机器人中发生的情况
 * NODE_CONFIG_DIR指向存储库根目录 (默认情况下，当应用在本地运行时，它会在文件夹) 中 `src` 查找根目录。
 
 > [!Note]
-> 如果在本教程的前面部分未停止 npm，则需要运行`npm stop`，以便Visual Studio Code正确地提取启动配置变量。
+> 如果在本教程的前面部分未停止npm，则需要运行`npm stop`才能Visual Studio Code正确地提取启动配置变量。
 
 <a name="ConfigureTheAppTab"></a>
 

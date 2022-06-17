@@ -1,14 +1,14 @@
 ---
 title: 自适应卡的通用操作概述
-description: 自适应卡片通用操作的快速概述，例如特定于用户的视图、顺序工作流支持，以及桌面和移动环境的更多功能
+description: 了解适用于自适应卡片的通用操作，例如特定于用户的视图、顺序工作流支持，以及桌面和移动环境的更多功能
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756469"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142085"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
@@ -109,7 +109,7 @@ ms.locfileid: "65756469"
 
 自适应卡片是内容（如文本和图形）以及用户可以执行的操作的组合。 有关详细信息，请参阅 [自适应卡片](http://adaptivecards.io/)。 新的自适应卡通用操作可跨平台和应用程序常见处理自适应卡片操作。 有关详细信息，请参阅 [通用操作模型](/adaptive-cards/authoring-cards/universal-action-model)。
 
-可以使用 [快速入门指南](Work-with-universal-actions-for-adaptive-cards.md) 更新方案并利用通用操作来开始操作。
+可以使用[快速入门指南]. (Work-with-universal-actions-for-adaptive-cards.md) 更新方案并利用通用操作入门。
 
 ## <a name="next-step"></a>后续步骤
 
@@ -121,4 +121,4 @@ ms.locfileid: "65756469"
 * [什么是机器人](~/bots/what-are-bots.md)
 * [自适应卡概述](~/task-modules-and-cards/what-are-cards.md)
 * [自适应卡片 @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [自适应卡片 @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [自适应卡 @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)。

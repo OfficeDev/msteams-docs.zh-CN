@@ -1,15 +1,14 @@
 ---
 title: 配置 OAuth 2.0 标识提供程序
-description: '介绍如何配置标识提供程序，重点介绍 Microsoft Azure Active Directory (Azure AD) '
+description: '在本模块中，了解如何配置标识提供者，重点是Microsoft Azure Active Directory (Azure AD) '
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 身份验证 Azure AD oauth 标识提供程序
-ms.openlocfilehash: 6fb17041e9169b4d5e74295cbb62ea97c8befd0f
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 2d344fb5ffcbde35ad9e85eed9ea662d2a0ca9f6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887567"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143443"
 ---
 # <a name="configure-identity-providers"></a>配置标识提供程序
 

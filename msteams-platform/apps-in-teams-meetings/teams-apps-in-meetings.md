@@ -1,17 +1,16 @@
 ---
 title: Teams 会议应用
 author: surbhigupta
-description: 基于参与者和用户角色的 Teams 会议中的应用概述
+description: 本文介绍应用在基于参与者、用户角色和应用扩展性的Microsoft Teams会议中的工作原理。
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: teams 应用会议用户参与者角色 API
-ms.openlocfilehash: 3543cb8e1beff69484a6348f511a033ad09e1f6d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 332d0e382cbadbe41900e8cc65eb0266e94954dc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668044"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142505"
 ---
 # <a name="apps-for-teams-meetings"></a>Teams 会议应用
 
@@ -47,4 +46,4 @@ ms.locfileid: "65668044"
 * [自定义全体模式场景](~/apps-in-teams-meetings/teams-together-mode.md)
 * [为 Teams 会议启用和配置应用](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [会议生命周期](meeting-app-extensibility.md#meeting-lifecycle)
-* [与 Live Share SDK 的增强协作](teams-live-share-overview.md)
+* [通过 Live Share SDK 增强协作](teams-live-share-overview.md)

@@ -1,25 +1,24 @@
 ---
 title: 对应用用户进行身份验证
-description: 介绍 Teams 中的身份验证以及如何在应用中使用它
+description: 在本模块中，了解Teams中的身份验证，以及如何在应用、基于 Web 的身份验证流和对话机器人的 OAuthPrompt 流中使用它
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Teams 身份验证 OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: db1a16959755668ec9aa298ed355ef657503ca03
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 0ea8813d8428036521cc4488668a30d82470a8d0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887732"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143464"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>在 Microsoft Teams 中对用户进行身份验证
 
-身份验证就是验证应用用户，并保护应用和应用用户免受无理访问。 可以使用适用于应用的身份验证方法来验证想要使用 Teams 应用的应用用户。
+身份验证就是验证应用用户，并保护应用和应用用户免受无理访问。 可以使用适用于应用的身份验证方法来验证想要使用Teams应用的应用用户。
 
 选择通过以下两种方式之一为应用添加身份验证：
 
-- **在 Teams 应用中启用单一登录 (SSO)**：Teams 中的 SSO 是一种身份验证方法，它使用应用用户的 Teams 标识为他们提供对应用的访问权限。 登录 Teams 的用户无需在 Teams 环境中再次登录到应用。 仅需要应用用户同意，Teams 应用将从 Azure Active Directory (AD) 检索访问详细信息。 应用用户同意后，他们甚至可以从其他设备访问应用，而无需再次进行验证。
+- **在Teams应用中启用单一登录 (SSO)**：Teams中的 SSO 是一种身份验证方法，它使用应用用户的Teams标识为他们提供对应用的访问权限。 登录到Teams的用户无需再次登录到Teams环境中的应用。 仅需要应用用户的同意，Teams应用将从Azure Active Directory (AD) 检索访问详细信息。 应用用户同意后，他们甚至可以从其他设备访问应用，而无需再次进行验证。
 
-- **使用第三方 OAuth 提供程序启用身份验证**：可以使用第三方 OAuth 标识提供者 (IdP) 对应用用户进行身份验证。 应用用户已注册到标识提供者，该提供程序与你的应用具有信任关系。 当用户尝试登录时，标识提供者会验证应用用户并为其提供对应用的访问权限。 Azure AD 是此类第三方 OAuth 提供程序之一。 可以使用其他提供商，例如 Google、Facebook、GitHub 或任何其他提供商。
+- **使用第三方 OAuth 提供程序启用身份验证**：可以使用第三方 OAuth 标识提供者 (IdP) 对应用用户进行身份验证。 应用用户已注册到标识提供者，该提供程序与你的应用具有信任关系。 当用户尝试登录时，标识提供者会验证应用用户并为其提供对应用的访问权限。 Azure AD 是此类第三方 OAuth 提供程序之一。 可以使用其他提供商，如 Google、Facebook、GitHub 或任何其他提供商。
 
 ## <a name="select-authentication-method"></a>选择身份验证方法
 

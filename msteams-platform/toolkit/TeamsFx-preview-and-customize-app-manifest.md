@@ -1,17 +1,17 @@
 ---
 title: Teams Toolkit中的Teams应用清单
 author: zyxiaoyuer
-description: Teams应用清单
+description: 在本模块中，了解如何在不同的环境中编辑、预览和自定义Teams应用清单。
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123652"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143870"
 ---
 # <a name="edit-teams-app-manifest"></a>编辑Teams应用清单
 
@@ -33,7 +33,7 @@ ms.locfileid: "66123652"
 * [本地环境中的预览清单文件](#preview-manifest-file-in-local-environment)
 * [远程环境中的预览清单文件](#preview-manifest-file-in-remote-environment)
 
-### <a name="preview-manifest-file-in-local-environment"></a>本地环境中的预览清单文件
+## <a name="preview-manifest-file-in-local-environment"></a>本地环境中的预览清单文件
 
 若要在本地环境中预览清单文件，可以按 **F5** 运行本地调试。 它会为你生成默认的本地设置，然后在 `build/appPackage` 文件夹下生成应用包和预览清单。
 
@@ -47,7 +47,7 @@ ms.locfileid: "66123652"
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="预览":::
 
-### <a name="preview-manifest-file-in-remote-environment"></a>远程环境中的预览清单文件
+## <a name="preview-manifest-file-in-remote-environment"></a>远程环境中的预览清单文件
 
 **在远程环境中预览清单文件**
 
@@ -112,7 +112,7 @@ ms.locfileid: "66123652"
 > [!NOTE]
 > 开发人员门户的更改更新。 开发人员门户中的任何手动更新都被覆盖。
 
-如果清单文件由于配置文件更改或模板更改而过时，请选择以下任一操作：
+如果清单文件因配置文件更改或模板更改而过时，请选择以下任一操作：
 
 * **仅预览**：根据当前配置覆盖本地清单文件。
 * **预览和更新**：本地清单文件根据当前配置覆盖，并已更新到Teams平台。

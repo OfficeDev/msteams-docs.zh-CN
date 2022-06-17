@@ -1,17 +1,16 @@
 ---
 title: 为机器人创建命令菜单
 author: surbhigupta
-description: 通过代码示例了解如何为 Microsoft Teams 机器人创建命令菜单。
+description: 在本模块中，了解如何使用代码示例为Microsoft Teams机器人创建和处理命令菜单。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: 命令菜单 撰写消息对话 @提及
-ms.openlocfilehash: 5b96a9b995806678596cc8cedd45f4bb6e80827c
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 7d8c702dd60c3e98b7f00543ce7ce8de9a76ae41
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048988"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144402"
 ---
 # <a name="bot-command-menus"></a>机器人命令菜单
 
@@ -42,11 +41,11 @@ ms.locfileid: "66048988"
 1. 打开 Teams，然后从左窗格中选择“**应用**”。 在“**应用**”页中，搜索 **App Studio**，然后选择“**打开**”。
 
    > [!WARNING]
-   > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
+   > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 6 月 30 日弃用。
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
-2. 在 **App Studio** 中，选择“**清单编辑器**”选项卡。如果没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [App Studio 中的更新 C# 应用包](../../get-started/deploy-csharp-app-studio.md)
+2. 在 **App Studio** 中，选择“**清单编辑器**”选项卡。如果没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [App Studio 中的更新 C# 应用包](../../get-started/deploy-csharp-app-studio.md)。
 
 3. 在 **清单编辑器** 的左窗格和“**功能**”部分中，选择“**机器人**”。
 
@@ -61,7 +60,6 @@ ms.locfileid: "66048988"
 7. 选择各“**范围**”复选框以选择此命令菜单必须显示的位置，然后选择“**保存**”。
 
    :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="“App Studio 新建命令”菜单按钮 "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
-
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑 Manifest.json 为机器人创建命令菜单
 

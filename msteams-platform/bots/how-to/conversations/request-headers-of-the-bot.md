@@ -1,14 +1,14 @@
 ---
 title: 将租户 ID 和对话 ID 发送到机器人的请求标头
-description: 介绍如何将租户 ID 和对话 ID 发送到机器人的请求标头。
+description: 在本模块中，了解如何在Teams中将租户 ID 和会话 ID 发送到机器人的请求标头。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 8aca2c11dbdfc84abe8c4d0ec40e2748d04f6301
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: dab795a65cf1c6d62bd899c9fa5a5948c44fcdfb
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757288"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144122"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>将租户 ID 和对话 ID 发送到机器人的请求标头
 

@@ -1,16 +1,15 @@
 ---
 title: 将机器人添加到 Microsoft Teams 应用
-description: 介绍如何开始在 Microsoft Teams 中开发机器人
+description: 在本模块中，了解如何开始在Microsoft Teams中开发机器人，以及在Teams中添加机器人的所有要求
 ms.topic: conceptual
-keywords: Teams 机器人开发
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: f592ae06efc2c416e70530fe2c46cbfbfc03140b
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 6c57371e0df5739d800fc07e46a014aeb3836bc8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755851"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142358"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>将机器人添加到 Microsoft Teams 应用
 
@@ -27,11 +26,11 @@ ms.locfileid: "65755851"
 
 机器人与你在对话中交互的任何其他团队成员一样出现，只不过它具有六边形头像图标，并且始终处于联机状态。
 
-取决于机器人所处的对话种类，它们的行为可能不同。 Teams 中的机器人支持在[应用清单](~/resources/schema/manifest-schema.md)中称为作用域的几种对话。
+机器人的行为不同，具体取决于它所涉及的聊天类型。 Teams 中的机器人支持在[应用清单](~/resources/schema/manifest-schema.md)中称为作用域的几种对话。
 
 * `teams` 也称为频道对话。
 * `personal` 机器人与单个用户之间的对话。
-* `groupChat` 机器人与 2 个或更多用户之间的对话。
+* `groupChat` 机器人与两个或更多用户之间的对话。
 
 有关详细信息，请参阅 [与 Microsoft Teams 机器人进行对话。](~/resources/bot-v3/bot-conversations/bots-conversations.md)
 
@@ -60,7 +59,7 @@ SDK 扩展安装依赖项，包括 Bot Builder SDK。
 
 ## <a name="build-a-great-teams-bot"></a>生成优秀的 Teams 机器人
 
-以下主题将指导你完成为 Teams 创建出色机器人的过程：
+以下文章将指导你完成创建适用于Teams的出色机器人的过程：
 
 * [创建机器人](~/resources/bot-v3/bots-create.md)：利用 Bot Framework 团队提供的出色工具、文档和社区。
 * [与机器人对话](~/resources/bot-v3/bot-conversations/bots-conversations.md)：添加基本聊天流并利用特定于频道的功能。 如果在 .NET 或 Node.js 中进行开发，请使用适用于 Bot Builder SDK 的扩展来简化工作。

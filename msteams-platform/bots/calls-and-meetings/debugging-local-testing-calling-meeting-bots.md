@@ -1,16 +1,15 @@
 ---
 title: 在本地调试呼叫和会议机器人
-description: 了解如何使用 ngrok 在本地电脑上开发呼叫和联机会议机器人。
+description: 在本模块中，了解如何使用 ngrok 在本地电脑上开发呼叫和联机会议机器人。
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: 本地开发 ngrok 隧道
 ms.date: 11/18/2018
-ms.openlocfilehash: 7f85243e0a5d94711cd303ff542decd3bbc7847a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 518d0b846737eca7f4c182dba032b2c85366cee6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757113"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143814"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>在本地电脑上开发呼叫和联机会议机器人
 

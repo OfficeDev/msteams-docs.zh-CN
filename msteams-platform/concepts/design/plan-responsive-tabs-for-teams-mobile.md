@@ -1,16 +1,16 @@
 ---
 title: 规划 Teams 移动版
 author: surbhigupta
-description: 规划在 Teams 移动版上创建应用的指南
+description: 通过此学习模块，你将了解如何在Teams移动设备上规划创建应用，并了解生成应用的不同阶段。
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 16eada349d2a6adc5b45e89f075107838594eeeb
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111722"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143184"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>规划 Teams 移动版的响应式选项卡
 
@@ -61,9 +61,9 @@ ms.locfileid: "65111722"
 
 可以显示以下信息：
 
-* 仪表板和摘要
-* 数据视觉对象、地图和信息图
-* 图表、图形和表
+* 仪表板和摘要。
+* 数据视觉对象、地图和信息图。
+* 图表、图形和表。
 
 ![仪表板和数据可视化应用使用情况](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
@@ -71,9 +71,9 @@ ms.locfileid: "65111722"
 
 在第二阶段，用户可以使用桌面体验中的现有图表和视觉对象。 可以引入以下操作：
 
-* 搜索内容
-* 筛选数据
-* 创建书签
+* 搜索内容。
+* 筛选数据。
+* 创建书签。
 
 ![仪表板和数据可视化应用快速操作](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
@@ -83,9 +83,9 @@ ms.locfileid: "65111722"
 
 可以向用户提供以下访问权限：
 
-* 修改标题和说明
-* 插入数据项以创建可视化效果
-* 在频道或群组聊天中共享可视化效果
+* 修改标题和说明。
+* 插入数据项以创建可视化效果。
+* 在频道或群聊中共享可视化效果。
 
 ![仪表板和数据可视化应用启用](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
 
@@ -111,12 +111,12 @@ ms.locfileid: "65111722"
 
 在第二个阶段，可以向用户提供以下应用访问权限：
 
-* 创建具有必填字段的任务或项目以减少用户的认知负担
-* 更改版块类型或视图
-* 展开视图以查看任务
-* 使用任务模块查看详细视图
-* 将任务移动到不同的类别
-* 通过电子邮件和活动源在聊天和频道中共享相关任务
+* 使用必需字段创建任务或项，以减少用户的认知负载。
+* 更改板类型或视图。
+* 通过展开视图来查看任务。
+* 使用任务模块查看详细视图。
+* 将任务移到不同的类别中。
+* 通过电子邮件和活动源在聊天和频道中共享相关任务。
 
 ![任务版块应用快速操作](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
@@ -124,9 +124,9 @@ ms.locfileid: "65111722"
 
 在第三阶段，可以让用户体验以下活动：
 
-* 添加新项目和版块
-* 添加和修改不同的类别，例如“**建议**”、“**活动**”和“**已关闭**”
-* 为任务配置评论、附件和其他复杂的功能
+* 添加新项目和板。
+* 添加和修改不同的类别，例如 **“建议**”、“ **活动”** 和“ **已关闭**”。
+* 为注释、附件和其他复杂功能配置任务。
 
 ![任务板块应用启用](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
@@ -145,9 +145,9 @@ ms.locfileid: "65111722"
 
 在第一阶段，可以考虑使用桌面体验来显示应用中的内容和资产。  可以显示以下功能：
 
-* 评论或反馈
-* 放大或缩小
-* 挂起文档的当前阶段或进度
+* 批注或反馈。
+* 放大或缩小。
+* 挂起文档的当前阶段或进度。
 
 ![合著和白板应用使用](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
@@ -155,9 +155,9 @@ ms.locfileid: "65111722"
 
 在第二个阶段，可以引入以下操作：
 
-* 创建用于协作的新版块或用于签名的新文档
-* 在内部以及与来宾共享版块
-* 配置管理员权限
+* 创建用于协作的新板或用于签名的新文档。
+* 在内部以及与来宾共享板。
+* 配置管理员权限。
 
 > [!TIP]
 > 可以公开操作，这些操作可以在小屏幕上轻松显示。
@@ -168,10 +168,10 @@ ms.locfileid: "65111722"
 
 在第三阶段，为用户提供完整的体验。 可以让用户体验以下活动：
 
-* 添加文本、形状和快速笔记
-* 浏览内容
-* 添加层和筛选器
-* 删除、撤消和重做操作
+* 添加文本、形状和快速笔记。
+* 在内容周围导航。
+* 添加层和筛选器。
+* 删除、撤消和重做操作。
 * 使用 JS SDK API 访问相机和麦克风。 有关设备功能的详细信息，请参阅[设备功能概述](../device-capabilities/device-capabilities-overview.md)。
 
 ![合著和白板应用启用](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)

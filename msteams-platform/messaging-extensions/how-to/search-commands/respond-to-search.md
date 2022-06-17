@@ -1,16 +1,16 @@
 ---
 title: 响应搜索命令
 author: surbhigupta
-description: 了解如何使用代码示例和示例从Microsoft Teams应用中的消息扩展响应搜索命令
+description: 在本模块中，了解如何使用代码示例和示例从Microsoft Teams应用中的消息扩展响应搜索命令
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e7dbfb6eed724fb56e7ae1e03a2132d7450947a
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 99720d4f914cd507f6fff2bce2386eb1a67622af
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032800"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143702"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -94,7 +94,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ### <a name="response-card-types-and-previews"></a>响应卡类型和预览
 
-Teams 支持以下卡片类型：
+Teams支持以下卡类型：
 
 * [缩略图卡](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [主图卡](~/task-modules-and-cards/cards/cards-reference.md#hero-card)

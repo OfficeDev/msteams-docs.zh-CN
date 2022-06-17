@@ -1,17 +1,16 @@
 ---
 title: 创建配置页
 author: surbhigupta
-description: 了解如何创建配置页来配置频道或群组聊天的设置，例如获取上下文数据、插入占位符和使用代码示例进行身份验证。
-keywords: Teams, 选项卡, 群组, 频道, 可配置
+description: 在本模块中，了解如何创建配置页来配置频道或群聊以进行设置，例如获取上下文数据等
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 2c439b38c061ad5f61538bb841f8ce7b9267ec0a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048974"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143954"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 

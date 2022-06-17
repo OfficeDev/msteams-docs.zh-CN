@@ -1,17 +1,17 @@
 ---
 title: 创建频道或组选项卡
 author: laujan
-description: 使用适用于 Microsoft Teams 的 Yeoman Generator 创建频道和组选项卡的快速入门指南，包括查看包含代码示例的源代码。
+description: 在本模块中，了解如何使用适用于Microsoft Teams的 Yeoman 生成器创建通道和组选项卡，包括使用代码示例查看源代码。
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cd50547e1b6d504d20d57ac1c23e741c6e043cf0
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672948"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142673"
 ---
 # <a name="channel-or-group-tab"></a>频道或组选项卡
 
@@ -621,7 +621,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 转到“[**开发人员门户**](https://dev.teams.microsoft.com/home)”。
 
-1. 打开“**应用**”并选择“**导入应用**”。
+1. 打开“**应用**”并选择“**导入引用**”。
 
 1. 应用包的名称是 **tab.zip**。 它可在以下路径中使用：
 

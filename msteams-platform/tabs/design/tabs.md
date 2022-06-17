@@ -1,17 +1,16 @@
 ---
 title: 桌面、Web 和移动设备的设计选项卡
-description: 了解如何为桌面、网络和移动设备设计 Teams 选项卡，并获得 Microsoft Teams UI Kit。 了解选项卡功能和外观、生成用户身份验证、选项卡通知以及选项卡中的深层链接。
+description: 了解如何为桌面、Web 和移动设备设计选项卡，并获得 Microsoft Teams UI Kit。 了解选项卡、生成用户身份验证、选项卡通知和深层链接。
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-keywords: UI 工具包管理选项卡设置单一登录 sso 深度链接基于角色的视图线程讨论
-ms.openlocfilehash: c2c081a1cb0ca96cce7cc55a9e39facc9cd691db
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948584"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144332"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>为 Microsoft Teams 设计选项卡
 

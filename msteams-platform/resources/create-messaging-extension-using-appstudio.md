@@ -5,12 +5,12 @@ description: 了解如何使用 App Studio 创建Microsoft Teams消息传递扩�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032779"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142337"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>使用 App Studio 创建消息传递
 
@@ -19,11 +19,11 @@ ms.locfileid: "66032779"
 
 在高级别上，需要完成以下步骤来创建消息传递扩展。
 
-1. 准备开发环境
-2. 在开发时创建和部署 Web 服务 (使用 ngrok 等隧道服务在本地运行它) 
-3. 使用 Bot Framework 注册你的 Web 服务
-4. 创建应用包
-5. 将你的程序包上传到 Microsoft Teams
+1. 准备开发环境。
+2. 在开发时创建和部署 Web 服务 (使用 ngrok 等隧道服务在本地运行它) 。
+3. 将 Web 服务注册到 Bot Framework。
+4. 创建应用包。
+5. 将程序包上传到 Microsoft Teams。
 
 可以按任何顺序创建 Web 服务、创建应用包以及向 Bot Framework 注册 Web 服务。 因为这三个部分是如此交织在一起，无论你按哪个顺序执行这些操作，都需要返回以更新其他部分。 注册需要已部署 Web 服务的消息传送终结点，并且 Web 服务需要从注册中创建的 ID 和密码。 应用清单还需要该 ID 才能将Teams连接到 Web 服务。
 

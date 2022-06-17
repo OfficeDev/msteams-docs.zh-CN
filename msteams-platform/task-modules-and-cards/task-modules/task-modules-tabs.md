@@ -1,15 +1,14 @@
 ---
 title: 在 Microsoft Teams 选项卡中使用任务模块
-description: 介绍如何从 Teams 选项卡调用任务模块，并使用 Microsoft Teams 客户端 SDK 提交其结果。 它包括代码示例。
+description: 了解如何从Teams选项卡调用任务模块，并使用Microsoft Teams客户端 SDK 提交其结果。 它包括代码示例。
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: 任务模块 Teams 选项卡客户端 sdk
-ms.openlocfilehash: 61955a9afd070a17b17210239054819f02d3b484
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a55ea89e67bf70254d52791d1ed5f0a1c573e89e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756694"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142064"
 ---
 # <a name="use-task-modules-in-tabs"></a>在选项卡中使用任务模块
 

@@ -1,70 +1,70 @@
 ---
-title: 将 Azure Bot 服务用于 Teams
-description: 介绍 Azure Bot Service OAuthCard 及其用于身份验证方式
+title: 在 Teams 中使用 Azure 机器人服务进行身份验证
+description: 介绍 Azure 机器人服务 OAuthCard 及其用于身份验证的用法
 ms.topic: conceptual
 localization_priority: Normal
-keywords: teams 身份验证 OAuthCard OAuth 卡 Azure Bot 服务
-ms.openlocfilehash: 3d0df4f04625c5be3468d12319b54096ae06de90
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: teams 身份验证 OAuthCard OAuth 卡 Azure 机器人服务
+ms.openlocfilehash: 7731e4d1148e50c748d9c5e1b55371628a78dea7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020679"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143163"
 ---
-# <a name="using-azure-bot-service-for-authentication-in-teams"></a>将 Azure Bot 服务用于 Teams
+# <a name="using-azure-bot-service-for-authentication-in-teams"></a>在 Teams 中使用 Azure 机器人服务进行身份验证
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-如果没有 Azure Bot Service 的 OAuthCard，在自动程序中实现身份验证会很复杂。 这是一个全堆栈挑战，涉及构建 Web 体验、与外部 OAuth 提供程序集成、令牌管理，以及处理正确的服务器到服务器 API 调用以安全完成身份验证流。 这可能会导致需要输入"神奇数字"的奇怪体验。
+如果没有 Azure 机器人服务的 OAuthCard，在机器人中实现身份验证会很复杂。 这是一个完整的堆栈挑战，涉及构建 Web 体验、与外部 OAuth 提供程序集成、令牌管理以及处理正确的服务器到服务器 API 调用，以安全地完成身份验证流。 这可能会导致需要输入“神奇数字”的笨重体验。
 
-借助 Azure Bot Service 的 OAuthCard，Teams自动程序可以更轻松地登录用户和访问外部数据提供程序。 无论你是否已实现身份验证并且想要切换到更简单的方法，或者如果你希望首次向自动程序服务添加身份验证，OAuthCard 都可以简化操作。
+使用 Azure 机器人服务的 OAuthCard，Teams机器人可以更轻松地登录用户并访问外部数据提供程序。 无论你是否已实现身份验证，并且想要切换到更简单的东西，或者如果希望首次将身份验证添加到机器人服务，OAuthCard 可以简化此操作。
 
-身份验证[中的](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)其他主题介绍不使用 OAuthCard 的身份验证，因此如果您想要更深入地了解 Teams 中的身份验证，或者有一个无法使用 OAuthCard 的情况，您仍可以参考这些主题。
+[身份验证](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)中的其他主题描述不使用 OAuthCard 的身份验证，因此，如果想要更深入地了解Teams的身份验证，或者遇到无法使用 OAuthCard 的情况，仍可参考这些主题。
 
 ## <a name="support-for-the-oauthcard"></a>对 OAuthCard 的支持
 
-目前，对 OAuthCard 的使用位置存在一些限制。 其中包括：
+目前，可以使用 OAuthCard 的位置存在一些限制。 具体包括：
 
-* 该卡不能与来宾 [访问一起使用](/MicrosoftTeams/guest-access)
-* 它不能与免费Microsoft Teams[一起](https://products.office.com/microsoft-teams/free)
-* 它只能用于自动程序身份验证
-* 它仅适用于在 Azure Bot 服务 [中注册的机器人](https://azure.microsoft.com/services/bot-service/)
+* 该卡不适用于 [来宾访问](/MicrosoftTeams/guest-access)。
+* 它不适用于[Microsoft Teams 免费版](https://products.office.com/microsoft-teams/free)。
+* 它只能用于机器人身份验证。
+* 它仅适用于在 [Azure 机器人服务](https://azure.microsoft.com/services/bot-service/)中注册的机器人。
 
-## <a name="how-does-the-azure-bot-service-help-me-do-authentication"></a>Azure 自动程序服务如何协助我进行身份验证？
+## <a name="how-does-the-azure-bot-service-help-me-do-authentication"></a>Azure 机器人服务如何帮助我进行身份验证？
 
-有关使用 OAuthCard 的完整文档，请参阅主题：通过 Azure Bot 服务向自动 [程序添加身份验证](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true)。 请注意，本主题位于 Azure Bot Framework 文档集，并非特定于 Teams。
+本主题提供了使用 OAuthCard 的完整文档：[通过 Azure 机器人服务 向机器人添加身份验证](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true)。 请注意，本主题在 Azure Bot Framework 文档集中，不特定于Teams。
 
-以下各节将告知如何在 Teams 中使用 OAuthCard。
+以下部分介绍如何在 Teams 中使用 OAuthCard。
 
-## <a name="main-benefits-for-teams-developers"></a>开发人员的主要Teams
+## <a name="main-benefits-for-teams-developers"></a>Teams开发人员的主要优势
 
 OAuthCard 通过以下方式帮助进行身份验证：
 
-* 提供基于 Web 的开箱即用身份验证流：无需再编写和托管网页来定向外部登录体验或提供重定向。
-* 对于最终用户是无缝的：在完全登录体验中Teams。
-* 包括简单的令牌管理：无需再实现令牌存储系统，而是自动程序服务负责令牌缓存并提供用于提取这些令牌的安全机制。
-* 受完整 SDK 支持：易于集成和使用自动程序服务。
-* 具有对许多热门 OAuth 提供程序（如 Azure AD/MSA、Facebook 和 Google）的现成支持。
+* 提供基于 Web 的现用身份验证流：无需再编写和托管网页即可直接访问外部登录体验或提供重定向。
+* 对于最终用户而言是无缝的：在Teams内完成完整登录体验。
+* 包括简单的令牌管理：不再需要实现令牌存储系统 - 相反，机器人服务负责令牌缓存，并提供用于提取这些令牌的安全机制。
+* 受完整 SDK 支持：易于从机器人服务集成和使用。
+* 对许多受欢迎的 OAuth 提供商（如 Azure AD/MSA、Facebook 和 Google）提供现成的支持。
 
-## <a name="when-should-i-implement-my-own-solution"></a>我应在何时实施自己的解决方案？
+## <a name="when-should-i-implement-my-own-solution"></a>何时应实现自己的解决方案？
 
-由于访问令牌是敏感信息，因此你可能不希望将它们存储在外部服务中。 在这种情况下，你可以选择仍在 Teams 中实现自己的令牌管理系统和登录体验，如 Teams[身份验证](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)主题的其余部分所述。
+由于访问令牌是敏感信息，因此你可能不希望它们存储在外部服务中。 在这种情况下，可以选择在Teams中仍实现自己的令牌管理系统和登录体验，如其他Teams[身份验证](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)主题中所述。
 
-## <a name="getting-started-with-oauthcard-in-teams"></a>在 Teams 中开始使用 OAuthCard
+## <a name="getting-started-with-oauthcard-in-teams"></a>Teams中的 OAuthCard 入门
 
 > [!NOTE]
-> 本指南使用 Bot Framework v3 SDK。 你可以在此处找到 v4 [实现](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)。 你仍然需要创建清单，并包括 token.botframework.com，否则"登录"按钮 `validDomains` 将不能打开身份验证窗口。 使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md) 生成清单。
+> 本指南使用 Bot Framework v3 SDK。 可 [在此](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)处找到 v4 实现。 仍需创建清单并在部分中 `validDomains` 包含 token.botframework.com，否则“登录”按钮将不会打开身份验证窗口。 使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md) 生成清单。
 
-首先需要配置 Azure 自动程序服务以设置外部身份验证提供程序。 有关 [详细步骤，请参阅配置](~/concepts/authentication/configure-identity-provider.md) 标识提供程序。
+首先需要将 Azure 机器人服务配置为设置外部身份验证提供程序。 有关详细步骤，请阅读 [“配置标识提供者](~/concepts/authentication/configure-identity-provider.md) ”。
 
-若要启用使用 Azure Bot 服务的身份验证，你需要对代码进行以下添加：
+若要使用 Azure 机器人服务启用身份验证，需要在代码中添加以下内容：
 
-1. 在 token.botframework.com 清单的 部分中包括 `validDomains` Teams，因为系统将会嵌入自动程序服务的登录页。
-2. 每当机器人需要访问经过身份验证的资源时，从自动程序服务获取令牌。 如果没有可用的令牌，则向用户发送包含 OAuthCard 的消息，请求他们登录到外部服务。
-3. 处理登录完成活动。 这将确保身份验证请求和令牌与当前与自动程序交互的用户相关联。
-4. 每当机器人需要执行已验证的操作（如调用外部 REST API）时检索令牌。
+1. 在应用清单部分中`validDomains`包含 token.botframework.com，因为Teams将嵌入机器人服务的登录页。
+2. 每当机器人需要访问经过身份验证的资源时，从机器人服务中提取令牌。 如果没有可用令牌，请向请求用户登录到外部服务的用户发送带有 OAuthCard 的消息。
+3. 处理登录完成活动。 这可确保身份验证请求和令牌与当前与机器人交互的用户相关联。
+4. 每当机器人需要执行经过身份验证的操作（例如调用外部 REST API）时，检索令牌。
 
-在对话框代码中，你需要将此代码段添加到 (C#) ，以检查现有访问令牌：
+在对话框代码中，需要添加此代码片段 (C#) ，用于检查现有访问令牌：
 
 ```CSharp
 // First ask Bot Service if it already has a token for this user
@@ -80,7 +80,7 @@ else
 }
 ```
 
-如果访问令牌不存在，代码随后会向用户发送包含 OAuthCard 的邮件：
+如果访问令牌不存在，则代码会向用户发送带有 OAuthCard 的消息：
 
 ```CSharp
 private async Task SendOAuthCardAsync(IDialogContext context, Activity activity)
@@ -94,7 +94,7 @@ private async Task SendOAuthCardAsync(IDialogContext context, Activity activity)
 }
 ```
 
-若要处理登录完成活动，需要处理此 Invoke：
+若要处理登录完成活动，需要处理此调用：
 
 ```CSharp
 if (activity.Name == "signin/verifyState")
@@ -108,7 +108,7 @@ if (activity.Name == "signin/verifyState")
 }
 ```
 
-在对话框代码中，然后可以从 Bot 身份验证服务检索令牌：
+然后，在对话框代码中，可以从机器人身份验证服务检索令牌：
 
 ```CSharp
 if (text.Contains("loginComplete"))
@@ -133,11 +133,11 @@ if (text.Contains("loginComplete"))
 }
 ```
 
-## <a name="using-oauthcard-with-messaging-extensions"></a>将 OAuthCard 与邮件扩展一同使用
+## <a name="using-oauthcard-with-messaging-extensions"></a>将 OAuthCard 与消息传递扩展配合使用
 
-您还可以使用 Azure Bot 服务将第三方提供程序连接到邮件扩展。 该流与自动程序相同，除了不返回 OAuthCard，服务将返回登录提示。
+还可以使用 Azure 机器人服务将第三方提供程序连接到消息传递扩展。 流与机器人相同，但服务将返回登录提示，而不是返回 OAuthCard。
 
-下面的代码 (C#) 演示如何创建登录响应：
+以下代码片段 (C#) 演示如何创建登录响应：
 
 ```CSharp
 var token = await client.OAuthApi.GetUserTokenAsync(activity.From.Id, ConnectionName).ConfigureAwait(false);
@@ -163,9 +163,9 @@ if (token == null)
 }
 ```
 
-请注意，在以上示例中，您需要直接对 属性 `GetSignInLinkAsync` `client.OAuthApi` 进行调用。
+请注意，在上面的示例中，需要直接对`client.OAuthApi`属性进行调用`GetSignInLinkAsync`。
 
-当用户成功完成登录序列时，你的服务将收到另一个 Invoke 请求，其中包含原始用户查询以及包含"神奇代码"的状态参数字符串。 现在，可以使用此字符串以及用户 ID 和连接名称获取令牌。
+当用户成功完成登录序列时，服务将收到另一个包含原始用户查询的 Invoke 请求，以及包含“magic code”的状态参数字符串。 现在可以使用此字符串以及用户 ID 和连接名称提取令牌。
 
 ```CSharp
 var query = activity.GetComposeExtensionQueryData();

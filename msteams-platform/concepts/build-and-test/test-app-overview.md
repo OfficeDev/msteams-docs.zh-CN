@@ -1,15 +1,14 @@
 ---
 title: 测试应用概述
-description: 介绍在 Microsoft 365 中测试和调试 Teams 自定义应用的过程
+description: 在本模块中，了解在Microsoft 365中测试和调试Teams自定义应用并将测试数据添加到Microsoft 365租户的过程
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: 配置 Microsoft 365 租户 Teams 上传测试应用
-ms.openlocfilehash: 98c00ece54e1654570556bac122e6760b283b73f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111526"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144381"
 ---
 # <a name="test-your-app"></a>测试应用
 

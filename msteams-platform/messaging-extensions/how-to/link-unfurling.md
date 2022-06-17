@@ -1,16 +1,16 @@
 ---
 title: 链接展开
 author: surbhigupta
-description: 了解如何使用应用清单在 Microsoft Teams 应用中添加带消息传递扩展的链接展开，或使用代码示例和示例手动添加。
+description: 在本模块中，了解如何使用应用清单或使用代码示例和示例在Teams应用中添加与消息传递扩展展开的链接。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032971"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142813"
 ---
 # <a name="link-unfurling"></a>链接展开
 

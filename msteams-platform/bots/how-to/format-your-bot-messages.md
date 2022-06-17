@@ -1,16 +1,16 @@
 ---
 title: 设置你的智能机器人邮件格式
 author: surbhigupta
-description: 向机器人邮件添加丰富的格式，例如删除线、有序和无序列表、超链接、图像链接等。
+description: 在本模块中，了解如何向机器人消息添加丰富的格式，例如删除、排序和无序列表、超链接、图像链接等。
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d8697cf25b0cc08f880f8849ea152d1c30d4c146
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111826"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143478"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
@@ -44,17 +44,17 @@ Teams 支持一部分 markdown 和 XML 或 HTML 格式标记。
 
 | 样式                     | 仅文本邮件 | 丰富卡片 - 仅 XML |
 | ---                       | :---: | :---: |
-| 粗体                      | ✔ | ✖ |
-| 斜体                    | ✔ | ✔ |
-| 标头 (级别 1&ndash;3) | ✖ | ✔ |
-| 删除线             | ✖ | ✔ |
-| 水平规则           | ✖ | ✖ |
-| 未排序列表            | ✖ | ✔ |
-| 已排序列表              | ✖ | ✔ |
-| 预设格式的文本         | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ |
-| 图像链接                | ✔ | ✖ |
+| 粗体                      | ✔️️ | ❌ |
+| 斜体                    | ✔️ | ✔️ |
+| 标头 (级别 1&ndash;3) | ❌ | ✔️ |
+| 删除线             | ❌ | ✔️ |
+| 水平规则           | ❌ | ❌ |
+| 未排序列表            | ❌ | ✔️ |
+| 已排序列表              | ❌ | ✔️ |
+| 预设格式的文本         | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ |
+| 图像链接                | ✔️ | ❌ |
 
 检查跨平台支持后，请确保单个平台的支持也可用。
 
@@ -68,17 +68,17 @@ Teams 支持一部分 markdown 和 XML 或 HTML 格式标记。
 
 | 样式                     | 桌面 | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| 粗体                      | ✔ | ✔ | ✔ |
-| 斜体                    | ✔ | ✔ | ✔ |
-| 标头 (级别 1&ndash;3) | ✖ | ✖ | ✖ |
-| 删除线             | ✔ | ✔ | ✖ |
-| 水平规则           | ✖ | ✖ | ✖ |
-| 未排序列表            | ✔ | ✖ | ✖ |
-| 已排序列表              | ✔ | ✖ | ✖ |
-| 预设格式的文本         | ✔ | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ | ✔ |
-| 图像链接                | ✔ | ✔ | ✔ |
+| 粗体                      | ✔️ | ✔️ | ✔️ |
+| 斜体                    | ✔️ | ✔️ | ✔️ |
+| 标头 (级别 1&ndash;3) | ❌ | ❌ | ❌ |
+| 删除线             | ✔️ | ✔️ | ❌ |
+| 水平规则           | ❌ | ❌ | ❌ |
+| 未排序列表            | ✔️ | ❌ | ❌ |
+| 已排序列表              | ✔️ | ❌ | ❌ |
+| 预设格式的文本         | ✔️ | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ | ✔️ |
+| 图像链接                | ✔️ | ✔️ | ✔️ |
 
 ### <a name="cards"></a>卡片
 

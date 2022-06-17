@@ -1,16 +1,15 @@
 ---
 title: 应用程序托管的媒体机器人的要求和注意事项
-description: 了解与使用代码示例和样本为 Microsoft Teams 创建应用程序托管的媒体机器人相关的重要要求和注意事项，以及可扩展性和性能。
+description: 了解与为Teams创建应用程序托管媒体机器人相关的重要要求和注意事项，以及可伸缩性和性能注意事项
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: 应用程序托管的媒体 Windows 服务器 Azure VM
 ms.date: 11/16/2018
-ms.openlocfilehash: 987bb26ba7ad91f11228f7072d3e268ebd87dc5a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756609"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142484"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 

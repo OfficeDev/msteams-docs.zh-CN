@@ -1,17 +1,16 @@
 ---
 title: 自定义 Teams 应用
 author: heath-hamilton
-description: 了解 Teams 管理员如何为其组织自定义应用。
-ms.localizationpriority: high
+description: 在本模块中，了解Teams管理员如何为其组织自定义Teams应用，并在管理员批准之前隐藏Teams应用。
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-keywords: 主题色, 品牌, 隐藏应用, 审批
-ms.openlocfilehash: 4728e6f34680d51983558d1ad96c47ffe3650234
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111197"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143198"
 ---
 # <a name="customize-your-teams-app"></a>自定义 Teams 应用
 

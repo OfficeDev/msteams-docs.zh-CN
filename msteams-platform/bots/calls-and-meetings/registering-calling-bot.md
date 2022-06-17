@@ -1,15 +1,14 @@
 ---
 title: 注册 Microsoft Teams 的通话和会议机器人
-description: 了解如何为 Microsoft Teams 注册新的音频/视频通话机器人、创建新机器人或添加通话功能以及添加图形权限。
+description: 在本模块中，了解如何为Microsoft Teams注册新的音频/视频呼叫机器人、创建新的机器人或添加呼叫功能以及添加图形权限。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: 通话机器人音频/视频音频视频媒体
-ms.openlocfilehash: 71ab66ab6c5f53405897447b8d531ed0ce6dac99
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 74e786850f11a77cea5cc0980febb56d550ae671
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297161"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143793"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>注册 Microsoft Teams 的通话和会议机器人
 

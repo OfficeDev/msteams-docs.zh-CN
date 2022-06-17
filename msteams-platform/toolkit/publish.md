@@ -1,16 +1,16 @@
 ---
 title: 使用 Teams 工具包发布 Teams 应用
 author: zyxiaoyuer
-description: 发布 Teams 应用
+description: 在本模块中，了解如何使用Teams Toolkit发布Teams应用并发布到单个范围或旁加载权限
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2c3fdd78d833baba6bbd5f21640765577f29430b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 0ae6ab1f128eccae6df4fff20364f590106ab146
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757449"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142603"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>使用 Teams 工具包发布 Teams 应用
 

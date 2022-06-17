@@ -1,15 +1,14 @@
 ---
 title: 在 Microsoft Teams 机器人中使用任务模块
-description: 如何将任务模块与 Microsoft Teams 机器人配合使用，包括 Bot Framework 卡片、自适应卡片和深层链接。
+description: 了解如何将任务模块用于Microsoft Teams机器人，包括 Bot Framework 卡、自适应卡片和深层链接。
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: 任务模块团队机器人深层链接自适应卡片
-ms.openlocfilehash: 443ff94fcc5c8b47dda5462555bf181c88b71ce3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e7bed83d9f13913b9a72997ac3679f844db3034a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756714"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142981"
 ---
 # <a name="use-task-modules-from-bots"></a>使用机器人的任务模块
 

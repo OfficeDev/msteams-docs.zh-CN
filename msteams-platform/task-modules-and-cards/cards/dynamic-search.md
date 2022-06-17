@@ -1,16 +1,16 @@
 ---
 title: 在自适应卡片中键入提前搜索
 author: Rajeshwari-v
-description: 介绍自适应卡片中 Input.ChoiceSet 控件的 typeahead 搜索
+description: 在本模块中，了解使用 Input.ChoiceSet 控件的自适应卡片中的 typeahead 搜索是什么，并实现 typeahead 搜索
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 205da5ca0171182047ccd06f7f2926f731ceb94d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103437"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143891"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>在自适应卡片中键入提前搜索
 
@@ -42,7 +42,7 @@ ms.locfileid: "65103437"
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-Android 和 iOS 移动客户端支持自适应卡片中的 typeahead 搜索。
+Android和iOS移动客户端支持自适应卡片中的 typeahead 搜索。
 
 **应用场景**
 
@@ -87,7 +87,7 @@ John 是一名在 Xbox 零售店工作的商店员工。 该商店使用机器�
 
 | 属性| 类型 | 必需 | 说明 |
 |-----------|------|----------|-------------|
-| 类型 | Data.Query | 可访问 | 指定它是 Data.Query 对象。|
+| 类型 | Data.Query | 是 | 指定它是 Data.Query 对象。|
 | 数据 | 字符串 | 是 | 指定动态提取的数据类型。 |
 | value | 字符串 | 否 | 使用用户 `ChoiceSet`提供给机器人的输入填充对机器人的调用请求。 |
 | count | 数字 | 否 | 填充对机器人的调用请求，以指定必须返回的元素数。 如果用户想要发送其他数量，机器人会忽略它。 |

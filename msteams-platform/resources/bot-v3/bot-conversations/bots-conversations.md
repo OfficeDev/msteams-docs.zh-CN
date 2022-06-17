@@ -1,16 +1,15 @@
 ---
 title: 使用机器人发送和接收消息
-description: 介绍如何在 Microsoft Teams 中使用机器人发送和接收消息
+description: 在本模块中，了解如何与Microsoft Teams机器人、主动消息、对话基础知识、消息内容和格式设置进行对话
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: teams 机器人消息
 ms.date: 05/20/2019
-ms.openlocfilehash: 0d4665d098e0e14fa3de5f2667c7e970b545b284
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fdf408a9e9d49c9c5c862a6b4dda3c7db7de93e8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296971"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143387"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>与 Microsoft Teams 机器人进行对话
 
@@ -74,7 +73,7 @@ ms.locfileid: "65296971"
 
 图片是通过将附件添加到消息来发送的。 可以在 [Bot Framework 文档](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)中找到有关附件的详细信息。
 
-图片最多可以为 1024×1024 MB 以及 1 MB 的 PNG、JPEG 或 GIF 格式; 不支持动画 GIF。
+图片最多可以为 1024×1024 MB，PNG、JPEG 或 GIF 格式最多可为 1 MB;不支持动画 GIF。
 
 建议使用 XML 指定每个图像的高度和宽度。 如果使用 Markdown，则图像大小默认为 256×256。 例如：
 
@@ -219,7 +218,7 @@ string tenantId = channelData.Tenant.Id;
 
 ### <a name="rest-api"></a>REST API
 
-若要发出消息更新，只需使用给定的活动 ID 对 `/v3/conversations/<conversationId>/activities/<activityId>/` 终结点执行 PUT 请求。 若要完成此方案，应缓存原始 POST 调用返回的活动 ID。
+若要发出消息更新，请使用给定的活动 ID 对 `/v3/conversations/<conversationId>/activities/<activityId>/` 终结点执行 PUT 请求。 若要完成此方案，应缓存原始 POST 调用返回的活动 ID。
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128

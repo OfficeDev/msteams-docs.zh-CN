@@ -1,46 +1,45 @@
 ---
-title: 获取自动程序Microsoft Teams上下文
-description: 介绍如何获取自动程序在Microsoft Teams
-keywords: teams 机器人上下文
+title: 获取Microsoft Teams机器人的上下文
+description: 在本模块中，了解如何获取Microsoft Teams中的机器人的上下文，在个人或群组聊天中提取团队名册和用户个人资料或名册
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: c4f2df1168b5e429b1d5a1107cd07264e10243bc
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 3fd75e063f9b12c09bc4dded167bd8cdaead6b7a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453143"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143114"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a>获取自动程序Microsoft Teams上下文
+# <a name="get-context-for-your-microsoft-teams-bot"></a>获取Microsoft Teams机器人的上下文
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-机器人可以访问有关团队或聊天的其他上下文，如用户配置文件。 此信息可用于丰富自动程序的功能并提供更加个性化的体验。
+机器人可以访问有关团队或聊天的其他上下文，例如用户配置文件。 此信息可用于丰富机器人的功能并提供更个性化的体验。
 
 > [!NOTE]
 >
-> * Microsoft Teams聊天机器人 API 的最佳访问方式是通过 Bot Builder SDK 的扩展。
-> * 对于 C# 或 .NET，请下载 [Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) 程序包。
-> * For Node.js development， the Bot Builder for Teams functionality is incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6.
+> * Microsoft Teams特定的机器人 API 最好通过 Bot Builder SDK 的扩展进行访问。
+> * 对于 C# 或 .NET，请下载 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet包。
+> * 对于Node.js开发，Bot Builder for Teams 功能已合并到 [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 中。
 
 ## <a name="fetch-the-team-roster"></a>提取团队名单
 
-机器人可以查询团队成员及其基本个人资料的列表。 基本配置文件包括Teams ID 和Microsoft Azure Active Directory (Azure AD) ，如名称和对象 ID。 可以使用此信息来关联用户标识。 例如，检查用户是否通过登录选项卡Microsoft Azure Active Directory (Azure AD) 凭据是团队成员。
+机器人可以查询团队成员列表及其基本配置文件。 基本配置文件包括Teams用户 ID 和 Microsoft Azure Active Directory (Azure AD) 信息，例如名称和对象 ID。 可以使用此信息来关联用户标识。 例如，检查用户是否通过Microsoft Azure Active Directory (Azure AD 登录到选项卡) 凭据是团队成员。
 
 ### <a name="rest-api-example"></a>REST API 示例
 
-直接在 上发出 GET 请求 [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members)，使用 `serviceUrl` 值作为终结点。
+直接发出 [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members)GET 请求，使用 `serviceUrl` 该值作为终结点。
 
-可以在 `teamId` 自动程序在 `channeldata` 下列情况下接收的活动有效负载的对象中找到 ：
+可以在 `teamId` 机器人在以下方案中 `channeldata` 接收的活动有效负载的对象中找到：
 
-* 当用户在团队上下文中向机器人发送消息或与之交互时。 有关详细信息，请参阅 [接收邮件](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)。
-* 将新用户或机器人添加到团队时。 有关详细信息，请参阅添加到 [团队的机器人或用户](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)。
+* 当用户在团队上下文中发送消息或与机器人交互时。 有关详细信息，请参阅 [接收消息](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)。
+* 将新用户或机器人添加到团队时。 有关详细信息，请参阅 [添加到团队的机器人或用户](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)。
 
 > [!NOTE]
 >
 >* 调用 API 时始终使用团队 ID。
->* 值 `serviceUrl` 往往很稳定，但可能会更改。 当新消息到达时，机器人必须验证其存储 `serviceUrl` 值。
+>* 该 `serviceUrl` 值通常稳定，但可能会更改。 当新消息到达时，机器人必须验证其存储 `serviceUrl` 值。
 
 ```json
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
@@ -72,7 +71,7 @@ Response body
 
 ### <a name="net-example"></a>.NET 示例
 
-调用 `GetConversationMembersAsync` using `Team.Id` 可返回用户 ID 列表。
+用于`Team.Id`返回用户 ID 列表的调用`GetConversationMembersAsync`。
 
 ```csharp
 // Fetch the members in the current conversation
@@ -118,29 +117,29 @@ connector.fetchMembers(
 );
 ```
 
-## <a name="fetch-user-profile-or-roster-in-personal-or-group-chat"></a>在个人或群组聊天中提取用户配置文件或名单
+## <a name="fetch-user-profile-or-roster-in-personal-or-group-chat"></a>在个人或群组聊天中提取用户配置文件或名册
 
-你可以对任意个人聊天进行 API 调用，以获取与机器人聊天的用户的个人资料信息。
+可以对任何个人聊天进行 API 调用，以获取用户与机器人聊天的配置文件信息。
 
-API 调用、SDK 方法和响应对象与提取团队名单完全相同。 唯一的区别是传递 `conversationId` ，而不是 `teamId`传递 。
+API 调用、SDK 方法和响应对象与提取团队名单相同。 唯一的区别是你传递而不是`conversationId``teamId`传递。
 
-## <a name="fetch-the-list-of-channels-in-a-team"></a>获取团队中的频道列表
+## <a name="fetch-the-list-of-channels-in-a-team"></a>提取团队中的频道列表
 
 机器人可以查询团队中的频道列表。
 
 > [!NOTE]
 >
->* 返回默认"常规"频道的名称，以 `null` 允许本地化。
+>* 默认常规频道的名称作为 `null` 返回，以允许本地化。
 >* 常规频道的频道 ID 始终与团队 ID 匹配。
 
 ### <a name="rest-api-example"></a>REST API 示例
 
-直接在 上发出 GET 请求 `/teams/{teamId}/conversations/`，使用 `serviceUrl` 值作为终结点。
+直接发出 `/teams/{teamId}/conversations/`GET 请求，使用 `serviceUrl` 该值作为终结点。
 
-的唯一来源 `teamId` 是团队上下文中的消息。 该消息可以是来自用户的消息，或者是机器人在添加到团队时收到的消息。 有关详细信息，请参阅添加到 [团队的机器人或用户](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)。
+唯一的 `teamId` 来源是来自团队上下文的消息。 该消息是来自用户的消息，或者是机器人在添加到团队时收到的消息。 有关详细信息，请参阅 [添加到团队的机器人或用户](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)。
 
 > [!NOTE]
-> 值 `serviceUrl` 往往很稳定，但可能会更改。 当新消息到达时，机器人必须验证其存储 `serviceUrl` 值。
+> 该 `serviceUrl` 值通常稳定，但可能会更改。 当新消息到达时，机器人必须验证其存储 `serviceUrl` 值。
 
 ```json
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -165,15 +164,15 @@ Response body
 
 #### <a name="net-example"></a>.NET 示例
 
-以下示例使用来自`FetchChannelList`适用于 [.NET 的自动Teams SDK 的扩展的调用](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)：
+以下示例使用 `FetchChannelList` [Bot Builder SDK for .NET 的Teams扩展](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)的调用：
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
 ```
 
-#### <a name="nodejs-example"></a>Node.js示例
+#### <a name="nodejs-example"></a>Node.js 示例
 
-下面的示例使用自动`fetchChannelList`程序生成器 SDK Teams[扩展](https://www.npmjs.com/package/botbuilder-teams)中的调用Node.js：
+以下示例使用 `fetchChannelList` [Bot Builder SDK for Node.js的 Teams 扩展](https://www.npmjs.com/package/botbuilder-teams)的调用：
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
@@ -191,14 +190,14 @@ connector.fetchChannelList(
 );
 ```
 
-## <a name="get-clientinfo-in-your-bot-context"></a>在自动程序上下文中获取 clientInfo
+## <a name="get-clientinfo-in-your-bot-context"></a>获取机器人上下文中的 clientInfo
 
-可以在自动程序的活动内获取 clientInfo。 clientInfo 包含以下属性：
+可以在机器人活动中提取 clientInfo。 clientInfo 包含以下属性：
 
 * Locale
 * 国家/地区
 * 平台
-* Timezone
+* 时区
 
 ### <a name="json-example"></a>JSON 示例
 
@@ -214,7 +213,7 @@ connector.fetchChannelList(
 ]
 ```
 
-### <a name="c-example"></a>C#示例
+### <a name="c-example"></a>C# 示例
 
 ```csharp
 var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));

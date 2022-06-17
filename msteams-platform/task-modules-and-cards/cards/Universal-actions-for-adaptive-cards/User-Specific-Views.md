@@ -1,22 +1,24 @@
 ---
 title: 用户特定视图
-description: 了解将通用操作与代码示例结合使用的用户特定视图
+description: 在本模块中，了解将通用操作与代码示例和 adaptiveCard/action invoke 响应卡配合使用的用户特定视图
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b2e5b8d6dd00104fab819ba7d05d5913bb891d83
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a3fdc937ba1528a2bf9aa304bf484bbcae68b5c6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073678"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143919"
 ---
 # <a name="user-specific-views"></a>用户特定视图
 
-如果在Teams对话中发送自适应卡片，则所有用户都会看到完全相同的卡片内容。 随着通用操作模型和 `refresh` 自适应卡片的引入，机器人开发人员现在可以向用户提供自适应卡片的用户特定视图。 同一自适应卡片现在可以刷新到用户特定的自适应卡片。 最多 60 个不同的用户可以查看其他信息或操作的不同版本的卡片。 自适应卡片提供强大的方案，如审批、投票创建者控制、票证、事件管理和项目管理卡。
+如果在Teams会话中发送自适应卡片，则所有用户都会看到完全相同的卡片内容。 随着通用操作模型和 `refresh` 自适应卡片的引入，机器人开发人员现在可以向用户提供自适应卡片的用户特定视图。 同一自适应卡片现在可以刷新到用户特定的自适应卡片。 自适应卡片提供强大的方案，如审批、投票创建者控制、票证、事件管理和项目管理卡。
 
 > [!NOTE]
-> 机器人发送的自适应卡支持用户特定视图，并且依赖于通用操作。
+>
+> * 机器人发送的自适应卡支持用户特定视图，并且依赖于通用操作。
+> * 最多 60 个不同的用户可以查看其他信息或操作的不同版本的卡片。
 
 例如，Contoso 的安全检查员 Megan 想要创建事件并将其分配给 Alex。 梅根还希望团队中的每个人都能知道这一事件。 Megan 使用由自适应卡的通用操作支持的 Contoso 事件报告消息扩展。
 
@@ -218,19 +220,32 @@ const cardRes = {
 
 ***
 
-在设计用户特定视图时要记住的卡片设计准则：
+以下列表提供了用户特定视图的卡片设计指南：
 
-* 通过在部分中指定`userIds``refresh`特定卡片，最多可以创建 **60 个用户特定视图**。
-* **基卡：** 机器人开发人员发送到聊天的卡的基本版本。 基本版本是本部分中 `userIds` 未指定的所有用户的自适应卡片版本。
-* 消息更新可用于更新基卡并同时刷新用户特定卡。 打开聊天或频道也会刷新启用刷新功能的用户的卡片。
-* 对于用户切换到操作视图（需要响应者动态更新）的较大组的方案，可以继续将最多 60 个用户添加到 `userIds` 列表中。 当第 61 个用户响应时，可以从列表中删除第一个响应者。 对于从列表中删除的 `userIds` 用户，可以提供手动刷新按钮或使用消息选项菜单中的刷新按钮来获取最新结果。
-* 提示用户获取用户特定视图，在该视图中，用户只看到卡片的特定视图或某些操作。
+* 刷新行为：通过在属性中`Refresh`指定`userIds`特定卡片，最多可以创建 60 个用户特定视图。
+
+  * 如果未在属性中`Refresh`指定字`userIds`段，则Teams当会话中的成员少于或等于 60 个成员时，客户端可以自动触发所有用户的刷新。
+
+  * 用户可以手动触发卡刷新，他们可以从消息选项菜单中选择 **“刷新** ”。 当会话中的成员少于 60 个时，或者当聊天中存在全部或少于 60 个用户时，列表中 `userIds` 未指定的用户集时，所有用户都会发生这种情况。
+
+* 基卡：机器人发送消息，其中嵌入了卡的基本版本。 会话的所有成员都可以查看相同的内容。 机器人随后通过刷新获取用户特定卡片，以供节中指定的 `userIds` 用户使用。
+
+* 刷新超时：Teams客户端通过刷新或选择 **“执行**”以两种方式触发刷 **新**。 仅当上次调用中的卡片早于一分钟时，刷新才会触发。 可以通过向数据包添加时间戳并在发送刷新卡片之前对其进行检查来控制刷新行为。
+
+* 消息更新可用于更新基卡并同时刷新用户特定卡。 打开聊天或频道也会刷新启用 **刷新** 功能的用户的卡片。
+
+* 对于用户切换到操作视图（需要响应者动态更新）的较大组的方案，可以继续将最多 60 个用户添加到 `userIds` 列表中。 当第 61 个用户响应时，可以从列表中删除第一个响应者。 对于从列表中删除的 `userIds` 用户，可以提供手动 **刷新** 以获取最新结果。
+
+* 提示用户获取用户特定视图，其中他们只看到卡片的特定视图或某些操作。
+
+> [!NOTE]
+> 机器人返回的用户特定卡片仅发送到请求它的特定客户端。 例如，如果用户切换到其他客户端（例如从桌面切换到移动设备），则会触发另一个调用事件来提取刷新卡片。
 
 ## <a name="code-sample"></a>代码示例
 
 |示例名称 | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| 顺序工作流自适应卡片 | 演示如何在机器人中实现顺序工作流、用户特定视图和最新自适应卡片。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| 顺序工作流自适应卡片 | 演示如何在机器人中实施顺序工作流、用户特定视图和最新自适应卡。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 

@@ -1,15 +1,14 @@
 ---
 title: App Studio for Microsoft Teams 入门
-description: 开始使用 App Studio 在 Microsoft Teams 中构建出色的应用
-keywords: 应用室团队入门
+description: 在本模块中，了解如何使用 app studio 生成和管理应用，以便Microsoft Teams和安装应用工作室。
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 65c6ad9d5f4eafef80e2ec75d95d9d4a5ff1694b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3cfef6db34c9754ac42b2af3ce153ba9374fdff1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757071"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143450"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio 管理应用以进行Microsoft Teams
 
@@ -27,7 +26,7 @@ ms.locfileid: "65757071"
 
 ## <a name="installing-app-studio"></a>安装 App Studio
 
-App Studio 是一款可在 Teams 商店找到的 Teams 应用。 请按照此链接直接下载 [App Studio](https://aka.ms/InstallTeamsAppStudio)。 还可以在应用商店中找到该应用。
+App Studio 是一个Teams应用，可在Teams存储中找到。 请按照此链接直接下载 [App Studio](https://aka.ms/InstallTeamsAppStudio)。 还可以在应用商店中找到该应用。
 
 在应用商店中，搜索 App Studio。
 
@@ -41,7 +40,7 @@ App Studio 是一款可在 Teams 商店找到的 Teams 应用。 请按照此链
 
 ![app studio](~/assets/images/get-started/teamsappstudio.png)
 
-在 App Studio 中后，单击 **清单编辑器** 选项卡，可在其中导入现有应用或创建新应用。
+进入 App Studio 后，在 **“清单编辑** 器”选项卡上选择可导入现有应用或创建新应用的位置。
 
 ## <a name="app-studio-features"></a>App Studio 功能
 
@@ -55,11 +54,11 @@ App Studio 是一款可在 Teams 商店找到的 Teams 应用。 请按照此链
 
 如前文所述，Microsoft Teams 应用包最重要的部分就是其 manifest.json 文件。 此文件必须遵循 [Teams 应用架构](~/resources/schema/manifest-schema.md)，包含可使 Teams 向用户正确呈现应用的元数据。
 
-App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于描述应用、上传图标、添加应用功能并生成 .zip 文件，可轻松上传到 Teams，以便进行测试或分发供其他人使用。 请注意，App Studio 不会为应用生成功能代码，也不托管应用。 应用必须已在应用上传流程的清单中列出的 URL 上托管并运行，以产生工作应用。
+App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你描述应用、上传图标、添加应用功能，并生成.zip文件，该文件可以轻松上传到Teams进行测试或分发供其他人使用。 请注意，App Studio 不会为应用生成功能代码，也不会托管应用。 应用必须已在应用上传流程的清单中列出的 URL 上托管并运行，以产生工作应用。
 
 #### <a name="details"></a>详细信息
 
-清单编辑器的详细信息部分定义所创建应用的详细信息。 这包括应用的名称、说明和视觉品牌等内容。 可以自动生成应用程序的 GUID，并提供隐私声明和使用条款的 URL。
+清单编辑器的详细信息部分定义了要创建的应用的高级说明。 这包括应用的名称、说明和视觉品牌等内容。 可以自动生成应用程序的 GUID，并提供隐私声明和使用条款的 URL。
 
 #### <a name="capabilities"></a>功能
 
@@ -70,7 +69,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 ##### <a name="tabs"></a>选项卡
 
-* **团队选项卡。** 团队选项卡将成为频道的一部分，可提供对团队信息和资源的快速访问。 例如，频道的"Planner"选项卡包含单个计划;Power BI 选项卡映射到特定报表。 用户可以向下钻取相关上下文，但无法导航到选项卡外部。例如，Power BI 选项卡不会启用到其他 Power BI 报表的导航，但它允许" *转到网站* "按钮，该按钮在 Power BI 主网站中启动报表。
+* **团队选项卡。** 团队选项卡将成为频道的一部分，可提供对团队信息和资源的快速访问。 例如，频道的"Planner"选项卡包含单个计划;Power BI 选项卡映射到特定报表。 用户可以向下钻取到相关上下文，但不应在选项卡外导航。例如，Power BI选项卡不启用对其他Power BI报表的导航，但它确实启用了在主Power BI网站中启动报表的 *“转到网站*”按钮。
 
   对于团队选项卡，必须使用 *配置 URL* 显示选项并收集信息，以便用户可以自定义选项卡的内容和体验。当用户首次将选项卡添加到频道时，将显示此 HTML 表格。
 
@@ -82,22 +81,22 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 通过此部分，可以将一 [对话自动](~/bots/what-are-bots.md) 添加到应用中。 如果你已有注册了 Bot Framework 的自动程序，您可以通过单击 *"设置* 并单击自动程序的名称"自动框架 ID"并定义自动程序工作的范围来添加自动程序。
 
-如果你尚未在 Bot Framework 中注册自动 **，请单击"注册** 自动程序"以创建新的自动程序。 完成注册自动程序后，请返回清单编辑器的此部分，输入其名称和 Bot Framework ID。
+如果尚未向 Bot Framework 注册机器人，请选择 **“注册** ”以创建新机器人。 完成注册自动程序后，请返回清单编辑器的此部分，输入其名称和 Bot Framework ID。
 
-提供机器人信息后，现在可以选择定义机器人可以向用户建议的命令列表。 添加命令的名称、指示其语法和参数的命令说明以及此命令应应用于的范围。
+提供机器人信息后，现在可以选择定义机器人可以向用户建议的命令列表。 添加命令的名称、命令的说明（指示其语法和参数）以及此命令应应用到的范围 () 。
 
 > [!NOTE]
 > 如果已将机器人定义为仅支持一个作用域，则会忽略为不受支持的范围指定的命令。 你随时都可以编辑你的自动程序支持的范围。
 
 ##### <a name="connectors"></a>连接器
 
-此部分允许向应用添加连接器。 如果已注册 Office 365 连接器，请选择" **设置** 并输入连接器的名称和 ID。 如果需要新的连接器，请单击 **注册** 以在浏览器中访问连接器开发人员仪表板。
+此部分允许向应用添加连接器。 如果已注册 Office 365 连接器，请选择" **设置** 并输入连接器的名称和 ID。 如果希望有新的连接器，请选择“ **注册** ”转到浏览器中的“连接器开发人员仪表板”。
 
 ##### <a name="message-extensions"></a>消息扩展
 
 [消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)是用户在Microsoft Teams中与应用互动的一种强大方式。 用户可以查询服务的信息，将该信息以卡片形式发布到频道或聊天对话中。
 
-消息扩展由 Bot Framework 机器人提供支持，因此它们需要配置的机器人才能运行。 如果具有要为消息扩展提供电源的机器人的名称和 Bot Framework ID，请输入它。 否则，请单击 **注册** 创建一个，然后输入信息。 选择用户是否可以更新消息扩展的配置。
+消息扩展由 Bot Framework 机器人提供支持，因此它们需要配置的机器人才能运行。 如果具有要为消息扩展提供电源的机器人的名称和 Bot Framework ID，请输入它。 否则，请选择 **“注册** ”以创建一个，然后输入信息。 选择用户是否可以更新消息扩展的配置。
 
 配置基础机器人后，定义消息扩展可以接受的命令和参数。
 
@@ -112,7 +111,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 
 #### <a name="test-and-distribute"></a>测试和分发
 
-定义完应用程序后，"测试并分发"部分可导出应用定义为压缩文件，然后可将其共享并上传到 Teams 客户端进行测试。 单击"导出"以 *appname.zip* 下载默认下载目录中的 zip 文件。
+定义完应用程序后，“测试和分发”部分允许将应用的定义导出为 zip 文件，然后可以将其共享并上传到Teams客户端进行测试。 单击"导出"以 *appname.zip* 下载默认下载目录中的 zip 文件。
 
 ##### <a name="publish-your-app-to-teams"></a>将应用发布到 Teams
 
@@ -131,7 +130,7 @@ App Studio 中的"清单编辑器"选项卡简化了清单的创建，可用于�
 >[!Note]
 > 将来将弃用此React控件库。 请考虑使用 [Fluent-UI 响应控件作为](https://microsoft.github.io/fluent-ui-react/)以前星尘 UI 的替代方法。
 
-创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为更轻松地创建一致的 UI，App Studio 提供了几种符合 Teams 设计原则的 UI 控件类别。
+创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为了更轻松地创建一致的 UI，App Studio 提供了多种类别的 UI 控件，这些控件遵循Teams设计原则。
 
 提供了控件和相应的"响应"组件的示例，可准备在构建应用时使用。
 

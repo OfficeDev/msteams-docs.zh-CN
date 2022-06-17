@@ -1,17 +1,16 @@
 ---
 title: 使用 Teams 工具包和 Visual Studio 构建应用
-description: 开始使用 Microsoft Teams 工具包直接在 Visual Studio 中构建出色的自定义应用。 了解如何在 Visual Studio 中配置应用、验证应用，并从 Visual Studio 和开发人员门户发布应用。
-keywords: Teams Visual Studio 工具包
+description: 了解使用Teams Toolkit直接在Visual Studio内生成自定义应用，并了解如何在Visual Studio中配置应用、验证应用等
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 9dbe606b99ef493a136381667bbd1c1da1f955b0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: aa7fdaad1d56966031eb13b6b05f145c8e734988
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756455"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142043"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Visual Studio 的Teams工具包
 

@@ -1,15 +1,14 @@
 ---
 title: 通过团队中的速率限制来优化你的智能机器人
-description: 使用代码示例，了解如何使用每机器人每线程限制和所有机器人每线程限制来处理速率限制。 此外，了解 Microsoft Teams 中关于速率限制的最佳做法。
+description: 了解使用代码示例处理每个机器人的每个线程限制和所有机器人的每个限制的机器人的处理速率限制
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Teams 机器人速率限制
-ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757148"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143730"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 

@@ -1,16 +1,15 @@
 ---
 title: 通过机器人收发文件
-description: 了解如何使用个人、频道和群组聊天作用域的 Graph API 通过机器人收发文件。 通过基于 v4 Bot Framework SDK 的代码示例使用 Teams 机器人 API。
-keywords: teams 机器人文件发送接收
+description: 了解如何使用个人、频道和群组聊天作用域的 Graph API 通过机器人收发文件。
 ms.date: 05/20/2019
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 102bdeb2cd05882266299f7962a6b69b1ecfa37c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a7746b15798c46c807c276fb7d29f34b59858528
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111211"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142925"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>通过机器人收发文件
 

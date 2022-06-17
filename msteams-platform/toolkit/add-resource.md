@@ -1,17 +1,17 @@
 ---
 title: 将资源添加到Teams应用
 author: MuyangAmigo
-description: 介绍添加 Teams 工具包的资源
+description: 在本模块中，了解如何添加Teams Toolkit资源、优势、限制和功能
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f3b96b60447596eae8c1cdf37f4b38f6653c444b
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9d8c7b1fd6b4910e1024f10a44e54271a0fbb475
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656647"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143856"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>将云资源添加到 Teams 应用
 

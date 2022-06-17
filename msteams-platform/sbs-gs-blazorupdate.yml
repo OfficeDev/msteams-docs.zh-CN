@@ -2,7 +2,7 @@
 title: 使用 Blazor 生成第一个应用
 metadata:
   title: 使用 Blazor Hello World
-  description: 本教程介绍如何使用 Blazor 生成Hello World应用。
+  description: 本教程介绍如何使用 Blazor 生成Hello World应用、使用 C# 生成交互式 Web UI，以及创建 Tab 应用和机器人应用。
   audience: Developer
   level: Beginner
   ms.date: 04/03/2022
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 返回到开始概述
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: d6ceee27abfb72b9b3f7bf5c5663fd7ee835a174
-  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+  ms.openlocfilehash: 37986a6301127ec194072fccf2c52904bf4f99b9
+  ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 06/16/2022
-  ms.locfileid: "66123298"
+  ms.lasthandoff: 06/17/2022
+  ms.locfileid: "66143121"
 items:
 - durationInMinutes: 1
   content: "\nBlazor 允许使用 C# 而不是 JavaScript 生成交互式 Web UI。 \n\n可以使用 Blazor 和最新版本的 Visual Studio 创建 Tab 应用和机器人应用。\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png\" alt-text=\"显示此应用具有选项卡和机器人两个功能的图示。\" border=\"false\":::\n\n> [!NOTE]\n> 目前，Teams Toolkit不支持消息扩展功能。\n"

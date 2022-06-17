@@ -1,16 +1,15 @@
 ---
 title: 从机器人收发文件
-description: 了解如何使用个人、频道和群组聊天作用域的 Graph API 通过机器人收发文件。 通过基于 v3 Bot Framework SDK 的代码示例使用 Teams 机器人 API。
-keywords: teams 机器人文件发送接收
+description: 了解如何使用个人、频道和群聊范围的Graph API 通过机器人发送和接收文件。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755900"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143366"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>通过机器人发送和接收文件
 
@@ -83,7 +82,7 @@ ms.locfileid: "65755900"
 1. 向请求编写文件权限的用户发送消息。 此消息必须包含 `FileConsentCard` 附件，其中带有要上传的文件的名称。
 2. 如果用户接受文件下载，则机器人将收到包含位置 URL 的 *调用* 活动。
 3. 要传输文件，机器人会直接将 `HTTP POST` 执行到提供的位置 URL。
-4. (可选)如果不希望允许用户接受同一文件的进一步上传，则可以删除原始同意卡。
+4. 或者，如果不想允许用户接受同一文件的进一步上传，则可以删除原始同意卡。
 
 #### <a name="message-requesting-permission-to-upload"></a>请求上传权限的消息
 
@@ -165,7 +164,7 @@ ms.locfileid: "65755900"
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>通知用户有关已上传文件的信息
 
-将文件上传到用户的 OneDrive 后，无论是使用上述机制还是 OneDrive 用户委派的 API，都应向用户发送确认消息。 此消息应包含以下用户可点击的 `FileCard` 附件，以便在 OneDrive 中预览、打开，或在本地下载。
+将文件上传到用户的 OneDrive 后，无论是使用上述机制还是 OneDrive 用户委派的 API，都应向用户发送确认消息。 此消息应包含`FileCard`用户可以选择的附件，可以对其进行预览、在OneDrive中打开或在本地下载。
 
 ```json
 {

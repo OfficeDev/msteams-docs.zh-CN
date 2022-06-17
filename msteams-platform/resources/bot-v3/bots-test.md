@@ -1,16 +1,15 @@
 ---
 title: 测试和调试机器人
-description: 本文介绍如何在 Microsoft Teams 中测试机器人
-keywords: Teams 机器人测试
+description: 在本文中，你将了解如何在Microsoft Teams中测试和调试机器人，并在不上传到Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 44fdb90431549b63e45d2ef2131fe6aa6cb44fc0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3cfb76443566a0ca5c279547f7b3db490c6095d3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123452"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143695"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>测试和调试 Microsoft Teams 机器人
 
@@ -40,7 +39,7 @@ ngrok http <port> -host-header=localhost:<port>
 
 ### <a name="use-the-bot-emulator"></a>使用机器人仿真器
 
-Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员在本地或远程测试和调试其机器人。 使用该仿真器，可以与机器人聊天并检查机器人发送和接收的消息。 这有助于验证机器人是否可用并做出响应，但仿真器不允许测试已添加到机器人的任何特定于 Teams 的功能，机器人的响应也不会成为在 Teams 中呈现这些功能的准确视觉表示形式。 如果需要测试其中任一项，则最好不要[上传机器人](#test-by-uploading-to-teams)。
+Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员在本地或远程测试和调试其机器人。 使用该仿真器，可以与机器人聊天并检查机器人发送和接收的消息。 这对于验证机器人是否可用并做出响应非常有用，但是模拟器不允许你测试已添加到机器人的任何特定于Teams的功能，机器人的响应也不会准确直观地表示它们在Teams中的呈现方式。 如果需要测试其中任一项，则最好不要[上传机器人](#test-by-uploading-to-teams)。
 
 可在[此处](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true)找到有关 Bot Framework Emulator 的完整说明。
 
@@ -70,7 +69,7 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 
 ## <a name="blocking-a-bot-in-personal-chat"></a>在个人聊天中阻止机器人
 
-请注意，用户可以选择阻止机器人发送个人聊天消息。 他们可以通过在聊天频道中右键单击机器人并选择 **阻止机器人对话** 来切换此问题。 这意味着机器人将继续发送消息，但用户不会收到这些消息。
+用户可以选择阻止机器人发送个人聊天消息。 他们可以通过在聊天频道中右键单击机器人并选择“**阻止机器人对话**”来进行切换。 这意味着机器人将继续发送消息，但用户不会收到这些消息。
 
   :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="阻止机器人"border="true":::
 
@@ -78,7 +77,7 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 
 用户可以通过在其团队视图中的机器人列表中选择垃圾桶图标来删除机器人。 请注意，这只会从该团队的使用中删除机器人，单个用户可以在个人上下文中进行交互。
 
-用户无法禁用或删除个人上下文中的机器人，从 Teams 中完全删除机器人除外。
+用户无法禁用或删除个人上下文中的机器人，无法从Teams中完全删除机器人。
 
 ## <a name="disabling-a-bot-in-teams"></a>在 Teams 中禁用机器人
 
@@ -86,7 +85,7 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 
 ## <a name="deleting-a-bot-from-teams"></a>从 Teams 中删除机器人
 
-若要从 Teams 中完全删除机器人，请转到“机器人仪表板”并编辑 Microsoft Teams 通道。 选择底部的”**删除**”按钮。 这会阻止用户发现、添加机器人或与机器人交互。 请注意，这不会从其他用户的 Teams 实例中删除机器人，但也会停止为其运行。
+若要从 Teams 中完全删除机器人，请转到“机器人仪表板”并编辑 Microsoft Teams 通道。 选择底部的”**删除**”按钮。 这会阻止用户发现、添加机器人或与机器人交互。 这不会从其他用户的Teams实例中删除机器人，尽管它也会停止为其运行。
 
 ## <a name="removing-your-bot-from-appsource"></a>从 AppSource 中删除机器人
 

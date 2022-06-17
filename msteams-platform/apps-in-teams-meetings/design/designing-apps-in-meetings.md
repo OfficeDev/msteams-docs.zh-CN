@@ -5,13 +5,12 @@ description: 了解如何在Teams会议中设计应用，并获取Microsoft Team
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: UI 工具包模板会议内响应行为共享会议阶段
-ms.openlocfilehash: 5688e858fda4aa90fb4bfa75ca70c145308d97ca
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122997"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142680"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -22,7 +21,7 @@ ms.locfileid: "66122997"
 可以在 Microsoft Teams UI 工具包中找到更全面的设计准则，包括可以根据需要获取和修改的元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit (用户)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展插件
 
@@ -187,11 +186,11 @@ ms.locfileid: "66122997"
 
 你可以允许用户在会议阶段共享你的某些或所有应用内容并与之交互。 下面是用户在会议期间如何使用此功能的示例：
 
-* 编辑文档
+* 编辑文档。
 * 白板化
-* 查看仪表板
-* 观看视频
-* 玩游戏
+* 查看仪表板。
+* 观看视频。
+* 玩游戏。
 
 共享到会议阶段的应用占用的空间与共享屏幕相同。 舞台也会以同样的方式为所有会议参与者重新定向。
 
@@ -292,7 +291,7 @@ ms.locfileid: "66122997"
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示帖子会议选项卡。" border="false":::
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳实践
 
 使用上述建议打造优质应用体验。
 

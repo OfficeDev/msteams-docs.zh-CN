@@ -4,12 +4,12 @@ description: 在本模块中，了解如何开始使用 Live Share SDK，以及�
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8dad224b74ff8a6d1252c4d1d27900f3bb5c6962
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668235"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143562"
 ---
 ---
 
@@ -101,7 +101,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>加入 Fluid 容器
 
-并非所有应用视图都需要协作。 `stage`视图 _始终_ 需要协作功能，`content`视图 _可能需要_ 协作功能，`config`视图 _不应_ 需要协作功能。 对于需要协作功能的视图，需要加入与当前会议关联的 Fluid 容器。
+并非所有应用视图都需要协作。 `stage`视图 *始终* 需要协作功能，`content`视图 *可能需要* 协作功能，`config`视图 *不应* 需要协作功能。 对于需要协作功能的视图，需要加入与当前会议关联的 Fluid 容器。
 
 加入会议容器与创建新的 [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) ，然后调用 [JoinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) 方法一样简单。  在本地运行时，需要传入具有特殊 `LOCAL_MODE_TENANT_ID` 的自定义连接配置，否则，加入本地容器与在 Teams 中加入容器相同。
 
@@ -192,15 +192,15 @@ function renderStage(diceMap, elem) {
 
 ### <a name="handle-remote-changes"></a>处理远程更改
 
-从 `diceMap` 返回的值只是时间快照。 若要使数据在更改时保持最新，必须在 `diceMap` 上设置事件处理程序，以便在每次发送 `valueChanged` 事件时调用 `updateDice`。 若要获取触发的事件列表以及传递给这些事件的值，请参阅 [SharedMap](https://fluidframework.com/docs/data-structures/map/)。 
+从 `diceMap` 返回的值只是时间快照。 若要使数据在更改时保持最新，必须在 `diceMap` 上设置事件处理程序，以便在每次发送 `valueChanged` 事件时调用 `updateDice`。 若要获取触发的事件列表以及传递给这些事件的值，请参阅 [SharedMap](https://fluidframework.com/docs/data-structures/map/)。
 
-```js 
+```js
     diceMap.on("valueChanged", updateDice);
 ```
 
 ## <a name="write-the-side-panel-view"></a>编写侧面板视图
 
-当用户在会议中打开应用时，会在侧面板中向用户显示侧面板视图，该视图通过选项卡 `contentUrl` 加载 `sidePanel` 帧上下文。 此视图的目标是让用户在将应用共享到会议阶段之前选择应用的内容。 对于 Live Share SDK 应用，侧面板视图也可用作应用的配套体验。 从侧面板视图调用 [ joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) 将连接到阶段视图连接到的同一 Fluid 容器。 然后，此容器可用于与阶段视图通信。 确保与每个人的阶段视图 _和_ 侧面板视图通信。
+当用户在会议中打开应用时，会在侧面板中向用户显示侧面板视图，该视图通过选项卡 `contentUrl` 加载 `sidePanel` 帧上下文。 此视图的目标是让用户在将应用共享到会议阶段之前选择应用的内容。 对于 Live Share SDK 应用，侧面板视图也可用作应用的配套体验。 从侧面板视图调用 [ joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) 将连接到阶段视图连接到的同一 Fluid 容器。 然后，此容器可用于与阶段视图通信。 确保与每个人的阶段视图 *和* 侧面板视图通信。
 
 示例的侧面板视图提示用户选择要暂存的共享按钮。
 

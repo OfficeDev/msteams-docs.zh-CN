@@ -1,17 +1,17 @@
 ---
 title: 向Teams应用添加功能
 author: MuyangAmigo
-description: 介绍添加Teams Toolkit功能
+description: 在本模块中，了解如何添加Teams Toolkit功能、优势、限制和功能
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 18c1379a630e637bea95209c35b823306b35a5de
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 413a42ce1f5eaa476faaf1bbfc97a987adcb6f65
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123995"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142960"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>向Teams应用添加功能
 

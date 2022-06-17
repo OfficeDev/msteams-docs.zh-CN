@@ -1,17 +1,16 @@
 ---
 title: 创建对话选项卡
 author: surbhigupta
-description: 了解如何为频道选项卡创建对话子级聊天，以使用代码示例管理对话
-keywords: teams 选项卡通道可配置
+description: 在本模块中，了解如何为频道选项卡创建聊天子实体聊天，以使用代码示例管理对话
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: ddf14d9d7dabe5b20cc21181783dc5c33f29eff9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111652"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142078"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
@@ -23,7 +22,7 @@ ms.locfileid: "65111652"
 
 若要支持会话子实体，Tab Web 应用程序必须能够在后端数据库中的子实体↔对话之间存储映射。 提供`conversationId`此功能，但必须将其存储`conversationId`并将其返回到Teams，以便用户继续对话。
 
-## <a name="start-a-new-conversation"></a>开始新对话
+## <a name="start-a-new-conversation"></a>"开始"菜单新对话
 
 若要启动新对话，请使用该 `openConversation()` 函数。 启动和继续会话均由此方法处理。 对函数的输入根据要执行的操作而更改，从用户的角度来看，这会打开屏幕右侧的对话面板，以启动对话或继续聊天。
 
@@ -103,8 +102,8 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## <a name="see-also"></a>另请参阅
 
-* [Teams选项卡](~/tabs/what-are-tabs.md)
+* [Teams 选项卡](~/tabs/what-are-tabs.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
-* [创建通道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 * [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
