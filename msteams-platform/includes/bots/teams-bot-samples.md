@@ -1,15 +1,15 @@
 ---
 title: Teams机器人示例
-description: 介绍 Bot Framework 的Teams示例
+description: 通过本学习模块，了解 Bot Framework 的Teams示例，其中包括用于演示该功能的工作示例。
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta12
-ms.openlocfilehash: 67a092138c3b466390d9d1f5d53f6a3ff84391cc
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 6074ada33b715ff414610910258583a9b7d11d6d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104558"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66140819"
 ---
 ## <a name="teams-bot-samples"></a>Teams机器人示例
 
@@ -19,7 +19,7 @@ ms.locfileid: "65104558"
 
 | **示例** | **说明** | **.NET** | **JavaScript** | **Python** |
 |--------|------------- |---|---|---|
-| Teams 对话自动程序 | 消息传送和会话事件处理。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot) |
+| Teams 对话自动程序 | 消息传递和对话事件处理。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot) |
 | 使用 OAuthPrompt 进行身份验证| Bot Framework v4 中的身份验证和基本消息传送。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth) |
 |Teams文件上传 | 在一对一对话中与机器人交换文件。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/56.teams-file-upload) |
 | 任务模块 | 从其中的卡片中检索任务模块和值以进行消息扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/54.teams-task-module) |
