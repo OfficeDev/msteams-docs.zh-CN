@@ -5,12 +5,13 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+keywords: UI 工具包管理选项卡设置单一登录 sso 深度链接基于角色的视图线程讨论
+ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144332"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123256"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>为 Microsoft Teams 设计选项卡
 

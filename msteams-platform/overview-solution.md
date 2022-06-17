@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 2df7bf928109c1616bebf99d895c953c4a420e9a
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1f2422f6e5c32e30bba80141e53a6ab60b08e08b
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795131"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123543"
 ---
 # <a name="the-teams-solution"></a>Teams 解决方案
 
@@ -71,7 +71,7 @@ Teams 应用为用户带去协作工作区的优势。
 1. 规划项目并确定要求。
 1. 设计应用。使用 Teams UI 工具包和 UI 库设计选项卡 UI。
 1. 使用 Teams 工具包和 JavaScript 生成应用。
-1. 通过 Microsoft Graph 添加更多 Teams 功能和 M365 数据来扩展功能。
+1. 通过添加更多 Teams 功能并使用Microsoft Graph Microsoft 365数据来扩展功能。
 1. 使用示例用户数据在开发人员租户上测试应用。
 1. 将应用部署到 Azure。
 1. 使用开发人员门户管理应用，并将应用发布到应用商店。 通过 SaaS 产品/服务、应用内购买等选项实现应用盈利。

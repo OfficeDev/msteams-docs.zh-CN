@@ -1,16 +1,16 @@
 ---
 title: 帮助规划 Teams 应用开发的问题
 author: heath-hamilton
-description: 规划应用时需要考虑的问题、了解用户及其需求、了解应用将解决的用户问题、规划用户身份验证及其载入体验
+description: 规划应用、了解用户及其需求、应用解决的问题、用户身份验证及其载入体验时需要考虑的问题。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: b0d9450f3d729131b28dbf744843eeeda1b91c22
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 01dfa683150070a2508173fb55991388ad877517
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756749"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123109"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams 应用规划清单
 

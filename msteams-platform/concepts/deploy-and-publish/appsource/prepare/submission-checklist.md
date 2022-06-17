@@ -1,17 +1,16 @@
 ---
 title: 准备应用商店提交
-description: 介绍提交以在应用商店中列出 Microsoft Teams 应用之前的最后步骤。 了解如何验证应用包、编译测试说明和创建应用商店一览详细信息。
+description: 在提交要在应用商店中列出的 Microsoft Teams 应用之前，请了解最后步骤。 了解如何验证应用包等。
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: 提交应用商店分发验证应用包指南本地化
-ms.openlocfilehash: 81c453a69b0c552c3e2db07edb6fd795d9c068ae
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: c71579900f910d2677ab0d48bab5a37853dfb69c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033006"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123165"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>准备 Microsoft Teams 应用商店提交
 
@@ -20,7 +19,7 @@ ms.locfileid: "66033006"
 请观看以下视频，以了解有关将应用发布到 Microsoft Teams 应用商店的详细信息：
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource) 之前，确保已完成以下操作。

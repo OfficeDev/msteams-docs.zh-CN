@@ -1,16 +1,15 @@
 ---
 title: Moodle 学习管理系统
-description: Moodle LMS 与 Teams 集成概述
+description: 了解 Moodle LMS 与 Teams、Moodle 学习管理、mConnect 和深层链接、辅助功能和用户需求方案的集成。 此集成提供音频、视频通话、聊天、保证和活动管理、分析信息等。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-keywords: moodle LMS mConnect 深层链接
-ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 61182fe5c11ba5c399d720ae043671983e262b1c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757344"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124023"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle 学习管理系统
 

@@ -1,17 +1,16 @@
 ---
 title: 概述 - 分发应用
-description: 介绍用于发布 Microsoft Teams 应用、上传应用和 GCC 的选项。
+description: 本文介绍用于发布 Microsoft Teams 应用、上传和部署应用以及 GCC 的选项。
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: 部署, 发布应用, 上传 gcc
-ms.openlocfilehash: e2c0af75b7cfb2e27255c9f6f194b5d9ab959093
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 72f902b340653cd6d57eccaf7bbd21e7ad608ebc
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111953"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123529"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>分发 Microsoft Teams 应用
 

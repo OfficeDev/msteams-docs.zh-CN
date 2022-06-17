@@ -1,16 +1,15 @@
 ---
 title: 集成人员选取器
-description: 如何使用 Teams JavaScript 客户端 SDK 集成人员选取器控件
-keywords: 人员选取器控件
+description: 本文介绍如何使用 Teams JavaScript 客户端 SDK 集成人员选取器控制和使用人员选取器的优势。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f16145354b05ab584e295ffd23262d2b925e4249
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757589"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123025"
 ---
 # <a name="integrate-people-picker"></a>集成人员选取器
 
@@ -52,7 +51,7 @@ ms.locfileid: "65757589"
 “人员选取器”输入控件允许用户使用以下步骤搜索和添加人员:
 
 1. 键入所需人员的姓名。 列表中显示名称建议。
-1. 从列表中选择所需人员的姓名。 
+1. 从列表中选择所需人员的姓名。
 
    :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="选取器选取器移动" border="true":::
 
@@ -61,7 +60,7 @@ ms.locfileid: "65757589"
 Web 或桌面上的“人员选取器”控件在 Web 应用顶部的模式窗口中启动，若要添加人员，请使用以下步骤:
 
 1. 键入所需人员的姓名。 列表中显示名称建议。
-1. 从列表中选择所需人员的姓名。 
+1. 从列表中选择所需人员的姓名。
 
    :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="按名称桌面人员选取器" border="true":::
 

@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams 应用商店排名参数
-description: Microsoft Teams 应用商店使用一组排名参数对应用商店中的应用搜索结果进行排名，以向用户提供相关的搜索结果。
+description: 了解 Microsoft Teams 应用商店使用一组排名参数对应用商店中的应用搜索结果进行排名，以便向用户提供相关的搜索结果。
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 10b637c388a862f7085216361ecb60d4d0bd72c4
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 61be6f8d85b5b98e9c96d4dec7301dea18ea55bc
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501933"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123848"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Microsoft Teams 应用商店排名参数
 
