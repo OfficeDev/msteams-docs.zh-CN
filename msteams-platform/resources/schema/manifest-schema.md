@@ -1,15 +1,14 @@
 ---
 title: 清单架构参考
-description: 介绍 Microsoft Teams 的清单架构
+description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-keywords: 团队清单架构
-ms.openlocfilehash: 5ec9aa0968ad8d15bf935302480330bca78c1bf1
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 49b3b1714d05f50ee6a4b186ff7a1a85d6209083
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032928"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130506"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -961,5 +960,5 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 * [了解Microsoft Teams结构](~/concepts/design/app-structure.md)
 * [启用应用自定义](~/concepts/design/enable-app-customization.md)
 * [本地化应用](~/concepts/build-and-test/apps-localization.md)
-* [集成媒体功能](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [集成媒体功能](~/concepts/device-capabilities/media-capabilities.md)
 * [Microsoft Teams 的公共开发人员预览清单架构](manifest-schema-dev-preview.md)

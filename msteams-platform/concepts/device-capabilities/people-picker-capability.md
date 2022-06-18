@@ -4,12 +4,12 @@ description: 本文介绍如何使用 Teams JavaScript 客户端 SDK 集成人�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: f16145354b05ab584e295ffd23262d2b925e4249
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123025"
+ms.locfileid: "66130443"
 ---
 # <a name="integrate-people-picker"></a>集成人员选取器
 
@@ -105,6 +105,6 @@ microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: micr
 
 ## <a name="see-also"></a>另请参阅
 
-* [在 Teams 中集成媒体功能](mobile-camera-image-permissions.md)
+* [集成媒体功能](~/concepts/device-capabilities/media-capabilities.md)
 * [在 Teams 中集成 QR 代码或条形码扫描程序功能](qr-barcode-scanner-capability.md)
 * [在 Teams 中集成位置功能](location-capability.md)

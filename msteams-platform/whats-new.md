@@ -1,14 +1,14 @@
 ---
 title: Teams 中面向开发人员的新增功能
-description: 了解 Microsoft Teams 中这些功能的新开发人员功能和增强功能。
+description: 在此学习路径中，了解 Microsoft Teams 中的新增开发人员功能和这些功能的增强功能。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8ca858211f87c9d514d655817b2a7887e70d4bf3
-ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
+ms.openlocfilehash: 0b7c2078980748f8e0820348e23a22c57ac7c22f
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66118968"
+ms.locfileid: "66130464"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -47,6 +47,7 @@ ms.locfileid: "66118968"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 06/16/2022 | 更新了支持桌面和移动设备的媒体功能| 集成设备功能 > [集成媒体功能](concepts/device-capabilities/media-capabilities.md)|
 | 06/08/2022 | 成功消息的可选卡片反馈| “生成机器人”>“机器人对话”>“[机器人对话中的消息](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)”|
 | 06/03/2022 | 更新了添加身份验证模块，用于使用新的结构和过程为选项卡应用启用 SSO | 添加身份验证 > 选项卡 > [在选项卡应用中启用单一登录](tabs/how-to/authentication/tab-sso-overview.md) |
 | 2022 年 5 月 24 日 | 快速批准发布链接到 SaaS 产品/服务的应用的其他提示 | 发布到 Teams 应用商店>概述>[快速批准发布链接到 SaaS 产品/服务的应用的其他提示](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
@@ -151,9 +152,9 @@ ms.locfileid: "66118968"
 |03/05/2021|默认安装范围和组功能 | 分配应用> [默认安装范围和组功能](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|对个人应用选项卡重新排序 | 生成选项卡> [个人应用中的聊天选项卡重新排序](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs) |
 |03/04/2021|自适应卡片中的信息屏蔽 | 生成卡片和任务模块>生成卡片> [自适应卡片中的信息屏蔽](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|02/19/2021|添加了位置功能。 <br/> 在设备功能概述、本机设备权限、集成媒体功能以及 QR 或条形码扫描仪功能文件中添加位置功能信息 | • 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> • 应用基础>设备功能> [请求设备权限](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>设备功能> [与媒体功能集成](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • 应用基础>设备功能>[将 QR 或条形码扫描程序功能集成](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • 应用基础>设备功能>[与位置功能集成](concepts/device-capabilities/location-capability.md) |
-|02/18/2021|添加了 QR 或条形码扫描仪功能。 <br/> QR 或条形码扫描仪功能信息已添加到设备功能概述、本机设备权限和集成媒体功能文件中 | • 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> • 应用基础>设备功能> [请求设备权限](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>设备功能> [与媒体功能集成](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • 应用基础>设备功能>[将 QR 或条形码扫描程序功能集成](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
-|02/09/2021|添加了设备功能概述。 <br/> 已将麦克风功能信息添加到本机设备权限和集成媒体功能文件中 |• 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> 应用基础> • 设备功能> [请求设备权限](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>设备功能> [与媒体功能集成](concepts/device-capabilities/mobile-camera-image-permissions.md)|
+|02/19/2021|添加了位置功能。 <br/> 在设备功能概述、本机设备权限、集成媒体功能以及 QR 或条形码扫描仪功能文件中添加位置功能信息 | • 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> • 应用基础>设备功能> [请求设备权限](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>设备功能> [与媒体功能集成](concepts/device-capabilities/media-capabilities.md) </br> • 应用基础>设备功能>[将 QR 或条形码扫描程序功能集成](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • 应用基础>设备功能>[与位置功能集成](concepts/device-capabilities/location-capability.md) |
+|02/18/2021|添加了 QR 或条形码扫描仪功能。 <br/> QR 或条形码扫描仪功能信息已添加到设备功能概述、本机设备权限和集成媒体功能文件中 | • 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> • 应用基础>设备功能> [请求设备权限](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>设备功能> [与媒体功能集成](concepts/device-capabilities/media-capabilities.md) </br> • 应用基础>设备功能>[将 QR 或条形码扫描程序功能集成](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
+|02/09/2021|添加了设备功能概述。 <br/> 已将麦克风功能信息添加到本机设备权限和集成媒体功能文件中 |• 应用基础>设备功能> [概述](concepts/device-capabilities/device-capabilities-overview.md) </br> 应用基础> • 设备功能> [请求设备权限](concepts/device-capabilities/native-device-permissions.md) </br> • 应用基础>设备功能> [与媒体功能集成](concepts/device-capabilities/media-capabilities.md)|
 
 <br>
 
