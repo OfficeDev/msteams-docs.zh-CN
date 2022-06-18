@@ -1,15 +1,15 @@
 ---
 title: Moodle 合作伙伴应用
-description: 合作伙伴应用简介
+description: 了解 Moodle 合作伙伴应用、Moodle 合作伙伴应用的主要优势、Saas 产品/服务和 mConnect。 为 Teams 用户启用单一登录 SSO。
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: ecb3d7a8a36a67a6d18315d5af3180a65f1602f3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ee6840193d0b2ecaf1eab2a7e466bcd61382e06f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757001"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123389"
 ---
 # <a name="partner-apps-for-moodle"></a>Moodle 合作伙伴应用
 
@@ -26,9 +26,9 @@ Microsoft Store 为 Moodle 提供所有经过认证的合作伙伴应用，这�
 
 ## <a name="mconnect"></a>mConnect
 
-mConnect 应用将 Moodle 课程和活动集成到 Teams 中，增强用户学习体验。 
+mConnect 应用将 Moodle 课程和活动集成到 Teams 中，增强用户学习体验。
 
-Skooler 是受信任的 Microsoft Gold 教育合作伙伴，他开发了 mConnect 应用并提供必要的支持。 
+Skooler 是受信任的 Microsoft Gold 教育合作伙伴，他开发了 mConnect 应用并提供必要的支持。
 
 mConnect 允许 Moodle 管理员自动设置 Teams for Moodle 课程，并为 Moodle 中的每门课程提供所有功能。
 

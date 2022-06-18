@@ -1,14 +1,14 @@
 ---
 title: 创建深层链接
-description: 了解如何描述 Teams 深层链接以及如何在应用中使用它们。
+description: 了解如何创建深层链接，以及如何在 Microsoft Teams 应用中使用和导航它们（带有选项卡）。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756767"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123715"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -245,7 +245,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 例如：`https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 > [!NOTE]
-> 搜索参数不支持用 `+` 信号代替空格 (` `)。 请确保 URI 编码代码对空格返回 `%20`，例如 `?subject=test%20subject` 是好的，但 `?subject=test+subject` 是不好的。
+> 搜索参数不支持用 `+` 信号代替空格 (``)。 请确保 URI 编码代码对空格返回 `%20`，例如 `?subject=test%20subject` 是好的，但 `?subject=test+subject` 是不好的。
 
 查询参数为：
 

@@ -1,18 +1,17 @@
 ---
 title: 创建个人选项卡
 author: laujan
-description: 使用 Node.js 通过 Yeoman 生成器、ASP.NET Core 或 ASP.NET Core MVC 为 Microsoft Teams 创建个人选项卡以及更新应用清单的快速指南。
+description: 在本模块中，了解如何使用 Node.js 通过适用于 Microsoft Teams 的 Yeoman 生成器、ASP.NET Core 或 ASP.NET Core MVC 创建个人选项卡以及更新应用清单。
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET MVC 包应用清单对话域权限存储
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673018"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143989"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -296,10 +295,10 @@ gulp ngrok-serve
 
 1. 在 Visual Studio 中，选择 **F5** 或从应用程序的“**调试**”菜单中选择“**开始调试**”，以验证应用程序是否已正确加载。 在浏览器中，转到以下 URL：
 
-    * <http://localhost:3978/>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978/>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>查看源代码</b></summary>
@@ -449,10 +448,10 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 Visual Studio 中，选择 **F5** 或从应用程序的“**调试**”菜单中选择“**开始调试**”，以验证应用程序是否已正确加载。 在浏览器中，转到以下 URL：
 
-    * <http://localhost:3978>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>查看源代码</b></summary>
@@ -552,7 +551,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 转到“[**开发人员门户**](https://dev.teams.microsoft.com/home)”。
 
-1. 打开“**应用**”并选择“**导入应用**”。
+1. 打开“**应用**”并选择“**导入引用**”。
 
 1. 应用包的名称是 **tab.zip**。 它可在以下路径中使用：
 

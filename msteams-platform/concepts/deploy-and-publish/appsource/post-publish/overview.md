@@ -1,16 +1,16 @@
 ---
 title: 维护和支持已发布的应用
-description: 在 Teams 应用商店和 AppSource 上列出你的应用后应进行的思考。
+description: 了解如何维护已发布的 Microsoft Teams 应用，以及在 Teams 应用商店和 AppSource 上列出应用商店后要考虑的操作。
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cea78b40bbfbe8b309f9e3fa8c05f62404717b33
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887805"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123046"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
@@ -65,6 +65,17 @@ Microsoft 针对在 Teams 应用商店中列出的应用运行每日自动化测
 ## <a name="complete-microsoft-365-certification"></a>完成 Microsoft 365 认证
 
 [Microsoft 365 认证](/microsoft-365-app-certification/docs/certification) 保证在 Microsoft 365 生态系统中安装第三方 Office 应用或外接程序时，数据和隐私受到充分保护。 认证确认了应用兼容于 Microsoft 技术、符合云应用安全最佳做法且受到 Microsoft 支持。
+
+## <a name="stop-app-distribution"></a>停止应用分发
+
+可以从 [Microsoft 商业市场](/azure/marketplace/overview) 中删除应用，以防止其发现和使用。
+
+若要在发布应用后停止分发，请按照以下步骤操作：
+
+1. 在“**产品概述**”页上，选择“**停止销售**”。 它会从 Microsoft AppSource 中删除该应用。
+1. 若要启动应用的取消列表，请在“**合作伙伴中心**”选择“**概述**”页，然后选择“**停止销售**”。
+
+停止分发应用后，仍可以在合作伙伴中心中看到它，状态为“**不可用**”。 如果决定再次发布该应用，请按照说明 [将应用发布到 Microsoft Teams 应用商店](/concepts/deploy-and-publish/appsource/publish#teams-app-submission)。
 
 ## <a name="see-also"></a>另请参阅
 

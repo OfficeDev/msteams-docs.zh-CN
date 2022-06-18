@@ -1,15 +1,15 @@
 ---
 title: 规划实现应用盈利
-description: 了解如何规划以实现 Microsoft Teams 应用盈利。
+description: 在本学习模块中，你将了解如何计划利用 Microsoft Teams 应用盈利，并了解实现全球可见性的最佳盈利选项。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 9a21304666866da5c08af5ba3df1f0a48297398c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 94ed62968cc2d6fc31086616b1d6e9c05f90e54b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756847"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144367"
 ---
 # <a name="plan-to-monetize-your-app"></a>规划实现应用盈利
 

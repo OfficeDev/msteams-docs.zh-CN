@@ -1,15 +1,14 @@
 ---
 title: 使用外部 OAuth 提供程序
-description: 描述使用外部 OAuth 提供程序的身份验证
+description: 在本模块中，了解如何使用外部 OAuth 提供程序进行身份验证，以及如何将其添加到外部浏览器
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: 使用外部 OAuth 提供程序进行团队身份验证
-ms.openlocfilehash: dc47163b58bcf2ce39820b0ba9db4e6cb05774ef
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 8a7d89bbe3c6109e52a4d22f4bc26eace7acc5d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826962"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142274"
 ---
 # <a name="use-external-oauth-providers"></a>使用外部 OAuth 提供程序
 

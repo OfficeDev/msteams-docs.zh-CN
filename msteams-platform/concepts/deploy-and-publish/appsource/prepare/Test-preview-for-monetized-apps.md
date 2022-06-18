@@ -1,17 +1,16 @@
 ---
 title: 针对盈利应用的测试预览
 author: v-ypalikila
-description: 在实时推送产品/服务之前，为 Teams 应用创建和测试 SaaS 预览版产品/服务。
+description: 了解如何在实时推送产品/服务之前，为 Teams 应用创建和测试 SaaS 预览版产品/服务。 可以在 Teams 中测试盈利应用的端到端购买体验。
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: teams 应用 SaaS 产品/服务预览版产品/服务测试预览版盈利 saas
-ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073814"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123701"
 ---
 # <a name="test-preview-for-monetized-apps"></a>针对盈利应用的测试预览
 

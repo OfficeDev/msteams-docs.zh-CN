@@ -1,16 +1,16 @@
 ---
 title: 调试 Teams 应用
-description: 在 Teams 工具包中本地调试 Teams 应用
+description: 在本模块中，了解如何在 Teams 工具包中本地调试 Teams 应用以及 Teams 工具包的主要功能
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123974"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142225"
 ---
 # <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
 
@@ -58,7 +58,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="停止调试":::
 
-## <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
+## <a name="debug-your-app-locally"></a>在本地调试应用
 
 下面的步骤帮助在本地调试 Teams 应用:
 

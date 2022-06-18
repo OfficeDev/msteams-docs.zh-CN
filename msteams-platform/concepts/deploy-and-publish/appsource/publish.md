@@ -1,16 +1,16 @@
 ---
 title: 概述–将应用发布到 Microsoft Teams 商店
-description: 介绍将应用提交到合作伙伴中心并将其发布到 Microsoft Teams 应用商店（和 AppSource）的过程。
+description: 了解将应用提交到合作伙伴中心并将其发布到 Microsoft Teams 应用商店（和 AppSource）的过程。
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: e2d9b08afb7be0d8d74596598876264f8efc10e0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757281"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124030"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -20,7 +20,7 @@ ms.locfileid: "65757281"
 
 ## <a name="understand-the-publishing-process"></a>了解发布过程
 
-当你认为应用已准备就绪，可以开始在 Teams 应用商店准备上架流程。
+如果你认为应用已准备就绪，可以开始在 Teams 应用商店准备上架流程。
 
 > [!TIP]
 > 严格遵循预提交步骤可以提高 Microsoft 批准应用发布的可能性。
@@ -51,7 +51,7 @@ ms.locfileid: "65757281"
 
 * **深层功能和体验测试**
 
-  验证程序会全面审查你的应用，以确保符合 [Microsoft 商业市场认证政策](/legal/marketplace/certification-policies)。 
+  验证程序会全面审查你的应用，以确保符合 [Microsoft 商业市场认证政策](/legal/marketplace/certification-policies)。
   重点介绍深度功能和用户体验测试、可用性检查、元数据检查。 跨桌面、Web 和移动客户端执行应用验证。 我们努力在提交后的 24 个工作日内为你提供详细的测试报告。
 
 * **通过引导式服务发布应用**

@@ -1,17 +1,17 @@
 ---
 title: 调试后台进程
 author: zyxiaoyuer
-description: 本地调试期间 Visual Studio Code 和 Teams 工具包的功能
+description: 在本模块中，了解本地调试期间 Visual Studio code 和 Teams 工具包的功能，并注册和配置 Teams 应用
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: d692f3f6869767e4b9948b36e521a56d799ebe4b
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: f2a94d92a157df20e956776f3a7e901219a45ffd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938924"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143583"
 ---
 # <a name="debug-background-processes"></a>调试后台进程
 
@@ -52,7 +52,7 @@ Teams 工具包在调试过程中检查以下先决条件：
   | 平台  | 软件|
   | --- | --- |
   |Windows、macO (x64) 和 Linux | **3.1（推荐）**, 5.0, 6.0 |
-  |macOs (arm64) |6.0 |
+  |macOS (arm64) |6.0 |
 
 * 开发证书，如果未在 Windows 或 MacOS 中的选项卡安装 localhost 的开发证书，则 Teams 工具包将提示你安装它。
 * Azure Functions 在 `api/extensions.csproj` 中定义绑定扩展，如果未安装 Azure Functions 绑定扩展，则 Teams 工具包将安装 Azure Functions 绑定扩展。

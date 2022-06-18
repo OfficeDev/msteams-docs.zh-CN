@@ -1,16 +1,15 @@
 ---
 title: 创建和发送邮件
 author: laujan
-description: 介绍如何使用 Microsoft Teams 中的 Office 365 连接器
+description: 在本模块中，了解如何使用 Office 365 连接器并在 Microsoft Teams 中创建和发送可操作邮件
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams Office365 连接器
-ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104075"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143261"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 

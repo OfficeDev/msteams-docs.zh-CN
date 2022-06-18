@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams 商店验证指南
-description: 介绍了每个提交给团队商店 (AppSource) 的应用程序必须遵循的准则。
+description: 在本文中，你将了解提交到 Teams 应用商店 (AppSource) 的每个应用都必须遵循的准则。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 316105d9ea6010094328ad7d204cfb765aecc022
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103970"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123841"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -23,6 +23,60 @@ ms.locfileid: "65103970"
 > * 某些准则标记为 *强制修复*。 如果你的应用提交不符合这些强制性准则，你将收到来自我们的失败报告，其中包含缓解措施。 只有在修复了问题后，应用提交才会通过 Microsoft Teams 应用商店验证。
 > * 其他准则标记为“*建议修复*”。为了获得理想的用户体验，我们建议你解决这些问题，但如果你选择不解决这些问题，也不会阻止你的应用提交在 Teams 应用商店上发布。
 
+:::row:::
+   :::column:::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/function.png" alt-text="功能" link="#general-functionality-and-performance" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules" border="false":::
+   :::column-end:::
+     :::column span="":::
+      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1" border="false":::
+   :::column-end:::
+:::row-end:::
+
 ## <a name="value-proposition"></a>价值主张
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略编号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements)，并为 Microsoft Teams 应用的开发人员提供有关其产品/服务价值主张的其他准则。
@@ -32,6 +86,8 @@ ms.locfileid: "65103970"
 [*强制修复*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 Microsoft [商业认证策略编号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name)，并为开发人员提供有关命名其应用的其他准则。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
 应用程序的名称对用户如何在商店中发现它起着关键作用。 使用以下准则命名应用：
 
@@ -57,15 +113,21 @@ ms.locfileid: "65103970"
  > [!TIP]  
  > 你的应用在 Microsoft Teams 应用商店和 Microsoft AppSource 上的品牌打造，包括应用名称、开发人员名称、应用图标、Microsoft AppSource 屏幕截图、视频、简短说明和网站，无论单独还是一起，不得模仿官方 Microsoft 产品/服务，除非你的应用是官方 Microsoft 1P 产品/服务。
 
+</details>
+
 ### <a name="suitable-for-workplace-consumption"></a>适用于工作区使用
 
 [*强制修复*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 Microsoft 商业认证策略号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value) 和 [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content)，并为开发人员提供了有关构建适合工作场所的应用的其他准则。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
 应用内容必须适用于一般工作场所使用，并遵循商业市场认证策略中列出的所有限制。 禁止与宗教、政治、赌博和长时间娱乐相关的内容。
 
 你的应用必须增进团队协作、提高个人工作效率，或同时满足两者。 用于团队联系和社交的应用必须是协作的，并且专为多个参与者设计。 应用不得要求每次会话投入时间超过 60 分钟或影响工作效率。
+
+</details>
 
 ### <a name="similar-platforms-and-services"></a>类似的平台和服务
 
@@ -86,6 +148,8 @@ ms.locfileid: "65103970"
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services)，并为开发人员提供关使用外部服务为其应用进行身份验证的其他准则。
 
 若要详细了解如何实施应用身份验证，请参阅 [Teams 中的身份验证](~/concepts/authentication/authentication.md)。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
 #### <a name="authenticating-with-external-services"></a>与外部服务进行身份验证
 
@@ -101,8 +165,9 @@ ms.locfileid: "65103970"
   
 * **内容共享体验**：需要通过外部服务进行身份验证以便在 Teams 频道中共享内容的应用必须在帮助文档（或类似资源）中清楚地说明如何断开连接或取消共享内容（如果外部服务支持此功能）。这并不意味取消内容共享的功能必须出现在你的 Teams 应用中。
 
-## <a name="security"></a>安全性
+</details>
 
+## <a name="security"></a>安全性
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略号 1140.3](/legal/marketplace/certification-policies#11403-security)。
 
@@ -111,18 +176,12 @@ ms.locfileid: "65103970"
 [*强制修复*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions)，并提供了有关在 Teams 界面中传输财务信息的准则，并通知了开发人员其 Teams 应用的移动 (Android 和 iOS) 版本的受限付款方案。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
-应用不得要求用户在 Teams 界面中付款，并通过机器人界面将财务信息传输给用户。  
+应用不得要求用户在 Teams 界面中付款，并通过机器人界面将财务信息传输给用户。
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![应用内付款](~/assets/images/submission/validation-financial-information-1.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
 
 只有在用户同意使用应用之前，在使用条款、隐私策略、配置文件页面或网站中披露外部付款服务，你才能提供安全外部付款服务的链接。
 
@@ -132,55 +191,39 @@ ms.locfileid: "65103970"
 
 * 应用不得包括旨在向用户推销支付版本的应用内购买、试用优惠或 UI，或指向可以购买其他内容、应用程序或加载项的联机应用商店的链接。
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![应用内购买](~/assets/images/submission/validation-financial-information-in-app-purchase.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![联机应用商店](~/assets/images/submission/validation-financial-information-online-stores.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
 * 如果应用需要帐户，则用户必须能够免费注册帐户。 禁止使用 **免费** 或 **免费帐户** 的术语。
 * 可以决定账户是无限期还是在有限时间内处于活动状态。当帐户到期时，应用不得显示指示需要支付的用户界面，文本或链接。
 * 应用的隐私策略和使用条款页面必须不含任何与商业相关的 UI 或链接。
+
+</details>
 
 ### <a name="bots"></a>机器人
 
 [*强制修复*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension)。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
 对于使用 Microsoft Azure 机器人服务的应用（如机器人和消息扩展），必须遵循 Microsoft [在线服务条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)中定义的所有要求。
 
 机器人必须始终请求上传文件的权限并显示确认消息。
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![确认消息](~/assets/images/submission/validation-bot-confirmation-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-confirmation-message.png" alt-text="validation-bot-confirmation":::
+
+</details>
 
 ### <a name="external-domains"></a>外部域
 
 [*强制修复*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains)，并提供了有关在 `validDomains` 清单属性中使用受限域的开发人员准则。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
 不要在应用的域配置中包含组织控制之外的域（包括通配符）和隧道服务。以下的例外情况包括:
 
@@ -190,6 +233,8 @@ ms.locfileid: "65103970"
 #### <a name="government-community-cloud-listings"></a>政府社区云列表
 
 若要将应用分发给政府社区云 (GCC) 用户，身份验证过程必须标识用户并将其路由到 GCC 特定 URL 或预期 URL，同时避免在 Teams 应用商店中重复列出。
+
+</details>
 
 ### <a name="sensitive-content"></a>敏感内容
 
@@ -208,10 +253,14 @@ ms.locfileid: "65103970"
 [*强制修复*]
 
 应用不得将用户带出 Teams 的核心用户场景。 应用内容和交互必须在 Teams 的功能中发生，如机器人、自适应卡片和任务模块。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
 应在 Teams 应用内链接用户，而不是链接到外部网站或应用。 对于需要外部功能的情况，你的应用必须获得明确的用户权限才能启动该功能。
 
 启动外部功能的按钮 UI 文本必须包含指示用户已退出 Teams 实例的内容。 例如，包括如下文本，**由此转到 Contoso.com** 或 **在 Contoso.com 中查看**。
+
+</details>
 
 ### <a name="compatibility"></a>兼容性
 
@@ -268,7 +317,11 @@ Teams 应用清单定义应用的配置。
 
 [*强制修复*]
 
-图标是用户在浏览 Teams 应用商店时看到的主要元素之一。 图标必须传达应用的品牌和用途，同时遵循以下要求：
+图标是用户在浏览 Teams 应用商店时看到的主要元素之一。 
+<br></br>
+<details><summary>展开以了解详细信息</summary>
+
+图标必须传达应用的品牌和用途，同时遵循以下要求：
 
 * 应用包必须包含两个 PNG 版本的应用图标：彩色图标和大纲图标。
 * 图标的颜色版本必须为 192x192 像素。 图标符号可以是任何颜色，但必须位于纯色或完全透明的方形背景上。
@@ -282,9 +335,13 @@ Teams 应用清单定义应用的配置。
 
 有关详细信息，请参阅 [图标准则](~/concepts/build-and-test/apps-package.md#app-icons)。
 
+</details>
+
 ### <a name="app-descriptions"></a>应用说明
 
 必须对应用有一个简短而长的介绍。 应用配置和合作伙伴中心中的说明必须相同。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
 说明不得直接或通过影射贬损其他品牌（Microsoft 所有或其他）。 请确保说明不包含无法证实的声明。 例如，**保证效率提高 200%**。
 
@@ -346,9 +403,15 @@ Teams 应用清单定义应用的配置。
 * 作出未经验证的声明。 例如，最好、顶级和排名，除非附带声明的来源。
 * 将产品/服务与其他市场产品/服务进行比较。
 
+</details>
+
 ### <a name="screenshots"></a>屏幕截图
 
-屏幕截图提供了应用的突出视觉预览，以作为应用名称、图标和说明的补充。请记住以下几点:
+屏幕截图提供了应用的突出视觉预览，以补充应用名称、图标和说明。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
+
+请记住以下事项：
 
 * 每个列表最多可以有五个屏幕截图。
 * 支持的文件类型包括 PNG、JPEG 和 GIF。
@@ -373,6 +436,8 @@ Teams 应用清单定义应用的配置。
 
 > [!TIP]  
 > 视频可能是传达用户必须使用你的应用的原因的最有效方法。 用户也将在列表中首先看到视频。 有关详细信息，请参阅 [创建商店列表视频](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video)。
+
+</details>
 
 ### <a name="privacy-policy"></a>隐私策略
 
@@ -401,11 +466,17 @@ Teams 应用清单定义应用的配置。
 
 ### <a name="support-links"></a>支持链接
 
+[*强制修复*]
+
 应用的支持 URL 不得要求身份验证。 例如，用户不得登录来联系你。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
-支持 URL 必须包含你的联系方式详细信息或供用户提出支持票证的方式。 例如，如果你的支持 URL 托管在 GitHub 上，GitHub 页面必须处于你的所有权下，并且必须包括你的联系方式详细信息或供用户提出支持票证的方式。 [*强制修复*]
+支持 URL 必须包含你的联系方式详细信息或供用户提出支持票证的方式。 例如，如果你的支持 URL 托管在 GitHub 上，GitHub 页面必须处于你的所有权下，并且必须包括你的联系方式详细信息或供用户提出支持票证的方式。
 
-  ![支持 URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
+:::image type="content" source="../../../../assets/images/submission/validation-supportlinks-authentication.png" alt-text="validation-support-links-auth":::
+
+</details>
 
 ### <a name="localization"></a>本地化
 
@@ -415,14 +486,20 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="apps-linked-to-saas-offer"></a>链接到 SaaS 产品/服务的应用
 
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673)。 如果要生成链接到 SaaS 产品/服务的 Teams 应用，请确保它遵守这些准则。
+<br></br>
+<details><summary>常规</summary>
+
 * ISV 必须支持相同租户中的多个用户 (订阅者) 管理自己的订阅，并将许可证分配给租户中的用户。
-*
- 产品/服务必须满足链接到 SaaS 产品/服务的 Teams 应用的所有[技术要求](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer)。
+* 产品/服务必须满足链接到 SaaS 产品/服务的 Teams 应用的所有[技术要求](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer)。
 * 链接到 SaaS 产品/服务的 Teams 应用必须满足[1000 服务型软件 (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas) 中定义的所有要求。
 * 清单文件中提到的 `subscriptionOffer` 详细信息必须正确。 在应用清单中，使用值 `publisherId.offerId` 添加或更新节点 `subscriptionOffer`。 例如，如果你的发布者 ID 是 `contoso1234`，并且你的产品/服务 ID 是 `offer01`，你在应用清单中指定的值必须是 `contoso1234.offer01`。
 * 链接到 SaaS 产品/服务的 Teams 应用必须在 AppSource 中已推出，并且不接受预览产品/服务通过应用商店批准。
 
-### <a name="offer-metadata"></a>产品/服务元数据
+</details>
+
+</br>
+<details><summary>产品/服务元数据</summary>
 
 * 产品/服务元数据必须与 Teams 清单、AppSource 中的 Teams 应用列表和 AppSource 中的 SaaS 产品/服务匹配。
 * Teams 应用和 SaaS 产品/服务必须来自同一发布者或开发人员。 应用清单中引用的 SaaS 产品/服务必须属于将 Teams 应用提交给商业市场时相同的发布者。
@@ -432,7 +509,10 @@ Teams 应用清单定义应用的配置。
 * 链接到 SaaS 产品/服务的 Teams 应用旨在支持按姓名和用户分配许可证。 有时，SaaS 产品/服务是使用其他方法构建的，或者具有专门的购买流。 你必须在应用元数据和订阅计划详细信息中清楚地提及构建方法和购买流的详细信息。
 * SaaS 产品/服务必须为购买流的所有适用状态中的所有用户提供消息和准则。
 
-### <a name="saas-offer-home-page-and-license-management"></a>SaaS 产品/服务主页和许可证管理  
+</details>
+</br>
+
+<details><summary>SaaS 产品/服务主页和许可证管理</summary>
 
 * 向订阅者提供有关如何使用产品的介绍。
 * 允许订阅者分配许可证。
@@ -441,19 +521,27 @@ Teams 应用清单定义应用的配置。
 * 许可证分配后通知用户。
 * 通过 Teams 聊天机器人或电子邮件，指导用户如何将应用添加到 Teams 并开始使用。
 
-### <a name="usability-and-functionality"></a>可用性和功能  
+</details>
+</br>
+
+<details><summary>可用性和功能</summary>
 
 * 成功购买和分配许可证后，必须提供以下内容：
 * 用户订阅计划功能的访问权限。
 * 用户订阅计划的价值增加和显著优势。
 * 从 Teams 应用中，提供指向 SaaS 应用程序主页的链接，以便订阅者将来管理许可证。
 
-### <a name="configure-and-test-saas-application"></a>配置和测试 SaaS 应用程序
+</details>
+</br>
+
+<details><summary>配置和测试 SaaS 应用程序</summary>
 
 如果出于测试目的的应用设置非常复杂，请提供端到端功能文档、链接的 SaaS 产品/服务配置步骤，以及作为"认证说明"一部分的许可证和用户管理说明。
 
 > [!TIP]  
 > 你可以添加一个有关应用和许可证管理工作原理的视频，以帮助团队进行测试。
+
+</details>
 
 ## <a name="tabs"></a>选项卡
 
@@ -462,137 +550,56 @@ Teams 应用清单定义应用的配置。
 > [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 设计指南](~/tabs/design/tabs.md)。
 
-### <a name="setup"></a>安装
+</br>
+<details><summary>安装</summary>
 
 * 选项卡设置 **不得终止** 新用户。 提供有关如何完成操作或工作流的信息。 [*强制修复*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![创建新帐户](~/assets/images/submission/validation-tabs-setup-create-new-account.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-create-new-account.png" alt-text="validation-tabs-setup-create-new-acc":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![缺少前进指南](~/assets/images/submission/validation-tabs-missing-forward-guidance.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-missing-forward-guidance.png" alt-text="validation-tabs-missing-fwd-guidance":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![新用户注册](~/assets/images/submission/validation-tabs-setup-new-user.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="validation-tabs-set-up-new-user":::
 
 * 为了获得最佳首次运行体验，在选项卡设置过程中对用户进行身份验证，而不是之后进行身份验证。 身份验证可在选项卡配置窗口外发生。 [*建议修复*]
 
 * 用户不得离开 Teams 内部的选项卡配置体验以在 Teams 外部创建内容，然后返回到 Teams 以固定内容。 选项卡配置屏幕必须说明配置值以及如何配置。 [*强制修复*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![获取配置文件名称](~/assets/images/submission/validation-tabs-setup-profile-name.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
 * 选项卡配置屏幕不得嵌入整个网站。应使配置体验保持专注。例如，如果要生成允许用户在频道中配置项目的项目管理应用，请将选项卡配置屏幕重点放在允许用户从应用中选择项目以在频道中进行配置。[*强制修复*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![配置体验](~/assets/images/submission/validation-tabs-setup-configuration-experience.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![配置屏幕](~/assets/images/submission/validation-tabs-setup-configuration-screen.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-screen.png" alt-text="validation-tabs-set-up-configuration-screen":::
 
 * 选项卡配置屏幕不得要求用户嵌入 URL。 要求用户在选项卡设置期间配置 URL 是不好的 UX，用户离开选项卡配置屏幕，获取 URL，返回到配置屏幕并输入 URL。 预先存在的 Teams 功能已允许用户在频道中固定网站链接。 如果你的应用要求用户在选项卡配置期间嵌入网站 URL，并且应用限制为在频道选项卡中显示整个网站内容，则你的应用不会为用户提供重要价值。 [*强制修复*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![已配置的 URL](~/assets/images/submission/validation-tabs-setup-configured-url.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url.png" alt-text="validation-tabs-set-up-configured-url":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![已配置的 URL 受限](~/assets/images/submission/validation-tabs-setup-configured-url-two.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url-two.png" alt-text="validation-tabs-set-up-configured-url-two":::
 
-### <a name="views"></a>视图
+</details>
+</br>
+
+<details><summary>视图</summary>
 
 * 登录屏幕区域不得使用大型徽标。[*强制修复*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![查看大型徽标](~\assets\images\submission\validation-views-applogin.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
 
-* 可以通过跨多个选项卡进行分解来简化内容。[*建议修复*]
+* 可以通过跨多个选项卡进行分解来简化内容。 [*建议修复*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![多个选项卡](~/assets/images/submission/validation-views-multiple-tabs.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
 * 选项卡不应具有重复标题。请从 iframe 中删除重复徽标，因为选项卡框架已显示应用图标和名称。[*建议修复*]
 
- :::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![重复的标题徽标](~/assets/images/submission/validation-views-duplicate-header-logo.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
-### <a name="navigation"></a>导航
+</details>
+</br>
+
+<details><summary>导航</summary>
 
 下面是导航准则：
 
@@ -600,67 +607,19 @@ Teams 应用清单定义应用的配置。
 
 使用 [基本](~/concepts/design/design-teams-app-basic-ui-components.md) 和 [高级](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI 组件设计应用。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![左侧导航](~/assets/images/submission/validation-navigation-left-navigation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![图标和文本](~/assets/images/submission/validation-navigation-icon-text.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![可折叠的左栏](~/assets/images/submission/validation-navigation-collapsable-left-rail.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="validation-navigation-left-nav":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![静态选项卡](~/assets/images/submission/validation-navigation-static-tab.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-icon-text.png" alt-text="validation-nav-icon-text":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![水平栏](~/assets/images/submission/validation-navigation-horizontal-rail.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
-* 工具栏位于左栏中的选项卡必须与 Teams 左侧导航保留 20px 的间距。[*强制修复*]
+* 左栏中具有工具栏的选项卡必须与 Teams 左侧导航保留 20px 的间距。 [*强制修复*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![工具栏之间的间距](~/assets/images/submission/validation-navigation-spacing-between-toolbar.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
 * 选项卡中的第二级和第三级页面必须在主选项卡区域的第二级别 (L2) 和第三级别 (L3) 视图中打开，这通过痕迹导航或左侧导航进行导航。还可以包括以下组件来帮助选项卡导航：[*强制修复*]
   * 后退按钮
@@ -670,83 +629,30 @@ Teams 应用清单定义应用的配置。
 
 * 选项卡中的深层链接不得链接到外部网页，而应链接到 Teams 内部。例如，任务模块或其他标签。[*强制修复*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![未链接的视图按钮](~/assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
 * 选项卡不得允许用户导航到 Teams 外部以获得核心应用体验。 对于非核心工作流，选项卡可以重定向到 Teams 外部。 例如，提出支持票证。 [*强制修复*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![配置选项卡内的核心工作流](~/assets/images/submission/validation-navigation-core-workflow-within-configuration.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-within-configuration.png" alt-text="validation-nav-core-workflow-within-configuration":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![应用核心工作流重定向到外部](~/assets/images/submission/validation-navigation-core-workflow-redirects-outside.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
 
-### <a name="usability"></a>可用性
+</details>
+</br>
+
+<details><summary>可用性</summary>
 
 * 选项卡必须提供价值，而不仅仅是托管现有网站。 [*强制修复*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![可用性应用提供工作流](~/assets/images/submission/validation-usability-app-provides-workflows.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="validation-usability-app-provides-work-flows":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![可用性网站 I-Frame](~/assets/images/submission/validation-usability-website-i-framed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="validation-usability-website-i-frame":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![可用性 Teams 应用相同](~/assets/images/submission/validation-usability-teams-app-identical-website.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-teams-app-identical-website.png" alt-text="validation-usability-teams-app-identical-websites":::
 
 * 内容不得在选项卡中截断或重叠。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![可用性内容截断](~/assets/images/submission/validation-usability-content-truncation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-content-truncation.png" alt-text="validation-usability-content-truncations":::
 
 * 用户必须能够撤消其在选项卡中的最后一个操作。
 
@@ -754,37 +660,13 @@ Teams 应用清单定义应用的配置。
 
 * 选项卡必须响应 Teams 主题。 当用户更改主题时，应用的主题必须反映所选内容。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![可用性响应选项卡](~/assets/images/submission/validation-usability-responsive-tabs.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-responsive-tabs.png" alt-text="validation-usability-responsive-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![可用性无响应选项卡](~/assets/images/submission/validation-usability-unresponsive-tabs.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
 * 选项卡必须尽可能使用 Teams 样式的组件，如 Teams 字体、类型渐变、调色板、网格系统、运动、语调等。有关详细信息，请参阅 [选项卡设计准则](/microsoftteams/platform/tabs/design/tabs)。[*建议修复*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![可用性不同的字体](~/assets/images/submission/validation-usability-app-uses-diff-font.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * 如果你的应用功能需要更改设置，请包含一个 **设置** 选项卡。 [*建议修复*]
 * 选项卡必须遵循 Teams 交互设计，例如页内导航、对话框位置和使用、信息层次结构等。有关详细信息，请参阅 [Microsoft Teams Fluent UI 工具包](~/concepts/design/design-teams-app-basic-ui-components.md)
@@ -797,27 +679,11 @@ Teams 应用清单定义应用的配置。
 
 * 如果你的应用需要为用户提供个人范围视图以提高效率或工作场所的工作效率，请使用筛选视图、个人应用的深层链接，或导航到可配置选项卡内的 L2 或 L3 视图，并在使所有用户的登录页面保持上下文相同。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![可用性可配置选项卡个人信息](~/assets/images/submission/validation-usability-configurable-tab-personal-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="validation-usability-configurable-tab-pers-info":::
 
 * 可配置选项卡必须具有重点功能。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![可用性可配置的嵌套选项卡](~/assets/images/submission/validation-usability-configurable-nested-tabs.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
 
 * 选项卡体验必须在移动设备（Android 和 iOS）上完全响应。
 
@@ -825,6 +691,8 @@ Teams 应用清单定义应用的配置。
 >
 > * 将个人机器人与个人选项卡一起包含在一起。
 > * 允许用户从其个人选项卡中共享内容。
+
+</details>
 
 ## <a name="bots"></a>机器人
 
@@ -835,133 +703,62 @@ Teams 应用清单定义应用的配置。
 > [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 机器人设计准则](~/bots/design/bots.md)。
 
-### <a name="bot-commands"></a>机器人命令
+</br>
+<details><summary>机器人命令</summary>
 
 分析用户输入和预测用户意图是困难的。机器人命令为用户提供了一组字词或短语，以便于机器人理解。
 
 * 强烈建议在应用配置中列出支持的机器人命令。 当用户尝试向机器人发送消息时，这些命令将显示在撰写框中。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![列出的机器人命令](~/assets/images/submission/validation-bot-commands-listed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
-  
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![未列出的机器人命令](~/assets/images/submission/validation-bot-commands-not-listed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="validation-bot-commands-list":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="validation-bot-commands-not-list":::
 
 * 机器人支持的所有命令必须正常工作，包括常规命令，如 **Hi**、**Hello** 和 **Help**。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![机器人帮助命令](~/assets/images/submission/validation-bot-help-command.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="validation-bots-help-command":::
 
 * 机器人命令不得将用户引入死路，这些命令必须始终提供前进的方法。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![机器人命令死路](~/assets/images/submission/validation-bot-commands-deadend.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
 > [!TIP]
 > 对于个人机器人，请包括一个 **帮助** 选项卡，进一步描述机器人可以执行的操作。
 
-### <a name="bot-welcome-messages"></a>机器人欢迎消息
+</details>
+</br>
 
-* 如果应用具有复杂的配置流 (需要企业许可证或缺少直观的注册流) ，则此类应用中的机器人必须在首次运行时始终发送欢迎消息。 为了获得最佳体验，欢迎消息必须包含机器人提供给用户的价值、在频道中安装机器人的用户、如何配置机器人并简要描述所有受支持的机器人命令。 可以使用带按钮的自适应卡片显示欢迎消息，以提供更好的可用性。 有关详细信息，请参阅 [如何触发机器人欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。 对于没有复杂配置流的应用，你可以选择在机器人首次运行体验期间触发欢迎消息。 但是，如果触发欢迎消息，则必须遵循欢迎消息准则。
+<details><summary>机器人欢迎消息</summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![机器人欢迎消息](~/assets/images/submission/validation-bot-welcome-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+* 如果应用具有复杂的配置流 (需要企业许可证或缺少直观的注册流) ，则此类应用中的机器人必须在首次运行时始终发送欢迎消息。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![机器人无欢迎消息](~/assets/images/submission/validation-bot-no-welcome-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+为了获得最佳体验，欢迎消息必须包含机器人提供给用户的价值、在频道中安装机器人的用户、如何配置机器人并简要描述所有受支持的机器人命令。 可以使用带按钮的自适应卡片显示欢迎消息，以提供更好的可用性。 有关详细信息，请参阅 [如何触发机器人欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。 对于没有复杂配置流的应用，你可以选择在机器人首次运行体验期间触发欢迎消息。 但是，如果触发欢迎消息，则必须遵循欢迎消息准则。
 
-* 首次运行期间，频道和聊天中的机器人欢迎消息是可选的，尤其是在机器人可供个人使用并执行类似操作时。 机器人不得向用户单独发送欢迎 (将被视为[垃圾邮件](#bot-message-spamming))。 消息还必须提及添加机器人的用户。
+:::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![欢迎消息未触发](~/assets/images/submission/validation-bot-welcome-message-not-triggered.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![欢迎消息已触发](~/assets/images/submission/validation-bot-welcome-message-triggered.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+* 首次运行期间，频道和聊天中的机器人欢迎消息是可选的，尤其是在机器人可供个人使用并执行类似操作时。 机器人不得向用户单独发送欢迎 (将被视为[垃圾邮件](#botmessagespamming))。 消息还必须提及添加机器人的用户。
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
 
 > [!TIP]
 > 在向单个用户发送的欢迎消息中，一次全方位介绍可以有效概述机器人和任何其他应用功能，鼓励用户尝试机器人命令。 例如，**创建任务**。
 
-### <a name="bot-message-spamming"></a>机器人邮件垃圾邮件
+</details>
+</br>
+
+<details><summary><a id="botmessagespamming">机器人邮件垃圾邮件</a></summary>
 
 机器人不得向用户发送垃圾邮件，即在短时间内发送多条消息。
 
 * **频道和聊天中的机器人邮件**: 请勿通过创建单独的帖子向用户发送垃圾邮件。 创建单一的帖子，并在同一线程中进行回复。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![机器人发送一条垃圾消息](~/assets/images/submission/validation-bot-message-spamming-one-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-one-message.png" alt-text="validation-bot-message-spam-one-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![机器人发送多条垃圾消息](~/assets/images/submission/validation-bot-message-spamming-multiple-messages.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
 * **个人应用中的机器人消息**：
   * 不要在短时间内发送多条消息。
@@ -970,53 +767,26 @@ Teams 应用清单定义应用的配置。
   * 使用窗体 (或任务模块) 一次性收集用户的所有输入。
   * 基于 NLP 的对话聊天机器人可以使用多轮对话使讨论更具吸引力并完成工作流。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![机器人使用任务模块](~/assets/images/submission/validation-bot-messages-using-task-module.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![机器人使用多轮对话](~/assets/images/submission/validation-bot-messages-using-mutliple-conversation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="validation-bot-messages-using-mutliple-conversations":::
 
 * **欢迎消息**：不要定期重复相同的欢迎消息。 例如，将新成员添加到团队时，不要向其他成员发送显示为欢迎消息的垃圾邮件。 向新成员单独发送消息。
 
-### <a name="bot-notifications"></a>机器人通知
+</details>
+</br>
+
+<details><summary>机器人通知</summary>
 
 机器人通知必须包含与你为机器人 (团队、聊天或个人) 定义的范围相关的内容。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![机器人通知相关](~/assets/images/submission/validation-bot-notifications-relevant.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-relevant.png" alt-text="validation-bot-notification-relevant":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![机器人通知不相关](~/assets/images/submission/validation-bot-notifications-not-relevant.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-not-relevant.png" alt-text="validation-bot-notification-not-relevant":::
 
-### <a name="bots-and-adaptive-cards"></a>机器人和自适应卡片
+</details>
+</br>
+<details><summary>机器人和自适应卡片</summary>
 
 自适应卡片是强烈建议显示机器人消息的方法。 卡片必须轻量，并且最多只包含六个操作。 若要显示更多内容，请考虑使用任务模块或选项卡。
 
@@ -1027,7 +797,10 @@ Teams 应用清单定义应用的配置。
 
 机器人体验必须在移动设备上完全响应。 机器人响应必须提供一种前进方法（如果适用）。 机器人必须快速响应，并且失败时会显示一条得体的失败错误消息。 基于协作范围内触发器在个人范围内发送给用户的机器人消息必须提供上下文信息 (包括消息的来源)。
 
-### <a name="notification-only-bots"></a>仅通知机器人
+</details>
+</br>
+
+<details><summary>仅通知机器人</summary>
 
 由仅通知机器人组成的应用通过基于核心应用或后端中的特定触发器或事件触发用户通知，从而为用户提供价值。 例如，添加了新的销售线索或潜在客户，供销售团队跟进。 高质量通知仅机器人会在某些事件完成（如工作流完成或警报）上定期通知用户。
 
@@ -1038,28 +811,16 @@ Teams 应用清单定义应用的配置。
 
 仅提供包含内容的通知（如 **你有新通知，单击以查看**）并要求用户导航到 Teams 外部以进行其他所有操作的应用不会在 Teams 中提供重大价值。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![机器人不足信息](~/assets/images/submission/validation-bot-notification-only-inadequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![机器人充足信息](~/assets/images/submission/validation-bot-notification-only-adequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="validation-bot-notifications-only-inadequete-info":::
 
 > [!TIP]
 > 预览信息并在发布卡片中提供基本的内联用户操作，以便用户无需导航到 Teams 外部进行所有操作 (不考虑复杂性)。
+
+</details>
 
 ## <a name="message-extensions"></a>消息扩展
 
@@ -1070,107 +831,55 @@ Teams 应用清单定义应用的配置。
 > [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 消息扩展设计准则](~/messaging-extensions/design/messaging-extension-design.md)。
 
-### <a name="action-commands"></a>操作命令
+</br>
+<details><summary>操作命令</summary>
 
 基于操作的消息扩展必须执行以下操作：
 
 * 允许用户在未完成中间步骤（如登录）的情况下对消息触发操作。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![无中间步骤 ](~/assets/images/submission/validation-messaging-extension-no-intermediate-step.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-no-intermediate-step.png" alt-text="validation-messaging-extension-no-intermediate-steps":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![中间步骤可用](~/assets/images/submission/validation-messaging-extension-intermediate-step-available.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-intermediate-step-available.png" alt-text="validation-messaging-extension-intermediate-steps-available":::
 
-* 将消息上下文传递到下一个工作状态。[*强制修复*]
+* 将消息上下文传递到下一个工作状态。 [*强制修复*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![应用传递消息](~/assets/images/submission/validation-messaging-extension-app-passes-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-passes-message.png" alt-text="validation-messaging-extension-app-passes-messages":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![应用不传递消息](~/assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png" alt-text="validation-messaging-extension-app-doesnot-pass-messages":::
 
 * 包含主机应用名称，而不是从聊天消息、频道帖子或应用内操作调用触发的操作命令的通用动词。 例如，使用“**启动 Skype 会议**”代表“**开始会议**”、“**将文件上传到 DocuSign**”代表“**上传文件**”等。 [*建议修复*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![操作命令主机名](~/assets/images/submission/validation-messaging-extension-action-command-host-name.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-host-name.png" alt-text="validation-messaging-extension-action-command-host-names":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![操作命令动词](~/assets/images/submission/validation-messaging-extension-action-command-verb.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
 
-### <a name="preview-links-link-unfurling"></a>预览链接 (链接展开)
+</details>
+</br>
+
+<details><summary>预览链接 (链接展开)</summary>
+
+[*强制修复*]
 
 消息扩展必须预览在 Teams 撰写框中识别的链接。 不要添加不受控制的域 (无论是绝对 URL 或通配符)。 例如，`yourapp.onmicrosoft.com` 有效，但 `*.onmicrosoft.com` 无效。 也禁止使用顶级域。 例如，`*.com` 或 `*.org`。 [*强制修复*]
 
-### <a name="search-commands"></a>搜索命令
+</details>
+</br>
+
+<details><summary>搜索命令</summary>
 
 * 基于搜索的消息扩展必须提供可帮助用户进行有效搜索的文本。 [*强制修复*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![帮助文本可用](~/assets/images/submission/validation-search-commands-text-available.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-commands-text-available.png" alt-text="validation-search-command-text-available":::
 
 * @提及可执行文件必须清晰、易于理解且可读。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![搜索命令不明确可执行](~/assets/images/submission/validation-search-command-unclear-executable.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
 
-### <a name="search-based-message-extension-only-apps"></a>仅基于搜索的消息扩展应用
+</details>
+</br>
+
+<details><summary>操作命令</summary>仅基于搜索的消息扩展应用
 
 [*强制修复*]
 
@@ -1181,64 +890,43 @@ Teams 应用清单定义应用的配置。
 1. 已发布卡片提供了足够详细的信息，无需用户进一步操作。
 1. 已发布卡片为用户提供了足够的预览信息，以便进行操作或决定在 Teams 外部打开的链接中进一步查看详细信息。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![基于搜索的消息传递不足](~/assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-   ![基于搜索的消息传递足够](~/assets/images/submission/validation-search-based-messaging-ext-adequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
 
 链接仅展开应用不会在 Teams 中提供重大价值。 如果应用仅支持链接展开且没有其他功能，请考虑在应用中构建其他工作流。
 
+</details>
+
 ## <a name="task-modules"></a>任务模块
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules)。
+[*强制修复*]
 
-任务模块必须包含图标及其关联的应用的短名称。 任务模块不得嵌入整个应用，而只能显示完成特定操作所需的组件。 [*强制修复*]
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules)。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
+
+任务模块必须包含图标及其关联的应用的短名称。 任务模块不得嵌入整个应用，而只能显示完成特定操作所需的组件。
 
 有关详细信息，请参阅[Teams 任务模块设计准则](~\task-modules-and-cards\task-modules\design-teams-task-modules.md)。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![任务模块显示组件](~/assets/images/submission/validation-task-module-displays-components.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-task-module-displays-components.png" alt-text="validation-task-module-displays-component":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![任务模块嵌入应用](~/assets/images/submission/validation-task-module-embeds-app.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-task-module-embeds-app.png" alt-text="validation-task-module-embed-app":::
 
 > [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 任务模块设计准则](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)。
+
+</details>
 
 ## <a name="meeting-extensions"></a>会议扩展
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions)。
 > [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 会议扩展设计准则](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
+
+</br>
+<details><summary>常规</summary>
 
 对会议扩展使用以下准则：
 
@@ -1257,75 +945,55 @@ Teams 应用清单定义应用的配置。
 > [!TIP]
 > 必须将 `groupchat` 声明为 `configurableTabs` 和 `meetingDetailsTab`下的范围，或将 `meetingChatTab` 和 `meetingSidePanel` 声明为清单中的上下文属性，以便在 Teams 移动版上为会议启用你的应用。
 
-### <a name="pre-and-post-meeting-experience"></a>会议前和会议后体验
+</details>
+
+</br>
+<details><summary>会议前和会议后体验</summary>
 
 * 会议前和会议后屏幕必须遵守常规选项卡设计准则。 有关详细信息，请参阅[Teams 设计准则](~/tabs/design/tabs.md)。
 * 选项卡不得有水平滚动。
 * 显示多个项时，选项卡应具有井然有序的布局。 例如，超过 10 个投票或调查，请参阅 [示例布局](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting)。
 * 当导出调查或投票的结果时，你的应用必须通知用户，表明“**结果已成功下载**”。
 
-### <a name="in-meeting-experience"></a>会议内体验
+</details>
+
+</br>
+<details><summary>会议内体验</summary>
 
 * 在会议期间应用必须仅能使用深色主题。 有关详细信息，请参阅[Teams 设计准则](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming)。
 * 在会议期间将鼠标悬停在应用图标上时，工具提示必须显示应用名称。
 
- :::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![工具提示显示应用名称](~/assets/images/submission/validation-in-meeting-exp-display-app-name.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validation-in-meeting-exp-display-app-names":::
 
 * 消息扩展在会议期间的功能必须与在会议外部执行的相同。
 
-### <a name="in-meeting-tabs"></a>会议内选项卡
+</details>
+
+</br>
+<details><summary>会议内选项卡</summary>
 
 * 必须具有响应能力。
 * 必须保持填充和组件大小。
 * 如果具有多个导航层，则必须有一个后退按钮。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![会议内后退按钮可用](~/assets/images/submission/validation-in-meeting-exp-back-button.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button.png" alt-text="validation-in-meeting-exp-back-buttons":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![会议内后退按钮不存在](~/assets/images/submission/validation-in-meeting-exp-back-button-absent.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="validation-in-meeting-exp-back-buttons-absent":::
 
 * 不得包含多个关闭按钮。 它可能会让用户混淆，因为已有一个可关闭选项卡的内置标题按钮。
 * 不得有水平滚动。
 
-### <a name="in-meeting-dialogs"></a>会议内对话
+</details>
+
+</br>
+<details><summary>会议内对话</summary>
 
 * 应谨慎使用并用于轻型和任务导向的场景。
 * 必须在单栏中显示内容，而且不能有多个导航层。
 * 不得使用任务模块。
 * 必须与会议阶段的中心对齐。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![会议内对话框未对齐](~/assets/images/submission/validation-in-meeting-dialog-not-aligned.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="validation-in-meeting-dialog-not-align":::
 
 * 在用户选择按钮或执行某个操作后必须关闭。
 
@@ -1336,55 +1004,61 @@ Teams 应用清单定义应用的配置。
   * 每个图像的最大大小为 5 MB。 场景是多个图像的集合。 限制是针对每个单独图像。
   * 根据需要选择 **透明**。 选中图像后，此复选框在右侧面板上可用。 重叠的图像必须标记为透明，以指示它们是场景中的重叠图像。
 
+</details>
+
 ## <a name="notifications"></a>通知
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis)。
 
 如果你的应用使用[Microsoft Graph 提供的活动信息提要 API](/graph/teams-send-activityfeednotifications)，请确保它遵守以下准则。
-
-### <a name="general"></a>常规
+<br></br>
+<details><summary>常规</summary>
 
 * 应用配置中指定的所有通知触发器都必须正常工作。
 * 通知必须根据为应用配置的支持语言进行本地化。
 * 通知必须在用户操作后的五秒内显示。
 
-### <a name="avatars"></a>头像
+</details>
+</br>
+<details><summary>头像</summary>
 
 * 通知头像必须与应用的颜色图标匹配。
 * 用户触发的通知必须包含用户的头像。
 
-### <a name="spamming"></a>垃圾邮件
+</details>
+</br>
+<details><summary>垃圾邮件</summary>
 
 * 应用每分钟不得向用户发送超过 10 条通知。
 * 机器人和活动信息提要不得触发重复通知。
 * 通知必须为用户提供一些值，并且不能用于琐碎或不相关的事件。
 
-### <a name="navigation-and-layout"></a>导航和布局
+</details>
+</br>
+<details><summary>导航和布局</summary>
 
 * 通知必须遵循 Teams 活动源布局和体验。
 * 在选择通知时，必须将用户定向到 Teams 内部的相关内容。
 
+</details>
+
 ## <a name="microsoft-365-app-compliance-program"></a>Microsoft 365 应用合规性
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation)。
+<br></br>
+<details><summary>展开以了解详细信息</summary>
 
 Microsoft 365 应用合规性计划 旨在帮助企业通过评估应用程序的安全和合规性信息来评估和管理风险。 如果要向 Teams 商店发布一个应用程序，则必须完成该程序的以下几层:
 
-* **发布者验证**: 可帮助管理员和终端用户了解到应用开发人员与 Microsoft 标识平台集成的真实性。 完成后，Azure Active Directory 同意对话框和其他屏幕上将显示蓝色的“**已验证**”徽章。 有关详细信息，请参阅 [将你的应用标记为经过发布者验证](/azure/active-directory/develop/mark-app-as-publisher-verified)。  
+* **发布者验证**: 可帮助管理员和终端用户了解到应用开发人员与 Microsoft 标识平台集成的真实性。 完成后，Azure Active Directory 同意对话框和其他屏幕上将显示蓝色的“**已验证**”徽章。 有关详细信息，请参阅 [将你的应用标记为经过发布者验证](/azure/active-directory/develop/mark-app-as-publisher-verified)。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![发布者验证](~/assets/images/submission/validation-365-compliance-publisher-verification.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="validation-365-compliance-publisher-verifications":::
 
 * **发布者证明**: 共享常规、数据处理以及安全性和合规性信息的过程，以帮助潜在客户在使用应用时做出明智的决定。
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::如果提交之前未列出的应用，则在应用进入 Teams 商店之前，无法正式完成发布者证明。 如果正在更新列出的应用，请在提交最新版本的应用之前完成发布者证明。
+
+</details>
 
 ## <a name="advertising"></a>广告
 

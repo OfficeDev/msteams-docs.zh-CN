@@ -4,12 +4,12 @@ description: 请在本模块中详细了解 Live Share SDK 功能、RSC 权限�
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: c6ea321cf9a0bee33b44c54f273662663f23b433
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756602"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143240"
 ---
 ---
 
@@ -29,13 +29,13 @@ Live Share SDK 可以很轻松地添加到会议扩展的 `sidePanel` 和 `meeti
 **npm**
 
 ```bash
-$ npm install @microsoft/live-share --save
+npm install @microsoft/live-share --save
 ```
 
 **Yarn**
 
 ```bash
-$ yarn add @microsoft/live-share
+yarn add @microsoft/live-share
 ```
 
 ## <a name="register-rsc-permissions"></a>注册 RSC 权限
@@ -91,10 +91,10 @@ $ yarn add @microsoft/live-share
 
 按照步骤加入与用户会议关联的会话：
 
-1. 初始化 Teams 客户端 SDK
-2. 初始化 [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient)
-3. 定义要同步的数据结构。 例如，`SharedMap`
-4. 加入容器
+1. 初始化 Teams 客户端 SDK。
+2. 初始化 [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient)。
+3. 定义要同步的数据结构。 例如，`SharedMap`。
+4. 加入容器。
 
 示例：
 

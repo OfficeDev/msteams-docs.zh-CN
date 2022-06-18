@@ -1,17 +1,16 @@
 ---
 title: 生成自适应卡片选项卡
 author: KirtiPereira
-description: 了解如何通过代码示例使用自适应卡片生成选项卡，包括调用活动、了解任务模块工作流和身份验证。
+description: 在本模块中，了解如何通过代码示例使用自适应卡片生成选项卡，包括调用活动、了解任务模块工作流和身份验证。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: 自适应卡片个人应用身份验证数据流
-ms.openlocfilehash: 3c919cb6185481306985adfe9402ba0c31aac584
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: c71c8199e1606a7d36f2cdbd553ac5232b9a7926
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110286"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143996"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 

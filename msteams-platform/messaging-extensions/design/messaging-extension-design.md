@@ -1,17 +1,16 @@
 ---
 title: 设计邮件扩展
-description: 了解如何设计 Teams 邮件扩展并获取 Microsoft Teams UI Kit。
-keywords: Teams 设计指南参考邮件扩展提示最佳实践
+description: 了解如何设计 Teams 邮件扩展并获取 Microsoft Teams UI Kit。 描述 Teams 设计指南参考邮件扩展提示最佳实践
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 4021f52359d2c97382fa988679bbfe2f9bd0ecab
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f7da87ecbacbf5632b0aea9ec8aa5142443acace
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104096"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123946"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>设计 Microsoft Teams 邮件扩展
 
@@ -162,7 +161,7 @@ ms.locfileid: "65104096"
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="示例演示了用户如何在撰写框中粘贴链接。" border="false":::
 
-**2.插入内容**。如果应用识别出撰写框中的 URL，它会将链接呈现为提供 Web 内容的内容丰富的预览的卡片。（有关详细信息，请参阅[自适应卡片设计指南](../../task-modules-and-cards/cards/design-effective-cards.md)。）
+**2.插入内容**。如果应用识别出撰写框中的 URL，它会将链接呈现为提供 Web 内容的内容丰富的预览的卡片。（有关详细信息，请参阅 [自适应卡片设计指南](../../task-modules-and-cards/cards/design-effective-cards.md)。）
 
 #### <a name="mobile"></a>移动设备
 

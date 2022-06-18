@@ -1,16 +1,15 @@
 ---
 title: 发送主动邮件
-description: 了解如何向 Microsoft Teams 机器人发送主动消息，使用 Microsoft Graph 主动安装应用，并根据 Bot Framework SDK v4 检查代码示例。
+description: 了解如何使用 Teams 机器人发送主动消息，使用 Microsoft Graph 安装应用，并根据 Bot Framework SDK v4 检查代码示例。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-Keywords: 发送消息, 获取用户 ID、频道 ID、对话 ID
-ms.openlocfilehash: 7b1227dd69e8245b6ad318eb5e7425893075d878
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: cf163b8c74a74eeb83757e65fd79351176290fc9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757575"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143506"
 ---
 # <a name="proactive-messages"></a>主动邮件
 

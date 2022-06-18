@@ -1,16 +1,16 @@
 ---
 title: Webhook 和连接器
 author: clearab
-description: 了解 Webhook 和连接器如何将 Web 服务连接到 Teams 客户端。
+description: 在此模块中，了解 Webhook 和连接器如何将 Web 服务连接到 Teams 客户端。
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 27b1647620291b278cc76491da13fe8687c4e314
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 604f4bce563957afb477a58d47ef8235e4b5c30d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059670"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142176"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook 和连接器
 

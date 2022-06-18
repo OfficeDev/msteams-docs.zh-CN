@@ -1,15 +1,15 @@
 ---
 title: 常见问题解答
-description: 常见问题解答
+description: 在本学习文章中，可获取在使用 Moodle LMS 时一些常见问题的答案。
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 532a7b9c36cff3bf7499d909ddd260fa0c1785b3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757547"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123480"
 ---
 # <a name="moodle-faq"></a>Moodle 常见问题解答
 
@@ -65,7 +65,7 @@ ms.locfileid: "65757547"
 
 <summary><b>我们希望教职员工能够将课程同步到 Teams，Moodle 管理员是否是唯一可以控制课程同步的管理员？</b></summary>
 
-默认情况下，只有 Moodle 管理员可以配置同步。 团队所有者可以控制课程是否同步到 Teams 以及是否启用 **允许在课程中配置课程同步**。 在这种情况下，团队所有者是教职员工。 block 向具有相应所有者权限的个人显示配置选项。 
+默认情况下，只有 Moodle 管理员可以配置同步。 团队所有者可以控制课程是否同步到 Teams 以及是否启用 **允许在课程中配置课程同步**。 在这种情况下，团队所有者是教职员工。 block 向具有相应所有者权限的个人显示配置选项。
 
 <!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
 
@@ -189,5 +189,3 @@ ms.locfileid: "65757547"
 <summary><b>是否有任何支持站点，我们可以在其中获取有关产品和其他问题的更多帮助？</b></summary>
 
 有关产品和服务问题的支持和帮助或开发人员社区帮助，请参阅[支持和反馈](/microsoftteams/platform/feedback)。
-
-

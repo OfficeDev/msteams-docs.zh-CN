@@ -1,17 +1,16 @@
 ---
 title: 集成 web 应用
 author: Rajeshwari-v
-description: 将 Web 应用程序和设备功能与 Microsoft Teams 应用集成的概述。
+description: 在本文中，你将开始进行 Web 应用程序和设备功能与 Microsoft Teams 应用的集成。 用于创建 Power 应用、Power Virtual Agents、虚拟助理、应用模板、Shift 连接器、Moodle LMS 的 Power 平台。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: Power Platform, Power Apps, 人员选取器, 深层链接, 虚拟代理助理, 共享到 Teams
-ms.openlocfilehash: dc31644fca25aeca12b7e5f3095ebae53a3c02ac
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a5394962594acf60e88bff0c7449c17a2a4b7c17
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757666"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123536"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 

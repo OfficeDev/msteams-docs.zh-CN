@@ -1,17 +1,17 @@
 ---
 title: 使用 Teams 工具包创建新的 Teams 应用
 author: zyxiaoyuer
-description: 使用 Teams 工具包创建新的 Teams 应用
+description: 在本模块中，了解如何使用 Teams 工具包创建新的 Teams 应用，以及如何使用视图示例创建新的 Teams 应用
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 4f85798c57c7816bed727e41adc69cf7dbc380d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656150"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142218"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>使用 Teams 工具包创建新的 Teams 应用
 
@@ -20,7 +20,7 @@ ms.locfileid: "65656150"
 * [新建 Teams 应用](create-new-project.md#create-a-new-teams-app)
 * [查看示例](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-### <a name="create-a-new-teams-app"></a>新建 Teams 应用
+## <a name="create-a-new-teams-app"></a>新建 Teams 应用
 
 1. 打开 Visual Studio Code。
 1. 在 Visual Studio Code 边栏中选择 Teams 工具包 :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: 图标。
@@ -29,17 +29,16 @@ ms.locfileid: "65656150"
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams 工具包边栏":::
 
 1. 可以选择“**创建新的 Teams 应用**”或“**从示例开始**”。
-   
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="创建应用":::
-   
-1. 如果选择“**新建 Teams 应用**”，则以下图像将显示三个类别的模板：基于方案的 Teams 应用、基本 Teams 应用和 Microsoft 365 中的扩展 Teams 应用： 
+
+1. 如果选择“**新建 Teams 应用**”，则以下图像将显示三个类别的模板：基于方案的 Teams 应用、基本 Teams 应用和 Microsoft 365 中的扩展 Teams 应用：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Teams 应用的功能":::
 
 1. 选择至少一个选项以开始创建 Teams 应用。
 
-
-### <a name="create-a-new-teams-app-using-view-samples"></a>使用视图示例创建新的 Teams 应用
+## <a name="create-a-new-teams-app-using-view-samples"></a>使用视图示例创建新的 Teams 应用
 
 可以浏览“**查看示例**”并选择现有示例来创建新应用。 所选示例可能已有一些功能，例如，具有 Azure 后端的待办事项列表或与 Microsoft Graph Toolkit 的集成。
 
@@ -50,7 +49,7 @@ ms.locfileid: "65656150"
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="查看示例":::
 
     示例库如下图所示：
-   
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="示例库":::
 
   可按以下方式浏览示例库：
