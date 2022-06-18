@@ -1,16 +1,16 @@
 ---
 title: 集成 web 应用
 author: Rajeshwari-v
-description: 在本文中，你将开始进行 Web 应用程序和设备功能与 Microsoft Teams 应用的集成。 用于创建 Power 应用、Power Virtual Agents、虚拟助理、应用模板、Shift 连接器、Moodle LMS 的 Power 平台。
+description: 在本文中，你将开始将 Web 应用程序和设备功能与 Microsoft Teams 应用集成。 用于创建 Power 应用、Power Virtual Agents、虚拟助理、应用模板、排班连接器、Moodle LMS 的 Power 平台。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: a5394962594acf60e88bff0c7449c17a2a4b7c17
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 73fb039886d47a5f011b1dcfb9a8a3a46cb4ff6f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123536"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144266"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
@@ -33,8 +33,8 @@ ms.locfileid: "66123536"
 
 低代码平台提供了一种直观的软件开发方法，并且只需少量编码或无需编码即可构建应用程序和进程。 可以使用低代码平台轻松创建自定义应用。 这些平台包括可视界面、后端服务的连接器，以及用于构建、调试、部署和维护应用程序的内置应用生命周期管理系统。 Microsoft 提供以下创新网关，以使用低代码属性快速构建与 Teams 兼容的应用：
 
-* Microsoft Power Platform
-* Microsoft Teams 应用模板
+* Microsoft Power Platform。
+* Microsoft Teams 应用模板。
 
 ## <a name="microsoft-power-platform"></a>Microsoft Power Platform
 

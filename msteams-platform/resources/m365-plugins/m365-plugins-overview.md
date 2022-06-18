@@ -1,15 +1,15 @@
 ---
 title: Microsoft 365 插件
-description: Microsoft 365 插件详细信息
+description: 在本文中，你将了解 Microsoft 365 插件、插件列表和标签、Microsoft 365 和 One Note 交互等。
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 3a1847a01687d2d363f29938ed589d3a12179c9c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5228803be99d77e24f5cd1731c826b1a28509097
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453946"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124044"
 ---
 # <a name="microsoft-365-plugins"></a>Microsoft 365 插件
 
@@ -149,7 +149,7 @@ Microsoft block 通过提供用户界面来修改 Microsoft 365 集成功能并�
 
 ## <a name="oembed-filter"></a>oEmbed 筛选器
 
-oEmbed 筛选器插件简化了在 Moodle 中包含的外部 HTML 内容，从而简化和增强了用户体验。 以下是 oEmbed 筛选器的优点。 
+oEmbed 筛选器插件简化了在 Moodle 中包含的外部 HTML 内容，从而简化和增强了用户体验。 以下是 oEmbed 筛选器的优点。
 
 * 缩短将视频嵌入 HTML 页面的时间。
 * 启用多个视频内容提供程序的嵌入。
@@ -163,4 +163,4 @@ oEmbed 筛选器插件简化了在 Moodle 中包含的外部 HTML 内容，从�
 ## <a name="see-also"></a>另请参阅
 
 * [Moodle 合作伙伴应用](../partner-apps-for-moodle.md)
-* [Moodle 常见问题解答](../faqs.md)
+* [Moodle FAQ](../faqs.md)
