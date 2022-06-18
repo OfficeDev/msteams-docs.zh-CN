@@ -1,17 +1,16 @@
 ---
 title: 创建传入 Webhook
 author: laujan
-description: 将传入 Webhook 添加到 Teams 应用，并使用它将任何外部请求发布到 Teams
-keywords: Teams 选项卡传出 Webhook
+description: 在本模块中，了解如何将传入 Webhook 添加到 Teams 应用，并使用它将任何外部请求发布到 Teams
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fab709bc8a6fe35db527b911567dab0b6a20717d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5374b9327abb15949a31ab47443c273a111ad7b9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123778"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142190"
 ---
 # <a name="create-an-incoming-webhook"></a>创建传入 Webhook
 

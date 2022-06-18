@@ -4,22 +4,22 @@ description: 了解 Moodle LMS 与 Teams、Moodle 学习管理、mConnect 和深
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 61182fe5c11ba5c399d720ae043671983e262b1c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e782c6361be7a6ca95b6a21baf88bee63461f139
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124023"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143303"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle 学习管理系统
 
  Moodle 是最大的开源学习管理系统(LMS)之一，提供由安全隐私服务支持的独特远程学习体验。 Moodle LMS 与 Microsoft Teams 集成以提供以下服务:
 
-* 音频或视频通话
-* 与学生聊天
-* 课程和活动管理
-* 徽章和奖励
-* 分析见解
+* 音频或视频通话。
+* 与学生聊天。
+* 课程和活动。
+* 徽章和奖励。
+* 分析见解。
 
 <!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
 This content is modified as per the requirement.-->
