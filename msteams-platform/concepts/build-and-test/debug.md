@@ -3,12 +3,12 @@ title: 选择用于测试和调试应用的设置
 description: 在本模块中，了解在本地和云托管环境中测试和调试Microsoft Teams应用的选项。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 38259c31f9c6d29ffae22217a17ccf173b5ced59
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 351f1c444c2a6c9467f8f9d697303a2bf1357600
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143415"
+ms.locfileid: "66150650"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>选择用于测试和调试 Microsoft Teams 应用的设置
 
@@ -28,7 +28,7 @@ Microsoft Teams 应用包含一个或多个功能，而运行甚至托管它们�
 ## <a name="purely-local"></a>纯本地
 
 > [!NOTE]
-> 在本地运行机器人无法访问 Teams 应用功能或特定于 Teams 的机器人功能，例如名单调用和其他特定于频道的功能。 此外，机器人仿真器中的机器人框架支持的某些功能在 Microsoft Teams 中运行时可能无法正常工作。
+> 在本地运行机器人无法访问 Teams 应用功能或特定于 Teams 的机器人功能，例如名单调用和其他特定于频道的功能。 此外，机器人Emulator中的 Bot Framework 允许某些功能在Teams中运行时可能无法正常工作。
 
 可以在机器人仿真器中运行机器人。 这使你能够测试机器人的一些核心逻辑，查看消息的粗略布局，并执行简单测试。 操作步骤如下所示：
 
@@ -40,11 +40,11 @@ Microsoft Teams 应用包含一个或多个功能，而运行甚至托管它们�
 
 ## <a name="locally-hosted"></a>本地托管
 
-Microsoft Teams 是一款完全基于云的产品，它要求可通过 HTTPS 终结点公开使用可供访问的所有服务。 因此，若要使应用在 Teams 中工作，需要将代码发布到所选云中，或使本地运行的实例可从外部访问。 我们可以使用隧道软件来实现后者。
+Teams完全基于云的产品，它要求它访问的所有服务都可使用 HTTPS 终结点公开提供。 因此，若要使应用在 Teams 中工作，需要将代码发布到所选云中，或使本地运行的实例可从外部访问。 我们可以使用隧道软件来实现后者。
 
 尽管可以使用所选任何工具，但我们建议使用 [ngrok](https://ngrok.com/download)，它可为在计算机上本地打开的端口创建外部可寻址 URL。
 
-若要设置 ngrok 以准备在本地运行 Microsoft Teams 应用，请执行以下步骤：
+若要设置 ngrok 以准备在本地执行Teams应用，请执行以下步骤：
 
 1. 转到在终端应用程序中安装的 ngrok.exe 的目录。 你可能希望将其添加为路径变量以避免此步骤。
 2. 例如，运行 `ngrok http 3978 --host-header=localhost:3978` 或根据需要替换端口号。
@@ -67,14 +67,14 @@ Microsoft Teams 是一款完全基于云的产品，它要求可通过 HTTPS 终
 
 ## <a name="cloud-hosted"></a>云托管
 
-可以使用任何可外部寻址的服务来托管开发和生产代码及其 HTTPS 终结点。 不期望你的功能驻留在同一服务上。 我们需要从 `manifest.json` 文件的 [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) 对象中列出的 Microsoft Teams 应用访问所有域。
+可以使用任何可外部寻址的服务来托管开发和生产代码及其 HTTPS 终结点。 不期望你的功能驻留在同一服务上。 我们需要从文件中对象中[`validDomains`](~/resources/schema/manifest-schema.md#validdomains)列出的Teams应用访问所有域`manifest.json`。
 
 > [!NOTE]
 > 若要确保环境安全，请明确说明所引用的确切域和子域，并且这些域必须由你控制。例如，不建议使用 `*.azurewebsites.net`，但建议使用 `contoso.azurewebsites.net`。
 
 ## <a name="load-and-run-your-experience"></a>加载和运行体验
 
-若要在 Microsoft Teams 中加载和运行体验，需要创建包并将其上传到 Teams。有关详细信息，请参阅：
+若要在Teams中加载和运行体验，需要创建包并将其上传到Teams。 有关详细信息，请参阅：
 
 * [为 Microsoft Teams 应用创建包](~/concepts/build-and-test/apps-package.md)。
 * [在 Microsoft Teams 中上传应用](~/concepts/deploy-and-publish/apps-upload.md)。

@@ -5,12 +5,12 @@ description: 在本模块中，了解如何向机器人消息添加丰富的格�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143478"
+ms.locfileid: "66150784"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
@@ -36,7 +36,7 @@ Teams 支持一部分 markdown 和 XML 或 HTML 格式标记。
 * 丰富卡片仅支持在文本属性中进行格式设置，不支持在标题或副标题属性中进行格式设置。
 * 丰富卡片不支持 markdown 或表格格式设置。
 
-设置文本内容的格式后，请确保格式设置可跨 Microsoft Teams 支持的所有平台运行。
+设置文本内容的格式后，请确保格式设置可跨Teams支持的所有平台运行。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 

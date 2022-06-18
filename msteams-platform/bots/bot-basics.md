@@ -5,18 +5,18 @@ description: 本文介绍Microsoft Teams中的机器人活动处理程序、框�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143835"
+ms.locfileid: "66150860"
 ---
 # <a name="bot-activity-handlers"></a>智能机器人活动处理程序
 
 本文档基于[机器人如何在](https://aka.ms/how-bots-work)核心[Bot Framework 中运行文档](https://aka.ms/azure-bot-service-docs)中的文章生成。 为 Microsoft Teams 开发的机器人与核心 Bot Framework 之间的主要区别在于 Teams 中提供的功能。
 
-若要为机器人组织聊天逻辑，请使用活动处理程序。 使用 Teams 活动处理程序和机器人逻辑以两种方式处理活动。 Teams 活动处理程序添加了对特定于 Microsoft Teams 事件和交互的支持。 机器人对象包含轮次的会话推理或逻辑，并公开轮次处理程序，该处理程序是可以接受来自机器人适配器的传入活动的方法。
+若要为机器人组织聊天逻辑，请使用活动处理程序。 使用 Teams 活动处理程序和机器人逻辑以两种方式处理活动。 Teams活动处理程序添加了对特定于Teams的事件和交互的支持。 机器人对象包含轮次的会话推理或逻辑，并公开轮次处理程序，该处理程序是可以接受来自机器人适配器的传入活动的方法。
 
 ## <a name="teams-activity-handlers"></a>Teams 活动处理程序
 

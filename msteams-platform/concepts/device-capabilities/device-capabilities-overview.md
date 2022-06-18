@@ -5,18 +5,18 @@ description: 了解如何将本机设备功能（如相机、图像、媒体、�
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: de79edb8e751c302dd685d74a7f477e50178eaec
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130428"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150671"
 ---
 # <a name="device-capabilities"></a>设备功能
 
 Microsoft Teams 平台一直在不断增强与内置第一方体验相匹配的开发人员功能。 增强的 Teams 平台允许合作伙伴将设备功能（如相机、QR 码或条形码扫描程序、照片库、麦克风和位置）与其 Web 应用集成。 此集成可减少应用开发障碍，缩短开发周期，并为开发人员社区创建新方案或用例。
 
-浏览器中的设备权限有所变化。 以前，浏览器负责处理如何授予访问权限，现在这些权限由 Microsoft Teams 处理。 有关详细信息，请参阅[浏览器设备权限](browser-device-permissions.md)。
+浏览器中的设备权限有所变化。 以前，浏览器处理了如何授予访问权限，现在这些权限在Teams中处理。 有关详细信息，请参阅[浏览器设备权限](browser-device-permissions.md)。
 
 ## <a name="native-device-capabilities"></a>原生设备功能
 
@@ -50,4 +50,4 @@ Microsoft Teams 平台一直在不断增强与内置第一方体验相匹配的�
 
 | 示例名称           | 说明 | Node.js    |
 |:---------------------|:--------------|:---------|
-|设备权限 | 介绍如何演示Microsoft Teams选项卡示例应用的设备权限。 |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|设备权限 | 介绍如何演示Teams选项卡示例应用的设备权限。 |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

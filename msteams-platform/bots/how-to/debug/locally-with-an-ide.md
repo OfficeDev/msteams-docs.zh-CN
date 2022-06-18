@@ -5,12 +5,12 @@ description: 了解如何通过旁加载等在Teams环境中使用 IDE 在本地
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 95a52b02c864a65454a8a03fa9917c4a5d99fdb8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c0fae3ccaf82eaf9e626a948959520d20dca3c01
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142890"
+ms.locfileid: "66150804"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
 
@@ -57,11 +57,11 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 > [!Important]
 > 通过 ID 与机器人交谈仅用于基本测试目的。 添加到机器人的任何特定于 Teams 的功能都无法正常工作。
 
-使用机器人的 ID 启动与机器人的对话。 通过其中一种方法添加机器人后，它将无法在频道对话中寻址，你也无法利用其他 Microsoft Teams 应用功能，例如选项卡或消息扩展。 通过以下方式之一启动对话：
+使用机器人的 ID 启动与机器人的对话。 通过这些方法之一添加机器人时，它在频道对话中无法寻址，也无法利用其他Teams应用功能（如选项卡或消息扩展）。 通过以下方式之一启动对话：
 
-* 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**频道**”下，选择“**添加到 Microsoft Teams**”。 Microsoft Teams 将启动与机器人的个人聊天。
+* 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**频道**”下，选择“**添加到 Microsoft Teams**”。 Teams启动与机器人的个人聊天。
 
-* 直接从 Microsoft Teams 中引用机器人的应用 ID：
+* 直接从Teams中引用机器人的应用 ID：
    1. 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**详细信息**”下，复制机器人的“**Microsoft 应用 ID**”。
   
       ![获取机器人的应用 ID](~/assets/images/bots_appid_botframework.png)
@@ -73,10 +73,10 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
       应用 ID 必须解析为机器人名称。
 
    3. 选择机器人并发送消息以发起对话。
-      或者，可以将机器人的应用 ID 粘贴到 Microsoft Teams 左上角的搜索框中。 在搜索结果页中，转到“**人员**”选项卡以查看机器人并开始与机器人聊天。
+      或者，可以将机器人的应用 ID 粘贴到Teams左上角的搜索框中。 在搜索结果页中，转到“**人员**”选项卡以查看机器人并开始与机器人聊天。
 
 > [!Note]
-> 若要让 Microsoft Teams 引用机器人的应用 ID，请启用“[应用旁加载](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)”。
+> 若要Teams引用机器人的应用 ID，请启用[应用旁加载](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
 
 将机器人添加到团队时，机器人会收到 `conversationUpdate` 事件，而 `channelData` 对象中没有团队信息。
 

@@ -1,15 +1,15 @@
 ---
 title: 为 Microsoft Teams 应用请求设备权限
 keywords: teams 应用功能权限设备本机扫描 qr 条形码图像音频视频
-description: 如何更新应用清单，以请求访问通常需要用户同意的本机功能，例如扫描 qr、条形码、图像、音频和视频功能
+description: 如何更新应用清单，以请求访问需要用户同意的本机功能，例如扫描 QR、条形码、图像、音频和视频功能
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: c346eaf880fd6a0a3847441f674fcfa72f2c5ed7
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: a2ffcb378c3e46f7e940e7729eb62ad31d0745a9
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130471"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150818"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>请求Teams应用的设备权限
 
@@ -19,7 +19,7 @@ ms.locfileid: "66130471"
 >
 > * 若要在Microsoft Teams Web 客户端、桌面和移动设备中集成媒体功能，请参阅[集成媒体功能](media-capabilities.md)。
 > * 要在 Microsoft Teams 移动应用中集成 QR 或条形码扫描程序功能，请参阅 [在 Teams 中集成 QR 或条形码扫描程序功能](qr-barcode-scanner-capability.md)。
-> * 若要在Microsoft Teams Web 客户端、桌面和移动设备中集成位置功能，请参阅[集成位置功能](location-capability.md)。
+> * 若要在Teams Web 客户端、桌面和移动设备中集成位置功能，请参阅[集成位置功能](location-capability.md)。
 
 ## <a name="native-device-permissions"></a>本机设备权限
 
@@ -36,7 +36,7 @@ ms.locfileid: "66130471"
 >
 > * 目前，Teams 不支持多窗口应用、选项卡和会议侧面板的设备权限。
 > * 浏览器中的设备权限不同。 有关详细信息，请参阅[浏览器设备权限](browser-device-permissions.md)。
-> * 目前，Microsoft Teams支持 QR 条形码扫描程序功能仅适用于移动客户端。
+> * 目前，Teams支持 QR 条形码扫描程序功能仅适用于移动客户端。
 
 ## <a name="access-device-permissions"></a>访问设备权限
 
@@ -129,13 +129,13 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 例如：
 
-* 要提示用户访问其位置，必须调用 `getCurrentPosition()`：
+* 若要提示用户访问其位置，必须调用 `getCurrentPosition()`：
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* 要提示用户访问桌面或网络上的摄像头，必须调用 `getUserMedia()`：
+* 若要提示用户在桌面或 Web 上访问其相机，必须调用 `getUserMedia()`：
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });

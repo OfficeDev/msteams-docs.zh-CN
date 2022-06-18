@@ -1,14 +1,14 @@
 ---
 title: App Studio for Microsoft Teams 入门
-description: 在本模块中，了解如何使用 app studio 生成和管理应用，以便Microsoft Teams和安装应用工作室。
+description: 本文介绍如何使用 app studio 生成和管理应用，以便Microsoft Teams和安装应用工作室。
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 3cfef6db34c9754ac42b2af3ce153ba9374fdff1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: de1a3bb355ce7f033cc1f41e3e42d3e97de6d0c1
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143450"
+ms.locfileid: "66150699"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio 管理应用以进行Microsoft Teams
 
@@ -52,9 +52,9 @@ App Studio 是一个Teams应用，可在Teams存储中找到。 请按照此链�
 
 ### <a name="manifest-editor"></a>清单编辑器
 
-如前文所述，Microsoft Teams 应用包最重要的部分就是其 manifest.json 文件。 此文件必须遵循 [Teams 应用架构](~/resources/schema/manifest-schema.md)，包含可使 Teams 向用户正确呈现应用的元数据。
+如前所述，Teams应用包最重要的部分是其 manifest.json 文件。 此文件必须符合[Teams应用架构](~/resources/schema/manifest-schema.md)，它包含元数据，使Teams能够将应用正确呈现给用户。
 
-App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你描述应用、上传图标、添加应用功能，并生成.zip文件，该文件可以轻松上传到Teams进行测试或分发供其他人使用。 请注意，App Studio 不会为应用生成功能代码，也不会托管应用。 应用必须已在应用上传流程的清单中列出的 URL 上托管并运行，以产生工作应用。
+App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你描述应用、上传图标、添加应用功能，并生成.zip文件，该文件可以轻松上传到Teams进行测试或分发供其他人使用。 App Studio 不会为应用生成功能代码，也不会托管应用。 应用必须已在应用上传流程的清单中列出的 URL 上托管并运行，以产生工作应用。
 
 #### <a name="details"></a>详细信息
 
@@ -75,11 +75,11 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 
   你还必须提供选项卡期望从其加载或链接到的任何其他域。
 
-* **个人选项卡。** 本部分允许你定义一组选项卡，这些选项卡默认显示在个人应用体验中， (用户在团队或频道) 上下文之外对应用的体验。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡需要从中加载或链接到的任何其他域。
+* **个人选项卡。** 可以定义默认情况下在个人应用体验中显示的一组选项卡， (用户在团队或频道) 的上下文之外对应用拥有的体验。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡需要从中加载或链接到的任何其他域。
 
 ##### <a name="bots"></a>机器人
 
-通过此部分，可以将一 [对话自动](~/bots/what-are-bots.md) 添加到应用中。 如果你已有注册了 Bot Framework 的自动程序，您可以通过单击 *"设置* 并单击自动程序的名称"自动框架 ID"并定义自动程序工作的范围来添加自动程序。
+通过此部分，可以将一 [对话自动](~/bots/what-are-bots.md) 添加到应用中。 如果已向 Bot Framework 注册了机器人，则可以通过单击 *“设置* ”并提供机器人的名称 Bot Framework ID 并定义机器人的工作范围来添加该机器人。
 
 如果尚未向 Bot Framework 注册机器人，请选择 **“注册** ”以创建新机器人。 完成注册自动程序后，请返回清单编辑器的此部分，输入其名称和 Bot Framework ID。
 
@@ -94,7 +94,7 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 
 ##### <a name="message-extensions"></a>消息扩展
 
-[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)是用户在Microsoft Teams中与应用互动的一种强大方式。 用户可以查询服务的信息，将该信息以卡片形式发布到频道或聊天对话中。
+[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)是用户在Teams中参与应用的强大方式。 用户可以查询服务的信息，将该信息以卡片形式发布到频道或聊天对话中。
 
 消息扩展由 Bot Framework 机器人提供支持，因此它们需要配置的机器人才能运行。 如果具有要为消息扩展提供电源的机器人的名称和 Bot Framework ID，请输入它。 否则，请选择 **“注册** ”以创建一个，然后输入信息。 选择用户是否可以更新消息扩展的配置。
 
@@ -115,11 +115,11 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 
 ##### <a name="publish-your-app-to-teams"></a>将应用发布到 Teams
 
-在项目主页上，你可以将应用上载到团队、将应用提交到公司自定义应用商店供你组织的用户使用，或将应用提交到所有 Teams 用户的应用源。 IT 管理员将审阅这些提交。 可返回" *发布* 页面，检查提交状态，并了解应用是否已获 IT 管理员批准或拒绝。这也是提交应用更新或取消当前任何活动提交的地方。
+在项目主页上，你可以将应用上载到团队、将应用提交到公司自定义应用商店供你组织的用户使用，或将应用提交到所有 Teams 用户的应用源。 IT 管理员会评审这些提交。 可返回" *发布* 页面，检查提交状态，并了解应用是否已获 IT 管理员批准或拒绝。这也是提交应用更新或取消当前任何活动提交的地方。
 
 ### <a name="card-editor"></a>卡片编辑器
 
-卡片是包含短信息或相关信息的容器。 Microsoft Teams 支持卡片，卡片可以有多个属性和附件。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。
+卡片是包含短信息或相关信息的容器。 Teams支持可具有多个属性和附件的卡片。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。
 
 为了使此过程更轻松且不易出错，“卡片编辑器”选项卡允许你使用窗体生成 Hero Card 或缩略图卡，并验证和测试生成的卡片 (完全与用户通过机器人) 一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
 

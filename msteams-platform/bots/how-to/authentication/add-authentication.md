@@ -5,12 +5,12 @@ description: 了解如何使用Azure Active Directory在Teams中向机器人添�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2a9ebf96f5795b6674646bc50dd856badf59152e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c66425550bdb989d8e0cb55d806a5e6b8fc92d6a
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142561"
+ms.locfileid: "66150762"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -189,7 +189,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>配置标识提供程序连接，并将其注册到机器人
 
-请注意，Microsoft Azure Active Directory (Azure AD) V1 和 Microsoft Azure Active Directory (Azure AD) V2 为服务提供程序提供了两个选项。  [此](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)处汇总了两个提供程序之间的差异，但一般来说，V2 在更改机器人权限方面提供了更大的灵活性。  图形 API 权限列在范围字段中，并且随着新权限的添加，机器人将允许用户在下一次登录时同意新权限。  对于 V1，用户必须删除机器人同意，才能在 OAuth 对话框中提示新的权限。
+请注意，此处有两个服务提供商选项 - Azure AD V1 和 Azure AD V2。  [此](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)处汇总了两个提供程序之间的差异，但一般来说，V2 在更改机器人权限方面提供了更大的灵活性。  图形 API 权限列在范围字段中，并且随着新权限的添加，机器人将允许用户在下一次登录时同意新权限。  对于 V1，用户必须删除机器人同意，才能在 OAuth 对话框中提示新的权限。
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v1"></a>Microsoft Azure Active Directory (Azure AD) V1
 
@@ -211,7 +211,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
         - 如果 *选择此组织目录中的帐户仅 (仅 Microsoft -* *Azure AD) - 多租户 (Microsoft Azure Active Directory (任何组织目录中的单租户) ) 或帐户，请* 输入前面记录的 **租户 ID** Microsoft Azure Active Directory (Azure AD) 应用。 这将是与可进行身份验证用户关联的租户。
 
-        - 如果 *在任何组织目录中选择了帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户和个人 Microsoft 帐户（例如，Skype、Xbox）Outlook)* 输入 **通用** 字词，而不是租户 ID。 否则，Microsoft Azure Active Directory (Azure AD) 应用将通过所选 ID 的租户进行验证，并排除个人 Microsoft 帐户。
+        - 如果 *在任何组织目录中选择了帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户和个人 Microsoft 帐户（例如，Skype、Xbox）Outlook)* 输入 **通用** 字词，而不是租户 ID。 否则，Azure AD (Azure AD) 应用将通过选中其 ID 的租户进行验证，并排除个人 Microsoft 帐户。
 
     h. 对于 **资源 URL**，请输入 `https://graph.microsoft.com/`。 当前代码示例中未使用此功能。  
     i. 将 **范围** 留空。 下图是一个示例：
@@ -230,15 +230,15 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 1. 如下所示完成表单：
 
     1. **名称**。 输入连接的名称。 你将在 `appsettings.json` 文件的机器人中使用此名称。 例如， *BotTeamsAuthADv2*。
-    1. **服务提供程序**。 选择 **Microsoft Azure Active Directory v2**。 选择此选项后，将显示特定于 Microsoft Azure Active Directory (Azure AD) 字段。
+    1. **服务提供程序**。 选择 **Microsoft Azure Active Directory v2**。 选择此选项后，将显示特定于 Azure AD 的字段。
     1. **客户端 ID**。在上述步骤中输入为 Azure 标识提供程序应用记录的应用程序 （客户端）ID。
     1. **客户端密码**。 在上述步骤中输入为 Azure 标识提供程序应用记录的机密。
     1. **令牌 Exchange URL**。 将其留空。
     1. **租户 ID**，输入之前为 Azure 标识应用记录 **的目录（租户）ID** ，或创建标识提供程序应用时选择的受支持帐户类型的 **常见 ID** 。 若要确定要分配的值，请遵循以下条件：
 
-        - 如果 *仅在此组织目录中选择帐户 (仅限 Microsoft - 单租户)* 或 *任何组织目录中的帐户 (Microsoft Azure Active Directory - 多租户)*，请输入之前为Microsoft Azure Active Directory (Azure AD) 应用记录的 **租户 ID**。 这将是与可进行身份验证用户关联的租户。
+        - 如果 *仅在此组织目录中选择了“仅 (Microsoft 的帐户-单租户)* 或 *任何组织目录中的帐户 (Microsoft Azure Active Directory - 多租户)*，请输入之前为 Azure AD 应用记录的 **租户 ID**。 这将是与可进行身份验证用户关联的租户。
 
-        - 如果 *在任何组织目录中选择了帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户和个人 Microsoft 帐户（例如，Skype、Xbox）Outlook)* 输入 **通用** 字词，而不是租户 ID。 否则，Microsoft Azure Active Directory (Azure AD) 应用将通过所选 ID 的租户进行验证，并排除个人 Microsoft 帐户。
+        - 如果 *在任何组织目录中选择了帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户和个人 Microsoft 帐户（例如，Skype、Xbox）Outlook)* 输入 **通用** 字词，而不是租户 ID。 否则，Azure AD 应用将通过选中其 ID 的租户进行验证，并排除个人 Microsoft 帐户。
 
     1. 对于 **作用域**，请输入此应用程序所需的图形权限的空间分隔列表，例如：User.Read User.ReadBasic.All Mail.Read
 
@@ -452,8 +452,8 @@ and when for these, and just reference that from here, along with the set of ste
 
 ### <a name="testing-the-bot-locally-in-teams"></a>在 Teams 中本地测试机器人
 
-Microsoft Teams 完全基于云的产品，它要求访问的所有服务都可使用 HTTPS 终结点从云中获取。 因此，若要使机器人（示例）在 Teams 中工作，需要将代码发布到所选云中，或者使本地运行的实例可通过 **隧道** 工具在外部访问。 我们建议使用 [ngrok](https://ngrok.com/download)，它为在计算机上本地打开的端口创建外部可寻址 URL。
-若要设置 ngrok 以准备在本地运行Microsoft Teams 应用，请执行以下步骤：
+Teams完全基于云的产品，它要求它访问的所有服务都可使用 HTTPS 终结点从云中获取。 因此，若要使机器人（示例）在 Teams 中工作，需要将代码发布到所选云中，或者使本地运行的实例可通过 **隧道** 工具在外部访问。 我们建议使用 [ngrok](https://ngrok.com/download)，它为在计算机上本地打开的端口创建外部可寻址 URL。
+若要设置 ngrok 以准备在本地运行Teams应用，请执行以下步骤：
 
 1. 在终端窗口中，转到已安装 `ngrok.exe` 目录。 建议将 *环境变量* 路径设置为指向该变量。
 1. 例如，运行 `ngrok http 3978 --host-header=localhost:3978`。 根据需要替换端口号。
@@ -462,7 +462,7 @@ Microsoft Teams 完全基于云的产品，它要求访问的所有服务都可�
     ![teams 机器人应用身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. 复制转发 HTTPS 地址。 具体应如下所示：`https://dea822bf.ngrok.io/`。
-1. 追加 `/api/messages` 以获取 `https://dea822bf.ngrok.io/api/messages`。 这是在计算机上本地运行的机器人的 **消息终结点**，可在 Microsoft Teams 聊天中通过 Web 访问。
+1. 追加 `/api/messages` 以获取 `https://dea822bf.ngrok.io/api/messages`。 这是在计算机上本地运行的机器人 **的消息终结点**，可在Teams聊天中通过 Web 访问。
 1. 要执行的最后一步是更新已部署机器人的消息终结点。 在该示例中，我们在 Azure 中部署了机器人。 因此，让我们执行以下步骤：
     1. 在浏览器中，导航到 [**Azure 门户**][azure-portal]。
     1. 选择 **机器人注册**。
@@ -481,7 +481,7 @@ Microsoft Teams 完全基于云的产品，它要求访问的所有服务都可�
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 
-此清单包含 Microsoft Teams 与机器人连接所需的信息：  
+此清单包含Teams与机器人连接所需的信息：  
 
 ```json
 {
@@ -635,7 +635,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| 机器人身份验证 | 此示例演示如何开始在 Microsoft Teams 机器人中进行身份验证。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| 机器人身份验证 | 此示例演示如何开始在机器人中进行身份验证以进行Teams。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | 选项卡、机器人和消息扩展 (ME) SSO | 此示例演示用于选项卡、机器人和 ME 的 SSO - 搜索、操作、linkunfurl。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
 
 ## <a name="see-also"></a>另请参阅

@@ -4,12 +4,12 @@ description: 了解本地化 Microsoft Teams应用和本地化应用清单中字
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018
-ms.openlocfilehash: 9c8e073f646bbd99f07725bee734e727103f6eb3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5c3d0612f0e7ce0e183d097469165cf2f9c337d0
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122892"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150664"
 ---
 # <a name="localize-your-app"></a>本地化应用
 
@@ -155,7 +155,7 @@ Teams 客户端按以下顺序应用字符串：默认语言字符串 -> 仅限�
 
 | 示例名称 | Description | .NET | Node.js |
 |-------------|-------------|------|------|
-| 应用本地化 | 使用机器人和选项卡进行 Microsoft Teams 应用本地化。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| 应用本地化 | 使用机器人和选项卡Teams应用本地化。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 

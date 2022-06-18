@@ -4,12 +4,12 @@ description: 了解与为Teams创建应用程序托管媒体机器人相关的�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142484"
+ms.locfileid: "66150786"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 
@@ -39,7 +39,7 @@ ms.locfileid: "66142484"
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>实时媒体呼叫保留创建位置
 
-实时媒体调用保留在创建它们的计算机上。 实时媒体调用固定到已接受或启动调用的虚拟机 (VM) 实例。 来自 Microsoft Teams 调用或会议的媒体流向该 VM 实例，机器人发送回 Microsoft Teams 的媒体也必须来自该 VM。 如果 VM 停止时有任何实时媒体调用正在进行，这些调用会立即终止。 如果机器人事先知道挂起的 VM 关闭，则可以结束调用。
+实时媒体调用保留在创建它们的计算机上。 实时媒体调用固定到已接受或启动调用的虚拟机 (VM) 实例。 来自Teams呼叫或会议的媒体流向该 VM 实例，机器人发送回Teams的媒体也必须来自该 VM。 如果 VM 停止时有任何实时媒体调用正在进行，这些调用会立即终止。 如果机器人事先知道挂起的 VM 关闭，则可以结束调用。
 
 下一部分提供有关应用程序托管的媒体机器人的辅助功能的详细信息。
 

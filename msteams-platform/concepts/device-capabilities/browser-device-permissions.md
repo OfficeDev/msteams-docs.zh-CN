@@ -4,12 +4,12 @@ keywords: Teams 应用功能权限
 description: 安全地恢复 Web 客户端中应用的设备权限支持
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0789715aebfd1db0c9d0100ccffb2ff213a10d1d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f1d25a94f25756e1beed66c430547a7f2f706c5f
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756742"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150811"
 ---
 # <a name="device-permissions-for-the-browser"></a>浏览器的设备权限
 
@@ -29,7 +29,7 @@ Teams需要设备权限（如相机或麦克风访问）的应用现在要求用
 用户需要在浏览器中启用这些权限才能使这些权限生效。 用户在浏览器中更改应用的设备权限后，系统会提示他们在 Teams 中重新加载应用程序。
 
 > [!IMPORTANT]
-> 必须让用户了解在 Microsoft Teams 中启用这些 **应用权限** 的位置。
+> 必须让用户了解在Teams中启用这些 **应用权** 限的去向。
 
 ## <a name="recommendation"></a>建议
 
@@ -46,7 +46,7 @@ Teams需要设备权限（如相机或麦克风访问）的应用现在要求用
 
 ## <a name="step-by-step-guide"></a>分步指南
 
-按照[分步指南](../../sbs-tab-device-permissions.yml)在 Microsoft Teams 中授予选项卡设备权限。
+按照分[步指南](../../sbs-tab-device-permissions.yml)在Teams中授予 Tab 设备权限。
 
 ## <a name="see-also"></a>另请参阅
 
