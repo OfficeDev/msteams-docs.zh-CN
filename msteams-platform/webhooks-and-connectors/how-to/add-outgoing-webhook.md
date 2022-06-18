@@ -1,17 +1,16 @@
 ---
 title: 创建传出 Webhook
 author: laujan
-description: 介绍如何创建传出 Webhook
+description: 在本模块中，了解如何在 Microsoft Teams 中创建传出 Webhook 及其主要功能和代码示例
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: Teams 选项卡, 传出 Webhook, 可操作邮件, 验证 Webhook
-ms.openlocfilehash: 8450f9411e2fa5b1e0af624f48882016951f24a7
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: 5c86fd5e3885fd859d02489c81f81aa0502b965a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590687"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143282"
 ---
 # <a name="create-outgoing-webhook"></a>创建传出 Webhook
 

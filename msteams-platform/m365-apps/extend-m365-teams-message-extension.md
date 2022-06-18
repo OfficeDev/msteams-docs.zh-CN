@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668072"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142099"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>在整个 Microsoft 365 中扩展 Teams 邮件扩展
 
@@ -20,9 +20,9 @@ ms.locfileid: "65668072"
 
 > [!div class="checklist"]
 >
-> * 更新应用清单
-> * 为机器人添加 Outlook 通道
-> * 在 Teams 中旁加载更新后的应用
+> * 更新应用清单。
+> * 为机器人添加 Outlook 通道。
+> * 在 Teams 中旁加载更新后的应用。
 
 本指南的其余部分将指导你完成这些步骤，并演示如何在 Outlook Windows 桌面版和 outlook.com 中预览邮件扩展。
 
@@ -30,10 +30,10 @@ ms.locfileid: "65668072"
 
 完成本教程需要：
 
-* Microsoft 365 开发人员计划沙盒租户
-* 为沙盒租户注册 *Office 365 目标版本*
-* 从 Microsoft 365 应用 *Beta 版频道* 安装了 Office 应用的测试环境
-* （可选）带有 Teams 工具包扩展的 Microsoft Visual Studio Code
+* Microsoft 365 开发人员计划沙盒租户。
+* 为沙盒租户注册 *Office 365 目标版本*。
+* 从 Microsoft 365 应用 *Beta 版频道* 安装了 Office 应用的测试环境。
+* （可选）带有 Teams 工具包扩展的 Microsoft Visual Studio Code。
 
 > [!div class="nextstepaction"]
 > [发布针对 Microsoft 365 扩展的 Teams 应用](publish.md)
@@ -90,7 +90,7 @@ ms.locfileid: "65668072"
 
 ---
 
-如果使用 Teams 工具包创建了邮件扩展应用，则可以使用它来验证清单文件的更改并识别任何错误。 打开命令面板 `Ctrl+Shift+P` 并找到“**Teams：验证清单文件**”。
+如果使用 Teams 工具包创建了邮件扩展应用，则可以使用它来验证清单文件的更改并识别任何错误。请打开命令面板 `Ctrl+Shift+P` 并找到“**Teams：验证清单文件**”。
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>为机器人添加 Outlook 通道
 
@@ -115,7 +115,7 @@ ms.locfileid: "65668072"
 > [!NOTE]
 > 如果使用本教程中提供的[示例应用](#quickstart)，则可以跳过此步骤，因为该方案不涉及 Azure Active Directory (AAD) 单一登录身份验证。
 
-邮件扩展的 Azure Active Directory (AD) 单一登录 (SSO) 在 Outlook 中的工作方式[与在 Teams 中的工作方式](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)相同。 但是，你需要在租户的“*应用注册*”门户中，将多个客户端应用程序标识符添加到机器人的 Azure AD 应用注册。
+邮件扩展的 Azure Active Directory (AD) 单一登录 (SSO) 在 Outlook [中的工作方式与在 Teams 中的工作方式相同](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)。但是，你需要在租户的 *应用注册* 门户中，将多个客户端应用程序标识符添加到机器人的 Azure AD 应用注册。
 
 1. 使用沙盒租户帐户登录 [Azure 门户](https://portal.azure.com)。
 1. 打开“**应用注册**”。
@@ -167,7 +167,7 @@ ms.locfileid: "65668072"
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="单击邮件撰写窗口底部的“更多应用”菜单以使用邮件扩展":::
 
-你的邮件扩展已列出。 可以从其中调用它，并像在 Teams 中撰写邮件时一样使用它。
+你的邮件扩展已列出。可以从那里调用它，并像在 Teams 中撰写邮件时一样使用它。
 
 ### <a name="outlook"></a>Outlook
 

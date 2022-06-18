@@ -1,15 +1,14 @@
 ---
 title: 卡片
-description: 介绍卡片及其在机器人、连接器、消息扩展中的使用方式
+description: 在本模块中，了解什么是卡片以及如何在机器人、连接器和消息扩展中使用它们
 ms.localizationpriority: high
-keywords: 连接器机器人卡片消息传递
 ms.topic: overview
-ms.openlocfilehash: fc18c1048ec019a5532b50babff8e2d419343c1f
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9ee24e4d66597cca4d614e21fde070ea65aa1825
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756476"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144136"
 ---
 # <a name="cards"></a>卡片
 

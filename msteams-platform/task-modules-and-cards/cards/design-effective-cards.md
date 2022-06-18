@@ -1,15 +1,15 @@
 ---
 title: 为你的应用设计自适应卡
-description: 了解如何设计 Microsoft Teams 自适应卡并获取 Microsoft Teams UI Kit。
+description: 在本模块中，了解如何为 Teams 应用设计自适应卡片并获取 Microsoft Teams UI 工具包。
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103900"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142659"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡
 
@@ -398,7 +398,7 @@ ms.locfileid: "65103900"
 
 # <a name="design"></a>[设计](#tab/design)
 
-当显示内容的大小不需要更改时，将列设置为特定的像素宽度。 此示例显示大小为 50 像素的左列，而缩略图旁边的说明会拉伸卡片的长度
+当显示内容的大小不需要更改时，将列设置为特定的像素宽度。 此示例显示大小为 50 像素的左列，而缩略图旁边的说明会拉伸卡片的长度。
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="图像显示如何在自适应卡片中设置列宽。":::
 

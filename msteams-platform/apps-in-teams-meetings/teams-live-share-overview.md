@@ -4,12 +4,12 @@ description: 在本模块中，了解什么是 Microsoft 实时共享 SDK 及其
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 5fa509ee7835db80a99487ed7d42ab7d6ed8341d
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: dc05093f69627cc5872e25113e1ca2ca680c07c7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759653"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142498"
 ---
 ---
 
@@ -33,12 +33,12 @@ ms.locfileid: "65759653"
 
 下面是实时共享 SDK 的一些关键优势：
 
-* 无障碍会话管理和安全性
-* 有状态和无状态分布式数据结构
-* 媒体扩展可轻松同步视频和音频
-* 使用角色验证尊重会议权限
-* 提供低延迟的免费和完全托管服务
-* 智能音频闪避
+* 无障碍会话管理和安全性。
+* 有状态和无状态分布式数据结构。
+* 媒体扩展可轻松同步视频和音频。
+* 使用角色验证尊重会议权限。
+* 提供低延迟的免费和完全托管服务。
+* 智能音频闪避。
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 

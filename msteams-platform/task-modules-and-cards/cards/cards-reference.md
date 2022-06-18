@@ -1,15 +1,14 @@
 ---
 title: 卡片类型
-description: 介绍 Teams 中机器人可用的所有卡片和卡片操作
+description: 在本模块中，了解哪些卡片和卡片操作可用于 Teams 中的机器人，并创建主图、缩略图和自适应卡片
 ms.localizationpriority: high
-keywords: 机器人卡参考
 ms.topic: reference
-ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032986"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142624"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -63,13 +62,13 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 | 卡类型 | 机器人 | 消息扩展预览 | 消息扩展结果 | 任务模块 | 传出 webhook | 传入 webhook | Office 365 连接器 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 自适应卡片 | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Office 365 连接器卡 | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| 主图卡片 | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| 缩略图卡片 | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| 列表卡 | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| 收据卡 | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| 登录卡 | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| 自适应卡片 | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Office 365 连接器卡 | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| 主图卡片 | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| 缩略图卡片 | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| 列表卡 | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
+| 收据卡 | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
+| 登录卡 | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 > 对于传入 Webhook 中的自适应卡片，完全支持所有本机自适应卡片架构元素 (`Action.Submit` 除外)。 受支持的操作包括 [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、[**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)和 [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
@@ -121,7 +120,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
@@ -304,7 +303,7 @@ Bot Framework 参考:
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="properties-of-a-hero-card"></a>主图卡的属性
 
@@ -371,7 +370,7 @@ Teams 已添加列表卡片，以提供超出列表集合可提供的功能。 �
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✔ |
+| ✔️ | ❌ | ❌ |✔️ |
 
 ### <a name="properties-of-a-list-card"></a>列表卡的属性
 
@@ -449,7 +448,7 @@ Teams 已添加列表卡片，以提供超出列表集合可提供的功能。 �
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✖ |
+| ✔️ | ✔️ | ✔️ | ❌ |
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Office 365 连接器卡的属性
 
@@ -571,7 +570,7 @@ Teams 支持收据卡，它使机器人能够向用户提供收据。 它通常�
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="example-of-a-receipt-card"></a>收据卡的示例
 
@@ -645,7 +644,7 @@ Teams 中的登录卡类似于 Bot Framework 中的登录卡，只不过 Teams �
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### <a name="additional-information-on-signin-cards"></a>有关登录卡的其他信息
 
@@ -664,7 +663,7 @@ Bot Framework 参考:
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 :::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="缩略图卡片":::
 
@@ -747,7 +746,7 @@ Bot Framework 参考:
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
 > 轮播每封邮件最多可显示十张卡片。
@@ -941,7 +940,7 @@ Bot Framework 参考:
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 #### <a name="example-of-a-list-collection"></a>列表集合示例
 

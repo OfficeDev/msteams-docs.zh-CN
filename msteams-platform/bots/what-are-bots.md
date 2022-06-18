@@ -1,16 +1,16 @@
 ---
 title: " Microsoft Teams 中的自动程序"
 author: surbhigupta
-description: Microsoft Teams 中的机器人概述。
+description: 借助此学习路径，开始使用 Microsoft Teams 中的聊天机器人及其代码示例。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602290"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143709"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
@@ -39,7 +39,7 @@ ms.locfileid: "65602290"
 
 机器人是具有对话界面的应用。 可以使用文本、交互式卡片和语音与机器人交互。 机器人在频道或群组聊天对话和一对一对话中的行为不同。 会话通过 Bot Framework 连接器进行处理。 请参阅[对话基础知识](~/bots/how-to/conversations/conversation-basics.md)。
 
-机器人需要上下文信息（例如用户配置文件详细信息）来访问相关内容并增强机器人体验。请参阅[获取 Teams 上下文](~/bots/how-to/get-teams-context.md)。
+机器人需要上下文信息（例如用户配置文件详细信息）来访问相关内容并增强机器人体验。 请参阅[获取 Teams 上下文](~/bots/how-to/get-teams-context.md)。
 
 可以使用 Graph API 或 Teams 机器人 API 通过机器人发送和接收文件。 请参阅[通过机器人发送和接收文件](~/bots/how-to/bots-filesv4.md)。
 

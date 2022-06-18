@@ -1,17 +1,16 @@
 ---
 title: 获取机器人的 Teams 特定上下文
 author: surbhigupta
-description: 如何获取机器人的 Microsoft Team 特定上下文，包括对话名单、单个成员或团队的详细信息、频道列表、代码示例。
+description: 了解如何获取机器人的 Teams 特定上下文，包括对话名单、单个成员或团队的详细信息、频道列表、代码示例。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: 机器人, 上下文, 名单, 用户个人资料, 频道列表
-ms.openlocfilehash: 8bbbf7af5fd9d86ec1019a5c3b4ec76dce4085f2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: fc138a66bd5a489133c11db8a24b2a9d6d06634d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756588"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143758"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>获取机器人的 Teams 特定上下文
 
