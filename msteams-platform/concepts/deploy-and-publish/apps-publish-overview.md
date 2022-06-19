@@ -5,12 +5,12 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 72f902b340653cd6d57eccaf7bbd21e7ad608ebc
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0efbc1e18d7cec6324ecc4cbec762d7b94c32511
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123529"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150797"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>分发 Microsoft Teams 应用
 
@@ -22,7 +22,7 @@ ms.locfileid: "66123529"
 
 ## <a name="create-your-app-package"></a>创建应用包
 
-若要分发 Microsoft Teams 应用，必须具有有效的应用包。  应用包是包含 **应用清单** 和 **应用图标的** zip 文件。
+若要分发 Teams 应用，必须具有有效的应用包。  应用包是包含 **应用清单** 和 **应用图标的** zip 文件。
 
 ## <a name="upload-your-app-in-teams"></a>在 Teams 中上传应用
 

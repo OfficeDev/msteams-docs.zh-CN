@@ -5,12 +5,12 @@ description: 借助此学习路径，开始使用 Microsoft Teams 中的聊天�
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143709"
+ms.locfileid: "66150839"
 ---
 # <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
 
@@ -18,7 +18,7 @@ ms.locfileid: "66143709"
 
 > [!IMPORTANT]
 > 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。
-> 
+>
 > Microsoft Teams 中的机器人应用程序可通过 [Azure 机器人服务](/azure/bot-service/channel-connect-teams)在 GCC-High 中使用。
 
 会话机器人允许用户通过文本、交互卡和任务模块与 web 服务进行交互。
@@ -43,9 +43,9 @@ ms.locfileid: "66143709"
 
 可以使用 Graph API 或 Teams 机器人 API 通过机器人发送和接收文件。 请参阅[通过机器人发送和接收文件](~/bots/how-to/bots-filesv4.md)。
 
-速率限制用于优化用于 Teams 应用程序的机器人。 为了保护 Microsoft Teams 及其用户，机器人 API 为传入请求提供速率限制。 请参阅[通过团队中的速率限制来优化你的智能机器人](~/bots/how-to/rate-limit.md)。
+速率限制用于优化用于 Teams 应用程序的机器人。 为了保护 Teams 及其用户，机器人 API 为传入请求提供速率限制。 请参阅[通过团队中的速率限制来优化你的智能机器人](~/bots/how-to/rate-limit.md)。
 
-通过用于通话和联机会议的 Microsoft Graph API，Microsoft Teams 应用现在可以使用语音和视频与用户进行交互。请参阅[通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。
+通过 Microsoft Graph 用于通话和联机会议的 API，Teams 应用现在可以使用语音和视频与用户进行交互。 请参阅[通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。
 
 可以使用 Teams 机器人 API 获取聊天或团队成员的信息。 请参阅[Teams 机器人 API 在提取团队或聊天成员方面的更改](~/resources/team-chat-member-api-changes.md)。
 

@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 了解如何创建深层链接，以及如何在 Microsoft Teams 应用中使用和导航它们（带有选项卡）。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123715"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150678"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -91,7 +91,7 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>使用选项卡中的深层链接
 
-导航到深层链接时，Microsoft Teams 只需导航到选项卡，并通过 Microsoft Teams JavaScript 库提供一种机制来检索子页面 ID（如果存在）。
+导航到深层链接时，Microsoft Teams 只需导航到选项卡，并通过 Teams JavaScript 库提供一种机制来检索子页面 ID（如果存在）。
 
 如果选项卡通过深层链接导航，则 TeamsJS v1 中的 [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) 调用 (`microsoftTeams.getContext()`) 将返回一个承诺，该承诺将使用包含 `subPageId` 属性 (TeamsJS v1 的 subEntityId) 的上下文进行解析。 有关详细信息，请参阅 [PageInfo 接口](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)。
 
@@ -109,7 +109,7 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> 如果机器人发送包含 `TextBlock` 和深层链接的消息，则当用户选择链接时，将打开新的浏览器选项卡。 这发生在 Chrome 和 Microsoft Teams 桌面应用中，两者都在 Linux 上运行。
+> 如果机器人发送包含 `TextBlock` 和深层链接的消息，则当用户选择链接时，将打开新的浏览器选项卡。 这发生在 Chrome 和 Teams 桌面应用中，两者都在 Linux 上运行。
 > 如果机器人将相同的深层链接 URL 发送到 `Action.OpenUrl`，则当用户选择链接时，Teams 选项卡将在当前浏览器选项卡中打开。 未打开新的浏览器选项卡。
 
 <!--- TBD: Edit this article.
@@ -446,7 +446,7 @@ else { /* handle case where capability isn't supported */ }
 
 | 示例名称 | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|使用子实体 ID 的深层链接  |Microsoft Teams 示例应用，用于演示从机器人聊天到使用子实体 ID 的选项卡的深层链接。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|使用子实体 ID 的深层链接  | Teams 示例应用，用于演示从机器人聊天到使用子实体 ID 的选项卡的深层链接。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>另请参阅
 
