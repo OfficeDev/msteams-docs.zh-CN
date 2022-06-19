@@ -3,12 +3,12 @@ title: 自定义同框场景模式
 description: 使用自定义"协同模式"场景
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736874"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150643"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
@@ -24,7 +24,7 @@ Microsoft Teams 中的"自定义在一起"模式场景提供沉浸式且极具�
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="仅创建场景应用" border="false":::
 
-仅场景应用仍然是 Microsoft Teams 中的应用。 Scene Studio 在后台处理应用包创建。 单个应用包中的多个场景显示为用户的平面列表。
+仅场景应用仍然是 Teams 中的应用。 Scene Studio 在后台处理应用包创建。 单个应用包中的多个场景显示为用户的平面列表。
 
 > [!NOTE]
 > 用户无法从移动端启动同框场景模式。但是，在用户通过移动设备加入会议并从桌面打开“同框场景模式”后，打开视频的移动用户将显示在桌面上的“同框场景模式”中。
@@ -34,7 +34,7 @@ Microsoft Teams 中的"自定义在一起"模式场景提供沉浸式且极具�
 必须基本了解以下内容才能使用自定义"同一模式"场景：
 
 * 定义场景中的场景和座位。
-* 拥有Microsoft 开发人员帐户并熟悉 Microsoft Teams [开发人员门户](../concepts/build-and-test/teams-developer-portal.md) 和 App Studio。
+* 拥有 Microsoft 开发人员帐户并熟悉 Teams [开发人员门户](../concepts/build-and-test/teams-developer-portal.md) 和 App Studio。
 * 了解[应用旁加载的概念](../concepts/deploy-and-publish/apps-upload.md)。
 * 确保管理员已授予 [**上传自定义应用**](../concepts/deploy-and-publish/apps-upload.md)的权限，并分别选择所有筛选器作为应用设置和会议策略的一部分。
 
@@ -50,7 +50,7 @@ Microsoft Teams 中的"自定义在一起"模式场景提供沉浸式且极具�
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>使用 Scene Studio 生成场景
 
-Microsoft 有一个场景工作室，可用于生成场景。 它在 [场景编辑器 - Teams 开发人员门户](https://dev.teams.microsoft.com/scenes)上提供。 本文档引用 Microsoft Teams 开发人员门户中的 Scene Studio。 在 App Studio 场景设计器中，接口和功能都相同。
+Microsoft 有一个场景工作室，可用于生成场景。 它在 [场景编辑器 - Teams 开发人员门户](https://dev.teams.microsoft.com/scenes)上提供。 本文档引用 Teams 开发人员门户中的 Scene Studio。 在 App Studio 场景设计器中，接口和功能都相同。
 
 Scene Studio 上下文中的场景是包含以下元素的项目：
 
@@ -106,9 +106,9 @@ Scene Studio 上下文中的场景是包含以下元素的项目：
 
     ![分配专色](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. 选择 **保存**，然后选择 **在 Teams 中查看**，以便在 Microsoft Teams 中快速测试场景。
+1. 选择“**保存**”，然后选择“**在 Teams 中查看**”，以在 Microsoft Teams 中快速测试场景。
 
-    * 在 Teams 中选择 **视图** 会自动创建可在 Teams 开发人员门户 的" **应用** "页中查看的 Microsoft Teams 应用。
+    * 选择“**在 Teams 中查看视图**”会自动创建可在 Teams 开发人员门户的“**应用**”页中查看的 Teams 应用。
     * 在 Teams 中选择 **视图** 会自动创建场景后面的 appmanifest.json 应用包。 可以从菜单转到  **应用** 并访问自动创建的应用包。
     * 若要删除创建的场景，请选择顶部栏上的 **删除场景**。
 
@@ -217,7 +217,7 @@ Scene.json 与图像一起指示席位的确切位置。 场景由位图图像�
 1. 创建新的测试会议。
 
     >[!NOTE]
-    > 在 Scene Studio 中选择 **预览** 时，场景将作为应用安装在 Microsoft Teams 中。 这是开发人员在场景工作室中测试和试用场景的模型。 将场景作为应用提供后，用户会在场景库中看到这些场景。
+    > 在 Scene Studio 中选择“**预览**”时，场景将作为应用安装在 Microsoft Teams 中。 这是开发人员在场景工作室中测试和试用场景的模型。 将场景作为应用提供后，用户会在场景库中看到这些场景。
 
 1. 从左上角的" **库"** 下拉列表中，选择" **一起模式"**。 将显示 **选取器** 对话框，并且添加的场景可用。
 

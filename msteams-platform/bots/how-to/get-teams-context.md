@@ -5,12 +5,12 @@ description: 了解如何获取机器人的 Teams 特定上下文，包括对话
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: fc138a66bd5a489133c11db8a24b2a9d6d06634d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 51e241aacce149dfab7371ab9c1d8f987134b67e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143758"
+ms.locfileid: "66150692"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>获取机器人的 Teams 特定上下文
 
@@ -208,7 +208,7 @@ Response body
 
 * * *
 
-获取单个成员的详细信息后，可以获取团队的详细信息。 目前，若要检索团队的信息，请使用 Microsoft Teams 机器人 API `TeamsInfo.GetMemberDetailsAsync`（对于 C#）或 `TeamsInfo.getTeamDetails`（对于 TypeScript）。
+获取单个成员的详细信息后，可以获取团队的详细信息。 目前，要检索团队的信息，请使用适用于 C# 的 Teams 机器人 API `TeamsInfo.GetMemberDetailsAsync` 或适用于 TypeScript 的 Teams 机器人 API `TeamsInfo.getTeamDetails`。
 
 ## <a name="get-teams-details"></a>获取团队的详细信息
 
@@ -283,7 +283,7 @@ Response body
 
 * * *
 
-获取团队的详细信息后，可以获取团队中的频道列表。 目前，若要检索团队中频道列表的信息，请使用 Microsoft Teams 机器人 API `TeamsInfo.GetTeamChannelsAsync`（对于 C#）或 `TeamsInfo.getTeamChannels`（对于 TypeScript API）。
+获取团队的详细信息后，可以获取团队中的频道列表。 目前，要检索团队中频道列表的信息，请使用适用于 C# 的 Teams 机器人 API `TeamsInfo.GetTeamChannelsAsync` 或适用于 TypeScript API 的 `TeamsInfo.getTeamChannels`。
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>获取团队中的频道列表
 
