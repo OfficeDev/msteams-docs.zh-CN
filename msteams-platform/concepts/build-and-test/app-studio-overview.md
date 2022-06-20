@@ -3,12 +3,12 @@ title: App Studio for Microsoft Teams 入门
 description: 本文介绍如何使用 app studio 生成和管理应用，以便Microsoft Teams和安装应用工作室。
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: de1a3bb355ce7f033cc1f41e3e42d3e97de6d0c1
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cf9f4a144886c67b2c2c667683d62a65fc4ee9c4
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150699"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164252"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio 管理应用以进行Microsoft Teams
 
@@ -30,15 +30,15 @@ App Studio 是一个Teams应用，可在Teams存储中找到。 请按照此链�
 
 在应用商店中，搜索 App Studio。
 
-![App studio 的应用商店条目](~/assets/images/get-started/storeteamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/StoreTeamsAppStudio.png" alt-text="App studio 的应用商店条目":::
 
 选择 App Studio 磁贴以打开应用安装页面：
 
-![配置 app studio](~/assets/images/get-started/teamsappstudioconfiguration.png)
+:::image type="content" source="../../assets/images/get-started/teamsAppStudioConfiguration.png" alt-text="配置 app studio":::
 
 选择“**安装**”。
 
-![app studio](~/assets/images/get-started/teamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/TeamsAppStudio.png" alt-text="app studio":::
 
 进入 App Studio 后，在 **“清单编辑** 器”选项卡上选择可导入现有应用或创建新应用的位置。
 
@@ -148,6 +148,32 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 * 选项卡
 * 表格
 * 图标
+
+## <a name="app-studio-to-developer-portal"></a>App Studio 到开发人员门户
+
+App Studio 将被弃用，可以使用开发人员门户。 下表提供了开发人员门户中支持的功能的详细信息：
+
+| 功能 | 应用程序 Studio | 开发人员门户 |
+| --- | --- | --- |
+| 应用分析* | ❌ | ✔️ |
+| 应用功能-机器人 | ✔️ | ✔️ |
+| 应用功能连接器 | ✔️ | ✔️ |
+| 应用功能-消息传递扩展 | ✔️ | ✔️ |
+| 应用功能会议扩展 | ❌ | ✔️ |
+| 应用功能-个人应用 | ✔️ | ✔️ |
+| 应用功能-选项卡 | ✔️ | ✔️ |
+| 应用环境 | ❌ | ✔️ |
+| 应用语言 | ✔️ | ✔️ |
+| 应用清单预览和下载 | ✔️ | ✔️ |
+| 应用计划和定价 | ❌ | ✔️ |
+| 应用发布 | ✔️ | ✔️ |
+| 应用权限 | ❌ | ✔️ |
+| 与共同开发人员共享应用 | ❌ | ✔️ |
+| 应用验证 | ✔️ | ✔️ |
+| 创建新应用 | ✔️ | ✔️ |
+| 传递 zip 包 | ✔️ | ✔️ |
+
+\**应用分析将很快可用于 GA。*
 
 ## <a name="see-also"></a>另请参阅
 

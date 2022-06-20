@@ -4,12 +4,12 @@ description: 在本模块中，了解如何使用开发人员门户为Microsoft 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 391d6c671bf7c34a734eed3202df50ebdc4f9eae
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142365"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164239"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>使用开发人员门户管理Teams应用
 
@@ -21,6 +21,31 @@ ms.locfileid: "66142365"
 >
 > * 目前，开发人员门户不适用于政府社区云 (GCC)、GCC High 或国防部 (DOD) 租户。
 > * 但是，可以使用常规租户在开发人员门户中构建应用、下载应用，并使用 [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) 将应用上传到国家云。 有关详细信息，请参阅[国家云部署](/graph/deployments)。
+
+> [!IMPORTANT]
+> 如果要从 App Studio 迁移到开发人员门户，下表提供了开发人员门户中支持的功能的详细信息：
+
+| 功能 | 应用程序 Studio | 开发人员门户 |
+| --- | --- | --- |
+| 应用分析* | ❌ | ✔️ |
+| 应用功能-机器人 | ✔️ | ✔️ |
+| 应用功能连接器 | ✔️ | ✔️ |
+| 应用功能-消息传递扩展 | ✔️ | ✔️ |
+| 应用功能会议扩展 | ❌ | ✔️ |
+| 应用功能-个人应用 | ✔️ | ✔️ |
+| 应用功能-选项卡 | ✔️ | ✔️ |
+| 应用环境 | ❌ | ✔️ |
+| 应用语言 | ✔️ | ✔️ |
+| 应用清单预览和下载 | ✔️ | ✔️ |
+| 应用计划和定价 | ❌ | ✔️ |
+| 应用发布 | ✔️ | ✔️ |
+| 应用权限 | ❌ | ✔️ |
+| 与共同开发人员共享应用 | ❌ | ✔️ |
+| 应用验证 | ✔️ | ✔️ |
+| 创建新应用 | ✔️ | ✔️ |
+| 传递 zip 包 | ✔️ | ✔️ |
+
+\**应用分析将很快可用于 GA。*
 
 ## <a name="register-an-app"></a>注册应用
 
@@ -161,7 +186,7 @@ Teams 应用是一款 Web 应用。 与所有 Web 应用一样，其源代码通
 
 可以选择每个 **指标名称** ，查看随时间推移的趋势。
 
- :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="应用程序":::
+ :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="应用":::
 
 ## <a name="use-tools-to-create-app-features"></a>使用工具创建应用功能
 
