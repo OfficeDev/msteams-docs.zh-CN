@@ -5,16 +5,23 @@ description: 在本模块中，了解如何开始使用Office 365连接器并将
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 53f5f6d9f360c465175b18d8b1b5eab9020d3ccf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1727ff46124c5c9dd5567ae63cea0826e806be2c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143555"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189323"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
 使用 Microsoft Teams 应用，可以在 Teams 中添加现有 Office 365 连接器或生成新的连接器。更多相关信息，请参阅 [生成自己的连接器](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)。
+
+请参阅以下视频，了解如何创建Office 365连接器：
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+<br>
+
 
 ## <a name="add-a-connector-to-teams-app"></a>将连接器添加到 Teams 应用
 
@@ -22,7 +29,7 @@ ms.locfileid: "66143555"
 
 要分发连接器，请从[连接器开发人员仪表板](https://aka.ms/connectorsdashboard)中注册。
 
-要使连接器仅在 Microsoft Teams 中工作，请按照[将应用发布到 Microsoft Teams 商店](~/concepts/deploy-and-publish/appsource/publish.md)文章的说明提交连接器。 否则，注册的连接器适用于支持应用程序的所有 Office 365 产品，包括 Outlook 和 Teams。
+若要使连接器仅在Teams中工作，请按照说明提交连接器，以便将[应用发布到Microsoft Teams应用商店](~/concepts/deploy-and-publish/appsource/publish.md)文章。 否则，注册的连接器适用于支持应用程序的所有 Office 365 产品，包括 Outlook 和 Teams。
 
 > [!IMPORTANT]
 > 在连接器开发人员仪表板中选择“**保存**”后，会注册连接器。 如果要在 AppSource 中发布连接器，请按照[将 Microsoft Teams 应用发布到 AppSource](~/concepts/deploy-and-publish/apps-publish.md) 中的说明操作。 如果不想在 AppSource 中发布应用，请将其直接分发给组织。 在为组织发布连接器以后，无需在连接器仪表板上执行进一步操作。
@@ -40,7 +47,7 @@ ms.locfileid: "66143555"
     > * 代码可以通过检索 Webhook 设置来处理保存事件。 代码存储 Webhook 以在稍后发布事件。
     > * 配置体验在 Teams 中内联加载。
 
-可以重用现有的 Web 配置体验，或创建单独的版本，专门托管在 Teams 中。 代码必须包含 Microsoft Teams JavaScript SDK。 这使代码能够访问 API 来执行常见操作，例如获取当前用户、频道或团队上下文并启动身份验证流。
+可以重用现有的 Web 配置体验，或创建单独的版本，专门托管在 Teams 中。 代码必须包含 Teams JavaScript SDK。 这使代码能够访问 API 来执行常见操作，例如获取当前用户、频道或团队上下文并启动身份验证流。
 
 要集成配置体验：
 
@@ -136,7 +143,7 @@ ms.locfileid: "66143555"
 | `configName`  | 配置名称，在调用 `setSettings()` 时由代码设置。 |
 | `contentUrl` | 配置页的 URL，在调用 `setSettings()` 时由代码设置。 |
 | `webhookUrl` | 为连接器创建的 Webhook URL。将 Webhook URL 用于 POST 结构的 JSON 以将卡片发送到频道。`webhookUrl` 仅在应用程序成功返回数据时返回。 |
-| `appType` | 返回的值可以是 `mail`、`groups` 或 `teams`，分别对应 Office 365 邮件、Office 365 组或 Microsoft Teams。 |
+| `appType` | 返回的值可以`mail`是或`groups``teams`分别对应于Office 365邮件、Office 365组或Teams。 |
 | `userObjectId` | 这是与启动连接器安装的 Office 365 用户相对应的唯一 ID，必须具备安全性。可以使用此值关联 Office 365 中已在服务中设置配置的用户。 |
 
 #### <a name="handle-edits"></a>处理编辑
@@ -214,11 +221,11 @@ ms.locfileid: "66143555"
 ![“连接器”对话框中“上传”部分的屏幕截图](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
-> 该流完全在作为托管体验的 Microsoft Teams 内发生。
+> 该流完全在托管体验Teams内发生。
 
 要验证操作 `HttpPOST` 是否正常工作，[将消息发送到连接器](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
-按照[分步指南](../../sbs-teams-connectors.yml)在 Microsoft Teams 中创建和测试连接器。
+按照[分步指南](../../sbs-teams-connectors.yml)在Teams中创建和测试连接器。
 
 ## <a name="distribute-webhook-and-connector"></a>分发 Webhook 和连接器
 

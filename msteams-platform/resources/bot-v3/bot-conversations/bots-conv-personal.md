@@ -4,12 +4,12 @@ description: 在本模块中，了解与机器人进行一对一对话的端到�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: e973e335558a54187a11d5146b52c5774d3cf758
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 78f517c10297565683cf75692781dea3d2fbdf6c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144325"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189577"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>与 Microsoft Teams 机器人进行个人（一对一）对话
 
@@ -18,6 +18,7 @@ ms.locfileid: "66144325"
 Microsoft Teams 允许用户与基于 [Microsoft Bot Framework](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true) 构建的机器人进行直接对话。 用户可以在“发现应用”库中查找机器人，并将其添加到 Teams 体验以进行个人对话。 具有相应权限的团队所有者和用户还可以将机器人添加为团队成员。 有关详细信息，请参阅 [团队频道中的交互](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)，这不仅使他们在该团队的频道中可用，而且还可用于个人聊天用户。
 
 个人聊天不同于频道中的聊天，因为用户无需 @提及机器人。 如果在多个上下文中使用机器人，如以下范围中：
+
 * 个人
 * 群组聊天
 * 频道
@@ -26,7 +27,7 @@ Microsoft Teams 允许用户与基于 [Microsoft Bot Framework](/azure/bot-servi
 
 ## <a name="designing-a-great-personal-bot"></a>设计出色的个人机器人
 
-Microsoft Teams 中出色的机器人可帮助用户获取所需信息，所有这些都位于 Teams 体验的上下文中。 与机器人的个人对话是机器人与其用户之间的私人交流；这是一种在个人上下文中提供用户特定信息和与该用户相关信息的好方法。 个人聊天中的机器人是服务与个人之间的对话框，其中群组聊天或频道中的机器人会将所有内容广播给一组人。
+Teams中的出色机器人可帮助用户获取所需的信息，所有这些信息都在Teams体验的上下文中。 与机器人的个人对话是机器人与其用户之间的私人交流；这是一种在个人上下文中提供用户特定信息和与该用户相关信息的好方法。 个人聊天中的机器人是服务与个人之间的对话框，其中群组聊天或频道中的机器人会将所有内容广播给一组人。
 
 根据要创建的体验，机器人可能需要在多个范围（个人、群组聊天和团队）中工作。 支持多个范围的工作是最少的。 Teams 并不期望机器人可在所有范围中发挥作用，但应确保机器人有意义，并在你选择支持的任何范围内提供用户价值。
 

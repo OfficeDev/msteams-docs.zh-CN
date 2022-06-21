@@ -3,12 +3,12 @@ title: 清单架构参考
 description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 2c7637f8ec3bd161827a2bd79f73b7374378e55b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5a65fa1fdbf854749bf21a4d4ab395af74211fc5
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142722"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189355"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
 
@@ -197,7 +197,7 @@ Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产�
                     ],
                     "description": "Command Description; e.g., Add a customer",
                     "initialRun": true,
-                    "fetchTask": true,
+                    "fetchTask": false ,
                     "parameters": [
                         {
                             "name": "custinfo",
@@ -578,7 +578,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`parameters.title`|string|32 个字符|✔️|参数的用户友好标题。|
 |`parameters.description`|string|128 个字符||描述此参数用途的用户友好字符串。|
 |`parameters.value`|string|512 个字符||参数的初始值。 当前不支持该值|
-|`parameters.inputType`|string|128 个字符||定义任务模块上为`fetchTask: true` 显示的控件类型。 `text, textarea, number, date, time, toggle, choiceset` 之一。|
+|`parameters.inputType`|string|128 个字符||定义任务模块上为`fetchTask: false` 显示的控件类型。 `text, textarea, number, date, time, toggle, choiceset` 之一。|
 |`parameters.choices`|对象数组|10 项||`choiceset`的选择选项。 仅当`parameter.inputType``choiceset`时使用。|
 |`parameters.choices.title`|string|128 个字符|✔️|选择的标题。|
 |`parameters.choices.value`|string|512 个字符|✔️|选项的值。|

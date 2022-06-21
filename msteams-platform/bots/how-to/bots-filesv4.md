@@ -4,12 +4,12 @@ description: 了解如何使用个人、频道和群组聊天作用域的 Graph 
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a7746b15798c46c807c276fb7d29f34b59858528
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142925"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189651"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>通过机器人收发文件
 
@@ -238,7 +238,7 @@ private static Attachment GetInlineAttachment()
 }
 ```
 
-### <a name="basic-example-in-c"></a>采用 C# 的基本示例
+### <a name="basic-example-in-c"></a>C 中的基本示例 #
 
 以下代码演示了如何在机器人对话框中处理文件上传并发送文件同意请求:
 
@@ -332,3 +332,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 > [!div class="nextstepaction"]
 > [通过团队中的速率限制来优化你的智能机器人](~/bots/how-to/rate-limit.md)
+
+## <a name="see-also"></a>另请参阅
+
+[Microsoft Teams 中的受保护 API](/graph/teams-protected-apis)

@@ -3,12 +3,12 @@ title: 创建虚拟助手
 description: 了解如何使用包含自适应卡片、处理中断等功能的代码示例和代码片段为Teams创建虚拟助理机器人。
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 4b1dc7168cc67cd455182dddd4dd2d14a0cf9c3d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: a26f68edd2134c0bda066325915891aae5e8e2d0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123060"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189513"
 ---
 # <a name="create-virtual-assistant"></a>创建虚拟助手
 
@@ -263,7 +263,11 @@ Teams 应用可以存在于多个作用域内，包括一对一聊天、群组�
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....   
+                 ....}
+         ]
+     }
+ ]
+                 
 ```
 
 以下部分显示了相应的虚拟助理清单文件代码片段：
@@ -277,7 +281,11 @@ Teams 应用可以存在于多个作用域内，包括一对一聊天、群组�
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    .... 
+                 ....}
+         ]
+     }
+ ]
+ 
 ```
 
 用户调用命令后，虚拟助理可以通过分析命令 ID 来标识关联的技能，通过从命令 ID 中删除额外的后缀 `:<skill_id>` 来更新活动，并将其转发到相应技能。 技能的代码不需要处理额外的后缀。 因此，可以避免跨技能命令 ID 之间的冲突。 使用此方法，所有上下文中技能的所有搜索和操作命令（如 **compose**、**commandBox** 和 **message**）都由虚拟助理提供支持。
@@ -334,7 +342,7 @@ Teams 应用可以存在于多个作用域内，包括一对一聊天、群组�
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何将预订会议室应用模板转换为虚拟助理技能：预订会议室是一个 Microsoft Teams，允许用户从当前时间开始快速查找和保留会议室 30、60 或 90 分钟。 默认时间为 30 分钟。 预订会议室机器人的作用域为个人对话或一对一对话。
+以下示例演示如何将书房应用模板转换为虚拟助理技能：书房是一种Teams，用户可以从当前时间开始快速查找和保留会议室 30、60 或 90 分钟。 默认时间为 30 分钟。 预订会议室机器人的作用域为个人对话或一对一对话。
 下图显示 **预订会议室** 技能的虚拟助理：
 
 ![具有“预订会议室”技能的虚拟助理](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -343,7 +351,7 @@ Teams 应用可以存在于多个作用域内，包括一对一聊天、群组�
 
 ### <a name="skill-manifest"></a>技能清单
 
-技能清单是公开技能的消息传送终结点、ID、名称和其他相关元数据的 JSON 文件。 此清单不同于用于在 Microsoft Teams 中旁加载应用的清单。 虚拟助理需要此文件的路径作为输入来附加技能。 我们已将以下清单添加到机器人的 wwwroot 文件夹。
+技能清单是公开技能的消息传送终结点、ID、名称和其他相关元数据的 JSON 文件。 此清单不同于用于在Teams中旁加载应用的清单。 虚拟助理需要此文件的路径作为输入来附加技能。 我们已将以下清单添加到机器人的 wwwroot 文件夹。
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..

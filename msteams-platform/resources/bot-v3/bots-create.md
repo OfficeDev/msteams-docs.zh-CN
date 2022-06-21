@@ -4,12 +4,12 @@ description: 在本模块中，了解如何使用Microsoft Bot Framework创建�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 0b39593917585db73eccd36492bcbb7b9fdd6dfd
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a669b11baef8dc31a662ea2ad178ad3488f2d69e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144010"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189522"
 ---
 # <a name="create-a-bot"></a>创建机器人
 
@@ -47,10 +47,11 @@ ms.locfileid: "66144010"
 > * 在 Bot Framework 中编辑机器人列表中现有[机器人的](https://dev.botframework.com/bots)属性（例如，首次开发机器人时常见的“消息终结点”）时，尤其是使用 [ngrok](https://ngrok.com) 时，会看到“迁移状态”列和蓝色“迁移”按钮，该按钮会将你带入Microsoft Azure门户。 不要单击“迁移”按钮，除非这是你要做的;请单击机器人的名称，然后编辑其属性：</br>
    ![编辑自动程序属性](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * 如果使用Microsoft Azure注册机器人，则无需在 Microsoft Azure 上 *托管* 机器人代码。
-> * 如果使用Azure 门户注册机器人，则必须有一个Microsoft Azure帐户。 你可以[免费创建一个](https://azure.microsoft.com/free/)。 若要在创建信用卡时验证身份，必须提供信用卡，但不会收取费用;始终可以使用Microsoft Teams创建和使用机器人。
-> * 现在可以使用 App Studio 直接在Microsoft Teams中注册/更新应用和机器人信息。 只需使用Azure 门户添加或配置其他 Bot Framework 通道，如 Direct Line、Web 聊天、Skype 和 Facebook Messenger。
+> * 如果使用Azure 门户注册机器人，则必须有一个Microsoft Azure帐户。 你可以[免费创建一个](https://azure.microsoft.com/free/)。 若要在创建信用卡时验证身份，必须提供信用卡，但不会收取费用;始终可以使用Teams创建和使用机器人。
+> * 现在可以使用 App Studio 直接在Teams中注册/更新应用和机器人信息。 只需使用Azure 门户添加或配置其他 Bot Framework 通道，如 Direct Line、Web 聊天、Skype 和 Facebook Messenger。
 
 > [!WARNING]
+>
 >* 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日弃用
 
 ## <a name="see-also"></a>另请参阅

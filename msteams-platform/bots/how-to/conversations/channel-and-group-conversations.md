@@ -5,12 +5,12 @@ description: 了解如何在频道或群聊中发送、接收和处理机器人�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144409"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190266"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 
@@ -26,6 +26,12 @@ ms.locfileid: "66144409"
 > 使用资源特定许可 (RSC)，机器人可在未被 @提及的情况下接收团队中安装的所有频道消息。 有关详细信息，请参阅[使用 RSC 接收所有频道消息](channel-messages-with-rsc.md)。
 >
 > 目前不支持将消息或自适应卡片发布到专用频道。
+
+请参阅以下视频，了解与机器人的频道和群聊对话：
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
 
 ## <a name="design-guidelines"></a>设计准则
 

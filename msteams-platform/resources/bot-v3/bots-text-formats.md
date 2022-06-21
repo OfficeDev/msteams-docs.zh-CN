@@ -4,12 +4,12 @@ description: 在本模块中，了解机器人对话中的文本格式设置支�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: 2bec542b678f371e20317d1ea7d11b4e97f52338
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0aea1472a323c0161567c4661c02956568cb2187
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142330"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189734"
 ---
 # <a name="formatting-bot-messages"></a>设置机器人消息的格式
 
@@ -27,7 +27,7 @@ Microsoft Teams 支持以下格式设置选项：
 
 ## <a name="formatting-text-content"></a>设置文本内容格式
 
-Microsoft Teams支持 Markdown 和 XML (HTML) 格式设置标记的子集。
+Teams支持 Markdown 和 XML (HTML) 格式设置标记的子集。
 
 目前，以下限制适用：
 * 仅文本邮件不支持表格格式设置。
@@ -36,7 +36,7 @@ Microsoft Teams支持 Markdown 和 XML (HTML) 格式设置标记的子集。
 
 ### <a name="cross-platform-support"></a>跨平台支持
 
-若要确保格式设置适用于Microsoft Teams支持的所有平台，请注意，某些样式当前不支持所有平台。
+若要确保格式设置适用于Teams支持的所有平台，请注意，某些样式当前不支持所有平台。
 
 | 样式                     | 仅文本邮件 | 仅)  (XML 的卡片 |
 |---------------------------|--------------------|------------------|

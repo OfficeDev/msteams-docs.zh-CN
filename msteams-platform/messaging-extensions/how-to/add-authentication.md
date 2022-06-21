@@ -1,16 +1,16 @@
 ---
 title: 为消息扩展添加身份验证
 author: surbhigupta
-description: 在本模块中，了解如何使用代码示例和示例将身份验证添加到消息传递扩展
+description: 本文介绍如何使用代码示例和示例将身份验证添加到消息传递扩展
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cca9aef8e08b9d997497e1531db928d8e29d7eac
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143541"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190270"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>为消息扩展添加身份验证
 
@@ -41,11 +41,11 @@ ms.locfileid: "66143541"
 1. 用户登录后，应关闭窗口并将 **身份验证代码** 发送到 Teams 客户端。
 1. 然后，Teams 客户端会重新向服务发出查询，其中包括步骤 5 中传递的身份验证代码。
 
-服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码一致。 这可确保恶意用户不会尝试欺骗或破坏登录流。 这可以有效地“关闭循环”以完成安全身份验证序列。
+服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 匹配。 这些步骤可确保恶意用户不会尝试欺骗或破坏登录流。 该流有效地“关闭循环”以完成安全身份验证序列。
 
 ### <a name="respond-with-a-sign-in-action"></a>使用登录操作进行响应
 
-若要提示未经身份验证的用户登录，请使用包含身份验证 URL 的类型为 `openUrl` 的建议操作进行响应。
+若要提示未经身份验证的用户登录，请使用包含身份验证 URL 的类型 `openUrl` 建议操作进行响应。
 
 #### <a name="response-example-for-a-sign-in-action"></a>登录操作的响应示例
 

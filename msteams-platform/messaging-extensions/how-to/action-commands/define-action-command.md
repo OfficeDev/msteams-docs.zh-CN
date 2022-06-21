@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在Microsoft Teams中使用应用清�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 64a11741612fdf8efbcca968fed3a3d78cda90b1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143429"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189619"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -23,6 +23,12 @@ ms.locfileid: "66143429"
 1. [可以从何处触发操作命令？](#select-action-command-invoke-locations)
 1. [如何创建任务模块？](#select-how-to-create-your-task-module)
 1. [最终消息或卡片是从机器人发送到频道，还是将消息或卡片插入撰写消息区域供用户提交？](#select-how-the-final-message-is-sent)
+
+请参阅以下视频，了解如何定义消息扩展操作命令：
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
 
 ## <a name="select-action-command-invoke-locations"></a>选择操作命令调用位置
 
@@ -185,7 +191,7 @@ ms.locfileid: "66143429"
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -212,7 +218,7 @@ ms.locfileid: "66143429"
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }

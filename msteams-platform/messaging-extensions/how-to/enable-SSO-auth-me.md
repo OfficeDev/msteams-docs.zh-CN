@@ -1,16 +1,16 @@
 ---
 title: 对消息扩展的 SSO 支持
 author: KirtiPereira
-description: 在本模块中，了解如何使用代码示例启用单一登录 (SSO) 对消息传递扩展的支持。
+description: 本文介绍如何使用代码示例启用单一登录 (SSO) 对消息扩展的支持。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a0130f2730289c3e45dfa3aa4585e62bd430a48a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e891e147d4cc3216b6c2acb686505dd03353b385
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142848"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189861"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>对消息扩展的单一登录支持
 
@@ -123,8 +123,8 @@ ms.locfileid: "66142848"
 
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| 机器人身份验证 | 此示例演示如何开始在 Microsoft Teams 机器人中进行身份验证。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| 选项卡、机器人和消息扩展 (ME) SSO | 此示例演示用于选项卡、机器人和 ME 的 SSO - 搜索、操作、linkunfurl。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
+| 机器人身份验证 | 此示例演示如何开始在机器人中进行身份验证以进行Teams。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| 选项卡、机器人和消息扩展 (ME) SSO | 此示例显示用于 Tab、Bot 和 ME 的 SSO - 搜索、操作、链接展开。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
 
 ## <a name="see-also"></a>另请参阅
 

@@ -5,16 +5,16 @@ description: 在本模块中，了解删除选项卡边距如何增强应用生�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 270d8499ff917a5b95aeaeaa48ddf11215f77d03
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143317"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190147"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
-本文档介绍如何删除Microsoft Teams中所有选项卡周围的边距，从而增强应用生成体验。 这是 2021 年在 Microsoft Teams 中引入的增强功能。
+本文档介绍如何删除Microsoft Teams中所有选项卡周围的边距，从而增强应用生成体验。 这是 2021 年在 Teams 中引入的增强功能。
 可以通过删除所有选项卡周围的边距来生成看起来更本机的应用来Teams。 带删除边距的选项卡与Microsoft Teams的 [UI 工具包设计](~/tabs/design/tabs.md)一致。 大多数应用在不带边距的情况下体验增强的外观。
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit 和无边距" border="false":::

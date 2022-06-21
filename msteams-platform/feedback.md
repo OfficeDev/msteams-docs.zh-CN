@@ -3,12 +3,12 @@ title: Microsoft Teams开发人员社区支持和反馈
 description: 了解Microsoft Teams产品团队通过各种反馈和支持渠道响应开发人员社区。
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 1155df225aff3016f0c978dc9c84b4462874ea16
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: aa8518c095eed2357e1da80af5eec1b15c71759f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144101"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190256"
 ---
 # <a name="support-and-feedback"></a>支持和反馈
 
@@ -20,15 +20,15 @@ ms.locfileid: "66144101"
 |:------------|:------------|
 | **Microsoft Teams 产品问题和故障** | 如果你有 :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft 365 的顶级支持合同，请访问 Microsoft 365 管理中心，并使用“支持”菜单[打开服务请求](https://admin.microsoft.com/)。 |
 | **Azure 帮助和支持** | 如果有付费 Azure 订阅，请访问 Azure 管理中心以[打开票证](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq)。 |
-| **有关 Microsoft Teams 的一般问题** | 如果对 Microsoft Teams 有一般问题，请提交有关 :::image type="icon" source="assets/icons/microsoft-icon.png" border="false":::[Microsoft Teams 社区](https://answers.microsoft.com/msteams/forum)的问题。|
+| **有关Teams的一般问题** | 如果对Teams有一般问题，请提交有关:::image type="icon" source="assets/icons/microsoft-icon.png" border="false":::[Microsoft Teams Community](https://answers.microsoft.com/msteams/forum)的问题。|
 
 ## <a name="developer-community-help"></a>开发人员社区帮助
 
-Microsoft Teams 开发人员社区使用堆栈溢出和 Microsoft 问答与其他开发人员联系，以构思、获取说明和提交查询。 此外，还可以使用其他联系人或网站，具体取决于提出问题、限制和一般问题所需的社区帮助类型。
+Teams开发人员社区使用 Stack Overflow 和 Microsoft Q&A 与其他开发人员进行联系，以进行构想、获取说明和提交查询。 此外，还可以使用其他联系人或网站，具体取决于提出问题、限制和一般问题所需的社区帮助类型。
 
 ### <a name="developer-community-forums"></a>开发人员社区论坛
 
-通过共享和回答 Microsoft Teams 应用开发问题，发布问题并帮助其他社区成员。
+通过共享和回答Teams应用开发问题，发布问题并帮助其他社区成员。
 
 | **社区频道**|   **Contact**  |
 |:---------------------|:---------------|

@@ -1,17 +1,16 @@
 ---
 title: 集成媒体功能
 author: Rajeshwari-v
-description: 了解如何使用代码示例利用 Teams JavaScript 客户端 SDK 启用媒体功能
-keywords: 相机图像麦克风功能本机设备权限媒体 API
+description: 了解如何使用 Teams JavaScript 客户端 SDK 来使用代码示例启用媒体功能，并了解集成媒体功能的优势。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 586db765ff94449a137e131cd788cbc1732d55f2
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130521"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190238"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能
 

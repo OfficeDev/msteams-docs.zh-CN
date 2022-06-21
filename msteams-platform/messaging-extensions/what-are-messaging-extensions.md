@@ -5,16 +5,16 @@ description: 在本模块中，了解消息传递扩展和在Microsoft Teams平�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 5a63c1a36217f4c0aa237e38537be2e094acdea3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7550667495c2d65fd2a9a502830c46eeccfe9749
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144318"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189795"
 ---
 # <a name="message-extensions"></a>消息扩展
 
-消息扩展允许用户通过 Microsoft Teams 客户端中的按钮和表单与你的 Web 服务进行交互。 他们可以从撰写消息区域、命令框或直接从消息的外部系统中搜索或启动操作。 然后，可以将该交互的结果发送回 Microsoft Teams 客户端，该交互通常采用格式丰富的卡片形式。
+消息扩展允许用户通过 Microsoft Teams 客户端中的按钮和表单与你的 Web 服务进行交互。 他们可以从撰写消息区域、命令框或直接从消息的外部系统中搜索或启动操作。 可以以格式丰富的卡片的形式将该交互的结果发送回Teams客户端。
 
 > [!IMPORTANT]
 > 消息扩展在政府社区云 (GCC) 和GCC-High环境中可用，但在国防部 (DoD) 环境中不可用。
@@ -38,12 +38,12 @@ ms.locfileid: "66144318"
 
 ## <a name="understand-how-message-extensions-work"></a>了解消息扩展的工作原理
 
-消息扩展包含托管的 Web 服务和 Microsoft Teams 应用清单，定义从 Microsoft Teams 客户端中调用 Web 服务的地方。 他们利用 Bot Framework 的消息传递架构和安全通信协议，因此你还需要在 Bot Framework 中将 Web 服务注册为机器人。
+消息扩展由托管的 Web 服务和应用清单组成，用于定义 Web 服务从Teams客户端调用的位置。 他们利用 Bot Framework 的消息传递架构和安全通信协议，因此你还需要在 Bot Framework 中将 Web 服务注册为机器人。
 
 > [!NOTE]
 > 虽然可以手动创建 Web 服务，但请使用 [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) 来处理协议。
 
-在 Microsoft Teams 应用的应用清单中，最多定义 10 个不同命令的单个消息扩展。 每个命令定义一个类型，例如操作或搜索，以及从中调用其客户端中的位置。 调用位置为撰写消息区域、命令栏和消息。 调用时，Web 服务将接收包含 JSON 有效负载（包括所有相关信息）的 HTTPS 消息。 使用 JSON 有效负载进行响应，使 Teams 客户端能够知道要启用的下一个交互。
+在Teams应用的应用清单中，最多定义了 10 个不同的命令的单个消息扩展。 每个命令定义一个类型，例如操作或搜索，以及从中调用其客户端中的位置。 调用位置为撰写消息区域、命令栏和消息。 调用时，Web 服务将接收包含 JSON 有效负载（包括所有相关信息）的 HTTPS 消息。 使用 JSON 有效负载进行响应，使 Teams 客户端能够知道要启用的下一个交互。
 
 ## <a name="types-of-message-extension-commands"></a>消息扩展命令的类型
 
@@ -71,7 +71,7 @@ ms.locfileid: "66144318"
 
 ## <a name="link-unfurling"></a>链接展开
 
-粘贴在撰写消息区域中的 URL 时，将调用 Web 服务。 此功能称为链接展开。 当粘贴某一域的 URL 到撰写消息区域，可以订阅以接收调用。 Web 服务可以将 URL“展开”到详细卡片中，提供的信息比标准网站预览卡还多。 可以添加按钮，让用户在不离开Microsoft Teams 客户端的情况下立即采取行动。
+粘贴在撰写消息区域中的 URL 时，将调用 Web 服务。 此功能称为链接展开。 当粘贴某一域的 URL 到撰写消息区域，可以订阅以接收调用。 Web 服务可以将 URL“展开”到详细卡片中，提供的信息比标准网站预览卡还多。 可以添加按钮，以允许用户在不离开Teams客户端的情况下立即采取行动。
 在消息扩展插件中粘贴链接时，以下图像显示链接展开功能：
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="展开链接":::

@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams 授权 OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 60014699aa1275df787fcf553ae04671d1105f1c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757442"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189879"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在 Teams 中测试特定于资源的同意权限
 
@@ -28,7 +28,7 @@ ms.locfileid: "65757442"
 
 <details>
 
-<summary><b>应用清单版本 1.12 的 RSC 权限</b></summary>
+<summary><b>应用清单版本 1.12 及更高版本的 RSC 权限</b></summary>
 
 使用以下值将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到应用清单：
 
@@ -194,7 +194,7 @@ ms.locfileid: "65757442"
 
 <details>
 
-<summary><b>应用清单版本 1.11 或更低版本的 RSC 权限</b></summary>
+<summary><b>应用清单版本 1.11 及更低版本的 RSC 权限</b></summary>
 
 使用以下值将 [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) 密钥添加到应用清单：
 

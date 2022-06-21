@@ -1,15 +1,15 @@
 ---
 title: 使用消息扩展进行搜索
-description: 在本模块中，了解如何开发基于搜索的消息扩展
+description: 本文介绍如何开发基于搜索的消息扩展
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: a555091558d66e070f09ec6df8338ac686657019
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 20dbc7c5a65ee44f3b40eda29a20d6d37e8a81f0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142750"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190010"
 ---
 # <a name="search-with-message-extensions"></a>使用消息扩展进行搜索
 
@@ -94,15 +94,15 @@ ms.locfileid: "66142750"
 
 大部分工作都涉及该 `onQuery` 事件，该事件处理消息扩展窗口中的所有交互。
 
-如果设置为`canUpdateConfiguration``true`清单中，则为消息扩展启用 **设置** 菜单项，并且还必须处理和`onSettingsUpdate`处理`onQuerySettingsUrl`。
+如果设置为`canUpdateConfiguration``true`清单中，则为消息扩展启用设置菜单项，并且还必须处理和`onSettingsUpdate`处理`onQuerySettingsUrl`。
 
 ## <a name="handle-onquery-events"></a>处理 onQuery 事件
 
 消息扩展在消息扩展窗口中发生任何事件或发送到窗口时接收 `onQuery` 事件。
 
-如果消息扩展使用配置页，则处理程序 `onQuery` 应首先检查是否存在任何存储的配置信息;如果未配置消息扩展名，则返回带有 `config` 配置页链接的响应。 请注意，配置页的响应也由 `onQuery`处理。 唯一的例外是处理程序 `onQuerySettingsUrl`调用配置页时;请参阅以下部分：
+如果消息扩展使用配置页，则处理程序 `onQuery` 应首先检查是否存在任何存储的配置信息;如果未配置消息扩展名，则返回带有 `config` 配置页链接的响应。 配置页的响应也由 `onQuery`处理。 唯一的例外是处理程序 `onQuerySettingsUrl`调用配置页时;请参阅以下部分：
 
-如果消息扩展需要身份验证，请检查用户状态信息;如果用户未登录，请按照本主题后面的 [“身份验证”](#authentication) 部分中的说明操作。
+如果消息扩展需要身份验证，请检查用户状态信息。 如果用户未登录，请按照本主题后面的 [“身份验证”](#authentication) 部分中的说明操作。
 
 接下来，检查是否 `initialRun` 已设置;如果是，请采取适当的操作，例如提供说明或响应列表。
 
@@ -136,9 +136,9 @@ ms.locfileid: "66142750"
 |`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) 租户 ID。 |
 |`channelData.channel.id`| 频道 ID（如果请求是在频道中发出）。 |
 |`channelData.team.id`| 团队 ID（如果请求是在频道中发出）。 |
-|`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>该 `country` 字段包含用户检测到的位置。<br>该 `platform` 字段介绍消息传送客户端平台。 <br>有关其他信息，请 *参阅*[非 IRI 实体类型 - clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
+|`clientInfo`|有关用于发送用户消息的客户端软件的可选元数据。 实体可以包含两个属性：<br>该 `country` 字段包含用户检测到的位置。<br>该 `platform` 字段介绍消息传送客户端平台。 <br>有关详细信息，*请参阅*[非 IRI 实体类型 - clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。|
 
-请求参数本身位于值对象中，其中包括以下属性：
+请求参数在值对象中找到，其中包括以下属性：
 
 | 属性名称 | 用途 |
 |---|---|
@@ -194,7 +194,7 @@ ms.locfileid: "66142750"
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>从插入撰写消息框中的链接接收请求
 
-作为搜索外部服务的替代 (或) ，可以使用插入撰写消息框中的 URL 来查询服务并返回卡片。 在下面的屏幕截图中，用户已粘贴到Azure DevOps中已将消息扩展解析为卡片的工作项的 URL 中。
+作为搜索外部服务的替代 (或) ，可以使用插入撰写消息框中的 URL 来查询服务并返回卡片。 在下面的屏幕截图中，用户粘贴了Azure DevOps中工作项的 URL，消息扩展已解析为卡片。
 
 ![链接展开示例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -234,7 +234,7 @@ ms.locfileid: "66142750"
 
 ### <a name="respond-to-user-requests"></a>响应用户请求
 
-当用户执行查询时，Microsoft Teams向服务发出同步 HTTP 请求。 此时，代码有 5 秒的时间提供对请求的 HTTP 响应。 在此期间，服务可以执行其他查找或为请求提供服务所需的任何其他业务逻辑。
+当用户执行查询时，Teams向服务发出同步 HTTP 请求。 在此期间，代码有 5 秒的时间提供对请求的 HTTP 响应。 在此期间，服务可以执行其他查找或为请求提供服务所需的任何其他业务逻辑。
 
 服务应响应与用户查询匹配的结果。 响应必须指示具有以下正文的 `200 OK` HTTP 状态代码和有效的 application/json 对象：
 
@@ -265,9 +265,9 @@ ms.locfileid: "66142750"
 结果列表显示在每个项的预览Microsoft Teams UI 中。 预览版是通过以下两种方式之一生成的：
 
 * `preview`使用对象中的`attachment`属性。 附 `preview` 件只能是 Hero 或缩略图卡。
-* 从附件的基本`title``text`属性和`image`属性中提取。 仅当未设置属性且这些属性可用时 `preview` ，才使用这些属性。
+* 从附件的基本`title``text`属性和`image`属性中提取。 仅当未设置该属性且这些属性可用时 `preview` ，才使用这些属性。
 
-只需设置结果列表的预览属性，即可在结果列表中显示自适应或Office 365连接器卡片的预览;如果结果已经是主图或缩略图卡，则不需要此功能。 如果使用预览附件，则它必须是 Hero 卡或缩略图卡。 如果未指定预览属性，则卡片预览将失败，不会显示任何内容。
+只需设置其预览属性，即可在结果列表中显示自适应或Office 365连接器卡的预览。 如果结果已经是主图或缩略图卡，则不需要这样做。 如果使用预览附件，则它必须是 Hero 卡或缩略图卡。 如果未指定预览属性，则卡片预览将失败，不会显示任何内容。
 
 #### <a name="response-example"></a>响应示例
 
@@ -448,18 +448,18 @@ ms.locfileid: "66142750"
 
 ## <a name="authentication"></a>身份验证
 
-如果服务需要用户身份验证，则需要先登录用户，然后才能使用消息扩展名。 如果已编写机器人或登录用户的选项卡，则应熟悉此部分。
+如果服务需要用户身份验证，则需要先登录用户，然后用户才能使用消息扩展。 如果已编写机器人或登录用户的选项卡，则应熟悉此部分。
 
 序列如下所示：
 
 1. 用户发出查询，或者默认查询会自动发送到服务。
 2. 服务通过检查Teams用户 ID 来检查用户是否已首次进行身份验证。
-3. 如果用户尚未进行身份验证，请使用建议的`openUrl`操作（包括身份验证 URL）发回`auth`响应。
+3. 如果用户尚未进行身份验证，请使用建议的操作（包括身份验证 URL）发回 `auth` 响应 `openUrl` 。
 4. Microsoft Teams客户端使用给定的身份验证 URL 启动托管网页的弹出窗口。
 5. 用户登录后，应关闭窗口并将“身份验证代码”发送到Teams客户端。
 6. 然后，Teams客户端将查询重新颁发到服务，其中包括在步骤 5 中传递的身份验证代码。
 
-服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码一致。 这可确保恶意用户不会尝试欺骗或破坏登录流。 这可以有效地“关闭循环”以完成安全身份验证序列。
+服务应验证步骤 6 中收到的身份验证代码是否与步骤 5 中的身份验证代码匹配，这可确保恶意用户不会尝试欺骗或破坏登录流。 这可以有效地“关闭循环”以完成安全身份验证序列。
 
 ### <a name="respond-with-a-sign-in-action"></a>使用登录操作进行响应
 
@@ -491,7 +491,7 @@ ms.locfileid: "66142750"
 
 登录体验应具有响应能力，并适合在弹出窗口中。 它应与使用消息传递的 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 集成。
 
-与 Microsoft Teams 内运行的其他嵌入式体验一样，窗口内的代码也需要先调用 `microsoftTeams.initialize()`。 如果代码执行 OAuth 流，则可以将Teams用户 ID 传递到窗口，然后将其传递到 OAuth 登录 URL。
+与Teams内运行的其他嵌入式体验一样，窗口内的代码需要先调用`microsoftTeams.initialize()`。 如果代码执行 OAuth 流，则可以将Teams用户 ID 传递到窗口，然后将其传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流
 

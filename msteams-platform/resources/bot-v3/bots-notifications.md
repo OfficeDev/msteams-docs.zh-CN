@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 30ccb4ee8810154e2b36311d15217205de87b413
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 95d6439d396a61471c0e7dbe5942d4b88cc00a87
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142757"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189320"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>处理 Microsoft Teams 中的机器人事件
 
@@ -48,7 +48,7 @@ Teams和组事件（从类型中触发）`conversationUpdate`具有作为对象�
 
 ### <a name="bot-or-user-added-to-a-team"></a>添加到团队的机器人或用户
 
-将机器人添加到团队或将新用户添加到已添加机器人的团队时，会发送有效负载中包含 `membersAdded` 对象的 `conversationUpdate` 事件。 Microsoft Teams 还会在 `channelData` 对象中添加 `eventType.teamMemberAdded`。
+将机器人添加到团队或将新用户添加到已添加机器人的团队时，会发送有效负载中包含 `membersAdded` 对象的 `conversationUpdate` 事件。 Teams还会在对象中`channelData`添加`eventType.teamMemberAdded`。
 
 由于此事件在这两种情况下都发送，因此应解析 `membersAdded` 对象以确定添加的对象是用户还是机器人本身。 对于后者，最佳做法是向频道发送 [ 欢迎消息 ](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams)，以便用户可以了解机器人提供的功能。
 
@@ -227,7 +227,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="team-member-or-bot-removed"></a>已删除团队成员或机器人
 
-从团队中删除机器人、或者从添加了机器人的团队中删除用户时，将发送有效负载中具有 `membersRemoved` 对象的 `conversationUpdate` 事件。 Microsoft Teams 还会在 `channelData` 对象中添加 `eventType.teamMemberRemoved`。 与 `membersAdded` 对象一样，应解析机器人应用 ID 的 `membersRemoved` 对象，以确定被删除的对象。
+从团队中删除机器人、或者从添加了机器人的团队中删除用户时，将发送有效负载中具有 `membersRemoved` 对象的 `conversationUpdate` 事件。 Teams还会在对象中`channelData`添加`eventType.teamMemberRemoved`。 与 `membersAdded` 对象一样，应解析机器人应用 ID 的 `membersRemoved` 对象，以确定被删除的对象。
 
 ### <a name="schema-example-team-member-removed"></a>架构示例：被删除的团队成员
 

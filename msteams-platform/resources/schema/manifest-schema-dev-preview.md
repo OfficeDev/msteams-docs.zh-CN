@@ -4,12 +4,12 @@ description: 了解Microsoft Teams支持的所有组件的示例清单文件和�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: deaf094ab18ddd2ebe70ea9594f41c108398bf32
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142735"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189870"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的公共开发人员预览清单架构
 
@@ -477,7 +477,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-消息扩展应声明一个或多个命令。 每个命令都显示在 Microsoft Teams 中，作为来自基于 UI 的入口点的潜在交互。 最多有 10 个命令。
+消息扩展应声明一个或多个命令。 每个命令在Teams中显示为来自基于 UI 的入口点的潜在交互。 最多有 10 个命令。
 
 每个命令项都是具有以下结构的对象：
 

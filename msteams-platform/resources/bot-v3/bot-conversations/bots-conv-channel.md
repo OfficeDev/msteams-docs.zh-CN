@@ -4,12 +4,12 @@ description: 在本模块中，了解在频道中与机器人进行对话的端�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: ad212108b9cce66e14cab5c850d8ff466d73c467
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e93b6cc18e38da4f6307fda3d30968bfa709dbf1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142778"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190180"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>带有 Microsoft Teams 机器人的频道和群聊对话
 
@@ -25,7 +25,7 @@ Microsoft Teams 允许用户将机器人引入其频道或群组聊天对话。 
 
 群组或频道中的机器人应为所有成员提供相关且适当的信息。 虽然机器人当然可以提供与体验相关的任何信息，但请记住，每个人都能看到与它的对话。 因此，群组或频道中的出色机器人应该为所有用户增加价值，当然不会无意中分享更适合一对一对话的信息。
 
-机器人可能与现在一样，在所有范围内都完全相关，而无需更多工作。 在Microsoft Teams中，不期望机器人在所有范围内运行，但应确保机器人在选择支持 () 的任何范围内提供用户值。 有关范围的详细信息，请参阅 [Microsoft Teams 中的应用](~/concepts/build-and-test/app-studio-overview.md)。
+机器人可能与现在一样，在所有范围内都完全相关，而无需更多工作。 在Teams中，不期望机器人在所有范围内运行，但应确保机器人在选择支持的任何范围 () 提供用户值。 有关范围的详细信息，请参阅 [Microsoft Teams 中的应用](~/concepts/build-and-test/app-studio-overview.md)。
 
 开发在群组或频道中工作的机器人使用与个人对话相同的许多功能。 有效负载中的其他事件和数据提供 Teams 群组和频道信息。 以下部分介绍了这些差异以及常见功能的主要差异。
 

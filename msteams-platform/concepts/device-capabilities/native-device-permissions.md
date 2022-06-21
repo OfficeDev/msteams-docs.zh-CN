@@ -1,15 +1,14 @@
 ---
 title: 为 Microsoft Teams 应用请求设备权限
-keywords: teams 应用功能权限设备本机扫描 qr 条形码图像音频视频
 description: 如何更新应用清单，以请求访问需要用户同意的本机功能，例如扫描 QR、条形码、图像、音频和视频功能
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a2ffcb378c3e46f7e940e7729eb62ad31d0745a9
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: c39673bd03d18c0aabb98e218bf13c41ce1eab9f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150818"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189457"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>请求Teams应用的设备权限
 

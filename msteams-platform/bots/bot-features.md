@@ -5,12 +5,12 @@ description: 本文介绍用于使用Microsoft Bot Framework生成Microsoft Team
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 0b344b6a2db0abc4d1769c47aca6f496f69b98d7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142463"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189331"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -61,6 +61,7 @@ Azure 机器人服务和 Bot Framework 提供用于生成、测试、部署和�
 > Microsoft Teams 中的机器人应用程序可通过 [Azure 机器人服务](/azure/bot-service/channel-connect-teams)在 GCC-High 中使用。
 
 > [!NOTE]
+>
 > * GCCH 中的机器人仅支持清单版本 v1.10。
 > * 自适应卡片中的图像 URL 在 GCCH 环境中不受支持。 可以将图像 URL 替换为 Base64 编码的 DataUri。
 > * Azure 政府中的机器人通道注册将预配 Web 应用机器人、应用服务 (应用服务计划) 和应用程序见解，但不支持仅在不提供应用服务)  (预配 azure 机器人服务。
@@ -70,12 +71,12 @@ Azure 机器人服务和 Bot Framework 提供用于生成、测试、部署和�
 >   * 转到资源组并手动删除未使用的资源。 例如，如果在机器人注册) 期间创建了应用服务、应用服务计划 (，如果选择在机器人注册) 期间启用应用服务，则应用程序见解 (。
 >   * 还可以使用 az-cli 进行机器人注册：
 >
->     1. 登录到 azure 并设置订阅 <br> 
->           &nbsp; az cloud set –name “AzureUSGovernment” <br> 
+>     1. 登录到 azure 并设置订阅 <br>
+>           &nbsp; az cloud set –name “AzureUSGovernment” <br>
 >           &nbsp; az account set –name “`subscriptionname/id`”.<br>
 >     1. 创建应用注册  
->           &nbsp; az ad app create --display-name “`name`” <br> 
->           &nbsp; --password“`password`” --available-to-other-tenants.<br> 
+>           &nbsp; az ad app create --display-name “`name`” <br>
+>           &nbsp; --password“`password`” --available-to-other-tenants.<br>
 >           应用 ID 将在此处创建。<br>
 >     1. 创建机器人资源 <br>
 >           &nbsp; az bot create –resource-group “`resource-group`”<br>
@@ -117,7 +118,7 @@ Azure 机器人服务和 Bot Framework 提供用于生成、测试、部署和�
     * 设置 `ConnectionName` 为添加到机器人的 OAuth 连接设置的名称。
 
     * 设置 `MicrosoftAppId` 为机器人的应用 ID，以及 `MicrosoftAppPassword` 为应用机密。
-    
+
     根据机器人机密中的字符，可能需要 XML 转义密码。 例如，任何 ampersands (&) 都需要编码为 `&amp;`。
 
     ```json
@@ -129,16 +130,17 @@ Azure 机器人服务和 Bot Framework 提供用于生成、测试、部署和�
       "ConnectionName": ""
     }
     ```
+
 2. **更新 Startup.cs：**
 
     若要在 *非公共 Azure 云*（如政府云）或具有数据驻留的机器人中使用 OAuth，必须在 **Startup.cs** 文件中添加以下代码。
-    
+
     ```csharp
     string uri = "<uri-to-use>";
     MicrosoftAppCredentials.TrustServiceUrl(uri);
     OAuthClientConfig.OAuthEndpoint = uri;
     ```
-    
+
     以下 URI 之一在哪里 \<uri-to-use\> ：
 
     |**URI**|**说明**|
@@ -308,3 +310,4 @@ this.onMessage(async (context, next) => {
 * [机器人命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Microsoft Teams 中机器人的身份验证流程](~/bots/how-to/authentication/auth-flow-bot.md)
 * [使用机器人的任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [将机器人发布到 Azure](/azure/bot-service/bot-builder-deploy-az-cli)

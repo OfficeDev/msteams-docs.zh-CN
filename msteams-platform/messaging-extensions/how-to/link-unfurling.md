@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用应用清单或使用代码示�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142813"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190000"
 ---
 # <a name="link-unfurling"></a>链接展开
 
@@ -26,6 +26,11 @@ ms.locfileid: "66142813"
 Azure DevOps 消息扩展使用链接展开查找粘贴到撰写消息区域(指向工作项)的 URL。 在下图中，用户粘贴了消息扩展已解析为卡片的Azure DevOps项的 URL：
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="链接展开示例":::
+
+请参阅以下视频，了解有关链接展开的详细信息：
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+<br>
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>将链接展开添加到应用清单
 

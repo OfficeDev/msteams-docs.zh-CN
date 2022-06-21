@@ -5,12 +5,12 @@ description: 了解如何使用 App Studio 创建Microsoft Teams消息传递扩�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f222f52a4eea3b59e6caf15e77b006a58a426d2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142337"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190028"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>使用 App Studio 创建消息传递
 
@@ -23,7 +23,7 @@ ms.locfileid: "66142337"
 2. 在开发时创建和部署 Web 服务 (使用 ngrok 等隧道服务在本地运行它) 。
 3. 将 Web 服务注册到 Bot Framework。
 4. 创建应用包。
-5. 将程序包上传到 Microsoft Teams。
+5. 将包Upload到Teams。
 
 可以按任何顺序创建 Web 服务、创建应用包以及向 Bot Framework 注册 Web 服务。 因为这三个部分是如此交织在一起，无论你按哪个顺序执行这些操作，都需要返回以更新其他部分。 注册需要已部署 Web 服务的消息传送终结点，并且 Web 服务需要从注册中创建的 ID 和密码。 应用清单还需要该 ID 才能将Teams连接到 Web 服务。
 
@@ -56,7 +56,7 @@ ms.locfileid: "66142337"
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>使用 App Studio 创建应用清单
 
-可以从Microsoft Teams客户端中使用 App Studio 应用来帮助创建应用清单。
+可以从Teams客户端中使用 App Studio 应用来帮助创建应用清单。
 
 1. 在 Teams 客户端中，从左侧导航栏上的“**…**”溢出菜单中打开 App Studio。 如果尚未安装，可以通过搜索来执行此操作。
 2. 在 **“清单编辑器** ”选项卡上选择 **“创建新应用** (，或者如果要将消息传递扩展添加到现有应用，则可以导入应用包) 
@@ -71,7 +71,7 @@ ms.locfileid: "66142337"
 
 ### <a name="create-your-app-manifest-manually"></a>手动创建应用清单
 
-与机器人和选项卡一样，更新应用的 [应用清单](~/resources/schema/manifest-schema.md#composeextensions) 以包含消息传递扩展属性。 这些属性控制消息传递扩展在Microsoft Teams客户端中的显示和行为方式。 从清单的 v1.0 开始支持消息传递扩展。
+与机器人和选项卡一样，更新应用的 [应用清单](~/resources/schema/manifest-schema.md#composeextensions) 以包含消息传递扩展属性。 这些属性控制消息传递扩展在Teams客户端中的显示和行为方式。 从清单的 v1.0 开始支持消息传递扩展。
 
 #### <a name="declare-your-messaging-extension"></a>声明消息传递扩展插件
 

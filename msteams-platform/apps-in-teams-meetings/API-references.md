@@ -5,12 +5,12 @@ description: 了解如何使用示例和代码示例标识会议应用 API 引�
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 018aa14b72a63575deaefb8ee53f7fe4de7474ef
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ac940438d78d941069f779150a74cfc85b1e2b95
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150657"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189440"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -267,7 +267,7 @@ POST /v3/conversations/{conversationId}/activities
 
 <details>
 
-<summary><b>针对应用清单版本 1.12</b></summary>
+<summary><b>对于应用清单版本 1.12 及更高版本</b></summary>
 
 使用以下示例为任何私人会议配置应用清单的 `webApplicationInfo` 和 `authorization` 属性：
 
@@ -315,7 +315,7 @@ POST /v3/conversations/{conversationId}/activities
 
 <details>
 
-<summary><b>针对应用清单版本 1.11 或更低版本</b></summary>
+<summary><b>对于应用清单版本 1.11 及更低版本</b></summary>
 
 使用以下示例为任何私人会议配置应用清单的 `webApplicationInfo` 属性：
 
@@ -631,7 +631,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
 
 <details>
 
-<summary><b>针对应用清单版本 1.12</b></summary>
+<summary><b>对于应用清单版本 1.12 及更高版本</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -658,7 +658,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
 
 <details>
 
-<summary><b>针对应用清单版本 1.11 或更低版本</b></summary>
+<summary><b>对于应用清单版本 1.11 及更低版本</b></summary>
 
 ```json
 "webApplicationInfo": {

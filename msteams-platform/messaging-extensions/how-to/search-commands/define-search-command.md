@@ -5,12 +5,12 @@ description: 在本模块中，了解Teams应用的消息扩展搜索命令，�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: e71e83f8fbd6b0d44257a2d38fd13486b087bc5e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 10bb71580ac67db155bd14b74325635ae22e6840
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142806"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189611"
 ---
 # <a name="define-message-extension-search-commands"></a>定义消息扩展搜索命令
 
@@ -20,6 +20,12 @@ ms.locfileid: "66142806"
 
 > [!NOTE]
 > 结果卡大小限制为 28 KB。 如果卡片的大小超过 28 KB，则不会发送该卡。
+
+请参阅以下视频，了解如何定义消息扩展搜索命令：
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+<br>
 
 ## <a name="select-search-command-invoke-locations"></a>选择搜索命令调用位置
 

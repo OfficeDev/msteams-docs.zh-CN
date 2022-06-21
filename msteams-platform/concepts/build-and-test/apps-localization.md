@@ -4,12 +4,12 @@ description: 了解本地化 Microsoft Teams应用和本地化应用清单中字
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018
-ms.openlocfilehash: 5c3d0612f0e7ce0e183d097469165cf2f9c337d0
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cfb425bef1b09540c1049a3769c87d8def272314
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150664"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189589"
 ---
 # <a name="localize-your-app"></a>本地化应用
 
@@ -46,6 +46,9 @@ ms.locfileid: "66150664"
 使用 Microsoft Teams 应用架构 `v1.5` 及更高版本来将应用本地化。 为此，可将 manifest.json 文件中的 `$schema` 属性设置为 `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` 或更高版本，并将 `manifestVersion` 属性更新为 `$schema` 版本（在本例中，是 `1.5` 版本）。
 
 使用应用程序支持的默认语言添加 `localizationInfo` 属性。 如果用户的客户端设置与任何其他语言都不匹配，则默认语言将用作最终回退语言。
+
+> [!NOTE]
+> Manifest.json 和 localization.json 文件的清单版本必须相同。
 
 ### <a name="example-manifestjson-change"></a>示例 manifest.json 更改
 

@@ -5,12 +5,12 @@ description: 了解如何使用代码示例将现有 Teams 选项卡作为 Share
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f889a4e1932feb02eeb502ab2f85f051093a5b58
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1da3d1359da2878586dafef16dac9a868d074ff1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123645"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189476"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>将 Teams 选项卡添加到 SharePoint
 
@@ -67,7 +67,7 @@ ms.locfileid: "66123645"
 
 ### <a name="sharepoint-framework-in-teams"></a>Teams 中的 SharePoint 框架
 
-你还可以使用 SharePoint 框架实施 Microsoft Teams 选项卡。 SharePoint 框架 Web 部件托管在 SharePoint 中，无需任何外部服务（如 Azure）。 对于 SharePoint 开发人员来说，这大大简化了 Teams 选项卡的开发过程。 有关 Teams 中的 SharePoint 框架的详细信息，请参阅[如何在 Teams 中使用 SharePoint 框架](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)。
+还可以使用SharePoint 框架实现Teams选项卡。 SharePoint 框架 Web 部件托管在 SharePoint 中，无需任何外部服务（如 Azure）。 对于 SharePoint 开发人员来说，这大大简化了 Teams 选项卡的开发过程。 有关 Teams 中的 SharePoint 框架的详细信息，请参阅[如何在 Teams 中使用 SharePoint 框架](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)。
 
 ## <a name="introduction"></a>简介
 

@@ -4,12 +4,12 @@ author: surbhigupta
 description: 了解在会议生命周期中Teams会议生命周期和用户会议体验、用户类型、集成机器人和消息扩展。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: caea4d49526c01de497f72a1878f9520d6e22348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4bc4609f2fdf6bba8b170088d214846c35d45486
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142575"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189362"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -226,3 +226,4 @@ Teams统一会议应用基于以下概念：
 * [Bot](../bots/what-are-bots.md)
 * [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Microsoft Teams 会议出勤情况报告](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)

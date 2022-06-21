@@ -4,24 +4,24 @@ description: 在本文中，你将了解如何在Microsoft Teams中测试和调�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 3cfb76443566a0ca5c279547f7b3db490c6095d3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 71045071666ecc21cdc376590deef90223694d15
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143695"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189752"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>测试和调试 Microsoft Teams 机器人
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-测试机器人时，需要考虑希望机器人在何种上下文中运行，以及可能已添加到机器人的任何功能，这些功能需要特定于 Microsoft Teams 的数据。 确保你选择测试机器人的方法与其功能一致。
+测试机器人时，必须同时考虑上下文 () 希望机器人运行，以及可能已添加到机器人的任何功能，这些功能需要特定于Microsoft Teams的数据。 确保你选择测试机器人的方法与其功能一致。
 
 ## <a name="test-by-uploading-to-teams"></a>通过上传到 Teams 进行测试
 
 测试机器人的最全面方法是创建应用包并将其上传到 Teams。 这是测试机器人在所有范围内可用的完整功能的唯一方法。
 
-有两种方法用于上传应用。 可以使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md)，也可以手动[创建应用包](~/concepts/build-and-test/apps-package.md)并[上传应用](~/concepts/deploy-and-publish/apps-upload.md)。 如果需要更改清单并重新加载应用，应先[删除机器人](#deleting-a-bot-from-teams)，然后再上传已更改的应用包。
+有两种方法用于上传应用。 可以使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md)，也可以手动[创建应用包](~/concepts/build-and-test/apps-package.md)并[上传应用](~/concepts/deploy-and-publish/apps-upload.md)。 如果需要更改清单并重新加载应用，应先 [删除机器人](#deleting-a-bot-from-teams) ，然后再上传已更改的应用包。
 
 ## <a name="debug-your-bot-locally"></a>在本地调试机器人
 
@@ -31,11 +31,11 @@ ms.locfileid: "66143695"
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-使用应用清单中 ngrok 提供的 https 端点。 如果关闭命令窗口并重新启动，你将获得一个新的 URL，并且还需要更新机器人端点地址才能使用该 URL。
+使用应用清单中 ngrok 提供的 https 端点。 如果关闭命令窗口并重新启动，你将获得一个新的 URL，并且还需要更新机器人终结点地址才能使用该 URL。
 
 ## <a name="testing-your-bot-without-uploading-to-teams"></a>测试机器人而不上传到 Teams
 
-有时需要测试机器人，而无需将其作为应用安装到 Teams 中。 我们提供了两种测试方法。 在不将其作为应用安装的情况下测试机器人有助于确保机器人可用并做出响应，但不允许测试可能已添加到机器人的所有 Microsoft Teams 功能。 如果需要完全测试机器人，请按照[通过上传进行测试](#test-by-uploading-to-teams)说明操作。
+有时需要测试机器人，而无需将其作为应用安装到 Teams 中。 我们提供了两种测试方法。 在不将其安装为应用的情况下测试机器人对于确保机器人可用和响应非常有用，但不允许你测试可能已添加到机器人的Teams功能的完整广度。 如果需要完全测试机器人，请按照[通过上传进行测试](#test-by-uploading-to-teams)说明操作。
 
 ### <a name="use-the-bot-emulator"></a>使用机器人仿真器
 
@@ -48,22 +48,23 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 >[!Important]
 >按 ID 与机器人交谈仅用于测试目的。
 
-还可以使用机器人的 ID 启动与机器人的对话。 下面提供了两种执行此操作的方法。 通过其中一种方法添加机器人后，它将无法在频道对话中寻址，你也无法利用其他 Microsoft Teams 应用功能，例如选项卡或消息扩展。
+还可以使用机器人的 ID 启动与机器人的对话。 下面提供了两种执行此操作的方法。 通过其中一种方法添加机器人时，它将无法在频道对话中寻址，并且无法利用其他Microsoft Teams应用功能，例如选项卡或消息扩展。
 
-1. 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**频道**”下选择“**添加到 Microsoft Teams**”。 Microsoft Teams 将启动与机器人的个人聊天。
-2. 直接从 Microsoft Teams 中引用机器人的应用 ID：
+1. 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**频道**”下，选择“**添加到 Microsoft Teams**”。 Teams将启动与机器人的个人聊天。
+2. 直接从Teams中引用机器人的应用 ID：
    * 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**详细信息**”下，复制机器人的“**Microsoft 应用 ID**”。
   
       :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="机器人仪表板":::
   
-   * 在 Microsoft Teams 内的“**聊天**”窗格中，选择“**添加聊天**”图标。 对于 **To:**，粘贴机器人的 Microsoft 应用 ID。
+   * 在Teams内的 **“聊天**”窗格中，选择 **“添加聊天**”图标。 对于 **To:**，粘贴机器人的 Microsoft 应用 ID。
   
       :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="上传机器人的 AppID"border="true":::
 
      应用 ID 应解析为机器人名称。
 
    * 选择机器人并发送消息以启动对话。
-   * 或者，可以将机器人的应用 ID 粘贴到 Microsoft Teams 左上角的搜索框中。 在搜索结果页中，导航到“人员”选项卡以查看机器人并开始与机器人聊天。
+
+   * 或者，可以将机器人的应用 ID 粘贴到 Microsoft Teams 左上角的搜索框中。 在搜索结果页中，转到“人员”选项卡以查看机器人并开始与机器人聊天。
 
 机器人将收到 `conversationUpdate` 事件，就像添加到团队中的机器人一样，但没有 `channelData` 对象中的团队信息。
 

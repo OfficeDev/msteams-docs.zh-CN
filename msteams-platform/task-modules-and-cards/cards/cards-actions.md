@@ -3,12 +3,12 @@ title: 在机器人中添加卡片操作
 description: 在本模块中，了解Microsoft Teams中的卡片操作、操作类型以及如何在机器人中使用它们
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e06cb41645480423727924127501b6ea3f85f953
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144171"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189761"
 ---
 # <a name="card-actions"></a>卡片操作
 
@@ -556,6 +556,16 @@ CardFactory.actions([
   }
 }
 ```
+
+## <a name="code-samples"></a>代码示例
+
+|S.no|卡| description|.NET|Javascript|Python|Java|
+|:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
+|1|使用卡片|介绍所有卡片类型，包括缩略图、音频、媒体等。通过在欢迎用户 + 多提示机器人的基础上构建，方法是显示一张卡片，其中包含可路由到相应对话框的欢迎消息中的按钮。|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|自适应卡片|演示多轮次对话如何使用卡片获取用户输入名称和年龄。|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+
+> [!NOTE]
+> 自适应卡片不支持媒体元素Teams
 
 ## <a name="next-step"></a>后续步骤
 
