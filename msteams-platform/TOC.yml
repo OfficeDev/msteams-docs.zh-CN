@@ -138,10 +138,12 @@
       href: toolkit/visual-studio-overview.md
     - name: Teams 中的 Yeoman 生成器 (GitHub)
       href: 'https://github.com/pnp/generator-teams'
-    - name: 应用程序 Studio
-      href: concepts/build-and-test/app-studio-overview.md
-    - name: Teams 开发人员门户
-      href: concepts/build-and-test/teams-developer-portal.md
+    - name: 开发人员门户
+      items:
+        - name: Teams 开发人员门户
+          href: concepts/build-and-test/teams-developer-portal.md
+        - name: 应用程序 Studio
+          href: concepts/build-and-test/app-studio-overview.md
     - name: 团队 JavaScript 客户端 SDK
       href: tabs/how-to/using-teams-client-sdk.md
     - name: 适用于机器人和消息扩展的 Node.js 机器人框架 (GitHub)
