@@ -5,16 +5,16 @@ description: 在此模块中，了解 Webhook 和连接器如何将 Web 服务�
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 604f4bce563957afb477a58d47ef8235e4b5c30d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: fc65046c0bcbecb6ed4c0f15ea81beac77195256
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142176"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190036"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook 和连接器
 
-Webhook 和连接器有助于将 Web 服务连接到 Microsoft Teams 中的频道和团队。 Webhook 是用户定义的 HTTP 回调，用于通知用户在 Microsoft Teams 频道中发生的任何操作。 这是应用获取实时数据的一种方法。 连接器允许用户订阅以接收来自 Web 服务的通知和消息。 他们为你的服务公开了一个 HTTPS 端点，以卡片的形式发布消息。
+Webhook 和连接器有助于将 Web 服务连接到 Microsoft Teams 中的频道和团队。 Webhook 是用户定义的 HTTP 回调，用于通知用户在 Teams 频道中发生的任何操作。 这是应用获取实时数据的一种方法。 连接器允许用户订阅以接收来自 Web 服务的通知和消息。 他们为你的服务公开了一个 HTTPS 端点，以卡片的形式发布消息。
 
 ## <a name="outgoing-webhooks"></a>传出 webhook
 

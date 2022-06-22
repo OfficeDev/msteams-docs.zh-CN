@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Microsoft Teams 中创建传出 W
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 5c86fd5e3885fd859d02489c81f81aa0502b965a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143282"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189892"
 ---
 # <a name="create-outgoing-webhook"></a>创建传出 Webhook
 
@@ -25,6 +25,12 @@ ms.locfileid: "66143282"
 * Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
+
+请参阅以下视频，了解如何创建传出 Webhook：
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
+<br>
 
 ## <a name="key-features-of-outgoing-webhook"></a>传出 Webhook 的主要功能
 
@@ -109,7 +115,7 @@ ms.locfileid: "66143282"
 
 **创建发送成功或失败回复的方法**
 
-对你传出 Webhook 的回复将作为原始消息，显示在同一回复链中。当用户执行查询时，Microsoft Teams 将向服务发出同步 HTTP 请求，并且你的代码在连接超时和终止之前有 5 秒时间回复消息。
+来自传出 Webhook 的回复显示在与原始消息相同的回复链中。 当用户执行查询时，Teams 将向服务发出同步 HTTP 请求，并且你的代码在连接超时和终止之前有 5 秒时间回复消息。
 
 ### <a name="example-response"></a>示例响应
 
@@ -232,7 +238,7 @@ var responseMsg = JSON.stringify({
 
 |**示例名称** | **说明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| 传出 webhook | 创建将在 Microsoft Teams 中使用的自定义机器人的示例。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| 传出 webhook | 创建将在 Teams 中使用的自定义机器人的示例。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="step-by-step-guide"></a>分步指南
 

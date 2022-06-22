@@ -1,17 +1,16 @@
 ---
 title: 集成位置功能
 author: Rajeshwari-v
-description: 通过代码片段和示例了解如何使用 Teams JavaScript 客户端 SDK 来利用位置功能
-keywords: 位置映射功能, 本机设备权限
+description: 通过代码片段和示例了解如何使用 Teams JavaScript 客户端 SDK 来利用位置功能。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0a2c7400801decd937243bbbe5dbcea307d13fc0
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 00fdfe470dcc5028afb233f9fbe0c6a6f7ff1b2c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130450"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189868"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能
 

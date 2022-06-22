@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124030"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189925"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
 你可以将应用直接分发到 Microsoft Teams 内的应用商店，可以覆盖全球数百万用户。 如果在应用商店你的应用得到特别推荐，则可以立即联系潜在客户。
 
-发布到 Teams 应用商店的应用也会自动在 [Microsoft AppSource](https://appsource.microsoft.com)上列出，这是 Microsoft 365 应用和解决方案的官方市场。
+发布到 Teams 应用商店的应用也会自动在 [Microsoft 商业商城](https://appsource.microsoft.com)上列出，此商城是 Microsoft 365 应用和解决方案的官方市场。
 
 ## <a name="understand-the-publishing-process"></a>了解发布过程
 
@@ -96,7 +96,7 @@ ms.locfileid: "66124030"
 
   1. [提前创建合作伙伴](prepare/create-partner-center-dev-account.md) 中心帐户。 如果你遇到[合作伙伴中心帐户](prepare/create-partner-center-dev-account.md)的任何难题，请创建[支持票证](/azure/marketplace/partner-center-portal/support)。
 
-  1. 再次查看[应用商店验证](prepare/teams-store-validation-guidelines.md)指南，以确保你的应用符合应用商店要求。 这有助于减少应用中观察到的问题数量，从而减少批准应用所需的时间。
+  1. 再次查看[应用商店验证](prepare/teams-store-validation-guidelines.md)指南，以确保你的应用符合应用商店要求。 温习指南有助于减少应用中观察到的问题数量，从而减少批准应用所需的时间。
 
   1. 测试和重新测试你的应用：
 

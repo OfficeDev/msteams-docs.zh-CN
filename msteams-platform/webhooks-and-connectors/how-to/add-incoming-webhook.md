@@ -5,12 +5,12 @@ description: 在本模块中，了解如何将传入 Webhook 添加到 Teams 应
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5374b9327abb15949a31ab47443c273a111ad7b9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a1cb8f3e686ad0e1ee956345095d07c97f7a137c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142190"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189898"
 ---
 # <a name="create-an-incoming-webhook"></a>创建传入 Webhook
 
@@ -19,6 +19,10 @@ ms.locfileid: "66142190"
 * 机器人
 * 消息扩展
 * 连接器
+
+请参阅以下视频，了解如何创建传入 Webhook：
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>传入 Webhook 的主要功能
 

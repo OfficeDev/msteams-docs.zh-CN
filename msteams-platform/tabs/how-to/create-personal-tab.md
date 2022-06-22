@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143989"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189467"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -249,7 +249,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>将应用程序上传到 Teams
 
-1. 转到 Microsoft Teams，然后选择“**应用**”&nbsp;“:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams 应用商店":::”。
+1. 转到 Teams 并选择 **应用**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::。
 1. 选择“**管理应用**”和“**上传自定义应用**”。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择压缩文件夹，然后选择“**打开**”。
 
@@ -335,7 +335,7 @@ ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。
 * 一个透明轮廓图标，尺寸为 32 x 32 像素。
 * 一个 `manifest.json` 指定应用属性的文件。
 
-这些文件必须压缩在应用包中，以便将选项卡上传到 Teams。 Microsoft Teams 加载清单中指定的 `contentUrl`，将其嵌入 <iframe\> 中，并在选项卡中呈现。
+这些文件必须压缩在应用包中，以便将选项卡上传到 Teams。 Teams 会加载清单中指定的 `contentUrl`，将其嵌入 <iframe\> 中，并在选项卡中呈现。
 
 #### <a name="csproj"></a>.csproj
 
@@ -484,7 +484,7 @@ public void Configure(IApplicationBuilder app)
 * 一个 **透明轮廓图标**，尺寸为 32 x 32 像素。
 * 一个 `manifest.json` 指定应用属性的文件。
 
-这些文件必须压缩在应用包中，以便将选项卡上传到 Teams。 Microsoft Teams 加载清单中指定的 `contentUrl`，将其嵌入 IFrame 中，并在选项卡中呈现。
+这些文件必须压缩在应用包中，以便将选项卡上传到 Teams。 Teams 会加载清单中指定的 `contentUrl`，将其嵌入 IFrame 中，并在选项卡中呈现。
 
 #### <a name="csproj"></a>.csproj
 

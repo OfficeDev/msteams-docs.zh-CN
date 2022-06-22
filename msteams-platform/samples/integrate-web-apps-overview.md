@@ -5,17 +5,17 @@ description: 在本文中，你将开始将 Web 应用程序和设备功能与 M
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 73fb039886d47a5f011b1dcfb9a8a3a46cb4ff6f
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144266"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189776"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
 可以通过将现有 Web 应用程序的功能集成到 Microsoft Teams Platform 来提供丰富的用户体验。 请确保遵循 [Teams 设计准则](~/concepts/design/understand-use-cases.md)，以便应用原生支持 Teams。
-本文档概述了将 Web 应用程序与 Teams 集成的先决条件、用于创建 Power 应用的 Power Platform、Power Virtual Agents、虚拟助理、应用模板、排班连接器、Moodle LMS、为网站创建“共享到 Teams”按钮、在 SharePoint 中添加 Microsoft Teams 选项卡、创建深层链接以及集成设备功能。
+本文档概述了将 Web 应用程序与 Teams 集成的先决条件、用于创建 Power 应用的 Power Platform、Power Virtual Agents、虚拟助理、应用模板、排班连接器、Moodle LMS、为网站创建“共享到 Teams”按钮、在 SharePoint 中添加 Teams 选项卡、创建深层链接以及集成设备功能。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -45,7 +45,7 @@ Microsoft Power Platform 将四种强大的 Microsoft 技术（如 Power BI、Po
 
 ### <a name="power-apps"></a>Power Apps
 
-使用 Power Apps，可以构建连接到业务数据并根据组织需求量身定制的业务应用。 Power Apps 支持各种应用方案，可通过画布应用解决业务难题。 构建应用后，可以从 Power Apps 创建者门户导出该应用并将其嵌入 Microsoft Teams 中。
+使用 Power Apps，可以构建连接到业务数据并根据组织需求量身定制的业务应用。 Power Apps 支持各种应用方案，可通过画布应用解决业务难题。 构建应用后，可以从 Power Apps 创建者门户导出该应用并将其嵌入 Teams 中。
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
@@ -61,7 +61,7 @@ Power Virtual Agent 是一种无代码引导式图形界面解决方案。 它�
 
 ## <a name="install-moodle-lms"></a>安装 Moodle LMS
 
-Moodle 是一种常用的 Learning Management System (LMS)。 它现在已与 Microsoft Teams 集成。 此集成可帮助教师围绕 Moodle 课程进行协作，提出有关成绩和作业的问题，并直接在 Teams 中随时关注通知。
+Moodle 是一种常用的 Learning Management System (LMS)。 它现在已与 Teams 集成。 此集成可帮助教师围绕 Moodle 课程进行协作，提出有关成绩和作业的问题，并直接在 Teams 中随时关注通知。
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>为网站创建“共享到 Teams”按钮
 
@@ -69,7 +69,7 @@ Moodle 是一种常用的 Learning Management System (LMS)。 它现在已与 Mi
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>在 SharePoint 中添加 Microsoft Teams 选项卡
 
-通过在 SharePoint 中将 Microsoft Teams 选项卡添加为 SPFx Web 部件，可以在 Microsoft Teams 和 SharePoint 之间获得丰富的集成体验。
+通过在 SharePoint 中将 Teams 选项卡添加为 SPFx Web 部件，可以在 Teams 和 SharePoint 之间获得丰富的集成体验。
 
 ## <a name="create-deep-link"></a>创建深层链接
 
@@ -77,7 +77,7 @@ Moodle 是一种常用的 Learning Management System (LMS)。 它现在已与 Mi
 
 ## <a name="integrate-device-capabilities"></a>集成设备功能
 
-Microsoft Teams 平台不断增强开发人员功能，与内置的第一方体验保持一致。增强的 Teams 平台允许合作伙伴使用 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 访问和集成原生设备功能，例如相机、QR 或条形码扫描仪、照片库、麦克风、位置。
+Teams 平台会不断增强开发人员功能，与内置的第一方体验保持一致。 增强的 Teams 平台允许合作伙伴使用 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 访问和集成本机设备功能，例如相机、QR 或条形码扫描程序、照片库、麦克风和位置。
 
 ## <a name="integrate-people-picker"></a>集成人员选取器
 
@@ -85,9 +85,9 @@ Microsoft Teams 平台不断增强开发人员功能，与内置的第一方体�
 
 ## <a name="integrate-teams-in-your-external-app"></a>在外部应用中集成 Teams
 
-可以通过构建 Teams 应用，将自己的体验嵌入到 Microsoft Teams 中。 若要 *反转* 此模型并将 Teams 或其他通信功能集成到自己的外部应用体验中，请参阅 [Azure 通信服务](/azure/communication-services/overview)。 Azure 通信服务是具有 REST API 和客户端库 SDK 的基于云的服务，可帮助你将通信集成到自己的自定义应用程序中。 可以借助 [UI 库](https://azure.github.io/communication-ui-library/)嵌入通用或 Teams 样式的 React Web 组件以进行呼叫和聊天。
+可以通过构建 Teams 应用，将自己的体验嵌入到 Teams 中。 若要 *反转* 此模型并将 Teams 或其他通信功能集成到自己的外部应用体验中，请参阅 [Azure 通信服务](/azure/communication-services/overview)。 Azure 通信服务是具有 REST API 和客户端库 SDK 的基于云的服务，可帮助你将通信集成到自己的自定义应用程序中。 可以借助 [UI 库](https://azure.github.io/communication-ui-library/)嵌入通用或 Teams 样式的 React Web 组件以进行呼叫和聊天。
 
-Azure 通信服务应用程序可以使用公共预览功能[与 Teams 进行互操作](/azure/communication-services/concepts/teams-interop)，并使自定义应用程序能够匿名加入 Teams 会议。 例如，可以将视频通话集成到移动银行应用程序中，并允许最终用户使用 Microsoft Teams 与银行员工进行虚拟会面。
+Azure 通信服务应用程序可以使用公共预览功能[与 Teams 进行互操作](/azure/communication-services/concepts/teams-interop)，并使自定义应用程序能够匿名加入 Teams 会议。 例如，可以将视频通话集成到移动银行应用程序中，并允许最终用户使用 Teams 与银行员工进行虚拟会面。
 
 你还可以集成 Microsoft 365 标识，以构建代表 Teams 用户嵌入视频和 PSTN 呼叫的外部应用程序。 如果过去使用过 [Skype for Business SDK](/skype-sdk/appsdk/skypeappsdk)，则建议将这些功能作为Azure 通信服务的一部分进行替换。
 

@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: 在本模块中，了解 Microsoft Teams JavaScript 客户端 SDK 概述，它可帮助你构建托管 <iframe> 在 Teams、Office 和 Outlook 中的应用体验。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144213"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189506"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验
 
@@ -235,7 +235,7 @@ async function example() {
 * **请勿** 根据 *hostName* 属性值假设某个功能在主机中可用或不可用。相反，请检查功能支持 (`isSupported`)。
 * **请勿** 使用 *hostName* 控制 API 调用。 相反，请检查功能支持 (`isSupported`)。
 * **请** 使用 *hostName* 根据运行应用程序的主机来区分应用程序的主题。 例如，在 Teams 中运行时，可以使用 Microsoft Teams 紫色作为主要主题色；在 Outlook 中运行时，可以使用 Outlook 蓝色。
-* **请** 使用 *hostName* 根据运行主机来区分向用户显示的消息。 例如，例如，在 Office 网页版中运行时显示“*在 Office 中管理任务*”，在 Microsoft Teams 中运行时显示“*在 Teams 中管理任务*”。
+* **请** 使用 *hostName* 根据运行主机来区分向用户显示的消息。 例如，例如，在 Office 网页版中运行时显示“*在 Office 中管理任务*”，在 Teams 中运行时显示“*在 Teams 中管理任务*”。
 
 #### <a name="namespaces"></a>命名空间
 
@@ -243,7 +243,7 @@ async function example() {
 
 ##### <a name="app-namespace"></a>*app* 命名空间
 
-`app` 命名空间包含跨 Microsoft Teams、Office 和 Outlook 的整体应用使用所需的顶级 API。 从 TeamsJS v.2.0 开始，其他各种 TeamsJS 命名空间中的所有 API 都已移动到 `app` 命名空间：
+`app` 命名空间包含跨 Teams、Office 和 Outlook 的整体应用使用所需的顶级 API。 从 TeamsJS v.2.0 开始，其他各种 TeamsJS 命名空间中的所有 API 都已移动到 `app` 命名空间：
 
 | 原始命名空间 `global (window)` | 新命名空间 `app` |
 | - | - |

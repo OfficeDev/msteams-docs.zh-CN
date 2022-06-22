@@ -1,15 +1,15 @@
 ---
 title: 设置开发环境以跨 Microsoft 365 扩展 Teams 应用
-description: 下面是跨 Microsoft 365 扩展 Teams 应用的先决条件
+description: 了解运行预览版以跨 Microsoft 365 扩展 Teams 应用所需的先决条件。
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: c0a1b265d4bc1aeb71232717ebc363d1b046da81
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668023"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189309"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>设置开发环境以跨 Microsoft 365 扩展 Teams 应用
 
@@ -93,7 +93,7 @@ ms.locfileid: "65668023"
 
 或者，可以使用 [Visual Studio Code](https://code.visualstudio.com/) 将 Teams 应用扩展到 Office 和 Outlook。
 
-[Visual Studio Code 的 Teams 工具包扩展](https://aka.ms/teams-toolkit)（`v2.10.0` 或更高版本）提供了有助于修改现有 Teams 代码以与 Outlook 和 Office 兼容的命令。 有关详细信息，请参阅[为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)。
+扩展[适用于 Visual Studio Code 的 Teams 工具包](https://aka.ms/teams-toolkit)（`v2.10.0` 或更高版本）提供有助于修改现有 Teams 代码以与 Outlook 和 Office 兼容的命令。有关详细信息，请参阅[为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)。
 
 ## <a name="next-step"></a>后续步骤
 

@@ -3,19 +3,19 @@ title: 适用于 Microsoft Teams 的公共开发人员预览版
 description: 在本文中，了解 Microsoft Teams 公共开发人员预览版和开发人员预览应用清单中的功能。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 6efc0681ad15add36ddaf94d3ca89ef931e9f30e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e166d9c65d93569e8854759dce725f5edca104f9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143982"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190247"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>适用于 Microsoft Teams 的公共开发人员预览版
 
 >[!NOTE]
 >预览版中包含的功能可能不完整，并且在公开发布之前可能会发生更改。 它们仅用于测试和探索目的。 不应在生产应用程序中使用它们。
 
-开发人员预览版是面向开发人员的公共计划，可提供对 Microsoft Teams 中未发布功能的早期访问权限。 这使你能够探索和测试即将推出的功能，以便可能包含在 Microsoft Teams 应用中。 欢迎你对开发者预览版中的任何功能提供 [反馈](~/feedback.md)。 每个 Microsoft Teams 客户端都已启用开发者预览版，因此你不必担心会影响整个组织。
+开发人员预览版是面向开发人员的公共计划，可提供对 Microsoft Teams 中未发布功能的早期访问权限。 这使你能够探索和测试即将推出的功能，以便可能包含在 Teams 应用中。 欢迎你对开发者预览版中的任何功能提供 [反馈](~/feedback.md)。 每个 Microsoft Teams 客户端都已启用开发者预览版，因此你不必担心会影响整个组织。
 
 ## <a name="developer-preview-app-manifest"></a>开发人员预览版应用清单
 

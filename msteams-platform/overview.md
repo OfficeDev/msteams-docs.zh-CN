@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 3513f272254b578c94a9b9adcf7b70f1113e4509
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795159"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189603"
 ---
 # <a name="teams-app-that-fits"></a>适合的 Teams 应用
 
@@ -39,7 +39,7 @@ Microsoft Teams 提供由 Microsoft 或外部服务提供的应用集合。 Team
 
 ## <a name="build-apps-with-microsoft-teams-platform"></a>使用 Microsoft Teams 平台生成应用
 
-Microsoft Teams 应用通过将关键信息、常用工具和受信任的流程引入人们日益收集、学习和工作的位置，帮助协作工作区提高工作效率。 应用是扩展团队平台功能以满足需求的方式。 创建全新的应用或集成现有应用，并利用 Microsoft Teams 平台的优势满足特定业务需求。
+Teams 应用通过将关键信息、常用工具和受信任的流程引入更多人员聚集、学习和工作的地方，帮助协作工作区提高工作效率。 应用是扩展团队平台功能以满足需求的方式。 创建全新的应用或集成现有应用，并利用 Teams 平台的优势满足特定业务需求。
 
 构建应用的好处包括满足从组织目标到提高内部工作效率。
 
@@ -75,7 +75,7 @@ Microsoft Teams 应用通过将关键信息、常用工具和受信任的流程�
 
 - **包含选项卡和机器人的个人应用**
 
-    一对一对话机器人是 Microsoft Teams 中更开放的功能之一。 对话仅在机器人和用户之间进行。 你可以灵活地包括任务模块来简化复杂的信息集。
+    一对一对话机器人是 Teams 中更开放的功能之一。 对话仅在机器人和用户之间进行。 你可以灵活地包括任务模块来简化复杂的信息集。
 
     例如，如果你的应用是具有多个协作者的设计工具，则通知所有用户的共享机器人有助于构建用户参与度。
 
