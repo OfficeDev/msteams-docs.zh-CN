@@ -4,12 +4,12 @@ description: 了解 Moodle LMS 与 Teams、Moodle 学习管理、mConnect 和深
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: e782c6361be7a6ca95b6a21baf88bee63461f139
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 62e52835e63f6fd40633ca2c99097746ee7ab2e5
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143303"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189442"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle 学习管理系统
 
@@ -33,7 +33,7 @@ This content is modified as per the requirement.-->
 
 Moodle LMS 可帮助用户访问以下应用:
 
-* **Microsoft 365 插件**: Microsoft 365 插件旨在确保 Moodle 站点与 Microsoft Teams 之间的集成。 这些插件可以独立或合作使用，从而满足不同的用户要求。 有关详细信息，请参阅 [Microsoft 365 插件](m365-plugins/m365-plugins-overview.md)。
+* **Microsoft 365 插件**：Microsoft 365 插件旨在确保 Moodle 站点与 Teams 之间的集成。 这些插件可以独立或合作使用，从而满足不同的用户要求。 有关详细信息，请参阅 [Microsoft 365 插件](m365-plugins/m365-plugins-overview.md)。
 
 * **Moodle 的合作伙伴应用**: Microsoft Store 中提供 Moodle 和 Teams 的所有合作伙伴应用集。 有关详细信息，请参阅 [Moodle 的合作伙伴应用](partner-apps-for-moodle.md)。
 

@@ -1,16 +1,16 @@
 ---
 title: 在整个 Microsoft 365 中扩展 Teams 邮件扩展
-description: 下面介绍如何更新基于搜索的 Teams 邮件扩展以在 Outlook 中运行
+description: 了解如何通过更新应用清单、添加 Outlook 频道和旁加载已更新应用来更新要在 Outlook 中运行的基于搜索的 Teams 消息扩展。
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142099"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190201"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>在整个 Microsoft 365 中扩展 Teams 邮件扩展
 
@@ -106,9 +106,9 @@ ms.locfileid: "66142099"
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="从“Azure 机器人通道”窗格为机器人添加 Outlook“邮件扩展”通道":::
 
-1. 确认你的 Outlook 频道与 Microsoft Teams 一起列在机器人的“**频道**”窗格中。
+1. 确认你的 Outlook 频道与 Teams 一起列出在机器人的“**频道**”窗格中。
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="“Azure 机器人通道”窗格，其中列出了 Microsoft Teams 和 Outlook 通道":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="“Azure 机器人频道”窗格，其中列出了 Teams 和 Outlook 频道":::
 
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>更新 Microsoft Azure Active Directory (Azure AD) 应用注册以实现 SSO
 
@@ -133,7 +133,7 @@ ms.locfileid: "66142099"
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>在 Teams 中旁加载更新后的邮件扩展
 
-最后一步是在 Microsoft Teams 中旁加载更新后的邮件扩展（[应用包](/microsoftteams/platform/concepts/build-and-test/apps-package)）。 完成后，邮件扩展将显示在已安装 *应用* 的撰写邮件区域中。
+最后一步是在 Teams 中旁加载更新后的邮件扩展（[应用包](/microsoftteams/platform/concepts/build-and-test/apps-package)）。 完成后，邮件扩展将显示在已安装 *应用* 的撰写邮件区域中。
 
 1. 将 Teams 应用（清单和应用[图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)）打包为一个 zip 文件。 如果使用 Teams 工具包创建应用，则可以使用 Teams 工具包的“*部署*”菜单中的“**压缩 Teams 元数据包**”选项轻松完成此操作。
 

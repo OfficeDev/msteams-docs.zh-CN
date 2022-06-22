@@ -4,12 +4,12 @@ description: 了解如何使用 Teams 机器人发送主动消息，使用 Micro
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-ms.openlocfilehash: cf163b8c74a74eeb83757e65fd79351176290fc9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4344a1c1a3d58d8bb3c06105b05a1b370b55e259
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143506"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190140"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -25,8 +25,9 @@ ms.locfileid: "66143506"
 > 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。
 >
 > 对于主动消息，机器人应将以下终结点用于政府云环境：
->    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`。
->    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
+>
+> * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`。
+> * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
 
 若要让机器人向用户、群聊或团队发送主动消息，它必须具有发送消息的权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。
 如果必要的话，你可以在团队中[使用 Microsoft Graph 主动安装应用](#proactively-install-your-app-using-graph)，或使用[应用策略](/microsoftteams/teams-custom-app-policies-and-settings)将应用推送给租户中的团队和用户。 对于用户，必须为你的用户安装应用，或者该用户必须是安装应用的团队的成员。
@@ -64,7 +65,9 @@ ms.locfileid: "66143506"
 
 如果对话不存在或者你不知道 `conversationId`，则必须创建对话。 只能创建一次对话并存储 `conversationId` 值或 `conversationReference` 对象。
 
-创建对话后，你必须获取对话 ID。
+首次安装应用时，可以获取对话。 创建对话后，你必须获取对话 ID。 会话更新事件中提供了 `conversationId`。
+
+如果没有 `conversationId`，则可以 [使用 Graph 主动安装应用](#proactively-install-your-app-using-graph) 以获取 `conversationId`。
 
 ## <a name="get-the-conversation-id"></a>获取对话 ID
 
@@ -77,6 +80,13 @@ ms.locfileid: "66143506"
 现在，你已拥有正确的地址信息，因此可以发送消息。 如果你使用的是 SDK，则必须使用 `continueConversation` 方法以及 `conversationId` 和 `tenantId` 进行直接 API 调用。 必须正确设置 `conversationParameters` 才能成功发送消息。 请参阅[示例](#samples)部分，或使用[代码示例](#code-sample)部分中列出的其中一个示例。
 
 现在，你已发送主动消息，你必须在发送主动消息时遵循这些最佳做法，以便更好地在用户和机器人之间交换信息。
+
+请参阅以下视频，以了解如何从机器人发送主动消息：
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+<br>
 
 ## <a name="best-practices-for-proactive-messaging"></a>主动消息传递的最佳做法
 

@@ -4,12 +4,12 @@ author: laujan
 description: 在本模块中，了解如何使用 Office 365 连接器并在 Microsoft Teams 中创建和发送可操作邮件
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143261"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190102"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -168,7 +168,7 @@ ms.locfileid: "66143261"
     > [!NOTE]
     > 如果 POST 成功，则必须看到 `curl` 简单输出 **1**。
 
-1. 检查 Microsoft Teams 客户端已发布的新卡。
+1. 检查 Teams 客户端以查看已发布的新卡片。
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
@@ -185,7 +185,7 @@ ms.locfileid: "66143261"
     > [!NOTE]
     > 如果 POST 成功，则必须看到 `Invoke-RestMethod` 简单输出 **1**。
 
-1. 检查与 Webhook URL 相关联的 Microsoft Teams 频道。 你应查看发布到频道的新卡片。 在使用连接器测试或发布应用之前，必须执行以下操作:
+1. 检查与 Webhook URL 相关联的 Teams 频道。 你应查看发布到频道的新卡片。 在使用连接器测试或发布应用之前，必须执行以下操作:
 
     * [包括两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
     * 将清单的 `icons` 部分修改为图标的文件名而不是 URL。
