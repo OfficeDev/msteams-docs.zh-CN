@@ -5,16 +5,16 @@ ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 61be6f8d85b5b98e9c96d4dec7301dea18ea55bc
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3a667247e0e67e4454effe2226e8775ac3fa0c3e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123848"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190005"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Microsoft Teams 应用商店排名参数
 
-此披露声明中的信息适用于 Microsoft 向用户提供第三方应用的 Microsoft Teams 应用商店。 Microsoft Teams 应用商店使用一组排名参数对应用商店中的应用搜索结果进行排名，以向用户提供相关的搜索结果。 列出的排名参数并不详尽，旨在让我们的发布者社区深入了解店铺在确定排名过程中使用的主要参数。 本文中使用但未另行定义的所有定义术语将具有《Microsoft 发布者协议》中规定的含义。
+此披露声明中的信息适用于 Microsoft 向用户提供第三方应用的 Microsoft Teams 应用商店。 Microsoft Teams 应用商店使用一组排名参数对应用商店中的应用搜索结果进行排名，以向用户提供相关的搜索结果。 列出的排名参数并不详尽，旨在让我们的发布者社区在高级别上了解店铺在确定排名过程中使用的主要参数。 本文中使用但未另行定义的所有定义术语将具有《Microsoft 发布者协议》中规定的含义。
 
 Microsoft Teams 应用商店编辑团队根据排名参数确定应用在编辑部分（例如 Microsoft Teams 应用商店上的促销横幅）中的显著程度和位置，并将其用作客观条件平等应用于 Microsoft Teams 应用商店中的全部应用，其中包括 Microsoft 自己的应用和所有第三方开发人员应用。 以下是用于确定应用放置位置的主要参数：
 
