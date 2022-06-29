@@ -5,17 +5,17 @@ localization_priority: Medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9802cbc0f78a84db972640ed8f96321a71a82504
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144164"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503485"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>自适应卡片中的人员选取器
 
 >[!NOTE]
-> 目前，自适应卡片中的人员选取器在 [公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) 版中仅适用于适用于桌面版的移动版和正式版 (正式版) 。
+> 目前，自适应卡片中的人员选取器在 [Teams 公共开发人员预览版](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) 中仅适用于移动版和正式版 (适用于桌面版的 GA) 。
 
 人员选取器可帮助用户在自适应卡片中搜索和选择用户。 可以将人员选取器添加为自适应卡片的输入控件，该卡可跨聊天、频道、任务模块和选项卡工作。 人员选取器支持以下功能：
 
@@ -58,9 +58,9 @@ Web 和桌面客户端支持自适应卡片中的人员选取器。 在 Web 上�
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
 > [!NOTE]
-> 目前，此功能仅适用于[公共开发人员预览版](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)。
+> 目前，此功能仅在  [Teams 的公共开发人员预览版](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) 中提供。
 
-Android和iOS移动客户端支持自适应卡片中的人员选取器。 可以使用移动设备中的人员选取器来搜索和选择用户，以增强用户体验。 搜索体验类似于移动版中的任何其他用户选择体验。
+Android 和 iOS 移动客户端支持自适应卡片中的人员选取器。 可以使用移动设备中的人员选取器来搜索和选择用户，以增强用户体验。 搜索体验类似于移动版中的任何其他用户选择体验。
 
 ### <a name="reassignment-scenario-example"></a>重新分配方案示例
 
@@ -71,7 +71,7 @@ Android和iOS移动客户端支持自适应卡片中的人员选取器。 可以
 1. 选择 **“重新分配** 人员选取器”字段预填充名称的位置，以便将任务重新分配给预期用户。
 1. 删除不正确的用户名。
 1. 根据映像方案选择预期用户、用户 B (Mona) 和用户 C (Robin) 。
-1. 选择“完成”。
+1. 选择“**完成**”。
 1. 选择“**分配**”。 分配后，信息将发送到机器人。
    机器人更新自适应卡片并通知预期用户。
 

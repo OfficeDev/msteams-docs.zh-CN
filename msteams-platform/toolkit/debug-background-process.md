@@ -6,14 +6,14 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: f2a94d92a157df20e956776f3a7e901219a45ffd
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 112b7da9a5b0926bde9ed1e88f9ad4a0d6dedb5b
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143583"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503597"
 ---
-# <a name="debug-background-processes"></a>调试后台进程
+# <a name="debug-background-process"></a>调试后台进程
 
 本地调试工作流涉及 `.vscode/launch.json` 和 `.vscode/tasks.json` 文件，用于在 Visual Studio Code (VS Code) 中配置调试器。 VS Code 启动调试器，Microsoft Edge 或 Google Chrome 启动新的浏览器实例，如下所示:
 

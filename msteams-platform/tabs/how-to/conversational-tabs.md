@@ -5,12 +5,12 @@ description: 在本模块中，了解如何为频道选项卡创建聊天子实�
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142078"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485659"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
@@ -20,9 +20,9 @@ ms.locfileid: "66142078"
 
 ## <a name="prerequisites"></a>先决条件
 
-若要支持会话子实体，Tab Web 应用程序必须能够在后端数据库中的子实体↔对话之间存储映射。 提供`conversationId`此功能，但必须将其存储`conversationId`并将其返回到Teams，以便用户继续对话。
+若要支持会话子实体，Tab Web 应用程序必须能够在后端数据库中的子实体↔对话之间存储映射。 提供 `conversationId` 此功能，但必须将其存储 `conversationId` 并返回到 Teams，以便用户继续对话。
 
-## <a name="start-a-new-conversation"></a>"开始"菜单新对话
+## <a name="start-a-new-conversation"></a>开始新对话
 
 若要启动新对话，请使用该 `openConversation()` 函数。 启动和继续会话均由此方法处理。 对函数的输入根据要执行的操作而更改，从用户的角度来看，这会打开屏幕右侧的对话面板，以启动对话或继续聊天。
 
@@ -47,7 +47,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 下图显示了对话面板：
 
-![对话子实体 - 启动对话](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="开始对话":::
 
 如果用户启动对话，请务必侦听该事件的回调以检索并保存 **conversationId**：
 
@@ -65,7 +65,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 
 下图显示了具有相应对话的对话面板：
 
-![对话子实体 - 继续对话](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="继续对话":::
 
 ## <a name="enhance-a-conversation"></a>增强对话
 
@@ -93,7 +93,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | 示例名称 | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|“创建对话”选项卡| Microsoft Teams选项卡示例应用，用于演示“创建对话”选项卡。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|“创建对话”选项卡| 用于演示“创建对话”选项卡的 Microsoft Teams 选项卡示例应用。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>后续步骤
 

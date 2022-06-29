@@ -1,20 +1,20 @@
 ---
 title: 使用 UI 模板设计应用
 author: heath-hamilton
-description: 了解如何使用Microsoft Teams中常见的标准化 UI 组件、布局和模式更快地设计应用。
+description: 了解如何使用 Microsoft Teams 中常见的标准化 UI 组件、布局和模式更快地设计应用。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d6323baf20c733eaddc1e8797a56d63effc45eab
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142897"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484817"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI 模板设计Microsoft Teams应用
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI 模板设计 Microsoft Teams 应用
 
-使用 UI 模板更快地设计Microsoft Teams应用。 这些模板是基于 Fluent UI 的组件的集合，可跨常见Teams用例工作，为用户提供更多时间来找出最佳体验。
+使用 UI 模板更快地设计 Microsoft Teams 应用。 这些模板是基于 Fluent UI 的组件的集合，可跨常见的 Teams 用例工作，为用户提供更多时间来找出最佳体验。
 
 ## <a name="getting-started-with-tools-and-samples"></a>工具和示例入门
 
@@ -22,7 +22,7 @@ ms.locfileid: "66142897"
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-从 Microsoft Teams UI 工具包中获取应用设计的 UI 模板，其中还包括有关使用情况、解剖、辅助功能和最佳做法的广泛信息。
+从 Microsoft Teams UI 工具包获取应用设计的 UI 模板，其中还包括有关使用情况、解剖、辅助功能和最佳做法的广泛信息。
 
 > [!div class="nextstepaction"]
 > [获取 UI 工具包 (Figma) ](https://www.figma.com/community/file/916836509871353159)
@@ -41,19 +41,19 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ### <a name="sample-app"></a>示例应用
 
-安装示例应用，查看 UI 模板在Teams上下文中的外观和行为。
+安装示例应用，查看 UI 模板在 Teams 上下文中的外观和行为。
 
 > [!div class="nextstepaction"]
 > [ 获取示例应用 (GitHub) ](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="calendar"></a>日历
 
-在Teams中，日历是用户为自己或组查看、计划和管理即将发生的和过去的事件的位置。
+在 Teams 中，日历是用户查看、计划和管理自己或组即将发生的和过去事件的位置。
 
 ### <a name="top-use-cases"></a>最主要用例
 
 * 安排会议和活动
-* 获取即将召开的会议和活动的提醒
+* 获取即将召开的会议和活动的提醒。
 * 查看计划
 
 ### <a name="desktop"></a>桌面
@@ -62,13 +62,13 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ## <a name="dashboard"></a>仪表板
 
-仪表板在中心位置 (显示不同类型的内容，例如Teams个人应用或选项卡) 。 用户应该能够自定义他们在仪表板上看到的至少一些内容。
+仪表板在中心位置中显示不同类型的内容 (如 Teams 个人应用或选项卡) 。 用户应该能够自定义他们在仪表板上看到的至少一些内容。
 
 ### <a name="top-use-cases"></a>最主要用例
 
 * 分析数据
 * 报表指标
-* 在一个位置组织不同的信息
+* 在一个位置组织不同的信息。
 
 ### <a name="mobile"></a>移动设备
 
@@ -84,8 +84,8 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ### <a name="top-use-cases"></a>最主要用例
 
-* 显示复杂信息
-* 创建仪表板
+* 显示复杂信息。
+* 创建仪表板。
 
 ### <a name="mobile"></a>移动设备
 
@@ -102,7 +102,7 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 ### <a name="top-use-cases"></a>最主要用例
 
 * 登录
-* 欢迎消息和首次运行体验
+* 欢迎消息和首次运行体验。
 * 成功消息
 * 错误消息
 
@@ -148,7 +148,7 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 :::image type="content" source="../../assets/form.png" alt-text="示例显示桌面上的窗体 UI 模板。" border="false":::
 
-## <a name="list"></a>列出
+## <a name="list"></a>列表
 
 可以使用列表以可扫描的格式显示相关项目，并允许用户对整个列表或单个项目执行操作。
 
@@ -167,7 +167,7 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ## <a name="sign-in"></a>登录
 
-可以为不同的Teams上下文和标识提供者设计应用登录流。 以下示例包括单一登录 (SSO) ，建议使用最简单的身份验证体验。
+可以为不同的 Teams 上下文和标识提供者设计应用登录流。 以下示例包括单一登录 (SSO) ，建议使用最简单的身份验证体验。
 
 ### <a name="top-use-case"></a>首要用例
 
@@ -183,7 +183,7 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ## <a name="settings"></a>设置
 
-设置屏幕是用户可以使用应用配置首选项的位置。  (注意：设置是[基本 UI 组件](~/concepts/design/design-teams-app-basic-ui-components.md)的容器。) 
+设置屏幕是用户可以使用应用配置首选项的位置。  (注意：设置是 [基本 UI 组件](~/concepts/design/design-teams-app-basic-ui-components.md)的容器。) 
 
 ### <a name="top-use-case"></a>首要用例
 
@@ -229,6 +229,6 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ## <a name="see-also"></a>另请参阅
 
-* [使用基本Fluent UI 组件设计应用](~/concepts/design/design-teams-app-basic-ui-components.md)
-* [使用高级 UI 组件设计Microsoft Teams应用](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [使用基本 Fluent UI 组件设计应用](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [使用高级 UI 组件设计 Microsoft Teams 应用](~/concepts/design/design-teams-app-advanced-ui-components.md)
 * [设置你的智能机器人邮件格式](~/bots/how-to/format-your-bot-messages.md)

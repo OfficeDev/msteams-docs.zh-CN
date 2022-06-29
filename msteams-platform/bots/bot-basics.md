@@ -1,31 +1,31 @@
 ---
 title: 智能机器人活动处理程序
 author: surbhigupta
-description: 本文介绍Microsoft Teams中的机器人活动处理程序、框架、Teams活动处理程序和机器人逻辑。
+description: 本文介绍 Microsoft Teams 中的机器人活动处理程序、框架、Teams 活动处理程序和机器人逻辑。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: c1d3acb4328f61f15d4751aedff3d413d18072fd
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150860"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485571"
 ---
 # <a name="bot-activity-handlers"></a>智能机器人活动处理程序
 
 本文档基于[机器人如何在](https://aka.ms/how-bots-work)核心[Bot Framework 中运行文档](https://aka.ms/azure-bot-service-docs)中的文章生成。 为 Microsoft Teams 开发的机器人与核心 Bot Framework 之间的主要区别在于 Teams 中提供的功能。
 
-若要为机器人组织聊天逻辑，请使用活动处理程序。 使用 Teams 活动处理程序和机器人逻辑以两种方式处理活动。 Teams活动处理程序添加了对特定于Teams的事件和交互的支持。 机器人对象包含轮次的会话推理或逻辑，并公开轮次处理程序，该处理程序是可以接受来自机器人适配器的传入活动的方法。
+若要为机器人组织聊天逻辑，请使用活动处理程序。 使用 Teams 活动处理程序和机器人逻辑以两种方式处理活动。 Teams 活动处理程序添加了对 Teams 特定事件和交互的支持。 机器人对象包含轮次的会话推理或逻辑，并公开轮次处理程序，该处理程序是可以接受来自机器人适配器的传入活动的方法。
 
 ## <a name="teams-activity-handlers"></a>Teams 活动处理程序
 
 Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序。 它会先路由所有 Teams 活动，然后再允许处理任何非 Teams 特定的活动。
 
-当机器人Teams收到活动时，它会路由到活动处理程序。 所有活动都通过一个称为轮次处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 Teams 机器人派生自 `TeamsActivityHandler` 类，此类派生自 Bot Framework 的 `ActivityHandler` 类。
+当 Teams 机器人收到活动时，它会路由到活动处理程序。 所有活动都通过一个称为轮次处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 Teams 机器人派生自 `TeamsActivityHandler` 类，此类派生自 Bot Framework 的 `ActivityHandler` 类。
 
 > [!NOTE]
-> 如果机器人活动需要超过 15 秒才能处理，Teams向机器人终结点发送重试请求。 因此，机器人中会看到重复的请求。
+> 如果机器人活动需要超过 15 秒才能处理，Teams 会向机器人终结点发送重试请求。 因此，机器人中会看到重复的请求。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -33,7 +33,7 @@ Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序�
 
 在 Teams 活动处理程序类中，有两个主要的 Teams 活动处理程序， `OnConversationUpdateActivityAsync` 和 `OnInvokeActivityAsync`。 `OnConversationUpdateActivityAsync` 路由所有会话更新活动， `OnInvokeActivityAsync` 路由所有 Teams 调用活动。
 
-如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 这些处理程序没有基本实现，因此，必须在重写中添加所需的逻辑。
+如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 这些处理程序没有基本实现。 因此，在替代中添加所需的逻辑。
 
 Teams 活动处理程序的代码片段：
 
@@ -173,13 +173,13 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 在 Teams 活动处理程序类中，有两个主要的 Teams 活动处理程序， `on_conversation_update_activity` 和 `on_invoke_activity`。 `on_conversation_update_activity` 路由所有会话更新活动， `on_invoke_activity` 路由所有 Teams 调用活动。
 
-如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 这些处理程序没有基本实现，因此，必须在重写中添加所需的逻辑。
+如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 这些处理程序没有基本实现。 因此，在替代中添加所需的逻辑。
 
 ---
 
 ## <a name="bot-logic"></a>机器人逻辑
 
-机器人逻辑处理来自一个或多个机器人通道的传入活动，并在响应中生成传出活动。 派生自Teams活动处理程序类的机器人仍然如此，该类首先检查Teams活动。 检查 Teams 活动后，会将所有其他活动传递给 Bot Framework 的活动处理程序。
+机器人逻辑处理来自一个或多个机器人通道的传入活动，并在响应中生成传出活动。 派生自 Teams 活动处理程序类的机器人仍然如此，该类首先检查 Teams 活动。 检查 Teams 活动后，会将所有其他活动传递给 Bot Framework 的活动处理程序。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -221,7 +221,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-invoke-activities"></a>Teams 调用活动
 
-从`OnInvokeActivityAsync`Teams活动处理程序调用的Teams活动处理程序列表包括：
+从 Teams 活动处理程序调用的 `OnInvokeActivityAsync` Teams 活动处理程序列表包括：
 
 | 调用类型                    | 处理程序                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -234,7 +234,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | 可在派生类中重写此方法，以便在提取任务模块时提供逻辑。 |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | 可在派生类中重写此方法，以便在提交任务模块时提供逻辑。 |
 
-本部分中列出的 Invoke 活动适用于Teams中的聊天机器人。 Bot Framework SDK 还支持调用特定于消息扩展的活动。 有关详细信息，请参阅[什么是消息扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+本部分中列出的 Invoke 活动适用于 Teams 中的聊天机器人。 Bot Framework SDK 还支持调用特定于消息扩展的活动。 有关详细信息，请参阅[什么是消息扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -273,7 +273,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-invoke-activities"></a>Teams 调用活动
 
-从`onInvokeActivity`Teams活动处理程序调用的Teams活动处理程序列表包括：
+从 Teams 活动处理程序调用的 `onInvokeActivity` Teams 活动处理程序列表包括：
 
 | 调用类型                    | 处理程序                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -326,7 +326,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-invoke-activities"></a>Teams 调用活动
 
-从`on_invoke_activity`Teams活动处理程序调用的Teams活动处理程序列表包括：
+从 Teams 活动处理程序调用的 `on_invoke_activity` Teams 活动处理程序列表包括：
 
 | 调用类型                    | 处理程序                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |

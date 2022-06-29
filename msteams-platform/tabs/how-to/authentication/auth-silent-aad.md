@@ -3,14 +3,14 @@ title: 无提示的身份验证
 description: 在本模块中，了解如何对选项卡执行无提示身份验证、单一登录和 Azure AD，以及它的工作原理
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bb5b65e70192c4796d7c828d19512e2a414cf812
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d4fdf501899b17d3ee64cf74b1a1fb52e0e749db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144241"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503625"
 ---
-# <a name="silent-authentication"></a>无提示的身份验证
+# <a name="use-silent-authentication-in-azure-ad"></a>在 Azure AD 中使用无提示身份验证
 
 > [!IMPORTANT]
 > Microsoft 对 Active Directory 身份验证库 (ADAL) 的支持和开发，包括安全修补程序，将于 **2022 年 6 月 30日** 结束。 若要继续接收支持，请将应用程序更新为使用 Microsoft 身份验证库 (MSAL) 。请参阅 [将应用程序迁移到 Microsoft 身份验证库 (MSAL) ](/azure/active-directory/develop/msal-migration)。

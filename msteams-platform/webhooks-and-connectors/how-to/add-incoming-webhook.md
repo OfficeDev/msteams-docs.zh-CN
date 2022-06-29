@@ -5,14 +5,14 @@ description: 在本模块中，了解如何将传入 Webhook 添加到 Teams 应
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a1cb8f3e686ad0e1ee956345095d07c97f7a137c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 4b93e7118cbd9b22ef7022f19b9538fe156b59f6
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189898"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503492"
 ---
-# <a name="create-an-incoming-webhook"></a>创建传入 Webhook
+# <a name="create-incoming-webhooks"></a>创建传入 Webhooks
 
 传入 Webhook 允许外部应用程序在 Microsoft Teams 频道中共享内容。 Webhook 用作跟踪和通知的工具。 Webhook 提供唯一的 URL，用于发送 JSON 有效负载，其中包含卡格式的消息。 卡片是包含与单个主题相关的内容和操作的用户界面容器。 可以在以下功能中使用卡片：
 

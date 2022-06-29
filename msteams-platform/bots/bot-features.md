@@ -1,16 +1,16 @@
 ---
 title: 智能机器人和 SDK
 author: surbhigupta
-description: 本文介绍用于使用Microsoft Bot Framework生成Microsoft Teams机器人和机器人的工具和 SDK。
+description: 本文介绍用于使用Microsoft Bot Framework生成 Microsoft Teams 机器人和机器人的工具和 SDK。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 28cebe4634899a607bb13804997ffbe0649d54f2
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189331"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485683"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -186,9 +186,10 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 一对一聊天是对话机器人与用户进行交互的传统方式。 一对一对话机器人的一些示例包括：
 
 * 问答机器人
-* 在其他系统中启动工作流的机器人
-* 讲笑话的机器人
-* 在创建一对一聊天机器人之前做笔记的机器人，请考虑基于对话的界面是否能够最佳呈现功能。
+* 在其他系统中启动工作流的机器人。
+* 讲笑话的机器人。
+* 做笔记的机器人。
+在创建一对一聊天机器人之前，请考虑基于对话的接口是否是呈现功能的最佳方式。
 
 ## <a name="disadvantages-of-bots"></a>机器人的缺点
 

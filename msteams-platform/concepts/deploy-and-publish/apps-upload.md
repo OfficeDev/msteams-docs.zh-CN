@@ -5,14 +5,14 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: df9f38be8202f9b982292847a7cfcc982e72fcb5
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 12bd5a6e2c72c1095fbb7f6f113cb9126b247289
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032814"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503954"
 ---
-# <a name="upload-your-app-in-microsoft-teams"></a>在 Microsoft Teams 中上传应用
+# <a name="upload-your-app-in-teams"></a>在 Teams 中上传应用
 
 在以下情况下，无需发布到组织或 Teams 应用商店即可旁加载 Microsoft Teams 应用：
 
@@ -71,13 +71,13 @@ ms.locfileid: "66032814"
 1. 转到“**应用**”，然后在 Teams 中选择“**管理应用**”以查看所有频道中安装的应用或以列表格式供个人使用。
 
     :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="访问团队应用列表" border="true":::
-    
+
 1. 选择应用下拉列表以查看安装应用的所有范围。
-    
+
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="访问团队应用范围" border="true":::
-    
+
 1. 选择应用范围以转到频道或个人视图中的应用。 范围列表仅包含个人范围和团队范围。 群聊范围内安装的应用当前不显示在此视图中。
-    
+
 Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [在 Teams 中访问应用](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)。
 
 ### <a name="update-your-app"></a>更新应用
@@ -92,7 +92,7 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 
 1. 选择“**查看更新**”，将显示具有更新选项的窗口。
 1. 选择“**更新**”按钮以更新应用。
-    
+
      :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="在管理应用中更新 Teams 应用" border="true":::
 
      :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="已更新的应用" border="true":::
@@ -103,11 +103,11 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 
 1. 在“**管理应用**”中查找应用。
 1. 在已安装应用的范围内选择&nbsp;“:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="在 Teams 中删除应用" border="false":::”&nbsp;。
-        
+
     :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="在频道中删除应用" border="true":::
 
 1. 选择“**删除**”以删除应用。
-    
+
     :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="从 Teams 中删除应用" border="true":::
 
 > [!NOTE]

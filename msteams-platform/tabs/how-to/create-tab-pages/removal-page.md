@@ -5,14 +5,14 @@ description: 在本模块中，了解如何创建选项卡删除页，以及如�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 81bc5f667d1be301965ccddf0709c8cb02f328e8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142631"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485214"
 ---
-# <a name="create-a-removal-page"></a>创建删除页面
+# <a name="tab-re-configuration-and-removal-page"></a>选项卡重新配置和删除页面
 
 可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams 使用户能够重命名或删除频道或群组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验为用户提供了删除后选项以删除或存档内容。
 

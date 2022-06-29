@@ -1,14 +1,14 @@
 ---
 title: 准备 Microsoft 365 租户
-description: 在本模块中，了解如何开始使用Microsoft 365中的Teams并创建开发环境
+description: 在本模块中，了解如何在 Microsoft 365 中开始使用 Teams 并创建开发环境
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 241040767c610692873e5a68bd215849a8cd26a0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b52a74056dac01d6a946bd8f0166080b75a5fab5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144388"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484885"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 
@@ -68,4 +68,5 @@ Microsoft 365 订阅者可以使用以下计划之一为 Microsoft Teams 开发�
 
 ## <a name="see-also"></a>另请参阅
 
-[将测试数据添加到 Microsoft 365 测试租户](~/concepts/build-and-test/test-data.md)
+* [将测试数据添加到 Microsoft 365 测试租户](~/concepts/build-and-test/test-data.md)
+* [Microsoft 365 多地理位置](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)

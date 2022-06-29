@@ -1,16 +1,16 @@
 ---
 title: 在 Teams 中启用资源特定许可
-description: 在本文中，你将了解Microsoft Teams中特定于资源的许可以及如何利用它。
+description: 本文介绍 Microsoft Teams 中特定于资源的许可以及如何利用它。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: af546bb888cf5a3e35b7c241eba927e2d144bdd0
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 158905194ea29bfd2aca8149b8f8d6236905b754
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189912"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484864"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 
@@ -44,7 +44,7 @@ ms.locfileid: "66189912"
 |TeamMember.Read.Group|获取此团队的成员。 |
 |TeamsActivity.Send.Group|在此团队中用户的活动信息提要内创建新通知。 |
 
-有关更多详细信息，请参阅[团队的资源特定许可权限](/graph/permissions-reference#teams-resource-specific-consent-permissions)。
+有关更多详细信息，请参阅[团队的资源特定许可权限](/graph/permissions-reference#team-resource-specific-consent-permissions)。
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>聊天的资源特定权限
 
@@ -66,6 +66,7 @@ ms.locfileid: "66189912"
 | Calls.AccessMedia.Chat         | 访问与此聊天或会议关联的通话中的媒体流。                                    |
 | Calls.JoinGroupCalls.Chat         | 加入与此聊天或会议关联的通话。                                    |
 | TeamsActivity.Send.Chat         | 在此聊天中用户的活动信息提要内创建新通知。 |
+| OnlineMeetingTranscript.Read.Chat | 阅读与此聊天关联的会议的脚本。 |
 
 有关更多详细信息，请参阅[聊天的资源特定许可权限](/graph/permissions-reference#chat-resource-specific-consent-permissions)。
 

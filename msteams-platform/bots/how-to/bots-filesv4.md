@@ -1,17 +1,17 @@
 ---
-title: 通过机器人收发文件
+title: 使用机器人发送和接收文件
 description: 了解如何使用个人、频道和群组聊天作用域的 Graph API 通过机器人收发文件。
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3fdf39c18743c991610c266a58e37e0109ffbf05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189651"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503877"
 ---
-# <a name="send-and-receive-files-through-the-bot"></a>通过机器人收发文件
+# <a name="send-and-receive-files-using-bot"></a>使用机器人发送和接收文件
 
 > [!IMPORTANT]
 > 本文档中的文章以 v4 Bot Framework SDK 为基础。

@@ -1,17 +1,17 @@
 ---
 title: Teams 工具包概述
 author: zyxiaoyuer
-description: 在本模块中，了解Teams Toolkit、安装Teams Toolkit和用户Teams Toolkit
+description: 在本模块中，了解 Teams 工具包、Teams 工具包安装和 Teams 工具包的用户旅程
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 529d7b6e18bf9ff0f28bb2230358f25f95b9e3db
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 49bf74276053f927f0337882d6f278ca64494128
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142197"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484601"
 ---
 # <a name="teams-toolkit-overview"></a>Teams 工具包概述
 
@@ -21,7 +21,7 @@ Teams 工具包允许直接从 Visual Studio Code 创建、调试和部署 Teams
 * 集成标识
 * 对云存储的访问权限
 * 来自 Microsoft Graph 的数据
-* 采用零配置方法的 Azure 和 Microsoft 365 服务
+* 采用零配置方法的 Azure 和 Microsoft 365 服务。
 
 Teams 工具包将构建 Teams 应用所需的所有工具集中在一处。
 
@@ -29,7 +29,7 @@ Teams 工具包将构建 Teams 应用所需的所有工具集中在一处。
 
 Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的强大集成。 下图显示了 Teams 工具包用户旅程：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Teams 工具包用户旅程" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Teams 工具包的用户旅程" border="true" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 此旅程的主要里程碑包括：
 
@@ -46,7 +46,7 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="安装":::
 
-1. 在搜索框中输入 **Teams Toolkit**。
+1. 在搜索框中输入 **Teams 工具包** 。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="工具包":::
 
@@ -63,7 +63,7 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="迷你功能":::
 
-可以选择 **入门** 来浏览Teams Toolkit，或选择 **“新建Teams应用**”以创建一个Teams项目。 如果Visual Studio Code Teams Toolkit创建了Teams项目，则会看到具有所有功能的Teams Toolkit UI，如下图所示：
+可以选择 **“入门”** 以浏览 Teams 工具包，或选择 **“创建新的 Teams 应用** ”以创建一个 Teams 项目。 如果已在 Visual Studio Code 中打开由 Teams 工具包创建的 Teams 项目，则会看到具有所有功能的 Teams 工具包 UI，如下图所示：
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="teams 工具包的屏幕截图":::
 
@@ -71,7 +71,7 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 
 ## <a name="accounts"></a>帐户
 
-若要开发 Teams 应用，至少需要一个具有有效订阅的 Microsoft 365 帐户。 如果要在 Azure 上托管后端资源，还需要 Azure 帐户。 Teams Toolkit支持用于登录、预配和部署 Azure 资源的集成体验。 可以在开始之前[创建免费的 Azure 帐户](https://azure.microsoft.com/free/)。
+若要开发 Teams 应用，至少需要一个具有有效订阅的 Microsoft 365 帐户。 如果要在 Azure 上托管后端资源，还需要 Azure 帐户。 Teams 工具包支持用于登录、预配和部署 Azure 资源的集成体验。 可以在开始之前[创建免费的 Azure 帐户](https://azure.microsoft.com/free/)。
 
 ## <a name="environment"></a>环境
 
@@ -89,11 +89,11 @@ Teams 工具包可帮助创建和自定义 Teams 应用项目，使 Teams 应用
 
 ### <a name="create-a-new-teams-app"></a>新建 Teams 应用
 
-它通过使用Teams Toolkit创建新项目或 **从示例**"开始"菜单创建新的Teams **项目**，帮助你从Teams应用开发入门。
+它通过使用 Teams 工具包创建新的 Teams **项目** 或从 **示例开始**，帮助你从 Teams 应用开发入门。
 
 ### <a name="add-features"></a>添加功能
 
-它可帮助你以增量方式添加其他Teams功能，如 **Tab** 或 **Bot**，或者选择性地添加 Azure 资源（如 **Azure SQL 数据库** 或 **Azure 密钥保管库**，以满足当前Teams应用的开发需求。 还可以为Teams应用添加 **单一登录** 或 **CI/CD 工作流**。 
+它可帮助你以增量方式添加其他 Teams 功能，如 **Tab** 或 **Bot**，或者选择性地添加 Azure 资源，例如 **Azure SQL数据库** 或 **Azure 密钥保管库**，以满足当前 Teams 应用的开发需求。 还可以为 Teams 应用添加 **单一登录** 或 **CI/CD 工作流** 。
 
 ### <a name="edit-manifest-file"></a>编辑清单文件
 
@@ -105,7 +105,7 @@ Teams 工具包可帮助创建和自定义 Teams 应用项目，使 Teams 应用
 
 ### <a name="provision-in-the-cloud"></a>在云中预配
 
-它与 Azure 资源管理器集成，使你能够预配应用程序需要用于代码方法的 Azure 资源。
+它与 Azure 资源管理器集成，使你能够预配 Azure 资源，而应用程序需要这些资源来使用代码方法。
 
 ### <a name="deploy-to-the-cloud"></a>部署到云
 

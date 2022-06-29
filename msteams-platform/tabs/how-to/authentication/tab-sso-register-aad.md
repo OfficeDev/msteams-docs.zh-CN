@@ -3,15 +3,15 @@ title: 将 Tab 应用注册到 Azure AD
 description: 介绍如何将选项卡应用注册到 Azure AD
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 身份验证选项卡 Microsoft Azure Active Directory (Azure AD) 访问令牌 SSO 租户范围
-ms.openlocfilehash: e508e80f4e2c881e848f628a12392e6ced5e6f4b
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Microsoft Azure Active Directory (Azure AD) 访问令牌 SSO 租户范围的 teams 身份验证选项卡
+ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887957"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503520"
 ---
-# <a name="register-your-app-in-azure-ad"></a>在 Azure AD 中注册应用
+# <a name="register-your-tab-app-in-azure-ad"></a>在 Azure AD 中注册 Tab 应用
 
 Azure AD 基于应用用户的 Teams 标识提供对 Tab 应用的访问权限。 需要将 Tab 应用注册到 Azure AD，以便可以向已登录 Teams 的应用用户授予对 Tab 应用的访问权限。
 
@@ -25,7 +25,7 @@ Azure AD 基于应用用户的 Teams 标识提供对 Tab 应用的访问权限�
 
 可能还需要配置其他详细信息，例如，在想要定位 Tab 应用的平台或设备上对应用用户进行身份验证。
 
-支持用户级图形 API 权限，即电子邮件、配置文件、offline_access和 OpenId。 如果需要访问其他 Graph 范围，例如`User.Read``Mail.Read`，请参阅[获取具有 Graph 权限的访问令牌](tab-sso-graph-api.md)。
+支持用户级图形 API权限，即电子邮件、配置文件、offline_access和 OpenId。 如果需要访问其他 Graph 范围，例如`User.Read``Mail.Read`，请参阅[获取具有 Graph 权限的访问令牌](tab-sso-graph-api.md)。
 
 Azure AD 配置为 Teams 中的 Tab 应用启用 SSO。 它使用访问令牌进行响应，以验证应用用户。
 
@@ -57,14 +57,14 @@ Azure AD 配置为 Teams 中的 Tab 应用启用 SSO。 它使用访问令牌进
 
 ### <a name="to-register-a-new-app-in-azure-ad"></a>在 Azure AD 中注册新应用
 
-1. 在 Web 浏览器上打开 [Azure 门户](https://ms.portal.azure.com/) 。
-   Microsoft Azure AD 门户页随即打开。
+1. 在 Web 浏览器上打开[Azure 门户](https://ms.portal.azure.com/)。
+   Microsoft Azure AD门户页随即打开。
 
-2. 选择 **“应用注册”** 图标。
+2. 选择 **应用注册** 图标。
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD 门户页。" border="true":::
 
-   将显示 **“应用注册”** 页。
+   将显示 **应用注册** 页。
 
 3. 选择 **“+ 新建注册** ”图标。
 
@@ -83,8 +83,8 @@ Azure AD 配置为 Teams 中的 Tab 应用启用 SSO。 它使用访问令牌进
 
     | 选项 | 选择此选项可... |
     | --- | --- |
-    | 此组织目录中的帐户仅 (Microsoft - 单租户)  | 生成仅供租户中 (或来宾) 用户使用的应用程序。 <br> 此应用通常称为 LOB 应用程序，是 Microsoft 标识平台中的单租户应用程序。 |
-    | 任何组织目录 (任何 Azure AD 目录中的帐户 - 多租户)  | 允许任何 Azure AD 租户中的用户使用应用程序。 例如，如果要生成 SaaS 应用程序，并且打算将其提供给多个组织，则此选项是合适的。 <br> 此类应用在 Microsoft 标识平台中称为多租户应用程序。|
+    | 此组织目录中的帐户仅 (Microsoft - 单租户)  | 生成仅供租户中 (或来宾) 用户使用的应用程序。 <br> 此应用通常称为 LOB 应用程序，是Microsoft 标识平台中的单租户应用程序。 |
+    | 任何组织目录 (任何 Azure AD 目录中的帐户 - 多租户)  | 允许任何 Azure AD 租户中的用户使用应用程序。 例如，如果要生成 SaaS 应用程序，并且打算将其提供给多个组织，则此选项是合适的。 <br> 此类应用在Microsoft 标识平台中称为多租户应用程序。|
     | 任何组织目录中的帐户 (任何 Azure AD 目录 - 多租户) 和个人 Microsoft 帐户 | 面向最广泛的客户集。 <br> 通过选择此选项，你将注册一个可支持具有个人 Microsoft 帐户的应用用户的多租户应用程序。 |
     | 仅限个人 Microsoft 帐户 | 仅为拥有个人 Microsoft 帐户的用户生成应用程序。 |
 
@@ -159,7 +159,7 @@ Azure AD 配置为 Teams 中的 Tab 应用启用 SSO。 它使用访问令牌进
     >
     >    将小写选项 *降级* 用作基本资源名称。
 
-1. 选择 **保存**。
+1. 选择“保存”。
 
     浏览器上弹出一条消息，指出应用程序 ID URI 已更新。
 
@@ -185,7 +185,7 @@ Azure AD 配置为 Teams 中的 Tab 应用启用 SSO。 它使用访问令牌进
 
     1. 输入范围名称。 这是必填字段。
     2. 选择可以对此范围表示同意的用户。 默认选项 **仅限管理员**。
-    3. 输入 **管理员同意显示名称**。 这是必填字段。
+    3. 输入 **管理员许可显示名称**。 这是必填字段。
     4. 输入管理员同意的说明。 这是必填字段。
     5. 输入 **用户同意显示名称**。
     6. 输入用户同意说明的说明。
@@ -272,6 +272,6 @@ Azure AD 配置为 Teams 中的 Tab 应用启用 SSO。 它使用访问令牌进
 
 - [Azure Active Directory 中的租户](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [使用 Microsoft Graph 权限和范围扩展选项卡应用](tab-sso-graph-api.md)
-- [快速入门 - 将应用程序注册到 Microsoft 标识平台](/azure/active-directory/develop/quickstart-register-app)
+- [快速入门 - 向Microsoft 标识平台注册应用程序](/azure/active-directory/develop/quickstart-register-app)
 - [快速入门：配置应用程序以公开 Web API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)

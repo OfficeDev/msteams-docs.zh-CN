@@ -1,15 +1,15 @@
 ---
 title: 卡片和任务模块
-description: 了解Teams机器人中支持的卡片类型，例如自适应卡片、英雄卡片和缩略图卡及其操作。
+description: 了解 Teams 机器人中支持的卡片类型，例如自适应卡、英雄卡和缩略图卡及其操作。
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f2f964307c4cc8dbd3033b52af88a9b2c38d474
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 04cdcfedd98bee67babf63231ffdeae6679f7331
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143933"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485445"
 ---
 # <a name="cards-and-task-modules"></a>卡片和任务模块
 
@@ -38,7 +38,7 @@ Teams 机器人支持以下类型的卡片：
 * 将消息和有效负载发送到机器人。
 * 启动 OAuth 流。
 
-可以在大型数据集中使用自适应卡片中的超前类型控制提供 [动态搜索](~/task-modules-and-cards/cards/dynamic-search.md) 体验，并在有限数量的选择内执行超前类型静态搜索。 在频道或个人选项卡、机器人或深层链接中调用任务模块。 通过将任务模块添加到用户的选项卡，可以改善用户对需要数据输入的工作流的体验。可以使用自适应卡片和机器人框架卡上的按钮从 Teams机器人调用任务模块。
+可以在大型数据集中使用自适应卡片中的 typeahead 控件提供 [动态搜索](~/task-modules-and-cards/cards/dynamic-search.md) 体验，并在有限的选择数内执行 typeahead 静态搜索。 在频道或个人选项卡、机器人或深层链接中调用任务模块。 通过将任务模块添加到用户的选项卡，可以改善用户对需要数据输入的工作流的体验。可以使用自适应卡片和机器人框架卡上的按钮从 Teams机器人调用任务模块。
 
 ## <a name="see-also"></a>另请参阅
 

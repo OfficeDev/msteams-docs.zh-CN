@@ -1,18 +1,18 @@
 ---
 title: 使用 Microsoft Graph 在 Teams 中授权主动机器人安装和消息传递
-description: 本文介绍Teams中的主动消息传送以及如何实现它。 了解如何使用代码示例启用主动应用安装和消息传递。
+description: 本文介绍 Teams 中的主动消息传递以及如何实现它。 了解如何使用代码示例启用主动应用安装和消息传递。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 832dfe6ddce7710d506c480fc1195c426b8da0df
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b7893b425618372085e8ef118beff7c12bd2eb15
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189583"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503590"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>使用 Graph API 发送邮件的应用主动安装
+# <a name="send-proactive-installation-messages"></a>发送主动安装消息 
 
 ## <a name="proactive-messaging-in-teams"></a>Teams 中的主动消息传递
 
@@ -247,3 +247,4 @@ server.get('/api/notify', async (req, res) => {
 
 * [在 Teams 中管理应用设置策略](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [向用户 SDK v4 发送主动通知](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+* [向 Microsoft Teams 中的用户发送活动源通知](/graph/teams-send-activityfeednotifications)

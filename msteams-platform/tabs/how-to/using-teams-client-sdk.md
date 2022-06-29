@@ -1,18 +1,18 @@
 ---
-title: 使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验
+title: 团队 JavaScript 客户端 SDK
 author: heath-hamilton
 ms.author: surbhigupta
 description: 在本模块中，了解 Microsoft Teams JavaScript 客户端 SDK 概述，它可帮助你构建托管 <iframe> 在 Teams、Office 和 Outlook 中的应用体验。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189506"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503919"
 ---
-# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>使用 Microsoft Teams JavaScript 客户端 SDK 生成选项卡和其他托管体验
+# <a name="teams-javascript-client-sdk"></a>团队 JavaScript 客户端 SDK
 
 Microsoft Teams JavaScript 客户端 SDK 可帮助你在 Teams、Office 和 Outlook 中创建托管体验，其中应用内容托管在 [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) 中。 SDK 有助于开发具有以下 Teams 功能的应用：
 
@@ -42,7 +42,7 @@ TeamsJS v.2.0 为某些类型的 Teams 应用引入了在 Microsoft 365 生态�
 | appInitialization| | 已弃用。 替换为 `app` 命名空间。 |
 | appInstallDialog | Teams||
 | 身份验证 | Teams、Outlook、Office | |
-| 日历 | Teams、Outlook ||
+| 日历 | Outlook ||
 | 通话 | Teams||
 | 聊天 |Teams||
 | 对话框 | Teams、Outlook、Office | 表示对话的命名空间（以前称为“*任务模块*”。 请参阅有关[对话](#dialogs)的说明。 |

@@ -1,17 +1,17 @@
 ---
 title: CI/CD 模板
 author: MuyangAmigo
-description: 在本模块中，了解如何在 GitHub、Azure DevOps 和 Jenkins 中使用 CI/CD 管道模板来Teams应用程序开发人员CI/CD 模板
+description: 在本模块中，了解如何在 GitHub、Azure DevOps 和 Jenkins for Teams 应用程序开发人员CI/CD 模板中使用 CI/CD 管道模板
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: db263d3c8cf7eff085e237e884ef5baafc200230
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1b2f7258b661a2b194f2072c9ad8fd920d58983d
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142596"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485391"
 ---
 # <a name="set-up-cicd-pipelines"></a>设置 CI/CD 管道
 
@@ -19,7 +19,7 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 
 |工具和模板 | 说明 |
 |---|---|
-|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub与 TeamsFx CLI 集成的操作。|
+|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|与 TeamsFx CLI 集成的 GitHub 操作。|
 |[Visual Studio Code 中的 Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code扩展，可帮助你开发 Teams 应用以及 GitHub、Azure DevOps 和 Jenkins 的自动化工作流。 |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | 命令行工具，可帮助你开发 Teams 应用以及适用于 GitHub、Azure DevOps 和 Jenkins 的自动化工作流。|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) 和 [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| 用于 GitHub、Azure DevOps 或 Jenkins 外部自动化的脚本模板。 |
@@ -46,13 +46,22 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 
 ### <a name="create-workflow-templates"></a>创建工作流模板
 
-可以使用GitHub创建以下工作流模板：
+可以使用 GitHub 创建以下工作流模板：
 
 **Visual Studio Code 中的 Teams Toolkit**
 
 1. 使用 Teams 工具包创建新的 Teams 应用项目。
-1. 从左侧导航栏中选择 **Teams Toolkit** 图 :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="标 api 图标":::。
+
+1. 从左窗格中选择 **Teams 工具包** 图标 :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: 。
+
+1. 选择 **“添加功能”**
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-feature.png" alt-text="添加功能":::
+
 1. 选择“**添加 CI/CD 工作流**”。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/toolkit-ci-cd-workflow.png" alt-text="选择 CI/CD 工作流":::
+
 1. 从命令提示符中选择环境。
 1. 选择 **GitHub** 作为 CI/CD 提供程序。
 1. 从以下选项中至少选择一个模板：CI、CD、预配或发布到 Teams。
@@ -93,18 +102,18 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 
 ### <a name="create-workflow-templates"></a>创建工作流模板
 
-可以使用Azure DevOps创建以下工作流模板：
+可以使用 Azure DevOps 创建以下工作流模板：
 
 **Visual Studio Code 中的 Teams Toolkit**
 
 1. 使用 Teams 工具包创建新的 Teams 应用项目。
-2. 从左侧导航栏中选择 **Teams Toolkit** 图 :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="标 api 图标":::。
-3. 选择“**添加 CI/CD 工作流**”。
-4. 从命令提示符中选择环境。
-5. 选择 **Azure DevOps** 作为 CI/CD 提供程序。
-6. 从以下选项中选择至少一个模板：CI、CD、预配和发布到 Teams。
-7. 打开模板并自定义适合方案的工作流。
-8. 按照 `.azure/pipelines` 下的 README 文件在 Azure DevOps 中设置工作流。
+2. 从左窗格中选择 **Teams 工具包** 图标 :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: 。
+1. 选择“**添加 CI/CD 工作流**”。
+1. 从命令提示符中选择环境。
+1. 选择 **Azure DevOps** 作为 CI/CD 提供程序。
+1. 从以下选项中选择至少一个模板：CI、CD、预配和发布到 Teams。
+1. 打开模板并自定义适合方案的工作流。
+1. 按照 `.azure/pipelines` 下的 README 文件在 Azure DevOps 中设置工作流。
 
 **TeamsFx CLI**
 
@@ -151,7 +160,7 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 **Visual Studio Code 中的 Teams Toolkit**
 
 1. 使用 Teams 工具包创建新的 Teams 应用项目。
-2. 从左侧导航栏中选择 **Teams Toolkit** 图 :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="标 api 图标":::。
+2. 从左窗格中选择 **Teams 工具包** 图标 :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: 。
 3. 选择“**添加 CI/CD 工作流**”。
 4. 从命令提示符中选择环境。
 5. 选择 **Jenkins** 作为 CI/CD 提供程序。
@@ -229,7 +238,7 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 
 执行以下步骤发布应用：
 
-1. 使用相应的帐户登录到[开发人员门户以Teams](https://dev.teams.microsoft.com)。
+1. 使用相应的帐户登录到 [Teams 开发人员门户](https://dev.teams.microsoft.com) 。
 2. 以 zip 形式导入应用包，然后选择 `App -> Import app -> Replace`。
 3. 在应用列表中选择目标应用。
 4. 发布应用，选择 `Publish -> Publish to your org`。

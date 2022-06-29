@@ -5,16 +5,16 @@ description: 在本模块中，了解如何为选项卡和选项卡内容创建�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 646e7f1a1177330fdb4db64b7e6cd1bde0df5db5
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 21cc2559b7a6751981156deac1d2373f7ce0dfbe
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142204"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503352"
 ---
-# <a name="create-a-content-page-for-your-tab"></a>为选项卡创建内容页
+# <a name="create-a-content-page"></a>创建内容页
 
-内容页是在Teams客户端中呈现的网页，这是以下内容的一部分：
+内容页是在 Teams 客户端中呈现的网页，这是以下内容的一部分：
 
 * 个人范围的自定义选项卡：在这种情况下，内容页是用户遇到的第一页。
 * 频道或群组自定义选项卡：在用户固定并在适当的上下文中配置选项卡后，显示内容页。
@@ -28,7 +28,7 @@ ms.locfileid: "66142204"
 
 选项卡的总体目标是提供对具有实际价值和明显用途的有意义且引人入胜的内容的访问权限。 
 
-你需要专注于使选项卡设计干净、导航直观且内容沉浸式。有关详细信息，请参阅[选项卡设计指南](~/tabs/design/tabs.md)和[Microsoft Teams存储验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
+你需要专注于使选项卡设计干净、导航直观且内容沉浸式。有关详细信息，请参阅 [选项卡设计指南](~/tabs/design/tabs.md) 和 [Microsoft Teams 应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 
 ## <a name="integrate-your-code-with-teams"></a>将代码与 Teams 集成
 
@@ -88,7 +88,7 @@ ms.locfileid: "66142204"
 
 ### <a name="deep-links"></a>深度链接
 
-可以在 Teams 中创建实体的深层链接。 它们用于创建导航到选项卡中的内容和信息的链接。有关详细信息，请参阅[在Teams中创建指向内容和功能的深层链接](~/concepts/build-and-test/deep-links.md)。
+可以在 Teams 中创建实体的深层链接。 它们用于创建导航到选项卡中的内容和信息的链接。有关详细信息，请参阅 [在 Teams 中创建指向内容和功能的深度链接](~/concepts/build-and-test/deep-links.md)。
 
 ### <a name="task-modules"></a>任务模块
 
@@ -115,9 +115,9 @@ ms.locfileid: "66142204"
 
 1. 将 `"showLoadingIndicator": true` 添加到清单。
 1. 调用 `app.initialize();`。
-1. 作为 **必需** 步骤，调用 `app.notifySuccess()` 以通知 Teams 应用已成功加载。 然后，Teams隐藏加载指示器（如果适用）。 如果`notifySuccess`未在 30 秒内调用，Teams假定应用超时，并显示带有重试选项的错误屏幕。
+1. 作为 **必需** 步骤，调用 `app.notifySuccess()` 以通知 Teams 应用已成功加载。 然后，Teams 隐藏加载指示器（如果适用）。 如果 `notifySuccess`  未在 30 秒内调用，Teams 假定应用超时，并显示带有重试选项的错误屏幕。
 1. **（可选）** 如果已准备好打印到屏幕，并希望延迟加载应用程序的其余内容，则可以通过调用 `app.notifyAppLoaded();`手动隐藏加载指示器。
-1. 如果应用程序未加载，可以调用`app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});`让Teams了解故障，并（可选）提供故障消息。 将向用户显示错误屏幕。 以下代码显示枚举，该枚举定义了可以指示应用程序无法加载的可能原因：
+1. 如果应用程序未加载，可以调用 `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` 让 Teams 了解故障，并（可选）提供故障消息。 将向用户显示错误屏幕。 以下代码显示枚举，该枚举定义了可以指示应用程序无法加载的可能原因：
 
     ```typescript
     /* List of failure reasons */

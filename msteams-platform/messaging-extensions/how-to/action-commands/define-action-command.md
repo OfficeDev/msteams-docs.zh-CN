@@ -1,16 +1,16 @@
 ---
 title: 定义消息扩展操作命令
 author: surbhigupta
-description: 在本模块中，了解如何在Microsoft Teams中使用应用清单示例定义消息传递扩展操作命令。
+description: 在本模块中，了解如何在 Microsoft Teams 中使用应用清单示例定义消息传递扩展操作命令。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189619"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503933"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -27,7 +27,7 @@ ms.locfileid: "66189619"
 请参阅以下视频，了解如何定义消息扩展操作命令：
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>选择操作命令调用位置
@@ -60,7 +60,7 @@ ms.locfileid: "66189619"
 
 除了选择命令调用位置外，还必须选择如何在任务模块中为用户填充表单。 可以使用以下三个选项来创建在任务模块内呈现的表单：
 
-* **参数的静态列表**：这是最简单的方法。 可以在应用清单中定义Teams客户端呈现的参数列表，但在这种情况下无法控制格式设置。
+* **参数的静态列表**：这是最简单的方法。 你可以在 Teams 客户端呈现的应用清单中定义参数列表，但在这种情况下无法控制格式设置。
 * **自适应卡片**：可以选择使用自适应卡片，它可以更好地控制 UI，但仍会限制可用控件和格式设置选项。
 * **嵌入式 Web 视图**：可以选择在任务模块中嵌入自定义 Web 视图，以完全控制 UI 和控件。
 

@@ -1,23 +1,23 @@
 ---
 title: 将测试数据添加到 Microsoft 365 测试租户
-description: 了解如何设置Office 365开发人员计划订阅，以便使用代码片段成功测试Microsoft Teams应用
+description: 了解如何设置Office 365开发人员计划订阅，以便使用代码片段成功测试 Microsoft Teams 应用
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/01/2019
-ms.openlocfilehash: 35a61413ab9e9a672971ba6ce45b49f6dc645ab3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: eea5c92f0f04cf09ba0dbcd92be638d3ae957901
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142351"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503457"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>将测试数据添加到 Microsoft 365 测试租户
+# <a name="add-test-data-to-your-environment"></a>向环境中添加测试数据
 
 可以使用 Microsoft 365 开发人员订阅的示例数据来测试 Microsoft Teams 应用。
 
 ## <a name="prerequisites"></a>先决条件
 
-1. 如果没有测试租户，请[加入Microsoft 365](/office/developer-program/office-365-developer-program)开发人员计划。
+1. 如果没有测试租户，请[加入 Microsoft 365 开发人员计划](/office/developer-program/office-365-developer-program)。
 2. [设置 Microsoft 365 开发人员订阅](/office/developer-program/office-365-developer-program-get-started)。
 3. [将示例数据包与 Microsoft 365 开发人员订阅结合使用，以安装用户内容包](/office/developer-program/install-sample-packs)。
 4. [安装 Teams PowerShell 模块](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。

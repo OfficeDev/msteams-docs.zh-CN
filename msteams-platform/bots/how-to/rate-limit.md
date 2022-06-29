@@ -1,14 +1,14 @@
 ---
-title: 通过团队中的速率限制来优化你的智能机器人
-description: 了解使用代码示例处理每个机器人的每个线程限制和所有机器人的每个限制的机器人的处理速率限制
+title: 机器人的速率限制
+description: 了解每个机器人的每个线程限制的机器人的处理速率限制，以及包含代码示例的所有机器人的处理速率限制
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f94ef6a047cf597421d788dfaca95656eac2318
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 38a8832c9a9a2c1368e36606b4b8c6af80341724
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190244"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503863"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 

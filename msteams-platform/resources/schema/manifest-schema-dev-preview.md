@@ -1,17 +1,17 @@
 ---
 title: 公共开发人员预览清单架构参考
-description: 了解Microsoft Teams支持的所有组件的示例清单文件和说明。
+description: 了解 Microsoft Teams 支持的所有组件的示例清单文件和说明。
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189870"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503471"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的公共开发人员预览清单架构
+# <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams 的公共开发人员预览清单架构
 
 有关如何启用开发人员预览的信息，请参阅 [Microsoft Teams 的公共开发人员预览](~/resources/dev-preview/developer-preview-intro.md)。
 
@@ -477,7 +477,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-消息扩展应声明一个或多个命令。 每个命令在Teams中显示为来自基于 UI 的入口点的潜在交互。 最多有 10 个命令。
+消息扩展应声明一个或多个命令。 每个命令在 Teams 中显示为来自基于 UI 的入口点的潜在交互。 最多有 10 个命令。
 
 每个命令项都是具有以下结构的对象：
 
@@ -547,7 +547,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 可选：
 
-指定Microsoft Azure Active Directory (Azure AD) 应用 ID 和Graph信息，以帮助用户无缝登录到 Azure AD 应用。
+指定Microsoft Azure Active Directory (Azure AD) 应用 ID 和 Graph 信息，以帮助用户无缝登录到 Azure AD 应用。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -779,7 +779,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
     |---|---|
     |`InAppPurchase.Allow.User`|允许应用代表已登录用户显示用户市场产品/服务并完成用户在应用内的购买。|
 
-* **Teams实时共享的资源特定权限**
+* **Teams 实时共享的特定于资源的权限**
 
    |名称| 说明 |
    | ----- | ----- |

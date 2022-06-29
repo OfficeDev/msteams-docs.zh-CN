@@ -1,29 +1,29 @@
 ---
 title: 使用 Teams 工具包预配云资源
 author: MuyangAmigo
-description: 在本模块中，了解如何使用Teams Toolkit、资源创建和自定义资源预配来预配云资源
+description: 在本模块中，了解如何使用 Teams 工具包、资源创建和自定义资源预配来预配云资源
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1c4232cfe51ae900414f474bcdd05c9a67d5c4c6
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7d95c5310147f9f974802d007a951d80a12acbe0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144115"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503366"
 ---
-# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>使用 Teams 工具包预配云资源
+# <a name="provision-cloud-resources-using-teams-toolkit"></a>使用 Teams 工具包预配云资源
 
-TeamsFx 与 Azure 和 Microsoft 365 云进行了集成，因此你可以使用单个命令将应用程序放置在 Azure 中。 TeamsFx 与 Azure 资源管理器进行了集成，因此你能够预配应用程序在使用代码方法时所需的 Azure 资源。  
+TeamsFx 与 Azure 和 Microsoft 365 云进行了集成，因此你可以使用单个命令将应用程序放置在 Azure 中。 TeamsFx 与 Azure 资源管理器进行了集成，因此你能够预配应用程序在使用代码方法时所需的 Azure 资源。
 
 ## <a name="prerequisites"></a>先决条件
 
 * 帐户先决条件     若要预配云资源，必须具有以下帐户：
 
-  * Microsoft 365具有有效订阅的帐户。
+  * 具有有效订阅的 Microsoft 365 帐户。
   * 具有有效订阅的 Azure。
-  有关详细信息，请参阅[如何准备用于生成Teams应用的帐户](accounts.md)。
+  有关详细信息，请参阅 [如何准备用于生成 Teams 应用的帐户](accounts.md)。
 
 * [安装 Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)（版本 v3.0.0+）。
 
@@ -40,8 +40,8 @@ TeamsFx 与 Azure 和 Microsoft 365 云进行了集成，因此你可以使用�
 
 在 Teams 工具包或 TeamsFx CLI 中触发预配命令时，可以获取以下资源：
 
-* Microsoft Azure Active Directory (Microsoft 365租户下的 Azure AD) 应用程序。
-* Teams Microsoft 365租户Teams平台下的应用注册。
+* Microsoft Azure Active Directory (Microsoft 365 租户下的 Azure AD) 应用程序。
+* Microsoft 365 租户的 Teams 平台下的 Teams 应用注册。
 * 所选 Azure 订阅下的 Azure 资源。
 
 创建新项目时，可以使用所有 Azure 资源。 ARM 模板可定义所有 Azure 资源，并有助于在预配期间创建所需的 Azure 资源。 向现有项目[添加新功能资源](./add-resource.md)时，更新的 ARM 模板将反映最新更改。

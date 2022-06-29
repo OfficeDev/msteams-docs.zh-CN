@@ -1,19 +1,19 @@
 ---
 title: 部署到云
 author: MuyangAmigo
-description: 在本模块中，了解如何使用Teams Toolkit将应用部署到云、Azure 或SharePoint并部署Teams应用
+description: 在本模块中，了解如何使用 Teams 工具包将应用部署到云、Azure 或 SharePoint 并部署 Teams 应用
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f7870a81c221182c98a0619d99c7cce255fcc170
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 607214b329734f143d3bbcd9ede87ca85c9c97bb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142050"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503331"
 ---
-# <a name="deploy-to-the-cloud"></a>部署到云
+# <a name="deploy-teams-app-to-the-cloud"></a>将 Teams 应用部署到云
 
 Teams 工具包可帮助你将应用程序中的前端和后端代码部署或上传到 Azure 中预配的云资源。
 

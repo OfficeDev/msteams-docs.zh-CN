@@ -1,16 +1,16 @@
 ---
 title: 规划 Teams 移动版
 author: surbhigupta
-description: 通过此学习模块，你将了解如何在Teams移动设备上规划创建应用，并了解生成应用的不同阶段。
+description: 通过此学习模块，你将了解如何在 Teams 移动版上规划创建应用，并了解生成应用的不同阶段。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 22b3abc44b2996547bc05e8cd11458b00eed1436
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143184"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66483998"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>规划 Teams 移动版的响应式选项卡
 
@@ -65,7 +65,7 @@ ms.locfileid: "66143184"
 * 数据视觉对象、地图和信息图。
 * 图表、图形和表。
 
-![仪表板和数据可视化应用使用情况](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="以可视化形式显示数据。":::
 
 快速操作：
 
@@ -75,7 +75,7 @@ ms.locfileid: "66143184"
 * 筛选数据。
 * 创建书签。
 
-![仪表板和数据可视化应用快速操作](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="对现有图表和视觉对象执行快速操作。":::
 
 启用：
 
@@ -87,7 +87,7 @@ ms.locfileid: "66143184"
 * 插入数据项以创建可视化效果。
 * 在频道或群聊中共享可视化效果。
 
-![仪表板和数据可视化应用启用](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="使用户能够创建图表图形等内容。":::
 
 <br>
 
@@ -105,7 +105,7 @@ ms.locfileid: "66143184"
 
 在第一阶段中，应用可以在垂直堆栈中向用户显示任务列表。 如果有多个类别的任务，例如“**建议**”、“**活动**”和“**已关闭**”，则提供筛选器安来显示分组任务或作为标头来查看分组任务。
 
-![任务版块应用使用](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="显示垂直堆栈中的任务列表。":::
 
 快速操作：
 
@@ -118,7 +118,7 @@ ms.locfileid: "66143184"
 * 将任务移到不同的类别中。
 * 通过电子邮件和活动源在聊天和频道中共享相关任务。
 
-![任务版块应用快速操作](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="创建任务以减少用户的认知负载。":::
 
 启用：
 
@@ -128,7 +128,8 @@ ms.locfileid: "66143184"
 * 添加和修改不同的类别，例如 **“建议**”、“ **活动”** 和“ **已关闭**”。
 * 为注释、附件和其他复杂功能配置任务。
 
-![任务板块应用启用](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="通过添加项目和板来启用用户体验。":::
+
 <br>
 
 </details>
@@ -149,7 +150,7 @@ ms.locfileid: "66143184"
 * 放大或缩小。
 * 挂起文档的当前阶段或进度。
 
-![合著和白板应用使用](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="在桌面体验中显示内容和资产。":::
 
 快速操作:
 
@@ -162,7 +163,7 @@ ms.locfileid: "66143184"
 > [!TIP]
 > 可以公开操作，这些操作可以在小屏幕上轻松显示。
 
-![合著和白板应用快速操作](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="介绍如何创建新的协作板。":::
 
 启用：
 
@@ -174,7 +175,7 @@ ms.locfileid: "66143184"
 * 删除、撤消和重做操作。
 * 使用 JS SDK API 访问相机和麦克风。 有关设备功能的详细信息，请参阅[设备功能概述](../device-capabilities/device-capabilities-overview.md)。
 
-![合著和白板应用启用](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="通过添加文本形状、快速笔记和其他功能来启用用户体验。":::
 
 <br>
 

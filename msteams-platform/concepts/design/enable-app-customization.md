@@ -1,16 +1,16 @@
 ---
 title: 自定义 Teams 应用
 author: heath-hamilton
-description: 在本模块中，了解Teams管理员如何为其组织自定义Teams应用，并在管理员批准之前隐藏Teams应用。
+description: 在本模块中，了解 Teams 管理员如何为其组织自定义 Teams 应用，并在管理员批准之前隐藏 Teams 应用。
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143198"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503443"
 ---
 # <a name="customize-your-teams-app"></a>自定义 Teams 应用
 
@@ -44,7 +44,7 @@ ms.locfileid: "66143198"
 
 若要隐藏应用，请在应用清单文件中将 `defaultBlockUntilAdminAction` 属性设置为 `true`。 当属性设置为 `true` 时，在 Teams 管理中心>“**管理应用**”中，“**已被发布者阻止**”会显示在应用的“**状态**”中：
 
-![管理已被发布者阻止的应用](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="管理被发布者阻止的应用。":::
 
 在用户能够访问应用之前，管理员会收到采取操作的请求。 在“**管理应用**”下，管理员可以选择“**允许**”以允许具有“**已被发布者阻止**”状态的应用：
 

@@ -4,14 +4,14 @@ author: surbhigupta
 description: 了解如何为 Teams 会议和不同的会议应用场景启用和配置应用、更新应用清单、配置功能等。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142589"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503359"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>启用和配置 Teams 会议应用
+# <a name="enable-and-configure-apps-for-meetings"></a>为会议启用和配置应用
 
 每个团队都有不同的方式来传达和协作任务。 若要完成这些不同的任务，请使用会议应用自定义 Teams。 启用 Teams 会议应用，并将应用配置为在其应用清单的会议范围内可用。
 

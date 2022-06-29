@@ -1,20 +1,20 @@
 ---
 title: 在本地测试和调试机器人
 author: surbhigupta
-description: 了解如何通过旁加载等在Teams环境中使用 IDE 在本地测试和调试机器人
+description: 了解如何通过旁加载等在 Teams 环境中使用 IDE 在本地测试和调试机器人
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c0fae3ccaf82eaf9e626a948959520d20dca3c01
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 3e1225991ad240f74e045a6941002b9eb7b5e81d
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150804"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503716"
 ---
-# <a name="test-and-debug-your-bot-locally"></a>在本地测试和调试机器人
+# <a name="test-and-debug-your-bot-locally-with-ide"></a>使用 IDE 在本地测试和调试机器人
 
-测试机器人时，需要考虑希望机器人运行的上下文，以及可能已添加到机器人的任何功能，这些功能需要特定于Microsoft Teams的数据。 确保选择测试机器人的方法与其功能一致。
+测试机器人时，需要考虑希望机器人运行的上下文，以及可能已添加到机器人（需要特定于 Microsoft Teams 的数据）的任何功能。 确保选择测试机器人的方法与其功能一致。
 
 ## <a name="test-by-uploading-to-teams"></a>通过上传到 Teams 进行测试
 
@@ -44,7 +44,7 @@ ngrok http <port> --host-header=localhost:<port>
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>在不上传到 Teams 的情况下测试机器人
 
-有时需要测试机器人，而无需将其作为应用安装到 Teams 中。 我们提供了两种测试机器人的方法。 测试机器人而不将其安装为应用可能非常有用，可确保机器人可用并响应。 但是，它不允许你测试已添加到机器人的Microsoft Teams功能的完整广度。 若要全面测试机器人，请参阅[通过上传进行测试](#test-by-uploading-to-teams)。
+有时需要测试机器人，而无需将其作为应用安装到 Teams 中。 我们提供了两种测试机器人的方法。 测试机器人而不将其安装为应用可能非常有用，可确保机器人可用并响应。 但是，它不允许你测试已添加到机器人的 Microsoft Teams 功能的完整广度。 若要全面测试机器人，请参阅[通过上传进行测试](#test-by-uploading-to-teams)。
 
 ### <a name="use-the-bot-emulator"></a>使用机器人仿真器
 
@@ -57,11 +57,11 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 > [!Important]
 > 通过 ID 与机器人交谈仅用于基本测试目的。 添加到机器人的任何特定于 Teams 的功能都无法正常工作。
 
-使用机器人的 ID 启动与机器人的对话。 通过这些方法之一添加机器人时，它在频道对话中无法寻址，也无法利用其他Teams应用功能（如选项卡或消息扩展）。 通过以下方式之一启动对话：
+使用机器人的 ID 启动与机器人的对话。 通过其中一种方法添加机器人时，它无法在频道对话中寻址，也无法利用其他 Teams 应用功能（如选项卡或消息扩展）。 通过以下方式之一启动对话：
 
-* 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**频道**”下，选择“**添加到 Microsoft Teams**”。 Teams启动与机器人的个人聊天。
+* 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**频道**”下，选择“**添加到 Microsoft Teams**”。 Teams 将启动与机器人的个人聊天。
 
-* 直接从Teams中引用机器人的应用 ID：
+* 直接从 Teams 中引用机器人的应用 ID：
    1. 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**详细信息**”下，复制机器人的“**Microsoft 应用 ID**”。
   
       ![获取机器人的应用 ID](~/assets/images/bots_appid_botframework.png)
@@ -73,10 +73,10 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
       应用 ID 必须解析为机器人名称。
 
    3. 选择机器人并发送消息以发起对话。
-      或者，可以将机器人的应用 ID 粘贴到Teams左上角的搜索框中。 在搜索结果页中，转到“**人员**”选项卡以查看机器人并开始与机器人聊天。
+      或者，可以将机器人的应用 ID 粘贴到 Teams 左上角的搜索框中。 在搜索结果页中，转到“**人员**”选项卡以查看机器人并开始与机器人聊天。
 
 > [!Note]
-> 若要Teams引用机器人的应用 ID，请启用[应用旁加载](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
+> Teams 若要引用机器人的应用 ID，请启用 [应用旁加载](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
 
 将机器人添加到团队时，机器人会收到 `conversationUpdate` 事件，而 `channelData` 对象中没有团队信息。
 

@@ -3,15 +3,15 @@ title: 在 Teams 和 Azure AD 中使用 SSO 的选项卡进行身份验证概述
 description: 概述 Teams 中的 SSO 身份验证以及如何在选项卡中使用它
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams 身份验证选项卡 Microsoft Azure Active Directory (Azure AD) SSO 访问令牌应用清单
-ms.openlocfilehash: 3214faec45001dd244115636e0964a56781837a8
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Microsoft Azure Active Directory (Azure AD) SSO 访问令牌应用清单的 teams 身份验证选项卡
+ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887940"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503765"
 ---
-# <a name="enable-single-sign-on-in-a-tab-app"></a>在选项卡应用中启用单一登录
+# <a name="enable-sso-for-tab-app"></a>为选项卡应用启用 SSO
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 

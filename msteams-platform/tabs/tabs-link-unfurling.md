@@ -1,20 +1,20 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 了解如何展开链接、打开“阶段视图”并使用Teams应用固定选项卡。 了解如何使用使用代码示例和示例的自适应卡调用它。
+description: 了解如何展开链接、打开阶段视图并使用 Microsoft Teams 应用固定选项卡。 了解阶段视图以及如何使用代码示例和样本通过自适应卡片调用它。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 07854a38fff8ded02fabba98926511e964f5baf0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122906"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484924"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
-阶段视图是 UI) 组件 (新的用户界面。 它允许呈现在Teams中全屏打开并固定为选项卡的内容。
+阶段视图是 UI) 组件 (新的用户界面。 它允许呈现在 Teams 中全屏打开并固定为选项卡的内容。
 
 ## <a name="stage-view"></a>阶段视图
 
@@ -87,7 +87,7 @@ ms.locfileid: "66122906"
 * 机器人使用 `200` 代码进行响应。
 
 > [!NOTE]
-> 在Teams移动客户端上，调用通过[Microsoft Teams应用分发的应用的](../concepts/deploy-and-publish/apps-publish-overview.md)阶段视图，而没有经过暴民优化的体验，则会打开设备的默认 Web 浏览器。 浏览器将打开 `TabInfo` 对象的 `websiteUrl` 参数中指定的 URL。
+> 在 Teams 移动客户端上，如果为通过 [Teams 应用商店](/platform/concepts/deploy-and-publish/apps-publish-overview.md) 分发的应用调用阶段视图并且没有针对移动设备优化的体验，则会打开设备的默认 Web 浏览器。浏览器打开 `TabInfo` 对象 `websiteUrl` 参数中指定的 URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 

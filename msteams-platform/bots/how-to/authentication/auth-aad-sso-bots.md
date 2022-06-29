@@ -3,14 +3,14 @@ title: 为机器人提供单一登录支持
 description: 了解如何获取用户令牌，机器人开发人员可以使用具有 OAuth 卡支持的登录卡或 Azure 机器人服务。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 924262b492c85205a8f1ba4fd034e86ecdf82d53
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189725"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503653"
 ---
-# <a name="single-sign-on-sso-support-for-bots"></a>机器人的单一登录 (SSO) 支持
+# <a name="use-sso-authentication-for-bots"></a>对机器人使用 SSO 身份验证
 
 Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无提示方式刷新身份验证令牌，最大限度地减少了用户需要输入其登录凭据的次数。 如果用户同意使用应用，则他们不必在另一台设备上再次同意，因为他们会自动登录。 选项卡和机器人具有类似的 SSO 支持流程。 但是，机器人会使用不同的协议[请求令牌](#request-a-bot-token)和[接收响应](#receive-the-bot-token)。
 
@@ -19,7 +19,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
 
 请参阅以下视频，了解对机器人的单一登录 (SSO) 支持：
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>运行时机器人 SSO
@@ -100,7 +100,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
    >
    > 必须注意以下重要限制：
    >
-   > * 仅支持用户级 Microsoft Graph API 权限，例如电子邮件、配置文件、offline_access 和 OpenId。 如果需要访问其他 Microsoft Graph范围，例如`User.Read``Mail.Read`，请参阅[具有 Microsoft Graph 权限和范围的扩展选项卡应用](../../../tabs/how-to/authentication/tab-sso-graph-api.md)。
+   > * 仅支持用户级 Microsoft Graph API 权限，例如电子邮件、配置文件、offline_access 和 OpenId。 如果需要访问其他 Microsoft Graph 范围，例如`User.Read``Mail.Read`，请参阅[具有 Microsoft Graph 权限和范围的“扩展”选项卡应用](../../../tabs/how-to/authentication/tab-sso-graph-api.md)。
    > * 应用程序的域名必须与为 Azure AD 应用程序注册的域名相同。
    > * 当前不支持每个应用多个域。
    > * 不支持使用 `azurewebsites.net` 域的应用程序，因为它很常见，可能存在安全风险。
@@ -385,7 +385,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
 
 |**示例名称** | **说明** |**.NET** |**C#** |**Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
-|Bot Framework SDK | 此示例代码演示如何开始在机器人中进行身份验证以进行Microsoft Teams。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
+|Bot Framework SDK | 此示例代码演示如何开始在 Microsoft Teams 机器人中进行身份验证。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>分步指南
 

@@ -1,16 +1,16 @@
 ---
-title: 使用机器人进行频道和群组对话
+title: 为频道或群集聊天创建聊天机器人
 author: surbhigupta
 description: 了解如何在频道或群聊中发送、接收和处理机器人的消息。 了解设计指南等。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190266"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503604"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 
@@ -289,4 +289,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="see-also"></a>另请参阅
 
-[获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
+* [获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
+* [代表用户创建专用频道](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
+* [将机器人连接到Web 聊天通道](/azure/bot-service/bot-service-channel-connect-webchat)
+

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7e17d4b07454013479936dc6e721cd1e2354b3ba
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cd28dc6be82b37223268d526c9673c0545f0bca9
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143590"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485620"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
@@ -190,7 +190,7 @@ ms.locfileid: "66143590"
 
 ### <a name="extract-intent-and-data-from-messages"></a>从邮件中提取意图和数据
 
-设计智能机器人以识别意图，该意图可捕获智能机器人在响应邮件或查询时所捕获的信息。 意图将邮件或查询分为单个操作，包括受该操作影响的一个或多个数据对象。 
+设计智能机器人以识别意图，该意图可捕获智能机器人在响应邮件或查询时所捕获的信息。 意图将邮件或查询分为单个操作，包括受该操作影响的一个或多个数据对象。
 
 以下示例概述了发送到自动程序的邮件中的用户意图和数据。
 

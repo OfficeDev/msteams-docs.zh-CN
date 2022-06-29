@@ -5,14 +5,14 @@ description: 本文介绍如何使用代码示例启用单一登录 (SSO) 对消
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: e891e147d4cc3216b6c2acb686505dd03353b385
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 674d8870989c42c25a121dc1f3a67616da5f57c1
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189861"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503947"
 ---
-# <a name="single-sign-on-support-for-message-extensions"></a>对消息扩展的单一登录支持
+# <a name="enable-sso-for-message-extensions"></a>为消息扩展启用 SSO
 
 单一登录 (SSO) 支持现在可用于消息扩展和链接展开。默认情况下，为消息扩展启用单一登录会刷新身份验证令牌，从而最大程度地减少输入 Microsoft Teams 登录凭据所需的次数。
 
@@ -123,8 +123,9 @@ ms.locfileid: "66189861"
 
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| 机器人身份验证 | 此示例演示如何开始在机器人中进行身份验证以进行Teams。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| 选项卡、机器人和消息扩展 (ME) SSO | 此示例显示用于 Tab、Bot 和 ME 的 SSO - 搜索、操作、链接展开。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
+| 机器人身份验证 | 此示例演示如何开始在适用于 Teams 的机器人中进行身份验证。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| 选项卡、机器人和消息扩展 (ME) SSO | 此示例显示用于 Tab、Bot 和 ME 的 SSO - 搜索、操作、链接展开。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不适用 |
+|Tab、Bot 和 Message 扩展| 此示例演示如何使用 SSO 检查 Bot、Tab 和消息传递区中的身份验证 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |
 
 ## <a name="see-also"></a>另请参阅
 

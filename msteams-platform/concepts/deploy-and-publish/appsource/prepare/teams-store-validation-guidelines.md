@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 316105d9ea6010094328ad7d204cfb765aecc022
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 45c19a5d7089fae85326e303641a8c9a281c7eb0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123841"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503737"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -317,7 +317,7 @@ Teams 应用清单定义应用的配置。
 
 [*强制修复*]
 
-图标是用户在浏览 Teams 应用商店时看到的主要元素之一。 
+图标是用户在浏览 Teams 应用商店时看到的主要元素之一。
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 

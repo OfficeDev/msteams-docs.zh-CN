@@ -1,16 +1,16 @@
 ---
 title: 向 Teams 机器人添加身份验证
 author: surbhigupta
-description: 了解如何使用Azure Active Directory在Teams中向机器人添加 OAuth 身份验证。 了解如何创建、部署和集成已启用身份验证的机器人。
+description: 了解如何使用 Azure Active Directory 将 OAuth 身份验证添加到 Teams 中的机器人。 了解如何创建、部署和集成已启用身份验证的机器人。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c66425550bdb989d8e0cb55d806a5e6b8fc92d6a
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 297307657905a1492abc68fde7d69cfbc0702497
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150762"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484969"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -27,7 +27,7 @@ OAuth 2.0 是 Microsoft Azure Active Directory (Azure AD) 和许多其他身份�
 在本文中，您将了解：
 
 - **如何创建已启用身份验证的机器人**。 你将使用 [cs-auth-sample][teams-auth-bot-cs] 来处理用户登录凭据和生成身份验证令牌。
-- **如何将机器人部署到 Azure 并将其与标识提供程序关联**。 提供程序根据用户登录凭据颁发令牌。 机器人可以使用令牌访问需要身份验证的资源，例如邮件服务。 有关详细信息，请参阅[机器人Microsoft Teams身份验证流](auth-flow-bot.md)。
+- **如何将机器人部署到 Azure 并将其与标识提供程序关联**。 提供程序根据用户登录凭据颁发令牌。 机器人可以使用令牌访问需要身份验证的资源，例如邮件服务。 有关详细信息，请参阅  [适用于机器人的 Microsoft Teams 身份验证流](auth-flow-bot.md)。
 - **如何在 Microsoft Teams 中集成机器人**。 集成机器人后，可以在聊天中登录并与其交换消息。
 
 ## <a name="prerequisites"></a>先决条件
@@ -119,7 +119,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
 1. 在 **Microsoft 应用 ID** 旁边，选择 **“管理**”。
 
-    ![管理机器人](~/assets/images/adaptive-cards/manage-bot-label.png)
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="管理机器人":::
 
 1. 在“**客户端机密**”部分中，选择“**新建客户端机密**”。将显示“**添加客户端机密**”窗口。
 
@@ -168,7 +168,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 1. 在右侧面板中，选择左上角的“**新建注册**”选项卡。
 1. 你将能够查看以下信息：
    1. **名称**。 为新的服务应用程序输入一个名称。 例如 *BotTeamsIdentity*。 请记住，该名称必须是唯一的。
-   1. 选择应用程序“**支持的帐户类型**”。 *选择任何组织目录中的帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户) 和个人 Microsoft 帐户 (例如，Skype、Xbox)*。
+   1. 选择应用程序“**支持的帐户类型**”。 *选择任何组织目录中的帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户) 和个人 Microsoft 帐户 (，例如 Skype、Xbox)*。
    1. 对于 **重定向 URI**：<br/>
        &#x2713;选择 **Web**。<br/>
        &#x2713;将 URL 设置为 `https://token.botframework.com/.auth/web/redirect`.
@@ -211,7 +211,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
         - 如果 *选择此组织目录中的帐户仅 (仅 Microsoft -* *Azure AD) - 多租户 (Microsoft Azure Active Directory (任何组织目录中的单租户) ) 或帐户，请* 输入前面记录的 **租户 ID** Microsoft Azure Active Directory (Azure AD) 应用。 这将是与可进行身份验证用户关联的租户。
 
-        - 如果 *在任何组织目录中选择了帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户和个人 Microsoft 帐户（例如，Skype、Xbox）Outlook)* 输入 **通用** 字词，而不是租户 ID。 否则，Azure AD (Azure AD) 应用将通过选中其 ID 的租户进行验证，并排除个人 Microsoft 帐户。
+        - 如果 *在任何组织目录中选择了帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户和个人 Microsoft 帐户，例如 Skype、Xbox、Outlook)* 输入 **通用** 字词，而不是租户 ID。 否则，Azure AD (Azure AD) 应用将通过选中其 ID 的租户进行验证，并排除个人 Microsoft 帐户。
 
     h. 对于 **资源 URL**，请输入 `https://graph.microsoft.com/`。 当前代码示例中未使用此功能。  
     i. 将 **范围** 留空。 下图是一个示例：
@@ -236,9 +236,9 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
     1. **令牌 Exchange URL**。 将其留空。
     1. **租户 ID**，输入之前为 Azure 标识应用记录 **的目录（租户）ID** ，或创建标识提供程序应用时选择的受支持帐户类型的 **常见 ID** 。 若要确定要分配的值，请遵循以下条件：
 
-        - 如果 *仅在此组织目录中选择了“仅 (Microsoft 的帐户-单租户)* 或 *任何组织目录中的帐户 (Microsoft Azure Active Directory - 多租户)*，请输入之前为 Azure AD 应用记录的 **租户 ID**。 这将是与可进行身份验证用户关联的租户。
+        - 如果 *选择此组织目录中的帐户仅 (仅限 Microsoft - 单租户)* 或 *Microsoft Azure Active directory - 多租户)  (的任何组织目录中的帐户*，请输入之前为 Azure AD 应用记录的 **租户 ID** 。 这将是与可进行身份验证用户关联的租户。
 
-        - 如果 *在任何组织目录中选择了帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户和个人 Microsoft 帐户（例如，Skype、Xbox）Outlook)* 输入 **通用** 字词，而不是租户 ID。 否则，Azure AD 应用将通过选中其 ID 的租户进行验证，并排除个人 Microsoft 帐户。
+        - 如果 *在任何组织目录中选择了帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户和个人 Microsoft 帐户，例如 Skype、Xbox、Outlook)* 输入 **通用** 字词，而不是租户 ID。 否则，Azure AD 应用将通过选中其 ID 的租户进行验证，并排除个人 Microsoft 帐户。
 
     1. 对于 **作用域**，请输入此应用程序所需的图形权限的空间分隔列表，例如：User.Read User.ReadBasic.All Mail.Read
 
@@ -268,7 +268,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
 1. 克隆 [cs-auth-sample][teams-auth-bot-cs]。
 1. 启动 Visual Studio。
-1. 在工具栏中，选择 **“文件->打开-> Project/解决方案**”，然后打开机器人项目。
+1. 在工具栏中，选择 **“文件->打开->项目/解决方案** ”并打开机器人项目。
 1. 在 C# 中，更新 **appsettings.json** ，如下所示：
 
     - 设置 `ConnectionName` 为添加到机器人注册的标识提供程序连接的名称。 本示例中使用的名称是 *BotTeamsAuthADv1*。
@@ -319,7 +319,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
 或者，在 Visual Studio 中，可以执行以下步骤：
 
-1. 在Visual Studio *解决方案资源管理器* 中，选择并按住 (或右键单击项目名称) 。
+1. 在 Visual Studio *解决方案资源管理器* 中，选择并按住 (或右键单击) 项目名称。
 1. 在显示的下拉菜单中，选择“**发布**”。
 1. 在显示的窗口中，选择“**新建**”链接。
 1. 在对话框窗口中，选择左侧的“**App 服务**”，并在右侧“**创建新建**”。
@@ -452,8 +452,8 @@ and when for these, and just reference that from here, along with the set of ste
 
 ### <a name="testing-the-bot-locally-in-teams"></a>在 Teams 中本地测试机器人
 
-Teams完全基于云的产品，它要求它访问的所有服务都可使用 HTTPS 终结点从云中获取。 因此，若要使机器人（示例）在 Teams 中工作，需要将代码发布到所选云中，或者使本地运行的实例可通过 **隧道** 工具在外部访问。 我们建议使用 [ngrok](https://ngrok.com/download)，它为在计算机上本地打开的端口创建外部可寻址 URL。
-若要设置 ngrok 以准备在本地运行Teams应用，请执行以下步骤：
+Teams 是一种完全基于云的产品，它要求其访问的所有服务都可使用 HTTPS 终结点从云中获取。 因此，若要使机器人（示例）在 Teams 中工作，需要将代码发布到所选云中，或者使本地运行的实例可通过 **隧道** 工具在外部访问。 我们建议使用 [ngrok](https://ngrok.com/download)，它为在计算机上本地打开的端口创建外部可寻址 URL。
+若要设置 ngrok 以准备在本地运行 Teams 应用，请执行以下步骤：
 
 1. 在终端窗口中，转到已安装 `ngrok.exe` 目录。 建议将 *环境变量* 路径设置为指向该变量。
 1. 例如，运行 `ngrok http 3978 --host-header=localhost:3978`。 根据需要替换端口号。
@@ -462,7 +462,7 @@ Teams完全基于云的产品，它要求它访问的所有服务都可使用 HT
     ![teams 机器人应用身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. 复制转发 HTTPS 地址。 具体应如下所示：`https://dea822bf.ngrok.io/`。
-1. 追加 `/api/messages` 以获取 `https://dea822bf.ngrok.io/api/messages`。 这是在计算机上本地运行的机器人 **的消息终结点**，可在Teams聊天中通过 Web 访问。
+1. 追加 `/api/messages` 以获取 `https://dea822bf.ngrok.io/api/messages`。 这是在计算机上本地运行的机器人 **的消息终结点** ，可在 Teams 的聊天中通过 Web 访问。
 1. 要执行的最后一步是更新已部署机器人的消息终结点。 在该示例中，我们在 Azure 中部署了机器人。 因此，让我们执行以下步骤：
     1. 在浏览器中，导航到 [**Azure 门户**][azure-portal]。
     1. 选择 **机器人注册**。
@@ -481,7 +481,7 @@ Teams完全基于云的产品，它要求它访问的所有服务都可使用 HT
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 
-此清单包含Teams与机器人连接所需的信息：  
+此清单包含 Teams 与机器人连接所需的信息：  
 
 ```json
 {
@@ -635,7 +635,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 | **示例名称** | **说明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| 机器人身份验证 | 此示例演示如何开始在机器人中进行身份验证以进行Teams。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| 机器人身份验证 | 此示例演示如何开始在适用于 Teams 的机器人中进行身份验证。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | 选项卡、机器人和消息扩展 (ME) SSO | 此示例演示用于选项卡、机器人和 ME 的 SSO - 搜索、操作、linkunfurl。 |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 不可用 |
 
 ## <a name="see-also"></a>另请参阅

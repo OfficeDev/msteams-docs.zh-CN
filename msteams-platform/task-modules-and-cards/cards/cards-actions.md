@@ -1,14 +1,14 @@
 ---
 title: 在机器人中添加卡片操作
-description: 在本模块中，了解Microsoft Teams中的卡片操作、操作类型以及如何在机器人中使用它们
+description: 在本模块中，了解什么是 Microsoft Teams 中的卡片操作、操作类型以及如何在机器人中使用它们
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9d73c09b9605ed9babbb2990c261dd920c3703b
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189761"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66483968"
 ---
 # <a name="card-actions"></a>卡片操作
 
@@ -429,7 +429,9 @@ CardFactory.actions([
 你还可以修改自适应卡片 `Action.Submit` 有效负载，以支持在 `Action.Submit` 的 `data` 对象中使用 `msteams` 属性的现有 Bot Framework 操作。 下一部分提供有关如何将现有 Bot Framework 操作与自适应卡片配合使用的详细信息。
 
 > [!NOTE]
-> 使用 Bot Framework 操作将 `msteams` 添加到数据不适用于自适应卡片任务模块。
+>* 使用 Bot Framework 操作将 `msteams` 添加到数据不适用于自适应卡片任务模块。
+> 
+>* Microsoft Teams 不支持主要或反执行 `ActionStyle` 。 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>包含 messageBack 操作的自适应卡片
 
@@ -559,13 +561,13 @@ CardFactory.actions([
 
 ## <a name="code-samples"></a>代码示例
 
-|S.no|卡| description|.NET|Javascript|Python|Java|
+|S.no|卡| 说明|.NET|Javascript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
 |1|使用卡片|介绍所有卡片类型，包括缩略图、音频、媒体等。通过在欢迎用户 + 多提示机器人的基础上构建，方法是显示一张卡片，其中包含可路由到相应对话框的欢迎消息中的按钮。|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
 |2|自适应卡片|演示多轮次对话如何使用卡片获取用户输入名称和年龄。|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
-> 自适应卡片不支持媒体元素Teams
+> Teams 中的自适应卡不支持媒体元素
 
 ## <a name="next-step"></a>后续步骤
 

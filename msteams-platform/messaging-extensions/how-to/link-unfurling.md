@@ -1,18 +1,18 @@
 ---
 title: 链接展开
 author: surbhigupta
-description: 在本模块中，了解如何使用应用清单或使用代码示例和示例在Teams应用中添加与消息传递扩展展开的链接。
+description: 在本模块中，了解如何使用应用清单或使用代码示例和示例在 Teams 应用中添加与消息传递扩展展开的链接。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190000"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503611"
 ---
-# <a name="link-unfurling"></a>链接展开
+# <a name="add-link-unfurling"></a>添加链接展开
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -23,7 +23,7 @@ ms.locfileid: "66190000"
 > * 目前，移动客户端不支持链接展开。
 > * 链接展开结果缓存 30 分钟。
 
-Azure DevOps 消息扩展使用链接展开查找粘贴到撰写消息区域(指向工作项)的 URL。 在下图中，用户粘贴了消息扩展已解析为卡片的Azure DevOps项的 URL：
+Azure DevOps 消息扩展使用链接展开查找粘贴到撰写消息区域(指向工作项)的 URL。 在下图中，用户粘贴了 Azure DevOps 中邮件扩展已解析为卡片中的项的 URL：
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="链接展开示例":::
 
@@ -50,7 +50,7 @@ Azure DevOps 消息扩展使用链接展开查找粘贴到撰写消息区域(指
 ### <a name="add-link-unfurling-manually"></a>手动添加链接展开
 
 > [!NOTE]
-> 如果通过 Azure AD 添加身份验证，请[使用机器人在Teams中展开链接](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4)。
+> 如果通过 Azure AD 添加身份验证，请 [使用机器人在 Teams 中展开链接](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4)。
 
 要使消息扩展能够与链接交互，首先必须将 `messageHandlers` 数组添加到应用清单。 以下示例说明了如何手动添加链接展开:
 

@@ -1,27 +1,27 @@
 ---
 title: 使用高级 UI 组件设计应用
 author: heath-hamilton
-description: 了解Teams UI 组件，如痕迹、通知栏、阶段视图以及相关用例。
+description: 了解 Teams UI 组件，如痕迹、通知栏、阶段视图以及相关用例。
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143422"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485719"
 ---
-# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI 组件设计Microsoft Teams应用
+# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI 组件设计 Microsoft Teams 应用
 
-以下组件是可用于常见Teams设计情况（如导航）[的基本 UI 组件](~/concepts/design/design-teams-app-basic-ui-components.md)的组合。
+以下组件是可用于常见 Teams 设计情况（如导航） [的基本 UI 组件](~/concepts/design/design-teams-app-basic-ui-components.md) 的组合。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-基于<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>，Microsoft Teams UI 工具包包含专门用于构建Teams应用的组件和模式。 在 UI 工具包中，可以直接将此处列出的组件抓取并插入到设计中，并查看有关如何使用每个组件的更多示例。
+Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>，包括专为构建 Teams 应用而设计的组件和模式。 在 UI 工具包中，可以直接将此处列出的组件抓取并插入到设计中，并查看有关如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit (用户)](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>痕迹导航栏
 
@@ -42,11 +42,11 @@ ms.locfileid: "66143422"
 
 ## <a name="left-nav"></a>左导航
 
-使用左侧导航在Teams选项卡中浏览多个页面。在以下示例中，左侧导航位于通道列表和选项卡内容之间。
+使用左侧导航在 Teams 选项卡中浏览多个页面。在以下示例中，左侧导航位于通道列表和选项卡内容之间。
 
 ### <a name="top-use-cases"></a>最主要用例
 
-* 在Teams选项卡中浏览多个页面。
+* 在 Teams 选项卡中浏览多个页面。
 * 将复杂应用分解为多个页面。
 
 ### <a name="mobile"></a>移动设备
@@ -61,11 +61,11 @@ ms.locfileid: "66143422"
 
 通知栏是用于显示简短的重要消息的专用区域，不需要用户立即执行操作。 特定背景颜色和图标与特定类型的消息相关联， (请参阅下) 。
 
-可以使用 Fluent UI [警报](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition)组件实现通知栏。
+可以使用 Fluent UI [警报](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) 组件实现通知栏。
 
 ### <a name="top-use-cases"></a>最主要用例
 
-* 关键消息、错误和警告
+* 关键消息、错误和警告。
 * 成功消息
 * 信息性或促销性消息
 
@@ -79,13 +79,13 @@ ms.locfileid: "66143422"
 
 ## <a name="stage-view"></a>阶段视图
 
-通过阶段视图，用户可在Teams的大图面上查看内容（如图像、文件或网站），而无需切换上下文。 此组件主要用于查看内容。 不要将其用于复杂的交互。
+阶段视图允许用户在 Teams 中的大型图面上查看内容（如图像、文件或网站），而无需切换上下文。 此组件主要用于查看内容。 不要将其用于复杂的交互。
 
 了解如何实现 [阶段视图](~/tabs/tabs-link-unfurling.md)。
 
 ### <a name="top-use-cases"></a>最主要用例
 
-* 在Teams而不是其他应用或浏览器的较大图面中显示内容
+* 在 Teams 内部的大型图面中显示内容，而不是其他应用或浏览器。
 * 聚焦媒体或其他丰富内容
 
 ### <a name="mobile"></a>移动设备

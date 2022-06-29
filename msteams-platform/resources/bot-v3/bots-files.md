@@ -1,17 +1,18 @@
 ---
-title: 从机器人收发文件
-description: 了解如何使用个人、频道和群聊范围的Graph API 通过机器人发送和接收文件。
+title: 从机器人发送和接收文件
+description: 了解如何使用个人、频道和群组聊天作用域的 Graph API 通过机器人收发文件。 通过基于 v3 Bot Framework SDK 的代码示例使用 Teams 机器人 API。
+keywords: teams 机器人文件发送接收
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143366"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503583"
 ---
-# <a name="send-and-receive-files-through-your-bot"></a>通过机器人发送和接收文件
+# <a name="send-and-receive-files-using-bots"></a>使用机器人发送和接收文件
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -164,7 +165,7 @@ ms.locfileid: "66143366"
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>通知用户有关已上传文件的信息
 
-将文件上传到用户的 OneDrive 后，无论是使用上述机制还是 OneDrive 用户委派的 API，都应向用户发送确认消息。 此消息应包含`FileCard`用户可以选择的附件，可以对其进行预览、在OneDrive中打开或在本地下载。
+将文件上传到用户的 OneDrive 后，无论是使用上述机制还是 OneDrive 用户委派的 API，都应向用户发送确认消息。 此消息应包含 `FileCard` 用户可以选择的附件，可以对其进行预览、在 OneDrive 中打开或在本地下载。
 
 ```json
 {
@@ -187,7 +188,7 @@ ms.locfileid: "66143366"
 | `uniqueId` | OneDrive/SharePoint 驱动器项 ID。 |
 | `fileType` | 文件类型，例如 pdf 或 docx。 |
 
-### <a name="basic-example-in-c"></a>采用 C# 的基本示例
+### <a name="basic-example-in-c"></a>C 中的基本示例 #
 
 以下示例展示了如何在机器人的对话框中处理文件上传并发送文件同意请求:
 
@@ -266,3 +267,7 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
+
+## <a name="see-also"></a>另请参阅
+
+[在 Microsoft Graph 中使用文件](/graph/api/resources/onedrive)

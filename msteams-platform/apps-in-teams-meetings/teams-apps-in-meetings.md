@@ -1,16 +1,16 @@
 ---
 title: Teams 会议应用
 author: surbhigupta
-description: 本文介绍应用在基于参与者、用户角色和应用扩展性的Microsoft Teams会议中的工作原理。
+description: 本文介绍基于参与者、用户角色和应用扩展性的 Microsoft Teams 会议中的应用工作原理。
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 332d0e382cbadbe41900e8cc65eb0266e94954dc
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8206695749f8b860c5bf0aba1612cbdbb9ccbd43
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142505"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484549"
 ---
 # <a name="apps-for-teams-meetings"></a>Teams 会议应用
 

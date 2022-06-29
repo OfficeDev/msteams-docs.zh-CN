@@ -1,23 +1,23 @@
 ---
-title: 在Teams Toolkit中管理Azure Active Directory应用程序
+title: 在 Teams 工具包中管理 Azure Active Directory 应用程序
 author: zyxiaoyuer
-description: 介绍在Teams Toolkit中管理Azure Active Directory应用程序
+description: 介绍如何在 Teams 工具包中管理 Azure Active Directory 应用程序
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 1f71d57e32bd6fb24cf75cc6027937337f29f972
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755935"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503786"
 ---
-# <a name="azure-ad-manifest"></a>Azure AD 清单
+# <a name="customize-azure-ad-manifest"></a>自定义 Azure AD 清单
 
 [Azure Active Directory (Azure AD) 清单](/azure/active-directory/develop/reference-app-manifest)包含Microsoft 标识平台中 Azure AD 应用程序对象的所有属性的定义。
 
-Teams Toolkit现在在Teams应用程序开发生命周期内，使用清单文件作为事实来源管理 Azure AD 应用程序。
+Teams 工具包现在管理 Azure AD 应用程序，在 Teams 应用程序开发生命周期内，清单文件作为事实来源。
 
 ## <a name="customize-azure-ad-manifest-template"></a>自定义 Azure AD 清单模板
 
@@ -39,7 +39,7 @@ Teams Toolkit现在在Teams应用程序开发生命周期内，使用清单文�
 
 ### <a name="customize-requiredresourceaccess"></a>自定义 requiredResourceAccess
 
-如果Teams应用程序需要更多权限才能使用其他权限调用 API，则需要更新 `requiredResourceAccess` Azure AD 清单模板中的属性。 可以查看此属性的以下示例：
+如果 Teams 应用程序需要更多权限才能使用其他权限调用 API，则需要更新 `requiredResourceAccess` Azure AD 清单模板中的属性。 可以查看此属性的以下示例：
 
 ```JSON
 
@@ -181,7 +181,7 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 ### <a name="required-resource-access-code-lens"></a>所需的资源访问代码镜头
 
-它不同于官方 [Azure AD 清单架构](/azure/active-directory/develop/reference-app-manifest)，而`resourceAppId``resourceAccess`属性中的 `requiredResourceAccess` ID 仅支持 UUID，Teams Toolkit中的 Azure AD 清单模板也支持用户可读字符串`Microsoft Graph`和`Office 365 SharePoint Online`权限。 如果输入 UUID，代码镜头会显示用户可读字符串，否则显示 UUID。
+它不同于官方 [Azure AD 清单架构](/azure/active-directory/develop/reference-app-manifest)，该`resourceAppId`架构和`resourceAccess`属性中的 `requiredResourceAccess` ID 仅支持 UUID，Teams 工具包中的 Azure AD 清单模板也支持用户可读字符串和`Microsoft Graph``Office 365 SharePoint Online`权限。 如果输入 UUID，代码镜头会显示用户可读字符串，否则显示 UUID。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="addresource":::
 
@@ -221,10 +221,10 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
 
-2. 转到[Azure 门户](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)并登录到Microsoft 365帐户。
+2. 转到[Azure 门户](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)并登录到 Microsoft 365 帐户。
   
    > [!NOTE]
-   > 确保Teams应用程序和 M365 帐户的登录凭据相同。
+   > 确保 Teams 应用程序和 M365 帐户的登录凭据相同。
 
 3. 打开 [应用注册页](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)，使用之前复制的客户端 ID 搜索 Azure AD 应用程序。
   
@@ -232,7 +232,7 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 4. 从搜索结果中选择 Azure AD 应用程序以查看详细信息。
   
-5. 在 Azure AD 应用信息页中，选择 `Manifest` 菜单以查看此应用程序的清单。 清单的架构与文件中的 `aad.template.json` 架构相同。 有关清单的详细信息，请[参阅Azure Active Directory应用程序清单](/azure/active-directory/develop/reference-app-manifest)。
+5. 在 Azure AD 应用信息页中，选择 `Manifest` 菜单以查看此应用程序的清单。 清单的架构与文件中的 `aad.template.json` 架构相同。 有关清单的详细信息，请参阅 [Azure Active Directory 应用程序清单](/azure/active-directory/develop/reference-app-manifest)。
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
@@ -240,27 +240,27 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
   
 ## <a name="use-an-existing-azure-ad-application"></a>使用现有的 Azure AD 应用程序
 
-可以将现有的 Azure AD 应用程序用于Teams项目，有关详细信息，请参阅[为Teams应用程序使用现有的 Azure AD 应用程序](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app)。
+可以将现有的 Azure AD 应用程序用于 Teams 项目，有关详细信息，请参阅 [使用 Teams 应用程序的现有 Azure AD 应用程序](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app)。
 
-## <a name="azure-ad-application-in-teams-application-development-lifecycle"></a>Teams应用程序开发生命周期中的 Azure AD 应用程序
+## <a name="azure-ad-application-in-teams-application-development-lifecycle"></a>Teams 应用程序开发生命周期中的 Azure AD 应用程序
 
-需要在Teams应用程序开发生命周期的各个阶段与 Azure AD 应用程序交互。
+需要在 Teams 应用程序开发生命周期的各个阶段与 Azure AD 应用程序交互。
 
-1. **创建Project**
+1. **创建 Project**
 
-      默认情况下，可以使用 SSO 支持附带的Teams Toolkit创建项目，例如`SSO-enabled tab`。 有关创建新应用的详细信息，请参阅[使用Teams Toolkit创建新的Teams应用程序](create-new-project.md)。 系统会自动创建 Azure AD 清单文件： `templates\appPackage\aad.template.json` Teams Toolkit在本地开发期间或将应用程序移到云时创建或更新 Azure AD 应用程序。
+      默认情况下，可以使用 SSO 支持附带的 Teams 工具包创建项目，例如 `SSO-enabled tab`。 有关创建新应用的详细信息，请参阅 [使用 Teams 工具包创建新的 Teams 应用程序](create-new-project.md)。 系统会自动创建 Azure AD 清单文件： `templates\appPackage\aad.template.json` Teams 工具包在本地开发期间或将应用程序移到云时创建或更新 Azure AD 应用程序。
 
 2. **将 SSO 添加到机器人或选项卡**
 
-      创建没有 SSO 内置的Teams应用程序后，Teams Toolkit以增量方式帮助你为项目添加 SSO。 因此，会自动为你创建 Azure AD 清单文件： `templates\appPackage\aad.template.json`
+      创建不带 SSO 内置的 Teams 应用程序后，Teams 工具包会增量帮助你为项目添加 SSO。 因此，会自动为你创建 Azure AD 清单文件： `templates\appPackage\aad.template.json`
 
-      Teams Toolkit在下次本地调试会话期间或将应用程序移到云时创建或更新 Azure AD 应用程序。
+      Teams 工具包在下一次本地调试会话期间或将应用程序移到云时创建或更新 Azure AD 应用程序。
 
 3. **在本地生成**
 
-    Teams Toolkit在本地开发 (（称为 F5) ）期间执行以下功能：
+    Teams 工具包在本地开发 (（称为 F5) ）期间执行以下功能：
 
-    * 读取文件 `state.local.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams Toolkit重新使用现有的 Azure AD 应用程序，否则需要使用该`aad.template.json`文件创建新应用程序。
+    * 读取文件 `state.local.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams 工具包将重新使用现有的 Azure AD 应用程序，否则需要使用该 `aad.template.json` 文件创建新应用程序。
 
     * 最初忽略清单文件中需要其他上下文 (的某些属性，例如，在创建包含清单文件的新 Azure AD 应用程序期间需要本地调试终结点) 的 replyUrls 属性。
 
@@ -270,9 +270,9 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 4. **预配云资源**
 
-      将应用程序移到云时，需要预配云资源并部署应用程序。 在本地开发等阶段，Teams Toolkit将：
+      将应用程序移到云时，需要预配云资源并部署应用程序。 在本地开发等阶段，Teams 工具包将：
 
-      * 读取文件 `state.{env}.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams Toolkit重新使用现有的 Azure AD 应用程序，否则需要使用该`aad.template.json`文件创建新应用程序。
+      * 读取文件 `state.{env}.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams 工具包将重新使用现有的 Azure AD 应用程序，否则需要使用该 `aad.template.json` 文件创建新应用程序。
 
       * 最初忽略清单文件中需要其他上下文 (的某些属性，例如 replyUrls 属性需要在创建包含清单文件的新 Azure AD 应用程序期间) 前端或机器人终结点。
 
@@ -284,13 +284,13 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
     * 可以看到， [为远程环境部署 Azure AD 应用程序更改](#deploy-azure-ad-application-changes-for-remote-environment) ，以便为远程环境部署 Azure AD 应用程序更改。
 
-    * Teams Toolkit根据 Azure AD 清单模板文件更新 Azure AD 应用程序。
+    * Teams 工具包根据 Azure AD 清单模板文件更新 Azure AD 应用程序。
 
 ## <a name="limitations"></a>限制
 
-1. Teams Toolkit扩展不支持 Azure AD 清单架构中列出的所有属性。
+1. Teams 工具包扩展不支持 Azure AD 清单架构中列出的所有属性。
   
-      下表列出了Teams Toolkit扩展中不支持的属性：
+      下表列出了 Teams 工具包扩展中不支持的属性：
 
       |**不支持的属性**|**原因**|
       |-----------|----------|
@@ -313,4 +313,4 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 ## <a name="see-also"></a>另请参阅
 
-* [在Toolkit中预览和自定义应用清单](TeamsFx-preview-and-customize-app-manifest.md)
+* [在 Toolkit 中预览和自定义应用清单](TeamsFx-preview-and-customize-app-manifest.md)

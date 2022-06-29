@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123046"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484843"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
@@ -75,7 +75,7 @@ Microsoft 针对在 Teams 应用商店中列出的应用运行每日自动化测
 1. 在“**产品概述**”页上，选择“**停止销售**”。 它会从 Microsoft AppSource 中删除该应用。
 1. 若要启动应用的取消列表，请在“**合作伙伴中心**”选择“**概述**”页，然后选择“**停止销售**”。
 
-停止分发应用后，仍可以在合作伙伴中心中看到它，状态为“**不可用**”。 如果决定再次发布该应用，请按照说明 [将应用发布到 Microsoft Teams 应用商店](/concepts/deploy-and-publish/appsource/publish#teams-app-submission)。
+停止分发应用后，仍可以在合作伙伴中心中看到它，状态为“**不可用**”。 如果决定再次发布该应用，请按照说明 [将应用发布到 Microsoft Teams 应用商店](../publish.md)。
 
 ## <a name="see-also"></a>另请参阅
 

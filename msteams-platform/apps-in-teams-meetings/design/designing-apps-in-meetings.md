@@ -1,16 +1,16 @@
 ---
 title: 设计会议扩展插件
 author: heath-hamilton
-description: 了解如何在Teams会议中设计应用，并获取Microsoft Teams UI 工具包、会议内选项卡、用例、响应行为、共享会议阶段、主题和导航。
+description: 了解如何在 Teams 会议中为应用设计会议扩展。 使用 Microsoft Teams UI 工具包中的 UI 模板来帮助你设计会议选项卡。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142680"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484662"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -21,11 +21,11 @@ ms.locfileid: "66142680"
 可以在 Microsoft Teams UI 工具包中找到更全面的设计准则，包括可以根据需要获取和修改的元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit (用户)](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展插件
 
-用户可以在会议前和会议期间添加会议扩展插件。 他们还可以直接从Teams存储中添加特定会议的应用。
+用户可以在会议前和会议期间添加会议扩展插件。 他们还可以直接从 Teams 商店添加特定会议的应用。
 
 ### <a name="add-before-a-meeting"></a>在会议前添加
 
@@ -65,7 +65,7 @@ ms.locfileid: "66142680"
 
 ### <a name="design-with-ui-templates"></a>使用 UI 模板进行设计
 
-使用以下Teams UI 模板之一来帮助设计会议选项卡：
+使用以下 Teams UI 模板之一来帮助设计会议选项卡：
 
 * [列表](../../concepts/design/design-teams-app-ui-templates.md#list): 列表可以以可扫描的格式显示相关项，并允许用户对整个列表或单个项目执行操作。
 * [任务板](../../concepts/design/design-teams-app-ui-templates.md#task-board): 任务板 (有时称为看板或泳道) 是通常用于跟踪工作项或票证状态的卡片集合。
@@ -131,16 +131,16 @@ ms.locfileid: "66142680"
 
 ## <a name="use-an-in-meeting-dialog"></a>使用会议内对话框
 
-会议内对话框显示在Teams会议阶段。 它们需要用户的注意、确认或交互，但很微妙，不会中断会议。 应谨慎使用这些功能，并针对轻型和面向任务的方案使用这些方案。
+Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、确认或交互，但很微妙，不会中断会议。 应谨慎使用这些功能，并针对轻型和面向任务的方案使用这些方案。
 
 ### <a name="use-cases"></a>用例
 
 会议内对话框由用户 (触发，例如会议组织者) 可能希望参与者：
 
-* 提供简短的反馈
-* 进行简短调查或轮询
-* 提交审批
-* 获取提醒
+* 提供简短的反馈。
+* 进行简短的调查或轮询。
+* 提交审批。
+* 获取提醒。
 
 ### <a name="mobile"></a>移动设备
 
@@ -261,7 +261,7 @@ ms.locfileid: "66142680"
 |计数器|说明|
 |----------|-----------|
 |1|**应用图标**：突出显示的图标指示应用的会议内选项卡处于打开状态。|
-|2|**“共享到会议”按钮**：将应用共享到会议的入口点。 若要获得一致的体验，请始终使用标准Teams共享图标。 **“共享到会议** ”是建议的默认文本，但也可以为用例自定义它。 例如， **一起玩** 游戏应用或 **一起观看** 视频应用。 无论哪种方式，请明确操作将创建与会议中的每个人共享的交互式体验。|
+|2|**“共享到会议”按钮**：将应用共享到会议的入口点。 若要获得一致的体验，请始终使用标准 Teams 共享图标。 **“共享到会议** ”是建议的默认文本，但也可以为用例自定义它。 例如， **一起玩** 游戏应用或 **一起观看** 视频应用。 无论哪种方式，请明确操作将创建与会议中的每个人共享的交互式体验。|
 |3|**演示者归因**：显示共享应用的参与者的名称。|
 |4|**iframe**: 显示应用内容。|
 |5|**停止共享按钮**：停止将应用共享到会议阶段。 仅显示启动共享的参与者。|
@@ -287,11 +287,11 @@ ms.locfileid: "66142680"
 
 ## <a name="after-a-meeting"></a>会议后
 
-可以在会议结束后返回会议并查看应用内容。 在此示例中，会议组织者可以在 **Contoso** 选项卡中查看轮询结果。 (注意：从设计角度来看，会议前和帖子选项卡体验之间没有区别。) 
+可以在会议结束后返回会议并查看应用内容。 在此示例中，会议组织者可以在 **Contoso** 选项卡中查看投票结果。 (注意：从设计角度来看，会前和会后选项卡体验之间没有区别。) 
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示帖子会议选项卡。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示会后选项卡。" border="false":::
 
-## <a name="best-practices"></a>最佳实践
+## <a name="best-practices"></a>最佳做法
 
 使用上述建议打造优质应用体验。
 
@@ -391,7 +391,7 @@ ms.locfileid: "66142680"
 
 #### <a name="dont-left-or-center-align-actions"></a>不要：左对齐或居中对齐操作
 
-这偏离了在对话框中控制放置的标准Teams模式，并且可能与顶部对话框相冲突。
+这偏离了控制放置在对话框中的标准 Teams 模式，并且可能与顶部对话框的对话相冲突。
 
    :::column-end:::
 :::row-end:::
@@ -407,7 +407,7 @@ ms.locfileid: "66142680"
 
 #### <a name="do-scroll-vertically"></a>请执行以下操作：垂直滚动
 
-用户期望在Teams (和) 的其他位置进行垂直滚动。 如果你有一个创造性的画布（如白板），用户可以在 x 轴和 y 轴上平移，则这可能不适用。
+用户期望在 Teams (和) 的其他位置进行垂直滚动。 如果你有一个创造性的画布（如白板），用户可以在 x 轴和 y 轴上平移，则这可能不适用。
 
    :::column-end:::
    :::column span="":::
@@ -418,7 +418,7 @@ ms.locfileid: "66142680"
 
 #### <a name="dont-scroll-horizontally"></a>不要：水平滚动
 
-水平滚动不是预期的行为，Teams (包括会议环境) 。
+水平滚动不是 Teams (（包括会议环境) ）中的预期行为。
 
    :::column-end:::
 :::row-end:::
@@ -455,7 +455,7 @@ ms.locfileid: "66142680"
 
 #### <a name="do-focus-on-dark-theme"></a>请执行以下操作：关注深色主题
 
-Teams会议针对深色主题进行了优化，有助于减少视觉和认知噪音，以便用户可以专注于讨论和共享内容。 请记住某些类型的应用 (如白板化和文档编辑) 不需要深色画布。
+Teams 会议针对深色主题进行了优化，有助于减少视觉和认知噪音，以便用户可以专注于讨论和共享内容。 请记住某些类型的应用 (如白板化和文档编辑) 不需要深色画布。
 
    :::column-end:::
    :::column span="":::
@@ -466,7 +466,7 @@ Teams会议针对深色主题进行了优化，有助于减少视觉和认知噪
 
 #### <a name="dont-use-unfamiliar-colors"></a>不要：使用不熟悉的颜色
 
-与会议环境冲突的颜色可能会分散注意力，而且看起来不太本机Teams。 了解Teams[颜色渐变](https://developer.microsoft.com/fluentui#/styles/web/colors/products)，包括调用主题中性。
+与会议环境冲突的颜色可能会分散注意力，并且对于 Teams 则显得不那么本机。 了解 Teams [颜色渐变](https://developer.microsoft.com/fluentui#/styles/web/colors/products)，包括调用主题中性。
 
    :::column-end:::
 :::row-end:::

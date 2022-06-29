@@ -1,19 +1,19 @@
 ---
-title: 创建频道或组选项卡
+title: 创建频道选项卡
 author: laujan
-description: 在本模块中，了解如何使用适用于Microsoft Teams的 Yeoman 生成器创建通道和组选项卡，包括使用代码示例查看源代码。
+description: 在本模块中，了解如何使用适用于 Microsoft Teams 的 Yeoman 生成器创建通道和组选项卡，包括使用代码示例查看源代码。
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189600"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503646"
 ---
-# <a name="channel-or-group-tab"></a>频道或组选项卡
+# <a name="create-a-channel-tab"></a>创建频道选项卡
 
 通道或组选项卡将内容传递到频道和群组聊天，是围绕基于 Web 的专用内容创建协作空间的好方法。
 
@@ -190,9 +190,9 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > 通过 **ngrok** 将选项卡上传到 Microsoft Teams 并成功保存后，可以在 Teams 中查看它，直到隧道会话结束。 如果重启 ngrok 会话，则必须使用新的 URL 更新应用。
 
-### <a name="upload-your-application-to-teams"></a>将应用程序上传到 Microsoft Teams
+### <a name="upload-your-application-to-teams"></a>将应用程序上传到 Teams
 
-1. 转到Teams，然后选择“**应用**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Microsoft Store":::。
+1. 转到 Teams 并选择 **应用**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::。
 1. 选择“**管理应用**”和“**上传自定义应用**”。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择应用包压缩文件夹，然后选择“**打开**”。
 
@@ -291,7 +291,7 @@ ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。
 * 一个 **透明轮廓图标**，尺寸为 32 x 32 像素。
 * 一个指定应用属性的 `manifest.json` 文件。
 
-这些文件需要压缩在应用包中，以便用于将选项卡上传到 Teams。 当用户选择添加或更新选项卡时，Teams加载`configurationUrl`清单中指定的选项卡，将其嵌入 IFrame 中，并将其呈现在选项卡中。
+这些文件需要压缩在应用包中，以便用于将选项卡上传到 Teams。 当用户选择添加或更新选项卡时，Teams 会加载 `configurationUrl` 清单中指定的选项卡，将其嵌入 IFrame 中，并将其呈现在选项卡中。
 
 #### <a name="csproj"></a>.csproj
 
@@ -394,7 +394,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>使用开发人员门户更新应用包
 
-1. 转到Teams。 如果使用[基于 Web 的版本](https://teams.microsoft.com)，可以使用浏览器的[开发人员工具](~/tabs/how-to/developer-tools.md)检查前端代码。
+1. 转到 Teams。 如果使用[基于 Web 的版本](https://teams.microsoft.com)，可以使用浏览器的[开发人员工具](~/tabs/how-to/developer-tools.md)检查前端代码。
 
 1. 转到“[**开发人员门户**](https://dev.teams.microsoft.com/home)”。
 
@@ -617,7 +617,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>使用开发人员门户更新应用包
 
-1. 转到Teams。 如果使用[基于 Web 的版本](https://teams.microsoft.com)，可以使用浏览器的[开发人员工具](~/tabs/how-to/developer-tools.md)检查前端代码。
+1. 转到 Teams。 如果使用[基于 Web 的版本](https://teams.microsoft.com)，可以使用浏览器的[开发人员工具](~/tabs/how-to/developer-tools.md)检查前端代码。
 
 1. 转到“[**开发人员门户**](https://dev.teams.microsoft.com/home)”。
 

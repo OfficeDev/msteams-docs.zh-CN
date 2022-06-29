@@ -1,16 +1,16 @@
 ---
 title: 定义消息扩展搜索命令
 author: surbhigupta
-description: 在本模块中，了解Teams应用的消息扩展搜索命令，通过应用清单和手动创建搜索命令。
+description: 在本模块中，了解 Teams 应用的消息扩展搜索命令，通过应用清单和手动创建搜索命令。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 10bb71580ac67db155bd14b74325635ae22e6840
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c131a511c5c16eac4bf57093bbbeed9bd4172e97
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189611"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503940"
 ---
 # <a name="define-message-extension-search-commands"></a>定义消息扩展搜索命令
 
@@ -24,7 +24,7 @@ ms.locfileid: "66189611"
 请参阅以下视频，了解如何定义消息扩展搜索命令：
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>选择搜索命令调用位置
@@ -94,7 +94,7 @@ ms.locfileid: "66189611"
 |`initialRun` | 如果此属性设置为 **true**，则指示用户在 UI 中选择此命令后应立即执行此命令。 | 否 | 1.0 |
 | `context` | 此属性是一个可选值数组，用于定义搜索操作可用的上下文。 可取值包括 `message`、`compose` 或 `commandBox`。 默认值为 `["compose", "commandBox"]`。 | 否 | 1.5 |
 
-必须添加搜索参数的详细信息，该参数定义用户在Teams客户端中可见的文本。
+必须添加搜索参数的详细信息，该参数定义 Teams 客户端中用户可见的文本。
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|

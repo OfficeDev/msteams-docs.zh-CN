@@ -3,13 +3,13 @@ title: 使用 Microsoft Graph 权限扩展选项卡应用
 description: 介绍如何使用 Microsoft Graph 配置 API 权限
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 身份验证选项卡 Microsoft Azure Active Directory (Azure AD) 图形 API 委派权限访问令牌范围
-ms.openlocfilehash: 76b474f69b31d9c9b9925803ee7c0240f9e5a7c4
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Microsoft Azure Active Directory (Azure AD) 图形 API委派权限访问令牌范围的 teams 身份验证选项卡
+ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887948"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485291"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>使用 Microsoft Graph 权限和范围扩展选项卡应用
 
@@ -29,7 +29,7 @@ ms.locfileid: "65887948"
 
 ### <a name="to-configure-api-permissions"></a>配置 API 权限
 
-1. 打开在 [Azure 门户](https://ms.portal.azure.com/)中注册的应用。
+1. 打开在[Azure 门户](https://ms.portal.azure.com/)中注册的应用。
 
 2. 从左窗格中选择 **“管理** > **API** ”权限。
 
@@ -37,7 +37,7 @@ ms.locfileid: "65887948"
 
     将显示 **“API 权限** ”页。
 
-3. 选择 **+添加权限** 以添加 Microsoft Graph API 权限。
+3. 选择 **+添加权** 限以添加 Microsoft 图形 API权限。
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="应用权限页。" border="true":::
 
@@ -82,7 +82,7 @@ ms.locfileid: "65887948"
 
 ### <a name="to-configure-authentication-for-a-platform"></a>为平台配置身份验证
 
-1. 打开在 [Azure 门户](https://ms.portal.azure.com/)中注册的应用。
+1. 打开在[Azure 门户](https://ms.portal.azure.com/)中注册的应用。
 
 1. 从左窗格中选择 **“管理** > **身份验证** ”。
 
@@ -198,7 +198,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 如果需要访问 Microsoft Graph 数据，请将服务器端代码配置为：
 
 1. 验证访问令牌。 有关详细信息，请参阅[验证访问令牌](tab-sso-code.md#validate-the-access-token)。
-1. 通过调用 Microsoft 标识平台启动 OAuth 2.0 OBO 流，其中包括访问令牌、有关用户的一些元数据，以及选项卡应用的凭据 (其应用 ID 和客户端机密) 。 Microsoft 标识平台将返回可用于访问 Microsoft Graph 的新访问令牌。
+1. 通过调用Microsoft 标识平台启动 OAuth 2.0 OBO 流，其中包括访问令牌、有关用户的一些元数据，以及选项卡应用的凭据 (其应用 ID 和客户端机密) 。 Microsoft 标识平台将返回可用于访问 Microsoft Graph 的新访问令牌。
 1. 使用新的令牌从 Microsoft Graph 获取数据。
 1. 如果需要，请在 MSAL.NET 中使用令牌缓存序列化来缓存多个的新访问令牌。
 
@@ -229,3 +229,4 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 - [OAuth 2.0 代表流](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [获取 MS Graph 的访问权限](/graph/auth-v2-user)
 - [MSAL.NET 中的令牌缓存序列化](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
+- [Microsoft Teams MSAL2 提供程序](/graph/toolkit/providers/teams-msal2)

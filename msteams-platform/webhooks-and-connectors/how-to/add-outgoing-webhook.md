@@ -5,14 +5,14 @@ description: 在本模块中，了解如何在 Microsoft Teams 中创建传出 W
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c3f7c3a1574af944dfc2ae64f76ec4d538cedae3
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189892"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503317"
 ---
-# <a name="create-outgoing-webhook"></a>创建传出 Webhook
+# <a name="create-outgoing-webhooks"></a>创建传出 Webhook
 
 传出 Webhook 充当机器人并使用 **@提及** 功能在频道中搜索邮件。 它向外部 Web 服务发送通知并以丰富的消息（包括卡片和图像）进行响应。 它有助于跳过通过 [Microsoft Bot Framework](https://dev.botframework.com/) 创建机器人的过程。
 
@@ -107,7 +107,7 @@ ms.locfileid: "66189892"
 你的代码必须始终验证请求中包含的 HMAC 签名，如下所示：
 
 * 从邮件的请求正文生成 HMAC 令牌。 在大多数平台上都有执行此操作的标准库，例如 Node.js 的 [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) 和 C\# 的 [Teams Webhook 示例](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs)。 Microsoft Teams 使用标准 SHA256 HMAC 加密。 你必须将正文转换为采用 UTF8 格式的字节数组。
-* 在客户端中注册传出 Webhook 时，将从 Teams 提供的安全令牌的字节数组计算哈希值。请参阅[创建传出 Webhook](#create-outgoing-webhook)。
+* 在客户端中注册传出 Webhook 时，将从 Teams 提供的安全令牌的字节数组计算哈希值。请参阅[创建传出 Webhook](#create-outgoing-webhooks)。
 * 将哈希值转换为使用 UTF-8 编码的字符串。
 * 将生成的哈希字符串值与 HTTP 请求中提供的值进行比较。
 

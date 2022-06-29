@@ -1,24 +1,24 @@
 ---
 title: App Studio for Microsoft Teams 入门
-description: 本文介绍如何使用 app studio 生成和管理应用，以便Microsoft Teams和安装应用工作室。
+description: 在本文中，你将了解如何使用适用于 Microsoft Teams 的应用工作室和安装应用工作室来生成和管理应用。
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: cf9f4a144886c67b2c2c667683d62a65fc4ee9c4
-ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
+ms.openlocfilehash: 6ec2e1dfc064302de096cb356641a773e7dceb35
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2022
-ms.locfileid: "66164252"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485704"
 ---
-# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio 管理应用以进行Microsoft Teams
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>使用 App Studio for Microsoft Teams 管理应用
 
 > [!WARNING]
-> **试用开发人员门户**：App Studio 已演变。 使用新的[开发人员门户](https://dev.teams.microsoft.com/)配置、分发和管理 Teams 应用。 <br> App Studio 将于 2022 年 6 月 30 日弃用。
+> **试用开发人员门户**：App Studio 已演变。 使用新的[开发人员门户](https://dev.teams.microsoft.com/)配置、分发和管理 Teams 应用。 <br> App Studio 将于 2022 年 8 月 1 日前弃用。
 
 无论你为企业开发自定义应用还是为世界各地的团队开发 SaaS 应用程序，App Studio 都可以轻松创建或集成你自己的 Microsoft Teams 应用，其方式包括简化应用程序的清单和包的创建，并提供卡片编辑器和响应控制库等有用工具。
 
 > [!IMPORTANT]
-> App Studio 当前在以下类型的Teams组织中不可用：
+> App Studio 当前在以下类型的 Teams 组织中不可用：
 >
 > * 政府社区云 (GCC)
 > * GCC 高
@@ -26,7 +26,7 @@ ms.locfileid: "66164252"
 
 ## <a name="installing-app-studio"></a>安装 App Studio
 
-App Studio 是一个Teams应用，可在Teams存储中找到。 请按照此链接直接下载 [App Studio](https://aka.ms/InstallTeamsAppStudio)。 还可以在应用商店中找到该应用。
+App Studio 是 Teams 应用，可在 Teams 应用商店中找到。 请按照此链接直接下载 [App Studio](https://aka.ms/InstallTeamsAppStudio)。 还可以在应用商店中找到该应用。
 
 在应用商店中，搜索 App Studio。
 
@@ -52,9 +52,9 @@ App Studio 是一个Teams应用，可在Teams存储中找到。 请按照此链�
 
 ### <a name="manifest-editor"></a>清单编辑器
 
-如前所述，Teams应用包最重要的部分是其 manifest.json 文件。 此文件必须符合[Teams应用架构](~/resources/schema/manifest-schema.md)，它包含元数据，使Teams能够将应用正确呈现给用户。
+如前所述，Teams 应用包最重要的部分是其 manifest.json 文件。 此文件必须符合 [Teams 应用架构](~/resources/schema/manifest-schema.md)，包含元数据，使 Teams 能够将应用正确呈现给用户。
 
-App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你描述应用、上传图标、添加应用功能，并生成.zip文件，该文件可以轻松上传到Teams进行测试或分发供其他人使用。 App Studio 不会为应用生成功能代码，也不会托管应用。 应用必须已在应用上传流程的清单中列出的 URL 上托管并运行，以产生工作应用。
+App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你描述应用、上传图标、添加应用功能，并生成一个.zip文件，该文件可以轻松上传到 Teams 进行测试或分发，供其他人使用。 App Studio 不会为应用生成功能代码，也不会托管应用。 应用必须已在应用上传流程的清单中列出的 URL 上托管并运行，以产生工作应用。
 
 #### <a name="details"></a>详细信息
 
@@ -65,17 +65,17 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 清单编辑器的功能部分介绍定义应用的功能并列出其中每个功能的详细信息。
 
 > [!NOTE]
-> 最佳做法是，在自定义应用时，必须为应用用户和客户提供自定义指南。 有关详细信息，请参阅[Microsoft Teams中的自定义应用](/MicrosoftTeams/customize-apps)。
+> 最佳做法是，在自定义应用时，必须为应用用户和客户提供自定义指南。 有关详细信息，请参阅 [Microsoft Teams 中的自定义应用](/MicrosoftTeams/customize-apps)。
 
 ##### <a name="tabs"></a>选项卡
 
-* **团队选项卡。** 团队选项卡将成为频道的一部分，可提供对团队信息和资源的快速访问。 例如，频道的"Planner"选项卡包含单个计划;Power BI 选项卡映射到特定报表。 用户可以向下钻取到相关上下文，但不应在选项卡外导航。例如，Power BI选项卡不启用对其他Power BI报表的导航，但它确实启用了在主Power BI网站中启动报表的 *“转到网站*”按钮。
+* **团队选项卡。** 团队选项卡将成为频道的一部分，可提供对团队信息和资源的快速访问。 例如，频道的"Planner"选项卡包含单个计划;Power BI 选项卡映射到特定报表。 用户可以向下钻取到相关上下文，但不应在选项卡外导航。例如，Power BI 选项卡不启用对其他 Power BI 报表的导航，但它确实启用了在主 Power BI 网站中启动报表的 *“转到网站* ”按钮。
 
   对于团队选项卡，必须使用 *配置 URL* 显示选项并收集信息，以便用户可以自定义选项卡的内容和体验。当用户首次将选项卡添加到频道时，将显示此 HTML 表格。
 
   你还必须提供选项卡期望从其加载或链接到的任何其他域。
 
-* **个人选项卡。** 可以定义默认情况下在个人应用体验中显示的一组选项卡， (用户在团队或频道) 的上下文之外对应用拥有的体验。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用Teams选项卡，提供选项卡需要从中加载或链接到的任何其他域。
+* **个人选项卡。** 可以定义默认情况下在个人应用体验中显示的一组选项卡， (用户在团队或频道) 的上下文之外对应用拥有的体验。 在这部分内容中，提供选项卡名称、唯一标识符、指向将在 Teams 中显示的 UI 的 URL，以及用户选择在浏览器中查看选项卡时使用的 URL（可选）。 使用 Teams 选项卡，提供选项卡需要从中加载或链接到的任何其他域。
 
 ##### <a name="bots"></a>机器人
 
@@ -94,7 +94,7 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 
 ##### <a name="message-extensions"></a>消息扩展
 
-[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)是用户在Teams中参与应用的强大方式。 用户可以查询服务的信息，将该信息以卡片形式发布到频道或聊天对话中。
+[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md) 是用户在 Teams 中与应用互动的强大方式。 用户可以查询服务的信息，将该信息以卡片形式发布到频道或聊天对话中。
 
 消息扩展由 Bot Framework 机器人提供支持，因此它们需要配置的机器人才能运行。 如果具有要为消息扩展提供电源的机器人的名称和 Bot Framework ID，请输入它。 否则，请选择 **“注册** ”以创建一个，然后输入信息。 选择用户是否可以更新消息扩展的配置。
 
@@ -102,7 +102,7 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 
 每个命令都需要标题和 ID。 命令可以选择性地包含用户说明。 每个命令可支持最多五个参数，每个参数要求：
 
-* 参数的名称，因为它显示在Teams客户端中，并包含在用户请求中。
+* 参数的名称，因为它显示在 Teams 客户端中，并包含在用户请求中。
 * 用户友好的标题。
 * 可选说明。
 
@@ -111,7 +111,7 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 
 #### <a name="test-and-distribute"></a>测试和分发
 
-定义完应用程序后，“测试和分发”部分允许将应用的定义导出为 zip 文件，然后可以将其共享并上传到Teams客户端进行测试。 单击"导出"以 *appname.zip* 下载默认下载目录中的 zip 文件。
+定义完应用程序后，“测试和分发”部分允许将应用的定义导出为 zip 文件，然后可以将其共享并上传到 Teams 客户端进行测试。 单击"导出"以 *appname.zip* 下载默认下载目录中的 zip 文件。
 
 ##### <a name="publish-your-app-to-teams"></a>将应用发布到 Teams
 
@@ -119,7 +119,7 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 
 ### <a name="card-editor"></a>卡片编辑器
 
-卡片是包含短信息或相关信息的容器。 Teams支持可具有多个属性和附件的卡片。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。
+卡片是包含短信息或相关信息的容器。 Teams 支持可具有多个属性和附件的卡片。 卡片是自动程序和连接器将可操作的信息中继给用户的一种重要方式。
 
 为了使此过程更轻松且不易出错，“卡片编辑器”选项卡允许你使用窗体生成 Hero Card 或缩略图卡，并验证和测试生成的卡片 (完全与用户通过机器人) 一样。 它还为卡片提供相应的 JSON 或 Node.js 代码，可将其复制/粘贴到 C# 应用的源代码中。
 
@@ -128,9 +128,9 @@ App Studio 中的“清单编辑器”选项卡简化了创建清单，允许你
 ### <a name="react-control-library"></a>反应控件库
 
 >[!Note]
-> 将来将弃用此React控件库。 请考虑使用 [Fluent-UI 响应控件作为](https://microsoft.github.io/fluent-ui-react/)以前星尘 UI 的替代方法。
+> 将来将弃用此React控件库。 请考虑使用 [Fluent-UI 响应控件作为](https://microsoft.github.io/fluent-ui-react/) 以前星尘 UI 的替代方法。
 
-创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为了更轻松地创建一致的 UI，App Studio 提供了多种类别的 UI 控件，这些控件遵循Teams设计原则。
+创建遵循 Teams 最佳做法的应用是使应用的外观与 Teams 客户端体验完美契合的一种好方法。 你使用的 UI 控件对于实现这一目标至关重要。 为了更轻松地创建一致的 UI，App Studio 提供了多种类别的 UI 控件，这些控件遵循 Teams 设计原则。
 
 提供了控件和相应的"响应"组件的示例，可准备在构建应用时使用。
 

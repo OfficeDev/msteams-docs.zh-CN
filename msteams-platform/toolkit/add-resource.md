@@ -1,17 +1,17 @@
 ---
-title: 将资源添加到Teams应用
+title: 将资源添加到 Teams 应用
 author: MuyangAmigo
-description: 在本模块中，了解如何添加Teams Toolkit资源、优势、限制和功能
+description: 在本模块中，了解如何添加 Teams 工具包的资源、优势、限制和功能
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d8c7b1fd6b4910e1024f10a44e54271a0fbb475
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a9848ecf16dfb8ff4034dc26dd350ce71c8e656e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143856"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485641"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>将云资源添加到 Teams 应用
 
@@ -21,27 +21,27 @@ TeamsFx 有助于预配应用程序托管的云资源。 可以选择性地添�
 
 以下列表提供了在 TeamsFx 中添加更多云资源的优点：
 
-* 提供便利
-* 使用Teams Toolkit自动生成所有配置文件并连接到Teams应用
+* 提供便利。
+* 使用 Teams 工具包自动生成所有配置文件并连接到 Teams 应用。
 
 ## <a name="limitation"></a>限制
 
-如果已创建基于SPFx选项卡项目，则无法添加 Azure 云资源。
+如果已创建基于 SPFx 的选项卡项目，则无法添加 Azure 云资源。
 
 ## <a name="add-cloud-resources"></a>添加云资源
 
 **可以通过以下方法添加云资源：**
 
-* 在Visual Studio Code中使用Teams Toolkit添加云资源
-* 使用命令面板添加云资源
+* 在 Visual Studio Code 中使用 Teams 工具包添加云资源。
+* 使用命令面板添加云资源。
 
   > [!NOTE]
-  > 在Teams应用中成功添加资源后，需要为每个环境进行预配。
+  > 在 Teams 应用中成功添加资源后，需要为每个环境进行预配。
   
-* **在Visual Studio Code中使用Teams Toolkit添加云资源：**
+* **在Visual Studio Code中使用 Teams 工具包添加云资源：**
 
    1. 打开 **Visual Studio Code**。
-   1. 从左侧面板中选择 **Teams Toolkit**。
+   1. 从左侧面板中选择 **Teams 工具包** 。
    1. 选择 **“开发**”下 **的“添加功能**”。
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="添加功能" border="true":::
@@ -74,19 +74,19 @@ TeamsFx 有助于预配应用程序托管的云资源。 可以选择性地添�
 
 在以下方案中，TeamsFx 与 Azure 服务集成：
 
-- [Azure 函数](/azure/azure-functions/functions-overview)：可满足随选要求的无服务器解决方案，例如为 Teams 应用程序后端创建 Web API。
-- [Azure SQL 数据库](/azure/azure-sql/database/sql-database-paas-overview)：平台即服务 (PaaS) 数据库引擎，可用作 Teams 应用程序数据存储。
-- [Azure API 管理](deploy.md)：API 网关可用于管理为Teams应用程序创建的 API，并将其发布到其他应用程序（如 Power 应用）上使用。
-- [Azure 密钥保管库](/azure/key-vault/general/overview)：保护云应用和服务所使用的密钥和其他密码。
+* [Azure 函数](/azure/azure-functions/functions-overview)：可满足随选要求的无服务器解决方案，例如为 Teams 应用程序后端创建 Web API。
+* [Azure SQL 数据库](/azure/azure-sql/database/sql-database-paas-overview)：平台即服务 (PaaS) 数据库引擎，可用作 Teams 应用程序数据存储。
+* [Azure API 管理](deploy.md)：API 网关可用于管理为 Teams 应用程序创建的 API，并将其发布到其他应用程序（例如 Power 应用）上使用。
+* [Azure 密钥保管库](/azure/key-vault/general/overview)：保护云应用和服务所使用的密钥和其他密码。
 
 ## <a name="add-cloud-resources"></a>添加云资源
 
 在项目中添加资源后，将显示以下更改：
 
-- 添加到 azure.parameter 的新参数。{env}.json，用于提供所需的预配信息。
-- 新内容包含在 ARM 模板下 `templates/azure`，但添加 Azure 资源的文件夹中 `templates/azure/teamsfx` 除外。
-- `templates/azure/teamsfx` 文件夹下的文件将重新生成，以确保 TeamsFx 所需的配置对于添加的 Azure 资源是最新的。
-- `.fx/projectSettings.json` 已更新以跟踪项目中的可用资源。
+* 添加到 azure.parameter 的新参数。{env}.json，用于提供所需的预配信息。
+* 新内容包含在 ARM 模板下 `templates/azure`，但添加 Azure 资源的文件夹中 `templates/azure/teamsfx` 除外。
+* `templates/azure/teamsfx` 文件夹下的文件将重新生成，以确保 TeamsFx 所需的配置对于添加的 Azure 资源是最新的。
+* `.fx/projectSettings.json` 已更新以跟踪项目中的可用资源。
 
 在项目中添加资源后，将显示以下其他更改：
 
@@ -99,5 +99,5 @@ TeamsFx 有助于预配应用程序托管的云资源。 可以选择性地添�
 
 * [预配云资源](provision.md)
 * [新建 Teams 应用](create-new-project.md)
-* [向Teams应用添加功能](add-capability.md)
+* [向 Teams 应用添加功能](add-capability.md)
 * [部署到云](deploy.md)

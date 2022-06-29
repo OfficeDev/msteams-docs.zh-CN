@@ -5,14 +5,14 @@ description: 了解 Teams 和 Microsoft Power Platform 提供的 Microsoft 低�
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 04fc4537969d3866e31e9c35e8484326b0ccbb56
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 74dd4eb094c31510319932ec96cbb0db34a1fca5
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123172"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503310"
 ---
-# <a name="create-low-code-custom-apps-for-microsoft-teams"></a>为 Microsoft Teams 创建低代码自定义应用
+# <a name="create-low-code-custom-apps-for-teams"></a>为 Teams 创建低代码自定义应用
 
 Microsoft Teams 具有可扩展性和适应性。 这意味着你可以为 Teams 构建自定义应用程序，以满足用户的不同需求。 低代码自定义应用可节省时间，提供快速的解决方案，并满足与从头开始创建的应用相同的需求。 本文档概述了 Microsoft Power Platform、Power Virtual Agents 聊天机器人和虚拟助理。
 
