@@ -3,12 +3,12 @@ title: 自定义同框场景模式
 description: 使用自定义"协同模式"场景
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: bbb6758993d99115b3f7c9cd615dfc2b9ebf97ab
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150643"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484774"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
@@ -22,7 +22,7 @@ Microsoft Teams 中的"自定义在一起"模式场景提供沉浸式且极具�
 
 以下过程概述了如何创建仅场景应用：
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="仅创建场景应用" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="仅创建场景应用。":::
 
 仅场景应用仍然是 Teams 中的应用。 Scene Studio 在后台处理应用包创建。 单个应用包中的多个场景显示为用户的平面列表。
 
@@ -83,7 +83,7 @@ Scene Studio 上下文中的场景是包含以下元素的项目：
 
 1. 选择 **添加映像** 以将映像添加到环境中：
 
-    ![将图像添加到环境中](../assets/images/apps-in-meetings/addimages.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="将图像添加到环境中。":::
 
     >[!NOTE]
     >可以下载 [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) ，并 [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) 包含图像的文件。
@@ -104,7 +104,7 @@ Scene Studio 上下文中的场景是包含以下元素的项目：
 
 1. 为参与者选择 **会议组织者** 或 **演示者** 角色。 在会议中，必须为一名参与者分配会议组织者的角色：
 
-    ![分配专色](../assets/images/apps-in-meetings/assign-spot.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="为参与者分配一个位置。":::
 
 1. 选择“**保存**”，然后选择“**在 Teams 中查看**”，以在 Microsoft Teams 中快速测试场景。
 
