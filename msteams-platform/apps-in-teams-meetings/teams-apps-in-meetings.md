@@ -5,22 +5,41 @@ description: 本文介绍基于参与者、用户角色和应用扩展性的 Mic
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 8206695749f8b860c5bf0aba1612cbdbb9ccbd43
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 07008b23ad9f5df32c61b417ab7f49be6dbfe6e9
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484549"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561595"
 ---
-# <a name="apps-for-teams-meetings"></a>Teams 会议应用
+# <a name="apps-for-teams-meetings-and-calls"></a>Teams 会议和呼叫的应用
 
 会议可实现协作、合作、明智的沟通和共享反馈。 会议应用可以为会议生命周期的每个阶段提供用户体验。 会议生命周期包括会议前、会议内和会议后应用体验，具体取决于与会者的状态。
 
-用户可以使用日历中的选项卡库在会议期间访问应用，例如：
+> [!Note]
+>
+> 用于即时会议、一对一和组调用的应用目前仅在 [公共开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)中可用。
 
-* 预暂存看板。
-* 启动会议内可操作对话框。
-* 创建会议后调查。
+Teams 支持在会议期间针对以下会议类型访问应用：
+
+* [**计划会议**](https://support.microsoft.com/office/schedule-a-meeting-in-teams-943507a9-8583-4c58-b5d2-8ec8265e04e5#ID0EFBD=Desktop)：通过 Teams 日历安排的会议。
+* [**一对一呼叫**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798)：在一对一聊天中发起的呼叫。
+* [**组呼叫**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798)：在群聊中启动的呼叫。
+* [**即时会议**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)：Teams 日历中通过 **“立即开会”** 按钮启动的会议。
+
+用户可以使用 **+** Teams 会议窗口中的选项向会议添加应用。
+
+:::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="在会议中添加应用" border="true":::
+
+访问 [Teams 应用商店](https://go.microsoft.com/fwlink/p/?LinkID=2183121) 并浏览专为会议设计的应用。
+
+> [!Note]
+>
+> * 目前，移动版不支持添加应用。 但是，用户可以查看应用，并共享应用以从移动设备进行分阶段操作。
+>
+> * 当前，当第三人称添加到一对一呼叫时，调用将提升为组调用，这意味着新会话将启动。 添加到一对一调用的应用在组调用中不可用。 但是，可以再次添加它们。
+>
+> * 目前，Teams 频道会议不支持应用体验， (计划的会议和即时会议) 。
 
 下图提供了会议应用扩展性功能的概念：
 

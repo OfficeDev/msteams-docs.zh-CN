@@ -4,18 +4,18 @@ description: 在本模块中，了解如何快速尝试 Dice Roller 示例
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: caf2e7386c22f01edb43cf0ad5ec444d5e068d07
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668218"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484584"
 ---
 ---
 
 # <a name="quick-start-guide"></a>快速入门指南
 
-使用 Dice Roller 示例开始使用 Live Share SDK。 此快速入门是 [Fluid Framework 快速入门](https://fluidframework.com/docs/start/quick-start/)的演变，旨在快速在计算机的 localhost 上运行基于 Live Share SDK 的 [Dice Scroll 示例](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)。
+使用 Dice Roller 示例的 Live Share SDK 快速入门是 [Fluid Framework 快速入门](https://fluidframework.com/docs/start/quick-start/)的演变，旨在快速在计算机的 localhost 上运行基于 Live Share SDK 的 [Dice Scroll 示例](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)。
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller 示例":::
 
@@ -24,7 +24,7 @@ ms.locfileid: "65668218"
 
 ## <a name="set-up-your-development-environment"></a>设置开发环境
 
-若要开始，请安装以下内容：
+若要开始，请安装：
 
 * [Node.js](https://nodejs.org/en/download)：Live Share SDK 支持 Node.js LTS 版本 12.17 及更高版本。
 * [最新版本的 Visual Studio Code](https://code.visualstudio.com/)。

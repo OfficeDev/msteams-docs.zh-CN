@@ -18,7 +18,7 @@
 - name: 入门
   expanded: false
   items:
-    - name: 入门概述
+    - name: 概述
       href: get-started/get-started-overview.md
     - name: 使用 JavaScript 生成第一个选项卡应用
       href: sbs-gs-javascript.yml
@@ -110,7 +110,7 @@
           href: toolkit/provision.md
         - name: 将 Teams 应用部署到云
           href: toolkit/deploy.md
-        - name: 预览和自定义 Teams 应用清单
+        - name: 编辑 Teams 应用清单
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: 自定义 Azure AD 清单
           href: toolkit/AAD-manifest-customization.md
@@ -128,7 +128,7 @@
           href: toolkit/publish.md
         - name: 管理多个环境
           href: toolkit/TeamsFx-multi-env.md
-        - name: 在 Teams 工具包上与其他开发人员协作
+        - name: 协作处理 Teams 项目
           href: toolkit/TeamsFx-collaboration.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
@@ -164,7 +164,7 @@
               items:
                 - name: 与机器人之间的个人对话
                   href: resources/bot-v3/bot-conversations/bots-conv-personal.md
-                - name: 与机器人之间的频道和群组对话
+                - name: 频道和群组聊天聊天机器人
                   href: resources/bot-v3/bot-conversations/bots-conv-channel.md
                 - name: 开始对话
                   href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
@@ -210,7 +210,7 @@
       href: tabs/how-to/create-tab-pages/content-page.md
     - name: 创建配置页
       href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: 创建删除页面
+    - name: 创建删除页
       href: tabs/how-to/create-tab-pages/removal-page.md
     - name: 移动设备上的选项卡
       href: tabs/design/tabs-mobile.md
@@ -241,9 +241,9 @@
           items:
             - name: 使用 RSC 接收所有频道消息
               href: bots/how-to/conversations/channel-messages-with-rsc.md
-        - name: 为机器人创建命令菜单
+        - name: 创建命令菜单
           href: bots/how-to/create-a-bot-commands-menu.md
-        - name: 频道和群组对话
+        - name: 使用机器人进行频道和群组对话
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Teams 智能机器人中的对话活动
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
@@ -251,13 +251,13 @@
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: 设置你的智能机器人邮件格式
           href: bots/how-to/format-your-bot-messages.md
-        - name: 更新和删除机器人消息
+        - name: 更新和删除机器人发送的消息
           href: bots/how-to/update-and-delete-bot-messages.md
         - name: 请求自动程序的标题
           href: bots/how-to/conversations/request-headers-of-the-bot.md
-    - name: 获取机器人的背景资料
+    - name: 获取机器人的 Teams 特定上下文
       href: bots/how-to/get-teams-context.md
-    - name: 发送和接收文件
+    - name: 使用机器人发送和接收文件
       href: bots/how-to/bots-filesv4.md
     - name: 通过团队中的速率限制来优化你的智能机器人
       href: bots/how-to/rate-limit.md
@@ -271,11 +271,11 @@
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: 来电通知
           href: bots/calls-and-meetings/call-notifications.md
-        - name: 应用程序托管的媒体
+        - name: 应用程序托管的媒体机器人的要求和注意事项
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-        - name: 支持的媒体格式
+        - name: 支持用于机器人的媒体格式
           href: resources/media-formats.md
-    - name: 为团队和聊天成更改机器人 API
+    - name: Teams 机器人 API 在提取团队或聊天成员方面的更改
       href: resources/team-chat-member-api-changes.md
 - name: 构建消息扩展
   items:
@@ -285,9 +285,9 @@
       items:
         - name: 定义操作命令
           href: messaging-extensions/how-to/action-commands/define-action-command.md
-        - name: 创建任务模块
+        - name: 创建和发送任务模块
           href: messaging-extensions/how-to/action-commands/create-task-module.md
-        - name: 响应操作命令
+        - name: 响应任务模块提交操作
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
     - name: 搜索命令
       items:
@@ -313,7 +313,7 @@
           href: apps-in-teams-meetings/teams-live-share-overview.md
         - name: 入门
           items:
-            - name: 快速启动
+            - name: 快速入门指南
               href: apps-in-teams-meetings/teams-live-share-quick-start.md
             - name: Dice Roller 教程
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
@@ -393,11 +393,11 @@
               href: tabs/how-to/authentication/tab-sso-register-aad.md
             - name: 添加代码以启用 SSO
               href: tabs/how-to/authentication/tab-sso-code.md
-            - name: 更新 SSO 和预览版的应用清单
+            - name: 更新 SSO 的应用清单并预览应用
               href: tabs/how-to/authentication/tab-sso-manifest.md
             - name: 授予 Microsoft Graph 权限和范围
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-            - name: 疑难解答
+            - name: SSO 身份验证故障排除
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
         - name: 使用第三方 OAuth IdP 身份验证
           items:
@@ -425,7 +425,7 @@
   items:
     - name: 概述
       href: concepts/device-capabilities/device-capabilities-overview.md
-    - name: 请求设备权限
+    - name: 请求 Teams 应用的设备权限
       href: concepts/device-capabilities/native-device-permissions.md
     - name: 浏览器的设备权限
       href: concepts/device-capabilities/browser-device-permissions.md
@@ -469,7 +469,7 @@
       href: concepts/build-and-test/test-app-overview.md
     - name: 准备 Microsoft 365 租户
       href: concepts/build-and-test/prepare-your-o365-tenant.md
-    - name: 选择测试设置
+    - name: 选择测试设置并调试 Teams 应用
       href: concepts/build-and-test/debug.md
     - name: 向环境中添加测试数据
       href: concepts/build-and-test/test-data.md
@@ -479,7 +479,7 @@
           href: tabs/how-to/developer-tools.md
     - name: 机器人
       items:
-        - name: 使用 IDE 在本地调试机器人
+        - name: 使用 IDE 在本地测试和调试机器人
           href: bots/how-to/debug/locally-with-an-ide.md
         - name: 使用检查中间件调试机器人
           href: /azure/bot-service/bot-service-debug-inspection-middleware
@@ -497,11 +497,11 @@
   items:
     - name: 概述
       href: concepts/deploy-and-publish/apps-publish-overview.md
-    - name: 配置默认安装选项
+    - name: 为 Teams 应用配置默认安装选项
       href: concepts/deploy-and-publish/add-default-install-scope.md
-    - name: 创建应用包
+    - name: 创建 Teams 应用包
       href: concepts/build-and-test/apps-package.md
-    - name: 上传应用
+    - name: 在 Teams 中上传应用
       href: concepts/deploy-and-publish/apps-upload.md
     - name: 发布到组织
       href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
@@ -511,13 +511,13 @@
           href: concepts/deploy-and-publish/appsource/publish.md
         - name: 查看商店验证指南
           href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-        - name: 创建合作伙伴中心帐户
+        - name: 创建合作伙伴中心开发者帐户
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-        - name: 准备应用商店提交
+        - name: 准备 Teams 应用商店提交
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
         - name: 提交你的应用
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-        - name: 解决应用商店提交失败时的问题
+        - name: 解决 Teams 应用商店提交失败的问题
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: 维护已发布的应用程序
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
@@ -529,7 +529,7 @@
   items:
     - name: 概述
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    - name: 在应用中包含 SaaS 产品/服务
+    - name: 在 Teams 应用中包含 SaaS 产品/服务
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - name: 应用内购买
       href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
@@ -537,13 +537,13 @@
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: 应用部件清单
   items:
-    - name: 应用程序清单架构
+    - name: Teams 的应用清单架构
       href: resources/schema/manifest-schema.md
     - name: 公共开发人员预览版
       items:
         - name: 概述
           href: resources/dev-preview/developer-preview-intro.md
-        - name: 清单架构
+        - name: Teams 的公共开发人员预览清单架构
           href: resources/schema/manifest-schema-dev-preview.md
 - name: 与Teams整合
   items:
@@ -595,7 +595,7 @@
           href: concepts/build-and-test/apps-localization.md
         - name: 本地化 JSON 架构参考
           href: resources/schema/localization-schema.md
-    - name: 使用无提示的身份验证
+    - name: 在 Azure AD 中使用无提示身份验证
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: SameSite cookie 属性
       href: resources/samesite-cookie-update.md

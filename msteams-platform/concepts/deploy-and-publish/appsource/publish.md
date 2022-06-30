@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 11893cb2db927935d399d83794b7680560adcc7d
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189925"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485732"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -120,7 +120,7 @@ ms.locfileid: "66189925"
 
         1. 如果应用需要更多配置来访问应用功能，请设置说明。 或者，如果应用需要复杂的配置，还可以提供 [预配的演示租户](/office/developer-program/microsoft-365-developer-program-get-started) 管理员访问权限，以便验证程序可以跳过配置步骤。
 
-        1. 关于应用的密钥用户流的演示视频的链接。强烈建议这样做。
+        1. 演示应用的关键用户流的视频链接。 强烈推荐。
 
 * **应用提交后**
 

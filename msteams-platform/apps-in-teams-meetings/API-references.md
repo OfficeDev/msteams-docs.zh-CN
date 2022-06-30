@@ -1,16 +1,16 @@
 ---
 title: 会议应用 API 参考
 author: surbhigupta
-description: 了解如何使用示例和代码示例标识会议应用 API 引用，Teams应用会议用户角色 api 用户上下文通知信号查询。
+description: 了解如何使用示例和代码示例、Teams 应用会议用户角色 api 用户上下文通知信号查询来标识会议应用 API 引用。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: ac940438d78d941069f779150a74cfc85b1e2b95
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ba0f3758cf08649100cbc564c60eab3a86e3d155
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189440"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561607"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -27,7 +27,7 @@ ms.locfileid: "66189440"
 
 |方法| 说明| 源|
 |---|---|----|
-|[**获取用户上下文**](#get-user-context-api)| 获取上下文信息，以便在Microsoft Teams选项卡中显示相关内容。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**获取用户上下文**](#get-user-context-api)| 获取上下文信息，以便在 Microsoft Teams 选项卡中显示相关内容。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**获取参与者**](#get-participant-api)| 通过会议 ID 和参与者 ID 提取参与者信息。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**发送会议内通知**](#send-an-in-meeting-notification)| 使用用户机器人聊天的现有对话通知 API 提供会议信号，并允许通知显示会议内通知的用户操作。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**获取会议详细信息**](#get-meeting-details-api)| 获取会议的静态元数据。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -125,6 +125,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    },
    "conversation":{
       "id":"<conversation id>",
+      "conversationType": "groupChat", 
       "isGroup":true
    }
 }
@@ -135,7 +136,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | 属性名称 | 用途 |
 |---|---|
 | **user.id** | 用户的 ID。 |
-| **user.aadObjectId** | Azure Active Directory用户的对象 ID。 |
+| **user.aadObjectId** | 用户的 Azure Active Directory 对象 ID。 |
 | **user.name** | 用户名。 |
 | **user.givenName** | 用户的名字。|
 | **user.surname** | 用户的姓氏。 |
@@ -346,7 +347,10 @@ POST /v3/conversations/{conversationId}/activities
 </details>
 
 > [!NOTE]
-> 机器人可以通过将 `ChannelMeeting.ReadBasic.Group` 添加到清单以获得 RSC 权限，自动从所有频道中创建的所有会议接收会议开始或结束事件。
+>
+> * 机器人可以通过将 `ChannelMeeting.ReadBasic.Group` 添加到清单以获得 RSC 权限，自动从所有频道中创建的所有会议接收会议开始或结束事件。
+>
+> * 对于一对一呼叫 `organizer` ，是聊天的发起者，组呼叫 `organizer` 是呼叫发起者。
 
 ### <a name="query-parameter"></a>查询参数
 
@@ -367,7 +371,11 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-不可用
+```javascript
+
+Not available
+
+```
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -377,29 +385,108 @@ GET /v1/meetings/{meetingId}
 
 会议详细信息 API 的 JSON 响应正文如下所示：
 
-```json
-{ 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "Scheduled" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupchat", 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" 
+* **计划的会议：**
+
+    ```json
+
+    {
+       "details":  { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "Scheduled" 
+         },
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+             }, 
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    } 
+    ```
+
+* **一对一调用：**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "OneToOneCall"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer  ": {
+             "id": "<organizer user ID>",
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
     }
-} 
-```
+    
+    ```
+
+* **组调用：**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "GroupCall",
+             "joinUrl": "https://teams.microsoft.com/l/xx"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer": {
+             "id": "<organizer user ID>",
+             "objectId": "<organizer object ID>",
+             "aadObjectId": "<AAD object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    }
+    
+    ```
+
+* **即时会议：**
+
+    ```json
+    { 
+       "details": { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "MeetNow" 
+         }, 
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+         },
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>", 
+             "tenantId": "<Tenant ID>" ,
+             "objectId": "<organizer object ID>"
+         }
+    }
+    
+    ```
 
 ---
 
@@ -411,13 +498,13 @@ GET /v1/meetings/{meetingId}
 | **details.scheduledEndTime** | 会议的预定结束时间，以 UTC 表示。 |
 | **details.joinUrl** | 用于加入会议的 URL。 |
 | **details.title** | 会议标题。 |
-| **details.type** | 会议的类型 - 例如 Adhoc、Broadcast、MeetNow、Recurring、Scheduled、Unknown。 |
+| **details.type** | 会议的类型 - 例如 GroupCall、OneToOneCall、Adhoc、Broadcast、MeetNow、Recurring、Scheduled、Unknown。 |
 | **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
 | **conversation.conversationType** | 会话类型。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **organizer.id** | 组织者的用户 ID。 |
-| **organizer.aadObjectId** | 组织者的Azure Active Directory对象 ID。 |
-| **organizer.tenantId** | 组织者的Azure Active Directory租户 ID。 |
+| **organizer.aadObjectId** | 组织者的 Azure Active Directory 对象 ID。 |
+| **organizer.tenantId** | 组织者的 Azure Active Directory 租户 ID。 |
 
 在定期会议类型中，
 
@@ -427,11 +514,11 @@ GET /v1/meetings/{meetingId}
 
 ## <a name="send-real-time-captions-api"></a>发送实时字幕 API
 
-发送实时字幕 API 公开 POST 终结点，用于Teams通信访问实时翻译 (CART) 字幕（人为型隐藏字幕）。 发送到此终结点的文本内容在启用了字幕时，会显示在Teams会议中的最终用户。
+发送实时字幕 API 公开了一个 POST 终结点，用于 Teams 通信访问实时翻译 (CART) 字幕（人为型隐藏字幕）。 发送到此终结点的文本内容在启用了字幕时，会显示在 Teams 会议中的最终用户。
 
 ### <a name="cart-url"></a>CART URL
 
-可以在Teams会议的 **“会议选项**”页中获取 POST 终结点的 CART URL。 有关详细信息，请参阅 [Microsoft Teams 会议中的 CART 字幕](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 无需修改 CART URL 即可使用 CART 字幕。
+可以从 Teams 会议中的 **“会议选项** ”页获取 POST 终结点的 CART URL。 有关详细信息，请参阅 [Microsoft Teams 会议中的 CART 字幕](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 无需修改 CART URL 即可使用 CART 字幕。
 
 #### <a name="query-parameter"></a>查询参数
 
@@ -540,7 +627,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>获取应用内容演示区域共享状态 API
 
-使用 `getAppContentStageSharingState` API 可以获取有关移动版和桌面版会议阶段应用共享的信息。
+`getAppContentStageSharingState` API 能够帮助获取有关应用在会议演示区域共享的内容信息。
 
 ### <a name="query-parameter"></a>查询参数
 
@@ -618,6 +705,9 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
 | **1000** | 应用没有允许共享登台的权限。|
 
 ## <a name="get-real-time-teams-meeting-events-api"></a>获取实时 Teams 会议事件 API
+
+> [!NOTE]
+> 实时 Teams 会议事件仅支持计划的会议。
 
 用户可以接收实时会议事件。 只要任何应用与会议关联，就会与机器人共享会议实际开始时间和结束时间。 会议实际开始和结束时间不同于计划的开始和结束时间。 会议详细信息 API 提供计划的开始和结束时间。 该事件提供实际开始和结束时间。
 
@@ -819,7 +909,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **from.id** | 发送请求的用户 ID。 |
 | **from.aadObjectId** | 发送请求的用户的 Azure Active Directory 对象 ID。 |
 | **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
-| **conversation.tenantId** | Azure Active Directory会话或会议的租户 ID。 |
+| **conversation.tenantId** | 会话或会议的 Azure Active Directory 租户 ID。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **recipient.id** | 接收请求的用户的 ID。 |
 | **recipient.name** | 接收请求的用户的名称。 |
@@ -841,10 +931,10 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 |示例名称 | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| 会议扩展性 | Teams用于传递令牌的会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| 会议内容气泡机器人 | Teams会议扩展性示例，用于在会议中与内容气泡机器人交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| 会议的 meetingSidePanel | Teams会议扩展性示例，用于与会中侧面板交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会议中的“详细信息”选项卡 | Teams会议扩展性示例，用于与会议中的“详细信息”选项卡进行交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| 会议扩展性 | 用于传递令牌的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会议内容气泡机器人 | 用于在会议中与内容气泡机器人交互的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| 会议的 meetingSidePanel | 用于与会中侧面板交互的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| 会议中的“详细信息”选项卡 | 用于与会议中的“详细信息”选项卡交互的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |会议事件示例|显示实时 Teams 会议事件的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |会议招聘示例|显示招聘情景的会议体验的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |使用 QR 代码安装应用|生成 QR 代码并使用 QR 代码安装应用的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
