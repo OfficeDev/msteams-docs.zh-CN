@@ -5,12 +5,12 @@ description: 规划应用、了解用户及其需求、应用解决的问题、�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 01dfa683150070a2508173fb55991388ad877517
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 60b0d1ed461ec7c632b1d488c65ac2c43f05f3ac
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123109"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558126"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams 应用规划清单
 
@@ -129,7 +129,7 @@ ms.locfileid: "66123109"
 
 Teams 不托管你的应用。 当用户在 Teams 中安装你的应用时，他们安装的应用包仅包含配置文件 (也称为应用清单) 以及应用的图标。 应用的逻辑和数据存储托管在其他地方，如开发期间的本地主机和 Azure Web 服务。 Teams 通过 HTTPS 访问这些资源。
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="显示 Teams 应用的应用托管插图" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="显示 Teams 应用的应用托管插图":::
 
 ## <a name="plan-beyond-app-building"></a>应用生成之外的计划
 

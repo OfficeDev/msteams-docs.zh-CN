@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 8bbfac3f72fb9ddbfb21d36f4a1ad2516af52b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073298"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558056"
 ---
 # <a name="in-app-purchases"></a>应用内购买
 
@@ -87,21 +87,21 @@ Microsoft Teams 提供可用于实现应用内购买的 API，以从免费升级
 
 1. 在应用详细信息对话框中，选择“**购买订阅**”或“**为我添加**”。
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="购买所选应用的订阅。" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="购买所选应用的订阅。":::
 
 1. “**为我添加**”提供应用的免费试用版，稍后可以将其“**升级**”为付费版本。
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="升级到所选应用的订阅。" lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="升级到所选应用的订阅。" lightbox="../../../../assets/images/saas-offer/upgradeapp.png":::
 
 1. 在“**选择订阅计划**”对话框中，选择计划，然后选择“**结账**”。
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="选择相应的订阅计划。" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="选择相应的订阅计划。" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png":::
 
 1. 完成交易并选择“**立即配置**”以设置订阅。
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="设置订阅。" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="设置订阅。" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="订阅的登陆页面。" lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="订阅的登陆页面。" lightbox="../../../../assets/images/saas-offer/getstarted.png":::
 
 ## <a name="next-step"></a>后续步骤
 

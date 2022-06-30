@@ -5,18 +5,18 @@ description: 在本模块中，了解如何设计 Teams 应用的任务模块并
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9649f39720587d678573b99719db8d91ba5465b4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143016"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558112"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计任务模块
 
 可以使用任务模块在 Teams 应用中创建模式弹出式体验。 使用此功能可显示丰富的媒体和信息，或完成复杂的任务。
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="示例显示任务模块。" border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="示例显示任务模块。":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
@@ -43,7 +43,7 @@ ms.locfileid: "66143016"
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="插图显示了移动端任务模块的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="插图显示了移动端任务模块的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -55,7 +55,7 @@ ms.locfileid: "66143016"
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="插图显示了任务模块的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="插图显示了任务模块的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -82,11 +82,11 @@ ms.locfileid: "66143016"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="移动设备上任务模块中的示例列表。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="移动设备上任务模块中的示例列表。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="任务模块中的示例列表。" border="false":::
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="任务模块中的示例列表。":::
 
 ### <a name="form"></a>表单
 
@@ -94,11 +94,11 @@ ms.locfileid: "66143016"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="移动设备上任务模块中的示例表单。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="移动设备上任务模块中的示例表单。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/form.png" alt-text="任务模块中的示例表单。" border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="任务模块中的示例表单。":::
 
 ### <a name="sign-in"></a>登录
 
@@ -106,11 +106,11 @@ ms.locfileid: "66143016"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="移动设备上任务模块中的登录体验示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="移动设备上任务模块中的登录体验示例。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="任务模块中的登录体验示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="任务模块中的登录体验示例。":::
 
 ### <a name="media"></a>媒体
 
@@ -118,11 +118,11 @@ ms.locfileid: "66143016"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="移动设备上任务模块中的示例媒体内容。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="移动设备上任务模块中的示例媒体内容。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="任务模块中的示例媒体内容。" border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="任务模块中的示例媒体内容。":::
 
 ### <a name="empty-state"></a>空状态
 
@@ -130,11 +130,11 @@ ms.locfileid: "66143016"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="移动设备上任务模块中的示例空状态。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="移动设备上任务模块中的示例空状态。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="任务模块中的示例空状态。" border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="任务模块中的示例空状态。":::
 
 ### <a name="image-gallery"></a>图像库
 
@@ -142,11 +142,11 @@ ms.locfileid: "66143016"
 
 ##### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="移动设备上任务模块中的示例图像库。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="移动设备上任务模块中的示例图像库。":::
 
 ##### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="任务模块中的示例图像库。" border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="任务模块中的示例图像库。":::
 
 ### <a name="poll"></a>投票
 
@@ -154,11 +154,11 @@ ms.locfileid: "66143016"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="移动设备上任务模块中的示例投票。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="移动设备上任务模块中的示例投票。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="任务模块中的示例投票。" border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="任务模块中的示例投票。":::
 
 ## <a name="best-practices"></a>最佳实践
 
@@ -168,7 +168,7 @@ ms.locfileid: "66143016"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="显示任务模块最佳做法(一次一个任务模块)的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="显示任务模块最佳做法(一次一个任务模块)的示例。":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>请执行: 一次使用一个任务模块
 
@@ -176,7 +176,7 @@ ms.locfileid: "66143016"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="显示任务模块最佳做法(在任务模块的顶部弹出对话框)的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="显示任务模块最佳做法(在任务模块的顶部弹出对话框)的示例。":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>请勿执行: 在任务模块顶部弹出对话框
 
@@ -189,7 +189,7 @@ ms.locfileid: "66143016"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="显示任务模块最佳做法(请确保内容快速响应)的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="显示任务模块最佳做法(请确保内容快速响应)的示例。":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>请执行: 确保内容快速响应
 
@@ -197,7 +197,7 @@ ms.locfileid: "66143016"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="显示任务模块最佳做法(不使用水平滚动条)的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="显示任务模块最佳做法(不使用水平滚动条)的示例。":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>请勿执行: 使用水平滚动条
 
@@ -210,7 +210,7 @@ ms.locfileid: "66143016"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="显示任务模块最佳做法(保持简短)的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="显示任务模块最佳做法(保持简短)的示例。":::
 
 #### <a name="do-keep-it-short"></a>请执行: 保持简短。
 
@@ -218,7 +218,7 @@ ms.locfileid: "66143016"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="显示任务模块最佳做法(请勿有长交互)的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="显示任务模块最佳做法(请勿有长交互)的示例。":::
 
 #### <a name="dont-have-long-interactions"></a>请勿执行: 具有长交互
 
@@ -231,7 +231,7 @@ ms.locfileid: "66143016"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="显示任务模块最佳做法(使用内联错误信息)的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="显示任务模块最佳做法(使用内联错误信息)的示例。":::
 
 #### <a name="do-use-inline-error-messages"></a>执行: 使用内联错误信息
 
@@ -239,7 +239,7 @@ ms.locfileid: "66143016"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="显示任务模块最佳做法(将错误信息放在对话框中)的示例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="显示任务模块最佳做法(将错误信息放在对话框中)的示例。":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>请勿执行: 将错误信息放在对话框中
 

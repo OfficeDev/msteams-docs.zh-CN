@@ -5,12 +5,12 @@ description: 了解如何使用 Microsoft Teams 中常见的标准化 UI 组件�
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c4a8b0b626092e4980ccac95f98148829dc06ccd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484817"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558721"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>使用 UI 模板设计 Microsoft Teams 应用
 
@@ -53,12 +53,12 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 ### <a name="top-use-cases"></a>最主要用例
 
 * 安排会议和活动
-* 获取即将召开的会议和活动的提醒。
+* 获取即将召开的会议和活动的提醒
 * 查看计划
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="示例显示桌面上的日历 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="示例显示桌面上的日历 UI 模板。":::
 
 ## <a name="dashboard"></a>仪表板
 
@@ -68,15 +68,15 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 * 分析数据
 * 报表指标
-* 在一个位置组织不同的信息。
+* 在一个位置组织不同的信息
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="示例显示移动设备上的仪表板 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="示例显示移动设备上的仪表板 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="示例显示桌面上的仪表板 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="示例显示桌面上的仪表板 UI 模板。":::
 
 ## <a name="data-visualization"></a>数据可视化
 
@@ -84,16 +84,16 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ### <a name="top-use-cases"></a>最主要用例
 
-* 显示复杂信息。
-* 创建仪表板。
+* 显示复杂信息
+* 创建仪表板
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="示例显示移动设备上的数据可视化 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="示例显示移动设备上的数据可视化 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="示例显示桌面上的数据可视化 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="示例显示桌面上的数据可视化 UI 模板。":::
 
 ## <a name="empty-state"></a>空状态
 
@@ -102,17 +102,17 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 ### <a name="top-use-cases"></a>最主要用例
 
 * 登录
-* 欢迎消息和首次运行体验。
+* 欢迎消息和首次运行体验
 * 成功消息
 * 错误消息
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="示例显示移动设备上的空状态 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="示例显示移动设备上的空状态 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="示例显示桌面上的空状态 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="示例显示桌面上的空状态 UI 模板。":::
 
 ## <a name="filter"></a>筛选器
 
@@ -127,7 +127,7 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 * 仪表板
 * 数据可视化
 
-:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="示例显示筛选器模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="示例显示筛选器模板。":::
 
 ## <a name="form"></a>表单
 
@@ -142,11 +142,11 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="示例显示移动设备上的窗体 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="示例显示移动设备上的窗体 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/form.png" alt-text="示例显示桌面上的窗体 UI 模板。" border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="示例显示桌面上的窗体 UI 模板。":::
 
 ## <a name="list"></a>列表
 
@@ -159,11 +159,11 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="示例显示移动设备上的列表 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="示例显示移动设备上的列表 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="示例显示桌面上的列表 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="示例显示桌面上的列表 UI 模板。":::
 
 ## <a name="sign-in"></a>登录
 
@@ -175,11 +175,11 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="示例显示移动设备上的登录 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="示例显示移动设备上的登录 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="示例显示桌面上的登录 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="示例显示桌面上的登录 UI 模板。":::
 
 ## <a name="settings"></a>设置
 
@@ -189,7 +189,7 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 * 管理应用功能
 
-:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="示例显示设置模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="示例显示设置模板。":::
 
 ## <a name="task-board"></a>任务板
 
@@ -203,11 +203,11 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="示例显示移动版上的任务板 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="示例显示移动版上的任务板 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="示例显示桌面上的任务板 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="示例显示桌面上的任务板 UI 模板。":::
 
 ## <a name="wizard"></a>向导
 
@@ -221,11 +221,11 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="示例显示移动设备上的向导 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="示例显示移动设备上的向导 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="示例显示桌面上的向导 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="示例显示桌面上的向导 UI 模板。":::
 
 ## <a name="see-also"></a>另请参阅
 

@@ -5,12 +5,12 @@ description: 了解如何在 Teams 会议中为应用设计会议扩展。 使�
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 7df89357f5c052fec5ff2a82cd721b9b7c06da94
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484662"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558084"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -21,7 +21,7 @@ ms.locfileid: "66484662"
 可以在 Microsoft Teams UI 工具包中找到更全面的设计准则，包括可以根据需要获取和修改的元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展插件
 
@@ -31,7 +31,7 @@ ms.locfileid: "66484662"
 
 在会议详细信息中，用户可以选择 **“添加选项卡 +** ”以打开应用浮出控件并查找针对会议优化的应用。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="示例演示如何在会议前添加会议扩展名。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="示例演示如何在会议前添加会议扩展名。":::
 
 ### <a name="add-during-a-meeting"></a>在会议期间添加
 
@@ -39,23 +39,23 @@ ms.locfileid: "66484662"
 
 添加应用 (例如，在桌面) 上，用户可以通过选择 **“更多**:::image type="icon" source="../../assets/icons/teams-client-more.png":::”来访问会议中的应用。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="示例演示如何在移动设备上的会议期间添加会议扩展。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="示例演示如何在移动设备上的会议期间添加会议扩展。":::
 
 #### <a name="desktop"></a>桌面
 
 在会议中，用户可以选择 **“更多**:::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **添加应用**”并选择所需的应用。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="示例演示如何在会议期间添加会议扩展名。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="示例演示如何在会议期间添加会议扩展名。":::
 
 ## <a name="before-a-meeting"></a>会议前
 
 在会议之前，你的应用可供选项卡中的用户使用。下面的示例演示了人们将在会议期间回答的调查问题草稿。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="示例演示如何在通话前在会议详细信息中应用内容。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="示例演示如何在通话前在会议详细信息中应用内容。":::
 
 ### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>解剖：会议前后 (“会议”选项卡) 
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="示例演示会议前后会议选项卡的结构解剖。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="示例演示会议前后会议选项卡的结构解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -88,15 +88,15 @@ ms.locfileid: "66484662"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="示例演示如何在移动设备上的会议内选项卡中显示投票内容。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="示例演示如何在移动设备上的会议内选项卡中显示投票内容。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="示例演示如何在会议内选项卡中显示轮询内容。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="示例演示如何在会议内选项卡中显示轮询内容。":::
 
 ### <a name="anatomy-in-meeting-tab"></a>解剖：会议内选项卡
 
-:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="示例显示会议内选项卡的结构解剖。" border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="示例显示会议内选项卡的结构解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -111,7 +111,7 @@ ms.locfileid: "66484662"
 
 优化会议内选项卡，以在 280 像素宽的 iframe 区域内调整边缘到边缘。 iframe 的左侧和右侧以及选项卡标头之间有 20 像素的填充。 iframe 已完全出血到选项卡底部。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="示例显示会议内选项卡间距维度。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="示例显示会议内选项卡间距维度。":::
 
 ### <a name="scrolling"></a>滚动
 
@@ -121,13 +121,13 @@ ms.locfileid: "66484662"
 * 用户只能看到已滚动到 (的内容，) 或更低。
 * 滚动条是 iframe 内容的一部分。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="示例演示会议中选项卡的滚动方式。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="示例演示会议中选项卡的滚动方式。":::
 
 ### <a name="navigation"></a>导航
 
 对于具有导航层或大量内容的方案，建议允许用户导航到辅助层。 用户必须能够返回到上一层。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="示例显示会议内导航。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="示例显示会议内导航。":::
 
 ## <a name="use-an-in-meeting-dialog"></a>使用会议内对话框
 
@@ -144,15 +144,15 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="示例演示如何在移动设备上使用会议内对话框。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="示例演示如何在移动设备上使用会议内对话框。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text=" 示例演示如何使用会议内对话框。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text=" 示例演示如何使用会议内对话框。":::
 
 ### <a name="anatomy-in-meeting-dialog"></a>解剖：会议内对话框
 
-:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="示例演示会议内对话框的结构解剖。" border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="示例演示会议内对话框的结构解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -161,7 +161,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>解剖：会议内对话框标头
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="示例显示会议内对话标题的结构解剖。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="示例显示会议内对话标题的结构解剖。":::
 
 有两个标头变体。 如果可能，请将变体与头像配合使用，以增强对话框来自一个人。
 
@@ -180,7 +180,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 * **宽度**：可以在受支持的大小范围内的任何位置指定对话框 iframe 的宽度。
 * **高度**：可以在受支持大小范围内的任何位置指定对话框 iframe 的高度。 如果应用内容超过最大高度，还可以允许用户垂直滚动。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="示例显示会议内对话框。宽度：最小 280 像素 (248 像素的 iframe) 。最大 460 像素 (428 像素的 iframe) 。高度：300 像素 (iframe) 。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="示例显示会议内对话框。宽度：最小 280 像素 (248 像素的 iframe) 。最大 460 像素 (428 像素的 iframe) 。高度：300 像素 (iframe) 。":::
 
 ## <a name="use-the-shared-meeting-stage"></a>使用共享会议阶段
 
@@ -209,9 +209,9 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="示例显示在共享会议阶段查看的仪表板。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="示例显示在共享会议阶段查看的仪表板。":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="示例显示正在共享会议阶段查看的仪表板组件。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="示例显示正在共享会议阶段查看的仪表板组件。":::
 
    :::column-end:::
 :::row-end:::
@@ -224,7 +224,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="示例显示共享会议阶段上的白板。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="示例显示共享会议阶段上的白板。":::
 
    :::column-end:::
 :::row-end:::
@@ -237,14 +237,14 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="示例显示共享会议阶段的测验。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="示例显示共享会议阶段的测验。":::
 
    :::column-end:::
 :::row-end:::
 
 ### <a name="anatomy-share-all-app-content-to-a-meeting"></a>解剖：将所有应用内容共享到会议
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="图像显示共享会议阶段在共享所有应用内容时的设计解剖。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="图像显示共享会议阶段在共享所有应用内容时的设计解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -256,7 +256,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 ### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>解剖：将特定应用内容共享到会议
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="图像显示仅共享特定应用内容时共享的共享会议阶段的设计解剖。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="图像显示仅共享特定应用内容时共享的共享会议阶段的设计解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -277,19 +277,19 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 当侧面板未打开时，默认情况下会议阶段为 994x678 像素，可以是至少 792x382 像素。
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="显示已关闭侧面板的共享会议阶段响应能力的图像。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="显示已关闭侧面板的共享会议阶段响应能力的图像。":::
 
 #### <a name="meeting-stage-with-side-panel"></a>使用侧面板) 的会议阶段 (
 
 当侧面板打开时，默认情况下会议阶段为 918x540 像素，并且可以是至少 472x382 像素。
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="显示共享会议阶段响应的图像，侧面板已打开。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="显示共享会议阶段响应的图像，侧面板已打开。":::
 
 ## <a name="after-a-meeting"></a>会议后
 
 可以在会议结束后返回会议并查看应用内容。 在此示例中，会议组织者可以在 **Contoso** 选项卡中查看投票结果。 (注意：从设计角度来看，会前和会后选项卡体验之间没有区别。) 
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示会后选项卡。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="示例插图显示会后选项卡。":::
 
 ## <a name="best-practices"></a>最佳做法
 
@@ -299,7 +299,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="演示如何限制交互数的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="演示如何限制交互数的示例。":::
 
 #### <a name="do-limit-the-number-of-interactions"></a>请执行以下操作：限制交互数
 
@@ -307,7 +307,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="演示如何不引入不必要的元素的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="演示如何不引入不必要的元素的示例。":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>不要：引入不必要的元素
 
@@ -318,7 +318,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="演示如何创建重点环境的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="演示如何创建重点环境的示例。":::
 
 #### <a name="do-create-a-focused-environment"></a>请执行以下操作：创建重点环境
 
@@ -326,7 +326,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="演示如何在会议期间不包含相互竞争的图面的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="演示如何在会议期间不包含相互竞争的图面的示例。":::
 
 #### <a name="dont-include-competing-surfaces"></a>不要：包括相互竞争的表面
 
@@ -339,7 +339,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="演示应如何使用单列对话布局的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="演示应如何使用单列对话布局的示例。":::
 
 #### <a name="do-use-a-one-column-dialog"></a>请执行以下操作：使用单列对话框
 
@@ -347,7 +347,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="显示不应混乱会议扩展空间的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="显示不应混乱会议扩展空间的示例。":::
 
 #### <a name="dont-clutter-the-space"></a>不要：杂乱无章的空间
 
@@ -358,7 +358,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="显示单列选项卡布局的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="显示单列选项卡布局的示例。":::
 
 #### <a name="do-use-a-one-column-tab"></a>请执行以下操作：使用单列选项卡
 
@@ -366,7 +366,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="显示包含多个列的选项卡的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="显示包含多个列的选项卡的示例。":::
 
 #### <a name="dont-use-multiple-columns"></a>不要：使用多个列
 
@@ -379,7 +379,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="演示如何右对齐主控件的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="演示如何右对齐主控件的示例。":::
 
 #### <a name="do-right-align-the-primary-action"></a>请执行以下操作：右对齐主要操作
 
@@ -387,7 +387,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="示例显示不应如何使主控件保持对齐。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="示例显示不应如何使主控件保持对齐。":::
 
 #### <a name="dont-left-or-center-align-actions"></a>不要：左对齐或居中对齐操作
 
@@ -401,9 +401,9 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="显示会议内选项卡中的垂直滚动的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="显示会议内选项卡中的垂直滚动的示例。":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="显示共享会议阶段中的垂直滚动的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="显示共享会议阶段中的垂直滚动的示例。":::
 
 #### <a name="do-scroll-vertically"></a>请执行以下操作：垂直滚动
 
@@ -412,9 +412,9 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="显示会议内选项卡中水平滚动的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="显示会议内选项卡中水平滚动的示例。":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="显示共享会议阶段的水平滚动的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="显示共享会议阶段的水平滚动的示例。":::
 
 #### <a name="dont-scroll-horizontally"></a>不要：水平滚动
 
@@ -427,7 +427,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="显示会议内选项卡中的复杂方案的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="显示会议内选项卡中的复杂方案的示例。":::
 
 #### <a name="do-surface-complex-scenarios-in-the-in-meeting-tab"></a>Do：会议内选项卡中的 Surface 复杂方案
 
@@ -435,7 +435,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="显示会议内对话框中的复杂方案的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="显示会议内对话框中的复杂方案的示例。":::
 
 #### <a name="dont-make-in-meeting-dialogs-complex"></a>不要：使会议内对话变得复杂
 
@@ -449,9 +449,9 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="显示带有深色主题的会议扩展的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="显示带有深色主题的会议扩展的示例。":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="另一个示例显示具有深色主题的会议扩展。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="另一个示例显示具有深色主题的会议扩展。":::
 
 #### <a name="do-focus-on-dark-theme"></a>请执行以下操作：关注深色主题
 
@@ -460,9 +460,9 @@ Teams 会议针对深色主题进行了优化，有助于减少视觉和认知�
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="显示与会议主题不匹配的颜色的会议扩展的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="显示与会议主题不匹配的颜色的会议扩展的示例。":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="另一个示例显示与会议主题不匹配的颜色的会议扩展插件。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="另一个示例显示与会议主题不匹配的颜色的会议扩展插件。":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>不要：使用不熟悉的颜色
 
@@ -475,7 +475,7 @@ Teams 会议针对深色主题进行了优化，有助于减少视觉和认知�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="显示带有后退按钮的会议扩展的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="显示带有后退按钮的会议扩展的示例。":::
 
 #### <a name="do-have-a-back-button"></a>做：有一个后退按钮
 
@@ -483,7 +483,7 @@ Teams 会议针对深色主题进行了优化，有助于减少视觉和认知�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="显示具有两个消除按钮的会议扩展的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="显示具有两个消除按钮的会议扩展的示例。":::
 
 #### <a name="dont-include-another-dismiss-button"></a>不要：包括另一个“关闭”按钮
 
@@ -496,7 +496,7 @@ Teams 会议针对深色主题进行了优化，有助于减少视觉和认知�
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="显示在会议中选项卡内) 模式 (或任务模块的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="显示在会议中选项卡内) 模式 (或任务模块的示例。":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>注意：避免会议内选项卡中的模式
 
@@ -509,7 +509,7 @@ Teams 会议针对深色主题进行了优化，有助于减少视觉和认知�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="演示如何正确调整会议扩展大小的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="演示如何正确调整会议扩展大小的示例。":::
 
 #### <a name="do-resize-and-scale-your-app-responsively"></a>执行以下操作：快速调整应用大小和缩放应用
 
@@ -517,7 +517,7 @@ Teams 会议针对深色主题进行了优化，有助于减少视觉和认知�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="演示如何不正确调整会议扩展大小的示例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="演示如何不正确调整会议扩展大小的示例。":::
 
 #### <a name="dont-crop-or-clip-primary-ui-components"></a>不要：裁剪或剪辑主 UI 组件
 

@@ -3,38 +3,38 @@ title: 从 Web 应用共享到 Teams
 description: 使用代码示例，了解如何通过网站预览将“共享到 Teams”嵌入式按钮添加到网站上。
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: de5bf1d762a39b5dce222cd4260f03bf461f5547
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190021"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558476"
 ---
 # <a name="share-to-teams-from-web-apps"></a>从 Web 应用共享到 Teams
 
-第三方网站可使用启动器脚本将“共享到 Teams”按钮添加到其网页上。 选择“共享以Teams”按钮时，它会在弹出窗口中启动“共享”以Teams体验。 这使你无需切换上下文，即可将链接直接共享给任何人或任何 Microsoft Teams 频道。
+第三方网站可使用启动器脚本将“共享到 Teams”按钮添加到其网页上。 选择“共享到 Teams”按钮时，它会在弹出窗口中启动“共享到 Teams”体验。 这使你无需切换上下文，即可将链接直接共享给任何人或任何 Microsoft Teams 频道。
 
-下图显示“共享Teams预览体验的弹出窗口：
+下图显示“共享到 Teams”预览体验的弹出窗口：
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="共享到Teams弹出窗口" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="“共享到 Teams”弹出窗口":::
 
 > [!NOTE]
 >
 > * 仅支持桌面版的 Microsoft&nbsp;Edge 和 Google Chrome。
 > * 不支持使用免费增值或来宾帐户。
 
-还可以为通过“共享”共享的链接添加链接，以Teams Web 应用、个人应用或选项卡中托管的按钮。有关详细信息，请参阅[链接展开](~/messaging-extensions/how-to/link-unfurling.md)。
+还可以为 Web 应用、个人应用或选项卡中托管的“共享到 Teams”按钮共享的链接添加链接展开。有关详细信息，请参阅 [链接展开](~/messaging-extensions/how-to/link-unfurling.md)。
 
-下图显示通过“共享到Teams”按钮展开体验的链接：
+下图显示通过“共享到 Teams”按钮展开体验的链接：
 
-:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="“共享到Teams”链接展开" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="“共享到 Teams”链接展开":::
 
 > [!NOTE]
-> 将共享展开链接到Teams当前仅在公共开发人员预览版中可用。
+> 将共享展开链接到 Teams 目前仅在公共开发人员预览版中可用。
 
-本文介绍如何为网站创建和嵌入“共享到Teams”按钮、制作网站预览版，以及如何将“共享”扩展到Teams 教育版。
+本文介绍如何为网站创建和嵌入“共享到 Teams”按钮、制作网站预览版，以及如何将“共享”扩展到Teams 教育版。
 
-请参阅以下视频，了解如何将“共享”嵌入到Teams按钮：
+请参阅以下视频，了解如何嵌入“共享到 Teams”按钮：
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
@@ -57,11 +57,11 @@ ms.locfileid: "66190021"
     </div>
     ```
 
-    完成此操作后，Teams图标将添加到网站。 下图显示了“共享到 Teams”图标：
+    完成此操作后，Teams 图标将添加到您的网站。 下图显示了“共享到 Teams”图标：
 
-    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="“共享到 Teams”图标" border="true":::
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="“共享到 Teams”图标":::
 
-1. 或者，如果希望共享Teams按钮具有不同的图标大小，请使用该`data-icon-px-size`属性。
+1. 或者，如果希望“共享到 Teams”按钮的图标大小不同，请使用该 `data-icon-px-size` 属性。
 
     ```html
     <div
@@ -71,7 +71,7 @@ ms.locfileid: "66190021"
     </div>
     ```
 
-1. 如果共享链接需要用户身份验证，并且链接中的 URL 预览无法在Teams中很好地呈现，则可以通过将属性集添加`data-preview`到`false`该属性来禁用 URL 预览。
+1. 如果共享链接需要用户身份验证，并且要共享的链接中的 URL 预览在 Teams 中呈现不正常，则可以通过将属性设置添加 `data-preview` 到 `false`来禁用 URL 预览。
 
     ```html
     <div
@@ -115,7 +115,7 @@ ms.locfileid: "66190021"
 
 ## <a name="share-to-teams-for-education"></a>“共享到 Teams”教育版
 
-对于使用“共享”Teams按钮的教师，还有一个额外的选项`Create an Assignment`可用于根据共享链接在所选团队中快速创建作业。 下图显示了“共享到 Teams”教育版：
+对于使用“共享到 Teams”按钮的教师，还有一个附加选项 `Create an Assignment` ，可让你基于共享链接在所选团队中快速创建作业。 下图显示了“共享到 Teams”教育版：
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="“共享到 Teams”弹出窗口教育版":::
 

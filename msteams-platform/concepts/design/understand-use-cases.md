@@ -5,12 +5,12 @@ description: 在本文中，你将了解 Microsoft Teams 应用功能、规划�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: c2fc61024a9f0c2d9bcf21b549e226b0d264305d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142470"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558441"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
@@ -53,7 +53,7 @@ ms.locfileid: "66142470"
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Teams 客户端中个人应用的外观的概念表示形式。" border="false":::
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Teams 客户端中个人应用的外观的概念表示形式。":::
 
    :::column-end:::
 
@@ -70,7 +70,7 @@ ms.locfileid: "66142470"
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Teams 客户端中选项卡外观的概念表示形式。" border="false":::
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Teams 客户端中选项卡外观的概念表示形式。":::
 
    :::column-end:::
 
@@ -87,7 +87,7 @@ ms.locfileid: "66142470"
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="在 Teams 客户端中机器人外观的概念表示形式。" border="false":::
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="在 Teams 客户端中机器人外观的概念表示形式。":::
 
    :::column-end:::
 
@@ -105,7 +105,7 @@ ms.locfileid: "66142470"
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="消息扩展在 Teams 客户端中的外观的概念表示形式。" border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="消息扩展在 Teams 客户端中的外观的概念表示形式。":::
 
    :::column-end:::
 :::row-end:::
@@ -122,7 +122,7 @@ ms.locfileid: "66142470"
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Teams 客户端中会议扩展的外观的概念表示形式。" border="false":::
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Teams 客户端中会议扩展的外观的概念表示形式。":::
 
    :::column-end:::
 :::row-end:::
@@ -139,7 +139,7 @@ ms.locfileid: "66142470"
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="连接器在 Teams 客户端中的外观的概念表示形式。" border="false":::
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="连接器在 Teams 客户端中的外观的概念表示形式。":::
 
    :::column-end:::
 :::row-end:::
@@ -156,7 +156,7 @@ ms.locfileid: "66142470"
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-graph.png" alt-text="适用于 Teams 的 Microsoft Graph API 的概念表示形式。" border="false":::
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="适用于 Teams 的 Microsoft Graph API 的概念表示形式。":::
 
    :::column-end:::
 :::row-end:::

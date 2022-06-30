@@ -5,12 +5,12 @@ description: 了解 Teams UI 组件，如痕迹、通知栏、阶段视图以及
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 055ee4440982add222b76454f1ff4382f129ff21
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485719"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558840"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI 组件设计 Microsoft Teams 应用
 
@@ -21,7 +21,7 @@ ms.locfileid: "66485719"
 Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>，包括专为构建 Teams 应用而设计的组件和模式。 在 UI 工具包中，可以直接将此处列出的组件抓取并插入到设计中，并查看有关如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>痕迹导航栏
 
@@ -34,11 +34,11 @@ Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.wind
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="示例显示移动设备上的痕迹清理模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="示例显示移动设备上的痕迹清理模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="示例演示桌面上的痕迹清理模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="示例演示桌面上的痕迹清理模板。":::
 
 ## <a name="left-nav"></a>左导航
 
@@ -51,11 +51,11 @@ Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.wind
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="示例显示移动版上的左导航模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="示例显示移动版上的左导航模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="示例显示桌面上的左导航模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="示例显示桌面上的左导航模板。":::
 
 ## <a name="notification-bar"></a>通知栏
 
@@ -65,17 +65,17 @@ Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.wind
 
 ### <a name="top-use-cases"></a>最主要用例
 
-* 关键消息、错误和警告。
+* 关键消息、错误和警告
 * 成功消息
 * 信息性或促销性消息
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="示例显示移动设备上的通知栏 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="示例显示移动设备上的通知栏 UI 模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="示例显示桌面上的通知栏 UI 模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="示例显示桌面上的通知栏 UI 模板。":::
 
 ## <a name="stage-view"></a>阶段视图
 
@@ -85,18 +85,18 @@ Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.wind
 
 ### <a name="top-use-cases"></a>最主要用例
 
-* 在 Teams 内部的大型图面中显示内容，而不是其他应用或浏览器。
+* 在 Teams 内部的大型图面中显示内容，而不是其他应用或浏览器
 * 聚焦媒体或其他丰富内容
 
 ### <a name="mobile"></a>移动设备
 
 应用可以从自适应卡片、共享链接或视觉组件（例如图表) ） (启动阶段。
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="示例显示移动设备上的阶段模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="示例显示移动设备上的阶段模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="示例显示桌面上的阶段模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="示例显示桌面上的阶段模板。":::
 
 ## <a name="toolbar"></a>工具栏
 
@@ -110,8 +110,8 @@ Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.wind
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="示例显示移动设备上的工具栏模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="示例显示移动设备上的工具栏模板。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="示例显示桌面上的工具栏模板。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="示例显示桌面上的工具栏模板。":::

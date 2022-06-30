@@ -4,12 +4,12 @@ description: 在本文章中，可获取在使用 Moodle LMS 时一些常见问�
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 45323bf169be059f96cedb797c29d9408f3564e6
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c617b3db7982e192db6cde9375be751e2cf2bf26
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143100"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558294"
 ---
 # <a name="moodle-faq"></a>Moodle 常见问题解答
 
@@ -53,9 +53,9 @@ ms.locfileid: "66143100"
 
 下图显示了用户创建限制选项：
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
 
 <br>
 
@@ -71,11 +71,11 @@ ms.locfileid: "66143100"
 
 下图显示了 **允许在课程中配置课程同步** 选项：
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="管理员" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="管理员":::
 
 下图显示了课程同步：
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="同步" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="同步":::
 
 <br>
 
@@ -123,11 +123,11 @@ ms.locfileid: "66143100"
 
 下图显示了用户使用 Microsoft 365 凭据登录时收到的错误消息：
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="报告问题" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="报告问题":::
 
 下图显示了 Azure 门户中的错误：
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure 门户" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure 门户":::
 
 如果 **客户端密码** 已过期，则用户需要生成新的 **客户端密码**，并更新页面上的配置。 用户可以在更新 **客户端密码** 后重新登录，这可能需要长达 24 小时才能重新预配。
 
@@ -143,7 +143,7 @@ ms.locfileid: "66143100"
 
 下图显示了团队实例：
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="团队实例" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="团队实例":::
 
 <br>
 
@@ -160,7 +160,7 @@ ms.locfileid: "66143100"
 
 下图显示了工具栏配置调整后的工具栏图标：
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="工具栏" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="工具栏":::
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="链接图标":::
 

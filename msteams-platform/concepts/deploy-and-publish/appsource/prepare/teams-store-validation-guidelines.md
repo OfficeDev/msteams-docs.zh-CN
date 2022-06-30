@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 45c19a5d7089fae85326e303641a8c9a281c7eb0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503737"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558119"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -25,67 +25,67 @@ ms.locfileid: "66503737"
 
 :::row:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" border="false":::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security" border="false":::
+     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/function.png" alt-text="功能" link="#general-functionality-and-performance" border="false":::
+      :::image type="content" source="../../../../assets/icons/function.png" alt-text="功能" link="#general-functionality-and-performance":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing" border="false":::
+      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer" border="false":::
+      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="saas" link="#apps-linked-to-saas-offer":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs" border="false":::
+      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs":::
    :::column-end:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1" border="false":::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions" border="false":::
+     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="messaging" link="#message-extensions":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules" border="false":::
+      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules":::
    :::column-end:::
      :::column span="":::
-      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions" border="false":::
+      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2" border="false":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications" border="false":::
+      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program" border="false":::
+      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising" border="false":::
+      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1" border="false":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1":::
    :::column-end:::
 :::row-end:::
 
 ## <a name="value-proposition"></a>价值主张
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略编号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements)，并为 Microsoft Teams 应用的开发人员提供有关其产品/服务价值主张的其他准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业认证策略编号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements)，并为 Microsoft Teams 应用的开发人员提供有关其产品/服务价值主张的其他准则。
 
 ### <a name="app-name"></a>应用名称
 
 [*强制修复*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 Microsoft [商业认证策略编号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name)，并为开发人员提供有关命名其应用的其他准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 Microsoft [商业认证策略编号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name)，并为开发人员提供有关命名其应用的其他准则。
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 
@@ -119,7 +119,7 @@ ms.locfileid: "66503737"
 
 [*强制修复*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 Microsoft 商业认证策略号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value) 和 [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content)，并为开发人员提供了有关构建适合工作场所的应用的其他准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 Microsoft 商业认证策略号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value) 和 [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content)，并为开发人员提供了有关构建适合工作场所的应用的其他准则。
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 
@@ -133,7 +133,7 @@ ms.locfileid: "66503737"
 
 [*强制修复*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业认证策略号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services)。
 
 应用必须专注于 Teams 体验，并且应用内容或应用元数据中不应包括其他类似的基于聊天的协作平台或服务的名称、图标或图像，除非应用提供特定的互操作性。
 
@@ -145,7 +145,7 @@ ms.locfileid: "66503737"
 
 [*强制修复*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services)，并为开发人员提供关使用外部服务为其应用进行身份验证的其他准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业认证策略 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services)，并为开发人员提供关使用外部服务为其应用进行身份验证的其他准则。
 
 若要详细了解如何实施应用身份验证，请参阅 [Teams 中的身份验证](~/concepts/authentication/authentication.md)。
 <br></br>
@@ -169,13 +169,13 @@ ms.locfileid: "66503737"
 
 ## <a name="security"></a>安全性
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略号 1140.3](/legal/marketplace/certification-policies#11403-security)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业认证策略号 1140.3](/legal/marketplace/certification-policies#11403-security)。
 
 ### <a name="financial-information"></a>财务信息
 
 [*强制修复*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业认证策略号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions)，并提供了有关在 Teams 界面中传输财务信息的准则，并通知了开发人员其 Teams 应用的移动 (Android 和 iOS) 版本的受限付款方案。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业认证策略号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions)，并提供了有关在 Teams 界面中传输财务信息的准则，并通知了开发人员其 Teams 应用的移动 (Android 和 iOS) 版本的受限付款方案。
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 
@@ -205,7 +205,7 @@ ms.locfileid: "66503737"
 
 [*强制修复*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension)。
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 
@@ -221,7 +221,7 @@ ms.locfileid: "66503737"
 
 [*强制修复*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains)，并提供了有关在 `validDomains` 清单属性中使用受限域的开发人员准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains)，并提供了有关在 `validDomains` 清单属性中使用受限域的开发人员准则。
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 
@@ -246,7 +246,7 @@ ms.locfileid: "66503737"
 
 ## <a name="general-functionality-and-performance"></a>常规功能和性能
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4](/legal/marketplace/certification-policies#11404-functionality)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.4](/legal/marketplace/certification-policies#11404-functionality)。
 
 ### <a name="launching-external-functionality"></a>正在启动外部功能
 
@@ -486,7 +486,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="apps-linked-to-saas-offer"></a>链接到 SaaS 产品/服务的应用
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673)。 如果要生成链接到 SaaS 产品/服务的 Teams 应用，请确保它遵守这些准则。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673)。 如果要生成链接到 SaaS 产品/服务的 Teams 应用，请确保它遵守这些准则。
 <br></br>
 <details><summary>常规</summary>
 
@@ -545,7 +545,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="tabs"></a>选项卡
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.2](/legal/marketplace/certification-policies#114042-tabs)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.4.2](/legal/marketplace/certification-policies#114042-tabs)。
 如果你的应用包含选项卡，请确保它遵守这些准则。
 > [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 设计指南](~/tabs/design/tabs.md)。
@@ -696,7 +696,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="bots"></a>机器人
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.3](/legal/marketplace/certification-policies#114043-bots)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.4.3](/legal/marketplace/certification-policies#114043-bots)。
 
 如果你的应用包含机器人，请确保它遵守这些准则。
 
@@ -824,7 +824,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="message-extensions"></a>消息扩展
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions)。
 
 如果应用包含消息扩展，请确保它遵守这些准则。
 
@@ -902,7 +902,7 @@ Teams 应用清单定义应用的配置。
 
 [*强制修复*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules)。
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 
@@ -921,7 +921,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="meeting-extensions"></a>会议扩展
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions)。
 > [!TIP]
 > 有关创建高质量应用体验的详细信息，请参阅 [Teams 会议扩展设计准则](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
 
@@ -1008,7 +1008,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="notifications"></a>通知
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis)。
 
 如果你的应用使用[Microsoft Graph 提供的活动信息提要 API](/graph/teams-send-activityfeednotifications)，请确保它遵守以下准则。
 <br></br>
@@ -1044,7 +1044,7 @@ Teams 应用清单定义应用的配置。
 
 ## <a name="microsoft-365-app-compliance-program"></a>Microsoft 365 应用合规性
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation)。
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 
@@ -1056,13 +1056,13 @@ Microsoft 365 应用合规性计划 旨在帮助企业通过评估应用程序�
 
 * **发布者证明**: 共享常规、数据处理以及安全性和合规性信息的过程，以帮助潜在客户在使用应用时做出明智的决定。
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::如果提交之前未列出的应用，则在应用进入 Teams 商店之前，无法正式完成发布者证明。 如果正在更新列出的应用，请在提交最新版本的应用之前完成发布者证明。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::如果提交之前未列出的应用，则在应用进入 Teams 商店之前，无法正式完成发布者证明。 如果正在更新列出的应用，请在提交最新版本的应用之前完成发布者证明。
 
 </details>
 
 ## <a name="advertising"></a>广告
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false":::本部分符合 [Microsoft 商业市场策略编号1140.7](/legal/marketplace/certification-policies#11407-advertising)。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png":::本部分符合 [Microsoft 商业市场策略编号1140.7](/legal/marketplace/certification-policies#11407-advertising)。
 
 应用不得显示广告，包括动态广告、横幅广告和消息内广告。
 

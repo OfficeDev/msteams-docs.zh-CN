@@ -3,12 +3,12 @@ title: 为 Microsoft Teams 应用请求设备权限
 description: 如何更新应用清单，以请求访问需要用户同意的本机功能，例如扫描 QR、条形码、图像、音频和视频功能
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a573855b6512cdbfcebb12c305973f8ad23113d6
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e5ae6d2f5dda0d173e336b81d696de8847f591a2
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484486"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557713"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>请求 Teams 应用的设备权限
 
@@ -25,11 +25,11 @@ ms.locfileid: "66484486"
 必须请求设备权限才能访问本机设备功能。 设备权限同样适用于所有应用构造，例如选项卡、任务模块或消息传递扩展。 用户必须转到 Teams 设置中的权限页面才能管理设备权限。 你可以借助设备功能在 Teams 平台上构建更丰富的体验，例如：必须请求设备权限才能访问本机设备功能。 设备权限对所有应用程序构造（如选项卡、任务模块或消息扩展）的作用类似。 用户必须转到 Teams 设置中的权限页面才能管理设备权限。
 通过访问设备功能，您可以在 Teams 平台上构建更丰富的体验，例如：
 
-* 捕获和查看图像。
-* 扫描 QR 或条形码。
-* 录制和分享短视频。
-* 录制音频备忘录并将其保存以备日后使用。
-* 使用用户的位置信息以显示相关信息。
+* 捕获和查看图像
+* 扫描 QR 或条形码
+* 录制和共享短视频
+* 录制音频备忘录并保存它们供以后使用
+* 使用用户的位置信息显示相关信息
 
 > [!NOTE]
 >
@@ -56,7 +56,7 @@ ms.locfileid: "66484486"
 
     <!-- ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png) -->
 
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="移动权限。" border="true":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="移动权限。":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
@@ -67,7 +67,7 @@ ms.locfileid: "66484486"
 
    <!-- ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="设备权限。" border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="设备权限。":::
 
 ---
 
@@ -228,13 +228,13 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
    <!-- ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="移动位置权限。" border="true":::
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="移动位置权限。":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
-   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="桌面中的设备权限。" border="true":::
+   :::image type="content" source="~/assets/images/tabs/device-permissions-prompt.png" alt-text="桌面中的设备权限。":::
 
 ---
 

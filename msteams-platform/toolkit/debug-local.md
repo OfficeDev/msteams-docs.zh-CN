@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 3b6d9ee830fcf1cb50e02138cf3b9b8ca952225f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142225"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557881"
 ---
 # <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
 
@@ -70,29 +70,29 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 
 1. 在活动栏的“**运行和调试**”中，选择“**调试 Edge**”或“**调试 Chrome**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器选项" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器选项":::
 
 1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="开始调试" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="开始调试":::
 
 3. 选择“**登录**”到 Microsoft 365 帐户。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="登录" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="登录":::
 
    > [!TIP]
    > 可以选择“**阅读更多**”，以了解Microsoft 365 开发人员计划。 打开默认 Web 浏览器，使用凭据登录到 Microsoft 365 帐户。
 
 4. 选择“**安装**”，以安装本地主机的开发证书。
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="证书" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="证书":::
 
    > [!TIP]
    > 可以选择“**了解**”有关开发证书的详细。
 
 5. 如果出现以下对话框，请选择“**是**”：
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="证书颁发机构" border="true":::：
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="证书颁发机构":::：
 
 工具包根据所选内容启动新的 Edge 或 Chrome 浏览器实例，并打开网页以加载 Teams 客户端。  
 
@@ -100,29 +100,29 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 
 1. 在活动栏的“**运行和调试**”中，选择“**调试 Edge**”或“**调试 Chrome**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器列表" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="浏览器列表":::
 
 1. 选择“**开始调试(F5)**”或“**运行**”，以在调试模式下运行 Teams 应用。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="调试应用" border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="调试应用":::
 
 3. 选择“**登录**”到 Microsoft 365 帐户。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="登录到 Microsoft 365 帐户" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="登录到 Microsoft 365 帐户":::
 
    > [!TIP]
    > 可以选择“**阅读更多**”，以了解Microsoft 365 开发人员计划。 打开默认 Web 浏览器，使用凭据登录到 Microsoft 365 帐户。
 
 4. 选择“**安装**”，以安装本地主机的开发证书。
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="证书" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="证书":::
 
    > [!TIP]
    > 可以选择“**了解**”有关开发证书的详细。
 
 5. 输入“**用户名**”和“**密码**”，然后在以下对话框中选择“**更新设置**”：
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac 登录" border="true":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="mac 登录":::
 
 工具包根据所选内容启动新的 Edge 或 Chrome 浏览器实例，并打开网页以加载 Teams 客户端。
 
@@ -179,7 +179,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 
 配置“**连接到前端**”或“**启动自动程序**”，启动新的 Edge 或 Chrome 浏览器实例，并打开网页以加载 Teams 客户端。 加载 Teams 客户端后，Teams 会旁加载由Teams 应用，此应用由 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) 启动配置中定义的旁加载 URL 控制。 当 Teams 客户端在 Web 浏览器中加载时，请选择“**添加**”或根据要求从下拉列表中选择一项。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="本地调试" border="true":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="本地调试":::
 
    你的应用已添加到 Teams！
 

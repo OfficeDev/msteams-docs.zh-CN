@@ -1,15 +1,15 @@
 ---
 title: 将机器人添加到 Microsoft Teams 应用
-description: 在本模块中，了解如何开始在Microsoft Teams中开发机器人，以及在Teams中添加机器人的所有要求
+description: 在本模块中，了解如何开始在 Microsoft Teams 中开发机器人，以及在 Teams 中添加机器人的所有要求
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: f3102e8a6a3fd424a4f4f25995d74911c83930ee
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 31a88b169173aab179581acc9b038670f0c8112c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189744"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558609"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>将机器人添加到 Microsoft Teams 应用
 
@@ -20,7 +20,7 @@ ms.locfileid: "66189744"
 > [!IMPORTANT]
 > 目前，机器人在政府社区云 (GCC) 和GCC-High中可用，但在国防部 (DOD) 中不可用。
 
-:::image type="content" source="../../assets/images/bot_example.png" alt-text="帮助用户的机器人示例" border="true":::
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="帮助用户的机器人示例":::
 
 ## <a name="what-you-need-to-know-bots"></a>需要了解的内容：机器人
 
@@ -34,11 +34,11 @@ ms.locfileid: "66189744"
 
 有关详细信息，请参阅 [与 Microsoft Teams 机器人进行对话。](~/resources/bot-v3/bot-conversations/bots-conversations.md)
 
-使用Teams应用，可以使机器人成为你体验的明星，或者只是一个帮助程序。 机器人作为更广泛的应用包的一部分分发，其中可能包括其他功能，例如[选项卡](~/tabs/what-are-tabs.md)或[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
+借助 Teams 应用，可以使机器人成为你体验的明星，或者只是一个帮助者。 机器人作为更广泛的应用包的一部分分发，其中可能包括其他功能，例如[选项卡](~/tabs/what-are-tabs.md)或[消息扩展](~/messaging-extensions/what-are-messaging-extensions.md)。
 
 ## <a name="bot-apis"></a>机器人 API
 
-Teams支持大多数[Microsoft Bot Framework](https://dev.botframework.com/)。  (如果已有基于 Bot Framework 的机器人，则可以轻松地使其适应 Teams.) 我们建议使用 C# 或Node.js来利用我们的 [SDK](/microsoftteams/platform/#pivot=sdk-tools)。 这些工具包拓展了基本机器人生成器 SDK 的类和方法：
+Teams 支持大部分[Microsoft Bot Framework](https://dev.botframework.com/)。  (如果已有基于 Bot Framework 的机器人，可以轻松地将其调整为在 Teams 中工作。) 我们建议使用 C# 或Node.js来利用我们的 [SDK](/microsoftteams/platform/#pivot=sdk-tools)。 这些工具包拓展了基本机器人生成器 SDK 的类和方法：
 
 * 使用专用卡类型，例如 Office 365 连接器卡。
 * 在活动上使用和设置 Teams 特定的频道数据。
@@ -59,7 +59,7 @@ SDK 扩展安装依赖项，包括 Bot Builder SDK。
 
 ## <a name="build-a-great-teams-bot"></a>生成优秀的 Teams 机器人
 
-以下文章将指导你完成创建适用于Teams的出色机器人的过程：
+以下文章将指导你完成为 Teams 创建出色机器人的过程：
 
 * [创建机器人](~/resources/bot-v3/bots-create.md)：利用 Bot Framework 团队提供的出色工具、文档和社区。
 * [与机器人对话](~/resources/bot-v3/bot-conversations/bots-conversations.md)：添加基本聊天流并利用特定于频道的功能。 如果在 .NET 或 Node.js 中进行开发，请使用适用于 Bot Builder SDK 的扩展来简化工作。

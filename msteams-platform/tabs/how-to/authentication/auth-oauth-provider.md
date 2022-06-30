@@ -3,12 +3,12 @@ title: 使用外部 OAuth 提供程序
 description: 在本模块中，了解如何使用外部 OAuth 提供程序进行身份验证，以及如何将其添加到外部浏览器
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 8a7d89bbe3c6109e52a4d22f4bc26eace7acc5d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a27d4fdb861ef7e893807af7a4427662a61fa021
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142274"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558763"
 ---
 # <a name="use-external-oauth-providers"></a>使用外部 OAuth 提供程序
 
@@ -44,7 +44,7 @@ function authenticate(authenticateParameters?: AuthenticateParameters)
 
 下图提供了向外部浏览器添加身份验证的流：
 
- :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth" border="true":::
+ :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
 
 **向外部浏览器添加身份验证**
 

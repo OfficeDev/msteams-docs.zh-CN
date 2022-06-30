@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: d14be8730ba59a94947c595c7bfb5a2ff079259d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142883"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558833"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams 应用设计系统
 
@@ -29,7 +29,7 @@ ms.locfileid: "66142883"
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Teams 布局的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Teams 布局的概念图。":::
    :::column-end:::
 
 :::row-end:::
@@ -47,7 +47,7 @@ ms.locfileid: "66142883"
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Teams 头像的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Teams 头像的概念图。":::
 
    :::column-end:::
 :::row-end:::
@@ -68,7 +68,7 @@ ms.locfileid: "66142883"
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Teams 图标的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Teams 图标的概念图。":::
 
    :::column-end:::
 :::row-end:::
@@ -87,7 +87,7 @@ ms.locfileid: "66142883"
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Teams 版式的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Teams 版式的概念图。":::
 
    :::column-end:::
 :::row-end:::
@@ -105,7 +105,7 @@ ms.locfileid: "66142883"
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Teams 颜色的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Teams 颜色的概念图。":::
    :::column-end:::
 
 :::row-end:::
@@ -124,7 +124,7 @@ ms.locfileid: "66142883"
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="形状和提升的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="形状和提升的概念图。":::
 
    :::column-end:::
 :::row-end:::
@@ -142,7 +142,7 @@ ms.locfileid: "66142883"
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="复制和内容的概念图。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="复制和内容的概念图。":::
 
    :::column-end:::
 :::row-end:::

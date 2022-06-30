@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 49bf74276053f927f0337882d6f278ca64494128
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: fe9bbbb7a6d3668f43c31322ad8099bf994051b1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484601"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558329"
 ---
 # <a name="teams-toolkit-overview"></a>Teams 工具包概述
 
@@ -29,7 +29,7 @@ Teams 工具包将构建 Teams 应用所需的所有工具集中在一处。
 
 Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的强大集成。 下图显示了 Teams 工具包用户旅程：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Teams 工具包的用户旅程" border="true" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Teams 工具包的用户旅程" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 此旅程的主要里程碑包括：
 
@@ -50,7 +50,7 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="工具包":::
 
-1. 选择“**安装**”。
+1. 选择“安装”。
   
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit.png" alt-text="安装工具包 4.0.0":::
 

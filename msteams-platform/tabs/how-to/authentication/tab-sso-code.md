@@ -3,13 +3,13 @@ title: 用于为选项卡启用 SSO 的代码配置
 description: 介绍为选项卡启用 SSO 的代码配置
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 身份验证选项卡 Microsoft Azure Active Directory (Azure AD) 图形 API
-ms.openlocfilehash: 3f095f3e2b0737b7afcdfe3bdcc96bd36d2f3847
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Azure AD) 图形 API Microsoft Azure Active Directory (团队身份验证选项卡
+ms.openlocfilehash: 0ce3e34f4cc36a3b4c08a21563261889266ebe79
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887934"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558728"
 ---
 # <a name="add-code-to-enable-sso"></a>添加代码以启用 SSO
 
@@ -20,7 +20,7 @@ ms.locfileid: "65887934"
 
 需要配置 Tab 应用的客户端代码，以从 Azure AD 获取访问令牌。 访问令牌代表选项卡应用颁发。 如果 Tab 应用需要其他 Microsoft Graph 权限，则需要将访问令牌传递给服务器端，并将其交换为 Microsoft Graph 令牌。
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="配置用于处理访问令牌的代码" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="配置用于处理访问令牌的代码":::
 
 本节介绍：
 

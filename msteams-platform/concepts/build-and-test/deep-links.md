@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 了解如何创建深层链接，以及如何在 Microsoft Teams 应用中使用和导航它们（带有选项卡）。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: afa3ea185247ab4edb5ada3b657c4d1259674bc5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150678"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485676"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -40,8 +40,8 @@ Microsoft Teams JavaScript 客户端 SDK (TeamsJS) 简化了导航过程。 对�
 >
 >跨 Microsoft 365 (Outlook/Office) 扩展的 Teams 应用的导航行为取决于两个因素：
 >
-> * 深层链接指向的目标
-> * 运行 Teams 应用的主机
+> * 深层链接指向的目标。
+> * 运行 Teams 应用的主机。
 >
 > 如果 Teams 应用在目标深层链接的主机内运行，则应用将直接在主机内打开。 但是，如果 Teams 应用在目标深层链接所在的不同主机中运行，则应用将首先在浏览器中打开。
 
@@ -207,29 +207,12 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ### <a name="open-a-scheduling-dialog"></a>打开计划对话框
 
-可以从 Teams 应用打开计划对话框，如以下代码所示。 如果你的应用帮助用户完成日历或计划相关任务，这尤其有用。
-
-# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
-
-```javascript
-// Open a scheduling dialog from your tab
-if(calendar.isSupported()) {
-   const calendarPromise = calendar.composeMeeting({
-      attendees: ["joe@contoso.com", "bob@contoso.com"],
-      content: "test content",
-      endTime: "2018-10-24T10:30:00-07:00"
-      startTime: "2018-10-24T10:00:00-07:00"
-      subject: "test subject"});
-   calendarPromise.
-      then((result) => {/*Successful operation*/}).
-      catch((error) => {/*Unsuccessful operation*/});
-}
-else { /* handle case where capability isn't supported */ }
-```
+> [!NOTE]
+> 为了在 Teams 中打开计划对话框，开发人员需要继续使用基于原始深层链接 URL 的方法，因为 Teams 尚不支持日历功能。
 
 有关使用日历的详细信息，请参阅 API 参考文档中的“[日历](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true)”命名空间。
 
-# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+### <a name="tabteams-js-v1"></a>选项卡/Teams JS v1
 
 ```javascript
 // Open a scheduling dialog from your tab

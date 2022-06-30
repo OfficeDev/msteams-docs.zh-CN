@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503646"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558574"
 ---
 # <a name="create-a-channel-tab"></a>创建频道选项卡
 
@@ -173,11 +173,11 @@ gulp build
 
 1. 在浏览器中输入 `http://localhost:3007/<yourDefaultAppNameTab>/` 以查看应用程序主页。
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="默认选项卡" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="默认选项卡":::
 
 1. 若要查看选项卡配置页面，请转到 `http://localhost:3007/<yourDefaultAppNameTab>/config.html`。 如下所示：
 
-    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="选项卡配置页面" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="选项卡配置页面":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
@@ -196,7 +196,7 @@ gulp ngrok-serve
 1. 选择“**管理应用**”和“**上传自定义应用**”。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择应用包压缩文件夹，然后选择“**打开**”。
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="上传的频道选项卡" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="上传的频道选项卡":::
 
 1. 选择对话框中的“**添加**”。 选项卡已上传到 Teams。
 
@@ -213,7 +213,7 @@ gulp ngrok-serve
 1. 按照添加选项卡的说明操作。频道或组选项卡有一个自定义配置对话框。
 1. 选择“**保存**”并将选项卡添加到频道的选项卡栏中。
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="已上传的“频道”选项卡" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="已上传的“频道”选项卡":::
 
     现在，你已成功创建并在 Teams 中添加频道或组选项卡。
 
@@ -433,7 +433,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 选择“**添加到团队**”以在团队中设置选项卡。 配置选项卡并选择“**保存**”。 选项卡现在 Teams 中可用。
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="上传的“频道”选项卡 ASPNET" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="上传的“频道”选项卡 ASPNET":::
 
     现在，你已成功创建并在 Teams 中添加频道或组选项卡。
 
@@ -651,7 +651,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 选择“**添加到团队**”以在团队中设置选项卡。 配置选项卡并选择“**保存**”。 选项卡现在 Teams 中可用。
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="频道选项卡 ASPNET MVC 已上传" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="频道选项卡 ASPNET MVC 已上传":::
 
     现在，你已成功创建并在 Teams 中添加频道或组选项卡。
 

@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: a9848ecf16dfb8ff4034dc26dd350ce71c8e656e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 2d1889de8cc5c36cde708f4d4628f6f61768e3f4
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485641"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557874"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>将云资源添加到 Teams 应用
 
@@ -44,7 +44,7 @@ TeamsFx 有助于预配应用程序托管的云资源。 可以选择性地添�
    1. 从左侧面板中选择 **Teams 工具包** 。
    1. 选择 **“开发**”下 **的“添加功能**”。
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="添加功能" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="添加功能":::
 
 * **若要使用命令面板添加云资源，请执行以下操作：**
 
@@ -52,11 +52,11 @@ TeamsFx 有助于预配应用程序托管的云资源。 可以选择性地添�
    1. 输入 **Teams：添加功能**。
    1. 按 Enter 键。
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="云" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="云":::
 
    1. 在弹出窗口中，选择要在项目中添加的云资源。
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="最后" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="最后":::
 
 ## <a name="add-cloud-resources-using-teamsfx-cli"></a>使用 TeamsFx CLI 添加云资源
 

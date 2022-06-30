@@ -3,13 +3,13 @@ title: 创建客户端机密
 description: 描述如何创建客户端机密
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 身份验证选项卡 Microsoft Azure Active Directory (Azure AD) 图形 API
-ms.openlocfilehash: 79116a0da845cd143de695424a904cf5b5968a15
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+keywords: Azure AD) 图形 API Microsoft Azure Active Directory (团队身份验证选项卡
+ms.openlocfilehash: 77d1c4e43c9bdfb9d2cb9e3e97ee3a26b8b0fa01
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887992"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558847"
 ---
 # <a name="create-client-secret"></a>创建客户端机密
 
@@ -23,7 +23,7 @@ ms.locfileid: "65887992"
 
    将显示 **“添加客户端机密** ”页。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="添加客户端机密页" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="添加客户端机密页":::
 
 3. 输入说明。
 4. 选择机密的有效期。

@@ -5,12 +5,12 @@ description: 了解如何在实时推送产品/服务之前，为 Teams 应用�
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123701"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558742"
 ---
 # <a name="test-preview-for-monetized-apps"></a>针对盈利应用的测试预览
 
@@ -26,11 +26,11 @@ ms.locfileid: "66123701"
 1. 为 SaaS 产品/服务添加 [预览版受众](/azure/marketplace/create-new-saas-offer-preview)。
 1. 选择“**上线发布**”下面的“**AppSource 预览**”链接，以在浏览器地址栏中查找采用 *publisherId.offerId-preview* 格式的预览版产品/服务 ID。
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="预览版产品/服务 ID" border="true" :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="预览版产品/服务 ID" :::
 
 1. 从浏览器地址栏复制预览版产品/服务 ID。
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="预览版产品/服务" border="true" :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="预览版产品/服务" :::
 
     > [!NOTE]
     > 与公共产品/服务 ID 不同，可以使用 *-preview* 后缀来识别预览产品/服务 ID。例如，**publisherId.offerId-preview**。
@@ -68,7 +68,7 @@ ms.locfileid: "66123701"
 
 如果在应用清单中指定了预览版产品/服务，并且预览版受众是在产品/服务的合作伙伴中心内定义的，则用户可以看到“**购买订阅**”按钮。
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="购买订阅" border="true":::
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="购买订阅":::
 
 ### <a name="error-scenarios"></a>错误方案
 
@@ -76,13 +76,13 @@ ms.locfileid: "66123701"
 
   找不到带有 **-preview** 的计划。 请确保你属于预览版受众。
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="无预览版受众" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="无预览版受众" :::
 
 * 如果应用清单中指定的产品/服务 ID 不是预览版产品/服务，应用将向用户显示以下警告消息，并禁用旁加载：
   
   这不是预览版产品/服务。 请务必将 **-preview** 追加到产品/服务 ID。
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="无 -preview" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="无 -preview" :::
 
 ## <a name="see-also"></a>另请参阅
 

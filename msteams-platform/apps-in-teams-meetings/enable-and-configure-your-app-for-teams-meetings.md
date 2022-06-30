@@ -4,12 +4,12 @@ author: surbhigupta
 description: 了解如何为 Teams 会议和不同的会议应用场景启用和配置应用、更新应用清单、配置功能等。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503359"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557734"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>为会议启用和配置应用
 
@@ -141,7 +141,7 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 
 会议内通知不得使用任务模块。 不会在会议聊天中调用任务模块。 外部资源 URL 用于显示会议内通知。 可以使用该 `submitTask` 方法在会议聊天中提交数据。
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text=" 示例演示如何使用会议内对话框。" border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text=" 示例演示如何使用会议内对话框。":::
 
 #### <a name="shared-meeting-stage"></a>共享会议演示区域
 

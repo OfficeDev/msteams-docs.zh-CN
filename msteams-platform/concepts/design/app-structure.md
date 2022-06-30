@@ -1,16 +1,16 @@
 ---
 title: 设计应用 - 了解应用结构
-description: 在本模块中，了解在设计应用结构时在Microsoft Teams中可以和无法自定义的内容。
+description: 在本模块中，了解在设计应用结构时可在 Microsoft Teams 中自定义的内容和不能自定义的内容。
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: cbcf44572b0105f9c0af4c7dc8cd0b00b6f5f9b9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6a409accc5f55aa0a9c245aa061efde5b67d81f3
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144395"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558756"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>了解Microsoft Teams结构
 
@@ -34,13 +34,13 @@ ms.locfileid: "66144395"
 
 画布是一个 Web 视图，因此可以完全自定义体验。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="显示开发人员可以为移动设备上的个人应用自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="显示开发人员可以为移动设备上的个人应用自定义的 Teams 前端区域的概念图。":::
 
 ### <a name="desktop"></a>桌面
 
 画布是一个 iframe，因此你可以完全自定义体验。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="显示开发人员可以为桌面设备上的个人应用自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="显示开发人员可以为桌面设备上的个人应用自定义的 Teams 前端区域的概念图。":::
 
 ## <a name="tabs"></a>选项卡
 
@@ -52,13 +52,13 @@ ms.locfileid: "66144395"
 
 画布是一个 Web 视图，因此可以完全自定义体验。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="显示开发人员可以为移动设备上的选项卡自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="显示开发人员可以为移动设备上的选项卡自定义的 Teams 前端区域的概念图。":::
 
 ### <a name="desktop"></a>桌面
 
 画布是一个 iframe，因此你可以完全自定义体验。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="显示开发人员可以为桌面设备上的选项卡自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="显示开发人员可以为桌面设备上的选项卡自定义的 Teams 前端区域的概念图。":::
 
 ## <a name="bots"></a>机器人
 
@@ -68,11 +68,11 @@ ms.locfileid: "66144395"
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="显示开发人员可以为移动设备上的机器人自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="显示开发人员可以为移动设备上的机器人自定义的 Teams 前端区域的概念图。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="显示开发人员可以为桌面设备上的机器人自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="显示开发人员可以为桌面设备上的机器人自定义的 Teams 前端区域的概念图。":::
 
 ## <a name="message-extensions"></a>消息扩展
 
@@ -82,11 +82,11 @@ ms.locfileid: "66144395"
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="显示开发人员可以为移动设备上的消息扩展自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="显示开发人员可以为移动设备上的消息扩展自定义的 Teams 前端区域的概念图。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="显示开发人员可以为桌面设备上的消息扩展自定义 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="显示开发人员可以为桌面设备上的消息扩展自定义 Teams 前端区域的概念图。":::
 
 ## <a name="meeting-extensions"></a>会议扩展
 
@@ -98,10 +98,10 @@ ms.locfileid: "66144395"
 
 图面是一个 Web 视图，允许你自定义体验，但请记住，在会议期间这些应用使用深色主题。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="显示开发人员可以为移动设备上的会议扩展自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="显示开发人员可以为移动设备上的会议扩展自定义的 Teams 前端区域的概念图。":::
 
 ### <a name="desktop"></a>桌面
 
 图面是一个 iframe，允许你自定义体验，但请记住，在会议期间这些应用使用深色主题，并且很窄。
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="显示开发人员可以为桌面上的会议扩展自定义的 Teams 前端区域的概念图。" border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="显示开发人员可以为桌面上的会议扩展自定义的 Teams 前端区域的概念图。":::

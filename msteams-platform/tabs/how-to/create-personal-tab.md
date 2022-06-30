@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: f06772cc6ba7975d0434e1c7c1c1c510ce760f6c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189467"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558392"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -58,7 +58,7 @@ ms.locfileid: "66189467"
 
 1. 为 Microsoft Teams 应用生成器提示的一系列问题提供值，以更新 `manifest.json` 文件。
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text=" Teams生成器 " border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text=" Teams生成器 ":::
 
     <details>
     <summary><b> 更新 manifest.json 文件的一系列问题 </b></summary>
@@ -230,11 +230,11 @@ gulp build
 
 1. 在浏览器中输入 `http://localhost:3007/<yourDefaultAppNameTab>/` 以查看应用程序主页。
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text=" 默认选项卡 " border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text=" 默认选项卡 ":::
 
 1. 浏览 `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` 以查看个人选项卡。
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text=" 默认 html 选项卡 " border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text=" 默认 html 选项卡 ":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
@@ -253,11 +253,11 @@ gulp ngrok-serve
 1. 选择“**管理应用**”和“**上传自定义应用**”。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择压缩文件夹，然后选择“**打开**”。
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text=" 添加个人选项卡 " border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text=" 添加个人选项卡 ":::
 
 1. 在对话框中选择“**添加**”。 选项卡已上传到 Teams。
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text=" 上传的个人选项卡 " border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text=" 上传的个人选项卡 ":::
 
 1. 在 Teams 的左窗格中，选择省略号 &#x25CF;&#x25CF;&#x25CF；然后选择上传的应用以查看个人选项卡。
 
@@ -412,7 +412,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 选择“**添加**”以加载 Teams 中的选项卡。 选项卡此时在 Teams 中可用。
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text=" 默认选项卡 " border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text=" 默认选项卡 ":::
 
    现在，你已成功在 Teams 中创建并添加个人选项卡。
   
@@ -581,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 选择“**添加**”以加载 Teams 上的选项卡。 选项卡此时在 Teams 中可用。
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="个人选项卡" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="个人选项卡":::
   
    现在，你已成功在 Teams 中创建并添加个人选项卡。
 

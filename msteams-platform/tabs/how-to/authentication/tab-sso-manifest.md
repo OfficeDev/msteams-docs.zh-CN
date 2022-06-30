@@ -4,12 +4,12 @@ description: 介绍为选项卡启用 SSO 的更新清单
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Azure AD) 图形 API Microsoft Azure Active Directory (团队身份验证选项卡
-ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503478"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558735"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>更新 SSO 和预览版应用的清单
 
@@ -24,7 +24,7 @@ ms.locfileid: "66503478"
 
 在 Teams 应用清单文件中配置 `webApplicationInfo` 属性。 此属性使应用的 SSO 能够帮助应用用户无缝访问选项卡应用。
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams 应用清单配置" border="false":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams 应用清单配置":::
 
 `webApplicationInfo` 有两个元素， `id` 和 `resource`.
 
@@ -138,7 +138,7 @@ ms.locfileid: "66503478"
 
 你已将 Tab 应用配置为在 Azure AD、应用代码和 Teams 清单文件中启用 SSO。 现在可以在 Teams 中旁加载选项卡应用，并在 Teams 环境中预览它。
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO 应用" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO 应用":::
 
 若要在 Teams 中预览选项卡应用，请执行以下操作：
 
@@ -160,17 +160,17 @@ ms.locfileid: "66503478"
 
 1. 选择 **继续**。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="“Teams”对话框，告知需要其他权限" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="“Teams”对话框，告知需要其他权限":::
 
     将显示 Azure AD 许可对话框。
 
 1. 选择 **“接受** ”以同意开放 ID 范围。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD 许可对话框" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD 许可对话框":::
 
     Teams 会打开选项卡应用，你可以使用它。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="启用了 SSO 的 Teams 选项卡应用示例" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="启用了 SSO 的 Teams 选项卡应用示例":::
 
     恭喜！ 你已为选项卡应用启用了 SSO。
 

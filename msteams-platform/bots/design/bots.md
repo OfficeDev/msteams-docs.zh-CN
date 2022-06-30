@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: cd28dc6be82b37223268d526c9673c0545f0bca9
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4571dfb49a8549ef644c392d3f05a6f2611b0f14
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485620"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557930"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>设计 Microsoft Teams 自动程序
 
@@ -46,7 +46,7 @@ ms.locfileid: "66485620"
 * 通过使用应用飞出，选择 teams **"更多应用"** 图标。
 * 当有@mention聊天或撰写框时（以下示例显示了如何在群组聊天中执行这一操作）。
 
-    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="示例演示了如何使用智能机器人在群组聊天中添加@mention。" border="false":::
+    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="示例演示了如何使用智能机器人在群组聊天中添加@mention。":::
 
 ## <a name="introduce-a-bot"></a>介绍机器人
 
@@ -58,11 +58,11 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="示例显示移动设备上个人应用中的自动程序简介。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="示例显示移动设备上个人应用中的自动程序简介。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="示例显示个人应用中的自动程序简介。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="示例显示个人应用中的自动程序简介。":::
 
 ### <a name="welcome-message-in-channels-and-group-chats"></a>频道和群组聊天中的欢迎消息
 
@@ -70,11 +70,11 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="示例显示移动设备上协作上下文中的自动程序简介。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="示例显示移动设备上协作上下文中的自动程序简介。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="在协作上下文中显示自动介绍的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="在协作上下文中显示自动介绍的示例。":::
 
 ### <a name="bot-authentication-with-single-sign-on"></a>使用单一登录的自动身份验证
 
@@ -84,11 +84,11 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="示例显示移动设备上带有登录按钮的自动程序。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="示例显示移动设备上带有登录按钮的自动程序。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="示例显示具有登录按钮的自动程序。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="示例显示具有登录按钮的自动程序。":::
 
 ### <a name="tours"></a>导览
 
@@ -103,11 +103,11 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="示例在移动设备上的一对一聊天中演示自动程序教程。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="示例在移动设备上的一对一聊天中演示自动程序教程。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="一对一聊天中的自动浏览示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="一对一聊天中的自动浏览示例。":::
 
 ### <a name="channels-and-group-chats"></a>频道和群组聊天
 
@@ -115,11 +115,11 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="示例演示移动频道中的自动程序教程。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="示例演示移动频道中的自动程序教程。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="示例显示频道中的自动浏览。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="示例显示频道中的自动浏览。":::
 
 ## <a name="chat-with-a-bot"></a>与聊天机器人聊天
 
@@ -138,7 +138,7 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="示例显示了移动自动程序的结构解析。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="示例显示了移动自动程序的结构解析。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -150,7 +150,7 @@ ms.locfileid: "66485620"
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="示例显示了机器人的结构分析。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="示例显示了机器人的结构分析。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -170,7 +170,7 @@ ms.locfileid: "66485620"
 
 无论对话状态如何，命令菜单必须始终可用。
 
-:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="示例显示自动程序的命令菜单。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="示例显示自动程序的命令菜单。":::
 
 ## <a name="understand-what-people-are-saying"></a>了解人们所说的
 
@@ -178,13 +178,13 @@ ms.locfileid: "66485620"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="显示自动程序如何解读&quot;Hello&quot;的示意图。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="显示自动程序如何解读&quot;Hello&quot;的示意图。":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="显示自动程序如何解读&quot;帮助&quot;的示意图。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="显示自动程序如何解读&quot;帮助&quot;的示意图。":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="显示自动程序如何解读&quot;谢谢&quot;的插图。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="显示自动程序如何解读&quot;谢谢&quot;的插图。":::
    :::column-end:::
 :::row-end:::
 
@@ -196,13 +196,13 @@ ms.locfileid: "66485620"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="显示在句子&quot;预订到西雅图的航班&quot;中的示例，用户意图是&quot;预定航班&quot;，数据为&quot;西雅图&quot;。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="显示在句子&quot;预订到西雅图的航班&quot;中的示例，用户意图是&quot;预定航班&quot;，数据为&quot;西雅图&quot;。":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="显示在句子&quot;存储何时打开&quot;中的示例，用户意图是&quot;何时打开&quot;且数据为&quot;打开&quot;。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="显示在句子&quot;存储何时打开&quot;中的示例，用户意图是&quot;何时打开&quot;且数据为&quot;打开&quot;。":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="示例显示在句子&quot;下午 1 点与 Bob 在分发中安排会议&quot;中，用户意图是&quot;安排会议&quot;，数据为&quot;下午 1 点&quot;和&quot;Bob 正在分发&quot;。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="示例显示在句子&quot;下午 1 点与 Bob 在分发中安排会议&quot;中，用户意图是&quot;安排会议&quot;，数据为&quot;下午 1 点&quot;和&quot;Bob 正在分发&quot;。":::
    :::column-end:::
 :::row-end:::
 
@@ -221,11 +221,11 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="示例演示了在移动设备上与机器人的简单查询交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="示例演示了在移动设备上与机器人的简单查询交互。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="示例显示与自动程序的简单查询交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="示例显示与自动程序的简单查询交互。":::
 
 ### <a name="multi-turn-interactions"></a>多位交互
 
@@ -235,11 +235,11 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="示例显示了与移动设备上的机器人的多轮次交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="示例显示了与移动设备上的机器人的多轮次交互。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="示例显示与自动程序之间的多元交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="示例显示与自动程序之间的多元交互。":::
 
 ### <a name="reach-out-to-users"></a>联系用户
 
@@ -249,21 +249,21 @@ ms.locfileid: "66485620"
 
 在下面的示例中，用户会收到一条通知，指出机器人在另一个通道中向他们发送了消息。
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="示例显示机器人的 toast 主动通过移动设备上的另一个通道向用户发送消息。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="示例显示机器人的 toast 主动通过移动设备上的另一个通道向用户发送消息。":::
 
 现在，用户可以从自动程序阅读其邮件。
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="示例显示用户在移动设备上查看机器人的主动消息。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="示例显示用户在移动设备上查看机器人的主动消息。":::
 
 #### <a name="desktop"></a>桌面
 
 在下面的示例中，用户会收到一条 toast 通知，指出机器人在另一个通道中向他们发送了消息。
 
-:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="示例显示了自动程序主动向另一个频道中的用户消息传递消息的祝念。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="示例显示了自动程序主动向另一个频道中的用户消息传递消息的祝念。":::
 
 现在，用户可以从自动程序阅读其邮件。
 
-:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="示例显示用户查看自动程序主动的消息。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="示例显示用户查看自动程序主动的消息。":::
 
 ### <a name="use-tabs-with-bots"></a>将标签用于机器人
 
@@ -271,17 +271,17 @@ ms.locfileid: "66485620"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="示例演示选项卡如何帮助组织移动设备上的机器人内容。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="示例演示选项卡如何帮助组织移动设备上的机器人内容。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="示例显示选项卡可如何帮助整理自动程序内容。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="示例显示选项卡可如何帮助整理自动程序内容。":::
 
 ## <a name="manage-a-bot"></a>管理自动程序
 
 用户应能够更改自动程序的设置。可通过自动程序命令提供此功能，但将所有设置包含在[任务模块](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)中通常更有效（如下例所示）。
 
-:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="示例显示一个任务模块，用于配置机器人的设置。" border="false":::
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="示例显示一个任务模块，用于配置机器人的设置。":::
 
 ## <a name="best-practices"></a>最佳做法
 
@@ -289,7 +289,7 @@ ms.locfileid: "66485620"
 
 ### <a name="content"></a>内容
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示机器人建立清晰角色的最佳做法。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="显示机器人建立清晰角色的最佳做法。":::
 
 #### <a name="do-establish-a-clear-persona"></a>执行：建立一个清晰的人
 
@@ -299,7 +299,7 @@ ms.locfileid: "66485620"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示以清楚地传达机器人可以执行的操作。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="显示以清楚地传达机器人可以执行的操作。":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>工作：清楚传达你的机器人可以做什么
 
@@ -307,7 +307,7 @@ ms.locfileid: "66485620"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="显示不遮盖机器人的功能。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="显示不遮盖机器人的功能。":::
 
 #### <a name="dont-obscure-your-bots-features"></a>不要：遮住了机器人的功能
 
@@ -318,7 +318,7 @@ ms.locfileid: "66485620"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示机器人应识别非问题。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="显示机器人应识别非问题。":::
 
 #### <a name="do-recognize-non-questions"></a>注意：识别非问题
 
@@ -326,7 +326,7 @@ ms.locfileid: "66485620"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="示例显示应避免对简单机器人消息的 clumsy 响应。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="示例显示应避免对简单机器人消息的 clumsy 响应。":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>不要：错过一些可喜欢的机会
 
@@ -339,7 +339,7 @@ ms.locfileid: "66485620"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="显示机器人的示例应帮助用户了解如何使用 bots." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="显示机器人的示例应帮助用户了解如何使用 bots.":::
 
 #### <a name="do-provide-help"></a>执行：提供帮助
 
@@ -347,7 +347,7 @@ ms.locfileid: "66485620"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="显示机器人不应使用户连接的示例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="显示机器人不应使用户连接的示例。":::
 
 #### <a name="dont-leave-users-stranded"></a>请勿参与：将用户困
 
@@ -360,7 +360,7 @@ ms.locfileid: "66485620"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示可以将任务模块或选项卡与机器人一起用于复杂交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="显示可以将任务模块或选项卡与机器人一起用于复杂交互。":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>Do：使用任务模块或选项卡
 
@@ -368,7 +368,7 @@ ms.locfileid: "66485620"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="显示机器人应如何避免多轮次交互。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="显示机器人应如何避免多轮次交互。":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>不要：进行多元交互，件非常乏味
 
@@ -381,7 +381,7 @@ ms.locfileid: "66485620"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="显示机器人应如何仅在个人上下文中显示私有信息。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="显示机器人应如何仅在个人上下文中显示私有信息。":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do：仅在个人上下文中显示敏感信息
 
@@ -389,7 +389,7 @@ ms.locfileid: "66485620"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="显示机器人不应如何向组或人员显示敏感信息。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="显示机器人不应如何向组或人员显示敏感信息。":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>不要：某些内容并非由每个人看到
 

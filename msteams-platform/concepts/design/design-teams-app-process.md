@@ -1,22 +1,22 @@
 ---
 title: 应用设计过程
 author: heath-hamilton
-description: 了解如何以及何时使用 Microsoft 工具和资源设计有效的Microsoft Teams应用。
+description: 了解如何以及何时可以使用 Microsoft 工具和资源设计有效的 Microsoft Teams 应用。
 ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 97ff20e0ffc6cc802c2226cc7767873cd3a25416
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b9b23fc2a849df6528af224e7289bced10f9e096
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144374"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557846"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Microsoft Teams 应用的设计过程
 
 有多个工具和资源用于设计 Microsoft Teams 应用。 以下步骤介绍在设计过程中何时以及如何使用这些内容。 （某些步骤可能在技术上超出了设计过程，但包含在其他上下文中。）
 
-:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="显示 Teams 应用设计过程示例的示意图。" border="false":::
+:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="显示 Teams 应用设计过程示例的示意图。":::
 
 ## <a name="plan-your-app"></a>计划应用
 

@@ -5,12 +5,12 @@ keywords: teams 机器人文件发送接收
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1bc04d2dfde200917c9faeb9fcb1c91b145463de
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503583"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558287"
 ---
 # <a name="send-and-receive-files-using-bots"></a>使用机器人发送和接收文件
 
@@ -89,7 +89,7 @@ ms.locfileid: "66503583"
 
 此桌面消息包含请求上传文件用户权限的简单附件对象:
 
-:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="请求上传文件用户权限的同意卡的屏幕截图" border="true":::
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="请求上传文件用户权限的同意卡的屏幕截图":::
 
 此移动消息包含请求上传文件用户权限的附件对象:
 

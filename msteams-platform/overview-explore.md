@@ -6,18 +6,18 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 769f0217d64295768159ccb77ae1726e83648468
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795145"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558826"
 ---
 # <a name="explore-teams-platform-features"></a>浏览 Teams 平台功能
 
 借助 Teams，可以在功能丰富的环境中生成应用。 使用 Teams 作为构建应用的平台，可以扩展桌面和移动应用解决方案的 Teams 功能。 选择应用的最佳功能。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Teams 作为平台的概念性表述" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Teams 作为平台的概念性表述":::
 
 ## <a name="teams-app-features"></a>Teams 应用功能
 

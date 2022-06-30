@@ -4,12 +4,12 @@ description: 在本模块中，了解如何为 Teams 应用设计自适应卡片
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142659"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558154"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡
 
@@ -17,7 +17,7 @@ ms.locfileid: "66142659"
 
 自适应卡框架用于许多 Microsoft 产品，包括 Microsoft Teams。 可通过机器人或消息传递扩展向用户发送消息内的卡片。 用户还可以在卡片上执行操作（如果存在）。
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="自适应卡概述示例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="自适应卡概述示例。":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
@@ -41,11 +41,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="示例显示了移动设备上的自适应卡主图卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="示例显示了移动设备上的自适应卡主图卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="示例显示了自适应卡主图卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="示例显示了自适应卡主图卡。":::
 
 ### <a name="thumbnail"></a>缩略图
 
@@ -53,11 +53,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="示例显示了移动设备上的自适应卡缩略图卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="示例显示了移动设备上的自适应卡缩略图卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="示例显示了自适应卡缩略图卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="示例显示了自适应卡缩略图卡。":::
 
 ### <a name="list"></a>列表
 
@@ -65,11 +65,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="示例显示了移动设备上的自适应卡列表卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="示例显示了移动设备上的自适应卡列表卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="示例显示了自适应卡列表卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="示例显示了自适应卡列表卡。":::
 
 ### <a name="digest"></a>摘要
 
@@ -77,11 +77,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="示例显示了移动端上的自适应卡摘要卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="示例显示了移动端上的自适应卡摘要卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="示例显示了自适应卡的摘要卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="示例显示了自适应卡的摘要卡。":::
 
 ### <a name="media"></a>媒体
 
@@ -89,11 +89,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="示例显示了移动设备上的自适应卡媒体卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="示例显示了移动设备上的自适应卡媒体卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="示例显示了自适应卡媒体卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="示例显示了自适应卡媒体卡。":::
 
 ### <a name="people"></a>人员
 
@@ -101,11 +101,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="示例显示了移动设备上的自适应卡人员卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="示例显示了移动设备上的自适应卡人员卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="示例显示了自适应卡人员卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="示例显示了自适应卡人员卡。":::
 
 ### <a name="request-ticket"></a>请求票证
 
@@ -113,11 +113,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="示例显示了移动设备上的自适应卡请求票证卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="示例显示了移动设备上的自适应卡请求票证卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="示例显示了自适应卡请求票证卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="示例显示了自适应卡请求票证卡。":::
 
 ### <a name="imageset"></a>ImageSet
 
@@ -125,11 +125,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="示例显示了移动设备上的自适应卡图像集卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="示例显示了移动设备上的自适应卡图像集卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="示例显示了自适应卡图像集卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="示例显示了自适应卡图像集卡。":::
 
 ### <a name="actionset"></a>ActionSet
 
@@ -137,11 +137,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="示例显示了移动设备上的自适应卡操作集卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="示例显示了移动设备上的自适应卡操作集卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="示例显示了自适应卡操作集卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="示例显示了自适应卡操作集卡。":::
 
 ### <a name="choiceset"></a>ChoiceSet
 
@@ -149,11 +149,11 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="示例显示了移动设备上的自适应卡选择集卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="示例显示了移动设备上的自适应卡选择集卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="示例显示了自适应卡选择集卡。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="示例显示了自适应卡选择集卡。":::
 
 ## <a name="anatomy"></a>解剖
 
@@ -161,7 +161,7 @@ ms.locfileid: "66142659"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="示例：移动设备上的自适应卡片解剖。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="示例：移动设备上的自适应卡片解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -171,7 +171,7 @@ ms.locfileid: "66142659"
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="示例显示了自适应卡片解剖。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="示例显示了自适应卡片解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -655,7 +655,7 @@ ms.locfileid: "66142659"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="有关如何在自适应卡上仅包含一小组操作的最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="有关如何在自适应卡上仅包含一小组操作的最佳实践。":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>建议：最多使用六个主要操作
 
@@ -663,7 +663,7 @@ ms.locfileid: "66142659"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="有关如何避免在自适应卡上添加过多操作，而让用户感到不知所措的最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="有关如何避免在自适应卡上添加过多操作，而让用户感到不知所措的最佳实践。":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>不建议：使用超过六个主要操作
 
@@ -674,7 +674,7 @@ ms.locfileid: "66142659"
 
 ### <a name="frequency"></a>频率
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="有关自适应卡频率的最佳实践。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="有关自适应卡频率的最佳实践。":::
 
 #### <a name="do-be-concise"></a>建议：做到简洁
 

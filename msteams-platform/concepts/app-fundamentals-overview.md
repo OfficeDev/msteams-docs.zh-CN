@@ -5,12 +5,12 @@ description: 介绍规划应用、了解用例、应用功能和其他 Teams 功
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150685"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558714"
 ---
 # <a name="plan-your-app-with-teams-features"></a>使用 Teams 功能规划应用
 
@@ -28,7 +28,7 @@ ms.locfileid: "66150685"
 
 Teams 即平台在应用开发的每个阶段为你提供工具包、库、应用。 让我们分解一下应用生成的生命周期：
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="图示应用规划的过程" border="true":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="图示应用规划的过程":::
 
 * [生成之前](#before-you-build)
 * [生成时](#during-build)
@@ -53,7 +53,7 @@ Teams 即平台在应用开发的每个阶段为你提供工具包、库、应�
 
 * **将 Teams 用作平台**：Teams 平台可帮助你构建单功能或多功能应用。 Teams 应用由增强应用体验的集成产品和服务提供支持。
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams 解决方案的感知表示形式。" border="true":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams 解决方案的感知表示形式。":::
 
     应用在 Teams 上显示为选项卡、自动程序、消息扩展、连接器、Webhook 或多功能应用。 这些功能在后端由 Azure、Microsoft Graph、SharePoint、Power 应用提供支持，可帮助自动执行任务和流程。
 

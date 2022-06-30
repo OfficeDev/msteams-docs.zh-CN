@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e530adfc92f4edc1e25946a5af7c38300ae67777
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4889f4a9f97ff6606ebb283156d42963816cd269
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485634"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557860"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -239,7 +239,7 @@ const profile = await graphClient.api("/me").get();
 <details>
 <summary><b>创建 API 客户端以调用机器人或 Azure 函数中的现有 API</b></summary>
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="创建 api 客户端" border="false":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="创建 api 客户端":::
 
 </details>
 

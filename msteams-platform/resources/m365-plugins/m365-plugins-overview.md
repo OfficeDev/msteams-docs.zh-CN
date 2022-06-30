@@ -4,12 +4,12 @@ description: 在本文中，你将了解 Microsoft 365 插件、插件列表和�
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 5228803be99d77e24f5cd1731c826b1a28509097
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: c09e2e15fd276c2007a989545cc5b5c0b23f2584
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124044"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558588"
 ---
 # <a name="microsoft-365-plugins"></a>Microsoft 365 插件
 
@@ -52,7 +52,7 @@ Open ID Connect 插件允许用户对任何支持必要规范的网站或工具�
 
 下图显示了 OpenID connect 登录页：
 
-:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="登录到 open-id connect" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="登录到 open-id connect":::
 
 ## <a name="microsoft-365-integration"></a>Microsoft 365 集成
 
@@ -65,7 +65,7 @@ Microsoft 365 集成包含多个具有多个功能的应用，使用户能够保
 
 下图显示了 Microsoft 365 集成设置页：
 
-:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="microsoft 365 集成" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="microsoft 365 集成":::
 
 ### <a name="user-functions"></a>用户函数
 
@@ -87,7 +87,7 @@ Microsoft 365 存储库允许用户将其用作机构的文件存储库，同时
 
 下图显示了 Microsoft 365 文件存储库：
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="M365 存储库"  border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="M365 存储库" :::
 
 ## <a name="teams-meetings"></a>团队会议
 
@@ -100,7 +100,7 @@ Teams 会议插件允许用户根据可用性在日历、作业、论坛帖子�
 
 下图显示 Teams 会议登录页：
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="登录到团队会议" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="登录到团队会议":::
 
 ## <a name="microsoft-365-teams-theme"></a>Microsoft 365 Teams 主题
 
@@ -115,7 +115,7 @@ Microsoft 365 Teams 主题插件为用户提供 Moodle 课程主页的自定义�
 
 下图显示了用户设置的 Teams 主题：
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Microsoft Teams 主题" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Microsoft Teams 主题":::
 
 ## <a name="onenote-integration"></a>OneNote 集成
 
@@ -145,7 +145,7 @@ Microsoft block 通过提供用户界面来修改 Microsoft 365 集成功能并�
 
 下图显示了 Microsoft block 用户界面：
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="microsoft block" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="microsoft block":::
 
 ## <a name="oembed-filter"></a>oEmbed 筛选器
 
@@ -158,7 +158,7 @@ oEmbed 筛选器插件简化了在 Moodle 中包含的外部 HTML 内容，从�
 
 下图显示了在 Moodle 中包含外部 HTML 内容：
 
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="oEmbed 筛选器页" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="oEmbed 筛选器页":::
 
 ## <a name="see-also"></a>另请参阅
 

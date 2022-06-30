@@ -4,12 +4,12 @@ description: 排查 Teams 中的 SSO 身份验证以及如何在选项卡中使�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Microsoft Azure Active Directory (Azure AD) SSO 错误问题的团队身份验证选项卡
-ms.openlocfilehash: d738c992b008028456dc9318b2a0720178f6f66f
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 93365732ee284cd8cb903f7535d2770d0154d417
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503723"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558420"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>排查 Teams 中的 SSO 身份验证问题
 
@@ -101,7 +101,7 @@ ms.locfileid: "66503723"
 
 下图显示了 Azure AD 中配置的应用详细信息的示例。
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Azure AD 中的应用配置值" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Azure AD 中的应用配置值":::
 
 检查以下值是否匹配 Azure AD、客户端代码和 Teams 应用清单：
 

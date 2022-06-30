@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a939217f31feb957cc9f3205a99d8b235de56d8e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7dda8dd7e68e7452da164c8ec45d3352909f45ed
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142400"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558336"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为 Microsoft Teams 设计个人应用
 
@@ -29,7 +29,7 @@ ms.locfileid: "66142400"
 
 用户可以通过选择 Teams 左侧的“**更多**”图标（如以下示例所示）从 Teams 应用商店或应用浮出控件添加个人应用。
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="示例显示如何从应用浮出控件添加个人应用。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="示例显示如何从应用浮出控件添加个人应用。":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>使用个人应用（专用工作区）
 
@@ -41,7 +41,7 @@ ms.locfileid: "66142400"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件剖析。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="示例显示个人选项卡的组件剖析。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -50,7 +50,7 @@ ms.locfileid: "66142400"
 |C|**更多菜单**：包括其他应用选项和信息。|
 |D|**主导航**： 向应用提供其他主要 Teams 功能的导航。|
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="示例显示个人选项卡的结构剖析。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="示例显示个人选项卡的结构剖析。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -59,7 +59,7 @@ ms.locfileid: "66142400"
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="此示例显示个人选项卡的组件剖析。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="此示例显示个人选项卡的组件剖析。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -68,7 +68,7 @@ ms.locfileid: "66142400"
 |C|**弹出视图**：将应用内容从父窗口推送到独立子窗口。|
 |D|**更多菜单**：包括其他应用选项和信息。 （也可以将 **设置** 设置为选项卡。）|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="此示例显示个人选项卡的结构剖析。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="此示例显示个人选项卡的结构剖析。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -94,7 +94,7 @@ ms.locfileid: "66142400"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例显示个人机器人组件剖析。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="示例显示个人机器人组件剖析。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -105,7 +105,7 @@ ms.locfileid: "66142400"
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="示例显示个人机器人组件的剖析。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="示例显示个人机器人组件的剖析。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -117,7 +117,7 @@ ms.locfileid: "66142400"
 
 在 Teams 左侧，用户可以右键单击个人应用以固定、删除和配置其他应用选项。
 
-:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="示例显示用于管理个人应用的选项。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="示例显示用于管理个人应用的选项。":::
 
 ## <a name="best-practices"></a>最佳做法
 
@@ -129,13 +129,13 @@ ms.locfileid: "66142400"
 
 使用响应式大小调整时，右侧的选项卡可能会被截断或无法查看。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="示例显示了在第一个选项卡中显示最相关内容的个人应用。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="示例显示了在第一个选项卡中显示最相关内容的个人应用。":::
 
 #### <a name="dont-lead-with-secondary-content-or-metadata"></a>请勿:以次要内容或元数据为开始
 
 与标准 Web 应用一样，选项卡导航应按有助于理解应用主要功能的顺序进行。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="示例显示以辅助内容或元数据为主导的个人应用。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="示例显示以辅助内容或元数据为主导的个人应用。":::
 
 ### <a name="tab-hierarchy"></a>选项卡层次结构
 
@@ -143,13 +143,13 @@ ms.locfileid: "66142400"
 
 选项卡应按照应用的主要功能和内容进行分类。 使用响应式大小调整时，右侧的内容可能会被截断或无法查看。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="示例显示具有相同层次结构选项卡的个人应用。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="示例显示具有相同层次结构选项卡的个人应用。":::
 
 #### <a name="dont-include-different-levels-of-hierarchy"></a>请勿: 包括不同层次结构级别
 
 内容应按逻辑顺序进行，以方便用户理解。 如果有两个密切相关的选项卡，请考虑将它们组合到一个选项卡中。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="示例显示了具有不同层次结构级别的个人应用。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="示例显示了具有不同层次结构级别的个人应用。":::
 
 ### <a name="first-run-experience"></a>首次运行体验
 
@@ -157,15 +157,15 @@ ms.locfileid: "66142400"
 
 首次使用个人应用时，至少应有一个欢迎界面。 对于机器人，请描述机器人可以执行的操作并提供快速操作，例如登录按钮。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="示例显示在个人应用首次运行体验期间要执行的操作。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="示例显示在个人应用首次运行体验期间要执行的操作。":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="另一个示例显示在个人应用首次运行体验期间要执行的操作。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="另一个示例显示在个人应用首次运行体验期间要执行的操作。":::
 
 #### <a name="dont-start-with-a-blank-screen"></a>请勿: 从空白屏幕开始
 
 如果用户在首次运行你的应用时未显示任何内容，可能会感到困惑。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="示例显示在个人应用首次运行体验期间不执行的操作。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="示例显示在个人应用首次运行体验期间不执行的操作。":::
 
 ### <a name="personalized-content"></a>个性化内容
 
@@ -173,17 +173,17 @@ ms.locfileid: "66142400"
 
 无论是个人选项卡还是机器人，都可以在应用中仅显示与用户活动相关的内容。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="示例显示对个人应用和个性化内容执行的操作。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="示例显示对个人应用和个性化内容执行的操作。":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="另一个示例显示对个人应用和个性化内容执行的操作。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="另一个示例显示对个人应用和个性化内容执行的操作。":::
 
 #### <a name="dont-show-unrelated-or-overly-broad-content"></a>请勿:显示不相关或过于宽泛的内容
 
 在个人上下文中，不显示用户非所属团队的内容。 个人机器人内容应侧重于个人，而不是组。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="示例显示不对个人应用和个性化内容执行的操作。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="示例显示不对个人应用和个性化内容执行的操作。":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="另一个示例显示不对个人应用和个性化内容执行的操作。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="另一个示例显示不对个人应用和个性化内容执行的操作。":::
 
 ### <a name="complex-app-features"></a>复杂应用功能
 
@@ -191,13 +191,13 @@ ms.locfileid: "66142400"
 
 你的应用应专注于 Teams 中的核心任务，但仍然可以在浏览器中查看完整的独立应用。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="示例显示如何使用个人应用处理复杂的应用功能。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="示例显示如何使用个人应用处理复杂的应用功能。":::
 
 #### <a name="dont-include-your-entire-app"></a>请勿:包括整个应用
 
 除非专门为 Teams 创建应用，否则可能具有在协作工具中没有意义的功能。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="示例显示如何不使用个人应用处理复杂的应用功能。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="示例显示如何不使用个人应用处理复杂的应用功能。":::
 
 ## <a name="see-also"></a>另请参阅
 

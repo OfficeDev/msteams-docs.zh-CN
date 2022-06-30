@@ -4,12 +4,12 @@ description: 概述 Teams 中的 SSO 身份验证以及如何在选项卡中使�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Microsoft Azure Active Directory (Azure AD) SSO 访问令牌应用清单的 teams 身份验证选项卡
-ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e394b58effbb21491f20a4a20bfa48bf42fd1484
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503765"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557720"
 ---
 # <a name="enable-sso-for-tab-app"></a>为选项卡应用启用 SSO
 
@@ -27,7 +27,7 @@ ms.locfileid: "66503765"
 
 应用用户使用个人 Microsoft 帐户或 Microsoft 365 帐户登录 Teams。 可以利用此功能，并使用 SSO 对应用用户进行身份验证和授权。
 
-&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Teams 选项卡应用中的 SSO 用户体验" border="false":::
+&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Teams 选项卡应用中的 SSO 用户体验":::
 
 - Teams 对其应用用户的身份进行身份验证并存储。
 - 选项卡应用使用已由 Teams 验证的应用用户的存储标识。
@@ -60,7 +60,7 @@ ms.locfileid: "66503765"
 
 下图显示了当 Teams 应用用户尝试访问选项卡应用时 SSO 的工作原理：
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Tab 单一登录 SSO 关系图" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Tab 单一登录 SSO 关系图" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 | # | 交互 | 这是怎么回事 |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ ms.locfileid: "66503765"
 
 若要为选项卡应用启用 SSO，请执行以下操作：
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="为选项卡启用 SSO 的步骤" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="为选项卡启用 SSO 的步骤" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **注册到 Azure AD**：创建 Azure AD 应用以生成应用 ID 和应用程序 ID URI。 若要生成访问令牌，请配置范围并授权受信任的客户端应用程序。
 2. **更新代码**：添加代码以处理访问令牌，在应用用户访问选项卡应用时调用 `getAuthToken()` ，将此令牌发送到授权标头中的应用服务器代码，并在收到访问令牌时对其进行验证。

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8b5aa93548ad08f8e1114b2d4b66b92fcd7195ba
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795124"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557979"
 ---
 # <a name="from-ideas-to-teams-app"></a>从创意到 Teams 应用
 
@@ -19,7 +19,7 @@ ms.locfileid: "65795124"
 
 请查看此方案:
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="一家旅游机构的开发人员生成一个应用，向客户发送天气预报，以便他们可以提前计划旅行日期" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="一家旅游机构的开发人员生成一个应用，向客户发送天气预报，以便他们可以提前计划旅行日期":::
 
 作为开发人员，你需要一种方式来共享重要和相关信息，以帮助用户。 这是一个典型的用户情景。 可延迟? 但 Teams 如何适应此方案呢?
 
@@ -29,7 +29,7 @@ ms.locfileid: "65795124"
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="用户情景 - 作为一家旅游公司的开发人员，我为旅行者构建了应用" border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="用户情景 - 作为一家旅游公司的开发人员，我为旅行者构建了应用":::
    :::column-end:::
    :::column span="":::
       #### <a name="understand-your-user"></a>了解你的用户
@@ -50,12 +50,12 @@ ms.locfileid: "65795124"
         - 要解决哪些问题?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="我想要开发一个将目标天气预报发送给客户的应用..." border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="我想要开发一个将目标天气预报发送给客户的应用...":::
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...以便客户能够了解天气状况并提前计划" border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...以便客户能够了解天气状况并提前计划":::
    :::column-end:::
    :::column span="":::
       #### <a name="list-app-requirements-and-benefits"></a>列出应用要求和权益
@@ -76,7 +76,7 @@ ms.locfileid: "65795124"
         - 哪些功能对用户体验来说最方便?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="客户已做好旅行准备!" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="客户已做好旅行准备!":::
    :::column-end:::
 :::row-end:::
 

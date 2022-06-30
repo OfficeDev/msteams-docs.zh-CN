@@ -1,20 +1,20 @@
 ---
 title: 集成媒体功能
 author: Rajeshwari-v
-description: 了解如何使用 Teams JavaScript 客户端 SDK 来使用代码示例启用媒体功能，并了解集成媒体功能的优势。
+description: 了解如何使用 Teams JavaScript 客户端 SDK 使用代码示例启用媒体功能，并了解集成媒体功能的优势。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: a2ee4843f5330ab9102540ea1c5dcb87bd8dc19c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190238"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558707"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能
 
-可以将本机设备功能（如相机和麦克风）与Teams应用集成。 对于集成，可以使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，为应用提供访问用户[设备权限](native-device-permissions.md)所需的工具。 使用合适的媒体功能 API 将设备功能（例如相机和麦克风）与Microsoft Teams应用中的Teams平台集成，并构建更丰富的体验。 媒体功能可用于Teams Web 客户端、桌面和移动设备。 若要集成媒体功能，必须更新应用清单文件并调用媒体功能 API。
+可以将本机设备功能（例如相机和麦克风）与 Teams 应用集成。 为了进行集成，可以使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 为应用提供访问用户 [设备权限](native-device-permissions.md)所需的工具。 使用合适的媒体功能 API 将设备功能（例如相机和麦克风）与 Microsoft Teams 应用中的 Teams 平台集成，并构建更丰富的体验。 媒体功能适用于 Teams Web 客户端、桌面和移动设备。 若要集成媒体功能，必须更新应用清单文件并调用媒体功能 API。
 
 若要进行有效的集成，必须充分了解用于调用相应 API 的[代码片段](#code-snippets)，以便使用本机媒体功能。 请务必熟悉 [API 响应错误](#error-handling)，以处理 Teams 应用中的错误。
 
@@ -22,7 +22,7 @@ ms.locfileid: "66190238"
 
 在 Teams 应用中集成设备功能的主要优势在于，可利用本机 Teams 控件为用户提供沉浸式的丰富体验。 以下方案展示了媒体功能的优势：
 
-* 允许用户通过手机捕获物理白板上绘制的粗略模拟，并在Teams群聊中使用捕获的图像作为轮询选项。
+* 允许用户通过手机捕获物理白板上绘制的粗略模拟，并使用捕获的图像作为 Teams 群聊中的轮询选项。
 
 * 允许用户录制音频消息并将其附加到事件票证。
 
@@ -30,9 +30,9 @@ ms.locfileid: "66190238"
 
 > [!NOTE]
 >
-> * 目前，Teams不支持弹出聊天窗口、选项卡和会议侧面板中的设备权限。</br>
+> * 目前，Teams 不支持弹出聊天窗口、选项卡和会议侧面板中的设备权限。</br>
 > * 浏览器中的设备权限不同。 有关详细信息，请参阅[浏览器设备权限](browser-device-permissions.md)。
-> * 启动相关Teams API 时，会在移动设备上自动显示请求权限提示。 有关详细信息，请参阅[请求设备权限](native-device-permissions.md)。
+> * 启动相关 Teams API 时，将自动在移动设备上显示请求权限提示。 有关详细信息，请参阅[请求设备权限](native-device-permissions.md)。
 
 ## <a name="update-manifest"></a>更新清单
 
@@ -75,27 +75,27 @@ ms.locfileid: "66190238"
 
 下图描绘了映像功能的 `selectMedia` API 的 Web 应用体验：
 
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="此图显示了移动设备的图像功能。" border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="此图显示了移动设备的图像功能。":::
 
 > [!NOTE]
 >
-> 在Android版本低于 7 的设备中`selectMedia`，API 会启动本机Android相机体验，而不是本机Teams相机体验。
+> 在 Android 版本低于 7 的设备中 `selectMedia` ，API 会启动本机 Android 相机体验，而不是本机 Teams 相机体验。
 
 下图描绘了用于麦克风功能的 `selectMedia` API 的 Web 应用体验：
 
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="插图显示了移动设备的麦克风功能。" border="true":::
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="插图显示了移动设备的麦克风功能。":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
 下图描绘了映像功能的 `selectMedia` API 的 Web 应用体验：
 
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="插图显示了桌面的媒体功能。" border="true":::
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="插图显示了桌面的媒体功能。":::
 
 ---
 
 ## <a name="error-handling"></a>错误处理
 
-请确保在Teams应用中正确处理这些错误。 下表列出了错误代码和生成错误的说明：
+请确保在 Teams 应用中正确处理这些错误。 下表列出了错误代码和生成错误的说明：
 
 |错误代码 |  错误名称     | 说明|
 | --------- | --------------- | -------- |

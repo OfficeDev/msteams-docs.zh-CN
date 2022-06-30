@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 22722d764cf498ff96bb81e9ede65c4ae112011f
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3f1caf4605766c16a51272a8d4c30436930c7100
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190116"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558672"
 ---
 # <a name="the-teams-solution"></a>Teams 解决方案
 
@@ -32,19 +32,19 @@ Microsoft Teams 平台是一个功能强大、灵活的平台，用于创建适�
 | 用户应用需求 | 检查预测 | 旅行前的通知 | 已注册的用户 |
 | --- |:---:|:---:|:---:|
 | **功能** | Bot | &nbsp; | &nbsp; |
-| **集成** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph，天气 API |
+| **集成** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph，天气 API |
 | **Scope** | &nbsp; | 个人应用 | &nbsp; |
 | **集成点** | &nbsp; | 聊天 | &nbsp; |
 
 **Teams 应用解决方案**：Teams *个人聊天机器人* 应用，用于检查并在 *注册用户* 出发前向他们发送 *预测通知*。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="一家旅游机构的开发人员构建了一个 Teams 机器人，用于向客户发送天气预报，以便他们可以提前计划出行日期" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="一家旅游机构的开发人员构建了一个 Teams 机器人，用于向客户发送天气预报，以便他们可以提前计划出行日期":::
 
 Teams 提供了这些功能以及许多其他功能，可为用户提供功能丰富的应用解决方案。若要开发此应用：
 
 1. 创建个人聊天机器人应用。
 1. 与外部天气预报 API 集成，连接并请求特定日期和位置的预测。
-1. 与注册用户的 :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph 集成。
+1. 与注册用户的 :::image type="icon" source="assets/icons/teams-icon.png"::: Microsoft Graph 集成。
 1. 根据用户的旅行日期和旅行位置检查和发送预测详细信息。
 
 ## <a name="choose-what-suits-you"></a>选择适合你的内容
@@ -53,7 +53,7 @@ Teams 提供了这些功能以及许多其他功能，可为用户提供功能�
 
 Teams 应用为你提供了选择生成环境的灵活性。 它包括用于应用开发的工具、框架、语言。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="业务需求应用" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="业务需求应用":::
 
 在符合特定要求的环境中构建 Teams 应用。你甚至可以选择一个组合。
 
@@ -65,14 +65,14 @@ Teams 应用为用户带去协作工作区的优势。
 
 作为构建应用的平台，Teams 提供了各种应用和工具包。 从规划应用到分发应用，Teams 平台在每个阶段都支持你。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="说明 Teams 应用开发的生命周期。计划、设计、生成、扩展、测试、部署、分发。下面的项目符号列表中显示了详细信息。" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="说明 Teams 应用开发的生命周期。计划、设计、生成、扩展、测试、部署、分发。下面的项目符号列表中显示了详细信息。":::
 
 从设计到构建和分发 Teams 应用，可以使用各种工具和服务。开发流的示例：
 
 1. 规划项目并确定要求。
 1. 设计应用。使用 Teams UI 工具包和 UI 库设计选项卡 UI。
 1. 使用 Teams 工具包和 JavaScript 生成应用。
-1. 通过 :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph 添加更多 Teams 功能和 M365 数据来扩展功能。
+1. 通过 :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph 添加更多 Teams 功能和 M365 数据来扩展功能。
 1. 使用示例用户数据在开发人员租户上测试应用。
 1. 将应用部署到 Azure。
 1. 使用开发人员门户管理应用，并将应用发布到应用商店。 通过 SaaS 产品/服务、应用内购买等选项实现应用盈利。

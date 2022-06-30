@@ -1,23 +1,23 @@
 ---
-title: Teams Toolkit中的Teams应用清单
+title: Teams 工具包中的 Teams 应用清单
 author: zyxiaoyuer
-description: 在本模块中，了解如何在不同的环境中编辑、预览和自定义Teams应用清单。
+description: 在本模块中，了解如何在不同的环境中编辑、预览和自定义 Teams 应用清单。
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: f87175aa4a965d38e439a58ea726fe0af7c68fbd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143870"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558000"
 ---
-# <a name="edit-teams-app-manifest"></a>编辑Teams应用清单
+# <a name="edit-teams-app-manifest"></a>编辑 Teams 应用清单
 
-清单模板文件 `manifest.template.json` 位于 scaffolding 下的 `templates/appPackage` 文件夹下。 具有占位符的模板文件和实际值通过使用不同环境下`.fx/configs`的文件`.fx/states`Teams Toolkit来解析。
+清单模板文件 `manifest.template.json` 位于 scaffolding 下的 `templates/appPackage` 文件夹下。 具有占位符的模板文件以及实际值由 Teams 工具包使用不同环境下 `.fx/configs` 的文件解 `.fx/states` 析。
 
-**若要使用实际内容预览清单，Teams Toolkit在文件夹下`build/appPackage`生成预览清单文件**：
+**若要使用实际内容预览清单，Teams 工具包在文件夹下 `build/appPackage` 生成预览清单文件**：
 
 ```text
 └───build
@@ -41,7 +41,7 @@ ms.locfileid: "66143870"
 
 1. 在文件的代码段`manifest.template.json`中选择 **“预览**”，然后选择 **“本地**”。
 2. 选择文件菜单栏`manifest.template.json`上的 **预览清单文件**。
-3. 在 Treeview **中选择 Zip Teams 元数据包**，然后选择 **本地**。
+3. 在 Treeview 中选择 **Zip Teams 元数据包** ，然后选择 **本地**。
 
 预览本地如下图所示：
 
@@ -51,16 +51,16 @@ ms.locfileid: "66143870"
 
 **在远程环境中预览清单文件**
 
-* 在开发 **Teams Toolkit扩展** 中选择 **云中的“预配**”或
-* 触发Teams：从命令面板 **在云中预配**。
+* 在 Teams 工具包扩展中选择 **“开发**”下的云中“**预配**”或
+* 触发 **器 Teams：从命令面板在云中预配** 。
 
-它生成远程Teams应用的配置，并在文件夹下`build/appPackage`生成包和预览清单。
+它生成远程 Teams 应用的配置，并在文件夹下 `build/appPackage` 生成包和预览清单。
 
 还可以通过以下步骤预览远程环境中的清单文件：
 
 1. 在文件的代码段`manifest.template.json`中选择 **“预览**”。
 2. 选择文件菜单栏`manifest.template.json`上的 **预览清单文件**。
-3. 在 Treeview **中选择 Zip Teams 元数据包**。
+3. 在 Treeview 中选择 **Zip Teams 元数据包** 。
 4. 选择环境。
 
 > [!NOTE]
@@ -72,9 +72,9 @@ ms.locfileid: "66143870"
 
 预览清单文件后，可以通过以下方式将本地更改同步到开发人员门户：
 
-1. 部署Teams应用清单。
+1. 部署 Teams 应用清单。
 
-   可以通过以下任一方式部署Teams应用清单：
+   可以通过以下任一方式部署 Teams 应用清单：
 
    * 转到 `manifest.template.json` 文件，然后右键单击以从上下文菜单中进行选择 `Deploy Teams app manifest` 。
 
@@ -84,22 +84,22 @@ ms.locfileid: "66143870"
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="从命令面板部署":::
 
-2. 更新到Teams平台。
+2. 更新到 Teams 平台。
 
-   可以通过以下任一方式更新到Teams平台：
+   可以通过以下任一方式更新到 Teams 平台：
 
-   * 在左上角`manifest.{env}.json`选择 **“更新到Teams平台**”。
+   * 选择左上角的 **“更新到 Teams** ” `manifest.{env}.json`平台。
 
-   * 触发 **Teams：将清单更新到** 菜单栏`manifest.{env}.json`上的Teams平台。
+   * 触发 **Teams：将清单更新到** 菜单栏 `manifest.{env}.json`上的 Teams 平台。
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="更新到团队":::
 
-还可以触发Teams：从命令面板 **将清单更新到Teams平台**：
+还可以从命令面板触发 **Teams：将清单更新到 Teams 平台** ：
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="树状视图":::
 
 > [!NOTE]
-> 来自编辑器代码管理器或菜单栏的触发器将当前清单文件更新到Teams平台。 命令面板中的触发器需要选择目标环境。
+> 来自编辑器代码管理器或菜单栏的触发器将当前清单文件更新到 Teams 平台。 命令面板中的触发器需要选择目标环境。
 
  CLI 命令：
 
@@ -115,10 +115,10 @@ ms.locfileid: "66143870"
 如果清单文件因配置文件更改或模板更改而过时，请选择以下任一操作：
 
 * **仅预览**：根据当前配置覆盖本地清单文件。
-* **预览和更新**：本地清单文件根据当前配置覆盖，并已更新到Teams平台。
+* **预览和更新**：本地清单文件根据当前配置覆盖，并已更新到 Teams 平台。
 * **取消**：不执行任何操作。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
 ## <a name="customize-teams-app-manifest"></a>自定义 Teams 应用部件清单
 
@@ -127,7 +127,7 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 * `manifest.template.json`
 * `templates/appPackage`
 
-在本地调试或预配期间，Teams Toolkit从`manifest.template.json`开发人员[门户](https://dev.teams.microsoft.com/apps)中加载清单、`config.{env}.json`从`state.{env}.json`中加载配置，并创建Teams应用。
+在本地调试或预配期间，Teams 工具包从`manifest.template.json`开发人员[门户](https://dev.teams.microsoft.com/apps)中加载清单和配置`state.{env}.json``config.{env}.json`，并创建 Teams 应用。
 
 ## <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json 中支持的占位符
 
@@ -154,7 +154,7 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 
 ### <a name="validate-manifest"></a>验证清单
 
-在 **Zip Teams元数据包** 等操作期间，Teams Toolkit根据其架构验证清单。 以下列表提供了验证清单的不同方法：
+在 **Zip Teams 元数据包** 等操作期间，Teams 工具包会根据其架构验证清单。 以下列表提供了验证清单的不同方法：
 
 * 在 VSC 中，从命令面板触发 `Teams: Validate manifest file` ：
 

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: f7da87ecbacbf5632b0aea9ec8aa5142443acace
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123946"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558749"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>设计 Microsoft Teams 邮件扩展
 
@@ -35,11 +35,11 @@ ms.locfileid: "66123946"
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="示例演示了如何在移动设备的频道的撰写框附近添加邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="示例演示了如何在移动设备的频道的撰写框附近添加邮件扩展。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="示例演示了如何在频道的撰写框附近添加邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="示例演示了如何在频道的撰写框附近添加邮件扩展。":::
 
 ## <a name="set-up-a-message-extension"></a>设置邮件扩展
 
@@ -49,11 +49,11 @@ ms.locfileid: "66123946"
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="示例显示了移动设备上带有登录按钮的邮件扩展设置屏幕。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="示例显示了移动设备上带有登录按钮的邮件扩展设置屏幕。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="示例显示了带有登录按钮的邮件扩展设置屏幕。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="示例显示了带有登录按钮的邮件扩展设置屏幕。":::
 
 ## <a name="types-of-message-extensions"></a>邮件扩展类型
 
@@ -65,17 +65,17 @@ ms.locfileid: "66123946"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="示例展示了在移动设备上从撰写框启动的基于搜索的邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="示例展示了在移动设备上从撰写框启动的基于搜索的邮件扩展。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="示例展示了从撰写框启动的基于搜索的邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="示例展示了从撰写框启动的基于搜索的邮件扩展。":::
 
 #### <a name="compose-box-layout-options"></a>撰写框布局选项
 
 有多种选项显示邮件扩展搜索结果，包括[列表和网格视图](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)。
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="图例：邮件扩展搜索结果的布局选项" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="图例：邮件扩展搜索结果的布局选项":::
 
 ### <a name="action-commands"></a>操作命令
 
@@ -93,11 +93,11 @@ ms.locfileid: "66123946"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="示例演示了如何在移动设备上从撰写框打开邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="示例演示了如何在移动设备上从撰写框打开邮件扩展。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="示例演示了如何从撰写框打开邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="示例演示了如何从撰写框打开邮件扩展。":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>从聊天消息或频道帖子
 
@@ -105,11 +105,11 @@ ms.locfileid: "66123946"
 
 #### <a name="chat-message"></a>聊天消息
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="示例演示了如何从聊天消息打开邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="示例演示了如何从聊天消息打开邮件扩展。":::
 
 #### <a name="channel-post"></a>频道帖子
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="示例演示了如何在移动设备上从频道帖子打开邮件扩展。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="示例演示了如何在移动设备上从频道帖子打开邮件扩展。":::
 
 ## <a name="use-a-message-extension"></a>使用邮件扩展
 
@@ -121,31 +121,31 @@ ms.locfileid: "66123946"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="示例展示了用户在移动设备上从撰写框搜索要插入的内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="示例展示了用户在移动设备上从撰写框搜索要插入的内容。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="示例展示了用户从撰写框搜索要插入的内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="示例展示了用户从撰写框搜索要插入的内容。":::
 
 **2.插入内容**。发布内容后，其他人可以回复或选择内容，以查看应用中的详细信息。
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="示例展示了用户在移动设备的频道对话中发布内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="示例展示了用户在移动设备的频道对话中发布内容。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="示例展示了用户在频道对话中发布的内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="示例展示了用户在频道对话中发布的内容。":::
 
 ### <a name="take-action-on-a-message"></a>对消息执行操作
 
 **1.选择邮件扩展**。 应用可以包含一个或多个操作命令。
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="示例演示了用户选择邮件扩展操作命令。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="示例演示了用户选择邮件扩展操作命令。":::
 
 **2. 完成操作**。 应用可以接收和处理消息操作发送的任何内容或数据。 用户在继续对话时完成应用中的操作。
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="对消息执行操作的示例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="对消息执行操作的示例。":::
 
 ### <a name="preview-links"></a>预览链接
 
@@ -155,21 +155,21 @@ ms.locfileid: "66123946"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="示例演示了用户如何在移动设备上的撰写框中粘贴链接。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="示例演示了用户如何在移动设备上的撰写框中粘贴链接。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="示例演示了用户如何在撰写框中粘贴链接。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="示例演示了用户如何在撰写框中粘贴链接。":::
 
 **2.插入内容**。如果应用识别出撰写框中的 URL，它会将链接呈现为提供 Web 内容的内容丰富的预览的卡片。（有关详细信息，请参阅 [自适应卡片设计指南](../../task-modules-and-cards/cards/design-effective-cards.md)。）
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="示例演示了在移动设备上 URL 被应用识别后如何在撰写框中包含一些丰富内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="示例演示了在移动设备上 URL 被应用识别后如何在撰写框中包含一些丰富内容。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="示例演示了在被应用识别后，URL 如何在撰写框中包含一些丰富内容。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="示例演示了在被应用识别后，URL 如何在撰写框中包含一些丰富内容。":::
 
 ## <a name="manage-a-message-extension"></a>管理邮件扩展
 
@@ -183,7 +183,7 @@ ms.locfileid: "66123946"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="图例：移动设备的撰写框中的邮件扩展的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="图例：移动设备的撰写框中的邮件扩展的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -196,7 +196,7 @@ ms.locfileid: "66123946"
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="图例：撰写框中邮件扩展的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="图例：撰写框中邮件扩展的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -211,7 +211,7 @@ ms.locfileid: "66123946"
 
 ### <a name="message-extension-management-menu"></a>邮件扩展管理菜单
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="图例：邮件扩展管理菜单的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="图例：邮件扩展管理菜单的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -226,7 +226,7 @@ ms.locfileid: "66123946"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="示例：设置和一般用途。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="示例：设置和一般用途。":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>建议：与单一登录集成
 
@@ -234,7 +234,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="示例：与单一登录集成。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="示例：与单一登录集成。":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>不建议：让用户离开对话
 
@@ -251,7 +251,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="示例：模板化。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="示例：模板化。":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>建议：如果可能，让 Teams 处理一些设计工作
 
@@ -259,7 +259,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="示例：处理设计工作。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="示例：处理设计工作。":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>不建议：在任务模块中嵌入整个应用
 
@@ -272,7 +272,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="示例：主题。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="示例：主题。":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>建议：充分利用 Teams 颜色令牌
 
@@ -280,7 +280,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="示例：颜色令牌。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="示例：颜色令牌。":::
 
 #### <a name="dont-hard-code-color-values"></a>不建议：硬编码颜色值
 
@@ -293,7 +293,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="示例：操作。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="示例：操作。":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>建议：包含上下文中有意义的操作命令
 
@@ -301,7 +301,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="示例：操作命令。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="示例：操作命令。":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>不建议：包含与上下文无关的操作命令
 

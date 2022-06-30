@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: f359488788c31941ea90bedb02c710c28fb98366
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 32877d96f3867e15c156bf97e727c158b68f9190
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142211"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558014"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>准备帐户以生成 Teams 应用
 
@@ -77,7 +77,7 @@ ms.locfileid: "66142211"
     3. 选择“**账户**”并登录到你的 Microsoft 365 帐户。
     4. 检查是否可以查看选项“**已启用旁加载**”，如下图所示：
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="启用旁加载" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="启用旁加载":::
 
 * **使用 Teams 客户端验证旁加载权限**
 
@@ -85,11 +85,11 @@ ms.locfileid: "66142211"
     2. 在左侧面板中选择“**应用**”。
     3. 选择“**发布应用**”。
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="发布应用" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="发布应用":::
 
     4. 检查是否可以看到选项“**上传自定义应用**”，如下图所示：
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="上传自定义应用" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="上传自定义应用":::
 
         如果无法查看 **上传自定义应用** 的选项，那么则表明你没有进行旁加载所需的权限。
 
@@ -107,7 +107,7 @@ ms.locfileid: "66142211"
 
   2. 选择 **显示全部** > **Teams**。
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="显示全部" border="true":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="显示全部":::
 
      > [!Note]
      > 可能 **至多 24 小时** 后 **Teams** 选项才会出现。 可以[将自定义应用上传到 Teams 环境](/microsoftteams/upload-custom-apps)进行测试和验证。

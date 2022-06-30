@@ -4,12 +4,12 @@ description: 本文介绍如何使用 Teams JavaScript 客户端 SDK 集成人�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d2be8b5cf0140b451ca870874f66e18aa727609f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130443"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557727"
 ---
 # <a name="integrate-people-picker"></a>集成人员选取器
 
@@ -53,7 +53,7 @@ ms.locfileid: "66130443"
 1. 键入所需人员的姓名。 列表中显示名称建议。
 1. 从列表中选择所需人员的姓名。
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="选取器选取器移动" border="true":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="选取器选取器移动":::
 
 # <a name="desktop"></a>[桌面设备](#tab/Sampledesktop)
 
@@ -62,7 +62,7 @@ Web 或桌面上的“人员选取器”控件在 Web 应用顶部的模式窗�
 1. 键入所需人员的姓名。 列表中显示名称建议。
 1. 从列表中选择所需人员的姓名。
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="按名称桌面人员选取器" border="true":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="按名称桌面人员选取器":::
 
 ---
 

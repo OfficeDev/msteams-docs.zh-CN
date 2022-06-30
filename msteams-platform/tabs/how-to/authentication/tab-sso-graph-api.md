@@ -4,12 +4,12 @@ description: 介绍如何使用 Microsoft Graph 配置 API 权限
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Microsoft Azure Active Directory (Azure AD) 图形 API委派权限访问令牌范围的 teams 身份验证选项卡
-ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 474d02c5b5f90e58bfc57f72ab6ce095a0323b62
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485291"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558252"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>使用 Microsoft Graph 权限和范围扩展选项卡应用
 
@@ -33,39 +33,39 @@ ms.locfileid: "66485291"
 
 2. 从左窗格中选择 **“管理** > **API** ”权限。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="应用权限菜单选项。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="应用权限菜单选项。":::
 
     将显示 **“API 权限** ”页。
 
 3. 选择 **+添加权** 限以添加 Microsoft 图形 API权限。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="应用权限页。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="应用权限页。":::
 
     将显示 **“请求 API 权限** ”页。
 
 4. 选择 **Microsoft Graph**。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="“请求 API 权限”页。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="“请求 API 权限”页。":::
 
     显示 Graph 权限的选项。
 
 5. 选择 **委托的权限** 以查看权限列表。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="委派的权限。" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="委派的权限。":::
 
 6. 选择应用的相关权限，然后选择 **“添加权限**”。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="选择权限。" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="选择权限。":::
 
     还可以在搜索框中输入权限名称来查找它。
 
     浏览器上弹出一条消息，指出权限已更新。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="权限已更新消息。" border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="权限已更新消息。":::
 
     添加的权限显示在 **API 权限** 页中。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="配置 API 权限。" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="配置 API 权限。":::
 
     你已使用 Microsoft Graph 权限配置了应用。
 
@@ -86,19 +86,19 @@ ms.locfileid: "66485291"
 
 1. 从左窗格中选择 **“管理** > **身份验证** ”。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="平台身份验证" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="平台身份验证":::
 
     将显示“ **平台配置”** 页。
 
 1. 选择 **+添加平台**。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="添加平台" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="添加平台":::
 
     将显示“ **配置平台** ”页。
 
 1. 选择要为选项卡应用配置的平台。 可以从 Web 或 SPA 中选择平台类型。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="选择 Web 平台" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="选择 Web 平台":::
 
     可以为特定平台类型配置多个平台。 确保重定向 URI 对于你配置的每个平台是唯一的。
 
@@ -109,7 +109,7 @@ ms.locfileid: "66485291"
 
 1. 输入平台的配置详细信息。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="配置 Web 平台" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="配置 Web 平台":::
 
     1. 输入重定向 URI。 URI 应是唯一的。
     2. 输入前通道注销 URL。

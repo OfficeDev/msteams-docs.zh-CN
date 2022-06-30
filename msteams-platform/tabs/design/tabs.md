@@ -5,13 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-keywords: UI 工具包管理选项卡设置单一登录 sso 深度链接基于角色的视图线程讨论
-ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123256"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558322"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>为 Microsoft Teams 设计选项卡
 
@@ -36,13 +35,13 @@ ms.locfileid: "66123256"
 
 用户可以通过选择频道中的 **更多** 按钮 (如下所示) 或已添加选项卡的聊天来访问选项卡。
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="示例显示在频道中添加的移动选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="示例显示在频道中添加的移动选项卡。":::
 
 ### <a name="desktop"></a>桌面
 
 以下示例演示用户如何在频道中添加选项卡。
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="示例显示在频道中添加的选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="示例显示在频道中添加的选项卡。":::
 
 ## <a name="set-up-a-tab"></a>设置选项卡
 
@@ -50,11 +49,11 @@ ms.locfileid: "66123256"
 
 ### <a name="tab-configuration-dialog"></a>选项卡配置对话框
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="示例显示选项卡配置模式。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="示例显示选项卡配置模式。":::
 
 #### <a name="anatomy-tab-configuration-dialog"></a>解剖: 选项卡配置对话框
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="插图显示了选项卡配置模式的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="插图显示了选项卡配置模式的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -71,7 +70,7 @@ ms.locfileid: "66123256"
 
 可以添加一个步骤，用户必须先使用其 Microsoft 凭据登录。 此身份验证方法称为单一登录 (SSO)。
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="示例显示了选项卡身份验证屏幕。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="示例显示了选项卡身份验证屏幕。":::
 
 ### <a name="design-a-tab-setup-with-ui-templates"></a>使用 UI 模板设计选项卡设置
 
@@ -87,17 +86,17 @@ ms.locfileid: "66123256"
 
 ### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="示例显示包含任务板的移动选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="示例显示包含任务板的移动选项卡。":::
 
 ### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="例如显示使用任务板的选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="例如显示使用任务板的选项卡。":::
 
 ### <a name="anatomy-tab"></a>剖析: 选项卡
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="插图显示了选项卡的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="插图显示了选项卡的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -107,7 +106,7 @@ ms.locfileid: "66123256"
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="插图显示了选项卡的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="插图显示了选项卡的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -137,11 +136,11 @@ ms.locfileid: "66123256"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="示例显示在频道线程中讨论的移动选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="示例显示在频道线程中讨论的移动选项卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="示例显示在频道线程中讨论的选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="示例显示在频道线程中讨论的选项卡。":::
 
 ### <a name="tab-chat"></a>选项卡聊天
 
@@ -149,11 +148,11 @@ ms.locfileid: "66123256"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="示例显示了带有上下文中聊天区域的移动选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="示例显示了带有上下文中聊天区域的移动选项卡。":::
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="示例显示了右侧有一个打开了聊天的选项卡。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="示例显示了右侧有一个打开了聊天的选项卡。":::
 
 ### <a name="permissions-and-role-based-views"></a>权限和基于角色的视图
 
@@ -167,7 +166,7 @@ ms.locfileid: "66123256"
 
 #### <a name="mobile"></a>移动设备
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="插图显示了移动选项卡菜单的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="插图显示了移动选项卡菜单的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -179,7 +178,7 @@ ms.locfileid: "66123256"
 
 #### <a name="desktop"></a>桌面
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="插图显示了选项卡菜单的 UI 解剖。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="插图显示了选项卡菜单的 UI 解剖。":::
 
 |计数器|说明|
 |----------|-----------|
@@ -204,7 +203,7 @@ ms.locfileid: "66123256"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="插图显示了如何使用选项卡导航设计。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="插图显示了如何使用选项卡导航设计。":::
 
 #### <a name="do-facilitate-conversation"></a>执行: 促进对话
 
@@ -212,7 +211,7 @@ ms.locfileid: "66123256"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="示例显示了不使用选项卡导航设计的事物。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="示例显示了不使用选项卡导航设计的事物。":::
 
 #### <a name="dont-treat-your-tab-like-any-other-webpage"></a>请勿执行: 像对待任何其他网页一样对待你的选项卡
 
@@ -225,7 +224,7 @@ ms.locfileid: "66123256"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="示例显示了如何使用选项卡导航设计。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="示例显示了如何使用选项卡导航设计。":::
 
 #### <a name="do-limit-tasks-and-data"></a>执行: 限制任务和数据
 
@@ -233,7 +232,7 @@ ms.locfileid: "66123256"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="插图显示了不使用选项卡导航设计的事物。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="插图显示了不使用选项卡导航设计的事物。":::
 
 #### <a name="dont-embed-your-entire-app"></a>请勿执行: 嵌入整个应用
 
@@ -246,7 +245,7 @@ ms.locfileid: "66123256"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="显示如何使用选项卡安装设计的插图。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="显示如何使用选项卡安装设计的插图。":::
 
 #### <a name="do-keep-it-simple"></a>请执行: 保持简单
 
@@ -254,7 +253,7 @@ ms.locfileid: "66123256"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="插图显示了不使用选项卡安装设计的事物。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="插图显示了不使用选项卡安装设计的事物。":::
 
 #### <a name="dont-have-too-many-steps"></a>请勿执行: 步骤太多
 
@@ -267,7 +266,7 @@ ms.locfileid: "66123256"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="显示如何使用选项卡主题的插图。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="显示如何使用选项卡主题的插图。":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>建议：充分利用 Teams 颜色令牌
 
@@ -275,7 +274,7 @@ ms.locfileid: "66123256"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="插图显示了不使用选项卡主题的事物。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="插图显示了不使用选项卡主题的事物。":::
 
 #### <a name="dont-hard-code-color-values"></a>请勿执行: 硬编码颜色值
 

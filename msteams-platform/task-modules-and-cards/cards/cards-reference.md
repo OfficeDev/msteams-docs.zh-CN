@@ -3,12 +3,12 @@ title: 卡片类型
 description: 在本模块中，了解哪些卡片和卡片操作可用于 Teams 中的机器人，并创建主图、缩略图和自适应卡片
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142624"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558581"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -131,7 +131,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 ### <a name="example-of-adaptive-card"></a>自适应卡片示例
 
-:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="自适应卡片示例" border="true":::
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="自适应卡片示例":::
 
 以下代码演示自适应卡片的示例:
 

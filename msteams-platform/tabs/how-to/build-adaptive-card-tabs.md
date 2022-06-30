@@ -5,12 +5,12 @@ description: 在本模块中，了解如何通过代码示例使用自适应卡�
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c42ea356e3654453d20f59a8be33412b1e608939
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485238"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558175"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -31,7 +31,7 @@ ms.locfileid: "66485238"
 
 下图显示了如何在桌面和移动设备中使用自适应卡片生成选项卡:
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="选项卡中呈现的自适应卡片示例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="选项卡中呈现的自适应卡片示例。":::
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -355,7 +355,7 @@ ms.locfileid: "66485238"
 
 下图概述了身份验证数据流如何适用于 `tab/fetch` 调用。
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="自适应卡片选项卡身份验证流示例。" border="false" lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="自适应卡片选项卡身份验证流示例。":::
 
 **`tab/fetch` 身份验证响应**
 

@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Teams 平台上生成自定义选
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1ff0d77f03e98ab2865705ed9a5be3687ee6779a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503891"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558140"
 ---
 # <a name="build-tabs-for-teams"></a>Teams 的生成选项卡
 
@@ -25,11 +25,11 @@ ms.locfileid: "66503891"
 
 下图显示了个人选项卡：
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="个人选项卡" lightbox="../assets/images/tabs/personaltab.png" border="true":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="个人选项卡" lightbox="../assets/images/tabs/personaltab.png":::
 
 下图显示了 Contoso 频道选项卡：
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="频道或组选项卡" lightbox="../assets/images/tabs/tabs.png" border="true":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="频道或组选项卡" lightbox="../assets/images/tabs/tabs.png":::
 
 在使用选项卡之前，必须先完成几个先决条件。
 
