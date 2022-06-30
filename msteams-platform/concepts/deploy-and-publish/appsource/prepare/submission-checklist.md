@@ -5,21 +5,21 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 29f98b024330c562e82722ddefffe68e94543bf6
-ms.sourcegitcommit: 46a2955f89b6a0e72449732eaa2bfea274191f67
+ms.openlocfilehash: 568c3017327126697834d1fdc27ffb1c69997670
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2022
-ms.locfileid: "66163490"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503744"
 ---
-# <a name="prepare-your-microsoft-teams-store-submission"></a>准备 Microsoft Teams 应用商店提交
+# <a name="prepare-your-teams-store-submission"></a>准备 Teams 应用商店提交
 
 你已设计、生成和测试了 Microsoft Teams 应用。 现在，你已准备好将其列出，以便用户可以发现并开始使用你的应用。
 
 请观看以下视频，以了解有关将应用发布到 Microsoft Teams 应用商店的详细信息：
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource) 之前，确保已完成以下操作。

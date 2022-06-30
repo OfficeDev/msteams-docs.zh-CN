@@ -5,14 +5,14 @@ description: 在本模块中，了解如何在 Teams 平台上生成自定义选
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 94fef69a1f11209fdb4512e7d140c2d6dbf813ef
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143646"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503891"
 ---
-# <a name="build-tabs-for-microsoft-teams"></a>构建 Microsoft Teams 选项卡
+# <a name="build-tabs-for-teams"></a>Teams 的生成选项卡
 
 选项卡是 Teams 中嵌入的与 Microsoft Teams 相关的网页。 它们是简单的 HTML `<iframe\>` 标记，指向在应用清单中声明的域，并且可以添加为团队内部频道、群组聊天或个人用户的个人应用的一部分。 可在应用中包含自定义选项卡，以便在 Teams 中嵌入自己的 Web 内容，或将 Teams 特定的功能添加到 Web 内容。 有关详细信息，请参阅 [Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client)。
 
@@ -25,11 +25,11 @@ ms.locfileid: "66143646"
 
 下图显示了个人选项卡：
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="个人选项卡" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="个人选项卡" lightbox="../assets/images/tabs/personaltab.png" border="true":::
 
 下图显示了 Contoso 频道选项卡：
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="频道或组选项卡" lightbox="../assets/images/tabs/tabs.png":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="频道或组选项卡" lightbox="../assets/images/tabs/tabs.png" border="true":::
 
 在使用选项卡之前，必须先完成几个先决条件。
 
