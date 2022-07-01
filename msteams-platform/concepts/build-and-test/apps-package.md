@@ -3,12 +3,12 @@ title: 打包应用
 description: 了解如何使用用于测试、上传和存储发布的图标打包 Microsoft Teams 应用。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: bf0cff985184a0a0d03a9f2a996182b3ea7365bc
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 670243f3b82408592af944fd2c8ae4fc2c739ebc
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503618"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558560"
 ---
 # <a name="create-teams-app-package"></a>创建 Teams 应用包
 
@@ -21,7 +21,7 @@ ms.locfileid: "66503618"
 
 当用户在 Teams 中安装你的应用时，他们安装的应用包仅包含配置文件 (也称为应用清单) 以及应用的图标。 应用的逻辑和数据存储托管在其他地方，如开发期间的本地主机和 Azure Web 服务。 Teams 通过 HTTPS 访问这些资源。
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="显示 Teams 应用的应用托管插图" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="显示 Teams 应用的应用托管插图":::
 
 ## <a name="app-manifest"></a>应用部件清单
 
@@ -44,7 +44,7 @@ ms.locfileid: "66503618"
 
 Teams 会自动裁剪图标，以在多个方案中显示圆角的正方形，并在机器人方案中显示六边形。 若要在不丢失任何详细信息的情况下裁剪符号，请在符号周围包含 48 像素的填充。
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams 颜色图标和设计指南。" border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams 颜色图标和设计指南。":::
 
 ### <a name="outline-icon"></a>大纲图标
 
@@ -55,13 +55,13 @@ Teams 会自动裁剪图标，以在多个方案中显示圆角的正方形，�
 
 图标必须为 32x32 像素。 它可以是白色，背景透明或透明，背景为白色（不允许使用其他颜色）。 大纲图标不应在符号周围有任何额外的填充。
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams 大纲图标设计指南。" border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams 大纲图标设计指南。":::
 
 ### <a name="best-practices"></a>最佳做法
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="演示如何设计应用图标的插图。" border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="演示如何设计应用图标的插图。":::
 
 #### <a name="do-follow-the-precise-outline-icon-guidelines"></a>执行：遵循精确的大纲图标准则
 
@@ -69,7 +69,7 @@ Teams 会自动裁剪图标，以在多个方案中显示圆角的正方形，�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="演示如何不设计应用图标的插图。" border="false":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="演示如何不设计应用图标的插图。":::
 
 #### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>不要：以圆形或圆角方形裁剪
 
@@ -88,15 +88,15 @@ Teams 会自动裁剪图标，以在多个方案中显示圆角的正方形，�
 
 #### <a name="personal-app"></a>个人应用
 
-:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="显示应用图标在个人应用中的外观的示例。" border="false":::
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="显示应用图标在个人应用中的外观的示例。":::
 
 #### <a name="bot-channel"></a>机器人（通道）
 
-:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="显示应用图标在通道内机器人上的外观的示例。" border="false":::
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="显示应用图标在通道内机器人上的外观的示例。":::
 
 #### <a name="message-extension"></a>消息扩展
 
-:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<文本>" border="false":::
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<文本>":::
 
 ## <a name="next-step"></a>后续步骤
 
