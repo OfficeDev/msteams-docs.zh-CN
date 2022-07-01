@@ -3,14 +3,14 @@ title: 清单架构参考
 description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5a65fa1fdbf854749bf21a4d4ab395af74211fc5
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189355"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503730"
 ---
-# <a name="reference-manifest-schema-for-microsoft-teams"></a>参考：Microsoft Teams 的清单架构
+# <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
 Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 应用清单必须符合托管在 [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) 的架构。 支持每个以前的版本 1.0、1.1...1.12 和当前 1.13 版本（请参阅下面的备注）（在 URL 中使用“v1.x”）。
 有关每个版本中所做的更改的详细信息，请参阅[管理更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。

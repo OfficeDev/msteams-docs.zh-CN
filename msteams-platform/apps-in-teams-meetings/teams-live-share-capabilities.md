@@ -4,16 +4,16 @@ description: 请在本模块中详细了解 Live Share SDK 功能、RSC 权限�
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 35d5228ac39dd1a9d58d699d8c989aeeceaf765d
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143240"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503345"
 ---
 ---
 
-# <a name="live-share-capabilities"></a>Live Share 功能
+# <a name="live-share-core-capabilities"></a>Live Share 核心功能
 
 Live Share SDK 可以很轻松地添加到会议扩展的 `sidePanel` 和 `meetingStage` 上下文。 本文重点介绍如何将 Live Share SDK 集成到应用和 SDK 的关键功能中。
 

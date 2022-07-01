@@ -5,14 +5,14 @@ description: 借助此学习路径，开始使用 Microsoft Teams 中的聊天�
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150839"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503758"
 ---
-# <a name="bots-in-microsoft-teams"></a> Microsoft Teams 中的自动程序
+# <a name="build-bots-for-teams"></a>为 Teams 生成机器人
 
 机器人也称为聊天机器人或对话机器人。 它是一个应用，可由客户服务或支持人员等用户运行简单且重复的任务。 机器人的日常使用包括提供天气信息、预订餐食或提供旅行信息。 与机器人的交互可以是快速问答或复杂的对话。
 

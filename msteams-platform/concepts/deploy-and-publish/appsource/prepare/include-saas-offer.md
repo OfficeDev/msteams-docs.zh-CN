@@ -5,14 +5,14 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 0fdfb097def9b39e099536c2054cfaab21610770
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 7a5647c940f6f20babf4f0704b5b7781f4d065c4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123638"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503324"
 ---
-# <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>将 SaaS 产品/服务包括在 Microsoft Teams 应用中
+# <a name="include-a-saas-offer-with-your-teams-app"></a>在 Teams 应用中包含 SaaS 产品/服务
 
 :::row:::
    :::column span="3":::
@@ -47,7 +47,7 @@ ms.locfileid: "66123638"
 
 规划如何实现 Teams 应用盈利时，需要考虑以下事项：
 
-* 针对订阅模型做出决定。 可交易的 SaaS 产品/服务可以包含多个订阅计划。 任何人都可使用的公共订阅计划最为常见，但你可能还希望通过仅面向他们的交易服务特定客户。 有关详细信息，请参阅 [面向 Microsoft 商业市场中的专用产品/服务](/azure/marketplace/private-offers)。
+* 针对订阅模型做出决定。 可交易的 SaaS 产品/服务可以包含多个订阅计划。 任何人都可使用的公共订阅计划最为常见，但你可能还希望通过仅面向他们的交易服务特定客户。 有关详细信息，请参阅 [Microsoft 商业市场中的专用计划](/azure/marketplace/private-plans)。
 * 阅读有关 SaaS 产品/服务的 [*通过 Microsoft 销售* 列表选项](/azure/marketplace/plan-saas-offer#listing-options)，如果希望用户直接通过 Teams 应用商店购买应用的订阅计划，则需要此选项。
 * 了解 [Azure Active Directory 单一登录 (SSO)](/azure/marketplace/azure-ad-saas) 如何帮助客户购买和管理订阅。 （具有 SaaS 产品/服务的 Teams 应用需要 Microsoft Azure Active Directory (Azure AD) SSO。）
 * 了解你负责管理支持客户使用 SaaS 产品/服务所需的基础结构并负责支付费用。

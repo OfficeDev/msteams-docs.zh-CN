@@ -3,12 +3,12 @@ title: 入门 - 概述
 description: 在本模块中，了解如何开始使用介绍常见工具、基本概念和高级功能的 Microsoft Teams 开发人员文档。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 09522f4509d9e9c73c7b854b57fbb7ad5e982ba2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4a53466aab1a896e99b91210dbc93d8467df52d1
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143156"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503898"
 ---
 # <a name="get-started"></a>入门
 
@@ -24,7 +24,7 @@ ms.locfileid: "66143156"
 
 让我们快速浏览一下可供选择的构建环境选项，以及构建和部署 Teams 应用的路线图。
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="显示构建和部署 Teams 应用的基本步骤的插图":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="显示构建和部署 Teams 应用的基本步骤的插图" border="true":::
 
 ## <a name="app-capabilities-and-development-tools"></a>应用功能和开发工具
 
@@ -50,7 +50,7 @@ ms.locfileid: "66143156"
 > [!div class="nextstepaction"]
 > [通过 JavaScript 使用 React 构建 Teams 选项卡应用](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [通过 JavaScript 使用 React 构建 Teams 机器人应用](../sbs-gs-bot.yml)
+> [通过 JavaScript 构建 Teams 机器人应用](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
 > [通过 JavaScript 使用 React 构建 Teams 消息扩展应用](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
