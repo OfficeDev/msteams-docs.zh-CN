@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 2f7d22c75bda7eb9ed820ac463214ed08bdc8cca
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: f894262918004e643370963ad8e67ef3183927b8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485306"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558427"
 ---
 # <a name="teams-app-that-fits"></a>适合的 Teams 应用
 
@@ -27,7 +27,7 @@ Microsoft Teams 提供由 Microsoft 或外部服务提供的应用集合。 Team
 
 我们用可帮助满足业务需求的一些方面。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="为什么要生成 Teams 应用?" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="为什么要生成 Teams 应用?":::
 
 | **开发选项** | **商机** |
 | --- | --- |
@@ -53,7 +53,7 @@ Teams 应用通过将关键信息、常用工具和受信任的流程引入更�
 
     Teams 是一个社交平台; 定制的以社交为中心的应用程序鼓励团队将公司文化延伸到协作空间中。 使用应用发送投票，让用户彼此共享反馈，从而实现连接和通信。
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="用于构建团队文化的 Teams 应用" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="用于构建团队文化的 Teams 应用":::
 
 - **常见业务流程**
 
@@ -61,7 +61,7 @@ Teams 应用通过将关键信息、常用工具和受信任的流程引入更�
 
     除了自动执行重复性工作流之外，还可以使用应用来帮助解决通信问题。 聊天机器人可以轻松替代给 IT 或人力资源部门的电子邮件和电话。
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams 应用供内部使用" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams 应用供内部使用":::
 
 - **Teams 应用商店优势**
 
@@ -71,7 +71,7 @@ Teams 应用通过将关键信息、常用工具和受信任的流程引入更�
 
     如果已经有现有的 Web 应用程序、SharePoint 站点 (或 SPFx 扩展)、PowerApp 或其他基于 Web 的应用程序，那么在 Teams 中启用其中的一部分或全部可能是有意义的。 扩展现有应用并将交互式功能移植到 Teams 中，有助于提高应用的用户群和用户参与度。
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint 网站移植为 Teams 选项卡" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint 网站移植为 Teams 选项卡":::
 
 - **包含选项卡和机器人的个人应用**
 
