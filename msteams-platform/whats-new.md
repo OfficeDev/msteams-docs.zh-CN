@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能
 description: 在此学习路径中，了解 Microsoft Teams 中的新增开发人员功能和这些功能的增强功能。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c11cf1d18c07693cb04b186b5f810ffca833590b
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 3ab4c771bb0bf0cab1fb7c71f2995d18af7b4289
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558567"
+ms.locfileid: "66561614"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -266,6 +266,7 @@ ms.locfileid: "66558567"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+| 2022/06/30 | 用于即时会议、一对一和群组通话的应用| 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 06/16/2022 | 将展开共享链接到 Web 应用中的团队| 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| 更新 Teams 机器人中的聊天和安装事件 |  生成机器人>机器人对话> Teams 机器人中的对话事件> [Teams 机器人中的对话事件](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 |  构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
