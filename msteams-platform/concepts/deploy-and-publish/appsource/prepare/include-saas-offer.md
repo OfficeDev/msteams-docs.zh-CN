@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 7a5647c940f6f20babf4f0704b5b7781f4d065c4
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 366902d242ece8a60e601361d4e9257defd7a836
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503324"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558189"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>在 Teams 应用中包含 SaaS 产品/服务
 
@@ -36,7 +36,7 @@ ms.locfileid: "66503324"
    :::column-end:::
    :::column span="1":::
 
-:::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="关闭图，演示如何将 SaaS 产品/服务包含在 Teams 应用中的过程。" border="false":::
+:::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="关闭图，演示如何将 SaaS 产品/服务包含在 Teams 应用中的过程。":::
 
    :::column-end:::
 :::row-end:::

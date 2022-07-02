@@ -5,12 +5,12 @@ description: 借助此学习路径，开始使用 Microsoft Teams 中的聊天�
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503758"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558315"
 ---
 # <a name="build-bots-for-teams"></a>为 Teams 生成机器人
 
@@ -33,7 +33,7 @@ ms.locfileid: "66503758"
 
 使用卡片、文本和任务模块的正确组合创建有用的机器人。 下图显示了用户在使用文本和交互式卡片的一对一聊天中与机器人交谈。
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="示例常见问题解答机器人" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="示例常见问题解答机器人":::
 
 用户与机器人之间的每次交互都表示为活动。 机器人收到活动时，会将其传递给其活动处理程序。 参阅[机器人活动处理程序](~/bots/bot-basics.md)。
 

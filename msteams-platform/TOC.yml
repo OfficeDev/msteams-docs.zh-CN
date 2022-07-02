@@ -297,7 +297,7 @@
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: 添加链接展开
       href: messaging-extensions/how-to/link-unfurling.md
-- name: 为 Teams 会议构建应用程序
+- name: 为 Teams 会议和通话构建应用
   items:
     - name: 概述
       href: apps-in-teams-meetings/teams-apps-in-meetings.md

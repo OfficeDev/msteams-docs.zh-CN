@@ -3,18 +3,18 @@ title: Teams 中面向开发人员的新增功能
 description: 在此学习路径中，了解 Microsoft Teams 中的新增开发人员功能和这些功能的增强功能。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 0b7c2078980748f8e0820348e23a22c57ac7c22f
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: c11cf1d18c07693cb04b186b5f810ffca833590b
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130464"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558567"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
 发现正式版 （GA） 和开发人员预览版中的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
 
-## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng-borderfalse"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png"
 
 | Date | 功能 | 在此处找到它 |
 | --- | --- | --- |

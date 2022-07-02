@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 12bd5a6e2c72c1095fbb7f6f113cb9126b247289
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 96b80409697c9347fac82138d0e929c5c874725a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503954"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558098"
 ---
 # <a name="upload-your-app-in-teams"></a>在 Teams 中上传应用
 
@@ -39,18 +39,18 @@ ms.locfileid: "66503954"
 1. 使用你的 [Microsoft 365开发帐户](https://developer.microsoft.com/en-us/microsoft-365/dev-program) 登录到 Teams 客户端。
 1. 选择“**应用**” > “**管理应用**”和“**发布应用**”。
 
-    :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="发布应用" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="发布应用":::
 
 1. 选择“**上传自定义应用**”。
 
-   :::image type="content" source="~/assets/images/publish-app/publish-app.png" alt-text="上传自定义应用" border="true":::
+   :::image type="content" source="~/assets/images/publish-app/publish-app.png" alt-text="上传自定义应用":::
 
 1. 选择应用包 .zip 文件。
 1. 根据要求将应用添加到 Teams:</br>
 
    a. 选择 **添加** 以添加个人应用。</br> b. 使用下拉菜单将应用添加到团队或聊天中。
 
-    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="应用说明" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="应用说明":::
 
 ## <a name="troubleshoot"></a>排除故障
 
@@ -70,11 +70,11 @@ ms.locfileid: "66503954"
 
 1. 转到“**应用**”，然后在 Teams 中选择“**管理应用**”以查看所有频道中安装的应用或以列表格式供个人使用。
 
-    :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="访问团队应用列表" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="访问团队应用列表":::
 
 1. 选择应用下拉列表以查看安装应用的所有范围。
 
-    :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="访问团队应用范围" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="访问团队应用范围":::
 
 1. 选择应用范围以转到频道或个人视图中的应用。 范围列表仅包含个人范围和团队范围。 群聊范围内安装的应用当前不显示在此视图中。
 
@@ -88,27 +88,28 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 
 1. 选择“**更新可用**”以查看更新。
 
-     :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="更新 Teams 应用" border="true":::
+     :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="更新 Teams 应用。":::
 
 1. 选择“**查看更新**”，将显示具有更新选项的窗口。
 1. 选择“**更新**”按钮以更新应用。
 
-     :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="在管理应用中更新 Teams 应用" border="true":::
+     :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="在管理应用中更新 Teams 应用。":::
 
-     :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="已更新的应用" border="true":::
+     :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="已更新的应用。":::
 
 ### <a name="remove-your-app"></a>删除应用
 
 要从 Teams 中删除应用，请按照以下步骤操作：
 
 1. 在“**管理应用**”中查找应用。
-1. 在已安装应用的范围内选择&nbsp;“:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="在 Teams 中删除应用" border="false":::”&nbsp;。
 
-    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="在频道中删除应用" border="true":::
+1. 在已安装应用的范围内选择&nbsp;“:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="在 Teams 中删除应用":::”&nbsp;。
+
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="在频道中删除应用。":::
 
 1. 选择“**删除**”以删除应用。
 
-    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="从 Teams 中删除应用" border="true":::
+    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="从 Teams 中删除应用。":::
 
 > [!NOTE]
 >
