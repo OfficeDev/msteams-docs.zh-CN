@@ -3,12 +3,12 @@ title: 为机器人提供单一登录支持
 description: 了解如何获取用户令牌，机器人开发人员可以使用具有 OAuth 卡支持的登录卡或 Azure 机器人服务。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
+ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503653"
+ms.lasthandoff: 07/04/2022
+ms.locfileid: "66611497"
 ---
 # <a name="use-sso-authentication-for-bots"></a>对机器人使用 SSO 身份验证
 
@@ -19,7 +19,7 @@ Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无
 
 请参阅以下视频，了解对机器人的单一登录 (SSO) 支持：
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>运行时机器人 SSO
