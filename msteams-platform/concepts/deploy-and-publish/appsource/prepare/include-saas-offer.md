@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 366902d242ece8a60e601361d4e9257defd7a836
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: d920b4f90ac71f2b470dbda9e6ba863872f59f2a
+ms.sourcegitcommit: c98dececb706d235bfb306852a9f29a387f3858b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558189"
+ms.lasthandoff: 07/04/2022
+ms.locfileid: "66611868"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>在 Teams 应用中包含 SaaS 产品/服务
 
@@ -224,4 +224,5 @@ ms.locfileid: "66558189"
 
 ## <a name="see-also"></a>另请参阅
 
-[维护和支持已发布的应用](../post-publish/overview.md)
+* [维护和支持已发布的应用](../post-publish/overview.md)
+* [链接到 SaaS 产品/服务的应用的验证准则](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
