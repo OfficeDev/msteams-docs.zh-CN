@@ -1,15 +1,15 @@
 ---
-title: 在 Teams 和 Azure AD 中使用 SSO 的选项卡进行身份验证概述
-description: 概述 Teams 中的 SSO 身份验证以及如何在选项卡中使用它
+title: 在 Teams 和 Azure AD 中使用 SSO 对选项卡进行身份验证的概述
+description: 概述 Teams 中的 SSO 身份验证以及如何在选项卡中使用
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: Microsoft Azure Active Directory (Azure AD) SSO 访问令牌应用清单的 teams 身份验证选项卡
-ms.openlocfilehash: e394b58effbb21491f20a4a20bfa48bf42fd1484
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Microsoft Azure Active Directory (Azure AD) SSO 访问令牌应用清单的 Teams 身份验证选项卡
+ms.openlocfilehash: 54e2a691208db1613bf73e255f91bd4cba8960d6
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557720"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659011"
 ---
 # <a name="enable-sso-for-tab-app"></a>为选项卡应用启用 SSO
 
@@ -20,8 +20,8 @@ ms.locfileid: "66557720"
 本部分将介绍以下内容：
 
 1. **SSO 用户体验**：Teams 为应用用户提供真正的 SSO 体验。 应用用户无需再次登录即可使用你的应用。
-2. **运行时 Teams 中的 SSO**：Tab 应用在运行时与 Azure AD 交互，以便为应用用户进行一次性身份验证和授权。
-3. **为选项卡应用启用 SSO**：实现在选项卡应用中实现 SSO 所涉及的任务。
+2. **运行时 Teams 中的 SSO**：选项卡应用在运行时与 Azure AD 交互，以便为应用用户进行一次性身份验证和授权。
+3. **为选项卡应用启用 SSO**：执行在选项卡应用中实现 SSO 所涉及的任务。
 
 ## <a name="sso-user-experience-in-teams"></a>Teams 中的 SSO 用户体验
 
@@ -44,8 +44,8 @@ ms.locfileid: "66557720"
 
 - Teams 从 Azure AD 获取当前应用用户的访问令牌。 与 Azure AD 的这种交互对应用用户来说是不可见的。 它转换为获取应用访问权限，而无需离开 Teams 环境。
 - 应用用户只需在多租户环境中同意。 如果应用用户和应用驻留在同一租户中，则应用用户无需同意使用该应用。
-- 首次同意 Teams 后，应用用户可以使用你的应用，而无需进一步的同意，即使在任何其他设备上。 因此，它提供了更好的用户体验。
-  - 或者，租户管理员可以代表应用用户授予同意。 在这种情况下，当租户管理员同意租户中的应用用户时，根本不需要提示应用用户同意。 这意味着应用用户看不到同意对话框，并且可以无缝访问应用。
+- 首次同意 Teams 后，应用用户可以使用你的应用，而无需进一步的同意，即使在任何其他设备上也是如此。 因此，它提供了更好的用户体验。
+  - 或者，租户管理员可以代表应用用户授予同意。 在这种情况下，当租户管理员同意租户中的应用用户时，根本不需要提示应用用户同意。 这意味着应用用户看不到同意对话框，并且可以无缝衔接访问应用。
 - Teams 会预先提取访问令牌，以提高 Teams 环境中应用的性能和加载时间。
 - 应用用户无需记住或记录多个密码，才能访问和使用 Teams 环境中的应用。
 
@@ -56,7 +56,7 @@ ms.locfileid: "66557720"
 
 ## <a name="sso-in-teams-at-runtime"></a>运行时 Teams 中的 SSO
 
-通过获取当前登录的 Teams 应用用户的访问令牌，在选项卡应用中实现 SSO。 此过程涉及 Tab 应用客户端和服务器、Teams 客户端和 Azure AD。 在此交互过程中，应用用户必须同意使用 Teams 标识在多租户环境中获取访问令牌。
+通过获取当前登录的 Teams 应用用户的访问令牌，在选项卡应用中实现 SSO。 此过程涉及选项卡应用客户端和服务器、Teams 客户端和 Azure AD。 在此交互过程中，应用用户必须同意使用 Teams 标识在多租户环境中获取访问令牌。
 
 下图显示了当 Teams 应用用户尝试访问选项卡应用时 SSO 的工作原理：
 
@@ -64,17 +64,17 @@ ms.locfileid: "66557720"
 
 | # | 交互 | 这是怎么回事 |
 | --- | --- | --- |
-| 1 | Tab 应用→ Teams 客户端 | 选项卡应用对 JavaScript 进行调用 `getAuthToken()`，告知 Teams 获取访问令牌。 |
+| 1 | 选项卡应用→ Teams 客户端 | 选项卡应用对 JavaScript 进行调用 `getAuthToken()`，告知 Teams 获取访问令牌。 |
 | 2 | Teams 客户端→ Azure AD | Teams 基于 Teams 标识请求 Azure AD 终结点为当前应用用户提供访问令牌。 |
-| 3 | Azure AD →许可表单 | 如果当前应用用户是第一次使用 Tab 应用，则如果应用需要访问一些受保护的数据，Teams 会显示请求提示以表示同意。 应用用户 (或管理员) 必须同意 Teams 使用应用用户的 Teams 标识从 Azure AD 获取访问令牌。 <br> 或者，有一个请求提示来处理升级身份验证，例如双因素身份验证。 |
-| 4 | Azure AD → Teams 客户端 | Azure AD 将访问令牌发送到 Teams 客户端。 该令牌是 JWT)  (JSON Web 令牌，其验证工作方式与大多数标准 OAuth 流中的令牌验证一样。 Teams 代表你缓存令牌，以便将来调用以 `getAuthToken()` 返回缓存的令牌。 |
-| 5 | Teams 客户端→ Tab 应用客户端 | Teams 将访问令牌作为调用返回 `getAuthToken()` 的结果对象的一部分发送到 Tab 应用。 |
-| 6  | 客户端&服务器) 之间的 Tab 应用 ( | 选项卡应用使用 JavaScript 分析访问令牌以提取所需的信息，例如应用用户的电子邮件地址。 返回到选项卡应用的令牌既是访问令牌，也是标识令牌。 |
+| 3 | Azure AD →许可表单 | 如果当前应用用户是第一次使用选项卡应用，则如果应用需要访问一些受保护的数据，Teams 会显示请求提示以表示同意。 应用用户 (或管理员) 必须同意 Teams 使用应用用户的 Teams 标识从 Azure AD 获取访问令牌。 <br> 或者，有一个请求提示来处理升级身份验证，例如双因素身份验证。 |
+| 4 | Azure AD → Teams 客户端 | Azure AD 将选项卡访问令牌发送到 Teams 客户端。 该令牌是 JSON Web 令牌 (JWT)，这意味着验证方式与大多数标准 OAuth 流中的令牌验证方式类似。 Teams 代表你缓存令牌，以便将来调用 `getAuthToken()` 返回缓存的令牌。 |
+| 5 | Teams 客户端→选项卡应用客户端 | Teams 将选项卡访问令牌作为 `getAuthToken()` 调用返回的结果对象的一部分发送到选项卡。 |
+| 6  | 选项卡应用（在客户端和服务器之间） | 使用 JavaScript 在选项卡应用程序中分析令牌，以提取所需的信息，例如用户的电子邮件地址。 返回到选项卡应用的令牌既是访问令牌又是标识令牌。 |
 
 有关详细信息，请参阅 [更新代码以启用 SSO](tab-sso-code.md)。
 
 > [!IMPORTANT]
-> 仅 `getAuthToken()` 对一组有限的用户级 API（例如电子邮件、配置文件、offline_access和 OpenId）的许可有效。 它不用于其他图形范围，如 `User.Read` 或 `Mail.Read`。 有关建议的解决方法，请参阅 [使用 Microsoft Graph 权限扩展应用](tab-sso-graph-api.md)。
+> `getAuthToken()` 仅对一组有限的用户级 API（即电子邮件、配置文件、offline_access、OpenId）的许可有效。 它不用于其他 Graph 范围，如 `User.Read` 或 `Mail.Read`。 有关建议的解决方法，请参阅 [使用 Microsoft Graph 权限扩展应用](tab-sso-graph-api.md)。
 
 选项卡是 Teams 感知的网页。 若要在选项卡应用中托管的网页中启用 SSO，请添加 [Teams Javascript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 并调用 `microsoftTeams.initialize()`。 初始化后，调用 `microsoftTeams.getAuthToken()` 以获取应用的访问令牌。
 
@@ -89,7 +89,7 @@ ms.locfileid: "66557720"
 - 还可以使用 SSO API 对想要访问阶段视图的应用用户进行身份验证，而无需再次进行验证。
 
 > [!TIP]
-> 还可以使用 SSO API 对嵌入 Web 内容 [的任务模块](../../../task-modules-and-cards/what-are-task-modules.md) 中的应用用户进行身份验证。
+> 还可以使用 SSO API 对嵌入 Web 内容 的 [任务模块](../../../task-modules-and-cards/what-are-task-modules.md) 中的应用用户进行身份验证。
 
 若要在运行时实现 SSO，请将应用配置为启用 SSO 以对应用用户进行身份验证和授权。
 
@@ -102,20 +102,20 @@ ms.locfileid: "66557720"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="为选项卡启用 SSO 的步骤" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **注册到 Azure AD**：创建 Azure AD 应用以生成应用 ID 和应用程序 ID URI。 若要生成访问令牌，请配置范围并授权受信任的客户端应用程序。
-2. **更新代码**：添加代码以处理访问令牌，在应用用户访问选项卡应用时调用 `getAuthToken()` ，将此令牌发送到授权标头中的应用服务器代码，并在收到访问令牌时对其进行验证。
+2. **更新代码**：添加代码以处理访问令牌，在应用用户访问选项卡应用时调用 `getAuthToken()`，将此令牌发送到授权标头中的应用服务器代码，并在收到访问令牌时对其进行验证。
 3. **更新 Teams 应用清单**：使用 Azure AD 上生成的应用 ID 和应用程序 ID URI 更新 Teams 客户端应用清单，以允许 Teams 代表应用请求访问令牌。
 
 ## <a name="third-party-cookies-on-ios"></a>iOS 上的第三方 Cookie
 
-iOS 14 更新后，Apple 默认阻止所有应用 [的第三方 Cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) 访问。 因此，利用第三方 Cookie 在其频道或聊天选项卡和个人应用中进行身份验证的应用将无法在 Teams iOS 客户端上完成其身份验证工作流。 若要符合隐私和安全要求，必须转为使用基于令牌的系统，或在用户身份验证工作流程中使用第一方 Cookie。
+iOS 14 更新后，Apple 默认阻止所有应用的 [第三方 Cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) 访问。 因此，在其“频道”或“聊天”选项卡和个人应用中利用第三方 Cookie 进行身份验证的应用，将无法在 Teams iOS 客户端上完成其身份验证工作流。 若要符合隐私和安全要求，必须转为使用基于令牌的系统，或在用户身份验证工作流程中使用第一方 Cookie。
 
 ### <a name="teams-mobile-client-support"></a>Teams 移动客户端支持
 
 对于 Teams 移动版，支持 SSO 的客户端版本为：
 
-- 适用于 Android (1416/1.0.0.2020073101 及更高版本的 Teams) 
-- 适用于 iOS (版本的 Teams：2.0.18 及更高版本)   
-- Teams JavaScript SDK (版本：1.11 及更高版本) SSO 在会议侧面板中工作
+- 适用于 Android 的 Teams（1416/1.0.0.2020073101 及更高版本）
+- 适用于 iOS 团队（版本：2.0.18 及更高版本）  
+- Teams JavaScript SDK（版本：1.11 及更高版本），用于 SSO 在会议侧面板中工作
 
 为获得 Teams 的最佳体验，请使用最新版本的 iOS 和 Android。
 
@@ -123,19 +123,19 @@ iOS 14 更新后，Apple 默认阻止所有应用 [的第三方 Cookie](https://
 
 下面列出了最佳做法：
 
-- **仅在需要时调用访问令** 牌：仅在需要访问令牌时调用 `getAuthToken()` 。 当应用用户访问 Tab 应用或使用需要应用用户验证的特定函数时，可以调用它。
-- **不要在客户端代码上存储访问令牌**：不要在应用的客户端代码中缓存或存储访问令牌。 Teams 客户端 (缓存访问令牌，或者在访问令牌过期) 时请求新令牌。 这可确保 Web 应用不会意外泄漏令牌。
+- **仅在需要时调用访问令牌**：仅在需要访问令牌时调用 `getAuthToken()` 。 当应用用户访问选项卡应用或使用需要应用用户验证的特定函数时，可以调用它。
+- **不要在客户端代码上存储访问令牌**：不要在应用的客户端代码中缓存或存储访问令牌。 Teams 客户端缓存访问令牌（如果访问令牌过期，则请求新令牌）。 这可确保 Web 应用不会意外泄漏令牌。
 - **对 Microsoft Graph 调用使用服务器端代码**：始终使用服务器端代码进行 Microsoft Graph 调用，或者使用需要传递访问令牌的其他调用。 从不将 OBO 令牌返回到客户端，以允许客户端直接调用 Microsoft Graph。 这有助于保护令牌免受截获或泄露的侵害。 有关详细信息，请参阅 [具有 Microsoft Graph 权限和范围的“扩展”选项卡应用](tab-sso-graph-api.md)。
 
 ## <a name="known-limitations"></a>已知限制
 
 - 目前，Teams 中的 SSO 仅支持 OAuth 2.0 令牌。 它不支持 SAML 令牌。
-- 不支持每个应用的多个域。 有关详细信息，请参阅 [LOB 应用](tab-sso-register-aad.md#before-you-register-with-azure-ad)。
+- 当前不支持每个应用多个域。 有关详细信息，请参阅 [LOB 应用](tab-sso-register-aad.md#before-you-register-with-azure-ad)。
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [在 Azure AD 中注册 Tab 应用程序](tab-sso-register-aad.md)
+> [在 Azure AD 中注册选项卡应用程序](tab-sso-register-aad.md)。
 
 ## <a name="see-also"></a>另请参阅
 
