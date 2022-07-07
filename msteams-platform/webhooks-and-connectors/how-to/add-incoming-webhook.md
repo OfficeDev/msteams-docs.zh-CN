@@ -5,12 +5,12 @@ description: 在本模块中，了解如何将传入 Webhook 添加到 Teams 应
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4b93e7118cbd9b22ef7022f19b9538fe156b59f6
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 5c826e3f8b041f1ef136fc8e7941c74ac35e7773
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503492"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659030"
 ---
 # <a name="create-incoming-webhooks"></a>创建传入 Webhooks
 
@@ -106,3 +106,4 @@ Webhook 在 Teams 频道中可用。
 * [创建和发送邮件](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [从 Web 应用共享到 Teams](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [集成 web 应用](~/samples/integrate-web-apps-overview.md)
+* [保护 Azure 逻辑应用中的访问和数据](/azure/logic-apps/logic-apps-securing-a-logic-app)

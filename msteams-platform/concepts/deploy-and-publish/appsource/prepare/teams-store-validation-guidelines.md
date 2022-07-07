@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558119"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659033"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
-遵循这些准则会增加应用通过 Microsoft Teams 应用商店提交程序的机会。 这些特定于 Teams 的准则是对 Microsoft [商业市场认证策略](/legal/marketplace/certification-policies) 的补充，并经常更新以反映新功能、用户反馈和业务规则更改。
+遵循这些准则会增加应用通过 Microsoft Teams 应用商店提交程序的机会。 这些特定于 Teams 的准则是对 Microsoft [商业市场认证策略](/legal/marketplace/certification-policies#1140-teams) 的补充，并经常更新以反映新功能、用户反馈和业务规则更改。
 
 > [!NOTE]
 >
@@ -163,7 +163,7 @@ ms.locfileid: "66558119"
   * 需要租户管理员完成一次性设置的应用必须强调对租户管理员配置应用的依赖性 (否则其他租户用户不能安装和使用应用)。  
   依赖性必须在应用清单、AppSource 长描述、所有首次运行体验接触点 (机器人欢迎消息、选项卡设置或配置页面)、被视为机器人响应、撰写扩展或静态选项卡内容中的必要部分的帮助文本中强调。
   
-* **内容共享体验**：需要通过外部服务进行身份验证以便在 Teams 频道中共享内容的应用必须在帮助文档（或类似资源）中清楚地说明如何断开连接或取消共享内容（如果外部服务支持此功能）。这并不意味取消内容共享的功能必须出现在你的 Teams 应用中。
+* **内容共享体验**: 需要通过外部服务进行身份验证以便在 Teams 频道中共享内容的应用，必须在帮助文档 (或类似资源) 中清楚地说明用户如何断开连接或取消共享内容 (如果外部服务支持此功能)。 这并不意味着你的 Teams 应用中必须有取消共享内容功能。
 
 </details>
 

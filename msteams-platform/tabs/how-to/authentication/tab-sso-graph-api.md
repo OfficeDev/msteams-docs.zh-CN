@@ -2,14 +2,14 @@
 title: 使用 Microsoft Graph 权限扩展选项卡应用
 description: 介绍如何使用 Microsoft Graph 配置 API 权限
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: Microsoft Azure Active Directory (Azure AD) 图形 API委派权限访问令牌范围的 teams 身份验证选项卡
-ms.openlocfilehash: 474d02c5b5f90e58bfc57f72ab6ce095a0323b62
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Microsoft Azure Active Directory (Azure AD) 图形 API 委派权限访问令牌范围的 Teams 身份验证选项卡
+ms.openlocfilehash: 4ca708847144e72d80557943edcc163297c85c48
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558252"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658991"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>使用 Microsoft Graph 权限和范围扩展选项卡应用
 
@@ -17,7 +17,7 @@ ms.locfileid: "66558252"
 
 图形范围（如 `User.Read` 或 `Mail.Read`）允许指定应用访问 Teams 用户帐户的方式。 需要在授权请求中指定范围。
 
-在本部分中，你将学习以下内容：
+此部分将介绍如何：
 
 - [在 Azure AD 中配置 API 权限](#configure-api-permissions-in-azure-ad)
 - [为不同平台配置身份验证](#configure-authentication-for-different-platforms)
@@ -25,23 +25,23 @@ ms.locfileid: "66558252"
 
 ## <a name="configure-api-permissions-in-azure-ad"></a>在 Azure AD 中配置 API 权限
 
-可以在 Azure AD 中为应用配置其他 Graph 范围。 这些是委托的权限，这些权限由需要登录访问的应用使用。 已登录的应用用户或管理员必须同意他们。 在调用 Microsoft Graph 时，选项卡应用可以代表已登录用户同意。
+可以在 Azure AD 中为应用配置其他 Graph 范围。 这些是委派权限，由需要登录访问的应用使用。 已登录的应用用户或管理员必须同意委托的权限。 在调用 Microsoft Graph 时，选项卡应用可以代表已登录用户同意。
 
 ### <a name="to-configure-api-permissions"></a>配置 API 权限
 
-1. 打开在[Azure 门户](https://ms.portal.azure.com/)中注册的应用。
+1. 打开在 [Azure 门户](https://ms.portal.azure.com/)中注册的应用。
 
-2. 从左窗格中选择 **“管理** > **API** ”权限。
+2. 从左窗格中选择 **管理** > **API权限**。
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="应用权限菜单选项。":::
 
-    将显示 **“API 权限** ”页。
+    将显示 **API 权限** 页面。
 
-3. 选择 **+添加权** 限以添加 Microsoft 图形 API权限。
+3. 选择 **+添加权限**，以添加 Microsoft 图形 API权限。
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="应用权限页。":::
 
-    将显示 **“请求 API 权限** ”页。
+    将显示“**请求 API 权限**”页。
 
 4. 选择 **Microsoft Graph**。
 
@@ -49,15 +49,15 @@ ms.locfileid: "66558252"
 
     显示 Graph 权限的选项。
 
-5. 选择 **委托的权限** 以查看权限列表。
+5. 选择 **委派权限** 以查看权限列表。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="委派的权限。":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="委派权限":::
 
-6. 选择应用的相关权限，然后选择 **“添加权限**”。
+6. 选择应用的相关权限，然后选择“**添加权限**”。
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="选择权限。":::
 
-    还可以在搜索框中输入权限名称来查找它。
+    还可以在搜索框中输入权限名称来查找。
 
     浏览器上弹出一条消息，指出权限已更新。
 
@@ -75,26 +75,26 @@ ms.locfileid: "66558252"
 
 > [!NOTE]
 >
-> - 如果 Tab 应用尚未获得 IT 管理员许可，则应用用户必须在第一次在其他平台上使用你的应用时提供同意。
-> - 如果在 Tab 应用上启用了 SSO，则不需要隐式授予。
+> - 如果选项卡应用尚未获得 IT 管理员同意，则应用用户必须在其他平台上首次使用应用时获得同意。
+> - 如果在选项卡应用上启用了 SSO，则不需要隐式授予。
 
-只要 URL 是唯一的，就可以为多个平台配置身份验证。
+只要 URL 唯一，就可以为多个平台配置身份验证。
 
 ### <a name="to-configure-authentication-for-a-platform"></a>为平台配置身份验证
 
-1. 打开在[Azure 门户](https://ms.portal.azure.com/)中注册的应用。
+1. 打开在 [Azure 门户](https://ms.portal.azure.com/)中注册的应用。
 
-1. 从左窗格中选择 **“管理** > **身份验证** ”。
+1. 从左窗格中选择“**管理** > **身份验证**”。
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="平台身份验证":::
 
-    将显示“ **平台配置”** 页。
+    将显示 **平台配置** 页。
 
-1. 选择 **+添加平台**。
+1. 选择 **+ 添加平台**。
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="添加平台":::
 
-    将显示“ **配置平台** ”页。
+    将显示“**配置平台**”页。
 
 1. 选择要为选项卡应用配置的平台。 可以从 Web 或 SPA 中选择平台类型。
 
@@ -102,7 +102,7 @@ ms.locfileid: "66558252"
 
     可以为特定平台类型配置多个平台。 确保重定向 URI 对于你配置的每个平台是唯一的。
 
-    将显示“配置”网页。
+    将显示“配置 Web”网页。
 
     > [!NOTE]
     > 根据所选平台，配置将有所不同。
@@ -117,13 +117,13 @@ ms.locfileid: "66558252"
 
 1. 选择“**配置**”。
 
-    平台已配置并显示在 **“平台配置** ”页中。
+    平台已配置并显示在“**平台配置**”页中。
 
 ## <a name="acquire-access-token-for-ms-graph"></a>获取 MS Graph 的访问令牌
 
 需要获取 Microsoft Graph 的访问令牌。 可以使用 Azure AD OBO 流来执行此操作。
 
-SSO 的当前实现仅授予用户级权限的许可，这些权限不能用于进行 Graph 调用。 若要获取进行 Graph 调用所需的权限 (范围) ，SSO 应用必须实现自定义 Web 服务，以交换从 Teams JavaScript SDK 收到的令牌，以获取包含所需范围的令牌。 可以使用 Microsoft 身份验证库 (MSAL) 从客户端提取令牌。
+SSO 当前仅对无法进行 Graph 调用的用户级权限授予许可。 若要获取 Graph 调用所需的权限（范围），SSO 解决方案必须执行自定义 Web 服务，交换从 Teams JavaScript SDK 收到的令牌，以获取包含所需范围的令牌。 可以使用 Microsoft 身份验证库 (MSAL) 从客户端提取令牌。
 
 在 Azure AD 中配置 Graph 权限后：
 
@@ -198,35 +198,35 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 如果需要访问 Microsoft Graph 数据，请将服务器端代码配置为：
 
 1. 验证访问令牌。 有关详细信息，请参阅[验证访问令牌](tab-sso-code.md#validate-the-access-token)。
-1. 通过调用Microsoft 标识平台启动 OAuth 2.0 OBO 流，其中包括访问令牌、有关用户的一些元数据，以及选项卡应用的凭据 (其应用 ID 和客户端机密) 。 Microsoft 标识平台将返回可用于访问 Microsoft Graph 的新访问令牌。
+1. 通过调用 Microsoft 标识平台来启动 OAuth 2.0 代理流，该平台包括访问令牌、有关用户的一些元数据，以及选项卡应用的凭据（其应用 ID 和客户端密码）。 Microsoft 标识平台将返回可用于访问 Microsoft Graph 的新访问令牌。
 1. 使用新的令牌从 Microsoft Graph 获取数据。
-1. 如果需要，请在 MSAL.NET 中使用令牌缓存序列化来缓存多个的新访问令牌。
+1. 如果需要，请在 MSAL.NET 中使用令牌缓存序列化来缓存多个新访问令牌。
 
 > [!IMPORTANT]
-> 作为安全的最佳做法，请始终使用服务器端代码进行 Microsoft Graph 调用，或者使用需要传递访问令牌的其他调用。 从不将 OBO 令牌返回到客户端，以允许客户端直接调用 Microsoft Graph。 这有助于保护令牌免受截获或泄露的侵害。
+> 作为最佳安全做法，请始终使用服务器端代码进行 Microsoft Graph 调用或需要传递访问令牌的其他调用。 从不将 OBO 令牌返回到客户端，以允许客户端直接调用 Microsoft Graph。 这有助于保护令牌免受截获或泄露的侵害。
 
 ## <a name="known-limitations"></a>已知限制
 
-租户管理员同意： [代表组织作为租户管理员进行许可的一](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) 种简单方法是 [获得管理员的同意](/azure/active-directory/manage-apps/grant-admin-consent)。
+租户管理员同意：[代表组织作为租户管理员进行许可的一](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) 种简单方法是获得[管理员的同意](/azure/active-directory/manage-apps/grant-admin-consent)。
 
-可以使用身份验证 API 请求同意。 获取 Graph 范围的另一种方法是使用现有的 [第三方 OAuth 提供程序身份验证方法](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page)来呈现同意对话框。 此方法涉及弹出 Azure AD 同意对话框。
+使用身份验证 API 请求其他许可。 获取 Graph 范围的另一种方法是使用现有的 [第三方 OAuth 提供程序身份验证方法](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page) 来呈现同意对话框。 此方法涉及弹出 Azure AD 同意对话框。
 
 <details>
 <summary>若要使用身份验证 API 请求其他同意，请执行以下步骤：</summary>
 
-1. 使用检索到的 `getAuthToken()` 令牌必须使用 Azure AD [代表流在](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) 服务器端进行交换，才能访问其他 Graph API。 请确保为此交换使用 v2 Graph 终结点。
-2. 如果交换失败，Azure AD 将返回无效的授权异常。 它通常使用两条错误消息 `invalid_grant` `interaction_required`之一或响应。
+1. 使用 `getAuthToken()` 检索到的令牌必须在服务器端使用 Azure AD [代表流](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) 进行交换，以获取对这些其他图形 API 的访问权限。 请确保为此交换使用 v2 Graph 终结点。
+2. 如果交换失败，Azure AD 将返回无效的授权异常。 它通常使用 `invalid_grant` 或 `interaction_required` 中的一条错误消息进行响应。
 3. 交换失败时，必须请求同意。 使用用户界面 (UI) 要求应用用户授予其他许可。 此 UI 必须包含一个按钮，该按钮使用 [无提示身份验证](~/concepts/authentication/auth-silent-aad.md)触发 Azure AD 同意对话框。
-4. 要求 Azure AD 提供更多许可时，必须将[查询字符串参数](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)包含`prompt=consent`到 Azure AD，否则 Azure AD 不会要求其他范围。
-    - 而不是 `?scope={scopes}`，使用 `?prompt=consent&scope={scopes}`
-    - 请确保包括 `{scopes}` 提示用户使用的所有范围，例如， `Mail.Read` 或 `User.Read`。
+4. 请求 Azure AD 的更多同意时，必须在给 Azure AD 发送的 [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) 中包含 `prompt=consent`，否则 Azure AD 不会要求其他范围。
+    - 使用 `?prompt=consent&scope={scopes}` 而不是 `?scope={scopes}`
+    - 确保 `{scopes}` 包括你提示用户的所有范围，例如， `Mail.Read` 或 `User.Read`。
 5. 应用用户授予更多权限后，重试 OBO 流以获取对这些其他 API 的访问权限。
 
     </details>
 
 ## <a name="see-also"></a>另请参阅
 
-- [OAuth 2.0 代表流](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
+- [OAuth 2.0 代理流](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 - [获取 MS Graph 的访问权限](/graph/auth-v2-user)
 - [MSAL.NET 中的令牌缓存序列化](/azure/active-directory/develop/msal-net-token-cache-serialization?tabs=aspnet)
 - [Microsoft Teams MSAL2 提供程序](/graph/toolkit/providers/teams-msal2)
