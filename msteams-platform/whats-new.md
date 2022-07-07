@@ -1,14 +1,14 @@
 ---
-title: Teams 中面向开发人员的新增功能
-description: 在此学习路径中，了解 Microsoft Teams 中的新增开发人员功能和这些功能的增强功能。
+title: Teams 中面向开发人员的新增功能和更新
+description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 3ab4c771bb0bf0cab1fb7c71f2995d18af7b4289
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.openlocfilehash: 1013ebe18f10d848ff44a26085a0353d851b613c
+ms.sourcegitcommit: 6b1d06de67fe26b657ffb0cffebc0df9ccd843ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561614"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66680676"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
