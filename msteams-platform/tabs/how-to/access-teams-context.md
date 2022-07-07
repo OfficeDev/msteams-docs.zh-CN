@@ -3,12 +3,12 @@ title: 获取选项卡的上下文
 description: 在本模块中，了解如何将用户上下文获取到选项卡、用户上下文和 Access 上下文信息
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: d6723c4733bd127dd32970e3d1059a75771c8bee
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1e530532b2cad41279a504d89fcdc2251a0455b7
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142309"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658922"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -27,7 +27,7 @@ ms.locfileid: "66142309"
 * 在应用中创建资源或将资源与指定的用户或团队相关联。
 * 从Microsoft Azure Active Directory (Azure AD) 或其他标识提供者启动身份验证流，并且无需用户再次输入其用户名。
 
-有关详细信息，请参阅[Microsoft Teams中对用户进行身份验证](~/concepts/authentication/authentication.md)。
+有关详细信息，请参阅 [Microsoft Teams 中的用户身份验证](~/concepts/authentication/authentication.md)。
 
 > [!IMPORTANT]
 > 尽管此用户信息有助于提供流畅的用户体验，但不得将其用作标识证明。  例如，攻击者可以在浏览器中加载页面并呈现有害信息或请求。
@@ -61,15 +61,15 @@ ms.locfileid: "66142309"
 * 他们的用户名 **user@example.com**。
 * 其公司租户 ID 为 **e2653c-etc**。
 * 他们是 ID 为 **00209384 等** 的Office 365组的成员。
-* 用户已将其Teams主题设置为 **深色**。
+* 用户已将其 Teams 主题设置为 **深色**。
 
-配置选项卡时，Teams调用以下 URL：
+配置选项卡时，Teams 会调用以下 URL：
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>使用 Microsoft Teams JavaScript 库获取上下文
 
-git-issue-clear-the-full-set-of-values-any-context-object-property-can-take 你也可以通过调用`microsoftTeams.getContext(function(context) { /* ... */ })`使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索上面列出的信息。
+还可通过调用 `microsoftTeams.getContext(function(context) { /* ... */ })` 使用[ Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索前面列出的信息。
 
 以下代码提供了上下文变量的示例：
 
@@ -114,7 +114,7 @@ git-issue-clear-the-full-set-of-values-any-context-object-property-can-take 你�
 }
 ```
 
-还可以通过调`app.getContext()`用函数，使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索上面列出的信息。 有关其他信息，请参阅 [上下文接口](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true)的属性。
+还可以通过调`app.getContext()`用函数来使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索上面列出的信息。 有关其他信息，请参阅 [上下文接口](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true)的属性。
 
 
 ## <a name="retrieve-context-in-private-channels"></a>在专用通道中检索上下文
@@ -126,9 +126,9 @@ git-issue-clear-the-full-set-of-values-any-context-object-property-can-take 你�
 * `groupId`：未定义专用频道
 * `teamId`：设置为专用通道的 threadId
 * `teamName`：设置为专用通道的名称
-* `teamSiteUrl`：设置为专用通道的非重复、唯一SharePoint网站的 URL
-* `teamSitePath`：设置为专用通道的非重复、唯一SharePoint网站的路径
-* `teamSiteDomain`：设置为专用通道的非重复唯一SharePoint站点域的域
+* `teamSiteUrl`：设置为专用频道的非重复唯一 SharePoint 网站的 URL
+* `teamSitePath`：设置为专用频道的非重复唯一 SharePoint 网站的路径
+* `teamSiteDomain`：设置为专用通道的非重复唯一 SharePoint 网站域的域
 
 如果页面使用这些值中的任何一个，则字段的 `channelType` 值必须 `Private` 是确定页面是否加载在专用通道中，并且可以相应地响应。
 
@@ -144,9 +144,9 @@ git-issue-clear-the-full-set-of-values-any-context-object-property-can-take 你�
 * `groupId`：未定义共享通道。
 * `teamId`：设置为 `threadId` 团队，为当前用户共享频道。 如果用户有权访问多个团队， `teamId` 则设置为托管 (创建) 共享通道的团队。
 * `teamName`：设置为团队的名称，为当前用户共享频道。 如果用户有权访问多个团队， `teamName` 则设置为托管 (创建) 共享通道的团队。
-* `teamSiteUrl`：设置为共享通道的非重复、唯一SharePoint站点的 URL。
-* `teamSitePath`：设置为共享通道的非重复唯一SharePoint站点的路径。
-* `teamSiteDomain`：设置为共享通道的非重复唯一SharePoint站点域的域。
+* `teamSiteUrl`：设置为共享通道的非重复唯一 SharePoint 网站的 URL。
+* `teamSitePath`：设置为共享通道的非重复唯一 SharePoint 网站的路径。
+* `teamSiteDomain`：设置为共享通道的非重复唯一 SharePoint 网站域的域。
 
 除了这些字段更改之外，还有两个新字段可用于共享频道：
 
@@ -156,7 +156,7 @@ git-issue-clear-the-full-set-of-values-any-context-object-property-can-take 你�
 如果页面使用这些值中的任何一个，则字段的 `channelType` 值必须 `Shared` 确定页面是否已加载到共享通道中，并且可以做出适当的响应。
 
 > [!NOTE]
-> 每次用户重启或重新加载Teams桌面或 Web 客户端时，都会创建一个新的 sessionID，由Teams会话跟踪，而当用户退出Teams应用并在Teams平台中重新加载它时，会创建一个新的应用会话ID，由应用会话跟踪。
+> 每次用户重启或重新加载 Teams 桌面或 Web 客户端时，都会创建新的 sessionID，由 Teams 会话跟踪该会话，而当用户退出 Teams 应用并在 Teams 平台中重新加载时，会创建新的应用会话ID，由应用会话跟踪。
 
 ## <a name="handle-theme-change"></a>处理主题更改
 
@@ -174,5 +174,5 @@ git-issue-clear-the-full-set-of-values-any-context-object-property-can-take 你�
 * [选项卡设计指南](../../tabs/design/tabs.md)
 * [Teams 选项卡](~/tabs/what-are-tabs.md)
 * [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
-* [创建频道或群组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
 * [在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
