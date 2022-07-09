@@ -3,12 +3,12 @@ title: 打包应用
 description: 了解如何使用用于测试、上传和存储发布的图标打包 Microsoft Teams 应用。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: d686b30a9a5a00fd73c72dd6212ed95d935ea501
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: 5d46eec7f32ccb18e861f32769bb2ecb87842abf
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659021"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695318"
 ---
 # <a name="create-teams-app-package"></a>创建 Teams 应用包
 
@@ -19,7 +19,7 @@ ms.locfileid: "66659021"
 
 ## <a name="teams-doesnt-host-your-app"></a>Teams 不托管你的应用
 
-当用户在 Teams 中安装你的应用时，他们安装的应用包仅包含配置文件（也称为应用清单）以及应用的图标。 应用的逻辑和数据存储托管在其他地方，如开发期间的本地主机和 Azure Web 服务。 Teams 通过 HTTPS 访问这些资源。
+当用户在 Teams 中安装你的应用时，他们安装的应用包仅包含配置文件 (也称为应用清单) 以及应用的图标。 应用的逻辑和数据存储托管在其他地方，如开发期间的本地主机和 Azure Web 服务。 Teams 通过 HTTPS 访问这些资源。
 
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="显示 Teams 应用的应用托管插图":::
 
