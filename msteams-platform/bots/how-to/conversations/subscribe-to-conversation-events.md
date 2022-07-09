@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 事件, 机器人, 频道消息, 回应, 对话
-ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906268"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695325"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 
@@ -409,7 +409,7 @@ async def on_teams_channel_restored(
 
 1. 安装机器人本身并将其添加到会话中时
 
-   > 在团队上下文中，活动的 conversation.id 设置为 `id` 用户在应用安装期间选择的通道，或从 [公共开发人员预览版](../../../resources/dev-preview/developer-preview-intro.md)) 中当前提供的 (安装机器人的通道。
+   > 在团队上下文中，活动的 conversation.id 设置为 `id` 用户在应用安装期间选择的通道或安装机器人的通道。
 
 2. 将用户添加到安装机器人的会话中时
 
@@ -1335,7 +1335,7 @@ async def on_reactions_removed(
 ![创建所选通道](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> 仅在将应用安装到团队中时发送的 *添加* 事件上`installationUpdate`设置所选通道 ID， ([公共开发人员预览](../../../resources/dev-preview/developer-preview-intro.md)版) 中当前可用。
+> 仅在将应用安装到团队中时发送的 *添加* 事件上`installationUpdate`设置所选通道 ID。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 

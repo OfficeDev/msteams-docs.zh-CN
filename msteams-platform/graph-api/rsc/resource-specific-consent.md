@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 158905194ea29bfd2aca8149b8f8d6236905b754
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 8501cab5db2017d120ef72f61e43691104df7fa1
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484864"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695306"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 
@@ -75,9 +75,9 @@ ms.locfileid: "66484864"
 
 ## <a name="enable-rsc-in-your-application"></a>在应用程序中启用 RSC
 
-1. [在 Azure AD 门户中配置许可设置](#configure-consent-settings-in-the-azure-ad-portal)。
-    1. [在团队中为 RSC 配置组所有者许可设置](#configure-group-owner-consent-settings-for-rsc-in-a-team)。
-    1. [在聊天中为 RSC 配置用户许可设置](#configure-user-consent-settings-for-rsc-in-a-chat)。
+1. [配置同意设置](#configure-consent-settings)。
+    1. [使用 Azure AD 门户在团队中为 RSC 配置组所有者同意设置](#configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal)。
+    1. [使用 Microsoft Graph API 在聊天中为 RSC 配置聊天所有者同意设置](#configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis)。
 1. [使用 Azure AD 门户向 Microsoft 标识平台注册应用](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。
 1. [在 Azure AD 门户中查看应用程序权限](#review-your-application-permissions-in-the-azure-ad-portal)。
 1. [从标识平台获取访问令牌](#obtain-an-access-token-from-the-microsoft-identity-platform)。
@@ -87,9 +87,9 @@ ms.locfileid: "66484864"
     1. [在团队中检查是否为应用添加了 RSC 权限](#check-your-app-for-added-rsc-permissions-in-a-team)。
     1. [在聊天中检查是否为应用添加了 RSC 权限](#check-your-app-for-added-rsc-permissions-in-a-chat)。
 
-## <a name="configure-consent-settings-in-the-azure-ad-portal"></a>在 Azure AD 门户中配置许可设置
+## <a name="configure-consent-settings"></a>配置同意设置
 
-### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>在团队中为 RSC 配置组所有者许可设置
+### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal"></a>使用 Azure AD 门户在团队中为 RSC 配置组所有者同意设置
 
 可以直接在 Microsoft Azure 门户中启用或禁用[组所有者许可](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal)：
 
@@ -101,17 +101,13 @@ ms.locfileid: "66484864"
 
 此外，还可以使用 PowerShell 启用或禁用组所有者许可，按照[使用 PowerShell 配置组所有者许可](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell)中所述的步骤操作。
 
-### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>在聊天中为 RSC 配置用户许可设置
+### <a name="configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis"></a>使用 Microsoft Graph API 在聊天中为 RSC 配置聊天所有者同意设置
 
-可以直接在 Azure 门户中启用或禁用[用户许可](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal)：
+可以使用图形 API为聊天启用或禁用 RSC。 [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) 中的属性`isChatResourceSpecificConsentEnabled`控制是否在租户中启用聊天 RSC。
 
-1. 以[全局管理员或公司管理员](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)身份登录 [Azure 门户](https://portal.azure.com)。
-1. 选择“**Azure Active Directory**” > “**企业应用程序**” > “**许可和权限**” > “[**用户同意设置**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)”。
-1. 使用标记为“**应用程序的用户许可**”的控件启用、禁用或限制用户许可。 默认值为“**允许针对应用的用户许可**”。 对于使用 RSC 安装应用的聊天成员，必须为该用户启用用户许可。
+   ![图形 RSC 团队配置](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
-    ![Azure RSC 聊天配置](../../assets/images/azure-rsc-chat-configuration.png)
-
-此外，还可以使用 PowerShell 启用或禁用用户许可，按照[使用 PowerShell 配置用户许可](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell)中所述的步骤操作。
+>  属性的默认值 **是ChatResourceSpecificConsentEnabled** ，它基于首次使用 RSC 进行聊天时租户中是否打开或关闭 [用户同意设置](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) 。 这可能是) 首次检索 [**teamsAppSettings**](/graph/api/teamsappsettings-get) 或 b) 在聊天/会议中安装具有资源特定权限的 Teams 应用。
 
 ## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>使用 Azure AD 门户向 Microsoft 标识平台注册应用
 
