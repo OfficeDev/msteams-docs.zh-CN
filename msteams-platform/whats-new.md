@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1013ebe18f10d848ff44a26085a0353d851b613c
-ms.sourcegitcommit: 6b1d06de67fe26b657ffb0cffebc0df9ccd843ef
+ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66680676"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695290"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -47,6 +47,7 @@ ms.locfileid: "66680676"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 2022/07/08| 用于通过对话和安装更新事件将用户在应用安装期间选择的通道 ID 发送到机器人的更新 |  生成机器人>机器人对话> Teams 机器人中的对话事件> [Teams 机器人中的对话事件](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 06/16/2022 | 更新了支持桌面和移动设备的媒体功能| 集成设备功能 > [集成媒体功能](concepts/device-capabilities/media-capabilities.md)|
 | 06/08/2022 | 成功消息的可选卡片反馈| “生成机器人”>“机器人对话”>“[机器人对话中的消息](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)”|
 | 06/03/2022 | 更新了添加身份验证模块，用于使用新的结构和过程为选项卡应用启用 SSO | 添加身份验证 > 选项卡 > [在选项卡应用中启用单一登录](tabs/how-to/authentication/tab-sso-overview.md) |
@@ -268,7 +269,6 @@ ms.locfileid: "66680676"
 | -------- | --------- | ------------------ |
 | 2022/06/30 | 用于即时会议、一对一和群组通话的应用| 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 06/16/2022 | 将展开共享链接到 Web 应用中的团队| 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 06/06/2022| 更新 Teams 机器人中的聊天和安装事件 |  生成机器人>机器人对话> Teams 机器人中的对话事件> [Teams 机器人中的对话事件](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 |  构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 02/07/2022 | 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
