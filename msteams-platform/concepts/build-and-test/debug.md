@@ -3,12 +3,12 @@ title: 选择用于测试和调试应用的设置
 description: 在本模块中，了解在本地和云托管环境中测试和调试 Microsoft Teams 应用的选项。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1f8a444a889eec15495272877ea1cca75f313629
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503884"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737389"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>选择测试设置并调试 Teams 应用
 
@@ -63,7 +63,7 @@ Teams 是一种完全基于云的产品，它要求其访问的所有服务都�
 
 > [!WARNING]
 >
-> * 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 6 月 30 日弃用。
+> * 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 8 月 1 日前弃用。
 
 ## <a name="cloud-hosted"></a>云托管
 
