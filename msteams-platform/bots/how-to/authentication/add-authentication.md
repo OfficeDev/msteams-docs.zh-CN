@@ -5,12 +5,12 @@ description: 了解如何使用 Azure Active Directory 将 OAuth 身份验证添
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 8470e281d7a6f3c0e18acda0548bf1b9a7480d85
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 5fc21d6e0e761da71670035cd2af1ee2006cc9c6
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558854"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792968"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -123,7 +123,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
 1. 在“**客户端机密**”部分中，选择“**新建客户端机密**”。将显示“**添加客户端机密**”窗口。
 
-    ![新客户端机密](~/assets/images/adaptive-cards/new-client-secret.png)
+    ![新客户端机密](~/assets/images/meetings-side-panel/newclientsecret.png)
 
 1. 输入“**说明**”并选择“**添加**”。
 
@@ -143,7 +143,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
 1. 在左窗格中选择“**频道**”，然后选择 **Microsoft Teams**:::image type="icon" source="../../../assets/icons/teams-icon.png":::。
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="频道 Teams":::
+    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="在频道中选择 Teams":::
 
 1. 选中该复选框以接受服务条款，然后选择 “**同意**”。</br>
 

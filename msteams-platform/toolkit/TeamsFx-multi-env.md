@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: da5da86bf5e96989cf962d88105c47affa899f6e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 13b9f640c57168858ee7c48a8f9dfc83b005c05a
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485648"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66793045"
 ---
 # <a name="manage-multiple-environments"></a>管理多个环境
 
@@ -42,7 +42,7 @@ ms.locfileid: "66485648"
 
 若要 **添加另一个远程环境**，请执行以下操作：
 
-1. 从左侧导航栏中选择 **Teams** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso 添加边栏"::: 。
+1. 从左侧导航栏中选择 **Teams** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso 添加边栏"::: 。
 2. 选择 **“+Teams：在”环境****“** 部分下创建新环境，如下图所示：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="创建":::
@@ -78,7 +78,7 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
 
 | 应用场景 | 位置| 说明 |
 | --- | --- | --- |
-| 自定义 Azure 资源 | <ul> <li>`templates/azure` 下的 Bicep 文件</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [自定义 ARM 参数和模板](provision.md#customize-arm-parameters-and-templates) |
+| 自定义 Azure 资源 | <ul> <li>`templates/azure` 下的 Bicep 文件</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [自定义 ARM 参数和模板](provision.md#customize-arm-template-files) |
 | 为 Teams 应用重复使用现有的 Azure AD 应用 | <ul> <li>`.fx/config.<envName>.json` 中的 `auth` 部分</li> </ul> |  [为 Teams 应用使用现有的 Azure AD 应用](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | 为机器人重复使用现有的 Azure AD 应用 | <ul> <li>`.fx/config.<envName>.json` 中的 `bot` 部分</li> </ul> | [为机器人使用现有的 Azure AD 应用](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | 在预配 SQL 时跳过添加用户 | <ul> <li>`.fx/config.<envName>.json` 中的 `skipAddingSqlUser` 属性</li> </ul> | [跳过为 SQL 数据库添加用户](provision.md#skip-adding-user-for-sql-database) |

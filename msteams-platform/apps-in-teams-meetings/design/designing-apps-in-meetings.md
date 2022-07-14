@@ -5,12 +5,12 @@ description: 了解如何在 Teams 会议中为应用设计会议扩展。 使�
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7df89357f5c052fec5ff2a82cd721b9b7c06da94
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558084"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792835"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -21,7 +21,7 @@ ms.locfileid: "66558084"
 可以在 Microsoft Teams UI 工具包中找到更全面的设计准则，包括可以根据需要获取和修改的元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit (用户)](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展插件
 
@@ -358,7 +358,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="显示单列选项卡布局的示例。":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="显示单列选项卡布局的示例。":::
 
 #### <a name="do-use-a-one-column-tab"></a>请执行以下操作：使用单列选项卡
 

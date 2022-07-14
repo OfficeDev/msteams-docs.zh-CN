@@ -1,7 +1,7 @@
 ## <a name="deploy-your-app-to-azure"></a>将应用部署到 Azure。
 
 部署包括两个步骤。  首先，创建必要的云资源 (也称为预配) 。 然后，应用的代码将复制到创建的云资源中。 在本教程中，你将部署 Tab 应用。
-<br> 
+<br>
 <br>
 <details>
 <summary>预配和部署有什么区别？</summary>
@@ -33,7 +33,7 @@
 
    预配过程在 Azure 云中创建资源。 这可能需要一些时间。 可以通过查看右下角的对话来监视进度。 几分钟后，你会看到以下通知：
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="显示预配完成对话框的屏幕截图。":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="显示预配完成对话框的屏幕截图。":::
 
     如果需要，可以查看预配的资源。 在本教程中，无需查看资源。
 
