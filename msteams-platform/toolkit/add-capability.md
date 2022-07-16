@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 81cddad2297ec526f94a3ab362422028b14b4598
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 90a1e28f4c7bb3d0bc9530fc1af8ad4d4e373c9b
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557986"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830790"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>向 Teams 应用添加功能
 
@@ -61,7 +61,7 @@ ms.locfileid: "66557986"
    1. 输入 **Teams：添加功能**。
    1. 按 Enter 键。
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="团队功能":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="使用命令面板添加功能。":::
 
    1. 在弹出窗口中，选择要在项目中添加的功能。
 

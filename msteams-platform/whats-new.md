@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: a358652f361dc080d916c4d548363776e7c092a4
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695290"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830804"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -269,15 +269,11 @@ ms.locfileid: "66695290"
 | -------- | --------- | ------------------ |
 | 2022/06/30 | 用于即时会议、一对一和群组通话的应用| 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 06/16/2022 | 将展开共享链接到 Web 应用中的团队| 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-|2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 |  构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
+|2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 | 构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
-| 02/07/2022 | 工具和 SDK |用于Visual Studio Code >的 Teams 工具包 </br> • 向 Teams 应用添加功能> [将功能添加到 Teams 应用](toolkit/add-capability.md) </br> • 将云资源添加到 Teams 应用> [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
-| 02/03/2022 | 引入了应用清单版本 1.12 | • 应用清单> [应用清单架构](resources/schema/manifest-schema.md) </br> • 应用清单>公共开发人员预览> [清单架构](resources/schema/manifest-schema-dev-preview.md) |
-|01/17/2022 | 适用于移动的自适应卡片中的人员选取器  | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
-|01/10/2022 | Visual Studio Code 的Teams工具包 | 工具和 SDK > Teams Toolkit Visual Studio Code > [Teams 工具包基础](toolkit/teams-toolkit-fundamentals.md) |
-| 12/24/2021 | 引入了授予 Tab 设备权限的分步指南 | 应用基础>设备功能>[授予 Tab 设备权限的分步指南](sbs-tab-device-permissions.yml) |
-| 11/15/2021 | 个人选项卡和可在 Outlook 和 Office 运行的邮件扩展 | [跨 Microsoft 365 扩展 Teams 应用](~/m365-apps/overview.md) |
-| 10/28/2021 |可以启用机器人以使用特定于资源的许可 （RSC） 接收所有通道消息 | • 生成机器人>机器人对话>机器人对话消息>[使用 RSC 接收所有消息](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • 生成机器人>机器人对话> [机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 生成机器人>机器人对话> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • 应用清单>公共开发人员预览> [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md) |
+| 02/03/2022 | 已引入应用清单版本 1.13 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
+| 01/17/2022 | 适用于移动的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
+| 10/28/2021 |可以启用机器人以使用特定于资源的许可 （RSC） 接收所有通道消息 | • 生成机器人>机器人对话> [机器人对话概述](~/bots/how-to/conversations/conversation-basics.md) </br> • 生成机器人>机器人对话> [频道和组对话](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 | 06/16/2021 | 聊天的特定资源许可 | • 利用 Microsoft Graph 的 Teams 数据>[特定资源许可](graph-api/rsc/resource-specific-consent.md) </br> • 测试你的应用> Microsoft Graph >[测试 Teams 中资源特定许可权限](graph-api/rsc/test-resource-specific-consent.md)|
 
 有关详细信息，请参阅[ Teams 公共开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)。

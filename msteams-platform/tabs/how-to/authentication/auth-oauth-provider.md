@@ -3,12 +3,12 @@ title: 使用外部 OAuth 提供程序
 description: 在本模块中，了解如何使用外部 OAuth 提供程序进行身份验证，以及如何将其添加到外部浏览器
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a27d4fdb861ef7e893807af7a4427662a61fa021
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 487e9c07615f3ed23f5ca43e5c7e6e4a98b8d0eb
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558763"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830783"
 ---
 # <a name="use-external-oauth-providers"></a>使用外部 OAuth 提供程序
 
@@ -122,7 +122,7 @@ function authenticate(authenticateParameters?: AuthenticateParameters)
    3P 应用以以下格式为 Teams 移动版生成深层链接，并将会话 ID 的身份验证代码发送回 Teams。
 
    ```JavaScript
-   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
+   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
  8. Teams 调用成功回调并发送结果。

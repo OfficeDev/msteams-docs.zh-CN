@@ -1,20 +1,20 @@
 ---
 title: 设置你的智能机器人邮件格式
 author: surbhigupta
-description: 在本模块中，了解如何向机器人消息添加丰富的格式，例如删除、排序和无序列表、超链接、图像链接等。
+description: 在本模块中，了解如何向机器人消息添加丰富的格式和样式，例如删除、排序和无序列表、超链接、图像链接等。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150784"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830797"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
-邮件格式设置可以使机器人邮件发挥出最佳效果。 你可以设置机器人邮件的格式，以包含带有交互元素的附件的丰富卡片，例如按钮、文本、图像、音频、视频等。
+邮件格式设置可以使机器人邮件发挥出最佳效果。 可以将机器人消息格式化为包含交互式元素（如按钮、文本、图像、音频、视频等）的附件。
 
 ## <a name="format-text-content"></a>设置文本内容格式
 
@@ -32,11 +32,11 @@ Teams 支持一部分 markdown 和 XML 或 HTML 格式标记。
 
 目前，以下限制适用于格式设置：
 
-* 仅文本邮件不支持表格格式设置。
+* 仅文本消息不支持表格格式。
 * 丰富卡片仅支持在文本属性中进行格式设置，不支持在标题或副标题属性中进行格式设置。
-* 丰富卡片不支持 markdown 或表格格式设置。
+* 富卡不支持 markdown 或表格格式。
 
-设置文本内容的格式后，请确保格式设置可跨Teams支持的所有平台运行。
+设置文本内容的格式后，请确保格式设置可跨 Teams 支持的所有平台运行。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
@@ -54,7 +54,7 @@ Teams 支持一部分 markdown 和 XML 或 HTML 格式标记。
 | 预设格式的文本         | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ |
-| 图像链接                | ✔️ | ❌ |
+| 图像链接                | ❌ | ❌ |
 
 检查跨平台支持后，请确保单个平台的支持也可用。
 
@@ -78,7 +78,7 @@ Teams 支持一部分 markdown 和 XML 或 HTML 格式标记。
 | 预设格式的文本         | ✔️ | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| 图像链接                | ✔️ | ✔️ | ✔️ |
+| 图像链接                | ❌ | ❌ | ❌ |
 
 ### <a name="cards"></a>卡片
 
