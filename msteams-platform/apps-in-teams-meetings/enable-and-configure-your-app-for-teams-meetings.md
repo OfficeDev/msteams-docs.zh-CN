@@ -3,13 +3,15 @@ title: 启用和配置 Teams 会议应用
 author: surbhigupta
 description: 了解如何为 Teams 会议和不同的会议应用场景启用和配置应用、更新应用清单、配置功能等。
 ms.topic: conceptual
+ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.date: 04/07/2022
+ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557734"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841895"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>为会议启用和配置应用
 
@@ -126,9 +128,9 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
-`meetingSidePanel` 可用于自定义会议中的体验，并允许组织者和演示者具有不同的视图和操作集。 在应用清单中，必须添加 `meetingSidePanel` 到上下文数组。 在会议和所有情况下，应用在宽度为 320 像素的会议内选项卡中呈现。 有关参数的详细信息，请参阅[身份验证参数接口](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)。
+`meetingSidePanel` 可用于自定义会议中的体验，并允许组织者和演示者具有不同的视图和操作集。 在应用清单中，必须添加 `meetingSidePanel` 到上下文数组。 在会议和所有情况下，应用在宽度为 320 像素的会议内选项卡中呈现。 有关详细信息，请参阅 [FrameInfo 接口](/javascript/api/@microsoft/teams-js/frameinfo)（在 TeamsJS v.2.0.0 之前称为 `FrameContext`）。
 
-若要使用 `userContext` API 路由请求，请 [参阅Teams SDK](../tabs/how-to/access-teams-context.md#user-context)。 有关详细信息，请参阅 [选项卡的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流类似于网站的身份验证流。 因此，选项卡可以直接使用 OAuth 2.0。 有关详细信息，请参阅 [Microsoft 标识平台和 OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
+可以 [使用用户的上下文路由请求](../tabs/how-to/access-teams-context.md#user-context)。 有关详细信息，请参阅 [选项卡的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)。 选项卡的身份验证流类似于网站的身份验证流。 选项卡可以直接使用 OAuth 2.0。 有关详细信息，请参阅 [Microsoft 标识平台和 OAuth 2.0 授权代码流](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
 
 当用户处于会议内视图中时，消息扩展按预期工作。 用户可以发布撰写消息扩展卡。 会议中的 AppName 是一个工具提示，用于在会议 U 栏中声明应用名称。
 
