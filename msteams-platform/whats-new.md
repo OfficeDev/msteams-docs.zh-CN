@@ -3,27 +3,16 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: a358652f361dc080d916c4d548363776e7c092a4
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: e060d1da7e618fe7730839aba0b676a9cb93ce7a
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830804"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842029"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
 发现正式版 （GA） 和开发人员预览版中的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
-
-## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png"
-
-| Date | 功能 | 在此处找到它 |
-| --- | --- | --- |
-| 2022 年 5 月 24 日| [*开发者预览版*] <br> 通过 Live Share SDK 增强协作 |  构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
-|2022 年 5 月 24 日| 将已启用 Outlook 和 Office 的应用提交到 Teams 应用商店 | 在 Microsoft 365 中扩展应用>[概述](m365-apps/overview.md) |
-|2022 年 5 月 24 日| TeamsJS 版本 2.0.0 中的应用指南和新增功能| 工具和 SDK > [Teams JavaScript 客户端 SDK](tabs/how-to/using-teams-client-sdk.md)  |
-| 2022 年 5 月 24 日 | 适用于 Visual Studio Code 的 Teams 工具包版本 4.0.0 现已正式发布 | 工具和 SDK > 适用于 Visual Studio Code 的 Teams 工具包 > <br> • [Teams 工具包概述](toolkit/teams-toolkit-fundamentals.md) <br> • [使用 JavaScript 生成命令机器人](toolkit/add-capability.md) <br> • [使用 JavaScript 生成通知机器人](toolkit/add-capability.md) <br> • [预览并自定义 Teams 应用清单](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [连接到现有 API](toolkit/add-API-connection.md) <br> • [将功能添加到 Teams 应用](toolkit/add-capability.md) <br> • [添加单一登录体验](toolkit/add-single-sign-on.md) <br> • [将云资源添加到 Teams 应用](toolkit/add-resource.md) |
-| 2022 年 5 月 24 日 | 已引入应用清单版本 1.13 | 应用清单> [Microsoft Teams 的清单架构](resources/schema/manifest-schema.md) |
-| 2022 年 5 月 24 日 | GCC 和 GCCH 中的机器人和消息扩展 | • 规划应用 > [概述](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • 生成机器人 > [概述](bots/what-are-bots.md) </br> • 生成邮件扩展 > [概述](messaging-extensions/what-are-messaging-extensions.md) |
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)

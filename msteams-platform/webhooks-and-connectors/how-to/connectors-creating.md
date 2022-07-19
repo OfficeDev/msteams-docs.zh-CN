@@ -5,12 +5,12 @@ description: 在本模块中，了解如何开始使用Office 365连接器并将
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: dec9acbf7ba2f52303b04a5219de575a96a792e5
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: a0e135864fd7c7d9775731e6c46faf9f24242943
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485342"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841631"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -19,9 +19,10 @@ ms.locfileid: "66485342"
 请参阅以下视频，了解如何创建Office 365连接器：
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="add-a-connector-to-teams-app"></a>将连接器添加到 Teams 应用
 
@@ -51,20 +52,23 @@ ms.locfileid: "66485342"
 
 要集成配置体验：
 
-1. 通过调用`microsoftTeams.initialize()`初始化 SDK。
-1. 调用 `microsoftTeams.settings.setValidityState(true)` 以启用“**保存**”。
+> [!NOTE]
+> 从 Teams JavaScript 客户端 SDK (TeamsJS) v.2.0.0 开始，已弃用 *设置* 命名空间中的 API，以支持 *页面* 命名空间中的等效 API，包括 `pages.getConfig()` 子命名空间中 `pages.config` 的其他 API。 有关详细信息，请参阅 [TeamsJS 版本 2.0 中的新增功能](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
+
+1. 通过调用`app.initialize()`初始化 SDK。
+1. 调用 `pages.config.setValidityState(true)` 以启用“**保存**”。
 
     > [!NOTE]
-    > 必须调用 `microsoftTeams.settings.setValidityState(true)` 作为对用户选择或字段更新的响应。
+    > 必须调用 `microsoftTeams.pages.config.setValidityState(true)` 作为对用户选择或字段更新的响应。
 
-1. 注册 `microsoftTeams.settings.registerOnSaveHandler()` 事件处理程序，当用户选择“**保存**”时调用。
-1. 调用 `microsoftTeams.settings.setSettings()` 以保存连接器设置。如果用户尝试更新连接器的现有配置，则配置对话框中也会显示已保存的设置。
-1. 调用 `microsoftTeams.settings.getSettings()` 以提取 Webhook 属性，包括 URL。
+1. 注册 `microsoftTeams.pages.config.registerOnSaveHandler()` 事件处理程序，当用户选择“**保存**”时调用。
+1. 调用 `microsoftTeams.pages.config.setConfig()` 以保存连接器设置。如果用户尝试更新连接器的现有配置，则配置对话框中也会显示已保存的设置。
+1. 调用 `microsoftTeams.pages.getConfig()` 以提取 Webhook 属性，包括 URL。
 
     > [!NOTE]
-    > 在重新配置的情况下，首次加载页面时必须调用 `microsoftTeams.settings.getSettings()`。
+    > 在重新配置的情况下，首次加载页面时必须调用 `microsoftTeams.pages.getConfig()`。
 
-1. 注册 `microsoftTeams.settings.registerOnRemoveHandler()` 事件处理程序，当用户删除连接器时调用。
+1. 注册 `microsoftTeams.pages.config.registerOnRemoveHandler()` 事件处理程序，当用户删除连接器时调用。
 
 此事件使服务有机会执行任何清理操作。
 
@@ -83,17 +87,18 @@ ms.locfileid: "66485342"
     </section>
 </div>
 
-<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="text/javascript">
-
+<script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        
         function onClick() {
-            microsoftTeams.settings.setValidityState(true);
+            pages.config.setValidityState(true);
         }
 
-        microsoftTeams.initialize();
-        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+        await app.initialize();
+        pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
             var eventType = '';
@@ -103,22 +108,22 @@ ms.locfileid: "66485342"
                 eventType = radios[1].value;
             }
 
-            microsoftTeams.settings.setSettings({
-                 entityId: eventType,
+            await pages.config.setConfig({
+                entityId: eventType,
                 contentUrl: "https://YourSite/Connector/Setup",
                 removeUrl:"https://YourSite/Connector/Setup",
-                 configName: eventType
+                configName: eventType
                 });
 
-            microsoftTeams.settings.getSettings(function (settings) {
-                // We get the Webhook URL in settings.webhookUrl which needs to be saved. 
+            pages.getConfig().then(async (config) {
+                // We get the Webhook URL from config.webhookUrl which needs to be saved. 
                 // This can be used later to send notification.
             });
 
             saveEvent.notifySuccess();
         });
 
-        microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+        pages.config.registerOnRemoveHandler(function (removeEvent) {
             alert("Removed" + JSON.stringify(removeEvent));
         });
 
@@ -128,46 +133,46 @@ ms.locfileid: "66485342"
 要在加载页面时对用户进行身份验证，请参阅[选项卡中的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)，以在嵌入页面时集成登录。
 
 > [!NOTE]
-> 由于跨客户端兼容性原因，代码在调用 `authenticate()` 之前必须使用 URL 和成功或失败回调方法调用 `microsoftTeams.authentication.registerAuthenticationHandlers()`。
+> 在 TeamsJS v.2.0.0 之前，由于跨客户端兼容性原因，在调`authenticate()`用之前，代码必须使用 URL 和成功或失败回调方法进行调`microsoftTeams.authentication.registerAuthenticationHandlers()`用。 从 TeamsJS v.2.0.0 开始， *registerAuthenticationHandlers* 已被弃用，转而使用所需的身份验证参数直接调用 [身份验证 ()](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) 。
 
-#### <a name="getsettings-response-properties"></a>`GetSettings` 响应属性
+#### <a name="getconfig-response-properties"></a>`getConfig` 响应属性
 
 >[!NOTE]
->从选项卡调用此方法时，`getSettings` 调用返回的参数不同于 [js 设置](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings)中记录的参数。
+>从选项卡调用此方法时，调用返回的 `getConfig` 参数不同于引用中记录的 [参数](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-getconfig)。
 
-下表提供了参数和 `GetSetting` 响应属性的详细信息：
+下表提供了参数和 `getConfig` 响应属性的详细信息：
 
 | 参数   | 详细信息 |
 |-------------|---------|
-| `entityId`       | 实体 ID，在调用 `setSettings()` 时由代码设置。 |
-| `configName`  | 配置名称，在调用 `setSettings()` 时由代码设置。 |
-| `contentUrl` | 配置页的 URL，在调用 `setSettings()` 时由代码设置。 |
+| `entityId`       | 实体 ID，在调用 `setConfig()` 时由代码设置。 |
+| `configName`  | 配置名称，在调用 `setConfig()` 时由代码设置。 |
+| `contentUrl` | 配置页的 URL，在调用 `setConfig()` 时由代码设置。 |
 | `webhookUrl` | 为连接器创建的 Webhook URL。将 Webhook URL 用于 POST 结构的 JSON 以将卡片发送到频道。`webhookUrl` 仅在应用程序成功返回数据时返回。 |
 | `appType` | 返回的值可以`mail`是或`groups``teams`分别对应于Office 365邮件、Office 365组或 Teams。 |
 | `userObjectId` | 这是与启动连接器安装的 Office 365 用户相对应的唯一 ID，必须具备安全性。可以使用此值关联 Office 365 中已在服务中设置配置的用户。 |
 
 #### <a name="handle-edits"></a>处理编辑
 
-代码必须处理返回编辑现有连接器配置的用户。 为此，请在初始配置期间使用以下参数调用 `microsoftTeams.settings.setSettings()`：
+代码必须处理返回编辑现有连接器配置的用户。 为此，请在初始配置期间使用以下参数调用 `microsoftTeams.pages.config.setConfig()`：
 
 * `entityId` 是自定义 ID，表示用户已由服务配置和理解的内容。
 * `configName` 是可以检索的配置代码名称。
 * `contentUrl` 是用户编辑现有连接器配置时加载的自定义 URL。
 
-此调用作为保存事件处理程序的一部分进行。 然后，在加载 `contentUrl` 以后，代码必须调用 `getSettings()` 以预填充配置用户界面中的任何设置或表单。
+此调用作为保存事件处理程序的一部分进行。 然后，在加载 `contentUrl` 以后，代码必须调用 `getConfig()` 以预填充配置用户界面中的任何设置或表单。
 
 #### <a name="handle-removals"></a>处理删除
 
-可以在用户删除现有的连接器配置时执行事件处理程序。 通过调用 `microsoftTeams.settings.registerOnRemoveHandler()` 注册该处理程序。 此处理程序用于执行清理操作，如删除数据库中的条目。
+可以在用户删除现有的连接器配置时执行事件处理程序。 通过调用 `microsoftTeams.pages.config.registerOnRemoveHandler()` 注册该处理程序。 此处理程序用于执行清理操作，如删除数据库中的条目。
 
 ### <a name="include-the-connector-in-your-manifest"></a>在清单中包含连接器
 
-从门户下载自动生成的 `Teams app manifest`。 在测试或发布应用之前，请执行以下步骤：
+从开发人员门户 () <https://dev.teams.microsoft.com> 下载自动生成的 *Teams 应用清单*。 在测试或发布应用之前，请执行以下步骤：
 
 1. [包括两个图标](../../concepts/build-and-test/apps-package.md#app-icons)。
 1. 修改清单的 `icons` 部分以包括图标的文件名而不是 URL。
 
-以下 manifest.json 文件包含测试和提交应用所需的元素：
+以下 *manifest.json* 文件包含测试和提交应用所需的元素：
 
 > [!NOTE]
 > 将以下示例中的 `id` 和 `connectorId` 替换为连接器的 GUID。
@@ -231,7 +236,7 @@ ms.locfileid: "66485342"
 
 1. 直接为团队[设置传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook)。
 
-1. 添加[配置页](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)并在 Office 365 连接器中发布传入 Webhook。
+1. 添加[配置页](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)并在Office 365连接器中发布传入 Webhook。
 
 1. 在 [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) 提交过程中打包并发布连接器。
 

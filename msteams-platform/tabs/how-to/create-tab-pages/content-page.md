@@ -5,12 +5,12 @@ description: 在本模块中，了解如何为选项卡和选项卡内容创建�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 21cc2559b7a6751981156deac1d2373f7ce0dfbe
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 4fd9c301ba48f346b9e721f5d6b3baa13ca50c04
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503352"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841966"
 ---
 # <a name="create-a-content-page"></a>创建内容页
 
@@ -26,7 +26,7 @@ ms.locfileid: "66503352"
 
 ## <a name="tab-content-and-design-guidelines"></a>选项卡内容和设计指南
 
-选项卡的总体目标是提供对具有实际价值和明显用途的有意义且引人入胜的内容的访问权限。 
+选项卡的总体目标是提供对具有实际价值和明显用途的有意义且引人入胜的内容的访问权限。
 
 你需要专注于使选项卡设计干净、导航直观且内容沉浸式。有关详细信息，请参阅 [选项卡设计指南](~/tabs/design/tabs.md) 和 [Microsoft Teams 应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 
@@ -43,14 +43,13 @@ ms.locfileid: "66503352"
 <html>
 <head>
 ...
-    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 ...
-</head>
-
 <body>
 ...
-    <script>
-    app.initialize();
+    <script type="module">
+        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
     </script>
 ...
 </body>

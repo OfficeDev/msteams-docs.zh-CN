@@ -1,18 +1,18 @@
 ---
 title: Live Share 媒体功能
+author: surbhigupta
 description: 在本模块中，详细了解 Live Share 媒体功能、挂起和等待点、音频闪烁以及同步视频和音频。
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 662a0204793eaf2ef4702a447a4a61c79964112c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.date: 04/07/2022
+ms.openlocfilehash: bf9d7c071a337a56373a9c58879d23a8d2638af7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142477"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841873"
 ---
----
-
 # <a name="live-share-media-capabilities"></a>Live Share 媒体功能
 
 视频和音频是现代世界和工作场所的重要部分。 我们收到了广泛的反馈，建议我们还可以采取更多措施来提高在会议中一起观看视频的质量、辅助功能和许可证保护。

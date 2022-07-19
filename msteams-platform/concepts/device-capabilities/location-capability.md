@@ -5,18 +5,20 @@ description: 通过代码片段和示例了解如何使用 Teams JavaScript 客�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 00fdfe470dcc5028afb233f9fbe0c6a6f7ff1b2c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 8290e78e9ea1baf87ce89642cd4f4f51b5f3c63d
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189868"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842015"
 ---
 # <a name="integrate-location-capabilities"></a>集成位置功能
 
 可以将本机设备的位置功能与 Teams 应用集成。  
 
 可以使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，它为应用访问用户的[本机设备功能](native-device-permissions.md)提供了所需的工具。 使用位置 API（例如 [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) 和 [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?)）来集成应用中的功能。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>集成位置功能的优势
 
@@ -66,6 +68,40 @@ ms.locfileid: "66189868"
 
 ### <a name="code-snippets"></a>代码段
 
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+**调用 `getLocation` API 以检索位置：**
+
+```javascript
+import {location} from "@microsoft/teams-js"
+
+let locationProps = {"allowChooseLocation":true,"showMap":true};
+if(location.isSupported()) {
+    const locationPromise = location.getLocation(locationProps);
+    locationPromise.
+        then((result) => {output(JSON.stringify(result));}.
+        catch((error) => {output(error);});
+}
+else {/*Handle case where capability isn't supported */}
+```
+
+**调用 `showLocation` API 以显示位置：**
+
+```javascript
+import {location} from "@microsoft/teams-js"
+
+let location = {"latitude":17,"longitude":17};
+if(location.isSupported()) {
+    const locationPromise = location.showLocation(location);
+    locationPromise.
+         then((result) => {/*Successful map display*/}).
+         catch((error) => {/*Failed map display*/});
+}
+else {/*Handle case where capability isn't supported */}
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
 **调用 `getLocation` API 以检索位置：**
 
 ```javascript
@@ -91,6 +127,8 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
      output(result);
 });
 ```
+
+---
 
 ## <a name="error-handling"></a>错误处理
 

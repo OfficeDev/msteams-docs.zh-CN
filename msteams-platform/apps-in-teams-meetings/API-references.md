@@ -5,12 +5,13 @@ description: 了解如何使用示例和代码示例、Teams 应用会议用户�
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: ba0f3758cf08649100cbc564c60eab3a86e3d155
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.date: 04/07/2022
+ms.openlocfilehash: 4e32937e906a472359c6d4d7788143e551e8a002
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561607"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841952"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -32,9 +33,9 @@ ms.locfileid: "66561607"
 |[**发送会议内通知**](#send-an-in-meeting-notification)| 使用用户机器人聊天的现有对话通知 API 提供会议信号，并允许通知显示会议内通知的用户操作。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**获取会议详细信息**](#get-meeting-details-api)| 获取会议的静态元数据。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**发送实时字幕**](#send-real-time-captions-api)| 将实时字幕发送到正在进行的会议。 | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**将应用内容共享到演示区域**](#share-app-content-to-stage-api)| 从会议中的应用侧面板将应用的特定部分共享到会议演示区域。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[**获取应用内容演示区域共享状态**](#get-app-content-stage-sharing-state-api)| 获取会议演示区域应用共享状态的信息。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
-|[**获取应用内容演示区域共享功能**](#get-app-content-stage-sharing-capabilities-api)| 获取应用共享到会议演示区域的功能。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**将应用内容共享到演示区域**](#share-app-content-to-stage-api)| 从会议中的应用侧面板将应用的特定部分共享到会议演示区域。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting) |
+|[**获取应用内容演示区域共享状态**](#get-app-content-stage-sharing-state-api)| 获取会议演示区域应用共享状态的信息。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+|[**获取应用内容演示区域共享功能**](#get-app-content-stage-sharing-capabilities-api)| 获取应用共享到会议演示区域的功能。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**获取实时 Teams 会议事件**](#get-real-time-teams-meeting-events-api)|获取实时会议事件，例如实际开始时间和结束时间。| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>获取用户上下文 API
@@ -508,9 +509,9 @@ GET /v1/meetings/{meetingId}
 
 在定期会议类型中，
 
-**startDate**：指定开始应用模式的日期。 startDate 的值必须对应于事件资源上 start 属性的日期值。 请注意，如果日期不符合模式，第一次会议可能不会在此日期发生。
+**startDate**：指定开始应用模式的日期。 startDate 的值必须对应于事件资源上 start 属性的日期值。 请注意，如果会议不符合模式，则不会在此日期发生第一次会议。
 
-**endDate**：指定停止应用模式的日期。 请注意，如果日期不符合模式，最后一次会议可能不会在此日期发生。
+**endDate**：指定停止应用模式的日期。 请注意，如果会议不符合模式，则此日期可能不会发生最后一次会议。
 
 ## <a name="send-real-time-captions-api"></a>发送实时字幕 API
 

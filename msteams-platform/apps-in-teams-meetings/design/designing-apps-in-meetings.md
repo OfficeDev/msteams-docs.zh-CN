@@ -5,12 +5,13 @@ description: 了解如何在 Teams 会议中为应用设计会议扩展。 使�
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.date: 04/07/2022
+ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792835"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842036"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -105,7 +106,7 @@ ms.locfileid: "66792835"
 |3|**标头**：包括应用名称。|
 |4|**关闭按钮**：关闭选项卡。始终使用右上角的关闭图标，而不是页脚中的操作。|
 |5|**通知栏**：错误警报直接显示在标头下方，并将 iframe 内容的其余部分向下推送到 20 像素。|
-|6 |**iframe**: 显示应用内容。|
+|6|**iframe**: 显示应用内容。|
 
 ### <a name="spacing"></a>Spacing
 

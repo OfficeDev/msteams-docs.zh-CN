@@ -5,14 +5,14 @@ description: 在本模块中，了解如何创建选项卡删除页，以及如�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485214"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841972"
 ---
-# <a name="tab-re-configuration-and-removal-page"></a>选项卡重新配置和删除页面
+# <a name="create-a-removal-page"></a>创建删除页面
 
 可以通过在应用中支持删除和修改选项来扩展和增强用户体验。 Teams 使用户能够重命名或删除频道或群组选项卡，并且你可以允许用户在安装后重新配置选项卡。 此外，选项卡删除体验为用户提供了删除后选项以删除或存档内容。
 
@@ -36,7 +36,7 @@ ms.locfileid: "66485214"
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>为应用程序创建选项卡删除页
 
-可选删除页是你托管的 HTML 页面，在删除选项卡时显示。 删除页 URL 由 `setConfig()` 方法指定， (配置页中以前 `setSettings()`) 。 与应用中的所有页面一样，删除页必须符合 [Teams 选项卡先决条件](../../../tabs/how-to/tab-requirements.md)。
+可选删除页是你托管的 HTML 页面，在删除选项卡时显示。 删除页 URL 由 `setConfig()` 方法 (或 `setSettings()` 在配置页内的 TeamsJS v.2.0.0) 之前指定。 与应用中的所有页面一样，删除页必须符合 [Teams 选项卡先决条件](../../../tabs/how-to/tab-requirements.md)。
 
 ### <a name="register-a-remove-handler"></a>注册删除处理程序
 
@@ -58,7 +58,7 @@ ms.locfileid: "66485214"
 
 #### <a name="include-authentication"></a>包括身份验证
 
-在允许用户删除选项卡内容之前，需要进行身份验证。 上下文信息可用于帮助构造身份验证请求和授权页面 URL。 请参阅[选项卡的 Microsoft Teams 身份验证流程](~/tabs/how-to/authentication/auth-flow-tab.md)。 确保选项卡页面中使用的所有域都列在 `manifest.json``validDomains` 数组中。
+在允许用户删除选项卡内容之前，需要进行身份验证。 上下文信息可用于帮助构造身份验证请求和授权页面 URL。 请参阅[选项卡的 Microsoft Teams 身份验证流程](~/tabs/how-to/authentication/auth-flow-tab.md)。 确保选项卡页中使用的所有域都列在应用清单的数组中 `validDomains` 。
 
 下面是一个示例选项卡删除代码块：
 
@@ -67,8 +67,9 @@ ms.locfileid: "66485214"
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script>
-    app.initialize();
+  <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    await app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

@@ -6,16 +6,18 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558574"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841706"
 ---
 # <a name="create-a-channel-tab"></a>创建频道选项卡
 
 通道或组选项卡将内容传递到频道和群组聊天，是围绕基于 Web 的专用内容创建协作空间的好方法。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -261,14 +263,15 @@ gulp ngrok-serve
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### <a name="wwwroot-folder"></a>wwwroot 文件夹
@@ -333,17 +336,17 @@ ngrok http 3978 --host-header=localhost
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
     > [!IMPORTANT]
     > 请勿复制和粘贴此页面的 `<script src="...">` URL，因为它们不代表最新版本。 若要获取最新版本的 SDK，请始终转到 [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js)。
 
-1. 在 `script` 标记中插入对 `microsoftTeams.initialize();` 的调用。
+1. 在 `script` 标记中插入对 `microsoftTeams.app.initialize();` 的调用。
 
 1. 在 Visual Studio 解决方案资源管理器中转到“**页面**”文件夹并打开“**Tab.cshtml**”
 
-    在“**Tab.cshtml**”中，应用程序向用户提供两个选项按钮，用于显示带有红色或灰色图标的选项卡。 选择“**选择灰色**”或“**选择红色**”按钮分别触发 `saveGray()` 或 `saveRed()`，设置 `settings.setValidityState(true)`，并启用配置页面上的“**保存**”按钮。 此代码让 Teams 知道你已完成配置要求，并且可以继续安装。 已设置参数 `settings.setSettings`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
+    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置，并且可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
 1. 使用 HTTPS ngrok URL 将每个函数中的 `websiteUrl` 和 `contentUrl` 值更新到选项卡。
 
@@ -352,27 +355,29 @@ ngrok http 3978 --host-header=localhost
     ```javascript
         
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
             });
         }
 
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
-        });
+            });
         }
     ```
 
@@ -481,14 +486,15 @@ ngrok http 3978 --host-header=localhost
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### <a name="wwwroot-folder"></a>wwwroot 文件夹
@@ -561,17 +567,17 @@ ngrok http 3978 --host-header=localhost
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
     > [!IMPORTANT]
     > 请勿复制和粘贴此页面的 `<script src="...">` URL，因为它们不代表最新版本。 若要获取最新版本的 SDK，请始终转到 [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js)。
 
-1. 在 `script` 标记中插入对 `microsoftTeams.initialize();` 的调用。
+1. 在 `script` 标记中插入对 `microsoftTeams.app.initialize();` 的调用。
 
 1. 在 Visual Studio 解决方案资源管理器中转到“**选项卡**”文件夹并打开“**Tab.cshtml**”
 
-    在“**Tab.cshtml**”中，应用程序向用户提供两个选项按钮，用于显示带有红色或灰色图标的选项卡。 选择“**选择灰色**”或“**选择红色**”按钮分别触发 `saveGray()` 或 `saveRed()`，设置 `settings.setValidityState(true)`，并启用配置页面上的“**保存**”按钮。 此代码让 Teams 知道你已完成配置要求，并且可以继续安装。 已设置参数 `settings.setSettings`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
+    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置，并且可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
 1. 使用 HTTPS ngrok URL 将每个函数中的 `websiteUrl` 和 `contentUrl` 值更新到选项卡。
 
@@ -580,24 +586,26 @@ ngrok http 3978 --host-header=localhost
     ```javascript
 
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });
         }
     
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });

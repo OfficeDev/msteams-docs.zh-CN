@@ -1,18 +1,18 @@
 ---
 title: Live Share 快速入门
+author: surbhigupta
 description: 在本模块中，了解如何快速尝试 Dice Roller 示例
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 10bf4b3ce67322c25517d82af2d06a654a4d8668
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484584"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841783"
 ---
----
-
 # <a name="quick-start-guide"></a>快速入门指南
 
 使用 Dice Roller 示例的 Live Share SDK 快速入门是 [Fluid Framework 快速入门](https://fluidframework.com/docs/start/quick-start/)的演变，旨在快速在计算机的 localhost 上运行基于 Live Share SDK 的 [Dice Scroll 示例](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)。
@@ -37,25 +37,25 @@ ms.locfileid: "66484584"
 1. 克隆 [Live Share SDK](https://github.com/microsoft/live-share-sdk) 存储库以测试示例应用：
 
     ```bash
-    $ git clone https://github.com/microsoft/live-share-sdk.git
+    git clone https://github.com/microsoft/live-share-sdk.git
     ```
 
 1. 运行以下命令以转到 Dice Roller 示例应用文件夹：
 
    ```bash
-    $ cd live-share-sdk\samples\01.dice-roller
+    cd live-share-sdk\samples\01.dice-roller
    ```
 
 1. 运行以下命令以安装依赖项包：
 
     ```bash
-    $ npm install
+    npm install
     ```
 
 1. 运行以下命令以启动客户端和本地服务器：
 
    ```bash
-   $ npm start
+   npm start
    ```
   
      新的浏览器选项卡将打开一个 `http://localhost:8080` URL，并显示 Dice Roller 游戏。

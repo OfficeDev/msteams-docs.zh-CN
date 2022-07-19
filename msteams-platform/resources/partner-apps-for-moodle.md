@@ -1,15 +1,15 @@
 ---
 title: Moodle 合作伙伴应用
 description: 了解 Moodle 合作伙伴应用、Moodle 合作伙伴应用的主要优势、Saas 产品/服务和 mConnect。 为 Teams 用户启用单一登录 SSO。
-ms.topic: Partner apps
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: ee6840193d0b2ecaf1eab2a7e466bcd61382e06f
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: f4a74db41284b92197f52bc95de35c9eb5176b80
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123389"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842022"
 ---
 # <a name="partner-apps-for-moodle"></a>Moodle 合作伙伴应用
 

@@ -5,12 +5,12 @@ description: 在本模块中，了解如何为频道选项卡创建聊天子实�
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485659"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841980"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
@@ -39,7 +39,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
    > **channelId** 是频道选项卡的可选选项。 但是，如果要在通道和静态选项卡之间保持相同的实现，则建议执行此操作。
 * **title**：在聊天面板中向用户显示的标题。
 
-这些值中的大部分也可以从 API 中 `getContext` 检索。
+还可以从 [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) TeamsJS v1) 中的 API (`microsoftTeams.getContext()` 检索其中的大部分值。 有关详细信息，请参阅 [PageInfo 接口](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});

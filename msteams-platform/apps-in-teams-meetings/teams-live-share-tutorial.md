@@ -1,18 +1,18 @@
 ---
 title: Live Share 代码教程
+author: surbhigupta
 description: 在本模块中，了解如何开始使用 Live Share SDK，以及如何使用 Live Share SDK 生成 Dice Roller 示例
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8af4a452820a01c0a535106e9273d953cb5f0713
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 0210962126604733c4d66ba0db4276ff36cfd6b7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484626"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841797"
 ---
----
-
 # <a name="dice-roller-code-tutorial"></a>Dice Roller 代码教程
 
 在 Dice Roller 示例应用中，用户会看到一个带有按钮的骰子来掷出它。 投掷骰子时，Live Share SDK 使用 Fluid Framework 跨客户端同步数据，因此每个人都可以看到相同的结果。 若要同步数据，请在 [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) 文件中执行以下步骤：
