@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 了解如何创建深层链接，以及如何在 Microsoft Teams 应用中使用和导航它们（带有选项卡）。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 2927a963387ccd2bab5401f15f3a3f21cbc714dc
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: dbb9c7568c955d7c70db978efa30f28025f708e4
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658929"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841959"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -212,7 +212,25 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 有关使用日历的详细信息，请参阅 API 参考文档中的“[日历](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true)”命名空间。
 
-### <a name="tabteams-js-v1"></a>选项卡/Teams JS v1
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+// Open a scheduling dialog from your tab
+if(calendar.isSupported()) {
+   const calendarPromise = calendar.composeMeeting({
+      attendees: ["joe@contoso.com", "bob@contoso.com"],
+      content: "test content",
+      endTime: "2018-10-24T10:30:00-07:00",
+      startTime: "2018-10-24T10:00:00-07:00",
+      subject: "test subject"});
+   calendarPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 // Open a scheduling dialog from your tab
@@ -220,6 +238,8 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 ```
 
 ---
+
+你还可以手动创建 Teams 内置计划对话框的深层链接。
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>生成计划对话框的深层链接
 
