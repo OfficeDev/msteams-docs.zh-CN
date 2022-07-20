@@ -5,16 +5,19 @@ description: 在本模块中，了解如何向机器人消息添加丰富的格�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: 43a64a5ab7d44058831b643f2516839c248e9af1
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830797"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895480"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
 邮件格式设置可以使机器人邮件发挥出最佳效果。 可以将机器人消息格式化为包含交互式元素（如按钮、文本、图像、音频、视频等）的附件。
+
+> [!NOTE]
+> 机器人消息大小限制为 40 KB。 如果机器人消息大小限制超过 40 KB，机器人将收到一个 `413` 状态代码 (RequestEntityTooLarge) ，其中包含错误代码 `MessageSizeTooBig`。 机器人消息大小限制包括编码为 UTF-16 的整个消息有效负载，不包括基本的 64 个编码图像。
 
 ## <a name="format-text-content"></a>设置文本内容格式
 

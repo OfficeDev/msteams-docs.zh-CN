@@ -571,6 +571,8 @@
           href: resources/m365-plugins/m365-plugins-overview.md
         - name: Moodle 合作伙伴应用
           href: resources/partner-apps-for-moodle.md
+        - name: 安装 Moodle LMS
+          href: resources/moodleInstructions.md
         - name: Moodle 常见问题解答
           href: resources/faqs.md
     - name: 共享到 Teams
