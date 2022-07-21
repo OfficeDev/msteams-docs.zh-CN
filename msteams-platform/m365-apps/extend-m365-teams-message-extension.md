@@ -1,16 +1,16 @@
 ---
 title: 在整个 Microsoft 365 中扩展 Teams 邮件扩展
-description: 了解如何通过更新应用清单、添加 Outlook 频道和旁加载已更新应用来更新要在 Outlook 中运行的基于搜索的 Teams 消息扩展。
+description: 在本文中，你将了解如何通过更新应用清单、添加 Outlook 频道和旁加载更新的应用来更新基于搜索的 Teams 消息扩展以在 Outlook 中运行。
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 790c6324f012da8aabe7c4489a414d9887e03640
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190201"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919730"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>在整个 Microsoft 365 中扩展 Teams 邮件扩展
 

@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e060d1da7e618fe7730839aba0b676a9cb93ce7a
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842029"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919835"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -36,6 +36,7 @@ ms.locfileid: "66842029"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 07/21/2022 | 引入了发送活动源通知的分步指南 | 设计应用> UI 组件>活动源通知> [发送活动源通知](sbs-graphactivity-feedbroadcast.yml) |
 | 2022/07/08| 用于通过对话和安装更新事件将用户在应用安装期间选择的通道 ID 发送到机器人的更新 |  生成机器人>机器人对话> Teams 机器人中的对话事件> [Teams 机器人中的对话事件](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 06/16/2022 | 更新了支持桌面和移动设备的媒体功能| 集成设备功能 > [集成媒体功能](concepts/device-capabilities/media-capabilities.md)|
 | 06/08/2022 | 成功消息的可选卡片反馈| “生成机器人”>“机器人对话”>“[机器人对话中的消息](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)”|
