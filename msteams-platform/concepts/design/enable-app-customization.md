@@ -5,12 +5,12 @@ description: 在本模块中，了解 Teams 管理员如何为其组织自定义
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 0a7a98c5d981f35bc60a6099873a445b45caa071
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503443"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919821"
 ---
 # <a name="customize-your-teams-app"></a>自定义 Teams 应用
 
@@ -23,7 +23,7 @@ ms.locfileid: "66503443"
 * 更改应用的主题色以匹配组织品牌形象。
 * 将应用名称从 *Contoso* 更新为 *Contoso Agent*，这是组织中用户将看到的名称。 （注意：将连接器添加到聊天或频道的用户仍会看到原始应用名称，即 *Contoso*。）
 
-你可以在 [Teams 开发人员门户](https://dev.teams.microsoft.com/home)中启用此功能。 这会配置 `configurableProperties`，这在 Teams 应用清单 1.10 之前的版本中不可用。
+可以从版本 1.11 开始，通过定义客户可在 [Teams 应用清单部分中`configurableProperties`](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties)自定义的应用属性来启用此功能。 如果选择使用开发人员门户编辑应用的清单，则可以在 Teams 开发人员 [门户](https://dev.teams.microsoft.com/home) 中完成此操作。
 
 ### <a name="test-your-app"></a>测试应用
 

@@ -5,12 +5,12 @@ description: 了解如何为 Teams 应用设计活动源通知并获取 Teams UI
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 923519965b5ae6debaf256032f9bc4cdaada2f6e
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9a17027f7dd68993a118f24bb23cfff0a56651e1
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558007"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919765"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计活动源通知
 
@@ -37,7 +37,7 @@ ms.locfileid: "66558007"
 |3|**标题 (第一行) ：执行组件 + 原因**： *执行组件*：发起活动的用户或应用的名称。 *原因*：描述活动。|
 |4|**时间戳**：显示活动发生的时间。|
 |5|**第二行 (位置)**：显示 Teams 中的活动发生位置。|
-|6 |**文本预览 (第三行)**：显示从通知开始截断的行。|
+|6|**文本预览 (第三行)**：显示从通知开始截断的行。|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>活动源通知卡的类型
 
@@ -73,6 +73,10 @@ ms.locfileid: "66558007"
 |3|Mac|
 
 ---
+
+## <a name="step-by-step-guide"></a>分步指南
+
+按照 [分步指南](../../sbs-graphactivity-feedbroadcast.yml) 在 Teams 中发送活动源通知。
 
 ## <a name="next-step"></a>后续步骤
 

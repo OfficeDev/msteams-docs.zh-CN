@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 4e32937e906a472359c6d4d7788143e551e8a002
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841952"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919758"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -134,7 +134,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-| 属性名称 | 用途 |
+| 属性名 | 说明 |
 |---|---|
 | **user.id** | 用户的 ID。 |
 | **user.aadObjectId** | 用户的 Azure Active Directory 对象 ID。 |
@@ -226,7 +226,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&<completionBotId>=<BOT_APP_ID>"
         }
     },
     "replyToId": "1493070356924"
@@ -235,14 +235,16 @@ POST /v3/conversations/{conversationId}/activities
 
 ---
 
-| 属性名称 | 用途 |
+| 属性名 | 说明 |
 |---|---|
-| **type** | 活动的类型。 |
+| **类型** | 活动的类型。 |
 | **text** | 消息的文本内容。 |
 | **summary** | 消息的摘要文本。 |
 | **channelData.notification.alertInMeeting** | 指示在会议中是否向用户显示通知的布尔值。 |
 | **channelData.notification.externalResourceUrl** | 通知的外部资源 URL 的值。|
 | **replyToId** | 线程的父消息或根消息的 ID。 |
+| **APP_ID** | 在清单中声明的应用 ID。 |
+| **completionBotId** | 机器人应用 ID |
 
 ### <a name="response-codes"></a>响应代码
 
@@ -491,7 +493,7 @@ GET /v1/meetings/{meetingId}
 
 ---
 
-| 属性名称 | 用途 |
+| 属性名 | 说明 |
 |---|---|
 | **details.id** | 会议 ID，编码为 BASE64 字符串。 |
 | **details.msGraphResourceId** | MsGraphResourceId，专门用于 MS 图形 API调用。 |
@@ -899,9 +901,9 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 }
 ```
 
-| 属性名称 | 用途 |
+| 属性名 | 说明 |
 |---|---|
-| **名称** | 用户名。|
+| **name** | 用户名。|
 | **type** | 活动类型。 |
 | **timestamp** | 以 ISO-8601 格式表示的邮件的本地日期和时间。 |
 | **id** | 活动的 ID。 |

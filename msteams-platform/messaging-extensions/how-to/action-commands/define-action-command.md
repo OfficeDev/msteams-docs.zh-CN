@@ -5,16 +5,19 @@ description: 在本模块中，了解如何在 Microsoft Teams 中使用应用�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6ac26e8d066da249ae1b105d2375da1a7e2df6db
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503933"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919842"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> 启动消息操作时，附件详细信息不会作为调用活动的一 `turncontext` 部分发送。
 
 利用操作命令可向用户呈现在 Teams 中称为任务模块的模式弹出窗口。 任务模块收集或显示信息、处理交互并将信息发送回 Teams。 本文档指导你如何选择操作命令调用位置、创建任务模块、发送最终消息或卡片、使用 App Studio 创建操作命令或手动创建操作命令。
 
@@ -27,7 +30,7 @@ ms.locfileid: "66503933"
 请参阅以下视频，了解如何定义消息扩展操作命令：
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>选择操作命令调用位置
@@ -84,7 +87,7 @@ ms.locfileid: "66503933"
 可以使用 **App Studio** 或 **开发人员门户** 创建操作命令。
 
 > [!WARNING]
- > 如果你一直在使用 App Studio，我们建议你尝试开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发、管理 Teams 应用。App Studio 将在 2022 年 6 月 30 日之前弃用。
+ > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 8 月 1 日弃用。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
