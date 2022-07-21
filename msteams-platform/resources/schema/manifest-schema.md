@@ -3,12 +3,12 @@ title: 清单架构参考
 description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503730"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895494"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
@@ -460,7 +460,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`configurationUrl`|string|2048 个字符|✔️|配置选项卡时要使用的 https:// URL。|
 |`scopes`|枚举数组|1|✔️|目前，可配置选项卡仅支持 `team` 和 `groupchat` 范围。 |
 |`canUpdateConfiguration`|Boolean|||一个值，该值指示创建后用户是否可以更新选项卡配置的实例。默认值：**true**。|
-|`context` |枚举数组|6 ||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值：**[channelTab， privateChatTab， meetingChatTab， meetingDetailsTab]**。|
+|`context` |枚举数组|6||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值：**[channelTab， privateChatTab， meetingChatTab， meetingDetailsTab]**。|
 |`sharePointPreviewImage`|string|2048||用于 SharePoint 的选项卡预览图像的相对文件路径。大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义如何在 SharePoint 中提供选项卡。选项 `sharePointFullPage` 和 `sharePointWebPart` |
 
@@ -505,7 +505,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-机器人可以向用户推荐的命令的可选列表。 对象是一个数组（最多两个元素），其类型为 `object`;必须为机器人支持的每个范围定义一个单独的命令列表。 有关详细信息，请参阅[机器人菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
+机器人可以向用户推荐的命令的列表。 对象是一个数组（最多两个元素），其类型为 `object`;必须为机器人支持的每个范围定义一个单独的命令列表。 有关详细信息，请参阅[机器人菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | Description|
 |---|---|---|---|---|
@@ -660,7 +660,10 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 指示是否在没有选项卡标题栏（表示全屏模式）的情况下呈现个人应用。 默认为 **false**。
 
 > [!NOTE]
-> `isFullScreen` 仅适用于发布到组织的应用。
+>
+> * `isFullScreen` 仅适用于发布到组织的应用。 旁加载和已发布的第三方应用无法使用此属性（将被忽略）。
+>
+> * `isFullScreen=true` 将从个人应用和任务模块对话框中删除 Teams 提供的标头栏和标题。
 
 ## <a name="activities"></a>activities
 
