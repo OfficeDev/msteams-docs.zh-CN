@@ -5,21 +5,24 @@ description: 借助此学习路径，开始使用 Microsoft Teams 中的聊天�
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f04f41ac100f243f7560f63364475cd877cf7bf3
+ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558315"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912259"
 ---
 # <a name="build-bots-for-teams"></a>为 Teams 生成机器人
 
 机器人也称为聊天机器人或对话机器人。 它是一个应用，可由客户服务或支持人员等用户运行简单且重复的任务。 机器人的日常使用包括提供天气信息、预订餐食或提供旅行信息。 与机器人的交互可以是快速问答或复杂的对话。
 
 > [!IMPORTANT]
-> 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。
 >
-> Microsoft Teams 中的机器人应用程序可通过 [Azure 机器人服务](/azure/bot-service/channel-connect-teams)在 GCC-High 中使用。
+> * 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。
+>
+> * Microsoft Teams 中的机器人应用程序通过 [Azure 机器人服务](/azure/bot-service/how-to-deploy-gov-cloud-high)提供，机器人通道注册必须在 Azure 政府门户中完成。
+>
+> * GCCH 中的应用程序最多仅支持清单版本 v1.10。 GCCH 环境中不支持自适应卡片中的图像 URL。 可以将图像 URL 替换为 Base64 编码的 DataUri。
 
 会话机器人允许用户通过文本、交互卡和任务模块与 web 服务进行交互。
 
