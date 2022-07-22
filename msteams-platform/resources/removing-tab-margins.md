@@ -5,12 +5,12 @@ description: 在本模块中，了解删除选项卡边距如何增强应用生�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: d99b58529cf15da4357d44d6bcfdcc9801b995ba
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558280"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962424"
 ---
 # <a name="tab-margin-changes"></a>选项卡边距更改
 
@@ -38,9 +38,9 @@ ms.locfileid: "66558280"
 
 **Teams 以前应用的选项卡边距的大小是怎样的？**
 
-* 左右：20 px
-* 顶部：16 px
-* 底部：0 px
+* 左右：20 像素
+* 顶部：16 像素
+* 底部：0 像素
 
 > [!IMPORTANT]
 >

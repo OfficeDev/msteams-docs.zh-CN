@@ -1,20 +1,20 @@
 ---
 title: 使用基本 Fluent UI 组件设计应用
 author: heath-hamilton
-description: 了解用于生成 Microsoft Teams 应用和获取 Teams UI 工具包的 UI 组件。 了解 Fluent kit breadcrumb 按钮卡旋转木马下拉式教练标记选取器透视工具提示
+description: 了解如何使用 Teams UI 工具包中的 Fluent UI 组件设计 Microsoft Teams 应用。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4f3295036315819413f262e5a224dd2231eb431d
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557755"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962438"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本 Fluent UI 组件设计 Microsoft Teams 应用
 
-可以使用以下基本 Fluent UI 组件从头开始生成 Teams 应用。 这些组件设计尽可能平坦，可跨不同的用例、主题和屏幕大小工作。
+可以使用以下基本 Fluent UI 组件从头开始设计和生成 Teams 应用。 这些组件设计尽可能平坦，可跨不同的用例、主题和屏幕大小工作。
 
 此页上的插图显示 Teams 默认 (浅色) 和深色主题中组件的外观。
 

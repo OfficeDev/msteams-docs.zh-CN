@@ -5,12 +5,12 @@ description: 在本模块中，了解如何为频道选项卡创建聊天子实�
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841980"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962417"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
@@ -52,9 +52,12 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 如果用户启动对话，请务必侦听该事件的回调以检索并保存 **conversationId**：
 
 ```javascript
-microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
-    // console.log(conversationReponse.conversationId)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onStartConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 该 `conversationResponse` 对象包含与已启动的对话相关的信息。 建议保存此响应对象的所有属性供以后使用。
@@ -81,12 +84,15 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 microsoftTeams.conversations.closeConversation();
 ```
 
-当用户关闭对话视图时，还可以侦听事件。
+当用户在对话视图中选择 **“关闭” (X) 时，** 还可以侦听事件。
 
 ```javascript
-microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
-    // console.log(conversationResponse)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onCloseConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 ## <a name="code-sample"></a>代码示例
