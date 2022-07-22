@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659033"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962473"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -617,7 +617,7 @@ Teams 应用清单定义应用的配置。
 
 :::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
-* 左栏中具有工具栏的选项卡必须与 Teams 左侧导航保留 20px 的间距。 [*强制修复*]
+* 在左侧导轨中使用工具栏的选项卡必须从 Teams 左侧导航留出 20 像素的间距。 [*强制修复*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
