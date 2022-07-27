@@ -5,12 +5,12 @@ description: 了解 Cookie 类型(包括 SameSite Cookie)、它们的属性、�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: fee4855c8dd6c8dfdb83bce8b6d4d0c5da348724
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8f61788779d34183f7000271245e683f2750f739
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142729"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035322"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite cookie 属性
 
@@ -60,7 +60,7 @@ SameSite Cookie 属性如下所示:
 ### <a name="tabs-task-modules-and-message-extensions"></a>选项卡、任务模块和消息扩展
 
 * Teams 选项卡使用 `<iframes>` 嵌入在顶级或第一方上下文中查看的内容。
-* 任务模块允许你在 Teams 应用程序中创建模式弹出体验。 与选项卡类似，模式窗口会在当前页面中打开。
+* 使用任务模块，可以在 Teams 应用程序中创建模式弹出体验。 与选项卡类似，模式窗口会在当前页面中打开。
 * 消息扩展允许将扩充的内容插入来自外部资源的聊天消息中。
 
 当站点显示在 `<iframe>` 中时，嵌入内容使用的所有 Cookie 都会被视为第三方。 此外，如果页面上的远程资源依赖于使用请求 `<img>` 和 `<script>` 标记、外部字体和个性化内容发送的 Cookie，则必须确保这些资源标记为跨站点使用(例如 `SameSite=None; Secure`)或确保有回退。

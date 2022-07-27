@@ -11,15 +11,15 @@ metadata:
   nextTutorialTitle: 阅读详细信息以启用消息扩展操作命令
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: ab505fc3e13ec4574ad34201c8554b374f883a05
-  ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+  ms.openlocfilehash: 06664d537e8fd4ab4eecef4b3d592681ab3d225c
+  ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/14/2022
-  ms.locfileid: "66793073"
+  ms.lasthandoff: 07/27/2022
+  ms.locfileid: "67035336"
 items:
 - durationInMinutes: 1
-  content: "消息扩展允许用户与 Microsoft Teams 客户端中的 Web 服务交互。 它们有助于从撰写消息区域、命令框或直接从消息启动外部系统中的操作。\n\n**基于操作的消息扩展的主要功能**\n\n* 向用户显示用于收集或显示信息的模式弹出窗口。\n* 从撰写消息区域、命令框或消息触发操作命令。 \n\n本分步指南可帮助你生成基于 Teams 操作的消息扩展，以从撰写消息和消息区域启动操作。 你将看到以下输出：\n   \n  ![输出](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)\n"
+  content: "消息扩展允许用户与 Microsoft Teams 客户端中的 Web 服务交互。 它们有助于从撰写消息区域、命令框或直接从消息启动外部系统中的操作。\n\n**基于操作的消息扩展的主要功能**\n\n* 向用户显示一个用于收集或显示信息的模式弹出窗口。\n* 从撰写消息区域、命令框或消息触发操作命令。 \n\n本分步指南可帮助你生成基于 Teams 操作的消息扩展，以从撰写消息和消息区域启动操作。 你将看到以下输出：\n   \n  ![输出](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)\n"
 - title: 先决条件
   durationInMinutes: 1
   content: "确保安装以下工具并设置开发环境：  \n\n* 具有有效帐户[的 Microsoft Teams](https://teams.microsoft.com/)\n* [.NET Core SDK](https://dotnet.microsoft.com/download) 版本 3.1\n* [最新版本的 Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) 最新版本 (仅用于开发人员箱测试) 或任何等效的隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n"

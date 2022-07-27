@@ -5,12 +5,12 @@ description: 在本模块中，了解如何处理初始调用操作，以及如�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a7ab29456605f7465dfba24cf58059fc173c883e
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 58b5d246c113262fa478a36246a224a52d160154
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503338"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035182"
 ---
 # <a name="create-and-send-task-module"></a>创建和发送任务模块
 
@@ -648,7 +648,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 |属性名称|用途|
 |---|---|
-|`type`| 可以是 `continue` 以显示窗体，也可以是`message` 用于简单的弹出窗口。 |
+|`type`| 可以是 `continue` 呈现窗体，也可以 `message` 是用于简单的弹出窗口。 |
 |`value`| 对于表单可为 `taskInfo`，或对于消息为 `string`。 |
 
 taskInfo 对象的架构为：

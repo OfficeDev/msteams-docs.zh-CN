@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 返回入门概述
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: b413dc05a7bc860e75f72af8fb1a965fc7f0cf08
-  ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+  ms.openlocfilehash: 4fcdc3d3631831ddc74c80f62ef42a3ea8fa524a
+  ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/22/2022
-  ms.locfileid: "66962466"
+  ms.lasthandoff: 07/27/2022
+  ms.locfileid: "67035217"
 items:
 - durationInMinutes: 1
   content: "SharePoint 框架 (SPFx) 是一种开发模型，用于为 Microsoft Teams 和 SharePoint 构建客户端解决方案。 SPFx Teams 应用托管在 Microsoft 365 上。 它为开发和托管客户端 SPFx 解决方案提供完全支持。 可以将SharePoint 框架解决方案与以下项集成：\n\n- SharePoint 数据并扩展 Microsoft Teams。 \n- 使用 Azure Active Directory 保护的业务 API。\n\n在本教程中，通过使用选项卡功能生成第一个应用，开始使用 SPFx 进行 Microsoft Teams 应用开发。\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png\" alt-text=\"显示此应用有三个功能的示意图。突出显示了选项卡。\":::\n\n> [!NOTE]\n> 目前，Teams 工具包仅在具有Visual Studio Code和SharePoint 框架的 Teams 应用中提供 Tab 功能。 机器人和消息扩展功能不可用。\n"

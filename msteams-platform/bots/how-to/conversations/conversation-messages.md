@@ -4,12 +4,12 @@ description: 了解如何使用代码示例与 Teams 机器人和 Teams 频道�
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695297"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035192"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
@@ -195,6 +195,38 @@ async def on_members_added_activity(
 > 在同一活动有效负载中发送短信和附件时，将发生消息拆分。 此活动由 Microsoft Teams 拆分为单独的活动，其中一个活动仅包含一条短信，另一个活动包含附件。 由于活动是拆分的，因此不会收到响应中的消息 ID，该 ID 用于主动 [更新或删除](~/bots/how-to/update-and-delete-bot-messages.md) 消息。 建议发送单独的活动，而不是根据消息拆分。
 
 用户和机器人之间发送的消息包括消息中的内部通道数据。 此数据允许机器人在该通道上正确通信。 Bot Builder SDK 允许修改消息结构。
+
+## <a name="send-suggested-actions"></a>发送建议的操作
+
+建议的操作使机器人能够显示用户可以选择以提供输入的按钮。 建议的操作使用户能够回答问题或选择按钮，而不是用键盘键入响应，从而增强用户体验。 即使用户进行了选择，并且对于建议的操作，按钮也不可用，这些按钮仍然可见，用户也可在富卡中访问。 这会阻止用户选择会话中的过时按钮。
+
+若要向消息添加建议的操作，请设置 `suggestedActions` [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) 对象的属性，以指定表示要向用户显示的按钮的 [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) 对象列表。 有关详细信息，请参阅 [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+
+下面是建议操作的实现和体验的示例：
+
+``` json
+"suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
+```
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="机器人建议的操作" border="true":::
+
+> [!NOTE]
+> * `SuggestedActions` 仅支持一对一聊天机器人和基于文本的消息，而不支持自适应卡片或附件。
+> * 目前 `imBack` 是唯一受支持的操作类型，Teams 最多显示三个建议的操作。
 
 ## <a name="teams-channel-data"></a>Teams 频道数据
 
