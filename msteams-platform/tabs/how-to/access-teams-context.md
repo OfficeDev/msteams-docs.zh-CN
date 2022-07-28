@@ -3,12 +3,12 @@ title: 获取选项卡的上下文
 description: 在本模块中，了解如何将用户上下文获取到选项卡、用户上下文和 Access 上下文信息
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 63bbc9c0e5f20e293f9230000597860e3f053274
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841720"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058114"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -17,8 +17,6 @@ ms.locfileid: "66841720"
 * 有关用户、团队或公司的基本信息。
 * 区域设置和主题信息。
 * `page.subPageId`标`page.id`识此选项卡中的内容， (称为 `entityId` TeamsJS v.2.0.0) 之前`subEntityId`。
-
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="user-context"></a>用户上下文
 
@@ -41,7 +39,7 @@ ms.locfileid: "66841720"
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>通过插入 URL 占位符值获取上下文
 
-在配置或内容 URL 中使用占位符。 确定实际配置或内容 URL 时，Microsoft Teams 会使用相关值替换占位符。 可用占位符包括 [上下文](/javascript/api/@microsoft/teams-js/app.context) 对象上的所有字段。 常见占位符包括以下列表：
+在配置或内容 URL 中使用占位符。 确定实际配置或内容 URL 时，Microsoft Teams 会使用相关值替换占位符。 可用占位符包括 [上下文](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) 对象上的所有字段。 常见占位符包括以下属性：
 
 * [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id)：首次 [配置页面](~/tabs/how-to/create-tab-pages/configuration-page.md)时定义的页面的开发人员定义的唯一 ID。  (称为 `{entityId}` TeamsJS v.2.0.0) 之前。
 * [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid)：在为页面中的特定项目生成 [深层链接](~/concepts/build-and-test/deep-links.md) 时定义的此内容点的子页的开发人员定义的唯一 ID。  (称为 `{subEntityId}` TeamsJS v.2.0.0) 之前。
@@ -70,6 +68,49 @@ ms.locfileid: "66841720"
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>使用 Microsoft Teams JavaScript 库获取上下文
 
 还可通过调用 `microsoftTeams.getContext(function(context) { /* ... */ })` 使用[ Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 检索前面列出的信息。
+
+以下代码提供了上下文变量的示例：
+
+```json
+{
+    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "teamName": "The name of the current team",
+    "channelId": "The channel ID in the format 19:[id]@thread.skype",
+    "channelName": "The name of the current channel",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
+    "entityId": "The developer-defined unique ID for the entity this content points to",
+    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
+    "groupId": "Guid identifying the current Office 365 Group ID",
+    "theme": "The current UI theme: default | dark | contrast",
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
+    "userLicenseType": "The license type for the current user",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
+}
+```
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
@@ -141,7 +182,7 @@ microsoftTeams.getContext((context) => {
 
 下表列出了上下文对象的常用 *上下文* 属性：
 
-| TeamsJS v2 名称 | TeamsJS v1 名称 | 描述 |
+| TeamsJS v2 名称 | TeamsJS v1 名称 | 说明 |
 |-----------------|-----------------|-------------|
 | team.internalId | teamId | 与内容关联的团队的 Microsoft Teams ID。 |
 | team.displayName | teamName | 与内容关联的团队的名称。 |
@@ -184,6 +225,9 @@ microsoftTeams.getContext((context) => {
 
 ## <a name="retrieve-context-in-private-channels"></a>在专用通道中检索上下文
 
+> [!NOTE]
+> 专用频道目前仅在专用开发人员预览版中。
+
 在专用通道中加载内容页面时，从 `getContext` 呼叫中收到的数据会混淆，以保护通道的隐私。
 
 当内容页面位于专用频道中时，将更改以下字段：
@@ -200,10 +244,9 @@ microsoftTeams.getContext((context) => {
 ## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>检索Microsoft Teams Connect共享通道中的上下文
 
 > [!NOTE]
-> 目前，Microsoft Teams Connect共享频道仅在[开发人员预览版](../../resources/dev-preview/developer-preview-intro.md)中。
+> 目前，Microsoft Teams Connect共享频道仅在开发人员预览版中。
 
 当内容页面加载到Microsoft Teams Connect共享通道中时，由于共享频道中用户的唯一名册，从`getContext`呼叫中收到的数据将会更改。
-
 当内容页面位于共享频道中时，将更改以下字段：
 
 * `team.groupId`：未定义共享通道。
@@ -221,7 +264,37 @@ microsoftTeams.getContext((context) => {
 如果页面使用这些值中的任何一个，则字段的 `channel.membershipType` 值必须 `Shared` 确定页面是否已加载到共享通道中，并且可以做出适当的响应。
 
 > [!NOTE]
-> 每次用户重启或重新加载 Teams 桌面或 Web 客户端时，都会创建新的 sessionID，由 Teams 会话跟踪该会话，而当用户退出 Teams 应用并在 Teams 平台中重新加载时，会创建新的应用会话ID，由应用会话跟踪。
+> `teamSiteUrl` 也适用于标准通道。
+> 如果页面使用这些值中的任何一个，则字段的 `channelType` 值必须 `Shared` 确定页面是否已加载到共享通道中，并且可以做出适当的响应。
+
+## <a name="get-context-in-shared-channels"></a>获取共享通道中的上下文
+
+在共享通道中加载内容 UX 时，使用从 `getContext` 调用收到的数据进行共享通道更改。 如果 Tab 使用以下任一值，则必须填充字 `channelType` 段以确定是否在共享通道中加载该选项卡，并做出适当的响应。
+对于共享频道， `groupId` 其值是 `null`，因为主机团队的 groupId 无法准确反映共享频道的真实成员身份。 若要解决此问题，新添加了`hostTeamGroupID`这些属性和`hostTenantID`属性，对于进行 Microsoft 图形 API 调用以检索成员身份非常有用。 `hostTeam` 引用创建共享通道的团队。 `currentTeam` 引用当前用户正在从中访问共享通道的团队。
+
+有关这些概念的详细信息，请参阅 [共享频道](~/concepts/build-and-test/shared-channels.md)。
+
+在共享通道中使用以下 `getContext` 属性：
+
+| 属性 | 说明 |
+|----------|--------------|
+|`channelId`| 该属性设置为 SC 通道线程 ID。|
+|`channelType`| 该属性设置 `sharedChannel` 为共享通道。|
+|`groupId`|该属性 `null` 适用于共享通道。|
+|`hostTenantId`| 该属性是新添加的，并描述了主机的租户 ID，可用于与当前用户的 `tid` 租户 ID 属性进行比较。 |
+|`hostTeamGroupId`| 该属性是新添加的，并描述了主机团队的 Azure AD 组 ID，可用于进行 Microsoft 图形 API 调用以检索共享频道成员身份。 |
+|`teamId`|该属性是新添加的，并设置为当前共享团队的线程 ID。 |
+|`teamName`|该属性设置为当前共享团队的 `teamName`属性。 |
+|`teamType`|该属性设置为当前共享团队的 `teamType`属性。|
+|`teamSiteUrl`|该属性描述共享通道的 `channelSiteUrl`。|
+|`teamSitePath`| 该属性描述共享通道的 `channelSitePath`。|
+|`teamSiteDomain`| 该属性描述共享通道的 `channelSiteDomain`。|
+|`tenantSKU`| 该属性描述主机团队的 `tenantSKU`属性。|
+|`tid`|  该属性描述当前用户的租户 ID。|
+|`userObjectId`|  该属性描述当前用户的 ID。|
+|`userPrincipalName`| 该属性描述当前用户的 UPN。|
+
+有关共享通道的详细信息，请参阅 [共享频道](~/concepts/build-and-test/shared-channels.md)。
 
 ## <a name="handle-theme-change"></a>处理主题更改
 

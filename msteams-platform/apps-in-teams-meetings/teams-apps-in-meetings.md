@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 97dcb7076797531b510b323e5d7671a8afed0961
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 5dc0793ee899d5423b81af6e07083fd03c8e5621
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841888"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058247"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams 会议和呼叫的应用
 
@@ -51,6 +51,8 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 通过使用会议扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，你可以在其中集成选项卡、机器人和消息扩展。 可以识别各种参与者角色和用户类型、获取会议事件并生成会议内对话框。
 
 若要使用会议应用自定义 Teams，请通过更新应用清单并配置用于会议方案的应用来为 Teams 会议启用应用。
+
+如果应用共享重要信息，请自定义共享通道中外部成员的应用权限。 [共享频道](../concepts/build-and-test/Shared-channels.md)中的应用权限遵循主机团队的应用名册和主机租户的应用策略。
 
 新的自定义“协同模式”场景功能使用户能够在一个位置与其团队进行协作。
 

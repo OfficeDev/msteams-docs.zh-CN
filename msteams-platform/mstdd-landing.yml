@@ -12,17 +12,21 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: c4583dd5452238dd38324fa3f2b7e7b9db7ea1e8
-  ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+  ms.openlocfilehash: cd572905bdaf62ff7843a3b213798ac2783cc5b8
+  ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 07/21/2022
-  ms.locfileid: "66919807"
+  ms.lasthandoff: 07/28/2022
+  ms.locfileid: "67058226"
 landingContent:
-- title: 'Microsoft Build 2022 '
+- title: 浏览最新
   linkLists:
   - linkListType: whats-new
     links:
+    - text: 生成共享通道
+      url: concepts/build-and-test/Shared-channels.md
+    - text: 引入的应用清单 v1.14
+      url: resources/schema/manifest-schema.md
     - text: 与 Live Share SDK 的增强协作 [开发人员预览]
       url: apps-in-teams-meetings/teams-live-share-overview.md
     - text: 更新 Teams 机器人中的对话和安装事件 [开发人员预览版]
@@ -33,8 +37,6 @@ landingContent:
       url: tabs/how-to/using-teams-client-sdk.md
     - text: 适用于 Visual Studio Code 的 Teams 工具包版本 4.0.0 现已正式发布
       url: toolkit/teams-toolkit-fundamentals.md
-    - text: 已引入应用清单版本 1.13
-      url: resources/schema/manifest-schema.md
     - text: GCC 和 GCCH 中的机器人和消息扩展
       url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
 - title: 入门
@@ -95,7 +97,7 @@ landingContent:
       url: https://github.com/OfficeDev/Microsoft-Teams-Samples
   - linkListType: whats-new
     links:
-    - text: 最近更新
+    - text: 新增功能
       url: ../msteams-platform/whats-new.md
 - title: 生成应用功能
   linkLists:

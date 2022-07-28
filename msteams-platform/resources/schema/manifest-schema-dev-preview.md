@@ -4,12 +4,12 @@ description: 了解 Microsoft Teams 支持的所有组件的示例清单文件�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503471"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058205"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams 的公共开发人员预览清单架构
 
@@ -396,7 +396,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`configurationUrl`|字符串|2048 个字符|✔️|配置选项卡时要使用的 https:// URL。|
 |`canUpdateConfiguration`|Boolean|||指示创建后用户是否可以更新选项卡配置的实例的值。默认值：`true`|
 |`scopes`|枚举数组|1|✔️|目前，可配置选项卡仅支持 `team` 和 `groupchat` 范围。 |
-|`context` |枚举数组|6 ||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值：`channelTab`、`privateChatTab`、`meetingChatTab`、`meetingDetailsTab`、`meetingSidePanel` 和 `meetingStage`。|
+|`context` |枚举数组|6||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值：`channelTab`、`privateChatTab`、`meetingChatTab`、`meetingDetailsTab`、`meetingSidePanel` 和 `meetingStage`。|
 |`sharePointPreviewImage`|String|2048||用于 SharePoint 的选项卡预览图像的相对文件路径。大小 1024x768。 |
 |`supportedSharePointHosts`|枚举数组|1||定义如何在 SharePoint 中提供选项卡。选项为 `sharePointFullPage` 和 `sharePointWebPart` |
 
@@ -667,6 +667,17 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 * `privacyUrl`：开发人员隐私策略的 HTTPS URL。
 * `termsOfUseUrl`：开发人员使用条款的 HTTPS URL。
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+**可选** - 数组
+
+在非标准通道中启用应用。 如果你的应用支持团队范围，并且定义了此属性，Teams 会在每个通道类型中相应地启用你的应用。 目前支持专用通道和共享通道类型。
+
+> [!NOTE]
+>
+> * 如果应用支持团队范围，则无论在此属性中定义的值如何，它都会在标准通道中运行。
+> * 应用可以考虑每个通道类型的唯一属性，以便正常运行。 若要为专用通道和共享通道启用选项卡，请参阅 [在专用通道中检索上下文](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) ， [并在共享通道中检索上下文](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)。
+
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
 **可选** - 字符串
@@ -713,6 +724,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`scenes`|对象数组| 5 个项目||会议支持的场景。|
+|`supportsStreaming`|Boolean|||一个值，该值指示应用是否可以将会议的音频和视频内容流式传输到实时会议协议 (RTMP) 终结点。 默认值为 **false**。|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 
