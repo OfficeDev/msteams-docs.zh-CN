@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035175"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058275"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -36,6 +36,9 @@ ms.locfileid: "67035175"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 07/28/2022 | 为会议内通知添加 Teams 显示图片和人员卡片| 为 Teams 会议和通话构建应用>为会议启用和配置应用>[会议内通知](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
+| 07/28/2022 | 在 Teams 中构建共享频道 | 为 Teams 会议和通话构建应用>[共享频道](concepts/build-and-test/Shared-channels.md) |
+| 07/28/2022|引入的应用清单 v1.14| 应用部件清单> [Teams 的应用部件清单架构](resources/schema/manifest-schema.md)|
 | 2022/07/26|建议的机器人操作| “生成机器人”>“机器人对话”>“[机器人对话中的消息](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)”|
 | 07/21/2022 | 引入了发送活动源通知的分步指南 | 设计应用> UI 组件>活动源通知> [发送活动源通知](sbs-graphactivity-feedbroadcast.yml) |
 | 2022/07/08| 用于通过对话和安装更新事件将用户在应用安装期间选择的通道 ID 发送到机器人的更新 |  生成机器人>机器人对话> Teams 机器人中的对话事件> [Teams 机器人中的对话事件](bots/how-to/conversations/subscribe-to-conversation-events.md) |

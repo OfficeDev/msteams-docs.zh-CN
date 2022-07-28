@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: e374e53b7d34837cb0de28d6586b2417f9ae4652
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841895"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058257"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>为会议启用和配置应用
 
@@ -144,6 +144,33 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 会议内通知不得使用任务模块。 不会在会议聊天中调用任务模块。 外部资源 URL 用于显示会议内通知。 可以使用该 `submitTask` 方法在会议聊天中提交数据。
 
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text=" 示例演示如何使用会议内对话框。":::
+
+还可以将用户的 Teams 显示图片和人员卡添加到会议内通知中，具体取决于`onBehalfOf`具有用户 MRI 的令牌以及传入有效负载的显示名称。 下面是一个示例有效负载：
+
+```json
+    {
+       "type": "message",
+       "text": "John Phillips assigned you a weekly todo",
+       "summary": "Don't forget to meet with Marketing next week",
+       "channelData": {
+           onBehalfOf: [
+             { 
+               itemId: 0, 
+               mentionType: 'person', 
+               mri: context.activity.from.id, 
+               displayname: context.activity.from.name 
+             }
+            ],
+           "notification": {
+           "alertInMeeting": true,
+           "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            }
+        },
+       "replyToId": "1493070356924"
+    }
+```
+
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="示例演示如何将 Teams 显示图片和人员卡片与会议内对话框一起使用。" border="true":::
 
 #### <a name="shared-meeting-stage"></a>共享会议演示区域
 

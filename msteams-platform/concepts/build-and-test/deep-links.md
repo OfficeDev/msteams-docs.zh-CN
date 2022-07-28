@@ -3,21 +3,21 @@ title: 创建深层链接
 description: 了解如何创建深层链接，以及如何在 Microsoft Teams 应用中使用和导航它们（带有选项卡）。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: dbb9c7568c955d7c70db978efa30f28025f708e4
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841959"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058219"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
 深层链接是一种导航机制，可用于将用户与 Teams 和 Teams 应用中的信息和功能联系起来。 创建深度链接可能有用的一些方案如下:
 
 * 将用户导航到应用的某个选项卡中的内容。 例如，应用可以有一个自动程序，用于发送通知用户重要活动的消息。 当用户点击通知时，深层链接将导航到选项卡，以便用户可以查看有关活动的更多详细信息。
-* 应用通过预先填充包含所需参数的深层链接，自动执行或简化某些用户任务，例如创建聊天或安排会议。 这样可以避免用户手动输入信息。
+* 应用通过预先填充包含所需参数的深层链接，自动执行或简化某些用户任务，例如创建聊天或安排会议。 避免用户需要手动输入信息。
 
-Microsoft Teams JavaScript 客户端 SDK (TeamsJS) 简化了导航过程。 对于许多方案（例如导航到选项卡中的内容和信息，或者甚至启动聊天对话框），SDK 提供强类型的 API，从而改进体验，并可替换深层链接的使用。 建议将这些 API 用于可能在其他主机 (Outlook，Office) 中运行的 Teams 应用，因为它们还提供了一种方法来检查该主机是否支持正在使用的功能。 以下部分显示有关深层链接的信息，但也强调了过去需要深层链接的方案如何随着 TeamsJS 的 v2 版本而发生更改。
+Microsoft Teams JavaScript 客户端 SDK (TeamsJS) 简化了导航过程。 对于许多方案（例如导航到选项卡中的内容和信息，甚至启动聊天对话框），SDK 提供了类型化 API，这些 API 可改进体验并取代深层链接的使用。 建议将这些 API 用于可能在其他主机 (Outlook，Office) 中运行的 Teams 应用，因为它们还提供了一种方法来检查该主机是否支持正在使用的功能。 以下部分显示有关深层链接的信息，但也强调了过去需要深层链接的方案如何随着 TeamsJS 的 v2 版本而发生更改。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -51,7 +51,7 @@ Microsoft Teams JavaScript 客户端 SDK (TeamsJS) 简化了导航过程。 对�
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-若要实现此操作，请以任何最适合 UI 的方式向每个项目添加“**复制链接**”操作。 当用户执行此操作时，将调用 [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) 以显示包含用户可复制到剪贴板的链接的对话框。 进行此调用时，请为项目传递一个 ID，点击链接并重新加载选项卡时，将在[上下文](~/tabs/how-to/access-teams-context.md)中返回该 ID。
+若要实现，请以最适合 UI 的任何方式向每个项添加 **复制链接** 操作。 当用户执行此操作时，将调用 [pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) 以显示包含用户可复制到剪贴板的链接的对话框。 进行此呼叫时，请传递你的项目的 ID。 当链接被跟踪并重新加载选项卡时，可在 [上下文](~/tabs/how-to/access-teams-context.md) 中将其返回。
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -91,7 +91,7 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>使用选项卡中的深层链接
 
-导航到深层链接时，Microsoft Teams 只需导航到选项卡，并通过 Teams JavaScript 库提供一种机制来检索子页面 ID（如果存在）。
+导航到深层链接时，Microsoft Teams 只需导航到选项卡，并通过 Teams JavaScript 库提供一种机制来检索子页 ID（如果存在）。
 
 如果选项卡通过深层链接导航，则 TeamsJS v1 中的 [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) 调用 (`microsoftTeams.getContext()`) 将返回一个承诺，该承诺将使用包含 `subPageId` 属性 (TeamsJS v1 的 subEntityId) 的上下文进行解析。 有关详细信息，请参阅 [PageInfo 接口](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)。
 
@@ -128,10 +128,10 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 | 参数名称 | 说明 | 示例 |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | Teams 管理中心的 ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | 选项卡中项的 ID，在[配置选项卡](~/tabs/how-to/create-tab-pages/configuration-page.md)时提供。|Tasklist123|
+| `entityId`&emsp; | 选项卡中项的 ID，在 [配置选项卡](~/tabs/how-to/create-tab-pages/configuration-page.md)时提供。生成用于深层链接的 URL 时，继续使用 entityID 作为 URL 中的参数名称。 配置选项卡时，上下文对象将 entityID 引用为 {page.id}。 |Tasklist123|
 | `entityWebUrl` 或 `subEntityWebUrl`&emsp; | 在客户端不支持呈现选项卡时要是用的具有回退 URL 的可选字段。 | `https://tasklist.example.com/123` 或 `https://tasklist.example.com/list123/task456` |
 | `entityLabel` 或 `subEntityLabel`&emsp; | 选项卡中项的标签，显示深层链接时要使用。 | 任务列表 123 或 任务 456 |
-| `context.subEntityId`&emsp; | 选项卡内项的 ID。 |Task456 |
+| `context.subEntityId`&emsp; | 选项卡内项的 ID。为深层链接生成 URL 时，继续使用 subEntityId 作为 URL 中的参数名称。 配置选项卡时，上下文对象将 subEntityID 引用为 subPageID。 |Task456 |
 | `context.channelId`&emsp; | 选项卡 [上下文](~/tabs/how-to/access-teams-context.md) 中提供的 Microsoft Teams 频道 ID。 此属性仅在 **团队** 范围内的可配置选项卡中可用。 它在具有 **个人** 范围的静态选项卡中不可用。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | 可从选项卡 [上下文](~/tabs/how-to/access-teams-context.md) 中获得的用于群组和会议聊天的 ChatId。 | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  聊天是唯一受支持的会议上下文类型 | 聊天 |
@@ -169,7 +169,7 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 
 ## <a name="navigation-from-your-tab"></a>从选项卡导航
 
-可以使用 TeamsJS 或深层链接从选项卡导航到 Teams 中的内容。 如果选项卡需要将用户与 Teams 中的其他内容（例如频道、消息、另一个选项卡，甚至打开计划对话框）连接起来，这将非常有用。 以前，导航可能需要一个深层链接，但现在可以在许多实例中使用 SDK 来完成。 以下部分显示了这两种方法，但建议在可能的情况下使用 SDK 的强类型功能。
+可以使用 TeamsJS 或深层链接从选项卡导航到 Teams 中的内容。 如果选项卡需要将用户与 Teams 中的其他内容（例如频道、消息、另一个选项卡，甚至打开计划对话框）连接起来，这将非常有用。 以前，导航可能需要一个深层链接，但现在可以在许多实例中使用 SDK 来完成。 以下部分显示了这两种方法，但建议在可能的情况下使用 SDK 的类型化功能。
 
 使用 TeamsJS 的好处之一，尤其是对于可能在其他主机 (Outlook 和 Office) 中运行的 Teams 应用，可以检查主机是否支持你尝试使用的功能。 若要检查主机对功能的支持，可以使用与 API 命名空间关联的 `isSupported()` 函数。 TeamsJS SDK 通过命名空间将 API 组织为功能。 例如，在命名空间 `pages` 中使用 API 之前，可以检查从 `pages.isSupported()` 返回的布尔值，并在应用和应用 UI 的上下文中执行相应操作。  
 
@@ -243,7 +243,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>生成计划对话框的深层链接
 
-虽然建议使用 TeamsJS 的强类型 API，但可以手动创建指向 Teams 内置计划对话框的深层链接。 将以下格式用于可以在机器人、连接器或消息扩展卡片中使用的深层链接：`https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+虽然建议使用 TeamsJS 的类型化 API，但可以手动创建指向 Teams 内置计划对话框的深层链接。 将以下格式用于可以在机器人、连接器或消息扩展卡片中使用的深层链接：`https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 例如：`https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -307,7 +307,7 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-虽然建议使用强类型 API，但也可以将以下格式用于手动创建的深层链接，该链接可以在机器人、连接器或消息扩展卡片中使用：
+虽然建议使用类型化 API，但也可以对手动创建的深层链接使用以下格式，以便在机器人、连接器或消息扩展卡中使用：
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -316,7 +316,7 @@ else { /* handle case where capability isn't supported */ }
 查询参数为：
 
 * `users`：表示聊天参与者的用户 ID 的逗号分隔列表。 执行操作的用户始终作为参与者被包括在内。 目前，“用户 ID”字段支持 Microsoft Azure Active Directory (Azure AD) UserPrincipalName，例如仅支持电子邮件地址。
-* `topicName`：与三个或更多用户聊天时，聊天显示名称的可选字段。 如果未指定此字段，则聊天的显示名称基于参与者的姓名。
+* `topicName`：聊天的显示名称的可选字段（如果聊天有三个或更多用户）。 如果未指定此字段，则聊天的显示名称基于参与者的姓名。
 * `message`：要在聊天处于草稿状态时插入当前用户撰写框的消息文本的可选字段。
 
 若要将此深层链接与机器人配合使用，请在卡的按钮中将此项指定为 URL 目标，或通过 `openUrl` 操作类型点击操作。
@@ -334,7 +334,7 @@ else { /* handle case where capability isn't supported */ }
 * `channelId`：会话的频道 ID。 例如，`19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2`。
 * `tenantId`：租户 ID，如 `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`。
 * `groupId`：文件的组 ID。 例如，`3606f714-ec2e-41b3-9ad1-6afb331bd35d`。
-* `parentMessageId`：会话的父消息 ID。
+* `parentMessageId`： 会话的父消息 ID。
 * `teamName`：团队名称。
 * `channelName`：团队频道的名称。
 
@@ -408,7 +408,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="navigate-to-an-audio-or-audio-video-call"></a>导航到音频或音频视频聊天
 
-通过指定通话类型和参与者，可以向单个用户或一组用户调用仅音频或音频视频聊天。 在进行呼叫之前，Teams 客户端会提示确认以进行呼叫。 对于群组调用，可以在同一深层链接调用中调用一组 VoIP 用户和一组 PSTN 用户。
+通过指定通话类型和参与者，可以向单个用户或一组用户调用仅音频或音频视频聊天。 在进行呼叫之前，Teams 客户端会提示确认以进行呼叫。 如果有群组呼叫，可以在同一深层链接调用中调用一组 VoIP 用户和一组 PSTN 用户。
 
 在视频通话时，客户端将请求确认并打开呼叫方的通话视频。 呼叫接收方可以选择通过 Teams 呼叫通知窗口通过仅音频或音频和视频进行响应。
 
@@ -430,7 +430,7 @@ else { /* handle case where capability isn't supported */ }
 
 #### <a name="generate-a-deep-link-to-a-call"></a>生成呼叫的深层链接
 
-虽然建议使用 TeamsJS 的强类型 API，但也可以使用手动创建的深层链接来启动调用。
+虽然建议使用 TeamsJS 的类型化 API，但也可以使用手动创建的深层链接来启动呼叫。
 
 | 深度链接 | 格式 | 示例 |
 |-----------|--------|---------|
