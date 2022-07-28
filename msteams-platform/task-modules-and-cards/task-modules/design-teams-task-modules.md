@@ -5,12 +5,12 @@ description: 在本模块中，了解如何设计 Teams 应用的任务模块并
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 07dd0457d49b167226da2fa10e91d87e6f674b6f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558112"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035266"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计任务模块
 
@@ -64,7 +64,7 @@ ms.locfileid: "66558112"
 |3|**标题**: 让标题清晰简洁。 描述希望用户完成的任务。
 |4|**关闭按钮**: 关闭任务模块。 不应应用内容中未保存的更改。|
 |5|**iframe**: 托管应用内容的响应空间。|
-|6 |**操作(可选)**: 与应用内容相关的按钮。|
+|6|**操作(可选)**: 与应用内容相关的按钮。|
 
 ## <a name="designing-with-ui-templates"></a>使用 UI 模板进行设计
 

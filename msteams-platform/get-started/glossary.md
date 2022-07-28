@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的术语
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5a8979e9f49fa73430ea9c1d547f462fe8d4e65
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 251adf781689d3633bd9e332d9c40df73aae264f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737382"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035154"
 ---
 # <a name="glossary"></a>术语表
 
@@ -49,7 +49,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [调用机器人](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | 参与音频或视频通话和联机会议的机器人。 <br> **另请参阅**：[聊天机器人](#c)；[会议机器人](#m) |
 | [功能](../toolkit/add-capability.md) | 可在应用中构建，以便与应用用户进行交互的 Teams 功能。 应用功能用于扩展 Teams 以满足应用需求。 应用可能具有一个或多个核心功能，例如选项卡、机器人和邮件扩展。 <br>**另请参阅**：[设备功能](#d)；[媒体功能](#m) |
-| [聊天机器人](../bots/how-to/conversations/conversation-basics.md) | 机器人也称为聊天机器人或对话机器人。 它是一个应用，可由客户服务或支持人员等用户运行简单且重复的任务。 <br> **另请参阅**：[对话机器人](#c) |
+| [聊天机器人](../bots/how-to/conversations/conversation-basics.md) | 机器人也称为聊天机器人或对话机器人。 它是一个应用，可为客户服务或支持人员等用户运行简单且重复的任务。 <br> **另请参阅**：[对话机器人](#c) |
 | 频道 | 团队共享消息、工具和文件的单个位置。 可以使用频道进行团队合作和沟通。 <br>**另请参阅**：[对话](#c) |
 | [客户端密码](../bots/how-to/authentication/add-authentication.md) | 客户端机密/密码或作为证书的公钥或私钥对。 本机应用不需要它。 <br> **另请参阅**：[机器人](#b) |
 | [云资源](../toolkit/add-resource.md) | 通过 Internet 在云上提供的服务，Teams 应用可以使用该服务。 它可以是存储帐户、Web 应用、数据库等。 |
@@ -71,7 +71,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [设备功能](../concepts/device-capabilities/device-capabilities-overview.md) | 内置设备，如移动设备或桌面设备中的相机、麦克风、条形码扫描程序、照片库。 可以通过 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 在移动设备或桌面设备上访问以下设备功能。 <br>**另请参阅**：[功能](#c)；[媒体功能](#m)；[位置功能](#l) |
 | [设备权限](../concepts/device-capabilities/browser-device-permissions.md) | 可在应用中配置的 Teams 应用设置。 可用于请求应用访问权限和利用本机设备功能的权限。 可以在 Teams 设置中管理设备权限。 <br>**另请参阅**：[应用权限](#a) |
 | [开发环境](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Teams 工具包默认创建的开发环境类型。 它表示远程或云环境配置。 一个项目可以有多个远程环境。 可以使用 Teams 工具包向项目添加更多开发环境。 <br>**另请参阅** [环境](#e)；[本地环境](#l) |
-| [DevTools](../tabs/how-to/developer-tools.md) | 浏览器的 Devtools 用于查看控制台日志、查看或修改运行时网络请求、将断点添加到代码 (JavaScript)，以及对 Teams 应用执行交互式调试。 该功能仅在启用开发人员预览版后才适用于桌面和 Android 客户端。 |
+| [DevTools](../tabs/how-to/developer-tools.md) | 浏览器的 DevTools 用于查看控制台日志、查看或修改运行时网络请求、将断点添加到代码 (JavaScript)，以及对 Teams 应用执行交互式调试。 该功能仅在启用开发人员预览版后才适用于桌面和 Android 客户端。 |
 | [动态搜索](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | 一种适用于自适应卡片的搜索功能，对于从大型数据集中搜索和选择数据非常有用。 它有助于在用户输入搜索字符串时筛选出选项。 <br>**另请参阅**：[静态搜索](#s) |
 
 ## <a name="e"></a>E
@@ -181,7 +181,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [Tab](../tabs/what-are-tabs.md) | 选项卡是 Microsoft Teams 中嵌入的 Teams 感知网页，指向在清单中声明的域。 可将其添加到团队、群组聊天或个人应用中。 |
 | [选项卡聊天](../tabs/how-to/conversational-tabs.md) | 一种选项卡类型，允许用户在动态选项卡中获得重点对话体验。 |
-| [任务模块](../task-modules-and-cards/what-are-task-modules.md) | Teams 应用的一项功能，用于创建用于完成任务、显示视频或仪表板的模式弹出窗口。 |
+| [任务模块](../task-modules-and-cards/what-are-task-modules.md) | Teams 应用的一项功能，可创建用于完成任务、显示视频或仪表板的模式弹出窗口。 |
 | [线程讨论](../tabs/design/tabs.md#thread-discussion) | 在频道上发布的对话或用户之间的聊天。 <br>**另请参阅**：[对话](#c)；[频道](#c) |
 | [Teams](../overview.md) | Microsoft Teams 是组织提供的终极消息应用。它是用于实时协作和通信、会议、文件和应用共享的工作区。 |
 | [Teams 工具包](../toolkit/teams-toolkit-fundamentals.md) | 借助 Microsoft Teams 工具包，可以直接在 Visual Studio Code 环境中创建自定义 Teams 应用程序。  |
