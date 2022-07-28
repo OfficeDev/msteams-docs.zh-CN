@@ -5,28 +5,28 @@ description: 与共享通道协作。
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 044a5189a626acfcb26631d7d8ee843264401dfe
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 96cd3014fa1cee38832724e1b50cf29db372d711
+ms.sourcegitcommit: d40ea0d504db66d49bbe0955f7031db1cd210056
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058286"
+ms.locfileid: "67060039"
 ---
 # <a name="shared-channels"></a>共享频道
 
-Teams 中的共享频道允许频道成员与其他 Teams 和组织中的用户协作。 可以使用以下方式创建和共享共享通道：
+Microsoft Teams 中的共享频道允许频道成员与其他 Teams 和组织中的用户协作。 可以使用以下方式创建和共享共享通道：
 
 * 同一组织中另一个团队的成员。
 * 同一组织内的个人。
 * 其他组织的个人和其他 Teams。
 
-共享通道可无缝地促进协作。 允许组织外部的外部用户与 Teams 中的内部用户协作，而无需更改其用户上下文。 与使用来宾帐户不同，增强用户体验，例如，成员必须注销 Teams 并使用来宾帐户再次登录。 Teams 应用程序现在可以扩展强大的协作空间。
+共享通道可无缝地促进协作。 允许组织外部用户与 Teams 中的内部用户协作，而无需更改其用户上下文。 与使用来宾帐户不同，增强用户体验，例如，成员必须注销 Teams 并使用来宾帐户再次登录。 Teams 应用程序现在可以扩展强大的协作空间。
 
 :::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="共享通道映像"border="true" :::
 
 ## <a name="manifest-update-in-shared-channels"></a>共享通道中的清单更新
 
-在共享通道中加载内容 UX 时，使用从 `getContext` 调用收到的数据进行共享通道更改。 `getContext`调用会发布两个新属性，`hostTeamGroupID`用于`hostTenantID`从 Microsoft 图形 API 检索频道成员身份。 `hostTeam` 是创建共享通道的团队。
+在共享通道中加载内容 UX 时，使用从 `getContext` 调用收到的数据进行共享通道更改。 `getContext` 调用会发布两个新属性， `hostTeamGroupID` 用于 `hostTenantID`使用 Microsoft Graph API 检索频道成员身份。 `hostTeam` 是创建共享通道的团队。
 
 SupportedChannelTypes 是一个可选属性，可在非标准通道中启用应用。 如果你的应用支持团队范围并定义了属性，Teams 将相应地在每个通道类型中启用你的应用。 目前支持专用频道和共享频道。 有关详细信息，请参阅 [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes)
 
@@ -46,7 +46,7 @@ SupportedChannelTypes 是一个可选属性，可在非标准通道中启用应�
 
 > [!NOTE]
 >
-> * 如果应用支持团队范围，它将始终在标准通道中运行，而不考虑在此属性中定义了哪些值。
+> * 如果应用支持团队范围，它将在标准通道中运行，而不考虑在此属性中定义了哪些值。
 > * 应用可能需要考虑这些通道类型的唯一属性才能正常运行。
 
 有关启用选项卡的详细信息，请参阅：
