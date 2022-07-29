@@ -307,6 +307,8 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: 会议应用 API 参考
       href: apps-in-teams-meetings/API-references.md
+    - name: 生成共享频道
+      href: concepts/build-and-test/Shared-channels.md
     - name: 通过 Live Share 增强协作
       items:
         - name: 概述
