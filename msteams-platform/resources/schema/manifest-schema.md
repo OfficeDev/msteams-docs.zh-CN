@@ -3,16 +3,16 @@ title: 清单架构参考
 description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895494"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058212"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
-Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 应用清单必须符合托管在 [`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) 的架构。 支持每个以前的版本 1.0、1.1...1.12 和当前 1.13 版本（请参阅下面的备注）（在 URL 中使用“v1.x”）。
+Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 应用清单必须符合托管在 [`https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json) 的架构。 以前的版本 1.0、1.1、...、1.13 和当前版本 1.14 均受支持（在 URL 中使用“v1.x”）。
 有关每个版本中所做的更改的详细信息，请参阅[管理更改日志](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
 
 根据不同的应用方案，下表列出了 TeamsJS 版本和应用清单版本：
@@ -25,8 +25,8 @@ Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产�
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.13",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -777,9 +777,20 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 * `privacyUrl`：开发人员隐私策略的 HTTPS URL。
 * `termsOfUseUrl`：开发人员使用条款的 HTTPS URL。
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+**可选** - 数组
+
+在非标准频道中启用应用。 如果应用支持团队范围，并且定义了此属性，Teams 会在每个频道类型中相应地启用应用。 当前支持专用频道和共享频道类型。
+
+> [!NOTE]
+>
+> * 如果应用支持团队范围，则无论在此属性中定义的值如何，它都会在标准频道中运行。
+> * 应用可以考虑每个频道类型的唯一属性，以便正常运行。 若要为专用频道和共享频道启用选项卡，请参阅 [在专用频道中检索上下文](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)和[在共享频道中检索上下文](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)。
+
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
-**可选**— 布尔值
+**可选** - 布尔值
 
 当 `defaultBlockUntilAdminAction` 属性设置为 **true** 时，应用默认向用户隐藏，直到管理员允许它。 如果设置为 **true，** 则应用将隐藏所有租户和最终用户。 租户管理员可以在管理中心内Teams应用，并采取措施以允许或阻止该应用。 默认值为 **false**。 有关默认应用块详细信息，请参阅隐藏[Teams应用，直到管理员批准](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
 
@@ -810,6 +821,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`scenes`|对象数组| 5 个项目||会议支持的场景。|
+|`supportsStreaming`|Boolean|||指示应用是否可以将会议的音频和视频内容流式传输到实时会议协议 (RTMP) 终结点的值。 默认值为 **false**。|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 
