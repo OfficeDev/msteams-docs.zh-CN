@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 11893cb2db927935d399d83794b7680560adcc7d
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4641d19a6df93cf4dc575653bde0318f429ca551
+ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485732"
+ms.lasthandoff: 08/02/2022
+ms.locfileid: "67158064"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -146,7 +146,7 @@ ms.locfileid: "66485732"
 
       1. 在应用清单文件中以 `publisherId.offerId` 格式正确提及了 `subscriptionOffer` 详细信息。
 
-      1. 必须确保链接的 SaaS 产品/服务旨在支持在已命名的[每用户模型](/azure/marketplace/create-new-saas-offer-plans)上分配的许可证。 目前不接受将支持其他定价模型（如统一费率）的链接 SaaS 产品/服务发布到 Teams 应用商店。
+      1. 必须确保链接的 SaaS 产品/服务旨在支持 [SaaS 定价模型](/azure/marketplace/create-new-saas-offer-plans)上分配的许可证。
 
       1. 包括测试说明或设置说明，或演示视频的链接，其中详细介绍了应用功能和支持的场景以及任何其他信息，以便我们的测试人员能够轻松了解你的 SaaS 门户工作流。
 
