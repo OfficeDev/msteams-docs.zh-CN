@@ -1,38 +1,35 @@
 ---
 title: 从个人应用或选项卡共享到 Teams
-description: 了解如何在个人应用或选项卡、限制和最终用户体验上启用“共享以Teams”按钮。
+description: 了解如何在个人应用或选项卡、限制和最终用户体验上启用“共享到 Teams”按钮。
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123932"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232195"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>从个人应用或选项卡共享到 Teams
 
-> [!NOTE]
-> 共享到Teams目前仅在[公共开发人员预览](../../resources/dev-preview/developer-preview-intro.md)版中可用。
+共享到 Teams 允许用户将内容从个人应用或选项卡共享到 Teams 中的其他用户、组或频道。 用户可以选择“共享到 Teams”以在弹出窗口中启动“共享到 Teams”体验。 弹出窗口允许用户添加其他用户、组或频道来共享内容。
 
-共享到Teams允许用户将内容从个人应用或选项卡共享到Teams中的其他用户或组或频道。 用户可以选择“共享Teams以启动”共享“以在弹出窗口中Teams体验。 弹出窗口允许用户添加其他用户、组或频道来共享内容。
-
-下图显示了“共享到Teams弹出窗口：
+下图显示了“共享到 Teams”弹出窗口：
 
 :::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="share-to-teams-pop-up":::
 
-## <a name="enable-share-to-teams-button"></a>“启用共享以Teams”按钮
+## <a name="enable-share-to-teams-button"></a>“启用共享到 Teams”按钮
 
 > [!NOTE]
-> 确保[已Microsoft Teams JavaScript 客户端 SDK](../../tabs/how-to/using-teams-client-sdk.md) 或 [Microsoft Teams JavaScript 客户端 SDK v2 预览](../../tabs/how-to/using-teams-client-sdk.md) (或更高版本) `@microsoft/teams-js@1.11.0-beta.7`，以使共享能够为个人应用或选项卡Teams。
+> 确保拥有 [Microsoft Teams JavaScript 客户端 SDK](../../tabs/how-to/using-teams-client-sdk.md) 或 [Microsoft Teams JavaScript 客户端 SDK v2 预览](../../tabs/how-to/using-teams-client-sdk.md) 版 (或更高版本) `@microsoft/teams-js@1.11.0-beta.7` 为个人应用或选项卡启用“共享到 Teams”。
 
-若要启用 Share 以Teams：
+若要启用“共享到 Teams”，请执行以下操作：
 
 1. 使用 **Teams Javascript 客户端 SDK** 创建个人应用或选项卡。
 
-2. 创建 **“共享到Teams**”按钮。
+2. 创建 **“共享到 Teams”** 按钮。
 
-3. 在“共享到Teams”按钮上，使用内容有效负载调`microsoftTeams.sharing.shareWebContent`用。
+3. 在“共享到 Teams”按钮上，使用内容有效负载调用 `microsoftTeams.sharing.shareWebContent` 。
 
 以下示例说明如何创建内容有效负载：
 
@@ -58,7 +55,7 @@ microsoftTeams.sharing.shareWebContent({
 |`message`| 要在撰写框中加载的默认消息 |
 | `preview` | 设置为 `true` 启用 URL 预览 |
 
-下图显示了“共享到Teams”选项：
+下图显示了“共享到 Teams”选项：
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="“共享到团队”按钮":::
 
@@ -85,16 +82,16 @@ microsoftTeams.sharing.shareWebContent({
 
 ## <a name="limitations"></a>限制
 
-将“共享”添加到Teams按钮的限制：
+将“共享”添加到 Teams 按钮的限制：
 
-* 可以在Teams内运行的应用中托管或嵌入“共享到Teams”按钮。
-* 可以使用 **Teams Javascript 客户端 SDK** 将“共享”添加到Teams按钮到创建的应用。
+* 可以在 Teams 内部运行的应用中托管或嵌入“共享到 Teams”按钮。
+* 可以使用 **Teams Javascript 客户端 SDK** 将“共享”按钮添加到创建的应用。
 
-## <a name="end-user-share-to-teams-experience"></a>最终用户共享到Teams体验
+## <a name="end-user-share-to-teams-experience"></a>最终用户共享到 Teams 体验
 
 在个人应用或选项卡上启用“共享到团队”按钮后，可以共享内容。 若要访问，请执行以下步骤：
 
-1. 打开个人应用或选项卡，然后选择 **“共享”以Teams**。
+1. 打开个人应用或选项卡，然后选择 **“共享到 Teams**”。
 
     :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="“共享到团队”按钮":::
 

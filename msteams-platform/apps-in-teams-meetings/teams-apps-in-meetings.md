@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 5dc0793ee899d5423b81af6e07083fd03c8e5621
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 30f5929524e9ae7391fef556d353be6d2461c987
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058247"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232251"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams 会议和呼叫的应用
 
@@ -48,13 +48,11 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 
 本文概述了 Teams 中的会议应用扩展性、API 参考、为会议启用和配置应用以及自定义“在一起”模式场景。
 
-通过使用会议扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，你可以在其中集成选项卡、机器人和消息扩展。 可以识别各种参与者角色和用户类型、获取会议事件并生成会议内对话框。
-
-若要使用会议应用自定义 Teams，请通过更新应用清单并配置用于会议方案的应用来为 Teams 会议启用应用。
-
-如果应用共享重要信息，请自定义共享通道中外部成员的应用权限。 [共享频道](../concepts/build-and-test/Shared-channels.md)中的应用权限遵循主机团队的应用名册和主机租户的应用策略。
-
-新的自定义“协同模式”场景功能使用户能够在一个位置与其团队进行协作。
+- **扩展会议应用**：使用会议扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，你可以在其中集成选项卡、机器人和消息扩展。 可以识别各种参与者角色和用户类型、获取会议事件并生成会议内对话框。
+- **为会议配置应用**：若要使用会议应用自定义 Teams，请通过更新应用清单为 Teams 会议启用应用，同时为会议方案配置应用。
+- **使用“一起模式”场景进行自定义**：新的自定义“一起模式”场景功能使用户能够在一个位置与其团队的会议中进行协作。
+- **在共享通道中自定义应用权限：如果应用在共享通道中共享重要信息，则可以自定义外部成员的应用权限。 [共享频道](../concepts/build-and-test/Shared-channels.md)中的应用权限遵循主机团队的应用名册和主机租户的应用策略。
+- **检索会议脚本**：可以在会后方案中访问和检索会议脚本。 将应用配置为自动获取计划会议的脚本，并将其用于见解、智能分析等。
 
 ## <a name="next-step"></a>后续步骤
 

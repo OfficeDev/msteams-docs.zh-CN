@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 02d89b8933f09e298c158afe835f5aacce137365
+ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058275"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67178623"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -261,6 +261,7 @@ ms.locfileid: "67058275"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+|08/02/2022| Teams 协作控制| 与 Teams > [协作控件集成](samples/collaboration-control.md)|
 | 2022/06/30 | 用于即时会议、一对一和群组通话的应用| 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 06/16/2022 | 将展开共享链接到 Web 应用中的团队| 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 |2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 | 构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |

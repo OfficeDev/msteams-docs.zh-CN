@@ -3,12 +3,12 @@ title: 从 Web 应用共享到 Teams
 description: 使用代码示例，了解如何通过网站预览将“共享到 Teams”嵌入式按钮添加到网站上。
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1d7b9b6ae80b224e67f24a589fae5e6af7e7f839
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035315"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232335"
 ---
 # <a name="share-to-teams-from-web-apps"></a>从 Web 应用共享到 Teams
 
@@ -28,9 +28,6 @@ ms.locfileid: "67035315"
 下图显示通过“共享到 Teams”按钮展开体验的链接：
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="“共享到 Teams”链接展开":::
-
-> [!NOTE]
-> 将共享展开链接到 Teams 目前仅在公共开发人员预览版中可用。
 
 本文介绍如何为网站创建和嵌入“共享到 Teams”按钮、制作网站预览版，以及如何将“共享”扩展到Teams 教育版。
 

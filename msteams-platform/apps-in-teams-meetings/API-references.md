@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919758"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232258"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -37,6 +37,8 @@ ms.locfileid: "66919758"
 |[**获取应用内容演示区域共享状态**](#get-app-content-stage-sharing-state-api)| 获取会议演示区域应用共享状态的信息。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**获取应用内容演示区域共享功能**](#get-app-content-stage-sharing-capabilities-api)| 获取应用共享到会议演示区域的功能。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**获取实时 Teams 会议事件**](#get-real-time-teams-meeting-events-api)|获取实时会议事件，例如实际开始时间和结束时间。| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+| [**获取传入音频扬声器**](#get-incoming-audio-speaker) | 允许应用获取会议用户的传入音频扬声器设置。| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**切换传入音频**](#toggle-incoming-audio) | 允许应用将会议用户的传入音频扬声器设置从静音切换到取消静音，反之亦然。| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>获取用户上下文 API
 
@@ -144,8 +146,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | 用户的邮件 ID。 |
 | **user.userPrincipalName** | 用户的 UPN。 |
 | **user.tenantId** | Azure Active Directory 租户 ID。 |
-| **user.userRole** | 用户的角色，即“admin”或“user”。 |
-| **meeting.role** | 参与者在会议中的角色。 即“组织者”或“演示者”或“与会者”。 |
+| **user.userRole** | 用户的角色。 例如，“admin”或“user”。 |
+| **meeting.role** | 参与者在会议中的角色。 例如，“组织者”或“演示者”或“与会者”。 |
 | **meeting.inMeeting** | 指示参与者是否在会议中的值。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
@@ -174,7 +176,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ### <a name="query-parameter"></a>查询参数
 
-下表列出了查询参数：
+下表包含查询参数：
 
 |值|类型|必需|说明|
 |---|---|----|---|
@@ -501,7 +503,7 @@ GET /v1/meetings/{meetingId}
 | **details.scheduledEndTime** | 会议的预定结束时间，以 UTC 表示。 |
 | **details.joinUrl** | 用于加入会议的 URL。 |
 | **details.title** | 会议标题。 |
-| **details.type** | 会议的类型 - 例如 GroupCall、OneToOneCall、Adhoc、Broadcast、MeetNow、Recurring、Scheduled、Unknown。 |
+| **details.type** | 会议的类型 (GroupCall、OneToOneCall、Adhoc、Broadcast、MeetNow、Recurring、Scheduled 或 Unknown) 。 |
 | **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
 | **conversation.conversationType** | 会话类型。 |
 | **conversation.id** | 会议聊天 ID。 |
@@ -634,7 +636,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 
 ### <a name="query-parameter"></a>查询参数
 
-下表列出了查询参数：
+下表包含查询参数：
 
 |值|类型|必需|说明|
 |---|---|----|---|
@@ -674,7 +676,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
 
 ### <a name="query-parameter"></a>查询参数
 
-下表列出了查询参数：
+下表包含查询参数：
 
 |值|类型|必需|说明|
 |---|---|----|---|
@@ -924,11 +926,89 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **channelData.meeting.id** | 与会议关联的默认 ID。 |
 | **价值。MeetingType** | 会议的类型。 |
 | **价值。标题** | 会议的主题。 |
-| **价值。Id** | 与会议关联的默认 ID。 |
+| **价值。ID** | 与会议关联的默认 ID。 |
 | **价值。JoinUrl** | 会议的加入 URL。 |
 | **价值。StartTime** | 会议开始时间（UTC）。 |
 | **价值。EndTime** | UTC 中的会议结束时间。 |
 | **locale**| 客户端设置的消息的区域设置。 |
+
+## <a name="get-incoming-audio-speaker"></a>获取传入音频扬声器
+
+API `getIncomingClientAudioState` 允许应用获取会议用户的传入音频扬声器设置。 可通过 Teams 客户端 SDK 获取 API。
+
+> [!NOTE]
+> 移动 `getIncomingClientAudioState` 版 API 目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+
+### <a name="query-parameter"></a>查询参数
+
+下表包含查询参数：
+
+|值|类型|必需|说明|
+|---|---|----|---|
+|**callback**| 字符串 | 是 | 回调包含两个参数 `error` 和 `result`。 *该错误* 可能包含错误类型`SdkError`或`null`音频提取成功时。 当音频提取成功时 *，结果* 可以包含 true 或 false 值，或者在音频提取失败时为 null。 如果结果为 true，则传入音频将静音，如果结果为 false，则取消删除。 |
+
+### <a name="example"></a>示例
+
+```typescript
+function getIncomingClientAudioState(
+    callback: (error: SdkError | null, result: boolean | null) => void,
+  ): void {
+    if (!callback) {
+      throw new Error('[get incoming client audio state] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('getIncomingClientAudioState', callback);
+  }
+
+```
+
+### <a name="response-codes"></a>响应代码
+
+下表列出了响应代码：
+
+|响应代码|说明|
+|---|---|
+| **500** | 内部错误。 |
+| **501** | 当前上下文不支持 API。|
+| **1000** | 应用没有允许共享登台的适当权限。|
+
+## <a name="toggle-incoming-audio"></a>切换传入音频
+
+API `toggleIncomingClientAudio` 允许应用将会议用户的传入音频扬声器设置从静音切换到取消静音，反之亦然。 可通过 Teams 客户端 SDK 获取 API。
+
+> [!NOTE]
+> 移动 `toggleIncomingClientAudio` 版 API 目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+
+### <a name="query-parameter"></a>查询参数
+
+下表包含查询参数：
+
+|值|类型|必需|说明|
+|---|---|----|---|
+|**callback**| 字符串 | 是 | 回调包含两个参数 `error` 和 `result`。 *该错误* 可以包含错误类型`SdkError`或`null`切换成功时。 当切换成功或切换失败时为 null 时， *结果* 可以包含 true 或 false 值。 如果结果为 true，则传入音频将静音，如果结果为 false，则取消删除。 |
+
+### <a name="example"></a>示例
+
+```typescript
+function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
+    if (!callback) {
+      throw new Error('[toggle incoming client audio] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('toggleIncomingClientAudio', callback);
+  }
+
+```
+
+### <a name="response-code"></a>响应代码
+
+下表列出了响应代码：
+
+|响应代码|说明|
+|---|---|
+| **500** | 内部错误。 |
+| **501** | 当前上下文不支持 API。|
+| **1000** | 应用没有允许共享登台的适当权限。|
 
 ## <a name="code-sample"></a>代码示例
 
