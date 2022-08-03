@@ -561,6 +561,44 @@
           href: samples/teams-low-code-solutions.md
         - name: 添加 Power Virtual Agent 聊天机器人
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+    - name: 协作控件
+      items:
+        - name: 概述
+          href: samples/collaboration-control.md
+        - name: 安装协作控件
+          href: samples/install-collaboration-control.md
+        - name: 使用协作控件创建应用
+          href: samples/app-with-collaboration-controls.md
+        - name: 使用协作控件将应用部署到 Teams
+          href: samples/deploy-collaboration-control-in-teams.md
+        - name: 协作控件应用的可选配置
+          items:
+            - name: Power Automate
+              href: samples/collaboration-control-power-automate.md
+            - name: 为外部客户端配置任务
+              href: samples/configure-tasks.md
+            - name: 用于任务、会议和文件的虚拟表
+              items:
+                - name: 概述
+                  href: samples/virtual-tables-for-tasks.md
+                - name: 虚拟表 Web API
+                  href: samples/virtual-tables-api.md
+                - name: 虚拟表实体引用
+                  href: samples/virtual-table-entity-references.md
+        - name: 协作控件和设置 API
+          items:
+            - name: 概述
+              href: samples/collaboration-api-reference.md
+            - name: 协作 - 自定义 API
+              href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+            - name: 协作 - 标准 OData API
+              href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+            - name: 设置 - 自定义 API
+              href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+            - name: 设置 - 标准 OData API
+              href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+        - name: 协作控件的限制
+          href: samples/collaboration-controls-limitations.md
     - name: Microsoft Teams 的应用模板
       href: samples/app-templates.md
     - name: 生产准备就绪的排班连接器
