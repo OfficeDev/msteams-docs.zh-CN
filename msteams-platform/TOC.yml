@@ -138,10 +138,14 @@
       href: toolkit/visual-studio-overview.md
     - name: Teams 中的 Yeoman 生成器 (GitHub)
       href: 'https://github.com/pnp/generator-teams'
-    - name: 开发人员门户
+    - name: Teams 开发人员门户
       items:
-        - name: Teams 开发人员门户
+        - name: 概述
           href: concepts/build-and-test/teams-developer-portal.md
+        - name: 在开发人员门户中管理应用
+          href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
+        - name: 在开发人员门户中分析应用使用情况
+          href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
         - name: 应用程序 Studio
           href: concepts/build-and-test/app-studio-overview.md
     - name: 团队 JavaScript 客户端 SDK
@@ -309,6 +313,14 @@
       href: apps-in-teams-meetings/API-references.md
     - name: 生成共享频道
       href: concepts/build-and-test/Shared-channels.md
+    - name: 使用图形 API 获取会议脚本
+      items:
+        - name: 概述
+          href: graph-api/meeting-transcripts/overview-transcripts.md
+        - name: 提取会议 ID 和组织者 ID
+          href: graph-api/meeting-transcripts/fetch-id.md
+        - name: 获取脚本
+          href: /graph/api/resources/calltranscript
     - name: 通过 Live Share 增强协作
       items:
         - name: 概述
