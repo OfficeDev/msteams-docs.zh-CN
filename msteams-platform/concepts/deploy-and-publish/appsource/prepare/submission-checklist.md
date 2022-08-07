@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: d37acc71ade61f23bbca32257ef7b30578948bcc
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 32aa12e69d32c8b50a05df994021fb9dfcc248b1
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737403"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264160"
 ---
 # <a name="prepare-your-teams-store-submission"></a>准备 Teams 应用商店提交
 
@@ -29,7 +29,7 @@ ms.locfileid: "66737403"
 虽然应用可能在测试环境中工作，但应检查应用包以避免在提交过程中遇到问题。
 
 > [!WARNING]
-> 如果一直在使用 App Studio，我们建议你试用 [开发人员门户](https://dev.teams.microsoft.com/) 来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 8 月 1 日弃用。
+> 如果一直在使用 App Studio，我们建议你试用 [开发人员门户](https://dev.teams.microsoft.com/) 来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
 
 Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具将根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
