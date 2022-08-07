@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Microsoft Teams 中使用应用�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dda990bcde10b6ff644bc034e91b838c681b842f
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 2769dc4d76f6b417f3264dd321b0d5c5e794c9f8
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035287"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264181"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -87,7 +87,7 @@ ms.locfileid: "67035287"
 可以使用 **App Studio** 或 **开发人员门户** 创建操作命令。
 
 > [!WARNING]
- > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 8 月 1 日弃用。
+ > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 

@@ -4,12 +4,12 @@ description: 在本模块中，了解如何使用Microsoft Bot Framework创建�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 0f53f26c8cb54c1d21cbe305d3ea1d433bfb864b
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737410"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264167"
 ---
 # <a name="create-a-bot"></a>创建机器人
 
@@ -44,15 +44,15 @@ ms.locfileid: "66737410"
 >
 > * 在 Azure 中注册的自动程序的 Microsoft Teams 频道是免费的。 通过 Teams 通道发送的消息不会计入机器人使用的邮件。
 > * 虽然无需使用 Azure 即可 [创建新的 Bot Framework 机器人](https://dev.botframework.com/bots/new) ，但必须使用 [创建新的 Bot Framework 机器人](https://dev.botframework.com/bots/new)，该机器人不再在 Bot Framework 门户中公开。
-> * 在 Bot Framework 中编辑机器人列表中现有[机器人的](https://dev.botframework.com/bots)属性（例如其“消息传送终结点”）时很常见，尤其是在使用 [ngrok](https://ngrok.com) 时，你会看到“迁移状态”列和蓝色“迁移”按钮，该按钮会将你带入 Microsoft Azure-Portal。 不要单击“迁移”按钮，除非这是你要做的;请单击机器人的名称，然后编辑其属性：</br>
+> * 在 Bot Framework 中编辑机器人列表中现有[机器人的](https://dev.botframework.com/bots)属性（例如其“消息传送终结点”）时很常见，尤其是在使用 [ngrok](https://ngrok.com) 时，你会看到“迁移状态”列和蓝色“迁移”按钮，该按钮会将你带入 Microsoft Azure 门户。 不要单击“迁移”按钮，除非这是你要做的;请单击机器人的名称，然后编辑其属性：</br>
    ![编辑自动程序属性](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * 如果使用 Microsoft Azure 注册机器人，则无需在 Microsoft Azure 上 *托管* 机器人代码。
-> * 如果使用 Azure-Portal 注册机器人，则必须具有 Microsoft Azure 帐户。 你可以[免费创建一个](https://azure.microsoft.com/free/)。 若要在创建信用卡时验证身份，必须提供信用卡，但不会收取费用;在 Teams 中创建和使用机器人始终是免费的。
-> * 现在可以使用 App Studio 直接在 Teams 中注册/更新应用和机器人信息。 只需使用Azure-Portal添加或配置其他 Bot Framework 通道，如 Direct Line、Web チャット、Skype 和 Facebook Messenger。
+> * 如果使用Azure 门户注册机器人，则必须具有 Microsoft Azure 帐户。 你可以[免费创建一个](https://azure.microsoft.com/free/)。 若要在创建信用卡时验证身份，必须提供信用卡，但不会收取费用;在 Teams 中创建和使用机器人始终是免费的。
+> * 现在可以使用 App Studio 直接在 Teams 中注册/更新应用和机器人信息。 只需使用Azure 门户添加或配置其他 Bot Framework 通道，如 Direct Line、Web 聊天、Skype 和 Facebook Messenger。
 
 > [!WARNING]
 >
->* 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 8 月 1 日前弃用
+>* 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
 
 ## <a name="see-also"></a>另请参阅
 

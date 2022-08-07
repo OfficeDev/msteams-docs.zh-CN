@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用代码示例为 Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6252531565693f318550398967db16297bfd40c0
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 1dff29ca48a7efb3338816394c177de7779714ee
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737417"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264174"
 ---
 # <a name="create-a-commands-menu"></a>创建命令菜单
 
@@ -41,7 +41,7 @@ ms.locfileid: "66737417"
 1. 打开 Teams，然后从左窗格中选择“**应用**”。 在“**应用**”页中，搜索 **App Studio**，然后选择“**打开**”。
 
    > [!WARNING]
-   > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 将于 2022 年 8 月 1 日前弃用。
+   > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
