@@ -3,12 +3,12 @@ title: 入门 - 概述
 description: 在本模块中，了解如何开始使用介绍常见工具、基本概念和高级功能的 Microsoft Teams 开发人员文档。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: a7acb1b69d33a77c9ea35adfddcd76d4c83d8c62
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 900d07b581f752b5169681750f209a280902b68d
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737396"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264139"
 ---
 # <a name="get-started"></a>入门
 
@@ -41,7 +41,7 @@ ms.locfileid: "66737396"
 如果你已经熟悉 Yeoman 工作流程，则可能更愿意使用 [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) 来构建应用。
 
 > [!WARNING]
-> 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。<br> App Studio 将于 2022 年 8 月 1 日弃用。
+> 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。<br> App Studio 于 2022 年 8 月 1 日弃用。
 
 ## <a name="build-your-first-teams-app"></a>构建首个 Teams 应用
 
