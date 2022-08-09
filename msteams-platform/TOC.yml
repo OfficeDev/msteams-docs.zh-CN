@@ -132,10 +132,22 @@
           href: toolkit/TeamsFx-collaboration.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
+    - name: Visual Studio 的Teams工具包
+      items:
+        - name: Teams 工具包概述
+          href: toolkit/teams-toolkit-overview-visual-studio.md
+        - name: 新建 Teams 应用
+          href: toolkit/create-new-teams-app-for-Visual-Studio.md
+        - name: 调试 Teams 应用
+          href: toolkit/debug-teams-app-visual-studio.md
+        - name: 预配云资源
+          href: toolkit/provision VS.md
+        - name: 将 Teams 应用部署到云
+          href: toolkit/deploy to the cloud for VS.md
+        - name: 编辑 Teams 应用清单
+          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: Teams 工具包 CLI
       href: toolkit/TeamsFx-CLI.md
-    - name: Visual Studio 的Teams工具包
-      href: toolkit/visual-studio-overview.md
     - name: Teams 中的 Yeoman 生成器 (GitHub)
       href: 'https://github.com/pnp/generator-teams'
     - name: Teams 开发人员门户
