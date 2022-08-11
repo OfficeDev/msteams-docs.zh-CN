@@ -5,12 +5,12 @@ description: 了解如何使用 Azure Active Directory 将 OAuth 身份验证添
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 5fc21d6e0e761da71670035cd2af1ee2006cc9c6
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.openlocfilehash: 6cfd765ba467d2c8b03ae4f86b4ab8727c21b9b7
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792968"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312147"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -446,7 +446,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. 选择“**添加到团队**”按钮。
 1. 在下一个窗口中，选择要在其中使用机器人的团队。
 1. 选择“**设置机器人**”按钮。
-1. 选择左侧面板中的三个点 (&#x25cf;&#x25cf;&#x25cf;) 。 然后选择 **App Studio** 图标。
+1. 选择左侧面板中的三个点 (&#x25cf;&#x25cf;&#x25cf;) 。 然后选择 **“开发人员门户** ”图标。
 1. 选择“**清单编辑器** ”选项卡。应该会看到上传的机器人的图标。
 1. 此外，你应该能够在聊天列表中看到机器人作为联系人列出，可以使用该联系人与机器人交换消息。
 

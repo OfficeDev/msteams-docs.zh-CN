@@ -4,12 +4,12 @@ description: 在本模块中，了解如何开始在 Microsoft Teams 中开发�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 31a88b169173aab179581acc9b038670f0c8112c
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: a1563d72ada21810393d7a0118b5a2b94463a27b
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558609"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312210"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>将机器人添加到 Microsoft Teams 应用
 
@@ -51,7 +51,7 @@ SDK 扩展安装依赖项，包括 Bot Builder SDK。
 > [!IMPORTANT]
 > 可以在任何其他 Web 编程技术中开发 Teams 应用，并直接调用 [Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview) ，但必须自行执行所有令牌处理。
 
-*Teams App Studio* 可帮助你创建和配置应用清单，并可创建 Bot Framework 机器人。 它还包含 React 控件库和交互式卡片生成器。
+*Teams 开发人员门户* 可帮助你创建和配置应用清单，并可为你创建 Bot Framework 机器人。 它还包含 React 控件库和交互式卡片生成器。
 
 ## <a name="outgoing-webhooks"></a>传出 webhook
 

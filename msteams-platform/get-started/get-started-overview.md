@@ -3,12 +3,12 @@ title: 入门 - 概述
 description: 在本模块中，了解如何开始使用介绍常见工具、基本概念和高级功能的 Microsoft Teams 开发人员文档。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 900d07b581f752b5169681750f209a280902b68d
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264139"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312280"
 ---
 # <a name="get-started"></a>入门
 
@@ -40,9 +40,6 @@ ms.locfileid: "67264139"
 
 如果你已经熟悉 Yeoman 工作流程，则可能更愿意使用 [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) 来构建应用。
 
-> [!WARNING]
-> 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。<br> App Studio 于 2022 年 8 月 1 日弃用。
-
 ## <a name="build-your-first-teams-app"></a>构建首个 Teams 应用
 
 现在，让我们来构建你的首个 Teams 应用。 但首先，请选择语言（框架）并准备开发环境。
@@ -69,5 +66,5 @@ ms.locfileid: "67264139"
 
 ## <a name="see-also"></a>另请参阅
 
-* [Microsoft Teams 示例](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Git 和 GitHub 资源](/contribute/additional-resources)
+- [Microsoft Teams 示例](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Git 和 GitHub 资源](/contribute/additional-resources)

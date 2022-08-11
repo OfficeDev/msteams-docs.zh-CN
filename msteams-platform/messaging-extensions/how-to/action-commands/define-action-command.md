@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Microsoft Teams 中使用应用�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2769dc4d76f6b417f3264dd321b0d5c5e794c9f8
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 6612309fc6d96a6e40e504edf14dc054f7412a30
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264181"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311980"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -30,7 +30,7 @@ ms.locfileid: "67264181"
 请参阅以下视频，了解如何定义消息扩展操作命令：
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>选择操作命令调用位置
@@ -79,71 +79,61 @@ ms.locfileid: "67264181"
 
 若要将操作命令添加到应用清单，必须将新的 `composeExtension` 对象添加到应用清单 JSON 的顶层。可以使用以下方法之一来执行此操作：
 
-* [使用 App Studio 创建操作命令](#create-an-action-command-using-app-studio)
+* [使用开发人员门户创建操作命令](#create-an-action-command-using-developer-portal)
 * [手动创建操作命令](#create-an-action-command-manually)
 
-### <a name="create-an-action-command-using-app-studio"></a>使用 App Studio 创建操作命令
+### <a name="create-an-action-command-using-developer-portal"></a>使用开发人员门户创建操作命令
 
-可以使用 **App Studio** 或 **开发人员门户** 创建操作命令。
-
-> [!WARNING]
- > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户[开发人员门户](https://dev.teams.microsoft.com/)来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
+可以使用 **开发人员门户** 创建操作命令。
 
 # <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
 > [!NOTE]
 > 创建操作命令的先决条件是已创建消息扩展。 有关如何创建消息扩展的信息，请参阅[创建消息扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
-**创建操作命令**
+若要创建操作命令，请执行以下操作：
 
-1. 从 Microsoft Teams 客户端打开 **App Studio**，然后选择“**清单编辑器**”选项卡。
-1. 如果已在 **App Studio** 中创建应用包，请从列表中选择它。 如果尚未创建应用包，请导入现有包。
-1. 导入应用包后，选择“**功能**”下的“**消息扩展**”。 将显示一个弹出窗口来设置消息扩展。
-1. 在窗口中选择“**设置**”，以在应用体验中包含消息扩展。 下图显示了消息扩展设置窗口：
+1. 从 Microsoft Teams 客户 **端打开开发人员门户** ，然后选择“ **应用** ”选项卡。如果已在 **开发人员门户** 中创建应用包，请从列表中选择。 如果尚未创建应用包，请导入现有包。
+1. 导入应用包后，选择 **“应用功能**”下 **的消息扩展**。
+1. 若要创建消息扩展，需要 Microsoft 注册的机器人。 可以使用现有机器人，也可以创建新的机器人。 选择 **“新建机器人** ”选项，为新机器人命名，然后选择 **“创建**”。
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="消息传递扩展设置":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="屏幕截图显示如何在开发人员门户中创建机器人。":::
 
-1. 若要创建消息扩展，需要 Microsoft 注册的机器人。 可以使用现有机器人，也可以创建新的机器人。 选择“**创建新的机器人**”选项，为新机器人命名，然后选择“**创建**”。 下图显示了如何为消息扩展创建机器人：
+1. 若要使用现有机器人，请 **选择现有机器人** ，然后从下拉列表中选择现有机器人，或者选择 **“输入机器人 ID** ”（如果已创建机器人 ID）。
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="为消息传递扩展创建机器人":::
+1. 选择消息传递扩展的范围，然后选择 **“保存**”。
 
-1. 若要使用现有机器人，请选择“**使用现有机器人**”，然后选择“**从现有机器人之一选择**”，以从下拉列表中选择现有机器人，提供“**机器人名称**”，如果已创建机器人 ID，请选择“**保存**”或选择“**连接到不同的机器人 ID**”，提供“**机器人名称**”并选择“**保存**”。
+1. 在 **“命令**”部分中选择 **“添加命令**”以包含命令，这些命令决定消息扩展的行为。
 
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="将现有机器人用于消息传递扩展":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="屏幕截图显示了如何添加命令以定义消息扩展的行为。":::
 
-1. 在消息扩展页面的“**命令部分**”中选择“**添加**”，以包含决定消息扩展行为的命令。下图显示了如何为消息扩展添加命令：
+1. 选择 **“操作** ”，然后选择参数类型。
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="包含命令":::
+1. 输入 **命令 ID**、 **命令标题** 和 **命令说明**。
 
-1. 选择“**允许用户在 Teams 内触发外部服务中的操作**”。 下图显示了操作命令选择：
+1. 输入所有参数，然后从下拉列表中选择输入类型。
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="操作命令选择":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="屏幕截图显示了如何添加参数以定义消息扩展的命令。":::
 
-1. 若要使用一组静态参数来创建任务模块，请选择“**为命令定义一组静态参数**”。
+1. 选择 **“预览”链接** 下 **的“添加域**”。
 
-    下图显示了操作命令静态参数选择：
+1. 输入有效域，然后选择 **“添加**”。
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="操作命令静态参数选择":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="屏幕截图显示了如何将有效的域添加到消息传递扩展，以便展开链接。":::
 
-    下图显示了静态参数设置示例：
+1. 选择“**保存**”。
 
-    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="操作命令静态参数设置":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="屏幕截图显示了如何保存消息扩展的所有设置和参数。":::
 
-    下图显示了静态参数测试示例：
+**添加其他参数**
 
-    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="操作命令静态参数测试":::
+1. 在命令节下选择省略号，然后选择 **“编辑”参数**。
 
-1. 若要使用动态参数，请选择“**从机器人提取一组动态参数**”。 下图显示了操作命令参数选择：
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="屏幕截图显示了如何为消息扩展添加其他参数。":::
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="操作命令动态参数选择":::
+1. 选择 **“添加参数** ”并输入所有参数。
 
-1. 添加 **命令 ID** 和 **标题**。
-1. 选择要从中调用操作命令的位置。 下图显示了操作命令调用位置：
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="操作命令调用位置":::
-
-1. 选择“保存”。
-1. 若要添加更多参数，请选择“**参数**”部分中的“**添加**”按钮。
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="屏幕截图显示了如何为消息扩展添加其他参数。"lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-an-action-command-manually"></a>手动创建操作命令
 
@@ -185,43 +175,54 @@ ms.locfileid: "67264181"
 ...
 "composeExtensions": [
   {
-    "botId": "12a3c29f-1fc5-4d97-a142-12bb662b7b23",
-    "canUpdateConfiguration": true,
+    "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
+    "scopes": [
+      "personal",
+      "groupchat"
+    ],
     "commands": [
       {
-        "id": "addTodo",
-        "description": "Create a To Do item",
-        "title": "Create To Do",
+        "id": "To do",
         "type": "action",
-        "context": ["commandBox", "message", "compose"],
+        "title": "Create To do",
+        "description": "Create a To do",
+        "initialRun": true,
         "fetchTask": false,
+        "context": [
+          "commandBox",
+          "compose"
+        ],
         "parameters": [
           {
             "name": "Name",
-            "description": "To Do Title",
             "title": "Title",
+            "description": "To do Title",
             "inputType": "text"
           },
           {
             "name": "Description",
-            "description": "Description of the task",
             "title": "Description",
+            "description": "Description of the task",
             "inputType": "textarea"
           },
           {
             "name": "Date",
-            "description": "Due date for the task",
             "title": "Date",
+            "description": "Due date for the task",
             "inputType": "date"
           }
         ]
-      },
+      }
+    ],
+    "canUpdateConfiguration": true,
+    "messageHandlers": [
       {
-        "id": "reassignTodo",
-        "description": "Reassign a todo item",
-        "title": "Reassign a todo item",
-        "type": "action",
-        "fetchTask": false,
+        "type": "link",
+        "value": {
+          "domains": [
+            "yourapp.onmicrosoft.com"
+          ]
+        }
       }
     ]
   }

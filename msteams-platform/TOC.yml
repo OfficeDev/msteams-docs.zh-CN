@@ -232,6 +232,8 @@
       href: tabs/design/tabs-mobile.md
     - name: 获取选项卡的上下文
       href: tabs/how-to/access-teams-context.md
+    - name: 为共享频道构建应用
+      href: concepts/build-and-test/shared-channels.md
     - name: 具有自适应卡片的生成选项卡
       href: tabs/how-to/build-adaptive-card-tabs.md
     - name: 选项卡链接展开和阶段视图
@@ -323,8 +325,6 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: 会议应用 API 参考
       href: apps-in-teams-meetings/API-references.md
-    - name: 生成共享频道
-      href: concepts/build-and-test/Shared-channels.md
     - name: 使用图形 API 获取会议脚本
       items:
         - name: 概述
@@ -612,15 +612,15 @@
         - name: 协作控件和设置 API
           items:
             - name: 概述
-              href: samples/collaboration-api-reference.md
+              href: /rest/api/industry/collaboration-controls/
             - name: 协作 - 自定义 API
-              href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+              href: /rest/api/industry/collaboration-controls/collaboration-custom-ap-is
             - name: 协作 - 标准 OData API
-              href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+              href: /rest/api/industry/collaboration-controls/collaboration-standard-o-data-ap-is
             - name: 设置 - 自定义 API
-              href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+              href: /rest/api/industry/collaboration-controls/settings-custom-ap-is
             - name: 设置 - 标准 OData API
-              href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+              href: /rest/api/industry/collaboration-controls/settings-standard-o-data-ap-is
         - name: 协作控件的限制
           href: samples/collaboration-controls-limitations.md
     - name: Microsoft Teams 的应用模板

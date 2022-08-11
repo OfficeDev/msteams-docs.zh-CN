@@ -1,16 +1,16 @@
 ---
 title: 在本地测试和调试机器人
 author: surbhigupta
-description: 了解如何通过旁加载等在 Teams 环境中使用 IDE 在本地测试和调试机器人
+description: 了解如何通过旁加载等在 Teams 环境中使用 IDE 在本地测试和调试机器人。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3e1225991ad240f74e045a6941002b9eb7b5e81d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c2b68279000da27aa055e591bcccc0a91e7f3769
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503716"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312203"
 ---
 # <a name="test-and-debug-your-bot-locally-with-ide"></a>使用 IDE 在本地测试和调试机器人
 
@@ -18,11 +18,11 @@ ms.locfileid: "66503716"
 
 ## <a name="test-by-uploading-to-teams"></a>通过上传到 Teams 进行测试
 
-测试机器人的最全面方法是创建应用包并将其上传到 Teams。 这是测试机器人在所有范围内可用的完整功能的唯一方法。
+测试机器人的最全面方法是创建应用包并将其上传到 Teams。 将应用包上传到 Teams 是唯一在所有范围内测试机器人可用的完整功能的方法。
 
 有两种方法用于上传应用：
 
-* 使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md)。
+* 使用 [Teams 开发人员门户](~/concepts/build-and-test/teams-developer-portal.md)。
 * 手动[创建应用包](~/concepts/build-and-test/apps-package.md)，然后[上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
 
 > [!NOTE]
@@ -57,7 +57,7 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 > [!Important]
 > 通过 ID 与机器人交谈仅用于基本测试目的。 添加到机器人的任何特定于 Teams 的功能都无法正常工作。
 
-使用机器人的 ID 启动与机器人的对话。 通过其中一种方法添加机器人时，它无法在频道对话中寻址，也无法利用其他 Teams 应用功能（如选项卡或消息扩展）。 通过以下方式之一启动对话：
+使用机器人的 ID 启动与机器人的对话。 通过其中一种方法添加机器人时，它在频道对话中不可寻址，也无法利用其他 Teams 应用功能（如选项卡或消息扩展）。 通过以下方式之一启动对话：
 
 * 在机器人的“[机器人仪表板](https://dev.botframework.com/bots)”页面上，在“**频道**”下，选择“**添加到 Microsoft Teams**”。 Teams 将启动与机器人的个人聊天。
 
@@ -66,7 +66,7 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
   
       ![获取机器人的应用 ID](~/assets/images/bots_appid_botframework.png)
   
-   2. 打开 Microsoft Teams，在“**聊天**”窗格上，选择“**添加聊天**”图标。 在“**聊天对象:**”中，粘贴机器人的 Microsoft 应用 ID。
+   2. 打开 Microsoft Teams，在“聊天”窗格上，选择 **“添加聊天** ”图标。 在“**聊天对象:**”中，粘贴机器人的 Microsoft 应用 ID。
   
       ![上传机器人](~/assets/images/bots_uploading.png)
 
@@ -96,7 +96,7 @@ Bot Framework Emulator 是一个桌面应用程序，允许机器人开发人员
 
 ## <a name="delete-a-bot-from-teams"></a>从 Teams 中删除机器人
 
-若要从 Teams 中完全删除机器人，请转到“**机器人仪表板**”并编辑 Teams 频道。 选择底部的“**删除**”按钮。 这会阻止用户发现、添加机器人和与机器人交互。 这不会从其他用户的 Teams 实例中删除机器人，但是，它会停止为用户运行。
+若要从 Teams 中完全删除机器人，请转到“**机器人仪表板**”并编辑 Teams 频道。 选择底部的“**删除**”按钮。 从 Teams 中删除机器人会阻止用户发现、添加机器人并与机器人交互。 从 Teams 中删除机器人不会从其他用户的 Teams 实例中删除机器人，但是，它也会停止为它们运行。
 
 ## <a name="see-also"></a>另请参阅
 

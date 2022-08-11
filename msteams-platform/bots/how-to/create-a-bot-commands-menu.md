@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用代码示例为 Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1dff29ca48a7efb3338816394c177de7779714ee
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: e14afc31839368c7826a6ee15a6f779b5f6f47b1
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264174"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312301"
 ---
 # <a name="create-a-commands-menu"></a>创建命令菜单
 
@@ -30,36 +30,34 @@ ms.locfileid: "67264174"
 
 ## <a name="create-a-command-menu-for-your-bot"></a>为机器人创建命令菜单
 
-在应用清单中定义命令菜单。 可以在应用清单中使用 **App Studio** 创建这些菜单，也可以手动添加。
+在应用清单中定义命令菜单。 可以使用 **开发人员门户** 创建它们，也可以在应用清单中手动添加它们。
 
-### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a>使用 App Studio 为机器人创建命令菜单
+### <a name="create-a-command-menu-for-your-bot-using-developer-portal"></a>使用开发人员门户为机器人创建命令菜单
 
 为机器人创建命令菜单的先决条件是必须编辑现有应用清单。 无论是创建新清单还是编辑现有清单，添加命令菜单的步骤都是相同的。
 
-**使用 App Studio 为机器人创建命令菜单**
+使用开发人员门户为机器人创建命令菜单：
 
-1. 打开 Teams，然后从左窗格中选择“**应用**”。 在“**应用**”页中，搜索 **App Studio**，然后选择“**打开**”。
+1. 打开 Teams，然后从左窗格中选择“**应用**”。 在 **“应用”** 页中，搜索 **开发人员门户**，然后选择 **“打开**”。
 
-   > [!WARNING]
-   > 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
+   :::image type="content" source="../../assets/images/tdp/add-dev-portal.png" alt-text="屏幕截图显示了如何在 Teams 客户端中添加开发人员门户。":::
+  
+1. 在 **开发人员门户** 中，选择 **“应用** ”选项卡。如果没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [Teams 开发人员门户](../../concepts/build-and-test/teams-developer-portal.md)。
 
-   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
+1. 选择 **“应用”** 选项卡，从左窗格中选择 **“应用”功能** ，然后选择 **“机器人**”。
 
-2. 在 **App Studio** 中，选择“**清单编辑器**”选项卡。如果没有现有应用包，可以创建或导入现有应用。 有关详细信息，请参阅 [App Studio 中的更新 C# 应用包](../../get-started/deploy-csharp-app-studio.md)。
+1. 在 **“命令**”部分下选择 **“添加命令**”。
 
-3. 在 **清单编辑器** 的左窗格和“**功能**”部分中，选择“**机器人**”。
+   :::image type="content" source="../../assets/images/tdp/add-a-bot-command.png" alt-text="屏幕截图显示了如何在开发人员门户中为机器人添加命令。":::
 
-4. 在 **清单编辑器** 的右窗格和 **命令** 部分中，选择 **添加**。出现 **新命令** 屏幕。
+1. 输入显示为机器人命令菜单的 **命令** 。
 
-   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="选择应用包" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
+1. 输入菜单中命令文本下显示的 **说明** 。 **说明** 必须是命令用途的简要说明。
 
-5. 输入必然显示为机器人命令菜单的“**命令文本**”。
+1. 选中“ **范围** ”复选框，然后选择 **“添加**”。
+   这定义了命令菜单必须显示的位置。
 
-6. 输入必然显示在菜单中命令文本下方的“**帮助文本**”。 **帮助文本** 必须是命令用途的简要说明。
-
-7. 选择各“**范围**”复选框以选择此命令菜单必须显示的位置，然后选择“**保存**”。
-
-   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="“App Studio 新建命令”菜单按钮 "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="屏幕截图显示了如何为机器人添加命令、说明和作用域。":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑 Manifest.json 为机器人创建命令菜单
 

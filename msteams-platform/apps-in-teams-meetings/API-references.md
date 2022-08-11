@@ -1,17 +1,17 @@
 ---
 title: 会议应用 API 参考
 author: surbhigupta
-description: 了解如何使用示例和代码示例、Teams 应用会议用户角色 api 用户上下文通知信号查询来标识会议应用 API 引用。
+description: 本文介绍适用于 Teams 客户端和 Bot Framework SDK 的会议应用 API 参考，以及示例、代码示例和响应代码。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232258"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311951"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -926,7 +926,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **channelData.meeting.id** | 与会议关联的默认 ID。 |
 | **价值。MeetingType** | 会议的类型。 |
 | **价值。标题** | 会议的主题。 |
-| **价值。ID** | 与会议关联的默认 ID。 |
+| **价值。Id** | 与会议关联的默认 ID。 |
 | **价值。JoinUrl** | 会议的加入 URL。 |
 | **价值。StartTime** | 会议开始时间（UTC）。 |
 | **价值。EndTime** | UTC 中的会议结束时间。 |
@@ -937,7 +937,9 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 API `getIncomingClientAudioState` 允许应用获取会议用户的传入音频扬声器设置。 可通过 Teams 客户端 SDK 获取 API。
 
 > [!NOTE]
-> 移动 `getIncomingClientAudioState` 版 API 目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+>
+> * 移动 `getIncomingClientAudioState` 版 API 当前在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+> * 特定于资源的许可适用于清单版本 1.12 和更高版本，因此此 API 不适用于清单版本 1.11 和更早版本。
 
 ### <a name="query-parameter"></a>查询参数
 
@@ -977,7 +979,9 @@ function getIncomingClientAudioState(
 API `toggleIncomingClientAudio` 允许应用将会议用户的传入音频扬声器设置从静音切换到取消静音，反之亦然。 可通过 Teams 客户端 SDK 获取 API。
 
 > [!NOTE]
-> 移动 `toggleIncomingClientAudio` 版 API 目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+>
+> * 移动 `toggleIncomingClientAudio` 版 API 当前在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+> * 特定于资源的许可适用于清单版本 1.12 和更高版本，因此此 API 不适用于清单版本 1.11 和更早版本。
 
 ### <a name="query-parameter"></a>查询参数
 

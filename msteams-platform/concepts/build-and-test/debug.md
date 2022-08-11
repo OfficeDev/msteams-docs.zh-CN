@@ -3,12 +3,12 @@ title: 选择用于测试和调试应用的设置
 description: 在本模块中，了解在本地和云托管环境中测试和调试 Microsoft Teams 应用的选项。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 6b06955df7fbe236deb05fc0e057062aa5f9b180
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264132"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312189"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>选择测试设置并调试 Teams 应用
 
@@ -58,12 +58,7 @@ Teams 是一种完全基于云的产品，它要求其访问的所有服务都�
 对于在 Microsoft Bot Framework 中注册的机器人，请更新机器人的消息传递终结点以使用此新的 ngrok 终结点。 例如，`https://2d1224fb.ngrok.io/api/messages`。 可以通过在 Bot Framework 门户的“测试聊天”窗口中测试机器人响应来验证 ngrok 是否正常工作。 同样，与模拟器一样，此测试不允许你访问 Teams 特定的功能。
 
 > [!NOTE]
->
-> * 若要更新机器人的消息传递终结点，必须使用 Bot Framework。 在 [Bot Framework 的机器人列表](https://dev.botframework.com/bots)中选择机器人。 无需将机器人迁移到 Microsoft Azure。 还可通过 [App Studio](~/concepts/build-and-test/app-studio-overview.md) 更新消息传递终结点。
-
-> [!WARNING]
->
-> * 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
+> 若要更新机器人的消息传递终结点，必须使用 Bot Framework。 在 [Bot Framework 的机器人列表](https://dev.botframework.com/bots)中选择机器人。 无需将机器人迁移到 Microsoft Azure。 还可以通过 [Teams 开发人员门户](~/concepts/build-and-test/teams-developer-portal.md)更新消息传送终结点。
 
 ## <a name="cloud-hosted"></a>云托管
 
@@ -87,3 +82,5 @@ Teams 是一种完全基于云的产品，它要求其访问的所有服务都�
 ## <a name="see-also"></a>另请参阅
 
 [使用 IDE 在本地测试和调试机器人](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+
+[适用于 Microsoft Teams 选项卡的 DevTools](../../tabs/how-to/developer-tools.md)

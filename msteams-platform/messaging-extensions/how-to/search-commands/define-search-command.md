@@ -5,12 +5,12 @@ description: 在本模块中，了解 Teams 应用的消息扩展搜索命令，
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: c131a511c5c16eac4bf57093bbbeed9bd4172e97
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503940"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312266"
 ---
 # <a name="define-message-extension-search-commands"></a>定义消息扩展搜索命令
 
@@ -42,44 +42,54 @@ ms.locfileid: "66503940"
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>将搜索命令添加到应用清单
 
-若要将搜索命令添加到应用清单，必须将新 `composeExtension` 对象添加到应用清单 JSON 的顶层。 可以在 App Studio 的帮助下或手动添加搜索命令。
+若要将搜索命令添加到应用清单，必须将新 `composeExtension` 对象添加到应用清单 JSON 的顶层。 可以借助开发人员门户或手动添加搜索命令。
 
-### <a name="create-a-search-command-using-app-studio"></a>使用 App Studio 创建搜索命令
+### <a name="create-a-search-command-using-developer-portal"></a>使用开发人员门户创建搜索命令
 
 创建搜索命令的先决条件是必须已创建消息扩展名。 有关如何创建消息扩展的信息，请参阅[创建消息扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
-若要创建搜索命令，请执行以下操作：
+**创建操作命令**
 
-1. 从 Microsoft Teams 客户端打开 “**App Studio**”，并选择“**清单编辑器**”选项卡。
-1. 如果已在 **App Studio** 中创建应用包，请从列表中选择。 如果尚未创建应用包，请导入现有包。
-1. 导入应用包后，选择“**功能**”下 **的消息扩展**。 将显示一个弹出窗口来设置消息扩展。
-1. 在窗口中选择“**设置**”，以在应用体验中包含消息扩展。 下图显示消息扩展设置页：
+1. 从 Microsoft Teams 客户 **端打开开发人员门户** ，然后选择“ **应用** ”选项卡。如果已在 **开发人员门户** 中创建应用包，请从列表中选择。 如果尚未创建应用包，请导入现有包。
+1. 导入应用包后，选择 **“应用功能**”下 **的消息扩展**。
+1. 若要创建消息扩展，需要 Microsoft 注册的机器人。 可以使用现有机器人，也可以创建新的机器人。 选择 **“新建机器人** ”选项，为新机器人命名，然后选择 **“创建**”。
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="消息传递扩展设置":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="屏幕截图显示如何在开发人员门户中创建机器人。":::
 
-1. 若要创建消息扩展，需要 Microsoft 注册的机器人。 可以使用现有机器人，也可以创建新的机器人。 选择“**创建新的机器人**”选项，为新机器人命名，然后选择“**创建**”。 下图显示了如何为消息扩展创建机器人：
+1. 若要使用现有机器人，请 **选择现有机器人** ，然后从下拉列表中选择现有机器人，或者选择 **“输入机器人 ID** ”（如果已创建机器人 ID）。
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="为消息传递扩展创建机器人":::
+1. 选择消息传递扩展的范围，然后选择 **“保存**”。
 
-1. 若要使用现有机器人，请选择“**使用现有机器人**”，然后选择“**从现有机器人之一选择**”，以从下拉列表中选择现有机器人，提供“**机器人名称**”，如果已创建机器人 ID，请选择“**保存**”或选择“**连接到不同的机器人 ID**”，提供“**机器人名称**”并选择“**保存**”。
-
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="将现有机器人用于消息传递扩展":::
-
-1. 选择“在消息扩展页的 **命令”部分** 中 **添加**“以包含命令，这些命令决定消息扩展的行为。
+1. 在 **“命令**”部分中选择 **“添加命令**”以包含命令，这些命令决定消息扩展的行为。
 下图显示了如何为消息扩展添加命令：
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="包含命令":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="屏幕截图显示了如何添加命令来定义消息扩展的行为。":::
 
-1. 选择 **“允许用户查询服务信息并将其插入到邮件中**”。 下图显示了搜索命令参数选择：
+1. 选择 **“搜索** ”并输入 **命令 ID**、 **命令标题** 和 **命令说明**。
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="搜索命令参数选择":::
+1. 输入所有参数，然后从下拉列表中选择输入类型。
 
-1. 添加 **命令 ID** 和 **标题**。
-1. 选择必须从中调用搜索命令的位置。 下图显示了搜索命令调用位置：
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="屏幕截图显示了如何添加参数以定义消息扩展的命令。":::
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="搜索命令调用位置选择":::
+1. 选择 **“预览”链接** 下 **的“添加域**”。
 
-1. 添加搜索参数并选择 **“保存**”。
+1. 输入有效域，然后选择 **“添加**”。
+
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="屏幕截图显示了如何将有效的域添加到消息传递扩展，以便展开链接。":::
+
+1. 选择“**保存**”。
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="屏幕截图显示了如何保存消息扩展的所有设置和参数。":::
+
+**添加其他参数**
+
+1. 在命令节下选择省略号，然后选择 **“编辑”参数**。
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="屏幕截图显示了如何为消息扩展添加其他参数。":::
+
+1. 选择 **“添加参数** ”并输入所有参数。
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="屏幕截图显示了如何为消息扩展添加其他参数。"lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-a-search-command-manually"></a>手动创建搜索命令
 

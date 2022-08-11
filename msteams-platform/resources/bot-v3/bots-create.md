@@ -4,12 +4,12 @@ description: 在本模块中，了解如何使用Microsoft Bot Framework创建�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 0f53f26c8cb54c1d21cbe305d3ea1d433bfb864b
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 66b0557308e2d76332e1a5b0fcba06ac596822c4
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264167"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312098"
 ---
 # <a name="create-a-bot"></a>创建机器人
 
@@ -21,7 +21,7 @@ ms.locfileid: "67264167"
 
 ## <a name="create-a-bot-for-microsoft-teams"></a>为 Microsoft Teams 创建自动程序
 
-**Teams App Studio** 是一种可帮助创建机器人的工具，以及引用机器人的应用包。 它还包含 React 控件库和卡的可配置示例。 有关详细信息，请参阅 [Teams App Studio 入](~/concepts/build-and-test/app-studio-overview.md)门。 以下步骤假定你正在手动配置机器人，而不是使用 **Teams App Studio**：
+**Teams 的 Teams 开发人员门户** 是一种可帮助创建机器人的工具，也是引用机器人的应用包。 它还包含 React 控件库和卡的可配置示例。 有关详细信息，请参阅 [Teams 的 Teams 开发人员门户入门](~/concepts/build-and-test/teams-developer-portal.md)。 以下步骤假定你正在手动配置机器人，而不使用 **Teams 开发人员门户 for Teams**：
 
 1. 使用 [Bot Framework 创建机器人](https://dev.botframework.com/bots/new)。 **创建自动程序后，请确保从特色频道列表中将 Microsoft Teams 添加为频道。** 如果你已经创建应用程序包/清单，请随意重复使用你生成的任何 Microsoft 应用 ID。
 
@@ -48,11 +48,7 @@ ms.locfileid: "67264167"
    ![编辑自动程序属性](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * 如果使用 Microsoft Azure 注册机器人，则无需在 Microsoft Azure 上 *托管* 机器人代码。
 > * 如果使用Azure 门户注册机器人，则必须具有 Microsoft Azure 帐户。 你可以[免费创建一个](https://azure.microsoft.com/free/)。 若要在创建信用卡时验证身份，必须提供信用卡，但不会收取费用;在 Teams 中创建和使用机器人始终是免费的。
-> * 现在可以使用 App Studio 直接在 Teams 中注册/更新应用和机器人信息。 只需使用Azure 门户添加或配置其他 Bot Framework 通道，如 Direct Line、Web 聊天、Skype 和 Facebook Messenger。
-
-> [!WARNING]
->
->* 如果你一直使用 App Studio，我们建议你尝试使用开发人员门户来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
+> * 现在可以使用 Teams 开发人员门户直接在 Teams 中注册/更新应用和机器人信息。 只需使用Azure 门户添加或配置其他 Bot Framework 通道，如 Direct Line、Web 聊天、Skype 和 Facebook Messenger。
 
 ## <a name="see-also"></a>另请参阅
 
