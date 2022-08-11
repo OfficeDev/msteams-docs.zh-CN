@@ -6,14 +6,14 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: f87175aa4a965d38e439a58ea726fe0af7c68fbd
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 2365d7adbebca011af9d4204b2a305a6131f72a5
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558000"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288141"
 ---
-# <a name="edit-teams-app-manifest"></a>编辑 Teams 应用清单
+# <a name="edit-teams-app-manifest-for-visual-studio"></a>编辑 Visual Studio 的 Teams 应用清单
 
 清单模板文件 `manifest.template.json` 位于 scaffolding 下的 `templates/appPackage` 文件夹下。 具有占位符的模板文件以及实际值由 Teams 工具包使用不同环境下 `.fx/configs` 的文件解 `.fx/states` 析。
 

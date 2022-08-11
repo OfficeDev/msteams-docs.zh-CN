@@ -1,16 +1,16 @@
 ---
 title: 跨 Microsoft 365 扩展 Teams 应用（预览版）
-description: 在本模块中，了解如何跨 Microsoft 365 的其他高使用区域生成和更新 Teams 应用体验。
+description: 本文介绍如何生成、更新和扩展 Teams 应用体验，以及如何创建跨 Microsoft 365 的其他高使用区域使用的应用。
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ec724b99e69cf496d25984d8dc800040d5817882
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 208843d9d4c46d29b095ffaf7260f28889f8ed45
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919828"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288211"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 应用
 
@@ -20,7 +20,7 @@ ms.locfileid: "66919828"
 
 Teams 应用平台继续发展并全面扩展到 Microsoft 365 生态系统。 以下是 Microsoft 365 (Teams、Outlook 和 Office 作为应用程序主机的 Teams 应用平台元素的当前支持) ：
 
-|          | 应用清单元素 | Teams 支持 |Outlook* 支持 | Office* 支持 | Notes |
+|          | 应用清单元素 | Teams 支持 |Outlook* 支持 | Office* 支持 | 注释 |
 |--|--|--|--|--|--|
 | [**选项卡**](../tabs/what-are-tabs.md) (个人范围)     |`staticTabs`  | Web、桌面、移动 | Web (目标发布) 、桌面 (Beta 通道)  | Web (目标发布) | Microsoft 365 尚不支持频道和组范围。 请参阅 [笔记](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)。
 | [**消息扩展**](../messaging-extensions/what-are-messaging-extensions.md) (基于搜索的) | `composeExtensions` | Web、桌面、移动| Web (目标发布) 、桌面 (Beta 通道) | - |Microsoft 365 尚不支持基于操作的操作。 请参阅 [笔记](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook)。 |

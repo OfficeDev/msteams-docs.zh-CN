@@ -5,14 +5,14 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: b7893b425618372085e8ef118beff7c12bd2eb15
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 229fa56331f9c8797d0511d77a86e418bbdb7103
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503590"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288197"
 ---
-# <a name="send-proactive-installation-messages"></a>发送主动安装消息 
+# <a name="send-proactive-installation-messages"></a>发送主动安装消息
 
 ## <a name="proactive-messaging-in-teams"></a>Teams 中的主动消息传递
 
@@ -248,3 +248,4 @@ server.get('/api/notify', async (req, res) => {
 * [在 Teams 中管理应用设置策略](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [向用户 SDK v4 发送主动通知](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 * [向 Microsoft Teams 中的用户发送活动源通知](/graph/teams-send-activityfeednotifications)
+* [将应用添加到团队 - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)

@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 详细了解浏览器的设备权限
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: f1c1168cad71729e47eee3cdae8b0783423f8f97
-  ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+  ms.openlocfilehash: 2d78357348ef50c57439ebf8ca2bca7936c61260
+  ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 06/30/2022
-  ms.locfileid: "66558308"
+  ms.lasthandoff: 08/09/2022
+  ms.locfileid: "67285957"
 items:
 - durationInMinutes: 1
   content: >
@@ -63,7 +63,7 @@ items:
     1. 选择 **“克隆**”。
 - title: 为本地 Web 服务器设置隧道
   durationInMinutes: 1
-  content: "使用 ngrok 或命令提示符创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n```bash\nngrok http -host-header=localhost 3000\n``` \n  > [!TIP]\n  > 如果遇到 **ERR_NGROK_4018**，请按照命令提示符中显示的步骤注册和身份验证 ngrok。 然后运行该 `ngrok http -host-header=localhost 3000` 命令。\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" ngrok 隧道\":::\n"
+  content: "使用 ngrok 或命令提示符创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n```bash\nngrok http --host-header=localhost 3000\n``` \n  > [!TIP]\n  > 如果遇到 **ERR_NGROK_4018**，请按照命令提示符中显示的步骤注册和身份验证 ngrok。 然后运行该 `ngrok http --host-header=localhost 3000` 命令。\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" ngrok 隧道\":::\n"
 - title: 设置清单文件
   durationInMinutes: 1
   content: "1. 导航到克隆存储库中的 **manifest.json** 。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png\" alt-text=\"清单文件\":::\n\n1. 在 Visual Studio 中打开 **manifest.json** 并进行以下更改：\n  \n   从 ngrok 替换 `<<BASE_URI_DOMAIN>>` 为 http 终结点，不包括所有位置中的 https:// 部分。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png\" alt-text=\"在 Visual Studio 中更新 ngrok\":::\n          \n"
