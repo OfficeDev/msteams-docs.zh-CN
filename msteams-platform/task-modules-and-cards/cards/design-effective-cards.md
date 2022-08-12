@@ -4,12 +4,12 @@ description: 在本模块中，了解如何为 Teams 应用设计自适应卡片
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 669c117ddd344b1ad77dc5983e89fd59e2405a47
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558154"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312063"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>为 Microsoft Teams 应用设计自适应卡
 
@@ -204,11 +204,11 @@ ms.locfileid: "66558154"
 
 **请**：在此屏幕中，将卡片底部设为两列。 输入组件宽度设置为 `stretch`，而 **选择** 按钮宽度设置为 `auto`。 这将确保按钮完全保留在视图中。
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="图像显示如何在自适应卡片中设置列宽。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="图像显示如何在自适应卡片中设置列宽。":::
 
 **请勿**：在此屏幕中，将两列 `width` 均设置为 `auto`。 与输入相比，这会导致右侧的 **选择** 按钮被略微切断。
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="图像显示如何不在自适应卡片中设置列宽。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="图像显示如何不在自适应卡片中设置列宽。":::
 
 # <a name="code"></a>[代码](#tab/code)
 
@@ -388,11 +388,11 @@ ms.locfileid: "66558154"
 
 **请**：在具有较少列的移动设备上显示布局效果更佳。
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="图像显示自适应卡片中正确数量的列。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-do.png" alt-text="图像显示自适应卡片中正确数量的列。":::
 
 **请勿**：使用过多的列会使你的卡片内容在移动设备上变得混乱。
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="图像显示太多列会对自适应卡片布局产生负面影响。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="图像显示太多列会对自适应卡片布局产生负面影响。":::
 
 #### <a name="example-fixed-width-has-its-place"></a>示例：固定宽度有其位置
 
@@ -400,7 +400,7 @@ ms.locfileid: "66558154"
 
 当显示内容的大小不需要更改时，将列设置为特定的像素宽度。 此示例显示大小为 50 像素的左列，而缩略图旁边的说明会拉伸卡片的长度。
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="图像显示如何在自适应卡片中设置列宽。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="图像显示如何在自适应卡片中设置列宽。":::
 
 # <a name="code"></a>[代码](#tab/code)
 
@@ -548,17 +548,17 @@ ms.locfileid: "66558154"
 
 无论是使用 [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html)、[`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) 或 [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html)，将 `wrap` 属性设置为 `true`，这样卡片文本不会在移动电话上截断。
 
-#### <a name="example-making-sure-text-doesnt-truncate"></a>示例：确保文本不截断
+#### <a name="example-making-sure-text-dont-truncate"></a>示例：确保文本不截断
 
 # <a name="design"></a>[设计](#tab/design)
 
 **请**：在此屏幕中，将卡片的 `wrap` 属性设置为 `true`。 这允许文本适应任何屏幕大小。
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="图像显示如何在自适应卡片中换行文本。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-true.png" alt-text="图像显示如何在自适应卡片中换行文本。":::
 
 **请勿**：在此屏幕中，卡片不使用 `wrap` 属性，因此文本在移动屏幕上被切断。
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="图像显示如果不在自适应卡片中换行，会发生什么情况。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-false.png" alt-text="图像显示如果不在自适应卡片中换行，会发生什么情况。":::
 
 # <a name="code"></a>[代码](#tab/code)
 
@@ -655,7 +655,7 @@ ms.locfileid: "66558154"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="有关如何在自适应卡上仅包含一小组操作的最佳实践。":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="屏幕截图显示有关如何在自适应卡上仅包含一小组操作的最佳实践。":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>建议：最多使用六个主要操作
 
@@ -663,7 +663,7 @@ ms.locfileid: "66558154"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="有关如何避免在自适应卡上添加过多操作，而让用户感到不知所措的最佳实践。":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="屏幕截图显示有关如何避免在自适应卡上添加过多操作，而让用户感到不知所措的最佳实践。":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>不建议：使用超过六个主要操作
 
@@ -674,7 +674,7 @@ ms.locfileid: "66558154"
 
 ### <a name="frequency"></a>频率
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="有关自适应卡频率的最佳实践。":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="屏幕截图显示了有关自适应卡片频率的最佳做法。":::
 
 #### <a name="do-be-concise"></a>建议：做到简洁
 

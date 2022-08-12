@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6e6326cb415a034fafec92879d0d20ab3ec9c472
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232279"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312238"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -36,6 +36,7 @@ ms.locfileid: "67232279"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 08/09/2022 | 为 Visual Studio 2022 引入了 Teams 工具包 | 工具和 SDK > 适用于 Visual Studio 的 Teams 工具包 > [适用于 Visual Studio 的 Teams 工具包概述](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 2022/08/03 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 2022/08/03 | 添加了在会议后场景中检索会议脚本的功能。 | 为 Teams 会议和通话构建应用 > 使用 Graph API 获取会议脚本 > [概述](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 2022/08/03 | 将展开共享链接到 Web 应用中的团队 | 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
@@ -227,7 +228,6 @@ ms.locfileid: "67232279"
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | 群聊中的选项卡现已在发布的 Teams 版本中提供。 作为此工作的一部分，为了清楚起见，选项卡部分已重新工作。| [可配置的选项卡](~/concepts/tabs/tabs-configurable.md) |
-| 11/11/2018 | Node JS 和 .NET/C# 入门已更新为在 Teams 中使用 App Studio，并且添加了有关在 Azure 中托管基于节点的 Teams 应用的新部分。 | [通过 C#/.NET 和 App Studio 开始使用 Microsoft Teams 平台](~/get-started/get-started-dotnet-app-studio.md)，[通过 Node JS 和 App Studio 开始使用 Microsoft Teams 平台](~/get-started/get-started-nodejs-app-studio.md)，[在 Azure 中托管 Node Teams 应用](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | 现在，可以创建指向用户之间的私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 11/08/2018 | SharePoint Framework 1.7 随附了一项新功能，可将 Microsoft Teams 选项卡用作 SharePoint 框架 Web 部件。 | [SharePoint 中的选项卡](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 11/05/2018 | 已发布 **任务模块** 功能。 任务模块允许在 Teams 应用程序中从机器人和选项卡创建模式弹出体验。 在弹出窗口中，你可以运行自己自定义的 HTML/JavaScript 代码，显示基于 `<iframe>`的小组件，如 YouTube 或 Microsoft Stream 视频，或显示[自适应卡片](/adaptive-cards/)。 | [任务模块概述](~/concepts/task-modules/task-modules-overview.md)，[选项卡中的任务模块](~/concepts/task-modules/task-modules-tabs.md)，[机器人中的任务模块](~/concepts/task-modules/task-modules-bots.md) |
@@ -251,7 +251,6 @@ ms.locfileid: "67232279"
 | 04/02/2018 | 使用机器人为应用发送通知。 |[仅限通知的机器人](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | 主动邮件传送的扩展文档。 |[开始对话](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 03/15/2018 | 卡片的重构文档。 |[卡片](~/concepts/cards/cards.md)、[卡片操作](~/concepts/cards/cards-actions.md)、[卡片格式](~/concepts/cards/cards-format.md)、[卡片参考](~/concepts/cards/cards-reference.md)|
-| 03/03/2018 | 添加了 Teams App Studio 的文档。 |[使用 Teams App Studio 快速开发应用](~/get-started/get-started-app-studio.md)，[使用 App Studio 中的控件库](~/get-started/app-studio-component-library.md)|
 | 02/27/2018 | 添加了示例代码以演示 AsTeamsChannelAccounts () 方法。 |[获取机器人的背景资料](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | 添加了有关开始使用 C# 的主题。 |[开始在 Microsoft Teams 平台上使用 C#/.NET ](./get-started/get-started-dotnet-app-studio.md)|
 |

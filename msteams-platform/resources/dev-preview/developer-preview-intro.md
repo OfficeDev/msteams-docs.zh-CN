@@ -3,12 +3,12 @@ title: 适用于 Microsoft Teams 的公共开发人员预览版
 description: 在本文中，了解 Microsoft Teams 公共开发人员预览版和开发人员预览应用清单中的功能。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e144672ab3ed9a26f3f8fdac14120f2f996d4d44
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92d85eea70b04f1a5a0f8c7505c7cb5986556052
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503912"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312196"
 ---
 # <a name="public-developer-preview-for-teams"></a>Teams 公共开发人员预览版
 
@@ -19,9 +19,9 @@ ms.locfileid: "66503912"
 
 ## <a name="developer-preview-app-manifest"></a>开发人员预览版应用清单
 
-开发人员预览版中启用的许多功能都需要更改应用清单 JSON 文件。 为此，需要使用 [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md)。 如果使用此架构，将无法使用 [App Studio](~/concepts/build-and-test/app-studio-overview.md) 进行这些更改，也无法将其用于上传应用来进行测试。 若要上传应用，需要选择应用栏上的 `More apps` 图标，然后选择 `Upload a custom app link`。 使用此方法，只能上传应用包的压缩版本。
+开发人员预览版中启用的许多功能都需要更改应用清单 JSON 文件。 为此，需要使用 [开发人员预览清单架构](~/resources/schema/manifest-schema-dev-preview.md)。 如果使用此架构，将无法使用 [Teams 开发人员门户](~/concepts/build-and-test/teams-developer-portal.md) 做出这些更改，也无法将其用于上传应用来进行测试。 若要上传应用，需要选择应用栏上的 `More apps` 图标，然后选择 `Upload a custom app link`。 使用此方法，只能上传应用包的压缩版本。
 
-你可能会发现使用 App Studio 创建应用包的非开发人员预览部分，然后导出该包并手动编辑 `manifest.json` 文件来添加要使用的开发人员预览功能是很有用的。 将开发人员预览功能添加到 `manifest.json` 文件后，将无法将包重新导入 App Studio。
+你可能会发现使用 Teams 开发人员门户 创建应用包的非开发人员预览部分，然后导出该包并手动编辑 `manifest.json` 文件来添加要使用的开发人员预览功能是很有用的。 将开发人员预览功能添加到 `manifest.json` 文件后，将无法将包重新导入 Teams 开发人员门户。
 
 ## <a name="enable-developer-preview"></a>启用开发人员预览版
 

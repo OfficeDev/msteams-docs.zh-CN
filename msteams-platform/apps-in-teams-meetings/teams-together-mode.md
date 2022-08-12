@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: f59a5765d58008586ff1ce9b238b9aa69c1aefb6
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d54d2ffaa6035778ba195c9e2eba44c2e096892e
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841790"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311965"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>在 Teams 中自定义同框场景模式
 
@@ -37,7 +37,7 @@ Microsoft Teams 中的"自定义在一起"模式场景提供沉浸式且极具�
 必须基本了解以下内容才能使用自定义"同一模式"场景：
 
 * 定义场景中的场景和座位。
-* 拥有 Microsoft 开发人员帐户并熟悉 Teams [开发人员门户](../concepts/build-and-test/teams-developer-portal.md) 和 App Studio。
+* 拥有 Microsoft 开发人员帐户并熟悉 Teams [开发人员门户](../concepts/build-and-test/teams-developer-portal.md)。
 * 了解[应用旁加载的概念](../concepts/deploy-and-publish/apps-upload.md)。
 * 确保管理员已授予 [**上传自定义应用**](../concepts/deploy-and-publish/apps-upload.md)的权限，并分别选择所有筛选器作为应用设置和会议策略的一部分。
 
@@ -53,7 +53,7 @@ Microsoft Teams 中的"自定义在一起"模式场景提供沉浸式且极具�
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>使用 Scene Studio 生成场景
 
-Microsoft 有一个场景工作室，可用于生成场景。 它在 [场景编辑器 - Teams 开发人员门户](https://dev.teams.microsoft.com/scenes)上提供。 本文档引用 Teams 开发人员门户中的 Scene Studio。 在 App Studio 场景设计器中，接口和功能都相同。
+Microsoft 有一个场景工作室，可用于生成场景。 它在 [场景编辑器 - Teams 开发人员门户](https://dev.teams.microsoft.com/scenes)上提供。 本文档引用 Teams 开发人员门户中的 Scene Studio。
 
 Scene Studio 上下文中的场景是包含以下元素的项目：
 

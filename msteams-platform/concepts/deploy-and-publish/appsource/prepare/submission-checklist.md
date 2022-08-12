@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 32aa12e69d32c8b50a05df994021fb9dfcc248b1
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: b5197a7fcb3a3309cfec003d8b4c2fc937e59035
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264160"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312245"
 ---
 # <a name="prepare-your-teams-store-submission"></a>准备 Teams 应用商店提交
 
@@ -19,7 +19,7 @@ ms.locfileid: "67264160"
 请观看以下视频，以了解有关将应用发布到 Microsoft Teams 应用商店的详细信息：
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource) 之前，确保已完成以下操作。
@@ -28,12 +28,9 @@ ms.locfileid: "67264160"
 
 虽然应用可能在测试环境中工作，但应检查应用包以避免在提交过程中遇到问题。
 
-> [!WARNING]
-> 如果一直在使用 App Studio，我们建议你试用 [开发人员门户](https://dev.teams.microsoft.com/) 来配置、分发和管理 Teams 应用。 App Studio 于 2022 年 8 月 1 日弃用。
-
 Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具将根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
-1. 转到“[Microsoft Teams 应用验证工具](https://dev.teams.microsoft.com/appvalidation.html)”。 （注意：该工具也可在 [App Studio](../../../build-and-test/app-studio-overview.md) 中使用。）
+1. 转到“[Microsoft Teams 应用验证工具](https://dev.teams.microsoft.com/appvalidation.html)”。 （注意：该工具在 [Teams 开发人员门户中也可用](~/concepts/build-and-test/teams-developer-portal.md)
 1. 上传应用包以运行自动测试。
 1. 转到“**初步清单**”并查看难以自动执行的测试用例。
 1. [修复配置问题](~/resources/schema/manifest-schema.md)或应用一般问题。如果自动测试提示错误或未满足清单中的所有条件，则会出现这些问题。

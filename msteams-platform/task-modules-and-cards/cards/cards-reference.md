@@ -3,12 +3,12 @@ title: 卡片类型
 description: 在本模块中，了解哪些卡片和卡片操作可用于 Teams 中的机器人，并创建主图、缩略图和自适应卡片
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 1fc197901b806adbb6a640f320d0df7565f199a3
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558581"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311958"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -18,7 +18,7 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 
 ## <a name="create-a-hero-card-thumbnail-card-or-adaptive-card"></a>创建主图卡、缩略图卡或自适应卡片
 
-要从 App Studio 创建主图卡、缩略图卡或自适应卡片，请：
+要从 Teams 的开发人员门户创建主图卡、缩略图卡或自适应卡片，请：
 
 1. 转到 [Teams 开发人员门户](https://dev.teams.microsoft.com/home)。
 1. 选择“**设计和构建自适应卡片**”。
