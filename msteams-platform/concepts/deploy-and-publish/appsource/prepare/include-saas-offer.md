@@ -1,16 +1,16 @@
 ---
 title: 在应用中包含 SaaS 产品/服务
-description: 了解如何使用订阅计划使 Microsoft Teams 应用盈利，以及如何在 Microsoft Teams 应用中包含 SaaS 产品/服务。
+description: 本文介绍如何使用基于订阅的定价模型使 Microsoft Teams 应用盈利，以及如何在 Microsoft Teams 应用中包含 SaaS 产品/服务。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 872008353850fd2d8b569b4f345152fba895cffb
-ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
+ms.openlocfilehash: e9182df9f6c3c5d7f84654022e658ac6d670e50d
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2022
-ms.locfileid: "67158071"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288183"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>在 Teams 应用中包含 SaaS 产品/服务
 

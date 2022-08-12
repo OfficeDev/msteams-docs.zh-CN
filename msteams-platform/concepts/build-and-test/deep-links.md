@@ -1,14 +1,14 @@
 ---
 title: 创建深层链接
-description: 了解如何创建深层链接，以及如何在 Microsoft Teams 应用中使用和导航它们（带有选项卡）。
+description: 在本文中，你将了解如何创建深层链接，并使用选项卡在 Microsoft Teams 应用中导航它们。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
+ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058219"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "67302463"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -387,7 +387,10 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 ### <a name="deep-linking-to-an-app"></a>深层链接到聊天
 
 在 Teams 应用商店中列出应用后，为应用创建深层链接。 若要创建启动 Teams 的链接，请将应用 ID 追加到以下 URL：`https://teams.microsoft.com/l/app/<your-app-id>`。 将显示一个对话框来安装应用。
-  
+
+> [!NOTE]
+> 目前，移动平台不支持与应用的深层链接。
+
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint 框架选项卡的深层链接
 
 可以在机器人、连接器或消息扩展卡片中使用以下深层链接格式：`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`

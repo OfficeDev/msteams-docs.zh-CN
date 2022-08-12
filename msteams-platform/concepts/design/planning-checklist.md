@@ -5,12 +5,12 @@ description: 规划应用、了解用户及其需求、应用解决的问题、�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 60b0d1ed461ec7c632b1d488c65ac2c43f05f3ac
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 78dd40e13c3bdac359cc5201bda92a5b1daccfb8
+ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558126"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67286117"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams 应用规划清单
 
@@ -27,12 +27,14 @@ ms.locfileid: "66558126"
 <details>
 <summary>了解你的用户</summary>
 
+了解用户及其关注点是 Teams 应用提供帮助的第一个指标。 围绕问题构建用例，确定应用如何解决该问题，并绘制解决方案。 有关详细信息，请参阅[了解用例](understand-use-cases.md)。
+
 | # | 考虑… |
 | --- | --- |
 | 1 | 用户是否主要是移动客户端上的一线工作人员? |
-| 2 | 是否希望许多来宾用户需要访问你的应用? |
+| 2 | 是否希望许多外部用户需要访问你的应用? |
 | 3 | 他们是使用团队和频道，还是主要使用群组聊天? |
-| 4 | 主要用户在技术上有多成熟? |
+| 4 | 主要用户在技术上有多先进？ |
 | 5 | 需要全面的载入体验，还是需要一些指导性的建议? |
 
 </details>
@@ -63,10 +65,12 @@ ms.locfileid: "66558126"
 <details>
 <summary>提供身份验证</summary>
 
+身份验证就是验证应用用户以及保护应用和应用用户免受无端访问。 可以使用适用于应用的身份验证方法来验证想要使用 Teams 应用的应用用户。 有关详细信息，请参阅[对 Microsoft Teams 中的用户进行身份验证](../authentication/authentication.md)。
+
 | # | 考虑…|
 |--- | --- |
 | 1 | 用户是否会根据其角色访问不同的数据视图? |
-| 2 | 是否涉及 PII? |
+| 2 | 是否涉及客户内容？ |
 | 3 | 交互是否也基于用户角色? |
 | 4 | 外部用户是否将访问该应用? |
 
@@ -74,6 +78,8 @@ ms.locfileid: "66558126"
 <br>
 <details>
 <summary>计划载入体验</summary>
+
+构建出色的 Teams 应用就是寻找满足用户需求的正确功能组合的过程。 若要为用户提供无缝的载入体验，可以创建一个分步指南来说明如何处理应用。 例如，请参阅[创建 Teams 对话机器人](../../sbs-teams-conversation-bot.yml)。
 
 | # | 考虑… |
 | --- | --- |
@@ -109,17 +115,23 @@ ms.locfileid: "66558126"
 <details>
 <summary>选择生成环境</summary>
 
+借助 Teams，可以选择最适合应用要求的生成环境。 使用 Teams 工具包或其他 SDK（如 C#、Blazor、Node.js 等）开始使用。 有关详细信息，请参阅[使用 Teams 功能规划应用](../app-fundamentals-overview.md)。
+
 建议: 可帮助根据应用需求选择正确环境的选项。
 </details>
 <br>
 <details>
 <summary>测试应用的计划</summary>
 
+将应用与 Microsoft Teams 集成后，必须在发布应用之前对其进行测试。 最终目标是为应用获取尽可能多的用户，因此，请确保在用户可以使用的多个设备上测试应用。 有关详细信息，请参阅[测试应用](../build-and-test/test-app-overview.md)。
+
 建议: 有助于确定应用最佳测试环境的选项。
 </details>
 <br>
 <details>
 <summary>应用分发的计划</summary>
+
+你可以将 Microsoft Teams 应用提供给个人、团队、组织或想要使用它的任何人。 分发方式取决于多种因素，包括用户的需求、业务和技术要求以及应用的目标。 有关详细信息，请参阅[分发 Microsoft Teams 应用](../deploy-and-publish/apps-publish-overview.md)。
 
 建议: 有助于确定最佳分发模型的选项。
 
@@ -129,7 +141,7 @@ ms.locfileid: "66558126"
 
 Teams 不托管你的应用。 当用户在 Teams 中安装你的应用时，他们安装的应用包仅包含配置文件 (也称为应用清单) 以及应用的图标。 应用的逻辑和数据存储托管在其他地方，如开发期间的本地主机和 Azure Web 服务。 Teams 通过 HTTPS 访问这些资源。
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="显示 Teams 应用的应用托管插图":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="插图显示 Teams 应用的应用托管。":::
 
 ## <a name="plan-beyond-app-building"></a>应用生成之外的计划
 
