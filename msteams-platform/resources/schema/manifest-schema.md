@@ -3,12 +3,12 @@ title: 清单架构参考
 description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058212"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363436"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
@@ -358,7 +358,7 @@ Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产�
 
 此版本字符串必须遵循[semver](http://semver.org/)标准 (MAJOR.MINOR.PATCH)。
 
-## <a name="id"></a>id
+## <a name="id"></a>ID
 
 **必需**—Microsoft 应用 ID
 
@@ -398,7 +398,7 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果机器人是通过Mi
 
 向用户描述应用。对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
-确保说明描述你的体验，并帮助潜在客户了解你的体验。 如果需要使用外部帐户，则必须在完整说明中进行说明。 `short`和`full`的值必须不同。 简短说明不能在长说明中重复，也不能包含任何其他应用名称。
+确保说明描述你的体验，并帮助潜在客户了解你的体验。 如果需要使用外部帐户，则必须在完整说明中进行说明。 `short`和`full`的值必须不同。 不能在长说明中重复简短说明，也不得包含任何其他应用名称。
 
 |名称| 最大大小 | 必需 | Description|
 |---|---|---|---|
@@ -453,7 +453,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选**— 数组
 
-当应用体验具有团队频道选项卡体验时使用，该体验需要在添加之前进行额外配置。 只能在 `team` 和 `groupchat` 作用域中使用可配置的选项卡，并且可以多次配置相同的选项卡。 但是，只能在清单中定义一次。
+当应用体验具有团队频道选项卡体验时使用，该体验需要在添加之前进行额外的配置。 只能在 `team` 和 `groupchat` 作用域中使用可配置的选项卡，并且可以多次配置相同的选项卡。 但是，只能在清单中定义一次。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -615,7 +615,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 应用应在 Teams 客户端中加载的网站的有效域列表。 域列表可以包含通配符，例如，`*.example.com`。 有效域与域的一个段完全匹配;如果需要匹配 `a.b.example.com`则使用 `*.*.example.com`。 如果选项卡配置或内容 UI 导航到选项卡配置以外的任何其他域，则必须在此处指定该域。
 
-请 **不要** 包含要在应用中支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，需要重定向到 accounts.google.com，但是，不得在 `validDomains[]`中包含 accounts.google.com。
+请 **不要** 包含要在应用中支持的标识提供程序的域。 例如，若要使用 Google ID 进行身份验证，需要重定向到 accounts.google.com，但是，不得在 `validDomains[]`其中包含 accounts.google.com。
 
 需要自己的 SharePoint URL 才能正常运行的 Teams 应用包括 "{teamsitedomain}>在其有效域列表中。
 
@@ -633,13 +633,13 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|string|36 个字符|✔️|应用的 Azure AD 应用程序 ID。 此 ID 必须是 GUID。|
-|`resource`|string|2048 个字符|✔️|用于获取 SSO 的身份验证令牌的应用的资源 URL。 </br> **注意：** 如果未使用 SSO，请确保在此字段中向应用清单输入虚拟字符串值，例如， <https://notapplicable> 以避免错误响应。 |
+|`resource`|string|2048 个字符|✔️|用于获取 SSO 的身份验证令牌的应用的资源 URL。 </br> **注意：** 如果未使用 SSO，请确保在此字段中将虚拟字符串值输入到应用清单，例如， <https://notapplicable> 以避免错误响应。 |
 
 ## <a name="graphconnector"></a>graphConnector
 
 **可选**— 对象
 
-指定应用的 Graph 连接器配置。 如果存在，则还必须指定 [webApplicationInfo.id](#webapplicationinfo)。
+指定应用的 Graph 连接器配置。 如果存在，则还必须指定 [webApplicationInfo.id](#webapplicationinfo) 。
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -767,15 +767,15 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 可以定义以下任一属性：
 
-* `name`：应用显示名称。
-* `shortDescription`：应用的简短说明。
-* `longDescription`：应用的详细说明。
-* `smallImageUrl`：应用的大纲图标。
-* `largeImageUrl`：应用的颜色图标。
-* `accentColor`：用于边框图标的颜色和背景。
-* `developerUrl`：开发人员网站的 HTTPS URL。
-* `privacyUrl`：开发人员隐私策略的 HTTPS URL。
-* `termsOfUseUrl`：开发人员使用条款的 HTTPS URL。
+* [名称](#name)：应用的显示名称。
+* [shortDescription](#description)：应用的简短说明。
+* [longDescription](#description)：应用的长描述。
+* [smallImageUrl](#icons)：应用的大纲图标。
+* [largeImageUrl](#icons)：应用的颜色图标。
+* [accentColor](#accentcolor)：要使用的颜色和轮廓图标的背景。
+* [developerUrl](#developer)：开发人员网站的 HTTPS URL。
+* [privacyUrl](#developer)：开发人员隐私策略的 HTTPS URL。
+* [termsOfUseUrl](#developer)：开发人员使用条款的 HTTPS URL。
 
 ## <a name="supportedchanneltypes"></a>supportedChannelTypes
 

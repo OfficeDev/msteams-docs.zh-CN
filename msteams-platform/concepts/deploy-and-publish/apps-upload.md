@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 96b80409697c9347fac82138d0e929c5c874725a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 702f8c6c53038fcedbd30a34262f2ed49eb03752
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558098"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363450"
 ---
 # <a name="upload-your-app-in-teams"></a>在 Teams 中上传应用
 
@@ -24,7 +24,9 @@ ms.locfileid: "66558098"
 > 多次旁加载应用会显示消息传递扩展的多个实例。
 
 > [!IMPORTANT]
-> 目前，旁加载应用在政府社区云 (GCC) 中可用，但不适用于 GCC-High 和国防部 (DOD)。
+>
+> * 目前，仅在政府社区云 (GCC) 中可以旁加载应用，GCC-High和国防部 (DOD) 中无法旁加载应用。
+> * 仅 Teams 桌面应用支持应用安装。
 
 ## <a name="prerequisites"></a>先决条件
 

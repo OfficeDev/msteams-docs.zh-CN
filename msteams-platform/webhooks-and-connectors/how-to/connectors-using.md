@@ -4,12 +4,12 @@ author: laujan
 description: 在本模块中，了解如何使用 Office 365 连接器并在 Microsoft Teams 中创建和发送可操作邮件
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 6e50877f1afbebe1e132c6461fbae30445227f43
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190102"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337213"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -289,3 +289,5 @@ try
 * [Teams 机器人消息的速率限制](~/bots/how-to/rate-limit.md)
 * [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Microsoft Teams 中的格式卡](~/task-modules-and-cards/cards/cards-format.md)
+* [使用 JavaScript 生成通知机器人](../../sbs-gs-notificationbot.yml)
+* [使用 JavaScript 生成第一个机器人应用](../../sbs-gs-bot.yml)

@@ -1,18 +1,21 @@
 ---
 title: " Microsoft Teams 中的自动程序"
 author: surbhigupta
-description: 借助此学习路径，开始使用 Microsoft Teams 中的聊天机器人及其代码示例。
+description: 在本文中，使用 Microsoft Teams 中的聊天机器人共享文件、发送主动通知、交互式卡片、呼叫、调用机器人命令、IVR。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: f04f41ac100f243f7560f63364475cd877cf7bf3
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
-ms.translationtype: HT
+ms.openlocfilehash: 90176b63c64d23ae76a8c98515e37455ab0742c0
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912259"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363502"
 ---
 # <a name="build-bots-for-teams"></a>为 Teams 生成机器人
+
+> [!NOTE]
+> 建议使用 Teams 的新一代开发工具创建第一个机器人应用或通知机器人应用。 有关详细信息，请参阅 [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) 和 [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md)。
 
 机器人也称为聊天机器人或对话机器人。 它是一个应用，可由客户服务或支持人员等用户运行简单且重复的任务。 机器人的日常使用包括提供天气信息、预订餐食或提供旅行信息。 与机器人的交互可以是快速问答或复杂的对话。
 
@@ -26,17 +29,17 @@ ms.locfileid: "66912259"
 
 会话机器人允许用户通过文本、交互卡和任务模块与 web 服务进行交互。
 
-:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="使用文本的 Web 服务"lightbox="../assets/images/invokebotwithtext.png":::
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="屏幕截图是显示使用文本的 Web 服务的示例。"lightbox="../assets/images/invokebotwithtext.png":::
 
-:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="使用交互卡的 Web 服务"lightbox="../assets/images/invokebotwithcard.png"border="true":::
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="屏幕截图是显示使用交互式卡片的 Web 服务的示例。"lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-:::image type="content" source="../assets/images/task-module-example.png" alt-text="使用任务模块的 Web 服务"lightbox="../assets/images/task-module-example.png"border="true":::
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="屏幕截图是显示使用任务模块的 Web 服务的示例。" lightbox="../assets/images/task-module-example-expanded.png":::
 
 对话机器人非常灵活。 机器人可以处理涉及人工智能和自然语言处理的一些基本命令或复杂任务。 机器人可以是较大应用程序的一部分，也可以是独立的。
 
 使用卡片、文本和任务模块的正确组合创建有用的机器人。 下图显示了用户在使用文本和交互式卡片的一对一聊天中与机器人交谈。
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="示例常见问题解答机器人":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="屏幕截图是显示示例常见问题解答机器人的示例。":::
 
 用户与机器人之间的每次交互都表示为活动。 机器人收到活动时，会将其传递给其活动处理程序。 参阅[机器人活动处理程序](~/bots/bot-basics.md)。
 
@@ -65,6 +68,9 @@ ms.locfileid: "66912259"
 |示例名称 | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | 机器人每日任务提醒| 演示如何计划定期任务并在计划的时间获取提醒。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| Hello World机器人 | 这是一个简单的 hello world 应用程序，同时具有机器人和消息扩展功能。 |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| 自适应卡片通知 | 此示例演示如何使用机器人使用不同的自适应卡片发送通知。 |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| 传入 Webhook 通知 | 此示例演示如何通过 Microsoft Teams 频道中的传入 Webhook 发送通知。 |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## <a name="see-also"></a>另请参阅
 
@@ -74,3 +80,5 @@ ms.locfileid: "66912259"
 * [向 Teams 机器人添加身份验证](~/bots/how-to/authentication/add-authentication.md)
 * [智能机器人活动处理程序](~/bots/bot-basics.md)
 * [Teams 智能机器人中的对话活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [使用 JavaScript 生成第一个机器人应用](../sbs-gs-bot.yml)
+* [使用 JavaScript 生成通知机器人](../sbs-gs-notificationbot.yml)
