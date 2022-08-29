@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Microsoft Teams 中创建传出 W
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c3f7c3a1574af944dfc2ae64f76ec4d538cedae3
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: e86f3825e39340cb228b24dccc770b2d302fb848
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503317"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337157"
 ---
 # <a name="create-outgoing-webhooks"></a>创建传出 Webhook
 
@@ -249,3 +249,5 @@ var responseMsg = JSON.stringify({
 * [创建传入 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [创建 Office 365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [创建和发送邮件](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [使用 JavaScript 生成通知机器人](../../sbs-gs-notificationbot.yml)
+* [使用 JavaScript 生成第一个机器人应用](../../sbs-gs-bot.yml)
