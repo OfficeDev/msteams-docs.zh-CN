@@ -5,12 +5,12 @@ description: 在本模块中，了解如何开始使用Office 365连接器并将
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: a0e135864fd7c7d9775731e6c46faf9f24242943
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: bb4bd02553ebb49752fa6450cd0f94f41dcc7ac8
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841631"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363480"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -19,7 +19,7 @@ ms.locfileid: "66841631"
 请参阅以下视频，了解如何创建Office 365连接器：
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -260,3 +260,5 @@ ms.locfileid: "66841631"
 * [创建 Office 365 连接器](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [管理员如何启用或禁用连接器](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [管理员如何在组织内发布自定义连接器](/MicrosoftTeams/office-365-custom-connectors)
+* [使用 JavaScript 生成通知机器人](../../sbs-gs-notificationbot.yml)
+* [使用 JavaScript 生成第一个机器人应用](../../sbs-gs-bot.yml)

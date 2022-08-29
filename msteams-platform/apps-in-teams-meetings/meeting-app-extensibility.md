@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919849"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417505"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -38,7 +38,7 @@ Teams 统一会议应用基于以下概念：
 选项卡允许团队成员访问会议中特定空间内的服务和内容。 团队直接使用选项卡，并就选项卡中可用的工具和数据进行对话。 在 Teams 会议中，可以通过选择添加选项卡来添加选项卡 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>，然后选择要安装的应用。
 
 > [!IMPORTANT]
-> 如果已将选项卡与会议集成，则应用必须遵循 Teams [单一登录 (选项卡的 SSO) 身份验证流](../tabs/how-to/authentication/tab-sso-overview.md)。
+> 如果已在会议中集成了选项卡应用，建议遵循 Teams [单一登录 (SSO) 选项卡的身份验证流](../tabs/how-to/authentication/tab-sso-overview.md)。
 
 > [!NOTE]
 > Teams Web 客户端不支持为 Teams 会议扩展选项卡应用添加应用选项。

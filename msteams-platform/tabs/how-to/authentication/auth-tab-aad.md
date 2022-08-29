@@ -3,12 +3,12 @@ title: 配置第三方 OAuth 身份验证
 description: 本文介绍 Teams 身份验证选项卡Microsoft Azure AD、Teams 中的身份验证以及如何在选项卡中使用它。
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: f3a3e9d4ae848459c4804895aa2f28a66868ddb0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 18a643af2b8a15940915145d02207f2aec93b014
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503464"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67434997"
 ---
 # <a name="configure-third-party-oauth-idp-authentication"></a>配置第三方 OAuth IdP 身份验证
 
@@ -20,11 +20,13 @@ Teams 用户配置文件信息存储在使用 Microsoft Graph 的 Azure AD 中�
 
 OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证开放标准。 了解 OAuth 2.0 是在 Teams 和 Azure AD 中使用身份验证的先决条件。 以下示例使用 OAuth 2.0 隐式授予流。 它从 Azure AD 和 Microsoft Graph 读取用户的个人资料信息。
 
-本文中的代码来自 Teams 示例应用，即 [Microsoft Teams 选项卡身份验证示例（节点）](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)。 它包含一个静态选项卡，该选项卡请求 Microsoft Graph 的访问令牌，并显示来自 Azure AD 的当前用户的基本配置文件信息。
+本文中的代码来自 Teams 示例应用 [Microsoft Teams 身份验证示例 (节点) ](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs)。 它包含一个静态选项卡，该选项卡请求 Microsoft Graph 的访问令牌，并显示来自 Azure AD 的当前用户的基本配置文件信息。
 
 有关选项卡的身份验证流概述，请参阅 [选项卡中的身份验证流](~/tabs/how-to/authentication/auth-flow-tab.md)。
 
 选项卡中的身份验证流不同于机器人中的身份验证流。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="configure-your-app-to-use-azure-ad-as-an-identity-provider"></a>将应用配置为使用 Azure AD 作为标识提供者
 
@@ -49,7 +51,31 @@ OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证开放
 
 将按钮添加到配置或内容页，使用户能够在需要时登录。 可在选项卡的[配置](~/tabs/how-to/create-tab-pages/configuration-page.md)页或任何[内容](~/tabs/how-to/create-tab-pages/content-page.md)页上完成此操作。
 
-与大多数标识提供者一样，Azure AD 不允许将其内容放置在某个标识提供者中 `iframe`。 这意味着需要添加一个弹出页来托管标识提供者。 在以下示例中，此页为 `/tab-auth/simple-start`. `microsoftTeams.authenticate()`选择按钮时，使用 Microsoft Teams 客户端 SDK 的函数启动此页面。
+与大多数标识提供者一样，Azure AD 不允许将其内容放置在某个标识提供者中 `iframe`。 这意味着需要添加一个弹出页来托管标识提供者。 在以下示例中，此页为 `/tab-auth/simple-start`. `authentication.authenticate()`选择按钮时，使用 Microsoft Teams 客户端 SDK 的函数启动此页面。
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+import { authentication } from "@microsoft/teams-js";
+authentication.authenticate({
+    url: window.location.origin + "/tab/simple-start-v2"),
+    width: 600,
+    height: 535})
+.then((result) => {
+    console.log("Login succeeded: " + result);
+    let data = localStorage.getItem(result);
+    localStorage.removeItem(result);
+    let tokenResult = JSON.parse(data);
+    showIdTokenAndClaims(tokenResult.idToken);
+    getUserProfile(tokenResult.accessToken);
+})
+.catch((reason) => {
+    console.log("Login failed: " + reason);
+    handleAuthError(reason);
+});
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -64,18 +90,49 @@ microsoftTeams.authentication.authenticate({
     }
 });
 ```
+---
 
 ### <a name="notes"></a>注释
 
-* 传递给 `microsoftTeams.authentication.authenticate()` 的 URL 是身份验证流的起始页。 在此示例中，它是 `/tab-auth/simple-start`。 这应与在 [Azure AD 应用程序注册门户](https://apps.dev.microsoft.com)中注册的内容相一致。
+* 传递给 `authenticate()` 的 URL 是身份验证流的起始页。 在此示例中，它是 `/tab-auth/simple-start`。 这应与在 [Azure AD 应用程序注册门户](https://apps.dev.microsoft.com)中注册的内容相一致。
 
 * 身份验证流必须从域上的页面开始。 此域还应在清单的 [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) 部分中列出。 如果不这样做，则会导致出现空弹出窗口。
 
-* 如果无法使用 `microsoftTeams.authentication.authenticate()` ，则会导致弹出窗口在登录过程结束时未关闭。
+* 如果无法使用 `authenticate()` ，则会导致弹出窗口在登录过程结束时未关闭。
 
 ## <a name="navigate-to-the-authorization-page-from-your-pop-up-page"></a>从弹出页导航到授权页
 
-当弹出页 (`/tab-auth/simple-start`) 显示时，将运行以下代码。 此页面的主要目标是重定向到标识提供者，以便用户可以登录。 可以使用 HTTP 302 在服务器端执行此重定向，但在本例中，此重定向是在客户端使用调用来 `window.location.assign()`完成的。 这还允许使用 `microsoftTeams.getContext()` 来检索提示信息，这些提示信息可以传递给 Azure AD。
+当弹出页 (`/tab-auth/simple-start`) 显示时，将运行以下代码。 页面的主要目标是重定向到标识提供者，以便用户可以登录。 可以使用 HTTP 302 在服务器端执行此重定向，但在本例中，此重定向是在客户端使用调用完成 `window.location.assign()`的。 这还允许使用 `app.getContext()` 来检索提示信息，这些提示信息可以传递给 Azure AD。
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+app.getContext().then((context) => {
+    // Generate random state string and store it, so we can verify it in the callback
+    let state = _guid(); // _guid() is a helper function in the sample
+    localStorage.setItem("simple.state", state);
+    localStorage.removeItem("simple.error");
+
+    // Go to the Azure AD authorization endpoint
+    let queryParams = {
+        client_id: "{{appId}}",
+        response_type: "id_token token",
+        response_mode: "fragment",
+        scope: "https://graph.microsoft.com/User.Read openid",
+        redirect_uri: window.location.origin + "/tab/simple-end",
+        nonce: _guid(),
+        state: state,
+        // The context object is populated by Teams; the loginHint attribute
+        // is used as hinting information
+        login_hint: context.user.loginHint,
+    };
+
+    let authorizeEndpoint = `https://login.microsoftonline.com/${context.user.tenant.id}/oauth2/v2.0/authorize?${toQueryString(queryParams)}`;
+    window.location.assign(authorizeEndpoint);
+});
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -102,12 +159,14 @@ microsoftTeams.getContext(function (context) {
 });
 ```
 
+---
+
 完成授权后，用户将重定向到在 `/tab-auth/simple-end` 上为应用指定的回调页。
 
 ### <a name="notes"></a>注释
 
 * 有关生成身份验证请求和 URL 的帮助，请参阅[获取用户上下文信息](~/tabs/how-to/access-teams-context.md)。 例如，可以将用户的登录名用作 Azure AD登录的 `login_hint` 值，这意味着用户只需输入更少的内容。 请记住，不应直接使用此上下文作为身份证明，因为攻击者可能会在恶意浏览器中加载页面，并向其提供所需的任何信息。
-* 尽管选项卡上下文提供了有关用户的有用信息，但无论是将其用作选项卡内容 URL 的 URL 参数还是通过调用 Microsoft Teams 客户端 SDK 中的 `microsoftTeams.getContext()` 函数，都不要使用此信息对用户进行身份验证。 恶意行动者可以使用自己的参数来调用选项卡内容 URL，而模拟 Microsoft Teams 的网页可能会在 iframe 中加载选项卡内容 URL，并将其自己的数据返回给 `getContext()` 函数。 应将选项卡上下文中与身份相关的信息视为提示，并在使用前对其进行验证。
+* 尽管选项卡上下文提供了有关用户的有用信息，但无论是将其用作选项卡内容 URL 的 URL 参数还是通过调用 Microsoft Teams 客户端 SDK 中的 `app.getContext()` 函数，都不要使用此信息对用户进行身份验证。 恶意行动者可以使用自己的参数来调用选项卡内容 URL，而模拟 Microsoft Teams 的网页可能会在 iframe 中加载选项卡内容 URL，并将其自己的数据返回给 `getContext()` 函数。 应将选项卡上下文中与身份相关的信息视为提示，并在使用前对其进行验证。
 * `state` 参数用于确认调用回调 URI 的服务就是你调用的服务。 `state`如果回调中的参数与在调用期间发送的参数不匹配，则返回调用不会进行验证，应终止。
 * 无需在应用的 manifest.json 文件的列表中 `validDomains` 包含标识提供者的域。
 
@@ -115,37 +174,41 @@ microsoftTeams.getContext(function (context) {
 
 在上一部分中，你调用了 Azure AD 授权服务，并传入了用户和应用信息，以便 Azure AD 可以向用户提供自己的整体授权体验。 你的应用无法控制此体验中发生的情况。 它只知道当 Azure AD 调用你提供的回调页时返回的内容 (`/tab-auth/simple-end`)。
 
-在此页中，需要根据 Azure AD 返回的信息和调用或确定 `microsoftTeams.authentication.notifySuccess()` 成功或 `microsoftTeams.authentication.notifyFailure()`失败。 如果登录成功，你将有权访问服务资源。
+在此页中，需要根据 Azure AD 返回的信息和调用或确定 `authentication.notifySuccess()` 成功或 `authentication.notifyFailure()`失败。 如果登录成功，你将有权访问服务资源。
 
-````javascript
+```javascript
 // Split the key-value pairs passed from Azure AD
 // getHashParameters is a helper function that parses the arguments sent
 // to the callback URL by Azure AD after the authorization call
 let hashParams = getHashParameters();
 if (hashParams["error"]) {
     // Authentication/authorization failed
-    microsoftTeams.authentication.notifyFailure(hashParams["error"]);
+    localStorage.setItem("simple.error", JSON.stringify(hashParams));
 } else if (hashParams["access_token"]) {
     // Get the stored state parameter and compare with incoming state
-    // This validates that the data is coming from Azure AD
     let expectedState = localStorage.getItem("simple.state");
     if (expectedState !== hashParams["state"]) {
         // State does not match, report error
-        microsoftTeams.authentication.notifyFailure("StateDoesNotMatch");
+        localStorage.setItem("simple.error", JSON.stringify(hashParams));
+        authentication.notifyFailure("StateDoesNotMatch");
     } else {
-        // Success: return token information to the tab
-        microsoftTeams.authentication.notifySuccess({
+        // Success -- return token information to the parent page.
+        // Use localStorage to avoid passing the token via notifySuccess; instead we send the item key.
+        let key = "simple.result";
+        localStorage.setItem(key, JSON.stringify({
             idToken: hashParams["id_token"],
             accessToken: hashParams["access_token"],
             tokenType: hashParams["token_type"],
             expiresIn: hashParams["expires_in"]
-        })
+        }));
+        authentication.notifySuccess(key);
     }
 } else {
     // Unexpected condition: hash does not contain error or access_token parameter
-    microsoftTeams.authentication.notifyFailure("UnexpectedFailure");
+    localStorage.setItem("simple.error", JSON.stringify(hashParams));
+    authentication.notifyFailure("UnexpectedFailure");
 }
-````
+```
 
 此代码使用 `getHashParameters()` 帮助程序函数来解析从 `window.location.hash` 中的 Azure AD 接收到的键值对。 如果它找到 `access_token`，并且 `state` 值与身份验证流开始时提供的值相同，则它会通过调用 `notifySuccess()` 将访问令牌返回给选项卡，否则会报告错误并显示 `notifyFailure()`。
 

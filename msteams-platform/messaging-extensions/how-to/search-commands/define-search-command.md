@@ -5,12 +5,12 @@ description: 在本模块中，了解 Teams 应用的消息扩展搜索命令，
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312266"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363471"
 ---
 # <a name="define-message-extension-search-commands"></a>定义消息扩展搜索命令
 
@@ -24,7 +24,7 @@ ms.locfileid: "67312266"
 请参阅以下视频，了解如何定义消息扩展搜索命令：
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>选择搜索命令调用位置
@@ -113,6 +113,7 @@ ms.locfileid: "67312266"
 | `parameter.description` | 此属性描述参数的用途或必须提供的值的示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
 | `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括`text`， `textarea`， `number`， `date`， `time`。 `toggle` 默认设置为 `text`. | 否 | 1.4 |
+| `parameters.value` | 参数的初始值。 当前不支持该值 | 否 | 1.5 |
 
 #### <a name="example"></a>示例
 

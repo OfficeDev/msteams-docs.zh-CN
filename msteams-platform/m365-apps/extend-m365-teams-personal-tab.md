@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 1110d195be91c73f9e0f60f15a94f2cdbdfa083b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919772"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337234"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -246,6 +246,7 @@ ms.locfileid: "66919772"
 | 待办事项列表 | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 仅在 Teams 中工作 (使用此示例应用来尝试本教程) 中所述的升级过程。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Microsoft 365 (待办事项列表)  | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Microsoft 365 (图像编辑器)  | 使用 Microsoft 图形 API 创建、编辑、打开和保存映像。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| Microsoft 365)  (示例启动页 | 展示 SSO 身份验证并利用不同主机上可用的 TeamsJS SDK 功能。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>后续步骤
 

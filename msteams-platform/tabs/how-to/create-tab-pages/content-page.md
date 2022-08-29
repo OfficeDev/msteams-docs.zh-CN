@@ -1,16 +1,16 @@
 ---
 title: 创建内容页
 author: surbhigupta
-description: 在本模块中，了解如何为选项卡和选项卡内容创建内容页面以及设计指南
-ms.localizationpriority: medium
+description: 了解 Teams 客户端中的网页，并且是个人、频道或组自定义选项卡的一部分。创建内容页并将其嵌入到任务模块中作为 Webview。
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4fd9c301ba48f346b9e721f5d6b3baa13ca50c04
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841966"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450371"
 ---
 # <a name="create-a-content-page"></a>创建内容页
 
@@ -33,6 +33,9 @@ ms.locfileid: "66841966"
 ## <a name="integrate-your-code-with-teams"></a>将代码与 Teams 集成
 
 若要在 Teams 中显示页面，必须包含 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，并在页面加载后包含对 `app.initialize()` 的调用。
+
+> [!NOTE]
+> 由于缓存，在选项卡应用中反映任何内容或 UI 更改需要近 24-48 小时。
 
 以下代码提供了页面和 Teams 客户端如何通信的示例：
 

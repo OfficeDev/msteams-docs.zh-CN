@@ -5,12 +5,12 @@ description: 了解 Teams 和 Microsoft Power Platform 提供的 Microsoft 低�
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 74dd4eb094c31510319932ec96cbb0db34a1fca5
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 59730f586ff90a6f0de9061c41ccc6c2e24385ef
+ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503310"
+ms.lasthandoff: 08/19/2022
+ms.locfileid: "67382935"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>为 Teams 创建低代码自定义应用
 
@@ -25,7 +25,11 @@ Microsoft Power Platform 将四种强大的 Microsoft 技术（如 Power BI、Po
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power Platform 服务":::
 
 > [!NOTE]
-> 不得使用 Microsoft Power Platform 创建要发布到 Teams 应用商店的应用。 Microsoft Power Platform 应用只能发布到组织的应用商店。
+>
+> - 如果有兴趣在 Teams 应用商店中为所有组织中的用户发布电源应用，请填写此 [表单](https://go.microsoft.com/fwlink/?linkid=2204468)。
+> - 如果有兴趣为特定组织发布应用，请参阅以下内容：
+>   - [Power Apps 和 Microsoft Teams 集成](/power-apps/teams/overview)
+>   - [使用 Power Apps 在 Microsoft Teams 中创建应用](/power-apps/teams/create-apps-overview)
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams 和 Power BI
 

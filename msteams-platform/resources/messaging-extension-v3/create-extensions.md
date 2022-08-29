@@ -3,18 +3,18 @@ title: 使用邮件扩展启动操作
 description: 在本模块中，了解如何创建基于操作的消息扩展，以允许用户触发外部服务
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143674"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337143"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>使用邮件扩展启动操作
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-基于操作的消息扩展允许用户在Teams时触发外部服务中的操作。
+基于操作的消息扩展允许用户在 Teams 中触发外部服务中的操作。
 
 ![消息扩展卡的示例](~/assets/images/compose-extensions/ceexample.png)
 
@@ -25,6 +25,9 @@ ms.locfileid: "66143674"
 ## <a name="action-type-message-extensions"></a>操作类型消息扩展
 
 若要从消息扩展启动操作，请将 `type` 参数设置为 `action`。 下面是包含搜索和创建命令的清单示例。 单个消息扩展最多可以有 10 个不同的命令。 这可以包括多个搜索和多个基于操作的命令。
+
+ > [!NOTE]
+ >`justInTimeInstall` 将应用上传到应用目录时函数，但在旁加载应用时失败。
 
 ### <a name="complete-app-manifest-example"></a>完整的应用清单示例
 
@@ -232,13 +235,13 @@ ms.locfileid: "66143674"
 
 ## <a name="collecting-input-from-users"></a>从用户收集输入
 
-可通过三种方式从Teams中的最终用户收集信息。
+可通过三种方法从 Teams 中的最终用户处收集信息。
 
 ### <a name="static-parameter-list"></a>静态参数列表
 
-在此方法中，只需在清单中定义参数的静态列表，如上面的“创建微软待办”命令中所示。 若要使用此方法，请确保 `fetchTask` 设置为 `false` 并在清单中定义参数。
+在此方法中，只需在清单中定义参数的静态列表，如上面的“创建待件”命令中所示。 若要使用此方法，请确保 `fetchTask` 设置为 `false` 并在清单中定义参数。
 
-当用户选择具有静态参数的命令时，Teams将在任务模块中生成一个表单，其中包含清单中定义的参数。 点击“提交”时，将向机器人发送一个 `composeExtension/submitAction` 。 有关预期响应集的详细信息，请参阅 [“响应提交](#responding-to-submit)”。
+当用户选择具有静态参数的命令时，Teams 将在任务模块中生成一个表单，其中包含清单中定义的参数。 点击“提交”时，将向机器人发送一个 `composeExtension/submitAction` 。 有关预期响应集的详细信息，请参阅 [“响应提交](#responding-to-submit)”。
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>使用自适应卡片的动态输入
 
@@ -441,12 +444,13 @@ ms.locfileid: "66143674"
 1. 提交配置任务模块后，应用使用任务模块中提供的信息来制作自适应卡片，并将其作为 `botMessagePreview` 响应发送给客户端。
 1. 然后，用户可以在机器人将其插入通道之前预览自适应卡片消息。 如果机器人不是通道的成员，单击 `Send` 将添加机器人。
 1. 与自适应卡片交互会在发送消息之前更改消息。
-1. 用户选择`Send`后，机器人会将消息帖子到通道。
+1. 用户选择 `Send` 后，机器人会将消息发布到通道。
 
 若要启用此流，任务模块应响应，如下面的示例所示，该示例将向用户显示预览消息。
 
->[!Note]
->该 `activityPreview` 活动必须包含完全包含 1 个 `message` 自适应卡片附件的活动。
+> [!NOTE]
+> 该 `activityPreview` 活动必须包含完全包含 1 个 `message` 自适应卡片附件的活动。
+
 
 ```json
 {
@@ -560,7 +564,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-此示例使用 [Microsoft.Bot.Connector.Teams 显示此流SDK (v3) ](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
+此示例使用 [Microsoft.Bot.Connector.Teams SDK (v3) ](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)显示此流。
 
 ```csharp
 public class MessagesController : ApiController

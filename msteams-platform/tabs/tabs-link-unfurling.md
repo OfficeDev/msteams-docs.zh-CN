@@ -1,16 +1,16 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 了解如何展开链接、打开阶段视图并使用 Microsoft Teams 应用固定选项卡。 了解阶段视图以及如何使用代码示例和样本通过自适应卡片调用它。
+description: 了解阶段视图，这是调用以显示 Web 内容的全屏 UI 组件。 链接展开用于使用自适应卡将 URL 转换为选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: medium
-ms.openlocfilehash: 9a12a32f15f0eb580b30897459d28b16bc88dccc
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.localizationpriority: high
+ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841987"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450448"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 

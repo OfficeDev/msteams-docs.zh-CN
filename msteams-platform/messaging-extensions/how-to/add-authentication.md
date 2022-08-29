@@ -5,16 +5,19 @@ description: 本文介绍如何使用代码示例和示例将身份验证添加�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190270"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435046"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>为消息扩展添加身份验证
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> 向消息扩展添加身份验证后，用户必须将“**token.botframework.com**”添加到清单中的“**validDomains**”部分。
 
 ## <a name="identify-the-user"></a>标识用户
 
@@ -75,14 +78,14 @@ ms.locfileid: "66190270"
 
 登录体验必须具有响应能力，并且适合弹出窗口。 它应与使用消息传递的 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 集成。
 
-与 Microsoft Teams 内运行的其他嵌入式体验一样，窗口内的代码也需要先调用 `microsoftTeams.initialize()`。 如果代码执行 OAuth 流，则可以将 Teams 用户 ID 传递到窗口，然后将其传递到 OAuth 登录 URL。
+与 Microsoft Teams 内运行的其他嵌入式体验一样，窗口内的代码也需要先调用 `app.initialize()`。 如果代码执行 OAuth 流，则可以将 Teams 用户 ID 传递到窗口，然后将其传递到 OAuth 登录 URL。
 
 ### <a name="complete-the-sign-in-flow"></a>完成登录流
 
 当登录请求完成并重定向回页面后，必须执行以下步骤：
 
 1. 生成安全代码（一个随机数）。 必须使用通过登录流获取的凭据（例如 OAuth 2.0 令牌）在服务上缓存此代码。
-1. 调用 `microsoftTeams.authentication.notifySuccess` 并传递安全代码。
+1. 调用 `authentication.notifySuccess` 并传递安全代码。
 
 此时，窗口会关闭，并且控件将传递给 Teams 客户端。 客户端现在会重新发出原始用户查询，以及属性中 `state` 的安全代码。 你的代码可以使用安全代码来查找之前存储的凭据以完成身份验证序列，然后完成用户请求。
 

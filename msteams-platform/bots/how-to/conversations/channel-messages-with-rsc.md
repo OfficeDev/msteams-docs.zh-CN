@@ -1,15 +1,15 @@
 ---
 title: 使用 RSC 接收所有频道消息
 author: surbhigupta12
-description: 在本模块中，了解如何接收具有 RSC 权限的所有通道消息，以及如何让机器人接收所有通道消息
+description: 允许机器人接收所有通道消息，而无需使用 RSC 权限@mentioned。 阅读清单中的 webApplicationInfo 或授权部分。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d0a8c05136d4ab98270d3d837c008f0e46bcae33
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bd740c999139d9b5f98c10800646501dd55e87f5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143513"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363464"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>使用 RSC 接收所有频道消息
 
@@ -33,8 +33,7 @@ ms.locfileid: "66143513"
 
 若要让机器人接收所有频道消息，必须使用 `webApplicationInfo` 属性中指定的 `ChannelMessage.Read.Group` 权限在 Teams 应用清单文件中配置 RSC。
 
-![更新应用清单](~/bots/how-to/conversations/Media/appmanifest.png)
-
+:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="应用清单更新的屏幕截图。":::
 
 下面是 `webApplicationInfo` 对象的示例：
 
@@ -46,12 +45,12 @@ ms.locfileid: "66143513"
 
 ```json
 "webApplicationInfo": {
-"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-"resource": "https://AnyString",
-"applicationPermissions": [
-"ChannelMessage.Read.Group"
-    ]
-  }
+  "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+  "resource": "https://AnyString",
+  "applicationPermissions": [
+    "ChannelMessage.Read.Group"
+  ]
+}
 ```
 
 ## <a name="sideload-in-a-team"></a>团队中的旁加载
@@ -62,29 +61,29 @@ ms.locfileid: "66143513"
 1. 从左侧窗格中选择省略号 &#x25CF;&#x25CF;&#x25CF。 此时将显示下拉菜单。
 1. 从下拉菜单中选择“**管理团队**”。 此时将显示详细信息。
 
-   ![在团队中管理应用](~/bots/how-to/conversations/Media/managingteam.png)
-
-      :::image type="content" source="Media/managingteam.png" alt-text="管理团队"border="true":::
+   :::image type="content" source="Media/managingteam.png" alt-text="Teams 应用程序中管理团队选项的屏幕截图。":::
 
 1. 选择“**应用**”。 此时将显示多个应用。
+
 1. 从右下角选择 **上传自定义应用**。
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="上传自定义应用":::
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="上传自定义应用选项的屏幕截图。":::
   
 1. 从“**打开**”对话框中选择应用程序包。
+
 1. 选择 **“打开”**。
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="选择应用程序包"lightbox="Media/selectapppackage.png"border="true":::
+      :::image type="content" source="Media/selectapppackage.png" alt-text="用于选择应用包的打开对话框的屏幕截图。" lightbox="Media/selectapppackage.png":::
 
 1. 从应用详细信息弹出窗口中选择“**添加**”，以便将机器人添加到选定团队。
 
-      :::image type="content" source="Media/addingbot.png" alt-text="添加机器人"lightbox="Media/addingbot.png"border="true":::
+      :::image type="content" source="Media/addingbot.png" alt-text="用于向团队添加机器人的“添加”按钮的屏幕截图。" lightbox="Media/addingbot.png":::
 
 1. 选择一个频道并在机器人频道中输入消息。
 
     机器人可以在未提及的情况下接收消息。
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="机器人接收消息"lightbox="Media/botreceivingmessage.png"border="true":::
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="机器人在频道中接收消息的屏幕截图。" lightbox="Media/botreceivingmessage.png":::
 
 ## <a name="code-snippets"></a>代码段
 
@@ -128,3 +127,4 @@ this.onMessage(async (context, next) => {
 * [特定于资源的同意](/microsoftteams/resource-specific-consent)
 * [测试资源特定许可](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [在 Teams 中上传自定义应用](~/concepts/deploy-and-publish/apps-upload.md)
+* [列出频道中对消息的答复](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)

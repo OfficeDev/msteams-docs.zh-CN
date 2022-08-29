@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Microsoft Teams 中使用应用�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6612309fc6d96a6e40e504edf14dc054f7412a30
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 0b51d34aaacfe38c077b03b5df8bb6a9227c5b61
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311980"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363457"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -30,7 +30,7 @@ ms.locfileid: "67311980"
 请参阅以下视频，了解如何定义消息扩展操作命令：
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>选择操作命令调用位置

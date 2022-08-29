@@ -1,14 +1,14 @@
 ---
 title: 呼叫和联机会议机器人
-description: 在本模块中，了解Microsoft Teams应用如何使用 Microsoft Graph API 进行呼叫和联机会议的语音和视频与用户交互，并了解实时媒体流
+description: 在本模块中，了解 Microsoft Teams 应用如何使用语音和视频与用户交互，使用 Microsoft Graph API 进行通话和联机会议，并了解实时媒体流
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fe13adaf662d70e7ca9e7f1ca3d73bac0208f53
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: db50d0d8228cc4241e67b9bfb48f35559402fc9d
+ms.sourcegitcommit: d3eb976f5883c1f019083b516289537ff8263cad
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150825"
+ms.lasthandoff: 08/26/2022
+ms.locfileid: "67442989"
 ---
 # <a name="calls-and-online-meetings-bots"></a>呼叫和联机会议机器人
 
@@ -51,7 +51,7 @@ Teams 中的通话可以是纯音频或音频和视频。 使用的术语是“�
 * 用户可以发起与机器人的对等通话，或邀请机器人加入现有多方通话。 Teams 用户界面中尚未启用多方通话。
 
     > [!NOTE]
-    > Teams移动平台目前不支持用户发起的对机器人的调用。
+    > Teams 移动平台目前不支持用户发起的对机器人的调用。
 
 * 用户无需 Graph 权限即可发起与机器人的对等通话。 机器人需要其他权限才可参与多方通话，或者机器人需要其他权限才可发起与用户的对等通话。
 * 通话可以以对等方式开始，并在最后成为多方通话。 如果机器人具有适当权限，则可邀请他人发起多方通话。 如果机器人没有参与群组通话的权限，并且如果参与者将另一名参与者添加到通话中，则将从通话中删除机器人。
@@ -111,3 +111,4 @@ Teams 中的通话可以是纯音频或音频和视频。 使用的术语是“�
 * [在 Android 和 Teams 视频电话设备上为 Microsoft Teams 会议室设置自动应答](/microsoftteams/set-up-auto-answer-on-teams-android)
 * [Teams 录制策略](/MicrosoftTeams/teams-recording-policy)
 * [在 Microsoft Graph 中使用通信 API](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [在 Outlook 日历中启用作为联机会议的事件](/graph/outlook-calendar-online-meetings?tabs=http)

@@ -4,12 +4,12 @@ description: 本文介绍如何使用 Microsoft Teams 开发人员门户配置�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 12f1def758e4ef108f9670e0cc696c7ce197e485
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232388"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435074"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>在开发人员门户中管理应用
 
@@ -154,9 +154,9 @@ ms.locfileid: "67232388"
 1. 在机器人管理页中，选择 **“新建机器人**”。
 1. 输入名称并选择 **“添加**”。
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="屏幕截图是显示开发人员门户中的工具的示例，可帮助你生成关键功能。":::
+   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="屏幕截图是显示开发人员门户中的工具的示例，可帮助你生成关键功能。":::
 
-在开发人员门户中，可以转到 Bot 框架门户，并将机器人配置为更新图标和其他属性。
+可从开发人员门户转到 Bot Framework 门户，并将机器人配置为更新图标和其他属性。
 
 ## <a name="see-also"></a>另请参阅
 

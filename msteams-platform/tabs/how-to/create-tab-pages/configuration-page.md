@@ -1,16 +1,16 @@
 ---
 title: 创建配置页
 author: surbhigupta
-description: 在本模块中，了解如何创建配置页来配置频道或群聊以进行设置，例如获取上下文数据等
-ms.localizationpriority: medium
+description: 创建配置页以从用户处收集信息。 此外，获取 Microsoft Teams 选项卡的上下文数据、了解身份验证、修改或删除选项卡。
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841699"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450378"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -174,9 +174,10 @@ ms.locfileid: "66841699"
 
 >[!NOTE]
 >
->* 超时前，有 30 秒的时间完成保存操作（对 registerOnSaveHandler 的回调）。 超时后，将显示一般错误消息。
+>* 有 30 秒的时间在超时前完成保存操作 (回调) `registerOnSaveHandler` 。 超时后，将显示一般错误消息。
 >* 如果使用 `registerOnSaveHandler()` 注册保存处理程序，则回调必须调用 `saveEvent.notifySuccess()` 或 `saveEvent.notifyFailure()` 以指示配置的结果。
 >* 如果未注册保存处理程序，则当用户选择“**保** 存”时，将自动进行 `saveEvent.notifySuccess()` 调用。
+>* 确保唯一 `entityId`。 重复重 `entityId` 定向到选项卡的第一个实例。
 
 ### <a name="get-context-data-for-your-tab-settings"></a>获取选项卡设置的上下文数据
 
@@ -292,7 +293,7 @@ document.write(getId());
 
 ## <a name="modify-or-remove-a-tab"></a>修改或删除选项卡
 
-将清单的 `canUpdateConfiguration` 属性设置为 `true`. 它使用户能够修改、重新配置或重命名通道或组选项卡。删除选项卡时，告知用户对内容的影响。 为此，请在应用中包含删除选项页，并在以前`setSettings()`) 配置的 (中设置`removeUrl`属性`setConfig()`的值。 用户可以卸载个人选项卡，但无法修改它们。 有关详细信息，请参阅[为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。
+将清单的 `canUpdateConfiguration` 属性设置为 `true`. 它使用户能够修改或重新配置通道或组选项卡。只能通过 Teams 用户界面重命名选项卡。 删除选项卡时，告知用户对内容的影响。 为此，请在应用中包含删除选项页，并在以前`setSettings()`) 配置的 (中设置`removeUrl`属性`setConfig()`的值。 用户可以卸载个人选项卡，但无法修改它们。 有关详细信息，请参阅[为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
 Microsoft Teams `setConfig()` (以前 `setSettings()`) 用于删除页面的配置：
 

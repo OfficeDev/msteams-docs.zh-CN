@@ -1,16 +1,16 @@
 ---
 title: 先决条件
 author: surbhigupta
-description: 在本模块中，了解Microsoft Teams中每个选项卡的要求，以及生成选项卡的工具。
-ms.localizationpriority: medium
+description: 本文介绍生成 Microsoft Teams 个人选项卡、频道选项卡或组选项卡的先决条件。了解生成选项卡所需的工具。
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 50497e0f4af4cb12a97cd355d3a81714398c9ab2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142617"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450413"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -36,7 +36,7 @@ ms.locfileid: "66142617"
 
 * 如果选择让频道或组选项卡显示在 Teams 移动客户端上，则 `setConfig()` 配置必须具有 `websiteUrl` 属性的值。
 
-* Microsoft Teams选项卡不支持加载使用自签名证书的 Intranet 网站。
+* Microsoft Teams 选项卡不支持加载使用自签名证书的 Intranet 网站的功能。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

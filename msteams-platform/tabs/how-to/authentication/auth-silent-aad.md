@@ -3,12 +3,12 @@ title: 无提示的身份验证
 description: 在本模块中，了解如何对选项卡执行无提示身份验证、单一登录和 Azure AD，以及它的工作原理
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 7df394bf43bd004e0a430b011ad5aad9c23d6983
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035308"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435039"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>在 Azure AD 中使用无提示身份验证
 
@@ -57,7 +57,7 @@ Active Directory 身份验证库为 OAuth 2.0 隐式授权流程创建隐藏的 
 
 ### <a name="get-the-user-context"></a>获取当前上下文的用户
 
-在选项卡的内容页中，调用 `microsoftTeams.getContext()` 以获取当前用户的登录提示。 该提示在调用 Azure AD 时用作 `loginHint`。
+在选项卡的内容页中，调用 `app.getContext()` 以获取当前用户的登录提示。 该提示在调用 Azure AD 时用作 `loginHint`。
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -109,16 +109,17 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 Active Directory 身份验证库通过在登录回调页中调用 `AuthenticationContext.handleWindowCallback(hash)` 来分析 Azure AD 的结果。
 
-检查是否有有效的用户，并调用 `microsoftTeams.authentication.notifySuccess()` 或 `microsoftTeams.authentication.notifyFailure()` 向主选项卡内容页面报告状态。
+检查是否有有效的用户，并调用 `authentication.notifySuccess()` 或 `authentication.notifyFailure()` 向主选项卡内容页面报告状态。
 
 ```javascript
+import { authentication } from "@microsoft/teams-js";
 if (authContext.isCallback(window.location.hash)) {
     authContext.handleWindowCallback(window.location.hash);
     if (window.parent === window) {
         if (authContext.getCachedUser()) {
-            microsoftTeams.authentication.notifySuccess();
+            authentication.notifySuccess();
         } else {
-            microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
+            authentication.notifyFailure(authContext.getLoginError());
         }
     }
 }

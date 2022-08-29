@@ -1,17 +1,17 @@
 ---
 title: 设计会议扩展插件
 author: heath-hamilton
-description: 了解如何在 Teams 会议中为应用设计会议扩展。 使用 Microsoft Teams UI 工具包中的 UI 模板来帮助你设计会议选项卡。
+description: 了解如何实现设计指南并使用 UI 模板为 Teams 设计会议扩展。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842036"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338849"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -22,7 +22,7 @@ ms.locfileid: "66842036"
 可以在 Microsoft Teams UI 工具包中找到更全面的设计准则，包括可以根据需要获取和修改的元素。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit (用户)](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>添加会议扩展插件
 
@@ -81,7 +81,7 @@ ms.locfileid: "66842036"
 
 ### <a name="use-cases"></a>用例
 
-用户可以使用会议内选项卡执行以下操作：
+人员可以使用会议中选项卡执行以下操作：
 
 * 提供详细的反馈。 例如，评估应聘者。
 * 为会议参与者创建轮询、调查或任务项。

@@ -1,16 +1,16 @@
 ---
 title: 创建选项卡删除页
 author: surbhigupta
-description: 在本模块中，了解如何创建选项卡删除页，以及如何在安装后重新配置选项卡
-ms.localizationpriority: medium
+description: 了解如何在安装后重新配置选项卡。 通过支持 Microsoft Teams 应用中的删除和修改选项来扩展用户体验。
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841972"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450406"
 ---
 # <a name="create-a-removal-page"></a>创建删除页面
 

@@ -1,16 +1,16 @@
 ---
 title: 创建对话选项卡
 author: surbhigupta
-description: 在本模块中，了解如何为频道选项卡创建聊天子实体聊天，以使用代码示例管理对话
+description: 了解如何在 Microsoft Teams 中创建对话选项卡以启动、继续、增强和关闭对话。
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: medium
-ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.localizationpriority: high
+ms.openlocfilehash: 37816fab1f8ca402e806dec3ec5cca77dd15cf95
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962417"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450420"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 

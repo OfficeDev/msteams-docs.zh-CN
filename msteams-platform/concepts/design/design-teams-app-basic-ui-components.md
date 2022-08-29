@@ -1,16 +1,16 @@
 ---
 title: 使用基本 Fluent UI 组件设计应用
 author: heath-hamilton
-description: 了解如何使用 Teams UI 工具包中的 Fluent UI 组件设计 Microsoft Teams 应用。
+description: 了解如何使用 Teams UI 工具包中的 UI 组件生成 Microsoft Teams 应用。 了解如何使用 Fluent 工具包、痕迹痕迹、按钮卡、旋转木马、下拉列表和切换等 UI 组件。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: bf90f0979e8a7b8670af8f8295be9f913b15dc36
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962438"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338786"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>使用基本 Fluent UI 组件设计 Microsoft Teams 应用
 

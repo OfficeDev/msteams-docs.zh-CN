@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312238"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435004"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -40,6 +40,7 @@ ms.locfileid: "67312238"
 | 2022/08/03 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 2022/08/03 | 添加了在会议后场景中检索会议脚本的功能。 | 为 Teams 会议和通话构建应用 > 使用 Graph API 获取会议脚本 > [概述](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 2022/08/03 | 将展开共享链接到 Web 应用中的团队 | 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 08/01/2021| 注意：开发人员门户现已正式发布，App Studio 自 2022 年 8 月 1 日开始弃用。 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
 | 07/28/2022 | 为会议内通知添加 Teams 显示图片和人员卡片| 为 Teams 会议和通话构建应用>为会议启用和配置应用>[会议内通知](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | 在 Teams 中构建共享频道 | 为 Teams 会议和通话构建应用>[共享频道](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|引入的应用清单 v1.14| 应用部件清单> [Teams 的应用部件清单架构](resources/schema/manifest-schema.md)|
@@ -263,6 +264,7 @@ ms.locfileid: "67312238"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | 在移动设备中将应用共享到 Teams 会议阶段 | 为 Teams 会议和呼叫构建应用> [为会议启用和配置应用](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 2022/08/03 | 在 Teams 会议阶段将应用的 API 静音和取消静音 | 为 Teams 会议和通话生成应用 > [会议应用 API 参考](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Teams 协作控制| 与 Teams > [协作控件集成](samples/collaboration-control.md)|
 | 2022/06/30 | 用于即时会议、一对一和群组通话的应用| 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|

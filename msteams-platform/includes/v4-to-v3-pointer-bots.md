@@ -1,2 +1,2 @@
 > [!Important]
-> 本节中的代码示例基于 4.6 版和更高版本的 Bot Framework SDK。 如果要查找有关早期版本的文档，请参阅文档的 Resources 文件夹中的 [bots - v3 SDK](~/resources/bot-v3/bots-overview.md) 部分。
+> 本部分中的代码示例基于 Bot Framework SDK 版本 4.6 及更高版本。 如果要查找早期版本的文档，请参阅文档的旧 [SDK 文件夹中的机器人 - v3 SDK](~/resources/bot-v3/bots-overview.md) 部分。

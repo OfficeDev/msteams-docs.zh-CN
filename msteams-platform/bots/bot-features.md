@@ -1,16 +1,16 @@
 ---
 title: 智能机器人和 SDK
 author: surbhigupta
-description: 本文介绍用于使用Microsoft Bot Framework生成 Microsoft Teams 机器人和机器人的工具和 SDK。
+description: 本文介绍适用于 Microsoft Teams 机器人的工具和 Bot Framework SDK (C#、Python、Java、JavaScript) 及其优点和缺点。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae95a56dc12435b97934bd1bbfc05167fbe2c11c
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
+ms.openlocfilehash: a3ba6c1ac32b24aefc8d751482bdb7bde53d1a73
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912252"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321185"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 

@@ -1,19 +1,19 @@
 ---
 title: 智能机器人对话中的邮件
-description: 了解如何使用代码示例与 Teams 机器人和 Teams 频道数据进行对话、通知消息、图片消息、自适应卡片
+description: 了解如何发送接收消息、建议的操作、通知、附件、图像、自适应卡片、Throttle 的状态错误代码响应。
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035192"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363443"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
-对话中的每个消息都是类型的`Activity``messageType: message`对象。 当用户发送消息时，Teams 会将消息发布到机器人。 Teams 将 JSON 对象发送到机器人的消息传送终结点。 机器人会检查消息来确定其类型并作出相应响应。
+对话中的每个消息都是类型的`Activity``messageType: message`对象。 当用户发送消息时，Microsoft Teams 会将消息发布到机器人。 Teams 将 JSON 对象发送到机器人的消息传送终结点，Teams 仅允许一个终结点进行消息传递。 机器人会检查消息来确定其类型并作出相应响应。
 
 基本对话通过 Bot Framework 连接器（单个 REST API）进行处理。 此 API 使机器人能够与 Teams 和其他频道进行通信。 Bot Builder SDK 提供以下功能：
 
@@ -198,7 +198,8 @@ async def on_members_added_activity(
 
 ## <a name="send-suggested-actions"></a>发送建议的操作
 
-建议的操作使机器人能够显示用户可以选择以提供输入的按钮。 建议的操作使用户能够回答问题或选择按钮，而不是用键盘键入响应，从而增强用户体验。 即使用户进行了选择，并且对于建议的操作，按钮也不可用，这些按钮仍然可见，用户也可在富卡中访问。 这会阻止用户选择会话中的过时按钮。
+建议的操作使机器人能够显示用户可以选择以提供输入的按钮。 建议的操作使用户能够回答问题或选择按钮，而不是用键盘键入响应，从而增强用户体验。
+即使用户进行了选择，并且对于建议的操作，按钮也不可用，这些按钮仍然可见，用户也可在富卡中访问。 这会阻止用户选择会话中的过时按钮。
 
 若要向消息添加建议的操作，请设置 `suggestedActions` [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) 对象的属性，以指定表示要向用户显示的按钮的 [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) 对象列表。 有关详细信息，请参阅 [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
 
@@ -225,6 +226,7 @@ async def on_members_added_activity(
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="机器人建议的操作" border="true":::
 
 > [!NOTE]
+>
 > * `SuggestedActions` 仅支持一对一聊天机器人和基于文本的消息，而不支持自适应卡片或附件。
 > * 目前 `imBack` 是唯一受支持的操作类型，Teams 最多显示三个建议的操作。
 

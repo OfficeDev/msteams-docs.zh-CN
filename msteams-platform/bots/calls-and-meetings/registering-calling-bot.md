@@ -1,14 +1,14 @@
 ---
 title: 注册 Microsoft Teams 的通话和会议机器人
-description: 在本模块中，了解如何为Microsoft Teams注册新的音频/视频呼叫机器人、创建新的机器人或添加呼叫功能以及添加图形权限。
+description: 在本模块中，了解如何为 Microsoft Teams 注册新的音频/视频呼叫机器人、创建新机器人或添加呼叫功能以及添加图形权限。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 74e786850f11a77cea5cc0980febb56d550ae671
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 74c0f5dab2fe8efbcfee73d8c356675384f83683
+ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143793"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67407572"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>注册 Microsoft Teams 的通话和会议机器人
 
@@ -58,7 +58,7 @@ Graph 提供精细的权限来控制应用对资源的访问权限。 你可以�
 |权限    |显示字符串   |说明 |需经过管理员同意 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |从应用发起一对一拨出通话（预览版）。 |允许应用在没有登录用户的情况下，向单个用户发起播出通话并将通话转接到组织目录中的用户。|是|
-| Calls.InitiateGroupCall.All |从应用发起组拨出通话（预览版）。 |允许应用在没有登录用户的情况下，向多个用户发起播出通话并向组织中的会议添加参与者。|是|
+| Calls.InitiateGroupCall.All |从应用预览启动传出 1：1 和分组调用。 |允许应用在没有登录用户的情况下向单个用户、多个用户进行出站呼叫、传输呼叫并将参与者添加到组织中的会议。|是|
 | Calls.JoinGroupCall.All |作为应用加入组通话和会议（预览版）。 |允许应用在没有登录用户的情况下，加入组织中的组通话和计划会议。 应用加入到租户的会议中并获得目录用户特权。|是|
 | Calls.JoinGroupCallasGuest.All |作为来宾加入组通话和会议（预览版）。 |允许应用在没有登录用户的情况下，以匿名方式加入组织中的组通话和计划会议。 应用作为来宾加入租户的会议。|是|
 | Calls.AccessMedia.All |作为应用访问通话中的媒体数据流（预览版）。 |允许应用在没有登录用户的情况下，直接访问通话中的媒体数据流。|是|

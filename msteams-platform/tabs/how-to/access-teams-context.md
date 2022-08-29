@@ -1,14 +1,14 @@
 ---
 title: 获取选项卡的上下文
-description: 在本模块中，了解如何将用户上下文获取到选项卡、用户上下文和 Access 上下文信息
-ms.localizationpriority: medium
+description: 了解选项卡的上下文、用户、团队或公司的上下文、访问信息、在专用频道或共享频道中检索上下文以及处理主题更改。
+ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058114"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450385"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -221,7 +221,7 @@ microsoftTeams.getContext((context) => {
 | channel.defaultOneNoteSectionId | defaultOneNoteSectionId | 链接到通道的 OneNote 节 ID。 |
 | page.isMultiWindow | isMultiWindow | 指示选项卡是否在弹出窗口中。 |
 
-有关详细信息，请参阅 [上下文接口和 *上下文* 接口](using-teams-client-sdk.md#updates-to-the-context-interface) API 参考更新。[](/javascript/api/@microsoft/teams-js/app.context)
+有关详细信息，请参阅 [上下文接口和 *上下文* 接口](using-teams-client-sdk.md#updates-to-the-context-interface) API 参考汇报。[](/javascript/api/@microsoft/teams-js/app.context)
 
 ## <a name="retrieve-context-in-private-channels"></a>在专用通道中检索上下文
 

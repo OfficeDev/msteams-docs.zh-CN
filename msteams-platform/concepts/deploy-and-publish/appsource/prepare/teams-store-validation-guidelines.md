@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
+ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962473"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417648"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -430,7 +430,6 @@ Teams 应用清单定义应用的配置。
 [*建议修复*]
 
 * 显示特定设备，例如手机或笔记本电脑。
-* 显示不在应用中的部件版式或 UI。
 * 在屏幕截图中捕获任何 Teams 或浏览器 UI。
 * 包括不准确反映应用实际 UI 模型，例如显示应用在 Teams 外部使用。
 

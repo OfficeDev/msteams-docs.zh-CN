@@ -1,16 +1,16 @@
 ---
 title: 设计邮件扩展
-description: 了解如何设计 Teams 邮件扩展并获取 Microsoft Teams UI Kit。 描述 Teams 设计指南参考邮件扩展提示最佳实践
+description: 了解如何设计 Teams 邮件扩展并获取 Microsoft Teams UI Kit。 介绍 Teams 设计指南参考消息扩展提示和最佳做法。
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558749"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338898"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>设计 Microsoft Teams 邮件扩展
 
@@ -57,7 +57,7 @@ ms.locfileid: "66558749"
 
 ## <a name="types-of-message-extensions"></a>邮件扩展类型
 
-邮件扩展可以包含搜索命令、操作命令或两者兼有。 你的命令取决于应用的功能以及这些功能在 Teams 用例中的适用性。
+邮件扩展可以包含搜索命令、操作命令或两者兼有。 命令取决于应用的功能以及这些功能如何适合 Teams 用例。
 
 ### <a name="search-commands"></a>搜索命令
 
@@ -192,7 +192,7 @@ ms.locfileid: "66558749"
 |3|**搜索框**：允许用户查找要插入的应用内容。|
 |4|**选项卡菜单（可选）**：提供多个内容类别。|
 |5|**操作命令菜单（可选）**：显示操作命令列表（如果指定）。|
-|6 |**应用内容**：主要用于显示搜索结果。|
+|6|**应用内容**：主要用于显示搜索结果。|
 
 #### <a name="desktop"></a>桌面
 
@@ -205,7 +205,7 @@ ms.locfileid: "66558749"
 |3|**操作命令菜单图标（可选）**：打开邮件扩展的操作命令列表（如果指定）。
 |4|**搜索框**：允许用户查找要插入的应用内容。|
 |5|**选项卡菜单（可选）**：提供多个内容类别。|
-|6 |**操作命令菜单（可选）**：显示操作命令列表（如果指定）。|
+|6|**操作命令菜单（可选）**：显示操作命令列表（如果指定）。|
 |7 |**应用内容**：主要用于显示搜索结果。 此处的示例使用的是列表布局（另一个选项是网格布局）。|
 |8 |**应用徽标**：应用徽标的大纲图标。|
 
@@ -226,7 +226,7 @@ ms.locfileid: "66558749"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="示例：设置和一般用途。":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="设置和常规用法的示例。":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>建议：与单一登录集成
 
@@ -234,7 +234,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="示例：与单一登录集成。":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="与单一登录集成的示例。":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>不建议：让用户离开对话
 
@@ -251,7 +251,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="示例：模板化。":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="模板化示例。":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>建议：如果可能，让 Teams 处理一些设计工作
 
@@ -259,7 +259,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="示例：处理设计工作。":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="处理设计工作的示例。":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>不建议：在任务模块中嵌入整个应用
 

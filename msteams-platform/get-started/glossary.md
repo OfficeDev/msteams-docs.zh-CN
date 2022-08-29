@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的术语
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 994a1956c14019562133f004517b5d060ee6c74c
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 742c2c940c5b3c39037b28eaf6ecc14fac3b0874
+ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312042"
+ms.lasthandoff: 08/19/2022
+ms.locfileid: "67382942"
 ---
 # <a name="glossary"></a>术语表
 
@@ -24,13 +24,13 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [应用程序目录](../toolkit/publish.md) | 存储 SharePoint 和 Office 应用以供组织内部使用的网站。 <br>**另请参阅**：[SPFx](#s) |
 | [应用部件清单](../resources/schema/manifest-schema.md) | Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 清单必须符合 [清单架构](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)。 |
 | [应用包](../concepts/build-and-test/apps-package.md) | Teams 应用包是一个 zip 文件，其中包含应用清单文件、颜色图标和大纲图标。 |
-| [应用权限](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Teams 应用中用于启用设备权限的选项。 仅当应用的清单文件声明应用需要设备权限时，此选项才可用。 <br> **另请参阅**：设备权限 |
+| [应用权限](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Teams 应用中用于启用设备权限的选项。 仅当应用的清单文件声明应用需要设备权限时，此选项才可用。 <br> **另请参阅**： [设备权限](#d) |
 | [应用程序范围](../concepts/design/app-structure.md) | Teams 中用户可以使用你的应用的区域。 应用可以有一个或多个范围，包括个人、频道、聊天和会议。 Teams 应用可以跨范围存在。 |
 | 应用托盘 | 位于 Teams 移动应用底部栏上的应用程序托盘。 它收集已打开但当前未使用或处于活动状态的所有应用。 <br>**另请参阅**：[Teams 移动](#t) |
 | [Azure 资源](../toolkit/provision.md) | 通过 Azure 提供的服务，Teams 应用可将其用于 Azure 部署。 它可以是存储帐户、Web 应用、数据库等。 |
-| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft 基于云的标识和访问管理服务。 可帮助经过身份验证的用户访问内部和外部 Azure 资源。 |
-| [身份验证](../concepts/authentication/authentication.md) | 验证用于了解应用使用情况的用户访问权限的过程。 可以使用 Microsoft Graph API 或基于 Web 的身份验证来完成此操作。 <br> **另请参阅**：[标识提供者](#i)；[SSO](#s) |
-| [身份验证流](../concepts/authentication/authentication.md) | 在 Teams 中，有两个身份验证流用于对用户进行身份验证以使用应用：基于 Web 的身份验证和 OAuthPrompt 流。 |
+| [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft 基于云的标识和访问管理服务。 它可帮助经过身份验证的用户访问内部和外部资源。 |
+| [身份验证](../concepts/authentication/authentication.md) | 验证用户标识以访问应用的过程。 <br> **另请参阅**：[标识提供者](#i)；[SSO](#s) |
+| [身份验证流](../concepts/authentication/authentication.md) | 用户对应用进行身份验证的方式。 对于 Teams 应用，我们建议使用 Azure Active Directory (AAD) 使用单一登录 (SSO) ，但另一种方法是使用第三方 OAuth 提供程序。|
 
 ## <a name="b"></a>B
 
@@ -50,7 +50,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [功能](../toolkit/add-capability.md) | 可在应用中构建，以便与应用用户进行交互的 Teams 功能。 应用功能用于扩展 Teams 以满足应用需求。 应用可能具有一个或多个核心功能，例如选项卡、机器人和邮件扩展。 <br>**另请参阅**：[设备功能](#d)；[媒体功能](#m) |
 | [聊天机器人](../bots/how-to/conversations/conversation-basics.md) | 机器人也称为聊天机器人或对话机器人。 它是一个应用，可为客户服务或支持人员等用户运行简单且重复的任务。 <br> **另请参阅**：[对话机器人](#c) |
 | 频道 | 团队共享消息、工具和文件的单个位置。 可以使用频道进行团队合作和沟通。 <br>**另请参阅**：[对话](#c) |
-| [客户端密码](../bots/how-to/authentication/add-authentication.md) | 客户端机密/密码或作为证书的公钥或私钥对。 本机应用不需要它。 <br> **另请参阅**：[机器人](#b) |
+| [客户端密码](../bots/how-to/authentication/add-authentication.md) | 应用程序在请求令牌时用来证明其标识的机密字符串。 此外，它可称为应用程序密码。|
 | [云资源](../toolkit/add-resource.md) | 通过 Internet 在云上提供的服务，Teams 应用可以使用该服务。 它可以是存储帐户、Web 应用、数据库等。 |
 | [协作与应用](../concepts/extensibility-points.md) | 具有可供用户在协作工作区中与其他用户一起工作的功能的应用。 <br> **另请参阅**：[独立应用](#s) |
 | [撰写扩展](../resources/schema/manifest-schema.md#composeextensions) | 应用清单 (`composeExtensions`) 中引用邮件扩展功能的属性。 该属性用于当扩展需要进行身份验证或配置以继续时。 <br>**另请参阅**：[应用清单](#a)；[邮件扩展](#m) |
@@ -64,6 +64,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | Term | 定义 |
 | --- | --- |
 | [深层链接](../concepts/build-and-test/deep-links.md) | 在 Teams 应用中，可以创建指向 Teams 中信息和功能的深层链接，或创建帮助用户导航到应用中内容的深层链接。 |
+|[国防部 (DOD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD 环境符合国防部安全要求准则、国防联邦采购条例补充 (DFARS) 以及 ITAR)  (国际武器流量条例。|
 | [Teams 开发人员门户](../concepts/build-and-test/teams-developer-portal.md) | 用于配置、分发和管理 Microsoft Teams 应用的主要工具。 借助开发人员门户，可以在应用上与同事协作、设置运行时环境等。 |
 | [开发人员预览版](../resources/dev-preview/developer-preview-intro.md) | 面向开发人员的公共计划，提供对 Microsoft Teams 中未发布功能的早期访问权限。 通过此计划，可以探索和测试可能包含在 Microsoft Teams 应用中的即将推出的功能。 |
 | 部署 | 用于上传应用程序后端和前端代码的过程。 在部署时，应用的代码将复制到预配期间创建的资源。 <br>**另请参阅**：[预配](#p) |
@@ -86,11 +87,14 @@ Teams 开发人员文档中使用的常用术语和定义。
 | Term | 定义 |
 | --- | --- |
 | [联合用户](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Teams 应用会议中来自外部且受邀加入会议的用户类型。 此用户具有由经授权的 Teams 合作伙伴联合的有效凭据。 他们也被称为外部用户。 <br>**另请参阅**：[匿名用户](#a) |
+| [首次运行体验](../concepts/design/design-teams-app-ui-templates.md)|首次运行的体验 (FRE) 是用户对产品的介绍。FRE 可帮助用户开始使用产品的功能、功能和优势，并影响用户返回并继续使用你的产品。|
 
 ## <a name="g"></a>G
 
 | Term | 定义 |
 | --- | --- |
+|[政府社区云 (GCC) ](../concepts/app-fundamentals-overview.md#government-community-cloud)| GCC 环境符合联邦对云服务的要求，包括 FedRAMP High、国防联邦采购条例补充 (DFARS) ，以及 (CJI 和 FTI 数据类型) 的刑事司法和联邦税务信息系统的要求。|
+|[政府社区云 (GCC) 高](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC 高环境符合国防部 (DoD) 安全要求准则、国防联邦采购条例补充 (DFARS) 以及国际武器法规 (ITAR) 。<br>**另请参阅**： [国防部 (国防部)](#d)|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | 适用于 Microsoft Graph 的 REST 风格的 Web API，支持访问 Microsoft Cloud 服务资源。 <br>**另请参阅**：[Microsoft Graph 浏览器](#m) |
 | [群组聊天](../resources/bot-v3/bot-conversations/bots-conversations.md) | 一种聊天功能，用户可以通过使用 @提及调用机器人，从而在组设置中与机器人聊天。 <br>**另请参阅**：[一对一聊天](#o)；[聊天机器人](#c) |
 

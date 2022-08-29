@@ -3,26 +3,25 @@ title: 创建深层链接
 description: 在本文中，你将了解如何创建深层链接，并使用选项卡在 Microsoft Teams 应用中导航它们。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
-ms.translationtype: HT
+ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302463"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452358"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
 深层链接是一种导航机制，可用于将用户与 Teams 和 Teams 应用中的信息和功能联系起来。 创建深度链接可能有用的一些方案如下:
 
 * 将用户导航到应用的某个选项卡中的内容。 例如，应用可以有一个自动程序，用于发送通知用户重要活动的消息。 当用户点击通知时，深层链接将导航到选项卡，以便用户可以查看有关活动的更多详细信息。
-* 应用通过预先填充包含所需参数的深层链接，自动执行或简化某些用户任务，例如创建聊天或安排会议。 避免用户需要手动输入信息。
+* 应用自动执行或简化某些用户任务。 可以通过预先填充包含所需参数的深层链接来创建聊天或安排会议。 避免用户需要手动输入信息。
 
-Microsoft Teams JavaScript 客户端 SDK (TeamsJS) 简化了导航过程。 对于许多方案（例如导航到选项卡中的内容和信息，甚至启动聊天对话框），SDK 提供了类型化 API，这些 API 可改进体验并取代深层链接的使用。 建议将这些 API 用于可能在其他主机 (Outlook，Office) 中运行的 Teams 应用，因为它们还提供了一种方法来检查该主机是否支持正在使用的功能。 以下部分显示有关深层链接的信息，但也强调了过去需要深层链接的方案如何随着 TeamsJS 的 v2 版本而发生更改。
+Microsoft Teams JavaScript 客户端 SDK (TeamsJS) 简化了导航过程。 对于许多方案，例如导航到选项卡中的内容和信息，或启动聊天对话框。 SDK 提供类型化的 API，可提供改进的体验，并可以替换深层链接的使用。 建议将这些 API 用于可能在其他主机 (Outlook，Office) 中运行的 Teams 应用，因为它们还提供了一种方法来检查该主机是否支持正在使用的功能。 以下部分显示有关深层链接的信息，但也强调了过去需要深层链接的方案如何随着 TeamsJS 的 v2 版本而发生更改。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
 > 深层链接的行为取决于多种因素。 以下列表概述了 Teams 实体上的深层链接的行为。
 >
 > **选项卡**：  
@@ -389,11 +388,11 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 在 Teams 应用商店中列出应用后，为应用创建深层链接。 若要创建启动 Teams 的链接，请将应用 ID 追加到以下 URL：`https://teams.microsoft.com/l/app/<your-app-id>`。 将显示一个对话框来安装应用。
 
 > [!NOTE]
-> 目前，移动平台不支持与应用的深层链接。
+> 如果你的应用已获得移动平台的批准，则可以深入链接到移动版上的应用。 此外，需要使用 Apple App Store Connect Team ID 才能在 Teams-iOS 上使用深层链接。 有关详细信息，请参阅[如何更新 Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center)。
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint 框架选项卡的深层链接
 
-可以在机器人、连接器或消息扩展卡片中使用以下深层链接格式：`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+可以在机器人、连接器或消息扩展卡片中使用以下深层链接格式：`https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > 当机器人发送包含深层链接的 TextBlock 消息时，当用户选择链接时，将打开新的浏览器选项卡。 这发生在 Linux 上运行的 Chrome 和 Microsoft Teams 桌面应用中。

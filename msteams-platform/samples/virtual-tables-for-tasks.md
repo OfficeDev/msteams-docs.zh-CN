@@ -5,12 +5,12 @@ description: 在本模块中，了解 Microsoft Teams 中协作控制应用中�
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 58572dc51164d18dcfcbf44012543bd5400c3921
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
+ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178838"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67314593"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>任务、会议、文件的虚拟表
 
@@ -54,7 +54,7 @@ ms.locfileid: "67178838"
 
 本指南中介绍的方案使用 Planner 计划和任务虚拟表。 所述方案与任务协作控件使用的方案相同。 从用户的角度来看，该方案演示如何创建 Planner 计划和多个任务并与特定业务记录相关联。 此方案继续演示如何检索与业务记录关联的任务，以及如何读取、更新和删除特定的规划器任务。
 
-下面的序列图说明了客户端之间的交互，即任务协作控制、 [协作 API](~/samples/collaboration-api-reference.md) 以及 Planner 计划和任务虚拟表。
+下面的序列图说明了客户端之间的交互，即任务协作控制、 [协作 API](/rest/api/industry/collaboration-controls/) 以及 Planner 计划和任务虚拟表。
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="虚拟表的序列图":::
 
@@ -584,7 +584,7 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 
 ---
 
-若要解决此问题，必须检查响应中的错误消息，如果该错误消息设置为上面显示的消息，则表示虚拟记录未关联。 若要为此记录创建关联，必须调用 [关联协作映射 - REST API](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map)。
+若要解决此问题，必须检查响应中的错误消息，如果该错误消息设置为上面显示的消息，则表示虚拟记录未关联。 若要为此记录创建关联，必须调用 [关联协作映射 - REST API](/rest/api/industry/collaboration-controls/collaboration-custom-ap-is/associate-collaboration-map)。
 
 ### <a name="attempt-to-read-a-virtual-record-and-the-graph-resource-has-been-deleted"></a>尝试读取虚拟记录和 Graph 资源已被删除
 

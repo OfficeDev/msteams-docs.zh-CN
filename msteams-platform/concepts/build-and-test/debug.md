@@ -3,12 +3,12 @@ title: 选择用于测试和调试应用的设置
 description: 在本模块中，了解在本地和云托管环境中测试和调试 Microsoft Teams 应用的选项。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: b064fb4ef06576251a91a4727a84bb4519d4d352
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312189"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452351"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>选择测试设置并调试 Teams 应用
 
@@ -81,6 +81,5 @@ Teams 是一种完全基于云的产品，它要求其访问的所有服务都�
 
 ## <a name="see-also"></a>另请参阅
 
-[使用 IDE 在本地测试和调试机器人](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
-
-[适用于 Microsoft Teams 选项卡的 DevTools](../../tabs/how-to/developer-tools.md)
+* [使用 IDE 在本地测试和调试机器人](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+* [适用于 Microsoft Teams 选项卡的 DevTools](../../tabs/how-to/developer-tools.md)

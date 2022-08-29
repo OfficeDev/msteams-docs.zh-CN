@@ -1,21 +1,23 @@
 ---
 title: 创建频道选项卡
 author: laujan
-description: 在本模块中，了解如何使用适用于 Microsoft Teams 的 Yeoman 生成器创建通道和组选项卡，包括使用代码示例查看源代码。
-ms.localizationpriority: medium
+description: 使用 Node.js、ASP.NET Core、ASP.NET Core MVC 创建自定义通道和组选项卡。 生成应用、创建包、生成和运行应用、机密隧道、上传到 Teams
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 1b668a0e89ba2f2c77a56623d25ed11c1caaf7ea
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841706"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450469"
 ---
 # <a name="create-a-channel-tab"></a>创建频道选项卡
 
 通道或组选项卡将内容传递到频道和群组聊天，是围绕基于 Web 的专用内容创建协作空间的好方法。
+
+确保具有生成频道或组选项卡的所有 [先决条件](~/tabs/how-to/tab-requirements.md) 。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -217,7 +219,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="已上传的“频道”选项卡":::
 
-    现在，你已成功创建并在 Teams 中添加频道或组选项卡。
+    现在，你已在 Teams 中成功创建并添加了频道或组选项卡。
 
 ::: zone-end
 
@@ -259,7 +261,7 @@ gulp ngrok-serve
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是从 ASP.NET Core 3.1 Web 应用程序空模板创建的，在设置时选中了 **Advanced * Configure for HTTPS** 复选框。 MVC 服务由依赖注入框架的 `ConfigureServices()` 方法注册。 此外，默认情况下，空模板不启用提供静态内容，因此使用以下代码将静态文件中间件添加到 `Configure()` 方法：
+此项目是从 ASP.NET Core 3.1 Web 应用程序空模板创建的，在设置时选中了 **Advanced * Configure for HTTPS** 复选框。 MVC 服务通过依赖注入框架 `ConfigureServices()` 的方法注册。 此外，默认情况下，空模板不支持提供静态内容，因此使用以下代码将静态文件中间件添加到 `Configure()` 方法：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -346,7 +348,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 Visual Studio 解决方案资源管理器中转到“**页面**”文件夹并打开“**Tab.cshtml**”
 
-    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置，并且可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
+    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置并可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
 1. 使用 HTTPS ngrok URL 将每个函数中的 `websiteUrl` 和 `contentUrl` 值更新到选项卡。
 
@@ -440,7 +442,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="上传的“频道”选项卡 ASPNET":::
 
-    现在，你已成功创建并在 Teams 中添加频道或组选项卡。
+    现在，你已在 Teams 中成功创建并添加了频道或组选项卡。
 
 ::: zone-end
 
@@ -482,7 +484,7 @@ ngrok http 3978 --host-header=localhost
 
 #### <a name="startupcs"></a>Startup.cs
 
-此项目是从 ASP.NET Core 3.1 Web 应用程序空模板创建的，在设置时选中了“**高级 - 配置 HTTPS**”复选框。 MVC 服务由依赖注入框架的 `ConfigureServices()` 方法注册。 此外，默认情况下，空模板不启用提供静态内容，因此使用以下代码将静态文件中间件添加到 `Configure()` 方法：
+此项目是从 ASP.NET Core 3.1 Web 应用程序空模板创建的，在设置时选中了“**高级 - 配置 HTTPS**”复选框。 MVC 服务通过依赖注入框架 `ConfigureServices()` 的方法注册。 此外，默认情况下，空模板不支持提供静态内容，因此使用以下代码将静态文件中间件添加到 `Configure()` 方法：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -577,7 +579,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 Visual Studio 解决方案资源管理器中转到“**选项卡**”文件夹并打开“**Tab.cshtml**”
 
-    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置，并且可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
+    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置并可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
 1. 使用 HTTPS ngrok URL 将每个函数中的 `websiteUrl` 和 `contentUrl` 值更新到选项卡。
 
@@ -661,7 +663,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="频道选项卡 ASPNET MVC 已上传":::
 
-    现在，你已成功创建并在 Teams 中添加频道或组选项卡。
+    现在，你已在 Teams 中成功创建并添加了频道或组选项卡。
 
 ::: zone-end
 

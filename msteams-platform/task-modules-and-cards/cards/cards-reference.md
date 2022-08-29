@@ -1,14 +1,14 @@
 ---
 title: 卡片类型
-description: 在本模块中，了解哪些卡片和卡片操作可用于 Teams 中的机器人，并创建主图、缩略图和自适应卡片
+description: 在本模块中，了解 Teams 中的机器人可用的卡片和卡片操作，并创建主图、缩略图和自适应卡片。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311958"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435025"
 ---
 # <a name="types-of-cards"></a>卡片类型
 
@@ -71,7 +71,10 @@ Microsoft Teams 机器人支持自适应、主图、列表、Office 365 连接�
 | 登录卡 | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
-> 对于传入 Webhook 中的自适应卡片，完全支持所有本机自适应卡片架构元素 (`Action.Submit` 除外)。 受支持的操作包括 [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、[**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)和 [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
+>
+> * 对于传入 Webhook 中的自适应卡片，完全支持所有本机自适应卡片架构元素 (`Action.Submit` 除外)。 受支持的操作包括 [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、[**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)和 [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
+>
+> * 自适应卡片仅支持传入 Webhook O365 连接器类型，不支持任何其他 O365 连接器类型。
 
 ## <a name="common-properties-for-all-cards"></a>所有卡片的常用属性
 
@@ -638,9 +641,9 @@ Teams 中的登录卡类似于 Bot Framework 中的登录卡，只不过 Teams �
 
 登录操作可以从 Teams 中的任何卡中使用，而不仅仅是登录卡。 有关详细信息，请参阅 [机器人的 Teams 身份验证流](~/bots/how-to/authentication/auth-flow-bot.md)。
 
-### <a name="support-for-signin-cards"></a>支持登录卡
+### <a name="support-for-log-in-cards"></a>支持登录卡
 
-下表提供了支持登录卡的功能:
+下表提供了支持登录卡的功能：
 
 | Teams 中的机器人 | 消息扩展  | 连接器 | 机器人框架 |
 | --- | --- | --- | --- |
@@ -650,7 +653,7 @@ Teams 中的登录卡类似于 Bot Framework 中的登录卡，只不过 Teams �
 
 Bot Framework 参考:
 
-* [登录卡 Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [登录卡Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [登录卡 C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>缩略图卡片
