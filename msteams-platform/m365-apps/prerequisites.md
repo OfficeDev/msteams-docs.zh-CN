@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 49c2b2e6ce8f173fcbc106f1cec8e0bb6d3bcb7b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 965c9d8b7b05141aa6add18bba51512bd9e0a213
+ms.sourcegitcommit: b13361f342c76d637321df21d2ef900471bf0eef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919737"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67457289"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>设置开发环境以跨 Microsoft 365 扩展 Teams 应用
 
@@ -32,15 +32,25 @@ ms.locfileid: "66919737"
 
 还需要为租户启用旁加载：
 
-1. 使用你的测试租户凭据登录 Microsoft 365 管理中心（https://admin.microsoft.com)），然后从侧面板中选择“**Teams**”以打开 *Microsoft Teams 管理中心*。
-1. 选择：Teams 应用 >“管理应用”>“**组织范围的应用设置**”。
-1. 在“**自定义应用**”下，打开选项“*与自定义应用交互*”。
+ 1. 使用测试租户凭据登录到 [Teams 管理中心](https://admin.teams.microsoft.com/dashboard) 。
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="从 Teams 管理中心为自定义应用启用旁加载":::
+ 1. 转到 **Teams 应用** > **管理应用**。
+
+ 1. 在右上角，选择 **组织范围的应用设置**。
+
+ 1. 在“自定义应用”下，打开 **与自定义应用** 切换和保存的交互。
+
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="屏幕截图是一个示例，用于从 Teams 管理员中心旁加载自定义应用":::
+
+ 1. 除了组织范围的应用设置外，自定义应用策略设置还允许用户将自定义应用上传到 Teams。 有关详细信息，请参阅 [管理自定义应用策略和设置](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings)。
+
+ 1. 在 Teams 管理中心，转到 **Teams 应用** > **设置策略**，然后选择 **全局 (组织范围的默认) 策略**。
+
+ 1. 打开 **“上传自定义应用**”，然后选择 **“保存**”。
 
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>为 Office 365 目标发布注册开发人员租户
 
-> [!Important]
+> [!IMPORTANT]
 > 创建 [Microsoft 365 开发人员沙盒租户](/office/developer-program/microsoft-365-developer-program-get-started)并注册 [Office 365 目标版本](#enroll-your-developer-tenant-for-office-365-targeted-releases)后，旁加载的 Teams 应用最多可能需要五天时间才能显示在 Outlook 和 Office 中。
 
 要为 Office 365 目标版本注册测试租户：
