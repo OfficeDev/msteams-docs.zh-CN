@@ -3,12 +3,12 @@ title: 配置第三方 OAuth 身份验证
 description: 本文介绍 Teams 身份验证选项卡Microsoft Azure AD、Teams 中的身份验证以及如何在选项卡中使用它。
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 18a643af2b8a15940915145d02207f2aec93b014
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 1afc7e7512c75c9002849801cfc14fb8eb1aa726
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67434997"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465370"
 ---
 # <a name="configure-third-party-oauth-idp-authentication"></a>配置第三方 OAuth IdP 身份验证
 
@@ -58,7 +58,7 @@ OAuth 2.0 是 Azure AD 和许多其他服务提供商使用的身份验证开放
 ```javascript
 import { authentication } from "@microsoft/teams-js";
 authentication.authenticate({
-    url: window.location.origin + "/tab/simple-start-v2"),
+    url: window.location.origin + "/tab/simple-start-v2",
     width: 600,
     height: 535})
 .then((result) => {

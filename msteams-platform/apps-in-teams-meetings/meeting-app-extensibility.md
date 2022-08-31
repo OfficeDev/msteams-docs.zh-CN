@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: d1de26a953e1ec0e1f02c18cd7db50441e9dd9d5
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417505"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465384"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -214,7 +214,7 @@ Teams 统一会议应用允许你根据会议中的参与者角色设计应用�
 
 | 用户类型 | 选项卡 | 机器人 | 消息扩展 | 自适应卡 | 任务模块 | 会议内的对话框 | 会议阶段 |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 匿名用户 | 不可用 | 不可用 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 不可用 | 不可用 |
+| 匿名用户 | 不可用 | 不可用 | 不可用 | 允许在会议聊天中进行交互。 | 不可用 | 不可用 | 不可用 |
 | 来宾，租户 Azure AD 的一部分 | 允许交互。 不允许创建、更新和删除。 | 不可用 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 可用 | 只能在 Teams 桌面客户端上启动、查看和与会议舞台上的应用交互 |
 | 联合用户，有关详细信息，请参阅 [非标准用户](/microsoftteams/non-standard-users)。 | 在计划的会议中允许交互。 不允许创建、更新和删除。 | 允许交互。 不允许获取、更新和删除。 | 不可用 | 允许在会议聊天中进行交互。 | 允许从自适应卡片在会议聊天中进行交互。 | 不可用 | 只能在 Teams 桌面客户端上启动、查看和与会议舞台上的应用交互。 |
 

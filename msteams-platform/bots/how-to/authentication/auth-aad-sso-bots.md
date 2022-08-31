@@ -3,19 +3,21 @@ title: 为机器人提供单一登录支持
 description: 了解如何获取用户令牌，机器人开发人员可以使用具有 OAuth 卡支持的登录卡或 Azure 机器人服务。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
-ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
+ms.openlocfilehash: 46f9ee905f470563fb2a402f9addabfcf09601b6
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2022
-ms.locfileid: "66611497"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465377"
 ---
 # <a name="use-sso-authentication-for-bots"></a>对机器人使用 SSO 身份验证
 
 Microsoft Azure Active Directory (Azure AD) 中的单一登录身份验证以无提示方式刷新身份验证令牌，最大限度地减少了用户需要输入其登录凭据的次数。 如果用户同意使用应用，则他们不必在另一台设备上再次同意，因为他们会自动登录。 选项卡和机器人具有类似的 SSO 支持流程。 但是，机器人会使用不同的协议[请求令牌](#request-a-bot-token)和[接收响应](#receive-the-bot-token)。
 
 >[!NOTE]
-> OAuth 2.0 是 Azure AD 和许多其他标识提供者用于身份验证和授权的开放标准。 基本了解 OAuth 2.0 是在 Teams 中使用身份验证的先决条件。
+> * OAuth 2.0 是 Azure AD 和许多其他标识提供者用于身份验证和授权的开放标准。 基本了解 OAuth 2.0 是在 Teams 中使用身份验证的先决条件。
+>
+> * 机器人 SSO 仅在一对一聊天中受支持。
 
 请参阅以下视频，了解对机器人的单一登录 (SSO) 支持：
 <br>
