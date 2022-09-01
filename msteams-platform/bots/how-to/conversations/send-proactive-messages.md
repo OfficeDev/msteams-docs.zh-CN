@@ -4,12 +4,12 @@ description: 了解如何使用 Teams 机器人发送主动消息、使用 Micro
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 964dd5bf33ab527ea1dcf5307e7d9ae94a29d9ec
-ms.sourcegitcommit: d3eb976f5883c1f019083b516289537ff8263cad
+ms.openlocfilehash: 41c7d1ecd4c57bda98bb72dd66546df21fe74754
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2022
-ms.locfileid: "67442982"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488262"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -50,9 +50,9 @@ ms.locfileid: "67442982"
 
 * 在特定上下文中安装应用时，会收到一个 [`onMembersAdded` 活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
 * 将新用户添加到安装应用的上下文时，你会收到一个 [`onMembersAdded` 活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
+* 机器人收到的每个事件都包含所需的信息，你可以从 bot 上下文 (TurnContext 对象) 获取这些信息。
 * 你可以在已安装应用的团队中检索[频道列表](~/bots/how-to/get-teams-context.md)。
 * 你可以检索已安装应用的团队的[成员列表](~/bots/how-to/get-teams-context.md)。
-* 机器人收到的每个活动都必须包含所需信息。
 
 无论如何获取信息，都存储 `tenantId` 或 `userId` 存储或 `channelId` 创建新会话。 你还可以使用 `teamId` 在团队的常规频道或默认频道中创建新的对话线程。
 
@@ -346,3 +346,4 @@ POST /v3/conversations
 * [向用户发送主动通知](/azure/bot-service/bot-builder-howto-proactive-message)
 * [使用 JavaScript 生成第一个机器人应用](../../../sbs-gs-bot.yml)
 * [使用 JavaScript 生成通知机器人以发送主动消息](../../../sbs-gs-notificationbot.yml)
+* [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")

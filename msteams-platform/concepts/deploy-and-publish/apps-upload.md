@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 702f8c6c53038fcedbd30a34262f2ed49eb03752
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: ab833f3472091d6727ad584c923a83cae2842c0c
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363450"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488283"
 ---
 # <a name="upload-your-app-in-teams"></a>在 Teams 中上传应用
 
@@ -127,3 +127,4 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 
 * [配置默认安装选项](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [维护已发布的 Microsoft Teams 应用](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
+* [将应用添加到聊天](/graph/api/chat-post-installedapps)

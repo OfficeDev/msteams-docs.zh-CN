@@ -3,16 +3,16 @@ title: 适用于 Microsoft Teams 选项卡的 DevTools
 description: 在本模块中，了解如何在使用 Microsoft Teams 桌面客户端和调试时访问 DevTools
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: de502588d6c1d4e11d7f68e2fff1c7e591d2918d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a0d5e3ea15fd796c2c426f1cf1457171f0abe7b2
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143009"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488269"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>适用于 Microsoft Teams 选项卡的 DevTools
 
-当Teams在浏览器中运行时，可以轻松访问浏览器的 DevTools：Windows 上的 F12 或 MacOS 上的 Command-Option-I。 DevTools 允许你访问：
+当 Teams 在浏览器中运行时，可以轻松访问浏览器的 DevTools：Windows 上的 F12 或 MacOS 上的 Command-Option-I。 DevTools 允许你访问：
 
 1. 查看控制台日志。
 1. 在运行时查看或修改 HTML、CSS 和网络请求。
@@ -50,3 +50,7 @@ ms.locfileid: "66143009"
 1. 选择要调试的选项卡下的 **检查** ，如下图所示：
 
    ![Android DevTools](~/assets/images/android-devtools.png)
+
+## <a name="see-also"></a>另请参阅
+
+[清除 Teams 客户端缓存](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)
