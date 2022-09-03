@@ -1,14 +1,14 @@
 ---
 title: 对应用用户进行身份验证
-description: 在本模块中，了解 Teams 中的身份验证以及如何在应用、基于 Web 的身份验证流和对话机器人的 OAuthPrompt 流中使用它
+description: 了解可以在 Teams 应用中启用的身份验证方法，例如单一登录 (SSO) 和使用第三方 OAuth 提供程序。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b5a083d0bd52a2c9233adaf6164821042236f85
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: b7ab4f007c0b7f9400e63d1654c5e0a930274468
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557867"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587006"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>在 Microsoft Teams 中对用户进行身份验证
 

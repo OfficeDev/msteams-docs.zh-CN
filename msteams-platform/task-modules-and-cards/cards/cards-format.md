@@ -4,12 +4,12 @@ description: 在本模块中，了解什么是 Microsoft Teams 中的卡片文�
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962431"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586957"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams 中的格式卡
 
@@ -326,6 +326,9 @@ ms.locfileid: "66962431"
 ### <a name="full-width-adaptive-card"></a>全宽自适应卡片
 
 可以使用 `msteams` 属性扩展自适应卡片的宽度并使用其他画布空间。 下一部分提供有关如何使用该属性的信息。
+
+> [!NOTE]
+> 在移动面板和会议侧面板等窄外形因素中测试全宽自适应卡片，以确保内容不会被截断。
 
 #### <a name="construct-full-width-cards"></a>构造全宽卡
 

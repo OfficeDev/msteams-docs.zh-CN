@@ -1,16 +1,16 @@
 ---
 title: 向 Teams 机器人添加身份验证
 author: surbhigupta
-description: 了解如何使用 Azure Active Directory 将 OAuth 身份验证添加到 Teams 中的机器人。 了解如何创建、部署和集成已启用身份验证的机器人。
+description: 了解如何使用 Azure AD 使用第三方 OAuth 提供程序在 Teams 中的机器人应用中启用身份验证。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 6cfd765ba467d2c8b03ae4f86b4ab8727c21b9b7
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: ed30f4600630b047ad410b88ed8e04e91989088c
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312147"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586852"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 

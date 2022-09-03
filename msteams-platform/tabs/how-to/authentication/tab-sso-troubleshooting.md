@@ -1,15 +1,15 @@
 ---
 title: 在 Teams 中使用 SSO 对选项卡的身份验证进行故障排除
-description: 排查 Teams 中的 SSO 身份验证问题以及如何在选项卡中使用它
+description: 排查 Teams 中的单一登录 (SSO) 身份验证问题以及如何在选项卡应用中使用它。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: 团队身份验证选项卡 Microsoft Azure Active Directory (Azure AD) SSO 错误问题
-ms.openlocfilehash: fa17ffef08f85124a230f76419158f4216f55416
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 8396b42c217ea58a0a4709e1dbd8580da32da991
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658952"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586894"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>在 Teams 中的 SSO 身份验证故障排除
 

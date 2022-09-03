@@ -1,15 +1,15 @@
 ---
 title: 在 Teams 和 Azure AD 中使用 SSO 对选项卡进行身份验证的概述
-description: 概述 Teams 中的 SSO 身份验证以及如何在选项卡中使用
+description: 了解在 Teams 中单一登录 (SSO) 身份验证，以及如何在选项卡中启用单一登录。
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: Microsoft Azure Active Directory (Azure AD) SSO 访问令牌应用清单的 Teams 身份验证选项卡
-ms.openlocfilehash: 54e2a691208db1613bf73e255f91bd4cba8960d6
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 367a7f0f02d6b1b32af42316774bd171afdaf703
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659011"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586992"
 ---
 # <a name="enable-sso-for-tab-app"></a>为选项卡应用启用 SSO
 
@@ -69,7 +69,7 @@ ms.locfileid: "66659011"
 | 3 | Azure AD →许可表单 | 如果当前应用用户是第一次使用选项卡应用，则如果应用需要访问一些受保护的数据，Teams 会显示请求提示以表示同意。 应用用户 (或管理员) 必须同意 Teams 使用应用用户的 Teams 标识从 Azure AD 获取访问令牌。 <br> 或者，有一个请求提示来处理升级身份验证，例如双因素身份验证。 |
 | 4 | Azure AD → Teams 客户端 | Azure AD 将选项卡访问令牌发送到 Teams 客户端。 该令牌是 JSON Web 令牌 (JWT)，这意味着验证方式与大多数标准 OAuth 流中的令牌验证方式类似。 Teams 代表你缓存令牌，以便将来调用 `getAuthToken()` 返回缓存的令牌。 |
 | 5 | Teams 客户端→选项卡应用客户端 | Teams 将选项卡访问令牌作为 `getAuthToken()` 调用返回的结果对象的一部分发送到选项卡。 |
-| 6  | 选项卡应用（在客户端和服务器之间） | 使用 JavaScript 在选项卡应用程序中分析令牌，以提取所需的信息，例如用户的电子邮件地址。 返回到选项卡应用的令牌既是访问令牌又是标识令牌。 |
+| 6 | 选项卡应用（在客户端和服务器之间） | 使用 JavaScript 在选项卡应用程序中分析令牌，以提取所需的信息，例如用户的电子邮件地址。 返回到选项卡应用的令牌既是访问令牌又是标识令牌。 |
 
 有关详细信息，请参阅 [更新代码以启用 SSO](tab-sso-code.md)。
 

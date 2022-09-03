@@ -1,14 +1,14 @@
 ---
 title: 无提示的身份验证
-description: 在本模块中，了解如何对选项卡执行无提示身份验证、单一登录和 Azure AD，以及它的工作原理
+description: 使用 Azure AD 为选项卡配置选项卡应用及其工作原理。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ef80c44e38e32666f68b13e42e1f815a4c351353
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435039"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586775"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>在 Azure AD 中使用无提示身份验证
 

@@ -1,14 +1,14 @@
 ---
 title: 机器人的 Microsoft Teams 身份验证流程
-description: 在本模块中，了解如何在Microsoft Teams及其代码示例中为机器人执行身份验证流。
+description: 使用代码示例通过第三方 OAuth 提供程序为 Microsoft Teams 机器人应用启用身份验证。
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: de263a75b7b8077570dca2f94bf6937d9d339bbe
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 67668f11fafcc8eff878d82913f002ed8c2f96bc
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143233"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587013"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Microsoft Teams 中的机器人身份验证流程
 

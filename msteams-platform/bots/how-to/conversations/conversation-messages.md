@@ -4,12 +4,12 @@ description: 了解如何发送接收消息、建议的操作、通知、附件�
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363443"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586985"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
@@ -192,7 +192,9 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> 在同一活动有效负载中发送短信和附件时，将发生消息拆分。 此活动由 Microsoft Teams 拆分为单独的活动，其中一个活动仅包含一条短信，另一个活动包含附件。 由于活动是拆分的，因此不会收到响应中的消息 ID，该 ID 用于主动 [更新或删除](~/bots/how-to/update-and-delete-bot-messages.md) 消息。 建议发送单独的活动，而不是根据消息拆分。
+>
+>* 在同一活动有效负载中发送短信和附件时，将发生消息拆分。 此活动由 Microsoft Teams 拆分为单独的活动，其中一个活动仅包含一条短信，另一个活动包含附件。 由于活动是拆分的，因此不会收到响应中的消息 ID，该 ID 用于主动 [更新或删除](~/bots/how-to/update-and-delete-bot-messages.md) 消息。 建议发送单独的活动，而不是根据消息拆分。
+>* 可以本地化发送的消息以提供个性化设置。 有关详细信息，请参阅 [本地化应用](../../../concepts/build-and-test/apps-localization.md)。
 
 用户和机器人之间发送的消息包括消息中的内部通道数据。 此数据允许机器人在该通道上正确通信。 Bot Builder SDK 允许修改消息结构。
 
@@ -459,9 +461,10 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="code-sample"></a>代码示例
 
-|示例名称 | Description | .NETCore | Node.js | Python |
-|----------------|-----------------|--------------|----------------|-----------|
-| Teams 对话自动程序 | 消息传递和对话事件处理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| 示例名称 | Description | Node.js | .NETCore | Python | .NET |
+|----------------|-----------------|--------------|----------------|-----------|-----|
+| Teams 对话自动程序 | 消息传递和对话事件处理。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | 不适用 |
+| Teams 应用本地化 | 使用机器人和选项卡进行 Teams 应用本地化。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## <a name="next-step"></a>后续步骤
 
@@ -474,3 +477,4 @@ async def on_message_activity(self, turn_context: TurnContext):
 * [订阅对话事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [通过机器人发送和接收文件](~/bots/how-to/bots-filesv4.md)
 * [将租户 ID 和对话 ID 发送到机器人的请求标头](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [本地化应用](../../../concepts/build-and-test/apps-localization.md)

@@ -1,15 +1,15 @@
 ---
 title: 用于为选项卡启用 SSO 的代码配置
-description: 介绍为选项卡启用 SSO 的代码配置
+description: 更新选项卡应用中的代码，以便使用应用用户的 Teams 标识请求和接收访问令牌，以便启用单一登录 (SSO) 。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 身份验证选项卡 Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 466da3cbd879ed2546adcad87f6f55620d54256d
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658934"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586782"
 ---
 # <a name="add-code-to-enable-sso"></a>添加代码以启用 SSO
 

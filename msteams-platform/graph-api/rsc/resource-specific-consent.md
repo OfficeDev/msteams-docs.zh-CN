@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 8501cab5db2017d120ef72f61e43691104df7fa1
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 7321c3dbf1f2a3493a1d457cfd80d7fc1efb01d6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695306"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586705"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 
@@ -107,7 +107,7 @@ ms.locfileid: "66695306"
 
    ![图形 RSC 团队配置](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
->  属性的默认值 **是ChatResourceSpecificConsentEnabled** ，它基于首次使用 RSC 进行聊天时租户中是否打开或关闭 [用户同意设置](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) 。 这可能是) 首次检索 [**teamsAppSettings**](/graph/api/teamsappsettings-get) 或 b) 在聊天/会议中安装具有资源特定权限的 Teams 应用。
+> 属性的默认值 **是ChatResourceSpecificConsentEnabled** ，它基于首次使用 RSC 进行聊天时租户中是否打开或关闭 [用户同意设置](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) 。 这可能是) 首次检索 [**teamsAppSettings**](/graph/api/teamsappsettings-get) 或 b) 在聊天/会议中安装具有资源特定权限的 Teams 应用。
 
 ## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>使用 Azure AD 门户向 Microsoft 标识平台注册应用
 

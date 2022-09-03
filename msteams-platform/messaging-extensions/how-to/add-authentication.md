@@ -1,16 +1,16 @@
 ---
 title: 为消息扩展添加身份验证
 author: surbhigupta
-description: 本文介绍如何使用代码示例和示例将身份验证添加到消息传递扩展
+description: 将第三方 OAuth 提供程序与 Azure AD 配置和代码示例配合使用，在 Teams 消息扩展应用中启用身份验证。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 4d5288d0145e60a263b439adfff3a5ae825caf23
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435046"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586978"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>为消息扩展添加身份验证
 

@@ -1,15 +1,15 @@
 ---
 title: 为选项卡启用 SSO 的更新清单
-description: 介绍为选项卡启用 SSO 的更新清单
+description: 更新 Teams 清单，用于为选项卡启用单一登录 (SSO) ，并将其旁加载到 Teams 客户端以测试 SSO 身份验证。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 身份验证选项卡 Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658967"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586999"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>更新 SSO 清单并预览应用
 

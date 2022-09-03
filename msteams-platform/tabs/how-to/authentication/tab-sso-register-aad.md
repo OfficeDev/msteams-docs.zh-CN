@@ -1,15 +1,15 @@
 ---
 title: 使用 Azure AD 注册选项卡应用
-description: 介绍如何使用 Azure AD 注册选项卡应用
+description: 通过配置应用 ID URI、访问令牌范围和预授权受信任客户端，配置 Azure AD 的单一登录 (SSO) 。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Microsoft Azure Active Directory (Azure AD) 访问令牌 SSO 租户范围的 Teams 身份验证选项卡
-ms.openlocfilehash: 60d3ce73d92a75a5520dbbc096ba140fb1daa174
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659003"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586796"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>在 Azure AD 中注册选项卡应用
 
