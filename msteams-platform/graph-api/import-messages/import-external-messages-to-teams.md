@@ -5,12 +5,12 @@ ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 3003f147d3861996fb17e3833144b6a6018f6550
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: 759fe9af0178af47c5f14b849269ab9ab444c35f
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488255"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605031"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>使用 Microsoft Graph 将第三方平台消息导入 Teams
 
@@ -387,4 +387,5 @@ HTTP/1.1 204 No Content
 
 * [ Microsoft Graph 和 Teams 集成 ](/graph/teams-concept-overview)
 * [通过 Microsoft Teams Export API 导出内容](/microsoftteams/export-teams-content)
-* [Microsoft Teams API 的许可和付款要求 ](/graph/teams-licenses)
+* [Microsoft Teams 服务限制](/graph/throttling-limits#microsoft-teams-service-limits)
+* [Microsoft Teams API 的许可和付款要求](/graph/teams-licenses)

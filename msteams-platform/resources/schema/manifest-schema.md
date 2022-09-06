@@ -3,12 +3,12 @@ title: 清单架构参考
 description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363436"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605024"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
@@ -792,7 +792,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选** - 布尔值
 
-当 `defaultBlockUntilAdminAction` 属性设置为 **true** 时，应用默认向用户隐藏，直到管理员允许它。 如果设置为 **true，** 则应用将隐藏所有租户和最终用户。 租户管理员可以在管理中心内Teams应用，并采取措施以允许或阻止该应用。 默认值为 **false**。 有关默认应用块详细信息，请参阅隐藏[Teams应用，直到管理员批准](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
+当 `defaultBlockUntilAdminAction` 属性设置为 **true** 时，应用默认向用户隐藏，直到管理员允许它。 如果设置为 **true，** 则应用将隐藏所有租户和最终用户。 租户管理员可以在管理中心内Teams应用，并采取措施以允许或阻止该应用。 默认值为 **false**。 有关默认应用块的详细信息，请 [参阅默认情况下为用户阻止应用，直到管理员批准](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 

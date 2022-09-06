@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Microsoft Teams 中使用应用�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0b51d34aaacfe38c077b03b5df8bb6a9227c5b61
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363457"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604855"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -85,8 +85,6 @@ ms.locfileid: "67363457"
 ### <a name="create-an-action-command-using-developer-portal"></a>使用开发人员门户创建操作命令
 
 可以使用 **开发人员门户** 创建操作命令。
-
-# <a name="app-studio"></a>[应用程序 Studio](#tab/AS)
 
 > [!NOTE]
 > 创建操作命令的先决条件是已创建消息扩展。 有关如何创建消息扩展的信息，请参阅[创建消息扩展](~/messaging-extensions/how-to/create-messaging-extension.md)。

@@ -3,12 +3,12 @@ title: 在机器人中添加卡片操作
 description: 在本模块中，了解什么是 Microsoft Teams 中的卡片操作、操作类型以及如何在机器人中使用它们
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1c55470d068c2a7e0db5b90c0a0c09a2942316ce
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035301"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605010"
 ---
 # <a name="card-actions"></a>卡片操作
 
@@ -37,7 +37,9 @@ Teams 中机器人和消息扩展使用的卡片支持以下活动 [`CardAction`
 `openUrl` 操作类型指定要在默认浏览器中启动的 URL。
 
 > [!NOTE]
-> 机器人不会收到任何关于所选按钮的通知。
+>
+> * 机器人不会收到任何关于所选按钮的通知。
+> * URL 不支持具有数字的计算机名称。
 
 通过 `openUrl`，你可以创建具有以下属性的操作：
 
@@ -561,7 +563,7 @@ CardFactory.actions([
 
 ## <a name="code-samples"></a>代码示例
 
-|S.no|卡| description|.NET|Javascript|Python|Java|
+|S.no|卡| 说明|.NET|Javascript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
 |1|使用卡片|介绍所有卡片类型，包括缩略图、音频、媒体等。通过在欢迎用户 + 多提示机器人的基础上构建，方法是显示一张卡片，其中包含可路由到相应对话框的欢迎消息中的按钮。|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
 |2|自适应卡片|演示多轮次对话如何使用卡片获取用户输入名称和年龄。|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|

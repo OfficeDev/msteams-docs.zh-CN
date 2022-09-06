@@ -1,14 +1,14 @@
 ---
 title: 使用第三方 OAuth 提供程序启用身份验证
-description: 本文介绍选项卡、第三方 OAuth 提供程序、OAuth by Azure AD 和身份验证代码示例中的 Teams 身份验证流。
+description: 了解使用第三方 OAuth 提供程序和 Azure AD 配置和代码示例的选项卡中的 Teams 身份验证流。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 33300461e16f5a8ab5e1e69f5fea775adb2359aa
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c9969e154dae2f0d2439c1d8513af34970723e5c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435054"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605038"
 ---
 # <a name="enable-authentication-using-third-party-oauth-provider"></a>使用第三方 OAuth 提供程序启用身份验证
 

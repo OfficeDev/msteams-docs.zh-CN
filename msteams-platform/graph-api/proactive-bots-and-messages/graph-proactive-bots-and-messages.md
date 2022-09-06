@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 525f49de49312d91705bc3a14c4a5da12bd44fdf
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: cee1b0078c3a963f41d811b1fac9daa0fbe65f77
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488276"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604848"
 ---
 # <a name="send-proactive-installation-messages"></a>发送主动安装消息
 
@@ -249,4 +249,5 @@ server.get('/api/notify', async (req, res) => {
 * [向用户 SDK v4 发送主动通知](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 * [向 Microsoft Teams 中的用户发送活动源通知](/graph/teams-send-activityfeednotifications)
 * [将应用添加到团队 - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Microsoft Teams 服务限制](/graph/throttling-limits#microsoft-teams-service-limits)
 * [Microsoft Teams 中的受保护 API](/graph/teams-protected-apis)

@@ -328,60 +328,76 @@
       items:
         - name: 定义操作命令
           href: messaging-extensions/how-to/action-commands/define-action-command.md
+          displayName: 'Command invoke locations, static list of parameters, command to your app manifest'
         - name: 创建和发送任务模块
           href: messaging-extensions/how-to/action-commands/create-task-module.md
+          displayName: 'Initial invoke request, respond to fetchTask'
         - name: 响应任务模块提交操作
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+          displayName: 'Respond to initial submit action, configure the poll, attribution for bot messages'
     - name: 搜索命令
       items:
         - name: 定义搜索命令
           href: messaging-extensions/how-to/search-commands/define-search-command.md
         - name: 响应搜索命令
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
+          displayName: Handle tap actions
     - name: 添加链接展开
       href: messaging-extensions/how-to/link-unfurling.md
+      displayName: Through wildcards
 - name: 为 Teams 会议和通话构建应用
   items:
     - name: 概述
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: 统一会议应用
       href: apps-in-teams-meetings/meeting-app-extensibility.md
+      displayName: 'Chat tab, poll survey, guest access'
     - name: 为会议启用和配置应用
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+      displayName: 'Access, organizer, meeting token generator app, channels, organizer'
     - name: 会议应用 API 参考
       href: apps-in-teams-meetings/API-references.md
+      displayName: 'CART URL, channel, permissions, access, audio state'
     - name: 使用图形 API 获取会议脚本
       items:
         - name: 概述
           href: graph-api/meeting-transcripts/overview-transcripts.md
+          displayName: 'Access, permissions'
         - name: 提取会议 ID 和组织者 ID
           href: graph-api/meeting-transcripts/fetch-id.md
+          displayName: 'Access, permisssions, chat entity'
         - name: 获取脚本
           href: /graph/api/resources/calltranscript
     - name: 通过 Live Share 增强协作
       items:
         - name: 概述
           href: apps-in-teams-meetings/teams-live-share-overview.md
+          displayName: 'Fluid Framework, Azure Fluid Relay, distributed data structures, web sockets'
         - name: 入门
           items:
             - name: 快速入门指南
               href: apps-in-teams-meetings/teams-live-share-quick-start.md
             - name: Dice Roller 教程
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
+              displayName: 'Fluid container, static view'
         - name: 核心功能
           href: apps-in-teams-meetings/teams-live-share-capabilities.md
+          displayName: Ephemeral data structures
         - name: 媒体同步
           href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+          displayName: 'Audio ducking,'
         - name: 操作指南
           items:
             - name: Agile Poker 教程
               href: sbs-teams-live-share.yml
             - name: 自定义 Azure Fluid Relay 服务
               href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
+              displayName: Access
         - name: Live Share 常见问题解答
           href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: 在 Teams 中自定义同框场景模式
       href: apps-in-teams-meetings/teams-together-mode.md
+      displayName: 'Single vitrual scene, organizer'
 - name: 构建Webhook 和连接器
   items:
     - name: 概述
@@ -594,8 +610,10 @@
   items:
     - name: 概述
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+      displayName: 'Pricing model, SaaS offer, In-app purchases,'
     - name: 在 Teams 应用中包含 SaaS 产品/服务
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      displayName: 'Transactable Software-as-a-Service, Recloud app'
     - name: 应用内购买
       href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     - name: 针对盈利应用的测试预览

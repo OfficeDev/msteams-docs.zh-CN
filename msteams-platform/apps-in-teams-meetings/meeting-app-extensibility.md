@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: d1de26a953e1ec0e1f02c18cd7db50441e9dd9d5
-ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
+ms.openlocfilehash: e08304cb59ec78ff784c87c01ea588a53adbe21d
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67465384"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604862"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -237,3 +237,4 @@ Teams 统一会议应用允许你根据会议中的参与者角色设计应用�
 * [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md)
 * [设计应用](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Microsoft Teams 会议出勤情况报告](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)
+* [设置针对 OneDrive for Business 和 SharePoint 的会议录制选项](/MicrosoftTeams/tmr-meeting-recording-change#set-up-the-meeting-recording-option-for-onedrive-for-business-and-sharepoint)

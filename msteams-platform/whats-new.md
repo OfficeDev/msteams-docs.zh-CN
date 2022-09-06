@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435004"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605080"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -122,7 +122,7 @@ ms.locfileid: "67435004"
 |10/20/2021| 会议详细信息 API 和实时 Teams 会议事件 | 为 Teams 会议生成应用 > [获取会议详细信息 API](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |10/18/2021| 选项卡链接展开和演示区域视图 | 生成选项卡>[选项卡链接展开和阶段视图](tabs/tabs-link-unfurling.md) |
 |10/08/2021| 设计自适应卡片的新最佳做法 | 设计应用> UI 组件>[为 Teams 应用设计自适应卡片](task-modules-and-cards/cards/design-effective-cards.md) |
-|10/05/2021| 隐藏 Teams 应用，直到管理员允许取消隐藏应用 | 设计应用> [隐藏 Teams 应用，直到管理员批准](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
+|10/05/2021| 隐藏 Teams 应用，直到管理员允许取消隐藏应用 | 默认情况下，设计应用> [阻止用户的应用，直到管理员批准](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |10/05/2021| 规划适用于 Teams 移动设备的应用 | 应用基础知识>[规划 Teams 移动的响应式选项卡](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |10/04/2021| 引入了用于管理 Teams 应用的新 Teams 开发人员门户 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|对于机器人和传入 Webhook，Teams 在用户提及中支持 Azure AD 对象 ID 和 UPN | • 生成卡片和任务模块>生成卡片>[用户提及的 Azure AD 对象 ID 和 UPN](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • 生成卡片和任务模块>生成卡片> [卡片- 概述](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
