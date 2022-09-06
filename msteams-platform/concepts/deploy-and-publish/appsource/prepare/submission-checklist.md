@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: bc38c6ed067a0d3884307e109d3033784ca2d4e8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363548"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605750"
 ---
 # <a name="prepare-your-teams-store-submission"></a>准备 Teams 应用商店提交
 
@@ -82,7 +82,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="突出显示应用短名称在应用商店一览中显示位置的示例屏幕截图。":::
+:::image type="content" source="../../../../assets/images/store-detail-page/specifying-short-name-under-submission.png" alt-text="突出显示应用短名称在应用商店一览中显示位置的示例屏幕截图。":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -102,7 +102,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="突出显示应用简短说明在应用商店一览中显示位置的示例屏幕截图。":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-short-description-under-submission.png" alt-text="突出显示应用简短说明在应用商店一览中显示位置的示例屏幕截图。":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -124,7 +124,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="突出显示应用较长说明在应用商店一览中显示位置的示例屏幕截图。":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="突出显示应用较长说明在应用商店一览中显示位置的示例屏幕截图。":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -146,7 +146,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 :::row:::
 
 :::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="突出显示应用屏幕截图在应用商店一览中显示位置的示例屏幕截图。":::
+:::image type="content" source="~/assets/images/store-detail-page/specifying-of-capturing-screenshots-submission.png" alt-text="突出显示应用屏幕截图在应用商店一览中显示位置的示例屏幕截图。":::
 :::column-end:::
 :::column span="1":::
 :::column-end:::
@@ -189,14 +189,14 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 
 | Teams 类别       | 合作伙伴中心类别  |
 |:---------------------|:---------------|
-| 分析和 BI | 分析、数据可视化和 BI |
-| 开发人员和 IT | 开发人员工具，IT 管理员 |
+| 数据可视化和 BI | 分析、数据可视化和 BI |
+| 开发人员工具 | 开发人员工具，IT 管理员 |
 | 教育 | 教育 |
-| 人力资源 | 人力资源和招聘 |
+| 人力资源&招聘| 人力资源和招聘 |
 | 工作效率 | 内容管理、文件和文档、生产力、培训和教程以及实用工具 |
 | 项目管理 | 通信、项目管理、工作流和业务管理 |
 | 销售和客户服务 | 客户和联系人管理、客户支持、财务管理，以及销售和市场营销 |
-| 社交和娱乐 | 图像和视频库、生活方式、新闻和天气、社交、旅行和导航 |
+| 社交 | 图像和视频库、生活方式、新闻和天气、社交、旅行和导航 |
 
 ### <a name="localize-your-store-listing"></a>本地化应用商店一览
 

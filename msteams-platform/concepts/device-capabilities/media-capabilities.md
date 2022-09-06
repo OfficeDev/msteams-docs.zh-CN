@@ -5,28 +5,30 @@ description: 了解如何使用 Teams JavaScript 客户端 SDK 使用代码示�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: b4e552f77b181d005f4a2f3da7967a0fdb1f3ac5
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 25d8fb9c52e0dee02d8057f1fe4714f7f3f1f613
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841776"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605787"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能
 
 可以将本机设备功能（例如相机和麦克风）与 Teams 应用集成。 为了进行集成，可以使用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 为应用提供访问用户 [设备权限](native-device-permissions.md)所需的工具。 使用合适的媒体功能 API 将设备功能（例如相机和麦克风）与 Microsoft Teams 应用中的 Teams 平台集成，并构建更丰富的体验。 媒体功能适用于 Teams Web 客户端、桌面和移动设备。 若要集成媒体功能，必须更新应用清单文件并调用媒体功能 API。
 
-若要进行有效的集成，必须充分了解用于调用相应 API 的[代码片段](#code-snippets)，以便使用本机媒体功能。 请务必熟悉 [API 响应错误](#error-handling)，以处理 Teams 应用中的错误。
+若要进行有效的集成，必须充分了解用于调用相应 API [的代码片段](#code-snippets) ，这样就可以使用本机媒体功能。 请务必熟悉 [API 响应错误](#error-handling)，以处理 Teams 应用中的错误。
 
 ## <a name="advantages"></a>优点
 
-在 Teams 应用中集成设备功能的主要优势在于，可利用本机 Teams 控件为用户提供沉浸式的丰富体验。 以下方案展示了媒体功能的优势：
+在 Teams 应用中集成设备功能的主要优势是使用本机 Teams 控件为用户提供丰富而沉浸式体验。 以下方案展示了媒体功能的优势：
 
 * 允许用户通过手机捕获物理白板上绘制的粗略模拟，并使用捕获的图像作为 Teams 群聊中的轮询选项。
 
 * 允许用户录制音频消息并将其附加到事件票证。
 
 * 允许用户从智能手机扫描物理文档以提交汽车保险索赔。
+
+* 允许用户在工作现场录制视频并上传以供出席。
 
 > [!NOTE]
 >
@@ -49,7 +51,7 @@ ms.locfileid: "66841776"
 [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia)、[getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia) 和 [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) API 使你能够使用本机媒体功能，如下所示：
 
 * 使用本机 **麦克风** 允许用户从设备 **录制音频**（录制 10 分钟聊天）。
-* 使用本机 **相机控件** 允许用户在移动中 **捕获和附加图像**。
+* 使用本机 **相机控件** 允许用户 **捕获和附加图像** ，并 **捕获视频** (录制最多 5 分钟的视频) 。
 * 使用本机 **库支持** 允许用户 **选择设备图像** 作为附件。
 * 使用本机 **图像查看器控件** 一次 **预览多个图像**。
 * 支持通过 SDK 桥进行 **大型图像传输**（从 1 MB 到 50 MB）。
@@ -107,165 +109,281 @@ ms.locfileid: "66841776"
 | **4000**| INVALID_ARGUMENTS | 一个或多个参数无效。|
 |  **8000** | USER_ABORT |用户中止了该操作。|
 | **9000**| OLD_PLATFORM | 平台代码已过时，不实现此 API。|
-| **10000**| SIZE_EXCEEDED |  返回值太大，已超出平台大小限制。|
+| **10000**| SIZE_EXCEEDED |  返回值太大，已超出平台大小边界。|
 
 ## <a name="code-snippets"></a>代码段
 
 * 调用 `selectMedia` API 以使用相机捕获图像：
 
-```javascript
-let imageProp: microsoftTeams.media.ImageProps = {
-    sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
-    startMode: microsoftTeams.media.CameraStartMode.Photo,
-    ink: false,
-    cameraSwitcher: false,
-    textSticker: false,
-    enableFilter: true,
-};
-let mediaInput: microsoftTeams.media.MediaInputs = {
-    mediaType: microsoftTeams.media.MediaType.Image,
-    maxMediaCount: 10,
-    imageProps: imageProp
-};
-microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-    if (error) {
-        if (error.message) {
-            alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-            alert(" ErrorCode: " + error.errorCode);
+    ```javascript
+    let imageProp: microsoftTeams.media.ImageProps = {
+        sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+        startMode: microsoftTeams.media.CameraStartMode.Photo,
+        ink: false,
+        cameraSwitcher: false,
+        textSticker: false,
+        enableFilter: true,
+    };
+    let mediaInput: microsoftTeams.media.MediaInputs = {
+        mediaType: microsoftTeams.media.MediaType.Image,
+        maxMediaCount: 10,
+        imageProps: imageProp
+    };
+    microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
         }
-    }
-    if (attachments) {
-        let y = attachments[0];
-        img.src = ("data:" + y.mimeType + ";base64," + y.preview);
-    }
-});
-```
+        if (attachments) {
+            let y = attachments[0];
+            img.src = ("data:" + y.mimeType + ";base64," + y.preview);
+        }
+    });
+    ```
+
+* 使用相机调用 `selectMedia` API 捕获视频：
+
+  * `fullscreen: true`使用：
+
+       `fullscreen: true` 在视频录制模式下打开相机。 它提供了使用前置和后置摄像头的选项，还提供以下示例中所述的其他属性：
+
+       ```javascript
+        
+         const defaultLensVideoProps: microsoftTeams.media.VideoProps = {
+             sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+             startMode: microsoftTeams.media.CameraStartMode.Video,
+             cameraSwitcher: true,
+             maxDuration: 30
+        }
+         const defaultLensVideoMediaInput: microsoftTeams.media.MediaInputs = {
+             mediaType: microsoftTeams.media.MediaType.Video,
+             maxMediaCount: 6,
+             videoProps: defaultLensVideoProps
+        }
+       ```
+
+  * `fullscreen: false`使用：
+
+       `fullscreen: false` 在视频录制模式下打开相机，并仅使用前置摄像头。 通常 `fullscreen: false` 当用户想要在设备屏幕上阅读内容时录制视频时使用。
+
+       此模式还支持 `isStopButtonVisible: true` 在屏幕上添加一个可让用户停止录制的停止按钮。 如果 `isStopButtonVisible: false`可以调用 mediaController API 或在录制持续时间达到 `maxDuration` 指定时间时停止录制。
+
+       下面是一个示例，用于在指定的时间内停止录制 `maxDuration` ：
+
+       ```javascript
+          const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
+             maxDuration: 30,
+             isFullScreenMode: false,
+             isStopButtonVisible: false,
+             videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
+         }
+          const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = {
+             mediaType: microsoftTeams.media.MediaType.Video,
+             maxMediaCount: 1,
+             videoProps: defaultNativeVideoProps
+         }
+       ```
+
+       下面是通过调用 mediaController API 来停止录制的示例：
+
+       ```javascript
+          const defaultNativeVideoProps: microsoftTeams.media.VideoProps = {
+             videoController.stop(),
+             isFullScreenMode: false,
+             isStopButtonVisible: false,
+             videoController: new microsoftTeams.media.VideoController(videoControllerCallback)
+         }
+          const defaultNativeVideoMediaInput: microsoftTeams.media.MediaInputs = {
+             mediaType: microsoftTeams.media.MediaType.Video,
+             maxMediaCount: 1,
+             videoProps: defaultNativeVideoProps
+         }
+       ```
+
+* 调用 `selectMedia` API 以使用相机捕获图像和视频：
+
+  这允许用户在捕获图像或视频之间进行选择。
+
+    ```javascript
+    
+      const defaultVideoAndImageProps: microsoftTeams.media.VideoAndImageProps = {
+        sources: [microsoftTeams.media.Source.Camera, microsoftTeams.media.Source.Gallery],
+        startMode: microsoftTeams.media.CameraStartMode.Photo,
+        ink: true,
+        cameraSwitcher: true,
+        textSticker: true,
+        enableFilter: true,
+        maxDuration: 30
+      }
+    
+      const defaultVideoAndImageMediaInput: microsoftTeams.media.MediaInputs = {
+        mediaType: microsoftTeams.media.MediaType.VideoAndImage,
+        maxMediaCount: 6,
+        videoAndImageProps: defaultVideoAndImageProps
+      }
+    
+      let videoControllerCallback: microsoftTeams.media.VideoControllerCallback = {
+        onRecordingStarted() {
+          console.log('onRecordingStarted Callback Invoked');
+        },
+      };
+    
+      microsoftTeams.media.selectMedia(defaultVideoAndImageMediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
+        }
+        
+        var videoElement = document.createElement("video");
+        attachments[0].getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
+        if (blob) {
+            if (blob.type.includes("video")) {
+                videoElement.setAttribute("src", URL.createObjectURL(blob));
+            }
+        }
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
+        }
+        });
+        });
+        
+    ```
 
 * 调用 `getMedia` API 以分块检索大型媒体：
 
-```javascript
-let media: microsoftTeams.media.Media = attachments[0]
-media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
-    if (blob) {
-        if (blob.type.includes("image")) {
-            img.src = (URL.createObjectURL(blob));
+    ```javascript
+    let media: microsoftTeams.media.Media = attachments[0]
+    media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
+        if (blob) {
+            if (blob.type.includes("image")) {
+                img.src = (URL.createObjectURL(blob));
+            }
         }
-    }
-    if (error) {
-        if (error.message) {
-            alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-            alert(" ErrorCode: " + error.errorCode);
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
         }
-    }
-});
-```
+    });
+    ```
 
 * 按 ID 调用 `viewImages` API，由 API 返回 `selectMedia` ：
 
-```javascript
-// View images by id:
-// Assumption: attachmentArray = select Media API Output
-let uriList = [];
-if (attachmentArray && attachmentArray.length > 0) {
-    for (let i = 0; i < attachmentArray.length; i++) {
-        let file = attachmentArray[i];
-        if (file.mimeType.includes("image")) {
-            let imageUri = {
-                value: file.content,
-                type: 1,
+    ```javascript
+    // View images by id:
+    // Assumption: attachmentArray = select Media API Output
+    let uriList = [];
+    if (attachmentArray && attachmentArray.length > 0) {
+        for (let i = 0; i < attachmentArray.length; i++) {
+            let file = attachmentArray[i];
+            if (file.mimeType.includes("image")) {
+                let imageUri = {
+                    value: file.content,
+                    type: 1,
+                }
+                uriList.push(imageUri);
+            } else {
+                alert("File type is not image");
             }
-            uriList.push(imageUri);
-        } else {
-            alert("File type is not image");
         }
     }
-}
-if (uriList.length > 0) {
-    microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
-        if (error) {
-            if (error.message) {
-                output(" ErrorCode: " + error.errorCode + error.message);
-            } else {
-                output(" ErrorCode: " + error.errorCode);
+    if (uriList.length > 0) {
+        microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
+            if (error) {
+                if (error.message) {
+                    output(" ErrorCode: " + error.errorCode + error.message);
+                } else {
+                    output(" ErrorCode: " + error.errorCode);
+                }
             }
-        }
-    });
-} else {
-    output("Url list is empty");
-}
-```
+        });
+    } else {
+        output("Url list is empty");
+    }
+    ```
 
 * 按 URL 调用 `viewImages` API：
 
-```javascript
-// View Images by URL:
-// Assumption 2 urls, url1 and url2
-let uriList = [];
-if (URL1 != null && URL1.length > 0) {
-    let imageUri = {
-        value: URL1,
-        type: 2,
-    }
-    uriList.push(imageUri);
-}
-if (URL2 != null && URL2.length > 0) {
-    let imageUri = {
-        value: URL2,
-        type: 2,
-    }
-    uriList.push(imageUri);
-}
-if (uriList.length > 0) {
-    microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
-        if (error) {
-            if (error.message) {
-                output(" ErrorCode: " + error.errorCode + error.message);
-            } else {
-                output(" ErrorCode: " + error.errorCode);
-            }
+    ```javascript
+    // View Images by URL:
+    // Assumption 2 urls, url1 and url2
+    let uriList = [];
+    if (URL1 != null && URL1.length > 0) {
+        let imageUri = {
+            value: URL1,
+            type: 2,
         }
-    });
-} else {
-    output("Url list is empty");
-}
-```
+        uriList.push(imageUri);
+    }
+    if (URL2 != null && URL2.length > 0) {
+        let imageUri = {
+            value: URL2,
+            type: 2,
+        }
+        uriList.push(imageUri);
+    }
+    if (uriList.length > 0) {
+        microsoftTeams.media.viewImages(uriList, (error: microsoftTeams.SdkError) => {
+            if (error) {
+                if (error.message) {
+                    output(" ErrorCode: " + error.errorCode + error.message);
+                } else {
+                    output(" ErrorCode: " + error.errorCode);
+                }
+            }
+        });
+    } else {
+        output("Url list is empty");
+    }
+    ```
 
 * 通过麦克风录制音频的呼叫 `selectMedia` 和 `getMedia` API：
 
-```javascript
-let mediaInput: microsoftTeams.media.MediaInputs = {
-    mediaType: microsoftTeams.media.MediaType.Audio,
-    maxMediaCount: 1,
-};
-microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-    if (error) {
-        if (error.message) {
-            alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-            alert(" ErrorCode: " + error.errorCode);
+    ```javascript
+      let mediaInput: microsoftTeams.media.MediaInputs = {
+        mediaType: microsoftTeams.media.MediaType.Audio,
+        maxMediaCount: 1,
+        };
+        microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+            if (error) {
+                if (error.message) {
+                    alert(" ErrorCode: " + error.errorCode + error.message);
+                } else {
+                    alert(" ErrorCode: " + error.errorCode);
+                }
+            }
+        // If you want to directly use the audio file (for smaller file sizes (~4MB))    if (attachments) {
+        let audioResult = attachments[0];
+        var videoElement = document.createElement("video");
+        videoElement.setAttribute("src", ("data:" + audioResult.mimeType + ";base64," + audioResult.preview));
+        audioResult.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
+        if (blob) {
+            if (blob.type.includes("video")) {
+                videoElement.setAttribute("src", URL.createObjectURL(blob));
+            }
         }
-    }
-    // If you want to directly use the audio file (for smaller file sizes (~4MB))    if (attachments) {
-    let audioResult = attachments[0];
-    var videoElement = document.createElement("video");
-    videoElement.setAttribute("src", ("data:" + y.mimeType + ";base64," + y.preview));
-    //To use the audio file via get Media API for bigger audio file sizes greater than 4MB        audioResult.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
-    if (blob) {
-        if (blob.type.includes("video")) {
-            videoElement.setAttribute("src", URL.createObjectURL(blob));
+        if (error) {
+            if (error.message) {
+                alert(" ErrorCode: " + error.errorCode + error.message);
+            } else {
+                alert(" ErrorCode: " + error.errorCode);
+            }
         }
-    }
-    if (error) {
-        if (error.message) {
-            alert(" ErrorCode: " + error.errorCode + error.message);
-        } else {
-            alert(" ErrorCode: " + error.errorCode);
-        }
-    }
-});
-```
+    });
+    });
+    ```
 
 ## <a name="see-also"></a>另请参阅
 

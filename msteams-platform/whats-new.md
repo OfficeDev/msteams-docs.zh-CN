@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: b13cc93e515c1b4daf08e3f218a7059e34615f0d
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605080"
+ms.locfileid: "67605780"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -36,6 +36,7 @@ ms.locfileid: "67605080"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 09/06/2022 | `selectMedia` 用于使用相机捕获视频的 API | 集成设备功能 > [集成媒体功能](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | 为 Visual Studio 2022 引入了 Teams 工具包 | 工具和 SDK > 适用于 Visual Studio 的 Teams 工具包 > [适用于 Visual Studio 的 Teams 工具包概述](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 2022/08/03 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 2022/08/03 | 添加了在会议后场景中检索会议脚本的功能。 | 为 Teams 会议和通话构建应用 > 使用 Graph API 获取会议脚本 > [概述](graph-api/meeting-transcripts/overview-transcripts.md) |
