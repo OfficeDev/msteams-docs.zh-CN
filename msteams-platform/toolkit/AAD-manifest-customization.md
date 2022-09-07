@@ -1,23 +1,34 @@
 ---
-title: 在 Teams 工具包中管理 Azure Active Directory 应用程序
+title: 在 Teams 工具包中编辑 Azure Active Directory 清单
 author: zyxiaoyuer
 description: 介绍如何在 Teams 工具包中管理 Azure Active Directory 应用程序
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 1f71d57e32bd6fb24cf75cc6027937337f29f972
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 2091649581686b376d2486a874118d36fd6a984b
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503786"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616651"
 ---
-# <a name="customize-azure-ad-manifest"></a>自定义 Azure AD 清单
+# <a name="edit-azure-ad-manifest"></a>编辑 Azure AD 清单
 
 [Azure Active Directory (Azure AD) 清单](/azure/active-directory/develop/reference-app-manifest)包含Microsoft 标识平台中 Azure AD 应用程序对象的所有属性的定义。
 
-Teams 工具包现在管理 Azure AD 应用程序，在 Teams 应用程序开发生命周期内，清单文件作为事实来源。
+Teams 工具包现在管理 Azure AD 应用程序，在 Teams 应用程序开发生命周期中，清单文件作为事实来源。
+
+本节介绍：
+
+* [自定义 Azure AD 清单模板](#customize-azure-ad-manifest-template)
+* [Azure AD 清单模板占位符](#azure-ad-manifest-template-placeholders)
+* [使用代码镜头创作和预览 Azure AD 清单](#author-and-preview-azure-ad-manifest-with-code-lens)
+* [为本地环境部署 Azure AD 应用程序更改](#deploy-azure-ad-application-changes-for-local-environment)
+* [为远程环境部署 Azure AD 应用程序更改](#deploy-azure-ad-application-changes-for-remote-environment)
+* [在Azure 门户上查看 Azure AD 应用程序](#view-azure-ad-application-on-the-azure-portal)
+* [使用现有的 Azure AD 应用程序](#use-an-existing-azure-ad-application)
+* [Teams 应用程序开发生命周期中的 Azure AD 应用程序](#azure-ad-application-in-teams-application-development-lifecycle)
 
 ## <a name="customize-azure-ad-manifest-template"></a>自定义 Azure AD 清单模板
 
@@ -29,15 +40,15 @@ Teams 工具包现在管理 Azure AD 应用程序，在 Teams 应用程序开发
 
 2. 直接更新模板或 [从另一个文件引用值](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template)。 可在此处看到多个自定义方案：
   
-   * [添加应用程序权限](#customize-requiredresourceaccess)
-   * [预授权客户端应用程序](#customize-preauthorizedapplications)
-   * [更新身份验证响应的重定向 URL](#customize-redirect-urls)
+   * [添加应用程序权限](#add-an-application-permission)
+   * [预授权客户端应用程序](#preauthorize-a-client-application)
+   * [更新身份验证响应的重定向 URL](#update-redirect-url-for-authentication-response)
 
 3. [为本地环境部署 Azure AD 应用程序更改](#deploy-azure-ad-application-changes-for-local-environment)。
   
 4. [为远程环境部署 Azure AD 应用程序更改](#deploy-azure-ad-application-changes-for-remote-environment)。
 
-### <a name="customize-requiredresourceaccess"></a>自定义 requiredResourceAccess
+### <a name="add-an-application-permission"></a>添加应用程序权限
 
 如果 Teams 应用程序需要更多权限才能使用其他权限调用 API，则需要更新 `requiredResourceAccess` Azure AD 清单模板中的属性。 可以查看此属性的以下示例：
 
@@ -69,15 +80,15 @@ Teams 工具包现在管理 Azure AD 应用程序，在 Teams 应用程序开发
 ]
 ```
 
-* `resourceAppId`属性适用于不同的 API，用于`Microsoft Graph`并`Office 365``SharePoint Online`直接输入名称而不是 UUID，对于其他 API，请使用 UUID。
+* `resourceAppId` 属性用于不同的 API。 对于`Microsoft Graph`并`Office 365``SharePoint Online`直接输入名称而不是 UUID，对于其他 API，请使用 UUID。
 
-* `resourceAccess.id` 属性适用于不同的权限，用于 `Microsoft Graph` 并 `Office 365 SharePoint Online`直接输入权限名称而不是 UUID，对于其他 API，请使用 UUID。
+* `resourceAccess.id` 属性用于不同的权限。 对于 `Microsoft Graph` 并 `Office 365 SharePoint Online`直接输入权限名称而不是 UUID，对于其他 API，请使用 UUID。
 
 * `resourceAccess.type` 属性用于委派权限或应用程序权限。 `Scope` 表示委派权限，表示 `Role` 应用程序权限。
 
-### <a name="customize-preauthorizedapplications"></a>自定义 preAuthorizedApplications
+### <a name="preauthorize-a-client-application"></a>预授权客户端应用程序
 
-可以使用 `preAuthorizedApplications` 属性授权客户端应用程序，以指示 API 信任应用程序，并且用户在客户端调用公开 API 时不同意。 可以查看此属性的以下示例：
+可以使用 `preAuthorizedApplications` 属性授权客户端应用程序，以指示 API 信任应用程序。 当客户端调用它公开 API 时，用户不会同意。 可以查看此属性的以下示例：
 
 ```JSON
 
@@ -92,17 +103,17 @@ Teams 工具包现在管理 Azure AD 应用程序，在 Teams 应用程序开发
     ]
 ```
 
-`preAuthorizedApplications.appId` 属性用于要授权的应用程序。 如果你不知道应用程序 ID，但只知道应用程序名称，则可以转到Azure 门户并按照以下步骤搜索应用程序以查找 ID：
+`preAuthorizedApplications.appId` 属性用于要授权的应用程序。 如果不知道应用程序 ID 并且只知道应用程序名称，请使用以下步骤搜索应用程序 ID：
 
-1. 转到[Azure 门户](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)并打开应用程序注册。
+1. 转到 [Azure 门户](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)并打开 **应用程序注册**。
 
 1. 选择 **所有应用程序** 并搜索应用程序名称。
 
 1. 选择应用程序名称，并从概述页获取应用程序 ID。
 
-### <a name="customize-redirect-urls"></a>自定义重定向 URL
+### <a name="update-redirect-url-for-authentication-response"></a>更新身份验证响应的重定向 URL
 
-  重定向 URL 在成功身份验证后返回身份验证响应（例如令牌）时使用。 可以使用属性 `replyUrlsWithType`自定义重定向 URL，例如，若要添加 `https://www.examples.com/auth-end.html` 为重定向 URL，可以将其添加为以下示例：
+  重定向 URL 在成功身份验证后返回身份验证响应（例如令牌）时使用。 可以使用属性 `replyUrlsWithType`自定义重定向 URL。 例如，若要添加 `https://www.examples.com/auth-end.html` 为重定向 URL，可以将其添加为以下示例：
 
 ``` JSON
 "replyUrlsWithType": [
@@ -136,7 +147,7 @@ Azure AD 清单文件包含具有 {{...}} 的占位符参数 在为不同环境�
 }
 ```
 
-可以在 Azure AD 清单中使用此占位符参数：`{{state.fx-resource-aad-app-for-teams.applicationIdUris}}`在属性中`fx-resource-aad-app-for-teams`引用`applicationIdUris`值。
+可以在 Azure AD 清单中使用此占位符参数： `{{state.fx-resource-aad-app-for-teams.applicationIdUris}}` 指出 `applicationIdUris` 属性中的 `fx-resource-aad-app-for-teams` 值。
 
 ### <a name="reference-config-file-values-in-azure-ad-manifest-template"></a>Azure AD 清单模板中的引用配置文件值
 
@@ -169,7 +180,7 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 ### <a name="azure-ad-manifest-template-file"></a>Azure AD 清单模板文件
 
-在 Azure AD 清单模板文件的开头，有一个预览代码镜头。 选择代码透镜，它根据所选环境生成 Azure AD 清单。
+Azure AD 清单模板文件的开头有一个预览代码镜头。 选择代码透镜，根据所选环境生成 Azure AD 清单。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add codelens.png" alt-text="addcodelens":::
 
@@ -181,13 +192,13 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 ### <a name="required-resource-access-code-lens"></a>所需的资源访问代码镜头
 
-它不同于官方 [Azure AD 清单架构](/azure/active-directory/develop/reference-app-manifest)，该`resourceAppId`架构和`resourceAccess`属性中的 `requiredResourceAccess` ID 仅支持 UUID，Teams 工具包中的 Azure AD 清单模板也支持用户可读字符串和`Microsoft Graph``Office 365 SharePoint Online`权限。 如果输入 UUID，代码镜头会显示用户可读字符串，否则显示 UUID。
+它不同于官方 [Azure AD 清单架构](/azure/active-directory/develop/reference-app-manifest) ，该 `resourceAppId` 架构和 `resourceAccess` 属性中的 `requiredResourceAccess` ID 仅支持 UUID。 Teams 工具包中的 Azure AD 清单模板还支持用户可读字符串 `Microsoft Graph` 和 `Office 365 SharePoint Online` 权限。 如果输入 UUID，代码镜头会显示用户可读字符串，否则显示 UUID。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="addresource":::
 
 ### <a name="pre-authorized-applications-code-lens"></a>预授权应用程序代码透镜
 
-代码镜头显示该属性的每个授权应用程序 ID 的 `preAuthorizedApplications` 应用程序名称。
+代码镜头显示该属性的预授权应用程序 ID 的 `preAuthorizedApplications` 应用程序名称。
 
 ## <a name="deploy-azure-ad-application-changes-for-local-environment"></a>为本地环境部署 Azure AD 应用程序更改
 
@@ -195,7 +206,7 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
 
-2. 选择 `local` 环境。
+2. 选择 **本地** 环境。
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
 
@@ -217,22 +228,25 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 ## <a name="view-azure-ad-application-on-the-azure-portal"></a>在Azure 门户上查看 Azure AD 应用程序
 
-1. 从 `state.xxx.json` (xxx 复制 Azure AD 应用程序客户端 ID 是已在属性中 `fx-resource-aad-app-for-teams` 部署 Azure AD 应用程序) 文件的环境名称。
+1. 从 `state.xxx.json` 属性中的 () 文件 `fx-resource-aad-app-for-teams` 复制 Azure AD 应用程序客户端 ID。
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
+
+   > [!NOTE]
+   > 客户端 ID 中的 xxx 指示在其中部署了 Azure AD 应用程序的环境名称
 
 2. 转到[Azure 门户](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)并登录到 Microsoft 365 帐户。
   
    > [!NOTE]
    > 确保 Teams 应用程序和 M365 帐户的登录凭据相同。
 
-3. 打开 [应用注册页](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)，使用之前复制的客户端 ID 搜索 Azure AD 应用程序。
+3. 打开 [“应用注册”页](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)，使用之前复制的客户端 ID 搜索 Azure AD 应用程序。
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view2.png" alt-text="view2":::
 
 4. 从搜索结果中选择 Azure AD 应用程序以查看详细信息。
   
-5. 在 Azure AD 应用信息页中，选择 `Manifest` 菜单以查看此应用程序的清单。 清单的架构与文件中的 `aad.template.json` 架构相同。 有关清单的详细信息，请参阅 [Azure Active Directory 应用程序清单](/azure/active-directory/develop/reference-app-manifest)。
+5. 在 Azure AD 应用信息页中 `Manifest` ，选择要查看此应用程序清单的菜单。 清单的架构与文件中的 `aad.template.json` 架构相同。 有关清单的详细信息，请参阅 [Azure Active Directory 应用程序清单](/azure/active-directory/develop/reference-app-manifest)。
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
@@ -248,21 +262,21 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
 1. **创建 Project**
 
-      默认情况下，可以使用 SSO 支持附带的 Teams 工具包创建项目，例如 `SSO-enabled tab`。 有关创建新应用的详细信息，请参阅 [使用 Teams 工具包创建新的 Teams 应用程序](create-new-project.md)。 系统会自动创建 Azure AD 清单文件： `templates\appPackage\aad.template.json` Teams 工具包在本地开发期间或将应用程序移到云时创建或更新 Azure AD 应用程序。
+      默认情况下，可以使用 SSO 支持附带的 Teams 工具包创建项目，例如 `SSO-enabled tab`。 有关创建新应用的详细信息，请参阅 [使用 Teams 工具包创建新的 Teams 应用程序](create-new-project.md)。 Azure AD 清单文件会自动在其中 `templates\appPackage\aad.template.json`创建。 Teams 工具包在本地开发期间或将应用程序移到云时创建或更新 Azure AD 应用程序。
 
 2. **将 SSO 添加到机器人或选项卡**
 
-      创建不带 SSO 内置的 Teams 应用程序后，Teams 工具包会增量帮助你为项目添加 SSO。 因此，会自动为你创建 Azure AD 清单文件： `templates\appPackage\aad.template.json`
+      创建不带 SSO 内置的 Teams 应用程序后，Teams 工具包会增量帮助你为项目添加 SSO。 因此，会自动为你 `templates\appPackage\aad.template.json`创建一个 Azure AD 清单文件。
 
       Teams 工具包在下一次本地调试会话期间或将应用程序移到云时创建或更新 Azure AD 应用程序。
 
 3. **在本地生成**
 
-    Teams 工具包在本地开发 (（称为 F5) ）期间执行以下功能：
+    Teams 工具包在本地开发过程中执行以下函数，或称为 F5：
 
-    * 读取文件 `state.local.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams 工具包将重新使用现有的 Azure AD 应用程序，否则需要使用该 `aad.template.json` 文件创建新应用程序。
+    * 读取文件 `state.local.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams 工具包将重复使用现有的 Azure AD 应用程序。 否则，需要使用该 `aad.template.json` 文件创建新应用程序。
 
-    * 最初忽略清单文件中需要其他上下文 (的某些属性，例如，在创建包含清单文件的新 Azure AD 应用程序期间需要本地调试终结点) 的 replyUrls 属性。
+    * 最初忽略清单文件中需要更多上下文的某些属性， (如在创建包含清单文件的新 Azure AD 应用程序期间需要本地调试终结点) 的 replyUrls 属性。
 
     * 本地开发环境成功启动后，Azure AD 应用程序的标识符Uris、replyUrls 和其他在创建阶段不可用的属性会相应地更新。
 
@@ -272,9 +286,9 @@ Azure AD 清单模板文件具有要查看和编辑的代码透镜。
 
       将应用程序移到云时，需要预配云资源并部署应用程序。 在本地开发等阶段，Teams 工具包将：
 
-      * 读取文件 `state.{env}.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams 工具包将重新使用现有的 Azure AD 应用程序，否则需要使用该 `aad.template.json` 文件创建新应用程序。
+      * 读取文件 `state.{env}.json` 以查找现有的 Azure AD 应用程序。 如果 Azure AD 应用程序已存在，Teams 工具包将重新使用现有的 Azure AD 应用程序。 否则，需要使用该 `aad.template.json` 文件创建新应用程序。
 
-      * 最初忽略清单文件中需要其他上下文 (的某些属性，例如 replyUrls 属性需要在创建包含清单文件的新 Azure AD 应用程序期间) 前端或机器人终结点。
+      * 最初忽略清单文件中需要更多上下文 (的某些属性，例如，在创建包含清单文件的新 Azure AD 应用程序期间，replyUrls 属性需要前端或机器人终结点) 。
 
       * 其他资源预配完成后，Azure AD 应用程序的标识符Uris 和 replyUrls 会相应地更新到正确的终结点。
 

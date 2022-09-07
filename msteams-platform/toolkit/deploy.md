@@ -6,29 +6,23 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 607214b329734f143d3bbcd9ede87ca85c9c97bb
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 9ad2c9d16901990344ca521599b94b84b0e76217
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503331"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616924"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>将 Teams 应用部署到云
 
-Teams 工具包可帮助你将应用程序中的前端和后端代码部署或上传到 Azure 中预配的云资源。
+Teams 工具包可帮助你将应用程序中的前端和后端代码部署或上传到 Azure 中预配的云资源。 可以将以下内容部署到云：
 
 * 选项卡（例如前端应用程序）将部署到 Azure 存储，并配置为静态 Web 托管或 SharePoint 网站。
 * 后端 API 将部署到 Azure 函数。
 * 机器人或邮件扩展将部署到 Azure 应用服务。
 
-## <a name="prerequisite"></a>先决条件
-
-* [安装 Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) 版本 v3.0.0+。
-
-> [!NOTE]
->
-> * 确保已在 VS Code 中打开 Teams 应用项目。
-> * 在将项目代码部署到云之前，[请预配云资源](provision.md)。
+  > [!NOTE]
+  > 在将应用代码部署到 Azure 云之前，需要成功完成 [云资源的预配](provision.md)。
 
 ## <a name="deploy-teams-apps-using-teams-toolkit"></a>使用 Teams 工具包部署 Teams 应用
 
@@ -47,13 +41,10 @@ Teams 工具包可帮助你将应用程序中的前端和后端代码部署或�
 |机器人和邮件扩展 </br> 后端工作负载 | `yourProjectFolder/bot` | 不适用 | Azure 应用服务 |
 
 > [!NOTE]
-> 在项目中包括 Azure API 管理资源并触发部署时。 可以在 Azure 函数中将 API 发布到 Azure API 管理服务。
+> 在项目中包括 Azure API 管理资源并触发部署时，可以在 Azure 函数中将 API 发布到 Azure API 管理服务。
 
 ## <a name="see-also"></a>另请参阅
 
-* [添加更多云资源](add-resource.md)
 * [创建和部署 Azure 云服务](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [添加更多 Teams 应用功能](add-capability.md)
-* [使用 CI/CD 管道部署项目代码](use-CICD-template.md)
-* [管理多个环境](TeamsFx-multi-env.md)
-* [在 Teams 项目中与其他开发人员协作](TeamsFx-collaboration.md)
+* [创建多功能 Teams 应用](add-capability.md)
+* [将云资源添加到 Microsoft Teams 应用](add-resource.md)

@@ -6,59 +6,51 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2d1889de8cc5c36cde708f4d4628f6f61768e3f4
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: fc58610802a51af19efc32e579566fbf5e36feca
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557874"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616516"
 ---
-# <a name="add-cloud-resources-to-teams-app"></a>将云资源添加到 Teams 应用
+# <a name="add-cloud-resources-to-microsoft-teams-app"></a>将云资源添加到 Microsoft Teams 应用
 
-TeamsFx 有助于预配应用程序托管的云资源。 可以选择性地添加符合开发需求的云资源。
+Teams 工具包可帮助你预配应用程序托管的云资源。 可以选择性地添加符合开发需求的云资源。 在 TeamsFx 中添加更多云资源的优点是，可以使用 Teams 工具包自动生成所有配置文件并连接到 Teams 应用。
 
-## <a name="advantages"></a>优点
-
-以下列表提供了在 TeamsFx 中添加更多云资源的优点：
-
-* 提供便利。
-* 使用 Teams 工具包自动生成所有配置文件并连接到 Teams 应用。
-
-## <a name="limitation"></a>限制
-
-如果已创建基于 SPFx 的选项卡项目，则无法添加 Azure 云资源。
+> [!NOTE]
+> 如果已创建基于 SPFx 的选项卡项目，则无法添加 Azure 云资源。
 
 ## <a name="add-cloud-resources"></a>添加云资源
 
-**可以通过以下方法添加云资源：**
+可以通过以下方法添加云资源：
 
-* 在 Visual Studio Code 中使用 Teams 工具包添加云资源。
-* 使用命令面板添加云资源。
-
-  > [!NOTE]
-  > 在 Teams 应用中成功添加资源后，需要为每个环境进行预配。
-  
-* **在Visual Studio Code中使用 Teams 工具包添加云资源：**
+### <a name="to-add-cloud-resources-by-using-teams-toolkit-in-visual-studio-code"></a>在 Visual Studio Code 中使用 Teams 工具包添加云资源
 
    1. 打开 **Visual Studio Code**。
-   1. 从左侧面板中选择 **Teams 工具包** 。
+   1. 从活动栏中选择 **Teams 工具包** 。
    1. 选择 **“开发**”下 **的“添加功能**”。
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="添加功能":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="从 Teams 工具包添加功能":::
 
-* **若要使用命令面板添加云资源，请执行以下操作：**
+### <a name="to-add-cloud-resources-by-using-command-palette"></a>使用命令面板添加云资源
 
-   1. 打开 **命令面板**。
+   1. 选择 **“查看** > **命令面板...** ”或 **“Ctrl+Shift+P**”。
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="从命令面板添加功能":::
+
    1. 输入 **Teams：添加功能**。
    1. 按 Enter 键。
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="云":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features1.png" alt-text="键入添加功能并输入":::
 
-   1. 在弹出窗口中，选择要在项目中添加的云资源。
+   1. 在弹出窗口中，选择要在项目中添加的 **云资源** 。
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="最后":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="最后":::
 
-## <a name="add-cloud-resources-using-teamsfx-cli"></a>使用 TeamsFx CLI 添加云资源
+  > [!NOTE]
+  > 在 Teams 应用中成功添加资源后，需要为每个环境进行预配。
+
+### <a name="add-cloud-resources-using-teamsfx-cli"></a>使用 TeamsFx CLI 添加云资源
 
 * 将目录更改为 **项目目录**。
 * 下表列出了功能和所需的命令：
@@ -79,7 +71,7 @@ TeamsFx 有助于预配应用程序托管的云资源。 可以选择性地添�
 * [Azure API 管理](deploy.md)：API 网关可用于管理为 Teams 应用程序创建的 API，并将其发布到其他应用程序（例如 Power 应用）上使用。
 * [Azure 密钥保管库](/azure/key-vault/general/overview)：保护云应用和服务所使用的密钥和其他密码。
 
-## <a name="add-cloud-resources"></a>添加云资源
+## <a name="changes-after-adding-cloud-resources"></a>添加云资源后的更改
 
 在项目中添加资源后，将显示以下更改：
 

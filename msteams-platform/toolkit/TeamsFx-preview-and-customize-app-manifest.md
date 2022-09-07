@@ -1,23 +1,31 @@
 ---
-title: Teams 工具包中的 Teams 应用清单
+title: 在 Teams 工具包中自定义 Teams 应用清单
 author: zyxiaoyuer
 description: 在本模块中，了解如何在不同的环境中编辑、预览和自定义 Teams 应用清单。
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 2365d7adbebca011af9d4204b2a305a6131f72a5
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
+ms.openlocfilehash: a3c8031c8c810fb7425a07c4627bb773cec2de5a
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288141"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616676"
 ---
-# <a name="edit-teams-app-manifest-for-visual-studio"></a>编辑 Visual Studio 的 Teams 应用清单
+# <a name="customize-teams-app-manifest"></a>自定义 Teams 应用部件清单
+
+Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有关清单的详细信息，请参阅 [Teams 的应用清单架构](../resources/schema/manifest-schema.md)。 本节介绍：
+
+* [本地环境中的预览清单文件](#preview-manifest-file-in-local-environment)
+* [远程环境中的预览清单文件](#preview-manifest-file-in-remote-environment)
+* [将本地更改同步到开发人员门户](#sync-local-changes-to-dev-portal)
+* [自定义 Teams 应用部件清单](#customize-teams-app-manifest)
+* [验证清单](#validate-manifest)
 
 清单模板文件 `manifest.template.json` 位于 scaffolding 下的 `templates/appPackage` 文件夹下。 具有占位符的模板文件以及实际值由 Teams 工具包使用不同环境下 `.fx/configs` 的文件解 `.fx/states` 析。
 
-**若要使用实际内容预览清单，Teams 工具包在文件夹下 `build/appPackage` 生成预览清单文件**：
+若要使用实际内容预览清单，Teams 工具包在文件夹下 `build/appPackage` 生成预览清单文件：
 
 ```text
 └───build
@@ -37,11 +45,36 @@ ms.locfileid: "67288141"
 
 若要在本地环境中预览清单文件，可以按 **F5** 运行本地调试。 它会为你生成默认的本地设置，然后在 `build/appPackage` 文件夹下生成应用包和预览清单。
 
-还可以按照以下步骤预览本地清单文件：
+还可以通过两种方法预览本地清单文件
 
-1. 在文件的代码段`manifest.template.json`中选择 **“预览**”，然后选择 **“本地**”。
-2. 选择文件菜单栏`manifest.template.json`上的 **预览清单文件**。
-3. 在 Treeview 中选择 **Zip Teams 元数据包** ，然后选择 **本地**。
+* 在 codelens 中使用预览选项
+* 使用 **Zip Teams 元数据包** 选项
+
+以下步骤有助于在 codelens 中使用预览选项预览本地清单文件：
+
+1. 在文件的代码段`manifest.template.json`中选择 **“预览**”。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="预览":::
+
+1. 选择 **“本地**”。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="选择 environment1":::
+
+以下步骤有助于使用 **Zip Teams 元数据包** 选项预览本地清单文件：
+
+1. 选择 `manifest.template.json` 文件。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="选择“清单”":::
+
+1. 在Visual Studio Code工具栏中选择 Teams 工具包:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG":::图标。
+
+1. 选择 **“部署**”下的 **Zip Teams 元数据包**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="选择 Teams 元数据包":::
+
+1. 选择 **“本地**”。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="选择环境":::
 
 预览本地如下图所示：
 
@@ -49,28 +82,63 @@ ms.locfileid: "67288141"
 
 ## <a name="preview-manifest-file-in-remote-environment"></a>远程环境中的预览清单文件
 
-**在远程环境中预览清单文件**
+使用Visual Studio Code预览清单文件：
 
-* 在 Teams 工具包扩展中选择 **“开发**”下的云中“**预配**”或
+* 在 Teams 工具包扩展的 **“开发**”下选择 **云中的“预配”**
+  
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="预配云资源":::
+
+若要使用命令 palatte 预览清单文件，请执行以下操作：
+
 * 触发 **器 Teams：从命令面板在云中预配** 。
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="使用命令 palatte 预配云资源":::
 
 它生成远程 Teams 应用的配置，并在文件夹下 `build/appPackage` 生成包和预览清单。
 
-还可以通过以下步骤预览远程环境中的清单文件：
+还可以通过远程环境中的两种方法预览清单文件
+
+* 在 codelens 中使用预览选项
+* 使用 **Zip Teams 元数据包** 选项
+
+以下步骤有助于在 codelens 中使用预览选项预览清单文件：
 
 1. 在文件的代码段`manifest.template.json`中选择 **“预览**”。
-2. 选择文件菜单栏`manifest.template.json`上的 **预览清单文件**。
-3. 在 Treeview 中选择 **Zip Teams 元数据包** 。
-4. 选择环境。
 
-> [!NOTE]
-> 如果有多个环境，则需要选择要预览的环境，如下图所示：
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="预览":::
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加 env":::
+1. 选择环境。
+
+   > [!NOTE]
+   > 如果有多个环境，则需要选择要预览的环境，如下图所示：
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加 env":::
+
+以下步骤有助于在远程环境中使用 **Zip Teams 元数据包** 选项预览清单文件：
+
+1. 选择 `manifest.template.json` 文件。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="选择“清单”":::
+
+1. 在Visual Studio Code工具栏中选择 Teams 工具包:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG":::图标。
+
+1. 选择 **“部署**”下的 **Zip Teams 元数据包**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="选择 Teams 元数据包":::
+
+1. 选择环境。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加 env":::
+
+   > [!NOTE]
+   > 如果有多个环境，则需要选择要预览的环境，如下图所示：
 
 ## <a name="sync-local-changes-to-dev-portal"></a>将本地更改同步到开发人员门户
 
 预览清单文件后，可以通过以下方式将本地更改同步到开发人员门户：
+
+> [!NOTE]
+> 有关开发人员门户的详细信息，请参阅 [Teams 开发人员门户](../concepts/build-and-test/teams-developer-portal.md)。
 
 1. 部署 Teams 应用清单。
 
@@ -129,7 +197,7 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 
 在本地调试或预配期间，Teams 工具包从`manifest.template.json`开发人员[门户](https://dev.teams.microsoft.com/apps)中加载清单和配置`state.{env}.json``config.{env}.json`，并创建 Teams 应用。
 
-## <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json 中支持的占位符
+### <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json 中支持的占位符
 
 以下列表提供以下内容中 `manifest.template.json`支持的占位符：
 
@@ -169,7 +237,7 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 
 ---
 
-## Codelenses and hovers
+## To preview values for local and dev environment
 
 In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 

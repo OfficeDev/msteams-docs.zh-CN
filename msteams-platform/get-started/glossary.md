@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的术语
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 742c2c940c5b3c39037b28eaf6ecc14fac3b0874
-ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.openlocfilehash: 962fa2ce2fb52fc3687da59b1453800a8d841e8e
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2022
-ms.locfileid: "67382942"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616798"
 ---
 # <a name="glossary"></a>术语表
 
@@ -70,7 +70,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | 部署 | 用于上传应用程序后端和前端代码的过程。 在部署时，应用的代码将复制到预配期间创建的资源。 <br>**另请参阅**：[预配](#p) |
 | [设备功能](../concepts/device-capabilities/device-capabilities-overview.md) | 内置设备，如移动设备或桌面设备中的相机、麦克风、条形码扫描程序、照片库。 可以通过 Microsoft Teams JavaScript 客户端 SDK 中提供的专用 API 在移动设备或桌面设备上访问以下设备功能。 <br>**另请参阅**：[功能](#c)；[媒体功能](#m)；[位置功能](#l) |
 | [设备权限](../concepts/device-capabilities/browser-device-permissions.md) | 可在应用中配置的 Teams 应用设置。 可用于请求应用访问权限和利用本机设备功能的权限。 可以在 Teams 设置中管理设备权限。 <br>**另请参阅**：[应用权限](#a) |
-| [开发环境](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Teams 工具包默认创建的开发环境类型。 它表示远程或云环境配置。 一个项目可以有多个远程环境。 可以使用 Teams 工具包向项目添加更多开发环境。 <br>**另请参阅** [环境](#e)；[本地环境](#l) |
+| [开发环境](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Teams 工具包默认创建的开发环境类型。 它表示远程或云环境配置。 一个项目可以有多个远程环境。 可以使用 Teams 工具包向项目添加更多开发环境。 <br>**另请参阅** [环境](#e)；[本地环境](#l) |
 | [DevTools](../tabs/how-to/developer-tools.md) | 浏览器的 DevTools 用于查看控制台日志、查看或修改运行时网络请求、将断点添加到代码 (JavaScript)，以及对 Teams 应用执行交互式调试。 该功能仅在启用开发人员预览版后才适用于桌面和 Android 客户端。 |
 | [动态搜索](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | 一种适用于自适应卡片的搜索功能，对于从大型数据集中搜索和选择数据非常有用。 它有助于在用户输入搜索字符串时筛选出选项。 <br>**另请参阅**：[静态搜索](#s) |
 
@@ -111,7 +111,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | Term | 定义 |
 | --- | --- |
 | [链接展开](../messaging-extensions/how-to/link-unfurling.md) | 一项和消息扩展和会议配合使用的功能，可用于展开粘贴到撰写消息区域的链接。 链接展开以在自适应卡片或会议阶段视图中显示有关链接的其他信息。 |
-| [本地环境](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Teams 工具包创建的默认开发环境。  <br>**另请参阅**：[环境](#e)；[开发环境](#d) |
+| [本地环境](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Teams 工具包创建的默认开发环境。  <br>**另请参阅**：[环境](#e)；[开发环境](#d) |
 | [本地工作台](../sbs-gs-spfx.yml) | 在使用 SPFx 创建的 Visual Studio Code 中运行和调试 Teams 应用的默认选项。 <br>**另请参阅**：[工作台](#w)；[Teams 工作台](#t) |
 | [位置功能](../concepts/device-capabilities/location-capability.md) | 可与应用集成的设备功能，用于了解应用用户的地理位置，以增强协作体验。此功能目前仅适用于 Teams 移动客户端。<br>**另请参阅**：[功能](#c)；[媒体功能](#m)；[设备功能](#d)；[Teams Mobile](#t) |
 | [低代码应用](../samples/teams-low-code-solutions.md) | 使用 Microsoft Power Platform 从头开始构建的自定义 Teams 应用，只需少量编码或无需编码，并且可以快速开发和部署。 |

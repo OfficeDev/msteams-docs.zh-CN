@@ -1,31 +1,33 @@
 ---
 title: 调试后台进程
-author: zyxiaoyuer
-description: 在本模块中，了解本地调试期间 Visual Studio code 和 Teams 工具包的功能，并注册和配置 Teams 应用
-ms.author: surbhigupta
+author: surbhigupta
+description: 在本模块中，Visual Studio 代码和 Teams 工具包在本地调试过程中的工作原理，以及如何注册和配置 Teams 应用
+ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 9891e2b93133484d4bb8394100f4e628841517f7
-ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
+ms.openlocfilehash: b8f85f092f9a99e9931a5ff0ea5e763c0b4fb0fe
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67407565"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616785"
 ---
 # <a name="debug-background-process"></a>调试后台进程
 
-本地调试工作流涉及 `.vscode/launch.json` 和 `.vscode/tasks.json` 文件，用于在 Visual Studio Code (VS Code) 中配置调试器。 VS Code 启动调试器，Microsoft Edge 或 Google Chrome 启动新的浏览器实例，如下所示:
+本地调试过程涉及`.vscode/launch.json`在 Microsoft Visual Studio Code 中配置调试器的和`.vscode/tasks.json`文件。 Visual Studio Code启动调试器，Microsoft Edge 或 Google Chrome 将启动新的浏览器实例。
 
-1. `launch.json` 文件在 VS Code 中配置调试器。
+调试进程工作流如下所示：
 
-2. VS Code 会在 `.vscode/tasks.json` 文件中运行复合 **preLaunchTask**、**预调试检查和启动全部**。
+1. `launch.json`文件在Visual Studio Code中配置调试器。
 
-3. 然后，VS Code 会启动复合配置中指定的调试器，例如 **连接到自动程序**、**连接到后端**、**连接到前端** 和 **启动自动程序**。
+2. Visual Studio Code运行复合 **preLaunchTask**，**预调试检查&在** 文件中`.vscode/tasks.json`全部启动。
+
+3. 然后，Visual Studio Code 启动复合配置中指定的调试器，例如 **附加到到自动程序**、**附加到后端**、**附加到前段**、**启动自动程序**。
 
 4. Microsoft Edge 或 Google Chrome 会启动新的浏览器实例，并打开网页以加载 Teams 客户端。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="teams-toolkit-verification-of-prerequisites"></a>Teams 工具包验证先决条件
 
 Teams 工具包在调试过程中检查以下先决条件：
 
@@ -38,14 +40,14 @@ Teams 工具包在调试过程中检查以下先决条件：
   |Bot |  14、16（推荐）|
   |消息扩展 | 14、16（推荐） |
 
-* 具有有效凭据的 Microsoft 365 帐户，如果尚未登录，Teams 工具包会提示你登录到 Microsoft 365 帐户。
-* 为开发人员租户启用自定义应用上传或旁加载，否则本地调试将终止。
-* Ngrok 二进制版本 2.3 适用于自动程序和消息扩展，如果未安装 Ngrok 或版本不符合要求，则 Teams 工具包将在 `~/.fx/bin/ngrok` 中安装 Ngrok NPM 包 `ngrok@4.2.2`。 `/.fx/bin/ngrok/node modules/ngrok/bin` 中的 Ngrok NPM 包管理 Ngrok 二进制文件。
-* Azure Functions Core Tools 版本 3，如果未安装 Azure Functions Core Tools 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/func` 中安装适用于 **Windows** 和 **MacOs** 的 Azure Functions Core Tools NPM 包 azure-functions-core-tools@3。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止。
-* 适用于 Azure Functions 的 .NET Core SDK 版本，如果未安装 .NET Core SDK 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/dotnet` 中安装适用于 Windows 和 MacOS 的 .NET Core SDK。 对于 Linux，本地调试终止。
-* Ngrok 二进制版本 2.3 适用于自动程序和消息扩展，如果未安装 Ngrok 或版本不符合要求，则 Teams 工具包将在 `~/.fx/bin/ngrok` 中安装 Ngrok NPM 包 `ngrok@4.2.2`。 Ngrok 二进制文件由 Ngrok NPM 包在 `/.fx/bin/ngrok/node modules/ngrok/bin` 中管理。
-* Azure Functions Core Tools 版本 4，如果未安装 Azure Functions Core Tools 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/func` 中安装适用于 **Windows** 和 **MacOs** 的 Azure Functions Core Tools NPM 包azure-functions-core-tools@3。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止。
-* 适用于 Azure Functions 的 .NET Core SDK 版本，如果未安装 .NET Core SDK 或版本不符合要求，则 Teams 工具包会在 `~/.fx/bin/dotnet` 中安装适用于 Windows 和 MacOS 的 .NET Core SDK。 对于 Linux，本地调试终止。
+* 如果尚未使用有效凭据登录，Teams 工具包会提示你登录到 Microsoft 365 帐户。
+* 已启用开发人员租户的自定义应用上传或旁加载，以防止本地调试终止。
+* 如果未安装 Ngrok 或版本不符合要求，Teams 工具包将安装 Ngrok NPM 包`ngrok@4.2.2``~/.fx/bin/ngrok`。 Ngrok NPM 包管理 `/.fx/bin/ngrok/node modules/ngrok/bin` 适用于机器人和消息扩展的 Ngrok 二进制版本 2.3。
+* Teams 工具包安装Azure Functions核心工具 NPM 包、适用于 **Windows** 和 **macO** `~/.fx/bin/func`的 azure-functions-core-tools@3（如果未安装 Azure Functions Core Tools 版本 3 或版本不符合要求）。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止。
+* 如果未安装适用于Azure Functions的 .NET Core SDK 版本或版本不符合要求，Teams 工具包将安装适用于 **Windows** 和 **MacOS** `~/.fx/bin/dotnet`的 .NET Core SDK。 对于 Linux，本地调试终止。
+* 如果未安装 Ngrok 或版本不符合要求，Teams 工具包将安装 Ngrok NPM 包`ngrok@4.2.2``~/.fx/bin/ngrok`。 Ngrok 二进制版本 2.3 适用于机器人和消息扩展。 Ngrok 二进制文件由 Ngrok NPM 包在 `/.fx/bin/ngrok/node modules/ngrok/bin` 中管理。
+* Teams 工具包安装Azure Functions核心工具 NPM 包、适用于 **Windows** 和 **MacO** `~/.fx/bin/func`的 azure-functions-core-tools@3（如果未安装 Azure Functions Core Tools 版本 4 或版本不符合要求）。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止。
+* 如果未安装 .NET Core SDK 或版本不符合要求，Teams 工具包将在适用于 Azure Functions 的 .NET Core SDK 版本中`~/.fx/bin/dotnet`安装适用于 **Windows** 和 **MacOS** 的 .NET Core SDK。 对于 Linux，本地调试终止。
 
   下表列出了 .NET Core 版本：
 
@@ -54,10 +56,10 @@ Teams 工具包在调试过程中检查以下先决条件：
   |Windows、macO (x64) 和 Linux | **3.1（推荐）**, 5.0, 6.0 |
   |macOS (arm64) |6.0 |
 
-* 开发证书，如果未在 Windows 或 MacOS 中的选项卡安装 localhost 的开发证书，则 Teams 工具包将提示你安装它。
-* Azure Functions 在 `api/extensions.csproj` 中定义绑定扩展，如果未安装 Azure Functions 绑定扩展，则 Teams 工具包将安装 Azure Functions 绑定扩展。
-* NPM 包，适用于选项卡应用、自动程序应用、消息扩展应用和 Azure Functions 的应用程序。 如果未安装 NPM，则 Teams 工具包将安装所有 NPM 包。
-* 自动程序和消息扩展，Teams 工具包将启动 Ngrok，为自动程序和消息扩展创建 HTTP 隧道。
+* 如果 **未为 Windows** 或 **MacOS** 中的选项卡安装 localhost 的开发证书，则 Teams 工具包会提示你安装它。
+* Azure Functions定义的`api/extensions.csproj`绑定扩展，如果未安装Azure Functions绑定扩展，Teams 工具包将安装Azure Functions绑定扩展。
+* NPM 包，适用于选项卡应用、自动程序应用、消息扩展应用和 Azure Functions 的应用程序。 如果未安装 NPM 包，Teams 工具包将安装所有 NPM 包。
+* 机器人和消息扩展，Teams 工具包启动 Ngrok，为机器人和消息扩展创建 HTTP 隧道。
 * 端口可用，如果选项卡、自动程序、消息扩展和 Azure Functions 端口不可用，则本地调试将终止。
 
   下表列出了可用于组件的端口：
@@ -101,21 +103,21 @@ Use the following .NET Core versions:
 
 选择 **开始调试 (F5)** 时，Teams 工具包输出通道会在检查先决条件后显示进度和结果。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="先决条件":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="先决条件检查摘要" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png":::
 
 ## <a name="register-and-configure-teams-app"></a>注册和配置 Teams 应用
 
 在设置过程中，Teams 工具包为 Teams 应用准备了以下注册和配置：
 
-1. [注册和配置Azure AD应用程序](#registers-and-configures-azure-ad-application)：Teams 工具包会注册并配置 Azure AD 应用程序。
+1. [注册和配置Microsoft Azure Active Directory (Azure AD) 应用](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
 
-1. [注册和配置自动程序](#registers-and-configures-bot)：Teams 工具包将为选项卡或消息扩展应用注册并配置自动程序。
+1. [注册和配置机器人](#registers-and-configures-bot)。
 
-1. [注册和配置 Teams 应用](#registers-and-configures-teams-app)：Teams 工具包会注册和配置 Teams 应用。
+1. [注册和配置 Teams 应用](#registers-and-configures-teams-app)。
 
-### <a name="registers-and-configures-azure-ad-application"></a>注册和配置 Azure AD 应用程序
+### <a name="registers-and-configures-microsoft-azure-active-directoryazure-ad-app"></a>注册和配置Microsoft Azure Active Directory (Azure AD) 应用
 
-1. 注册 Azure AD 应用程序。
+1. 注册 Azure AD 应用。
 
 1. 创建客户端密码。
 
@@ -163,13 +165,13 @@ Use the following .NET Core versions:
 
 ### <a name="registers-and-configures-teams-app"></a>注册和配置 Teams 应用
 
-在[开发人员](https://dev.teams.microsoft.com/home)中使用 `templates/appPackage/manifest.template.json` 中的清单模板注册 Teams 应用。
+使用清单模板在 [开发人员门户](https://dev.teams.microsoft.com/home) 中 `templates/appPackage/manifest.template.json`注册 Teams 应用。
 
 注册和配置应用后，将生成本地调试文件。
 
 ## <a name="take-a-tour-of-your-app-source-code"></a>浏览你的应用源代码
 
-在 Teams 工具包注册和配置应用后，可以在 VS Code 的 **资源管理器** 下查看项目文件夹和文件。 下表列出了本地调试文件和配置类型：
+在 Teams 工具包注册和配置应用后，可以在Visual Studio Code的 **“资源管理器**”下查看项目文件夹和文件。 下表列出了本地调试文件和配置类型：
 
 | 文件夹名| 目录| 调试配置类型 |
 | --- | --- | --- |
