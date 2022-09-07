@@ -18,7 +18,11 @@
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="显示预配命令的屏幕截图":::
 
-1. 选择要用于 Azure 资源的订阅。
+1. 选择现有订阅的任何人。
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="选择订阅":::
+
+1. 选择要用于 Azure 资源的资源组。
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="显示用于预配的资源的屏幕截图":::
 
@@ -29,7 +33,7 @@
 
 1. 选择 **“预配**”。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="预配对话框的屏幕截图。":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="选择订阅":::
 
    预配过程在 Azure 云中创建资源。 这可能需要一些时间。 可以通过查看右下角的对话来监视进度。 几分钟后，你会看到以下通知：
 
@@ -89,4 +93,3 @@
     恭喜，你的第一个选项卡应用正在 Azure 环境中运行！
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="屏幕截图显示立即或更高版本尝试应用的消息":::
- 
