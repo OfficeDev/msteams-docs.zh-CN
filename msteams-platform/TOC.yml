@@ -98,40 +98,66 @@
       items:
         - name: Teams 工具包概述
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: 新建 Teams 应用
-          href: toolkit/create-new-project.md
-        - name: 准备帐户以生成 Teams 应用
-          href: toolkit/accounts.md
-        - name: 在本地调试 Teams 应用
-          href: toolkit/debug-local.md
-        - name: 调试后台进程
-          href: toolkit/debug-background-process.md
-        - name: 预配云资源
-          href: toolkit/provision.md
-        - name: 将 Teams 应用部署到云
-          href: toolkit/deploy.md
-        - name: 编辑 Teams 应用清单
-          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-        - name: 自定义 Azure AD 清单
-          href: toolkit/AAD-manifest-customization.md
-        - name: 向 Teams 应用添加功能
-          href: toolkit/add-capability.md
-        - name: 将云资源添加到 Teams 应用
-          href: toolkit/add-resource.md
-        - name: 向 Teams 应用添加单一登录
-          href: toolkit/add-single-sign-on.md
-        - name: 将 API 连接添加到 Teams 应用
-          href: toolkit/add-API-connection.md
-        - name: 设置 CI/CD 管道
-          href: toolkit/use-CICD-template.md
-        - name: 使用 Teams 工具包发布 Teams 应用
-          href: toolkit/publish.md
-        - name: 管理多个环境
-          href: toolkit/TeamsFx-multi-env.md
-        - name: 协作处理 Teams 项目
-          href: toolkit/TeamsFx-collaboration.md
-        - name: TeamsFx SDK
-          href: toolkit/TeamsFx-SDK.md
+        - name: 安装 Teams 工具包
+          href: toolkit/install-Teams-Toolkit.md
+        - name: 浏览 Teams 工具包
+          href: toolkit/explore-Teams-Toolkit.md
+        - name: 准备使用 Microsoft Teams 工具包生成应用
+          href: toolkit/build-environments.md
+        - name: 使用 Teams 工具包创建应用
+          items:
+            - name: 创建 Teams 应用的先决条件
+              href: toolkit/tools-prerequisites.md
+            - name: 创建新的 Teams 应用项目
+              href: toolkit/create-new-project.md
+            - name: 开发 Teams 应用
+              items:
+                - name: 添加和管理环境
+                  href: toolkit/TeamsFx-multi-env.md
+                - name: 创建多功能应用
+                  href: toolkit/add-capability.md
+                - name: 创建基于功能的云资源
+                  href: toolkit/add-resource.md
+                - name: 集成现有的第三方 API
+                  href: toolkit/add-API-connection.md
+            - name: 自定义清单
+              items:
+                - name: 自定义 Teams 应用清单
+                  href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
+                - name: 编辑 Azure AD 清单
+                  href: toolkit/AAD-manifest-customization.md
+            - name: TeamsFx SDK
+              href: toolkit/TeamsFx-SDK.md
+            - name: 调试 Teams 应用
+              items:
+                - name: 概述
+                  href: toolkit/debug-overview.md
+                - name: 在本地调试 Teams 应用
+                  href: toolkit/debug-local.md
+                - name: 调试后台进程
+                  href: toolkit/debug-background-process.md
+            - name: 在 Azure 上托管应用
+              items:
+                - name: 预配云资源
+                  href: toolkit/provision.md
+                - name: 将 Teams 应用部署到云
+                  href: toolkit/deploy.md
+            - name: 测试 Teams 应用
+              items:
+                - name: 集成和协作
+                  href: toolkit/TeamsFx-collaboration.md
+                - name: Teams 环境中的旁加载和测试应用
+                  href: toolkit/sideload-and-test-app.md
+                - name: 在不同的环境中测试应用行为
+                  href: toolkit/test-app-behavior.md
+        - name: 发布 Teams 应用
+          items:
+            - name: 使用 Teams 工具包发布 Teams 应用
+              href: toolkit/publish.md
+            - name: 与开发人员门户集成
+              href: toolkit/Integrate-with-developer-portal.md
+        - name: 常见问题
+          href: toolkit/faq.md
     - name: Visual Studio 的Teams工具包
       items:
         - name: Teams 工具包概述
@@ -385,7 +411,7 @@
           displayName: Ephemeral data structures
         - name: 媒体同步
           href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-          displayName: 'Audio ducking,'
+          displayName: Audio ducking
         - name: 操作指南
           items:
             - name: Agile Poker 教程
@@ -404,12 +430,15 @@
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: 创建传出 Webhook
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+      displayName: 'HMAC security token, access, channel'
     - name: 创建传入 Webhooks
       href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+      displayName: 'Access, permissions'
     - name: 创建 Office 365 连接器
       href: webhooks-and-connectors/how-to/connectors-creating.md
     - name: 创建和发送邮件
       href: webhooks-and-connectors/how-to/connectors-using.md
+      displayName: 'Access, settings, configuration'
 - name: 构建卡和任务模块
   items:
     - name: 概述
@@ -418,34 +447,44 @@
       items:
         - name: 概述
           href: task-modules-and-cards/what-are-cards.md
+          displayName: 'People picker, type-ahead'
         - name: 卡片类型
           href: task-modules-and-cards/cards/cards-reference.md
+          displayName: 'Flexible layout, receipt card, carousel card, setting'
         - name: Microsoft Teams 中的格式卡
           href: task-modules-and-cards/cards/cards-format.md
+          displayName: 'Information masking, background, extension, notification'
         - name: 卡片操作
           href: task-modules-and-cards/cards/cards-actions.md
         - name: 自适应卡片中的人员选取器
           href: task-modules-and-cards/cards/people-picker.md
+          displayName: 'Setting, channel, static typeahead'
         - name: 在自适应卡片中键入提前搜索
           href: task-modules-and-cards/cards/dynamic-search.md
         - name: 自适应卡的通用操作
           items:
             - name: 概述
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+              displayName: 'Access, extension, channel, communication'
             - name: 使用自适应卡的通用操作
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+              displayName: 'Setting, channels,'
             - name: 用户特定视图
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
+              displayName: 'Poll creator controls, channel, extension'
             - name: 顺序工作流
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+              displayName: Channel
             - name: 最新卡片
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: 构建任务模块
       items:
         - name: 概述
           href: task-modules-and-cards/what-are-task-modules.md
+          displayName: Channel
         - name: 调用和关闭任务模块
           href: task-modules-and-cards/task-modules/invoking-task-modules.md
+          displayName: 'Access, module sizing'
         - name: 在选项卡中使用任务模块
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: 使用机器人的任务模块
