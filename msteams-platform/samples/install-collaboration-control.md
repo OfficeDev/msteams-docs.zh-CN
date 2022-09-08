@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用电源应用和Microsoft 365 E3
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: aa4259855ba0c95906d7196ffd83c093bea89ea9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
+ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178842"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67617976"
 ---
 # <a name="install-collaboration-controls"></a>安装协作控件
 
@@ -31,9 +31,10 @@ ms.locfileid: "67178842"
 
 ## <a name="install-the-collaboration-controls-solutions"></a>安装协作控制解决方案
 
-你将通过专用链接将协作控件安装到 dataverse 环境中。 此链接不得与组织内部或外部的任何其他人员共享。
+你将通过 [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) 将协作控件安装到 dataverse 环境中。
 
-只有在收到链接并将协作控件安装到 dataverse 环境中后，才能在自己的模型驱动应用中配置和使用组件。
+
+只有在浏览到 [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  并将协作控件安装到 dataverse 环境中后，才能在自己的模型驱动应用中配置和使用组件。
 
 协作控制包括以下解决方案：
 
@@ -57,7 +58,7 @@ ms.locfileid: "67178842"
 
 安装前，必须位于 Power Platform 环境或管理员租户中。 你将需要一个包含数据库的 dataverse 环境。 如果没有，则需要 [创建一个新](/power-platform/admin/create-environment) 安装来继续安装。
 
-若要安装解决方案，请先浏览到 [Microsoft AppSource]，然后完成以下步骤：
+若要安装解决方案，请浏览到 [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) 并完成以下步骤：
 
 1. 选择 **“立即获取”** 按钮。
 

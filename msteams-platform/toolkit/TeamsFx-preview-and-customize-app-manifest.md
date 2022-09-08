@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: a3c8031c8c810fb7425a07c4627bb773cec2de5a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 3828c357307c5f7bfd94935a75dc9d6f5cedbc39
+ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616676"
+ms.locfileid: "67617787"
 ---
 # <a name="customize-teams-app-manifest"></a>自定义 Teams 应用部件清单
 
@@ -20,7 +20,7 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 * [本地环境中的预览清单文件](#preview-manifest-file-in-local-environment)
 * [远程环境中的预览清单文件](#preview-manifest-file-in-remote-environment)
 * [将本地更改同步到开发人员门户](#sync-local-changes-to-dev-portal)
-* [自定义 Teams 应用部件清单](#customize-teams-app-manifest)
+* [自定义 Teams 应用清单](#customize-your-teams-app-manifest)
 * [验证清单](#validate-manifest)
 
 清单模板文件 `manifest.template.json` 位于 scaffolding 下的 `templates/appPackage` 文件夹下。 具有占位符的模板文件以及实际值由 Teams 工具包使用不同环境下 `.fx/configs` 的文件解 `.fx/states` 析。
@@ -188,7 +188,7 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-## <a name="customize-teams-app-manifest"></a>自定义 Teams 应用部件清单
+## <a name="customize-your-teams-app-manifest"></a>自定义 Teams 应用清单
 
 Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件夹下的以下清单模板文件：
 

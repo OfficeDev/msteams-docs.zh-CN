@@ -5,12 +5,12 @@ description: 了解如何使用 Azure AD 使用第三方 OAuth 提供程序在 T
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ed30f4600630b047ad410b88ed8e04e91989088c
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: ff7e4e8d3ffede250bd89ecca7b0e3d8054a646b
+ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586852"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67618329"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -91,67 +91,67 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 1. 从下拉列表中选择 **资源组** 。
 1. 选择 **应用类型** 作为 **Microsoft 应用 ID** 的 **多租户**。
 
-    ![多租户](~/assets/images/adaptive-cards/multi-tenant.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="此屏幕截图显示了如何为 Microsoft AppID 选择多租户。":::
 
 1. 然后“**审阅 + 创建**”。
 
-    ![创建 Azure 机器人](~/assets/images/adaptive-cards/create-azure-bot.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/create-azure-bot.png" alt-text="此屏幕截图显示了如何创建 Azure 机器人。":::
 
 1. 如果验证通过，请选择“**创建**”。
 
     预配机器人服务需要一些时间。
 
-    ![Azure 机器人验证](~/assets/images/adaptive-cards/validation-pane.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/validation-pane.png" alt-text="此屏幕截图显示 Azure 机器人验证如何通过。":::
 
 1. 选择“**转到资源**”。 机器人和相关资源在资源组中列出。
 
-    ![转到资源](~/assets/images/adaptive-cards/go-to-resource-card.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/go-to-resource-card.png" alt-text="此屏幕截图显示了如何选择资源组。":::
 
     现在，Azure 机器人已创建。
 
-    ![创建的 Azure 机器人资源](~/assets/images/adaptive-cards/azure-bot-ui.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/azure-bot-ui.png" alt-text="此屏幕截图显示了如何创建 Azure 机器人资源。":::
 
 若要创建客户端机密，请执行以下操作：
 
 1. 在 **设置** 中，选择“**配置**”。 保存 **Microsoft 应用 ID**（客户端 ID）供将来参考。
 
-    ![Microsoft 应用 ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="此屏幕截图显示了如何添加 Microsoft 应用 ID 以创建客户端机密。":::
 
 1. 在 **Microsoft 应用 ID** 旁边，选择 **“管理**”。
 
-   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="管理机器人":::
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="此屏幕截图显示了如何创建管理机器人。":::
 
 1. 在“**客户端机密**”部分中，选择“**新建客户端机密**”。将显示“**添加客户端机密**”窗口。
 
-    ![新客户端机密](~/assets/images/meetings-side-panel/newclientsecret.png)
+   :::image type="content" source="../../../assets/images/meetings-side-panel/newclientsecret.PNG" alt-text="此屏幕截图显示了如何创建新的客户端机密。":::
 
 1. 输入“**说明**”并选择“**添加**”。
 
-    ![客户端密码](~/assets/images/adaptive-cards/client-secret.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="屏幕截图显示了如何输入客户端机密的说明。":::
 
 1. 在“**值**”列中，选择“**复制到剪贴板**”并保存客户端机密 ID 以供将来参考。
 
-    ![客户端机密值](~/assets/images/adaptive-cards/client-secret-value.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/client-secret-value.png" alt-text="屏幕截图显示了如何保存客户端机密 ID 以供将来参考。":::
 
 若要添加 Microsoft Teams 频道：
 
 1. 转到“**主页**”。
 
-    ![机器人主页](~/assets/images/adaptive-cards/bot-home-page.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/bot-home-page.png" alt-text="此屏幕截图显示机器人主页。":::
 
 1. 打开“**最近资源**”部分中列出的机器人。
 
 1. 在左窗格中选择“**频道**”，然后选择 **Microsoft Teams**:::image type="icon" source="../../../assets/icons/teams-icon.png":::。
 
-    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="在频道中选择 Teams":::
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="此屏幕截图显示了如何在频道中选择 Teams。":::
 
 1. 选中该复选框以接受服务条款，然后选择 “**同意**”。</br>
 
-    ![选择服务条款](~/assets/images/adaptive-cards/select-terms-of-service.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/select-terms-of-service.png" alt-text="此屏幕截图显示了如何在服务时设置条款。":::
 
-1. 选择“保存”。
+1. 选择“**保存**”。
 
-    ![选择 Teams](~/assets/images/adaptive-cards/select-teams.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/select-teams.png" alt-text="此屏幕截图显示了如何添加 Microsoft Teams 频道。":::
 
 有关更多信息，请参阅“[为 Teams 创建应用](../create-a-bot-for-teams.md)”。
 
@@ -197,8 +197,10 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 1. 选择机器人注册链接。
 1. 打开资源页，然后在“**设置**”下选择“**配置**”。
 1. 选择“**添加 OAuth 连接设置**”按钮。
-下图在资源页中显示相应的选择：  
-![SampleAppDemoBot 配置](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+   下图在资源页中显示相应的选择：
+
+   ![SampleAppDemoBot 配置](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+
 1. 如下所示完成表单：
 
     1. **名称**。 输入连接的名称。 你将在 `appsettings.json` 文件的机器人中使用此名称。 例如， *BotTeamsAuthADv1*。
@@ -216,7 +218,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
     h. 对于 **资源 URL**，请输入 `https://graph.microsoft.com/`。 当前代码示例中未使用此功能。  
     i. 将 **范围** 留空。 下图是一个示例：
 
-    ![Teams 机器人应用身份验证连接字符串 adv1 视图](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
+    :::image type="content" source="../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG" alt-text="此屏幕截图显示了如何添加 Teams 机器人身份验证机器人标识连接 adv1。":::
 
 1. 选择“保存”。
 
@@ -225,7 +227,9 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 1. 在 [**Azure 门户**][azure-portal]中，从仪表板中选择 Azure 机器人。
 1. 在资源页中，选择“**设置**”下的“**配置**”。
 1. 选择“**添加 OAuth 连接设置**”按钮。  
-下图显示资源页中的相应选择：![SampleAppDemoBot 配置](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+   下图在资源页中显示相应的选择：
+
+   :::image type="content" source="../../../assets/images/authentication/sample-app-demo-bot-configuration.png" alt-text="此屏幕截图显示了资源页中的相应选择。":::
 
 1. 如下所示完成表单：
 
@@ -251,12 +255,12 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 1. 首次执行此操作时，将打开一个新的浏览器窗口，要求你选择一个帐户。 选择要使用的帐户。
 1. 接下来，系统将要求你允许标识提供程序使用你的数据（凭据）。 下图是一个示例：
 
-    ![Teams 机器人身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-connection-test-accept.PNG" alt-text="屏幕截图显示了如何添加 Teams 机器人身份验证连接字符串 adv1。":::
 
 1. 选择“**接受**”。
 1. 然后，这应会将你重定向 到“**测试连接到\<your-connection-name>成功**”页。 如果收到错误，请刷新页面。 下图是一个示例：
 
-    ![Teams 机器人应用身份验证连接 str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-connection-test-token.PNG" alt-text="屏幕截图显示了如何添加 Teams 应用身份验证连接字符串 adv1。":::
 
 机器人代码使用连接名称检索用户身份验证令牌。
 
@@ -326,14 +330,14 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 1. 选择“**发布**”按钮。
 1. 在下一个对话框窗口中，输入所需的信息。 示例如下：
 
-    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service.png" alt-text="此屏幕截图显示了如何输入身份验证应用服务所需的信息。":::
 
 1. 选择“**创建**”。
 1. 如果部署成功完成，应会在 Visual Studio 中看到它。 此外，默认浏览器中会显示一个页面，表示 *机器人已准备就绪！*。 URL 如下所示：`https://botteamsauth.azurewebsites.net/`。 将其保存到文件。
 1. 在浏览器中，导航到 [**Azure 门户**][azure-portal]。
 1. 检查资源组，机器人应与其他资源一起列出。 下图是一个示例：
 
-    ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service-in-group.png" alt-text="此屏幕截图显示了如何检查资源组和机器人。":::
 
 1. 在资源组中，选择机器人注册名称（链接）。
 1. 在左侧面板中，选择“**设置**”。
@@ -387,11 +391,11 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
     下图是登录后机器人 UI 的示例：
 
-    ![身份验证机器人登录模拟器](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
+    :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator.PNG" alt-text="此屏幕截图显示了登录后机器人 UI 的示例。":::
 
 1. 如果在机器人询问 *是否要查看令牌* 时选择 **“是**”，你会得到如下所示的响应：
 
-    ![身份验证机器人登录模拟器令牌](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator-token.png" alt-text="此屏幕截图显示了如何选择同意。":::
 
 1. 在输入聊天框中输入 **注销** 以注销。这会释放用户令牌，在你再次登录之前，机器人将无法代表你执行操作。
 
@@ -414,15 +418,15 @@ and when for these, and just reference that from here, along with the set of ste
 1. 如果有要求，请选择适用用户的帐户。
     下图是登录后机器人 UI 的示例：
 
-    ![已部署身份验证机器人登录](../../../assets/images/authentication/auth-bot-login-deployed.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed.PNG" alt-text="此屏幕截图显示了登录后 Teams 机器人 UI 的示例。":::
 
 1. 选择“**是**”按钮以显示身份验证令牌。 下图是一个示例：
 
-    ![身份验证机器人登录部署的令牌](../../../assets/images/authentication/auth-bot-login-deployed-token.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed-token.PNG" alt-text="此屏幕截图显示了如何选择“是”按钮以显示身份验证令牌。":::
 
 1. 输入注销以注销。
 
-    ![身份验证机器人部署的注销](../../../assets/images/authentication/auth-bot-deployed-logout.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-deployed-logout.PNG" alt-text="此屏幕截图显示了如何输入注销以注销。":::
 
 > [!NOTE]
 > 如果登录时遇到问题，请尝试再次测试连接，如前面的步骤中所述。 这可以重新创建身份验证令牌。
@@ -441,7 +445,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. 导航到 `TeamsAppManifest` 文件夹并上传压缩清单。
 系统将显示导入作业向导：
 
-    ![身份验证机器人团队上传](../../../assets/images/authentication/auth-bot-teams-upload.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="此屏幕截图显示了机器人上传到 Teams 后的示例。":::
 
 1. 选择“**添加到团队**”按钮。
 1. 在下一个窗口中，选择要在其中使用机器人的团队。
@@ -459,7 +463,7 @@ Teams 是一种完全基于云的产品，它要求其访问的所有服务都�
 1. 例如，运行 `ngrok http 3978 --host-header=localhost:3978`。 根据需要替换端口号。
 这会启动 ngrok 来侦听指定的端口。 作为回报，它为你提供了一个外部可寻址的 URL，只要 ngrok 正在运行，该 URL 就有效。 下图是一个示例：
 
-    ![teams 机器人应用身份验证连接字符串 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-ngrok-start.PNG" alt-text="此屏幕截图显示 Teams 机器人应用身份验证连接字符串 adv1":::
 
 1. 复制转发 HTTPS 地址。 具体应如下所示：`https://dea822bf.ngrok.io/`。
 1. 追加 `/api/messages` 以获取 `https://dea822bf.ngrok.io/api/messages`。 这是在计算机上本地运行的机器人 **的消息终结点** ，可在 Teams 的聊天中通过 Web 访问。
@@ -472,7 +476,7 @@ Teams 是一种完全基于云的产品，它要求其访问的所有服务都�
 1. 使用 Bot Framework 门户的 **测试 Web 聊天** 在本地运行时测试机器人。 与 Emulator 一样，此测试不允许访问特定于 Teams 的功能。
 1. 在运行的终端窗口 `ngrok` 中，可以看到机器人与 Web 聊天客户端之间的 HTTP 流量。 如果需要更详细的视图，请在浏览器窗口中输入 `http://127.0.0.1:4040` 从上一个终端窗口获取的视图。 下图是一个示例：
 
-    ![身份验证机器人团队 ngrok 测试](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png" alt-text="此屏幕截图显示了身份验证机器人团队 ngrok 测试。":::
 
 > [!NOTE]
 > 如果停止并重新启动 ngrok，URL 会更改。 若要在项目中使用 ngrok，并且根据使用的功能，必须更新所有 URL 引用。
@@ -656,6 +660,3 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 [teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
 
 [teams-auth-bot-js]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth
-
-[azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
-[aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview

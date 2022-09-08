@@ -5,12 +5,12 @@ description: 在本模块中，了解如何将传入 Webhook 添加到 Teams 应
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ade5d5f30261cfd77140ab3cc9332bba15c76be8
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: de46f651c3dd6df741b4fef47c9813dfd88a6fe0
+ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337136"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67618256"
 ---
 # <a name="create-incoming-webhooks"></a>创建传入 Webhooks
 
@@ -52,16 +52,16 @@ ms.locfileid: "67337136"
 1. 打开要在其中添加 Webhook 的频道，然后选择 &#8226;&#8226;&#8226; **顶部导航栏中** 的更多选项。
 1. 从下拉菜单中选择 **连接器**：
 
-    ![选择连接器](~/assets/images/connectors.png)
+   :::image type="content" source="../../assets/images/connectors.png" alt-text="此屏幕截图显示了如何选择连接器。":::
 
 1. 搜索 **传入 Webhook** 并选择 **添加**。
 1. 选择 **配置**，提供名称，并在必要时上传 Webhook 的图像：
 
-    ![“配置”按钮](~/assets/images/configure.png)
+   :::image type="content" source="../../assets/images/configure.png" alt-text="此屏幕截图显示了如何配置和上传 Webhook 的图像。":::
 
 1. 复制并保存对话框窗口中存在的唯一 Webhook URL。 URL 映射到频道，你可以使用它将信息发送到 Teams。 选择“**完成**”。
 
-    ![唯一 URL](~/assets/images/url.png)
+   :::image type="content" source="../../assets/images/url.png" alt-text="此屏幕截图显示了唯一的 Webhook URL。":::
 
 Webhook 在 Teams 频道中可用。
 
@@ -79,19 +79,19 @@ Webhook 在 Teams 频道中可用。
 1. 选择 **Configured** 下 **Manage** 下。
 1. 选择 **<*1*> 已配置** 查看当前连接器的列表：
 
-    ![配置的 Webhook](~/assets/images/configured.png)
+   :::image type="content" source="../../assets/images/configured.png" alt-text="此屏幕截图显示如何配置为查看当前连接器的列表。":::
 
 1. 选择 **管理要删除的连接器的** ：
 
-    ![管理 Webhook](~/assets/images/manage.png)
+   :::image type="content" source="../../assets/images/manage.png" alt-text="此屏幕截图显示了如何管理要删除的连接器。":::
 
 1. 选择 **Remove** 以查看 **"移动配置** 对话框。
 
-    ![删除配置](~/assets/images/removeconfiguration.png)
+   :::image type="content" source="../../assets/images/removeconfiguration.png" alt-text="此屏幕截图显示了如何查看“删除配置”对话框。":::
 
 1. 完成对话框字段和复选框，然后选择 **删除**。
 
-    ![最终删除](~/assets/images/finalremove.png)
+   :::image type="content" source="../../assets/images/finalremove.png" alt-text="此屏幕截图显示了如何从 Teams 频道中删除传入 Webhook。":::
 
 ## <a name="code-sample"></a>代码示例
 

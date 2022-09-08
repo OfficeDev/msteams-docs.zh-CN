@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: e64daa0c3288f97286177e814204404522a6d6b9
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 8500f5ba1f54b28f68f9b56c0a42aedfff108e64
+ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616583"
+ms.locfileid: "67617794"
 ---
 # <a name="create-a-new-teams-project"></a>创建新的 Teams 项目
 
@@ -29,40 +29,49 @@ ms.locfileid: "67616583"
 **创建应用**
 
 1. 打开 Visual Studio Code。
-1. 选择 Teams 工具包 :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: 图标。
+
+1. 选择左侧导航栏中的 Teams 工具包 :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: 图标。
+
 1. 选择 **创建新的 Teams 应用**。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Teams 工具包边栏":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Teams 工具包边栏中&quot;创建新项目&quot;链接的位置。":::
 
-1. 选择 **“创建新的 Teams 应用** ”以使用 Teams 工具包创建应用。
+1. 确保 **选项卡** 已选中为应用功能。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="创建应用":::
-
-1. 在本教程中，选择 **Tab** 作为生成应用的功能。
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp1.png" alt-text="选择应用功能":::
-
-   > [!NOTE]
-   > 可以根据要求选择任何类型的功能。
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="选择应用功能":::
 
 1. 选择 **JavaScript** 作为编程语言。
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/select-language-tab.png" alt-text="显示如何选择编程语言的屏幕截图":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="显示如何选择编程语言的屏幕截图。":::
 
-1. 选择项目工作区的位置， **然后选择“文件夹**”。
+1. 选择 **默认文件夹** 以将项目根文件夹存储在默认位置。
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder1.png" alt-text="select-folder":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="选择默认位置":::
 
-1. 在本教程中，输入 `helloworld` 为应用程序名称。 选择“**Enter**”。
+   以下步骤指导你更改默认位置：
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/enter-name-tab.png" alt-text="显示在何处输入应用名称的屏幕截图":::
+      1. 选择 **“浏览**”。
 
-   > [!NOTE]
-   > 可以为其他功能输入自己的应用程序名称，并确保仅使用字母数字字符。
+          :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="选择浏览以进行存储":::
+
+      1. 选择项目工作区的位置。
+
+      1. 选择 **“选择文件夹**”。
+
+          :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="用于存储的 select-folder":::
+
+1. 输入 `helloworld` 为应用程序名称。 确保仅使用字母数字字符。 选择“**Enter**”。
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="显示在何处输入应用名称的屏幕截图。":::
+
+1. 默认情况下，项目将在 10 秒内在新窗口中打开。 如果要在当前窗口中打开，请 **在当前窗口中选择“打开**”。
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="新窗口通知":::
 
    Teams 选项卡应用在几秒钟内创建。
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/tap-app-created1.png" alt-text="显示创建的应用的屏幕截图":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="显示已创建应用的屏幕截图。":::
+
 
 ### <a name="directory-structure-for-different-app-types"></a>不同应用类型的目录结构
 
