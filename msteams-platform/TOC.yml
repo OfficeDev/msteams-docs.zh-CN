@@ -493,86 +493,115 @@
   items:
     - name: 概述
       href: concepts/authentication/authentication.md
+      displayName: Access
     - name: 选项卡
       items:
         - name: 为选项卡应用启用 SSO
           items:
             - name: 概述
               href: tabs/how-to/authentication/tab-sso-overview.md
+              displayName: 'Cookies, channel, access, permissions'
             - name: 在 Azure AD 中注册选项卡应用
               href: tabs/how-to/authentication/tab-sso-register-aad.md
+              displayName: 'Access, permissions, configurations, browser, extension'
             - name: 添加代码以启用 SSO
               href: tabs/how-to/authentication/tab-sso-code.md
+              displayName: 'Extension, access, permissions'
             - name: 更新 SSO 的应用清单并预览应用
               href: tabs/how-to/authentication/tab-sso-manifest.md
+              displayName: 'Access, permissions'
             - name: 授予 Microsoft Graph 权限和范围
               href: tabs/how-to/authentication/tab-sso-graph-api.md
+              displayName: 'Access, permissions, channel, browser, configuration, delegated'
             - name: SSO 身份验证故障排除
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+              displayName: 'Access, permissions, configurations'
         - name: 使用第三方 OAuth IdP 身份验证
           items:
             - name: 概述
               href: tabs/how-to/authentication/auth-flow-tab.md
+              displayName: 'Access, configuration'
             - name: 配置第三方 OAuth IdP 身份验证
               href: tabs/how-to/authentication/auth-tab-aad.md
+              displayName: 'Access, configuration, cookies'
             - name: 使用外部 OAuth 提供程序
               href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: 机器人
       items:
         - name: 机器人中的身份验证流
           href: bots/how-to/authentication/auth-flow-bot.md
+          displayName: Access
         - name: 将身份验证添加到机器人
           href: bots/how-to/authentication/add-authentication.md
+          displayName: 'Configuration, delegate, emulator, tunneling, channels'
         - name: 使用 SSO 身份验证
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+          displayName: 'Acces, permissions, configuration, settings'
     - name: 消息扩展
       items:
         - name: 为消息扩展添加身份验证
           href: messaging-extensions/how-to/add-authentication.md
+          displayName: Configuration
         - name: 为消息扩展启用 SSO
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
+          displayName: 'Setting, extensions'
 - name: 集成设备功能
   items:
     - name: 概述
       href: concepts/device-capabilities/device-capabilities-overview.md
+      displayName: 'Access, premissions'
     - name: 请求 Teams 应用的设备权限
       href: concepts/device-capabilities/native-device-permissions.md
     - name: 浏览器的设备权限
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: 集成媒体功能
       href: concepts/device-capabilities/media-capabilities.md
+      displayName: 'Access, permissions, whiteboard, configuration'
     - name: 集成 QR 或条码扫描仪功能
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+      displayName: 'Access, permissions, configuration'
     - name: 集成位置功能
       href: concepts/device-capabilities/location-capability.md
+      displayName: 'Access, permissions, configurations'
 - name: 利用 Microsoft Graph 及 Teams 数据
   items:
     - name: 概述
       href: /graph/teams-concept-overview
+      displayname: 'Permissions, communication, channels, delegated, reports, extensions'
     - name: Microsoft Graph 工具包
       href: /graph/toolkit/overview
+      displayName: 'Access, routing'
     - name: 入门
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
+      displayName: 'Access, report, MSAL2'
     - name: 资源特定许可
       href: graph-api/rsc/resource-specific-consent.md
+      displayName: 'Access, permissions, delegated, channel, organizer, notifications'
     - name: 使用 Graph API 发送邮件的应用主动安装
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+      displayName: 'Permissions, delegated, channel, notifications'
     - name: 导入第三方消息
       href: graph-api/import-messages/import-external-messages-to-teams.md
+      displayName: 'Permission, channel, communications, setting'
     - name: 代码示例
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
 - name: 跨 Microsoft 365 扩展应用
   items:
     - name: 概述
       href: m365-apps/overview.md
+      displayName: 'Access, permissions, channel, extensions'
     - name: 先决条件
       href: m365-apps/prerequisites.md
+      displayName: 'Channel, configuration, settings, extensions'
     - name: 为 Office 和 Outlook 启用 Teams 个人选项卡
       href: m365-apps/extend-m365-teams-personal-tab.md
+      displayName: 'Access, permissions, channel, report, browser'
     - name: 为 Outlook 启用 Teams 消息扩展
       href: m365-apps/extend-m365-teams-message-extension.md
+      displayName: 'Access, channel, report, communication'
     - name: 发布适用于 Microsoft 365 的 Teams 应用
       href: m365-apps/publish.md
+      displayName: 'Access, permissions, channel, extensions'
 - name: 测试应用
   items:
     - name: 概述
@@ -649,7 +678,7 @@
   items:
     - name: 概述
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-      displayName: 'Pricing model, SaaS offer, In-app purchases,'
+      displayName: 'Pricing model, SaaS offer, In-app purchases'
     - name: 在 Teams 应用中包含 SaaS 产品/服务
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       displayName: 'Transactable Software-as-a-Service, Recloud app'
@@ -658,15 +687,18 @@
     - name: 针对盈利应用的测试预览
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: 应用部件清单
-  items:
+  itesms:
     - name: Teams 的应用清单架构
       href: resources/schema/manifest-schema.md
+      displayName: 'Access, permissions, configuration, browser, channel, notification, background, delegated, organizer'
     - name: 公共开发人员预览版
       items:
         - name: 概述
           href: resources/dev-preview/developer-preview-intro.md
+          displayName: 'Access, setting'
         - name: Teams 的公共开发人员预览清单架构
           href: resources/schema/manifest-schema-dev-preview.md
+          displayName: 'Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer'
 - name: 与Teams整合
   items:
     - name: 概述
