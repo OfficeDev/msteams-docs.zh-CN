@@ -606,24 +606,31 @@
   items:
     - name: 概述
       href: concepts/build-and-test/test-app-overview.md
+      displayName: 'Access, settings'
     - name: 准备 Microsoft 365 租户
       href: concepts/build-and-test/prepare-your-o365-tenant.md
     - name: 选择测试设置并调试 Teams 应用
       href: concepts/build-and-test/debug.md
+      displayName: 'Access, configuration, browser, channel'
     - name: 向环境中添加测试数据
       href: concepts/build-and-test/test-data.md
+      displayName: 'Permissions, channel'
     - name: 选项卡
       items:
         - name: 适用于 Microsoft Teams 选项卡的 DevTools
           href: tabs/how-to/developer-tools.md
+          displayName: 'Access, cache, configuration, browser'
     - name: 机器人
       items:
         - name: 使用 IDE 在本地测试和调试机器人
+          displayName: 'Channel, extensions'
           href: bots/how-to/debug/locally-with-an-ide.md
         - name: 使用检查中间件调试机器人
           href: /azure/bot-service/bot-service-debug-inspection-middleware
+          displayName: Channels
         - name: 在本地调试呼叫和会议机器人
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+          displayName: 'Configuration, setting, notification'
     - name: Microsoft Graph
       items:
         - name: 测试资源特定许可权限
