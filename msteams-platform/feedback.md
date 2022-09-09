@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员社区支持和反馈
 description: 了解 Microsoft Teams 产品团队通过各种反馈和支持渠道响应开发人员社区。
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: bd24ee9f9706bdf845dd518db2735c843f2b46ca
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 70df325781e5cbc6d18731d4aa0d31dd26b7817a
+ms.sourcegitcommit: 8e57439ad8258bf3315d29fd8e54d4bf15057346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558147"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636050"
 ---
 # <a name="support-and-feedback"></a>支持和反馈
 
@@ -65,6 +65,7 @@ ms.locfileid: "66558147"
 |:----------------------|:------------|
 | **功能建议** | 在 [Microsoft Teams 反馈门户](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472)上:::image type="icon" source="assets/icons/Teams-icon.png":::发布功能建议。 |
 | **一般问题** | 将有关 Microsoft Teams 开发人员平台的一般问题发送到 [Microsoft Teams 社区帮助](mailto:microsoftteamsdev@microsoft.com)。 我们鼓励在此处提到的频道上发布问题，并且仅在没有其他通信方式适用的情况下才使用电子邮件。 |
+| **反馈面试** | 你的反馈对我们非常重要。 如果你有兴趣与我们谈论你利用我们的平台文档、社区论坛响应和 Teams 应用商店发布过程的经验，请随时 [预订槽位](https://aka.ms/bookdevfeedback)。|
 
 ## <a name="see-also"></a>另请参阅
 

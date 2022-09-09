@@ -796,13 +796,18 @@
           href: concepts/build-and-test/apps-localization.md
         - name: 本地化 JSON 架构参考
           href: resources/schema/localization-schema.md
+          displayName: 'Notification, setting'
     - name: 在 Azure AD 中使用无提示身份验证
       href: tabs/how-to/authentication/auth-silent-aad.md
+      displayName: 'Access, cache, report'
     - name: SameSite cookie 属性
       href: resources/samesite-cookie-update.md
+      displayName: 'Cookies, configuration, browser, chat'
     - name: 参与 Teams 文档
       href: resources/teams-contributor-reference.md
     - name: Microsoft Teams 应用疑难解答
       href: resources/troubleshoot.md
+      displayName: 'Channel, chat, settings, browser, domain'
 - name: 支持和反馈
   href: feedback.md
+  displayName: 'Channel, chat, report, extensions'
