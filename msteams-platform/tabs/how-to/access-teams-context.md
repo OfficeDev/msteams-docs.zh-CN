@@ -3,12 +3,12 @@ title: 获取选项卡的上下文
 description: 了解选项卡的上下文、用户、团队或公司的上下文、访问信息、在专用频道或共享频道中检索上下文以及处理主题更改。
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 2048f46e6cbe181a755df12b61c5153aacc21186
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450385"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635306"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -241,31 +241,8 @@ microsoftTeams.getContext((context) => {
 
 如果页面使用这些值中的任何一个，则字段的 `channel.membershipType` 值必须 `Private` 是确定页面是否加载在专用通道中，并且可以相应地响应。
 
-## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>检索Microsoft Teams Connect共享通道中的上下文
-
 > [!NOTE]
-> 目前，Microsoft Teams Connect共享频道仅在开发人员预览版中。
-
-当内容页面加载到Microsoft Teams Connect共享通道中时，由于共享频道中用户的唯一名册，从`getContext`呼叫中收到的数据将会更改。
-当内容页面位于共享频道中时，将更改以下字段：
-
-* `team.groupId`：未定义共享通道。
-* `team.internalId`：设置为 `threadId` 团队，为当前用户共享频道。 如果用户有权访问多个团队，则将其设置为托管 () 共享通道创建的团队。
-* `team.displayName`：设置为团队的名称，为当前用户共享频道。 如果用户有权访问多个团队，则将其设置为托管 () 共享通道创建的团队。
-* `sharepointSite.url`：设置为共享通道的非重复唯一 SharePoint 网站的 URL。
-* `sharepointSite.path`：设置为共享通道的非重复唯一 SharePoint 网站的路径。
-* `sharepointSite.domain`：设置为共享通道的非重复唯一 SharePoint 网站域的域。
-
-除了这些字段更改之外，还有两个新字段可用于共享频道：
-
-* `hostTeamGroupId`：设置为 `team.groupId` 与托管团队或创建共享频道的团队关联。 该属性可以使 Microsoft 图形 API调用检索共享通道的成员身份。
-* `hostTeamTenantId`：设置为 `channel.ownerTenantId` 与托管团队或创建共享频道的团队关联。 可以使用 *在上下文* 对象字段中`user.tenant.id`找到的当前用户的租户 ID 交叉引用该属性，以确定用户是托管团队租户的内部还是外部。
-
-如果页面使用这些值中的任何一个，则字段的 `channel.membershipType` 值必须 `Shared` 确定页面是否已加载到共享通道中，并且可以做出适当的响应。
-
-> [!NOTE]
-> `teamSiteUrl` 也适用于标准通道。
-> 如果页面使用这些值中的任何一个，则字段的 `channelType` 值必须 `Shared` 确定页面是否已加载到共享通道中，并且可以做出适当的响应。
+>`teamSiteUrl` 也适用于标准通道。 如果页面使用这些值中的任何一个，则字段的 `channelType` 值必须 `Shared` 确定页面是否已加载到共享通道中，并且可以做出适当的响应。
 
 ## <a name="get-context-in-shared-channels"></a>获取共享通道中的上下文
 
@@ -278,7 +255,7 @@ microsoftTeams.getContext((context) => {
 
 | 属性 | 说明 |
 |----------|--------------|
-|`channelId`| 该属性设置为 SC 通道线程 ID。|
+|`channelId`| 该属性设置为共享通道线程 ID。|
 |`channelType`| 该属性设置 `sharedChannel` 为共享通道。|
 |`groupId`|该属性 `null` 适用于共享通道。|
 |`hostTenantId`| 该属性是新添加的，并描述了主机的租户 ID，可用于与当前用户的 `tid` 租户 ID 属性进行比较。 |

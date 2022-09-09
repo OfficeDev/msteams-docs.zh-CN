@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的术语
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 962fa2ce2fb52fc3687da59b1453800a8d841e8e
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616798"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635320"
 ---
 # <a name="glossary"></a>术语表
 
@@ -102,7 +102,6 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [身份提供程序](../concepts/authentication/configure-identity-provider.md) | 存储并向用户提供凭据的一个实体。 用户也可以向标识提供者注册自己。  <br>**另请参阅**：[身份验证](#a) |
 | [传入 Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | 它允许外部应用在 Teams 频道中共享内容。 这些 Webhook 可以用作跟踪和通知工具。 <br>**另请参阅**：[Webhook](#w)；[传出 Webhook](#o) |
 | [会议内应用体验](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Teams 会议生命周期的一个阶段。借助会议内应用体验，可以在会议期间通过使用应用和会议中的对话框来吸引与会者。<br>**另请参阅**：[会议生命周期](#m) |
 

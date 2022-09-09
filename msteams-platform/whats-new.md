@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b13cc93e515c1b4daf08e3f218a7059e34615f0d
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: aae169cc03b51e1f0db04564234be4876d39ce49
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605780"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635299"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -288,6 +288,7 @@ ms.locfileid: "67605780"
 ## <a name="get-latest-updates"></a>获取最新更新
 
 可以通过配置到 [RSS 源](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。
+
 
 ### <a name="to-configure-rss-feed"></a>配置 RSS 源
 

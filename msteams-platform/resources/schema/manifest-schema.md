@@ -3,12 +3,12 @@ title: 清单架构参考
 description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: db72e9e40a5bf4381b4e7e47090b4f6cfcb1d1d8
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605024"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635334"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
@@ -786,7 +786,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 > [!NOTE]
 >
 > * 如果应用支持团队范围，则无论在此属性中定义的值如何，它都会在标准频道中运行。
-> * 应用可以考虑每个频道类型的唯一属性，以便正常运行。 若要为专用频道和共享频道启用选项卡，请参阅 [在专用频道中检索上下文](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)和[在共享频道中检索上下文](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)。
+> * 应用可以考虑每个频道类型的唯一属性，以便正常运行。 若要为专用频道和共享频道启用选项卡，请参 [阅在专用通道中检索上下文](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) 并在 [共享通道中获取上下文](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
