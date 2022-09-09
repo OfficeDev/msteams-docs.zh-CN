@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 2201319113817b4837553accc11d6ce6c8b3d4cd
-ms.sourcegitcommit: 51e4e43bc73182c5992e45b145cf1f7cdc0dd48c
+ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67418848"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636159"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>为会议启用和配置应用
 
@@ -227,7 +227,7 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 > [!NOTE]
 >
 > * 若要共享要暂存应用的特定部分，请使用 Teams 清单版本 1.12 或更高版本。
-> * 目前，只能在 Teams 桌面客户端上将应用的特定部分共享到会议阶段。
+> * 只能在 Teams 桌面客户端上将应用的特定部分共享到会议阶段。 移动用户可以共享应用的特定部分，以使用 [共享来暂存 API](API-references.md#share-app-content-to-stage-api)。
 
 ### <a name="after-a-meeting"></a>会议后
 
