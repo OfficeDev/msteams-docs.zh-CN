@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338849"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636173"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -194,9 +194,6 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 * 玩游戏。
 
 共享到会议阶段的应用占用的空间与共享屏幕相同。 舞台也会以同样的方式为所有会议参与者重新定向。
-
-> [!NOTE]
-> 目前，移动用户无法将应用内容共享到会议阶段。 不过，他们可以看到从桌面共享的内容。
 
 ### <a name="use-cases"></a>用例
 
