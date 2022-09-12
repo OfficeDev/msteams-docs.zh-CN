@@ -5,12 +5,12 @@ description: 了解如何在频道或群聊中发送、接收和处理机器人�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 91e696644698a609f6870aad9f4242e797b8e6bc
+ms.sourcegitcommit: 2d48459e0cdf92c097954ecc785f0ea257d423b9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503604"
+ms.lasthandoff: 09/12/2022
+ms.locfileid: "67646137"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 
@@ -23,14 +23,14 @@ ms.locfileid: "66503604"
 > [!NOTE]
 > 此功能目前仅适用于[公共开发人员预览版](../../../resources/dev-preview/developer-preview-intro.md)。
 >
-> 使用资源特定许可 (RSC)，机器人可在未被 @提及的情况下接收团队中安装的所有频道消息。 有关详细信息，请参阅[使用 RSC 接收所有频道消息](channel-messages-with-rsc.md)。
+> 使用资源特定的许可 (RSC) ，机器人可以接收团队中安装的所有频道消息，而无需@mentioned。 有关详细信息，请参阅[使用 RSC 接收所有频道消息](channel-messages-with-rsc.md)。
 >
 > 目前不支持将消息或自适应卡片发布到专用频道。
 
 请参阅以下视频，了解与机器人的频道和群聊对话：
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
 <br>
 
 ## <a name="design-guidelines"></a>设计准则
@@ -41,7 +41,7 @@ ms.locfileid: "66503604"
 
 ## <a name="create-new-conversation-threads"></a>创建新的对话线程
 
-在团队中安装机器人时，必须创建新的对话线程，而不是回复现有对话线程。 有时很难区分两个对话。 如果对话是线程式的，则更容易组织和管理频道中的不同对话。 这是[主动消息传送](~/bots/how-to/conversations/send-proactive-messages.md)的一种形式。
+在团队中安装机器人时，必须创建新的对话线程，而不是回复现有对话线程。 有时，很难区分两个对话。 如果会话是线程式的，则更容易在频道中组织和管理不同的对话。 这是[主动消息传送](~/bots/how-to/conversations/send-proactive-messages.md)的一种形式。
 
 接下来，可以使用 `entities` 对象检索提及，并使用 `Mention` 对象向消息添加提及。
 
@@ -267,11 +267,14 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 首次将机器人添加到群组或团队时，必须发送简介消息。 该消息必须简要说明机器人的功能以及如何使用它们。 必须订阅具有 `teamMemberAdded` eventType 的 `conversationUpdate` 事件。  添加任何新团队成员时，将发送该事件。 检查添加的新成员是否为机器人。 有关详细信息，请参阅[向新团队成员发送欢迎消息](~/bots/how-to/conversations/send-proactive-messages.md)。
 
-添加机器人时，将向每个团队成员发送个人消息。 为此，请获取团队名单，并向每个用户发送直接消息。
+添加机器人时，可以向团队的每个成员发送个人消息。 为此， [请提取团队名册，](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) 并向每个用户发送 [一条直接消息](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
+
+>[!NOTE]
+> 确保机器人发送的消息相关，并将值添加到初始消息，并且不会向用户发送垃圾邮件。
 
 在以下情况下，请勿发送消息：
 
-* 例如，团队为超过 100 个成员的大型团队。 机器人可能被视为垃圾邮件，添加机器人的人员可能会收到投诉。 你必须清楚地向所有看到欢迎消息的成员传达机器人的价值主张。
+* 例如，当团队规模大于 100 个成员时。 机器人可能被视为垃圾邮件，添加机器人的人员可能会收到投诉。 你必须清楚地向所有看到欢迎消息的成员传达机器人的价值主张。
 * 首先在群组或频道中提及机器人，而不是先将其添加到团队。
 * 群组或频道已重命名。
 * 团队成员将添加到群组或频道。
@@ -292,4 +295,3 @@ async def _mention_activity(self, turn_context: TurnContext):
 * [获取 Teams 上下文](~/bots/how-to/get-teams-context.md)
 * [代表用户创建专用频道](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [将机器人连接到Web 聊天通道](/azure/bot-service/bot-service-channel-connect-webchat)
-

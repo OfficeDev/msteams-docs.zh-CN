@@ -697,7 +697,6 @@
   itesms:
     - name: Teams 的应用清单架构
       href: resources/schema/manifest-schema.md
-      displayName: 'Access, permissions, configuration, browser, channel, notification, background, delegated, organizer'
     - name: 公共开发人员预览版
       items:
         - name: 概述
@@ -705,7 +704,6 @@
           displayName: 'Access, setting'
         - name: Teams 的公共开发人员预览清单架构
           href: resources/schema/manifest-schema-dev-preview.md
-          displayName: 'Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer'
 - name: 与Teams整合
   items:
     - name: 概述
