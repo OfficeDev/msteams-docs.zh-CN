@@ -5,12 +5,12 @@ description: 了解如何生成嵌入在 Microsoft Teams 中的选项卡和网�
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450392"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653187"
 ---
 # <a name="build-tabs-for-teams"></a>Teams 的生成选项卡
 
@@ -80,7 +80,7 @@ Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选�
 
 ### <a name="tools-to-build-tabs"></a>用于生成选项卡的工具
 
-* [适用于 Microsoft Visual Studio Code 的 Teams 工具包](../toolkit/visual-studio-code-overview.md)
+* [Visual Studio Code 的Teams工具包](../toolkit/teams-toolkit-fundamentals.md)
 * [Visual Studio 的Teams工具包](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>后续步骤

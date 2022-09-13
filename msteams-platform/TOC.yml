@@ -120,6 +120,8 @@
                   href: toolkit/add-resource.md
                 - name: 集成现有的第三方 API
                   href: toolkit/add-API-connection.md
+                - name: 向 Teams 应用添加单一登录
+                  href: toolkit/add-single-sign-on.md
             - name: 自定义清单
               items:
                 - name: 自定义 Teams 应用清单
@@ -146,6 +148,8 @@
               items:
                 - name: 集成和协作
                   href: toolkit/TeamsFx-collaboration.md
+                - name: 设置 CI/CD 管道
+                  href: toolkit/use-CICD-template.md
                 - name: Teams 环境中的旁加载和测试应用
                   href: toolkit/sideload-and-test-app.md
                 - name: 在不同的环境中测试应用行为

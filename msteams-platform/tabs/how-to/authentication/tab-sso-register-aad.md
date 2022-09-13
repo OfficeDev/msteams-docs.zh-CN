@@ -4,12 +4,12 @@ description: 通过配置应用 ID URI、访问令牌范围和预授权受信任
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Microsoft Azure Active Directory (Azure AD) 访问令牌 SSO 租户范围的 Teams 身份验证选项卡
-ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586796"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653195"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>在 Azure AD 中注册选项卡应用
 
@@ -21,7 +21,7 @@ Azure AD 基于应用用户的 Teams 标识提供对选项卡应用的访问权�
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="配置 Azure AD 以将访问令牌发送到 Teams 客户端应用":::
 
-在 Azure AD 中创建新的应用注册，并使用范围（权限）公开其 (Web) API。 在 Azure AD 上公开的 API 与应用之间配置信任关系。 这允许 Teams 客户端代表应用程序和登录用户获取访问令牌。 可以为要预先授权的受信任的移动、桌面和 Web 应用程序添加客户端 ID。
+在 Azure AD 中创建新的应用注册，并使用范围（权限）公开其 (Web) API。 在 Azure AD 上公开的 API 与应用之间配置信任关系。 它允许 Teams 客户端代表应用程序和登录用户获取访问令牌。 可以为要预先授权的受信任的移动、桌面和 Web 应用程序添加客户端 ID。
 
 可能还需要配置其他详细信息，例如，在想要定位选项卡应用的平台或设备上对应用用户进行身份验证。
 
@@ -36,7 +36,7 @@ Azure AD 配置为 Teams 中的选项卡应用启用 SSO。 它使用访问令�
 
 如果事先了解在 Azure AD 上注册应用的配置，这很有帮助。 在注册应用之前，请确保已准备好配置以下详细信息：
 
-- **单租户或多租户选项**：应用程序将仅在注册它的 Microsoft 365 租户中使用，还是许多 Microsoft 365 租户使用它？ 为一家企业编写的应用程序通常是单租户；由独立软件供应商编写且由许多客户使用的应用程序需要是多租户，以便每个客户的租户都可以访问该应用程序。
+- **单租户或多租户选项**：应用程序将仅在注册的 Microsoft 365 租户中使用，还是许多 Microsoft 365 租户使用它？ 为一家企业编写的应用程序通常是单租户。 由独立软件供应商编写且由许多客户使用的应用程序需要是多租户，以便每个客户的租户都可以访问该应用程序。
 - **应用程序 ID URI**：它是一个全局唯一的 URI，用于标识通过范围访问应用时公开的 Web API。 它也称为标识符 URI。 应用程序 ID URI 包括应用 ID 和托管应用的子域。 应用程序的域名和为 Azure AD 应用程序注册的域名应相同。 目前不支持每个应用有多个域。
 - **范围**：可以授予授权应用用户或应用访问 API 公开资源的权限。
 
@@ -84,7 +84,7 @@ Azure AD 配置为 Teams 中的选项卡应用启用 SSO。 它使用访问令�
     | 选项 | 选择此选项可... |
     | --- | --- |
     | 仅限此组织目录中的帐户（仅限 Microsoft - 单租户） | 生成仅供租户中（或来宾）用户使用的应用程序。 <br> 此应用通常称为 LOB 应用程序，是Microsoft 标识平台中的单租户应用程序。 |
-    | 任何组织目录（任何 Azure AD 目录 - 多租户）中的帐户 | 允许任何 Azure AD 租户中的用户使用应用程序。 例如，如果要生成 SaaS 应用程序，并且打算将其提供给多个组织，则此选项非常合适。 <br> 此类应用在 Microsoft 标识平台中称为多租户应用程序。|
+    | 任何组织目录（任何 Azure AD 目录 - 多租户）中的帐户 | 允许任何 Azure AD 租户中的用户使用应用程序。 例如，如果要生成 SaaS 应用程序，并且打算将其提供给多个组织，则此选项是合适的。 <br> 此类应用在 Microsoft 标识平台中称为多租户应用程序。|
     | 任何组织目录中的帐户（任何 Azure AD 目录 - 多租户）和个人 Microsoft 帐户 | 面向最广泛的客户集。 <br> 通过选择此选项，你将注册一个可支持具有个人 Microsoft 帐户的应用用户的多租户应用程序。 |
     | 仅限个人 Microsoft 帐户 | 仅为拥有个人 Microsoft 帐户的用户生成应用程序。 |
 
@@ -208,13 +208,13 @@ Azure AD 配置为 Teams 中的选项卡应用启用 SSO。 它使用访问令�
 
     将显示“**添加客户端应用程序**”页。
 
-1. 输入要为应用的 Web 应用程序授权的应用程序的 Teams 客户端的相应客户端 ID。
+1. 输入要为应用的 Web 应用程序授权的应用程序的 Teams 客户端的相应 Microsoft 365 客户端 ID。
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="添加客户端应用程序":::。
 
     > [!NOTE]
     >
-    > - Teams 移动、桌面和 Web 应用程序的客户端 ID 是应添加的实际 ID。
+    > - 适用于 Teams、Office 和 Outlook 的移动、桌面和 Web 应用程序的 Microsoft 365 客户端 ID 是应添加的实际 ID。
     > - 对于 Teams 选项卡应用，需要 Web 或 SPA，因为无法在 Teams 中拥有移动或桌面客户端应用程序。
 
     1. 选择以下客户端 ID 之一：
@@ -223,6 +223,10 @@ Azure AD 配置为 Teams 中的选项卡应用启用 SSO。 它使用访问令�
        | --- | --- |
        | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams 移动或桌面应用程序 |
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams Web 应用程序 |
+       | 4765445b-32c6-49b0-83e6-1d93765276ca | Office Web 应用程序 |
+       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Office 桌面应用程序 |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook 桌面、移动应用程序 |
+       | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook Web 应用程序 |
 
     1. 选择在 **授权范围内** 为应用创建的应用程序 ID URI，将范围添加到公开的 Web API。
 

@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Teams 集成注意事项
-ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 994747586610ac9301e1cc1a6d752ad77816af97
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178609"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653166"
 ---
 # <a name="considerations-for-teams-integration"></a>Teams 集成注意事项
 
@@ -75,7 +75,7 @@ Teams 应用必须包含必需和预期的协作功能。 若要处理应用集�
 
 ***集成方案**：独立应用、协作应用*
 
-与 Teams 集成时，应用的 API 和数据结构必须支持应用。 若要扩展支持，必须使用有关 Teams 的上下文信息来增强 API 和数据结构，用于[标识映射](../concepts/authentication/configure-identity-provider.md)、[深层链接支持](../concepts/build-and-test/deep-links.md)以及[整合 Microsoft Graph](/graph/teams-concept-overview)。
+与 Teams 集成时，应用的 API 和数据结构必须支持应用。 若要扩展支持，必须使用有关 Teams 的上下文信息来增强 API 和数据结构，用于[标识映射](../concepts/authentication/authentication.md)、[深层链接支持](../concepts/build-and-test/deep-links.md)以及[整合 Microsoft Graph](/graph/teams-concept-overview)。
 
 了解如何获取 Teams [选项卡](../tabs/how-to/access-teams-context.md)或[机器人](../bots/how-to/get-teams-context.md)的上下文。
 

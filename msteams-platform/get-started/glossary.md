@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的术语
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: 2cf9b4c3533b86e45247316e9c6a9da8517494d2
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635320"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653159"
 ---
 # <a name="glossary"></a>术语表
 
@@ -25,7 +25,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [应用部件清单](../resources/schema/manifest-schema.md) | Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 清单必须符合 [清单架构](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)。 |
 | [应用包](../concepts/build-and-test/apps-package.md) | Teams 应用包是一个 zip 文件，其中包含应用清单文件、颜色图标和大纲图标。 |
 | [应用权限](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | Teams 应用中用于启用设备权限的选项。 仅当应用的清单文件声明应用需要设备权限时，此选项才可用。 <br> **另请参阅**： [设备权限](#d) |
-| [应用程序范围](../concepts/design/app-structure.md) | Teams 中用户可以使用你的应用的区域。 应用可以有一个或多个范围，包括个人、频道、聊天和会议。 Teams 应用可以跨范围存在。 |
+| [应用程序范围](../concepts/design/understand-use-cases.md#app-scope) | Teams 中用户可以使用你的应用的区域。 应用可以有一个或多个范围，包括个人、频道、聊天和会议。 Teams 应用可以跨范围存在。 |
 | 应用托盘 | 位于 Teams 移动应用底部栏上的应用程序托盘。 它收集已打开但当前未使用或处于活动状态的所有应用。 <br>**另请参阅**：[Teams 移动](#t) |
 | [Azure 资源](../toolkit/provision.md) | 通过 Azure 提供的服务，Teams 应用可将其用于 Azure 部署。 它可以是存储帐户、Web 应用、数据库等。 |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft 基于云的标识和访问管理服务。 它可帮助经过身份验证的用户访问内部和外部资源。 |
@@ -54,7 +54,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [云资源](../toolkit/add-resource.md) | 通过 Internet 在云上提供的服务，Teams 应用可以使用该服务。 它可以是存储帐户、Web 应用、数据库等。 |
 | [协作与应用](../concepts/extensibility-points.md) | 具有可供用户在协作工作区中与其他用户一起工作的功能的应用。 <br> **另请参阅**：[独立应用](#s) |
 | [撰写扩展](../resources/schema/manifest-schema.md#composeextensions) | 应用清单 (`composeExtensions`) 中引用邮件扩展功能的属性。 该属性用于当扩展需要进行身份验证或配置以继续时。 <br>**另请参阅**：[应用清单](#a)；[邮件扩展](#m) |
-| [命令框](../resources/schema/manifest-schema.md) | 应用清单中的一种上下文类型 (`commandBox`)，可以将其配置为从 Teams 命令框中调用邮件扩展。 |
+| [CommandBox](../resources/schema/manifest-schema.md) | 应用清单中的一种上下文类型 (`commandBox`)，可以将其配置为从 Teams 命令框中调用邮件扩展。 |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | 使用连接器，用户可以订阅以接收来自 Web 服务的通知和消息。 连接器公开服务的 HTTPS 终结点，以便将消息发布到 Teams 频道，通常采用卡片形式。 <br> **另请参阅**：[Webhook](#w) |
 | 对话 | Microsoft Teams 应用（选项卡或机器人）与一个或多个用户之间发送的一系列消息。 对话可以有三个范围：频道、个人聊天和群组聊天。 <br>**另请参阅**：[一对一聊天](#o)；[群组聊天](#g)；[频道](#c) |
 | [对话机器人](../bots/how-to/conversations/conversation-messages.md) |  它允许用户使用文本、交互式卡片和任务模块与 Web 服务进行交互。 <br>**另请参阅** [聊天机器人](#c) |
@@ -102,6 +102,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
+| [身份提供程序](../concepts/authentication/authentication.md) | 一个实体，用于存储并向用户提供凭据。 它还允许用户自行注册。  <br>**另请参阅**：[身份验证](#a) |
 | [传入 Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | 它允许外部应用在 Teams 频道中共享内容。 这些 Webhook 可以用作跟踪和通知工具。 <br>**另请参阅**：[Webhook](#w)；[传出 Webhook](#o) |
 | [会议内应用体验](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Teams 会议生命周期的一个阶段。借助会议内应用体验，可以在会议期间通过使用应用和会议中的对话框来吸引与会者。<br>**另请参阅**：[会议生命周期](#m) |
 
@@ -126,7 +127,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md) | 邮件扩展是插入应用内容或对消息执行操作的快捷方式。无需离开对话即可使用邮件扩展。<br>**另请参阅**：[搜索命令](#s)；[操作命令](#a) |
 | [会议扩展](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | 旨在用于在会议生命周期内提高工作效率的应用，例如白板、仪表板等。 |
 | [Microsoft 365 账户](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 帐户包含 25 个仅用于开发用途的用户许可证，包括管理员。 |
-| [Microsoft 365 开发人员计划](../toolkit/accounts.md)| Microsoft 365 开发人员计划可帮助你构建扩展 Microsoft 365 的应用。 |
+| [Microsoft 365 开发人员计划](../toolkit/tools-prerequisites.md)| Microsoft 365 开发人员计划可帮助你构建扩展 Microsoft 365 的应用。 |
 | [Microsoft Graph 浏览器](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | 通往 Microsoft 365 中数据和智能的网关。它提供了一个统一的可编程性模型，可用于访问 Microsoft 365、Windows 10 和企业移动性 + 安全性中的数据。 |
 | [Microsoft Teams](../overview.md) | Microsoft Teams 是一种组协作软件，可用于帮助团队开展远程协作。 |
 | [Microsoft Teams 平台](../concepts/app-fundamentals-overview.md) | 借助 Microsoft Teams 开发人员平台，开发人员可以轻松地将自己的应用和服务与 Teams 集成。 |

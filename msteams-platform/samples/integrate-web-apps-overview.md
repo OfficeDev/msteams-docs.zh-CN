@@ -5,12 +5,12 @@ description: 在本文中，你将开始将 Web 应用程序和设备功能与 M
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 19cf5b580c2d25e90eb90bd1fef9a78c75111092
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189776"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653179"
 ---
 # <a name="integrate-web-apps"></a>集成 web 应用
 
@@ -49,7 +49,7 @@ Microsoft Power Platform 将四种强大的 Microsoft 技术（如 Power BI、Po
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
-Power Virtual Agent 是一种无代码引导式图形界面解决方案。 它基于 Microsoft Power Platform 和 Bot Framework 构建。 它使团队的每个成员能够创建和维护与 Teams 平台轻松集成的丰富对话聊天机器人。 可以为 Teams 设计、开发和发布智能虚拟代理，而无需设置开发环境、创建 Web 服务或直接向 Bot Framework 注册。
+Power Virtual Agent 是一种无代码引导式图形界面解决方案。 它基于 Microsoft Power Platform 和 Bot Framework 构建。 它使团队的每个成员能够创建和维护与 Teams 平台轻松集成的丰富对话聊天机器人。 可以为 Teams 设计、开发和发布智能虚拟代理，而无需设置开发环境、创建 Web 服务或直接注册到 Bot Framework。
 
 ### <a name="create-virtual-assistant"></a>创建虚拟助手
 
@@ -65,7 +65,7 @@ Moodle 是一种常用的 Learning Management System (LMS)。 它现在已与 Te
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>为网站创建“共享到 Teams”按钮
 
-第三方网站可以使用启动器脚本在其网页上嵌入“共享到 Teams”按钮。 选择该按钮时，它会在弹出窗口中启动“共享到 Teams”体验。 这样你无需切换上下文，即可将链接直接共享给任何人或 Microsoft Teams 频道。
+第三方网站可以使用启动器脚本在其网页上嵌入“共享到 Teams”按钮。 选择该按钮时，它会在弹出窗口中启动“共享到 Teams”体验。 它允许你直接共享指向任何人或 Microsoft Teams 频道的链接，而无需切换上下文。
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>在 SharePoint 中添加 Microsoft Teams 选项卡
 
