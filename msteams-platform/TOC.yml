@@ -698,7 +698,7 @@
     - name: 针对盈利应用的测试预览
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: 应用部件清单
-  itesms:
+  items:
     - name: Teams 的应用清单架构
       href: resources/schema/manifest-schema.md
     - name: 公共开发人员预览版
