@@ -705,7 +705,6 @@
       items:
         - name: 概述
           href: resources/dev-preview/developer-preview-intro.md
-          displayName: 'Access, setting'
         - name: Teams 的公共开发人员预览清单架构
           href: resources/schema/manifest-schema-dev-preview.md
 - name: 与Teams整合
