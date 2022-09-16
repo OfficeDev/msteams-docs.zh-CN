@@ -3,18 +3,18 @@ title: 自适应卡的通用操作概述
 description: 了解适用于自适应卡片的通用操作，例如特定于用户的视图、顺序工作流支持，以及桌面和移动环境的更多功能
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9c04ed4726840bd3d1637555d1bb021f31bf2e25
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142085"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786974"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>自适应卡的通用操作
 
 自适应卡片的通用操作是从开发人员反馈演变而来的，尽管自适应卡片的布局和呈现是通用的，但操作处理并非如此。 即使开发人员想要将同一张卡片发送到不同的地方，他们也必须以不同的方式处理操作。
 
-自适应卡的通用操作将机器人作为处理操作的常见后端，并引入了一种新的操作类型，`Action.Execute`它适用于应用，例如Teams和Outlook。
+自适应卡的通用操作将机器人作为处理操作的常见后端，并引入了一种新的操作类型， `Action.Execute`它适用于 Teams 和 Outlook 等应用。
 
 本文档可帮助你了解如何使用通用操作模型来增强用户跨平台和应用程序与自适应卡片交互的体验。
 
@@ -34,36 +34,36 @@ ms.locfileid: "66142085"
 
 在自适应卡的通用操作之前，不同的主机提供了不同的操作模型，如下所示：
 
-* 使用Teams或机器人`Action.Submit`，这是一种将实际通信模型延迟到基础通道的方法。
-* Outlook用于`Action.Http`与自适应卡有效负载中显式指定的后端服务通信。
+* 使用的 `Action.Submit`Teams 或机器人是一种将实际通信模型延迟到基础通道的方法。
+* Outlook 用于 `Action.Http` 与自适应卡有效负载中显式指定的后端服务通信。
 
 下图显示了当前不一致的操作模型：
 
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="不一致的操作模型":::
 
-使用适用于自适应卡片的通用操作，可以用于 `Action.Execute` 跨不同平台的操作处理。 `Action.Execute`跨中心工作，包括Teams和Outlook。 此外，自适应卡片可以作为触发的调用请求的 `Action.Execute` 响应返回。
+使用适用于自适应卡片的通用操作，可以用于 `Action.Execute` 跨不同平台的操作处理。 `Action.Execute` 适用于包括 Teams 和 Outlook 在内的各个中心。 此外，自适应卡片可以作为触发的调用请求的 `Action.Execute` 响应返回。
 
 下图显示了新的通用操作模型：
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="自适应卡的新通用操作":::
 
-现在，可以将相同的卡片发送到两者，Teams和Outlook，并使用基础机器人使它们彼此保持同步。 在任一平台上执行的任何操作都会通过此生成反映到另一个平台，部署 (自适应卡片通用操作) 模型 *的任何位置* 。
+现在，可以将相同的卡片发送到 Teams 和 Outlook，并使用基础机器人使它们彼此保持同步。 在任一平台上执行的任何操作都会通过此生成反映到另一个平台，部署 (自适应卡片通用操作) 模型 *的任何位置* 。
 
-下图描绘了Teams和Outlook的自适应卡的通用操作：
+下图描绘了 Teams 和 Outlook 的自适应卡的通用操作：
 
 # <a name="mobile"></a>[移动设备](#tab/mobile)
 
-:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="移动同一张卡片以Teams和Outlook":::
+:::image type="content" source="~/assets/images/mobile-universal-bots-teams-outlook.png" alt-text="移动到 Teams 和 Outlook 的同一张卡片":::
 
 # <a name="desktop"></a>[桌面设备](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="要Teams和Outlook的同一张卡片" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Teams 和 Outlook 的同一张卡片" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
 
 * * *
 
 ### <a name="user-specific-views"></a>用户特定视图
 
-如今，Teams聊天或频道中的每个用户都会在自适应卡片上看到完全相同的视图和按钮操作。 但是，在某些情况下，某些用户需要以不同的方式行事，并有权访问同一聊天或频道中的不同信息。
+今天，Teams 聊天或频道中的每个用户都会在自适应卡片上看到完全相同的视图和按钮操作。 但是，在某些情况下，某些用户需要以不同的方式行事，并有权访问同一聊天或频道中的不同信息。
 
 例如，如果在聊天或频道中发送事件报告卡，则只有分配了事件的用户才能看到“ **解决** ”按钮。 另一方面，事件创建者必须看到 **“编辑”** 按钮，所有其他用户必须只能查看事件的详细信息。 属性启用 `refresh` 的用户特定视图可以实现此操作。
 
@@ -122,3 +122,4 @@ ms.locfileid: "66142085"
 * [自适应卡概述](~/task-modules-and-cards/what-are-cards.md)
 * [自适应卡片 @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [自适应卡 @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)。
+* [基于搜索的消息传递扩展的通用操作](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

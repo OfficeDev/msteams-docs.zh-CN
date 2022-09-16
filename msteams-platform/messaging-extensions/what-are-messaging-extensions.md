@@ -5,12 +5,12 @@ description: 在本模块中，了解在 Microsoft Teams 平台上使用消息�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: af67eb36d89903f22a8479e04ed22134b7741c80
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: c93e55bbbbf9bc135afeef3c9b5787cbefe3ce80
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035168"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786953"
 ---
 # <a name="message-extensions"></a>消息扩展
 
@@ -249,3 +249,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 * [定义搜索消息扩展命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [创建消息扩展](../build-your-first-app/build-messaging-extension.md)
+* [基于搜索的消息传递扩展的通用操作](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

@@ -1,16 +1,16 @@
 ---
 title: 定义消息扩展搜索命令
 author: surbhigupta
-description: 在本模块中，了解 Teams 应用的消息扩展搜索命令，通过应用清单和手动创建搜索命令。
+description: 在本模块中，了解搜索命令调用位置以及如何为消息传递扩展创建搜索命令。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363471"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786960"
 ---
 # <a name="define-message-extension-search-commands"></a>定义消息扩展搜索命令
 
@@ -38,7 +38,7 @@ ms.locfileid: "67363471"
 
 下图显示了搜索命令的调用位置：
 
-:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="搜索命令调用位置":::
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="屏幕截图显示了 Teams 通道中搜索命令的调用位置。":::
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>将搜索命令添加到应用清单
 
@@ -54,28 +54,28 @@ ms.locfileid: "67363471"
 1. 导入应用包后，选择 **“应用功能**”下 **的消息扩展**。
 1. 若要创建消息扩展，需要 Microsoft 注册的机器人。 可以使用现有机器人，也可以创建新的机器人。 选择 **“新建机器人** ”选项，为新机器人命名，然后选择 **“创建**”。
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="屏幕截图显示如何在开发人员门户中创建机器人。":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="屏幕截图显示了在 Teams 开发人员门户中为应用配置机器人的选项。":::
 
 1. 若要使用现有机器人，请 **选择现有机器人** ，然后从下拉列表中选择现有机器人，或者选择 **“输入机器人 ID** ”（如果已创建机器人 ID）。
 
 1. 选择消息传递扩展的范围，然后选择 **“保存**”。
 
-1. 在 **“命令**”部分中选择 **“添加命令**”以包含命令，这些命令决定消息扩展的行为。
+1. 选择“**在命令**”部分 **添加命令** 以包含命令，这些命令决定消息扩展的行为。
 下图显示了如何为消息扩展添加命令：
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="屏幕截图显示了如何添加命令来定义消息扩展的行为。":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="屏幕截图显示了如何在 Teams 开发人员门户中添加命令以定义消息扩展的行为。":::
 
 1. 选择 **“搜索** ”并输入 **命令 ID**、 **命令标题** 和 **命令说明**。
 
 1. 输入所有参数，然后从下拉列表中选择输入类型。
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="屏幕截图显示了如何添加参数以定义消息扩展的命令。":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="屏幕截图显示了如何添加参数以在 Teams 开发人员门户中为消息扩展定义命令。":::
 
 1. 选择 **“预览”链接** 下 **的“添加域**”。
 
 1. 输入有效域，然后选择 **“添加**”。
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="屏幕截图显示了如何将有效的域添加到消息传递扩展，以便展开链接。":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="屏幕截图显示如何将有效域添加到消息传递扩展以展开链接。":::
 
 1. 选择“**保存**”。
 
@@ -85,7 +85,7 @@ ms.locfileid: "67363471"
 
 1. 在命令节下选择省略号，然后选择 **“编辑”参数**。
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="屏幕截图显示了如何为消息扩展添加其他参数。":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="屏幕截图显示如何编辑消息扩展的参数。":::
 
 1. 选择 **“添加参数** ”并输入所有参数。
 
@@ -109,7 +109,7 @@ ms.locfileid: "67363471"
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
 | `parameters` | 此属性定义命令的参数静态列表。 | 否 | 1.0 |
-| `parameter.name` | 此属性描述参数的名称。 这会在用户请求中发送到服务。 | 是 | 1.0 |
+| `parameter.name` | 此属性描述参数的名称。 系统 `parameter.name` 会在用户请求中发送到服务。 | 是 | 1.0 |
 | `parameter.description` | 此属性描述参数的用途或必须提供的值的示例。 此值显示在 UI 中。 | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
 | `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括`text`， `textarea`， `number`， `date`， `time`。 `toggle` 默认设置为 `text`. | 否 | 1.4 |
@@ -142,6 +142,7 @@ ms.locfileid: "67363471"
   ],
 ...
 }
+
 ```
 
 有关完整的应用清单，请参阅 [应用清单架构](~/resources/schema/manifest-schema.md)。

@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aae169cc03b51e1f0db04564234be4876d39ce49
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: bd1c8ff2d9216ba0f1611fd48d8df943e2f75a35
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635299"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786967"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -36,6 +36,7 @@ ms.locfileid: "67635299"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 09/16/2022 | 基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。 | 生成消息扩展>搜索命令>定义搜索命令> [基于搜索的消息扩展的通用操作](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
 | 09/06/2022 | `selectMedia` 用于使用相机捕获视频的 API | 集成设备功能 > [集成媒体功能](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | 为 Visual Studio 2022 引入了 Teams 工具包 | 工具和 SDK > 适用于 Visual Studio 的 Teams 工具包 > [适用于 Visual Studio 的 Teams 工具包概述](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 2022/08/03 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
@@ -288,7 +289,6 @@ ms.locfileid: "67635299"
 ## <a name="get-latest-updates"></a>获取最新更新
 
 可以通过配置到 [RSS 源](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。
-
 
 ### <a name="to-configure-rss-feed"></a>配置 RSS 源
 
