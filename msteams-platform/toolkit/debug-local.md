@@ -6,16 +6,23 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 68999351232deb60015259840147d2a1ab55681a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616550"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780857"
 ---
 # <a name="debug-your-microsoft-teams-app-locally"></a>在本地调试 Microsoft Teams 应用
 
-Microsoft Teams 工具包可帮助你在本地调试和预览 Teams 应用。 在调试过程中，Teams 工具包会自动启动应用服务、启动调试器和旁加载 Teams 应用。 调试后，可以在 Teams Web 客户端本地预览 Teams 应用。 在调试应用之前，需要设置 Teams 工具包。
+Teams 工具包有助于本地调试和预览 Teams 应用。 在调试过程中，Teams 工具包会自动启动应用服务、启动调试器和旁加载 Teams 应用。 调试后，可以在 Teams Web 客户端本地预览 Teams 应用。
+
+::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>在本地调试 Microsoft Teams 应用以进行Visual Studio Code
+
+Visual Studio Code中的 Teams 工具包提供在本地自动调试 Teams 应用的功能。 Visual Studio 允许调试选项卡、机器人和消息扩展。 在调试应用之前，需要设置 Teams 工具包。
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>设置用于调试的 Teams 工具包
 
@@ -140,9 +147,73 @@ Teams 工具包启动浏览器实例并打开网页以加载 Teams 客户端。
 > [!div class="nextstepaction"]
 > [调试后台进程](debug-background-process.md)
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>使用 Visual Studio 在本地调试 Microsoft Teams 应用
+
+Teams 工具包可帮助你在本地调试和预览 Microsoft Teams 应用。 Visual Studio 允许调试选项卡、机器人和消息扩展。 可以通过执行以下操作，在 Visual Studio 中使用 Teams 工具包在本地调试应用：
+
+### <a name="set-up-ngrok-only-for-bot-and-message-extension-app"></a>设置仅适用于机器人和消息扩展应用的 ngrok () 
+
+使用命令提示符运行以下命令：
+
+```
+ngrok http 5130
+```
+
+### <a name="set-up-your-teams-toolkit"></a>设置 Teams 工具包
+
+创建项目后，使用 Teams 工具包执行以下步骤来调试应用：
+
+1. 右键单击 **项目**。
+1. 选择 **Teams 工具包** > **“准备 Teams 应用依赖项**”。
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="用于本地调试的 Teams 应用依赖项" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
+
+   > [!NOTE]
+   > 在此方案中，项目名称为 MyTeamsApp1
+
+   登录前，Microsoft 365 帐户需要具有旁加载权限。  请确保 Teams 应用可以上传到租户，否则 Teams 应用可能无法在 Teams 客户端中运行。
+
+1. 登录到 **Microsoft 365 帐户**，然后选择 **“继续”**
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="登录到 Microsoft 365 帐户":::
+
+   > [!Note]
+   > 通过访问了解有关旁加载权限的详细信息 <https://aka.ms/teamsfx-sideloading-option>。
+
+1. 选择 **“调试** > **开始调试**”，或直接选择 **F5**。
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="开始调试":::
+
+   Visual Studio 在浏览器中的 Microsoft Teams 客户端中启动 Teams 应用。
+
+   > [!Note]
+   > 通过访问了解详细信息 <https://aka.ms/teamsfx-vs-debug>。
+
+1. 加载 Microsoft Teams 后，选择 **“添加** ”以在 Teams 中安装应用。
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-add-loadapp.png" alt-text="选择“添加以加载应用”":::
+
+   > [!TIP]
+   > 还可以在调试期间使用 Visual Studio 的热重载函数。 通过访问了解详细信息 <https://aka.ms/teamsfx-vs-hotreload>。
+
+   > [!NOTE]
+   > 在调试通知机器人应用时，请确保将 HTTP 请求发布到“<http://localhost:5130/api/notification>”以触发通知。 如果在创建项目时选择了 HTTP 触发器，则可以使用任何 API 工具，例如 curl (Windows 命令提示符) 、Postman 等。
+
+   > [!TIP]
+   > 如果对 Teams 应用清单文件 (/templates/appPackage/manifest.template.json) 进行任何更改，请确保执行 Prepare Teams 应用依赖项命令。 在尝试在本地再次运行 Teams 应用之前。
+
+::: zone-end
+
 ## <a name="see-also"></a>另请参阅
 
 * [使用 Teams 工具包预配云资源](provision.md)
 * [将功能添加到 Teams 应用](add-capability.md)
 * [部署到云](deploy.md)
 * [在 Teams 工具包中管理多个环境](TeamsFx-multi-env.md)
+* [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
+* [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)
+* [使用 Visual Studio 编辑 Teams 应用清单](VS-TeamsFx-preview-and-customize-app-manifest.md)

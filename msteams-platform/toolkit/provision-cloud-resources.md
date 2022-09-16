@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7dfc5817fb8872a782b28c113c270a318e3d5078
-ms.sourcegitcommit: 52a11f7614c43172bc2d57401a60d569db5310a9
+ms.openlocfilehash: 00e021e3e42eed6eeb5881d258a9884a7e579377
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67291682"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781001"
 ---
 # <a name="provision-cloud-resources-using-visual-studio"></a>使用 Visual Studio 预配云资源
 
@@ -87,7 +87,7 @@ TeamsFx 与 Azure 和 Microsoft 365 云集成，可通过单个命令将应用�
 5. 可以选择或创建新的 **资源组**。
 6. 选择 **“预配**”。
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription.png" alt-text="选择资源组":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription1.png" alt-text="选择资源组":::
 
 7. 对话框警告可以根据 Azure 使用情况添加费用。 选择 **“预配**”。
 

@@ -6,16 +6,23 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-ms.openlocfilehash: 1072d377393e6b3d3aecc3a7d3e3a89b9ec82192
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: c784e5d2242381a919500b16ab922a397bfc5d9e
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617106"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780680"
 ---
 # <a name="install-teams-toolkit"></a>安装 Teams 工具包
 
-Teams 工具包是Visual Studio Code中的扩展。 在本文档中，可以了解如何安装 Teams 工具包。 在开始安装之前，需要安装Visual Studio Code和 Teams 客户端。
+Teams 工具包是 Visual Studio 和 Visual Studio Code 中的扩展。 在本文档中，可以了解如何安装 Teams 工具包。
+
+::: zone pivot="visual-studio-code"
+
+## <a name="install-teams-toolkit-for-visual-studio-code"></a>安装适用于 Visual Studio Code 的 Teams 工具包
+
+在开始安装之前，需要安装Visual Studio Code和 Teams 客户端。
 
 ## <a name="steps-to-install-teams-toolkit"></a>安装 Teams 工具包的步骤
 
@@ -79,6 +86,35 @@ Teams 工具包是Visual Studio Code中的扩展。 在本文档中，可以了�
 * 在 Teams 工具包扩展中，选择 :::image type="icon" source="../assets/images/teams-toolkit-v2/setting icon.PNG"::: 图标。
 * 选择 **“安装另一个版本** ”以升级到最新版本的 Teams 工具包。
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="install-teams-toolkit-for-visual-studio"></a>安装 Visual Studio 的 Teams 工具包
+
+在开始安装之前，需要安装Visual Studio 安装程序。
+
+可以从 [Visual Studio 下载页面](https://visualstudio.microsoft.com/vs/preview/)下载最新Visual Studio 安装程序。
+
+## <a name="steps-to-install-teams-toolkit"></a>安装 Teams 工具包的步骤
+
+打开Visual Studio 安装程序后，在弹出的工作负荷窗口中：
+
+1. 选择 **ASP.NET 和 Web 开发** 工作负载。
+1. 在 **“安装详细信息**”面板中选择 **Microsoft Teams 开发工具**。
+1. 选择“安装”。
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation":::
+
+1. 选择 **“启动** ”以打开 Visual Studio。
+
+    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1.png" alt-text="启动 visual Studio":::
+
+   > [!IMPORTANT]
+   > 建议下载 Visual Studio 2022 版本 17.3.3，因为适用于 Visual Studio 的 Teams 工具包在此版本中为 GA。 本文适用于 Visual Studio 2022 版本 17.3.3。 Teams 工具包版本 17.3.* 或更高版本。
+
+::: zone-end
+
 ## <a name="see-also"></a>另请参阅
 
 * [浏览 Teams 工具包](explore-Teams-Toolkit.md)
@@ -86,3 +122,6 @@ Teams 工具包是Visual Studio Code中的扩展。 在本文档中，可以了�
 * [准备使用 Microsoft Teams 工具包生成应用](build-environments.md)
 * [使用 Teams 工具包预配云资源](provision.md)
 * [将 Teams 应用部署到云](deploy.md)
+* [在 Visual Studio 中创建新的 Teams 应用](create-new-teams-app-for-Visual-Studio.md)
+* [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
+* [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)

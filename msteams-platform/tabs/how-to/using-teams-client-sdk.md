@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: 在本模块中，了解 Microsoft Teams JavaScript 客户端 SDK 概述，它可帮助你构建托管 <iframe> 在 Teams、Office 和 Outlook 中的应用体验。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503919"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781064"
 ---
 # <a name="teams-javascript-client-sdk"></a>团队 JavaScript 客户端 SDK
 
@@ -408,7 +408,6 @@ TeamsJS *tasks* 命名空间已重命名为 *dialog*，并且已重命名以下 
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
 | `userTeamRole` | `app.Context.team.userRole`|
-| `userDisplayName` | `app.Context.user.displayName` |
 | 不适用 | `app.Context.app.host.name`|
 
 ## <a name="updating-to-the-teams-client-sdk-v200"></a>更新到 Teams 客户端 SDK v.2.0.0

@@ -6,14 +6,21 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: b614c73a9d15b058dcd01bb26b15bf35bd3030ce
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 95a42e4bd2064bc1ce4b775f13ba990890bc6776
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616885"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780728"
 ---
 # <a name="teams-toolkit-overview"></a>Teams 工具包概述
+
+Teams 工具包是一项功能功能，可用于在 Microsoft Visual Studio Code 和 Visual Studio 中执行多函数。 借助 Teams 工具包，可以自动完成从创建到部署和自定义应用的过程。 Teams 工具包的各种功能和优势将在所选环境的相应文档中进行讨论。
+
+::: zone pivot="visual-studio-code"
+
+## <a name="teams-toolkit-overview-for--visual-studio-code"></a>Visual Studio Code的 Teams 工具包概述
 
 Teams 工具包允许你直接从Visual Studio Code创建、调试和部署 Teams 应用。使用工具包进行应用开发具有以下优势：
 
@@ -70,9 +77,64 @@ Teams 工具包将构建 Teams 应用所需的所有工具集中在一处。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-1.png" alt-text="开发人员门户":::
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="teams-toolkit-overview-for-visual-studio"></a>Visual Studio 的 Teams 工具包概述
+
+适用于 Visual Studio 的 Teams 工具包可帮助你创建、调试和部署 Microsoft Teams 应用。 适用于 Visual Studio 的 Teams 工具包是 Visual Studio 2022 版本 17.3 中的正式版。 使用 Teams 工具包进行应用开发具有以下优点：
+
+* 集成标识
+* 对云存储的访问权限
+* 来自 Microsoft Graph 的数据
+* 采用零配置方法的 Azure 和 Microsoft 365 服务
+
+对于 Teams 应用开发，还可以使用 [CLI 工具](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)，类似于包含 Toolkit `teamsfx`的适用于 Microsoft Visual Studio 的 Teams 工具包代码。
+
+Teams 工具包将生成 Teams 应用所需的所有工具放在一个位置。
+
+> [!NOTE]
+> Teams 工具包在其他版本中不可用。
+
+## <a name="user-journey-of-teams-toolkit"></a>Teams 工具包的用户旅程
+
+Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的极佳集成。 下图显示了用户旅程：
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png" alt-text="Teams 工具包用户旅程" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-user-journey.png":::
+
+此旅程的主要里程碑包括：
+
+1. 可以首先创建新项目或尝试生成示例 Teams 应用。
+1. 然后，可以根据需要编辑代码或清单文件。
+1. 若要生成和调试 Teams 应用，可以使用 Microsoft 365 帐户。
+1. 若要预配应用并将其部署到云，可以使用 Azure 帐户。
+1. 你最终可以将应用发布到 Teams。
+
+与适用于 Microsoft Visual Studio Code 的 Teams 工具包相比，Visual Studio 的 Teams 工具包尚不支持以下操作，但计划在未来的产品路线图中执行这些操作。
+
+* 将其他 Teams 功能添加到 Teams 应用。
+* 将更多 Azure 资源添加到 Teams 应用
+* 将单一登录 (SSO) 添加到 Teams 应用。
+* 将 API 连接添加到 Teams 应用。
+* 自定义Microsoft Azure Active Directory (Azure AD) 清单。
+* 添加 CI/CD 管道。
+* 管理多个云环境。
+* 协作处理 Teams 项目。
+* 发布 Teams 应用。
+
+### <a name="teamsfx-net-sdk-reference-docs"></a>TeamsFx .NET SDK 参考文档
+
+* [Microsoft.Extensions.DependencyInjection 命名空间](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
+* [Microsoft.TeamsFx 命名空间](/../dotnet/api/Microsoft.TeamsFx)
+* [Microsoft.TeamsFx.Configuration 命名空间](/../dotnet/api/Microsoft.TeamsFx.Configuration)
+* [Microsoft.TeamsFx.Conversation 命名空间](/../dotnet/api/Microsoft.TeamsFx.Conversation)
+* [Microsoft.TeamsFx.Helper 命名空间](/../dotnet/api/Microsoft.TeamsFx.Helper)
+
 ## <a name="see-also"></a>另请参阅
 
-* [创建新的 Teams 项目](create-new-project.md)
-* [安装 Teams 工具包](install-Teams-Toolkit.md)
-* [浏览 Teams 工具包](explore-Teams-Toolkit.md)
-* [准备使用 Microsoft Teams 工具包生成应用](build-environments.md)
+* [在 Visual Studio 中创建新的 Teams 应用](create-new-teams-app-for-Visual-Studio.md)
+* [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
+* [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)
+
+::: zone-end

@@ -6,16 +6,23 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9ad2c9d16901990344ca521599b94b84b0e76217
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616924"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781087"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>将 Teams 应用部署到云
 
-Teams 工具包可帮助你将应用程序中的前端和后端代码部署或上传到 Azure 中预配的云资源。 可以将以下内容部署到云：
+Teams 工具包可帮助你将应用程序中的前端和后端代码部署或上传到 Azure 中预配的云资源。
+
+::: zone pivot="visual-studio-code"
+
+## <a name="deploy-teams-app-to-the-cloud-using-visual-studio-code"></a>使用 Visual Studio Code 将 Teams 应用部署到云
+
+可以将以下内容部署到云：
 
 * 选项卡（例如前端应用程序）将部署到 Azure 存储，并配置为静态 Web 托管或 SharePoint 网站。
 * 后端 API 将部署到 Azure 函数。
@@ -43,8 +50,80 @@ Teams 工具包可帮助你将应用程序中的前端和后端代码部署或�
 > [!NOTE]
 > 在项目中包括 Azure API 管理资源并触发部署时，可以在 Azure 函数中将 API 发布到 Azure API 管理服务。
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="deploy-teams-app-to-the-cloud-using-visual-studio"></a>使用 Visual Studio 将 Teams 应用部署到云
+
+可在 Visual Studio 中部署以下应用：
+
+* Tab 应用（如前端应用程序）部署到 Azure 存储，配置为静态 Web 托管。
+* 可以将具有 Azure 函数触发器的通知机器人应用部署到 Azure 函数。
+* 机器人应用或消息扩展可以部署到 Azure 应用服务。
+
+部署后，可以在 Teams 客户端或 Web 浏览器中预览应用，然后才能开始使用。
+
+## <a name="deploy-teams-app-using-teams-toolkit"></a>使用 Teams 工具包部署 Teams 应用
+
+1. 打开 Visual Studio。
+1. 选择 **“创建新项目** ”或从列表中打开现有项目。
+1. 右键单击部署 **到云** 的项目 **MyTeamsApp1** > **Teams 工具包** > 。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud.png" alt-text="部署到云":::
+
+   > [!NOTE]
+   > 在此方案中，项目名称为 MyTeamsApp1。
+
+1. 在确认对话框中选择 **“部署** ”。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="“部署到云确认”对话框":::
+
+   部署过程完成后，可以看到一个弹出窗口，其中确认已成功部署。 还可以检查输出窗口中的状态。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="部署到云弹出窗口":::
+
+### <a name="preview-your-app"></a>预览应用
+
+若要预览应用，首先需要创建 Zip 应用包并旁加载到 Teams 客户端。
+
+1. 选择 **Project** > **Teams 工具包** > **Zip 应用包**。
+1. 选择 **“本地** ”或 **“Azure”** 选项以生成 Teams 应用包。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package1.png" alt-text="生成 Teams 应用包":::
+
+**在 Teams 客户端中预览应用**
+
+1. **在 Teams 中** 选择 **Project** > **Teams 工具包** > 预览版。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams2.png" alt-text="Teams 客户端中的预览 Teams 应用":::
+
+   现在，你的应用已旁加载到 Teams 中。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="在 Teams 客户端中旁加载 Teams 应用":::
+
+预览应用的另一种方法：
+
+1. 右键单击 **解决方案资源管理器** 下的项目 **MyTeamsApp1**。
+1. **在 Teams 中** 选择 **Teams 工具包** > 预览以在 Web 浏览器中启动 Teams 应用。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Web 浏览器中的预览团队应用":::
+
+   > [!NOTE]
+   > “项目”菜单中提供了相同的菜单选项。
+
+   现在，你的应用已旁加载到 Teams 中。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="在 Teams 客户端中旁加载 Teams 应用":::
+
+::: zone-end
+
 ## <a name="see-also"></a>另请参阅
 
 * [创建和部署 Azure 云服务](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [创建多功能 Teams 应用](add-capability.md)
 * [将云资源添加到 Microsoft Teams 应用](add-resource.md)
+* [在 Visual Studio 中创建新的 Teams 应用](create-new-teams-app-for-Visual-Studio.md)
+* [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
+* [使用 Visual Studio 编辑 Teams 应用清单](VS-TeamsFx-preview-and-customize-app-manifest.md)
+* [使用 Visual Studio 在本地调试 Teams 应用](debug-teams-app-visual-studio.md)

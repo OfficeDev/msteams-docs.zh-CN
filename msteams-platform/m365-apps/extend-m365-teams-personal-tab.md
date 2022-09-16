@@ -1,16 +1,16 @@
 ---
 title: 跨 Microsoft 365 扩展 Teams 个人选项卡应用
-description: 本文介绍如何通过更新要在 Outlook 和 Office 中运行的个人选项卡，在 Microsoft 365 中扩展 Teams 个人选项卡应用。
+description: 在本文中，你将了解如何通过更新个人选项卡在 Outlook 和 Office 中运行来跨 Microsoft 365 扩展 Teams 个人选项卡应用。
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337234"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781195"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -46,7 +46,7 @@ ms.locfileid: "67337234"
 
 如果要使用示例代码完成本教程，请按照 [Todo 列表示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend)中的设置步骤，使用 Teams Toolkit 扩展为 Visual Studio Code 生成个人选项卡应用，然后返回到本文，将其更新为 Microsoft 365。
 
-或者，你可以在以下快速入门部分使用已启用 Microsoft 365 的基本单Sign-On *hello world* 应用，然后跳到 [Teams 中的旁加载应用](#sideload-your-app-in-teams) 。
+或者，你可以在以下快速入门部分使用已启用 Microsoft 365 的基本单一登录 *hello world* 应用，然后跳到 [Teams 中的旁加载应用](#sideload-your-app-in-teams) 。
 
 ### <a name="quickstart"></a>快速入门
 
@@ -190,7 +190,7 @@ ms.locfileid: "67337234"
 若要查看 Outlook 网页版中的应用，请执行以下操作：
 
 1. 导航到 [ Outlook 网页版 ](https://outlook.office.com) 并使用开发租户帐户登录。
-1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题显示在已安装的应用中。
+1. 在侧栏上，选择  **“更多应用**”。 旁加载的应用标题显示在已安装的应用中。
 1. 选择应用图标以启动和预览在Outlook 网页版中运行的应用。
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text=" 单击 outlook.com 侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
@@ -200,7 +200,7 @@ ms.locfileid: "67337234"
 若要在 Windows 桌面上查看在 Office 中运行的应用，请执行以下操作：
 
 1. 启动 Office 并使用开发租户帐户登录。
-1. 选择侧栏上的省略号 (**...**) 。 旁加载的应用标题显示在已安装的应用中。
+1. 选择侧栏上的 **“应用** ”图标。 旁加载的应用标题显示在已安装的应用中。
 1. 选择应用图标以在 Office 中启动应用。
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text=" 单击 Office 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
@@ -233,7 +233,7 @@ ms.locfileid: "67337234"
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="从 Teams 工具包中的 Teams、Outlook 和 Office 调试目标中进行选择":::
 
-首次对 Office 或 Outlook 运行本地调试时，系统会提示你登录到 Microsoft 365 租户帐户并安装自签名测试证书。 系统还会提示你手动安装 Teams。 选择 **“在 Teams 中安装** ”以打开浏览器窗口并手动安装应用。 然后单击“ **继续** ”，在 Office/Outlook 中继续调试应用。
+首次对 Office 或 Outlook 运行本地调试时，系统会提示你登录到 Microsoft 365 租户帐户并安装自签名测试证书。 系统还会提示你手动安装 Teams。 选择 **“在 Teams 中安装** ”以打开浏览器窗口并手动安装应用。 然后选择 **“继续** ”，在 Office/Outlook 中继续调试应用。
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="“工具包”对话框 Teams 安装":::
 
@@ -246,7 +246,7 @@ ms.locfileid: "67337234"
 | 待办事项列表 | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 仅在 Teams 中工作 (使用此示例应用来尝试本教程) 中所述的升级过程。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Microsoft 365 (待办事项列表)  | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Microsoft 365 (图像编辑器)  | 使用 Microsoft 图形 API 创建、编辑、打开和保存映像。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Microsoft 365)  (示例启动页 | 展示 SSO 身份验证并利用不同主机上可用的 TeamsJS SDK 功能。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Microsoft 365)  (示例启动页 | 演示不同主机中可用的 SSO 身份验证和 TeamsJS SDK 功能。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>后续步骤
 

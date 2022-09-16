@@ -4,12 +4,12 @@ description: 使用 Microsoft Graph 配置其他权限和范围以启用单一�
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Microsoft Azure Active Directory (Azure AD) 图形 API 委派权限访问令牌范围的 Teams 身份验证选项卡
-ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605087"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780847"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>使用 Microsoft Graph 权限和范围扩展选项卡应用
 
@@ -220,8 +220,9 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 4. 请求 Azure AD 的更多同意时，必须在给 Azure AD 发送的 [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) 中包含 `prompt=consent`，否则 Azure AD 不会要求其他范围。
     - 使用 `?prompt=consent&scope={scopes}` 而不是 `?scope={scopes}`
     - 确保 `{scopes}` 包括你提示用户的所有范围，例如， `Mail.Read` 或 `User.Read`。
-5. 应用用户授予更多权限后，重试 OBO 流以获取对这些其他 API 的访问权限。
 
+    若要处理选项卡应用的增量同意，请参阅 [增量和动态用户同意](/azure/active-directory/develop/v2-permissions-and-consent)。
+5. 应用用户授予更多权限后，重试 OBO 流以获取对这些其他 API 的访问权限。
     </details>
 
 ## <a name="see-also"></a>另请参阅

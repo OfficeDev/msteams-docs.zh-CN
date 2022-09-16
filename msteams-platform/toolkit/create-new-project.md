@@ -6,14 +6,21 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 8500f5ba1f54b28f68f9b56c0a42aedfff108e64
-ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: e9f1d0cbfcc1de9ced3cd0bac6f26f9218aecd40
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617794"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781135"
 ---
 # <a name="create-a-new-teams-project"></a>创建新的 Teams 项目
+
+本部分介绍如何使用 Visual Studio Code 和 Visual Studio 创建新的 Teams 项目。
+
+::: zone pivot="visual-studio-code"
+
+## <a name="create-a-new-teams-project-for-visual-studio-code"></a>为Visual Studio Code创建新的 Teams 项目
 
 可以通过在 Teams 工具包中选择 **“创建新的 Teams 应用** ”来生成新的 Teams 项目。 可以在 Teams 工具包中创建以下类型的应用：
 
@@ -71,7 +78,6 @@ ms.locfileid: "67617794"
    Teams 选项卡应用在几秒钟内创建。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="显示已创建应用的屏幕截图。":::
-
 
 ### <a name="directory-structure-for-different-app-types"></a>不同应用类型的目录结构
 
@@ -163,9 +169,109 @@ Teams 工具包提供用于生成应用的所有组件。 创建项目后，可�
 
 </details>
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="create-new-teams-app-in-visual-studio"></a>在 Visual Studio 中创建新的 Teams 应用
+
+Teams 工具包在 Visual Studio 中提供 Microsoft Teams 应用模板以创建 Teams 应用。  可以在创建新项目时搜索并选择所需的 Teams 应用模板。 可以使用 Teams 应用模板来创建：
+
+* Tab 应用
+* 命令机器人
+* 通知机器人
+* 消息扩展应用
+
+## <a name="prerequisites"></a>先决条件
+
+| &nbsp; | 安装 | 用于使用... |
+| --- | --- | --- |
+| &nbsp; | **Required** | &nbsp; |
+| &nbsp; | Visual Studio 版本 17.3 | 可以安装 Visual Studio 的企业版，并安装“ASP.NET”工作负荷和 Microsoft Teams 开发工具。 |
+| &nbsp; | Teams 工具包 | 一个 Visual Studio 扩展，用于为应用创建项目基架。 使用最新版本。 |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | 通过聊天、会议、通话等应用与每一位同事进行协作的 Microsoft Teams - 一个地方完成所有操作。 |
+ | &nbsp; | [准备 Microsoft 365 租户](../concepts/build-and-test/prepare-your-o365-tenant.md) | 对具有相应安装应用权限的 Teams 帐户的访问权限。 |
+
+## <a name="create-a-new-teams-app"></a>新建 Teams 应用
+
+创建新 Teams 应用的步骤与除通知机器人以外的所有类型的应用类似。 以下步骤可帮助你创建新的 Tab 应用：
+
+1. 打开 Visual Studio。
+1. 使用以下两个选项之一创建新项目。
+
+     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1.png" alt-text="使用入门代码创建新项目":::
+
+    * 在“**入门”** 下选择 **“创建新项目**”可帮助你选择具有代码基架的项目模板。
+    * 选择 **“不使用代码继续** ”以创建没有代码基架的项目，然后在 Visual Studio 中选择 **“文件** > **新建** > **项目** ”。
+
+        :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1.png" alt-text="从文件菜单创建新项目":::
+
+   将显示 **“创建新项目** ”窗口。  
+
+1. 在搜索框中输入团队，然后从列表中选择 **Microsoft Teams 应用** ，然后选择 **“下一步**”。
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/visual-studio.png" alt-text="搜索并选择 Microsoft Teams 应用":::
+
+   将显示 **“配置新项目** ”窗口。
+
+     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-project-name_1.png" alt-text="为应用程序命名":::
+
+    1. 为项目输入合适的名称。
+
+         > [!NOTE]
+         > 你输入的项目名称也会自动填充在 **解决方案名称** 中。 如果需要，可以更改解决方案名称，而不会影响项目名称。
+
+    1. 选择要在其中创建项目工作区的文件夹路径。
+    1. 如果需要，请输入其他解决方案名称。
+    1. 如果需要，请检查将项目和解决方案保存在同一文件夹中的选项。 对于本教程，不需要此选项。
+    1. 选择“**创建**”。
+
+   将显示 **“创建新的 Teams 应用程序** ”窗口。
+
+1. 在本教程中，选择 **Tab** 以创建新的团队应用程序并选择 **“创建**”。
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_3.png" alt-text="选择 Teams 应用类型":::
+
+   > [!NOTE]
+   > 你可以为项目选择所需的 Teams 应用类型。
+
+   随 **即** 会显示“**欢迎使用 Teams 工具包**”窗口的入门。
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="选择入门团队工具包":::
+
+### <a name="directory-structure"></a>目录结构
+
+Teams 工具包提供用于生成应用的所有组件。 创建项目后，可以在资源管理器下查看项目文件夹和文件。
+
+* **基本 Teams 应用的目录结构**
+
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer_1.png" alt-text="选择解决方案资源管理器团队工具包的选项卡":::
+
+* **基于方案的 Teams 应用的目录结构**
+
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer.png" alt-text="选择解决方案资源管理器团队工具包":::
+
+## <a name="teams-app-templates-in-teams-toolkit-for-visual-studio"></a>Teams Toolkit for Visual Studio 中的 Teams 应用模板
+
+可以看到 Teams 工具包中已为各种 Teams 应用类型填充了 Teams 应用模板。 下表列出了所有可用的模板：
+
+|Teams 应用模板  |说明  |
+|---------|---------|
+|通知机器人     |通知机器人应用可以向 Teams 客户端发送通知，可以通过多种方式触发通知。 例如，按 HTTP 请求或按时间触发通知。 还可以根据业务方案选择触发的通知。         |
+|命令机器人     |用户可以键入命令以使用命令机器人应用与机器人交互。         |
+|Tab     |Tab 应用在 Teams 中显示网页，并使用 Teams 帐户启用单一登录。         |
+|消息扩展     |消息扩展应用实现简单的功能，例如创建自适应卡片、搜索 Nugget 包、展开“dev.botframework.com”域的链接。         |
+
+> [!NOTE]
+> 创建项目后，Teams 工具包会自动打开 **“入门”** 窗口。 现在可以在 **“入门** ”窗口中查看说明，并查看 Teams 工具包中的不同功能。
+
+::: zone-end
+
 ## <a name="see-also"></a>另请参阅
 
 * [使用 Blazor 构建 Teams 应用](../sbs-gs-blazorupdate.yml)
 * [使用 C# 或 .NET 构建 Teams 应用](../sbs-gs-csharp.yml)
 * [所有类型的环境和创建 Teams 应用的先决条件](tools-prerequisites.md)
 * [准备使用 Microsoft Teams 工具包生成应用](build-environments.md)
+* [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
+* [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)

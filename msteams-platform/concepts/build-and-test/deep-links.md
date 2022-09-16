@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 在本文中，你将了解如何创建深层链接，并使用选项卡在 Microsoft Teams 应用中导航它们。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
-ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2022
-ms.locfileid: "67452358"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780882"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -392,7 +392,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint 框架选项卡的深层链接
 
-可以在机器人、连接器或消息扩展卡片中使用以下深层链接格式：`https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+可以在机器人、连接器或消息扩展卡片中使用以下深层链接格式：`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > 当机器人发送包含深层链接的 TextBlock 消息时，当用户选择链接时，将打开新的浏览器选项卡。 这发生在 Linux 上运行的 Chrome 和 Microsoft Teams 桌面应用中。

@@ -94,7 +94,7 @@
       href: concepts/design/enable-app-customization.md
 - name: 工具和 SDK
   items:
-    - name: Visual Studio Code 的Teams工具包
+    - name: Teams 工具包
       items:
         - name: Teams 工具包概述
           href: toolkit/teams-toolkit-fundamentals.md
@@ -162,20 +162,6 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: 常见问题
           href: toolkit/faq.md
-    - name: Visual Studio 的Teams工具包
-      items:
-        - name: Teams 工具包概述
-          href: toolkit/teams-toolkit-overview-visual-studio.md
-        - name: 新建 Teams 应用
-          href: toolkit/create-new-teams-app-for-Visual-Studio.md
-        - name: 调试 Teams 应用
-          href: toolkit/debug-teams-app-visual-studio.md
-        - name: 预配云资源
-          href: toolkit/provision-cloud-resources.md
-        - name: 将 Teams 应用部署到云
-          href: toolkit/deploy-teams-app.md
-        - name: 编辑 Teams 应用清单
-          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: Teams 工具包 CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Teams 中的 Yeoman 生成器 (GitHub)
@@ -670,7 +656,7 @@
           displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
         - name: 创建合作伙伴中心开发者帐户
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-          displayName: Update Apple app store
+          displayName: 'Update Apple app store,app acquisition on mobile'
         - name: 准备 Teams 应用商店提交
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, publisher verification, attestation'

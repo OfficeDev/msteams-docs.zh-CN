@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 4a4b67399b2ec7c78fa536b06ee7faa9bb352468
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616940"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780994"
 ---
 # <a name="manage-multiple-environments"></a>管理多个环境
 
@@ -118,7 +118,7 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
 3. 可以创建一个新环境，并在它不存在时将其 `staging` 命名。
 4. 打开配置文件 `.fx/configs/config.staging.json`。
 5. 更新同一属性 `myapp(staging)`。
-6. 现在，可以在远程环境中运行预配命令 `dev` 和 `staging` 环境来更新应用名称。 若要使用 Teams 工具包运行预配命令，请参阅 [预配](provision.md#provision-using-teams-toolkit)。
+6. 现在，可以在远程环境中运行预配命令 `dev` 和 `staging` 环境来更新应用名称。 若要使用 Teams 工具包运行预配命令，请参阅 [预配](provision.md#provision-using-teams-toolkit-in-visual-studio-code)。
 
 </details>
 

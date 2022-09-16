@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: 511083fea77c40cec0134e6620c741c3c4da8829
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: f6dd6bb0f130e69f4147ae73be085795d75b1083
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425615"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780812"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller 代码教程
 
@@ -351,7 +351,7 @@ function renderSettings(elem) {
 
 ## <a name="deployment"></a>部署
 
-准备好部署代码后，可以使用 [Teams 工具包](../toolkit/provision.md#provision-using-teams-toolkit) 或 [Teams 开发人员门户](https://dev.teams.microsoft.com/apps) 来预配和上传应用的 zip 文件。
+准备好部署代码后，可以使用 [Teams 工具包](../toolkit/provision.md#provision-using-teams-toolkit-in-visual-studio-code) 或 [Teams 开发人员门户](https://dev.teams.microsoft.com/apps) 来预配和上传应用的 zip 文件。
 
 > [!NOTE]
 > 在上传或分发应用之前，需要将预配的 appId 添加到 `manifest.json`。

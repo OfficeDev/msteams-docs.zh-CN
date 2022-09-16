@@ -5,12 +5,12 @@ description: 了解如何在频道或群聊中发送、接收和处理机器人�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 91e696644698a609f6870aad9f4242e797b8e6bc
-ms.sourcegitcommit: 2d48459e0cdf92c097954ecc785f0ea257d423b9
+ms.openlocfilehash: 8db8858ff746ce466b8cfef1cfa210111662cbeb
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2022
-ms.locfileid: "67646137"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780931"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>使用机器人进行频道和群组对话
 
@@ -30,7 +30,7 @@ ms.locfileid: "67646137"
 请参阅以下视频，了解与机器人的频道和群聊对话：
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
 <br>
 
 ## <a name="design-guidelines"></a>设计准则

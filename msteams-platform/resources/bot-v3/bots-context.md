@@ -1,17 +1,17 @@
 ---
-title: 获取Microsoft Teams机器人的上下文
-description: 在本模块中，了解如何获取Microsoft Teams中的机器人的上下文，在个人或群组聊天中提取团队名册和用户个人资料或名册
+title: 获取 Microsoft Teams 机器人的上下文
+description: 在本模块中，了解如何获取 Microsoft Teams 中机器人的上下文、在个人或群组聊天中提取团队名单、用户个人资料或名册
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 3fd75e063f9b12c09bc4dded167bd8cdaead6b7a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: fd43d9c4b3a3e4702b9bbd4955e58c0fc86caddf
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143114"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780924"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a>获取Microsoft Teams机器人的上下文
+# <a name="get-context-for-your-microsoft-teams-bot"></a>获取 Microsoft Teams 机器人的上下文
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -19,13 +19,13 @@ ms.locfileid: "66143114"
 
 > [!NOTE]
 >
-> * Microsoft Teams特定的机器人 API 最好通过 Bot Builder SDK 的扩展进行访问。
-> * 对于 C# 或 .NET，请下载 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet包。
-> * 对于Node.js开发，Bot Builder for Teams 功能已合并到 [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 中。
+> * 最好通过 Bot Builder SDK 的扩展访问特定于 Microsoft Teams 的机器人 API。
+> * 对于 C# 或 .NET，请下载 [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet 包。
+> * 为了Node.js开发，Bot Builder for Teams 功能已合并到 [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 中。
 
 ## <a name="fetch-the-team-roster"></a>提取团队名单
 
-机器人可以查询团队成员列表及其基本配置文件。 基本配置文件包括Teams用户 ID 和 Microsoft Azure Active Directory (Azure AD) 信息，例如名称和对象 ID。 可以使用此信息来关联用户标识。 例如，检查用户是否通过Microsoft Azure Active Directory (Azure AD 登录到选项卡) 凭据是团队成员。
+机器人可以查询团队成员列表及其基本配置文件。 基本配置文件包括 Teams 用户 ID 和 Microsoft Azure Active Directory (Azure AD) 信息，例如名称和对象 ID。 可以使用此信息来关联用户标识。 例如，检查用户是否通过Microsoft Azure Active Directory (Azure AD 登录到选项卡) 凭据是团队成员。
 
 ### <a name="rest-api-example"></a>REST API 示例
 
@@ -72,6 +72,7 @@ Response body
 ### <a name="net-example"></a>.NET 示例
 
 用于`Team.Id`返回用户 ID 列表的调用`GetConversationMembersAsync`。
+调用 `GetConversationMembersAsync` 以用户身份返回 `userRole` 该值的属性。
 
 ```csharp
 // Fetch the members in the current conversation
@@ -164,7 +165,7 @@ Response body
 
 #### <a name="net-example"></a>.NET 示例
 
-以下示例使用 `FetchChannelList` [Bot Builder SDK for .NET 的Teams扩展](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)的调用：
+以下示例使用`FetchChannelList`[来自 Bot Builder SDK for .NET 的 Teams 扩展](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)的调用：
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -172,7 +173,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js 示例
 
-以下示例使用 `fetchChannelList` [Bot Builder SDK for Node.js的 Teams 扩展](https://www.npmjs.com/package/botbuilder-teams)的调用：
+以下示例使用`fetchChannelList`[来自 Bot Builder SDK for Node.js的 Teams 扩展](https://www.npmjs.com/package/botbuilder-teams)的调用：
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;

@@ -6,18 +6,21 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
-ms.openlocfilehash: 0ef95064a1715a64d8f719c54aced7cdc74ecb23
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 0126953ac43b463460dcfd07c66354d39b53d690
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617126"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781039"
 ---
 # <a name="explore-teams-toolkit"></a>浏览 Teams 工具包
 
-在本文档中，可以了解不同的 UI 元素以及 Teams 工具包中的说明和基本用法。
+在本文档中，可以了解不同的 UI 元素，以及 Teams 工具包中针对 Visual Studio Code 和 Visual Studio 的说明和基本用法。
 
-## <a name="teams-toolkit-basic-ui-elements"></a>Teams 工具包基本 UI 元素
+::: zone pivot="visual-studio-code"
+
+## <a name="teams-toolkit-for-visual-studio-code-basic-ui-elements"></a>用于Visual Studio Code基本 UI 元素的 Teams 工具包
 
 安装 Teams 工具包后，你将看到 Teams 工具包 UI，如下图所示：
 
@@ -142,12 +145,63 @@ ms.locfileid: "67617126"
    :::column-end:::
 :::row-end:::
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="explore-teams-toolkit-for-visual-studio"></a>探索适用于 Visual Studio 的 Teams 工具包
+
+安装 Teams 工具包后，可以使用两种不同的方法查看 Teams 工具包选项：
+
+# <a name="project"></a>[项目](#tab/prj)
+
+可以在 **Project** 下访问 Teams 工具包。
+
+1. 选择 **Project** > **Teams 工具包**。
+1. 现在可以访问不同的 Teams 工具包选项。
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Teams 工具包操作菜单":::
+
+# <a name="solution-explorer"></a>[解决方案资源管理器](#tab/solutionexplorer)
+
+   可以在 **解决方案资源管理器** 下访问 Teams 工具包。
+
+1. 选择 **“视图** > **解决方案资源管理器** 查看解决方案资源管理器面板。
+1. 右键单击 **你的项目**。
+1. 选择 **Teams 工具包** 以访问不同的 Teams 工具包选项。
+
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Project 中的 Teams 工具包操作":::
+
+   > [!NOTE]
+   > 在此方案中，项目名称为 **MyTeamsApp1**。
+
+---
+
+创建 Teams 项目后，可以在适用于 Visual Studio 的 Teams 工具包上执行以下函数：
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="“项目”菜单中的 Teams 工具包操作":::
+
+|功能  |说明  |
+|---------|---------|
+|准备 Teams 应用依赖项     |执行本地调试之前，它可帮助你设置本地调试依赖项并在 Teams 平台中注册 Teams 应用。 需要 Microsoft 365 帐户。 有关详细信息，请参阅 [使用 Visual Studio 在本地调试 Teams 应用](debug-teams-app-visual-studio.md)         |
+|打开清单文件     |若要打开 Teams 清单文件，可以将鼠标悬停在参数上以预览值。 有关详细信息，请参阅 [使用 Visual Studio 编辑 Teams 应用清单](VS-TeamsFx-preview-and-customize-app-manifest.md)         |
+|Teams 开发人员门户中的更新清单     |更新清单文件时，只能将清单文件重新部署到 Azure，而无需再次部署整个项目。 使用此命令将更改更新为远程。 有关详细信息，请参阅 [使用 Visual Studio 编辑 Teams 应用清单](VS-TeamsFx-preview-and-customize-app-manifest.md)       |
+|预配到云     |此选项可帮助你创建托管 Teams 应用的 Azure 资源。 有关详细信息，请参阅 [使用 Visual Studio 预配云资源](provision-cloud-resources.md)        |
+|部署到云     |此选项可帮助你将代码复制到“预配到云”时创建的 Azure 资源。 有关详细信息，请参阅 [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)        |
+|Teams 中的预览版     |此选项启动 Teams Web 客户端，并允许你在其浏览器中预览 Teams 应用。         |
+|Zip 应用包     |此选项在项目下的文件夹中 `Build` 生成 Teams 应用包。 可以将包上传到 Teams 客户端并运行 Teams 应用。         |
+
+::: zone-end
+
 ## <a name="see-also"></a>另请参阅
 
 * [安装 Teams 工具包](install-Teams-Toolkit.md)
 * [使用 Teams 工具包创建新的 Teams 应用](create-new-project.md)
 * [准备使用 Microsoft Teams 工具包生成应用](build-environments.md)
 * [使用 Teams 工具包预配云资源](provision.md)
+* [在 Visual Studio 中创建新的 Teams 应用](create-new-teams-app-for-Visual-Studio.md)
+* [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
+* [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
