@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 5c70a88c7b67229143af881a46272d5cdc9a06c4
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.openlocfilehash: b2016cefcdf476e32860f80a76606c04bf892f5d
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792828"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806792"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>向 Teams 应用添加单一登录
 
@@ -353,4 +353,4 @@ TeamsFx 通过使用 SSO 并将云资源访问到零配置的单行语句来帮�
 
 ## <a name="see-also"></a>另请参阅
 
-* [准备帐户以生成 Teams 应用](accounts.md)
+* [创建 Teams 应用的先决条件](tools-prerequisites.md)

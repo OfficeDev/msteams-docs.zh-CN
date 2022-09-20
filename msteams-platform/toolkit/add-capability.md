@@ -6,16 +6,16 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: fe78407c0a269d26a63e23efe5a04a1cd0d83e4b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616963"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806855"
 ---
-# <a name="add-capabilities-to-microsoft-teams-apps"></a>向 Microsoft Teams 应用添加功能
+# <a name="add-capabilities-to-teams-apps"></a>向 Teams 应用添加功能
 
-使用 Teams 工具包添加功能可帮助你在现有 Teams 应用中包含其他功能。 添加更多功能的优点是，可以通过使用 Teams 工具包自动添加源代码，向应用添加更多函数。 还可以根据在 Teams 应用中创建的项目选择不同的功能。 下表列出了 Teams 应用功能：
+使用 Teams 工具包添加功能有助于将其他功能包含到现有的 Microsoft Teams 应用。 添加更多功能的优点是，可以通过使用 Teams 工具包自动添加源代码，向应用添加更多函数。 还可以根据在 Teams 应用中创建的项目选择不同的功能。 下表列出了 Teams 应用功能：
 
 |功能|说明|其他支持的功能|
 |--------|-------------|-----------------|

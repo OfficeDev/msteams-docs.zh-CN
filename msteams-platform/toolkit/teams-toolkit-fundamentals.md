@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 95a42e4bd2064bc1ce4b775f13ba990890bc6776
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780728"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806771"
 ---
 # <a name="teams-toolkit-overview"></a>Teams 工具包概述
 
@@ -131,10 +131,11 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 * [Microsoft.TeamsFx.Conversation 命名空间](/../dotnet/api/Microsoft.TeamsFx.Conversation)
 * [Microsoft.TeamsFx.Helper 命名空间](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
+::: zone-end
+
 ## <a name="see-also"></a>另请参阅
 
 * [在 Visual Studio 中创建新的 Teams 应用](create-new-teams-app-for-Visual-Studio.md)
 * [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
 * [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)
 
-::: zone-end

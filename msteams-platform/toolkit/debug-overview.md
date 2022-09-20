@@ -7,22 +7,28 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: fcb1ceae7f49109ba3936c7c12258f2fe4d1e01c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: d2bdebcb75a9e145cbb874b2d7cc263c78050e07
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781011"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806920"
 ---
-# <a name="debug-your-microsoft-teams-app"></a>调试 Microsoft Teams 应用
+# <a name="debug-your-teams-app"></a>调试 Teams 应用
 
-Teams 工具包可帮助你调试和预览 Teams 应用。 调试是检查、检测和更正问题或 bug 以确保程序在 Teams 中成功运行的过程。
+
+Teams 工具包可帮助你调试和预览 Microsoft Teams 应用。 调试是检查、检测和更正问题或 bug 以确保程序在 Teams 中成功运行的过程。
 
 ::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-teams-app-for-visual-studio-code"></a>调试 Teams 应用以Visual Studio Code
+
+Microsoft 中的 Teams 工具包Visual Studio Code自动执行调试过程。 可以检测错误并修复这些错误，并预览 Teams 应用。 还可以自定义调试设置以创建选项卡或机器人。
 
 ## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>调试 Microsoft Teams 应用以进行Visual Studio Code
 
 Visual Studio Code中的 Teams 工具包自动执行调试过程。 可以检测错误并修复这些错误，并预览 Teams 应用。 还可以自定义调试设置以创建选项卡或机器人。
+
 在调试过程中：
 
 * Teams 工具包会自动启动应用服务、启动调试器和旁加载 Teams 应用。
@@ -203,7 +209,7 @@ Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-using-visual-studio"></a>使用 Visual Studio 调试 Microsoft Teams 应用
+## <a name="debug-your-teams-app-using-visual-studio"></a>使用 Visual Studio 调试 Teams 应用
 
 Teams 工具包自动执行应用启动服务、启动调试和旁加载 Teams 应用。 调试后，可以在 Teams Web 客户端中预览 Teams 应用。 还可以自定义调试设置，以使用机器人终结点或环境变量加载已配置的应用。 Visual Studio 允许调试选项卡、机器人和消息扩展。 在调试过程中，Teams 工具包支持以下调试功能：
 
@@ -312,6 +318,3 @@ Teams 工具包准备本地调试依赖项，并在帐户的租户中注册 Team
 * [使用 Teams 工具包预配云资源](provision.md)
 * [部署到云](deploy.md)
 * [预览和自定义 Teams 应用清单](TeamsFx-preview-and-customize-app-manifest.md)
-* [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
-* [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)
-* [使用 Visual Studio 编辑 Teams 应用清单](VS-TeamsFx-preview-and-customize-app-manifest.md)

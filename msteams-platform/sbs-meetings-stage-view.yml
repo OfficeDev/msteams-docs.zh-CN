@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 详细了解如何为会议启用和配置应用
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 8228a5b558845aa26a6ccea4c3e3a8b1212b5076
-  ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+  ms.openlocfilehash: 798023d6033a151035aa34c3e108edf812e19fe9
+  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 08/15/2022
-  ms.locfileid: "67338793"
+  ms.lasthandoff: 09/19/2022
+  ms.locfileid: "67806877"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,7 +36,7 @@ items:
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="会议阶段视图":::
 - title: 先决条件
   durationInMinutes: 1
-  content: "\n确保安装以下工具并设置开发环境：\n\n* 具有有效帐户[的 Microsoft Teams](https://teams.microsoft.com/)\n* [最新版本的 Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [nodejs 的最新版本](https://nodejs.org/en/download/) \n* [最新版本的 ngrok](https://ngrok.com/download) (仅用于开发人员箱测试) 或任何等效的隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n\n 你必须具备以下技术的工作知识：\n\n* [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [最新版本的 ASP.NET 核心](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) \n* [最新版本的React.JS](https://reactjs.org/tutorial/tutorial.html) \n"
+  content: "\n确保安装以下工具并设置开发环境：\n\n* 具有有效帐户[的 Microsoft Teams](https://teams.microsoft.com/)\n* [最新版本的 Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [nodejs 的最新版本](https://nodejs.org/en/download/) \n* [最新版本的 ngrok](https://ngrok.com/download) (仅用于开发人员箱测试) 或任何等效的隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n\n 你必须具备以下技术的工作知识：\n\n* [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [最新版本的 ASP.NET 核心](/aspnet/core/?view=aspnetcore-3.1) \n* [最新版本的React.JS](https://reactjs.org/tutorial/tutorial.html) \n"
 - title: 设置本地环境
   durationInMinutes: 1
   content: "\n1. 打开 [Microsoft Teams 示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n1. 选择 **“代码**”。\n1. 在下拉菜单中，选择 **“使用 GitHub Desktop 打开**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png\" alt-text=\"克隆存储库\":::\n\n1. 选择 **“克隆**”。 \n\n   > [!NOTE]\n   > 如果遇到错误“文件名太长”，请在所选管理员终端中应用 git 命令“git config --system core.longpaths true”。\n"

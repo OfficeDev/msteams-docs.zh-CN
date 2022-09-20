@@ -7,16 +7,17 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 1c1052e2542354cd1b403d8a3df0be24cbd01bee
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780857"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806750"
 ---
-# <a name="debug-your-microsoft-teams-app-locally"></a>在本地调试 Microsoft Teams 应用
+# <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
 
-Teams 工具包有助于本地调试和预览 Teams 应用。 在调试过程中，Teams 工具包会自动启动应用服务、启动调试器和旁加载 Teams 应用。 调试后，可以在 Teams Web 客户端本地预览 Teams 应用。
+
+Teams 工具包可帮助你在本地调试和预览 Microsoft Teams 应用。 在调试过程中，Teams 工具包会自动启动应用服务、启动调试器和旁加载 Teams 应用。 调试后，可以在 Teams Web 客户端本地预览 Teams 应用。
 
 ::: zone pivot="visual-studio-code"
 
@@ -151,7 +152,7 @@ Teams 工具包启动浏览器实例并打开网页以加载 Teams 客户端。
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>使用 Visual Studio 在本地调试 Microsoft Teams 应用
+## <a name="debug-your-teams-app-locally-using-visual-studio"></a>使用 Visual Studio 在本地调试 Teams 应用
 
 Teams 工具包可帮助你在本地调试和预览 Microsoft Teams 应用。 Visual Studio 允许调试选项卡、机器人和消息扩展。 可以通过执行以下操作，在 Visual Studio 中使用 Teams 工具包在本地调试应用：
 
@@ -214,6 +215,3 @@ ngrok http 5130
 * [将功能添加到 Teams 应用](add-capability.md)
 * [部署到云](deploy.md)
 * [在 Teams 工具包中管理多个环境](TeamsFx-multi-env.md)
-* [使用 Visual Studio 预配云资源](provision-cloud-resources.md)
-* [使用 Visual Studio 将 Teams 应用部署到云](deploy-teams-app.md)
-* [使用 Visual Studio 编辑 Teams 应用清单](VS-TeamsFx-preview-and-customize-app-manifest.md)

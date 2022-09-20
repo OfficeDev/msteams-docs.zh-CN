@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: 1b2f7258b661a2b194f2072c9ad8fd920d58983d
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 05f797afcf54cab2d23ee24aae2c4985f3d724f2
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485391"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806870"
 ---
 # <a name="set-up-cicd-pipelines"></a>设置 CI/CD 管道
 
@@ -243,7 +243,7 @@ TeamsFx 有助于在构建 Teams 应用程序时自动执行开发工作流。 �
 3. 在应用列表中选择目标应用。
 4. 发布应用，选择 `Publish -> Publish to your org`。
 
-### <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>另请参阅
 
 * [GitHub Actions 快速入门](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [创建第一个 Azure DevOps 管道](/azure/devops/pipelines/create-first-pipeline)

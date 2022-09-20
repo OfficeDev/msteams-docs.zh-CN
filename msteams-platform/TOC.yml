@@ -102,7 +102,7 @@
           href: toolkit/install-Teams-Toolkit.md
         - name: 浏览 Teams 工具包
           href: toolkit/explore-Teams-Toolkit.md
-        - name: 准备使用 Microsoft Teams 工具包生成应用
+        - name: 准备使用 Teams 工具包生成应用
           href: toolkit/build-environments.md
         - name: 使用 Teams 工具包创建应用
           items:
@@ -164,8 +164,6 @@
           href: toolkit/faq.md
     - name: Teams 工具包 CLI
       href: toolkit/TeamsFx-CLI.md
-    - name: Teams 中的 Yeoman 生成器 (GitHub)
-      href: 'https://github.com/pnp/generator-teams'
     - name: Teams 开发人员门户
       items:
         - name: 概述
@@ -180,6 +178,8 @@
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: 适用于机器人和消息扩展的 .NET 机器人框架 (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
+    - name: Teams 中的 Yeoman 生成器 (GitHub)
+      href: 'https://github.com/pnp/generator-teams'
     - name: Microsoft Graph SDK
       href: /graph/sdks/sdks-overview
     - name: 旧版SDK

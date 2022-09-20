@@ -1,20 +1,20 @@
 ---
 title: 参与 Teams 文档
-description: 了解创建和发布Teams文档的步骤
+description: 了解创建和发布 Teams 文档的步骤
 author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 165f5df18395d329aa2f383d2f07e6f7ff3afdcf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5a9b2f16b23eaa4879062c104a85b223564cc10c
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143079"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806757"
 ---
 # <a name="contribute-to-teams-documentation"></a>参与 Teams 文档
 
-Teams 文档是 **Microsoft Docs** 技术文档库的一部分。 内容分为称为 docsets 的组，每个组表示作为单个实体管理的一组相关文档。 同一文档集中的项目在 **docs.microsoft.com** 后具有相同的 URL 路径扩展名。 例如，`/docs.microsoft.com/microsoftteams/...`是 Teams 文档集文件路径的开头。 Teams 文章以 Markdown 语法编写，并托管在 GitHub 上。
+Teams 文档是 **Microsoft Docs** 技术文档库的一部分。 内容分为称为 docsets 的组，每个组表示作为单个实体管理的一组相关文档。 同一文档集中的文章之后具有相同的 URL 路径扩展 `learn.microsoft.com`名。 例如，`/learn.microsoft.com/microsoftteams/...`是 Teams 文档集文件路径的开头。 Teams 文章以 Markdown 语法编写，并托管在 GitHub 上。
 
 ## <a name="set-up-your-workspace"></a>设置工作区
 
