@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用应用清单或使用代码示�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
+ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312219"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833388"
 ---
 # <a name="add-link-unfurling"></a>添加链接展开
 
@@ -22,6 +22,7 @@ ms.locfileid: "67312219"
 >
 > * 目前，移动客户端不支持链接展开。
 > * 链接展开结果缓存 30 分钟。
+> * 链接展开不需要消息传递扩展命令。 但是，清单中必须至少有一个命令，因为它是消息传递扩展中的必需属性。 有关详细信息，请参阅 [撰写扩展](/microsoftteams/platform/resources/schema/manifest-schema)
 
 Azure DevOps 消息扩展使用链接展开查找粘贴到撰写消息区域(指向工作项)的 URL。 在下图中，用户粘贴了 Azure DevOps 中邮件扩展已解析为卡片中的项的 URL：
 
