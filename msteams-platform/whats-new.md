@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: bd1c8ff2d9216ba0f1611fd48d8df943e2f75a35
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786967"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833737"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -66,7 +66,7 @@ ms.locfileid: "67786967"
 | 2022 年 4 月 19 日 | 在 Microsoft Teams 中上传应用 | 分发应用 > [上传应用](concepts/deploy-and-publish/apps-upload.md)|
 | 2022 年 4 月 1 日 | 引入了创建 Teams 对话机器人的分步指南| “声称机器人”>“机器人对话”>“频道和组对话”>“[创建 Teams 对话机器人的分步指南](sbs-teams-conversation-bot.yml)” |
 | 2022 年 3 月 30 日 | 已使用选项卡和机器人更新 Blazor 应用入门模块|  开始 > [使用 Blazor 生成第一个应用](sbs-gs-blazorupdate.yml)|
-|2022 年 3 月 30 日|浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
+| 2022 年 3 月 30 日 | 浏览器的设备权限 | “集成设备功能”>“[浏览器的设备权限](concepts/device-capabilities/browser-device-permissions.md)” |
 | 2022 年 3 月 29 日 |集成人员选取器 | “与 Teams 集成”>“[与人员选取器集成](concepts/device-capabilities/people-picker-capability.md)”
 | 2022 年 3 月 23 日 | 介绍了在 Teams 中使用机器人展开链接的分步指南 | 生成邮件扩展>添加链接展开功能>[在 Teams 中使用机器人展开链接](sbs-botbuilder-linkunfurling.yml)|  
 | 2022 年 3 月 22 日 | 添加了有关调试过程的信息| • 工具和 SDK > Teams Toolkit Visual Studio Code > [在本地调试 Teams 应用](toolkit/debug-local.md) </br> • 工具和 SDK > Teams Toolkit Visual Studio Code > [调试后台进程](toolkit/debug-background-process.md)|
@@ -77,7 +77,7 @@ ms.locfileid: "67786967"
 | 2022/02/24| 引入了生成基于操作的邮件扩展的分步指南 | 生成邮件扩展>操作命令>定义操作命令>[生成基于操作的邮件扩展](sbs-meetingextension-action.yml)|
 | 2022/02/24 | 引入了生成基于搜索的邮件扩展的分步指南 | 生成邮件扩展>搜索命令>定义搜索命令>[生成基于搜索的邮件扩展](sbs-messagingextension-searchcommand.yml)|
 | 2022/02/24 | 引入了创建传出 Webhook 的分步指南 | 生成 Webhook 和连接器 > 创建传出 Webhook > [创建传出 Webhook](sbs-outgoing-webhooks.yml)|
-| 2022/02/23 |Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 2022/02/23 | Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 2022/02/18 | 为 Microsoft Teams 开发人员文档引入了广泛的术语表，可帮助你快速找到有关术语的定义 | [术语表](~/get-started/glossary.md) |
 | 2022/02/18 | 更新了概述模块，用于将 Teams 应用映射到组织目标、用户情景和探索 Teams 应用功能 | [概述 > 适合的 Teams 应用](overview.md) |
 | 2022/02/18 | 更新了应用基础知识模块以规划应用，以包括将用例映射到 Teams 功能和应用规划清单 | [规划应用 > 概述](~/concepts/app-fundamentals-overview.md) |
@@ -266,7 +266,8 @@ ms.locfileid: "67786967"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-| 08/23/2022 | 在移动设备中将应用共享到 Teams 会议阶段 | 为 Teams 会议和呼叫构建应用> [为会议启用和配置应用](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 09/20/2022 | 引入了对计划频道会议的会议应用支持 | 为 Teams 会议和呼叫构建应用> [统一会议应用](apps-in-teams-meetings/meeting-app-extensibility.md) |
+| 08/10/2022 | 计划公共频道会议的应用 | 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 2022/08/03 | 在 Teams 会议阶段将应用的 API 静音和取消静音 | 为 Teams 会议和通话生成应用 > [会议应用 API 参考](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Teams 协作控制| 与 Teams > [协作控件集成](samples/collaboration-control.md)|
 | 2022/06/30 | 用于即时会议、一对一和群组通话的应用| 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|

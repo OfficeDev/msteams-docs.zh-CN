@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c151217bc2a93de9337688b562b9f63f142c09fa
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435011"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833723"
 ---
 # <a name="meeting-apps-api-references"></a>会议应用 API 参考
 
@@ -355,7 +355,7 @@ POST /v3/conversations/{conversationId}/activities
 >
 > * 机器人可以通过将 `ChannelMeeting.ReadBasic.Group` 添加到清单以获得 RSC 权限，自动从所有频道中创建的所有会议接收会议开始或结束事件。
 >
-> * 对于一对一呼叫 `organizer` ，是聊天的发起者，组呼叫 `organizer` 是呼叫发起者。
+> * 对于一对一呼叫 `organizer` ，是聊天的发起者，组呼叫 `organizer` 是呼叫发起者。 对于公共频道会议 `organizer`，是创建频道帖子的人员。
 
 ### <a name="query-parameter"></a>查询参数
 
@@ -416,6 +416,33 @@ GET /v1/meetings/{meetingId}
              "tenantId": "<Tenant ID>" 
          }
     } 
+    ```
+
+* **计划的频道会议：**
+
+    ```json
+    { 
+        "details": { 
+        "msGraphResourceId": "MSoxNmUwYjdiYi05M2Q1LTQzNTItOTllMC0yM2VlNWYyZmZmZTIqMTY2MDc1ODYwNzc0MCoqMTk6a0RtQkpEWFZsYWl0QWhHcVB2SzBtRExZbHVTWnJub01WX1MxeFNkTjQxNDFAdGhyZWFkLnRhY3Yy", 
+        "scheduledStartTime": "2022-08-17T18:00:00Z", 
+        "scheduledEndTime": "2022-08-17T18:30:00Z", 
+        "type": "ChannelScheduled", 
+        "id": "MCMxOTprRG1CSkRYVmxhaXRBaEdxUHZLMG1ETFlsdVNacm5vTVZfUzF4U2RONDE0MUB0aHJlYWQudGFjdjIjMTY2MDc1ODYwNzc0MA==", 
+        "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3akDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141%40thread.tacv2/1660758607740?context=%7b%22Tid%22%3a%229f044231-b634-4bdd-b29d-2776e3dbd699%22%2c%22Oid%22%3a%2216e0b7bb-93d5-4352-99e0-23ee5f2fffe2%22%7d", 
+        "title": "Test channel meeting"
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "channel", 
+        "id": "19:kDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141@thread.tacv2;messageid=1660758607740"
+    }, 
+    "organizer": { 
+        "tenantId": "9f044231-b634-4bdd-b29d-2776e3dbd699", 
+        "objectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2", 
+        "id": "29:1q4D6ekLXEAALkrqyLXUIcwtVSdXx31bf6vMdfahmkTb9euYVYSsN9x4133pXLV_I2idpVriFe40e19XEZt57bQ", 
+        "aadObjectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2"
+    }
+    }
     ```
 
 * **一对一调用：**
@@ -503,7 +530,7 @@ GET /v1/meetings/{meetingId}
 | **details.scheduledEndTime** | 会议的预定结束时间，以 UTC 表示。 |
 | **details.joinUrl** | 用于加入会议的 URL。 |
 | **details.title** | 会议标题。 |
-| **details.type** | 会议的类型 (GroupCall、OneToOneCall、Adhoc、Broadcast、MeetNow、Recurring、Scheduled 或 Unknown) 。 |
+| **details.type** | 会议的类型 (GroupCall、ChannelScheduled、OneToOneCall、Adhoc、Broadcast、MeetNow、Recurring、Scheduled 或 Unknown) 。 |
 | **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
 | **conversation.conversationType** | 会话类型。 |
 | **conversation.id** | 会议聊天 ID。 |
