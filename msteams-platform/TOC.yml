@@ -2,15 +2,19 @@
   href: mstdd-landing.yml
 - name: 新变化？
   href: whats-new.md
+  displayName: 'Teams platform features, latest updates, RSS feed, deprecated'
 - name: 术语表
   href: get-started/glossary.md
+  displayName: 'App tray, terminologies, definitions'
 - name: 概述
   expanded: false
   items:
     - name: 适合的 Teams 应用
       href: overview.md
+      displayName: Why build apps with Microsoft Teams platform
     - name: 从创意到 Teams 应用
       href: overview-story.md
+      displayName: Teams app user experience
     - name: 探索 Teams 平台功能
       href: overview-explore.md
     - name: Teams 解决方案
@@ -20,6 +24,7 @@
   items:
     - name: 概述
       href: get-started/get-started-overview.md
+      displayName: First Teams app
     - name: 使用 JavaScript 生成第一个选项卡应用
       href: sbs-gs-javascript.yml
     - name: 使用 JavaScript 生成第一个机器人应用
@@ -44,20 +49,25 @@
   items:
     - name: 概述
       href: concepts/app-fundamentals-overview.md
+      displayName: 'Government Community Cloud (GCC), Department of Defense (DOD), GCC-High'
     - name: 了解用例
       href: concepts/design/understand-use-cases.md
+      displayName: 'App scope, Teams app features, capabilities'
     - name: 将用例与 Teams 功能相结合
       href: concepts/design/map-use-cases.md
     - name: Teams 应用规划清单
       href: concepts/design/planning-checklist.md
+      displayName: 'HTTPs, localhost, host your Teams app'
     - name: 规划 Teams 移动版的响应式选项卡
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     - name: 规划将你的应用货币化
       href: concepts/design/plan-to-monetize.md
+      displayName: 'Subscription, In-app purchases, Free trials, Test preview'
 - name: 设计应用
   items:
     - name: 概述
       href: concepts/design/design-teams-app-overview.md
+      displayName: 'Design principles, Figma, UI Kit, UI library'
     - name: 了解设计过程
       href: concepts/design/design-teams-app-process.md
     - name: 设计系统
@@ -92,6 +102,7 @@
           href: concepts/design/activity-feed-notifications.md
     - name: 应用自定义
       href: concepts/design/enable-app-customization.md
+      displayName: 'Customize your app, update app name, branding, hide and unhide app'
 - name: 工具和 SDK
   items:
     - name: Teams 工具包
@@ -108,6 +119,7 @@
           items:
             - name: 创建 Teams 应用的先决条件
               href: toolkit/tools-prerequisites.md
+              displayName: Accounts to build your Teams app
             - name: 创建新的 Teams 应用项目
               href: toolkit/create-new-project.md
             - name: 开发 Teams 应用
@@ -116,6 +128,7 @@
                   href: toolkit/TeamsFx-multi-env.md
                 - name: 创建多功能应用
                   href: toolkit/add-capability.md
+                  displayName: Multiple capabilities app
                 - name: 创建基于功能的云资源
                   href: toolkit/add-resource.md
                 - name: 集成现有的第三方 API
@@ -230,28 +243,26 @@
   items:
     - name: 概述
       href: tabs/what-are-tabs.md
-      displayName: 'Adaptive Cards, channel or group tabs, conversational tabs, SSO capabiity, custom tab'
+      displayName: 'Webpages embedded in Microsoft Teams, declare custom tab in app manifest'
     - name: 先决条件
       href: tabs/how-to/tab-requirements.md
-      displayName: 'iFrame, X-Frame-Options, clickjacking, SameSite cookie, Node.js, ngrok'
+      displayName: clickjacking
     - name: 创建个人选项卡
       href: tabs/how-to/create-personal-tab.md
-      displayName: 'App generator, secure tunnel to your tab, Reorder static personal tabs'
+      displayName: 'App generator, Reorder static personal tabs'
     - name: 创建频道选项卡
       href: tabs/how-to/create-channel-group-tab.md
-      displayName: 'Secure tunnel to your tab, channel or group tab with ASP.NET Core'
     - name: 创建内容页
       href: tabs/how-to/create-tab-pages/content-page.md
-      displayName: 'Task module, code integration, native loading indicator property, access additional content, TeamsJS'
+      displayName: 'Loading indicator, personal-scoped custom tab, channel or group custom tab'
     - name: 创建配置页
       href: tabs/how-to/create-tab-pages/configuration-page.md
-      displayName: 'Secured HTTPs endpoints, context data for your tab, tabs on mobile'
     - name: 创建删除页
       href: tabs/how-to/create-tab-pages/removal-page.md
       displayName: 'Reconfigure tab, register remove handler'
     - name: 移动设备上的选项卡
       href: tabs/design/tabs-mobile.md
-      displayName: 'Authentication on mobile, with low bandwhidht and intermittent connections, testng and debugging on mobile devices'
+      displayName: Teams store apps approved by Microsoft for mobile
     - name: 获取选项卡的上下文
       href: tabs/how-to/access-teams-context.md
       displayName: 'User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes'
@@ -263,21 +274,19 @@
       displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
     - name: 选项卡链接展开和阶段视图
       href: tabs/tabs-link-unfurling.md
-      displayName: 'Deep link, invoke stage view, tab information property'
+      displayName: Tab in stage view
     - name: 创建对话选项卡
       href: tabs/how-to/conversational-tabs.md
-      displayName: 'New converstaion, channel and static tabs'
     - name: 选项卡边距更改
       href: resources/removing-tab-margins.md
-      displayName: 'margins align, UI Kit desings, extra padding effect,'
+      displayName: 'margins align, extra padding effect, size of the tab margins'
 - name: 构建机器人
   items:
     - name: 概述
       href: bots/what-are-bots.md
-      displayName: 'Right mix of cards, text, and task modules, bot activity handlers, rate limiting'
     - name: 智能机器人和 SDK
       href: bots/bot-features.md
-      displayName: Multi-turn experiences in chat
+      displayName: 'Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework'
     - name: 智能机器人活动处理程序
       href: bots/bot-basics.md
       displayName: 'Bot logic, core Bot Framework handlers'
@@ -285,9 +294,10 @@
       items:
         - name: 概述
           href: bots/how-to/conversations/conversation-basics.md
+          displayName: Messages sent between your Microsoft Teams bot and one or more user
         - name: 智能机器人对话中的邮件
           href: bots/how-to/conversations/conversation-messages.md
-          displayName: 'Picture messages, attribution for bot message'
+          displayName: 'Picture messages, attribution for bot message, status code responses, app localization using bot and tab.'
           items:
             - name: 使用 RSC 接收所有频道消息
               href: bots/how-to/conversations/channel-messages-with-rsc.md
@@ -295,10 +305,10 @@
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: 使用机器人进行频道和群组对话
           href: bots/how-to/conversations/channel-and-group-conversations.md
-          displayName: 'Entities collection, OAuthPrompt,'
+          displayName: Teams conversational bots
         - name: Teams 智能机器人中的对话活动
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-          displayName: Message reaction events
+          displayName: 'Message reaction events, event handling for install and uninstall events'
         - name: 主动邮件
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: 设置你的智能机器人邮件格式
@@ -306,17 +316,17 @@
           displayName: 'Interactive elements, UTF-16'
         - name: 更新和删除机器人发送的消息
           href: bots/how-to/update-and-delete-bot-messages.md
-          displayName: 'Poll updates, asychronous state change,'
         - name: 请求自动程序的标题
           href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: 获取机器人的 Teams 特定上下文
       href: bots/how-to/get-teams-context.md
-      dispalyName: Fetch the roster
+      dispalyName: Fetch roster or user profile
     - name: 使用机器人发送和接收文件
       href: bots/how-to/bots-filesv4.md
+      displayName: File consent and upload files to Teams from a bot
     - name: 通过团队中的速率限制来优化你的智能机器人
       href: bots/how-to/rate-limit.md
-      displayName: 'handle rate limit, detect transient exceptions, per thread limit'
+      displayName: 'handle rate limit, detect transient exceptions, per thread limit, exponential backoff'
     - name: 通话和会议智能机器人
       items:
         - name: 概述
@@ -326,6 +336,7 @@
           displayName: 'Active and dominant speakers, SILK and G.722 for audio and H.264 for video,'
         - name: 注册通话和会议智能机器人
           href: bots/calls-and-meetings/registering-calling-bot.md
+          displayName: 'How Bot can create call, join meeting and transfer call'
         - name: 来电通知
           href: bots/calls-and-meetings/call-notifications.md
           displayName: 'Redirects for region affinity, GeoDNS resolution'
@@ -344,13 +355,13 @@
       items:
         - name: 定义操作命令
           href: messaging-extensions/how-to/action-commands/define-action-command.md
-          displayName: 'Command invoke locations, static list of parameters, command to your app manifest'
+          displayName: 'Command invoke locations, static list of parameters, action command manually'
         - name: 创建和发送任务模块
           href: messaging-extensions/how-to/action-commands/create-task-module.md
-          displayName: 'Initial invoke request, respond to fetchTask'
+          displayName: 'Initial invoke request, respond to fetchTask, payload activity'
         - name: 响应任务模块提交操作
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-          displayName: 'Respond to initial submit action, configure the poll, attribution for bot messages'
+          displayName: 'Respond to initial submit action, configure the poll, attribution for bot messages, submit action'
     - name: 搜索命令
       items:
         - name: 定义搜索命令
@@ -359,20 +370,20 @@
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
         - name: 基于搜索的消息扩展的通用操作
           href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
-          displayName: Handle tap actions
+          displayName: 'Handle tap actions, Just-in-time install, JIT'
     - name: 添加链接展开
       href: messaging-extensions/how-to/link-unfurling.md
-      displayName: Through wildcards
+      displayName: Domain listings can include wildcards
 - name: 为 Teams 会议和通话构建应用
   items:
     - name: 概述
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: 统一会议应用
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-      displayName: 'Chat tab, poll survey, guest access'
+      displayName: 'Chat tab, poll survey, user access, federated users'
     - name: 为会议启用和配置应用
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-      displayName: 'Access, organizer, meeting token generator app, channels, organizer'
+      displayName: 'meeting token generator app, meeting scenario'
     - name: 会议应用 API 参考
       href: apps-in-teams-meetings/API-references.md
       displayName: 'CART URL, channel, permissions, access, audio state'
@@ -380,10 +391,9 @@
       items:
         - name: 概述
           href: graph-api/meeting-transcripts/overview-transcripts.md
-          displayName: 'Access, permissions'
         - name: 提取会议 ID 和组织者 ID
           href: graph-api/meeting-transcripts/fetch-id.md
-          displayName: 'Access, permisssions, chat entity'
+          displayName: 'Obtain meeting details using user-level notification, tenant-level notification'
         - name: 获取脚本
           href: /graph/api/resources/calltranscript
     - name: 通过 Live Share 增强协作
@@ -397,7 +407,6 @@
               href: apps-in-teams-meetings/teams-live-share-quick-start.md
             - name: Dice Roller 教程
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
-              displayName: 'Fluid container, static view'
         - name: 核心功能
           href: apps-in-teams-meetings/teams-live-share-capabilities.md
           displayName: Ephemeral data structures
@@ -410,27 +419,25 @@
               href: sbs-teams-live-share.yml
             - name: 自定义 Azure Fluid Relay 服务
               href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
-              displayName: Access
         - name: Live Share 常见问题解答
           href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: 在 Teams 中自定义同框场景模式
       href: apps-in-teams-meetings/teams-together-mode.md
-      displayName: 'Single vitrual scene, organizer'
+      displayName: 'Single vitrual scene, scene studio'
 - name: 构建Webhook 和连接器
   items:
     - name: 概述
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: 创建传出 Webhook
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-      displayName: 'HMAC security token, access, channel'
+      displayName: HMAC security token
     - name: 创建传入 Webhooks
       href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-      displayName: 'Access, permissions'
     - name: 创建 Office 365 连接器
       href: webhooks-and-connectors/how-to/connectors-creating.md
     - name: 创建和发送邮件
       href: webhooks-and-connectors/how-to/connectors-using.md
-      displayName: 'Access, settings, configuration'
+      displayName: 'Send messages using cURL and PowerShell, Rate limiting for connectors'
 - name: 构建卡和任务模块
   items:
     - name: 概述
@@ -442,41 +449,39 @@
           displayName: 'People picker, type-ahead'
         - name: 卡片类型
           href: task-modules-and-cards/cards/cards-reference.md
-          displayName: 'Flexible layout, receipt card, carousel card, setting'
+          displayName: 'Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card'
         - name: Microsoft Teams 中的格式卡
           href: task-modules-and-cards/cards/cards-format.md
           displayName: 'Information masking, background, extension, notification'
         - name: 卡片操作
           href: task-modules-and-cards/cards/cards-actions.md
+          displayName: 'openUrl, messageBack, imBack, invoke, signin'
         - name: 自适应卡片中的人员选取器
           href: task-modules-and-cards/cards/people-picker.md
           displayName: 'Setting, channel, static typeahead'
         - name: 在自适应卡片中键入提前搜索
           href: task-modules-and-cards/cards/dynamic-search.md
+          displayName: Static and dynamic typeahead search
         - name: 自适应卡的通用操作
           items:
             - name: 概述
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
-              displayName: 'Access, extension, channel, communication'
             - name: 使用自适应卡的通用操作
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
-              displayName: 'Setting, channels,'
             - name: 用户特定视图
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
               displayName: 'Poll creator controls, channel, extension'
             - name: 顺序工作流
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
-              displayName: Channel
             - name: 最新卡片
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: 构建任务模块
       items:
         - name: 概述
           href: task-modules-and-cards/what-are-task-modules.md
-          displayName: Channel
         - name: 调用和关闭任务模块
           href: task-modules-and-cards/task-modules/invoking-task-modules.md
-          displayName: 'Access, module sizing'
+          displayName: 'JavaScript task modules,keyboard and accessility guidelines, module sizing'
         - name: 在选项卡中使用任务模块
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: 使用机器人的任务模块
@@ -485,50 +490,41 @@
   items:
     - name: 概述
       href: concepts/authentication/authentication.md
-      displayName: Access
+      displayName: Authentication method
     - name: 选项卡
       items:
         - name: 为选项卡应用启用 SSO
           items:
             - name: 概述
               href: tabs/how-to/authentication/tab-sso-overview.md
-              displayName: 'Cookies, channel, access, permissions'
             - name: 在 Azure AD 中注册选项卡应用
               href: tabs/how-to/authentication/tab-sso-register-aad.md
-              displayName: 'Access, permissions, configurations, browser, extension'
             - name: 添加代码以启用 SSO
               href: tabs/how-to/authentication/tab-sso-code.md
-              displayName: 'Extension, access, permissions'
             - name: 更新 SSO 的应用清单并预览应用
               href: tabs/how-to/authentication/tab-sso-manifest.md
-              displayName: 'Access, permissions'
             - name: 授予 Microsoft Graph 权限和范围
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-              displayName: 'Access, permissions, channel, browser, configuration, delegated'
+              displayName: Configure authentication for different platforms
             - name: SSO 身份验证故障排除
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-              displayName: 'Access, permissions, configurations'
         - name: 使用第三方 OAuth IdP 身份验证
           items:
             - name: 概述
               href: tabs/how-to/authentication/auth-flow-tab.md
-              displayName: 'Access, configuration'
             - name: 配置第三方 OAuth IdP 身份验证
               href: tabs/how-to/authentication/auth-tab-aad.md
-              displayName: 'Access, configuration, cookies'
             - name: 使用外部 OAuth 提供程序
               href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: 机器人
       items:
         - name: 机器人中的身份验证流
           href: bots/how-to/authentication/auth-flow-bot.md
-          displayName: Access
         - name: 将身份验证添加到机器人
           href: bots/how-to/authentication/add-authentication.md
-          displayName: 'Configuration, delegate, emulator, tunneling, channels'
+          displayName: 'Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams'
         - name: 使用 SSO 身份验证
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-          displayName: 'Acces, permissions, configuration, settings'
     - name: 消息扩展
       items:
         - name: 为消息扩展添加身份验证
@@ -536,25 +532,21 @@
           displayName: Configuration
         - name: 为消息扩展启用 SSO
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
-          displayName: 'Setting, extensions'
 - name: 集成设备功能
   items:
     - name: 概述
       href: concepts/device-capabilities/device-capabilities-overview.md
-      displayName: 'Access, premissions'
+      displayName: 'Camera, microphone, gallery, QR, barcode scanner, location'
     - name: 请求 Teams 应用的设备权限
       href: concepts/device-capabilities/native-device-permissions.md
     - name: 浏览器的设备权限
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: 集成媒体功能
       href: concepts/device-capabilities/media-capabilities.md
-      displayName: 'Access, permissions, whiteboard, configuration'
     - name: 集成 QR 或条码扫描仪功能
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-      displayName: 'Access, permissions, configuration'
     - name: 集成位置功能
       href: concepts/device-capabilities/location-capability.md
-      displayName: 'Access, permissions, configurations'
 - name: 利用 Microsoft Graph 及 Teams 数据
   items:
     - name: 概述
@@ -568,65 +560,61 @@
       displayName: 'Access, report, MSAL2'
     - name: 资源特定许可
       href: graph-api/rsc/resource-specific-consent.md
-      displayName: 'Access, permissions, delegated, channel, organizer, notifications'
+      displayName: 'Permissions, delegated'
     - name: 使用 Graph API 发送邮件的应用主动安装
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-      displayName: 'Permissions, delegated, channel, notifications'
     - name: 导入第三方消息
       href: graph-api/import-messages/import-external-messages-to-teams.md
-      displayName: 'Permission, channel, communications, setting'
     - name: 代码示例
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
 - name: 跨 Microsoft 365 扩展应用
   items:
     - name: 概述
       href: m365-apps/overview.md
-      displayName: 'Access, permissions, channel, extensions'
+      displayName: 'Outlook, and Office as application hosts'
     - name: 先决条件
       href: m365-apps/prerequisites.md
-      displayName: 'Channel, configuration, settings, extensions'
     - name: 为 Office 和 Outlook 启用 Teams 个人选项卡
       href: m365-apps/extend-m365-teams-personal-tab.md
-      displayName: 'Access, permissions, channel, report, browser'
+      displayName: 'Microoft 365, Office 365'
     - name: 为 Outlook 启用 Teams 消息扩展
       href: m365-apps/extend-m365-teams-message-extension.md
-      displayName: 'Access, channel, report, communication'
+      displayName: 'Microoft 365, Office 365'
     - name: 发布适用于 Microsoft 365 的 Teams 应用
       href: m365-apps/publish.md
-      displayName: 'Access, permissions, channel, extensions'
 - name: 测试应用
   items:
     - name: 概述
       href: concepts/build-and-test/test-app-overview.md
-      displayName: 'Access, settings'
+      displayName: 'Prepare your Microsoft 365 tenant, add test data to your Microsoft 365 tenant'
     - name: 准备 Microsoft 365 租户
       href: concepts/build-and-test/prepare-your-o365-tenant.md
+      displayName: 'Basic, Standard, Enterprise E1, E3, and E5, developer, Education, Education Plus, and Education E5'
     - name: 选择测试设置并调试 Teams 应用
       href: concepts/build-and-test/debug.md
-      displayName: 'Access, configuration, browser, channel'
+      displayName: 'Purely hosted, locally hosted, cloud hosted'
     - name: 向环境中添加测试数据
       href: concepts/build-and-test/test-data.md
-      displayName: 'Permissions, channel'
+      displayName: Allow users to upload apps
     - name: 选项卡
       items:
         - name: 适用于 Microsoft Teams 选项卡的 DevTools
           href: tabs/how-to/developer-tools.md
-          displayName: 'Access, cache, configuration, browser'
     - name: 机器人
       items:
         - name: 使用 IDE 在本地测试和调试机器人
-          displayName: 'Channel, extensions'
+          displayName: Bot Emulator
           href: bots/how-to/debug/locally-with-an-ide.md
         - name: 使用检查中间件调试机器人
           href: /azure/bot-service/bot-service-debug-inspection-middleware
-          displayName: Channels
         - name: 在本地调试呼叫和会议机器人
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
-          displayName: 'Configuration, setting, notification'
+          displayName: signaling
     - name: Microsoft Graph
       items:
         - name: 测试资源特定许可权限
           href: graph-api/rsc/test-resource-specific-consent.md
+          displayName: Postman app
         - name: 团队 JSON 测试文件的特定于资源的许可
           href: graph-api/rsc/test-team-rsc-json-file.md
         - name: 聊天 JSON 测试文件的特定于资源的许可
@@ -635,16 +623,15 @@
   items:
     - name: 概述
       href: concepts/deploy-and-publish/apps-publish-overview.md
-      displayName: 'configure install options, valid app package'
+      displayName: configure default install options
     - name: 为 Teams 应用配置默认安装选项
       href: concepts/deploy-and-publish/add-default-install-scope.md
       displayName: 'default install scope, default capability for shared scopes'
     - name: 创建 Teams 应用包
       href: concepts/build-and-test/apps-package.md
-      displayName: 'App manifest, host your app'
+      displayName: 'Host your app, HTTPS, cloud server'
     - name: 在 Teams 中上传应用
       href: concepts/deploy-and-publish/apps-upload.md
-      displayName: 'Manage, access, update, and remove your app'
     - name: 发布到组织
       href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: 'App catalog, allow and block apps'
@@ -652,32 +639,34 @@
       items:
         - name: 概述
           href: concepts/deploy-and-publish/appsource/publish.md
-          displayName: 'Commercial marketplace, deep functional and experience tests, publish through concierge service, rapid approval, prior app submission, post app submission'
+          displayName: 'Rapid app approval, approve, publisher verification, What to expect after you submit your app,'
         - name: 查看商店验证指南
           href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-          displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
+          displayName: 'Value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies'
         - name: 创建合作伙伴中心开发者帐户
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-          displayName: 'Update Apple app store,app acquisition on mobile'
+          displayName: 'Update Apple App Store Connect Team ID on Partner Center, app acquisition on mobile'
         - name: 准备 Teams 应用商店提交
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-          displayName: 'Testing instructions, publisher verification, attestation'
+          displayName: 'Testing instructions, store listing'
         - name: 提交你的应用
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         - name: 解决 Teams 应用商店提交失败的问题
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
+          displayName: 'Resubmit your app, multiple submission failures, Microsoft concierge'
         - name: 维护已发布的应用程序
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-          displayName: 'Promote your app, stop selling'
+          displayName: 'Promote your app, stop selling, stop app distribution'
         - name: Microsoft Teams 应用商店排名参数
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+          displayName: 'Microsoft Publisher Agreement, app update or new release, user engagement data,'
         - name: 应用验证失败的常见原因
           href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 - name: 将你的应用货币化
   items:
     - name: 概述
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-      displayName: 'Pricing model, SaaS offer, In-app purchases'
+      displayName: 'Pricing model, SaaS offer, purchase experience'
     - name: 在 Teams 应用中包含 SaaS 产品/服务
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       displayName: 'Transactable Software-as-a-Service, Recloud app'
@@ -699,14 +688,17 @@
   items:
     - name: 概述
       href: samples/integrate-web-apps-overview.md
+      displayName: Low code platforms
     - name: Teams 集成注意事项
       href: samples/integrating-web-apps.md
+      displayName: 'Multitenancy, Sharepoint'
     - name: 创建虚拟助手
       href: samples/virtual-assistant.md
     - name: Power Platform 应用
       items:
         - name: 概述
           href: samples/teams-low-code-solutions.md
+          displayName: 'Power BI, Power Apps, Power Automate, Project Oakdale'
         - name: 添加 Power Virtual Agent 聊天机器人
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: 协作控件
@@ -749,14 +741,18 @@
           href: samples/collaboration-controls-limitations.md
     - name: Microsoft Teams 的应用模板
       href: samples/app-templates.md
+      displayName: 'Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams'
     - name: 生产准备就绪的排班连接器
       href: samples/shifts-wfm-connectors.md
+      displayName: 'Teams Shifts Workforce management (WFM),'
     - name: Moodle LMS
       items:
         - name: 概述
           href: resources/moodle-overview.md
+          displayName: 'Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps'
         - name: Microsoft 365 插件
           href: resources/m365-plugins/m365-plugins-overview.md
+          displayName: 'OpenID Connect, Microsoft 365 integration, Microsoft 365 Repository, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter'
         - name: Moodle 合作伙伴应用
           href: resources/partner-apps-for-moodle.md
         - name: 安装 Moodle LMS
@@ -769,12 +765,14 @@
           href: concepts/build-and-test/share-to-teams-overview.md
         - name: 从 Web 应用共享到 Teams
           href: concepts/build-and-test/share-to-teams-from-web-apps.md
+          displayName: Share to Teams for Education
         - name: 从个人应用或选项卡共享到 Teams
           href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
     - name: 向 SharePoint 添加Teams选项卡
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: 创建深层链接
       href: concepts/build-and-test/deep-links.md
+      displayName: Navigate within your app
     - name: 集成人员选取器
       href: concepts/device-capabilities/people-picker-capability.md
 - name: 资源
@@ -785,18 +783,15 @@
           href: concepts/build-and-test/apps-localization.md
         - name: 本地化 JSON 架构参考
           href: resources/schema/localization-schema.md
-          displayName: 'Notification, setting'
     - name: 在 Azure AD 中使用无提示身份验证
       href: tabs/how-to/authentication/auth-silent-aad.md
-      displayName: 'Access, cache, report'
     - name: SameSite cookie 属性
       href: resources/samesite-cookie-update.md
-      displayName: 'Cookies, configuration, browser, chat'
+      displayName: Cookies
     - name: 参与 Teams 文档
       href: resources/teams-contributor-reference.md
     - name: Microsoft Teams 应用疑难解答
       href: resources/troubleshoot.md
-      displayName: 'Channel, chat, settings, browser, domain'
 - name: 支持和反馈
   href: feedback.md
-  displayName: 'Channel, chat, report, extensions'
+  displayName: 'Developer community help, questions, suggestions, contact, issues'

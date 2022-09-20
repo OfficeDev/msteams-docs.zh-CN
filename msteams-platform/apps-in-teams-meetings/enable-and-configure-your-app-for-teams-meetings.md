@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: b01155abe9ec421310b169c7a2b50c49e211b4b7
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636159"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833703"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>为会议启用和配置应用
 
@@ -23,7 +23,7 @@ ms.locfileid: "67636159"
 
 * 了解如何开发 Teams 应用。 有关如何开发 Teams 应用的详细信息，请[参阅 Teams 应用开发](../overview.md)。
 
-* 使用支持范围内可配置选项卡的 `groupchat` 应用。 有关详细信息，请参阅 [组聊天范围](../resources/schema/manifest-schema.md#configurabletabs) 并 [生成组选项卡](../build-your-first-app/build-channel-tab.md)。
+* 使用支持组聊天和/或团队范围内的可配置选项卡的应用。 有关详细信息，请参阅 [范围](../resources/schema/manifest-schema.md#configurabletabs) 并 [生成第一个选项卡应用](../build-your-first-app/build-channel-tab.md)。
 
 * 会议前和会议后应用场景必须遵守常规 [Teams 选项卡设计准则](../tabs/design/tabs.md)。 有关会议期间的体验，请参阅 [会议内选项卡设计准则](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) 和 [会议内对话框设计准则](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
 
@@ -39,7 +39,8 @@ ms.locfileid: "67636159"
 
 > [!NOTE]
 >
-> * 会议中的应用需要 `groupchat` 作用域。 该 `team` 范围仅适用于频道中的选项卡。
+> * 会议中的应用需要 `groupchat` 或 `team` 作用域。 范围 `team` 适用于频道或频道会议中的选项卡。
+> * 若要支持在计划的频道会议中添加选项卡，请在应用清单的 **“范围”** 部分中指定 **团队** 范围。 如果没有 **团队** 范围，应用将不会出现在频道会议的浮出控件中。
 > * 会议中的应用可以使用以下上下文：`meetingChatTab`、`meetingDetailsTab`、`meetingSidePanel` 和 `meetingStage`。
 
 以下代码片段是 Teams 会议的应用中使用的可配置选项卡的示例：
@@ -81,7 +82,7 @@ ms.locfileid: "67636159"
 | **meetingChatTab** | 计划会议的一组用户之间群组聊天标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动设备中工作。 |
 | **meetingDetailsTab** | 日历会议详细信息视图标题中的选项卡。 可以指定 **meetingChatTab** 或 **meetingDetailsTab** 以确保应用在移动设备中工作。 |
 | **meetingSidePanel** | 通过统一栏（U 栏）打开的会议内面板。 |
-| **meetingStage** | 可将来自 `meetingSidePanel` 的应用共享到会议阶段。 不能在 Teams 会议室客户端上使用此应用。 |
+| **meetingStage** | 可将来自 `meetingSidePanel` 的应用共享到会议阶段。 不能在移动设备或 Teams 会议室客户端上使用此应用。 |
 
 启用 Teams 会议应用后，必须在会议前、会议期间和会议后配置应用。
 
@@ -100,9 +101,9 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 若要将选项卡添加到会议：
 
 1. 在日历中，选择要向其添加选项卡的会议。
-1. 选择 **“详细信息”** 选项卡，然后选择 :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="“屏幕截图”描述如何在详细信息选项卡中使用加号按钮图标将应用安装为 Tab。":::
+1. 选择“**详细信息**”选项卡并选择 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="屏幕截图介绍如何在 Teams 会议的“会议前”选项卡中将应用安装为选项卡。":::
+    <img src="../assets/images/apps-in-meetings/PreMeeting1.png" alt="Pre-meeting experience" width="900"/>
 
 1. 在显示的选项卡库中，选择要添加的应用，并根据需要执行步骤。 安装应用选项卡。
 
@@ -143,7 +144,7 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 
 会议内通知不得使用任务模块。 不会在会议聊天中调用任务模块。 外部资源 URL 用于显示会议内通知。 可以使用该 `submitTask` 方法在会议聊天中提交数据。
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="屏幕截图是演示如何使用会议内对话框的示例。":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text=" 示例演示如何使用会议内对话框。":::
 
 还可以将用户的 Teams 显示图片和人员卡添加到会议内通知中，具体取决于`onBehalfOf`具有用户 MRI 的令牌以及传入有效负载的显示名称。 下面是一个示例有效负载：
 
@@ -183,18 +184,7 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 
 参与者可以使用应用侧面板中的“共享暂存”按钮将整个应用共享到协作会议阶段。
 
-> [!NOTE]
-> 在移动设备中将整个应用共享到会议阶段目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
-
-# <a name="desktop"></a>[桌面设备](#tab/Desktop)
-
-:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="屏幕截图介绍如何将整个应用共享到桌面上的协作会议阶段。":::
-
-# <a name="mobile"></a>[移动设备](#tab/mobile)
-
-:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="屏幕截图介绍如何在移动设备上将整个应用共享到协作会议阶段。":::
-
----
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
 若要共享要暂存的整个应用，必须在应用清单中将 `meetingStage` 和 `meetingSidePanel` 配置为帧上下文。 例如：
 
@@ -220,7 +210,7 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 
 参与者可以通过使用共享来暂存 API，将应用的特定部分共享到协作会议阶段。 API 在 Teams 客户端 SDK 中可用，并从应用端面板调用。
 
-:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="屏幕截图介绍如何将应用的特定部分共享到 Teams 会议中的会议阶段。":::
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 若要共享应用的特定部分，必须调用 Teams 客户端 SDK 库中的相关 API。 有关详细信息，请参阅 [API 参考](API-references.md)。
 
@@ -244,7 +234,7 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 ## <a name="step-by-step-guides"></a>分步指南
 
 * 按照 [分步准则](../sbs-meeting-token-generator.yml) 在 Teams 会议中生成会议令牌。
-* 按照 [分步指南](../sbs-meetings-sidepanel.yml) 在 Teams 会议中生成会议 SidePanel。
+* 按照 [分步准则](../sbs-meetings-sidepanel.yml) 在 Teams 会议中生成会议侧窗格。
 * 按照 [分步准则](../sbs-meetings-stage-view.yml) 在 Teams 会议中共享会议阶段视图。
 * 按照[分步准则](../sbs-meeting-content-bubble.yml) 在 Teams 会议中生成会议内容气泡。
 
