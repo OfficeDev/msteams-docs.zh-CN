@@ -5,12 +5,12 @@ description: 了解 Teams 和 Microsoft Power Platform 提供的 Microsoft 低�
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 59730f586ff90a6f0de9061c41ccc6c2e24385ef
-ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2022
-ms.locfileid: "67382935"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858907"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>为 Teams 创建低代码自定义应用
 
@@ -59,10 +59,10 @@ Teams 中的新 [Power Apps 应用](https://go.microsoft.com/fwlink/?linkid=2143
 
 |  主题  |  链接  |
 |:---------|:----------------------|
-|Power BI|[面向应用创建者的 Power BI](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[面向开发人员的 Power BI](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[面向应用创建者的 Power Apps](/learn/browse/?products=power-apps&roles=maker)</br>[面向开发人员的 Power Apps](/learn/browse/?products=power-apps)|
-|Power Automate|[面向应用创建者的 Power Automate](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[面向开发人员的 Power Automate](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[面向应用创建者和开发人员的 Power Virtual Agents](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[面向应用创建者的 Power BI](/training/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[面向开发人员的 Power BI](/training/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power Apps|[面向应用创建者的 Power Apps](/training/browse/?products=power-apps&roles=maker)</br>[面向开发人员的 Power Apps](/training/browse/?products=power-apps)|
+|Power Automate|[面向应用创建者的 Power Automate](/training/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[面向开发人员的 Power Automate](/training/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Power Virtual Agents|[面向应用创建者和开发人员的 Power Virtual Agents](/training/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### <a name="-project-oakdale-preview"></a>✔ Project Oakdale（预览版）
 

@@ -3,12 +3,12 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: b5ca7ab2aa0a2861b8cc9d402e30eec5409b9aff
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833737"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858900"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -169,7 +169,7 @@ ms.locfileid: "67833737"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-|11/30/2020|标识平台与 Teams 工具包和 Visual Studio Code 选项卡集成 |[使用选项卡的 Teams 工具包和 Visual Studio Code 单一登录身份验证](toolkit/visual-studio-code-tab-sso.md)|
+|11/30/2020|标识平台与 Teams 工具包和 Visual Studio Code 选项卡集成 |[使用选项卡的 Teams 工具包和 Visual Studio Code 单一登录身份验证](toolkit/add-single-sign-on.md)|
 |11/16/2020|Teams 应用清单更新到版本 1.8。|[参考：Microsoft Teams 的清单架构](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams 机器人设计准则 |[机器人设计指南](bots/design/bots.md)|
 |09/30/2020|现在支持在移动设备上向机器人发送和接收文件 |[通过机器人发送和接收文件](resources/bot-v3/bots-files.md)|
@@ -184,7 +184,7 @@ ms.locfileid: "67833737"
 |07/20/2020|适用于 AppSource 提交的 Teams 应用验证工具 |[Teams 应用验证工具](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|为 Teams 创建虚拟助理 |[Microsoft Teams 虚拟助理](samples/virtual-assistant.md)|
 |07/14/2020|显示本机加载指示器文档 |[显示本机加载指示器](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-|07/01/2020|开始使用 Visual Studio Code 工具包构建 Teams 应用 |[使用 Microsoft Teams 工具包和Visual Studio Code 生成应用](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|开始使用 Visual Studio Code 工具包构建 Teams 应用 |[使用 Microsoft Teams 工具包和Visual Studio Code 生成应用](sbs-gs-javascript.yml) |
 |07/01/2020|适用于 Teams Web 和桌面客户端的选项卡 GA 的单一登录 |[单一登录 (SSO)](tabs/how-to/authentication/tab-sso-overview.md)|
 |06/05/2020| 清单架构已更新到版本 1.7。| [参考：Microsoft Teams 的清单架构](resources/schema/manifest-schema.md)|
 |05/18/2020|将 Power Virtual Agents 与 Teams 集成 |[将 Power Virtual Agents 聊天机器人与 Microsoft Teams 集成](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

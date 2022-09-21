@@ -8,7 +8,7 @@ Microsoft Teams 是一个基于云的通信平台，整合了不同的协作服�
 
 Teams 文档是 Microsoft Docs 技术文档库的一部分。 内容分为称为 docsets 的组，每个组表示作为单个实体管理的一组相关文档。 可以提出问题、提供建议或提供更新。 了解 [如何参与 Teams 文档](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/)。
 
-若要参与任何 Microsoft 文档，请参阅 [参与者指南概述](https://learn.microsoft.com/contribute/)。
+若要参与Microsoft Docs，请参阅[参与者指南概述](https://learn.microsoft.com/contribute/)。
 
 若要详细了解 Microsoft 标准和样式指南，请参阅 [Microsoft 样式指南](https://learn.microsoft.com/style-guide/welcome/)。
 
