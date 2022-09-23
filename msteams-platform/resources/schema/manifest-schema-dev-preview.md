@@ -4,12 +4,12 @@ description: 了解 Microsoft Teams 支持的所有组件的示例清单文件�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: e7b74ab4c610e1cb3b71c8045c3cb93626f0efc9
-ms.sourcegitcommit: 3215a931285ae738c248d145c07fb98656dd42ed
+ms.openlocfilehash: c019b686d27df4927ca721f36bacb5018c5ad596
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2022
-ms.locfileid: "67675831"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990922"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams 的公共开发人员预览清单架构
 
@@ -356,7 +356,7 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
 
 必需：
 
-向用户描述应用。对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
+向用户描述应用。 对于提交到 AppSource 的应用，这些值必须与 AppSource 条目中的信息匹配。
 
 确保描述可以准确描述你的体验，并提供信息来帮助潜在客户了解你的体验。 如果需要使用外部帐户，则应在完整说明中进行备注。 `short`值和`full`应该不一样。  简短说明不能在长说明中重复，也不能包含任何其他应用名称。
 
@@ -395,11 +395,11 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`configurationUrl`|字符串|2048 个字符|✔️|配置选项卡时要使用的 https:// URL。|
-|`canUpdateConfiguration`|Boolean|||指示创建后用户是否可以更新选项卡配置的实例的值。默认值：`true`|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|枚举数组|1|✔️|目前，可配置选项卡仅支持 `team` 和 `groupchat` 范围。 |
 |`context` |枚举数组|6||[支持选项卡](../../tabs/how-to/access-teams-context.md)的 `contextItem` 范围的集合。 默认值：`channelTab`、`privateChatTab`、`meetingChatTab`、`meetingDetailsTab`、`meetingSidePanel` 和 `meetingStage`。|
-|`sharePointPreviewImage`|String|2048||用于 SharePoint 的选项卡预览图像的相对文件路径。大小 1024x768。 |
-|`supportedSharePointHosts`|枚举数组|1||定义如何在 SharePoint 中提供选项卡。选项为 `sharePointFullPage` 和 `sharePointWebPart` |
+|`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`supportedSharePointHosts`|枚举数组|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -431,10 +431,10 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|字符串|64 个字符|✔️|使用 Bot Framework 注册的自动程序的唯一 Microsoft 应用 ID。 这可能与整个 [应用 ID](#id) 相同。|
-|`needsChannelSelector`|Boolean|||描述机器人是否利用用户提示将该机器人添加到特定频道。默认值：`false`|
-|`isNotificationOnly`|Boolean|||指示机器人是否为单向、仅通知机器人，而不是聊天机器人。默认值：`false`|
-|`supportsFiles`|Boolean|||指示机器人是否支持在个人聊天中上传/下载文件的功能。默认值：`false`|
-|`scopes`|枚举数组|3|✔️|指定机器人是在 `team`、群组聊天（`groupchat`）的频道上下文中提供体验还是单独限于单个用户的体验（`personal`）。这些选项不是独占的。|
+|`needsChannelSelector`|Boolean|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
+|`isNotificationOnly`|布尔值|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
+|`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
+|`scopes`|枚举数组|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -442,7 +442,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`items.scopes`|枚举数组|3|✔️|指定命令列表有效的范围。选项为 `team`、 `personal`和 `groupchat`。|
+|`items.scopes`|枚举数组|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|对象数组|10|✔️|自动程序支持的命令数组：<br>`title`：自动程序命令名称（字符串，32）<br>`description`：命令语法及其参数的简单说明或示例（字符串，128）。|
 
 ## <a name="connectors"></a>连接器
@@ -457,7 +457,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |---|---|---|---|---|
 |`configurationUrl`|字符串|2048 个字符|✔️|配置连接器时要使用的 https:// URL。|
 |`connectorId`|字符串|64 个字符|✔️|连接器的唯一标识符，与[Connectors 开发人员仪表板](https://aka.ms/connectorsdashboard)中的 ID 匹配。|
-|`scopes`|枚举数组|1|✔️|指定连接器是在 `team` 中频道的上下文中提供体验，还是单独限于单个用户的体验（`personal`）。目前，仅支持 `team` 范围。|
+|`scopes`|枚举数组|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -473,7 +473,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型 | 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`botId`|字符串|64|✔️|支持消息扩展的机器人的唯一 Microsoft 应用 ID，已向机器人框架注册。 这可能与整个 [应用 ID](#id) 相同。|
-|`canUpdateConfiguration`|Boolean|||指示用户是否可以更新消息扩展插件的配置的一个值。默认值为 `false`。|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
 |`commands`|对象数组|10|✔️|消息扩展支持的命令数组|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -496,11 +496,11 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |`taskInfo.width`|字符串|||对话框宽度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
 |`taskInfo.height`|String|||对话框高度 - 数字（以像素为单位）或默认布局，如"large"、"medium"或"small"。|
 |`taskInfo.url`|String|||初始 Web 视图 URL。|
-|`messageHandlers`|对象数组|5||允许在满足特定条件时调用应用的处理程序列表。域还必须在 `validDomains` 中列出。|
-|`messageHandlers.type`|字符串|||消息处理程序的类型。必须 `"link"`。|
+|`messageHandlers`|对象数组|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
+|`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|||链接消息处理程序可以注册的域数组。|
 |`parameters`|对象数组|5|✔️|命令采用的参数列表。 最小值：1；最大值：5。|
-|`parameter.name`|字符串|64 个字符|✔️|在客户端中显示时参数的名称。此名称包含在用户请求中。|
+|`parameter.name`|字符串|64 个字符|✔️|在客户端中显示的参数的名称。 这包含在用户请求中。|
 |`parameter.title`|字符串|32 个字符|✔️|参数的用户友好标题。|
 |`parameter.description`|String|128 个字符||描述此参数用途的用户友好字符串。|
 |`parameter.inputType`|String|128 个字符||定义在 `fetchTask: true` 的任务模块上显示的控件类型。 `text`、`textarea`、`number`、`date`、`time`、`toggle`、`choiceset` 其中之一。|
@@ -523,7 +523,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选** 字符串数组
 
-在应用可以请求访问的用户设备上指定本机功能。选项包括：
+Specifies the native features on a user's device that your app may request access to. Options are:
 
 * `geolocation`
 * `media`
@@ -578,7 +578,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
  **可选**— 布尔值
 
-指示使用或不使用选项卡标题栏呈现个人应用的位置。默认值为 **false**。
+Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
 > `isFullScreen` 仅适用于发布到组织的应用。
@@ -598,7 +598,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`type`|string|32 个字符|✔️|通知类型。 *请参阅下文*。|
-|`description`|string|128 个字符|✔️|通知的简要说明。 *请参阅下面的*。|
+|`description`|string|128 个字符|✔️|A brief description of the notification. *See below*.|
 |`templateText`|string|128 个字符|✔️|例如："{actor} 为你创建了任务 {taskId}"|
 
 ```json
@@ -694,7 +694,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 **可选** - object
 
-选择组安装范围后，它将在用户安装应用时定义默认功能。选项包括：
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
 
 * `team`
 * `groupchat`
@@ -702,9 +702,9 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`team`|string|||当所选安装范围 `team` 时，此字段指定可用的默认功能。选项：`tab`、 `bot`或 `connector`。|
-|`groupchat`|string|||当所选安装范围 `groupchat` 时，此字段指定可用的默认功能。选项：`tab`、 `bot`或 `connector`。|
-|`meetings`|string|||当所选安装范围 `meetings` 时，此字段指定可用的默认功能。选项：`tab`、 `bot`或 `connector`。|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
@@ -714,13 +714,13 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`offerId`| string | 2048 个字符 | ✔️ | 包含发布者 ID 和产品/服务 ID 的唯一标识符，可在 [合作伙伴中心](https://partner.microsoft.com/dashboard)中找到。必须将字符串格式设置为 `publisherId.offerId`。|
+|`offerId`| string | 2048 个字符 | ✔️ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
 **可选** - object
 
-指定会议扩展定义。有关详细信息，请参阅 [Teams 中的自定义“同框场景模式”场景](../../apps-in-teams-meetings/teams-together-mode.md)。
+Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
@@ -758,7 +758,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 |名称| 类型|最大大小|必需 |说明|
 |---|---|---|---|---|
-|`type`|string||✔️| 特定于资源的权限类型。选项：`Application` 和 `Delegated`。|
+|`type`|string||✔️| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
 |`name`|string|128 个字符|✔️|特定于资源的权限名称。 有关详细信息，请参阅[资源对应的应用程序权限](#resource-specific-application-permissions)和[资源对应的委派权限](#resource-specific-delegated-permissions)|
 
 #### <a name="resource-specific-application-permissions"></a>资源对应的应用程序权限
@@ -776,6 +776,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
     |`ChannelMeetingParticipant.Read.Group`| 允许应用代表已登录用户读取与此团队关联的频道会议的参与者信息，包括姓名、角色、ID、加入和离开时间。|
     |`InAppPurchase.Allow.Group`| 允许应用代表已登录用户向此团队中的用户显示市场产品/服务并在应用中完成购买。|
     |`ChannelMeetingStage.Write.Group`| 允许应用代表已登录用户在与此团队关联的频道会议中显示会议阶段的内容。|
+    |`LiveShareSession.ReadWrite.Group`|允许应用为与此团队关联的会议创建和同步 Live Share 会话，并代表登录用户访问有关会议名册的相关信息，例如成员的会议角色。|
 
 * **聊天或会议的资源对应的委派权限**
 
@@ -785,21 +786,14 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
     |`MeetingStage.Write.Chat`|允许应用代表已登录用户在与此聊天关联的会议中显示会议阶段的内容。|
     |`OnlineMeetingParticipant.Read.Chat`|允许应用代表已登录用户读取与此聊天关联的会议的参与者信息，包括姓名、角色、ID、加入和离开时间。|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|允许应用代表登录用户为与此聊天关联的会议中的参与者切换传入音频。|
+    |`LiveShareSession.ReadWrite.Chat`|允许应用为与此聊天关联的会议创建和同步 Live Share 会话，并代表登录用户访问有关会议名册的相关信息，例如成员的会议角色。|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|允许应用代表已登录用户检测与此聊天关联的会议中传入音频状态的变化。|
 
 * **用户的资源对应的委派权限**
 
     |**名称**|**说明**|
     |---|---|
     |`InAppPurchase.Allow.User`|允许应用代表已登录用户显示用户市场产品/服务并完成用户在应用内的购买。|
-
-* **Teams 实时共享的特定于资源的权限**
-
-   |名称| 说明 |
-   | ----- | ----- |
-   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
-   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
-   |`MeetingStage.Write.Chat`|<!--- need info --->|
-   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>另请参阅
 

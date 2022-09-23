@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 0f51d2c44eef3ec09d48581a797c63d501be8644
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
+ms.openlocfilehash: 3685d105f13024507b880c35040b9d798a6d845f
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302449"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990915"
 ---
 # <a name="teams-toolkit-overview-for-visual-studio"></a>Visual Studio 的 Teams 工具包概述
 
@@ -45,7 +45,7 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 
 ## <a name="install-teams-toolkit-for-visual-studio"></a>安装 Visual Studio 的 Teams 工具包
 
-可以从 [Visual Studio 下载页下载最新的 Visual Studio 安装](https://visualstudio.microsoft.com/vs/preview/)程序。
+可以从 [Visual Studio 下载页下载最新的 Visual Studio 安装](https://visualstudio.microsoft.com)程序。
 
 > [!NOTE]
 > 安装 Visual Studio 之前，需要先安装 Visual Studio 安装程序。

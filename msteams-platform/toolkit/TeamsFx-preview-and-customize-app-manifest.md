@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 02bbcc86c769f8ebff87803b6a12bf882e214bf6
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 2a06953ede09d9486dab239557a4941c590c882b
+ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780701"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991661"
 ---
 # <a name="customize-teams-app-manifest"></a>自定义 Teams 应用部件清单
 
@@ -61,31 +61,31 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
 1. 在文件的代码段`manifest.template.json`中选择 **“预览**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="预览":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="屏幕截图是一个示例，其中显示了清单文件的 codelens 中的预览。":::
 
 1. 选择 **“本地**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="选择 environment1":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="屏幕截图是显示环境中的本地选择的示例。":::
 
 以下步骤有助于使用 **Zip Teams 元数据包** 选项预览本地清单文件：
 
 1. 选择 `manifest.template.json` 文件。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="选择“清单”":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="屏幕截图是显示 manifest.template.json 选择的示例。":::
 
 1. 在Visual Studio Code工具栏中选择 Teams 工具包:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG":::图标。
 
 1. 选择 **“部署**”下的 **Zip Teams 元数据包**。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="选择 Teams 元数据包":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="屏幕截图是显示选择 zip Teams 元数据包的示例。":::
 
 1. 选择 **“本地**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="选择环境":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="屏幕截图是显示环境中的本地选择的示例。":::
 
 预览本地如下图所示：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="预览":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="屏幕截图是显示本地预览的示例。":::
 
 ## <a name="preview-manifest-file-in-remote-environment"></a>远程环境中的预览清单文件
 
@@ -93,13 +93,13 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
 * 在 Teams 工具包扩展的 **“开发**”下选择 **云中的“预配”**
   
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="预配云资源":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="屏幕截图是显示云资源中预配选择的示例。":::
 
 若要使用命令 palatte 预览清单文件，请执行以下操作：
 
 * 触发 **器 Teams：从命令面板在云中预配** 。
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="使用命令 palatte 预配云资源":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="屏幕截图是显示使用命令 palatte 预配云资源的示例。":::
 
 它生成远程 Teams 应用的配置，并在文件夹下 `build/appPackage` 生成包和预览清单。
 
@@ -112,30 +112,30 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
 1. 在文件的代码段`manifest.template.json`中选择 **“预览**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="预览":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="屏幕截图是一个示例，显示清单文件的代码宽中的预览。":::
 
 1. 选择环境。
 
    > [!NOTE]
    > 如果有多个环境，则需要选择要预览的环境，如下图所示：
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加 env":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="屏幕截图是显示添加环境的示例。":::
 
 以下步骤有助于在远程环境中使用 **Zip Teams 元数据包** 选项预览清单文件：
 
 1. 选择 `manifest.template.json` 文件。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="选择“清单”":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="屏幕截图是显示 manifest.template.json 选择的示例。":::
 
 1. 在Visual Studio Code工具栏中选择 Teams 工具包:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG":::图标。
 
 1. 选择 **“部署**”下的 **Zip Teams 元数据包**。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="选择 Teams 元数据包":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="屏幕截图是显示选择 zip Teams 元数据包的示例。":::
 
 1. 选择环境。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="添加 env":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="屏幕截图是显示添加环境的示例。":::
 
    > [!NOTE]
    > 如果有多个环境，则需要选择要预览的环境，如下图所示：
@@ -153,11 +153,11 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
    * 转到 `manifest.template.json` 文件，然后右键单击以从上下文菜单中进行选择 `Deploy Teams app manifest` 。
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="部署清单":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="屏幕截图是显示所选部署 Teams 应用清单的示例。":::
 
    * 来自命令面板的触发器 `Teams: Deploy Teams app manifest` 。
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="从命令面板部署":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="屏幕截图是显示命令面板中的部署的示例。":::
 
 2. 更新到 Teams 平台。
 
@@ -167,11 +167,11 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
    * 触发 **Teams：将清单更新到** 菜单栏 `manifest.{env}.json`上的 Teams 平台。
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="更新到团队":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="屏幕截图是显示清单菜单栏上的 Teams 平台更新的示例。":::
 
 还可以从命令面板触发 **Teams：将清单更新到 Teams 平台** ：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="树状视图":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="屏幕截图是显示 Teams 选择的示例：从命令面板将清单更新到 Teams 平台。":::
 
 > [!NOTE]
 > 来自编辑器代码管理器或菜单栏的触发器将当前清单文件更新到 Teams 平台。 命令面板中的触发器需要选择目标环境。
@@ -193,7 +193,7 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 * **预览和更新**：本地清单文件根据当前配置覆盖，并已更新到 Teams 平台。
 * **取消**：不执行任何操作。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="屏幕截图是显示的一个示例，即在清单文件因配置或模板更改而过时选择预览、预览和更新以及取消选项的导航。":::
 
 ## <a name="customize-your-teams-app-manifest"></a>自定义 Teams 应用清单
 
@@ -233,7 +233,7 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 
 * 在 VSC 中，从命令面板触发 `Teams: Validate manifest file` ：
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="验证文件":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="屏幕截图是显示来自命令面板的 Teams 验证清单文件的示例。":::
 
 * 在 CLI 中，使用命令：
 
@@ -248,18 +248,18 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 
 In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Screenshot is an example of showing preview values for local and dev environment.":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate values for placeholders.
 
 You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Select your environment":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Screenshot is an example of showing the selection of an environment.":::
 
 To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you haven't provisioned the environment or executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Screenshot is an example of showing the preview values for all environments.":::
 
 ::: zone-end
 
@@ -274,7 +274,7 @@ After scaffolding, in the manifest template file under `templates/appPackage` fo
 
 In the manifest template, select **Project** > **Teams Toolkit** > **Open Manifest File**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Open manifest file" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png" alt-text="Screenshot is an example of showing the navigation to open manifest file." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-open-manifest.png":::
 
 ### Customize app manifest in Teams Toolkit
 
@@ -302,11 +302,11 @@ You can preview values in app manifest in two ways:
 
 * When you hover over the placeholder in `manifest.template.json`, then you can see the values for **dev** and **local** environment.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png" alt-text="Hover over placeholder" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png" alt-text="Screenshot is an example showing when you hover over placeholder, can view the values for dev and local environment." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png":::
 
 * You can also hover over the key besides each placeholder in `manifest.template.json`, and you can see the same values for **dev** and **local** environment.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Hover over key beside placeholder" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Screenshot is an example showing when you hover over key beside placeholder can view the same values for dev and local environment." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png":::
 
    > [!NOTE]
    > If the environment has not been provisioned, or the Teams app dependencies have not been prepared, it indicates that the values for placeholder have not been generated. Please follow the guidance inside hover to generate corresponding values.
@@ -317,26 +317,26 @@ To preview the manifest file, you can sideload for local or deploy for Azure. Yo
 
 * Select **Project** > **Teams Toolkit** and trigger **Prepare Teams App Dependencies** or **Provision in the Cloud** that generates configuration for local or remote Teams app.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Preview manifest file" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png" alt-text="Screenshot is an example of showing preview manifest file." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview-manifest1.png":::
 
 There are two other ways to upload zip app package before you can preview manifest file:
 
 1. From the list of menu select **Project** > **Teams Toolkit** > **Zip App Package**, and select **For Local** or **For Azure**.
 
-    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png" alt-text="Zip app package" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png":::
+    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png" alt-text="Screenshot is an example of showing the navigation to zip app package for local and azure." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-zip1.png":::
 
 1. You can also upload zip app package from Solution Explorer, if you right-click on **MyTeamsApp1** and then select **Teams Toolkit** > **Zip App Package** > **For Local** or **For Azure**.
 
   > [!NOTE]
   > In this scenario the project name is **MyTeamsApp1**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="List of Teams Toolkit menus from solution explorer" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png" alt-text="Screenshot is an example of showing the list of Teams toolkit menus from solution explorer." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-solution-explorer1.png":::
 
 Teams Toolkit generates the zip app package, and to preview manifest file content you can follow the step below:
 
 * Right-click on **manifest.template.json** under **appPackage** folder, select **Preview Manifest File** > **For Local** or **For Azure**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png" alt-text="Preview context menu" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png" alt-text="Screenshot is an example of showing the preview manifest menu for local and azure." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-preview1.png":::
 
 This displays the preview of the manifest file in Visual Studio.
 
@@ -344,12 +344,16 @@ This displays the preview of the manifest file in Visual Studio.
 
 After you've previewed the manifest file in Visual Studio, you can now sync the local changes to the Developer Portal. Select **Project** > **Teams Toolkit** > **Update Manifest in Teams Developer Portal**, or context menu from Solution Explorer. You can now preview the manifest file in Developer Portal as a result of syncing the local changes.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png" alt-text="Update manifest in teams developer portal" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png" alt-text="Screenshot is an example of showing the navigation to update manifest in Teams developer portal." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png":::
+
+The changes are updated to Teams Developer Portal.
 
 > [!NOTE]
-> The changes are updated to Teams Developer Portal. If you have some manual updates in Developer Portal, that can be overwritten. In the **Warning** dialog box you can select **Overwrite and update** or **Cancel**.
+>
+> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any maual updates that can be overwritten in the Develope Portal.
+> * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and existing **Bot ID** under **App features**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Update warning" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Screenshot is an example of showing the update warning." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::
 
 ::: zone-end
 

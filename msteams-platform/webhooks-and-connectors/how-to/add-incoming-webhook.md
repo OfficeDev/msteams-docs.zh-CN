@@ -5,12 +5,12 @@ description: 在本模块中，了解如何将传入 Webhook 添加到 Teams 应
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: de46f651c3dd6df741b4fef47c9813dfd88a6fe0
-ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
+ms.openlocfilehash: 4dd4790f6ff545b01999be7911129a53ab12c72d
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67618256"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990943"
 ---
 # <a name="create-incoming-webhooks"></a>创建传入 Webhooks
 
@@ -20,9 +20,12 @@ ms.locfileid: "67618256"
 * 消息扩展
 * 连接器
 
+> [!IMPORTANT]
+> 可以选择生成通知机器人 Teams 应用，而不是传入 Webhook。 它们的性能类似，但通知机器人具有更多功能。 有关详细信息，请参阅 [使用 JavaScript](../../sbs-gs-notificationbot.yml) 或 [传入 Webhook 通知示例生成通知](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification)机器人。 若要开始，请立即下载 [Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) 并浏览。 有关详细信息，请参阅 [Teams 工具包文档](../../toolkit/teams-toolkit-fundamentals.md)。
+
 请参阅以下视频，了解如何创建传入 Webhook：
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>传入 Webhook 的主要功能
 
@@ -32,7 +35,7 @@ ms.locfileid: "67618256"
 | -------- | ----------- |
 |使用传入 webhook 的自适应卡 | 可以通过传入 Webhook 发送自适应卡片。 有关详细信息，请参阅[使用传入 Webhook 发送自适应卡片](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook)。|
 |可操作消息传递支持|包括 Teams 在内的所有 Office 365 组都支持可操作消息卡片。 如果通过卡片发送消息，则必须使用可操作邮件卡格式。 有关详细信息，请参阅[可操作邮件卡参考](/outlook/actionable-messages/message-card-reference)和[消息卡片操场](https://messagecardplayground.azurewebsites.net)。|
-|独立 HTTPS 消息传递支持|卡片提供清晰且一致的信息。任何可以发送 HTTPS POST 请求的工具或框架都可以通过传入 Webhook 将消息发送到 Teams。|
+|独立 HTTPS 消息传递支持|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
 |Markdown 支持|在可操作消息传递卡片中的所有文本字段都支持基础 Markdown。 请勿在卡片中使用 HTML 标记。 HTML 会遭忽略并被视为纯文本。|
 |作用域配置|传入的 Webhook 在通道级别进行作用域化和配置。|
 |保护资源定义|消息的格式设置为 JSON 有效负载。 此声明性消息传送结构阻止插入恶意代码。|
@@ -95,9 +98,9 @@ Webhook 在 Teams 频道中可用。
 
 ## <a name="code-sample"></a>代码示例
 
-| 示例名称           | 说明 | C#    | Node.js   |
+| 示例名称           | 说明 | C#    |  TypeScript |
 |:---------------------|:--------------|:---------|:--------|
-|传入 Webhook|此示例代码演示如何使用传入 Webhook 发送卡。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+|传入 Webhook|此示例代码演示如何使用传入 Webhook 发送卡。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/TeamsFx-Samples/tree/release/incoming-webhook-notification) |
 
 ## <a name="see-also"></a>另请参阅
 

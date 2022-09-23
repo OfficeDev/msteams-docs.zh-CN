@@ -5,19 +5,19 @@ description: 在本文中，使用 Microsoft Teams 中的聊天机器人共享�
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 90176b63c64d23ae76a8c98515e37455ab0742c0
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: b9d0bda0d733a3b4a3204449ca9fd2ed6746ac98
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363502"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990908"
 ---
 # <a name="build-bots-for-teams"></a>为 Teams 生成机器人
 
-> [!NOTE]
-> 建议使用 Teams 的新一代开发工具创建第一个机器人应用或通知机器人应用。 有关详细信息，请参阅 [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) 和 [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md)。
-
 机器人也称为聊天机器人或对话机器人。 它是一个应用，可由客户服务或支持人员等用户运行简单且重复的任务。 机器人的日常使用包括提供天气信息、预订餐食或提供旅行信息。 与机器人的交互可以是快速问答或复杂的对话。
+
+> [!NOTE]
+> 建议首先 [使用 JavaScript 生成第一个机器人应用](../sbs-gs-bot.yml) ，或者使用适用于 Teams 的新一代开发工具通过 [JavaScript 生成通知机器人](../sbs-gs-notificationbot.yml) 。 有关详细信息，请参阅 [Teams 工具包概述](../toolkit/teams-toolkit-fundamentals.md)。
 
 > [!IMPORTANT]
 >

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: b62c2312524c1844b9b40b32d2d21ecdd2db43dc
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833653"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990887"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams 会议和呼叫的应用
 
@@ -36,8 +36,6 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 访问 [Teams 应用商店](https://go.microsoft.com/fwlink/p/?LinkID=2183121) 并浏览专为会议设计的应用。
 
 > [!Note]
->
-> * 目前，移动版不支持添加应用。 但是，用户可以查看应用，并共享应用以从移动设备进行分阶段操作。
 >
 > * 当前，当第三人称添加到一对一呼叫时，调用将提升为组调用，这意味着新会话将启动。 添加到一对一调用的应用在组调用中不可用。 但是，可以再次添加它们。
 >

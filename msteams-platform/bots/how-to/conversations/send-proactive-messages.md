@@ -4,12 +4,12 @@ description: 了解如何使用 Teams 机器人发送主动消息、使用 Micro
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: adecf29766909fb9a8692aa135e09c41a307c867
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: ec787b827323a462d3ab9ebd76686f5833740534
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586901"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990936"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -22,12 +22,10 @@ ms.locfileid: "67586901"
 * 计划的消息
 
 > [!IMPORTANT]
-> 机器人在政府社区云 (GCC) 和GCC-High中可用，但在国防部 (DOD) 环境中不可用。
 >
-> 对于主动消息，机器人应将以下终结点用于政府云环境：
+> * 若要发送主动消息，建议从 [使用 JavaScript](../../../sbs-gs-notificationbot.yml) 或 [传入 Webhook 通知示例生成通知](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification)机器人开始。 若要开始，请下载 [Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) 浏览。 有关详细信息，请参阅 [Teams 工具包文档](../../../toolkit/teams-toolkit-fundamentals.md)。
 >
-> * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`。
-> * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
+> * 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。 对于主动消息，机器人应将以下终结点用于政府云环境： <br> - GCC： `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH： `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 若要向用户、群集聊天或团队发送主动消息，机器人必须具有发送消息所需的访问权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。
 
@@ -87,7 +85,7 @@ ms.locfileid: "67586901"
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ### <a name="understand-who-blocked-muted-or-uninstalled-a-bot"></a>了解阻止、静音或卸载机器人的人员

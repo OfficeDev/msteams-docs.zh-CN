@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 在本文中，你将了解如何创建深层链接，并使用选项卡在 Microsoft Teams 应用中导航它们。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ea279c9bd4883507df4f56fbf514080940da52b4
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780882"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990999"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -258,7 +258,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 * `content`：会议详细信息字段的可选字段。
 
 > [!NOTE]
-> 目前不支持指定位置。必须指定 UTC 偏移量，它表示生成开始和结束时间时的时区。
+> Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 若要将此深层链接与机器人配合使用，可以在卡片的按钮中将此链接指定为 URL 目标，或通过 `openUrl` 操作类型点击操作。
 
@@ -348,7 +348,7 @@ else { /* handle case where capability isn't supported */ }
 
 查询参数为：
 
-* `fileId`：Sharepoint Online 中的唯一文件 ID，也称为 `sourcedoc`。例如，`1FA202A5-3762-4F10-B550-C04F81F6ACBD`。
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`：租户 ID，如 `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`。
 * `fileType`：支持的文件类型，如 .docx、.pptx、.xlsx 和 .pdf
 * `objectUrl`：文件的对象 URL。 格式为 `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`。 例如，`https://microsoft.sharepoint.com/teams/(filepath)`。
@@ -385,7 +385,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="deep-linking-to-an-app"></a>深层链接到聊天
 
-在 Teams 应用商店中列出应用后，为应用创建深层链接。 若要创建启动 Teams 的链接，请将应用 ID 追加到以下 URL：`https://teams.microsoft.com/l/app/<your-app-id>`。 将显示一个对话框来安装应用。
+在 Teams 应用商店中列出应用后，为应用创建深层链接。 若要创建启动 Teams 的链接，请将应用 ID 追加到以下 URL：`https://teams.microsoft.com/l/app/<your-app-id>`。 将显示一个对话框来安装或打开应用。
 
 > [!NOTE]
 > 如果你的应用已获得移动平台的批准，则可以深入链接到移动版上的应用。 此外，需要使用 Apple App Store Connect Team ID 才能在 Teams-iOS 上使用深层链接。 有关详细信息，请参阅[如何更新 Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center)。
