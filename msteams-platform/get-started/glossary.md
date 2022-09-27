@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的术语
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 2cf9b4c3533b86e45247316e9c6a9da8517494d2
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: c8a9a663244803efb113c09857e21523218108d2
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653159"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027324"
 ---
 # <a name="glossary"></a>术语表
 
@@ -20,7 +20,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [操作命令](../messaging-extensions/how-to/action-commands/define-action-command.md) | 一种使用弹出窗口收集或显示信息的邮件扩展应用。 <br>**另请参阅**：[邮件扩展](#m)；[搜索命令](#s) |
 | [自适应卡](../task-modules-and-cards/what-are-cards.md) | 由自动程序或邮件扩展添加到对话的可操作内容片段。 将文本、图形和按钮与这些卡片配合使用，以进行丰富的通信。 |
-| [匿名用户](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Teams 会议中没有 Azure AD 标识且未与租户联合的参与者类型。他们就像会议中的外部用户。<br>**另请参阅**：[联合用户](#f) |
+| [匿名用户](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**另请参阅**：[联合用户](#f) |
 | [应用程序目录](../toolkit/publish.md) | 存储 SharePoint 和 Office 应用以供组织内部使用的网站。 <br>**另请参阅**：[SPFx](#s) |
 | [应用部件清单](../resources/schema/manifest-schema.md) | Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 清单必须符合 [清单架构](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)。 |
 | [应用包](../concepts/build-and-test/apps-package.md) | Teams 应用包是一个 zip 文件，其中包含应用清单文件、颜色图标和大纲图标。 |
@@ -36,7 +36,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [Blazor](../get-started/get-started-overview.md) | 一个免费的开源 Web 框架，使开发人员能够使用 C# 和 HTML 创建 Web 应用。它正由 Microsoft 开发。 |
+| [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
 | [Bicep](../toolkit/provision.md) | 声明性语言，这意味着元素可以按任意顺序显示。 与命令性语言不同，元素的顺序不会影响部署的处理方式。 |
 | [Bot](../bots/what-are-bots.md) | 机器人是执行已编程重复性任务的应用。 <br> **另请参阅**：[对话机器人](#c)；[聊天机器人](#c) |
 | [机器人仿真器](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | 一个桌面应用程序，可用于在本地或远程测试和调试机器人。 |
@@ -78,7 +78,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [E5 开发人员帐户](../toolkit/accounts.md) | 用于构建应用以扩展 Microsoft 365 的 E5 开发人员订阅。 包括仅用于开发用途的 25 个用户许可证（包括管理员）。  <br>**另请参阅**：[Microsoft 365 帐户](#m) |
+| [E5 开发人员帐户](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | 用于构建应用以扩展 Microsoft 365 的 E5 开发人员订阅。 包括仅用于开发用途的 25 个用户许可证（包括管理员）。  <br>**另请参阅**：[Microsoft 365 帐户](#m) |
 | [入口点](../concepts/app-fundamentals-overview.md) | Teams 应用的访问点，例如团队、频道和聊天，用户可在其中使用你的应用。 |
 | [环境](../toolkit/teamsfx-multi-env.md) | Teams 工具包中的一项功能，可用于为应用项目创建和使用多个开发环境。 Teams 工具包默认创建两个开发环境：本地环境和开发环境。 <br>**另请参阅**：[本地环境](#l)；[开发环境](#d) |
 
@@ -104,7 +104,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [身份提供程序](../concepts/authentication/authentication.md) | 一个实体，用于存储并向用户提供凭据。 它还允许用户自行注册。  <br>**另请参阅**：[身份验证](#a) |
 | [传入 Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | 它允许外部应用在 Teams 频道中共享内容。 这些 Webhook 可以用作跟踪和通知工具。 <br>**另请参阅**：[Webhook](#w)；[传出 Webhook](#o) |
-| [会议内应用体验](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Teams 会议生命周期的一个阶段。借助会议内应用体验，可以在会议期间通过使用应用和会议中的对话框来吸引与会者。<br>**另请参阅**：[会议生命周期](#m) |
+| [会议内应用体验](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**另请参阅**：[会议生命周期](#m) |
 
 ## <a name="l"></a>L
 
@@ -113,7 +113,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [链接展开](../messaging-extensions/how-to/link-unfurling.md) | 一项和消息扩展和会议配合使用的功能，可用于展开粘贴到撰写消息区域的链接。 链接展开以在自适应卡片或会议阶段视图中显示有关链接的其他信息。 |
 | [本地环境](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Teams 工具包创建的默认开发环境。  <br>**另请参阅**：[环境](#e)；[开发环境](#d) |
 | [本地工作台](../sbs-gs-spfx.yml) | 在使用 SPFx 创建的 Visual Studio Code 中运行和调试 Teams 应用的默认选项。 <br>**另请参阅**：[工作台](#w)；[Teams 工作台](#t) |
-| [位置功能](../concepts/device-capabilities/location-capability.md) | 可与应用集成的设备功能，用于了解应用用户的地理位置，以增强协作体验。此功能目前仅适用于 Teams 移动客户端。<br>**另请参阅**：[功能](#c)；[媒体功能](#m)；[设备功能](#d)；[Teams Mobile](#t) |
+| [位置功能](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**另请参阅**：[功能](#c)；[媒体功能](#m)；[设备功能](#d)；[Teams Mobile](#t) |
 | [低代码应用](../samples/teams-low-code-solutions.md) | 使用 Microsoft Power Platform 从头开始构建的自定义 Teams 应用，只需少量编码或无需编码，并且可以快速开发和部署。 |
 
 ## <a name="m"></a>M
@@ -124,11 +124,11 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [会议机器人](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | 使用实时语音、视频和屏幕共享与 Teams 通话和会议进行交互的机器人。 <br>**另请参阅**：[通话机器人](#c)；[聊天机器人](#c) |
 | [会议生命周期](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | 它涵盖会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和邮件扩展。 <br>**另请参阅**：[会议内体验](#i) |
 | [会议阶段](../sbs-meetings-stage-view.yml) | 会议扩展应用的一项功能。 它是在会议期间所有参与者都可访问的共享空间。 可帮助参与者实时与应用内容进行交互和协作。 <br>**另请参阅**：[阶段视图](#s) |
-| [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md) | 邮件扩展是插入应用内容或对消息执行操作的快捷方式。无需离开对话即可使用邮件扩展。<br>**另请参阅**：[搜索命令](#s)；[操作命令](#a) |
+| [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**另请参阅**：[搜索命令](#s)；[操作命令](#a) |
 | [会议扩展](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | 旨在用于在会议生命周期内提高工作效率的应用，例如白板、仪表板等。 |
 | [Microsoft 365 账户](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 帐户包含 25 个仅用于开发用途的用户许可证，包括管理员。 |
 | [Microsoft 365 开发人员计划](../toolkit/tools-prerequisites.md)| Microsoft 365 开发人员计划可帮助你构建扩展 Microsoft 365 的应用。 |
-| [Microsoft Graph 浏览器](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | 通往 Microsoft 365 中数据和智能的网关。它提供了一个统一的可编程性模型，可用于访问 Microsoft 365、Windows 10 和企业移动性 + 安全性中的数据。 |
+| [Microsoft Graph 浏览器](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams 是一种组协作软件，可用于帮助团队开展远程协作。 |
 | [Microsoft Teams 平台](../concepts/app-fundamentals-overview.md) | 借助 Microsoft Teams 开发人员平台，开发人员可以轻松地将自己的应用和服务与 Teams 集成。 |
 | [Microsoft Teams UI 库](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 模板和相关组件。 |
@@ -151,7 +151,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [个人应用](../concepts/design/personal-apps.md) | 个人应用是具有个人范围的 Teams 应用程序。 它侧重于与单个用户的交互。 它可以是一个对话机器人，可以与用户或提供嵌入式 Web 体验的个人选项卡进行一对一对话，或两者兼具。 <br>**另请参阅**：[共享应用](#s) |
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | 无代码引导式图形界面解决方案，可支持团队的每个成员创建可轻松与 Teams 平台集成的丰富对话聊天机器人。 |
 | [主动邮件](../bots/how-to/conversations/send-proactive-messages.md) | 由机器人发送的一条消息，例如欢迎消息、通知、计划的消息，该消息不响应来自用户的请求。 |
-| [预配](../toolkit/provision.md) | 在 Azure 和 Microsoft 365 中为应用创建资源，但不会将代码 (HTML、CSS、JavaScript 等) 复制到资源中。这是部署的先决条件。<br>**另请参阅**：[部署](#d) |
+| [预配](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**另请参阅**：[部署](#d) |
 
 ## <a name="r"></a>R
 
@@ -168,12 +168,12 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [搜索命令](../messaging-extensions/how-to/search-commands/define-search-command.md) | 一种邮件扩展应用，允许用户搜索外部系统，并使用卡片将搜索结果包含到邮件中。 <br>**另请参阅**：[邮件扩展](#m)；[操作命令](#a) |
 | [顺序工作流](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | 允许机器人根据用户响应与用户进行对话的工作流。 |
 | [共享应用](../concepts/extensibility-points.md#shared-app-experiences) | 存在于团队、频道或聊天中的应用，用户可以在其中进行协作和交互。 <br>**另请参阅：** 个人应用 |
-| [SharePoint 网站集](../sbs-gs-spfx.yml) | SharePoint 应用的集合网站。在 SharePoint 网站上部署基于 SPFx 的应用之前，需要拥有此网站的管理员帐户。<br>**另请参阅**：SPFx |
+| [SharePoint 网站集](../sbs-gs-spfx.yml) | A collection site for SharePoint apps. You need to have an administrator account for this site before you can deploy your SPFx-based app on the SharePoint site. <br>**另请参阅**：SPFx |
 | [旁加载](../toolkit/publish.md#publish-to-individual-scope-or-sideload-permission) | 将 Teams 应用加载到 Teams 客户端，以在将其分发之前在 Teams 环境中对其进行测试的过程。 |
 | [SidePanel](../sbs-meetings-sidepanel.yml) | Teams 会议应用的一项功能，可用于自定义会议中的体验，并允许组织者和演示者具有不同的视图和操作集。 |
 | [SPFx](../sbs-gs-spfx.yml) | SharePoint 框架 (SPFx) 是一种开发模型，用于为 Microsoft Teams 和 SharePoint 构建客户端解决方案。 |
 | SSO | 单一登录的首字母缩写，这是一种身份验证方法。使用此方法，用户只需登录一次软件平台的独立服务（如 Microsoft 365）。 然后，用户无需再次进行身份验证即可访问所有服务。 <br>**另请参阅**：[身份验证](#a) |
-| [阶段视图](../sbs-meetings-stage-view.yml) | 一个用户界面组件，可用于呈现在 Teams 中全屏打开并固定为选项卡的内容。调用它以在 Teams 中显示 Web 内容。请注意，它与会议阶段 *不* 同。<br>**另请参阅**：[会议阶段](#m) |
+| [阶段视图](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it is *not* the same as meeting stage. <br>**另请参阅**：[会议阶段](#m) |
 | [独立应用](../samples/integrating-web-apps.md) | 单页面或大型复杂应用。 用户可以在 Teams 中使用它的某些方面。 <br>**另请参阅**：[协作 aap](#c) |
 | [静态搜索](../task-modules-and-cards/cards/dynamic-search.md) | 一种 typeahead 搜索方法，允许用户从自适应卡片有效负载中的预指定值进行搜索。 <br>**另请参阅**：[动态搜索](#d) |
 | [应用商店验证指南](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | 一组特定于 Teams 的指南，用于在将应用提交到 Teams 应用商店之前对其进行验证。 <br>**另请参阅**：[Teams 商店](#t) |
@@ -186,9 +186,9 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [选项卡聊天](../tabs/how-to/conversational-tabs.md) | 一种选项卡类型，允许用户在动态选项卡中获得重点对话体验。 |
 | [任务模块](../task-modules-and-cards/what-are-task-modules.md) | Teams 应用的一项功能，可创建用于完成任务、显示视频或仪表板的模式弹出窗口。 |
 | [线程讨论](../tabs/design/tabs.md#thread-discussion) | 在频道上发布的对话或用户之间的聊天。 <br>**另请参阅**：[对话](#c)；[频道](#c) |
-| [Teams](../overview.md) | Microsoft Teams 是组织提供的终极消息应用。它是用于实时协作和通信、会议、文件和应用共享的工作区。 |
+| [Teams](../overview.md) | Microsoft Teams is the ultimate message app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
 | [Teams 工具包](../toolkit/teams-toolkit-fundamentals.md) | 借助 Microsoft Teams 工具包，可以直接在 Visual Studio Code 环境中创建自定义 Teams 应用程序。  |
-| [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx 是基于文本的命令行接口，可加速 Teams 应用程序开发。也称为 TeamsFx CLI。|
+| [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK 是使用 TeamsFx 工具包或 CLI 在基架项目中预配置的。 |
 | [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK 使你能够在 Teams 中创建托管体验。 从 TeamsJS v.2.0.0 开始，可以扩展 Teams 应用以在 Outlook 和 Office 中运行。 |
 | [Teams 移动](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams 作为移动应用提供。 |
@@ -213,7 +213,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [网站 URL](../tabs/design/tabs-mobile.md) | 应用清单文件 (`websiteUrl`) 中的一个属性，该属性将应用链接到相关产品的组织网站或登陆页面。这是 Teams 移动客户端的强制性配置。 <br>**另请参阅**：[应用清单](#a)；[Teams 移动](#t) |
+| [网站 URL](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. It's a mandatory configuration for Teams mobile client. <br>**另请参阅**：[应用清单](#a)；[Teams 移动](#t) |
 | [Web 应用](../samples/integrate-web-apps-overview.md) | 在 Web 服务器上运行的应用。 它可以与 Microsoft Teams 平台集成。 |
 | [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | 它是 Teams 应用的一项功能，用于将其与外部应用集成。 <br>**另请参阅**：传入 webhook；传出 Webhook |
 | [Web 部件](../sbs-gs-spfx.yml) | 用于在使用 Visual Studio Code 和 SharePoint 框架创建的 Teams 应用中生成页面或网站的 UI 组件。 <br>**另请参阅**：[SPFx](#s) |

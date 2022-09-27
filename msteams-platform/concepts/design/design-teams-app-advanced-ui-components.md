@@ -5,12 +5,12 @@ description: 了解 Teams UI 组件，如痕迹、通知栏、阶段视图以及
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 055ee4440982add222b76454f1ff4382f129ff21
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: d0c95c680e4cbf81776ebe7d5b0a580b5cff7d2d
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558840"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027345"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>使用高级 UI 组件设计 Microsoft Teams 应用
 
@@ -18,10 +18,10 @@ ms.locfileid: "66558840"
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI 工具包基于 <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>，包括专为构建 Teams 应用而设计的组件和模式。 在 UI 工具包中，可以直接将此处列出的组件抓取并插入到设计中，并查看有关如何使用每个组件的更多示例。
+Microsoft Teams UI 工具包基于 [Fluent UI](https://fluentsite.z22.web.core.windows.net/)，包括专为构建 Teams 应用而设计的组件和模式。 在 UI 工具包中，可以直接将此处列出的组件抓取并插入到设计中，并查看有关如何使用每个组件的更多示例。
 
 > [!div class="nextstepaction"]
-> [获取 Microsoft Teams UI Kit （用户）](https://www.figma.com/community/file/916836509871353159)
+> [获取 Microsoft Teams UI Kit（用户）](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>痕迹导航栏
 

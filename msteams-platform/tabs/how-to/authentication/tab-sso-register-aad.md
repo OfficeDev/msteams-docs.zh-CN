@@ -4,12 +4,12 @@ description: 通过配置应用 ID URI、访问令牌范围和预授权受信任
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Microsoft Azure Active Directory (Azure AD) 访问令牌 SSO 租户范围的 Teams 身份验证选项卡
-ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 92b974840262fedb268aa7c160aa28fc0a33e2cb
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653195"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027093"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>在 Azure AD 中注册选项卡应用
 
@@ -154,8 +154,8 @@ Azure AD 配置为 Teams 中的选项卡应用启用 SSO。 它使用访问令�
     >
     >   | 如果使用了基本资源名称 | URL 将为... | 支持格式... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | 所有平台|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | 仅限桌面、Web 和 iOS。 Android 不支持此功能。 |
+    >   | *demoapplication* | `https://demoapplication.example.net` | 所有平台|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | 仅限桌面、Web 和 iOS。 Android 不支持此功能。 |
     >
     >    使用小写选项 *demoapplication* 作为基本资源名称。
 

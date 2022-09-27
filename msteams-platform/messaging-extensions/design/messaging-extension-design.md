@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: bb85c9c7d00fea47796e171cc1a0175367462942
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338898"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027079"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>设计 Microsoft Teams 邮件扩展
 
@@ -117,7 +117,7 @@ ms.locfileid: "67338898"
 
 ### <a name="insert-content-into-a-message"></a>在消息中插入内容
 
-**1.选择邮件扩展**。用户可以从撰写框中搜索要共享的内容。
+**1. Select a message extension**. Users can search for the content they want to share from the compose box.
 
 #### <a name="mobile"></a>移动设备
 
@@ -127,7 +127,7 @@ ms.locfileid: "67338898"
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="示例展示了用户从撰写框搜索要插入的内容。":::
 
-**2.插入内容**。发布内容后，其他人可以回复或选择内容，以查看应用中的详细信息。
+**2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
 #### <a name="mobile"></a>移动设备
 
@@ -161,7 +161,7 @@ ms.locfileid: "67338898"
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="示例演示了用户如何在撰写框中粘贴链接。":::
 
-**2.插入内容**。如果应用识别出撰写框中的 URL，它会将链接呈现为提供 Web 内容的内容丰富的预览的卡片。（有关详细信息，请参阅 [自适应卡片设计指南](../../task-modules-and-cards/cards/design-effective-cards.md)。）
+**2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
 #### <a name="mobile"></a>移动设备
 
@@ -230,7 +230,7 @@ ms.locfileid: "67338898"
 
 #### <a name="do-integrate-with-single-sign-on"></a>建议：与单一登录集成
 
-S单一登录可使登录过程更轻松、更快速、更安全。此外，如果用户已登录到你的个人应用，则不必重新登录即可访问邮件扩展。
+SSO makes the sign-in process easier, faster, and secure. Also, if a user has already signed in to your personal app, they don’t have to also sign in again to access the message extension.
 
    :::column-end:::
    :::column span="":::
@@ -276,7 +276,7 @@ S单一登录可使登录过程更轻松、更快速、更安全。此外，如�
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>建议：充分利用 Teams 颜色令牌
 
-每个 Teams 主题都有自己的配色方案。 若要自动处理主题更改，请在设计中使用<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">颜色令牌 (Fluent UI)</a>。
+每个 Teams 主题都有自己的配色方案。 若要自动处理主题更改，请在设计中使用[颜色令牌 (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme)。
 
    :::column-end:::
    :::column span="":::

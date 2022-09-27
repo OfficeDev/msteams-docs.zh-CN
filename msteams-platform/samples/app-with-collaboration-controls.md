@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用 Teams 协作控件生成模型
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: b5300a66fa8a5948a2081e90e8ad138858d38f3f
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178931"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027338"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>使用 Teams 协作控件创建新的模型驱动应用
 
@@ -190,9 +190,9 @@ ms.locfileid: "67178931"
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="屏幕截图是显示图形资源管理器的示例。":::
 
      1. 确保将主机名替换为主机名和站点路径的相对路径，并调用 `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`图形。 下面是一个示例：
-         1. 如果网站 URL = <https://myhostname.sharepoint.com/sites/MySiteName>
-         1. 主机名 = myhostname.sharepoint.com
-         1. 站点的相对路径 = sites/MySiteName
+         1. 如果网站 URL = `https://myhostname.sharepoint.com/sites/MySiteName`
+         1. 主机名 = `myhostname.sharepoint.com`
+         1. 站点的相对路径 = `sites/MySiteName`
 
               :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="屏幕截图是显示 Graph 调用的示例。":::
 

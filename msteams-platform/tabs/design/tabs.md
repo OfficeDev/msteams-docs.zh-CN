@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 26e6982cf7b00d21fb8a15e0d8f194ac8d08ac7d
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558322"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026995"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>为 Microsoft Teams 设计选项卡
 
@@ -62,7 +62,7 @@ ms.locfileid: "66558322"
 |3|**iframe**: 为应用的内容提供响应的空间 (例如，选项卡设置或身份验证)。|
 |4|**关于链接**: 打开一个对话框，其中显示有关应用的详细信息，例如完整说明、应用所需的权限，以及指向隐私策略和服务条款的链接。|
 |5|**关闭按钮**: 关闭对话框。|
-|6 |**通知团队成员选项**: 对话框询问用户是否要创建一个帖子让其他人知道他们添加了选项卡。|
+|6|**通知团队成员选项**: 对话框询问用户是否要创建一个帖子让其他人知道他们添加了选项卡。|
 |7 |**后退按钮**: 根据对话框打开的位置转到上一步。|
 |8 |**保存按钮**: 完成选项卡设置。|
 
@@ -270,7 +270,7 @@ ms.locfileid: "66558322"
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>建议：充分利用 Teams 颜色令牌
 
-每个 Teams 主题都有自己的配色方案。 若要自动处理主题更改，请在设计中使用<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">颜色令牌 (Fluent UI)</a>。
+每个 Teams 主题都有自己的配色方案。 若要自动处理主题更改，请在设计中使用[颜色令牌 (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme)。
 
    :::column-end:::
    :::column span="":::

@@ -3,46 +3,51 @@ title: Teams 中面向开发人员的新增功能和更新
 description: 引入了哪些新的 Microsoft Teams 开发人员功能，以及对现有功能的更新。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b5ca7ab2aa0a2861b8cc9d402e30eec5409b9aff
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+zone_pivot_groups: What-new-features
+ms.openlocfilehash: 2540738b2001363c6bc4466bcaa0b4754d4935cc
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858900"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027167"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
-发现正式版 （GA） 和开发人员预览版中的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
+::: zone pivot="ga-feature"
 
-<!--
-## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
+发现正式发布 (正式版) 的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
 
-| Date | Update | Find here |
-| --- | --- | --- |
-|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
-|05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
-|05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
-|05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
--->
+## <a name="generally-available"></a>正式发布
 
-## <a name="ga-features"></a>GA 功能
+:::row:::
+:::column:::
+
+:::image type="icon" source="~/assets/images/general-availabe.png" alt-text="汇报正式版功能":::
+
+:::column-end:::
+:::column span="2":::
 
 适用于所有应用开发人员的 Microsoft Teams 平台功能。
 
-<br>
+**2022 年 9 月**
 
+* ***2022 年 9 月 16*** 日： [基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* ***2022 年 9 月 6*** 日： [引入了用于通过 `selectMedia` API 使用相机捕获视频的代码片段。](concepts/device-capabilities/media-capabilities.md#code-snippets)
+
+:::column-end:::
+:::row-end:::
+
+<br>
 <details>
 <summary><b>2022</b></summary>
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-| 09/16/2022 | 基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。 | 生成消息扩展>搜索命令>定义搜索命令> [基于搜索的消息扩展的通用操作](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md) |
-| 09/06/2022 | `selectMedia` 用于使用相机捕获视频的 API | 集成设备功能 > [集成媒体功能](concepts/device-capabilities/media-capabilities.md#code-snippets) |
 | 08/09/2022 | 为 Visual Studio 2022 引入了 Teams 工具包 | 工具和 SDK > 适用于 Visual Studio 的 Teams 工具包 > [适用于 Visual Studio 的 Teams 工具包概述](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 2022/08/03 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 2022/08/03 | 添加了在会议后场景中检索会议脚本的功能。 | 为 Teams 会议和通话构建应用 > 使用 Graph API 获取会议脚本 > [概述](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 2022/08/03 | 将展开共享链接到 Web 应用中的团队 | 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 08/01/2021| 注意：开发人员门户现已正式发布，App Studio 自 2022 年 8 月 1 日开始弃用。 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
+| 08/01/2022| 注意：开发人员门户现已正式发布，App Studio 自 2022 年 8 月 1 日开始弃用。 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
 | 07/28/2022 | 为会议内通知添加 Teams 显示图片和人员卡片| 为 Teams 会议和通话构建应用>为会议启用和配置应用>[会议内通知](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 07/28/2022 | 在 Teams 中构建共享频道 | 为 Teams 会议和通话构建应用>[共享频道](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|引入的应用清单 v1.14| 应用部件清单> [Teams 的应用部件清单架构](resources/schema/manifest-schema.md)|
@@ -91,15 +96,13 @@ ms.locfileid: "67858900"
 | 01/17/2022 | 适用于桌面的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
-
-<br>
-
+</br>
 <details>
 <summary><b>较旧的更新</b></summary>
-<br>
-浏览此处列出的以前 GA 版本的更新。
-<br><br>
 
+浏览此处列出的以前 GA 版本的更新。
+
+</br>
 <details>
 <summary><b>2021</b></summary>
 
@@ -203,7 +206,7 @@ ms.locfileid: "67858900"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-| 12/26/2019 | 发送到机器人的有效负载中的 `replyToId` 参数不再加密，因此可以使用此值构造这些消息的深层链接。消息有效负载包括参数 `legacy.replyToId` 中的加密值。  |
+| 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
 | 11/05/2019 | 使用 Teams JavaScript SDK 的单一登录。 | [单一登录](tabs/how-to/authentication/tab-sso-overview.md) |
 | 10/31/2019 | 已更新对话机器人和邮件扩展文档，以反映 4.6 Bot Framework SDK。 有关 v3 SDK 的文档，请参阅"资源"部分。 | 所有机器人和邮件扩展文档 |
 | 10/31/2019 | 新的文档结构和主要文章重构。 请通过创建 GitHub 问题来报告任何死链接或 404。 | 全部都一样！ |
@@ -259,14 +262,34 @@ ms.locfileid: "67858900"
 |
 </details>
 </details>
+</details>
+::: zone-end
+
+::: zone pivot="dev-preview"
+
+发现开发人员预览版中的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
 
 ## <a name="developer-preview"></a>开发者预览版
 
-开发人员预览是一个公共计划，可提前访问未发布 Teams 功能。  
+:::row:::
+:::column:::
+
+:::image type="icon" source="~/assets/images/developer-preview.png" alt-text="开发人员预览版中提供的功能汇报":::
+
+:::column-end:::
+:::column span="2":::
+
+开发人员预览是一个公共计划，可提前访问未发布 Teams 功能。
+
+**2022 年 9 月**
+
+***2022 年 9 月 23*** 日： [引入了对计划频道会议的会议应用支持。](apps-in-teams-meetings/meeting-app-extensibility.md)
+
+:::column-end:::
+:::row-end:::
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-| 09/20/2022 | 引入了对计划频道会议的会议应用支持 | 为 Teams 会议和呼叫构建应用> [统一会议应用](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/10/2022 | 计划公共频道会议的应用 | 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 2022/08/03 | 在 Teams 会议阶段将应用的 API 静音和取消静音 | 为 Teams 会议和通话生成应用 > [会议应用 API 参考](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Teams 协作控制| 与 Teams > [协作控件集成](samples/collaboration-control.md)|
@@ -279,9 +302,36 @@ ms.locfileid: "67858900"
 
 有关详细信息，请参阅[ Teams 公共开发人员预览版](~/resources/dev-preview/developer-preview-intro.md)。
 
+::: zone-end
+
+::: zone pivot="dep-feature"
+
+发现已弃用的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
+
+## <a name="deprecated"></a>不推荐使用
+
+:::row:::
+:::column:::
+
+:::image type="icon" source="~/assets/images/deprecated.png" alt-text="不推荐使用的功能":::
+
+:::column-end:::
+:::column span="2":::
+
+Microsoft Teams 平台功能不可用。
+
+**2022 年 8 月**
+
+***2022 年 8 月 1*** 日：已弃用 App Studio，使用 Teams [开发人员门户](concepts/build-and-test/teams-developer-portal.md) 。
+
+:::column-end:::
+:::row-end:::
+
+::: zone-end
+
 ## <a name="teams-app-template-catalog"></a>Teams 应用程序模板目录
 
-除了新功能外，我们还提供[生产就绪的 Teams 应用模板](samples/app-templates.md)，你可以立即部署或根据需要进行修改。新添加的模板以星型 ☆表示。
+Along with new features, we also provide [production-ready Teams app templates](samples/app-templates.md) that you can deploy right away or modify to your needs. Newly added templates are indicated with a star ☆.
 
 ## <a name="submit-your-feedback"></a>提交反馈
 
@@ -296,7 +346,7 @@ ms.locfileid: "67858900"
 1. 打开 Microsoft Teams。
 1. 从左窗格中选择“**Teams**”。
 1. 选择团队中的频道。
-1. 选择省略号 &#x25CF;&#x25CF;&#x25CF； 然后从下拉列表 **中选择连接器**。
+1. 选择省略号 &#x25CF;&#x25CF;&#x25CF; ，然后从下拉列表中选择 **“连接器**”。
 1. 在出现的 “**连接器**” 对话框中搜索 **RSS**。
 1. 选择“**配置**”。
 1. 在“**输入RSS 连接器的名称”中输入名称。**

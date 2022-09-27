@@ -3,12 +3,12 @@ title: 清单架构参考
 description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 68208d7a3c2ff1547d6b686cad966f5878bc8780
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990929"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026967"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
@@ -634,7 +634,7 @@ Provides the native features on a user's device that your app requests access to
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
 |`id`|string|36 个字符|✔️|应用的 Azure AD 应用程序 ID。 此 ID 必须是 GUID。|
-|`resource`|string|2048 个字符|✔️|用于获取 SSO 的身份验证令牌的应用的资源 URL。 </br> **注意：** 如果未使用 SSO，请确保在此字段中将虚拟字符串值输入到应用清单，例如， <https://notapplicable> 以避免错误响应。 |
+|`resource`|string|2048 个字符|✔️|用于获取 SSO 的身份验证令牌的应用的资源 URL。 </br> **注意：** 如果未使用 SSO，请确保在此字段中将虚拟字符串值输入到应用清单，例如， `https://notapplicable` 以避免错误响应。 |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -886,7 +886,7 @@ Specify meeting extension definition. For more information, see [custom Together
     |`MeetingStage.Write.Chat`|允许应用代表已登录用户在与此聊天关联的会议中显示会议阶段的内容。|
     |`OnlineMeetingParticipant.Read.Chat`|允许应用代表已登录用户读取与此聊天关联的会议的参与者信息，包括姓名、角色、ID、加入和离开时间。|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|允许应用代表登录用户为与此聊天关联的会议中的参与者切换传入音频。|
-    |`LiveShareSession.ReadWrite.Chat`|允许应用为与此聊天关联的会议创建和同步 Live Share 会话，并代表登录用户访问有关会议名册的相关信息，例如成员的会议角色。|   
+    |`LiveShareSession.ReadWrite.Chat`|允许应用为与此聊天关联的会议创建和同步 Live Share 会话，并代表登录用户访问有关会议名册的相关信息，例如成员的会议角色。|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|允许应用代表已登录用户检测与此聊天关联的会议中传入音频状态的变化。|
 
 * **用户的资源对应的委派权限**

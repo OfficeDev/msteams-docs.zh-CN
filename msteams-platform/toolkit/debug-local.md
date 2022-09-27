@@ -7,15 +7,14 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 1c1052e2542354cd1b403d8a3df0be24cbd01bee
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 24d231ef7a76ede1d45176d5869caa9a76a791be
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806750"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026960"
 ---
 # <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
-
 
 Teams 工具包可帮助你在本地调试和预览 Microsoft Teams 应用。 在调试过程中，Teams 工具包会自动启动应用服务、启动调试器和旁加载 Teams 应用。 调试后，可以在 Teams Web 客户端本地预览 Teams 应用。
 

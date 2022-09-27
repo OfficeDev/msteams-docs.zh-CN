@@ -3,12 +3,12 @@ title: 使用外部 OAuth 提供程序
 description: 使用外部 OAuth 提供程序对应用用户进行身份验证，并了解如何将其添加到外部浏览器。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: ca88471405fa06713261d56eaf94179c7896d8c4
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 4892dc23174e34015a02a9afff64269e01871fb5
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605052"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027317"
 ---
 # <a name="use-external-oauth-providers"></a>使用外部 OAuth 提供程序
 
@@ -31,7 +31,7 @@ function authenticate(authenticateParameters: AuthenticatePopUpParameters): Prom
 | --- | --- |
 |`isExternal` | 参数的类型为布尔值，指示身份验证窗口在外部浏览器中打开。|
 |`height` |弹出窗口的首选高度。 如果值超出可接受的边界，则可以忽略该值。|
-|`url`  <br>|身份验证弹出的 3P 应用服务器 URL，具有以下两个参数占位符：</br> <br> - `oauthRedirectMethod`：传递 `{}` 中的占位符。此占位符被 Teams 平台替换为 deeplink 或网页，这会通知应用服务器呼叫是否来自移动平台。</br> <br> - `authId`：此占位符被 UUID 替换。 应用服务器使用它来维护会话。| 
+|`url`  <br>|身份验证弹出的 3P 应用服务器 URL，具有以下两个参数占位符：</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`：此占位符被 UUID 替换。 应用服务器使用它来维护会话。|
 |`width`|弹出窗口的首选宽度。 如果值超出可接受的边界，则可以忽略该值。|
 
 有关参数的详细信息，请参阅 [authenticatePopUpParameters () 函数的身份验证 ](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) 。
@@ -39,7 +39,8 @@ function authenticate(authenticateParameters: AuthenticatePopUpParameters): Prom
 ## <a name="add-authentication-to-external-browsers"></a>向外部浏览器添加身份验证
 
 > [!NOTE]
-> * 目前，只能向外部浏览器添加对移动版选项卡的身份验证。 
+>
+> * 目前，只能向外部浏览器添加对移动版选项卡的身份验证。
 > * 使用 JS SDK 的 beta 版本来利用此功能。 beta 版本通过 [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2) 提供。
 
 下图提供了向外部浏览器添加身份验证的流：
@@ -53,7 +54,6 @@ function authenticate(authenticateParameters: AuthenticatePopUpParameters): Prom
    3P 应用调用 SDK 函数 `authentication.authenticate`，`isExternal` 设置为 true 以启动外部身份验证登录过程。
 
    传递的 `url` 包含 `{authId}` 的占位符，以及 `{oauthRedirectMethod}`。  
-
 
     ```JavaScript
     import { authentication } from "@microsoft/teams-js";
@@ -102,7 +102,7 @@ function authenticate(authenticateParameters: AuthenticatePopUpParameters): Prom
 
 5. 登录到外部浏览器。
 
-   用户登录到外部浏览器。OAuth 提供程序使用身份验证代码和状态对象重定向回 `redirect_uri`。
+   User signs in to the external browser. The OAuth providers redirects back to the `redirect_uri` with the auth code and the state object.
 
 6. 3P 应用服务器检查并响应 Teams。
 
@@ -126,7 +126,7 @@ function authenticate(authenticateParameters: AuthenticatePopUpParameters): Prom
    return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
- 8. Teams 调用成功回调并发送结果。
+8. Teams 调用成功回调并发送结果。
 
     Teams 调用成功回调，并将结果（身份验证代码）发送到 3P 应用。 3P 应用接收成功回调中的代码，并使用代码检索令牌、用户信息、更新用户界面。
 
@@ -138,5 +138,5 @@ function authenticate(authenticateParameters: AuthenticatePopUpParameters): Prom
 
 ## <a name="see-also"></a>另请参阅
 
-* [配置标识提供程序](../../../concepts/authentication/configure-identity-provider.md)
+* [配置标识提供程序](~/concepts/authentication/authentication.md)
 * [选项卡的 Microsoft Teams 身份验证流](auth-flow-tab.md)

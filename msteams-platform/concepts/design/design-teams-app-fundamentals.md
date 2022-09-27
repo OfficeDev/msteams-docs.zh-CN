@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 654bc49cfc671b849e3b88aae1eefa5d1bbaef02
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558833"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026974"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams 应用设计系统
 
-快速了解 Teams 应用设计的基础知识。 可以在 <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI 工具包 (Figma) </a>中找到全面的指南和示例。
+快速了解 Teams 应用设计的基础知识。 可以在 [Microsoft Teams UI 工具包 (Figma) ](https://www.figma.com/community/file/916836509871353159)中找到全面的指南和示例。
 
 ## <a name="layout"></a>布局
 
@@ -42,7 +42,7 @@ ms.locfileid: "66558833"
 
       头像是 Teams 中人员、团队、机器人或实体的图形表示形式。 头像组通常用于传达实时活动，或者代表保留垂直空间的名单。 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的头像指南 (Figma)</a>
+      * [请参阅完整的头像指南 (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::
@@ -62,7 +62,7 @@ ms.locfileid: "66558833"
 
       你还可以在整个应用中使用 Fluent UI 图标：
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">获取最新的 Fluent 图标集 (Figma)</a>
+      * [获取最新的 Fluent 图标集 (Figma)](https://www.figma.com/community/file/836835755999342788)
       * [实施图标 (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
@@ -81,7 +81,7 @@ ms.locfileid: "66558833"
 
       Teams 在其类型渐变和不同字体大小和权重中使用 Segoe UI，以帮助创建层次结构并确保可读性。
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的类型指南 (Figma)</a>
+      * [请参阅完整的类型指南 (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [实施版式 (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
@@ -100,7 +100,7 @@ ms.locfileid: "66558833"
 
       Teams Web 版和桌面版均支持默认（浅色）、深色和高对比度主题，而 Teams移动版则只支持浅色和深色主题。 每个主题都有自己的配色方案。
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的颜色指南和提供的颜色令牌 (Figma)</a>
+      * [请参阅完整的颜色指南和提供的颜色令牌 (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [实施颜色 (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
@@ -118,7 +118,7 @@ ms.locfileid: "66558833"
 
       可以在应用中使用形状和提升来创建其他层次结构。 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的形状和提升指南 (Figma)</a>
+      * [请参阅完整的形状和提升指南 (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [实施形状和提升 (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
@@ -137,7 +137,7 @@ ms.locfileid: "66558833"
 
       一般来说，若要了解 Teams 的一部分，应用副本应遵循以下 [Microsoft 语音原则](/style-guide/brand-voice-above-all-simple-human)：热情轻松、清晰明了，并且乐于帮忙。
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">请参阅完整的复制和内容指南 — 包括为机器人编写 (Figma)</a>
+      * [请参阅完整的复制和内容指南 — 包括为机器人编写 (Figma)](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::

@@ -5,12 +5,12 @@ description: 了解阶段视图，这是调用以显示 Web 内容的全屏 UI �
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450448"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027289"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -24,7 +24,7 @@ ms.locfileid: "67450448"
 
 ## <a name="advantage-of-stage-view"></a>阶段视图的优点
 
-阶段视图有助于提供在 Teams 中查看内容的更无缝体验。用户可以在不离开上下文的情况下打开和查看应用提供的内容，并且他们可以将内容固定到聊天或频道，以便将来快速访问，从而提高用户与应用的互动。
+Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
 ## <a name="stage-view-vs-task-module"></a>阶段视图与任务模块
 
@@ -84,13 +84,13 @@ ms.locfileid: "67450448"
 
 下面是调用阶段视图的过程：
 
-* 当用户选择 **视图** 时，机器人会收到 `invoke` 请求。请求类型为 `composeExtension/queryLink`。
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
 * 来自机器人的 `invoke` 响应包含类型为 `tab/tabInfoAction` 的自适应卡片。
 * 机器人使用 `200` 代码进行响应。
 
 > [!NOTE]
-
-> 在 Teams 移动客户端上，如果为通过 [Teams 应用商店](/platform/concepts/deploy-and-publish/apps-publish-overview.md) 分发的应用调用阶段视图并且没有针对移动设备优化的体验，则会打开设备的默认 Web 浏览器。浏览器打开 `TabInfo` 对象 `websiteUrl` 参数中指定的 URL。
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
@@ -141,8 +141,8 @@ ms.locfileid: "67450448"
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | 字符串 | 64 | 此属性是选项卡所显示实体的唯一标识符。 这是必填字段。|
 | `name` | String | 128 | 此属性是频道界面中选项卡的显示名称。 这是一个可选字段。|
-| `contentUrl` | String | 2048 | 此属性是指向要在 Teams 画布中显示的实体 UI 的 https:// URL。这是必填字段。|
-| `websiteUrl?` | 字符串 | 2048 | 此属性是当用户选择在浏览器中查看时要指向的 https:// URL。这是必填字段。|
+| `contentUrl` | String | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
+| `websiteUrl?` | String | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
 | `removeUrl?` | String | 2048 | 此属性是指向用户删除选项卡时要显示的 UI 的 https:// URL。这是一个可选字段。|
 
 ## <a name="code-sample"></a>代码示例

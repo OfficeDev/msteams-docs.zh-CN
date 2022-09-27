@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Microsoft Teams 中使用协作�
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 0ea4f1c25a84ec1bcbefc379e5021815a5bea650
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178897"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027303"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>将协作控件部署到 Microsoft Teams
 
@@ -21,7 +21,7 @@ ms.locfileid: "67178897"
 
 ## <a name="configure-the-app-for-teams"></a>为 Teams 配置应用
 
-在 [创建模型驱动](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) 应用程序时创建的应用只有一个左窗格，没有复杂的命令。 因此，在将应用添加到 Teams 之前，可以隐藏左窗格并创建更易于理解的标头视图。
+在 [创建模型驱动](~/samples/app-with-collaboration-controls.md#create-a-model-driven-application) 应用程序时创建的应用只有一个左窗格，没有复杂的命令。 因此，在将应用添加到 Teams 之前，可以隐藏左窗格并创建更易于理解的标头视图。
 
 > [!NOTE]
 > 如果要向用户显示左窗格和高密度标头，请勿启用以下步骤。

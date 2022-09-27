@@ -5,12 +5,12 @@ description: 了解 Teams 和 Microsoft Power Platform 提供的 Microsoft 低�
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 05553535f146316dddef311a9a7c2f859fedc3f8
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858907"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027226"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>为 Teams 创建低代码自定义应用
 
@@ -43,7 +43,7 @@ Teams 中的新 [Power Apps 应用](https://go.microsoft.com/fwlink/?linkid=2143
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams 和 Power Automate
 
-可以使用 [Teams 中的 Power Automate 应用](/power-automate/flows-teams)直接在 Teams 环境中[创建流来自动执行重复性工作任务](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/)。 可以[从 Microsoft Teams 中的任何消息触发流](/power-automate/trigger-flow-teams-message)，并[在 Power Automate 中使用自适应卡片](/power-automate/create-adaptive-cards)。 此外，你还可以生成流，以便从 Teams 中的新 [Power Apps 应用](https://go.microsoft.com/fwlink/?linkid=2143539)自定义并进一步增加 Microsoft Teams 的价值。
+可以使用 [Teams 中的 Power Automate 应用](/power-automate/teams/install-teams-app)直接在 Teams 环境中[创建流来自动执行重复性工作任务](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/)。 可以[从 Microsoft Teams 中的任何消息触发流](/power-automate/trigger-flow-teams-message)，并[在 Power Automate 中使用自适应卡片](/power-automate/create-adaptive-cards)。 此外，你还可以生成流，以便从 Teams 中的新 [Power Apps 应用](https://go.microsoft.com/fwlink/?linkid=2143539)自定义并进一步增加 Microsoft Teams 的价值。
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams 和 Power Virtual Agents
 

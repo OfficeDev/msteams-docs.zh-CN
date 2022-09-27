@@ -20,6 +20,16 @@ groups:
     title: ASP.NET Core
   - id: mvc-csharp
     title: ASP.NET Core MVC
+- id: What-new-features
+  title: Teams 功能更新
+  prompt: 选择功能可用性类型以浏览功能
+  pivots:
+  - id: ga-feature
+    title: 正式发布
+  - id: dev-preview
+    title: 开发者预览版
+  - id: dep-feature
+    title: 不推荐使用
 - id: teams-app-platform
   title: Teams 应用平台
   prompt: 在开始之前，请根据要在其中生成应用的环境选择以下应用程序的任何人
@@ -29,9 +39,9 @@ groups:
   - id: visual-studio
     title: Visual Studio
 metadata:
-  ms.openlocfilehash: 5abc8210d4988c0dc42ad02f3e5dae0b7dfc61d2
-  ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+  ms.openlocfilehash: c015bc3eccf12cedf7fd4195c0ef5c24fe91b280
+  ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/16/2022
-  ms.locfileid: "67780840"
+  ms.lasthandoff: 09/27/2022
+  ms.locfileid: "68026946"

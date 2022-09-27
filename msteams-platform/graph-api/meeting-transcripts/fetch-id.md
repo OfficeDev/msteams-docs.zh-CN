@@ -3,12 +3,12 @@ title: 获取用于提取会议脚本的会议 ID 和组织者 ID
 description: 介绍获取用于提取会议脚本的会议 ID 和组织者 ID 的流程
 ms.localizationpriority: high
 ms.topic: concept
-ms.openlocfilehash: 316eabb77eb440a171ca6f357e1db8a2f3b18b6b
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 8be611f72a1ddac84bbe596a1bfc00621cb7c038
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67434983"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027310"
 ---
 # <a name="obtain-meeting-id-and-organizer-id"></a>获取会议 ID 和组织者 ID
 
@@ -510,7 +510,7 @@ GET /v1/meetings/{meetingId}
 在此示例中：
 
 - 会议 ID 包含为 `msGraphResourceId` 的值：*MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVl dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJt1RnM 1ltVXpAdGhyZWFkLnYy*。
-- 组织者 ID 包含为 `organizer` 的 `id`值：*29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w*。
+- 组织者 ID 包含为 `aadObjectId` `organizer`：  *6702afb6-109b-4c32-a141-6e65469502b9* 的值。
 
 </details>
 
