@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
-ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417648"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044698"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 
@@ -21,7 +21,7 @@ ms.locfileid: "67417648"
 > * 某些准则可能不适用于你的应用。 例如，如果应用不包含机器人，则可以忽略与机器人相关的准则。
 > * 我们已将这些准则交叉引用到 Microsoft 商业认证策略，并添加了注意事项，其中包含验证过程中遇到的通过或失败情况的示例。
 > * 某些准则标记为 *强制修复*。 如果你的应用提交不符合这些强制性准则，你将收到来自我们的失败报告，其中包含缓解措施。 只有在修复了问题后，应用提交才会通过 Microsoft Teams 应用商店验证。
-> * 其他准则标记为“*建议修复*”。为了获得理想的用户体验，我们建议你解决这些问题，但如果你选择不解决这些问题，也不会阻止你的应用提交在 Teams 应用商店上发布。
+> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -103,10 +103,10 @@ ms.locfileid: "67417648"
   * **Help**
 * 使用开发人员姓名作为常用名词的前缀或后缀。 例如，**Contoso Tasks** 而不是 **Tasks**。
 * 不得使用 **Teams** 或其他 Microsoft 产品名称，如 Excel、PowerPoint、Word、OneDrive、SharePoint、OneNote、Azure、Surface、Xbox 等，这些名称可能会错误地指示品牌联合或联合销售。 有关引用 Microsoft 软件产品和服务的详细信息，请参阅 [Microsoft 商标和品牌准则](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)。
-* 如果应用程序是与 Microsoft 官方合作的一部分，则应用程序的名称必须放在前面 (例如，**Contoso Connector for Microsoft Teams**)。
+* If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso Connector for Microsoft Teams**.
 * 不得复制商店中列出的应用程序的名称或商业市场中的其他报价。
 * 不得包含亵渎或贬损性的词汇。 该名称也不得包括对种族或文化不敏感的语言。
-* 必须是唯一的。如果你的应用 (Contoso) 在 Microsoft Teams 应用商店和 Microsoft AppSource 中列出，并且你希望列出特定于地理位置的另一个应用，例如 Contoso Mexico，则你的提交必须满足以下条件：
+* Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource and you want to list another app specific to a geography, such as Contoso Mexico, your submission must meet the following criteria:
   * 在标题、元数据、首次响应应用体验和帮助部分中，强调应用的特定区域功能。 例如，标题必须是 Contoso Mexico。 应用标题必须与出自同一开发人员的现有应用明确区分，以避免最终用户混淆。
   * 在合作伙伴中心上传应用包时，在 **可用性** 部分中选择应用可用的正确的 **市场**。
 
@@ -196,7 +196,7 @@ ms.locfileid: "67417648"
     :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
 * 如果应用需要帐户，则用户必须能够免费注册帐户。 禁止使用 **免费** 或 **免费帐户** 的术语。
-* 可以决定账户是无限期还是在有限时间内处于活动状态。当帐户到期时，应用不得显示指示需要支付的用户界面，文本或链接。
+* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
 * 应用的隐私策略和使用条款页面必须不含任何与商业相关的 UI 或链接。
 
 </details>
@@ -225,7 +225,7 @@ ms.locfileid: "67417648"
 <br></br>
 <details><summary>展开以了解详细信息</summary>
 
-不要在应用的域配置中包含组织控制之外的域（包括通配符）和隧道服务。以下的例外情况包括:
+Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
 * 如果应用使用 Azure 机器人服务的 OAuthCard，则必须将 `token.botframework.com` 作为有效的域包含在内，否则 **登录** 按钮将无法工作。
 * 如果应用依赖于 SharePoint，则可以使用 `{teamSiteDomain}` 上下文属性将关联的根 SharePoint 站点作为有效域包含。
@@ -420,7 +420,7 @@ Teams 应用清单定义应用的配置。
 
 **应做:**
 
-* 专注于应用的功能。例如，用户如何与机器人沟通。
+* Focus on your app's capabilities. For example, how people can communicate with your bot.
 * 包括能准确代表应用程序的内容。
 * 谨慎使用文本。
 * 使用反映品牌和包含营销内容的颜色作为屏幕截图的边框。
@@ -526,9 +526,9 @@ Teams 应用清单定义应用的配置。
 <details><summary>可用性和功能</summary>
 
 * 成功购买和分配许可证后，必须提供以下内容：
-* 用户订阅计划功能的访问权限。
-* 用户订阅计划的价值增加和显著优势。
-* 从 Teams 应用中，提供指向 SaaS 应用程序主页的链接，以便订阅者将来管理许可证。
+  * 用户订阅计划功能的访问权限。
+  * 用户订阅计划的价值增加和显著优势。
+  * 从 Teams 应用中，提供指向 SaaS 应用程序主页的链接，以便订阅者将来管理许可证。
 
 </details>
 </br>
@@ -566,7 +566,7 @@ Teams 应用清单定义应用的配置。
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
-* 选项卡配置屏幕不得嵌入整个网站。应使配置体验保持专注。例如，如果要生成允许用户在频道中配置项目的项目管理应用，请将选项卡配置屏幕重点放在允许用户从应用中选择项目以在频道中进行配置。[*强制修复*]
+* Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
@@ -583,7 +583,7 @@ Teams 应用清单定义应用的配置。
 
 <details><summary>视图</summary>
 
-* 登录屏幕区域不得使用大型徽标。[*强制修复*]
+* The sign in screen area must not use large logos. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
 
@@ -591,7 +591,7 @@ Teams 应用清单定义应用的配置。
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
-* 选项卡不应具有重复标题。请从 iframe 中删除重复徽标，因为选项卡框架已显示应用图标和名称。[*建议修复*]
+* Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
@@ -620,13 +620,13 @@ Teams 应用清单定义应用的配置。
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
-* 选项卡中的第二级和第三级页面必须在主选项卡区域的第二级别 (L2) 和第三级别 (L3) 视图中打开，这通过痕迹导航或左侧导航进行导航。还可以包括以下组件来帮助选项卡导航：[*强制修复*]
+* The secondary and third pages in a tab must be opened in a level two (L2) and level three (L3) view in the main tab area, which is navigated via breadcrumbs or left navigation. You can also include the following components to aid tab navigation: [*Mandatory Fix*]
   * 后退按钮
   * 页眉
   * 汉堡菜单
-* 选项卡不得具有水平滚动。白板应用和其他需要较大画布以允许用户协作而不会造成不良应用体验的应用，可以使用水平滚动，具体取决于业务需求。[*建议修复*]
+* Tab must not have a horizontal scroll. Whiteboarding apps and other apps that require a larger canvas to allow users to collaborate without a perceived broken app experience, can use horizontal scroll depending on their business need. [*Suggested Fix*]
 
-* 选项卡中的深层链接不得链接到外部网页，而应链接到 Teams 内部。例如，任务模块或其他标签。[*强制修复*]
+* Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
@@ -663,12 +663,12 @@ Teams 应用清单定义应用的配置。
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
-* 选项卡必须尽可能使用 Teams 样式的组件，如 Teams 字体、类型渐变、调色板、网格系统、运动、语调等。有关详细信息，请参阅 [选项卡设计准则](/microsoftteams/platform/tabs/design/tabs)。[*建议修复*]
+* Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * 如果你的应用功能需要更改设置，请包含一个 **设置** 选项卡。 [*建议修复*]
-* 选项卡必须遵循 Teams 交互设计，例如页内导航、对话框位置和使用、信息层次结构等。有关详细信息，请参阅 [Microsoft Teams Fluent UI 工具包](~/concepts/design/design-teams-app-basic-ui-components.md)
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * iframe 中的选项卡内容不得包含模拟 Teams 核心功能的功能。 例如，机器人、消息扩展、呼叫、会议等。
 
@@ -705,7 +705,7 @@ Teams 应用清单定义应用的配置。
 </br>
 <details><summary>机器人命令</summary>
 
-分析用户输入和预测用户意图是困难的。机器人命令为用户提供了一组字词或短语，以便于机器人理解。
+Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
 * 强烈建议在应用配置中列出支持的机器人命令。 当用户尝试向机器人发送消息时，这些命令将显示在撰写框中。
 

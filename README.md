@@ -1,4 +1,4 @@
-## <a name="about-microsoft-teams-and-the-docs"></a>关于 Microsoft Teams 和文档
+## <a name="about-microsoft-teams-and-its-documentation"></a>关于 Microsoft Teams 及其文档
 
 Microsoft Teams 是一个基于云的通信平台，整合了不同的协作服务，例如聊天、会议、通话和文件。 Teams 已很好地集成到 Microsoft 365 中，并将多个工作负载合并到统一的通信和协作系统中。 此外，Teams 为其他工具和第三方产品提供集成功能。
 
@@ -6,9 +6,9 @@ Microsoft Teams 是一个基于云的通信平台，整合了不同的协作服�
 
 ## <a name="how-to-contribute"></a>如何参与
 
-Teams 文档是 Microsoft Docs 技术文档库的一部分。 内容分为称为 docsets 的组，每个组表示作为单个实体管理的一组相关文档。 可以提出问题、提供建议或提供更新。 了解 [如何参与 Teams 文档](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/)。
+Microsoft Teams 文档是 Microsoft Learn 技术文档库的一部分。 内容分为称为 docsets 的组，每个组表示作为单个实体管理的一组相关文档。 可以提出问题、提供建议或提供更新。 了解 [如何参与 Teams 文档](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/)。
 
-若要参与Microsoft Docs，请参阅[参与者指南概述](https://learn.microsoft.com/contribute/)。
+若要参与 Microsoft Learn，请参阅 [参与者指南概述](https://learn.microsoft.com/contribute/)。
 
 若要详细了解 Microsoft 标准和样式指南，请参阅 [Microsoft 样式指南](https://learn.microsoft.com/style-guide/welcome/)。
 

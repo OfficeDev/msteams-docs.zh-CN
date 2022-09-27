@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4641d19a6df93cf4dc575653bde0318f429ca551
-ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
-ms.translationtype: HT
+ms.openlocfilehash: f8891edb11134570a79c5483eea722a44ad48b91
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2022
-ms.locfileid: "67158064"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044649"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -124,7 +124,7 @@ ms.locfileid: "67158064"
 
 * **应用提交后**
 
-  * 查看验证报告后，使用与验证报告相关的任何查询回复电子邮件线程，或者需要任何额外支持来解决报告的问题。
+  * 查看验证报告后，使用与验证报告相关的任何查询回复电子邮件线程，或者需要任何额外的支持来解决报告的问题。
 
   * 确保有足够带宽供开发人员解决报告的任何问题，直到应用获得批准。
 

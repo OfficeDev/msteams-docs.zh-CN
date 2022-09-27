@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ab833f3472091d6727ad584c923a83cae2842c0c
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: ffa7cdb0fabf07254c90590fe94fe2347c35658c
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488283"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044677"
 ---
 # <a name="upload-your-app-in-teams"></a>在 Teams 中上传应用
 
@@ -21,7 +21,7 @@ ms.locfileid: "67488283"
 * 你为一小部分用户 (例如你的工作组) 构建了一个应用。
 
 > [!NOTE]
-> 多次旁加载应用会显示消息传递扩展的多个实例。
+> 多次旁加载消息扩展应用会显示多个消息传递扩展的实例。
 
 > [!IMPORTANT]
 >
@@ -50,21 +50,22 @@ ms.locfileid: "67488283"
 1. 选择应用包 .zip 文件。
 1. 根据要求将应用添加到 Teams:</br>
 
-   a. 选择 **添加** 以添加个人应用。</br> b. 使用下拉菜单将应用添加到团队或聊天中。
+   a. Select **Add** to add your personal app.</br>
+   b. Use the dropdown menu to add your app to a Team or chat.
 
     :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="应用说明":::
 
 ## <a name="troubleshoot"></a>排除故障
 
-如果应用无法旁加载或上传遇到问题，请检查以下选项：
+如果应用无法旁加载或遇到任何上传问题，请检查以下选项：
 
 1. 确保已按照[创建应用包](../../concepts/build-and-test/apps-package.md)的所有说明进行操作。
 1. [验证应用包](https://dev.teams.microsoft.com/appvalidation.html)。
-1. 确保应用清单与最新的 [架构](../../resources/schema/manifest-schema.md)匹配。
+1. 确保应用清单与最新 [架构](../../resources/schema/manifest-schema.md)匹配。
 
 ## <a name="manage-your-apps"></a>管理应用
 
-通过管理应用，用户可以在 Teams 客户端上专门管理、更新和删除其应用、权限和订阅。用户可以从 **管理应用** 中安装应用。
+Manage your apps allows users to have a dedicated place to manage, update and remove their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
 
 ### <a name="access-your-app"></a>访问你的应用
 
@@ -92,7 +93,7 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 
      :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="更新 Teams 应用。":::
 
-1. 选择“**查看更新**”，将显示具有更新选项的窗口。
+1. 选择 **“视图更新**”。 将显示具有更新选项的窗口。
 1. 选择“**更新**”按钮以更新应用。
 
      :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="在管理应用中更新 Teams 应用。":::
@@ -115,7 +116,7 @@ Teams 提供了几种打开应用的方法。 有关详细信息，请参阅 [�
 
 > [!NOTE]
 >
-> * 不能完全删除个人机器人活动。如果删除并再次添加该应用，则与机器人的新通信将追加到与该应用的上一个对话中。
+> * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
 > * 目前，无法将自定义应用迁移到 Teams 应用商店。 若要将应用列到 Teams 应用商店中，请参阅 [将应用发布到 Microsoft Teams 应用商店](appsource/publish.md)。
 
 ## <a name="next-step"></a>后续步骤

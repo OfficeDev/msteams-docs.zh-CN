@@ -633,8 +633,8 @@
     - name: 在 Teams 中上传应用
       href: concepts/deploy-and-publish/apps-upload.md
     - name: 发布到组织
-      href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      displayName: 'App catalog, allow and block apps'
+      href: /microsoftteams/upload-custom-apps
+      displayName: 'upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization''s store'
     - name: 发布到 Teams 应用商店
       items:
         - name: 概述

@@ -3,16 +3,16 @@ title: 打包应用
 description: 了解如何使用用于测试、上传和存储发布的图标打包 Microsoft Teams 应用。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 5d46eec7f32ccb18e861f32769bb2ecb87842abf
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
-ms.translationtype: HT
+ms.openlocfilehash: 03f1df6af15b5e07dd71bcec22838ecff53d4c7f
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695318"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044684"
 ---
 # <a name="create-teams-app-package"></a>创建 Teams 应用包
 
-需要应用包，但你计划分发 Microsoft Teams 应用。 有效的包是包含以下内容的 ZIP 文件：
+你需要一个应用包，无论你打算如何分发 Microsoft Teams 应用。 有效的包是包含以下内容的 ZIP 文件：
 
 * **应用清单**：描述应用的配置方式，包括其功能、所需资源和其他重要属性。
 * **应用图标**：每个包都需要应用的颜色和轮廓图标。
