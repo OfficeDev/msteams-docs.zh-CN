@@ -1,7 +1,7 @@
 ## <a name="deploy-your-app-to-azure"></a>将应用部署到 Azure。
 
 部署包括两个步骤。  首先，创建必要的云资源 (也称为预配) 。 然后，应用的代码将复制到创建的云资源中。 在本教程中，你将部署 Tab 应用。
-<br> 
+<br>
 <br>
 <details>
 <summary>预配和部署有什么区别？</summary>
@@ -16,34 +16,34 @@
 
 1. 在 **云中选择“预配**”。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="显示预配命令的屏幕截图":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="显示 Teams 工具包下云中预配的选择的屏幕截图。":::
 
 1. 选择要用于 Azure 资源的订阅。
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="显示用于预配的资源的屏幕截图":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="显示要用于 Azure 资源的订阅的屏幕截图。":::
 
    > [!NOTE]
-   > 始终有一些用于托管应用的 Azure 资源。
+   > 应用使用 Azure 资源托管。
 
     对话框警告在 Azure 中运行资源时可能会产生成本。
 
 1. 选择 **“预配**”。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="预配对话框的屏幕截图。":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="显示在 Azure 中运行资源时可能会产生成本的对话框的屏幕截图。":::
 
    预配过程在 Azure 云中创建资源。 这可能需要一些时间。 可以通过查看右下角的对话来监视进度。 几分钟后，你会看到以下通知：
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="显示预配完成对话框的屏幕截图。":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="显示在云中成功预配“hellomsg”的通知的屏幕截图。":::
 
     如果需要，可以查看预配的资源。 在本教程中，无需查看资源。
 
     预配的资源显示在 **“环境** ”部分。
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="显示预配完成对话框的屏幕截图。":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="显示在环境部分中预配的资源的屏幕截图。":::
 
 1. 预配完成后，从 **部署** 面板中选择 **“部署到云**”。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="显示要单击到云的部署位置的屏幕截图。":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="显示部署到云的屏幕截图。":::
 
    与预配一样，部署需要一些时间。 可以通过查看右下角的对话来监视过程。 几分钟后，你将看到完成通知。
 
@@ -62,7 +62,7 @@
    出现提示时，选择 Azure 订阅以使用 Azure 资源。
 
    > [!NOTE]
-   > 始终有一些用于托管应用的 Azure 资源。
+   > 应用使用 Azure 资源托管。
 
 1. 运行 `teamsfx deploy`。
 
@@ -88,20 +88,15 @@
 
    该工具包显示一条消息，指示应用已添加到 Teams。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="屏幕截图显示立即或更高版本尝试应用的消息":::
- 
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="显示立即或更高版本尝试应用的消息的屏幕截图":::
+
     - 如果选择 **“获取”**，可以稍后从旁加载应用列表中试用该应用。
     - 如果选择 **“试用”**，Teams 将加载应用。
 
    你的应用在 Azure 网站上加载。
-   
+
 1. 选择 **“试用**”。
 
    消息扩展应用在聊天机器人应用中加载。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="显示 Teams 中旁加载的应用的屏幕截图":::
-
-
-
-
-
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="显示在 Teams 中旁加载的应用的屏幕截图":::
