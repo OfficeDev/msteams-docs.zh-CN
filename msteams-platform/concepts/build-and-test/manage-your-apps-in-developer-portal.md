@@ -4,12 +4,12 @@ description: 本文介绍如何使用 Microsoft Teams 开发人员门户配置�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
+ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435074"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68098916"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>在开发人员门户中管理应用
 
@@ -56,7 +56,7 @@ ms.locfileid: "67435074"
   * 会议扩展
   * 活动源通知
 * **权限**：本部分允许为应用授予设备权限、团队权限、聊天或会议权限以及用户权限。
-* **单一登录**：可以将应用配置为使用单一登录 (SSO) 对用户进行身份验证。
+* **单一登录**：在 Azure AD 上注册的机器人支持单Sign-On (SSO) 。 如果机器人在 Bot Framework 门户 (或在 Bot Management) 下的开发人员门户中注册，则这些机器人不支持 SSO，你必须在 Azure AD 上注册机器人以支持 SSO。 对于在 Azure AD 上注册的机器人，请添加 **应用程序 ID URI**。 若要从 Azure AD 获取应用程序 ID URI，请参阅 [对机器人使用 SSO 身份验证](../../bots/how-to/authentication/auth-aad-sso-bots.md)。
 * **语言**：可以设置或更改应用的语言。
 * **域**：可以在 Teams 客户端中添加域以加载应用 (例如：*.example.com) 。
 
@@ -104,7 +104,7 @@ ms.locfileid: "67435074"
       1. 在开发人员门户的任何字段中输入 `{{`。 此时会显示一个下拉列表，其中包含为所选环境创建的所有变量以及全局变量。  
       1. 例如，在下载应用包之前（例如，在准备发布到 Teams 应用商店时），请选择要使用的环境。 你的应用配置会根据环境自动更新。
 
-* **规划和定价**：可以链接在应用合作伙伴中心创建的 SaaS 产品/服务。
+* **计划和定价**：可以链接在应用合作伙伴中心创建的 SaaS 产品/服务。
 * **管理员设置**：
   * 应用自定义：可以自定义应用
   * 默认情况下阻止应用：默认情况下，用户可以阻止应用，直到租户管理员选择启用应用。
