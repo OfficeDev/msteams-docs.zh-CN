@@ -1,14 +1,14 @@
 ---
 title: 浏览器的设备权限
-description: 了解如何安全地恢复设备权限，例如 Web 客户端中应用的相机或麦克风访问权限。
+description: 需要设备权限（如相机或麦克风访问）的应用现在要求用户在 Web 浏览器的每个应用级别手动授予权限。
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: ac4695d119b04ee71334ccb2baa820c0e15bff88
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: a9df46a3bacd66b32efceaf2f2069e92c2cc64a3
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035077"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100572"
 ---
 # <a name="device-permissions-for-the-browser"></a>浏览器的设备权限
 

@@ -1,16 +1,16 @@
 ---
 title: 创建和发送任务模块
 author: surbhigupta
-description: 在本模块中，了解如何处理初始调用操作，以及如何通过操作消息传递扩展命令使用任务模块进行响应
+description: 了解如何创建和发送任务模块。 处理初始调用操作，并使用操作消息扩展命令中的任务模块进行响应。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 58b5d246c113262fa478a36246a224a52d160154
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035182"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100313"
 ---
 # <a name="create-and-send-task-module"></a>创建和发送任务模块
 
@@ -22,12 +22,12 @@ ms.locfileid: "67035182"
 
 ## <a name="the-initial-invoke-request"></a>初始调用请求
 
-在初始调用请求的过程中，服务接收类型 `composeExtension/fetchTask` 的 `Activity` 对象，并且必须使用包含自适应卡片或嵌入 Web 视图 URL `task` 对象进行响应。除了标准机器人活动属性，初始调用有效负载还包含以下请求元数据:
+In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |属性名称|用途|
 |---|---|
 |`type`| 请求类型。 它必须为 `invoke`。 |
-|`name`| 颁发给服务的命令类型。它必须 `composeExtension/fetchTask`。 |
+|`name`| 颁发给服务的命令类型。 它必须为 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户 ID。 |
 |`from.name`| 发送请求的用户名。 |
 |`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
@@ -36,7 +36,7 @@ ms.locfileid: "67035182"
 |`channelData.team.id`| 团队 ID（如果请求是在频道中发出）。 |
 |`value.commandId` | 包含已调用命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须为 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。它必须是 `default`、`contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，对于嵌入式 Web 视图格式设置非常有用。 它必须为 `default`、`contrast` 或 `dark`。 |
 
 ### <a name="example"></a>示例
 
@@ -77,7 +77,7 @@ ms.locfileid: "67035182"
 |属性名称|用途|
 |---|---|
 |`type`| 请求类型。 它必须为 `invoke`。 |
-|`name`| 颁发给服务的命令类型。它必须 `composeExtension/fetchTask`。 |
+|`name`| 颁发给服务的命令类型。 它必须为 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户 ID。 |
 |`from.name`| 发送请求的用户名。 |
 |`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
@@ -86,7 +86,7 @@ ms.locfileid: "67035182"
 |`ChannelData.legacy. replyToId`| 获取或设置此消息作为所答复消息的 ID。 |
 |`value.commandId` | 包含已调用命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须为 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。它必须是 `default`、`contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，对于嵌入式 Web 视图格式设置非常有用。 它必须为 `default`、`contrast` 或 `dark`。 |
 
 ### <a name="example"></a>示例
 
@@ -128,7 +128,7 @@ ms.locfileid: "67035182"
 |属性名称|用途|
 |---|---|
 |`type`| 请求类型。 它必须为 `invoke`。 |
-|`name`| 颁发给服务的命令类型。它必须 `composeExtension/fetchTask`。 |
+|`name`| 颁发给服务的命令类型。 它必须为 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户 ID。 |
 |`from.name`| 发送请求的用户名。 |
 |`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
@@ -137,7 +137,7 @@ ms.locfileid: "67035182"
 |`ChannelData.legacy. replyToId`| 获取或设置此消息作为所答复消息的 ID。 |
 |`value.commandId` | 包含已调用命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须为 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。它必须是 `default`、`contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，对于嵌入式 Web 视图格式设置非常有用。 它必须为 `default`、`contrast` 或 `dark`。 |
 
 ### <a name="example"></a>示例
 
@@ -227,7 +227,7 @@ ms.locfileid: "67035182"
 |属性名称|用途|
 |---|---|
 |`type`| 请求类型。 它必须为 `invoke`。 |
-|`name`| 颁发给服务的命令类型。它必须 `composeExtension/fetchTask`。 |
+|`name`| 颁发给服务的命令类型。 它必须为 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户 ID。 |
 |`from.name`| 发送请求的用户名。 |
 |`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
@@ -238,7 +238,7 @@ ms.locfileid: "67035182"
 |`ChannelData.legacy. replyToId`| 获取或设置此消息作为所答复消息的 ID。 |
 |`value.commandId` | 包含已调用命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须为 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。它必须是 `default`、`contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，对于嵌入式 Web 视图格式设置非常有用。 它必须为 `default`、`contrast` 或 `dark`。 |
 
 ### <a name="example"></a>示例
 
@@ -293,7 +293,7 @@ ms.locfileid: "67035182"
 |属性名称|用途|
 |---|---|
 |`type`| 请求类型。 它必须为 `invoke`。 |
-|`name`| 颁发给服务的命令类型。它必须 `composeExtension/fetchTask`。 |
+|`name`| 颁发给服务的命令类型。 它必须为 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户 ID。 |
 |`from.name`| 发送请求的用户名。 |
 |`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
@@ -304,7 +304,7 @@ ms.locfileid: "67035182"
 |`ChannelData.legacy. replyToId`| 获取或设置此消息作为所答复消息的 ID。 |
 |`value.commandId` | 包含已调用命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须为 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。它必须是 `default`、`contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，对于嵌入式 Web 视图格式设置非常有用。 它必须为 `default`、`contrast` 或 `dark`。 |
 
 ### <a name="example"></a>示例
 
@@ -402,7 +402,7 @@ ms.locfileid: "67035182"
 |属性名称|用途|
 |---|---|
 |`type`| 请求类型。 它必须为 `invoke`。 |
-|`name`| 颁发给服务的命令类型。它必须 `composeExtension/fetchTask`。 |
+|`name`| 颁发给服务的命令类型。 它必须为 `composeExtension/fetchTask`。 |
 |`from.id`| 发送请求的用户 ID。 |
 |`from.name`| 发送请求的用户名。 |
 |`from.aadObjectId`| 发送请求的用户的 Azure Active Directory 对象 ID。 |
@@ -410,7 +410,7 @@ ms.locfileid: "67035182"
 |`channelData.source.name`| 从中调用任务模块的源名称。 |
 |`value.commandId` | 包含已调用命令的 ID。 |
 |`value.commandContext` | 触发事件的上下文。 它必须为 `compose`。 |
-|`value.context.theme` | 用户的客户端主题，适用于嵌入式 Web 视图格式设置。它必须是 `default`、`contrast` 或 `dark`。 |
+|`value.context.theme` | 用户的客户端主题，对于嵌入式 Web 视图格式设置非常有用。 它必须为 `default`、`contrast` 或 `dark`。 |
 
 ### <a name="example"></a>示例
 

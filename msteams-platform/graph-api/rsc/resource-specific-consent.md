@@ -1,16 +1,16 @@
 ---
 title: 在 Teams 中启用资源特定许可
-description: 本文介绍 Microsoft Teams 中特定于资源的许可以及如何利用它。
+description: 了解支持粒度资源特定的许可 (RSC) 权限，这些权限允许团队所有者和聊天所有者为应用程序授予许可。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 7321c3dbf1f2a3493a1d457cfd80d7fc1efb01d6
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 558ddd3603c9545781a3ebe06b7878df48b1333c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586705"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100887"
 ---
 # <a name="resource-specific-consent"></a>资源特定许可
 

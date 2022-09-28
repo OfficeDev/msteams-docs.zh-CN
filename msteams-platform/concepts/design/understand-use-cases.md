@@ -1,16 +1,16 @@
 ---
 title: 了解应用的用例和 Teams 功能
 author: heath-hamilton
-description: 在本文中，你将了解 Microsoft Teams 应用功能、规划和了解 Teams 应用和功能，以及 Teams 应用将解决的用户问题。
+description: 了解 Microsoft Teaams 应用负债- 选项卡、机器人、会议扩展、消息扩展、Webhook 连接器、个人应用体验、共享应用体验。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558441"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100453"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
@@ -31,7 +31,7 @@ ms.locfileid: "66558441"
 
 ## <a name="microsoft-teams-app-features"></a>Microsoft Teams 应用功能
 
-有多种扩展 Teams 的方法，因此每个应用都是唯一的。Teams 应用功能提供了：
+There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
 - [应用功能](#app-capabilities)
 - [应用程序范围](#app-scope)
@@ -173,7 +173,7 @@ ms.locfileid: "66558441"
 - **个人应用体验**: 个人应用是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
 - **共享应用体验**: 团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间中的每个人使用。 协作空间通常侧重于应用交互的工作流或解锁新的社交交互。
 
-应用可以存在于不同的范围内。例如：
+应用可以存在于不同的范围内。 例如：
 
 - 应用可以在中央共享位置 (即选项卡) 中显示数据。
 - 它还可以通过个人对话界面 (即机器人) 显示相同的信息。

@@ -1,15 +1,15 @@
 ---
 title: 来电通知
-description: 在本模块中，了解有关使用代码示例处理来自传入呼叫的通知、重定向和身份验证呼叫的详细技术信息
+description: 了解传入通知协议，以便将调用从旧版转换为 Graph 格式、重定向区域相关性以及对回调进行身份验证。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2019
-ms.openlocfilehash: fd68b85a3c6f5f4682a728461d792093bcd8cac0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d5bdd20cb9cb7deef7419acb1da4ac96da2d89a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143828"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100656"
 ---
 # <a name="incoming-call-notifications"></a>来电通知
 

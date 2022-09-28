@@ -1,20 +1,20 @@
 ---
 title: 创建 Office 365 连接器
 author: laujan
-description: 在本模块中，了解如何开始使用Office 365连接器并将连接器添加到 Microsoft Teams 中的 Teams 应用
+description: Office 365连接器入门。 将连接器添加到 Microsoft Teams 中的 Teams 应用。 示例 (.NET，Node.js) Office 365连接器向 Teams 通道生成通知。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: bb4bd02553ebb49752fa6450cd0f94f41dcc7ac8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 977bcac5daa3185177fbc9a3b441c245541914df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363480"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100726"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
-使用 Microsoft Teams 应用，可以在 Teams 中添加现有 Office 365 连接器或生成新的连接器。更多相关信息，请参阅 [生成自己的连接器](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)。
+With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 请参阅以下视频，了解如何创建Office 365连接器：
 <br>
@@ -62,7 +62,7 @@ ms.locfileid: "67363480"
     > 必须调用 `microsoftTeams.pages.config.setValidityState(true)` 作为对用户选择或字段更新的响应。
 
 1. 注册 `microsoftTeams.pages.config.registerOnSaveHandler()` 事件处理程序，当用户选择“**保存**”时调用。
-1. 调用 `microsoftTeams.pages.config.setConfig()` 以保存连接器设置。如果用户尝试更新连接器的现有配置，则配置对话框中也会显示已保存的设置。
+1. Call `microsoftTeams.pages.config.setConfig()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 1. 调用 `microsoftTeams.pages.getConfig()` 以提取 Webhook 属性，包括 URL。
 
     > [!NOTE]
@@ -147,9 +147,9 @@ ms.locfileid: "67363480"
 | `entityId`       | 实体 ID，在调用 `setConfig()` 时由代码设置。 |
 | `configName`  | 配置名称，在调用 `setConfig()` 时由代码设置。 |
 | `contentUrl` | 配置页的 URL，在调用 `setConfig()` 时由代码设置。 |
-| `webhookUrl` | 为连接器创建的 Webhook URL。将 Webhook URL 用于 POST 结构的 JSON 以将卡片发送到频道。`webhookUrl` 仅在应用程序成功返回数据时返回。 |
+| `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | 返回的值可以`mail`是或`groups``teams`分别对应于Office 365邮件、Office 365组或 Teams。 |
-| `userObjectId` | 这是与启动连接器安装的 Office 365 用户相对应的唯一 ID，必须具备安全性。可以使用此值关联 Office 365 中已在服务中设置配置的用户。 |
+| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
 #### <a name="handle-edits"></a>处理编辑
 
@@ -219,7 +219,7 @@ ms.locfileid: "67363480"
 
 ## <a name="test-your-connector"></a>测试连接器
 
-若要测试连接器，请使用任何其他应用将其上传到团队中。可以使用两个图标文件和连接器开发人员仪表板中的清单文件来创建 .zip 包，并按照 [在清单中包含连接器](#include-the-connector-in-your-manifest) 中的说明进行修改。
+To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
 上传应用后，从任意频道打开连接器列表。 滚动到底部，查看“**上传**”部分中的应用：
 

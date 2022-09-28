@@ -1,17 +1,17 @@
 ---
 title: 浏览 Teams 作为构建应用的平台
 author: heath-hamilton
-description: 了解有关在桌面和移动设备上探索应用 Microsoft Teams 平台功能的概述。
+description: 桌面和移动版上应用的 Microsoft Teams 平台功能。 选项卡、机器人、消息传递扩展、Webhook、连接器、Microsoft Graph 或自适应卡片。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: b49c4013184b11f686e460cd23441acf1b4faff1
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558826"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100306"
 ---
 # <a name="explore-teams-platform-features"></a>浏览 Teams 平台功能
 
@@ -23,7 +23,7 @@ ms.locfileid: "66558826"
 
 | 功能 | 说明 | 适用于 |
 | --- | --- | --- |
-|选项卡 | 选项卡是 Microsoft Teams 中嵌入的与 Teams 相关的网页。可以将它们添加为团队、群组聊天或个人用户的个人应用内频道的一部分。 | 个人选项卡、频道或组选项卡、阶段视图和链接展开。 |
+|选项卡 | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | 个人选项卡、频道或组选项卡、阶段视图和链接展开。 |
 | 机器人 | 机器人也称为聊天机器人或对话机器人。 它是一个可运行用户完成的简单且重复的自动化任务的应用。 机器人交互可以是快速问答，也可以是提供服务访问权限的复杂对话。 | 客户服务、天气信息、预订晚餐、或提供旅游信息。 |
 | 邮件扩展 | 邮件扩展允许用户与 Web 服务 Teams 客户端进行交互。 在外部系统中搜索或启动操作。 可以将交互结果作为丰富地格式化卡片发送到 Teams 客户端。 | 保留资源并允许通道知道保留的时间段。 搜索工作项，并将其作为自适应卡片与组共享。 在跟踪系统中根据 Teams 消息创建 bug，将该 bug 分配给用户，并向会话线程发送包含该 bug 详细信息的卡片。 |
 |会议扩展 | 你可以创建应用来提高会议效率。 | 要求用户在通话期间完成调查，或发送不会中断会议流程的快速提醒。 |

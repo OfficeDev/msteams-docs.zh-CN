@@ -1,19 +1,19 @@
 ---
 title: 应用程序托管的媒体机器人的要求和注意事项
-description: 了解与为Teams创建应用程序托管媒体机器人相关的重要要求和注意事项，以及可伸缩性和性能注意事项
+description: 了解如何为 Microsoft Teams 创建应用程序托管的媒体机器人、可伸缩性和性能。 查看不同远程和本地媒体方案的示例。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 8643575f2fcb64cbfe6349c32d0b1b3df98ea31e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150786"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100873"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>应用程序托管的媒体机器人的要求和注意事项
 
-应用程序托管的媒体机器人需要 [`Microsoft.Graph.Communications.Calls.Media` .NET 库](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) 才能访问音频和视频媒体流。机器人必须部署在 Windows Server 本地计算机或 Azure 中的 Windows Server 来宾操作系统 (OS) 上。
+An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. The bot must be deployed on a Windows Server on-premises machine or a Windows Server guest Operating System (OS) in Azure.
 
 > [!NOTE]
 >
@@ -39,7 +39,7 @@ ms.locfileid: "66150786"
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>实时媒体呼叫保留创建位置
 
-实时媒体调用保留在创建它们的计算机上。 实时媒体调用固定到已接受或启动调用的虚拟机 (VM) 实例。 来自Teams呼叫或会议的媒体流向该 VM 实例，机器人发送回Teams的媒体也必须来自该 VM。 如果 VM 停止时有任何实时媒体调用正在进行，这些调用会立即终止。 如果机器人事先知道挂起的 VM 关闭，则可以结束调用。
+实时媒体调用保留在创建它们的计算机上。 实时媒体调用固定到已接受或启动调用的虚拟机 (VM) 实例。 Teams 呼叫或会议中的媒体流向该 VM 实例，机器人发送回 Teams 的媒体也必须来自该 VM。 如果 VM 停止时有任何实时媒体调用正在进行，这些调用会立即终止。 如果机器人事先知道挂起的 VM 关闭，则可以结束调用。
 
 下一部分提供有关应用程序托管的媒体机器人的辅助功能的详细信息。
 

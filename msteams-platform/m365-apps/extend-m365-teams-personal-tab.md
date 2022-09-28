@@ -1,20 +1,20 @@
 ---
 title: 跨 Microsoft 365 扩展 Teams 个人选项卡应用
-description: 在本文中，你将了解如何通过更新个人选项卡在 Outlook 和 Office 中运行来跨 Microsoft 365 扩展 Teams 个人选项卡应用。
+description: 更新个人应用以在 Outlook 和 Office 中运行。 更新清单和 TeamsJS SDK V2，修改同意安全性，更新 SSO 的 Azure AD 应用注册。
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781195"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100759"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
-个人选项卡提供了增强 Microsoft Teams 体验的好方法。 使用个人选项卡，可以在 Teams 中提供用户对其应用程序的访问权限，无需用户离开体验或再次登录。 使用此预览版，个人选项卡可以在其他 Microsoft 365 应用程序中亮起。 本教程演示了使用现有 Teams 个人选项卡、并将其更新用于在桌面和网页版 Outlook 以及 Office 网页版 (office.com) 体验中运行的过程。
+个人选项卡提供了增强 Microsoft Teams 体验的好方法。 使用个人选项卡，可以在 Teams 中提供用户对其应用程序的访问权限，无需用户离开体验或再次登录。 使用此预览版，个人选项卡可以在其他 Microsoft 365 应用程序中亮起。 本教程演示了使用现有 Teams 个人选项卡并将其更新为在 Outlook 和 Office 桌面和 Web 体验以及适用于 Android 的 Office 应用中运行的过程。
 
 更新要在 Outlook 和 Office 中运行的个人应用涉及以下步骤：
 
@@ -141,8 +141,12 @@ ms.locfileid: "67781195"
     |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Office Web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Office 桌面版  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office 移动版  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook 桌面版、移动版 | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook Web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > 某些 Microsoft 365 客户端应用程序共享客户端 ID。
 
 ## <a name="sideload-your-app-in-teams"></a>在 Teams 中旁加载应用
 
@@ -164,7 +168,7 @@ ms.locfileid: "67781195"
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams 中的“上传自定义应用”选项":::
 
-旁加载到 Teams 后，您的个人选项卡在 Outlook 和 Office 中可用。 请务必使用登录 Teams 时所用的相同凭据登录，以旁加载应用。
+旁加载到 Teams 后，您的个人选项卡在 Outlook 和 Office 中可用。 必须使用用于在 Teams 中旁加载应用的相同凭据登录。 运行适用于 Android 的 Office 应用时，需要重启该应用，以使用 Office 应用中的个人选项卡应用。
 
 可以固定应用以进行快速访问，也可以在省略号 (**...**) 中找到应用左侧边栏中最近应用程序中的浮出控件。 在 Teams 中固定应用不会将其固定为 Office 或 Outlook 中的应用。
 
@@ -215,7 +219,20 @@ ms.locfileid: "67781195"
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="单击 office.com 侧栏上的“更多应用”选项，查看已安装的个人选项卡":::
 
-## <a name="troubleshooting"></a>疑难解答
+### <a name="office-app-for-android"></a>适用于 Android 的 Office 应用
+
+> [!NOTE]
+> 在安装应用之前，请执行 [安装最新 Office 应用 beta 生成的步骤](prerequisites.md#mobile) ，并成为 beta 程序的一部分。
+
+若要查看在适用于 Android 的 Office 应用中运行的应用，请执行以下操作：
+
+1. 启动 Office 应用并使用开发租户帐户登录。 如果 Office Android 应用在 Teams 中旁加载应用之前已运行，则需要重启它才能在已安装的应用中看到它。
+1. 选择 **“应用** ”图标。 旁加载应用显示在已安装的应用中。
+1. 选择应用图标以在适用于 Android 的 Office 应用中启动应用。
+
+:::image type="content" source="images/office-mobile-apps.png" alt-text="点击 Office 应用侧栏上的“应用”选项，查看已安装的个人选项卡":::
+
+## <a name="troubleshooting"></a>故障排除
 
 目前，Outlook 和 Office 客户端支持一部分 Teams 应用程序类型和功能。 此支持随时间推移而扩展。
 
@@ -239,6 +256,26 @@ ms.locfileid: "67781195"
 
 在 [Microsoft Teams Framework (TeamsFx) ](https://github.com/OfficeDev/TeamsFx/issues)中提供反馈并报告 Teams 工具包调试体验的任何问题。
 
+#### <a name="mobile-debugging"></a>移动调试
+
+适用于 Android 的 Office 应用尚不支持 Teams 工具包 (`F5`) 调试。 下面介绍如何远程调试在适用于 Android 的 Office 应用中运行的应用：
+
+1. 如果使用物理 Android 设备进行调试，请将其连接到开发计算机并启用 [USB 调试](https://developer.android.com/studio/debug/dev-options)选项。 默认情况下，Android 仿真器会启用此功能。
+1. 从 Android 设备启动 Office 应用。
+1. 打开配置文件 **“我>设置>允许调试**，并切换” **启用远程调试“** 选项。
+
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="显示启用远程调试的屏幕截图":::
+
+1. 退出 **设置**。
+1. 退出配置文件屏幕。
+1. 选择 **“应用** ”并启动旁加载应用以在 Office 应用中运行。
+1. 确保 Android 设备已连接到开发计算机。 在开发计算机中，打开浏览器到其 DevTools 检查页。 例如，转到 `edge://inspect/#devices` Microsoft Edge 以显示已启用调试的 Android WebView 的列表。
+1. `Microsoft Teams Tab`找到选项卡 URL，然后选择 **“检查**”以开始使用 DevTools 调试应用。
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="显示 devtool 中的 Web 视图列表的屏幕截图":::
+
+1. 在 Android WebView 中调试选项卡应用。 以同样的方式远程 [调试](/microsoft-edge/devtools-guide-chromium/remote-debugging) Android 设备上的常规网站。
+
 ## <a name="code-sample"></a>代码示例
 
 | **示例名称** | **说明** | **Node.js** |
@@ -247,6 +284,7 @@ ms.locfileid: "67781195"
 | Microsoft 365 (待办事项列表)  | 使用React和Azure Functions生成的 SSO 的可编辑待办事项列表。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Microsoft 365 (图像编辑器)  | 使用 Microsoft 图形 API 创建、编辑、打开和保存映像。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Microsoft 365)  (示例启动页 | 演示不同主机中可用的 SSO 身份验证和 TeamsJS SDK 功能。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders 应用 | 演示如何使用 Microsoft TeamsJS SDK V2 将团队应用程序扩展到其他 M365 主机应用。 在 Teams、Outlook、Office 中工作。 针对移动设备进行了优化。| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>后续步骤
 

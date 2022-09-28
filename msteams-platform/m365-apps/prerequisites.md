@@ -1,16 +1,16 @@
 ---
 title: 设置开发环境以跨 Microsoft 365 扩展 Teams 应用
-description: 在本文中，你将了解运行预览版本以跨Microsoft 365扩展 Teams 应用所需的先决条件。
+description: 设置开发环境以跨 Microsoft 365 扩展 Teams 应用的要求。 了解运行 Microsoft Teams 和 Microsoft Office 应用程序生成所需的配置。
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 965c9d8b7b05141aa6add18bba51512bd9e0a213
-ms.sourcegitcommit: b13361f342c76d637321df21d2ef900471bf0eef
+ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2022
-ms.locfileid: "67457289"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100945"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>设置开发环境以跨 Microsoft 365 扩展 Teams 应用
 
@@ -70,6 +70,8 @@ ms.locfileid: "67457289"
 
 ## <a name="install-office-apps-in-your-test-environment"></a>在测试环境中安装 Office 应用
 
+### <a name="desktop"></a>桌面
+
 可以使用最近的 *Beta 版频道* 预览在 Windows 桌面的 Outlook 中运行的 Teams 应用。 检查是否必须为测试租户[更改 Microsoft 365 应用更新通道](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016)才能安装 Office 365 Beta 版频道内部版本。
 
 要在测试环境中安装 Office 365 Beta 版频道应用程序：
@@ -90,6 +92,27 @@ ms.locfileid: "67457289"
 
     如果未列出，则将 [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) 安装到测试环境。
 
+### <a name="mobile"></a>移动设备
+
+可以通过加入 beta 程序来预览在适用于 Android 的 Office 应用中运行的 Teams 个人选项卡。
+
+若要将最新的 Office 应用 beta 生成安装到物理 Android 设备或 Android 仿真器，
+
+1. 确保使用 [Google Play 支持的 Android 设备](https://support.google.com/googleplay/answer/1727131)。
+1. 在 Android 设备上启动 **Play 应用商店** 。
+1. 搜索 Office 并选择 **“Microsoft Office：编辑&共享**”。
+1. 选择 **“安装** ”按钮。
+
+    :::image type="content" source="images/office-android-install.png" alt-text="Microsoft Office 的屏幕截图：在 Google Play Store 中编辑&共享应用":::
+
+1. 安装完成后，在“**加入 beta”部分** 下选择“**加入**”。
+
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="“加入 beta”屏幕的屏幕截图":::
+
+1. 启动 Office 应用并使用测试租户凭据登录。
+1. 打开配置文件 **(“我) >设置** ”，然后滚动到菜单底部。
+2. 确保对 Android 使用 Office 应用版本 16.0.15726.20000 或更高版本。
+
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>切换到开发人员预览版 Teams
 
 确保从 Microsoft Teams 客户端切换到[公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)。
@@ -104,7 +127,7 @@ ms.locfileid: "67457289"
 
 或者，可以使用 [Visual Studio Code](https://code.visualstudio.com/) 将 Teams 应用扩展到 Office 和 Outlook。
 
-扩展[适用于 Visual Studio Code 的 Teams 工具包](https://aka.ms/teams-toolkit)（`v2.10.0` 或更高版本）提供有助于修改现有 Teams 代码以与 Outlook 和 Office 兼容的命令。有关详细信息，请参阅[为 Office 和 Outlook 启用 Teams 个人选项卡](extend-m365-teams-personal-tab.md)。
+The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Office. For more information, see [enable Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md).
 
 ## <a name="next-step"></a>后续步骤
 

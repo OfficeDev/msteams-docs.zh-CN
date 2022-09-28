@@ -1,14 +1,14 @@
 ---
 title: Microsoft Teams 开发人员文档 - 术语表
-description: 了解 Microsoft Teams 开发人员文档中使用的术语
+description: 了解 Microsoft Teams 开发人员文档中使用的常见术语、含义和定义。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 53682fd717faf623c77b706d30896519e2754dae
-ms.sourcegitcommit: df3b507a3834fd7c9d4bb1d1098df267998414d4
+ms.openlocfilehash: 8673752e4af13e837793e790c4f7bc14007ff48e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027510"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100859"
 ---
 # <a name="glossary"></a>术语表
 
@@ -78,7 +78,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [E5 开发人员帐户](../toolkit/tools-prerequisites.md) | 用于构建应用以扩展 Microsoft 365 的 E5 开发人员订阅。 包括仅用于开发用途的 25 个用户许可证（包括管理员）。  <br>**另请参阅**：[Microsoft 365 帐户](#m) |
+| [E5 开发人员帐户](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | 用于构建应用以扩展 Microsoft 365 的 E5 开发人员订阅。 包括仅用于开发用途的 25 个用户许可证（包括管理员）。  <br>**另请参阅**：[Microsoft 365 帐户](#m) |
 | [入口点](../concepts/app-fundamentals-overview.md) | Teams 应用的访问点，例如团队、频道和聊天，用户可在其中使用你的应用。 |
 | [环境](../toolkit/teamsfx-multi-env.md) | Teams 工具包中的一项功能，可用于为应用项目创建和使用多个开发环境。 Teams 工具包默认创建两个开发环境：本地环境和开发环境。 <br>**另请参阅**：[本地环境](#l)；[开发环境](#d) |
 

@@ -1,14 +1,14 @@
 ---
 title: 打包应用
-description: 了解如何使用用于测试、上传和存储发布的图标打包 Microsoft Teams 应用。
+description: 了解如何打包 Microsoft Teams 应用并将其上传到 Teams。 创建应用包，启用自定义上传，确保应用正在运行，并可使用 HTTP 进行访问。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 03f1df6af15b5e07dd71bcec22838ecff53d4c7f
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: 87f9e8c6447c8f2712eea40c7c9db2bda3459550
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044684"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100194"
 ---
 # <a name="create-teams-app-package"></a>创建 Teams 应用包
 

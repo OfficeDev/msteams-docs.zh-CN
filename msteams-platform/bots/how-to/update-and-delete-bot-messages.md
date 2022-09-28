@@ -1,18 +1,18 @@
 ---
 title: 更新和删除从机器人发送的消息
 author: WashingtonKayaker
-description: 了解如何使用代码示例更新和删除从 Microsoft Teams 机器人在不同环境中和借助 REST API 发送的消息。
+description: 了解如何使用示例 (.NET、Node.js、Python) 在不同环境中使用 REST API 更新和删除从 Microsoft Teams 机器人发送的消息。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bd52a3cfa27153c4349d50f4263dc29346fdfb45
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d85bb7086661eba58c6cf852cab599970fdc9c80
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503800"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100817"
 ---
-# <a name="update-and-delete-messages-sent-from-bot"></a>更新和删除从机器人发送的消息 
+# <a name="update-and-delete-messages-sent-from-bot"></a>更新和删除机器人发送的消息 
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 

@@ -1,16 +1,16 @@
 ---
 title: 响应搜索命令
 author: surbhigupta
-description: 在本模块中，了解如何使用代码示例和示例从Microsoft Teams应用中的消息扩展响应搜索命令
+description: 了解如何从 Microsoft Teams 应用中的消息扩展响应搜索命令。 了解如何响应用户请求。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99720d4f914cd507f6fff2bce2386eb1a67622af
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143702"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100558"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
@@ -21,7 +21,7 @@ ms.locfileid: "66143702"
 * 当字符输入到搜索框中时。
 * `initialRun` 在应用清单中设置为 true，一旦调用搜索命令，就会收到调用消息。 有关详细信息，请参阅 [默认查询](#default-query)。
 
-本文档介绍如何以卡片和预览的形式响应用户请求，以及Microsoft Teams发出默认查询的条件。
+本文档介绍如何以卡片和预览的形式响应用户请求，以及 Microsoft Teams 发出默认查询的条件。
 
 请求参数在 `value` 请求中的对象中找到，其中包括以下属性：
 
@@ -79,7 +79,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ## <a name="respond-to-user-requests"></a>响应用户请求
 
-当用户执行查询时，Microsoft Teams向服务发出同步 HTTP 请求。 此时，代码有 `5` 几秒钟的时间向请求提供 HTTP 响应。 在此期间，服务可以执行其他查找或为请求提供服务所需的任何其他业务逻辑。
+当用户执行查询时，Microsoft Teams 会向服务发出同步 HTTP 请求。 此时，代码有 `5` 几秒钟的时间向请求提供 HTTP 响应。 在此期间，服务可以执行其他查找或为请求提供服务所需的任何其他业务逻辑。
 
 服务必须响应与用户查询匹配的结果。 响应必须指示具有以下属性的 `200 OK` HTTP 状态代码以及有效的应用程序或 JSON 对象：
 
@@ -94,7 +94,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ### <a name="response-card-types-and-previews"></a>响应卡类型和预览
 
-Teams支持以下卡类型：
+Teams 支持以下卡片类型：
 
 * [缩略图卡](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [主图卡](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
@@ -107,7 +107,7 @@ Teams支持以下卡类型：
 
 有关Office 365连接器卡的其他信息，请参阅[“使用Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)”。
 
-结果列表显示在每个项的预览Microsoft Teams UI 中。 预览版是通过以下两种方式之一生成的：
+结果列表显示在 Microsoft Teams UI 中，其中包含每个项的预览。 预览版是通过以下两种方式之一生成的：
 
 * `preview`使用对象中的`attachment`属性。 附 `preview` 件只能是 Hero 或缩略图卡。
 * 从对象的基本`title``text`属性和`image`属性中`attachment`提取。 仅当未指定该属性时， `preview` 才使用基本属性。
@@ -387,7 +387,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="default-query"></a>默认查询
 
-如果设置为`initialRun``true`清单中，Microsoft Teams用户首次打开消息扩展时发出 **默认** 查询。 服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或不依赖于用户输入的任何其他信息时，这非常有用。
+如果设置为`initialRun``true`在清单中，则当用户首次打开消息扩展时，Microsoft Teams 将发出 **默认** 查询。 服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或不依赖于用户输入的任何其他信息时，这非常有用。
 
 默认查询的结构与任何常规用户查询相同， `name` 字段设置为 `initialRun` 并 `value` 设置为 `true` 如下对象所示：
 

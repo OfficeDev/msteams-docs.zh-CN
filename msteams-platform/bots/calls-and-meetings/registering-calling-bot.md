@@ -1,14 +1,14 @@
 ---
 title: 注册 Microsoft Teams 的通话和会议机器人
-description: 在本模块中，了解如何为 Microsoft Teams 注册新的音频/视频呼叫机器人、创建新机器人或添加呼叫功能以及添加图形权限。
+description: 了解如何为 Microsoft Teams 注册新的音频/视频呼叫机器人、创建新机器人或添加呼叫功能、添加图形权限。 用于创建呼叫、加入会议和传输呼叫的示例。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 74c0f5dab2fe8efbcfee73d8c356675384f83683
-ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
+ms.openlocfilehash: 2563d94e944a7d4058d1417be2f3816e3f565bff
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67407572"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100922"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>注册 Microsoft Teams 的通话和会议机器人
 
@@ -22,8 +22,8 @@ ms.locfileid: "67407572"
 
 通话和联机会议机器人在 manifest.json 中具有以下两个附加设置，用于在 Teams 中为机器人启用音频或视频。
 
-* `bots[0].supportsCalling`。如果存在且设置为 `true`，则 Teams 允许机器人参与通话和联机会议。
-* `bots[0].supportsVideo`。如果存在且设置为 `true`，则 Teams 知道机器人支持视频。
+* `bots[0].supportsCalling`. If present and set to `true`, Teams allows your bot to participate in calls and online meetings.
+* `bots[0].supportsVideo`. If present and set to `true`, Teams knows that your bot supports video.
 
 如果希望 IDE 针对这些值正确验证通话和会议机器人的 manifest.json 架构，则可以更改 `$schema` 属性，如下所示：
 
@@ -39,7 +39,7 @@ ms.locfileid: "67407572"
 
 若要为 Teams 创建新机器人，请执行以下操作：
 
-1. 使用此链接创建新机器人，`https://dev.botframework.com/bots/new`。或者，如果在 Bot Framework 门户中选择“**创建机器人**”按钮，则在 Microsoft Azure 中创建机器人，必须为其创建 Azure 帐户。
+1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
 1. 添加 Teams 频道。
 1. 选择 Teams 频道页面上的“**通话**”选项卡。 选择“**启用通话**”，然后使用接收传入通知的 HTTPS URL 更新 **Webhook（用于通话）**，例如 `https://contoso.com/teamsapp/api/calling`。 有关详细信息，请参阅[配置频道](/bot-framework/portal-configure-channels)。
 
@@ -81,9 +81,9 @@ Graph 提供精细的权限来控制应用对资源的访问权限。 你可以�
 
 ### <a name="get-tenant-administrator-consent"></a>获取租户管理员同意
 
-对于使用 Azure AD V1 端点的应用，当应用安装在其组织中时，租户管理员可以使用 [Microsoft Azure 门户](https://portal.azure.com)许可应用程序权限。或者，你可以在应用中提供注册体验，管理员可以通过该体验同意你配置的权限。Azure AD 记录下管理员许可后，应用无需再次请求许可即可请求令牌。
+For apps using the Azure AD V1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. Once administrator consent is recorded by Azure AD, your app can request tokens without having to request consent again.
 
-你可让管理员在 [Microsoft Azure 门户](https://portal.azure.com)授予你的应用所需的权限；但更好的方法是通过使用 Azure AD V2 `/adminconsent` 端点为管理员提供注册体验。有关详细信息，请参阅[构造管理员同意 URL 的说明](/graph/auth-v2-service#3-get-administrator-consent)。
+You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD V2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > 若要构造租户管理员同意 URL，需要在[应用注册门户](https://apps.dev.microsoft.com/)中配置重定向 URI 或回复 URL。 若要为机器人添加回复 URL，请访问机器人注册，选择“**高级选项**” > “**编辑应用程序清单**”。 将重定向 URL 添加到 `replyUrls` 集合。

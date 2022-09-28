@@ -1,16 +1,16 @@
 ---
 title: 创建传出 Webhook
 author: laujan
-description: 在本模块中，了解如何在 Microsoft Teams 中创建传出 Webhook 及其主要功能和代码示例
+description: 了解如何在 Microsoft Teams 中创建传出 Webhook 及其关键功能和代码示例 (.NET，Node.js) 创建要在 Teams 中使用的自定义机器人。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: e86f3825e39340cb228b24dccc770b2d302fb848
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: 8e4e097d20986badc2ca014156f33772d1b997dd
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337157"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100488"
 ---
 # <a name="create-outgoing-webhooks"></a>创建传出 Webhook
 
@@ -53,7 +53,7 @@ ms.locfileid: "67337157"
 
     ![Teams 频道](~/assets/images/teamschannel.png)
 
-1. 在“**Teams**”页面中，选择所需的团队以创建传出 Webhook，然后选择 &#8226;&#8226;&#8226;。在下拉菜单中，选择“**管理团队**”：
+1. In the **Teams** page, select the required team to create an Outgoing Webhook and select the &#8226;&#8226;&#8226;. In the dropdown menu, select **Manage team**:
 
     ![创建传出 Webhook](~/assets/images/outgoingwebhook1.png)
 
@@ -72,14 +72,14 @@ ms.locfileid: "67337157"
     * **说明**：显示在个人资料卡片和团队级应用仪表板中的详细字符串。
     * **个人资料图片**：Webhook 的应用图标，它为可选。
 
-1. 选择“**创建**”。传出 Webhook 将添加到当前团队的频道中：
+1. Select **Create**. The Outgoing Webhook is added to the current team's channel:
 
     ![创建传出 Webhook](~/assets/images/outgoingwebhook.png)
 
 此时将显示“[基于哈希的消息身份验证代码 (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301)”对话框。 它是一个安全令牌，用于验证 Teams 与指定的外部服务之间的调用。 HMAC 安全令牌不会过期，并且对于每个配置都是唯一的。
 
 >[!NOTE]
-> 仅当 URL 有效并且服务器和客户端身份验证令牌相同时，团队的用户才可以使用传出 Webhook。例如，HMAC 握手。
+> The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
 
 以下方案提供了添加传出 Webhook 的详细信息：
 
@@ -102,12 +102,12 @@ ms.locfileid: "67337157"
 
 在请求标头的授权中，使用值“HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U=”。
 
-为确保你的服务仅接收来自实际 Teams 客户端的调用，Teams 在 HTTP `hmac` 授权标头中提供了 HMAC 代码。始终在身份验证协议中包含 HMAC 代码。
+To ensure that your service is receiving calls only from actual Teams clients, Teams provides an HMAC code in the HTTP `hmac` authorization header. Always include the code in your authentication protocol.
 
 你的代码必须始终验证请求中包含的 HMAC 签名，如下所示：
 
 * 从邮件的请求正文生成 HMAC 令牌。 在大多数平台上都有执行此操作的标准库，例如 Node.js 的 [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) 和 C\# 的 [Teams Webhook 示例](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs)。 Microsoft Teams 使用标准 SHA256 HMAC 加密。 你必须将正文转换为采用 UTF8 格式的字节数组。
-* 在客户端中注册传出 Webhook 时，将从 Teams 提供的安全令牌的字节数组计算哈希值。请参阅[创建传出 Webhook](#create-outgoing-webhooks)。
+* Compute the hash from the byte array of the security token provided by Teams when you registered the Outgoing Webhook in the Teams client. See [create an Outgoing Webhook](#create-outgoing-webhooks).
 * 将哈希值转换为使用 UTF-8 编码的字符串。
 * 将生成的哈希字符串值与 HTTP 请求中提供的值进行比较。
 
@@ -131,7 +131,7 @@ ms.locfileid: "67337157"
 > [!NOTE]
 >
 > * 你可以使用传出 Webhook 将自适应卡片、主图卡片和短信作为附件发送。
-> * 卡片支持设置格式。有关详细信息，请参阅[使用 Markdown 设置卡片格式](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown)。
+> * Cards support formatting. For more information, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
 > * 传出 Webhook 中的自适应卡片仅支持 `openURL` 卡片操作。
 
 以下代码是自适应卡片答复的示例：

@@ -1,16 +1,16 @@
 ---
 title: 跨 Microsoft 365 扩展 Teams 应用（预览版）
-description: 本文介绍如何生成、更新和扩展 Teams 应用体验，以及如何创建跨 Microsoft 365 的其他高使用区域使用的应用。
+description: 了解如何在应用程序托管) 时跨 Microsoft M365 (Teams、Outlook 和 Office 生成、更新和扩展 Teams 应用。 Microsoft AppSource 提交。
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: fec2a91d250044e638783ecb25175771a60f3cdd
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 835af580a23a5fa4bcf99bf5fd2f091d076df489
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781071"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100615"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 应用
 
@@ -22,7 +22,7 @@ Teams 应用平台继续发展并全面扩展到 Microsoft 365 生态系统。 �
 
 |          | 应用清单元素 | Teams 支持 |Outlook* 支持 | Office* 支持 | 备注 |
 |--|--|--|--|--|--|
-| [**选项卡**](../tabs/what-are-tabs.md) (个人范围)     |`staticTabs`  | Web、桌面、移动 | Web (目标发布) 、桌面 (Beta 通道)  | Web (目标发布) 、桌面 (Beta 通道) | Microsoft 365 尚不支持频道和组范围。 请参阅 [笔记](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)。
+| [**选项卡**](../tabs/what-are-tabs.md) (个人范围)     |`staticTabs`  | Web、桌面、移动 | Web (目标发布) 、桌面 (Beta 通道)  | Web (目标发布) 、桌面 (Beta 频道) 、移动 (Android) | Microsoft 365 尚不支持频道和组范围。 请参阅 [笔记](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)。
 | [**消息扩展**](../messaging-extensions/what-are-messaging-extensions.md) (基于搜索的) | `composeExtensions` | Web、桌面、移动| Web (目标发布) 、桌面 (Beta 通道) | - |Microsoft 365 尚不支持基于操作的操作。 请参阅 [笔记](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook)。 |
 | [**Office 加载项**](/office/dev/add-ins/develop/json-manifest-overview) (预览)  | `extensions` | - | Web、桌面 | - | 仅在 [devPreview](../resources/schema/manifest-schema-dev-preview.md) 清单版本中可用。 请参阅 [笔记](#office-add-ins-preview)。|
 
@@ -38,6 +38,10 @@ Teams 应用平台继续发展并全面扩展到 Microsoft 365 生态系统。 �
 通过将 Web 应用扩展为同样在 Outlook 和 Office 中运行的 Teams 个人选项卡应用程序，在用户的工作上下文中访问用户。
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="屏幕截图是显示 Outlook、Office 和 Teams 中运行的个人选项卡的示例。":::
+
+在移动设备上，可以在适用于 Android 的 Office 应用上测试和调试运行的 Teams 个人选项卡。
+
+:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="屏幕截图是显示在 Office 中运行的个人选项卡的示例。":::
 
 还可以将基于搜索的 Teams 消息扩展扩展到Outlook 网页版和 Windows 桌面，使客户能够通过 Outlook 的撰写消息区域（除了 Microsoft Teams 客户端）搜索和共享结果。
 

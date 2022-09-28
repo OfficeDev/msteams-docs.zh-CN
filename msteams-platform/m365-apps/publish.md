@@ -1,20 +1,20 @@
 ---
 title: 发布适用于 Microsoft 365 的 Teams 应用
-description: 本文介绍如何让 Teams、Outlook 和 Office 中的用户发现已启用 Microsoft 365 的 Teams 应用。
+description: 了解如何使已启用 Microsoft 365 的 Teams 应用可供 Teams、Outlook 和 Office 中的用户发现。 了解单租户多租户分布。
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: c99114ed397b9c20f699ffee165189ec7c4fd26d
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 01806f5aa7e3a5b0cb79cb6a2562cbf104f031bb
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919814"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100936"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>发布适用于 Microsoft 365 的 Teams 应用
 
-Microsoft Teams 中支持已启用 Microsoft 365 的 Teams 应用进行生产使用。 可以将这些应用分发给预览使用目标 *版本* outlook.com 和 office.com 的受众，以及 Outlook for Windows 桌面版 *Beta Channel* 版本。 已启用 Microsoft 365 的 Teams 应用的分发选项和流程与传统 Teams 应用相同。
+Microsoft Teams 支持已启用 Microsoft 365 的 Teams 应用进行生产。 可以将这些应用分发给使用 *目标发布*  (开发预览) 版本的 Outlook.com 和 Office.com、Outlook for Windows 桌面版 *Beta Channel* 版本和 Office 当前频道 (开发预览) Android Office 应用生成的受众。 已启用 Microsoft 365 的 Teams 应用的分发选项和流程与传统 Teams 应用相同。
 
 发布后，除了 Teams 应用商店之外，你的应用将作为可安装的应用从 Outlook 和 Office 应用商店中发现。 你的应用使用在 Outlook 和 Office 的 Teams 中定义的权限。 对于组织中的用户，Teams 管理员可以 [管理对 Microsoft 365 中 Teams 应用的访问权限](/MicrosoftTeams/manage-third-party-teams-apps) 。
 

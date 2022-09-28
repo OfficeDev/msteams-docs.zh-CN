@@ -1,16 +1,16 @@
 ---
 title: 定义消息扩展搜索命令
 author: surbhigupta
-description: 在本模块中，了解搜索命令调用位置以及如何为消息传递扩展创建搜索命令。
+description: 了解 Teams 应用的消息扩展搜索命令，通过应用清单和手动创建搜索命令。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
-ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
+ms.openlocfilehash: f774ae4ce0e4198a8e676080b87c33c8ecec3f3f
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67786960"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100894"
 ---
 # <a name="define-message-extension-search-commands"></a>定义消息扩展搜索命令
 

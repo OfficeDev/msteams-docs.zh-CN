@@ -1,18 +1,21 @@
 ---
 title: 为机器人创建命令菜单
 author: surbhigupta
-description: 在本模块中，了解如何使用代码示例为 Microsoft Teams 机器人创建和处理命令菜单。
+description: 了解如何为 Microsoft Teams 机器人创建和处理命令菜单，以及最佳做法。 了解如何从清单中删除命令。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e14afc31839368c7826a6ee15a6f779b5f6f47b1
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 0e0f9ce9ada0cde0aa6f7b6b29c7badb07dd7db9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312301"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100901"
 ---
 # <a name="create-a-commands-menu"></a>创建命令菜单
+
+> [!NOTE]
+> 建议按照使用 Teams 的新一代开发工具使用 [JavaScript 生成命令机器人](../../sbs-gs-commandbot.yml) 的分步指南创建命令机器人。 有关 Teams 工具包的详细信息，请参阅适用于 Visual Studio 的 Visual Studio Code 和 [Teams 工具包概述](../../toolkit/teams-toolkit-overview-visual-studio.md)的 [Teams 工具包概述](../../toolkit/teams-toolkit-fundamentals.md)。
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -61,7 +64,7 @@ ms.locfileid: "67312301"
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>通过编辑 Manifest.json 为机器人创建命令菜单
 
-创建命令菜单的另一种方法是在开发机器人源代码时直接在清单文件中创建。若要使用此方法，请遵循以下几点:
+Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
 
 * 每个菜单最多支持 10 个命令。
 * 创建一个在所有范围内生效的单个命令菜单。
@@ -188,7 +191,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-可以使用“聊天机器人框架”提供的一个静态方法分析消息文本的 **@提及** 部分。它是名为 `remove_recipient_mention` 的 `TurnContext` 类方法。
+You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `remove_recipient_mention`.
 
 用于分析消息文本的“**\@提及**”部分的 Python 代码如下所示：
 
@@ -205,7 +208,7 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 下面是命令菜单最佳做法：
 
 * 保持简单：机器人菜单旨在呈现机器人的关键功能。
-* 保持简短: 菜单选项不能冗长，不能是复杂的自然语言语句。它们必须是简单的命令。
+* Keep it short: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
 * 始终可调用：无论机器人所在的聊天或对话的状态如何，机器人菜单操作或命令必须始终可用。
 
 > [!NOTE]

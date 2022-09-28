@@ -1,16 +1,16 @@
 ---
 title: 针对盈利应用的测试预览
 author: v-ypalikila
-description: 了解如何在实时推送产品/服务之前，为 Teams 应用创建和测试 SaaS 预览版产品/服务。 可以在 Teams 中测试盈利应用的端到端购买体验。
+description: 在实时推送产品/服务之前，为 Teams 应用创建和测试 SaaS 预览版产品/服务。 创建预览产品/服务 ID，使用预览产品/服务 ID 配置应用，并旁加载。
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 98b9876a93fe6040cf66a16475fe7fdacf98a520
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558742"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100789"
 ---
 # <a name="test-preview-for-monetized-apps"></a>针对盈利应用的测试预览
 
@@ -33,13 +33,13 @@ ms.locfileid: "66558742"
       :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="预览版产品/服务" :::
 
     > [!NOTE]
-    > 与公共产品/服务 ID 不同，可以使用 *-preview* 后缀来识别预览产品/服务 ID。例如，**publisherId.offerId-preview**。
+    > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
 
 ## <a name="configure-your-app-with-the-preview-offer-id"></a>使用预览版产品/服务 ID 配置应用
 
 开始之前，请使用带 **预览版受众** 的开发人员账户登录到 **开发人员门户**，以便用户在 Teams 应用商店中查看订阅计划。
 
-生成预览版产品/服务 ID 后，将产品/服务 ID 链接到 Teams 应用。要链接产品/服务 ID，请执行以下操作：
+After you've generated your Preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
 1. 转到 [开发人员门户](https://dev.teams.microsoft.com/) 并使用开发人员凭据登录。
 1. 从左窗格中选择“**应用**”。

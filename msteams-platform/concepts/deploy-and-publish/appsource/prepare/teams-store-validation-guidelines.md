@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams 商店验证指南
-description: 在本文中，你将了解提交到 Teams 应用商店 (AppSource) 的每个应用都必须遵循的准则。
+description: 了解如何增加应用通过 Microsoft Teams 应用商店提交过程的机会。 了解必需和建议的修补程序。 浏览验证准则。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: ed428ba714f5e6cf409f7ded25e8b0df22cd61a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044698"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100299"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams 商店验证指南
 

@@ -1,14 +1,14 @@
 ---
 title: 适用于 Microsoft Teams 的公共开发人员预览版
-description: 在本文中，了解 Microsoft Teams 公共开发人员预览版和开发人员预览应用清单中的功能。
+description: 开发人员预览 (Beta) 是一个公共计划，用于探索和测试即将推出的功能，以便可能包含在 Microsoft Teams 应用中。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 92d85eea70b04f1a5a0f8c7505c7cb5986556052
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: dd0583f453e93a0127bf4cbcc29a6a56dec6655a
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312196"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100285"
 ---
 # <a name="public-developer-preview-for-teams"></a>Teams 公共开发人员预览版
 

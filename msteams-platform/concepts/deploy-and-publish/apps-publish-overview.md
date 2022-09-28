@@ -1,16 +1,16 @@
 ---
 title: 概述 - 分发应用
-description: 本文介绍用于发布 Microsoft Teams 应用、上传和部署应用以及 GCC 的选项。
+description: 了解如何将应用分发、发布到 Microsoft Teams 应用商店或组织。了解应用的终结点必须如何符合政府社区云 (GCC) 组织的要求。
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b194e435ec6152993ce1269875d431ab4ef03aef
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: df17129ce1e51093351683ad01db3be9e65c5770
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044670"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100719"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>分发 Microsoft Teams 应用
 

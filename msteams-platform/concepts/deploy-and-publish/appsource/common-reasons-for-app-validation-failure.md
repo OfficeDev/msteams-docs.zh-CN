@@ -1,16 +1,16 @@
 ---
 title: 应用验证失败的常见原因
-description: 了解应用无法通过应用验证的最常见原因，并增加应用通过 Teams 应用商店提交过程的可能性。
+description: 了解应用无法通过应用验证的最常见原因。 链接断开、描述中的错误、无效的策略链接、有效的域准则冲突、无效的支持链接等。
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: b8d0b0eb44a3071a6831500cfae41952e520399e
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
-ms.translationtype: HT
+ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132737"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100908"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>应用验证失败的常见原因
 

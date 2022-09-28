@@ -1,14 +1,14 @@
 ---
 title: 使用 Microsoft Teams 进行实时媒体通话和在线会议
-description: 了解构建可进行实时音频和视频呼叫以及联机会议的机器人的关键概念。
+description: 了解实时媒体平台如何让机器人与 Microsoft Teams 呼叫和会议交互。 浏览、媒体会话、帧和帧速率、音频和视频格式、活动扬声器、视频订阅。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b1ff14a0229483312c0de6fdb33836ee205f1e14
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8eeb30d63c982ead3e990c0dea2a2bb04a820b97
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143786"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100915"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>使用 Microsoft Teams实时媒体通话和会议
 

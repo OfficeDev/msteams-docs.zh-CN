@@ -1,16 +1,16 @@
 ---
 title: 定义消息扩展操作命令
 author: surbhigupta
-description: 在本模块中，了解如何在 Microsoft Teams 中使用应用清单示例定义消息传递扩展操作命令。
+description: 了解如何在 Microsoft Teams 中使用应用清单示例定义消息扩展操作命令。 示例 (.NET，Node.js) 如何定义操作命令、创建任务模块和响应任务模块提交操作。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604855"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100733"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -77,7 +77,7 @@ ms.locfileid: "67604855"
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>将操作命令添加到应用清单
 
-若要将操作命令添加到应用清单，必须将新的 `composeExtension` 对象添加到应用清单 JSON 的顶层。可以使用以下方法之一来执行此操作：
+To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
 * [使用开发人员门户创建操作命令](#create-an-action-command-using-developer-portal)
 * [手动创建操作命令](#create-an-action-command-manually)
@@ -149,9 +149,9 @@ ms.locfileid: "67604855"
 
 | 属性名称 | 用途 | 是否必需？ | 最低清单版本 |
 |---|---|---|---|
-| `parameters` | 此属性描述了命令的静态参数列表。仅当 `fetchTask` 为 `false` 时使用。 | 否 | 1.0 |
+| `parameters` | This property describes the static list of parameters for the command. Only use when `fetchTask` is `false`. | 否 | 1.0 |
 | `parameter.name` | 此属性描述参数的名称。 这会在用户请求中发送到服务。 | 是 | 1.0 |
-| `parameter.description` | 此属性描述了参数的用途或应提供的值示例。此值显示在 UI 中。 | 是 | 1.0 |
+| `parameter.description` | This property describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | 是 | 1.0 |
 | `parameter.title` | 此属性是一个简短的用户友好参数标题或标签。 | 是 | 1.0 |
 | `parameter.inputType` | 此属性设置为所需的输入类型。 可能的值包括 `text`、`textarea`、`number`、`date`、`time`、`toggle`。 默认值设置为 `text`。 | 否 | 1.4 |
 

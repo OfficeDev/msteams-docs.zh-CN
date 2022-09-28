@@ -1,22 +1,22 @@
 ---
 title: 规划应用概述
 author: heath-hamilton
-description: 介绍规划应用、了解用例、应用功能和其他 Teams 功能的元素。
+description: 了解用例和 Microsoft Teams 应用功能、映射用例、规划移动设备的响应式选项卡。 了解 GCC、GCC-High 和 DOD 的 Teams 功能和可用性。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058240"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100418"
 ---
 # <a name="plan-your-app-with-teams-features"></a>使用 Teams 功能规划应用
 
 构建出色的 Teams 应用就是寻找满足用户需求的正确功能组合的过程。 应用的设计、特性、功能源于此目的。
 
-从本质上看，Teams 是一个协作平台。它也是一个社交平台，是跨平台的本机平台和 Office 365 的核心，并为你提供个人画布来创建应用。
+At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
 在本部分中，了解如何：
 
@@ -76,7 +76,7 @@ Teams 即平台在应用开发的每个阶段为你提供工具包、库、应�
 |-------------|---------|---|---|
 | Teams 拥有的应用（与在内部开发的应用中一样） | ✔️ 如果应用具有 GCC，则会启用该应用。 | ✔️ 如果应用具有 GCC-High，则会启用该应用。 | ✔️ 如果应用具有 DOD，则会启用该应用。 |
 | Microsoft 应用 | ✔️ 符合 GCC 的 Microsoft 应用 | ✔️ 符合 GCC-High 的 Microsoft 应用 | ✔️ 符合 DOD 的 Microsoft 应用 |
-| 3P 或第三方应用 | ✔️ 第三方应用可用。默认情况下禁用，租户管理员自行决定是否启用它。 | ❌ | ❌ |
+| 3P 或第三方应用 | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | 机器人 | ✔️ | ❌ | ❌ |
 | 自定义或 Lob 选项卡应用 |  ✔️ | ✔️ | ✔️ |
 | 旁加载应用 | ✔️ | ❌ | ❌ |

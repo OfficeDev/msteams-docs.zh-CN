@@ -1,16 +1,16 @@
 ---
 title: 准备应用商店提交
-description: 在提交要在应用商店中列出的 Microsoft Teams 应用之前，请了解最后步骤。 了解如何验证应用包等。
+description: 在提交要在应用商店中列出的 Microsoft Teams 应用之前，请了解最后步骤。 了解如何验证应用包。 了解如何在合作伙伴中心更新 Apple App Store Connect 团队 ID。
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605750"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100439"
 ---
 # <a name="prepare-your-teams-store-submission"></a>准备 Teams 应用商店提交
 
@@ -33,7 +33,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 1. 转到“[Microsoft Teams 应用验证工具](https://dev.teams.microsoft.com/appvalidation.html)”。 （注意：该工具在 [Teams 开发人员门户中也可用](~/concepts/build-and-test/teams-developer-portal.md)
 1. 上传应用包以运行自动测试。
 1. 转到“**初步清单**”并查看难以自动执行的测试用例。
-1. [修复配置问题](~/resources/schema/manifest-schema.md)或应用一般问题。如果自动测试提示错误或未满足清单中的所有条件，则会出现这些问题。
+1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## <a name="compile-testing-instructions"></a>编译测试说明
 
@@ -97,7 +97,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 
 #### <a name="short-description"></a>简短说明
 
-应用的简洁摘要，应为原创作品、具有吸引力且针对目标受众。将简短说明保留为一句话。
+A concise summary of your app that should be original, engaging, and directed at your target audience. Keep the short description to one sentence.
 
 :::row:::
 
@@ -167,7 +167,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 
 ### <a name="create-a-video"></a>创建视频
 
-一览中的视频可能是传达为什么应使用你的应用的最有效方法。应在视频中解决以下问题：
+A video in your listing can be the most effective way to communicate why people should use your app. Address the following questions in a video:
 
 * 应用适合谁使用？
 * 应用可以解决哪些问题？
@@ -179,7 +179,7 @@ Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之�
 #### <a name="best-practices-for-videos"></a>视频最佳做法
 
 * 将视频长度保持在 60-90 秒之间。
-* 以质量为目标。在应用一览中，用户将在看到屏幕截图之前先看到你的视频。
+* Aim for quality. In a listing, users will see your video before screenshots.
 * 以叙述形式传达产品的价值。
 * 演示产品的工作方式。
 

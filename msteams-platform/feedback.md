@@ -1,14 +1,14 @@
 ---
 title: Microsoft Teams 开发人员社区支持和反馈
-description: 了解 Microsoft Teams 产品团队通过各种反馈和支持渠道响应开发人员社区。
+description: 了解开发人员社区以及提出问题、限制和一般问题所需的帮助。 询问与 SDK 和示例、文档反馈、功能请求相关的问题。
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 70df325781e5cbc6d18731d4aa0d31dd26b7817a
-ms.sourcegitcommit: 8e57439ad8258bf3315d29fd8e54d4bf15057346
+ms.openlocfilehash: 15d0fb7ccb9ad738a053e1e5c53970ea6bc27f2e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636050"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100173"
 ---
 # <a name="support-and-feedback"></a>支持和反馈
 

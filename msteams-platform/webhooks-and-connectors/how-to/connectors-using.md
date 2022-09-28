@@ -1,15 +1,15 @@
 ---
 title: 创建和发送邮件
 author: laujan
-description: 在本模块中，了解如何使用 Office 365 连接器并在 Microsoft Teams 中创建和发送可操作邮件
+description: 创建可操作消息、通过传入 Webhook、Office 365 连接器、cURL 或 PowerShell 发送消息。 发送自适应卡片。 基于时间的事务。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 5014c23d13dd8f0b1c694c144e936c624c602d40
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ce7f2dd8eba6aaa98156ea118a9724dcd79fd989
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806778"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100460"
 ---
 # <a name="create-and-send-messages"></a>创建和发送邮件
 
@@ -258,10 +258,10 @@ ms.locfileid: "67806778"
 | 7200 | 150  |
 | 86400  | 1800  |
 
-[具有指数补偿的重试逻辑](/azure/architecture/patterns/retry) 将减轻速率限制，以应对请求在一秒内超出限制的情况。请遵循 [最佳做法](../../bots/how-to/rate-limit.md) 以避免达到效率限制。
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md) to avoid hitting the rate limits.
 
 > [!NOTE]
-> [具有指数补偿的重试逻辑](/azure/architecture/patterns/retry)将减轻速率限制，以应对请求在一秒内超出限制的情况。请参阅 [HTTP 429 响应](../../bots/how-to/rate-limit.md#handle-http-429-responses)以避免达到速率限制。
+> A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

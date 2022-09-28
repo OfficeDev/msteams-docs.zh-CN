@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: 在本模块中，了解 Microsoft Teams JavaScript 客户端 SDK 概述，它可帮助你构建托管 <iframe> 在 Teams、Office 和 Outlook 中的应用体验。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ca5a02a067c44aaeab52bdde3c7be3a45c6797df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781064"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100152"
 ---
 # <a name="teams-javascript-client-sdk"></a>团队 JavaScript 客户端 SDK
 
@@ -38,10 +38,10 @@ TeamsJS v.2.0 为某些类型的 Teams 应用引入了在 Microsoft 365 生态�
 
 |功能 | 主机支持 | 注释 |
 |-----------|--------------|-------|
-| 应用 | Teams、Outlook、Office | 表示应用初始化和生命周期的命名空间。 |
+| 应用 | Teams、Outlook、Office、适用于 Android 的 Office 应用 | 表示应用初始化和生命周期的命名空间。 |
 | appInitialization| | 已弃用。 替换为 `app` 命名空间。 |
 | appInstallDialog | Teams||
-| 身份验证 | Teams、Outlook、Office | |
+| 身份验证 | Teams、Outlook、Office、适用于 Android 的 Office 应用 | |
 | 日历 | Outlook ||
 | 通话 | Teams||
 | 聊天 |Teams||
@@ -49,7 +49,7 @@ TeamsJS v.2.0 为某些类型的 Teams 应用引入了在 Microsoft 365 生态�
 | 位置 |Teams| 请参阅有关[应用权限](#app-permissions)的说明。|
 | mail | Outlook（仅限 Windows 桌面版）||
 | 媒体 |Teams| 请参阅有关[应用权限](#app-permissions)的说明。|
-| pages | Teams、Outlook、Office | 表示页面导航的命名空间。 请参阅有关[深层链接](#deep-linking)的说明。 |
+| pages | Teams、Outlook、Office、适用于 Android 的 Office 应用 | 表示页面导航的命名空间。 请参阅有关[深层链接](#deep-linking)的说明。 |
 | people |Teams||
 | settings || 已弃用。 已被 `pages.config` 取代。|
 | 共享 | Teams||
@@ -143,7 +143,7 @@ TeamsJS 1.x.x 版本和 v.2.0.0 及更高版本之间有两个重大更改：
 
 ### <a name="callbacks-converted-to-promises"></a>转换为 promise 的回调
 
-以前使用回调参数的 Teams API 已更新为返回 JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象。其中包括以下 API：
+以前使用回调参数的 Teams API 已更新为返回 JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象。 其中包括以下 API：
 
 ```js
 app.getContext, app.initialize, appInstallDialog.openAppInstallDialog, app.openLink, authentication.authenticate, authentication.getAuthToken, authentication.getUser, authentication.registerAuthenticationHandlers was removed to support using Promises, calendar.openCalendarItem, calendar.composeMeeting, call.startCall, chat.getChatMembers, conversations.openConversation, location.getLocation, location.showLocation, mail.openMailItem, mail.composeMail, pages.backStack.navigateBack, pages.navigateCrossDomain, pages.navigateToTab, pages.tabs.getMruTabInstances, pages.tabs.getTabInstances, pages.getConfig, pages.config.setConfig, pages.backStack.navigateBack, people.selectPeople, teams.fullTrust.getConfigSetting, teams.fullTrust.joinedTeams.getUserJoinedTeams
@@ -232,7 +232,7 @@ async function example() {
 
 运行应用之主机的名称作为 Context 接口 (`app.Context.app.host.name`) 上的 *hostName* 属性公开，可在运行时通过调用 `getContext` 进行查询。 它也可用作 `{hostName}` [URL 占位符值](./access-teams-context.md#get-context-by-inserting-url-placeholder-values)。 最佳做法是谨慎使用 *hostName* 机制：
 
-* **请勿** 根据 *hostName* 属性值假设某个功能在主机中可用或不可用。相反，请检查功能支持 (`isSupported`)。
+* **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **请勿** 使用 *hostName* 控制 API 调用。 相反，请检查功能支持 (`isSupported`)。
 * **请** 使用 *hostName* 根据运行应用程序的主机来区分应用程序的主题。 例如，在 Teams 中运行时，可以使用 Microsoft Teams 紫色作为主要主题色；在 Outlook 中运行时，可以使用 Outlook 蓝色。
 * **请** 使用 *hostName* 根据运行主机来区分向用户显示的消息。 例如，例如，在 Office 网页版中运行时显示“*在 Office 中管理任务*”，在 Teams 中运行时显示“*在 Teams 中管理任务*”。
@@ -446,7 +446,7 @@ TeamsJS *tasks* 命名空间已重命名为 *dialog*，并且已重命名以下 
 # <a name="teams-toolkit"></a>[Teams 工具包](#tab/manifest-teams-toolkit)
 
 1. 打开 *命令面板*：`Ctrl+Shift+P`
-1. 运行“**Teams：升级 Teams 清单以支持 Outlook 和 Office 应用**”命令并选择应用清单文件。将就地进行更改。
+1. Run **Teams: Upgrade Teams manifest to support Outlook and Office apps** command and select your app manifest file. Changes will be made in place.
 
 # <a name="manual-steps"></a>[ 手动步骤 ](#tab/manifest-manual)
 

@@ -1,16 +1,16 @@
 ---
 title: 响应任务模块提交操作
 author: surbhigupta
-description: 在本模块中，了解如何使用主动消息和更多消息从消息传递扩展操作命令响应任务模块提交操作
+description: 了解如何使用主动消息从消息扩展操作命令响应任务模块提交操作。 定义搜索命令并响应搜索。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144024"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100481"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -204,7 +204,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 ## <a name="bot-response-with-adaptive-card"></a>使用自适应卡片获取机器人响应
 
 > [!NOTE]
-> 使用自适应卡获取机器人响应的先决条件是，必须将 `bot` 对象添加到应用清单，并为机器人定义所需的范围。使用与机器人的消息扩展相同的 ID。
+> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 
 你还可以通过使用机器人将带有自适应卡片的消息插入频道来响应 `submitAction`。 用户可以在提交消息之前预览它。 如果要在创建自适应卡片响应之前从用户那里收集信息，或者在有人与卡片交互后更新卡片时，这非常有用。
 
@@ -595,7 +595,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 |`itemId`|整数|介绍项目的标识。 其值必须是 `0`。|
 |`mentionType`|字符串|介绍“人员”的提及。|
 |`mri`|String|代表其发送消息的人员的消息资源标识符 (MRI)。 消息发件人名称将显示为“\<user\> - \<bot name\>”。|
-|`displayName`|String|人员的姓名。在名称解析不可用的情况下作为回退使用。|
+|`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## <a name="code-sample"></a>代码示例
 

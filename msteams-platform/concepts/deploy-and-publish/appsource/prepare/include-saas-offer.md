@@ -1,16 +1,16 @@
 ---
 title: 在应用中包含 SaaS 产品/服务
-description: 本文介绍如何使用基于订阅的定价模型使 Microsoft Teams 应用盈利，以及如何在 Microsoft Teams 应用中包含 SaaS 产品/服务。
+description: 了解如何通过直接从 Teams 应用商店一览中销售订阅计划来使 Microsoft Teams 应用盈利。 了解发布应用、最终用户、管理员购买体验。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e9182df9f6c3c5d7f84654022e658ac6d670e50d
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
-ms.translationtype: HT
+ms.openlocfilehash: 3fe41b635f9789e7f96eeb41f17526205924dadf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288183"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100635"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>在 Teams 应用中包含 SaaS 产品/服务
 
@@ -69,7 +69,7 @@ ms.locfileid: "67288183"
 
 * 对于 Teams 应用的可交易 SaaS 产品/服务，应将订阅计划（许可证）分配给单个用户，而不是组或整个组织。
 * 为用户分配订阅计划时，请通过 Teams 机器人或电子邮件通知他们。 在消息传递中，包括有关如何将应用添加到 Teams 并开始使用的信息。
-* 支持多个管理员的想法。换句话说，同一组织中的多个用户可以购买和管理自己的订阅。
+* 支持多个管理员的想法。 换句话说，同一组织中的多个用户可以购买和管理自己的订阅。
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>生成用于订阅管理的登陆页面
 
@@ -109,7 +109,7 @@ ms.locfileid: "67288183"
 
     * 在“**Microsoft 365 集成**”下，将 AppSource 链接添加到应用列表。 此步骤可确保除 Teams 之外，用户还可以在 AppSource 中购买订阅计划。
 
-1. 存储发布者并提供 ID。（稍后需要它们才能将产品/服务链接到开发人员门户中的应用。）
+1. 存储发布者和产品/服务 ID。 （稍后需要它们才能将产品/服务链接到“开发人员门户”中的应用。）
 
 1. 将产品/服务发布到商业市场。
 

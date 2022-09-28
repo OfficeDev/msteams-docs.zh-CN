@@ -1,17 +1,17 @@
 ---
 title: 概述 - Microsoft Teams 平台的用户情景
 author: heath-hamilton
-description: 了解有关应用创意如何满足 Microsoft Teams 平台用户要求的概述用户案例。
+description: 了解 Microsoft Teams 应用如何帮助 Teams 环境中的用户。 了解用户、问题、应用要求、权益和以用户为中心的解决方案。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 905e357438e9913b64fd46c60a645d0d3d5d3cb0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557979"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100705"
 ---
 # <a name="from-ideas-to-teams-app"></a>从创意到 Teams 应用
 

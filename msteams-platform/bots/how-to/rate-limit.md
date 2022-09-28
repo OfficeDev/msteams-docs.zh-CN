@@ -1,14 +1,13 @@
 ---
 title: 机器人的速率限制
-description: 了解每个机器人的每个线程限制的机器人的处理速率限制，以及包含代码示例的所有机器人的处理速率限制
-ms.topic: conceptual
+description: 了解如何使用速率限制优化机器人。 检测每个机器人线程限制的暂时性异常。 还可以执行指数回退。
 ms.localizationpriority: medium
-ms.openlocfilehash: 38a8832c9a9a2c1368e36606b4b8c6af80341724
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 487f251be40894464e55b891a7386cd8a04abe25
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503863"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100425"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>通过团队中的速率限制来优化你的智能机器人
 

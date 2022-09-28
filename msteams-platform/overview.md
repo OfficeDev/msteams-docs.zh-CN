@@ -1,27 +1,27 @@
 ---
 title: 为 Microsoft Teams 平台生成应用
 author: heath-hamilton
-description: 了解有关开发人员如何使用自定义应用扩展 Microsoft Teams 功能的概述。
+description: 了解 Microsoft Teams、为什么要在 Teams 平台上生成应用，以及 Teams 应用如何帮助满足业务需求。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: f894262918004e643370963ad8e67ef3183927b8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 143f316a6f5153185e78b2efa4ec1db3dc9c1fa6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558427"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100201"
 ---
 # <a name="teams-app-that-fits"></a>适合的 Teams 应用
 
 Microsoft Teams 提供由 Microsoft 或外部服务提供的应用集合。 Teams 应用可以是选项卡、机器人或消息扩展，也可以是这三者的任意组合。 这些应用扩展了 Teams 协作体验的价值。
 
-应用可以是个人或共享应用。个人应用可实现一对一通信，而共享应用则允许多个用户共享应用空间以进行协作。
+Apps can be personal or shared. A personal app enables a one-on-one communication, and a shared app lets multiple users share app space to collaborate.
 
 ## <a name="driving-organizational-goals"></a>推动组织目标
 
-协作和通信是组织的关键所在。简洁的通信、与所需服务的集成以及即时辅助功能是组织越来越多地选择依赖应用的原因。
+Collaboration and communication are key for an organization. Concise communication, integration with necessary services, and on-the-go accessibility is why organizations are increasingly choosing to rely on apps.
 
 组织使用它来与其客户联系、提供服务并共享信息。 但这还不是全部! 应用是人们协同工作的会议场所。 合适的应用有助于构建一个适合外部和内部业务需求的有凝聚力的环境。
 
@@ -47,7 +47,7 @@ Teams 应用通过将关键信息、常用工具和受信任的流程引入更�
 
 - **沟通和协作**
 
-    大多数成功的 Teams 应用都涉及从另一个系统拉取信息、对其进行对话，并让用户采取行动。Teams 允许你直接在 Teams 客户端中执行所有这些任务。甚至可以根据外部系统中的事件或操作将信息推送到目标受众。
+    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users to take action. Teams lets you do all these tasks directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
 
 - **社交交互**
 
@@ -57,7 +57,7 @@ Teams 应用通过将关键信息、常用工具和受信任的流程引入更�
 
 - **常见业务流程**
 
-    创建和共享销售呼叫报告、跟踪项目时间线、保留常用资源、提交技术支持请求等任务是重复的任务。它们适用于有效的 Teams 应用。
+    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests are repetitive tasks. They make for effective Teams apps.
 
     除了自动执行重复性工作流之外，还可以使用应用来帮助解决通信问题。 聊天机器人可以轻松替代给 IT 或人力资源部门的电子邮件和电话。
 

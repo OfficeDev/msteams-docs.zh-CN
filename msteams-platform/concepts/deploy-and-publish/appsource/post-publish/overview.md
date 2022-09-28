@@ -1,16 +1,16 @@
 ---
 title: 维护和支持已发布的应用
-description: 了解如何维护已发布的 Microsoft Teams 应用，以及在 Teams 应用商店和 AppSource 上列出应用商店后要考虑的操作。
+description: 了解如何维护已发布的 Microsoft Teams 应用，以及在 Teams 应用商店和 AppSource 上列出应用商店后要执行的操作。 分析应用使用情况、发布更新、推广应用、完成 Microsoft 365 认证。
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484843"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100327"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
@@ -35,7 +35,7 @@ ms.locfileid: "66484843"
 
 * 请勿更改应用 ID。
 * 递增应用的版本号。
-* 在合作伙伴中心中，不要选择“**添加新应用**”来执行更新。请改为转到应用的页面。
+* In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
 ### <a name="app-updates-requiring-user-consent"></a>需要用户同意的应用更新
 
@@ -50,7 +50,7 @@ ms.locfileid: "66484843"
 * 添加个人选项卡。
 * 添加频道和群组选项卡。
 * 添加连接器。
-* 修改与 Microsoft Azure Active Directory (Azure AD) 应用注册相关的配置。有关详细信息，请参阅 [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)。
+* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>修复已发布应用的问题
 

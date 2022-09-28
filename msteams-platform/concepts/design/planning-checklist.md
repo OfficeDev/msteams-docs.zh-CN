@@ -1,16 +1,15 @@
 ---
 title: 帮助规划 Teams 应用开发的问题
 author: heath-hamilton
-description: 了解如何使用清单规划应用，以确保你的计划涵盖应用开发的重要详细信息。
-ms.topic: conceptual
+description: 了解如何使用清单规划应用，以确保你的计划涵盖应用开发的重要详细信息。 规划应用的生命周期。 计划托管 Teams 应用。
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: dd33aa3dbef8579f06d951138739301f5886b70e
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 932e8ea564a6cc47bb2b8dbe4e01256d0688cefa
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338765"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100712"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams 应用规划清单
 
@@ -106,9 +105,9 @@ ms.locfileid: "67338765"
 
 | # | 考虑… |
 | --- | --- |
-| 1 | 应用在选项卡或机器人中提供的信息是否与团队中的大多数成员相关且有用？例如 Scrum 应用。 |
+| 1 | Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app. |
 | 2 | 应用的上下文能否根据其添加到的团队而改变? 例如，Planner 的任务在不同的团队中是不同的。 |
-| 3 | 角色中需要协作的所有成员是否都属于单个团队？例如，处理票证的代理。 |
+| 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 
 </details>
 <br>

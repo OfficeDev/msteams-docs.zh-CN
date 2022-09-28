@@ -1,14 +1,14 @@
 ---
 title: 清单架构参考
-description: 在本文中，你将拥有 Microsoft Teams 引用、架构和示例完整清单的清单架构。
+description: 在本文中，你将拥有适用于 Microsoft Teams 参考、架构和示例完整清单的最新版本的公共清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026967"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100166"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 

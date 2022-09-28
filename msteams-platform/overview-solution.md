@@ -1,17 +1,17 @@
 ---
 title: 用于生成应用的 Teams 解决方案
 author: heath-hamilton
-description: 了解用于生成应用的 Teams 解决方案概述，并提供从规划应用到分发应用的支持。
+description: 了解如何规划、设计、生成、扩展到 Microsoft 365、测试、分发、盈利以及将应用与 Teams 集成。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 10e35af5ec4993ea93579f70afc120ff0aa8b18a
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
-ms.translationtype: HT
+ms.openlocfilehash: ac4f3a208484a093460a14777a351aa4abc10af7
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66793059"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100782"
 ---
 # <a name="the-teams-solution"></a>Teams 解决方案
 
@@ -22,7 +22,7 @@ Microsoft Teams 平台是一个功能强大、灵活的平台，用于创建适�
 
 你已了解 Teams 产品/服务。 现在可以将它们映射到用户需求。 让我们重新回顾此方案。
 
-旅游旅行机构的开发人员希望为他们的用户（即旅游者）构建一个应用。该应用必须：
+旅游旅行机构的开发人员希望为他们的用户（即旅游者）构建一个应用。 应用必须能够：
 
 - 检查预测信息并将其发送给在该旅游机构注册的旅行者。
 - 在出发日期前一天通知用户，以便他们可以进行计划。
@@ -40,7 +40,7 @@ Microsoft Teams 平台是一个功能强大、灵活的平台，用于创建适�
 
 :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="一家旅游机构的开发人员构建了一个 Teams 机器人，用于向客户发送天气预报，以便他们可以提前计划出行日期":::
 
-Teams 提供了这些功能以及许多其他功能，可为用户提供功能丰富的应用解决方案。若要开发此应用：
+Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
 1. 创建个人聊天机器人应用。
 1. 与外部天气预报 API 集成，连接并请求特定日期和位置的预测。
@@ -55,7 +55,7 @@ Teams 应用为你提供了选择生成环境的灵活性。 它包括用于应�
 
 :::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="业务需求应用":::
 
-在符合特定要求的环境中构建 Teams 应用。你甚至可以选择一个组合。
+Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
 例如，可以使用 Teams 工具包和 JavaScript 生成应用，并将其托管在 SharePoint 网站上。
 
@@ -67,10 +67,10 @@ Teams 应用为用户带去协作工作区的优势。
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="说明 Teams 应用开发的生命周期。计划、设计、生成、扩展、测试、部署、分发。下面的项目符号列表中显示了详细信息。":::
 
-从设计到构建和分发 Teams 应用，可以使用各种工具和服务。开发流的示例：
+From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
 1. 规划项目并确定要求。
-1. 设计应用。使用 Teams UI 工具包和 UI 库设计选项卡 UI。
+1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
 1. 使用 Teams 工具包和 JavaScript 生成应用。
 1. 通过 :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph 添加更多 Teams 功能和 M365 数据来扩展功能。
 1. 使用示例用户数据在开发人员租户上测试应用。
@@ -122,7 +122,7 @@ Teams 应用为用户带去协作工作区的优势。
         **生成应用程序**
     :::column-end:::
     :::column span="2":::
-        正在寻找应用开发灵感？通过高保真概念模拟浏览我们的实际方案和行业解决方案列表，了解 Teams 应用可帮助用户的各种方式。
+        Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
 
         > [!div class="nextstepaction"]
         > [查看应用方案](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
@@ -194,7 +194,7 @@ Teams 应用为用户带去协作工作区的优势。
         **一些代码会大有用处**
     :::column-end:::
     :::column span="2":::
-        无需成为专家程序员即可构建出色的 Teams 应用。尝试几种低代码解决方案之一。
+        You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
         > [!div class="nextstepaction"]
         > [创建低代码应用](samples/teams-low-code-solutions.md)

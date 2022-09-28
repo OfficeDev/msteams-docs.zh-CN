@@ -1,16 +1,16 @@
 ---
 title: 使用 Microsoft Graph 在 Teams 中授权主动机器人安装和消息传递
-description: 本文介绍 Teams 中的主动消息传递以及如何实现它。 了解如何使用代码示例启用主动应用安装和消息传递。
+description: 使用 Graph API 主动安装应用。 检查机器人当前是否已安装，检索聊天 chatId 以发送主动消息。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: cee1b0078c3a963f41d811b1fac9daa0fbe65f77
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 5c45eff85b3a46f27e91e4740513c48c05588198
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604848"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100747"
 ---
 # <a name="send-proactive-installation-messages"></a>发送主动安装消息
 

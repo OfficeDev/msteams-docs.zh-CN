@@ -1,17 +1,17 @@
 ---
 title: 对话事件
 author: WashingtonKayaker
-description: 如何使用代码示例处理来自 Microsoft Teams 机器人、频道事件更新、团队成员事件和消息回应事件的对话事件。
+description: 使用 Microsoft Teams 机器人中的对话事件、频道事件更新、团队成员事件和消息响应事件，其中包含示例 (.NET、Node.js、Python) 。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: 事件, 机器人, 频道消息, 回应, 对话
-ms.openlocfilehash: d7bdd35f887c9f59000139aa36352b0b416465c6
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 6bf1be094afc778317f2e4d5a7657514d35b9777
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616994"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100355"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams 智能机器人中的对话活动
 

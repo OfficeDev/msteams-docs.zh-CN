@@ -1,16 +1,16 @@
 ---
 title: 解决应用商店提交问题
-description: 本文介绍如何排查和更正 Microsoft Teams 应用商店提交问题。
+description: 了解如何排查和更正 Microsoft Teams 应用商店提交的问题。 直接从 Microsoft 获取帮助，解决问题并重新提交应用。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503870"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100278"
 ---
 # <a name="resolve-issues-if-your-teams-store-submission-fails"></a>解决 Teams 应用商店提交失败的问题
 
@@ -84,7 +84,7 @@ Microsoft 提供的礼宾验证服务可帮助开发人员将其应用发布到 
 
 <summary><b>我的应用正在测试 beta。是否可以提交应用以节省发布过程的时间？</b></summary>
 
-不需要。 Microsoft 仅验证生产就绪应用。
+否。 Microsoft 仅验证生产就绪应用。
 
 <br>
 
@@ -94,7 +94,7 @@ Microsoft 提供的礼宾验证服务可帮助开发人员将其应用发布到 
 
 <summary><b>在合作伙伴中心首次提交应用之前，是否可以联系 teamsubm@microsoft.com 电子邮件？</b></summary>
 
-不需要。 在合作伙伴中心首次提交应用之前，Microsoft 不会开始验证应用。
+否。 在合作伙伴中心首次提交应用之前，Microsoft 不会开始验证应用。
 
 <br>
 

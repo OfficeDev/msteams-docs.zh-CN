@@ -1,16 +1,16 @@
 ---
 title: 设置你的智能机器人邮件格式
 author: surbhigupta
-description: 在本模块中，了解如何向机器人消息添加丰富的格式和样式，例如删除、排序和无序列表、超链接、图像链接等。
+description: 了解如何设置机器人消息的格式和样式，例如删除、排序和无序列表、超链接或图像链接。 了解跨平台支持。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 63c201e2126181793ce09a962b5352fb3418cff2
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363492"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100180"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 

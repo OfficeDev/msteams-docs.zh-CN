@@ -1,14 +1,14 @@
 ---
 title: 入门 - 概述
-description: 在本模块中，了解如何开始使用介绍常见工具、基本概念和高级功能的 Microsoft Teams 开发人员文档。
+description: 入门。 基于语言 (Node.js、C#、Java、Python) 和开发环境生成第一个 Microsoft Teams 应用，了解应用功能、SDK。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 4ad64240c97ab11da6a999f87621fdff6d70ebe2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312280"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100432"
 ---
 # <a name="get-started"></a>入门
 
