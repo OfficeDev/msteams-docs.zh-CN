@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 在本文中，你将了解如何创建深层链接，并使用选项卡在 Microsoft Teams 应用中导航它们。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: ea279c9bd4883507df4f56fbf514080940da52b4
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
+ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990999"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158836"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -383,7 +383,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
 
-### <a name="deep-linking-to-an-app"></a>深层链接到聊天
+## <a name="deep-linking-to-an-app"></a>深层链接到聊天
 
 在 Teams 应用商店中列出应用后，为应用创建深层链接。 若要创建启动 Teams 的链接，请将应用 ID 追加到以下 URL：`https://teams.microsoft.com/l/app/<your-app-id>`。 将显示一个对话框来安装或打开应用。
 
@@ -408,9 +408,9 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 例如：`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-### <a name="navigate-to-an-audio-or-audio-video-call"></a>导航到音频或音频视频聊天
+## <a name="navigate-to-an-audio-or-audio-video-call"></a>导航到音频或音频视频聊天
 
-通过指定通话类型和参与者，可以向单个用户或一组用户调用仅音频或音频视频聊天。 在进行呼叫之前，Teams 客户端会提示确认以进行呼叫。 如果有群组呼叫，可以在同一深层链接调用中调用一组 VoIP 用户和一组 PSTN 用户。
+通过指定通话类型和参与者，可以向单个用户或一组用户调用仅音频或音频视频聊天。 在进行呼叫之前，Teams 客户端会提示确认以进行呼叫。 对于组调用，可以在同一深层链接调用中调用一组 VoIP 用户和一组 PSTN 用户。
 
 在视频通话时，客户端将请求确认并打开呼叫方的通话视频。 呼叫接收方可以选择通过 Teams 呼叫通知窗口通过仅音频或音频和视频进行响应。
 
@@ -430,7 +430,78 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-#### <a name="generate-a-deep-link-to-a-call"></a>生成呼叫的深层链接
+## <a name="generate-a-deep-link-to-share-content-to-stage-in-meetings"></a>生成一个深度链接以共享要在会议中登台的内容
+
+你还可以生成一个深度链接来 [共享应用以暂存](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) 和启动或加入会议。
+
+> [!Note]
+> 仅 Teams 桌面客户端支持共享会议阶段内容的深度链接。
+
+当作为正在进行的会议一部分的用户在应用中选择深度链接时，应用将共享到该阶段，并显示权限弹出窗口。 用户可以为参与者授予权限，例如共同编辑文档或与应用协作。
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="屏幕截图是显示权限弹出窗口的示例。":::
+
+当用户不在会议中时，用户将重定向到 Teams 日历，用户需要加入会议或即时会议 (会议现在) 可以启动。
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Instant-meetnow-pop-up.png" alt-text="屏幕截图是一个示例，显示在没有正在进行的会议时弹出窗口。":::
+
+一旦用户启动即时会议 (会议现在) ，他们可以添加参与者并与应用交互。
+
+:::image type="content" source="../../assets/images/intergrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="屏幕截图是一个示例，其中显示了添加参与者的选项以及如何与应用交互。":::
+
+若要添加深度链接以在舞台上共享内容，需要具有应用上下文。 应用上下文允许 Teams 客户端提取应用清单，并检查是否可以在舞台上共享。 下面是应用上下文的示例。
+
+* `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
+
+应用上下文的查询参数为：
+
+* `appID`：这是可以从应用清单获取的 ID。
+* `appSharingUrl`：需要在舞台上共享的 URL 应是应用清单中定义的有效域。 如果 URL 不是有效的域，则会弹出错误对话框，向用户提供错误说明。
+* `useMeetNow`：这包括可为 true 或 false 的布尔参数。
+  * **True** - 如果 `UseMeetNow` 值为 true，并且没有正在进行的会议，则将启动新的“现在开会”会议。 当有正在进行的会议时，将忽略此值。
+
+  * **False** - 默认值为 `UseMeetNow` false，这意味着当共享到阶段的深层链接且没有正在进行的会议时，将显示日历弹出窗口。 当有正在进行的会议时，可以直接进行共享。
+
+确保所有查询参数都正确编码了 URI，并且必须在最终 URL 中对应用上下文进行两次编码。 下面是一个示例。
+
+```json
+var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
+var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
+var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+```
+
+可以从 Teams Web 或 Teams 桌面客户端启动深度链接。
+
+* **Teams Web** - 使用以下格式从 Teams Web 启动深度链接以在舞台上共享内容。
+
+    `https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`
+
+    例如：`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |深度链接|格式|示例|
+    |---------|---------|---------|
+    |若要共享应用并打开 Teams 日历，当 UseMeeetNow 为“false”时，默认值。|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |若要共享应用并启动即时会议，则 UseMeeetNow 为“true”。|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+* **团队桌面客户端** - 使用以下格式从 Teams 桌面客户端启动深度链接，在舞台上共享内容。
+
+    `msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`
+
+    例如：`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
+
+    |深度链接|格式|示例|
+    |---------|---------|---------|
+    |若要共享应用并打开 Teams 日历，当 UseMeeetNow 为“false”时，默认值。|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |若要共享应用并启动即时会议，则 UseMeeetNow 为“true”。|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+
+查询参数为：
+
+* `deepLinkId`：用于遥测关联的任何标识符。
+* `fqdn`： `fqdn` 是一个可选参数，可用于切换到会议的适当环境以在舞台上共享应用。 它支持特定应用共享在特定环境中发生的情况。 默认值`fqdn`为企业 URL，可能的值`Teams.live.com`适用于 Teams for Life 或 `teams.microsoft.com``teams.microsoft.us`。
+
+若要将整个应用共享到阶段，必须在应用清单中配置`meetingStage``meetingSidePanel`并作为帧上下文，请参阅[应用清单](../../resources/schema/manifest-schema.md)。 否则，与会者可能无法在舞台上看到内容。
+
+## <a name="generate-a-deep-link-to-a-call"></a>生成呼叫的深层链接
 
 虽然建议使用 TeamsJS 的类型化 API，但也可以使用手动创建的深层链接来启动呼叫。
 
