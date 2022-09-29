@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ca65a34796886ff8eb6a0c13aaa11af319739dc8
+ms.sourcegitcommit: 1db4429f34da213aa749e483a4ceb83c14b07de3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806771"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158261"
 ---
 # <a name="teams-toolkit-overview"></a>Teams 工具包概述
 
@@ -59,7 +59,7 @@ Teams 工具包可自动执行手动工作，并提供 Teams 和 Azure 资源的
 | 发布 Teams 应用 | 它包含： <br> - 发布应用 <br> - 管理管理员审批 <br> - 发布到存储 <br> - 与开发人员门户集成 |
 
 ### <a name="entities-integrated-with-teams-toolkit"></a>与 Teams 工具包集成的实体
-
+ 
 Teams 工具包是Visual Studio Code中的扩展。 它与 Teams 工具包中的以下实体集成，例如 Azure AD 和 Microsoft 365、开发人员门户和 Microsoft graph。 所有实体都集成在 Teams 工具包中，并帮助用户创建应用。
 
 | 实体 | 说明 |
