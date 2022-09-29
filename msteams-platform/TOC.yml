@@ -649,6 +649,9 @@
         - name: 准备 Teams 应用商店提交
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing'
+        - name: 在合作伙伴中心上更新 Apple App Store 连接团队 ID
+          href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
+          displayName: Enable users to install your app on Teams iOS Platform.
         - name: 提交你的应用
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         - name: 解决 Teams 应用商店提交失败的问题

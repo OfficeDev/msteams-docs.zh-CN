@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 在本文中，你将了解如何创建深层链接，并使用选项卡在 Microsoft Teams 应用中导航它们。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158836"
+ms.locfileid: "68160718"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -388,7 +388,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 在 Teams 应用商店中列出应用后，为应用创建深层链接。 若要创建启动 Teams 的链接，请将应用 ID 追加到以下 URL：`https://teams.microsoft.com/l/app/<your-app-id>`。 将显示一个对话框来安装或打开应用。
 
 > [!NOTE]
-> 如果你的应用已获得移动平台的批准，则可以深入链接到移动版上的应用。 此外，需要使用 Apple App Store Connect Team ID 才能在 Teams-iOS 上使用深层链接。 有关详细信息，请参阅[如何更新 Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center)。
+> 如果你的应用已获得移动平台的批准，则可以深入链接到移动版上的应用。 此外，需要使用 Apple App Store Connect Team ID 才能在 Teams-iOS 上使用深层链接。 有关详细信息，请参阅[如何更新 Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md)。
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint 框架选项卡的深层链接
 

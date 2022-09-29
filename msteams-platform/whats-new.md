@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能以及对现有功�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: e54f37ae2c330275fb0dd51de34c2f8bcd721bba
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 5aad27389416a5e10920ebc00521274fc8f7d907
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158825"
+ms.locfileid: "68160725"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -31,6 +31,7 @@ ms.locfileid: "68158825"
 
 **2022 年 9 月**
 
+* ***2022 年 9 月 29*** 日： [Teams 移动应用现在支持将文件下载到本地设备。](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***2022 年 9 月 29*** 日： [生成一个深度链接以共享内容以在会议中登台。](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***2022 年 9 月 16*** 日： [基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
 * ***2022 年 9 月 6*** 日： [引入了用于通过 `selectMedia` API 使用相机捕获视频的代码片段。](concepts/device-capabilities/media-capabilities.md#code-snippets)
@@ -291,9 +292,10 @@ ms.locfileid: "68158825"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | 在移动设备中将应用共享到 Teams 会议阶段 | 为 Teams 会议和呼叫构建应用> [为会议启用和配置应用](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | 计划公共频道会议的应用 | 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 2022/08/03 | 在 Teams 会议阶段将应用的 API 静音和取消静音 | 为 Teams 会议和通话生成应用 > [会议应用 API 参考](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
-| 08/02/2022| Teams 协作控制| 与 Teams > [协作控件集成](samples/collaboration-control.md)|
+| 08/02/2022| Teams 协作控制| 与 Teams > [协作控件集成](samples/collaboration-control.md) |
 | 2022/06/30 | 用于即时会议、一对一和群组通话的应用| 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 | 构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 02/03/2022 | 已引入应用清单版本 1.13 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |

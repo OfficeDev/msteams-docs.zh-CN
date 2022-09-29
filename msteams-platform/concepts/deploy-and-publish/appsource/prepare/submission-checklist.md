@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 9d850b76bddf288e766bdcc039711ef1d3059df8
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100439"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160711"
 ---
 # <a name="prepare-your-teams-store-submission"></a>准备 Teams 应用商店提交
 
@@ -19,7 +19,7 @@ ms.locfileid: "68100439"
 请观看以下视频，以了解有关将应用发布到 Microsoft Teams 应用商店的详细信息：
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 在将应用提交到 [合作伙伴中心](/office/dev/store/use-partner-center-to-submit-to-appsource) 之前，确保已完成以下操作。
@@ -30,7 +30,10 @@ ms.locfileid: "68100439"
 
 Microsoft Teams 应用验证工具可帮助你在提交到合作伙伴中心之前识别和修复问题。 该工具将根据应用商店验证期间使用的相同测试用例自动检查应用的配置。
 
-1. 转到“[Microsoft Teams 应用验证工具](https://dev.teams.microsoft.com/appvalidation.html)”。 （注意：该工具在 [Teams 开发人员门户中也可用](~/concepts/build-and-test/teams-developer-portal.md)
+1. 转到“[Microsoft Teams 应用验证工具](https://dev.teams.microsoft.com/appvalidation.html)”。
+
+   还可以使用 [Teams 开发人员门户](~/concepts/build-and-test/teams-developer-portal.md)验证应用。
+
 1. 上传应用包以运行自动测试。
 1. 转到“**初步清单**”并查看难以自动执行的测试用例。
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
@@ -185,18 +188,36 @@ A video in your listing can be the most effective way to communicate why people 
 
 ### <a name="select-a-category-for-your-app"></a>为应用选择一个类别
 
-提交期间，系统将要求你对应用进行分类。 下表将 Teams 应用商店类别映射到 [合作伙伴中心](https://aka.ms/PartnerCenterHomePage) 中列出的类别。
+提交期间，系统将要求你对应用进行分类。 可以根据以下类别对应用进行分类：
 
-| Teams 类别       | 合作伙伴中心类别  |
-|:---------------------|:---------------|
-| 数据可视化和 BI | 分析、数据可视化和 BI |
-| 开发人员工具 | 开发人员工具，IT 管理员 |
-| 教育 | 教育 |
-| 人力资源&招聘| 人力资源和招聘 |
-| 工作效率 | 内容管理、文件和文档、生产力、培训和教程以及实用工具 |
-| 项目管理 | 通信、项目管理、工作流和业务管理 |
-| 销售和客户服务 | 客户和联系人管理、客户支持、财务管理，以及销售和市场营销 |
-| 社交 | 图像和视频库、生活方式、新闻和天气、社交、旅行和导航 |
+|类别  |
+|--------------|
+| Microsoft |
+| 教育版 |
+| 工作效率 |
+| 视频库&图像 |
+| 项目管理 |
+| 公用事业 |
+| 社交 |
+| 通信 |
+| 内容管理 |
+| 文件&文档 |
+| 工作流&业务管理 |
+| IT/管理员 |
+| 人力资源&招聘|
+| 开发人员工具 |
+| 会议&日程安排 |
+| 数据可视化& BI |
+| 培训&教程 |
+| 新闻&天气 |
+| 客户支持 |
+| 参考 |
+| 销售&营销 |
+| 看&感觉 |
+| 客户&联系管理 (CRM)  |
+| 财务管理 |
+| 映射&源 |
+| 其他 |
 
 ### <a name="localize-your-store-listing"></a>本地化应用商店一览
 

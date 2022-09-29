@@ -5,12 +5,12 @@ description: 了解如何在 Microsoft Teams 中使用应用清单示例定义�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 7fbfc848c8ba59f46d3651996e46c37c8076ca76
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100733"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160641"
 ---
 # <a name="define-message-extension-action-commands"></a>定义消息扩展操作命令
 
@@ -99,7 +99,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 1. 若要使用现有机器人，请 **选择现有机器人** ，然后从下拉列表中选择现有机器人，或者选择 **“输入机器人 ID** ”（如果已创建机器人 ID）。
 
-1. 选择消息传递扩展的范围，然后选择 **“保存**”。
+1. 选择机器人的范围并 **保存**。
 
 1. 在 **“命令**”部分中选择 **“添加命令**”以包含命令，这些命令决定消息扩展的行为。
 
@@ -167,17 +167,13 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 #### <a name="app-manifest-example"></a>应用清单示例
 
-以下部分是定义两个操作命令的 `composeExtensions` 对象示例。 这不是完整清单的示例。 有关完整的应用清单架构，请参阅[应用清单架构](~/resources/schema/manifest-schema.md)：
-
+本部分不是完整清单的示例。 有关完整的应用清单架构，请参阅 [应用清单架构](~/resources/schema/manifest-schema.md)。 下面是定义两个 `composeExtensions` 操作命令的对象示例：
+ 
 ```json
 ...
 "composeExtensions": [
   {
     "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
-    "scopes": [
-      "personal",
-      "groupchat"
-    ],
     "commands": [
       {
         "id": "To do",
