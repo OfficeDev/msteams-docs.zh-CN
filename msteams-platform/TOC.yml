@@ -265,13 +265,13 @@
       displayName: Teams store apps approved by Microsoft for mobile
     - name: 获取选项卡的上下文
       href: tabs/how-to/access-teams-context.md
-      displayName: 'User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes'
+      displayName: 'User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes'
     - name: 为共享频道构建应用
       href: concepts/build-and-test/shared-channels.md
       displayName: 'Cross-tenant notifications, context for shared channel, apps and permissions in shared channels'
     - name: 具有自适应卡片的生成选项卡
       href: tabs/how-to/build-adaptive-card-tabs.md
-      displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
+      displayName: 'Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication'
     - name: 选项卡链接展开和阶段视图
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -320,7 +320,7 @@
           href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: 获取机器人的 Teams 特定上下文
       href: bots/how-to/get-teams-context.md
-      dispalyName: Fetch roster or user profile
+      displayName: Fetch roster or user profile
     - name: 使用机器人发送和接收文件
       href: bots/how-to/bots-filesv4.md
       displayName: File consent and upload files to Teams from a bot
@@ -342,7 +342,7 @@
           displayName: 'Redirects for region affinity, GeoDNS resolution'
         - name: 应用程序托管的媒体机器人的要求和注意事项
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-          dispalyName: 'Service Fabric with Virtual Machine Scale Sets, instance-level public'
+          displayName: 'Service Fabric with Virtual Machine Scale Sets, instance-level public'
         - name: 支持用于机器人的媒体格式
           href: resources/media-formats.md
     - name: Teams 机器人 API 在提取团队或聊天成员方面的更改
@@ -423,7 +423,7 @@
           href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: 在 Teams 中自定义同框场景模式
       href: apps-in-teams-meetings/teams-together-mode.md
-      displayName: 'Single vitrual scene, scene studio'
+      displayName: 'Single virtual scene, scene studio'
 - name: 构建Webhook 和连接器
   items:
     - name: 概述
@@ -481,7 +481,7 @@
           href: task-modules-and-cards/what-are-task-modules.md
         - name: 调用和关闭任务模块
           href: task-modules-and-cards/task-modules/invoking-task-modules.md
-          displayName: 'JavaScript task modules,keyboard and accessility guidelines, module sizing'
+          displayName: 'JavaScript task modules, keyboard and accessibility guidelines, module sizing'
         - name: 在选项卡中使用任务模块
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: 使用机器人的任务模块
@@ -551,7 +551,7 @@
   items:
     - name: 概述
       href: /graph/teams-concept-overview
-      displayname: 'Permissions, communication, channels, delegated, reports, extensions'
+      displayName: 'Permissions, communication, channels, delegated, reports, extensions'
     - name: Microsoft Graph 工具包
       href: /graph/toolkit/overview
       displayName: 'Access, routing'
@@ -576,10 +576,10 @@
       href: m365-apps/prerequisites.md
     - name: 为 Office 和 Outlook 启用 Teams 个人选项卡
       href: m365-apps/extend-m365-teams-personal-tab.md
-      displayName: 'Microoft 365, Office 365'
+      displayName: 'Microsoft 365, Office 365'
     - name: 为 Outlook 启用 Teams 消息扩展
       href: m365-apps/extend-m365-teams-message-extension.md
-      displayName: 'Microoft 365, Office 365'
+      displayName: 'Microsoft 365, Office 365'
     - name: 发布适用于 Microsoft 365 的 Teams 应用
       href: m365-apps/publish.md
 - name: 测试应用
@@ -744,7 +744,7 @@
       displayName: 'Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams'
     - name: 生产准备就绪的排班连接器
       href: samples/shifts-wfm-connectors.md
-      displayName: 'Teams Shifts Workforce management (WFM),'
+      displayName: Teams Shifts Workforce management (WFM)
     - name: Moodle LMS
       items:
         - name: 概述

@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
+ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450399"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158679"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -130,7 +130,8 @@ ms.locfileid: "67450399"
     * **是否需要 Microsoft Azure Active Directory (Azure AD) 对该选项卡的单点登录支持？**
 
       选择 **不要** 包含对该选项卡的 Azure AD 单点登录支持。默认值为“是”，输入 **n**。
-
+    > [!NOTE]
+    > 在选项卡中，仅当用户选择后退按钮 (或移出选项卡) 并返回到主页时，才会显示选项卡主页。 该选项卡不按设计维护或保留以前的状态。
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>将内容页添加到个人选项卡
