@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 790c6324f012da8aabe7c4489a414d9887e03640
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919730"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243512"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>在整个 Microsoft 365 中扩展 Teams 邮件扩展
 
@@ -90,7 +90,7 @@ ms.locfileid: "66919730"
 
 ---
 
-如果使用 Teams 工具包创建了邮件扩展应用，则可以使用它来验证清单文件的更改并识别任何错误。请打开命令面板 `Ctrl+Shift+P` 并找到“**Teams：验证清单文件**”。
+If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>为机器人添加 Outlook 通道
 
@@ -98,7 +98,7 @@ ms.locfileid: "66919730"
 
 为了让用户与 Outlook 中的邮件扩展进行交互，需要向机器人添加 Outlook 通道：
 
-1. 从 [Microsoft Azure 门户](https://portal.azure.com)（或 [Bot Framework 门户](https://dev.botframework.com)，如果之前在此门户中注册）中，导航到你的机器人资源。
+1. 从 [Microsoft Azure 门户](https://portal.azure.com) (或 [Bot Framework 门户](https://dev.botframework.com)（如果之前在其中注册) ，请转到机器人资源。
 
 1. 从 *“设置”* 中，选择“**通道**”。
 
@@ -115,7 +115,7 @@ ms.locfileid: "66919730"
 > [!NOTE]
 > 如果使用本教程中提供的[示例应用](#quickstart)，则可以跳过此步骤，因为该方案不涉及 Azure Active Directory (AAD) 单一登录身份验证。
 
-邮件扩展的 Azure Active Directory (AD) 单一登录 (SSO) 在 Outlook [中的工作方式与在 Teams 中的工作方式相同](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)。但是，你需要在租户的 *应用注册* 门户中，将多个客户端应用程序标识符添加到机器人的 Azure AD 应用注册。
+Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
 
 1. 使用沙盒租户帐户登录 [Azure 门户](https://portal.azure.com)。
 1. 打开“**应用注册**”。
@@ -167,7 +167,7 @@ ms.locfileid: "66919730"
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="单击邮件撰写窗口底部的“更多应用”菜单以使用邮件扩展":::
 
-你的邮件扩展已列出。可以从那里调用它，并像在 Teams 中撰写邮件时一样使用它。
+Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
 ### <a name="outlook"></a>Outlook
 

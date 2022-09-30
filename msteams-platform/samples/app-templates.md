@@ -6,12 +6,12 @@ keywords: Microsoft Teams 模板示例演示
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 7f99a15ee8138c029e3ae0c68ae52152f0efc6bb
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 1314221e5962db045a5e75b8dadbcb6a868c959c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058121"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243036"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 的应用模板
 
@@ -38,7 +38,7 @@ Champion Management Platform (CMP) 应用模板可帮助你管理、扩大和激
 
 通过 Company Communicator 应用，公司团队能够创建和发送面向多个团队或大量员工的聊天消息，从而使组织能够在员工进行协作的位置与员工联系。 将此模板可用于多种场景，例如新计划公告、员工入职、新式学习、开发或组织范围的广播。
 
-该应用可为指定用户提供一个易于使用的界面，供其创建、预览、协作和发送消息。
+该应用为指定用户提供了一个易于创建、预览、协作和发送消息的界面。
 
 它为构建自定义目标通信功能提供了基础，例如基于确认消息或与消息交互的用户数的自定义遥测。
 
@@ -85,13 +85,13 @@ Icebreaker 是一个 [Microsoft Teams 机器人](../bots/what-are-bots.md)，通
 
 Microsoft Teams 紧急运营中心 (TEOC) 解决方案模板利用 Microsoft 365 平台的强大功能，使用Microsoft Lists、SharePoint 等强大服务集中事件响应、信息共享和现场通信。 Microsoft 支持的开源解决方案提供核心功能，并且可以扩展以满足特定的代理要求。
 
-[在 GitHub 上获取该应用](https://github.com/OfficeDev/microsoft-teams-emergency-operations-center/)
+[在 GitHub 上获取该机器人](https://github.com/OfficeDev/microsoft-teams-emergency-operations-center/)
 
 ## <a name="tournament-of-teams"></a>Teams 锦标赛
 
-冠军在帮助推动采用和发展新锦标赛、帮助实现业务目标方面至关重要。 请确保利用你的冠军来帮助确定和构建新的采用主题锦标赛，并激励你的组织学习和参与。
+冠军在帮助推动采用和发展新锦标赛、帮助实现业务目标方面至关重要。 确保你正在利用你的冠军来帮助确定和构建新的采用主题锦标赛，并激励你的组织学习和参与。
 
-[在 GitHub 上获取该应用](https://github.com/OfficeDev/microsoft-teams-apps-tournament-of-teams)
+[在 GitHub 上获取该模板](https://github.com/OfficeDev/microsoft-teams-apps-tournament-of-teams)
 
 ## <a name="app-template-code-samples"></a>应用模板代码示例
 
@@ -99,8 +99,8 @@ Microsoft Teams 紧急运营中心 (TEOC) 解决方案模板利用 Microsoft 365
 
 > [!NOTE]
 >
-> * Microsoft 没有主动管理源代码。完整的源代码是开放源代码，你可以浏览、分支和修改源代码以满足特定要求。
-> * 请勿使用 Microsoft Power Platform 创建要发布到 Teams 应用商店的应用。 Microsoft Power Platform 应用只能发布到组织的应用商店。
+> * Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
+> * 不得使用 Microsoft Power Platform 创建要发布到 Teams 应用商店的应用。 Microsoft Power Platform 应用只能发布到组织的应用商店。
 
 下表描述了应用模板代码示例：  
 

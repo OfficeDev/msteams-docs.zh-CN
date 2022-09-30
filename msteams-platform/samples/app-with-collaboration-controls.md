@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用 Teams 协作控件生成模型
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027338"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243057"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>使用 Teams 协作控件创建新的模型驱动应用
 
@@ -227,7 +227,7 @@ ms.locfileid: "68027338"
 
      :::image type="content" source="../assets/images/collaboration-control/launch-window.png" alt-text="屏幕截图是显示控件窗口的示例。":::
 
-1. 选择 **“配置** ”并导航到“常规”选项卡以添加组 ID。
+1. 选择 **“配置** ”并转到“常规”选项卡以添加组 ID。
 
      :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="屏幕截图介绍如何在“常规”选项卡中添加组 ID。":::
 
@@ -284,7 +284,7 @@ Notes 控件不需要设置值。 现在可以在应用程序中创建任务和�
 
 用户可以在会议列表中看到内部会议和客户预订。 会议开始后，用户可以通过选择“ **加入** ”按钮加入，该按钮直接在 Microsoft Teams 中打开会议。
 
-由于会议由 Outlook 提供支持，因此用户可以导航到 Bookings 或Outlook 日历查看单个日历中列出的所有会议。 内部会议在共享日历中列出。
+由于会议由 Outlook 提供支持，因此用户可以转到 Bookings 或Outlook 日历查看单个日历中列出的所有会议。 内部会议在共享日历中列出。
 
 下面是将共享日历添加到 Outlook (可选) 的步骤：
 

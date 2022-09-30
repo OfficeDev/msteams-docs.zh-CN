@@ -3,12 +3,12 @@ title: 准备 Microsoft 365 租户
 description: 在本模块中，了解如何在 Microsoft 365 中开始使用 Teams 并创建开发环境
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: b52a74056dac01d6a946bd8f0166080b75a5fab5
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c5ebc7d36f73978e1cd954c7be8d7ac3595ba68e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484885"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243582"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 
@@ -46,7 +46,7 @@ Microsoft 365 订阅者可以使用以下计划之一为 Microsoft Teams 开发�
     > [!Note]
     > 可能至多 24 小时后 **Teams** 选项才会出现。 在此期间可以[将自定义应用上传到 Teams 环境](/microsoftteams/upload-custom-apps#validate)进行测试和验证。
 
-3. 导航到“**Teams 应用**” > “**设置策略**” > “**全局**”。
+3. 转到 **Teams 应用** > **“全局设置策略** > ”。
 
    ![打开旁加载视图](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 

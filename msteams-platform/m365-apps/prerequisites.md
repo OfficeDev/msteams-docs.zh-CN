@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100945"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243323"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>设置开发环境以跨 Microsoft 365 扩展 Teams 应用
 
@@ -79,12 +79,12 @@ ms.locfileid: "68100945"
 1. 请使用测试租户凭据登录到测试环境。
 1. 下载 [Office部署工具](https://www.microsoft.com/download/details.aspx?id=49117)并提取到本地文件夹。
 1. 转到本地文件夹并在文本编辑器中打开 *configuration-Office365-x86.xml*（或 **x64.xml*，具体取决于环境），并将 *频道* 值更新为 `BetaChannel`。
-1. 打开命令提示符并导航到本地文件夹路径。
+1. 打开命令提示符并转到本地文件夹路径。
 1. 运行 `setup.exe /configure configuration-Office365-x86.xml`（或使用 **x64.xml* 文件，具体取决于设置）。
 1. 打开 Outlook（桌面客户端）并使用测试租户凭据设置邮件帐户。
 1. 打开“**文件**” > “**Office 帐户**” > “**关于 Outlook**”，确认你正在运行 Outlook 的 Microsoft 365 *Beta 版频道* 版本。
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="从 Office 帐户转到“关于 Outlook”，验证你是否正在运行 Beta 版频道版本。":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="从 Office 帐户转到“关于 Outlook”，验证你正在运行 Beta Channel 版本。":::
 
 1. 验证是否已安装 *Microsoft Edge WebView2 运行时*。 打开 Windows“**开始**” > “**应用和功能**”，然后搜索 **webview**：
 
@@ -96,7 +96,7 @@ ms.locfileid: "68100945"
 
 可以通过加入 beta 程序来预览在适用于 Android 的 Office 应用中运行的 Teams 个人选项卡。
 
-若要将最新的 Office 应用 beta 生成安装到物理 Android 设备或 Android 仿真器，
+若要安装最新的 Office 应用 beta，请生成到物理 Android 设备或 Android 仿真器：
 
 1. 确保使用 [Google Play 支持的 Android 设备](https://support.google.com/googleplay/answer/1727131)。
 1. 在 Android 设备上启动 **Play 应用商店** 。

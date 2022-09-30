@@ -4,12 +4,12 @@ description: 本文介绍如何开发基于搜索的消息扩展
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: aece6f0984e1a6979f5a591fb271010e508b51a1
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 789563d3a11a7e83d59b1653cc0cf45af2354dc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035224"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243029"
 ---
 # <a name="search-with-message-extensions"></a>使用消息扩展进行搜索
 
@@ -88,7 +88,7 @@ ms.locfileid: "67035224"
 
 可以通过上传应用来测试消息扩展。
 
-若要打开邮件扩展插件，请导航到任何聊天或频道。 在撰写框中选择“ **更多”选项** **(&#8943;**) 按钮，然后选择邮件扩展。
+若要打开邮件扩展插件，请转到任何聊天或频道。 在撰写框中选择“ **更多”选项** **(&#8943;**) 按钮，然后选择邮件扩展。
 
 ## <a name="add-event-handlers"></a>添加事件处理程序
 

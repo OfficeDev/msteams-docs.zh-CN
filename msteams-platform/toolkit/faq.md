@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2b229b14db563a6b7a4dc587ac67c872d461ec72
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 6a6c6599ff036cf7b81dd30b00e5608db3dc4cc2
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806899"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243373"
 ---
 # <a name="faq-for-teams-toolkit"></a>Teams 工具包常见问题解答
 
@@ -25,7 +25,7 @@ ms.locfileid: "67806899"
 
 <summary><b>如何进行故障排除？</b></summary>
 
-如果在 Visual Studio Code 中出现 Teams 工具包错误，可以在错误通知中选择 **获取帮助** 来导航到相关文档。 如果使用的是 TeamsFx CLI，则错误消息末尾会有一个指向帮助文档的超链接。也可以直接查看[预配帮助文档](https://aka.ms/teamsfx-arm-help)。
+如果在 Visual Studio Code 中遇到 Teams 工具包错误，可以选择 **“获取** 有关错误通知的帮助”转到相关文档。 如果使用的是 TeamsFx CLI，则错误消息末尾会有一个指向帮助文档的超链接。也可以直接查看[预配帮助文档](https://aka.ms/teamsfx-arm-help)。
 
 <br>
 

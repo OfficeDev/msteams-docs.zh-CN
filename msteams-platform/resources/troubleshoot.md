@@ -1,16 +1,16 @@
 ---
 title: 排查应用问题
-description: 排查为Microsoft Teams构建应用时出现的问题或错误
+description: 排查为 Microsoft Teams 生成应用时出现的问题或错误
 keywords: teams 应用开发故障排除
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0b3f4f7b3a38b6e61b4fbc7e58c5ed5897ed427e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048960"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243470"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Microsoft Teams 应用疑难解答
 
@@ -18,7 +18,7 @@ ms.locfileid: "66048960"
 
 ### <a name="accessing-the-devtools"></a>访问 DevTools
 
-可以在[Teams客户端中打开 DevTools](~/tabs/how-to/developer-tools.md)，以获得与在浏览器中的 MacOS) 上的 Windows) 或 Command-Option-I (上按 F12 (类似的体验。
+可以在 [Teams 客户端中打开 DevTools](~/tabs/how-to/developer-tools.md) ，以获得与在 Windows) 上按 F12 (或在浏览器中的 MacOS) 上的 Command-Option-I (类似的体验。
 
 ### <a name="blank-tab-screen"></a>空白选项卡屏幕
 
@@ -26,6 +26,9 @@ ms.locfileid: "66048960"
 
 * 无法在 `<iframe>`其中显示内容。
 * 内容域不在清单中的 [validDomains](~/resources/schema/manifest-schema.md#validdomains) 列表中。
+
+> [!NOTE]
+> 当给定的选项卡 URL 重定向到登录屏幕时，将显示一个空白选项卡。 登录页不会在 iFrame 中呈现，作为防止点击劫持的保障措施。 身份验证逻辑必须使用重定向以外的方法。
 
 ### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>“设置”对话框上未启用“保存”按钮
 
@@ -87,12 +90,12 @@ ms.locfileid: "66048960"
 
 清单读取错误的常见原因：
 
-* JSON 无效。 使用 IDE，例如[自动](https://code.visualstudio.com)验证 JSON 语法[的Visual Studio Code或Visual Studio](https://www.visualstudio.com/vs/)。
+* JSON 无效。 使用 IDE（例如[Visual Studio Code](https://code.visualstudio.com)或 [Visual Studio](https://www.visualstudio.com/vs/)）自动验证 JSON 语法。
 * 编码问题。 对 *manifest.json* 文件使用 UTF-8。 其他编码（特别是 BOM 编码）可能不可读。
-* 格式不正确的.zip包。 *manifest.json* 文件必须位于.zip文件的顶层。 请注意，默认的 Mac 文件压缩可能会将 *manifest.json* 放置在子目录中，而子目录不会在Microsoft Teams中正确加载。
+* 格式不正确的.zip包。 *manifest.json* 文件必须位于.zip文件的顶层。 请注意，默认的 Mac 文件压缩可能会将 *manifest.json* 放置在子目录中，而子目录不会在 Microsoft Teams 中正确加载。
 
 ### <a name="another-extension-with-same-id-exists"></a>存在具有相同 ID 的另一个扩展
 
-如果尝试再次上传具有相同 ID 的更新包，请选择选项卡表行末尾的 **“替换**”图标，而不是 **“Upload**”按钮。
+如果尝试再次上传具有相同 ID 的更新包，请选择选项卡表行末尾的 **“替换** ”图标，而不是 **“上传** ”按钮。
 
 如果不重新上传更新的包，请确保 ID 是唯一的。

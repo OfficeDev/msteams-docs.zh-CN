@@ -3,12 +3,12 @@ title: 创建深层链接
 description: 在本文中，你将了解如何创建深层链接，并使用选项卡在 Microsoft Teams 应用中导航它们。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 7a9af415a6fdc4f2cb1f9fd04ba79e8b197a40fc
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160718"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243218"
 ---
 # <a name="create-deep-links"></a>创建深层链接
 
@@ -101,7 +101,7 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 > [!NOTE]
 >
 > * 个人选项卡具有 `personal` 作用域，而通道和组选项卡使用 `team` 或 `group` 作用域。 这两种选项卡类型的语法略有不同，因为只有可配置的选项卡具有与其上下文对象关联的 `channel` 属性。 有关选项卡范围的详细信息，请参阅[应用程序清单](~/resources/schema/manifest-schema.md)参考。
-> * 仅当使用 v0.4 或更高版本库配置了选项卡并且具有实体 ID 时，深层链接才能正常工作。 没有实体 ID 的选项卡的深层链接仍会导航到选项卡，但无法向选项卡提供子实体 ID。
+> * 仅当使用 v0.4 或更高版本库配置了选项卡并且具有实体 ID 时，深层链接才能正常工作。 指向没有实体 ID 的选项卡的深层链接仍会转到选项卡，但无法向选项卡提供子实体 ID。
 
 对可在自动程序、连接器或消息扩展卡中使用的深层链接使用以下格式：
 
@@ -322,7 +322,7 @@ else { /* handle case where capability isn't supported */ }
 
 ### <a name="generate-deep-links-to-channel-conversation"></a>生成指向频道对话的深层链接
 
-使用此深层链接格式导航到频道线程中的特定对话：
+使用此深层链接格式转到通道线程中的特定对话：
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 

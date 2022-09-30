@@ -5,12 +5,12 @@ description: 在本模块中，了解 Microsoft Teams 中协作控制应用中�
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
-ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
+ms.openlocfilehash: 2571787d5fba47c4ada3765dd13dd36ef1f8f63a
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67314593"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243043"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>任务、会议、文件的虚拟表
 
@@ -45,7 +45,7 @@ ms.locfileid: "67314593"
 
 1. 已安装协作控件的 Dataverse 环境。
 1. Dataverse 环境中的用户帐户，其中分配了 **协作控制用户** 角色。
-1. 第三方工具，例如：发布人员或一些自定义 C# 代码，允许你对 Microsoft Dataverse 实例进行身份验证，并撰写和发送 Web API 请求并查看响应。  
+1. 第三方工具（例如，Post man 或一些自定义 C# 代码）允许你对 Microsoft Dataverse 实例进行身份验证，并撰写和发送 Web API 请求并查看响应。  
 
 > [!TIP]
 > Microsoft 提供有关如何配置连接到 Dataverse 实例的 Postman 环境以及如何使用 Postman 使用 Web API 执行操作的信息。 请参阅 [将 Postman 与 Microsoft Dataverse Web API 配合使用](/power-apps/developer/data-platform/webapi/use-postman-web-api)。
@@ -56,7 +56,7 @@ ms.locfileid: "67314593"
 
 下面的序列图说明了客户端之间的交互，即任务协作控制、 [协作 API](/rest/api/industry/collaboration-controls/) 以及 Planner 计划和任务虚拟表。
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="虚拟表的序列图":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="此图显示了虚拟表的序列图。":::
 
 ## <a name="virtual-tables-basic-operations"></a>虚拟表基本操作
 
@@ -73,7 +73,7 @@ ms.locfileid: "67314593"
 
 协作会话是协作根表中的记录，可用于将多个协作（例如任务、事件、约会）与业务记录相关联。
 
-协作会话允许执行与业务记录关联的日历事件列表等操作，例如检查应用程序。
+通过协作会话，可以执行与业务记录关联的日历事件列表等操作，例如检查应用程序。
 
 # <a name="request"></a>[请求](#tab/request)
 
@@ -108,7 +108,7 @@ ms.locfileid: "67314593"
 
 ---
 
-跟踪 `collaborationRootId` 后续请求中所需的信息。
+`collaborationRootId`跟踪后续请求中所需的信息。
 
 **任务 3：创建 Planner 计划**
 
@@ -132,7 +132,7 @@ ms.locfileid: "67314593"
 
 * `collaborationRootId`：标识要将此计划与之关联的协作会话，使用任务 2 中的值
 
-* `groupId`：标识将拥有此计划的组，使用步骤 1 中的值
+* `groupId`：标识拥有此计划的组，使用步骤 1 中的值
 
 * `planTitle`：计划标题
 
@@ -161,7 +161,7 @@ ms.locfileid: "67314593"
 
 ---
 
-跟踪`m365_id` 后续请求中所需的信息。
+`m365_id`跟踪后续请求中所需的信息。
 
 **任务 4：创建 Planner 任务**
 
@@ -184,7 +184,7 @@ ms.locfileid: "67314593"
 
 ```
 
-* `collaborationRootId`：标识要将此计划与之关联的协作会话，以及任务 2 中的值
+* `collaborationRootId`：标识要将此计划与之关联的协作会话，使用任务 2 中的值
 * `planId`：标识此任务将分配到的计划，使用上一步中的值
 * `taskTitle`：任务的标题
 
@@ -230,7 +230,7 @@ ms.locfileid: "67314593"
 
 ---
 
-跟踪 `m365_graphplannertaskid` 后续请求中所需的信息。
+`m365_graphplannertaskid`跟踪后续请求中所需的信息。
 
 > [!NOTE]
 > 这是 `m365_graphplannertaskid` Planner Task 虚拟表中记录的主键。 对虚拟表进行与此记录交互的所有后续请求都必须使用此主键。 此操作将称为 `plannerTaskId` 本文档后续步骤。

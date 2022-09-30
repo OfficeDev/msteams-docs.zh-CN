@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能以及对现有功�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 5aad27389416a5e10920ebc00521274fc8f7d907
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 8c618862056d6cc8b7a76cfd504be32f341d11ca
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160725"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243421"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -22,7 +22,7 @@ ms.locfileid: "68160725"
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/general-availabe.png" alt-text="汇报正式版功能":::
+:::image type="icon" source="~/assets/images/general-availabe.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -31,6 +31,7 @@ ms.locfileid: "68160725"
 
 **2022 年 9 月**
 
+* ***2022 年 9 月 30*** 日： [管理 Teams 中第三方应用的 SaaS 许可证](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***2022 年 9 月 29*** 日： [Teams 移动应用现在支持将文件下载到本地设备。](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***2022 年 9 月 29*** 日： [生成一个深度链接以共享内容以在会议中登台。](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***2022 年 9 月 16*** 日： [基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
@@ -265,6 +266,7 @@ ms.locfileid: "68160725"
 </details>
 </details>
 </details>
+
 ::: zone-end
 
 ::: zone pivot="dev-preview"
@@ -276,7 +278,7 @@ ms.locfileid: "68160725"
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/developer-preview.png" alt-text="开发人员预览版中提供的功能汇报":::
+:::image type="icon" source="~/assets/images/developer-preview.png":::
 
 :::column-end:::
 :::column span="2":::
@@ -316,7 +318,7 @@ ms.locfileid: "68160725"
 :::row:::
 :::column:::
 
-:::image type="icon" source="~/assets/images/deprecated.png" alt-text="不推荐使用的功能":::
+:::image type="icon" source="~/assets/images/deprecated.png":::
 
 :::column-end:::
 :::column span="2":::

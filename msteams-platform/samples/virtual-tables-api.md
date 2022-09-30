@@ -5,12 +5,12 @@ description: 在本模块中，了解 Microsoft Teams 中的虚拟表 Web API �
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 31784cfabccdfa861044e74be533c00f134ea851
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: b15c7972dfc0152d458e4ad895ed6d4f7e45cd4c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178898"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243547"
 ---
 # <a name="virtual-tables-web-api"></a>虚拟表 Web API
 
@@ -31,14 +31,14 @@ ms.locfileid: "67178898"
 > [!NOTE]
 > 不支持对相应 Graph 资源的所有属性进行排序。 如果用户尝试对具有不受支持的属性的虚拟表进行排序，则此结果集将具有默认顺序。 这与不支持排序的列上的 Dataverse Web API 的行为相同。
 
-示例:
+示例：
 
 * GET [组织 URI]/api/data/v9.2/m365_graphdriveitems？$filter=m365_collaborationrootid eq '00000000-0000-0000-00000-00000000000000'&$orderby=m365_name desc
 * GET [组织 URI]/api/data/v9.2/m365_graphevents？$filter=m365_groupid eq '00000000-0000-0000-00000-00000000000000'$orderby=m365_subject asc
 
 ## <a name="virtual-table-filtering"></a>虚拟表筛选
 
-使用虚拟表，可以使用 OData $filter查询参数来设置将返回哪些行的条件。 使用 Dataverse Web API 支持的相同 OData 运算符查询虚拟表。
+使用虚拟表，可以使用 OData $filter查询参数来设置返回行的条件。 使用 Dataverse Web API 支持的相同 OData 运算符查询虚拟表。
 
 * **比较运算符**
 
@@ -81,9 +81,9 @@ not|逻辑协商 |$filter=不包含 (m365_name，'Contoso') |
 * 图形事件
 
 > [!Note]
-> 各自 Graph 资源的所有属性不支持筛选。 如果用户尝试使用不受支持的属性筛选虚拟表，则将忽略此筛选器。 这与不支持筛选的列上的 Dataverse Web API 的行为相同。
+> 各自 Graph 资源的所有属性不支持筛选。 如果用户尝试使用不受支持的属性筛选虚拟表，则忽略此筛选器。 这与不支持筛选的列上的 Dataverse Web API 的行为相同。
 
-示例:
+示例：
 
 * GET [组织 URI]/api/data/v9.2/m365_graphbookingappointments？$filter=m365_bookingbusinessid eq 'ContosoBank@Contoso.onmicrosoft.com' 和 m365_price eq 100.0
 * GET [组织 URI]/api/data/v9.2/m365_graphdriveitems？$filter=m365_collaborationrootid eq '0000000-0000-0000-00000-00000000000000'，m365_name eq 'Meeting Notes.docx'
@@ -93,7 +93,7 @@ not|逻辑协商 |$filter=不包含 (m365_name，'Contoso') |
 
 分页是提取大量记录的有用资源。 可以通过三种不同的方式实现虚拟表分页。
 
-可以使用 `odata.maxpagesize` 请求标头中的首选项值来指定页面大小。 如果结果集跨多个页面，则响应将包括该 `@odata.nextLink` 属性。 示例请求和响应如下所示：
+可以使用 `odata.maxpagesize` 请求标头中的首选项值来指定页面大小。 如果结果集跨多个页面，则响应包括属性 `@odata.nextLink` 。 示例请求和响应如下所示：
 
 # <a name="request"></a>[请求](#tab/request)
 

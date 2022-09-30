@@ -4,12 +4,12 @@ description: 了解如何使用 Teams 机器人发送主动消息、使用 Micro
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ec787b827323a462d3ab9ebd76686f5833740534
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 13db8624cfd9b8bc73adce0a418fe5283455bf5f
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990936"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243022"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -25,7 +25,7 @@ ms.locfileid: "67990936"
 >
 > * 若要发送主动消息，建议从 [使用 JavaScript](../../../sbs-gs-notificationbot.yml) 或 [传入 Webhook 通知示例生成通知](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification)机器人开始。 若要开始，请下载 [Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) 浏览。 有关详细信息，请参阅 [Teams 工具包文档](../../../toolkit/teams-toolkit-fundamentals.md)。
 >
-> * 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。 对于主动消息，机器人应将以下终结点用于政府云环境： <br> - GCC： `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH： `https://smba.infra.gov.teams.microsoft.us/gcch`.
+> * 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。 对于主动消息，机器人应将以下终结点用于政府云环境： <br> -Gcc： `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH： `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 若要向用户、群集聊天或团队发送主动消息，机器人必须具有发送消息所需的访问权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。
 
@@ -195,9 +195,21 @@ public class NotifyController : ControllerBase
 
     public async Task<IActionResult> Get()
     {
-        foreach (var conversationReference in _conversationReferences.Values)
+        foreach (var conversationReference in _conversationReferences.Values) // Loop of all conversation references must be updated to get it from backend system.
         {
-            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, conversationReference, BotCallback, default(CancellationToken));
+            var newReference = new ConversationReference()
+        {
+            Bot = new ChannelAccount()
+            {
+                Id = conversationReference.Bot.Id
+            },
+            Conversation = new ConversationAccount()
+            {
+                Id = conversationReference.Conversation.Id
+            },
+            ServiceUrl = conversationReference.ServiceUrl,
+        };
+            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
         }
         
         // Let the caller know proactive messages have been sent

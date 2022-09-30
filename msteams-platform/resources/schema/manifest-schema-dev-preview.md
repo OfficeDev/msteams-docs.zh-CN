@@ -4,12 +4,12 @@ description: 了解如何启用开发人员预览版。 Microsoft Teams 的公�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100292"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243169"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams 的公共开发人员预览清单架构
 
@@ -535,7 +535,7 @@ Specifies the native features on a user's device that your app may request acces
 
 **可选**，除非备注为 **必需**。
 
-应用需要从中加载任何内容的有效域的列表。 域列表可以包含通配符，例如 `*.example.com`。 这与域的一个区段完全匹配；如果需要匹配 `a.b.example.com`，则使用 `*.*.example.com`。 如果选项卡配置或内容 UI 需要导航到除用于选项卡配置的域之外的任何其他域，则必须在此处指定该域。
+应用需要从中加载任何内容的有效域的列表。 域列表可以包含通配符，例如 `*.example.com`。 这与域的某区段完全匹配；如果需要匹配 `a.b.example.com`，则使用 `*.*.example.com`。 如果选项卡配置或内容 UI 需要转到除选项卡配置之外的任何其他域，则必须在此处指定该域。
 
 但是，**没有** 必要在应用中包含你要支持的标识提供者的域。 例如，若要使用 Google ID 进行身份验证，必须重定向到 accounts.google.com，但不应在 `validDomains[]`其中包含 accounts.google.com。
 

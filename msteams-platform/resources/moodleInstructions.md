@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 83a4b4d40ebca418b62dcac5f94f77ac30ee85d7
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: c2276c720ca4d7014b3317365411a9c3d7fe6a73
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895501"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243176"
 ---
 # <a name="install-moodle-lms"></a>安装 Moodle LMS
 
@@ -64,7 +64,7 @@ Microsoft Teams 中的 Moodle 集成由 开放源代码 [Microsoft 365 Moodle �
 
 1. 检测到要安装的新插件后，Moodle 应将你重定向到“安装新插件”页。 如果不发生这种情况，请在 **“站点管理**”页的“**常规**”选项卡中选择 **“通知**”，这应该会触发插件的安装。
 
-1. 安装插件后，转到 **“站点管理员**”页中的 **“插件**”选项卡，选择 **“身份验证”** 部分链接，并启用 **OpenID Connect**。 将插件配置留空是可以的 - 稍后会填写这些配置。
+1. 安装插件后，转到 **“站点管理员**”页中的 **“插件**”选项卡，选择 **“身份验证”** 部分链接，并启用 **OpenID Connect**。 将插件配置留空是可以的 - 稍后将填写这些配置。
 
 1. 在 **“站点管理员** ”页中，向下滚动到 **“本地插件** ”部分，然后选择 **Microsoft 365 集成** 链接。
 
@@ -115,7 +115,7 @@ Microsoft Teams 中的 Moodle 集成由 开放源代码 [Microsoft 365 Moodle �
     1. 右键单击 **Windows PowerShell**。
     1. 选择 **“以管理员身份运行**”。
 
-1. 通过键入 `cd .../.../Moodle-AzureAD-Powershell` 目录路径的位置 `.../...` ，导航到解压缩的目录。
+1. 键入 `cd .../.../Moodle-AzureAD-Powershell` 目录路径的位置 `.../...` ，转到解压缩的目录。
 
 1. 执行 PowerShell 脚本：
 
@@ -243,9 +243,9 @@ Microsoft Teams 中的 Moodle 集成由 开放源代码 [Microsoft 365 Moodle �
    > [!NOTE]
    > 如果以全局管理员身份登录，则必须可以选择将应用上传到组织的应用目录，否则只能为你所属团队加载应用。
 
-4. 选择之前下载的 `manifest.zip` 包，然后选择 **“保存**”。 如果尚未下载应用清单包，则可以从 Moodle 中插件配置页的“ **团队设置”** 选项卡下载。
+4. 选择之前下载的 `manifest.zip` 包，然后选择 **“保存**”。 如果尚未下载应用清单包，可以从 Moodle 中插件配置页的“ **团队设置”** 选项卡下载。
 
-安装应用后，可以将选项卡添加到有权访问的任何通道。 为此，请导航到通道，选择 **加号** () ➕符号，然后从列表中选择应用。 按照提示完成将 Moodle 课程选项卡添加到频道。
+安装应用后，可以将选项卡添加到有权访问的任何通道。 为此，请转到通道，选择 **加** 号 () ➕符号，然后从列表中选择应用。 按照提示完成将 Moodle 课程选项卡添加到频道。
 
 ## <a name="5-allow-automatic-creation-of-moodle-tabs-in-microsoft-teams"></a>5. 允许在 Microsoft Teams 中自动创建 Moodle 选项卡
 

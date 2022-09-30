@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: 2c458752e081efd170a757a39789aca4f7360bc6
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636173"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243127"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -126,7 +126,7 @@ ms.locfileid: "67636173"
 
 ### <a name="navigation"></a>导航
 
-对于具有导航层或大量内容的方案，建议允许用户导航到辅助层。 用户必须能够返回到上一层。
+对于具有导航层或大量内容的方案，建议允许用户转到辅助层。 用户必须能够返回到上一层。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="示例显示会议内导航。":::
 
@@ -273,7 +273,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 #### <a name="meeting-stage-without-side-panel"></a>没有侧面板的会议阶段 () 
 
-当侧面板未打开时，默认情况下会议阶段为 994x678 像素，可以是至少 792x382 像素。
+当侧面板未打开时，会议阶段默认为 994x678 像素，并且可以是至少 792x382 像素。
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="显示已关闭侧面板的共享会议阶段响应能力的图像。":::
 
@@ -341,7 +341,7 @@ Teams 会议阶段显示的会议内对话框。 它们需要用户的注意、�
 
 #### <a name="do-use-a-one-column-dialog"></a>请执行以下操作：使用单列对话框
 
-由于对话位于会议阶段的中心，因此任务完成速度快且简单，以避免用户的挫折感。
+由于对话位于会议阶段的中心，因此任务完成速度应该很快，并且可以轻松避免用户的挫折感。
 
    :::column-end:::
    :::column span="":::

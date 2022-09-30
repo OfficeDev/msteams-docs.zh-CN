@@ -5,12 +5,12 @@ description: 了解如何使用 Azure AD 使用第三方 OAuth 提供程序在 T
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ff7e4e8d3ffede250bd89ecca7b0e3d8054a646b
-ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
+ms.openlocfilehash: 6984774ea8738ce2039f61b83891745db0774599
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67618329"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243120"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -170,7 +170,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
    1. **名称**。 为新的服务应用程序输入一个名称。 例如 *BotTeamsIdentity*。 请记住，该名称必须是唯一的。
    1. 选择应用程序“**支持的帐户类型**”。 *选择任何组织目录中的帐户 (任何Microsoft Azure Active Directory (Azure AD) - 多租户) 和个人 Microsoft 帐户 (，例如 Skype、Xbox)*。
    1. 对于 **重定向 URI**：<br/>
-       &#x2713;选择 **Web**。<br/>
+       &#x2713;Select **Web**. <br/>
        &#x2713;将 URL 设置为 `https://token.botframework.com/.auth/web/redirect`.
    1. 选择“**注册**”。
 
@@ -283,12 +283,12 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
      [!code-json[appsettings](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/appsettings.json?range=1-5)]
 
-1. 在解决方案资源管理器中，导航到`TeamsAppManifest`文件夹，打开`manifest.json`并设置`id`和`botId`到机器人注册时保存的 **机器人应用 ID**。
+1. 在解决方案资源管理器中，转到`TeamsAppManifest`文件夹，打开`manifest.json`并设置`id``botId`机器人注册时保存的 **机器人应用 ID**。
 
 # <a name="javascript"></a>[JavaScript](#tab/node-js)
 
 1. 克隆 [node-auth-sample][teams-auth-bot-js]。
-1. 在控制台中，导航到项目： </br></br>
+1. 在控制台中，转到项目： </br></br>
 `cd samples/javascript_nodejs/46.teams`  
 1. 安装模块</br></br>
 `npm install`
@@ -334,7 +334,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 
 1. 选择“**创建**”。
 1. 如果部署成功完成，应会在 Visual Studio 中看到它。 此外，默认浏览器中会显示一个页面，表示 *机器人已准备就绪！*。 URL 如下所示：`https://botteamsauth.azurewebsites.net/`。 将其保存到文件。
-1. 在浏览器中，导航到 [**Azure 门户**][azure-portal]。
+1. 在浏览器中，转到 [**Azure 门户**][azure-portal]。
 1. 检查资源组，机器人应与其他资源一起列出。 下图是一个示例：
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service-in-group.png" alt-text="此屏幕截图显示了如何检查资源组和机器人。":::
@@ -407,7 +407,7 @@ Azure 机器人资源注册将 Web 服务注册为 Bot Framework 的机器人，
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
 and when for these, and just reference that from here, along with the set of steps that exercises the bot code.-->
 
-1. 在浏览器中，导航到 [**Azure 门户**][azure-portal]。
+1. 在浏览器中，转到 [**Azure 门户**][azure-portal]。
 1. 查找资源组。
 1. 选择资源链接。 将显示资源页。
 1. 在资源页中，选择“**在 Web 聊天测试**”。 机器人启动并显示预定义的问候语。
@@ -435,14 +435,14 @@ and when for these, and just reference that from here, along with the set of ste
 ## <a name="install-and-test-the-bot-in-teams"></a>在 Teams 中安装和测试机器人
 
 1. 在机器人项目中，确保 `TeamsAppManifest` 文件夹包含 `manifest.json` 随附文件 `outline.png` 和 `color.png` 文件。
-1. 在解决方案资源管理器中，导航到 `TeamsAppManifest` 文件夹。 通过分配以下值进行编辑 `manifest.json` ：
+1. 在解决方案资源管理器中`TeamsAppManifest`，转到文件夹。 通过分配以下值进行编辑 `manifest.json` ：
     1. 确保在机器人注册时收到的 **机器人应用 ID** 已分配到 `id` 和 `botId`分配。
     1. 分配此值：`validDomains: [ "token.botframework.com" ]`。
 1. 选择并 **压缩**`manifest.json`、`outline.png`文件和`color.png`文件。
 1. 打开 **Microsoft Teams**。
 1. 在左侧面板的底部，选择“**应用图标**”。
 1. 在右侧面板的底部，选择“**上传自定义应用**”。
-1. 导航到 `TeamsAppManifest` 文件夹并上传压缩清单。
+1. 转到 `TeamsAppManifest` 文件夹并上传压缩清单。
 系统将显示导入作业向导：
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="此屏幕截图显示了机器人上传到 Teams 后的示例。":::
@@ -468,7 +468,7 @@ Teams 是一种完全基于云的产品，它要求其访问的所有服务都�
 1. 复制转发 HTTPS 地址。 具体应如下所示：`https://dea822bf.ngrok.io/`。
 1. 追加 `/api/messages` 以获取 `https://dea822bf.ngrok.io/api/messages`。 这是在计算机上本地运行的机器人 **的消息终结点** ，可在 Teams 的聊天中通过 Web 访问。
 1. 要执行的最后一步是更新已部署机器人的消息终结点。 在该示例中，我们在 Azure 中部署了机器人。 因此，让我们执行以下步骤：
-    1. 在浏览器中，导航到 [**Azure 门户**][azure-portal]。
+    1. 在浏览器中，转到 [**Azure 门户**][azure-portal]。
     1. 选择 **机器人注册**。
     1. 在左侧面板中，选择“**设置**”。
     1. 在右侧面板的“**消息传送**”终结点 框中，在示例 `https://dea822bf.ngrok.io/api/messages` 中输入 ngrok URL。

@@ -5,17 +5,17 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 67dfa765d27327cee15977d17dfecf955cae8bca
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 144328aff254f94a3bcfc7e383e82dfa93d0d8fd
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100579"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243575"
 ---
 # <a name="monetize-your-app"></a>将你的应用货币化
 
 Microsoft Teams 应用商店提供的功能使你能够通过与用户互动来使应用盈利并获得客户。 本部分中的主题介绍如何将这些功能构建到应用中。
- 
+
 ## <a name="choose-a-pricing-model"></a>选择定价模型
 
 :::row:::
@@ -70,6 +70,10 @@ Microsoft Teams 应用商店提供的功能使你能够通过与用户互动来�
 
     :::column-end:::
 :::row-end:::
+
+**管理 Teams 中第三方应用的许可证**
+
+使用 Microsoft 许可证管理，独立软件供应商 (ISV) 可以管理在 Teams 中购买的 SaaS 许可证，以便轻松分配、取消分配、使用和跟踪 SaaS 许可证。 有关详细信息，请参阅 [Teams 中第三方应用的管理许可证](include-saas-offer.md#manage-license-for-third-party-apps-in-teams)。
 
 ## <a name="next-step"></a>后续步骤
 

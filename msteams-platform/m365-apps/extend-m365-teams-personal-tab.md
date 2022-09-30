@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100759"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243505"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -193,7 +193,7 @@ ms.locfileid: "68100759"
 
 若要查看 Outlook 网页版中的应用，请执行以下操作：
 
-1. 导航到 [ Outlook 网页版 ](https://outlook.office.com) 并使用开发租户帐户登录。
+1. 转到[Outlook 网页版](https://outlook.office.com)并使用开发租户帐户登录。
 1. 在侧栏上，选择  **“更多应用**”。 旁加载的应用标题显示在已安装的应用中。
 1. 选择应用图标以启动和预览在Outlook 网页版中运行的应用。
 

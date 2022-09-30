@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990887"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243204"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams 会议和呼叫的应用
 
@@ -46,6 +46,10 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 ![会议应用可扩展性](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 本文概述了 Teams 中的会议应用扩展性、API 参考、为会议启用和配置应用以及自定义“在一起”模式场景。
+
+> [!Note]
+>
+> Teams 桌面客户端支持会议应用 (侧面板、会议阶段) 。 在 Teams Web 客户端中，仅在启用开发人员预览时才支持它。
 
 * **扩展会议应用**：使用会议扩展性功能增强会议体验。 此功能使你能够在会议中集成应用。 它还包括会议生命周期的不同阶段，你可以在其中集成选项卡、机器人和消息扩展。 可以识别各种参与者角色和用户类型、获取会议事件并生成会议内对话框。
 * **为会议配置应用**：若要使用会议应用自定义 Teams，请通过更新应用清单为 Teams 会议启用应用，同时为会议方案配置应用。

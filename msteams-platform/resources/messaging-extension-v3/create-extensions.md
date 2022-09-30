@@ -3,12 +3,12 @@ title: 使用邮件扩展启动操作
 description: 在本模块中，了解如何创建基于操作的消息扩展，以允许用户触发外部服务
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: e72d4c5d7ca7ecaa0ced14f28cc321d0a93a19c3
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337143"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243568"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>使用邮件扩展启动操作
 
@@ -231,7 +231,7 @@ ms.locfileid: "67337143"
 
 可以通过上传应用来测试消息扩展。 有关详细信息，请参阅在 [团队中上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
 
-若要打开邮件扩展插件，请导航到任何聊天或频道。 在撰写框中选择“ **更多”选项** **(&#8943;**) 按钮，然后选择邮件扩展。
+若要打开邮件扩展插件，请转到任何聊天或频道。 在撰写框中选择“ **更多”选项** **(&#8943;**) 按钮，然后选择邮件扩展。
 
 ## <a name="collecting-input-from-users"></a>从用户收集输入
 
