@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: b2016cefcdf476e32860f80a76606c04bf892f5d
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 9c221b0903d4541c4b0601e14ea347680140dfb9
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806792"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295961"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>向 Teams 应用添加单一登录
 
@@ -67,7 +67,7 @@ Teams 工具包可帮助你将 SSO 添加到以下 Teams 功能：
 
 ## <a name="update-your-application-to-use-sso"></a>更新应用程序以使用 SSO
 
-以下步骤可帮助你在应用程序中启用 SSO。
+以下步骤可帮助你在应用程序中启用 SSO：
 
 > [!NOTE]
 > 这些更改基于我们基架的模板。
@@ -95,221 +95,267 @@ Teams 工具包可帮助你将 SSO 添加到以下 Teams 功能：
 
     ```
 
-5. 将以下行替换为： `<AddSSO />` 用 `<InitTeamsFx />` 组件替换 `AddSso` 组件 `InitTeamsFx` 。
+5. 将以下行：
+
+   `<AddSSO />` 用于 `<InitTeamsFx />` 将组件替换 `AddSso` 为 `InitTeamsFx` 组件。
 
 </details>
 <details>
 <summary><b>机器人项目 </b></summary>
 
-1. 将文件夹复制 `auth/bot/public` 到 `bot/src`. 这两个文件夹包含用于身份验证重定向的 HTML 页面，需要修改 `bot/src/index` 文件以将路由添加到这些页面。
+#### <a name="set-up-the-azure-ad-redirects"></a>设置 Azure AD 重定向
 
-2. 将文件夹复制 `auth/bot/sso` 到 `bot/src`. 这两个文件夹包含三个文件作为 SSO 实现的参考：
+1. `auth/bot/public`将文件夹移动到 `bot/src`. 此文件夹包含机器人应用程序托管的 HTML 页面。 使用 Azure AD 启动单一登录流时，它会将用户重定向到 HTML 页面。
+1. 修改你 `bot/src/index` 以将适当的 `restify` 路由添加到 HTML 页面。
 
-    * `showUserInfo`：它实现一个函数来获取具有 SSO 令牌的用户信息。 可以按照此操作创建自己的需要 SSO 令牌的方法。
+    ```ts
+    const path = require("path");
 
-    * `ssoDialog`：它创建一个用于 SSO 的 [ComponentDialog](/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest&preserve-view=true) 。
+    server.get(
+        "/auth-*.html",
+        restify.plugins.serveStatic({
+            directory: path.join(__dirname, "public"),
+        })
+    );
+    ```
 
-    * `teamsSsoBot`：它创建一个 [TeamsActivityHandler](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true) ，并 `ssoDialog` 将其添加 `showUserInfo` 为可触发的命令。
+#### <a name="update-your-app"></a>更新应用
 
-3. 按照代码示例操作，在此文件中注册自己的命令 `addCommand` (可选) 。
+SSO 命令处理程序 `ProfileSsoCommandHandler` 使用 Azure AD 令牌调用 Microsoft Graph。 此令牌是使用登录的 Teams 用户令牌获取的。 如果需要，该流将汇集在显示同意对话框的对话框中。
 
-4. 在 `npm install isomorphic-fetch` .`bot/`
+1. 将文件夹下`auth/bot/sso`的文件移`profileSsoCommandHandler`到 `bot/src`. `ProfileSsoCommandHandler` 类是一个 SSO 命令处理程序，用于获取具有 SSO 令牌的用户信息、遵循此方法并创建自己的 SSO 命令处理程序。
+1. 打开 `package.json` 文件并确保 teamsfx SDK 版本>= 1.2.0
+1. 在 `npm install isomorphic-fetch --save` 文件夹中 `bot` 执行命令。
+1. 对于 ts 脚本，请在文件夹中`bot`执行`npm install copyfiles --save-dev`命令，并替换以下行`package.json`：
 
-5. `bot/`在 package.json 中执行`npm install copyfiles`并替换以下行：
-  
-   ```JSON
+    ```json
+    "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src",
+    ```
 
-   "build": "tsc --build",
+    具有  的 
+
+    ```json
+    "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
+    ```
+
+    这将复制生成机器人项目时用于身份验证重定向的 HTML 页面。
+
+1. 若要使 SSO 同意流正常工作，请在文件中 `bot/src/index` 替换以下代码：
+
+    ```ts
+    server.post("/api/messages", async (req, res) => {
+        await commandBot.requestHandler(req, res);
+    });
+    ```
+
+    具有  的 
+
+    ```ts
+    server.post("/api/messages", async (req, res) => {
+        await commandBot.requestHandler(req, res).catch((err) => {
+            // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+            if (!err.message.includes("412")) {
+                throw err;
+            }
+        });
+    });
+    ```
+
+1. 替换用于 `ConversationBot` 添加 SSO 配置和 SSO 命令处理程序的实 `bot/src/internal/initialize` 例选项：
+
+    ```ts
+    export const commandBot = new ConversationBot({
+        ...
+        command: {
+            enabled: true,
+            commands: [new HelloWorldCommandHandler()],
+        },
+    });
+    ```
+
+    具有  的 
+
+    ```ts
+    import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
+
+    export const commandBot = new ConversationBot({
+        ...
+        // To learn more about ssoConfig, please refer teamsfx sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
+        ssoConfig: {
+            aad :{
+                scopes:["User.Read"],
+            },
+        },
+        command: {
+            enabled: true,
+            commands: [new HelloWorldCommandHandler() ],
+            ssoCommands: [new ProfileSsoCommandHandler()],
+        },
+    });
+    ```
+
+1. 在 Teams 应用清单中注册命令。 在机器人中`commands``commandLists`打开`templates/appPackage/manifest.template.json`并添加以下行：
+
+    ```json
+    {
+        "title": "profile",
+        "description": "Show user profile using Single Sign On feature"
+    }
+    ```
+
+#### <a name="add-a-new-sso-command-to-the-bot-optional"></a>将新的 SSO 命令添加到机器人 (可选) 
+
+在项目中成功添加 SSO 后，可以添加新的 SSO 命令。
+
+1. 创建新文件（例如`photoSsoCommandHandler.ts`或`photoSsoCommandHandler.js`加入`bot/src/`）并添加自己的 SSO 命令处理程序来调用图形 API：
+
+    ```TypeScript
+    // for TypeScript:
+    import { Activity, TurnContext, ActivityTypes } from "botbuilder";
+    import "isomorphic-fetch";
+    import {
+        CommandMessage,
+        TriggerPatterns,
+        TeamsFx,
+        createMicrosoftGraphClient,
+        TeamsFxBotSsoCommandHandler,
+        TeamsBotSsoPromptTokenResponse,
+    } from "@microsoft/teamsfx";
+
+    export class PhotoSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
+        triggerPatterns: TriggerPatterns = "photo";
+
+        async handleCommandReceived(
+            context: TurnContext,
+            message: CommandMessage,
+            tokenResponse: TeamsBotSsoPromptTokenResponse,
+        ): Promise<string | Partial<Activity> | void> {
+            await context.sendActivity("Retrieving user information from Microsoft Graph ...");
+
+            const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+            const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+
+            let photoUrl = "";
+            try {
+                const photo = await graphClient.api("/me/photo/$value").get();
+                const arrayBuffer = await photo.arrayBuffer();
+                const buffer=Buffer.from(arrayBuffer, 'binary');
+                photoUrl = "data:image/png;base64," + buffer.toString("base64");
+            } catch {
+                // Could not fetch photo from user's profile, return empty string as placeholder.
+            }
+            if (photoUrl) {
+                const photoMessage: Partial<Activity> = {
+                    type: ActivityTypes.Message, 
+                    text: 'This is your photo:', 
+                    attachments: [
+                        {
+                            name: 'photo.png',
+                            contentType: 'image/png',
+                            contentUrl: photoUrl
+                        }
+                    ]
+                };
+                return photoMessage;
+            } else {
+                return "Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.";
+            }
+        }
+    }
+    ```
+
+    ```javascript
+    // for JavaScript:
+    const { ActivityTypes } = require("botbuilder");
+    require("isomorphic-fetch");
+    const { createMicrosoftGraphClient, TeamsFx } = require("@microsoft/teamsfx");
+
+    class PhotoSsoCommandHandler {
+        triggerPatterns = "photo";
+
+        async handleCommandReceived(context, message, tokenResponse) {
+            await context.sendActivity("Retrieving user information from Microsoft Graph ...");
+
+            const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+            const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+        
+            let photoUrl = "";
+            try {
+                const photo = await graphClient.api("/me/photo/$value").get();
+                const arrayBuffer = await photo.arrayBuffer();
+                const buffer=Buffer.from(arrayBuffer, 'binary');
+                photoUrl = "data:image/png;base64," + buffer.toString("base64");
+            } catch {
+            // Could not fetch photo from user's profile, return empty string as placeholder.
+            }
+            if (photoUrl) {
+                const photoMessage = {
+                    type: ActivityTypes.Message, 
+                    text: 'This is your photo:', 
+                    attachments: [
+                        {
+                            name: 'photo.png',
+                            contentType: 'image/png',
+                            contentUrl: photoUrl
+                        }
+                    ]
+                };
+                return photoMessage;
+            } else {
+                return "Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.";
+            }
+        }
+    }
+
+    module.exports = {
+        PhotoSsoCommandHandler,
+    };
 
     ```
 
-   具有  的 
+1. 将实例添加 `PhotoSsoCommandHandler` 到 `ssoCommands` 数组中 `bot/src/internal/initialize.ts`：
 
-   ```JSON
+    ```ts
+    // for TypeScript:
+    import { PhotoSsoCommandHandler } from "../photoSsoCommandHandler";
 
-   "build": "tsc --build && copyfiles public/*.html lib/",
+    export const commandBot = new ConversationBot({
+        ...
+        command: {
+            ...
+            ssoCommands: [new ProfileSsoCommandHandler(), new PhotoSsoCommandHandler()],
+        },
+    });
+    ```
 
-   ```
+    ```javascript
+    // for JavaScript:
+    ...
+    const { PhotoSsoCommandHandler } = require("../photoSsoCommandHandler");
 
-   生成此机器人项目时，将复制用于身份验证重定向的 HTML 页面。
+    const commandBot = new ConversationBot({
+        ...
+        command: {
+            ...
+            ssoCommands: [new ProfileSsoCommandHandler(), new PhotoSsoCommandHandler()]
+        },
+    });
+    ...
 
-6. 添加以下文件后，需要在文件中`bot/src/index`创建一个新`teamsSsoBot`实例。 替换以下代码：
+    ```
 
-   ```Bash
-  
-   // Process Teams activity with Bot Framework.
-   server.post("/api/messages", async (req, res) => {
-   await commandBot.requestHandler(req, res);
-   });  
+1. 在 Teams 应用清单中注册命令。 在机器人中`commands``commandLists`打开`templates/appPackage/manifest.template.json`并添加以下行：
 
-   ```
+    ```JSON
 
-   具有  的 
+    {
+        "title": "photo",
+        "description": "Show user photo using Single Sign On feature"
+    }
 
-   ```Bash
-
-   const handler = new TeamsSsoBot();
-   // Process Teams activity with Bot Framework.
-   server.post("/api/messages", async (req, res) => {
-       await commandBot.requestHandler(req, res, async (context)=> {
-           await handler.run(context);
-       });
-   });
-
-   ```
-
-7. 在文件中 `bot/src/index` 添加 HTML 路由：
-
-   ```Bash
-
-   server.get(
-       "/auth-*.html",
-       restify.plugins.serveStatic({
-           directory: path.join(__dirname, "public"),
-       })
-   );
-
-   ```
-
-8. 添加以下行以 `bot/src/index` 进行导 `teamsSsoBot` 入，并 `path`执行以下操作：
-
-   ```Bash
-
-   // For ts:
-   import { TeamsSsoBot } from "./sso/teamsSsoBot";
-   const path = require("path");
-
-   // For js:
-   const { TeamsSsoBot } = require("./sso/teamsSsoBot");
-   const path = require("path");
-
-   ```
-
-9. 在 Teams 应用清单中注册命令。 在机器人中`command``commandLists`打开`templates/appPackage/manifest.template.json`并添加以下行：
-
-   ```JSON
-
-   {
-       "title": "show",
-       "description": "Show user profile using Single Sign On feature"
-   }
-
-   ```
-
-</details>
-<details>
-<summary><b>向机器人添加新命令 </b></summary>
-
-> [!NOTE]
-> 目前，这些说明适用于 `command bot`。 如果从一个 `bot`示例开始，请参阅 [bot-sso 示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/bot-sso)。
-
-在项目中添加 SSO 后，以下步骤可帮助你添加新命令：
-
-1. 在下 (`todo.ts`或`todo.js`) `bot/src/`创建新文件，并添加自己的业务逻辑来调用图形 API：
-
-# <a name="typescript"></a>[TypeScript](#tab/typescript)
-
-   ```typescript
-   // for TypeScript:
-export async function showUserImage(
-    context: TurnContext,
-    ssoToken: string,
-    param: any[]
-): Promise<DialogTurnResult> {
-    await context.sendActivity("Retrieving user photo from Microsoft Graph ...");
-
-    // Init TeamsFx instance with SSO token
-    const teamsfx = new TeamsFx().setSsoToken(ssoToken);
-
-    // Update scope here. For example: Mail.Read, etc.
-    const graphClient = createMicrosoftGraphClient(teamsfx, param[0]);
-    
-    // You can add following code to get your photo:
-    // let photoUrl = "";
-    // try {
-    //   const photo = await graphClient.api("/me/photo/$value").get();
-    //   photoUrl = URL.createObjectURL(photo);
-    // } catch {
-    //   // Could not fetch photo from user's profile, return empty string as placeholder.
-    // }
-    // if (photoUrl) {
-    //   await context.sendActivity(
-    //     `You can find your photo here: ${photoUrl}`
-    //   );
-    // } else {
-    //   await context.sendActivity("Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.");
-    // }
-
-    return;
-}  
-   ```
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-   ```javaScript
-   // for JavaScript:
-export async function showUserImage(context, ssoToken, param) {
-    await context.sendActivity("Retrieving user photo from Microsoft Graph ...");
-
-    // Init TeamsFx instance with SSO token
-    const teamsfx = new TeamsFx().setSsoToken(ssoToken);
-
-    // Update scope here. For example: Mail.Read, etc.
-    const graphClient = createMicrosoftGraphClient(teamsfx, param[0]);
-    
-    // You can add following code to get your photo:
-    // let photoUrl = "";
-    // try {
-    //   const photo = await graphClient.api("/me/photo/$value").get();
-    //   photoUrl = URL.createObjectURL(photo);
-    // } catch {
-    //   // Could not fetch photo from user's profile, return empty string as placeholder.
-    // }
-    // if (photoUrl) {
-    //   await context.sendActivity(
-    //     `You can find your photo here: ${photoUrl}`
-    //   );
-    // } else {
-    //   await context.sendActivity("Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.");
-    // }
-
-    return;
-}
-   ```
-
----
-
-2. 注册新命令
-
-   * 使用以下行进行新的命令注册，如下所示`addCommand``teamsSsoBot`：
-
-     ```bash
-
-     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
-
-     ```
-
-   * 在上述行后添加以下行以注册新命令 `photo` 并挂接上面添加的方法 `showUserImage` ：
-
-     ```bash
-
-     // As shown here, you can add your own parameter into the `showUserImage` method
-     // You can also use regular expression for the command here
-     const scope = ["User.Read"];
-     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
-
-     ```
-
-3. 在 Teams 应用清单中注册命令。 在机器人中`command``commandLists`打开`templates/appPackage/manifest.template.json`并添加以下行：
-
-   ```JSON
-
-   {
-       "title": "photo",
-       "description": "Show user photo using Single Sign On feature"
-   }
-
-   ```
+    ```
 
 </details>
 <br>
@@ -320,8 +366,8 @@ export async function showUserImage(context, ssoToken, param) {
 
 ## <a name="customize-azure-ad-application-registration"></a>自定义 Azure AD 应用程序注册
 
-[使用 Azure AD 应用清单](/azure/active-directory/develop/reference-app-manifest)可以自定义应用程序注册的各个方面。 可以根据需要更新清单。 如果需要包含其他 API 权限来访问所需的 API，请参阅 [API 访问所需 API 的权](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template)限。
-若要在 Azure 门户中查看 Azure AD 应用程序，请参[阅Azure 门户中的 Azure AD 应用程序。](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal)
+[使用 Azure AD 应用清单](/azure/active-directory/develop/reference-app-manifest)可以自定义应用程序注册的各个方面。 可以根据需要更新清单。 如果需要包含更多 API 权限来访问所需的 API，请参阅 [API 访问所需 API 的](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template)权限。
+若要在Azure 门户中查看 Azure AD 应用程序，请参[阅Azure 门户中的查看 Azure AD 应用程序](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal)。
 
 ## <a name="sso-authentication-concepts"></a>SSO 身份验证概念
 

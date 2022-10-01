@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158818"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295975"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>为会议启用和配置应用
 
@@ -177,7 +177,7 @@ Teams 会议为组织提供协作体验。 为不同的会议应用场景配置�
 
 共享会议阶段允许会议参与者实时与应用内容进行交互和协作。 可以通过以下方式将应用共享到协作会议阶段：
 
-* [共享整个应用，以便](#share-entire-app-to-stage) 使用共享在 Teams 客户端的会议侧面板中或通过 [深度链接](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)暂存按钮。
+* [共享整个应用，以](#share-entire-app-to-stage)在 Teams客户端中使用共享暂存按钮。
 * [共享应用的特定部分，以便](#share-specific-parts-of-the-app-to-stage)在Teams客户端 SDK 中使用 API 进行暂存。
 
 ##### <a name="share-entire-app-to-stage"></a>将整个应用共享暂存

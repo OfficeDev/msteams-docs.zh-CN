@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: 在本模块中，了解 Microsoft Teams JavaScript 客户端 SDK 概述，它可帮助你构建托管 <iframe> 在 Teams、Office 和 Outlook 中的应用体验。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: ca5a02a067c44aaeab52bdde3c7be3a45c6797df
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 963c9b390323b92d6cfecfad04a251bd0310a6d7
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100152"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68296010"
 ---
 # <a name="teams-javascript-client-sdk"></a>团队 JavaScript 客户端 SDK
 
@@ -188,31 +188,30 @@ async function example() {
 
 ```TypeScript
 import * as microsoftTeams from "@microsoft/teams-js";
-
-microsoftTeams.getContext((context: microsoftTeams.Context) => {
-  /* ... */
+microsoftTeams.app.getContext().then((context:  microsoftTeams.app.Context) => { 
+/* ... */ 
 });
 ```
 
 需要更新为：
 
 ```TypeScript
-import { app, Context } from "@microsoft/teams-js";
+import { app, Context } from "@microsoft/teams-js"; 
 
-app.getContext().then((context: Context) => {
-    /*...*/
+app.getContext().then((context: app.Context) => { 
+/*...*/
 });
 ```
 
 ...或等效 `async/await` 模式：
 
 ```TypeScript
-import { app, Context } from "@microsoft/teams-js";
+import { app, Context } from "@microsoft/teams-js"; 
 
 async function example() {
-  const context: Context = await app.getContext();
-  /*...*/
-}
+            const context: app.Context = await app.getContext();
+            /*...*/
+          }
 ```
 
 ---
