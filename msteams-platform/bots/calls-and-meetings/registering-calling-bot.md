@@ -3,12 +3,12 @@ title: 注册 Microsoft Teams 的通话和会议机器人
 description: 了解如何为 Microsoft Teams 注册新的音频/视频呼叫机器人、创建新机器人或添加呼叫功能、添加图形权限。 用于创建呼叫、加入会议和传输呼叫的示例。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2563d94e944a7d4058d1417be2f3816e3f565bff
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 3fe8d0adde45242738b8023c5478c24769561d1c
+ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100922"
+ms.lasthandoff: 10/01/2022
+ms.locfileid: "68319935"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>注册 Microsoft Teams 的通话和会议机器人
 
@@ -93,9 +93,10 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## <a name="code-sample"></a>代码示例
 
-| **示例名称** | **说明** | **Graph** |
+| **示例名称** | **说明** | **C#** |
 |---------------|----------|--------|
 | 通话和会议机器人 | 示例应用演示了机器人如何创建通话、加入会议和转移通话。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| 实时会议事件 |示例应用演示机器人如何接收实时会议事件。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## <a name="step-by-step-guide"></a>分步指南
 
@@ -111,3 +112,4 @@ You can rely on an administrator to grant the permissions your app needs at the 
 * [来电通知](~/bots/calls-and-meetings/call-notifications.md)
 * [在本地电脑上开发通话和联机会议机器人](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
 * [查看应用权限并授予管理员许可](/MicrosoftTeams/app-permissions-admin-center)
+* [使用 Microsoft Graph 中的云通信 API](/graph/api/resources/communications-api-overview)
