@@ -1,15 +1,15 @@
 ---
 title: 智能机器人对话中的邮件
-description: 了解如何发送接收消息、建议的操作、通知、附件、图像、自适应卡片、Throttle 的状态错误代码响应。
+description: 了解如何发送接收消息、建议的操作、通知、附件、图像、自适应卡片和状态错误代码响应。
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: e9cb272717b5bffc11224b319f40872ec2698c5d
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 152515f16ff27467feac6e17aeb1310abc548c54
+ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586985"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68327592"
 ---
 # <a name="messages-in-bot-conversations"></a>智能机器人对话中的邮件
 
@@ -248,8 +248,8 @@ async def on_members_added_activity(
 * `channel`：仅在频道上下文中传递、提及机器人时，或在添加了机器人的团队中的频道中传递事件。
   * `id`：通道的 GUID。
   * `name`：通道名称仅在 [通道修改事件](~/bots/how-to/conversations/subscribe-to-conversation-events.md)的情况下传递。
-* `channelData.teamsTeamId`：已弃用。 此属性仅包含用于向后兼容性。
-* `channelData.teamsChannelId`：已弃用。 此属性仅包含用于向后兼容性。
+* `channelData.teamsTeamId`：废弃。 此属性仅包含用于向后兼容性。
+* `channelData.teamsChannelId`：废弃。 此属性仅包含用于向后兼容性。
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>示例 channelData 对象（channelCreated 事件）
 
@@ -284,7 +284,7 @@ async def on_members_added_activity(
 
 ## <a name="notifications-to-your-message"></a>消息通知
 
-还可以使用该 `Notification.Alert` 属性向邮件添加通知。 通知会提醒用户有关新任务、提及和注释的信息。 这些警报与用户正在处理的内容或必须通过在活动源中插入通知来查看的内容相关。 若要从机器人消息触发通知，请将 `TeamsChannelData` 对象 `Notification.Alert` 属性设置为 *true*。 是否引发通知取决于单个用户的 Teams 设置，不能重写这些设置。 通知类型是横幅，或者是横幅和电子邮件。
+还可以使用该 `Notification.Alert` 属性向邮件添加通知。 通知会提醒用户有关新任务、提及和注释的信息。 这些警报与用户正在处理的内容或必须通过在活动源中插入通知来查看的内容相关。 若要从机器人消息触发通知，请将 `TeamsChannelData` 对象 `Notification.Alert` 属性设置为 *true*。 是否引发通知取决于单个用户的 Teams 设置，不能重写这些设置。 通知类型是横幅或横幅和电子邮件。
 
 > [!NOTE]
 > “ **摘要** ”字段将用户的任何文本显示为源中的通知消息。
@@ -444,20 +444,39 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 有关机器人中的卡片和卡片的详细信息，请参阅 [卡片文档](~/task-modules-and-cards/what-are-cards.md)。
 
-## <a name="status-code-responses"></a>状态代码响应
+## <a name="status-codes-from-bot-conversational-apis"></a>来自机器人会话 API 的状态代码
 
-下面是状态代码及其错误代码和消息值：
+请确保在 Teams 应用中正确处理这些错误。 下表列出了错误代码和生成错误的说明：
 
-| 状态代码 | 错误代码和消息值 | 说明 |
-|----------------|-----------------|-----------------|
-| 403 | **代码**： `ConversationBlockedByUser` <br/> **消息**：用户阻止了与机器人的对话。 | 用户通过审查设置在 1：1 聊天或频道中阻止了机器人。 |
-| 403 | **代码**： `BotNotInConversationRoster` <br/> **消息**：机器人不是聊天名单的一部分。 | 机器人不是对话的一部分。 |
-| 403 | **代码**： `BotDisabledByAdmin` <br/> **消息**：租户管理员禁用了此机器人。 | 租户阻止了机器人。 |
-| 401 | **代码**： `BotNotRegistered` <br/> **消息**：未为此机器人找到注册。 | 找不到此机器人的注册。 |
-| 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一会话上的多个并发操作，我们的某个依赖项的先决条件失败。 |
-| 404 | **代码**： `ConversationNotFound` <br/> **消息**：找不到对话。 | 找不到对话。 |
-| 413 | **代码**： `MessageSizeTooBig` <br/> **消息**：消息大小太大。 | 传入请求的大小太大。 |
-| 429 | **代码**： `Throttled` <br/> **消息**：请求过多。 另请返回重试时间。 | 机器人发送的请求过多。 有关详细信息，请参阅 [速率限制](~/bots/how-to/rate-limit.md)。 |
+| 状态代码 | 错误代码和消息值 | 说明 | 重试请求 | 开发人员操作 |
+|----------------|-----------------|-----------------|----------------|----------------|
+| 400 | **代码**： `Bad Argument` <br/> **消息**：*特定于方案 | 机器人提供的请求有效负载无效。 有关特定详细信息，请参阅错误消息。 | 否 | 重新评估错误的请求有效负载。 有关详细信息，请检查返回的错误消息。 |
+| 401 | **代码**： `BotNotRegistered` <br/> **消息**：未为此机器人找到注册。 | 找不到此机器人的注册。 | 否 | 验证机器人 ID 和密码。 确保机器人 ID (AAD ID) 在 Teams 开发人员门户中注册，或者通过 Azure 中的 Azure 机器人通道注册，并启用“Teams”通道。|
+| 403 | **代码**： `BotDisabledByAdmin` <br/> **消息**：租户管理员禁用了此机器人 | 租户管理员阻止了用户与机器人应用之间的交互。 租户管理员需要允许应用策略中的用户使用该应用。 有关详细信息，请参阅 [应用策略](/microsoftteams/app-policies)。 | 否 | 停止发布到对话，直到对话中用户显式启动与机器人的交互，指示不再阻止机器人。 |
+| 403 | **代码**： `BotNotInConversationRoster` <br/> **消息**：机器人不是聊天名单的一部分。 | 机器人不是对话的一部分。 需要在会话中重新安装应用。 | 否 | 在尝试发送其他会话请求之前，请等待事件 [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) ，该事件指示机器人已重新添加。|
+| 403 | **代码**： `ConversationBlockedByUser` <br/> **消息**：用户阻止了与机器人的对话。 | 用户通过审查设置阻止了个人聊天或频道中的机器人。 | 否 | 从缓存中删除对话。 停止尝试发布到对话，直到对话中的用户显式启动与机器人的交互，指示机器人不再被阻止。 |
+| 403 | **代码**： `NotEnoughPermissions` <br/> **消息**：*特定于方案 | 机器人没有执行所请求操作所需的权限。 | 否 | 确定错误消息中所需的操作。 |
+| 404 | **代码**： `ActivityNotFoundInConversation` <br/> **消息**：找不到对话。 | 在会话中找不到提供的邮件 ID。 消息不存在或已删除。 | 否 | 检查发送的消息 ID 是否为预期值。 如果已缓存 ID，请删除该 ID。 |
+| 404 | **代码**： `ConversationNotFound` <br/> **消息**：找不到对话。 | 找不到对话，因为它不存在或已被删除。 | 否 | 检查发送的会话 ID 是否为预期值。 如果已缓存 ID，请删除该 ID。 |
+| 412 | **代码**： `PreconditionFailed` <br/> **消息**：先决条件失败，请重试。 | 由于同一会话上的多个并发操作，我们的某个依赖项的先决条件失败。 | 是 | 使用指数回退重试。 |
+| 413 | **代码**： `MessageSizeTooBig` <br/> **消息**：消息大小太大。 | 传入请求的大小太大。 有关详细信息，请参阅 [机器人消息的格式](/microsoftteams/platform/bots/how-to/format-your-bot-messages)。 | 否 | 减小有效负载大小。 |
+| 429 | **代码**： `Throttled` <br/> **消息**：请求过多。 另请返回重试时间。 | 机器人发送的请求过多。 有关详细信息，请参阅 [速率限制](/microsoftteams/platform/bots/how-to/rate-limit)。 | 是 | 使用 `Retry-After` 标头重试以确定回退时间。 |
+| 500 | **代码**： `ServiceError` <br/> **消息**：*各种 | 内部服务器错误。 | 否 | 在 [开发人员社区](~/feedback.md#developer-community-help)中报告问题。 |
+| 502 | **代码**： `ServiceError` <br/> **消息**：*各种 | 服务依赖项问题。 | 是 | 使用指数回退重试。 如果问题仍然存在，请在 [开发人员社区](~/feedback.md#developer-community-help)中报告问题。 |
+| 503 | | 服务不可用。 | 是 | 使用指数回退重试。 如果问题仍然存在，请在 [开发人员社区](~/feedback.md#developer-community-help)中报告问题。 |
+| 504 | | 网关超时。 | 是 | 使用指数回退重试。 如果问题仍然存在，请在 [开发人员社区](~/feedback.md#developer-community-help)中报告问题。 |
+
+### <a name="status-codes-retry-guidance"></a>状态代码重试指南
+
+下表列出了每个状态代码的常规重试指南。 机器人应避免重试下表中未指定的状态代码：
+
+|状态代码 | 重试策略 |
+|----------------|-----------------|
+| 412 | 使用指数回退重试。 |
+| 429 | 使用 `Retry-After` 标头重试，以确定等待时间（以秒为单位）和请求之间（如果可用）。 否则，如果可能，请使用带有线程 ID 的指数回退进行重试。 |
+| 502 | 使用指数回退重试。 |
+| 503 | 使用指数回退重试。 |
+| 504 | 使用指数回退重试。 |
 
 ## <a name="code-sample"></a>代码示例
 

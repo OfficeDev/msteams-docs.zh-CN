@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
-ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
+ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158679"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329089"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -251,7 +251,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>将应用程序上传到 Teams
 
 1. 转到 Teams 并选择 **应用**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::。
-1. 选择“**管理应用**”和“**上传自定义应用**”。
+1. 选择 **“管理应用** > **上传应用** > **上传自定义应用**”。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择压缩文件夹，然后选择“**打开**”。
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text=" 添加个人选项卡 ":::
@@ -399,9 +399,9 @@ ngrok http 3978 --host-header=localhost
 
 1. 在“**开发人员信息**”中，添加所需详细信息，并在 **网站 (必须是有效的 HTTPS URL)** 中提供 ngrok HTTPS URL。
 
-1. 在“**应用 URL**”中，将隐私策略更新为 `https://<yourngrokurl>/privacy` 和使用条款 `https://<yourngrokurl>/tou` 并保存。
+1. 在 **应用 URL** 中，将隐私策略更新为`https://<yourngrokurl>/privacy``https://<yourngrokurl>/tou`“使用条款”，然后选择 **“保存**”。
 
-1. 在 **应用功能** 中，选择 **“ 个人应用** > **创建第一个个人应用”选项卡**，然后输入“名称”，并用 `https://<yourngrokurl>/personalTab` 更新 **内容 URL**。 将“网站 URL”字段留空，然后从下拉列表和“**添加**”中选择“**上下文**”作为 personalTab。
+1. 在 **应用功能** 中，选择 **“ 个人应用** > **创建第一个个人应用”选项卡**，然后输入“名称”，并用 `https://<yourngrokurl>/personalTab` 更新 **内容 URL**。 将“网站 URL”字段留空，然后从下拉列表中选择 **“上下文** 为 personalTab”，然后选择 **“确认**”。
 
 1. 选择“保存”。
 
@@ -566,11 +566,11 @@ ngrok http 3978 --host-header=localhost
 
 1. 在“**说明**”中添加应用的短说明和长说明。
 
-1. 在“**开发人员信息**”中，添加所需详细信息，并在 **网站 (必须是有效的 HTTPS URL)** 中提供 ngrok HTTPS URL。
+1. 在 **开发人员信息** 中，添加所需的详细信息，在 **网站 (必须是有效的 HTTPS URL)** 提供 ngrok HTTPS URL。
 
-1. 在“**应用 URL**”中，将隐私策略更新为 `https://<yourngrokurl>/privacy` 和使用条款 `https://<yourngrokurl>/tou` 并保存。
+1. 在 **应用 URL** 中，将隐私策略更新为`https://<yourngrokurl>/privacy``https://<yourngrokurl>/tou`“使用条款”，然后选择 **“保存**”。
 
-1. 在 **应用功能** 中，选择 **“ 个人应用** > **创建第一个个人应用”选项卡**，然后输入“名称”，并用 `https://<yourngrokurl>/personalTab` 更新 **内容 URL**。 将“网站 URL”字段留空，然后从下拉列表和“**添加**”中选择“**上下文**”作为 personalTab。
+1. 在 **应用功能** 中，选择 **“ 个人应用** > **创建第一个个人应用”选项卡**，然后输入“名称”，并用 `https://<yourngrokurl>/personalTab` 更新 **内容 URL**。 将“网站 URL”字段留空，然后从下拉列表中选择 **“上下文** 为 personalTab”，然后选择 **“确认**”。
 
 1. 选择“保存”。
 

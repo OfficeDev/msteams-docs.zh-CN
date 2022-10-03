@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f4147a204fe4ff51c2015457fe62581adfd63c8d
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 9d870680e146564bb23db0193d2e2b116a249009
+ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616868"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68327585"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -91,7 +91,7 @@ npm install @microsoft/teamsfx
 
 | 命令 | 说明 |
 |----------------|-------------|
-| `new TeamsFx(IdentityType.App)`| 应用程序作为应用程序进行身份验证。权限通常需要管理员审批。|
+| `new TeamsFx(IdentityType.App)`| Application  is authenticated as an application. The permission usually needs administrator's approval.|
 | `TeamsFx:getCredential()`| 它提供与标识类型自动对应的凭据实例。 |
 
 > [!NOTE]
@@ -100,7 +100,7 @@ npm install @microsoft/teamsfx
 
 ### <a name="credential"></a>Credential
 
-若要初始化 TeamsFx，必须选择所需的标识类型。 指定标识类型 SDK 后，使用不同类型的凭据类。 这些帮助表示标识，并通过相应的身份验证流获取访问令牌。 凭据类实现 `TokenCredential` 在 Azure 库 API 中广泛使用的接口，旨在为特定范围提供访问令牌。 其他 API 依赖于凭据调用 `TeamsFx:getCredential()` 来获取 `TokenCredential` 实例。 有关凭据和身份验证流相关类的详细信息，请参阅 [凭据文件夹](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential)。
+若要初始化 TeamsFx，必须选择所需的标识类型。 指定标识类型 SDK 后，使用不同类型的凭据类。 这些表示标识并通过相应的身份验证流获取访问令牌。 凭据类实现 `TokenCredential` 在 Azure 库 API 中广泛使用的接口，旨在为特定范围提供访问令牌。 其他 API 依赖于凭据调用 `TeamsFx:getCredential()` 来获取 `TokenCredential` 实例。 有关凭据和身份验证流相关类的详细信息，请参阅 [凭据文件夹](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential)。
 
 有三个凭据类可以简化身份验证。 以下是每个凭据类目标的相应场景。
 
@@ -138,15 +138,15 @@ npm install @microsoft/teamsfx
 
 ### <a name="supported-functions"></a>受支持的函数
 
-TeamsFx SDK 提供了多个函数，可用于简化第三方库的配置。它们位于[核心文件夹](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core)下。
+TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
 * Microsoft Graph 服务: `createMicrosoftGraphClient` 和 `MsGraphAuthProvider` 有助于创建经过身份验证的 Graph 实例。
 * SQL: `getTediousConnectionConfig` 返回繁琐的连接配置。
 
-所需配置:
+    所需配置:
 
-* 如果想要使用用户标识， `sqlUsername` `sqlPassword`则`sqlServerEndpoint`是必需的。
-* 如果想要使用 MSI 标识，则`sqlServerEndpoint``sqlIdentityId`需要使用该标识。
+  * 如果要使用用户标识，则`sqlServerEndpoint``sqlUsername``sqlPassword`是必需的。
+  * 如果要使用 MSI 标识，则`sqlServerEndpoint``sqlIdentityId`是必需的。
 
 ### <a name="override-configuration"></a>替换配置
 
@@ -179,7 +179,7 @@ TeamsFx SDK 提供了多个函数，可用于简化第三方库的配置。它�
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
-* sqlServerEndpoint (SQL_ENDPOINT) // 仅在存在 sql 实例时使用
+* 仅当有 sql 实例时才使用 sqlServerEndpoint (SQL_ENDPOINT) //
 * 仅当有 sql 实例时才使用 sqlUsername (SQL_USER_NAME) //
 * 仅当有 sql 实例时才使用 sqlPassword (SQL_PASSWORD) //
 * sqlDatabaseName (SQL_DATABASE_NAME) // 仅在存在 sql 实例时使用
@@ -191,7 +191,7 @@ TeamsFx SDK 提供了多个函数，可用于简化第三方库的配置。它�
 
 API 错误响应的基本类型是 `ErrorWithCode`包含错误代码和错误消息。 例如，要筛选出特定错误，可以使用以下代码片段:
 
-```ts
+```typescript
 try {
   const teamsfx = new TeamsFx();
   await teamsfx.login("User.Read");
@@ -218,7 +218,7 @@ try {
 
     1. 导入所需的类。
 
-    ```ts
+    ```typescript
     import {
       createMicrosoftGraphClient,
       TeamsFx,
@@ -227,14 +227,14 @@ try {
 
     2. 用于 `TeamsFx.login()` 获取用户同意。
 
-    ```ts
+    ```typescript
     // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
     await teamsfx.login(["User.Read"]); // Login with scope
     ```
 
     3. 可以初始化 TeamsFx 实例和图形客户端，并从此客户端的 MS Graph 获取信息。
 
-    ```ts
+    ```typescript
     try {
       const teamsfx = new TeamsFx();
       const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
@@ -266,8 +266,8 @@ try {
 
     2. 在组件中初始化提供程序。
 
-    ```ts
-    // Import the providers and credential at the top of the page
+    ```typescript
+     // Import the providers and credential at the top of the page
     import {Providers} from '@microsoft/mgt-element';
     import {TeamsFxProvider} from '@microsoft/mgt-teamsfx-provider';
     import {TeamsUserCredential} from "@microsoft/teamsfx";
@@ -275,12 +275,12 @@ try {
     const scope = ["User.Read"];
     const teamsfx = new TeamsFx();
     const provider = new TeamsFxProvider(teamsfx, scope);
-    Providers.globalProvider = provider;
+    Providers.globalProvider = provider;   
     ```
 
     3. 可以使用该 `teamsfx.login(scopes)` 方法获取所需的访问令牌。
 
-    ```ts
+    ```typescript
     // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups. 
     await teamsfx.login(this.scope);
     Providers.globalProvider.setState(ProviderState.SignedIn);
@@ -292,14 +292,14 @@ try {
     <mgt-person query="me" view="threeLines"></mgt-person>
     ```
 
-    ```ts
+    ```typescript
     public render(): void {
     return (
         <div>
             <Person personQuery="me" view={PersonViewType.threelines}></Person>
         </div>
     );
-    }
+    }    
     ```
 
     有关用于初始化 TeamsFx 提供程序的示例的详细信息，请参 [阅联系人导出程序示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-toolkit-contact-exporter)。
@@ -313,7 +313,7 @@ try {
 
     1. 初始化并添加 `TeamsBotSsoPrompt` 到对话集。
 
-    ```ts
+    ```typescript
     const { ConversationState, MemoryStorage } = require("botbuilder");
     const { DialogSet, WaterfallDialog } = require("botbuilder-dialogs");
     const { TeamsBotSsoPrompt } = require("@microsoft/teamsfx");
@@ -327,12 +327,12 @@ try {
       new TeamsBotSsoPrompt(teamsfx, "TeamsBotSsoPrompt", {
         scopes: ["User.Read"],
       })
-    );
+    );    
     ```
 
     2. 开始对话框并登录。
 
-    ```ts
+    ```typescript
     dialogs.add(
       new WaterfallDialog("taskNeedingLogin", [
         async (step) => {
@@ -348,10 +348,74 @@ try {
           }
         },
       ])
-    );
+    );    
     ```
 
     有关在机器人应用程序中使用图形 API 的示例的详细信息，请参阅 [bot-sso 示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso)。
+
+    </details>
+
+    <details>
+    <summary><b>在消息扩展插件中使用图形 API</b></summary>
+
+    此代码片段演示如何替代 `handleTeamsMessagingExtensionQuery` 扩展 `TeamsActivityHandler`，以及如何使用 `handleMessageExtensionQueryWithToken` TeamsFx sdk 提供的登录来获取访问令牌：
+
+    ```typescript
+    public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {
+      return await handleMessageExtensionQueryWithToken(context, null, 'User.Read', 
+        async (token: MessageExtensionTokenResponse) => {
+          // ... continue to query with access token ...
+        });
+    }    
+    ```
+
+    有关在消息扩展插件中使用图形 API 的示例的详细信息，请参阅 [message-extension-sso-sample](https://aka.ms/teamsfx-me-sso-sample)。
+    </details>
+
+    <details>
+    <summary><b>在命令机器人中使用图形 API</b></summary>
+
+    此代码片段演示如何实现 `TeamsFxBotSsoCommandHandler` 命令机器人调用 Microsoft API。
+
+    ```typescript
+    import { Activity, TurnContext } from "botbuilder";
+    import {
+      CommandMessage,
+      TriggerPatterns,
+      TeamsFx,
+      createMicrosoftGraphClient,
+      TeamsFxBotSsoCommandHandler,
+      TeamsBotSsoPromptTokenResponse,
+    } from "@microsoft/teamsfx";
+
+    export class ProfileSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
+      triggerPatterns: TriggerPatterns = "profile";
+
+      async handleCommandReceived(
+        context: TurnContext,
+        message: CommandMessage,
+        tokenResponse: TeamsBotSsoPromptTokenResponse,
+      ): Promise<string | Partial<Activity> | void> {
+        // Init TeamsFx instance with SSO token
+        const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+        // Add scope for your Azure AD app. For example: Mail.Read, etc.
+        const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+      
+        // Call graph api use `graph` instance to get user profile information
+        const me = await graphClient.api("/me").get();
+
+        if (me) {
+          // Bot will send the user profile info to user
+          return `Your command is '${message.text}' and you're logged in as ${me.displayName}`;
+        } else {
+          return "Could not retrieve profile information from Microsoft Graph.";
+        }
+      }
+    }    
+    ```
+
+    有关如何在命令机器人中使用此类的详细信息， [请参阅向 Teams 应用添加单一登录](add-single-sign-on.md)。 此外还有一个 [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) 示例项目，你可以尝试使用 sso 命令机器人。
 
     </details>
 
@@ -362,7 +426,7 @@ try {
 
     1. 可以使用 TeamsFx sdk 提供的调用 `CreateApiClient` Azure 函数：
 
-    ```ts
+    ```typescript
     async function callFunction(teamsfx?: TeamsFx) {
       const teamsfx = new TeamsFx();
 
@@ -377,12 +441,12 @@ try {
       // Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
       const response = await apiClient.get("RELATIVE_API_PATH");
       return response.data;
-    }
+    }    
     ```
 
     还可以使用 `axios` 库调用 Azure 函数。
 
-    ```ts
+    ```typescript
     async function callFunction(teamsfx?: TeamsFx) {
       const accessToken = await teamsfx.getCredential().getToken(""); // Get SSO token 
       // teamsfx.getConfig("apiEndpoint") will read REACT_APP_FUNC_ENDPOINT environment variable 
@@ -393,12 +457,12 @@ try {
         },
       });
       return response.data;
-    }
+    }    
     ```
 
     2. 在 Azure 函数中代表用户调用图形 API作为响应。
 
-    ```ts
+    ```typescript
     export default async function run(
       context: Context,
       req: HttpRequest,
@@ -425,7 +489,7 @@ try {
       } catch (e) {
       }
       return res;
-    }
+    }    
     ```
 
     有关在机器人应用程序中使用图形 API 的示例的详细信息，  [请参阅 hello-world-tab-with-backend 示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend)。
@@ -439,21 +503,21 @@ try {
 
     1. 你可以 `authConfig` 通过提供一个 `PEM-encoded key certificate`。
 
-    ```ts
+    ```typescript
     const authConfig = {
       clientId: process.env.M365_CLIENT_ID,
       certificateContent: "The content of a PEM-encoded public/private key certificate",
       authorityHost: process.env.M365_AUTHORITY_HOST,
       tenantId: process.env.M365_TENANT_ID,
-    };
+    };    
     ```
 
     2. 可以使用该 `authConfig` 令牌获取令牌。
 
-    ```ts
+    ```typescript
     const teamsfx = new TeamsFx(IdentityType.App);
     teamsfx.setCustomeConfig(authConfig);
-    const token = teamsfx.getCredential().getToken();
+    const token = teamsfx.getCredential().getToken();    
     ```
 
     </details>
@@ -465,21 +529,21 @@ try {
 
     1. 你可以 `authConfig` 通过提供一个 `client secret`。
 
-    ```ts
+    ```typescript
     const authConfig = {
       clientId: process.env.M365_CLIENT_ID,
       clientSecret: process.env.M365_CLIENT_SECRET,
       authorityHost: process.env.M365_AUTHORITY_HOST,
       tenantId: process.env.M365_TENANT_ID,
-    };
+    };    
     ```
 
     2. 可以使用该 `authConfig` 令牌获取令牌。
 
-    ```ts
+    ```typescript
     const teamsfx = new TeamsFx(IdentityType.App);
     teamsfx.setCustomeConfig(authConfig);
-    const token = teamsfx.getCredential().getToken();
+    const token = teamsfx.getCredential().getToken();    
     ```
 
     有关在机器人应用程序中使用图形 API 的示例的详细信息，请参阅 [hello-world-tab-with-backend 示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend)。
@@ -495,7 +559,7 @@ try {
 
   此代码片段演示如何调 `ApiKeyProvider`用机器人中的现有 API。
 
-  ```ts
+  ```typescript
   const teamsfx = new TeamsFx();
 
   // Create an API Key auth provider. In addition to APiKeyProvider, following auth providers are also available:
@@ -513,7 +577,7 @@ try {
   );
 
   // Send a GET request to "RELATIVE_API_PATH", "/api/apiname" for example.
-  const response = await apiClient.get("RELATIVE_API_PATH");
+  const response = await apiClient.get("RELATIVE_API_PATH");  
   ```
 
   </details>
@@ -525,7 +589,7 @@ try {
 
   1. 设置连接配置。
 
-  ```ts
+  ```typescript
   // Equivalent to:
   // const sqlConnectConfig = new DefaultTediousConnectionConfiguration({
   //    sqlServerEndpoint: process.env.SQL_ENDPOINT,
@@ -536,18 +600,18 @@ try {
   // If there's only one SQL database
   const config = await getTediousConnectionConfig(teamsfx);
   // If there are multiple SQL databases
-  const config2 = await getTediousConnectionConfig(teamsfx, "your database name");
+  const config2 = await getTediousConnectionConfig(teamsfx, "your database name");  
   ```
 
   2. 连接到数据库。
 
-  ```ts
+  ```typescript
   const connection = new Connection(config);
   connection.on("connect", (error) => {
     if (error) {
       console.log(error);
     }
-  });
+  });  
   ```
 
   > [!NOTE]
@@ -570,7 +634,7 @@ try {
 
 使用以下代码片段设置日志级别:
 
-```ts
+```typescript
 // Only need the warning and error messages.
 setLogLevel(LogLevel.Warn);
 ```
@@ -580,7 +644,7 @@ setLogLevel(LogLevel.Warn);
 
 #### <a name="redirect-by-setting-custom-logger"></a>设置自定义记录器以重定向
 
-```ts
+```typescript
 setLogLevel(LogLevel.Info);
 // Set another logger if you want to redirect to Application Insights in Azure Function
 setLogger(context.log);
@@ -588,7 +652,7 @@ setLogger(context.log);
 
 #### <a name="redirect-by-setting-custom-log-function"></a>设置自定义日志函数以重定向
 
-```ts
+```typescript
 setLogLevel(LogLevel.Info);
 // Only log error message to Application Insights in bot application.
 setLogFunction((level: LogLevel, message: string) => {
