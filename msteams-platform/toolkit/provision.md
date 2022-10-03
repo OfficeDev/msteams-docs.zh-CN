@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 175854db36b85a1fc68cc299bd733b7abd539ac9
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: a0174d113d441e2318f4f9f4165211f46df1876e
+ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780971"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68350459"
 ---
 # <a name="provision-cloud-resources"></a>预配云资源
 
@@ -189,7 +189,7 @@ ARM 模板文件使用参数的占位符。 这些占位符的目的是确保在
 
 你可以自定义以下方案：
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>为机器人使用现有的 Azure AD 应用
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>为 Teams 应用使用现有的 Azure AD 应用
 
 可以将以下配置代码片段添加到 `.fx/configs/config.{env}.json` 文件，以便使用自己为 Teams 应用创建的 Azure AD 应用。 若要创建 Azure AD 应用，请参阅 <https://aka.ms/teamsfx-existing-aad-doc>。
 
@@ -207,7 +207,7 @@ ARM 模板文件使用参数的占位符。 这些占位符的目的是确保在
 > [!NOTE]
 > 确保不要在多个环境中共享同一 Azure AD 应用。 如果你没有更新 Azure AD 应用的权限，则可以收到一条警告，其中包含有关如何手动更新 Azure AD 应用的说明。 请按照说明在预配后更新 Azure AD 应用。
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>为 Teams 应用使用现有的 Azure AD 应用
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>为机器人使用现有的 Azure AD 应用
 
 可以将以下配置代码片段添加到 `.fx/configs/config.{env}.json` 文件，以便使用自己为机器人创建的 Azure AD 应用：
 
@@ -308,7 +308,7 @@ ARM 模板文件使用参数的占位符。 这些占位符的目的是确保在
 
 1. 选择 **“登录** ”以登录到 Azure 帐户。
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="登录 Microsoft 365":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-prepare1.png" alt-text="登录到 Microsoft 365":::
 
     > [!NOTE]
     > 如果已登录，则会显示用户名，或者可以选择相同的用户名来切换帐户。
@@ -543,7 +543,7 @@ ARM 模板文件使用参数的占位符。 占位符的目的是确保可在新
 
 可以通过添加配置片段来自定义机器人或 Teams 应用，以使用由你创建的 Azure AD 应用。 可以通过以下方式执行：
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>为机器人使用现有的 Azure AD 应用
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>为 Teams 应用使用现有的 Azure AD 应用
 
 可以添加以下配置代码片段 `.fx/configs/config.{env}.json` ，以使用为 Teams 应用创建的 Azure AD 应用。 若要创建 Azure AD 应用，请按照链接操作 <https://aka.ms/teamsfx-existing-aad-doc>。
 
@@ -561,7 +561,7 @@ ARM 模板文件使用参数的占位符。 占位符的目的是确保可在新
 > [!NOTE]
 > 确保不要在多个环境中共享同一 Azure AD 应用。 如果没有更新 Azure AD 应用的权限，则会收到一条警告，其中包含手动更新 Azure AD 应用的说明。 按照以下说明在预配后更新 Azure AD 应用。
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>为 Teams 应用使用现有的 Azure AD 应用
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>为机器人使用现有的 Azure AD 应用
 
 可以添加以下配置代码片段以 `.fx/configs/config.{env}.json` 使用为机器人创建的 Azure AD 应用：
 
