@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用电源应用和Microsoft 365 E3
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
-ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
+ms.openlocfilehash: 5a253c9e7373a2df9e1161e6d3fc9d9b1c8ccdaa
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617976"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373029"
 ---
 # <a name="install-collaboration-controls"></a>安装协作控件
 
@@ -33,12 +33,11 @@ ms.locfileid: "67617976"
 
 你将通过 [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) 将协作控件安装到 dataverse 环境中。
 
-
 只有在浏览到 [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  并将协作控件安装到 dataverse 环境中后，才能在自己的模型驱动应用中配置和使用组件。
 
 协作控制包括以下解决方案：
 
-|**设置解决方案** | **用途** |
+|**设置的解决方案** | **用途** |
 |---|---|
 | 协作控制设置 | 保留支持协作控件的设置基础结构 |
 | 协作控制设置对象 | 提供协作控件使用的预定义设置值。|
@@ -62,20 +61,20 @@ ms.locfileid: "67617976"
 
 1. 选择 **“立即获取”** 按钮。
 
-   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="预览窗体 "border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="显示协作控件的“立即获取”按钮的屏幕截图。"border="true":::
 
 1. 使用帐户登录，填写窗体，然后选择 **“继续**”。
 
-   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="概述协作控制" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="概述协作控件的屏幕截图。" border="true":::
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="协作控制预览" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="安装协作控件预览版的屏幕截图。" border="true":::
 
 1. 你将定向到 Power Platform 管理员中心。 从下拉菜单中选择一个环境并同意条款和策略语句。
 
    > [!TIP]
    > 如果在选择环境时看到权限错误，请尝试在环境下拉菜单外部进行选择，看看这是否解决了此问题。
 
-   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="安装协作控制环境" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="屏幕截图是安装协作控制环境的示例。" border="true":::
 
 1. 选择 **“安装**”，安装可能需要大约 15 分钟才能完成。
 
@@ -85,7 +84,7 @@ ms.locfileid: "67617976"
 
 1. 选择 **“解决方案”** 选项卡可查看已在正确环境中安装的所有解决方案。
 
-   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="解决方案协作控制" border= "true":::
+   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="屏幕截图显示了用于查看所有解决方案协作控件的解决方案选项卡。" border= "true":::
 
 > [!NOTE]
 > 协作控件是预览版，元素可能会随时间而变化，可能会发生重大更改。 生产环境中不支持协作控件。

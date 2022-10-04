@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用 Teams 协作控件生成模型
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: f75f7ea3b014a9373ba1d643cede7055aa333ef5
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243057"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373043"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>使用 Teams 协作控件创建新的模型驱动应用
 
@@ -27,11 +27,11 @@ ms.locfileid: "68243057"
 
 1. 选择 **“新建解决方案**”，以便你可以为将来的所有自定义项提供一个主页。
 
-   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="屏幕截图是显示新解决方案的示例。":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="屏幕截图是显示新解决方案的示例，该解决方案为你未来的所有自定义提供了一个主页。":::
 
 1. 提供新解决方案的名称和发布者，此解决方案将保留自定义Collaboration Manager。
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="屏幕截图是显示协作管理器的示例。":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="屏幕截图是提供新解决方案的发布者详细信息的示例。":::
 
 1. 选择 **“创建”**
 
@@ -39,7 +39,7 @@ ms.locfileid: "68243057"
 
 1. 在创建应用之前，请为数据创建一个主页。 选择 **“新建** > **表** ”以开始使用。
 
-     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="屏幕截图介绍了如何创建新表。":::
+     :::image type="content" source="../assets/images/collaboration-control/create-table.png" alt-text="屏幕截图介绍如何创建新表。":::
 
 1. 为表命名。 在 **“高级”选项** 下，选择 **“创建新活动**”。
 
@@ -47,33 +47,33 @@ ms.locfileid: "68243057"
 
 1. 选择“**保存**”。
 
-1. 创建完表后，可以通过添加额外的列、关系和更多 (可选) 来自定义表。
+1. 创建表后，可以通过添加额外的列、关系和更多 (可选) 对其进行自定义。
 
 1. 现在，可以通过选择“**新建** > **应用** > 模型驱动”应用来创建新的模型 **驱动应用。**
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="屏幕截图是显示新模型驱动应用的示例。":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="屏幕截图是演示如何创建新的模型驱动应用的示例。":::
 
 1. 选择新的 **新式应用设计器 (预览)** 打开新应用。
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="屏幕截图是显示新的模型驱动应用空白的示例。":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="屏幕截图是一个示例，其中显示新的模型驱动应用为空，你可以选择创建体验。":::
 
 1. 选择 **“创建”。**
 
 1. 为应用命名并选择 **“创建”。**
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="屏幕截图是显示要检查的协作管理器的示例。":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="屏幕截图是显示添加协作管理器进行检查并创建新的模型驱动应用的示例。":::
 
 1. 选择 **“添加”页。**
 
 1. 选择 **基于表的视图和窗体。**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="屏幕截图是显示基于表的视图和窗体的示例。":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="屏幕截图是显示基于表的视图和窗体的示例，可以选择页面类型。":::
 
 1. 选择 **“下一步”。**
 
 1. 搜索并选择之前创建的表。
 
-   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="屏幕截图是显示表格视图窗体页的示例。":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="屏幕截图是显示表格视图窗体页的示例，可以选择已创建的表。":::
 
 1. 选择 **“添加”。**
 
@@ -111,36 +111,36 @@ ms.locfileid: "68243057"
 
 1. 展开控件抽屉上的“协作 (预览) ”类别，并将“任务 (预览) 控件拖动到”任务“窗体中的部分。
 
-     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="在任务窗体中将控件预览到节":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="屏幕截图介绍如何在任务窗体中将控件预览到该部分。":::
 
 3. 将表设置为“活动”&选择“完成”。
 
-     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="选择要活动的表":::
+     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="屏幕截图显示了如何选择表到活动。":::
 
 5. 在属性上选择“隐藏标签”。
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="选择隐藏标签":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="屏幕截图显示了如何选择隐藏标签。":::
 
 1. 现在将显示“任务”控件。
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="任务控件显示":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="屏幕截图显示了任务控件显示的示例。":::
 
 1. 重复“任务”步骤，将审批、文件、会议和备注控件添加到应用。
 1. 添加所有控件后，将在窗体设计器中看到下面呈现的控件。 如果控件未在窗体设计器中呈现，例如显示空白窗体，请在 Power Apps 中运行应用，并且存在“配置”页或“空状态”意味着控件已成功添加。
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="控件窗体设计器":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="屏幕截图显示已成功添加控件表单设计器。":::
 
 1. 现在，可以通过选择 Power Apps 在 Power Apps 中运行电源应用。
 
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="用于检查的协作管理器":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="屏幕截图显示通过选择协作管理器进行检查来运行电源应用。":::
 
 1. 通过选择 **+New** 创建新记录，然后打开记录。
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="屏幕截图是显示打开记录的电源应用的示例。":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="用于创建新记录的屏幕截图。":::
 
 1. 现在，可以看到每个选项卡的视图，这些视图与下图类似：
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="屏幕截图是显示任务的示例。":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="屏幕截图是显示每个选项卡的视图的示例。":::
 
      > [!TIP]
      > 只有在应用程序中保存记录后，控件才可见。 如果记录中未显示控件选项卡，请尝试刷新浏览器或从 Power Apps 重新发布应用。
@@ -161,7 +161,7 @@ ms.locfileid: "68243057"
 |驱动器 ID|SharePoint 文件|
 
 > [!NOTE]
-> 设置对启动应用具有关键性，因此请确保按照建议执行步骤。 如果启动和保存控件时遇到问题，请重新检查值。
+> 设置对于启动应用至关重要，因此请确保按照建议执行步骤。 如果启动和保存控件时遇到问题，请重新检查值。
 
 可以通过创建新团队或使用 Microsoft Teams 中的现有团队来托管应用程序和创建设置变量来获取组 ID。
 
@@ -173,7 +173,7 @@ ms.locfileid: "68243057"
 
 1. 选择省略号 **...** 
 
-     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="屏幕截图介绍如何将链接到团队。":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="屏幕截图介绍了如何将链接到团队。":::
 
 1. 复制链接并记录 URL 中的 `groupId` 值。 稍后在定义解决方案设置时，将使用此值。
 
@@ -187,7 +187,7 @@ ms.locfileid: "68243057"
 
      1. **网站 ID**：使用 [Graph 资源管理器](https://developer.microsoft.com/graph/graph-explorer)登录并授予 Directory.ReadWrite.All 和 User.ReadWrite.All 的权限
 
-         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="屏幕截图是显示图形资源管理器的示例。":::
+         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="屏幕截图是显示 Graph 资源管理器的示例。":::
 
      1. 确保将主机名替换为主机名和站点路径的相对路径，并调用 `https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}`图形。 下面是一个示例：
          1. 如果网站 URL = `https://myhostname.sharepoint.com/sites/MySiteName`
@@ -212,7 +212,7 @@ ms.locfileid: "68243057"
 
 若要应用设置并在 Power Apps 中探索应用的协作功能，请打开之前创建的应用程序。 你将看到一个视图页，可在其中选择现有记录或创建新记录。 以打开或创建记录开头。
 
-需要添加之前为应用程序保存的设置 ID
+需要添加之前为应用程序保存的设置 ID。
 
 |设置|使用方|
 |---|---|
@@ -276,7 +276,7 @@ Notes 控件不需要设置值。 现在可以在应用程序中创建任务和�
 
 在 **“新建会议** ”对话框中，用户可以提供有关会议的相关信息，然后选择 **“保存**”。 会议将显示在会议列表中。
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="屏幕截图介绍了如何安排新会议。":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="屏幕截图介绍如何安排新会议。":::
 
 若要安排与客户的外部会议，请选择 **“新建会议** ”按钮旁边的下拉列表，然后选择 **“客户预订**”。 如果 **“新会议**”下拉列表中没有“**客户预订**”选项，请确认应用是否配置为在“设置”中Microsoft Bookings，并且用户具有“预订管理员”角色。 有关详细信息，请参阅 [将员工添加到 Bookings](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true)。 可以通过在 Bookings 业务中添加其他服务来添加其他预订类型。
 

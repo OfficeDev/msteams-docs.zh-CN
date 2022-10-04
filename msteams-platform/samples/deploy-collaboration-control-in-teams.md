@@ -5,12 +5,12 @@ description: 在本模块中，了解如何在 Microsoft Teams 中使用协作�
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 816dd8052cdfb13ab83bfc34ae2a99a16f9f9569
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027303"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373036"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>将协作控件部署到 Microsoft Teams
 
@@ -34,31 +34,31 @@ ms.locfileid: "68027303"
 
 1. 搜索并选择 **“设置定义**”。
 
-     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="设置定义":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="屏幕截图显示在 Power 应用中搜索和设置定义。":::
 
 1. 搜索并从设置定义列表中选择 **“隐藏导航栏** ”。 这会隐藏应用程序中的左窗格。
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="隐藏导航栏":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="屏幕截图显示了如何选择隐藏导航栏。":::
 
 1. 在编辑窗格中应用程序的右下角，有一个标题为 **“设置应用值”** 的部分。 如果使用新式应用设计器创建了应用，则应用将显示在列表中。 选择 **应用下的新应用值** 。
 
 1. 将值从 **“否** ”更改为 **“是”。**
 
-     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="将值更改为“是”":::
+     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="屏幕截图显示下拉列表以选择“是”的更改值。":::
 
 1. 选择 **“保存”。**
 
 1. 从设置定义列表中搜索并选择 **“应用高密度”页眉** ，然后重复此过程。
 
-     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="密度页眉":::
+     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="屏幕截图显示了如何选择应用高密度页眉。":::
 
 1. 选择 **“返回到解决方案**”。
 
-     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="默认解决方案":::
+     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="屏幕截图显示了默认解决方案。":::
 
 1. 选择 **“发布所有自定义项** ”以发布已完成的所有工作。
 
-     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="发布所有自定义项":::
+     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="发布所有自定义项。":::
 
 ## <a name="add-the-app-to-microsoft-teams-app-catalog"></a>将应用添加到 Microsoft Teams 应用目录
 
@@ -66,11 +66,11 @@ ms.locfileid: "68027303"
 
 若要将应用添加到 Teams，请选择 **“添加到 Teams**”。
 
-:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="添加到 Teams":::
+:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="添加到 Teams。":::
 
 选择 **“添加到 Teams** ”将打开一个对话框，可在其中查看详细信息并选择 **“下载应用**”，将 Microsoft Teams 应用清单保存到设备。
 
-:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="屏幕截图是显示协作管理器检查的示例":::
+:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="屏幕截图是显示协作管理器检查的示例。":::
 
 若要将应用上传到 Teams，请参阅 [Team 中的上传应用](~/concepts/deploy-and-publish/apps-upload.md)。
 
@@ -100,7 +100,7 @@ ms.locfileid: "68027303"
      1. **管理员：** 通过输入字符在组织内搜索要分配为管理员的用户。
      1. **团队类型：** 选择团队类型。 以下步骤假定你已从下拉列表中选择了“所有者”。 其他团队类型 (Microsoft 365 团队和Microsoft Azure Active Directory团队) 从 Azure Active Directory 自动填充团队成员。
 
-         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="新团队":::
+         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="用于选择新团队类型的屏幕截图。":::
 
      1. 请确保记下团队名称。 稍后需要此项才能将此团队分配为记录的所有者。
 
@@ -115,7 +115,7 @@ ms.locfileid: "68027303"
 
 1. 若要添加新的团队成员，请选择 **+添加团队成员** ，然后从组织中选择要添加的用户。
 
-     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="屏幕截图介绍如何添加团队成员":::
+     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="屏幕截图介绍了如何添加团队成员。":::
 
 1. 若要删除团队成员，请选择用户，然后选择 **“删除**”。
 
@@ -125,7 +125,7 @@ ms.locfileid: "68027303"
 
 1. 选择 **安全角色**。
 
-     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="用户权限":::
+     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="显示用于为用户添加新团队成员权限的屏幕截图。":::
 
 1. 选择页面左上角的 **“新建”角色** ，该角色现在将打开一个新页面。
 
@@ -135,7 +135,7 @@ ms.locfileid: "68027303"
 
      1. 为每个协作实体、 **协作映射**、 **协作元** 数据和协作 **根**) 授予组织 (完全绿色圆圈的权限。
 
-         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="协作映射":::
+         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="屏幕截图显示了如何在协作映射上创建安全角色。":::
 
 1. 选择 **“保存** 并 **关闭**”。
 
@@ -147,7 +147,7 @@ ms.locfileid: "68027303"
 
 1. 从标头中选择 **“管理安全角色** ”。
 
-     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="编辑团队":::
+     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="屏幕截图显示协作映射、协作元数据和协作根。用于编辑团队。":::
 
 1. 选择 [在安全角色中创建的角色](#create-a-security-role)。
 
