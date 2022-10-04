@@ -3,12 +3,12 @@ title: 使用邮件扩展启动操作
 description: 在本模块中，了解如何创建基于操作的消息扩展，以允许用户触发外部服务
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: e72d4c5d7ca7ecaa0ced14f28cc321d0a93a19c3
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: c087e8d3866215a1ed55c0bc503b34f920a4e436
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243568"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376611"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>使用邮件扩展启动操作
 
@@ -18,13 +18,11 @@ ms.locfileid: "68243568"
 
 ![消息扩展卡的示例](~/assets/images/compose-extensions/ceexample.png)
 
-以下部分介绍如何执行此操作：
-
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
 ## <a name="action-type-message-extensions"></a>操作类型消息扩展
 
-若要从消息扩展启动操作，请将 `type` 参数设置为 `action`。 下面是包含搜索和创建命令的清单示例。 单个消息扩展最多可以有 10 个不同的命令。 这可以包括多个搜索和多个基于操作的命令。
+若要从消息扩展启动操作，请将 `type` 参数设置为 `action`。 下面是包含搜索和创建命令的清单示例。 单个消息扩展最多可以有 10 个不同的命令，并包含多个搜索和基于操作的命令。
 
  > [!NOTE]
  >`justInTimeInstall` 将应用上传到应用目录时函数，但在旁加载应用时失败。
@@ -37,7 +35,6 @@ ms.locfileid: "68243568"
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.Todo",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://todobotservice.azurewebsites.net/",
@@ -133,7 +130,7 @@ ms.locfileid: "68243568"
 
 ### <a name="initiate-actions-from-messages"></a>从消息启动操作
 
-除了从撰写消息区域启动操作外，还可以使用消息扩展从消息启动操作。 这将允许您将消息内容发送到机器人进行处理，并可选择性地使用“ [响应提交](#responding-to-submit)”中所述的方法使用响应回复该消息。 响应将作为对用户在提交前可以编辑的消息的答复进行插入。 用户可以从溢出 `...` 菜单访问消息扩展，然后选择 `Take action` 如下图所示：
+可以从撰写消息区域启动操作，并使用消息扩展从消息启动操作，以便将消息内容发送到机器人进行处理。 （可选）可以使用“ [响应提交](#responding-to-submit)”中所述的方法通过响应来回复该消息。 响应将作为对用户在提交前可以编辑的消息的答复进行插入。 用户可以从溢出 `...` 菜单访问消息扩展，然后选择 `Take action` 如下图所示：
 
 ![从消息启动操作的示例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -313,7 +310,7 @@ ms.locfileid: "68243568"
 
 ### <a name="request-to-install-your-conversational-bot"></a>请求安装对话机器人
 
-如果应用包含会话机器人，请确保在加载任务模块之前将其安装在会话中。 在需要获取任务模块的其他上下文的情况下，这很有用。 例如，可能需要提取名册以填充人员选取器控件或团队中的频道列表。
+如果应用包含会话机器人，请确保在加载任务模块之前将其安装在会话中，以获取任务模块的更多上下文。 例如，可能需要提取名册以填充人员选取器控件或团队中的频道列表。
 
 为了便于此流，当消息扩展首次收到 `composeExtension/fetchTask` 调用检查以查看机器人是否安装在当前上下文中时。 你可以通过尝试获取名册呼叫来获取此数据。 例如，如果未安装机器人，则返回自适应卡片，其中包含请求用户安装机器人的操作。 用户需要有权在该位置安装应用。 如果无法安装，则消息会提示与管理员联系。
 
@@ -379,15 +376,15 @@ ms.locfileid: "68243568"
 
 ### <a name="task-module-response"></a>任务模块响应
 
-当扩展需要将对话链接在一起以获取详细信息时，将使用此功能。 响应与前面提到的完全相同 `fetchTask` 。
+当扩展需要将对话链接在一起以获取详细信息时，将使用任务模块响应。 响应与前面提到的完全相同 `fetchTask` 。
 
 ### <a name="compose-extension-authconfig-response"></a>撰写扩展身份验证/配置响应
 
-当扩展需要进行身份验证或配置以继续时，将使用此功能。 有关详细信息，请参阅搜索 [部分中的身份验证部分](~/resources/messaging-extension-v3/search-extensions.md#authentication) 。
+当扩展需要进行身份验证或配置以继续时，将使用撰写扩展身份验证/配置响应。 有关详细信息，请参阅搜索 [部分中的身份验证部分](~/resources/messaging-extension-v3/search-extensions.md#authentication) 。
 
 ### <a name="compose-extension-result-response"></a>撰写扩展结果响应
 
-这用于将卡片作为命令的结果插入撰写框中。 它与搜索命令中使用的响应相同，但它仅限于数组中的一张卡片或一个结果。
+由于命令，撰写扩展结果响应用于将卡片插入撰写框中。 它与搜索命令中使用的响应相同，但它仅限于数组中的一张卡片或一个结果。
 
 ```json
 {
@@ -450,7 +447,6 @@ ms.locfileid: "68243568"
 
 > [!NOTE]
 > 该 `activityPreview` 活动必须包含完全包含 1 个 `message` 自适应卡片附件的活动。
-
 
 ```json
 {

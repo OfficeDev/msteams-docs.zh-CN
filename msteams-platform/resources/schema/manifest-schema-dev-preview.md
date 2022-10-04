@@ -4,12 +4,12 @@ description: 了解如何启用开发人员预览版。 Microsoft Teams 的公�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 2278b2f500ce89f239cae59ffab7f432a8d170f5
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243169"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376597"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams 的公共开发人员预览清单架构
 
@@ -28,7 +28,6 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "devicePermissions": [
         "geolocation",
         "media"
@@ -301,12 +300,6 @@ Microsoft Teams 清单介绍应用如何集成到 Microsoft Teams 平台中。 �
 **必需** &ndash; Microsoft 应用 ID
 
 此应用的唯一 Microsoft 生成的标识符。 如果已通过Microsoft Bot Framework注册了机器人，或者选项卡的 Web 应用已使用 Microsoft 登录，则应该已有一个 ID，并且必须在此处输入。 否则，必须在 Microsoft 应用程序注册门户 ([“我的应用程序](https://apps.dev.microsoft.com) ”) 生成新 ID，在此处输入该 ID，然后在 [添加机器人](~/bots/how-to/create-a-bot-for-teams.md)时重用它。
-
-## <a name="packagename"></a>packageName
-
-**必需** &ndash; 字符串
-
-采用反向域表示法的此应用的唯一标识符；例如，com.example.myapp。
 
 ## <a name="developer"></a>developer
 

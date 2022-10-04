@@ -3,12 +3,12 @@ title: 清单架构参考
 description: 在本文中，你将拥有适用于 Microsoft Teams 参考、架构和示例完整清单的最新版本的公共清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100166"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376569"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
@@ -29,7 +29,6 @@ Microsoft Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产�
     "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "localizationInfo": {
         "defaultLanguageTag": "en-us",
         "additionalLanguages": [
@@ -404,12 +403,6 @@ ID 是 Microsoft 为应用生成的唯一标识符。 如果机器人是通过Mi
 |---|---|---|---|
 |`short`|80 个字符|✔️|应用体验的简短说明，在空间受限时使用。|
 |`full`|4000 个字符|✔️|应用的完整说明。|
-
-## <a name="packagename"></a>packageName
-
-**可选**— 字符串
-
-A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
@@ -910,7 +903,7 @@ Specify meeting extension definition. For more information, see [custom Together
 <br>
 
 > [!NOTE]
-> 此处显示的清单示例内容仅适用于选项卡应用。 它使用子域 URI 和包名称的示例值。 有关详细信息，请参阅[示例清单架构](#sample-full-manifest)。
+> 此处显示的清单示例内容仅适用于选项卡应用。 它使用子域 URI 的示例值。 有关详细信息，请参阅[示例清单架构](#sample-full-manifest)。
 
   ```json
 { 
@@ -918,7 +911,6 @@ Specify meeting extension definition. For more information, see [custom Together
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
  "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 

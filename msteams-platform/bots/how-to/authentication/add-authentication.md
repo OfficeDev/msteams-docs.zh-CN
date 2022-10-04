@@ -5,12 +5,12 @@ description: 了解如何使用 Azure AD 使用第三方 OAuth 提供程序在 T
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 6984774ea8738ce2039f61b83891745db0774599
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: db760f81195634431fe0d3415b1a9c3797b519e7
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243120"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376632"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>向 Teams 机器人添加身份验证
 
@@ -493,7 +493,6 @@ Teams 是一种完全基于云的产品，它要求其访问的所有服务都�
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
-  "packageName": "com.teams.auth.bot",
   "developer": {
     "name": "TeamsBotAuth",
     "websiteUrl": "https://www.microsoft.com",
