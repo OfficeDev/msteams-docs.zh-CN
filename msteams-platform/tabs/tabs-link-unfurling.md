@@ -5,12 +5,12 @@ description: 了解阶段视图，这是调用以显示 Web 内容的全屏 UI �
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
+ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027289"
+ms.lasthandoff: 10/06/2022
+ms.locfileid: "68484918"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
@@ -90,7 +90,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 > [!NOTE]
 >
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> 在 Teams 移动客户端上，为通过 [Teams 存储](~/concepts/deploy-and-publish/apps-publish-overview.md) 分发且没有移动优化体验的应用调用阶段视图会打开设备的默认 Web 浏览器。 浏览器将打开 `TabInfo` 对象的 `websiteUrl` 参数中指定的 URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
