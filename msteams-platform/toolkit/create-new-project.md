@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: e9f1d0cbfcc1de9ced3cd0bac6f26f9218aecd40
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 8ed7d882ba7d58862539e77bfc8b6ea5277a3729
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781135"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499242"
 ---
 # <a name="create-a-new-teams-project"></a>创建新的 Teams 项目
 
@@ -135,7 +135,7 @@ Teams 工具包提供用于生成应用的所有组件。 创建项目后，可�
 
 | 文件名 | 目录 |
 | --- | --- |
-| `src/adaptiveCards/` | 自适应卡片模板  |
+| `src/adaptiveCards/` | 自适应卡片的模板  |
 | `src/internal/` | 为通知功能生成的初始化代码 |
 | `src/index.*s` | 用于处理机器人消息和发送通知的入口点 |
 | `.gitignore` | 要从机器人项目中排除本地文件的文件 |

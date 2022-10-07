@@ -4,12 +4,12 @@ description: 在本文中，你将了解 Microsoft 365 插件、插件列表和�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 438093c5ffe9990c5aa7c8175131c654019c3120
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 56ba41598fb7d9e75aff92f240f7a3132988c1ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841748"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499305"
 ---
 # <a name="microsoft-365-plugins"></a>Microsoft 365 插件
 
@@ -36,7 +36,7 @@ Microsoft 365 插件提供 Moodle 网站和 Teams 之间的集成。 通过这�
 |[**Microsoft 365 集成**](#microsoft-365-integration)|在 Moodle 中为每个课程创建 Teams 实例，并将教职员工作为所有者同步，将学生同步为团队成员。|local_o365|
 |[**Microsoft 365 存储库**](#microsoft-365-repository) |支持 Microsoft 365 文件存储库的 OneDrive 内容，以减少 Moodle 中的存储需求。| repository_office 365|
 |[**Teams 会议**](#teams-meetings) |在 Moodle 中启用 Atto 编辑器以创建 Teams 会议链接。|atto_teamsmeeting |
-|[**Teams主题**](#microsoft-365-teams-theme)| 删除 Moodle iframes for Teams 中的 Moodle 块和额外部件版式，这适用于将课程映射到 Teams 实例。| themeboost_o365teams |
+|[**Teams主题**](#microsoft-365-teams-theme)| 在 Moodle iFrames for Teams 中删除 Moodle 块和额外版式，在将课程映射到 Teams 实例时适用。| themeboost_o365teams |
 |[**OneNote**](#onenote-integration)| 启用 OneNote 以用于布置作业、提交和反馈。|local_onenote、assignsubmission_onenote 和 assignfeedback_onenote </br>|  
 |[**Microsoft Block**](#microsoft-block) | 在 Moodle 中启用 Microsoft 365 快速访问块，提供指向 Microsoft 365 协作服务的链接，并安装 Microsoft Office 链接。|block_microsoft |
 |[**oEmbed 筛选器**](#oembed-filter) | 在 Moodle 中启用视频链接。|Filter_oembed|

@@ -3,12 +3,12 @@ title: 创建虚拟助手
 description: 了解如何使用包含自适应卡片、处理中断等功能的代码示例和代码片段为 Teams 创建虚拟助手机器人。
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 12339ed10f1c6a6e30ebb74320fbf69018a6d3f9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 4f35edee79dba5b6a8faa9720906915bec27d6d5
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178602"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499277"
 ---
 # <a name="create-virtual-assistant"></a>创建虚拟助手
 
@@ -564,7 +564,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
     }
 ```
 
-还可以利用 [Bot Framework Solutions 存储库](https://github.com/microsoft/botframework-components/tree/main/skills/csharp)中的现有技能，或从头开始创建新技能。 有关创建新技能的详细信息，请参阅[创建新技能教程](https://microsoft.github.io/botframework-solutions/overview/skills/)。 有关虚拟助理和技能体系结构文档，请参阅[虚拟助理和技能体系结构](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。  
+还可以利用 [Bot Framework Solutions 存储库](https://github.com/microsoft/botframework-components/tree/main/skills/csharp)中的现有技能，或从头开始创建新技能。 有关创建新技能的详细信息，请参阅[创建新技能教程](https://microsoft.github.io/botframework-solutions/overview/skills/)。 有关虚拟助手和技能体系结构文档，请参阅 [虚拟助手和技能体系结构](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。  
 
 ## <a name="limitations-of-virtual-assistant"></a>虚拟助理限制
 

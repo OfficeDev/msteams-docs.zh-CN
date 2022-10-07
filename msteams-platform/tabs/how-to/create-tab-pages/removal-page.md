@@ -5,12 +5,12 @@ description: 了解如何在安装后重新配置选项卡。 通过支持 Micro
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450406"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499292"
 ---
 # <a name="create-a-removal-page"></a>创建删除页面
 
@@ -24,15 +24,15 @@ ms.locfileid: "67450406"
 
 |名称| 类型| 最大大小 | 必需 | 说明|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||一个值，指示创建后用户是否可以更新选项卡配置的实例。默认值为 `true`。 |
+|`canUpdateConfiguration`|Boolean|||一个值，该值指示创建后用户是否可以更新选项卡配置的实例。 默认值为“`true`”。 |
 
 将选项卡上传到频道或群组聊天时，Teams 会为选项卡添加右键单击下拉菜单。可用选项由 `canUpdateConfiguration` 设置确定。 下表提供了设置详细信息：
 
 | `canUpdateConfiguration`| true   | false | 说明 |
 | ----------------------- | :----: | ----- | ----------- |
-|     设置            |   √    |       |在 IFrame 中重新加载 `configurationUrl` 页面，允许用户重新配置选项卡。 |
+|     设置            |   √    |       |页面 `configurationUrl` 在 iFrame 中重新加载，允许用户重新配置选项卡。 |
 |     重命名              |   √    |   √   | 用户可以更改选项卡名称，因为它显示在选项卡栏中。          |
-|     删除              |   √    |   √   |  如果 **配置页** 中包含 `removeURL` 属性和值，则 **删除页** 将加载到 IFrame 中并呈现给用户。 如果未包含删除页，则会向用户显示确认对话框。          |
+|     删除              |   √    |   √   |  `removeURL`如果属性和值包含在 **配置页** 中，**则删除页** 将加载到 iFrame 中并呈现给用户。 如果未包含删除页，则会向用户显示确认对话框。          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>为应用程序创建选项卡删除页
 
@@ -111,7 +111,7 @@ ms.locfileid: "67450406"
 
 ***
 
-当用户从选项卡的下拉菜单中选择“**删除**”时，Teams 会将 **配置页** 中分配的可选 `removeUrl` 页面加载到 IFrame 中。 向用户显示一个加载了 `onClick()` 函数的按钮，它将调用 `pages.config.setValidityState(true)` 并启用删除页 IFrame 底部显示的“**删除**”按钮。
+当用户从选项卡的下拉菜单中选择 **“删除**”时，Teams 会将 **配置页** 中分配的可选`removeUrl`页面加载到 iFrame 中。 用户将看到一个按钮，其中加载 `onClick()` 了调用 `pages.config.setValidityState(true)` 和启用删除页 iFrame 底部显示的 **“删除** ”按钮的函数。
 
 执行删除处理程序后，`removeEvent.notifySuccess()` 或 `removeEvent.notifyFailure()` 将通知 Teams 内容删除结果。
 

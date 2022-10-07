@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d870680e146564bb23db0193d2e2b116a249009
-ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
+ms.openlocfilehash: e28e726a1915cdbc8fddf501b0352d160673516c
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68327585"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499165"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -179,6 +179,7 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
+
 * 仅当有 sql 实例时才使用 sqlServerEndpoint (SQL_ENDPOINT) //
 * 仅当有 sql 实例时才使用 sqlUsername (SQL_USER_NAME) //
 * 仅当有 sql 实例时才使用 sqlPassword (SQL_PASSWORD) //
@@ -254,9 +255,9 @@ try {
     <details>
     <summary><b>与 Microsoft Graph 工具包集成</b></summary>
 
-    [Microsoft Graph 工具包 (mgt) ](https://aka.ms/mgt)库是由 Microsoft Graph 提供的各种身份验证提供程序和 UI 组件的集合。
+    [Microsoft Graph 工具包](https://aka.ms/mgt)库是由 Microsoft Graph 提供的各种身份验证提供程序和 UI 组件的集合。
 
-    该 `@microsoft/mgt-teamsfx-provider` 包公开 `TeamsFxProvider` 类，该类使用 `TeamsFx` 类来登录用户并获取要与 Graph 一起使用的令牌。
+    该 `@microsoft/mgt-teamsfx-provider` 包公开 `TeamsFxProvider` 类，该类使用 `TeamsFx` 类来登录用户并获取要与 Microsoft Graph 一起使用的令牌。
 
     1. 可以安装以下必需的包：
 

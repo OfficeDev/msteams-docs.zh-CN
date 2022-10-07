@@ -5,12 +5,12 @@ description: 在本模块中，了解如何使用 Teams 协作控件生成模型
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: f75f7ea3b014a9373ba1d643cede7055aa333ef5
-ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
+ms.openlocfilehash: aace2b68bc67aaee54d8c9015c2e649c7c3b8887
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68373043"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499326"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>使用 Teams 协作控件创建新的模型驱动应用
 
@@ -316,7 +316,7 @@ Notes 控件不需要设置值。 现在可以在应用程序中创建任务和�
 
       :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="屏幕截图是显示新的审批请求表单的示例。":::
 
-1. 在审批请求表单中，填写所需的字段并选择 **“发送**”，这将创建一个请求并添加到列表中。
+1. 在“审批请求”窗体中，填写所需字段并选择 **“发送**”，这将创建一个请求并将其添加到列表中。
 
       :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="屏幕截图是显示审批列表的示例。":::
 

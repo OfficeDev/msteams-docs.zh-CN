@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329089"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499208"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -193,13 +193,13 @@ ms.locfileid: "68329089"
 
 1. 保存更新的 `manifest.json` 文件。
 
-1. 从以下路径打开 Visual Studio Code 中的 **Tab.ts**，在 IFrame 中提供内容页面：
+1. 从以下路径打开Visual Studio Code中的 **Tab.ts**，在 iFrame 中提供内容页面：
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-1. 将以下内容添加到 IFrame 修饰器列表：
+1. 将以下内容添加到 iFrame 修饰器列表：
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
@@ -485,7 +485,7 @@ public void Configure(IApplicationBuilder app)
 * 一个 **透明轮廓图标**，尺寸为 32 x 32 像素。
 * 一个 `manifest.json` 指定应用属性的文件。
 
-这些文件必须压缩在应用包中，以便将选项卡上传到 Teams。 Teams 会加载清单中指定的 `contentUrl`，将其嵌入 IFrame 中，并在选项卡中呈现。
+这些文件必须压缩在应用包中，以便将选项卡上传到 Teams。 Teams 加载 `contentUrl` 清单中指定的清单，将其嵌入 iFrame 中，并将其呈现在选项卡中。
 
 #### <a name="csproj"></a>.csproj
 

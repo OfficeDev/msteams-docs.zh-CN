@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 233000d39ee60b6affd5efa26c69e04390a24686
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: ac0be381837b62e1a3108f71a0320ae8b0c0a908
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243365"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499312"
 ---
 # <a name="customize-teams-app-manifest"></a>自定义 Teams 应用部件清单
 
@@ -95,11 +95,11 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
   
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="屏幕截图是显示云资源中预配选择的示例。":::
 
-若要使用命令 palatte 预览清单文件，请执行以下操作：
+使用命令面板预览清单文件：
 
 * 触发 **器 Teams：从命令面板在云中预配** 。
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="屏幕截图是显示使用命令 palatte 预配云资源的示例。":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="屏幕截图是显示使用命令面板预配云资源的示例。":::
 
 它生成远程 Teams 应用的配置，并在文件夹下 `build/appPackage` 生成包和预览清单。
 
@@ -350,7 +350,7 @@ The changes are updated to Teams Developer Portal.
 
 > [!NOTE]
 >
-> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any maual updates that can be overwritten in the Develope Portal.
+> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any manual updates that can be overwritten in the Developer Portal.
 > * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and existing **Bot ID** under **App features**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Screenshot is an example of showing the update warning." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::

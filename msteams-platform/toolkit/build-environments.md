@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: dc3a51d393a6445c26dddd54c471ecb630580b94
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 7f092d18075030777f0978f6e963c8513256a0f5
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806906"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499179"
 ---
 # <a name="prepare-to-build-apps-using-teams-toolkit"></a>准备使用 Teams 工具包生成应用
 
@@ -66,7 +66,7 @@ Azure Function 与 [云服务](add-resource.md#types-of-cloud-resources) 数组�
 
 * 生成 Web API 时
 * 处理数据库更改
-* 处理 Iot 数据流
+* 处理 IoT 数据流
 * 管理消息队列
 
 ## <a name="see-also"></a>另请参阅

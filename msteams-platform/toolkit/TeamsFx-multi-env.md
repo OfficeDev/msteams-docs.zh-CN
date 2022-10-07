@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 20bdb351eeff9a11d9460cf8206cfdc7dcbea0ff
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780994"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499298"
 ---
 # <a name="manage-multiple-environments"></a>管理多个环境
 
@@ -156,7 +156,7 @@ Teams 工具包允许更改配置文件和模板文件，以自定义每个环�
 4. 打开配置文件 `.fx/configs/config.staging.json`。
 5. 将同一属性添加到 `my app description for staging`.
 6. 打开 Teams 应用清单模板 `templates/appPackage/manifest.template.json`。
-7. 更新属性 **`description`** > **`short`** 以使用在配置具有胡子语法 **`{{config.manifest.description.short}}`** 的文件中定义的 **变量**。
+7. 更新属性 **`description`** > **`short`** 以使用在配置具有大括号语法 **`{{config.manifest.description.short}}`** 的文件中定义的 **变量**。
   
   更新内容 `manifest.template.json` 如下：
 

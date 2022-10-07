@@ -3,12 +3,12 @@ title: 清单架构参考
 description: 在本文中，你将拥有适用于 Microsoft Teams 参考、架构和示例完整清单的最新版本的公共清单架构。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 2638c668bf1363a0f997786bcb958689626c70c6
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376569"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499172"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams 的应用清单架构
 
@@ -499,7 +499,7 @@ Teams 应用中使用的图标。 图标文件必须作为上传包的一部分�
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-机器人可以向用户推荐的命令的列表。 对象是一个数组（最多两个元素），其类型为 `object`;必须为机器人支持的每个范围定义一个单独的命令列表。 有关详细信息，请参阅[机器人菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
+机器人可以向用户推荐的命令的列表。 对象是一个数组（最多两个元素），其类型为 `object`;必须为机器人支持的每个范围定义一个单独的命令列表。 有关详细信息，请参阅 [机器人菜单](~/bots/how-to/create-a-bot-commands-menu.md)。
 
 |名称| 类型| 最大大小 | 必需 | Description|
 |---|---|---|---|---|
@@ -643,9 +643,9 @@ Provides the native features on a user's device that your app requests access to
 
 **可选**— 布尔值
 
-Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
+指示是否在加载应用或选项卡时显示加载指示器。 默认为 **false**。
 >[!NOTE]
->如果在应用清单中选择`showLoadingIndicator` 为 true，若要正确加载页面，请修改选项卡和任务模块的内容页，如 [显示本机加载指示器](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) 文档中所述。
+>如果在应用清单中选择 `showLoadingIndicator` 为 true，若要正确加载页面，请根据 [“显示本机加载指示器](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) ”文档中所述修改选项卡和任务模块的内容页。
 
 ## <a name="isfullscreen"></a>isFullScreen
 

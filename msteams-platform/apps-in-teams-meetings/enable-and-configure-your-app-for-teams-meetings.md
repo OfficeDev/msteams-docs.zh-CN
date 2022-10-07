@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 4284babe1015a041bf36e24c74d9a33225bf5e8a
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295975"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499200"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>为会议启用和配置应用
 
@@ -42,6 +42,7 @@ ms.locfileid: "68295975"
 > * 会议中的应用需要 `groupchat` 或 `team` 作用域。 范围 `team` 适用于频道或频道会议中的选项卡。
 > * 若要支持在计划的频道会议中添加选项卡，请在应用清单的 **“范围”** 部分中指定 **团队** 范围。 如果没有 **团队** 范围，应用将不会出现在频道会议的浮出控件中。
 > * 会议中的应用可以使用以下上下文：`meetingChatTab`、`meetingDetailsTab`、`meetingSidePanel` 和 `meetingStage`。
+> * 委托的 RSC 权 `MeetingStage.Write.Chat` 限，并且 `ChannelMeetingStage.Write.Group` 在清单中是启用会议阶段共享所必需的。
 
 以下代码片段是 Teams 会议的应用中使用的可配置选项卡的示例：
 

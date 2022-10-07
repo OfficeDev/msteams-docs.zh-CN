@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 3b125d6f2f1029191debc547b3cc49b30cd47089
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 624cad282e181ed56cbc3041f725b046ca061c72
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027058"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499158"
 ---
 # <a name="debug-your-teams-app"></a>调试 Teams 应用
 
@@ -46,7 +46,7 @@ Teams 工具包支持以下调试功能：
 * [热重新加载](#hot-reload)
 * [停止调试](#stop-debugging)
 
-Teams 工具包在调试过程中执行后台函数，其中包括验证调试所需的先决条件。可以在 Teams 工具包的输出通道中查看验证过程的进度。 在安装过程中，可以注册和配置 Teams 应用。
+Teams 工具包在调试过程中执行后台函数，其中包括验证调试所需的先决条件。 可以在 Teams 工具包的输出通道中查看验证过程的进度。 在安装过程中，可以注册和配置 Teams 应用。
 
 ### <a name="start-debugging"></a>开始调试
 

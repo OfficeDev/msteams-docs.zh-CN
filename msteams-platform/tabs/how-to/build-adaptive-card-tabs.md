@@ -5,12 +5,12 @@ description: 了解如何使用自适应卡片生成选项卡，其中前端使�
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 33c9d42ff2d2d5d13676261c7197e287fcacff59
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376625"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499284"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
@@ -25,7 +25,7 @@ ms.locfileid: "68376625"
 * iFrame 约束
 * 服务器维护和成本
 
-自适应卡片选项卡是在 Teams 中生成选项卡的新方法。 可以将自适应卡片呈现到选项卡，而不是在 IFrame 中嵌入 Web 内容。前端通过自适应卡片呈现，后端由机器人提供支持。 机器人负责接受请求，并使用呈现的自适应卡片进行适当的响应。
+自适应卡片选项卡是在 Teams 中生成选项卡的新方法。 可以将自适应卡片呈现到选项卡，而不是在 iFrame 中嵌入 Web 内容。前端使用自适应卡片呈现，但后端由机器人提供支持。 机器人负责接受请求，并使用呈现的自适应卡片进行适当的响应。
 
 可以在桌面、Web 和移动设备上使用现成的用户界面(UI)构建基块来生成选项卡。 本文可帮助你了解需对应用清单执行的更改。 本文还确定了调用活动如何使用自适应卡片在选项卡中请求并发送信息，以及它对任务模块工作流的影响。
 
