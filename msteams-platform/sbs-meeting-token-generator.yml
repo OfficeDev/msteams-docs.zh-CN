@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 详细了解如何为会议启用和配置应用
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 7301003a6a69119ec1ca0658b90a53f2184dac38
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 396f1e1a2a085e18d4a8778998953e7eff517fbc
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243148"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490743"
 items:
 - durationInMinutes: 1
   content: >
@@ -59,7 +59,7 @@ items:
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="最终输出":::
 - title: 先决条件
   durationInMinutes: 1
-  content: "安装以下工具并设置开发环境： \n\n * 具有有效帐户[的 Microsoft Teams](https://teams.microsoft.com/) \n * [获取免费的 Teams 开发人员租户](https://developer.microsoft.com/microsoft-365/dev-program)\n * [最新版本的 .NET Core SDK](https://dotnet.microsoft.com/download)\n * [最新版本的 Visual Studio](https://visualstudio.microsoft.com/downloads/)\n * [nodejs 的最新版本](https://nodejs.org/en/download/)\n * [最新版本的 ngrok](https://ngrok.com/download) 或任何等效的隧道解决方案\n \n   > [!NOTE]\n   > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n \n 你必须具备以下技术的工作知识：\n\n * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n * [ECMAScript6](http://es6-features.org/#Constants)\n * [最新版本的 ASP.NET 核心](/aspnet/core/?view=aspnetcore-3.1)\n * [最新版本的React.JS](https://reactjs.org/tutorial/tutorial.html) \n \n"
+  content: "安装以下工具并设置开发环境： \n\n  | &nbsp; | 安装 | 用于使用... |\n  | --- | --- | --- |\n  | **Required** | &nbsp; | &nbsp; |\n  | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams 可通过一个位置的聊天、会议、呼叫和所有应用与你协作的所有人进行协作。|\n  | &nbsp; | [Visual Studio 2022 版本 17.3](https://visualstudio.microsoft.com)<br> 安装以下两个工作负荷之一：<br> • **ASP.NET 和 Web 开发** <br> • **.NET Core 跨平台开发** | 可以在 Visual Studio 2022 中安装企业版本，并安装工作负荷。 |\n  | &nbsp; | [Microsoft 365 开发人员帐户](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | 对具有相应安装应用权限的 Teams 帐户的访问权限。 |\n  | &nbsp; | [.NET Core SDK 版本 3.1](https://dotnet.microsoft.com/en-us/download) | 用于本地调试和Azure Functions应用部署的自定义绑定。 如果尚未全局安装 .NET 3.1 (或更高版本) SDK，则可以安装可移植版本。 |\n  | &nbsp; | [Node.js和 NPM](https://nodejs.org/) | 后端 JavaScript 运行时环境。 使用最新的 v16 LTS 版本。|\n  | &nbsp; | [ngrok](https://ngrok.com/download) | Teams 应用功能 (会话机器人、消息扩展和传入 Webhook) 需要入站连接。 隧道将开发系统连接到 Teams。 对于仅包含选项卡的应用，不需要这样做。 此包安装在项目目录中， (使用 npm `devDependencies`) 。 |\n \n   > [!NOTE]\n   > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n \n 你必须具备以下技术的工作知识：\n\n * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n * [ECMAScript6](http://es6-features.org/#Constants)\n * [最新版本的 ASP.NET 核心](/aspnet/core/?view=aspnetcore-3.1)\n * [最新版本的React.JS](https://reactjs.org/tutorial/tutorial.html) \n \n"
 - title: 设置本地环境
   durationInMinutes: 1
   content: "1. 打开 [Microsoft Teams 示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n1. 选择 **“代码**”。\n1. 在下拉菜单中，选择 **“使用 GitHub Desktop 打开**”。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-bot-builder-samples.png\" alt-text=\"Bot\":::\n\n1. 选择 **“克隆**”。 \n\n   > [!NOTE]\n   > 如果遇到错误“文件名太长”，请在所选管理员终端中应用 git 命令“git config --system core.longpaths true”。\n"

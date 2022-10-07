@@ -11,18 +11,18 @@ metadata:
   nextTutorialTitle: 阅读详细信息以启用消息扩展操作命令
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 8b0b4ea1780d1157db9f496933619fccecd20552
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 5cc3b94a0980b3761ac3f8255874bff6c9d0fa9c
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243309"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490239"
 items:
 - durationInMinutes: 1
   content: "消息扩展允许用户与 Microsoft Teams 客户端中的 Web 服务交互。 它们有助于从撰写消息区域、命令框或直接从消息启动外部系统中的操作。\n\n**基于操作的消息扩展的主要功能**\n\n* 向用户显示一个用于收集或显示信息的模式弹出窗口。\n* 从撰写消息区域、命令框或消息触发操作命令。 \n\n本分步指南可帮助你生成基于 Teams 操作的消息扩展，以从撰写消息和消息区域启动操作。 你将看到以下输出：\n   \n  ![输出](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)\n"
 - title: 先决条件
   durationInMinutes: 1
-  content: "确保安装以下工具并设置开发环境：  \n\n* 具有有效帐户[的 Microsoft Teams](https://teams.microsoft.com/)\n* [.NET Core SDK](https://dotnet.microsoft.com/download) 版本 3.1\n* [最新版本的 Visual Studio](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) 最新版本 (仅用于开发人员箱测试) 或任何等效的隧道解决方案\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n"
+  content: "确保安装以下工具并设置开发环境：  \n\n | &nbsp; | 安装 | 用于使用... |\n | --- | --- | --- |\n | **Required** | &nbsp; | &nbsp; |\n | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams 可通过一个位置的聊天、会议、呼叫和所有应用与你协作的所有人进行协作。|\n | &nbsp; | [Visual Studio 2022 版本 17.3](https://visualstudio.microsoft.com)<br> 安装以下两个工作负荷之一：<br> • **ASP.NET 和 Web 开发** <br> • **.NET Core 跨平台开发** | 可以在 Visual Studio 2022 中安装企业版本，并安装工作负荷。 |\n | &nbsp; | [.NET Core SDK 版本 3.1](https://dotnet.microsoft.com/en-us/download) | 用于本地调试和Azure Functions应用部署的自定义绑定。 如果尚未全局安装 .NET 3.1 (或更高版本) SDK，则可以安装可移植版本。 |\n | &nbsp; | [ngrok](https://ngrok.com/download) | Teams 应用功能 (会话机器人、消息扩展和传入 Webhook) 需要入站连接。 隧道将开发系统连接到 Teams。 对于仅包含选项卡的应用，不需要这样做。 此包安装在项目目录中， (使用 npm `devDependencies`) 。 |\n\n  > [!NOTE]\n  > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。\n"
 - title: 设置本地环境
   durationInMinutes: 1
   content: "将存储库克隆 `BotBuilder-Samples` 到本地 GitHub：  \n\n 1. 打开 [BotBuilder-Samples](https://github.com/Microsoft/BotBuilder-Samples)。\n 1. 选择 **“代码**”。\n 1. 在下拉菜单中，选择 **“使用 GitHub Desktop 打开**”。\n\n    ![克隆存储库](~/assets/images/sbs-messagingextension-action/botbuilder-sample.png)\n\n 1. 选择 **“克隆**”。 \n"
