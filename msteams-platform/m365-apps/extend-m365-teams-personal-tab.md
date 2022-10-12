@@ -1,16 +1,16 @@
 ---
 title: 跨 Microsoft 365 扩展 Teams 个人选项卡应用
-description: 更新个人应用以在 Outlook 和 Office 中运行。 更新清单和 TeamsJS SDK V2，修改同意安全性，更新 SSO 的 Azure AD 应用注册。
-ms.date: 05/24/2022
+description: 了解如何更新个人选项卡应用以在 Outlook 和 Office 中运行，以及 Microsoft Teams。
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 99b95d72e75bf43381ea441cf2e94f9cf63edc7e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243505"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537589"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -35,6 +35,7 @@ ms.locfileid: "68243505"
 * Microsoft 365 开发人员计划沙盒租户
 * 在 *Office 365 目标版本* 中注册的沙盒租户
 * 从 Microsoft 365 应用 *beta 版通道* 安装了 Office 应用的计算机
+*  (可选) 安装并注册了适用于 Android 的 Office 应用的 Android 设备或仿真器
 * （可选）Microsoft Visual Studio Code 的 [ Teams 工具包 ](https://aka.ms/teams-toolkit) 扩展，用于帮助更新代码
 
 > [!div class="nextstepaction"]
@@ -46,7 +47,7 @@ ms.locfileid: "68243505"
 
 如果要使用示例代码完成本教程，请按照 [Todo 列表示例](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend)中的设置步骤，使用 Teams Toolkit 扩展为 Visual Studio Code 生成个人选项卡应用，然后返回到本文，将其更新为 Microsoft 365。
 
-或者，你可以在以下快速入门部分使用已启用 Microsoft 365 的基本单一登录 *hello world* 应用，然后跳到 [Teams 中的旁加载应用](#sideload-your-app-in-teams) 。
+或者，你可以在以下 [快速入门](#quickstart)部分使用已启用 Microsoft 365 的基本单一登录 *hello world* 应用，然后跳到 [Teams 中的旁加载应用](#sideload-your-app-in-teams)。
 
 ### <a name="quickstart"></a>快速入门
 
@@ -93,7 +94,7 @@ ms.locfileid: "68243505"
 
 若要在 Outlook 和 Office 中运行，应用需要引用 npm 包 `@microsoft/teams-js@2.0.0` (或更高) 。 虽然 Outlook 和 Office 中支持具有下层版本的代码，但会记录弃用警告，并且 Outlook 和 Office 中对 TeamsJS 下层版本的支持最终将停止。
 
-可以使用 Teams 工具包来帮助识别和自动化从 1.x TeamsJS 版本升级到 TeamsJS 版本 2.0.0 所需的代码更改。 或者，可以手动执行相同的步骤;有关详细信息，请参阅 [Microsoft Teams JavaScript 客户端 SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) 。
+可以使用 Teams 工具包来帮助识别和自动执行所需的代码更改，以便从 1.x TeamsJS 版本升级到 TeamsJS 版本 2.x.x。 或者，可以手动执行相同的步骤;有关详细信息，请参阅 [Microsoft Teams JavaScript 客户端 SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) 。
 
 1. 打开 *命令面板*： `Ctrl+Shift+P`.
 1. 运行命令 `Teams: Upgrade Teams JS SDK and code references`。
@@ -102,8 +103,8 @@ ms.locfileid: "68243505"
 
 > [!div class="checklist"]
 >
-> * teams-js@2.0.0 的导入语句
-> * teams-js@2.0.0 的函数[、枚举和接口调](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)用
+> * teams-js@2.x.x 的导入语句
+> * teams-js@2.x.x 的函数[、枚举和接口调用](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
 > * `TODO` 注释提醒标记可能受 [上下文](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) 接口更改影响的区域
 > * `TODO` 注释提醒，[将回调函数转换为 promise](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
@@ -226,7 +227,7 @@ ms.locfileid: "68243505"
 
 若要查看在适用于 Android 的 Office 应用中运行的应用，请执行以下操作：
 
-1. 启动 Office 应用并使用开发租户帐户登录。 如果 Office Android 应用在 Teams 中旁加载应用之前已运行，则需要重启它才能在已安装的应用中看到它。
+1. 启动 Office 应用并使用开发租户帐户登录。 如果 Office Android 应用在 Teams 中旁加载应用之前已运行，则需要重启它才能在已安装的应用中查看它。
 1. 选择 **“应用** ”图标。 旁加载应用显示在已安装的应用中。
 1. 选择应用图标以在适用于 Android 的 Office 应用中启动应用。
 
@@ -240,7 +241,7 @@ ms.locfileid: "68243505"
 
 有关 Microsoft 365 主机和平台对 Teams 应用的支持的总体摘要，请参阅 [跨 Microsoft 365 扩展 Teams 应用](overview.md)。
 
-可以通过调用该功能上的函数 (命名空间) ，并根据需要调整应用行为，在运行时 `isSupported()` 检查给定功能的主机支持。 这样，应用就可以在支持它的主机中点亮 UI 和功能，并在不支持的主机上提供正常回退体验。 有关详细信息，请参阅 [“区分应用体验](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience)”。
+可以通过调用该功能上的函数 (命名空间) ，并根据需要调整应用行为，在运行时 `isSupported()` 检查给定功能的主机支持。 这样，你的应用就可以在支持它的主机中亮起 UI 和功能，并在不支持的主机上提供正常回退体验。 有关详细信息，请参阅 [“区分应用体验](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience)”。
 
 使用 [Microsoft Teams 开发人员社区频道](/microsoftteams/platform/feedback)报告问题并提供反馈。
 
