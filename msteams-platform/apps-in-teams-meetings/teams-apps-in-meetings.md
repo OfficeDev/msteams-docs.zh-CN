@@ -6,18 +6,18 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 86cccc05a2c22cd337ae696d232c09c52728523c
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243204"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537526"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams 会议和呼叫的应用
 
 会议可实现协作、合作、明智的沟通和共享反馈。 会议应用可以为会议生命周期的每个阶段提供用户体验。 会议生命周期包括会议前、会议内和会议后应用体验，具体取决于与会者的状态。
 
-> [!Note]
+> [!NOTE]
 >
 > 用于即时会议、计划的公共频道会议、一对一和组呼叫的应用目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
 
@@ -35,7 +35,7 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 
 访问 [Teams 应用商店](https://go.microsoft.com/fwlink/p/?LinkID=2183121) 并浏览专为会议设计的应用。
 
-> [!Note]
+> [!NOTE]
 >
 > * 当前，当第三人称添加到一对一呼叫时，调用将提升为组调用，这意味着新会话将启动。 添加到一对一调用的应用在组调用中不可用。 但是，可以再次添加它们。
 >
@@ -47,7 +47,7 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 
 本文概述了 Teams 中的会议应用扩展性、API 参考、为会议启用和配置应用以及自定义“在一起”模式场景。
 
-> [!Note]
+> [!NOTE]
 >
 > Teams 桌面客户端支持会议应用 (侧面板、会议阶段) 。 在 Teams Web 客户端中，仅在启用开发人员预览时才支持它。
 
@@ -56,6 +56,7 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 * **使用“一起模式”场景进行自定义**：新的自定义“一起模式”场景功能使用户能够在一个位置与其团队的会议中进行协作。
 * **在共享通道中自定义应用权限**：如果应用在共享通道中共享重要信息，则可以自定义外部成员的应用权限。 [共享频道](../concepts/build-and-test/Shared-channels.md)中的应用权限遵循主机团队的应用名册和主机租户的应用策略。
 * **检索会议脚本**：可以在会后方案中访问和检索会议脚本。 将应用配置为自动获取计划会议的脚本，并将其用于见解、智能分析等。
+* **生成一个深度链接，以共享内容以在会议中登台**：可以生成一个深度链接来共享应用以暂存和启动或加入会议。
 
 ## <a name="next-step"></a>后续步骤
 

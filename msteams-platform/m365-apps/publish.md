@@ -1,16 +1,16 @@
 ---
 title: 发布适用于 Microsoft 365 的 Teams 应用
-description: 了解如何使已启用 Microsoft 365 的 Teams 应用可供 Teams、Outlook 和 Office 中的用户发现。 了解单租户多租户分布。
-ms.date: 05/24/2022
+description: 了解如何通过单租户和多租户分发让 Teams、Outlook 和 Office 中的用户发现已启用 Microsoft 365 的 Teams 应用。
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 01806f5aa7e3a5b0cb79cb6a2562cbf104f031bb
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b225624970a380679b2b1a508bf3b4d2882de72e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100936"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537519"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>发布适用于 Microsoft 365 的 Teams 应用
 
@@ -42,7 +42,7 @@ Microsoft Teams 支持已启用 Microsoft 365 的 Teams 应用进行生产。 �
 
 ## <a name="multitenant-distribution"></a>多租户分布
 
-为 Outlook 和 Office 启用的 Teams 应用的 [Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft 商业市场) 提交过程与传统的 Teams 应用相同。 唯一的区别是需要在应用包中使用 Teams 应用清单 [版本 1.13](../tabs/how-to/using-teams-client-sdk.md) ，这为跨 Microsoft 365 运行的 Teams 应用引入了支持。
+为 Outlook 和 Office 启用的 Teams 应用的 [Microsoft 商业市场](https://appsource.microsoft.com/) (Microsoft AppSource) 提交过程与传统的 Teams 应用相同。 唯一的区别是需要在应用包中使用 Teams 应用清单 [版本 1.13](../tabs/how-to/using-teams-client-sdk.md) ，这为跨 Microsoft 365 运行的 Teams 应用引入了支持。
 
 > [!TIP]
 > 在通过 [Microsoft 合作伙伴网络](https://partner.microsoft.com/)) 提交到 Teams 应用商店 (之前，使用 Teams 开发人员门户[验证应用包](https://dev.teams.microsoft.com/validation)以解决任何错误或警告。

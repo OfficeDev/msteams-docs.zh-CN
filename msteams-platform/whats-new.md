@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能以及对现有功�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 674da73dfbbb5417ef498315da0b3219466a4935
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295968"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537575"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -284,15 +284,16 @@ ms.locfileid: "68295968"
 
 开发人员预览是一个公共计划，可提前访问未发布 Teams 功能。
 
-**2022 年 9 月**
+**2022 年 10 月**
 
-***2022 年 9 月 23*** 日： [引入了对计划频道会议的会议应用支持。](apps-in-teams-meetings/meeting-app-extensibility.md)
+***2022 年 10 月 11*** 日： [生成一个深度链接以共享内容以在会议中登台。](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
+| 09/23/2022 | 引入了对计划频道会议的会议应用支持。 | 为 Teams 会议和呼叫构建应用> [统一会议应用](apps-in-teams-meetings/meeting-app-extensibility.md) |
 | 08/23/2022 | 在移动设备中将应用共享到 Teams 会议阶段 | 为 Teams 会议和呼叫构建应用> [为会议启用和配置应用](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | 计划公共频道会议的应用 | 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 2022/08/03 | 在 Teams 会议阶段将应用的 API 静音和取消静音 | 为 Teams 会议和通话生成应用 > [会议应用 API 参考](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |

@@ -1,16 +1,16 @@
 ---
 title: 在整个 Microsoft 365 中扩展 Teams 邮件扩展
-description: 在本文中，你将了解如何通过更新应用清单、添加 Outlook 频道和旁加载更新的应用来更新基于搜索的 Teams 消息扩展以在 Outlook 中运行。
-ms.date: 05/24/2022
+description: 了解如何将基于搜索的消息扩展更新为在 Outlook 中运行，以及 Microsoft Teams。
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: a0de61f0d1b6414d4ab35b54e4ec708f3b868948
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243512"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537505"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>在整个 Microsoft 365 中扩展 Teams 邮件扩展
 
@@ -36,7 +36,11 @@ ms.locfileid: "68243512"
 * （可选）带有 Teams 工具包扩展的 Microsoft Visual Studio Code。
 
 > [!div class="nextstepaction"]
-> [发布针对 Microsoft 365 扩展的 Teams 应用](publish.md)
+> [安装先决条件](prerequisites.md)
+
+## <a name="link-unfurling"></a>链接展开
+
+如果基于搜索的消息扩展支持在 Teams 中[展开链接](../messaging-extensions/how-to/link-unfurling.md)，则完成本教程的步骤还可在 Outlook 网页版 和 Windows 桌面环境中启用链接展开。 下面的 [“代码示例”](#code-sample) 部分提供了用于测试的简单链接展开应用。
 
 ## <a name="prepare-your-message-extension-for-the-upgrade"></a>为升级准备邮件扩展
 
@@ -115,7 +119,7 @@ If you used Teams Toolkit to create your message extension app, you can use it t
 > [!NOTE]
 > 如果使用本教程中提供的[示例应用](#quickstart)，则可以跳过此步骤，因为该方案不涉及 Azure Active Directory (AAD) 单一登录身份验证。
 
-Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
+邮件扩展的 Azure Active Directory (AD) 单一登录 (SSO) 在 Outlook 中的工作方式[与在 Teams 中的工作方式](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)相同。 但是，需要在租户的 *应用注册* 门户中将多个客户端应用程序标识符添加到机器人的 Azure AD 应用注册。
 
 1. 使用沙盒租户帐户登录 [Azure 门户](https://portal.azure.com)。
 1. 打开“**应用注册**”。
@@ -186,7 +190,7 @@ Your message extension is listed. You can invoke it from there and use it just a
  虽然更新后的邮件扩展将继续在具有完整[邮件扩展功能支持](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)的 Teams 中运行，但需要注意在启用了 Outlook 的体验的早期预览版中存在一些限制：
 
 * Outlook 中的邮件扩展仅限于邮件 [*撰写* 上下文](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions)。 即使 Teams 邮件扩展在其清单中包含 `commandBox` 作为 *上下文*，当前预览版也仅限于邮件撰写 (`compose`) 选项。 不支持从全局 Outlook“*搜索*”框中调用邮件扩展。
-* Outlook 不支持[基于操作的邮件扩展](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS)命令。 如果应用同时具有基于搜索和基于操作的命令，则其将出现在 Outlook 中，但操作菜单将不可用。
+* Outlook 不支持[基于操作的邮件扩展](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS)命令。 如果应用同时具有搜索和基于操作的命令，它将在 Outlook 中显示，但操作菜单将不可用。
 * 不支持在电子邮件中插入超过五个[自适应卡片](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design)；不支持自适应卡片 v1.4 及更高版本。
 * 插入的卡片不支持 `messageBack`、`imBack`、`invoke` 和 `signin` 类型的[卡片操作](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json)。 支持仅限于 `openURL`：单击时，用户将被重定向到新标签页中的指定 URL。
 
@@ -201,6 +205,7 @@ Your message extension is listed. You can invoke it from there and use it just a
 | **示例名称** | **说明** | **Node.js** |
 |---------------|--------------|--------|
 | NPM 搜索连接器 | 使用 Teams 工具包构建邮件扩展应用。 在 Teams、Outlook 中工作。 |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Teams 链接展开 | 用于演示链接展开的简单 Teams 应用。 在 Teams、Outlook 中工作。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling)
 
 ## <a name="next-step"></a>后续步骤
 

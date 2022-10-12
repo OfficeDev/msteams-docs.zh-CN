@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 3ed46761977bf31a9eb717d3533ed0c4f6e49646
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: ac74ac9f38e4c9e015cba3039e44ff92b4af92dd
+  ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243183"
+  ms.lasthandoff: 10/12/2022
+  ms.locfileid: "68537512"
 landingContent:
 - title: 浏览最新
   linkLists:
@@ -27,6 +27,8 @@ landingContent:
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
+    - text: 生成一个深度链接，以共享要在会议中登台的内容。
+      url: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
     - text: 管理 Teams 中第三方应用的 SaaS 许可证
       url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
     - text: 在合作伙伴中心上更新 Apple App Store 连接团队 ID
@@ -45,8 +47,6 @@ landingContent:
       url: apps-in-teams-meetings/teams-live-share-overview.md
     - text: 更新 Teams 机器人中的对话和安装事件 [开发人员预览版]
       url: bots/how-to/conversations/subscribe-to-conversation-events.md
-    - text: 将已启用 Outlook 和 Office 的应用提交到 Teams 应用商店
-      url: m365-apps/overview.md
 - title: 入门
   linkLists:
   - linkListType: get-started
