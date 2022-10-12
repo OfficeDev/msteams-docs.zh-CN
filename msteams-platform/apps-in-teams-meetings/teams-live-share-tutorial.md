@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: f6dd6bb0f130e69f4147ae73be085795d75b1083
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780812"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552572"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller 代码教程
 
@@ -28,7 +28,7 @@ ms.locfileid: "67780812"
 
 ## <a name="set-up-the-application"></a>设置应用程序
 
-首先导入所需的模块。 该示例使用 Fluid Framework 中的 [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) 和 Live Share SDK 中的 [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient)。 此示例支持 Teams 会议扩展性，因此我们需要包括 [Teams 客户端 SDK](https://github.com/OfficeDev/microsoft-teams-library-js)。 最后，该示例设计为在本地和 Teams 会议中运行，因此我们需要包括一些在 [本地测试示例](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious) 所需的其他 Fluid Framework 部分。
+首先导入所需的模块。 该示例使用 Fluid Framework 和 [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) 类中的 [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/)。 此示例支持 Teams 会议扩展性，因此我们需要包括 [Teams 客户端 SDK](https://github.com/OfficeDev/microsoft-teams-library-js)。 最后，该示例设计为在本地和 Teams 会议中运行，因此我们需要包括一些在 [本地测试示例](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious) 所需的其他 Fluid Framework 部分。
 
 应用程序使用一个架构创建 Fluid 容器，该架构定义一组可供容器使用的 _初始对象_。 该示例使用 SharedMap 存储已投掷的最新骰子数值。 有关详细信息，请参阅 [数据建模](https://fluidframework.com/docs/build/data-modeling/)。
 
@@ -38,9 +38,8 @@ Teams 会议应用需要多个视图（内容、配置和阶段）。 我们将�
 
 ```js
 import { SharedMap } from "fluid-framework";
-import { TeamsFluidClient } from "@microsoft/live-share";
 import { app, pages } from "@microsoft/teams-js";
-import { LOCAL_MODE_TENANT_ID } from "@fluidframework/azure-client";
+import { LiveShareClient, testLiveShare } from "@microsoft/live-share";
 import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
 
 const searchParams = new URL(window.location).searchParams;
@@ -100,36 +99,26 @@ start().catch((error) => console.error(error));
 
 并非所有应用视图都需要协作。 `stage`视图 _始终_ 需要协作功能，`content`视图 _可能需要_ 协作功能，`config`视图 _不应_ 需要协作功能。 对于需要协作功能的视图，需要加入与当前会议关联的 Fluid 容器。
 
-加入会议容器与创建新的 [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) ，然后调用 [JoinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) 方法一样简单。 在本地运行时，需要传入具有特殊 `LOCAL_MODE_TENANT_ID` 的自定义连接配置，否则，加入本地容器与在 Teams 中加入容器相同。
+加入会议的容器与初始化 [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) 并调用其 [joinContainer () ](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) 方法一样简单。
+
+在本地运行时，可以导入 [testLiveShare](/javascript/api/@microsoft/live-share/testliveshare) 并调用其 [初始化 () ](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-initialize) 方法。 然后，使用 [joinContainer () ](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-joincontainer) 方法连接到会话。
 
 ```js
 async function joinContainer() {
   // Are we running in teams?
-  let client;
   if (!!searchParams.get("inTeams")) {
     // Create client
-    client = new TeamsFluidClient();
-  } else {
-    // Create client and configure for testing
-    client = new TeamsFluidClient({
-      connection: {
-        type: "local",
-        tokenProvider: new InsecureTokenProvider("", {
-          id: "123",
-          name: "Test User",
-        }),
-        endpoint: "http://localhost:7070",
-      },
-    });
+    const liveShare = new LiveShareClient();
+    // Join container
+    return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
   }
-
-  // Join container
-  return await client.joinContainer(containerSchema, onContainerFirstCreated);
+  // Create client and configure for testing
+  testLiveShare.initialize();
+  return await testLiveShare.joinContainer(containerSchema, onContainerFirstCreated);
 }
 ```
 
-> [!NOTE]
-> 在本地测试时，TeamsFluidClient 会更新浏览器 URL，以包含已创建的测试容器的 ID。 将该链接复制到其他浏览器选项卡会导致 TeamsFluidClient 加入已创建的测试容器。 如果修改应用程序 URL 干扰应用程序操作，则可以使用传递给 TeamsFluidClient 的 [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-setlocaltestcontainerid) 和 [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-getlocaltestcontainerid) 选项自定义用于存储测试容器 ID 的策略。
+在本地测试时， `testLiveShare` 更新浏览器 URL 以包含已创建的测试容器的 ID。 将该链接复制到其他浏览器选项卡会导致 `testLiveShare` 加入已创建的测试容器。 如果将应用程序 URL 干扰器修改为应用程序的操作，则可以使用 [传递给的 setLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) 和 [getLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid) 选项自定义用于存储测试容器 ID 的策略 `LiveShareClient`。
 
 ## <a name="write-the-stage-view"></a>编写阶段视图
 
@@ -200,7 +189,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>编写侧面板视图
 
-当用户在会议中打开应用时，会在侧面板中向用户显示侧面板视图，该视图通过选项卡 `contentUrl` 加载 `sidePanel` 帧上下文。 此视图的目标是让用户在将应用共享到会议阶段之前选择应用的内容。 对于 Live Share SDK 应用，侧面板视图也可用作应用的配套体验。 从侧面板视图调用 [ joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) 将连接到阶段视图连接到的同一 Fluid 容器。 然后，此容器可用于与阶段视图通信。 确保与每个人的阶段视图 _和_ 侧面板视图通信。
+当用户在会议中打开应用时，会在侧面板中向用户显示侧面板视图，该视图通过选项卡 `contentUrl` 加载 `sidePanel` 帧上下文。 此视图的目标是让用户在将应用共享到会议阶段之前选择应用的内容。 对于 Live Share SDK 应用，侧面板视图也可用作应用的配套体验。 从侧面板视图调用 [ joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) 将连接到阶段视图连接到的同一 Fluid 容器。 然后，此容器可用于与阶段视图通信。 确保与每个人的阶段视图 _和_ 侧面板视图通信。
 
 示例的侧面板视图提示用户选择要暂存的共享按钮。
 
@@ -228,8 +217,8 @@ function renderSidePanel(elem) {
 
 通过应用清单中的 `configurationUrl` 加载的设置视图会在用户首次将应用添加到 Teams 会议时向用户显示。 此视图允许开发人员根据用户输入配置固定到会议的选项卡的 `contentUrl`。 即使不需要用户输入来设置 `contentUrl`，当前也需要此页。
 
-> [!IMPORTANT]
-> 选项卡 `settings` 上下文中不支持 Live Share SDK 的 [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer)。
+> [!NOTE]
+> 选项卡`settings`上下文不支持 Live Share 的 [joinContainer () ](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer)。
 
 示例的设置视图提示用户选择保存按钮。
 

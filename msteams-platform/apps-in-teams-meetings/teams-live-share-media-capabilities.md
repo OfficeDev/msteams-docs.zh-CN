@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 0ab0bf436ce3ca27b55a68ea2c80f1451f4d967e
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: 31b962d747a792b58a9efc9e2c52e42dc841ed18
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425582"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552489"
 ---
 # <a name="live-share-media-capabilities"></a>Live Share 媒体功能
 
@@ -26,8 +26,8 @@ Live Share SDK 为仅包含几行代码的任何 HTML `<video>` 和`<audio>`元�
 若要使用 npm 将最新版本的 SDK 添加到应用程序，请执行以下操作：
 
 ```bash
-npm install @microsoft/live-share --save
-npm install @microsoft/live-share-media --save
+npm install @microsoft/live-share@next --save
+npm install @microsoft/live-share-media@next --save
 ```
 
 OR
@@ -35,8 +35,8 @@ OR
 若要使用 [Yarn](https://yarnpkg.com/) 将最新版本的 SDK 添加到应用程序，请执行以下操作：
 
 ```bash
-yarn add @microsoft/live-share
-yarn add @microsoft/live-share-media
+yarn add @microsoft/live-share@next
+yarn add @microsoft/live-share-media@next
 ```
 
 ## <a name="media-sync-overview"></a>媒体同步概述
@@ -45,8 +45,8 @@ Live Share SDK 有两个与媒体同步相关的主类：
 
 | 课程                                                                                        | 说明                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EphemeralMediaSession](/javascript/api/@microsoft/live-share-media/ephemeralmediasession)     | 自定义临时对象，旨在协调独立媒体流中的媒体传输控件和播放状态。                          |
-| [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | 使用 >a0/> 同步实现 `IMediaPlayer` 接口（包括 HTML5 `<video>` 和 `<audio>` ） `EphemeralMediaSession`的任何对象。 |
+| [LiveMediaSession](/javascript/api/@microsoft/live-share-media/livemediasession)     | 自定义实时对象，旨在协调独立媒体流中的媒体传输控件和播放状态。                          |
+| [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | 使用 >a0/> 同步实现 `IMediaPlayer` 接口（包括 HTML5 `<video>` 和 `<audio>` ） `LiveMediaSession`的任何对象。 |
 
 示例：
 
@@ -61,19 +61,15 @@ Live Share SDK 有两个与媒体同步相关的主类：
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient, UserMeetingRole } from "@microsoft/live-share";
-import { EphemeralMediaSession } from "@microsoft/live-share-media";
-
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
+import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import { LiveMediaSession } from "@microsoft/live-share-media";
 
 // Setup the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
-  initialObjects: { mediaSession: EphemeralMediaSession },
+  initialObjects: { mediaSession: LiveMediaSession },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { mediaSession } = container.initialObjects;
 
 // Get the player from your document and create synchronizer
@@ -88,21 +84,17 @@ await mediaSession.initialize(allowedRoles);
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient, UserMeetingRole } from "@microsoft/live-share";
-import { EphemeralMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
+import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
 import { ContainerSchema } from "fluid-framework";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
-  initialObjects: { mediaSession: EphemeralMediaSession },
+  initialObjects: { mediaSession: LiveMediaSession },
 };
-const { container } = await client.joinContainer(schema);
-const mediaSession = container.initialObjects.mediaSession as EphemeralMediaSession;
+const { container } = await liveShare.joinContainer(schema);
+const mediaSession = container.initialObjects.mediaSession as LiveMediaSession;
 
 // Get the player from your document and create synchronizer
 const player: IMediaPlayer = document.getElementById("player") as HTMLVideoElement;
@@ -115,7 +107,7 @@ await mediaSession.initialize(allowedRoles);
 
 ---
 
-自动 `EphemeralMediaSession` 侦听对组播放状态的更改。 `MediaPlayerSynchronizer` 侦听所发出的 `EphemeralMediaSession` 状态更改，并将其应用于提供的 `IMediaPlayer` 对象，例如 HTML5 `<video>` 或 `<audio>` 元素。 为了避免播放用户未有意启动的状态更改（如缓冲区事件），我们必须通过同步器调用传输控件，而不是直接通过播放器调用传输控件。
+自动 `LiveMediaSession` 侦听对组播放状态的更改。 `MediaPlayerSynchronizer` 侦听所发出的 `LiveMediaSession` 状态更改，并将其应用于提供的 `IMediaPlayer` 对象，例如 HTML5 `<video>` 或 `<audio>` 元素。 为了避免播放用户未有意启动的状态更改（如缓冲区事件），我们必须通过同步器调用传输控件，而不是直接通过播放器调用传输控件。
 
 示例：
 
@@ -156,13 +148,13 @@ document.getElementById("change-track-button").onclick = () => {
 ```
 
 > [!NOTE]
-> 虽然可以使用该 `EphemeralMediaSession` 对象手动同步媒体，但通常建议使用该 `MediaPlayerSynchronizer`对象。 根据你在应用中使用的玩家，可能需要创建一个委托填充码，使 Web 播放器的接口与 [IMediaPlayer](/javascript/api/@microsoft/live-share-media/imediaplayer) 接口匹配。
+> 虽然可以使用该 `LiveMediaSession` 对象手动同步媒体，但通常建议使用该 `MediaPlayerSynchronizer`对象。 根据你在应用中使用的玩家，可能需要创建一个委托填充码，使 Web 播放器的接口与 [IMediaPlayer](/javascript/api/@microsoft/live-share-media/imediaplayer) 接口匹配。
 
 ## <a name="suspensions-and-wait-points"></a>挂起和等待点
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="显示与演示者的暂停同步的屏幕截图。":::
 
-如果要暂时挂起 `EphemeralMediaSession` 对象的同步，可以使用挂起功能。 默认情况下，[MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension) 对象是本地对象，当用户可能想要跟进他们错过的内容、休息一下等等时，这很有帮助。 如果用户结束挂起，同步将自动恢复。
+如果要暂时挂起 `LiveMediaSession` 对象的同步，可以使用挂起功能。 默认情况下，[MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/livemediasessioncoordinatorsuspension) 对象是本地对象，当用户可能想要跟进他们错过的内容、休息一下等等时，这很有帮助。 如果用户结束挂起，同步将自动恢复。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -235,18 +227,18 @@ document.getElementById("ready-up-button")!.onclick = () => {
 
 ## <a name="audio-ducking"></a>音频闪避
 
-Live Share SDK 支持智能音频闪避。 可以通过将以下内容添加到代码中来使用应用程序中的 _实验_ 性功能：
+Live Share SDK 支持智能音频闪避。 可以通过将以下内容添加到代码中来使用应用程序中的功能：
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
 // Register speaking state change handler through Teams Client SDK
 let volumeTimer;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
+meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     // If someone in the meeting starts speaking, periodically
     // lower the volume using your MediaPlayerSynchronizer's
@@ -267,13 +259,13 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
 // Register speaking state change handler through Teams Client SDK
 let volumeTimer: NodeJS.Timeout | undefined;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState: microsoftTeams.meeting.ISpeakingState) => {
+meeting.registerSpeakingStateChangeHandler((speakingState: meeting.ISpeakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     // If someone in the meeting starts speaking, periodically
     // lower the volume using your MediaPlayerSynchronizer's
@@ -317,24 +309,23 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState: micros
 ```
 
 > [!NOTE]
-> 用于音频闪避的 `registerSpeakingStateChangeHandler` API 目前仅适用于正在讲话的非本地用户。
+> `registerSpeakingStateChangeHandler`用于音频回避的 API 目前仅在 Microsoft Teams 桌面上工作，并按计划运行并满足现在的会议类型。
 
 ## <a name="code-samples"></a>代码示例
 
 | 示例名称          | Description                                                                                                                               | JavaScript                                     |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| React 视频          | 演示 EphemeralMediaSession 对象如何与 HTML5 视频配合工作的基本示例。                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
+| React 视频          | 演示 LiveMediaSession 对象如何使用 HTML5 视频的基本示例。                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
 | React 媒体模板 | 使所有连接的客户端能够一起观看视频、生成共享播放列表、转移在控制的人，并通过视频进行批注。 | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [Agile Poker 教程](../sbs-teams-live-share.yml)
+> [Live Share 画布](teams-live-share-canvas.md)
 
 ## <a name="see-also"></a>另请参阅
 
 - [Live Share SDK 常见问题解答](teams-live-share-faq.md)
 - [Live Share SDK 参考文档](/javascript/api/@microsoft/live-share/)
 - [Live Share 媒体 SDK 参考文档](/javascript/api/@microsoft/live-share-media/)
-- [参考文档](https://aka.ms/livesharedocs)
 - [会议中的 Teams 应用](teams-apps-in-meetings.md)

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: b53d7c01722faa51824e0df17586bc8a385438b0
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: 7cea66e58461814e3b2cd3be85e979b7a5b75c4b
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425608"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552509"
 ---
 ---
 
@@ -25,7 +25,7 @@ ms.locfileid: "67425608"
 
 <summary><b>我是否可以使用自己的 Azure Fluid Relay 服务？</b></summary>
 
-可以！ 构造 `TeamsFluidClient` 类时，可以定义自己的 `AzureConnectionConfig`。 Live Share 将创建的容器与会议相关联，但需要实现 `ITokenProvider` 接口来为容器签名令牌。 例如，可以使用提供的 `AzureFunctionTokenProvider`，它使用 Azure 云函数从服务器请求访问令牌。
+可以！ 初始化 Live Share 时，可以定义自己的 `AzureConnectionConfig`。 Live Share 将创建的容器与会议相关联，但需要实现 `ITokenProvider` 接口来为容器签名令牌。 例如，可以使用提供的 `AzureFunctionTokenProvider`，它使用 Azure 云函数从服务器请求访问令牌。
 
 虽然大多数用户认为使用我们的免费托管服务非常有用，但有时仍可将自己的 Azure Fluid Relay 服务用于 Live Share 应用。 如果有以下事项，请考虑使用自定义 AFR 服务连接：
 
@@ -53,7 +53,7 @@ ms.locfileid: "67425608"
 
 <summary><b>Live Share 支持什么会议类型？</b></summary>
 
-在预览期间，仅支持计划的会议，并且所有参与者都必须在会议日历上。 不支持一对一通话、群组呼叫、立即开会等会议类型。
+现在支持计划会议、一对一呼叫、组呼叫和会议。 尚不支持频道会议。
 
 <br>
 
@@ -79,7 +79,7 @@ ms.locfileid: "67425608"
 </details>
 
 <details>
-<summary><b>是否可以在 Teams 外部使用 Live Share 的临时数据结构？</b></summary>
+<summary><b>是否可以在 Teams 外部使用 Live Share 的数据结构？</b></summary>
 
 目前，Live Share 包要求 Teams 客户端 SDK 正常运行。 `@microsoft/live-share` Microsoft Teams 外部的功能或`@microsoft/live-share-media`不起作用。 如果这是你感兴趣的内容，可以 [在此处开始讨论](https://github.com/microsoft/live-share-sdk/discussions)。
 
@@ -106,7 +106,7 @@ ms.locfileid: "67425608"
 
 若要 `initialObjects` 修复在浏览器中本地测试时更改导致的错误，请从 URL 中删除哈希容器 ID 并重新加载页面。 如果在 Teams 会议中进行测试，请启动新会议并重试。
 
-如果计划频繁更新新应用 `SharedObject` 或 `EphemeralObject` 实例，应考虑如何将新架构更改部署到生产环境。 虽然实际风险相对较低且持续时间较短，但推出更改时可能会有活动会话。 会话中的现有用户不应受到影响，但部署中断性更改后加入该会话的用户在连接到会话时可能会遇到问题。 若要缓解此问题，可以考虑以下一些解决方案：
+如果计划频繁更新新应用 `SharedObject` 或 `LiveObject` 实例，应考虑如何将新架构更改部署到生产环境。 虽然实际风险相对较低且持续时间较短，但推出更改时可能会有活动会话。 会话中的现有用户不应受到影响，但部署中断性更改后加入该会话的用户在连接到会话时可能会遇到问题。 若要缓解此问题，可以考虑以下一些解决方案：
 
 * 在正常工作时间之外为 Web 应用程序部署架构更改。
 * 用于 `dynamicObjectTypes` 对架构所做的任何更改，而不是更改 `initialObjects`。
@@ -121,7 +121,7 @@ ms.locfileid: "67425608"
 <details>
 <summary><b>可以通过 Live Share 发出的更改事件数量是否有限制？</b></summary>
 
-虽然 Live Share 处于预览状态，但不会强制执行通过 Live Share 发出的任何事件限制。 为了获得最佳性能，必须将通过 `SharedObject` 或 `EphemeralObject` 实例发出的更改取消为每 50 毫秒或更长一条消息。 在基于鼠标或触摸坐标发送更改（例如同步光标位置、墨迹书写和在页面周围拖动对象时）时，这一点尤为重要。
+虽然 Live Share 处于预览状态，但不会强制执行通过 Live Share 发出的任何事件限制。 为了获得最佳性能，必须将通过 `SharedObject` 或 `LiveObject` 实例发出的更改取消为每 50 毫秒或更长一条消息。 在基于鼠标或触摸坐标发送更改（例如同步光标位置、墨迹书写和在页面周围拖动对象时）时，这一点尤为重要。
 
 <br>
 

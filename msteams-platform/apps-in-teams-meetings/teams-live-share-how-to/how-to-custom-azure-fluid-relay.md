@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 07/21/2022
-ms.openlocfilehash: baa192bf82e059b1cfe7a9fc8979874710f266b1
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: b8bec005450515fbef7dfb60e58fac1325235b62
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425630"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552516"
 ---
 ---
 
@@ -27,17 +27,17 @@ ms.locfileid: "67425630"
 
 ## <a name="connect-to-azure-fluid-relay-service"></a>连接到 Azure Fluid Relay 服务
 
-构造 `TeamsFluidClient` 类时，可以定义自己的 `AzureConnectionConfig`。 Live Share 将创建的容器与会议相关联，但需要实现 `ITokenProvider` 接口来为容器签名令牌。 本示例介绍 Azure， `AzureFunctionTokenProvider`它使用 Azure 云函数从服务器请求访问令牌。
+调用初始化 `LiveShareClient`时，可以定义你自己的 `AzureConnectionConfig`。 Live Share 将创建的容器与会议相关联，但需要实现 `ITokenProvider` 接口来为容器签名令牌。 本示例介绍 Azure， `AzureFunctionTokenProvider`它使用 Azure 云函数从服务器请求访问令牌。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import { TeamsFluidClient, EphemeralPresence } from "@microsoft/live-share";
+import { LiveShareClient, LivePresence } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
 // Define a custom connection for your app
-const clientProps = {
+const options = {
   connection: {
     tenantId: "MY_TENANT_ID",
     tokenProvider: new AzureFunctionTokenProvider(
@@ -49,14 +49,14 @@ const clientProps = {
   },
 };
 // Join the Fluid container
-const client = new TeamsFluidClient(clientProps);
+const liveShare = new LiveShareClient(options);
 const schema = {
   initialObjects: {
-    presence: EphemeralPresence,
+    presence: LivePresence,
     ticTacToePositions: SharedMap,
   },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -64,12 +64,16 @@ const { container } = await client.joinContainer(schema);
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import { TeamsFluidClient, EphemeralPresence, ITeamsFluidClientOptions } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  ILiveShareClientOptions,
+  LivePresence,
+} from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
 // Define a custom connection for your app
-const clientProps: ITeamsFluidClientOptions = {
+const options: ILiveShareClientOptions = {
   connection: {
     tenantId: "MY_TENANT_ID",
     tokenProvider: new AzureFunctionTokenProvider(
@@ -81,14 +85,14 @@ const clientProps: ITeamsFluidClientOptions = {
   },
 };
 // Join the Fluid container
-const client = new TeamsFluidClient(clientProps);
+const liveShare = new LiveShareClient(options);
 const schema = {
   initialObjects: {
-    presence: EphemeralPresence,
+    presence: LivePresence,
     ticTacToePositions: SharedMap,
   },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -110,21 +114,21 @@ Azure Fluid Relay 设计用于任何基于 Web 的应用程序，这意味着它
 Live Share 具有对增强应用中其他功能的常见会议方案有益的功能，包括：
 
 * [容器映射](#container-mapping)
-* [临时对象和角色验证](#ephemeral-objects-and-role-verification)
+* [实时对象和角色验证](#live-objects-and-role-verification)
 * [媒体同步](#media-synchronization)
 
 ### <a name="container-mapping"></a>容器映射
 
-Live Share 的 `TeamsFluidClient` 类负责将唯一会议标识符映射到 Fluid 容器，这可确保所有会议参与者都加入同一容器。 在此过程中，客户端尝试连接到 `containerId` 映射到已存在的会议。 如果其中一个不存在， `AzureClient` 则用于使用你 `AzureConnectionConfig` 创建容器，然后将该 `containerId` 容器中继给其他会议参与者。
+In `LiveShareClient` `@microsoft/live-share` 负责将唯一会议标识符映射到 Fluid 容器，这可确保所有会议参与者都加入同一容器。 在此过程中，客户端尝试连接到 `containerId` 映射到已存在的会议。 如果其中一个不存在， `AzureClient` 则用于使用你 `AzureConnectionConfig` 创建容器，然后将该 `containerId` 容器中继给其他会议参与者。
 
 如果你的应用已有一种机制来创建 Fluid 容器并将其共享给其他成员，例如插入 `containerId` 到共享到会议阶段的 URL，则应用可能不需要这样做。
 
-### <a name="ephemeral-objects-and-role-verification"></a>临时对象和角色验证
+### <a name="live-objects-and-role-verification"></a>实时对象和角色验证
 
-Live Share 的临时数据结构（例如`EphemeralPresence``EphemeralState``EphemeralEvent`）是为会议中的协作量身定制的，因此在 Microsoft Teams 外部使用的 Fluid 容器中不受支持。 角色验证等功能可帮助应用符合用户的期望。
+Live Share 的实时数据结构（例如`LivePresence``LiveState``LiveEvent`）是为会议中的协作量身定制的，因此在 Microsoft Teams 外部使用的 Fluid 容器中不受支持。 角色验证等功能可帮助应用符合用户的期望。
 
 > [!NOTE]
-> 与传统的 Fluid 数据结构相比，临时对象还具有更快的消息延迟，这是一个额外的好处。
+> 此外，与传统的 Fluid 数据结构相比，实时对象还具有更快的消息延迟。
 
 有关详细信息，请参阅 [核心功能](../teams-live-share-capabilities.md) 页。
 
