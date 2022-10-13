@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能以及对现有功�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: b1c06e5ea6e46adf5a40d29015bf79a30d653107
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537575"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560748"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -29,12 +29,10 @@ ms.locfileid: "68537575"
 
 适用于所有应用开发人员的 Microsoft Teams 平台功能。
 
-**2022 年 9 月**
+**2022 年 10 月**
 
-* ***2022 年 9 月 30*** 日： [管理 Teams 中第三方应用的 SaaS 许可证](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
-* ***2022 年 9 月 29*** 日： [Teams 移动应用现在支持将文件下载到本地设备。](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
-* ***2022 年 9 月 16*** 日： [基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
-* ***2022 年 9 月 6*** 日： [引入了用于通过 `selectMedia` API 使用相机捕获视频的代码片段。](concepts/device-capabilities/media-capabilities.md#code-snippets)
+* ***2022 年 10 月 12*** [日：即时会议、一对一和组调用支持应用。](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* ***2022 年 10 月 12*** 日： [Live Share 画布](apps-in-teams-meetings/teams-live-share-canvas.md)
 
 :::column-end:::
 :::row-end:::
@@ -45,6 +43,10 @@ ms.locfileid: "68537575"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
+| 09/30/2022|管理 Teams 中第三方应用的 SaaS 许可证|通过 Teams 应用将应用盈利>包含 SaaS 产品/服务> [管理 Teams 中第三方应用的许可证](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
+| 09/29/2022|Teams 移动应用现在支持将文件下载到本地设备。|集成设备功能>集成媒体功能> [Teams 移动版上的文件下载](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
+| 09/16/2022|基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。|为 [基于搜索的消息扩展>通用操作>搜索命令生成消息扩展](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
+| 09/06/2022|引入了用于通过 `selectMedia` API 使用相机捕获视频的代码片段。| 集成设备功能>集成媒体功能> [代码片段](concepts/device-capabilities/media-capabilities.md#code-snippets)|
 | 08/09/2022 | 为 Visual Studio 2022 引入了 Teams 工具包 | 工具和 SDK > 适用于 Visual Studio 的 Teams 工具包 > [适用于 Visual Studio 的 Teams 工具包概述](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 2022/08/03 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 2022/08/03 | 添加了在会议后场景中检索会议脚本的功能。 | 为 Teams 会议和通话构建应用 > 使用 Graph API 获取会议脚本 > [概述](graph-api/meeting-transcripts/overview-transcripts.md) |
@@ -208,7 +210,7 @@ ms.locfileid: "68537575"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-| 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
+| 12/26/2019 | `replyToId`发送到机器人的有效负载中的参数不再加密，因此可以使用此值构造指向这些消息的深层链接。 消息有效负载包括参数中的加密值 `legacy.replyToId`。  |
 | 11/05/2019 | 使用 Teams JavaScript SDK 的单一登录。 | [单一登录](tabs/how-to/authentication/tab-sso-overview.md) |
 | 10/31/2019 | 已更新对话机器人和邮件扩展文档，以反映 4.6 Bot Framework SDK。 有关 v3 SDK 的文档，请参阅"资源"部分。 | 所有机器人和邮件扩展文档 |
 | 10/31/2019 | 新的文档结构和主要文章重构。 请通过创建 GitHub 问题来报告任何死链接或 404。 | 全部都一样！ |
@@ -298,7 +300,6 @@ ms.locfileid: "68537575"
 | 08/10/2022 | 计划公共频道会议的应用 | 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 2022/08/03 | 在 Teams 会议阶段将应用的 API 静音和取消静音 | 为 Teams 会议和通话生成应用 > [会议应用 API 参考](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Teams 协作控制| 与 Teams > [协作控件集成](samples/collaboration-control.md) |
-| 2022/06/30 | 用于即时会议、一对一和群组通话的应用| 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 | 构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 02/03/2022 | 已引入应用清单版本 1.13 | 应用清单 > 公共开发人员预览 > [清单架构](resources/schema/manifest-schema-dev-preview.md) |
 | 01/17/2022 | 适用于移动的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|

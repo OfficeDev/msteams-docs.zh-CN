@@ -1,16 +1,16 @@
 ---
 title: 应用验证失败的常见原因
-description: 了解应用无法通过应用验证的最常见原因。 链接断开、描述中的错误、无效的策略链接、有效的域准则冲突、无效的支持链接等。
+description: 了解应用验证失败的最常见原因，例如链接损坏、意外错误、崩溃、有效的域准则冲突、功能 bug。
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100908"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560650"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>应用验证失败的常见原因
 

@@ -1,16 +1,16 @@
 ---
 title: 准备应用商店提交
-description: 在提交要在应用商店中列出的 Microsoft Teams 应用之前，请了解最后步骤。 了解如何验证应用包。 了解如何在合作伙伴中心更新 Apple App Store Connect 团队 ID。
+description: 提交要在应用商店中列出的 Microsoft Teams 应用之前的最后步骤。 验证应用包并完成发布者验证和证明。
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c78cfb103b9e6bd57218b6ca31edeae54c4ecca1
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: bec6c900a0f478b2243685215f094b9a051c44f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376604"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560678"
 ---
 # <a name="prepare-your-teams-store-submission"></a>准备 Teams 应用商店提交
 

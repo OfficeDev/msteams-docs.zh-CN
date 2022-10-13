@@ -1,16 +1,16 @@
 ---
 title: 解决应用商店提交问题
-description: 了解如何排查和更正 Microsoft Teams 应用商店提交的问题。 直接从 Microsoft 获取帮助，解决问题并重新提交应用。
+description: 排查和更正 Microsoft Teams 应用商店提交问题。 直接从 Microsoft 获取帮助，解决问题并重新提交应用。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 729275b141fc30571dcfc1a1b5e303734d216aa2
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100278"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560713"
 ---
 # <a name="resolve-issues-if-your-teams-store-submission-fails"></a>解决 Teams 应用商店提交失败的问题
 

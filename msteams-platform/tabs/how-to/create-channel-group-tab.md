@@ -6,16 +6,16 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329082"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560489"
 ---
 # <a name="create-a-channel-tab"></a>创建频道选项卡
 
-通道或组选项卡将内容传递到频道和群组聊天，是围绕基于 Web 的专用内容创建协作空间的好方法。
+频道或组选项卡将内容传递到频道和群聊，这有助于围绕基于 Web 的专用内容创建协作空间。
 
 确保具有生成频道或组选项卡的所有 [先决条件](~/tabs/how-to/tab-requirements.md) 。
 
@@ -31,7 +31,7 @@ ms.locfileid: "68329082"
     npm install yo gulp-cli --global
     ```
 
-2. 在命令提示符下，通过输入以下命令安装 Microsoft Teams 应用生成器：
+2. 在命令提示符下，输入以下命令安装 Microsoft Teams 应用生成器：
 
     ```cmd
     npm install generator-teams --global
@@ -55,7 +55,7 @@ ms.locfileid: "68329082"
     yo teams
     ```
 
-1. 向 Microsoft Teams 应用程序生成器提示的一系列问题提供值以更新 `manifest.json` 文件：
+1. 向 Microsoft Teams 应用生成器 `manifest.json` 提示的更新文件的一系列问题提供值：
 
     ![生成器打开的屏幕截图](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ ms.locfileid: "68329082"
 
     * **你的 (公司) 名称是什么? (最多 32 个字符)**
 
-        你的公司名称将用于应用清单。 输入公司名称或选择“**Enter**”以接受默认名称。
+        你的公司名称可以在应用清单中使用。 输入公司名称或选择“**Enter**”以接受默认名称。
 
     * **要使用哪个清单版本?**
 
@@ -94,7 +94,7 @@ ms.locfileid: "68329082"
 
         选择 **( &ast; ) 选项卡**。
 
-    * **要托管此解决方案的 URL 是什么?**
+    * **要托管此解决方案的 URL？**
 
         默认情况下，生成器建议使用 Azure 网站 URL。 仅在本地测试应用，因此不需要有效的 URL。
 
@@ -169,7 +169,7 @@ gulp build
 
 #### <a name="run-your-application"></a>运行应用程序
 
-1. 在命令提示符中输入以下命令以启动本地 Web 服务器：
+1. 在命令提示符下，输入以下命令以启动本地 Web 服务器：
 
     ```bash
     gulp serve
@@ -179,7 +179,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="默认选项卡":::
 
-1. 若要查看选项卡配置页面，请转到 `http://localhost:3007/<yourDefaultAppNameTab>/config.html`。 如下所示：
+1. 若要查看选项卡配置页面，请转到 `http://localhost:3007/<yourDefaultAppNameTab>/config.html`。
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="选项卡配置页面":::
 
@@ -324,7 +324,7 @@ ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-在项目目录根目录的命令提示符处运行以下命令，以建立到选项卡的安全隧道：
+在项目目录根目录的命令提示符处，运行以下命令以建立到选项卡的安全隧道：
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -338,7 +338,10 @@ ngrok http 3978 --host-header=localhost
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -346,7 +349,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 `script` 标记中插入对 `microsoftTeams.app.initialize();` 的调用。
 
-1. 在 Visual Studio 解决方案资源管理器中转到“**页面**”文件夹并打开“**Tab.cshtml**”
+1. 在 Visual Studio 解决方案资源管理器中，转到 **Pages** 文件夹并打开 **Tab.cshtml**
 
     在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置并可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
@@ -515,7 +518,7 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="csproj"></a>.csproj
 
-在 Visual Studio 解决方案资源管理器窗口中，右键单击项目，然后选择“**编辑项目文件**”。 在文件末尾，会看到以下代码，用于在应用程序构建时创建和更新压缩文件夹：
+在 Visual Studio 解决方案资源管理器窗口中，右键单击项目，然后选择“**编辑项目文件**”。 在文件末尾，请参阅以下代码，该代码在应用程序生成时创建和更新 zip 文件夹：
 
 ```xml
 <PropertyGroup>
@@ -537,15 +540,15 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="models"></a>模型
 
-**ChannelGroup.cs** 提供了一个消息对象和方法，这些对象和方法将在配置期间从控制器调用。
+**ChannelGroup.cs** 显示一个消息对象和方法，可以在配置期间从控制器调用。
 
 #### <a name="views"></a>视图
 
 这些是 ASP.NET Core MVC 中的不同视图：
 
-* 主页：ASP.NET Core 将名为“**索引**”的文件视为网站的默认页面或主页。 当浏览器 URL 指向网站的根目录时，**Index.cshtml** 将显示为应用程序的主页。
+* 主页：ASP.NET Core 将名为“**索引**”的文件视为网站的默认页面或主页。 当浏览器 URL 指向站点的根目录时， **Index.cshtml** 可以显示为应用程序的主页。
 
-* 共享：部分视图标记 **_Layout.cshtml** 包含应用程序的整体页面结构和共享视觉元素。 它还将引用 Teams 库。
+* 共享：部分视图标记 **_Layout.cshtml** 包含应用程序的整体页面结构和共享视觉元素，这些元素也引用 Teams 库。
 
 #### <a name="controllers"></a>控制器
 
@@ -555,7 +558,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-在项目目录根目录的命令提示符处运行以下命令，以建立到选项卡的安全隧道：
+在项目目录根目录的命令提示符处，运行以下命令以建立到选项卡的安全隧道：
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -569,7 +572,10 @@ ngrok http 3978 --host-header=localhost
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -577,7 +583,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 `script` 标记中插入对 `microsoftTeams.app.initialize();` 的调用。
 
-1. 在 Visual Studio 解决方案资源管理器中转到“**选项卡**”文件夹并打开“**Tab.cshtml**”
+1. 在 Visual Studio 解决方案资源管理器中，转到 **Tab** 文件夹并打开 **Tab.cshtml**
 
     在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置并可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 

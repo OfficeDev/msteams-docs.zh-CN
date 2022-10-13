@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams 应用商店排名参数
-description: 了解 Microsoft Teams 应用商店排名参数。 用于确定应用放置的主要参数是历史使用情况数据、用户参与数据、应用质量和值、Udience 相关性、应用更新。
+description: 了解 Microsoft Teams 应用商店排名参数，例如历史使用情况和用户参与数据、应用质量和值、受众相关性、应用更新。
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 558ac86814ddb61660ca2409418754fd33730c7b
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: e285f2a69703b6870a4392d35a377bf7a585b360
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100334"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560482"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Microsoft Teams 应用商店排名参数
 

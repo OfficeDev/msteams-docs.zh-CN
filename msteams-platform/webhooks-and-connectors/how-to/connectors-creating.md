@@ -5,12 +5,12 @@ description: Office 365连接器入门。 将连接器添加到 Microsoft Teams 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 82fa425b3a2edb4db72c327655bdc8513d6b51f3
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 8e9b1d831858bcf9aefeedbafcb098744470e1d7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376576"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560741"
 ---
 # <a name="create-office-365-connectors"></a>创建 Office 365 连接器
 
@@ -19,7 +19,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 请参阅以下视频，了解如何创建Office 365连接器：
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -87,17 +87,15 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
     </section>
 </div>
 
-<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        
+<script>
         function onClick() {
             pages.config.setValidityState(true);
         }
 
-        await app.initialize();
+        await microsoftTeams.app.initialize();
         pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
@@ -149,7 +147,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 | `contentUrl` | 配置页的 URL，在调用 `setConfig()` 时由代码设置。 |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | 返回的值可以`mail`是或`groups``teams`分别对应于Office 365邮件、Office 365组或 Teams。 |
-| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
+| `userObjectId` | 对应于发起连接器设置的Office 365用户的唯一 ID。 必须保护它。 此值可用于将已在服务中设置配置的用户关联到Office 365中。 |
 
 #### <a name="handle-edits"></a>处理编辑
 
@@ -163,7 +161,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 
 #### <a name="handle-removals"></a>处理删除
 
-可以在用户删除现有的连接器配置时执行事件处理程序。 通过调用 `microsoftTeams.pages.config.registerOnRemoveHandler()` 注册该处理程序。 此处理程序用于执行清理操作，如删除数据库中的条目。
+可以在用户删除现有的连接器配置时执行事件处理程序。 通过调用 `microsoftTeams.pages.config.registerOnRemoveHandler()` 注册该处理程序。 此处理程序用于执行清理操作，例如从数据库中删除条目。
 
 ### <a name="include-the-connector-in-your-manifest"></a>在清单中包含连接器
 

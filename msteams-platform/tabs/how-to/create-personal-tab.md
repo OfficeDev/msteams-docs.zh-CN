@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499208"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560734"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -56,7 +56,7 @@ ms.locfileid: "68499208"
     yo teams
     ```
 
-1. 为 Microsoft Teams 应用生成器提示的一系列问题提供值，以更新 `manifest.json` 文件。
+1. 向 Microsoft Teams 应用生成器 `manifest.json` 提示的更新文件的一系列问题提供值。
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text=" Teams生成器 ":::
 
@@ -223,7 +223,7 @@ gulp build
 
 #### <a name="run-your-application"></a>运行应用程序
 
-1. 在命令提示符中输入以下命令以启动本地 Web 服务器：
+1. 在命令提示符下，输入以下命令以启动本地 Web 服务器：
 
     ```cmd
     gulp serve
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
 1. 在 Teams 的左窗格中，选择省略号 &#x25CF;&#x25CF;&#x25CF；然后选择上传的应用以查看个人选项卡。
 
-   现在，你已成功在 Teams 中创建并添加个人选项卡。
+   现在，你已在 Teams 中成功创建并添加了个人选项卡。
   
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -371,13 +371,15 @@ ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. 在 Visual Studio 解决方案资源管理器打开“**页面**”文件夹中的 **PersonalTab.cshtml**，在 `<script>` 标记中添加 `app.initialize()` 并保存。
+1. 在 Visual Studio 解决方案资源管理器中，从 **Pages** 文件夹打开 **PersonalTab.cshtml** 并添加`microsoftTeams.app.initialize()`到标记中`<script>`。
+
+1. 选择“**保存**”。
 
 1. 在 Visual Studio 中，选择 **F5** 或从应用程序的“**调试**”菜单中选择“**开始调试**”。
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-在项目目录根目录的命令提示符处运行以下命令，建立到选项卡的安全隧道：
+在项目目录根目录的命令提示符处，运行以下命令以建立到选项卡的安全隧道：
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -389,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 打开“**应用**”并选择“**导入引用**”。
 
-1. 应用包文件名是 `tab.zip`，可在 `/bin/Debug/netcoreapp3.1/tab.zip` 路径上使用。
+1. 应用包文件名是 `tab.zip` ，可在路径上 `/bin/Debug/netcoreapp3.1/tab.zip` 使用。
 
 1. 在“开发人员门户”中选择 `tab.zip` 并将其打开。
 
@@ -401,7 +403,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **应用 URL** 中，将隐私策略更新为`https://<yourngrokurl>/privacy``https://<yourngrokurl>/tou`“使用条款”，然后选择 **“保存**”。
 
-1. 在 **应用功能** 中，选择 **“ 个人应用** > **创建第一个个人应用”选项卡**，然后输入“名称”，并用 `https://<yourngrokurl>/personalTab` 更新 **内容 URL**。 将“网站 URL”字段留空，然后从下拉列表中选择 **“上下文** 为 personalTab”，然后选择 **“确认**”。
+1. 在 **“应用功能**”中，选择 **“个人应用** > **创建你的第一个个人应用”选项卡**，然后输入名称并更新 **内容 URL**`https://<yourngrokurl>/personalTab`。 将“网站 URL”字段留空，然后从下拉列表中选择 **“上下文** 为 personalTab”，然后选择 **“确认**”。
 
 1. 选择“保存”。
 
@@ -415,7 +417,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text=" 默认选项卡 ":::
 
-   现在，你已成功在 Teams 中创建并添加个人选项卡。
+   现在，你已在 Teams 中成功创建并添加了个人选项卡。
   
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -536,13 +538,15 @@ public void Configure(IApplicationBuilder app)
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. 在 Visual Studio 解决方案资源管理器中，从“**视图** > **PersonalTab**”文件夹打开 **PersonalTab.cshtml**，在 `<script>` 标记中添加 `app.initialize()` 并保存。
+1. 在 Visual Studio 解决方案资源管理器中，打开 **Views** > **PersonalTab** 文件夹 **中的 PersonalTab.cshtml** 并在标记中`<script>`添加`microsoftTeams.app.initialize()`。
+
+1. 选择“**保存**”。
 
 1. 在 Visual Studio 中，选择 **F5** 或从应用程序的“**调试**”菜单中选择“**开始调试**”。
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-在项目目录根目录的命令提示符处运行以下命令，建立到选项卡的安全隧道：
+在项目目录根目录的命令提示符处，运行以下命令以建立到选项卡的安全隧道：
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -570,7 +574,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 **应用 URL** 中，将隐私策略更新为`https://<yourngrokurl>/privacy``https://<yourngrokurl>/tou`“使用条款”，然后选择 **“保存**”。
 
-1. 在 **应用功能** 中，选择 **“ 个人应用** > **创建第一个个人应用”选项卡**，然后输入“名称”，并用 `https://<yourngrokurl>/personalTab` 更新 **内容 URL**。 将“网站 URL”字段留空，然后从下拉列表中选择 **“上下文** 为 personalTab”，然后选择 **“确认**”。
+1. 在 **“应用功能**”中，选择 **“个人应用** > **创建你的第一个个人应用”选项卡**，然后输入名称并更新 **内容 URL**`https://<yourngrokurl>/personalTab`。 将“网站 URL”字段留空，然后从下拉列表中选择 **“上下文** 为 personalTab”，然后选择 **“确认**”。
 
 1. 选择“保存”。
 
@@ -584,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="个人选项卡":::
   
-   现在，你已成功在 Teams 中创建并添加个人选项卡。
+   现在，你已在 Teams 中成功创建并添加了个人选项卡。
 
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -592,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>将静态个人选项卡重新排序
 
-从清单版本 1.7 开始，开发人员可以重新排列其个人应用中的所有选项卡。 特别是，开发人员可以将“**机器人聊天**”选项卡（始终默认为第一个位置）移动到个人应用选项卡标题中的任意位置。 声明了两个保留选项卡 `entityId` 关键字，即“ **对话**”和“**相关内容**”。
+从清单版本 1.7 开始，开发人员可以重新排列其个人应用中的所有选项卡。 可以将 **机器人聊天** 选项卡（始终默认为第一个位置）移动到个人应用选项卡标题中的任意位置。 声明了两个保留选项卡 `entityId` 关键字，即“ **对话**”和“**相关内容**”。
 
 如果创建具有 **个人** 范围的机器人，则默认显示在个人应用的第一个选项卡位置。 如果要将其移动到另一个位置，则必须使用保留的关键字“**对话**”将静态选项卡对象添加到清单。 “**对话**”选项卡显示在 Web 或桌面上，具体取决于在 `staticTabs` 数组中添加“**对话**”选项卡的位置。
 

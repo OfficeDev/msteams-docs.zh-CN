@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 10/04/2022
-ms.openlocfilehash: 3845d890de365eca8029a3f28d770586a6929743
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 9d1a776432f728c1e56caa357089be6e47c17e4c
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552603"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560608"
 ---
 # <a name="live-share-canvas-overview"></a>Live Share 画布概述
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Teams Live Share 媒体同步":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="屏幕截图显示了与 Teams 会议中其他会议参与者同步的画布示例。":::
 
-在全球各地的会议室和教室中，白板是合作的关键部分。 然而，在现代，白板已经不够了。 由于 PowerPoint 等众多数字工具是现代协作的焦点，因此必须具有相同的创意潜力。
+在全球各地的会议室和教室中，白板是合作的关键部分。 然而，在现代，白板已经不够了。 由于 PowerPoint 等众多数字工具是现代协作的焦点，因此必须启用相同的创意潜力。
 
 为了实现更无缝的协作，Microsoft 创建了PowerPoint Live，这对于用户在 Teams 中的工作方式起到了重要作用。 演示者可以使用笔、荧光笔和激光笔在幻灯片上进行批注，以吸引大家对关键概念的关注。 使用 Live Share 画布，你的应用可以以最少的精力PowerPoint Live墨迹书写工具。
 
@@ -103,7 +103,7 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## <a name="canvas-tools--cursors"></a>&游标的画布工具
+## <a name="canvas-tools-and-cursors"></a>画布工具和游标
 
 设置并同步 Live Share 画布后，可以配置画布以进行用户交互，例如用于选择笔工具的按钮。 在本部分中，我们将讨论哪些工具可用以及如何使用它们。
 
@@ -113,7 +113,7 @@ Live Share 画布中的每个墨迹书写工具都会在用户绘制时呈现笔
 
 #### <a name="pen-tool"></a>笔工具
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="Teams Live Share 画布笔工具":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="GIF 显示使用笔工具在画布上绘制笔划的示例。":::
 
 笔工具绘制存储在画布中的纯笔划。 默认提示形状是一个圆圈。
 
@@ -151,7 +151,7 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 #### <a name="highlighter-tool"></a>荧光笔工具
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Teams Live Share 画布荧光笔工具":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF 演示了使用荧光笔工具在画布上绘制半透明笔划的示例。":::
 
 荧光笔工具绘制存储在画布中的半透明笔划。 默认提示形状为正方形。
 
@@ -189,7 +189,7 @@ document.getElementById("highlighter-tip-size").onclick = () => {
 
 #### <a name="eraser-tool"></a>橡皮擦工具
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="Teams Live Share 画布橡皮擦工具":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF 演示了使用橡皮擦工具擦除画布上的笔划的示例。":::
 
 橡皮擦工具擦除穿过其路径的整个笔划。
 
@@ -219,7 +219,7 @@ document.getElementById("eraser-size").onclick = () => {
 
 #### <a name="point-eraser-tool"></a>点橡皮擦工具
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="Teams Live Share 画布点橡皮擦工具":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="GIF 演示了使用点橡皮擦工具删除画布上笔划中的各个点的示例。":::
 
 点橡皮擦工具通过将现有笔划拆分为一半来清除跨越其路径的笔划中的各个点。 此工具的计算成本高昂，可能会使用户的帧速率降低。
 
@@ -247,7 +247,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### <a name="laser-pointer"></a>激光指针
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Teams Live Share 画布激光指针工具":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF 演示了使用激光笔工具在画布上绘制笔划的示例。":::
 
 激光笔是唯一的，因为在移动鼠标时激光尖具有尾随效果。 绘制笔划时，尾随效果会在完全消失之前呈现一小段时间。 此工具非常适合在会议期间指出屏幕上的信息，因为演示者不必在工具之间切换以擦除笔划。
 
@@ -285,7 +285,7 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### <a name="line-and-arrow-tools"></a>线和箭头工具
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="Teams Live Share 画布行工具":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF 展示了使用线条和箭头工具在画布上绘制直线的示例。":::
 
 线条工具允许用户使用可应用于末尾的可选箭头从一个点到另一个点绘制直线。
 
@@ -333,7 +333,7 @@ document.getElementById("line-tip-size").onclick = () => {
 
 ### <a name="cursors"></a>游标
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Teams Live Share 游标共享":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF 展示了用户在画布上共享光标的示例。":::
 
 可以在应用程序中启用实时游标，让用户在画布上跟踪彼此的游标位置。 与墨迹书写工具不同，游标完全通过类运行 `LiveCanvas` 。 可以选择提供名称和图片来标识每个用户。 可以单独启用游标，也可以使用墨迹化工具启用游标。
 
@@ -357,7 +357,7 @@ liveCanvas.isCursorShared = !isCursorShared;
 
 下面是一个帮助可视化此概念的简单关系图：
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Live Share 画布视区可视化效果":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="屏幕截图显示了桌面用户和移动用户的全屏画布布局。":::
 
 可以通过以下方式自定义此行为：
 

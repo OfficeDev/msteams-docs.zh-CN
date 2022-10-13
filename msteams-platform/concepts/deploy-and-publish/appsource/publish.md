@@ -1,16 +1,16 @@
 ---
 title: 概述–将应用发布到 Microsoft Teams 商店
-description: 了解将应用发布到 Microsoft Teams 应用商店的过程、提交后的预期、快速批准发布链接到 SaaS 产品/服务的应用的提示。
+description: 将应用发布到 Microsoft Teams 应用商店或 AppSource。 提交后会发生什么，有关快速审批和发布链接到 SaaS 产品/服务的应用的提示。
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d64a5eda5f728a87991b361d5ec17b95c6ac49cd
-ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
+ms.openlocfilehash: 95d310467ae5fad80d07a61d6b790dcd086feb35
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68350452"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560727"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 

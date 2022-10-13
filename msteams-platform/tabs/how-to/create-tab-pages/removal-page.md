@@ -5,12 +5,12 @@ description: 了解如何在安装后重新配置选项卡。 通过支持 Micro
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 40d6024d01b608c99347e9df65883906d7cb276d
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499292"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560447"
 ---
 # <a name="create-a-removal-page"></a>创建删除页面
 
@@ -40,7 +40,7 @@ ms.locfileid: "68499292"
 
 ### <a name="register-a-remove-handler"></a>注册删除处理程序
 
-（可选）在删除页逻辑中，当用户删除现有选项卡配置时，可以调用 `registerOnRemoveHandler((RemoveEvent) => {}` 事件处理程序。 当用户尝试删除内容时，该方法将采用 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) 接口，并在处理程序中执行代码。 该方法用于执行清理操作，例如删除支持选项卡内容的基础资源。 一次只能注册一个删除处理程序。
+（可选）在删除页逻辑中，当用户删除现有选项卡配置时，可以调用 `registerOnRemoveHandler((RemoveEvent) => {}` 事件处理程序。 当用户尝试删除内容时，该方法将采用 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) 接口，并在处理程序中执行代码。 该方法用于执行清理操作，例如删除为选项卡内容提供电源的基础资源。 一次只能注册一个删除处理程序。
 
 `RemoveEvent` 接口用两种方法描述对象：
 
@@ -67,9 +67,8 @@ ms.locfileid: "68499292"
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-    await app.initialize();
+  <script>
+    await microsoftTeams.app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

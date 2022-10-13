@@ -1,16 +1,16 @@
 ---
 title: 维护和支持已发布的应用
-description: 了解如何维护已发布的 Microsoft Teams 应用，以及在 Teams 应用商店和 AppSource 上列出应用商店后要执行的操作。 分析应用使用情况、发布更新、推广应用、完成 Microsoft 365 认证。
+description: 维护已发布的 Microsoft Teams 应用。 分析应用使用情况、发布更新、推广应用、完成 Microsoft 365 认证。
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100327"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560468"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 

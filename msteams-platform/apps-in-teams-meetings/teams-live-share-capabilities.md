@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 6d2e1dc9d49ab1ec551fd814ba8baa330e9ace3f
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 0e2c2a41eee5bf77dfeaf7150eede97a4b60ded8
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552541"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560622"
 ---
 # <a name="live-share-core-capabilities"></a>Live Share 核心功能
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="屏幕截图显示了用户在 Teams 会议中玩敏捷扑克游戏的示例，其中展示了 Live 共享功能。":::
 
 Live Share SDK 可以很轻松地添加到会议扩展的 `sidePanel` 和 `meetingStage` 上下文。 本文重点介绍如何将 Live Share SDK 集成到应用和 SDK 的关键功能中。
 
@@ -221,7 +221,7 @@ Live Share SDK 包括一组新的 Live Share `SharedObject` 类，这些类提�
 
 ### <a name="livepresence-example"></a>LivePresence 示例
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Teams Live Share 状态":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="屏幕截图显示了显示使用 Live Share 状态在会话Teams 中可用的人员的示例。":::
 
 该 `LivePresence` 类使跟踪会话中的人员比以往更容易。 调用 `.initialize()` 或 `.updatePresence()` 方法时，可以为该用户分配自定义元数据，例如名称或配置文件图片。 通过侦 `presenceChanged` 听事件，每个客户端接收到最新的 `LivePresenceUser` 对象，将所有状态更新折叠为每个唯 `userId`一的单个记录。
 
@@ -317,7 +317,7 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 ### <a name="liveevent-example"></a>LiveEvent 示例
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="用于显示通知的 Teams Live Share 事件":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="屏幕截图显示了当事件发生更改时 Teams 客户端显示通知的示例。":::
 
 `LiveEvent` 是向会议中的其他客户端发送简单事件的好方法。 它适用于发送会话通知等场景。
 
@@ -399,7 +399,7 @@ notifications.sendEvent({
 
 ### <a name="livetimer-example"></a>LiveTimer 示例
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Teams Live Share 倒计时计时器":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="屏幕截图显示了一个剩余 9 秒的倒计时计时器示例。":::
 
 `LiveTimer` 启用具有时间限制的方案，例如组冥想计时器或游戏的圆计时器。
 

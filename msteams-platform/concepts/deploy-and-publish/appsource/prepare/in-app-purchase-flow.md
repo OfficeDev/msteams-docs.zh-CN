@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 59511c62fbc03b2d730bbbcccf5f4d2eadc37885
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
-ms.translationtype: HT
+ms.openlocfilehash: 1dd557190ef6faa3afa6ab477f7e8b22c9cd0e12
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302456"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560706"
 ---
 # <a name="in-app-purchases"></a>应用内购买
 
@@ -88,12 +88,12 @@ Microsoft Teams 提供可用于实现应用内购买的 API，以从免费升级
 </div>
 </body>
 <script>
-   function openPurchaseExperience() {
-      app.initialize();
-    var planInfo = {
-        planId: "<Plan id>", // Plan Id of the published SAAS Offer
-        term: "<Plan Term>" // Term of the plan.
-    }
+    function openPurchaseExperience() {
+      micorosftTeams.app.initialize();
+      var planInfo = {
+          planId: "<Plan id>", // Plan Id of the published SAAS Offer
+          term: "<Plan Term>" // Term of the plan.
+      }
       monetization.openPurchaseExperience(planInfo);
     }
 </script>

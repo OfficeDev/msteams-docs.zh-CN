@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 31b962d747a792b58a9efc9e2c52e42dc841ed18
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 0a1b7a48ffaf0cd71fd0aac2ecf7c1fe2c5970f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552489"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560587"
 ---
 # <a name="live-share-media-capabilities"></a>Live Share 媒体功能
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-capabilities-docs-feature-1.png" alt-text="Teams Live Share 媒体同步":::
 
-视频和音频是现代世界和工作场所的重要部分。 我们收到了广泛的反馈，建议我们还可以采取更多措施来提高在会议中一起观看视频的质量、辅助功能和许可证保护。
+视频和音频是现代世界和工作场所的重要部分。 我们听到广泛的反馈，我们还可以做更多的工作来提高在会议中一起观看视频的质量、辅助功能和许可证保护。
 
 Live Share SDK 为仅包含几行代码的任何 HTML `<video>` 和`<audio>`元素启用可靠的 **媒体同步**。 通过在播放器状态和传输控件层同步媒体，可以单独赋予视图和许可证，同时提供通过应用可获得的最高质量。
 

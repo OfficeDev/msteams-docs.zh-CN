@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: none
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 4807b85ed1b520b84701bcd727fda88cf77808eb
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: db90b3e3f026eced56c626a082f5ec6be04cb893
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833672"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560643"
 ---
 # <a name="unified-meetings-apps"></a>统一会议应用
 
@@ -29,7 +29,7 @@ Teams 统一会议应用基于以下概念：
 
 > [!NOTE]
 >
-> * 用于即时会议、计划的公共频道会议、一对一和组呼叫的应用目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+> * 计划公共频道会议的应用目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
 >
 > * Web 客户端支持会议扩展，例如机器人、卡片、消息扩展和消息操作。 但是，当前不完全支持托管体验，例如选项卡、内容气泡和共享到阶段。
 

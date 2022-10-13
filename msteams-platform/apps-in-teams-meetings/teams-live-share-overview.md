@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 38157dea1c2d24b82cf1f48829639fd1d92392c1
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: c242faa57809bb967a29b7ab224e6cc0e859247b
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552524"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560552"
 ---
 ---
 
@@ -49,7 +49,7 @@ Live Share 核心包支持的功能包括：
 
 ### <a name="live-share-media"></a>实时共享媒体
 
-:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="实时共享 视频共享体验":::
+:::image type="content" source="../assets/images/teams-live-share/teams-live-share-contoso-video.gif" alt-text="屏幕截图显示了 Live Share 视频共享体验的示例。":::
 
 视频和音频是现代世界和工作场所的重要部分。 Live Share 媒体为只有几行代码的任何媒体播放器启用 **媒体同步** 。 通过在播放器状态和传输控件层同步媒体，可以单独属性视图，同时提供可通过应用获得的最高质量。 由于 Microsoft 未重新广播媒体内容，因此许可和访问要求保持不变。
 
@@ -67,7 +67,7 @@ Live Share 媒体支持的功能包括：
 
 ### <a name="live-share-canvas"></a>Live Share 画布
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="屏幕截图显示了多个用户在会议期间在画布上绘图的示例。":::
 
 在会议中协作时，用户必须能够指出和强调屏幕上的内容。 使用 Live Share 画布，可以轻松地将墨迹、激光指针和游标添加到应用以实现无缝协作。
 
@@ -173,7 +173,7 @@ const { container } = await liveShare.joinContainer(schema);
 | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 在市场营销评审期间，用户希望收集有关其最新视频编辑的反馈。 | 用户将视频共享到会议阶段并启动视频。 根据需要，用户暂停视频以讨论场景，参与者在屏幕的各个部分上绘制以强调要点。 |
 | 项目经理在规划期间与团队一起玩敏捷扑克。                    | 经理将敏捷扑克应用共享到会议阶段，以便在团队达成共识之前玩计划游戏。                                                                        |
-| 财务顾问在签名前与客户一起查看 PDF 文档。                  | 财务顾问将 PDF 合同共享到会议阶段。 所有与会者都可以在 PDF 中看到其他游标和突出显示的文本，然后双方签署协议。        |
+| 财务顾问在签名前与客户一起查看 PDF 文档。                  | 财务顾问将 PDF 合同共享到会议阶段。 所有与会者都可以在 PDF 中看到彼此的游标和突出显示的文本，然后双方签署协议。        |
 
 > [!IMPORTANT]
 > Live Share 根据 [Microsoft Live Share SDK 许可证获得许可](https://github.com/microsoft/live-share-sdk/blob/main/LICENSE)。 若要在应用中使用这些功能，必须先阅读并同意这些条款。

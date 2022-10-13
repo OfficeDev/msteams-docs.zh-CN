@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 66ff0cfed7fcd34d741a35ff4aa30e507adf8717
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552572"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560538"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller 代码教程
 
-在 Dice Roller 示例应用中，用户会看到一个带有按钮的骰子来掷出它。 投掷骰子时，Live Share SDK 使用 Fluid Framework 跨客户端同步数据，因此每个人都可以看到相同的结果。 若要同步数据，请在 [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) 文件中执行以下步骤：
+在“骰子滚筒”示例应用中，用户会看到一个带按钮滚动的骰子。 滚动骰子时，Live Share SDK 使用 Fluid Framework 跨客户端同步数据，因此每个人都会看到相同的结果。 若要同步数据，请在 [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) 文件中执行以下步骤：
 
 1. [设置应用程序](#set-up-the-application)
 2. [加入 Fluid 容器](#join-a-fluid-container)
@@ -28,13 +28,16 @@ ms.locfileid: "68552572"
 
 ## <a name="set-up-the-application"></a>设置应用程序
 
-首先导入所需的模块。 该示例使用 Fluid Framework 和 [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) 类中的 [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/)。 此示例支持 Teams 会议扩展性，因此我们需要包括 [Teams 客户端 SDK](https://github.com/OfficeDev/microsoft-teams-library-js)。 最后，该示例设计为在本地和 Teams 会议中运行，因此我们需要包括一些在 [本地测试示例](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious) 所需的其他 Fluid Framework 部分。
+首先可以导入所需的模块。 该示例使用来自 Fluid Framework 的 [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) 和 Live Share SDK 中的 [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) 。 此示例支持 Teams 会议扩展性，因此必须包含 [Teams 客户端 SDK](https://github.com/OfficeDev/microsoft-teams-library-js)。 最后，该示例设计为在本地和 Teams 会议中运行，因此需要包含更多 Fluid Framework 部分以 [在本地测试示例](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious)。
 
-应用程序使用一个架构创建 Fluid 容器，该架构定义一组可供容器使用的 _初始对象_。 该示例使用 SharedMap 存储已投掷的最新骰子数值。 有关详细信息，请参阅 [数据建模](https://fluidframework.com/docs/build/data-modeling/)。
+应用程序使用定义一组可供容器使用的 _初始对象_ 的架构创建 Fluid 容器。 该示例使用 SharedMap 来存储已滚动的当前骰子值。 有关详细信息，请参阅 [数据建模](https://fluidframework.com/docs/build/data-modeling/)。
 
-Teams 会议应用需要多个视图（内容、配置和阶段）。 我们将创建一个 `start()` 函数，以帮助标识要呈现的视图并执行所需的任何初始化。 我们希望应用支持在 Web 浏览器和 Teams 会议中本地运行，以便 `start()` 函数查找 `inTeams=true` 查询参数以确定它是否在 Teams 中运行。 在 Teams 中运行时，应用程序需要在调用任何其他 teams-js 方法之前调用 `app.initialize()`。
+Teams 会议应用需要多个视图，例如内容、配置和阶段。 可以创建一个 `start()` 函数来帮助标识视图。 这有助于呈现和执行所需的任何初始化。 该应用支持在 Web 浏览器本地和 Teams 会议中运行。 该 `start()` 函数查找 `inTeams=true` 查询参数，以确定它是否在 Teams 中运行。
 
-除了 `inTeams=true` 查询参数，我们还可以使用 `view=content|config|stage` 查询参数来确定需要呈现的视图。
+> [!NOTE]
+> 在 Teams 中运行时，应用程序需要在调用任何其他 teams-js 方法之前调用 `app.initialize()` 。
+
+除了 `inTeams=true` 查询参数，还可以使用 `view=content|config|stage` 查询参数来确定需要呈现的视图。
 
 ```js
 import { SharedMap } from "fluid-framework";
@@ -97,7 +100,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>加入 Fluid 容器
 
-并非所有应用视图都需要协作。 `stage`视图 _始终_ 需要协作功能，`content`视图 _可能需要_ 协作功能，`config`视图 _不应_ 需要协作功能。 对于需要协作功能的视图，需要加入与当前会议关联的 Fluid 容器。
+并非所有应用的视图都需要协作。 `stage`视图 _始终_ 需要协作功能，`content`视图 _可能需要_ 协作功能，`config`视图 _不应_ 需要协作功能。 对于需要协作功能的视图，需要加入与当前会议关联的 Fluid 容器。
 
 加入会议的容器与初始化 [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) 并调用其 [joinContainer () ](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) 方法一样简单。
 
@@ -128,7 +131,7 @@ async function joinContainer() {
 
 使用不带任何 Fluid 功能的本地数据轻松创建视图，然后通过更改应用的某些关键部分来添加 Fluid。
 
-`renderStage` 函数在传递的 HTML 元素上添加了 `stageTemplate`，并在每次选择 **Roll** 按钮时创建一个工作的投掷骰子，并有一个随机的骰子值。 在接下来的几个步骤中将使用 `diceMap`。
+该 `renderStage` 函数将追加 `stageTemplate` 到传递的 HTML 元素，并在每次选择 **“滚动** ”按钮时创建具有随机骰子值的工作骰子滚筒。 在接下来的几个步骤中将使用 `diceMap`。
 
 ```js
 const stageTemplate = document.createElement("template");
@@ -158,7 +161,7 @@ function renderStage(diceMap, elem) {
 
 ### <a name="modify-fluid-data"></a>修改 Fluid 数据
 
-若要开始在应用程序中使用 Fluid，首先要更改的是用户选择 `rollButton` 时发生的情况。 按钮不直接更新本地状态，而是更新 `diceMap` 中传入的 `value` 键中存储的数字。 由于 `diceMap` 是 Fluid `SharedMap`，因此更改将分发给所有客户端。 对 `diceMap` 的任何更改都将导致发出 `valueChanged` 事件，并且事件处理程序可以触发视图的更新。
+若要开始在应用程序中使用 Fluid，首先要更改的是用户选择 `rollButton` 时发生的情况。 按钮不直接更新本地状态，而是更新 `diceMap` 中传入的 `value` 键中存储的数字。 由于 `diceMap` 是 Fluid `SharedMap`，因此更改将分发给所有客户端。 对事件 `diceMap` 的任何更改都可能导致 `valueChanged` 发出事件，事件处理程序可以触发视图的更新。
 
 此模式在 Fluid 中很常见，因为它使视图能够对本地和远程更改采用相同的行为方式。
 
@@ -169,7 +172,7 @@ rollButton.onclick = () =>
 
 ### <a name="rely-on-fluid-data"></a>依赖 Fluid 数据
 
-需要进行的下一个更改是更改 `updateDice` 函数，使其不再接受任意值。 这意味着应用无法再直接修改本地骰子值。 而是在每次调用 `updateDice` 时从 `SharedMap` 检索值。
+需要进行的下一个更改是更改 `updateDice` 函数，因为它不再接受任意值。 这意味着应用无法再直接修改本地骰子值。 而是在每次调用 `updateDice` 时从 `SharedMap` 检索值。
 
 ```js
 const updateDice = () => {
@@ -189,7 +192,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>编写侧面板视图
 
-当用户在会议中打开应用时，会在侧面板中向用户显示侧面板视图，该视图通过选项卡 `contentUrl` 加载 `sidePanel` 帧上下文。 此视图的目标是让用户在将应用共享到会议阶段之前选择应用的内容。 对于 Live Share SDK 应用，侧面板视图也可用作应用的配套体验。 从侧面板视图调用 [ joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) 将连接到阶段视图连接到的同一 Fluid 容器。 然后，此容器可用于与阶段视图通信。 确保与每个人的阶段视图 _和_ 侧面板视图通信。
+当用户在会议中打开应用时，会在侧面板中向用户显示侧面板视图，该视图通过选项卡 `contentUrl` 加载 `sidePanel` 帧上下文。 侧面板视图的目标是让用户在将应用共享到会议阶段之前选择应用的内容。 对于 Live Share SDK 应用，侧面板视图也可用作应用的配套体验。 从侧面板视图调用 [ joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) 将连接到阶段视图连接到的同一 Fluid 容器。 然后，此容器可用于与阶段视图通信。 确保与每个人的阶段视图 _和_ 侧面板视图通信。
 
 示例的侧面板视图提示用户选择要暂存的共享按钮。
 
@@ -215,7 +218,7 @@ function renderSidePanel(elem) {
 
 ## <a name="write-the-settings-view"></a>编写设置视图
 
-通过应用清单中的 `configurationUrl` 加载的设置视图会在用户首次将应用添加到 Teams 会议时向用户显示。 此视图允许开发人员根据用户输入配置固定到会议的选项卡的 `contentUrl`。 即使不需要用户输入来设置 `contentUrl`，当前也需要此页。
+在应用清单中加载的 `configurationUrl` 设置视图会在用户首次将应用添加到 Teams 会议时显示。 此视图允许开发人员根据用户输入配置固定到会议的选项卡的 `contentUrl`。 即使不需要用户输入来设置 `contentUrl`，当前也需要此页。
 
 > [!NOTE]
 > 选项卡`settings`上下文不支持 Live Share 的 [joinContainer () ](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer)。

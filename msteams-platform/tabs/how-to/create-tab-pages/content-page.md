@@ -5,12 +5,12 @@ description: 了解 Teams 客户端中的网页，并且是个人、频道或组
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 362b63f44abf1afdf1572d967eb703f0836d4a45
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450371"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560461"
 ---
 # <a name="create-a-content-page"></a>创建内容页
 
@@ -46,13 +46,16 @@ ms.locfileid: "67450371"
 <html>
 <head>
 ...
-    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 ...
+</head>
 <body>
 ...
-    <script type="module">
-        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
@@ -68,7 +71,6 @@ ms.locfileid: "67450371"
     <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
-
 <body>
 ...
     <script>
@@ -86,7 +88,7 @@ ms.locfileid: "67450371"
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>使用 SDK 与 Teams 交互
 
-[Teams 客户端 JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) 提供了许多其他功能，在开发内容页面时会发现这些功能非常有用。
+[Teams 客户端 JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) 提供了更多功能，你可以在开发内容页面时发现这些函数很有用。
 
 ### <a name="deep-links"></a>深度链接
 
@@ -94,7 +96,7 @@ ms.locfileid: "67450371"
 
 ### <a name="task-modules"></a>任务模块
 
-任务模块是一种模式弹出体验，你可以从选项卡触发。在内容页中，使用任务模块显示窗体以收集其他信息、在列表中显示项的详细信息，或向用户提供其他信息。 任务模块本身可以是附加内容页，也可以完全使用自适应卡片创建。 有关详细信息，请参阅[在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
+任务模块是一种模式弹出体验，你可以从选项卡触发。在内容页中，使用任务模块显示窗体以收集其他信息、在列表中显示项的详细信息，或向用户提供其他信息。 任务模块本身可以是其他内容页，也可以是使用自适应卡片完全创建的。 有关详细信息，请参阅[在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
 
 ### <a name="valid-domains"></a>有效域
 
