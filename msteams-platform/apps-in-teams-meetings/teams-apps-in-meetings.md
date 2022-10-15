@@ -6,22 +6,16 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 2e022ab2a39d399395a1aaf43ca6b282d24b81b7
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 7420a7fb92d6abd684d931896221bf86eb9acf9a
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560531"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575759"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams 会议和呼叫的应用
 
 会议可实现协作、合作、明智的沟通和共享反馈。 会议应用可以为会议生命周期的每个阶段提供用户体验。 会议生命周期包括会议前、会议内和会议后应用体验，具体取决于与会者的状态。
-
-> [!NOTE]
->
-> * 计划公共频道会议的应用目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
->
-> * [公共交换电话网络 (PSTN) ](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)和[端到端加密 Teams 呼叫](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)中不支持应用。
 
 Teams 支持在会议期间针对以下会议类型访问应用：
 
@@ -31,6 +25,16 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 * [**组呼叫**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798)：在群聊中启动的呼叫。
 * [**即时会议**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)：Teams 日历中通过 **“立即开会”** 按钮启动的会议。
 
+> [!NOTE]
+>
+> * 计划公共频道会议的应用目前仅在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+>
+> * 以下内容不支持应用：
+>   * [公共交换电话网络 (PSTN) Teams 呼叫](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
+>   * [端到端加密的 Teams 调用](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
+>   * [即时频道会议](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
+>   * [共享频道](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)中的会议
+
 用户可以使用 **+** Teams 会议窗口中的选项向会议添加应用。
 
 :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="在会议中添加应用" border="true":::
@@ -39,9 +43,7 @@ Teams 支持在会议期间针对以下会议类型访问应用：
 
 > [!NOTE]
 >
-> * 当前，当第三人称添加到一对一呼叫时，调用将提升为组调用，这意味着新会话将启动。 添加到一对一调用的应用在组调用中不可用。 但是，可以再次添加它们。
->
-> * 目前，Teams 即时频道会议不支持应用体验。
+> 当前，当第三人称添加到一对一呼叫时，调用将提升为组调用，这意味着新会话将启动。 添加到一对一调用的应用在组调用中不可用。 但是，可以再次添加它们。
 
 下图提供了会议应用扩展性功能的概念：
 

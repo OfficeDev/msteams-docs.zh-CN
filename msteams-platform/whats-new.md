@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能以及对现有功�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: b1c06e5ea6e46adf5a40d29015bf79a30d653107
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 069c908c18377b440d21e44c0a95594d2904722b
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560748"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575773"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -31,6 +31,8 @@ ms.locfileid: "68560748"
 
 **2022 年 10 月**
 
+* ***2022 年 10 月 13*** 日： [配置 NavBar 并为多个操作创建溢出菜单](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
+* ***2022 年 10 月 13*** 日： [配置应用的后退按钮](concepts/design/personal-apps.md#configure-back-button)。
 * ***2022 年 10 月 12*** [日：即时会议、一对一和组调用支持应用。](apps-in-teams-meetings/teams-apps-in-meetings.md)
 * ***2022 年 10 月 12*** 日： [Live Share 画布](apps-in-teams-meetings/teams-live-share-canvas.md)
 

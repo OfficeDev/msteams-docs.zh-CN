@@ -3,12 +3,12 @@ title: 移动设备上的选项卡
 description: 了解 Android 和 iOS Microsoft Teams 客户端上的 Tab 功能如何 (移动) 、身份验证、低带宽连接、测试或分发。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 604d1ed8cabd745359e4714bc1b5fe82e67c7662
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 0dbb74d5c2854897f82708aa83a0c49df4f28890
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450476"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575766"
 ---
 # <a name="tabs-on-mobile"></a>移动设备上的选项卡
 
@@ -62,7 +62,12 @@ ms.locfileid: "67450476"
 | 功能 | 移动可用性？ | 移动行为 |
 |----------|-----------|------------|
 |“频道和组”选项卡|是|选项卡在设备的默认浏览器中打开，而不是使用应用配置的 `websiteUrl` Teams 移动客户端，该配置也必须包含在源代码的`setSettings()`[函数](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace)中。 但是，用户可以通过选择应用旁边的 **“更多”** 并选择 **“打开**”来查看 Teams 移动客户端中的选项卡，这会触发应用的 `contentUrl` 配置。|
-|个人应用|不支持|不适用|
+|个人应用|否|不适用|
+
+> [!NOTE]
+> 如果移动应用同时具有机器人和选项卡功能，则会在聊天部分中显示机器人消息。
+>
+> 选择“ **机器人聊天** ”应用并选择 **“更多 (...)**”时，无法在列表中看到该应用的选项卡功能。 但是，如果从 **“聊天**”部分右下角选择“**更多 (...)**”，则可以使用指向该应用的机器人应用功能的链接来查看选项卡应用。
 
 ### <a name="apps-not-on-teams-store"></a>不适用于 Teams 应用商店的应用
 
