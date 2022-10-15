@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ad6a69f05225c6821ec1d8ee8ba1f569044247ff
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 4646d47c5aa325291f060ea192dcc1705b414ac7
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338821"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575784"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>为 Microsoft Teams 设计个人应用
 
-个人应用可以是机器人、专用工作区或两者兼顾。有时，它的功能类似于创建或查看内容的地方，有时，当应用程序配置为多个频道中的选项卡时，它为用户提供了他们所有内容的鸟瞰图。
+个人应用可以是机器人、专用工作区或两者。 有时，它充当创建或查看内容的位置。 其他时候，当应用在多个通道中配置为选项卡时，它会为用户提供对其所有内容的鸟瞰视图。
 
 为指导应用设计，以下信息描述并说明用户可以如何在 Teams 中添加、使用和管理个人应用。
 
@@ -49,6 +49,37 @@ ms.locfileid: "67338821"
 |B|**选项卡**：为个人应用提供导航。|
 |C|**更多菜单**：包括其他应用选项和信息。|
 |D|**主导航**： 向应用提供其他主要 Teams 功能的导航。|
+
+#### <a name="configure-and-add-multiple-actions-in-navbar"></a>**在 NavBar 中配置和添加多个操作**
+
+可以将多个操作添加到右上角的 NavBar，并生成溢出菜单，以便在应用中执行额外的操作。
+
+>[!NOTE]
+> 导航栏中最多可以添加五个操作，包括溢出菜单。
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="屏幕截图是描述导航栏和溢出菜单的示例。":::
+
+若要 **在 NavBar 中配置和添加多个操作**，请调用 [setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) API。 并将属性 `displayMode enum` 添加到 `MenuItem`. 定义 `displayMode enum` 了如何在 NavBar 中显示菜单。 的默认值 `displayMode enum` 设置为 `ifRoom`。
+
+根据 NavBar 中可用的要求和空间，请考虑 `displayMode enum` 下列操作之一。
+
+* 如果有房间，请设置 `ifRoom = 0` 为将项放置在 NavBar 中。
+* 如果没有空间，请设置 `overflowOnly = 1`，以便始终将该项目放置在 NavBar 的溢出菜单中，但不会放在 NavBar 中。
+
+下面是使用多个操作的溢出菜单配置 NavBar 的示例：
+
+```typescript
+const menuItems = [item1, item2, item3, item4, item5]
+microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
+  output(`Clicked ${id}`)
+  return true;
+})
+```
+
+> [!NOTE]
+> API `setNavBarMenu` 不控制 **“刷新** ”按钮。 默认情况下会显示它。
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="屏幕截图是显示溢出菜单中的导航栏和多个操作的示例。":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="示例显示个人选项卡的结构剖析。":::
 
@@ -88,7 +119,7 @@ ms.locfileid: "67338821"
 
 ## <a name="use-a-personal-app-bot"></a>使用个人应用 （机器人）
 
-个人应用包括用于一对一对话的机器人和私人通知（例如，当同事在美工板上发布评论时）。用户可在你指定的选项卡中与机器人交互。
+Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on artboard). Users interact with the bot in a tab you specify.
 
 ### <a name="anatomy-personal-app-bot"></a>剖析：个人应用（机器人）
 
@@ -102,6 +133,30 @@ ms.locfileid: "67338821"
 |B|**后退按钮**：将用户带回专用工作区。|
 |C|**机器人消息**：机器人通常以卡片的形式发送消息和通知 （如自适应卡片）。|
 |D|**撰写框**：用于向机器人发送消息的输入字段。|
+
+#### <a name="configure-back-button"></a>配置后退按钮
+
+在 Teams 应用中选择后退按钮时，将返回到 Teams 平台，而无需在应用内导航。
+
+若要在应用中导航，请配置后退按钮，以便在选择后退按钮时，可以返回到以前的步骤并在应用中导航。
+
+若要 **配置后退按钮**，请调用 [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) API，该 API 根据以下条件之一处理后退按钮的功能：
+
+* 设置为 `false`JavaScript SDK 时`registerBackButtonHandler`调用 `navigateBack` API，Teams 平台处理后退按钮。
+* 设置为`true`后`registerBackButtonHandler`退按钮时，应用将处理后退按钮的功能 (可以返回到以前的步骤并在应用) 中导航，而 Teams 平台不会执行进一步的操作。
+
+下面是配置后退按钮的示例：
+
+```typescript
+microsoftTeams.registerBackButtonHandler(() => {
+  const selectOption = registerBackReturn.options[registerBackReturn.selectedIndex].value
+  var isHandled = false
+  if (selectOption == 'true') 
+    isHandled = true;
+  output(`onBack isHandled ${isHandled}`)
+  return isHandled;
+})
+```
 
 #### <a name="desktop"></a>桌面
 
@@ -205,3 +260,5 @@ ms.locfileid: "67338821"
 
 * [设计选项卡](../../tabs/design/tabs.md)
 * [设计机器人](../../bots/design/bots.md)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+* [DisplayMode 枚举](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
