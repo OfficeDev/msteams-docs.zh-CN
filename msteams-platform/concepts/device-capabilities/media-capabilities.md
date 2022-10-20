@@ -5,12 +5,12 @@ description: 了解如何使用 Teams JavaScript 客户端 SDK 使用代码示�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: d7bfedc0a439f428287cb1443df2a66fcff670ab
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: bfa63b42383e507f004b0225c64f381e47e547f0
+ms.sourcegitcommit: 1ea035bc20303070268db38472839584ad4280b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160634"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653369"
 ---
 # <a name="integrate-media-capabilities"></a>集成媒体功能
 
@@ -61,8 +61,9 @@ ms.locfileid: "68160634"
 > [!IMPORTANT]
 >
 > * 可以从多个 Teams 表面（例如任务模块、选项卡和个人应用）调用 `selectMedia`、`getMedia`、`viewImages` API。 有关详细信息，请参阅 [Teams 应用的入口点](../extensibility-points.md)。</br>
-> * `selectMedia` API 通过不同的输入配置支持相机和麦克风功能。
+> * API `selectMedia` 通过不同的输入配置支持相机和麦克风功能。
 > * `selectMedia`用于访问麦克风功能的 API 仅支持移动客户端。
+> * 上传的图像的最大计数由 [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) API 返回的数组总大小决定，也由 `selectMedia` 该 API 返回的总大小决定。 确保数组大小不超过 4 MB，如果数组大小超过 4 MB，则 API 将生成错误代码 10000，SIZE_EXCEEDED错误。
 
 下表列出了一组用于启用设备媒体功能的 API：
 

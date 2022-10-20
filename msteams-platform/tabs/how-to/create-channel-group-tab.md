@@ -1,19 +1,19 @@
 ---
-title: 创建频道选项卡
+title: “创建频道”选项卡或“组”选项卡
 author: laujan
 description: 使用 Node.js、ASP.NET Core、ASP.NET Core MVC 创建自定义通道和组选项卡。 生成应用、创建包、生成和运行应用、机密隧道、上传到 Teams
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560489"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615238"
 ---
-# <a name="create-a-channel-tab"></a>创建频道选项卡
+# <a name="create-a-channel-tab-or-group-tab"></a>“创建频道”选项卡或“组”选项卡
 
 频道或组选项卡将内容传递到频道和群聊，这有助于围绕基于 Web 的专用内容创建协作空间。
 
