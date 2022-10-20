@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: 2c458752e081efd170a757a39789aca4f7360bc6
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: b91b4a4306560c4a148b16ef1da9858ad50eca7b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243127"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615266"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>设计 Microsoft Teams 会议扩展
 
@@ -527,4 +527,4 @@ Teams 会议针对深色主题进行了优化，有助于减少视觉和认知�
 ## <a name="next-step"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [为会议配置应用](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+> [为会议配置应用](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
