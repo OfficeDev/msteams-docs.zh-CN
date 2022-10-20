@@ -7,16 +7,14 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 84a18c736c59c992bb4e3e51962ed631483f7f2b
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 786bfd318f1cefa4329e54b5a19cba89a823bb5b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68296019"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615336"
 ---
 # <a name="teams-toolkit-overview"></a>Teams 工具包概述
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Teams 工具包的用户旅程" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 使用 Visual Studio 和 Visual Studio Code，Teams 工具包可以轻松地开始为 Microsoft Teams 开发应用。
 
@@ -26,6 +24,8 @@ ms.locfileid: "68296019"
 * 使用基础结构即代码和 Bicep 在 Azure 中托管的智能默认值
 * 使用“环境”功能创建开发、测试和 prod 等唯一配置
 * 使用内置发布工具将应用引入组织或 Teams App Store
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Teams 工具包的用户旅程" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 ## <a name="available-for-visual-studio-and-visual-studio-code"></a>适用于 Visual Studio 和 Visual Studio Code
 

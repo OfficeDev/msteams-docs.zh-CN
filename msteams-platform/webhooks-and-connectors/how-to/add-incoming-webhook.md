@@ -5,12 +5,12 @@ description: 创建 Teams 应用的传入 Webhook 并将外部请求发布到 Te
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c439a7147ea4fe76e2cd1778396b4936a6313a23
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 5f6aef184805aa4ef7a68eac827b08fa8d4c12f1
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100474"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615329"
 ---
 # <a name="create-incoming-webhooks"></a>创建传入 Webhooks
 
@@ -25,7 +25,7 @@ ms.locfileid: "68100474"
 
 请参阅以下视频，了解如何创建传入 Webhook：
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>传入 Webhook 的主要功能
 

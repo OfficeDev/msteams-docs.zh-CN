@@ -4,12 +4,12 @@ description: 本文介绍如何使用 Microsoft Teams 开发人员门户配置�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
-ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
+ms.openlocfilehash: e66ee0a46417fe18c6729cb11bb2851795cda4c4
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68098916"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615315"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>在开发人员门户中管理应用
 
@@ -55,6 +55,8 @@ ms.locfileid: "68098916"
   * 消息传递扩展
   * 会议扩展
   * 活动源通知
+  > [!NOTE]
+  > 目前，连接器不适用于政府社区云 (GCC) 租户。
 * **权限**：本部分允许为应用授予设备权限、团队权限、聊天或会议权限以及用户权限。
 * **单一登录**：在 Azure AD 上注册的机器人支持单Sign-On (SSO) 。 如果机器人在 Bot Framework 门户 (或在 Bot Management) 下的开发人员门户中注册，则这些机器人不支持 SSO，你必须在 Azure AD 上注册机器人以支持 SSO。 对于在 Azure AD 上注册的机器人，请添加 **应用程序 ID URI**。 若要从 Azure AD 获取应用程序 ID URI，请参阅 [对机器人使用 SSO 身份验证](../../bots/how-to/authentication/auth-aad-sso-bots.md)。
 * **语言**：可以设置或更改应用的语言。
