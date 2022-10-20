@@ -271,7 +271,9 @@
       displayName: 'Cross-tenant notifications, context for shared channel, apps and permissions in shared channels'
     - name: 具有自适应卡片的生成选项卡
       href: tabs/how-to/build-adaptive-card-tabs.md
-      displayName: 'Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication'
+      displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
+    - name: 将 Fluid 与 Microsoft Teams 配合使用
+      href: tabs/how-to/using-fluid-msteam.md
     - name: 选项卡链接展开和阶段视图
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -378,15 +380,20 @@
   items:
     - name: 概述
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: 统一会议应用
-      href: apps-in-teams-meetings/meeting-app-extensibility.md
-      displayName: 'Chat tab, poll survey, user access, federated users'
-    - name: 为会议启用和配置应用
-      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-      displayName: 'meeting token generator app, meeting scenario'
-    - name: 会议应用 API 参考
-      href: apps-in-teams-meetings/API-references.md
-      displayName: 'CART URL, channel, permissions, access, audio state'
+    - name: 为 Teams 会议启用和配置应用
+      items:
+        - name: 会议的生成选项卡
+          href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        - name: 为会议阶段生成应用
+          href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+        - name: 生成会议内通知
+          href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
+        - name: 为会议聊天生成可扩展对话
+          href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
+        - name: 为匿名用户生成应用
+          href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
+        - name: 会议应用 API
+          href: apps-in-teams-meetings/meeting-apps-apis.md
     - name: 使用图形 API 获取会议脚本
       items:
         - name: 概述

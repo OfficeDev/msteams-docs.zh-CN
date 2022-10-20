@@ -5,12 +5,12 @@ description: 了解用例和 Microsoft Teams 应用功能、映射用例、规�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: fcc360410d4af501d4097c6269b3e1157a6e742b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100418"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615175"
 ---
 # <a name="plan-your-app-with-teams-features"></a>使用 Teams 功能规划应用
 
@@ -88,7 +88,7 @@ Teams 即平台在应用开发的每个阶段为你提供工具包、库、应�
 
 以下列表有助于确定对于不同功能的 GCC、GCC-High、DOD 的可用性：
 
-* 对于第三方应用，请参阅 [web 应用](../samples/integrating-web-apps.md)和[会议应用拓展性](../apps-in-teams-meetings/meeting-app-extensibility.md)。
+* 对于第三方应用，请参阅 [web 应用](../samples/integrating-web-apps.md)和[会议应用拓展性](../apps-in-teams-meetings/teams-apps-in-meetings.md)。
 * 对于机器人，请参阅[为 Teams 构建第一个对话机器人](../get-started/first-app-bot.md)、[设计 Teams 机器人](../bots/design/bots.md)、[将机器人添加到 Microsoft Teams 应用](../resources/bot-v3/bots-overview.md)、[Teams 中的机器人](../bots/what-are-bots.md)。
 * 有关旁加载应用的信息，请参阅[允许自定义 Teams 应用](../concepts/design/enable-app-customization.md)、[分发你的 Microsoft Teams 应用](../concepts/deploy-and-publish/apps-publish-overview.md)、[在 Teams 中上传你的应用](../concepts/deploy-and-publish/apps-upload.md)。
 * 有关自定义连接器的信息，请参阅[创建适用于 Teams 的 Office 365 连接器](../webhooks-and-connectors/how-to/connectors-creating.md)。

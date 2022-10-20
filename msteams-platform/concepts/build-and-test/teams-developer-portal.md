@@ -4,12 +4,12 @@ description: 在本文中，详细了解开发人员门户以及如何在 Teams 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: b0619fc328e6bc30decfe5868692281037489654
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417498"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615133"
 ---
 # <a name="developer-portal-for-teams"></a>Teams 开发人员门户
 
@@ -19,9 +19,8 @@ ms.locfileid: "67417498"
 
 > [!NOTE]
 >
-> * 目前，开发人员门户不适用于政府社区云 (GCC)、GCC High 或国防部 (DOD) 租户。
+> * 目前，开发人员门户不适用于政府社区云 (GCC) -High 或国防部 (DOD) 租户。
 > * 但是，可以使用常规租户在开发人员门户中构建应用、下载应用，并使用 [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) 将应用上传到国家云。 有关详细信息，请参阅[国家云部署](/graph/deployments)。
-> * 目前，在某些情况下，启用 AdBlocker 时，开发人员门户不会在浏览器中加载。 若要在浏览器中继续使用开发人员门户，请禁用 AdBlocker。
 
 ## <a name="register-an-app"></a>注册应用
 

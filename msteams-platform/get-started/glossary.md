@@ -3,12 +3,12 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的常见术语、含义和定义。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 8673752e4af13e837793e790c4f7bc14007ff48e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100859"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615231"
 ---
 # <a name="glossary"></a>术语表
 
@@ -20,7 +20,6 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [操作命令](../messaging-extensions/how-to/action-commands/define-action-command.md) | 一种使用弹出窗口收集或显示信息的邮件扩展应用。 <br>**另请参阅**：[邮件扩展](#m)；[搜索命令](#s) |
 | [自适应卡](../task-modules-and-cards/what-are-cards.md) | 由自动程序或邮件扩展添加到对话的可操作内容片段。 将文本、图形和按钮与这些卡片配合使用，以进行丰富的通信。 |
-| [匿名用户](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**另请参阅**：[联合用户](#f) |
 | [应用程序目录](../toolkit/publish.md) | 存储 SharePoint 和 Office 应用以供组织内部使用的网站。 <br>**另请参阅**：[SPFx](#s) |
 | [应用部件清单](../resources/schema/manifest-schema.md) | Teams 应用清单介绍了应用如何集成到 Microsoft Teams 产品中。 清单必须符合 [清单架构](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)。 |
 | [应用包](../concepts/build-and-test/apps-package.md) | Teams 应用包是一个 zip 文件，其中包含应用清单文件、颜色图标和大纲图标。 |
@@ -86,7 +85,6 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [联合用户](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Teams 应用会议中来自外部且受邀加入会议的用户类型。 此用户具有由经授权的 Teams 合作伙伴联合的有效凭据。 他们也被称为外部用户。 <br>**另请参阅**：[匿名用户](#a) |
 | [首次运行体验](../concepts/design/design-teams-app-ui-templates.md)|首次运行的体验 (FRE) 是用户对产品的介绍。FRE 可帮助用户开始使用产品的功能、功能和优势，并影响用户返回并继续使用你的产品。|
 
 ## <a name="g"></a>G
@@ -104,7 +102,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [身份提供程序](../concepts/authentication/authentication.md) | 一个实体，用于存储并向用户提供凭据。 它还允许用户自行注册。  <br>**另请参阅**：[身份验证](#a) |
 | [传入 Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | 它允许外部应用在 Teams 频道中共享内容。 这些 Webhook 可以用作跟踪和通知工具。 <br>**另请参阅**：[Webhook](#w)；[传出 Webhook](#o) |
-| [会议内应用体验](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**另请参阅**：[会议生命周期](#m) |
+| [会议内应用体验](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**另请参阅**：[会议生命周期](#m) |
 
 ## <a name="l"></a>L
 
@@ -122,7 +120,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | --- | --- |
 | [媒体功能](../concepts/device-capabilities/media-capabilities.md) | 可以与 Teams 应用集成的本机设备功能（如相机和麦克风）。 <br>**另请参阅**：[功能](#c)；[设备功能](#d) |
 | [会议机器人](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | 使用实时语音、视频和屏幕共享与 Teams 通话和会议进行交互的机器人。 <br>**另请参阅**：[通话机器人](#c)；[聊天机器人](#c) |
-| [会议生命周期](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | 它涵盖会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和邮件扩展。 <br>**另请参阅**：[会议内体验](#i) |
+| [会议生命周期](../apps-in-teams-meetings/teams-apps-in-meetings.md) | 它涵盖会议前、会议内和会议后应用体验。 可以在会议生命周期的每个阶段集成选项卡、机器人和邮件扩展。 <br>**另请参阅**：[会议内体验](#i) |
 | [会议阶段](../sbs-meetings-stage-view.yml) | 会议扩展应用的一项功能。 它是在会议期间所有参与者都可访问的共享空间。 可帮助参与者实时与应用内容进行交互和协作。 <br>**另请参阅**：[阶段视图](#s) |
 | [邮件扩展](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**另请参阅**：[搜索命令](#s)；[操作命令](#a) |
 | [会议扩展](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | 旨在用于在会议生命周期内提高工作效率的应用，例如白板、仪表板等。 |
