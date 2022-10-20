@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 4f5afe23e9d8deefdf2b1b182fa51cfe034e5c4d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781087"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615140"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>将 Teams 应用部署到云
 
@@ -24,9 +24,9 @@ Teams 工具包可帮助你将应用程序中的前端和后端代码部署或�
 
 可以将以下内容部署到云：
 
-* 选项卡（例如前端应用程序）将部署到 Azure 存储，并配置为静态 Web 托管或 SharePoint 网站。
-* 后端 API 将部署到 Azure 函数。
-* 机器人或邮件扩展将部署到 Azure 应用服务。
+* 该选项卡（如前端应用程序）部署到 Azure 存储，并配置为静态 Web 托管或 sharepoint 站点。
+* 后端 API 部署到Azure Functions。
+* 机器人或消息扩展部署到Azure 应用服务。
 
   > [!NOTE]
   > 在将应用代码部署到 Azure 云之前，需要成功完成 [云资源的预配](provision.md)。
@@ -44,11 +44,11 @@ Teams 工具包可帮助你将应用程序中的前端和后端代码部署或�
 |-------------|----------|---------------|---------------|
 |带 React 的选项卡 </br> 前端工作负载| `yourProjectFolder/tabs`| `tabs/build` |Azure 存储 |
 |带有 SharePoint 的选项卡 </br> 前端工作负载 | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint 应用目录 |
-|Azure 函数上的 API </br> 后端工作负载 | `yourProjectFolder/api`| 不适用 |Azure 函数 |
+|Azure Functions上的 API </br> 后端工作负载 | `yourProjectFolder/api`| 不适用 |Azure Functions |
 |机器人和邮件扩展 </br> 后端工作负载 | `yourProjectFolder/bot` | 不适用 | Azure 应用服务 |
 
 > [!NOTE]
-> 在项目中包括 Azure API 管理资源并触发部署时，可以在 Azure 函数中将 API 发布到 Azure API 管理服务。
+> 在项目中包括 Azure API 管理资源并触发部署时，可以在Azure Functions中将 API 发布到 Azure API 管理服务。
 
 ::: zone-end
 
@@ -59,8 +59,8 @@ Teams 工具包可帮助你将应用程序中的前端和后端代码部署或�
 可在 Visual Studio 中部署以下应用：
 
 * Tab 应用（如前端应用程序）部署到 Azure 存储，配置为静态 Web 托管。
-* 可以将具有 Azure 函数触发器的通知机器人应用部署到 Azure 函数。
-* 机器人应用或消息扩展可以部署到 Azure 应用服务。
+* 可以将具有Azure Functions触发器的通知机器人应用部署到Azure Functions。
+* 机器人应用或消息扩展可以部署到Azure 应用服务。
 
 部署后，可以在 Teams 客户端或 Web 浏览器中预览应用，然后才能开始使用。
 

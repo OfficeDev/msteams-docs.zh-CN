@@ -1,16 +1,16 @@
 ---
 title: 设计自定义应用
 author: heath-hamilton
-description: 了解如何设计Microsoft Teams应用和资源，包括 Microsoft Teams UI 工具包、最佳做法、示例等。
+description: 了解如何设计 Microsoft Teams 应用和资源，包括 Microsoft Teams UI 工具包、最佳做法、示例等。
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 442d092be36f5d49e68fc997394e8846c4394f8d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 341c64b2afda7574b6d230257290220e2c97d325
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142876"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615308"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>设计 Microsoft Teams 应用
 
@@ -185,7 +185,7 @@ Microsoft Teams UI 库可帮助你在浏览器中查看和测试单个 Teams UI 
 
 ## <a name="see-also"></a>另请参阅
 
-* [为 Teams 会议启用和配置应用](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [为会议阶段启用和配置应用](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [设计 Microsoft Teams 自动程序](~/bots/design/bots.md)
 * [创建虚拟助手](~/samples/virtual-assistant.md)
 * [为 Microsoft Teams 应用设计任务模块](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

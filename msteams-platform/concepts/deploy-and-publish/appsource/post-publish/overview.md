@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: cbb97bd1fcd3422af968e7928436f4da1ae4038d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560468"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615287"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>维护已发布的 Microsoft Teams 应用
 
@@ -23,11 +23,6 @@ ms.locfileid: "68560468"
 新发布的应用的数据大约需要一周时间才会显示在报表中。
 
 ## <a name="publish-updates-to-your-app"></a>将更新发布到应用
-
-> [!NOTE]
-> Teams 应用商店已演变:
->
-> 以前，可通过在应用磁贴上选择省略号来复制链接。 借助更新的 Teams 应用商店体验，你将从应用的详细信息选项卡访问同一内容。 此更新将于 2022 年 3 月 1 日正式发布 (GA)。
 
 可以在合作伙伴中心中将更改提交到应用（例如新增功能，甚至元数据）。 这些更改需要新的评审过程。
 
