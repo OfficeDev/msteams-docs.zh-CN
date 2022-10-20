@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 624cad282e181ed56cbc3041f725b046ca061c72
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499158"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653677"
 ---
 # <a name="debug-your-teams-app"></a>调试 Teams 应用
 
@@ -88,71 +88,82 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 
 ## <a name="customize-debug-settings"></a>自定义调试设置
 
-Teams 工具包取消选中某些先决条件，并允许你自定义调试设置以创建选项卡或机器人:
+Teams 工具包允许自定义调试设置以创建选项卡或机器人。 有关可自定义选项的完整列表的详细信息，请参阅 [调试设置文档](https://aka.ms/teamsfx-debug-tasks)。
+
+### <a name="customize-scenarios"></a>自定义方案
 
 <br>
 
 <details>
-<summary><b>使用自动程序终结点</b></summary>
 
-1. 在Visual Studio Code设置中，需要取消选中 **“确保 Ngrok 已安装并启动 (ngrok)**。
+<summary><b>跳过先决条件检查</b></summary>
 
-1. 可以将配置`.fx/configs/config.local.json`设置`siteEndpoint`为终结点。
+在`.fx/configs/tasks.json`下面`"Validate & install prerequisites"` >  > `"args"``"prerequisites"`，更新要跳过的先决条件检查。
 
-```json
-{
-    "bot": {
-        "siteEndpoint": "https://your-bot-tunneling-url"
-    }
-}
-
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="自定义自动程序终结点":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="跳过先决条件检查":::
 
 </details>
 
 <details>
 <summary><b>使用开发证书</b></summary>
 
-1. 在Visual Studio Code设置中，需要取消选中 **“确保开发证书受信任 (devCert)**。
-
-1. 可以将证书文件路径和密钥文件路径设置 `sslCertFile` 和 `sslKeyFile` 配置 `.fx/configs/config.local.json` 到其中。
-
-```json
-{
-    "frontend": {
-        "sslCertFile": "",
-        "sslKeyFile": ""
-    }
-}
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="自定义证书":::
+1. 在`.fx/configs/tasks.json`，取消检查`"devCert"`下`"prerequisites"``"Validate & install prerequisites"``"args"` >  > 。
+1. 将“SSL_CRT_FILE”和“SSL_KEY_FILE” `.env.teamsfx.local` 设置为证书文件路径和密钥文件路径。
 
 </details>
 
 <details>
-<summary><b>使用启动脚本以启动应用服务</b></summary>
+<summary><b>自定义 npm 安装 args</b></summary>
 
-1. 对于选项卡，需要在其中更新 `dev:teamsfx` 脚本 `tabs/package.json`。
-
-1. 对于机器人或消息扩展，需要在其中更新 `dev:teamsfx` 脚本 `bot/package.json`。
-
-1. 对于Azure Functions，需要更新 `dev:teamsfx` TypeScript 更新脚本`api/package.json`和 TypeScript 更新`watch:teamsfx`脚本。
-
-   > [!NOTE]
-   > 当前不支持自定义选项卡、自动程序、邮件扩展应用和 Azure 函数端口。
+在 `.fx/configs/tasks.json`中，在下 `"Install npm packages"`设置 npmInstallArgs。
+  
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="安装 npm 包":::
 
 </details>
 
 <details>
+<summary><b>修改端口</b></summary>
+
+* Bot
+  1. 在整个项目中`tasks.json`搜索`"3978"`并查找外观， `ngrok.yml` `index.js`
+  1. 将其替换为端口。
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="替换机器人的端口":::
+* Tab
+  1. 在 `.fx/configs/tasks.json`中，搜索 `"53000"`。
+  1. 将其替换为端口。
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="替换选项卡的端口":::
+
+</details>
+
+<details>
+<summary><b>使用自己的应用包</b></summary>
+
+在`.fx/configs/tasks.json`其中，设置`"Build & upload Teams manifest"``"appPackagePath"`为应用包的路径。
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="使用自己的应用包路径":::
+
+</details>
+
+<details>
+<summary><b>使用自己的隧道</b></summary>
+
+1. 在 `.fx/configs/tasks.json` 下面 `"Start Teams App Locally"`，你可以更新 `"Start Local tunnel"`。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="使用自己的隧道":::
+1. 启动自己的隧道服务，然后在下面`"Set up bot"`更新`"botMessagingEndpoint"`到自己的消息终结点`.fx/configs/tasks.json`。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="更新消息传送终结点":::
+
+</details>
+
+<details>
+
 <summary><b>添加环境变量</b></summary>
 
 你可以将环境变量添加到选项卡、自动程序、邮件扩展和 Azure 函数的 `.env.teamsfx.local` 文件。 Teams 工具包加载添加的环境变量，以在本地调试期间启动服务。
 
  > [!NOTE]
- > 请确保在添加新环境变量后启动新的本地调试，因为环境变量不支持热重新加载。
+ > 请确保在添加新环境变量后启动新的本地调试，因为环境变量不支持热重载。
 
 </details>
 
@@ -161,7 +172,7 @@ Teams 工具包取消选中某些先决条件，并允许你自定义调试设�
 
 Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选项卡、自动程序、邮件扩展和 Azure 函数。 可以更新 `.vscode/launch.json` 和 `.vscode/tasks.json` 来调试部分组件。 如果只想在 Azure 函数项目中调试选项卡和自动程序，请使用以下步骤：
 
-1. 注释 **`Attach to Bot`** 和 **`Attach to Backend`** 从调试复合在 `.vscode/launch.json`。
+1. 更新 `"Attach to Bot"` 和 `"Attach to Backend"` 从调试复合在 `.vscode/launch.json`.
 
    ```json
    {
@@ -181,7 +192,7 @@ Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选
    }
    ```
 
-2. 在 .vscode/tasks.json 中从“开始所有”任务中注释 **`Start Backend`** 和启动机器人。
+2. 在 .vscode/tasks.json 中更新 `"Start Backend"` 和 `"Start Bot"` 从“开始所有”任务。
 
    ```json
    {

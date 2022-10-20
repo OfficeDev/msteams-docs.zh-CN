@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: b8f85f092f9a99e9931a5ff0ea5e763c0b4fb0fe
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 4d654d5da598b9bf2b9bacfc189c97df08f9a359
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616785"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653643"
 ---
 # <a name="debug-background-process"></a>调试后台进程
 
@@ -21,13 +21,13 @@ ms.locfileid: "67616785"
 
 1. `launch.json`文件在Visual Studio Code中配置调试器。
 
-2. Visual Studio Code运行复合 **preLaunchTask**，**预调试检查&在** 文件中`.vscode/tasks.json`全部启动。
+2. Visual Studio Code运行复合 **preLaunchTask**，在文件中`.vscode/tasks.json`**本地启动 Teams 应用**。
 
 3. 然后，Visual Studio Code 启动复合配置中指定的调试器，例如 **附加到到自动程序**、**附加到后端**、**附加到前段**、**启动自动程序**。
 
 4. Microsoft Edge 或 Google Chrome 会启动新的浏览器实例，并打开网页以加载 Teams 客户端。
 
-## <a name="teams-toolkit-verification-of-prerequisites"></a>Teams 工具包验证先决条件
+## <a name="verification-of-prerequisites"></a>先决条件验证
 
 Teams 工具包在调试过程中检查以下先决条件：
 
@@ -42,9 +42,6 @@ Teams 工具包在调试过程中检查以下先决条件：
 
 * 如果尚未使用有效凭据登录，Teams 工具包会提示你登录到 Microsoft 365 帐户。
 * 已启用开发人员租户的自定义应用上传或旁加载，以防止本地调试终止。
-* 如果未安装 Ngrok 或版本不符合要求，Teams 工具包将安装 Ngrok NPM 包`ngrok@4.2.2``~/.fx/bin/ngrok`。 Ngrok NPM 包管理 `/.fx/bin/ngrok/node modules/ngrok/bin` 适用于机器人和消息扩展的 Ngrok 二进制版本 2.3。
-* Teams 工具包安装Azure Functions核心工具 NPM 包、适用于 **Windows** 和 **macO** `~/.fx/bin/func`的 azure-functions-core-tools@3（如果未安装 Azure Functions Core Tools 版本 3 或版本不符合要求）。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止。
-* 如果未安装适用于Azure Functions的 .NET Core SDK 版本或版本不符合要求，Teams 工具包将安装适用于 **Windows** 和 **MacOS** `~/.fx/bin/dotnet`的 .NET Core SDK。 对于 Linux，本地调试终止。
 * 如果未安装 Ngrok 或版本不符合要求，Teams 工具包将安装 Ngrok NPM 包`ngrok@4.2.2``~/.fx/bin/ngrok`。 Ngrok 二进制版本 2.3 适用于机器人和消息扩展。 Ngrok 二进制文件由 Ngrok NPM 包在 `/.fx/bin/ngrok/node modules/ngrok/bin` 中管理。
 * Teams 工具包安装Azure Functions核心工具 NPM 包、适用于 **Windows** 和 **MacO** `~/.fx/bin/func`的 azure-functions-core-tools@3（如果未安装 Azure Functions Core Tools 版本 4 或版本不符合要求）。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` 中的 Azure Functions Core Tools NPM 包负责管理 Azure Functions Core Tools 二进制文件。 对于 Linux，本地调试终止。
 * 如果未安装 .NET Core SDK 或版本不符合要求，Teams 工具包将在适用于 Azure Functions 的 .NET Core SDK 版本中`~/.fx/bin/dotnet`安装适用于 **Windows** 和 **MacOS** 的 .NET Core SDK。 对于 Linux，本地调试终止。
@@ -103,7 +100,7 @@ Use the following .NET Core versions:
 
 选择 **开始调试 (F5)** 时，Teams 工具包输出通道会在检查先决条件后显示进度和结果。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="先决条件检查摘要" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png" alt-text="先决条件检查摘要" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png":::
 
 ## <a name="register-and-configure-teams-app"></a>注册和配置 Teams 应用
 

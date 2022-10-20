@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 24d231ef7a76ede1d45176d5869caa9a76a791be
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 730317fd6480b583d7b293a4e032589d01c99db0
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026960"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653657"
 ---
 # <a name="debug-your-teams-app-locally"></a>在本地调试 Teams 应用
 
@@ -23,6 +23,10 @@ Teams 工具包可帮助你在本地调试和预览 Microsoft Teams 应用。 �
 ## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>在本地调试 Microsoft Teams 应用以进行Visual Studio Code
 
 Visual Studio Code中的 Teams 工具包提供在本地自动调试 Teams 应用的功能。 Visual Studio 允许调试选项卡、机器人和消息扩展。 在调试应用之前，需要设置 Teams 工具包。
+
+> [!NOTE]
+>
+> 可以升级旧的 Teams 工具包项目以使用新任务，有关详细信息，请参阅 [调试设置文档](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>设置用于调试的 Teams 工具包
 
@@ -110,7 +114,7 @@ Teams 工具包启动浏览器实例并打开网页以加载 Teams 客户端。
 
 下图在运行选项卡、机器人或消息扩展以及Azure Functions时，在Visual Studio Code的 **“输出**”和 **“终端**”选项卡中显示任务名称。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="启动应用服务":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="启动应用服务" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
 ### <a name="launches-debug-configurations"></a>启动调试配置
 
