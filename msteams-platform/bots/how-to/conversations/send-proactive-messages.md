@@ -4,12 +4,12 @@ description: 了解如何使用 Teams 机器人发送主动消息、使用 Micro
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 13db8624cfd9b8bc73adce0a418fe5283455bf5f
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: dec8739cbab66e9ddd6aac18038a001b1fdfa104
+ms.sourcegitcommit: b72f51377f41be18ee9b70b042f736605f755cf1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243022"
+ms.lasthandoff: 10/21/2022
+ms.locfileid: "68670047"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -85,7 +85,7 @@ ms.locfileid: "68243022"
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### <a name="understand-who-blocked-muted-or-uninstalled-a-bot"></a>了解阻止、静音或卸载机器人的人员
