@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能以及对现有功�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: d1ad99b5fff30f5329525fc536e62f5690c0e9a9
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 99da7ecfc60d681246b0e5c7ea9448235fc37bf3
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615322"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699183"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -18,7 +18,7 @@ ms.locfileid: "68615322"
 发现正式发布 (正式版) 的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
 
 ## <a name="generally-available"></a>正式发布
-
+ 
 :::row:::
 :::column:::
 
@@ -46,7 +46,8 @@ ms.locfileid: "68615322"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-| 09/30/2022|管理 Teams 中第三方应用的 SaaS 许可证|通过 Teams 应用将应用盈利>包含 SaaS 产品/服务> [管理 Teams 中第三方应用的许可证](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
+| 10/26/2022 | 生成一个会议内应用，使会议参与者能够实时登录文档。 | 为 Teams 会议和呼叫构建应用>为 Teams 会议启用和配置应用>为 Teams 会议阶段生成应用> [生成会议内文档签名应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 09/30/2022|管理 Teams 中第三方应用的 SaaS 许可证。|通过 Teams 应用将应用盈利>包含 SaaS 产品/服务> [管理 Teams 中第三方应用的许可证](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
 | 09/29/2022|Teams 移动应用现在支持将文件下载到本地设备。|集成设备功能>集成媒体功能> [Teams 移动版上的文件下载](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
 | 09/16/2022|基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。|为 [基于搜索的消息扩展>通用操作>搜索命令生成消息扩展](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
 | 09/06/2022|引入了用于通过 `selectMedia` API 使用相机捕获视频的代码片段。| 集成设备功能>集成媒体功能> [代码片段](concepts/device-capabilities/media-capabilities.md#code-snippets)|

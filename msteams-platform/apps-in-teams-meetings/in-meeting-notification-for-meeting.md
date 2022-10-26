@@ -5,12 +5,12 @@ description: 本文介绍如何为 Microsoft Teams 会议及其代码示例生�
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bdf63ab597c00627c14b909d51efa753e0cd1b0
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: e62958535fa1bcbcdeb104b5fd5fdd2882250aa3
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615403"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699127"
 ---
 # <a name="build-in-meeting-notification-for-teams-meeting"></a>为 Teams 会议生成会议内通知
 
@@ -53,7 +53,7 @@ ms.locfileid: "68615403"
 |----------------|-----------------|--------------|----------------|
 | 会议内通知 | 演示如何使用机器人实现会议内通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 
-## <a name="step-by-step-guides"></a>分步指南
+## <a name="step-by-step-guide"></a>分步指南
 
 按照 [分步指南](../sbs-meeting-content-bubble.yml) 在 Teams 会议中生成会议内通知。
 

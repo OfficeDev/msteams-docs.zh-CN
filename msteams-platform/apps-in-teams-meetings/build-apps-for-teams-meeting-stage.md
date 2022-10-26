@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 440e48d370d18564f5bba869d95c63bc25b11e4e
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 48834addceb0e7a6e4522c096cf40b117312647c
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615380"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699135"
 ---
 # <a name="build-apps-for-teams-meeting-stage"></a>为 Teams 会议阶段生成应用
 
@@ -265,13 +265,37 @@ var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").r
 > [!NOTE]
 > 若要使应用通过验证，从网站、Web 应用或自适应卡片创建深度链接时，请使用 **会议中的共享** 作为字符串或复制。
 
+## <a name="build-an-in-meeting-document-signing-app"></a>生成会议内文档签名应用
+
+可以生成会议内应用，使会议参与者能够实时登录文档。 它有助于在单个会话中查看和签名文档。 参与者可以使用其当前租户标识对文档进行签名。
+
+可以使用会议内签名应用执行以下操作：
+
+- 添加要在会议期间审阅的文档
+- 共享要查看到主阶段的文档
+- 使用签名者的标识对文档进行签名
+
+参与者可以查看和签署文档，如采购协议和采购订单。
+
+![会议内文档签名应用](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+
+会议期间可能涉及以下参与者角色：
+
+- **文档创建者**：此角色可以添加要审阅和签名的文档。
+- **签名者**：此角色可以对已审阅的文档进行签名。
+- **读者**：此角色可以查看添加到会议的文档。
+
 ## <a name="code-sample"></a>代码示例
 
 |示例名称 | Description | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
 |会议阶段示例 | 示例应用，用于在会议阶段显示用于协作的选项卡 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | 会议内通知 | 演示如何使用机器人实现会议内通知。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
-| 会议内文档签名 | 演示如何实现文档签名 Teams 应用。 包括将特定应用内容共享到阶段、Teams SSO 和用户特定的阶段视图。 | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
+| 会议内文档签名 | 演示如何实现文档签名 Teams 应用。 包括将特定应用内容共享到阶段、Teams SSO 和用户特定的阶段视图。 | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | 不适用 |
+
+## <a name="step-by-step-guide"></a>分步指南
+
+按照 [分步指南](../sbs-inmeeting-document-signing.yml) 生成会议内文档签名应用。
 
 ## <a name="see-also"></a>另请参阅
 
@@ -283,3 +307,4 @@ var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").r
 * [高级会议 API](meeting-apps-apis.md)
 * [自定义全体模式场景](~/apps-in-teams-meetings/teams-together-mode.md)
 * [实时共享 SDK](teams-live-share-overview.md)
+* [生成会议内文档签名应用的分步指南](../sbs-inmeeting-document-signing.yml)
