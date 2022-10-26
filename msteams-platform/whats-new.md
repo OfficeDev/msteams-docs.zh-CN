@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能以及对现有功�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 99da7ecfc60d681246b0e5c7ea9448235fc37bf3
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: 946dad871ce27ebd4a317ddf816592a3238ac2aa
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699183"
+ms.locfileid: "68701039"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -31,6 +31,7 @@ ms.locfileid: "68699183"
 
 **2022 年 10 月**
 
+* ***2022 年 10 月 26*** 日： [生成会议内文档签名应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***2022 年 10 月 19*** 日： [适用于 Teams 的开发人员门户现在可用于 GCC 租户](concepts/build-and-test/teams-developer-portal.md)。
 * ***2022 年 10 月 13*** 日： [配置 NavBar 并为多个操作创建溢出菜单](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
 * ***2022 年 10 月 13*** 日： [配置应用的后退按钮](concepts/design/personal-apps.md#configure-back-button)。

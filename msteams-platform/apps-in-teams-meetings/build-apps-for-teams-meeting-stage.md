@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 48834addceb0e7a6e4522c096cf40b117312647c
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: ea5d7b57b9ee6344d34fcc6ed560936ac6109304
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699135"
+ms.locfileid: "68701032"
 ---
 # <a name="build-apps-for-teams-meeting-stage"></a>为 Teams 会议阶段生成应用
 
@@ -277,7 +277,7 @@ var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").r
 
 参与者可以查看和签署文档，如采购协议和采购订单。
 
-![会议内文档签名应用](~/assets//images/sbs-inmeeting-doc-signing/signing-clip.gif)
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="会议内文档签名应用":::
 
 会议期间可能涉及以下参与者角色：
 
@@ -307,4 +307,3 @@ var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").r
 * [高级会议 API](meeting-apps-apis.md)
 * [自定义全体模式场景](~/apps-in-teams-meetings/teams-together-mode.md)
 * [实时共享 SDK](teams-live-share-overview.md)
-* [生成会议内文档签名应用的分步指南](../sbs-inmeeting-document-signing.yml)
