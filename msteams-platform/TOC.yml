@@ -43,6 +43,8 @@
       href: sbs-gs-notificationbot.yml
     - name: 使用 JavaScript 生成命令机器人
       href: sbs-gs-commandbot.yml
+    - name: 生成工作流机器人
+      href: sbs-gs-workflow-bot.yml
     - name: 代码示例
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: 计划应用
@@ -111,7 +113,7 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: 安装 Teams 工具包
           href: toolkit/install-Teams-Toolkit.md
-        - name: 浏览 Teams 工具包
+        - name: 探索 Teams 工具包
           href: toolkit/explore-Teams-Toolkit.md
         - name: 准备使用 Teams 工具包生成应用
           href: toolkit/build-environments.md
@@ -131,7 +133,7 @@
                   displayName: Multiple capabilities app
                 - name: 创建基于功能的云资源
                   href: toolkit/add-resource.md
-                - name: 集成现有的第三方 API
+                - name: 集成现有第三方 API
                   href: toolkit/add-API-connection.md
                 - name: 向 Teams 应用添加单一登录
                   href: toolkit/add-single-sign-on.md
@@ -141,8 +143,6 @@
                   href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
                 - name: 编辑 Azure AD 清单
                   href: toolkit/AAD-manifest-customization.md
-            - name: TeamsFx SDK
-              href: toolkit/TeamsFx-SDK.md
             - name: 调试 Teams 应用
               items:
                 - name: 概述
@@ -163,9 +163,9 @@
                   href: toolkit/TeamsFx-collaboration.md
                 - name: 设置 CI/CD 管道
                   href: toolkit/use-CICD-template.md
-                - name: Teams 环境中的旁加载和测试应用
+                - name: 在 Teams 环境中旁加载和测试应用
                   href: toolkit/sideload-and-test-app.md
-                - name: 在不同的环境中测试应用行为
+                - name: 测试不同环境中的应用行为
                   href: toolkit/test-app-behavior.md
         - name: 发布 Teams 应用
           items:
@@ -175,6 +175,8 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: 常见问题
           href: toolkit/faq.md
+    - name: TeamsFx SDK
+      href: toolkit/TeamsFx-SDK.md
     - name: Teams 工具包 CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Teams 开发人员门户
@@ -382,13 +384,13 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: 为 Teams 会议启用和配置应用
       items:
-        - name: 会议的生成选项卡
+        - name: 会议的“生成”选项卡
           href: apps-in-teams-meetings/build-tabs-for-meeting.md
         - name: 为会议阶段生成应用
           href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-        - name: 生成会议内通知
+        - name: 为会议生成会议内通知
           href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
-        - name: 为会议聊天生成可扩展对话
+        - name: 为会议聊天生成可扩展的对话
           href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
         - name: 为匿名用户生成应用
           href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
@@ -659,7 +661,7 @@
         - name: 准备 Teams 应用商店提交
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration'
-        - name: 在合作伙伴中心更新 Apple App Store Connect Team ID，在移动设备上获取应用
+        - name: 在合作伙伴中心更新 Apple App Store Connect 团队 ID，在移动设备上获取应用
           href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
           displayName: Enable users to install your app on Teams iOS platform.
         - name: 提交你的应用

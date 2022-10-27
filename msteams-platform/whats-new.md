@@ -1,24 +1,24 @@
 ---
 title: Teams 中面向开发人员的新增功能和更新
-description: 了解新的 Microsoft Teams 开发人员功能以及对现有功能的更新、弃用说明和更改。 订阅 RSS 源以获取最新更新。
+description: 了解新的 Microsoft Teams 开发人员功能和现有功能的更新、弃用说明和更改。 订阅 RSS 源以获取最新更新。
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 946dad871ce27ebd4a317ddf816592a3238ac2aa
-ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
+ms.openlocfilehash: 154f2ae1c293f39c0be5f6f6517fc1607688754f
+ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2022
-ms.locfileid: "68701039"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "68740609"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
 ::: zone pivot="ga-feature"
 
-发现正式发布 (正式版) 的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
+了解正式版)  (正式版提供的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
 
 ## <a name="generally-available"></a>正式发布
- 
+
 :::row:::
 :::column:::
 
@@ -31,12 +31,13 @@ ms.locfileid: "68701039"
 
 **2022 年 10 月**
 
+* ***2022 年 10 月 27 日***： [Teams 工作流机器人简介](sbs-gs-workflow-bot.yml)
 * ***2022 年 10 月 26*** 日： [生成会议内文档签名应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***2022 年 10 月 19*** 日： [适用于 Teams 的开发人员门户现在可用于 GCC 租户](concepts/build-and-test/teams-developer-portal.md)。
 * ***2022 年 10 月 13*** 日： [配置 NavBar 并为多个操作创建溢出菜单](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
 * ***2022 年 10 月 13*** 日： [配置应用的后退按钮](concepts/design/personal-apps.md#configure-back-button)。
-* ***2022 年 10 月 12*** [日：即时会议、一对一和组调用支持应用。](apps-in-teams-meetings/teams-apps-in-meetings.md)
-* ***2022 年 10 月 12*** 日： [Live Share 画布](apps-in-teams-meetings/teams-live-share-canvas.md)
+* ***2022 年 10 月 12*** 日： [即时会议、一对一和群组通话支持应用。](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* ***2022 年 10 月 12 日***： [实时共享画布](apps-in-teams-meetings/teams-live-share-canvas.md)
 
 :::column-end:::
 :::row-end:::
@@ -47,17 +48,17 @@ ms.locfileid: "68701039"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-| 10/26/2022 | 生成一个会议内应用，使会议参与者能够实时登录文档。 | 为 Teams 会议和呼叫构建应用>为 Teams 会议启用和配置应用>为 Teams 会议阶段生成应用> [生成会议内文档签名应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
-| 09/30/2022|管理 Teams 中第三方应用的 SaaS 许可证。|通过 Teams 应用将应用盈利>包含 SaaS 产品/服务> [管理 Teams 中第三方应用的许可证](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
-| 09/29/2022|Teams 移动应用现在支持将文件下载到本地设备。|集成设备功能>集成媒体功能> [Teams 移动版上的文件下载](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
-| 09/16/2022|基于搜索的消息扩展插件中的自适应卡片现在支持通用操作。|为 [基于搜索的消息扩展>通用操作>搜索命令生成消息扩展](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
-| 09/06/2022|引入了用于通过 `selectMedia` API 使用相机捕获视频的代码片段。| 集成设备功能>集成媒体功能> [代码片段](concepts/device-capabilities/media-capabilities.md#code-snippets)|
+| 10/26/2022 | 生成会议内应用，使会议参与者能够实时对文档进行签名。 | 为 Teams 会议和通话生成应用 >为 Teams 会议启用和配置应用>为 Teams 会议阶段生成应用> [生成会议内文档签名应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 09/30/2022|在 Teams 中管理第三方应用的 SaaS 许可证。|将应用盈利>将 SaaS 产品/服务包含在 Teams 应用中> [管理 Teams 中第三方应用的许可证](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
+| 09/29/2022|Teams 移动应用现在支持将文件下载到本地设备。|集成设备功能>在 [Teams 移动版上](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)集成媒体功能>文件下载|
+| 09/16/2022|基于搜索的消息扩展中的自适应卡片现在支持通用操作。|为基于搜索的消息扩展> [通用操作>搜索命令生成消息扩展](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
+| 09/06/2022|引入了用于通过 `selectMedia` API 使用相机捕获视频的代码片段。| 集成设备功能>将媒体功能> [代码片段集成](concepts/device-capabilities/media-capabilities.md#code-snippets)|
 | 08/09/2022 | 为 Visual Studio 2022 引入了 Teams 工具包 | 工具和 SDK > 适用于 Visual Studio 的 Teams 工具包 > [适用于 Visual Studio 的 Teams 工具包概述](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 2022/08/03 | 从个人应用或选项卡共享到 Teams | 与 Teams 集成 > 共享到 Teams > [从个人应用或选项卡共享到 Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 2022/08/03 | 添加了在会议后场景中检索会议脚本的功能。 | 为 Teams 会议和通话构建应用 > 使用 Graph API 获取会议脚本 > [概述](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 2022/08/03 | 将展开共享链接到 Web 应用中的团队 | 与 Teams >“共享到 Teams”集成> [从 Web 应用共享到 Teams](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 08/01/2022| 注意：开发人员门户现已正式发布，App Studio 自 2022 年 8 月 1 日开始弃用。 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
-| 07/28/2022 | 为会议内通知添加 Teams 显示图片和人员卡片| 为 Teams 会议和呼叫生成应用>为 Teams 会议启用和配置应用> [为 Teams 会议生成会议内通知](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
+| 08/01/2022| 注意：开发人员门户现已正式发布，App Studio 已从 2022 年 8 月 1 日起弃用。 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
+| 07/28/2022 | 为会议内通知添加 Teams 显示图片和人员卡片| 为 Teams 会议和通话生成应用 >为 Teams 会议启用和配置应用> [为 Teams 会议生成会议内通知](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
 | 07/28/2022 | 在 Teams 中构建共享频道 | 为 Teams 会议和通话构建应用>[共享频道](concepts/build-and-test/Shared-channels.md) |
 | 07/28/2022|引入的应用清单 v1.14| 应用部件清单> [Teams 的应用部件清单架构](resources/schema/manifest-schema.md)|
 | 2022/07/26|建议的机器人操作| “生成机器人”>“机器人对话”>“[机器人对话中的消息](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)”|
@@ -100,7 +101,7 @@ ms.locfileid: "68701039"
 | 2022 年 2 月 11 日 | 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • 为 Teams 会议生成应用> [为 Teams 会议生成应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
 | 02/08/2022 | 引入创建通话和会议机器人的分步指南。| 生成机器人 >通话和会议机器人 >注册通话和会议机器人 >[创建通话和会议机器人的分步指南](sbs-calling-and-meeting.yml) |
 | 02/02/2022 | 引入了应用清单版本 1.12 | 应用清单> [应用程序清单架构](resources/schema/manifest-schema.md) |
-| 2022/01/25 | 发送实时字幕 API | 为 Teams 会议生成应用>会议应用 API 参考> [高级会议 API](apps-in-teams-meetings/meeting-apps-apis.md)|
+| 2022/01/25 | 发送实时字幕 API | 生成适用于 Teams 会议的应用>会议应用 API 参考> [高级会议 API](apps-in-teams-meetings/meeting-apps-apis.md)|
 | 01/19/2022 | 自适应卡片表单完成反馈 | 生成机器人 >机器人对话 >机器人对话中的消息 >[Form 完成反馈](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 01/17/2022 | 适用于桌面的自适应卡片中的人员选取器 | 生成卡片和任务模块>生成卡片> [自适应卡片中的人员选取器](task-modules-and-cards/cards/people-picker.md)|
 
@@ -136,7 +137,7 @@ ms.locfileid: "68701039"
 |10/20/2021| 会议详细信息 API 和实时 Teams 会议事件 | 为 Teams 会议生成应用 > [获取会议详细信息 API](apps-in-teams-meetings/meeting-apps-apis.md) |
 |10/18/2021| 选项卡链接展开和演示区域视图 | 生成选项卡>[选项卡链接展开和阶段视图](tabs/tabs-link-unfurling.md) |
 |10/08/2021| 设计自适应卡片的新最佳做法 | 设计应用> UI 组件>[为 Teams 应用设计自适应卡片](task-modules-and-cards/cards/design-effective-cards.md) |
-|10/05/2021| 隐藏 Teams 应用，直到管理员允许取消隐藏应用 | 默认情况下，设计应用> [阻止用户的应用，直到管理员批准](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
+|10/05/2021| 隐藏 Teams 应用，直到管理员允许取消隐藏应用 | 设计应用> [默认情况下阻止用户的应用，直到管理员批准](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |10/05/2021| 规划适用于 Teams 移动设备的应用 | 应用基础知识>[规划 Teams 移动的响应式选项卡](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |10/04/2021| 引入了用于管理 Teams 应用的新 Teams 开发人员门户 | 工具和 SDK >[Teams 开发人员门户](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|对于机器人和传入 Webhook，Teams 在用户提及中支持 Azure AD 对象 ID 和 UPN | • 生成卡片和任务模块>生成卡片>[用户提及的 Azure AD 对象 ID 和 UPN](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • 生成卡片和任务模块>生成卡片> [卡片- 概述](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
@@ -277,7 +278,7 @@ ms.locfileid: "68701039"
 
 ::: zone pivot="dev-preview"
 
-发现开发人员预览版中的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
+了解开发人员预览版中的 Microsoft Teams 平台功能。 现在可以通过订阅 RSS 源[![下载源](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)来获取最新的 Teams 平台更新。 有关详细信息，请参阅[配置 RSS 源](#get-latest-updates)。
 
 ## <a name="developer-preview"></a>开发者预览版
 
@@ -293,16 +294,16 @@ ms.locfileid: "68701039"
 
 **2022 年 10 月**
 
-***2022 年 10 月 11*** 日： [生成一个深度链接以共享内容以在会议中登台。](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+***2022 年 10 月 11*** 日： [生成深层链接以在会议中将内容共享到阶段。](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ------------------ |
-| 09/23/2022 | 引入了对计划频道会议的会议应用支持。 | 为 Teams 会议和呼叫构建应用> [Teams 会议和呼叫的应用](apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| 08/23/2022 | 在移动设备中将应用共享到 Teams 会议阶段 | 为 Teams 会议和呼叫构建应用> [为会议启用和配置应用](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
-| 08/10/2022 | 计划公共频道会议的应用 | 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md) |
+| 09/23/2022 | 引入了对计划频道会议的会议应用支持。 | 为 Teams 会议和通话生成应用> [Teams 会议和通话应用](apps-in-teams-meetings/teams-apps-in-meetings.md) |
+| 08/23/2022 | 在移动设备中将应用共享到 Teams 会议阶段 | 为 Teams 会议和通话生成应用> [启用和配置会议应用](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 08/10/2022 | 用于已安排公共频道会议的应用 | 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 2022/08/03 | 在 Teams 会议阶段将应用的 API 静音和取消静音 | 为 Teams 会议和通话生成应用 > [会议应用 API 参考](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Teams 协作控制| 与 Teams > [协作控件集成](samples/collaboration-control.md) |
 |2022 年 5 月 24 日| 通过 Live Share SDK 增强协作 | 构建 Teams 会议应用>通过 Live Share 增强协作>[概述](apps-in-teams-meetings/teams-live-share-overview.md) |
@@ -329,11 +330,11 @@ ms.locfileid: "68701039"
 :::column-end:::
 :::column span="2":::
 
-Microsoft Teams 平台功能不可用。
+不可用的 Microsoft Teams 平台功能。
 
 **2022 年 8 月**
 
-***2022 年 8 月 1*** 日：已弃用 App Studio，使用 Teams [开发人员门户](concepts/build-and-test/teams-developer-portal.md) 。
+***2022 年 8 月 1*** 日：弃用 App Studio，请使用 Teams [开发人员门户](concepts/build-and-test/teams-developer-portal.md) 。
 
 :::column-end:::
 :::row-end:::
@@ -357,7 +358,7 @@ Along with new features, we also provide [production-ready Teams app templates](
 1. 打开 Microsoft Teams。
 1. 从左窗格中选择“**Teams**”。
 1. 选择团队中的频道。
-1. 选择省略号 &#x25CF;&#x25CF;&#x25CF; ，然后从下拉列表中选择 **“连接器**”。
+1. 选择省略号 &#x25CF;&#x25CF;&#x25CF; ，然后从下拉列表中选择“ **连接器**”。
 1. 在出现的 “**连接器**” 对话框中搜索 **RSS**。
 1. 选择“**配置**”。
 1. 在“**输入RSS 连接器的名称”中输入名称。**

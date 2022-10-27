@@ -1,0 +1,52 @@
+### YamlMime:Tutorial
+title: 创建 Teams 工作流机器人
+metadata:
+  title: 创建 Teams 工作流机器人
+  description: 通过此学习模块，你将了解如何使用自适应卡片操作处理程序功能在 Microsoft Teams 中创建工作流机器人。
+  audience: Developer
+  level: Beginner
+  ms.date: 28/09/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: toolkit/add-capability.md
+  nextTutorialTitle: 向 Teams 应用添加功能
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: 39ffa9600836fe58f243140c8a5379006df339eb
+  ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+  ms.translationtype: MT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 10/27/2022
+  ms.locfileid: "68740949"
+items:
+- durationInMinutes: 1
+  content: >
+    工作流机器人允许用户与工作流机器人应用中的自适应卡片操作处理程序功能启用的自适应卡片进行交互。 响应触发的自适应卡片操作时，将完成顺序工作流。
+
+    获取自适应卡片时，它会在卡片中提供一个或多个按钮以供输入。 还可以调用 API，然后在对话中发送另一个自适应卡片，以响应卡片操作。
+
+    在本教程中，你将了解：
+      * 如何使用 Teams 工具包生成工作流机器人。
+      * 关于应用的目录结构。
+      * 使用自适应卡片响应自定义机器人的安装。
+
+    可以看到以下输出：
+
+
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="工作流机器人输出。":::
+- title: 先决条件
+  durationInMinutes: 1
+  content: "下面是生成和部署应用所需的工具列表。\n\n| &nbsp; | 安装 | 使用 |\n| --- | --- | --- |\n| **必需** | &nbsp; | &nbsp; |\n| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript 或 TypeScript，生成环境。 使用最新版本。 |\n| &nbsp; | [Teams 工具包](#install-the-teams-toolkit) | Microsoft Visual Studio Code扩展，用于为应用创建项目基架。 使用版本 4.0.0。|\n| &nbsp; | [Node.js](https://nodejs.org/en/download/) | 后端 JavaScript 运行时环境。 使用版本 14 或 16。|\n| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams 可在一个位置通过聊天、会议、通话等应用与你合作的每个人进行协作。|\n| &nbsp; | [微软&nbsp;Edge (建议](https://www.microsoft.com/edge)) 或 [Google Chrome](https://www.google.com/chrome/) | 包含开发人员工具的浏览器。 |\n| &nbsp; | [Microsoft 365 开发人员帐户](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | 具有安装应用的相应权限的 Teams 帐户的访问权限。 |\n> [!NOTE]\n> 本指南在 Teams 工具包版本 4.0.0 和 Nodejs 版本 14 和 16 上进行测试。 本指南中的步骤可能适用于其他版本，但尚未测试。\n\n## <a name=\"prepare-development-environment\"></a>准备开发环境\n安装所需的工具后，设置开发环境。\n\n### <a name=\"install-the-teams-toolkit\"></a>安装 Teams 工具包\nTeams 工具包通过为应用预配和部署云资源、发布到 Teams 应用商店等工具来帮助简化开发过程。 \n\n可以将工具包与 Visual Studio Code 或 CLI 一起使用， (名为 `TeamsFx`的命令行接口) 。\n\n# <a name=\"visual-studio-code\"></a>[Visual Studio Code](#tab/vscode)\n\n1. 打开Visual Studio Code，然后选择“**扩展**” (**Ctrl+Shift+X** / **⌘⇧-X** 或 **“查看>扩展**) ”。\n1. 在搜索框中，输入 **Teams 工具包**。\n1. 选择 Teams 工具包旁边的 **“安装** ”。\n   :::image type=\"content\" source=\"~/assets/images/sbs-command-bot/teams-toolkit.png\" alt-text=\"图中显示了 Teams 工具包扩展安装。\":::\n\nTeams 工具包:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png\" alt-text=\"插图显示侧栏中Visual Studio Code Teams 工具包图标。\"::: 图标在安装后显示在Visual Studio Code侧栏中。\n    \n还可以在[Visual Studio Code市场](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)中找到 Teams 工具包。\n\n# <a name=\"command-line\"></a>[命令行](#tab/cli)\n若要安装 TeamsFx CLI，请使用 `npm` 包管理器：\n``` bash\nnpm install -g @microsoft/teamsfx-cli\n```\n根据配置，可能需要使用 `sudo` 来安装 CLI：\n``` bash\nsudo npm install -g --unsafe-perm @microsoft/teamsfx-cli\n```\n它在 Linux 和 macOS 系统上更常见。\n确保将 npm 全局缓存添加到 PATH。 此步骤通常作为Node.js安装程序的一部分完成。  \n可以将 CLI 与 命令一起使用 `teamsfx` 。 通过运行 `teamsfx -h`验证命令是否正常工作。\n\n> [!NOTE]\n> 在 PowerShell 终端中运行 TeamsFx 之前，请确保为 PowerShell 启用 **远程签名** 的执行策略。\n\n## <a name=\"set-up-your-teams-development-tenant\"></a>设置 Teams 开发租户\n**租户** 类似于一个空间，或者一个容器，你可以在 Teams 中为组织聊天、共享文件和运行会议。 还可以旁加载和测试应用。\n### <a name=\"check-for-sideloading-option\"></a>检查旁加载选项\n创建应用后，必须在 Teams 中加载应用，而无需分发它。 这称为旁加载。 登录到 Microsoft 365 帐户以查看此选项。\n> [!NOTE]\n> 在 Teams 本地环境中预览和测试应用时，需要旁加载。 启用旁加载以在本地 Teams 中预览和测试应用。\n\n是否已拥有租户，并且是否具有管理员访问权限？ 让我们来看看你是否真的这样做了！\n在 Teams 中验证旁加载应用：\n1. 在 Teams 客户端中，选择“ **存储** ”。\n1. 选择“**管理应用**”。\n1. 选择“**发布应用**”。\n1. 查找“ **上传自定义应用**”选项。 如果看到 选项，则表示已启用旁加载应用。\n    :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png\" alt-text=\"图中显示了在 Teams 中上传自定义应用的选项。\":::\n    > [!NOTE]\n    > 如果没有上传自定义应用的选项，请联系 Teams 管理员。\n### <a name=\"create-a-free-teams-developer-tenant-optional\"></a>创建免费的 Teams 开发人员租户 (可选) \n如果没有 Teams 开发人员帐户，可以免费获取它。 加入 Microsoft 365 开发人员计划！\n1. 转到 [Microsoft 365 开发人员计划](https://developer.microsoft.com/microsoft-365/dev-program)。\n1. 选择“ **立即加入** ”，然后按照屏幕上的说明进行操作。\n1. 从欢迎屏幕中选择 **“设置 E5 订阅** ”。\n1. 设置管理员帐户。 完成后，将显示以下屏幕。\n   :::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png\" alt-text=\"Microsoft\":::\n1. 使用新的管理员帐户登录到 Teams。 现在，应具有 **“上传自定义应用** ”选项。\n"
+- title: 生成工作流机器人
+  durationInMinutes: 5
+  content: "若要使用 Visual Studio Code 生成工作流机器人，请执行以下步骤：\n1. 打开 Visual Studio Code。\n1. 选择Visual Studio Code侧栏中的 **Teams 工具包**:::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png\":::图标。\n1. 选择“ **创建新的 Teams** 应用”。\n  \n    :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-create.png\" alt-text=\"在侧面板中创建新的 Teams 应用。\":::\n\n1. 选择“ **创建新的 Teams** 应用”选项，使用 Teams 工具包创建应用。\n\n    :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-teams-app.png\" alt-text=\" 选择选项创建新的团队应用。\":::\n\n1. 在 **“基于方案的 Teams 应用**”下，选择“ **工作流机器人** ”作为要在应用中生成的功能。\n\n    :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png\" alt-text=\" 选择选项“功能工作流机器人”\" lightbox=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png\":::\n\n1. 选择“ **TypeScript** ”作为编程语言。\n\n    :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-program-lang.png\" alt-text=\" 编程语言的 select 选项类型脚本\":::\n\n1. 选择“ **默认文件夹** ”，将项目根文件夹存储在默认位置。\n  \n    > [!NOTE]\n    > 还可以通过选择“浏览...”来更改默认位置 **。**\n    \n    :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-workspace-folder.png\" alt-text=\" 选择以添加工作区文件夹\":::\n   \n1. 为应用输入合适的名称，例如工作流机器人作为应用程序名称。\n    > [!NOTE]\n    > 确保在应用程序名称中仅使用字母数字字符。\n    \n    :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-app-name.png\" alt-text=\"输入应用程序名称\":::\n\n1. 选择“**Enter**”。\n    \n1. 工作流机器人在几秒钟内创建，你可以看到基架。\n    \n    :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png\" alt-text=\"你的应用是在侧面板中可见的基架创建的\":::\n\n1. 从Visual Studio Code侧栏中选择 **“运行和调试”**:::image type=\"icon\" source=\"../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png\":::图标。\n\n1. 从下拉列表中选择 **“调试 (Edge)** **”或“调试 (Chrome)** ”。\n\n   :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-local-debug1.png\" alt-text=\"你的应用是在侧面板中可见的基架创建的\":::    \n\n1. 选择“ **开始调试**”。\n\n1. 选择“**添加**”。\n    :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png\" alt-text=\"选择“添加”以添加工作流机器人应用\":::\n### <a name=\"take-tour-of-source-code\"></a>了解源代码\nTeams 工具包提供用于生成应用的组件。 创建项目后，可以在 JavaScript/TypeScript Visual Studio Code的“资源管理器”区域中查看项目文件夹和文件。 \n\n:::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding2.png\" alt-text=\"选择“添加”以添加工作流机器人应用\":::\n\n\n创建的机器人是包含以下文件夹的普通 TeamsFx 项目：\n\n| Folder | 内容 |\n|   ---  |   ---   |\n|`.fx`   | 项目级别的设置、配置和环境信息。|\n|`.vscode`| 用于本地调试的Visual Studio Code文件 |\n|`bot`   | 工作流机器人 Teams 应用程序的源代码。|\n|`templates`| Teams 应用程序清单和用于预配 Azure 资源的模板。|\n\nTeams 机器人的核心实现位于 `bot/` 文件夹中。 文件夹下的 `bot/` 以下文件提供工作流机器人的业务逻辑。\n可以更新这些文件以满足业务逻辑要求。 默认实现提供了一个起点来帮助你入门：\n\n| Folder | 内容 |\n|   ---  |   ---   |\n|`src/index.js(ts)` | 工作流机器人的应用程序入口点和 `restify` 处理程序。|\n|`src/adaptiveCards/helloworldCommand.json` | 发送到 Teams 的生成的自适应卡片。 |\n|`src/commands/helloworldCommandHandler.js(ts)` | 响应命令消息。|\n|`src/cardActions/doStuffActionHandler.js(ts)` | `doStuff`响应卡片操作。|\n|`src/cardModels.js(ts)` | 默认自适应卡片数据模型。|\n\n以下文件在 Bot Framework 上实现核心工作流机器人，通常不需要自定义此文件：\n\n| 文件/文件夹 | 内容 |\n|   ---  |   ---   |\n| `src/internal/initialize.js(ts)`| 应用程序初始化和机器人消息处理。|\n\n以下文件与项目相关，通常不需要自定义这些文件：\n\n| 文件/文件夹 | 内容 |\n|   ---  |   ---   |\n| `.gitignore` | Git 忽略文件|\n| `package.json` | NPM 包文件|\n"
+- title: 与工作流机器人交互
+  durationInMinutes: 2
+  content: "可以通过发送 helloWorld 命令与 Teams 中的机器人交互。 运行此模板后，你会收到响应，然后选择 **工作流机器人** 和 **Enter**。\n :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png\" alt-text=\"选择“添加”以添加工作流机器人应用\":::\n\n你将在自适应卡片中收到以下命令响应： :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output1.png\" alt-text=\"选择“添加”以添加工作流机器人应用\":::\n\n然后，可以选择 **“DoStuff** ”按钮来调用响应以下更新的自适应卡片的操作： :::image type=\"content\" source=\"./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png\" alt-text=\"选择“添加”以添加工作流机器人应用\":::\n   \n"
+- title: 完成挑战
+  durationInMinutes: 1
+  content: >
+    你想出了这样的东西吗？
+
+
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="选择“添加”以添加工作流机器人应用":::
+- content: 你已完成本教程以开始使用适用于 Microsoft Teams 的工作流机器人。

@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft Teams 开发人员文档
-summary: 欢迎访问 Microsoft Teams 开发人员文档概述。 Microsoft Teams 应用将关键信息、常用工具和受信任的流程引入人们不断收集、学习和工作的地方。
+summary: 欢迎查看 Microsoft Teams 开发人员文档概述。 Microsoft Teams 应用将关键信息、常用工具和受信任的流程引入人们不断收集、学习和工作的地方。
 metadata:
   title: Microsoft Teams 开发人员文档
-  description: 为 Teams 生成应用的简介
+  description: 为 Teams 构建应用简介
   ms.service: msteams
   ms.subservice: subservice
   ms.topic: landing-page
@@ -12,28 +12,28 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: c70a978c8d369d8caf486c35c39c9aed48b94fcb
-  ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+  ms.openlocfilehash: 4ca17af82eddcfe4648436ff56246419f57f4d55
+  ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/26/2022
-  ms.locfileid: "68699162"
+  ms.lasthandoff: 10/27/2022
+  ms.locfileid: "68739916"
 landingContent:
-- title: 浏览最新
+- title: 了解最新
   linkLists:
   - linkListType: reference
     links:
-    - text: 面向 Microsoft Teams 应用开发人员的社区聊天室
+    - text: Microsoft Teams 应用开发人员的社区聊天室
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
-    - text: 适用于 Teams 的开发人员门户现在适用于 GCC 租户
+    - text: 适用于 Teams 的开发人员门户现在可用于 GCC 租户
       url: concepts/build-and-test/teams-developer-portal.md
     - text: Live Share 画布
       url: apps-in-teams-meetings/teams-live-share-canvas.md
-    - text: 生成一个深度链接以共享要在会议中登台的内容
+    - text: 生成深层链接以将内容共享到会议阶段
       url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
-    - text: 管理 Teams 中第三方应用的 SaaS 许可证
+    - text: 在 Teams 中管理第三方应用的 SaaS 许可证
       url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
     - text: 在合作伙伴中心上更新 Apple App Store 连接团队 ID
       url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
@@ -41,15 +41,15 @@ landingContent:
       url: apps-in-teams-meetings/teams-apps-in-meetings.md
     - text: 为 Visual Studio 2022 引入了 Teams 工具包
       url: toolkit/teams-toolkit-fundamentals.md
-    - text: 协作控制 [开发人员预览]
+    - text: 协作控件 [开发人员预览版]
       url: samples/collaboration-control.md
-    - text: 生成共享通道
+    - text: 生成共享频道
       url: concepts/build-and-test/Shared-channels.md
 - title: 入门
   linkLists:
   - linkListType: get-started
     links:
-    - text: 生成应用入门
+    - text: 构建应用入门
       url: ../msteams-platform/get-started/get-started-overview.md
     - text: GitHub 入门
       url: /contribute/additional-resources
@@ -67,12 +67,14 @@ landingContent:
       url: sbs-gs-spfx.yml
     - text: 使用 C# 或 .NET 生成应用
       url: sbs-gs-csharp.yml
-    - text: 使用Node.js生成应用
+    - text: 使用 Node.js 生成应用
       url: sbs-gs-nodejs.yml
     - text: 使用 JavaScript 生成命令机器人
       url: sbs-gs-commandbot.yml
     - text: 使用 JavaScript 生成通知机器人
       url: sbs-gs-notificationbot.yml
+    - text: 生成工作流机器人
+      url: sbs-gs-workflow-bot.yml
 - title: 将你的应用货币化
   linkLists:
   - linkListType: concept
@@ -133,15 +135,15 @@ landingContent:
     links:
     - text: 授予选项卡设备权限
       url: ~/sbs-tab-device-permissions.yml
-    - text: 创建 Teams 对话机器人
+    - text: 创建 Teams 聊天机器人
       url: ~/sbs-teams-conversation-bot.yml
-    - text: 创建呼叫和会议机器人
+    - text: 创建通话和会议机器人
       url: ~/sbs-calling-and-meeting.yml
     - text: 为选项卡和消息扩展配置 SSO
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
-    - text: 使用自适应卡片生成选项卡
+    - text: 使用自适应卡片的“生成”选项卡
       url: ~/sbs-tab-with-adaptive-cards.yml
-    - text: 生成机器人以发送主动消息
+    - text: 生成用于发送主动消息的机器人
       url: ~/sbs-send-proactive.yml
     - text: 使用 SSO 身份验证生成机器人
       url: ~/sbs-bots-with-sso.yml
@@ -153,7 +155,7 @@ landingContent:
     links:
     - text: 发送活动源通知
       url: ~/sbs-graphactivity-feedbroadcast.yml
-    - text: 生成会议内文档签名应用
+    - text: 生成会议中文档签名应用
       url: ~/sbs-inmeeting-document-signing.yml
   - linkListType: tutorial
     links:
@@ -169,7 +171,7 @@ landingContent:
       url: ~/sbs-botbuilder-taskmodule.yml
     - text: 生成基于搜索的消息扩展
       url: ~/sbs-messagingextension-searchcommand.yml
-    - text: 基于生成基于操作的消息扩展
+    - text: 基于生成操作的消息扩展
       url: ~/sbs-meetingextension-action.yml
     - text: 生成传出 Webhook
       url: ~/sbs-outgoing-webhooks.yml
