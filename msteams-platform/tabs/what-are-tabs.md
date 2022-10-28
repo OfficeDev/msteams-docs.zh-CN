@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams 选项卡
 author: surbhigupta
-description: 了解如何生成嵌入在 Microsoft Teams 中的选项卡和网页。 创建内容页面作为个人、频道或组选项卡的一部分。此外，了解如何使用自适应卡片生成选项卡。
+description: 了解如何生成 Microsoft Teams 中嵌入的选项卡和网页。 创建内容页作为个人、频道或组选项卡的一部分。此外，了解如何使用自适应卡片生成选项卡。
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 0bf8593c4cb27b54893c88c5f47bf1cbd489f9a0
+ms.sourcegitcommit: 6b262c2044b7c5f6f99e64c5cee11a5b28a00139
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653187"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772506"
 ---
 # <a name="build-tabs-for-teams"></a>Teams 的生成选项卡
 
@@ -21,7 +21,7 @@ ms.locfileid: "67653187"
 
 下图显示了个人选项卡：
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="个人选项卡" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="屏幕截图显示了 Teams 桌面客户端中个人选项卡的示例。":::
 
 下图显示了 Contoso 频道选项卡：
 
@@ -72,7 +72,7 @@ Teams 中提供了两种类型的选项卡：个人选项卡和频道或组选�
 
 自定义选项卡在应用包的应用清单中声明。 对于要作为选项卡包含在应用中的每个网页，可以定义一个 URL 和一个范围。 此外，还可以将 [Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 添加到页面，并在页面加载后调用 `microsoftTeams.initialize()`。 Teams 显示你的页面并提供对 Teams 特定信息的访问权限，例如 Teams 客户端正在运行深色主题。
 
-无论是选择在频道或组或个人范围内公开选项卡，都必须在选项卡中显示 <iframe\>HTML [内容页面](~/tabs/how-to/create-tab-pages/content-page.md)。对于个人选项卡，内容 URL 由 `staticTabs` 数组中的 `contentUrl` 属性直接在 Teams 应用清单中设置。你的选项卡内容与所有用户都一样。
+Whether you choose to expose your tab within the channel or group, or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is the same for all users.
 
 对于频道或组选项卡，还可以创建额外的配置页面。 此页允许配置内容页 URL，通常通过使用 URL 查询字符串参数加载该上下文的相应内容。 这是因为频道或组选项卡可以添加到多个团队或群组聊天。 每次后续安装时，用户都可以配置选项卡，以便根据需要定制体验。 当用户添加或配置选项卡时，URL 与 Teams 用户界面 (UI) 中显示的选项卡相关联。 配置选项卡只是向该 URL 添加更多参数。 例如，添加 Azure Boards 选项卡时，可选择配置页加载选项卡的哪个板。 配置页 URL 由应用清单中的 `configurableTabs` 数组中的 `configurationUrl` 属性指定。
 
