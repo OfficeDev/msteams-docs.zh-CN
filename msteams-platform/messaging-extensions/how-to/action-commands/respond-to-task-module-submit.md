@@ -5,30 +5,35 @@ description: 了解如何使用主动消息从消息扩展操作命令响应任�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100481"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772305"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 本文档将介绍应用如何响应操作命令，例如用户的任务模块提交操作。
-在用户提交任务模块后，Web 服务会收到一条 `composeExtension/submitAction` 调用消息，其中包含命令 ID 和参数值。 应用有五秒钟的时间响应调用，否则用户会收到错误消息“**无法访问应用**”，Teams 客户端将忽略任何调用回复。
+在用户提交任务模块后，Web 服务会收到一条 `composeExtension/submitAction` 调用消息，其中包含命令 ID 和参数值。 应用有 5 秒的时间响应调用。  
 
 有以下响应选项：
 
-* 无响应：使用提交操作在外部系统中触发进程，而不向用户提供任何反馈。 它对于长时间运行的进程以及交替提供反馈非常有用。 例如，可以使用[主动消息](~/bots/how-to/conversations/send-proactive-messages.md)提供反馈。
+* 无响应：使用提交操作在外部系统中触发进程，而不向用户提供任何反馈。 它对于长时间运行的进程和交替提供反馈非常有用。 例如，可以使用[主动消息](~/bots/how-to/conversations/send-proactive-messages.md)提供反馈。
 * [另一个任务模块](#respond-with-another-task-module)：可以在多步骤交互过程中使用其他任务模块进行响应。
 * [卡片响应](#respond-with-a-card-inserted-into-the-compose-message-area)：可以使用用户能与之交互或插入到消息中的卡片进行响应。
 * [来自机器人的自适应卡片](#bot-response-with-adaptive-card)：将自适应卡片直接插入对话中。
 * [请求用户进行身份验证](~/messaging-extensions/how-to/add-authentication.md)。
 * [请求用户提供其他配置](~/get-started/first-message-extension.md)。
 
-对于身份验证或配置，在用户完成该过程后，原始调用将重新发送到 Web 服务。 下表根据消息扩展插件的调用位置 `commandContext` 显示哪些类型的响应可用：
+如果应用在五秒内未响应，Teams 客户端将在发送错误消息 **“无法访问应用**”之前重试请求两次。 如果机器人在超时后答复，则忽略响应。
+
+> [!NOTE]
+> 在机器人回复调用请求后，应用必须推迟任何长时间运行的操作。 长时间运行的操作结果可以作为消息传递。
+
+对于身份验证或配置，在用户完成该过程后，原始调用将重新发送到 Web 服务。 下表根据消息扩展的调用位置 `commandContext` 显示了可用的响应类型：
 
 |响应类型 | 撰写 | 命令栏 | 邮件 |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -42,7 +47,7 @@ ms.locfileid: "68100481"
 > * 当通过 ME 卡片选择 **Action.Submit** 时，它会发送名为 **composeExtension** 的调用活动，其中值等于常用有效负载。
 > * 当通过对话选择 **Action.Submit** 时，将收到名为 **onCardButtonClicked** 的消息活动，其中值等于常用有效负载。
 
-如果应用包含对话机器人，请在对话中安装机器人，然后加载任务模块。 机器人可用于获取任务模块的其他上下文。 若要安装对话机器人，请参阅[请求安装对话机器人](create-task-module.md#request-to-install-your-conversational-bot)。
+如果应用包含对话机器人，请在聊天中安装机器人，然后加载任务模块。 机器人可用于获取任务模块的其他上下文。 若要安装对话机器人，请参阅[请求安装对话机器人](create-task-module.md#request-to-install-your-conversational-bot)。
 
 ## <a name="the-submitaction-invoke-event"></a>submitAction 调用事件
 
@@ -215,18 +220,18 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 1. 用户选择消息扩展以调用任务模块。
 1. 用户使用任务模块配置轮询。
 1. 提交任务模块后，应用使用提供的信息将轮询生成为自适应卡片，并将其作为 `botMessagePreview` 响应发送给客户端。
-1. 然后，用户可以在机器人将自适应卡片消息插入频道之前预览它。 如果应用不是通道的成员，请选择 `Send` 添加它。
+1. 然后，用户可以在机器人将自适应卡片消息插入频道之前预览它。 如果应用不是频道的成员，请选择 `Send` 添加它。
 
     > [!NOTE]
     >
     > * 用户还可以选择 `Edit` 消息，这样会将其返回到原始任务模块。
     > * 与自适应卡片的交互会在发送消息之前更改消息。
     >
-1. 用户选择 `Send`后，机器人会将消息发布到通道。
+1. 用户选择 `Send`后，机器人会将消息发布到频道。
 
 ## <a name="respond-to-initial-submit-action"></a>响应初始提交操作
 
-任务模块必须使用机器人发送到频道的卡片预览来响应初始 `composeExtension/submitAction` 消息。 用户可以在发送之前验证卡片，如果已安装机器人，则尝试在会话中安装机器人。
+任务模块必须使用机器人发送到频道的卡片预览来响应初始 `composeExtension/submitAction` 消息。 用户可以在发送之前验证卡片，如果机器人已安装，则尝试在对话中安装机器人。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

@@ -1,15 +1,15 @@
 ---
 title: 用于为选项卡启用 SSO 的代码配置
-description: 更新选项卡应用中的代码，以便使用应用用户的 Teams 标识请求和接收访问令牌，以便启用单一登录 (SSO) 。
+description: 更新选项卡应用中的代码，以便使用应用用户的 Teams 标识请求和接收访问令牌，以启用单一登录 (SSO) 。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 身份验证选项卡 Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 20b11032227a08d057a6cdae8e46154004bfdb02
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586782"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772263"
 ---
 # <a name="add-code-to-enable-sso"></a>添加代码以启用 SSO
 
@@ -36,7 +36,7 @@ ms.locfileid: "67586782"
 <details>
 <summary>详细了解 getAuthToken（）</summary>
 <br>
-`getAuthToken()` 是 Microsoft Teams JavaScript SDK 中的一种方法。 它请求代表应用颁发 Azure AD 访问令牌。 如果令牌尚未过期，则可以从缓存中获取该令牌。 否则，将向 Azure AD 发送请求以获取新令牌。
+`getAuthToken()` 是 Microsoft Teams JavaScript SDK 中的一种方法。 它请求代表应用颁发 Azure AD 访问令牌。 如果令牌未过期，则从缓存获取该令牌。 否则，将向 Azure AD 发送请求以获取新令牌。
 
  有关详细信息，请参阅 [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true)。
 </details>
@@ -47,7 +47,7 @@ ms.locfileid: "67586782"
 
 | 如果需要访问令牌... | 调用 getAuthToken () ... |
 | --- | --- |
-| 当应用用户访问应用时 | 从内部 `microsoftTeams.initialize()`。 |
+| 当应用用户访问应用时 | 之后 `microsoftTeams.initialize()`。 |
 | 使用应用的特定功能 | 当应用用户执行需要登录的操作时。 |
 
 ### <a name="add-code-for-getauthtoken"></a>添加 getAuthToken 的代码

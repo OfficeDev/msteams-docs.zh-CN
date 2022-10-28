@@ -1,23 +1,23 @@
 ---
 title: 设置你的智能机器人邮件格式
 author: surbhigupta
-description: 了解如何设置机器人消息的格式和样式，例如删除、排序和无序列表、超链接或图像链接。 了解跨平台支持。
+description: 了解如何设置机器人消息的格式和样式，例如删除线、有序列表和无序列表、超链接或图像链接。 了解跨平台支持。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b0db9f9d9e55dc3f11474dac4b8c6563caf5fd1b
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100180"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772298"
 ---
 # <a name="format-your-bot-messages"></a>设置你的智能机器人邮件格式
 
-邮件格式设置可以使机器人邮件发挥出最佳效果。 可以将机器人消息格式化为包含交互式元素（如按钮、文本、图像、音频、视频等）的附件。
+邮件格式设置可以使机器人邮件发挥出最佳效果。 可以设置机器人消息的格式，以将富卡作为附件包含交互式元素，例如按钮、文本、图像等。
 
 > [!NOTE]
-> 机器人消息大小限制为 40 KB。 如果机器人消息大小限制超过 40 KB，机器人将收到状态 `413` 代码 (`RequestEntityTooLarge`) ，其中包含错误代码 `MessageSizeTooBig`。 机器人消息大小限制包括编码为 UTF-16 的整个消息有效负载，不包括 Base64 编码的映像。
+> 机器人消息大小限制为 40 KB。 如果机器人消息大小限制超过 40 KB，机器人会收到状态 `413` 代码 (`RequestEntityTooLarge`) ，其中包含错误代码 `MessageSizeTooBig`。 机器人消息大小限制包括编码为 UTF-16 的整个消息有效负载，不包括 Base64 编码的图像。
 
 ## <a name="format-text-content"></a>设置文本内容格式
 
@@ -35,11 +35,11 @@ Teams 支持一部分 markdown 和 XML 或 HTML 格式标记。
 
 目前，以下限制适用于格式设置：
 
-* 仅文本消息不支持表格格式。
+* 纯文本消息不支持表格格式设置。
 * 丰富卡片仅支持在文本属性中进行格式设置，不支持在标题或副标题属性中进行格式设置。
-* 富卡不支持 markdown 或表格格式。
+* 富卡不支持 Markdown 或表格格式。
 
-设置文本内容的格式后，请确保格式设置可跨 Teams 支持的所有平台运行。
+设置文本内容格式后，请确保你的格式设置适用于 Teams 支持的所有平台。
 
 ## <a name="cross-platform-support"></a>跨平台支持
 
