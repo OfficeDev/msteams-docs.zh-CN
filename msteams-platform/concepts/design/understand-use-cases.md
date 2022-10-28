@@ -1,16 +1,16 @@
 ---
 title: 了解应用的用例和 Teams 功能
 author: heath-hamilton
-description: 了解 Microsoft Teaams 应用负债- 选项卡、机器人、会议扩展、消息扩展、Webhook 连接器、个人应用体验、共享应用体验。
+description: 了解 Microsoft Teams 应用功能，例如选项卡、机器人、会议扩展、消息扩展、Webhook 连接器、个人应用体验和共享应用体验。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 296f6d2e8fe5088c480490cc0dbcc035f9f659ec
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100453"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773511"
 ---
 # <a name="understand-your-use-cases"></a>了解用例
 
@@ -20,21 +20,22 @@ ms.locfileid: "68100453"
 
 如果要通过应用满足用户要求，首先需要了解这些要求。
 
-- **了解你的用户**:
-  - 识别用户问题并确定用户遇到的一些常见问题的解决方案。
-  - 通过查找 Teams 功能的正确组合来建立 Teams 应用，以满足用户的需求。
-  - 了解用例，了解最终用户如何与应用进行交互。
+* **了解你的用户**:
+  * 识别用户问题并确定用户遇到的一些常见问题的解决方案。
+  * 通过查找 Teams 功能的正确组合来建立 Teams 应用，以满足用户的需求。
+  * 了解用例，了解最终用户如何与应用进行交互。
+  * 建议通过精益模块 [了解如何将应用发布到 Teams 应用商店](/training/modules/microsoft-teams-publish-app-to-store/) ，以帮助应用通过 Microsoft Teams 应用商店提交过程。
 
-- **了解问题**: 解决应用必须解决的核心问题。
+* **了解问题**: 解决应用必须解决的核心问题。
 
-- **请考虑集成**: 标识应用所需的应用和服务，例如身份验证、Microsoft Graph 或 Web 应用。
+* **请考虑集成**: 标识应用所需的应用和服务，例如身份验证、Microsoft Graph 或 Web 应用。
 
 ## <a name="microsoft-teams-app-features"></a>Microsoft Teams 应用功能
 
 There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
-- [应用功能](#app-capabilities)
-- [应用程序范围](#app-scope)
+* [应用功能](#app-capabilities)
+* [应用程序范围](#app-scope)
 
 ### <a name="app-capabilities"></a>应用功能
 
@@ -150,7 +151,7 @@ There are multiple ways to extend Teams so every app is unique. Teams app featur
 
 #### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
 
-[Microsoft Graph API for Teams](/graph/teams-concept-overview) 提供有关团队、频道、用户和消息的信息的访问权限，这些信息将帮助你为应用创建或增强功能。
+[Microsoft 图形 API for Teams](/graph/teams-concept-overview) 提供对有关团队、频道、用户和消息的信息的访问权限，这些信息可帮助你为应用创建或增强功能。
 
    :::column-end:::
 
@@ -170,13 +171,13 @@ There are multiple ways to extend Teams so every app is unique. Teams app featur
 
 应用可以具有以下范围之一:
 
-- **个人应用体验**: 个人应用是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
-- **共享应用体验**: 团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间中的每个人使用。 协作空间通常侧重于应用交互的工作流或解锁新的社交交互。
+* **个人应用体验**: 个人应用是一个专用空间或机器人，可帮助用户专注于自己的任务或查看对他们很重要的活动。
+* **共享应用体验**: 团队、频道和聊天是协作空间。 这些上下文中的应用可供该空间中的每个人使用。 协作空间通常侧重于应用交互的工作流或解锁新的社交交互。
 
 应用可以存在于不同的范围内。 例如：
 
-- 应用可以在中央共享位置 (即选项卡) 中显示数据。
-- 它还可以通过个人对话界面 (即机器人) 显示相同的信息。
+* 应用可以在中央共享位置 (即选项卡) 中显示数据。
+* 它还可以通过个人对话界面 (即机器人) 显示相同的信息。
 
 用户可以在画布选项卡上与应用进行交互以执行活动，也可以选择使用对话机器人执行相同的操作。
 

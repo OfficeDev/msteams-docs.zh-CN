@@ -1,16 +1,16 @@
 ---
 title: 概述–将应用发布到 Microsoft Teams 商店
-description: 将应用发布到 Microsoft Teams 应用商店或 AppSource。 提交后会发生什么，有关快速审批和发布链接到 SaaS 产品/服务的应用的提示。
+description: 将应用发布到 Microsoft Teams 应用商店或 AppSource。 提交后的预期内容、快速审批和发布链接到 SaaS 产品/服务的应用的提示。
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 95d310467ae5fad80d07a61d6b790dcd086feb35
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: f3981ccc9437c28b288a86912dd2b878e729c101
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560727"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773504"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>将应用发布到 Microsoft Teams 商店
 
@@ -124,7 +124,7 @@ ms.locfileid: "68560727"
 
 * **应用提交后**
 
-  * 查看验证报告后，使用与验证报告相关的任何查询回复电子邮件线程，或者需要任何额外的支持来解决报告的问题。
+  * 查看验证报告后，使用与验证报告相关的任何查询回复电子邮件线程，或者如果需要任何额外的支持来解决报告的问题。
 
   * 确保有足够带宽供开发人员解决报告的任何问题，直到应用获得批准。
 
@@ -172,6 +172,7 @@ ms.locfileid: "68560727"
 
 ## <a name="see-also"></a>另请参阅
 
+* [在 Microsoft Teams 应用商店中发布 Teams 应用](/training/modules/microsoft-teams-publish-app-to-store/)
 * [发布到 Microsoft 365 应用商店](/office/dev/store/)
 * [上传 Teams 应用](~/concepts/deploy-and-publish/apps-upload.md)
 * [将 Teams 应用发布到组织](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)

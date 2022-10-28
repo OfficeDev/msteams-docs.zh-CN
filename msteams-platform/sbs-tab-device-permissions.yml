@@ -2,7 +2,7 @@
 title: 授予选项卡设备权限
 metadata:
   title: 授予选项卡设备权限
-  description: 了解如何为选项卡设备授予权限，例如 Microsoft Teams 应用的位置、相机和麦克风访问权限。
+  description: 了解如何为 Microsoft Teams 应用授予选项卡设备权限，例如位置、相机和麦克风访问权限。
   audience: Developer
   level: Beginner
   ms.date: 12/24/2021
@@ -11,19 +11,19 @@ metadata:
   nextTutorialTitle: 详细了解浏览器的设备权限
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 90f0562fc24a3d363a1435b16cff15ba73f42b3e
-  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
+  ms.openlocfilehash: 268982d898361a2f59a107c073a3603de19c6149
+  ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/06/2022
-  ms.locfileid: "68490918"
+  ms.lasthandoff: 10/28/2022
+  ms.locfileid: "68773457"
 items:
 - durationInMinutes: 1
   content: >
-    需要设备权限（如位置、相机或麦克风访问）的 Teams 应用现在要求用户在 Web 浏览器中手动授予权限。 以前，浏览器处理了如何授予访问权限的问题，但现在这些权限在 Microsoft Teams 中处理。
+    需要设备权限（例如位置、相机或麦克风访问权限）的 Teams 应用现在要求用户在 Web 浏览器中手动授予权限。 以前，浏览器处理了如何授予访问权限的问题，但现在这些权限在 Microsoft Teams 中处理。
 
 
-    本分步指南可帮助你在 Teams 中授予 Tab 设备权限。 你将看到以下输出：
+    本分步指南可帮助你在 Teams 中授予选项卡设备权限。 你将看到以下输出：
 
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="最终输出":::
 - title: 先决条件
@@ -36,46 +36,46 @@ items:
     *| &nbsp; | 安装 | 用于使用... |
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams 可通过一个位置的聊天、会议、呼叫和所有应用与你协作的所有人进行协作。|
-     | &nbsp; | [Microsoft 365 开发人员帐户](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | 对具有相应安装应用权限的 Teams 帐户的访问权限。 |
-     | &nbsp; | [Visual Studio 2022 版本 17.3](https://visualstudio.microsoft.com)<br> 安装以下两个工作负荷之一：<br> • **ASP.NET 和 Web 开发** <br> • **.NET Core 跨平台开发** | 可以在 Visual Studio 2022 中安装企业版本，并安装工作负荷。 |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams 可在一个位置通过聊天、会议、通话等应用与你合作的每个人进行协作。|
+     | &nbsp; | [Microsoft 365 开发人员帐户](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | 具有安装应用的相应权限的 Teams 帐户的访问权限。 |
+     | &nbsp; | [Visual Studio 2022 版本 17.3](https://visualstudio.microsoft.com)<br> 安装以下两个工作负载之一：<br> • **ASP.NET 和 Web 开发** <br> • **.NET Core 跨平台开发** | 可以在 Visual Studio 2022 中安装企业版，并安装工作负载。 |
      | &nbsp; | [Node.js和 NPM](https://nodejs.org/) | 后端 JavaScript 运行时环境。 使用最新的 v16 LTS 版本。|
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams 应用功能 (会话机器人、消息扩展和传入 Webhook) 需要入站连接。 隧道将开发系统连接到 Teams。 对于仅包含选项卡的应用，不需要这样做。 此包安装在项目目录中， (使用 npm `devDependencies`) 。 |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | teams 应用功能 (对话机器人、消息扩展和传入 Webhook) 需要入站连接。 隧道将开发系统连接到 Teams。 对于仅包含选项卡的应用，这不是必需的。 此包使用 npm `devDependencies`) 安装在项目目录 (中。 |
 
       > [!NOTE]
-      > 下载 ngrok 后，注册并安装 [身份验证](https://ngrok.com/download)。
+      > 下载 ngrok 后，注册并安装 [authtoken](https://ngrok.com/download)。
 - title: 设置本地环境
   durationInMinutes: 1
   content: >
     1. 打开 [Microsoft Teams 示例](https://github.com/OfficeDev/Microsoft-Teams-Samples)。
 
 
-    1. 选择 **“代码**”。
+    1. 选择“ **代码**”。
 
 
-    1. 在下拉菜单中，选择 **“使用 GitHub Desktop 打开**”。
+    1. 在下拉菜单中，选择“ **使用 GitHub Desktop 打开**”。
 
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/cloner-epository-tab-device.png" alt-text="克隆存储库":::
 
 
-    1. 选择 **“克隆**”。
+    1. 选择“ **克隆**”。
 - title: 为本地 Web 服务器设置隧道
   durationInMinutes: 1
-  content: "使用 ngrok 或命令提示符创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n```bash\nngrok http --host-header=localhost 3000\n``` \n  > [!TIP]\n  > 如果遇到 **ERR_NGROK_4018**，请按照命令提示符中显示的步骤注册和身份验证 ngrok。 然后运行该 `ngrok http --host-header=localhost 3000` 命令。\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" ngrok 隧道\":::\n"
+  content: "使用 ngrok 或命令提示符创建到本地运行的 Web 服务器的公开可用 HTTPS 终结点的隧道。 在 ngrok 中运行以下命令：\n\n```bash\nngrok http --host-header=localhost 3000\n``` \n  > [!TIP]\n  > 如果遇到 **ERR_NGROK_4018**，请按照命令提示符中显示的步骤注册并验证 ngrok。 然后运行 命令 `ngrok http --host-header=localhost 3000` 。\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" ngrok 隧道\":::\n"
 - title: 设置清单文件
   durationInMinutes: 1
-  content: "1. 转到克隆存储库中的 **manifest.json** 。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png\" alt-text=\"清单文件\":::\n\n1. 在 Visual Studio 中打开 **manifest.json** 并进行以下更改：\n  \n   从 ngrok 替换 `<<BASE_URI_DOMAIN>>` 为 http 终结点，不包括所有位置中的 https:// 部分。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png\" alt-text=\"在 Visual Studio 中更新 ngrok\":::\n          \n"
-- title: 使用 npm 生成和运行客户端应用
+  content: "1. 转到克隆存储库中的 **manifest.json** 。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png\" alt-text=\"清单文件\":::\n\n1. 在 Visual Studio 中打开 **manifest.json** 并进行以下更改：\n  \n   将 替换为 `<<BASE_URI_DOMAIN>>` ngrok 中的 http 终结点，排除所有位置的 https:// 部分。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png\" alt-text=\"在 Visual Studio 中更新 ngrok\":::\n          \n"
+- title: 使用 npm 生成并运行客户端应用
   durationInMinutes: 1
-  content: "1. 在克隆的存储库中，转到 **> nodejs 的 tab-device-permissions >示** 例。\n\n1. 复制 **nodejs** 文件夹路径。 \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png\" alt-text=\"复制路径\":::  \n\n1. 打开新的 **命令提示符** 窗口，将当前目录更改为复制的 **nodejs** 路径。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png\" alt-text=\"复制路径\":::     \n\n1. 在 **命令提示符** 中运行以下命令以下载包和依赖项：\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. 在 **命令提示符** 下运行以下命令以启动应用：\n\n   ```Command-Prompt\n   npm start\n   ```\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png\" alt-text=\"安装并启动 npm\":::     \n\n1. 可以在浏览器中看到以下输出：\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-react.png\" alt-text=\"浏览器输出\":::     \n"
+  content: "1. 在克隆的存储库中，转到 **示例> tab-device-permissions > nodejs**。\n\n1. 复制 **nodejs** 文件夹路径。 \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png\" alt-text=\"复制路径\":::  \n\n1. 打开新的 **命令提示符** 窗口，将当前目录更改为复制的 **nodejs** 路径。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png\" alt-text=\"复制路径\":::     \n\n1. 在 **命令提示符** 中运行以下命令以下载包和依赖项：\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. 在 **命令提示符中运行以下命令** 以启动应用：\n\n   ```Command-Prompt\n   npm start\n   ```\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png\" alt-text=\"安装和启动 npm\":::     \n\n1. 可以在浏览器中看到以下输出：\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-react.png\" alt-text=\"浏览器输出\":::     \n"
 - title: 向 Teams 添加选项卡设备权限
   durationInMinutes: 1
-  content: "# <a name=\"desktop\"></a>[桌面设备](#tab/desktop) \n\n\n1. 在克隆的存储库中，获取 **tab-device-permissions****nodejs** > **appPackage** 的 > **示例** > 。\n\n1. 使用 **appPackage** 文件夹中存在的以下文件创建.zip： \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"创建 zip\":::        \n \n 1. 转到 **Microsoft Teams**。\n\n 1. 选择“**应用**”。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"选择应用\":::         \n\n 1. 在左下角，选择 **“管理应用**”。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"选择“管理应用”\":::         \n\n 1. 选择“**上传自定义应用**”。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"上传自定义应用\":::           \n\n 1. 选择 **“打开** ”以上传在 **appPackage** 文件夹中创建的.zip文件。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"添加清单 zip\":::             \n\n 1. 选择“**添加**”。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png\" alt-text=\"添加应用选项卡设备权限\":::               \n\n 1. 选择 **“设备权限”选项卡** 可查看以下输出：\n \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"将 Tab 设备添加到桌面\"::: \n\n\n# <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n\n1. 在克隆的存储库中，转到 **tab-device-permissions****nodejs** > **appPackage** 示 > **例** > 。\n\n1. 使用 **appPackage** 文件夹中存在的以下文件创建.zip： \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"创建 zip\":::        \n\n1. 转到 **Microsoft Teams**。 \n\n1. 选择“**应用**”。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"选择应用\":::         \n\n1. 在左下角，选择 **“管理应用**”。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"选择“管理应用”\":::         \n\n1. 选择“**上传自定义应用**”。 \n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"上传自定义应用\":::           \n\n1. 选择 **“打开** ”以上传在 **appPackage** 文件夹中创建的.zip文件。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"添加清单 zip\":::             \n\n1. 选择“**添加**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1.png\" alt-text=\"添加应用选项卡设备权限\":::               \n\n1. 选择 **“设备权限”选项卡** 可查看以下输出：\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"获取位置\":::\n\n\n# <a name=\"mobile\"></a>[移动设备](#tab/mobile)\n\n \n  在移动设备中打开 Teams 以查看以下输出：\n\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/mobile-teams-output1.png\" alt-text=\"移动选项卡设备\":::                   \n\n \n"
+  content: "# <a name=\"desktop\"></a>[桌面设备](#tab/desktop) \n\n\n1. 在克隆的存储库中，获取 **了示例** > **tab-device-permissions** > **nodejs** > **appPackage**。\n\n1. 使用 **appPackage** 文件夹中存在的以下文件创建.zip： \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"创建 zip\":::        \n \n 1. 转到 **Microsoft Teams**。\n\n 1. 选择“**应用**”。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"选择应用\":::         \n\n 1. 在左下角，选择“ **管理应用**”。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"选择“管理应用”\":::         \n\n 1. 选择 **“上传应用**”。\n\n 1. 选择 **“上传自定义应用**”。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"上传自定义应用\":::           \n\n 1. 选择“ **打开** ”以上传在 **appPackage** 文件夹中创建的.zip文件。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"添加清单 zip\":::             \n\n 1. 选择“**添加**”。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png\" alt-text=\"添加应用选项卡设备权限\":::               \n\n 1. 选择 **“设备权限”选项卡** 以查看以下输出：\n \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"将选项卡设备添加到桌面\"::: \n\n\n# <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n\n1. 在克隆的存储库中，转到 **示例** > **tab-device-permissions** > **nodejs** > **appPackage**。\n\n1. 使用 **appPackage** 文件夹中存在的以下文件创建.zip： \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"创建 zip\":::        \n\n1. 转到 **Microsoft Teams**。 \n\n1. 选择“**应用**”。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"选择应用\":::         \n\n1. 在左下角，选择“ **管理应用**”。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"选择“管理应用”\":::         \n\n1. 选择“**上传自定义应用**”。 \n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"上传自定义应用\":::           \n\n1. 选择“ **打开** ”以上传在 **appPackage** 文件夹中创建的.zip文件。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"添加清单 zip\":::             \n\n1. 选择“**添加**”。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1.png\" alt-text=\"添加应用选项卡设备权限\":::               \n\n1. 选择 **“设备权限”选项卡** 以查看以下输出：\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"获取位置\":::\n\n\n# <a name=\"mobile\"></a>[移动设备](#tab/mobile)\n\n \n  在移动版中打开 Teams，查看以下输出：\n\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/mobile-teams-output1.png\" alt-text=\"移动选项卡设备\":::                   \n\n \n"
 - title: 测试应用
   durationInMinutes: 1
-  content: "若要确保 Tab 设备权限应用允许用户授予权限，必须在成功将应用上传到 Teams 后测试应用。\n\n # <a name=\"desktop\"></a>[桌面设备](#tab/Desktop)\n\n  若要在桌面上测试应用，请选择 **“应用权限** ”图标以允许访问权限请求：\n\n    \n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"桌面\":::                   \n  \n  \n   # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  \n  若要在浏览器中测试应用，请选择 **“应用权限** ”图标以允许访问权限请求：\n\n    \n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"获取位置\":::                   \n \n \n # <a name=\"mobile\"></a>[移动设备](#tab/Mobile)\n\n  \n  若要在移动设备上测试应用，将显示以下弹出窗口以选择操作过程：\n\n  * 如果要授予权限，请选择 **ALLOW** 。\n  * 如果不想授予权限，请选择 **DENY** 。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png\" alt-text=\"移动输出\":::                   \n--- \n"
-- title: 完成质询
+  content: "若要确保选项卡设备权限应用允许用户授予权限，必须在成功将应用上传到 Teams 后测试应用。\n\n # <a name=\"desktop\"></a>[桌面设备](#tab/Desktop)\n\n  若要在桌面上测试应用，请选择“ **应用权限”** 图标以允许访问权限请求：\n\n    \n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"桌面\":::                   \n  \n  \n   # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  \n  若要在浏览器中测试应用，请选择“ **应用权限”** 图标以允许访问权限请求：\n\n    \n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"获取位置\":::                   \n \n \n # <a name=\"mobile\"></a>[移动设备](#tab/Mobile)\n\n  \n  若要在移动设备上测试应用，将显示以下弹出窗口以选择操作过程：\n\n  * 如果要授予权限，请选择 **“允许** ”。\n  * 如果不想授予权限，请选择“ **拒绝** ”。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png\" alt-text=\"移动输出\":::                   \n--- \n"
+- title: 完成挑战
   durationInMinutes: 1
-  content: "你想出了这样的事吗？\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/output1.png\" alt-text=\"location\":::                   \n"
-- content: 你已完成本教程，现在可以在 Teams 中授予 Tab 设备权限。
+  content: "你想出了这样的东西吗？\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/output1.png\" alt-text=\"location\":::                   \n"
+- content: 你已完成本教程，现在可以在 Teams 中授予选项卡设备权限。

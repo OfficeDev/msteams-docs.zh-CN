@@ -1,26 +1,26 @@
 ---
 title: 创建内容页
 author: surbhigupta
-description: 了解 Teams 客户端中的网页，并且是个人、频道或组自定义选项卡的一部分。创建内容页并将其嵌入到任务模块中作为 Webview。
+description: 了解 Teams 客户端中的网页，属于个人、频道或组自定义选项卡。创建内容页并将其作为 Web 视图嵌入到任务模块中。
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 362b63f44abf1afdf1572d967eb703f0836d4a45
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: dad5451c4255ad97cb14a13983f1701a52f39bb9
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560461"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773441"
 ---
 # <a name="create-a-content-page"></a>创建内容页
 
-内容页是在 Teams 客户端中呈现的网页，这是以下内容的一部分：
+内容页是在 Teams 客户端中呈现的网页，它是以下内容的一部分：
 
 * 个人范围的自定义选项卡：在这种情况下，内容页是用户遇到的第一页。
 * 频道或群组自定义选项卡：在用户固定并在适当的上下文中配置选项卡后，显示内容页。
 * [任务模块](~/task-modules-and-cards/what-are-task-modules.md)：可以创建内容页并将其作为 Web 视图嵌入到任务模块中。 页面呈现在模式弹出窗口内。
 
-本文特定于使用内容页作为选项卡;但是，无论内容页面如何呈现给用户，此处的大部分指南都适用。
+本文专门介绍如何将内容页用作选项卡;但是，无论内容页如何呈现给用户，此处的大多数指南都适用。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -28,14 +28,14 @@ ms.locfileid: "68560461"
 
 选项卡的总体目标是提供对具有实际价值和明显用途的有意义且引人入胜的内容的访问权限。
 
-你需要专注于使选项卡设计干净、导航直观且内容沉浸式。有关详细信息，请参阅 [选项卡设计指南](~/tabs/design/tabs.md) 和 [Microsoft Teams 应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
+你需要专注于使选项卡设计简洁、导航直观和内容沉浸式。有关详细信息，请参阅 [选项卡设计指南](~/tabs/design/tabs.md) 和 [Microsoft Teams 应用商店验证指南](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 
 ## <a name="integrate-your-code-with-teams"></a>将代码与 Teams 集成
 
 若要在 Teams 中显示页面，必须包含 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)，并在页面加载后包含对 `app.initialize()` 的调用。
 
 > [!NOTE]
-> 由于缓存，在选项卡应用中反映任何内容或 UI 更改需要近 24-48 小时。
+> 由于缓存，任何内容或 UI 更改都需要近 24-48 小时才能反映在选项卡应用中。
 
 以下代码提供了页面和 Teams 客户端如何通信的示例：
 
@@ -88,15 +88,15 @@ ms.locfileid: "68560461"
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>使用 SDK 与 Teams 交互
 
-[Teams 客户端 JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) 提供了更多功能，你可以在开发内容页面时发现这些函数很有用。
+[Teams 客户端 JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) 提供了更多在开发内容页面时很有用的函数。
 
 ### <a name="deep-links"></a>深度链接
 
-可以在 Teams 中创建实体的深层链接。 它们用于创建导航到选项卡中的内容和信息的链接。有关详细信息，请参阅 [在 Teams 中创建指向内容和功能的深度链接](~/concepts/build-and-test/deep-links.md)。
+可以在 Teams 中创建实体的深层链接。 它们用于创建导航到选项卡中的内容和信息的链接。有关详细信息，请参阅 [在 Teams 中创建指向内容和功能的深层链接](~/concepts/build-and-test/deep-links.md)。
 
 ### <a name="task-modules"></a>任务模块
 
-任务模块是一种模式弹出体验，你可以从选项卡触发。在内容页中，使用任务模块显示窗体以收集其他信息、在列表中显示项的详细信息，或向用户提供其他信息。 任务模块本身可以是其他内容页，也可以是使用自适应卡片完全创建的。 有关详细信息，请参阅[在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
+任务模块是可从选项卡触发的模式弹出体验。在内容页中，使用任务模块演示表单以收集其他信息、在列表中显示项的详细信息或向用户提供其他信息。 任务模块本身可以是其他内容页，也可以是完全使用自适应卡片创建的。 有关详细信息，请参阅[在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
 
 ### <a name="valid-domains"></a>有效域
 
@@ -119,9 +119,9 @@ ms.locfileid: "68560461"
 
 1. 将 `"showLoadingIndicator": true` 添加到清单。
 1. 调用 `app.initialize();`。
-1. 作为 **必需** 步骤，调用 `app.notifySuccess()` 以通知 Teams 应用已成功加载。 然后，Teams 隐藏加载指示器（如果适用）。 如果 `notifySuccess`  未在 30 秒内调用，Teams 假定应用超时，并显示带有重试选项的错误屏幕。
-1. **（可选）** 如果已准备好打印到屏幕，并希望延迟加载应用程序的其余内容，则可以通过调用 `app.notifyAppLoaded();`手动隐藏加载指示器。
-1. 如果应用程序未加载，可以调用 `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` 让 Teams 了解故障，并（可选）提供故障消息。 将向用户显示错误屏幕。 以下代码显示枚举，该枚举定义了可以指示应用程序无法加载的可能原因：
+1. 作为 **必需** 步骤，调用 `app.notifySuccess()` 以通知 Teams 应用已成功加载。 然后，Teams 会隐藏加载指示器（如果适用）。 如果在 `notifySuccess`  30 秒内未调用 ，Teams 会假定你的应用超时，并显示一个错误屏幕，其中包含重试选项。
+1. **（可选）** 如果已准备好打印到屏幕并希望延迟加载应用程序的其余内容，可以通过调用 `app.notifyAppLoaded();`来手动隐藏加载指示器。
+1. 如果应用程序未加载，可以调用 `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` 以告知 Teams 有关失败的信息，并选择性地提供失败消息。 `notifyFailure` 不显示自定义消息。 将向用户显示错误屏幕。 以下代码显示了定义应用程序加载失败的可能原因的枚举：
 
     ```typescript
     /* List of failure reasons */
