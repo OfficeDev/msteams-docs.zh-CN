@@ -1,16 +1,16 @@
 ---
 title: 应用验证失败的常见原因
-description: 了解应用验证失败的最常见原因，例如链接损坏、意外错误、崩溃、有效的域准则冲突、功能 bug。
+description: 了解应用验证失败的最常见原因，例如链接断开、意外错误、崩溃、违反有效域准则、功能 bug。
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 006fe6d9e939d9578fa84c61daaa4c404a10d5f6
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560650"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791725"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>应用验证失败的常见原因
 
@@ -155,7 +155,7 @@ Microsoft 365应用合规性计划通过评估有关应用的安全性和合规�
 * 应用名称在整个应用功能中的使用不一致。
 * 作为应用包的一部分提交的应用清单中提到的应用名称与合作伙伴中心不匹配。
 * 追加了 *Beta 版*、 *开发* 和 *Prod* 的应用名称，以指示应用尚未准备好生产。
-* 应用提交，其中开发人员更改了应用名称，但旧应用名称在应用中使用。
+* 应用提交，其中开发人员已更改应用名称，但旧应用名称仍在应用中使用。
 
 ## <a name="support-link"></a>支持链接
 

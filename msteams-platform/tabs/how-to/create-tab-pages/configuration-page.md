@@ -1,16 +1,16 @@
 ---
 title: 创建配置页
 author: surbhigupta
-description: 创建配置页以从用户处收集信息。 此外，获取 Microsoft Teams 选项卡的上下文数据、了解身份验证、修改或删除选项卡。
+description: 创建配置页以收集用户的信息。 此外，获取 Microsoft Teams 选项卡的上下文数据，了解身份验证、修改或删除选项卡。
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5db345ce0653407b750afa96e6f82fff949f98f6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 51e5ef0a6752ab70ede4d2da699f78910c08f6c9
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560657"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791700"
 ---
 # <a name="create-a-configuration-page"></a>创建配置页
 
@@ -24,13 +24,13 @@ ms.locfileid: "68560657"
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>配置频道或群组聊天选项卡
 
-应用程序必须引用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 并调用 `app.initialize()`。 所使用的 URL 必须保护 HTTPS 终结点，并且可从云中使用。
+应用程序必须引用 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 并调用 `app.initialize()`。 使用的 URL 必须是安全的 HTTPS 终结点，并且可从云中获取。
 
 ### <a name="example"></a>示例
 
 下图显示了配置页的示例：
 
-<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="屏幕截图显示了配置页。":::
 
 下面的代码是配置页的相应代码示例：
 
@@ -160,11 +160,11 @@ ms.locfileid: "68560657"
 
 下图显示了选中 **灰色** 图标的选项卡内容：
 
-<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="屏幕截图显示了“配置”选项卡，其中选择灰色。":::
 
 下图显示了选中 **红色** 图标的选项卡内容：
 
-<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="屏幕截图显示了“配置”选项卡，其中选择了“红色”。":::
 
 选择适当的按钮会触发 `saveGray()` 或 `saveRed()`，并调用以下命令：
 
@@ -172,14 +172,14 @@ ms.locfileid: "68560657"
 * 触发 `pages.config.registerOnSaveHandler()` 事件处理程序。
 * 在应用的配置页上启用“**保存**”。
 
-配置页代码通知 Teams 满足配置要求，并且安装可以继续进行。 当用户选择“**保存**”时，将根据 `Config` 接口的定义设置 `pages.config.setConfig()` 的参数。 有关详细信息，请参阅 [配置接口](/javascript/api/@microsoft/teams-js/pages.config?)。 调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
+配置页代码会通知 Teams 满足配置要求，可以继续安装。 当用户选择“**保存**”时，将根据 `Config` 接口的定义设置 `pages.config.setConfig()` 的参数。 有关详细信息，请参阅 [配置接口](/javascript/api/@microsoft/teams-js/pages.config?)。 调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
 >[!NOTE]
 >
->* 有 30 秒的时间在超时前完成保存操作 (回调) `registerOnSaveHandler` 。 超时后，将显示一般错误消息。
+>* 你有 30 秒的时间来完成保存操作， (超时前回调到 `registerOnSaveHandler`) 。 超时后，将显示一般错误消息。
 >* 如果使用 `registerOnSaveHandler()` 注册保存处理程序，则回调必须调用 `saveEvent.notifySuccess()` 或 `saveEvent.notifyFailure()` 以指示配置的结果。
 >* 如果未注册保存处理程序，则当用户选择“**保** 存”时，将自动进行 `saveEvent.notifySuccess()` 调用。
->* 确保唯一 `entityId`。 重复重 `entityId` 定向到选项卡的第一个实例。
+>* 确保具有唯一 `entityId`的 。 重复 `entityId` 重定向到选项卡的第一个实例。
 
 ### <a name="get-context-data-for-your-tab-settings"></a>获取选项卡设置的上下文数据
 
@@ -247,7 +247,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>使用 `getContext()` 函数检索上下文
 
-该 `app.getContext()` 函数返回一个使用 [上下文接口](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) 对象解析的承诺。
+函数 `app.getContext()` 返回一个通过 [上下文接口](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) 对象解析的 promise。
 
 以下代码提供了将此函数添加到配置页以检索上下文值的示例：
 
@@ -295,9 +295,9 @@ document.write(getId());
 
 ## <a name="modify-or-remove-a-tab"></a>修改或删除选项卡
 
-将清单的 `canUpdateConfiguration` 属性设置为 `true`. 它使用户能够修改或重新配置通道或组选项卡。只能通过 Teams 用户界面重命名选项卡。 删除选项卡时，告知用户对内容的影响。 为此，请在应用中包含删除选项页，并在以前`setSettings()`) 配置的 (中设置`removeUrl`属性`setConfig()`的值。 用户可以卸载个人选项卡，但无法修改它们。 有关详细信息，请参阅[为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。
+将清单的 `canUpdateConfiguration` 属性设置为 `true`。 它使用户能够修改或重新配置频道或组选项卡。只能通过 Teams 用户界面重命名选项卡。 在删除选项卡时通知用户对内容的影响。 为此，请在应用中包括删除选项页，并在以前`setSettings()`) 配置 (中设置 `removeUrl` 属性`setConfig()`的值。 用户可以卸载个人选项卡，但无法修改它们。 有关详细信息，请参阅[为选项卡创建删除页](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
-Microsoft Teams `setConfig()` (以前 `setSettings()`) 用于删除页面的配置：
+Microsoft Teams `setConfig()` (以前 `setSettings()`) 删除配置页面：
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

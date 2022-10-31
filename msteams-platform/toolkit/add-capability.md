@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: abcda0dd19388d1cdce2f2b440ecbae833b5f9c3
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: a0bec3166228b53dd4a6da336b42632ba2475582
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740602"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791753"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>向 Teams 应用添加功能
 
@@ -94,7 +94,7 @@ ms.locfileid: "68740602"
 |机器人、消息扩展和选项卡|在 teamsfx 中包含与机器人或选项卡相关的&nbsp;信息，以及用于集成 Azure 函数的预配文件。|将更新下面的 `templates/azure/teamsfx` 文件，并 `templates/azure/provision/xxx`重新生成 .bicep 文件。|
 |机器人、消息扩展和选项卡|确保为新添加的功能设置了正确的项目配置。|将重新生成下面的 `.fx/config` 文件|
 
-## <a name="step-by-step-guide"></a>分步指南
+## <a name="step-by-step-guides"></a>分步指南
 
 * 按照 [分步](../sbs-gs-commandbot.yml) 指南在 Microsoft Teams 中生成命令机器人。
 

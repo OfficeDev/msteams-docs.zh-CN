@@ -1,31 +1,31 @@
 ---
 title: 智能机器人活动处理程序
 author: surbhigupta
-description: 了解使用 Microsoft Bot Framework SDK 的消息、频道、团队、成员、提及、身份验证、卡片操作的 Microsoft Teams 事件和活动处理程序。
+description: 使用 Microsoft Bot Framework SDK 了解消息、频道、团队、成员、提及、身份验证、卡片操作的 Microsoft Teams 事件和活动处理程序。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4780c4c2ca3965186411f7927f1fb5b555647004
-ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
+ms.openlocfilehash: 6599fbecd9166e053952bbbf70c7a2bea7ab48e3
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67321206"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791676"
 ---
 # <a name="bot-activity-handlers"></a>智能机器人活动处理程序
 
 本文档基于[机器人如何在](https://aka.ms/how-bots-work)核心[Bot Framework 中运行文档](https://aka.ms/azure-bot-service-docs)中的文章生成。 为 Microsoft Teams 开发的机器人与核心 Bot Framework 之间的主要区别在于 Teams 中提供的功能。
 
-若要为机器人组织聊天逻辑，请使用活动处理程序。 使用 Teams 活动处理程序和机器人逻辑以两种方式处理活动。 Teams 活动处理程序添加了对 Teams 特定事件和交互的支持。 机器人对象包含轮次的会话推理或逻辑，并公开轮次处理程序，该处理程序是可以接受来自机器人适配器的传入活动的方法。
+活动处理程序用于组织机器人的对话逻辑。 使用 Teams 活动处理程序和机器人逻辑以两种方式处理活动。 Teams 活动处理程序添加了对 Teams 特定事件和交互的支持。 机器人对象包含轮次的会话推理或逻辑，并公开轮次处理程序，该处理程序是可以接受来自机器人适配器的传入活动的方法。
 
 ## <a name="teams-activity-handlers"></a>Teams 活动处理程序
 
 Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序。 它会先路由所有 Teams 活动，然后再允许处理任何非 Teams 特定的活动。
 
-当 Teams 机器人收到活动时，它会路由到活动处理程序。 所有活动都通过一个称为轮次处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 Teams 机器人派生自 `TeamsActivityHandler` 类，此类派生自 Bot Framework 的 `ActivityHandler` 类。
+当 Teams 机器人收到活动时，该活动将路由到活动处理程序。 所有活动都通过一个称为轮次处理程序的基本处理程序进行路由。 轮次处理程序调用所需的活动处理程序来管理收到的任何活动。 Teams 机器人派生自 `TeamsActivityHandler` 类，此类派生自 Bot Framework 的 `ActivityHandler` 类。
 
 > [!NOTE]
-> 如果机器人活动需要超过 15 秒才能处理，Teams 会向机器人终结点发送重试请求。 因此，机器人中会看到重复的请求。
+> 如果机器人活动处理时间超过 15 秒，Teams 会向机器人终结点发送重试请求。 因此，你将在机器人中看到重复的请求。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -33,7 +33,7 @@ Teams 活动处理程序派生自 Microsoft Bot Framework 的活动处理程序�
 
 在 Teams 活动处理程序类中，有两个主要的 Teams 活动处理程序， `OnConversationUpdateActivityAsync` 和 `OnInvokeActivityAsync`。 `OnConversationUpdateActivityAsync` 路由所有会话更新活动， `OnInvokeActivityAsync` 路由所有 Teams 调用活动。
 
-如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 这些处理程序没有基本实现。 因此，在替代中添加所需的逻辑。
+如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 这些处理程序没有基本实现。 因此，请在替代中添加所需的逻辑。
 
 Teams 活动处理程序的代码片段：
 
@@ -103,7 +103,7 @@ protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> te
 
 在 Teams 活动处理程序类中，有两个主要的 Teams 活动处理程序， `dispatchConversationUpdateActivity` 和 `onInvokeActivity`。 `dispatchConversationUpdateActivity` 路由所有会话更新活动， `onInvokeActivity` 路由所有 Teams 调用活动。
 
-如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 为这些处理程序定义机器人逻辑，然后确保在最后调用 `next()`。 通过调用 `next()`，可确保下一个处理程序运行。
+如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 为这些处理程序定义机器人逻辑，然后确保在最后调用 `next()`。 通过调用 `next()`，可确保运行下一个处理程序。
 
 Teams 活动处理程序的代码片段：
 
@@ -173,13 +173,13 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 在 Teams 活动处理程序类中，有两个主要的 Teams 活动处理程序， `on_conversation_update_activity` 和 `on_invoke_activity`。 `on_conversation_update_activity` 路由所有会话更新活动， `on_invoke_activity` 路由所有 Teams 调用活动。
 
-如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 这些处理程序没有基本实现。 因此，在替代中添加所需的逻辑。
+如果要实现特定活动处理程序 Teams 逻辑，必须覆盖机器人中的方法，如[机器人逻辑](#bot-logic)部分所示。 这些处理程序没有基本实现。 因此，请在替代中添加所需的逻辑。
 
 ---
 
 ## <a name="bot-logic"></a>机器人逻辑
 
-机器人逻辑处理来自一个或多个机器人通道的传入活动，并在响应中生成传出活动。 派生自 Teams 活动处理程序类的机器人仍然如此，该类首先检查 Teams 活动。 检查 Teams 活动后，会将所有其他活动传递给 Bot Framework 的活动处理程序。
+机器人逻辑处理来自一个或多个机器人通道的传入活动，并在响应中生成传出活动。 从 Teams 活动处理程序类派生的机器人仍然如此，该类首先检查 Teams 活动。 检查 Teams 活动后，会将所有其他活动传递给 Bot Framework 的活动处理程序。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -192,7 +192,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 活动处理程序在团队的上下文中有所不同，其中新成员将添加到团队而不是消息线程。
 
-中 `ActivityHandler` 定义的处理程序列表包括以下内容：
+中 `ActivityHandler` 定义的处理程序列表包括以下事件：
 
 | Event | 处理程序 | 说明 |
 | :-- | :-- | :-- |
@@ -208,7 +208,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-specific-activity-handlers"></a>Teams 特定的活动处理程序
 
-`TeamsActivityHandler` 扩展了核心 Bot Framework 处理程序部分中的处理程序列表，以包括以下内容：
+扩展 `TeamsActivityHandler` 核心 Bot Framework 处理程序节中的处理程序列表，以包括以下事件：
 
 | Event | 处理程序 | 说明 |
 | :-- | :-- | :-- |
@@ -221,7 +221,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-invoke-activities"></a>Teams 调用活动
 
-从 Teams 活动处理程序调用的 `OnInvokeActivityAsync` Teams 活动处理程序列表包括：
+从 Teams 活动处理程序调用的 `OnInvokeActivityAsync` Teams 活动处理程序列表包括以下调用类型：
 
 | 调用类型                    | 处理程序                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -229,12 +229,12 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | 用户接受文件同意卡时，将调用此方法。 |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | 从连接器接收文件同意卡活动时，将调用此方法。 |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | 用户拒绝文件同意卡时，将调用此方法。 |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | 从连接器接收Office 365连接器卡操作活动时，将调用此方法。 |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | 当从连接器接收Office 365连接器卡操作活动时，将调用此方法。 |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | 从连接器接收登录验证状态活动时，将调用此方法。 |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | 可在派生类中重写此方法，以便在提取任务模块时提供逻辑。 |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | 可在派生类中重写此方法，以便在提交任务模块时提供逻辑。 |
 
-本部分中列出的 Invoke 活动适用于 Teams 中的聊天机器人。 Bot Framework SDK 还支持调用特定于消息扩展的活动。 有关详细信息，请参阅[什么是消息扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+本部分中列出的“调用”活动适用于 Teams 中的对话机器人。 Bot Framework SDK 还支持调用特定于消息扩展的活动。 有关详细信息，请参阅[什么是消息扩展](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -245,7 +245,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 活动处理程序在团队的上下文中有所不同，其中新成员将添加到团队而不是消息线程。
 
-中 `ActivityHandler` 定义的处理程序列表包括以下内容：
+中 `ActivityHandler` 定义的处理程序列表包括以下事件：
 
 | Event | 处理程序 | 说明 |
 | :-- | :-- | :-- |
@@ -260,7 +260,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-specific-activity-handlers"></a>Teams 特定的活动处理程序
 
-`TeamsActivityHandler` 扩展了核心 Bot Framework 处理程序部分中的处理程序列表，以包括以下内容：
+扩展 `TeamsActivityHandler` 核心 Bot Framework 处理程序节中的处理程序列表，以包括以下事件：
 
 | Event | 处理程序 | 说明 |
 | :-- | :-- | :-- |
@@ -273,7 +273,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-invoke-activities"></a>Teams 调用活动
 
-从 Teams 活动处理程序调用的 `onInvokeActivity` Teams 活动处理程序列表包括：
+从 Teams 活动处理程序调用的 `onInvokeActivity` Teams 活动处理程序列表包括以下内容：
 
 | 调用类型                    | 处理程序                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -281,7 +281,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | 用户接受文件同意卡时，将调用此方法。 |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | 从连接器接收文件同意卡活动时，将调用此方法。 |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | 用户拒绝文件同意卡时，将调用此方法。 |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | 从连接器接收Office 365连接器卡操作活动时，将调用此方法。 |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | 当从连接器接收Office 365连接器卡操作活动时，将调用此方法。 |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | 从连接器接收登录验证状态活动时，将调用此方法。 |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | 可在派生类中重写此方法，以便在提取任务模块时提供逻辑。 |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | 可在派生类中重写此方法，以便在提交任务模块时提供逻辑。 |
@@ -297,7 +297,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 活动处理程序在团队的上下文中有所不同，其中新成员将添加到团队而不是消息线程。
 
-中 `ActivityHandler` 定义的处理程序列表包括以下内容：
+中 `ActivityHandler` 定义的处理程序列表包括以下事件：
 
 | Event | 处理程序 | 说明 |
 | :-- | :-- | :-- |
@@ -309,11 +309,11 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | 收到的事件活动 | `on_event_activity` | 此方法调用特定于事件类型的处理程序。 |
 | 收到的令牌响应事件活动 | `on_token_response_event` | 可以重写此方法来处理令牌响应事件。 |
 | 收到的非令牌响应事件活动 | `on_event` | 可以重写此方法来处理其他类型的事件。 |
-| 收到的其他活动类型 | `on_unrecognized_activity_type` | 可以重写此方法来处理任何未处理的活动类型。 |
+| 收到的其他活动类型 | `on_unrecognized_activity_type` | 可以重写此方法以处理未处理的任何类型的活动。 |
 
 #### <a name="teams-specific-activity-handlers"></a>Teams 特定的活动处理程序
 
-`TeamsActivityHandler` 扩展了核心 Bot Framework 处理程序部分内的处理程序列表，以包括以下内容：
+扩展 `TeamsActivityHandler` 了核心 Bot Framework 处理程序部分的处理程序列表，以包括以下事件：
 
 | Event | 处理程序 | 说明 |
 | :-- | :-- | :-- |
@@ -326,7 +326,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-invoke-activities"></a>Teams 调用活动
 
-从 Teams 活动处理程序调用的 `on_invoke_activity` Teams 活动处理程序列表包括：
+从 Teams 活动处理程序调用的 `on_invoke_activity` Teams 活动处理程序列表包括以下调用类型：
 
 | 调用类型                    | 处理程序                              | 说明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -334,7 +334,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | 用户接受文件同意卡时，将调用此方法。 |
 | fileConsent/invoke              | `on_teams_file_consent`            | 从连接器接收文件同意卡活动时，将调用此方法。 |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | 用户拒绝文件同意卡时，将调用此方法。 |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | 从连接器接收Office 365连接器卡操作活动时，将调用此方法。 |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | 当从连接器接收Office 365连接器卡操作活动时，将调用此方法。 |
 | signin/verifyState              | `on_teams_signin_verify_state`      | 从连接器接收登录验证状态活动时，将调用此方法。 |
 | task/fetch                      | `on_teams_task_module_fetch`        | 可在派生类中重写此方法，以便在提取任务模块时提供逻辑。 |
 | task/submit                     | `on_teams_task_module_submit`       | 可在派生类中重写此方法，以便在提交任务模块时提供逻辑。 |
@@ -345,7 +345,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 ---
 
-现在你已经熟悉了机器人活动处理程序，让我们看看机器人的行为方式如何根据聊天及其接收或发送的消息而有所不同。
+现在，你已熟悉机器人活动处理程序，让我们看看机器人如何根据聊天以及它接收或发送的消息以不同的方式行为。
 
 ## <a name="next-step"></a>后续步骤
 

@@ -5,12 +5,12 @@ description: 了解 Teams 客户端中的网页，属于个人、频道或组自
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dad5451c4255ad97cb14a13983f1701a52f39bb9
-ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
+ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68773441"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791536"
 ---
 # <a name="create-a-content-page"></a>创建内容页
 
@@ -111,7 +111,7 @@ ms.locfileid: "68773441"
 
 > [!NOTE]
 >
-> * 移动客户端上的行为无法通过本机加载指示器属性进行配置。 移动客户端默认在内容页和基于 iframe 的任务模块中显示此指示器。 移动设备上的此指示器将在发出内容提取请求时显示，并在请求完成后立即关闭。
+> 移动客户端上的行为无法通过本机加载指示器属性进行配置。 移动客户端默认在内容页和基于 iframe 的任务模块中显示此指示器。 移动设备上的此指示器将在发出内容提取请求时显示，并在请求完成后立即关闭。
 
 如果在应用清单中指示 `showLoadingIndicator : true`，则所有选项卡配置、内容、删除页和所有基于 iframe 的任务模块都必须遵循以下步骤：
 

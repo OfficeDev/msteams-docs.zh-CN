@@ -1,16 +1,16 @@
 ---
 title: 规划 Teams 移动版
 author: surbhigupta
-description: 通过此学习模块，你将了解如何在 Teams 移动版上规划创建应用，并了解生成应用的不同阶段。
+description: 通过此学习模块，你将了解如何规划在 Teams 移动版上创建应用，并了解生成应用的不同阶段。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e7cf4508f723efa1b2a0445d304e080677b257ff
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66483998"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791557"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>规划 Teams 移动版的响应式选项卡
 
@@ -40,8 +40,8 @@ ms.locfileid: "66483998"
 
    提供完整的应用体验以在移动设备上进行互动。 当用户与应用进行互动时，请在移动设备上提供与桌面体验相当或更出色的完全沉浸式体验。 若要为用户提供良好的体验，请让所有用例都在移动设备上响应。
 
-> [!TIP]
-> 若要获取有关设计准则的信息，请参阅 [Teams 应用的设计过程](design-teams-app-process.md)。
+    > [!TIP]
+    > 若要获取有关设计准则的信息，请参阅 [Teams 应用的设计过程](design-teams-app-process.md)。
 
 ## <a name="use-cases"></a>用例
 
@@ -75,7 +75,7 @@ ms.locfileid: "66483998"
 * 筛选数据。
 * 创建书签。
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="对现有图表和视觉对象执行快速操作。":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="对现有图表和视觉对象的快速操作。":::
 
 启用：
 
@@ -85,7 +85,7 @@ ms.locfileid: "66483998"
 
 * 修改标题和说明。
 * 插入数据项以创建可视化效果。
-* 在频道或群聊中共享可视化效果。
+* 在频道或群组聊天中共享可视化效果。
 
 :::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="使用户能够创建图表图形等内容。":::
 
@@ -111,11 +111,11 @@ ms.locfileid: "66483998"
 
 在第二个阶段，可以向用户提供以下应用访问权限：
 
-* 使用必需字段创建任务或项，以减少用户的认知负载。
+* 创建具有必填字段的任务或项，以减少用户的认知负载。
 * 更改板类型或视图。
-* 通过展开视图来查看任务。
+* 通过展开视图查看任务。
 * 使用任务模块查看详细视图。
-* 将任务移到不同的类别中。
+* 将任务移动到不同的类别。
 * 通过电子邮件和活动源在聊天和频道中共享相关任务。
 
 :::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="创建任务以减少用户的认知负载。":::
@@ -125,8 +125,8 @@ ms.locfileid: "66483998"
 在第三阶段，可以让用户体验以下活动：
 
 * 添加新项目和板。
-* 添加和修改不同的类别，例如 **“建议**”、“ **活动”** 和“ **已关闭**”。
-* 为注释、附件和其他复杂功能配置任务。
+* 添加和修改不同的类别，例如 **“建议**”、“ **活动”** 和 **“已关闭**”。
+* 为批注、附件和其他复杂功能配置任务。
 
 :::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="通过添加项目和板来启用用户体验。":::
 
@@ -146,18 +146,18 @@ ms.locfileid: "66483998"
 
 在第一阶段，可以考虑使用桌面体验来显示应用中的内容和资产。  可以显示以下功能：
 
-* 批注或反馈。
-* 放大或缩小。
+* 评论或反馈。
+* 放大缩小字体功能 放大缩小字体功能
 * 挂起文档的当前阶段或进度。
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="在桌面体验中显示内容和资产。":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="显示桌面体验中的内容和资产。":::
 
 快速操作:
 
 在第二个阶段，可以引入以下操作：
 
 * 创建用于协作的新板或用于签名的新文档。
-* 在内部以及与来宾共享板。
+* 在内部共享板，也与来宾共享。
 * 配置管理员权限。
 
 > [!TIP]
@@ -170,12 +170,12 @@ ms.locfileid: "66483998"
 在第三阶段，为用户提供完整的体验。 可以让用户体验以下活动：
 
 * 添加文本、形状和快速笔记。
-* 在内容周围导航。
+* 在内容中导航。
 * 添加层和筛选器。
 * 删除、撤消和重做操作。
 * 使用 JS SDK API 访问相机和麦克风。 有关设备功能的详细信息，请参阅[设备功能概述](../device-capabilities/device-capabilities-overview.md)。
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="通过添加文本形状、快速笔记和其他功能来启用用户体验。":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="通过添加文本形状和快速笔记和其他功能来启用用户体验。":::
 
 <br>
 

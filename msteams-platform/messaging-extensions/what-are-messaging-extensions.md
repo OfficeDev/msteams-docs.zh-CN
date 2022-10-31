@@ -1,20 +1,20 @@
 ---
 title: 消息扩展
 author: surbhigupta
-description: 了解如何使用消息扩展、其类型以及在 Microsoft Teams 平台上使用的方案。 操作示例和基于搜索的消息扩展插件。
+description: 了解如何使用消息扩展、其类型，以及它在 Microsoft Teams 平台上使用的方案。 有关操作和基于搜索的消息扩展的示例。
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 766a135a55b3894c985a0701bb883d45519b496b
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 09dad55a4ca0b59e517f55e12f24d8ea8d687313
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100271"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791732"
 ---
 # <a name="message-extensions"></a>消息扩展
 
-消息扩展允许用户通过 Microsoft Teams 客户端中的按钮和表单与你的 Web 服务进行交互。 他们可以从撰写消息区域、命令框或直接从消息的外部系统中搜索或启动操作。 可以以格式丰富的卡片的形式将该交互的结果发送回 Teams 客户端。
+消息扩展允许用户通过 Microsoft Teams 客户端中的按钮和表单与你的 Web 服务进行交互。 他们可以从撰写消息区域、命令框或直接从消息的外部系统中搜索或启动操作。 你可以以格式丰富的卡片形式将该交互的结果发送回 Teams 客户端。
 
 > [!IMPORTANT]
 > 消息扩展在政府社区云 (GCC) 和GCC-High环境中提供，但在国防部 (DoD) 环境中不可用。
@@ -38,12 +38,12 @@ ms.locfileid: "68100271"
 
 ## <a name="understand-how-message-extensions-work"></a>了解消息扩展的工作原理
 
-消息扩展由托管的 Web 服务和应用清单组成，用于定义 Web 服务在 Teams 客户端中的调用位置。 他们利用 Bot Framework 的消息传递架构和安全通信协议，因此你还需要在 Bot Framework 中将 Web 服务注册为机器人。
+消息扩展由托管的 Web 服务和应用清单组成，该清单定义在 Teams 客户端中从何处调用 Web 服务。 他们利用 Bot Framework 的消息传递架构和安全通信协议，因此你还需要在 Bot Framework 中将 Web 服务注册为机器人。
 
 > [!NOTE]
 > 虽然可以手动创建 Web 服务，但请使用 [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) 来处理协议。
 
-在 Teams 应用的应用清单中，使用最多 10 个不同的命令定义单个消息扩展。 每个命令定义一个类型，例如操作或搜索，以及从中调用其客户端中的位置。 调用位置为撰写消息区域、命令栏和消息。 调用时，Web 服务将接收包含 JSON 有效负载（包括所有相关信息）的 HTTPS 消息。 使用 JSON 有效负载进行响应，使 Teams 客户端能够知道要启用的下一个交互。
+在 Teams 应用的应用清单中，使用最多 10 个不同的命令定义单个消息扩展。 每个命令定义一个类型，例如操作或搜索，以及客户端中调用它的位置。 调用位置为撰写消息区域、命令栏和消息。 调用时，Web 服务将接收包含 JSON 有效负载（包括所有相关信息）的 HTTPS 消息。 使用 JSON 有效负载进行响应，使 Teams 客户端能够知道要启用的下一个交互。
 
 ## <a name="types-of-message-extension-commands"></a>消息扩展命令的类型
 
@@ -71,7 +71,7 @@ ms.locfileid: "68100271"
 
 ## <a name="link-unfurling"></a>链接展开
 
-粘贴在撰写消息区域中的 URL 时，将调用 Web 服务。 此功能称为链接展开。 当粘贴某一域的 URL 到撰写消息区域，可以订阅以接收调用。 Web 服务可以将 URL“展开”到详细卡片中，提供的信息比标准网站预览卡还多。 可以添加按钮以允许用户在不离开 Teams 客户端的情况下立即采取行动。
+粘贴在撰写消息区域中的 URL 时，将调用 Web 服务。 此功能称为链接展开。 当粘贴某一域的 URL 到撰写消息区域，可以订阅以接收调用。 Web 服务可以将 URL“展开”到详细卡片中，提供的信息比标准网站预览卡还多。 可以添加按钮以允许用户在不离开 Teams 客户端的情况下立即执行操作。
 在消息扩展插件中粘贴链接时，以下图像显示链接展开功能：
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="展开链接":::
@@ -238,7 +238,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 |------------|-------------|----------------|------------|------------|
 | 具有基于操作命令的消息扩展 | 此示例演示如何生成基于操作的消息扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | 具有基于搜索命令的消息扩展 | 此示例演示如何生成基于搜索的消息扩展。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|任务计划的消息扩展操作|此示例演示如何从消息扩展操作命令中计划任务，并在计划的日期和时间获取提醒卡。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|任务计划的消息扩展操作|此示例演示如何从消息扩展操作命令中计划任务，并在计划的日期和时间获取提醒卡。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| 不适用 |
 
 ## <a name="next-step"></a>后续步骤
 
@@ -249,4 +249,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 * [定义搜索消息扩展命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [创建消息扩展](../build-your-first-app/build-messaging-extension.md)
-* [基于搜索的消息传递扩展的通用操作](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* [基于搜索的消息传送扩展的通用操作](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

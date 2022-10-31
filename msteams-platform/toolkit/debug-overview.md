@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
-ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
+ms.openlocfilehash: db6e3b99ab737b7ea8cac393e6ee3e0830cd0acc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68653677"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791788"
 ---
 # <a name="debug-your-teams-app"></a>调试 Teams 应用
 
@@ -20,23 +20,23 @@ Teams 工具包可帮助你调试和预览 Microsoft Teams 应用。 调试是�
 
 ::: zone pivot="visual-studio-code"
 
-## <a name="debug-your-teams-app-for-visual-studio-code"></a>调试 Teams 应用以Visual Studio Code
+## <a name="debug-your-teams-app-for-visual-studio-code"></a>针对Visual Studio Code调试 Teams 应用
 
-Microsoft 中的 Teams 工具包Visual Studio Code自动执行调试过程。 可以检测错误并修复这些错误，并预览 Teams 应用。 还可以自定义调试设置以创建选项卡或机器人。
+Microsoft Visual Studio Code 中的 Teams 工具包可自动执行调试过程。 可以检测错误并修复错误，以及预览团队应用。 还可以自定义调试设置以创建选项卡或机器人。
 
-## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>调试 Microsoft Teams 应用以进行Visual Studio Code
+## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>调试适用于Visual Studio Code的 Microsoft Teams 应用
 
-Visual Studio Code中的 Teams 工具包自动执行调试过程。 可以检测错误并修复这些错误，并预览 Teams 应用。 还可以自定义调试设置以创建选项卡或机器人。
+Visual Studio Code 中的 Teams 工具包自动执行调试过程。 可以检测错误并修复错误，以及预览团队应用。 还可以自定义调试设置以创建选项卡或机器人。
 
 在调试过程中：
 
-* Teams 工具包会自动启动应用服务、启动调试器和旁加载 Teams 应用。
+* Teams 工具包会自动启动应用服务、启动调试器，并旁加载 Teams 应用。
 * Teams 工具包在调试后台过程中检查先决条件。
-* 调试后，Teams 应用可在本地 Teams Web 客户端中预览。
+* 调试后，Teams 应用可在 Teams Web 客户端本地预览。
 * 还可以自定义调试设置，使用自动程序终结点、开发证书或调试部分组件来加载配置应用。
-* Microsoft Visual Studio Code允许你调试选项卡、机器人、消息扩展和Azure Functions。
+* Microsoft Visual Studio Code允许调试选项卡、机器人、消息扩展和Azure Functions。
 
-## <a name="key-debug-features-of-teams-toolkit"></a>Teams 工具包的关键调试功能
+## <a name="key-debug-features-of-teams-toolkit"></a>Teams 工具包的主要调试功能
 
 Teams 工具包支持以下调试功能：
 
@@ -46,11 +46,11 @@ Teams 工具包支持以下调试功能：
 * [热重新加载](#hot-reload)
 * [停止调试](#stop-debugging)
 
-Teams 工具包在调试过程中执行后台函数，其中包括验证调试所需的先决条件。 可以在 Teams 工具包的输出通道中查看验证过程的进度。 在安装过程中，可以注册和配置 Teams 应用。
+Teams 工具包在调试过程中执行后台功能，包括验证调试所需的先决条件。 可以在 Teams 工具包的输出通道中查看验证过程的进度。 在设置过程中，可以注册和配置 Teams 应用。
 
 ### <a name="start-debugging"></a>开始调试
 
-可以按 **F5** 作为单个操作开始调试。 Teams 工具包开始检查先决条件、注册 Azure AD 应用、Teams 应用以及注册机器人、启动服务和启动浏览器。
+可以按 **F5** 作为单个操作来开始调试。 Teams 工具包开始检查先决条件、注册 Azure AD 应用、Teams 应用以及注册机器人、启动服务和启动浏览器。
 
 ### <a name="multi-target-debugging"></a>多目标调试
 
@@ -64,13 +64,13 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 
 ### <a name="hot-reload"></a>热重新加载
 
-在调试 Teams 应用时，可以同时更新和保存选项卡、机器人、消息扩展和Azure Functions的源代码。 应用将重新加载，调试器将重新连接到编程语言。
+调试 Teams 应用时，可以同时更新和保存选项卡、机器人、消息扩展和Azure Functions的源代码。 应用将重新加载，调试器将重新连接到编程语言。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="源代码的热重新加载" lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
 
 ### <a name="stop-debugging"></a>停止调试
 
-完成本地调试后，可以选择 **“停止 (Shift+F5)** 或[Alt] 从浮动调试工具栏 **(Shift+F5) 断开连接** ，停止所有调试会话并终止任务。 下图显示了停止调试操作：
+完成本地调试后，可以选择“ **停止 (Shift+F5)** 或 **[Alt] 断开 (Shift+F5)** ，以停止所有调试会话并终止任务。 下图显示了停止调试操作：
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="停止调试":::
 
@@ -84,7 +84,7 @@ Teams 工具包利用多目标调试功能同时调试选项卡、自动程序�
 
 ### <a name="toggle-breakpoints"></a>切换断点
 
-有关详细信息，请参阅[“切换断点](#toggle-breakpoints)”，确保可以在选项卡、机器人、消息扩展和Azure Functions的源代码上切换断点
+确保可以在选项卡、机器人、消息扩展和Azure Functions的源代码上切换断点，有关详细信息，请参阅[切换断点](#toggle-breakpoints)
 
 ## <a name="customize-debug-settings"></a>自定义调试设置
 
@@ -98,7 +98,7 @@ Teams 工具包允许自定义调试设置以创建选项卡或机器人。 有�
 
 <summary><b>跳过先决条件检查</b></summary>
 
-在`.fx/configs/tasks.json`下面`"Validate & install prerequisites"` >  > `"args"``"prerequisites"`，更新要跳过的先决条件检查。
+在 `.fx/configs/tasks.json` 下的 `"Validate & install prerequisites"` >  > `"args"``"prerequisites"`中，更新要跳过的先决条件检查。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="跳过先决条件检查":::
 
@@ -107,15 +107,15 @@ Teams 工具包允许自定义调试设置以创建选项卡或机器人。 有�
 <details>
 <summary><b>使用开发证书</b></summary>
 
-1. 在`.fx/configs/tasks.json`，取消检查`"devCert"`下`"prerequisites"``"Validate & install prerequisites"``"args"` >  > 。
-1. 将“SSL_CRT_FILE”和“SSL_KEY_FILE” `.env.teamsfx.local` 设置为证书文件路径和密钥文件路径。
+1. 在 中`.fx/configs/tasks.json`，取消选中 下的 。`"devCert"` `"Validate & install prerequisites"` > `"args"` > `"prerequisites"`
+1. 将 中的“SSL_CRT_FILE”和“SSL_KEY_FILE” `.env.teamsfx.local` 设置为证书文件路径和密钥文件路径。
 
 </details>
 
 <details>
-<summary><b>自定义 npm 安装 args</b></summary>
+<summary><b>自定义 npm install args</b></summary>
 
-在 `.fx/configs/tasks.json`中，在下 `"Install npm packages"`设置 npmInstallArgs。
+在 `.fx/configs/tasks.json`中，在 下 `"Install npm packages"`设置 npmInstallArgs。
   
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="安装 npm 包":::
 
@@ -125,7 +125,7 @@ Teams 工具包允许自定义调试设置以创建选项卡或机器人。 有�
 <summary><b>修改端口</b></summary>
 
 * Bot
-  1. 在整个项目中`tasks.json`搜索`"3978"`并查找外观， `ngrok.yml` `index.js`
+  1. 在整个项目中搜索`"3978"`并查找 、 `ngrok.yml` 和 `index.js`中的`tasks.json`外观。
   1. 将其替换为端口。
      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="替换机器人的端口":::
 * Tab
@@ -138,7 +138,7 @@ Teams 工具包允许自定义调试设置以创建选项卡或机器人。 有�
 <details>
 <summary><b>使用自己的应用包</b></summary>
 
-在`.fx/configs/tasks.json`其中，设置`"Build & upload Teams manifest"``"appPackagePath"`为应用包的路径。
+在 `.fx/configs/tasks.json`中，将 下`"Build & upload Teams manifest"`设置为`"appPackagePath"`应用包的路径。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="使用自己的应用包路径":::
 
@@ -147,10 +147,10 @@ Teams 工具包允许自定义调试设置以创建选项卡或机器人。 有�
 <details>
 <summary><b>使用自己的隧道</b></summary>
 
-1. 在 `.fx/configs/tasks.json` 下面 `"Start Teams App Locally"`，你可以更新 `"Start Local tunnel"`。
+1. 在 `.fx/configs/tasks.json` 下 `"Start Teams App Locally"`，可以更新 `"Start Local tunnel"`。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="使用自己的隧道":::
-1. 启动自己的隧道服务，然后在下面`"Set up bot"`更新`"botMessagingEndpoint"`到自己的消息终结点`.fx/configs/tasks.json`。
+1. 启动自己的隧道服务，然后在 下`.fx/configs/tasks.json``"Set up bot"`更新`"botMessagingEndpoint"`到你自己的消息终结点。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="更新消息传送终结点":::
 
@@ -163,7 +163,7 @@ Teams 工具包允许自定义调试设置以创建选项卡或机器人。 有�
 你可以将环境变量添加到选项卡、自动程序、邮件扩展和 Azure 函数的 `.env.teamsfx.local` 文件。 Teams 工具包加载添加的环境变量，以在本地调试期间启动服务。
 
  > [!NOTE]
- > 请确保在添加新环境变量后启动新的本地调试，因为环境变量不支持热重载。
+ > 确保添加新环境变量后启动新的本地调试，因为环境变量不支持热重载。
 
 </details>
 
@@ -172,7 +172,7 @@ Teams 工具包允许自定义调试设置以创建选项卡或机器人。 有�
 
 Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选项卡、自动程序、邮件扩展和 Azure 函数。 可以更新 `.vscode/launch.json` 和 `.vscode/tasks.json` 来调试部分组件。 如果只想在 Azure 函数项目中调试选项卡和自动程序，请使用以下步骤：
 
-1. 更新 `"Attach to Bot"` 和 `"Attach to Backend"` 从调试复合在 `.vscode/launch.json`.
+1. 从 中的调试复合中`.vscode/launch.json`更新 `"Attach to Bot"` 和 `"Attach to Backend"` 。
 
    ```json
    {
@@ -192,7 +192,7 @@ Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选
    }
    ```
 
-2. 在 .vscode/tasks.json 中更新 `"Start Backend"` 和 `"Start Bot"` 从“开始所有”任务。
+2. 从 .vscode/tasks.json 中的“启动所有任务”更新 `"Start Backend"` 和 `"Start Bot"` 。
 
    ```json
    {
@@ -221,7 +221,7 @@ Teams 工具包利用 Visual Studio Code 多目标调试功能，同时调试选
 
 ## <a name="debug-your-teams-app-using-visual-studio"></a>使用 Visual Studio 调试 Teams 应用
 
-Teams 工具包自动执行应用启动服务、启动调试和旁加载 Teams 应用。 调试后，可以在 Teams Web 客户端中预览 Teams 应用。 还可以自定义调试设置，以使用机器人终结点或环境变量加载已配置的应用。 Visual Studio 允许调试选项卡、机器人和消息扩展。 在调试过程中，Teams 工具包支持以下调试功能：
+Teams 工具包自动执行应用启动服务、启动调试和旁加载 Teams 应用。 调试后，可以在 Teams Web 客户端中预览 Teams 应用。 还可以自定义调试设置，以使用机器人终结点或环境变量来加载配置的应用。 Visual Studio 允许调试选项卡、机器人和消息扩展。 在调试过程中，Teams 工具包支持以下调试功能：
 
 * 准备 Teams 应用依赖项
 * 开始调试
@@ -234,22 +234,22 @@ Teams 工具包自动执行应用启动服务、启动调试和旁加载 Teams �
 | &nbsp; | 安装 | 用于使用... |
 | --- | --- | --- |
 | &nbsp; | **Required** | &nbsp; |
-| &nbsp; | Visual Studio 2022 版本 17.3 | 可以安装 Visual Studio 的企业版，并安装“ASP.NET”工作负荷和 Microsoft Teams 开发工具。 |
+| &nbsp; | Visual Studio 2022 版本 17.3 | 可以安装 Visual Studio 企业版，并安装“ASP.NET”工作负载和 Microsoft Teams 开发工具。 |
 | &nbsp; | Teams 工具包 | 一个 Visual Studio 扩展，用于为应用创建项目基架。 使用最新版本。 |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | 通过聊天、会议、通话等应用与每一位同事进行协作的 Microsoft Teams - 一个地方完成所有操作。 |
-| &nbsp; | [准备 Microsoft 365 租户](../concepts/build-and-test/prepare-your-o365-tenant.md) | 对具有相应安装应用权限的 Teams 帐户的访问权限。 |
-| &nbsp; | [Microsoft 365 开发人员帐户](/../concepts/build-and-test/prepare-your-o365-tenant) | 对具有相应安装应用权限的 Teams 帐户的访问权限。 |
-| &nbsp; | Azure 工具和 [Microsoft Azure CLI](/cli/azure/install-azure-cli) | 用于访问存储数据或在 Azure 中为 Teams 应用部署基于云的后端的 Azure 工具。 |
+| &nbsp; | [准备 Microsoft 365 租户](~/concepts/build-and-test/prepare-your-o365-tenant.md) | 具有安装应用的相应权限的 Teams 帐户的访问权限。 |
+| &nbsp; | [Microsoft 365 开发人员帐户](~/concepts/build-and-test/prepare-your-o365-tenant.md) | 具有安装应用的相应权限的 Teams 帐户的访问权限。 |
+| &nbsp; | Azure 工具和 [Microsoft Azure CLI](/cli/azure/install-azure-cli) | 用于访问存储的数据或在 Azure 中为 Teams 应用部署基于云的后端的 Azure 工具。 |
 |&nbsp;  | **可选** | &nbsp; |
 |&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok 用于将外部消息从 Azure Bot Framework 转发到本地计算机。|
 
 ## <a name="key-features-of-teams-toolkit"></a>Teams 工具包的主要功能
 
-可以看到 Teams 工具包的以下主要功能，这些功能可自动执行 Teams 应用的本地调试过程：
+可以看到 Teams 工具包的以下关键功能，这些功能可自动执行 Teams 应用的本地调试过程：
 
 ### <a name="prepare-teams-app-dependencies"></a>准备 Teams 应用依赖项
 
-Teams 工具包准备本地调试依赖项，并在帐户的租户中注册 Teams 应用。 对于机器人和消息扩展应用，Teams 工具包将注册和配置机器人。
+Teams 工具包准备本地调试依赖项，并在帐户的租户中注册 Teams 应用。 对于机器人和消息扩展应用，Teams 工具包将注册并配置机器人。
 
 ### <a name="start-debugging"></a>开始调试
 
@@ -257,27 +257,27 @@ Teams 工具包准备本地调试依赖项，并在帐户的租户中注册 Team
 
 ### <a name="toggle-breakpoints"></a>切换断点
 
-可以在选项卡、机器人、消息扩展和 Azure 函数的源代码中切换断点。 在 Web 浏览器中与 Teams 应用交互时，断点会执行。
+可以在选项卡、机器人、消息扩展和 Azure 函数的源代码中切换断点。 在 Web 浏览器中与 Teams 应用交互时，会执行断点。
 下图显示了切换断点：
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="本地调试切换断点" lightbox="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png":::
 
 ### <a name="hot-reload"></a>热重新加载
 
-选择 **热重载** 在调试期间同时更新和保存源代码时，在 Teams 应用中应用更改。
+若要在调试期间同时更新和保存源代码，请选择“**热重载**”以在 Teams 应用中应用所做的更改。
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload.png" alt-text="选择热重载图标":::
 
-从下拉列表 **中选择“文件保存”热重载** 选项以启用自动热重载。
+从下拉列表中选择 **“文件保存”上热重载** 选项以启用自动热重载。
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-hot-reload-filesave.png" alt-text="在文件保存时选择热重载":::
   
    > [!Tip]
-   > 若要详细了解在调试期间 visual Studio 的热重载函数，可以访问<https://aka.ms/teamsfx-vs-hotreload>。
+   > 若要详细了解调试期间 Visual Studio 的热重载函数，请访问 <https://aka.ms/teamsfx-vs-hotreload>。
 
 ### <a name="stop-debugging"></a>停止调试
 
-本地调试完成后，选择 **“停止** 调试”。
+在本地 **调试** 完成后，选择“停止调试”。
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Stopdebug.png" alt-text="选择“停止调试”图标":::
 
@@ -287,7 +287,7 @@ Teams 工具包准备本地调试依赖项，并在帐户的租户中注册 Team
 
 ### <a name="use-your-bot-endpoint"></a>使用自动程序终结点
 
-可以将 **.fx/configs/config.local.json** 中的 siteEndpoint 配置设置为终结点。
+可以在 **.fx/configs/config.local.json** 中将 siteEndpoint 配置设置为终结点。
 
 ```
 "bot": {
@@ -305,17 +305,17 @@ Teams 工具包准备本地调试依赖项，并在帐户的租户中注册 Team
 
 可以将 Teams 应用作为 Web 应用启动，而不是在 Teams 客户端中运行。
 
-1. 在项目下的解决方案资源管理器面板中选择 **“属性** > **”launchSettings.json**。
+1. 在项目下的解决方案资源管理器面板中选择 **“属性** > **启动”“设置.json**”。
 1. 从文件中删除 **“launchUrl”。**
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="通过删除 launchurl 将团队作为 Web 应用启动" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
 
-1. 右键单击 **“解决方案** ”，然后选择 **“属性**”。
+1. 右键单击“ **解决方案** ”，然后选择“ **属性**”。
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="右键单击解决方案并选择属性" lightbox="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png":::
 
-1. 在对话框中选择 **“配置属性** > **配置** ”。
-1. 清除 **“部署”** 复选框。
+1. 在对话框中选择“ **配置属性** > **配置** ”。
+1. 清除“ **部署** ”复选框。
 1. 选择“**确定**”。
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="取消选中配置属性中的部署" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::

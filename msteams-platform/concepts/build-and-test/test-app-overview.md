@@ -1,14 +1,14 @@
 ---
 title: 测试应用概述
-description: 在本模块中，了解在Microsoft 365中测试和调试Teams自定义应用并将测试数据添加到Microsoft 365租户的过程
+description: 在本模块中，了解在 Microsoft 365 中测试和调试 Teams 自定义应用并将测试数据添加到 Microsoft 365 租户的过程
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7cb0d194cfa5cab503a632889b5449f086532afd
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144381"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791550"
 ---
 # <a name="test-your-app"></a>测试应用
 
@@ -20,7 +20,7 @@ ms.locfileid: "66144381"
 
 ## <a name="prepare-your-microsoft-365-tenant"></a>准备 Microsoft 365 租户
 
-在开始测试应用之前，请准备 Microsoft 365 测试租户，启用自定义 Teams 应用以便上传应用。 必须注册 Microsoft 365 开发人员计划，并管理组织的 Teams 设置。 设置开发人员订阅，并通过[准备 Microsoft 365 租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)进行配置。
+在开始测试应用之前，请准备 Microsoft 365 测试租户并启用自定义 Teams 应用以允许上传应用。 必须注册 Microsoft 365 开发人员计划，并管理组织的 Teams 设置。 设置开发人员订阅，并通过[准备 Microsoft 365 租户](~/concepts/build-and-test/prepare-your-o365-tenant.md)进行配置。
 
 ## <a name="test-and-debug"></a>测试和调试
 

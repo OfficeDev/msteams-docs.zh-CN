@@ -1,20 +1,20 @@
 ---
 title: 选项卡链接展开和阶段视图
 author: Rajeshwari-v
-description: 了解阶段视图，这是调用以显示 Web 内容的全屏 UI 组件。 链接展开用于使用自适应卡将 URL 转换为选项卡。
+description: 了解舞台视图，这是一个为显示 Web 内容而调用的全屏 UI 组件。 链接展开用于使用自适应卡片将 URL 转换为选项卡。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
-ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
+ms.openlocfilehash: 57ff75ac5861f6f348f676c85cc8ac702ece9842
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2022
-ms.locfileid: "68484918"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791564"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>选项卡链接展开和阶段视图
 
-阶段视图是 UI) 组件 (新的用户界面。 它允许呈现在 Teams 中全屏打开并固定为选项卡的内容。
+阶段视图是一个新的用户界面 (UI) 组件。 它允许呈现在 Teams 中全屏打开并固定为选项卡的内容。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -45,9 +45,9 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 下图显示了从自适应卡片打开的阶段：
 
-[![从自适应卡片打开阶段](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="屏幕截图显示了自适应卡片中的打开阶段。"lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![打开阶段](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="屏幕截图显示卡片中的打开阶段。"lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### <a name="example"></a>示例
 
@@ -90,7 +90,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 > [!NOTE]
 >
-> 在 Teams 移动客户端上，为通过 [Teams 存储](~/concepts/deploy-and-publish/apps-publish-overview.md) 分发且没有移动优化体验的应用调用阶段视图会打开设备的默认 Web 浏览器。 浏览器将打开 `TabInfo` 对象的 `websiteUrl` 参数中指定的 URL。
+> 在 Teams 移动客户端上，为通过 [Teams 应用商店](~/concepts/deploy-and-publish/apps-publish-overview.md) 分发的应用调用阶段视图，并且没有移动优化体验会打开设备的默认 Web 浏览器。 浏览器将打开 `TabInfo` 对象的 `websiteUrl` 参数中指定的 URL。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>通过深层链接调用阶段视图
 
@@ -104,7 +104,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 ### <a name="examples"></a>示例
 
-当用户输入 URL 时，它将展开到自适应卡片中。
+当用户输入 URL 时，该 URL 会展开到自适应卡片中。
 
 下面是用于调用阶段视图的深层链接示例：
 
@@ -129,7 +129,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 `<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>`
 
 > [!NOTE]
-> 粘贴 URL 之前，必须先对所有深层链接进行编码。 我们不支持未编码的 URL。
+> 粘贴 URL 之前，必须对所有深层链接进行编码。 我们不支持未编码的 URL。
 >
 > * `name` 在深层链接中是可选的。 如果未包含，应用名称将替换它。
 > * 也可以通过 `OpenURL` 操作传递深层链接。

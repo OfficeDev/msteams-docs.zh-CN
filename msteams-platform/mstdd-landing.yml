@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Microsoft Teams 开发人员文档
-summary: 欢迎查看 Microsoft Teams 开发人员文档概述。 Microsoft Teams 应用将关键信息、常用工具和受信任的流程引入人们不断收集、学习和工作的地方。
+summary: 欢迎查看 Microsoft Teams 开发人员文档概述。 Teams 应用将关键信息、常用工具和受信任的流程引入人们越来越多地收集、学习和工作的地方。
 metadata:
   title: Microsoft Teams 开发人员文档
   description: 为 Teams 构建应用简介
@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 35cdd8a9e70ced7e78377f35184ba033dcf36154
-  ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
+  ms.openlocfilehash: 7a21f1d000d586124aa1338eb5f7f74dc5b43c71
+  ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
   ms.translationtype: MT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 10/28/2022
-  ms.locfileid: "68773497"
+  ms.lasthandoff: 10/31/2022
+  ms.locfileid: "68791795"
 landingContent:
 - title: 了解最新
   linkLists:
@@ -151,14 +151,12 @@ landingContent:
       url: ~/sbs-meeting-token-generator.yml
     - text: 生成会议侧窗格
       url: ~/sbs-meetings-sidepanel.yml
-  - linkListType: tutorial
-    links:
     - text: 发送活动源通知
       url: ~/sbs-graphactivity-feedbroadcast.yml
-    - text: 生成会议中文档签名应用
-      url: ~/sbs-inmeeting-document-signing.yml
   - linkListType: tutorial
     links:
+    - text: 生成会议中文档签名应用
+      url: ~/sbs-inmeeting-document-signing.yml
     - text: 使用 JavaScript 生成命令机器人
       url: sbs-gs-commandbot.yml
     - text: 使用 JavaScript 生成通知机器人
@@ -177,6 +175,8 @@ landingContent:
       url: ~/sbs-outgoing-webhooks.yml
     - text: 使用机器人在 Teams 中展开链接
       url: ~/sbs-botbuilder-linkunfurling.yml
+  - linkListType: tutorial
+    links:
     - text: 生成 Teams 连接器
       url: ~/sbs-teams-connectors.yml
 - title: Teams 应用方案

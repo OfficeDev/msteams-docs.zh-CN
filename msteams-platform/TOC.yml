@@ -274,8 +274,6 @@
     - name: 具有自适应卡片的生成选项卡
       href: tabs/how-to/build-adaptive-card-tabs.md
       displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
-    - name: 将 Fluid 与 Microsoft Teams 配合使用
-      href: tabs/how-to/using-fluid-msteam.md
     - name: 选项卡链接展开和阶段视图
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -570,6 +568,8 @@
     - name: 入门
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
       displayName: 'Access, report, MSAL2'
+    - name: Teams 应用权限
+      href: graph-api/app-permissions/teams-app-permissions.md
     - name: 资源特定许可
       href: graph-api/rsc/resource-specific-consent.md
       displayName: 'Permissions, delegated'

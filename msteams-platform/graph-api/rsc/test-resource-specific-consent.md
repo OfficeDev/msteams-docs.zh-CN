@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: Teams 授权 OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ade66f40662140b86fcc9ae2e185fc10ea09d2f2
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189879"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791711"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>在 Teams 中测试特定于资源的同意权限
 
@@ -273,7 +273,7 @@ ms.locfileid: "66189879"
 
 * `azureADAppId`：应用的 Azure AD 应用 ID。
 * `azureADAppSecret`：Azure AD 应用密码。
-* `token_scope`：获取令牌所需的范围。 将值设置为 https://graph.microsoft.com/.default。
+* `token_scope`：获取令牌所需的范围。 将值设置为 `https://graph.microsoft.com/.default`。
 * `teamGroupId`：可以从 Teams 客户端获取团队组 ID，如下所示：
 
     1. 在 Teams 客户端中，从最左侧导航栏中选择“**团队**”。
@@ -288,7 +288,7 @@ ms.locfileid: "66189879"
 
 * `azureADAppId`：应用的 Azure AD 应用 ID。
 * `azureADAppSecret`：Azure AD 应用密码。
-* `token_scope`：获取令牌所需的范围。 将值设置为 https://graph.microsoft.com/.default。
+* `token_scope`：获取令牌所需的范围。 将值设置为 `https://graph.microsoft.com/.default`。
 * `tenantId`：租户的名称或 Azure AD 对象 ID。
 * `chatId`：可以从 Teams *Web* 客户端获取聊天线程 ID，如下所示：
 

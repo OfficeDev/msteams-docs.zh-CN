@@ -1,15 +1,15 @@
 ---
 title: 使用 Microsoft Graph 权限扩展选项卡应用
-description: 使用 Microsoft Graph 配置其他权限和范围以启用单一登录 (SSO) 。
+description: 使用 Microsoft Graph 配置其他权限和范围，以启用单一登录 (SSO) 。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Microsoft Azure Active Directory (Azure AD) 图形 API 委派权限访问令牌范围的 Teams 身份验证选项卡
-ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 11620e10ed736ce9fe88e3bb755acfbabfec3f47
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780847"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791718"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>使用 Microsoft Graph 权限和范围扩展选项卡应用
 

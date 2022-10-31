@@ -1,18 +1,18 @@
 ---
 title: 打包应用
-description: 了解如何打包 Microsoft Teams 应用并将其上传到 Teams。 创建应用包，启用自定义上传，确保应用正在运行，并可使用 HTTP 进行访问。
+description: 了解如何打包 Microsoft Teams 应用并将其上传到 Teams。 创建应用包，启用自定义上传，确保应用正在运行，并且可使用 HTTPs 进行访问。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 87f9e8c6447c8f2712eea40c7c9db2bda3459550
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: cd2bb1c2f0ff97a28f467334148c283142b2d535
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100194"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791452"
 ---
 # <a name="create-teams-app-package"></a>创建 Teams 应用包
 
-你需要一个应用包，无论你打算如何分发 Microsoft Teams 应用。 有效的包是包含以下内容的 ZIP 文件：
+你需要一个应用包，但是，你计划分发 Microsoft Teams 应用。 有效的包是包含以下内容的 ZIP 文件：
 
 * **应用清单**：描述应用的配置方式，包括其功能、所需资源和其他重要属性。
 * **应用图标**：每个包都需要应用的颜色和轮廓图标。

@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能和现有功能的�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 154f2ae1c293f39c0be5f6f6517fc1607688754f
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: 95dc1e09eb54880e1e3412947914d263f3792fb1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740609"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791585"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -27,7 +27,7 @@ ms.locfileid: "68740609"
 :::column-end:::
 :::column span="2":::
 
-适用于所有应用开发人员的 Microsoft Teams 平台功能。
+可供所有应用开发人员使用的 Teams 平台功能。
 
 **2022 年 10 月**
 
@@ -94,8 +94,8 @@ ms.locfileid: "68740609"
 | 2022/02/24 | 引入了创建传出 Webhook 的分步指南 | 生成 Webhook 和连接器 > 创建传出 Webhook > [创建传出 Webhook](sbs-outgoing-webhooks.yml)|
 | 2022/02/23 | Microsoft Teams 应用商店排名参数| 分发应用 > 发布到 Teams 应用商店 > [Microsoft Teams 应用商店排名参数](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 2022/02/18 | 为 Microsoft Teams 开发人员文档引入了广泛的术语表，可帮助你快速找到有关术语的定义 | [术语表](~/get-started/glossary.md) |
-| 2022/02/18 | 更新了概述模块，用于将 Teams 应用映射到组织目标、用户情景和探索 Teams 应用功能 | [概述 > 适合的 Teams 应用](overview.md) |
-| 2022/02/18 | 更新了应用基础知识模块以规划应用，以包括将用例映射到 Teams 功能和应用规划清单 | [规划应用 > 概述](~/concepts/app-fundamentals-overview.md) |
+| 2022/02/18 | 更新了概述模块，用于将 Teams 应用映射到组织目标、用户情景和探索 Teams 应用功能 | [适合> Teams 应用的](overview.md)概述 |
+| 2022/02/18 | 更新了应用基础知识模块以规划应用，以包括将用例映射到 Teams 功能和应用规划清单 | >[概述](~/concepts/app-fundamentals-overview.md)规划应用 |
 | 02/17/2022 | 提交应用后会发生什么？| 分发应用>发布到 Teams 应用商店>[概述](concepts/deploy-and-publish/appsource/publish.md) |
 | 02/15/2022 | 介绍了如何将文件从机器人上传到 Teams 的分步指南 | 生成机器人>发送和接收文件>[如何将文件从机器人上传到 Teams 的分步指南](sbs-file-handling-in-bot.yml) |
 | 2022 年 2 月 11 日 | 共享会议演示区域| • 为 Teams 会议生成应用 >[共享会议阶段](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • 为 Teams 会议生成应用> [为 Teams 会议生成应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • 应用清单 > 公共开发人员预览 > [开发人员预览清单架构](resources/schema/manifest-schema-dev-preview.md)|
@@ -233,7 +233,7 @@ ms.locfileid: "68740609"
 | 04/23/2019 | 基于操作的邮件扩展现已可用。 | [基于操作的邮件扩展](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | 创建到私人聊天的深层链接。 | [到聊天的深层链接](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 01/23/2019 | 在选项卡上下文中显示 SKU 和 licenceType 信息。 | [选项卡上下文](~/concepts/tabs/tabs-context.md) |
-|
+
 </details>
 
 <br>
@@ -269,7 +269,7 @@ ms.locfileid: "68740609"
 | 03/15/2018 | 卡片的重构文档。 |[卡片](~/concepts/cards/cards.md)、[卡片操作](~/concepts/cards/cards-actions.md)、[卡片格式](~/concepts/cards/cards-format.md)、[卡片参考](~/concepts/cards/cards-reference.md)|
 | 02/27/2018 | 添加了示例代码以演示 AsTeamsChannelAccounts () 方法。 |[获取机器人的背景资料](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | 添加了有关开始使用 C# 的主题。 |[开始在 Microsoft Teams 平台上使用 C#/.NET ](./get-started/get-started-dotnet-app-studio.md)|
-|
+
 </details>
 </details>
 </details>
@@ -330,7 +330,7 @@ ms.locfileid: "68740609"
 :::column-end:::
 :::column span="2":::
 
-不可用的 Microsoft Teams 平台功能。
+Teams 平台功能不可用。
 
 **2022 年 8 月**
 
@@ -355,7 +355,7 @@ Along with new features, we also provide [production-ready Teams app templates](
 
 ### <a name="to-configure-rss-feed"></a>配置 RSS 源
 
-1. 打开 Microsoft Teams。
+1. 打开 Teams。
 1. 从左窗格中选择“**Teams**”。
 1. 选择团队中的频道。
 1. 选择省略号 &#x25CF;&#x25CF;&#x25CF; ，然后从下拉列表中选择“ **连接器**”。

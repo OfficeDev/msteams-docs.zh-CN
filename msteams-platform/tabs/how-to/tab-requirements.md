@@ -1,16 +1,16 @@
 ---
 title: 先决条件
 author: surbhigupta
-description: 本文介绍生成 Microsoft Teams 个人选项卡、频道选项卡或组选项卡的先决条件。了解生成选项卡所需的工具。
+description: 在本文中，了解生成 Microsoft Teams 个人、频道或组选项卡的先决条件。了解生成选项卡所需的工具。
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450413"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791809"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -30,13 +30,13 @@ ms.locfileid: "67450413"
 
 * 根据 Teams 客户端的主题、设计和意向设置选项卡样式。 在构建选项卡以满足特定需求并专注于一小组任务或与选项卡频道位置相关的数据子集时，选项卡效果最佳。
 
-* 在内容页中，使用脚本标记添加对 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 的引用。 加载页面后，调用 `app.initialize()`，否则不会显示页面。
+* 在内容页中，使用脚本标记添加对 [Microsoft Teams JavaScript 客户端 SDK](/javascript/api/overview/msteams-client) 的引用。 页面加载后，调用 `app.initialize()`，否则不会显示页面。
 
 * 要在移动客户端上使用身份验证，必须升级到 Teams JavaScript SDK 1.4.1 及更高版本。
 
 * 如果选择让频道或组选项卡显示在 Teams 移动客户端上，则 `setConfig()` 配置必须具有 `websiteUrl` 属性的值。
 
-* Microsoft Teams 选项卡不支持加载使用自签名证书的 Intranet 网站的功能。
+* Microsoft Teams 选项卡不支持加载使用自签名证书的 Intranet 网站。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -48,7 +48,7 @@ ms.locfileid: "67450413"
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | 后端 JavaScript 运行时环境。 使用最新的 v16 LTS 版本。|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge)（推荐）或 [Google Chrome](https://www.google.com/chrome/) | 包含开发人员工具的浏览器。 |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript、TypeScript 或 SharePoint 框架 (SPFx) 生成环境。 |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)、**ASP.NET 和 web 开发** 或 **.NET Core 跨平台开发** 工作负载 | .NET。 你可以安装 2019 Visual Studio 的免费社区版。 |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)、 **ASP.NET 和 Web 开发** 或 **.NET Core 跨平台开发** 工作负载 | .NET。 可以安装 Visual Studio 2022 的免费社区版。 |
 | &nbsp; | [Git](https://git-scm.com/downloads) | 使用 GitHub 中示例应用存储库的 Git。 |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | 通过聊天、会议、通话等应用与每一位同事进行协作的 Microsoft Teams - 一个地方完成所有操作。 |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok 是反向代理软件工具。 Ngrok 创建通向本地运行 Web 服务器的公开可用 HTTPS 终结点的隧道。 在计算机上当前会话期间，服务器的 Web 终结点可用。 当计算机关机或进入睡眠状态时，服务将不再可用。 |

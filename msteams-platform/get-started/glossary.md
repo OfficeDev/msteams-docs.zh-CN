@@ -3,16 +3,16 @@ title: Microsoft Teams 开发人员文档 - 术语表
 description: 了解 Microsoft Teams 开发人员文档中使用的常见术语、含义和定义。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 74717387d83e32e240a21b83d87a89bcb4591145
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615231"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791438"
 ---
 # <a name="glossary"></a>术语表
 
-Teams 开发人员文档中使用的常用术语和定义。
+Microsoft Teams 开发人员文档中使用的常见术语和定义。
 
 ## <a name="a"></a>A
 
@@ -29,7 +29,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [Azure 资源](../toolkit/provision.md) | 通过 Azure 提供的服务，Teams 应用可将其用于 Azure 部署。 它可以是存储帐户、Web 应用、数据库等。 |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft 基于云的标识和访问管理服务。 它可帮助经过身份验证的用户访问内部和外部资源。 |
 | [身份验证](../concepts/authentication/authentication.md) | 验证用户标识以访问应用的过程。 <br> **另请参阅**：[标识提供者](#i)；[SSO](#s) |
-| [身份验证流](../concepts/authentication/authentication.md) | 用户对应用进行身份验证的方式。 对于 Teams 应用，我们建议使用 Azure Active Directory (AAD) 使用单一登录 (SSO) ，但另一种方法是使用第三方 OAuth 提供程序。|
+| [身份验证流](../concepts/authentication/authentication.md) | 用户向应用进行身份验证的方式。 对于 Teams 应用，我们建议使用单一登录 (SSO) 使用 Azure Active Directory (AAD) ，但替代方法是使用第三方 OAuth 提供程序。|
 
 ## <a name="b"></a>B
 
@@ -49,7 +49,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | [功能](../toolkit/add-capability.md) | 可在应用中构建，以便与应用用户进行交互的 Teams 功能。 应用功能用于扩展 Teams 以满足应用需求。 应用可能具有一个或多个核心功能，例如选项卡、机器人和邮件扩展。 <br>**另请参阅**：[设备功能](#d)；[媒体功能](#m) |
 | [聊天机器人](../bots/how-to/conversations/conversation-basics.md) | 机器人也称为聊天机器人或对话机器人。 它是一个应用，可为客户服务或支持人员等用户运行简单且重复的任务。 <br> **另请参阅**：[对话机器人](#c) |
 | 频道 | 团队共享消息、工具和文件的单个位置。 可以使用频道进行团队合作和沟通。 <br>**另请参阅**：[对话](#c) |
-| [客户端密码](../bots/how-to/authentication/add-authentication.md) | 应用程序在请求令牌时用来证明其标识的机密字符串。 此外，它可称为应用程序密码。|
+| [客户端密码](../bots/how-to/authentication/add-authentication.md) | 应用程序在请求令牌时用于证明其标识的机密字符串。 此外，它也可以称为应用程序密码。|
 | [云资源](../toolkit/add-resource.md) | 通过 Internet 在云上提供的服务，Teams 应用可以使用该服务。 它可以是存储帐户、Web 应用、数据库等。 |
 | [协作与应用](../concepts/extensibility-points.md) | 具有可供用户在协作工作区中与其他用户一起工作的功能的应用。 <br> **另请参阅**：[独立应用](#s) |
 | [撰写扩展](../resources/schema/manifest-schema.md#composeextensions) | 应用清单 (`composeExtensions`) 中引用邮件扩展功能的属性。 该属性用于当扩展需要进行身份验证或配置以继续时。 <br>**另请参阅**：[应用清单](#a)；[邮件扩展](#m) |
@@ -63,7 +63,7 @@ Teams 开发人员文档中使用的常用术语和定义。
 | Term | 定义 |
 | --- | --- |
 | [深层链接](../concepts/build-and-test/deep-links.md) | 在 Teams 应用中，可以创建指向 Teams 中信息和功能的深层链接，或创建帮助用户导航到应用中内容的深层链接。 |
-|[国防部 (DOD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD 环境符合国防部安全要求准则、国防联邦采购条例补充 (DFARS) 以及 ITAR)  (国际武器流量条例。|
+|[国防部 (DOD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD 环境符合国防部安全要求准则、国防联邦采购条例补充 (DFARS) ，以及 ITAR)  (国际武器流量法规。|
 | [Teams 开发人员门户](../concepts/build-and-test/teams-developer-portal.md) | 用于配置、分发和管理 Microsoft Teams 应用的主要工具。 借助开发人员门户，可以在应用上与同事协作、设置运行时环境等。 |
 | [开发人员预览版](../resources/dev-preview/developer-preview-intro.md) | 面向开发人员的公共计划，提供对 Microsoft Teams 中未发布功能的早期访问权限。 通过此计划，可以探索和测试可能包含在 Microsoft Teams 应用中的即将推出的功能。 |
 | 部署 | 用于上传应用程序后端和前端代码的过程。 在部署时，应用的代码将复制到预配期间创建的资源。 <br>**另请参阅**：[预配](#p) |
@@ -85,14 +85,14 @@ Teams 开发人员文档中使用的常用术语和定义。
 
 | Term | 定义 |
 | --- | --- |
-| [首次运行体验](../concepts/design/design-teams-app-ui-templates.md)|首次运行的体验 (FRE) 是用户对产品的介绍。FRE 可帮助用户开始使用产品的功能、功能和优势，并影响用户返回并继续使用你的产品。|
+| [首次运行体验](../concepts/design/design-teams-app-ui-templates.md)| (FRE) 的首次运行体验是用户对产品的介绍。FRE 可帮助用户开始使用产品的功能、功能和优势，并影响用户回来继续使用你的产品。|
 
 ## <a name="g"></a>G
 
 | Term | 定义 |
 | --- | --- |
-|[政府社区云 (GCC) ](../concepts/app-fundamentals-overview.md#government-community-cloud)| GCC 环境符合联邦对云服务的要求，包括 FedRAMP High、国防联邦采购条例补充 (DFARS) ，以及 (CJI 和 FTI 数据类型) 的刑事司法和联邦税务信息系统的要求。|
-|[政府社区云 (GCC) 高](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC 高环境符合国防部 (DoD) 安全要求准则、国防联邦采购条例补充 (DFARS) 以及国际武器法规 (ITAR) 。<br>**另请参阅**： [国防部 (国防部)](#d)|
+|[政府社区云 (GCC) ](../concepts/app-fundamentals-overview.md#government-community-cloud)| GCC 环境符合联邦云服务要求，包括 FedRAMP High、国防联邦收购条例补充 (DFARS) ，以及 (CJI 和 FTI 数据类型) 的刑事司法和联邦税务信息系统的要求。|
+|[政府社区云 (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC 高环境符合国防部 (DoD) 安全要求准则、国防联邦采购条例补充 (DFARS) 以及国际武器贸易条例 (ITAR) 。<br>**另请参阅**： [国防部 (国防部)](#d)|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | 适用于 Microsoft Graph 的 REST 风格的 Web API，支持访问 Microsoft Cloud 服务资源。 <br>**另请参阅**：[Microsoft Graph 浏览器](#m) |
 | [群组聊天](../resources/bot-v3/bot-conversations/bots-conversations.md) | 一种聊天功能，用户可以通过使用 @提及调用机器人，从而在组设置中与机器人聊天。 <br>**另请参阅**：[一对一聊天](#o)；[聊天机器人](#c) |
 

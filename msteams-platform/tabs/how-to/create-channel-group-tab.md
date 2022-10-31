@@ -1,23 +1,23 @@
 ---
-title: “创建频道”选项卡或“组”选项卡
+title: 创建频道选项卡或组选项卡
 author: laujan
-description: 使用 Node.js、ASP.NET Core、ASP.NET Core MVC 创建自定义通道和组选项卡。 生成应用、创建包、生成和运行应用、机密隧道、上传到 Teams
+description: 创建自定义通道、包含Node.js、ASP.NET Core ASP.NET Core MVC 的组选项卡。 生成应用、创建包、生成并运行应用、机密隧道、上传到 Teams
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615238"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791662"
 ---
-# <a name="create-a-channel-tab-or-group-tab"></a>“创建频道”选项卡或“组”选项卡
+# <a name="create-a-channel-tab-or-group-tab"></a>创建频道选项卡或组选项卡
 
-频道或组选项卡将内容传递到频道和群聊，这有助于围绕基于 Web 的专用内容创建协作空间。
+频道或组选项卡将内容传送到频道和群组聊天，这有助于围绕基于 Web 的专用内容创建协作空间。
 
-确保具有生成频道或组选项卡的所有 [先决条件](~/tabs/how-to/tab-requirements.md) 。
+确保具备生成频道或组选项卡的所有 [先决条件](~/tabs/how-to/tab-requirements.md) 。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "68615238"
     npm install yo gulp-cli --global
     ```
 
-2. 在命令提示符下，输入以下命令安装 Microsoft Teams 应用生成器：
+2. 在命令提示符下，通过输入以下命令安装 Microsoft Teams 应用生成器：
 
     ```cmd
     npm install generator-teams --global
@@ -55,7 +55,7 @@ ms.locfileid: "68615238"
     yo teams
     ```
 
-1. 向 Microsoft Teams 应用生成器 `manifest.json` 提示的更新文件的一系列问题提供值：
+1. 向 Microsoft Teams 应用生成器提示的一系列问题提供值以更新文件 `manifest.json` ：
 
     ![生成器打开的屏幕截图](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ ms.locfileid: "68615238"
 
     * **你的 (公司) 名称是什么? (最多 32 个字符)**
 
-        你的公司名称可以在应用清单中使用。 输入公司名称或选择“**Enter**”以接受默认名称。
+        可以在应用清单中使用公司名称。 输入公司名称或选择“**Enter**”以接受默认名称。
 
     * **要使用哪个清单版本?**
 
@@ -94,9 +94,9 @@ ms.locfileid: "68615238"
 
         选择 **( &ast; ) 选项卡**。
 
-    * **要托管此解决方案的 URL？**
+    * **用于托管此解决方案的 URL？**
 
-        默认情况下，生成器建议使用 Azure 网站 URL。 仅在本地测试应用，因此不需要有效的 URL。
+        默认情况下，生成器会建议 Azure 网站 URL。 仅在本地测试应用，因此不需要有效的 URL。
 
     * **加载应用/选项卡时，是否希望显示加载指示器?**
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>将应用程序上传到 Teams
 
 1. 转到 Teams 并选择 **应用**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::。
-1. 选择 **“管理应用** > **上传应用** > **上传自定义应用**”。
+1. 选择“ **管理应用** > **”“上传应用** > **上传自定义应用**”。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择应用包压缩文件夹，然后选择“**打开**”。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="上传的频道选项卡":::
@@ -214,12 +214,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. 按照添加选项卡的说明操作。频道或组选项卡有一个自定义配置对话框。
+1. 按照添加选项卡的说明进行操作。频道或组选项卡有一个自定义配置对话框。
 1. 选择“**保存**”并将选项卡添加到频道的选项卡栏中。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="已上传的“频道”选项卡":::
 
-    现在，你已在 Teams 中成功创建并添加了频道或组选项卡。
+    现在，你已成功在 Teams 中创建并添加了频道或组选项卡。
 
 ::: zone-end
 
@@ -296,7 +296,7 @@ ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。
 * 一个 **透明轮廓图标**，尺寸为 32 x 32 像素。
 * 一个指定应用属性的 `manifest.json` 文件。
 
-这些文件需要压缩在应用包中，以便用于将选项卡上传到 Teams。 当用户选择添加或更新选项卡时，Teams 会加载 `configurationUrl` 清单中指定的选项卡，将其嵌入 IFrame 中，并将其呈现在选项卡中。
+这些文件需要压缩在应用包中，以便用于将选项卡上传到 Teams。 当用户选择添加或更新选项卡时，Teams 会加载 `configurationUrl` 清单中指定的 ，将其嵌入到 IFrame 中，并将其呈现在你的选项卡中。
 
 #### <a name="csproj"></a>.csproj
 
@@ -324,7 +324,7 @@ ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-在项目目录根目录的命令提示符处，运行以下命令以建立到选项卡的安全隧道：
+在项目目录根目录中的命令提示符下，运行以下命令，建立到选项卡的安全隧道：
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -349,9 +349,9 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 `script` 标记中插入对 `microsoftTeams.app.initialize();` 的调用。
 
-1. 在 Visual Studio 解决方案资源管理器中，转到 **Pages** 文件夹并打开 **Tab.cshtml**
+1. 在 Visual Studio 解决方案资源管理器中，转到 **“页面”** 文件夹并打开 **Tab.cshtml**
 
-    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置并可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
+    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色”** 或 **“选择红色**”按钮将分别触发`saveGray()`或`saveRed()`设置 `pages.config.setValidityState(true)`，并在配置页上启用 **“保存**”。 此代码告知 Teams 你已完成要求配置，可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
 1. 使用 HTTPS ngrok URL 将每个函数中的 `websiteUrl` 和 `contentUrl` 值更新到选项卡。
 
@@ -410,10 +410,10 @@ ngrok http 3978 --host-header=localhost
 
 1. 打开“**应用**”并选择“**导入应用**”。
 
-<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+   <!--- TBD: This steps seems to be removed from main now so commenting it for now.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
---->
+   Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+   --->
 
 1. 应用包的名称是 `tab.zip`。 它可在以下路径中使用：
 
@@ -431,7 +431,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在“**应用 URL**”中，将隐私策略更新为 `https://<yourngrokurl>/privacy` 和使用条款 `https://<yourngrokurl>/tou` 并保存。
 
-1. 在 **应用功能** 中，选择 **“组”和“频道”应用**。 使用 `https://<yourngrokurl>/tab` 并选择选项卡 **范围** 来更新 **配置 URL**。
+1. 在 **“应用功能**”中，选择“ **组和频道应用**”。 使用 `https://<yourngrokurl>/tab` 并选择选项卡 **范围** 来更新 **配置 URL**。
 
 1. 选择“保存”。
 
@@ -445,7 +445,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="上传的“频道”选项卡 ASPNET":::
 
-    现在，你已在 Teams 中成功创建并添加了频道或组选项卡。
+    现在，你已成功在 Teams 中创建并添加了频道或组选项卡。
 
 ::: zone-end
 
@@ -518,7 +518,7 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="csproj"></a>.csproj
 
-在 Visual Studio 解决方案资源管理器窗口中，右键单击项目，然后选择“**编辑项目文件**”。 在文件末尾，请参阅以下代码，该代码在应用程序生成时创建和更新 zip 文件夹：
+在 Visual Studio 解决方案资源管理器窗口中，右键单击项目，然后选择“**编辑项目文件**”。 在文件的末尾，请参阅以下代码，用于在生成应用程序时创建和更新 zip 文件夹：
 
 ```xml
 <PropertyGroup>
@@ -540,7 +540,7 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="models"></a>模型
 
-**ChannelGroup.cs** 显示一个消息对象和方法，可以在配置期间从控制器调用。
+**ChannelGroup.cs** 提供了一个消息对象和方法，可以在配置期间从控制器调用。
 
 #### <a name="views"></a>视图
 
@@ -548,7 +548,7 @@ public void Configure(IApplicationBuilder app)
 
 * 主页：ASP.NET Core 将名为“**索引**”的文件视为网站的默认页面或主页。 当浏览器 URL 指向站点的根目录时， **Index.cshtml** 可以显示为应用程序的主页。
 
-* 共享：部分视图标记 **_Layout.cshtml** 包含应用程序的整体页面结构和共享视觉元素，这些元素也引用 Teams 库。
+* 共享：部分视图标记 **_Layout.cshtml** 包含应用程序的整体页面结构和也引用 Teams 库的共享视觉元素。
 
 #### <a name="controllers"></a>控制器
 
@@ -558,7 +558,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-在项目目录根目录的命令提示符处，运行以下命令以建立到选项卡的安全隧道：
+在项目目录根目录中的命令提示符下，运行以下命令，建立到选项卡的安全隧道：
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -585,7 +585,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在 Visual Studio 解决方案资源管理器中，转到 **Tab** 文件夹并打开 **Tab.cshtml**
 
-    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色**”或 **“选择红色**”按钮触发器`saveGray()`或`saveRed()`分别设置`pages.config.setValidityState(true)`和启用“在配置页上 **保存**”。 此代码让 Teams 知道你已完成要求配置并可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
+    在 **Tab.cshtml** 中，应用程序向用户提供两个选项，用于显示带有红色或灰色图标的选项卡。 **“选择灰色”** 或 **“选择红色**”按钮将分别触发`saveGray()`或`saveRed()`设置 `pages.config.setValidityState(true)`，并在配置页上启用 **“保存**”。 此代码告知 Teams 你已完成要求配置，可以继续安装。 已设置参数 `pages.config.setConfig`。 最后，调用 `saveEvent.notifySuccess()` 以指示已成功解析内容 URL。
 
 1. 使用 HTTPS ngrok URL 将每个函数中的 `websiteUrl` 和 `contentUrl` 值更新到选项卡。
 
@@ -655,7 +655,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 在“**应用 URL**”中，将隐私策略更新为 `https://<yourngrokurl>/privacy` 和使用条款 `https://<yourngrokurl>/tou` 并保存。
 
-1. 在 **应用功能** 中，选择 **“组”和“频道”应用**。 使用 `https://<yourngrokurl>/tab` 并选择选项卡 **范围** 来更新 **配置 URL**。
+1. 在 **“应用功能**”中，选择“ **组和频道应用**”。 使用 `https://<yourngrokurl>/tab` 并选择选项卡 **范围** 来更新 **配置 URL**。
 
 1. 选择“保存”。
 
@@ -669,7 +669,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="频道选项卡 ASPNET MVC 已上传":::
 
-    现在，你已在 Teams 中成功创建并添加了频道或组选项卡。
+    现在，你已成功在 Teams 中创建并添加了频道或组选项卡。
 
 ::: zone-end
 
@@ -685,4 +685,4 @@ ngrok http 3978 --host-header=localhost
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
 * [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [创建删除页面](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [在 Teams 中添加 SharePoint 页面作为选项卡](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
+* [在 Teams 中将 SharePoint 页面添加为选项卡](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
