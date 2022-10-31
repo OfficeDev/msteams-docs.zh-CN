@@ -1,17 +1,17 @@
 ---
 title: 会议应用 API
 author: v-sdhakshina
-description: 本文介绍适用于 Teams 客户端和 Bot Framework SDK 的会议应用 API 参考，以及示例、代码示例和响应代码。
+description: 在本文中，通过示例、代码示例和响应代码了解可用于 Teams 客户端和 Bot Framework SDK 的会议应用 API 参考。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 79b5f58f5089ac40a12f608616dc52b90ed6ef08
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: f3d44317dbc8ea317e8fe3c5bdeb19404df75265
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615416"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789861"
 ---
 # <a name="meeting-apps-apis"></a>会议应用 API
 
@@ -24,11 +24,11 @@ ms.locfileid: "68615416"
 > [!NOTE]
 > 使用 Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)（*版本*：1.10 及更高版本）使 SSO 在会议侧面板中得以使用。
 
-下表提供了 Microsoft Teams JavaScript 库和 Microsoft Bot Framework SDK 中可用的 API 列表：
+下表提供了 Microsoft Teams JavaScript 库和Microsoft Bot Framework SDK 中可用的 API 列表：
 
 |方法| 说明| 源|
 |---|---|----|
-|[**获取用户上下文**](#get-user-context-api)| 获取上下文信息，以便在 Microsoft Teams 选项卡中显示相关内容。| [Microsoft Teams JavaScript 库 SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**获取用户上下文**](#get-user-context-api)| 获取上下文信息以在 Microsoft Teams 选项卡中显示相关内容。| [Microsoft Teams JavaScript 库 SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**获取参与者**](#get-participant-api)| 通过会议 ID 和参与者 ID 提取参与者信息。 | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**发送会议内通知**](#send-an-in-meeting-notification)| 使用用户机器人聊天的现有对话通知 API 提供会议信号，并允许通知显示会议内通知的用户操作。 | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**获取会议详细信息**](#get-meeting-details-api)| 获取会议的静态元数据。 | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -36,7 +36,7 @@ ms.locfileid: "68615416"
 |[**将应用内容共享到演示区域**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| 从会议中的应用侧面板将应用的特定部分共享到会议演示区域。 | [Microsoft Teams JavaScript 库 SDK](/javascript/api/@microsoft/teams-js/meeting) |
 |[**获取实时 Teams 会议事件**](#get-real-time-teams-meeting-events-api)|获取实时会议事件，例如实际开始时间和结束时间。| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**获取传入音频状态**](#get-incoming-audio-state) | 允许应用获取会议用户的传入音频状态设置。| [Microsoft Teams JavaScript 库 SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**切换传入音频**](#toggle-incoming-audio) | 允许应用将会议用户的传入音频状态设置从静音切换到取消静音，反之亦然。| [Microsoft Teams JavaScript 库 SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**切换传入音频**](#toggle-incoming-audio) | 允许应用将会议用户的传入音频状态设置从静音切换为取消静音，反之亦然。| [Microsoft Teams JavaScript 库 SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>获取用户上下文 API
 
@@ -48,7 +48,7 @@ ms.locfileid: "68615416"
 
 > [!NOTE]
 >
-> * **getParticipantRole** API 中不包括用户类型。
+> * **getParticipantRole** API 中不包含用户类型。
 > * 请勿缓存参与者角色，因为会议组织者可以随时更改角色。
 > * 目前，只有少于 350 名参与者的通讯组列表或名单才支持 `GetParticipant` API。
 
@@ -149,7 +149,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **meeting.role** | 参与者在会议中的角色。 例如，“组织者”或“演示者”或“与会者”。 |
 | **meeting.inMeeting** | 指示参与者是否在会议中的值。 |
 | **conversation.id** | 会议聊天 ID。 |
-| **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
+| **conversation.isGroup** | 指示对话是否包含两个以上参与者的布尔值。 |
 
 ### <a name="response-codes"></a>响应代码
 
@@ -240,7 +240,7 @@ POST /v3/conversations/{conversationId}/activities
 |---|---|
 | **类型** | 活动的类型。 |
 | **text** | 消息的文本内容。 |
-| **summary** | 消息的摘要文本。 |
+| **summary** | 邮件的摘要文本。 |
 | **channelData.notification.alertInMeeting** | 指示在会议中是否向用户显示通知的布尔值。 |
 | **channelData.notification.externalResourceUrl** | 通知的外部资源 URL 的值。|
 | **replyToId** | 线程的父消息或根消息的 ID。 |
@@ -320,7 +320,7 @@ POST /v3/conversations/{conversationId}/activities
 
 <details>
 
-<summary><b>对于应用清单版本 1.11 及更低版本</b></summary>
+<summary><b>对于应用清单 1.11 及更早版本</b></summary>
 
 使用以下示例为任何私人会议配置应用清单的 `webApplicationInfo` 属性：
 
@@ -353,7 +353,7 @@ POST /v3/conversations/{conversationId}/activities
 > [!NOTE]
 >
 > * 机器人可以通过将 `ChannelMeeting.ReadBasic.Group` 添加到清单以获得 RSC 权限，自动从所有频道中创建的所有会议接收会议开始或结束事件。
-> * 对于一对一呼叫 `organizer` ，是聊天的发起者，组呼叫 `organizer` 是呼叫发起者。 对于公共频道会议 `organizer` ，是创建频道帖子的人员。
+> * 对于一对一呼叫 `organizer` ，聊天的发起方为发起方，组呼叫 `organizer` 为呼叫发起方。 对于公共频道会议 `organizer` ，是创建频道帖子的人员。
 
 ### <a name="query-parameter"></a>查询参数
 
@@ -388,7 +388,7 @@ GET /v1/meetings/{meetingId}
 
 会议详细信息 API 的 JSON 响应正文如下所示：
 
-* **计划的会议：**
+* **计划会议：**
 
     ```json
 
@@ -466,7 +466,7 @@ GET /v1/meetings/{meetingId}
     
     ```
 
-* **组调用：**
+* **组呼叫：**
 
     ```json
     {
@@ -523,32 +523,32 @@ GET /v1/meetings/{meetingId}
 | 属性名称 | 说明 |
 |---|---|
 | **details.id** | 会议 ID，编码为 BASE64 字符串。 |
-| **details.msGraphResourceId** | MsGraphResourceId，专门用于 MS 图形 API调用。 |
-| **details.scheduledStartTime** | 会议的预定开始时间（以 UTC 为中心）。 |
-| **details.scheduledEndTime** | 会议的预定结束时间，以 UTC 表示。 |
+| **details.msGraphResourceId** | MsGraphResourceId，专用于 MS 图形 API 调用。 |
+| **details.scheduledStartTime** | 会议的安排开始时间（UTC）。 |
+| **details.scheduledEndTime** | 会议计划的结束时间（UTC）。 |
 | **details.joinUrl** | 用于加入会议的 URL。 |
-| **details.title** | 会议标题。 |
-| **details.type** | 会议的类型 (OneToOneCall、GroupCall、Scheduled、Recurring、MeetNow、ChannelScheduled 和 ChannelRecurring) 。 |
-| **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
-| **conversation.conversationType** | 会话类型。 |
+| **details.title** | 会议的标题。 |
+| **details.type** | 会议类型 (OneToOneCall、GroupCall、Scheduled、定期、MeetNow、ChannelScheduled 和 ChannelRecurring) 。 |
+| **conversation.isGroup** | 指示对话是否包含两个以上参与者的布尔值。 |
+| **conversation.conversationType** | 对话类型。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **organizer.id** | 组织者的用户 ID。 |
 | **organizer.aadObjectId** | 组织者的 Azure Active Directory 对象 ID。 |
 | **organizer.tenantId** | 组织者的 Azure Active Directory 租户 ID。 |
 
-在定期会议类型中，
+如果是定期会议类型，
 
-**startDate**：指定开始应用模式的日期。 startDate 的值必须对应于事件资源上 start 属性的日期值。 请注意，如果会议不符合模式，则不会在此日期发生第一次会议。
+**startDate**：指定开始应用模式的日期。 startDate 的值必须对应于事件资源上 start 属性的日期值。 请注意，如果不符合模式，则第一次会议可能不会在此日期发生。
 
-**endDate**：指定停止应用模式的日期。 请注意，如果会议不符合模式，则此日期可能不会发生最后一次会议。
+**endDate**：指定停止应用模式的日期。 请注意，如果会议不符合模式，则最后一次会议可能不会在此日期发生。
 
 ## <a name="send-real-time-captions-api"></a>发送实时字幕 API
 
-发送实时字幕 API 公开了一个 POST 终结点，用于 Teams 通信访问实时翻译 (CART) 字幕（人为型隐藏字幕）。 发送到此终结点的文本内容在启用了字幕时，会显示在 Teams 会议中的最终用户。
+发送实时字幕 API 公开用于 Teams 通信访问实时翻译的 POST 终结点， (CART) 字幕、人工类型隐藏字幕。 当最终用户启用了字幕时，发送到此终结点的文本内容会显示在 Teams 会议中。
 
 ### <a name="cart-url"></a>CART URL
 
-可以从 Teams 会议中的 **“会议选项** ”页获取 POST 终结点的 CART URL。 有关详细信息，请参阅 [Microsoft Teams 会议中的 CART 字幕](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 无需修改 CART URL 即可使用 CART 字幕。
+可以从 Teams **会议中的“会议选项** ”页获取 POST 终结点的 CART URL。 有关详细信息，请参阅 [Microsoft Teams 会议中的 CART 字幕](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 无需修改 CART URL 即可使用 CART 字幕。
 
 #### <a name="query-parameter"></a>查询参数
 
@@ -601,7 +601,7 @@ Hello I’m Cortana, welcome to my meeting.
 ## <a name="get-real-time-teams-meeting-events-api"></a>获取实时 Teams 会议事件 API
 
 > [!NOTE]
-> 实时 Teams 会议事件仅支持计划的会议。
+> 实时 Teams 会议事件仅支持安排的会议。
 
 用户可以接收实时会议事件。 只要任何应用与会议关联，就会与机器人共享会议实际开始时间和结束时间。 会议实际开始和结束时间不同于计划的开始和结束时间。 会议详细信息 API 提供计划的开始和结束时间。 该事件提供实际开始和结束时间。
 
@@ -642,7 +642,7 @@ Hello I’m Cortana, welcome to my meeting.
 
 <details>
 
-<summary><b>对于应用清单版本 1.11 及更低版本</b></summary>
+<summary><b>对于应用清单 1.11 及更早版本</b></summary>
 
 ```json
 "webApplicationInfo": {
@@ -796,29 +796,29 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 |---|---|
 | **name** | 用户名。|
 | **type** | 活动类型。 |
-| **timestamp** | 以 ISO-8601 格式表示的邮件的本地日期和时间。 |
+| **timestamp** | 消息的本地日期和时间，以 ISO-8601 格式表示。 |
 | **id** | 活动的 ID。 |
-| **channelId** | 将此活动与通道关联。 |
-| **serviceUrl** | 应在其中发送对此活动的响应的服务 URL。 |
+| **channelId** | 与此活动关联的通道。 |
+| **serviceUrl** | 应发送对此活动的响应的服务 URL。 |
 | **from.id** | 发送请求的用户 ID。 |
 | **from.aadObjectId** | 发送请求的用户的 Azure Active Directory 对象 ID。 |
-| **conversation.isGroup** | 指示会话是否具有两个以上参与者的布尔值。 |
-| **conversation.tenantId** | 会话或会议的 Azure Active Directory 租户 ID。 |
+| **conversation.isGroup** | 指示对话是否包含两个以上参与者的布尔值。 |
+| **conversation.tenantId** | 对话或会议的 Azure Active Directory 租户 ID。 |
 | **conversation.id** | 会议聊天 ID。 |
 | **recipient.id** | 接收请求的用户的 ID。 |
 | **recipient.name** | 接收请求的用户的名称。 |
-| **entities.locale** | 包含有关区域设置的元数据的实体。 |
-| **entities.country** | 包含有关国家/地区的元数据的实体。 |
+| **entities.locale** | 实体，其中包含有关区域设置的元数据。 |
+| **entities.country** | 实体，其中包含有关国家/地区的元数据。 |
 | **entities.type** | 包含有关客户端的元数据的实体。 |
 | **channelData.tenant.id** | Azure Active Directory 租户 ID。 |
-| **channelData.source** | 触发或调用事件的源名称。 |
+| **channelData.source** | 从中触发或调用事件的源名称。 |
 | **channelData.meeting.id** | 与会议关联的默认 ID。 |
-| **价值。MeetingType** | 会议的类型。 |
+| **价值。MeetingType** | 会议类型。 |
 | **价值。标题** | 会议的主题。 |
 | **价值。Id** | 与会议关联的默认 ID。 |
 | **价值。JoinUrl** | 会议的加入 URL。 |
 | **价值。StartTime** | 会议开始时间（UTC）。 |
-| **价值。EndTime** | UTC 中的会议结束时间。 |
+| **价值。EndTime** | 会议结束时间（UTC）。 |
 | **locale**| 客户端设置的消息的区域设置。 |
 
 ## <a name="get-incoming-audio-state"></a>获取传入音频状态
@@ -827,7 +827,7 @@ API `getIncomingClientAudioState` 允许应用获取会议用户的传入音频�
 
 > [!NOTE]
 >
-> * 移动 `getIncomingClientAudioState` 版 API 当前在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+> * 适用于移动设备的 `getIncomingClientAudioState` API 目前在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中提供。
 > * 特定于资源的许可适用于清单版本 1.12 和更高版本，因此此 API 不适用于清单版本 1.11 和更早版本。
 
 ### <a name="manifest"></a>清单
@@ -866,7 +866,7 @@ microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 
 |值|类型|必需|说明|
 |---|---|----|---|
-|**callback**| 字符串 | 是 | 回调包含两个参数 `error` 和 `result`。 *该错误* 可能包含错误类型`SdkError`或`null`音频提取成功时。 当音频提取成功时 *，结果* 可以包含 true 或 false 值，或者在音频提取失败时为 null。 如果结果为 true，则传入音频将静音，如果结果为 false，则取消删除。 |
+|**callback**| 字符串 | 是 | 回调包含两个参数 `error` 和 `result`。 *此错误* 可以包含错误类型`SdkError`，也可以在`null`音频提取成功时出现。 当音频提取成功时， *结果* 可以包含 true 或 false 值，或者在音频提取失败时为 null。 如果结果为 true，则传入音频将静音;如果结果为 false，则取消静音。 |
   
 ### <a name="response-codes"></a>响应代码
 
@@ -875,16 +875,16 @@ microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 |响应代码|说明|
 |---|---|
 | **500** | 内部错误。 |
-| **501** | 当前上下文不支持 API。|
-| **1000** | 应用没有允许共享登台的适当权限。|
+| **501** | 当前上下文中不支持 API。|
+| **1000** | 应用没有允许共享到阶段的适当权限。|
 
 ## <a name="toggle-incoming-audio"></a>切换传入音频
 
-API `toggleIncomingClientAudio` 允许应用将会议用户的传入音频状态设置从静音切换为取消静音，反之亦然。 可通过 Teams 客户端 SDK 获取 API。
+该 `toggleIncomingClientAudio` API 允许应用将会议用户的传入音频状态设置从静音切换为取消静音，反之亦然。 可通过 Teams 客户端 SDK 获取 API。
 
 > [!NOTE]
 >
-> * 移动 `toggleIncomingClientAudio` 版 API 当前在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中可用。
+> * 适用于移动设备的 `toggleIncomingClientAudio` API 目前在 [公共开发人员预览版](../resources/dev-preview/developer-preview-intro.md)中提供。
 > * 特定于资源的许可适用于清单版本 1.12 和更高版本，因此此 API 不适用于清单版本 1.11 和更早版本。
 
 ### <a name="manifest"></a>清单
@@ -923,7 +923,7 @@ microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 
 |值|类型|必需|说明|
 |---|---|----|---|
-|**callback**| 字符串 | 是 | 回调包含两个参数 `error` 和 `result`。 *该错误* 可以包含错误类型`SdkError`或`null`切换成功时。 当切换成功或切换失败时为 null 时， *结果* 可以包含 true 或 false 值。 如果结果为 true，则传入音频将静音，如果结果为 false，则取消删除。
+|**callback**| 字符串 | 是 | 回调包含两个参数 `error` 和 `result`。 *此错误* 可以包含错误类型`SdkError`，也可以在`null`切换成功时出现。 当切换成功时， *结果* 可以包含 true 或 false 值，或者在切换失败时为 null。 如果结果为 true，则传入音频将静音;如果结果为 false，则取消静音。
   
 ### <a name="response-code"></a>响应代码
 
@@ -932,17 +932,17 @@ microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 |响应代码|说明|
 |---|---|
 | **500** | 内部错误。 |
-| **501** | 当前上下文不支持 API。|
-| **1000** | 应用没有允许共享登台的适当权限。|
+| **501** | 当前上下文中不支持 API。|
+| **1000** | 应用没有允许共享到阶段的适当权限。|
 
 ## <a name="code-sample"></a>代码示例
 
 |示例名称 | Description | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | 会议扩展性 | 用于传递令牌的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| 会议内容气泡机器人 | 用于在会议中与内容气泡机器人交互的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| 会议侧面板 | 用于与会中侧面板交互的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会议中的“详细信息”选项卡 | 用于与会议中的“详细信息”选项卡交互的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| 会议内容气泡机器人 | Teams 会议扩展性示例，用于在会议中与内容气泡机器人交互。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| 会议侧面板 | 用于在会议中与侧面板交互的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| 会议中的“详细信息”选项卡 | 用于在会议中与“详细信息”选项卡交互的 Teams 会议扩展性示例。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 | 会议事件示例 | 显示实时 Teams 会议事件的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 | 会议招聘示例 |显示招聘情景的会议体验的示例应用。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 | 使用 QR 代码安装应用 |生成 QR 代码并使用 QR 代码安装应用的示例应用|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
@@ -952,7 +952,8 @@ microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 * [选项卡的 Teams 身份验证流](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Teams 会议应用](teams-apps-in-meetings.md)
 * [实时共享 SDK](teams-live-share-overview.md)
+* [Teams 云会议录制](/microsoftteams/cloud-recording)
 
 ## <a name="next-steps"></a>后续步骤
 
-[会议的生成选项卡](build-tabs-for-meeting.md)
+[会议的“生成”选项卡](build-tabs-for-meeting.md)

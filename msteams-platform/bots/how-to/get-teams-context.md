@@ -1,16 +1,16 @@
 ---
 title: 获取机器人的 Teams 特定上下文
 author: surbhigupta
-description: 获取机器人的 Teams 特定上下文、获取用户配置文件、获取单个成员、团队的、团队详细信息中的频道列表。 创建新通道线程的示例。
+description: 获取机器人的 Teams 特定上下文、获取用户配置文件、获取单个成员、团队的、团队详细信息中的频道列表。 有关创建新通道线程的示例。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a2d884809a538d16b5c5a1e62e2a064fbeaa2a76
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1958d45bf4fac927c32b628ea8aebc4c1c03ad46
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100138"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789987"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>获取机器人的 Teams 特定上下文
 
@@ -377,4 +377,5 @@ Response body
 
 ## <a name="see-also"></a>另请参阅
 
-[本地化应用](../../concepts/build-and-test/apps-localization.md)
+* [本地化应用](../../concepts/build-and-test/apps-localization.md)
+* [获取用户、组、团队或 Outlook 联系人的个人资料照片](/graph/api/profilephoto-get)

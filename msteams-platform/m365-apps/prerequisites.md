@@ -1,16 +1,16 @@
 ---
 title: 设置开发环境以跨 Microsoft 365 扩展 Teams 应用
-description: 设置开发环境以跨 Microsoft 365 扩展 Teams 应用的要求。 了解运行 Microsoft Teams 和 Microsoft Office 应用程序生成所需的配置。
+description: 设置开发环境以跨 Microsoft 365 扩展 Teams 应用的要求。 了解运行 Microsoft Teams 和 Microsoft Office 应用程序内部版本所需的配置。
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 99050d8b8db4fac38e9d36c42a6c3efe7f1bf28d
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243323"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789910"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>设置开发环境以跨 Microsoft 365 扩展 Teams 应用
 
@@ -36,17 +36,17 @@ ms.locfileid: "68243323"
 
  1. 转到 **Teams 应用** > **管理应用**。
 
- 1. 在右上角，选择 **组织范围的应用设置**。
+ 1. 在右上角，选择 **“组织范围的应用设置**”。
 
- 1. 在“自定义应用”下，打开 **与自定义应用** 切换和保存的交互。
+ 1. 在“自定义应用”下，打开“ **与自定义应用交互”** 切换和 **“保存**”。
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="屏幕截图是一个示例，用于从 Teams 管理员中心旁加载自定义应用":::
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="屏幕截图是一个从 Teams 管理员中心为自定义应用启用旁加载的示例":::
 
  1. 除了组织范围的应用设置外，自定义应用策略设置还允许用户将自定义应用上传到 Teams。 有关详细信息，请参阅 [管理自定义应用策略和设置](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings)。
 
- 1. 在 Teams 管理中心，转到 **Teams 应用** > **设置策略**，然后选择 **全局 (组织范围的默认) 策略**。
+ 1. 在 Teams 管理中心中，转到 **“Teams 应用** > **设置策略**”，然后选择“ **全局 (组织范围的默认) 策略**”。
 
- 1. 打开 **“上传自定义应用**”，然后选择 **“保存**”。
+ 1. 打开 **“上传自定义应用**”，然后选择“ **保存**”。
 
 ## <a name="enroll-your-developer-tenant-for-office-365-targeted-releases"></a>为 Office 365 目标发布注册开发人员租户
 
@@ -62,17 +62,17 @@ ms.locfileid: "68243323"
     1. **针对所有人的目标发布**
     1. **选定用户的目标发布**
 
-    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 管理中心“发布首选项”菜单，其中选择了“目标发布”选项":::
+    :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="屏幕截图是一个示例，其中显示了选择了“目标发布”选项的Microsoft 365 管理中心“发布首选项”菜单。":::
 
-1. 选择“保存”。
+1. 选择“**保存**”。
 
-有关 Office 365 发布选项的详细信息，请参阅 *Microsoft 365 管理中心帮助* 中的 [设置标准或目标发布选项](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release)。
+有关Office 365发布选项的详细信息，请参阅 *Microsoft 365 管理中心帮助* 中的 [设置标准或目标发布选项](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release)。
 
 ## <a name="install-office-apps-in-your-test-environment"></a>在测试环境中安装 Office 应用
 
 ### <a name="desktop"></a>桌面
 
-可以使用最近的 *Beta 版频道* 预览在 Windows 桌面的 Outlook 中运行的 Teams 应用。 检查是否必须为测试租户[更改 Microsoft 365 应用更新通道](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016)才能安装 Office 365 Beta 版频道内部版本。
+可以使用最近的 *Beta 版频道* 预览在 Windows 桌面的 Outlook 中运行的 Teams 应用。 检查是否必须更改测试租户[的Microsoft 365 应用版更新通道](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016)才能安装Office 365 Beta 频道版本。
 
 要在测试环境中安装 Office 365 Beta 版频道应用程序：
 
@@ -84,34 +84,34 @@ ms.locfileid: "68243323"
 1. 打开 Outlook（桌面客户端）并使用测试租户凭据设置邮件帐户。
 1. 打开“**文件**” > “**Office 帐户**” > “**关于 Outlook**”，确认你正在运行 Outlook 的 Microsoft 365 *Beta 版频道* 版本。
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="从 Office 帐户转到“关于 Outlook”，验证你正在运行 Beta Channel 版本。":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="屏幕截图是一个示例，其中显示了有关 Outlook 的示例，用于验证你是否正在运行 Beta 频道版本。":::
 
 1. 验证是否已安装 *Microsoft Edge WebView2 运行时*。 打开 Windows“**开始**” > “**应用和功能**”，然后搜索 **webview**：
 
-    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="在 Windows 设置的“应用和功能”下搜索“webview”":::
+    :::image type="content" source="images/windows-addremove-webview2.png" alt-text="屏幕截图是显示 Windows 设置中的搜索字段的示例。":::
 
     如果未列出，则将 [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) 安装到测试环境。
 
 ### <a name="mobile"></a>移动设备
 
-可以通过加入 beta 程序来预览在适用于 Android 的 Office 应用中运行的 Teams 个人选项卡。
+通过加入 beta 计划，可以预览 Office for Android 应用中运行的 Teams 个人选项卡。
 
-若要安装最新的 Office 应用 beta，请生成到物理 Android 设备或 Android 仿真器：
+若要安装最新的 Office 应用 beta 版，请构建到物理 Android 设备或 Android 仿真器：
 
-1. 确保使用 [Google Play 支持的 Android 设备](https://support.google.com/googleplay/answer/1727131)。
-1. 在 Android 设备上启动 **Play 应用商店** 。
+1. 确保使用 Google Play [支持的 Android 设备](https://support.google.com/googleplay/answer/1727131)。
+1. 在 Android 设备上启动 **Play Store** 。
 1. 搜索 Office 并选择 **“Microsoft Office：编辑&共享**”。
-1. 选择 **“安装** ”按钮。
+1. 选择“ **安装** ”按钮。
 
-    :::image type="content" source="images/office-android-install.png" alt-text="Microsoft Office 的屏幕截图：在 Google Play Store 中编辑&共享应用":::
+    :::image type="content" source="images/office-android-install.png" alt-text="屏幕截图显示了 Microsoft Office 的安装按钮：在 Google Play Store 中编辑&共享应用。":::
 
-1. 安装完成后，在“**加入 beta”部分** 下选择“**加入**”。
+1. 安装完成后，选择“**加入 beta 版”部分** 下的“**加入**”。
 
-    :::image type="content" source="images/office-android-join-beta.png" alt-text="“加入 beta”屏幕的屏幕截图":::
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="屏幕截图是显示“加入 beta 版”屏幕的示例。":::
 
 1. 启动 Office 应用并使用测试租户凭据登录。
-1. 打开配置文件 **(“我) >设置** ”，然后滚动到菜单底部。
-2. 确保对 Android 使用 Office 应用版本 16.0.15726.20000 或更高版本。
+1. **(我) >“设置”打开** 个人资料，然后滚动到菜单底部。
+2. 确保使用适用于 Android 的 Office 应用版本 16.0.15726.20000 或更高版本。
 
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>切换到开发人员预览版 Teams
 
@@ -121,7 +121,7 @@ ms.locfileid: "68243323"
 1. 从用户配置文件旁边的省略号 (**...**) 菜单中，选择“**关于**” > “**开发人员预览版**”。 将出现对话框，选择“**切换到开发人员预览版**”。
 1. Teams 应用重启后，转到用户配置文件旁边的省略号 (**...**) 菜单，并检查是否选中了“**开发人员预览版**”。
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="Teams 中的公共开发人员预览版选项":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="屏幕截图是一个示例，显示了 Teams 中的公共开发人员预览版选项。":::
 
 ## <a name="install-visual-studio-code-and-teams-toolkit-extension"></a>安装 Visual Studio Code 和 Teams 工具包扩展
 

@@ -1,16 +1,16 @@
 ---
 title: 智能机器人和 SDK
 author: surbhigupta
-description: 本文介绍适用于 Microsoft Teams 机器人的工具和 Bot Framework SDK (C#、Python、Java、JavaScript) 及其优点和缺点。
+description: 在本文中，了解适用于 Microsoft Teams 机器人的工具和 Bot Framework SDK (C#、Python、Java、JavaScript) 及其优点和缺点。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b8d9f81216ea82aff3a5be9ec96c4f1dd79e9603
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: e1be981a381846ab17220254336571ea40bf2752
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605017"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789896"
 ---
 # <a name="bots-and-sdks"></a>智能机器人和 SDK
 
@@ -66,7 +66,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="in-a-channel"></a>在频道中
 
-频道包含多个人员之间的线程对话，甚至最多可达到两千人。 这可能会让机器人拥有广阔的范围，但是个人交互需要简洁。 传统的多轮次交互不起作用。 可以尝试使用交互卡片或任务模块，或者如果要收集很多信息的话，也可以将对话转移到一对一模式。 机器人仅有权访问其 `@mentioned`所在的消息。 可以使用 Microsoft Graph 和组织级别权限从对话中检索额外的消息。
+频道包含多个人员之间的线程对话，甚至最多可达到两千人。 这可能会让机器人拥有广阔的范围，但是个人交互需要简洁。 传统的多轮次交互不起作用。 可以尝试使用交互卡片或任务模块，或者如果要收集很多信息的话，也可以将对话转移到一对一模式。 机器人仅有权访问其所在的 `@mentioned`消息。 可以使用 Microsoft Graph 和组织级别权限从对话中检索额外的消息。
 
 在以下情况下，机器人在频道中效果更好：
 
@@ -77,7 +77,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="in-a-group-chat"></a>在群组聊天中
 
-群聊是在三个及以上人员之间进行的非按线索组织的对话。 其中的成员一般比频道中的少且更短暂。 与通道类似，机器人仅有权访问直接访问的消息 `@mentioned` 。
+群聊是在三个及以上人员之间进行的非按线索组织的对话。 其中的成员一般比频道中的少且更短暂。 与通道类似，机器人只能直接访问消息 `@mentioned` 。
 
 如果机器人在频道中工作良好，那么在群聊中也会更好。
 
@@ -88,12 +88,12 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 * 问答机器人
 * 在其他系统中启动工作流的机器人。
 * 讲笑话的机器人。
-* 做笔记的机器人。
-在创建一对一聊天机器人之前，请考虑基于对话的接口是否是呈现功能的最佳方式。
+* 记录笔记的机器人。
+在创建一对一聊天机器人之前，请考虑基于对话的界面是否是展示功能的最佳方式。
 
 ## <a name="disadvantages-of-bots"></a>机器人的缺点
 
-机器人与用户之间的广泛对话是一种完成任务的缓慢而复杂的方法。 支持过多命令（尤其是各种命令）的机器人不会成功或被用户积极查看。
+机器人与用户之间的广泛对话是一种完成任务的缓慢而复杂的方法。 支持过多命令（尤其是各种命令）的机器人不会成功或被用户正面查看。
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>在聊天中具有多轮体验
 
@@ -117,7 +117,7 @@ Microsoft Teams 中的机器人可以进行一对一对话、群聊或参与团�
 
 ### <a name="maintain-a-large-knowledge-base"></a>维护大型知识库
 
-机器人的缺点之一是很难使用未分段的响应来维护大型检索知识库。 机器人最适合进行简短、快速的交互，而不适合在寻找答案的长列表之间切换。
+机器人的一个缺点是，很难使用未调调的响应维护大型检索知识库。 机器人最适合进行简短、快速的交互，而不适合在寻找答案的长列表之间切换。
 
 ## <a name="code-snippets"></a>代码段
 
@@ -209,6 +209,7 @@ this.onMessage(async (context, next) => {
 * [通话和会议机器人](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [智能机器人对话](~/bots/how-to/conversations/conversation-basics.md)
 * [机器人命令菜单](~/bots/how-to/create-a-bot-commands-menu.md)
+* [在 Bot Framework Composer 中创建自定义触发器](/composer/how-to-create-custom-triggers)
 * [Microsoft Teams 中机器人的身份验证流程](~/bots/how-to/authentication/auth-flow-bot.md)
 * [使用机器人的任务模块](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [将机器人发布到 Azure](/azure/bot-service/bot-builder-deploy-az-cli)

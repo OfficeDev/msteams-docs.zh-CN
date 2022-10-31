@@ -5,12 +5,12 @@ ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e16b27b0854e9dc4f92e1c7ce4dc35c2af1f5c4
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: 910a94f34d14c8dbb8a35099d438469fea52155b
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68739923"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789970"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>跨 Microsoft 365 扩展 Teams 个人选项卡
 
@@ -20,17 +20,17 @@ ms.locfileid: "68739923"
 
 > [!div class="checklist"]
 >
-> * 更新应用清单。
-> * 更新 TeamsJS SDK 引用。
-> * 修改内容安全策略标头。
-> * 更新用于单一登录 (SSO) Microsoft Azure Active Directory (Azure AD) 应用注册。
-> * 在 Teams 中旁加载更新后的应用。
+> * [更新应用清单](#update-the-app-manifest)。
+> * [更新 TeamsJS SDK 引用](#update-sdk-references)。
+> * [修改内容安全策略标头](#configure-content-security-policy-headers)。
+> * [更新单个 Sign-On (SSO) Microsoft Azure Active Directory (Azure AD) 应用注册](#update-azure-ad-app-registration-for-sso)。
+> * [在 Teams 中旁加载已更新的应用](#sideload-your-app-in-teams)。
 
 本指南的其余部分将指导你完成这些步骤，并演示如何在其他 Microsoft 365 应用程序中预览你的个人选项卡。
 
 ## <a name="prerequisites"></a>先决条件
 
-完成本教程需要：
+若要完成本教程，需要：
 
 * Microsoft 365 开发人员计划沙盒租户
 * 在 *Office 365 目标版本* 中注册的沙盒租户
@@ -47,22 +47,26 @@ ms.locfileid: "68739923"
 
 若要使用示例代码完成本教程，请按照[待办事项列表示例中](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend)的设置步骤，使用适用于Visual Studio Code的 Teams 工具包扩展生成个人选项卡应用，然后返回本文以更新 Microsoft 365。
 
-或者，可以使用以下 [快速入门](#quickstart)部分中已启用 Microsoft 365 的基本单一登录 *hello world* 应用，然后跳到 [在 Teams 中旁加载应用](#sideload-your-app-in-teams)。
+或者，可以使用以下 [快速入门](#quickstart)部分中已启用 Microsoft 365 的基本单一登录 *hello world* 应用，然后跳到 [Teams 中旁加载应用](#sideload-your-app-in-teams)。
 
 ### <a name="quickstart"></a>快速入门
 
 若要从已启用可在 Outlook 和 Office 中运行[的个人选项卡](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)开始，请使用适用于Visual Studio Code的 Teams 工具包扩展。
 
 1. 从 Visual Studio Code 打开命令面板 (`Ctrl+Shift+P`)，键入 `Teams: Create a new Teams app`。
+1. 选择“**新建 Teams 应用**”选项。
 1. 选择 **“已启用 SSO 的个人”选项卡**。
 
-    :::image type="content" source="images/toolkit-tab-sample.png" alt-text=" Teams 工具包中的待办事项列表示例（Teams、Outlook 和 Office 中的工作）":::
-
-1. 在本地计算机上为工作区文件夹选择一个位置。
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="屏幕截图是一个示例，其中显示了 Teams 工具包中的待办事项列表示例 (在 Teams、Outlook 和 Office) 中工作。":::
+1. 选择首选编程语言。
+1. 在本地计算机上为工作区文件夹选择一个位置，然后输入应用程序名称。
 1. 打开命令面板 (`Ctrl+Shift+P`) 并键入`Teams: Provision in the cloud`以在 Azure 帐户中创建所需的应用资源， (App 服务计划、存储帐户、函数应用、托管标识) 。
+1. 选择订阅和资源组。
+1. 选择“ **预配**”。
 1. 打开命令面板（`Ctrl+Shift+P`）并键入 `Teams: Deploy to the cloud`，将示例代码部署到 Azure 中预配的资源并启动应用。
+1. 选择“部署”。
 
-在此处，可以跳到 [在 Teams 中旁加载应用，并在](#sideload-your-app-in-teams) Outlook 和 Office 中预览应用。  (已针对 Microsoft 365.) 更新应用清单和 TeamsJS API 调用
+在此处，你可以跳到 [在 Teams 中旁加载应用](#sideload-your-app-in-teams) ，并在 Outlook 和 Office 中预览应用。  (已针对 Microsoft 365.) 更新应用清单和 TeamsJS API 调用
 
 ## <a name="update-the-app-manifest"></a>更新应用清单
 
@@ -125,14 +129,14 @@ ms.locfileid: "68739923"
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>更新 SSO 的 Azure AD 应用注册
 
-适用于个人选项卡[的 Azure Active Directory (AD) 单一登录 (SSO) ](../tabs/how-to/authentication/tab-sso-overview.md)在 Office 和 Outlook 中的工作方式与在 Teams 中的工作方式相同。 但是，你需要将多个客户端应用程序标识符添加到租户 *应用注册* 门户中选项卡应用的 Azure AD 应用注册。
+适用于个人选项卡[的 Azure Active Directory (AD) 单一登录 (SSO) ](../tabs/how-to/authentication/tab-sso-overview.md)在 Office 和 Outlook 中的工作方式与在 Teams 中的工作方式相同。 但是，需要在租户的 *应用注册* 门户中将多个客户端应用程序标识符添加到选项卡应用的 Azure AD 应用注册。
 
 1. 使用沙盒租户帐户登录到 [Microsoft Azure 门户 ](https://portal.azure.com)。
 1. 打开 **应用注册** 边栏选项卡。
 1. 选择个人选项卡应用程序的名称以打开其应用注册。
 1. 在“*管理*”下选择“**公开 API**”。
 
-    :::image type="content" source="images/azure-app-registration-clients.png" alt-text=" 从 Azure 门户上的 *应用注册* 边栏选项卡授权客户端 ID ":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="屏幕截图显示了Azure 门户上“应用注册”边栏选项卡中的授权客户端 ID。":::
 
 1. 在”**授权客户端应用程序**“部分中，确保添加了以下 `Client Id` 所有值：
 
@@ -155,21 +159,21 @@ ms.locfileid: "68739923"
 
 1. 将 Teams 应用程序打包 ([清单](../resources/schema/manifest-schema.md) 和 [应用图标](/microsoftteams/platform/resources/schema/manifest-schema#icons)) 在 zip 文件中。 如果使用 Teams 工具包创建应用，则可以使用 Teams 工具包的“**部署**”菜单中的“**压缩 Teams 元数据包**”选项轻松完成此操作。
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="适用于 Visual Studio Code 的 Teams 工具包扩展中的“压缩 Teams 元数据包”选项":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="“屏幕截图是用于Visual Studio Code的 Teams 工具包扩展中显示 Zip Teams 元数据包”选项的示例。":::
 
 1. 使用沙盒租户帐户登录 Teams，并切换到“*开发者预览版*”模式。 选择用户个人资料旁边的省略号 (**...**) 菜单，然后依次选择：“**关于**” > “**开发者预览版**”。
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="从 Teams 省略号菜单中，打开“关于”，然后选择“开发者预览版”选项":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="屏幕截图介绍如何选择“开发人员预览版”选项。":::
 
-1. 选择“**应用**”以打开“**管理你的应用**”窗格。 然后选择“**发布应用**”。
+1. 选择“**应用**”以打开“**管理你的应用**”窗格。 然后选择“ **上传应用**”。
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="打开“管理应用”窗格，然后选择“发布应用”":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="屏幕截图是显示“管理应用”窗格和“发布应用”选项的示例。":::
 
 1. 选择 **“上传自定义应用** ”选项，然后选择应用包。
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams 中的“上传自定义应用”选项":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="屏幕截图是一个示例，其中显示了在 Teams 中上传 am 应用的选项。":::
 
-旁加载到 Teams 后，你的个人选项卡可在 Outlook 和 Office 中使用。 必须使用用于在 Teams 中旁加载应用的相同凭据登录。 运行适用于 Android 的 Office 应用时，需要重启应用才能使用 Office 应用中的个人选项卡应用。
+旁加载到 Teams 后，你的个人选项卡可在 Outlook 和 Office 中使用。 必须使用用于将应用旁加载到 Teams 中的相同凭据登录。 运行适用于 Android 的 Office 应用时，需要重启应用才能使用 Office 应用中的个人选项卡应用。
 
 可以固定应用以进行快速访问，也可以在省略号 (**...**) 中找到应用左侧边栏中最近应用程序中的浮出控件。 在 Teams 中固定应用不会将其固定为 Office 或 Outlook 中的应用。
 
@@ -178,7 +182,7 @@ ms.locfileid: "68739923"
 下面介绍如何预览 Office 和 Outlook、Web 和 Windows 桌面客户端中运行的应用。
 
 > [!NOTE]
-> 从 Teams 中卸载应用还会将其从 Outlook 和 Office 中的 **“更多应用”** 目录中删除。 如果使用上面提供的 Teams 工具包示例应用。
+> 如果使用 Teams 工具包示例应用并从 Teams 中卸载它，则会从 Outlook 和 Office 中的 **“更多应用”** 目录中删除它。
 
 ### <a name="outlook-on-windows"></a>Windows 版 Outlook
 
@@ -188,7 +192,7 @@ ms.locfileid: "68739923"
 1. 在侧边栏上，选择“  **更多应用**”。 旁加载的应用标题显示在已安装的应用之间。
 1. 选择应用图标以在 Outlook 中启动应用。
 
-    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text=" 单击 Outlook 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="屏幕截图是一个示例，显示 Outlook 桌面客户端侧栏上的省略号 (“更多应用) ”选项，以查看已安装的个人选项卡。":::
 
 ### <a name="outlook-on-the-web"></a>Outlook 网页版
 
@@ -198,7 +202,7 @@ ms.locfileid: "68739923"
 1. 在侧边栏上，选择“  **更多应用**”。 旁加载的应用标题显示在已安装的应用之间。
 1. 选择应用图标以启动和预览在 Outlook 网页版 中运行的应用。
 
-    :::image type="content" source="images/outlook-web-more-apps.png" alt-text=" 单击 outlook.com 侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="屏幕截图是一个示例，显示 outlook.com 侧边栏中的省略号 (“更多应用) ”选项，以查看已安装的个人选项卡。":::
 
 ### <a name="office-on-windows"></a>Windows 版 Office
 
@@ -208,7 +212,7 @@ ms.locfileid: "68739923"
 1. 选择侧栏上的 **“应用”** 图标。 旁加载的应用标题显示在已安装的应用之间。
 1. 选择应用图标以在 Office 中启动应用。
 
-    :::image type="content" source="images/office-desktop-more-apps.png" alt-text=" 单击 Office 桌面客户端侧边栏上的省略号（“更多应用”）选项，查看已安装的个人选项卡 ":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="屏幕截图是一个示例，显示 Office 桌面客户端侧栏上的省略号 (“更多应用) ”选项，以查看已安装的个人选项卡。":::
 
 ### <a name="office-on-the-web"></a>Office 网页版
 
@@ -218,7 +222,7 @@ ms.locfileid: "68739923"
 1. 选择侧栏上的 **“应用”** 图标。 旁加载的应用标题显示在已安装的应用之间。
 1. 选择应用图标以在 Office web 版 中启动应用。
 
-    :::image type="content" source="images/office-web-more-apps.png" alt-text="单击 office.com 侧边栏中的“更多应用”选项，查看已安装的个人选项卡":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="屏幕截图是一个示例，显示 office.com 侧栏上的“ (更多应用) ”选项，以查看已安装的个人选项卡。":::
 
 ### <a name="office-app-for-android"></a>适用于 Android 的 Office 应用
 
@@ -227,11 +231,11 @@ ms.locfileid: "68739923"
 
 若要查看在适用于 Android 的 Office 应用中运行的应用，请执行以下操作：
 
-1. 启动 Office 应用并使用开发租户帐户登录。 如果 Office for Android 应用在 Teams 中旁加载应用之前已在运行，则需要重启它才能在已安装的应用中查看它。
+1. 启动 Office 应用并使用开发租户帐户登录。 如果在 Teams 中旁加载应用之前，Android 版 Office 应用已在运行，则需要重启它才能在已安装的应用中查看。
 1. 选择 **“应用”** 图标。 旁加载的应用显示在已安装的应用之间。
 1. 选择应用图标，在适用于 Android 的 Office 应用中启动应用。
 
-:::image type="content" source="images/office-mobile-apps.png" alt-text="点击 Office 应用侧栏上的“应用”选项，查看已安装的个人选项卡":::
+    :::image type="content" source="images/office-mobile-apps.png" alt-text="屏幕截图是一个示例，显示 Office 应用侧栏上的“应用”选项，以查看已安装的个人选项卡。":::
 
 ## <a name="troubleshooting"></a>故障排除
 
@@ -249,31 +253,31 @@ ms.locfileid: "68739923"
 
 在 Teams 工具包中，除了 Teams 之外，还可以) Office 和 Outlook 中运行的选项卡应用程序调试 `F5` (。
 
-:::image type="content" source="images/toolkit-debug-targets.png" alt-text="从 Teams 工具包中的 Teams、Outlook 和 Office 调试目标中进行选择":::
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="屏幕截图是一个示例，显示了 Teams 工具包中 Teams 中调试的下拉菜单。":::
 
-首次运行 Office 或 Outlook 的本地调试后，系统会提示登录 Microsoft 365 租户帐户并安装自签名测试证书。 系统还会提示你手动安装 Teams。 选择“ **在 Teams 中安装** ”，打开浏览器窗口并手动安装应用。 然后选择“ **继续** ”以继续在 Office/Outlook 中调试应用。
+首次在 Office 或 Outlook 中运行本地调试时，系统会提示登录 Microsoft 365 租户帐户并安装自签名测试证书。 系统还会提示你手动安装 Teams。 选择“ **在 Teams 中安装** ”，打开浏览器窗口并手动安装应用。 然后选择“ **继续** ”以继续在 Office/Outlook 中调试应用。
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="“工具包”对话框 Teams 安装":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="屏幕截图是一个示例，其中显示了要安装在 Teams 中的“工具包”对话框。":::
 
 在 [Microsoft Teams Framework (TeamsFx) ](https://github.com/OfficeDev/TeamsFx/issues)提供反馈并报告 Teams 工具包调试体验的任何问题。
 
 #### <a name="mobile-debugging"></a>移动调试
 
-适用于 Android 的 `F5` Office 应用尚不支持 Teams 工具包 () 调试。 下面介绍如何远程调试在适用于 Android 的 Office 应用中运行的应用：
+适用于 Android 的 Office 应用尚不支持 Teams 工具包 `F5` () 调试。 下面介绍如何远程调试在适用于 Android 的 Office 应用中运行的应用：
 
 1. 如果使用物理 Android 设备进行调试，请将其连接到开发计算机，并启用 [USB 调试](https://developer.android.com/studio/debug/dev-options)选项。 默认情况下，这是使用 Android 模拟器启用的。
 1. 从 Android 设备启动 Office 应用。
 1. 打开配置文件 **“我”>“设置”>“允许调试**”，然后切换 **“启用远程调试**”选项。
 
-    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="显示启用远程调试的屏幕截图":::
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="屏幕截图是显示“启用远程调试”切换选项的示例。":::
 
-1. 退出 **设置**。
-1. 退出个人资料屏幕。
+1. 保留 **“设置”。**
+1. 离开个人资料屏幕。
 1. 选择“ **应用** ”并启动旁加载的应用以在 Office 应用中运行。
 1. 确保 Android 设备已连接到开发计算机。 在开发计算机上，打开浏览器到其 DevTools 检查页。 例如，在 Microsoft Edge 中转到 `edge://inspect/#devices` 以显示已启用调试的 Android WebView 的列表。
 1. `Microsoft Teams Tab`找到带有选项卡 URL 的 ，然后选择“**检查**”以开始使用 DevTools 调试应用。
 
-    :::image type="content" source="images/office-android-debug.png" alt-text="显示 devtool 中的 Web 视图列表的屏幕截图":::
+    :::image type="content" source="images/office-android-debug.png" alt-text="屏幕截图是一个示例，显示了 devtool 中的 Web 视图列表。":::
 
 1. 在 Android WebView 中调试选项卡应用。 与在 Android 设备上 [远程调试](/microsoft-edge/devtools-guide-chromium/remote-debugging) 常规网站的方式相同。
 
@@ -285,7 +289,7 @@ ms.locfileid: "68739923"
 | 待办事项列表 (Microsoft 365)  | 具有使用 React 和 Azure Functions 生成的 SSO 的可编辑待办事项列表。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 |  (Microsoft 365) 的图像编辑器 | 使用 Microsoft 图形 API创建、编辑、打开和保存图像。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | Microsoft 365)  (示例启动页 | 演示不同主机中可用的 SSO 身份验证和 TeamsJS SDK 功能。 在 Teams、Outlook、Office 中工作。 | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
-| Northwind Orders 应用 | 演示如何使用 Microsoft TeamsJS SDK V2 将 Teams 应用程序扩展到其他 M365 主机应用。 在 Teams、Outlook、Office 中工作。 针对移动设备进行优化。| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
+| Northwind Orders 应用 | 演示如何使用 Microsoft TeamsJS SDK V2 将 Teams 应用程序扩展到其他 Microsoft 365 主机应用。 在 Teams、Outlook、Office 中工作。 针对移动设备进行优化。| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>后续步骤
 
