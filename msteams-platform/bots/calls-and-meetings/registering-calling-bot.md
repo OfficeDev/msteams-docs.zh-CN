@@ -1,14 +1,14 @@
 ---
 title: 注册 Microsoft Teams 的通话和会议机器人
-description: 了解如何为 Microsoft Teams 注册新的音频/视频呼叫机器人、创建新机器人或添加呼叫功能、添加图形权限。 用于创建呼叫、加入会议和传输呼叫的示例。
+description: 了解如何为 Microsoft Teams 注册新的音频/视频呼叫机器人、创建新机器人或添加呼叫功能、添加图形权限。 用于创建呼叫、加入会议和转接呼叫的示例。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fe8d0adde45242738b8023c5478c24769561d1c
-ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
+ms.openlocfilehash: 6ee71c6ca790bdc2016c02143256e2d21b9595f2
+ms.sourcegitcommit: 88fb2e9a18de3bd84e3c604ff235fc753c8de8f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2022
-ms.locfileid: "68319935"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68817975"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>注册 Microsoft Teams 的通话和会议机器人
 
@@ -58,7 +58,7 @@ Graph 提供精细的权限来控制应用对资源的访问权限。 你可以�
 |权限    |显示字符串   |说明 |需经过管理员同意 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |从应用发起一对一拨出通话（预览版）。 |允许应用在没有登录用户的情况下，向单个用户发起播出通话并将通话转接到组织目录中的用户。|是|
-| Calls.InitiateGroupCall.All |从应用预览启动传出 1：1 和分组调用。 |允许应用在没有登录用户的情况下向单个用户、多个用户进行出站呼叫、传输呼叫并将参与者添加到组织中的会议。|是|
+| Calls.InitiateGroupCall.All |从应用预览启动传出 1：1 和组调用。 |允许应用在没有登录用户的情况下向单个用户、多个用户发出出站呼叫、转移呼叫并将参与者添加到组织中的会议。|是|
 | Calls.JoinGroupCall.All |作为应用加入组通话和会议（预览版）。 |允许应用在没有登录用户的情况下，加入组织中的组通话和计划会议。 应用加入到租户的会议中并获得目录用户特权。|是|
 | Calls.JoinGroupCallasGuest.All |作为来宾加入组通话和会议（预览版）。 |允许应用在没有登录用户的情况下，以匿名方式加入组织中的组通话和计划会议。 应用作为来宾加入租户的会议。|是|
 | Calls.AccessMedia.All |作为应用访问通话中的媒体数据流（预览版）。 |允许应用在没有登录用户的情况下，直接访问通话中的媒体数据流。|是|
@@ -96,11 +96,11 @@ You can rely on an administrator to grant the permissions your app needs at the 
 | **示例名称** | **说明** | **C#** |
 |---------------|----------|--------|
 | 通话和会议机器人 | 示例应用演示了机器人如何创建通话、加入会议和转移通话。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
-| 实时会议事件 |示例应用演示机器人如何接收实时会议事件。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
+| 实时会议事件 |示例应用演示了机器人如何接收实时会议事件。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## <a name="step-by-step-guide"></a>分步指南
 
-按照[分步指南](../../sbs-calling-and-meeting.yml)在机器人中设置通话和会议。
+按照 [分步指南](../../sbs-calling-and-meeting.yml) 设置 Teams 通话和会议机器人。
 
 ## <a name="next-step"></a>后续步骤
 
