@@ -5,12 +5,12 @@ description: 了解 Teams 应用的消息扩展搜索命令，通过应用清单
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: c126d6436c5fb091804c92caeb2876c09392bd9b
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 9ec7ea734e331fcfb563702d18284f4831c369f6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791830"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820176"
 ---
 # <a name="define-message-extension-search-commands"></a>定义邮件扩展搜索命令
 
@@ -24,7 +24,7 @@ ms.locfileid: "68791830"
 请参阅以下视频，了解如何定义消息扩展搜索命令：
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>选择搜索命令调用位置
@@ -161,3 +161,11 @@ ms.locfileid: "68791830"
 
 > [!div class="nextstepaction"]
 > [响应搜索命令](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。
+
+## <a name="see-also"></a>另请参阅
+
+* [卡片](../../../task-modules-and-cards/what-are-cards.md)
+* [任务模块](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Teams 的应用清单架构](../../../resources/schema/manifest-schema.md)
+* [Teams 开发人员门户](../../../concepts/build-and-test/teams-developer-portal.md)
+* [消息扩展](../../what-are-messaging-extensions.md)

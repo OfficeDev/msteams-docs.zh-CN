@@ -1,17 +1,17 @@
 ---
 title: 创建个人选项卡
 author: laujan
-description: 了解如何生成个人选项卡。选择Node.js、ASP.NET Core或 ASP.NET Core MVC 环境。 生成应用、添加内容、创建包、生成和运行应用。
+description: 了解如何构建个人选项卡。选择Node.js、ASP.NET Core或 ASP.NET Core MVC 环境。 生成应用、添加内容、创建包、生成和运行应用。
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 5afb145bdba5639b71a7b56ac8884dc465127d35
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560734"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820001"
 ---
 # <a name="create-a-personal-tab"></a>创建个人选项卡
 
@@ -31,7 +31,7 @@ ms.locfileid: "68560734"
     npm install yo gulp-cli --global
     ```
 
-1. 在命令提示符下，输入以下命令安装 Microsoft Teams 应用生成器：
+1. 在命令提示符下，通过输入以下命令安装 Microsoft Teams 应用生成器：
 
     ```cmd
     npm install generator-teams --global
@@ -56,7 +56,7 @@ ms.locfileid: "68560734"
     yo teams
     ```
 
-1. 向 Microsoft Teams 应用生成器 `manifest.json` 提示的更新文件的一系列问题提供值。
+1. 向 Microsoft Teams 应用生成器提示的一系列问题提供值以更新文件 `manifest.json` 。
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text=" Teams生成器 ":::
 
@@ -97,7 +97,7 @@ ms.locfileid: "68560734"
 
     * **要托管此解决方案的 URL 是什么?**
 
-      默认情况下，生成器建议使用 Azure 网站 URL。 仅在本地测试应用，因此不需要有效的 URL。
+      默认情况下，生成器会建议 Azure 网站 URL。 仅在本地测试应用，因此不需要有效的 URL。
 
     * **加载应用/选项卡时，是否希望显示加载指示器?**
 
@@ -131,7 +131,7 @@ ms.locfileid: "68560734"
 
       选择 **不要** 包含对该选项卡的 Azure AD 单点登录支持。默认值为“是”，输入 **n**。
     > [!NOTE]
-    > 在选项卡中，仅当用户选择后退按钮 (或移出选项卡) 并返回到主页时，才会显示选项卡主页。 该选项卡不按设计维护或保留以前的状态。
+    > 在选项卡中，仅当用户选择“后退”按钮 (或移出选项卡) 并返回到主页时，选项卡主页才会显示。 根据设计，选项卡不会保留或保留以前的状态。
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>将内容页添加到个人选项卡
@@ -193,7 +193,7 @@ ms.locfileid: "68560734"
 
 1. 保存更新的 `manifest.json` 文件。
 
-1. 从以下路径打开Visual Studio Code中的 **Tab.ts**，在 iFrame 中提供内容页面：
+1. 从以下路径打开 Visual Studio Code中的 **Tab.ts**，以在 iFrame 中提供内容页：
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
@@ -251,7 +251,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>将应用程序上传到 Teams
 
 1. 转到 Teams 并选择 **应用**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::。
-1. 选择 **“管理应用** > **上传应用** > **上传自定义应用**”。
+1. 选择“ **管理应用** > **”“上传应用** > **上传自定义应用**”。
 1. 转到项目目录，浏览到 **./package** 文件夹，选择压缩文件夹，然后选择“**打开**”。
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text=" 添加个人选项卡 ":::
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
 1. 在 Teams 的左窗格中，选择省略号 &#x25CF;&#x25CF;&#x25CF；然后选择上传的应用以查看个人选项卡。
 
-   现在，你已在 Teams 中成功创建并添加了个人选项卡。
+   现在，你已成功在 Teams 中创建并添加了个人选项卡。
   
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -371,7 +371,7 @@ ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. 在 Visual Studio 解决方案资源管理器中，从 **Pages** 文件夹打开 **PersonalTab.cshtml** 并添加`microsoftTeams.app.initialize()`到标记中`<script>`。
+1. 在 Visual Studio გადაწყვეტების მნახველი中，从 **Pages** 文件夹打开 **PersonalTab.cshtml** 并添加`microsoftTeams.app.initialize()``<script>`标记。
 
 1. 选择“**保存**”。
 
@@ -379,7 +379,7 @@ ASP.NET Core 将名为“**索引**”的文件视为网站的默认或主页。
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-在项目目录根目录的命令提示符处，运行以下命令以建立到选项卡的安全隧道：
+在项目目录根目录中的命令提示符下，运行以下命令，建立到选项卡的安全隧道：
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. 打开“**应用**”并选择“**导入引用**”。
 
-1. 应用包文件名是 `tab.zip` ，可在路径上 `/bin/Debug/netcoreapp3.1/tab.zip` 使用。
+1. 应用包文件名为 `tab.zip` ，且在路径中 `/bin/Debug/netcoreapp3.1/tab.zip` 可用。
 
 1. 在“开发人员门户”中选择 `tab.zip` 并将其打开。
 
@@ -401,9 +401,9 @@ ngrok http 3978 --host-header=localhost
 
 1. 在“**开发人员信息**”中，添加所需详细信息，并在 **网站 (必须是有效的 HTTPS URL)** 中提供 ngrok HTTPS URL。
 
-1. 在 **应用 URL** 中，将隐私策略更新为`https://<yourngrokurl>/privacy``https://<yourngrokurl>/tou`“使用条款”，然后选择 **“保存**”。
+1. 在 **“应用 URL**”中，将“隐私策略”更新为 `https://<yourngrokurl>/privacy` `https://<yourngrokurl>/tou` 和“使用条款”，然后选择“ **保存**”。
 
-1. 在 **“应用功能**”中，选择 **“个人应用** > **创建你的第一个个人应用”选项卡**，然后输入名称并更新 **内容 URL**`https://<yourngrokurl>/personalTab`。 将“网站 URL”字段留空，然后从下拉列表中选择 **“上下文** 为 personalTab”，然后选择 **“确认**”。
+1. 在 **“应用功能**”中，选择“**个人应用** > **”“创建你的第一个个人应用”选项卡**，然后输入名称并使用 更新 **内容 URL**`https://<yourngrokurl>/personalTab`。 将“网站 URL”字段留空，从下拉列表中选择“ **上下文** ”作为“个人选项卡”，然后选择“ **确认**”。
 
 1. 选择“保存”。
 
@@ -417,7 +417,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text=" 默认选项卡 ":::
 
-   现在，你已在 Teams 中成功创建并添加了个人选项卡。
+   现在，你已成功在 Teams 中创建并添加了个人选项卡。
   
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -487,7 +487,7 @@ public void Configure(IApplicationBuilder app)
 * 一个 **透明轮廓图标**，尺寸为 32 x 32 像素。
 * 一个 `manifest.json` 指定应用属性的文件。
 
-这些文件必须压缩在应用包中，以便将选项卡上传到 Teams。 Teams 加载 `contentUrl` 清单中指定的清单，将其嵌入 iFrame 中，并将其呈现在选项卡中。
+这些文件必须压缩在应用包中，以便将选项卡上传到 Teams。 Teams 加载 `contentUrl` 清单中指定的 ，将其嵌入 iFrame 中，并将其呈现在选项卡中。
 
 #### <a name="csproj"></a>.csproj
 
@@ -538,7 +538,7 @@ public void Configure(IApplicationBuilder app)
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. 在 Visual Studio 解决方案资源管理器中，打开 **Views** > **PersonalTab** 文件夹 **中的 PersonalTab.cshtml** 并在标记中`<script>`添加`microsoftTeams.app.initialize()`。
+1. 在 Visual Studio გადაწყვეტების მნახველი中，从 **Views** >  **PersonalTab 文件夹打开 PersonalTab.cshtml**，并在`microsoftTeams.app.initialize()`标记中添加 。`<script>`
 
 1. 选择“**保存**”。
 
@@ -546,7 +546,7 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>建立到选项卡的安全隧道
 
-在项目目录根目录的命令提示符处，运行以下命令以建立到选项卡的安全隧道：
+在项目目录根目录中的命令提示符下，运行以下命令，建立到选项卡的安全隧道：
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -570,11 +570,11 @@ ngrok http 3978 --host-header=localhost
 
 1. 在“**说明**”中添加应用的短说明和长说明。
 
-1. 在 **开发人员信息** 中，添加所需的详细信息，在 **网站 (必须是有效的 HTTPS URL)** 提供 ngrok HTTPS URL。
+1. 在 **“开发人员信息**”中，添加所需的详细信息，并在 **“网站 (必须是有效的 HTTPS URL)** 提供 ngrok HTTPS URL。
 
-1. 在 **应用 URL** 中，将隐私策略更新为`https://<yourngrokurl>/privacy``https://<yourngrokurl>/tou`“使用条款”，然后选择 **“保存**”。
+1. 在 **“应用 URL**”中，将“隐私策略”更新为 `https://<yourngrokurl>/privacy` `https://<yourngrokurl>/tou` 和“使用条款”，然后选择“ **保存**”。
 
-1. 在 **“应用功能**”中，选择 **“个人应用** > **创建你的第一个个人应用”选项卡**，然后输入名称并更新 **内容 URL**`https://<yourngrokurl>/personalTab`。 将“网站 URL”字段留空，然后从下拉列表中选择 **“上下文** 为 personalTab”，然后选择 **“确认**”。
+1. 在 **“应用功能**”中，选择“**个人应用** > **”“创建你的第一个个人应用”选项卡**，然后输入名称并使用 更新 **内容 URL**`https://<yourngrokurl>/personalTab`。 将“网站 URL”字段留空，从下拉列表中选择“ **上下文** ”作为“个人选项卡”，然后选择“ **确认**”。
 
 1. 选择“保存”。
 
@@ -588,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="个人选项卡":::
   
-   现在，你已在 Teams 中成功创建并添加了个人选项卡。
+   现在，你已成功在 Teams 中创建并添加了个人选项卡。
 
    Teams 中含有个人选项卡时，还可以将个人选项卡 [ 重新排序 ](#reorder-static-personal-tabs)。
 
@@ -596,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>将静态个人选项卡重新排序
 
-从清单版本 1.7 开始，开发人员可以重新排列其个人应用中的所有选项卡。 可以将 **机器人聊天** 选项卡（始终默认为第一个位置）移动到个人应用选项卡标题中的任意位置。 声明了两个保留选项卡 `entityId` 关键字，即“ **对话**”和“**相关内容**”。
+从清单版本 1.7 开始，开发人员可以重新排列其个人应用中的所有选项卡。 可以移动 **机器人聊天** 选项卡，该选项卡始终默认为个人应用选项卡标题中的第一个位置。 声明了两个保留选项卡 `entityId` 关键字，即“ **对话**”和“**相关内容**”。
 
 如果创建具有 **个人** 范围的机器人，则默认显示在个人应用的第一个选项卡位置。 如果要将其移动到另一个位置，则必须使用保留的关键字“**对话**”将静态选项卡对象添加到清单。 “**对话**”选项卡显示在 Web 或桌面上，具体取决于在 `staticTabs` 数组中添加“**对话**”选项卡的位置。
 
@@ -625,8 +625,10 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="see-also"></a>另请参阅
 
-* [Teams 选项卡](~/tabs/what-are-tabs.md)
-* [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
-* [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [创建对话选项卡](~/tabs/how-to/conversational-tabs.md)
+* [Teams 的生成选项卡](../what-are-tabs.md)
+* [创建频道选项卡或组选项卡](create-channel-group-tab.md)
 * [从个人应用或选项卡共享到 Teams](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Teams 开发人员门户](../../concepts/build-and-test/teams-developer-portal.md)
+* [Teams 的应用清单架构](../../resources/schema/manifest-schema.md)
+* [具有自适应卡片的生成选项卡](build-adaptive-card-tabs.md)
+* [移动设备上的选项卡](../design/tabs-mobile.md)

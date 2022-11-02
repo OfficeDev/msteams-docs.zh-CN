@@ -1,30 +1,30 @@
 ---
 title: 创建对话选项卡
 author: surbhigupta
-description: 了解如何在 Microsoft Teams 中创建对话选项卡以启动、继续、增强和关闭对话。
+description: 了解如何在 Microsoft Teams 中创建对话选项卡以开始、继续、增强和关闭对话。
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: high
-ms.openlocfilehash: 37816fab1f8ca402e806dec3ec5cca77dd15cf95
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: fa54221a413b19704d80ec62feb1cf068e42d1a0
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450420"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820120"
 ---
 # <a name="create-conversational-tabs"></a>创建对话选项卡
 
-对话子实体提供了一种方法，允许用户在选项卡中进行有关子实体的对话。例如特定的任务、患者和销售机会，而不是讨论整个选项卡（也称为实体）。 传统的频道或可配置选项卡允许用户进行有关选项卡的对话，但用户需要更集中的对话。 如果内容过多而无法进行集中讨论，或者由于内容随时间推移而更改，使对话与所显示的内容无关，则可能会产生对更集中对话的要求。 会话子实体为动态选项卡提供更集中的会话体验。
+对话子实体提供了一种允许用户在选项卡中就子实体进行对话的方法。例如特定任务、患者和销售机会，而不是讨论整个选项卡（也称为实体）。 传统频道或可配置选项卡允许用户就选项卡进行对话，但用户需要更专注的对话。 如果内容太多而无法集中讨论，或者内容随时间而更改，则可能会产生更集中的对话的要求，从而使对话与显示的内容无关。 对话子实体为动态选项卡提供了更集中的聊天体验。
 
-对话子实体仅在通道中受支持。 可以从个人或静态选项卡使用它们在已固定到频道的选项卡中创建或继续对话。 如果要为用户提供一个位置来查看和访问跨多个通道发生的对话，静态选项卡非常有用。
+对话子实体仅在通道中受支持。 可以从个人或静态选项卡使用它们，在已固定到频道的选项卡中创建或继续对话。 如果要为用户提供一个位置，以便查看和访问跨多个通道发生的对话，则静态选项卡非常有用。
 
 ## <a name="prerequisites"></a>先决条件
 
-若要支持会话子实体，Tab Web 应用程序必须能够在后端数据库中的子实体↔对话之间存储映射。 提供 `conversationId` 此功能，但必须将其存储 `conversationId` 并返回到 Teams，以便用户继续对话。
+若要支持对话子实体，选项卡 Web 应用程序必须能够在后端数据库中存储子实体↔会话之间的映射。 `conversationId`提供了 ，但你必须存储它`conversationId`并将其返回到 Teams，以便用户继续对话。
 
 ## <a name="start-a-new-conversation"></a>开始新对话
 
-若要启动新对话，请使用该 `openConversation()` 函数。 启动和继续会话均由此方法处理。 对函数的输入根据要执行的操作而更改，从用户的角度来看，这会打开屏幕右侧的对话面板，以启动对话或继续聊天。
+若要开始新的对话，请使用 `openConversation()` 函数。 开始和继续对话均由此方法处理。 从用户的角度来看，函数的输入会根据要采取的操作而更改，这会打开屏幕右侧的对话面板，以启动对话或继续对话。
 
 ``` javascript
 microsoftTeams.conversations.openConversation(openConversationRequest);
@@ -33,13 +33,13 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 **openConversation** 采用以下输入在频道中启动对话：
 
 * **subEntityId**：特定子实体的 ID。 例如，task-123。
-* **entityId**：创建选项卡实例时的 ID。 返回到同一个选项卡实例时，ID 非常重要。
+* **entityId**：创建选项卡实例时的 ID。 ID 对于回引用同一选项卡实例非常重要。
 * **channelId**：选项卡实例所在的通道。
    > [!NOTE]
-   > **channelId** 是频道选项卡的可选选项。 但是，如果要在通道和静态选项卡之间保持相同的实现，则建议执行此操作。
-* **title**：在聊天面板中向用户显示的标题。
+   > **channelId 对于通道** 选项卡是可选的。 但是，如果要使跨通道和静态选项卡的实现保持一致，则建议这样做。
+* **title**：在聊天面板中向用户显示的游戏。
 
-还可以从 [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) TeamsJS v1) 中的 API (`microsoftTeams.getContext()` 检索其中的大部分值。 有关详细信息，请参阅 [PageInfo 接口](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
+还可以从 [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) TeamsJS v1) `microsoftTeams.getContext()` 中的 API (检索其中大多数值。 有关详细信息，请参阅 [PageInfo 接口](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});
@@ -49,7 +49,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 :::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="开始对话":::
 
-如果用户启动对话，请务必侦听该事件的回调以检索并保存 **conversationId**：
+如果用户启动会话，请务必侦听该事件的回调以检索和保存 **conversationId**：
 
 ```javascript
 ⁠microsoftTeams.conversations.openConversation({
@@ -60,21 +60,21 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 });
 ```
 
-该 `conversationResponse` 对象包含与已启动的对话相关的信息。 建议保存此响应对象的所有属性供以后使用。
+对象 `conversationResponse` 包含与已启动的会话相关的信息。 建议保存此响应对象的所有属性以供以后使用。
 
 ## <a name="continue-a-conversation"></a>继续对话
 
-会话启动后，需要后续调用 `openConversation()` ，同时提供与 [开始新会话](#start-a-new-conversation)时相同的输入，但也包括 **conversationId**。 会话面板将打开，供查看相应对话的用户使用。 用户可以实时查看新消息或传入消息。
+会话开始后，后续调用 `openConversation()` 要求提供与 [开始新对话](#start-a-new-conversation)相同的输入，但还包括 **conversationId**。 此时会为视图中具有相应对话的用户打开对话面板。 用户可以实时查看新消息或传入消息。
 
-下图显示了具有相应对话的对话面板：
+下图显示了具有相应对话的会话面板：
 
 :::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="继续对话":::
 
 ## <a name="enhance-a-conversation"></a>增强对话
 
-选项卡包含 [到子实体的深层链接](~/concepts/build-and-test/deep-links.md)非常重要。 例如，用户从频道对话中选择选项卡小鸡的深层链接。 预期行为是接收深层链接，打开该子实体，然后打开该子实体的对话面板。
+选项卡必须包含 [指向子实体的深层链接](~/concepts/build-and-test/deep-links.md)，这一点很重要。 例如，用户从频道对话中选择选项卡 chiclet 深层链接。 预期行为是接收深层链接，打开该子实体，然后打开该子实体的对话面板。
 
-若要从个人或静态选项卡支持对话子实体，无需更改实现中的任何内容。 我们仅支持从已固定的频道选项卡开始或继续对话。 支持静态选项卡可为用户提供单个位置，以便与所有子实体进行交互。 在静态选项卡中打开对话视图时，`entityId``channelId`务必保存`subEntityId`选项卡，并在最初在通道中创建选项卡时具有正确的属性。
+若要支持个人或静态选项卡中的对话子实体，无需在实现中更改任何内容。 我们仅支持从已固定的频道选项卡开始或继续对话。 通过支持静态选项卡，你可以为用户提供一个位置，以便与所有子实体交互。 在频道中最初创建选项卡时，请务必保存 `subEntityId`、 `entityId`和 `channelId` ，以在静态选项卡中打开对话视图时具有正确的属性。
 
 ## <a name="close-a-conversation"></a>关闭对话
 
@@ -84,7 +84,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 microsoftTeams.conversations.closeConversation();
 ```
 
-当用户在对话视图中选择 **“关闭” (X) 时，** 还可以侦听事件。
+当用户在对话视图中选择 **“关闭 (X)** ”时，还可以侦听事件。
 
 ```javascript
 ⁠microsoftTeams.conversations.openConversation({
@@ -108,8 +108,8 @@ microsoftTeams.conversations.closeConversation();
 
 ## <a name="see-also"></a>另请参阅
 
-* [Teams 选项卡](~/tabs/what-are-tabs.md)
-* [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
-* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
+* [Teams 的生成选项卡](../what-are-tabs.md)
+* [创建个人选项卡](create-personal-tab.md)
+* [创建频道选项卡或组选项卡](create-channel-group-tab.md)
+* [具有自适应卡片的生成选项卡](build-adaptive-card-tabs.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
-* [具有自适应卡片的生成选项卡](~/tabs/how-to/build-adaptive-card-tabs.md)

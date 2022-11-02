@@ -259,7 +259,7 @@
       displayName: 'Loading indicator, personal-scoped custom tab, channel or group custom tab'
     - name: 创建配置页
       href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: 创建删除页
+    - name: 创建删除页面
       href: tabs/how-to/create-tab-pages/removal-page.md
       displayName: 'Reconfigure tab, register remove handler'
     - name: 移动设备上的选项卡

@@ -5,12 +5,12 @@ description: 了解Teams Connect共享频道，无需切换租户即可在共享
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: d1f2d212c33f80ce6a5d27e93bda0551d26542dd
-ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
+ms.openlocfilehash: d8c6e46a67c8cfeb1e8fa9bf0196a74fb6e183c6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68789924"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819952"
 ---
 # <a name="microsoft-teams-connect-shared-channels"></a>Microsoft Teams Connect共享频道
 
@@ -112,4 +112,4 @@ SupportedChannelTypes 是一个可选属性，可在非标准通道中启用应�
 * [Teams 的应用清单架构](../../resources/schema/manifest-schema.md)
 * [Microsoft Teams 中的共享频道](/MicrosoftTeams/shared-channels)
 * [通道资源类型](/graph/api/resources/channel)
-* [Teams 位置的保留策略](/microsoft-365/compliance/create-retention-policies)
+* [Teams 位置的重压策略](/microsoft-365/compliance/create-retention-policies)

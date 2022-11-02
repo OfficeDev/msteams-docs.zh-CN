@@ -3,12 +3,12 @@ title: 获取选项卡的上下文
 description: 了解选项卡的上下文、用户、团队或公司的上下文、访问信息、检索专用或共享频道中的上下文以及处理主题更改。
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: f0a54dc749d1132918e3ec47ac614aff3ce8aab8
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: d4dee147da2fd0091e038526ca56d66a9b80f7e5
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791543"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820106"
 ---
 # <a name="get-context-for-your-tab"></a>获取选项卡的上下文
 
@@ -247,7 +247,7 @@ microsoftTeams.getContext((context) => {
 ## <a name="get-context-in-shared-channels"></a>获取共享频道中的上下文
 
 在共享通道中加载内容 UX 时，使用从 `getContext` 调用收到的数据来更改共享通道。 如果选项卡使用以下任何值，则必须填充 `channelType` 字段以确定选项卡是否加载到共享频道中，并相应地做出响应。
-对于共享频道， `groupId` 值为 `null`，因为主机团队的 groupId 无法准确反映共享频道的真实成员身份。 为了解决此问题，`hostTeamGroupID`新添加了 和 `hostTenantID` 属性，并且可用于调用 Microsoft 图形 API 来检索成员身份。 `hostTeam` 指创建共享频道的团队。 `currentTeam` 指当前用户从中访问共享频道的 Team。
+对于共享频道， `groupId` 值为 `null`，因为主机团队的 groupId 无法准确反映共享频道的真实成员身份。 为了解决此问题， `hostTeamGroupID` 新添加了 和 `hostTenantID` 属性，可用于进行 Microsoft Graph API 调用以检索成员身份。 `hostTeam` 指创建共享频道的团队。 `currentTeam` 指当前用户从中访问共享频道的 Team。
 
 有关这些概念的详细信息，请参阅 [共享频道](~/concepts/build-and-test/shared-channels.md)。
 
@@ -259,7 +259,7 @@ microsoftTeams.getContext((context) => {
 |`channelType`| 对于共享频道，属性设置为 `sharedChannel` 。|
 |`groupId`|属性 `null` 适用于共享频道。|
 |`hostTenantId`| 属性是新添加的，用于描述主机的租户 ID，可用于与当前用户的 `tid` 租户 ID 属性进行比较。 |
-|`hostTeamGroupId`| 属性是新添加的，它描述主机团队的 Azure AD 组 ID，对于进行 Microsoft 图形 API调用以检索共享频道成员身份非常有用。 |
+|`hostTeamGroupId`| 属性是新添加的，用于描述主机团队的 Azure AD 组 ID，可用于进行 Microsoft Graph API 调用以检索共享频道成员身份。 |
 |`teamId`|属性是新添加的，并设置为当前共享团队的线程 ID。 |
 |`teamName`|属性设置为当前共享团队的 `teamName`。 |
 |`teamType`|属性设置为当前共享团队的 `teamType`。|
@@ -286,8 +286,9 @@ microsoftTeams.getContext((context) => {
 
 ## <a name="see-also"></a>另请参阅
 
-* [选项卡设计准则](../../tabs/design/tabs.md)
-* [Teams 选项卡](~/tabs/what-are-tabs.md)
-* [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
-* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-* [在选项卡中使用任务模块](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Teams 的生成选项卡](../what-are-tabs.md)
+* [为 Microsoft Teams 设计选项卡](../design/tabs.md)
+* [为选项卡应用启用 SSO](authentication/tab-sso-overview.md)
+* [Microsoft Teams Connect共享频道](../../concepts/build-and-test/shared-channels.md)
+* [Teams 的应用清单架构](../../resources/schema/manifest-schema.md)
+* [在选项卡中使用任务模块](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

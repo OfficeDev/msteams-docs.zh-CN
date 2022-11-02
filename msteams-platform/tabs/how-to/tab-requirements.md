@@ -5,12 +5,12 @@ description: 在本文中，了解生成 Microsoft Teams 个人、频道或组�
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4471d88b7f9b0fd6364c833f6b3dd910aadb300a
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791809"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819959"
 ---
 # <a name="prerequisites"></a>先决条件
 
@@ -65,5 +65,7 @@ ms.locfileid: "68791809"
 
 ## <a name="see-also"></a>另请参阅
 
-* [Teams 选项卡](~/tabs/what-are-tabs.md)
+* [Teams 的生成选项卡](../what-are-tabs.md)
+* [使用 JavaScript 生成第一个选项卡应用](../../sbs-gs-javascript.yml)
+* [在 Azure AD 中注册选项卡应用](authentication/tab-sso-register-aad.md)
 * [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)

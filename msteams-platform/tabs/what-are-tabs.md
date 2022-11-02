@@ -5,12 +5,12 @@ description: 了解如何生成 Microsoft Teams 中嵌入的选项卡和网页�
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 0bf8593c4cb27b54893c88c5f47bf1cbd489f9a0
-ms.sourcegitcommit: 6b262c2044b7c5f6f99e64c5cee11a5b28a00139
+ms.openlocfilehash: cd8e57a0773a5c1b8cd145176de703018c4e45e7
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68772506"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819987"
 ---
 # <a name="build-tabs-for-teams"></a>Teams 的生成选项卡
 
@@ -90,9 +90,7 @@ Whether you choose to expose your tab within the channel or group, or personal s
 
 ## <a name="see-also"></a>另请参阅
 
-* [在Microsoft Teams 中自定义选项卡](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
-* [请求设备权限](../concepts/device-capabilities/native-device-permissions.md)
-* [集成媒体功能](../concepts/device-capabilities/media-capabilities.md)
-* [集成 QR 或条形码扫描程序](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [集成位置功能](../concepts/device-capabilities/location-capability.md)
+* [为 Microsoft Teams 设计选项卡](design/tabs.md)
+* [设备功能](../concepts/device-capabilities/device-capabilities-overview.md)
 * [移动设备上的选项卡](design/tabs-mobile.md#tabs-on-mobile)
+* [映射到功能的应用功能](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)

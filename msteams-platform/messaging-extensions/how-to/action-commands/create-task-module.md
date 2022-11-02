@@ -1,16 +1,16 @@
 ---
 title: 创建和发送任务模块
 author: surbhigupta
-description: 了解如何创建和发送任务模块。 处理初始调用操作，并使用操作消息扩展命令中的任务模块进行响应。
+description: 了解如何创建和发送任务模块。 通过操作消息扩展命令处理初始调用操作并使用任务模块进行响应。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 08629f59979923a397c08809fc20b50c81a30c58
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100313"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820113"
 ---
 # <a name="create-and-send-task-module"></a>创建和发送任务模块
 
@@ -648,7 +648,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 |属性名称|用途|
 |---|---|
-|`type`| 可以是 `continue` 呈现窗体，也可以 `message` 是用于简单的弹出窗口。 |
+|`type`| 可以是 `continue` 用于呈现窗体，也可以 `message` 是用于简单弹出窗口。 |
 |`value`| 对于表单可为 `taskInfo`，或对于消息为 `string`。 |
 
 taskInfo 对象的架构为：
@@ -995,4 +995,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>另请参阅
 
-[定义操作命令](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [卡片](../../../task-modules-and-cards/what-are-cards.md)
+* [自适应卡片中的人员选取器](../../../task-modules-and-cards/cards/people-picker.md)
+* [任务模块](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Teams 的应用清单架构](../../../resources/schema/manifest-schema.md)
+* [定义消息扩展操作命令](define-action-command.md)
+* [消息扩展](../../what-are-messaging-extensions.md)

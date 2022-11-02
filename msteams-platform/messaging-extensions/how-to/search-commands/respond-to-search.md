@@ -5,29 +5,29 @@ description: 了解如何从 Microsoft Teams 应用中的消息扩展响应搜�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 97fe20097e98a015759ba030004fb8c0b3b5e3f9
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100558"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819945"
 ---
 # <a name="respond-to-search-command"></a>响应搜索命令
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-用户提交搜索命令后，Web 服务将收到一条 `composeExtension/query` 包含具有 `value` 搜索参数的对象的调用消息。 使用以下条件触发的此调用：
+用户提交搜索命令后，Web 服务会收到一 `composeExtension/query` 条调用消息，其中包含具有 `value` 搜索参数的 对象。 此调用将触发以下条件：
 
-* 当字符输入到搜索框中时。
-* `initialRun` 在应用清单中设置为 true，一旦调用搜索命令，就会收到调用消息。 有关详细信息，请参阅 [默认查询](#default-query)。
+* 在搜索框中输入字符时。
+* `initialRun` 在应用清单中设置为 true，一旦调用搜索命令，就会立即收到调用消息。 有关详细信息，请参阅 [默认查询](#default-query)。
 
-本文档介绍如何以卡片和预览的形式响应用户请求，以及 Microsoft Teams 发出默认查询的条件。
+本文档指导你如何以卡片和预览的形式响应用户请求，以及 Microsoft Teams 发出默认查询的条件。
 
-请求参数在 `value` 请求中的对象中找到，其中包括以下属性：
+请求参数位于 `value` 请求中的 对象中，其中包括以下属性：
 
 | 属性名称 | 用途 |
 |---|---|
-| `commandId` | 用户调用的命令的名称，与应用清单中声明的命令之一匹配。 |
+| `commandId` | 用户调用的命令的名称，与应用清单中声明的命令之一相匹配。 |
 | `parameters` | 参数数组。 每个参数对象都包含参数名称以及用户提供的参数值。 |
 | `queryOptions` | 分页参数： <br>`skip`：跳过此查询的计数 <br>`count`：要返回的元素数。 |
 
@@ -52,7 +52,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-下面的 JSON 会缩短，以突出显示最相关的部分。
+以下 JSON 将缩短，以突出显示最相关的部分。
 
 ```json
 {
@@ -79,18 +79,18 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ## <a name="respond-to-user-requests"></a>响应用户请求
 
-当用户执行查询时，Microsoft Teams 会向服务发出同步 HTTP 请求。 此时，代码有 `5` 几秒钟的时间向请求提供 HTTP 响应。 在此期间，服务可以执行其他查找或为请求提供服务所需的任何其他业务逻辑。
+当用户执行查询时，Microsoft Teams 会向服务发出同步 HTTP 请求。 此时，代码有 `5` 几秒钟的时间向请求提供 HTTP 响应。 在此期间，服务可以执行其他查找，或者执行处理请求所需的任何其他业务逻辑。
 
-服务必须响应与用户查询匹配的结果。 响应必须指示具有以下属性的 `200 OK` HTTP 状态代码以及有效的应用程序或 JSON 对象：
+服务必须响应结果与用户查询匹配。 响应必须指示 的 HTTP 状态代码 `200 OK` 以及具有以下属性的有效应用程序或 JSON 对象：
 
 |属性名称|用途|
 |---|---|
 |`composeExtension`|顶级响应信封。|
-|`composeExtension.type`|响应类型。 支持以下类型： <br>`result`：显示搜索结果的列表 <br>`auth`：提示用户进行身份验证 <br>`config`：提示用户设置消息扩展插件 <br>`message`：显示纯文本消息 |
-|`composeExtension.attachmentLayout`|指定附件的布局。 用于类型 `result`响应。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象列表 <br>`grid`：缩略图图像的网格 |
-|`composeExtension.attachments`|有效附件对象的数组。 用于类型 `result`响应。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
-|`composeExtension.suggestedActions`|建议的操作。 用于类型或 `config`. `auth` 的响应。 |
-|`composeExtension.text`|要显示的消息。 用于类型 `message`响应。 |
+|`composeExtension.type`|响应类型。 支持以下类型： <br>`result`：显示搜索结果列表 <br>`auth`：提示用户进行身份验证 <br>`config`：提示用户设置消息扩展 <br>`message`：显示纯文本消息 |
+|`composeExtension.attachmentLayout`|指定附件的布局。 用于 类型的 `result`响应。 <br>目前支持以下类型： <br>`list`：包含缩略图、标题和文本字段的卡片对象列表 <br>`grid`：缩略图图像网格 |
+|`composeExtension.attachments`|有效附件对象的数组。 用于 类型的 `result`响应。 <br>目前支持以下类型： <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.suggestedActions`|建议的操作。 用于 类型 `auth` 为 或 `config`的响应。 |
+|`composeExtension.text`|要显示的消息。 用于 类型的 `message`响应。 |
 
 ### <a name="response-card-types-and-previews"></a>响应卡类型和预览
 
@@ -101,22 +101,22 @@ Teams 支持以下卡片类型：
 * [Office 365 连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [自适应卡](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-若要更好地了解和概述卡片，请参阅[卡片。](~/task-modules-and-cards/what-are-cards.md)
+若要更好地了解和概述卡片，请参阅 [什么是卡片](~/task-modules-and-cards/what-are-cards.md)。
 
-若要了解如何使用缩略图和英雄卡片类型，请 [参阅添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
+若要了解如何使用缩略图和主图卡类型，请参阅 [添加卡片和卡片操作](~/task-modules-and-cards/cards/cards-actions.md)。
 
-有关Office 365连接器卡的其他信息，请参阅[“使用Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)”。
+有关Office 365连接器卡的其他信息，请参阅[使用Office 365连接器卡](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
-结果列表显示在 Microsoft Teams UI 中，其中包含每个项的预览。 预览版是通过以下两种方式之一生成的：
+结果列表显示在 Microsoft Teams UI 中，其中包含每个项目的预览。 预览是通过以下两种方式之一生成的：
 
-* `preview`使用对象中的`attachment`属性。 附 `preview` 件只能是 Hero 或缩略图卡。
-* 从对象的基本`title``text`属性和`image`属性中`attachment`提取。 仅当未指定该属性时， `preview` 才使用基本属性。
+* `preview`在 对象中使用 `attachment` 属性。 附件 `preview` 只能是 Hero 或缩略图卡。
+* 从 对象的基本 `title`、 `text`和 `image` 属性 `attachment` 中提取 。 仅当未指定属性时， `preview` 才使用基本属性。
 
-对于 Hero 或缩略图卡，预览卡不支持调用操作其他操作，例如按钮和点击。
+对于“Hero”或“缩略图”卡片，除了调用操作外，预览卡不支持按钮和点击等其他操作。
 
-若要发送自适应卡片或Office 365连接器卡，必须包含预览版。 该 `preview` 属性必须是 Hero 或缩略图卡。 如果未在对象中 `attachment` 指定预览属性，则不会生成预览。
+若要发送自适应卡片或Office 365连接器卡，必须包含预览版。 属性 `preview` 必须是 Hero 卡或缩略图卡。 如果未在 对象中 `attachment` 指定预览属性，则不会生成预览。
 
-对于 Hero 和 Thumbnail 卡，无需指定预览属性，默认情况下会生成预览版。
+对于 Hero 和 Thumbnail 卡片，无需指定预览属性，默认情况下会生成预览。
 
 ### <a name="response-example"></a>响应示例
 
@@ -387,9 +387,9 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="default-query"></a>默认查询
 
-如果设置为`initialRun``true`在清单中，则当用户首次打开消息扩展时，Microsoft Teams 将发出 **默认** 查询。 服务可以使用一组预填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或不依赖于用户输入的任何其他信息时，这非常有用。
+如果在清单中将 设置为 `initialRun` `true` ，Microsoft Teams 会在用户首次打开消息扩展时发出 **默认** 查询。 服务可以使用一组预先填充的结果来响应此查询。 当搜索命令需要身份验证或配置、显示最近查看的项目、收藏夹或不依赖于用户输入的任何其他信息时，这非常有用。
 
-默认查询的结构与任何常规用户查询相同， `name` 字段设置为 `initialRun` 并 `value` 设置为 `true` 如下对象所示：
+默认查询具有与任何常规用户查询相同的结构， `name` 字段设置为 `initialRun` ，并将 `value` 设置为 `true` ，如以下 对象所示：
 
 ```json
 {
@@ -426,4 +426,6 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="see-also"></a>另请参阅
 
-[将配置添加到消息扩展](~/get-started/first-message-extension.md)
+* [消息扩展](../../what-are-messaging-extensions.md)
+* [使用 JavaScript 生成第一个选项卡应用](../../../sbs-gs-javascript.yml)
+* [composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)

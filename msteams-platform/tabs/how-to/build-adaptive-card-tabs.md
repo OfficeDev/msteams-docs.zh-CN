@@ -1,22 +1,22 @@
 ---
 title: 生成自适应卡片选项卡
 author: KirtiPereira
-description: 了解如何使用自适应卡片生成选项卡，其中前端使用自适应卡片呈现，后端由机器人提供支持。 浏览调用活动和处理提交。
+description: 了解如何使用自适应卡片生成选项卡，其中前端使用自适应卡片呈现，后端由机器人提供支持。 探索调用活动并处理提交。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 31aecc7ab7744d0b45061d2434d8709c776c52e8
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499284"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820127"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>具有自适应卡片的生成选项卡
 
 > [!IMPORTANT]
 >
-> 自适应卡片选项卡目前仅作为个人应用受支持。
+> 仅支持将具有自适应卡片的选项卡作为个人应用。
 
 使用传统方法开发选项卡时，可能会遇到以下问题:
 
@@ -25,7 +25,7 @@ ms.locfileid: "68499284"
 * iFrame 约束
 * 服务器维护和成本
 
-自适应卡片选项卡是在 Teams 中生成选项卡的新方法。 可以将自适应卡片呈现到选项卡，而不是在 iFrame 中嵌入 Web 内容。前端使用自适应卡片呈现，但后端由机器人提供支持。 机器人负责接受请求，并使用呈现的自适应卡片进行适当的响应。
+自适应卡片选项卡是在 Teams 中生成选项卡的新方法。 可以将自适应卡片呈现到选项卡，而不是在 iFrame 中嵌入 Web 内容。使用自适应卡呈现前端时，后端由机器人提供支持。 机器人负责接受请求，并使用呈现的自适应卡片进行适当的响应。
 
 可以在桌面、Web 和移动设备上使用现成的用户界面(UI)构建基块来生成选项卡。 本文可帮助你了解需对应用清单执行的更改。 本文还确定了调用活动如何使用自适应卡片在选项卡中请求并发送信息，以及它对任务模块工作流的影响。
 
@@ -45,7 +45,7 @@ ms.locfileid: "68499284"
 呈现选项卡的个人应用必须在其应用清单中包含 `staticTabs` 数组。 在 `staticTab` 定义中提供 `contentBotId` 属性时，会呈现自适应卡片选项卡。 静态选项卡定义必须包含 `contentBotId` 以指定自适应卡片选项卡，或包含 `contentUrl` 以指定典型的托管 Web 内容选项卡体验。
 
 > [!NOTE]
-> `contentBotId` 属性当前在清单版本 1.9 或更高版本中提供。
+> 属性 `contentBotId` 在清单版本 1.9 或更高版本中可用。
 
 为 `contentBotId` 属性提供自适应卡片选项卡必须与之通信的 `botId`。 为自适应卡片选项卡配置的 `entityId` 在每个调用请求的 `tabContext` 参数z 发送，可用于区分由同一机器人提供支持的自适应卡片选项卡。 有关其他静态选项卡定义字段的详细信息，请参阅 [清单架构](../../resources/schema/manifest-schema.md#statictabs)。
 
@@ -437,9 +437,8 @@ ms.locfileid: "68499284"
 
 ## <a name="see-also"></a>另请参阅
 
-* [自适应卡](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Teams 选项卡](~/tabs/what-are-tabs.md)
-* [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
-* [创建频道或组选项卡](~/tabs/how-to/create-channel-group-tab.md)
-* [移动设备上的选项卡](~/tabs/design/tabs-mobile.md)
-* [表单完成反馈](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Teams 的生成选项卡](../what-are-tabs.md)
+* [移动设备上的选项卡](../design/tabs-mobile.md)
+* [卡片](../../task-modules-and-cards/what-are-cards.md)
+* [在选项卡中使用任务模块](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [表单完成反馈](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

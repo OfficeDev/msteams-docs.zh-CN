@@ -5,12 +5,12 @@ description: 了解如何使用消息扩展、其类型，以及它在 Microsoft
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 09dad55a4ca0b59e517f55e12f24d8ea8d687313
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 6b486e732542cbd6fdfeaecbef74b9724a024e67
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791732"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819973"
 ---
 # <a name="message-extensions"></a>消息扩展
 
@@ -247,6 +247,11 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 ## <a name="see-also"></a>另请参阅
 
-* [定义搜索消息扩展命令](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-* [创建消息扩展](../build-your-first-app/build-messaging-extension.md)
-* [基于搜索的消息传送扩展的通用操作](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* [映射到功能的应用功能](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
+* [使用 JavaScript 生成第一个消息传递扩展应用](../sbs-gs-msgext.yml)
+* [设计 Microsoft Teams 邮件扩展](design/messaging-extension-design.md)
+* [定义消息扩展操作命令](how-to/action-commands/define-action-command.md)
+* [定义邮件扩展搜索命令](how-to/search-commands/define-search-command.md)
+* [添加链接展开](how-to/link-unfurling.md)
+* [Teams 的应用清单架构](../resources/schema/manifest-schema.md)
+* [Teams 开发人员门户](../concepts/build-and-test/teams-developer-portal.md)

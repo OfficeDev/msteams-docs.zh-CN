@@ -5,12 +5,12 @@ description: 了解 Teams 客户端中的网页，属于个人、频道或组自
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 4074b3bb4499cca2453a9d928a83b1cd04f5c064
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791536"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820162"
 ---
 # <a name="create-a-content-page"></a>创建内容页
 
@@ -139,8 +139,8 @@ ms.locfileid: "68791536"
 
 ## <a name="see-also"></a>另请参阅
 
-* [Teams 选项卡](~/tabs/what-are-tabs.md)
-* [创建个人选项卡](~/tabs/how-to/create-personal-tab.md)
-* [选项卡链接展开和阶段视图](~/tabs/tabs-link-unfurling.md)
-* [创建配置页](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Teams 的生成选项卡](../../what-are-tabs.md)
+* [创建个人选项卡](../create-personal-tab.md)
+* [创建频道选项卡或组选项卡](../create-channel-group-tab.md)
+* [Teams 的应用清单架构](../../../resources/schema/manifest-schema.md)
 * [适用于 Microsoft Teams 选项卡的 DevTools](~/tabs/how-to/developer-tools.md)

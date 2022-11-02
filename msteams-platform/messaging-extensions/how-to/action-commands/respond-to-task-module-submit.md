@@ -5,12 +5,12 @@ description: 了解如何使用主动消息从消息扩展操作命令响应任�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
-ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
+ms.openlocfilehash: 96ba10d59eccbc95a73455641425a01a9f3f2c47
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68772305"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820141"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>响应任务模块提交操作
 
@@ -616,4 +616,6 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="see-also"></a>另请参阅
 
-[响应搜索命令](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
+* [Teams 的应用清单架构](../../../resources/schema/manifest-schema.md)
+* [响应搜索命令](../search-commands/respond-to-search.md)
+* [消息扩展](../../what-are-messaging-extensions.md)
