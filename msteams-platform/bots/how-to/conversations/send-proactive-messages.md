@@ -4,12 +4,12 @@ description: 了解如何使用 Teams 机器人发送主动消息、使用 Micro
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ff2a4310f2dea57fd5fd1d2550474c3361bf8a90
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 7e50719e9befd807127a1eae4022b4af67a9fc00
+ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791459"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819681"
 ---
 # <a name="proactive-messages"></a>主动邮件
 
@@ -25,7 +25,7 @@ ms.locfileid: "68791459"
 >
 > * 若要发送主动消息，建议从 [使用 JavaScript](../../../sbs-gs-notificationbot.yml) 或 [传入 Webhook 通知示例构建通知](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification)机器人开始。 若要开始，请下载 [Teams 工具包](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) 探索。 有关详细信息，请参阅 [Teams 工具包文档](../../../toolkit/teams-toolkit-fundamentals.md)。
 >
-> * 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。 对于主动消息，机器人应将以下终结点用于政府云环境： <br> -Gcc： `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH： `https://smba.infra.gov.teams.microsoft.us/gcch`。
+> * 目前，机器人在政府社区云（GCC）和 GCC-High 中可用，但在国防部（DOD）中不可用。 对于主动消息，机器人应将以下终结点用于政府云环境： <br> -Gcc： `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH： `https://smba.infra.gov.teams.microsoft.us/gcch`
 
 若要向用户、群组聊天或团队发送主动消息，机器人必须具有发送消息所需的访问权限。 对于群聊或团队，必须先将包含机器人的应用安装在该位置。
 
@@ -44,7 +44,7 @@ ms.locfileid: "68791459"
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>获取用户 ID、团队 ID 或频道 ID
 
-若要在频道中创建新会话或会话线程，必须具有正确的 ID。 可以使用以下任一方式接收或检索此 ID：
+可以在频道中与用户或会话线程创建新会话，并且必须具有正确的 ID。 可以使用以下任一方式接收或检索此 ID：
 
 * 当你的应用安装在特定的上下文中时，你会收到一个 [`onMembersAdded` 活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
 * 将新用户添加到安装应用的上下文时，你会收到一个 [`onMembersAdded` 活动](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
@@ -60,7 +60,17 @@ ms.locfileid: "68791459"
 
 ## <a name="create-the-conversation"></a>创建对话
 
-如果会话不存在或你不知道，请创建该 `conversationId`会话。 仅创建一次对话并存储 `conversationId` 值或 `conversationReference` 对象。
+如果会话不存在或你不知道，则可以创建该 `conversationId`对话。 仅创建一次对话并存储 `conversationId` 值或 `conversationReference` 对象。
+
+若要创建对话，需要一个 `userId`、 `tenantId`和 `serviceUrl`。
+
+对于 `serviceUrl`，请使用来自触发流或其中一个全局服务 URL 的传入活动的值。 `serviceUrl`如果从触发主动方案的传入活动中不可用，请使用以下全局 URL 终结点：
+
+* 公共： `https://smba.trafficmanager.net/teams/`
+* Gcc： `https://smba.infra.gcc.teams.microsoft.com/gcc`
+* GCCH： `https://smba.infra.gov.teams.microsoft.us/gcch`
+
+有关代码示例，请参阅 [**示例中**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs)的调用`CreateConversationAsync`。
 
 首次安装应用时，可以获取对话。 创建对话后， [获取对话 ID](#get-the-conversation-id)。 会话更新事件中提供了 `conversationId`。
 

@@ -4,12 +4,12 @@ description: 了解新的 Microsoft Teams 开发人员功能和现有功能的�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 95dc1e09eb54880e1e3412947914d263f3792fb1
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 54f5c515c9ce9831df09a58087a37fe637ff6c49
+ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791585"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819688"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams 中面向开发人员的新增功能
 
@@ -29,15 +29,9 @@ ms.locfileid: "68791585"
 
 可供所有应用开发人员使用的 Teams 平台功能。
 
-**2022 年 10 月**
+**2022 年 11 月**
 
-* ***2022 年 10 月 27 日***： [Teams 工作流机器人简介](sbs-gs-workflow-bot.yml)
-* ***2022 年 10 月 26*** 日： [生成会议内文档签名应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
-* ***2022 年 10 月 19*** 日： [适用于 Teams 的开发人员门户现在可用于 GCC 租户](concepts/build-and-test/teams-developer-portal.md)。
-* ***2022 年 10 月 13*** 日： [配置 NavBar 并为多个操作创建溢出菜单](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
-* ***2022 年 10 月 13*** 日： [配置应用的后退按钮](concepts/design/personal-apps.md#configure-back-button)。
-* ***2022 年 10 月 12*** 日： [即时会议、一对一和群组通话支持应用。](apps-in-teams-meetings/teams-apps-in-meetings.md)
-* ***2022 年 10 月 12 日***： [实时共享画布](apps-in-teams-meetings/teams-live-share-canvas.md)
+***2022 年 11 月 2 日***： [支持机器人 API 的全局路由](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation)。
 
 :::column-end:::
 :::row-end:::
@@ -48,7 +42,13 @@ ms.locfileid: "68791585"
 
 | **Date** | **更新** | **在此处查找** |
 | -------- | --------- | ----------------|
-| 10/26/2022 | 生成会议内应用，使会议参与者能够实时对文档进行签名。 | 为 Teams 会议和通话生成应用 >为 Teams 会议启用和配置应用>为 Teams 会议阶段生成应用> [生成会议内文档签名应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 10/27/2022 | Teams 工作流机器人简介。 | 工具和 SDK > Teams 工具包>使用 Teams 工具包创建应用>开发 Teams 应用>创建多功能应用> [创建 Teams 工作流机器人](sbs-gs-workflow-bot.yml) |
+| 10/26/2022 | 生成会议内应用，使会议参与者能够实时对文档进行签名。 | 为 Teams 会议和通话生成应用>为 Teams 会议启用和配置应用> [为 Teams 会议阶段生成应用](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 10/19/2022| 适用于 Teams 的开发人员门户现在可用于 GCC 租户。 | Teams 开发人员门户>工具和 SDK > [概述](concepts/build-and-test/teams-developer-portal.md)|
+| 10/13/2022| 配置 NavBar 并为多个操作创建溢出菜单。 | >个人应用>应用功能设计 [应用](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)|
+| 10/13/2022| 应用的“配置后退”按钮。 | >个人应用>应用功能设计 [应用](concepts/design/personal-apps.md#configure-back-button)|
+| 10/12/2022| 即时会议、一对一和群组通话支持应用。 | 为 Teams 会议和通话构建应用 > [概述](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+| 10/12/2022| Live Share 画布 | 使用 Live Share > [Canvas](apps-in-teams-meetings/teams-live-share-canvas.md) 构建适用于 Teams 会议和通话的应用>增强协作|
 | 09/30/2022|在 Teams 中管理第三方应用的 SaaS 许可证。|将应用盈利>将 SaaS 产品/服务包含在 Teams 应用中> [管理 Teams 中第三方应用的许可证](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
 | 09/29/2022|Teams 移动应用现在支持将文件下载到本地设备。|集成设备功能>在 [Teams 移动版上](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)集成媒体功能>文件下载|
 | 09/16/2022|基于搜索的消息扩展中的自适应卡片现在支持通用操作。|为基于搜索的消息扩展> [通用操作>搜索命令生成消息扩展](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
