@@ -1,38 +1,38 @@
 ---
 title: 在 Teams 工具包中自定义 Teams 应用清单
 author: zyxiaoyuer
-description: 在本模块中，了解如何在不同的环境中编辑、预览和自定义 Teams 应用清单。
+description: 在本模块中，了解如何在不同环境中编辑、预览和自定义 Teams 应用清单。
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: ac0be381837b62e1a3108f71a0320ae8b0c0a908
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: e92e30cf30dd06dbbe3c513a79fe4b7ed7c4bc1a
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499312"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833098"
 ---
 # <a name="customize-teams-app-manifest"></a>自定义 Teams 应用部件清单
 
-Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。
+Teams 应用清单介绍了你的应用如何集成到 Microsoft Teams 产品中。
 
 ::: zone pivot="visual-studio-code"
 
 ## <a name="customize-teams-app-manifest-for-visual-studio-code"></a>为Visual Studio Code自定义 Teams 应用清单
 
-Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有关清单的详细信息，请参阅 [Teams 的应用清单架构](../resources/schema/manifest-schema.md)。 本节介绍：
+Teams 应用清单介绍了你的应用如何集成到 Microsoft Teams 产品中。 有关清单的详细信息，请参阅 [Teams 的应用清单架构](../resources/schema/manifest-schema.md)。 本节介绍：
 
-* [本地环境中的预览清单文件](#preview-manifest-file-in-local-environment)
+* [在本地环境中预览清单文件](#preview-manifest-file-in-local-environment)
 * [远程环境中的预览清单文件](#preview-manifest-file-in-remote-environment)
 * [将本地更改同步到开发人员门户](#sync-local-changes-to-developer-portal)
 * [自定义 Teams 应用清单](#customize-your-teams-app-manifest)
 * [验证清单](#validate-manifest)
 
-清单模板文件 `manifest.template.json` 位于 scaffolding 下的 `templates/appPackage` 文件夹下。 具有占位符的模板文件以及实际值由 Teams 工具包使用不同环境下 `.fx/configs` 的文件解 `.fx/states` 析。
+清单模板文件 `manifest.template.json` 位于 scaffolding 下的 `templates/appPackage` 文件夹下。 包含占位符和实际值的模板文件和实际值由 Teams 工具包在不同环境中使用 和 `.fx/configs` `.fx/states` 的文件进行解析。
 
-若要使用实际内容预览清单，Teams 工具包在文件夹下 `build/appPackage` 生成预览清单文件：
+为了预览包含实际内容的清单，Teams 工具包会在 文件夹下 `build/appPackage` 生成预览清单文件：
 
 ```text
 └───build
@@ -45,43 +45,43 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
 可以在本地和远程环境中预览清单文件。
 
-* [本地环境中的预览清单文件](#preview-manifest-file-in-local-environment)
+* [在本地环境中预览清单文件](#preview-manifest-file-in-local-environment)
 * [远程环境中的预览清单文件](#preview-manifest-file-in-remote-environment)
 
-## <a name="preview-manifest-file-in-local-environment"></a>本地环境中的预览清单文件
+## <a name="preview-manifest-file-in-local-environment"></a>在本地环境中预览清单文件
 
 若要在本地环境中预览清单文件，可以按 **F5** 运行本地调试。 它会为你生成默认的本地设置，然后在 `build/appPackage` 文件夹下生成应用包和预览清单。
 
 还可以通过两种方法预览本地清单文件
 
-* 在 codelens 中使用预览选项
+* 通过在 codelens 中使用预览选项
 * 使用 **Zip Teams 元数据包** 选项
 
-以下步骤有助于在 codelens 中使用预览选项预览本地清单文件：
+以下步骤有助于使用 codelens 中的预览选项预览本地清单文件：
 
-1. 在文件的代码段`manifest.template.json`中选择 **“预览**”。
+1. 在文件的 codelens `manifest.template.json` 中选择 **“预览**”。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="屏幕截图是一个示例，其中显示了清单文件的 codelens 中的预览。":::
 
 1. 选择 **“本地**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="屏幕截图是显示环境中的本地选择的示例。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="屏幕截图是显示环境中选择本地的示例。":::
 
 以下步骤有助于使用 **Zip Teams 元数据包** 选项预览本地清单文件：
 
 1. 选择 `manifest.template.json` 文件。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="屏幕截图是显示 manifest.template.json 选择的示例。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="屏幕截图是显示选择 manifest.template.json 的示例。":::
 
-1. 在Visual Studio Code工具栏中选择 Teams 工具包:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG":::图标。
+1. 选择Visual Studio Code工具栏中的 Teams 工具包:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG":::图标。
 
-1. 选择 **“部署**”下的 **Zip Teams 元数据包**。
+1. 在“**部署**”下选择“**Zip Teams 元数据包**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="屏幕截图是显示选择 zip Teams 元数据包的示例。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="屏幕截图是显示 zip Teams 元数据包选择的示例。":::
 
 1. 选择 **“本地**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="屏幕截图是显示环境中的本地选择的示例。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="屏幕截图是显示环境中选择本地的示例。":::
 
 预览本地如下图所示：
 
@@ -89,53 +89,53 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
 ## <a name="preview-manifest-file-in-remote-environment"></a>远程环境中的预览清单文件
 
-使用Visual Studio Code预览清单文件：
+若要使用 Visual Studio Code 预览清单文件，请执行以下操作：
 
-* 在 Teams 工具包扩展的 **“开发**”下选择 **云中的“预配”**
+* 在 Teams 工具包扩展的 **“开发**”下，选择“**在云中预配**”
   
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="屏幕截图是显示云资源中预配选择的示例。":::
 
-使用命令面板预览清单文件：
+若要使用命令面板预览清单文件，请执行以下操作：
 
-* 触发 **器 Teams：从命令面板在云中预配** 。
+* 触发 Teams：从命令面板 **在云中预配** 。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="屏幕截图是显示使用命令面板预配云资源的示例。":::
 
-它生成远程 Teams 应用的配置，并在文件夹下 `build/appPackage` 生成包和预览清单。
+它为远程 Teams 应用生成配置，并在文件夹下 `build/appPackage` 生成包和预览清单。
 
-还可以通过远程环境中的两种方法预览清单文件
+还可以在远程环境中通过两种方法预览清单文件
 
-* 在 codelens 中使用预览选项
+* 通过在 codelens 中使用预览选项
 * 使用 **Zip Teams 元数据包** 选项
 
-以下步骤有助于在 codelens 中使用预览选项预览清单文件：
+以下步骤有助于使用 codelens 中的预览选项预览清单文件：
 
-1. 在文件的代码段`manifest.template.json`中选择 **“预览**”。
+1. 在文件的 codelens `manifest.template.json` 中选择 **“预览**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="屏幕截图是一个示例，显示清单文件的代码宽中的预览。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="屏幕截图是在清单文件的 codelens 中显示预览的示例。":::
 
 1. 选择环境。
 
    > [!NOTE]
    > 如果有多个环境，则需要选择要预览的环境，如下图所示：
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="屏幕截图是显示添加环境的示例。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="屏幕截图是显示环境添加的示例。":::
 
 以下步骤有助于在远程环境中使用 **Zip Teams 元数据包** 选项预览清单文件：
 
 1. 选择 `manifest.template.json` 文件。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="屏幕截图是显示 manifest.template.json 选择的示例。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="屏幕截图是显示选择 manifest.template.json 的示例。":::
 
-1. 在Visual Studio Code工具栏中选择 Teams 工具包:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG":::图标。
+1. 选择Visual Studio Code工具栏中的 Teams 工具包:::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG":::图标。
 
-1. 选择 **“部署**”下的 **Zip Teams 元数据包**。
+1. 在“**部署**”下选择“**Zip Teams 元数据包**”。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="屏幕截图是显示选择 zip Teams 元数据包的示例。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="屏幕截图是显示 zip Teams 元数据包选择的示例。":::
 
 1. 选择环境。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="屏幕截图是显示添加环境的示例。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="屏幕截图是显示环境添加的示例。":::
 
    > [!NOTE]
    > 如果有多个环境，则需要选择要预览的环境，如下图所示：
@@ -149,32 +149,32 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 
 1. 部署 Teams 应用清单。
 
-   可以通过以下任一方式部署 Teams 应用清单：
+   可以采用以下任一方式部署 Teams 应用清单：
 
-   * 转到 `manifest.template.json` 文件，然后右键单击以从上下文菜单中进行选择 `Deploy Teams app manifest` 。
+   * 转到 `manifest.template.json` 文件，然后右键单击以 `Deploy Teams app manifest` 从上下文菜单中选择。
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="屏幕截图是显示所选部署 Teams 应用清单的示例。":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="屏幕截图是显示选择部署 Teams 应用清单的示例。":::
 
-   * 来自命令面板的触发器 `Teams: Deploy Teams app manifest` 。
+   * 从命令面板触发 `Teams: Deploy Teams app manifest` 。
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="屏幕截图是显示命令面板中的部署的示例。":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="屏幕截图是显示从命令面板部署的示例。":::
 
 2. 更新到 Teams 平台。
 
    可以通过以下任一方式更新到 Teams 平台：
 
-   * 选择左上角的 **“更新到 Teams** ” `manifest.{env}.json`平台。
+   * 选择 左上角的`manifest.{env}.json`“**更新到 Teams 平台**”。
 
-   * 触发 **Teams：将清单更新到** 菜单栏 `manifest.{env}.json`上的 Teams 平台。
+   * 触发 Teams：在 菜单栏`manifest.{env}.json`上 **将清单更新到 Teams 平台**。
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="屏幕截图是显示清单菜单栏上的 Teams 平台更新的示例。":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="屏幕截图是在清单的菜单栏上显示 Teams 平台更新的示例。":::
 
-还可以从命令面板触发 **Teams：将清单更新到 Teams 平台** ：
+还可以触发 Teams：从命令面板 **将清单更新到 Teams 平台** ：
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="屏幕截图是显示 Teams 选择的示例：从命令面板将清单更新到 Teams 平台。":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="屏幕截图是一个示例，显示了从命令面板选择 Teams：将清单更新到 Teams 平台。":::
 
 > [!NOTE]
-> 来自编辑器代码管理器或菜单栏的触发器将当前清单文件更新到 Teams 平台。 命令面板中的触发器需要选择目标环境。
+> 从编辑器 codelens 或菜单栏触发将当前清单文件更新到 Teams 平台。 从命令面板触发需要选择目标环境。
 
  CLI 命令：
 
@@ -185,15 +185,15 @@ Teams 应用清单介绍应用如何集成到 Microsoft Teams 产品中。 有�
 ---
 
 > [!NOTE]
-> 开发人员门户的更改更新。 开发人员门户中的任何手动更新都被覆盖。
+> 更改将更新到开发人员门户。 将覆盖开发门户中的任何手动更新。
 
 如果清单文件因配置文件更改或模板更改而过时，请选择以下任一操作：
 
 * **仅预览**：根据当前配置覆盖本地清单文件。
-* **预览和更新**：本地清单文件根据当前配置覆盖，并已更新到 Teams 平台。
+* **预览和更新**：根据当前配置覆盖本地清单文件，并更新为 Teams 平台。
 * **取消**：不执行任何操作。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="屏幕截图是显示的一个示例，即在清单文件因配置或模板更改而过时选择预览、预览和更新以及取消选项的导航。":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="屏幕截图是一个示例，显示用于选择“仅预览”的导航，以及当清单文件因配置或模板更改而过时时，预览和更新和取消选项。":::
 
 ## <a name="customize-your-teams-app-manifest"></a>自定义 Teams 应用清单
 
@@ -202,20 +202,20 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 * `manifest.template.json`
 * `templates/appPackage`
 
-在本地调试或预配期间，Teams 工具包从`manifest.template.json`开发人员[门户](https://dev.teams.microsoft.com/apps)中加载清单和配置`state.{env}.json``config.{env}.json`，并创建 Teams 应用。
+在本地调试或预配期间，Teams 工具包从 `manifest.template.json`加载清单，并使用 、 `state.{env}.json``config.{env}.json`中的配置，并在[开发门户中](https://dev.teams.microsoft.com/apps)创建 Teams 应用。
 
 ### <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json 中支持的占位符
 
-以下列表提供以下内容中 `manifest.template.json`支持的占位符：
+以下列表在 中 `manifest.template.json`提供了支持的占位符：
 
-* `{{state.xx}}` 是预定义的占位符，其值由 Teams 工具包解析（在 `state.{env}.json` 中定义）。 确保不修改其中的值 `state.{env}.json`
-* `{{config.manifest.xx}}` 是自定义占位符，其值已从中解析 `config.{env}.json`
+* `{{state.xx}}` 是预定义的占位符，其值由 Teams 工具包解析（在 `state.{env}.json` 中定义）。 确保不修改 中的值 `state.{env}.json`
+* `{{config.manifest.xx}}` 是自定义占位符，其值解析自 `config.{env}.json`
 
 **添加自定义参数**
 
-1. 按如下所示添加自定义参数：</br>
-   a. 使用模式`{{config.manifest.xx}}`添加占位符`manifest.template.json`。</br>
-   b. 在中添加配置值 `config.{env}.json`。
+1. 添加自定义参数，如下所示：</br>
+   a. 使用模式 `{{config.manifest.xx}}`在 中添加`manifest.template.json`占位符。</br>
+   b. 在 `config.{env}.json`中添加配置值。
 
      ```json
      {
@@ -225,7 +225,7 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
      }
      ```
 
-2. 可以通过选择任何一个配置占位符 **转到配置文件** 或 **查看状态文件** 来转到配置文件 `manifest.template.json`。
+2. 可以通过选择任一配置占位符“**转到配置文件**”或“在 中`manifest.template.json`**查看状态文件**”来转到配置文件。
 
 ### <a name="validate-manifest"></a>验证清单
 
@@ -233,9 +233,9 @@ Teams 工具包包含跨本地和远程环境的 `manifest.template.json` 文件
 
 * 在 VSC 中，从命令面板触发 `Teams: Validate manifest file` ：
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="屏幕截图是显示来自命令面板的 Teams 验证清单文件的示例。":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/validate.png" alt-text="屏幕截图是显示命令面板中的 Teams 验证清单文件的示例。":::
 
-* 在 CLI 中，使用命令：
+* 在 CLI 中，使用 命令：
 
      ``` bash
         teamsfx validate --env local
@@ -362,7 +362,5 @@ The changes are updated to Teams Developer Portal.
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
-
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)

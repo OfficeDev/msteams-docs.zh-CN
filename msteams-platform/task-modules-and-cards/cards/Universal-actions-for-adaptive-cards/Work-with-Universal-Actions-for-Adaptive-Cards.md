@@ -1,14 +1,14 @@
 ---
 title: 使用自适应卡的通用操作
-description: 了解如何使用自适应卡的通用操作，包括自适应卡片的 UniversalActions 架构、刷新模型和向后兼容性
+description: 了解如何使用自适应卡片的通用操作，包括适用于自适应卡片的 UniversalActions 架构、刷新模型和向后兼容性
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 17dd7fd611c593c3f5de0237e0aa61885ac630c0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d723b565cadfacc550cd4fd9c8648149e9d164e2
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143877"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833007"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>使用自适应卡的通用操作
 
@@ -25,7 +25,7 @@ ms.locfileid: "66143877"
 2. 如果要使用自动刷新模型或方案需要用户特定视图，请向自适应卡添加 `refresh` 子句。
 
     >[!NOTE]
-    > 指定属性以 `userIds` 标识哪些用户获取自动更新。
+    > 指定 属性 `userIds` 以标识哪些用户获取自动更新。
 
 3. 处理机器人中的 `adaptiveCard/action` 调用请求。
 4. 使用调用请求的上下文来响应为用户创建的卡片。
@@ -44,7 +44,7 @@ ms.locfileid: "66143877"
 
 | Client | 行为 |
 | :-- | :-- |
-| Teams | 卡片停止工作。 卡片不会刷新，`Action.Execute` 也不会呈现，具体取决于Teams 客户端的版本。 为确保在 Teams 中实现最大兼容性，请在 fallback 属性中使用 `Action.Submit` 定义 `Action.Execute`。 |
+| Teams | 卡片停止工作。 卡片不会刷新，也不会 `Action.Execute` 呈现，具体取决于 Teams 客户端的版本。 为确保在 Teams 中实现最大兼容性，请在 fallback 属性中使用 `Action.Submit` 定义 `Action.Execute`。 |
 
 有关如何支持旧客户端的详细信息，请参阅[向后兼容性](#backward-compatibility)。
 
@@ -68,7 +68,7 @@ ms.locfileid: "66143877"
 
 * UserIds 是一组用户 MRI，它是自适应卡中 `refresh` 属性的一部分。
 
-* 如果 `userIds` 列表属性在卡片的刷新部分指定为 `userIds: []`，则卡片不会自动刷新。 相反，**刷新卡** 片选项将显示在Teams Web 客户端或桌面的三点菜单中，在移动Teams的长按下文菜单中，即Android或iOS手动刷新卡片。 或者，如果方案涉及Teams组聊天或频道中的 <=60 个成员，则可以选择完全跳过 `userIds` refresh 属性。 如果组或频道<=60 个用户，则Teams客户端会自动调用所有用户的刷新调用。
+* `userIds`如果在卡片的刷新部分中将列表属性指定为 `userIds: []` ，则不会自动刷新该卡。 相反，在 Teams Web 客户端或桌面的三点菜单中以及 Teams 移动版（即 Android 或 iOS）的长按上下文菜单中向用户显示 **刷新** 卡片选项，以便手动刷新卡片。 或者，如果方案涉及 Teams 群聊或频道中的<=60 个成员，则可以选择完全跳过 `userIds` 刷新属性。 如果组或频道有<=60 个用户，Teams 客户端会自动为所有用户调用刷新调用。
 
 * 添加 UserIds 属性是因为 Teams 中的频道可以包含大量成员。 如果所有成员同时查看频道，则无条件的自动刷新会导致对机器人进行多次并发调用。 必须始终包含 `userIds` 属性，以确定哪些用户必须获得自动刷新，最多 *60 （六十）个用户 MRI*。
 
@@ -115,8 +115,8 @@ ms.locfileid: "66143877"
 
 |示例名称 | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams 餐饮机器人 | 使用自适应卡片创建接受食品订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 尚不可用 |
-| 顺序工作流自适应卡片 | 演示如何在机器人中实施顺序工作流、用户特定视图和最新自适应卡。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [视图](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) 。|
+| Teams 餐饮机器人 | 使用自适应卡片创建接受食品订单的机器人。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| 不适用 |
+| 顺序工作流自适应卡片 | 演示如何在机器人中实施顺序工作流、用户特定视图和最新自适应卡。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>另请参阅
 
