@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: db6e3b99ab737b7ea8cac393e6ee3e0830cd0acc
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 111f45a8ed0b5246a75d1a1adbda9b124c1e9578
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791788"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833147"
 ---
 # <a name="debug-your-teams-app"></a>调试 Teams 应用
 
@@ -237,8 +237,8 @@ Teams 工具包自动执行应用启动服务、启动调试和旁加载 Teams �
 | &nbsp; | Visual Studio 2022 版本 17.3 | 可以安装 Visual Studio 企业版，并安装“ASP.NET”工作负载和 Microsoft Teams 开发工具。 |
 | &nbsp; | Teams 工具包 | 一个 Visual Studio 扩展，用于为应用创建项目基架。 使用最新版本。 |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | 通过聊天、会议、通话等应用与每一位同事进行协作的 Microsoft Teams - 一个地方完成所有操作。 |
-| &nbsp; | [准备 Microsoft 365 租户](~/concepts/build-and-test/prepare-your-o365-tenant.md) | 具有安装应用的相应权限的 Teams 帐户的访问权限。 |
-| &nbsp; | [Microsoft 365 开发人员帐户](~/concepts/build-and-test/prepare-your-o365-tenant.md) | 具有安装应用的相应权限的 Teams 帐户的访问权限。 |
+| &nbsp; | [准备 Microsoft 365 租户](../concepts/build-and-test/prepare-your-o365-tenant.md) | 具有安装应用的相应权限的 Teams 帐户的访问权限。 |
+| &nbsp; | [Microsoft 365 开发人员帐户](../concepts/build-and-test/prepare-your-o365-tenant.md) | 具有安装应用的相应权限的 Teams 帐户的访问权限。 |
 | &nbsp; | Azure 工具和 [Microsoft Azure CLI](/cli/azure/install-azure-cli) | 用于访问存储的数据或在 Azure 中为 Teams 应用部署基于云的后端的 Azure 工具。 |
 |&nbsp;  | **可选** | &nbsp; |
 |&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok 用于将外部消息从 Azure Bot Framework 转发到本地计算机。|
