@@ -301,7 +301,7 @@
           href: bots/how-to/conversations/conversation-messages.md
           displayName: 'Picture messages, attribution for bot message, status code responses, app localization using bot and tab.'
           items:
-            - name: 使用 RSC 接收所有频道消息
+            - name: 使用 RSC 接收所有对话消息
               href: bots/how-to/conversations/channel-messages-with-rsc.md
         - name: 创建命令菜单
           href: bots/how-to/create-a-bot-commands-menu.md
@@ -320,6 +320,8 @@
           href: bots/how-to/update-and-delete-bot-messages.md
         - name: 请求自动程序的标题
           href: bots/how-to/conversations/request-headers-of-the-bot.md
+        - name: Teams 中的工作流机器人
+          href: bots/how-to/conversations/workflow-bot-in-teams.md
     - name: 获取机器人的 Teams 特定上下文
       href: bots/how-to/get-teams-context.md
       displayName: Fetch roster or user profile
