@@ -502,14 +502,13 @@
   items:
     - name: 概述
       href: concepts/authentication/authentication.md
-      displayName: Authentication method
-    - name: 选项卡
+    - name: 为 Teams 应用启用 SSO
       items:
         - name: 为选项卡应用启用 SSO
           items:
-            - name: 概述
+            - name: 选项卡 SSO 概述
               href: tabs/how-to/authentication/tab-sso-overview.md
-            - name: 在 Azure AD 中注册选项卡应用
+            - name: 在 Azure AD 中配置选项卡应用
               href: tabs/how-to/authentication/tab-sso-register-aad.md
             - name: 添加代码以启用 SSO
               href: tabs/how-to/authentication/tab-sso-code.md
@@ -517,33 +516,32 @@
               href: tabs/how-to/authentication/tab-sso-manifest.md
             - name: 授予 Microsoft Graph 权限和范围
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-              displayName: Configure authentication for different platforms
-            - name: SSO 身份验证故障排除
-              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-        - name: 使用第三方 OAuth IdP 身份验证
+        - name: 为机器人和消息扩展应用启用 SSO
           items:
             - name: 概述
-              href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: 配置第三方 OAuth IdP 身份验证
-              href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: 使用外部 OAuth 提供程序
-              href: tabs/how-to/authentication/auth-oauth-provider.md
-    - name: 机器人
+              href: bots/how-to/authentication/bot-sso-overview.md
+            - name: 在 Azure AD 中配置应用
+              href: bots/how-to/authentication/bot-sso-register-aad.md
+            - name: 添加代码以启用 SSO
+              href: bots/how-to/authentication/bot-sso-code.md
+            - name: 更新 SSO 清单并预览应用
+              href: bots/how-to/authentication/bot-sso-manifest.md
+            - name: 授予 Microsoft Graph 权限和范围
+              href: bots/how-to/authentication/bot-sso-graph-api.md
+        - name: SSO 身份验证故障排除
+          href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+    - name: 使用第三方 IdP 身份验证
       items:
-        - name: 机器人中的身份验证流
-          href: bots/how-to/authentication/auth-flow-bot.md
-        - name: 将身份验证添加到机器人
+        - name: 概述
+          href: tabs/how-to/authentication/auth-flow-tab.md
+        - name: 向选项卡应用添加第三方 IdP 身份验证
+          href: tabs/how-to/authentication/auth-tab-aad.md
+        - name: 向机器人应用添加第三方 IdP 身份验证
           href: bots/how-to/authentication/add-authentication.md
-          displayName: 'Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams'
-        - name: 使用 SSO 身份验证
-          href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: 消息扩展
-      items:
-        - name: 为消息扩展添加身份验证
+        - name: 向消息扩展应用添加第三方 IdP 身份验证
           href: messaging-extensions/how-to/add-authentication.md
-          displayName: Configuration
-        - name: 为消息扩展启用 SSO
-          href: messaging-extensions/how-to/enable-SSO-auth-me.md
+    - name: 使用外部 OAuth 提供程序
+      href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: 集成设备功能
   items:
     - name: 概述
