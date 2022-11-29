@@ -62,6 +62,14 @@
       displayName: 'HTTPs, localhost, host your Teams app'
     - name: 规划 Teams 移动版的响应式选项卡
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+    - name: 为 Teams 应用规划分析
+      items:
+        - name: 概览
+          href: concepts/design/overview-analytics.md
+        - name: 制定策略并决定要衡量的内容
+          href: concepts/design/strategize-measure.md
+        - name: 使用分析服务规划代码检测
+          href: concepts/design/plan-code-instrumentation.md
     - name: 规划将你的应用货币化
       href: concepts/design/plan-to-monetize.md
       displayName: 'Subscription, In-app purchases, Free trials, Test preview'
@@ -145,7 +153,7 @@
                   href: toolkit/AAD-manifest-customization.md
             - name: 调试 Teams 应用
               items:
-                - name: 概述
+                - name: 概览
                   href: toolkit/debug-overview.md
                 - name: 在本地调试 Teams 应用
                   href: toolkit/debug-local.md
@@ -518,7 +526,7 @@
               href: tabs/how-to/authentication/tab-sso-graph-api.md
         - name: 为机器人和消息扩展应用启用 SSO
           items:
-            - name: 概述
+            - name: 概览
               href: bots/how-to/authentication/bot-sso-overview.md
             - name: 在 Azure AD 中配置应用
               href: bots/how-to/authentication/bot-sso-register-aad.md
@@ -532,7 +540,7 @@
           href: tabs/how-to/authentication/tab-sso-troubleshooting.md
     - name: 使用第三方 IdP 身份验证
       items:
-        - name: 概述
+        - name: 概览
           href: tabs/how-to/authentication/auth-flow-tab.md
         - name: 向选项卡应用添加第三方 IdP 身份验证
           href: tabs/how-to/authentication/auth-tab-aad.md
